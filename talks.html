@@ -289,6 +289,10 @@ body.dark-mode #scripture-panel { background: #333333; border-color: #d4af37; }
 
 /* ========== READING PROGRESS ========== */
 #reading-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--accent); z-index: 200; width: 0%; transition: width 0.1s; }
+body.dark-mode #return-banner { background: #2a2a2a !important; border-color: #444 !important; }
+body.dark-mode #return-link { background: #d4af37 !important; color: #1a1a1a !important; }
+#return-link:hover { background: #b8942e !important; }
+body.dark-mode #return-link:hover { background: #c8a84e !important; }
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 600px) {
@@ -349,15 +353,16 @@ body.dark-mode #scripture-panel { background: #333333; border-color: #d4af37; }
 </div>
 
 <!-- Return to scripture banner (shown when arriving from a scripture page) -->
-<div id="return-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:90;
-  background:#1e2233; color:#c8a84e; padding:10px 20px; text-align:center;
-  font-family:'Crimson Pro',serif; font-size:0.95em; border-top:2px solid #c8a84e;
-  box-shadow:0 -2px 12px rgba(0,0,0,0.2);">
-  <a id="return-link" href="#" style="color:#c8a84e; text-decoration:none;">
-    &#x276E; Return to <span id="return-verse"></span> in Hebrew
+<div id="return-banner" style="display:none; position:fixed; top:46px; left:0; right:0; z-index:99;
+  background:#fff; padding:8px 20px; text-align:center;
+  font-family:'Crimson Pro',serif; font-size:0.95em; border-bottom:1px solid #e8e2d4;
+  box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+  <a id="return-link" href="#" style="display:inline-block; background:#c8a84e; color:#fff; text-decoration:none;
+    padding:6px 18px; border-radius:4px; font-weight:600; font-size:0.9em; transition:background 0.2s;">
+    &#x276E; Return to <span id="return-verse"></span>
   </a>
   <span onclick="document.getElementById('return-banner').style.display='none'"
-    style="position:absolute;right:16px;top:50%;transform:translateY(-50%);cursor:pointer;opacity:0.6;">&times;</span>
+    style="position:absolute;right:16px;top:50%;transform:translateY(-50%);cursor:pointer;color:#999;font-size:1.2em;">&times;</span>
 </div>
 
 <!-- Main content -->
