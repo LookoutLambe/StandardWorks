@@ -1004,7 +1004,48 @@ body.dark-mode #share-popup { background: #333333; border-color: #d4af37; }
   .popup-strong { font-size: 1.0em !important; }
   #glossary-panel { width: 100vw; max-width: 100vw; }
   #annotations-panel { width: 100vw; max-width: 100vw; }
+  #xref-panel { width: 55%; right: -55%; }
 }
+
+/* === CROSS-REFERENCES === */
+.xref-marker {
+  display: inline-block; font-size: 0.6em; color: var(--accent); cursor: pointer;
+  vertical-align: super; line-height: 0; margin: 0 2px; font-family: 'Crimson Pro', serif;
+  font-weight: 600; opacity: 0.7; transition: opacity 0.2s;
+}
+.xref-marker:hover { opacity: 1; text-decoration: underline; }
+body.hide-gloss .xref-marker, body.dual-mode .xref-marker { font-size: 0.5em; }
+.word-unit.xref-linked { cursor: pointer; }
+.word-unit.xref-linked .hw { color: #5dade2 !important; }
+.word-unit.xref-linked .gl { color: #5dade2 !important; }
+.word-unit.xref-linked:hover .hw { color: #85c1e9 !important; text-decoration: underline; }
+.word-unit.xref-linked:hover .gl { color: #85c1e9 !important; }
+body.dark-mode .word-unit.xref-linked .hw { color: #5dade2 !important; }
+body.dark-mode .word-unit.xref-linked .gl { color: #5dade2 !important; }
+body.dark-mode .word-unit.xref-linked:hover .hw { color: #85c1e9 !important; }
+body.dark-mode .word-unit.xref-linked:hover .gl { color: #85c1e9 !important; }
+#xref-panel {
+  position: fixed; top: 0; right: -400px; width: 380px; height: 100vh;
+  background: var(--bg); border-left: 2px solid var(--accent); z-index: 1200;
+  transition: right 0.3s ease; overflow-y: auto; padding: 0; direction: ltr;
+  font-family: 'Crimson Pro', serif; box-shadow: -4px 0 20px rgba(0,0,0,0.3);
+}
+#xref-panel.open { right: 0; }
+.xref-panel-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 16px; border-bottom: 1px solid var(--rule);
+  position: sticky; top: 0; background: var(--bg); z-index: 2;
+}
+.xref-panel-header h3 { margin: 0; font-size: 1.1em; color: var(--accent); font-weight: 600; }
+.xref-panel-close { cursor: pointer; font-size: 1.3em; color: var(--ink-light); padding: 2px 6px; border-radius: 4px; }
+.xref-panel-close:hover { background: rgba(200,168,78,0.15); color: var(--accent); }
+.xref-panel-word { font-weight: 600; color: var(--accent); font-size: 1.1em; padding: 12px 16px 0; }
+.xref-panel-category { font-size: 0.75em; color: var(--ink-light); text-transform: uppercase; letter-spacing: 0.5px; padding: 2px 16px 10px; border-bottom: 1px solid var(--rule-light); }
+.xref-ref-card { padding: 12px 16px; border-bottom: 1px solid var(--rule-light); }
+.xref-ref-card:last-child { border-bottom: none; }
+.xref-ref-title { font-weight: 600; color: var(--accent); font-size: 0.95em; margin-bottom: 4px; }
+.xref-ref-nodata { font-size: 0.85em; color: var(--ink-light); font-style: italic; padding: 16px; }
+body.dark-mode #xref-panel { background: #252525; border-color: #d4af37; }
 
 </style>
 </head>
@@ -1112,6 +1153,17 @@ body.dark-mode #share-popup { background: #333333; border-color: #d4af37; }
   </div>
   <div id="annotations-list"></div>
   <button class="ann-export-btn" onclick="exportAnnotations()">Export Annotations (JSON)</button>
+</div>
+
+<!-- Cross-Reference Panel -->
+<div id="xref-panel">
+  <div class="xref-panel-header">
+    <h3>Cross-References</h3>
+    <span class="xref-panel-close" onclick="closeXrefPanel()">&#10005;</span>
+  </div>
+  <div class="xref-panel-word"></div>
+  <div class="xref-panel-category"></div>
+  <div id="xref-panel-refs"></div>
 </div>
 
 <div class="controls-top">
@@ -2221,6 +2273,10 @@ try {
 <script src="jst_verses/jst1jn.js"></script>
 <script src="jst_verses/jstrev.js"></script>
 
+<!-- Cross-reference data + engine (JST will get data later) -->
+<script>window._volumeCrossrefsData = {};</script>
+<script src="crossrefs_engine.js"></script>
+
 <script>
 
 // PREV / NEXT CHAPTER NAVIGATION
@@ -2832,7 +2888,37 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
       var sorted = Object.entries(sInfo.glosses).sort(function(a,b) { return b[1]-a[1]; });
       detailHtml += '<br><span>Also glossed:</span> ' + sorted.slice(0, 4).map(function(pair) { return '"' + pair[0] + '" (' + pair[1] + 'x)'; }).join(', ');
     }
+    // Cross-reference link
+    var directXref = wu.getAttribute('data-xref-ref');
+    var directXrefKey = wu.getAttribute('data-xref-key');
+    if (directXref) {
+      var xrefObj = JSON.parse(directXref);
+      var refCount = xrefObj.refs ? xrefObj.refs.length : 0;
+      detailHtml += '<br><span class="popup-xref-direct" style="cursor:pointer;color:#d4af37;text-decoration:underline;font-size:0.9em;">View Cross-References (' + refCount + ') \u2192</span>';
+    } else {
+      var rootXrefs = window._rootXrefs && window._rootXrefs[root];
+      if (rootXrefs && rootXrefs.length > 0) {
+        detailHtml += '<br><span class="popup-xref-link" style="cursor:pointer;color:#d4af37;text-decoration:underline;font-size:0.9em;">Cross-References for root (' + rootXrefs.length + ') \u2192</span>';
+      }
+    }
     popupDetail.innerHTML = detailHtml;
+    // Bind xref links
+    var directLink = popupDetail.querySelector('.popup-xref-direct');
+    if (directLink && directXref) {
+      directLink.addEventListener('click', function(ev) {
+        ev.stopPropagation();
+        closePopup();
+        openXrefPanel(JSON.parse(wu.getAttribute('data-xref-ref')), wu.getAttribute('data-xref-key'), root);
+      });
+    }
+    var xrefLink = popupDetail.querySelector('.popup-xref-link');
+    if (xrefLink) {
+      xrefLink.addEventListener('click', function(ev) {
+        ev.stopPropagation();
+        closePopup();
+        openRootXrefPanel(root);
+      });
+    }
 
     var rect = wu.getBoundingClientRect();
     popup.style.display = 'block';
@@ -3376,6 +3462,7 @@ var _origEnsureRendered = _ensureChapterRendered;
 _ensureChapterRendered = function(chapId) {
   _origEnsureRendered(chapId);
   setTimeout(applyAllAnnotations, 50);
+  if (window._crossrefsLoaded && typeof addCrossRefMarkers === 'function') setTimeout(addCrossRefMarkers, 100);
 };
 
 
