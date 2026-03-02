@@ -1,0 +1,759 @@
+[
+  {
+    "code": "jstgen",
+    "en": "Genesis",
+    "he": "בְּרֵאשִׁית",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, Genesis 1–8",
+        "verseCount": 160
+      },
+      {
+        "ch": 2,
+        "label": "JST, Genesis 9",
+        "verseCount": 51
+      },
+      {
+        "ch": 3,
+        "label": "JST, Genesis 14",
+        "verseCount": 24
+      },
+      {
+        "ch": 4,
+        "label": "JST, Genesis 15",
+        "verseCount": 21
+      },
+      {
+        "ch": 5,
+        "label": "JST, Genesis 17",
+        "verseCount": 27
+      },
+      {
+        "ch": 6,
+        "label": "JST, Genesis 19",
+        "verseCount": 38
+      },
+      {
+        "ch": 7,
+        "label": "JST, Genesis 21",
+        "verseCount": 34
+      },
+      {
+        "ch": 8,
+        "label": "JST, Genesis 48",
+        "verseCount": 22
+      },
+      {
+        "ch": 9,
+        "label": "JST, Genesis 50",
+        "verseCount": 26
+      }
+    ]
+  },
+  {
+    "code": "jstexo",
+    "en": "Exodus",
+    "he": "שְׁמוֹת",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, Exodus 4",
+        "verseCount": 31
+      },
+      {
+        "ch": 2,
+        "label": "JST, Exodus 18",
+        "verseCount": 27
+      },
+      {
+        "ch": 3,
+        "label": "JST, Exodus 22",
+        "verseCount": 30
+      },
+      {
+        "ch": 4,
+        "label": "JST, Exodus 32",
+        "verseCount": 35
+      },
+      {
+        "ch": 5,
+        "label": "JST, Exodus 33",
+        "verseCount": 23
+      },
+      {
+        "ch": 6,
+        "label": "JST, Exodus 34",
+        "verseCount": 35
+      }
+    ]
+  },
+  {
+    "code": "jstdeu",
+    "en": "Deuteronomy",
+    "he": "דְּבָרִים",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, Deuteronomy 10",
+        "verseCount": 22
+      }
+    ]
+  },
+  {
+    "code": "jst1sa",
+    "en": "1 Samuel",
+    "he": "שְׁמוּאֵל א",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, 1 Samuel 16",
+        "verseCount": 23
+      }
+    ]
+  },
+  {
+    "code": "jst2sa",
+    "en": "2 Samuel",
+    "he": "שְׁמוּאֵל ב",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, 2 Samuel 12",
+        "verseCount": 31
+      }
+    ]
+  },
+  {
+    "code": "jst1ch",
+    "en": "1 Chronicles",
+    "he": "דִּבְרֵי הַיָּמִים א",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, 1 Chronicles 21",
+        "verseCount": 30
+      }
+    ]
+  },
+  {
+    "code": "jst2ch",
+    "en": "2 Chronicles",
+    "he": "דִּבְרֵי הַיָּמִים ב",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, 2 Chronicles 18",
+        "verseCount": 34
+      }
+    ]
+  },
+  {
+    "code": "jstpsa",
+    "en": "Psalms",
+    "he": "תְּהִלִּים",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, Psalm 11",
+        "verseCount": 7
+      },
+      {
+        "ch": 2,
+        "label": "JST, Psalm 14",
+        "verseCount": 7
+      },
+      {
+        "ch": 3,
+        "label": "JST, Psalm 24",
+        "verseCount": 10
+      },
+      {
+        "ch": 4,
+        "label": "JST, Psalm 109",
+        "verseCount": 31
+      }
+    ]
+  },
+  {
+    "code": "jstisa",
+    "en": "Isaiah",
+    "he": "יְשַׁעְיָהוּ",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, Isaiah 29",
+        "verseCount": 24
+      },
+      {
+        "ch": 2,
+        "label": "JST, Isaiah 42",
+        "verseCount": 25
+      }
+    ]
+  },
+  {
+    "code": "jstjer",
+    "en": "Jeremiah",
+    "he": "יִרְמְיָהוּ",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, Jeremiah 26",
+        "verseCount": 24
+      }
+    ]
+  },
+  {
+    "code": "jstamo",
+    "en": "Amos",
+    "he": "עָמוֹס",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, Amos 7",
+        "verseCount": 17
+      }
+    ]
+  },
+  {
+    "code": "jstmatt",
+    "en": "Matthew",
+    "he": "מַתָּי",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, Matthew 3",
+        "verseCount": 17
+      },
+      {
+        "ch": 2,
+        "label": "JST, Matthew 4",
+        "verseCount": 25
+      },
+      {
+        "ch": 3,
+        "label": "JST, Matthew 5",
+        "verseCount": 48
+      },
+      {
+        "ch": 4,
+        "label": "JST, Matthew 6",
+        "verseCount": 34
+      },
+      {
+        "ch": 5,
+        "label": "JST, Matthew 7",
+        "verseCount": 29
+      },
+      {
+        "ch": 6,
+        "label": "JST, Matthew 9",
+        "verseCount": 38
+      },
+      {
+        "ch": 7,
+        "label": "JST, Matthew 11",
+        "verseCount": 30
+      },
+      {
+        "ch": 8,
+        "label": "JST, Matthew 12",
+        "verseCount": 50
+      },
+      {
+        "ch": 9,
+        "label": "JST, Matthew 13",
+        "verseCount": 58
+      },
+      {
+        "ch": 10,
+        "label": "JST, Matthew 16",
+        "verseCount": 28
+      },
+      {
+        "ch": 11,
+        "label": "JST, Matthew 17",
+        "verseCount": 27
+      },
+      {
+        "ch": 12,
+        "label": "JST, Matthew 18",
+        "verseCount": 35
+      },
+      {
+        "ch": 13,
+        "label": "JST, Matthew 19",
+        "verseCount": 30
+      },
+      {
+        "ch": 14,
+        "label": "JST, Matthew 21",
+        "verseCount": 46
+      },
+      {
+        "ch": 15,
+        "label": "JST, Matthew 23",
+        "verseCount": 39
+      },
+      {
+        "ch": 16,
+        "label": "JST, Matthew 26",
+        "verseCount": 75
+      },
+      {
+        "ch": 17,
+        "label": "JST, Matthew 27",
+        "verseCount": 66
+      }
+    ]
+  },
+  {
+    "code": "jstmark",
+    "en": "Mark",
+    "he": "מַרְקוֹס",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, Mark 2",
+        "verseCount": 28
+      },
+      {
+        "ch": 2,
+        "label": "JST, Mark 3",
+        "verseCount": 35
+      },
+      {
+        "ch": 3,
+        "label": "JST, Mark 7",
+        "verseCount": 37
+      },
+      {
+        "ch": 4,
+        "label": "JST, Mark 8",
+        "verseCount": 38
+      },
+      {
+        "ch": 5,
+        "label": "JST, Mark 9",
+        "verseCount": 50
+      },
+      {
+        "ch": 6,
+        "label": "JST, Mark 12",
+        "verseCount": 44
+      },
+      {
+        "ch": 7,
+        "label": "JST, Mark 14",
+        "verseCount": 72
+      },
+      {
+        "ch": 8,
+        "label": "JST, Mark 16",
+        "verseCount": 20
+      }
+    ]
+  },
+  {
+    "code": "jstluke",
+    "en": "Luke",
+    "he": "לוּקָס",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, Luke 1",
+        "verseCount": 80
+      },
+      {
+        "ch": 2,
+        "label": "JST, Luke 2",
+        "verseCount": 52
+      },
+      {
+        "ch": 3,
+        "label": "JST, Luke 3",
+        "verseCount": 38
+      },
+      {
+        "ch": 4,
+        "label": "JST, Luke 6",
+        "verseCount": 49
+      },
+      {
+        "ch": 5,
+        "label": "JST, Luke 9",
+        "verseCount": 62
+      },
+      {
+        "ch": 6,
+        "label": "JST, Luke 11",
+        "verseCount": 54
+      },
+      {
+        "ch": 7,
+        "label": "JST, Luke 12",
+        "verseCount": 59
+      },
+      {
+        "ch": 8,
+        "label": "JST, Luke 14",
+        "verseCount": 35
+      },
+      {
+        "ch": 9,
+        "label": "JST, Luke 16",
+        "verseCount": 31
+      },
+      {
+        "ch": 10,
+        "label": "JST, Luke 17",
+        "verseCount": 37
+      },
+      {
+        "ch": 11,
+        "label": "JST, Luke 18",
+        "verseCount": 43
+      },
+      {
+        "ch": 12,
+        "label": "JST, Luke 21",
+        "verseCount": 38
+      },
+      {
+        "ch": 13,
+        "label": "JST, Luke 23",
+        "verseCount": 56
+      },
+      {
+        "ch": 14,
+        "label": "JST, Luke 24",
+        "verseCount": 53
+      }
+    ]
+  },
+  {
+    "code": "jstjohn",
+    "en": "John",
+    "he": "יוֹחָנָן",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, John 1",
+        "verseCount": 51
+      },
+      {
+        "ch": 2,
+        "label": "JST, John 4",
+        "verseCount": 54
+      },
+      {
+        "ch": 3,
+        "label": "JST, John 6",
+        "verseCount": 71
+      },
+      {
+        "ch": 4,
+        "label": "JST, John 13",
+        "verseCount": 38
+      },
+      {
+        "ch": 5,
+        "label": "JST, John 14",
+        "verseCount": 31
+      }
+    ]
+  },
+  {
+    "code": "jstacts",
+    "en": "Acts",
+    "he": "מַעֲשֵׂי הַשְּׁלִיחִים",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, Acts 9",
+        "verseCount": 43
+      },
+      {
+        "ch": 2,
+        "label": "JST, Acts 22",
+        "verseCount": 30
+      }
+    ]
+  },
+  {
+    "code": "jstrom",
+    "en": "Romans",
+    "he": "אֶל הָרוֹמִים",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, Romans 3",
+        "verseCount": 31
+      },
+      {
+        "ch": 2,
+        "label": "JST, Romans 4",
+        "verseCount": 25
+      },
+      {
+        "ch": 3,
+        "label": "JST, Romans 7",
+        "verseCount": 26
+      },
+      {
+        "ch": 4,
+        "label": "JST, Romans 8",
+        "verseCount": 39
+      },
+      {
+        "ch": 5,
+        "label": "JST, Romans 13",
+        "verseCount": 14
+      }
+    ]
+  },
+  {
+    "code": "jst1co",
+    "en": "1 Corinthians",
+    "he": "אֶל הַקּוֹרִנְתִּים א",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, 1 Corinthians 7",
+        "verseCount": 40
+      },
+      {
+        "ch": 2,
+        "label": "JST, 1 Corinthians 15",
+        "verseCount": 58
+      }
+    ]
+  },
+  {
+    "code": "jst2co",
+    "en": "2 Corinthians",
+    "he": "אֶל הַקּוֹרִנְתִּים ב",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, 2 Corinthians 5",
+        "verseCount": 21
+      }
+    ]
+  },
+  {
+    "code": "jstgal",
+    "en": "Galatians",
+    "he": "אֶל הַגָּלָטִים",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, Galatians 3",
+        "verseCount": 29
+      }
+    ]
+  },
+  {
+    "code": "jsteph",
+    "en": "Ephesians",
+    "he": "אֶל הָאֶפֶסִיִּים",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, Ephesians 4",
+        "verseCount": 32
+      }
+    ]
+  },
+  {
+    "code": "jstcol",
+    "en": "Colossians",
+    "he": "אֶל הַקּוֹלוֹסִּים",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, Colossians 2",
+        "verseCount": 23
+      }
+    ]
+  },
+  {
+    "code": "jst1th",
+    "en": "1 Thessalonians",
+    "he": "אֶל הַתֶּסָלוֹנִיקִים א",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, 1 Thessalonians 4",
+        "verseCount": 18
+      }
+    ]
+  },
+  {
+    "code": "jst2th",
+    "en": "2 Thessalonians",
+    "he": "אֶל הַתֶּסָלוֹנִיקִים ב",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, 2 Thessalonians 2",
+        "verseCount": 17
+      }
+    ]
+  },
+  {
+    "code": "jst1ti",
+    "en": "1 Timothy",
+    "he": "אֶל טִימוֹתֵיאוֹס א",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, 1 Timothy 2",
+        "verseCount": 15
+      },
+      {
+        "ch": 2,
+        "label": "JST, 1 Timothy 3",
+        "verseCount": 16
+      },
+      {
+        "ch": 3,
+        "label": "JST, 1 Timothy 6",
+        "verseCount": 21
+      }
+    ]
+  },
+  {
+    "code": "jstheb",
+    "en": "Hebrews",
+    "he": "אֶל הָעִבְרִים",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, Hebrews 1",
+        "verseCount": 14
+      },
+      {
+        "ch": 2,
+        "label": "JST, Hebrews 4",
+        "verseCount": 16
+      },
+      {
+        "ch": 3,
+        "label": "JST, Hebrews 6",
+        "verseCount": 20
+      },
+      {
+        "ch": 4,
+        "label": "JST, Hebrews 7",
+        "verseCount": 28
+      },
+      {
+        "ch": 5,
+        "label": "JST, Hebrews 11",
+        "verseCount": 40
+      }
+    ]
+  },
+  {
+    "code": "jstjas",
+    "en": "James",
+    "he": "יַעֲקֹב",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, James 1",
+        "verseCount": 27
+      },
+      {
+        "ch": 2,
+        "label": "JST, James 2",
+        "verseCount": 26
+      }
+    ]
+  },
+  {
+    "code": "jst1pe",
+    "en": "1 Peter",
+    "he": "פֶּטְרוֹס א",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, 1 Peter 3",
+        "verseCount": 22
+      },
+      {
+        "ch": 2,
+        "label": "JST, 1 Peter 4",
+        "verseCount": 19
+      }
+    ]
+  },
+  {
+    "code": "jst2pe",
+    "en": "2 Peter",
+    "he": "פֶּטְרוֹס ב",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, 2 Peter 3",
+        "verseCount": 18
+      }
+    ]
+  },
+  {
+    "code": "jst1jn",
+    "en": "1 John",
+    "he": "יוֹחָנָן א",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, 1 John 2",
+        "verseCount": 29
+      },
+      {
+        "ch": 2,
+        "label": "JST, 1 John 3",
+        "verseCount": 24
+      },
+      {
+        "ch": 3,
+        "label": "JST, 1 John 4",
+        "verseCount": 21
+      }
+    ]
+  },
+  {
+    "code": "jstrev",
+    "en": "Revelation",
+    "he": "הִתְגַּלּוּת",
+    "entries": [
+      {
+        "ch": 1,
+        "label": "JST, Revelation 1",
+        "verseCount": 20
+      },
+      {
+        "ch": 2,
+        "label": "JST, Revelation 2",
+        "verseCount": 29
+      },
+      {
+        "ch": 3,
+        "label": "JST, Revelation 5",
+        "verseCount": 14
+      },
+      {
+        "ch": 4,
+        "label": "JST, Revelation 12",
+        "verseCount": 17
+      },
+      {
+        "ch": 5,
+        "label": "JST, Revelation 19",
+        "verseCount": 21
+      }
+    ]
+  }
+]

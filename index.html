@@ -408,7 +408,7 @@ body.dark-mode .top-bar { background: #0a0a0a; }
     <div class="card-grid">
 
       <!-- Old Testament -->
-      <div class="scripture-card" onclick="window.open('ot.html','_blank')">
+      <div class="scripture-card" onclick="window.location.href='ot.html'">
         <div class="card-cover ot">
           <div class="rule-top"></div>
           <div class="card-cover-title">Old<br>Testament</div>
@@ -423,7 +423,7 @@ body.dark-mode .top-bar { background: #0a0a0a; }
       </div>
 
       <!-- New Testament -->
-      <div class="scripture-card" onclick="window.open('nt.html','_blank')">
+      <div class="scripture-card" onclick="window.location.href='nt.html'">
         <div class="card-cover nt">
           <div class="rule-top"></div>
           <div class="card-cover-title">New<br>Testament</div>
@@ -438,7 +438,7 @@ body.dark-mode .top-bar { background: #0a0a0a; }
       </div>
 
       <!-- Book of Mormon -->
-      <div class="scripture-card" onclick="openBOM()">
+      <div class="scripture-card" onclick="window.location.href='bom/bom.html'">
         <div class="card-cover bom">
           <div class="rule-top"></div>
           <div class="card-cover-title">The<br>Book of<br>Mormon</div>
@@ -453,7 +453,7 @@ body.dark-mode .top-bar { background: #0a0a0a; }
       </div>
 
       <!-- Doctrine and Covenants -->
-      <div class="scripture-card" onclick="window.open('dc.html','_blank')">
+      <div class="scripture-card" onclick="window.location.href='dc.html'">
         <div class="card-cover dc">
           <div class="rule-top"></div>
           <div class="card-cover-title">Doctrine<br>and<br>Covenants</div>
@@ -468,7 +468,7 @@ body.dark-mode .top-bar { background: #0a0a0a; }
       </div>
 
       <!-- Pearl of Great Price -->
-      <div class="scripture-card" onclick="window.open('pgp.html','_blank')">
+      <div class="scripture-card" onclick="window.location.href='pgp.html'">
         <div class="card-cover pgp">
           <div class="rule-top"></div>
           <div class="card-cover-title">Pearl<br>of Great<br>Price</div>
@@ -483,14 +483,13 @@ body.dark-mode .top-bar { background: #0a0a0a; }
       </div>
 
       <!-- Joseph Smith Translation -->
-      <div class="scripture-card" onclick="navTo('jst')">
+      <div class="scripture-card" onclick="window.location.href='jst.html'">
         <div class="card-cover jst">
           <div class="rule-top"></div>
           <div class="card-cover-title">Joseph<br>Smith<br>Translation</div>
           <div class="rule-bottom"></div>
           <div class="card-cover-hebrew">תרגום<br>ג׳וזף סמית</div>
           <div class="rule-bottom"></div>
-          <div class="card-badge">Coming Soon</div>
         </div>
         <div class="card-label">
           <div class="card-label-en">Joseph Smith Translation</div>
@@ -509,35 +508,10 @@ body.dark-mode .top-bar { background: #0a0a0a; }
 
   </div><!-- /panel-landing -->
 
-  <!-- ===== PLACEHOLDER PANELS ===== -->
-  <div class="panel" id="panel-jst">
-    <div class="placeholder-panel">
-      <button class="back-btn" onclick="navTo('landing')">← Back to Standard Works</button>
-      <div class="placeholder-title">Joseph Smith Translation</div>
-      <div class="placeholder-hebrew">תרגום ג׳וזף סמית</div>
-      <div class="placeholder-message">Coming soon — Hebrew interlinear Joseph Smith Translation appendix.</div>
-    </div>
-  </div>
-
 
 </div><!-- /page -->
 
 <script>
-
-// ===== NAVIGATION =====
-function navTo(id) {
-  var panels = document.querySelectorAll('.panel');
-  panels.forEach(function(p) { p.classList.remove('active'); });
-  var target = document.getElementById('panel-' + id);
-  if (target) {
-    target.classList.add('active');
-    window.scrollTo(0, 0);
-  }
-}
-
-function openBOM() {
-  window.open('../Hebrew BOM/BOM.html', '_blank');
-}
 
 // ===== DARK MODE =====
 function toggleDark() {
