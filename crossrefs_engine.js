@@ -48,6 +48,125 @@
     'Ether': 'Ether', 'Moro.': 'Moroni'
   };
 
+  // ── Book name to volume page + hash builder ──
+  // Maps full book names to their volume page and friendly hash format
+  var _bookToVolume = {
+    // OT
+    'Genesis': { page: 'ot.html', hash: function(c) { return 'genesis-' + c; } },
+    'Exodus': { page: 'ot.html', hash: function(c) { return 'exodus-' + c; } },
+    'Leviticus': { page: 'ot.html', hash: function(c) { return 'leviticus-' + c; } },
+    'Numbers': { page: 'ot.html', hash: function(c) { return 'numbers-' + c; } },
+    'Deuteronomy': { page: 'ot.html', hash: function(c) { return 'deuteronomy-' + c; } },
+    'Joshua': { page: 'ot.html', hash: function(c) { return 'joshua-' + c; } },
+    'Judges': { page: 'ot.html', hash: function(c) { return 'judges-' + c; } },
+    'Ruth': { page: 'ot.html', hash: function(c) { return 'ruth-' + c; } },
+    '1 Samuel': { page: 'ot.html', hash: function(c) { return '1-samuel-' + c; } },
+    '2 Samuel': { page: 'ot.html', hash: function(c) { return '2-samuel-' + c; } },
+    '1 Kings': { page: 'ot.html', hash: function(c) { return '1-kings-' + c; } },
+    '2 Kings': { page: 'ot.html', hash: function(c) { return '2-kings-' + c; } },
+    '1 Chronicles': { page: 'ot.html', hash: function(c) { return '1-chronicles-' + c; } },
+    '2 Chronicles': { page: 'ot.html', hash: function(c) { return '2-chronicles-' + c; } },
+    'Ezra': { page: 'ot.html', hash: function(c) { return 'ezra-' + c; } },
+    'Nehemiah': { page: 'ot.html', hash: function(c) { return 'nehemiah-' + c; } },
+    'Esther': { page: 'ot.html', hash: function(c) { return 'esther-' + c; } },
+    'Job': { page: 'ot.html', hash: function(c) { return 'job-' + c; } },
+    'Psalms': { page: 'ot.html', hash: function(c) { return 'psalms-' + c; } },
+    'Proverbs': { page: 'ot.html', hash: function(c) { return 'proverbs-' + c; } },
+    'Ecclesiastes': { page: 'ot.html', hash: function(c) { return 'ecclesiastes-' + c; } },
+    'Song of Solomon': { page: 'ot.html', hash: function(c) { return 'song-of-solomon-' + c; } },
+    'Isaiah': { page: 'ot.html', hash: function(c) { return 'isaiah-' + c; } },
+    'Jeremiah': { page: 'ot.html', hash: function(c) { return 'jeremiah-' + c; } },
+    'Lamentations': { page: 'ot.html', hash: function(c) { return 'lamentations-' + c; } },
+    'Ezekiel': { page: 'ot.html', hash: function(c) { return 'ezekiel-' + c; } },
+    'Daniel': { page: 'ot.html', hash: function(c) { return 'daniel-' + c; } },
+    'Hosea': { page: 'ot.html', hash: function(c) { return 'hosea-' + c; } },
+    'Joel': { page: 'ot.html', hash: function(c) { return 'joel-' + c; } },
+    'Amos': { page: 'ot.html', hash: function(c) { return 'amos-' + c; } },
+    'Obadiah': { page: 'ot.html', hash: function(c) { return 'obadiah-' + c; } },
+    'Jonah': { page: 'ot.html', hash: function(c) { return 'jonah-' + c; } },
+    'Micah': { page: 'ot.html', hash: function(c) { return 'micah-' + c; } },
+    'Nahum': { page: 'ot.html', hash: function(c) { return 'nahum-' + c; } },
+    'Habakkuk': { page: 'ot.html', hash: function(c) { return 'habakkuk-' + c; } },
+    'Zephaniah': { page: 'ot.html', hash: function(c) { return 'zephaniah-' + c; } },
+    'Haggai': { page: 'ot.html', hash: function(c) { return 'haggai-' + c; } },
+    'Zechariah': { page: 'ot.html', hash: function(c) { return 'zechariah-' + c; } },
+    'Malachi': { page: 'ot.html', hash: function(c) { return 'malachi-' + c; } },
+    // NT
+    'Matthew': { page: 'nt.html', hash: function(c) { return 'matthew-' + c; } },
+    'Mark': { page: 'nt.html', hash: function(c) { return 'mark-' + c; } },
+    'Luke': { page: 'nt.html', hash: function(c) { return 'luke-' + c; } },
+    'John': { page: 'nt.html', hash: function(c) { return 'john-' + c; } },
+    'Acts': { page: 'nt.html', hash: function(c) { return 'acts-' + c; } },
+    'Romans': { page: 'nt.html', hash: function(c) { return 'romans-' + c; } },
+    '1 Corinthians': { page: 'nt.html', hash: function(c) { return '1-corinthians-' + c; } },
+    '2 Corinthians': { page: 'nt.html', hash: function(c) { return '2-corinthians-' + c; } },
+    'Galatians': { page: 'nt.html', hash: function(c) { return 'galatians-' + c; } },
+    'Ephesians': { page: 'nt.html', hash: function(c) { return 'ephesians-' + c; } },
+    'Philippians': { page: 'nt.html', hash: function(c) { return 'philippians-' + c; } },
+    'Colossians': { page: 'nt.html', hash: function(c) { return 'colossians-' + c; } },
+    '1 Thessalonians': { page: 'nt.html', hash: function(c) { return '1-thessalonians-' + c; } },
+    '2 Thessalonians': { page: 'nt.html', hash: function(c) { return '2-thessalonians-' + c; } },
+    '1 Timothy': { page: 'nt.html', hash: function(c) { return '1-timothy-' + c; } },
+    '2 Timothy': { page: 'nt.html', hash: function(c) { return '2-timothy-' + c; } },
+    'Titus': { page: 'nt.html', hash: function(c) { return 'titus-' + c; } },
+    'Philemon': { page: 'nt.html', hash: function(c) { return 'philemon-' + c; } },
+    'Hebrews': { page: 'nt.html', hash: function(c) { return 'hebrews-' + c; } },
+    'James': { page: 'nt.html', hash: function(c) { return 'james-' + c; } },
+    '1 Peter': { page: 'nt.html', hash: function(c) { return '1-peter-' + c; } },
+    '2 Peter': { page: 'nt.html', hash: function(c) { return '2-peter-' + c; } },
+    '1 John': { page: 'nt.html', hash: function(c) { return '1-john-' + c; } },
+    '2 John': { page: 'nt.html', hash: function(c) { return '2-john-' + c; } },
+    '3 John': { page: 'nt.html', hash: function(c) { return '3-john-' + c; } },
+    'Jude': { page: 'nt.html', hash: function(c) { return 'jude-' + c; } },
+    'Revelation': { page: 'nt.html', hash: function(c) { return 'revelation-' + c; } },
+    // BOM
+    '1 Nephi': { page: 'bom/bom.html', hash: function(c) { return '1-nephi-' + c; } },
+    '2 Nephi': { page: 'bom/bom.html', hash: function(c) { return '2-nephi-' + c; } },
+    'Jacob': { page: 'bom/bom.html', hash: function(c) { return 'jacob-' + c; } },
+    'Enos': { page: 'bom/bom.html', hash: function(c) { return 'enos-' + c; } },
+    'Jarom': { page: 'bom/bom.html', hash: function(c) { return 'jarom-' + c; } },
+    'Omni': { page: 'bom/bom.html', hash: function(c) { return 'omni-' + c; } },
+    'Words of Mormon': { page: 'bom/bom.html', hash: function(c) { return 'words-of-mormon-' + c; } },
+    'Mosiah': { page: 'bom/bom.html', hash: function(c) { return 'mosiah-' + c; } },
+    'Alma': { page: 'bom/bom.html', hash: function(c) { return 'alma-' + c; } },
+    'Helaman': { page: 'bom/bom.html', hash: function(c) { return 'helaman-' + c; } },
+    '3 Nephi': { page: 'bom/bom.html', hash: function(c) { return '3-nephi-' + c; } },
+    '4 Nephi': { page: 'bom/bom.html', hash: function(c) { return '4-nephi-' + c; } },
+    'Mormon': { page: 'bom/bom.html', hash: function(c) { return 'mormon-' + c; } },
+    'Ether': { page: 'bom/bom.html', hash: function(c) { return 'ether-' + c; } },
+    'Moroni': { page: 'bom/bom.html', hash: function(c) { return 'moroni-' + c; } },
+    // D&C
+    'D&C': { page: 'dc.html', hash: function(c) { return 'dc' + c; } },
+    // PGP
+    'Moses': { page: 'pgp.html', hash: function(c) { return 'moses-' + c; } },
+    'Abraham': { page: 'pgp.html', hash: function(c) { return 'abraham-' + c; } },
+    'JS-H': { page: 'pgp.html', hash: function(c) { return 'js-history-' + c; } },
+    'JS-M': { page: 'pgp.html', hash: function(c) { return 'js-matthew-' + c; } },
+    'A-of-F': { page: 'pgp.html', hash: function(c) { return 'articles-of-faith-' + c; } }
+  };
+
+  /**
+   * Build a cross-volume URL with return navigation params.
+   * Returns null if book not found or same volume.
+   */
+  function buildCrossVolumeUrl(refKey, sourceVerseKey) {
+    if (!refKey) return null;
+    var parts = refKey.split('|');
+    if (parts.length < 3) return null;
+    var book = parts[0], chapter = parts[1];
+    var vol = _bookToVolume[book];
+    if (!vol) return null;
+
+    // Don't link if we're already on that page
+    var currentPage = window.location.pathname.split('/').pop() || '';
+    if (currentPage === vol.page || currentPage === vol.page.replace('bom/', '')) return null;
+
+    var url = vol.page + '?from=' + encodeURIComponent(window.location.pathname) +
+      '&verse=' + encodeURIComponent(sourceVerseKey) +
+      '#' + vol.hash(chapter);
+    return url;
+  }
+
   function parseScriptureRef(refText) {
     var norm = refText.replace(/\u00a0/g, ' ');
     for (var abbr in _abbrToFullBook) {
@@ -352,6 +471,21 @@
           card.appendChild(extDiv);
         }
 
+        // Add "View in Hebrew" link for cross-volume references
+        if (refKey && !isInternal) {
+          var crossUrl = buildCrossVolumeUrl(refKey, sourceVerseKey);
+          if (crossUrl) {
+            var crossDiv = document.createElement('div');
+            crossDiv.style.cssText = 'padding:4px 0;font-size:0.85em;';
+            var crossLink = document.createElement('a');
+            crossLink.href = crossUrl;
+            crossLink.style.cssText = 'color:var(--accent,#c8a84e);text-decoration:none;font-weight:600;';
+            crossLink.textContent = 'View in Hebrew \u2192';
+            crossDiv.appendChild(crossLink);
+            card.appendChild(crossDiv);
+          }
+        }
+
         refsContainer.appendChild(card);
       });
     } else {
@@ -470,6 +604,22 @@
               var extDiv = document.createElement('div');
               extDiv.innerHTML = extHtml;
               card.appendChild(extDiv);
+            }
+
+            // Add "View in Hebrew" link for cross-volume references
+            var rk = parseScriptureRef(fullRef);
+            if (rk) {
+              var cUrl = buildCrossVolumeUrl(rk, e.verseKey);
+              if (cUrl) {
+                var cDiv = document.createElement('div');
+                cDiv.style.cssText = 'padding:4px 0;font-size:0.85em;';
+                var cLink = document.createElement('a');
+                cLink.href = cUrl;
+                cLink.style.cssText = 'color:var(--accent,#c8a84e);text-decoration:none;font-weight:600;';
+                cLink.textContent = 'View in Hebrew \u2192';
+                cDiv.appendChild(cLink);
+                card.appendChild(cDiv);
+              }
             }
 
             refsContainer.appendChild(card);
