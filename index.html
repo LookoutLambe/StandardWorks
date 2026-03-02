@@ -6,6 +6,8 @@
 <title>The Standard Works · כְּתָבֵי הַקֹּדֶשׁ — Hebrew Interlinear</title>
 <meta name="description" content="The Standard Works in Hebrew — Old Testament, New Testament, Book of Mormon, Doctrine and Covenants, Pearl of Great Price">
 <meta name="theme-color" content="#1e2233">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
 <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 
@@ -555,6 +557,11 @@ function toggleDark() {
   } catch(e) {}
 })();
 
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
 </script>
 </body>
 </html>
