@@ -135,37 +135,6 @@ body.hide-gloss .arr-hw { font-size: 2.1em; }
 /* === READING PROGRESS === */
 #reading-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--accent); z-index: 200; width: 0%; transition: width 0.1s; }
 
-/* === AUDIO BAR === */
-#audio-bar {
-  display: none; position: fixed; left: 0; right: 0; z-index: 99;
-  background: #151929; border-bottom: 1px solid #2a2f44;
-  padding: 6px 16px; direction: ltr;
-  justify-content: center; align-items: center; gap: 10px;
-}
-#audio-bar.visible { display: flex; }
-#audio-bar audio {
-  height: 32px; max-width: 500px; flex: 1;
-  filter: sepia(20%) saturate(70%) brightness(0.9) hue-rotate(5deg);
-}
-#audio-bar .audio-label {
-  font-family: 'Crimson Pro', serif; font-size: 0.8em; color: #8a7a4a;
-  white-space: nowrap;
-}
-#audio-bar .audio-close {
-  background: none; border: none; color: #8a7a4a; font-size: 1.1em;
-  cursor: pointer; padding: 2px 6px; line-height: 1;
-}
-#audio-bar .audio-close:hover { color: #c8a84e; }
-#btn-audio {
-  background: transparent; border: 1px solid #3a3f55; color: #8a7a4a;
-  width: 32px; height: 32px; border-radius: 4px; cursor: pointer;
-  font-size: 1.1em; display: none; align-items: center; justify-content: center;
-  transition: all 0.15s;
-}
-#btn-audio:hover { background: #2a2f44; color: #c8a84e; }
-#btn-audio.playing { color: #c8a84e; border-color: #c8a84e; }
-body.audio-bar-open .page { padding-top: 95px; }
-
 /* === WORD POPUP === */
 #word-popup {
   display: none; position: fixed; z-index: 300;
@@ -336,11 +305,9 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
   .verse-num { min-width: 24px; font-size: 1em; }
   .controls-top { padding: 5px 8px; }
   .landing-section-grid { grid-template-columns: repeat(7, 1fr); }
-  #audio-bar { padding: 4px 8px; }
-  #audio-bar .audio-label { font-size: 0.7em; }
 }
 @media print {
-  .controls-top, .controls-bottom, #reading-progress, #word-popup, #search-container, #search-results, #audio-bar { display: none !important; }
+  .controls-top, .controls-bottom, #reading-progress, #word-popup, #search-container, #search-results { display: none !important; }
   .page { padding: 0; }
 }
 
@@ -359,7 +326,7 @@ body.dark-mode .hw { color: var(--ink); }
 body.dark-mode .gl { color: var(--gloss); }
 body.dark-mode .tl { color: var(--gloss); }
 body.dark-mode .page { background: #333333; }
-body.dark-mode .controls-top, body.dark-mode .controls-bottom, body.dark-mode #audio-bar { background: #0a0a0a; }
+body.dark-mode .controls-top, body.dark-mode .controls-bottom { background: #0a0a0a; }
 body.dark-mode .verse { border-color: #383838; }
 body.dark-mode .verse:hover { background: rgba(200, 168, 78, 0.08); }
 body.dark-mode .word-unit:hover { background: rgba(200, 168, 78, 0.10); }
@@ -786,14 +753,7 @@ body.dark-mode #xref-panel { background: #252525; border-color: #d4af37; }
     <span style="color:#3a3f55">&#x2502;</span>
     <button id="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode" aria-label="Toggle dark mode">&#x263D;</button>
     <button id="search-toggle" style="background:transparent;border:1px solid #3a3f55;color:#c8a84e;padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openSearch()" title="Search" aria-label="Search">&#x2315;</button>
-    <button id="btn-audio" onclick="toggleAudioBar()" title="Listen to chapter audio" aria-label="Listen to chapter audio">&#x1F50A;</button>
   </div>
-</div>
-
-<div id="audio-bar">
-  <span class="audio-label" id="audio-label">Matthew 1</span>
-  <audio id="audio-player" controls preload="none"></audio>
-  <button class="audio-close" onclick="toggleAudioBar()" title="Close audio bar" aria-label="Close audio bar">&times;</button>
 </div>
 
 <div class="controls-bottom">
@@ -1081,93 +1041,8 @@ function navTo(id, slideDir) {
   currentPageId = id;
   currentChapterId = isLanding ? null : id;
   updateNavButtons();
-  updateAudioSource(id);
   window.scrollTo({top: 0, behavior: 'instant'});
 }
-
-// === INTERNET ARCHIVE HEBREW NT AUDIO (MHNT 2020) ===
-var IA_AUDIO = {
-  matt:'matthew', mark:'mark', luke:'luke', john:'john',
-  acts:'acts', rom:'romans', '1co':'1corinthians', '2co':'2corinthians',
-  gal:'galatians', eph:'ephesians', php:'philippians', col:'colossians',
-  '1th':'1thessalonians', '2th':'2thessalonians',
-  '1ti':'1timothy', '2ti':'2timothy', tit:'titus', phm:'philemon',
-  heb:'hebrews', jas:'james', '1pe':'1peter', '2pe':'2peter',
-  '1jn':'1john', '2jn':'2john', '3jn':'3john', jude:'jude', rev:'revelation'
-};
-
-function getAudioUrl(chId) {
-  var info = getBookChapter(chId);
-  if (!info) return null;
-  var folder = IA_AUDIO[info.bookData.prefix];
-  if (!folder) return null;
-  var ch = info.chapter;
-  var chStr = ch < 10 ? '00' + ch : ch < 100 ? '0' + ch : '' + ch;
-  return 'https://archive.org/download/bible_Audio_Hebrewmhnt2020/' + folder + '/' + chStr + '.mp3';
-}
-
-function updateAudioSource(chId) {
-  var player = document.getElementById('audio-player');
-  var label = document.getElementById('audio-label');
-  var btn = document.getElementById('btn-audio');
-  if (!chId || chId === 'landing') {
-    player.pause();
-    player.removeAttribute('src');
-    btn.style.display = 'none';
-    if (document.getElementById('audio-bar').classList.contains('visible')) {
-      toggleAudioBar();
-    }
-    return;
-  }
-  var url = getAudioUrl(chId);
-  btn.style.display = url ? 'flex' : 'none';
-  if (!url) {
-    player.pause();
-    player.removeAttribute('src');
-    return;
-  }
-  var info = getBookChapter(chId);
-  label.textContent = info ? info.book + ' ' + info.chapter : '';
-  var wasPlaying = !player.paused;
-  player.src = url;
-  if (wasPlaying) player.play();
-}
-
-function positionAudioBar() {
-  var bar = document.getElementById('audio-bar');
-  var header = document.querySelector('.controls-top');
-  if (header && bar.classList.contains('visible')) {
-    bar.style.top = header.offsetHeight + 'px';
-  }
-}
-
-function toggleAudioBar() {
-  var bar = document.getElementById('audio-bar');
-  var btn = document.getElementById('btn-audio');
-  var player = document.getElementById('audio-player');
-  var isOpen = bar.classList.contains('visible');
-  if (isOpen) {
-    bar.classList.remove('visible');
-    document.body.classList.remove('audio-bar-open');
-    btn.classList.remove('playing');
-    player.pause();
-  } else {
-    bar.classList.add('visible');
-    document.body.classList.add('audio-bar-open');
-    btn.classList.add('playing');
-    positionAudioBar();
-  }
-}
-window.addEventListener('resize', positionAudioBar);
-
-document.getElementById('audio-player').addEventListener('play', function() {
-  document.getElementById('btn-audio').classList.add('playing');
-});
-document.getElementById('audio-player').addEventListener('pause', function() {
-  if (!document.getElementById('audio-bar').classList.contains('visible')) {
-    document.getElementById('btn-audio').classList.remove('playing');
-  }
-});
 
 // === MODE CONTROLS ===
 

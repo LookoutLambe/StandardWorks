@@ -1,4 +1,4 @@
-const CACHE_NAME = 'standard-works-v3';
+const CACHE_NAME = 'standard-works-v4';
 
 const CORE_ASSETS = [
   '/StandardWorks/index.html',
