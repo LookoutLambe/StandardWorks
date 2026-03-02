@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Messages from President Oaks · דברי הנשיא אוקס</title>
+<meta name="description" content="General Conference talks by President Dallin H. Oaks — with scripture cross-references to Hebrew interlinear text">
+<meta name="theme-color" content="#1e2233">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+
+/* ========== THEME ========== */
+:root {
+  --bg: #faf8f2;
+  --bg-deep: #f0ece0;
+  --ink: #1a1a1a;
+  --ink-light: #444;
+  --accent: #c8a84e;
+  --accent-light: #d4b96a;
+  --rule: #d6ceb8;
+  --rule-light: #e8e2d4;
+  --header-bg: #1e2233;
+  --header-text: #c8a84e;
+  --highlight: rgba(200, 168, 78, 0.10);
+  --talk-accent: #6a4c93;
+  --ref-color: #5dade2;
+}
+body.dark-mode {
+  --bg: #333333; --bg-deep: #2a2a2a;
+  --ink: #e8e0d0; --ink-light: #b0a890;
+  --accent: #d4af37; --accent-light: #e8c84e;
+  --rule: #444444; --rule-light: #383838;
+  --header-bg: #0a0a0a; --header-text: #d4af37;
+  --highlight: rgba(200, 168, 78, 0.15);
+  --talk-accent: #9b72cf;
+  --ref-color: #85c1e9;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Crimson Pro', 'Georgia', serif;
+  background: var(--bg);
+  color: var(--ink);
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ========== TOP BAR ========== */
+.controls-top {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: #1e2233; color: #c8a84e;
+  display: flex; justify-content: center; align-items: center;
+  padding: 6px 12px; gap: 12px; flex-wrap: wrap;
+  font-family: 'Crimson Pro', serif; font-size: 0.9em;
+  direction: ltr;
+}
+body.dark-mode .controls-top { background: #0a0a0a; }
+
+.nav-row { display: flex; align-items: center; gap: 12px; direction: ltr; }
+#nav-label { font-size: 1em; font-weight: 600; cursor: pointer; min-width: 100px; text-align: center; color: #c8a84e; }
+#nav-label:hover { text-decoration: underline; }
+
+.nav-prev, .nav-next {
+  background: transparent; border: 1px solid #3a3f55; color: #c8a84e;
+  width: 32px; height: 32px; border-radius: 4px; cursor: pointer;
+  font-size: 1.1em; display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s;
+}
+.nav-prev:hover:not(:disabled), .nav-next:hover:not(:disabled) { background: #2a2f44; }
+.nav-prev:disabled, .nav-next:disabled { opacity: 0.3; cursor: default; }
+
+.tools-group { display: flex; align-items: center; gap: 8px; direction: ltr; }
+.tools-group button {
+  background: transparent; border: 1px solid #3a3f55; color: #c8a84e;
+  padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 0.9em; transition: all 0.2s;
+}
+.tools-group button:hover { background: #2a2f44; }
+
+/* ========== NAV DROPDOWN ========== */
+#nav-dropdown {
+  display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  background: #1e2233; border: 1px solid #3a3f55; border-radius: 6px;
+  min-width: 360px; max-height: 70vh; overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4); z-index: 200; padding: 4px 0;
+}
+#nav-dropdown.open { display: block; }
+.dd-year {
+  display: flex; align-items: center; padding: 8px 14px;
+  color: #c8a84e; cursor: pointer; font-family: 'Cormorant Garamond', serif;
+  font-size: 1em; font-weight: 600;
+}
+.dd-year:hover { background: #2a2f44; }
+.dd-year .dd-arrow { margin-left: auto; font-size: 12px; opacity: 0.6; }
+.dd-year-talks { display: none; padding: 0 14px 6px; }
+.dd-year-talks.open { display: block; }
+.dd-talk-link {
+  display: block; padding: 6px 10px; color: #8a7a4a;
+  font-family: 'Crimson Pro', serif; font-size: 0.88em;
+  cursor: pointer; border-radius: 3px; transition: all 0.15s;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.dd-talk-link:hover { background: #2a2f44; color: #c8a84e; }
+.dd-talk-link .dd-conf-label { font-size: 0.78em; opacity: 0.6; margin-right: 6px; }
+.dd-talk-link .dd-ref-count { float: right; font-size: 0.75em; opacity: 0.5; }
+body.dark-mode #nav-dropdown { background: #0a0a0a; border-color: #444; }
+body.dark-mode #nav-dropdown .dd-year:hover,
+body.dark-mode #nav-dropdown .dd-talk-link:hover { background: #383838; }
+#nav-dropdown .dd-divider { border: none; border-top: 1px solid #2a2f44; margin: 4px 12px; }
+
+/* ========== SEARCH ========== */
+#search-container {
+  position: fixed; top: -60px; left: 0; right: 0; z-index: 150;
+  background: #fff; border-bottom: 2px solid var(--accent);
+  display: flex; align-items: center; padding: 10px 16px; gap: 10px;
+  transition: top 0.2s ease; direction: ltr;
+}
+#search-container.open { top: 0; }
+#search-input { flex: 1; border: 1px solid var(--rule); padding: 8px 12px; border-radius: 4px; font-size: 1em; font-family: 'Crimson Pro', serif; }
+#search-close { cursor: pointer; font-size: 1.2em; color: #888; padding: 4px 8px; }
+#search-results {
+  display: none; position: fixed; top: 50px; left: 0; right: 0; z-index: 149;
+  background: #fff; max-height: 60vh; overflow-y: auto;
+  border-bottom: 1px solid var(--rule); box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+#search-results.open { display: block; }
+.search-result { padding: 10px 16px; cursor: pointer; border-bottom: 1px solid var(--rule-light); }
+.search-result:hover { background: var(--highlight); }
+.search-result-ref { font-size: 0.8em; color: var(--accent); margin-bottom: 2px; }
+.search-result-text { font-size: 0.92em; color: var(--ink); }
+body.dark-mode #search-container { background: #252525; border-color: #444; }
+body.dark-mode #search-input { background: #2a2a2a; color: #e8e0d0; border-color: #444; }
+body.dark-mode #search-results { background: #252525; }
+
+/* ========== MAIN CONTENT ========== */
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 24px 40px;
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+/* ========== LANDING VIEW ========== */
+.talks-hero { text-align: center; padding: 30px 20px 10px; }
+.talks-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2em; font-weight: 600; color: var(--accent);
+  letter-spacing: 0.04em; margin-bottom: 4px;
+}
+.talks-hero .subtitle-he {
+  font-family: 'David Libre', serif;
+  font-size: 1.3em; color: var(--ink); direction: rtl;
+}
+.talks-hero .subtitle-desc {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.95em; color: var(--ink-light);
+  max-width: 520px; margin: 12px auto 0; line-height: 1.6;
+}
+.diamond-divider {
+  text-align: center; padding: 18px 0 24px;
+  color: var(--accent); font-size: 0.7em; letter-spacing: 12px;
+}
+.diamond-divider::before { content: "· · \25C6 · ·"; }
+
+/* Stats bar */
+.stats-bar {
+  display: flex; justify-content: center; gap: 32px;
+  padding: 12px 0 24px; font-size: 0.85em; color: var(--ink-light);
+}
+.stat-item { text-align: center; }
+.stat-num { font-size: 1.6em; font-weight: 700; color: var(--accent); display: block; }
+
+/* Conference year cards */
+.year-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px; max-width: 640px; margin: 0 auto 30px; padding: 0 8px;
+}
+.year-card {
+  background: linear-gradient(170deg, #0d1a2e 0%, #162744 100%);
+  border: 1px solid #2a4060; border-radius: 6px;
+  padding: 14px 12px; text-align: center; cursor: pointer;
+  transition: all 0.2s;
+}
+.year-card:hover { transform: translateY(-3px); box-shadow: 0 4px 16px rgba(0,0,0,0.25); border-color: var(--accent); }
+.year-card-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3em; font-weight: 600; color: #c8a84e;
+}
+.year-card-count { font-size: 0.78em; color: #5a6a80; margin-top: 2px; }
+body.dark-mode .year-card { background: linear-gradient(170deg, #0a0f1a 0%, #111828 100%); border-color: #333; }
+
+/* ========== TALK VIEW ========== */
+#talk-view { display: none; }
+.talk-header {
+  text-align: center; padding: 20px 0 16px;
+  border-bottom: 2px solid var(--rule); margin-bottom: 24px;
+}
+.talk-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8em; font-weight: 600; color: var(--ink);
+  line-height: 1.3; margin-bottom: 6px;
+}
+.talk-meta {
+  font-size: 0.9em; color: var(--ink-light);
+}
+.talk-meta .speaker { font-weight: 600; color: var(--accent); }
+
+.talk-refs-summary {
+  background: var(--bg-deep); border: 1px solid var(--rule);
+  border-radius: 8px; padding: 14px 18px; margin-bottom: 24px;
+}
+.talk-refs-summary h4 {
+  font-size: 0.85em; color: var(--accent);
+  text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;
+}
+.ref-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.ref-chip {
+  background: var(--bg); border: 1px solid var(--rule);
+  padding: 3px 10px; border-radius: 14px; font-size: 0.82em;
+  color: var(--ref-color); cursor: pointer; transition: all 0.15s;
+  text-decoration: none;
+}
+.ref-chip:hover { border-color: var(--ref-color); background: rgba(93,173,226,0.08); }
+
+.talk-paragraph {
+  font-size: 1.05em; line-height: 1.75;
+  margin-bottom: 16px; color: var(--ink);
+}
+.talk-paragraph .scripture-link {
+  color: var(--ref-color); cursor: pointer;
+  text-decoration: none; border-bottom: 1px dotted var(--ref-color);
+  transition: all 0.15s;
+}
+.talk-paragraph .scripture-link:hover {
+  color: var(--accent); border-bottom-color: var(--accent);
+}
+
+/* Source link */
+.talk-source {
+  text-align: center; padding: 20px 0; margin-top: 20px;
+  border-top: 1px solid var(--rule);
+}
+.talk-source a {
+  color: var(--accent); font-size: 0.9em; text-decoration: none;
+}
+.talk-source a:hover { text-decoration: underline; }
+
+/* ========== SCRIPTURE PREVIEW PANEL ========== */
+#scripture-panel {
+  position: fixed; top: 0; right: -420px; width: 400px; height: 100vh;
+  background: var(--bg); border-left: 2px solid var(--accent); z-index: 1200;
+  transition: right 0.3s ease; overflow-y: auto; padding: 0;
+  font-family: 'Crimson Pro', serif; box-shadow: -4px 0 20px rgba(0,0,0,0.3);
+}
+#scripture-panel.open { right: 0; }
+.sp-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 16px; border-bottom: 1px solid var(--rule);
+  position: sticky; top: 0; background: var(--bg); z-index: 2;
+}
+.sp-header h3 { margin: 0; font-size: 1.1em; color: var(--accent); font-weight: 600; }
+.sp-close { cursor: pointer; font-size: 1.3em; color: var(--ink-light); padding: 2px 6px; border-radius: 4px; }
+.sp-close:hover { background: rgba(200,168,78,0.15); color: var(--accent); }
+.sp-ref-title { font-weight: 600; color: var(--accent); font-size: 1.1em; padding: 12px 16px 4px; }
+.sp-verse-text { padding: 8px 16px; font-size: 0.95em; color: var(--ink); line-height: 1.6; }
+.sp-view-hebrew {
+  display: inline-block; margin: 8px 16px 16px;
+  background: var(--accent); color: #fff; padding: 6px 14px;
+  border-radius: 4px; font-size: 0.85em; text-decoration: none;
+  transition: all 0.15s; cursor: pointer;
+}
+.sp-view-hebrew:hover { opacity: 0.85; }
+body.dark-mode #scripture-panel { background: #333333; border-color: #d4af37; }
+
+/* ========== BACK LINK ========== */
+.back-nav {
+  text-align: center; margin: 20px 0;
+}
+.back-nav a {
+  font-family: 'Crimson Pro', serif; color: var(--accent);
+  text-decoration: none; font-size: 0.95em;
+  border: 1px solid var(--rule); padding: 8px 20px; border-radius: 4px;
+  transition: all 0.2s; display: inline-block;
+}
+.back-nav a:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+/* ========== READING PROGRESS ========== */
+#reading-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--accent); z-index: 200; width: 0%; transition: width 0.1s; }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 600px) {
+  .page { padding: 50px 12px 30px; }
+  .talks-hero h1 { font-size: 1.5em; }
+  .talk-title { font-size: 1.4em; }
+  #nav-dropdown { min-width: 280px; }
+  #scripture-panel { width: 85vw; right: -85vw; }
+  #scripture-panel.open { right: 0; }
+  .year-grid { grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); }
+}
+
+@media print {
+  .controls-top, #reading-progress, #search-container, #search-results, #scripture-panel { display: none !important; }
+  .page { padding: 0; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Reading progress bar -->
+<div id="reading-progress"></div>
+
+<!-- Top controls bar -->
+<div class="controls-top" role="navigation">
+  <div class="tools-group">
+    <button onclick="window.location.href='index.html'" title="Home" aria-label="Home">&#x1F3E0;</button>
+  </div>
+
+  <div class="nav-row" style="position:relative;">
+    <button class="nav-prev" id="prev-btn" disabled aria-label="Previous talk">&#x276E;</button>
+    <span id="nav-label" tabindex="0" role="button" aria-label="Select a talk">Messages from President Oaks</span>
+    <button class="nav-next" id="next-btn" disabled aria-label="Next talk">&#x276F;</button>
+    <div id="nav-dropdown" role="listbox"></div>
+  </div>
+
+  <div class="tools-group">
+    <button id="search-btn" onclick="toggleSearch()" title="Search" aria-label="Search">&#x1F50D;</button>
+    <button id="dark-mode-toggle" onclick="toggleDark()" title="Dark mode">&#x1F319;</button>
+  </div>
+</div>
+
+<!-- Search -->
+<div id="search-container">
+  <input type="text" id="search-input" placeholder="Search talks..." aria-label="Search talks">
+  <span id="search-close" onclick="toggleSearch()">&times;</span>
+</div>
+<div id="search-results"></div>
+
+<!-- Scripture preview panel -->
+<div id="scripture-panel">
+  <div class="sp-header">
+    <h3>Scripture Reference</h3>
+    <span class="sp-close" onclick="closeScripturePanel()">&times;</span>
+  </div>
+  <div id="sp-content"></div>
+</div>
+
+<!-- Return to scripture banner (shown when arriving from a scripture page) -->
+<div id="return-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:90;
+  background:#1e2233; color:#c8a84e; padding:10px 20px; text-align:center;
+  font-family:'Crimson Pro',serif; font-size:0.95em; border-top:2px solid #c8a84e;
+  box-shadow:0 -2px 12px rgba(0,0,0,0.2);">
+  <a id="return-link" href="#" style="color:#c8a84e; text-decoration:none;">
+    &#x276E; Return to <span id="return-verse"></span> in Hebrew
+  </a>
+  <span onclick="document.getElementById('return-banner').style.display='none'"
+    style="position:absolute;right:16px;top:50%;transform:translateY(-50%);cursor:pointer;opacity:0.6;">&times;</span>
+</div>
+
+<!-- Main content -->
+<div class="page">
+
+  <!-- Landing View -->
+  <div id="landing-view">
+    <div class="talks-hero">
+      <h1>Messages from President Oaks</h1>
+      <div class="subtitle-he">דברי הנשיא אוקס</div>
+      <div class="subtitle-desc">
+        General Conference addresses by President Dallin H. Oaks,
+        with scripture references linked to the Hebrew interlinear text.
+      </div>
+    </div>
+
+    <div class="diamond-divider"></div>
+
+    <div class="stats-bar">
+      <div class="stat-item"><span class="stat-num" id="stat-talks">—</span>Talks</div>
+      <div class="stat-item"><span class="stat-num" id="stat-refs">—</span>Scripture Refs</div>
+      <div class="stat-item"><span class="stat-num" id="stat-years">—</span>Years</div>
+    </div>
+
+    <div id="year-grid" class="year-grid"></div>
+
+    <div class="back-nav">
+      <a href="index.html">&larr; Back to Standard Works</a>
+    </div>
+  </div>
+
+  <!-- Talk View -->
+  <div id="talk-view">
+    <div id="talk-content"></div>
+    <div class="back-nav" style="margin-top:30px;">
+      <a href="#" onclick="showLanding(); return false;">&larr; Back to All Talks</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- Data scripts -->
+<script src="talks_data/oaks_talks.js"></script>
+<script src="talks_data/oaks_scripture_index.js"></script>
+<script src="bom/scripture_verses.js"></script>
+
+<script>
+(function() {
+  'use strict';
+
+  // ── State ──
+  var talks = window._oaksTalksData || [];
+  var currentTalkIdx = -1;
+  var talkOrder = [];
+
+  // ── Scripture ref → volume page mapping ──
+  var bookToPage = {
+    'Genesis': 'ot.html', 'Exodus': 'ot.html', 'Leviticus': 'ot.html', 'Numbers': 'ot.html',
+    'Deuteronomy': 'ot.html', 'Joshua': 'ot.html', 'Judges': 'ot.html', 'Ruth': 'ot.html',
+    '1 Samuel': 'ot.html', '2 Samuel': 'ot.html', '1 Kings': 'ot.html', '2 Kings': 'ot.html',
+    '1 Chronicles': 'ot.html', '2 Chronicles': 'ot.html', 'Ezra': 'ot.html', 'Nehemiah': 'ot.html',
+    'Esther': 'ot.html', 'Job': 'ot.html', 'Psalms': 'ot.html', 'Proverbs': 'ot.html',
+    'Ecclesiastes': 'ot.html', 'Song of Solomon': 'ot.html', 'Isaiah': 'ot.html', 'Jeremiah': 'ot.html',
+    'Lamentations': 'ot.html', 'Ezekiel': 'ot.html', 'Daniel': 'ot.html', 'Hosea': 'ot.html',
+    'Joel': 'ot.html', 'Amos': 'ot.html', 'Obadiah': 'ot.html', 'Jonah': 'ot.html',
+    'Micah': 'ot.html', 'Nahum': 'ot.html', 'Habakkuk': 'ot.html', 'Zephaniah': 'ot.html',
+    'Haggai': 'ot.html', 'Zechariah': 'ot.html', 'Malachi': 'ot.html',
+    'Matthew': 'nt.html', 'Mark': 'nt.html', 'Luke': 'nt.html', 'John': 'nt.html',
+    'Acts': 'nt.html', 'Romans': 'nt.html', '1 Corinthians': 'nt.html', '2 Corinthians': 'nt.html',
+    'Galatians': 'nt.html', 'Ephesians': 'nt.html', 'Philippians': 'nt.html', 'Colossians': 'nt.html',
+    '1 Thessalonians': 'nt.html', '2 Thessalonians': 'nt.html',
+    '1 Timothy': 'nt.html', '2 Timothy': 'nt.html', 'Titus': 'nt.html', 'Philemon': 'nt.html',
+    'Hebrews': 'nt.html', 'James': 'nt.html', '1 Peter': 'nt.html', '2 Peter': 'nt.html',
+    '1 John': 'nt.html', '2 John': 'nt.html', '3 John': 'nt.html', 'Jude': 'nt.html', 'Revelation': 'nt.html',
+    'D&C': 'dc.html',
+    'Moses': 'pgp.html', 'Abraham': 'pgp.html', 'JS-H': 'pgp.html', 'JS-M': 'pgp.html', 'A-of-F': 'pgp.html',
+    '1 Nephi': 'bom/bom.html', '2 Nephi': 'bom/bom.html', 'Jacob': 'bom/bom.html', 'Enos': 'bom/bom.html',
+    'Jarom': 'bom/bom.html', 'Omni': 'bom/bom.html', 'Words of Mormon': 'bom/bom.html',
+    'Mosiah': 'bom/bom.html', 'Alma': 'bom/bom.html', 'Helaman': 'bom/bom.html',
+    '3 Nephi': 'bom/bom.html', '4 Nephi': 'bom/bom.html', 'Mormon': 'bom/bom.html',
+    'Ether': 'bom/bom.html', 'Moroni': 'bom/bom.html'
+  };
+
+  // ── Format scripture reference for display ──
+  function formatRef(key) {
+    var parts = key.split('|');
+    if (parts.length < 3) return key;
+    if (parts[2] === '0') return parts[0] + ' ' + parts[1];
+    return parts[0] + ' ' + parts[1] + ':' + parts[2];
+  }
+
+  // ── Get link to Hebrew interlinear page ──
+  function getHebrewLink(refKey) {
+    var parts = refKey.split('|');
+    var book = parts[0];
+    var page = bookToPage[book];
+    if (!page) return null;
+    return page;
+  }
+
+  // ── Build landing page ──
+  function buildLanding() {
+    if (!talks || talks.length === 0) {
+      document.getElementById('year-grid').innerHTML = '<p style="text-align:center;color:var(--ink-light);">No talk data found. Run <code>node fetch_oaks_talks.js</code> to generate data.</p>';
+      return;
+    }
+
+    // Stats
+    var totalRefs = talks.reduce(function(s, t) { return s + t.scriptureRefs.length; }, 0);
+    var years = {};
+    talks.forEach(function(t) { years[t.year] = true; });
+    document.getElementById('stat-talks').textContent = talks.length;
+    document.getElementById('stat-refs').textContent = totalRefs;
+    document.getElementById('stat-years').textContent = Object.keys(years).length;
+
+    // Group by year
+    var byYear = {};
+    talks.forEach(function(t) {
+      if (!byYear[t.year]) byYear[t.year] = [];
+      byYear[t.year].push(t);
+    });
+
+    var sortedYears = Object.keys(byYear).sort(function(a, b) { return b - a; });
+
+    // Year grid
+    var gridHtml = '';
+    sortedYears.forEach(function(year) {
+      var count = byYear[year].length;
+      gridHtml += '<div class="year-card" onclick="filterByYear(' + year + ')">';
+      gridHtml += '<div class="year-card-year">' + year + '</div>';
+      gridHtml += '<div class="year-card-count">' + count + ' talk' + (count !== 1 ? 's' : '') + '</div>';
+      gridHtml += '</div>';
+    });
+    document.getElementById('year-grid').innerHTML = gridHtml;
+
+    // Build talk order (newest first)
+    talkOrder = [];
+    for (var i = 0; i < talks.length; i++) talkOrder.push(i);
+
+    // Build navigation dropdown
+    buildNavDropdown(sortedYears, byYear);
+  }
+
+  // ── Build nav dropdown ──
+  function buildNavDropdown(sortedYears, byYear) {
+    var ddHtml = '';
+    sortedYears.forEach(function(year) {
+      ddHtml += '<div class="dd-year" onclick="toggleYearDD(this)">' + year + ' <span class="dd-arrow">&#x25BC;</span></div>';
+      ddHtml += '<div class="dd-year-talks">';
+      byYear[year].forEach(function(t) {
+        var idx = talks.indexOf(t);
+        var refCount = t.scriptureRefs.length;
+        ddHtml += '<div class="dd-talk-link" onclick="showTalk(' + idx + ')">';
+        ddHtml += '<span class="dd-conf-label">' + t.conference + '</span> ';
+        ddHtml += t.title;
+        if (refCount > 0) ddHtml += '<span class="dd-ref-count">' + refCount + ' refs</span>';
+        ddHtml += '</div>';
+      });
+      ddHtml += '</div>';
+      ddHtml += '<hr class="dd-divider">';
+    });
+    document.getElementById('nav-dropdown').innerHTML = ddHtml;
+  }
+
+  // ── Show talk ──
+  window.showTalk = function(idx) {
+    if (idx < 0 || idx >= talks.length) return;
+    currentTalkIdx = idx;
+    var talk = talks[idx];
+
+    // Update nav
+    document.getElementById('nav-label').textContent = talk.title;
+    document.getElementById('prev-btn').disabled = (idx <= 0);
+    document.getElementById('next-btn').disabled = (idx >= talks.length - 1);
+    closeNavDropdown();
+
+    // Build talk content
+    var html = '<div class="talk-header">';
+    html += '<div class="talk-title">' + escHtml(talk.title) + '</div>';
+    html += '<div class="talk-meta">';
+    html += '<span class="speaker">President Dallin H. Oaks</span> &middot; ';
+    html += talk.conference;
+    if (talk.session) html += ' &middot; ' + escHtml(talk.session);
+    html += '</div></div>';
+
+    // Scripture refs summary
+    if (talk.scriptureRefs.length > 0) {
+      html += '<div class="talk-refs-summary">';
+      html += '<h4>Scripture References (' + talk.scriptureRefs.length + ')</h4>';
+      html += '<div class="ref-chips">';
+      talk.scriptureRefs.forEach(function(ref) {
+        html += '<span class="ref-chip" onclick="openScripturePanel(\'' + escAttr(ref) + '\')">' + formatRef(ref) + '</span>';
+      });
+      html += '</div></div>';
+    }
+
+    // Paragraphs
+    if (talk.paragraphs && talk.paragraphs.length > 0) {
+      talk.paragraphs.forEach(function(p) {
+        var pText = escHtml(p.text);
+        // Link scripture refs within the text
+        if (p.refs && p.refs.length > 0) {
+          p.refs.forEach(function(ref) {
+            var display = formatRef(ref);
+            // Try to find and link the reference text in the paragraph
+            var pattern = display.replace(/([()[\]{}.*+?^$|\\])/g, '\\$1');
+            var re = new RegExp('(' + pattern + ')', 'g');
+            pText = pText.replace(re, '<span class="scripture-link" onclick="openScripturePanel(\'' + escAttr(ref) + '\')">$1</span>');
+          });
+        }
+        html += '<p class="talk-paragraph">' + pText + '</p>';
+      });
+    }
+
+    // Source link
+    html += '<div class="talk-source">';
+    html += '<a href="https://www.churchofjesuschrist.org/study' + talk.uri + '?lang=eng" target="_blank" rel="noopener">';
+    html += 'Read on churchofjesuschrist.org &rarr;</a></div>';
+
+    document.getElementById('talk-content').innerHTML = html;
+    document.getElementById('landing-view').style.display = 'none';
+    document.getElementById('talk-view').style.display = 'block';
+    window.scrollTo(0, 0);
+    updateHash();
+  };
+
+  // ── Show landing ──
+  window.showLanding = function() {
+    currentTalkIdx = -1;
+    document.getElementById('landing-view').style.display = 'block';
+    document.getElementById('talk-view').style.display = 'none';
+    document.getElementById('nav-label').textContent = 'Messages from President Oaks';
+    document.getElementById('prev-btn').disabled = true;
+    document.getElementById('next-btn').disabled = true;
+    window.location.hash = '';
+    window.scrollTo(0, 0);
+  };
+
+  // ── Filter by year ──
+  window.filterByYear = function(year) {
+    // Find first talk of that year and show it
+    for (var i = 0; i < talks.length; i++) {
+      if (talks[i].year === year) {
+        showTalk(i);
+        return;
+      }
+    }
+  };
+
+  // ── Nav dropdown ──
+  window.toggleYearDD = function(el) {
+    var talks = el.nextElementSibling;
+    talks.classList.toggle('open');
+    var arrow = el.querySelector('.dd-arrow');
+    arrow.textContent = talks.classList.contains('open') ? '\u25B2' : '\u25BC';
+  };
+
+  document.getElementById('nav-label').addEventListener('click', function() {
+    document.getElementById('nav-dropdown').classList.toggle('open');
+  });
+
+  function closeNavDropdown() {
+    document.getElementById('nav-dropdown').classList.remove('open');
+  }
+
+  // Close dropdown on outside click
+  document.addEventListener('click', function(e) {
+    var dd = document.getElementById('nav-dropdown');
+    var label = document.getElementById('nav-label');
+    if (dd.classList.contains('open') && !dd.contains(e.target) && e.target !== label) {
+      dd.classList.remove('open');
+    }
+  });
+
+  // ── Navigation buttons ──
+  document.getElementById('prev-btn').addEventListener('click', function() {
+    if (currentTalkIdx > 0) showTalk(currentTalkIdx - 1);
+  });
+  document.getElementById('next-btn').addEventListener('click', function() {
+    if (currentTalkIdx < talks.length - 1) showTalk(currentTalkIdx + 1);
+  });
+
+  // ── Scripture panel ──
+  window.openScripturePanel = function(refKey) {
+    var panel = document.getElementById('scripture-panel');
+    var content = document.getElementById('sp-content');
+    var display = formatRef(refKey);
+
+    var html = '<div class="sp-ref-title">' + display + '</div>';
+
+    // Try to get verse text from scripture_verses
+    if (window._scriptureVerses && window._scriptureVerses[refKey]) {
+      html += '<div class="sp-verse-text">' + window._scriptureVerses[refKey] + '</div>';
+    } else {
+      html += '<div class="sp-verse-text" style="color:var(--ink-light);font-style:italic;">Verse text not available in current data. View in Hebrew interlinear below.</div>';
+    }
+
+    // Link to Hebrew page
+    var link = getHebrewLink(refKey);
+    if (link) {
+      html += '<a class="sp-view-hebrew" href="' + link + '" target="_blank">View in Hebrew Interlinear &rarr;</a>';
+    }
+
+    // Show other talks that cite this verse
+    if (window._oaksScriptureIndex && window._oaksScriptureIndex[refKey]) {
+      var citing = window._oaksScriptureIndex[refKey];
+      if (citing.length > 1 || (citing.length === 1 && currentTalkIdx >= 0 && citing[0].talkId !== talks[currentTalkIdx].id)) {
+        html += '<div style="padding:12px 16px;border-top:1px solid var(--rule);margin-top:8px;">';
+        html += '<h4 style="font-size:0.85em;color:var(--accent);margin-bottom:8px;">Also Referenced In</h4>';
+        citing.forEach(function(c) {
+          if (currentTalkIdx >= 0 && c.talkId === talks[currentTalkIdx].id) return;
+          var tIdx = talks.findIndex(function(t) { return t.id === c.talkId; });
+          html += '<div style="padding:4px 0;font-size:0.88em;cursor:pointer;color:var(--ref-color);" onclick="showTalk(' + tIdx + ');closeScripturePanel();">';
+          html += c.title + ' (' + c.conference + ')';
+          html += '</div>';
+        });
+        html += '</div>';
+      }
+    }
+
+    content.innerHTML = html;
+    panel.classList.add('open');
+  };
+
+  window.closeScripturePanel = function() {
+    document.getElementById('scripture-panel').classList.remove('open');
+  };
+
+  // ── Search ──
+  window.toggleSearch = function() {
+    var sc = document.getElementById('search-container');
+    sc.classList.toggle('open');
+    if (sc.classList.contains('open')) {
+      document.getElementById('search-input').focus();
+    } else {
+      document.getElementById('search-results').classList.remove('open');
+    }
+  };
+
+  document.getElementById('search-input').addEventListener('input', function() {
+    var query = this.value.trim().toLowerCase();
+    var results = document.getElementById('search-results');
+    if (query.length < 2) {
+      results.classList.remove('open');
+      return;
+    }
+
+    var matches = [];
+    talks.forEach(function(t, idx) {
+      if (t.title.toLowerCase().includes(query)) {
+        matches.push({ idx: idx, type: 'title', text: t.title, ref: t.conference });
+      }
+      if (t.paragraphs) {
+        t.paragraphs.forEach(function(p) {
+          if (p.text.toLowerCase().includes(query)) {
+            var snippet = p.text.substring(0, 120);
+            matches.push({ idx: idx, type: 'content', text: snippet + '...', ref: t.title });
+          }
+        });
+      }
+    });
+
+    if (matches.length === 0) {
+      results.innerHTML = '<div class="search-result" style="color:var(--ink-light);">No results found</div>';
+    } else {
+      var html = '';
+      matches.slice(0, 20).forEach(function(m) {
+        html += '<div class="search-result" onclick="showTalk(' + m.idx + ');toggleSearch();">';
+        html += '<div class="search-result-ref">' + escHtml(m.ref) + '</div>';
+        html += '<div class="search-result-text">' + escHtml(m.text) + '</div>';
+        html += '</div>';
+      });
+      results.innerHTML = html;
+    }
+    results.classList.add('open');
+  });
+
+  // ── Hash routing ──
+  function updateHash() {
+    if (currentTalkIdx >= 0) {
+      window.location.hash = talks[currentTalkIdx].id;
+    }
+  }
+
+  function handleHash() {
+    var hash = window.location.hash.replace('#', '');
+    if (!hash) { showLanding(); return; }
+    for (var i = 0; i < talks.length; i++) {
+      if (talks[i].id === hash) { showTalk(i); return; }
+    }
+    showLanding();
+  }
+
+  window.addEventListener('hashchange', handleHash);
+
+  // ── Reading progress ──
+  window.addEventListener('scroll', function() {
+    var h = document.documentElement;
+    var pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    document.getElementById('reading-progress').style.width = Math.min(pct, 100) + '%';
+  });
+
+  // ── Dark mode ──
+  window.toggleDark = function() {
+    document.body.classList.toggle('dark-mode');
+    var isDark = document.body.classList.contains('dark-mode');
+    document.getElementById('dark-mode-toggle').textContent = isDark ? '\u2600\uFE0F' : '\uD83C\uDF19';
+    try { localStorage.setItem('sw-dark', isDark ? '1' : '0'); } catch(e) {}
+  };
+
+  // Restore dark mode
+  (function() {
+    try {
+      if (localStorage.getItem('sw-dark') === '1') {
+        document.body.classList.add('dark-mode');
+        document.getElementById('dark-mode-toggle').textContent = '\u2600\uFE0F';
+      }
+    } catch(e) {}
+  })();
+
+  // ── Keyboard shortcuts ──
+  document.addEventListener('keydown', function(e) {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if (e.key === 'ArrowLeft' && currentTalkIdx > 0) showTalk(currentTalkIdx - 1);
+    if (e.key === 'ArrowRight' && currentTalkIdx < talks.length - 1) showTalk(currentTalkIdx + 1);
+    if (e.key === 'Escape') { closeScripturePanel(); closeNavDropdown(); }
+    if (e.key === '/' || e.key === 'f' && e.ctrlKey) { e.preventDefault(); toggleSearch(); }
+  });
+
+  // ── Utility ──
+  function escHtml(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function escAttr(s) {
+    return String(s).replace(/'/g, "\\'").replace(/"/g, '&quot;');
+  }
+
+  // ── Detect return-to-scripture parameter ──
+  (function() {
+    var params = new URLSearchParams(window.location.search);
+    var fromPage = params.get('from');
+    var verseKey = params.get('verse');
+    if (fromPage && verseKey) {
+      var parts = verseKey.split('|');
+      var display = parts.length >= 3 ? parts[0] + ' ' + parts[1] + ':' + parts[2] : verseKey;
+      document.getElementById('return-verse').textContent = display;
+      document.getElementById('return-link').href = fromPage;
+      document.getElementById('return-banner').style.display = 'block';
+    }
+  })();
+
+  // ── Init ──
+  buildLanding();
+  handleHash();
+
+})();
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+</script>
+</body>
+</html>

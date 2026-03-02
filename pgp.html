@@ -1081,6 +1081,8 @@ body.dark-mode .word-unit.xref-linked:hover .gl { color: #85c1e9 !important; }
 .xref-ref-nodata { font-size: 0.85em; color: var(--ink-light); font-style: italic; padding: 16px; }
 body.dark-mode #xref-panel { background: #252525; border-color: #d4af37; }
 
+.talk-ref-badge { display: block; font-size: 0.65em; cursor: pointer; margin-top: 2px; opacity: 0.8; transition: opacity 0.2s, transform 0.2s; line-height: 1; }
+.talk-ref-badge:hover { opacity: 1; transform: scale(1.2); }
 </style>
 </head>
 <body>
@@ -1628,6 +1630,8 @@ try {
 <script src="pgp_crossrefs.js"></script>
 <script>window._volumeCrossrefsData = window._pgpCrossrefsData;</script>
 <script src="bom/scripture_verses.js"></script>
+<script src="talks_data/oaks_scripture_index.js"></script>
+<script src="talks_data/oaks_talks.js"></script>
 <script src="crossrefs_engine.js"></script>
 
 <script>

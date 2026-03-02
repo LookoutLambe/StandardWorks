@@ -1,4 +1,4 @@
-const CACHE_NAME = 'standard-works-v5';
+const CACHE_NAME = 'standard-works-v7';
 
 const CORE_ASSETS = [
   '/StandardWorks/index.html',
@@ -6,13 +6,16 @@ const CORE_ASSETS = [
   '/StandardWorks/nt.html',
   '/StandardWorks/dc.html',
   '/StandardWorks/pgp.html',
+  '/StandardWorks/talks.html',
+  '/StandardWorks/study_plans.html',
   '/StandardWorks/manifest.json',
   '/StandardWorks/icons/icon-192.png',
   '/StandardWorks/icons/icon-512.png',
   '/StandardWorks/images/cover-bom.jpg',
   '/StandardWorks/strongs_lookup.js',
   '/StandardWorks/_strongs_lookup.json',
-  '/StandardWorks/_supplement.json'
+  '/StandardWorks/_supplement.json',
+  '/StandardWorks/crossrefs_engine.js'
 ];
 
 // Install — cache core assets
@@ -38,7 +41,7 @@ self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
 
   // Verse data files — network first, fall back to cache
-  if (url.pathname.match(/_(verses|cache)\//)) {
+  if (url.pathname.match(/_(verses|cache)\//) || url.pathname.match(/talks_data\//)) {
     event.respondWith(
       fetch(event.request)
         .then(response => {

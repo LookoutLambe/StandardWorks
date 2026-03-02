@@ -586,9 +586,17 @@
     }
   }
 
+  // ── Wrap addCrossRefMarkers to also apply talk ref markers ──
+  var _origAddCrossRefMarkers = addCrossRefMarkers;
+  function addCrossRefMarkersWithTalks() {
+    _origAddCrossRefMarkers();
+    // Chain talk reference markers after cross-refs
+    setTimeout(addTalkRefMarkers, 200);
+  }
+
   // ── Expose globally ──
   window.loadCrossRefs = loadCrossRefs;
-  window.addCrossRefMarkers = addCrossRefMarkers;
+  window.addCrossRefMarkers = addCrossRefMarkersWithTalks;
   window.openXrefPanel = openXrefPanel;
   window.openRootXrefPanel = openRootXrefPanel;
   window.closeXrefPanel = closeXrefPanel;
@@ -597,5 +605,128 @@
 
   // ── Auto-load after delay ──
   setTimeout(loadCrossRefs, 500);
+
+  // ══════════════════════════════════════════════════════════════
+  // ── TALK REFERENCE MARKERS (President Oaks Conference Talks) ──
+  // ══════════════════════════════════════════════════════════════
+
+  /**
+   * Adds talk reference badges to verses that are cited in
+   * President Oaks' conference talks. Requires oaks_scripture_index.js
+   * to be loaded (sets window._oaksScriptureIndex).
+   */
+  function addTalkRefMarkers() {
+    if (!window._oaksScriptureIndex) return;
+
+    var allVerses = document.querySelectorAll('[data-verse-key]');
+    allVerses.forEach(function(verseDiv) {
+      // Skip if already processed
+      if (verseDiv.getAttribute('data-talk-refs-applied')) return;
+
+      var key = verseDiv.getAttribute('data-verse-key');
+      var talkRefs = window._oaksScriptureIndex[key];
+      if (!talkRefs || talkRefs.length === 0) return;
+
+      verseDiv.setAttribute('data-talk-refs-applied', '1');
+
+      // Create a talk badge under the verse number
+      var badge = document.createElement('span');
+      badge.className = 'talk-ref-badge';
+      badge.title = 'Referenced in ' + talkRefs.length + ' talk' + (talkRefs.length > 1 ? 's' : '') + ' by President Oaks';
+      badge.textContent = '\uD83C\uDF99\uFE0F';
+      badge.onclick = function(e) {
+        e.stopPropagation();
+        openTalkRefPanel(key, talkRefs);
+      };
+
+      // Place inside .verse-num, below the number
+      var verseNum = verseDiv.querySelector('.verse-num');
+      if (verseNum) {
+        verseNum.appendChild(badge);
+      } else {
+        verseDiv.appendChild(badge);
+      }
+    });
+  }
+
+  /**
+   * Opens a mini-panel showing which talks reference a verse.
+   * Reuses the cross-reference panel structure.
+   */
+  function openTalkRefPanel(verseKey, talkRefs) {
+    var panel = document.getElementById('xref-panel');
+    if (!panel) return;
+
+    var parts = verseKey.split('|');
+    var displayRef = parts.length >= 3 ? parts[0] + ' ' + parts[1] + ':' + parts[2] : verseKey;
+
+    panel.querySelector('.xref-panel-word').textContent = displayRef;
+    panel.querySelector('.xref-panel-category').textContent =
+      'Referenced in ' + talkRefs.length + ' Conference Talk' + (talkRefs.length > 1 ? 's' : '');
+
+    var refsContainer = document.getElementById('xref-panel-refs');
+    refsContainer.innerHTML = '';
+
+    talkRefs.forEach(function(t) {
+      var card = document.createElement('div');
+      card.className = 'xref-ref-card';
+
+      var titleDiv = document.createElement('div');
+      titleDiv.className = 'xref-ref-title';
+      titleDiv.style.cursor = 'pointer';
+      titleDiv.innerHTML = '<span style="color:var(--accent);">\uD83C\uDF99\uFE0F</span> ' +
+        '<span style="font-weight:600;">' + (t.title || 'Untitled') + '</span>' +
+        '<span style="font-size:0.8em;color:var(--ink-light,#888);margin-left:8px;">' + (t.conference || '') + '</span>';
+      titleDiv.onclick = function() {
+        window.open('talks.html#' + t.talkId, '_blank');
+      };
+      card.appendChild(titleDiv);
+
+      if (t.snippet) {
+        var snippetDiv = document.createElement('div');
+        snippetDiv.className = 'xref-ref-english';
+        snippetDiv.style.fontStyle = 'italic';
+        snippetDiv.textContent = t.snippet;
+        card.appendChild(snippetDiv);
+      }
+
+      // Build talk URI for church website link
+      var talkUri = '';
+      if (window._oaksTalksData) {
+        for (var ti = 0; ti < window._oaksTalksData.length; ti++) {
+          if (window._oaksTalksData[ti].id === t.talkId) {
+            talkUri = window._oaksTalksData[ti].uri || '';
+            break;
+          }
+        }
+      }
+
+      // Build return URL so talks.html can link back to this verse
+      var returnUrl = window.location.pathname;
+      var returnLabel = displayRef;
+
+      var linkDiv = document.createElement('div');
+      linkDiv.style.cssText = 'padding:6px 0;font-size:0.85em;display:flex;gap:12px;flex-wrap:wrap;';
+      var talkPageUrl = 'talks.html?from=' + encodeURIComponent(returnUrl) + '&verse=' + encodeURIComponent(verseKey) + '#' + t.talkId;
+      var links = '<a href="' + talkPageUrl + '" target="_blank" style="color:var(--accent);text-decoration:none;">Read talk \u2192</a>';
+      if (talkUri) {
+        links += '<a href="https://www.churchofjesuschrist.org/study' + talkUri + '?lang=eng" target="_blank" style="color:var(--accent);text-decoration:none;">\uD83C\uDF10 churchofjesuschrist.org</a>';
+      }
+      linkDiv.innerHTML = links;
+      card.appendChild(linkDiv);
+
+      refsContainer.appendChild(card);
+    });
+
+    panel.scrollTop = 0;
+    panel.classList.add('open');
+  }
+
+  // ── Expose talk ref functions globally ──
+  window.addTalkRefMarkers = addTalkRefMarkers;
+  window.openTalkRefPanel = openTalkRefPanel;
+
+  // ── Auto-load talk refs after cross-refs ──
+  setTimeout(addTalkRefMarkers, 1500);
 
 })();

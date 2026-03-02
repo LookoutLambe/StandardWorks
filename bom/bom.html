@@ -1784,6 +1784,11 @@ body.dark-mode #nav-dropdown .dd-ch:hover { background: #383838; }
 }
 #nav-hint.show { opacity: 1; }
 body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
+
+/* === TALK REFERENCE BADGES === */
+.talk-ref-badge { display: block; font-size: 0.65em; cursor: pointer; margin-top: 2px; opacity: 0.8; transition: opacity 0.2s, transform 0.2s; line-height: 1; }
+.talk-ref-badge:hover { opacity: 1; transform: scale(1.2); }
+
 </style>
 </head>
 <body>
@@ -8306,6 +8311,36 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
+</script>
+<script src="../talks_data/oaks_scripture_index.js"></script>
+<script src="../talks_data/oaks_talks.js"></script>
+<script>
+// Talk reference markers for President Oaks conference talks
+(function() {
+  function addBomTalkRefMarkers() {
+    if (!window._oaksScriptureIndex) return;
+    var allVerses = document.querySelectorAll('[data-verse-key]');
+    allVerses.forEach(function(verseDiv) {
+      if (verseDiv.getAttribute('data-talk-refs-applied')) return;
+      var key = verseDiv.getAttribute('data-verse-key');
+      var talkRefs = window._oaksScriptureIndex[key];
+      if (!talkRefs || talkRefs.length === 0) return;
+      verseDiv.setAttribute('data-talk-refs-applied', '1');
+      var badge = document.createElement('span');
+      badge.className = 'talk-ref-badge';
+      badge.title = 'Referenced in ' + talkRefs.length + ' talk' + (talkRefs.length > 1 ? 's' : '') + ' by President Oaks';
+      badge.textContent = '\uD83C\uDF99\uFE0F';
+      badge.onclick = function(e) {
+        e.stopPropagation();
+        window.open('../talks.html#' + talkRefs[0].talkId, '_blank');
+      };
+      var verseNum = verseDiv.querySelector('.verse-num');
+      if (verseNum) verseNum.appendChild(badge);
+      else verseDiv.appendChild(badge);
+    });
+  }
+  setTimeout(addBomTalkRefMarkers, 2000);
+})();
 </script>
 </body>
 </html>
