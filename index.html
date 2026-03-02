@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Standard Works · כְּתָבֵי הַקֹּדֶשׁ — Hebrew Interlinear</title>
+<meta name="description" content="The Standard Works in Hebrew — Old Testament, New Testament, Book of Mormon, Doctrine and Covenants, Pearl of Great Price">
+<meta name="theme-color" content="#1e2233">
+<link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+
+/* ========== THEME ========== */
+:root {
+  --bg: #faf8f2;
+  --bg-deep: #f0ece0;
+  --ink: #1a1a1a;
+  --ink-light: #444;
+  --accent: #c8a84e;
+  --accent-light: #d4b96a;
+  --rule: #d6ceb8;
+  --rule-light: #e8e2d4;
+  --header-bg: #1e2233;
+  --header-text: #c8a84e;
+  --highlight: rgba(200, 168, 78, 0.10);
+  --card-bg: #1e2233;
+}
+
+body.dark-mode {
+  --bg: #333333;
+  --bg-deep: #2a2a2a;
+  --ink: #e8e0d0;
+  --ink-light: #b0a890;
+  --accent: #d4af37;
+  --accent-light: #e8c84e;
+  --rule: #444444;
+  --rule-light: #383838;
+  --header-bg: #0a0a0a;
+  --header-text: #d4af37;
+  --highlight: rgba(200, 168, 78, 0.15);
+  --card-bg: #1a1a2e;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Crimson Pro', 'Georgia', serif;
+  background: var(--bg);
+  color: var(--ink);
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ========== TOP BAR ========== */
+.top-bar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 52px;
+  background: var(--header-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  z-index: 100;
+  border-bottom: 2px solid var(--accent);
+}
+body.dark-mode .top-bar { background: #0a0a0a; }
+
+.top-bar-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15em;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.03em;
+}
+.top-bar-title .hebrew {
+  font-family: 'David Libre', serif;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.top-bar-actions {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.top-bar-actions button {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+.top-bar-actions button:hover {
+  background: rgba(200, 168, 78, 0.15);
+}
+
+/* ========== PAGE CONTAINER ========== */
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 72px 24px 40px;
+}
+
+/* ========== PANELS ========== */
+.panel { display: none; }
+.panel.active { display: block; }
+
+/* ========== LANDING PAGE ========== */
+.landing-header {
+  text-align: center;
+  padding: 40px 0 10px;
+}
+.landing-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.6em;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.landing-title-hebrew {
+  font-family: 'David Libre', serif;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: var(--accent);
+  direction: rtl;
+  margin-bottom: 12px;
+}
+.landing-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15em;
+  color: var(--ink-light);
+  font-style: italic;
+  margin-bottom: 6px;
+}
+.landing-description {
+  font-size: 0.95em;
+  color: var(--ink-light);
+  max-width: 600px;
+  margin: 16px auto 0;
+  line-height: 1.6;
+}
+
+/* ========== DIVIDER ========== */
+.diamond-divider {
+  text-align: center;
+  padding: 24px 0 32px;
+  color: var(--accent);
+  font-size: 0.7em;
+  letter-spacing: 12px;
+}
+.diamond-divider::before { content: "· · ◆ · ·"; }
+
+/* ========== CARD GRID ========== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+  gap: 28px 24px;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+/* ========== SCRIPTURE CARD ========== */
+.scripture-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.scripture-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-cover {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 18px 14px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18), 0 1px 4px rgba(0,0,0,0.10);
+  transition: box-shadow 0.2s;
+}
+.scripture-card:hover .card-cover {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.25), 0 2px 8px rgba(0,0,0,0.12);
+}
+
+/* Book cover styles — each volume gets a distinct look */
+.card-cover.ot {
+  background: linear-gradient(170deg, #0d1a2e 0%, #162744 100%);
+  border: 1px solid #2a4060;
+}
+.card-cover.nt {
+  background: linear-gradient(170deg, #0d1a2e 0%, #162744 100%);
+  border: 1px solid #2a4060;
+}
+.card-cover.bom {
+  background: linear-gradient(170deg, #0a1628 0%, #1a3050 100%);
+  border: 1px solid #2a4a70;
+}
+.card-cover.dc {
+  background: linear-gradient(170deg, #0d1a2e 0%, #162744 100%);
+  border: 1px solid #2a4060;
+}
+.card-cover.pgp {
+  background: linear-gradient(170deg, #0d1a2e 0%, #162744 100%);
+  border: 1px solid #2a4060;
+}
+.card-cover.jst {
+  background: linear-gradient(170deg, #0d1a2e 0%, #162744 100%);
+  border: 1px solid #2a4060;
+}
+
+.card-cover-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15em;
+  font-weight: 600;
+  color: #c8a84e;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 1.35;
+}
+.card-cover .rule-top,
+.card-cover .rule-bottom {
+  width: 55%;
+  height: 1px;
+  background: #c8a84e;
+  opacity: 0.5;
+  margin: 10px auto;
+}
+
+.card-cover-hebrew {
+  font-family: 'David Libre', serif;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #c8a84e;
+  direction: rtl;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.card-label {
+  margin-top: 12px;
+  text-align: center;
+}
+.card-label-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: var(--ink);
+}
+.card-label-he {
+  font-family: 'David Libre', serif;
+  font-size: 0.85em;
+  color: var(--ink-light);
+  direction: rtl;
+  margin-top: 2px;
+}
+
+/* Coming soon badge */
+.card-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.6em;
+  color: #c8a84e;
+  background: rgba(0,0,0,0.6);
+  padding: 2px 8px;
+  border-radius: 3px;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+/* ========== PLACEHOLDER PANEL ========== */
+.placeholder-panel {
+  text-align: center;
+  padding: 80px 20px;
+}
+.placeholder-panel .back-btn {
+  display: inline-block;
+  margin-bottom: 32px;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.95em;
+  color: var(--accent);
+  background: none;
+  border: 1px solid var(--accent);
+  padding: 8px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.placeholder-panel .back-btn:hover {
+  background: rgba(200, 168, 78, 0.1);
+}
+.placeholder-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.placeholder-hebrew {
+  font-family: 'David Libre', serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--ink-light);
+  direction: rtl;
+  margin-bottom: 24px;
+}
+.placeholder-message {
+  font-size: 1.1em;
+  color: var(--ink-light);
+  font-style: italic;
+}
+
+/* ========== FOOTER ========== */
+.landing-footer {
+  text-align: center;
+  padding: 40px 0 20px;
+  border-top: 1px solid var(--rule);
+  margin-top: 48px;
+}
+.landing-footer p {
+  font-size: 0.85em;
+  color: var(--ink-light);
+  line-height: 1.7;
+}
+.landing-footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.landing-footer a:hover { text-decoration: underline; }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 600px) {
+  .landing-title { font-size: 1.8em; }
+  .landing-title-hebrew { font-size: 1.4em; }
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 16px;
+  }
+  .card-cover-title { font-size: 0.95em; }
+  .card-cover-hebrew { font-size: 0.9em; }
+  .page { padding: 62px 16px 30px; }
+}
+@media (max-width: 380px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 12px;
+  }
+}
+@media (min-width: 800px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<div class="top-bar">
+  <div class="top-bar-title">
+    <span class="hebrew">כתבי הקודש</span>
+    Standard Works
+  </div>
+  <div class="top-bar-actions">
+    <button onclick="toggleDark()" id="dark-btn" title="Toggle dark mode">☽</button>
+  </div>
+</div>
+
+<!-- ===== PAGE ===== -->
+<div class="page">
+
+  <!-- ===== LANDING PANEL ===== -->
+  <div class="panel active" id="panel-landing">
+
+    <div class="landing-header">
+      <div class="landing-title">Scriptures &amp; Study Resources</div>
+      <div class="landing-title-hebrew">כתבי הקודש</div>
+      <div class="landing-subtitle">Hebrew Interlinear Edition</div>
+      <div class="landing-description">
+        Study the Standard Works in Hebrew with word-by-word interlinear translation,
+        transliteration, and English glosses.
+      </div>
+    </div>
+
+    <div class="diamond-divider"></div>
+
+    <!-- ===== CARD GRID ===== -->
+    <div class="card-grid">
+
+      <!-- Old Testament -->
+      <div class="scripture-card" onclick="window.open('ot.html','_blank')">
+        <div class="card-cover ot">
+          <div class="rule-top"></div>
+          <div class="card-cover-title">Old<br>Testament</div>
+          <div class="rule-bottom"></div>
+          <div class="card-cover-hebrew">תַּנַ״ךְ</div>
+          <div class="rule-bottom"></div>
+        </div>
+        <div class="card-label">
+          <div class="card-label-en">Old Testament</div>
+          <div class="card-label-he">תַּנַ״ךְ</div>
+        </div>
+      </div>
+
+      <!-- New Testament -->
+      <div class="scripture-card" onclick="window.open('nt.html','_blank')">
+        <div class="card-cover nt">
+          <div class="rule-top"></div>
+          <div class="card-cover-title">New<br>Testament</div>
+          <div class="rule-bottom"></div>
+          <div class="card-cover-hebrew">הברית<br>החדשה</div>
+          <div class="rule-bottom"></div>
+        </div>
+        <div class="card-label">
+          <div class="card-label-en">New Testament</div>
+          <div class="card-label-he">הברית החדשה</div>
+        </div>
+      </div>
+
+      <!-- Book of Mormon -->
+      <div class="scripture-card" onclick="openBOM()">
+        <div class="card-cover bom">
+          <div class="rule-top"></div>
+          <div class="card-cover-title">The<br>Book of<br>Mormon</div>
+          <div class="rule-bottom"></div>
+          <div class="card-cover-hebrew">ספר<br>מורמון</div>
+          <div class="rule-bottom"></div>
+        </div>
+        <div class="card-label">
+          <div class="card-label-en">The Book of Mormon</div>
+          <div class="card-label-he">ספר מורמון</div>
+        </div>
+      </div>
+
+      <!-- Doctrine and Covenants -->
+      <div class="scripture-card" onclick="window.open('dc.html','_blank')">
+        <div class="card-cover dc">
+          <div class="rule-top"></div>
+          <div class="card-cover-title">Doctrine<br>and<br>Covenants</div>
+          <div class="rule-bottom"></div>
+          <div class="card-cover-hebrew">תורה<br>ובריתות</div>
+          <div class="rule-bottom"></div>
+        </div>
+        <div class="card-label">
+          <div class="card-label-en">Doctrine and Covenants</div>
+          <div class="card-label-he">תורה ובריתות</div>
+        </div>
+      </div>
+
+      <!-- Pearl of Great Price -->
+      <div class="scripture-card" onclick="window.open('pgp.html','_blank')">
+        <div class="card-cover pgp">
+          <div class="rule-top"></div>
+          <div class="card-cover-title">Pearl<br>of Great<br>Price</div>
+          <div class="rule-bottom"></div>
+          <div class="card-cover-hebrew">פנינת<br>המחיר הגדול</div>
+          <div class="rule-bottom"></div>
+        </div>
+        <div class="card-label">
+          <div class="card-label-en">Pearl of Great Price</div>
+          <div class="card-label-he">פנינת המחיר הגדול</div>
+        </div>
+      </div>
+
+      <!-- Joseph Smith Translation -->
+      <div class="scripture-card" onclick="navTo('jst')">
+        <div class="card-cover jst">
+          <div class="rule-top"></div>
+          <div class="card-cover-title">Joseph<br>Smith<br>Translation</div>
+          <div class="rule-bottom"></div>
+          <div class="card-cover-hebrew">תרגום<br>ג׳וזף סמית</div>
+          <div class="rule-bottom"></div>
+          <div class="card-badge">Coming Soon</div>
+        </div>
+        <div class="card-label">
+          <div class="card-label-en">Joseph Smith Translation</div>
+          <div class="card-label-he">תרגום ג׳וזף סמית</div>
+        </div>
+      </div>
+
+    </div><!-- /card-grid -->
+
+    <div class="landing-footer">
+      <p>
+        Hebrew Interlinear Standard Works<br>
+        <a href="mailto:lookoutlambe@gmail.com">lookoutlambe@gmail.com</a>
+      </p>
+    </div>
+
+  </div><!-- /panel-landing -->
+
+  <!-- ===== PLACEHOLDER PANELS ===== -->
+  <div class="panel" id="panel-jst">
+    <div class="placeholder-panel">
+      <button class="back-btn" onclick="navTo('landing')">← Back to Standard Works</button>
+      <div class="placeholder-title">Joseph Smith Translation</div>
+      <div class="placeholder-hebrew">תרגום ג׳וזף סמית</div>
+      <div class="placeholder-message">Coming soon — Hebrew interlinear Joseph Smith Translation appendix.</div>
+    </div>
+  </div>
+
+
+</div><!-- /page -->
+
+<script>
+
+// ===== NAVIGATION =====
+function navTo(id) {
+  var panels = document.querySelectorAll('.panel');
+  panels.forEach(function(p) { p.classList.remove('active'); });
+  var target = document.getElementById('panel-' + id);
+  if (target) {
+    target.classList.add('active');
+    window.scrollTo(0, 0);
+  }
+}
+
+function openBOM() {
+  window.open('../Hebrew BOM/BOM.html', '_blank');
+}
+
+// ===== DARK MODE =====
+function toggleDark() {
+  document.body.classList.toggle('dark-mode');
+  var isDark = document.body.classList.contains('dark-mode');
+  document.getElementById('dark-btn').textContent = isDark ? '☀' : '☽';
+  try { localStorage.setItem('sw-dark', isDark ? '1' : '0'); } catch(e) {}
+}
+
+// Restore dark mode preference
+(function() {
+  try {
+    if (localStorage.getItem('sw-dark') === '1') {
+      document.body.classList.add('dark-mode');
+      document.getElementById('dark-btn').textContent = '☀';
+    }
+  } catch(e) {}
+})();
+
+</script>
+</body>
+</html>

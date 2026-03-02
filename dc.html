@@ -1,0 +1,2021 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>כתבי הקודש — Doctrine and Covenants</title>
+<meta name="description" content="Hebrew Interlinear Doctrine and Covenants — Classical Biblical Hebrew, Word-by-Word">
+<link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --bg: #faf8f2;
+  --bg-deep: #f0ece0;
+  --ink: #1a1a1a;
+  --ink-light: #444;
+  --accent: #c8a84e;
+  --accent-light: #d4b96a;
+  --rule: #d6ceb8;
+  --rule-light: #e8e2d4;
+  --gloss: #333;
+  --verse-num: #7fb3d3;
+  --highlight: rgba(200, 168, 78, 0.10);
+  --header-bg: #1e2233;
+  --header-text: #c8a84e;
+  --row-alt: #fdf8eb;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.skip-link {
+  position: absolute; top: -100px; left: 0;
+  background: #1e2233; color: #c8a84e;
+  padding: 10px 20px; z-index: 9999;
+  font-size: 1em; text-decoration: none;
+}
+.skip-link:focus { top: 0; }
+*:focus-visible { outline: 2px solid #c8a84e; outline-offset: 2px; }
+body.dark-mode *:focus-visible { outline-color: #d4af37; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'David Libre', 'Frank Ruhl Libre', serif;
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 55px 24px 50px;
+  background: #faf8f2;
+  min-height: 100vh;
+  box-shadow: none;
+  position: relative;
+}
+
+.book-header { text-align: center; padding: 20px 0 10px; margin-bottom: 8px; }
+.book-title { font-size: 2.4em; font-weight: 700; color: var(--header-bg); letter-spacing: 0.04em; margin-bottom: 2px; }
+.book-subtitle { font-size: 1.1em; font-weight: 400; color: var(--ink-light); letter-spacing: 0.06em; }
+.ornament { text-align: center; padding: 6px 0 12px; color: var(--accent); font-size: 1.2em; letter-spacing: 0.5em; }
+
+.chapter-heading { text-align: center; padding: 16px 0 20px; border-bottom: 2px solid var(--rule); margin-bottom: 24px; }
+.chapter-heading h2 { font-size: 1.6em; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+.chapter-label-en { font-family: 'Crimson Pro', serif; font-size: 0.85em; color: var(--ink-light); direction: ltr; letter-spacing: 0.04em; }
+
+/* === INTERLINEAR CORE === */
+.verse { display: flex; align-items: flex-start; gap: 10px; border-bottom: 1px solid var(--rule-light); padding: 12px 0; direction: rtl; transition: background 0.2s; }
+.verse:hover { background: var(--highlight); }
+.verse-num { font-family: 'David Libre', serif; font-size: 1.2em; font-weight: 700; color: var(--verse-num); min-width: 30px; text-align: center; padding-top: 3px; cursor: pointer; user-select: none; flex-shrink: 0; line-height: 1.2; }
+.verse-num .verse-num-arabic { display: block; font-size: 0.55em; color: var(--ink-light); font-weight: 400; font-family: 'Crimson Pro', serif; opacity: 0.7; }
+.word-flow { display: flex; flex-wrap: wrap; gap: 1px; align-items: flex-start; flex: 1; direction: rtl; }
+.word-group { display: inline-flex; align-items: flex-start; direction: rtl; }
+.word-unit { display: inline-flex; flex-direction: column; align-items: center; padding: 3px 5px; border-radius: 3px; cursor: pointer; transition: background 0.15s; line-height: 1.2; }
+.word-unit:hover { background: var(--highlight); }
+.hw { font-size: 1.4em; font-weight: 700; color: var(--ink); direction: rtl; unicode-bidi: bidi-override; white-space: nowrap; }
+.gl { font-family: 'Crimson Pro', serif; font-size: 0.72em; color: var(--gloss); direction: ltr; text-align: center; white-space: nowrap; font-style: italic; }
+.tl { font-family: 'Crimson Pro', serif; font-size: 0.65em; color: var(--ink-light); direction: ltr; text-align: center; white-space: nowrap; opacity: 0.7; }
+.arr { display: inline-flex; flex-direction: column; align-items: center; padding: 3px 0; opacity: 0.25; line-height: 1.2; }
+.arr-hw { font-size: 1.4em; visibility: hidden; }
+.arr-gl, .arr-tl { font-family: 'Times New Roman', 'Crimson Pro', serif; font-size: 0.72em; color: var(--gloss); direction: ltr; }
+.word-unit.sof + .arr { display: none; }
+body.hide-translit .tl, body.hide-translit .arr-tl { display: none; }
+body.hide-gloss .gl, body.hide-gloss .arr-gl, body.hide-gloss .tl, body.hide-gloss .arr-tl { display: none; }
+body.hide-gloss .hw { font-size: 1.6em; }
+body.hide-gloss .verse { gap: 6px; }
+body.hide-gloss .word-unit { padding: 2px 3px; }
+body.hide-gloss .arr-hw { font-size: 1.6em; }
+
+.verse.highlighted { background: var(--highlight); border-radius: 4px; }
+
+/* === CONTROLS === */
+.controls-top {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: #1e2233; color: #c8a84e;
+  display: flex; justify-content: center; align-items: center;
+  padding: 6px 12px; gap: 12px; flex-wrap: wrap;
+  font-family: 'Crimson Pro', serif; font-size: 0.9em;
+  direction: ltr;
+}
+.controls-bottom {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+  background: #1e2233;
+  display: flex; justify-content: center;
+  padding: 6px 0; gap: 4px;
+  font-family: 'Crimson Pro', serif;
+  direction: ltr;
+}
+.controls-bottom button {
+  background: transparent; border: 1px solid #3a3f55;
+  color: #8a7a4a; padding: 4px 14px; border-radius: 3px;
+  cursor: pointer; font-family: 'Crimson Pro', serif;
+  font-size: 0.78em; line-height: 1.3; text-align: center;
+  transition: all 0.15s;
+}
+.controls-bottom button:hover { background: #2a2f44; color: #c8a84e; }
+.controls-bottom button.active { background: #c8a84e; color: #1e2233; border-color: #c8a84e; font-weight: 600; }
+.tools-group { display: flex; align-items: center; gap: 8px; }
+.tools-group label { display: flex; align-items: center; gap: 5px; color: #8a7a4a; font-size: 0.85em; }
+.tools-group input[type="range"] { width: 60px; accent-color: #c8a84e; }
+.label-text { font-size: 0.85em; }
+
+.nav-prev, .nav-next {
+  background: transparent; border: 1px solid #3a3f55; color: #c8a84e;
+  width: 32px; height: 32px; border-radius: 4px; cursor: pointer;
+  font-size: 1.1em; display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s;
+}
+.nav-prev:hover:not(:disabled), .nav-next:hover:not(:disabled) { background: #2a2f44; }
+.nav-prev:disabled, .nav-next:disabled { opacity: 0.3; cursor: default; }
+
+/* === READING PROGRESS === */
+#reading-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--accent); z-index: 200; width: 0%; transition: width 0.1s; }
+
+/* === WORD POPUP === */
+#word-popup {
+  display: none; position: fixed; z-index: 300;
+  background: #fff; border: 2px solid #c8a84e;
+  border-radius: 8px; padding: 14px 18px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  min-width: 180px; max-width: 320px;
+  direction: rtl;
+}
+.popup-close { position: absolute; top: 4px; right: 8px; cursor: pointer; color: #888; font-size: 14px; }
+.popup-hebrew { font-size: 2em; font-weight: 700; color: var(--ink); margin-bottom: 4px; text-align: center; }
+.popup-translit { font-family: 'Crimson Pro', serif; font-size: 1em; color: var(--ink-light); text-align: center; margin-bottom: 4px; direction: ltr; font-style: italic; }
+.popup-gloss { font-family: 'Crimson Pro', serif; font-size: 1.1em; color: var(--accent); text-align: center; margin-bottom: 8px; direction: ltr; font-weight: 600; }
+.popup-detail { font-family: 'Crimson Pro', serif; font-size: 0.8em; color: var(--ink-light); direction: ltr; line-height: 1.5; }
+.popup-detail span { font-weight: 600; }
+
+/* === SEARCH === */
+#search-container {
+  position: fixed; top: -60px; left: 0; right: 0; z-index: 150;
+  background: #fff; border-bottom: 2px solid var(--accent);
+  display: flex; align-items: center; padding: 10px 16px; gap: 10px;
+  transition: top 0.2s ease; direction: ltr;
+}
+#search-container.open { top: 0; }
+#search-input { flex: 1; border: 1px solid var(--rule); padding: 8px 12px; border-radius: 4px; font-size: 1em; font-family: 'Crimson Pro', serif; }
+#search-close { cursor: pointer; font-size: 1.2em; color: #888; padding: 4px 8px; }
+#search-results {
+  display: none; position: fixed; top: 50px; left: 0; right: 0; z-index: 149;
+  background: #fff; max-height: 60vh; overflow-y: auto;
+  border-bottom: 1px solid var(--rule); box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+#search-results.open { display: block; }
+.search-result { padding: 10px 16px; cursor: pointer; border-bottom: 1px solid var(--rule-light); direction: rtl; }
+.search-result:hover { background: var(--highlight); }
+.search-result-ref { font-family: 'Crimson Pro', serif; font-size: 0.8em; color: var(--accent); direction: ltr; margin-bottom: 2px; }
+.search-result-text { font-size: 1em; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* === NAV DROPDOWN === */
+#nav-dropdown {
+  display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  background: #1e2233; border: 1px solid #3a3f55; border-radius: 6px;
+  min-width: 320px; max-height: 70vh; overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4); z-index: 200;
+  padding: 4px 0;
+}
+#nav-dropdown.open { display: block; }
+#nav-dropdown .dd-link {
+  display: block; width: 100%; background: transparent; border: none;
+  color: #c8a84e; padding: 8px 14px; text-align: right;
+  font-family: 'David Libre', serif; font-size: 0.95em; cursor: pointer;
+}
+#nav-dropdown .dd-link:hover { background: #2a2f44; }
+#nav-dropdown .dd-book {
+  display: flex; align-items: center; padding: 6px 14px;
+  color: #c8a84e; cursor: pointer; font-family: 'David Libre', serif; font-size: 0.95em;
+}
+#nav-dropdown .dd-book:hover { background: #2a2f44; }
+#nav-dropdown .dd-eng { font-family: 'Crimson Pro', serif; font-size: 0.8em; opacity: 0.6; margin-right: auto; direction: ltr; }
+#nav-dropdown .dd-book .dd-arrow { font-size: 12px; opacity: 0.6; }
+#nav-dropdown .dd-chapters { display: none; padding: 4px 14px 6px; }
+#nav-dropdown .dd-chapters.open { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; direction: rtl; }
+#nav-dropdown .dd-ch {
+  background: transparent; border: 1px solid #3a3f55;
+  color: #8a7a4a; padding: 5px 0 4px; border-radius: 3px;
+  cursor: pointer; font-family: 'Crimson Pro', serif; font-size: 12px;
+  font-weight: 400; text-align: center;
+  display: flex; flex-direction: column; align-items: center; line-height: 1.1;
+}
+#nav-dropdown .dd-ch .dd-ch-heb { font-family: 'David Libre', serif; font-size: 16px; font-weight: 700; color: #d4af37; direction: rtl; }
+#nav-dropdown .dd-ch:hover { background: #2a2f44; border-color: var(--accent); color: #fff; }
+#nav-dropdown .dd-divider { border: none; border-top: 1px solid #2a2f44; margin: 4px 12px; }
+body.dark-mode #nav-dropdown { background: #0a0a0a; border-color: #444444; }
+body.dark-mode #nav-dropdown .dd-link:hover,
+body.dark-mode #nav-dropdown .dd-book:hover,
+body.dark-mode #nav-dropdown .dd-ch:hover { background: #383838; }
+@media (max-width: 600px) {
+  #nav-dropdown { width: 280px; }
+  #nav-dropdown .dd-chapters.open { grid-template-columns: repeat(5, 1fr); }
+}
+
+.nav-row { display: flex; align-items: center; gap: 12px; direction: ltr; }
+#nav-label { font-size: 1em; font-weight: 600; cursor: pointer; min-width: 100px; text-align: center; }
+#nav-label:hover { text-decoration: underline; }
+
+#dark-mode-toggle {
+  background: transparent; border: 1px solid #3a3f55; color: #c8a84e;
+  padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 0.9em; transition: all 0.2s;
+}
+#dark-mode-toggle:hover { background: #2a2f44; }
+
+#nav-hint {
+  position: fixed; bottom: 64px; left: 50%; transform: translateX(-50%);
+  background: rgba(26,39,68,0.88); color: #fff;
+  font-family: 'Crimson Pro', serif; font-size: 14px;
+  padding: 8px 20px; border-radius: 20px; z-index: 9999;
+  pointer-events: none; opacity: 0; transition: opacity 0.5s ease;
+  white-space: nowrap; direction: ltr;
+}
+#nav-hint.show { opacity: 1; }
+body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
+
+/* === LANDING PAGE === */
+.landing-hero { text-align: center; padding: 40px 20px 30px; }
+.landing-hero h1 { font-size: 2.2em; color: var(--accent); margin-bottom: 6px; font-weight: 700; }
+.landing-hero .subtitle-en { font-family: 'Crimson Pro', serif; font-size: 1.1em; color: var(--ink-light); letter-spacing: 0.08em; direction: ltr; }
+.landing-hero .subtitle-heb { font-size: 1.3em; color: var(--ink); margin-top: 4px; }
+.landing-divider { border: none; border-top: 2px solid var(--rule); margin: 20px auto; max-width: 200px; }
+.landing-sections { max-width: 600px; margin: 0 auto 30px; padding: 0 12px; }
+.landing-section-group { margin-bottom: 16px; }
+.landing-section-group h3 {
+  font-family: 'Crimson Pro', serif; font-size: 0.85em; color: var(--ink-light);
+  letter-spacing: 0.08em; direction: ltr; margin-bottom: 8px; text-align: center;
+}
+.landing-section-grid {
+  display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; direction: rtl;
+}
+.landing-sec-btn {
+  background: linear-gradient(170deg, #0d1a2e 0%, #162744 100%);
+  border: 1px solid #2a4060; border-radius: 4px;
+  padding: 6px 0; cursor: pointer; text-align: center;
+  transition: all 0.2s; display: flex; flex-direction: column; align-items: center;
+}
+.landing-sec-btn:hover { transform: scale(1.05); box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-color: var(--accent); }
+.landing-sec-btn .sec-heb { font-family: 'David Libre', serif; font-size: 0.85em; font-weight: 700; color: #c8a84e; }
+.landing-sec-btn .sec-num { font-family: 'Crimson Pro', serif; font-size: 0.65em; color: #5a6a80; }
+.landing-back { text-align: center; margin-top: 20px; }
+.landing-back a {
+  font-family: 'Crimson Pro', serif; color: var(--accent);
+  text-decoration: none; font-size: 0.95em;
+  border: 1px solid var(--rule); padding: 8px 20px; border-radius: 4px;
+  transition: all 0.2s; direction: ltr; display: inline-block;
+}
+.landing-back a:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+/* === PAGE ANIMATIONS === */
+.chapter-panel { opacity: 1; transition: opacity 0.3s ease; }
+.chapter-panel.fade-in { animation: fadeIn 0.35s ease-out; }
+.chapter-panel.slide-right { animation: slideRight 0.3s ease-out; }
+.chapter-panel.slide-left { animation: slideLeft 0.3s ease-out; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideRight { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: none; } }
+@keyframes slideLeft { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 600px) {
+  .page { padding: 50px 10px 45px; }
+  .book-title { font-size: 1.8em; }
+  .hw { font-size: 1.2em; }
+  .gl { font-size: 0.65em; }
+  .verse-num { min-width: 24px; font-size: 1em; }
+  .controls-top { padding: 5px 8px; }
+  .landing-section-grid { grid-template-columns: repeat(7, 1fr); }
+}
+@media print {
+  .controls-top, .controls-bottom, #reading-progress, #word-popup, #search-container, #search-results { display: none !important; }
+  .page { padding: 0; }
+}
+
+/* === DARK MODE === */
+body.dark-mode {
+  --bg: #333333; --bg-deep: #2a2a2a;
+  --ink: #e8e0d0; --ink-light: #b0a890;
+  --accent: #d4af37; --accent-light: #e8c84e;
+  --rule: #444444; --rule-light: #383838;
+  --gloss: #c0b898; --verse-num: #7fb3d3;
+  --highlight: rgba(200, 168, 78, 0.15);
+  --header-bg: #d4af37; --header-text: #d4af37;
+  --row-alt: #2e2e2e;
+}
+body.dark-mode .hw { color: var(--ink); }
+body.dark-mode .gl { color: var(--gloss); }
+body.dark-mode .tl { color: var(--gloss); }
+body.dark-mode .page { background: #333333; }
+body.dark-mode .controls-top, body.dark-mode .controls-bottom { background: #0a0a0a; }
+body.dark-mode .verse { border-color: #383838; }
+body.dark-mode .verse:hover { background: rgba(200, 168, 78, 0.08); }
+body.dark-mode .word-unit:hover { background: rgba(200, 168, 78, 0.10); }
+body.dark-mode #word-popup { background: #252525; border-color: #d4af37; color: #e8e0d0; }
+body.dark-mode .book-title { color: #d4af37; }
+body.dark-mode .book-subtitle { color: #b0a890; }
+body.dark-mode .chapter-heading h2 { color: #e8e0d0; }
+body.dark-mode #search-container { background: #252525; border-color: #444444; }
+body.dark-mode #search-input { background: #2a2a2a; color: #e8e0d0; border-color: #444444; }
+body.dark-mode #search-results { background: #252525; }
+body.dark-mode .verse.highlighted { background: rgba(200, 168, 78, 0.12); }
+body.dark-mode #search-input::placeholder { color: #666; }
+body.dark-mode #search-results .search-result { color: #e8e0d0; }
+body.dark-mode #search-results .search-result:hover { background: rgba(200,168,78,0.08); }
+body.dark-mode .landing-sec-btn { background: linear-gradient(170deg, #0a0f1a 0%, #111828 100%); border-color: #333; }
+
+/* === PANEL OVERLAY === */
+#panel-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.4); z-index: 1000; }
+#panel-overlay.open { display: block; }
+
+/* === GLOSSARY PANEL === */
+#glossary-panel {
+  display: none; position: fixed; top: 0; left: 0; bottom: 0; width: 380px; max-width: 90vw;
+  background: var(--bg); border-right: 2px solid var(--accent); z-index: 1100;
+  overflow-y: auto; padding: 16px; font-family: 'Crimson Pro', serif;
+  transform: translateX(-100%); transition: transform 0.25s ease;
+}
+#glossary-panel.open { display: block; transform: translateX(0); }
+.glossary-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.glossary-header h3 { font-size: 1.3em; color: var(--accent); margin: 0; }
+.glossary-close { cursor: pointer; font-size: 1.4em; color: var(--ink-light); padding: 4px 8px; }
+#glossary-search { width: 100%; padding: 8px 12px; border: 1px solid var(--rule); border-radius: 4px; font-size: 1em; font-family: 'Crimson Pro', serif; margin-bottom: 8px; background: var(--bg); color: var(--ink); }
+.glossary-controls { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+.glossary-tab { background: transparent; border: 1px solid var(--rule); color: var(--ink-light); padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; font-family: 'Crimson Pro', serif; }
+.glossary-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+#glossary-sort-select { border: 1px solid var(--rule); padding: 4px 6px; border-radius: 3px; font-size: 0.8em; font-family: 'Crimson Pro', serif; background: var(--bg); color: var(--ink); }
+.glossary-entry { border: 1px solid var(--rule-light); border-radius: 6px; padding: 10px 12px; margin-bottom: 6px; cursor: pointer; transition: all 0.15s; }
+.glossary-entry:hover { border-color: var(--accent); }
+.glossary-entry-header { display: flex; align-items: baseline; gap: 4px; }
+.glossary-root { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--accent); direction: rtl; }
+.glossary-count { margin-left: auto; font-size: 0.8em; color: var(--ink-light); white-space: nowrap; }
+.glossary-meaning { font-size: 0.9em; color: var(--ink); margin-top: 2px; }
+.glossary-category-badge { display: inline-block; font-size: 0.7em; background: var(--accent); color: #fff; padding: 1px 6px; border-radius: 10px; margin-top: 4px; }
+.glossary-category-header { font-size: 0.85em; font-weight: 700; color: var(--accent); padding: 8px 0 4px; border-bottom: 1px solid var(--rule-light); margin-bottom: 6px; }
+.glossary-detail { display: none; margin-top: 8px; font-size: 0.85em; color: var(--ink-light); line-height: 1.5; direction: ltr; }
+.glossary-entry.expanded .glossary-detail { display: block; }
+.glossary-forms-list { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; direction: rtl; }
+.glossary-form-chip { display: inline-block; font-family: 'David Libre', serif; font-size: 1.1em; background: var(--bg-deep); padding: 2px 8px; border-radius: 4px; cursor: pointer; direction: rtl; }
+.glossary-form-chip:hover { background: var(--accent); color: #fff; }
+.glossary-highlight-btn { display: block; margin-top: 8px; background: var(--accent); color: #fff; border: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-family: 'Crimson Pro', serif; font-size: 0.85em; }
+.glossary-highlighted { background: rgba(200,168,78,0.25) !important; border-radius: 3px; }
+.glossary-refs-section { margin-top: 8px; font-size: 0.85em; }
+.glossary-refs-book { margin: 2px 0; }
+.glossary-refs-book-name { font-weight: 600; }
+.glossary-ref-link { cursor: pointer; color: var(--accent); text-decoration: underline; }
+.glossary-ref-link:hover { color: var(--accent-light); }
+.glossary-refs-toggle { cursor: pointer; color: var(--accent); text-decoration: underline; font-size: 0.85em; display: inline-block; margin-top: 4px; }
+.glossary-biblical-section { margin-top: 8px; }
+.glossary-biblical-ref { margin: 2px 0; }
+.glossary-biblical-ref-key { font-weight: 600; color: var(--accent); }
+body.dark-mode #glossary-panel { background: #333333; border-color: #d4af37; }
+body.dark-mode #glossary-search { background: #2a2a2a; color: #e8e0d0; border-color: #444; }
+body.dark-mode .glossary-entry { border-color: #444; }
+body.dark-mode .glossary-form-chip { background: #2a2a2a; }
+
+/* === ANNOTATIONS PANEL === */
+#annotations-panel {
+  display: none; position: fixed; top: 0; right: 0; bottom: 0; width: 360px; max-width: 90vw;
+  background: var(--bg); border-left: 2px solid var(--accent); z-index: 1100;
+  overflow-y: auto; padding: 16px; font-family: 'Crimson Pro', serif;
+  transform: translateX(100%); transition: transform 0.25s ease;
+}
+#annotations-panel.open { display: block; transform: translateX(0); }
+.ann-panel-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.ann-panel-header h3 { font-size: 1.3em; color: var(--accent); margin: 0; }
+.ann-panel-close { cursor: pointer; font-size: 1.4em; color: var(--ink-light); padding: 4px 8px; }
+.ann-tabs { display: flex; gap: 4px; margin-bottom: 12px; }
+.ann-tab { background: transparent; border: 1px solid var(--rule); color: var(--ink-light); padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; font-family: 'Crimson Pro', serif; }
+.ann-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.ann-export-btn { background: var(--accent); color: #fff; border: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-family: 'Crimson Pro', serif; font-size: 0.85em; margin-top: 12px; }
+.ann-item { padding: 8px; border: 1px solid var(--rule-light); border-radius: 4px; margin-bottom: 6px; font-size: 0.85em; }
+.ann-item-ref { font-weight: 600; color: var(--accent); margin-bottom: 4px; }
+.ann-item-text { color: var(--ink); direction: rtl; }
+.ann-item-note { font-style: italic; color: var(--ink-light); margin-top: 4px; }
+.ann-hl { border-radius: 2px; }
+.ann-ul { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; }
+.note-marker { color: var(--accent); cursor: pointer; font-size: 0.7em; margin-right: 2px; }
+body.dark-mode #annotations-panel { background: #333333; border-color: #d4af37; }
+
+/* === SELECTION TOOLBAR === */
+#sel-toolbar {
+  display: none; position: fixed; z-index: 1300;
+  background: #1e2233; border: 1px solid #3a3f55; border-radius: 8px;
+  padding: 6px; box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  flex-direction: column; gap: 4px; align-items: center;
+}
+#sel-toolbar.visible { display: flex; }
+#sel-toolbar button {
+  background: transparent; border: none; color: #c8a84e; cursor: pointer;
+  font-size: 1.1em; padding: 6px 8px; border-radius: 4px; transition: background 0.15s;
+  width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+}
+#sel-toolbar button:hover { background: #2a2f44; }
+#sel-toolbar button.active { background: #c8a84e; color: #1e2233; }
+#sel-subpanel { display: none; padding: 6px; border-top: 1px solid #3a3f55; }
+.sel-color-row { display: flex; gap: 3px; margin-bottom: 3px; align-items: center; }
+.sel-color-row-label { font-size: 0.6em; color: #8a7a4a; min-width: 12px; font-family: 'Crimson Pro', serif; }
+.sel-color { width: 22px; height: 22px; border-radius: 50%; cursor: pointer; border: 2px solid transparent; transition: all 0.15s; }
+.sel-color:hover { transform: scale(1.2); }
+.sel-color.active { border-color: #fff; box-shadow: 0 0 4px rgba(255,255,255,0.5); }
+#sel-note-row { display: none; padding: 6px; border-top: 1px solid #3a3f55; }
+#sel-note-input { width: 180px; height: 60px; font-size: 0.8em; font-family: 'Crimson Pro', serif; padding: 6px; border-radius: 4px; border: 1px solid #3a3f55; background: #0a0f1a; color: #e8e0d0; resize: none; }
+#sel-note-save { background: #c8a84e; color: #1e2233; border: none; padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; margin-top: 4px; font-family: 'Crimson Pro', serif; }
+@media (max-width: 600px) {
+  #sel-toolbar { flex-direction: row; flex-wrap: wrap; max-width: 200px; }
+  #sel-toolbar button { width: 32px; height: 32px; font-size: 1em; }
+}
+
+/* === SHARE POPUP === */
+#share-popup {
+  display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  background: var(--bg); border: 2px solid var(--accent); border-radius: 12px;
+  padding: 24px; z-index: 1200; min-width: 280px; max-width: 90vw;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center; font-family: 'Crimson Pro', serif;
+}
+#share-popup.open { display: block; }
+#share-popup h3 { color: var(--accent); margin-bottom: 16px; }
+.share-btns { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.share-btn { background: var(--header-bg); color: var(--header-text); border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-family: 'Crimson Pro', serif; font-size: 0.9em; transition: all 0.15s; }
+.share-btn:hover { opacity: 0.85; transform: scale(1.03); }
+.share-close { position: absolute; top: 8px; right: 12px; cursor: pointer; color: var(--ink-light); font-size: 1.2em; }
+body.dark-mode #share-popup { background: #333333; border-color: #d4af37; }
+
+/* === ENHANCED POPUP (Strong's + Root) === */
+.popup-strong { font-family: 'Crimson Pro', serif; font-size: 0.85em; color: var(--ink-light); text-align: center; margin-bottom: 4px; direction: ltr; }
+.popup-strong a { color: var(--accent); text-decoration: none; }
+.popup-strong a:hover { text-decoration: underline; }
+
+/* === MOBILE POPUP ENLARGEMENT === */
+@media (max-width: 600px) {
+  #word-popup { max-width: 90vw; padding: 16px 20px; }
+  .popup-hebrew { font-size: 2.4em !important; }
+  .popup-translit { font-size: 1.2em !important; }
+  .popup-gloss { font-size: 1.3em !important; }
+  .popup-detail { font-size: 1.0em !important; }
+  .popup-strong { font-size: 1.0em !important; }
+  #glossary-panel { width: 100vw; max-width: 100vw; }
+  #annotations-panel { width: 100vw; max-width: 100vw; }
+}
+
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div id="nav-hint"></div>
+<div id="reading-progress"></div>
+
+<div id="search-container" role="search">
+  <input id="search-input" type="text" placeholder="Search Hebrew or English..." autocomplete="off" aria-label="Search Hebrew or English">
+  <span id="search-close" onclick="closeSearch()" role="button" aria-label="Close search">✕</span>
+</div>
+<div id="search-results"></div>
+
+<div id="word-popup">
+  <span class="popup-close" onclick="closePopup()" role="button" aria-label="Close popup">✕</span>
+  <div class="popup-hebrew" id="popup-hw"></div>
+  <div class="popup-translit" id="popup-translit"></div>
+  <div class="popup-gloss" id="popup-gl"></div>
+  <div class="popup-strong" id="popup-strong"></div>
+  <div class="popup-detail" id="popup-detail"></div>
+</div>
+
+<!-- Panel Overlay -->
+<div id="panel-overlay" onclick="closeGlossary();closeAnnotationsPanel();"></div>
+
+<!-- Selection Toolbar -->
+<div id="sel-toolbar">
+  <button id="sel-btn-highlight" onclick="selToolbarToggleColors()" title="Highlight">🖍</button>
+  <button id="sel-btn-note" onclick="selToolbarOpenNote()" title="Note">✎</button>
+  <button id="sel-btn-copy" onclick="selToolbarCopy()" title="Copy">📋</button>
+  <button id="sel-btn-share" onclick="selToolbarShare()" title="Share">↗</button>
+  <button id="sel-btn-delete" onclick="selToolbarClearAll()" title="Clear">✕</button>
+  <button id="sel-btn-glossary" onclick="closePopup();openGlossary()" title="Glossary">📖</button>
+  <button id="sel-btn-annotations" onclick="openAnnotationsPanel()" title="Annotations">📝</button>
+  <div id="sel-subpanel">
+    <div class="sel-color-row">
+      <span class="sel-color-row-label">HL</span>
+      <span class="sel-color" style="background:#fff9c4" data-ann="highlight" data-color="#fff9c4" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" style="background:#bbdefb" data-ann="highlight" data-color="#bbdefb" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" style="background:#ef9a9a" data-ann="highlight" data-color="#ef9a9a" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" style="background:#c8e6c9" data-ann="highlight" data-color="#c8e6c9" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" style="background:#e1bee7" data-ann="highlight" data-color="#e1bee7" onclick="selToolbarApply(this)"></span>
+    </div>
+    <div class="sel-color-row">
+      <span class="sel-color-row-label">UL</span>
+      <span class="sel-color" style="background:#c8a84e" data-ann="underline" data-color="#c8a84e" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" style="background:#ef5350" data-ann="underline" data-color="#ef5350" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" style="background:#42a5f5" data-ann="underline" data-color="#42a5f5" onclick="selToolbarApply(this)"></span>
+    </div>
+  </div>
+  <div id="sel-note-row">
+    <textarea id="sel-note-input" placeholder="Add a note..."></textarea>
+    <button id="sel-note-save" onclick="selToolbarSaveNote()">Save</button>
+  </div>
+</div>
+
+<!-- Share Popup -->
+<div id="share-popup">
+  <span class="share-close" onclick="closeSharePopup()">✕</span>
+  <h3>Share This Verse</h3>
+  <div id="share-verse-preview" style="font-family:'David Libre',serif;font-size:1.1em;color:var(--ink);direction:rtl;margin-bottom:12px;padding:8px;background:var(--bg-deep);border-radius:4px;"></div>
+  <div class="share-btns">
+    <button class="share-btn" onclick="shareToFacebook()">Facebook</button>
+    <button class="share-btn" onclick="shareToX()">𝕏 / Twitter</button>
+    <button class="share-btn" onclick="shareCopyLink()">Copy Link</button>
+    <button class="share-btn" onclick="shareNative()">Share...</button>
+  </div>
+</div>
+
+<!-- Glossary Panel -->
+<div id="glossary-panel" role="dialog" aria-label="Glossary">
+  <div class="glossary-header">
+    <h3>📖 Root Glossary</h3>
+    <span class="glossary-close" onclick="closeGlossary()">✕</span>
+  </div>
+  <input id="glossary-search" type="text" placeholder="Search by root or meaning..." autocomplete="off">
+  <div class="glossary-controls">
+    <button class="glossary-tab active" data-tab="all" onclick="setGlossaryTab(this)">All</button>
+    <button class="glossary-tab" data-tab="frequent" onclick="setGlossaryTab(this)">Frequent</button>
+    <button class="glossary-tab" data-tab="category" onclick="setGlossaryTab(this)">Category</button>
+    <select id="glossary-sort-select" onchange="renderGlossaryList()">
+      <option value="freq-desc">Most frequent</option>
+      <option value="freq-asc">Least frequent</option>
+      <option value="alpha-heb">א-ת</option>
+      <option value="alpha-eng">A-Z</option>
+    </select>
+  </div>
+  <div id="glossary-list"></div>
+</div>
+
+<!-- Annotations Panel -->
+<div id="annotations-panel" role="dialog" aria-label="Annotations">
+  <div class="ann-panel-header">
+    <h3>📝 Annotations</h3>
+    <span class="ann-panel-close" onclick="closeAnnotationsPanel()">✕</span>
+  </div>
+  <div class="ann-tabs">
+    <button class="ann-tab active" onclick="showAnnTab('highlights')">Highlights</button>
+    <button class="ann-tab" onclick="showAnnTab('notes')">Notes</button>
+  </div>
+  <div id="annotations-list"></div>
+  <button class="ann-export-btn" onclick="exportAnnotations()">Export Annotations (JSON)</button>
+</div>
+
+<div class="controls-top">
+  <div class="nav-row">
+    <button class="nav-prev" id="nav-prev" onclick="goPrev()" disabled aria-label="Previous section">←</button>
+    <span class="nav-label-wrap">
+      <span id="nav-label" onclick="toggleNavDropdown()">הַבְּרִיתוֹת וְהַחֻקִּים ▾</span>
+      <div id="nav-dropdown">
+        <button class="dd-link" onclick="ddNav('landing')">← הַבְּרִיתוֹת וְהַחֻקִּים</button>
+        <hr class="dd-divider">
+        <div class="dd-book" onclick="toggleDdBook('dd-sec1')"><span class="dd-arrow">▼</span>חלקים א–כ <span class="dd-eng">Sections 1–20</span></div>
+        <div class="dd-chapters" id="dd-sec1"></div>
+        <div class="dd-book" onclick="toggleDdBook('dd-sec21')"><span class="dd-arrow">▼</span>חלקים כא–מ <span class="dd-eng">Sections 21–40</span></div>
+        <div class="dd-chapters" id="dd-sec21"></div>
+        <div class="dd-book" onclick="toggleDdBook('dd-sec41')"><span class="dd-arrow">▼</span>חלקים מא–ס <span class="dd-eng">Sections 41–60</span></div>
+        <div class="dd-chapters" id="dd-sec41"></div>
+        <div class="dd-book" onclick="toggleDdBook('dd-sec61')"><span class="dd-arrow">▼</span>חלקים סא–פ <span class="dd-eng">Sections 61–80</span></div>
+        <div class="dd-chapters" id="dd-sec61"></div>
+        <div class="dd-book" onclick="toggleDdBook('dd-sec81')"><span class="dd-arrow">▼</span>חלקים פא–ק <span class="dd-eng">Sections 81–100</span></div>
+        <div class="dd-chapters" id="dd-sec81"></div>
+        <div class="dd-book" onclick="toggleDdBook('dd-sec101')"><span class="dd-arrow">▼</span>חלקים קא–קכ <span class="dd-eng">Sections 101–120</span></div>
+        <div class="dd-chapters" id="dd-sec101"></div>
+        <div class="dd-book" onclick="toggleDdBook('dd-sec121')"><span class="dd-arrow">▼</span>חלקים קכא–קלח <span class="dd-eng">Sections 121–138</span></div>
+        <div class="dd-chapters" id="dd-sec121"></div>
+        <hr class="dd-divider">
+        <button class="dd-link" onclick="ddNav('od1-ch1')">הכרזה רשמית א׳ — OD 1</button>
+        <button class="dd-link" onclick="ddNav('od2-ch1')">הכרזה רשמית ב׳ — OD 2</button>
+      </div>
+    </span>
+    <button class="nav-next" id="nav-next" onclick="goNext()" disabled aria-label="Next section">→</button>
+  </div>
+  <div class="tools-group">
+    <label><span class="label-text">Size </span><input type="range" id="sizeSlider" min="70" max="150" value="100" oninput="setSize(this.value)" aria-label="Font size"></label>
+    <span style="color:#3a3f55">│</span>
+    <button id="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode" aria-label="Toggle dark mode">☽</button>
+    <button id="search-toggle" style="background:transparent;border:1px solid #3a3f55;color:#c8a84e;padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openSearch()" title="Search" aria-label="Search">⌕</button>
+  </div>
+</div>
+
+<div class="controls-bottom">
+  <button id="btn-inter" class="active" onclick="setMode('inter')">Interlinear<br>בֵּין־שׁוּרוֹת</button>
+  <button id="btn-heb" onclick="setMode('heb')">Hebrew Only<br>עִבְרִית</button>
+  <button id="btn-translit" onclick="toggleTranslit()" title="Show/hide transliteration">Transliterate<br>תַּעְתִּיק</button>
+</div>
+
+<div class="page" id="page">
+  <div class="book-header" id="book-header">
+    <div class="book-title" id="main-book-title">הַבְּרִיתוֹת וְהַחֻקִּים</div>
+    <div class="book-subtitle" id="main-book-subtitle">Doctrine and Covenants</div>
+  </div>
+  <div class="ornament" id="main-ornament">✦ ✦ ✦</div>
+  <main id="main-content">
+    <div class="chapter-panel" id="panel-landing" style="display:block;"></div>
+    <!-- Section panels are created dynamically by JavaScript -->
+  </main>
+</div>
+
+<script>
+// === D&C SECTION DATA ===
+// Sections: 1-108, 109, 110-138, OD1, OD2 (no section 109 gap — we now have it)
+var DC_SECTIONS = [];
+for (var i = 1; i <= 138; i++) DC_SECTIONS.push(i);
+var DC_ODS = ['OD1', 'OD2'];
+
+// Build chapter IDs: dc1-ch1, dc2-ch1, ..., dc138-ch1, od1-ch1, od2-ch1
+var chapterOrder = [];
+DC_SECTIONS.forEach(function(n) { chapterOrder.push('dc' + n + '-ch1'); });
+DC_ODS.forEach(function(od) { chapterOrder.push(od.toLowerCase() + '-ch1'); });
+
+// Hebrew numeral converter (supports up to ~500)
+function toHebNum(n) {
+  var ones = ['','א','ב','ג','ד','ה','ו','ז','ח','ט'];
+  var tens = ['','י','כ','ל','מ','נ','ס','ע','פ','צ'];
+  var hundreds = ['','ק','ר','ש','ת'];
+  if (n === 15) return 'טו';
+  if (n === 16) return 'טז';
+  var result = '';
+  if (n >= 100) {
+    var h = Math.floor(n / 100);
+    if (h <= 4) result += hundreds[h];
+    else result += 'ת' + hundreds[h - 4];
+    n %= 100;
+  }
+  if (n === 15) { result += 'טו'; return result; }
+  if (n === 16) { result += 'טז'; return result; }
+  if (n >= 10) { result += tens[Math.floor(n / 10)]; n %= 10; }
+  if (n > 0) result += ones[n];
+  return result;
+}
+
+// Dynamically create landing page and section panels
+(function buildPanels() {
+  var mainContent = document.getElementById('main-content');
+  var landingPanel = document.getElementById('panel-landing');
+
+  // Build landing page with section grid
+  var landingHtml = '<div class="landing-hero">' +
+    '<h1>הַבְּרִיתוֹת וְהַחֻקִּים</h1>' +
+    '<div class="subtitle-en">Doctrine and Covenants</div>' +
+    '<div class="subtitle-heb">Hebrew Interlinear</div>' +
+    '</div><hr class="landing-divider"><div class="landing-sections">';
+
+  // Section groups
+  var groups = [
+    { label: 'Sections 1–20', start: 1, end: 20 },
+    { label: 'Sections 21–40', start: 21, end: 40 },
+    { label: 'Sections 41–60', start: 41, end: 60 },
+    { label: 'Sections 61–80', start: 61, end: 80 },
+    { label: 'Sections 81–100', start: 81, end: 100 },
+    { label: 'Sections 101–120', start: 101, end: 120 },
+    { label: 'Sections 121–138', start: 121, end: 138 }
+  ];
+
+  groups.forEach(function(g) {
+    landingHtml += '<div class="landing-section-group"><h3>' + g.label + '</h3><div class="landing-section-grid">';
+    for (var n = g.start; n <= g.end; n++) {
+      landingHtml += '<div class="landing-sec-btn" onclick="navTo(\'dc' + n + '-ch1\')">' +
+        '<span class="sec-heb">' + toHebNum(n) + '</span>' +
+        '<span class="sec-num">' + n + '</span></div>';
+    }
+    landingHtml += '</div></div>';
+  });
+
+  // Official Declarations
+  landingHtml += '<div class="landing-section-group"><h3>Official Declarations</h3><div class="landing-section-grid" style="grid-template-columns:1fr 1fr;">' +
+    '<div class="landing-sec-btn" onclick="navTo(\'od1-ch1\')"><span class="sec-heb">הכרזה א׳</span><span class="sec-num">OD 1</span></div>' +
+    '<div class="landing-sec-btn" onclick="navTo(\'od2-ch1\')"><span class="sec-heb">הכרזה ב׳</span><span class="sec-num">OD 2</span></div>' +
+    '</div></div>';
+
+  landingHtml += '</div><div class="landing-back"><a href="index.html">\u2190 Standard Works Home</a></div>';
+  landingPanel.innerHTML = landingHtml;
+
+  // Create section panels dynamically
+  DC_SECTIONS.forEach(function(n) {
+    var panelId = 'dc' + n + '-ch1';
+    var div = document.createElement('div');
+    div.className = 'chapter-panel';
+    div.id = 'panel-' + panelId;
+    div.style.display = 'none';
+    div.innerHTML = '<div class="chapter-heading"><h2>חֵלֶק ' + toHebNum(n) + '</h2>' +
+      '<div class="chapter-label-en">Section ' + n + '</div></div>' +
+      '<div id="' + panelId + '-verses"></div>';
+    mainContent.appendChild(div);
+  });
+
+  // OD panels
+  ['od1','od2'].forEach(function(od, idx) {
+    var panelId = od + '-ch1';
+    var hebLabel = idx === 0 ? 'הַכְרָזָה רִשְׁמִית א׳' : 'הַכְרָזָה רִשְׁמִית ב׳';
+    var engLabel = idx === 0 ? 'Official Declaration 1' : 'Official Declaration 2';
+    var div = document.createElement('div');
+    div.className = 'chapter-panel';
+    div.id = 'panel-' + panelId;
+    div.style.display = 'none';
+    div.innerHTML = '<div class="chapter-heading"><h2>' + hebLabel + '</h2>' +
+      '<div class="chapter-label-en">' + engLabel + '</div></div>' +
+      '<div id="' + panelId + '-verses"></div>';
+    mainContent.appendChild(div);
+  });
+})();
+
+// === HELPER FUNCTIONS ===
+
+function getBookChapter(chId) {
+  var m = chId.match(/^dc(\d+)-ch1$/);
+  if (m) return { book: 'D&C', chapter: parseInt(m[1], 10) };
+  if (chId === 'od1-ch1') return { book: 'OD', chapter: 1 };
+  if (chId === 'od2-ch1') return { book: 'OD', chapter: 2 };
+  return null;
+}
+
+function getChapterLabel(id) {
+  if (!id || id === 'landing') return 'D&C';
+  var m = id.match(/^dc(\d+)-ch1$/);
+  if (m) return 'D&C ' + m[1];
+  if (id === 'od1-ch1') return 'OD 1';
+  if (id === 'od2-ch1') return 'OD 2';
+  return id;
+}
+
+// === RENDERING ENGINE ===
+
+function makeWordUnit(h, e, isSof) {
+  if (h === '\u05C3') return '';
+  h = h.replace(/\u05C3/g, '');
+  var div = document.createElement('div');
+  div.className = 'word-unit' + (isSof ? ' sof' : '');
+  div.setAttribute('data-h', h);
+  var gloss = e.replace(/-/g, ' ');
+  div.innerHTML = '<span class="hw">' + h + '</span><span class="tl"></span><span class="gl">' + gloss + '</span>';
+  return div;
+}
+
+function renderWords(words, container, verseKey) {
+  var realWords = words.filter(function(w) { return w[0] !== '\u05C3'; });
+  var lastRealIdx = realWords.length - 1;
+  var realCount = 0;
+  words.forEach(function(w, i) {
+    var h = w[0], e = w[1];
+    if (h === '\u05C3') return;
+    var isSof = (i + 1 < words.length && words[i+1][0] === '\u05C3') || (realCount === lastRealIdx);
+    var isLastWord = (realCount === lastRealIdx);
+    var el = makeWordUnit(h, e, isSof);
+    if (el && verseKey) el.setAttribute('data-wid', verseKey + '|' + realCount);
+    var chevron = document.createElement('span');
+    chevron.className = 'arr';
+    var sym = isLastWord ? '\u00ab' : '\u2039';
+    chevron.innerHTML = '<span class="arr-hw">\u200B</span><span class="arr-tl">' + sym + '</span><span class="arr-gl">' + sym + '</span>';
+    var group = document.createElement('span');
+    group.className = 'word-group';
+    if (el) group.appendChild(el);
+    group.appendChild(chevron);
+    container.appendChild(group);
+    realCount++;
+  });
+}
+
+var _verseRegistry = [];
+var _pendingRenders = [];
+var _renderedChapters = {};
+
+function renderVerseSet(verseData, containerId) {
+  var chId = containerId.replace('-verses', '');
+  _verseRegistry.push({ chapId: chId, verses: verseData });
+  _pendingRenders.push({ verseData: verseData, containerId: containerId, chapId: chId });
+}
+
+function _doRenderVerses(verseData, containerId) {
+  var chId = containerId.replace('-verses', '');
+  var container = document.getElementById(containerId);
+  if (!container) return;
+  var bkInfo = getBookChapter(chId);
+  verseData.forEach(function(v, idx) {
+    var verseKey = bkInfo ? (bkInfo.book + '|' + bkInfo.chapter + '|' + (idx + 1)) : '';
+    var verseDiv = document.createElement('div');
+    verseDiv.className = 'verse';
+    if (verseKey) verseDiv.setAttribute('data-verse-key', verseKey);
+    var numDiv = document.createElement('div');
+    numDiv.className = 'verse-num';
+    numDiv.textContent = v.num;
+    var arabicNum = document.createElement('span');
+    arabicNum.className = 'verse-num-arabic';
+    arabicNum.textContent = idx + 1;
+    numDiv.appendChild(arabicNum);
+    verseDiv.appendChild(numDiv);
+    var flowDiv = document.createElement('div');
+    flowDiv.className = 'word-flow';
+    renderWords(v.words, flowDiv, verseKey);
+    verseDiv.appendChild(flowDiv);
+    container.appendChild(verseDiv);
+  });
+}
+
+function _ensureChapterRendered(chapId) {
+  if (_renderedChapters[chapId]) return;
+  for (var i = _pendingRenders.length - 1; i >= 0; i--) {
+    if (_pendingRenders[i].chapId === chapId) {
+      _doRenderVerses(_pendingRenders[i].verseData, _pendingRenders[i].containerId);
+      _pendingRenders.splice(i, 1);
+    }
+  }
+  _renderedChapters[chapId] = true;
+  if (typeof transliterate === 'function') {
+    var chapContainer = document.getElementById('panel-' + chapId);
+    if (chapContainer) {
+      var units = chapContainer.querySelectorAll('.word-unit[data-h]');
+      for (var ti = 0; ti < units.length; ti++) {
+        var h = units[ti].getAttribute('data-h');
+        var tlSpan = units[ti].querySelector('.tl');
+        if (tlSpan && h && !tlSpan.textContent) tlSpan.textContent = transliterate(h);
+      }
+    }
+  }
+}
+
+// === NAVIGATION ===
+
+function navTo(id, slideDir) {
+  var isLanding = id === 'landing';
+  var headerEl = document.getElementById('book-header');
+  var ornamentEl = document.getElementById('main-ornament');
+  var titleEl = document.getElementById('main-book-title');
+  var subEl = document.getElementById('main-book-subtitle');
+
+  headerEl.style.display = isLanding ? 'none' : '';
+  ornamentEl.style.display = isLanding ? 'none' : '';
+
+  if (!isLanding) {
+    var m = id.match(/^dc(\d+)-ch1$/);
+    if (m) {
+      titleEl.textContent = 'חֵלֶק ' + toHebNum(parseInt(m[1],10));
+      subEl.textContent = 'Section ' + m[1]; subEl.style.display = '';
+    } else if (id === 'od1-ch1') {
+      titleEl.textContent = 'הַכְרָזָה רִשְׁמִית א׳';
+      subEl.textContent = 'Official Declaration 1'; subEl.style.display = '';
+    } else if (id === 'od2-ch1') {
+      titleEl.textContent = 'הַכְרָזָה רִשְׁמִית ב׳';
+      subEl.textContent = 'Official Declaration 2'; subEl.style.display = '';
+    }
+    _ensureChapterRendered(id);
+  }
+
+  document.querySelectorAll('.chapter-panel').forEach(function(p) {
+    p.style.display = 'none';
+    p.classList.remove('slide-right', 'slide-left');
+  });
+  var targetPanel = document.getElementById('panel-' + (isLanding ? 'landing' : id));
+  if (targetPanel) {
+    targetPanel.style.display = 'block';
+    if (slideDir) targetPanel.classList.add(slideDir === 'next' ? 'slide-right' : 'slide-left');
+  }
+
+  currentPageId = id;
+  currentChapterId = isLanding ? null : id;
+  updateNavButtons();
+  window.scrollTo({top: 0, behavior: 'instant'});
+}
+
+// === MODE CONTROLS ===
+
+function setMode(mode) {
+  document.body.classList.remove('hide-gloss');
+  document.querySelectorAll('.controls-bottom button:not(#btn-translit)').forEach(function(b) { b.classList.remove('active'); });
+  if (mode === 'heb') {
+    document.body.classList.add('hide-gloss');
+    document.getElementById('btn-heb').classList.add('active');
+  } else {
+    document.getElementById('btn-inter').classList.add('active');
+  }
+}
+
+function toggleTranslit() {
+  document.body.classList.toggle('hide-translit');
+  var btn = document.getElementById('btn-translit');
+  btn.classList.toggle('active');
+  try { localStorage.setItem('dc-show-translit', btn.classList.contains('active') ? '1' : '0'); } catch(e) {}
+}
+
+function setSize(val) {
+  document.getElementById('page').style.fontSize = val + '%';
+  try { localStorage.setItem('dc-font-size', val); } catch(e) {}
+}
+
+// INIT: Restore settings
+try {
+  if (localStorage.getItem('dc-show-translit') === '1') {
+    document.getElementById('btn-translit').classList.add('active');
+  } else { document.body.classList.add('hide-translit'); }
+} catch(e) { document.body.classList.add('hide-translit'); }
+try {
+  var savedSize = localStorage.getItem('dc-font-size');
+  if (savedSize) { document.getElementById('page').style.fontSize = savedSize + '%'; document.getElementById('sizeSlider').value = savedSize; }
+} catch(e) {}
+</script>
+
+<!-- Strong's lookup + Root glossary data -->
+<script src="strongs_lookup.js"></script>
+<script src="../Hebrew BOM/roots_glossary.js"></script>
+
+<!-- Verse data files -->
+<script src="dc_verses/dc1_10.js"></script>
+<script src="dc_verses/dc11_20.js"></script>
+<script src="dc_verses/dc21_30.js"></script>
+<script src="dc_verses/dc31_40.js"></script>
+<script src="dc_verses/dc41_50.js"></script>
+<script src="dc_verses/dc51_60.js"></script>
+<script src="dc_verses/dc61_70.js"></script>
+<script src="dc_verses/dc71_80.js"></script>
+<script src="dc_verses/dc81_90.js"></script>
+<script src="dc_verses/dc91_100.js"></script>
+<script src="dc_verses/dc101_110.js"></script>
+<script src="dc_verses/dc109.js"></script>
+<script src="dc_verses/dc111_120.js"></script>
+<script src="dc_verses/dc121_130.js"></script>
+<script src="dc_verses/dc131_138.js"></script>
+<script src="dc_verses/od.js"></script>
+
+<script>
+
+// PREV / NEXT NAVIGATION
+var currentChapterId = null;
+var currentPageId = 'landing';
+var fullPageOrder = ['landing'].concat(chapterOrder);
+
+function updateNavButtons() {
+  var prevBtn = document.getElementById('nav-prev');
+  var nextBtn = document.getElementById('nav-next');
+  var label = document.getElementById('nav-label');
+  var idx = fullPageOrder.indexOf(currentPageId);
+  prevBtn.disabled = idx <= 0;
+  nextBtn.disabled = idx >= fullPageOrder.length - 1;
+  if (label) {
+    if (currentChapterId) {
+      label.innerHTML = getChapterLabel(currentChapterId) + ' \u25BE';
+    } else {
+      label.innerHTML = 'הַבְּרִיתוֹת וְהַחֻקִּים \u25BE';
+    }
+  }
+}
+
+function goNext() {
+  var idx = fullPageOrder.indexOf(currentPageId);
+  if (idx >= 0 && idx < fullPageOrder.length - 1) navTo(fullPageOrder[idx + 1], 'next');
+}
+
+function goPrev() {
+  var idx = fullPageOrder.indexOf(currentPageId);
+  if (idx > 0) navTo(fullPageOrder[idx - 1], 'prev');
+}
+
+// === HEBREW TRANSLITERATION ===
+var _tlKnown = {
+  'אב':'av','אח':'ach','אל':'el','אם':'em','אש':'esh','את':'et',
+  'בן':'ben','גד':'gad','דם':'dam','חי':'chai','חן':'chen','יד':'yad',
+  'ים':'yam','כל':'kol','כן':'ken','לב':'lev','עד':'ad','על':'al',
+  'עם':'am','רב':'rav','שם':'shem','שר':'sar',
+  'כי':'ki','לא':'lo','גם':'gam','מן':'min','אשר':'asher',
+  'אבד':'avad','אדם':'adam','אהב':'ahav','אור':'or','אמר':'amar',
+  'אנש':'enosh','ארץ':'erets','בוא':'bo','בית':'bayit','בנה':'banah',
+  'ברא':'bara','ברך':'barakh','גדל':'gadal','גלה':'galah','דבר':'davar',
+  'דרך':'derekh','הלך':'halakh','היה':'hayah','הלל':'halal','הנה':'hinneh',
+  'זכר':'zakhar','זרע':'zera','חדש':'chadash','חזק':'chazaq','חטא':'chata',
+  'חיה':'chayah','חכם':'chakham','חנן':'chanan','חסד':'chesed','חרב':'cherev',
+  'טוב':'tov','ידע':'yada','ידה':'yadah','יום':'yom','ילד':'yalad',
+  'ירא':'yare','ירד':'yarad','ירש':'yarash','ישב':'yashav','ישע':'yasha',
+  'ישר':'yashar','כהן':'kohen','כון':'kun','כפר':'kafar','כרת':'karat',
+  'כתב':'katav','לחם':'lacham','למד':'lamad','לקח':'laqach','מלא':'male',
+  'מלך':'melekh','משח':'mashach','משל':'mashal','משפט':'mishpat','מות':'mut',
+  'נבא':'nava','נגד':'nagad','נפל':'nafal','נפש':'nefesh','נשא':'nasa',
+  'נתן':'natan','ספר':'sefer','עבד':'avad','עבר':'avar','עלה':'alah',
+  'עלם':'olam','עמד':'amad','ענה':'anah','עשה':'asah','פקד':'paqad',
+  'צבא':'tsava','צדק':'tsedek','צוה':'tsavah','קדש':'qadash','קום':'qum',
+  'קול':'qol','קרא':'qara','קרב':'qarav','ראה':'raah','ראש':'rosh',
+  'רוח':'ruach','רחם':'racham','שוב':'shuv','שלח':'shalach','שלם':'shalam',
+  'שמע':'shama','שמר':'shamar','שפט':'shafat','תור':'torah',
+  'אלהים':'elohim','יהוה':'Adonai','נביא':'navi','תורה':'torah',
+  'שלום':'shalom','ברית':'berit','כהן':'kohen','נפש':'nefesh','רוח':'ruach',
+  'משיח':'mashiach','תפלה':'tefilah','אמונה':'emunah','תשובה':'teshuvah','גאולה':'geulah'
+};
+
+function transliterate(heb) {
+  if (heb.indexOf(' ') >= 0) return heb.split(' ').map(function(p) { return transliterate(p); }).join(' ');
+  if (heb.indexOf('\u05BE') >= 0) return heb.split('\u05BE').map(function(p) { return transliterate(p); }).join('-');
+  var hasNikkud = /[\u05B0-\u05BB]/.test(heb);
+  if (hasNikkud) return _tlPointed(heb);
+  var clean = heb.replace(/[\u0591-\u05C7]/g, '');
+  if (_tlKnown[clean]) return _tlKnown[clean];
+  var cmap = {'\u05D0':'','\u05D1':'v','\u05D2':'g','\u05D3':'d','\u05D4':'h','\u05D5':'v','\u05D6':'z','\u05D7':'ch','\u05D8':'t',
+    '\u05D9':'y','\u05DB':'kh','\u05DA':'kh','\u05DC':'l','\u05DE':'m','\u05DD':'m','\u05E0':'n','\u05DF':'n',
+    '\u05E1':'s','\u05E2':'','\u05E4':'f','\u05E3':'f','\u05E6':'ts','\u05E5':'ts','\u05E7':'q','\u05E8':'r','\u05E9':'sh','\u05EA':'t'};
+  var cc = [];
+  for (var i = 0; i < clean.length; i++) { var x = cmap[clean[i]]; if (x !== undefined) cc.push(x); }
+  if (cc.length === 0) return '';
+  var r = '';
+  for (var j = 0; j < cc.length; j++) { r += cc[j]; if (j < cc.length-1 && cc[j] && cc[j+1]) r += 'a'; }
+  return r;
+}
+
+function _tlPointed(text) {
+  var stripped = text.replace(/[\u0591-\u05C7]/g, '');
+  if (stripped === '\u05D9\u05D4\u05D5\u05D4') return 'Adonai';
+  var vmap = {};
+  vmap['\u05B0']='\u0115'; vmap['\u05B1']='\u0115'; vmap['\u05B2']='\u0103'; vmap['\u05B3']='\u014F';
+  vmap['\u05B4']='i'; vmap['\u05B5']='\u0113'; vmap['\u05B6']='e'; vmap['\u05B7']='a';
+  vmap['\u05B8']='\u0101'; vmap['\u05B9']='\u014D'; vmap['\u05BA']='\u014D'; vmap['\u05BB']='u';
+  var cmap = {'\u05D0':'','\u05D1':'v','\u05D2':'g','\u05D3':'d','\u05D4':'h','\u05D5':'v','\u05D6':'z','\u05D7':'ch','\u05D8':'t',
+    '\u05D9':'y','\u05DB':'kh','\u05DA':'kh','\u05DC':'l','\u05DE':'m','\u05DD':'m','\u05E0':'n','\u05DF':'n','\u05E1':'s',
+    '\u05E2':'','\u05E4':'f','\u05E3':'f','\u05E6':'ts','\u05E5':'ts','\u05E7':'q','\u05E8':'r','\u05E9':'sh','\u05EA':'t'};
+  var dmap = {'\u05D1':'b','\u05DB':'k','\u05DA':'k','\u05E4':'p','\u05E3':'p'};
+  var tokens = [], i = 0;
+  while (i < text.length) {
+    var ch = text[i], code = ch.charCodeAt(0);
+    if (code >= 0x05D0 && code <= 0x05EA) {
+      var tok = {c:ch, dag:false, shin:true, vowel:''};
+      i++;
+      while (i < text.length) {
+        var mc = text[i].charCodeAt(0);
+        if (mc === 0x05BC) { tok.dag = true; i++; }
+        else if (mc === 0x05C1) { tok.shin = true; i++; }
+        else if (mc === 0x05C2) { tok.shin = false; i++; }
+        else if (mc >= 0x05B0 && mc <= 0x05BB) { tok.vowel = text[i]; i++; }
+        else if ((mc >= 0x0591 && mc <= 0x05AF) || mc === 0x05BD) { i++; }
+        else break;
+      }
+      tokens.push(tok);
+    } else { i++; }
+  }
+  var segments = [], len = tokens.length;
+  for (var t = 0; t < len; t++) {
+    var tk = tokens[t], isLast = (t === len - 1);
+    var c;
+    if (tk.c === '\u05E9') c = tk.shin ? 'sh' : 's';
+    else if (tk.dag && dmap[tk.c]) c = dmap[tk.c];
+    else c = cmap[tk.c] || '';
+    if (tk.c === '\u05D5' && tk.dag && !tk.vowel) {
+      if (segments.length > 0) segments[segments.length-1].v = '\u00FB';
+      else segments.push({c:'', v:'\u00FB'});
+      continue;
+    }
+    if (tk.c === '\u05D5' && tk.vowel === '\u05B9') {
+      if (segments.length > 0) segments[segments.length-1].v = '\u00F4';
+      else segments.push({c:'', v:'\u00F4'});
+      continue;
+    }
+    if (tk.c === '\u05D5' && !tk.vowel && !tk.dag && t > 0 && tokens[t-1].vowel === '\u05B9') continue;
+    if (tk.c === '\u05D4' && isLast && !tk.vowel) continue;
+    if (tk.c === '\u05D9' && !tk.vowel && t > 0 && tokens[t-1].vowel === '\u05B4') {
+      if (segments.length > 0) segments[segments.length-1].v = '\u00EE'; continue;
+    }
+    if (tk.c === '\u05D9' && !tk.vowel && t > 0 && tokens[t-1].vowel === '\u05B5') {
+      if (segments.length > 0) segments[segments.length-1].v = '\u00EA'; continue;
+    }
+    if (tk.c === '\u05D9' && !tk.vowel && t > 0 && tokens[t-1].vowel === '\u05B6') {
+      if (segments.length > 0) segments[segments.length-1].v = '\u00EA'; continue;
+    }
+    var v = tk.vowel ? (vmap[tk.vowel] || '') : '';
+    var bgdkpt = '\u05D1\u05D2\u05D3\u05DB\u05E4\u05EA';
+    var prevVowel = t > 0 ? tokens[t-1].vowel : '';
+    var nextTok = t < len-1 ? tokens[t+1] : null;
+    if (tk.vowel === '\u05B0') {
+      if (isLast) v = '';
+      else if (tk.dag && bgdkpt.indexOf(tk.c) < 0) v = '\u0115';
+      else if (tk.dag && bgdkpt.indexOf(tk.c) >= 0 && t > 0 && prevVowel && prevVowel !== '\u05B0') v = '\u0115';
+      else if (prevVowel === '\u05B9') v = '';
+      else if (prevVowel === '\u05B4') v = '';
+      else if (t > 0 && tokens[t-1].c === '\u05D5' && tokens[t-1].dag && !tokens[t-1].vowel) v = '';
+      else if (nextTok && bgdkpt.indexOf(nextTok.c) >= 0 && nextTok.dag) v = '';
+      else if (nextTok && (t + 1 === len - 1) && !nextTok.vowel) v = '';
+      else if (prevVowel === '\u05B0') v = '\u0115';
+      else v = '\u0115';
+    }
+    if (tk.vowel === '\u05B8' && !isLast) {
+      var nxt = tokens[t+1];
+      var nxtIsLast = (t+1 === len-1);
+      var suffixLetters = '\u05DD\u05DF\u05DA';
+      if (nxtIsLast && !nxt.vowel && nxt.c !== '\u05D4' && suffixLetters.indexOf(nxt.c) < 0) {
+        var realVowels = 0;
+        for (var rv = 0; rv < len; rv++) { if (tokens[rv].vowel && tokens[rv].vowel !== '\u05B0') realVowels++; }
+        if (realVowels <= 1) v = 'o';
+      }
+      if (!nxtIsLast && nxt.vowel === '\u05B0') {
+        var nxt2 = t+2 < len ? tokens[t+2] : null;
+        if (nxt2 && bgdkpt.indexOf(nxt2.c) >= 0 && nxt2.dag) v = 'o';
+      }
+    }
+    var isDagForte = tk.dag && bgdkpt.indexOf(tk.c) < 0 && t > 0 && prevVowel;
+    var isBgdkptForte = tk.dag && bgdkpt.indexOf(tk.c) >= 0 && t > 0 && prevVowel && prevVowel !== '\u05B0';
+    if (isDagForte || isBgdkptForte) segments.push({c: c, v: '', ov: '', hc: tk.c, dag: false, doubled: true});
+    if (tk.c === '\u05D4' && isLast && tk.dag && !tk.vowel) { segments.push({c: 'h', v: '', ov: '', hc: tk.c, dag: true}); continue; }
+    segments.push({c: c, v: v, ov: tk.vowel || '', hc: tk.c, dag: !!tk.dag});
+  }
+  var gutturals = '\u05D7\u05E2\u05D4';
+  if (segments.length >= 2) {
+    var last = segments[segments.length - 1];
+    if (gutturals.indexOf(last.hc) >= 0 && last.ov === '\u05B7') { last.furtive = true; last.v = 'a'; }
+  }
+  var result = '';
+  for (var s = 0; s < segments.length; s++) {
+    var seg = segments[s];
+    result += seg.furtive ? (seg.v + seg.c) : (seg.c + seg.v);
+  }
+  return result;
+}
+
+// === NAV DROPDOWN ===
+var DD_GROUPS = [
+  { id: 'dd-sec1', start: 1, end: 20 },
+  { id: 'dd-sec21', start: 21, end: 40 },
+  { id: 'dd-sec41', start: 41, end: 60 },
+  { id: 'dd-sec61', start: 61, end: 80 },
+  { id: 'dd-sec81', start: 81, end: 100 },
+  { id: 'dd-sec101', start: 101, end: 120 },
+  { id: 'dd-sec121', start: 121, end: 138 }
+];
+(function initDdChapters() {
+  DD_GROUPS.forEach(function(g) {
+    var el = document.getElementById(g.id);
+    if (!el) return;
+    var html = '';
+    for (var i = g.start; i <= g.end; i++) {
+      html += '<button class="dd-ch" onclick="ddNav(\'dc' + i + '-ch1\')">' +
+        '<span class="dd-ch-heb">' + toHebNum(i) + '</span>' + i + '</button>';
+    }
+    el.innerHTML = html;
+  });
+})();
+
+function toggleNavDropdown() { document.getElementById('nav-dropdown').classList.toggle('open'); }
+function toggleDdBook(id) {
+  var el = document.getElementById(id);
+  if (!el) return;
+  var isOpen = el.classList.contains('open');
+  document.querySelectorAll('#nav-dropdown .dd-chapters').forEach(function(c) { c.classList.remove('open'); });
+  document.querySelectorAll('#nav-dropdown .dd-book .dd-arrow').forEach(function(a) { a.textContent = '\u25BC'; });
+  if (!isOpen) {
+    el.classList.add('open');
+    var arrow = el.previousElementSibling.querySelector('.dd-arrow');
+    if (arrow) arrow.textContent = '\u25B2';
+  }
+}
+function ddNav(id) { document.getElementById('nav-dropdown').classList.remove('open'); navTo(id); }
+
+document.addEventListener('click', function(e) {
+  var dd = document.getElementById('nav-dropdown');
+  if (!dd || !dd.classList.contains('open')) return;
+  var wrap = e.target.closest('.nav-label-wrap');
+  if (!wrap) dd.classList.remove('open');
+});
+
+// Keyboard shortcuts
+document.addEventListener('keydown', function(e) {
+  if ((e.ctrlKey || e.metaKey) && e.key === 'f') { e.preventDefault(); openSearch(); return; }
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+  if (e.key === 'Escape') { closeAllPanels(); e.preventDefault(); return; }
+  if (e.key === 'ArrowLeft') { goNext(); e.preventDefault(); }
+  else if (e.key === 'ArrowRight') { goPrev(); e.preventDefault(); }
+  else if (e.key === '1') { setMode('inter'); }
+  else if (e.key === '2') { setMode('heb'); }
+  else if (e.key === 'd' || e.key === 'D') { toggleDarkMode(); }
+  else if (e.key === 's' || e.key === 'S') { openSearch(); }
+  else if (e.key === 'g' || e.key === 'G') { openGlossary(); }
+  else if (e.key === 'n' || e.key === 'N') { openAnnotationsPanel(); }
+});
+
+function closeAllPanels() {
+  var sc = document.getElementById('search-container');
+  if (sc && sc.classList.contains('open')) closeSearch();
+  var wp = document.getElementById('word-popup');
+  if (wp && wp.style.display !== 'none' && wp.style.display !== '') closePopup();
+  var gp = document.getElementById('glossary-panel');
+  if (gp && gp.classList.contains('open')) closeGlossary();
+  var ap = document.getElementById('annotations-panel');
+  if (ap && ap.classList.contains('open')) closeAnnotationsPanel();
+  var sp = document.getElementById('share-popup');
+  if (sp && sp.classList.contains('open')) closeSharePopup();
+  _hideSelToolbar();
+}
+
+// PAGE-FLIP ANIMATION
+(function() {
+  var _navFade = window.navTo;
+  window.navTo = function(id, slideDir) {
+    document.querySelectorAll('.chapter-panel').forEach(function(p) { p.classList.remove('fade-in', 'slide-left', 'slide-right'); });
+    _navFade(id, slideDir);
+    setTimeout(function() {
+      document.querySelectorAll('.chapter-panel').forEach(function(p) {
+        if (p.style.display !== 'none') {
+          p.classList.add(slideDir ? (slideDir === 'next' ? 'slide-right' : 'slide-left') : 'fade-in');
+        }
+      });
+    }, 20);
+  };
+})();
+
+// VERSE HIGHLIGHTING
+(function() {
+  document.addEventListener('click', function(e) {
+    var num = e.target.closest('.verse-num');
+    if (!num) return;
+    var verse = num.closest('.verse');
+    if (!verse) return;
+    if (verse.classList.contains('highlighted')) { verse.classList.remove('highlighted'); }
+    else {
+      verse.parentElement.closest('.chapter-panel,.page').querySelectorAll('.verse.highlighted').forEach(function(v) { v.classList.remove('highlighted'); });
+      verse.classList.add('highlighted');
+    }
+  });
+})();
+
+// === ROOT MAP + MORPHOLOGICAL ANALYSIS ===
+
+// Strip common Hebrew prefixes to get closer to root/lemma
+function stripPrefixes(w) {
+  w = w.replace(/^.*\u05BE/, ''); // remove maqaf-joined particles
+  var prefixes = [
+    /^\u05D5\u05B0/, /^\u05D5\u05B7/, /^\u05D5\u05BC/, /^\u05D5\u05B8/, /^\u05D5\u05B6/,
+    /^\u05D4\u05B7/, /^\u05D4\u05B8/, /^\u05D4\u05B6/,
+    /^\u05D1\u05BC\u05B0/, /^\u05D1\u05BC\u05B7/, /^\u05D1\u05BC\u05B4/, /^\u05D1\u05BC\u05B8/, /^\u05D1\u05BC\u05B6/, /^\u05D1\u05B0/, /^\u05D1\u05B7/, /^\u05D1\u05B4/,
+    /^\u05DC\u05B0/, /^\u05DC\u05B7/, /^\u05DC\u05B4/, /^\u05DC\u05B8/, /^\u05DC\u05B6/,
+    /^\u05DE\u05B4/, /^\u05DE\u05B5/, /^\u05DE\u05B0/, /^\u05DE\u05B7/,
+    /^\u05DB\u05BC\u05B0/, /^\u05DB\u05BC\u05B7/, /^\u05DB\u05B0/, /^\u05DB\u05B7/,
+    /^\u05E9\u05C1\u05B6/, /^\u05E9\u05C1\u05B6/
+  ];
+  var stripped = w;
+  for (var i = 0; i < prefixes.length; i++) {
+    if (prefixes[i].test(stripped) && stripped.replace(prefixes[i], '').length >= 2) {
+      stripped = stripped.replace(prefixes[i], ''); break;
+    }
+  }
+  for (var j = 0; j < prefixes.length; j++) {
+    if (prefixes[j].test(stripped) && stripped.replace(prefixes[j], '').length >= 2) {
+      stripped = stripped.replace(prefixes[j], ''); break;
+    }
+  }
+  return stripped;
+}
+
+function normFinals(s) {
+  return s.replace(/\u05DA/g,'\u05DB').replace(/\u05DD/g,'\u05DE').replace(/\u05DF/g,'\u05E0').replace(/\u05E3/g,'\u05E4').replace(/\u05E5/g,'\u05E6');
+}
+
+var sofitMap = {'\u05DB':'\u05DA','\u05DE':'\u05DD','\u05E0':'\u05DF','\u05E4':'\u05E3','\u05E6':'\u05E5'};
+function toSofit(s) {
+  if (!s || s.length === 0) return s;
+  var last = s[s.length - 1];
+  return sofitMap[last] ? s.slice(0, -1) + sofitMap[last] : s;
+}
+
+function extractRoot(cons) {
+  var s = normFinals(cons);
+  if (s.length <= 3) return s;
+  if (s.length === 0) return cons;
+  var sufs = [
+    '\u05EA\u05D9\u05D4\u05DD','\u05D5\u05EA\u05D9\u05D4\u05DD','\u05D5\u05EA\u05D9\u05E0\u05D5',
+    '\u05D9\u05D4\u05DD','\u05D9\u05D4\u05DF','\u05D5\u05EA\u05DD','\u05D5\u05EA\u05DF','\u05EA\u05D9\u05D5','\u05EA\u05D9\u05D4','\u05EA\u05E0\u05D5',
+    '\u05DB\u05DD','\u05DB\u05DF','\u05E0\u05D5','\u05EA\u05D9','\u05EA\u05DD','\u05EA\u05DF','\u05D9\u05DD','\u05D5\u05EA','\u05D5\u05DF','\u05D9\u05DF','\u05D4\u05DD','\u05D4\u05DF',
+    '\u05D4','\u05D5','\u05DD','\u05DF','\u05D9','\u05EA','\u05DB'
+  ];
+  var stem = s;
+  for (var i = 0; i < sufs.length; i++) {
+    if (stem.length > sufs[i].length + 2 && stem.endsWith(sufs[i])) { stem = stem.slice(0, -sufs[i].length); break; }
+  }
+  if (stem.length === 3) return stem;
+  if (stem.length >= 5 && (stem.slice(0,2) === '\u05D4\u05EA' || stem.slice(0,2) === '\u05DE\u05EA')) { stem = stem.slice(2); }
+  else if (stem.length >= 4 && /^[\u05D4\u05D9\u05EA\u05D0\u05E0\u05DE]/.test(stem)) { stem = stem.slice(1); }
+  if (stem.length === 3) return stem;
+  if (stem.length === 4 && stem[1] === stem[2]) return stem[0] + stem[1] + stem[3];
+  for (var j = 0; j < sufs.length; j++) {
+    if (stem.length > sufs[j].length + 2 && stem.endsWith(sufs[j])) { stem = stem.slice(0, -sufs[j].length); break; }
+  }
+  if (stem.length === 3) return stem;
+  if (stem.length >= 4 && /^[\u05D4\u05D9\u05EA\u05D0\u05E0\u05DE]/.test(stem)) { stem = stem.slice(1); }
+  if (stem.length === 3) return stem;
+  if (stem.length === 4 && stem[1] === stem[2]) return stem[0] + stem[1] + stem[3];
+  return stem.length > 3 ? stem.slice(0, 3) : stem;
+}
+
+var rootMap = {
+  '\u05D7\u05B6\u05E1\u05B6\u05D3': '\u05D7\u05E1\u05D3', '\u05D7\u05B7\u05E1\u05B0\u05D3\u05BC\u05D5\u05B9': '\u05D7\u05E1\u05D3', '\u05D7\u05B2\u05E1\u05B8\u05D3\u05B8\u05D9\u05D5': '\u05D7\u05E1\u05D3',
+  '\u05D2\u05BC\u05B8\u05D0\u05B7\u05DC': '\u05D2\u05D0\u05DC', '\u05D2\u05BC\u05B9\u05D0\u05B5\u05DC': '\u05D2\u05D0\u05DC', '\u05D2\u05BC\u05B0\u05D0\u05BB\u05DC\u05BC\u05B8\u05D4': '\u05D2\u05D0\u05DC',
+  '\u05D1\u05BC\u05B0\u05E8\u05B4\u05D9\u05EA': '\u05D1\u05E8\u05EA', '\u05D4\u05B7\u05D1\u05BC\u05B0\u05E8\u05B4\u05D9\u05EA': '\u05D1\u05E8\u05EA',
+  '\u05D0\u05B1\u05DC\u05B9\u05D4\u05B4\u05D9\u05DD': '\u05D0\u05DC\u05D4', '\u05D4\u05B8\u05D0\u05B1\u05DC\u05B9\u05D4\u05B4\u05D9\u05DD': '\u05D0\u05DC\u05D4',
+  '\u05EA\u05BC\u05D5\u05B9\u05E8\u05B8\u05D4': '\u05EA\u05D5\u05E8', '\u05D4\u05B7\u05EA\u05BC\u05D5\u05B9\u05E8\u05B8\u05D4': '\u05EA\u05D5\u05E8', '\u05EA\u05BC\u05D5\u05B9\u05E8\u05B7\u05EA': '\u05EA\u05D5\u05E8',
+  '\u05DE\u05B6\u05DC\u05B6\u05DA\u05B0': '\u05DE\u05DC\u05DB', '\u05D4\u05B7\u05DE\u05BC\u05B6\u05DC\u05B6\u05DA\u05B0': '\u05DE\u05DC\u05DB', '\u05DE\u05B0\u05DC\u05B8\u05DB\u05B4\u05D9\u05DD': '\u05DE\u05DC\u05DB',
+  '\u05DE\u05B4\u05E9\u05C1\u05B0\u05E4\u05BC\u05B8\u05D8': '\u05E9\u05E4\u05D8', '\u05D4\u05B7\u05DE\u05BC\u05B4\u05E9\u05C1\u05B0\u05E4\u05BC\u05B8\u05D8': '\u05E9\u05E4\u05D8',
+  '\u05E0\u05B8\u05D1\u05B4\u05D9\u05D0': '\u05E0\u05D1\u05D0', '\u05D4\u05B7\u05E0\u05BC\u05B8\u05D1\u05B4\u05D9\u05D0': '\u05E0\u05D1\u05D0', '\u05E0\u05B0\u05D1\u05B4\u05D9\u05D0\u05B4\u05D9\u05DD': '\u05E0\u05D1\u05D0',
+  '\u05E9\u05C1\u05B8\u05DC\u05D5\u05B9\u05DD': '\u05E9\u05DC\u05DD', '\u05D4\u05B7\u05E9\u05C1\u05BC\u05B8\u05DC\u05D5\u05B9\u05DD': '\u05E9\u05DC\u05DD',
+  '\u05DE\u05B8\u05E9\u05C1\u05B4\u05D9\u05D7\u05B7': '\u05DE\u05E9\u05D7', '\u05D4\u05B7\u05DE\u05BC\u05B8\u05E9\u05C1\u05B4\u05D9\u05D7\u05B7': '\u05DE\u05E9\u05D7',
+  '\u05E2\u05D5\u05B9\u05DC\u05B8\u05DD': '\u05E2\u05DC\u05DD', '\u05DC\u05B0\u05E2\u05D5\u05B9\u05DC\u05B8\u05DD': '\u05E2\u05DC\u05DD',
+  '\u05D9\u05B0\u05E8\u05D5\u05BC\u05E9\u05C1\u05B8\u05DC\u05B7\u05D9\u05B4\u05DD': '\u05D9\u05E8\u05E9\u05DC\u05DD',
+  '\u05D3\u05BC\u05B8\u05D5\u05B4\u05D3': '\u05D3\u05D5\u05D3', '\u05DC\u05B0\u05D3\u05B8\u05D5\u05B4\u05D3': '\u05D3\u05D5\u05D3',
+  '\u05D9\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u05DC': '\u05D9\u05E9\u05E8\u05D0\u05DC'
+};
+
+function getRoot(hw) {
+  if (rootMap[hw]) return rootMap[hw];
+  var stripped = stripPrefixes(hw);
+  if (rootMap[stripped]) return rootMap[stripped];
+  return extractRoot(_stripNikkud(stripped));
+}
+
+// Build frequency maps by root
+var rootFreq = {};
+var wordToRoot = {};
+var wordFreq = {};
+for (var ri = 0; ri < _verseRegistry.length; ri++) {
+  var reg = _verseRegistry[ri];
+  var bk = getBookChapter(reg.chapId);
+  for (var vi = 0; vi < reg.verses.length; vi++) {
+    var vWords = reg.verses[vi].words;
+    var vk = bk ? (bk.book + '|' + bk.chapter + '|' + (vi + 1)) : '';
+    for (var wi = 0; wi < vWords.length; wi++) {
+      var h = vWords[wi][0], g = vWords[wi][1].replace(/-/g, ' ');
+      if (h === '\u05C3' || !g.trim()) continue;
+      var root = getRoot(h);
+      wordToRoot[h] = root;
+      if (!rootFreq[root]) rootFreq[root] = { count: 0, glosses: {}, forms: {}, exampleVerse: '', verseRefs: {} };
+      rootFreq[root].count++;
+      rootFreq[root].glosses[g] = (rootFreq[root].glosses[g] || 0) + 1;
+      rootFreq[root].forms[h] = (rootFreq[root].forms[h] || 0) + 1;
+      if (vk) { rootFreq[root].verseRefs[vk] = (rootFreq[root].verseRefs[vk] || 0) + 1; if (!rootFreq[root].exampleVerse) rootFreq[root].exampleVerse = vk; }
+      if (!wordFreq[h]) wordFreq[h] = { count: 0, glosses: {} };
+      wordFreq[h].count++;
+      wordFreq[h].glosses[g] = (wordFreq[h].glosses[g] || 0) + 1;
+    }
+  }
+}
+
+// === ENHANCED WORD POPUP ===
+(function() {
+  var popup = document.getElementById('word-popup');
+  var popupHw = document.getElementById('popup-hw');
+  var popupGl = document.getElementById('popup-gl');
+  var popupDetail = document.getElementById('popup-detail');
+  var popupStrong = document.getElementById('popup-strong');
+
+  document.addEventListener('click', function(e) {
+    if (e.target.closest('#sel-toolbar')) return;
+    var wu = e.target.closest('.word-unit');
+    if (!wu) { closePopup(); return; }
+    if (e.target.closest('.verse-num')) return;
+    var hw = wu.querySelector('.hw'), gl = wu.querySelector('.gl');
+    if (!hw || !gl) return;
+    window._popupWordUnit = wu;
+    var hText = hw.textContent, gText = gl.textContent;
+    popupHw.textContent = hText;
+    document.getElementById('popup-translit').textContent = transliterate(hText);
+    popupGl.textContent = gText;
+
+    // Strong's H-number
+    var strongsNum = '';
+    if (window._strongsLookup) {
+      var stripped = stripPrefixes(hText);
+      strongsNum = _strongsLookup[hText] || _strongsLookup[stripped] || _strongsLookup[_stripNikkud(hText)] || _strongsLookup[_stripNikkud(stripped)] || '';
+    }
+    if (strongsNum) {
+      popupStrong.innerHTML = "Strong\u2019s: <a href='https://www.blueletterbible.org/lexicon/" + strongsNum.toLowerCase() + "/wlc/0/1/' target='_blank' rel='noopener'>" + strongsNum + "</a>";
+      popupStrong.style.display = '';
+    } else {
+      popupStrong.style.display = 'none';
+    }
+
+    // Root-based frequency
+    var root = wordToRoot[hText] || getRoot(hText);
+    var rInfo = rootFreq[root];
+    var sInfo = wordFreq[hText];
+    var detailHtml = '';
+    if (rInfo) {
+      var verseCount = rInfo.verseRefs ? Object.keys(rInfo.verseRefs).length : 0;
+      var curatedRoot = (window._rootGlossaryData || {})[root] || {};
+      var rootMeaning = curatedRoot.meaning || '';
+      if (!rootMeaning) {
+        var glossPairs = Object.entries(rInfo.glosses).sort(function(a,b) { return b[1]-a[1]; });
+        var seen = {}, meanings = [];
+        glossPairs.forEach(function(pair) {
+          var m = pair[0].replace(/^(and-|the-|to-|in-|from-|as-|that-|by-|for-|with-|a-|an-|his-|her-|their-|my-|our-|your-|its-)+/g,'').replace(/-/g,' ').trim();
+          if (m && !seen[m] && m.length > 1) { seen[m] = true; meanings.push(m); }
+        });
+        rootMeaning = meanings.slice(0, 4).join(', ');
+      }
+      detailHtml += '<span style="cursor:pointer;text-decoration:underline;" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">Root (<span style="font-family:David Libre,serif">' + toSofit(root) + '</span>) <span style="font-size:0.85em;opacity:0.7;">' + transliterate(toSofit(root)) + '</span></span> \u2014 ' + rInfo.count + ' uses in ' + verseCount + ' verses';
+      if (rootMeaning) detailHtml += '<br><span style="font-style:italic;color:var(--ink-light);font-size:0.9em;">' + rootMeaning + '</span>';
+      var formKeys = Object.keys(rInfo.forms);
+      if (formKeys.length > 1) {
+        var sortedForms = Object.entries(rInfo.forms).sort(function(a,b) { return b[1]-a[1]; });
+        detailHtml += '<br><span>Forms:</span> ' + sortedForms.slice(0, 5).map(function(pair) {
+          return '<span style="font-family:David Libre,serif">' + pair[0] + '</span> (' + pair[1] + 'x)';
+        }).join(', ');
+      }
+      detailHtml += '<br><span style="cursor:pointer;color:var(--accent);text-decoration:underline;font-size:0.9em;" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">View all references \u2192</span>';
+    } else {
+      detailHtml += '<span>Occurrences:</span> ' + (sInfo ? sInfo.count : 1);
+    }
+    if (sInfo && Object.keys(sInfo.glosses).length > 1) {
+      var sorted = Object.entries(sInfo.glosses).sort(function(a,b) { return b[1]-a[1]; });
+      detailHtml += '<br><span>Also glossed:</span> ' + sorted.slice(0, 4).map(function(pair) { return '"' + pair[0] + '" (' + pair[1] + 'x)'; }).join(', ');
+    }
+    popupDetail.innerHTML = detailHtml;
+
+    var rect = wu.getBoundingClientRect();
+    popup.style.display = 'block';
+    var popRect = popup.getBoundingClientRect();
+    var left = rect.left + rect.width / 2 - popRect.width / 2;
+    if (left < 8) left = 8;
+    if (left + popRect.width > window.innerWidth - 8) left = window.innerWidth - popRect.width - 8;
+    var top = rect.bottom + 8;
+    if (top + popRect.height > window.innerHeight - 60) top = rect.top - popRect.height - 8;
+    popup.style.left = left + 'px';
+    popup.style.top = top + 'px';
+  });
+})();
+
+function closePopup() { document.getElementById('word-popup').style.display = 'none'; }
+
+// === ANNOTATIONS SYSTEM ===
+var _dcAnnotations = {};
+try { _dcAnnotations = JSON.parse(localStorage.getItem('dc-annotations') || '{}'); } catch(e) {}
+var _dcNotes = {};
+try { _dcNotes = JSON.parse(localStorage.getItem('dc-notes') || '{}'); } catch(e) {}
+
+function _saveAnnotations() { try { localStorage.setItem('dc-annotations', JSON.stringify(_dcAnnotations)); } catch(e) {} }
+function _saveNotes() { try { localStorage.setItem('dc-notes', JSON.stringify(_dcNotes)); } catch(e) {} }
+
+function setWordAnnotation(wid, tier, type, color) {
+  if (!_dcAnnotations[wid]) _dcAnnotations[wid] = {};
+  if (!_dcAnnotations[wid][tier]) _dcAnnotations[wid][tier] = {};
+  if (color) { _dcAnnotations[wid][tier][type] = color; }
+  else {
+    delete _dcAnnotations[wid][tier][type];
+    if (Object.keys(_dcAnnotations[wid][tier]).length === 0) delete _dcAnnotations[wid][tier];
+    if (Object.keys(_dcAnnotations[wid]).length === 0) delete _dcAnnotations[wid];
+  }
+  _saveAnnotations();
+  applyAnnotationToWord(wid);
+}
+
+function applyAnnotationToWord(wid) {
+  var el = document.querySelector('.word-unit[data-wid="' + wid + '"]');
+  if (!el) return;
+  var ann = _dcAnnotations[wid] || {};
+  ['hw','tl','gl'].forEach(function(tier) {
+    var tierEl = el.querySelector('.' + tier);
+    if (!tierEl) return;
+    var ta = ann[tier] || {};
+    if (ta.hl) { tierEl.classList.add('ann-hl'); tierEl.style.backgroundColor = ta.hl; }
+    else { tierEl.classList.remove('ann-hl'); tierEl.style.backgroundColor = ''; }
+    if (ta.ul) { tierEl.classList.add('ann-ul'); tierEl.style.textDecorationColor = ta.ul; }
+    else { tierEl.classList.remove('ann-ul'); tierEl.style.textDecorationColor = ''; }
+  });
+}
+
+function applyAllAnnotations() {
+  document.querySelectorAll('.word-unit[data-wid]').forEach(function(el) {
+    var wid = el.getAttribute('data-wid');
+    var ann = _dcAnnotations[wid];
+    if (!ann) return;
+    ['hw','tl','gl'].forEach(function(tier) {
+      var tierEl = el.querySelector('.' + tier);
+      if (!tierEl) return;
+      var ta = ann[tier] || {};
+      if (ta.hl) { tierEl.classList.add('ann-hl'); tierEl.style.backgroundColor = ta.hl; }
+      if (ta.ul) { tierEl.classList.add('ann-ul'); tierEl.style.textDecorationColor = ta.ul; }
+    });
+  });
+}
+
+function openAnnotationsPanel() {
+  renderAnnotationsList();
+  document.getElementById('annotations-panel').classList.add('open');
+  document.getElementById('panel-overlay').classList.add('open');
+}
+function closeAnnotationsPanel() {
+  document.getElementById('annotations-panel').classList.remove('open');
+  document.getElementById('panel-overlay').classList.remove('open');
+}
+
+var _currentAnnTab = 'highlights';
+function showAnnTab(tab) {
+  _currentAnnTab = tab;
+  document.querySelectorAll('.ann-tab').forEach(function(t) { t.classList.remove('active'); });
+  document.querySelector('.ann-tab[onclick*="' + tab + '"]').classList.add('active');
+  renderAnnotationsList();
+}
+
+function renderAnnotationsList() {
+  var list = document.getElementById('annotations-list');
+  var html = '';
+  if (_currentAnnTab === 'highlights') {
+    var wids = Object.keys(_dcAnnotations);
+    if (wids.length === 0) { html = '<div style="color:var(--ink-light);padding:16px;font-style:italic;">No highlights yet. Select text and use the toolbar to highlight.</div>'; }
+    else {
+      wids.forEach(function(wid) {
+        var parts = wid.split('|');
+        var ref = parts.length >= 3 ? parts[0] + ' ' + parts[1] + ':' + parts[2] : wid;
+        var el = document.querySelector('.word-unit[data-wid="' + wid + '"]');
+        var hw = el ? el.querySelector('.hw') : null;
+        var text = hw ? hw.textContent : '';
+        html += '<div class="ann-item"><div class="ann-item-ref">' + ref + '</div><div class="ann-item-text">' + text + '</div></div>';
+      });
+    }
+  } else {
+    var vks = Object.keys(_dcNotes);
+    if (vks.length === 0) { html = '<div style="color:var(--ink-light);padding:16px;font-style:italic;">No notes yet. Select text and use the toolbar to add notes.</div>'; }
+    else {
+      vks.forEach(function(vk) {
+        var parts = vk.split('|');
+        var ref = parts.length >= 3 ? parts[0] + ' ' + parts[1] + ':' + parts[2] : vk;
+        html += '<div class="ann-item"><div class="ann-item-ref">' + ref + '</div><div class="ann-item-note">' + _dcNotes[vk] + '</div></div>';
+      });
+    }
+  }
+  list.innerHTML = html;
+}
+
+function exportAnnotations() {
+  var data = { annotations: _dcAnnotations, notes: _dcNotes, exported: new Date().toISOString(), reader: 'D&C' };
+  var blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a'); a.href = url; a.download = 'dc-annotations.json'; a.click();
+  URL.revokeObjectURL(url);
+}
+
+// === SELECTION TOOLBAR ===
+var _selWordUnits = [];
+var _selTier = '';
+var _selMode = '';
+
+function _detectTier(node) {
+  var el = node.nodeType === 3 ? node.parentElement : node;
+  while (el && !el.classList.contains('word-unit')) {
+    if (el.classList.contains('hw')) return 'hw';
+    if (el.classList.contains('tl')) return 'tl';
+    if (el.classList.contains('gl')) return 'gl';
+    el = el.parentElement;
+  }
+  return '';
+}
+
+function _getSelectedWordUnits(sel) {
+  if (!sel.rangeCount) return [];
+  var range = sel.getRangeAt(0);
+  var tier = _detectTier(sel.anchorNode);
+  if (!tier) tier = _detectTier(sel.focusNode);
+  if (!tier) return [];
+  _selTier = tier;
+  var container = range.commonAncestorContainer;
+  if (container.nodeType === 3) container = container.parentElement;
+  while (container && !container.classList.contains('verse') && !container.classList.contains('word-flow') && !container.classList.contains('chapter-panel')) {
+    if (container.tagName === 'BODY') return [];
+    container = container.parentElement;
+  }
+  if (!container) return [];
+  var wordUnits = container.querySelectorAll('.word-unit[data-wid]');
+  var result = [];
+  wordUnits.forEach(function(wu) {
+    var tierEl = wu.querySelector('.' + tier);
+    if (tierEl && sel.containsNode(tierEl, true)) result.push(wu);
+  });
+  return result;
+}
+
+function _showSelToolbar() {
+  var sel = window.getSelection();
+  if (!sel || sel.isCollapsed || sel.toString().trim().length === 0) { _hideSelToolbar(); return; }
+  var anchor = sel.anchorNode && (sel.anchorNode.nodeType === 3 ? sel.anchorNode.parentElement : sel.anchorNode);
+  if (anchor && (anchor.closest('#sel-toolbar') || anchor.closest('input') || anchor.closest('textarea'))) return;
+  var wus = _getSelectedWordUnits(sel);
+  if (wus.length > 0) { _selMode = 'word'; _selWordUnits = wus; }
+  else { _selMode = 'text'; _selWordUnits = []; }
+  var toolbar = document.getElementById('sel-toolbar');
+  var range = sel.getRangeAt(0);
+  var rect = range.getBoundingClientRect();
+  document.getElementById('sel-subpanel').style.display = 'none';
+  document.getElementById('sel-note-row').style.display = 'none';
+  var top = rect.top - 250;
+  if (top < 10) top = rect.bottom + 10;
+  var left = rect.left + rect.width / 2 - 24;
+  if (left < 10) left = 10;
+  if (left + 52 > window.innerWidth) left = window.innerWidth - 60;
+  toolbar.style.top = top + 'px';
+  toolbar.style.left = left + 'px';
+  toolbar.classList.add('visible');
+  if (_selMode === 'word') _updateSelToolbarIndicators();
+  if (sel) sel.removeAllRanges();
+}
+
+function _hideSelToolbar() {
+  document.getElementById('sel-toolbar').classList.remove('visible');
+  var sp = document.getElementById('sel-subpanel');
+  if (sp) sp.style.display = 'none';
+  _selWordUnits = [];
+  _selTier = '';
+  _selMode = '';
+}
+
+function _updateSelToolbarIndicators() {
+  if (_selWordUnits.length === 0) return;
+  var wid = _selWordUnits[0].getAttribute('data-wid');
+  var ann = _dcAnnotations[wid] || {};
+  var ta = ann[_selTier] || {};
+  document.querySelectorAll('#sel-toolbar .sel-color[data-ann="highlight"]').forEach(function(c) { c.classList.toggle('active', ta.hl === c.getAttribute('data-color')); });
+  document.querySelectorAll('#sel-toolbar .sel-color[data-ann="underline"]').forEach(function(c) { c.classList.toggle('active', ta.ul === c.getAttribute('data-color')); });
+}
+
+function selToolbarApply(el) {
+  var annType = el.getAttribute('data-ann');
+  var color = el.getAttribute('data-color');
+  var type = annType === 'highlight' ? 'hl' : 'ul';
+  _selWordUnits.forEach(function(wu) { var wid = wu.getAttribute('data-wid'); if (wid) setWordAnnotation(wid, _selTier, type, color || null); });
+  _updateSelToolbarIndicators();
+  window.getSelection().removeAllRanges();
+  setTimeout(_hideSelToolbar, 150);
+}
+
+function selToolbarToggleColors() {
+  var sp = document.getElementById('sel-subpanel');
+  sp.style.display = sp.style.display === 'none' ? 'block' : 'none';
+}
+
+function selToolbarOpenNote() {
+  var row = document.getElementById('sel-note-row');
+  var panel = document.getElementById('sel-subpanel');
+  if (row.style.display !== 'none') { row.style.display = 'none'; } else { panel.style.display = 'block'; row.style.display = 'block'; _loadSelNote(); document.getElementById('sel-note-input').focus(); }
+}
+
+function _selVerseKey() {
+  if (_selWordUnits.length === 0) return '';
+  var wid = _selWordUnits[0].getAttribute('data-wid');
+  return wid ? wid.split('|').slice(0, 3).join('|') : '';
+}
+
+function _loadSelNote() {
+  var ta = document.getElementById('sel-note-input');
+  var vk = _selVerseKey();
+  ta.value = vk ? (_dcNotes[vk] || '') : '';
+}
+
+function selToolbarSaveNote() {
+  var vk = _selVerseKey();
+  if (!vk) return;
+  var ta = document.getElementById('sel-note-input');
+  if (ta.value.trim()) { _dcNotes[vk] = ta.value; } else { delete _dcNotes[vk]; }
+  _saveNotes();
+  ta.value = '';
+  _hideSelToolbar();
+}
+
+function selToolbarCopy() {
+  var text = '';
+  _selWordUnits.forEach(function(wu) {
+    var el = wu.querySelector('.' + _selTier);
+    if (el) text += (text ? ' ' : '') + el.textContent;
+  });
+  if (!text && _selMode === 'text') text = window.getSelection().toString();
+  if (text) { navigator.clipboard.writeText(text).catch(function() {}); }
+  _hideSelToolbar();
+}
+
+function selToolbarShare() { _hideSelToolbar(); openSharePopup(); }
+
+function selToolbarClearAll() {
+  _selWordUnits.forEach(function(wu) {
+    var wid = wu.getAttribute('data-wid');
+    if (wid && _dcAnnotations[wid]) { delete _dcAnnotations[wid]; _saveAnnotations(); applyAnnotationToWord(wid); }
+  });
+  _hideSelToolbar();
+}
+
+// Selection event listeners
+document.addEventListener('mouseup', function(e) { if (!e.target.closest('#sel-toolbar')) setTimeout(_showSelToolbar, 10); });
+document.addEventListener('touchend', function(e) { if (!e.target.closest('#sel-toolbar')) setTimeout(_showSelToolbar, 300); });
+document.addEventListener('mousedown', function(e) { if (!e.target.closest('#sel-toolbar')) _hideSelToolbar(); });
+document.addEventListener('touchstart', function(e) { if (!e.target.closest('#sel-toolbar')) _hideSelToolbar(); });
+
+// === SHARE SYSTEM ===
+var _shareVerseKey = '';
+function _getShareUrl() {
+  var hash = currentChapterId || '';
+  return window.location.origin + window.location.pathname + '#' + hash;
+}
+
+function getShareContent() {
+  var text = '';
+  if (_selWordUnits.length > 0) {
+    _selWordUnits.forEach(function(wu) { var hw = wu.querySelector('.hw'); if (hw) text += (text ? ' ' : '') + hw.textContent; });
+  }
+  return text;
+}
+
+function openSharePopup() {
+  var preview = document.getElementById('share-verse-preview');
+  preview.textContent = getShareContent() || 'Select text to share';
+  document.getElementById('share-popup').classList.add('open');
+}
+function closeSharePopup() { document.getElementById('share-popup').classList.remove('open'); }
+
+function shareToFacebook() { window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(_getShareUrl()), '_blank'); closeSharePopup(); }
+function shareToX() { var text = getShareContent(); window.open('https://x.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(_getShareUrl()), '_blank'); closeSharePopup(); }
+function shareCopyLink() {
+  navigator.clipboard.writeText(_getShareUrl()).then(function() { var btn = document.querySelector('.share-btn:nth-child(3)'); if (btn) { btn.textContent = 'Copied!'; setTimeout(function() { btn.textContent = 'Copy Link'; }, 1500); } });
+  closeSharePopup();
+}
+function shareNative() {
+  if (navigator.share) { navigator.share({ title: 'Hebrew Doctrine and Covenants', text: getShareContent(), url: _getShareUrl() }).catch(function() {}); }
+  closeSharePopup();
+}
+
+// === GLOSSARY SYSTEM ===
+var glossaryIndex = null;
+var glossaryExclude = new Set(['', ' ']);
+
+function buildGlossaryIndex() {
+  if (glossaryIndex) return;
+  glossaryIndex = [];
+  var curated = window._rootGlossaryData || {};
+  for (var root in rootFreq) {
+    if (glossaryExclude.has(root)) continue;
+    var rInfo = rootFreq[root];
+    var cInfo = curated[root] || {};
+    var topGloss = '', topCount = 0;
+    for (var g in rInfo.glosses) { if (rInfo.glosses[g] > topCount) { topCount = rInfo.glosses[g]; topGloss = g; } }
+    var autoMeaning = topGloss.replace(/^(and-|the-|to-|in-|from-|as-|that-|by-|for-|with-|a-|an-)+/g,'').replace(/-/g,' ');
+    glossaryIndex.push({
+      root: root, meaning: cInfo.meaning || autoMeaning || '', category: cInfo.category || 'Uncategorized',
+      count: rInfo.count, forms: rInfo.forms, glosses: rInfo.glosses,
+      exampleVerse: rInfo.exampleVerse || '', verseRefs: rInfo.verseRefs || {}, biblicalRefs: cInfo.biblicalRefs || []
+    });
+  }
+}
+
+function openGlossary() {
+  buildGlossaryIndex();
+  renderGlossaryList();
+  document.getElementById('glossary-panel').classList.add('open');
+  document.getElementById('panel-overlay').classList.add('open');
+}
+function closeGlossary() {
+  document.getElementById('glossary-panel').classList.remove('open');
+  document.getElementById('panel-overlay').classList.remove('open');
+  clearHighlightedWords();
+}
+
+function setGlossaryTab(btn) {
+  document.querySelectorAll('.glossary-tab').forEach(function(t) { t.classList.remove('active'); });
+  btn.classList.add('active');
+  renderGlossaryList();
+}
+
+function renderGlossaryList() {
+  var list = document.getElementById('glossary-list');
+  var searchVal = (document.getElementById('glossary-search').value || '').trim().toLowerCase();
+  var activeTab = document.querySelector('.glossary-tab.active');
+  var tab = activeTab ? activeTab.getAttribute('data-tab') : 'all';
+  var sortVal = document.getElementById('glossary-sort-select').value;
+  var filtered = glossaryIndex.filter(function(e) {
+    if (searchVal) {
+      var svNorm = normFinals(searchVal.replace(/[\u0591-\u05C7]/g, ''));
+      var rootNorm = e.root.replace(/[\u0591-\u05C7]/g, '');
+      return rootNorm.indexOf(svNorm) === 0 || e.meaning.toLowerCase().indexOf(searchVal) >= 0 ||
+        Object.keys(e.glosses).some(function(g) { return g.toLowerCase().indexOf(searchVal) >= 0; });
+    }
+    return true;
+  });
+  if (sortVal === 'freq-desc') filtered.sort(function(a,b) { return b.count - a.count; });
+  else if (sortVal === 'freq-asc') filtered.sort(function(a,b) { return a.count - b.count; });
+  else if (sortVal === 'alpha-heb') filtered.sort(function(a,b) { return a.root.localeCompare(b.root,'he'); });
+  else if (sortVal === 'alpha-eng') filtered.sort(function(a,b) { return a.meaning.localeCompare(b.meaning,'en'); });
+  var html = '';
+  if (tab === 'category') {
+    var cats = {};
+    filtered.forEach(function(e) { var c = e.category || 'Uncategorized'; if (!cats[c]) cats[c] = []; cats[c].push(e); });
+    Object.keys(cats).sort().forEach(function(cat) {
+      html += '<div class="glossary-category-header">' + cat + ' (' + cats[cat].length + ')</div>';
+      cats[cat].forEach(function(e) { html += renderGlossaryEntry(e); });
+    });
+  } else if (tab === 'frequent') {
+    filtered.sort(function(a,b) { return b.count - a.count; });
+    filtered.slice(0, 100).forEach(function(e) { html += renderGlossaryEntry(e); });
+  } else {
+    filtered.forEach(function(e) { html += renderGlossaryEntry(e); });
+  }
+  if (!html) html = '<div style="color:var(--ink-light);padding:20px;font-style:italic;">No roots found.</div>';
+  list.innerHTML = html;
+}
+
+function renderGlossaryEntry(entry) {
+  var formsList = Object.entries(entry.forms).sort(function(a,b) { return b[1]-a[1]; }).slice(0,8)
+    .map(function(pair) { return '<span class="glossary-form-chip" onclick="event.stopPropagation();highlightForm(\'' + pair[0].replace(/'/g,"\\'") + '\')">' + pair[0] + ' <small>(' + pair[1] + ')</small></span>'; }).join('');
+  var glossList = Object.entries(entry.glosses).sort(function(a,b) { return b[1]-a[1]; }).slice(0,6)
+    .map(function(pair) { return '"' + pair[0] + '" (' + pair[1] + 'x)'; }).join(', ');
+  var refsHtml = buildVerseRefsHtml(entry.verseRefs || {});
+  return '<div class="glossary-entry" onclick="toggleGlossaryEntry(this)">' +
+    '<div class="glossary-entry-header"><span class="glossary-root">' + toSofit(entry.root) + '</span>' +
+    '<span style="font-size:0.75em;opacity:0.6;margin-left:6px;">' + transliterate(toSofit(entry.root)) + '</span>' +
+    '<span class="glossary-count">' + entry.count + 'x</span></div>' +
+    '<div class="glossary-meaning">' + (entry.meaning || '') + '</div>' +
+    (entry.category !== 'Uncategorized' ? '<span class="glossary-category-badge">' + entry.category + '</span>' : '') +
+    '<div class="glossary-detail"><div><strong>Glosses:</strong> ' + glossList + '</div>' +
+    '<div style="margin-top:6px;"><strong>Forms:</strong></div><div class="glossary-forms-list">' + formsList + '</div>' +
+    refsHtml +
+    '<button class="glossary-highlight-btn" onclick="event.stopPropagation();highlightAllForms(\'' + entry.root.replace(/'/g,"\\'") + '\')">Highlight all in text</button></div></div>';
+}
+
+function buildVerseRefsHtml(verseRefs) {
+  var keys = Object.keys(verseRefs);
+  if (keys.length === 0) return '';
+  var byBook = {};
+  keys.forEach(function(vk) {
+    var parts = vk.split('|');
+    if (parts.length !== 3) return;
+    if (!byBook[parts[0]]) byBook[parts[0]] = [];
+    byBook[parts[0]].push({ ch: parseInt(parts[1],10), vs: parseInt(parts[2],10), key: vk });
+  });
+  for (var b in byBook) byBook[b].sort(function(a,c) { return a.ch !== c.ch ? a.ch - c.ch : a.vs - c.vs; });
+  var html = '<div class="glossary-refs-section"><strong>References (' + keys.length + ' verses):</strong>';
+  var count = 0;
+  Object.keys(byBook).sort().forEach(function(book) {
+    if (count >= 30) return;
+    var refs = byBook[book].slice(0, 10);
+    html += '<div class="glossary-refs-book"><span class="glossary-refs-book-name">' + book + ':</span> ';
+    html += refs.map(function(r) { return '<span class="glossary-ref-link" onclick="event.stopPropagation();goToGlossaryVerse(\'' + r.key.replace(/'/g,"\\'") + '\')">' + r.ch + ':' + r.vs + '</span>'; }).join(', ');
+    html += '</div>';
+    count += refs.length;
+  });
+  html += '</div>';
+  return html;
+}
+
+function toggleGlossaryEntry(el) { el.classList.toggle('expanded'); }
+
+function goToGlossaryVerse(verseKey) {
+  closeGlossary();
+  var parts = verseKey.split('|');
+  if (parts.length < 3) return;
+  var book = parts[0];
+  var chNum = parts[1];
+  var chId = '';
+  if (book === 'D&C') { chId = 'dc' + chNum + '-ch1'; }
+  else if (book === 'OD') { chId = 'od' + chNum + '-ch1'; }
+  if (!chId) return;
+  navTo(chId);
+  setTimeout(function() {
+    var verse = document.querySelector('[data-verse-key="' + verseKey + '"]');
+    if (verse) { verse.classList.add('highlighted'); verse.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+  }, 200);
+}
+
+function highlightAllForms(rootKey) {
+  clearHighlightedWords();
+  var panel = document.querySelector('.chapter-panel[style*="block"]');
+  if (!panel) return;
+  panel.querySelectorAll('.word-unit').forEach(function(wu) {
+    var hw = wu.querySelector('.hw');
+    if (!hw) return;
+    var wRoot = getRoot(hw.textContent);
+    if (wRoot === rootKey) wu.classList.add('glossary-highlighted');
+  });
+}
+
+function highlightForm(surfaceForm) {
+  clearHighlightedWords();
+  var panel = document.querySelector('.chapter-panel[style*="block"]');
+  if (!panel) return;
+  panel.querySelectorAll('.word-unit').forEach(function(wu) {
+    var hw = wu.querySelector('.hw');
+    if (hw && hw.textContent === surfaceForm) wu.classList.add('glossary-highlighted');
+  });
+}
+
+function clearHighlightedWords() { document.querySelectorAll('.glossary-highlighted').forEach(function(el) { el.classList.remove('glossary-highlighted'); }); }
+
+function openGlossaryAtRoot(rootKey) {
+  closePopup();
+  buildGlossaryIndex();
+  document.getElementById('glossary-search').value = rootKey;
+  renderGlossaryList();
+  document.getElementById('glossary-panel').classList.add('open');
+  document.getElementById('panel-overlay').classList.add('open');
+  setTimeout(function() {
+    var entries = document.querySelectorAll('#glossary-list .glossary-entry');
+    for (var i = 0; i < entries.length; i++) {
+      var rootEl = entries[i].querySelector('.glossary-root');
+      if (rootEl && rootEl.textContent === rootKey) { entries[i].classList.add('expanded'); entries[i].scrollIntoView({ behavior: 'smooth', block: 'start' }); break; }
+    }
+  }, 100);
+}
+
+// Debounced glossary search
+(function() {
+  var gd;
+  document.getElementById('glossary-search').addEventListener('input', function() { clearTimeout(gd); gd = setTimeout(renderGlossaryList, 200); });
+})();
+
+// Apply saved annotations on chapter load
+var _origEnsureRendered = _ensureChapterRendered;
+_ensureChapterRendered = function(chapId) {
+  _origEnsureRendered(chapId);
+  setTimeout(applyAllAnnotations, 50);
+};
+
+// DARK MODE
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+  var isDark = document.body.classList.contains('dark-mode');
+  document.getElementById('dark-mode-toggle').textContent = isDark ? '\u2600' : '\u263D';
+  try { localStorage.setItem('dc-dark-mode', isDark ? '1' : '0'); } catch(e) {}
+}
+(function() {
+  if (localStorage.getItem('dc-dark-mode') === '1') {
+    document.body.classList.add('dark-mode');
+    var btn = document.getElementById('dark-mode-toggle');
+    if (btn) btn.textContent = '\u2600';
+  }
+})();
+
+// SEARCH
+var searchIndex = null;
+function buildSearchIndex() {
+  if (searchIndex) return;
+  searchIndex = [];
+  for (var r = 0; r < _verseRegistry.length; r++) {
+    var reg = _verseRegistry[r];
+    var label = getChapterLabel(reg.chapId);
+    for (var vi = 0; vi < reg.verses.length; vi++) {
+      var v = reg.verses[vi];
+      var hWords = [], eWords = [];
+      for (var wi = 0; wi < v.words.length; wi++) {
+        var w = v.words[wi];
+        if (w[0] !== '\u05C3') { hWords.push(w[0]); eWords.push(w[1].replace(/-/g, ' ')); }
+      }
+      searchIndex.push({ chapId: reg.chapId, ref: label + ':' + (vi + 1), hebrew: hWords.join(' '), english: eWords.join(' '), verseIdx: vi });
+    }
+  }
+}
+
+function openSearch() { document.getElementById('search-container').classList.add('open'); document.getElementById('search-input').focus(); buildSearchIndex(); }
+function closeSearch() {
+  document.getElementById('search-container').classList.remove('open');
+  document.getElementById('search-results').classList.remove('open');
+  document.getElementById('search-input').value = '';
+}
+(function() {
+  var debounce;
+  document.addEventListener('input', function(e) {
+    if (e.target.id !== 'search-input') return;
+    clearTimeout(debounce);
+    debounce = setTimeout(function() { doSearch(e.target.value); }, 200);
+  });
+})();
+
+function _stripNikkud(s) { return s.replace(/[\u0591-\u05C7]/g, ''); }
+function doSearch(query) {
+  var results = document.getElementById('search-results');
+  if (!query || query.trim().length === 0) { results.classList.remove('open'); results.innerHTML = ''; return; }
+  var q = query.trim().toLowerCase(), qStripped = _stripNikkud(q);
+  var matches = [];
+  for (var i = 0; i < searchIndex.length && matches.length < 50; i++) {
+    var si = searchIndex[i];
+    var hebStripped = _stripNikkud(si.hebrew);
+    if (hebStripped.indexOf(qStripped) >= 0 || si.english.toLowerCase().indexOf(q) >= 0 || si.hebrew.indexOf(q) >= 0) matches.push(si);
+  }
+  if (matches.length === 0) {
+    results.innerHTML = '<div style="padding:12px;color:#888;font-family:Crimson Pro,serif;">No results found</div>';
+    results.classList.add('open'); return;
+  }
+  var html = '';
+  matches.forEach(function(m) {
+    var displayText = m.hebrew.length > 60 ? m.hebrew.substring(0, 60) + '\u2026' : m.hebrew;
+    html += '<div class="search-result" onclick="closeSearch();navTo(\'' + m.chapId + '\')">';
+    html += '<div class="search-result-ref">' + m.ref + '</div>';
+    html += '<div class="search-result-text">' + displayText + '</div></div>';
+  });
+  results.innerHTML = html;
+  results.classList.add('open');
+}
+
+// READING PROGRESS BAR
+window.addEventListener('scroll', function() {
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var pct = docHeight > 0 ? (scrollTop / docHeight * 100) : 0;
+  document.getElementById('reading-progress').style.width = pct + '%';
+});
+
+// URL HASH ROUTING
+(function() {
+  function handleHash() {
+    var hash = window.location.hash.replace('#', '');
+    if (!hash) return;
+    if (chapterOrder.indexOf(hash) >= 0) { navTo(hash); return; }
+    // Friendly: dc/109, dc-109, section-109
+    var m = hash.match(/(?:dc|section)[\/\-]?(\d+)/i);
+    if (m) { var n = parseInt(m[1], 10); if (n >= 1 && n <= 138) { navTo('dc' + n + '-ch1'); return; } }
+    if (/od[\/\-]?1/i.test(hash)) { navTo('od1-ch1'); return; }
+    if (/od[\/\-]?2/i.test(hash)) { navTo('od2-ch1'); return; }
+  }
+  handleHash();
+  window.addEventListener('hashchange', handleHash);
+})();
+
+</script>
+</body>
+</html>
