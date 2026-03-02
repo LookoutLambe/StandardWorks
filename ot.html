@@ -75,20 +75,20 @@ body {
 .word-group { display: inline-flex; align-items: flex-start; direction: rtl; }
 .word-unit { display: inline-flex; flex-direction: column; align-items: center; padding: 3px 5px; border-radius: 3px; cursor: pointer; transition: background 0.15s; line-height: 1.2; }
 .word-unit:hover { background: var(--highlight); }
-.hw { font-size: 1.4em; font-weight: 700; color: var(--ink); direction: rtl; unicode-bidi: bidi-override; white-space: nowrap; }
+.hw { font-size: 1.85em; font-weight: 500; line-height: 1.5; color: var(--ink); direction: rtl; unicode-bidi: bidi-override; white-space: nowrap; }
 .gl { font-family: 'Crimson Pro', serif; font-size: 0.72em; color: var(--gloss); direction: ltr; text-align: center; white-space: nowrap; font-style: italic; }
-.tl { font-family: 'Crimson Pro', serif; font-size: 0.65em; color: var(--ink-light); direction: ltr; text-align: center; white-space: nowrap; opacity: 0.7; }
+.tl { font-family: 'Crimson Pro', serif; font-size: 0.78em; color: var(--ink-light); direction: ltr; text-align: center; white-space: nowrap; opacity: 0.7; }
 .arr { display: inline-flex; flex-direction: column; align-items: center; padding: 3px 0; opacity: 0.25; line-height: 1.2; }
-.arr-hw { font-size: 1.4em; visibility: hidden; }
+.arr-hw { font-size: 1.85em; visibility: hidden; }
 .arr-gl, .arr-tl { font-family: 'Times New Roman', 'Crimson Pro', serif; font-size: 0.72em; color: var(--gloss); direction: ltr; }
 .word-unit.sof + .arr { display: none; }
 .word-unit.sof .hw::after { content: ' ׃'; color: var(--rule); }
 body.hide-translit .tl, body.hide-translit .arr-tl { display: none; }
 body.hide-gloss .gl, body.hide-gloss .arr-gl, body.hide-gloss .tl, body.hide-gloss .arr-tl { display: none; }
-body.hide-gloss .hw { font-size: 1.6em; }
+body.hide-gloss .hw { font-size: 2.1em; }
 body.hide-gloss .verse { gap: 6px; }
 body.hide-gloss .word-unit { padding: 2px 3px; }
-body.hide-gloss .arr-hw { font-size: 1.6em; }
+body.hide-gloss .arr-hw { font-size: 2.1em; }
 
 .verse.highlighted { background: var(--highlight); border-radius: 4px; }
 
@@ -300,8 +300,8 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
 @media (max-width: 600px) {
   .page { padding: 50px 10px 45px; }
   .book-title { font-size: 1.8em; }
-  .hw { font-size: 1.2em; }
-  .gl { font-size: 0.65em; }
+  .hw { font-size: 1.5em; }
+  .gl { font-size: 0.68em; }
   .verse-num { min-width: 24px; font-size: 1em; }
   .controls-top { padding: 5px 8px; }
   .landing-section-grid { grid-template-columns: repeat(7, 1fr); }
