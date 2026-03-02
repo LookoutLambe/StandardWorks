@@ -137,7 +137,7 @@ body.hide-gloss .arr-hw { font-size: 2.1em; }
 
 /* === AUDIO BAR === */
 #audio-bar {
-  display: none; position: fixed; top: 42px; left: 0; right: 0; z-index: 99;
+  display: none; position: fixed; left: 0; right: 0; z-index: 99;
   background: #151929; border-bottom: 1px solid #2a2f44;
   padding: 6px 16px; direction: ltr;
   justify-content: center; align-items: center; gap: 10px;
@@ -1165,6 +1165,14 @@ function updateAudioSource(chId) {
   if (wasPlaying) player.play();
 }
 
+function positionAudioBar() {
+  var bar = document.getElementById('audio-bar');
+  var header = document.querySelector('.controls-top');
+  if (header && bar.classList.contains('visible')) {
+    bar.style.top = header.offsetHeight + 'px';
+  }
+}
+
 function toggleAudioBar() {
   var bar = document.getElementById('audio-bar');
   var btn = document.getElementById('btn-audio');
@@ -1179,8 +1187,10 @@ function toggleAudioBar() {
     bar.classList.add('visible');
     document.body.classList.add('audio-bar-open');
     btn.classList.add('playing');
+    positionAudioBar();
   }
 }
+window.addEventListener('resize', positionAudioBar);
 
 // Update playing indicator when audio plays/pauses
 document.getElementById('audio-player').addEventListener('play', function() {
