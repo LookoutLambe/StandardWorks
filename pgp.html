@@ -453,55 +453,61 @@ body.hide-gloss .word-unit { padding-bottom: 3px; }
   display: none;
   position: fixed;
   z-index: 200;
-  background: #1e2233;
-  color: #e8e0d0;
-  border: 1px solid var(--accent);
+  background: #fff;
+  color: var(--ink);
+  border: 2px solid #c8a84e;
   border-radius: 8px;
-  padding: 12px 16px;
+  padding: 14px 18px;
   font-family: 'Crimson Pro', serif;
   font-size: 0.95em;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-  max-width: 340px;
-  direction: ltr;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  min-width: 180px;
+  max-width: 320px;
+  direction: rtl;
   pointer-events: auto;
 }
 #word-popup .popup-hebrew {
   font-family: 'David Libre', serif;
-  font-size: 1.8em;
-  color: var(--accent);
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--ink);
   text-align: center;
   direction: rtl;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 #word-popup .popup-translit {
   font-family: 'Crimson Pro', serif;
   font-style: italic;
   font-size: 1.0em;
-  color: #b0a890;
+  color: var(--ink-light);
   text-align: center;
   margin-bottom: 4px;
+  direction: ltr;
 }
 #word-popup .popup-gloss {
+  font-family: 'Crimson Pro', serif;
   font-size: 1.1em;
-  color: #fff;
+  color: var(--accent);
   text-align: center;
   margin-bottom: 8px;
   font-weight: 600;
+  direction: ltr;
 }
 #word-popup .popup-detail {
-  font-size: 0.85em;
-  color: #9a9ab0;
-  line-height: 1.4;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.8em;
+  color: var(--ink-light);
+  line-height: 1.5;
+  direction: ltr;
 }
-#word-popup .popup-detail span { color: #c8a84e; }
+#word-popup .popup-detail span { font-weight: 600; }
 #word-popup .popup-close {
   position: absolute;
   top: 4px;
   right: 8px;
   cursor: pointer;
-  color: #666;
-  font-size: 1.2em;
-  padding: 8px;
+  color: #888;
+  font-size: 14px;
 }
 .word-unit { cursor: pointer; }
 .word-unit:hover { background: rgba(200,168,78,0.06); border-radius: 4px; }
