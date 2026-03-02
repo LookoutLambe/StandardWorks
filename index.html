@@ -382,7 +382,7 @@ body.dark-mode .top-bar { background: #0a0a0a; }
     Standard Works
   </div>
   <div class="top-bar-actions">
-    <button onclick="toggleDark()" id="dark-btn" title="Toggle dark mode">☽</button>
+    <button onclick="toggleDark()" id="dark-btn" title="Toggle dark mode">🌙</button>
   </div>
 </div>
 
@@ -517,7 +517,7 @@ body.dark-mode .top-bar { background: #0a0a0a; }
 function toggleDark() {
   document.body.classList.toggle('dark-mode');
   var isDark = document.body.classList.contains('dark-mode');
-  document.getElementById('dark-btn').textContent = isDark ? '☀' : '☽';
+  document.getElementById('dark-btn').textContent = isDark ? '☀️' : '🌙';
   try { localStorage.setItem('sw-dark', isDark ? '1' : '0'); } catch(e) {}
 }
 
@@ -526,7 +526,7 @@ function toggleDark() {
   try {
     if (localStorage.getItem('sw-dark') === '1') {
       document.body.classList.add('dark-mode');
-      document.getElementById('dark-btn').textContent = '☀';
+      document.getElementById('dark-btn').textContent = '☀️';
     }
   } catch(e) {}
 })();

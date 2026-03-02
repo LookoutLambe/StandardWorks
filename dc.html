@@ -82,6 +82,7 @@ body {
 .arr-hw { font-size: 1.4em; visibility: hidden; }
 .arr-gl, .arr-tl { font-family: 'Times New Roman', 'Crimson Pro', serif; font-size: 0.72em; color: var(--gloss); direction: ltr; }
 .word-unit.sof + .arr { display: none; }
+.word-unit.sof .hw::after { content: ' \05C3'; color: var(--rule); }
 body.hide-translit .tl, body.hide-translit .arr-tl { display: none; }
 body.hide-gloss .gl, body.hide-gloss .arr-gl, body.hide-gloss .tl, body.hide-gloss .arr-tl { display: none; }
 body.hide-gloss .hw { font-size: 1.6em; }
@@ -117,7 +118,7 @@ body.hide-gloss .arr-hw { font-size: 1.6em; }
 }
 .controls-bottom button:hover { background: #2a2f44; color: #c8a84e; }
 .controls-bottom button.active { background: #c8a84e; color: #1e2233; border-color: #c8a84e; font-weight: 600; }
-.tools-group { display: flex; align-items: center; gap: 8px; }
+.tools-group { display: flex; align-items: center; gap: 8px; direction: ltr; }
 .tools-group label { display: flex; align-items: center; gap: 5px; color: #8a7a4a; font-size: 0.85em; }
 .tools-group input[type="range"] { width: 60px; accent-color: #c8a84e; }
 .label-text { font-size: 0.85em; }
@@ -494,7 +495,32 @@ body.dark-mode .word-unit.xref-linked:hover .gl { color: #85c1e9 !important; }
 .xref-panel-category { font-size: 0.75em; color: var(--ink-light); text-transform: uppercase; letter-spacing: 0.5px; padding: 2px 16px 10px; border-bottom: 1px solid var(--rule-light); }
 .xref-ref-card { padding: 12px 16px; border-bottom: 1px solid var(--rule-light); }
 .xref-ref-card:last-child { border-bottom: none; }
-.xref-ref-title { font-weight: 600; color: var(--accent); font-size: 0.95em; margin-bottom: 4px; }
+.xref-ref-title {
+  font-weight: 600; color: var(--ink); font-size: 0.95em;
+  margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;
+}
+.xref-ref-title span { color: var(--ink); }
+.xref-ref-goto {
+  font-size: 0.75em; color: var(--ink-light); cursor: pointer;
+  padding: 2px 8px; border: 1px solid var(--rule); border-radius: 3px;
+  text-decoration: none; white-space: nowrap;
+}
+.xref-ref-goto:hover { background: rgba(200,168,78,0.15); color: var(--accent); border-color: var(--accent); }
+.xref-ref-content {
+  direction: rtl; display: flex; flex-wrap: wrap; gap: 4px 8px;
+  margin: 6px 0; line-height: 1.7;
+}
+.xref-ref-word {
+  display: inline-flex; flex-direction: column; align-items: center;
+  text-align: center; padding: 2px 3px;
+}
+.xref-ref-word .hw { font-family: 'SBL Hebrew', 'David Libre', serif; font-size: 1.05em; color: var(--ink); }
+.xref-ref-word .en { font-size: 0.65em; color: var(--gloss); direction: ltr; }
+.xref-ref-english {
+  direction: ltr; font-size: 0.88em; color: var(--ink-light);
+  line-height: 1.5; margin-top: 6px; padding: 8px 10px;
+  background: rgba(200,168,78,0.05); border-radius: 4px; border-left: 3px solid var(--accent);
+}
 .xref-ref-nodata { font-size: 0.85em; color: var(--ink-light); font-style: italic; padding: 16px; }
 body.dark-mode #xref-panel { background: #252525; border-color: #d4af37; }
 
@@ -525,11 +551,13 @@ body.dark-mode #xref-panel { background: #252525; border-color: #d4af37; }
 
 <!-- Selection Toolbar -->
 <div id="sel-toolbar">
+  <button id="sel-btn-close" onclick="_hideSelToolbar()" title="Close">✕</button>
   <button id="sel-btn-highlight" onclick="selToolbarToggleColors()" title="Highlight">🖍</button>
   <button id="sel-btn-note" onclick="selToolbarOpenNote()" title="Note">✎</button>
   <button id="sel-btn-copy" onclick="selToolbarCopy()" title="Copy">📋</button>
   <button id="sel-btn-share" onclick="selToolbarShare()" title="Share">↗</button>
-  <button id="sel-btn-delete" onclick="selToolbarClearAll()" title="Clear">✕</button>
+  <button id="sel-btn-delete" onclick="selToolbarClearAll()" title="Clear">🗑</button>
+  <button id="sel-btn-xref" onclick="selToolbarXref()" title="Cross-References">🔗</button>
   <button id="sel-btn-glossary" onclick="closePopup();openGlossary()" title="Glossary">📖</button>
   <button id="sel-btn-annotations" onclick="openAnnotationsPanel()" title="Annotations">📝</button>
   <div id="sel-subpanel">
@@ -646,8 +674,8 @@ body.dark-mode #xref-panel { background: #252525; border-color: #d4af37; }
   <div class="tools-group">
     <label><span class="label-text">Size </span><input type="range" id="sizeSlider" min="70" max="150" value="100" oninput="setSize(this.value)" aria-label="Font size"></label>
     <span style="color:#3a3f55">│</span>
-    <button id="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode" aria-label="Toggle dark mode">☽</button>
-    <button id="search-toggle" style="background:transparent;border:1px solid #3a3f55;color:#c8a84e;padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openSearch()" title="Search" aria-label="Search">⌕</button>
+    <button id="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
+    <button id="search-toggle" style="background:transparent;border:1px solid #3a3f55;color:#c8a84e;padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openSearch()" title="Search" aria-label="Search">🔍</button>
   </div>
 </div>
 
@@ -992,6 +1020,7 @@ try {
 <!-- Cross-reference data + engine -->
 <script src="dc_crossrefs.js"></script>
 <script>window._volumeCrossrefsData = window._dcCrossrefsData;</script>
+<script src="bom/scripture_verses.js"></script>
 <script src="crossrefs_engine.js"></script>
 
 <script>

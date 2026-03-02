@@ -10,7 +10,7 @@
  *   - getRoot(hebrewWord)          (from the page's Hebrew utils)
  *   - transliterate(hebrewWord)    (from the page's transliteration utils)
  *   - window._rootGlossaryData     (from roots_glossary.js)
- *   - toSofit(root)                (from the page's Hebrew utils)
+ *   - window._scriptureVerses      (from scripture_verses.js, optional)
  */
 
 (function() {
@@ -20,6 +20,85 @@
   window._crossrefsLoaded = false;
   window._crossrefMap = {};
   window._rootXrefs = {};
+
+  // ── Scripture abbreviation to full book name ──
+  var _abbrToFullBook = {
+    'Gen.': 'Genesis', 'Ex.': 'Exodus', 'Lev.': 'Leviticus', 'Num.': 'Numbers',
+    'Deut.': 'Deuteronomy', 'Josh.': 'Joshua', 'Judg.': 'Judges', 'Ruth': 'Ruth',
+    '1 Sam.': '1 Samuel', '2 Sam.': '2 Samuel', '1 Kgs.': '1 Kings', '2 Kgs.': '2 Kings',
+    '1 Chr.': '1 Chronicles', '2 Chr.': '2 Chronicles', 'Ezra': 'Ezra', 'Neh.': 'Nehemiah',
+    'Esth.': 'Esther', 'Job': 'Job', 'Ps.': 'Psalms', 'Prov.': 'Proverbs',
+    'Eccl.': 'Ecclesiastes', 'Song': 'Song of Solomon', 'Isa.': 'Isaiah', 'Jer.': 'Jeremiah',
+    'Lam.': 'Lamentations', 'Ezek.': 'Ezekiel', 'Dan.': 'Daniel', 'Hosea': 'Hosea',
+    'Joel': 'Joel', 'Amos': 'Amos', 'Obad.': 'Obadiah', 'Jonah': 'Jonah',
+    'Micah': 'Micah', 'Nahum': 'Nahum', 'Hab.': 'Habakkuk', 'Zeph.': 'Zephaniah',
+    'Hag.': 'Haggai', 'Zech.': 'Zechariah', 'Mal.': 'Malachi',
+    'Matt.': 'Matthew', 'Mark': 'Mark', 'Luke': 'Luke', 'John': 'John',
+    'Acts': 'Acts', 'Rom.': 'Romans', '1 Cor.': '1 Corinthians', '2 Cor.': '2 Corinthians',
+    'Gal.': 'Galatians', 'Eph.': 'Ephesians', 'Philip.': 'Philippians', 'Col.': 'Colossians',
+    '1 Thes.': '1 Thessalonians', '2 Thes.': '2 Thessalonians',
+    '1 Tim.': '1 Timothy', '2 Tim.': '2 Timothy', 'Titus': 'Titus', 'Philem.': 'Philemon',
+    'Heb.': 'Hebrews', 'James': 'James', '1 Pet.': '1 Peter', '2 Pet.': '2 Peter',
+    '1 Jn.': '1 John', '2 Jn.': '2 John', '3 Jn.': '3 John', 'Jude': 'Jude', 'Rev.': 'Revelation',
+    'D&C': 'D&C', 'Moses': 'Moses', 'Abr.': 'Abraham', 'JS—H': 'JS-H', 'JS—M': 'JS-M', 'A of F': 'A-of-F',
+    '1 Ne.': '1 Nephi', '2 Ne.': '2 Nephi', 'Jacob': 'Jacob', 'Enos': 'Enos',
+    'Jarom': 'Jarom', 'Omni': 'Omni', 'W of M': 'Words of Mormon',
+    'Mosiah': 'Mosiah', 'Alma': 'Alma', 'Hel.': 'Helaman',
+    '3 Ne.': '3 Nephi', '4 Ne.': '4 Nephi', 'Morm.': 'Mormon',
+    'Ether': 'Ether', 'Moro.': 'Moroni'
+  };
+
+  function parseScriptureRef(refText) {
+    var norm = refText.replace(/\u00a0/g, ' ');
+    for (var abbr in _abbrToFullBook) {
+      if (norm.indexOf(abbr) === 0) {
+        var rest = norm.substring(abbr.length).trim();
+        var m = rest.match(/^(\d+):(\d+)/);
+        if (m) {
+          return _abbrToFullBook[abbr] + '|' + m[1] + '|' + m[2];
+        }
+      }
+    }
+    return null;
+  }
+
+  function getExternalVerseHtml(refText) {
+    if (!window._scriptureVerses) return '';
+    var key = parseScriptureRef(refText);
+    if (key && window._scriptureVerses[key]) {
+      return '<div class="xref-ref-english">' + window._scriptureVerses[key] + '</div>';
+    }
+    return '';
+  }
+
+  function getInternalVerseHtml(verseKey) {
+    var verseDiv = document.querySelector('[data-verse-key="' + verseKey + '"]');
+    if (!verseDiv) return '';
+    var wordUnits = verseDiv.querySelectorAll('.word-unit');
+    if (wordUnits.length === 0) return '';
+    var html = '<div class="xref-ref-content">';
+    wordUnits.forEach(function(wu) {
+      var hwEl = wu.querySelector('.hw');
+      var glEl = wu.querySelector('.gl');
+      if (hwEl) {
+        html += '<span class="xref-ref-word">';
+        html += '<span class="hw">' + hwEl.textContent + '</span>';
+        if (glEl) html += '<span class="en">' + glEl.textContent + '</span>';
+        html += '</span>';
+      }
+    });
+    html += '</div>';
+    // Gloss-based English summary
+    var glossArr = [];
+    wordUnits.forEach(function(wu) {
+      var glEl = wu.querySelector('.gl');
+      if (glEl && glEl.textContent) glossArr.push(glEl.textContent);
+    });
+    if (glossArr.length > 0) {
+      html += '<div class="xref-ref-english" style="font-style:italic;">' + glossArr.join(' ') + '</div>';
+    }
+    return html;
+  }
 
   // ── Load cross-references ──
   function loadCrossRefs() {
@@ -62,6 +141,10 @@
       if (!wordFlow) return;
       var wordUnits = wordFlow.querySelectorAll('.word-unit');
       if (wordUnits.length === 0) return;
+
+      // Skip if already processed
+      if (wordFlow.getAttribute('data-xrefs-applied')) return;
+      wordFlow.setAttribute('data-xrefs-applied', '1');
 
       // Build gloss list
       var glossList = [];
@@ -196,16 +279,78 @@
     refsContainer.innerHTML = '';
 
     if (ref.refs && ref.refs.length > 0) {
+      var lastBookPrefix = '';
       ref.refs.forEach(function(r) {
+        var rNorm = r.replace(/\u00a0/g, ' ');
+
+        // Resolve abbreviated continuation references
+        var foundPrefix = '';
+        for (var abbr in _abbrToFullBook) {
+          if (rNorm.indexOf(abbr) === 0) { foundPrefix = abbr; break; }
+        }
+        var fullRef = rNorm;
+        if (foundPrefix) {
+          lastBookPrefix = foundPrefix;
+        } else if (/^\d/.test(rNorm) && lastBookPrefix) {
+          fullRef = lastBookPrefix + ' ' + rNorm;
+        }
+
         var card = document.createElement('div');
         card.className = 'xref-ref-card';
 
         var titleDiv = document.createElement('div');
         titleDiv.className = 'xref-ref-title';
+
+        // Check if this is an internal reference (in the current volume)
+        var refKey = parseScriptureRef(fullRef);
+        var isInternal = refKey && window._crossrefMap[refKey];
+
         var titleSpan = document.createElement('span');
-        titleSpan.textContent = r;
+        titleSpan.textContent = fullRef;
+        if (isInternal) {
+          titleSpan.style.cursor = 'pointer';
+          titleSpan.style.textDecoration = 'underline';
+          titleSpan.onclick = (function(k) {
+            return function() {
+              closeXrefPanel();
+              navigateToVerseKey(k);
+            };
+          })(refKey);
+        }
         titleDiv.appendChild(titleSpan);
+
+        // Add "Go to verse" button for internal references
+        if (isInternal) {
+          var gotoBtn = document.createElement('span');
+          gotoBtn.className = 'xref-ref-goto';
+          gotoBtn.textContent = 'Go to verse \u2192';
+          gotoBtn.onclick = (function(k) {
+            return function() {
+              closeXrefPanel();
+              navigateToVerseKey(k);
+            };
+          })(refKey);
+          titleDiv.appendChild(gotoBtn);
+        }
+
         card.appendChild(titleDiv);
+
+        // Show verse content
+        if (isInternal) {
+          var intHtml = getInternalVerseHtml(refKey);
+          if (intHtml) {
+            var intDiv = document.createElement('div');
+            intDiv.innerHTML = intHtml;
+            card.appendChild(intDiv);
+          }
+        }
+        // Try external verse lookup (scripture_verses.js)
+        var extHtml = getExternalVerseHtml(fullRef);
+        if (extHtml) {
+          var extDiv = document.createElement('div');
+          extDiv.innerHTML = extHtml;
+          card.appendChild(extDiv);
+        }
 
         refsContainer.appendChild(card);
       });
@@ -218,6 +363,57 @@
 
     panel.scrollTop = 0;
     panel.classList.add('open');
+  }
+
+  // ── Navigate to a verse key within the current volume ──
+  function navigateToVerseKey(verseKey) {
+    // verseKey format: "BookName|Chapter|Verse"
+    var parts = verseKey.split('|');
+    if (parts.length < 3) return;
+
+    // Try to find the verse already in the DOM
+    var existing = document.querySelector('[data-verse-key="' + verseKey + '"]');
+    if (existing) {
+      existing.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      existing.style.transition = 'background 0.3s';
+      existing.style.background = 'rgba(200,168,78,0.2)';
+      setTimeout(function() { existing.style.background = ''; }, 2000);
+      return;
+    }
+
+    // If not in DOM, try to navigate to the right chapter panel
+    // Look for chapter panels and try to match
+    var panels = document.querySelectorAll('.chapter-panel');
+    for (var i = 0; i < panels.length; i++) {
+      var panelId = panels[i].id;
+      if (!panelId || panelId === 'panel-landing') continue;
+
+      // Get the chapter ID from panel ID (remove "panel-" prefix)
+      var chapId = panelId.replace('panel-', '');
+
+      // Check if getBookChapter maps this panel to the right book/chapter
+      if (typeof getBookChapter === 'function') {
+        var bc = getBookChapter(chapId);
+        if (bc && bc.book === parts[0] && String(bc.chapter) === parts[1]) {
+          // Found the right panel - render it and navigate
+          if (typeof _ensureChapterRendered === 'function') {
+            _ensureChapterRendered(chapId);
+          }
+          panels[i].scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Try to find the verse after rendering
+          setTimeout(function() {
+            var v = document.querySelector('[data-verse-key="' + verseKey + '"]');
+            if (v) {
+              v.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              v.style.transition = 'background 0.3s';
+              v.style.background = 'rgba(200,168,78,0.2)';
+              setTimeout(function() { v.style.background = ''; }, 2000);
+            }
+          }, 300);
+          return;
+        }
+      }
+    }
   }
 
   // ── Open aggregated root xref panel ──
@@ -241,17 +437,41 @@
 
     // Deduplicate
     var seen = {};
+    var lastBookPrefix = '';
     entries.forEach(function(e) {
       if (e.ref.refs) {
         e.ref.refs.forEach(function(r) {
-          if (!seen[r]) {
-            seen[r] = true;
+          var rNorm = r.replace(/\u00a0/g, ' ');
+          var foundPrefix = '';
+          for (var abbr in _abbrToFullBook) {
+            if (rNorm.indexOf(abbr) === 0) { foundPrefix = abbr; break; }
+          }
+          var fullRef = rNorm;
+          if (foundPrefix) {
+            lastBookPrefix = foundPrefix;
+          } else if (/^\d/.test(rNorm) && lastBookPrefix) {
+            fullRef = lastBookPrefix + ' ' + rNorm;
+          }
+
+          if (!seen[fullRef]) {
+            seen[fullRef] = true;
             var card = document.createElement('div');
             card.className = 'xref-ref-card';
             var titleDiv = document.createElement('div');
             titleDiv.className = 'xref-ref-title';
-            titleDiv.textContent = r;
+            var titleSpan = document.createElement('span');
+            titleSpan.textContent = fullRef;
+            titleDiv.appendChild(titleSpan);
             card.appendChild(titleDiv);
+
+            // Show verse text
+            var extHtml = getExternalVerseHtml(fullRef);
+            if (extHtml) {
+              var extDiv = document.createElement('div');
+              extDiv.innerHTML = extHtml;
+              card.appendChild(extDiv);
+            }
+
             refsContainer.appendChild(card);
           }
         });
@@ -276,12 +496,104 @@
     }
   });
 
+  // ── Selection toolbar cross-reference button handler ──
+  function selToolbarXref() {
+    var candidates = [];
+    if (window._selWordUnits && window._selWordUnits.length > 0) {
+      for (var i = 0; i < window._selWordUnits.length; i++) candidates.push(window._selWordUnits[i]);
+    }
+    if (window._popupWordUnit) candidates.push(window._popupWordUnit);
+
+    for (var c = 0; c < candidates.length; c++) {
+      var wu = candidates[c];
+      var xrefData = wu.getAttribute('data-xref-ref');
+      var xrefKey = wu.getAttribute('data-xref-key');
+      if (xrefData && xrefKey) {
+        var hw = wu.querySelector('.hw');
+        if (hw && window.getRoot) {
+          var root = window.getRoot(hw.textContent);
+          if (root && window._rootXrefs && window._rootXrefs[root]) {
+            if (typeof _hideSelToolbar === 'function') _hideSelToolbar();
+            openRootXrefPanel(root);
+            return;
+          }
+        }
+        if (typeof _hideSelToolbar === 'function') _hideSelToolbar();
+        openXrefPanel(JSON.parse(xrefData), xrefKey, '');
+        return;
+      }
+      var hw2 = wu.querySelector('.hw');
+      if (hw2 && window.getRoot) {
+        var root2 = window.getRoot(hw2.textContent);
+        if (root2 && window._rootXrefs && window._rootXrefs[root2]) {
+          if (typeof _hideSelToolbar === 'function') _hideSelToolbar();
+          openRootXrefPanel(root2);
+          return;
+        }
+      }
+    }
+
+    // Find nearest xref-linked word in the current verse
+    var verseEl = null;
+    if (candidates.length > 0) verseEl = candidates[0].closest('[data-verse-key]');
+    if (verseEl) {
+      var verseXref = verseEl.querySelector('.xref-linked');
+      if (verseXref) {
+        var hw3 = verseXref.querySelector('.hw');
+        if (hw3 && window.getRoot) {
+          var root3 = window.getRoot(hw3.textContent);
+          if (root3 && window._rootXrefs && window._rootXrefs[root3]) {
+            if (typeof _hideSelToolbar === 'function') _hideSelToolbar();
+            openRootXrefPanel(root3);
+            return;
+          }
+        }
+        var xd = verseXref.getAttribute('data-xref-ref');
+        var xk = verseXref.getAttribute('data-xref-key');
+        if (xd && xk) {
+          if (typeof _hideSelToolbar === 'function') _hideSelToolbar();
+          openXrefPanel(JSON.parse(xd), xk, '');
+          return;
+        }
+      }
+    }
+
+    // Fallback: first xref-linked word in active chapter
+    if (typeof _hideSelToolbar === 'function') _hideSelToolbar();
+    var active = document.querySelector('.chapter-panel[style*="block"]');
+    if (active) {
+      var firstXref = active.querySelector('.xref-linked');
+      if (firstXref) {
+        var hw4 = firstXref.querySelector('.hw');
+        if (hw4 && window.getRoot) {
+          var root4 = window.getRoot(hw4.textContent);
+          if (root4 && window._rootXrefs && window._rootXrefs[root4]) { openRootXrefPanel(root4); return; }
+        }
+        var xd2 = firstXref.getAttribute('data-xref-ref');
+        var xk2 = firstXref.getAttribute('data-xref-key');
+        if (xd2 && xk2) { openXrefPanel(JSON.parse(xd2), xk2, ''); return; }
+      }
+    }
+
+    // Nothing found
+    var panel = document.getElementById('xref-panel');
+    if (panel) {
+      panel.querySelector('.xref-panel-word').textContent = '';
+      panel.querySelector('.xref-panel-category').textContent = 'No cross-references found';
+      document.getElementById('xref-panel-refs').innerHTML = '<div style="padding:16px;color:#888;font-style:italic;">Tap a blue word to view its cross-references.</div>';
+      panel.scrollTop = 0;
+      panel.classList.add('open');
+    }
+  }
+
   // ── Expose globally ──
   window.loadCrossRefs = loadCrossRefs;
   window.addCrossRefMarkers = addCrossRefMarkers;
   window.openXrefPanel = openXrefPanel;
   window.openRootXrefPanel = openRootXrefPanel;
   window.closeXrefPanel = closeXrefPanel;
+  window.navigateToVerseKey = navigateToVerseKey;
+  window.selToolbarXref = selToolbarXref;
 
   // ── Auto-load after delay ──
   setTimeout(loadCrossRefs, 500);
