@@ -161,10 +161,7 @@
     var currentPage = window.location.pathname.split('/').pop() || '';
     if (currentPage === vol.page || currentPage === vol.page.replace('bom/', '')) return null;
 
-    var url = vol.page + '?from=' + encodeURIComponent(window.location.pathname) +
-      '&verse=' + encodeURIComponent(sourceVerseKey) +
-      '#' + vol.hash(chapter);
-    return url;
+    return vol.page + '#' + vol.hash(chapter);
   }
 
   function parseScriptureRef(refText) {
@@ -479,6 +476,12 @@
             crossDiv.style.cssText = 'padding:4px 0;font-size:0.85em;';
             var crossLink = document.createElement('a');
             crossLink.href = crossUrl;
+            crossLink.onclick = (function(sv) {
+              return function() {
+                sessionStorage.setItem('xref-return-from', window.location.pathname + window.location.hash);
+                sessionStorage.setItem('xref-return-verse', sv);
+              };
+            })(sourceVerseKey);
             crossLink.style.cssText = 'color:var(--accent,#c8a84e);text-decoration:none;font-weight:600;';
             crossLink.textContent = 'View in Hebrew \u2192';
             crossDiv.appendChild(crossLink);
@@ -615,6 +618,12 @@
                 cDiv.style.cssText = 'padding:4px 0;font-size:0.85em;';
                 var cLink = document.createElement('a');
                 cLink.href = cUrl;
+                cLink.onclick = (function(sv) {
+                  return function() {
+                    sessionStorage.setItem('xref-return-from', window.location.pathname + window.location.hash);
+                    sessionStorage.setItem('xref-return-verse', sv);
+                  };
+                })(e.verseKey);
                 cLink.style.cssText = 'color:var(--accent,#c8a84e);text-decoration:none;font-weight:600;';
                 cLink.textContent = 'View in Hebrew \u2192';
                 cDiv.appendChild(cLink);
@@ -857,12 +866,27 @@
 
       var linkDiv = document.createElement('div');
       linkDiv.style.cssText = 'padding:6px 0;font-size:0.85em;display:flex;gap:12px;flex-wrap:wrap;';
-      var talkPageUrl = 'talks.html?from=' + encodeURIComponent(returnUrl) + '&verse=' + encodeURIComponent(verseKey) + '#' + t.talkId;
-      var links = '<a href="' + talkPageUrl + '" target="_blank" style="color:var(--accent);text-decoration:none;">Read talk \u2192</a>';
+      var talkPageUrl = 'talks.html#' + t.talkId;
+      var readLink = document.createElement('a');
+      readLink.href = talkPageUrl;
+      readLink.target = '_blank';
+      readLink.style.cssText = 'color:var(--accent);text-decoration:none;';
+      readLink.textContent = 'Read talk \u2192';
+      readLink.onclick = (function(vk, rUrl) {
+        return function() {
+          sessionStorage.setItem('xref-return-from', rUrl + window.location.hash);
+          sessionStorage.setItem('xref-return-verse', vk);
+        };
+      })(verseKey, returnUrl);
+      linkDiv.appendChild(readLink);
       if (talkUri) {
-        links += '<a href="https://www.churchofjesuschrist.org/study' + talkUri + '?lang=eng" target="_blank" style="color:var(--accent);text-decoration:none;">\uD83C\uDF10 churchofjesuschrist.org</a>';
+        var churchLink = document.createElement('a');
+        churchLink.href = 'https://www.churchofjesuschrist.org/study' + talkUri + '?lang=eng';
+        churchLink.target = '_blank';
+        churchLink.style.cssText = 'color:var(--accent);text-decoration:none;';
+        churchLink.textContent = '\uD83C\uDF10 churchofjesuschrist.org';
+        linkDiv.appendChild(churchLink);
       }
-      linkDiv.innerHTML = links;
       card.appendChild(linkDiv);
 
       refsContainer.appendChild(card);

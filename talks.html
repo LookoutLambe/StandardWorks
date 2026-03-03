@@ -357,11 +357,11 @@ body.dark-mode #return-link:hover { background: #c8a84e !important; }
   background:#fff; padding:8px 20px; text-align:center;
   font-family:'Crimson Pro',serif; font-size:0.95em; border-bottom:1px solid #e8e2d4;
   box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-  <a id="return-link" href="#" style="display:inline-block; background:#c8a84e; color:#fff; text-decoration:none;
+  <a id="return-link" href="#" onclick="sessionStorage.removeItem('xref-return-from');sessionStorage.removeItem('xref-return-verse');" style="display:inline-block; background:#c8a84e; color:#fff; text-decoration:none;
     padding:6px 18px; border-radius:4px; font-weight:600; font-size:0.9em; transition:background 0.2s;">
     &#x276E; Return to <span id="return-verse"></span>
   </a>
-  <span onclick="document.getElementById('return-banner').style.display='none'"
+  <span onclick="sessionStorage.removeItem('xref-return-from');sessionStorage.removeItem('xref-return-verse');document.getElementById('return-banner').style.display='none'"
     style="position:absolute;right:16px;top:50%;transform:translateY(-50%);cursor:pointer;color:#999;font-size:1.2em;">&times;</span>
 </div>
 
@@ -800,11 +800,10 @@ body.dark-mode #return-link:hover { background: #c8a84e !important; }
     return String(s).replace(/'/g, "\\'").replace(/"/g, '&quot;');
   }
 
-  // ── Detect return-to-scripture parameter ──
+  // ── Detect return-to-scripture from sessionStorage ──
   (function() {
-    var params = new URLSearchParams(window.location.search);
-    var fromPage = params.get('from');
-    var verseKey = params.get('verse');
+    var fromPage = sessionStorage.getItem('xref-return-from');
+    var verseKey = sessionStorage.getItem('xref-return-verse');
     if (fromPage && verseKey) {
       var parts = verseKey.split('|');
       var display = parts.length >= 3 ? parts[0] + ' ' + parts[1] + ':' + parts[2] : verseKey;

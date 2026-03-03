@@ -600,7 +600,7 @@ body.dark-mode #return-banner a:hover { background:#c8a84e; }
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
-<div id="return-banner"><a id="return-link" href="#">&#x276E; Return to <span id="return-verse"></span></a><span onclick="document.getElementById('return-banner').style.display='none'" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);cursor:pointer;color:#999;font-size:1.2em;">&times;</span></div>
+<div id="return-banner"><a id="return-link" href="#" onclick="sessionStorage.removeItem('xref-return-from');sessionStorage.removeItem('xref-return-verse');">&#x276E; Return to <span id="return-verse"></span></a><span onclick="sessionStorage.removeItem('xref-return-from');sessionStorage.removeItem('xref-return-verse');document.getElementById('return-banner').style.display='none'" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);cursor:pointer;color:#999;font-size:1.2em;">&times;</span></div>
 <div id="nav-hint"></div>
 <div id="reading-progress"></div>
 
@@ -2459,7 +2459,7 @@ if ('serviceWorker' in navigator) {
 }
 </script>
 <script>
-(function(){var p=new URLSearchParams(window.location.search);var f=p.get('from');var v=p.get('verse');if(f&&v){var d=v.split('|');var t=d.length>=3?d[0]+' '+d[1]+':'+d[2]:v;document.getElementById('return-verse').textContent=t;document.getElementById('return-link').href=f;document.getElementById('return-banner').style.display='block';}})();
+(function(){var f=sessionStorage.getItem('xref-return-from');var v=sessionStorage.getItem('xref-return-verse');if(f&&v){var d=v.split('|');var t=d.length>=3?d[0]+' '+d[1]+':'+d[2]:v;document.getElementById('return-verse').textContent=t;document.getElementById('return-link').href=f;document.getElementById('return-banner').style.display='block';}})();
 </script>
 </body>
 </html>
