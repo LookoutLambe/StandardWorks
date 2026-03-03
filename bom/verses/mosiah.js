@@ -1004,7 +1004,7 @@ var mo_ch13Verses = [
     ["לֹא","you-shall-not"],["תִּנְאָף","you-shall-commit-adultery"],["לֹא","you-shall-not"],["תִּגְנֹב","you-shall-steal"]
   ]},
   { num: "כג", words: [
-    ["לֹא־תַעֲנֶה","you-shall-not-bear"],["בְרֵעֲךָ","against-your-neighbor"],["עֵד","false-witness"],["שָׁקֶר","false"]
+    ["לֹא־תַעֲנֶה","you-shall-not-bear"],["בְרֵעֲךָ","against-your-neighbor"],["עֵד","witness"],["שָׁקֶר","false"]
   ]},
   { num: "כד", words: [
     ["לֹא־תַחְמֹד","you-shall-not-covet"],["בֵּית","the-house-of"],["רֵעֶךָ","your-neighbor"],["לֹא־תַחְמֹד","you-shall-not-covet"],["אֵשֶׁת","the-wife-of"],["רֵעֶךָ","your-neighbor"],["וְעַבְדּוֹ","nor-his-manservant"],["וַאֲמָתוֹ","nor-his-maidservant"],["וְשׁוֹרוֹ","nor-his-ox"],["וַחֲמֹרוֹ","nor-his-ass"],["וְכֹל","and-the-whole"],["אֲשֶׁר","which"],["לְרֵעֶךָ","your-neighbor's"]
@@ -1022,7 +1022,7 @@ var mo_ch13Verses = [
     ["וְעוֹד","and-moreover"],["אֹמֵר","say"],["אֲנִי","I"],["לָכֶם","unto-you"],["כִּי־לֹא","that-salvation-does-not"],["תָבֹא","come"],["הַיְשׁוּעָה","the-salvation"],["בַּתּוֹרָה","by-the-law"],["לְבַדָּהּ","alone"],["וְלוּלֵי","and-if-not-for"],["הַכִּפֻּרִים","the-atonement"],["אֲשֶׁר","which"],["יַעֲשֶׂה","he-shall-do"],["אֱלֹהִים","God"],["בְּעַצְמוֹ","Himself"],["לְחַטֹּאת","for-the-sins-of"],["עַמּוֹ","His-people"],["וַעֲוֹנוֹתֵיהֶם","and-their-iniquities"],["כִּי","that"],["אָז","then"],["אָבֹד","perish"],["יֹאבֵדוּ","they-shall-perish"],["אַף","yea"],["עִם־תּוֹרַת","with-the-law-of"],["מֹשֶׁה","Moses"]
   ]},
   { num: "כט", words: [
-    ["וְעַתָּה","and-now"],["אֹמֵר","say"],["אֲנִי","I"],["לָכֶם","unto-you"],["כִּי","that-it-was"],["נָכוֹן","expedient"],["הָיָה","was"],["לָתֵת","to-give"],["תּוֹרָה","a-law"],["לִבְנֵי","to-the-children-of"],["יִשְׂרָאֵל","Israel"],["אַף","yea-even"],["תּוֹרָה","a-Bible"],["חֲזָקָה","strict"],["מְאֹד","very"],["כִּי","for"],["עַם־קְשֵׁה־עֹרֶף","they-were-a-stiffnecked-people-stiffnecked-people"],["הֵמָּה","they"],["מְמַהֲרִים","quick-to-do"],["לַעֲשׂוֹת","do"],["רָעָה","evil"],["וּמְאַחֲרִים","and-slow"],["לִזְכֹּר","to-remember"],["אֶת־יְהוָה","the-Lord"],["אֱלֹהֵיהֶם","their-God"]
+    ["וְעַתָּה","and-now"],["אֹמֵר","say"],["אֲנִי","I"],["לָכֶם","unto-you"],["כִּי","that-it-was"],["נָכוֹן","expedient"],["הָיָה","was"],["לָתֵת","to-give"],["תּוֹרָה","a-law"],["לִבְנֵי","to-the-children-of"],["יִשְׂרָאֵל","Israel"],["אַף","yea-even"],["תּוֹרָה","Torah/law"],["חֲזָקָה","strict"],["מְאֹד","very"],["כִּי","for"],["עַם־קְשֵׁה־עֹרֶף","they-were-a-stiffnecked-people-stiffnecked-people"],["הֵמָּה","they"],["מְמַהֲרִים","quick-to-do"],["לַעֲשׂוֹת","do"],["רָעָה","evil"],["וּמְאַחֲרִים","and-slow"],["לִזְכֹּר","to-remember"],["אֶת־יְהוָה","the-Lord"],["אֱלֹהֵיהֶם","their-God"]
   ]},
   { num: "ל", words: [
     ["עַל־כֵּן","therefore"],["נִתְּנָה","was-given(f)"],["לָהֶם","them"],["תּוֹרָה","a-law"],["אַף","yea"],["תּוֹרַת","a-law-of"],["מַעֲשִׂים","performances"],["וְחֻקִּים","and-of-ordinances"],["תּוֹרָה","a-law"],["אֲשֶׁר","which"],["יִשְׁמְרוּ","they-shall-keep"],["יוֹם","the-day-of"],["יוֹם","from-day-to-day"],["לְמַעַן","that"],["יִזְכְּרוּ","in-remembrance-of"],["אֶת־אֱלֹהִים","God"],["וּמִשְׁמַרְתָּם","and-their-duty"],["אֵלָיו","unto-him"]
