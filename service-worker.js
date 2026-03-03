@@ -1,4 +1,4 @@
-const CACHE_NAME = 'standard-works-v9';
+const CACHE_NAME = 'standard-works-v10';
 
 const CORE_ASSETS = [
   '/StandardWorks/index.html',
@@ -36,12 +36,13 @@ self.addEventListener('activate', event => {
   self.clients.claim();
 });
 
-// Fetch — network-first for verse data, cache-first for core assets
+// Fetch — network-first for HTML/JS, cache-first for static assets (images, fonts)
 self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
 
-  // Verse data files — network first, fall back to cache
-  if (url.pathname.match(/_(verses|cache)\//) || url.pathname.match(/talks_data\//)) {
+  // HTML pages and JS files — always network-first so updates arrive immediately
+  // Falls back to cache when offline
+  if (url.pathname.match(/\.(html|js|json)$/) || url.pathname.match(/_(verses|cache)\//) || url.pathname.match(/talks_data\//)) {
     event.respondWith(
       fetch(event.request)
         .then(response => {
@@ -54,7 +55,7 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // Core assets — cache first, fall back to network
+  // Static assets (images, icons, fonts) — cache-first for speed
   event.respondWith(
     caches.match(event.request).then(cached => {
       if (cached) return cached;
