@@ -480,6 +480,7 @@
               return function() {
                 sessionStorage.setItem('xref-return-from', window.location.pathname + window.location.hash);
                 sessionStorage.setItem('xref-return-verse', sv);
+                sessionStorage.setItem('xref-return-set', '1');
               };
             })(sourceVerseKey);
             crossLink.style.cssText = 'color:var(--accent,#c8a84e);text-decoration:none;font-weight:600;';
@@ -622,6 +623,7 @@
                   return function() {
                     sessionStorage.setItem('xref-return-from', window.location.pathname + window.location.hash);
                     sessionStorage.setItem('xref-return-verse', sv);
+                    sessionStorage.setItem('xref-return-set', '1');
                   };
                 })(e.verseKey);
                 cLink.style.cssText = 'color:var(--accent,#c8a84e);text-decoration:none;font-weight:600;';
@@ -836,9 +838,11 @@
       titleDiv.innerHTML = '<span style="color:var(--accent);">\uD83C\uDF99\uFE0F</span> ' +
         '<span style="font-weight:600;">' + (t.title || 'Untitled') + '</span>' +
         '<span style="font-size:0.8em;color:var(--ink-light,#888);margin-left:8px;">' + (t.conference || '') + '</span>';
-      titleDiv.onclick = function() {
-        window.open('talks.html#' + t.talkId, '_blank');
-      };
+      titleDiv.onclick = (function(tId) {
+        return function() {
+          window.location.href = 'talks.html#' + tId;
+        };
+      })(t.talkId);
       card.appendChild(titleDiv);
 
       if (t.snippet) {
@@ -869,13 +873,13 @@
       var talkPageUrl = 'talks.html#' + t.talkId;
       var readLink = document.createElement('a');
       readLink.href = talkPageUrl;
-      readLink.target = '_blank';
       readLink.style.cssText = 'color:var(--accent);text-decoration:none;';
       readLink.textContent = 'Read talk \u2192';
       readLink.onclick = (function(vk, rUrl) {
         return function() {
           sessionStorage.setItem('xref-return-from', rUrl + window.location.hash);
           sessionStorage.setItem('xref-return-verse', vk);
+          sessionStorage.setItem('xref-return-set', '1');
         };
       })(verseKey, returnUrl);
       linkDiv.appendChild(readLink);
@@ -902,5 +906,24 @@
 
   // ── Auto-load talk refs after cross-refs ──
   setTimeout(addTalkRefMarkers, 1500);
+
+  // ══════════════════════════════════════════════════════════════
+  // ── RETURN NAVIGATION — store current page on departure ──
+  // ══════════════════════════════════════════════════════════════
+  window.addEventListener('beforeunload', function() {
+    // If user clicked the return link, don't overwrite
+    if (sessionStorage.getItem('xref-returning')) return;
+    // If a cross-ref onclick already set specific verse info, don't overwrite
+    if (sessionStorage.getItem('xref-return-set')) {
+      sessionStorage.removeItem('xref-return-set');
+      return;
+    }
+    sessionStorage.setItem('xref-return-from', window.location.pathname + window.location.hash);
+    sessionStorage.removeItem('xref-return-verse');
+    // Store a readable label from the page title
+    var titleParts = document.title.split('\u2014');
+    var label = titleParts.length > 1 ? titleParts[titleParts.length - 1].trim() : document.title;
+    sessionStorage.setItem('xref-return-label', label);
+  });
 
 })();

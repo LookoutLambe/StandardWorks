@@ -546,5 +546,14 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service-worker.js');
 }
 </script>
+<script>
+window.addEventListener('beforeunload', function() {
+  if (sessionStorage.getItem('xref-returning')) return;
+  if (sessionStorage.getItem('xref-return-set')) { sessionStorage.removeItem('xref-return-set'); return; }
+  sessionStorage.setItem('xref-return-from', window.location.pathname + window.location.hash);
+  sessionStorage.removeItem('xref-return-verse');
+  sessionStorage.setItem('xref-return-label', 'Home');
+});
+</script>
 </body>
 </html>
