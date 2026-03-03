@@ -920,9 +920,15 @@
     }
     sessionStorage.setItem('xref-return-from', window.location.pathname + window.location.hash);
     sessionStorage.removeItem('xref-return-verse');
-    // Store a readable label from the page title
-    var titleParts = document.title.split('\u2014');
-    var label = titleParts.length > 1 ? titleParts[titleParts.length - 1].trim() : document.title;
+    // Store a readable label — prefer nav-label (shows current chapter) over page title
+    var navLabel = document.getElementById('nav-label');
+    var label;
+    if (navLabel && navLabel.textContent) {
+      label = navLabel.textContent.replace(/\s*▾\s*$/, '').trim();
+    } else {
+      var titleParts = document.title.split('\u2014');
+      label = titleParts.length > 1 ? titleParts[titleParts.length - 1].trim() : document.title;
+    }
     sessionStorage.setItem('xref-return-label', label);
   });
 

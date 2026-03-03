@@ -355,6 +355,72 @@ body.dark-mode .top-bar { background: #0a0a0a; }
 }
 .landing-footer a:hover { text-decoration: underline; }
 
+/* ========== GLOBAL SEARCH ========== */
+.global-search-wrap {
+  max-width: 520px;
+  margin: 0 auto 8px;
+  padding: 0 8px;
+}
+.global-search-input {
+  width: 100%;
+  padding: 10px 16px;
+  font-family: 'Crimson Pro', serif;
+  font-size: 1em;
+  background: var(--bg-deep);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.global-search-input:focus {
+  border-color: var(--accent);
+}
+.global-search-input::placeholder {
+  color: var(--ink-light);
+  opacity: 0.7;
+}
+.global-search-results {
+  margin-top: 12px;
+  display: none;
+}
+.global-search-results.open {
+  display: block;
+}
+.gs-result-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  margin-bottom: 6px;
+  background: var(--card-bg);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  color: var(--accent);
+  text-decoration: none;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.95em;
+  transition: background 0.15s, transform 0.15s;
+}
+.gs-result-link:hover {
+  background: #2a2f44;
+  transform: translateY(-1px);
+}
+.gs-result-link .gs-heb {
+  font-family: 'David Libre', serif;
+  font-size: 1.1em;
+  min-width: 60px;
+  text-align: center;
+  direction: rtl;
+}
+.gs-hint {
+  text-align: center;
+  font-size: 0.82em;
+  color: var(--ink-light);
+  margin-top: 6px;
+  font-style: italic;
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 600px) {
   .landing-title { font-size: 1.8em; }
@@ -411,6 +477,12 @@ body.dark-mode .top-bar { background: #0a0a0a; }
     </div>
 
     <div class="diamond-divider"></div>
+
+    <!-- ===== GLOBAL SEARCH ===== -->
+    <div class="global-search-wrap">
+      <input type="text" id="global-search" class="global-search-input" placeholder="Search all volumes...   (press / to focus)" autocomplete="off" aria-label="Search all volumes">
+      <div class="global-search-results" id="gs-results"></div>
+    </div>
 
     <!-- ===== CARD GRID ===== -->
     <div class="card-grid">
@@ -513,6 +585,10 @@ body.dark-mode .top-bar { background: #0a0a0a; }
         Hebrew Interlinear Standard Works<br>
         <a href="mailto:lookoutlambe@gmail.com">lookoutlambe@gmail.com</a>
       </p>
+      <p style="margin-top: 16px; font-size: 0.78em; color: var(--ink-light); max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+        This is an independent project and is not affiliated with, endorsed by, or
+        officially connected to The Church of Jesus Christ of Latter-day Saints.
+      </p>
     </div>
 
   </div><!-- /panel-landing -->
@@ -539,6 +615,64 @@ function toggleDark() {
     }
   } catch(e) {}
 })();
+
+// ===== GLOBAL SEARCH =====
+var gsVolumes = [
+  { name: 'Old Testament', heb: 'תנ״ך', page: 'ot.html' },
+  { name: 'New Testament', heb: 'הברית החדשה', page: 'nt.html' },
+  { name: 'Book of Mormon', heb: 'ספר מורמון', page: 'bom/bom.html' },
+  { name: 'Doctrine & Covenants', heb: 'תורה ובריתות', page: 'dc.html' },
+  { name: 'Pearl of Great Price', heb: 'פנינת המחיר הגדול', page: 'pgp.html' },
+  { name: 'Joseph Smith Translation', heb: 'תרגום ג׳וזף סמית', page: 'jst.html' }
+];
+
+var gsInput = document.getElementById('global-search');
+var gsResults = document.getElementById('gs-results');
+
+gsInput.addEventListener('input', function() {
+  var q = gsInput.value.trim();
+  if (q.length < 2) {
+    gsResults.classList.remove('open');
+    gsResults.innerHTML = '';
+    return;
+  }
+  var html = '';
+  gsVolumes.forEach(function(v) {
+    html += '<a class="gs-result-link" href="' + v.page + '?q=' + encodeURIComponent(q) + '">'
+      + '<span class="gs-heb">' + v.heb + '</span>'
+      + '<span>Search "' + q.replace(/</g, '&lt;') + '" in <strong>' + v.name + '</strong></span>'
+      + '</a>';
+  });
+  html += '<div class="gs-hint">Press Enter to search the first volume, or click a specific volume.</div>';
+  gsResults.innerHTML = html;
+  gsResults.classList.add('open');
+});
+
+gsInput.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    var q = gsInput.value.trim();
+    if (q.length >= 2) {
+      window.location.href = 'ot.html?q=' + encodeURIComponent(q);
+    }
+  }
+  if (e.key === 'Escape') {
+    gsInput.blur();
+    gsResults.classList.remove('open');
+    gsResults.innerHTML = '';
+  }
+});
+
+// ===== KEYBOARD SHORTCUTS =====
+document.addEventListener('keydown', function(e) {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+  if (e.key === '/') {
+    e.preventDefault();
+    gsInput.focus();
+  }
+  if (e.key === 'd' || e.key === 'D') {
+    toggleDark();
+  }
+});
 
 </script>
 <script>
