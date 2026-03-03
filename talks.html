@@ -285,6 +285,19 @@ body.dark-mode .year-card { background: linear-gradient(170deg, #0a0f1a 0%, #111
 .sp-view-hebrew:hover { opacity: 0.85; }
 body.dark-mode #scripture-panel { background: #333333; border-color: #d4af37; }
 
+/* Inline interlinear in scripture panel */
+.sp-interlinear {
+  direction: rtl; display: flex; flex-wrap: wrap; gap: 4px 8px;
+  padding: 10px 16px; line-height: 1.8; justify-content: center;
+}
+.sp-hw-unit {
+  display: inline-flex; flex-direction: column; align-items: center;
+  text-align: center; padding: 2px 3px;
+}
+.sp-hw-unit .hw { font-family: 'SBL Hebrew', 'David Libre', serif; font-size: 1.15em; color: var(--ink); }
+.sp-hw-unit .gl { font-size: 0.6em; color: var(--ink-light); direction: ltr; }
+.sp-loading { padding: 16px; text-align: center; color: var(--ink-light); font-style: italic; font-size: 0.9em; }
+
 /* ========== BACK LINK ========== */
 .back-nav {
   text-align: center; margin: 20px 0;
@@ -505,6 +518,191 @@ body.dark-mode #return-link:hover { background: #c8a84e !important; }
     return page + '#' + prefix + chapter;
   }
 
+  // ── Verse file loader for inline interlinear ──
+  var _verseFileCache = {};
+
+  var bookToVerseFile = {
+    // OT
+    'Genesis': { dir: 'ot_verses', file: 'gen', chPfx: 'gen-ch' },
+    'Exodus': { dir: 'ot_verses', file: 'exo', chPfx: 'exo-ch' },
+    'Leviticus': { dir: 'ot_verses', file: 'lev', chPfx: 'lev-ch' },
+    'Numbers': { dir: 'ot_verses', file: 'num', chPfx: 'num-ch' },
+    'Deuteronomy': { dir: 'ot_verses', file: 'deu', chPfx: 'deu-ch' },
+    'Joshua': { dir: 'ot_verses', file: 'jos', chPfx: 'jos-ch' },
+    'Judges': { dir: 'ot_verses', file: 'jdg', chPfx: 'jdg-ch' },
+    'Ruth': { dir: 'ot_verses', file: 'rth', chPfx: 'rth-ch' },
+    '1 Samuel': { dir: 'ot_verses', file: '1sa', chPfx: '1sa-ch' },
+    '2 Samuel': { dir: 'ot_verses', file: '2sa', chPfx: '2sa-ch' },
+    '1 Kings': { dir: 'ot_verses', file: '1ki', chPfx: '1ki-ch' },
+    '2 Kings': { dir: 'ot_verses', file: '2ki', chPfx: '2ki-ch' },
+    '1 Chronicles': { dir: 'ot_verses', file: '1ch', chPfx: '1ch-ch' },
+    '2 Chronicles': { dir: 'ot_verses', file: '2ch', chPfx: '2ch-ch' },
+    'Ezra': { dir: 'ot_verses', file: 'ezr', chPfx: 'ezr-ch' },
+    'Nehemiah': { dir: 'ot_verses', file: 'neh', chPfx: 'neh-ch' },
+    'Esther': { dir: 'ot_verses', file: 'est', chPfx: 'est-ch' },
+    'Job': { dir: 'ot_verses', file: 'job', chPfx: 'job-ch' },
+    'Psalms': { dir: 'ot_verses', file: 'psa', chPfx: 'psa-ch' },
+    'Proverbs': { dir: 'ot_verses', file: 'pro', chPfx: 'pro-ch' },
+    'Ecclesiastes': { dir: 'ot_verses', file: 'ecc', chPfx: 'ecc-ch' },
+    'Song of Solomon': { dir: 'ot_verses', file: 'sos', chPfx: 'sos-ch' },
+    'Isaiah': { dir: 'ot_verses', file: 'isa', chPfx: 'isa-ch' },
+    'Jeremiah': { dir: 'ot_verses', file: 'jer', chPfx: 'jer-ch' },
+    'Lamentations': { dir: 'ot_verses', file: 'lam', chPfx: 'lam-ch' },
+    'Ezekiel': { dir: 'ot_verses', file: 'eze', chPfx: 'eze-ch' },
+    'Daniel': { dir: 'ot_verses', file: 'dan', chPfx: 'dan-ch' },
+    'Hosea': { dir: 'ot_verses', file: 'hos', chPfx: 'hos-ch' },
+    'Joel': { dir: 'ot_verses', file: 'joe', chPfx: 'joe-ch' },
+    'Amos': { dir: 'ot_verses', file: 'amo', chPfx: 'amo-ch' },
+    'Obadiah': { dir: 'ot_verses', file: 'oba', chPfx: 'oba-ch' },
+    'Jonah': { dir: 'ot_verses', file: 'jon', chPfx: 'jon-ch' },
+    'Micah': { dir: 'ot_verses', file: 'mic', chPfx: 'mic-ch' },
+    'Nahum': { dir: 'ot_verses', file: 'nah', chPfx: 'nah-ch' },
+    'Habakkuk': { dir: 'ot_verses', file: 'hab', chPfx: 'hab-ch' },
+    'Zephaniah': { dir: 'ot_verses', file: 'zep', chPfx: 'zep-ch' },
+    'Haggai': { dir: 'ot_verses', file: 'hag', chPfx: 'hag-ch' },
+    'Zechariah': { dir: 'ot_verses', file: 'zec', chPfx: 'zec-ch' },
+    'Malachi': { dir: 'ot_verses', file: 'mal', chPfx: 'mal-ch' },
+    // NT
+    'Matthew': { dir: 'nt_verses', file: 'matt', chPfx: 'matt-ch' },
+    'Mark': { dir: 'nt_verses', file: 'mark', chPfx: 'mark-ch' },
+    'Luke': { dir: 'nt_verses', file: 'luke', chPfx: 'luke-ch' },
+    'John': { dir: 'nt_verses', file: 'john', chPfx: 'john-ch' },
+    'Acts': { dir: 'nt_verses', file: 'acts', chPfx: 'acts-ch' },
+    'Romans': { dir: 'nt_verses', file: 'rom', chPfx: 'rom-ch' },
+    '1 Corinthians': { dir: 'nt_verses', file: '1co', chPfx: '1co-ch' },
+    '2 Corinthians': { dir: 'nt_verses', file: '2co', chPfx: '2co-ch' },
+    'Galatians': { dir: 'nt_verses', file: 'gal', chPfx: 'gal-ch' },
+    'Ephesians': { dir: 'nt_verses', file: 'eph', chPfx: 'eph-ch' },
+    'Philippians': { dir: 'nt_verses', file: 'php', chPfx: 'php-ch' },
+    'Colossians': { dir: 'nt_verses', file: 'col', chPfx: 'col-ch' },
+    '1 Thessalonians': { dir: 'nt_verses', file: '1th', chPfx: '1th-ch' },
+    '2 Thessalonians': { dir: 'nt_verses', file: '2th', chPfx: '2th-ch' },
+    '1 Timothy': { dir: 'nt_verses', file: '1ti', chPfx: '1ti-ch' },
+    '2 Timothy': { dir: 'nt_verses', file: '2ti', chPfx: '2ti-ch' },
+    'Titus': { dir: 'nt_verses', file: 'tit', chPfx: 'tit-ch' },
+    'Philemon': { dir: 'nt_verses', file: 'phm', chPfx: 'phm-ch' },
+    'Hebrews': { dir: 'nt_verses', file: 'heb', chPfx: 'heb-ch' },
+    'James': { dir: 'nt_verses', file: 'jas', chPfx: 'jas-ch' },
+    '1 Peter': { dir: 'nt_verses', file: '1pe', chPfx: '1pe-ch' },
+    '2 Peter': { dir: 'nt_verses', file: '2pe', chPfx: '2pe-ch' },
+    '1 John': { dir: 'nt_verses', file: '1jn', chPfx: '1jn-ch' },
+    '2 John': { dir: 'nt_verses', file: '2jn', chPfx: '2jn-ch' },
+    '3 John': { dir: 'nt_verses', file: '3jn', chPfx: '3jn-ch' },
+    'Jude': { dir: 'nt_verses', file: 'jude', chPfx: 'jude-ch' },
+    'Revelation': { dir: 'nt_verses', file: 'rev', chPfx: 'rev-ch' },
+    // BOM
+    '1 Nephi': { dir: 'bom/verses', file: '1nephi', chPfx: 'ch' },
+    '2 Nephi': { dir: 'bom/verses', file: '2nephi', chPfx: '2n-ch' },
+    'Jacob': { dir: 'bom/verses', file: 'jacob', chPfx: 'jc-ch' },
+    'Enos': { dir: 'bom/verses', file: 'enos', chPfx: 'en-ch' },
+    'Jarom': { dir: 'bom/verses', file: 'jarom', chPfx: 'jr-ch' },
+    'Omni': { dir: 'bom/verses', file: 'omni', chPfx: 'om-ch' },
+    'Words of Mormon': { dir: 'bom/verses', file: 'words_of_mormon', chPfx: 'wm-ch' },
+    'Mosiah': { dir: 'bom/verses', file: 'mosiah', chPfx: 'mo-ch' },
+    'Alma': { dir: 'bom/verses', file: 'alma', chPfx: 'al-ch' },
+    'Helaman': { dir: 'bom/verses', file: 'helaman', chPfx: 'he-ch' },
+    '3 Nephi': { dir: 'bom/verses', file: '3nephi', chPfx: '3n-ch' },
+    '4 Nephi': { dir: 'bom/verses', file: '4nephi', chPfx: '4n-ch' },
+    'Mormon': { dir: 'bom/verses', file: 'mormon', chPfx: 'mm-ch' },
+    'Ether': { dir: 'bom/verses', file: 'ether', chPfx: 'et-ch' },
+    'Moroni': { dir: 'bom/verses', file: 'moroni', chPfx: 'mr-ch' },
+    // D&C (file determined dynamically)
+    'D&C': { dir: 'dc_verses', chPfx: 'dc', isDC: true },
+    // PGP
+    'Moses': { dir: 'pgp_verses', file: 'moses', chPfx: 'ms-ch' },
+    'Abraham': { dir: 'pgp_verses', file: 'abraham', chPfx: 'ab-ch' },
+    'JS-H': { dir: 'pgp_verses', file: 'js_history', chPfx: 'jsh-ch' },
+    'JS-M': { dir: 'pgp_verses', file: 'js_matthew', chPfx: 'jsm-ch' },
+    'A-of-F': { dir: 'pgp_verses', file: 'articles_of_faith', chPfx: 'aof-ch' }
+  };
+
+  function getDCFileName(section) {
+    var s = parseInt(section);
+    if (s === 109) return 'dc109';
+    if (s <= 10) return 'dc1_10';
+    if (s <= 20) return 'dc11_20';
+    if (s <= 30) return 'dc21_30';
+    if (s <= 40) return 'dc31_40';
+    if (s <= 50) return 'dc41_50';
+    if (s <= 60) return 'dc51_60';
+    if (s <= 70) return 'dc61_70';
+    if (s <= 80) return 'dc71_80';
+    if (s <= 90) return 'dc81_90';
+    if (s <= 100) return 'dc91_100';
+    if (s <= 110) return 'dc101_110';
+    if (s <= 120) return 'dc111_120';
+    if (s <= 130) return 'dc121_130';
+    return 'dc131_138';
+  }
+
+  function getVerseFileUrl(book, chapter) {
+    var info = bookToVerseFile[book];
+    if (!info) return null;
+    if (info.isDC) return info.dir + '/' + getDCFileName(chapter) + '.js';
+    return info.dir + '/' + info.file + '.js';
+  }
+
+  function getChapterTargetId(book, chapter) {
+    var info = bookToVerseFile[book];
+    if (!info) return null;
+    if (info.isDC) return 'dc' + chapter + '-ch1-verses';
+    return info.chPfx + chapter + '-verses';
+  }
+
+  function loadVerseFile(url, callback) {
+    if (_verseFileCache[url]) { callback(_verseFileCache[url]); return; }
+    fetch(url).then(function(r) {
+      if (!r.ok) throw new Error('Not found');
+      return r.text();
+    }).then(function(text) {
+      var chapters = {};
+      var mockRender = function(data, id) { chapters[id] = data; };
+      try {
+        var fn = new Function('renderVerseSet', text);
+        fn(mockRender);
+      } catch(e) { callback(null); return; }
+      _verseFileCache[url] = chapters;
+      callback(chapters);
+    }).catch(function() { callback(null); });
+  }
+
+  function renderInterlinearVerse(verseData) {
+    if (!verseData || !verseData.words) return '';
+    var html = '<div class="sp-interlinear">';
+    verseData.words.forEach(function(w) {
+      var hw = w[0], gl = w[1] || '';
+      if (hw === '׃' || hw === '') return;
+      html += '<span class="sp-hw-unit"><span class="hw">' + hw + '</span>';
+      if (gl) html += '<span class="gl">' + gl.replace(/-/g, ' ') + '</span>';
+      html += '</span>';
+    });
+    html += '</div>';
+    return html;
+  }
+
+  function loadAndRenderInterlinear(refKey, targetEl) {
+    var parts = refKey.split('|');
+    var book = parts[0], chapter = parts[1], verse = parseInt(parts[2]);
+    var url = getVerseFileUrl(book, chapter);
+    var targetId = getChapterTargetId(book, chapter);
+    if (!url || !targetId) { targetEl.innerHTML = '<div class="sp-loading">Interlinear data not available for this reference.</div>'; return; }
+
+    targetEl.innerHTML = '<div class="sp-loading">Loading Hebrew interlinear...</div>';
+    loadVerseFile(url, function(chapters) {
+      if (!chapters || !chapters[targetId]) {
+        targetEl.innerHTML = '<div class="sp-loading">Interlinear data not available.</div>';
+        return;
+      }
+      var chapterVerses = chapters[targetId];
+      var verseData = verse > 0 && verse <= chapterVerses.length ? chapterVerses[verse - 1] : null;
+      if (!verseData) {
+        targetEl.innerHTML = '<div class="sp-loading">Verse not found in data.</div>';
+        return;
+      }
+      targetEl.innerHTML = renderInterlinearVerse(verseData);
+    });
+  }
+
   // ── Build landing page ──
   function buildLanding() {
     if (!talks || talks.length === 0) {
@@ -702,20 +900,18 @@ body.dark-mode #return-link:hover { background: #c8a84e !important; }
 
     var html = '<div class="sp-ref-title">' + display + '</div>';
 
-    // Try to get verse text from scripture_verses
+    // Interlinear container (loaded async)
+    html += '<div id="sp-interlinear-target"></div>';
+
+    // English verse text
     if (window._scriptureVerses && window._scriptureVerses[refKey]) {
-      html += '<div class="sp-verse-text">' + window._scriptureVerses[refKey] + '</div>';
-    } else {
-      var fbLink = getHebrewLink(refKey);
-      html += '<div class="sp-verse-text" style="color:var(--ink-light);font-style:italic;">Verse text not available in preview. ';
-      if (fbLink) html += '<a href="' + fbLink + '" target="_blank" style="color:var(--accent);">View in Hebrew Interlinear &rarr;</a>';
-      html += '</div>';
+      html += '<div class="sp-verse-text" style="text-align:justify;">' + window._scriptureVerses[refKey] + '</div>';
     }
 
-    // Link to Hebrew page
+    // Link to full Hebrew page
     var link = getHebrewLink(refKey);
     if (link) {
-      html += '<a class="sp-view-hebrew" href="' + link + '" target="_blank">View in Hebrew Interlinear &rarr;</a>';
+      html += '<a class="sp-view-hebrew" href="' + link + '" target="_blank">Open Full Chapter &rarr;</a>';
     }
 
     // Show other talks that cite this verse
@@ -737,6 +933,10 @@ body.dark-mode #return-link:hover { background: #c8a84e !important; }
 
     content.innerHTML = html;
     panel.classList.add('open');
+
+    // Load interlinear data async
+    var target = document.getElementById('sp-interlinear-target');
+    if (target) loadAndRenderInterlinear(refKey, target);
   };
 
   window.closeScripturePanel = function() {
