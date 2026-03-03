@@ -809,7 +809,10 @@ body.dark-mode #return-link:hover { background: #c8a84e !important; }
       var display = parts.length >= 3 ? parts[0] + ' ' + parts[1] + ':' + parts[2] : verseKey;
       document.getElementById('return-verse').textContent = display;
       document.getElementById('return-link').href = fromPage;
-      document.getElementById('return-banner').style.display = 'block';
+      var b = document.getElementById('return-banner');
+      var ct = document.querySelector('.controls-top');
+      if (ct) b.style.top = ct.offsetHeight + 'px';
+      b.style.display = 'block';
     }
   })();
 
