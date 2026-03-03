@@ -25,7 +25,7 @@
   --header-text: #c8a84e;
   --highlight: rgba(200, 168, 78, 0.10);
   --talk-accent: #6a4c93;
-  --ref-color: #5dade2;
+  --ref-color: #c8a84e;
 }
 body.dark-mode {
   --bg: #333333; --bg-deep: #2a2a2a;
@@ -35,7 +35,7 @@ body.dark-mode {
   --header-bg: #0a0a0a; --header-text: #d4af37;
   --highlight: rgba(200, 168, 78, 0.15);
   --talk-accent: #9b72cf;
-  --ref-color: #85c1e9;
+  --ref-color: #d4af37;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -223,7 +223,7 @@ body.dark-mode .year-card { background: linear-gradient(170deg, #0a0f1a 0%, #111
   color: var(--ref-color); cursor: pointer; transition: all 0.15s;
   text-decoration: none;
 }
-.ref-chip:hover { border-color: var(--ref-color); background: rgba(93,173,226,0.08); }
+.ref-chip:hover { border-color: var(--ref-color); background: rgba(200,168,78,0.10); }
 
 .talk-paragraph {
   font-size: 1.05em; line-height: 1.75;
@@ -237,6 +237,16 @@ body.dark-mode .year-card { background: linear-gradient(170deg, #0a0f1a 0%, #111
 .talk-paragraph .scripture-link:hover {
   color: var(--accent); border-bottom-color: var(--accent);
 }
+
+/* Listen button */
+.talk-listen-btn {
+  display: inline-flex; align-items: center;
+  margin-top: 10px; padding: 7px 16px;
+  background: var(--accent); color: #fff;
+  border-radius: 20px; font-size: 0.85em; font-weight: 600;
+  text-decoration: none; transition: opacity 0.2s;
+}
+.talk-listen-btn:hover { opacity: 0.85; }
 
 /* Source link */
 .talk-source {
@@ -330,7 +340,8 @@ body.dark-mode #return-link:hover { background: #c8a84e !important; }
     <div id="nav-dropdown" role="listbox"></div>
   </div>
 
-  <div class="tools-group">
+  <div class="tools-group" style="display:flex;align-items:center;gap:6px;">
+    <label style="display:flex;align-items:center;gap:4px;font-size:0.8em;color:#c8a84e;"><span>Size </span><input type="range" id="sizeSlider" min="70" max="150" value="100" oninput="setSize(this.value)" aria-label="Font size" style="width:60px;accent-color:#c8a84e;"></label>
     <button id="search-btn" onclick="toggleSearch()" title="Search" aria-label="Search">&#x1F50D;</button>
     <button id="dark-mode-toggle" onclick="toggleDark()" title="Dark mode">&#x1F319;</button>
   </div>
@@ -454,13 +465,44 @@ body.dark-mode #return-link:hover { background: #c8a84e !important; }
     return parts[0] + ' ' + parts[1] + ':' + parts[2];
   }
 
+  // ── Book name to hash prefix for chapter navigation ──
+  var bookToHash = {
+    'Genesis': 'genesis-', 'Exodus': 'exodus-', 'Leviticus': 'leviticus-', 'Numbers': 'numbers-',
+    'Deuteronomy': 'deuteronomy-', 'Joshua': 'joshua-', 'Judges': 'judges-', 'Ruth': 'ruth-',
+    '1 Samuel': '1samuel-', '2 Samuel': '2samuel-', '1 Kings': '1kings-', '2 Kings': '2kings-',
+    '1 Chronicles': '1chronicles-', '2 Chronicles': '2chronicles-', 'Ezra': 'ezra-', 'Nehemiah': 'nehemiah-',
+    'Esther': 'esther-', 'Job': 'job-', 'Psalms': 'psalms-', 'Proverbs': 'proverbs-',
+    'Ecclesiastes': 'ecclesiastes-', 'Song of Solomon': 'songofsolomon-', 'Isaiah': 'isaiah-', 'Jeremiah': 'jeremiah-',
+    'Lamentations': 'lamentations-', 'Ezekiel': 'ezekiel-', 'Daniel': 'daniel-', 'Hosea': 'hosea-',
+    'Joel': 'joel-', 'Amos': 'amos-', 'Obadiah': 'obadiah-', 'Jonah': 'jonah-',
+    'Micah': 'micah-', 'Nahum': 'nahum-', 'Habakkuk': 'habakkuk-', 'Zephaniah': 'zephaniah-',
+    'Haggai': 'haggai-', 'Zechariah': 'zechariah-', 'Malachi': 'malachi-',
+    'Matthew': 'matthew-', 'Mark': 'mark-', 'Luke': 'luke-', 'John': 'john-',
+    'Acts': 'acts-', 'Romans': 'romans-', '1 Corinthians': '1corinthians-', '2 Corinthians': '2corinthians-',
+    'Galatians': 'galatians-', 'Ephesians': 'ephesians-', 'Philippians': 'philippians-', 'Colossians': 'colossians-',
+    '1 Thessalonians': '1thessalonians-', '2 Thessalonians': '2thessalonians-',
+    '1 Timothy': '1timothy-', '2 Timothy': '2timothy-', 'Titus': 'titus-', 'Philemon': 'philemon-',
+    'Hebrews': 'hebrews-', 'James': 'james-', '1 Peter': '1peter-', '2 Peter': '2peter-',
+    '1 John': '1john-', '2 John': '2john-', '3 John': '3john-', 'Jude': 'jude-', 'Revelation': 'revelation-',
+    '1 Nephi': '1-nephi-', '2 Nephi': '2-nephi-', 'Jacob': 'jacob-', 'Enos': 'enos-',
+    'Jarom': 'jarom-', 'Omni': 'omni-', 'Words of Mormon': 'words-of-mormon-',
+    'Mosiah': 'mosiah-', 'Alma': 'alma-', 'Helaman': 'helaman-',
+    '3 Nephi': '3-nephi-', '4 Nephi': '4-nephi-', 'Mormon': 'mormon-',
+    'Ether': 'ether-', 'Moroni': 'moroni-',
+    'D&C': 'dc',
+    'Moses': 'moses-', 'Abraham': 'abraham-', 'JS-H': 'js-history-', 'JS-M': 'js-matthew-', 'A-of-F': 'articles-of-faith-'
+  };
+
   // ── Get link to Hebrew interlinear page ──
   function getHebrewLink(refKey) {
     var parts = refKey.split('|');
     var book = parts[0];
+    var chapter = parts[1];
     var page = bookToPage[book];
     if (!page) return null;
-    return page;
+    var prefix = bookToHash[book];
+    if (!prefix) return page;
+    return page + '#' + prefix + chapter;
   }
 
   // ── Build landing page ──
@@ -546,7 +588,14 @@ body.dark-mode #return-link:hover { background: #c8a84e !important; }
     html += '<span class="speaker">President Dallin H. Oaks</span> &middot; ';
     html += talk.conference;
     if (talk.session) html += ' &middot; ' + escHtml(talk.session);
-    html += '</div></div>';
+    html += '</div>';
+    // Audio listen button
+    if (talk.uri) {
+      html += '<a class="talk-listen-btn" href="https://www.churchofjesuschrist.org/study' + talk.uri + '?lang=eng&player=all" target="_blank" rel="noopener">';
+      html += '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:5px;"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3v5z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3v5z"/></svg>';
+      html += 'Listen to Address</a>';
+    }
+    html += '</div>';
 
     // Scripture refs summary
     if (talk.scriptureRefs.length > 0) {
@@ -657,7 +706,10 @@ body.dark-mode #return-link:hover { background: #c8a84e !important; }
     if (window._scriptureVerses && window._scriptureVerses[refKey]) {
       html += '<div class="sp-verse-text">' + window._scriptureVerses[refKey] + '</div>';
     } else {
-      html += '<div class="sp-verse-text" style="color:var(--ink-light);font-style:italic;">Verse text not available in current data. View in Hebrew interlinear below.</div>';
+      var fbLink = getHebrewLink(refKey);
+      html += '<div class="sp-verse-text" style="color:var(--ink-light);font-style:italic;">Verse text not available in preview. ';
+      if (fbLink) html += '<a href="' + fbLink + '" target="_blank" style="color:var(--accent);">View in Hebrew Interlinear &rarr;</a>';
+      html += '</div>';
     }
 
     // Link to Hebrew page
@@ -773,12 +825,23 @@ body.dark-mode #return-link:hover { background: #c8a84e !important; }
     try { localStorage.setItem('sw-dark', isDark ? '1' : '0'); } catch(e) {}
   };
 
-  // Restore dark mode
+  // Font size slider
+  window.setSize = function(val) {
+    document.getElementById('talk-content').style.fontSize = val + '%';
+    try { localStorage.setItem('talks-font-size', val); } catch(e) {}
+  };
+
+  // Restore dark mode & font size
   (function() {
     try {
       if (localStorage.getItem('sw-dark') === '1') {
         document.body.classList.add('dark-mode');
         document.getElementById('dark-mode-toggle').textContent = '\u2600\uFE0F';
+      }
+      var savedSize = localStorage.getItem('talks-font-size');
+      if (savedSize) {
+        document.getElementById('talk-content').style.fontSize = savedSize + '%';
+        document.getElementById('sizeSlider').value = savedSize;
       }
     } catch(e) {}
   })();

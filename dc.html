@@ -72,15 +72,16 @@ body {
 .verse-num { font-family: 'David Libre', serif; font-size: 1.2em; font-weight: 700; color: var(--verse-num); min-width: 30px; text-align: center; padding-top: 3px; cursor: pointer; user-select: none; flex-shrink: 0; line-height: 1.2; }
 .verse-num .verse-num-arabic { display: block; font-size: 0.55em; color: var(--ink-light); font-weight: 400; font-family: 'Crimson Pro', serif; opacity: 0.7; }
 .word-flow { display: flex; flex-wrap: wrap; gap: 1px; align-items: flex-start; flex: 1; direction: rtl; }
-.word-group { display: inline-flex; align-items: flex-start; direction: rtl; }
+.word-group { display: inline-flex; align-items: stretch; vertical-align: top; direction: rtl; }
 .word-unit { display: inline-flex; flex-direction: column; align-items: center; padding: 3px 5px; border-radius: 3px; cursor: pointer; transition: background 0.15s; line-height: 1.2; }
 .word-unit:hover { background: var(--highlight); }
 .hw { font-size: 1.85em; font-weight: 500; line-height: 1.5; color: #1a2744; direction: rtl; unicode-bidi: bidi-override; white-space: nowrap; }
 .gl { font-family: 'Crimson Pro', serif; font-size: 0.72em; color: var(--gloss); direction: ltr; text-align: center; white-space: nowrap; font-style: italic; }
 .tl { font-family: 'Crimson Pro', serif; font-size: 0.78em; color: var(--ink-light); direction: ltr; text-align: center; white-space: nowrap; opacity: 0.7; }
-.arr { display: inline-flex; flex-direction: column; align-items: center; padding: 3px 0; opacity: 0.25; line-height: 1.2; }
-.arr-hw { font-size: 1.85em; visibility: hidden; }
-.arr-gl, .arr-tl { font-family: 'Times New Roman', 'Crimson Pro', serif; font-size: 0.72em; color: var(--gloss); direction: ltr; }
+.arr { display: inline-flex; flex-direction: column; align-items: center; justify-content: flex-end; color: var(--accent); font-family: 'Times New Roman', Times, serif; font-style: normal; font-weight: normal; vertical-align: top; padding: 3px 0 6px; margin: 2px 0; opacity: 0.75; direction: ltr; unicode-bidi: isolate; line-height: 1.2; }
+.arr-hw { flex-grow: 1; visibility: hidden; max-width: 0; }
+.arr-tl { font-size: 0.78em; line-height: 1.2; margin-top: 2px; visibility: visible; transform: scale(1.8); }
+.arr-gl { font-size: 0.72em; font-style: normal; line-height: 1.2; margin-top: 1px; visibility: visible; transform: scale(1.8); }
 .word-unit.sof + .arr { display: none; }
 .word-unit.sof .hw::after { content: ' \05C3'; color: var(--rule); }
 body.hide-translit .tl, body.hide-translit .arr-tl { display: none; }
@@ -491,9 +492,7 @@ body.dark-mode #share-popup { background: #333333; border-color: #d4af37; }
 
 /* === CROSS-REFERENCES === */
 .xref-marker {
-  display: inline-block; font-size: 0.6em; color: var(--accent); cursor: pointer;
-  vertical-align: super; line-height: 0; margin: 0 2px; font-family: 'Crimson Pro', serif;
-  font-weight: 600; opacity: 0.7; transition: opacity 0.2s;
+  display: none;
 }
 .xref-marker:hover { opacity: 1; text-decoration: underline; }
 body.hide-gloss .xref-marker, body.dual-mode .xref-marker { font-size: 0.5em; }
@@ -1460,7 +1459,7 @@ var rootMap = {
   '\u05D7\u05B6\u05E1\u05B6\u05D3': '\u05D7\u05E1\u05D3', '\u05D7\u05B7\u05E1\u05B0\u05D3\u05BC\u05D5\u05B9': '\u05D7\u05E1\u05D3', '\u05D7\u05B2\u05E1\u05B8\u05D3\u05B8\u05D9\u05D5': '\u05D7\u05E1\u05D3',
   '\u05D2\u05BC\u05B8\u05D0\u05B7\u05DC': '\u05D2\u05D0\u05DC', '\u05D2\u05BC\u05B9\u05D0\u05B5\u05DC': '\u05D2\u05D0\u05DC', '\u05D2\u05BC\u05B0\u05D0\u05BB\u05DC\u05BC\u05B8\u05D4': '\u05D2\u05D0\u05DC',
   '\u05D1\u05BC\u05B0\u05E8\u05B4\u05D9\u05EA': '\u05D1\u05E8\u05EA', '\u05D4\u05B7\u05D1\u05BC\u05B0\u05E8\u05B4\u05D9\u05EA': '\u05D1\u05E8\u05EA',
-  '\u05D0\u05B1\u05DC\u05B9\u05D4\u05B4\u05D9\u05DD': '\u05D0\u05DC\u05D4', '\u05D4\u05B8\u05D0\u05B1\u05DC\u05B9\u05D4\u05B4\u05D9\u05DD': '\u05D0\u05DC\u05D4',
+  '\u05D0\u05B1\u05DC\u05B9\u05D4\u05B4\u05D9\u05DD': '\u05D0\u05DC\u05D4\u05D9\u05DD', '\u05D4\u05B8\u05D0\u05B1\u05DC\u05B9\u05D4\u05B4\u05D9\u05DD': '\u05D0\u05DC\u05D4\u05D9\u05DD',
   '\u05EA\u05BC\u05D5\u05B9\u05E8\u05B8\u05D4': '\u05EA\u05D5\u05E8', '\u05D4\u05B7\u05EA\u05BC\u05D5\u05B9\u05E8\u05B8\u05D4': '\u05EA\u05D5\u05E8', '\u05EA\u05BC\u05D5\u05B9\u05E8\u05B7\u05EA': '\u05EA\u05D5\u05E8',
   '\u05DE\u05B6\u05DC\u05B6\u05DA\u05B0': '\u05DE\u05DC\u05DB', '\u05D4\u05B7\u05DE\u05BC\u05B6\u05DC\u05B6\u05DA\u05B0': '\u05DE\u05DC\u05DB', '\u05DE\u05B0\u05DC\u05B8\u05DB\u05B4\u05D9\u05DD': '\u05DE\u05DC\u05DB',
   '\u05DE\u05B4\u05E9\u05C1\u05B0\u05E4\u05BC\u05B8\u05D8': '\u05E9\u05E4\u05D8', '\u05D4\u05B7\u05DE\u05BC\u05B4\u05E9\u05C1\u05B0\u05E4\u05BC\u05B8\u05D8': '\u05E9\u05E4\u05D8',
