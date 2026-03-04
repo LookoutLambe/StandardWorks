@@ -1,7 +1,7 @@
 // nt_verses/col.js — Colossians verse data
 (function() {
 var col_ch1Verses = [
-  { num:"א", words:[["פּוֹלוֹס","Paul"],["שְׁלִיחַ","apostle"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׁיחַ","the-Messiah"],["בִּרְצוֹן","in-the-will-of"],["אֱלֹהִים","God"],["וְטִימוֹתִיּוֹס","and-Timothy"],["אָחִינוּ","our-brother"],["׃",""]] },
+  { num:"א", words:[["פּוֹלוֹס","Paul"],["שְׁלִיחַ","an-apostle-of"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׁיחַ","the-Messiah"],["בִּרְצוֹן","in-the-will-of"],["אֱלֹהִים","God"],["וְטִימוֹתִיּוֹס","and-Timothy"],["אָחִינוּ","our-brother"],["׃",""]] },
   { num:"ב", words:[["אֶל־הַקְּדשִׁים","to-the-holy-things"],["וְהָאַחִים","and-the-brothers"],["הַנֶּאֱמָנִים","the-faithful"],["בַּמָּשִׁיחַ","in-the-Messiah"],["אֲשֶׁר","whose"],["הֵם","they"],["בְּקוֹלַסָּא","in-Colossae"],["חֶסֶד","mercy"],["לָכֶם","to-you"],["וְשָׁלוֹם","and-peace"],["מֵאֵת","from"],["הָאֱלֹהִים","the-God"],["אָבִינוּ","our-father"],["וַאֲדוֹנֵינוּ","and-lord-our"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׁיחַ","the-Messiah"],["׃",""]] },
   { num:"ג", words:[["מוֹדִים","giving-thanks"],["אֲנַחְנוּ","we"],["לֵאלֹהִים","God"],["אֲבִי","Father-of"],["אֲדֹנֵינוּ","our-Lord"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׁיחַ","the-Messiah"],["וְנִתְפַּלֵּל","and-we prayed"],["בַּעַדְכֶם","in-until-you"],["תָּמִיד","continually"],["׃",""]] },
   { num:"ד", words:[["כִּי","because"],["שָׁמַעְנוּ","did-we-heed"],["אֱמוּנַתְכֶם","your-faith"],["בַּמָּשִׁיחַ","in-the-Messiah"],["יֵשׁוּעַ","Jesus"],["וְאַהֲבַתְכֶם","and-you-shall-love-you(pl)"],["אֶת־כָּל־הַקְּדשִׁים","[ACC]-all-the-holy-things"],["׃",""]] },
