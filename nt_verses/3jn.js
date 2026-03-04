@@ -1,8 +1,8 @@
 // nt_verses/3jn.js — 3 John verse data
 (function() {
 var _3jn_ch1Verses = [
-  { num:"א", words:[["הַזָּקֵן","the-elder"],["אֶל־גָּיוֹס","at-enlistment"],["יְדִידִי","my-beloved"],["אֲשֶׁר","whose"],["אֲנִי","I"],["אֹהֵב","loves"],["אֹתוֹ","him"],["בֶּאֱמֶת","in-truth"],["׃",""]] },
-  { num:"ב", words:[["יְדִידִי","my-beloved"],["רְצוֹנִי","my-desire"],["שֶׁיִּיטַב","that-it was good"],["לְךָ","for-you"],["לְכָל־דָּבָר","to-all-things"],["וְתִהְיֶה","and-is-to-come"],["בָרִיא","is fat"],["כְּטוֹב","like-good"],["לְנַפְשֶׁךָ","for-self-your"],["׃",""]] },
+  { num:"א", words:[["הַזָּקֵן","the-elder"],["אֶל־גָּיוֹס","to-Gaius"],["יְדִידִי","my-beloved"],["אֲשֶׁר","whose"],["אֲנִי","I"],["אֹהֵב","loves"],["אֹתוֹ","him"],["בֶּאֱמֶת","in-truth"],["׃",""]] },
+  { num:"ב", words:[["יְדִידִי","my-beloved"],["רְצוֹנִי","my-desire"],["שֶׁיִּיטַב","that-it was good"],["לְךָ","for-you"],["לְכָל־דָּבָר","to-all-things"],["וְתִהְיֶה","and-is-to-come"],["בָרִיא","in-health"],["כְּטוֹב","like-good"],["לְנַפְשֶׁךָ","for-self-your"],["׃",""]] },
   { num:"ג", words:[["כִּי","because"],["שָׂמַחְתִּי","I-rejoiced"],["מְאֹד","exceedingly"],["כַּאֲשֶׁר","when/as"],["בָּאוּ","came"],["אַחִים","brothers"],["וַיָּעִידוּ","and-testified"],["עַל־אֲמִתֶּךָ","upon-faithfulness-your"],["אֲשֶׁר","whose"],["מִתְהַלֵּךְ","walking"],["אַתָּה","you"],["בָּאֱמֶת","in-truth"],["׃",""]] },
   { num:"ד", words:[["אֵין","there-is-no"],["לִי","to-me"],["שִׂמְחָה","joy"],["גְדוֹלָה","great"],["מִלִּשְׁמֹעַ","from-to-listen"],["אֶת־בָּנַי","[ACC]-my-sons"],["מִתְהַלְּכִים","walking"],["בָּאֱמֶת","in-truth"],["׃",""]] },
   { num:"ה", words:[["יְדִידִי","my-beloved"],["בֶּאֱמוּנָה","with-much-faith"],["כָּל־מַעֲשֶׂיךָ","all-Your-works"],["עִם־הָאַחִים","with-the-brethren"],["וְעִם־הָאֹרְחִים","and-equally with-the-travelers"],["׃",""]] },
@@ -14,7 +14,7 @@ var _3jn_ch1Verses = [
   { num:"יא", words:[["יְדִידִי","my-beloved"],["אַל־תֵּלֵךְ","do-not-should-go"],["בְּעִקְּבוֹת","in-the footprints of"],["הָרָעָה","the-evil"],["כִּי","because"],["אִם־בְּעִקְּבוֹת","[compound]-in-the footprints of"],["הַטּוֹב","good"],["הָעֹשֶׂה","does"],["טוֹב","good"],["הוּא","it-is"],["מֵאֱלֹהִים","by-God"],["וְהָעֹשֶׂה","and-does"],["רַע","evil"],["לֹא","not"],["רָאָה","he-saw"],["אֶת־הָאֱלֹהִים","[ACC]-God"],["׃",""]] },
   { num:"יב", words:[["עַל־דְּמַטְרִיּוֹס","concerning-Demetrius"],["הֵעִידוּ","testified"],["הַכֹּל","all"],["וְגַם־הָאֱמֶת","and-also-the-true"],["עַצְמָהּ","strength"],["וְגַם־אֲנַחְנוּ","and-also-we"],["מְעִידִים","testify"],["עָלָיו","upon-him"],["וִידַעְתֶּם","and-you-shall-know"],["כִּי","because"],["עֵדוּתֵנוּ","testimony-of-us"],["נֶאֱמָנָה","is reliable"],["׃",""]] },
   { num:"יג", words:[["הַרְבֵּה","much"],["יֶשׁ־לִי","has-to-me"],["לִכְתֹּב","to-write"],["וְלֹא","and-not"],["חָפַצְתִּי","I-desire"],["לִכְתֹּב","to-write"],["אֵלֶיךָ","to-you(f)"],["בִּדְיוֹ","with-ink"],["וּבְקוֹלָמוֹס","and-with-a-pen"],["׃",""]] },
-  { num:"יד", words:[["אֲבָל","but/however"],["אֲקַוֶּה","Koh"],["לִרְאוֹתְךָ","to-your-seeing"],["בִּמְהֵרָה","soon"],["וּפֶה","and-a mouth"],["אֶל־פֶּה","to-mouth"],["נְדַבֵּר","speak"],["׃",""]] },
+  { num:"יד", words:[["אֲבָל","but/however"],["אֲקַוֶּה","I-hope"],["לִרְאוֹתְךָ","to-your-seeing"],["בִּמְהֵרָה","soon"],["וּפֶה","and-a mouth"],["אֶל־פֶּה","to-mouth"],["נְדַבֵּר","speak"],["׃",""]] },
   { num:"טו", words:[["שָׁלוֹם","peace"],["לָךְ","[compound]"],["הָרֵעִים","the-friends"],["שֹׁאֲלִים","asking"],["לִשְׁלוֹמֶךָ","to-your-peace"],["שְׁאַל","ask"],["לִשְׁלוֹם","for-the-welfare-of"],["הָרֵעִים","the-friends"],["לְאִישׁ","for-a-man"],["אִישׁ","man-of"],["בִּשְׁמוֹ","in-His-name"],["׃",""]] },
 ];
 renderVerseSet(_3jn_ch1Verses, '3jn-ch1-verses');
