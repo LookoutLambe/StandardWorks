@@ -1,7 +1,7 @@
 // nt_verses/php.js — Philippians verse data
 (function() {
 var php_ch1Verses = [
-  { num:"א", words:[["פּוֹלוֹס","Paul"],["וְטִימוֹתִיּוֹס","and-Timothy"],["עַבְדֵי","servants-of"],["הַמָּשִׁיחַ","the-Messiah"],["יֵשׁוּעַ","Jesus"],["אֶל־כָּל־הַקְּדשִׁים","to-all-the-saints"],["בַּמָּשִׁיחַ","in-the-Messiah"],["יֵשׁוּעַ","Jesus"],["אֲשֶׁר","whose"],["הֵם","they"],["בְּפִילִפִּי","in-Philippi"],["עִם־הַהֶגְמוֹנִם","with-the-overseers"],["וְהַשַּׁמָּשִׁים","and-the-deacons"],["׃",""]] },
+  { num:"א", words:[["פּוֹלוֹס","Paul"],["וְטִימוֹתִיּוֹס","and-Timothy"],["עַבְדֵי","servants-of"],["הַמָּשִׁיחַ","the-Messiah"],["יֵשׁוּעַ","Jesus"],["אֶל־כָּל־הַקְּדשִׁים","to-all-the-saints"],["בַּמָּשִׁיחַ","in-the-Messiah"],["יֵשׁוּעַ","Jesus"],["אֲשֶׁר","whose"],["הֵם","they"],["בְּפִילִפִּי","in-Philippi"],["עִם־הַהֶגְמוֹנִם","with-the-bishops"],["וְהַשַּׁמָּשִׁים","and-the-deacons"],["׃",""]] },
   { num:"ב", words:[["חֶסֶד","grace"],["לָכֶם","to-you"],["וְשָׁלוֹם","and-peace"],["מֵאֵת","from"],["הָאֱלֹהִים","the-God"],["אָבִינוּ","our-father"],["וַאֲדֹנֵינוּ","and-lord-our"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׁיחַ","the-Messiah"],["׃",""]] },
   { num:"ג", words:[["אוֹדֶה","I-thank"],["לֵאלֹהָי","of-my-God"],["מִדֵּי","whenever"],["זָכְרִי","I-remember"],["אֶתְכֶם","you"],["׃",""]] },
   { num:"ד", words:[["וְתָמִיד","and-continually"],["בְּכָל־תְּפִלּוֹתַי","in-all-my-prayers"],["אֶתְחַנֵּן","I-beseech"],["בְּשִׂמְחָה","with-joy"],["בְּעַד","on-behalf-of"],["כֻּלְּכֶם","all-you"],["׃",""]] },
