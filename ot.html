@@ -58,7 +58,8 @@ body {
 }
 
 .book-header { text-align: center; padding: 20px 0 10px; margin-bottom: 8px; }
-.book-title { font-size: 2.4em; font-weight: 700; color: var(--header-bg); letter-spacing: 0.04em; margin-bottom: 2px; }
+.book-title { font-size: 2.4em; font-weight: 700; color: var(--header-bg); letter-spacing: 0.04em; margin-bottom: 2px; line-height: 1.2; }
+.book-title-en { font-size: 0.6em; font-weight: 400; letter-spacing: 0.02em; }
 .book-subtitle { font-size: 1.1em; font-weight: 400; color: var(--ink-light); letter-spacing: 0.06em; }
 .ornament { text-align: center; padding: 6px 0 12px; color: var(--accent); font-size: 1.2em; letter-spacing: 0.5em; }
 
@@ -1148,7 +1149,7 @@ function navTo(id, slideDir) {
   if (!isLanding) {
     var info = getBookChapter(id);
     if (info) {
-      titleEl.textContent = info.bookData.he + ' / ' + info.bookData.en;
+      titleEl.innerHTML = info.bookData.he + '<br><span class="book-title-en" dir="ltr">' + info.bookData.en + '</span>';
       subEl.textContent = '\u05E4\u05E8\u05E7 ' + toHebNum(info.chapter) + ' / Chapter ' + info.chapter;
       subEl.style.display = '';
     }
