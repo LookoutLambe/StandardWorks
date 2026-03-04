@@ -789,6 +789,25 @@
     // Try to find the verse already in the DOM
     var existing = document.querySelector('[data-verse-key="' + verseKey + '"]');
     if (existing) {
+      // Check if the verse's chapter panel is visible
+      var parentPanel = existing.closest('.chapter-panel');
+      if (parentPanel && window.getComputedStyle(parentPanel).display === 'none') {
+        // Panel is hidden — navigate to it first via hash
+        var vol = _bookToVolume[parts[0]];
+        if (vol) {
+          window.location.hash = vol.hash(parts[1]);
+          setTimeout(function() {
+            var v = document.querySelector('[data-verse-key="' + verseKey + '"]');
+            if (v) {
+              v.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              v.style.transition = 'background 0.3s';
+              v.style.background = 'rgba(200,168,78,0.2)';
+              setTimeout(function() { v.style.background = ''; }, 2000);
+            }
+          }, 600);
+          return;
+        }
+      }
       existing.scrollIntoView({ behavior: 'smooth', block: 'center' });
       existing.style.transition = 'background 0.3s';
       existing.style.background = 'rgba(200,168,78,0.2)';
@@ -797,25 +816,20 @@
     }
 
     // If not in DOM, try to navigate to the right chapter panel
-    // Look for chapter panels and try to match
     var panels = document.querySelectorAll('.chapter-panel');
     for (var i = 0; i < panels.length; i++) {
       var panelId = panels[i].id;
       if (!panelId || panelId === 'panel-landing') continue;
 
-      // Get the chapter ID from panel ID (remove "panel-" prefix)
       var chapId = panelId.replace('panel-', '');
 
-      // Check if getBookChapter maps this panel to the right book/chapter
       if (typeof getBookChapter === 'function') {
         var bc = getBookChapter(chapId);
         if (bc && bc.book === parts[0] && String(bc.chapter) === parts[1]) {
-          // Found the right panel - render it and navigate
           if (typeof _ensureChapterRendered === 'function') {
             _ensureChapterRendered(chapId);
           }
           panels[i].scrollIntoView({ behavior: 'smooth', block: 'start' });
-          // Try to find the verse after rendering
           setTimeout(function() {
             var v = document.querySelector('[data-verse-key="' + verseKey + '"]');
             if (v) {
@@ -828,6 +842,23 @@
           return;
         }
       }
+    }
+
+    // Fallback: use hash navigation via _bookToVolume (handles unrendered chapters)
+    var vol = _bookToVolume[parts[0]];
+    if (vol) {
+      var targetHash = vol.hash(parts[1]);
+      window.location.hash = targetHash;
+      // After hash navigation renders the chapter, scroll to the specific verse
+      setTimeout(function() {
+        var v = document.querySelector('[data-verse-key="' + verseKey + '"]');
+        if (v) {
+          v.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          v.style.transition = 'background 0.3s';
+          v.style.background = 'rgba(200,168,78,0.2)';
+          setTimeout(function() { v.style.background = ''; }, 2000);
+        }
+      }, 800);
     }
   }
 
