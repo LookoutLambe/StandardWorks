@@ -1,6 +1,6 @@
 // nt_verses/2th.js — 2 Thessalonians verse data
 (function() {
-var 2th_ch1Verses = [
+var _2th_ch1Verses = [
   { num:"א", words:[["פּוֹלוֹס","Paul"],["וְסִלְוָנוֹס","???"],["וְטִימוֹתִיּוֹס","and-Timothy"],["אֶל־קְהִלַּת","to-church-of"],["הַתֶּסָּלוֹנִיקִיּים","???"],["בֵּאלֹהִים","in-God"],["אָבִינוּ","our-father"],["וּבַאֲדֹנֵינוּ","and-in-our-Lord"],["יֵשׁוּעַ","Yeshua"],["הַמָּשִׁיחַ","the-Messiah"],["׃",""]] },
   { num:"ב", words:[["חֶסֶד","mercy"],["לָכֶם","to-you"],["וְשָׁלוֹם","and-peace"],["מֵאֵת","from"],["אֱלֹהִים","God"],["אָבִינוּ","our-father"],["וַאֲדֹנֵינוּ","and-lord-our"],["יֵשׁוּעַ","Yeshua"],["הַמָּשִׁיחַ","the-Messiah"],["׃",""]] },
   { num:"ג", words:[["חַיָּבִים","are-obligated"],["אֲנַחְנוּ","we"],["לְהוֹדוֹת","to-thanksgivings"],["תָּמִיד","continually"],["לֵאלֹהִים","God"],["עֲלֵיכֶם","over-you"],["אַחַי","my-brothers"],["כָּרָאוּי","as-fitting"],["כִּי","because"],["אֱמוּנַתְכֶם","your-faith"],["גָּדְלָה","great-was"],["מְאֹד","exceedingly"],["וְרַבָּה","and-it will become many"],["אַהֲבַת","love-of"],["כֻּלְּכֶם","all-you"],["אִישׁ","man-of"],["לְרֵעֵהוּ","another"],["׃",""]] },
@@ -14,9 +14,9 @@ var 2th_ch1Verses = [
   { num:"יא", words:[["לָזֹאת","to-this"],["גַּם־נִתְפַּלֵּל","also-we prayed"],["בַּעַדְכֶם","in-until-you"],["תָּמִיד","continually"],["אֲשֶׁר","whose"],["יִתֵּן","shall-give"],["אֶתְכֶם","you"],["אֱלֹהֵינוּ","our-God"],["רְאוּיִם","worthy"],["לְמַה־שֶּׁאַתֶּם","to-what-???"],["מְקֹרָאִים","from-calling-on"],["וִימַלֵּא","so-may he fill?"],["בְעֹז","in-strength-of"],["כָּל־חֶפְצְכֶם","???"],["בַּטּוֹב","the-good"],["וְכָל־מַעֲשֵׂה","and-all-work-of"],["אֱמוּנַתְכֶם","your-faith"],["׃",""]] },
   { num:"יב", words:[["לְמַעַן","in-order-that"],["יִכָּבֶד","it was unresponsive"],["בָּכֶם","in-you"],["שֵׁם","name-of"],["יֵשׁוּעַ","Yeshua"],["אֲדֹנֵינוּ","our-Lord"],["וְאַתֶּם","and-will-you"],["תִּכָּבְדוּ","respect"],["בוֹ","in-Him"],["עַל־פִּי","according-to"],["חֶסֶד","mercy"],["אֱלֹהֵינוּ","our-God"],["וַאֲדֹנֵינוּ","and-lord-our"],["יֵשׁוּעַ","Yeshua"],["הַמָּשִׁיחַ","the-Messiah"],["׃",""]] },
 ];
-renderVerseSet(2th_ch1Verses, '2th-ch1-verses');
+renderVerseSet(_2th_ch1Verses, '2th-ch1-verses');
 
-var 2th_ch2Verses = [
+var _2th_ch2Verses = [
   { num:"א", words:[["וְהִנְנוּ","and-behold-us"],["מְבַקְשִׁים","seek"],["מִכֶּם","from-you"],["אֶחָי","brothers-my"],["עַל־אֹדוֹת","upon-concerning"],["בִּיאַת","the-coming-of"],["אֲדֹנֵינוּ","our-Lord"],["יֵשׁוּעַ","Yeshua"],["הַמָּשִׁיחַ","the-Messiah"],["וַאֲסִיפָתֵנוּ","and-gathering-of-us"],["אֵלָיו","to-him"],["׃",""]] },
   { num:"ב", words:[["אֲשֶׁר","whose"],["לֹא־תִטָּרֵף","???"],["דַּעְתְּכֶם","knowledge-you(pl)"],["פִּתְאֹם","suddenly"],["וַאֲשֶׁר","and-whom"],["לֹא","not"],["תִּבָּהֵלוּ","you be hasty(they)"],["לֹא","not"],["בְרוּחַ","by-the spirit of"],["וְלֹא","and-not"],["בְדִבּוּר","in-speaking"],["וְלֹא","and-not"],["בְאִגֶּרֶת","in-letter"],["כְּאִלּוּ","as-though"],["שְׁלוּחָה","which has been sent"],["מֵאִתָּנוּ","from-among-us"],["לֵאמֹר","saying"],["הִגִּיעַ","come-has"],["יוֹם","day"],["יְהוָֹה","the-Lord"],["׃",""]] },
   { num:"ג", words:[["אַל־יַתְעֶה","do-not-shall-deceive"],["אֶתְכֶם","you"],["אִישׁ","man-of"],["בְּשׁוּם","in-any/put"],["אוֹפֶן","a wheel"],["כִּי","because"],["לֹא־יָבֹא","not-shall-come"],["בְּטֶרֶם","before"],["יִהְיֶה","he-shall-be"],["בָרִאשׁוֹנָה","first-place"],["הַמֶּרֶד","the-rebellion"],["וְנִגְלָה","and-he has revealed himself"],["אִישׁ","man-of"],["הָחַטָּאָה","the-sin"],["בֶּן־הָאֲבַדּוֹן","son-of-H'bdvn"],["׃",""]] },
@@ -35,9 +35,9 @@ var 2th_ch2Verses = [
   { num:"טז", words:[["וַאֲדֹנֵינוּ","and-lord-our"],["יֵשׁוּעַ","Yeshua"],["הַמָּשִׁיחַ","the-Messiah"],["וֵאלֹהֵינוּ","and-God-our"],["אָבִינוּ","our-father"],["אֲשֶׁר","whose"],["אָהַב","He-loves"],["אֹתָנוּ","us"],["וַיִּתֶּן־לָנוּ","and-the-king-granted-unto-us"],["בְחַסְדּוֹ","in-His-lovingkindness"],["נֶחָמַת","???"],["עוֹלָם","eternal"],["וְתִקְוָה","and-hope"],["טוֹבָה","good"],["׃",""]] },
   { num:"יז", words:[["הוּא","it-is"],["יְנַחֵם","He-comforted"],["אֶת־לְבַבְכֶם","[ACC]-your-hearts"],["וִיכוֹנֵן","and-he will establish"],["אֶתְכֶם","you"],["בְּכָל־דָּבָר","in-all-things"],["וּמַעֲשֶׂה","and-a-work"],["טוֹב","good"],["׃",""]] },
 ];
-renderVerseSet(2th_ch2Verses, '2th-ch2-verses');
+renderVerseSet(_2th_ch2Verses, '2th-ch2-verses');
 
-var 2th_ch3Verses = [
+var _2th_ch3Verses = [
   { num:"א", words:[["וְעוֹד","and-again"],["אַחַי","my-brothers"],["הִתְפַּלֲלוּ","pray!"],["בַעֲדֵנוּ","for-us"],["אֲשֶׁר","whose"],["יָרוּץ","he runs"],["דְּבַר","word-of"],["יְהוָֹה","the-Lord"],["וְיִכָּבֵד","and-he-bore-down"],["כְּהִכָּבְדוֹ","as-make heavy-his"],["בְקִרְבְּכֶם","among-you"],["׃",""]] },
   { num:"ב", words:[["וַאֲשֶׁר","and-whom"],["נִנָּצֵל","we-will-snatch"],["מִן־הָאֲנָשִׁים","from-men"],["הַתֹּעִים","the-wandering"],["וְהָרָעִים","and-evil"],["כִּי","because"],["לֹא","not"],["לְכָל־אָדָם","unto-all-men"],["הָאֱמוּנָה","the-faith"],["׃",""]] },
   { num:"ג", words:[["אֲבָל","but/however"],["נֶאֱמָן","more-faithful"],["הוּא","it-is"],["הָאָדוֹן","the-Lord"],["אֲשֶׁר","whose"],["יְחַזֵּק","mightier"],["אֶתְכֶם","you"],["וְיִשְׁמָרְכֶם","and-shall-be-kept-you(pl)"],["מִן־הָרָע","from-that-which-is-evil"],["׃",""]] },
@@ -57,6 +57,6 @@ var 2th_ch3Verses = [
   { num:"יז", words:[["שֹׁאֵל","ask"],["לִשְׁלוֹמְכֶם","for-your-peace"],["בִּכְתָב","in-writing"],["יָדִי","my-hand"],["אֲנִי","I"],["פוֹלוֹס","Paul"],["וְהִיא","and-she-was"],["הָאוֹת","the-sign"],["בְּכָל־הָאִגְּרוֹת","among-all-the-letters"],["כֵּן","thus"],["אָנֹכִי","I"],["כֹתֵב","writing"],["׃",""]] },
   { num:"יח", words:[["חֶסֶד","mercy"],["יֵשׁוּעַ","Yeshua"],["הַמָּשִׁיחַ","the-Messiah"],["אֲדֹנֵינוּ","our-Lord"],["עִם־כֻּלְּכֶם","with-all-you"],["׃",""]] },
 ];
-renderVerseSet(2th_ch3Verses, '2th-ch3-verses');
+renderVerseSet(_2th_ch3Verses, '2th-ch3-verses');
 
 })();

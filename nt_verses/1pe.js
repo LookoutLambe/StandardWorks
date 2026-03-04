@@ -1,6 +1,6 @@
 // nt_verses/1pe.js — 1 Peter verse data
 (function() {
-var 1pe_ch1Verses = [
+var _1pe_ch1Verses = [
   { num:"א", words:[["פֶּטְרוֹס","Peter"],["שְׁלִיחַ","you are sent"],["יֵשׁוּעַ","Yeshua"],["הַמָּשִׁיחַ","the-Messiah"],["אֶל־תּוֹשְׁבֵי","???"],["תְפוּצוֹת","???"],["פָּנְטוֹס","???"],["גָּלַטְיָא","Galatia"],["קַפּוֹדְקִיָּא","???"],["אַסְיָא","Asia"],["וּבִיתִינְיָא","???"],["׃",""]] },
   { num:"ב", words:[["הַנִּבְחָרִים","the-chosen"],["מִדַּעַת","from-the-knowledge-of"],["אֱלֹהִים","God"],["הָאָב","the-Father"],["מִקֶּדֶם","of-old"],["בְּקִדּוּשׁ","in-sanctifying"],["הָרוּחַ","the-Spirit"],["אֶל־מִשְׁמַעַת","to-court"],["יֵשׁוּעַ","Yeshua"],["הַמָּשִׁיחַ","the-Messiah"],["וְאֶל־הַזָּיַת","and-will be to-the-olive tree"],["דָּמוֹ","His-blood"],["חֶסֶד","mercy"],["וְשָׁלוֹם","and-peace"],["לְמַכְבִּיר","to-abundance"],["יִהְיוּ","shall-be"],["לָכֶם","to-you"],["׃",""]] },
   { num:"ג", words:[["בָּרוּךְ","blessed"],["הָאֱלֹהִים","the-God"],["אֲבִי","Father-of"],["אֲדֹנֵינוּ","our-Lord"],["יֵשׁוּעַ","Yeshua"],["הַמָּשִׁיחַ","the-Messiah"],["אֲשֶׁר","whose"],["כְּרֹב","according-to-the-multitude-of"],["רַחֲמָיו","His-mercy"],["חָזַר","to return"],["וְיָלַד","and-he brings forth"],["אֹתָנוּ","us"],["לְתִקְוָה","to-hope"],["חַיָּה","burning"],["בַּהֲקָמַת","in-the-you will set up"],["יֵשׁוּעַ","Yeshua"],["הַמָּשִׁיחַ","the-Messiah"],["מֵעִם","from"],["הַמֵּתִים","the-dead"],["׃",""]] },
@@ -27,9 +27,9 @@ var 1pe_ch1Verses = [
   { num:"כד", words:[["כִּי","because"],["כָל־בָּשָׂר","all-flesh"],["חָצִיר","grass"],["וְכָל־כְּבוֹד","and-all-the-glory-of"],["אִישׁ","man-of"],["כְּצִיץ","as-the-blossoms-of"],["הַשָׂדֶה","the-field"],["׃",""]] },
   { num:"כה", words:[["יָבֵשׁ","it-has-withered-away"],["חָצִיר","grass"],["נָבֵל","it withers"],["צִיץ","the plate of"],["וּדְבַר","and-spoke"],["יְהוָֹה","the-Lord"],["יָקוּם","he-shall-rise"],["לְעוֹלָם","forever"],["וְהוּא","and-it"],["הַדָּבָר","the-thing"],["אֲשֶׁר","whose"],["בֻּשַׂר","bear the news"],["לָכֶם","to-you"],["׃",""]] },
 ];
-renderVerseSet(1pe_ch1Verses, '1pe-ch1-verses');
+renderVerseSet(_1pe_ch1Verses, '1pe-ch1-verses');
 
-var 1pe_ch2Verses = [
+var _1pe_ch2Verses = [
   { num:"א", words:[["וְעַתָּה","and-now"],["הָסִירוּ","remove"],["מֵאִתְּכֶם","of-you"],["כָּל־רֶשַׁע","any-manner-of-wickedness"],["וְכָל־מִרְמָה","and-all-deceit"],["וַחֲנֻפָּה","and-hypocrisy"],["וְקִנְאָה","and-jealousy"],["וְכָל־לָשׁוֹן","and-all-tongue"],["רָע","evil"],["׃",""]] },
   { num:"ב", words:[["וּכְעֹלֲלִים","and-like-children"],["אֲשֶׁר","whose"],["מִקָּרוֹב","is from-near"],["נוֹלָדוּ","were-born"],["הִתְאַוּוּ","they craved"],["לֶחָלָב","to-milk"],["הַשִׂכְלִי","the-that-vessel"],["וְהַזָּךְ","and-the-pure"],["לְמַעַן","in-order-that"],["תִּגְדְּלוּ־בוֹ","you/she-will-greatness-his-is in-it"],["לַתְּשׁוּעָה","to-the-deliverance"],["׃",""]] },
   { num:"ג", words:[["אִם־אָמְנָם","[compound]-truly"],["טְעַמְתֶּם","you-tasted"],["כִּי־טוֹב","that-it-is-well"],["הָאָדוֹן","the-Lord"],["׃",""]] },
@@ -56,9 +56,9 @@ var 1pe_ch2Verses = [
   { num:"כד", words:[["לְמַעַן","in-order-that"],["נִחְיֶה","we-will-lived"],["לַצְּדָקָה","pertain-to-righteousness"],["אַחֲרֵי","after"],["חָדַלְנוּ","we ceased"],["מִן־הַחֲטָאִים","from-the-sins"],["׃",""]] },
   { num:"כה", words:[["אֲשֶׁר","whose"],["בַּחֲבֻרָתוֹ","in the-joined set-his"],["נִרְפָּא","we-are-healed"],["לָכֶם","to-you"],["כִּי","because"],["הֱיִיתֶם","because-you-have-been"],["כְּצֹאן","like-sheep of"],["אֹבְדוֹת","lost"],["וְעַתָּה","and-now"],["שַׁבְתֶּם","repent"],["אֶל־הָרֹעֶה","to-the-shepherd"],["פְּקִיד","the officer of"],["נַפְשֹׁתֵיכֶם","your-souls"],["׃",""]] },
 ];
-renderVerseSet(1pe_ch2Verses, '1pe-ch2-verses');
+renderVerseSet(_1pe_ch2Verses, '1pe-ch2-verses');
 
-var 1pe_ch3Verses = [
+var _1pe_ch3Verses = [
   { num:"א", words:[["וְכֵן","and-so"],["אַתֵּנָה","you"],["הַנָּשִׁים","that-the-women"],["הִכָּנַעְנָה","we-submitted"],["לִפְנֵי","before"],["בַעֲלֵיכֶן","in-to-you"],["לְמַעַן","in-order-that"],["אֲשֶׁר־יִקָּנוּ","whose-they will be bought"],["בְּאֵין־אֹמֶר","in-un-utterance"],["וּדְבָרִים","and-things"],["עַל־יְדֵי","by-means-of"],["מַעֲשֵׂי","works-of"],["הַנָּשִׁים","that-the-women"],["מִי","who"],["שֶׁאֵינָם","that-they-are-not"],["שֹׁמְעִים","obedient"],["לַדָּבָר","for-the-intent"],["׃",""]] },
   { num:"ב", words:[["בִּרְאוֹתָם","when-they-saw"],["כִּי","because"],["תִצְנַעְנָה","they(f)-shall-be-modest"],["לֶכֶת","departing-of"],["בְּיִרְאָה","in-He-shall-manifest-Himself"],["׃",""]] },
   { num:"ג", words:[["וּפְאֵרְכֶן","and-your(f)-adornment"],["אַל־יְהִי","do-not-let-this-be"],["מִבַּחוּץ","from-in-the-except"],["בְּמַחְלְפוֹת","in-the plaits of"],["שֵׂעָר","hair"],["וַעֲדִי","and-ornaments of"],["זָהָב","gold"],["וּלְבִישַׁת","and-wearing-of"],["מַחֲלָצוֹת","robes"],["׃",""]] },
@@ -82,9 +82,9 @@ var 1pe_ch3Verses = [
   { num:"כא", words:[["וְהוּא","and-it"],["דְּמוּת","likeness-of"],["הַטְּבִילָה","the-baptism"],["אֲשֶׁר","whose"],["כָּעֵת","as-yet"],["תּוֹשִׁיעַ","you save"],["גַּם־אֶתְכֶם","also-you"],["לֹא","not"],["לְהָסִיר","to-he-removed"],["חֶלְאַת","filth-of"],["הַבָּשָׂר","the-flesh"],["כִּי","because"],["אִם־לִשְׁאָל־לָנוּ","[compound]-to-enquire-us"],["מֵאֵת","from"],["אֱלֹהִים","God"],["רוּחַ","spirit-of"],["שְׁלֵמָה","complete/perfect"],["עַל־יְדֵי","by-means-of"],["הֲקָמַת","you will set up"],["יֵשׁוּעַ","Yeshua"],["הַמָּשִׁיחַ","the-Messiah"],["׃",""]] },
   { num:"כב", words:[["אֲשֶׁר","whose"],["עָבַר","passed"],["הַשָּׁמַיְמָה","unto-the-heavens"],["וַיֵּשֶׁב","and-he-sat/dwelt"],["לִימִין","at-right-of"],["אֱלֹהִים","God"],["וַיִּכָּנְעוּ","and-they-submitted"],["מִפָּנָיו","from-before-him"],["הַמַּלְאָכִים","the-angels"],["וְהָרְשֻׁיּוֹת","and-the-authorities"],["וְהַגְּבוּרוֹת","and-the-mighty"],["׃",""]] },
 ];
-renderVerseSet(1pe_ch3Verses, '1pe-ch3-verses');
+renderVerseSet(_1pe_ch3Verses, '1pe-ch3-verses');
 
-var 1pe_ch4Verses = [
+var _1pe_ch4Verses = [
   { num:"א", words:[["וְעַתָּה","and-now"],["כַּאֲשֶׁר","when/as"],["עֻנָּה","was replying"],["הַמָּשִׁיחַ","the-Messiah"],["בַּעֲדֵנוּ","in-until-us"],["בַּבָּשָׂר","in-the-flesh"],["כֵּן","thus"],["הֱיוּ","be"],["גַם־אַתֶּם","also-you"],["מְזֻיָּנִים","armed"],["בַּדַּעַת","in-the-true-knowledge"],["הַהִיא","that"],["כִּי","because"],["הַמְעֻנֶּה","the-from-answered"],["בַבָּשָׂר","in-the-flesh"],["חָדַל","ceased"],["לַחֲטוֹא","to-the-sinning"],["׃",""]] },
   { num:"ב", words:[["לְמַעַן","in-order-that"],["אֲשֶׁר","whose"],["לֹא","not"],["תִחְיוּ","you-will-live"],["עוֹד","any-more"],["לְתַאֲוֹת","to-chambers"],["בְּנֵי","sons-of"],["אָדָם","man"],["כִּי","because"],["אִם־לִרְצוֹן","[compound]-to-the-will-of"],["אֱלֹהִים","God"],["כָּל־יְמֵי","as-long-as"],["הֱיֹתְכֶם","you will become-you(pl)"],["עוֹד","any-more"],["בַּבָּשָׂר","in-the-flesh"],["׃",""]] },
   { num:"ג", words:[["כִּי","because"],["רַב","great"],["לָנוּ","us"],["עֲשׂוֹת","do"],["כְּחֵפֶץ","as-desire/precious"],["הַגּוֹיִם","the-nations"],["בַּיָּמִים","in-the-days"],["הָרִאשֹׁנִים","his-first"],["יְמֵי","days-of"],["לֶכְתֵּנוּ","departing-of-our/-us"],["בְּדַרְכֵי","in-ways-of"],["זִמָּה","there-could-not"],["וּבְתַאֲוֹת","and-in-desire of"],["כְּסֹבְאֵי","as-drunkards of"],["יַיִן","wine"],["וְזֹלֲלֵי","and-gluttons of"],["בָשָׂר","carnal"],["וְרֹדְפֵי","and-you-who-follow-after"],["שֵׁכָר","strong-drink"],["וְתוֹעֲבוֹת","and-abominations-of"],["עֲבֹדַת","the service of"],["הָאֱלִילִים","idols"],["׃",""]] },
@@ -105,9 +105,9 @@ var 1pe_ch4Verses = [
   { num:"יח", words:[["הֵן","yea"],["צַדִּיק","righteous"],["כִּמְעַט","nearly"],["לֹא","not"],["יִוָּשֵׁעַ","saved"],["אַף","yea"],["כִּי־רָשָׁע","because-wicked"],["וְחוֹטֵא","and-sinful"],["׃",""]] },
   { num:"יט", words:[["לָכֵן","therefore"],["גַּם־הַמְעֻנִּים","???"],["כִּרְצוֹן","according-to-the-desires-of"],["אֱלֹהִים","God"],["יַפְקִידוּ","he-has-laid-up(they)"],["אֶת־נַפְשֹׁתֵיהֶם","with-corpses of-their"],["בְּיַד","in-hand-of"],["אֱלֹהִים","God"],["הַבֹּרֵא","the-creation-of"],["הַנֶּאֱמָן","the-faithful"],["וְיוֹסִיפוּ","so-they may add"],["לַעֲשׂוֹת","to-do"],["הַטּוֹב","good"],["׃",""]] },
 ];
-renderVerseSet(1pe_ch4Verses, '1pe-ch4-verses');
+renderVerseSet(_1pe_ch4Verses, '1pe-ch4-verses');
 
-var 1pe_ch5Verses = [
+var _1pe_ch5Verses = [
   { num:"א", words:[["אֶת־הַזְּקֵנִים","[ACC]-you-old-men"],["אֲשֶׁר","whose"],["בְּקִרְבְּכֶם","among-you"],["אַזְהִיר","I-would-exhort"],["אֲנִי","I"],["הַזָּקֵן","the-elder"],["עֲמִיתָם","companionship-their"],["וְעֵד","and-was a witness"],["עִנּוּיֵי","sufferings-of"],["הַמָּשִׁיחַ","the-Messiah"],["וְגַם־חָבֵר","and-also-am a companion"],["לַכָּבוֹד","to-the-glorious"],["הֶעָתִיד","the-future"],["לְהִגָּלוֹת","to-be-revealed"],["׃",""]] },
   { num:"ב", words:[["רְעוּ","Reu"],["אֶת־עֵדֶר","[ACC]-fold"],["הָאֱלֹהִים","the-God"],["אֲשֶׁר","whose"],["תַּחַת","under"],["יֶדְכֶם","hand-your"],["וְהַשְׁגִּיחוּ","and-he-watched-over(they)"],["עֲלֵיהֶם","against-them"],["לֹא","not"],["בְאֹנֶס","in-is oppressing"],["כִּי","because"],["אִם־בִּנְדָבָה","[compound]-in-voluntariness"],["כִּרְצוֹן","according-to-the-desires-of"],["אֱלֹהִים","God"],["וְלֹא","and-not"],["עֵקֶב","for"],["בֶּצַע","gain/profit"],["רָע","evil"],["כִּי","because"],["אִם־בְּנֶפֶשׁ","[compound]-the corpse of"],["חֲפֵצָה","desiring(f)"],["׃",""]] },
   { num:"ג", words:[["אַף־לֹא","yea-not"],["כְּרוֹדָנִים","as-Rodanim"],["בְּנַחֲלַת","on-the inheritance of"],["יְהוָֹה","the-Lord"],["כִּי","because"],["אִם־לִהְיוֹת","[compound]-to-be"],["מוֹפֵת","a-miracle"],["לַצֹּאן","for the-sheep"],["׃",""]] },
@@ -123,6 +123,6 @@ var 1pe_ch5Verses = [
   { num:"יג", words:[["קְהִלַתְּכֶם","church-of-you(pl)"],["אֲשֶׁר","whose"],["בְּבָבֶל","on-Babylon"],["הַנִּבְחָרָה","the-let us choose"],["אִתְּכֶם","with-you"],["וּמַרְקוֹס","and-Mark"],["בְּנִי","my-son"],["שֹׁאֲלִים","asking"],["לִשְׁלוֹמְכֶם","for-your-peace"],["׃",""]] },
   { num:"יד", words:[["שַׁאֲלוּ","they-asked"],["אִישׁ","man-of"],["אֶת־רֵעֵהוּ","[ACC]-another"],["לְשָׁלוֹם","for-peace"],["בִּנְשִׁיקַת","???"],["אַהֲבָה","love"],["שָׁלוֹם","peace"],["לָכֶם","to-you"],["כֻּלְּכֶם","all-you"],["אֲשֶׁר","whose"],["בַּמָּשִׁיחַ","in-the-Messiah"],["יֵשׁוּעַ","Yeshua"],["אָמֵן","amen"],["׃",""]] },
 ];
-renderVerseSet(1pe_ch5Verses, '1pe-ch5-verses');
+renderVerseSet(_1pe_ch5Verses, '1pe-ch5-verses');
 
 })();

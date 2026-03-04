@@ -1,6 +1,6 @@
 // ot_verses/2sa.js — 2 Samuel verse data
 (function() {
-var 2sa_ch1Verses = [
+var _2sa_ch1Verses = [
   { num:"א", words:[["וַיְהִי","and-it-came-to-pass"],["אַחֲרֵי","after"],["מוֹת","death-of"],["שָׁאוּל","Saul"],["וְדָוִד","and-David"],["שָׁב","returned/repented"],["מֵהַכּוֹת","from-defeating"],["אֶת־הָעֲמָלֵק","[ACC]-Amalek"],["וַיֵּשֶׁב","and-he-sat/dwelt"],["דָּוִד","David"],["בְּצִקְלָג","in-Ziklag"],["יָמִים","days"],["שְׁנָיִם","two"],["׃",""]] },
   { num:"ב", words:[["וַיְהִי","and-it-came-to-pass"],["בַּיּוֹם","in-the-day"],["הַשְּׁלִישִׁי","the-third"],["וְהִנֵּה","and-behold"],["אִישׁ","man-of"],["בָּא","came"],["מִן־הַמַּחֲנֶה","from-the-camp"],["מֵעִם","from"],["שָׁאוּל","Saul"],["וּבְגָדָיו","and-garments-his"],["קְרֻעִים","were torn"],["וַאֲדָמָה","and-Adamah"],["עַל־רֹאשׁוֹ","upon-his-head"],["וַיְהִי","and-it-came-to-pass"],["בְּבֹאוֹ","when-came-he"],["אֶל־דָּוִד","to-David"],["וַיִּפֹּל","and-fell"],["אַרְצָה","the-land-of"],["וַיִּשְׁתָּחוּ","and-he bowed down"],["׃",""]] },
   { num:"ג", words:[["וַיֹּאמֶר","and-said"],["לוֹ","him"],["דָּוִד","David"],["אֵי","where"],["מִזֶּה","than-this"],["תָּבוֹא","come-shall"],["וַיֹּאמֶר","and-said"],["אֵלָיו","to-him"],["מִמַּחֲנֵה","from-the camp of"],["יִשְׂרָאֵל","Israel"],["נִמְלָטְתִּי","I have escaped"],["׃",""]] },
@@ -29,9 +29,9 @@ var 2sa_ch1Verses = [
   { num:"כו", words:[["צַר־לִי","narrow/enemy-to-me"],["עָלֶיךָ","upon-you(f)"],["אָחִי","my-brother"],["יְהוֹנָתָן","Jonathan"],["נָעַמְתָּ","you were pleasant"],["לִּי","to-me"],["מְאֹד","exceedingly"],["נִפְלְאַתָה","it was wonderful"],["אַהֲבָתְךָ","love-your"],["לִי","to-me"],["מֵאַהֲבַת","from-the love of"],["נָשִׁים","women"],["׃",""]] },
   { num:"כז", words:[["אֵיךְ","how"],["נָפְלוּ","fell"],["גִבּוֹרִים","mighty-ones"],["וַיֹּאבְדוּ","and-were-lost"],["כְּלֵי","weapons-of"],["מִלְחָמָה","war"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch1Verses, '2sa-ch1-verses');
+renderVerseSet(_2sa_ch1Verses, '2sa-ch1-verses');
 
-var 2sa_ch2Verses = [
+var _2sa_ch2Verses = [
   { num:"א", words:[["וַיְהִי","and-it-came-to-pass"],["אַחֲרֵי־כֵן","hereafter"],["וַיִּשְׁאַל","and-asked"],["דָּוִד","David"],["בַּיהֹוָה","is in-Yahweh"],["לֵאמֹר","saying"],["הַאֶעֱלֶה","¿-will I go up"],["בְּאַחַת","in-one"],["עָרֵי","cities-of"],["יְהוּדָה","Judah"],["וַיֹּאמֶר","and-said"],["יְהֹוָה","the-LORD"],["אֵלָיו","to-him"],["עֲלֵה","go-up"],["וַיֹּאמֶר","and-said"],["דָּוִד","David"],["אָנָה","whither"],["אֶעֱלֶה","I-will-ascend"],["וַיֹּאמֶר","and-said"],["חֶבְרֹנָה","Hebron-towards"],["׃",""]] },
   { num:"ב", words:[["וַיַּעַל","and-he-ascended"],["שָׁם","there-is"],["דָּוִד","David"],["וְגַם","and-also"],["שְׁתֵּי","two"],["נָשָׁיו","his-wives"],["אֲחִינֹעַם","was Ahinoam"],["הַיִּזְרְעֵלִית","the-Jezreelite woman"],["וַאֲבִיגַיִל","and-Abigail"],["אֵשֶׁת","the-wife-of"],["נָבָל","fool"],["הַכַּרְמְלִי","the-Carmelite"],["׃",""]] },
   { num:"ג", words:[["וַאֲנָשָׁיו","and-his-men"],["אֲשֶׁר־עִמּוֹ","whose-with-him"],["הֶעֱלָה","brought-up"],["דָוִד","David"],["אִישׁ","man-of"],["וּבֵיתוֹ","and-his-house"],["וַיֵּשְׁבוּ","and-they-had-dwelt"],["בְּעָרֵי","in-the cities of"],["חֶבְרוֹן","Hebron"],["׃",""]] },
@@ -65,9 +65,9 @@ var 2sa_ch2Verses = [
   { num:"לא", words:[["וְעַבְדֵי","and-the-servants-of"],["דָוִד","David"],["הִכּוּ","they-were-smitten"],["מִבִּנְיָמִן","from-Benjamin"],["וּבְאַנְשֵׁי","and-in-the-men-of"],["אַבְנֵר","Abner"],["שְׁלֹשׁ־מֵאוֹת","three-hundred"],["וְשִׁשִּׁים","and-sixty"],["אִישׁ","man-of"],["מֵתוּ","have-died"],["׃",""]] },
   { num:"לב", words:[["וַיִּשְׂאוּ","and-lifted"],["אֶת־עֲשָׂהאֵל","[ACC]-Asahel"],["וַיִּקְבְּרֻהוּ","and-they buried-him"],["בְּקֶבֶר","in-a-sepulchre"],["אָבִיו","his-father"],["אֲשֶׁר","whose"],["בֵּית","house-of"],["לָחֶם","food"],["וַיֵּלְכוּ","and-they-went"],["כׇל־הַלַּיְלָה","all-the-night"],["יוֹאָב","Joab"],["וַאֲנָשָׁיו","and-his-men"],["וַיֵּאֹר","and-it became light"],["לָהֶם","to-them"],["בְּחֶבְרוֹן","in-Hebron"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch2Verses, '2sa-ch2-verses');
+renderVerseSet(_2sa_ch2Verses, '2sa-ch2-verses');
 
-var 2sa_ch3Verses = [
+var _2sa_ch3Verses = [
   { num:"א", words:[["וַתְּהִי","and-was"],["הַמִּלְחָמָה","the-battle"],["אֲרֻכָּה","long"],["בֵּין","among"],["בֵּית","house-of"],["שָׁאוּל","Saul"],["וּבֵין","and-between"],["בֵּית","house-of"],["דָּוִד","David"],["וְדָוִד","and-David"],["הֹלֵךְ","going"],["וְחָזֵק","and-strong"],["וּבֵית","and-house-of"],["שָׁאוּל","Saul"],["הֹלְכִים","walking"],["וְדַלִּים","and-weak"],["׃",""]] },
   { num:"ב", words:[["(וילדו)","and-they will bear"],["[וַיִּוָּלְדוּ]","and-they-shall-be-born"],["לְדָוִד","of-David"],["בָּנִים","children"],["בְּחֶבְרוֹן","in-Hebron"],["וַיְהִי","and-it-came-to-pass"],["בְכוֹרוֹ","firstborn-his"],["אַמְנוֹן","Amnon"],["לַאֲחִינֹעַם","of-Ahinoam"],["הַיִּזְרְעֵאלִת","the-Jezreelite woman"],["׃",""]] },
   { num:"ג", words:[["וּמִשְׁנֵהוּ","and-second-his"],["כִלְאָב","Kileab"],["(לאביגל)","to-Abigail"],["[לַאֲבִיגַיִל]","of-Abigail"],["אֵשֶׁת","the-wife-of"],["נָבָל","fool"],["הַכַּרְמְלִי","the-Carmelite"],["וְהַשְּׁלִשִׁי","and-the-third"],["אַבְשָׁלוֹם","Absalom"],["בֶּן־מַעֲכָה","son-of-Maacah"],["בַּת־תַּלְמַי","daughter-of-Talmai"],["מֶלֶךְ","king-of"],["גְּשׁוּר","Geshur"],["׃",""]] },
@@ -108,9 +108,9 @@ var 2sa_ch3Verses = [
   { num:"לח", words:[["וַיֹּאמֶר","and-said"],["הַמֶּלֶךְ","the-king"],["אֶל־עֲבָדָיו","to-His-servants"],["הֲלוֹא","art-not"],["תֵדְעוּ","you-know"],["כִּי־שַׂר","because-the-king's-captain"],["וְגָדוֹל","and-great"],["נָפַל","fell"],["הַיּוֹם","the-day"],["הַזֶּה","this"],["בְּיִשְׂרָאֵל","Israel"],["׃",""]] },
   { num:"לט", words:[["וְאָנֹכִי","yet-I"],["הַיּוֹם","the-day"],["רַךְ","tender"],["וּמָשׁוּחַ","and-am anointed"],["מֶלֶךְ","king-of"],["וְהָאֲנָשִׁים","and-men"],["הָאֵלֶּה","these"],["בְּנֵי","sons-of"],["צְרוּיָה","Zeruiah"],["קָשִׁים","hard"],["מִמֶּנִּי","from-me"],["יְשַׁלֵּם","he-will-complete"],["יְהֹוָה","the-LORD"],["לְעֹשֵׂה","to-that-doeth"],["הָרָעָה","the-evil"],["כְּרָעָתוֹ","according to-evil-his"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch3Verses, '2sa-ch3-verses');
+renderVerseSet(_2sa_ch3Verses, '2sa-ch3-verses');
 
-var 2sa_ch4Verses = [
+var _2sa_ch4Verses = [
   { num:"א", words:[["וַיִּשְׁמַע","and-he-obeyed"],["בֶּן־שָׁאוּל","son-of-Saul"],["כִּי","because"],["מֵת","is-dead"],["אַבְנֵר","Abner"],["בְּחֶבְרוֹן","in-Hebron"],["וַיִּרְפּוּ","and-they-relaxed"],["יָדָיו","his-hands"],["וְכׇל־יִשְׂרָאֵל","and-all-Israel"],["נִבְהָלוּ","confounded-were-they"],["׃",""]] },
   { num:"ב", words:[["וּשְׁנֵי","and-the-two"],["אֲנָשִׁים","men"],["שָׂרֵי־גְדוּדִים","captains-of-marauding bands"],["הָיוּ","were"],["בֶן־שָׁאוּל","Bn-Saul"],["שֵׁם","name-of"],["הָאֶחָד","the-one"],["בַּעֲנָה","was Baanah"],["וְשֵׁם","and-there"],["הַשֵּׁנִי","the-second"],["רֵכָב","was Rechab"],["בְּנֵי","sons-of"],["רִמּוֹן","Rimmon"],["הַבְּאֵרֹתִי","the-Beerothite"],["מִבְּנֵי","the-sons-of"],["בִנְיָמִן","Benjamin"],["כִּי","because"],["גַּם־בְּאֵרוֹת","also-Beeroth"],["תֵּחָשֵׁב","it was regarded"],["עַל־בִּנְיָמִן","upon-Benjamin"],["׃",""]] },
   { num:"ג", words:[["וַיִּבְרְחוּ","and-they fled"],["הַבְּאֵרֹתִים","the-Beerothites"],["גִּתָּיְמָה","Gittaim-towards"],["וַיִּהְיוּ־שָׁם","and-they-were-there-is"],["גָּרִים","shall-strangers"],["עַד","until"],["הַיּוֹם","the-day"],["הַזֶּה","this"],["׃",""]] },
@@ -124,9 +124,9 @@ var 2sa_ch4Verses = [
   { num:"יא", words:[["אַף","yea"],["כִּי־אֲנָשִׁים","because-men"],["רְשָׁעִים","wicked-men"],["הָרְגוּ","had-slain"],["אֶת־אִישׁ־צַדִּיק","[ACC]-man-of-righteous"],["בְּבֵיתוֹ","in-his-house"],["עַל־מִשְׁכָּבוֹ","upon-his-bed"],["וְעַתָּה","and-now"],["הֲלוֹא","art-not"],["אֲבַקֵּשׁ","I-require"],["אֶת־דָּמוֹ","[ACC]-His-blood"],["מִיֶּדְכֶם","from-you"],["וּבִעַרְתִּי","and-I will remove"],["אֶתְכֶם","you"],["מִן־הָאָרֶץ","from-the-land"],["׃",""]] },
   { num:"יב", words:[["וַיְצַו","and-commanded"],["דָּוִד","David"],["אֶת־הַנְּעָרִים","[ACC]-the-young-men"],["וַיַּהַרְגוּם","and-killed-them"],["וַיְקַצְּצוּ","and-they cut off"],["אֶת־יְדֵיהֶם","[ACC]-their-hands"],["וְאֶת־רַגְלֵיהֶם","and-[ACC]-were-their-feet"],["וַיִּתְלוּ","and-they hanged them"],["עַל־הַבְּרֵכָה","upon-the-pool"],["בְּחֶבְרוֹן","in-Hebron"],["וְאֵת","and-[ACC]"],["רֹאשׁ","head-of"],["אִישׁ־בֹּשֶׁת","man-of-bosheth"],["לָקָחוּ","they took"],["וַיִּקְבְּרוּ","and-they-buried"],["בְקֶבֶר־אַבְנֵר","in-the tomb of-Abner"],["בְּחֶבְרוֹן","in-Hebron"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch4Verses, '2sa-ch4-verses');
+renderVerseSet(_2sa_ch4Verses, '2sa-ch4-verses');
 
-var 2sa_ch5Verses = [
+var _2sa_ch5Verses = [
   { num:"א", words:[["וַיָּבֹאוּ","and-they-came"],["כׇּל־שִׁבְטֵי","all-tribes-of"],["יִשְׂרָאֵל","Israel"],["אֶל־דָּוִד","to-David"],["חֶבְרוֹנָה","Hebron-towards"],["וַיֹּאמְרוּ","and-they-said"],["לֵאמֹר","saying"],["הִנְנוּ","behold-us"],["עַצְמְךָ","yourself"],["וּבְשָׂרְךָ","and-flesh-your"],["אֲנָחְנוּ","we"],["׃",""]] },
   { num:"ב", words:[["גַּם־אֶתְמוֹל","also-yesterday"],["גַּם־שִׁלְשׁוֹם","also-three days ago"],["בִּהְיוֹת","while-was"],["שָׁאוּל","Saul"],["מֶלֶךְ","king-of"],["עָלֵינוּ","over-us"],["אַתָּה","you"],["(הייתה","you will become"],["מוציא)","brought out"],["[הָיִיתָ","you were"],["הַמּוֹצִיא]","the-one-bringing-forth"],["וְהַמֵּבִי","and-the-come"],["אֶת־יִשְׂרָאֵל","[ACC]-Israel"],["וַיֹּאמֶר","and-said"],["יְהֹוָה","the-LORD"],["לְךָ","for-you"],["אַתָּה","you"],["תִרְעֶה","you will shepherd"],["אֶת־עַמִּי","[ACC]-my-people"],["אֶת־יִשְׂרָאֵל","[ACC]-Israel"],["וְאַתָּה","for-you"],["תִּהְיֶה","shall-be"],["לְנָגִיד","to-ruler"],["עַל־יִשְׂרָאֵל","upon-Israel"],["׃",""]] },
   { num:"ג", words:[["וַיָּבֹאוּ","and-they-came"],["כׇּל־זִקְנֵי","all-the-elders-of"],["יִשְׂרָאֵל","Israel"],["אֶל־הַמֶּלֶךְ","unto-the-king"],["חֶבְרוֹנָה","Hebron-towards"],["וַיִּכְרֹת","and-made"],["לָהֶם","to-them"],["הַמֶּלֶךְ","the-king"],["דָּוִד","David"],["בְּרִית","covenant-of"],["בְּחֶבְרוֹן","in-Hebron"],["לִפְנֵי","before"],["יְהֹוָה","the-LORD"],["וַיִּמְשְׁחוּ","and-ordained"],["אֶת־דָּוִד","[ACC]-David"],["לְמֶלֶךְ","king"],["עַל־יִשְׂרָאֵל","upon-Israel"],["׃",""]] },
@@ -153,9 +153,9 @@ var 2sa_ch5Verses = [
   { num:"כד", words:[["וִיהִי","and-may-be"],["(בשמעך)","when-hearing-you"],["[כְּשׇׁמְעֲךָ]","just as-hearing-you"],["אֶת־קוֹל","[ACC]-the-voice-of"],["צְעָדָה","marching"],["בְּרָאשֵׁי","by-the heads of"],["הַבְּכָאִים","the-balsam trees"],["אָז","then"],["תֶּחֱרָץ","you will act decisively"],["כִּי","because"],["אָז","then"],["יָצָא","he-went-forth"],["יְהֹוָה","the-LORD"],["לְפָנֶיךָ","before-you"],["לְהַכּוֹת","to-smite"],["בְּמַחֲנֵה","in-the camp of"],["פְלִשְׁתִּים","the Philistines"],["׃",""]] },
   { num:"כה", words:[["וַיַּעַשׂ","and-did"],["דָּוִד","David"],["כֵּן","thus"],["כַּאֲשֶׁר","when/as"],["צִוָּהוּ","had-commanded-him"],["יְהֹוָה","the-LORD"],["וַיַּךְ","and-he-smote"],["אֶת־פְּלִשְׁתִּים","[ACC]-Philistines"],["מִגֶּבַע","from-Geba"],["עַד־בֹּאֲךָ","until-going-you"],["גָזֶר","Gezer"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch5Verses, '2sa-ch5-verses');
+renderVerseSet(_2sa_ch5Verses, '2sa-ch5-verses');
 
-var 2sa_ch6Verses = [
+var _2sa_ch6Verses = [
   { num:"א", words:[["וַיֹּסֶף","and-continued"],["עוֹד","any-more"],["דָּוִד","David"],["אֶת־כׇּל־בָּחוּר","[ACC]-all-a-chosen-man"],["בְּיִשְׂרָאֵל","Israel"],["שְׁלֹשִׁים","thirty"],["אָלֶף","thousand"],["׃",""]] },
   { num:"ב", words:[["וַיָּקׇם","and-may he carry out"],["וַיֵּלֶךְ","and-he-went"],["דָּוִד","David"],["וְכׇל־הָעָם","and-all-the-people"],["אֲשֶׁר","whose"],["אִתּוֹ","with-him"],["מִבַּעֲלֵי","from-the citizens of"],["יְהוּדָה","Judah"],["לְהַעֲלוֹת","puts-up"],["מִשָּׁם","from-there"],["אֵת","[ACC]"],["אֲרוֹן","an ark of"],["הָאֱלֹהִים","the-God"],["אֲשֶׁר־נִקְרָא","whose-called-was"],["שֵׁם","name-of"],["שֵׁם","name-of"],["יְהֹוָה","the-LORD"],["צְבָאוֹת","of-Hosts"],["יֹשֵׁב","who-dwell-in"],["הַכְּרֻבִים","the-according-to-multitude-of(pl)"],["עָלָיו","upon-him"],["׃",""]] },
   { num:"ג", words:[["וַיַּרְכִּבוּ","and-they made to ride"],["אֶת־אֲרוֹן","[ACC]-an ark of"],["הָאֱלֹהִים","the-God"],["אֶל־עֲגָלָה","to-a cart"],["חֲדָשָׁה","new"],["וַיִּשָּׂאֻהוּ","therefore-he-was-taken"],["מִבֵּית","from-house-of"],["אֲבִינָדָב","Abinadab"],["אֲשֶׁר","whose"],["בַּגִּבְעָה","in-Gibeah"],["וְעֻזָּא","and-Uzzah"],["וְאַחְיוֹ","and-Ahio"],["בְּנֵי","sons-of"],["אֲבִינָדָב","Abinadab"],["נֹהֲגִים","were leading"],["אֶת־הָעֲגָלָה","[ACC]-a-cart"],["חֲדָשָׁה","new"],["׃",""]] },
@@ -180,9 +180,9 @@ var 2sa_ch6Verses = [
   { num:"כב", words:[["וּנְקַלֹּתִי","and-I will demean myself"],["עוֹד","any-more"],["מִזֹּאת","can"],["וְהָיִיתִי","and-I-was"],["שָׁפָל","humble"],["בְּעֵינָי","in-view-my"],["וְעִם־הָאֲמָהוֹת","and-with-the-maidservants"],["אֲשֶׁר","whose"],["אָמַרְתְּ","you said"],["עִמָּם","with-them"],["אִכָּבֵדָה","I will be honored"],["׃",""]] },
   { num:"כג", words:[["וּלְמִיכַל","and-to-Michal"],["בַּת־שָׁאוּל","daughter-of-Saul"],["לֹא־הָיָה","not-was"],["לָהּ","it"],["יָלֶד","a child"],["עַד","until"],["יוֹם","day"],["מוֹתָהּ","death-her"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch6Verses, '2sa-ch6-verses');
+renderVerseSet(_2sa_ch6Verses, '2sa-ch6-verses');
 
-var 2sa_ch7Verses = [
+var _2sa_ch7Verses = [
   { num:"א", words:[["וַיְהִי","and-it-came-to-pass"],["כִּי־יָשַׁב","because-dwelt/sat"],["הַמֶּלֶךְ","the-king"],["בְּבֵיתוֹ","in-his-house"],["וַיהֹוָה","and-Yahweh"],["הֵנִיחַ־לוֹ","he has given rest-him"],["מִסָּבִיב","round-about"],["מִכׇּל־אֹיְבָיו","from-all-enemies-its"],["׃",""]] },
   { num:"ב", words:[["וַיֹּאמֶר","and-said"],["הַמֶּלֶךְ","the-king"],["אֶל־נָתָן","to-Nathan"],["הַנָּבִיא","the-prophet"],["רְאֵה","behold"],["נָא","I-pray"],["אָנֹכִי","I"],["יוֹשֵׁב","sitting"],["בְּבֵית","in-house-of"],["אֲרָזִים","cedars"],["וַאֲרוֹן","and-the ark of"],["הָאֱלֹהִים","the-God"],["יֹשֵׁב","who-dwell-in"],["בְּתוֹךְ","among"],["הַיְרִיעָה","the-curtain"],["׃",""]] },
   { num:"ג", words:[["וַיֹּאמֶר","and-said"],["נָתָן","Nathan"],["אֶל־הַמֶּלֶךְ","unto-the-king"],["כֹּל","all"],["אֲשֶׁר","whose"],["בִּלְבָבְךָ","in-heart-your"],["לֵךְ","go"],["עֲשֵׂה","do!"],["כִּי","because"],["יְהֹוָה","the-LORD"],["עִמָּךְ","your-people"],["׃",""]] },
@@ -213,9 +213,9 @@ var 2sa_ch7Verses = [
   { num:"כח", words:[["וְעַתָּה","and-now"],["אֲדֹנָי","Lord"],["יֱהֹוִה","Yahweh"],["אַתָּה־הוּא","you-it-is"],["הָאֱלֹהִים","the-God"],["וּדְבָרֶיךָ","and-words-your"],["יִהְיוּ","shall-be"],["אֱמֶת","truth"],["וַתְּדַבֵּר","and-she-spoke"],["אֶל־עַבְדְּךָ","to-your-manservant"],["אֶת־הַטּוֹבָה","[ACC]-the-good"],["הַזֹּאת","is-this"],["׃",""]] },
   { num:"כט", words:[["וְעַתָּה","and-now"],["הוֹאֵל","be willing"],["וּבָרֵךְ","and-bless"],["אֶת־בֵּית","[ACC]-house-of"],["עַבְדְּךָ","your-manservant"],["לִהְיוֹת","to-be"],["לְעוֹלָם","forever"],["לְפָנֶיךָ","before-you"],["כִּי־אַתָּה","that-you"],["אֲדֹנָי","Lord"],["יֱהֹוִה","Yahweh"],["דִּבַּרְתָּ","thou-hast-spoken"],["וּמִבִּרְכָתְךָ","and-from-blessing-your"],["יְבֹרַךְ","shall-be-blessed"],["בֵּית־עַבְדְּךָ","house-of-your-manservant"],["לְעוֹלָם","forever"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch7Verses, '2sa-ch7-verses');
+renderVerseSet(_2sa_ch7Verses, '2sa-ch7-verses');
 
-var 2sa_ch8Verses = [
+var _2sa_ch8Verses = [
   { num:"א", words:[["וַיְהִי","and-it-came-to-pass"],["אַחֲרֵי־כֵן","hereafter"],["וַיַּךְ","and-he-smote"],["דָּוִד","David"],["אֶת־פְּלִשְׁתִּים","[ACC]-Philistines"],["וַיַּכְנִיעֵם","and-he subdued-them"],["וַיִּקַּח","and-took"],["דָּוִד","David"],["אֶת־מֶתֶג","[ACC]-Metheg-"],["הָאַמָּה","the-cubit"],["מִיַּד","from-hand-of"],["פְּלִשְׁתִּים","Philistines"],["׃",""]] },
   { num:"ב", words:[["וַיַּךְ","and-he-smote"],["אֶת־מוֹאָב","[ACC]-Moab"],["וַיְמַדְּדֵם","and-he measured off-them"],["בַּחֶבֶל","with-rope"],["הַשְׁכֵּב","he made lie down"],["אוֹתָם","them"],["אַרְצָה","the-land-of"],["וַיְמַדֵּד","and-he measured off"],["שְׁנֵי־חֲבָלִים","two-pain"],["לְהָמִית","that-he-might-be-slain"],["וּמְלֹא","and-fullness-of"],["הַחֶבֶל","measuring-line"],["לְהַחֲיוֹת","to-preserve alive"],["וַתְּהִי","and-was"],["מוֹאָב","Moab"],["לְדָוִד","of-David"],["לַעֲבָדִים","for-servants"],["נֹשְׂאֵי","carried-my"],["מִנְחָה","as-a-present"],["׃",""]] },
   { num:"ג", words:[["וַיַּךְ","and-he-smote"],["דָּוִד","David"],["אֶת־הֲדַדְעֶזֶר","[ACC]-Hadadezer"],["בֶּן־רְחֹב","son-of-Rehob"],["מֶלֶךְ","king-of"],["צוֹבָה","Zobah"],["בְּלֶכְתּוֹ","in-following"],["לְהָשִׁיב","to-he-restored"],["יָדוֹ","his-hand"],["(בנהר)","in the-river"],["[בִּנְהַר־פְּרָת]","at-the river---Euphrates"],["׃",""]] },
@@ -235,9 +235,9 @@ var 2sa_ch8Verses = [
   { num:"יז", words:[["וְצָדוֹק","and-Zadok"],["בֶּן־אֲחִיטוּב","son-of-Ahitub"],["וַאֲחִימֶלֶךְ","and-Ahimelech"],["בֶּן־אֶבְיָתָר","son-of-was Abiathar"],["כֹּהֲנִים","priests"],["וּשְׂרָיָה","and-Seraiah"],["סוֹפֵר","was secretary"],["׃",""]] },
   { num:"יח", words:[["וּבְנָיָהוּ","and-Benaiah"],["בֶּן־יְהוֹיָדָע","son-of-Jehoiada"],["וְהַכְּרֵתִי","and-the-Kerethites"],["וְהַפְּלֵתִי","and-the-Pelethites"],["וּבְנֵי","and-sons-of"],["דָוִד","David"],["כֹּהֲנִים","priests"],["הָיוּ","were"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch8Verses, '2sa-ch8-verses');
+renderVerseSet(_2sa_ch8Verses, '2sa-ch8-verses');
 
-var 2sa_ch9Verses = [
+var _2sa_ch9Verses = [
   { num:"א", words:[["וַיֹּאמֶר","and-said"],["דָּוִד","David"],["הֲכִי","indeed"],["יֶשׁ־עוֹד","has-any-more"],["אֲשֶׁר","whose"],["נוֹתַר","remaining"],["לְבֵית","to-house-of"],["שָׁאוּל","Saul"],["וְאֶעֱשֶׂה","and-do"],["עִמּוֹ","with-him"],["חֶסֶד","mercy"],["בַּעֲבוּר","because-of"],["יְהוֹנָתָן","Jonathan"],["׃",""]] },
   { num:"ב", words:[["וּלְבֵית","and-to-the house of"],["שָׁאוּל","Saul"],["עֶבֶד","servant-of"],["וּשְׁמוֹ","and-his-name"],["צִיבָא","was Ziba"],["וַיִּקְרְאוּ־לוֹ","and-they-called-him"],["אֶל־דָּוִד","to-David"],["וַיֹּאמֶר","and-said"],["הַמֶּלֶךְ","the-king"],["אֵלָיו","to-him"],["הַאַתָּה","the-you"],["צִיבָא","was Ziba"],["וַיֹּאמֶר","and-said"],["עַבְדֶּךָ","servant-your"],["׃",""]] },
   { num:"ג", words:[["וַיֹּאמֶר","and-said"],["הַמֶּלֶךְ","the-king"],["הַאֶפֶס","¿-is there not"],["עוֹד","any-more"],["אִישׁ","man-of"],["לְבֵית","to-house-of"],["שָׁאוּל","Saul"],["וְאֶעֱשֶׂה","and-do"],["עִמּוֹ","with-him"],["חֶסֶד","mercy"],["אֱלֹהִים","God"],["וַיֹּאמֶר","and-said"],["צִיבָא","was Ziba"],["אֶל־הַמֶּלֶךְ","unto-the-king"],["עוֹד","any-more"],["בֵּן","a-son"],["לִיהוֹנָתָן","to-Jonathan"],["נְכֵה","stricken of"],["רַגְלָיִם","feet"],["׃",""]] },
@@ -252,9 +252,9 @@ var 2sa_ch9Verses = [
   { num:"יב", words:[["וְלִמְפִיבֹשֶׁת","and-belonged to-Mephibosheth"],["בֵּן־קָטָן","a-son-small"],["וּשְׁמוֹ","and-his-name"],["מִיכָא","was Mica"],["וְכֹל","and-the-whole"],["מוֹשַׁב","dwelling of"],["בֵּית־צִיבָא","house-of-was Ziba"],["עֲבָדִים","bondage"],["לִמְפִיבֹשֶׁת","of-Mephibosheth"],["׃",""]] },
   { num:"יג", words:[["וּמְפִיבֹשֶׁת","and-Mephibosheth"],["יֹשֵׁב","who-dwell-in"],["בִּירוּשָׁלַ͏ִם","is in-Jerusalem"],["כִּי","because"],["עַל־שֻׁלְחַן","upon-the table of"],["הַמֶּלֶךְ","the-king"],["תָּמִיד","continually"],["הוּא","it-is"],["אֹכֵל","ate"],["וְהוּא","and-it"],["פִסֵּחַ","lame"],["שְׁתֵּי","two"],["רַגְלָיו","His-feet"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch9Verses, '2sa-ch9-verses');
+renderVerseSet(_2sa_ch9Verses, '2sa-ch9-verses');
 
-var 2sa_ch10Verses = [
+var _2sa_ch10Verses = [
   { num:"א", words:[["וַיְהִי","and-it-came-to-pass"],["אַחֲרֵי־כֵן","hereafter"],["וַיָּמׇת","and-he-died"],["מֶלֶךְ","king-of"],["בְּנֵי","sons-of"],["עַמּוֹן","Ammon"],["וַיִּמְלֹךְ","and-he-did-reign"],["חָנוּן","Hanun"],["בְּנוֹ","his-son"],["תַּחְתָּיו","in-his-stead"],["׃",""]] },
   { num:"ב", words:[["וַיֹּאמֶר","and-said"],["דָּוִד","David"],["אֶעֱשֶׂה־חֶסֶד","I-do-mercy"],["עִם־חָנוּן","with-Hanun"],["בֶּן־נָחָשׁ","son-of-the-serpent"],["כַּאֲשֶׁר","when/as"],["עָשָׂה","he-did"],["אָבִיו","his-father"],["עִמָּדִי","against-me"],["חֶסֶד","mercy"],["וַיִּשְׁלַח","and-he-sent"],["דָּוִד","David"],["לְנַחֲמוֹ","to-comfort-him"],["בְּיַד־עֲבָדָיו","in-hand-of-His-servants"],["אֶל־אָבִיו","to-his-father"],["וַיָּבֹאוּ","and-they-came"],["עַבְדֵי","servants-of"],["דָוִד","David"],["אֶרֶץ","land-of"],["בְּנֵי","sons-of"],["עַמּוֹן","Ammon"],["׃",""]] },
   { num:"ג", words:[["וַיֹּאמְרוּ","and-they-said"],["שָׂרֵי","captains-of"],["בְנֵי־עַמּוֹן","sons-of-Ammon"],["אֶל־חָנוּן","to-Hanun"],["אֲדֹנֵיהֶם","master-their"],["הַמְכַבֵּד","¿-honoring"],["דָּוִד","David"],["אֶת־אָבִיךָ","[ACC]-your-father"],["בְּעֵינֶיךָ","in-your-eyes"],["כִּי־שָׁלַח","because-sent"],["לְךָ","for-you"],["מְנַחֲמִים","comforters"],["הֲלוֹא","art-not"],["בַּעֲבוּר","because-of"],["חֲקֹר","to search out"],["אֶת־הָעִיר","ACC-the-city"],["וּלְרַגְּלָהּ","and-to-spy on-it"],["וּלְהׇפְכָהּ","and-to-overthrow-it"],["שָׁלַח","sent"],["דָּוִד","David"],["אֶת־עֲבָדָיו","[ACC]-his-servants"],["אֵלֶיךָ","to-you(f)"],["׃",""]] },
@@ -275,9 +275,9 @@ var 2sa_ch10Verses = [
   { num:"יח", words:[["וַיָּנׇס","and-he fled"],["אֲרָם","Aram"],["מִפְּנֵי","because-of"],["יִשְׂרָאֵל","Israel"],["וַיַּהֲרֹג","and-he-murdered"],["דָּוִד","David"],["מֵאֲרָם","from-Aram"],["שְׁבַע","seven"],["מֵאוֹת","hundred"],["רֶכֶב","chariotry"],["וְאַרְבָּעִים","and-forty"],["אֶלֶף","thousand"],["פָּרָשִׁים","horsemen"],["וְאֵת","and-[ACC]"],["שׁוֹבַךְ","Shobach"],["שַׂר־צְבָאוֹ","the-king's-captain-his-army"],["הִכָּה","was-smitten"],["וַיָּמׇת","and-he-died"],["שָׁם","there-is"],["׃",""]] },
   { num:"יט", words:[["וַיִּרְאוּ","and-they-saw"],["כׇל־הַמְּלָכִים","all-the-kings"],["עַבְדֵי","servants-of"],["הֲדַדְעֶזֶר","Hadadezer"],["כִּי","because"],["נִגְּפוּ","they were defeated"],["לִפְנֵי","before"],["יִשְׂרָאֵל","Israel"],["וַיַּשְׁלִמוּ","and-they made peace"],["אֶת־יִשְׂרָאֵל","[ACC]-Israel"],["וַיַּעַבְדוּם","and-they served-them"],["וַיִּרְאוּ","and-they-saw"],["אֲרָם","Aram"],["לְהוֹשִׁיעַ","to-save"],["עוֹד","any-more"],["אֶת־בְּנֵי","[ACC]-the-sons-of"],["עַמּוֹן","Ammon"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch10Verses, '2sa-ch10-verses');
+renderVerseSet(_2sa_ch10Verses, '2sa-ch10-verses');
 
-var 2sa_ch11Verses = [
+var _2sa_ch11Verses = [
   { num:"א", words:[["וַיְהִי","and-it-came-to-pass"],["לִתְשׁוּבַת","to-the return of"],["הַשָּׁנָה","the-year"],["לְעֵת","to-time"],["צֵאת","departed"],["הַמְּלָאכִים","messengers"],["וַיִּשְׁלַח","and-he-sent"],["דָּוִד","David"],["אֶת־יוֹאָב","[ACC]-Joab"],["וְאֶת־עֲבָדָיו","and-[ACC]-His-servants"],["עִמּוֹ","with-him"],["וְאֶת־כׇּל־יִשְׂרָאֵל","and-[ACC]-all-Israel"],["וַיַּשְׁחִתוּ","and-they destroyed"],["אֶת־בְּנֵי","[ACC]-the-sons-of"],["עַמּוֹן","Ammon"],["וַיָּצֻרוּ","and-they laid siege"],["עַל־רַבָּה","upon-much"],["וְדָוִד","and-David"],["יוֹשֵׁב","sitting"],["בִּירוּשָׁלָ͏ִם","is in-Jerusalem"],["׃",""]] },
   { num:"ב", words:[["וַיְהִי","and-it-came-to-pass"],["לְעֵת","to-time"],["הָעֶרֶב","the-evening"],["וַיָּקׇם","and-may he carry out"],["דָּוִד","David"],["מֵעַל","from-upon"],["מִשְׁכָּבוֹ","lying down-his"],["וַיִּתְהַלֵּךְ","and-go-forth"],["עַל־גַּג","upon-the roof of"],["בֵּית־הַמֶּלֶךְ","house-of-the-king"],["וַיַּרְא","and-he-saw"],["אִשָּׁה","a-woman"],["רֹחֶצֶת","bathing"],["מֵעַל","from-upon"],["הַגָּג","the-roof"],["וְהָאִשָּׁה","and-the-woman"],["טוֹבַת","the-welfare-of"],["מַרְאֶה","appearance"],["מְאֹד","exceedingly"],["׃",""]] },
   { num:"ג", words:[["וַיִּשְׁלַח","and-he-sent"],["דָּוִד","David"],["וַיִּדְרֹשׁ","and-inquired-of"],["לָאִשָּׁה","to the-woman"],["וַיֹּאמֶר","and-said"],["הֲלוֹא־זֹאת","art-not-this"],["בַּת־שֶׁבַע","Bathsheba"],["בַּת־אֱלִיעָם","daughter-of-Eliam"],["אֵשֶׁת","the-wife-of"],["אוּרִיָּה","Uriah"],["הַחִתִּי","the-Hittites"],["׃",""]] },
@@ -306,9 +306,9 @@ var 2sa_ch11Verses = [
   { num:"כו", words:[["וַתִּשְׁמַע","and-she-heard"],["אֵשֶׁת","the-wife-of"],["אוּרִיָּה","Uriah"],["כִּי־מֵת","because-is-dead"],["אוּרִיָּה","Uriah"],["אִישָׁהּ","Ishh"],["וַתִּסְפֹּד","and-she mourned"],["עַל־בַּעְלָהּ","upon-her-husband"],["׃",""]] },
   { num:"כז", words:[["וַיַּעֲבֹר","and-overcame"],["הָאֵבֶל","the-but/however"],["וַיִּשְׁלַח","and-he-sent"],["דָּוִד","David"],["וַיַּאַסְפָהּ","and-he gathered-her"],["אֶל־בֵּיתוֹ","to-his-house"],["וַתְּהִי־לוֹ","and-was-him"],["לְאִשָּׁה","for-wife"],["וַתֵּלֶד","and-bore"],["לוֹ","him"],["בֵּן","a-son"],["וַיֵּרַע","were-displeased-with"],["הַדָּבָר","the-thing"],["אֲשֶׁר־עָשָׂה","which-did"],["דָוִד","David"],["בְּעֵינֵי","in-eyes-of"],["יְהֹוָה","the-LORD"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch11Verses, '2sa-ch11-verses');
+renderVerseSet(_2sa_ch11Verses, '2sa-ch11-verses');
 
-var 2sa_ch12Verses = [
+var _2sa_ch12Verses = [
   { num:"א", words:[["וַיִּשְׁלַח","and-he-sent"],["יְהֹוָה","the-LORD"],["אֶת־נָתָן","[ACC]-Nathan"],["אֶל־דָּוִד","to-David"],["וַיָּבֹא","and-came"],["אֵלָיו","to-him"],["וַיֹּאמֶר","and-said"],["לוֹ","him"],["שְׁנֵי","two"],["אֲנָשִׁים","men"],["הָיוּ","were"],["בְּעִיר","in-the-city-of"],["אֶחָת","one"],["אֶחָד","one"],["עָשִׁיר","rich"],["וְאֶחָד","and-one"],["רָאשׁ","was poor"],["׃",""]] },
   { num:"ב", words:[["לְעָשִׁיר","to-the rich man"],["הָיָה","was"],["צֹאן","flocks"],["וּבָקָר","and-herds"],["הַרְבֵּה","much"],["מְאֹד","exceedingly"],["׃",""]] },
   { num:"ג", words:[["וְלָרָשׁ","and-belonged to the-poor man"],["אֵין־כֹּל","there-is-no-all"],["כִּי","because"],["אִם־כִּבְשָׂה","[compound]-a ewe-lamb"],["אַחַת","one"],["קְטַנָּה","sin"],["אֲשֶׁר","whose"],["קָנָה","he-acquired"],["וַיְחַיֶּהָ","and-he nourished-it"],["וַתִּגְדַּל","unto-them"],["עִמּוֹ","with-him"],["וְעִם־בָּנָיו","and-with-his-sons"],["יַחְדָּו","together"],["מִפִּתּוֹ","from-morsel-his"],["תֹאכַל","you must eat"],["וּמִכֹּסוֹ","and-from-cup-his"],["תִשְׁתֶּה","you will drink"],["וּבְחֵיקוֹ","and-in-bosom-his"],["תִשְׁכָּב","it lay down"],["וַתְּהִי־לוֹ","and-was-him"],["כְּבַת","like-a daughter"],["׃",""]] },
@@ -341,9 +341,9 @@ var 2sa_ch12Verses = [
   { num:"ל", words:[["וַיִּקַּח","and-took"],["אֶת־עֲטֶרֶת־מַלְכָּם","[ACC]-crown-of-their-king"],["מֵעַל","from-upon"],["רֹאשׁוֹ","his-head"],["וּמִשְׁקָלָהּ","and-weight-its"],["כִּכַּר","the valley of"],["זָהָב","gold"],["וְאֶבֶן","and-the-stone-of"],["יְקָרָה","precious"],["וַתְּהִי","and-was"],["עַל־רֹאשׁ","upon-the-heads-of"],["דָּוִד","David"],["וּשְׁלַל","and-the booty of"],["הָעִיר","the-city"],["הוֹצִיא","has-brought"],["הַרְבֵּה","much"],["מְאֹד","exceedingly"],["׃",""]] },
   { num:"לא", words:[["וְאֶת־הָעָם","and-[ACC]-the-people"],["אֲשֶׁר־בָּהּ","whose-in-it(f)"],["הוֹצִיא","has-brought"],["וַיָּשֶׂם","and-made-He"],["בַּמְּגֵרָה","at the-saws"],["וּבַחֲרִצֵי","and-at-the picks of"],["הַבַּרְזֶל","the-iron"],["וּבְמַגְזְרֹת","and-at-the axes of"],["הַבַּרְזֶל","the-iron"],["וְהֶעֱבִיר","and-he caused to pass"],["אוֹתָם","them"],["(במלכן)","???"],["[בַּמַּלְבֵּן]","in the-brick molds"],["וְכֵן","and-so"],["יַעֲשֶׂה","he-shall-do"],["לְכֹל","for-all"],["עָרֵי","cities-of"],["בְנֵי־עַמּוֹן","sons-of-Ammon"],["וַיָּשׇׁב","and-he will turn"],["דָּוִד","David"],["וְכׇל־הָעָם","and-all-the-people"],["יְרוּשָׁלָ͏ִם","Jerusalem"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch12Verses, '2sa-ch12-verses');
+renderVerseSet(_2sa_ch12Verses, '2sa-ch12-verses');
 
-var 2sa_ch13Verses = [
+var _2sa_ch13Verses = [
   { num:"א", words:[["וַיְהִי","and-it-came-to-pass"],["אַחֲרֵי־כֵן","hereafter"],["וּלְאַבְשָׁלוֹם","and-belonged to-Absalom"],["בֶּן־דָּוִד","son-of-David"],["אָחוֹת","a sister"],["יָפָה","yea-even-a-very-beautiful"],["וּשְׁמָהּ","and-there"],["תָּמָר","Tamar"],["וַיֶּאֱהָבֶהָ","and-he loved-her"],["אַמְנוֹן","Amnon"],["בֶּן־דָּוִד","son-of-David"],["׃",""]] },
   { num:"ב", words:[["וַיֵּצֶר","and-it was distress"],["לְאַמְנוֹן","to-Amnon"],["לְהִתְחַלּוֹת","to-make himself sick"],["בַּעֲבוּר","because-of"],["תָּמָר","Tamar"],["אֲחֹתוֹ","sister-his"],["כִּי","because"],["בְתוּלָה","a virgin"],["הִיא","it-is"],["וַיִּפָּלֵא","and-surpassed"],["בְּעֵינֵי","in-eyes-of"],["אַמְנוֹן","Amnon"],["לַעֲשׂוֹת","to-do"],["לָהּ","it"],["מְאוּמָה","anything"],["׃",""]] },
   { num:"ג", words:[["וּלְאַמְנוֹן","and-belonged to-Amnon"],["רֵעַ","a friend"],["וּשְׁמוֹ","and-his-name"],["יוֹנָדָב","was Jonadab"],["בֶּן־שִׁמְעָה","son-of-Shimeah"],["אֲחִי","the-brother-of"],["דָוִד","David"],["וְיוֹנָדָב","and-Jonadab"],["אִישׁ","man-of"],["חָכָם","wise"],["מְאֹד","exceedingly"],["׃",""]] },
@@ -384,9 +384,9 @@ var 2sa_ch13Verses = [
   { num:"לח", words:[["וְאַבְשָׁלוֹם","and-Absalom"],["בָּרַח","had-fled"],["וַיֵּלֶךְ","and-he-went"],["גְּשׁוּר","Geshur"],["וַיְהִי־שָׁם","and-it-came-to-pass-there-is"],["שָׁלֹשׁ","for-the-space-of-three"],["שָׁנִים","years"],["׃",""]] },
   { num:"לט", words:[["וַתְּכַל","and-she finished"],["דָּוִד","David"],["הַמֶּלֶךְ","the-king"],["לָצֵאת","to-come-forth"],["אֶל־אַבְשָׁלוֹם","to-Absalom"],["כִּי־נִחַם","for-comforted"],["עַל־אַמְנוֹן","upon-Amnon"],["כִּי־מֵת","because-is-dead"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch13Verses, '2sa-ch13-verses');
+renderVerseSet(_2sa_ch13Verses, '2sa-ch13-verses');
 
-var 2sa_ch14Verses = [
+var _2sa_ch14Verses = [
   { num:"א", words:[["וַיֵּדַע","and-he-knew"],["יוֹאָב","Joab"],["בֶּן־צְרֻיָה","son-of-Zeruiah"],["כִּי־לֵב","because-heart"],["הַמֶּלֶךְ","the-king"],["עַל־אַבְשָׁלוֹם","upon-Absalom"],["׃",""]] },
   { num:"ב", words:[["וַיִּשְׁלַח","and-he-sent"],["יוֹאָב","Joab"],["תְּקוֹעָה","Tekoa-towards"],["וַיִּקַּח","and-took"],["מִשָּׁם","from-there"],["אִשָּׁה","a-woman"],["חֲכָמָה","wisdom"],["וַיֹּאמֶר","and-said"],["אֵלֶיהָ","to-her"],["הִתְאַבְּלִי־נָא","play the mourner-I-pray"],["וְלִבְשִׁי־נָא","and-put on-I-pray"],["בִגְדֵי־אֵבֶל","thy-garments-of-a-great-mourning"],["וְאַל־תָּסוּכִי","and-do-not-you anoint yourself"],["שֶׁמֶן","oil"],["וְהָיִית","and-you will be"],["כְּאִשָּׁה","like-a woman"],["זֶה","this"],["יָמִים","days"],["רַבִּים","many"],["מִתְאַבֶּלֶת","mourns"],["עַל־מֵת","upon-is-dead"],["׃",""]] },
   { num:"ג", words:[["וּבָאת","and-you will go"],["אֶל־הַמֶּלֶךְ","unto-the-king"],["וְדִבַּרְתְּ","and-you will speak"],["אֵלָיו","to-him"],["כַּדָּבָר","according-to-the-word"],["הַזֶּה","this"],["וַיָּשֶׂם","and-made-He"],["יוֹאָב","Joab"],["אֶת־הַדְּבָרִים","[ACC]-the-words"],["בְּפִיהָ","was in-mouth-its"],["׃",""]] },
@@ -421,9 +421,9 @@ var 2sa_ch14Verses = [
   { num:"לב", words:[["וַיֹּאמֶר","and-said"],["אַבְשָׁלוֹם","Absalom"],["אֶל־יוֹאָב","to-Joab"],["הִנֵּה","behold"],["שָׁלַחְתִּי","I-sent"],["אֵלֶיךָ","to-you(f)"],["לֵאמֹר","saying"],["בֹּא","come"],["הֵנָּה","hither"],["וְאֶשְׁלְחָה","so-let me send"],["אֹתְךָ","you"],["אֶל־הַמֶּלֶךְ","unto-the-king"],["לֵאמֹר","saying"],["לָמָּה","why"],["בָּאתִי","when-I-came"],["מִגְּשׁוּר","from-Geshur"],["טוֹב","good"],["לִי","to-me"],["עֹד","again"],["אֲנִי־שָׁם","I-there-is"],["וְעַתָּה","and-now"],["אֶרְאֶה","I-shall-see"],["פְּנֵי","face-of"],["הַמֶּלֶךְ","the-king"],["וְאִם־יֶשׁ־בִּי","and-if-has-against-me"],["עָוֺן","iniquity"],["וֶהֱמִתָנִי","and-he will kill-me"],["׃",""]] },
   { num:"לג", words:[["וַיָּבֹא","and-came"],["יוֹאָב","Joab"],["אֶל־הַמֶּלֶךְ","unto-the-king"],["וַיַּגֶּד־לוֹ","and-told-to-him"],["וַיִּקְרָא","and-he-called"],["אֶל־אַבְשָׁלוֹם","to-Absalom"],["וַיָּבֹא","and-came"],["אֶל־הַמֶּלֶךְ","unto-the-king"],["וַיִּשְׁתַּחוּ","and-bowed-himself"],["לוֹ","him"],["עַל־אַפָּיו","upon-face-his"],["אַרְצָה","the-land-of"],["לִפְנֵי","before"],["הַמֶּלֶךְ","the-king"],["וַיִּשַּׁק","and-he kissed"],["הַמֶּלֶךְ","the-king"],["לְאַבְשָׁלוֹם","to-Absalom"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch14Verses, '2sa-ch14-verses');
+renderVerseSet(_2sa_ch14Verses, '2sa-ch14-verses');
 
-var 2sa_ch15Verses = [
+var _2sa_ch15Verses = [
   { num:"א", words:[["וַיְהִי","and-it-came-to-pass"],["מֵאַחֲרֵי","from-after"],["כֵן","thus"],["וַיַּעַשׂ","and-did"],["לוֹ","him"],["אַבְשָׁלוֹם","Absalom"],["מֶרְכָּבָה","a chariot"],["וְסֻסִים","and-horses"],["וַחֲמִשִּׁים","and-also"],["אִישׁ","man-of"],["רָצִים","who ran"],["לְפָנָיו","before-him"],["׃",""]] },
   { num:"ב", words:[["וְהִשְׁכִּים","and-he rose early"],["אַבְשָׁלוֹם","Absalom"],["וְעָמַד","and-it stood"],["עַל־יַד","beside"],["דֶּרֶךְ","through"],["הַשָּׁעַר","the-gate"],["וַיְהִי","and-it-came-to-pass"],["כׇּל־הָאִישׁ","all-the-man"],["אֲשֶׁר־יִהְיֶה־לּוֹ־רִיב","whose-he-shall-be-upon-him-contention"],["לָבוֹא","to-come"],["אֶל־הַמֶּלֶךְ","unto-the-king"],["לַמִּשְׁפָּט","to-the-judgment"],["וַיִּקְרָא","and-he-called"],["אַבְשָׁלוֹם","Absalom"],["אֵלָיו","to-him"],["וַיֹּאמֶר","and-said"],["אֵי־מִזֶּה","where-than-this"],["עִיר","city-of"],["אַתָּה","you"],["וַיֹּאמֶר","and-said"],["מֵאַחַד","any-one of"],["שִׁבְטֵי־יִשְׂרָאֵל","tribes-of-Israel"],["עַבְדֶּךָ","servant-your"],["׃",""]] },
   { num:"ג", words:[["וַיֹּאמֶר","and-said"],["אֵלָיו","to-him"],["אַבְשָׁלוֹם","Absalom"],["רְאֵה","behold"],["דְבָרֶיךָ","words-your"],["טוֹבִים","good"],["וּנְכֹחִים","and-upright"],["וְשֹׁמֵעַ","and-shall-hearken"],["אֵין־לְךָ","there-is-no-unto-you"],["מֵאֵת","from"],["הַמֶּלֶךְ","the-king"],["׃",""]] },
@@ -462,9 +462,9 @@ var 2sa_ch15Verses = [
   { num:"לו", words:[["הִנֵּה־שָׁם","behold-there-is"],["עִמָּם","with-them"],["שְׁנֵי","two"],["בְנֵיהֶם","sons-their"],["אֲחִימַעַץ","Ahimaaz"],["לְצָדוֹק","to-Zadok"],["וִיהוֹנָתָן","and-Jonathan"],["לְאֶבְיָתָר","to-Abiathar"],["וּשְׁלַחְתֶּם","and-you will send"],["בְּיָדָם","into-their-hands"],["אֵלַי","to-me"],["כׇּל־דָּבָר","all-things"],["אֲשֶׁר","whose"],["תִּשְׁמָעוּ","you will hear"],["׃",""]] },
   { num:"לז", words:[["וַיָּבֹא","and-came"],["חוּשַׁי","Hushai"],["רֵעֶה","the friend of"],["דָוִד","David"],["הָעִיר","the-city"],["וְאַבְשָׁלוֹם","and-Absalom"],["יָבוֹא","shall-come"],["יְרוּשָׁלָ͏ִם","Jerusalem"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch15Verses, '2sa-ch15-verses');
+renderVerseSet(_2sa_ch15Verses, '2sa-ch15-verses');
 
-var 2sa_ch16Verses = [
+var _2sa_ch16Verses = [
   { num:"א", words:[["וְדָוִד","and-David"],["עָבַר","passed"],["מְעַט","somewhat"],["מֵהָרֹאשׁ","from-the-head"],["וְהִנֵּה","and-behold"],["צִיבָא","was Ziba"],["נַעַר","a-young-man"],["מְפִיבֹשֶׁת","Mephibosheth"],["לִקְרָאתוֹ","to-you-called-his"],["וְצֶמֶד","and-a pair of"],["חֲמֹרִים","donkeys"],["חֲבֻשִׁים","were saddled"],["וַעֲלֵיהֶם","and-upon-them"],["מָאתַיִם","two-hundred"],["לֶחֶם","bread"],["וּמֵאָה","and-one hundred"],["צִמּוּקִים","bunches of raisins"],["וּמֵאָה","and-one hundred"],["קַיִץ","summer fruit"],["וְנֵבֶל","and-a skin of"],["יָיִן","wine"],["׃",""]] },
   { num:"ב", words:[["וַיֹּאמֶר","and-said"],["הַמֶּלֶךְ","the-king"],["אֶל־צִיבָא","to-was Ziba"],["מָה־אֵלֶּה","what-these"],["לָּךְ","to-you"],["וַיֹּאמֶר","and-said"],["צִיבָא","was Ziba"],["הַחֲמוֹרִים","the-donkeys"],["לְבֵית־הַמֶּלֶךְ","to-house-of-the-king"],["לִרְכֹּב","to-ride"],["(ולהלחם)","and-fight"],["[וְהַלֶּחֶם]","and-the-bread"],["וְהַקַּיִץ","and-the-summer fruit"],["לֶאֱכוֹל","to-eat"],["הַנְּעָרִים","the-children"],["וְהַיַּיִן","and-the-wine"],["לִשְׁתּוֹת","to-drink"],["הַיָּעֵף","the-weary person"],["בַּמִּדְבָּר","in-the-wilderness"],["׃",""]] },
   { num:"ג", words:[["וַיֹּאמֶר","and-said"],["הַמֶּלֶךְ","the-king"],["וְאַיֵּה","and-where-is"],["בֶּן־אֲדֹנֶיךָ","son-of-master-your"],["וַיֹּאמֶר","and-said"],["צִיבָא","was Ziba"],["אֶל־הַמֶּלֶךְ","unto-the-king"],["הִנֵּה","behold"],["יוֹשֵׁב","sitting"],["בִּירוּשָׁלַ͏ִם","is in-Jerusalem"],["כִּי","because"],["אָמַר","said"],["הַיּוֹם","the-day"],["יָשִׁיבוּ","Ishibo"],["לִי","to-me"],["בֵּית","house-of"],["יִשְׂרָאֵל","Israel"],["אֵת","[ACC]"],["מַמְלְכוּת","the kingdom of"],["אָבִי","my-father"],["׃",""]] },
@@ -489,9 +489,9 @@ var 2sa_ch16Verses = [
   { num:"כב", words:[["וַיַּטּוּ","and-they-shall-turn"],["לְאַבְשָׁלוֹם","to-Absalom"],["הָאֹהֶל","the-tent"],["עַל־הַגָּג","upon-the-roof"],["וַיָּבֹא","and-came"],["אַבְשָׁלוֹם","Absalom"],["אֶל־פִּלַגְשֵׁי","to-the concubines of"],["אָבִיו","his-father"],["לְעֵינֵי","in-the-eyes-of"],["כׇּל־יִשְׂרָאֵל","all-Israel"],["׃",""]] },
   { num:"כג", words:[["וַעֲצַת","and-the-plan-of"],["אֲחִיתֹפֶל","Ahithophel"],["אֲשֶׁר","whose"],["יָעַץ","he counseled"],["בַּיָּמִים","in-the-days"],["הָהֵם","those"],["כַּאֲשֶׁר","when/as"],["יִשְׁאַל־[אִישׁ]","he enquires---anyone"],["בִּדְבַר","of-the-promise-of"],["הָאֱלֹהִים","the-God"],["כֵּן","thus"],["כׇּל־עֲצַת","all-the-plan-of"],["אֲחִיתֹפֶל","Ahithophel"],["גַּם־לְדָוִד","also-of-David"],["גַּם","also"],["לְאַבְשָׁלֹם","to-Absalom"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch16Verses, '2sa-ch16-verses');
+renderVerseSet(_2sa_ch16Verses, '2sa-ch16-verses');
 
-var 2sa_ch17Verses = [
+var _2sa_ch17Verses = [
   { num:"א", words:[["וַיֹּאמֶר","and-said"],["אֲחִיתֹפֶל","Ahithophel"],["אֶל־אַבְשָׁלוֹם","to-Absalom"],["אֶבְחֲרָה","let me choose"],["נָּא","now"],["שְׁנֵים־עָשָׂר","two-[compound]"],["אֶלֶף","thousand"],["אִישׁ","man-of"],["וְאָקוּמָה","and-I will arise"],["וְאֶרְדְּפָה","and-I will pursue"],["אַחֲרֵי־דָוִד","after-David"],["הַלָּיְלָה","the-night"],["׃",""]] },
   { num:"ב", words:[["וְאָבוֹא","and-I-will-come"],["עָלָיו","upon-him"],["וְהוּא","and-it"],["יָגֵעַ","Ig"],["וּרְפֵה","and-slack of"],["יָדַיִם","both hands"],["וְהַחֲרַדְתִּי","and-I will terrify"],["אֹתוֹ","him"],["וְנָס","and-he will flee"],["כׇּל־הָעָם","all-the-people"],["אֲשֶׁר־אִתּוֹ","whose-with-him"],["וְהִכֵּיתִי","and-I-was-smitten"],["אֶת־הַמֶּלֶךְ","[ACC]-the-King"],["לְבַדּוֹ","alone"],["׃",""]] },
   { num:"ג", words:[["וְאָשִׁיבָה","and-I will bring back"],["כׇל־הָעָם","all-the-people"],["אֵלֶיךָ","to-you(f)"],["כְּשׁוּב","as-returns"],["הַכֹּל","all"],["הָאִישׁ","the-man"],["אֲשֶׁר","whose"],["אַתָּה","you"],["מְבַקֵּשׁ","desire"],["כׇּל־הָעָם","all-the-people"],["יִהְיֶה","he-shall-be"],["שָׁלוֹם","peace"],["׃",""]] },
@@ -522,9 +522,9 @@ var 2sa_ch17Verses = [
   { num:"כח", words:[["מִשְׁכָּב","beds"],["וְסַפּוֹת","and-basins"],["וּכְלִי","and-a vessel of"],["יוֹצֵר","potter"],["וְחִטִּים","and-wheat"],["וּשְׂעֹרִים","and-barley"],["וְקֶמַח","and-flour"],["וְקָלִי","and-roasted grain"],["וּפוֹל","and-beans"],["וַעֲדָשִׁים","and-lentils"],["וְקָלִי","and-roasted grain"],["׃",""]] },
   { num:"כט", words:[["וּדְבַשׁ","and-honey"],["וְחֶמְאָה","and-curd"],["וְצֹאן","and-the-flock-of"],["וּשְׁפוֹת","and-cheese of"],["בָּקָר","of-the-herd"],["הִגִּישׁוּ","they brought"],["לְדָוִד","of-David"],["וְלָעָם","and-to-the-people"],["אֲשֶׁר־אִתּוֹ","whose-with-him"],["לֶאֱכוֹל","to-eat"],["כִּי","because"],["אָמְרוּ","they-said"],["הָעָם","the-people"],["רָעֵב","hungry"],["וְעָיֵף","and-fatigue"],["וְצָמֵא","and-a-blood-thirsty"],["בַּמִּדְבָּר","in-the-wilderness"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch17Verses, '2sa-ch17-verses');
+renderVerseSet(_2sa_ch17Verses, '2sa-ch17-verses');
 
-var 2sa_ch18Verses = [
+var _2sa_ch18Verses = [
   { num:"א", words:[["וַיִּפְקֹד","and-he-appointed"],["דָּוִד","David"],["אֶת־הָעָם","ACC-the-people"],["אֲשֶׁר","whose"],["אִתּוֹ","with-him"],["וַיָּשֶׂם","and-made-He"],["עֲלֵיהֶם","against-them"],["שָׂרֵי","captains-of"],["אֲלָפִים","two-thousand"],["וְשָׂרֵי","and-captains-of"],["מֵאוֹת","hundred"],["׃",""]] },
   { num:"ב", words:[["וַיְשַׁלַּח","and-he-sent"],["דָּוִד","David"],["אֶת־הָעָם","ACC-the-people"],["הַשְּׁלִשִׁית","third"],["בְּיַד־יוֹאָב","in-hand-of-Joab"],["וְהַשְּׁלִשִׁית","and-the-third"],["בְּיַד","in-hand-of"],["אֲבִישַׁי","Abishai"],["בֶּן־צְרוּיָה","son-of-Zeruiah"],["אֲחִי","the-brother-of"],["יוֹאָב","Joab"],["וְהַשְּׁלִשִׁת","and-the-third"],["בְּיַד","in-hand-of"],["אִתַּי","Ittai"],["הַגִּתִּי","the-Gittites"],["וַיֹּאמֶר","and-said"],["הַמֶּלֶךְ","the-king"],["אֶל־הָעָם","to-the-people"],["יָצֹא","certainly"],["אֵצֵא","I-go-forth"],["גַּם־אֲנִי","also-I"],["עִמָּכֶם","with-you"],["׃",""]] },
   { num:"ג", words:[["וַיֹּאמֶר","and-said"],["הָעָם","the-people"],["לֹא","not"],["תֵצֵא","shall-proceed"],["כִּי","because"],["אִם־נֹס","[compound]-certainly if"],["נָנוּס","we will flee"],["לֹא־יָשִׂימוּ","not-set-at"],["אֵלֵינוּ","unto-us"],["לֵב","heart"],["וְאִם־יָמֻתוּ","and-if-they will die"],["חֶצְיֵנוּ","half of-us"],["לֹא־יָשִׂימוּ","not-set-at"],["אֵלֵינוּ","unto-us"],["לֵב","heart"],["כִּי־עַתָּה","because-now"],["כָמֹנוּ","like-us"],["עֲשָׂרָה","ten"],["אֲלָפִים","two-thousand"],["וְעַתָּה","and-now"],["טוֹב","good"],["כִּי־תִהְיֶה־לָּנוּ","because-be-we"],["מֵעִיר","from-city"],["(לעזיר)","???"],["[לַעְזוֹר]","to-help"],["׃",""]] },
@@ -558,9 +558,9 @@ var 2sa_ch18Verses = [
   { num:"לא", words:[["וְהִנֵּה","and-behold"],["הַכּוּשִׁי","the-Cushite"],["בָּא","came"],["וַיֹּאמֶר","and-said"],["הַכּוּשִׁי","the-Cushite"],["יִתְבַּשֵּׂר","let him receive the news"],["אֲדֹנִי","my-Lord"],["הַמֶּלֶךְ","the-king"],["כִּי־שְׁפָטְךָ","because-he has vindicated-you"],["יְהֹוָה","the-LORD"],["הַיּוֹם","the-day"],["מִיַּד","from-hand-of"],["כׇּל־הַקָּמִים","all-the-ones-rising-up"],["עָלֶיךָ","upon-you(f)"],["׃",""]] },
   { num:"לב", words:[["וַיֹּאמֶר","and-said"],["הַמֶּלֶךְ","the-king"],["אֶל־הַכּוּשִׁי","to-the-Cushite"],["הֲשָׁלוֹם","¿-does health"],["לַנַּעַר","for the-lad"],["לְאַבְשָׁלוֹם","to-Absalom"],["וַיֹּאמֶר","and-said"],["הַכּוּשִׁי","the-Cushite"],["יִהְיוּ","shall-be"],["כַנַּעַר","like the-young man"],["אֹיְבֵי","the enemies of"],["אֲדֹנִי","my-Lord"],["הַמֶּלֶךְ","the-king"],["וְכֹל","and-the-whole"],["אֲשֶׁר־קָמוּ","whose-have-been-fulfilled"],["עָלֶיךָ","upon-you(f)"],["לְרָעָה","for-evil"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch18Verses, '2sa-ch18-verses');
+renderVerseSet(_2sa_ch18Verses, '2sa-ch18-verses');
 
-var 2sa_ch19Verses = [
+var _2sa_ch19Verses = [
   { num:"א", words:[["וַיִּרְגַּז","and-he was agitated"],["הַמֶּלֶךְ","the-king"],["וַיַּעַל","and-he-ascended"],["עַל־עֲלִיַּת","upon-the upper room of"],["הַשַּׁעַר","the-gate"],["וַיֵּבְךְּ","and-he-wept"],["וְכֹה","and-thus"],["אָמַר","said"],["בְּלֶכְתּוֹ","in-following"],["בְּנִי","my-son"],["אַבְשָׁלוֹם","Absalom"],["בְּנִי","my-son"],["בְנִי","my-son"],["אַבְשָׁלוֹם","Absalom"],["מִי־יִתֵּן","would-that"],["מוּתִי","died-I"],["אֲנִי","I"],["תַחְתֶּיךָ","in place of-you"],["אַבְשָׁלוֹם","Absalom"],["בְּנִי","my-son"],["בְנִי","my-son"],["׃",""]] },
   { num:"ב", words:[["וַיֻּגַּד","and-it-shall-be-told"],["לְיוֹאָב","to-Joab"],["הִנֵּה","behold"],["הַמֶּלֶךְ","the-king"],["בֹּכֶה","was crying"],["וַיִּתְאַבֵּל","and-he mourned"],["עַל־אַבְשָׁלוֹם","upon-Absalom"],["׃",""]] },
   { num:"ג", words:[["וַתְּהִי","and-was"],["הַתְּשֻׁעָה","the-deliverance"],["בַּיּוֹם","in-the-day"],["הַהוּא","that"],["לְאֵבֶל","mourning"],["לְכׇל־הָעָם","to-all-the-people"],["כִּי־שָׁמַע","because-heard"],["הָעָם","the-people"],["בַּיּוֹם","in-the-day"],["הַהוּא","that"],["לֵאמֹר","saying"],["נֶעֱצַב","we-will-grief"],["הַמֶּלֶךְ","the-king"],["עַל־בְּנוֹ","upon-his-son"],["׃",""]] },
@@ -606,9 +606,9 @@ var 2sa_ch19Verses = [
   { num:"מג", words:[["וַיַּעַן","and-he-answered"],["כׇּל־אִישׁ","all-man/each"],["יְהוּדָה","Judah"],["עַל־אִישׁ","upon-man/each"],["יִשְׂרָאֵל","Israel"],["כִּי־קָרוֹב","because-soon"],["הַמֶּלֶךְ","the-king"],["אֵלַי","to-me"],["וְלָמָּה","and-why"],["זֶּה","Zh"],["חָרָה","burned"],["לְךָ","for-you"],["עַל־הַדָּבָר","concerning-this-thing"],["הַזֶּה","this"],["הֶאָכוֹל","¿-really"],["אָכַלְנוּ","have we eaten"],["מִן־הַמֶּלֶךְ","from-the-king"],["אִם־נִשֵּׂאת","[compound]-really"],["נִשָּׂא","we-carry"],["לָנוּ","us"],["׃",""]] },
   { num:"מד", words:[["וַיַּעַן","and-he-answered"],["אִישׁ־יִשְׂרָאֵל","man-of-Israel"],["אֶת־אִישׁ","ACC-man-of"],["יְהוּדָה","Judah"],["וַיֹּאמֶר","and-said"],["עֶשֶׂר־יָדוֹת","ten-hands"],["לִי","to-me"],["בַמֶּלֶךְ","in the-king"],["וְגַם־בְּדָוִד","and-also-on-David"],["אֲנִי","I"],["מִמְּךָ","from-you"],["וּמַדּוּעַ","therefore-why-should-you"],["הֱקִלֹּתַנִי","did you treat with contempt-me"],["וְלֹא־הָיָה","and-not-was"],["דְבָרִי","My-word"],["רִאשׁוֹן","the-first"],["לִי","to-me"],["לְהָשִׁיב","to-he-restored"],["אֶת־מַלְכִּי","[ACC]-Malki-"],["וַיִּקֶשׁ","and-it was hard"],["דְּבַר־אִישׁ","word-of-man-of"],["יְהוּדָה","Judah"],["מִדְּבַר","of-the-word-of"],["אִישׁ","man-of"],["יִשְׂרָאֵל","Israel"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch19Verses, '2sa-ch19-verses');
+renderVerseSet(_2sa_ch19Verses, '2sa-ch19-verses');
 
-var 2sa_ch20Verses = [
+var _2sa_ch20Verses = [
   { num:"א", words:[["וְשָׁם","and-there"],["נִקְרָא","called-was"],["אִישׁ","man-of"],["בְּלִיַּעַל","worthlessness"],["וּשְׁמוֹ","and-his-name"],["שֶׁבַע","seven"],["בֶּן־בִּכְרִי","son-of-Bicri"],["אִישׁ","man-of"],["יְמִינִי","jaminites"],["וַיִּתְקַע","and-he-pitched"],["בַּשֹּׁפָר","on the-trumpet"],["וַיֹּאמֶר","and-said"],["אֵין־לָנוּ","there-is-no-us"],["חֵלֶק","part"],["בְּדָוִד","on-David"],["וְלֹא","and-not"],["נַחֲלָה־לָנוּ","inheritance-us"],["בְּבֶן־יִשַׁי","in-Son-of-Jesse"],["אִישׁ","man-of"],["לְאֹהָלָיו","to-tents-his"],["יִשְׂרָאֵל","Israel"],["׃",""]] },
   { num:"ב", words:[["וַיַּעַל","and-he-ascended"],["כׇּל־אִישׁ","all-man/each"],["יִשְׂרָאֵל","Israel"],["מֵאַחֲרֵי","from-after"],["דָוִד","David"],["אַחֲרֵי","after"],["שֶׁבַע","seven"],["בֶּן־בִּכְרִי","son-of-Bicri"],["וְאִישׁ","and-the-man-of"],["יְהוּדָה","Judah"],["דָּבְקוּ","they clung"],["בְמַלְכָּם","to-king-their"],["מִן־הַיַּרְדֵּן","from-the-Jordan"],["וְעַד־יְרוּשָׁלָ͏ִם","and-unto-Jerusalem"],["׃",""]] },
   { num:"ג", words:[["וַיָּבֹא","and-came"],["דָוִד","David"],["אֶל־בֵּיתוֹ","to-his-house"],["יְרוּשָׁלַ͏ִם","Jerusalem"],["וַיִּקַּח","and-took"],["הַמֶּלֶךְ","the-king"],["אֵת","[ACC]"],["עֶשֶׂר־נָשִׁים","ten-women"],["פִּלַגְשִׁים","concubines"],["אֲשֶׁר","whose"],["הִנִּיחַ","suffered"],["לִשְׁמֹר","in-keeping"],["הַבַּיִת","the-house"],["וַיִּתְּנֵם","and-he-shall-give-them"],["בֵּית־מִשְׁמֶרֶת","house-of-charge/duty"],["וַיְכַלְכְּלֵם","and-he sustained-them"],["וַאֲלֵיהֶם","and-into-them"],["לֹא־בָא","not-came"],["וַתִּהְיֶינָה","now-there-were"],["צְרֻרוֹת","locked up"],["עַד־יוֹם","until-the-day-of"],["מֻתָן","died-they"],["אַלְמְנוּת","widowhood of"],["חַיּוּת","living"],["׃",""]] },
@@ -636,9 +636,9 @@ var 2sa_ch20Verses = [
   { num:"כה", words:[["(ושיא)","???"],["[וּשְׁוָא]","and-falsehood"],["סֹפֵר","a muster-officer"],["וְצָדוֹק","and-Zadok"],["וְאֶבְיָתָר","and-Abiathar"],["כֹּהֲנִים","priests"],["׃",""]] },
   { num:"כו", words:[["וְגַם","and-also"],["עִירָא","Ira"],["הַיָּאִרִי","the-Jairite"],["הָיָה","was"],["כֹהֵן","their-high-priest"],["לְדָוִד","of-David"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch20Verses, '2sa-ch20-verses');
+renderVerseSet(_2sa_ch20Verses, '2sa-ch20-verses');
 
-var 2sa_ch21Verses = [
+var _2sa_ch21Verses = [
   { num:"א", words:[["וַיְהִי","and-it-came-to-pass"],["רָעָב","hungry"],["בִּימֵי","in-days-of"],["דָוִד","David"],["שָׁלֹשׁ","for-the-space-of-three"],["שָׁנִים","years"],["שָׁנָה","year"],["אַחֲרֵי","after"],["שָׁנָה","year"],["וַיְבַקֵּשׁ","and-requested"],["דָּוִד","David"],["אֶת־פְּנֵי","ACC-face-of"],["יְהֹוָה","the-LORD"],["וַיֹּאמֶר","and-said"],["יְהֹוָה","the-LORD"],["אֶל־שָׁאוּל","to-Saul"],["וְאֶל־בֵּית","and-house-of"],["הַדָּמִים","so-much-blood"],["עַל","upon"],["אֲשֶׁר־הֵמִית","whose-he-put-to-death"],["אֶת־הַגִּבְעֹנִים","[ACC]-the-Gibeonites"],["׃",""]] },
   { num:"ב", words:[["וַיִּקְרָא","and-he-called"],["הַמֶּלֶךְ","the-king"],["לַגִּבְעֹנִים","the-Gibeonites"],["וַיֹּאמֶר","and-said"],["אֲלֵיהֶם","to-them"],["וְהַגִּבְעֹנִים","and-the-Gibeonites"],["לֹא","not"],["מִבְּנֵי","the-sons-of"],["יִשְׂרָאֵל","Israel"],["הֵמָּה","they-are"],["כִּי","because"],["אִם־מִיֶּתֶר","[compound]-from-the remnant of"],["הָאֱמֹרִי","the-Amorites"],["וּבְנֵי","and-sons-of"],["יִשְׂרָאֵל","Israel"],["נִשְׁבְּעוּ","had-sworn"],["לָהֶם","to-them"],["וַיְבַקֵּשׁ","and-requested"],["שָׁאוּל","Saul"],["לְהַכֹּתָם","to-strike down-them"],["בְּקַנֹּאתוֹ","because-was zealous-he"],["לִבְנֵי־יִשְׂרָאֵל","unto-the-children-of-Israel"],["וִיהוּדָה","and-Judah"],["׃",""]] },
   { num:"ג", words:[["וַיֹּאמֶר","and-said"],["דָּוִד","David"],["אֶל־הַגִּבְעֹנִים","to-the-Gibeonites"],["מָה","what"],["אֶעֱשֶׂה","I-do"],["לָכֶם","to-you"],["וּבַמָּה","and-how?"],["אֲכַפֵּר","will I make amends"],["וּבָרְכוּ","and-bless"],["אֶת־נַחֲלַת","[ACC]-the-first-inheritance-of"],["יְהֹוָה","the-LORD"],["׃",""]] },
@@ -662,9 +662,9 @@ var 2sa_ch21Verses = [
   { num:"כא", words:[["וַיְחָרֵף","and-he taunted"],["אֶת־יִשְׂרָאֵל","[ACC]-Israel"],["וַיַּכֵּהוּ","and-smote-them"],["יְהוֹנָתָן","Jonathan"],["בֶּן־[שִׁמְעָה]","son-of-Shemaahite"],["(שמעי)","had-heard"],["אֲחִי","the-brother-of"],["דָוִד","David"],["׃",""]] },
   { num:"כב", words:[["אֶת־אַרְבַּעַת","[ACC]-four-of"],["אֵלֶּה","these"],["יֻלְּדוּ","they were born"],["לְהָרָפָה","to-the-Raphah"],["בְּגַת","in-Gath"],["וַיִּפְּלוּ","and-they-fell"],["בְיַד־דָּוִד","by-the hand of-David"],["וּבְיַד","and-by-the-hand-of"],["עֲבָדָיו","His-servants"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch21Verses, '2sa-ch21-verses');
+renderVerseSet(_2sa_ch21Verses, '2sa-ch21-verses');
 
-var 2sa_ch22Verses = [
+var _2sa_ch22Verses = [
   { num:"א", words:[["וַיְדַבֵּר","and-he-spoke"],["דָּוִד","David"],["לַיהֹוָה","to-Yahweh"],["אֶת־דִּבְרֵי","the-words-of"],["הַשִּׁירָה","the-song"],["הַזֹּאת","is-this"],["בְּיוֹם","in-day-of"],["הִצִּיל","he-delivered"],["יְהֹוָה","the-LORD"],["אֹתוֹ","him"],["מִכַּף","from-the-wrist"],["כׇּל־אֹיְבָיו","all-enemies-its"],["וּמִכַּף","and-from-the hand of"],["שָׁאוּל","Saul"],["׃",""]] },
   { num:"ב", words:[["וַיֹּאמַר","and-said"],["יְהֹוָה","the-LORD"],["סַלְעִי","is rock-my"],["וּמְצֻדָתִי","and-stronghold-my"],["וּמְפַלְטִי־לִי","and-deliverer-my-to-me"],["׃",""]] },
   { num:"ג", words:[["אֱלֹהֵי","God-of"],["צוּרִי","my-Rock"],["אֶחֱסֶה־בּוֹ","whom I take refuge-against-him"],["מָגִנִּי","shield-my"],["וְקֶרֶן","and-the horn of"],["יִשְׁעִי","My-salvation"],["מִשְׂגַּבִּי","refuge-my"],["וּמְנוּסִי","and-place of escape-my"],["מֹשִׁעִי","O deliverer-my"],["מֵחָמָס","from-violence"],["תֹּשִׁעֵנִי","you deliver-me"],["׃",""]] },
@@ -717,9 +717,9 @@ var 2sa_ch22Verses = [
   { num:"נ", words:[["עַל־כֵּן","therefore"],["אוֹדְךָ","I-will-praise-You"],["יְהֹוָה","the-LORD"],["בַּגּוֹיִם","by-the-nations"],["וּלְשִׁמְךָ","and-to-name-your"],["אֲזַמֵּר","I will sing praises"],["׃",""]] },
   { num:"נא", words:[["(מגדיל)","he is making great"],["[מִגְדּוֹל]","from-the-eldest"],["יְשׁוּעוֹת","of the salvation of"],["מַלְכּוֹ","king-its"],["וְעֹשֶׂה־חֶסֶד","and-I-make-it-mercy"],["לִמְשִׁיחוֹ","to-anointed-his"],["לְדָוִד","of-David"],["וּלְזַרְעוֹ","and-for-offspring-his"],["עַד־עוֹלָם","forever"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch22Verses, '2sa-ch22-verses');
+renderVerseSet(_2sa_ch22Verses, '2sa-ch22-verses');
 
-var 2sa_ch23Verses = [
+var _2sa_ch23Verses = [
   { num:"א", words:[["וְאֵלֶּה","and-these"],["דִּבְרֵי","account-of"],["דָוִד","David"],["הָאַחֲרֹנִים","last"],["נְאֻם","says"],["דָּוִד","David"],["בֶּן־יִשַׁי","son-of-Jesse"],["וּנְאֻם","and-the utterance of"],["הַגֶּבֶר","the-he-prevailed"],["הֻקַם","who he was raised up"],["עָל","height"],["מְשִׁיחַ","a-false-Messiah"],["אֱלֹהֵי","God-of"],["יַעֲקֹב","Jacob"],["וּנְעִים","and-the pleasant one of"],["זְמִרוֹת","the songs of"],["יִשְׂרָאֵל","Israel"],["׃",""]] },
   { num:"ב", words:[["רוּחַ","spirit-of"],["יְהֹוָה","the-LORD"],["דִּבֶּר־בִּי","spoke-against-me"],["וּמִלָּתוֹ","and-speech-his"],["עַל־לְשׁוֹנִי","upon-linguistic"],["׃",""]] },
   { num:"ג", words:[["אָמַר","said"],["אֱלֹהֵי","God-of"],["יִשְׂרָאֵל","Israel"],["לִי","to-me"],["דִבֶּר","spoke"],["צוּר","the-rock-of"],["יִשְׂרָאֵל","Israel"],["מוֹשֵׁל","ruler"],["בָּאָדָם","in-man"],["צַדִּיק","righteous"],["מוֹשֵׁל","ruler"],["יִרְאַת","the-fear-of"],["אֱלֹהִים","God"],["׃",""]] },
@@ -760,9 +760,9 @@ var 2sa_ch23Verses = [
   { num:"לח", words:[["עִירָא","Ira"],["הַיִּתְרִי","the-Ithrite"],["גָּרֵב","Gareb"],["הַיִּתְרִי","the-Ithrite"],["׃",""]] },
   { num:"לט", words:[["אוּרִיָּה","Uriah"],["הַחִתִּי","the-Hittites"],["כֹּל","all"],["שְׁלֹשִׁים","thirty"],["וְשִׁבְעָה","and-satisfied"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch23Verses, '2sa-ch23-verses');
+renderVerseSet(_2sa_ch23Verses, '2sa-ch23-verses');
 
-var 2sa_ch24Verses = [
+var _2sa_ch24Verses = [
   { num:"א", words:[["וַיֹּסֶף","and-continued"],["אַף־יְהֹוָה","the-anger-of-the-LORD"],["לַחֲרוֹת","to-engrave"],["בְּיִשְׂרָאֵל","Israel"],["וַיָּסֶת","and-he-incited"],["אֶת־דָּוִד","[ACC]-David"],["בָּהֶם","in-them"],["לֵאמֹר","saying"],["לֵךְ","go"],["מְנֵה","count"],["אֶת־יִשְׂרָאֵל","[ACC]-Israel"],["וְאֶת־יְהוּדָה","and-[ACC]-Judah"],["׃",""]] },
   { num:"ב", words:[["וַיֹּאמֶר","and-said"],["הַמֶּלֶךְ","the-king"],["אֶל־יוֹאָב","to-Joab"],["שַׂר־הַחַיִל","the-king's-captain-the-wealth"],["אֲשֶׁר־אִתּוֹ","whose-with-him"],["שׁוּט־נָא","go about-I-pray"],["בְּכׇל־שִׁבְטֵי","in-all-tribes-of"],["יִשְׂרָאֵל","Israel"],["מִדָּן","from-Dan"],["וְעַד־בְּאֵר","and-unto-Beer"],["שֶׁבַע","seven"],["וּפִקְדוּ","and-enroll"],["אֶת־הָעָם","ACC-the-people"],["וְיָדַעְתִּי","and-I-know"],["אֵת","[ACC]"],["מִסְפַּר","so-many-of"],["הָעָם","the-people"],["׃",""]] },
   { num:"ג", words:[["וַיֹּאמֶר","and-said"],["יוֹאָב","Joab"],["אֶל־הַמֶּלֶךְ","unto-the-king"],["וְיוֹסֵף","and-Joseph"],["יְהֹוָה","the-LORD"],["אֱלֹהֶיךָ","your-God"],["אֶל־הָעָם","to-the-people"],["כָּהֵם","like-them"],["וְכָהֵם","and-like-them"],["מֵאָה","a-hundredth"],["פְעָמִים","times"],["וְעֵינֵי","now-the-eyes-of"],["אֲדֹנִי־הַמֶּלֶךְ","my-Lord-the-king"],["רֹאוֹת","are seeing"],["וַאדֹנִי","and-lord-my"],["הַמֶּלֶךְ","the-king"],["לָמָּה","why"],["חָפֵץ","desire/precious"],["בַּדָּבָר","in-the-thing"],["הַזֶּה","this"],["׃",""]] },
@@ -789,6 +789,6 @@ var 2sa_ch24Verses = [
   { num:"כד", words:[["וַיֹּאמֶר","and-said"],["הַמֶּלֶךְ","the-king"],["אֶל־אֲרַוְנָה","to-Araunah"],["לֹא","not"],["כִּי־קָנוֹ","because-certainly"],["אֶקְנֶה","I-shall-acquire"],["מֵאוֹתְךָ","from-you"],["בִּמְחִיר","for-a price"],["וְלֹא","and-not"],["אַעֲלֶה","I-will-ascend"],["לַיהֹוָה","to-Yahweh"],["אֱלֹהַי","my-God"],["עֹלוֹת","burnt-offerings"],["חִנָּם","is-free"],["וַיִּקֶן","and-he bought"],["דָּוִד","David"],["אֶת־הַגֹּרֶן","[ACC]-the-threshing floor"],["וְאֶת־הַבָּקָר","and-[ACC]-the-herd"],["בְּכֶסֶף","in-money"],["שְׁקָלִים","shekels"],["חֲמִשִּׁים","fifty"],["׃",""]] },
   { num:"כה", words:[["וַיִּבֶן","and-built"],["שָׁם","there-is"],["דָּוִד","David"],["מִזְבֵּחַ","an altar"],["לַיהֹוָה","to-Yahweh"],["וַיַּעַל","and-he-ascended"],["עֹלוֹת","burnt-offerings"],["וּשְׁלָמִים","and-peace offerings"],["וַיֵּעָתֵר","and-he was entreated"],["יְהֹוָה","the-LORD"],["לָאָרֶץ","to-the-ground"],["וַתֵּעָצַר","and-it was restrained"],["הַמַּגֵּפָה","the-plague"],["מֵעַל","from-upon"],["יִשְׂרָאֵל","Israel"],["׃",""]] },
 ];
-renderVerseSet(2sa_ch24Verses, '2sa-ch24-verses');
+renderVerseSet(_2sa_ch24Verses, '2sa-ch24-verses');
 
 })();

@@ -1,6 +1,6 @@
 // nt_verses/3jn.js — 3 John verse data
 (function() {
-var 3jn_ch1Verses = [
+var _3jn_ch1Verses = [
   { num:"א", words:[["הַזָּקֵן","the-elder"],["אֶל־גָּיוֹס","at-enlistment"],["יְדִידִי","my-beloved"],["אֲשֶׁר","whose"],["אֲנִי","I"],["אֹהֵב","loves"],["אֹתוֹ","him"],["בֶּאֱמֶת","in-truth"],["׃",""]] },
   { num:"ב", words:[["יְדִידִי","my-beloved"],["רְצוֹנִי","my-desire"],["שֶׁיִּיטַב","that-it was good"],["לְךָ","for-you"],["לְכָל־דָּבָר","to-all-things"],["וְתִהְיֶה","and-is-to-come"],["בָרִיא","is fat"],["כְּטוֹב","like-good"],["לְנַפְשֶׁךָ","for-self-your"],["׃",""]] },
   { num:"ג", words:[["כִּי","because"],["שָׂמַחְתִּי","I-rejoiced"],["מְאֹד","exceedingly"],["כַּאֲשֶׁר","when/as"],["בָּאוּ","came"],["אַחִים","brothers"],["וַיָּעִידוּ","and-testified"],["עַל־אֲמִתֶּךָ","upon-faithfulness-your"],["אֲשֶׁר","whose"],["מִתְהַלֵּךְ","walking"],["אַתָּה","you"],["בָּאֱמֶת","in-truth"],["׃",""]] },
@@ -17,6 +17,6 @@ var 3jn_ch1Verses = [
   { num:"יד", words:[["אֲבָל","but/however"],["אֲקַוֶּה","Koh"],["לִרְאוֹתְךָ","to-your-seeing"],["בִּמְהֵרָה","soon"],["וּפֶה","and-a mouth"],["אֶל־פֶּה","to-mouth"],["נְדַבֵּר","speak"],["׃",""]] },
   { num:"טו", words:[["שָׁלוֹם","peace"],["לָךְ","[compound]"],["הָרֵעִים","the-friends"],["שֹׁאֲלִים","asking"],["לִשְׁלוֹמֶךָ","to-your-peace"],["שְׁאַל","ask"],["לִשְׁלוֹם","for-the-welfare-of"],["הָרֵעִים","the-friends"],["לְאִישׁ","for-a-man"],["אִישׁ","man-of"],["בִּשְׁמוֹ","in-His-name"],["׃",""]] },
 ];
-renderVerseSet(3jn_ch1Verses, '3jn-ch1-verses');
+renderVerseSet(_3jn_ch1Verses, '3jn-ch1-verses');
 
 })();

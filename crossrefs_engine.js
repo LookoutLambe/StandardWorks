@@ -178,6 +178,273 @@
     return null;
   }
 
+  // ── Verse file mapping for dynamic interlinear loading ──
+  var _verseFileCache = {}; // url → { targetId → [verseArray] }
+
+  // Map full book name → { dir, file, chPfx } or { dir, chPfx, isDC }
+  var _bookToVerseFile = {
+    // OT
+    'Genesis': { dir: 'ot_verses', file: 'gen', chPfx: 'gen' },
+    'Exodus': { dir: 'ot_verses', file: 'exo', chPfx: 'exo' },
+    'Leviticus': { dir: 'ot_verses', file: 'lev', chPfx: 'lev' },
+    'Numbers': { dir: 'ot_verses', file: 'num', chPfx: 'num' },
+    'Deuteronomy': { dir: 'ot_verses', file: 'deu', chPfx: 'deu' },
+    'Joshua': { dir: 'ot_verses', file: 'jos', chPfx: 'jos' },
+    'Judges': { dir: 'ot_verses', file: 'jdg', chPfx: 'jdg' },
+    'Ruth': { dir: 'ot_verses', file: 'rth', chPfx: 'rth' },
+    '1 Samuel': { dir: 'ot_verses', file: '1sa', chPfx: '1sa' },
+    '2 Samuel': { dir: 'ot_verses', file: '2sa', chPfx: '2sa' },
+    '1 Kings': { dir: 'ot_verses', file: '1ki', chPfx: '1ki' },
+    '2 Kings': { dir: 'ot_verses', file: '2ki', chPfx: '2ki' },
+    '1 Chronicles': { dir: 'ot_verses', file: '1ch', chPfx: '1ch' },
+    '2 Chronicles': { dir: 'ot_verses', file: '2ch', chPfx: '2ch' },
+    'Ezra': { dir: 'ot_verses', file: 'ezr', chPfx: 'ezr' },
+    'Nehemiah': { dir: 'ot_verses', file: 'neh', chPfx: 'neh' },
+    'Esther': { dir: 'ot_verses', file: 'est', chPfx: 'est' },
+    'Job': { dir: 'ot_verses', file: 'job', chPfx: 'job' },
+    'Psalms': { dir: 'ot_verses', file: 'psa', chPfx: 'psa' },
+    'Proverbs': { dir: 'ot_verses', file: 'pro', chPfx: 'pro' },
+    'Ecclesiastes': { dir: 'ot_verses', file: 'ecc', chPfx: 'ecc' },
+    'Song of Solomon': { dir: 'ot_verses', file: 'sos', chPfx: 'sos' },
+    'Isaiah': { dir: 'ot_verses', file: 'isa', chPfx: 'isa' },
+    'Jeremiah': { dir: 'ot_verses', file: 'jer', chPfx: 'jer' },
+    'Lamentations': { dir: 'ot_verses', file: 'lam', chPfx: 'lam' },
+    'Ezekiel': { dir: 'ot_verses', file: 'eze', chPfx: 'eze' },
+    'Daniel': { dir: 'ot_verses', file: 'dan', chPfx: 'dan' },
+    'Hosea': { dir: 'ot_verses', file: 'hos', chPfx: 'hos' },
+    'Joel': { dir: 'ot_verses', file: 'joe', chPfx: 'joe' },
+    'Amos': { dir: 'ot_verses', file: 'amo', chPfx: 'amo' },
+    'Obadiah': { dir: 'ot_verses', file: 'oba', chPfx: 'oba' },
+    'Jonah': { dir: 'ot_verses', file: 'jon', chPfx: 'jon' },
+    'Micah': { dir: 'ot_verses', file: 'mic', chPfx: 'mic' },
+    'Nahum': { dir: 'ot_verses', file: 'nah', chPfx: 'nah' },
+    'Habakkuk': { dir: 'ot_verses', file: 'hab', chPfx: 'hab' },
+    'Zephaniah': { dir: 'ot_verses', file: 'zep', chPfx: 'zep' },
+    'Haggai': { dir: 'ot_verses', file: 'hag', chPfx: 'hag' },
+    'Zechariah': { dir: 'ot_verses', file: 'zec', chPfx: 'zec' },
+    'Malachi': { dir: 'ot_verses', file: 'mal', chPfx: 'mal' },
+    // NT
+    'Matthew': { dir: 'nt_verses', file: 'matt', chPfx: 'matt' },
+    'Mark': { dir: 'nt_verses', file: 'mark', chPfx: 'mark' },
+    'Luke': { dir: 'nt_verses', file: 'luke', chPfx: 'luke' },
+    'John': { dir: 'nt_verses', file: 'john', chPfx: 'john' },
+    'Acts': { dir: 'nt_verses', file: 'acts', chPfx: 'acts' },
+    'Romans': { dir: 'nt_verses', file: 'rom', chPfx: 'rom' },
+    '1 Corinthians': { dir: 'nt_verses', file: '1co', chPfx: '1co' },
+    '2 Corinthians': { dir: 'nt_verses', file: '2co', chPfx: '2co' },
+    'Galatians': { dir: 'nt_verses', file: 'gal', chPfx: 'gal' },
+    'Ephesians': { dir: 'nt_verses', file: 'eph', chPfx: 'eph' },
+    'Philippians': { dir: 'nt_verses', file: 'php', chPfx: 'php' },
+    'Colossians': { dir: 'nt_verses', file: 'col', chPfx: 'col' },
+    '1 Thessalonians': { dir: 'nt_verses', file: '1th', chPfx: '1th' },
+    '2 Thessalonians': { dir: 'nt_verses', file: '2th', chPfx: '2th' },
+    '1 Timothy': { dir: 'nt_verses', file: '1ti', chPfx: '1ti' },
+    '2 Timothy': { dir: 'nt_verses', file: '2ti', chPfx: '2ti' },
+    'Titus': { dir: 'nt_verses', file: 'tit', chPfx: 'tit' },
+    'Philemon': { dir: 'nt_verses', file: 'phm', chPfx: 'phm' },
+    'Hebrews': { dir: 'nt_verses', file: 'heb', chPfx: 'heb' },
+    'James': { dir: 'nt_verses', file: 'jas', chPfx: 'jas' },
+    '1 Peter': { dir: 'nt_verses', file: '1pe', chPfx: '1pe' },
+    '2 Peter': { dir: 'nt_verses', file: '2pe', chPfx: '2pe' },
+    '1 John': { dir: 'nt_verses', file: '1jn', chPfx: '1jn' },
+    '2 John': { dir: 'nt_verses', file: '2jn', chPfx: '2jn' },
+    '3 John': { dir: 'nt_verses', file: '3jn', chPfx: '3jn' },
+    'Jude': { dir: 'nt_verses', file: 'jude', chPfx: 'jude' },
+    'Revelation': { dir: 'nt_verses', file: 'rev', chPfx: 'rev' },
+    // BOM
+    '1 Nephi': { dir: 'bom/verses', file: '1nephi', chPfx: '' },
+    '2 Nephi': { dir: 'bom/verses', file: '2nephi', chPfx: '2n' },
+    'Jacob': { dir: 'bom/verses', file: 'jacob', chPfx: 'jc' },
+    'Enos': { dir: 'bom/verses', file: 'enos', chPfx: 'en' },
+    'Jarom': { dir: 'bom/verses', file: 'jarom', chPfx: 'jr' },
+    'Omni': { dir: 'bom/verses', file: 'omni', chPfx: 'om' },
+    'Words of Mormon': { dir: 'bom/verses', file: 'words_of_mormon', chPfx: 'wm' },
+    'Mosiah': { dir: 'bom/verses', file: 'mosiah', chPfx: 'mo' },
+    'Alma': { dir: 'bom/verses', file: 'alma', chPfx: 'al' },
+    'Helaman': { dir: 'bom/verses', file: 'helaman', chPfx: 'he' },
+    '3 Nephi': { dir: 'bom/verses', file: '3nephi', chPfx: '3n' },
+    '4 Nephi': { dir: 'bom/verses', file: '4nephi', chPfx: '4n' },
+    'Mormon': { dir: 'bom/verses', file: 'mormon', chPfx: 'mm' },
+    'Ether': { dir: 'bom/verses', file: 'ether', chPfx: 'et' },
+    'Moroni': { dir: 'bom/verses', file: 'moroni', chPfx: 'mr' },
+    // D&C
+    'D&C': { dir: 'dc_verses', chPfx: 'dc', isDC: true },
+    // PGP
+    'Moses': { dir: 'pgp_verses', file: 'moses', chPfx: 'ms' },
+    'Abraham': { dir: 'pgp_verses', file: 'abraham', chPfx: 'ab' },
+    'JS-H': { dir: 'pgp_verses', file: 'js_history', chPfx: 'jsh' },
+    'JS-M': { dir: 'pgp_verses', file: 'js_matthew', chPfx: 'jsm' },
+    'A-of-F': { dir: 'pgp_verses', file: 'articles_of_faith', chPfx: 'aof' }
+  };
+
+  // Hebrew number to Arabic for verse lookup
+  var _hebNums = {
+    '\u05D0':1,'\u05D1':2,'\u05D2':3,'\u05D3':4,'\u05D4':5,'\u05D5':6,'\u05D6':7,'\u05D7':8,'\u05D8':9,
+    '\u05D9':10,'\u05D9\u05D0':11,'\u05D9\u05D1':12,'\u05D9\u05D2':13,'\u05D9\u05D3':14,'\u05D9\u05D4':15,
+    '\u05D8\u05D6':16,'\u05D9\u05D6':17,'\u05D9\u05D7':18,'\u05D9\u05D8':19,
+    '\u05DB':20,'\u05DB\u05D0':21,'\u05DB\u05D1':22,'\u05DB\u05D2':23,'\u05DB\u05D3':24,'\u05DB\u05D4':25,
+    '\u05DB\u05D5':26,'\u05DB\u05D6':27,'\u05DB\u05D7':28,'\u05DB\u05D8':29,
+    '\u05DC':30,'\u05DC\u05D0':31,'\u05DC\u05D1':32,'\u05DC\u05D2':33,'\u05DC\u05D3':34,'\u05DC\u05D4':35,
+    '\u05DC\u05D5':36,'\u05DC\u05D6':37,'\u05DC\u05D7':38,'\u05DC\u05D8':39,
+    '\u05DE':40,'\u05DE\u05D0':41,'\u05DE\u05D1':42,'\u05DE\u05D2':43,'\u05DE\u05D3':44,'\u05DE\u05D4':45,
+    '\u05DE\u05D5':46,'\u05DE\u05D6':47,'\u05DE\u05D7':48,'\u05DE\u05D8':49,
+    '\u05E0':50,'\u05E0\u05D0':51,'\u05E0\u05D1':52,'\u05E0\u05D2':53,'\u05E0\u05D3':54,'\u05E0\u05D4':55,
+    '\u05E0\u05D5':56,'\u05E0\u05D6':57,'\u05E0\u05D7':58,'\u05E0\u05D8':59,
+    '\u05E1':60,'\u05E1\u05D0':61,'\u05E1\u05D1':62,'\u05E1\u05D2':63,'\u05E1\u05D3':64,'\u05E1\u05D4':65,
+    '\u05E1\u05D5':66,'\u05E1\u05D6':67,'\u05E1\u05D7':68,'\u05E1\u05D8':69,
+    '\u05E2':70,'\u05E2\u05D0':71,'\u05E2\u05D1':72,'\u05E2\u05D2':73,'\u05E2\u05D3':74,'\u05E2\u05D4':75,
+    '\u05E2\u05D5':76,'\u05E2\u05D6':77,'\u05E2\u05D7':78,'\u05E2\u05D8':79,
+    '\u05E4':80,'\u05E4\u05D0':81,'\u05E4\u05D1':82,'\u05E4\u05D2':83,'\u05E4\u05D3':84,'\u05E4\u05D4':85,
+    '\u05E4\u05D5':86,'\u05E4\u05D6':87,'\u05E4\u05D7':88,'\u05E4\u05D8':89,
+    '\u05E6':90,'\u05E6\u05D0':91,'\u05E6\u05D1':92,'\u05E6\u05D2':93,'\u05E6\u05D3':94,'\u05E6\u05D4':95,
+    '\u05E6\u05D5':96,'\u05E6\u05D6':97,'\u05E6\u05D7':98,'\u05E6\u05D8':99,
+    '\u05E7':100,'\u05E7\u05D0':101,'\u05E7\u05D1':102,'\u05E7\u05D2':103,'\u05E7\u05D3':104,
+    '\u05E7\u05D4':105,'\u05E7\u05D5':106,'\u05E7\u05D6':107,'\u05E7\u05D7':108,'\u05E7\u05D8':109,
+    '\u05E7\u05D9':110,'\u05E7\u05D9\u05D0':111,'\u05E7\u05D9\u05D1':112,'\u05E7\u05D9\u05D2':113,
+    '\u05E7\u05D9\u05D3':114,'\u05E7\u05D9\u05D4':115,'\u05E7\u05D8\u05D6':116,'\u05E7\u05D9\u05D6':117,
+    '\u05E7\u05D9\u05D7':118,'\u05E7\u05D9\u05D8':119,
+    '\u05E7\u05DB':120,'\u05E7\u05DB\u05D0':121,'\u05E7\u05DB\u05D1':122,'\u05E7\u05DB\u05D2':123,
+    '\u05E7\u05DB\u05D3':124,'\u05E7\u05DB\u05D4':125,'\u05E7\u05DB\u05D5':126,'\u05E7\u05DB\u05D6':127,
+    '\u05E7\u05DB\u05D7':128,'\u05E7\u05DB\u05D8':129,
+    '\u05E7\u05DC':130,'\u05E7\u05DC\u05D0':131,'\u05E7\u05DC\u05D1':132,'\u05E7\u05DC\u05D2':133,
+    '\u05E7\u05DC\u05D3':134,'\u05E7\u05DC\u05D4':135,'\u05E7\u05DC\u05D5':136,'\u05E7\u05DC\u05D6':137,
+    '\u05E7\u05DC\u05D7':138,'\u05E7\u05DC\u05D8':139,
+    '\u05E7\u05DE':140,'\u05E7\u05DE\u05D0':141,'\u05E7\u05DE\u05D1':142,'\u05E7\u05DE\u05D2':143,
+    '\u05E7\u05DE\u05D3':144,'\u05E7\u05DE\u05D4':145,'\u05E7\u05DE\u05D5':146,'\u05E7\u05DE\u05D6':147,
+    '\u05E7\u05DE\u05D7':148,'\u05E7\u05DE\u05D8':149,
+    '\u05E7\u05E0':150,'\u05E7\u05E0\u05D0':151,'\u05E7\u05E0\u05D1':152,'\u05E7\u05E0\u05D2':153,
+    '\u05E7\u05E0\u05D3':154,'\u05E7\u05E0\u05D4':155,'\u05E7\u05E0\u05D5':156,'\u05E7\u05E0\u05D6':157,
+    '\u05E7\u05E0\u05D7':158,'\u05E7\u05E0\u05D8':159,
+    '\u05E7\u05E1':160,'\u05E7\u05E1\u05D0':161,'\u05E7\u05E1\u05D1':162,'\u05E7\u05E1\u05D2':163,
+    '\u05E7\u05E1\u05D3':164,'\u05E7\u05E1\u05D4':165,'\u05E7\u05E1\u05D5':166,'\u05E7\u05E1\u05D6':167,
+    '\u05E7\u05E1\u05D7':168,'\u05E7\u05E1\u05D8':169,
+    '\u05E7\u05E2':170,'\u05E7\u05E2\u05D0':171,'\u05E7\u05E2\u05D1':172,'\u05E7\u05E2\u05D2':173,
+    '\u05E7\u05E2\u05D3':174,'\u05E7\u05E2\u05D4':175,'\u05E7\u05E2\u05D5':176
+  };
+
+  function hebNumToArabic(h) {
+    if (_hebNums[h] !== undefined) return _hebNums[h];
+    // Fallback: try matching by position (verse index + 1)
+    return -1;
+  }
+
+  function getDCFileName(section) {
+    var s = parseInt(section, 10);
+    if (s >= 1 && s <= 10) return 'dc1_10';
+    if (s >= 11 && s <= 20) return 'dc11_20';
+    if (s >= 21 && s <= 30) return 'dc21_30';
+    if (s >= 31 && s <= 40) return 'dc31_40';
+    if (s >= 41 && s <= 50) return 'dc41_50';
+    if (s >= 51 && s <= 60) return 'dc51_60';
+    if (s >= 61 && s <= 70) return 'dc61_70';
+    if (s >= 71 && s <= 80) return 'dc71_80';
+    if (s >= 81 && s <= 90) return 'dc81_90';
+    if (s >= 91 && s <= 100) return 'dc91_100';
+    if (s >= 101 && s <= 110) return 'dc101_110';
+    if (s >= 111 && s <= 120) return 'dc111_120';
+    if (s >= 121 && s <= 130) return 'dc121_130';
+    if (s >= 131 && s <= 138) return 'dc131_138';
+    return null;
+  }
+
+  function getVerseFileUrl(book, chapter) {
+    var info = _bookToVerseFile[book];
+    if (!info) return null;
+    // Normalize base path to project root (strip bom/ if on BOM page)
+    var basePath = window.location.pathname.replace(/[^/]*$/, '');
+    if (basePath.match(/\/bom\/$/)) basePath = basePath.replace(/bom\/$/, '');
+    if (info.isDC) {
+      var fn = getDCFileName(chapter);
+      if (!fn) return null;
+      return basePath + info.dir + '/' + fn + '.js';
+    }
+    return basePath + info.dir + '/' + info.file + '.js';
+  }
+
+  function getChapterTargetId(book, chapter) {
+    var info = _bookToVerseFile[book];
+    if (!info) return null;
+    if (info.isDC) return 'dc' + chapter + '-ch1-verses';
+    var pfx = info.chPfx;
+    if (pfx === '') return 'ch' + chapter + '-verses';
+    return pfx + '-ch' + chapter + '-verses';
+  }
+
+  function loadVerseFileAsync(url, callback) {
+    if (_verseFileCache[url]) { callback(_verseFileCache[url]); return; }
+    fetch(url).then(function(r) { return r.text(); }).then(function(text) {
+      var captured = {};
+      try {
+        var fn = new Function('renderVerseSet', text);
+        fn(function(data, targetId) { captured[targetId] = data; });
+      } catch(e) { console.warn('Verse file parse error:', url, e); }
+      _verseFileCache[url] = captured;
+      callback(captured);
+    }).catch(function(e) {
+      console.warn('Verse file fetch error:', url, e);
+      callback(null);
+    });
+  }
+
+  function renderInterlinearHtml(verseData) {
+    if (!verseData || !verseData.words) return '';
+    var html = '<div class="xref-ref-content">';
+    var first = true;
+    verseData.words.forEach(function(w) {
+      var hw = w[0], gl = w[1];
+      if (!hw || hw === '\u05C3' || hw === '׃') return; // skip sof pasuq
+      if (!first) html += '<span class="xref-ref-arr">\u2039</span>';
+      first = false;
+      html += '<span class="xref-ref-word">';
+      html += '<span class="hw">' + hw + '</span>';
+      if (gl) html += '<span class="en">' + gl + '</span>';
+      html += '</span>';
+    });
+    html += '</div>';
+    return html;
+  }
+
+  function loadExternalInterlinear(refKey, container) {
+    if (!refKey) return;
+    var parts = refKey.split('|');
+    if (parts.length < 3) return;
+    var book = parts[0], chapter = parts[1], verse = parseInt(parts[2], 10);
+    var url = getVerseFileUrl(book, chapter);
+    var targetId = getChapterTargetId(book, chapter);
+    if (!url || !targetId) return;
+
+    // Add loading indicator
+    var loadingEl = document.createElement('div');
+    loadingEl.className = 'xref-ref-loading';
+    loadingEl.textContent = 'Loading Hebrew...';
+    loadingEl.style.cssText = 'font-size:0.8em;color:var(--ink-light,#888);font-style:italic;padding:4px 0;';
+    container.insertBefore(loadingEl, container.firstChild);
+
+    loadVerseFileAsync(url, function(data) {
+      if (loadingEl.parentNode) loadingEl.parentNode.removeChild(loadingEl);
+      if (!data || !data[targetId]) return;
+      var verses = data[targetId];
+      // Find verse by index (verse number = array index + 1, since Hebrew nums are sequential)
+      var verseData = null;
+      if (verse >= 1 && verse <= verses.length) {
+        verseData = verses[verse - 1];
+      } else {
+        // Fallback: search by Hebrew number
+        for (var i = 0; i < verses.length; i++) {
+          if (hebNumToArabic(verses[i].num) === verse) { verseData = verses[i]; break; }
+        }
+      }
+      if (verseData) {
+        var html = renderInterlinearHtml(verseData);
+        if (html) {
+          var div = document.createElement('div');
+          div.innerHTML = html;
+          container.insertBefore(div, container.firstChild);
+        }
+      }
+    });
+  }
+
   function getExternalVerseHtml(refText) {
     if (!window._scriptureVerses) return '';
     var key = parseScriptureRef(refText);
@@ -471,6 +738,11 @@
           card.appendChild(extDiv);
         }
 
+        // Load Hebrew interlinear for cross-volume references
+        if (refKey && !isInternal) {
+          loadExternalInterlinear(refKey, card);
+        }
+
         // Add "View in Hebrew" link for cross-volume references
         if (refKey && !isInternal) {
           var crossUrl = buildCrossVolumeUrl(refKey, sourceVerseKey);
@@ -613,8 +885,13 @@
               card.appendChild(extDiv);
             }
 
-            // Add "View in Hebrew" link for cross-volume references
+            // Load Hebrew interlinear for cross-volume references
             var rk = parseScriptureRef(fullRef);
+            if (rk) {
+              loadExternalInterlinear(rk, card);
+            }
+
+            // Add "View in Hebrew" link for cross-volume references
             if (rk) {
               var cUrl = buildCrossVolumeUrl(rk, e.verseKey);
               if (cUrl) {

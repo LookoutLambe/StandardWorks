@@ -1,6 +1,6 @@
 // nt_verses/2jn.js — 2 John verse data
 (function() {
-var 2jn_ch1Verses = [
+var _2jn_ch1Verses = [
   { num:"א", words:[["הַזָּקֵן","the-elder"],["אֶל־הַגְּבִירָה","to-the-queen"],["הַבְּחִירָה","the-choice"],["וְאֶל־בָּנֶיהָ","and-sons-her"],["אֲשֶׁר","whose"],["אֲנִי","I"],["אֹהֵב","loves"],["אֹתָם","them"],["בֶּאֱמֶת","in-truth"],["וְלֹא־אֲנִי","and-not-I"],["לְבַדִּי","alone"],["כִּי","because"],["אִם־גַּם","if-also"],["כָּל־יֹדְעֵי","all-knowing"],["הָאֱמֶת","the-true"],["׃",""]] },
   { num:"ב", words:[["לְמַעַן","in-order-that"],["הָאֱמֶת","the-true"],["הָעֹמֶדֶת","the-standing(f)"],["בְּקִרְבֵּנוּ","among-us"],["וְגַם־תִּהְיֶה","and-also-shall-be"],["עִמָּנוּ","with-us"],["לְעוֹלָם","forever"],["׃",""]] },
   { num:"ג", words:[["יְהִי","let-this-be"],["עִמָּנוּ","with-us"],["חֶסֶד","mercy"],["וְרַחֲמִים","and-compassion"],["וְשָׁלוֹם","and-peace"],["מֵאֵת","from"],["הָאֱלֹהִים","the-God"],["אָבִינוּ","our-father"],["וּמֵאֵת","and-from-with"],["אֲדֹנֵינוּ","our-Lord"],["יֵשׁוּעַ","Yeshua"],["הַמָּשִׁיחַ","the-Messiah"],["בֶּן־הָאָב","son-of-the-Father"],["בֶּאֱמֶת","in-truth"],["וּבְאַהֲבָה","and-in-love"],["׃",""]] },
@@ -15,6 +15,6 @@ var 2jn_ch1Verses = [
   { num:"יב", words:[["הַרְבֵּה","much"],["יֶשׁ־לִי","has-to-me"],["לִכְתֹּב","to-write"],["אֲלֵיכֶם","unto-you"],["וְלֹא","and-not"],["חָפַצְתִּי","I-desire"],["בִּנְיָר","in-light"],["וּבִדְיוֹ","and-with-ink"],["כִּי","because"],["אִם־אֲקַוֶּה","[compound]-Koh"],["לָבוֹא","to-come"],["אֲלֵיכֶם","unto-you"],["וּלְדַבֵּר","and-to-speak"],["פֶּה","mouth"],["אֶל־פֶּה","to-mouth"],["לְמַעַן","in-order-that"],["תִּהְיֶה","shall-be"],["שִׂמְחָתֵנוּ","joy-of-us"],["שְׁלֵמָה","complete/perfect"],["׃",""]] },
   { num:"יג", words:[["בְּנֵי","sons-of"],["אֲחוֹתֵךְ","sister-your"],["הַבְּחִירָה","the-choice"],["שֹׁאֲלִים","asking"],["לִשְׁלוֹמֵךְ","to-your-peace"],["אָמֵן","amen"],["׃",""]] },
 ];
-renderVerseSet(2jn_ch1Verses, '2jn-ch1-verses');
+renderVerseSet(_2jn_ch1Verses, '2jn-ch1-verses');
 
 })();
