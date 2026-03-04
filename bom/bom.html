@@ -598,166 +598,6 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
 
 /* Chapter divider */
 
-/* ===== HAMBURGER TOGGLE ===== */
-#menu-toggle {
-  display: none;
-}
-#menu-toggle:hover { background: #2a2a3e; }
-
-/* ===== OVERLAY ===== */
-#drawer-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  z-index: 149;
-  display: none;
-}
-#drawer-overlay.open { display: block; }
-
-/* ===== SLIDE-OUT DRAWER ===== */
-#drawer {
-  direction: ltr;
-  position: fixed;
-  top: 0;
-  right: -320px;
-  width: 300px;
-  height: 100vh;
-  background: #151520;
-  border-left: 1px solid #2a2a3e;
-  z-index: 150;
-  overflow-y: auto;
-  transition: right 0.3s ease;
-  direction: rtl;
-  padding: 18px 20px 40px;
-  box-sizing: border-box;
-}
-#drawer.open { right: 0; }
-
-.drawer-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 16px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #2a2a3e;
-}
-.drawer-header-title {
-  font-family: 'David Libre', serif;
-  font-size: 1.35em;
-  color: #c8a84e;
-  font-weight: 700;
-}
-.drawer-header-sub {
-  font-family: 'David Libre', serif;
-  font-size: 0.8em;
-  color: #7a7a9a;
-}
-.drawer-close {
-  background: none;
-  border: none;
-  color: #7a7a9a;
-  font-size: 1.5em;
-  cursor: pointer;
-  padding: 0 4px;
-  line-height: 1;
-}
-.drawer-close:hover { color: #c8a84e; }
-
-/* Front matter links */
-.drawer-section-label {
-  font-family: 'David Libre', serif;
-  color: #5a5a7a;
-  font-size: 0.72em;
-  letter-spacing: 1px;
-  margin: 18px 0 8px;
-  text-transform: uppercase;
-}
-.drawer-link {
-  display: block;
-  padding: 8px 10px;
-  color: #9a9ab8;
-  font-family: 'David Libre', serif;
-  font-size: 0.92em;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: all 0.15s;
-  text-decoration: none;
-  border: none;
-  background: none;
-  width: 100%;
-  text-align: right;
-}
-.drawer-link:hover { background: #1e1e30; color: #c8a84e; }
-.drawer-link.active { background: #1e1e30; color: #c8a84e; font-weight: 700; }
-
-/* Book accordion */
-.book-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 10px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background 0.15s;
-  margin-top: 4px;
-}
-.book-row:hover { background: #1e1e30; }
-.book-row.expanded { background: #1a1a2e; }
-.book-row-heb {
-  font-family: 'David Libre', serif;
-  font-size: 0.78em;
-  color: #7a7a9a;
-  font-weight: 400;
-  margin-left: 6px;
-  direction: rtl;
-  display: inline;
-}
-.book-row-name {
-  font-family: 'David Libre', serif;
-  font-size: 1.05em;
-  color: #c8a84e;
-  font-weight: 700;
-}
-.book-row-arrow {
-  color: #c8a84e;
-  font-size: 0.7em;
-  transition: transform 0.2s;
-}
-.book-row.expanded .book-row-arrow { transform: rotate(180deg); }
-
-/* Chapter brick grid */
-.chapter-grid {
-  direction: ltr;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 5px;
-  padding: 8px 6px 14px;
-  direction: rtl;
-}
-.ch-brick {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 36px;
-  background: transparent;
-  border: 1px solid #2a2a3e;
-  border-radius: 4px;
-  color: #8a8aa8;
-  font-family: 'David Libre', serif;
-  font-size: 0.9em;
-  cursor: pointer;
-  transition: all 0.15s;
-}
-.ch-brick:hover { background: #1e1e30; color: #c8a84e; border-color: #444; }
-.ch-brick.active { background: #c8a84e22; color: #c8a84e; border-color: #c8a84e; font-weight: 700; }
-
-/* Divider */
-.drawer-divider {
-  border: none;
-  border-top: 1px solid #2a2a3e;
-  margin: 14px 0;
-}
-
 /* Adjust page — no permanent sidebar */
 .page {
   margin-right: 0 !important;
@@ -766,16 +606,6 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   left: 0 !important;
   width: 100% !important;
   right: 0 !important;
-}
-@media (max-width: 600px) {
-  #drawer { width: 260px; right: -280px; }
-  .chapter-grid { grid-template-columns: repeat(4, 1fr); }
-  .page { margin-right: 0 !important; }
-  .controls-top, .controls-bottom {
-    left: 0 !important;
-    width: 100% !important;
-    right: 0 !important;
-  }
 }
 
 .chapter-panel {
@@ -1135,7 +965,7 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
 #glossary-panel.open { left: 0; }
 #panel-overlay {
   position: fixed; inset: 0; background: rgba(0,0,0,0.4);
-  z-index: 1199; display: none; cursor: pointer;
+  z-index: 1000; display: none; cursor: pointer;
 }
 #panel-overlay.open { display: block; }
 .glossary-header {
@@ -1502,11 +1332,7 @@ body.dark-mode .controls-top, body.dark-mode .controls-bottom { background: #0a0
 body.dark-mode .verse { border-color: #383838; }
 body.dark-mode .verse:hover { background: rgba(200, 168, 78, 0.08); }
 body.dark-mode .word-unit:hover { background: rgba(200, 168, 78, 0.10); }
-body.dark-mode #drawer { background: #0a0a0a; color: #e8e0d0; }
-body.dark-mode .drawer-section-label { color: #b0a890; }
 body.dark-mode .book-label { color: #e8e0d0; }
-body.dark-mode .ch-brick { border-color: #444444; color: #e8e0d0; }
-body.dark-mode .ch-brick:hover { background: #383838; }
 body.dark-mode #word-popup { background: #252525; border-color: #d4af37; color: #e8e0d0; }
 body.dark-mode .book-title { color: #d4af37; }
 body.dark-mode .book-subtitle { color: #b0a890; }
@@ -1537,10 +1363,6 @@ body.dark-mode .title-interlinear .tw .th { color: #d4af37; }
 body.dark-mode .title-interlinear .tw .tg { color: #b0a890; }
 /* Colophon (synopsis box) */
 body.dark-mode .colophon { background: rgba(40, 40, 40, 0.5); border-color: #444444; }
-/* Drawer links */
-body.dark-mode .drawer-link { color: #e8e0d0; }
-body.dark-mode .drawer-link:hover { color: #d4af37; }
-body.dark-mode .drawer-link.active { color: #d4af37; }
 /* Dark mode: close buttons, placeholders, search results */
 body.dark-mode .popup-close, body.dark-mode #search-close,
 body.dark-mode .glossary-close, body.dark-mode .notes-close { color: #b0a890; }
@@ -1992,366 +1814,8 @@ body.dark-mode #return-banner a:hover { background:#c8a84e; }
   <div id="xref-panel-refs"></div>
 </div>
 
-<!-- Hamburger toggle -->
-<button id="menu-toggle" onclick="toggleDrawer()" aria-label="Open navigation menu" aria-expanded="false">☰</button>
-
-<!-- Overlay -->
-<div id="drawer-overlay" onclick="toggleDrawer()"></div>
-
-<!-- Slide-out drawer -->
-<div id="drawer">
-  <div class="drawer-header">
-    <div>
-      <div class="drawer-header-title">Book of Mormon</div>
-      <div class="drawer-header-sub">ספר מורמון · Hebrew Interlinear</div>
-    </div>
-    <button class="drawer-close" onclick="toggleDrawer()" aria-label="Close navigation menu">✕</button>
-  </div>
-
-  <!-- Front matter links -->
-  <div class="drawer-section-label">FRONT MATTER</div>
-  <button class="drawer-link active" onclick="navTo('landing')">ספר מורמון</button>
-  <button class="drawer-link" onclick="navTo('intro')">To the Reader · מבוא אנגלי</button>
-  <button class="drawer-link" onclick="navTo('front-hebrew-guide')">Reading Hebrew · קריאת עברית</button>
-  <button class="drawer-link" onclick="navTo('front-translator')">Translator's Preface · מבוא המתרגם</button>
-  <button class="drawer-link" onclick="navTo('front-titlepage')">Title Page · דף השער</button>
-  <button class="drawer-link" onclick="navTo('front-introduction')">Introduction · מבוא</button>
-  <button class="drawer-link" onclick="navTo('front-three')">Three Witnesses · עדות שלשת העדים</button>
-  <button class="drawer-link" onclick="navTo('front-eight')">Eight Witnesses · עדות שמונה עדים</button>
-  <button class="drawer-link" onclick="navTo('front-js')">Testimony of Joseph Smith · עדות יוסף סמית</button>
-  <button class="drawer-link" onclick="navTo('front-brief')">Brief Explanation · ביאור קצר</button>
-  <button class="drawer-link" onclick="navTo('topical-guide')">Topical Guide · מַדְרִיךְ נוֹשְׂאִי</button>
-
-  <hr class="drawer-divider">
-
-  <!-- Books -->
-  <div class="drawer-section-label">BOOKS</div>
-
-  <!-- 1 Nephi -->
-  <div class="book-row expanded" onclick="toggleBook('nephi1')">
-    <span class="book-row-name">1 Nephi <span class="book-row-heb">נפי א׳</span></span>
-    <span class="book-row-arrow">▲</span>
-  </div>
-  <div class="chapter-grid" id="grid-nephi1">
-    <button class="ch-brick" onclick="navTo('ch1')">1</button>
-    <button class="ch-brick" onclick="navTo('ch2')">2</button>
-    <button class="ch-brick" onclick="navTo('ch3')">3</button>
-    <button class="ch-brick" onclick="navTo('ch4')">4</button>
-    <button class="ch-brick" onclick="navTo('ch5')">5</button>
-    <button class="ch-brick" onclick="navTo('ch6')">6</button>
-    <button class="ch-brick" onclick="navTo('ch7')">7</button>
-    <button class="ch-brick" onclick="navTo('ch8')">8</button>
-    <button class="ch-brick" onclick="navTo('ch9')">9</button>
-    <button class="ch-brick" onclick="navTo('ch10')">10</button>
-    <button class="ch-brick" onclick="navTo('ch11')">11</button>
-    <button class="ch-brick" onclick="navTo('ch12')">12</button>
-    <button class="ch-brick" onclick="navTo('ch13')">13</button>
-    <button class="ch-brick" onclick="navTo('ch14')">14</button>
-    <button class="ch-brick" onclick="navTo('ch15')">15</button>
-    <button class="ch-brick" onclick="navTo('ch16')">16</button>
-    <button class="ch-brick" onclick="navTo('ch17')">17</button>
-    <button class="ch-brick" onclick="navTo('ch18')">18</button>
-    <button class="ch-brick" onclick="navTo('ch19')">19</button>
-    <button class="ch-brick" onclick="navTo('ch20')">20</button>
-    <button class="ch-brick" onclick="navTo('ch21')">21</button>
-    <button class="ch-brick" onclick="navTo('ch22')">22</button>
-  </div>
-
-  <div class="book-row" onclick="toggleBook('nephi2')">
-    <span class="book-row-name">2 Nephi <span class="book-row-heb">נפי ב׳</span></span>
-    <span class="book-row-arrow">▼</span>
-  </div>
-  <div class="chapter-grid" id="grid-nephi2" style="display:none">
-    <button class="ch-brick" onclick="navTo('2n-ch1')">1</button>
-    <button class="ch-brick" onclick="navTo('2n-ch2')">2</button>
-    <button class="ch-brick" onclick="navTo('2n-ch3')">3</button>
-    <button class="ch-brick" onclick="navTo('2n-ch4')">4</button>
-    <button class="ch-brick" onclick="navTo('2n-ch5')">5</button>
-    <button class="ch-brick" onclick="navTo('2n-ch6')">6</button>
-    <button class="ch-brick" onclick="navTo('2n-ch7')">7</button>
-    <button class="ch-brick" onclick="navTo('2n-ch8')">8</button>
-    <button class="ch-brick" onclick="navTo('2n-ch9')">9</button>
-    <button class="ch-brick" onclick="navTo('2n-ch10')">10</button>
-    <button class="ch-brick" onclick="navTo('2n-ch11')">11</button>
-    <button class="ch-brick" onclick="navTo('2n-ch12')">12</button>
-    <button class="ch-brick" onclick="navTo('2n-ch13')">13</button>
-    <button class="ch-brick" onclick="navTo('2n-ch14')">14</button>
-    <button class="ch-brick" onclick="navTo('2n-ch15')">15</button>
-    <button class="ch-brick" onclick="navTo('2n-ch16')">16</button>
-    <button class="ch-brick" onclick="navTo('2n-ch17')">17</button>
-    <button class="ch-brick" onclick="navTo('2n-ch18')">18</button>
-    <button class="ch-brick" onclick="navTo('2n-ch19')">19</button>
-    <button class="ch-brick" onclick="navTo('2n-ch20')">20</button>
-    <button class="ch-brick" onclick="navTo('2n-ch21')">21</button>
-    <button class="ch-brick" onclick="navTo('2n-ch22')">22</button>
-    <button class="ch-brick" onclick="navTo('2n-ch23')">23</button>
-    <button class="ch-brick" onclick="navTo('2n-ch24')">24</button>
-    <button class="ch-brick" onclick="navTo('2n-ch25')">25</button>
-    <button class="ch-brick" onclick="navTo('2n-ch26')">26</button>
-    <button class="ch-brick" onclick="navTo('2n-ch27')">27</button>
-    <button class="ch-brick" onclick="navTo('2n-ch28')">28</button>
-    <button class="ch-brick" onclick="navTo('2n-ch29')">29</button>
-    <button class="ch-brick" onclick="navTo('2n-ch30')">30</button>
-    <button class="ch-brick" onclick="navTo('2n-ch31')">31</button>
-    <button class="ch-brick" onclick="navTo('2n-ch32')">32</button>
-    <button class="ch-brick" onclick="navTo('2n-ch33')">33</button>
-  </div>
-
-  <div class="book-row" onclick="toggleBook('jacob')">
-    <span class="book-row-name">Jacob <span class="book-row-heb">יעקב</span></span>
-    <span class="book-row-arrow">▼</span>
-  </div>
-  <div class="chapter-grid" id="grid-jacob" style="display:none">
-    <button class="ch-brick" onclick="navTo('jc-ch1')">1</button>
-    <button class="ch-brick" onclick="navTo('jc-ch2')">2</button>
-    <button class="ch-brick" onclick="navTo('jc-ch3')">3</button>
-    <button class="ch-brick" onclick="navTo('jc-ch4')">4</button>
-    <button class="ch-brick" onclick="navTo('jc-ch5')">5</button>
-    <button class="ch-brick" onclick="navTo('jc-ch6')">6</button>
-    <button class="ch-brick" onclick="navTo('jc-ch7')">7</button>
-  </div>
-
-  <div class="book-row" onclick="navTo('en-ch1')" style="cursor:pointer">
-    <span class="book-row-name">Enos <span class="book-row-heb">אנוש</span></span>
-  </div>
-
-  <div class="book-row" onclick="navTo('jr-ch1')" style="cursor:pointer">
-    <span class="book-row-name">Jarom <span class="book-row-heb">ירום</span></span>
-  </div>
-
-  <div class="book-row" onclick="navTo('om-ch1')" style="cursor:pointer">
-    <span class="book-row-name">Omni <span class="book-row-heb">עמני</span></span>
-  </div>
-
-  <div class="book-row" onclick="navTo('wm-ch1')" style="cursor:pointer">
-    <span class="book-row-name">Words of Mormon <span class="book-row-heb">דברי מורמון</span></span>
-  </div>
-
-  <div class="book-row" onclick="toggleBook('mo')">
-    <span class="book-row-name">Mosiah <span class="book-row-heb">מושיה</span></span>
-    <span class="book-row-arrow">▼</span>
-  </div>
-  <div class="chapter-grid" id="grid-mo" style="display:none">
-    <button class="ch-brick" onclick="navTo('mo-ch1')">1</button>
-    <button class="ch-brick" onclick="navTo('mo-ch2')">2</button>
-    <button class="ch-brick" onclick="navTo('mo-ch3')">3</button>
-    <button class="ch-brick" onclick="navTo('mo-ch4')">4</button>
-    <button class="ch-brick" onclick="navTo('mo-ch5')">5</button>
-    <button class="ch-brick" onclick="navTo('mo-ch6')">6</button>
-    <button class="ch-brick" onclick="navTo('mo-ch7')">7</button>
-    <button class="ch-brick" onclick="navTo('mo-ch8')">8</button>
-    <button class="ch-brick" onclick="navTo('mo-ch9')">9</button>
-    <button class="ch-brick" onclick="navTo('mo-ch10')">10</button>
-    <button class="ch-brick" onclick="navTo('mo-ch11')">11</button>
-    <button class="ch-brick" onclick="navTo('mo-ch12')">12</button>
-    <button class="ch-brick" onclick="navTo('mo-ch13')">13</button>
-    <button class="ch-brick" onclick="navTo('mo-ch14')">14</button>
-    <button class="ch-brick" onclick="navTo('mo-ch15')">15</button>
-    <button class="ch-brick" onclick="navTo('mo-ch16')">16</button>
-    <button class="ch-brick" onclick="navTo('mo-ch17')">17</button>
-    <button class="ch-brick" onclick="navTo('mo-ch18')">18</button>
-    <button class="ch-brick" onclick="navTo('mo-ch19')">19</button>
-    <button class="ch-brick" onclick="navTo('mo-ch20')">20</button>
-    <button class="ch-brick" onclick="navTo('mo-ch21')">21</button>
-    <button class="ch-brick" onclick="navTo('mo-ch22')">22</button>
-    <button class="ch-brick" onclick="navTo('mo-ch23')">23</button>
-    <button class="ch-brick" onclick="navTo('mo-ch24')">24</button>
-    <button class="ch-brick" onclick="navTo('mo-ch25')">25</button>
-    <button class="ch-brick" onclick="navTo('mo-ch26')">26</button>
-    <button class="ch-brick" onclick="navTo('mo-ch27')">27</button>
-    <button class="ch-brick" onclick="navTo('mo-ch28')">28</button>
-    <button class="ch-brick" onclick="navTo('mo-ch29')">29</button>
-  </div>
-
-  <div class="book-row" onclick="toggleBook('al')">
-    <span class="book-row-name">Alma <span class="book-row-heb">אלמא</span></span>
-    <span class="book-row-arrow">▼</span>
-  </div>
-  <div class="chapter-grid" id="grid-al" style="display:none">
-    <button class="ch-brick" onclick="navTo('al-ch1')">1</button>
-    <button class="ch-brick" onclick="navTo('al-ch2')">2</button>
-    <button class="ch-brick" onclick="navTo('al-ch3')">3</button>
-    <button class="ch-brick" onclick="navTo('al-ch4')">4</button>
-    <button class="ch-brick" onclick="navTo('al-ch5')">5</button>
-    <button class="ch-brick" onclick="navTo('al-ch6')">6</button>
-    <button class="ch-brick" onclick="navTo('al-ch7')">7</button>
-    <button class="ch-brick" onclick="navTo('al-ch8')">8</button>
-    <button class="ch-brick" onclick="navTo('al-ch9')">9</button>
-    <button class="ch-brick" onclick="navTo('al-ch10')">10</button>
-    <button class="ch-brick" onclick="navTo('al-ch11')">11</button>
-    <button class="ch-brick" onclick="navTo('al-ch12')">12</button>
-    <button class="ch-brick" onclick="navTo('al-ch13')">13</button>
-    <button class="ch-brick" onclick="navTo('al-ch14')">14</button>
-    <button class="ch-brick" onclick="navTo('al-ch15')">15</button>
-    <button class="ch-brick" onclick="navTo('al-ch16')">16</button>
-    <button class="ch-brick" onclick="navTo('al-ch17')">17</button>
-    <button class="ch-brick" onclick="navTo('al-ch18')">18</button>
-    <button class="ch-brick" onclick="navTo('al-ch19')">19</button>
-    <button class="ch-brick" onclick="navTo('al-ch20')">20</button>
-    <button class="ch-brick" onclick="navTo('al-ch21')">21</button>
-    <button class="ch-brick" onclick="navTo('al-ch22')">22</button>
-    <button class="ch-brick" onclick="navTo('al-ch23')">23</button>
-    <button class="ch-brick" onclick="navTo('al-ch24')">24</button>
-    <button class="ch-brick" onclick="navTo('al-ch25')">25</button>
-    <button class="ch-brick" onclick="navTo('al-ch26')">26</button>
-    <button class="ch-brick" onclick="navTo('al-ch27')">27</button>
-    <button class="ch-brick" onclick="navTo('al-ch28')">28</button>
-    <button class="ch-brick" onclick="navTo('al-ch29')">29</button>
-    <button class="ch-brick" onclick="navTo('al-ch30')">30</button>
-    <button class="ch-brick" onclick="navTo('al-ch31')">31</button>
-    <button class="ch-brick" onclick="navTo('al-ch32')">32</button>
-    <button class="ch-brick" onclick="navTo('al-ch33')">33</button>
-    <button class="ch-brick" onclick="navTo('al-ch34')">34</button>
-    <button class="ch-brick" onclick="navTo('al-ch35')">35</button>
-    <button class="ch-brick" onclick="navTo('al-ch36')">36</button>
-    <button class="ch-brick" onclick="navTo('al-ch37')">37</button>
-    <button class="ch-brick" onclick="navTo('al-ch38')">38</button>
-    <button class="ch-brick" onclick="navTo('al-ch39')">39</button>
-    <button class="ch-brick" onclick="navTo('al-ch40')">40</button>
-    <button class="ch-brick" onclick="navTo('al-ch41')">41</button>
-    <button class="ch-brick" onclick="navTo('al-ch42')">42</button>
-    <button class="ch-brick" onclick="navTo('al-ch43')">43</button>
-    <button class="ch-brick" onclick="navTo('al-ch44')">44</button>
-    <button class="ch-brick" onclick="navTo('al-ch45')">45</button>
-    <button class="ch-brick" onclick="navTo('al-ch46')">46</button>
-    <button class="ch-brick" onclick="navTo('al-ch47')">47</button>
-    <button class="ch-brick" onclick="navTo('al-ch48')">48</button>
-    <button class="ch-brick" onclick="navTo('al-ch49')">49</button>
-    <button class="ch-brick" onclick="navTo('al-ch50')">50</button>
-    <button class="ch-brick" onclick="navTo('al-ch51')">51</button>
-    <button class="ch-brick" onclick="navTo('al-ch52')">52</button>
-    <button class="ch-brick" onclick="navTo('al-ch53')">53</button>
-    <button class="ch-brick" onclick="navTo('al-ch54')">54</button>
-    <button class="ch-brick" onclick="navTo('al-ch55')">55</button>
-    <button class="ch-brick" onclick="navTo('al-ch56')">56</button>
-    <button class="ch-brick" onclick="navTo('al-ch57')">57</button>
-    <button class="ch-brick" onclick="navTo('al-ch58')">58</button>
-    <button class="ch-brick" onclick="navTo('al-ch59')">59</button>
-    <button class="ch-brick" onclick="navTo('al-ch60')">60</button>
-    <button class="ch-brick" onclick="navTo('al-ch61')">61</button>
-    <button class="ch-brick" onclick="navTo('al-ch62')">62</button>
-    <button class="ch-brick" onclick="navTo('al-ch63')">63</button>
-  </div>
-
-  <div class="book-row" onclick="toggleBook('he')">
-    <span class="book-row-name">Helaman <span class="book-row-heb">הילמן</span></span>
-    <span class="book-row-arrow">▼</span>
-  </div>
-  <div class="chapter-grid" id="grid-he" style="display:none">
-    <button class="ch-brick" onclick="navTo('he-ch1')">1</button>
-    <button class="ch-brick" onclick="navTo('he-ch2')">2</button>
-    <button class="ch-brick" onclick="navTo('he-ch3')">3</button>
-    <button class="ch-brick" onclick="navTo('he-ch4')">4</button>
-    <button class="ch-brick" onclick="navTo('he-ch5')">5</button>
-    <button class="ch-brick" onclick="navTo('he-ch6')">6</button>
-    <button class="ch-brick" onclick="navTo('he-ch7')">7</button>
-    <button class="ch-brick" onclick="navTo('he-ch8')">8</button>
-    <button class="ch-brick" onclick="navTo('he-ch9')">9</button>
-    <button class="ch-brick" onclick="navTo('he-ch10')">10</button>
-    <button class="ch-brick" onclick="navTo('he-ch11')">11</button>
-    <button class="ch-brick" onclick="navTo('he-ch12')">12</button>
-    <button class="ch-brick" onclick="navTo('he-ch13')">13</button>
-    <button class="ch-brick" onclick="navTo('he-ch14')">14</button>
-    <button class="ch-brick" onclick="navTo('he-ch15')">15</button>
-    <button class="ch-brick" onclick="navTo('he-ch16')">16</button>
-  </div>
-
-  <div class="book-row" onclick="toggleBook('3n')">
-    <span class="book-row-name">3 Nephi <span class="book-row-heb">נפי ג׳</span></span>
-    <span class="book-row-arrow">▼</span>
-  </div>
-  <div class="chapter-grid" id="grid-3n" style="display:none">
-    <button class="ch-brick" onclick="navTo('3n-ch1')">1</button>
-    <button class="ch-brick" onclick="navTo('3n-ch2')">2</button>
-    <button class="ch-brick" onclick="navTo('3n-ch3')">3</button>
-    <button class="ch-brick" onclick="navTo('3n-ch4')">4</button>
-    <button class="ch-brick" onclick="navTo('3n-ch5')">5</button>
-    <button class="ch-brick" onclick="navTo('3n-ch6')">6</button>
-    <button class="ch-brick" onclick="navTo('3n-ch7')">7</button>
-    <button class="ch-brick" onclick="navTo('3n-ch8')">8</button>
-    <button class="ch-brick" onclick="navTo('3n-ch9')">9</button>
-    <button class="ch-brick" onclick="navTo('3n-ch10')">10</button>
-    <button class="ch-brick" onclick="navTo('3n-ch11')">11</button>
-    <button class="ch-brick" onclick="navTo('3n-ch12')">12</button>
-    <button class="ch-brick" onclick="navTo('3n-ch13')">13</button>
-    <button class="ch-brick" onclick="navTo('3n-ch14')">14</button>
-    <button class="ch-brick" onclick="navTo('3n-ch15')">15</button>
-    <button class="ch-brick" onclick="navTo('3n-ch16')">16</button>
-    <button class="ch-brick" onclick="navTo('3n-ch17')">17</button>
-    <button class="ch-brick" onclick="navTo('3n-ch18')">18</button>
-    <button class="ch-brick" onclick="navTo('3n-ch19')">19</button>
-    <button class="ch-brick" onclick="navTo('3n-ch20')">20</button>
-    <button class="ch-brick" onclick="navTo('3n-ch21')">21</button>
-    <button class="ch-brick" onclick="navTo('3n-ch22')">22</button>
-    <button class="ch-brick" onclick="navTo('3n-ch23')">23</button>
-    <button class="ch-brick" onclick="navTo('3n-ch24')">24</button>
-    <button class="ch-brick" onclick="navTo('3n-ch25')">25</button>
-    <button class="ch-brick" onclick="navTo('3n-ch26')">26</button>
-    <button class="ch-brick" onclick="navTo('3n-ch27')">27</button>
-    <button class="ch-brick" onclick="navTo('3n-ch28')">28</button>
-    <button class="ch-brick" onclick="navTo('3n-ch29')">29</button>
-    <button class="ch-brick" onclick="navTo('3n-ch30')">30</button>
-  </div>
-
-  <div class="book-row" onclick="navTo('4n-ch1')" style="cursor:pointer">
-    <span class="book-row-name">4 Nephi <span class="book-row-heb">נפי ד׳</span></span>
-  </div>
-
-  <div class="book-row" onclick="toggleBook('mm')">
-    <span class="book-row-name">Mormon <span class="book-row-heb">מורמון</span></span>
-    <span class="book-row-arrow">▼</span>
-  </div>
-  <div class="chapter-grid" id="grid-mm" style="display:none">
-    <button class="ch-brick" onclick="navTo('mm-ch1')">1</button>
-    <button class="ch-brick" onclick="navTo('mm-ch2')">2</button>
-    <button class="ch-brick" onclick="navTo('mm-ch3')">3</button>
-    <button class="ch-brick" onclick="navTo('mm-ch4')">4</button>
-    <button class="ch-brick" onclick="navTo('mm-ch5')">5</button>
-    <button class="ch-brick" onclick="navTo('mm-ch6')">6</button>
-    <button class="ch-brick" onclick="navTo('mm-ch7')">7</button>
-    <button class="ch-brick" onclick="navTo('mm-ch8')">8</button>
-    <button class="ch-brick" onclick="navTo('mm-ch9')">9</button>
-  </div>
-
-  <div class="book-row" onclick="toggleBook('et')">
-    <span class="book-row-name">Ether <span class="book-row-heb">אתר</span></span>
-    <span class="book-row-arrow">▼</span>
-  </div>
-  <div class="chapter-grid" id="grid-et" style="display:none">
-    <button class="ch-brick" onclick="navTo('et-ch1')">1</button>
-    <button class="ch-brick" onclick="navTo('et-ch2')">2</button>
-    <button class="ch-brick" onclick="navTo('et-ch3')">3</button>
-    <button class="ch-brick" onclick="navTo('et-ch4')">4</button>
-    <button class="ch-brick" onclick="navTo('et-ch5')">5</button>
-    <button class="ch-brick" onclick="navTo('et-ch6')">6</button>
-    <button class="ch-brick" onclick="navTo('et-ch7')">7</button>
-    <button class="ch-brick" onclick="navTo('et-ch8')">8</button>
-    <button class="ch-brick" onclick="navTo('et-ch9')">9</button>
-    <button class="ch-brick" onclick="navTo('et-ch10')">10</button>
-    <button class="ch-brick" onclick="navTo('et-ch11')">11</button>
-    <button class="ch-brick" onclick="navTo('et-ch12')">12</button>
-    <button class="ch-brick" onclick="navTo('et-ch13')">13</button>
-    <button class="ch-brick" onclick="navTo('et-ch14')">14</button>
-    <button class="ch-brick" onclick="navTo('et-ch15')">15</button>
-  </div>
-
-  <div class="book-row" onclick="toggleBook('mr')">
-    <span class="book-row-name">Moroni <span class="book-row-heb">מורוני</span></span>
-    <span class="book-row-arrow">▼</span>
-  </div>
-  <div class="chapter-grid" id="grid-mr" style="display:none">
-    <button class="ch-brick" onclick="navTo('mr-ch1')">1</button>
-    <button class="ch-brick" onclick="navTo('mr-ch2')">2</button>
-    <button class="ch-brick" onclick="navTo('mr-ch3')">3</button>
-    <button class="ch-brick" onclick="navTo('mr-ch4')">4</button>
-    <button class="ch-brick" onclick="navTo('mr-ch5')">5</button>
-    <button class="ch-brick" onclick="navTo('mr-ch6')">6</button>
-    <button class="ch-brick" onclick="navTo('mr-ch7')">7</button>
-    <button class="ch-brick" onclick="navTo('mr-ch8')">8</button>
-    <button class="ch-brick" onclick="navTo('mr-ch9')">9</button>
-    <button class="ch-brick" onclick="navTo('mr-ch10')">10</button>
-  </div>
-</div>
+<!-- Drawer removed — using #nav-dropdown panel instead -->
+<!-- DRAWER CONTENT REMOVED -->
 
 <div class="page" id="page" role="main">
 
@@ -4264,28 +3728,6 @@ body.dark-mode #return-banner a:hover { background:#c8a84e; }
 
 // CHAPTER 12 VERSES
 
-function toggleDrawer() {
-  document.getElementById('drawer').classList.toggle('open');
-  document.getElementById('drawer-overlay').classList.toggle('open');
-  var btn = document.getElementById('menu-toggle');
-  if (btn) btn.setAttribute('aria-expanded', document.getElementById('drawer').classList.contains('open'));
-}
-
-function toggleBook(bookId) {
-  const grid = document.getElementById('grid-' + bookId);
-  if (!grid || grid.innerHTML === '') return; // placeholder book
-  const row = grid.previousElementSibling;
-  if (grid.style.display === 'none') {
-    grid.style.display = 'grid';
-    row.classList.add('expanded');
-    row.querySelector('.book-row-arrow').textContent = '▲';
-  } else {
-    grid.style.display = 'none';
-    row.classList.remove('expanded');
-    row.querySelector('.book-row-arrow').textContent = '▼';
-  }
-}
-
 function navTo(id, slideDir) {
   const isLanding = id === 'landing';
   const isTopicalGuide = id === 'topical-guide';
@@ -4388,21 +3830,8 @@ function navTo(id, slideDir) {
     if (slideDir) targetPanel.classList.add(slideDir === 'next' ? 'slide-right' : 'slide-left');
   }
 
-  // Update active states in drawer
-  document.querySelectorAll('.drawer-link').forEach(l => l.classList.remove('active'));
-  document.querySelectorAll('.ch-brick').forEach(b => b.classList.remove('active'));
-  const allLinks = document.querySelectorAll('.drawer-link');
-  allLinks.forEach(l => {
-    if (l.getAttribute('onclick') && l.getAttribute('onclick').includes("'" + id + "'")) l.classList.add('active');
-  });
-  const allBricks = document.querySelectorAll('.ch-brick');
-  allBricks.forEach(b => {
-    if (b.getAttribute('onclick') && b.getAttribute('onclick').includes("'" + id + "'")) b.classList.add('active');
-  });
-
-  // Close drawer
-  document.getElementById('drawer').classList.remove('open');
-  document.getElementById('drawer-overlay').classList.remove('open');
+  // Close nav panel
+  closeNavPanel();
 
   // Track current chapter for nav buttons
   currentPageId = id;
@@ -6381,11 +5810,7 @@ function startReading() {
 
 // Unified panel close
 function closeAllPanels() {
-  var drawer = document.getElementById('drawer');
-  if (drawer && drawer.classList.contains('open')) {
-    drawer.classList.remove('open');
-    document.getElementById('drawer-overlay').classList.remove('open');
-  }
+  closeNavPanel();
   var sc = document.getElementById('search-container');
   if (sc && sc.classList.contains('open')) closeSearch();
   var wp = document.getElementById('word-popup');
@@ -6657,7 +6082,17 @@ var DD_BOOKS = [
 
 function toggleNavDropdown() {
   var dd = document.getElementById('nav-dropdown');
-  dd.classList.toggle('open');
+  if (dd.classList.contains('open')) { closeNavPanel(); } else {
+    dd.classList.add('open');
+    document.getElementById('panel-overlay').classList.add('open');
+    var first = dd.querySelector('.dd-volume-card, .dd-book, button');
+    if (first) setTimeout(function() { first.focus(); }, 350);
+  }
+}
+function closeNavPanel() {
+  var dd = document.getElementById('nav-dropdown');
+  dd.classList.remove('open');
+  document.getElementById('panel-overlay').classList.remove('open');
 }
 
 function toggleDdBook(id) {
@@ -6674,10 +6109,7 @@ function toggleDdBook(id) {
   }
 }
 
-function ddNav(id) {
-  document.getElementById('nav-dropdown').classList.remove('open');
-  navTo(id);
-}
+function ddNav(id) { closeNavPanel(); navTo(id); }
 
 // Close dropdown when clicking outside
 
@@ -6709,31 +6141,8 @@ document.addEventListener('keydown', function(e) {
   else if (e.key === 's' || e.key === 'S') { openSearch(); }
   else if (e.key === 'n' || e.key === 'N') { openAnnotationsPanel(); }
   else if (e.key === 'g' || e.key === 'G') { openGlossary(); }
-  else if (e.key === 'm' || e.key === 'M') { toggleDrawer(); }
+  else if (e.key === 'm' || e.key === 'M') { toggleNavDropdown(); }
 });
-
-// Auto-expand current book in drawer when navigating
-(function() {
-  var bookPrefixMap = {
-    'ch': 'nephi1', '2n-ch': 'nephi2', 'jc-ch': 'jacob',
-    'mo-ch': 'mo', 'al-ch': 'al', 'he-ch': 'he',
-    '3n-ch': '3n', 'mm-ch': 'mm', 'et-ch': 'et', 'mr-ch': 'mr'
-  };
-  var origUpdate2 = window.updateNavButtons;
-  window.updateNavButtons = function() {
-    if (origUpdate2) origUpdate2();
-    if (typeof currentChapterId === 'undefined' || !currentChapterId) return;
-    for (var prefix in bookPrefixMap) {
-      if (currentChapterId.indexOf(prefix) === 0) {
-        var grid = document.getElementById('grid-' + bookPrefixMap[prefix]);
-        if (grid && grid.style.display === 'none') {
-          toggleBook(bookPrefixMap[prefix]);
-        }
-        break;
-      }
-    }
-  };
-})();
 
 // Fix setMode to scope button selection to controls-bottom only
 (function() {

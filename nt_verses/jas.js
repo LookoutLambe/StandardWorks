@@ -1,7 +1,7 @@
 // nt_verses/jas.js — James verse data
 (function() {
 var jas_ch1Verses = [
-  { num:"א", words:[["יַעֲקֹב","James/Jacob"],["עֶבֶד","servant-of"],["אֱלֹהִים","God"],["וַאֲדֹנֵינוּ","and-lord-our"],["יֵשׁוּעַ","Yeshua"],["הַמָּשִׂיחַ","the-Messiah"],["שֹׁאֵל","ask"],["לִשְׁלוֹם","for-the-welfare-of"],["שְׁנֵים","two"],["עָשָׂר","[compound]"],["הַשְּׁבָטִים","the-tribes"],["שֶּׁבַּגּוֹלָה","that-in the-exile"],["׃",""]] },
+  { num:"א", words:[["יַעֲקֹב","James/Jacob"],["עֶבֶד","servant-of"],["אֱלֹהִים","God"],["וַאֲדֹנֵינוּ","and-lord-our"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׂיחַ","the-Messiah"],["שֹׁאֵל","ask"],["לִשְׁלוֹם","for-the-welfare-of"],["שְׁנֵים","two"],["עָשָׂר","[compound]"],["הַשְּׁבָטִים","the-tribes"],["שֶּׁבַּגּוֹלָה","that-in the-exile"],["׃",""]] },
   { num:"ב", words:[["אַךְ","but"],["לְשִׂמְחָה","to-their-joy"],["חִשְׁבוּ","think-of"],["לָכֶם","to-you"],["אֶחָי","brothers-my"],["כַּאֲשֶׁר","when/as"],["תָּבֹאוּ","should-enter"],["בְּנִסְיֹנוֹת","in-trials"],["שׁוֹנִים","divers"],["׃",""]] },
   { num:"ג", words:[["מִפְּנֵי","because-of"],["שֶׁיֹּדְעִים","that-knowledgeable"],["אַתֶּם","you-are"],["כִּי־בֹחַן","because-it has been tested"],["אֱמוּנַתְכֶם","your-faith"],["מֵבִיא","brings"],["לִידֵי","unto"],["סַבְלָנוּת","patience"],["׃",""]] },
   { num:"ד", words:[["וְהַסַּבְלָנוּת","and-the-patience"],["שְׁלֵמָה","complete/perfect"],["תִּהְיֶה","shall-be"],["בְּפָעֳלָהּ","in-worked"],["לְמַעַן","in-order-that"],["תִּהְיוּ","you-may-stand"],["שְׁלֵמִים","perfect"],["וּתְמִימִים","and-blameless"],["וְלֹא","and-not"],["תַחְסְרוּ","you-lack"],["כָּל־דָּבָר","all-things"],["׃",""]] },
@@ -32,7 +32,7 @@ var jas_ch1Verses = [
 renderVerseSet(jas_ch1Verses, 'jas-ch1-verses');
 
 var jas_ch2Verses = [
-  { num:"א", words:[["אַחַי","my-brothers"],["אַל־יְהִי","do-not-let-this-be"],["מַשּׂא","usury"],["פָנִים","man"],["בֶּאֱמוּנַתְכֶם","in-your-faith"],["בְּיֵשׁוּעַ","in-Yeshua"],["הַמָּשִׁיחַ","the-Messiah"],["אֲדֹנֵינוּ","our-Lord"],["אֲדוֹן","the-master-of"],["הַכָּבוֹד","the-glorious"],["׃",""]] },
+  { num:"א", words:[["אַחַי","my-brothers"],["אַל־יְהִי","do-not-let-this-be"],["מַשּׂא","usury"],["פָנִים","man"],["בֶּאֱמוּנַתְכֶם","in-your-faith"],["בְּיֵשׁוּעַ","in-Jesus"],["הַמָּשִׁיחַ","the-Messiah"],["אֲדֹנֵינוּ","our-Lord"],["אֲדוֹן","the-master-of"],["הַכָּבוֹד","the-glorious"],["׃",""]] },
   { num:"ב", words:[["כִּי","because"],["אִם־יָבוֹא","if-comes"],["אִישׁ","man-of"],["לְבֵית","to-house-of"],["הַכְּנֵסֶת","the-assembly"],["שֶׁלָּכֶם","that-you"],["וְטַבְּעֹת","and-rings of"],["זָהָב","gold"],["עַל־יָדָיו","upon-His-hands"],["וְהוּא","and-it"],["לָבוּשׁ","clothed"],["לְבֻשֵׁי","clothed of"],["מִכְלוֹל","perfection"],["וּבָא","and-come"],["שָׁמָּה","there"],["גַּם־אִישׁ","also-man-of"],["עָנִי","poor"],["בִּבְגָדִים","in-garments"],["צוֹאִים","filthy"],["׃",""]] },
   { num:"ג", words:[["וּפְנִיתֶם","and-you-turn"],["אֶל־הַלָּבוּשׁ","to-the-clothing"],["לְבֻשֵׁי","clothed of"],["מִכְלוֹל","perfection"],["וַאֲמַרְתֶּם","and-you-shall-say"],["לוֹ","him"],["שֶׁב־לְךָ","dwell-for-you"],["הֵנָּה","hither"],["בְּכָבוֹד","in-glory"],["וְלֶעָנִי","and-for the-poor person"],["תֹאמְרוּ","you-say"],["עֲמָד־שָׁם","stand-there-is"],["אוֹ","or"],["שֶׁב־פֹּה","dwell-here"],["מִתַּחַת","from-beneath"],["לַהֲדֹם","to-the footstool of"],["רַגְלָי","feet-my"],["׃",""]] },
   { num:"ד", words:[["הֲלֹא","do-not"],["לֵב","heart"],["וָלֵב","and-a heart"],["לָכֶם","to-you"],["וְהִנְּכֶם","and-you-are"],["שֹׁפְטִים","judges"],["בַּעֲלֵי","they-are"],["מַחֲשָׁבוֹת","purposes-of"],["רָעוֹת","wild"],["׃",""]] },
