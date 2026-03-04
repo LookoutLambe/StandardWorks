@@ -1,7 +1,7 @@
 // nt_verses/mark.js — Mark verse data
 (function() {
 var mark_ch1Verses = [
-  { num:"א", words:[["תְּחִלַּת","beginning-of"],["בְּשׂוֹרַת","tidings-of"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׁיחַ","the-Messiah"],["בֶּן־הָאֱלֹהִים","Son-of-God"],["׃",""]] },
+  { num:"א", words:[["תְּחִלַּת","the-beginning"],["בְּשׂוֹרַת","of-the-gospel"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׁיחַ","the-Messiah"],["בֶּן־הָאֱלֹהִים","Son-of-God"],["׃",""]] },
   { num:"ב", words:[["כַּכָּתוּב","according-to-that-which-is-written"],["בַּנְּבִיאִים","the-prophets"],["הִנְנִי","behold-I"],["שֹׁלֵחַ","sent"],["מַלְאָכִי","my-messenger"],["לְפָנֶיךָ","before-you"],["וּפִנָּה","and-he will make clear"],["דַּרְכֶּךָ","your-way"],["׃",""]] },
   { num:"ג", words:[["קוֹל","voice-of"],["קוֹרֵא","calling"],["בַמִּדְבָּר","in-the-wilderness"],["פַּנּוּ","prepare-ye"],["דֶּרֶךְ","through"],["יְהוָֹה","the-Lord"],["יַשְּׁרוּ","make straight"],["מְסִלּוֹתָיו","His-paths"],["׃",""]] },
   { num:"ד", words:[["יוֹחָנָן","John"],["הָיָה","was"],["טֹבֵל","one who dips"],["בַּמִּדְבָּר","in-the-wilderness"],["וְקוֹרֵא","and-proclaiming"],["טְבִילַת","baptism-of"],["הַתְּשׁוּבָה","the-repentance"],["לִסְלִיחַת","for-a-remission-of"],["חֲטָאִים","sins"],["׃",""]] },
