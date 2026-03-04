@@ -745,7 +745,7 @@
           loadExternalInterlinear(refKey, card);
         }
 
-        // Add "View in Hebrew" link for cross-volume references
+        // Add "Open Full Chapter" link for cross-volume references
         if (refKey && !isInternal) {
           var crossUrl = buildCrossVolumeUrl(refKey, sourceVerseKey);
           if (crossUrl) {
@@ -761,7 +761,7 @@
               };
             })(sourceVerseKey);
             crossLink.style.cssText = 'color:var(--accent,#c8a84e);text-decoration:none;font-weight:600;';
-            crossLink.textContent = 'View in Hebrew \u2192';
+            crossLink.textContent = 'Open Full Chapter \u2192';
             crossDiv.appendChild(crossLink);
             card.appendChild(crossDiv);
           }
@@ -924,7 +924,7 @@
               loadExternalInterlinear(rk, card);
             }
 
-            // Add "View in Hebrew" link for cross-volume references
+            // Add "Open Full Chapter" link for cross-volume references
             if (rk) {
               var cUrl = buildCrossVolumeUrl(rk, e.verseKey);
               if (cUrl) {
@@ -940,7 +940,7 @@
                   };
                 })(e.verseKey);
                 cLink.style.cssText = 'color:var(--accent,#c8a84e);text-decoration:none;font-weight:600;';
-                cLink.textContent = 'View in Hebrew \u2192';
+                cLink.textContent = 'Open Full Chapter \u2192';
                 cDiv.appendChild(cLink);
                 card.appendChild(cDiv);
               }
