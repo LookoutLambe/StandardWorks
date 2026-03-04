@@ -1,7 +1,7 @@
 // nt_verses/php.js — Philippians verse data
 (function() {
 var php_ch1Verses = [
-  { num:"א", words:[["פּוֹלוֹס","Paul"],["וְטִימוֹתִיּוֹס","and-Timothy"],["עַבְדֵי","servants-of"],["הַמָּשִׁיחַ","the-Messiah"],["יֵשׁוּעַ","Jesus"],["אֶל־כָּל־הַקְּדשִׁים","to-all-the-saints"],["בַּמָּשִׁיחַ","in-the-Messiah"],["יֵשׁוּעַ","Jesus"],["אֲשֶׁר","whose"],["הֵם","they"],["בְּפִילִפִּי","in-Philippi"],["עִם־הַהֶגְמוֹנִם","with-the-bishops"],["וְהַשַּׁמָּשִׁים","and-the-deacons"],["׃",""]] },
+  { num:"א", words:[["פּוֹלוֹס","Paul"],["וְטִימוֹתִיּוֹס","and-Timothy"],["עַבְדֵי","servants-of"],["הַמָּשִׁיחַ","the-Messiah"],["יֵשׁוּעַ","Jesus"],["אֶל־כָּל־הַקְּדוֹשִׁים","to-all-the-saints"],["בַּמָּשִׁיחַ","in-the-Messiah"],["יֵשׁוּעַ","Jesus"],["אֲשֶׁר","whose"],["הֵם","they"],["בְּפִילִפִּי","in-Philippi"],["עִם־הַהֶגְמוֹנִם","with-the-bishops"],["וְהַשַּׁמָּשִׁים","and-the-deacons"],["׃",""]] },
   { num:"ב", words:[["חֶסֶד","grace"],["לָכֶם","to-you"],["וְשָׁלוֹם","and-peace"],["מֵאֵת","from"],["הָאֱלֹהִים","the-God"],["אָבִינוּ","our-father"],["וַאֲדֹנֵינוּ","and-lord-our"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׁיחַ","the-Messiah"],["׃",""]] },
   { num:"ג", words:[["אוֹדֶה","I-thank"],["לֵאלֹהָי","of-my-God"],["מִדֵּי","whenever"],["זָכְרִי","I-remember"],["אֶתְכֶם","you"],["׃",""]] },
   { num:"ד", words:[["וְתָמִיד","and-continually"],["בְּכָל־תְּפִלּוֹתַי","in-all-my-prayers"],["אֶתְחַנֵּן","I-beseech"],["בְּשִׂמְחָה","with-joy"],["בְּעַד","on-behalf-of"],["כֻּלְּכֶם","all-you"],["׃",""]] },
@@ -115,7 +115,7 @@ var php_ch4Verses = [
   { num:"יט", words:[["וֵאלֹהַי","and-my-God"],["הוּא","it-is"],["יְמַלֵּא","should-fill"],["אֶת־כָּל־צָרְכְּכֶם","[ACC]-all-your-needs"],["כְּעשֶׁר","according-to-the-riches-of"],["כְּבוֹדוֹ","His-glory"],["בַּמָּשִׁיחַ","in-the-Messiah"],["יֵשׁוּעַ","Jesus"],["׃",""]] },
   { num:"כ", words:[["וְלֵאלֹהִים","and-God"],["אָבִינוּ","our-father"],["הַכָּבוֹד","the-glory"],["לְעוֹלְמֵי","forever"],["עוֹלָמִים","everlasting"],["אָמֵן","amen"],["׃",""]] },
   { num:"כא", words:[["שַׁאֲלוּ","greet"],["לִשְׁלוֹם","for-the-welfare-of"],["כָּל־קָדוֹשׁ","every-saint"],["בַּמָּשִׁיחַ","in-the-Messiah"],["יֵשׁוּעַ","Jesus"],["הָאַחִים","the-brethren"],["אֲשֶׁר","whose"],["עִמִּי","with-me"],["שֹׁאֲלִים","asking"],["לִשְׁלוֹמְכֶם","for-your-peace"],["׃",""]] },
-  { num:"כב", words:[["כָּל־הַקְּדשִׁים","all-the-saints"],["שֹׁאֲלִים","asking"],["לִשְׁלוֹמְכֶם","for-your-peace"],["וּבְיוֹתֵר","and-in-more"],["שֶׁל־בֵּית","of-house-of"],["קֵיסָר","Caesar"],["׃",""]] },
+  { num:"כב", words:[["כָּל־הַקְּדוֹשִׁים","all-the-saints"],["שֹׁאֲלִים","asking"],["לִשְׁלוֹמְכֶם","for-your-peace"],["וּבְיוֹתֵר","and-in-more"],["שֶׁל־בֵּית","of-house-of"],["קֵיסָר","Caesar"],["׃",""]] },
   { num:"כג", words:[["חֶסֶד","the-grace-of"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׁיחַ","the-Messiah"],["אֲדֹנֵינוּ","our-Lord"],["עִם","with"],["רוּחֲכֶם","your-spirit"],["אָמֵן","amen"],["׃",""]] },
 ];
 renderVerseSet(php_ch4Verses, 'php-ch4-verses');
