@@ -1,7 +1,7 @@
 // nt_verses/jas.js — James verse data
 (function() {
 var jas_ch1Verses = [
-  { num:"א", words:[["יַעֲקֹב","James/Jacob"],["עֶבֶד","servant-of"],["אֱלֹהִים","God"],["וַאֲדֹנֵינוּ","and-lord-our"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׂיחַ","the-Messiah"],["שֹׁאֵל","ask"],["לִשְׁלוֹם","for-the-welfare-of"],["שְׁנֵים","two"],["עָשָׂר","[compound]"],["הַשְּׁבָטִים","the-tribes"],["שֶּׁבַּגּוֹלָה","that-in the-exile"],["׃",""]] },
+  { num:"א", words:[["יַעֲקֹב","James/Jacob"],["עֶבֶד","servant-of"],["אֱלֹהִים","God"],["וַאֲדֹנֵינוּ","and-lord-our"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׂיחַ","the-Messiah"],["שֹׁאֵל","ask"],["לִשְׁלוֹם","for-the-welfare-of"],["שְׁנֵים־עָשָׂר","twelve"],["הַשְּׁבָטִים","the-tribes"],["שֶּׁבַּגּוֹלָה","that-in the-exile"],["׃",""]] },
   { num:"ב", words:[["אַךְ","but"],["לְשִׂמְחָה","to-their-joy"],["חִשְׁבוּ","think-of"],["לָכֶם","to-you"],["אֶחָי","brothers-my"],["כַּאֲשֶׁר","when/as"],["תָּבֹאוּ","should-enter"],["בְּנִסְיֹנוֹת","in-trials"],["שׁוֹנִים","divers"],["׃",""]] },
   { num:"ג", words:[["מִפְּנֵי","because-of"],["שֶׁיֹּדְעִים","that-knowledgeable"],["אַתֶּם","you-are"],["כִּי־בֹחַן","because-it has been tested"],["אֱמוּנַתְכֶם","your-faith"],["מֵבִיא","brings"],["לִידֵי","unto"],["סַבְלָנוּת","patience"],["׃",""]] },
   { num:"ד", words:[["וְהַסַּבְלָנוּת","and-the-patience"],["שְׁלֵמָה","complete/perfect"],["תִּהְיֶה","shall-be"],["בְּפָעֳלָהּ","in-worked"],["לְמַעַן","in-order-that"],["תִּהְיוּ","you-may-stand"],["שְׁלֵמִים","perfect"],["וּתְמִימִים","and-blameless"],["וְלֹא","and-not"],["תַחְסְרוּ","you-lack"],["כָּל־דָּבָר","all-things"],["׃",""]] },
