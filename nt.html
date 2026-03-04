@@ -960,7 +960,7 @@ function getChapterLabel(id) {
       div.className = 'chapter-panel';
       div.id = 'panel-' + panelId;
       div.style.display = 'none';
-      div.innerHTML = '<div class="chapter-heading"><h2>\u05E4\u05B6\u05BC\u05E8\u05B6\u05E7 ' + toHebNum(ch) + '</h2>' +
+      div.innerHTML = '<div class="chapter-heading"><h2>\u05E4\u05E8\u05E7 ' + toHebNum(ch) + '</h2>' +
         '<div class="chapter-label-en">Chapter ' + ch + '</div></div>' +
         '<div id="' + panelId + '-verses"></div>';
       mainContent.appendChild(div);
@@ -1079,7 +1079,7 @@ function navTo(id, slideDir) {
     var info = getBookChapter(id);
     if (info) {
       titleEl.textContent = info.bookData.he + ' / ' + info.bookData.en;
-      subEl.textContent = '\u05E4\u05B6\u05BC\u05E8\u05B6\u05E7 ' + toHebNum(info.chapter) + ' / Chapter ' + info.chapter;
+      subEl.textContent = '\u05E4\u05E8\u05E7 ' + toHebNum(info.chapter) + ' / Chapter ' + info.chapter;
       subEl.style.display = '';
     }
     _ensureChapterRendered(id);
