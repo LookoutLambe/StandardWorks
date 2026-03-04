@@ -193,10 +193,13 @@
     var wordUnits = verseDiv.querySelectorAll('.word-unit');
     if (wordUnits.length === 0) return '';
     var html = '<div class="xref-ref-content">';
+    var first = true;
     wordUnits.forEach(function(wu) {
       var hwEl = wu.querySelector('.hw');
       var glEl = wu.querySelector('.gl');
       if (hwEl) {
+        if (!first) html += '<span class="xref-ref-arr">\u2039</span>';
+        first = false;
         html += '<span class="xref-ref-word">';
         html += '<span class="hw">' + hwEl.textContent + '</span>';
         if (glEl) html += '<span class="en">' + glEl.textContent + '</span>';

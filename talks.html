@@ -296,6 +296,7 @@ body.dark-mode #scripture-panel { background: #333333; border-color: #d4af37; }
 }
 .sp-hw-unit .hw { font-family: 'SBL Hebrew', 'David Libre', serif; font-size: 1.15em; color: var(--ink); }
 .sp-hw-unit .gl { font-size: 0.6em; color: var(--ink-light); direction: ltr; }
+.sp-arr { display: inline-flex; align-items: center; color: var(--accent); opacity: 0.5; font-size: 1.1em; padding: 0 1px; }
 .sp-loading { padding: 16px; text-align: center; color: var(--ink-light); font-style: italic; font-size: 0.9em; }
 
 /* ========== BACK LINK ========== */
@@ -669,9 +670,12 @@ body.dark-mode #return-link:hover { background: #c8a84e !important; }
   function renderInterlinearVerse(verseData) {
     if (!verseData || !verseData.words) return '';
     var html = '<div class="sp-interlinear">';
+    var first = true;
     verseData.words.forEach(function(w) {
       var hw = w[0], gl = w[1] || '';
       if (hw === '׃' || hw === '') return;
+      if (!first) html += '<span class="sp-arr">\u2039</span>';
+      first = false;
       html += '<span class="sp-hw-unit"><span class="hw">' + hw + '</span>';
       if (gl) html += '<span class="gl">' + gl.replace(/-/g, ' ') + '</span>';
       html += '</span>';
