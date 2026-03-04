@@ -722,12 +722,14 @@
         card.appendChild(titleDiv);
 
         // Show verse content
+        var hasInterlinear = false;
         if (isInternal) {
           var intHtml = getInternalVerseHtml(refKey);
           if (intHtml) {
             var intDiv = document.createElement('div');
             intDiv.innerHTML = intHtml;
             card.appendChild(intDiv);
+            hasInterlinear = true;
           }
         }
         // Try external verse lookup (scripture_verses.js)
@@ -738,8 +740,8 @@
           card.appendChild(extDiv);
         }
 
-        // Load Hebrew interlinear for cross-volume references
-        if (refKey && !isInternal) {
+        // Load Hebrew interlinear dynamically if not already shown from DOM
+        if (refKey && !hasInterlinear) {
           loadExternalInterlinear(refKey, card);
         }
 
