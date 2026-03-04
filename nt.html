@@ -84,7 +84,7 @@ body {
 .arr-tl { font-size: 0.78em; line-height: 1.2; margin-top: 2px; visibility: visible; transform: scale(1.8); }
 .arr-gl { font-size: 0.72em; font-style: normal; line-height: 1.2; margin-top: 1px; visibility: visible; transform: scale(1.8); }
 .word-unit.sof + .arr { display: none; }
-.word-unit.sof .hw::after { content: ' ׃'; color: var(--rule); }
+.word-unit.sof .hw::after { content: ' ׃'; color: #1a2744; }
 body.hide-translit .tl, body.hide-translit .arr-tl { display: none; }
 body.hide-gloss .gl, body.hide-gloss .arr-gl, body.hide-gloss .tl, body.hide-gloss .arr-tl { display: none; }
 body.hide-gloss .hw { font-size: 2.1em; }
@@ -355,6 +355,7 @@ body.dark-mode {
   --row-alt: #2e2e2e;
 }
 body.dark-mode .hw { color: var(--ink); }
+body.dark-mode .word-unit.sof .hw::after { color: var(--ink); }
 body.dark-mode .gl { color: var(--gloss); }
 body.dark-mode .tl { color: var(--gloss); }
 body.dark-mode .page { background: #333333; }
