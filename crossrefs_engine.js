@@ -1223,12 +1223,18 @@
   // ══════════════════════════════════════════════════════════════
   // ── RETURN NAVIGATION — store current page on departure ──
   // ══════════════════════════════════════════════════════════════
-  window.addEventListener('beforeunload', function() {
+  function _storeReturnData() {
     // If user clicked the return link, don't overwrite
     if (sessionStorage.getItem('xref-returning')) return;
     // If a cross-ref onclick already set specific verse info, don't overwrite
     if (sessionStorage.getItem('xref-return-set')) {
       sessionStorage.removeItem('xref-return-set');
+      return;
+    }
+    // If we already have valid return data pointing to a DIFFERENT page, preserve it.
+    // This prevents page refresh from destroying cross-page return data.
+    var existing = sessionStorage.getItem('xref-return-from');
+    if (existing && existing.split('#')[0] !== window.location.pathname) {
       return;
     }
     sessionStorage.setItem('xref-return-from', window.location.pathname + window.location.hash);
@@ -1243,6 +1249,9 @@
       label = titleParts.length > 1 ? titleParts[titleParts.length - 1].trim() : document.title;
     }
     sessionStorage.setItem('xref-return-label', label);
-  });
+  }
+  window.addEventListener('beforeunload', _storeReturnData);
+  // pagehide fires reliably on mobile Safari/Chrome (beforeunload does not)
+  window.addEventListener('pagehide', _storeReturnData);
 
 })();
