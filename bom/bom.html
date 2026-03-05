@@ -3702,6 +3702,7 @@ body.dark-mode #return-banner a:hover { background:#c8a84e; }
 <script src="scripture_verses.js"></script>
 <script src="topical_guide.js"></script>
 <script src="../strongs_lookup.js"></script>
+<script src="../strongs_roots.js"></script>
 <script>
 
 // CHAPTER 1 VERSES
@@ -6465,13 +6466,22 @@ document.addEventListener('keydown', function(e) {
 
   // Get root key for a Hebrew word
   function getRoot(hw) {
-    // Check root map first (exact surface form)
+    // Try Strong's-based root first
+    if (window._strongsLookup && window._strongsRoots) {
+      var stripped = stripPrefixes(hw);
+      var sNum = _strongsLookup[hw] || _strongsLookup[stripped] || _strongsLookup[stripNikkud(hw)] || _strongsLookup[stripNikkud(stripped)] || '';
+      if (sNum && _strongsRoots[sNum]) {
+        var entry = _strongsRoots[sNum];
+        return entry.r || sNum;
+      }
+    }
+    // Fallback: Check root map (exact surface form)
     if (rootMap[hw]) return rootMap[hw];
     // Strip prefixes and check again
-    var stripped = stripPrefixes(hw);
-    if (rootMap[stripped]) return rootMap[stripped];
+    var stripped2 = stripPrefixes(hw);
+    if (rootMap[stripped2]) return rootMap[stripped2];
     // Extract morphological root from consonantal form
-    return extractRoot(stripNikkud(stripped));
+    return extractRoot(stripNikkud(stripped2));
   }
 
   // Build frequency map by ROOT from _verseRegistry data (works with lazy DOM rendering)
@@ -6550,9 +6560,24 @@ document.addEventListener('keydown', function(e) {
     // Root-based total (the main count)
     if (rInfo) {
       var verseCount = rInfo.verseRefs ? Object.keys(rInfo.verseRefs).length : 0;
-      // Get root meaning from curated glossary or derive from top glosses
-      var curatedRoot = (window._rootGlossaryData || {})[root] || {};
-      var rootMeaning = curatedRoot.meaning || '';
+      var rootDisplay = '', rootMeaning = '';
+      var isStrongsRoot = /^H\d+$/.test(root) && window._strongsRoots;
+      if (isStrongsRoot) {
+        var rootEntry = _strongsRoots[root];
+        if (rootEntry) {
+          rootDisplay = '<span style="font-family:SBL Hebrew,serif">' + rootEntry.w + '</span> <span style="font-size:0.85em;opacity:0.7;">(' + rootEntry.x + ')</span>';
+          rootMeaning = rootEntry.g || '';
+          if (!rootMeaning) {
+            var consRoot = stripNikkud(rootEntry.w);
+            var curatedRoot = (window._rootGlossaryData || {})[consRoot] || {};
+            rootMeaning = curatedRoot.meaning || '';
+          }
+        }
+      } else {
+        rootDisplay = '(<span style="font-family:SBL Hebrew,serif">' + toSofit(root) + '</span>) <span style="font-size:0.85em;opacity:0.7;">' + transliterate(toSofit(root)) + '</span>';
+        var curatedRoot = (window._rootGlossaryData || {})[root] || {};
+        rootMeaning = curatedRoot.meaning || '';
+      }
       if (!rootMeaning) {
         // Derive from top glosses: collect unique base meanings
         var glossPairs = Object.entries(rInfo.glosses).sort(function(a,b) { return b[1]-a[1]; });
@@ -6564,7 +6589,7 @@ document.addEventListener('keydown', function(e) {
         });
         rootMeaning = meanings.slice(0, 4).join(', ');
       }
-      detailHtml += '<span style="cursor:pointer;text-decoration:underline;" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">Root (<span style="font-family:SBL Hebrew,serif">' + toSofit(root) + '</span>) <span style="font-size:0.85em;opacity:0.7;">' + transliterate(toSofit(root)) + '</span></span> — ' + rInfo.count + ' uses in ' + verseCount + ' verses';
+      detailHtml += '<span style="cursor:pointer;text-decoration:underline;" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">Root ' + rootDisplay + '</span> — ' + rInfo.count + ' uses in ' + verseCount + ' verses';
       if (rootMeaning) {
         detailHtml += '<br><span style="font-style:italic;color:#b0a890;font-size:0.9em;">' + rootMeaning + '</span>';
       }
@@ -6869,7 +6894,17 @@ function buildGlossaryIndex() {
   for (var root in rf) {
     if (glossaryExclude.has(root)) continue;
     var rInfo = rf[root];
+    var displayHeb = root, displayTranslit = '';
     var cInfo = curated[root] || {};
+    if (/^H\d+$/.test(root) && window._strongsRoots && _strongsRoots[root]) {
+      var sEntry = _strongsRoots[root];
+      displayHeb = sEntry.w;
+      displayTranslit = sEntry.x || '';
+      if (!cInfo.meaning) {
+        var consRoot = (sEntry.w || '').replace(/[\u0591-\u05C7]/g, '');
+        cInfo = curated[consRoot] || {};
+      }
+    }
     // Get top gloss as auto-meaning
     var topGloss = '', topCount = 0;
     for (var g in rInfo.glosses) {
@@ -6877,7 +6912,7 @@ function buildGlossaryIndex() {
     }
     var autoMeaning = topGloss.replace(/^(and-|the-|to-|in-|from-|as-|that-|by-|for-|with-|a-|an-)+/g,'').replace(/-/g,' ');
     glossaryIndex.push({
-      root: root,
+      root: root, displayHeb: displayHeb, displayTranslit: displayTranslit,
       meaning: cInfo.meaning || autoMeaning || '',
       category: cInfo.category || 'Uncategorized',
       count: rInfo.count,
@@ -6918,11 +6953,11 @@ function renderGlossaryList() {
 
   var filtered = glossaryIndex.filter(function(e) {
     if (searchVal) {
-      // Strip Hebrew diacritics (nikkud) and normalize sofit for root comparison
       var svNorm = normFinals(searchVal.replace(/[\u0591-\u05C7]/g, ''));
       var rootNorm = e.root.replace(/[\u0591-\u05C7]/g, '');
-      // Use exact-start match for roots (not substring) to avoid false matches
-      return rootNorm.indexOf(svNorm) === 0 ||
+      var dispNorm = (e.displayHeb || '').replace(/[\u0591-\u05C7]/g, '');
+      return rootNorm.indexOf(svNorm) === 0 || dispNorm.indexOf(svNorm) === 0 ||
+             e.root.toLowerCase().indexOf(searchVal) >= 0 ||
              e.meaning.toLowerCase().indexOf(searchVal) >= 0 ||
              Object.keys(e.glosses).some(function(g) { return g.toLowerCase().indexOf(searchVal) >= 0; });
     }
@@ -7047,10 +7082,12 @@ function renderGlossaryEntry(entry) {
     biblHtml += '</div></div>';
   }
 
+  var rootHeb = entry.displayHeb || toSofit(entry.root);
+  var rootTranslit = entry.displayTranslit || transliterate(toSofit(entry.root));
   return '<div class="glossary-entry" onclick="toggleGlossaryEntry(this)">' +
     '<div class="glossary-entry-header">' +
-      '<span class="glossary-root">' + toSofit(entry.root) + '</span>' +
-      '<span style="font-size:0.75em;opacity:0.6;margin-left:6px;">' + transliterate(toSofit(entry.root)) + '</span>' +
+      '<span class="glossary-root" data-root-key="' + entry.root + '">' + rootHeb + '</span>' +
+      '<span style="font-size:0.75em;opacity:0.6;margin-left:6px;">' + rootTranslit + '</span>' +
       '<span class="glossary-count">' + entry.count + 'x</span>' +
     '</div>' +
     '<div class="glossary-meaning">' + (entry.meaning || '<em style="color:var(--ink-light)">(tap to expand)</em>') + '</div>' +
@@ -7108,14 +7145,18 @@ function clearHighlightedWords() {
 function openGlossaryAtRoot(rootKey) {
   closePopup();
   buildGlossaryIndex();
-  document.getElementById('glossary-search').value = rootKey;
+  var searchTerm = rootKey;
+  if (/^H\d+$/.test(rootKey) && window._strongsRoots && _strongsRoots[rootKey]) {
+    searchTerm = _strongsRoots[rootKey].w;
+  }
+  document.getElementById('glossary-search').value = searchTerm;
   renderGlossaryList();
   document.getElementById('glossary-panel').classList.add('open');
   setTimeout(function() {
     var entries = document.querySelectorAll('#glossary-list .glossary-entry');
     for (var i = 0; i < entries.length; i++) {
       var rootEl = entries[i].querySelector('.glossary-root');
-      if (rootEl && rootEl.textContent === rootKey) {
+      if (rootEl && (rootEl.getAttribute('data-root-key') === rootKey || rootEl.textContent === rootKey)) {
         entries[i].classList.add('expanded');
         entries[i].scrollIntoView({ behavior: 'smooth', block: 'start' });
         break;

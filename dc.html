@@ -1055,6 +1055,7 @@ try {
 
 <!-- Strong's lookup + Root glossary data -->
 <script src="strongs_lookup.js"></script>
+<script src="strongs_roots.js"></script>
 <script src="bom/roots_glossary.js"></script>
 
 <!-- Verse data files -->
@@ -1476,10 +1477,20 @@ var rootMap = {
 };
 
 function getRoot(hw) {
+  // Try Strong's-based root first
+  if (window._strongsLookup && window._strongsRoots) {
+    var stripped = stripPrefixes(hw);
+    var sNum = _strongsLookup[hw] || _strongsLookup[stripped] || _strongsLookup[_stripNikkud(hw)] || _strongsLookup[_stripNikkud(stripped)] || '';
+    if (sNum && _strongsRoots[sNum]) {
+      var entry = _strongsRoots[sNum];
+      return entry.r || sNum; // direct parent H-number, or self if primitive
+    }
+  }
+  // Fallback to old algorithmic root
   if (rootMap[hw]) return rootMap[hw];
-  var stripped = stripPrefixes(hw);
-  if (rootMap[stripped]) return rootMap[stripped];
-  return extractRoot(_stripNikkud(stripped));
+  var stripped2 = stripPrefixes(hw);
+  if (rootMap[stripped2]) return rootMap[stripped2];
+  return extractRoot(_stripNikkud(stripped2));
 }
 
 // Build frequency maps by root
@@ -1550,8 +1561,24 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
     var detailHtml = '';
     if (rInfo) {
       var verseCount = rInfo.verseRefs ? Object.keys(rInfo.verseRefs).length : 0;
-      var curatedRoot = (window._rootGlossaryData || {})[root] || {};
-      var rootMeaning = curatedRoot.meaning || '';
+      var rootDisplay = '', rootMeaning = '';
+      var isStrongsRoot = /^H\d+$/.test(root) && window._strongsRoots;
+      if (isStrongsRoot) {
+        var rootEntry = _strongsRoots[root];
+        if (rootEntry) {
+          rootDisplay = '<span style="font-family:David Libre,serif">' + rootEntry.w + '</span> <span style="font-size:0.85em;opacity:0.7;">(' + rootEntry.x + ')</span>';
+          rootMeaning = rootEntry.g || '';
+          if (!rootMeaning) {
+            var consRoot = _stripNikkud(rootEntry.w);
+            var curatedRoot = (window._rootGlossaryData || {})[consRoot] || {};
+            rootMeaning = curatedRoot.meaning || '';
+          }
+        }
+      } else {
+        rootDisplay = '(<span style="font-family:David Libre,serif">' + toSofit(root) + '</span>) <span style="font-size:0.85em;opacity:0.7;">' + transliterate(toSofit(root)) + '</span>';
+        var curatedRoot = (window._rootGlossaryData || {})[root] || {};
+        rootMeaning = curatedRoot.meaning || '';
+      }
       if (!rootMeaning) {
         var glossPairs = Object.entries(rInfo.glosses).sort(function(a,b) { return b[1]-a[1]; });
         var seen = {}, meanings = [];
@@ -1561,7 +1588,7 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
         });
         rootMeaning = meanings.slice(0, 4).join(', ');
       }
-      detailHtml += '<span style="cursor:pointer;text-decoration:underline;" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">Root (<span style="font-family:David Libre,serif">' + toSofit(root) + '</span>) <span style="font-size:0.85em;opacity:0.7;">' + transliterate(toSofit(root)) + '</span></span> \u2014 ' + rInfo.count + ' uses in ' + verseCount + ' verses';
+      detailHtml += '<span style="cursor:pointer;text-decoration:underline;" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">Root ' + rootDisplay + '</span> \u2014 ' + rInfo.count + ' uses in ' + verseCount + ' verses';
       if (rootMeaning) detailHtml += '<br><span style="font-style:italic;color:var(--ink-light);font-size:0.9em;">' + rootMeaning + '</span>';
       var formKeys = Object.keys(rInfo.forms);
       if (formKeys.length > 1) {
@@ -1930,12 +1957,23 @@ function buildGlossaryIndex() {
   for (var root in rootFreq) {
     if (glossaryExclude.has(root)) continue;
     var rInfo = rootFreq[root];
+    var displayHeb = root, displayTranslit = '';
     var cInfo = curated[root] || {};
+    if (/^H\d+$/.test(root) && window._strongsRoots && _strongsRoots[root]) {
+      var sEntry = _strongsRoots[root];
+      displayHeb = sEntry.w;
+      displayTranslit = sEntry.x || '';
+      if (!cInfo.meaning) {
+        var consRoot = _stripNikkud(sEntry.w);
+        cInfo = curated[consRoot] || {};
+      }
+    }
     var topGloss = '', topCount = 0;
     for (var g in rInfo.glosses) { if (rInfo.glosses[g] > topCount) { topCount = rInfo.glosses[g]; topGloss = g; } }
     var autoMeaning = topGloss.replace(/^(and-|the-|to-|in-|from-|as-|that-|by-|for-|with-|a-|an-)+/g,'').replace(/-/g,' ');
     glossaryIndex.push({
-      root: root, meaning: cInfo.meaning || autoMeaning || '', category: cInfo.category || 'Uncategorized',
+      root: root, displayHeb: displayHeb, displayTranslit: displayTranslit,
+      meaning: cInfo.meaning || autoMeaning || '', category: cInfo.category || 'Uncategorized',
       count: rInfo.count, forms: rInfo.forms, glosses: rInfo.glosses,
       exampleVerse: rInfo.exampleVerse || '', verseRefs: rInfo.verseRefs || {}, biblicalRefs: cInfo.biblicalRefs || []
     });
@@ -1970,7 +2008,10 @@ function renderGlossaryList() {
     if (searchVal) {
       var svNorm = normFinals(searchVal.replace(/[\u0591-\u05C7]/g, ''));
       var rootNorm = e.root.replace(/[\u0591-\u05C7]/g, '');
-      return rootNorm.indexOf(svNorm) === 0 || e.meaning.toLowerCase().indexOf(searchVal) >= 0 ||
+      var dispNorm = (e.displayHeb || '').replace(/[\u0591-\u05C7]/g, '');
+      return rootNorm.indexOf(svNorm) === 0 || dispNorm.indexOf(svNorm) === 0 ||
+        e.root.toLowerCase().indexOf(searchVal) >= 0 ||
+        e.meaning.toLowerCase().indexOf(searchVal) >= 0 ||
         Object.keys(e.glosses).some(function(g) { return g.toLowerCase().indexOf(searchVal) >= 0; });
     }
     return true;
@@ -2003,9 +2044,11 @@ function renderGlossaryEntry(entry) {
   var glossList = Object.entries(entry.glosses).sort(function(a,b) { return b[1]-a[1]; }).slice(0,6)
     .map(function(pair) { return '"' + pair[0] + '" (' + pair[1] + 'x)'; }).join(', ');
   var refsHtml = buildVerseRefsHtml(entry.verseRefs || {});
+  var rootHeb = entry.displayHeb || toSofit(entry.root);
+  var rootTranslit = entry.displayTranslit || transliterate(toSofit(entry.root));
   return '<div class="glossary-entry" onclick="toggleGlossaryEntry(this)">' +
-    '<div class="glossary-entry-header"><span class="glossary-root">' + toSofit(entry.root) + '</span>' +
-    '<span style="font-size:0.75em;opacity:0.6;margin-left:6px;">' + transliterate(toSofit(entry.root)) + '</span>' +
+    '<div class="glossary-entry-header"><span class="glossary-root" data-root-key="' + entry.root + '">' + rootHeb + '</span>' +
+    '<span style="font-size:0.75em;opacity:0.6;margin-left:6px;">' + rootTranslit + '</span>' +
     '<span class="glossary-count">' + entry.count + 'x</span></div>' +
     '<div class="glossary-meaning">' + (entry.meaning || '') + '</div>' +
     (entry.category !== 'Uncategorized' ? '<span class="glossary-category-badge">' + entry.category + '</span>' : '') +
@@ -2086,7 +2129,11 @@ function clearHighlightedWords() { document.querySelectorAll('.glossary-highligh
 function openGlossaryAtRoot(rootKey) {
   closePopup();
   buildGlossaryIndex();
-  document.getElementById('glossary-search').value = rootKey;
+  var searchTerm = rootKey;
+  if (/^H\d+$/.test(rootKey) && window._strongsRoots && _strongsRoots[rootKey]) {
+    searchTerm = _strongsRoots[rootKey].w;
+  }
+  document.getElementById('glossary-search').value = searchTerm;
   renderGlossaryList();
   document.getElementById('glossary-panel').classList.add('open');
   document.getElementById('panel-overlay').classList.add('open');
@@ -2094,7 +2141,9 @@ function openGlossaryAtRoot(rootKey) {
     var entries = document.querySelectorAll('#glossary-list .glossary-entry');
     for (var i = 0; i < entries.length; i++) {
       var rootEl = entries[i].querySelector('.glossary-root');
-      if (rootEl && rootEl.textContent === rootKey) { entries[i].classList.add('expanded'); entries[i].scrollIntoView({ behavior: 'smooth', block: 'start' }); break; }
+      if (rootEl && (rootEl.getAttribute('data-root-key') === rootKey || rootEl.textContent === rootKey)) {
+        entries[i].classList.add('expanded'); entries[i].scrollIntoView({ behavior: 'smooth', block: 'start' }); break;
+      }
     }
   }, 100);
 }
