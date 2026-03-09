@@ -161,7 +161,18 @@
     var currentPage = window.location.pathname.split('/').pop() || '';
     if (currentPage === vol.page || currentPage === vol.page.replace('bom/', '')) return null;
 
-    return vol.page + '#' + vol.hash(chapter);
+    // Adjust relative path when navigating from the bom/ subdirectory
+    var pagePath = vol.page;
+    var basePath = window.location.pathname.replace(/[^/]*$/, '');
+    if (basePath.match(/\/bom\/$/)) {
+      if (pagePath.indexOf('bom/') === 0) {
+        pagePath = pagePath.replace('bom/', '');
+      } else {
+        pagePath = '../' + pagePath;
+      }
+    }
+
+    return pagePath + '#' + vol.hash(chapter);
   }
 
   function parseScriptureRef(refText) {
@@ -493,7 +504,30 @@
       console.warn('Cross-refs: No data found (window._volumeCrossrefsData not set)');
       return;
     }
-    window._crossrefMap = window._volumeCrossrefsData;
+    // Filter out TG (Topical Guide) entries and TG refs within other entries
+    var raw = window._volumeCrossrefsData;
+    var filtered = {};
+    for (var key in raw) {
+      var entries = raw[key];
+      var kept = [];
+      for (var i = 0; i < entries.length; i++) {
+        if (entries[i].category === 'tg') continue;
+        var e = entries[i];
+        if (e.refs) {
+          var cleanRefs = [];
+          for (var j = 0; j < e.refs.length; j++) {
+            if (e.refs[j].indexOf('TG ') !== 0) cleanRefs.push(e.refs[j]);
+          }
+          if (cleanRefs.length === 0 && e.refs.length > 0) continue;
+          if (cleanRefs.length !== e.refs.length) {
+            e = { marker: e.marker, text: e.text, refs: cleanRefs, category: e.category };
+          }
+        }
+        kept.push(e);
+      }
+      if (kept.length > 0) filtered[key] = kept;
+    }
+    window._crossrefMap = filtered;
     window._crossrefsLoaded = true;
     console.log('Cross-references loaded:', Object.keys(window._crossrefMap).length, 'verses');
     addCrossRefMarkers();
@@ -641,23 +675,40 @@
 
     var displayText = ref.text || '';
     var engMeaning = '';
+    var xrefTranslit = '';
     if (hebrewRoot) {
-      var glossEntry = window._rootGlossaryData && window._rootGlossaryData[hebrewRoot];
-      engMeaning = glossEntry ? glossEntry.meaning : '';
       displayText = hebrewRoot;
+      // Resolve Strong's H-number roots to Hebrew word + meaning
+      if (/^H\d+$/.test(hebrewRoot) && window._strongsRoots && window._strongsRoots[hebrewRoot]) {
+        var sEntry = window._strongsRoots[hebrewRoot];
+        displayText = sEntry.w || hebrewRoot;
+        xrefTranslit = sEntry.x || '';
+        engMeaning = sEntry.g || '';
+        if (!engMeaning) {
+          var glossEntry = window._rootGlossaryData && window._rootGlossaryData[displayText];
+          if (!glossEntry) {
+            var stripped = displayText.replace(/[\u0591-\u05C7]/g, '');
+            glossEntry = window._rootGlossaryData && window._rootGlossaryData[stripped];
+          }
+          engMeaning = glossEntry ? glossEntry.meaning : '';
+        }
+      } else {
+        var glossEntry = window._rootGlossaryData && window._rootGlossaryData[hebrewRoot];
+        engMeaning = glossEntry ? glossEntry.meaning : '';
+        xrefTranslit = (typeof transliterate === 'function') ? transliterate(hebrewRoot) : '';
+      }
     }
-    var xrefTranslit = (hebrewRoot && typeof transliterate === 'function')
-      ? ' <span style="font-weight:400;font-size:0.75em;opacity:0.7;">' + transliterate(hebrewRoot) + '</span>'
+    var translitHtml = xrefTranslit
+      ? ' <span style="font-weight:400;font-size:0.75em;opacity:0.7;">' + xrefTranslit + '</span>'
       : '';
-    panel.querySelector('.xref-panel-word').innerHTML = displayText + xrefTranslit +
+    panel.querySelector('.xref-panel-word').innerHTML = displayText + translitHtml +
       (engMeaning ? ' <span style="font-weight:400;font-size:0.8em;color:var(--ink-light,#888);">\u2014 ' + engMeaning + '</span>' : '');
 
-    var catLabel = ref.category === 'tg' ? 'Topical Guide' :
-      ref.category === 'cross-ref' ? 'Cross-Reference' :
-      ref.category === 'gst' ? 'Guide to Scriptures' :
+    var catLabel = ref.category === 'cross-ref' ? 'Cross-Reference' :
       ref.category === 'heb' ? 'Hebrew/Greek' :
       ref.category === 'ie' ? 'Explanation' :
       ref.category === 'or' ? 'Alternate Translation' :
+      ref.category === 'trn' ? 'Translation Note' :
       (ref.category || 'Cross-Reference');
     panel.querySelector('.xref-panel-category').textContent = catLabel;
 
@@ -668,6 +719,8 @@
       var lastBookPrefix = '';
       ref.refs.forEach(function(r) {
         var rNorm = r.replace(/\u00a0/g, ' ');
+        // Skip TG (Topical Guide) entries
+        if (rNorm.indexOf('TG ') === 0) return;
 
         // Resolve abbreviated continuation references
         var foundPrefix = '';
@@ -679,6 +732,9 @@
           lastBookPrefix = foundPrefix;
         } else if (/^\d/.test(rNorm) && lastBookPrefix) {
           fullRef = lastBookPrefix + ' ' + rNorm;
+        } else if (!foundPrefix && !/^\d/.test(rNorm)) {
+          // Not a known book abbreviation and not a verse continuation — likely a TG topic
+          return;
         }
 
         var card = document.createElement('div');
@@ -870,10 +926,29 @@
     var panel = document.getElementById('xref-panel');
     if (!panel) return;
 
-    var glossEntry = window._rootGlossaryData && window._rootGlossaryData[root];
-    var engMeaning = glossEntry ? glossEntry.meaning : '';
-    var rootTranslit = (typeof transliterate === 'function') ? transliterate(root) : '';
-    panel.querySelector('.xref-panel-word').innerHTML = root +
+    // Resolve Strong's H-number roots to Hebrew word + meaning
+    var displayRoot = root;
+    var engMeaning = '';
+    var rootTranslit = '';
+    if (/^H\d+$/.test(root) && window._strongsRoots && window._strongsRoots[root]) {
+      var sEntry = window._strongsRoots[root];
+      displayRoot = sEntry.w || root;
+      rootTranslit = sEntry.x || '';
+      engMeaning = sEntry.g || '';
+      if (!engMeaning) {
+        var glossEntry = window._rootGlossaryData && window._rootGlossaryData[displayRoot];
+        if (!glossEntry) {
+          var stripped = displayRoot.replace(/[\u0591-\u05C7]/g, '');
+          glossEntry = window._rootGlossaryData && window._rootGlossaryData[stripped];
+        }
+        engMeaning = glossEntry ? glossEntry.meaning : '';
+      }
+    } else {
+      var glossEntry = window._rootGlossaryData && window._rootGlossaryData[root];
+      engMeaning = glossEntry ? glossEntry.meaning : '';
+      rootTranslit = (typeof transliterate === 'function') ? transliterate(root) : '';
+    }
+    panel.querySelector('.xref-panel-word').innerHTML = displayRoot +
       (rootTranslit ? ' <span style="font-weight:400;font-size:0.75em;opacity:0.7;">' + rootTranslit + '</span>' : '') +
       (engMeaning ? ' <span style="font-weight:400;font-size:0.8em;color:var(--ink-light,#888);">\u2014 ' + engMeaning + '</span>' : '');
     panel.querySelector('.xref-panel-category').textContent = 'Cross-References (' + entries.length + ' markers)';
@@ -888,6 +963,8 @@
       if (e.ref.refs) {
         e.ref.refs.forEach(function(r) {
           var rNorm = r.replace(/\u00a0/g, ' ');
+          // Skip TG (Topical Guide) entries
+          if (rNorm.indexOf('TG ') === 0) return;
           var foundPrefix = '';
           for (var abbr in _abbrToFullBook) {
             if (rNorm.indexOf(abbr) === 0) { foundPrefix = abbr; break; }
@@ -897,6 +974,9 @@
             lastBookPrefix = foundPrefix;
           } else if (/^\d/.test(rNorm) && lastBookPrefix) {
             fullRef = lastBookPrefix + ' ' + rNorm;
+          } else if (!foundPrefix && !/^\d/.test(rNorm)) {
+            // Not a known book abbreviation — likely a TG topic name
+            return;
           }
 
           if (!seen[fullRef]) {
@@ -1060,17 +1140,9 @@
     }
   }
 
-  // ── Wrap addCrossRefMarkers to also apply talk ref markers ──
-  var _origAddCrossRefMarkers = addCrossRefMarkers;
-  function addCrossRefMarkersWithTalks() {
-    _origAddCrossRefMarkers();
-    // Chain talk reference markers after cross-refs
-    setTimeout(addTalkRefMarkers, 200);
-  }
-
   // ── Expose globally ──
   window.loadCrossRefs = loadCrossRefs;
-  window.addCrossRefMarkers = addCrossRefMarkersWithTalks;
+  window.addCrossRefMarkers = addCrossRefMarkers;
   window.openXrefPanel = openXrefPanel;
   window.openRootXrefPanel = openRootXrefPanel;
   window.closeXrefPanel = closeXrefPanel;
@@ -1079,146 +1151,6 @@
 
   // ── Auto-load after delay ──
   setTimeout(loadCrossRefs, 500);
-
-  // ══════════════════════════════════════════════════════════════
-  // ── TALK REFERENCE MARKERS (President Oaks Conference Talks) ──
-  // ══════════════════════════════════════════════════════════════
-
-  /**
-   * Adds talk reference badges to verses that are cited in
-   * President Oaks' conference talks. Requires oaks_scripture_index.js
-   * to be loaded (sets window._oaksScriptureIndex).
-   */
-  function addTalkRefMarkers() {
-    if (!window._oaksScriptureIndex) return;
-
-    var allVerses = document.querySelectorAll('[data-verse-key]');
-    allVerses.forEach(function(verseDiv) {
-      // Skip if already processed
-      if (verseDiv.getAttribute('data-talk-refs-applied')) return;
-
-      var key = verseDiv.getAttribute('data-verse-key');
-      var talkRefs = window._oaksScriptureIndex[key];
-      if (!talkRefs || talkRefs.length === 0) return;
-
-      verseDiv.setAttribute('data-talk-refs-applied', '1');
-
-      // Create a talk badge under the verse number
-      var badge = document.createElement('span');
-      badge.className = 'talk-ref-badge';
-      badge.title = 'Referenced in ' + talkRefs.length + ' talk' + (talkRefs.length > 1 ? 's' : '') + ' by President Oaks';
-      badge.textContent = '\uD83C\uDF99\uFE0F';
-      badge.onclick = function(e) {
-        e.stopPropagation();
-        openTalkRefPanel(key, talkRefs);
-      };
-
-      // Place inside .verse-num, below the number
-      var verseNum = verseDiv.querySelector('.verse-num');
-      if (verseNum) {
-        verseNum.appendChild(badge);
-      } else {
-        verseDiv.appendChild(badge);
-      }
-    });
-  }
-
-  /**
-   * Opens a mini-panel showing which talks reference a verse.
-   * Reuses the cross-reference panel structure.
-   */
-  function openTalkRefPanel(verseKey, talkRefs) {
-    var panel = document.getElementById('xref-panel');
-    if (!panel) return;
-
-    var parts = verseKey.split('|');
-    var displayRef = parts.length >= 3 ? parts[0] + ' ' + parts[1] + ':' + parts[2] : verseKey;
-
-    panel.querySelector('.xref-panel-word').textContent = displayRef;
-    panel.querySelector('.xref-panel-category').textContent =
-      'Referenced in ' + talkRefs.length + ' Conference Talk' + (talkRefs.length > 1 ? 's' : '');
-
-    var refsContainer = document.getElementById('xref-panel-refs');
-    refsContainer.innerHTML = '';
-
-    talkRefs.forEach(function(t) {
-      var card = document.createElement('div');
-      card.className = 'xref-ref-card';
-
-      var titleDiv = document.createElement('div');
-      titleDiv.className = 'xref-ref-title';
-      titleDiv.style.cursor = 'pointer';
-      titleDiv.innerHTML = '<span style="color:var(--accent);">\uD83C\uDF99\uFE0F</span> ' +
-        '<span style="font-weight:600;">' + (t.title || 'Untitled') + '</span>' +
-        '<span style="font-size:0.8em;color:var(--ink-light,#888);margin-left:8px;">' + (t.conference || '') + '</span>';
-      titleDiv.onclick = (function(tId) {
-        return function() {
-          window.location.href = 'talks.html#' + tId;
-        };
-      })(t.talkId);
-      card.appendChild(titleDiv);
-
-      if (t.snippet) {
-        var snippetDiv = document.createElement('div');
-        snippetDiv.className = 'xref-ref-english';
-        snippetDiv.style.fontStyle = 'italic';
-        snippetDiv.textContent = t.snippet;
-        card.appendChild(snippetDiv);
-      }
-
-      // Build talk URI for church website link
-      var talkUri = '';
-      if (window._oaksTalksData) {
-        for (var ti = 0; ti < window._oaksTalksData.length; ti++) {
-          if (window._oaksTalksData[ti].id === t.talkId) {
-            talkUri = window._oaksTalksData[ti].uri || '';
-            break;
-          }
-        }
-      }
-
-      // Build return URL so talks.html can link back to this verse
-      var returnUrl = window.location.pathname;
-      var returnLabel = displayRef;
-
-      var linkDiv = document.createElement('div');
-      linkDiv.style.cssText = 'padding:6px 0;font-size:0.85em;display:flex;gap:12px;flex-wrap:wrap;';
-      var talkPageUrl = 'talks.html#' + t.talkId;
-      var readLink = document.createElement('a');
-      readLink.href = talkPageUrl;
-      readLink.style.cssText = 'color:var(--accent);text-decoration:none;';
-      readLink.textContent = 'Read talk \u2192';
-      readLink.onclick = (function(vk, rUrl) {
-        return function() {
-          sessionStorage.setItem('xref-return-from', rUrl + window.location.hash);
-          sessionStorage.setItem('xref-return-verse', vk);
-          sessionStorage.setItem('xref-return-set', '1');
-        };
-      })(verseKey, returnUrl);
-      linkDiv.appendChild(readLink);
-      if (talkUri) {
-        var churchLink = document.createElement('a');
-        churchLink.href = 'https://www.churchofjesuschrist.org/study' + talkUri + '?lang=eng';
-        churchLink.target = '_blank';
-        churchLink.style.cssText = 'color:var(--accent);text-decoration:none;';
-        churchLink.textContent = '\uD83C\uDF10 churchofjesuschrist.org';
-        linkDiv.appendChild(churchLink);
-      }
-      card.appendChild(linkDiv);
-
-      refsContainer.appendChild(card);
-    });
-
-    panel.scrollTop = 0;
-    panel.classList.add('open');
-  }
-
-  // ── Expose talk ref functions globally ──
-  window.addTalkRefMarkers = addTalkRefMarkers;
-  window.openTalkRefPanel = openTalkRefPanel;
-
-  // ── Auto-load talk refs after cross-refs ──
-  setTimeout(addTalkRefMarkers, 1500);
 
   // ══════════════════════════════════════════════════════════════
   // ── RETURN NAVIGATION — store current page on departure ──

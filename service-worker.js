@@ -1,4 +1,4 @@
-const CACHE_NAME = 'standard-works-v25';
+const CACHE_NAME = 'standard-works-v26';
 
 const CORE_ASSETS = [
   '/StandardWorks/index.html',
@@ -6,8 +6,6 @@ const CORE_ASSETS = [
   '/StandardWorks/nt.html',
   '/StandardWorks/dc.html',
   '/StandardWorks/pgp.html',
-  '/StandardWorks/talks.html',
-  '/StandardWorks/study_plans.html',
   '/StandardWorks/manifest.json',
   '/StandardWorks/icons/icon-192.png',
   '/StandardWorks/icons/icon-512.png',
@@ -42,7 +40,7 @@ self.addEventListener('fetch', event => {
 
   // HTML pages and JS files — always network-first so updates arrive immediately
   // Falls back to cache when offline
-  if (url.pathname.match(/\.(html|js|json)$/) || url.pathname.match(/_(verses|cache)\//) || url.pathname.match(/talks_data\//)) {
+  if (url.pathname.match(/\.(html|js|json)$/) || url.pathname.match(/_(verses|cache)\//)) {
     event.respondWith(
       fetch(event.request)
         .then(response => {

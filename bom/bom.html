@@ -1293,7 +1293,7 @@ body.dark-mode #xref-popup { background: #252525; border-color: #d4af37; color: 
 }
 .xref-ref-word .hw { font-family: 'SBL Hebrew', 'David Libre', serif; font-size: 1.05em; color: var(--ink); }
 .xref-ref-word .en { font-size: 0.65em; color: var(--gloss); direction: ltr; }
-.xref-ref-arr { display: inline-flex; align-items: center; color: var(--accent); opacity: 0.5; font-size: 1.1em; padding: 0 1px; }
+.xref-ref-arr { display: inline-flex; align-items: center; color: var(--accent); opacity: 0.5; font-size: 1.1em; padding: 0 1px; direction: ltr; unicode-bidi: isolate; }
 .xref-ref-english {
   direction: ltr; font-size: 0.88em; color: var(--ink-light);
   line-height: 1.5; margin-top: 6px; padding: 8px 10px;
@@ -1628,9 +1628,7 @@ body.dark-mode #nav-dropdown .dd-ch:hover { background: #383838; }
 #nav-hint.show { opacity: 1; }
 body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
 
-/* === TALK REFERENCE BADGES === */
-.talk-ref-badge { display: block; font-size: 0.65em; cursor: pointer; margin-top: 2px; opacity: 0.8; transition: opacity 0.2s, transform 0.2s; line-height: 1; }
-.talk-ref-badge:hover { opacity: 1; transform: scale(1.2); }
+
 #return-banner { display:none; position:fixed; top:46px; left:0; right:0; z-index:99; background:#fff; padding:8px 20px; text-align:center; font-family:'Crimson Pro',serif; font-size:0.95em; border-bottom:1px solid #e8e2d4; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
 #return-banner a { display:inline-block; background:#c8a84e; color:#fff; text-decoration:none; padding:6px 18px; border-radius:4px; font-weight:600; font-size:0.9em; }
 #return-banner a:hover { background:#b8942e; }
@@ -5054,10 +5052,34 @@ window._crossrefMap = {};
 
 function loadCrossRefs() {
   if (window._crossrefsLoaded) return;
+  function filterTG(data) {
+    var filtered = {};
+    for (var key in data) {
+      var entries = data[key];
+      var kept = [];
+      for (var i = 0; i < entries.length; i++) {
+        if (entries[i].category === 'tg') continue;
+        var e = entries[i];
+        if (e.refs) {
+          var cleanRefs = [];
+          for (var j = 0; j < e.refs.length; j++) {
+            if (e.refs[j].indexOf('TG ') !== 0) cleanRefs.push(e.refs[j]);
+          }
+          if (cleanRefs.length === 0 && e.refs.length > 0) continue;
+          if (cleanRefs.length !== e.refs.length) {
+            e = { marker: e.marker, text: e.text, refs: cleanRefs, category: e.category };
+          }
+        }
+        kept.push(e);
+      }
+      if (kept.length > 0) filtered[key] = kept;
+    }
+    return filtered;
+  }
   function processData(data) {
-    window._crossrefMap = data;
+    window._crossrefMap = filterTG(data);
     window._crossrefsLoaded = true;
-    console.log('Cross-references loaded:', Object.keys(data).length, 'verses');
+    console.log('Cross-references loaded:', Object.keys(window._crossrefMap).length, 'verses');
     addCrossRefMarkers();
   }
   // Use pre-loaded data from <script src="crossrefs.js"> if available
@@ -5404,16 +5426,37 @@ function openXrefPanel(ref, sourceVerseKey, hebrewRoot) {
   // Show Hebrew root + English meaning if available, otherwise show ref.text
   var displayText = ref.text || '';
   var engMeaning = '';
+  var xrefTranslit = '';
   if (hebrewRoot) {
-    var glossEntry = window._rootGlossaryData && window._rootGlossaryData[hebrewRoot];
-    engMeaning = glossEntry ? glossEntry.meaning : '';
     displayText = hebrewRoot;
+    // Resolve Strong's H-number roots to Hebrew word + meaning
+    if (/^H\d+$/.test(hebrewRoot) && window._strongsRoots && window._strongsRoots[hebrewRoot]) {
+      var sEntry = window._strongsRoots[hebrewRoot];
+      displayText = sEntry.w || hebrewRoot;
+      xrefTranslit = sEntry.x || '';
+      engMeaning = sEntry.g || '';
+      if (!engMeaning) {
+        var glossEntry = window._rootGlossaryData && window._rootGlossaryData[displayText];
+        if (!glossEntry) {
+          var stripped = displayText.replace(/[\u0591-\u05C7]/g, '');
+          glossEntry = window._rootGlossaryData && window._rootGlossaryData[stripped];
+        }
+        engMeaning = glossEntry ? glossEntry.meaning : '';
+      }
+    } else {
+      var glossEntry = window._rootGlossaryData && window._rootGlossaryData[hebrewRoot];
+      engMeaning = glossEntry ? glossEntry.meaning : '';
+      xrefTranslit = (typeof transliterate === 'function') ? transliterate(hebrewRoot) : '';
+    }
   }
-  var xrefTranslit = hebrewRoot ? ' <span style="font-weight:400;font-size:0.75em;opacity:0.7;">' + transliterate(hebrewRoot) + '</span>' : '';
-  panel.querySelector('.xref-panel-word').innerHTML = displayText + xrefTranslit + (engMeaning ? ' <span style="font-weight:400;font-size:0.8em;color:var(--ink-light,#888);">— ' + engMeaning + '</span>' : '');
-  var catLabel = ref.category === 'tg' ? 'Topical Guide' :
-    ref.category === 'cross-ref' ? 'Cross-Reference' :
-    ref.category === 'gst' ? 'Guide to Scriptures' : (ref.category || '');
+  var translitHtml = xrefTranslit ? ' <span style="font-weight:400;font-size:0.75em;opacity:0.7;">' + xrefTranslit + '</span>' : '';
+  panel.querySelector('.xref-panel-word').innerHTML = displayText + translitHtml + (engMeaning ? ' <span style="font-weight:400;font-size:0.8em;color:var(--ink-light,#888);">\u2014 ' + engMeaning + '</span>' : '');
+  var catLabel = ref.category === 'cross-ref' ? 'Cross-Reference' :
+    ref.category === 'trn' ? 'Translation Note' :
+    ref.category === 'heb' ? 'Hebrew/Greek' :
+    ref.category === 'ie' ? 'Explanation' :
+    ref.category === 'or' ? 'Alternate Translation' :
+    (ref.category || '');
   panel.querySelector('.xref-panel-category').textContent = catLabel;
 
   var refsContainer = document.getElementById('xref-panel-refs');
@@ -5442,6 +5485,9 @@ function openXrefPanel(ref, sourceVerseKey, hebrewRoot) {
       } else if (/^\d/.test(rNorm) && lastBookPrefix) {
         // Continuation reference (e.g., "44:30" after "Jer. 37:1" → "Jer. 44:30")
         fullRef = lastBookPrefix + ' ' + rNorm;
+      } else if (!foundPrefix && !/^\d/.test(rNorm)) {
+        // Not a known book abbreviation — likely a TG topic name
+        return;
       }
 
       var card = document.createElement('div');
@@ -5512,9 +5558,29 @@ function openRootXrefPanel(root) {
   if (!entries || entries.length === 0) return;
 
   var panel = document.getElementById('xref-panel');
-  var glossEntry = window._rootGlossaryData && window._rootGlossaryData[root];
-  var engMeaning = glossEntry ? glossEntry.meaning : '';
-  panel.querySelector('.xref-panel-word').innerHTML = root + ' <span style="font-weight:400;font-size:0.75em;opacity:0.7;">' + transliterate(root) + '</span>' + (engMeaning ? ' <span style="font-weight:400;font-size:0.8em;color:var(--ink-light,#888);">— ' + engMeaning + '</span>' : '');
+  var displayRoot = root;
+  var engMeaning = '';
+  var rootTranslit = '';
+  // Resolve Strong's H-number roots to Hebrew word + meaning
+  if (/^H\d+$/.test(root) && window._strongsRoots && window._strongsRoots[root]) {
+    var sEntry = window._strongsRoots[root];
+    displayRoot = sEntry.w || root;
+    rootTranslit = sEntry.x || '';
+    engMeaning = sEntry.g || '';
+    if (!engMeaning) {
+      var glossEntry = window._rootGlossaryData && window._rootGlossaryData[displayRoot];
+      if (!glossEntry) {
+        var stripped = displayRoot.replace(/[\u0591-\u05C7]/g, '');
+        glossEntry = window._rootGlossaryData && window._rootGlossaryData[stripped];
+      }
+      engMeaning = glossEntry ? glossEntry.meaning : '';
+    }
+  } else {
+    var glossEntry = window._rootGlossaryData && window._rootGlossaryData[root];
+    engMeaning = glossEntry ? glossEntry.meaning : '';
+    rootTranslit = (typeof transliterate === 'function') ? transliterate(root) : '';
+  }
+  panel.querySelector('.xref-panel-word').innerHTML = displayRoot + (rootTranslit ? ' <span style="font-weight:400;font-size:0.75em;opacity:0.7;">' + rootTranslit + '</span>' : '') + (engMeaning ? ' <span style="font-weight:400;font-size:0.8em;color:var(--ink-light,#888);">\u2014 ' + engMeaning + '</span>' : '');
   panel.querySelector('.xref-panel-category').textContent = 'Cross-References (' + entries.length + ' markers)';
 
   var refsContainer = document.getElementById('xref-panel-refs');
@@ -5527,6 +5593,8 @@ function openRootXrefPanel(root) {
     if (entry.ref.refs) {
       entry.ref.refs.forEach(function(r) {
         var rNorm = r.replace(/\u00a0/g, ' ');
+        // Skip TG-prefixed entries
+        if (rNorm.indexOf('TG ') === 0) return;
         if (!seen[rNorm]) {
           seen[rNorm] = true;
           uniqueRefs.push({ refText: rNorm, word: entry.ref.text, category: entry.ref.category, verseKey: entry.verseKey });
@@ -5535,18 +5603,19 @@ function openRootXrefPanel(root) {
     }
   });
 
-  // Group by category
-  var groups = { 'cross-ref': [], 'tg': [], 'gst': [], 'other': [] };
+  // Group by category (skip TG — Topical Guide entries are copyrighted)
+  var groups = { 'cross-ref': [], 'gst': [], 'other': [] };
   uniqueRefs.forEach(function(u) {
+    if (u.category === 'tg') return; // skip TG
     var cat = u.category || 'other';
     if (!groups[cat]) cat = 'other';
     groups[cat].push(u);
   });
 
-  var catLabels = { 'cross-ref': 'Scripture Cross-References', 'tg': 'Topical Guide', 'gst': 'Guide to Scriptures', 'other': 'Other References' };
+  var catLabels = { 'cross-ref': 'Scripture Cross-References', 'gst': 'Guide to Scriptures', 'other': 'Other References' };
   var lastBookPrefix = '';
 
-  ['cross-ref', 'tg', 'gst', 'other'].forEach(function(cat) {
+  ['cross-ref', 'gst', 'other'].forEach(function(cat) {
     var items = groups[cat];
     if (items.length === 0) return;
 
@@ -7830,36 +7899,6 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
-</script>
-<script src="../talks_data/oaks_scripture_index.js"></script>
-<script src="../talks_data/oaks_talks.js"></script>
-<script>
-// Talk reference markers for President Oaks conference talks
-(function() {
-  function addBomTalkRefMarkers() {
-    if (!window._oaksScriptureIndex) return;
-    var allVerses = document.querySelectorAll('[data-verse-key]');
-    allVerses.forEach(function(verseDiv) {
-      if (verseDiv.getAttribute('data-talk-refs-applied')) return;
-      var key = verseDiv.getAttribute('data-verse-key');
-      var talkRefs = window._oaksScriptureIndex[key];
-      if (!talkRefs || talkRefs.length === 0) return;
-      verseDiv.setAttribute('data-talk-refs-applied', '1');
-      var badge = document.createElement('span');
-      badge.className = 'talk-ref-badge';
-      badge.title = 'Referenced in ' + talkRefs.length + ' talk' + (talkRefs.length > 1 ? 's' : '') + ' by President Oaks';
-      badge.textContent = '\uD83C\uDF99\uFE0F';
-      badge.onclick = function(e) {
-        e.stopPropagation();
-        window.open('../talks.html#' + talkRefs[0].talkId, '_blank');
-      };
-      var verseNum = verseDiv.querySelector('.verse-num');
-      if (verseNum) verseNum.appendChild(badge);
-      else verseDiv.appendChild(badge);
-    });
-  }
-  setTimeout(addBomTalkRefMarkers, 2000);
-})();
 </script>
 <script>
 function _showReturnBanner() {

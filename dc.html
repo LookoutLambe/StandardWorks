@@ -546,7 +546,7 @@ body.dark-mode .word-unit.xref-linked:hover .gl { color: #85c1e9 !important; }
 }
 .xref-ref-word .hw { font-family: 'SBL Hebrew', 'David Libre', serif; font-size: 1.05em; color: var(--ink); }
 .xref-ref-word .en { font-size: 0.65em; color: var(--gloss); direction: ltr; }
-.xref-ref-arr { display: inline-flex; align-items: center; color: var(--accent); opacity: 0.5; font-size: 1.1em; padding: 0 1px; }
+.xref-ref-arr { display: inline-flex; align-items: center; color: var(--accent); opacity: 0.5; font-size: 1.1em; padding: 0 1px; direction: ltr; unicode-bidi: isolate; }
 .xref-ref-english {
   direction: ltr; font-size: 0.88em; color: var(--ink-light);
   line-height: 1.5; margin-top: 6px; padding: 8px 10px;
@@ -556,8 +556,6 @@ body.dark-mode .word-unit.xref-linked:hover .gl { color: #85c1e9 !important; }
 .xref-ref-nodata { font-size: 0.85em; color: var(--ink-light); font-style: italic; padding: 16px; }
 body.dark-mode #xref-panel { background: #252525; border-color: #d4af37; }
 
-.talk-ref-badge { display: block; font-size: 0.65em; cursor: pointer; margin-top: 2px; opacity: 0.8; transition: opacity 0.2s, transform 0.2s; line-height: 1; }
-.talk-ref-badge:hover { opacity: 1; transform: scale(1.2); }
 #return-banner { display:none; position:fixed; top:46px; left:0; right:0; z-index:99; background:#fff; padding:8px 20px; text-align:center; font-family:'Crimson Pro',serif; font-size:0.95em; border-bottom:1px solid #e8e2d4; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
 #return-banner a { display:inline-block; background:#c8a84e; color:#fff; text-decoration:none; padding:6px 18px; border-radius:4px; font-weight:600; font-size:0.9em; }
 #return-banner a:hover { background:#b8942e; }
@@ -1080,8 +1078,6 @@ try {
 <script src="dc_crossrefs.js"></script>
 <script>window._volumeCrossrefsData = window._dcCrossrefsData;</script>
 <script src="bom/scripture_verses.js"></script>
-<script src="talks_data/oaks_scripture_index.js"></script>
-<script src="talks_data/oaks_talks.js"></script>
 <script src="crossrefs_engine.js"></script>
 
 <script>
