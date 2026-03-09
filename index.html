@@ -9,6 +9,7 @@
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="nav_engine.css">
 <style>
 
 /* ========== THEME ========== */
@@ -470,6 +471,13 @@ body.dark-mode .top-bar { background: #0a0a0a; }
 
     <div class="diamond-divider"></div>
 
+    <!-- ===== CONTINUE READING ===== -->
+    <div class="continue-reading" id="continue-reading" style="display:none;" onclick="goToLastRead()">
+      <div class="cr-label">Continue Reading</div>
+      <div class="cr-ref" id="cr-ref"></div>
+      <div class="cr-heb" id="cr-heb"></div>
+    </div>
+
     <!-- ===== GLOBAL SEARCH ===== -->
     <div class="global-search-wrap">
       <input type="text" id="global-search" class="global-search-input" placeholder="Search all volumes...   (press / to focus)" autocomplete="off" aria-label="Search all volumes">
@@ -566,6 +574,9 @@ body.dark-mode .top-bar { background: #0a0a0a; }
         This is an independent project and is not affiliated with, endorsed by, or
         officially connected to The Church of Jesus Christ of Latter-day Saints.
       </p>
+      <p style="margin-top: 12px; font-size: 0.75em; color: var(--ink-light);">
+        &copy; 2026 Chris Lambe. All rights reserved.
+      </p>
     </div>
 
   </div><!-- /panel-landing -->
@@ -650,6 +661,24 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
+</script>
+<script>
+// ===== CONTINUE READING =====
+function goToLastRead() {
+  try {
+    var data = JSON.parse(localStorage.getItem('sw-last-read'));
+    if (data && data.path) window.location.href = data.path;
+  } catch(e) {}
+}
+(function showContinueReading() {
+  try {
+    var data = JSON.parse(localStorage.getItem('sw-last-read'));
+    if (!data || !data.label) return;
+    document.getElementById('cr-ref').textContent = data.label;
+    document.getElementById('cr-heb').textContent = data.heb || '';
+    document.getElementById('continue-reading').style.display = '';
+  } catch(e) {}
+})();
 </script>
 <script>
 if ('serviceWorker' in navigator) {

@@ -1,0 +1,775 @@
+/* ══════════════════════════════════════════════════════
+   NAV ENGINE — Unified Navigation for Standard Works
+   ══════════════════════════════════════════════════════ */
+(function() {
+  'use strict';
+
+  // ── Hebrew Numerals ──
+  function toHebNum(n) {
+    var ones = ['','\u05D0','\u05D1','\u05D2','\u05D3','\u05D4','\u05D5','\u05D6','\u05D7','\u05D8'];
+    var tens = ['','\u05D9','\u05DB','\u05DC','\u05DE','\u05E0','\u05E1','\u05E2','\u05E4','\u05E6'];
+    var hundreds = ['','\u05E7','\u05E8','\u05E9','\u05EA'];
+    if (n === 15) return '\u05D8\u05D5';
+    if (n === 16) return '\u05D8\u05D6';
+    var result = '';
+    if (n >= 100) {
+      var h = Math.floor(n / 100);
+      if (h <= 4) result += hundreds[h];
+      else result += '\u05EA' + hundreds[h - 4];
+      n %= 100;
+    }
+    if (n === 15) { result += '\u05D8\u05D5'; return result; }
+    if (n === 16) { result += '\u05D8\u05D6'; return result; }
+    if (n >= 10) { result += tens[Math.floor(n / 10)]; n %= 10; }
+    if (n > 0) result += ones[n];
+    return result;
+  }
+
+  // ── Volume Registry ──
+  var VOLUMES = {
+    ot: {
+      key: 'ot', name: 'Old Testament', heb: '\u05EA\u05E0\u05F4\u05DA', abbr: '\u05EA\u05E0\u05F4\u05DA',
+      page: 'ot.html',
+      divisions: [
+        { name: '\u05EA\u05D5\u05B9\u05E8\u05B8\u05D4 \u00B7 Torah', books: [
+          { id:'gen', en:'Genesis', heb:'\u05D1\u05B0\u05BC\u05E8\u05B5\u05D0\u05E9\u05B4\u05C1\u05D9\u05EA', ch:50, prefix:'gen-ch' },
+          { id:'exo', en:'Exodus', heb:'\u05E9\u05B0\u05C1\u05DE\u05D5\u05B9\u05EA', ch:40, prefix:'exo-ch' },
+          { id:'lev', en:'Leviticus', heb:'\u05D5\u05B7\u05D9\u05B4\u05BC\u05E7\u05B0\u05E8\u05B8\u05D0', ch:27, prefix:'lev-ch' },
+          { id:'num', en:'Numbers', heb:'\u05D1\u05B0\u05BC\u05DE\u05B4\u05D3\u05B0\u05D1\u05B7\u05BC\u05E8', ch:36, prefix:'num-ch' },
+          { id:'deu', en:'Deuteronomy', heb:'\u05D3\u05B0\u05BC\u05D1\u05B8\u05E8\u05B4\u05D9\u05DD', ch:34, prefix:'deu-ch' }
+        ]},
+        { name: "\u05E0\u05B0\u05D1\u05B4\u05D9\u05D0\u05B4\u05D9\u05DD \u00B7 Nevi'im", books: [
+          { id:'jos', en:'Joshua', heb:'\u05D9\u05B0\u05D4\u05D5\u05B9\u05E9\u05BB\u05C1\u05E2\u05B7', ch:24, prefix:'jos-ch' },
+          { id:'jdg', en:'Judges', heb:'\u05E9\u05C1\u05D5\u05B9\u05E4\u05B0\u05D8\u05B4\u05D9\u05DD', ch:21, prefix:'jdg-ch' },
+          { id:'1sa', en:'1 Samuel', heb:'\u05E9\u05B0\u05C1\u05DE\u05D5\u05BC\u05D0\u05B5\u05DC \u05D0', ch:31, prefix:'1sa-ch' },
+          { id:'2sa', en:'2 Samuel', heb:'\u05E9\u05B0\u05C1\u05DE\u05D5\u05BC\u05D0\u05B5\u05DC \u05D1', ch:24, prefix:'2sa-ch' },
+          { id:'1ki', en:'1 Kings', heb:'\u05DE\u05B0\u05DC\u05B8\u05DB\u05B4\u05D9\u05DD \u05D0', ch:22, prefix:'1ki-ch' },
+          { id:'2ki', en:'2 Kings', heb:'\u05DE\u05B0\u05DC\u05B8\u05DB\u05B4\u05D9\u05DD \u05D1', ch:25, prefix:'2ki-ch' },
+          { id:'isa', en:'Isaiah', heb:'\u05D9\u05B0\u05E9\u05B7\u05C1\u05E2\u05B0\u05D9\u05B8\u05D4\u05D5\u05BC', ch:66, prefix:'isa-ch' },
+          { id:'jer', en:'Jeremiah', heb:'\u05D9\u05B4\u05E8\u05B0\u05DE\u05B0\u05D9\u05B8\u05D4\u05D5\u05BC', ch:52, prefix:'jer-ch' },
+          { id:'eze', en:'Ezekiel', heb:'\u05D9\u05B0\u05D7\u05B6\u05D6\u05B0\u05E7\u05B5\u05D0\u05DC', ch:48, prefix:'eze-ch' },
+          { id:'hos', en:'Hosea', heb:'\u05D4\u05D5\u05B9\u05E9\u05B5\u05C1\u05E2\u05B7', ch:14, prefix:'hos-ch' },
+          { id:'joe', en:'Joel', heb:'\u05D9\u05D5\u05B9\u05D0\u05B5\u05DC', ch:4, prefix:'joe-ch' },
+          { id:'amo', en:'Amos', heb:'\u05E2\u05B8\u05DE\u05D5\u05B9\u05E1', ch:9, prefix:'amo-ch' },
+          { id:'oba', en:'Obadiah', heb:'\u05E2\u05D5\u05B9\u05D1\u05B7\u05D3\u05B0\u05D9\u05B8\u05D4', ch:1, prefix:'oba-ch' },
+          { id:'jon', en:'Jonah', heb:'\u05D9\u05D5\u05B9\u05E0\u05B8\u05D4', ch:4, prefix:'jon-ch' },
+          { id:'mic', en:'Micah', heb:'\u05DE\u05B4\u05D9\u05DB\u05B8\u05D4', ch:7, prefix:'mic-ch' },
+          { id:'nah', en:'Nahum', heb:'\u05E0\u05B7\u05D7\u05D5\u05BC\u05DD', ch:3, prefix:'nah-ch' },
+          { id:'hab', en:'Habakkuk', heb:'\u05D7\u05B2\u05D1\u05B7\u05E7\u05BC\u05D5\u05BC\u05E7', ch:3, prefix:'hab-ch' },
+          { id:'zep', en:'Zephaniah', heb:'\u05E6\u05B0\u05E4\u05B7\u05E0\u05B0\u05D9\u05B8\u05D4', ch:3, prefix:'zep-ch' },
+          { id:'hag', en:'Haggai', heb:'\u05D7\u05B7\u05D2\u05B7\u05BC\u05D9', ch:2, prefix:'hag-ch' },
+          { id:'zec', en:'Zechariah', heb:'\u05D6\u05B0\u05DB\u05B7\u05E8\u05B0\u05D9\u05B8\u05D4', ch:14, prefix:'zec-ch' },
+          { id:'mal', en:'Malachi', heb:'\u05DE\u05B7\u05DC\u05B0\u05D0\u05B8\u05DB\u05B4\u05D9', ch:3, prefix:'mal-ch' }
+        ]},
+        { name: '\u05DB\u05B0\u05BC\u05EA\u05D5\u05BC\u05D1\u05B4\u05D9\u05DD \u00B7 Ketuvim', books: [
+          { id:'psa', en:'Psalms', heb:'\u05EA\u05B0\u05BC\u05D4\u05B4\u05DC\u05B4\u05BC\u05D9\u05DD', ch:150, prefix:'psa-ch' },
+          { id:'pro', en:'Proverbs', heb:'\u05DE\u05B4\u05E9\u05B0\u05C1\u05DC\u05B5\u05D9', ch:31, prefix:'pro-ch' },
+          { id:'job', en:'Job', heb:'\u05D0\u05B4\u05D9\u05BC\u05D5\u05B9\u05D1', ch:42, prefix:'job-ch' },
+          { id:'sos', en:'Song of Songs', heb:'\u05E9\u05B4\u05C1\u05D9\u05E8 \u05D4\u05B7\u05E9\u05B4\u05BC\u05C1\u05D9\u05E8\u05B4\u05D9\u05DD', ch:8, prefix:'sos-ch' },
+          { id:'rth', en:'Ruth', heb:'\u05E8\u05D5\u05BC\u05EA', ch:4, prefix:'rth-ch' },
+          { id:'lam', en:'Lamentations', heb:'\u05D0\u05B5\u05D9\u05DB\u05B8\u05D4', ch:5, prefix:'lam-ch' },
+          { id:'ecc', en:'Ecclesiastes', heb:'\u05E7\u05B9\u05D4\u05B6\u05DC\u05B6\u05EA', ch:12, prefix:'ecc-ch' },
+          { id:'est', en:'Esther', heb:'\u05D0\u05B6\u05E1\u05B0\u05EA\u05B5\u05BC\u05E8', ch:10, prefix:'est-ch' },
+          { id:'dan', en:'Daniel', heb:'\u05D3\u05B8\u05BC\u05E0\u05B4\u05D9\u05B5\u05BC\u05D0\u05DC', ch:12, prefix:'dan-ch' },
+          { id:'ezr', en:'Ezra', heb:'\u05E2\u05B6\u05D6\u05B0\u05E8\u05B8\u05D0', ch:10, prefix:'ezr-ch' },
+          { id:'neh', en:'Nehemiah', heb:'\u05E0\u05B0\u05D7\u05B6\u05DE\u05B0\u05D9\u05B8\u05D4', ch:13, prefix:'neh-ch' },
+          { id:'1ch', en:'1 Chronicles', heb:'\u05D3\u05B4\u05BC\u05D1\u05B0\u05E8\u05B5\u05D9 \u05D4\u05B7\u05D9\u05B8\u05BC\u05DE\u05B4\u05D9\u05DD \u05D0', ch:29, prefix:'1ch-ch' },
+          { id:'2ch', en:'2 Chronicles', heb:'\u05D3\u05B4\u05BC\u05D1\u05B0\u05E8\u05B5\u05D9 \u05D4\u05B7\u05D9\u05B8\u05BC\u05DE\u05B4\u05D9\u05DD \u05D1', ch:36, prefix:'2ch-ch' }
+        ]}
+      ]
+    },
+    nt: {
+      key: 'nt', name: 'New Testament', heb:'\u05D4\u05D1\u05E8\u05D9\u05EA \u05D4\u05D7\u05D3\u05E9\u05D4', abbr:'\u05D1.\u05D7',
+      page: 'nt.html',
+      divisions: [
+        { name: '\u05D1\u05E9\u05D5\u05E8\u05D5\u05EA \u00B7 Gospels', books: [
+          { id:'matt', en:'Matthew', heb:'\u05DE\u05B7\u05EA\u05B8\u05BC\u05D9', ch:28, prefix:'matt-ch' },
+          { id:'mark', en:'Mark', heb:'\u05DE\u05B7\u05E8\u05B0\u05E7\u05D5\u05B9\u05E1', ch:16, prefix:'mark-ch' },
+          { id:'luke', en:'Luke', heb:'\u05DC\u05D5\u05BC\u05E7\u05B8\u05E1', ch:24, prefix:'luke-ch' },
+          { id:'john', en:'John', heb:'\u05D9\u05D5\u05B9\u05D7\u05B8\u05E0\u05B8\u05DF', ch:21, prefix:'john-ch' }
+        ]},
+        { name: '\u05DE\u05E2\u05E9\u05D9\u05DD \u00B7 Acts', books: [
+          { id:'acts', en:'Acts', heb:'\u05DE\u05B7\u05E2\u05B2\u05E9\u05B5\u05C2\u05D9 \u05D4\u05B7\u05E9\u05B0\u05BC\u05C1\u05DC\u05B4\u05D9\u05D7\u05B4\u05D9\u05DD', ch:28, prefix:'acts-ch' }
+        ]},
+        { name: '\u05D0\u05D2\u05E8\u05D5\u05EA \u05E4\u05D5\u05DC\u05D5\u05E1 \u00B7 Pauline Epistles', books: [
+          { id:'rom', en:'Romans', heb:'\u05E8\u05D5\u05B9\u05DE\u05B4\u05D9\u05DD', ch:16, prefix:'rom-ch' },
+          { id:'1co', en:'1 Corinthians', heb:'\u05E7\u05D5\u05B9\u05E8\u05B4\u05E0\u05B0\u05EA\u05B4\u05BC\u05D9\u05DD \u05D0', ch:16, prefix:'1co-ch' },
+          { id:'2co', en:'2 Corinthians', heb:'\u05E7\u05D5\u05B9\u05E8\u05B4\u05E0\u05B0\u05EA\u05B4\u05BC\u05D9\u05DD \u05D1', ch:13, prefix:'2co-ch' },
+          { id:'gal', en:'Galatians', heb:'\u05D2\u05B8\u05BC\u05DC\u05B8\u05D8\u05B4\u05D9\u05DD', ch:6, prefix:'gal-ch' },
+          { id:'eph', en:'Ephesians', heb:'\u05D0\u05B6\u05E4\u05B6\u05E1\u05B4\u05D9\u05DD', ch:6, prefix:'eph-ch' },
+          { id:'php', en:'Philippians', heb:'\u05E4\u05B4\u05D9\u05DC\u05B4\u05E4\u05B4\u05BC\u05D9\u05DD', ch:4, prefix:'php-ch' },
+          { id:'col', en:'Colossians', heb:'\u05E7\u05D5\u05B9\u05DC\u05D5\u05B9\u05E1\u05B4\u05D9\u05DD', ch:4, prefix:'col-ch' },
+          { id:'1th', en:'1 Thessalonians', heb:'\u05EA\u05B6\u05BC\u05E1\u05B8\u05BC\u05DC\u05D5\u05B9\u05E0\u05B4\u05D9\u05E7\u05B4\u05D9\u05DD \u05D0', ch:5, prefix:'1th-ch' },
+          { id:'2th', en:'2 Thessalonians', heb:'\u05EA\u05B6\u05BC\u05E1\u05B8\u05BC\u05DC\u05D5\u05B9\u05E0\u05B4\u05D9\u05E7\u05B4\u05D9\u05DD \u05D1', ch:3, prefix:'2th-ch' },
+          { id:'1ti', en:'1 Timothy', heb:'\u05D8\u05B4\u05D9\u05DE\u05D5\u05B9\u05EA\u05B5\u05D0\u05D5\u05B9\u05E1 \u05D0', ch:6, prefix:'1ti-ch' },
+          { id:'2ti', en:'2 Timothy', heb:'\u05D8\u05B4\u05D9\u05DE\u05D5\u05B9\u05EA\u05B5\u05D0\u05D5\u05B9\u05E1 \u05D1', ch:4, prefix:'2ti-ch' },
+          { id:'tit', en:'Titus', heb:'\u05D8\u05B4\u05D9\u05D8\u05D5\u05B9\u05E1', ch:3, prefix:'tit-ch' },
+          { id:'phm', en:'Philemon', heb:'\u05E4\u05B4\u05D9\u05DC\u05B5\u05D9\u05DE\u05D5\u05B9\u05DF', ch:1, prefix:'phm-ch' }
+        ]},
+        { name: '\u05D0\u05D2\u05E8\u05D5\u05EA \u05DB\u05DC\u05DC\u05D9\u05D5\u05EA \u00B7 General Epistles', books: [
+          { id:'heb', en:'Hebrews', heb:'\u05E2\u05B4\u05D1\u05B0\u05E8\u05B4\u05D9\u05DD', ch:13, prefix:'heb-ch' },
+          { id:'jas', en:'James', heb:'\u05D9\u05B7\u05E2\u05B2\u05E7\u05B9\u05D1', ch:5, prefix:'jas-ch' },
+          { id:'1pe', en:'1 Peter', heb:'\u05E4\u05B6\u05BC\u05D8\u05B0\u05E8\u05D5\u05B9\u05E1 \u05D0', ch:5, prefix:'1pe-ch' },
+          { id:'2pe', en:'2 Peter', heb:'\u05E4\u05B6\u05BC\u05D8\u05B0\u05E8\u05D5\u05B9\u05E1 \u05D1', ch:3, prefix:'2pe-ch' },
+          { id:'1jn', en:'1 John', heb:'\u05D9\u05D5\u05B9\u05D7\u05B8\u05E0\u05B8\u05DF \u05D0', ch:5, prefix:'1jn-ch' },
+          { id:'2jn', en:'2 John', heb:'\u05D9\u05D5\u05B9\u05D7\u05B8\u05E0\u05B8\u05DF \u05D1', ch:1, prefix:'2jn-ch' },
+          { id:'3jn', en:'3 John', heb:'\u05D9\u05D5\u05B9\u05D7\u05B8\u05E0\u05B8\u05DF \u05D2', ch:1, prefix:'3jn-ch' },
+          { id:'jude', en:'Jude', heb:'\u05D9\u05B0\u05D4\u05D5\u05BC\u05D3\u05B8\u05D4', ch:1, prefix:'jude-ch' }
+        ]},
+        { name: '\u05D7\u05D6\u05D5\u05DF \u00B7 Prophecy', books: [
+          { id:'rev', en:'Revelation', heb:'\u05D7\u05B8\u05D6\u05D5\u05B9\u05DF \u05D9\u05D5\u05B9\u05D7\u05B8\u05E0\u05B8\u05DF', ch:22, prefix:'rev-ch' }
+        ]}
+      ]
+    },
+    bom: {
+      key: 'bom', name: 'Book of Mormon', heb:'\u05E1\u05E4\u05E8 \u05DE\u05D5\u05E8\u05DE\u05D5\u05DF', abbr:'\u05E1.\u05DE',
+      page: 'bom/bom.html',
+      divisions: [
+        { name: '\u05DC\u05D5\u05D7\u05D5\u05EA \u05E7\u05D8\u05E0\u05D9\u05DD \u00B7 Small Plates', books: [
+          { id:'1ne', en:'1 Nephi', heb:"\u05E0\u05B6\u05E4\u05B4\u05D9 \u05D0\u05F3", ch:22, prefix:'ch' },
+          { id:'2ne', en:'2 Nephi', heb:"\u05E0\u05B6\u05E4\u05B4\u05D9 \u05D1\u05F3", ch:33, prefix:'2n-ch' },
+          { id:'jac', en:'Jacob', heb:'\u05D9\u05B7\u05E2\u05B2\u05E7\u05B9\u05D1', ch:7, prefix:'jc-ch' },
+          { id:'eno', en:'Enos', heb:'\u05D0\u05B1\u05E0\u05D5\u05B9\u05E9\u05C1', ch:1, prefix:'en-ch' },
+          { id:'jar', en:'Jarom', heb:'\u05D9\u05B8\u05E8\u05D5\u05B9\u05DD', ch:1, prefix:'jr-ch' },
+          { id:'omn', en:'Omni', heb:'\u05E2\u05B8\u05DE\u05B0\u05E0\u05B4\u05D9', ch:1, prefix:'om-ch' }
+        ]},
+        { name: '\u05DC\u05D5\u05D7\u05D5\u05EA \u05D2\u05D3\u05D5\u05DC\u05D9\u05DD \u00B7 Large Plates', books: [
+          { id:'wom', en:'Words of Mormon', heb:'\u05D3\u05B4\u05BC\u05D1\u05B0\u05E8\u05B5\u05D9 \u05DE\u05D5\u05B9\u05E8\u05B0\u05DE\u05D5\u05B9\u05DF', ch:1, prefix:'wm-ch' },
+          { id:'mos', en:'Mosiah', heb:'\u05DE\u05D5\u05B9\u05E9\u05B4\u05C1\u05D9\u05B8\u05BC\u05D4', ch:29, prefix:'mo-ch' },
+          { id:'alm', en:'Alma', heb:'\u05D0\u05B7\u05DC\u05B0\u05DE\u05B8\u05D0', ch:63, prefix:'al-ch' },
+          { id:'hel', en:'Helaman', heb:'\u05D4\u05B5\u05D9\u05DC\u05B8\u05DE\u05B8\u05DF', ch:16, prefix:'he-ch' },
+          { id:'3ne', en:'3 Nephi', heb:"\u05E0\u05B6\u05E4\u05B4\u05D9 \u05D2\u05F3", ch:30, prefix:'3n-ch' },
+          { id:'4ne', en:'4 Nephi', heb:"\u05E0\u05B6\u05E4\u05B4\u05D9 \u05D3\u05F3", ch:1, prefix:'4n-ch' }
+        ]},
+        { name: '\u05DC\u05D5\u05D7\u05D5\u05EA \u05DE\u05D5\u05E8\u05DE\u05D5\u05DF \u00B7 Plates of Mormon', books: [
+          { id:'mrm', en:'Mormon', heb:'\u05DE\u05D5\u05B9\u05E8\u05B0\u05DE\u05D5\u05B9\u05DF', ch:9, prefix:'mm-ch' },
+          { id:'eth', en:'Ether', heb:'\u05E2\u05B5\u05EA\u05B6\u05E8', ch:15, prefix:'et-ch' },
+          { id:'mro', en:'Moroni', heb:'\u05DE\u05D5\u05B9\u05E8\u05D5\u05B9\u05E0\u05B4\u05D9', ch:10, prefix:'mr-ch' }
+        ]}
+      ]
+    },
+    dc: {
+      key: 'dc', name: 'D&C', heb:'\u05EA\u05D5\u05E8\u05D4 \u05D5\u05D1\u05E8\u05D9\u05EA\u05D5\u05EA', abbr:'\u05EA\u05D5',
+      page: 'dc.html',
+      divisions: [
+        { name: '\u05E1\u05E2\u05D9\u05E4\u05D9\u05DD \u00B7 Sections', books: (function() {
+          var books = [];
+          for (var i = 1; i <= 138; i++) {
+            books.push({ id:'dc'+i, en:'Section '+i, heb:'\u05E1\u05E2\u05D9\u05E3 '+toHebNum(i), ch:1, prefix:'dc'+i+'-ch', isSection:true, secNum:i });
+          }
+          return books;
+        })()},
+        { name: '\u05D4\u05DB\u05E8\u05D6\u05D5\u05EA \u00B7 Official Declarations', books: [
+          { id:'od1', en:'OD 1', heb:'\u05D4\u05DB\u05E8\u05D6\u05D4 \u05D0', ch:1, prefix:'od1-ch' },
+          { id:'od2', en:'OD 2', heb:'\u05D4\u05DB\u05E8\u05D6\u05D4 \u05D1', ch:1, prefix:'od2-ch' }
+        ]}
+      ]
+    },
+    pgp: {
+      key: 'pgp', name: 'Pearl of Great Price', heb:'\u05E4\u05E0\u05D9\u05E0\u05EA \u05D4\u05DE\u05D7\u05D9\u05E8 \u05D4\u05D2\u05D3\u05D5\u05DC', abbr:'\u05E4\u05E0\u05D9\u05E0\u05EA',
+      page: 'pgp.html',
+      divisions: [
+        { name: '', books: [
+          { id:'ms', en:'Moses', heb:'\u05DE\u05D5\u05B9\u05E9\u05B6\u05C1\u05D4', ch:8, prefix:'ms-ch' },
+          { id:'ab', en:'Abraham', heb:'\u05D0\u05B7\u05D1\u05B0\u05E8\u05B8\u05D4\u05B8\u05DD', ch:5, prefix:'ab-ch' },
+          { id:'jsm', en:'JS\u2014Matthew', heb:'\u05D9\u05D5\u05B9\u05E1\u05B5\u05E3 \u05E1\u05DE\u05D9\u05EA\u2014\u05DE\u05EA\u05EA\u05D9\u05D4\u05D5', ch:1, prefix:'jsm-ch' },
+          { id:'jsh', en:'JS\u2014History', heb:'\u05D9\u05D5\u05B9\u05E1\u05B5\u05E3 \u05E1\u05DE\u05D9\u05EA\u2014\u05D4\u05D9\u05E1\u05D8\u05D5\u05E8\u05D9\u05D4', ch:1, prefix:'jsh-ch' },
+          { id:'aof', en:'Articles of Faith', heb:'\u05E2\u05B4\u05E7\u05B0\u05E8\u05B5\u05D9 \u05D4\u05B8\u05D0\u05B1\u05DE\u05D5\u05BC\u05E0\u05B8\u05D4', ch:1, prefix:'aof-ch' }
+        ]}
+      ]
+    }
+  };
+
+  // ── State ──
+  var _config = null;
+  var _sidebarEl = null;
+  var _overlayEl = null;
+  var _breadcrumbEl = null;
+  var _searchInput = null;
+  var _searchResults = null;
+  var _activeVolTab = null;
+  var _expandedBook = null;
+  var _searchIdx = -1;
+
+  // ── Build flat search index ──
+  var _searchIndex = [];
+  (function buildSearchIndex() {
+    var volKeys = ['ot','nt','bom','dc','pgp'];
+    volKeys.forEach(function(vk) {
+      var vol = VOLUMES[vk];
+      vol.divisions.forEach(function(div) {
+        div.books.forEach(function(book) {
+          if (book.isSection) {
+            // D&C sections — add as single entry per section
+            _searchIndex.push({
+              en: 'D&C ' + book.secNum, heb: book.heb, vol: vk,
+              volName: vol.name, page: vol.page, prefix: book.prefix,
+              ch: 1, chId: book.prefix + '1'
+            });
+          } else {
+            _searchIndex.push({
+              en: book.en, heb: book.heb, vol: vk,
+              volName: vol.name, page: vol.page, prefix: book.prefix,
+              ch: book.ch, id: book.id
+            });
+          }
+        });
+      });
+    });
+  })();
+
+  // ── Search ──
+  function searchBooks(query) {
+    if (!query || query.length < 1) return [];
+    var q = query.toLowerCase().trim();
+    // Try to parse "Book Chapter" pattern
+    var chMatch = q.match(/^(.+?)\s+(\d+)$/);
+    var bookQ = chMatch ? chMatch[1] : q;
+    var chNum = chMatch ? parseInt(chMatch[2], 10) : 0;
+
+    var results = [];
+    _searchIndex.forEach(function(entry) {
+      var enLower = entry.en.toLowerCase();
+      var score = 0;
+      if (enLower === bookQ) score = 100;
+      else if (enLower.indexOf(bookQ) === 0) score = 80;
+      else if (enLower.indexOf(bookQ) >= 0) score = 60;
+      else if (entry.heb.indexOf(q) >= 0) score = 70;
+      if (score > 0) {
+        results.push({ entry: entry, score: score, chNum: chNum });
+      }
+    });
+    results.sort(function(a, b) { return b.score - a.score; });
+    return results.slice(0, 8);
+  }
+
+  // ── Create DOM ──
+  function createSidebar() {
+    // Overlay
+    _overlayEl = document.createElement('div');
+    _overlayEl.id = 'nav-overlay';
+    _overlayEl.onclick = closeSidebar;
+    document.body.appendChild(_overlayEl);
+
+    // Sidebar
+    _sidebarEl = document.createElement('div');
+    _sidebarEl.id = 'nav-sidebar';
+
+    // Search bar
+    var searchWrap = document.createElement('div');
+    searchWrap.className = 'nav-search-wrap';
+    _searchInput = document.createElement('input');
+    _searchInput.type = 'text';
+    _searchInput.placeholder = 'Jump to verse... (e.g. Isaiah 53)';
+    _searchInput.oninput = onSearchInput;
+    _searchInput.onkeydown = onSearchKeydown;
+    var closeBtn = document.createElement('button');
+    closeBtn.className = 'nav-close-btn';
+    closeBtn.innerHTML = '\u2715';
+    closeBtn.onclick = closeSidebar;
+    searchWrap.appendChild(_searchInput);
+    searchWrap.appendChild(closeBtn);
+    _sidebarEl.appendChild(searchWrap);
+
+    // Search results
+    _searchResults = document.createElement('div');
+    _searchResults.className = 'nav-search-results';
+    _sidebarEl.appendChild(_searchResults);
+
+    // Volume tabs
+    var tabsRow = document.createElement('div');
+    tabsRow.className = 'nav-vol-tabs';
+    var volKeys = ['ot','nt','bom','dc','pgp'];
+    volKeys.forEach(function(vk) {
+      var vol = VOLUMES[vk];
+      var tab = document.createElement('div');
+      tab.className = 'nav-vol-tab' + (vk === _config.volume ? ' active' : '');
+      tab.setAttribute('data-vol', vk);
+      tab.innerHTML = '<span class="vt-heb">' + vol.abbr + '</span><span class="vt-en">' + vol.name + '</span>';
+      tab.onclick = function() { switchVolTab(vk); };
+      tabsRow.appendChild(tab);
+    });
+    _sidebarEl.appendChild(tabsRow);
+
+    // Book list container
+    var bookList = document.createElement('div');
+    bookList.className = 'nav-book-list';
+    bookList.id = 'nav-book-list';
+    _sidebarEl.appendChild(bookList);
+
+    document.body.appendChild(_sidebarEl);
+
+    // Render initial volume
+    renderVolBooks(_config.volume);
+
+    // Breadcrumb
+    _breadcrumbEl = document.getElementById('nav-breadcrumb');
+    if (!_breadcrumbEl) {
+      _breadcrumbEl = document.createElement('div');
+      _breadcrumbEl.id = 'nav-breadcrumb';
+      var controlsTop = document.querySelector('.controls-top');
+      if (controlsTop && controlsTop.nextElementSibling) {
+        controlsTop.parentNode.insertBefore(_breadcrumbEl, controlsTop.nextElementSibling);
+      } else if (controlsTop) {
+        controlsTop.parentNode.appendChild(_breadcrumbEl);
+      }
+    }
+    updateBreadcrumb();
+  }
+
+  // ── Render books for a volume ──
+  function renderVolBooks(volKey) {
+    var list = document.getElementById('nav-book-list');
+    if (!list) return;
+    list.innerHTML = '';
+    _expandedBook = null;
+    _activeVolTab = volKey;
+
+    // Update tab highlight
+    var tabs = _sidebarEl.querySelectorAll('.nav-vol-tab');
+    for (var i = 0; i < tabs.length; i++) {
+      tabs[i].classList.toggle('active', tabs[i].getAttribute('data-vol') === volKey);
+    }
+
+    var vol = VOLUMES[volKey];
+    if (!vol) return;
+
+    // D&C special: show section number grid instead of book list
+    if (volKey === 'dc') {
+      renderDCSections(list, vol);
+      return;
+    }
+
+    vol.divisions.forEach(function(div) {
+      if (div.name) {
+        var divEl = document.createElement('div');
+        divEl.className = 'nav-division';
+        divEl.textContent = div.name;
+        list.appendChild(divEl);
+      }
+      div.books.forEach(function(book) {
+        // Book row
+        var row = document.createElement('div');
+        row.className = 'nav-book-row' + (book.ch === 1 ? ' single-ch' : '');
+        var leftSpan = document.createElement('span');
+        leftSpan.innerHTML = (book.ch > 1 ? '<span class="nb-arrow">\u25B8</span>' : '') +
+          '<span class="nb-en">' + book.en + '</span>' +
+          (book.ch > 1 ? '<span class="nb-ch"> \u00B7 ' + book.ch + '</span>' : '');
+        var rightSpan = document.createElement('span');
+        rightSpan.className = 'nb-heb';
+        rightSpan.textContent = book.heb;
+        row.appendChild(leftSpan);
+        row.appendChild(rightSpan);
+
+        if (book.ch === 1) {
+          // Single chapter — click navigates directly
+          row.onclick = (function(b) { return function() { navigateToChapter(volKey, b.prefix + '1', b); }; })(book);
+        } else {
+          // Multi-chapter — click expands grid
+          row.onclick = (function(b, r) { return function() { toggleBookGrid(volKey, b, r); }; })(book, row);
+        }
+        list.appendChild(row);
+
+        // Chapter grid (hidden)
+        if (book.ch > 1) {
+          var grid = document.createElement('div');
+          grid.className = 'nav-ch-grid';
+          grid.setAttribute('data-book', book.id);
+          for (var c = 1; c <= book.ch; c++) {
+            var cell = document.createElement('div');
+            cell.className = 'nav-ch-cell';
+            var chId = book.prefix + c;
+            if (volKey === _config.volume && chId === _config.currentChapter) {
+              cell.classList.add('current');
+            }
+            cell.innerHTML = '<span class="ch-heb">' + toHebNum(c) + '</span><span class="ch-num">' + c + '</span>';
+            cell.onclick = (function(vid, cid, b) { return function(e) { e.stopPropagation(); navigateToChapter(vid, cid, b); }; })(volKey, chId, book);
+            grid.appendChild(cell);
+          }
+          list.appendChild(grid);
+        }
+      });
+    });
+
+    // Auto-expand current book if on this volume
+    if (volKey === _config.volume && _config.currentChapter) {
+      autoExpandCurrentBook();
+    }
+  }
+
+  // ── D&C special rendering (section grid) ──
+  function renderDCSections(list, vol) {
+    // Sections
+    var secDiv = document.createElement('div');
+    secDiv.className = 'nav-division';
+    secDiv.textContent = '\u05E1\u05E2\u05D9\u05E4\u05D9\u05DD \u00B7 Sections';
+    list.appendChild(secDiv);
+
+    var grid = document.createElement('div');
+    grid.className = 'nav-ch-grid open';
+    grid.style.gridTemplateColumns = 'repeat(7, 1fr)';
+    for (var i = 1; i <= 138; i++) {
+      var cell = document.createElement('div');
+      cell.className = 'nav-ch-cell';
+      var chId = 'dc' + i + '-ch1';
+      if ('dc' === _config.volume && chId === _config.currentChapter) cell.classList.add('current');
+      cell.innerHTML = '<span class="ch-heb">' + toHebNum(i) + '</span><span class="ch-num">' + i + '</span>';
+      cell.onclick = (function(cid) { return function() { navigateToChapter('dc', cid); }; })(chId);
+      grid.appendChild(cell);
+    }
+    list.appendChild(grid);
+
+    // Official Declarations
+    var odDiv = document.createElement('div');
+    odDiv.className = 'nav-division';
+    odDiv.textContent = '\u05D4\u05DB\u05E8\u05D6\u05D5\u05EA \u00B7 Official Declarations';
+    list.appendChild(odDiv);
+
+    ['od1','od2'].forEach(function(od, idx) {
+      var row = document.createElement('div');
+      row.className = 'nav-book-row single-ch';
+      var chId = od + '-ch1';
+      row.innerHTML = '<span><span class="nb-en">Official Declaration ' + (idx+1) + '</span></span><span class="nb-heb">\u05D4\u05DB\u05E8\u05D6\u05D4 ' + toHebNum(idx+1) + '</span>';
+      if ('dc' === _config.volume && chId === _config.currentChapter) row.style.background = 'rgba(200,168,78,0.15)';
+      row.onclick = (function(cid) { return function() { navigateToChapter('dc', cid); }; })(chId);
+      list.appendChild(row);
+    });
+  }
+
+  // ── Toggle book chapter grid ──
+  function toggleBookGrid(volKey, book, rowEl) {
+    var grid = _sidebarEl.querySelector('.nav-ch-grid[data-book="' + book.id + '"]');
+    if (!grid) return;
+    var isOpen = grid.classList.contains('open');
+    // Close all grids first
+    var allGrids = _sidebarEl.querySelectorAll('.nav-ch-grid');
+    var allRows = _sidebarEl.querySelectorAll('.nav-book-row');
+    for (var i = 0; i < allGrids.length; i++) allGrids[i].classList.remove('open');
+    for (var i = 0; i < allRows.length; i++) allRows[i].classList.remove('expanded');
+    if (!isOpen) {
+      grid.classList.add('open');
+      rowEl.classList.add('expanded');
+      _expandedBook = book.id;
+      // Scroll grid into view
+      setTimeout(function() { grid.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }, 50);
+    } else {
+      _expandedBook = null;
+    }
+  }
+
+  // ── Auto-expand the book containing current chapter ──
+  function autoExpandCurrentBook() {
+    if (!_config.currentChapter) return;
+    var vol = VOLUMES[_config.volume];
+    if (!vol) return;
+    for (var d = 0; d < vol.divisions.length; d++) {
+      var books = vol.divisions[d].books;
+      for (var b = 0; b < books.length; b++) {
+        if (_config.currentChapter.indexOf(books[b].prefix) === 0) {
+          var grid = _sidebarEl.querySelector('.nav-ch-grid[data-book="' + books[b].id + '"]');
+          var row = grid ? grid.previousElementSibling : null;
+          if (grid && row) {
+            grid.classList.add('open');
+            row.classList.add('expanded');
+            _expandedBook = books[b].id;
+            setTimeout(function() {
+              var cur = grid.querySelector('.current');
+              if (cur) cur.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+          }
+          return;
+        }
+      }
+    }
+  }
+
+  // ── Navigate to a chapter ──
+  function navigateToChapter(volKey, chapterId, book) {
+    closeSidebar();
+    // Save reading position
+    saveReadingPosition(volKey, chapterId, book);
+
+    if (volKey === _config.volume) {
+      // Same volume — use page's navTo
+      _config.currentChapter = chapterId;
+      if (_config.onNavigate) _config.onNavigate(chapterId);
+      updateBreadcrumb();
+    } else {
+      // Cross-volume — navigate to other page
+      var vol = VOLUMES[volKey];
+      if (!vol) return;
+      var url = _config.basePath + vol.page;
+      // Build hash from chapterId
+      var hash = buildHash(volKey, chapterId);
+      window.location.href = url + (hash ? '#' + hash : '');
+    }
+  }
+
+  // ── Build URL hash from chapter ID ──
+  function buildHash(volKey, chapterId) {
+    if (volKey === 'bom') {
+      // BOM uses different hash format
+      var bomHashes = {
+        'ch': '1-nephi-', '2n-ch': '2-nephi-', 'jc-ch': 'jacob-',
+        'en-ch': 'enos-', 'jr-ch': 'jarom-', 'om-ch': 'omni-',
+        'wm-ch': 'words-of-mormon-', 'mo-ch': 'mosiah-', 'al-ch': 'alma-',
+        'he-ch': 'helaman-', '3n-ch': '3-nephi-', '4n-ch': '4-nephi-',
+        'mm-ch': 'mormon-', 'et-ch': 'ether-', 'mr-ch': 'moroni-'
+      };
+      for (var prefix in bomHashes) {
+        if (chapterId.indexOf(prefix) === 0) {
+          var num = chapterId.replace(prefix, '');
+          return bomHashes[prefix] + num;
+        }
+      }
+    }
+    // For other volumes, the hash is typically derived from the page's navTo logic
+    // We return the chapterId as a reasonable hash for now
+    return chapterId;
+  }
+
+  // ── Switch volume tab ──
+  function switchVolTab(volKey) {
+    renderVolBooks(volKey);
+  }
+
+  // ── Open / Close ──
+  function openSidebar() {
+    if (!_sidebarEl) return;
+    _sidebarEl.classList.add('open');
+    _overlayEl.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    setTimeout(function() { _searchInput.focus(); }, 300);
+  }
+
+  function closeSidebar() {
+    if (!_sidebarEl) return;
+    _sidebarEl.classList.remove('open');
+    _overlayEl.classList.remove('open');
+    document.body.style.overflow = '';
+    _searchInput.value = '';
+    _searchResults.classList.remove('open');
+    _searchResults.innerHTML = '';
+    _searchIdx = -1;
+  }
+
+  function toggleSidebar() {
+    if (_sidebarEl && _sidebarEl.classList.contains('open')) closeSidebar();
+    else openSidebar();
+  }
+
+  // ── Search input handler ──
+  function onSearchInput() {
+    var q = _searchInput.value.trim();
+    if (q.length < 1) {
+      _searchResults.classList.remove('open');
+      _searchResults.innerHTML = '';
+      _searchIdx = -1;
+      return;
+    }
+    var results = searchBooks(q);
+    _searchResults.innerHTML = '';
+    _searchIdx = -1;
+    if (results.length === 0) {
+      _searchResults.classList.remove('open');
+      return;
+    }
+    results.forEach(function(r, idx) {
+      var div = document.createElement('div');
+      div.className = 'nav-search-result';
+      var label = r.entry.en;
+      if (r.chNum && r.chNum <= r.entry.ch) label += ' ' + r.chNum;
+      div.innerHTML = '<span><span class="sr-name">' + label + '</span><span class="sr-vol"> ' + r.entry.volName + '</span></span><span class="sr-heb">' + r.entry.heb + '</span>';
+      div.onclick = function() { executeSearchResult(r); };
+      _searchResults.appendChild(div);
+    });
+    _searchResults.classList.add('open');
+  }
+
+  function onSearchKeydown(e) {
+    var items = _searchResults.querySelectorAll('.nav-search-result');
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      _searchIdx = Math.min(_searchIdx + 1, items.length - 1);
+      updateSearchHighlight(items);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      _searchIdx = Math.max(_searchIdx - 1, 0);
+      updateSearchHighlight(items);
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (_searchIdx >= 0 && items[_searchIdx]) {
+        items[_searchIdx].click();
+      } else if (items.length > 0) {
+        items[0].click();
+      }
+    } else if (e.key === 'Escape') {
+      closeSidebar();
+    }
+  }
+
+  function updateSearchHighlight(items) {
+    for (var i = 0; i < items.length; i++) {
+      items[i].classList.toggle('active', i === _searchIdx);
+    }
+  }
+
+  function executeSearchResult(r) {
+    var chNum = r.chNum || 1;
+    if (chNum > r.entry.ch) chNum = r.entry.ch;
+    var chId = r.entry.prefix + chNum;
+    if (r.entry.isSection) chId = r.entry.chId;
+    navigateToChapter(r.entry.vol, chId);
+  }
+
+  // ── Breadcrumb ──
+  function updateBreadcrumb() {
+    if (!_breadcrumbEl) return;
+    if (!_config.currentChapter || _config.currentChapter === 'landing') {
+      _breadcrumbEl.classList.remove('visible');
+      return;
+    }
+    var vol = VOLUMES[_config.volume];
+    if (!vol) return;
+
+    var bookInfo = findBook(_config.volume, _config.currentChapter);
+    if (!bookInfo) { _breadcrumbEl.classList.remove('visible'); return; }
+
+    var chNum = _config.currentChapter.replace(bookInfo.prefix, '');
+    var bcHtml = '<span onclick="NavEngine.openToVolume(\'' + _config.volume + '\')">' + vol.heb + ' \u00B7 ' + vol.name + '</span>';
+    bcHtml += '<span class="bc-sep">\u203A</span>';
+    bcHtml += '<span onclick="NavEngine.openToBook(\'' + bookInfo.id + '\')">' + bookInfo.heb + ' \u00B7 ' + bookInfo.en + '</span>';
+    if (bookInfo.ch > 1) {
+      bcHtml += '<span class="bc-sep">\u203A</span>';
+      bcHtml += '<span>\u05E4\u05E8\u05E7 ' + toHebNum(parseInt(chNum,10)) + ' \u00B7 Chapter ' + chNum + '</span>';
+    }
+    _breadcrumbEl.innerHTML = bcHtml;
+    _breadcrumbEl.classList.add('visible');
+    // Position below controls-top
+    var ct = document.querySelector('.controls-top');
+    if (ct) _breadcrumbEl.style.top = ct.offsetHeight + 'px';
+  }
+
+  function findBook(volKey, chapterId) {
+    var vol = VOLUMES[volKey];
+    if (!vol) return null;
+    for (var d = 0; d < vol.divisions.length; d++) {
+      var books = vol.divisions[d].books;
+      for (var b = 0; b < books.length; b++) {
+        if (chapterId.indexOf(books[b].prefix) === 0) return books[b];
+      }
+    }
+    return null;
+  }
+
+  // ── Reading Position Memory ──
+  function saveReadingPosition(volKey, chapterId, book) {
+    var vol = VOLUMES[volKey];
+    if (!vol) return;
+    var bookInfo = book || findBook(volKey, chapterId);
+    var label = bookInfo ? bookInfo.en : '';
+    var chNum = chapterId.replace(bookInfo ? bookInfo.prefix : '', '');
+    if (bookInfo && bookInfo.ch > 1) label += ' ' + chNum;
+    var hash = buildHash(volKey, chapterId);
+    var url = vol.page + (hash ? '#' + hash : '');
+    try {
+      localStorage.setItem('sw-last-read', JSON.stringify({
+        volume: volKey, chapter: chapterId, label: label,
+        heb: bookInfo ? bookInfo.heb : '', path: url, timestamp: Date.now()
+      }));
+    } catch(e) {}
+  }
+
+  // ── Keyboard Shortcuts ──
+  function onKeydown(e) {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
+    if (e.key === 'b' || e.key === 'B' || e.key === 'm' || e.key === 'M') {
+      e.preventDefault(); toggleSidebar();
+    } else if (e.key === '/' || e.key === 's' || e.key === 'S') {
+      if (!_sidebarEl.classList.contains('open')) { e.preventDefault(); openSidebar(); }
+    } else if (e.key === 'Escape') {
+      closeSidebar();
+    }
+  }
+
+  // ── Touch / Swipe ──
+  var _touchStartX = 0;
+  var _touchStartY = 0;
+  function onTouchStart(e) {
+    _touchStartX = e.touches[0].clientX;
+    _touchStartY = e.touches[0].clientY;
+  }
+  function onTouchEnd(e) {
+    var dx = e.changedTouches[0].clientX - _touchStartX;
+    var dy = Math.abs(e.changedTouches[0].clientY - _touchStartY);
+    // Swipe right from left edge to open
+    if (_touchStartX < 30 && dx > 60 && dy < 80 && !_sidebarEl.classList.contains('open')) {
+      openSidebar();
+    }
+    // Swipe left on sidebar to close
+    if (_sidebarEl.classList.contains('open') && dx < -60 && dy < 80) {
+      closeSidebar();
+    }
+  }
+
+  // ── Public API ──
+  window.NavEngine = {
+    init: function(config) {
+      _config = config;
+      createSidebar();
+      document.addEventListener('keydown', onKeydown);
+      document.addEventListener('touchstart', onTouchStart, { passive: true });
+      document.addEventListener('touchend', onTouchEnd, { passive: true });
+
+      // Hook into existing nav-label click
+      var navLabel = document.getElementById('nav-label');
+      if (navLabel) {
+        navLabel.onclick = function(e) { e.stopPropagation(); toggleSidebar(); };
+      }
+    },
+    open: openSidebar,
+    close: closeSidebar,
+    toggle: toggleSidebar,
+    update: function(chapterId) {
+      _config.currentChapter = chapterId;
+      updateBreadcrumb();
+      saveReadingPosition(_config.volume, chapterId);
+    },
+    openToVolume: function(volKey) {
+      openSidebar();
+      switchVolTab(volKey);
+    },
+    openToBook: function(bookId) {
+      openSidebar();
+      // Find which volume has this book
+      var volKeys = ['ot','nt','bom','dc','pgp'];
+      for (var v = 0; v < volKeys.length; v++) {
+        var vol = VOLUMES[volKeys[v]];
+        for (var d = 0; d < vol.divisions.length; d++) {
+          for (var b = 0; b < vol.divisions[d].books.length; b++) {
+            if (vol.divisions[d].books[b].id === bookId) {
+              switchVolTab(volKeys[v]);
+              setTimeout(function() {
+                var grid = _sidebarEl.querySelector('.nav-ch-grid[data-book="' + bookId + '"]');
+                var row = grid ? grid.previousElementSibling : null;
+                if (grid && row) {
+                  grid.classList.add('open');
+                  row.classList.add('expanded');
+                  grid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+              }, 100);
+              return;
+            }
+          }
+        }
+      }
+    },
+    getLastRead: function() {
+      try {
+        var data = localStorage.getItem('sw-last-read');
+        return data ? JSON.parse(data) : null;
+      } catch(e) { return null; }
+    },
+    VOLUMES: VOLUMES
+  };
+})();

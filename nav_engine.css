@@ -1,0 +1,211 @@
+/* ══════════════════════════════════════════════════════
+   NAV ENGINE — Unified Navigation for Standard Works
+   ══════════════════════════════════════════════════════ */
+
+/* ── Overlay ── */
+#nav-overlay {
+  display: none; position: fixed; inset: 0; z-index: 999;
+  background: rgba(0,0,0,0.5); backdrop-filter: blur(2px);
+  opacity: 0; transition: opacity 0.25s ease;
+}
+#nav-overlay.open { display: block; opacity: 1; }
+
+/* ── Sidebar Panel ── */
+#nav-sidebar {
+  position: fixed; top: 0; left: 0; bottom: 0; z-index: 1000;
+  width: 360px; max-width: 90vw;
+  background: #1a1a1a; color: #e8e2d4;
+  transform: translateX(-100%);
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex; flex-direction: column;
+  font-family: 'Crimson Pro', 'Georgia', serif;
+  border-right: 1px solid #333;
+  box-shadow: 4px 0 24px rgba(0,0,0,0.4);
+  overflow: hidden;
+}
+#nav-sidebar.open { transform: translateX(0); }
+
+/* ── Search Bar ── */
+.nav-search-wrap {
+  display: flex; align-items: center; gap: 8px;
+  padding: 12px 16px; border-bottom: 1px solid #2a2a2a;
+  background: #151515; flex-shrink: 0;
+}
+.nav-search-wrap input {
+  flex: 1; background: #222; border: 1px solid #333; border-radius: 6px;
+  padding: 8px 12px; color: #e8e2d4; font-size: 0.95em;
+  font-family: 'Crimson Pro', serif;
+  outline: none; transition: border-color 0.2s;
+}
+.nav-search-wrap input::placeholder { color: #666; }
+.nav-search-wrap input:focus { border-color: #c8a84e; }
+.nav-close-btn {
+  background: none; border: none; color: #888; font-size: 1.4em;
+  cursor: pointer; padding: 4px 8px; line-height: 1;
+}
+.nav-close-btn:hover { color: #e8e2d4; }
+
+/* ── Search Results ── */
+.nav-search-results {
+  display: none; background: #1e1e1e; border-bottom: 1px solid #2a2a2a;
+  max-height: 280px; overflow-y: auto; flex-shrink: 0;
+}
+.nav-search-results.open { display: block; }
+.nav-search-result {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 16px; cursor: pointer; border-bottom: 1px solid #222;
+  transition: background 0.15s;
+}
+.nav-search-result:hover, .nav-search-result.active { background: rgba(200,168,78,0.12); }
+.nav-search-result .sr-name { font-size: 0.95em; }
+.nav-search-result .sr-heb { font-family: 'SBL Hebrew','David Libre',serif; font-size: 1em; color: #c8a84e; }
+.nav-search-result .sr-vol { font-size: 0.75em; color: #888; margin-left: 8px; }
+
+/* ── Volume Tabs ── */
+.nav-vol-tabs {
+  display: flex; flex-shrink: 0;
+  border-bottom: 1px solid #2a2a2a; background: #151515;
+}
+.nav-vol-tab {
+  flex: 1; text-align: center; padding: 10px 4px 8px; cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: background 0.15s, border-color 0.2s;
+  min-width: 0;
+}
+.nav-vol-tab:hover { background: rgba(200,168,78,0.08); }
+.nav-vol-tab.active {
+  border-bottom-color: #c8a84e;
+  background: rgba(200,168,78,0.1);
+}
+.nav-vol-tab .vt-heb {
+  display: block; font-family: 'SBL Hebrew','David Libre',serif;
+  font-size: 0.85em; color: #c8a84e; line-height: 1.2;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.nav-vol-tab .vt-en {
+  display: block; font-size: 0.6em; color: #888; margin-top: 2px;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.nav-vol-tab.active .vt-heb { color: #e8c860; }
+.nav-vol-tab.active .vt-en { color: #c8a84e; }
+
+/* ── Book List (scrollable area) ── */
+.nav-book-list {
+  flex: 1; overflow-y: auto; overflow-x: hidden;
+  padding: 8px 0;
+  scrollbar-width: thin; scrollbar-color: #444 #1a1a1a;
+}
+.nav-book-list::-webkit-scrollbar { width: 6px; }
+.nav-book-list::-webkit-scrollbar-track { background: #1a1a1a; }
+.nav-book-list::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
+
+/* ── Division Headers ── */
+.nav-division {
+  padding: 12px 16px 4px; font-size: 0.72em; color: #888;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  font-weight: 600; border-top: 1px solid #2a2a2a; margin-top: 4px;
+}
+.nav-division:first-child { border-top: none; margin-top: 0; }
+
+/* ── Book Row ── */
+.nav-book-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 8px 16px; cursor: pointer;
+  transition: background 0.15s;
+}
+.nav-book-row:hover { background: rgba(200,168,78,0.08); }
+.nav-book-row.expanded { background: rgba(200,168,78,0.06); }
+.nav-book-row .nb-heb {
+  font-family: 'SBL Hebrew','David Libre',serif; font-size: 1em;
+  color: #c8a84e; direction: rtl;
+}
+.nav-book-row .nb-en { font-size: 0.88em; color: #bbb; }
+.nav-book-row .nb-ch {
+  font-size: 0.7em; color: #666; margin-left: 6px; white-space: nowrap;
+}
+.nav-book-row .nb-arrow {
+  font-size: 0.7em; color: #666; transition: transform 0.2s; margin-right: 4px;
+}
+.nav-book-row.expanded .nb-arrow { transform: rotate(90deg); }
+.nav-book-row.single-ch { cursor: pointer; }
+
+/* ── Chapter Grid ── */
+.nav-ch-grid {
+  display: none; grid-template-columns: repeat(7, 1fr); gap: 4px;
+  padding: 6px 16px 10px; background: rgba(0,0,0,0.15);
+}
+.nav-ch-grid.open { display: grid; }
+.nav-ch-cell {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 6px 2px; border-radius: 4px; cursor: pointer;
+  background: #252525; border: 1px solid #333;
+  transition: background 0.15s, border-color 0.15s;
+  min-height: 38px;
+}
+.nav-ch-cell:hover { background: rgba(200,168,78,0.15); border-color: #c8a84e; }
+.nav-ch-cell.current {
+  background: rgba(200,168,78,0.25); border-color: #c8a84e;
+}
+.nav-ch-cell .ch-heb {
+  font-family: 'SBL Hebrew','David Libre',serif; font-size: 0.85em;
+  color: #c8a84e; line-height: 1.1;
+}
+.nav-ch-cell .ch-num { font-size: 0.65em; color: #888; }
+.nav-ch-cell.current .ch-heb { color: #e8c860; }
+.nav-ch-cell.current .ch-num { color: #c8a84e; }
+
+/* ── Breadcrumb ── */
+#nav-breadcrumb {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 99;
+  font-family: 'Crimson Pro', serif; font-size: 0.78em;
+  color: #888; padding: 4px 16px;
+  border-bottom: 1px solid rgba(200,168,78,0.15);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  background: var(--bg, #faf6ef);
+  display: none;
+  direction: ltr;
+}
+#nav-breadcrumb.visible { display: block; }
+#nav-breadcrumb span { cursor: pointer; transition: color 0.15s; }
+#nav-breadcrumb span:hover { color: #c8a84e; }
+#nav-breadcrumb .bc-sep { color: #bbb; margin: 0 6px; cursor: default; }
+body.dark-mode #nav-breadcrumb { background: #1e1e1e; color: #888; }
+body.dark-mode #nav-breadcrumb .bc-sep { color: #555; }
+
+/* ── Continue Reading Card (index.html) ── */
+.continue-reading {
+  background: rgba(200,168,78,0.08); border: 1px solid rgba(200,168,78,0.25);
+  border-radius: 8px; padding: 16px 20px; margin: 16px auto;
+  max-width: 600px; cursor: pointer; transition: background 0.2s;
+  font-family: 'Crimson Pro', serif; text-align: center;
+}
+.continue-reading:hover { background: rgba(200,168,78,0.15); }
+.continue-reading .cr-label { font-size: 0.8em; color: #888; text-transform: uppercase; letter-spacing: 0.1em; }
+.continue-reading .cr-ref { font-size: 1.15em; color: #c8a84e; margin-top: 4px; font-weight: 600; }
+.continue-reading .cr-heb { font-family: 'SBL Hebrew','David Libre',serif; font-size: 1.1em; color: #c8a84e; }
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  #nav-sidebar { width: 90vw; }
+  .nav-ch-grid { grid-template-columns: repeat(5, 1fr); gap: 5px; }
+  .nav-ch-cell { min-height: 44px; padding: 8px 2px; }
+  .nav-book-row { padding: 10px 16px; }
+  .nav-vol-tab { padding: 8px 2px 6px; }
+  .nav-vol-tab .vt-heb { font-size: 0.8em; }
+  .nav-vol-tab .vt-en { font-size: 0.55em; }
+  #nav-breadcrumb { font-size: 0.72em; padding: 3px 12px; }
+}
+
+/* ── Swipe hint (first visit) ── */
+.nav-swipe-hint {
+  position: fixed; left: 0; top: 50%; transform: translateY(-50%);
+  width: 4px; height: 60px; background: rgba(200,168,78,0.3);
+  border-radius: 0 4px 4px 0; z-index: 998;
+  animation: swipeHintPulse 2s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes swipeHintPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; width: 6px; }
+}

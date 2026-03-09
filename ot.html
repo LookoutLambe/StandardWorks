@@ -9,6 +9,7 @@
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="nav_engine.css">
 <style>
 
 :root {
@@ -205,76 +206,7 @@ body.audio-bar-open .page { padding-top: 95px; }
 .search-result-ref { font-family: 'Crimson Pro', serif; font-size: 0.8em; color: var(--accent); direction: ltr; margin-bottom: 2px; }
 .search-result-text { font-size: 1em; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-/* === NAV DROPDOWN === */
-#nav-dropdown {
-  position: fixed; top: 0; left: 0; bottom: 0;
-  width: 50vw; max-width: 50vw;
-  background: #1e2233; border-right: 2px solid #c8a84e;
-  overflow-y: auto; z-index: 1100;
-  padding: 0 0 4px;
-  transform: translateX(-100%); transition: transform 0.3s ease;
-  box-shadow: 4px 0 24px rgba(0,0,0,0.4);
-}
-#nav-dropdown.open { transform: translateX(0); }
-.nav-panel-header {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 14px 16px; border-bottom: 1px solid #3a3f55;
-  position: sticky; top: 0; background: #1e2233; z-index: 1;
-}
-.nav-panel-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1em; color: #c8a84e; font-weight: 600; }
-.nav-panel-close { cursor: pointer; color: #c8a84e; font-size: 1.4em; background: none; border: none; padding: 4px 8px; }
-.nav-panel-close:hover { color: #fff; }
-#nav-dropdown .dd-link {
-  display: block; width: 100%; background: transparent; border: none;
-  color: #c8a84e; padding: 8px 14px; text-align: right;
-  font-family: 'David Libre', serif; font-size: 0.95em; cursor: pointer;
-}
-#nav-dropdown .dd-link:hover { background: #2a2f44; }
-#nav-dropdown .dd-book {
-  display: flex; align-items: center; padding: 6px 14px;
-  color: #c8a84e; cursor: pointer; font-family: 'David Libre', serif; font-size: 0.95em;
-}
-#nav-dropdown .dd-book:hover { background: #2a2f44; }
-#nav-dropdown .dd-eng { font-family: 'Crimson Pro', serif; font-size: 0.8em; opacity: 0.6; margin-right: auto; direction: ltr; }
-#nav-dropdown .dd-book .dd-arrow { font-size: 12px; opacity: 0.6; }
-#nav-dropdown .dd-chapters { display: none; padding: 4px 14px 6px; }
-#nav-dropdown .dd-chapters.open { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; direction: rtl; }
-#nav-dropdown .dd-ch {
-  background: transparent; border: 1px solid #3a3f55;
-  color: #8a7a4a; padding: 5px 0 4px; border-radius: 3px;
-  cursor: pointer; font-family: 'Crimson Pro', serif; font-size: 12px;
-  font-weight: 400; text-align: center;
-  display: flex; flex-direction: column; align-items: center; line-height: 1.1;
-}
-#nav-dropdown .dd-ch .dd-ch-heb { font-family: 'David Libre', serif; font-size: 16px; font-weight: 700; color: #d4af37; direction: rtl; }
-#nav-dropdown .dd-ch:hover { background: #2a2f44; border-color: var(--accent); color: #fff; }
-#nav-dropdown .dd-divider { border: none; border-top: 1px solid #2a2f44; margin: 4px 12px; }
-body.dark-mode #nav-dropdown { background: #0a0a0a; border-color: #444444; }
-body.dark-mode .nav-panel-header { background: #0a0a0a; }
-body.dark-mode #nav-dropdown .dd-link:hover,
-body.dark-mode #nav-dropdown .dd-book:hover,
-body.dark-mode #nav-dropdown .dd-ch:hover { background: #383838; }
-@media (max-width: 600px) {
-  #nav-dropdown { width: 85vw; max-width: 85vw; }
-  #nav-dropdown .dd-chapters.open { grid-template-columns: repeat(5, 1fr); }
-}
-
-.dd-section-header {
-  padding: 6px 12px; font-size: 0.85em; color: #c8a84e;
-  font-weight: 700; letter-spacing: 0.05em; opacity: 0.8;
-  font-family: 'Crimson Pro', serif;
-}
-
-/* Volume cards in nav panel */
-.dd-volume-card {
-  display: flex; align-items: center; gap: 10px;
-  padding: 8px 16px; color: #8a7a4a;
-  text-decoration: none; font-family: 'Crimson Pro', serif;
-  font-size: 0.9em; transition: background 0.15s; direction: ltr;
-}
-.dd-volume-card:hover { background: #2a2f44; color: #c8a84e; }
-.dd-volume-card.active { color: #c8a84e; font-weight: 600; background: rgba(200,168,78,0.1); border-left: 3px solid #c8a84e; }
-.dd-vol-heb { font-family: 'David Libre', serif; font-size: 1em; direction: rtl; min-width: 80px; text-align: right; }
+/* nav dropdown styles moved to nav_engine.css */
 
 /* Keyboard shortcuts overlay */
 #shortcuts-overlay {
@@ -651,111 +583,7 @@ body.dark-mode #return-banner a:hover { background:#c8a84e; }
 </div>
 
 <!-- Panel Overlay -->
-<div id="panel-overlay" onclick="closeGlossary();closeAnnotationsPanel();closeNavPanel();"></div>
-
-<!-- Navigation Panel -->
-<div id="nav-dropdown">
-  <div class="nav-panel-header">
-    <span class="nav-panel-title">Navigation</span>
-    <button class="nav-panel-close" onclick="closeNavPanel()" aria-label="Close navigation">&times;</button>
-  </div>
-  <div class="dd-section-header" style="padding-top:8px;">All Volumes</div>
-    <a class="dd-volume-card" href="index.html"><span class="dd-vol-heb">🏠</span> Home</a>
-    <a class="dd-volume-card active" href="ot.html"><span class="dd-vol-heb">תנ״ך</span> Old Testament</a>
-    <a class="dd-volume-card" href="nt.html"><span class="dd-vol-heb">הברית החדשה</span> New Testament</a>
-    <a class="dd-volume-card" href="bom/bom.html"><span class="dd-vol-heb">ספר מורמון</span> Book of Mormon</a>
-    <a class="dd-volume-card" href="dc.html"><span class="dd-vol-heb">תורה ובריתות</span> D&amp;C</a>
-    <a class="dd-volume-card" href="pgp.html"><span class="dd-vol-heb">פנינת המחיר הגדול</span> Pearl of Great Price</a>
-    <a class="dd-volume-card" href="jst.html"><span class="dd-vol-heb">תרגום ג׳וזף סמית</span> JST</a>
-  <hr class="dd-divider">
-
-        <button class="dd-link" onclick="ddNav('landing')">← תַּנַ"ךְ</button>
-        <hr class="dd-divider">
-        <div class="dd-section-header">תּוֹרָה / Torah</div>
-        <div class="dd-book" onclick="toggleDdBook('dd-gen')"><span class="dd-arrow">▼</span>בְּרֵאשִׁית <span class="dd-eng">Genesis</span></div>
-        <div class="dd-chapters" id="dd-gen"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-exo')"><span class="dd-arrow">▼</span>שְׁמוֹת <span class="dd-eng">Exodus</span></div>
-        <div class="dd-chapters" id="dd-exo"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-lev')"><span class="dd-arrow">▼</span>וַיִּקְרָא <span class="dd-eng">Leviticus</span></div>
-        <div class="dd-chapters" id="dd-lev"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-num')"><span class="dd-arrow">▼</span>בְּמִדְבַּר <span class="dd-eng">Numbers</span></div>
-        <div class="dd-chapters" id="dd-num"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-deu')"><span class="dd-arrow">▼</span>דְּבָרִים <span class="dd-eng">Deuteronomy</span></div>
-        <div class="dd-chapters" id="dd-deu"></div>
-        <hr class="dd-divider">
-        <div class="dd-section-header">נְבִיאִים / Nevi'im</div>
-        <div class="dd-book" onclick="toggleDdBook('dd-jos')"><span class="dd-arrow">▼</span>יְהוֹשֻׁעַ <span class="dd-eng">Joshua</span></div>
-        <div class="dd-chapters" id="dd-jos"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-jdg')"><span class="dd-arrow">▼</span>שׁוֹפְטִים <span class="dd-eng">Judges</span></div>
-        <div class="dd-chapters" id="dd-jdg"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-1sa')"><span class="dd-arrow">▼</span>שְׁמוּאֵל א <span class="dd-eng">1 Samuel</span></div>
-        <div class="dd-chapters" id="dd-1sa"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-2sa')"><span class="dd-arrow">▼</span>שְׁמוּאֵל ב <span class="dd-eng">2 Samuel</span></div>
-        <div class="dd-chapters" id="dd-2sa"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-1ki')"><span class="dd-arrow">▼</span>מְלָכִים א <span class="dd-eng">1 Kings</span></div>
-        <div class="dd-chapters" id="dd-1ki"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-2ki')"><span class="dd-arrow">▼</span>מְלָכִים ב <span class="dd-eng">2 Kings</span></div>
-        <div class="dd-chapters" id="dd-2ki"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-isa')"><span class="dd-arrow">▼</span>יְשַׁעְיָהוּ <span class="dd-eng">Isaiah</span></div>
-        <div class="dd-chapters" id="dd-isa"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-jer')"><span class="dd-arrow">▼</span>יִרְמְיָהוּ <span class="dd-eng">Jeremiah</span></div>
-        <div class="dd-chapters" id="dd-jer"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-eze')"><span class="dd-arrow">▼</span>יְחֶזְקֵאל <span class="dd-eng">Ezekiel</span></div>
-        <div class="dd-chapters" id="dd-eze"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-hos')"><span class="dd-arrow">▼</span>הוֹשֵׁעַ <span class="dd-eng">Hosea</span></div>
-        <div class="dd-chapters" id="dd-hos"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-joe')"><span class="dd-arrow">▼</span>יוֹאֵל <span class="dd-eng">Joel</span></div>
-        <div class="dd-chapters" id="dd-joe"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-amo')"><span class="dd-arrow">▼</span>עָמוֹס <span class="dd-eng">Amos</span></div>
-        <div class="dd-chapters" id="dd-amo"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-oba')"><span class="dd-arrow">▼</span>עוֹבַדְיָה <span class="dd-eng">Obadiah</span></div>
-        <div class="dd-chapters" id="dd-oba"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-jon')"><span class="dd-arrow">▼</span>יוֹנָה <span class="dd-eng">Jonah</span></div>
-        <div class="dd-chapters" id="dd-jon"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-mic')"><span class="dd-arrow">▼</span>מִיכָה <span class="dd-eng">Micah</span></div>
-        <div class="dd-chapters" id="dd-mic"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-nah')"><span class="dd-arrow">▼</span>נַחוּם <span class="dd-eng">Nahum</span></div>
-        <div class="dd-chapters" id="dd-nah"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-hab')"><span class="dd-arrow">▼</span>חֲבַקּוּק <span class="dd-eng">Habakkuk</span></div>
-        <div class="dd-chapters" id="dd-hab"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-zep')"><span class="dd-arrow">▼</span>צְפַנְיָה <span class="dd-eng">Zephaniah</span></div>
-        <div class="dd-chapters" id="dd-zep"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-hag')"><span class="dd-arrow">▼</span>חַגַּי <span class="dd-eng">Haggai</span></div>
-        <div class="dd-chapters" id="dd-hag"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-zec')"><span class="dd-arrow">▼</span>זְכַרְיָה <span class="dd-eng">Zechariah</span></div>
-        <div class="dd-chapters" id="dd-zec"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-mal')"><span class="dd-arrow">▼</span>מַלְאָכִי <span class="dd-eng">Malachi</span></div>
-        <div class="dd-chapters" id="dd-mal"></div>
-        <hr class="dd-divider">
-        <div class="dd-section-header">כְּתוּבִים / Ketuvim</div>
-        <div class="dd-book" onclick="toggleDdBook('dd-psa')"><span class="dd-arrow">▼</span>תְּהִלִּים <span class="dd-eng">Psalms</span></div>
-        <div class="dd-chapters" id="dd-psa"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-pro')"><span class="dd-arrow">▼</span>מִשְׁלֵי <span class="dd-eng">Proverbs</span></div>
-        <div class="dd-chapters" id="dd-pro"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-job')"><span class="dd-arrow">▼</span>אִיּוֹב <span class="dd-eng">Job</span></div>
-        <div class="dd-chapters" id="dd-job"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-sos')"><span class="dd-arrow">▼</span>שִׁיר הַשִּׁירִים <span class="dd-eng">Song of Songs</span></div>
-        <div class="dd-chapters" id="dd-sos"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-rth')"><span class="dd-arrow">▼</span>רוּת <span class="dd-eng">Ruth</span></div>
-        <div class="dd-chapters" id="dd-rth"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-lam')"><span class="dd-arrow">▼</span>אֵיכָה <span class="dd-eng">Lamentations</span></div>
-        <div class="dd-chapters" id="dd-lam"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-ecc')"><span class="dd-arrow">▼</span>קֹהֶלֶת <span class="dd-eng">Ecclesiastes</span></div>
-        <div class="dd-chapters" id="dd-ecc"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-est')"><span class="dd-arrow">▼</span>אֶסְתֵּר <span class="dd-eng">Esther</span></div>
-        <div class="dd-chapters" id="dd-est"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-dan')"><span class="dd-arrow">▼</span>דָּנִיֵּאל <span class="dd-eng">Daniel</span></div>
-        <div class="dd-chapters" id="dd-dan"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-ezr')"><span class="dd-arrow">▼</span>עֶזְרָא <span class="dd-eng">Ezra</span></div>
-        <div class="dd-chapters" id="dd-ezr"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-neh')"><span class="dd-arrow">▼</span>נְחֶמְיָה <span class="dd-eng">Nehemiah</span></div>
-        <div class="dd-chapters" id="dd-neh"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-1ch')"><span class="dd-arrow">▼</span>דִּבְרֵי הַיָּמִים א <span class="dd-eng">1 Chronicles</span></div>
-        <div class="dd-chapters" id="dd-1ch"></div>
-        <div class="dd-book" onclick="toggleDdBook('dd-2ch')"><span class="dd-arrow">▼</span>דִּבְרֵי הַיָּמִים ב <span class="dd-eng">2 Chronicles</span></div>
-        <div class="dd-chapters" id="dd-2ch"></div>
-      
-</div>
+<div id="panel-overlay" onclick="closeGlossary();closeAnnotationsPanel();"></div>
 
 <!-- Selection Toolbar -->
 <div id="sel-toolbar">
@@ -854,7 +682,7 @@ body.dark-mode #return-banner a:hover { background:#c8a84e; }
     <a href="index.html" style="background:transparent;border:1px solid #3a3f55;color:#c8a84e;padding:5px 10px;border-radius:3px;text-decoration:none;font-size:0.95em;line-height:1;display:flex;align-items:center;" title="Standard Works Home" aria-label="Standard Works Home">🏠</a>
     <button class="nav-prev" id="nav-prev" onclick="goPrev()" disabled aria-label="Previous chapter">←</button>
     <span class="nav-label-wrap">
-      <span id="nav-label" onclick="toggleNavDropdown()" tabindex="0" role="button" aria-label="Open navigation">תַּנַ"ךְ ▾</span>
+      <span id="nav-label" tabindex="0" role="button" aria-label="Open navigation">תַּנַ"ךְ ▾</span>
       </span>
     <button class="nav-next" id="nav-next" onclick="goNext()" disabled aria-label="Next chapter">→</button>
   </div>
@@ -866,6 +694,7 @@ body.dark-mode #return-banner a:hover { background:#c8a84e; }
     <button id="btn-audio" onclick="toggleAudioBar()" title="Listen to chapter audio" aria-label="Listen to chapter audio">🔊</button>
   </div>
 </div>
+<div id="nav-breadcrumb"></div>
 
 <div id="audio-bar">
   <span class="audio-label" id="audio-label">Genesis 1</span>
@@ -1169,6 +998,7 @@ function navTo(id, slideDir) {
   currentChapterId = isLanding ? null : id;
   updateNavButtons();
   updateAudioSource(id);
+  if (window.NavEngine) NavEngine.update(currentChapterId || 'landing');
   window.scrollTo({top: 0, behavior: 'instant'});
 }
 
@@ -1535,49 +1365,8 @@ function _tlPointed(text) {
   return result;
 }
 
-// === NAV DROPDOWN (dynamically populate chapter buttons) ===
-(function initDdChapters() {
-  OT_BOOKS.forEach(function(book) {
-    var el = document.getElementById('dd-' + book.prefix);
-    if (!el) return;
-    var html = '';
-    for (var ch = 1; ch <= book.ch; ch++) {
-      html += '<button class="dd-ch" onclick="ddNav(\'' + book.prefix + '-ch' + ch + '\')">' +
-        '<span class="dd-ch-heb">' + toHebNum(ch) + '</span>' + ch + '</button>';
-    }
-    el.innerHTML = html;
-  });
-})();
-
-function toggleNavDropdown() {
-  var dd = document.getElementById('nav-dropdown');
-  if (dd.classList.contains('open')) { closeNavPanel(); } else {
-    dd.classList.add('open');
-    document.getElementById('panel-overlay').classList.add('open');
-    var first = dd.querySelector('.dd-volume-card, .dd-book, button');
-    if (first) setTimeout(function() { first.focus(); }, 350);
-  }
-}
-function closeNavPanel() {
-  var dd = document.getElementById('nav-dropdown');
-  dd.classList.remove('open');
-  document.getElementById('panel-overlay').classList.remove('open');
-}
 function openShortcuts() { document.getElementById('shortcuts-overlay').classList.add('open'); }
 function closeShortcuts() { document.getElementById('shortcuts-overlay').classList.remove('open'); }
-function toggleDdBook(id) {
-  var el = document.getElementById(id);
-  if (!el) return;
-  var isOpen = el.classList.contains('open');
-  document.querySelectorAll('#nav-dropdown .dd-chapters').forEach(function(c) { c.classList.remove('open'); });
-  document.querySelectorAll('#nav-dropdown .dd-book .dd-arrow').forEach(function(a) { a.textContent = '\u25BC'; });
-  if (!isOpen) {
-    el.classList.add('open');
-    var arrow = el.previousElementSibling.querySelector('.dd-arrow');
-    if (arrow) arrow.textContent = '\u25B2';
-  }
-}
-function ddNav(id) { closeNavPanel(); navTo(id); }
 
 
 
@@ -1594,7 +1383,7 @@ document.addEventListener('keydown', function(e) {
   else if (e.key === 's' || e.key === 'S') { openSearch(); }
   else if (e.key === 'g' || e.key === 'G') { openGlossary(); }
   else if (e.key === 'n' || e.key === 'N') { openAnnotationsPanel(); }
-  else if (e.key === 'b' || e.key === 'B') { toggleNavDropdown(); }
+  else if (e.key === 'b' || e.key === 'B') { if (window.NavEngine) NavEngine.toggle(); }
   else if (e.key === '?') { openShortcuts(); }
 });
 
@@ -1610,7 +1399,7 @@ function closeAllPanels() {
   var sp = document.getElementById('share-popup');
   if (sp && sp.classList.contains('open')) closeSharePopup();
   _hideSelToolbar();
-  closeNavPanel();
+  if (window.NavEngine) NavEngine.close();
   var sh = document.getElementById('shortcuts-overlay');
   if (sh && sh.classList.contains('open')) closeShortcuts();
 }
@@ -2586,25 +2375,13 @@ window.addEventListener('scroll', function() {
 })();
 
 </script>
+<script src="nav_engine.js"></script>
 <script>
-// Keyboard support for nav panel book items
-document.querySelectorAll('#nav-dropdown .dd-book').forEach(function(book) {
-  book.setAttribute('tabindex', '0');
-  book.setAttribute('role', 'button');
-  book.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); book.click(); }
-  });
-});
-// Volume card click stores return info
-document.querySelectorAll('.dd-volume-card:not(.active)').forEach(function(link) {
-  link.addEventListener('click', function() {
-    sessionStorage.setItem('xref-return-from', window.location.pathname + window.location.hash);
-    sessionStorage.removeItem('xref-return-verse');
-    var navLabel = document.getElementById('nav-label');
-    var label = navLabel ? navLabel.textContent.replace(/\s*▾/, '') : document.title;
-    sessionStorage.setItem('xref-return-label', label);
-    sessionStorage.setItem('xref-return-set', '1');
-  });
+NavEngine.init({
+  volume: 'ot',
+  currentChapter: currentChapterId || 'landing',
+  basePath: '',
+  onNavigate: function(id) { navTo(id); }
 });
 </script>
 <script>
@@ -2655,7 +2432,7 @@ window.addEventListener('resize', function() {
     <table style="width:100%;font-size:0.9em;line-height:2.2;color:var(--ink);">
       <tr><td style="width:100px"><kbd>&larr;</kbd> / <kbd>&rarr;</kbd></td><td>Next / Previous chapter</td></tr>
       <tr><td><kbd>S</kbd> or <kbd>Ctrl+F</kbd></td><td>Search</td></tr>
-      <tr><td><kbd>B</kbd></td><td>Open navigation panel</td></tr>
+      <tr><td><kbd>B</kbd> / <kbd>M</kbd></td><td>Open navigation panel</td></tr>
       <tr><td><kbd>G</kbd></td><td>Glossary</td></tr>
       <tr><td><kbd>N</kbd></td><td>Annotations</td></tr>
       <tr><td><kbd>D</kbd></td><td>Toggle dark mode</td></tr>

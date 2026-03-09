@@ -1,4 +1,4 @@
-const CACHE_NAME = 'standard-works-v26';
+const CACHE_NAME = 'standard-works-v27';
 
 const CORE_ASSETS = [
   '/StandardWorks/index.html',
@@ -13,7 +13,9 @@ const CORE_ASSETS = [
   '/StandardWorks/strongs_lookup.js',
   '/StandardWorks/_strongs_lookup.json',
   '/StandardWorks/_supplement.json',
-  '/StandardWorks/crossrefs_engine.js'
+  '/StandardWorks/crossrefs_engine.js',
+  '/StandardWorks/nav_engine.js',
+  '/StandardWorks/nav_engine.css'
 ];
 
 // Install — cache core assets
