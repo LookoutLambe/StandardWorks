@@ -4,7 +4,7 @@
 
 /* ── Overlay ── */
 #nav-overlay {
-  display: none; position: fixed; inset: 0; z-index: 999;
+  display: none; position: fixed; inset: 0; z-index: 5000;
   background: rgba(0,0,0,0.5); backdrop-filter: blur(2px);
   opacity: 0; transition: opacity 0.25s ease;
 }
@@ -12,7 +12,7 @@
 
 /* ── Sidebar Panel ── */
 #nav-sidebar {
-  position: fixed; top: 0; left: 0; bottom: 0; z-index: 1000;
+  position: fixed; top: 0; left: 0; bottom: 0; z-index: 5001;
   width: 360px; max-width: 90vw;
   background: #1a1a1a; color: #e8e2d4;
   transform: translateX(-100%);

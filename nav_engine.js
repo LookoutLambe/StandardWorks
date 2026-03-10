@@ -248,12 +248,17 @@
     // Overlay
     _overlayEl = document.createElement('div');
     _overlayEl.id = 'nav-overlay';
-    _overlayEl.onclick = closeSidebar;
+    _overlayEl.addEventListener('click', function(e) {
+      // Only close if clicking directly on the overlay, not on sidebar content
+      if (e.target === _overlayEl) closeSidebar();
+    });
     document.body.appendChild(_overlayEl);
 
     // Sidebar
     _sidebarEl = document.createElement('div');
     _sidebarEl.id = 'nav-sidebar';
+    // Prevent clicks inside sidebar from propagating to overlay or page handlers
+    _sidebarEl.addEventListener('click', function(e) { e.stopPropagation(); });
 
     // Search bar
     var searchWrap = document.createElement('div');
@@ -492,7 +497,11 @@
     if (volKey === _config.volume) {
       // Same volume — use page's navTo
       _config.currentChapter = chapterId;
-      if (_config.onNavigate) _config.onNavigate(chapterId);
+      try {
+        if (_config.onNavigate) _config.onNavigate(chapterId);
+      } catch(e) {
+        console.error('NavEngine: navigation error for', chapterId, e);
+      }
       updateBreadcrumb();
     } else {
       // Cross-volume — navigate to other page
@@ -536,6 +545,13 @@
   // ── Open / Close ──
   function openSidebar() {
     if (!_sidebarEl) return;
+    // Close any conflicting page panels/overlays that might block the sidebar
+    var panelOverlay = document.getElementById('panel-overlay');
+    if (panelOverlay) panelOverlay.classList.remove('open');
+    var glossary = document.getElementById('glossary-panel');
+    if (glossary) glossary.classList.remove('open');
+    var annotations = document.getElementById('annotations-panel');
+    if (annotations) annotations.classList.remove('open');
     _sidebarEl.classList.add('open');
     _overlayEl.classList.add('open');
     document.body.style.overflow = 'hidden';

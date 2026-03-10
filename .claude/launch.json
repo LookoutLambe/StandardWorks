@@ -4,7 +4,7 @@
     {
       "name": "standard-works",
       "runtimeExecutable": "C:\\Program Files\\nodejs\\node.exe",
-      "runtimeArgs": ["C:\\Users\\chris\\Desktop\\Hebrew BOM\\node_modules\\serve\\build\\main.js", "-l", "3001", "--no-clipboard", "C:\\Users\\chris\\Desktop\\Standard Works Project"],
+      "runtimeArgs": ["C:\\Users\\chris\\Desktop\\Standard Works Project\\Hebrew BOM\\node_modules\\serve\\build\\main.js", "-l", "3001", "--no-clipboard", "C:\\Users\\chris\\Desktop\\Standard Works Project"],
       "port": 3001
     }
   ]

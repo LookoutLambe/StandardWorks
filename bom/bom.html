@@ -35,6 +35,7 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
+html { overflow-x: hidden; }
 
 /* Skip-to-content link (screen reader / keyboard) */
 .skip-link {
@@ -600,9 +601,6 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
 /* Chapter divider */
 
 /* Adjust page — no permanent sidebar */
-.page {
-  margin-right: 0 !important;
-}
 .controls-top, .controls-bottom {
   left: 0 !important;
   width: 100% !important;
@@ -4394,6 +4392,7 @@ document.addEventListener('touchend', function(e) {
 });
 document.addEventListener('mousedown', function(e) {
   if (e.target.closest('#sel-toolbar')) return;
+  if (e.target.closest('#nav-sidebar') || e.target.closest('#nav-overlay')) return;
   _hideSelToolbar();
   if (window.NavEngine) NavEngine.close();
   var sh = document.getElementById('shortcuts-overlay');
