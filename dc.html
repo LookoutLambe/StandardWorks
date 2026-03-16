@@ -93,6 +93,48 @@ body.hide-gloss .verse { gap: 6px; }
 body.hide-gloss .word-unit { padding: 2px 3px; }
 body.hide-gloss .arr-hw { font-size: 2.1em; }
 
+/* Dual mode: English + Hebrew interlinear side by side */
+.verse-english { display: none; }
+body.dual-mode .verse-english {
+  display: block;
+  flex: 1 1 0;
+  min-width: 0;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.92em;
+  line-height: 1.65;
+  color: var(--ink);
+  direction: ltr;
+  text-align: justify;
+  padding: 6px 14px 6px 0;
+  border-right: 1px solid var(--rule-light);
+  opacity: 0.85;
+}
+body.dual-mode .word-flow { flex: 1 1 0; min-width: 0; direction: rtl; text-align: justify; }
+body.dual-mode .verse-num { order: -1; }
+body.dual-mode .gl { display: none; }
+body.dual-mode .arr { display: none; }
+body.dual-mode .word-unit { padding-bottom: 3px; }
+body.dual-mode .hw { font-size: 16px; }
+body.dual-mode .heading-flow .gl,
+body.dual-mode .heading-flow .arr { display: inline; }
+body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
+@media (max-width: 700px) {
+  body.dual-mode .verse { flex-wrap: nowrap; }
+  body.dual-mode .verse-english {
+    flex: 0 0 35%;
+    min-width: 0;
+    border-right: 1px solid var(--rule-light);
+    padding: 4px 6px 4px 0;
+    font-size: 0.68em;
+    line-height: 1.4;
+  }
+  body.dual-mode .word-flow { flex: 1 1 0; min-width: 0; }
+  body.dual-mode .hw { font-size: 14px; }
+  body.dual-mode .verse-num { min-width: 22px; font-size: 0.7em; }
+}
+.verse-english ::selection { background: transparent !important; color: inherit !important; }
+.verse-english ::-moz-selection { background: transparent !important; color: inherit !important; }
+
 .verse.highlighted { background: var(--highlight); border-radius: 4px; }
 
 /* === CONTROLS === */
@@ -640,6 +682,7 @@ body.dark-mode #return-banner a:hover { background:#c8a84e; }
 <div class="controls-bottom">
   <button id="btn-inter" class="active" onclick="setMode('inter')">Interlinear<br>בֵּין־שׁוּרוֹת</button>
   <button id="btn-heb" onclick="setMode('heb')">Hebrew Only<br>עִבְרִית</button>
+  <button id="btn-dual" onclick="setMode('dual')">Dual<br>כָּפוּל</button>
   <button id="btn-translit" onclick="toggleTranslit()" title="Show/hide transliteration">Transliterate<br>תַּעְתִּיק</button>
 </div>
 
@@ -847,6 +890,10 @@ function _doRenderVerses(verseData, containerId) {
     flowDiv.className = 'word-flow';
     renderWords(v.words, flowDiv, verseKey);
     verseDiv.appendChild(flowDiv);
+    var engDiv = document.createElement('div');
+    engDiv.className = 'verse-english';
+    if (verseKey) engDiv.setAttribute('data-key', verseKey);
+    verseDiv.appendChild(engDiv);
     container.appendChild(verseDiv);
   });
 }
@@ -871,6 +918,7 @@ function _ensureChapterRendered(chapId) {
       }
     }
   }
+  if (window._englishLoaded && typeof populateEnglishDivs === 'function') populateEnglishDivs();
 }
 
 // === NAVIGATION ===
@@ -920,11 +968,15 @@ function navTo(id, slideDir) {
 // === MODE CONTROLS ===
 
 function setMode(mode) {
-  document.body.classList.remove('hide-gloss');
+  document.body.classList.remove('hide-gloss', 'dual-mode');
   document.querySelectorAll('.controls-bottom button:not(#btn-translit)').forEach(function(b) { b.classList.remove('active'); });
   if (mode === 'heb') {
     document.body.classList.add('hide-gloss');
     document.getElementById('btn-heb').classList.add('active');
+  } else if (mode === 'dual') {
+    document.body.classList.add('dual-mode');
+    document.getElementById('btn-dual').classList.add('active');
+    if (!window._englishLoaded) loadEnglishText();
   } else {
     document.getElementById('btn-inter').classList.add('active');
   }
@@ -940,6 +992,28 @@ function toggleTranslit() {
 function setSize(val) {
   document.getElementById('page').style.fontSize = val + '%';
   try { localStorage.setItem('dc-font-size', val); } catch(e) {}
+}
+
+// === DUAL MODE ENGLISH TEXT ===
+window._englishLoaded = false;
+window._englishMap = {};
+
+function loadEnglishText() {
+  if (window._englishLoaded) return;
+  if (window._dcEnglishData) {
+    window._dcEnglishData.forEach(function(v) {
+      window._englishMap[v.book + '|' + v.chapter + '|' + v.verse] = v.english;
+    });
+    window._englishLoaded = true;
+    populateEnglishDivs();
+  }
+}
+
+function populateEnglishDivs() {
+  document.querySelectorAll('.verse-english[data-key]').forEach(function(div) {
+    var key = div.getAttribute('data-key');
+    if (window._englishMap[key]) div.textContent = window._englishMap[key];
+  });
 }
 
 // INIT: Restore settings
@@ -958,6 +1032,9 @@ try {
 <script src="strongs_lookup.js"></script>
 <script src="strongs_roots.js"></script>
 <script src="bom/roots_glossary.js"></script>
+
+<!-- English text for dual mode -->
+<script src="dc_english.js"></script>
 
 <!-- Verse data files -->
 <script src="dc_verses/dc1_10.js"></script>
