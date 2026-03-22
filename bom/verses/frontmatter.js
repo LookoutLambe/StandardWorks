@@ -274,7 +274,7 @@ var frontTitle = [
   ]},
   { num:"יא", words:[
     ["וְגַם","and-also"],
-    ["לְהוֹכִיחַ","to-he-reproved"],
+    ["לְהוֹכִיחַ","to-convince"],
     ["לַיְּהוּדִי","the-Jew"],
     ["וְלַגּוֹי","and-the-Gentile"],
     ["כִּי","that"],
@@ -449,7 +449,7 @@ var frontIntroduction = [
   { num:"י", words:[
     ["וַיְהִי","and-it-came-to-pass"],
     ["כַּאֲשֶׁר","when/as"],
-    ["כִּלָּה","all-of-it(f)"],
+    ["כִּלָּה","he-finished"],
     ["מוֹרְמוֹן","Mormon"],
     ["לִכְתֹּב","to-write"],
     ["וַיִּתֵּן","and-he-gave"],
@@ -1344,7 +1344,7 @@ var frontJST = [
   { num:"כד", words:[
     ["וַיְהִי","and-it-came-to-pass"],
     ["כַּאֲשֶׁר","when/as"],
-    ["כִּלָּה","all-of-it(f)"],
+    ["כִּלָּה","he-finished"],
     ["לְדַבֵּר","speaking"],
     ["וַיַּעַל","and-he-ascended"],
     ["שֵׁנִית","again"],
@@ -1505,7 +1505,7 @@ var frontJST = [
     ["אֲשֶׁר","which"],
     ["הָיִינוּ","we-were"],
     ["בּוֹ","in-him/it"],
-    ["כָּלָה","all-of-it(f)"],
+    ["כָּלָה","destruction"],
     ["כֹּחִי","my-strength"],
     ["כֻּלּוֹ","entirely"],
     ["וָאֶפֹּל","and-I-fell"],
