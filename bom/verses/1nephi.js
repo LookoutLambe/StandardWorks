@@ -799,7 +799,7 @@ var ch2Verses = [
     ["לוֹ","him"],
     ["וַיַּעֲשׂוּ","and-did"],
     ["כַּאֲשֶׁר","when/as"],
-    ["צִוָּם","fasting"],
+    ["צִוָּם","commanded-them"],
     ["׃",""]
   ]},
   { num:"טו", words:[
@@ -1074,7 +1074,7 @@ var ch3Verses = [
     ["לַעֲשׂוֹת","to-do"],
     ["אֵת","[ACC]"],
     ["אֲשֶׁר","that-which"],
-    ["צִוָּם","fasting"],
+    ["צִוָּם","commanded-them"],
     ["׃",""]
   ]},
   { num:"ח", words:[
@@ -2333,7 +2333,7 @@ var ch5Verses = [
     ["לַעֲשׂוֹת","to-do"],
     ["אֵת","[ACC]"],
     ["אֲשֶׁר","that-which"],
-    ["צִוָּם","fasting"],
+    ["צִוָּם","commanded-them"],
     ["יְהוָה","the-Lord"],
     ["וּבַדְּבָרִים","and-with-the-words"],
     ["הָאֵלֶּה","these"],
@@ -8825,7 +8825,7 @@ var ch17Verses = [
     ["לַעֲשׂוֹת","to-do"],
     ["אֵת","[ACC]"],
     ["אֲשֶׁר","that-which"],
-    ["צִוָּם","fasting"],
+    ["צִוָּם","commanded-them"],
     ["לָכֵן","therefore"],
     ["הֵכִין","prepared"],
     ["לָנוּ","unto-us"],
@@ -11365,7 +11365,7 @@ var ch20Verses = [
     ["עָשָׂם","did-them"],
     ["וּפִסְלִי","and-my-graven-image"],
     ["וְנִסְכִּי","and-my-molten-image"],
-    ["צִוָּם","fasting"],
+    ["צִוָּם","commanded-them"],
     ["׃",""]
   ]},
   { num:"ו", words:[
