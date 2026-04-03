@@ -1,0 +1,9 @@
+node_modules/
+nul
+.claude/
+
+# Generated/local output files
+_local_output/
+__pycache__/
+Scribus/
+_build_scripts/_fetch_heb_log.txt
