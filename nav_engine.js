@@ -160,7 +160,8 @@
       page: 'dc.html',
       divisions: [
         { name: '\u05D4\u05E7\u05D3\u05DE\u05D5\u05EA \u00B7 Front Matter', books: [
-          { id:'dc-intro', en:'Introduction', heb:'\u05DE\u05B8\u05D1\u05D5\u05B9\u05D0', ch:1, prefix:'dc-intro', isFront:true }
+          { id:'dc-intro', en:'Introduction', heb:'\u05DE\u05B8\u05D1\u05D5\u05B9\u05D0', ch:1, prefix:'dc-intro', isFront:true },
+          { id:'dc-chron', en:'Chronological Order', heb:'\u05E1\u05B5\u05D3\u05B6\u05E8 \u05DB\u05B0\u05BC\u05E8\u05D5\u05B9\u05E0\u05D5\u05B9\u05DC\u05D5\u05B9\u05D2\u05B4\u05D9', ch:1, prefix:'dc-chron', isFront:true }
         ]},
         { name: '\u05E1\u05E2\u05D9\u05E4\u05D9\u05DD \u00B7 Sections', books: (function() {
           var books = [];
@@ -426,6 +427,13 @@
     if ('dc' === _config.volume && 'dc-intro' === _config.currentChapter) introRow.style.background = 'rgba(200,168,78,0.15)';
     introRow.onclick = function() { navigateToChapter('dc', 'dc-intro'); };
     list.appendChild(introRow);
+
+    var chronRow = document.createElement('div');
+    chronRow.className = 'nav-book-row single-ch';
+    chronRow.innerHTML = '<span><span class="nb-en">Chronological Order</span></span><span class="nb-heb">\u05E1\u05B5\u05D3\u05B6\u05E8 \u05DB\u05B0\u05BC\u05E8\u05D5\u05B9\u05E0\u05D5\u05B9\u05DC\u05D5\u05B9\u05D2\u05B4\u05D9</span>';
+    if ('dc' === _config.volume && 'dc-chron' === _config.currentChapter) chronRow.style.background = 'rgba(200,168,78,0.15)';
+    chronRow.onclick = function() { navigateToChapter('dc', 'dc-chron'); };
+    list.appendChild(chronRow);
 
     // Sections
     var secDiv = document.createElement('div');

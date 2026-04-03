@@ -702,6 +702,22 @@ body.dark-mode #return-banner a:hover { background:#c8a84e; }
         <div id="dc-intro-verses"></div>
       </div>
     </div>
+    <!-- Chronological Order -->
+    <div class="chapter-panel" id="panel-dc-chron" style="display:none;">
+      <div style="max-width:900px;margin:0 auto;padding:20px 30px;direction:ltr">
+        <div class="chapter-heading" style="direction:rtl"><h2>סֵדֶר כְּרוֹנוֹלוֹגִי</h2><div class="chapter-label-en">Chronological Order of Contents</div></div>
+        <table id="dc-chron-table" style="width:100%;border-collapse:collapse;font-family:'Crimson Pro',serif;font-size:0.9em;margin-top:16px;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--accent);color:var(--accent);text-align:left;">
+              <th style="padding:8px 6px;">תַּאֲרִיךְ</th>
+              <th style="padding:8px 6px;">מָקוֹם</th>
+              <th style="padding:8px 6px;">סְעִיפִים</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
     <!-- Section panels are created dynamically by JavaScript -->
   </main>
 </div>
@@ -1046,6 +1062,7 @@ try {
 
 <!-- Verse data files -->
 <script src="dc_verses/dc_intro.js"></script>
+<script src="dc_verses/dc_chron.js"></script>
 <script src="dc_verses/dc1_10.js"></script>
 <script src="dc_verses/dc11_20.js"></script>
 <script src="dc_verses/dc21_30.js"></script>
@@ -1074,7 +1091,7 @@ try {
 // PREV / NEXT NAVIGATION
 var currentChapterId = null;
 var currentPageId = 'landing';
-var fullPageOrder = ['landing','dc-intro'].concat(chapterOrder);
+var fullPageOrder = ['landing','dc-intro','dc-chron'].concat(chapterOrder);
 
 function updateNavButtons() {
   var prevBtn = document.getElementById('nav-prev');
