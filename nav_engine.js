@@ -125,6 +125,13 @@
       key: 'bom', name: 'Book of Mormon', heb:'\u05E1\u05E4\u05E8 \u05DE\u05D5\u05E8\u05DE\u05D5\u05DF', abbr:'\u05E1.\u05DE',
       page: 'bom/bom.html',
       divisions: [
+        { name: '\u05D4\u05E7\u05D3\u05DE\u05D5\u05EA \u00B7 Front Matter', books: [
+          { id:'front-titlepage', en:'Title Page', heb:'\u05D3\u05E3 \u05D4\u05E9\u05E2\u05E8', ch:1, prefix:'front-titlepage', isFront:true },
+          { id:'front-introduction', en:'Introduction', heb:'\u05DE\u05D1\u05D5\u05D0', ch:1, prefix:'front-introduction', isFront:true },
+          { id:'front-three', en:'Three Witnesses', heb:'\u05E9\u05DC\u05E9\u05EA \u05D4\u05E2\u05D3\u05D9\u05DD', ch:1, prefix:'front-three', isFront:true },
+          { id:'front-eight', en:'Eight Witnesses', heb:'\u05E9\u05DE\u05D5\u05E0\u05D4 \u05E2\u05D3\u05D9\u05DD', ch:1, prefix:'front-eight', isFront:true },
+          { id:'front-js', en:'Joseph Smith', heb:'\u05D9\u05D5\u05E1\u05E3 \u05E1\u05DE\u05D9\u05EA', ch:1, prefix:'front-js', isFront:true }
+        ]},
         { name: '\u05DC\u05D5\u05D7\u05D5\u05EA \u05E7\u05D8\u05E0\u05D9\u05DD \u00B7 Small Plates', books: [
           { id:'1ne', en:'1 Nephi', heb:"\u05E0\u05B6\u05E4\u05B4\u05D9 \u05D0\u05F3", ch:22, prefix:'ch' },
           { id:'2ne', en:'2 Nephi', heb:"\u05E0\u05B6\u05E4\u05B4\u05D9 \u05D1\u05F3", ch:33, prefix:'2n-ch' },
@@ -152,6 +159,9 @@
       key: 'dc', name: 'D&C', heb:'\u05EA\u05D5\u05E8\u05D4 \u05D5\u05D1\u05E8\u05D9\u05EA\u05D5\u05EA', abbr:'\u05EA\u05D5',
       page: 'dc.html',
       divisions: [
+        { name: '\u05D4\u05E7\u05D3\u05DE\u05D5\u05EA \u00B7 Front Matter', books: [
+          { id:'dc-intro', en:'Introduction', heb:'\u05DE\u05B8\u05D1\u05D5\u05B9\u05D0', ch:1, prefix:'dc-intro', isFront:true }
+        ]},
         { name: '\u05E1\u05E2\u05D9\u05E4\u05D9\u05DD \u00B7 Sections', books: (function() {
           var books = [];
           for (var i = 1; i <= 138; i++) {
@@ -404,6 +414,19 @@
 
   // ── D&C special rendering (section grid) ──
   function renderDCSections(list, vol) {
+    // Front Matter
+    var frontDiv = document.createElement('div');
+    frontDiv.className = 'nav-division';
+    frontDiv.textContent = '\u05D4\u05E7\u05D3\u05DE\u05D5\u05EA \u00B7 Front Matter';
+    list.appendChild(frontDiv);
+
+    var introRow = document.createElement('div');
+    introRow.className = 'nav-book-row single-ch';
+    introRow.innerHTML = '<span><span class="nb-en">Introduction</span></span><span class="nb-heb">\u05DE\u05B8\u05D1\u05D5\u05B9\u05D0</span>';
+    if ('dc' === _config.volume && 'dc-intro' === _config.currentChapter) introRow.style.background = 'rgba(200,168,78,0.15)';
+    introRow.onclick = function() { navigateToChapter('dc', 'dc-intro'); };
+    list.appendChild(introRow);
+
     // Sections
     var secDiv = document.createElement('div');
     secDiv.className = 'nav-division';
