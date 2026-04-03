@@ -767,6 +767,12 @@ function toHebNum(n) {
     '<div class="subtitle-heb">Hebrew Interlinear</div>' +
     '</div><hr class="landing-divider"><div class="landing-sections">';
 
+  // Front matter links
+  landingHtml += '<div class="landing-section-group"><h3>הקדמות · Front Matter</h3><div class="landing-section-grid" style="grid-template-columns:1fr 1fr;">' +
+    '<div class="landing-sec-btn" onclick="navTo(\'dc-intro\')"><span class="sec-heb">מָבוֹא</span><span class="sec-num">Introduction</span></div>' +
+    '<div class="landing-sec-btn" onclick="navTo(\'dc-chron\')"><span class="sec-heb">סֵדֶר כְּרוֹנוֹלוֹגִי</span><span class="sec-num">Chronological Order</span></div>' +
+    '</div></div>';
+
   // Section groups
   var groups = [
     { label: 'Sections 1–20', start: 1, end: 20 },

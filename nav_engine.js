@@ -191,6 +191,47 @@
           { id:'aof', en:'Articles of Faith', heb:'\u05E2\u05B4\u05E7\u05B0\u05E8\u05B5\u05D9 \u05D4\u05B8\u05D0\u05B1\u05DE\u05D5\u05BC\u05E0\u05B8\u05D4', ch:1, prefix:'aof-ch' }
         ]}
       ]
+    },
+    jst: {
+      key: 'jst', name: 'JST', heb:'\u05EA\u05B7\u05BC\u05E8\u05B0\u05D2\u05BC\u05D5\u05BC\u05DD \u05D2\u05F3\u05D5\u05D6\u05E3 \u05E1\u05DE\u05D9\u05EA', abbr:'\u05EA.\u05D2.\u05E1',
+      page: 'jst.html',
+      divisions: [
+        { name: '\u05EA\u05E0\u05F4\u05DA \u00B7 Old Testament', books: [
+          { id:'jstgen', en:'Genesis', heb:'\u05D1\u05B0\u05BC\u05E8\u05B5\u05D0\u05E9\u05B4\u05C1\u05D9\u05EA', ch:9, prefix:'jstgen-ch' },
+          { id:'jstexo', en:'Exodus', heb:'\u05E9\u05B0\u05C1\u05DE\u05D5\u05B9\u05EA', ch:6, prefix:'jstexo-ch' },
+          { id:'jstdeu', en:'Deuteronomy', heb:'\u05D3\u05B0\u05BC\u05D1\u05B8\u05E8\u05B4\u05D9\u05DD', ch:1, prefix:'jstdeu-ch' },
+          { id:'jst1sa', en:'1 Samuel', heb:'\u05E9\u05B0\u05C1\u05DE\u05D5\u05BC\u05D0\u05B5\u05DC \u05D0', ch:1, prefix:'jst1sa-ch' },
+          { id:'jst2sa', en:'2 Samuel', heb:'\u05E9\u05B0\u05C1\u05DE\u05D5\u05BC\u05D0\u05B5\u05DC \u05D1', ch:1, prefix:'jst2sa-ch' },
+          { id:'jst1ch', en:'1 Chronicles', heb:'\u05D3\u05B4\u05BC\u05D1\u05B0\u05E8\u05B5\u05D9 \u05D4\u05B7\u05D9\u05B8\u05BC\u05DE\u05B4\u05D9\u05DD \u05D0', ch:1, prefix:'jst1ch-ch' },
+          { id:'jst2ch', en:'2 Chronicles', heb:'\u05D3\u05B4\u05BC\u05D1\u05B0\u05E8\u05B5\u05D9 \u05D4\u05B7\u05D9\u05B8\u05BC\u05DE\u05B4\u05D9\u05DD \u05D1', ch:1, prefix:'jst2ch-ch' },
+          { id:'jstpsa', en:'Psalms', heb:'\u05EA\u05B0\u05BC\u05D4\u05B4\u05DC\u05B4\u05BC\u05D9\u05DD', ch:4, prefix:'jstpsa-ch' },
+          { id:'jstisa', en:'Isaiah', heb:'\u05D9\u05B0\u05E9\u05B7\u05C1\u05E2\u05B0\u05D9\u05B8\u05D4\u05D5\u05BC', ch:2, prefix:'jstisa-ch' },
+          { id:'jstjer', en:'Jeremiah', heb:'\u05D9\u05B4\u05E8\u05B0\u05DE\u05B0\u05D9\u05B8\u05D4\u05D5\u05BC', ch:1, prefix:'jstjer-ch' },
+          { id:'jstamo', en:'Amos', heb:'\u05E2\u05B8\u05DE\u05D5\u05B9\u05E1', ch:1, prefix:'jstamo-ch' }
+        ]},
+        { name: '\u05D1\u05E8\u05D9\u05EA \u05D4\u05D7\u05D3\u05E9\u05D4 \u00B7 New Testament', books: [
+          { id:'jstmatt', en:'Matthew', heb:'\u05DE\u05B7\u05EA\u05B4\u05BC\u05EA\u05B0\u05D9\u05B8\u05D4\u05D5\u05BC', ch:17, prefix:'jstmatt-ch' },
+          { id:'jstmark', en:'Mark', heb:'\u05DE\u05B7\u05E8\u05B0\u05E7\u05D5\u05B9\u05E1', ch:8, prefix:'jstmark-ch' },
+          { id:'jstluke', en:'Luke', heb:'\u05DC\u05D5\u05BC\u05E7\u05B8\u05E1', ch:14, prefix:'jstluke-ch' },
+          { id:'jstjohn', en:'John', heb:'\u05D9\u05D5\u05B9\u05D7\u05B8\u05E0\u05B8\u05DF', ch:5, prefix:'jstjohn-ch' },
+          { id:'jstacts', en:'Acts', heb:'\u05DE\u05B7\u05E2\u05B2\u05E9\u05B5\u05C2\u05D9', ch:2, prefix:'jstacts-ch' },
+          { id:'jstrom', en:'Romans', heb:'\u05E8\u05D5\u05B9\u05DE\u05B4\u05D9\u05B4\u05BC\u05D9\u05DD', ch:5, prefix:'jstrom-ch' },
+          { id:'jst1co', en:'1 Corinthians', heb:'\u05E7\u05D5\u05B9\u05E8\u05B4\u05E0\u05B0\u05EA\u05B4\u05BC\u05D9\u05B4\u05DD \u05D0', ch:2, prefix:'jst1co-ch' },
+          { id:'jst2co', en:'2 Corinthians', heb:'\u05E7\u05D5\u05B9\u05E8\u05B4\u05E0\u05B0\u05EA\u05B4\u05BC\u05D9\u05B4\u05DD \u05D1', ch:1, prefix:'jst2co-ch' },
+          { id:'jstgal', en:'Galatians', heb:'\u05D2\u05B8\u05BC\u05DC\u05B8\u05D8\u05B4\u05D9\u05B4\u05DD', ch:1, prefix:'jstgal-ch' },
+          { id:'jsteph', en:'Ephesians', heb:'\u05D0\u05B6\u05E4\u05B0\u05E1\u05B4\u05D9\u05B4\u05DD', ch:1, prefix:'jsteph-ch' },
+          { id:'jstcol', en:'Colossians', heb:'\u05E7\u05D5\u05B9\u05DC\u05D5\u05B9\u05E1\u05B4\u05D9\u05B4\u05DD', ch:1, prefix:'jstcol-ch' },
+          { id:'jst1th', en:'1 Thessalonians', heb:'\u05EA\u05B6\u05BC\u05E1\u05B7\u05DC\u05D5\u05B9\u05E0\u05B4\u05D9\u05E7\u05B4\u05D9\u05DD \u05D0', ch:1, prefix:'jst1th-ch' },
+          { id:'jst2th', en:'2 Thessalonians', heb:'\u05EA\u05B6\u05BC\u05E1\u05B7\u05DC\u05D5\u05B9\u05E0\u05B4\u05D9\u05E7\u05B4\u05D9\u05DD \u05D1', ch:1, prefix:'jst2th-ch' },
+          { id:'jst1ti', en:'1 Timothy', heb:'\u05D8\u05B4\u05D9\u05DE\u05D5\u05B9\u05EA\u05B0\u05D0\u05D5\u05B9\u05E1 \u05D0', ch:3, prefix:'jst1ti-ch' },
+          { id:'jstheb', en:'Hebrews', heb:'\u05E2\u05B4\u05D1\u05B0\u05E8\u05B4\u05D9\u05B4\u05DD', ch:5, prefix:'jstheb-ch' },
+          { id:'jstjas', en:'James', heb:'\u05D9\u05B7\u05E2\u05B2\u05E7\u05B9\u05D1', ch:2, prefix:'jstjas-ch' },
+          { id:'jst1pe', en:'1 Peter', heb:'\u05E4\u05B6\u05BC\u05D8\u05B0\u05E8\u05D5\u05B9\u05E1 \u05D0', ch:2, prefix:'jst1pe-ch' },
+          { id:'jst2pe', en:'2 Peter', heb:'\u05E4\u05B6\u05BC\u05D8\u05B0\u05E8\u05D5\u05B9\u05E1 \u05D1', ch:1, prefix:'jst2pe-ch' },
+          { id:'jst1jn', en:'1 John', heb:'\u05D9\u05D5\u05B9\u05D7\u05B8\u05E0\u05B8\u05DF \u05D0', ch:3, prefix:'jst1jn-ch' },
+          { id:'jstrev', en:'Revelation', heb:'\u05D7\u05B8\u05D6\u05D5\u05B9\u05DF', ch:5, prefix:'jstrev-ch' }
+        ]}
+      ]
     }
   };
 
@@ -208,7 +249,7 @@
   // ── Build flat search index ──
   var _searchIndex = [];
   (function buildSearchIndex() {
-    var volKeys = ['ot','nt','bom','dc','pgp'];
+    var volKeys = ['ot','nt','bom','dc','pgp','jst'];
     volKeys.forEach(function(vk) {
       var vol = VOLUMES[vk];
       vol.divisions.forEach(function(div) {
@@ -298,7 +339,7 @@
     // Volume tabs
     var tabsRow = document.createElement('div');
     tabsRow.className = 'nav-vol-tabs';
-    var volKeys = ['ot','nt','bom','dc','pgp'];
+    var volKeys = ['ot','nt','bom','dc','pgp','jst'];
     volKeys.forEach(function(vk) {
       var vol = VOLUMES[vk];
       var tab = document.createElement('div');
@@ -792,7 +833,7 @@
     openToBook: function(bookId) {
       openSidebar();
       // Find which volume has this book
-      var volKeys = ['ot','nt','bom','dc','pgp'];
+      var volKeys = ['ot','nt','bom','dc','pgp','jst'];
       for (var v = 0; v < volKeys.length; v++) {
         var vol = VOLUMES[volKeys[v]];
         for (var d = 0; d < vol.divisions.length; d++) {
