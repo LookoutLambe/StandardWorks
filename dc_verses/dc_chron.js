@@ -85,22 +85,58 @@ var chronData = [
   ["1978 יוני","סוֹלְט לֵייק סִיטִי, יוּטָה","הכרזה רשמית 2"]
 ];
 
+// Hebrew numeral converter
+function _chronHebNum(n) {
+  var ones = ['','א','ב','ג','ד','ה','ו','ז','ח','ט'];
+  var tens = ['','י','כ','ל','מ','נ','ס','ע','פ','צ'];
+  var hundreds = ['','ק','ר','ש','ת'];
+  if (n === 15) return 'ט״ו';
+  if (n === 16) return 'ט״ז';
+  var result = '';
+  if (n >= 100) {
+    var h = Math.floor(n / 100);
+    if (h <= 4) result += hundreds[h];
+    else result += 'ת' + hundreds[h - 4];
+    n %= 100;
+  }
+  if (n === 15) { result += 'ט״ו'; return result; }
+  if (n === 16) { result += 'ט״ז'; return result; }
+  if (n >= 10) { result += tens[Math.floor(n / 10)]; n %= 10; }
+  if (n > 0) result += ones[n];
+  return result;
+}
+
+// Convert year to Hebrew letters
+var _hebYears = {
+  '1823':'תקפ״ג','1828':'תקפ״ח','1829':'תקפ״ט','1830':'תק״ץ',
+  '1831':'תקצ״א','1832':'תקצ״ב','1833':'תקצ״ג','1834':'תקצ״ד',
+  '1835':'תקצ״ה','1836':'תקצ״ו','1837':'תקצ״ז','1838':'תקצ״ח',
+  '1839':'תקצ״ט','1841':'תר״א','1842':'תר״ב','1843':'תר״ג',
+  '1844':'תר״ד','1847':'תר״ז','1890':'תר״ן','1918':'תרע״ח','1978':'תשל״ח'
+};
+
 var tbody = document.querySelector('#dc-chron-table tbody');
 if (tbody) {
   chronData.forEach(function(row, i) {
     var tr = document.createElement('tr');
     tr.style.borderBottom = '1px solid var(--rule-light)';
     if (i % 2 === 1) tr.style.background = 'var(--highlight)';
-    // Parse sections to make them clickable
+
+    // Convert date: replace Arabic year with Hebrew year
+    var dateHeb = row[0].replace(/\d{4}/, function(y) { return _hebYears[y] || y; });
+
+    // Convert section numbers to Hebrew and make clickable
     var secHtml = row[2].replace(/(\d+)/g, function(m) {
-      return '<span style="cursor:pointer;color:var(--accent);text-decoration:underline;" onclick="navTo(\'dc' + m + '-ch1\')">' + m + '</span>';
+      var heb = _chronHebNum(parseInt(m));
+      return '<span style="cursor:pointer;color:var(--accent);text-decoration:underline;" onclick="navTo(\'dc' + m + '-ch1\')">' + heb + '</span>';
     });
     // Handle OD links
-    secHtml = secHtml.replace('הכרזה רשמית 1', '<span style="cursor:pointer;color:var(--accent);text-decoration:underline;" onclick="navTo(\'od1-ch1\')">הכרזה רשמית 1</span>');
-    secHtml = secHtml.replace('הכרזה רשמית 2', '<span style="cursor:pointer;color:var(--accent);text-decoration:underline;" onclick="navTo(\'od2-ch1\')">הכרזה רשמית 2</span>');
-    tr.innerHTML = '<td style="padding:6px;font-family:\'David Libre\',serif;direction:rtl;">' + row[0] + '</td>' +
-                   '<td style="padding:6px;font-family:\'David Libre\',serif;direction:rtl;">' + row[1] + '</td>' +
-                   '<td style="padding:6px;direction:ltr;">' + secHtml + '</td>';
+    secHtml = secHtml.replace('הכרזה רשמית 1', '<span style="cursor:pointer;color:var(--accent);text-decoration:underline;" onclick="navTo(\'od1-ch1\')">הכרזה רשמית א׳</span>');
+    secHtml = secHtml.replace('הכרזה רשמית 2', '<span style="cursor:pointer;color:var(--accent);text-decoration:underline;" onclick="navTo(\'od2-ch1\')">הכרזה רשמית ב׳</span>');
+
+    tr.innerHTML = '<td style="padding:6px;font-family:\'David Libre\',serif;">' + dateHeb + '</td>' +
+                   '<td style="padding:6px;font-family:\'David Libre\',serif;">' + row[1] + '</td>' +
+                   '<td style="padding:6px;">' + secHtml + '</td>';
     tbody.appendChild(tr);
   });
 }
