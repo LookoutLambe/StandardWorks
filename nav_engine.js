@@ -180,6 +180,9 @@
       key: 'pgp', name: 'Pearl of Great Price', heb:'\u05E4\u05E0\u05D9\u05E0\u05EA \u05D4\u05DE\u05D7\u05D9\u05E8 \u05D4\u05D2\u05D3\u05D5\u05DC', abbr:'\u05E4\u05E0\u05D9\u05E0\u05EA',
       page: 'pgp.html',
       divisions: [
+        { name: '\u05D4\u05E7\u05D3\u05DE\u05D5\u05EA \u00B7 Front Matter', books: [
+          { id:'pgp-intro', en:'Introduction', heb:'\u05DE\u05B8\u05D1\u05D5\u05B9\u05D0', ch:1, prefix:'pgp-intro', isFront:true }
+        ]},
         { name: '', books: [
           { id:'ms', en:'Moses', heb:'\u05DE\u05D5\u05B9\u05E9\u05B6\u05C1\u05D4', ch:8, prefix:'ms-ch' },
           { id:'ab', en:'Abraham', heb:'\u05D0\u05B7\u05D1\u05B0\u05E8\u05B8\u05D4\u05B8\u05DD', ch:5, prefix:'ab-ch' },

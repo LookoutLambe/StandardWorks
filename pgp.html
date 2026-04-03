@@ -1222,6 +1222,14 @@ body.dark-mode #return-banner a:hover { background:#c8a84e; }
       </div>
     </div>
 
+    <!-- Introduction -->
+    <div class="chapter-panel" id="panel-pgp-intro" style="display:none;">
+      <div style="max-width:900px;margin:0 auto;padding:20px 30px;direction:rtl">
+        <div class="chapter-heading"><h2>מָבוֹא</h2><div class="chapter-label-en">Introduction</div></div>
+        <div id="pgp-intro-verses"></div>
+      </div>
+    </div>
+
     <!-- Moses Chapters 1-8 -->
     <div class="chapter-panel" id="panel-ms-ch1" style="display:none;">
       <div class="chapter-heading"><h2>פרק א</h2><div class="chapter-label-en">Moses Chapter 1</div></div>
@@ -1589,6 +1597,7 @@ try {
 <script src="pgp_english.js"></script>
 
 <!-- Verse data files -->
+<script src="pgp_verses/pgp_intro.js"></script>
 <script src="pgp_verses/moses.js"></script>
 <script src="pgp_verses/abraham.js"></script>
 <script src="pgp_verses/js_matthew.js"></script>
@@ -1634,7 +1643,7 @@ function getBookProgress(chapterId) {
   return null;
 }
 
-var fullPageOrder = ['landing'].concat(chapterOrder);
+var fullPageOrder = ['landing','pgp-intro'].concat(chapterOrder);
 
 function updateNavButtons() {
   var prevBtn = document.getElementById('nav-prev');
