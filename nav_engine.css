@@ -198,6 +198,12 @@ body.dark-mode #nav-breadcrumb .bc-sep { color: #555; }
   #nav-breadcrumb { font-size: 0.72em; padding: 3px 12px; }
 }
 
+/* ── Mobile nav bar padding fix ── */
+/* On small screens the controls-top wraps to 2+ rows (~100px). */
+@media (max-width: 600px) {
+  .page { padding-top: 110px !important; }
+}
+
 /* ── Swipe hint (first visit) ── */
 .nav-swipe-hint {
   position: fixed; left: 0; top: 50%; transform: translateY(-50%);

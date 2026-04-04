@@ -378,6 +378,8 @@
       }
     }
     updateBreadcrumb();
+
+    // Mobile padding is handled by CSS media query in nav_engine.css
   }
 
   // ── Render books for a volume ──
@@ -722,8 +724,10 @@
     if (!_breadcrumbEl) return;
     if (!_config.currentChapter || _config.currentChapter === 'landing') {
       _breadcrumbEl.classList.remove('visible');
+      // On landing pages, ensure padding clears the nav bar (which may wrap on mobile)
+      var ct = document.querySelector('.controls-top');
       var pageEl = document.querySelector('.page');
-      if (pageEl) pageEl.style.paddingTop = '';
+      if (ct && pageEl) pageEl.style.paddingTop = (ct.offsetHeight + 10) + 'px';
       return;
     }
     var vol = VOLUMES[_config.volume];
