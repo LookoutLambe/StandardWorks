@@ -193,7 +193,7 @@
       ]
     },
     jst: {
-      key: 'jst', name: 'JST', heb:'\u05EA\u05B7\u05BC\u05E8\u05B0\u05D2\u05BC\u05D5\u05BC\u05DD \u05D2\u05F3\u05D5\u05D6\u05E3 \u05E1\u05DE\u05D9\u05EA', abbr:'\u05EA.\u05D2.\u05E1',
+      key: 'jst', name: 'JST', heb:'\u05EA\u05B7\u05BC\u05E8\u05B0\u05D2\u05BC\u05D5\u05BC\u05DD \u05D9\u05D5\u05B9\u05E1\u05B5\u05E3 \u05E1\u05B0\u05DE\u05B4\u05D9\u05EA', abbr:'\u05EA.\u05D2.\u05E1',
       page: 'jst.html',
       divisions: [
         { name: '\u05D4\u05E7\u05D3\u05DE\u05D5\u05EA \u00B7 Front Matter', books: [
@@ -379,7 +379,17 @@
     }
     updateBreadcrumb();
 
-    // Mobile padding is handled by CSS media query in nav_engine.css
+    // Ensure page padding always clears the fixed nav bar (varies by screen size)
+    setTimeout(function() {
+      var ct = document.querySelector('.controls-top');
+      var pageEl = document.querySelector('.page');
+      if (ct && pageEl) {
+        var needed = ct.offsetHeight + 12;
+        if (parseInt(getComputedStyle(pageEl).paddingTop, 10) < needed) {
+          pageEl.style.setProperty('padding-top', needed + 'px', 'important');
+        }
+      }
+    }, 100);
   }
 
   // ── Render books for a volume ──
@@ -724,10 +734,8 @@
     if (!_breadcrumbEl) return;
     if (!_config.currentChapter || _config.currentChapter === 'landing') {
       _breadcrumbEl.classList.remove('visible');
-      // On landing pages, ensure padding clears the nav bar (which may wrap on mobile)
-      var ct = document.querySelector('.controls-top');
       var pageEl = document.querySelector('.page');
-      if (ct && pageEl) pageEl.style.paddingTop = (ct.offsetHeight + 10) + 'px';
+      if (pageEl) pageEl.style.paddingTop = '';
       return;
     }
     var vol = VOLUMES[_config.volume];
