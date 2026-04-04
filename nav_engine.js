@@ -196,6 +196,9 @@
       key: 'jst', name: 'JST', heb:'\u05EA\u05B7\u05BC\u05E8\u05B0\u05D2\u05BC\u05D5\u05BC\u05DD \u05D2\u05F3\u05D5\u05D6\u05E3 \u05E1\u05DE\u05D9\u05EA', abbr:'\u05EA.\u05D2.\u05E1',
       page: 'jst.html',
       divisions: [
+        { name: '\u05D4\u05E7\u05D3\u05DE\u05D5\u05EA \u00B7 Front Matter', books: [
+          { id:'jst-intro', en:'Introduction', heb:'\u05DE\u05B8\u05D1\u05D5\u05B9\u05D0', ch:1, prefix:'jst-intro', isFront:true }
+        ]},
         { name: '\u05EA\u05E0\u05F4\u05DA \u00B7 Old Testament', books: [
           { id:'jstgen', en:'Genesis', heb:'\u05D1\u05B0\u05BC\u05E8\u05B5\u05D0\u05E9\u05B4\u05C1\u05D9\u05EA', ch:9, prefix:'jstgen-ch' },
           { id:'jstexo', en:'Exodus', heb:'\u05E9\u05B0\u05C1\u05DE\u05D5\u05B9\u05EA', ch:6, prefix:'jstexo-ch' },
@@ -423,7 +426,8 @@
 
         if (book.ch === 1) {
           // Single chapter — click navigates directly
-          row.onclick = (function(b) { return function() { navigateToChapter(volKey, b.prefix + '1', b); }; })(book);
+          // Front matter pages use prefix as-is; regular chapters append '1'
+          row.onclick = (function(b) { var cid = b.isFront ? b.prefix : b.prefix + '1'; return function() { navigateToChapter(volKey, cid, b); }; })(book);
         } else {
           // Multi-chapter — click expands grid
           row.onclick = (function(b, r) { return function() { toggleBookGrid(volKey, b, r); }; })(book, row);
