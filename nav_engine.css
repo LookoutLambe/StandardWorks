@@ -167,8 +167,7 @@
   direction: ltr;
 }
 #nav-breadcrumb.visible { display: block; }
-#nav-breadcrumb.visible ~ .page,
-body:has(#nav-breadcrumb.visible) .page { padding-top: 100px; }
+/* Page padding is set dynamically by nav_engine.js when breadcrumb is visible */
 #nav-breadcrumb span { cursor: pointer; transition: color 0.15s; }
 #nav-breadcrumb span:hover { color: #c8a84e; }
 #nav-breadcrumb .bc-sep { color: #bbb; margin: 0 6px; cursor: default; }

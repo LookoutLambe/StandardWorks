@@ -722,6 +722,8 @@
     if (!_breadcrumbEl) return;
     if (!_config.currentChapter || _config.currentChapter === 'landing') {
       _breadcrumbEl.classList.remove('visible');
+      var pageEl = document.querySelector('.page');
+      if (pageEl) pageEl.style.paddingTop = '';
       return;
     }
     var vol = VOLUMES[_config.volume];
@@ -740,9 +742,17 @@
     }
     _breadcrumbEl.innerHTML = bcHtml;
     _breadcrumbEl.classList.add('visible');
-    // Position below controls-top
+    // Position below controls-top and push page content down
     var ct = document.querySelector('.controls-top');
-    if (ct) _breadcrumbEl.style.top = ct.offsetHeight + 'px';
+    if (ct) {
+      var bcTop = ct.offsetHeight;
+      _breadcrumbEl.style.top = bcTop + 'px';
+      // Defer padding update so breadcrumb offsetHeight is computed after display:block
+      setTimeout(function() {
+        var pageEl = document.querySelector('.page');
+        if (pageEl) pageEl.style.paddingTop = (bcTop + _breadcrumbEl.offsetHeight + 16) + 'px';
+      }, 0);
+    }
   }
 
   function findBook(volKey, chapterId) {
