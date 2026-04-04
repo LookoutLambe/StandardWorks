@@ -824,13 +824,34 @@
   function onTouchEnd(e) {
     var dx = e.changedTouches[0].clientX - _touchStartX;
     var dy = Math.abs(e.changedTouches[0].clientY - _touchStartY);
-    // Swipe right from left edge to open
-    if (_touchStartX < 30 && dx > 60 && dy < 80 && !_sidebarEl.classList.contains('open')) {
-      openSidebar();
+    var absDx = Math.abs(dx);
+
+    // Ignore if mostly vertical scroll or too short
+    if (dy > absDx || absDx < 60) return;
+
+    // If sidebar is open, swipe left closes it
+    if (_sidebarEl.classList.contains('open')) {
+      if (dx < -60) closeSidebar();
+      return;
     }
-    // Swipe left on sidebar to close
-    if (_sidebarEl.classList.contains('open') && dx < -60 && dy < 80) {
-      closeSidebar();
+
+    // Swipe right from left edge opens sidebar
+    if (_touchStartX < 30 && dx > 60) {
+      openSidebar();
+      return;
+    }
+
+    // Swipe left → next chapter, swipe right → previous chapter
+    if (_config.onNavigate) {
+      var nextBtn = document.getElementById('nav-next');
+      var prevBtn = document.getElementById('nav-prev');
+      if (dx < -80 && nextBtn && !nextBtn.disabled) {
+        // Swipe left → next
+        nextBtn.click();
+      } else if (dx > 80 && prevBtn && !prevBtn.disabled) {
+        // Swipe right → previous
+        prevBtn.click();
+      }
     }
   }
 
