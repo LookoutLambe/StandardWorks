@@ -1514,6 +1514,14 @@ body.dark-mode #return-banner a:hover { background:#c8a84e; }
       </div>
     </div>
 
+    <!-- Introduction Panel -->
+    <div class="chapter-panel" id="panel-jst-intro" style="display:none;">
+      <div style="max-width:900px;margin:0 auto;padding:20px 30px;direction:rtl">
+        <div class="chapter-heading"><h2>מָבוֹא</h2><div class="chapter-label-en">Introduction</div></div>
+        <div id="jst-intro-verses"></div>
+      </div>
+    </div>
+
     <!-- Chapter Panels -->
     <div class="chapter-panel" id="panel-jstgen-ch1" style="display:none;">
       <div class="chapter-heading"><h2>פרק א</h2><div class="chapter-label-en">JST, Genesis 1–8</div></div>
@@ -2320,6 +2328,7 @@ try {
 <script src="bom/roots_glossary.js"></script>
 
 <!-- Verse data files -->
+<script src="jst_verses/jst_intro.js"></script>
 <script src="jst_verses/jstgen.js"></script>
 <script src="jst_verses/jstexo.js"></script>
 <script src="jst_verses/jstdeu.js"></script>
@@ -2411,7 +2420,7 @@ function getBookProgress(chapterId) {
   return null;
 }
 
-var fullPageOrder = ['landing'].concat(chapterOrder);
+var fullPageOrder = ['landing','jst-intro'].concat(chapterOrder);
 
 function updateNavButtons() {
   var prevBtn = document.getElementById('nav-prev');
