@@ -6,6 +6,7 @@ const CORE_ASSETS = [
   '/StandardWorks/nt.html',
   '/StandardWorks/dc.html',
   '/StandardWorks/pgp.html',
+  '/StandardWorks/jst.html',
   '/StandardWorks/manifest.json',
   '/StandardWorks/icons/icon-192.png',
   '/StandardWorks/icons/icon-512.png',
@@ -26,14 +27,13 @@ self.addEventListener('install', event => {
   self.skipWaiting();
 });
 
-// Activate — clean old caches
+// Activate — purge ALL old caches and force clients to use new worker
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(keys =>
-      Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))
-    )
+      Promise.all(keys.map(k => k !== CACHE_NAME ? caches.delete(k) : null))
+    ).then(() => self.clients.claim())
   );
-  self.clients.claim();
 });
 
 // Fetch — network-first for HTML/JS, cache-first for static assets (images, fonts)
