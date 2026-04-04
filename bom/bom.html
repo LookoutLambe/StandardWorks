@@ -7579,8 +7579,8 @@ addNoteMarkers();
     var dx = t.clientX - startX;
     var dy = t.clientY - startY;
     var dt = Date.now() - startTime;
-    // Require: horizontal > 70px, more horizontal than vertical, under 500ms
-    if (Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 1.5 && dt < 500) {
+    // Require: horizontal > 70px, more horizontal than vertical
+    if (Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy)) {
       if (dx > 0) goNext();  // swipe right = next (Hebrew book direction)
       else goPrev();         // swipe left = prev
     }
@@ -7630,6 +7630,7 @@ NavEngine.init({
   volume: 'bom',
   currentChapter: currentChapterId || 'landing',
   basePath: '../',
+  skipSwipeNav: true,
   onNavigate: function(id) { navTo(id); }
 });
 </script>

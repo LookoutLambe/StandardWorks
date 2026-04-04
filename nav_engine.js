@@ -842,14 +842,15 @@
     }
 
     // RTL: Swipe right → next chapter, swipe left → previous chapter
-    if (dx > 80) {
-      // Swipe right → next (RTL forward)
-      if (typeof goNext === 'function') goNext();
-      else { var nb = document.getElementById('nav-next'); if (nb && !nb.disabled) nb.click(); }
-    } else if (dx < -80) {
-      // Swipe left → previous (RTL back)
-      if (typeof goPrev === 'function') goPrev();
-      else { var pb = document.getElementById('nav-prev'); if (pb && !pb.disabled) pb.click(); }
+    // Skip if page has its own swipe handler (BOM)
+    if (!_config.skipSwipeNav) {
+      if (dx > 80) {
+        if (typeof goNext === 'function') goNext();
+        else { var nb = document.getElementById('nav-next'); if (nb && !nb.disabled) nb.click(); }
+      } else if (dx < -80) {
+        if (typeof goPrev === 'function') goPrev();
+        else { var pb = document.getElementById('nav-prev'); if (pb && !pb.disabled) pb.click(); }
+      }
     }
   }
 
