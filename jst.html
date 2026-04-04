@@ -2702,7 +2702,15 @@ var DD_BOOKS = [
 
 function toggleNavDropdown() {
   var dd = document.getElementById('nav-dropdown');
-  dd.classList.toggle('open');
+  if (dd.classList.contains('open')) { closeNavPanel(); } else {
+    dd.classList.add('open');
+    document.getElementById('panel-overlay').classList.add('open');
+  }
+}
+function closeNavPanel() {
+  var dd = document.getElementById('nav-dropdown');
+  dd.classList.remove('open');
+  document.getElementById('panel-overlay').classList.remove('open');
 }
 
 function toggleDdBook(id) {

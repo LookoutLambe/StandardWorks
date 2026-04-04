@@ -380,7 +380,7 @@
     updateBreadcrumb();
 
     // Ensure page padding always clears the fixed nav bar (varies by screen size)
-    setTimeout(function() {
+    function _fixPagePadding() {
       var ct = document.querySelector('.controls-top');
       var pageEl = document.querySelector('.page');
       if (ct && pageEl) {
@@ -389,7 +389,12 @@
           pageEl.style.setProperty('padding-top', needed + 'px', 'important');
         }
       }
-    }, 100);
+    }
+    // Run after layout settles and on window load/resize
+    setTimeout(_fixPagePadding, 50);
+    setTimeout(_fixPagePadding, 300);
+    window.addEventListener('load', _fixPagePadding);
+    window.addEventListener('resize', _fixPagePadding);
   }
 
   // ── Render books for a volume ──
