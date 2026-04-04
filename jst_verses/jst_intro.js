@@ -3,7 +3,7 @@
 (function() {
 var jstIntro_ch1Verses = [
   // Paragraph 1: Selected portions of the JST
-  { num:"א", words:[["חֲלָקִים","portions"],["נִבְחָרִים","selected"],["מִתַּרְגּוּם","from-the-translation-of"],["יוֹסֵף","Joseph"],["סְמִית","Smith"],["לְמִקְרָא","of-the-Bible"],["הַמֶּלֶךְ","the-King"],["יַעֲקֹב","James"],["׃",""]] },
+  { num:"א", words:[["חֲלָקִים","portions"],["נִבְחָרִים","selected"],["מִתַּרְגּוּם","from-the-translation-of"],["יוֹסֵף","Joseph"],["סְמִית","Smith"],["לְמִקְרָא","of-the-Bible"],["הַמֶּלֶךְ","the-King"],["יַעֲקֹב","James-(Jacob)"],["׃",""]] },
   // Paragraph 2: The Lord inspired Joseph Smith to restore truths
   { num:"ב", words:[["עוֹרֵר","inspired"],["יְהוָה","the-Lord"],["אֶת","[ACC]"],["הַנָּבִיא","the-Prophet"],["יוֹסֵף","Joseph"],["סְמִית","Smith"],["לְהָשִׁיב","to-restore"],["אֲמִתּוֹת","truths"],["אֲשֶׁר","which"],["אָבְדוּ","had-been-lost"],["אוֹ","or"],["נִשְׁתַּנּוּ","changed"],["מֵעֵת","since"],["נִכְתְּבוּ","were-written"],["הַדְּבָרִים","the-words"],["הָרִאשׁוֹנִים","the-original"],["׃",""]] },
   // Paragraph 3: More revelation than literal translation
