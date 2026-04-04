@@ -157,7 +157,7 @@
 
 /* ── Breadcrumb ── */
 #nav-breadcrumb {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 99;
+  position: fixed; top: 46px; left: 0; right: 0; z-index: 99;
   font-family: 'Crimson Pro', serif; font-size: 0.78em;
   color: #888; padding: 4px 16px;
   border-bottom: 1px solid rgba(200,168,78,0.15);
@@ -167,6 +167,8 @@
   direction: ltr;
 }
 #nav-breadcrumb.visible { display: block; }
+#nav-breadcrumb.visible ~ .page,
+body:has(#nav-breadcrumb.visible) .page { padding-top: 78px; }
 #nav-breadcrumb span { cursor: pointer; transition: color 0.15s; }
 #nav-breadcrumb span:hover { color: #c8a84e; }
 #nav-breadcrumb .bc-sep { color: #bbb; margin: 0 6px; cursor: default; }
