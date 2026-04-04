@@ -11,7 +11,7 @@ var dc51_ch1Verses = [
     ["לָכֵן","therefore"],["עַבְדִּי","thou-art-My-servant"],["אֶדְוַרְד","Edward"],["פַּרְטְרִיג׳","Partridge"],["וַאֲשֶׁר","and-who"],["בָּחַר","chose"],["בָּהֶם","in-them"],["אֲשֶׁר","which"],["רָצִיתִי","ran-of-my"],["בָהֶם","among-them"],["יְמַנּוּ","they counted"],["לָעָם","to-the-people"],["הַזֶּה","this"],["חֶלְקֵיהֶם","portions-their"],["לְכָל","to-all"],["אִישׁ","man/each"],["בְּשָׁוֶה","in-equal"],["לְפִי","according-to"],["מִשְׁפַּחְתּוֹ","his-family"],["לְפִי","according-to"],["מַצָּבוֹ","his-state"],["וּרְצוֹנוֹתָיו","???"],["וּצְרָכָיו׃","???"],["׃",""]
   ]},
   { num: "ד", words: [
-    ["וְעַבְדִּי","and-servant-my"],["אֶדְוַרְד","Edward"],["פַּרְטְרִיג׳","Partridge"],["כַּאֲשֶׁר","as"],["יְמַנֶּה","Imnahites"],["לְאִישׁ","for-a-man"],["חֶלְקוֹ","his-part"],["יִתֵּן","shall-give"],["לוֹ","to-him"],["כְּתָב","writing"],["אֲשֶׁר","which"],["יַבְטִיחַ","he-shall-promise"],["לוֹ","to-him"],["חֶלְקוֹ","his-part"],["לְאָחֳזוֹ","to-bolt them"],["הַזְּכוּת","the-merit"],["הַזֹּאת","this"],["וְהַנַּחֲלָה","and-inheritance (e.g. promise)"],["הַזֹּאת","this"],["בָּעֵדָה","into-the-church"],["עַד","until"],["פָּשְׁעוֹ","transgress"],["וְלֹא","and-not"],["יֵחָשֵׁב","it-is-reckoned"],["רָאוּי","worthy"],["לְפִי","according-to"],["קוֹל","the-voice-of"],["הָעֵדָה","the-church"],["כְּפִי","according-to"],["תּוֹרוֹת","doctrines-of"],["הָעֵדָה","the-church"],["וּבְרִיתוֹתֶיהָ","and-a-covenant-her"],["לִהְיוֹת","to-be"],["שַׁיָּךְ","belonging"],["לָעֵדָה׃","to-the-church"],["׃",""]
+    ["וְעַבְדִּי","and-servant-my"],["אֶדְוַרְד","Edward"],["פַּרְטְרִיג׳","Partridge"],["כַּאֲשֶׁר","as"],["יְמַנֶּה","Imnahites"],["לְאִישׁ","for-a-man"],["חֶלְקוֹ","his-part"],["יִתֵּן","shall-give"],["לוֹ","to-him"],["כְּתָב","writing"],["אֲשֶׁר","which"],["יַבְטִיחַ","he-shall-promise"],["לוֹ","to-him"],["חֶלְקוֹ","his-part"],["לְאָחֳזוֹ","to-bolt them"],["הַזְּכוּת","the-merit"],["הַזֹּאת","this"],["וְהַנַּחֲלָה","and-the-inheritance (e.g. promise)"],["הַזֹּאת","this"],["בָּעֵדָה","into-the-church"],["עַד","until"],["פָּשְׁעוֹ","transgress"],["וְלֹא","and-not"],["יֵחָשֵׁב","it-is-reckoned"],["רָאוּי","worthy"],["לְפִי","according-to"],["קוֹל","the-voice-of"],["הָעֵדָה","the-church"],["כְּפִי","according-to"],["תּוֹרוֹת","doctrines-of"],["הָעֵדָה","the-church"],["וּבְרִיתוֹתֶיהָ","and-a-covenant-her"],["לִהְיוֹת","to-be"],["שַׁיָּךְ","belonging"],["לָעֵדָה׃","to-the-church"],["׃",""]
   ]},
   { num: "ה", words: [
     ["וְאִם","and-if"],["יִפְשַׁע","he will transgress"],["וְלֹא","and-not"],["יֵחָשֵׁב","it-is-reckoned"],["רָאוּי","worthy"],["לִהְיוֹת","to-be"],["שַׁיָּךְ","belonging"],["לָעֵדָה","to-the-church"],["לֹא","not"],["יִהְיֶה","shall-be"],["לוֹ","to-him"],["כֹּחַ","power"],["לִתְבֹּעַ","to-claim"],["הַחֵלֶק","the-part"],["אֲשֶׁר","which"],["הִקְדִּישׁ","he consecrated"],["לַמַּשְׁגִּיחַ","to-the-is gazing"],["לַעֲנִיֵּי","to-the-from-the-poor-of"],["עֲדָתִי","My-church"],["וְנִצְרָכֶיהָ","???"],["לָכֵן","therefore"],["לֹא","not"],["יַחֲזִיק","shall-endure"],["הַמַּתָּנָה","the-gift"],["אֶלָּא","but-rather"],["יִתְבַּע","he-shall-be-sought"],["רַק","only"],["הַחֵלֶק","the-part"],["הַנָּתוּן","the-given"],["לוֹ","to-him"],["בִּשְׁטָר׃","in-a side"],["׃",""]
@@ -23,7 +23,7 @@ var dc51_ch1Verses = [
     ["וְאֲשֶׁר","and-those-upon"],["שַׁיָּךְ","belonging"],["לָעָם","to-the-people"],["הַזֶּה","this"],["יְמֻנֶּה","Imnahites"],["לָעָם","to-the-people"],["הַזֶּה׃","this"],["׃",""]
   ]},
   { num: "ח", words: [
-    ["וְהַכֶּסֶף","and-the-silver"],["הַנּוֹתָר","what is left over"],["לָעָם","to-the-people"],["הַזֶּה","this"],["יְמֻנֶּה","Imnahites"],["סוֹכֵן","agent"],["לָעָם","to-the-people"],["הַזֶּה","this"],["לָקַחַת","to-take"],["הַכֶּסֶף","the-money"],["לְסַפֵּק","to-enough"],["אֹכֶל","food"],["וּמַלְבּוּשׁ","and-clothing"],["לְפִי","according-to"],["צָרְכֵי","needs-of"],["הָעָם","the-people"],["הַזֶּה׃","this"],["׃",""]
+    ["וְהַכֶּסֶף","and-the-silver"],["הַנּוֹתָר","the-what is left over"],["לָעָם","to-the-people"],["הַזֶּה","this"],["יְמֻנֶּה","Imnahites"],["סוֹכֵן","agent"],["לָעָם","to-the-people"],["הַזֶּה","this"],["לָקַחַת","to-take"],["הַכֶּסֶף","the-money"],["לְסַפֵּק","to-enough"],["אֹכֶל","food"],["וּמַלְבּוּשׁ","and-clothing"],["לְפִי","according-to"],["צָרְכֵי","needs-of"],["הָעָם","the-people"],["הַזֶּה׃","this"],["׃",""]
   ]},
   { num: "ט", words: [
     ["וְכָל","and-all"],["אִישׁ","man/each"],["יִתְנַהֵג","he-will-you have led away"],["בְּיֹשֶׁר","uprightly"],["וְיִהְיֶה","and-he-shall-be"],["שָׁוֶה","equal"],["בְּתוֹךְ","in-midst-of"],["הָעָם","the-people"],["הַזֶּה","this"],["וִיקַבֵּל","and-he-received"],["בְּשָׁוֶה","in-equal"],["לְמַעַן","that"],["תִּהְיוּ","you-may-stand"],["אֶחָד","one"],["כַּאֲשֶׁר","as"],["צִוִּיתִי","have-I-commanded"],["אֶתְכֶם׃","you"],["׃",""]
@@ -66,7 +66,7 @@ renderVerseSet(dc51_ch1Verses, 'dc51-ch1-verses');
 
 var dc52_ch1Verses = [
   { num: "א", words: [
-    ["הִנֵּה","behold"],["כֹּה","thus"],["אָמַר","said"],["יְהוָה","the-Lord"],["אֶל","to/unto"],["הַזְּקֵנִים","you-old-men"],["אֲשֶׁר","which"],["קָרָא","called"],["וּבָחַר","and-will-yet-choose"],["בַּיָּמִים","in-the-days"],["הָאַחֲרוֹנִים","last"],["הָאֵלֶּה","these"],["בְּקוֹל","the-voice-of"],["רוּחוֹ׃","spirit-its"],["׃",""]
+    ["הִנֵּה","behold"],["כֹּה","thus"],["אָמַר","said"],["יְהוָה","the-Lord"],["אֶל","to/unto"],["הַזְּקֵנִים","the-you-old-men"],["אֲשֶׁר","which"],["קָרָא","called"],["וּבָחַר","and-will-yet-choose"],["בַּיָּמִים","in-the-days"],["הָאַחֲרוֹנִים","the-last"],["הָאֵלֶּה","these"],["בְּקוֹל","the-voice-of"],["רוּחוֹ׃","spirit-its"],["׃",""]
   ]},
   { num: "ב", words: [
     ["לֵאמֹר","saying"],["אֲנִי","I"],["יְהוָה","the-Lord"],["אוֹדִיעַ","I-shall-make-known"],["אֶתְכֶם","you"],["מַה","what"],["אֲשֶׁר","which"],["אֶרְצֶה","I will accept"],["כִּי","that"],["תַעֲשׂוּ","perform"],["מֵעַתָּה","from-this-time"],["עַד","until"],["הַוַּעֲדָה","the-and-the congregation"],["הַבָּאָה","the-coming"],["אֲשֶׁר","which"],["תֵּאָסֵף","she will be received"],["בְּמִיזוּרִי","in-Missouri"],["עַל","upon"],["הָאֲדָמָה","the-ground"],["אֲשֶׁר","which"],["אֲקַדֵּשׁ","I will consecrate"],["לְעַמִּי","unto-my-people"],["הֵם","they"],["שְׁאֵרִית","remnant-of"],["יַעֲקֹב","Jacob"],["וְהַיּוֹרְשִׁים","and-the-those who dispossess"],["לְפִי","according-to"],["הַבְּרִית׃","the-covenant"],["׃",""]
@@ -81,7 +81,7 @@ var dc52_ch1Verses = [
     ["וְגַם","and-also"],["כַּאֲשֶׁר","as"],["יִהְיוּ","shall-be"],["נֶאֱמָנִים","faithful"],["יוּדַע","knowing"],["לָהֶם","unto-them"],["אֶרֶץ","the-land-of"],["נַחֲלַתְכֶם׃","inheritance-your"],["׃",""]
   ]},
   { num: "ו", words: [
-    ["וְכַאֲשֶׁר","and-when"],["לֹא","not"],["יִהְיוּ","shall-be"],["נֶאֱמָנִים","faithful"],["יִכָּרְתוּ","they-shall-be-cut-off"],["כִּרְצוֹנִי","according-to-my-will"],["כַּטּוֹב","as-seems-you-good"],["בְּעֵינָי׃","in-my-eyes"],["׃",""]
+    ["וְכַאֲשֶׁר","and-when"],["לֹא","not"],["יִהְיוּ","shall-be"],["נֶאֱמָנִים","faithful"],["יִכָּרְתוּ","they-shall-be-cut-off"],["כִּרְצוֹנִי","according-to-my-will"],["כַּטּוֹב","as-the-seems-you-good"],["בְּעֵינָי׃","in-my-eyes"],["׃",""]
   ]},
   { num: "ז", words: [
     ["וְעוֹד","and-again"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["עַבְדִּי","thou-art-My-servant"],["לִימָן","to-he assigned"],["וַייְט","Wight"],["וְעַבְדִּי","and-servant-my"],["יוֹחָנָן","John"],["קוֹרִיל","Corrill"],["יֵצְאוּ","they-shall-go-forth"],["לְדַרְכָּם","to-their-march"],["בִּמְהֵרָה׃","in-soon"],["׃",""]
@@ -99,7 +99,7 @@ var dc52_ch1Verses = [
     ["כִּי","that"],["כֹה","thus"],["אָמַר","said"],["יְהוָה","the-Lord"],["אֲקַצֵּר","I-abridge"],["מְלַאכְתִּי","My-work"],["בְּצֶדֶק","in-righteousness"],["כִּי","that"],["הַיָּמִים","the-days"],["בָּאִים","come"],["אֲשֶׁר","which"],["אֶשְׁלַח","shall-I-send"],["מִשְׁפָּט","judgment"],["לְנִצָּחוֹן׃","to-victory"],["׃",""]
   ]},
   { num: "יב", words: [
-    ["וְעַבְדִּי","and-servant-my"],["לִימָן","to-he assigned"],["וַייְט","Wight"],["יִזָּהֵר","Yizhar (Hebrew name)"],["כִּי","that"],["הַשָּׂטָן","the-Adversary"],["מְבַקֵּשׁ","desire"],["לְנַפּוֹתוֹ","to-the heights of-his"],["כַּמֹּץ׃","like-chaff"],["׃",""]
+    ["וְעַבְדִּי","and-servant-my"],["לִימָן","to-he assigned"],["וַייְט","Wight"],["יִזָּהֵר","Yizhar (Hebrew name)"],["כִּי","that"],["הַשָּׂטָן","the-Adversary"],["מְבַקֵּשׁ","desire"],["לְנַפּוֹתוֹ","to-the heights of-his"],["כַּמֹּץ׃","like-the-chaff"],["׃",""]
   ]},
   { num: "יג", words: [
     ["וְהִנֵּה","and-behold"],["הַנֶּאֱמָן","the-faithful"],["יִמָּשַׁל","he-shall-reign"],["עַל","upon"],["דְּבָרִים","things"],["רַבִּים׃","many"],["׃",""]
@@ -114,7 +114,7 @@ var dc52_ch1Verses = [
     ["הַמְדַבֵּר","who-spoke"],["אֲשֶׁר","which"],["רוּחוֹ","His-Spirit"],["נִשְׁבָּרָה","broken-her"],["אֲשֶׁר","which"],["לְשׁוֹנוֹ","his-tongue"],["עֲנָוָה","humility"],["וּבוֹנֶה","and-am about to build"],["הוּא","he/it"],["מֵאֱלֹהִים","from-God"],["אִם","if"],["יִשְׁמֹר","He-preserve"],["חֻקּוֹתָי׃","statutes-my"],["׃",""]
   ]},
   { num: "יז", words: [
-    ["וְעוֹד","and-again"],["הָרוֹעֵד","the-trembles"],["תַּחַת","under"],["כֹּחִי","my-strength"],["יֶחֱזַק","mightier"],["וְיוֹצִיא","and-shall-bring-forth"],["פְּרִי","fruit"],["תְהִלָּה","praise"],["וְחָכְמָה","and-wisdom"],["לְפִי","according-to"],["הַגִּלּוּיִים","the-uncovered one(pl)"],["וְהָאֲמִתּוֹת","and-true(pl)"],["אֲשֶׁר","which"],["נָתַתִּי","I-gave"],["לָכֶם׃","to-you"],["׃",""]
+    ["וְעוֹד","and-again"],["הָרוֹעֵד","the-trembles"],["תַּחַת","under"],["כֹּחִי","my-strength"],["יֶחֱזַק","mightier"],["וְיוֹצִיא","and-shall-bring-forth"],["פְּרִי","fruit"],["תְהִלָּה","praise"],["וְחָכְמָה","and-wisdom"],["לְפִי","according-to"],["הַגִּלּוּיִים","the-uncovered one(pl)"],["וְהָאֲמִתּוֹת","and-the-true(pl)"],["אֲשֶׁר","which"],["נָתַתִּי","I-gave"],["לָכֶם׃","to-you"],["׃",""]
   ]},
   { num: "יח", words: [
     ["וְעוֹד","and-again"],["הַנִּכְבָּשׁ","the-was-conquered"],["וְאֵינֶנּוּ","and-it-is-not"],["מוֹצִיא","he is bringing out"],["פְּרִי","fruit"],["לְפִי","according-to"],["הַתַּבְנִית","the-pattern"],["הַזֹּאת","this"],["אֵינֶנּוּ","we-are-not"],["מִמֶּנִּי׃","from-me"],["׃",""]
@@ -126,7 +126,7 @@ var dc52_ch1Verses = [
     ["וְהַיָּמִים","and-the-days"],["בָּאוּ","they-came"],["לְפִי","according-to"],["אֱמוּנַת","the-faith-of"],["אֲנָשִׁים","men"],["יֵעָשֶׂה","shall-be-done"],["לָהֶם׃","unto-them"],["׃",""]
   ]},
   { num: "כא", words: [
-    ["הִנֵּה","behold"],["הַמִּצְוָה","the-commandment"],["הַזֹּאת","this"],["נִתְּנָה","was-given"],["לְכָל","to-all"],["הַזְּקֵנִים","you-old-men"],["אֲשֶׁר","which"],["בָּחָרְתִּי׃","I-chose"],["׃",""]
+    ["הִנֵּה","behold"],["הַמִּצְוָה","the-commandment"],["הַזֹּאת","this"],["נִתְּנָה","was-given"],["לְכָל","to-all"],["הַזְּקֵנִים","the-you-old-men"],["אֲשֶׁר","which"],["בָּחָרְתִּי׃","I-chose"],["׃",""]
   ]},
   { num: "כב", words: [
     ["וְעוֹד","and-again"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["עַבְדִּי","thou-art-My-servant"],["תּוֹמַס","Thomas"],["בּ","in"],["מַרְשׁ","from-a poor person"],["וְעַבְדִּי","and-servant-my"],["עֶזְרָא","Ezra"],["תֵיֶיר","Thayer"],["יֵצְאוּ","they-shall-go-forth"],["גַם","also"],["לְדַרְכָּם","to-their-march"],["קוֹרְאִים","calling"],["הַדָּבָר","the-thing"],["בַּדֶּרֶךְ","in-the-way"],["אֶל","to/unto"],["אוֹתָהּ","her/it(f)"],["הָאָרֶץ׃","the-land"],["׃",""]
@@ -135,7 +135,7 @@ var dc52_ch1Verses = [
     ["וְעוֹד","and-again"],["עַבְדִּי","thou-art-My-servant"],["יִצְחָק","Isaac"],["מוֹרְלִי","Morley"],["וְעַבְדִּי","and-servant-my"],["עֶזְרָא","Ezra"],["בּוּת","Booth"],["יֵצְאוּ","they-shall-go-forth"],["לְדַרְכָּם","to-their-march"],["גַּם","also"],["קוֹרְאִים","calling"],["הַדָּבָר","the-thing"],["בַּדֶּרֶךְ","in-the-way"],["אֶל","to/unto"],["אוֹתָהּ","her/it(f)"],["הָאָרֶץ׃","the-land"],["׃",""]
   ]},
   { num: "כד", words: [
-    ["וְעוֹד","and-again"],["עֲבָדַי","are servants-my"],["אֶדְוַרְד","Edward"],["פַּרְטְרִיג׳","Partridge"],["וּמַרְטִין","and-Martin"],["הֶרִיס","the-a-stade"],["יֵצְאוּ","they-shall-go-forth"],["לְדַרְכָּם","to-their-march"],["עִם","with"],["עֲבָדַי","are servants-my"],["סִידְנִי","Sidney"],["רִיגְדּוֹן","Rigdon"],["וְיוֹסֵף","and-Joseph"],["סְמִית","Smith"],["הַבֵּן׃","explain"],["׃",""]
+    ["וְעוֹד","and-again"],["עֲבָדַי","are servants-my"],["אֶדְוַרְד","Edward"],["פַּרְטְרִיג׳","Partridge"],["וּמַרְטִין","and-Martin"],["הֶרִיס","the-a-stade"],["יֵצְאוּ","they-shall-go-forth"],["לְדַרְכָּם","to-their-march"],["עִם","with"],["עֲבָדַי","are servants-my"],["סִידְנִי","Sidney"],["רִיגְדּוֹן","Rigdon"],["וְיוֹסֵף","and-Joseph"],["סְמִית","Smith"],["הַבֵּן׃","the-explain"],["׃",""]
   ]},
   { num: "כה", words: [
     ["עֲבָדַי","are servants-my"],["דָּוִד","David"],["וִיטְמֶר","Whitmer"],["וְהַרְוֶי","???"],["וִיטְלוֹק","???"],["גַּם","also"],["יֵצְאוּ","they-shall-go-forth"],["לְדַרְכָּם","to-their-march"],["וְיִקְרְאוּ","and-they-shall-call"],["בַּדֶּרֶךְ","in-the-way"],["אֶל","to/unto"],["אוֹתָהּ","her/it(f)"],["הָאָרֶץ׃","the-land"],["׃",""]
@@ -180,7 +180,7 @@ var dc52_ch1Verses = [
     ["וְעוֹד","and-again"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["יֶרֶד","Jared"],["קַרְטֶר","Carter"],["יִסָּמֵךְ","he-shall-be-supported"],["לְכֹהֵן","to-their-high-priest"],["וְגַם","and-also"],["ג׳וֹרְג׳","???"],["ג׳יימְס","???"],["יִסָּמֵךְ","he-shall-be-supported"],["לְכֹהֵן׃","a priest"],["׃",""]
   ]},
   { num: "לט", words: [
-    ["שְׁאָר","the-remnant-of"],["הַזְּקֵנִים","you-old-men"],["יִשְׁקְדוּ","he kept watch(they)"],["עַל","upon"],["הַקְּהִלּוֹת","the-churches"],["וְיַכְרִיזוּ","and-they-shall-proclaim"],["הַדָּבָר","the-thing"],["בָּאֲזוֹרִים","with-a-girdle(pl)"],["מִסָּבִיב","round-about"],["לָהֶם","unto-them"],["וְיַעַבְדוּ","and-worship"],["בְּיָדָם","into-their-hands"],["לְמַעַן","that"],["לֹא","not"],["תֵעָשֶׂה","there-be-made"],["עֲבוֹדַת","ministry-of"],["אֱלִילִים","idols"],["וְרִשְׁעָה׃","and-wickedness"],["׃",""]
+    ["שְׁאָר","the-remnant-of"],["הַזְּקֵנִים","the-you-old-men"],["יִשְׁקְדוּ","he kept watch(they)"],["עַל","upon"],["הַקְּהִלּוֹת","the-churches"],["וְיַכְרִיזוּ","and-they-shall-proclaim"],["הַדָּבָר","the-thing"],["בָּאֲזוֹרִים","with-a-girdle(pl)"],["מִסָּבִיב","round-about"],["לָהֶם","unto-them"],["וְיַעַבְדוּ","and-worship"],["בְּיָדָם","into-their-hands"],["לְמַעַן","that"],["לֹא","not"],["תֵעָשֶׂה","there-be-made"],["עֲבוֹדַת","ministry-of"],["אֱלִילִים","idols"],["וְרִשְׁעָה׃","and-wickedness"],["׃",""]
   ]},
   { num: "מ", words: [
     ["וְזִכְרוּ","and-remember"],["בְּכָל","with-all"],["דָּבָר","things"],["הֶעָנִי","the-poor"],["וְהַנִּצְרָךְ","and-the-to be consumed"],["הַחוֹלֶה","the-sick"],["וְהַמֵּצַר","and-the-distress"],["כִּי","that"],["אֲשֶׁר","which"],["אֵינֶנּוּ","we-are-not"],["עֹשֶׂה","do"],["הַדְּבָרִים","the-things"],["הָאֵלֶּה","these"],["אֵינֶנּוּ","we-are-not"],["תַלְמִידִי׃","disciples-of"],["׃",""]
@@ -202,7 +202,7 @@ renderVerseSet(dc52_ch1Verses, 'dc52-ch1-verses');
 
 var dc53_ch1Verses = [
   { num: "א", words: [
-    ["הִנֵּה","behold"],["אֲנִי","I"],["אֹמֵר","I-say"],["לְךָ","unto-you"],["עַבְדִּי","thou-art-My-servant"],["סִידְנִי","Sidney"],["גִּילְבֶּרְט","???"],["שָׁמַעְתִּי","I-had-heard"],["תְּפִלּוֹתֶיךָ","your-prayers"],["וְקָרָאתָ","and-you will call"],["אֵלַי","to-me"],["כִּי","that"],["יוּדַע","knowing"],["לְךָ","unto-you"],["מֵאֵת","from"],["יְהוָה","the-Lord"],["אֱלֹהֶיךָ","your-God"],["עַל","upon"],["קְרִיאָתְךָ","your-calling"],["וּבְחִירָתְךָ","and-choosing-of-your"],["בָּעֵדָה","into-the-church"],["אֲשֶׁר","which"],["אֲנִי","I"],["יְהוָה","the-Lord"],["הֲקִימוֹתִי","I will raise up"],["בַּיָּמִים","in-the-days"],["הָאַחֲרוֹנִים","last"],["הָאֵלֶּה׃","these"],["׃",""]
+    ["הִנֵּה","behold"],["אֲנִי","I"],["אֹמֵר","I-say"],["לְךָ","unto-you"],["עַבְדִּי","thou-art-My-servant"],["סִידְנִי","Sidney"],["גִּילְבֶּרְט","???"],["שָׁמַעְתִּי","I-had-heard"],["תְּפִלּוֹתֶיךָ","your-prayers"],["וְקָרָאתָ","and-you will call"],["אֵלַי","to-me"],["כִּי","that"],["יוּדַע","knowing"],["לְךָ","unto-you"],["מֵאֵת","from"],["יְהוָה","the-Lord"],["אֱלֹהֶיךָ","your-God"],["עַל","upon"],["קְרִיאָתְךָ","your-calling"],["וּבְחִירָתְךָ","and-choosing-of-your"],["בָּעֵדָה","into-the-church"],["אֲשֶׁר","which"],["אֲנִי","I"],["יְהוָה","the-Lord"],["הֲקִימוֹתִי","I will raise up"],["בַּיָּמִים","in-the-days"],["הָאַחֲרוֹנִים","the-last"],["הָאֵלֶּה׃","these"],["׃",""]
   ]},
   { num: "ב", words: [
     ["הִנֵּה","behold"],["אֲנִי","I"],["יְהוָה","the-Lord"],["אֲשֶׁר","which"],["נִצְלַבְתִּי","was-crucified(I)"],["בְּעַד","on-behalf-of"],["חַטֹּאת","the-sins-of"],["הָעוֹלָם","the-world"],["נֹתֵן","I-give"],["לְךָ","unto-you"],["מִצְוָה","a-commandment"],["לַעֲזֹב","to-leave"],["הָעוֹלָם׃","the-world"],["׃",""]
@@ -227,7 +227,7 @@ renderVerseSet(dc53_ch1Verses, 'dc53-ch1-verses');
 
 var dc54_ch1Verses = [
   { num: "א", words: [
-    ["הִנֵּה","behold"],["כֹּה","thus"],["אָמַר","said"],["יְהוָה","the-Lord"],["הָרִאשׁוֹן","the-first"],["וְהָאַחֲרוֹן","and-last"],["הַתְּחִלָּה","the-beginning"],["וְהַסּוֹף","and-the-rushes"],["הוּא","he/it"],["אֲשֶׁר","which"],["נִצְלַב","was-crucified"],["בְּעַד","on-behalf-of"],["חַטֹּאת","the-sins-of"],["הָעוֹלָם׃","the-world"],["׃",""]
+    ["הִנֵּה","behold"],["כֹּה","thus"],["אָמַר","said"],["יְהוָה","the-Lord"],["הָרִאשׁוֹן","the-first"],["וְהָאַחֲרוֹן","and-the-last"],["הַתְּחִלָּה","the-beginning"],["וְהַסּוֹף","and-the-rushes"],["הוּא","he/it"],["אֲשֶׁר","which"],["נִצְלַב","was-crucified"],["בְּעַד","on-behalf-of"],["חַטֹּאת","the-sins-of"],["הָעוֹלָם׃","the-world"],["׃",""]
   ]},
   { num: "ב", words: [
     ["הִנֵּה","behold"],["אָמֵן","amen"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לְךָ","unto-you"],["עַבְדִּי","thou-art-My-servant"],["נְיוּאֶל","Newel"],["נַייְט","Knight"],["תַּעֲמֹד","shall-stand"],["חָזָק","strong"],["בַּמִּשְׂרָה","in-the-dominion"],["אֲשֶׁר","which"],["מִנִּיתִיךָ","I-appointed-you"],["בָּהּ׃","in-it(f)"],["׃",""]
@@ -242,7 +242,7 @@ var dc54_ch1Verses = [
     ["וְאוֹי","and-woe"],["לָאִישׁ","be-unto-that-man"],["אֲשֶׁר","which"],["עַל","upon"],["יָדוֹ","His-hand"],["בָּא","came"],["הַמִּכְשׁוֹל","the-a stumbling block"],["הַזֶּה","this"],["כִּי","that"],["טוֹב","good"],["הָיָה","was"],["לוֹ","to-him"],["לוּ","if"],["הֻטְבַּע","the-nature"],["בִּמְצוּלוֹת","in-depths-of"],["הַיָּם׃","the-sea"],["׃",""]
   ]},
   { num: "ו", words: [
-    ["אַךְ","but/surely"],["אַשְׁרֵי","blessed-are"],["הַשֹּׁמְרִים","those-who watched"],["הַבְּרִית","the-covenant"],["וְהַשֹּׁמְעִים","and-you-who-hear"],["לַמִּצְוָה","to-the-commandment"],["כִּי","that"],["הֵם","they"],["יַשִּׂיגוּ","they-obtain"],["רַחֲמִים׃","mercy"],["׃",""]
+    ["אַךְ","but/surely"],["אַשְׁרֵי","blessed-are"],["הַשֹּׁמְרִים","the-those-who watched"],["הַבְּרִית","the-covenant"],["וְהַשֹּׁמְעִים","and-the-you-who-hear"],["לַמִּצְוָה","to-the-commandment"],["כִּי","that"],["הֵם","they"],["יַשִּׂיגוּ","they-obtain"],["רַחֲמִים׃","mercy"],["׃",""]
   ]},
   { num: "ז", words: [
     ["לָכֵן","therefore"],["לְכוּ","go"],["עַתָּה","now"],["וּבִרְחוּ","and-flee"],["מִן","from"],["הָאָרֶץ","the-land"],["פֶּן","lest"],["יָבֹאוּ","shall-come"],["עֲלֵיכֶם","upon-you"],["אֹיְבֵיכֶם","your-enemies"],["וּסְעוּ","and-set out"],["לְדַרְכְּכֶם","to-your-ways"],["וּמַנּוּ","and-from-it"],["אֲשֶׁר","which"],["תִּרְצוּ","you-will-want"],["לִמְנַהֵלְכֶם","to-to-guide-you(pl)"],["וּלְשַׁלֵּם","and-to-Shelem"],["כְּסָפִים","as-thresholds"],["בַּעֲבוּרְכֶם׃","for-your-sakes"],["׃",""]
@@ -254,7 +254,7 @@ var dc54_ch1Verses = [
     ["וְאַחֲרֵי","and-after"],["תַשְׁלִימוּ","???"],["נְסִיעַתְכֶם","???"],["הִנֵּה","behold"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["בַּקְּשׁוּ","seek"],["פַּרְנָסָה","livelihood"],["כִּבְנֵי","like-young ones of"],["אָדָם","man"],["עַד","until"],["אֲכִין","I-shall-prepare"],["לָכֶם","to-you"],["מָקוֹם׃","the place of"],["׃",""]
   ]},
   { num: "י", words: [
-    ["וְעוֹד","and-again"],["הִתְאַזְּרוּ","gird-yourselves"],["בְּסַבְלָנוּת","in-patience"],["בַּצָּרָה","trouble"],["עַד","until"],["בוֹאִי","come"],["וְהִנֵּה","and-behold"],["בָּא","came"],["אֲנִי","I"],["מַהֵר","Maher-"],["וּשְׂכָרִי","and-reward-my"],["אִתִּי","with-me"],["וּמְבַקְשַׁי","and-those-who-seek"],["בַּבֹּקֶר","in-the-morning"],["יִמְצְאוּ","they-might-find"],["מְנוּחָה","rest"],["לְנַפְשָׁם","to-their-own-souls"],["כֵּן","so/thus"],["יְהִי","let-this-be"],["אָמֵן׃","amen"],["׃",""]
+    ["וְעוֹד","and-again"],["הִתְאַזְּרוּ","gird-yourselves"],["בְּסַבְלָנוּת","in-patience"],["בַּצָּרָה","the-trouble"],["עַד","until"],["בוֹאִי","come"],["וְהִנֵּה","and-behold"],["בָּא","came"],["אֲנִי","I"],["מַהֵר","Maher-"],["וּשְׂכָרִי","and-reward-my"],["אִתִּי","with-me"],["וּמְבַקְשַׁי","and-those-who-seek"],["בַּבֹּקֶר","in-the-morning"],["יִמְצְאוּ","they-might-find"],["מְנוּחָה","rest"],["לְנַפְשָׁם","to-their-own-souls"],["כֵּן","so/thus"],["יְהִי","let-this-be"],["אָמֵן׃","amen"],["׃",""]
   ]},
 ];
 renderVerseSet(dc54_ch1Verses, 'dc54-ch1-verses');
@@ -270,7 +270,7 @@ var dc55_ch1Verses = [
     ["וְעַל","and-upon"],["כָּל","all"],["אֲשֶׁר","which"],["תָּשִׂים","You-shall-make"],["יָדֶיךָ","hands-your"],["אִם","if"],["הֵם","they"],["נִשְׁבְּרֵי","people broken of"],["לֵב","heart"],["לְפָנַי","before-me"],["יִהְיֶה","shall-be"],["לְךָ","unto-you"],["כֹּחַ","power"],["לָתֵת","to-give"],["רוּחַ","spirit"],["הַקֹּדֶשׁ׃","the-Holy"],["׃",""]
   ]},
   { num: "ד", words: [
-    ["וְעוֹד","and-again"],["תִּסָּמֵךְ","you-shall-be-ordained"],["לַעֲזֹר","for-help"],["לְעַבְדִּי","to-My-servant"],["אוֹלִיבֵר","Oliver"],["קַאוּדֶּרִי","Cowdery"],["בִּמְלֶאכֶת","with-fine-work-of"],["הַדְּפוּס","the-printing-press"],["וּבִבְחִירַת","and-in-choosing-of"],["וּכְתִיבַת","???"],["סְפָרִים","records"],["לְבָתֵּי","to-houses-of"],["סֵפֶר","the-book-of"],["בָּעֵדָה","into-the-church"],["הַזֹּאת","this"],["לְמַעַן","that"],["גַּם","also"],["יְלָדִים","little-children"],["קְטַנִּים","little"],["יְקַבְּלוּ","they-shall-be-received"],["הוֹרָאָה","instruction"],["לְפָנַי","before-me"],["כַּטּוֹב","as-seems-you-good"],["בְּעֵינָי׃","in-my-eyes"],["׃",""]
+    ["וְעוֹד","and-again"],["תִּסָּמֵךְ","you-shall-be-ordained"],["לַעֲזֹר","for-help"],["לְעַבְדִּי","to-My-servant"],["אוֹלִיבֵר","Oliver"],["קַאוּדֶּרִי","Cowdery"],["בִּמְלֶאכֶת","with-fine-work-of"],["הַדְּפוּס","the-printing-press"],["וּבִבְחִירַת","and-in-choosing-of"],["וּכְתִיבַת","???"],["סְפָרִים","records"],["לְבָתֵּי","to-houses-of"],["סֵפֶר","the-book-of"],["בָּעֵדָה","into-the-church"],["הַזֹּאת","this"],["לְמַעַן","that"],["גַּם","also"],["יְלָדִים","little-children"],["קְטַנִּים","little"],["יְקַבְּלוּ","they-shall-be-received"],["הוֹרָאָה","instruction"],["לְפָנַי","before-me"],["כַּטּוֹב","as-the-seems-you-good"],["בְּעֵינָי׃","in-my-eyes"],["׃",""]
   ]},
   { num: "ה", words: [
     ["וְעוֹד","and-again"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לְךָ","unto-you"],["לְמַעַן","that"],["זֹאת","this"],["תֵּצֵא","shall-go-forth"],["לְדַרְכְּךָ","thy-way"],["עִם","with"],["עֲבָדַי","are servants-my"],["יוֹסֵף","Joseph"],["סְמִית","Smith"],["הַבֵּן","the-Son"],["וְסִידְנִי","and-Sidney"],["רִיגְדּוֹן","Rigdon"],["לְמַעַן","that"],["תִּנָּטַע","you/she-will-to plant (a tree)"],["בְּאֶרֶץ","in-the-land-of"],["נַחֲלָתְךָ","your-inheritance"],["לַעֲשׂוֹת","to-do"],["הַמְּלָאכָה","the-task"],["הַזֹּאת׃","is-this"],["׃",""]
@@ -289,10 +289,10 @@ var dc56_ch1Verses = [
     ["וַאֲשֶׁר","and-who"],["לֹא","not"],["יִשָּׂא","takes-away"],["צְלָבוֹ","His-cross"],["וְיֵלֵךְ","and-go-forth"],["אַחֲרַי","after-me"],["וְיִשְׁמֹר","and-He-preserve"],["מִצְווֹתַי","from-a command-my"],["לֹא","not"],["יִוָּשֵׁעַ׃","saved"],["׃",""]
   ]},
   { num: "ג", words: [
-    ["הִנֵּה","behold"],["אֲנִי","I"],["יְהוָה","the-Lord"],["מְצַוֶּה","command"],["וַאֲשֶׁר","and-who"],["לֹא","not"],["יִשְׁמַע","hearkens-to"],["יִכָּרֵת","he-shall-be-cut-off"],["בְּעִתִּי","in-My-own-due-time"],["אַחֲרֵי","after"],["צִוִּיתִי","have-I-commanded"],["וְהֻפְרָה","and-Parah"],["הַמִּצְוָה׃","that-is-commanded"],["׃",""]
+    ["הִנֵּה","behold"],["אֲנִי","I"],["יְהוָה","the-Lord"],["מְצַוֶּה","command"],["וַאֲשֶׁר","and-who"],["לֹא","not"],["יִשְׁמַע","hearkens-to"],["יִכָּרֵת","he-shall-be-cut-off"],["בְּעִתִּי","in-My-own-due-time"],["אַחֲרֵי","after"],["צִוִּיתִי","have-I-commanded"],["וְהֻפְרָה","and-Parah"],["הַמִּצְוָה׃","that-the-is-commanded"],["׃",""]
   ]},
   { num: "ד", words: [
-    ["לָכֵן","therefore"],["אֲנִי","I"],["יְהוָה","the-Lord"],["מְצַוֶּה","command"],["וּמְבַטֵּל","and-annuls"],["כַּטּוֹב","as-seems-you-good"],["בְּעֵינָי","in-view-my"],["וְכָל","and-all"],["זֹאת","this"],["יֻשַּׁב","he will turn"],["עַל","upon"],["רָאשֵׁי","the-heads-of"],["הַמּוֹרְדִים","those-that-rebel"],["אָמַר","said"],["יְהוָה׃","the-Lord"],["׃",""]
+    ["לָכֵן","therefore"],["אֲנִי","I"],["יְהוָה","the-Lord"],["מְצַוֶּה","command"],["וּמְבַטֵּל","and-annuls"],["כַּטּוֹב","as-the-seems-you-good"],["בְּעֵינָי","in-view-my"],["וְכָל","and-all"],["זֹאת","this"],["יֻשַּׁב","he will turn"],["עַל","upon"],["רָאשֵׁי","the-heads-of"],["הַמּוֹרְדִים","the-those-that-rebel"],["אָמַר","said"],["יְהוָה׃","the-Lord"],["׃",""]
   ]},
   { num: "ה", words: [
     ["לָכֵן","therefore"],["אֲנִי","I"],["מְבַטֵּל","from-idle"],["הַמִּצְוָה","the-commandment"],["אֲשֶׁר","which"],["נִתְּנָה","was-given"],["לַעֲבָדַי","to-the-are servants-my"],["תּוֹמַס","Thomas"],["בּ","in"],["מַרְשׁ","from-a poor person"],["וְעֶזְרָא","and-Ezra"],["תֵיֶיר","Thayer"],["וְנֹתֵן","and-was-given"],["מִצְוָה","a-commandment"],["חֲדָשָׁה","new"],["לְעַבְדִּי","to-My-servant"],["תּוֹמַס","Thomas"],["לָצֵאת","to-come-forth"],["לְדַרְכּוֹ","to-his-own-way"],["בִּמְהֵרָה","soon"],["לְאֶרֶץ","to-the-land-of"],["מִיזוּרִי","Missouri"],["וְעַבְדִּי","and-servant-my"],["סֶלָה","Selah"],["ג׳","3rd"],["גְּרִיפִין","Griffin"],["יֵלֵךְ","he-must-go"],["גַּם","also"],["עִמּוֹ׃","with-him"],["׃",""]
@@ -356,7 +356,7 @@ var dc57_ch1Verses = [
     ["וְכֹה","and-thus"],["אָמַר","said"],["יְהוָה","the-Lord"],["אֱלֹהֵיכֶם","your-God"],["אִם","if"],["תְּקַבְּלוּ","receive"],["חָכְמָה","wisdom"],["הִנֵּה","behold"],["חָכְמָה","wisdom"],["הַמָּקוֹם","the-place"],["הַנִּקְרָא","the-called"],["עַתָּה","now"],["אִינְדִּיפֶּנְדֶּנְס","Independence"],["הוּא","he/it"],["הַמָּקוֹם","the-place"],["הַמֶּרְכָּזִי","the-central"],["וּמְקוֹם","and-the place of"],["לַמִּקְדָּשׁ","for the-sanctuary"],["יֵשׁ","there-is"],["מַעֲרָבָה","west"],["עַל","upon"],["חֶלְקָה","portion of land"],["לֹא","not"],["רְחוֹקָה","far-distant"],["מִבֵּית","of-house-of"],["הַמִּשְׁפָּט׃","the-judgment"],["׃",""]
   ]},
   { num: "ד", words: [
-    ["לָכֵן","therefore"],["חָכְמָה","wisdom"],["הִיא","it-is"],["שֶׁתִּקָּנֶה","that-you will buy"],["הָאָרֶץ","the-land"],["בְּיַד","by-hand-of"],["הַקְּדוֹשִׁים","holy"],["וְגַם","and-also"],["כָּל","all"],["חֶלְקָה","portion of land"],["מַעֲרָבָה","west"],["עַד","until"],["הַגְּבוּל","the-border-of"],["הַהֹלֵךְ","leading"],["יָשָׁר","straight"],["בֵּין","among"],["יְהוּדִי","Jew"],["לְגוֹי׃","to the-nation"],["׃",""]
+    ["לָכֵן","therefore"],["חָכְמָה","wisdom"],["הִיא","it-is"],["שֶׁתִּקָּנֶה","that-you will buy"],["הָאָרֶץ","the-land"],["בְּיַד","by-hand-of"],["הַקְּדוֹשִׁים","the-holy"],["וְגַם","and-also"],["כָּל","all"],["חֶלְקָה","portion of land"],["מַעֲרָבָה","west"],["עַד","until"],["הַגְּבוּל","the-border-of"],["הַהֹלֵךְ","leading"],["יָשָׁר","straight"],["בֵּין","among"],["יְהוּדִי","Jew"],["לְגוֹי׃","to the-nation"],["׃",""]
   ]},
   { num: "ה", words: [
     ["וְגַם","and-also"],["כָּל","all"],["חֶלְקָה","portion of land"],["הַגּוֹבֶלֶת","???"],["בַּעֲרָבוֹת","in-the-desert plains"],["כַּאֲשֶׁר","as"],["יוּכְלוּ","can-they"],["תַלְמִידַי","disciples-of"],["לִקְנוֹת","to-recover"],["אֲרָצוֹת","lands"],["הִנֵּה","behold"],["זֹאת","this"],["חָכְמָה","wisdom"],["לְמַעַן","that"],["יַשִּׂיגוּהָ","???"],["לְנַחֲלַת","for-the-inheritance-of"],["עוֹלָם׃","eternal"],["׃",""]
@@ -368,13 +368,13 @@ var dc57_ch1Verses = [
     ["וְעַבְדִּי","and-servant-my"],["אֶדְוָרְד","Edward"],["פַּרְטְרִיג׳","Partridge"],["יַעֲמֹד","shall-stand"],["בַּתַּפְקִיד","in-the-assignment"],["אֲשֶׁר","which"],["מִנִּיתִיו","I-have-appointed-him"],["וִיחַלֵּק","and-He-shall-divide"],["לַקְּדוֹשִׁים","for-the-saints"],["נַחֲלָתָם","their-inheritance"],["כַּאֲשֶׁר","as"],["צִוִּיתִי","have-I-commanded"],["וְגַם","and-also"],["לַאֲשֶׁר","unto-him-who"],["מִנָּה","he-appointed"],["לַעֲזֹר","for-help"],["לוֹ׃","to-him"],["׃",""]
   ]},
   { num: "ח", words: [
-    ["וְעוֹד","and-again"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["עַבְדִּי","thou-art-My-servant"],["סִידְנִי","Sidney"],["גִילְבֶּרְט","Gilbert"],["יִתְנַקֵּל","???"],["בַּמָּקוֹם","in-the-place"],["הַזֶּה","this"],["וְיָקֵם","and-may he carry out"],["חֲנוּת","has-encamped"],["לִמְכֹּר","to-from-cors of"],["סְחוֹרוֹת","merchandise"],["בְּלֹא","without"],["מִרְמָה","deceit"],["לְמַעַן","that"],["יַשִּׂיג","he-shall-overtake"],["כֶּסֶף","silver"],["לִקְנוֹת","to-recover"],["אֲרָצוֹת","lands"],["לְטוֹבַת","for-the-welfare-of"],["הַקְּדוֹשִׁים","holy"],["וּלְמַעַן","and-so-that"],["יַשִּׂיג","he-shall-overtake"],["כָּל","all"],["אֲשֶׁר","which"],["יִצְטָרְכוּ","they-shall-need"],["הַתַּלְמִידִים","the-disciples"],["לְנָטְעָם","to-plant-their"],["בְּנַחֲלָתָם׃","in-their-inheritance"],["׃",""]
+    ["וְעוֹד","and-again"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["עַבְדִּי","thou-art-My-servant"],["סִידְנִי","Sidney"],["גִילְבֶּרְט","Gilbert"],["יִתְנַקֵּל","???"],["בַּמָּקוֹם","in-the-place"],["הַזֶּה","this"],["וְיָקֵם","and-may he carry out"],["חֲנוּת","has-encamped"],["לִמְכֹּר","to-from-cors of"],["סְחוֹרוֹת","merchandise"],["בְּלֹא","without"],["מִרְמָה","deceit"],["לְמַעַן","that"],["יַשִּׂיג","he-shall-overtake"],["כֶּסֶף","silver"],["לִקְנוֹת","to-recover"],["אֲרָצוֹת","lands"],["לְטוֹבַת","for-the-welfare-of"],["הַקְּדוֹשִׁים","the-holy"],["וּלְמַעַן","and-so-that"],["יַשִּׂיג","he-shall-overtake"],["כָּל","all"],["אֲשֶׁר","which"],["יִצְטָרְכוּ","they-shall-need"],["הַתַּלְמִידִים","the-disciples"],["לְנָטְעָם","to-plant-their"],["בְּנַחֲלָתָם׃","in-their-inheritance"],["׃",""]
   ]},
   { num: "ט", words: [
     ["וְגַם","and-also"],["עַבְדִּי","thou-art-My-servant"],["סִידְנִי","Sidney"],["גִילְבֶּרְט","Gilbert"],["יַשִּׂיג","he-shall-overtake"],["רִשָּׁיוֹן","the permission of"],["הִנֵּה","behold"],["זֹאת","this"],["חָכְמָה","wisdom"],["וְהַקּוֹרֵא","and-the-calling"],["יָבֵן","he may understand"],["לְמַעַן","that"],["יִשְׁלַח","he-will-send"],["גַּם","also"],["סְחוֹרוֹת","merchandise"],["לָעָם","to-the-people"],["עַל","upon"],["יְדֵי","hands-of"],["אֲשֶׁר","which"],["יִבְחַר","he-chooses"],["כְּפָקִידִים","as-were overseers"],["הַמְשָׁרְתִים","[compound]"],["אוֹתוֹ׃","him"],["׃",""]
   ]},
   { num: "י", words: [
-    ["וְכֵן","and-thus"],["יְכַלְכֵּל","he maintains"],["קְדוֹשַׁי","the-saints-of"],["לְמַעַן","that"],["תִּקָּרֵא","shall-be-proclaimed"],["בְשׂוֹרָתִי","My-good-tidings"],["לַיֹּשְׁבִים","to-those who dwell"],["בַּחֹשֶׁךְ","in-darkness"],["וּבְאֶרֶץ","and-in-the-land-of"],["צַלְמָוֶת׃","deep darkness"],["׃",""]
+    ["וְכֵן","and-thus"],["יְכַלְכֵּל","he maintains"],["קְדוֹשַׁי","the-saints-of"],["לְמַעַן","that"],["תִּקָּרֵא","shall-be-proclaimed"],["בְשׂוֹרָתִי","My-good-tidings"],["לַיֹּשְׁבִים","to-the-those who dwell"],["בַּחֹשֶׁךְ","in-darkness"],["וּבְאֶרֶץ","and-in-the-land-of"],["צַלְמָוֶת׃","deep darkness"],["׃",""]
   ]},
   { num: "יא", words: [
     ["וְעוֹד","and-again"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["עַבְדִּי","thou-art-My-servant"],["וִילְיַם","William"],["וו","hook"],["פֶלְפְּס","Phelps"],["יִנָּטַע","he-will-to plant (a tree)"],["בַּמָּקוֹם","in-the-place"],["הַזֶּה","this"],["וְיוּקַם","and-shall-be-raised"],["לְמַדְפִּיס","to-printer (person)"],["לָעֵדָה׃","to-the-church"],["׃",""]
@@ -392,17 +392,17 @@ var dc57_ch1Verses = [
     ["וְעַתָּה","and-now"],["עַל","upon"],["הַקִּבּוּץ","the-throng"],["יָכִין","prepares"],["הָאֶפִּיסְקוֹפּוֹס","the-bishop"],["וְהַסּוֹכֵן","and-the-agent"],["לַמִּשְׁפָּחוֹת","to the-families"],["אֲשֶׁר","which"],["צֻוּוּ","were-commanded"],["לָבוֹא","to-come"],["לָאָרֶץ","to-the-land"],["הַזֹּאת","this"],["בְּהֶקְדֵּם","in-the-east"],["הָאֶפְשָׁרִי","the-that-you-could-have-my"],["וְיִטָּעֵם","and-will he taste"],["בְּנַחֲלָתָם׃","in-their-inheritance"],["׃",""]
   ]},
   { num: "טז", words: [
-    ["וְלִשְׁאָר","and-for-the-remnant-of"],["הַזְּקֵנִים","you-old-men"],["וְהַחֲבֵרִים","and-the-united"],["יִנָּתְנוּ","shall-be-delivered"],["הוֹרָאוֹת","instruction"],["נוֹסָפוֹת","additional(f.pl)"],["אַחֲרֵי","after"],["כֵן","thus"],["כֵּן","so/thus"],["יְהִי","let-this-be"],["אָמֵן׃","amen"],["׃",""]
+    ["וְלִשְׁאָר","and-for-the-remnant-of"],["הַזְּקֵנִים","the-you-old-men"],["וְהַחֲבֵרִים","and-the-united"],["יִנָּתְנוּ","shall-be-delivered"],["הוֹרָאוֹת","instruction"],["נוֹסָפוֹת","additional(f.pl)"],["אַחֲרֵי","after"],["כֵן","thus"],["כֵּן","so/thus"],["יְהִי","let-this-be"],["אָמֵן׃","amen"],["׃",""]
   ]},
 ];
 renderVerseSet(dc57_ch1Verses, 'dc57-ch1-verses');
 
 var dc58_ch1Verses = [
   { num: "א", words: [
-    ["הַאֲזִינוּ","give ear"],["זִקְנֵי","the-elders-of"],["עֲדָתִי","My-church"],["וְהַטּוּ","and-turn"],["אָזְנְכֶם","your-ears"],["לִדְבָרִי","to-My-word"],["וְלִמְדוּ","and-learn"],["מִמֶּנִּי","from-me"],["מַה־אֲנִי","what-I"],["רוֹצֶה","would-that"],["בָּכֶם","in-you"],["וְגַם","and-also"],["בָּאָרֶץ","in-the-land"],["הַזֹּאת","this"],["אֲשֶׁר","which"],["שְׁלַחְתִּיכֶם","stretch-forth-my-you(pl)"],["אֵלֶיהָ׃","to-her"],["׃",""]
+    ["הַאֲזִינוּ","give ear"],["זִקְנֵי","the-elders-of"],["עֲדָתִי","My-church"],["וְהַטּוּ","and-the-turn"],["אָזְנְכֶם","your-ears"],["לִדְבָרִי","to-My-word"],["וְלִמְדוּ","and-learn"],["מִמֶּנִּי","from-me"],["מַה־אֲנִי","what-I"],["רוֹצֶה","would-that"],["בָּכֶם","in-you"],["וְגַם","and-also"],["בָּאָרֶץ","in-the-land"],["הַזֹּאת","this"],["אֲשֶׁר","which"],["שְׁלַחְתִּיכֶם","stretch-forth-my-you(pl)"],["אֵלֶיהָ׃","to-her"],["׃",""]
   ]},
   { num: "ב", words: [
-    ["כִּי","that"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["אַשְׁרֵי","blessed-are"],["הַשֹּׁמֵר","who-keeps"],["מִצְווֹתַי","from-a command-my"],["בֵּין","among"],["בַּחַיִּים","in-the-life"],["בֵּין","among"],["בַּמָּוֶת","with-death"],["וְהַנֶּאֱמָן","and-the-faithful"],["בַּצָּרָה","trouble"],["שְׂכָרוֹ","his-reward"],["גָדוֹל","great"],["יוֹתֵר","more"],["בְּמַלְכוּת","in-the-kingdom-of"],["הַשָּׁמָיִם׃","the-heavens"],["׃",""]
+    ["כִּי","that"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["אַשְׁרֵי","blessed-are"],["הַשֹּׁמֵר","the-who-keeps"],["מִצְווֹתַי","from-a command-my"],["בֵּין","among"],["בַּחַיִּים","in-the-life"],["בֵּין","among"],["בַּמָּוֶת","with-the-death"],["וְהַנֶּאֱמָן","and-the-faithful"],["בַּצָּרָה","the-trouble"],["שְׂכָרוֹ","his-reward"],["גָדוֹל","great"],["יוֹתֵר","more"],["בְּמַלְכוּת","in-the-kingdom-of"],["הַשָּׁמָיִם׃","the-heavens"],["׃",""]
   ]},
   { num: "ג", words: [
     ["לֹא","not"],["תוּכְלוּ","you-may"],["לִרְאוֹת","to-see"],["בְּעֵינֵיכֶם","in-view-your"],["הַטִּבְעִיּוֹת","the-natural(pl)"],["לָעֵת","against-the-time"],["הַזֹּאת","this"],["מַחְשֶׁבֶת","thought"],["אֱלֹהֵיכֶם","your-God"],["עַל","upon"],["הַדְּבָרִים","the-things"],["אֲשֶׁר","which"],["יָבֹאוּ","shall-come"],["אַחֲרֵי","after"],["כֵן","thus"],["וְהַכָּבוֹד","and-the-honor"],["אֲשֶׁר","which"],["יָבוֹא","shall-come"],["אַחֲרֵי","after"],["צָרָה","affliction"],["רַבָּה׃","much"],["׃",""]
@@ -414,7 +414,7 @@ var dc58_ch1Verses = [
     ["זִכְרוּ","remember"],["זֹאת","this"],["אֲשֶׁר","which"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["מִלְּפָנִים","from-before"],["לְמַעַן","that"],["תָּשִׂימוּהָ","???"],["עַל","upon"],["לְבַבְכֶם","your-hearts"],["וּתְקַבְּלוּ","and-receive"],["אֶת","[ACC]"],["הַבָּא׃","has-come?"],["׃",""]
   ]},
   { num: "ו", words: [
-    ["הִנֵּה","behold"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["לָזֹאת","to-this"],["שְׁלַחְתִּיכֶם","stretch-forth-my-you(pl)"],["לְמַעַן","that"],["תִּהְיוּ","you-may-stand"],["שׁוֹמְעִים","who listens(pl)"],["וּלְבַבְכֶם","and-your-hearts"],["נָכוֹן","expedient"],["לָשֵׂאת","to-bear"],["עֵדוּת","testimony"],["עַל","upon"],["הַדְּבָרִים","the-things"],["הַבָּאִים׃","to-come"],["׃",""]
+    ["הִנֵּה","behold"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["לָזֹאת","to-this"],["שְׁלַחְתִּיכֶם","stretch-forth-my-you(pl)"],["לְמַעַן","that"],["תִּהְיוּ","you-may-stand"],["שׁוֹמְעִים","who listens(pl)"],["וּלְבַבְכֶם","and-your-hearts"],["נָכוֹן","expedient"],["לָשֵׂאת","to-bear"],["עֵדוּת","testimony"],["עַל","upon"],["הַדְּבָרִים","the-things"],["הַבָּאִים׃","to-the-come"],["׃",""]
   ]},
   { num: "ז", words: [
     ["וְגַם","and-also"],["לְמַעַן","that"],["תְּכֻבְּדוּ","respect"],["בִּיסֹד","in-found"],["הַיְסוֹד","the-foundation"],["וּבָעֵדוּת","and-the-churches-of"],["עַל","upon"],["הָאָרֶץ","the-land"],["אֲשֶׁר","which"],["עָלֶיהָ","upon-it"],["תַּעֲמֹד","shall-stand"],["צִיּוֹן","Zion"],["אֱלֹהִים׃","God"],["׃",""]
@@ -429,7 +429,7 @@ var dc58_ch1Verses = [
     ["רִאשׁוֹנָה","first"],["הָעֲשִׁירִים","the-rich"],["וְהַלְּמוּדִים","and-the-learned"],["הַחֲכָמִים","the-wise"],["וְהָאַדִּירִים׃","and-the-nobles"],["׃",""]
   ]},
   { num: "יא", words: [
-    ["וְאַחֲרֵי","and-after"],["כֵן","thus"],["יָבוֹא","shall-come"],["יוֹם","day"],["גְּבוּרָתִי","might-my"],["וְאָז","and-then"],["יָבֹאוּ","shall-come"],["הָעֲנִיִּים","the-poor"],["וְהַפִּסְחִים","and-the-lame people"],["וְהַעִוְרִים","and-O-blind people"],["וְהַחֵרְשִׁים","and-the-deaf"],["לְחֲתֻנַּת","???"],["הַשֶּׂה","the-Lamb"],["וְיֹאכְלוּ","and-partake"],["בִּסְעוּדַת","at-the-feast-of"],["יְהוָה","the-Lord"],["הַמּוּכָנָה","prepared"],["לַיּוֹם","that-day"],["הַגָּדוֹל","the-great/high"],["הַבָּא׃","has-come?"],["׃",""]
+    ["וְאַחֲרֵי","and-after"],["כֵן","thus"],["יָבוֹא","shall-come"],["יוֹם","day"],["גְּבוּרָתִי","might-my"],["וְאָז","and-then"],["יָבֹאוּ","shall-come"],["הָעֲנִיִּים","the-poor"],["וְהַפִּסְחִים","and-the-lame people"],["וְהַעִוְרִים","and-O-blind people"],["וְהַחֵרְשִׁים","and-the-deaf"],["לְחֲתֻנַּת","???"],["הַשֶּׂה","the-Lamb"],["וְיֹאכְלוּ","and-partake"],["בִּסְעוּדַת","at-the-feast-of"],["יְהוָה","the-Lord"],["הַמּוּכָנָה","the-prepared"],["לַיּוֹם","that-the-day"],["הַגָּדוֹל","the-great/high"],["הַבָּא׃","has-come?"],["׃",""]
   ]},
   { num: "יב", words: [
     ["הִנֵּה","behold"],["אֲנִי","I"],["יְהוָה","the-Lord"],["דִּבַּרְתִּי׃","I have spoken"],["׃",""]
@@ -459,7 +459,7 @@ var dc58_ch1Verses = [
     ["אַל","do-not"],["יַחְשֹׁב","he-thinks"],["אִישׁ","man/each"],["כִּי","that"],["הוּא","he/it"],["מוֹשֵׁל","ruler"],["אֶלָּא","but-rather"],["יִמְשֹׁל","he-shall-reign"],["אֱלֹהִים","God"],["בַּשּׁוֹפֵט","in-the-judge"],["לְפִי","according-to"],["עֲצַת","the-plan-of"],["רְצוֹנוֹ","His-will"],["שֶׁלּוֹ","Shiloh"],["אוֹ","or"],["בְּמִלִּים","in-words"],["אֲחֵרוֹת","other"],["בַּיּוֹעֵץ","in-the-he consulted"],["אוֹ","or"],["בַּיּוֹשֵׁב","in-the-he caused to dwell"],["עַל","upon"],["כִּסֵּא","throne"],["הַמִּשְׁפָּט׃","the-judgment"],["׃",""]
   ]},
   { num: "כא", words: [
-    ["אַל","do-not"],["יָפֵר","shall-annul-it"],["אִישׁ","man/each"],["חֻקֵּי","the-laws-of"],["הָאָרֶץ","the-land"],["כִּי","that"],["הַשֹּׁמֵר","who-keeps"],["חֻקֵּי","the-laws-of"],["אֱלֹהִים","God"],["אֵין","there-is-no"],["צֹרֶךְ","need"],["לוֹ","to-him"],["לְהָפֵר","to-break"],["חֻקֵּי","the-laws-of"],["הָאָרֶץ׃","the-land"],["׃",""]
+    ["אַל","do-not"],["יָפֵר","shall-annul-it"],["אִישׁ","man/each"],["חֻקֵּי","the-laws-of"],["הָאָרֶץ","the-land"],["כִּי","that"],["הַשֹּׁמֵר","the-who-keeps"],["חֻקֵּי","the-laws-of"],["אֱלֹהִים","God"],["אֵין","there-is-no"],["צֹרֶךְ","need"],["לוֹ","to-him"],["לְהָפֵר","to-break"],["חֻקֵּי","the-laws-of"],["הָאָרֶץ׃","the-land"],["׃",""]
   ]},
   { num: "כב", words: [
     ["לָכֵן","therefore"],["הִכָּנְעוּ","they-were-humbled"],["לַשִּׁלְטוֹנוֹת","???"],["עַד","until"],["יִמְלֹךְ","shall-reign"],["אֲשֶׁר","which"],["לוֹ","to-him"],["הַמְּלוּכָה","the-capital"],["לִמְלֹךְ","to-reign"],["וְיַכְנִיעַ","and-he-shall-humble"],["כָּל","all"],["אֹיְבָיו","enemies-its"],["תַּחַת","under"],["רַגְלָיו׃","feet-its"],["׃",""]
@@ -510,7 +510,7 @@ var dc58_ch1Verses = [
     ["וְגַם","and-also"],["חָכְמָה","wisdom"],["הִיא","it-is"],["שֶׁתִּקָּנֶינָה","that-they-be-acquired(f)"],["אֲרָצוֹת","lands"],["בְּאִינְדִּיפֶּנְדֶּנְס","in-Independence"],["לִמְקוֹם","for-place-of"],["הָאוֹצָר","the-treasury"],["וְגַם","and-also"],["לְבֵית","to-house-of"],["הַדְּפוּס׃","???"],["׃",""]
   ]},
   { num: "לח", words: [
-    ["וְהוֹרָאוֹת","and-instruction"],["אֲחֵרוֹת","other"],["עַל","upon"],["עַבְדִּי","thou-art-My-servant"],["מַרְטִין","Martin"],["הָרִיס","the-a-stade"],["תִּנָּתֶנָּה","you/she-will-she gave"],["לוֹ","to-him"],["מִן","from"],["הָרוּחַ","the-spirit"],["לְמַעַן","that"],["יְקַבֵּל","he-receives"],["נַחֲלָתוֹ","inheritance-of-his"],["כַּטּוֹב","as-seems-you-good"],["בְּעֵינָיו׃","in-view-his"],["׃",""]
+    ["וְהוֹרָאוֹת","and-instruction"],["אֲחֵרוֹת","other"],["עַל","upon"],["עַבְדִּי","thou-art-My-servant"],["מַרְטִין","Martin"],["הָרִיס","the-a-stade"],["תִּנָּתֶנָּה","you/she-will-she gave"],["לוֹ","to-him"],["מִן","from"],["הָרוּחַ","the-spirit"],["לְמַעַן","that"],["יְקַבֵּל","he-receives"],["נַחֲלָתוֹ","inheritance-of-his"],["כַּטּוֹב","as-the-seems-you-good"],["בְּעֵינָיו׃","in-view-his"],["׃",""]
   ]},
   { num: "לט", words: [
     ["וְיָשׁוּב","and-repent"],["מֵחֲטָאָיו","from-his-sins"],["כִּי","that"],["מְבַקֵּשׁ","desire"],["הוּא","he/it"],["תְּהִלַּת","praise-of"],["הָעוֹלָם׃","the-world"],["׃",""]
@@ -549,7 +549,7 @@ var dc58_ch1Verses = [
     ["וַאֲנִי","and-I"],["נוֹתֵן","grants"],["לְעַבְדִּי","to-My-servant"],["סִידְנִי","Sidney"],["רִיגְדוֹן","Rigdon"],["מִצְוָה","a-commandment"],["לִכְתֹּב","to-write"],["תֵּאוּר","description"],["אֶרֶץ","the-land-of"],["צִיּוֹן","Zion"],["וּדְבַר","and-spoke"],["רְצוֹן","the-will-of"],["אֱלֹהִים","God"],["כַּאֲשֶׁר","as"],["יִגָּלֶה","He-manifest-Himself"],["לוֹ","to-him"],["מִן","from"],["הָרוּחַ׃","the-spirit"],["׃",""]
   ]},
   { num: "נא", words: [
-    ["וְאִגֶּרֶת","and-a letter"],["וּמִגְבָּה","and-from-a high place"],["לְהַגִּישׁ","to-the-mass of earth"],["לְכָל","to-all"],["הָעֵדוֹת","the-churches"],["לְהַשִּׂיג","obtain"],["כְּסָפִים","as-thresholds"],["לָתֵת","to-give"],["בְּיַד","by-hand-of"],["הָאֶפִּיסְקוֹפּוֹס","the-bishop"],["לְעַצְמוֹ","to-himself"],["אוֹ","or"],["לַסּוֹכֵן","to-the-agent"],["כַּטּוֹב","as-seems-you-good"],["בְּעֵינָיו","in-his-eyes"],["אוֹ","or"],["כַאֲשֶׁר","as/when"],["יוֹרֶה","teaches"],["לִקְנוֹת","to-recover"],["אֲרָצוֹת","lands"],["לְנַחֲלָה","for-inheritance"],["לִבְנֵי","unto-the-children-of"],["אֱלֹהִים׃","God"],["׃",""]
+    ["וְאִגֶּרֶת","and-a letter"],["וּמִגְבָּה","and-from-a high place"],["לְהַגִּישׁ","to-the-mass of earth"],["לְכָל","to-all"],["הָעֵדוֹת","the-churches"],["לְהַשִּׂיג","obtain"],["כְּסָפִים","as-thresholds"],["לָתֵת","to-give"],["בְּיַד","by-hand-of"],["הָאֶפִּיסְקוֹפּוֹס","the-bishop"],["לְעַצְמוֹ","to-himself"],["אוֹ","or"],["לַסּוֹכֵן","to-the-agent"],["כַּטּוֹב","as-the-seems-you-good"],["בְּעֵינָיו","in-his-eyes"],["אוֹ","or"],["כַאֲשֶׁר","as/when"],["יוֹרֶה","teaches"],["לִקְנוֹת","to-recover"],["אֲרָצוֹת","lands"],["לְנַחֲלָה","for-inheritance"],["לִבְנֵי","unto-the-children-of"],["אֱלֹהִים׃","God"],["׃",""]
   ]},
   { num: "נב", words: [
     ["כִּי","that"],["הִנֵּה","behold"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["יְהוָה","the-Lord"],["רוֹצֶה","would-that"],["שֶׁיִּפְתְּחוּ","that-they opened"],["הַתַּלְמִידִים","the-disciples"],["וּבְנֵי","and-sons-of"],["הָאָדָם","the-man/Adam"],["לְבָבָם","their-hearts"],["לִקְנוֹת","to-recover"],["כָּל","all"],["חֶבֶל","the region of"],["הָאָרֶץ","the-land"],["הַזֶּה","this"],["בְּהֶקְדֵּם","in-the-east"],["הָאֶפְשָׁרִי׃","???"],["׃",""]
@@ -579,7 +579,7 @@ var dc58_ch1Verses = [
     ["אֲשֶׁר","which"],["נִתַּן","is-given"],["לְצִיבָא","to-was Ziba"],["פִיטֶרְסוֹן","???"],["יֻקַּח","let it be brought"],["מִמֶּנּוּ","from-him"],["וְיַעֲמֹד","and-shall-stand"],["כְּחָבֵר","as-am a companion"],["בָּעֵדָה","into-the-church"],["וְיַעֲבֹד","and-he-shall-serve"],["בְּיָדָיו","in-His-hands"],["עִם","with"],["הָאַחִים","the-brethren"],["עַד","until"],["שֶׁיְּיֻסַּר","that-he-shall-discipline"],["דַּיּוֹ","ink"],["בְּעַד","on-behalf-of"],["כָּל","all"],["חֲטָאָיו","their-sins"],["כִּי","that"],["אֵינֶנּוּ","we-are-not"],["מִתְוַדֶּה","confess"],["עֲלֵיהֶם","upon-them"],["וְחוֹשֵׁב","and-thinking"],["לְהַסְתִּירָם׃","???"],["׃",""]
   ]},
   { num: "סא", words: [
-    ["שְׁאָר","the-remnant-of"],["זִקְנֵי","the-elders-of"],["הָעֵדָה","the-church"],["הַזֹּאת","this"],["הַבָּאִים","to-come"],["לָאָרֶץ","to-the-land"],["הַזֹּאת","this"],["אֲשֶׁר","which"],["מֵהֶם","from-them"],["מְבֹרָכִים","are-blessed"],["עַד","until"],["מְאֹד","exceedingly"],["יַעֲשׂוּ","shall-yield"],["גַם","also"],["אֲסֵפָה","a gathering"],["בָּאָרֶץ","in-the-land"],["הַזֹּאת׃","is-this"],["׃",""]
+    ["שְׁאָר","the-remnant-of"],["זִקְנֵי","the-elders-of"],["הָעֵדָה","the-church"],["הַזֹּאת","this"],["הַבָּאִים","to-the-come"],["לָאָרֶץ","to-the-land"],["הַזֹּאת","this"],["אֲשֶׁר","which"],["מֵהֶם","from-them"],["מְבֹרָכִים","are-blessed"],["עַד","until"],["מְאֹד","exceedingly"],["יַעֲשׂוּ","shall-yield"],["גַם","also"],["אֲסֵפָה","a gathering"],["בָּאָרֶץ","in-the-land"],["הַזֹּאת׃","is-this"],["׃",""]
   ]},
   { num: "סב", words: [
     ["וְעַבְדִּי","and-servant-my"],["אֶדְוָרְד","Edward"],["פַּרְטְרִיג׳","Partridge"],["יְנַהֵל","he will lead"],["הָאֲסֵפָה","the-a gathering"],["אֲשֶׁר","which"],["יַעֲשׂוּ׃","they have made"],["׃",""]
@@ -598,10 +598,10 @@ renderVerseSet(dc58_ch1Verses, 'dc58-ch1-verses');
 
 var dc59_ch1Verses = [
   { num: "א", words: [
-    ["הִנֵּה","behold"],["אַשְׁרֵיהֶם","which-their"],["אָמַר","said"],["יְהוָה","the-Lord"],["הָעֹלִים","which-were going up"],["לָאָרֶץ","to-the-land"],["הַזֹּאת","this"],["בְּעַיִן","with-one-eye"],["תְּמִימָה","perfect(f)"],["לִכְבוֹדִי","to-will honor-my"],["לְפִי","according-to"],["מִצְווֹתָי׃","my-commandments"],["׃",""]
+    ["הִנֵּה","behold"],["אַשְׁרֵיהֶם","which-their"],["אָמַר","said"],["יְהוָה","the-Lord"],["הָעֹלִים","the-which-were going up"],["לָאָרֶץ","to-the-land"],["הַזֹּאת","this"],["בְּעַיִן","with-one-eye"],["תְּמִימָה","perfect(f)"],["לִכְבוֹדִי","to-will honor-my"],["לְפִי","according-to"],["מִצְווֹתָי׃","my-commandments"],["׃",""]
   ]},
   { num: "ב", words: [
-    ["כִּי","that"],["הַחַיִּים","life"],["יִירְשׁוּ","they-possess"],["הָאָרֶץ","the-land"],["וְהַמֵּתִים","and-the-dead"],["יָנוּחוּ","they-might-rest"],["מִכָּל","above-all"],["עֲמָלָם","their-toil"],["וּמַעֲשֵׂיהֶם","and-their-works"],["יֵלְכוּ","they-should-travel"],["אַחֲרֵיהֶם","after-them"],["וִיקַבְּלוּ","and-they received it"],["עֲטָרָה","was Atarah"],["בִּמְעוֹנוֹת","in-dens"],["אָבִי","my-father"],["אֲשֶׁר","which"],["הֲכִינוֹתִי","I-prepared"],["לָהֶם׃","unto-them"],["׃",""]
+    ["כִּי","that"],["הַחַיִּים","the-life"],["יִירְשׁוּ","they-possess"],["הָאָרֶץ","the-land"],["וְהַמֵּתִים","and-the-dead"],["יָנוּחוּ","they-might-rest"],["מִכָּל","above-all"],["עֲמָלָם","their-toil"],["וּמַעֲשֵׂיהֶם","and-their-works"],["יֵלְכוּ","they-should-travel"],["אַחֲרֵיהֶם","after-them"],["וִיקַבְּלוּ","and-they received it"],["עֲטָרָה","was Atarah"],["בִּמְעוֹנוֹת","in-dens"],["אָבִי","my-father"],["אֲשֶׁר","which"],["הֲכִינוֹתִי","I-prepared"],["לָהֶם׃","unto-them"],["׃",""]
   ]},
   { num: "ג", words: [
     ["אָכֵן","yea"],["אַשְׁרֵיהֶם","which-their"],["אֲשֶׁר","which"],["רַגְלֵיהֶם","were-their-feet"],["עֹמְדוֹת","standing"],["עַל","upon"],["אֶרֶץ","the-land-of"],["צִיּוֹן","Zion"],["אֲשֶׁר","which"],["שָׁמְעוּ","they-heard"],["לִבְשׂוֹרָתִי","to-My-good-tidings"],["כִּי","that"],["יְקַבְּלוּ","they-shall-be-received"],["לִשְׂכָרָם","to-their-reward"],["טוּב","good thing of"],["הָאָרֶץ","the-land"],["וְתוֹצִיא","and-you will bring out"],["בְּכֹחָהּ׃","in-her-power"],["׃",""]
@@ -634,7 +634,7 @@ var dc59_ch1Verses = [
     ["אַךְ","but/surely"],["זְכֹר","remember"],["כִּי","that"],["בְּיוֹם","in-day"],["הַזֶּה","this"],["יוֹם","day"],["יְהוָה","the-Lord"],["תַּקְרִיב","you will bring near"],["מִנְחוֹתֶיךָ","Menuchites-your"],["וְקָרְבְּנוֹתֶיךָ","???"],["לָעֶלְיוֹן","to-the-Most-High"],["וּתְוַדֶּה","and-thanksgiving"],["חֲטָאֶיךָ","sin-your"],["לְאַחֶיךָ","to-brothers-your"],["וְלִפְנֵי","and-before"],["יְהוָה׃","the-Lord"],["׃",""]
   ]},
   { num: "יג", words: [
-    ["וּבַיּוֹם","and-in-that-day"],["הַזֶּה","this"],["לֹא","not"],["תַעֲשֶׂה","make"],["דָּבָר","things"],["אַחֵר","other"],["רַק","only"],["יוּכַן","prepared-be"],["אָכְלְךָ","food-your"],["בְּתֹם","in-the-integrity-of"],["לֵבָב","heart"],["לְמַעַן","that"],["יִהְיֶה","shall-be"],["צוֹמְךָ","???"],["שָׁלֵם","whole"],["אוֹ","or"],["בְּמִלִּים","in-words"],["אֲחֵרוֹת","other"],["לְמַעַן","that"],["תִּמָּלֵא","shall-be-filled"],["שִׂמְחָתְךָ׃","joy-of-your"],["׃",""]
+    ["וּבַיּוֹם","and-in-that-the-day"],["הַזֶּה","this"],["לֹא","not"],["תַעֲשֶׂה","make"],["דָּבָר","things"],["אַחֵר","other"],["רַק","only"],["יוּכַן","prepared-be"],["אָכְלְךָ","food-your"],["בְּתֹם","in-the-integrity-of"],["לֵבָב","heart"],["לְמַעַן","that"],["יִהְיֶה","shall-be"],["צוֹמְךָ","???"],["שָׁלֵם","whole"],["אוֹ","or"],["בְּמִלִּים","in-words"],["אֲחֵרוֹת","other"],["לְמַעַן","that"],["תִּמָּלֵא","shall-be-filled"],["שִׂמְחָתְךָ׃","joy-of-your"],["׃",""]
   ]},
   { num: "יד", words: [
     ["אָמֵן","amen"],["זֶה","this"],["צוֹם","fasting"],["וּתְפִלָּה","and-prayer"],["אוֹ","or"],["בְּמִלִּים","in-words"],["אֲחֵרוֹת","other"],["שִׂמְחָה","joy"],["וּתְפִלָּה׃","and-prayer"],["׃",""]
@@ -646,10 +646,10 @@ var dc59_ch1Verses = [
     ["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["כְּפִי","according-to"],["שֶׁתַּעֲשׂוּ","that-you-do"],["זֹאת","this"],["מְלֹא","fullness-of"],["הָאָרֶץ","the-land"],["לָכֶם","to-you"],["חַיַּת","beasts-of"],["הַשָּׂדֶה","the-field"],["וְעוֹף","and-bird/fowl"],["הַשָּׁמַיִם","the-heavens"],["וְהַמְּטַפֵּס","and-the-climber (plant)"],["עַל","upon"],["הָעֵצִים","the-trees"],["וְהַהֹלֵךְ","and-leading"],["עַל","upon"],["הָאָרֶץ׃","the-land"],["׃",""]
   ]},
   { num: "יז", words: [
-    ["אָכֵן","yea"],["וְהָעֵשֶׂב","and-the-plants"],["וְהַדְּבָרִים","and-the-things"],["הַטּוֹבִים","the-fertile"],["הַיֹּצְאִים","who-came out"],["מִן","from"],["הָאָרֶץ","the-land"],["בֵּין","among"],["לְאֹכֶל","to-food"],["בֵּין","among"],["לְמַלְבּוּשׁ","to-clothing"],["בֵּין","among"],["לְבָתִּים","holders"],["בֵּין","among"],["לְאֲסָמִים","to-the-granaries"],["בֵּין","among"],["לְפַרְדֵּסִים","to-parks"],["בֵּין","among"],["לְגַנּוֹת","to-gardens"],["בֵּין","among"],["לִכְרָמִים׃","to the-vineyards"],["׃",""]
+    ["אָכֵן","yea"],["וְהָעֵשֶׂב","and-the-plants"],["וְהַדְּבָרִים","and-the-things"],["הַטּוֹבִים","the-fertile"],["הַיֹּצְאִים","the-who-came out"],["מִן","from"],["הָאָרֶץ","the-land"],["בֵּין","among"],["לְאֹכֶל","to-food"],["בֵּין","among"],["לְמַלְבּוּשׁ","to-clothing"],["בֵּין","among"],["לְבָתִּים","holders"],["בֵּין","among"],["לְאֲסָמִים","to-the-granaries"],["בֵּין","among"],["לְפַרְדֵּסִים","to-parks"],["בֵּין","among"],["לְגַנּוֹת","to-gardens"],["בֵּין","among"],["לִכְרָמִים׃","to the-vineyards"],["׃",""]
   ]},
   { num: "יח", words: [
-    ["אָכֵן","yea"],["כָּל","all"],["הַיֹּצֵא","which-goes out"],["מִן","from"],["הָאָרֶץ","the-land"],["בְּעִתּוֹ","in-its-time"],["נַעֲשָׂה","was-done"],["לְתוֹעֶלֶת","a-great-benefit-to"],["הָאָדָם","the-man/Adam"],["וּלְשִׁמּוּשׁוֹ","and-to-use-his"],["לִרְצוֹת","to-show favor"],["הָעַיִן","the-spring"],["וּלְשַׂמֵּחַ","and-to-make-themselves-merry"],["הַלֵּב׃","the-heart"],["׃",""]
+    ["אָכֵן","yea"],["כָּל","all"],["הַיֹּצֵא","the-which-goes out"],["מִן","from"],["הָאָרֶץ","the-land"],["בְּעִתּוֹ","in-its-time"],["נַעֲשָׂה","was-done"],["לְתוֹעֶלֶת","a-great-benefit-to"],["הָאָדָם","the-man/Adam"],["וּלְשִׁמּוּשׁוֹ","and-to-use-his"],["לִרְצוֹת","to-show favor"],["הָעַיִן","the-spring"],["וּלְשַׂמֵּחַ","and-to-make-themselves-merry"],["הַלֵּב׃","the-heart"],["׃",""]
   ]},
   { num: "יט", words: [
     ["אָכֵן","yea"],["לְאֹכֶל","to-food"],["וּלְמַלְבּוּשׁ","and-for-raiment"],["לְטַעַם","to-taste/sense"],["וּלְרֵיחַ","and-to-an odor of"],["לְחַזֵּק","to-strengthen"],["הַגּוּף","the-body"],["וּלְהַחֲיוֹת","and-to-preserve alive"],["הַנָּפֶשׁ׃","the-soul"],["׃",""]
@@ -664,7 +664,7 @@ var dc59_ch1Verses = [
     ["הִנֵּה","behold"],["זֶה","this"],["לְפִי","according-to"],["הַתּוֹרָה","the-law"],["וְהַנְּבִיאִים","and-the-prophets"],["לָכֵן","therefore"],["אַל","do-not"],["תַּטְרִיחוּנִי","???"],["עוֹד","more"],["עַל","upon"],["הַדָּבָר","the-thing"],["הַזֶּה׃","this"],["׃",""]
   ]},
   { num: "כג", words: [
-    ["אַךְ","but/surely"],["לִמְדוּ","learn"],["כִּי","that"],["הָעֹשֶׂה","does"],["מַעֲשֵׂי","works-of"],["צֶדֶק","righteousness"],["יְקַבֵּל","he-receives"],["שְׂכָרוֹ","his-reward"],["שָׁלוֹם","peace"],["בָּעוֹלָם","in-the-world"],["הַזֶּה","this"],["וְחַיֵּי","and-life"],["עוֹלָם","eternal"],["בָּעוֹלָם","in-the-world"],["הַבָּא׃","has-come?"],["׃",""]
+    ["אַךְ","but/surely"],["לִמְדוּ","learn"],["כִּי","that"],["הָעֹשֶׂה","the-does"],["מַעֲשֵׂי","works-of"],["צֶדֶק","righteousness"],["יְקַבֵּל","he-receives"],["שְׂכָרוֹ","his-reward"],["שָׁלוֹם","peace"],["בָּעוֹלָם","in-the-world"],["הַזֶּה","this"],["וְחַיֵּי","and-life"],["עוֹלָם","eternal"],["בָּעוֹלָם","in-the-world"],["הַבָּא׃","has-come?"],["׃",""]
   ]},
   { num: "כד", words: [
     ["אֲנִי","I"],["יְהוָה","the-Lord"],["דִּבַּרְתִּי","I-spoke"],["וְהָרוּחַ","and-the-spirit"],["מֵעִידָה","testifying(f)"],["אָמֵן׃","amen"],["׃",""]
@@ -683,10 +683,10 @@ var dc60_ch1Verses = [
     ["וְהָיָה","and-it-shall-come-to-pass"],["אִם","if"],["לֹא","not"],["יִהְיוּ","shall-be"],["נֶאֱמָנִים","faithful"],["יוֹתֵר","more"],["אֵלַי","to-me"],["יֻקַּח","let it be brought"],["מֵהֶם","from-them"],["גַּם","also"],["אֲשֶׁר","which"],["יֵשׁ","there-is"],["לָהֶם׃","unto-them"],["׃",""]
   ]},
   { num: "ד", words: [
-    ["כִּי","that"],["אֲנִי","I"],["יְהוָה","the-Lord"],["מוֹשֵׁל","ruler"],["בַּשָּׁמַיִם","in-heaven"],["מִמַּעַל","above"],["וּבְצִבְאוֹת","and-in-of-Hosts"],["הָאָרֶץ","the-land"],["וּבַיּוֹם","and-in-that-day"],["אֲשֶׁר","which"],["אֶאֱסֹף","I will gather"],["סְגֻלָּתִי","treasure of-my"],["יֵדְעוּ","they-know"],["כָל","all"],["אָדָם","man"],["מַה","what"],["הוּא","he/it"],["הַמּוֹרֶה","the-teacher(f)"],["עַל","upon"],["גְּבוּרַת","might-of"],["אֱלֹהִים׃","God"],["׃",""]
+    ["כִּי","that"],["אֲנִי","I"],["יְהוָה","the-Lord"],["מוֹשֵׁל","ruler"],["בַּשָּׁמַיִם","in-the-heaven"],["מִמַּעַל","above"],["וּבְצִבְאוֹת","and-in-of-Hosts"],["הָאָרֶץ","the-land"],["וּבַיּוֹם","and-in-that-the-day"],["אֲשֶׁר","which"],["אֶאֱסֹף","I will gather"],["סְגֻלָּתִי","treasure of-my"],["יֵדְעוּ","they-know"],["כָל","all"],["אָדָם","man"],["מַה","what"],["הוּא","he/it"],["הַמּוֹרֶה","the-teacher(f)"],["עַל","upon"],["גְּבוּרַת","might-of"],["אֱלֹהִים׃","God"],["׃",""]
   ]},
   { num: "ה", words: [
-    ["אַךְ","but/surely"],["אָמֵן","amen"],["אֲדַבֵּר","I-speak"],["אֲלֵיכֶם","unto-you"],["עַל","upon"],["מַסַּעֲכֶם","quarry-you(pl)"],["לָאָרֶץ","to-the-land"],["אֲשֶׁר","which"],["בָּאתֶם","you-have-entered-into"],["מִשָּׁם","from-there"],["תֵּעָשֶׂה","you-shall-make"],["סְפִינָה","vessel"],["אוֹ","or"],["תִקָּנֶה","you will buy"],["כַּטּוֹב","as-seems-you-good"],["בְּעֵינֵיכֶם","in-view-your"],["לֹא","not"],["אִכְפַּת","matter/care"],["לִי","to-me"],["וּסְעוּ","and-set out"],["בִּמְהֵרָה","soon"],["לְדַרְכְּכֶם","to-your-ways"],["לַמָּקוֹם","the-place"],["הַנִּקְרָא","the-called"],["סֵיינְט","???"],["לוּאִיס׃","???"],["׃",""]
+    ["אַךְ","but/surely"],["אָמֵן","amen"],["אֲדַבֵּר","I-speak"],["אֲלֵיכֶם","unto-you"],["עַל","upon"],["מַסַּעֲכֶם","quarry-you(pl)"],["לָאָרֶץ","to-the-land"],["אֲשֶׁר","which"],["בָּאתֶם","you-have-entered-into"],["מִשָּׁם","from-there"],["תֵּעָשֶׂה","you-shall-make"],["סְפִינָה","vessel"],["אוֹ","or"],["תִקָּנֶה","you will buy"],["כַּטּוֹב","as-the-seems-you-good"],["בְּעֵינֵיכֶם","in-view-your"],["לֹא","not"],["אִכְפַּת","matter/care"],["לִי","to-me"],["וּסְעוּ","and-set out"],["בִּמְהֵרָה","soon"],["לְדַרְכְּכֶם","to-your-ways"],["לַמָּקוֹם","the-place"],["הַנִּקְרָא","the-called"],["סֵיינְט","???"],["לוּאִיס׃","???"],["׃",""]
   ]},
   { num: "ו", words: [
     ["וּמִשָּׁם","and-from-thence"],["יִסְעוּ","they set out"],["עֲבָדַי","are servants-my"],["סִידְנִי","Sidney"],["רִיגְדוֹן","Rigdon"],["וְיוֹסֵף","and-Joseph"],["סְמִית","Smith"],["הַבֵּן","the-Son"],["וְאוֹלִיבֶר","and-Oliver"],["קַאוּדְרִי","Cowdery"],["לְדַרְכָּם","to-their-march"],["לְסִינְסִינֶּאטִי׃","to-Cincinnati"],["׃",""]
@@ -704,10 +704,10 @@ var dc60_ch1Verses = [
     ["וְעַבְדִּי","and-servant-my"],["אֶדְוָרְד","Edward"],["פַּרְטְרִיג׳","Partridge"],["יִתֵּן","shall-give"],["מִן","from"],["הַכֶּסֶף","the-money"],["אֲשֶׁר","which"],["נָתַתִּי","I-gave"],["לוֹ","to-him"],["חֵלֶק","part"],["לִזְקֵנַי","to-my-old-men"],["אֲשֶׁר","which"],["צֻוּוּ","were-commanded"],["לָשׁוּב׃","to-return/repent"],["׃",""]
   ]},
   { num: "יא", words: [
-    ["וְהַיָּכוֹל","and-¿-certainly"],["יַחֲזִירֶנּוּ","???"],["עַל","upon"],["יְדֵי","hands-of"],["הַסּוֹכֵן","the-agent"],["וַאֲשֶׁר","and-who"],["אֵינֶנּוּ","we-are-not"],["יָכוֹל","Almighty"],["לֹא","not"],["נִדְרָשׁ","requisite"],["מִמֶּנּוּ׃","from-him"],["׃",""]
+    ["וְהַיָּכוֹל","and-the-¿-certainly"],["יַחֲזִירֶנּוּ","???"],["עַל","upon"],["יְדֵי","hands-of"],["הַסּוֹכֵן","the-agent"],["וַאֲשֶׁר","and-who"],["אֵינֶנּוּ","we-are-not"],["יָכוֹל","Almighty"],["לֹא","not"],["נִדְרָשׁ","requisite"],["מִמֶּנּוּ׃","from-him"],["׃",""]
   ]},
   { num: "יב", words: [
-    ["וְעַתָּה","and-now"],["אֲדַבֵּר","I-speak"],["עַל","upon"],["הַשְּׁאָר","the-the relatives of"],["הַבָּאִים","to-come"],["לָאָרֶץ","to-the-land"],["הַזֹּאת׃","is-this"],["׃",""]
+    ["וְעַתָּה","and-now"],["אֲדַבֵּר","I-speak"],["עַל","upon"],["הַשְּׁאָר","the-the relatives of"],["הַבָּאִים","to-the-come"],["לָאָרֶץ","to-the-land"],["הַזֹּאת׃","is-this"],["׃",""]
   ]},
   { num: "יג", words: [
     ["הִנֵּה","behold"],["נִשְׁלְחוּ","they-were-sent"],["לִקְרֹא","to-read"],["בְשׂוֹרָתִי","My-good-tidings"],["בְּקֶרֶב","among"],["קְהִלּוֹת","churches"],["הָרְשָׁעִים","the-wicked"],["לָכֵן","therefore"],["אֲנִי","I"],["נוֹתֵן","grants"],["לָהֶם","unto-them"],["מִצְוָה","a-commandment"],["כֹּה","thus"],["לֹא","not"],["תְבַזְבֵּז","???"],["עִתֶּךָ","time-your"],["וְלֹא","and-not"],["תִטְמֹן","???"],["כִּשְׁרוֹנְךָ","???"],["לְבַל","that-ye"],["יִוָּדַע׃","knowing"],["׃",""]
@@ -716,10 +716,10 @@ var dc60_ch1Verses = [
     ["וְאַחֲרֵי","and-after"],["עֲלוֹתְךָ","the-ascending-of-your"],["לְאֶרֶץ","to-the-land-of"],["צִיּוֹן","Zion"],["וְקָרָאתָ","and-you will call"],["דְבָרִי","My-word"],["תָּשׁוּב","return"],["בִּמְהֵרָה","soon"],["וְתִקְרָא","and-she-called"],["דְבָרִי","My-word"],["בְּקֶרֶב","among"],["קְהִלּוֹת","churches"],["הָרְשָׁעִים","the-wicked"],["לֹא","not"],["בְחִפָּזוֹן","exceedingly-great-speed"],["וְלֹא","and-not"],["בְכַעַס","with-grief"],["וְלֹא","and-not"],["בְמָדוֹן׃","in-strife"],["׃",""]
   ]},
   { num: "טו", words: [
-    ["וְנָעַרְתָּ","and-tow"],["עֲפַר","ore"],["רַגְלֶיךָ","feet-your"],["עַל","upon"],["אֵלֶּה","these"],["אֲשֶׁר","which"],["לֹא","not"],["יְקַבְּלוּךָ","they-shall-receive-you"],["לֹא","not"],["בִפְנֵיהֶם","in-faces-their"],["פֶּן","lest"],["תַּקְצִיפֵם","???"],["אֶלָּא","but-rather"],["בַסֵּתֶר","in-secret"],["וְרָחַצְתָּ","and-you will wash"],["רַגְלֶיךָ","feet-your"],["לְעֵדוּת","as-a-testimony"],["בָּם","in-them"],["בְּיוֹם","in-day"],["הַמִּשְׁפָּט׃","the-judgment"],["׃",""]
+    ["וְנָעַרְתָּ","and-tow"],["עֲפַר","ore"],["רַגְלֶיךָ","feet-your"],["עַל","upon"],["אֵלֶּה","these"],["אֲשֶׁר","which"],["לֹא","not"],["יְקַבְּלוּךָ","they-shall-receive-you"],["לֹא","not"],["בִפְנֵיהֶם","in-faces-their"],["פֶּן","lest"],["תַּקְצִיפֵם","???"],["אֶלָּא","but-rather"],["בַסֵּתֶר","in-the-secret"],["וְרָחַצְתָּ","and-you will wash"],["רַגְלֶיךָ","feet-your"],["לְעֵדוּת","as-a-testimony"],["בָּם","in-them"],["בְּיוֹם","in-day"],["הַמִּשְׁפָּט׃","the-judgment"],["׃",""]
   ]},
   { num: "טז", words: [
-    ["הִנֵּה","behold"],["זֶה","this"],["דַּי","is-sufficient"],["לָכֶם","to-you"],["וּרְצוֹן","and-the-will-of"],["הַשּׁוֹלֵחַ","lays"],["אֶתְכֶם׃","you"],["׃",""]
+    ["הִנֵּה","behold"],["זֶה","this"],["דַּי","is-sufficient"],["לָכֶם","to-you"],["וּרְצוֹן","and-the-will-of"],["הַשּׁוֹלֵחַ","the-lays"],["אֶתְכֶם׃","you"],["׃",""]
   ]},
   { num: "יז", words: [
     ["וּבְפִי","and-in-the-mouth-of"],["עַבְדִּי","thou-art-My-servant"],["יוֹסֵף","Joseph"],["סְמִית","Smith"],["הַבֵּן","the-Son"],["יִוָּדַע","shall-be-known"],["עַל","upon"],["סִידְנִי","Sidney"],["רִיגְדוֹן","Rigdon"],["וְאוֹלִיבֶר","and-Oliver"],["קַאוּדְרִי","Cowdery"],["וְהַשְּׁאָר","and-the-the relatives of"],["אַחֲרֵי","after"],["כֵן","thus"],["כֵּן","so/thus"],["יְהִי","let-this-be"],["אָמֵן׃","amen"],["׃",""]
