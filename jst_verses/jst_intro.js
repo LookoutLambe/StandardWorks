@@ -9,7 +9,7 @@ var jstIntro_ch1Verses = [
   // Paragraph 3: More revelation than literal translation
   { num:"ג", words:[["תַּרְגּוּם","the-translation-of"],["יוֹסֵף","Joseph"],["סְמִית","Smith"],["הָיָה","was"],["יוֹתֵר","more"],["גִּלּוּי","revelation"],["מֵאֲשֶׁר","than"],["תַּרְגּוּם","translation"],["מִלְּשׁוֹן","from-language"],["אַחַת","one"],["לִלְשׁוֹן","to-language"],["אַחֶרֶת","another"],["׃",""]] },
   // Paragraph 4: References to D&C sections
-  { num:"ד", words:[["רְאֵה","see"],["גַם","also"],["תּוֹרָה","Doctrine"],["וּבְרִיתוֹת","and-Covenants"],["סְעִיפִים","sections"],["לז","37"],["מה","45"],["עג","73"],["עו","76"],["עז","77"],["פו","86"],["צא","91"],["וְקלב","and-132"],["׃",""]] },
+  { num:"ד", words:[["רְאֵה","see"],["גַם","also"],["תּוֹרָה","Doctrine"],["וּבְרִיתוֹת","and-Covenants"],["סְעִיפִים","sections"],["37","37"],["45","45"],["73","73"],["76","76"],["77","77"],["86","86"],["91","91"],["132","and-132"],["׃",""]] },
   // Paragraph 5: Book of Moses and JS-Matthew are excerpts
   { num:"ה", words:[["סֵפֶר","the-Book-of"],["מֹשֶׁה","Moses"],["וְיוֹסֵף","and-Joseph"],["סְמִית","Smith"],["מַתִּתְיָהוּ","Matthew"],["הֵם","are"],["קְטָעִים","excerpts"],["מִתּוֹךְ","from-within"],["תַּרְגּוּם","the-translation"],["זֶה","this"],["׃",""]] }
 ];
