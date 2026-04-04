@@ -2498,7 +2498,7 @@ var ch5Verses = [
     ["׃",""]
   ]},
   { num:"יח", words:[
-    ["כִּי","that"],
+    ["כִּי","for"],
     ["יֵצְאוּ","they-shall-go-forth"],
     ["לוּחוֹת","plates-of"],
     ["הַנְּחֹשֶׁת","the-brass"],
@@ -3963,7 +3963,7 @@ var ch10Verses = [
     ["׃",""]
   ]},
   { num:"ג", words:[
-    ["כִּי","that"],
+    ["כִּי","for"],
     ["אַחֲרֵי","after"],
     ["הִשָּׁמְדָם","their-destruction"],
     ["גַּם־הָעִיר","even-the-city"],

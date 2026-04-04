@@ -696,7 +696,7 @@ var frontThreeWit = [
     ["הַזֶּה","this"],
   ]},
   { num:"ב", words:[
-    ["כִּי","that"],
+    ["כִּי","for"],
     ["אֲנַחְנוּ","we"],
     ["בְּחֶסֶד","by-the-grace-of"],
     ["אֱלֹהִים","God"],
@@ -862,7 +862,7 @@ var frontEightWit = [
     ["הַזֶּה","this"],
   ]},
   { num:"ב", words:[
-    ["כִּי","that"],
+    ["כִּי","for"],
     ["יוֹסֵף","Joseph"],
     ["סְמִית","Smith"],
     ["הַצָּעִיר","the-younger"],

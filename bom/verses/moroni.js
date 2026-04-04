@@ -5,7 +5,7 @@ var mr_ch1Verses = [
     ["וְעַתָּה","now"],["אֲנִי","I"],["מוֹרוֹנִי","Moroni"],["אַחֲרֵי","after"],["כַּלּוֹתִי","my-finishing"],["לְקַצֵּר","abridging"],["אֶת־דִּבְרֵי","the-account-of"],["עַם־יֶרֶד","the-people-of-Jared"],["חָשַׁבְתִּי","I-had-supposed"],["לֹא","not"],["לִכְתֹּב","to-write-more"],["עוֹד","more"],["וְהִנֵּה","but-behold"],["עוֹד","more"],["לֹא","not"],["אָבַדְתִּי","perished"],["וְלֹא","and-not"],["אֶתְוַדַּע","I-shall-known"],["אֶל־הַלָּמָנִים","to-the-Lamanites"],["פֶּן","lest"],["יַשְׁמִידוּנִי","they-should-destroy-me"]
   ]},
   { num: "ב", words: [
-    ["כִּי","that"],["הִנֵּה","behold"],["מִלְחֲמוֹתֵיהֶם","their-wars"],["אַכְזָרִיּוֹת","fierce"],["מְאֹד","exceedingly"],["בֵּינֵיהֶם","among-themselves"],["וּמִשִּׂנְאָתָם","and-because-of-their-hatred"],["יָמִיתוּ","they-put-to-death"],["כָּל־נֶפִי","every-Nephi"],["אֲשֶׁר","which"],["לֹא־יְכַחֵשׁ","not-will-deny"],["בַּמָּשִׁיחַ","in-the-Messiah"]
+    ["כִּי","for"],["הִנֵּה","behold"],["מִלְחֲמוֹתֵיהֶם","their-wars"],["אַכְזָרִיּוֹת","fierce"],["מְאֹד","exceedingly"],["בֵּינֵיהֶם","among-themselves"],["וּמִשִּׂנְאָתָם","and-because-of-their-hatred"],["יָמִיתוּ","they-put-to-death"],["כָּל־נֶפִי","every-Nephi"],["אֲשֶׁר","which"],["לֹא־יְכַחֵשׁ","not-will-deny"],["בַּמָּשִׁיחַ","in-the-Messiah"]
   ]},
   { num: "ג", words: [
     ["וַאֲנִי","and-I"],["מוֹרוֹנִי","Moroni"],["לֹא","will-not"],["אֲכַחֵשׁ","I-shall-deny"],["בַּמָּשִׁיחַ","in-the-Messiah"],["לָכֵן","therefore"],["אָנוּד","I-wander"],["בְּכָל־אֲשֶׁר","with-all-which"],["אוּכַל","am-able"],["לְמַעַן","that"],["חַיַּי","life"]
