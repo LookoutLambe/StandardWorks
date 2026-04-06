@@ -174,7 +174,7 @@ var dc52_ch1Verses = [
     ["יַעַבְדוּ","they-labor"],["עִם","with"],["מִשְׁפְּחוֹתֵיהֶם","kindreds-of-their"],["וְלֹא","and-not"],["יַכְרִיזוּ","they-shall-proclaim"],["דְּבָרִים","things"],["אֲחֵרִים","other"],["בִּלְתִּי","except"],["אֲשֶׁר","which"],["כָּתְבוּ","wrote"],["הַנְּבִיאִים","the-prophets"],["וְהַשְּׁלִיחִים","and-the-apostles"],["וַאֲשֶׁר","and-who"],["רָאוּ","they-saw"],["וְשָׁמְעוּ","and-they-heard"],["וּבָטְחוּ","and-they trusted"],["בֶּאֱמֶת","in-truth"],["לְמַעַן","that"],["יִתְמַלְּאוּ","it-shall-be-filled(they)"],["הַנְּבוּאוֹת׃","the-prophesyings"],["׃",""]
   ]},
   { num: "לז", words: [
-    ["בִּגְלַל","on-account of"],["פֶּשַׁע","the-transgression-of"],["יִלָּקַח","shall-be-taken-away"],["אֲשֶׁר","which"],["נִתַּן","is-given"],["לְהֵימַן","for-Heman"],["וְיוּשַׂם","and-have-set"],["עַל","upon"],["רֹאשׁ","head-of"],["׃",""]
+    ["בִּגְלַל","on-account of"],["פֶּשַׁע","the-transgression-of"],["יִלָּקַח","shall-be-taken-away"],["אֲשֶׁר","which"],["נִתַּן","is-given"],["לְהֵימַן","for-Heman"],["וְיוּשַׂם","and-have-set"],["עַל","upon"],["רֹאשׁ","the-head-of"],["׃",""]
   ]},
   { num: "לח", words: [
     ["וְעוֹד","and-again"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["יֶרֶד","Jared"],["קַרְטֶר","Carter"],["יִסָּמֵךְ","he-shall-be-supported"],["לְכֹהֵן","to-their-high-priest"],["וְגַם","and-also"],["יִסָּמֵךְ","he-shall-be-supported"],["לְכֹהֵן׃","a priest"],["׃",""]

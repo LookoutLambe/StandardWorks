@@ -489,7 +489,7 @@ renderVerseSet(dc84_ch1Verses, 'dc84-ch1-verses');
 
 var dc85_ch1Verses = [
   { num: "א", words: [
-    ["חוֹבַת","duty-of"],["סוֹפֵר","was secretary"],["יְהוָה","the-Lord"],["אֲשֶׁר","which"],["מִנָּהוּ","portion-its"],["לִשְׁמֹר","to-keep"],["תּוֹלְדוֹת","generations-of"],["וְרֵשׁוּם","and-thing inscribed"],["כְּלָלִי","as-to-the-me"],["שֶׁל","of"],["הָעֵדָה","the-church"],["עַל","upon"],["כָּל","all"],["הַנַּעֲשֶׂה","the-shall-we-do"],["בְּצִיּוֹן","in-Zion"],["וְעַל","and-upon"],["כָּל","all"],["רְכוּשָׁם","they-possessed"],["וְהַמְקַבְּלִים","and-the-from-received"],["נַחֲלוֹת","weak ones"],["כַּדִּין","as-the-endless-damnation"],["׃",""]
+    ["חוֹבַת","duty-of"],["סוֹפֵר","was secretary"],["יְהוָה","the-Lord"],["אֲשֶׁר","which"],["מִנָּהוּ","portion-its"],["לִשְׁמֹר","to-keep"],["תּוֹלְדוֹת","the-generations-of"],["וְרֵשׁוּם","and-thing inscribed"],["כְּלָלִי","as-to-the-me"],["שֶׁל","of"],["הָעֵדָה","the-church"],["עַל","upon"],["כָּל","all"],["הַנַּעֲשֶׂה","the-shall-we-do"],["בְּצִיּוֹן","in-Zion"],["וְעַל","and-upon"],["כָּל","all"],["רְכוּשָׁם","they-possessed"],["וְהַמְקַבְּלִים","and-the-from-received"],["נַחֲלוֹת","weak ones"],["כַּדִּין","as-the-endless-damnation"],["׃",""]
   ]},
   { num: "ב", words: [
     ["וְגַם","and-also"],["עַל","upon"],["דַּרְכֵי","the-ways-of"],["חַיֵּיהֶם","their-lives"],["אֱמוּנָתָם","their-faith"],["וּמַעֲשֵׂיהֶם","and-their-works"],["וְגַם","and-also"],["עַל","upon"],["הַסּוֹרְרִים","the-dissenters"],["אֲשֶׁר","which"],["סוֹרְרִים","rebellious people"],["אַחֲרֵי","after"],["קַבְּלָם","their-receiving"],["אֶת","[ACC]"],["נַחֲלוֹתֵיהֶם׃","their-inheritances"],["׃",""]
@@ -498,7 +498,7 @@ var dc85_ch1Verses = [
     ["נֶגֶד","against"],["רְצוֹן","the-will-of"],["וּמִצְוַת","and-the-commandments-of"],["אֱלֹהִים","God"],["הוּא","he/it"],["שֶׁאֵלֶּה","that-these"],["אֲשֶׁר","which"],["אֵינָם","they-are-not"],["מְקַבְּלִים","from-received"],["אֶת","[ACC]"],["נַחֲלָתָם","their-inheritance"],["בְּהַקְדָּשָׁה","in-is the-cult prostitute"],["לְפִי","according-to"],["תּוֹרָתוֹ","His-doctrine"],["אֲשֶׁר","which"],["נָתַן","gave"],["לְמַעַן","that"],["יְעַשֵּׂר","he will become rich"],["אֶת","[ACC]"],["עַמּוֹ","his-people"],["לַהֲכִינָם","to-the-had-prepared-them"],["לְיוֹם","to-day"],["הַנָּקָם","the-vengeance"],["וְהַבְּעֵרָה","and-the-fire"],["שְׁמוֹתֵיהֶם","the-names-of-their"],["עִם","with"],["עַם","the-people-of"],["אֱלֹהִים׃","God"],["׃",""]
   ]},
   { num: "ד", words: [
-    ["וְגַם","and-also"],["יִחוּסָם","Ichos-their"],["לֹא","not"],["יִשָּׁמֵר","shall-be-kept"],["וְלֹא","and-not"],["יִמָּצֵא","found"],["בְּכָל","with-all"],["אוֹ","or"],["תּוֹלְדוֹת","generations-of"],["הָעֵדָה׃","the-congregation"],["׃",""]
+    ["וְגַם","and-also"],["יִחוּסָם","Ichos-their"],["לֹא","not"],["יִשָּׁמֵר","shall-be-kept"],["וְלֹא","and-not"],["יִמָּצֵא","found"],["בְּכָל","with-all"],["אוֹ","or"],["תּוֹלְדוֹת","the-generations-of"],["הָעֵדָה׃","the-congregation"],["׃",""]
   ]},
   { num: "ה", words: [
     ["שְׁמוֹתֵיהֶם","the-names-of-their"],["לֹא","not"],["יִמָּצְאוּ","be-found"],["וְלֹא","and-not"],["שְׁמוֹת","the-names-of"],["הָאָבוֹת","the-fathers"],["וְלֹא","and-not"],["שְׁמוֹת","the-names-of"],["הַבָּנִים","the-children"],["כְּתוּבִים","there-are-written"],["בְּסֵפֶר","in-the-book-of"],["תּוֹרַת","the-laws-of"],["אֱלֹהִים","God"],["נְאֻם","says"],["יְהוָה","the-Lord"],["צְבָאוֹת׃","of-Hosts"],["׃",""]

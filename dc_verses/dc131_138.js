@@ -331,7 +331,7 @@ var dc133_ch1Verses = [
     ["וְיִמָּלְאוּ","and-be-filled-with"],["שִׁירֵי","songs-of"],["שִׂמְחַת","joy-of"],["עוֹלָם׃","eternal"],["׃",""]
   ]},
   { num: "לד", words: [
-    ["הִנֵּה","behold"],["זֹאת","this"],["בִּרְכַּת","blessing-of"],["אֵל","God"],["עוֹלָם","eternal"],["עַל","upon"],["שִׁבְטֵי","tribes-of"],["יִשְׂרָאֵל","Israel"],["וְהַבְּרָכָה","and-the-blessing"],["הָעֲשִׁירָה","the-rich"],["עַל","upon"],["רֹאשׁ","head-of"],["אֶפְרַיִם","Ephraim"],["וַחֲבֵרָיו׃","and-his-fellow"],["׃",""]
+    ["הִנֵּה","behold"],["זֹאת","this"],["בִּרְכַּת","blessing-of"],["אֵל","God"],["עוֹלָם","eternal"],["עַל","upon"],["שִׁבְטֵי","tribes-of"],["יִשְׂרָאֵל","Israel"],["וְהַבְּרָכָה","and-the-blessing"],["הָעֲשִׁירָה","the-rich"],["עַל","upon"],["רֹאשׁ","the-head-of"],["אֶפְרַיִם","Ephraim"],["וַחֲבֵרָיו׃","and-his-fellow"],["׃",""]
   ]},
   { num: "לה", words: [
     ["וְגַם","and-also"],["שֵׁבֶט","the-rod-of"],["יְהוּדָה","Judah"],["אַחֲרֵי","after"],["עָנְיָם","their-poverty"],["יִתְקַדְּשׁוּ","they-shall-be-sanctified"],["בִּקְדֻשָּׁה","in-holiness"],["לִפְנֵי","before"],["יְהוָה","the-Lord"],["לָשֶׁבֶת","to-dwell"],["בְּפָנָיו","by-own presence-his"],["יוֹמָם","by-day"],["וָלַיְלָה","and-a-night"],["לְעוֹלָם","forever"],["וָעֶד׃","and-a witness"],["׃",""]

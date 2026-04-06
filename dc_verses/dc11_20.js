@@ -647,7 +647,7 @@ var dc20_ch1Verses = [
     ["וּלְאַשֵּׁר","and-to-guide"],["אֶת־הָעֵדָה","[ACC]-the-church"],["בִּסְמִיכַת","in-ordination-of"],["יָדַיִם","both hands"],["וּבִנְתִינַת","and-in-administering"],["רוּחַ","spirit"],["הַקֹּדֶשׁ׃","the-Holy"],["׃",""]
   ]},
   { num: "מד", words: [
-    ["וְלָשֵׂאת","and-to-bear"],["רֹאשׁ","head-of"],["כָּל־הַמּוֹעֲדִים׃","all-the-appointed-times"],["׃",""]
+    ["וְלָשֵׂאת","and-to-bear"],["רֹאשׁ","the-head-of"],["כָּל־הַמּוֹעֲדִים׃","all-the-appointed-times"],["׃",""]
   ]},
   { num: "מה", words: [
     ["הַזְּקֵנִים","the-you-old-men"],["יְנַהֲלוּ","he will lead(they)"],["אֶת־הַמּוֹעֲדִים","[ACC]-the-appointed-times"],["כַּאֲשֶׁר","as"],["יַנְחֵם","he led-them"],["רוּחַ","spirit"],["הַקֹּדֶשׁ","the-Holy"],["כְּמִצְוֹת","according-to-the-commandments-of"],["וְחֶזְיֹנוֹת","and-visions"],["אֱלֹהִים׃","God"],["׃",""]
@@ -662,7 +662,7 @@ var dc20_ch1Verses = [
     ["וְגַם","and-also"],["יָכֹל","was-able"],["לִסְמֹךְ","to-ordain"],["כֹּהֲנִים","priests"],["וּמוֹרִים","and-teachers"],["וּמְשָׁרְתִים","and-serving"],["אֲחֵרִים׃","other"],["׃",""]
   ]},
   { num: "מט", words: [
-    ["וְיִשָּׂא","and-takes-away"],["רֹאשׁ","head-of"],["הַמּוֹעֲדִים","the-appointed-times"],["בְּאֵין","in-un"],["זָקֵן׃","beard"],["׃",""]
+    ["וְיִשָּׂא","and-takes-away"],["רֹאשׁ","the-head-of"],["הַמּוֹעֲדִים","the-appointed-times"],["בְּאֵין","in-un"],["זָקֵן׃","beard"],["׃",""]
   ]},
   { num: "נ", words: [
     ["אַךְ","but/surely"],["בִּהְיוֹת","while-was"],["זָקֵן","the-ancient"],["רַק","only"],["יַשְׁמִיעַ","publish"],["וִילַמֵּד","so-he may teach"],["וִיבָאֵר","explained"],["וְיוֹכִיחַ","and-reprove"],["׃",""]
@@ -683,7 +683,7 @@ var dc20_ch1Verses = [
     ["וְלִרְאוֹת","and-to-see"],["הָעֵדָה","the-church"],["לְעִתִּים","at-times"],["קְרוֹבוֹת","often"],["וְגַם","and-also"],["לִרְאוֹת","to-see"],["שֶׁכָּל־הַחֲבֵרִים","he laid cross-wise-the-united"],["עֹשִׂים","which-act"],["אֶת־חוֹבָתָם׃","[ACC] their-duty"],["׃",""]
   ]},
   { num: "נו", words: [
-    ["וְיִשָּׂא","and-takes-away"],["רֹאשׁ","head-of"],["הַמּוֹעֲדִים","the-appointed-times"],["בְּאֵין","in-un"],["זָקֵן","the-ancient"],["אוֹ","or"],["כֹהֵן׃","serving as priests"],["׃",""]
+    ["וְיִשָּׂא","and-takes-away"],["רֹאשׁ","the-head-of"],["הַמּוֹעֲדִים","the-appointed-times"],["בְּאֵין","in-un"],["זָקֵן","the-ancient"],["אוֹ","or"],["כֹהֵן׃","serving as priests"],["׃",""]
   ]},
   { num: "נז", words: [
     ["וְיֵעָזֵר","and-helped"],["תָּמִיד","continually"],["בְּכָל־חוֹבוֹתָיו","among-all-a debt-his"],["בָּעֵדָה","into-the-church"],["עַל־יְדֵי","by-means-of"],["הַמְשָׁרְתִים","[compound]"],["אִם","if"],["יִצְטָרֵךְ׃","he-shall-need"],["׃",""]

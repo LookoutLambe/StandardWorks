@@ -89,7 +89,7 @@ var job_ch4Verses = [
   { num:"יג", words:[["בִּשְׂעִפִּים","in-disquieting thoughts"],["מֵחֶזְיֹנוֹת","from-visions of"],["לָיְלָה","night"],["בִּנְפֹל","in-fell"],["תַּרְדֵּמָה","deep-sleep"],["עַל־אֲנָשִׁים","upon-men"],["׃",""]] },
   { num:"יד", words:[["פַּחַד","dread"],["קְרָאַנִי","was-called-by"],["וּרְעָדָה","and-trembling"],["וְרֹב","and-most-of"],["עַצְמוֹתַי","bones-my"],["הִפְחִיד","it caused to tremble"],["׃",""]] },
   { num:"טו", words:[["וְרוּחַ","and-spirit-of"],["עַל־פָּנַי","upon-presence-my"],["יַחֲלֹף","pass-away"],["תְּסַמֵּר","it made bristle"],["שַׂעֲרַת","the hair of"],["בְּשָׂרִי","my-flesh"],["׃",""]] },
-  { num:"טז", words:[["יַעֲמֹד","shall-stand"],["וְלֹא־אַכִּיר","and-not-I recognized"],["מַרְאֵהוּ","from-saw-his"],["תְּמוּנָה","of-any-thing"],["לְנֶגֶד","before"],["עֵינָי","eyes-my"],["דְּמָמָה","still"],["וָקוֹל","and-a voice"],["אֶשְׁמָע","I heard"],["׃",""]] },
+  { num:"טז", words:[["יַעֲמֹד","shall-stand"],["וְלֹא־אַכִּיר","and-not-I recognized"],["מַרְאֵהוּ","from-saw-his"],["תְּמוּנָה","of-any-thing"],["לְנֶגֶד","before"],["עֵינָי","my-eyes"],["דְּמָמָה","still"],["וָקוֹל","and-a voice"],["אֶשְׁמָע","I heard"],["׃",""]] },
   { num:"יז", words:[["הַאֱנוֹשׁ","¿-a person"],["מֵאֱלוֹהַּ","from-Loh"],["יִצְדָּק","will he be righteous"],["אִם","[compound]"],["מֵעֹשֵׂהוּ","from-maker-his"],["יִטְהַר־גָּבֶר","he will be pure-Geber"],["׃",""]] },
   { num:"יח", words:[["הֵן","yea"],["בַּעֲבָדָיו","in-servants-his"],["לֹא","not"],["יַאֲמִין","shall-believe"],["וּבְמַלְאָכָיו","and-against-messengers-his"],["יָשִׂים","he-appointed"],["תׇּהֳלָה","fatuity"],["׃",""]] },
   { num:"יט", words:[["אַף","yea"],["שֹׁכְנֵי","those who dwell of"],["בָתֵּי־חֹמֶר","houses-of-clay"],["אֲשֶׁר־בֶּעָפָר","whose-in-the-dust"],["יְסוֹדָם","foundation-their"],["יְדַכְּאוּם","people crush-them"],["לִפְנֵי־עָשׁ","before-the-moth"],["׃",""]] },
@@ -254,7 +254,7 @@ var job_ch9Verses = [
 renderVerseSet(job_ch9Verses, 'job-ch9-verses');
 
 var job_ch10Verses = [
-  { num:"א", words:[["נָקְטָה","it loathes"],["נַפְשִׁי","my-life"],["בְּחַיָּי","life-my"],["אֶעֶזְבָה","I will let loose"],["עָלַי","I-must"],["שִׂיחִי","complaint-my"],["אֲדַבְּרָה","let-me-speak"],["בְּמַר","in-the bitterness of"],["נַפְשִׁי","my-life"],["׃",""]] },
+  { num:"א", words:[["נָקְטָה","it loathes"],["נַפְשִׁי","my-life"],["בְּחַיָּי","my-life"],["אֶעֶזְבָה","I will let loose"],["עָלַי","I-must"],["שִׂיחִי","complaint-my"],["אֲדַבְּרָה","let-me-speak"],["בְּמַר","in-the bitterness of"],["נַפְשִׁי","my-life"],["׃",""]] },
   { num:"ב", words:[["אֹמַר","I-say"],["אֶל־אֱלוֹהַּ","to-Loh"],["אַל־תַּרְשִׁיעֵנִי","do-not-you condemn as guilty-me"],["הוֹדִיעֵנִי","make known to-me"],["עַל","upon"],["מַה־תְּרִיבֵנִי","what-do you contend with-me"],["׃",""]] },
   { num:"ג", words:[["הֲטוֹב","¿-really"],["לְךָ","for-you"],["כִּי־תַעֲשֹׁק","because-you will oppress"],["כִּי־תִמְאַס","because-you will reject"],["יְגִיעַ","the product of"],["כַּפֶּיךָ","the-hands-your"],["וְעַל־עֲצַת","and-upon-the-plan-of"],["רְשָׁעִים","wicked-men"],["הוֹפָעְתָּ","you have shone forth"],["׃",""]] },
   { num:"ד", words:[["הַעֵינֵי","¿-the eyes of"],["בָשָׂר","carnal"],["לָךְ","[compound]"],["אִם־כִּרְאוֹת","[compound]-when-saw"],["אֱנוֹשׁ","Enos"],["תִּרְאֶה","you-shall-see"],["׃",""]] },
@@ -616,7 +616,7 @@ var job_ch22Verses = [
   { num:"ט", words:[["אַלְמָנוֹת","a-great-many-widows"],["שִׁלַּחְתָּ","you have let go"],["רֵיקָם","empty-handed"],["וּזְרֹעוֹת","and-the arms of"],["יְתֹמִים","fatherless ones"],["יְדֻכָּא","it has been crushed"],["׃",""]] },
   { num:"י", words:[["עַל־כֵּן","therefore"],["סְבִיבוֹתֶיךָ","are around-you"],["פַחִים","thin plates"],["וִיבַהֶלְךָ","and-it terrifies-you"],["פַּחַד","dread"],["פִּתְאֹם","suddenly"],["׃",""]] },
   { num:"יא", words:[["אוֹ־חֹשֶׁךְ","or-darkness"],["לֹא־תִרְאֶה","not-you-will-saw"],["וְשִׁפְעַת־מַיִם","and-abundance of-water"],["תְּכַסֶּךָּ","it covers-you"],["׃",""]] },
-  { num:"יב", words:[["הֲלֹא־אֱלוֹהַּ","do-not-Loh"],["גֹּבַהּ","height"],["שָׁמָיִם","heavenly"],["וּרְאֵה","and-behold"],["רֹאשׁ","head-of"],["כּוֹכָבִים","stars"],["כִּי־רָמּוּ","because-they are high"],["׃",""]] },
+  { num:"יב", words:[["הֲלֹא־אֱלוֹהַּ","do-not-Loh"],["גֹּבַהּ","height"],["שָׁמָיִם","heavenly"],["וּרְאֵה","and-behold"],["רֹאשׁ","the-head-of"],["כּוֹכָבִים","stars"],["כִּי־רָמּוּ","because-they are high"],["׃",""]] },
   { num:"יג", words:[["וְאָמַרְתָּ","and-say"],["מַה־יָּדַע","what-does he know"],["אֵל","God"],["הַבְעַד","¿-through"],["עֲרָפֶל","mist-of"],["יִשְׁפּוֹט","shall-he-judge"],["׃",""]] },
   { num:"יד", words:[["עָבִים","Vim"],["סֵתֶר־לוֹ","secret-him"],["וְלֹא","and-not"],["יִרְאֶה","He-shall-manifest-Himself"],["וְחוּג","and-the circle of"],["שָׁמַיִם","the-heavens"],["יִתְהַלָּךְ","he walks about"],["׃",""]] },
   { num:"טו", words:[["הַאֹרַח","¿-a path of"],["עוֹלָם","eternal"],["תִּשְׁמוֹר","you will take care"],["אֲשֶׁר","which"],["דָּרְכוּ","his-way"],["מְתֵי־אָוֶן","a-few-iniquity"],["׃",""]] },
@@ -800,7 +800,7 @@ var job_ch29Verses = [
   { num:"כב", words:[["אַחֲרֵי","after"],["דְבָרִי","My-word"],["לֹא","not"],["יִשְׁנוּ","they repeated"],["וְעָלֵימוֹ","and-on-them"],["תִּטֹּף","it dropped"],["מִלָּתִי","speech-my"],["׃",""]] },
   { num:"כג", words:[["וְיִחֲלוּ","and-they waited"],["כַמָּטָר","like the-rain"],["לִי","to-me"],["וּפִיהֶם","and-mouth-their"],["פָּעֲרוּ","people have opened wide"],["לְמַלְקוֹשׁ","for-spring rain"],["׃",""]] },
   { num:"כד", words:[["אֶשְׂחַק","I laughed"],["אֲלֵהֶם","unto-them"],["לֹא","not"],["יַאֲמִינוּ","they-believe"],["וְאוֹר","and-light"],["פָּנַי","presence-my"],["לֹא","not"],["יַפִּילוּן","they made fall-!"],["׃",""]] },
-  { num:"כה", words:[["אֶבְחַר","I will choose"],["דַּרְכָּם","their-journey"],["וְאֵשֵׁב","and-I-will-sit"],["רֹאשׁ","head-of"],["וְאֶשְׁכּוֹן","so-I may dwell"],["כְּמֶלֶךְ","as-a-king"],["בַּגְּדוּד","among the-troops"],["כַּאֲשֶׁר","when/as"],["אֲבֵלִים","mourners"],["יְנַחֵם","He-comforted"],["׃",""]] },
+  { num:"כה", words:[["אֶבְחַר","I will choose"],["דַּרְכָּם","their-journey"],["וְאֵשֵׁב","and-I-will-sit"],["רֹאשׁ","the-head-of"],["וְאֶשְׁכּוֹן","so-I may dwell"],["כְּמֶלֶךְ","as-a-king"],["בַּגְּדוּד","among the-troops"],["כַּאֲשֶׁר","when/as"],["אֲבֵלִים","mourners"],["יְנַחֵם","He-comforted"],["׃",""]] },
 ];
 renderVerseSet(job_ch29Verses, 'job-ch29-verses');
 

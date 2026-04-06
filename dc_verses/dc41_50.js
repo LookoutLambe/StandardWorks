@@ -769,7 +769,7 @@ var dc46_ch1Verses = [
     ["וְהָיָה","and-it-shall-come-to-pass"],["הַשֹּׁאֵל","the-enquire"],["בָּרוּחַ","in-the-Spirit"],["יְקַבֵּל","he-receives"],["בָּרוּחַ׃","in-the-Spirit"],["׃",""]
   ]},
   { num: "כט", words: [
-    ["לְמַעַן","that"],["לִקְצָתָם","to-some-of-them"],["יִנָּתֵן","shall-be-delivered"],["לִהְיוֹת","to-be"],["לָהֶם","unto-them"],["כָּל","all"],["הַמַּתָּנוֹת","the-these-gifts"],["הָאֵלֶּה","these"],["לִהְיוֹת","to-be"],["רֹאשׁ","head-of"],["לְמַעַן","that"],["כָּל","all"],["אֵבֶר","limb"],["׃",""]
+    ["לְמַעַן","that"],["לִקְצָתָם","to-some-of-them"],["יִנָּתֵן","shall-be-delivered"],["לִהְיוֹת","to-be"],["לָהֶם","unto-them"],["כָּל","all"],["הַמַּתָּנוֹת","the-these-gifts"],["הָאֵלֶּה","these"],["לִהְיוֹת","to-be"],["רֹאשׁ","the-head-of"],["לְמַעַן","that"],["כָּל","all"],["אֵבֶר","limb"],["׃",""]
   ]},
   { num: "ל", words: [
     ["הַשֹּׁאֵל","the-enquire"],["בָּרוּחַ","in-the-Spirit"],["שׁוֹאֵל","questioner"],["כִּרְצוֹן","according-to-the-desires-of"],["אֱלֹהִים","God"],["לָכֵן","therefore"],["יֵעָשֶׂה","shall-be-done"],["כַּאֲשֶׁר","as"],["שָׁאַל׃","enquire"],["׃",""]

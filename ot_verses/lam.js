@@ -57,7 +57,7 @@ var lam_ch3Verses = [
   { num:"ב", words:[["אוֹתִי","me"],["נָהַג","he has driven"],["וַיֹּלַךְ","and-he has made walk"],["חֹשֶׁךְ","darkness"],["וְלֹא־אוֹר","and-not-light"],["׃",""]] },
   { num:"ג", words:[["אַךְ","but"],["בִּי","against-me"],["יָשֻׁב","he will return"],["יַהֲפֹךְ","he-might-overthrow"],["יָדוֹ","his-hand"],["כׇּל־הַיּוֹם","all-the-day"],["׃",""]] },
   { num:"ד", words:[["בִּלָּה","he has made to waste away"],["בְשָׂרִי","my-flesh"],["וְעוֹרִי","and-skin-my"],["שִׁבַּר","he broke in pieces"],["עַצְמוֹתָי","bones-my"],["׃",""]] },
-  { num:"ה", words:[["בָּנָה","built"],["עָלַי","I-must"],["וַיַּקַּף","and-he has surrounded me"],["רֹאשׁ","head-of"],["וּתְלָאָה","and-hardship"],["׃",""]] },
+  { num:"ה", words:[["בָּנָה","built"],["עָלַי","I-must"],["וַיַּקַּף","and-he has surrounded me"],["רֹאשׁ","the-head-of"],["וּתְלָאָה","and-hardship"],["׃",""]] },
   { num:"ו", words:[["בְּמַחֲשַׁכִּים","in-the dark places"],["הוֹשִׁיבַנִי","he has caused to dwell-me"],["כְּמֵתֵי","like-dead people of"],["עוֹלָם","eternal"],["׃",""]] },
   { num:"ז", words:[["גָּדַר","he has walled up"],["בַּעֲדִי","for-me"],["וְלֹא","and-not"],["אֵצֵא","I-go-forth"],["הִכְבִּיד","did-more-grievously-afflict"],["נְחׇשְׁתִּי","the-serpent(I)"],["׃",""]] },
   { num:"ח", words:[["גַּם","also"],["כִּי","because"],["אֶזְעַק","I-shall-cry"],["וַאֲשַׁוֵּעַ","and-I may cry for help"],["שָׂתַם","he has shut out"],["תְּפִלָּתִי","my-prayer"],["׃",""]] },

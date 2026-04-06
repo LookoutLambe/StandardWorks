@@ -411,7 +411,7 @@ var frontIntroduction = [
     ["הַקַּדְמוֹנִים","the-ancient"],
   ]},
   { num:"ח", words:[
-    ["רֹאשׁ","head-of"],
+    ["רֹאשׁ","the-head-of"],
     ["הַמַּעֲשִׂים","the-events"],
     ["הַכְּתוּבִים","the-scriptures"],
     ["בַּסֵּפֶר","in-the-book"],

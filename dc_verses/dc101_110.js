@@ -1229,7 +1229,7 @@ var dc107_ch1Verses = [
     ["וְשׁוּב","and-again"],["חוֹבַת","duty-of"],["נְשִׂיא","are a prince of"],["מִשְׂרַת","pan"],["הַכְּהֻנָּה","the-priesthood"],["הַגְּדוֹלָה","the-great"],["לְנַשֵּׂא","to-be-borne"],["עַל","upon"],["כָּל־הָעֵדָה","all-the-church"],["וְלִהְיוֹת","and-to-be"],["כְּמֹשֶׁה׃","as-Moses"],["׃",""]
   ]},
   { num: "צב", words: [
-    ["הִנֵּה","behold"],["זֹאת","this"],["חָכְמָה","wisdom"],["אָכֵן","yea"],["לִהְיוֹת","to-be"],["רוֹאֶה","perceiving"],["מְגַלֶּה","a-revelator"],["מְתַרְגֵּם","was translated"],["וְנָבִיא","and-a-prophet-of"],["בַּעַל","holder-of"],["כָּל־מַתְּנוֹת","all-the-gifts-of"],["הָאֱלֹהִים","God"],["אֲשֶׁר","which"],["הוּא","he/it"],["מַעֲנִיק","bestowing"],["עַל","upon"],["רֹאשׁ","head-of"],["הָעֵדָה׃","the-congregation"],["׃",""]
+    ["הִנֵּה","behold"],["זֹאת","this"],["חָכְמָה","wisdom"],["אָכֵן","yea"],["לִהְיוֹת","to-be"],["רוֹאֶה","perceiving"],["מְגַלֶּה","a-revelator"],["מְתַרְגֵּם","was translated"],["וְנָבִיא","and-a-prophet-of"],["בַּעַל","holder-of"],["כָּל־מַתְּנוֹת","all-the-gifts-of"],["הָאֱלֹהִים","God"],["אֲשֶׁר","which"],["הוּא","he/it"],["מַעֲנִיק","bestowing"],["עַל","upon"],["רֹאשׁ","the-head-of"],["הָעֵדָה׃","the-congregation"],["׃",""]
   ]},
   { num: "צג", words: [
     ["וּלְפִי","and-according-to"],["הֶחָזוֹן","the-vision"],["הַמַּרְאֶה","the-vision"],["סֵדֶר","the-order-of"],["הַשִּׁבְעִים","even-the"],["יִהְיוּ","shall-be"],["לָהֶם","unto-them"],["שִׁבְעָה","seven"],["נְשִׂיאִים","were leaders"],["לְנַשֵּׂא","to-be-borne"],["עֲלֵיהֶם","upon-them"],["נִבְחָרִים","chosen"],["מִתּוֹךְ","from-midst-of"],["מִסְפַּר","number-of"],["הַשִּׁבְעִים׃","even-the"],["׃",""]

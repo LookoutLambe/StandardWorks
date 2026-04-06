@@ -1,7 +1,7 @@
 // nt_verses/matt.js — Matthew verse data
 (function() {
 var matt_ch1Verses = [
-  { num:"א", words:[["סֵפֶר","a-book"],["תּוֹלְדֹת","generations-of"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׁיחַ","the-Messiah"],["בֶּן־דָּוִד","son-of-David"],["בֶּן־אַבְרָהָם","son-of-Abraham"],["׃",""]] },
+  { num:"א", words:[["סֵפֶר","a-book"],["תּוֹלְדֹת","the-generations-of"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׁיחַ","the-Messiah"],["בֶּן־דָּוִד","son-of-David"],["בֶּן־אַבְרָהָם","son-of-Abraham"],["׃",""]] },
   { num:"ב", words:[["אַבְרָהָם","Abraham"],["הוֹלִיד","begot"],["אֶת־יִצְחָק","[ACC]-Isaac"],["וְיִצְחָק","and-Isaac"],["הוֹלִיד","begot"],["אֶת־יַעֲקֹב","[ACC]-Jacob"],["וְיַעֲקֹב","and-Jacob"],["הוֹלִיד","begot"],["אֶת־יְהוּדָה","[ACC]-Judah"],["וְאֶת־אֶחָיו","and-[ACC]-his-brothers"],["׃",""]] },
   { num:"ג", words:[["וִיהוּדָה","and-Judah"],["הוֹלִיד","begot"],["אֶת־פֶּרֶץ","[ACC]-Perez"],["וְאֶת־זֶרַח","and-[ACC]-Zerah"],["מִתָּמָר","from-Tamar"],["וּפֶרֶץ","and-Perez"],["הוֹלִיד","begot"],["אֶת־חֶצְרוֹן","[ACC]-Hezron"],["וְחֶצְרוֹן","and-Hezron"],["הוֹלִיד","begot"],["אֶת־רָם","[ACC]-Ram"],["׃",""]] },
   { num:"ד", words:[["וְרָם","and-Ram"],["הוֹלִיד","begot"],["אֶת־עַמִּינָדָב","[ACC]-Amminadab"],["וְעַמִּינָדָב","and-Amminadab"],["הוֹלִיד","begot"],["אֶת־נַחְשׁוֹן","[ACC]-Nahshon"],["וְנַחְשׁוֹן","and-Nahshon"],["הוֹלִיד","begot"],["אֶת־שַׂלְמוֹן","[ACC]-Salmon"],["׃",""]] },
