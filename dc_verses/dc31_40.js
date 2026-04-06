@@ -195,7 +195,7 @@ var dc35_ch1Verses = [
     ["וְאֵין","and-there-is-not"],["עֹשֶׂה","do"],["טוֹב","good"],["זוּלָתִי","except"],["הַנְּכוֹנִים","the-were-willing"],["לְקַבֵּל","to-receive"],["מְלֹא","fullness-of"],["בְשׂוֹרָתִי","My-good-tidings"],["אֲשֶׁר","which"],["שָׁלַחְתִּי","I-sent"],["לַדּוֹר","unto-the-generation"],["הַזֶּה׃","this"],["׃",""]
   ]},
   { num: "יג", words: [
-    ["לָכֵן","therefore"],["קֹרֵא","I-call"],["אֲנִי","I"],["הָעוֹלָם","the-world"],["אֲשֶׁר","which"],["אֵין","there-is-no"],["לָהֶם","unto-them"],["לֶקַח","the-learning-of"],["וְנִבְזִים","and-He-is-despised(pl)"],["הֵמָּה","they-are"],["לָדוּשׁ","to-thresh"],["הַגּוֹיִם","the-nations"],["בְּכֹחַ","by-the-power-of"],["רוּחִי׃","the winds of"],["׃",""]
+    ["לָכֵן","therefore"],["קֹרֵא","I-call"],["אֲנִי","I"],["הָעוֹלָם","the-world"],["אֲשֶׁר","which"],["אֵין","there-is-no"],["לָהֶם","unto-them"],["לֶקַח","the-learning-of"],["וְנִבְזִים","and-He-is-despised(pl)"],["הֵמָּה","they"],["לָדוּשׁ","to-thresh"],["הַגּוֹיִם","the-nations"],["בְּכֹחַ","by-the-power-of"],["רוּחִי׃","the winds of"],["׃",""]
   ]},
   { num: "יד", words: [
     ["וּזְרוֹעָם","and-arm-their"],["תִּהְיֶה","shall-be"],["זְרוֹעִי","My-arm"],["וַאֲנִי","and-I"],["אֶהְיֶה","I-shall-be"],["וְצִנָּתָם","and-the cold of-their"],["וַאֲזָרֵם","and-I have winnowed-them"],["מָתְנֵיהֶם","their-loins"],["וְנִלְחֲמוּ","and-they will fight"],["בְגֶבֶר","in-a man"],["לְמַעֲנִי","to-from-my-affliction"],["וְאֹיְבֵיהֶם","and-their-enemies"],["יִהְיוּ","shall-be"],["תַּחַת","under"],["רַגְלֵיהֶם","were-their-feet"],["וְאַפִּיל","and-I will make fall"],["חֶרֶב","the-sword-of"],["לְמַעֲנָם","for-them"],["וּבְאֵשׁ","and-in-the fire of"],["זַעְמִי","is-My-indignation"],["אֶשְׁמְרֵם׃","I-may-preserve-them"],["׃",""]

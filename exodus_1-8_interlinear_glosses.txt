@@ -1,0 +1,438 @@
+EXODUS CHAPTERS 1-8: BibleHub Interlinear Hebrew-English Glosses
+================================================================
+
+=== CHAPTER 1 ===
+
+CH1 v1: וְאֵלֶּה="And these", שְׁמוֹת="the names", בְּנֵי="of the sons", יִשְׂרָאֵל="of Israel", הַבָּאִים="who came", מִצְרָיְמָה="to Egypt", אֵת="with", יַעֲקֹב="Jacob", אִישׁ="each man", וּבֵיתוֹ="and his household", בָּאוּ="came"
+
+CH1 v2: רְאוּבֵן="Reuben", שִׁמְעוֹן="Simeon", לֵוִי="Levi", וִיהוּדָה="and Judah"
+
+CH1 v3: יִשָּׂשכָר="Issachar", זְבוּלֻן="Zebulun", וּבְנְיָמִן="and Benjamin"
+
+CH1 v4: דָּן="Dan", וְנַפְתָּלִי="and Naphtali", גָּד="Gad", וְאָשֵׁר="and Asher"
+
+CH1 v5: וַיְהִי="And were", כָּל־="all", נֶפֶשׁ="the souls", יֹצְאֵי="who were", יֶרֶךְ־="descendants", יַעֲקֹב="of Jacob", שִׁבְעִים="seventy", נָפֶשׁ="souls", וְיוֹסֵף="for Joseph", הָיָה="was", בְמִצְרָיִם="in Egypt"
+
+CH1 v6: וַיָּמָת="And died", יוֹסֵף="Joseph", וְכָל="and all", אֶחָיו="his brothers", וְכֹל="and all", הַדּוֹר="generation", הַהוּא="that"
+
+CH1 v7: וּבְנֵי="the sons", יִשְׂרָאֵל="of Israel", פָּרוּ="were fruitful", וַיִּשְׁרְצוּ="and increased abundantly", וַיִּרְבּוּ="and multiplied", וַיַּעַצְמוּ="and grew", בִּמְאֹד="exceedingly", מְאֹד="greatly", וַתִּמָּלֵא="and was filled", הָאָרֶץ="the land", אֹתָם="with them"
+
+CH1 v8: וַיָּקָם="And there arose", מֶלֶךְ="king", חָדָשׁ="new", עַל="over", מִצְרָיִם="Egypt", אֲשֶׁר="who", לֹא="not", יָדַע="did know", אֶת="(direct object marker)", יוֹסֵף="Joseph"
+
+CH1 v9: וַיֹּאמֶר="said", אֶל־="to", עַמֹּו="his people", הִנֵּה="Behold", עַם="the people", בְּנֵי="of the sons", יִשְׂרָאֵל="of Israel", רַב="are more", וְעָצוּם="and mightier", מִמֶּנּוּ="than we"
+
+CH1 v10: הָבָה="Come", נִתְחַכְּמָה="let us deal shrewdly", לוֹ="with him", פֶּן־="lest", יִרְבֶּה="he multiply", וְהָיָה="and it happen", כִּי־="when", תִקְרֶאנָה="there falls out", מִלְחָמָה="war", וְנוֹסַף="that may join", גַּם־="also", הוּא="he", עַל־="to", שׂוֹנְאֵינוּ="our enemies", וְנִלְחַם־="and fight", בָּנוּ="against us", וְעָלָה="and go up", מִן־="out", הָאָרֶץ="of the land"
+
+CH1 v11: וַיָּשִׂימוּ="appointed", עָלָיו="over", שָׂרֵי="captain", מִסִּים="discomfited", לְמַעַן="because of", עַנֹּתוֹ="to afflict", בְּסִבְלֹתָם="hard", וַיִּבֶן="built", עָרֵי="cities", מִסְכְּנוֹת="storage", לְפַרְעֹה="Pharaoh", אֶת־="(direct object marker)", פִּתֹם="Pithom", וְאֶת־="and", רַעַמְסֵס="and Raamses"
+
+CH1 v12: וְכַאֲשֶׁר="But the more", יְעַנּוּ="they afflicted", אֹתוֹ="them", כֵּן="the more", יִרְבֶּה="they multiplied", וְכֵן="and", יִפְרֹץ="grew", וַיָּקֻצוּ="And they were in dread", מִפְּנֵי="of", בְּנֵי="the sons", יִשְׂרָאֵל="of Israel"
+
+CH1 v13: וַיַּעֲבִדוּ="to labor", מִצְרַיִם="Egyptian", אֶת־="(direct object marker)", בְּנֵי="the sons", יִשְׂרָאֵל="of Israel", בְּפָרֶךְ="rigorously"
+
+CH1 v14: וַיְמָרְרוּ="and they made bitter", אֶת־="[direct object marker]", חַיֵּיהֶם="their lives", בַּעֲבֹדָה="with bondage", קָשָׁה="hard", בְּחֹמֶר="in mortar", וּבִלְבֵנִים="and in brick", וּבְכָל־="and in all manner", עֲבֹדָה="of service", בַּשָּׂדֶה="in the field", אֵת="[direct object marker]", כָּל־="all", עֲבֹדָתָם="their service", אֲשֶׁר־="in which", עָבְדוּ="they made serve", בָהֶם="them", בְּפָרֶךְ="with harshness"
+
+CH1 v15: וַיֹּאמֶר="spoke", מֶלֶךְ="the king", מִצְרַיִם="of Egypt", לַמְיַלְּדֹת="to the midwives", הָעִבְרִיֹּת="Hebrewesses", אֲשֶׁר="of whom", שֵׁם="the name", הָאַחַת="of one", שִׁפְרָה="Shiphrah", וְשֵׁם="and the name", הַשֵּׁנִית="of the second", פּוּעָה="Puah"
+
+CH1 v16: וַיֹּאמֶר="said", בְּיַלֶּדְכֶן="to give", אֶת־="for", הָעִבְרִיּוֹת="the Hebrew", וּרְאִיתֶן="and see", עַל־="upon", הָאָבְנָיִם="the birthstool", אִם־="if", בֵּן="son", הוּא="it", וַהֲמִתֶּן="shall put", אֹתוֹ="him", וְאִם־="if", בַּת="daughter", הִיא="it", וָחָיָה="shall live"
+
+CH1 v17: וַתִּירֶאןָ="feared", הַמְיַלְּדֹת="the midwives", אֶת־="(direct object marker)", הָאֱלֹהִים="God", וְלֹא="and did not", עָשׂוּ="do", כַּאֲשֶׁר="as", דִּבֶּר="had commanded", אֲלֵיהֶן="them", מֶלֶךְ="the king", מִצְרָיִם="of Egypt", וַתְּחַיֶּיןָ="but saved alive", אֶת־="(direct object marker)", הַיְלָדִים="the male children"
+
+CH1 v18: וַיִּקְרָא="called", מֶלֶךְ־="the king", מִצְרַיִם="of Egypt", לַמְיַלְּדֹת="the midwives", וַיֹּאמֶר="and said", לָהֶן="to them", מַדּוּעַ="Why", עֲשִׂיתֶן="have you done", הַדָּבָר="thing", הַזֶּה="this", וַתְּחַיֶּיןָ="and saved alive", אֶת־="[direct object marker]", הַיְלָדִים="the male children"
+
+CH1 v19: וַתֹּאמַרְןָ="said", הַמְיַלְּדֹת="the midwives", אֶל־="to", פַּרְעֹה="Pharaoh", כִּי="because", לֹא="not", כַנָּשִׁים="like the women", הַמִּצְרִיֹּת="Egyptian", הָעִבְרִיֹּת="the Hebrew", כִּי־="for", חָיוֹת="are vigorous", הֵנָּה="they", בְּטֶרֶם="before", תָּבוֹא="come", אֲלֵהֶן="to them", הַמְיַלֶּדֶת="the midwife", וְיָלָדוּ="and give birth"
+
+CH1 v20: וַיֵּיטֶב="was good", אֱלֹהִים="God", לַמְיַלְּדֹת="to the midwives", וַיִּרֶב="multiplied", הָעָם="the people", וַיַּעַצְמוּ="and became", מְאֹד="very"
+
+CH1 v21: וַיְהִי="And so it was", כִּי־="because", יָרְאוּ="feared", הַמְיַלְּדֹת="the midwives", אֶת־="[direct object marker]", הָאֱלֹהִים="God", וַיַּעַשׂ="that He provided", לָהֶם="for them", בָּתִּים="households"
+
+CH1 v22: וַיְצַו="commanded", פַּרְעֹה="Pharaoh", לְכָל־="all", עַמֹּו="his people", לֵאמֹר="saying", כָּל־="every", הַבֵּן="son", הַיִּלֹּוד="who is born", הַיְאֹרָה="into the river", תַּשְׁלִיכֻהוּ="you shall cast", וְכָל־="and every", הַבַּת="daughter", תְּחַיּוּן="you shall save alive"
+
+=== CHAPTER 2 ===
+
+CH2 v1: וַיֵּלֶךְ="And went", אִישׁ="a man", מִבֵּית="of the house", לֵוִי="of Levi", וַיִּקַּח="and took [as wife]", אֶת־="a", בַּת־="daughter", לֵוִי="of Levi"
+
+CH2 v2: וַתַּהַר="conceived", הָאִשָּׁה="the woman", וַתֵּלֶד="and bore", בֵּן="a son", וַתֵּרֶא="and when she saw", אֹתוֹ="him", כִּי־="that", טוֹב="beautiful", הוּא="he", וַתִּצְפְּנֵהוּ="then she hid him", שְׁלֹשָׁה="three", יְרָחִים="months"
+
+CH2 v3: וְלֹא="But when no", יָכְלָה="she could", עוֹד="longer", הַצְּפִינוֹ="hide him", וַתִּקַּח־="then she took", לוֹ="for him", תֵּבַת="an ark", גֹּמֶא="of bulrushes", וַתַּחְמְרָה="and daubed it", בַחֵמָר="with asphalt", וּבַזָּפֶת="and pitch", וַתָּשֶׂם="and put", בָּהּ="in it", אֶת־="[direct object marker]", הַיֶּלֶד="the child", וַתָּשֶׂם="and laid [it]", בַּסּוּף="in the reeds", עַל־="by", שְׂפַת="bank", הַיְאֹר="of the Nile"
+
+CH2 v4: וַתֵּתַצַּב="And stood", אֲחֹתוֹ="his sister", מֵרָחֹק="afar off", לְדֵעָה="to know", מַה־="what", יֵּעָשֶׂה="would be done", לוֹ="to him"
+
+CH2 v5: וַתֵּרֶד="And came down", בַּת="the daughter", פַּרְעֹה="of Pharaoh", לִרְחֹץ="to bathe", עַל="at", הַיְאֹר="the Nile", וְנַעֲרֹתֶיהָ="and her maidens", הֹלְכֹת="walked", עַל="along", יַד="the side", הַיְאֹר="of the Nile", וַתֵּרֶא="and when she saw", אֶת="[direct object marker]", הַתֵּבָה="the ark", בְּתוֹךְ="among", הַסּוּף="the reeds", וַתִּשְׁלַח="and she sent", אֶת="[direct object marker]", אֲמָתָהּ="her maidservant", וַתִּקָּחֶהָ="then to retrieve it"
+
+CH2 v6: וַתִּפְתַּח="And when she had opened [it]", וַתִּרְאֵהוּ="then she saw", אֶת־="[direct object marker]", הַיֶּלֶד="the child", וְהִנֵּה־="and behold", נַעַר="the little boy", בֹּכֶה="wept", וַתַּחְמֹל="So she had compassion", עָלָיו="on him", וַתֹּאמֶר="and said", מִיַּלְדֵי="[one] of children", הָעִבְרִים="of the Hebrews", זֶה="this [is]"
+
+CH2 v7: וַתֹּאמֶר="said", אֲחֹתוֹ="his sister", אֶל־="to", בַּת־="daughter", פַּרְעֹה="of Pharaoh", הַאֵלֵךְ="shall I go", וְקָרָאתִי="and call", לָךְ="for you", אִשָּׁה="a woman", מֵינֶקֶת="a nurse", מִן="from", הָעִבְרִיֹּת="the Hebrewesses", וְתֵינִק="that she may nurse", לָךְ="for you", אֶת־="[direct object marker]", הַיָּלֶד="the child"
+
+CH2 v8: וַתֹּאמֶר="said", לָהּ="to her", בַּת="daughter", פַּרְעֹה="of Pharaoh", לֵכִי="go", וַתֵּלֶךְ="went", הָעַלְמָה="the maiden", וַתִּקְרָא="and called", אֶת="(direct object marker)", אֵם="the mother", הַיָּלֶד="of the child"
+
+CH2 v9: וַתֹּאמֶר="And said", לָהּ="to her", בַּת־="the daughter", פַּרְעֹה="of Pharaoh", הֵילִיכִי="take away", אֶת־="[direct object marker]", הַיֶּלֶד="the child", הַזֶּה="this", וְהֵינִקִהוּ="and nurse him", לִי="for me", וַאֲנִי="and I", אֶתֵּן="will give [you]", אֶת־="[direct object marker]", שְׂכָרֵךְ="your wages", וַתִּקַּח="So took", הָאִשָּׁה="the woman", הַיֶּלֶד="the child", וַתְּנִיקֵהוּ="and nursed him"
+
+CH2 v10: וַיִגְדַּל="grew", הַיֶּלֶד="the child", וַתְּבִאֵהוּ="brought", לְבַת־="daughter", פַּרְעֹה="Pharaoh", וַיְהִי־="became", לָהּ="her", לְבֵן="son", וַתִּקְרָא="called", שְׁמוֹ="his name", מֹשֶׁה="Moses", וַתֹּאמֶר="said", כִּי="because", מִן־="out", הַמַּיִם="water", מְשִׁיתִהוּ="drew"
+
+CH2 v11: וַיְהִי="And it came to pass", בַּיָּמִים="in days", הָהֵם="those", וַיִּגְדַּל="that when was grown", מֹשֶׁה="Moses", וַיֵּצֵא="that he went out", אֶל־="to", אֶחָיו="his brothers", וַיַּרְא="and looked", בְּסִבְלֹתָם="at their burdens", וַיַּרְא="and he saw", אִישׁ="an", מִצְרִי="Egyptian", מַכֶּה="beating", אִישׁ־="a", עִבְרִי="Hebrew", מֵאֶחָיו="of his brothers"
+
+CH2 v12: וַיִּפֶן="looked", כֹּה="this way", וָכֹה="that way", וַיַּרְא="saw", כִּי="for", אֵין="no", אִישׁ="one", וַיַּךְ="struck", אֶת־="[direct object marker]", הַמִּצְרִי="the Egyptian", וַיִּטְמְנֵהוּ="hid him", בַּחֹול="in the sand"
+
+CH2 v13: וַיֵּצֵא="went", בַּיּוֹם="day", הַשֵּׁנִי="second", וְהִנֵּה="and behold", שְׁנֵי="two", אֲנָשִׁים="men", עִבְרִים="Hebrews", נִצִּים="were fighting", וַיֹּאמֶר="said", לָרָשָׁע="to the offender", לָמָּה="why", תַכֶּה="striking", רֵעֶךָ="your companion"
+
+CH2 v14: וַיֹּאמֶר="and he said", מִי="who", שָׂמְךָ="made you", לְאִישׁ="a man", שַׂר="a prince", וְשֹׁפֵט="and a judge", עָלֵינוּ="over us", הַלְהָרְגֵנִי="to kill me", אַתָּה="you", אֹמֵר="intend", כַּאֲשֶׁר="as", הָרַגְתָּ="you killed", אֶת="[direct object marker]", הַמִּצְרִי="the Egyptian", וַיִּירָא="and feared", מֹשֶׁה="Moses", וַיֹּאמַר="and said", אָכֵן="surely", נוֹדַע="is known", הַדָּבָר="this thing"
+
+CH2 v15: וַיִּשְׁמַע="And when heard", פַּרְעֹה="Pharaoh", אֶת־="[direct object marker]", הַדָּבָר="matter", הַזֶּה="this", וַיְבַקֵּשׁ="then he sought", לַהֲרֹג="to kill", אֶת־="[direct object marker]", מֹשֶׁה="Moses", וַיִּבְרַח="But fled", מֹשֶׁה="Moses", מִפְּנֵי="from the face", פַרְעֹה="of Pharaoh", וַיֵּשֶׁב="and dwelt", בְּאֶרֶץ־="in the land", מִדְיָן="of Midian", וַיֵּשֶׁב="and he sat down", עַל־="by", הַבְּאֵר="a well"
+
+CH2 v16: וּלְכֹהֵן="now the priest", מִדְיָן="of Midian", שֶׁבַע="had seven", בָּנוֹת="daughters", וַתָּבֹאנָה="and they came", וַתִּדְלֶנָה="and drew water", וַתְּמַלֶּאנָה="and filled", אֶת־="they", הָרְהָטִים="the troughs", לְהַשְׁקוֹת="to water", צֹאן="the flock", אֲבִיהֶן="of their father"
+
+CH2 v17: וַיָּבֹאוּ="came", הָרֹעִים="the shepherds", וַיְגָרְשׁוּם="and drove them away", וַיָּקָם="stood up", מֹשֶׁה="Moses", וַיּוֹשִׁעָן="and helped them", וַיַּשְׁקְ="and watered", אֶת־="(direct object marker)", צֹאנָם="their flock"
+
+CH2 v18: וַתָּבֹאנָה="And they came", אֶל־="to", רְעוּאֵל="Reuel", אֲבִיהֶן="their father", וַיֹּאמֶר="and he said", מַדּוּעַ="Why", מִהַרְתֶּן="so early", בֹּא="have you returned", הַיֹּום="today"
+
+CH2 v19: וַתֹּאמַרְןָ="and they said", אִישׁ="an", מִצְרִי="Egyptian", הִצִּילָנוּ="delivered us", מִיַּד="from the hand", הָרֹעִים="of the shepherds", וְגַם־="and also", דָּלֹה="drew", דָלָה="he drew water", לָנוּ="for us", וַיַּשְׁקְ="and watered", אֶת־="[direct object marker]", הַצֹּאן="the flock"
+
+CH2 v20: וַיֹּאמֶר="said", אֶל="to", בְּנֹתָיו="his daughters", וְאַיּוֹ="and where", לָמָּה="why", זֶּה="this", עֲזַבְתֶּן="you have left", אֶת="(direct object marker)", הָאִישׁ="the man", קִרְאֶן="call", לוֹ="him", וְיֹאכַל="that he may eat", לָחֶם="bread"
+
+CH2 v21: וַיּוֹאֶל="And was content", מֹשֶׁה="Moses", לָשֶׁבֶת="to live", אֶת־="with", הָאִישׁ="the man", וַיִּתֵּן="and he gave", אֶת־="[direct object marker]", צִפֹּרָה="Zipporah", בִתּוֹ="his daughter", לְמֹשֶׁה="to Moses"
+
+CH2 v22: וַתֵּלֶד="And she bore", בֵּן="a son", וַיִּקְרָא="and he called", אֶת־="(direct object marker)", שְׁמוֹ="his name", גֵּרְשֹׁם="Gershom", כִּי="for", אָמַר="he said", גֵּר="a stranger", הָיִיתִי="I have been", בְּאֶרֶץ="in a land", נָכְרִיָּה="Strange"
+
+CH2 v23: וַיְהִי="And it came to pass", בַיָּמִים="after days", הָרַבִּים="many", הָהֵם="those", וַיָּמָת="that died", מֶלֶךְ="The king", מִצְרַיִם="of Egypt", וַיֵּאָנְחוּ="and groaned", בְנֵי="the sons", יִשְׂרָאֵל="of Israel", מִן="because", הָעֲבֹדָה="of the bondage", וַיִּזְעָקוּ="and they cried out", וַתַּעַל="And came up", שַׁוְעָתָם="their cry", אֶל="to", הָאֱלֹהִים="God", מִן="because", הָעֲבֹדָה="of the bondage"
+
+CH2 v24: וַיִּשְׁמַע="heard", אֱלֹהִים="God", אֶת־="[direct object marker]", נַאֲקָתָם="their groaning", וַיִּזְכֹּר="and remembered", אֱלֹהִים="God", אֶת־="[direct object marker]", בְּרִיתוֹ="his covenant", אֶת־="with", אַבְרָהָם="Abraham", אֶת־="with", יִצְחָק="Isaac", וְאֶת־="and with", יַעֲקֹב="Jacob"
+
+CH2 v25: וַיַּרְא="And looked upon", אֱלֹהִים="God", אֶת־="[direct object marker]", בְּנֵי="the sons", יִשְׂרָאֵל="of Israel", וַיֵּדַע="took notice", אֱלֹהִים="God"
+
+=== CHAPTER 3 ===
+
+CH3 v1: וּמֹשֶׁה="And Moses", הָיָה="was", רֹעֶה="tending", אֶת־="(direct object marker)", צֹאן="the flock", יִתְרוֹ="of Jethro", חֹתְנוֹ="his father-in-law", כֹּהֵן="the priest", מִדְיָן="of Midian", וַיִּנְהַג="and he led", אֶת־="(direct object marker)", הַצֹּאן="the flock", אַחַר="behind", הַמִּדְבָּר="the desert", וַיָּבֹא="and came", אֶל־="to", הַר="the mountain", הָאֱלֹהִים="of God", חֹרֵבָה="Horeb"
+
+CH3 v2: וַיֵּרָא="And appeared", מַלְאַךְ="the Angel", יְהֹוָה="of Yahweh", אֵלָיו="to him", בְּלַבַּת="in a flame", אֵשׁ="of fire", מִתּוֹךְ="from the midst", הַסְּנֶה="of a bush", וַיַּרְא="So he looked", וְהִנֵּה="and behold", הַסְּנֶה="the bush", בֹּעֵר="was burning", בָּאֵשׁ="with fire", וְהַסְּנֶה="but the bush", אֵינֶנּוּ="not", אֻכָּל="[was] consumed"
+
+CH3 v3: וַיֹּאמֶר="said", מֹשֶׁה="Moses", אָסֻרָה="turn aside", נָּא="now", וְאֶרְאֶה="and see", אֶת="(direct object marker)", הַמַּרְאֶה="sight", הַגָּדֹל="great", הַזֶּה="this", מַדּוּעַ="why", לֹא="not", יִבְעַר="does burn", הַסְּנֶה="the bush"
+
+CH3 v4: וַיַּרְא="saw", יְהוָה="the LORD", כִּי="for", סָר="turned aside", לִרְאוֹת="to look", וַיִּקְרָא="called", אֵלָיו="to him", אֱלֹהִים="God", מִתֹּוךְ="from the midst", הַסְּנֶה="of the bush", וַיֹּאמֶר="and said", מֹשֶׁה="Moses", מֹשֶׁה="Moses", וַיֹּאמֶר="and he said", הִנֵּנִי="Here I am"
+
+CH3 v5: וַיֹּאמֶר="And He said", אַל־="not", תִּקְרַב="do draw near", הֲלֹם="this place", שַׁל־="take", נְעָלֶיךָ="your sandals", מֵעַל="off", רַגְלֶיךָ="your feet", כִּי="for", הַמָּקוֹם="the place", אֲשֶׁר="where", אַתָּה="you", עוֹמֵד="stand", עָלָיו="(prepositional marker)", אַדְמַת־="ground", קֹדֶשׁ="holy", הוּא="is"
+
+CH3 v6: וַיֹּאמֶר="said", אָנֹכִי="I", אֱלֹהֵי="God", אָבִיךָ="your father", אֱלֹהֵי="God", אַבְרָהָם="Abraham", אֱלֹהֵי="God", יִצְחָק="Isaac", וֵאלֹהֵי="and God", יַעֲקֹב="Jacob", וַיַּסְתֵּר="hid", מֹשֶׁה="Moses", פָּנָיו="his face", כִּי="for", יָרֵא="was afraid", מֵהַבִּיט="to look", אֶל="upon", הָאֱלֹהִים="God"
+
+CH3 v7: וַיֹּאמֶר="And said", יְהוָה="Yahweh", רָאֹה="surely", רָאִיתִי="I have seen", אֶת־="(direct object marker)", עֳנִי="the oppression", עַמִּי="of My people", אֲשֶׁר="who", בְּמִצְרָיִם="in Egypt", וְאֶת־="and", צַעֲקָתָם="their cry", שָׁמַעְתִּי="have I heard", מִפְּנֵי="because of", נֹגְשָׂיו="their oppressors", כִּי="for", יָדַעְתִּי="I know", אֶת־="(direct object marker)", מַכְאֹבָיו="their sorrows"
+
+CH3 v8: וָאֵרֵד="so I have come down", לְהַצִּילוֹ="to deliver them", מִיַּד="out of the hand", מִצְרַיִם="of Egypt", וּלְהַעֲלֹתוֹ="and to bring them up", מִן="from", הָאָרֶץ="the land", הַהִוא="that", אֶל="to", אֶרֶץ="a land", טוֹבָה="good", וּרְחָבָה="and large", אֶל="to", אֶרֶץ="a land", זָבַת="flowing", חָלָב="with milk", וּדְבָשׁ="and honey", אֶל="to", מְקוֹם="the place", הַכְּנַעֲנִי="of the Canaanite", וְהַחִתִּי="and the Hittite", וְהָאֱמֹרִי="and the Amorite", וְהַפְּרִזִּי="and the Perizzite", וְהַחִוִּי="and the Hivite", וְהַיְבוּסִי="and the Jebusite"
+
+CH3 v9: וְעַתָּה="And therefore", הִנֵּה="behold", צַעֲקַת="the cry", בְּנֵי־="of the sons", יִשְׂרָאֵל="of Israel", בָּאָה="has come", אֵלָי="to Me", וְגַם־="and also", רָאִיתִי="I have seen", אֶת־="-", הַלַּחַץ="the oppression", אֲשֶׁר="with which", מִצְרַיִם="Egypt", לֹחֲצִים="oppressed", אֹתָם="them"
+
+CH3 v10: וְעַתָּה="And therefore", לְכָה="come", וְאֶשְׁלָחֲךָ="and I will send you", אֶל־="to", פַּרְעֹה="Pharaoh", וְהוֹצֵא="that you may bring", אֶת־="-", עַמִּי="My people", בְנֵי־="the sons", יִשְׂרָאֵל="of Israel", מִמִּצְרָיִם="out of Egypt"
+
+CH3 v11: וַיֹּאמֶר="said", מֹשֶׁה="Moses", אֶל־="to", הָאֱלֹהִים="God", מִי="Who", אָנֹכִי="I", כִּי="that", אֵלֵךְ="go", אֶל־="to", פַּרְעֹה="Pharaoh", וְכִי="that", אוֹצִיא="bring", אֶת־="[direct object marker]", בְּנֵי="the sons", יִשְׂרָאֵל="of Israel", מִמִּצְרָיִם="out of Egypt"
+
+CH3 v12: וַיֹּאמֶר="said", כִּי="Certainly", אֶהְיֶה="I will be", עִמָּךְ="with you", וְזֶה="And this", לְּךָ="to you", הָאֹת="[shall be] a sign", כִּי="that", אָנֹכִי="I", שְׁלַחְתִּיךָ="have sent you", בְּהוֹצִיאֲךָ="when you have brought", אֶת="direct object marker", הָעָם="the people", מִמִּצְרַיִם="out of Egypt", תַּעַבְדוּן="you shall serve", אֶת="direct object marker", הָאֱלֹהִים="God", עַל="on", הָהָר="mountain", הַזֶּה="this"
+
+CH3 v13: וַיֹּאמֶר="said", מֹשֶׁה="Moses", אֶל־="to", הָאֱלֹהִים="God", הִנֵּה="Behold", אָנֹכִי="I", בָא="come", אֶל־="to", בְּנֵי="the sons", יִשְׂרָאֵל="of Israel", וְאָמַרְתִּי="and shall say", לָהֶם="to them", אֱלֹהֵי="the God", אֲבוֹתֵיכֶם="of your fathers", שְׁלָחַנִי="has sent me", אֲלֵיכֶם="to you", וְאָמְרוּ="And they say", לִי="to me", מַה־="what", שְּׁמוֹ="His name", מָה="what", אֹמַר="shall I say", אֲלֵהֶם="to them"
+
+CH3 v14: וַיֹּאמֶר="and said", אֱלֹהִים="God", אֶל־="to", מֹשֶׁה="Moses", אֶהְיֶה="I AM", אֲשֶׁר="who", אֶהְיֶה="I AM", וַיֹּאמֶר="and He said", כֹּה="thus", תֹאמַר="you shall say", לִבְנֵי="to the sons", יִשְׂרָאֵל="of Israel", אֶהְיֶה="I AM", שְׁלָחַנִי="has sent me", אֲלֵיכֶם="to you"
+
+CH3 v15: וַיֹּאמֶר="said", עוֹד="furthermore", אֱלֹהִים="God", אֶל="to", מֹשֶׁה="Moses", כֹּה="Thus", תֹאמַר="shall say", אֶל="to", בְּנֵי="the sons", יִשְׂרָאֵל="of Israel", יְהוָה="Yahweh", אֱלֹהֵי="the God", אֲבֹתֵיכֶם="of your fathers", אֱלֹהֵי="the God", אַבְרָהָם="of Abraham", אֱלֹהֵי="the God", יִצְחָק="of Isaac", וֵאלֹהֵי="and the God", יַעֲקֹב="of Jacob", שְׁלָחַנִי="has sent me", אֲלֵיכֶם="to you", זֶה="This", שְּׁמִי="My name", לְעֹלָם="forever", וְזֶה="and this", זִכְרִי="My memorial", לְדֹר="to", דֹּר="generations"
+
+CH3 v16: לֵךְ="Go", וְאָסַפְתָּ="and gather together", אֶת־="[direct object marker]", זִקְנֵי="the elders", יִשְׂרָאֵל="of Israel", וְאָמַרְתָּ="and say", אֲלֵהֶם="to them", יְהוָה="Yahweh", אֱלֹהֵי="God", אֲבֹתֵיכֶם="of your fathers", נִרְאָה="has appeared", אֵלַי="to me", אֱלֹהֵי="the God", אַבְרָהָם="of Abraham", יִצְחָק="of Isaac", וְיַעֲקֹב="and of Jacob", לֵאמֹר="saying", פָּקֹד="surely", פָּקַדְתִּי="I have visited", אֶתְכֶם="you", וְאֶת־="and", הֶעָשׂוּי="[seen] what is done", לָכֶם="to you", בְּמִצְרָיִם="in Egypt"
+
+CH3 v17: וָאֹמַר="said", אַעֲלֶה="will bring", אֶתְכֶם="you", מֵעֳנִי="of the affliction", מִצְרַיִם="of Egypt", אֶל־="to", אֶרֶץ="the land", הַכְּנַעֲנִי="of the Canaanite", וְהַחִתִּי="and the Hittite", וְהָאֱמֹרִי="and the Amorite", וְהַפְּרִזִּי="and the Perizzite", וְהַחִוִּי="and the Hivite", וְהַיְבוּסִי="and the Jebusite", אֶל־="to", אֶרֶץ="a land", זָבַת="flowing", חָלָב="with milk", וּדְבָשׁ="and honey"
+
+CH3 v18: וְשָׁמְעוּ="And they will heed", לְקֹלֶךָ="your voice", וּבָאתָ="and you shall come", אַתָּה="you", וְזִקְנֵי="and the elders", יִשְׂרָאֵל="of Israel", אֶל־="to", מֶלֶךְ="the king", מִצְרַיִם="of Egypt", וַאֲמַרְתֶּם="and you shall say", אֵלָיו="to him", יְהוָה="Yahweh", אֱלֹהֵי="God", הָעִבְרִיִּים="of the Hebrews", נִקְרָה="has met", עָלֵינוּ="with us", וְעַתָּה="Now", נֵלֲכָה־="let us go", נָּא="please", דֶּרֶךְ="journey", שְׁלֹשֶׁת="three", יָמִים="days'", בַּמִּדְבָּר="into the wilderness", וְנִזְבְּחָה="that we may sacrifice", לַיהוָה="to Yahweh", אֱלֹהֵינוּ="our God"
+
+CH3 v19: וַאֲנִי="But I", יָדַעְתִּי="am sure", כִּי="that", לֹא־="not", יִתֵּן="will let", אֶתְכֶם="you", מֶלֶךְ="the king", מִצְרַיִם="of Egypt", לַהֲלֹךְ="go", וְלֹא="unless", בְּיָד="by a hand", חֲזָקָה="mighty"
+
+CH3 v20: וְשָׁלַחְתִּי="will stretch out", אֶת־="(direct object marker)", יָדִי="my hand", וְהִכֵּיתִי="and strike", אֶת־="(direct object marker)", מִצְרַיִם="the Egyptians", בְּכֹל="with all", נִפְלְאֹתַי="my wonders", אֲשֶׁר="which", אֶעֱשֶׂה="I will do", בְּקִרְבּוֹ="in its midst", וְאַחֲרֵי־="and after", כֵן="that", יְשַׁלַּח="he will let go", אֶתְכֶם="you"
+
+CH3 v21: וְנָתַתִּי="will grant", אֶת־="(direct object marker)", חֵן="favor", הָעָם־="people", הַזֶּה="this", בְּעֵינֵי="in the sight", מִצְרָיִם="of the Egyptians", וְהָיָה="and it shall be", כִּי="that when", תֵלֵכוּן="you go", לֹא="not", תֵלְכוּ="you shall go", רֵיקָם="empty-handed"
+
+CH3 v22: וְשָׁאֲלָה="shall ask", אִשָּׁה="woman", מִשְּׁכֶנְתָּהּ="of her neighbor", וּמִגָּרַת="and any woman staying", בֵּיתָהּ="in her house", כְּלֵי="articles", כֶסֶף="of silver", וּכְלֵי="and articles", זָהָב="of gold", וּשְׂמָלֹת="and clothing", וְשַׂמְתֶּם="And you shall put", עַל="on", בְּנֵיכֶם="your sons", וְעַל="and on", בְּנֹתֵיכֶם="your daughters", וְנִצַּלְתֶּם="so you shall plunder", אֶת="(direct object marker)", מִצְרָיִם="Egypt"
+
+=== CHAPTER 4 ===
+
+CH4 v1: וַיַּעַן="answered", מֹשֶׁה="Moses", וַיֹּאמֶר="said", וְהֵן="if", לֹא="not", יַאֲמִינוּ="believe", לִי="me", וְלֹא="or", יִשְׁמְעוּ="listen", בְּקֹלִי="to my voice", כִּי="for", יֹאמְרוּ="they say", לֹא="not", נִרְאָה="has appeared", אֵלֶיךָ="to you", יְהוָה="Yahweh"
+
+CH4 v2: וַיֹּאמֶר="said", אֵלָיו="to him", יְהוָה="Yahweh", מַה="what", זֶּה="this", בְיָדֶךָ="in your hand", וַיֹּאמֶר="and He said", מַטֶּה="A staff"
+
+CH4 v3: וַיֹּאמֶר="And he said", הַשְׁלִיכֵהוּ="Cast it", אַרְצָה="on the ground", וַיַּשְׁלִיכֵהוּ="So He cast it", אַרְצָה="on the ground", וַיְהִי="and it became", לְנָחָשׁ="a serpent", וַיָּנָס="and fled", מֹשֶׁה="Moses", מִפָּנָיו="from it"
+
+CH4 v4: וַיֹּאמֶר="said", יְהוָה="Yahweh", אֶל־="to", מֹשֶׁה="Moses", שְׁלַח="Reach out", יָדְךָ="your hand", וֶאֱחֹז="and take [it]", בִּזְנָבוֹ="by the tail", וַיִּשְׁלַח="and he reached out", יָדוֹ="his hand", וַיַּחֲזֶק="and caught", בּוֹ="it", וַיְהִי="and it became", לְמַטֶּה="a staff", בְּכַפּוֹ="in his hand"
+
+CH4 v5: לְמַעַן="that", יַאֲמִינוּ="they may believe", כִּי־="that", נִרְאָה="has appeared", אֵלֶיךָ="to you", יְהוָה="Yahweh", אֱלֹהֵי="the God", אֲבֹתָם="of their fathers", אֱלֹהֵי="the God", אַבְרָהָם="of Abraham", אֱלֹהֵי="the God", יִצְחָק="of Isaac", וֵאלֹהֵי="and the God", יַעֲקֹב="of Jacob"
+
+CH4 v6: וַיֹּאמֶר="said", יְהוָה="the LORD", לוֹ="to him", עוֹד="furthermore", הָבֵא="put", נָא="now", יָדְךָ="your hand", בְּחֵיקֶךָ="in your bosom", וַיָּבֵא="and he put", יָדוֹ="his hand", בְּחֵיקוֹ="in his bosom", וַיֹּוצִאָהּ="and when he took it out", וְהִנֵּה="then behold", יָדוֹ="his hand", מְצֹרַעַת="[was] leprous", כַּשָּׁלֶג="like snow"
+
+CH4 v7: וַיֹּאמֶר="And He said", הָשֵׁב="Put again", יָדְךָ="your hand", אֶל־="in", חֵיקֶךָ="your bosom", וַיָּשֶׁב="so he put again", יָדוֹ="his hand", אֶל־="in", חֵיקוֹ="his bosom", וַיּוֹצִאָהּ="and drew it", מֵחֵיקוֹ="out of his bosom", וְהִנֵּה־="and behold", שָׁבָה="it was restored", כִּבְשָׂרוֹ="like his flesh"
+
+CH4 v8: וְהָיָה="And it will be", אִם־="if", לֹא="not", יַאֲמִינוּ="they do believe", לָךְ="you", וְלֹא="nor", יִשְׁמְעוּ="heed", לְקֹל="the message", הָאֹת="of the sign", הָרִאשׁוֹן="first", וְהֶאֱמִינוּ="that they may believe", לְקֹל="the message", הָאֹת="of the sign", הָאַחֲרוֹן="latter"
+
+CH4 v9: וְהָיָה="And it shall be", אִם־="if", לֹא="not", יַאֲמִינוּ="they do believe", גַּם="even", לִשְׁנֵי="two", הָאֹתוֹת="signs", הָאֵלֶּה="these", וְלֹא="or", יִשְׁמְעוּן="listen", לְקֹלֶךָ="to your voice", וְלָקַחְתָּ="that you shall take", מִמֵּימֵי="water from", הַיְאֹר="the Nile", וְשָׁפַכְתָּ="and pour [it] on", הַיַּבָּשָׁה="the dry [land]", וְהָיוּ="And", הַמַּיִם="the water", אֲשֶׁר="which", תִּקַּח="you take", מִן־="from", הַיְאֹר="the Nile", וְהָיוּ="then will become", לְדָם="blood", בַּיַּבָּשֶׁת="on the dry [land]"
+
+CH4 v10: וַיֹּאמֶר="said", מֹשֶׁה="Moses", אֶל="to", יְהוָה="Yahweh", בִּי="Please", אֲדֹנָי="my Lord", לֹא="not", אִישׁ="a man", דְּבָרִים="eloquent", אָנֹכִי="I am", גַּם="also", מִתְּמוֹל="from yesterday", גַּם="also", מִשִּׁלְשֹׁם="from before", גַּם="also", מֵאָז="from then on", דַּבֶּרְךָ="You have spoken", אֶל="to", עַבְדֶּךָ="Your servant", כִּי="but", כְבַד="slow", פֶּה="of speech", וּכְבַד="and slow", לָשׁוֹן="of tongue", אָנֹכִי="I am"
+
+CH4 v11: וַיֹּאמֶר="said", יְהוָה="the LORD", אֵלָיו="to him", מִי="Who", שָׂם="has made", פֶּה="the mouth", לָאָדָם="of man", אוֹ="Or", מִי="who", יָשׂוּם="makes", אִלֵּם="the mute", אוֹ="or", חֵרֵשׁ="the deaf", אוֹ="or", פִקֵּחַ="the seeing", אוֹ="or", עִוֵּר="the blind", הֲלֹא="[Have] not", אָנֹכִי="I", יְהוָה="Yahweh"
+
+CH4 v12: וְעַתָּה="now therefore", לֵךְ="go", וְאָנֹכִי="and I", אֶהְיֶה="will be", עִם־="with", פִּיךָ="your mouth", וְהוֹרֵיתִיךָ="and I will teach", אֲשֶׁר="what", תְּדַבֵּר="you shall say"
+
+CH4 v13: וַיֹּאמֶר="said", בִּי="Please", אֲדֹנָי="Lord", שְׁלַח־="send", נָא="I pray", בְּיַד־="the hand", תִּשְׁלָח="will send"
+
+CH4 v14: וַיִּחַר־="So was kindled", אַף="the anger", יְהוָה="of Yahweh", בְּמֹשֶׁה="against Moses", וַיֹּאמֶר="and He said", הֲלֹא="is not", אַהֲרֹן="Aaron", אָחִיךָ="your brother", הַלֵּוִי="the Levite", יָדַעְתִּי="I know", כִּי־="that", דַבֵּר="well", יְדַבֵּר="can speak", הוּא="he", וְגַם="And also", הִנֵּה־="look", הוּא="he", יֹצֵא="is coming out", לִקְרָאתֶךָ="to meet you", וְרָאֲךָ="and when he sees you", וְשָׂמַח="then he will be glad", בְּלִבּוֹ="in his heart"
+
+CH4 v15: וְדִבַּרְתָּ="And you shall speak", אֵלָיו="to him", וְשַׂמְתָּ="and put", אֶת־="[direct object marker]", הַדְּבָרִים="the words", בְּפִיו="in his mouth", וְאָנֹכִי="and I", אֶהְיֶה="will be", עִם־="with", פִּיךָ="your mouth", וְעִם־="and with", פִּיהוּ="his mouth", וְהוֹרֵיתִי="and I will teach", אֶתְכֶם="you", אֵת="[direct object marker]", אֲשֶׁר="what", תַּעֲשׂוּן="you shall do"
+
+CH4 v16: וְדִבֶּר="shall speak", הוּא="he", לְךָ="for you", אֶל="to", הָעָם="the people", וְהָיָה="and", הוּא="he", יִהְיֶה="shall be", לְּךָ="for you", לְפֶה="as a mouth", וְאַתָּה="and you", תִּהְיֶה="shall be", לֹּו="to him", לֵאלֹהִים="as God"
+
+CH4 v17: וְאֶת="And", הַמַּטֶּה="rod", הַזֶּה="this", תִּקַּח="you shall take", בְּיָדֶךָ="in your hand", אֲשֶׁר="with which", תַּעֲשֶׂה="you shall perform", בּוֹ="in you", אֶת="(direct object marker)", הָאֹתֹת="the signs"
+
+CH4 v18: וַיֵּלֶךְ="departed", מֹשֶׁה="Moses", וַיָּשָׁב="and returned", אֶל־="to", יֶתֶר="Jethro", חֹתְנוֹ="his father-in-law", וַיֹּאמֶר="and said", לוֹ="to him", אֵלֲכָה="let me go", נָּא="please", וְאָשׁוּבָה="and return", אֶל־="to", אַחַי="my brothers", אֲשֶׁר־="who", בְּמִצְרַיִם="in Egypt", וְאֶרְאֶה="and see", הַעוֹדָם="whether they are still", חַיִּים="alive", וַיֹּאמֶר="and said", יִתְרוֹ="Jethro", לְמֹשֶׁה="to Moses", לֵךְ="go", לְשָׁלוֹם="in peace"
+
+CH4 v19: וַיֹּאמֶר="said", יְהוָה="Yahweh", אֶל־="to", מֹשֶׁה="Moses", בְּמִדְיָן="in Midian", לֵךְ="go", שֻׁב="return", מִצְרָיִם="to Egypt", כִּי־="for", מֵתוּ="are dead", כָּל־="all", הָאֲנָשִׁים="the men", הַמְבַקְשִׁים="who sought", אֶת־="[direct object marker]", נַפְשְׁךָ="your life"
+
+CH4 v20: וַיִּקַּח="took", מֹשֶׁה="Moses", אֶת־="(direct object marker)", אִשְׁתּוֹ="his wife", וְאֶת־="and", בָּנָיו="his sons", וַיַּרְכִּבֵם="mounted", עַל־="on", הַחֲמֹר="donkey", וַיָּשָׁב="returned", אַרְצָה="to the land", מִצְרָיִם="of Egypt", וַיִּקַּח="took", מֹשֶׁה="Moses", אֶת־="(direct object marker)", מַטֵּה="staff", הָאֱלֹהִים="of God", בְּיָדוֹ="in his hand"
+
+CH4 v21: וַיֹּאמֶר="said", יְהוָה="the LORD", אֶל־="to", מֹשֶׁה="Moses", בְּלֶכְתְּךָ="when you go", לָשׁוּב="to return", מִצְרַיְמָה="to Egypt", רְאֵה="see", כָּל־="all", הַמֹּפְתִים="the wonders", אֲשֶׁר־="which", שַׂמְתִּי="I have put", בְיָדֶךָ="in your hand", וַעֲשִׂיתָם="and you perform", לִפְנֵי="before", פַרְעֹה="Pharaoh", וַאֲנִי="but I", אֲחַזֵּק="will harden", אֶת־="the", לִבּוֹ="his heart", וְלֹא="and not", יְשַׁלַּח="he will let go", אֶת־="the", הָעָם="the people"
+
+CH4 v22: וְאָמַרְתָּ="And you shall say", אֶל־="to", פַּרְעֹה="Pharaoh", כֹּה="Thus", אָמַר="says", יְהוָה="Yahweh", בְּנִי="My son", בְכֹרִי="My firstborn", יִשְׂרָאֵל="Israel"
+
+CH4 v23: וָאֹמַר="said", אֵלֶיךָ="to you", שַׁלַּח="Let", אֶת־="[direct object marker]", בְּנִי="my son", וְיַעַבְדֵנִי="may serve", וַתְּמָאֵן="have refused", לְשַׁלְּחוֹ="to let him go", הִנֵּה="Behold", אָנֹכִי="I", הֹרֵג="will kill", אֶת־="[direct object marker]", בִּנְךָ="your son", בְּכֹרֶךָ="your firstborn"
+
+CH4 v24: וַיְהִי="And it came to pass", בַדֶּרֶךְ="along the way", בַּמָּלוֹן="at the encampment", וַיִּפְגְּשֵׁהוּ="that met him", יְהוָה="Yahweh", וַיְבַקֵּשׁ="and sought", הֲמִיתוֹ="to kill him"
+
+CH4 v25: וַתִּקַּח="took", צִפֹּרָה="Zipporah", צֹר="a sharp stone", וַתִּכְרֹת="and cut off", אֶת־="[direct object marker]", עָרְלַת="the foreskin", בְּנָהּ="of her son", וַתַּגַּע="and cast [it]", לְרַגְלָיו="at his feet", וַתֹּאמֶר="and said", כִּי="surely", חֲתַן="a bridegroom", דָּמִים="of blood", אַתָּה="you [are]", לִי="to me"
+
+CH4 v26: וַיִּרֶף="let (go)", מִמֶּנּוּ="him", אָז="then", אָמְרָה="said", חֲתַן="bridegroom", דָּמִים="of blood", לַמּוּלֹת="of the circumcision"
+
+CH4 v27: וַיֹּאמֶר="said", יְהוָה="Yahweh", אֶל־="to", אַהֲרֹן="Aaron", לֵךְ="go", לִקְרַאת="to meet", מֹשֶׁה="Moses", הַמִּדְבָּרָה="into the wilderness", וַיֵּלֶךְ="so he went", וַיִּפְגְּשֵׁהוּ="and met him", בְּהַר="on the mountain", הָאֱלֹהִים="of God", וַיִּשַּׁק־="and kissed", לוֹ="him"
+
+CH4 v28: וַיַּגֵּד="told", מֹשֶׁה="Moses", לְאַהֲרֹן="Aaron", אֵת="[direct object marker]", כָּל="all", דִּבְרֵי="words", יְהוָה="Yahweh", אֲשֶׁר="who/which", שְׁלָחוֹ="had sent him", וְאֵת="and [direct object marker]", כָּל="all", הָאֹתֹת="signs", אֲשֶׁר="which", צִוָּהוּ="had commanded him"
+
+CH4 v29: וַיֵּלֶךְ="And went", מֹשֶׁה="Moses", וְאַהֲרֹן="and Aaron", וַיַּאַסְפוּ="and gathered together", אֶת="(direct object marker)", כָּל="all", זִקְנֵי="the elders", בְּנֵי="of the sons", יִשְׂרָאֵל="of Israel"
+
+CH4 v30: וַיְדַבֵּר="And spoke", אַהֲרֹן="Aaron", אֵת="[direct object marker]", כָּל="all", הַדְּבָרִים="the words", אֲשֶׁר="which", דִּבֶּר="had spoken", יְהוָה="Yahweh", אֶל="to", מֹשֶׁה="Moses", וַיַּעַשׂ="and he did", הָאֹתֹת="the signs", לְעֵינֵי="in the sight", הָעָם="of the people"
+
+CH4 v31: וַיַּאֲמֵן="believed", הָעָם="the people", וַיִּשְׁמְעוּ="heard", כִּי־="for", פָקַד="had visited", יְהוָה="Yahweh", אֶת־="[direct object marker]", בְּנֵי="the sons", יִשְׂרָאֵל="of Israel", וְכִי="and that", רָאָה="had seen", אֶת־="[direct object marker]", עָנְיָם="their affliction", וַיִּקְּדוּ="bowed", וַיִּשְׁתַּחֲוּוּ="and worshiped"
+
+=== CHAPTER 5 ===
+
+CH5 v1: וְאַחַר="and afterward", בָּאוּ="went in", מֹשֶׁה="Moses", וְאַהֲרֹן="and Aaron", וַיֹּאמְרוּ="and said", אֶל="unto", פַּרְעֹה="Pharaoh", כֹּה="thus", אָמַר="says", יְהוָה="Yahweh", אֱלֹהֵי="God", יִשְׂרָאֵל="of Israel", שַׁלַּח="let go", אֶת="(direct object marker)", עַמִּי="my people", וְיָחֹגּוּ="that they may hold a feast", לִי="to me", בַּמִּדְבָּר="in the wilderness"
+
+CH5 v2: וַיֹּאמֶר="said", פַּרְעֹה="Pharaoh", מִי="who", יְהוָה="Yahweh", אֲשֶׁר="that", אֶשְׁמַע="obey", בְּקֹלוֹ="his voice", לְשַׁלַּח="to let go", אֶת־="[direct object marker]", יִשְׂרָאֵל="Israel", לֹא="not", יָדַעְתִּי="I do know", אֶת־="[direct object marker]", יְהוָה="Yahweh", וְגַם="and", אֶת־="[direct object marker]", יִשְׂרָאֵל="Israel", לֹא="not", אֲשַׁלֵּחַ="let go"
+
+CH5 v3: וַיֹּאמְרוּ="said", אֱלֹהֵי="the God", הָעִבְרִים="of the Hebrews", נִקְרָא="has met", עָלֵינוּ="with us", נֵלֲכָה="Let us go", נָּא="please", דֶּרֶךְ="journey", שְׁלֹשֶׁת="three", יָמִים="days'", בַּמִּדְבָּר="into the desert", וְנִזְבְּחָה="and sacrifice", לַיהוָה="to Yahweh", אֱלֹהֵינוּ="our God", פֶּן="lest", יִפְגָּעֵנוּ="He fall upon us", בַּדֶּבֶר="with pestilence", אוֹ="or", בֶחָרֶב="with the sword"
+
+CH5 v4: וַיֹּאמֶר="And said", אֲלֵהֶם="to them", מֶלֶךְ="the king", מִצְרַיִם="of Egypt", לָמָּה="why", מֹשֶׁה="Moses", וְאַהֲרֹן="and Aaron", תַּפְרִיעוּ="do you take", אֶת־="[direct object marker]", הָעָם="the people", מִמַּעֲשָׂיו="from their work", לְכוּ="Get [back]", לְסִבְלֹתֵיכֶם="to your labor"
+
+CH5 v5: וַיֹּאמֶר="said", פַּרְעֹה="Pharaoh", הֵן="Behold", רַבִּים="many", עַתָּה="now", עַם="the people", הָאָרֶץ="of the land", וְהִשְׁבַּתֶּם="and you make rest", אֹתָם="them", מִסִּבְלֹתָם="from their labor"
+
+CH5 v6: וַיְצַו="commanded", פַּרְעֹה="Pharaoh", בַּיּוֹם="day", הַהוּא="the same", אֶת־="[direct object marker]", הַנֹּגְשִׂים="the taskmasters", בָּעָם="of the people", וְאֶת־="and", שֹׁטְרָיו="their officers", לֵאמֹר="saying"
+
+CH5 v7: לֹא="no longer", תֹאסִפוּן="you shall", לָתֵת="give", תֶּבֶן="straw", לָעָם="the people", לִלְבֹּן="to make", הַלְּבֵנִים="brick", כִּתְמוֹל="as", שִׁלְשֹׁם="before", הֵם="them", יֵלְכוּ="let go", וְקֹשְׁשׁוּ="and gather", לָהֶם="for themselves", תֶּבֶן="straw"
+
+CH5 v8: וְאֶת־="And", מַתְכֹּנֶת="the quota", הַלְּבֵנִים="of bricks", אֲשֶׁר="which", הֵם="they", עֹשִׂים="made", תְּמוֹל="before", שִׁלְשֹׁם="previously", תָּשִׂימוּ="you shall lay", עֲלֵיהֶם="on them", לֹא="Not", תִגְרְעוּ="you shall reduce", מִמֶּנּוּ="it", כִּי־="for", נִרְפִּים="are idle", הֵם="they", עַל־="Upon", כֵּן="thus", הֵם="they", צֹעֲקִים="cry out", לֵאמֹר="saying", נֵלְכָה="let us go", נִזְבְּחָה="[and] sacrifice", לֵאלֹהֵינוּ="to our God"
+
+CH5 v9: תִּכְבַּד="be laid", הָעֲבֹדָה="the labor", עַל־="on", הָאֲנָשִׁים="the men", וְיַעֲשׂוּ־="that they may labor", בָהּ="in it", וְאַל־="and not", יִשְׁעוּ="let them regard", בְּדִבְרֵי־="words", שָׁקֶר="false"
+
+CH5 v10: וַיֵּצְאוּ="went out", נֹגְשֵׂי="taskmasters", הָעָם="of the people", וְשֹׁטְרָיו="and their officers", וַיֹּאמְרוּ="and spoke", אֶל־="to", הָעָם="the people", לֵאמֹר="saying", כֹּה="thus", אָמַר="says", פַּרְעֹה="Pharaoh", אֵינֶנִּי="I will not", נֹתֵן="give", לָכֶם="you", תֶּבֶן="straw"
+
+CH5 v11: אַתֶּם="You", לְכוּ="go", קְחוּ="get", לָכֶם="yourselves", תֶּבֶן="straw", מֵאֲשֶׁר="where", תִּמְצָאוּ="you can find it", כִּי="Yet", אֵין="not", נִגְרָע="will be reduced", מֵעֲבֹדַתְכֶם="Of your work", דָּבָר="ought"
+
+CH5 v12: וַיָּפֶץ="scattered", הָעָם="the people", בְּכָל־="all", אֶרֶץ="the land", מִצְרָיִם="of Egypt", לְקֹשֵׁשׁ="to gather", קַשׁ="stubble", לַתֶּבֶן="for straw"
+
+CH5 v13: וְהַנֹּגְשִׂים="And the taskmasters", אָצִים="kept pressing them", לֵאמֹר="saying", כַּלּוּ="Fulfill", מַעֲשֵׂיכֶם="your work", דְּבַר="quota", יוֹם="day", בְּיוֹמוֹ="by day", כַּאֲשֶׁר="as", בִּהְיוֹת="when there was", הַתֶּבֶן="straw"
+
+CH5 v14: וַיֻּכּוּ="were beaten", שֹׁטְרֵי="the foremen", בְּנֵי="of the sons", יִשְׂרָאֵל="of Israel", אֲשֶׁר־="whom", שָׂמוּ="had set", עֲלֵהֶם="over them", נֹגְשֵׂי="taskmasters", פַרְעֹה="of Pharaoh", לֵאמֹר="[and] were asked", מַדּוּעַ="why", לֹא="not", כִלִּיתֶם="have you fulfilled", חָקְכֶם="your task", לִלְבֹּן="in making brick", כִּתְמֹל="as", שִׁלְשֹׁם="before", גַּם־="both", תְּמוֹל="yesterday", גַּם־="and", הַיֹּום="today"
+
+CH5 v15: וַיָּבֹאוּ="and came", שֹׁטְרֵי="the officers", בְּנֵי="of the sons", יִשְׂרָאֵל="of Israel", וַיִּצְעֲקוּ="and cried out", אֶל־="to", פַּרְעֹה="Pharaoh", לֵאמֹר="saying", לָמָּה="why", תַעֲשֶׂה="are you dealing", כֹה="thus", לַעֲבָדֶיךָ="with your servants"
+
+CH5 v16: תֶּבֶן="straw", אֵין="no", נִתָּן="there is given", לַעֲבָדֶיךָ="to your servants", וּלְבֵנִים="and bricks", אֹמְרִים="they tell", לָנוּ="to us", עֲשׂוּ="to make", וְהִנֵּה="and indeed", עֲבָדֶיךָ="your servants", מֻכִּים="[are] beaten", וְחָטָאת="but the fault", עַמֶּךָ="[is] in your people"
+
+CH5 v17: וַיֹּאמֶר="said", נִרְפִּים="are lazy", אַתֶּם="you", נִרְפִּים="lazy", עַל־="upon", כֵּן="thus", אַתֶּם="you", אֹמְרִים="say", נֵלְכָה="go", נִזְבְּחָה="sacrifice", לַיהוָה="to Yahweh"
+
+CH5 v18: וְעַתָּה="Therefore now", לְכוּ="go", עִבְדוּ="[and] work", וְתֶבֶן="for straw", לֹא־="no", יִנָּתֵן="shall be given", לָכֶם="you", וְתֹכֶן="and yet the quota", לְבֵנִים="of bricks", תִּתֵּנּוּ="you shall deliver"
+
+CH5 v19: וַיִּרְאוּ="And saw", שֹׁטְרֵי="the officers", בְנֵי־="of the sons", יִשְׂרָאֵל="of Israel", אֹתָם="[that] they", בְּרָע="[were] in trouble", לֵאמֹר="after it was said", לֹא־="not", תִגְרְעוּ="You shall reduce", מִלִּבְנֵיכֶם="from bricks", דְּבַר־="your quota", יֹום="day", בְּיֹומוֹ="by day"
+
+CH5 v20: וַיִּפְגְּעוּ="And they met", אֶת="sign of definite direct object", מֹשֶׁה="Moses", וְאֶת="and", אַהֲרֹן="Aaron", נִצָּבִים="who stood there", לִקְרָאתָם="to meet them", בְּצֵאתָם="as they came out", מֵאֵת="from", פַּרְעֹה="Pharaoh"
+
+CH5 v21: וַיֹּאמְרוּ="said", אֲלֵהֶם="to them", יֵרֶא="look", יְהוָה="Yahweh", עֲלֵיכֶם="on you", וְיִשְׁפֹּט="and judge", אֲשֶׁר="because", הִבְאַשְׁתֶּם="to be abhorred", אֶת="[direct object marker]", רֵיחֵנוּ="our savor", בְּעֵינֵי="in the sight", פַרְעֹה="Pharaoh", וּבְעֵינֵי="and in the sight", עֲבָדָיו="of his servants", לָתֶת="to put", חֶרֶב="a sword", בְּיָדָם="in their hand", לְהָרְגֵנוּ="to kill us"
+
+CH5 v22: וַיָּשָׁב="returned", מֹשֶׁה="Moses", אֶל־="to", יְהוָה="the LORD", וַיֹּאמַר="and said", אֲדֹנָי="Lord", לָמָה="why", הֲרֵעֹתָה="have You brought trouble", לָעָם="on people", הַזֶּה="this", לָמָּה="why", זֶּה="[is] this", שְׁלַחְתָּנִי="You have sent me"
+
+CH5 v23: וּמֵאָז="for from when", בָּאתִי="I came", אֶל־="to", פַּרְעֹה="Pharaoh", לְדַבֵּר="to speak", בִּשְׁמֶךָ="in Your name", הֵרַע="he has done evil", לָעָם="to people", הַזֶּה="this", וְהַצֵּל="and have You delivered", לֹא־="not", הִצַּלְתָּ="at all", אֶת־="-", עַמֶּךָ="Your people"
+
+=== CHAPTER 6 ===
+
+CH6 v1: וַיֹּאמֶר="and said", יְהוָה="Yahweh", אֶל="to", מֹשֶׁה="Moses", עַתָּה="now", תִרְאֶה="you shall see", אֲשֶׁר="what", אֶעֱשֶׂה="I will do", לְפַרְעֹה="to Pharaoh", כִּי="for", בְיָד="with a hand", חֲזָקָה="mighty", יְשַׁלְּחֵם="he will let them go", וּבְיָד="and with a hand", חֲזָקָה="mighty", יְגָרְשֵׁם="he will drive them out", מֵאַרְצוֹ="of his land"
+
+CH6 v2: וַיְדַבֵּר="And spoke", אֱלֹהִים="God", אֶל־="to", מֹשֶׁה="Moses", וַיֹּאמֶר="and said", אֵלָיו="to him", אֲנִי="I", יְהוָה="[am] Yahweh"
+
+CH6 v3: וָאֵרָא="and I appeared", אֶל־="to", אַבְרָהָם="Abraham", אֶל־="to", יִצְחָק="Isaac", וְאֶל־="and to", יַעֲקֹב="Jacob", בְּאֵל="as God", שַׁדָּי="Almighty", וּשְׁמִי="but [by] My name", יְהוָה="Yahweh", לֹא="not", נוֹדַעְתִּי="I was known", לָהֶם="to them"
+
+CH6 v4: וְגַם="And also", הֲקִמֹתִי="I have established", אֶת־="[direct object marker]", בְּרִיתִי="my covenant", אִתָּם="with them", לָתֵת="to give", לָהֶם="them", אֶת־="[direct object marker]", אֶרֶץ="the land", כְּנָעַן="of Canaan", אֵת="[direct object marker]", אֶרֶץ="the land", מְגֻרֵיהֶם="of their sojourning", אֲשֶׁר־="which", גָּרוּ="they were strangers", בָהּ="in"
+
+CH6 v5: וְגַם="And also", אֲנִי="I", שָׁמַעְתִּי="have heard", אֶת־="[direct object marker]", נַאֲקַת="the groaning", בְּנֵי="of the sons", יִשְׂרָאֵל="of Israel", אֲשֶׁר="whom", מִצְרַיִם="Egypt", מַעֲבִדִים="keeps in bondage", אֹתָם="[direct object marker]", וָאֶזְכֹּר="and I have remembered", אֶת־="[direct object marker]", בְּרִיתִי="My covenant"
+
+CH6 v6: לָכֵן="Therefore", אֱמֹר="say", לִבְנֵי־="to the sons", יִשְׂרָאֵל="of Israel", אֲנִי="I", יְהוָה="Yahweh", וְהוֹצֵאתִי="and I will bring out", אֶתְכֶם="you", מִתַּחַת="from under", סִבְלֹת="the burdens", מִצְרַיִם="of Egypt", וְהִצַּלְתִּי="and I will rescue", אֶתְכֶם="you", מֵעֲבֹדָתָם="from their bondage", וְגָאַלְתִּי="and I will redeem", אֶתְכֶם="you", בִּזְרוֹעַ="with an arm", נְטוּיָה="outstretched", וּבִשְׁפָטִים="and with judgments", גְּדֹלִים="great"
+
+CH6 v7: וְלָקַחְתִּי="will take", אֶתְכֶם="you", לִי="to me", לְעָם="as My people", וְהָיִיתִי="and I will be", לָכֶם="to you", לֵאלֹהִים="God", וִידַעְתֶּם="then you shall know", כִּי="that", אֲנִי="I", יְהוָה="Yahweh", אֱלֹהֵיכֶם="your God", הַמּוֹצִיא="who brings out", אֶתְכֶם="you", מִתַּחַת="from under", סִבְלוֹת="the burdens", מִצְרָיִם="of Egypt"
+
+CH6 v8: וְהֵבֵאתִי="And I will bring", אֶתְכֶם="you", אֶל־="into", הָאָרֶץ="the land", אֲשֶׁר="which", נָשָׂאתִי="I swore", אֶת־="[object marker]", יָדִי="[my hand]", לָתֵת="to give", אֹתָהּ="it", לְאַבְרָהָם="to Abraham", לְיִצְחָק="Isaac", וּלְיַעֲקֹב="and Jacob", וְנָתַתִּי="and I will give", אֹתָהּ="it", לָכֶם="to you", מוֹרָשָׁה="[as] a heritage", אֲנִי="I", יְהוָה="[am] Yahweh"
+
+CH6 v9: וַיְדַבֵּר="spoke", מֹשֶׁה="Moses", כֵּן="thus", אֶל־="to", בְּנֵי="the sons", יִשְׂרָאֵל="of Israel", וְלֹא="but not", שָׁמְעוּ="they did heed", אֶל־="unto", מֹשֶׁה="Moses", מִקֹּצֶר="because of anguish", רוּחַ="of spirit", וּמֵעֲבֹדָה="and bondage", קָשָׁה="cruel"
+
+CH6 v10: וַיְדַבֵּר="And spoke", יְהוָה="Yahweh", אֶל־="to", מֹשֶׁה="Moses", לֵּאמֹר="saying"
+
+CH6 v11: בֹּא="go in", דַבֵּר="tell", אֶל־="unto", פַּרְעֹה="Pharaoh", מֶלֶךְ="king", מִצְרָיִם="of Egypt", וִישַׁלַּח="to let go", אֶת־="[direct object marker]", בְּנֵי־="the sons", יִשְׂרָאֵל="of Israel", מֵאַרְצוֹ="out of his land"
+
+CH6 v12: וַיְדַבֵּר="And spoke", מֹשֶׁה="Moses", לִפְנֵי="before", יְהוָה="Yahweh", לֵאמֹר="saying", הֵן="behold", בְּנֵי="the sons", יִשְׂרָאֵל="of Israel", לֹא="not", שָׁמְעוּ="have heeded", אֵלַי="me", וְאֵיךְ="then how", יִשְׁמָעֵנִי="shall heed me", פַרְעֹה="Pharaoh", וַאֲנִי="for I [am]", עֲרַל="of uncircumcised", שְׂפָתָיִם="lips"
+
+CH6 v13: וַיְדַבֵּר="and spoke", יְהוָה="Yahweh", אֶל־="to", מֹשֶׁה="Moses", וְאֶל־="and to", אַהֲרֹן="Aaron", וַיְצַוֵּם="and gave them a command", אֶל־="to", בְּנֵי="the sons", יִשְׂרָאֵל="of Israel", וְאֶל־="and to", פַּרְעֹה="Pharaoh", מֶלֶךְ="king", מִצְרָיִם="of Egypt", לְהוֹצִיא="to bring", אֶת־="(direct object marker)", בְּנֵי־="the sons", יִשְׂרָאֵל="of Israel", מֵאֶרֶץ="out of the land", מִצְרָיִם="of Egypt"
+
+CH6 v14: אֵלֶּה="These", רָאשֵׁי="are the heads", בֵית="of houses", אֲבֹתָם="their fathers'", בְּנֵי="the sons", רְאוּבֵן="of Reuben", בְּכֹר="the firstborn", יִשְׂרָאֵל="of Israel", חֲנוֹךְ="Hanoch", וּפַלּוּא="and Pallu", חֶצְרוֹן="Hezron", וְכַרְמִי="and Carmi", אֵלֶּה="these", מִשְׁפְּחֹת="are the families", רְאוּבֵן="of Reuben"
+
+CH6 v15: וּבְנֵי="the sons", שִׁמְעוֹן="of Simeon", יְמוּאֵל="Jemuel", וְיָמִין="and Jamin", וְאֹהַד="and Ohad", וְיָכִין="and Jachin", וְצֹחַר="and Zohar", וְשָׁאוּל="and Shaul", בֶּן־="the son", הַכְּנַעֲנִית="of a Canaanite", אֵלֶּה="these", מִשְׁפְּחֹת="are the families", שִׁמְעוֹן="of Simeon"
+
+CH6 v16: וְאֵלֶּה="And these", שְׁמוֹת="names", בְּנֵי="of the sons", לֵוִי="of Levi", לְתֹלְדֹתָם="according to their generations", גֵּרְשׁוֹן="Gershon", וּקְהָת="and Kohath", וּמְרָרִי="and Merari", וּשְׁנֵי="and the years", חַיֵּי="of the life", לֵוִי="of Levi", שֶׁבַע="seven", וּשְׁלֹשִׁים="and thirty", וּמְאַת="and a hundred", שָׁנָה="years"
+
+CH6 v17: בְּנֵי="the sons", גֵרְשֹׁון="of Gershon", לִבְנִי="Libni", וְשִׁמְעִי="and Shimei", לְמִשְׁפְּחֹתָם="according to their families"
+
+CH6 v18: וּבְנֵי="And the sons", קְהָת="of Kohath", עַמְרָם="Amram", וְיִצְהָר="and Izhar", וְחֶבְרוֹן="and Hebron", וְעֻזִּיאֵל="and Uzziel", וּשְׁנֵי="and the years", חַיֵּי="of the life", קְהָת="of Kohath", שָׁלֹשׁ="were three", וּשְׁלֹשִׁים="and thirty", וּמְאַת="and a hundred", שָׁנָה="years"
+
+CH6 v19: וּבְנֵי="And the sons", מְרָרִי="of Merari", מַחְלִי="Mahli", וּמוּשִׁי="and Mushi", אֵלֶּה="These", מִשְׁפְּחֹת="are the families", הַלֵּוִי="of Levi", לְתֹלְדֹתָם="according to their generations"
+
+CH6 v20: וַיִּקַּח="took", עַמְרָם="Amram", אֶת־="[direct object marker]", יוֹכֶבֶד="Jochebed", דֹּדָתוֹ="his father's sister", לוֹ="for himself", לְאִשָּׁה="as wife", וַתֵּלֶד="and she bore", לוֹ="to him", אֶת־="[direct object marker]", אַהֲרֹן="Aaron", וְאֶת־="and", מֹשֶׁה="Moses", וּשְׁנֵי="and the years", חַיֵּי="of the life", עַמְרָם="of Amram", שֶׁבַע="seven", וּשְׁלֹשִׁים="and thirty", וּמְאַת="and a hundred", שָׁנָה="years"
+
+CH6 v21: וּבְנֵי="And the sons", יִצְהָר="of Izhar", קֹרַח="Korah", וָנֶפֶג="and Nepheg", וְזִכְרִי="and Zichri"
+
+CH6 v22: וּבְנֵי="and the sons", עֻזִּיאֵל="of Uzziel", מִישָׁאֵל="Mishael", וְאֶלְצָפָן="and Elzaphan", וְסִתְרִי="and Sithri"
+
+CH6 v23: וַיִּקַּח="And took", אַהֲרֹן="Aaron", אֶת־="(direct object marker)", אֱלִישֶׁבַע="Elisheba", בַּת־="daughter", עַמִּינָדָב="of Amminadab", אֲחוֹת="sister", נַחְשׁוֹן="of Nahshon", לוֹ="to himself", לְאִשָּׁה="as wife", וַתֵּלֶד="and she bore", לוֹ="to him", אֶת־="(direct object marker)", נָדָב="Nadab", וְאֶת־="and", אֲבִיהוּא="Abihu", אֶת־="(direct object marker)", אֶלְעָזָר="Eleazar", וְאֶת־="and", אִיתָמָר="Ithamar"
+
+CH6 v24: וּבְנֵי="And the sons", קֹרַח="of Korah", אַסִּיר="Assir", וְאֶלְקָנָה="and Elkanah", וַאֲבִיאָסָף="and Abiasaph", אֵלֶּה="these", מִשְׁפְּחֹת="are the families", הַקָּרְחִי="of the Korahite"
+
+CH6 v25: וְאֶלְעָזָר="And Eleazar", בֶּן־="son", אַהֲרֹן="of Aaron", לָקַח־="took", לוֹ="for himself", מִבְּנוֹת="one of the daughters", פּוּטִיאֵל="of Putiel", לוֹ="to him", לְאִשָּׁה="as wife", וַתֵּלֶד="and she bore", לוֹ="him", אֶת־="[direct object marker]", פִּינְחָס="Phinehas", אֵלֶּה="These", רָאשֵׁי="[are] the heads", אֲבוֹת="of the fathers", הַלְוִיִּם="of the Levites", לְמִשְׁפְּחֹתָם="according to their families"
+
+CH6 v26: הוּא="he", אַהֲרֹן="Aaron", וּמֹשֶׁה="and Moses", אֲשֶׁר="whom", אָמַר="said", יְהוָה="Yahweh", לָהֶם="to them", הוֹצִיאוּ="bring out", אֶת="(direct object marker)", בְּנֵי="the sons", יִשְׂרָאֵל="of Israel", מֵאֶרֶץ="from the land", מִצְרַיִם="of Egypt", עַל="according to", צִבְאֹתָם="their armies"
+
+CH6 v27: הֵם="These", הַמְדַבְּרִים="they who spoke", אֶל="to", פַּרְעֹה="Pharaoh", מֶלֶךְ="king", מִצְרַיִם="of Egypt", לְהוֹצִיא="to bring out", אֶת="(direct object marker)", בְּנֵי="the sons", יִשְׂרָאֵל="of Israel", מִמִּצְרָיִם="from Egypt", הוּא="that", מֹשֶׁה="Moses", וְאַהֲרֹן="and Aaron"
+
+CH6 v28: וַיְהִי="And it came to pass", בְּיוֹם="on the day", דִּבֶּר="spoke", יְהוָה="Yahweh", אֶל־="to", מֹשֶׁה="Moses", בְּאֶרֶץ="in the land", מִצְרָיִם="of Egypt"
+
+CH6 v29: וַיְדַבֵּר="spoke", יְהוָה="the LORD", אֶל־="to", מֹשֶׁה="Moses", לֵּאמֹר="saying", אֲנִי="I", יְהוָה="the LORD", דַּבֵּר="speak", אֶל־="to", פַּרְעֹה="Pharaoh", מֶלֶךְ="king", מִצְרַיִם="of Egypt", אֵת="-", כָּל־="all", אֲשֶׁר="that", אֲנִי="I", דֹּבֵר="speak", אֵלֶיךָ="to you"
+
+CH6 v30: וַיֹּאמֶר="said", מֹשֶׁה="Moses", לִפְנֵי="before", יְהוָה="the LORD", הֵן="Behold", אֲנִי="I", עֲרַל="unskilled", שְׂפָתַיִם="lips", וְאֵיךְ="and how", יִשְׁמַע="shall heed", אֵלַי="me", פַּרְעֹה="Pharaoh"
+
+=== CHAPTER 7 ===
+
+CH7 v1: וַיֹּאמֶר="said", יְהוָה="the LORD", אֶל־="to", מֹשֶׁה="Moses", רְאֵה="See", נְתַתִּיךָ="make", אֱלֹהִים="you God", לְפַרְעֹה="to Pharaoh", וְאַהֲרֹן="and Aaron", אָחִיךָ="and your brother", יִהְיֶה="become", נְבִיאֶךָ="shall be your prophet"
+
+CH7 v2: אַתָּה="You", תְדַבֵּר="shall speak", אֵת="[direct object marker]", כָּל="all", אֲשֶׁר="that", אֲצַוֶּךָּ="I command you", וְאַהֲרֹן="and Aaron", אָחִיךָ="your brother", יְדַבֵּר="shall speak", אֶל="to", פַּרְעֹה="Pharaoh", וְשִׁלַּח="that he send", אֶת="[direct object marker]", בְּנֵי="the sons", יִשְׂרָאֵל="of Israel", מֵאַרְצוֹ="out of his land"
+
+CH7 v3: וַאֲנִי="And I", אַקְשֶׁה="will harden", אֶת־="[direct object marker]", לֵב="heart", פַּרְעֹה="of Pharaoh", וְהִרְבֵּיתִי="and multiply", אֶת־="[direct object marker]", אֹתוֹתַי="My signs", וְאֶת־="and", מוֹפְתַי="My wonders", בְּאֶרֶץ="in the land", מִצְרָיִם="of Egypt"
+
+CH7 v4: וְלֹא="But not", יִשְׁמַע="will heed", אֲלֵכֶם="you", פַּרְעֹה="Pharaoh", וְנָתַתִּי="so that I may lay", אֶת־="[direct object marker]", יָדִי="My hand", בְּמִצְרָיִם="on Egypt", וְהוֹצֵאתִי="and bring", אֶת־="[direct object marker]", צִבְאֹתַי="My armies", אֶת־="[direct object marker]", עַמִּי="My people", בְנֵי־="the sons", יִשְׂרָאֵל="of Israel", מֵאֶרֶץ="out of the land", מִצְרַיִם="of Egypt", בִּשְׁפָטִים="by judgments", גְּדֹלִים="great"
+
+CH7 v5: וְיָדְעוּ="shall know", מִצְרַיִם="Egyptian", כִּי־="that", אֲנִי="I am", יְהוָה="the LORD", בִּנְטֹתִי="stretch", אֶת־="(direct object marker)", יָדִי="my hand", עַל־="and", מִצְרָיִם="Egyptian", וְהוֹצֵאתִי="and bring", אֶת־="(direct object marker)", בְּנֵי־="the sons", יִשְׂרָאֵל="of Israel", מִתֹּוכָם="their midst"
+
+CH7 v6: וַיַּעַשׂ="And [so] did", מֹשֶׁה="Moses", וְאַהֲרֹן="and Aaron", כַּאֲשֶׁר="just as", צִוָּה="commanded", יְהוָה="Yahweh", אֹתָם="them", כֵּן="so", עָשׂוּ="they did"
+
+CH7 v7: וּמֹשֶׁה="And Moses", בֶּן־="old", שְׁמֹנִים="eighty", שָׁנָה="years", וְאַהֲרֹן="and Aaron", בֶּן־="old", שָׁלֹשׁ="three", וּשְׁמֹנִים="and eighty", שָׁנָה="years", בְּדַבְּרָם="when they spoke", אֶל־="to", פַּרְעֹה="Pharaoh"
+
+CH7 v8: וַיֹּאמֶר="spoke", יְהוָה="Yahweh", אֶל="to", מֹשֶׁה="Moses", וְאֶל="and", אַהֲרֹן="Aaron", לֵאמֹר="saying"
+
+CH7 v9: כִּי="when", יְדַבֵּר="speaks", אֲלֵכֶם="to you", פַּרְעֹה="Pharaoh", לֵאמֹר="saying", תְּנוּ="Show", לָכֶם="for yourselves", מוֹפֵת="a miracle", וְאָמַרְתָּ="then you shall say", אֶל="to", אַהֲרֹן="Aaron", קַח="take", אֶת="[direct object marker]", מַטְּךָ="your rod", וְהַשְׁלֵךְ="and cast [it]", לִפְנֵי="before", פַרְעֹה="Pharaoh", יְהִי="let it become", לְתַנִּין="a serpent"
+
+CH7 v10: וַיָּבֹא="came", מֹשֶׁה="Moses", וְאַהֲרֹן="and Aaron", אֶל־="to", פַּרְעֹה="Pharaoh", וַיַּעַשׂוּ="did", כֵן="so", כַּאֲשֶׁר="just as", צִוָּה="commanded", יְהוָה="Yahweh", וַיַּשְׁלֵךְ="cast down", אַהֲרֹן="Aaron", אֶת־="[direct object marker]", מַטֵּהוּ="his rod", לִפְנֵי="before", פַרְעֹה="Pharaoh", וְלִפְנֵי="and before", עֲבָדָיו="his servants", וַיְהִי="became", לְתַנִּין="a serpent"
+
+CH7 v11: וַיִּקְרָא="called", גַּם="also", פַּרְעֹה="Pharaoh", לַחֲכָמִים="the wise men", וְלַמְכַשְּׁפִים="and the sorcerers", וַיַּעֲשׂוּ="did", גַם="also", הֵם="they", חַרְטֻמֵּי="the magicians", מִצְרַיִם="of Egypt", בְּלַהֲטֵיהֶם="with their enchantments", כֵּן="in like manner"
+
+CH7 v12: וַיַּשְׁלִיכוּ="threw", אִישׁ="each", מַטֵּהוּ="his staff", וַיִּהְיוּ="turned", לְתַנִּינִם="serpents", וַיִּבְלַע="swallowed", מַטֵּה="staff", אַהֲרֹן="Aaron's", אֶת="(direct object marker)", מַטֹּתָם="their staffs"
+
+CH7 v13: וַיֶּחֱזַק="And grew hard", לֵב="heart", פַּרְעֹה="of Pharaoh", וְלֹא="and not", שָׁמַע="he did heed", אֲלֵהֶם="them", כַּאֲשֶׁר="as", דִּבֶּר="had said", יְהוָה="Yahweh"
+
+CH7 v14: וַיֹּאמֶר="said", יְהוָה="Yahweh", אֶל־="to", מֹשֶׁה="Moses", כָּבֵד="is hard", לֵב="heart", פַּרְעֹה="of Pharaoh", מֵאֵן="he refuses", לְשַׁלַּח="to let go", הָעָם="the people"
+
+CH7 v15: לֵךְ="Go", אֶל־="to", פַּרְעֹה="Pharaoh", בַּבֹּקֶר="in the morning", הִנֵּה="behold", יֹצֵא="he goes out", הַמַּיְמָה="to the water", וְנִצַּבְתָּ="and you shall stand", לִקְרָאתוֹ="to meet him", עַל־="by", שְׂפַת="bank", הַיְאֹר="of the Nile", וְהַמַּטֶּה="and the rod", אֲשֶׁר־="which", נֶהְפַּךְ="was turned", לְנָחָשׁ="to a serpent", תִּקַּח="you shall take", בְּיָדֶךָ="in your hand"
+
+CH7 v16: וְאָמַרְתָּ="And you shall say", אֵלָיו="to him", יְהוָה="Yahweh", אֱלֹהֵי="God", הָעִבְרִים="of the Hebrews", שְׁלָחַנִי="has sent me", אֵלֶיךָ="to you", לֵאמֹר="saying", שַׁלַּח="let go", אֶת־="[direct object marker]", עַמִּי="My people", וְיַעַבְדֻנִי="that they may serve Me", בַּמִּדְבָּר="in the wilderness", וְהִנֵּה="But indeed", לֹא־="not", שָׁמַעְתָּ="you would hear", עַד־="until", כֹּה="now"
+
+CH7 v17: כֹּה="Thus", אָמַר="says", יְהוָה="Yahweh", בְּזֹאת="by this", תֵּדַע="you shall know", כִּי="that", אֲנִי="I", יְהוָה="Yahweh", הִנֵּה="behold", אָנֹכִי="I", מַכֶּה="will strike", בַּמַּטֶּה="with the rod", אֲשֶׁר="that", בְּיָדִי="in my hand", עַל="upon", הַמַּיִם="the waters", אֲשֶׁר="which", בַּיְאֹר="in the Nile", וְנֶהֶפְכוּ="and they shall be turned", לְדָם="to blood"
+
+CH7 v18: וְהַדָּגָה="And the fish", אֲשֶׁר־="that", בַּיְאֹר="in the Nile", תָּמוּת="shall die", וּבָאַשׁ="and shall stink", הַיְאֹר="the Nile", וְנִלְאוּ="and will loathe", מִצְרַיִם="Egypt", לִשְׁתּוֹת="to drink", מַיִם="the water", מִן־="of", הַיְאֹר="the Nile"
+
+CH7 v19: וַיֹּאמֶר="said", יְהוָה="the LORD", אֶל־="to", מֹשֶׁה="Moses", אֱמֹר="Say", אֶל־="to", אַהֲרֹן="Aaron", קַח="Take", מַטְּךָ="your staff", וּנְטֵה־="and stretch", יָדְךָ="your hand", עַל־="over", מֵימֵי="the waters", מִצְרַיִם="of Egypt", עַל־="over", נַהֲרֹתָם="their rivers", עַל־="over", יְאֹרֵיהֶם="their streams", וְעַל־="and over", אַגְמֵיהֶם="their pools", וְעַל="and over", כָּל־="all", מִקְוֵה="their reservoirs", מֵימֵיהֶם="of water", וְיִהְיוּ־="may become", דָם="blood", וְהָיָה="and there shall be", דָם="blood", בְּכָל־="throughout all", אֶרֶץ="the land", מִצְרַיִם="of Egypt", וּבָעֵצִים="and in wood", וּבָאֲבָנִים="and in stone"
+
+CH7 v20: וַיַּעֲשׂוּ="did", כֵן="so", מֹשֶׁה="Moses", וְאַהֲרֹן="and Aaron", כַּאֲשֶׁר="just as", צִוָּה="commanded", יְהוָה="Yahweh", וַיָּרֶם="lifted up", בַּמַּטֶּה="the rod", וַיַּךְ="struck", אֶת="(direct object marker)", הַמַּיִם="the waters", אֲשֶׁר="that", בַּיְאֹר="in the Nile", לְעֵינֵי="in the sight", פַרְעֹה="of Pharaoh", וּלְעֵינֵי="and in the sight", עֲבָדָיו="of his servants", וַיֵּהָפְכוּ="were turned", כָּל="all", הַמַּיִם="the waters", אֲשֶׁר="that", בַּיְאֹר="in the Nile", לְדָם="to blood"
+
+CH7 v21: וְהַדָּגָה="And the fish", אֲשֶׁר="that", בַּיְאֹר="in the Nile", מֵתָה="died", וַיִּבְאַשׁ="and stank", הַיְאֹר="the Nile", וְלֹא="and not", יָכְלוּ="could", מִצְרַיִם="Egypt", לִשְׁתּוֹת="drink", מַיִם="the water", מִן="of", הַיְאֹר="the Nile", וַיְהִי="so there was", הַדָּם="blood", בְּכָל="throughout all", אֶרֶץ="the land", מִצְרָיִם="of Egypt"
+
+CH7 v22: וַיַּעֲשׂוּ="did", כֵן="so", חַרְטֻמֵּי="the magicians", מִצְרַיִם="of Egypt", בְּלָטֵיהֶם="with their enchantments", וַיֶּחֱזַק="was hardened", לֵב="heart", פַּרְעֹה="of Pharaoh", וְלֹא="and not", שָׁמַע="he did heed", אֲלֵהֶם="them", כַּאֲשֶׁר="as", דִּבֶּר="had said", יְהוָה="Yahweh"
+
+CH7 v23: וַיִּפֶן="turned", פַּרְעֹה="Pharaoh", וַיָּבֹא="and went", אֶל־="into", בֵּיתוֹ="his house", וְלֹא־="and neither", שָׁת="was moved", לִבּוֹ="his heart", גַּם־="also", לָזֹאת="by this"
+
+CH7 v24: וַיַּחְפְּרוּ="dug", כָל="all", מִצְרַיִם="Egyptian", סְבִיבֹת="around", הַיְאֹר="the Nile", מַיִם="water", לִשְׁתּוֹת="to drink", כִּי="for", לֹא="not", יָכְלוּ="could", לִשְׁתֹּת="drink", מִמֵּימֵי="of the water", הַיְאֹר="of the Nile"
+
+CH7 v25: וַיִּמָּלֵא="And passed", שִׁבְעַת="seven", יָמִים="days", אַחֲרֵי="after", הַכּוֹת="had struck", יְהוָה="Yahweh", אֶת="[direct object marker]", הַיְאֹר="the river"
+
+=== CHAPTER 8 ===
+
+CH8 v1: וַיֹּאמֶר="said", יְהוָה="the LORD", אֶל־="to", מֹשֶׁה="Moses", בֹּא="Go", אֶל־="to", פַּרְעֹה="Pharaoh", וְאָמַרְתָּ="and say", אֵלָיו="to him", כֹּה="Thus", אָמַר="says", יְהוָה="the LORD", שַׁלַּח="Let", אֶת־="(direct object marker)", עַמִּי="my people", וְיַעַבְדֻנִי="that they may serve Me"
+
+CH8 v2: וְאִם־="But if", מָאֵן="refuse", אַתָּה="you", לְשַׁלֵּחַ="to let [them] go", הִנֵּה="behold", אָנֹכִי="I", נֹגֵף="will smite", אֶת־="[direct object marker]", כָּל־="all", גְּבוּלְךָ="your territory", בַּצְפַרְדְּעִים="with frogs"
+
+CH8 v3: וְשָׁרַץ="will swarm", הַיְאֹר="the Nile", צְפַרְדְּעִים="frogs", וְעָלוּ="will come", וּבָאוּ="and go", בְּבֵיתֶךָ="your house", וּבַחֲדַר="chamber", מִשְׁכָּבְךָ="bed", וְעַל־="and on", מִטָּתֶךָ="your bed", וּבְבֵית="the houses", עֲבָדֶיךָ="of your servants", וּבְעַמֶּךָ="your people", וּבְתַנּוּרֶיךָ="your ovens", וּבְמִשְׁאֲרוֹתֶיךָ="your kneading bowls"
+
+CH8 v4: וּבְכָה="and on you", וּבְעַמְּךָ="and on your people", וּבְכָל־="and on all", עֲבָדֶיךָ="your servants", יַעֲלוּ="shall come up", הַצְפַרְדְּעִים="the frogs"
+
+CH8 v5: וַיֹּאמֶר="And spoke", יְהוָה="Yahweh", אֶל־="to", מֹשֶׁה="Moses", אֱמֹר="Say", אֶל־="to", אַהֲרֹן="Aaron", נְטֵה="Stretch out", אֶת־="[direct object marker]", יָדְךָ="your hand", בְּמַטֶּךָ="with your rod", עַל־="over", הַנְּהָרֹת="the streams", עַל־="over", הַיְאֹרִים="the rivers", וְעַל־="and over", הָאֲגַמִּים="the ponds", וְהַעַל="and cause to come up", אֶת־="[direct object marker]", הַצְפַרְדְּעִים="frogs", עַל־="on", אֶרֶץ="the land", מִצְרָיִם="of Egypt"
+
+CH8 v6: וַיֵּט="stretched out", אַהֲרֹן="Aaron", אֶת־="direct object marker", יָדוֹ="his hand", עַל="over", מֵימֵי="the waters", מִצְרָיִם="of Egypt", וַתַּעַל="and came up", הַצְּפַרְדֵּעַ="the frogs", וַתְּכַס="and covered", אֶת־="direct object marker", אֶרֶץ="the land", מִצְרָיִם="of Egypt"
+
+CH8 v7: וַיַּעֲשׂוּ="did", כֵן="so", הַחֲרְטֻמִּים="the magicians", בְּלָטֵיהֶם="with their enchantments", וַיַּעֲלוּ="and brought up", אֶת־="[direct object marker]", הַצְפַרְדְּעִים="frogs", עַל־="on", אֶרֶץ="the land", מִצְרָיִם="of Egypt"
+
+CH8 v8: וַיִּקְרָא="called", פַרְעֹה="Pharaoh", לְמֹשֶׁה="for Moses", וּלְאַהֲרֹן="and Aaron", וַיֹּאמֶר="and said", הַעְתִּירוּ="Entreat", אֶל־="(preposition)", יְהוָה="Yahweh", וְיָסֵר="that He may take away", הַצְפַרְדְּעִים="the frogs", מִמֶּנִּי="from me", וּמֵעַמִּי="and from my people", וַאֲשַׁלְּחָה="and I will let go", אֶת־="(object marker)", הָעָם="the people", וְיִזְבְּחוּ="that they may sacrifice", לַיהוָה="to Yahweh"
+
+CH8 v9: וַיֹּאמֶר="said", מֹשֶׁה="Moses", לְפַרְעֹה="to Pharaoh", הִתְפָּאֵר="the honor", עָלַי="and", לְמָתַי="when", אַעְתִּיר="entreat", לְךָ="for you", וְלַעֲבָדֶיךָ="and your servants", וּלְעַמְּךָ="and your people", לְהַכְרִית="be destroyed", הַצֲפַרְדְּעִים="the frogs", מִמְּךָ="at", וּמִבָּתֶּיךָ="and your houses", רַק="in", בַּיְאֹר="the river", תִּשָּׁאַרְנָה="may be left"
+
+CH8 v10: וַיֹּאמֶר="said", לְמָחָר="Tomorrow", וַיֹּאמֶר="said", כִּדְבָרְךָ="to your word", לְמַעַן="that", תֵּדַע="you may know", כִּי־="that", אֵין="there is no one", כַּיהוָה="like Yahweh", אֱלֹהֵינוּ="our God"
+
+CH8 v11: וְסָרוּ="will depart", הַצְפַרְדְּעִים="the frogs", מִמְּךָ="from you", וּמִבָּתֶּיךָ="and your houses", וּמֵעֲבָדֶיךָ="and your servants", וּמֵעַמֶּךָ="and your people", רַק="only", בַּיְאֹר="in the Nile", תִּשָּׁאַרְנָה="they shall remain"
+
+CH8 v12: וַיֵּצֵא="went out", מֹשֶׁה="Moses", וְאַהֲרֹן="and Aaron", מֵעִם="from", פַּרְעֹה="Pharaoh", וַיִּצְעַק="cried out", מֹשֶׁה="Moses", אֶל־="to", יְהוָה="Yahweh", עַל־="concerning", דְּבַר="matter of", הַצְפַרְדְּעִים="the frogs", אֲשֶׁר־="which", שָׂם="he had brought", לְפַרְעֹה="against Pharaoh"
+
+CH8 v13: וַיַּעַשׂ="did", יְהוָה="the LORD", כִּדְבַר="to the word", מֹשֶׁה="of Moses", וַיָּמֻתוּ="died", הַצְפַרְדְּעִים="and the frogs", מִן־="out", הַבָּתִּים="of the houses", מִן־="out", הַחֲצֵרֹת="the courts", וּמִן־="and out", הַשָּׂדֹת="of the fields"
+
+CH8 v14: וַיִּצְבְּרוּ="And they gathered together", אֹתָם="them", חֳמָרִם="on heaps", חֳמָרִם="of heaps", וַתִּבְאַשׁ="and stank", הָאָרֶץ="the land"
+
+CH8 v15: וַיַּרְא="saw", פַּרְעֹה="Pharaoh", כִּי="for", הָיְתָה="there was", הָרְוָחָה="relief", וְהַכְבֵּד="and he hardened", אֶת־="[direct object marker]", לִבּוֹ="his heart", וְלֹא="and not", שָׁמַע="did heed", אֲלֵהֶם="them", כַּאֲשֶׁר="as", דִּבֶּר="had said", יְהוָה="Yahweh"
+
+CH8 v16: וַיֹּאמֶר="said", יְהוָה="the LORD", אֶל־="to", מֹשֶׁה="Moses", אֱמֹר="Say", אֶל־="to", אַהֲרֹן="Aaron", נְטֵה="Stretch out", אֶת־="-", מַטְּךָ="your rod", וְהַךְ="and strike", אֶת־="-", עֲפַר="the dust", הָאָרֶץ="of the earth", וְהָיָה="may become", לְכִנִּם="lice", בְּכָל־="throughout all", אֶרֶץ="the land", מִצְרָיִם="of Egypt"
+
+CH8 v17: וַיַּעֲשׂוּ="And they did", כֵן="so", וַיֵּט="stretched out", אַהֲרֹן="Aaron", אֶת־="[direct object marker]", יָדוֹ="his hand", בְמַטֵּהוּ="with his rod", וַיַּךְ="and struck", אֶת־="[direct object marker]", עֲפַר="the dust", הָאָרֶץ="of the earth", וַתְּהִי="and it became", הַכִּנָּם="lice", בָּאָדָם="on man", וּבַבְּהֵמָה="and on beast", כָּל־="all", עֲפַר="the dust", הָאָרֶץ="of the land", הָיָה="became", כִנִּים="lice", בְּכָל־="throughout all", אֶרֶץ="the land", מִצְרָיִם="of Egypt"
+
+CH8 v18: וַיַּעֲשׂוּ="And worked", כֵן="so", הַחַרְטֻמִּים="the magicians", בְּלָטֵיהֶם="with their enchantments", לְהוֹצִיא="to bring forth", אֶת="[direct object marker]", הַכִּנִּים="lice", וְלֹא="but not", יָכֹלוּ="they could", וַתְּהִי="So there were", הַכִּנָּם="lice", בָּאָדָם="on man", וּבַבְּהֵמָה="and beast"
+
+CH8 v19: וַיֹּאמְרוּ="said", הַחַרְטֻמִּים="the magicians", אֶל־="to", פַּרְעֹה="Pharaoh", אֶצְבַּע="the finger", אֱלֹהִים="of God", הִוא="That [is]", וַיֶּחֱזַק="was hardened", לֵב־="heart", פַּרְעֹה="of Pharaoh", וְלֹא־="and not", שָׁמַע="he did heed", אֲלֵהֶם="them", כַּאֲשֶׁר="just as", דִּבֶּר="had said", יְהוָה="Yahweh"
+
+CH8 v20: וַיֹּאמֶר="said", יְהוָה="Yahweh", אֶל־="to", מֹשֶׁה="Moses", הַשְׁכֵּם="Rise early", בַּבֹּקֶר="in the morning", וְהִתְיַצֵּב="and stand", לִפְנֵי="before", פַרְעֹה="Pharaoh", הִנֵּה="as", יוֹצֵא="he comes out", הַמָּיְמָה="to the water", וְאָמַרְתָּ="and say", אֵלָיו="to him", כֹּה="thus", אָמַר="says", יְהוָה="Yahweh", שַׁלַּח="let go", עַמִּי="My people", וְיַעַבְדֻנִי="that they may serve Me"
+
+CH8 v21: כִּי="For", אִם־="if", אֵינְךָ="not", מְשַׁלֵּחַ="let", אֶת־="[object marker]", עַמִּי="my people", הִנְנִי="behold", מַשְׁלִיחַ="I will send", בְּךָ="on you", וּבַעֲבָדֶיךָ="and your servants", וּבְעַמְּךָ="and your people", וּבְבָתֶּיךָ="and into your houses", אֶת־="[object marker]", הֶעָרֹב="swarms", וּמָלְאוּ="will be full", בָּתֵּי="the houses", מִצְרַיִם="of Egypt", אֶת־="[object marker]", הֶעָרֹב="swarms", וְגַם="and also", הָאֲדָמָה="the ground", אֲשֶׁר־="on which", הֵם="they", עָלֶיהָ="are"
+
+CH8 v22: וְהִפְלֵיתִי="and I will set apart", בַיּוֹם="in day", הַהוּא="that", אֶת־="[direct object marker]", אֶרֶץ="the land", גֹּשֶׁן="of Goshen", אֲשֶׁר="which", עַמִּי="My people", עֹמֵד="dwell", עָלֶיהָ="in", לְבִלְתִּי="that not", הֱיוֹת־="shall be", שָׁם="there", עָרֹב="swarms [of flies]", לְמַעַן="in order that", תֵּדַע="you may know", כִּי="that", אֲנִי="I", יְהוָה="Yahweh", בְּקֶרֶב="[am] in the midst", הָאָרֶץ="of the land"
+
+CH8 v23: וְשַׂמְתִּי="And I will make", פְדֻת="a difference", בֵּין="between", עַמִּי="My people", וּבֵין="and between", עַמֶּךָ="your people", לְמָחָר="Tomorrow", יִהְיֶה="shall be", הָאֹת="sign", הַזֶּה="this"
+
+CH8 v24: וַיַּעַשׂ="did", יְהוָה="the LORD", כֵּן="so", וַיָּבֹא="came", עָרֹב="swarms", כָּבֵד="great", בֵּיתָה="the house", פַרְעֹה="of Pharaoh", וּבֵית="and the houses", עֲבָדָיו="of his servants", וּבְכָל־="And into all", אֶרֶץ="and the land", מִצְרַיִם="of Egypt", תִּשָּׁחֵת="was corrupted", הָאָרֶץ="the land", מִפְּנֵי="because", הֶעָרֹב="of the swarms"
+
+CH8 v25: וַיִּקְרָא="And called", פַרְעֹה="Pharaoh", אֶל־="for", מֹשֶׁה="Moses", וּלְאַהֲרֹן="and Aaron", וַיֹּאמֶר="and said", לְכוּ="Go", זִבְחוּ="sacrifice", לֵאלֹהֵיכֶם="to your God", בָּאָרֶץ="in the land"
+
+CH8 v26: וַיֹּאמֶר="said", מֹשֶׁה="Moses", לֹא="not", נָכוֹן="right", לַעֲשׂוֹת="to do", כֵּן="so", כִּי="for", תּוֹעֲבַת="abomination", מִצְרַיִם="Egyptian", נִזְבַּח="sacrifice", לַיהוָה="to Yahweh", אֱלֹהֵינוּ="our God", הֵן="If", נִזְבַּח="sacrifice", אֶת="(direct object marker)", תּוֹעֲבַת="abomination", מִצְרַיִם="Egyptian", לְעֵינֵיהֶם="their eyes", וְלֹא="not", יִסְקְלֻנוּ="stone us"
+
+CH8 v27: דֶּרֶךְ="journey", שְׁלֹשֶׁת="three", יָמִים="days'", נֵלֵךְ="we will go", בַּמִּדְבָּר="into the wilderness", וְזָבַחְנוּ="and sacrifice", לַיהוָה="to Yahweh", אֱלֹהֵינוּ="our God", כַּאֲשֶׁר="as", יֹאמַר="He will command", אֵלֵינוּ="us"
+
+CH8 v28: וַיֹּאמֶר="said", פַּרְעֹה="Pharaoh", אָנֹכִי="I", אֲשַׁלַּח="will let go", אֶתְכֶם="you", וּזְבַחְתֶּם="you may sacrifice", לַיהוָה="to Yahweh", אֱלֹהֵיכֶם="your God", בַּמִּדְבָּר="in the wilderness", רַק="only", הַרְחֵק="very", לֹא="not", תַרְחִיקוּ="you shall far away", לָלֶכֶת="go", הַעְתִּירוּ="intercede", בַּעֲדִי="for me"
+
+CH8 v29: וַיֹּאמֶר="said", מֹשֶׁה="Moses", הִנֵּה="Behold", אָנֹכִי="I", יוֹצֵא="am going", מֵעִמָּךְ="from you", וְהַעְתַּרְתִּי="and I will entreat", אֶל="to", יְהוָה="the LORD", וְסָר="may depart", הֶעָרֹב="the swarms", מִפַּרְעֹה="from Pharaoh", מֵעֲבָדָיו="from his servants", וּמֵעַמּוֹ="and from his people", מָחָר="tomorrow", רַק="but", אַל="not", יֹסֵף="let anymore", פַּרְעֹה="Pharaoh", הָתֵל="deal deceitfully", לְבִלְתִּי="in not", שַׁלַּח="letting", אֶת="[object marker]", הָעָם="the people", לִזְבֹּחַ="to sacrifice", לַיהוָה="to the LORD"
+
+CH8 v30: וַיֵּצֵא="went out", מֹשֶׁה="Moses", מֵעִם="from", פַּרְעֹה="Pharaoh", וַיֶּעְתַּר="and entreated", אֶל־="unto", יְהוָה="Yahweh"
+
+CH8 v31: וַיַּעַשׂ="And did", יְהוָה="Yahweh", כִּדְבַר="according to the word", מֹשֶׁה="of Moses", וַיָּסַר="and He removed", הֶעָרֹב="the swarms [of flies]", מִפַּרְעֹה="from Pharaoh", מֵעֲבָדָיו="from his servants", וּמֵעַמּוֹ="and from his people", לֹא="Not", נִשְׁאַר="remained", אֶחָד="one"
+
+CH8 v32: וַיַּכְבֵּד="hardened", פַּרְעֹה="Pharaoh", אֶת־="(direct object marker)", לִבּוֹ="his heart", גַּם="also", בַּפַּעַם="at time", הַזֹּאת="this", וְלֹא="and neither", שִׁלַּח="would he let go", אֶת־="(direct object marker)", הָעָם="the people"

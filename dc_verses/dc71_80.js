@@ -367,7 +367,7 @@ var dc76_ch1Verses = [
     ["לָכֵן","therefore"],["הוּא","he/it"],["עוֹשֶׂה","doing/making"],["מִלְחָמָה","war"],["בְּקִדּוֹשֵׁי","in-the-saints-of"],["אֱלֹהִים","God"],["וּמַקִּיפָם","and-surrounding-them"],["מִסָּבִיב׃","round-about"],["׃",""]
   ]},
   { num: "ל", words: [
-    ["וְרָאִינוּ","and-we-saw"],["חֲזוֹן","a-vision"],["יִסּוּרֵי","torment-of"],["אֵלֶּה","these"],["אֲשֶׁר","which"],["עָשָׂה","he-did"],["עִמָּם","with-them"],["מִלְחָמָה","war"],["וְגָבַר","and-it prevailed"],["עֲלֵיהֶם","upon-them"],["כִּי","that"],["כָּכָה","thus"],["בָּא","came"],["קוֹל","the-voice-of"],["יְהוָה","the-Lord"],["אֵלֵינוּ׃","unto-us"],["׃",""]
+    ["וְרָאִינוּ","and-we-saw"],["חֲזוֹן","a-vision"],["יִסּוּרֵי","torment-of"],["אֵלֶּה","these"],["אֲשֶׁר","which"],["עָשָׂה","he-made"],["עִמָּם","with-them"],["מִלְחָמָה","war"],["וְגָבַר","and-it prevailed"],["עֲלֵיהֶם","upon-them"],["כִּי","that"],["כָּכָה","thus"],["בָּא","came"],["קוֹל","the-voice-of"],["יְהוָה","the-Lord"],["אֵלֵינוּ׃","unto-us"],["׃",""]
   ]},
   { num: "לא", words: [
     ["כֹּה","thus"],["אָמַר","said"],["יְהוָה","the-Lord"],["עַל","upon"],["כָּל","all"],["אֵלֶּה","these"],["הַיּוֹדְעִים","the-ones-knowing"],["אֶת","[ACC]"],["כֹּחִי","my-strength"],["וְנַעֲשׂוּ","and-they-were-made"],["שֻׁתָּפִים","partners"],["בּוֹ","in-him/it"],["וְהִנִּיחוּ","and-they leave"],["לְעַצְמָם","up-unto-themselves"],["בְּכֹחַ","by-the-power-of"],["הַשֵּׁד","the-devastation"],["לְהִכָּנַע","to-be-humbled"],["וּלְכַחֵשׁ","and-deny"],["בָּאֱמֶת","in-truth"],["וְלִמְרֹד","and-to-rebellion"],["בְּכֹחִי׃","in-power-my"],["׃",""]

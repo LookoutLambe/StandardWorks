@@ -151,7 +151,7 @@ var dc113_ch1Verses = [
     ["מַה","what"],["הוּא","he/it"],["הַחֹטֶר","the-a-rod"],["הַנֶּאֱמָר","the-shall-we-say"],["בַּפָּסוּק","in-the-verse"],["הָרִאשׁוֹן","the-first"],["לְפֶרֶק","to-chapters"],["בִּישַׁעְיָהוּ","in-Jeshaiah"],["הַיּוֹצֵא","the-whatever-comes out"],["מִגֵּזַע","from-the rootstock of"],["יִשַׁי׃","Jesse"],["׃",""]
   ]},
   { num: "ד", words: [
-    ["הִנֵּה","behold"],["כֹּה","thus"],["אָמַר","said"],["יְהוָה","the-Lord"],["הוּא","he/it"],["עֶבֶד","servant-of"],["בְּיַד","by-hand-of"],["הַמָּשִׁיחַ","the-Messiah"],["אֲשֶׁר","which"],["הוּא","he/it"],["צֶאֱצָא","produce"],["יִשַׁי","Jesse"],["בְּמִקְצָת","in-some-of"],["וְגַם","and-also"],["אֶפְרַיִם","Ephraim"],["אוֹ","or"],["בֵּית","the-house-of"],["יוֹסֵף","Joseph"],["אֲשֶׁר","which"],["הוּטַל","was-established"],["עָלָיו","upon-him"],["כֹּחַ","power"],["רַב׃","much"],["׃",""]
+    ["הִנֵּה","behold"],["כֹּה","thus"],["אָמַר","said"],["יְהוָה","the-Lord"],["הוּא","he/it"],["עֶבֶד","the-servant-of"],["בְּיַד","by-hand-of"],["הַמָּשִׁיחַ","the-Messiah"],["אֲשֶׁר","which"],["הוּא","he/it"],["צֶאֱצָא","produce"],["יִשַׁי","Jesse"],["בְּמִקְצָת","in-some-of"],["וְגַם","and-also"],["אֶפְרַיִם","Ephraim"],["אוֹ","or"],["בֵּית","the-house-of"],["יוֹסֵף","Joseph"],["אֲשֶׁר","which"],["הוּטַל","was-established"],["עָלָיו","upon-him"],["כֹּחַ","power"],["רַב׃","much"],["׃",""]
   ]},
   { num: "ה", words: [
     ["מַה","what"],["הוּא","he/it"],["שֹׁרֶשׁ","the-root-of"],["יִשַׁי","Jesse"],["הַנֶּאֱמָר","the-shall-we-say"],["בַּפָּסוּק","in-the-verse"],["הָעֲשִׂירִי","the-rich-my"],["לְפֶרֶק","to-chapters"],["׃",""]

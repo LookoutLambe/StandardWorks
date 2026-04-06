@@ -343,7 +343,7 @@ var dc29_ch1Verses = [
     ["כִּי","for"],["קָרְבָה","drew-near"],["הַשָּׁעָה","the-he-looked"],["וְהַיּוֹם","and-the-day"],["מְמַהֵר","hastening"],["לָבוֹא","to-come"],["בְּבַשֵּׁל","in-boiled"],["הָאָרֶץ","the-land"],["וְכָל","and-all"],["הַגֵּאִים","the-proud people"],["וְעֹשֵׂי","and-those-doing"],["רִשְׁעָה","iniquity"],["יִהְיוּ","shall-be"],["כְקַשׁ","like-chaff"],["וּשְׂרַפְתִּים","and-I-burned-them"],["נְאֻם","says"],["יְהוָה","the-Lord"],["צְבָאוֹת","of-Hosts"],["וְלֹא","and-not"],["תִהְיֶה","be"],["רִשְׁעָה","iniquity"],["עַל","upon"],["הָאָרֶץ׃","the-land"],["׃",""]
   ]},
   { num: "י", words: [
-    ["כִּי","for"],["קָרְבָה","drew-near"],["הַשָּׁעָה","the-he-looked"],["וַאֲשֶׁר","and-who"],["דִּבְּרוּ","have-spoken"],["שְׁלִיחַי","My-apostles"],["יִתְמַלֵּא","it-shall-be-filled"],["כִּי","that"],["כַּאֲשֶׁר","as"],["דִּבְּרוּ","have-spoken"],["כֵּן","so/thus"],["יִהְיֶה׃","he-shall-be"],["׃",""]
+    ["כִּי","for"],["קָרְבָה","drew-near"],["הַשָּׁעָה","the-he-looked"],["וַאֲשֶׁר","and-who"],["דִּבְּרוּ","have-spoken"],["שְׁלִיחַי","My-apostles"],["יִתְמַלֵּא","it-shall-be-filled"],["כִּי","that"],["כַּאֲשֶׁר","as"],["דִּבְּרוּ","have-spoken"],["כֵּן","so/thus"],["יִהְיֶה׃","shall-be"],["׃",""]
   ]},
   { num: "יא", words: [
     ["כִּי","for"],["אֶגָּלֶה","I-will-reveal"],["מִן","from"],["הַשָּׁמַיִם","the-heavens"],["בְּכֹחַ","by-the-power-of"],["וּבְכָבוֹד","and-in-glory"],["גָּדוֹל","great"],["עִם","with"],["כָּל","all"],["צְבָאָם","their-army"],["וְאֶשְׁכֹּן","and-I-will-dwell"],["בְּצֶדֶק","in-righteousness"],["עִם","with"],["אֲנָשִׁים","men"],["עַל","upon"],["הָאָרֶץ","the-land"],["אֶלֶף","thousand"],["שָׁנִים","years"],["וְהָרְשָׁעִים","but-the-wicked"],["לֹא","not"],["יַעֲמֹדוּ׃","they stood still"],["׃",""]

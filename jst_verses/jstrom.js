@@ -44,7 +44,7 @@ renderVerseSet(jstrom_ch4Verses, 'jstrom-ch4-verses');
 // === CH5: JST Romans 13:6–7 ===
 // Honoring civil authorities makes honor to God greater.
 var jstrom_ch5Verses = [
-  { num:"ו", words:[["לָכֵן","for-this-cause"],["גַּם","also"],["שַׁלְּמוּ","pay-ye"],["מַס","tribute"],["כִּי","for"],["הֵם","they-are"],["מְשָׁרְתֵי","ministers-of"],["אֱלֹהִים","God"],["הַמִּתְמַקְּדִים","the-attending-continually"],["תָּמִיד","upon"],["בַּדָּבָר","the-this-very-thing"],["הַזֶּה","[this]"],["׃",""]] },
+  { num:"ו", words:[["לָכֵן","for-this-cause"],["גַּם","also"],["שַׁלְּמוּ","pay-ye"],["מַס","tribute"],["כִּי","for"],["הֵם","they"],["מְשָׁרְתֵי","ministers-of"],["אֱלֹהִים","God"],["הַמִּתְמַקְּדִים","the-attending-continually"],["תָּמִיד","upon"],["בַּדָּבָר","the-this-very-thing"],["הַזֶּה","[this]"],["׃",""]] },
   { num:"ז", words:[["הָשִׁיבוּ","render"],["לְכֻלָּם","therefore-to-all"],["אֵפוֹא","their"],["חוֹבוֹתֵיהֶם","dues"],["מַס","tribute"],["לָחַיָּב","to-whom"],["בְּמַס","tribute-is-due"],["מֶכֶס","custom"],["לָחַיָּב","to-whom"],["בְּמֶכֶס","custom"],["יִרְאָה","fear"],["לָרָאוּי","to-whom"],["בְּיִרְאָה","fear"],["כָּבוֹד","honor"],["לָרָאוּי","to-whom"],["בְּכָבוֹד","honor"],["׃",""]] }
 ];
 renderVerseSet(jstrom_ch5Verses, 'jstrom-ch5-verses');

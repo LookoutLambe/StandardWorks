@@ -1063,7 +1063,7 @@ var dc89_ch1Verses = [
     ["כָּל","all"],["דָּגָן","grain"],["יֻעַד","he warned"],["לְשִׁמּוּשׁ","for-use"],["הָאָדָם","the-man/Adam"],["וְהַבְּהֵמָה","and-the-livestock"],["לִהְיוֹת","to-be"],["מַטֵּה","the-staff-of"],["לֶחֶם","bread"],["לֹא","not"],["רַק","only"],["לָאָדָם","unto-man"],["אֶלָּא","but-rather"],["גַּם","also"],["לְחַיַּת","for-beasts-of"],["הַשָּׂדֶה","the-field"],["וּלְעוֹף","and-to-the birds of"],["הַשָּׁמַיִם","the-heavens"],["וּלְכָל","and-for-all"],["חַיַּת","beasts-of"],["הַבָּר","the-wild"],["הָרָצָה","the-desired"],["אוֹ","or"],["עַל","upon"],["הָאָרֶץ׃","the-land"],["׃",""]
   ]},
   { num: "טו", words: [
-    ["וְאֵלֶּה","and-these"],["עָשָׂה","he-did"],["אֱלֹהִים","God"],["לְשִׁמּוּשׁ","for-use"],["הָאָדָם","the-man/Adam"],["רַק","only"],["בִּזְמַן","in-time"],["רָעָב","hunger"],["וְרֹב","and-most-of"],["רְעָבוֹן׃","the hunger of"],["׃",""]
+    ["וְאֵלֶּה","and-these"],["עָשָׂה","he-made"],["אֱלֹהִים","God"],["לְשִׁמּוּשׁ","for-use"],["הָאָדָם","the-man/Adam"],["רַק","only"],["בִּזְמַן","in-time"],["רָעָב","hunger"],["וְרֹב","and-most-of"],["רְעָבוֹן׃","the hunger of"],["׃",""]
   ]},
   { num: "טז", words: [
     ["כָּל","all"],["דָּגָן","grain"],["טוֹב","good"],["לְמַאֲכַל","food"],["הָאָדָם","the-man/Adam"],["וְגַם","and-also"],["פְּרִי","fruit"],["הַגֶּפֶן","the-vine"],["אֲשֶׁר","which"],["מַעֲלֶה","brings-up"],["פְּרִי","fruit"],["אִם","if"],["בָּאָרֶץ","in-the-land"],["אוֹ","or"],["מֵעַל","from-upon"],["הָאָרֶץ׃","the-land"],["׃",""]

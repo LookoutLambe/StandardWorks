@@ -108,7 +108,7 @@ var _1ti_ch5Verses = [
   { num:"כב", words:[["אַל־תְּהִי","do-not-be"],["נִבְהָל","disturbed"],["לִסְמוֹךְ","to-near"],["יָדֶיךָ","hands-your"],["עַל־אָדָם","upon-man"],["וְלֹא","and-not"],["תִשְׁתַּתֵּף","partake"],["בְּחַטֹּאת","for-the sins of"],["אֲחֵרִים","others"],["שְׁמֹר","watch"],["אֶת־נַפְשְׁךָ","[ACC]-your-soul"],["בְּטָהֳרָה","in-purity"],["׃",""]] },
   { num:"כג", words:[["אַל־תִּשְׁתֶּה","do-not-it drinks"],["עוֹד","any-more"],["מַיִם","water"],["הַרְבֵּה","much"],["אֶלָּא","but-rather"],["מְעַט־יָיִן","somewhat-wine"],["מִפְּנֵי","because-of"],["מֵעֶיךָ","your-loins"],["וּמִפְּנֵי","and-because-of"],["שֶׁפְּעָמִים","that-times"],["הַרְבֶּה","exceeding"],["חֹלֶה","is sick"],["אָתָּה","you-are"],["׃",""]] },
   { num:"כד", words:[["יֵשׁ","there"],["בְּנֵי־אָדָם","the-children-of-men"],["אֲשֶׁר־חַטֹּאתֵיהֶם","whose-their-sins"],["גְּלוּיוֹת","who is uncovered of(pl)"],["וּמַקְדִּימוֹת","and-preceding"],["לַמִּשְׁפָּט","to-the-judgment"],["וְיֵשׁ","and-there-was"],["מֵהֶם","of-them"],["אֲשֶׁר","which"],["הֵנָּה","hither"],["בָּאוֹת","come"],["אַחֲרֵיהֶם","after-them"],["׃",""]] },
-  { num:"כה", words:[["וְכָכָה","and-thus"],["גַּם־הַמַּעֲשִׂים","also-the-works"],["הַטּוֹבִים","the-good"],["גְּלוּיִם","manifest"],["הֵמָּה","they-are"],["וַאֲשֶׁר","and-whom"],["לֹא־כֵן","so"],["לֹא","not"],["יוּכְלוּ","could-they"],["לְהִסָּתֵר","to-hide yourself"],["׃",""]] },
+  { num:"כה", words:[["וְכָכָה","and-thus"],["גַּם־הַמַּעֲשִׂים","also-the-works"],["הַטּוֹבִים","the-good"],["גְּלוּיִם","manifest"],["הֵמָּה","they"],["וַאֲשֶׁר","and-whom"],["לֹא־כֵן","so"],["לֹא","not"],["יוּכְלוּ","could-they"],["לְהִסָּתֵר","to-hide yourself"],["׃",""]] },
 ];
 renderVerseSet(_1ti_ch5Verses, '1ti-ch5-verses');
 

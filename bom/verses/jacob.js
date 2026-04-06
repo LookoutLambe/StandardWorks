@@ -260,10 +260,10 @@ var jc_ch1Verses = [
     ["נִקְרְאוּ","they-were-called"],
     ["בְּפִי","by-the-mouth-of"],
     ["הָעָם","the-people"],
-    ["יִהְיֶה","he-shall-be"],
+    ["יִהְיֶה","shall-be"],
     ["שְׁמָם","their-name"],
     ["אֲשֶׁר","which"],
-    ["יִהְיֶה","he-shall-be"],
+    ["יִהְיֶה","shall-be"],
   ]},
   { num:"יב", words:[
     ["וַיְהִי","and-it-came-to-pass"],
@@ -980,7 +980,7 @@ var jc_ch2Verses = [
     ["לִדְבַר","unto-the-word-of"],
     ["יְהוָה","the-Lord"],
     ["כִּי־לֹא","for-not"],
-    ["יִהְיֶה","he-shall-be"],
+    ["יִהְיֶה","shall-be"],
     ["לְאִישׁ","unto-any-man"],
     ["מִכֶּם","among-you"],
     ["כִּי־אִם","that-only"],
@@ -1344,7 +1344,7 @@ var jc_ch3Verses = [
     ["לֹא","not"],
     ["תָשׁוּבוּ","you-repent"],
     ["מֵחַטֹּאתֵיכֶם","of-your-sins"],
-    ["יִהְיֶה","he-shall-be"],
+    ["יִהְיֶה","shall-be"],
     ["עוֹרָם","their-skins"],
     ["לָבָן","whiter"],
     ["מֵעוֹרְכֶם","than-yours"],
@@ -2068,7 +2068,7 @@ var jc_ch5Verses = [
     ["קַח","take"],["אֶת־עַנְפֵי","the-branches-of"],["זַיִת","the-olive-tree"],["הַבַּר","the-wild"],["וְהַרְכֵּב","and-graft"],["אוֹתָם","them"],["תַּחְתָּם","in-their-stead"],["וְאֵלֶּה","and-these"],["אֲשֶׁר","which"],["קָטַפְתִּי","I-have-plucked-off"],["אַשְׁלִיךְ","I-will-cast"],["אֶל־הָאֵשׁ","into-the-fire"],["וְאֶשְׂרְפֵם","and-I-shall-burn-them"],["לְמַעַן","that"],["לֹא־יַפְרִיעוּ","not-they-cumber"],["אֶת־אַדְמַת","the-ground-of"],["כַרְמִי","my-vineyard"],
   ]},
   { num:"י", words:[
-    ["וַיַּעַשׂ","and-did"],["עֶבֶד","the-servant-of"],["אֲדוֹן","the-master-of"],["הַכֶּרֶם","the-vineyard"],["כִּדְבַר","according-to-the-word-of"],["אֲדוֹן","the-master-of"],["הַכֶּרֶם","the-vineyard"],["וַיַּרְכֵּב","and-grafted-in"],["אֶת־עַנְפֵי","the-branches-of"],["זַיִת","the-olive-tree"],["הַבָּר","the-wild"],
+    ["וַיַּעַשׂ","and-made"],["עֶבֶד","the-servant-of"],["אֲדוֹן","the-master-of"],["הַכֶּרֶם","the-vineyard"],["כִּדְבַר","according-to-the-word-of"],["אֲדוֹן","the-master-of"],["הַכֶּרֶם","the-vineyard"],["וַיַּרְכֵּב","and-grafted-in"],["אֶת־עַנְפֵי","the-branches-of"],["זַיִת","the-olive-tree"],["הַבָּר","the-wild"],
   ]},
   { num:"יא", words:[
     ["וַיְצַו","and-commanded"],["אֲדוֹן","the-master-of"],["הַכֶּרֶם","the-vineyard"],["לַעְדֹּר","to-dig-about"],["סְבִיבוֹ","around-it"],["וְלִזְמֹר","and-to-prune"],["וּלְטַפֵּחַ","and-to-nourish"],["וַיֹּאמֶר","and-he-said"],["אֶל־עַבְדּוֹ","unto-his-servant"],["יֵצַר","it-shall-grieve"],["לִי","me"],["כִּי","that"],["אֹבַד","I-should-lose"],["אֶת־הָעֵץ","the-tree"],["הַזֶּה","this"],["לָכֵן","therefore"],["אוּלַי","perhaps"],["אֶשְׁמֹר","I-may-preserve"],["אֶת־שָׁרָשָׁיו","its-roots"],["לְבִלְתִּי","that-not"],["יֹאבְדוּ","they-shall-perish"],["לְמַעַן","that"],["אֶשְׁמְרֵם","I-may-preserve-them"],["לִי","to-me"],["עָשִׂיתִי","I-made"],["אֶת־הַדָּבָר","the-thing"],["הַזֶּה","this"],
@@ -2248,7 +2248,7 @@ var jc_ch5Verses = [
     ["וְהַשְׁלֵךְ","and-he-was-cast-out"],["יֻשְׁלַךְ","shall-be-cast"],["הָרַע","the-bad"],["מִכָּל־אַדְמַת","out-of-all-the-land-of"],["כַרְמִי","my-vineyard"],["כִּי","for"],["הִנֵּה","behold"],["רַק","only"],["הַפַּעַם","the-time"],["הַזֹּאת","is-this"],["אֶזְמֹר","will-I-prune"],["אֶת־כַּרְמִי","my-vineyard"],
   ]},
   { num:"ע", words:[
-    ["וַיְהִי","and-it-came-to-pass"],["כִּי","that"],["שָׁלַח","sent"],["אֲדוֹן","the-master-of"],["הַכֶּרֶם","the-vineyard"],["אֶת־עַבְדּוֹ","his-servant"],["וַיֵּלֶךְ","and-went"],["הָעֶבֶד","the-servant"],["וַיַּעַשׂ","and-did"],["כַּאֲשֶׁר","when/as"],["צִוָּה","commanded"],["אוֹתוֹ","him"],["אֲדֹנָיו","his-master"],["וַיָּבֵא","and-brought"],["עֲבָדִים","servants"],["אֲחֵרִים","other"],["וַיִּהְיוּ","and-they-were"],["מְעַטִּים","few"],
+    ["וַיְהִי","and-it-came-to-pass"],["כִּי","that"],["שָׁלַח","sent"],["אֲדוֹן","the-master-of"],["הַכֶּרֶם","the-vineyard"],["אֶת־עַבְדּוֹ","his-servant"],["וַיֵּלֶךְ","and-went"],["הָעֶבֶד","the-servant"],["וַיַּעַשׂ","and-made"],["כַּאֲשֶׁר","when/as"],["צִוָּה","commanded"],["אוֹתוֹ","him"],["אֲדֹנָיו","his-master"],["וַיָּבֵא","and-brought"],["עֲבָדִים","servants"],["אֲחֵרִים","other"],["וַיִּהְיוּ","and-they-were"],["מְעַטִּים","few"],
   ]},
   { num:"עא", words:[
     ["וַיֹּאמֶר","and-said"],["אֲדוֹן","the-master-of"],["הַכֶּרֶם","the-vineyard"],["אֲלֵיהֶם","unto-them"],["לְכוּ","go"],["וְעִבְדוּ","and-labor"],["בַכֶּרֶם","in-the-vineyard"],["בְּכָל־כֹּחֲכֶם","with-all-your-might"],["כִּי","for"],["הִנֵּה","behold"],["זֹאת","this-is"],["הַפַּעַם","the-time"],["הָאַחֲרוֹנָה","the-last"],["אֲשֶׁר","that"],["אֲטַפֵּחַ","I-shall-nourish"],["אֶת־כַּרְמִי","my-vineyard"],["כִּי","for"],["קָרֵב","draws-near"],["הַקֵּץ","the-end"],["וְהַמּוֹעֵד","and-the-season"],["יָבוֹא","comes"],["מְהֵרָה","soon"],["וְאִם","and-if"],["תַּעַבְדוּ","you-shall-labor"],["בְכָל־כֹּחֲכֶם","with-all-your-might"],["עִמָּדִי","with-me"],["תִּשְׂמְחוּ","you-shall-have-joy"],["בַפְּרִי","in-the-fruit"],["אֲשֶׁר","which"],["אֶצְבֹּר","I-shall-lay-up"],["לִי","to-me"],["לָעֵת","against-the-time"],["אֲשֶׁר","which"],["תָּבוֹא","will-come"],["מְהֵרָה","soon"],
@@ -2320,7 +2320,7 @@ var jc_ch7Verses = [
     ["וַיְהִי","and-it-came-to-pass"],["אַחֲרֵי","after"],["עֲבֹר","the-passing-of"],["שָׁנִים","years"],["מִסְפָּר","number"],["וַיָּבֹא","there-came"],["אִישׁ","a-man"],["בְּתוֹךְ","among"],["עַם־נֶפִי","the-people-of-Nephi"],["וּשְׁמוֹ","and-his-name-was"],["שֶׁרֶם","Sherem"],
   ]},
   { num:"ב", words:[
-    ["וַיְהִי","and-it-came-to-pass"],["כִּי","that"],["הֵחֵל","he-began"],["לִדְרֹשׁ","to-preach"],["בָּעָם","among-the-people"],["וּלְהַגִּיד","and-to-declare"],["לָהֶם","unto-them"],["כִּי־לֹא","that-not"],["יִהְיֶה","he-shall-be"],["מָשִׁיחַ","Messiah"],["וַיִּדְרֹשׁ","and-he-preached"],["דְּבָרִים","things"],["רַבִּים","many"],["חֲלָקִים","parts"],["לָעָם","unto-the-people"],["וְזֹאת","and-this"],["עָשָׂה","he-did"],["לְמַעַן","that"],["יַהֲפֹךְ","he-might-overthrow"],["אֶת־תּוֹרַת","the-doctrine-of"],["הַמָּשִׁיחַ","the-Messiah"],
+    ["וַיְהִי","and-it-came-to-pass"],["כִּי","that"],["הֵחֵל","he-began"],["לִדְרֹשׁ","to-preach"],["בָּעָם","among-the-people"],["וּלְהַגִּיד","and-to-declare"],["לָהֶם","unto-them"],["כִּי־לֹא","that-not"],["יִהְיֶה","shall-be"],["מָשִׁיחַ","Messiah"],["וַיִּדְרֹשׁ","and-he-preached"],["דְּבָרִים","things"],["רַבִּים","many"],["חֲלָקִים","parts"],["לָעָם","unto-the-people"],["וְזֹאת","and-this"],["עָשָׂה","he-made"],["לְמַעַן","that"],["יַהֲפֹךְ","he-might-overthrow"],["אֶת־תּוֹרַת","the-doctrine-of"],["הַמָּשִׁיחַ","the-Messiah"],
   ]},
   { num:"ג", words:[
     ["וַיַּעֲבֹד","and-he-shall-serve"],["בְּכָל־כֹּחַ","with-all-power"],["לְמַעַן","that"],["יַתְעֶה","he-shall-deceive"],["אֶת־לְבַב","the-hearts-of"],["הָעָם","the-people"],["עַד־כִּי","insomuch-that"],["הִתְעָה","he-did-lead-away"],["לְבָבוֹת","the-hearts-of"],["רַבִּים","many"],["וְהוּא","and-he"],["יָדַע","he-knew"],["כִּי־הֶאֱמַנְתִּי","that-I-believe"],["יַעֲקֹב","I-Jacob"],["בַּמָּשִׁיחַ","in-the-Messiah"],["אֲשֶׁר","who"],["יָבוֹא","should-come"],["וַיְבַקֵּשׁ","and-requested"],["תַּאֲנָה","an-opportunity"],["רַבָּה","much"],["לָבוֹא","to-come"],["אֵלָי","unto-me"],
