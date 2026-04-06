@@ -435,7 +435,7 @@ var dc58_ch1Verses = [
     ["הִנֵּה","behold"],["אֲנִי","I"],["יְהוָה","the-Lord"],["דִּבַּרְתִּי׃","I have spoken"],["׃",""]
   ]},
   { num: "יג", words: [
-    ["וּלְמַעַן","and-so-that"],["תֵּצֵא","shall-go-forth"],["הָעֵדוּת","the-testimony"],["מִצִּיּוֹן","out-of-Zion"],["מִפִּי","from-mouth-of"],["עִיר","city-of"],["נַחֲלַת","the-first-inheritance-of"],["אֱלֹהִים׃","God"],["׃",""]
+    ["וּלְמַעַן","and-so-that"],["תֵּצֵא","shall-go-forth"],["הָעֵדוּת","the-testimony"],["מִצִּיּוֹן","out-of-Zion"],["מִפִּי","from-mouth-of"],["עִיר","the-city-of"],["נַחֲלַת","the-first-inheritance-of"],["אֱלֹהִים׃","God"],["׃",""]
   ]},
   { num: "יד", words: [
     ["כִּי","for"],["לָזֹאת","to-this"],["שְׁלַחְתִּיכֶם","stretch-forth-my-you(pl)"],["הֵנָּה","hither"],["וּבָחַרְתִּי","and-I-have-chosen"],["עַבְדִּי","thou-art-My-servant"],["אֶדְוָרְד","Edward"],["פַּרְטְרִיג׳","Partridge"],["וּמִנִּיתִי","and-I will appoint"],["לוֹ","to-him"],["שְׁלִיחוּתוֹ","his-apostleship"],["בָּאָרֶץ","in-the-land"],["הַזֹּאת׃","is-this"],["׃",""]

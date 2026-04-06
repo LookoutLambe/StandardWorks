@@ -7048,7 +7048,7 @@ var n2_ch15Verses = [
     ["עֲשֶׂרֶת","ten"],
     ["צִמְדֵי־כֶרֶם","acres-of-vineyard"],
     ["יַעֲשׂוּ","they-shall-yield"],
-    ["בַּת","daughter-of"],
+    ["בַּת","the-daughter-of"],
     ["אֶחָת","one"],
     ["וְזֶרַע","and-the-seed-of"],
     ["חֹמֶר","a-homer"],

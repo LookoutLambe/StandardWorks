@@ -152,7 +152,7 @@ var dc101_ch1Verses = [
     ["וּבְהִתְוַכְּחָם","and-in-to argue-them"],["זֶה","this"],["עִם","with"],["זֶה","this"],["נַעֲשׂוּ","were-done"],["עֲצֵלִים","idle(pl)"],["מְאֹד","exceedingly"],["וְלֹא","and-not"],["שָׁמְעוּ","they-heard"],["בְּמִצְוֹת","the-commandments-of"],["אֲדוֹנֵיהֶם׃","master-their"],["׃",""]
   ]},
   { num: "נא", words: [
-    ["וַיָּבֹא","and-he-came"],["הָאוֹיֵב","the-is-an-enemy"],["בַּלַּיְלָה","in-the-night"],["וַיִּפְרֹץ","and-it has increased"],["אֶת־הַמְּשׂוּכָה","term used to indicate a direct object-the-hedgerow"],["וְעַבְדֵי","and-the-servants-of"],["הָאָדוֹן","the-Lord"],["קָמוּ","have-been-fulfilled"],["וַיִּבָּהֲלוּ","and-they-were-alarmed"],["וַיָּנֻסוּ","Oinso"],["וְהָאוֹיֵב","and-the-is-an-enemy"],["הֵשְׁחִית","to destroy"],["מַעֲשֵׂיהֶם","of-their-proceedings"],["וַיְשַׁבֵּר","and-he broke in pieces"],["אֶת־עֲצֵי","[ACC]-the-trees-of"],["הַזַּיִת׃","the-you will spatter it"],["׃",""]
+    ["וַיָּבֹא","and-came"],["הָאוֹיֵב","the-is-an-enemy"],["בַּלַּיְלָה","in-the-night"],["וַיִּפְרֹץ","and-it has increased"],["אֶת־הַמְּשׂוּכָה","term used to indicate a direct object-the-hedgerow"],["וְעַבְדֵי","and-the-servants-of"],["הָאָדוֹן","the-Lord"],["קָמוּ","have-been-fulfilled"],["וַיִּבָּהֲלוּ","and-they-were-alarmed"],["וַיָּנֻסוּ","Oinso"],["וְהָאוֹיֵב","and-the-is-an-enemy"],["הֵשְׁחִית","to destroy"],["מַעֲשֵׂיהֶם","of-their-proceedings"],["וַיְשַׁבֵּר","and-he broke in pieces"],["אֶת־עֲצֵי","[ACC]-the-trees-of"],["הַזַּיִת׃","the-you will spatter it"],["׃",""]
   ]},
   { num: "נב", words: [
     ["וְהִנֵּה","and-behold"],["הָאָדוֹן","the-Lord"],["בַּעַל","holder-of"],["הַכֶּרֶם","the-vineyard"],["קָרָא","called"],["לַעֲבָדָיו","unto-his-servants"],["וַיֹּאמֶר","and-said"],["לָהֶם","unto-them"],["מַה־זֹּאת","what-is-this"],["מָה","what"],["סִבַּת","cause-of"],["הָרָעָה","the-evil"],["הַגְּדוֹלָה","the-great"],["הַזֹּאת׃","is-this"],["׃",""]
@@ -644,7 +644,7 @@ var dc104_ch1Verses = [
     ["וּכְפִי","and-according-to"],["שֶׁיִּהְיֶה","that-will-be"],["נֶאֱמָן","more-faithful"],["אַרְבֶּה","I-will-great"],["בְּרָכוֹת","blessings"],["עָלָיו׃","upon-him"],["׃",""]
   ]},
   { num: "לו", words: [
-    ["וּרְצוֹנִי","and-my-desire"],["שֶׁיִּמְכֹּר","that-he sold"],["הַמִּגְרָשׁוֹת","the-pasturelands"],["הַמֻּפְרָדִים","the-separated(pl)"],["לְבִנְיַן","to-the-building-of"],["עִיר","city-of"],["קְדוֹשַׁי","the-saints-of"],["כְּפִי","according-to"],["שֶׁיּוּדַע","that-knowing"],["לוֹ","to-him"],["בְּקוֹל","the-voice-of"],["הָרוּחַ","the-spirit"],["וּלְפִי","and-according-to"],["עֲצַת","the-plan-of"],["הַסֵּדֶר","the-the-order-of"],["וּבְקוֹל","and-with-a-noise"],["הַסֵּדֶר׃","the-the-order-of"],["׃",""]
+    ["וּרְצוֹנִי","and-my-desire"],["שֶׁיִּמְכֹּר","that-he sold"],["הַמִּגְרָשׁוֹת","the-pasturelands"],["הַמֻּפְרָדִים","the-separated(pl)"],["לְבִנְיַן","to-the-building-of"],["עִיר","the-city-of"],["קְדוֹשַׁי","the-saints-of"],["כְּפִי","according-to"],["שֶׁיּוּדַע","that-knowing"],["לוֹ","to-him"],["בְּקוֹל","the-voice-of"],["הָרוּחַ","the-spirit"],["וּלְפִי","and-according-to"],["עֲצַת","the-plan-of"],["הַסֵּדֶר","the-the-order-of"],["וּבְקוֹל","and-with-a-noise"],["הַסֵּדֶר׃","the-the-order-of"],["׃",""]
   ]},
   { num: "לז", words: [
     ["וְזֹאת","and-this"],["רֵאשִׁית","the-beginning-of"],["הַפְּקֻדָּה","all-the-affairs"],["אֲשֶׁר","which"],["מִנִּיתִי","I will appoint"],["לוֹ","to-him"],["לְבִרְכָתוֹ","to-a pool of-his"],["וּלְזַרְעוֹ","and-for-offspring-his"],["אַחֲרָיו׃","after-him"],["׃",""]
@@ -680,7 +680,7 @@ var dc104_ch1Verses = [
     ["וְעַתָּה","and-now"],["מִצְוָה","a-commandment"],["נוֹתֵן","grants"],["לָכֶם","to-you"],["עַל","upon"],["צִיּוֹן","Zion"],["שֶׁלֹּא","that-there-should-be-no"],["תִהְיוּ","you-should-be"],["עוֹד","more"],["קְשׁוּרִים","bound(pl)"],["כְּסֵדֶר","as-the-order-of"],["מְאֻחָד","one"],["לַאֲחֵיכֶם","to-the-your-brethren"],["בְּצִיּוֹן","in-Zion"],["רַק","only"],["בְּאֹפֶן","in-a-manner"],["זֶה׃","this"],["׃",""]
   ]},
   { num: "מח", words: [
-    ["אַחֲרֵי","after"],["שֶׁתִּתְאַרְגְּנוּ","that-you-organize"],["תִּקָּרְאוּ","you-shall-be-called"],["סֵדֶר","the-order-of"],["מְאֻחָד","one"],["שֶׁל","of"],["יְתַד","the peg of"],["צִיּוֹן","Zion"],["עִיר","city-of"],["קִירְטְלַנְד","Kirtland"],["וַאֲחֵיכֶם","and-relatives-your"],["אַחֲרֵי","after"],["יִקָּרְאוּ","they-call-themselves"],["סֵדֶר","the-order-of"],["מְאֻחָד","one"],["שֶׁל","of"],["עִיר","city-of"],["צִיּוֹן׃","Zion"],["׃",""]
+    ["אַחֲרֵי","after"],["שֶׁתִּתְאַרְגְּנוּ","that-you-organize"],["תִּקָּרְאוּ","you-shall-be-called"],["סֵדֶר","the-order-of"],["מְאֻחָד","one"],["שֶׁל","of"],["יְתַד","the peg of"],["צִיּוֹן","Zion"],["עִיר","the-city-of"],["קִירְטְלַנְד","Kirtland"],["וַאֲחֵיכֶם","and-relatives-your"],["אַחֲרֵי","after"],["יִקָּרְאוּ","they-call-themselves"],["סֵדֶר","the-order-of"],["מְאֻחָד","one"],["שֶׁל","of"],["עִיר","the-city-of"],["צִיּוֹן׃","Zion"],["׃",""]
   ]},
   { num: "מט", words: [
     ["וְיִתְאַרְגְּנוּ","and-they-shall-organize"],["בִּשְׁמוֹתֵיהֶם","the-names-of-their"],["וּבְשִׁמְךָ","and-in-your-name"],["וְיַעֲשׂוּ","so-they may work"],["עֲסָקֵיהֶם","to deal with-their"],["בִּשְׁמוֹתֵיהֶם","the-names-of-their"],["׃",""]

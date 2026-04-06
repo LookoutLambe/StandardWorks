@@ -234,7 +234,7 @@ var dc115_ch1Verses = [
     ["וְאִם","and-if"],["יִבְנוּ","they-build"],["עַמִּי","my-people"],["כְּתַבְנִית","like-the form of"],["אֲשֶׁר","which"],["אַרְאֶה","I-will-show"],["אֶת־רָאשֵׁיהֶם","[ACC]-the-heads-of-them"],["עַבְדִּי","thou-art-My-servant"],["יוֹסֵף","Joseph"],["וְיֹעֲצָיו","and-counselors-his"],["אָז","then"],["אֲקַבְּלֶנּוּ","receive"],["מִיַּד","from-hand-of"],["עַמִּי׃","my-people"],["׃",""]
   ]},
   { num: "יז", words: [
-    ["וְעוֹד","and-again"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["רְצוֹנִי","my-desire"],["הוּא","he/it"],["אֲשֶׁר","which"],["תִּבָּנֶה","built-shall-be"],["עִיר","city-of"],["פַּר","a young bull"],["וֶסְט","and-sin"],["מְהֵרָה","soon"],["בְּהִקָּבֵץ","shall-run-together"],["קְדוֹשַׁי׃","the-saints-of"],["׃",""]
+    ["וְעוֹד","and-again"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["רְצוֹנִי","my-desire"],["הוּא","he/it"],["אֲשֶׁר","which"],["תִּבָּנֶה","built-shall-be"],["עִיר","the-city-of"],["פַּר","a young bull"],["וֶסְט","and-sin"],["מְהֵרָה","soon"],["בְּהִקָּבֵץ","shall-run-together"],["קְדוֹשַׁי׃","the-saints-of"],["׃",""]
   ]},
   { num: "יח", words: [
     ["וְגַם","and-also"],["יִמָּנוּ","they-were-numbered"],["מְקוֹמוֹת","places"],["אֲחֵרִים","other"],["לִיתֵדוֹת","to-stakes"],["בָּאֲזוֹרִים","with-a-girdle(pl)"],["מִסָּבִיב","round-about"],["כַּאֲשֶׁר","as"],["יִגָּלוּ","be-revealed"],["לְעַבְדִּי","to-My-servant"],["יוֹסֵף","Joseph"],["מֵעֵת","from-time"],["לְעֵת׃","to-time"],["׃",""]

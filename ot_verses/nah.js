@@ -37,7 +37,7 @@ var nah_ch2Verses = [
 renderVerseSet(nah_ch2Verses, 'nah-ch2-verses');
 
 var nah_ch3Verses = [
-  { num:"א", words:[["הוֹי","O"],["עִיר","city-of"],["דָּמִים","blood"],["כֻּלָּהּ","all-of-it(f)"],["כַּחַשׁ","lying"],["פֶּרֶק","plunder"],["מְלֵאָה","full"],["לֹא","not"],["יָמִישׁ","it departed"],["טָרֶף","prey"],["׃",""]] },
+  { num:"א", words:[["הוֹי","O"],["עִיר","the-city-of"],["דָּמִים","blood"],["כֻּלָּהּ","all-of-it(f)"],["כַּחַשׁ","lying"],["פֶּרֶק","plunder"],["מְלֵאָה","full"],["לֹא","not"],["יָמִישׁ","it departed"],["טָרֶף","prey"],["׃",""]] },
   { num:"ב", words:[["קוֹל","the-voice-of"],["שׁוֹט","a-scourge"],["וְקוֹל","the-voice-of-the-people"],["רַעַשׁ","an earthquake"],["אוֹפָן","a wheel"],["וְסוּס","and-horses"],["דֹּהֵר","galloping"],["וּמֶרְכָּבָה","and-a chariot"],["מְרַקֵּדָה","jolting"],["׃",""]] },
   { num:"ג", words:[["פָּרָשׁ","a horseman"],["מַעֲלֶה","brings-up"],["וְלַהַב","and-a flame"],["חֶרֶב","the-sword-of"],["וּבְרַק","and-the flash of"],["חֲנִית","daggers"],["וְרֹב","and-most-of"],["חָלָל","one slain"],["וְכֹבֶד","and-is heaviness of"],["פָּגֶר","corpses"],["וְאֵין","and-has-no"],["קֵצֶה","end"],["לַגְּוִיָּה","to the-bodies"],["(יכשלו)","they will stumble"],["[וְכָשְׁלוּ]","and-shall-stumble"],["בִּגְוִיָּתָם","over-bodies-their"],["׃",""]] },
   { num:"ד", words:[["מֵרֹב","from-multitude-of"],["זְנוּנֵי","the prostitutions of"],["זוֹנָה","harlot"],["טוֹבַת","the-welfare-of"],["חֵן","favor"],["בַּעֲלַת","Baalath"],["כְּשָׁפִים","sorceries"],["הַמֹּכֶרֶת","the-who-sells"],["גּוֹיִם","nations/gentiles"],["בִּזְנוּנֶיהָ","by-prostitution-her"],["וּמִשְׁפָּחוֹת","and-clans"],["בִּכְשָׁפֶיהָ","by-sorceries-her"],["׃",""]] },

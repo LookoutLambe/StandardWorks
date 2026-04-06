@@ -1078,7 +1078,7 @@ var frontJST = [
     ["מִמֶּנִּי","from-me"],
   ]},
   { num:"ט", words:[
-    ["וַיִּקְרָא","and-he-called"],
+    ["וַיִּקְרָא","and-called"],
     ["בִשְׁמִי","me-by-name"],
     ["וַיֹּאמֶר","and-said"],
     ["אֵלַי","unto-me"],

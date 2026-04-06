@@ -489,7 +489,7 @@ var dc45_ch1Verses = [
     ["לָכֵן","therefore"],["הַאֲזִינוּ","give ear"],["יַחְדָּו","together"],["וַאֲרֶאֲכֶם","and-when I may look-you(pl)"],["חָכְמָתִי","wisdom-my"],["חָכְמַת","the-wisdom-of"],["אֲשֶׁר","which"],["תֹּאמְרוּ","you-say"],["אֱלֹהֵי","the-God-of"],["חֲנוֹךְ","Enoch"],["וְאֶחָיו׃","and-his-brethren"],["׃",""]
   ]},
   { num: "יב", words: [
-    ["אֲשֶׁר","which"],["הֻפְרְשׁוּ","offal-its"],["מִן","from"],["הָאָרֶץ","the-land"],["וְנֶאֶסְפוּ","and-gathered"],["אֵלַי","to-me"],["עִיר","city-of"],["הַשְּׁמוּרָה","the-keep"],["עַד","until"],["בּוֹא","come/coming"],["יוֹם","day"],["הַצֶּדֶק","the-justice"],["יוֹם","day"],["אֲשֶׁר","which"],["בִּקְּשׁוּ","sought-his"],["כָּל","all"],["אַנְשֵׁי","the-men-of"],["קֹדֶשׁ","holy"],["וְלֹא","and-not"],["בִּגְלַל","on-account of"],["רֶשַׁע","wickedness"],["וְתוֹעֵבוֹת׃","and-abominations"],["׃",""]
+    ["אֲשֶׁר","which"],["הֻפְרְשׁוּ","offal-its"],["מִן","from"],["הָאָרֶץ","the-land"],["וְנֶאֶסְפוּ","and-gathered"],["אֵלַי","to-me"],["עִיר","the-city-of"],["הַשְּׁמוּרָה","the-keep"],["עַד","until"],["בּוֹא","come/coming"],["יוֹם","day"],["הַצֶּדֶק","the-justice"],["יוֹם","day"],["אֲשֶׁר","which"],["בִּקְּשׁוּ","sought-his"],["כָּל","all"],["אַנְשֵׁי","the-men-of"],["קֹדֶשׁ","holy"],["וְלֹא","and-not"],["בִּגְלַל","on-account of"],["רֶשַׁע","wickedness"],["וְתוֹעֵבוֹת׃","and-abominations"],["׃",""]
   ]},
   { num: "יג", words: [
     ["וְהוֹדוּ","and-give-thanks"],["כִּי","that"],["גֵּרִים","sojourners"],["וְתוֹשָׁבִים","and-resident aliens"],["הֵם","they"],["עַל","upon"],["הָאָרֶץ׃","the-land"],["׃",""]
@@ -651,7 +651,7 @@ var dc45_ch1Verses = [
     ["וּבְלֵב","and-of-heart"],["אֶחָד","one"],["וּבְדַעַת","and-with-knowledge"],["אַחַת","one"],["אִסְפוּ","gather"],["רְכוּשְׁכֶם","your-substance"],["לִקְנוֹת","to-recover"],["נַחֲלָה","inheritance"],["אֲשֶׁר","which"],["תְּמֻנֶּה","Timnah"],["לָכֶם","to-you"],["לְאַחַר","after"],["מִכֵּן׃","from-so"],["׃",""]
   ]},
   { num: "סו", words: [
-    ["וְתִקָּרֵא","and-salvation-should-be-declared"],["יְרוּשָׁלַיִם","Jerusalem"],["הַחֲדָשָׁה","the-new"],["אֶרֶץ","the-land-of"],["שָׁלוֹם","peace"],["עִיר","city-of"],["מִקְלָט","a-resort"],["מָקוֹם","place"],["בֶּטַח","security"],["לְקִדּוֹשֵׁי","of-the-Saints-of"],["אֵל","God"],["עֶלְיוֹן׃","Most-High"],["׃",""]
+    ["וְתִקָּרֵא","and-salvation-should-be-declared"],["יְרוּשָׁלַיִם","Jerusalem"],["הַחֲדָשָׁה","the-new"],["אֶרֶץ","the-land-of"],["שָׁלוֹם","peace"],["עִיר","the-city-of"],["מִקְלָט","a-resort"],["מָקוֹם","place"],["בֶּטַח","security"],["לְקִדּוֹשֵׁי","of-the-Saints-of"],["אֵל","God"],["עֶלְיוֹן׃","Most-High"],["׃",""]
   ]},
   { num: "סז", words: [
     ["וּכְבוֹד","and-glory-of"],["יְהוָה","the-Lord"],["יִהְיֶה","shall-be"],["שָׁם","there"],["וְאֵימַת","and-terror-of"],["יְהוָה","the-Lord"],["גַּם","also"],["תִּהְיֶה","shall-be"],["שָׁם","there"],["עַד","until"],["כִּי","that"],["הָרְשָׁעִים","the-wicked"],["לֹא","not"],["יָבֹאוּ","shall-come"],["אֵלֶיהָ","to-her"],["וְתִקָּרֵא","and-salvation-should-be-declared"],["צִיּוֹן׃","Zion"],["׃",""]

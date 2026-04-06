@@ -167,7 +167,7 @@ var ab_ch2Verses = [
     ["לָכֵן","therefore"],["יִהְיֶה","shall-be"],["כִּרְאוֹת","when-saw"],["אֹתָהּ","it"],["הַמִּצְרִים","the-Egyptians"],["יֹאמְרוּ","shall-say"],["אִשְׁתּוֹ","his-wife"],["זֹאת","this"],["וַהֲרָגוּךָ","and-they-would-kill-you"],["וְאֹתָהּ","and-it"],["יְחַיּוּ","they will let live"],["לָכֵן","therefore"],["רְאוּ","see-to-it!(pl)"],["לַעֲשׂוֹת","to-do"],["כָּזֹאת","such"],["׃",""]
   ]},
   { num: "כד", words: [
-    ["תֹּאמַר","you-say"],["אֶל־הַמִּצְרִים","to/unto-the-Egyptians"],["אֲחֹתוֹ","sister-his"],["אָנִי","I"],["וּתְחִי","so-it may live"],["נַפְשֶׁךָ","your-soul"],["׃",""]
+    ["תֹּאמַר","you-say"],["אֶל־הַמִּצְרִים","to/unto-the-Egyptians"],["אֲחֹתוֹ","his-sister"],["אָנִי","I"],["וּתְחִי","so-it may live"],["נַפְשֶׁךָ","your-soul"],["׃",""]
   ]},
   { num: "כה", words: [
     ["וַיְהִי","and-it-was"],["וָאַגֵּד","and-declared"],["אֲנִי","I"],["אַבְרָהָם","Abraham"],["לְשָׂרַי","to-Sarai"],["אִשְׁתִּי","my-wife"],["אֵת","[ACC]"],["כָּל־אֲשֶׁר","all-things-what"],["אָמַר","said"],["יְהוָה","the-Lord"],["אֵלַי","to-me"],["לָכֵן","therefore"],["אִמְרִי־נָא","say-I-pray"],["לָהֶם","unto-them"],["אֲחֹתִי","are sister-my"],["אָתְּ","you"],["לְמַעַן","that"],["יִיטַב","it-shall-be-well"],["לִי","to-me"],["בַּעֲבוּרֵךְ","for-sake of-you"],["וְחָיְתָה","and-it will live"],["נַפְשִׁי","my-soul"],["בִּגְלָלֵךְ","on-account of-you"],["׃",""]
@@ -242,7 +242,7 @@ var ab_ch3Verses = [
     ["וַיַּרְאֵנִי","and-showed-me"],["יְהוָה","the-Lord"],["אֲנִי","I"],["אַבְרָהָם","Abraham"],["אֶת־הַשְּׂכָלִים","term used to indicate a direct object-the-childlessness"],["אֲשֶׁר","which"],["עָרְכוּ","they had deployed"],["לִפְנֵי","before"],["הָיוֹת","you-shall-have"],["הָעוֹלָם","the-world"],["וּבֵין","and-between"],["כָּל־אֵלֶּה","all-these-things"],["הָיוּ","were"],["רַבִּים","many"],["מִן־הָאַדִּירִים","from-the-mighty"],["וְהַגְּדוֹלִים","and-the-large"],["׃",""]
   ]},
   { num: "כג", words: [
-    ["וַיַּרְא","and-he-saw"],["אֱלֹהִים","God"],["אֶת־הַנְּפָשׁוֹת","[ACC]-the-souls"],["הָאֵלֶּה","these"],["כִּי","that"],["טוֹבוֹת","good"],["וַיַּעֲמֹד","and-stood"],["בְּקִרְבָּם","among-them"],["וַיֹּאמֶר","and-said"],["אֵלֶּה","these"],["אֶעֱשֶׂה","I-do"],["לְמוֹשְׁלָי","my-rulers"],["כִּי","that"],["עָמַד","stood"],["בֵּין","among"],["אֵלֶּה","these"],["אֲשֶׁר","which"],["הָיוּ","were"],["רוּחוֹת","the-spirits-of"],["וַיַּרְא","and-he-saw"],["כִּי","that"],["טוֹבִים","good"],["וַיֹּאמֶר","and-said"],["אֵלַי","to-me"],["אַבְרָהָם","Abraham"],["אַתָּה","you"],["אֶחָד","one"],["מֵהֶם","from-them"],["נִבְחַרְתָּ","choice"],["בְּטֶרֶם","before"],["נוֹלָדְתָּ","you-were-born"],["׃",""]
+    ["וַיַּרְא","and-saw"],["אֱלֹהִים","God"],["אֶת־הַנְּפָשׁוֹת","[ACC]-the-souls"],["הָאֵלֶּה","these"],["כִּי","that"],["טוֹבוֹת","good"],["וַיַּעֲמֹד","and-stood"],["בְּקִרְבָּם","among-them"],["וַיֹּאמֶר","and-said"],["אֵלֶּה","these"],["אֶעֱשֶׂה","I-do"],["לְמוֹשְׁלָי","my-rulers"],["כִּי","that"],["עָמַד","stood"],["בֵּין","among"],["אֵלֶּה","these"],["אֲשֶׁר","which"],["הָיוּ","were"],["רוּחוֹת","the-spirits-of"],["וַיַּרְא","and-saw"],["כִּי","that"],["טוֹבִים","good"],["וַיֹּאמֶר","and-said"],["אֵלַי","to-me"],["אַבְרָהָם","Abraham"],["אַתָּה","you"],["אֶחָד","one"],["מֵהֶם","from-them"],["נִבְחַרְתָּ","choice"],["בְּטֶרֶם","before"],["נוֹלָדְתָּ","you-were-born"],["׃",""]
   ]},
   { num: "כד", words: [
     ["וְאֶחָד","and-first"],["עָמַד","stood"],["בֵּינֵיהֶם","among-them"],["דֹּמֶה","one silenced"],["לֵאלֹהִים","to-God"],["וַיֹּאמֶר","and-said"],["לְאֵלֶּה","to-these"],["אֲשֶׁר","which"],["עִמּוֹ","with-him"],["נֵרְדָה","let-us-go-down"],["כִּי","that"],["יֵשׁ","there"],["מָקוֹם","place"],["שָׁם","there"],["וְנִקַּח","and-we-take"],["מִן־הַחֲמָרִים","from-the-donkeys"],["הָאֵלֶּה","these"],["וְנַעֲשֶׂה","and-do"],["אֶרֶץ","the-land-of"],["אֲשֶׁר","which"],["יֵשְׁבוּ","dwell-shall"],["עָלֶיהָ","upon-it"],["אֵלֶּה","these"],["׃",""]
@@ -419,7 +419,7 @@ var ab_ch5Verses = [
     ["וּמִן־הָאֲדָמָה","and-from-the-ground"],["יָצְרוּ","Itsro"],["הָאֱלֹהִים","God"],["כָּל־חַיַּת","all-beasts-of"],["הַשָּׂדֶה","the-field"],["וְאֵת","and-[ACC]"],["כָּל־עוֹף","all-bird/fowl"],["הַשָּׁמַיִם","the-heavens"],["וַיָּבִיאוּ","and-brought"],["אֶל־הָאָדָם","to/unto-the-man/Adam"],["לִרְאוֹת","to-see"],["מַה־יִּקְרָא","what-will he call"],["לוֹ","to-him"],["וְכֹל","and-the-whole"],["אֲשֶׁר","which"],["יִקְרָא","calls"],["לוֹ","to-him"],["הָאָדָם","the-man/Adam"],["נֶפֶשׁ","soul"],["חַיָּה","burning"],["הוּא","he/it"],["שְׁמוֹ","his-name"],["׃",""]
   ]},
   { num: "כא", words: [
-    ["וַיִּקְרָא","and-he-called"],["הָאָדָם","the-man/Adam"],["שֵׁמוֹת","names"],["לְכָל־הַבְּהֵמָה","to-all-the-livestock"],["וּלְעוֹף","and-to-the birds of"],["הַשָּׁמַיִם","the-heavens"],["וּלְכֹל","and-to-every"],["חַיַּת","beasts-of"],["הַשָּׂדֶה","the-field"],["וּלְאָדָם","and-for-Adam"],["לֹא־מָצָא","not-found"],["עֵזֶר","a helper"],["כְּנֶגְדּוֹ","like-before-him"],["׃",""]
+    ["וַיִּקְרָא","and-called"],["הָאָדָם","the-man/Adam"],["שֵׁמוֹת","names"],["לְכָל־הַבְּהֵמָה","to-all-the-livestock"],["וּלְעוֹף","and-to-the birds of"],["הַשָּׁמַיִם","the-heavens"],["וּלְכֹל","and-to-every"],["חַיַּת","beasts-of"],["הַשָּׂדֶה","the-field"],["וּלְאָדָם","and-for-Adam"],["לֹא־מָצָא","not-found"],["עֵזֶר","a helper"],["כְּנֶגְדּוֹ","like-before-him"],["׃",""]
   ]}
 ];
 renderVerseSet(ab_ch5Verses, 'ab-ch5-verses');
