@@ -342,13 +342,13 @@ var dc38_ch1Verses = [
     ["וַאֲנִי","and-I"],["וְרוֹצֶה","and-would-that"],["לָתֵת","to-give"],["לָכֶם","to-you"],["עֹשֶׁר","riches"],["גָּדוֹל","great"],["יוֹתֵר","more"],["אֶרֶץ","the-land-of"],["הַבְטָחָה","a-promise"],["אֶרֶץ","the-land-of"],["זָבַת","flowing"],["חָלָב","milk"],["וּדְבַשׁ","and-honey"],["אֲשֶׁר","which"],["לֹא","not"],["תִהְיֶה","be"],["בָּהּ","in-it(f)"],["קְלָלָה","a-curse"],["בְּבוֹא","when-comes"],["יְהוָה׃","the-Lord"],["׃",""]
   ]},
   { num: "יט", words: [
-    ["וַאֲנִי","and-I"],["אֶתְּנֶנָּה","shall-I-give-it"],["לָכֶם","to-you"],["לְאֶרֶץ","to-the-land-of"],["נַחֲלַתְכֶם","your-inheritance"],["אִם","if"],["בְּכָל","with-all"],["לְבַבְכֶם׃","heart-your"],["׃",""]
+    ["וַאֲנִי","and-I"],["אֶתְּנֶנָּה","shall-I-give-it"],["לָכֶם","to-you"],["לְאֶרֶץ","to-the-land-of"],["נַחֲלַתְכֶם","your-inheritance"],["אִם","if"],["בְּכָל","with-all"],["לְבַבְכֶם׃","your-heart"],["׃",""]
   ]},
   { num: "כ", words: [
     ["וְזֹאת","and-this"],["תִּהְיֶה","shall-be"],["בְרִיתִי","covenant-my"],["אִתְּכֶם","with-you"],["תְּקַבְּלוּהָ","you-shall-receive-it"],["לְאֶרֶץ","to-the-land-of"],["נַחֲלַתְכֶם","your-inheritance"],["וּלְנַחֲלַת","and-for-the-inheritance-of"],["בְּנֵיכֶם","your-children"],["לְעוֹלָם","forever"],["כָּל","all"],["עוֹד","more"],["הָאָרֶץ","the-land"],["עֹמֶדֶת","Mdt"],["עוֹד","more"],["בַּנֶּצַח","in-the-he-conquered"],["לֹא","not"],["לַעֲבֹר","cross"],["עוֹד׃","more"],["׃",""]
   ]},
   { num: "כא", words: [
-    ["אַךְ","but/surely"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["כִּי","that"],["בַזְּמַן","in-the-time"],["לֹא","not"],["יִהְיֶה","shall-be"],["לָכֶם","to-you"],["מֶלֶךְ","king-of"],["וְלֹא","and-not"],["מוֹשֵׁל","ruler"],["כִּי","that"],["אֲנִי","I"],["אֶהְיֶה","I-shall-be"],["מַלְכְּכֶם","your-king"],["וְאֶשְׁמֹר","and-I-may-preserve"],["עֲלֵיכֶם׃","upon-you"],["׃",""]
+    ["אַךְ","but/surely"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["כִּי","that"],["בַזְּמַן","in-the-time"],["לֹא","not"],["יִהְיֶה","shall-be"],["לָכֶם","to-you"],["מֶלֶךְ","the-king-of"],["וְלֹא","and-not"],["מוֹשֵׁל","ruler"],["כִּי","that"],["אֲנִי","I"],["אֶהְיֶה","I-shall-be"],["מַלְכְּכֶם","your-king"],["וְאֶשְׁמֹר","and-I-may-preserve"],["עֲלֵיכֶם׃","upon-you"],["׃",""]
   ]},
   { num: "כב", words: [
     ["לָכֵן","therefore"],["שִׁמְעוּ","hear"],["קוֹלִי","my-voice"],["וְלֵכוּ","and-they-went"],["אַחֲרַי","after-me"],["וְתִהְיוּ","and-will-be"],["עַם","the-people-of"],["חָפְשִׁי","free"],["וְלֹא","and-not"],["יִהְיֶה","shall-be"],["לָכֶם","to-you"],["חֻקִּים","laws"],["זוּלָתִי","except"],["חֻקַּי","statutes-my"],["בְּבוֹאִי","when-I-came"],["כִּי","that"],["אֲנִי","I"],["מְחֹקֵקְכֶם","what is decreed-you(pl)"],["וּמִי","and-who"],["יַעֲצֹר","constrains"],["יָדִי׃","the hands of"],["׃",""]

@@ -2031,7 +2031,7 @@ var frontBrief = [
     ["רֵאשִׁית","the-beginning-of"],
     ["מְלֹךְ","the-reign-of"],
     ["צִדְקִיָּהוּ","Zedekiah"],
-    ["מֶלֶךְ","king-of"],
+    ["מֶלֶךְ","the-king-of"],
     ["יְהוּדָה","Judah"],
     ["וּנְבוּאוֹת","and-the-prophecies-of"],
     ["הַנְּבִיאִים","the-prophets"],

@@ -38,7 +38,7 @@ var _2th_ch2Verses = [
 renderVerseSet(_2th_ch2Verses, '2th-ch2-verses');
 
 var _2th_ch3Verses = [
-  { num:"א", words:[["וְעוֹד","and-again"],["אַחַי","my-brothers"],["הִתְפַּלֲלוּ","pray!"],["בַעֲדֵנוּ","for-us"],["אֲשֶׁר","which"],["יָרוּץ","he runs"],["דְּבַר","word-of"],["יְהוָֹה","the-Lord"],["וְיִכָּבֵד","and-be-glorified"],["כְּהִכָּבְדוֹ","as-it-was-glorified"],["בְקִרְבְּכֶם","among-you"],["׃",""]] },
+  { num:"א", words:[["וְעוֹד","and-again"],["אַחַי","my-brothers"],["הִתְפַּלֲלוּ","pray!"],["בַעֲדֵנוּ","for-us"],["אֲשֶׁר","which"],["יָרוּץ","he runs"],["דְּבַר","the-word-of"],["יְהוָֹה","the-Lord"],["וְיִכָּבֵד","and-be-glorified"],["כְּהִכָּבְדוֹ","as-it-was-glorified"],["בְקִרְבְּכֶם","among-you"],["׃",""]] },
   { num:"ב", words:[["וַאֲשֶׁר","and-whom"],["נִנָּצֵל","we-be-delivered"],["מִן־הָאֲנָשִׁים","from-the-men"],["הַתֹּעִים","the-wandering"],["וְהָרָעִים","and-evil"],["כִּי","because"],["לֹא","not"],["לְכָל־אָדָם","unto-all-men"],["הָאֱמוּנָה","the-faith"],["׃",""]] },
   { num:"ג", words:[["אֲבָל","but/however"],["נֶאֱמָן","more-faithful"],["הוּא","it-is"],["הָאָדוֹן","the-Lord"],["אֲשֶׁר","which"],["יְחַזֵּק","shall-strengthen"],["אֶתְכֶם","you"],["וְיִשְׁמָרְכֶם","and-shall-be-kept-you(pl)"],["מִן־הָרָע","from-that-which-is-evil"],["׃",""]] },
   { num:"ד", words:[["וַאֲנַחְנוּ","and-we-are"],["בְּטוּחִים","confident"],["עֲלֵיכֶם","over-you"],["בַּאֲדֹנֵינוּ","in-the-our-Lord"],["שֶׁעֹשִׂים","that-which-act"],["אַתֶּם","you-are"],["כְּמִצְוָתֵנוּ","as-our-precept"],["וְגַם־תּוֹסִיפוּ","and-also-continue"],["לַעֲשׂוֹת","to-do"],["׃",""]] },

@@ -2,7 +2,7 @@
 (function() {
 var dc109_ch1Verses = [
   { num: "א", words: [
-    ["תּוֹדָה","thanksgiving"],["לִשְׁמֶךָ","to-your-name"],["יְהוָה","the-Lord"],["אֱלֹהֵי","God-of"],["יִשְׂרָאֵל","Israel"],["שׁוֹמֵר","the keeper of"],["הַבְּרִית","the-covenant"],["וּמַרְאֶה","and-shows"],["חֶסֶד","mercy"],["לַעֲבָדֶיךָ","to-servants-of-your"],["הַהֹלְכִים","the-ones-walking"],["לְפָנֶיךָ","before-you"],["בְּיֹשֶׁר","uprightly"],["בְּכָל־לִבָּם׃","in-all-their-hearts"],["׃",""]
+    ["תּוֹדָה","thanksgiving"],["לִשְׁמֶךָ","to-your-name"],["יְהוָה","the-Lord"],["אֱלֹהֵי","the-God-of"],["יִשְׂרָאֵל","Israel"],["שׁוֹמֵר","the keeper of"],["הַבְּרִית","the-covenant"],["וּמַרְאֶה","and-shows"],["חֶסֶד","mercy"],["לַעֲבָדֶיךָ","to-servants-of-your"],["הַהֹלְכִים","the-ones-walking"],["לְפָנֶיךָ","before-you"],["בְּיֹשֶׁר","uprightly"],["בְּכָל־לִבָּם׃","in-all-their-hearts"],["׃",""]
   ]},
   { num: "ב", words: [
     ["אַתָּה","you"],["אֲשֶׁר","which"],["צִוִּיתָ","you commanded"],["אֶת־עֲבָדֶיךָ","with-servants-your"],["לִבְנוֹת","white"],["בַּיִת","house"],["לִשְׁמֶךָ","to-your-name"],["בַּמָּקוֹם","the-space"],["הַזֶּה׃","this"],["׃",""]
@@ -44,7 +44,7 @@ var dc109_ch1Verses = [
     ["וְתֵן","and-give"],["אָבִינוּ","our-father"],["הַקָּדוֹשׁ","the-holy"],["שֶׁכָּל","that-every"],["הָעוֹבְדִים","the-worker(pl)"],["בַּבַּיִת","in-the-house"],["הַזֶּה","this"],["יִלְמְדוּ","they-may-learn"],["דִּבְרֵי","account-of"],["חָכְמָה","wisdom"],["מִתּוֹךְ","from-midst-of"],["הַסְּפָרִים","the-records"],["הַטּוֹבִים","the-good"],["בְּיוֹתֵר","exceedingly"],["דַּעַת","true-knowledge"],["אַף","yea"],["בְּלִמּוּד","in-study"],["וְגַם","and-also"],["בֶּאֱמוּנָה","with-much-faith"],["כַּאֲשֶׁר","when/as"],["אָמָרְתָּ׃","you will say"],["׃",""]
   ]},
   { num: "טו", words: [
-    ["בְּךָ","in-You"],["וִיקַבְּלוּ","and-they received it"],["מְלוֹא","the-fullness-of"],["רוּחַ","spirit-of"],["הַקֹּדֶשׁ","the-Holy"],["וְיִתְאַרְגְּנוּ","and-they-shall-organize"],["כְּחֻקֶּיךָ","as-decrees-your"],["וְיִהְיוּ","and-they-were"],["מוּכָנִים","prepared"],["לְהַשִּׂיג","to-obtain"],["כָּל","all"],["דָּבָר","things"],["נָחוּץ׃","necessary"],["׃",""]
+    ["בְּךָ","in-You"],["וִיקַבְּלוּ","and-they received it"],["מְלוֹא","the-fullness-of"],["רוּחַ","the-spirit-of"],["הַקֹּדֶשׁ","the-Holy"],["וְיִתְאַרְגְּנוּ","and-they-shall-organize"],["כְּחֻקֶּיךָ","as-decrees-your"],["וְיִהְיוּ","and-they-were"],["מוּכָנִים","prepared"],["לְהַשִּׂיג","to-obtain"],["כָּל","all"],["דָּבָר","things"],["נָחוּץ׃","necessary"],["׃",""]
   ]},
   { num: "טז", words: [
     ["וְשֶׁיִּהְיֶה","and-that-he-shall-be"],["הַבַּיִת","the-house"],["הַזֶּה","this"],["בֵּית","house-of"],["תְּפִלָּה","prayer"],["בֵּית","house-of"],["צוֹם","fasting"],["בֵּית","house-of"],["אֱמוּנָה","faith"],["בֵּית","house-of"],["כָּבוֹד","glorious"],["וּבֵית","and-house-of"],["אֱלֹהִים","God"],["אַף","yea"],["בֵּיתֶךָ׃","house-your"],["׃",""]
@@ -155,7 +155,7 @@ var dc109_ch1Verses = [
     ["וְאִם","and-if"],["לֹא","not"],["יֹאבוּ","he-will-father"],["חֲשֹׂף","he has bared"],["זְרוֹעֲךָ","strength-your"],["יְהוָה","the-Lord"],["וּגְאַל","and-he will redeem"],["אֵת","[ACC]"],["אֲשֶׁר","which"],["מִנִּיתָ","Minnith"],["לְצִיּוֹן","unto-Zion"],["לְעַמֶּךָ׃","to-people-your"],["׃",""]
   ]},
   { num: "נב", words: [
-    ["וְאִם","and-if"],["לֹא","not"],["יוּכַל","can"],["אַחֶרֶת","any-other"],["לְמַעַן","in-order-that"],["לֹא","not"],["תִכָּשֵׁל","you will stumble"],["דְּבַר","word-of"],["עַמְּךָ","your-people"],["לְפָנֶיךָ","before-you"],["יִחַר","be-angry-with"],["אַפְּךָ","Your-anger"],["וְיִפֹּל","and-shall-fall"],["זַעְמְךָ","indignation-your"],["עֲלֵיהֶם","against-them"],["לְמַעַן","in-order-that"],["יִכָּרְתוּ","they-shall-be-cut-off"],["בֵּין","among"],["אָדָם","man"],["לְבֵהֵמָה׃","for the-animal"],["׃",""]
+    ["וְאִם","and-if"],["לֹא","not"],["יוּכַל","can"],["אַחֶרֶת","any-other"],["לְמַעַן","in-order-that"],["לֹא","not"],["תִכָּשֵׁל","you will stumble"],["דְּבַר","the-word-of"],["עַמְּךָ","your-people"],["לְפָנֶיךָ","before-you"],["יִחַר","be-angry-with"],["אַפְּךָ","Your-anger"],["וְיִפֹּל","and-shall-fall"],["זַעְמְךָ","indignation-your"],["עֲלֵיהֶם","against-them"],["לְמַעַן","in-order-that"],["יִכָּרְתוּ","they-shall-be-cut-off"],["בֵּין","among"],["אָדָם","man"],["לְבֵהֵמָה׃","for the-animal"],["׃",""]
   ]},
   { num: "נג", words: [
     ["אַךְ","but"],["בְּמִדָּה","with-a measure"],["שֶׁיָּשׁוּבוּ","that-he-will-return-his"],["בִּתְשׁוּבָה","through-repentance"],["חַנּוּן","merciful"],["וְרַחוּם","and-merciful"],["אַתָּה","you"],["וְתָשִׁיב","and-recall"],["חֲרוֹנְךָ","your-wrath"],["בְּהַבִּיטְךָ","in-to look-your"],["עַל","upon"],["פְּנֵי","face-of"],["מְשִׁיחֶךָ׃","anointed-your"],["׃",""]

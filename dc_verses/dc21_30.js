@@ -180,7 +180,7 @@ var dc25_ch1Verses = [
     ["כִּי","for"],["נַפְשִׁי","my-soul"],["בְּשִׁיר","in-a-song"],["הַלֵּב","the-heart"],["אָכֵן","yea"],["שִׁיר","a song"],["הַצַּדִּיקִים","the-righteous"],["תְּפִלָּה","prayer"],["הִיא","it-is"],["לִי","to-me"],["וְתֵעָנֶה","and-she afflicted-her"],["בִּבְרָכָה","in-blessing"],["עַל","upon"],["רֹאשָׁם׃","their-own-heads"],["׃",""]
   ]},
   { num: "יג", words: [
-    ["לָכֵן","therefore"],["הָרִימִי","the-lift up"],["לִבֵּךְ","heart-your"],["וְגִילִי","and-be-joyful"],["וְדִבְקִי","and-he cleaves-my"],["בַּבְּרִיתוֹת","in-the-covenants-of"],["אֲשֶׁר","which"],["כָּרַתְּ׃","He-made"],["׃",""]
+    ["לָכֵן","therefore"],["הָרִימִי","the-lift up"],["לִבֵּךְ","your-heart"],["וְגִילִי","and-be-joyful"],["וְדִבְקִי","and-he cleaves-my"],["בַּבְּרִיתוֹת","in-the-covenants-of"],["אֲשֶׁר","which"],["כָּרַתְּ׃","He-made"],["׃",""]
   ]},
   { num: "יד", words: [
     ["בְּרוּחַ","by-the-spirit-of"],["עֲנָוָה","humility"],["וְהִשָּׁמְרִי","and-take care"],["מִגַּאֲוָה","from-pride"],["תִּתְעַנֵּג","delights"],["נַפְשֵׁךְ","life-your"],["וּבַכָּבוֹד","and-in-the-glorious"],["אֲשֶׁר","which"],["יָבוֹא","shall-come"],["עָלָיו׃","upon-him"],["׃",""]
