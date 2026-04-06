@@ -26,7 +26,7 @@ var n2_ch1Verses = [
     ["׃",""]
   ]},
   { num:"ב", words:[
-    ["וַיְדַבֵּר","and-he-spoke"],
+    ["וַיְדַבֵּר","and-spoke"],
     ["אֲלֵיהֶם","to-them"],
     ["עַל־מְרִיבוֹתָם","upon-their-contentions"],
     ["עַל־הַמַּיִם","upon-the-waters"],
@@ -39,7 +39,7 @@ var n2_ch1Verses = [
     ["׃",""]
   ]},
   { num:"ג", words:[
-    ["וַיְדַבֵּר","and-he-spoke"],
+    ["וַיְדַבֵּר","and-spoke"],
     ["גַּם","also"],
     ["עַל־אֶרֶץ","concerning-the-land-of"],
     ["הַנַּחֲלָה","the-inheritance (e.g. promise)"],
@@ -152,7 +152,7 @@ var n2_ch1Verses = [
   ]},
   { num:"ח", words:[
     ["וְחָכְמָה","and-wisdom"],
-    ["הִיא","it-is"],
+    ["הִיא","it"],
     ["כִּי","that"],
     ["תִּסָּתֵר","you-shall-be-hidden"],
     ["הָאָרֶץ","the-land"],
@@ -822,7 +822,7 @@ var n2_ch2Verses = [
     ["בַּבָּשָׂר","in-the-flesh"],
     ["כִּי","for"],
     ["אַחַת","one"],
-    ["הִיא","it-is"],
+    ["הִיא","it"],
     ["הָרוּחַ","the-Spirit"],
     ["אֶתְמוֹל","yesterday"],
     ["הַיּוֹם","the-today"],
@@ -2173,7 +2173,7 @@ var n2_ch4Verses = [
     ["׃",""]
   ]},
   { num:"ט", words:[
-    ["וַיְדַבֵּר","and-he-spoke"],
+    ["וַיְדַבֵּר","and-spoke"],
     ["אֲלֵיהֶם","unto-them"],
     ["לֵאמֹר","saying"],
     ["בָּנַי","my-sons"],
@@ -4021,7 +4021,7 @@ var n2_ch8Verses = [
     ["קֶדֶם","old"],
     ["הֲלוֹא","art-not"],
     ["אַתָּה","you"],
-    ["הִיא","it-is"],
+    ["הִיא","it"],
     ["הַמַּחְצֶבֶת","the-who-hewed"],
     ["רַהַב","Rahab"],
     ["מְחוֹלֶלֶת","and-wounded"],
@@ -4031,7 +4031,7 @@ var n2_ch8Verses = [
   { num:"י", words:[
     ["הֲלוֹא","art-not"],
     ["אַתָּה","you"],
-    ["הִיא","it-is"],
+    ["הִיא","it"],
     ["הַמַּחֲרֶבֶת","the-who-dried"],
     ["יָם","the-sea"],
     ["מֵי","the-waters-of"],
@@ -4371,7 +4371,7 @@ var n2_ch9Verses = [
     ["מְקוֹם","the-place"],
     ["מוֹצָאֵנוּ","from-which-we-came"],
     ["נָכוֹן","expedient"],
-    ["הוּא","it-is"],
+    ["הוּא","it"],
     ["בְתוֹכָם","among-them"],
     ["יָאֶה","it-behooves"],
     ["לַבּוֹרֵא","to-the-Creator"],
@@ -5811,7 +5811,7 @@ var n2_ch10Verses = [
     ["כִּי","for"],
     ["אֶרֶץ","a-land"],
     ["סְגֻלָּה","choice"],
-    ["הִיא","it-is"],
+    ["הִיא","it"],
     ["נְאֻם־אֱלֹהִים","says-God"],
     ["אֵלַי","unto-me"],
     ["מִכָּל־הָאֲרָצוֹת","the-above-all-other-lands"],
@@ -9955,7 +9955,7 @@ var n2_ch24Verses = [
     ["הָיָתָה","shall-it-come-to-pass"],
     ["וְכַאֲשֶׁר","and-as"],
     ["יָעַצְתִּי","I-have-purposed"],
-    ["הִיא","it-is"],
+    ["הִיא","it"],
     ["תָקוּם","stand"],
     ["׃",""]
   ]},
@@ -10821,7 +10821,7 @@ var n2_ch25Verses = [
     ["לִבָּם","their-hearts"],
     ["נֶגְדּוֹ","against-Him"],
     ["בְּעֵת","at-the-time"],
-    ["הֱיוֹתָהּ","it-is"],
+    ["הֱיוֹתָהּ","it"],
     ["מוּסֶרֶת","to-be-done-away"],
     ["׃",""]
   ]},
@@ -13617,7 +13617,7 @@ var n2_ch30Verses = [
     ["יֵדְעוּ","they-shall-know"],
     ["כִּי","that"],
     ["בְרָכָה","it-is-a-blessing"],
-    ["הִיא","it-is"],
+    ["הִיא","it"],
     ["לָהֶם","unto-them"],
     ["מִיַּד","from-the-hand-of"],
     ["אֱלֹהִים","God"],

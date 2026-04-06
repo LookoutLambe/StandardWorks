@@ -16,7 +16,7 @@ renderVerseSet(jstexo_ch1Verses, 'jstexo-ch1-verses');
 // === CH2: JST Exodus 18:1 ===
 // Jethro is a high priest.
 var jstexo_ch2Verses = [
-  { num:"א", words:[["וַיִּשְׁמַע","and-heard"],["יִתְרוֹ","Jethro"],["כֹּהֵן","the-high"],["גָּדוֹל","priest-of"],["מִדְיָן","Midian"],["חֹתֵן","father-in-law-of"],["מֹשֶׁה","Moses"],["אֵת","[ACC]"],["כׇּל","all"],["אֲשֶׁר","that"],["עָשָׂה","had-done"],["אֱלֹהִים","God"],["לְמֹשֶׁה","for-Moses"],["וּלְיִשְׂרָאֵל","and-for-Israel"],["עַמּוֹ","his-people"],["וְכִי","and-that"],["הוֹצִיא","had-brought-out"],["יְהוָה","the-LORD"],["אֶת","[ACC]"],["יִשְׂרָאֵל","Israel"],["מִמִּצְרָיִם","out-of-Egypt"],["׃",""]] }
+  { num:"א", words:[["וַיִּשְׁמַע","and-heard"],["יִתְרוֹ","Jethro"],["כֹּהֵן","the-high"],["גָּדוֹל","the-priest-of"],["מִדְיָן","Midian"],["חֹתֵן","father-in-law-of"],["מֹשֶׁה","Moses"],["אֵת","[ACC]"],["כׇּל","all"],["אֲשֶׁר","that"],["עָשָׂה","had-done"],["אֱלֹהִים","God"],["לְמֹשֶׁה","for-Moses"],["וּלְיִשְׂרָאֵל","and-for-Israel"],["עַמּוֹ","his-people"],["וְכִי","and-that"],["הוֹצִיא","had-brought-out"],["יְהוָה","the-LORD"],["אֶת","[ACC]"],["יִשְׂרָאֵל","Israel"],["מִמִּצְרָיִם","out-of-Egypt"],["׃",""]] }
 ];
 renderVerseSet(jstexo_ch2Verses, 'jstexo-ch2-verses');
 

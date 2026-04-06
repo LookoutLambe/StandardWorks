@@ -103,13 +103,13 @@ var dc93_ch1Verses = [
     ["גַּם","also"],["אַתֶּם","you"],["הֱיִיתֶם","because-you-have-been"],["בָּרֵאשִׁית","in-the-the-beginning-of"],["עִם","with"],["הָאָב","the-Father"],["אֲשֶׁר","which"],["רוּחַ","spirit"],["הוּא","he/it"],["אָכֵן","yea"],["רוּחַ","spirit"],["הָאֱמֶת׃","the-truth"],["׃",""]
   ]},
   { num: "כד", words: [
-    ["וְהָאֱמֶת","and-the-true"],["הִיא","it-is"],["דַּעַת","knowledge"],["הַדְּבָרִים","the-things"],["כַּאֲשֶׁר","as"],["הֵם","they"],["וְכַאֲשֶׁר","and-when"],["הָיוּ","were"],["וְכַאֲשֶׁר","and-when"],["יִהְיוּ׃","shall-be"],["׃",""]
+    ["וְהָאֱמֶת","and-the-true"],["הִיא","it"],["דַּעַת","knowledge"],["הַדְּבָרִים","the-things"],["כַּאֲשֶׁר","as"],["הֵם","they"],["וְכַאֲשֶׁר","and-when"],["הָיוּ","were"],["וְכַאֲשֶׁר","and-when"],["יִהְיוּ׃","shall-be"],["׃",""]
   ]},
   { num: "כה", words: [
     ["וְכָל־יוֹתֵר","and-all-more"],["אוֹ","or"],["פָחוֹת","governors"],["מִזֶּה","than-this"],["רוּחַ","spirit"],["הָרָשָׁע","the-more-wicked"],["הַהוּא","that"],["אֲשֶׁר","which"],["כַּזָּב","as-the-one discharging"],["הוּא","he/it"],["מֵרֵאשִׁית׃","from-the-beginning"],["׃",""]
   ]},
   { num: "כו", words: [
-    ["רוּחַ","spirit"],["הָאֱמֶת","the-truth"],["מֵאֱלֹהִים","from-God"],["הִיא","it-is"],["אֲנִי","I"],["רוּחַ","spirit"],["הָאֱמֶת","the-truth"],["וְיוֹחָנָן","and-Johanan"],["הֵעִיד","he-testified"],["עָלַי","I-must"],["לֵאמֹר","saying"],["הוּא","he/it"],["קִבֵּל","received"],["מְלֹא","fullness-of"],["אֱמֶת","true"],["אָכֵן","yea"],["מְלֹא","fullness-of"],["כָּל־אֱמֶת׃","all-true"],["׃",""]
+    ["רוּחַ","spirit"],["הָאֱמֶת","the-truth"],["מֵאֱלֹהִים","from-God"],["הִיא","it"],["אֲנִי","I"],["רוּחַ","spirit"],["הָאֱמֶת","the-truth"],["וְיוֹחָנָן","and-Johanan"],["הֵעִיד","he-testified"],["עָלַי","I-must"],["לֵאמֹר","saying"],["הוּא","he/it"],["קִבֵּל","received"],["מְלֹא","fullness-of"],["אֱמֶת","true"],["אָכֵן","yea"],["מְלֹא","fullness-of"],["כָּל־אֱמֶת׃","all-true"],["׃",""]
   ]},
   { num: "כז", words: [
     ["וְאֵין","and-there-is-not"],["אִישׁ","man/each"],["מְקַבֵּל","from-received"],["מְלֹא","fullness-of"],["אֶלָּא","but-rather"],["אִם","if"],["שֹׁמֵר","who keeps"],["מִצְוֹתָיו׃","His-commandments"],["׃",""]
