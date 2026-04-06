@@ -89,7 +89,7 @@ var dc11_ch1Verses = [
     ["אֲנִי","I"],["הוּא","he/it"],["אֲשֶׁר","which"],["בָּאתִי","when-I-came"],["אֶל־שְׁלִי","to/unto-privacy"],["וּשְׁלִי","and-privacy"],["לֹא","not"],["קִבְּלוּנִי׃","they-received-me"],["׃",""]
   ]},
   { num: "ל", words: [
-    ["אַךְ","but/surely"],["אָמֵן","amen"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["כֹּל","all"],["הַמְקַבְּלִים","the-from-received"],["אֹתִי","me"],["לָהֶם","unto-them"],["אֶתֵּן","shall-I-give"],["כֹּחַ","power"],["לִהְיוֹת","to-be"],["בְּנֵי","sons-of"],["אֱלֹהִים","God"],["אָכֵן","yea"],["לַמַּאֲמִינִים","to-the-believers"],["בִּשְׁמִי","My-name"],["אָמֵן׃","amen"],["׃",""]
+    ["אַךְ","but/surely"],["אָמֵן","amen"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["כֹּל","all"],["הַמְקַבְּלִים","the-from-received"],["אֹתִי","me"],["לָהֶם","unto-them"],["אֶתֵּן","shall-I-give"],["כֹּחַ","power"],["לִהְיוֹת","to-be"],["בְּנֵי","the-sons-of"],["אֱלֹהִים","God"],["אָכֵן","yea"],["לַמַּאֲמִינִים","to-the-believers"],["בִּשְׁמִי","My-name"],["אָמֵן׃","amen"],["׃",""]
   ]},
 ];
 renderVerseSet(dc11_ch1Verses, 'dc11-ch1-verses');
@@ -127,7 +127,7 @@ renderVerseSet(dc12_ch1Verses, 'dc12-ch1-verses');
 
 var dc13_ch1Verses = [
   { num: "א", words: [
-    ["עֲלֵיכֶם","upon-you"],["עַבְדַי","which work"],["הַחֲבֵרִים","the-united"],["בְּשֵׁם","in-name-of"],["הַמָּשִׁיחַ","the-Messiah"],["אֲנִי","I"],["נֹתֵן","I-give"],["כְּהֻנַּת","priesthood of"],["אַהֲרֹן","Aaron"],["אֲשֶׁר","which"],["בְּיָדָהּ","her-hand"],["מַפְתְּחוֹת","keys-of"],["שֵׁרוּת","freedom"],["הַמַּלְאָכִים","the-angels"],["וּבְשׂוֹרַת","and-good-tidings-of"],["הַתְּשׁוּבָה","the-repentance"],["וּטְבִילָה","and-baptism"],["בִּטְבִילָה","in-baptism"],["לִסְלִיחַת","for-a-remission-of"],["חֲטָאִים","sins"],["וְזֹאת","and-this"],["לֹא","not"],["תִלָּקַח","she was taken"],["עוֹד","more"],["מִן","from"],["הָאָרֶץ","the-land"],["עַד","until"],["אֲשֶׁר","which"],["יַקְרִיבוּ","they-lay"],["בְּנֵי","sons-of"],["לֵוִי","Levi"],["שׁוּב","again"],["קָרְבָּן","victim/sacrifice"],["לַיהוָה","unto-the-Lord"],["בִּצְדָקָה׃","in-righteousness"],["׃",""]
+    ["עֲלֵיכֶם","upon-you"],["עַבְדַי","which work"],["הַחֲבֵרִים","the-united"],["בְּשֵׁם","in-name-of"],["הַמָּשִׁיחַ","the-Messiah"],["אֲנִי","I"],["נֹתֵן","I-give"],["כְּהֻנַּת","priesthood of"],["אַהֲרֹן","Aaron"],["אֲשֶׁר","which"],["בְּיָדָהּ","her-hand"],["מַפְתְּחוֹת","keys-of"],["שֵׁרוּת","freedom"],["הַמַּלְאָכִים","the-angels"],["וּבְשׂוֹרַת","and-good-tidings-of"],["הַתְּשׁוּבָה","the-repentance"],["וּטְבִילָה","and-baptism"],["בִּטְבִילָה","in-baptism"],["לִסְלִיחַת","for-a-remission-of"],["חֲטָאִים","sins"],["וְזֹאת","and-this"],["לֹא","not"],["תִלָּקַח","she was taken"],["עוֹד","more"],["מִן","from"],["הָאָרֶץ","the-land"],["עַד","until"],["אֲשֶׁר","which"],["יַקְרִיבוּ","they-lay"],["בְּנֵי","the-sons-of"],["לֵוִי","Levi"],["שׁוּב","again"],["קָרְבָּן","victim/sacrifice"],["לַיהוָה","unto-the-Lord"],["בִּצְדָקָה׃","in-righteousness"],["׃",""]
   ]},
 ];
 renderVerseSet(dc13_ch1Verses, 'dc13-ch1-verses');
@@ -273,7 +273,7 @@ var dc18_ch1Verses = [
     ["וְעַתָּה","and-now"],["אוֹלִיבֵר","Oliver"],["קַאוּדְרִי","Cowdery"],["אֵלֶיךָ","unto-you"],["אֲנִי","I"],["מְדַבֵּר","speaking"],["וְגַם","and-also"],["אֶל־דָּוִד","to/unto-David"],["וִיטְמֵר","Whitmer"],["בְּדֶרֶךְ","after-the-manner-of"],["מִצְוָה","a-commandment"],["כִּי","that"],["הִנֵּה","behold"],["מְצַוֶּה","command"],["אָנֹכִי","I"],["אֶת־כָּל־אָדָם","[ACC]-all-man"],["בְּכָל־מָקוֹם","with-all-place"],["לָשׁוּב","to-return/repent"],["וַאֲדַבֵּר","and-I-speak"],["אֲלֵיכֶם","unto-you"],["כַּאֲשֶׁר","as"],["דִּבַּרְתִּי","I-spoke"],["אֶל־פַּוְלוּס","to/unto-Paul"],["שְׁלִיחִי","My-apostles"],["כִּי","that"],["בִּקְרִיאָתוֹ","in-his-calling"],["נִקְרֵאתֶם׃","ye-are-called"],["׃",""]
   ]},
   { num: "י", words: [
-    ["זִכְרוּ","remember"],["כִּי","that"],["יְקַר","a person noble of"],["נֶפֶשׁ","soul"],["גָּדוֹל","great"],["בְּעֵינֵי","in-eyes-of"],["אֱלֹהִים׃","God"],["׃",""]
+    ["זִכְרוּ","remember"],["כִּי","that"],["יְקַר","a person noble of"],["נֶפֶשׁ","soul"],["גָּדוֹל","great"],["בְּעֵינֵי","in-the-eyes-of"],["אֱלֹהִים׃","God"],["׃",""]
   ]},
   { num: "יא", words: [
     ["כִּי","for"],["הִנֵּה","behold"],["יְהוָה","the-Lord"],["גֹּאַלְכֶם","redeemer-your"],["טָעַם","tasted"],["מָוֶת","death"],["בַּבָּשָׂר","in-the-flesh"],["וְעַל־כֵּן","and-therefore"],["נָשָׂא","bore"],["מַכְאוֹב","much-anguish-of"],["כָּל־אָדָם","all-men"],["לְמַעַן","that"],["יָשׁוּבוּ","repent"],["כֻלָּם","all"],["וְיָבֹאוּ","and-shall-come"],["אֵלָיו׃","unto-him"],["׃",""]
@@ -409,7 +409,7 @@ var dc19_ch1Verses = [
     ["אַךְ","but/surely"],["לֹא","not"],["כָתוּב","written"],["כִּי","that"],["יִהְיֶה","shall-be"],["קֵץ","end"],["לָעִנּוּי","to-the-a-never-ending-torment"],["הַזֶּה","this"],["כִּי","that"],["אִם־כָּתוּב","if-written"],["עִנּוּי","a-never-ending-torment"],["אֵין־קֵץ׃","there-is-no-end"],["׃",""]
   ]},
   { num: "ז", words: [
-    ["וְעוֹד","and-again"],["כָּתוּב","written"],["קִלְלַת","curse-of"],["עוֹלָם","eternal"],["לָכֵן","therefore"],["מְפֹרָשׁ","making clear"],["הוּא","he/it"],["מִשְּׁאָר","any of-the relatives of"],["כְּתוּבִים","there-are-written"],["לְמַעַן","that"],["יִפְעַל","work"],["עַל","upon"],["לִבּוֹת","the-hearts-of"],["בְּנֵי","sons-of"],["הָאָדָם","the-man/Adam"],["הַכֹּל","all-the"],["לִכְבוֹד","for-the-glory-of"],["שְׁמִי׃","the heavens of"],["׃",""]
+    ["וְעוֹד","and-again"],["כָּתוּב","written"],["קִלְלַת","curse-of"],["עוֹלָם","eternal"],["לָכֵן","therefore"],["מְפֹרָשׁ","making clear"],["הוּא","he/it"],["מִשְּׁאָר","any of-the relatives of"],["כְּתוּבִים","there-are-written"],["לְמַעַן","that"],["יִפְעַל","work"],["עַל","upon"],["לִבּוֹת","the-hearts-of"],["בְּנֵי","the-sons-of"],["הָאָדָם","the-man/Adam"],["הַכֹּל","all-the"],["לִכְבוֹד","for-the-glory-of"],["שְׁמִי׃","the heavens of"],["׃",""]
   ]},
   { num: "ח", words: [
     ["לָכֵן","therefore"],["אֲגַלֶּה","I-shall-reveal"],["לְךָ","unto-you"],["אֶת־הַסּוֹד","[ACC]-the-mystery"],["הַזֶּה","this"],["כִּי","that"],["נָכוֹן","expedient"],["לְךָ","unto-you"],["לָדַעַת","to-know"],["׃",""]

@@ -144,7 +144,7 @@ renderVerseSet(dc24_ch1Verses, 'dc24-ch1-verses');
 
 var dc25_ch1Verses = [
   { num: "א", words: [
-    ["הַאֲזִינִי","give ear"],["לְקוֹל","to-voice-of"],["יְהוָה","the-Lord"],["אֱלֹהַיִךְ","God-your"],["בְּדַבְּרִי","when-speak-I"],["אֵלַיִךְ","into-you"],["אֶמָּה","a-nation"],["סְמִית","Smith"],["בִּתִּי","daughter-my"],["כִּי","that"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["כָּל","all"],["הַמְקַבְּלִים","the-from-received"],["אֶת־בְּשׂוֹרָתִי","[ACC]-My-good-tidings"],["בָּנִים","children"],["וּבָנוֹת","and-daughters"],["הֵם","they"],["בְּמַלְכוּתִי׃","in-kingdom-my"],["׃",""]
+    ["הַאֲזִינִי","give ear"],["לְקוֹל","the-voice-of"],["יְהוָה","the-Lord"],["אֱלֹהַיִךְ","God-your"],["בְּדַבְּרִי","when-speak-I"],["אֵלַיִךְ","into-you"],["אֶמָּה","a-nation"],["סְמִית","Smith"],["בִּתִּי","daughter-my"],["כִּי","that"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["כָּל","all"],["הַמְקַבְּלִים","the-from-received"],["אֶת־בְּשׂוֹרָתִי","[ACC]-My-good-tidings"],["בָּנִים","children"],["וּבָנוֹת","and-daughters"],["הֵם","they"],["בְּמַלְכוּתִי׃","in-kingdom-my"],["׃",""]
   ]},
   { num: "ב", words: [
     ["חָזוֹן","revelation"],["נֹתֵן","I-give"],["אֲנִי","I"],["לָךְ","unto-you"],["עַל","upon"],["רְצוֹנִי","my-desire"],["וְאִם","and-if"],["תִּהְיִי","you belonged"],["נֶאֱמָנָה","is reliable"],["וְתֵלְכִי","and-you will go"],["בְּנְתִיבוֹת","in-paths"],["הַצְּנִיעוּת","the-modesty"],["לְפָנַי","before-me"],["אֶשְׁמֹר","I-may-preserve"],["אֶת־חַיַּיִךְ","[ACC]-your-life"],["וּתְקַבְּלִי","and-you-shall-receive-it-my"],["נַחֲלָה","inheritance"],["בְּצִיּוֹן׃","in-Zion"],["׃",""]
@@ -206,7 +206,7 @@ renderVerseSet(dc26_ch1Verses, 'dc26-ch1-verses');
 
 var dc27_ch1Verses = [
   { num: "א", words: [
-    ["הַאֲזִינוּ","give ear"],["לְקוֹל","to-voice-of"],["יֵשׁוּעַ","Yeshua"],["הַמָּשִׁיחַ","the-Messiah"],["אֲדֹנֵיכֶם","your-Lord"],["וֵאלֹהֵיכֶם","and-Elah-your(pl)"],["וְגֹאַלְכֶם","and-your-Redeemer"],["אֲשֶׁר","which"],["דְּבָרוֹ","His-word"],["חַי","living"],["וְעַצוּם׃","and-mighty"],["׃",""]
+    ["הַאֲזִינוּ","give ear"],["לְקוֹל","the-voice-of"],["יֵשׁוּעַ","Yeshua"],["הַמָּשִׁיחַ","the-Messiah"],["אֲדֹנֵיכֶם","your-Lord"],["וֵאלֹהֵיכֶם","and-Elah-your(pl)"],["וְגֹאַלְכֶם","and-your-Redeemer"],["אֲשֶׁר","which"],["דְּבָרוֹ","His-word"],["חַי","living"],["וְעַצוּם׃","and-mighty"],["׃",""]
   ]},
   { num: "ב", words: [
     ["כִּי","for"],["הִנֵּה","behold"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["לֹא","not"],["נֹגֵעַ","one who has touched"],["הַדָּבָר","the-thing"],["מָה","what"],["תֹאכְלוּ","you must eat"],["אוֹ","or"],["מָה","what"],["תִשְׁתּוּ","you will drink"],["בַּאֲכָלְכֶם","when-eat-you"],["הַקֹּדֶשׁ","the-Holy"],["אִם","if"],["תַּעֲשׂוּ","you-do"],["בְּעַיִן","with-one-eye"],["תְּמִימָה","perfect(f)"],["לִכְבוֹדִי","to-will honor-my"],["לְהַזְכִּיר","to-bring-to-remembrance"],["לָאָב","unto-the-Father"],["אֶת־גּוּפִי","[ACC]-frame"],["אֲשֶׁר","which"],["הוּנַח","it has been given rest"],["בַּעֲדֵכֶם","for-you"],["וְאֶת־דָּמִי","and-[ACC]-blood-of"],["אֲשֶׁר","which"],["נִשְׁפַּךְ","was-poured"],["לִסְלִיחַת","for-a-remission-of"],["חַטֹּאתֵיכֶם׃","sins-your"],["׃",""]
@@ -316,7 +316,7 @@ renderVerseSet(dc28_ch1Verses, 'dc28-ch1-verses');
 
 var dc29_ch1Verses = [
   { num: "א", words: [
-    ["הַאֲזִינוּ","give ear"],["לְקוֹל","to-voice-of"],["יֵשׁוּעַ","Yeshua"],["הַמָּשִׁיחַ","the-Messiah"],["גֹּאַלְכֶם","redeemer-your"],["אֶהְיֶה","I-shall-be"],["הַגָּדוֹל","the-great/high"],["אֲשֶׁר","which"],["זְרוֹעַ","the-arm-of"],["רַחֲמָיו","His-mercy"],["כִּפְּרָה","an-atonement"],["עַל","upon"],["חַטֹּאתֵיכֶם׃","sins-your"],["׃",""]
+    ["הַאֲזִינוּ","give ear"],["לְקוֹל","the-voice-of"],["יֵשׁוּעַ","Yeshua"],["הַמָּשִׁיחַ","the-Messiah"],["גֹּאַלְכֶם","redeemer-your"],["אֶהְיֶה","I-shall-be"],["הַגָּדוֹל","the-great/high"],["אֲשֶׁר","which"],["זְרוֹעַ","the-arm-of"],["רַחֲמָיו","His-mercy"],["כִּפְּרָה","an-atonement"],["עַל","upon"],["חַטֹּאתֵיכֶם׃","sins-your"],["׃",""]
   ]},
   { num: "ב", words: [
     ["אֲשֶׁר","which"],["יְקַבֵּץ","shall-gather"],["עַמּוֹ","his-people"],["כְּתַרְנְגֹלֶת","as-hen"],["אֶפְרוֹחֶיהָ","chick-her"],["תַּחַת","under"],["כְּנָפֶיהָ","as-Nephihah"],["כָּל","all"],["לְקוֹלִי","to-voice-my"],["לְפָנַי","before-me"],["וְקוֹרְאִים","and-calling"],["אֵלַי","to-me"],["בִּתְפִלָּה","in-prayer"],["עַצוּמָה׃","exceeding"],["׃",""]

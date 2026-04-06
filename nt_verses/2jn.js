@@ -13,7 +13,7 @@ var _2jn_ch1Verses = [
   { num:"י", words:[["כָּל־הַבָּא","all-that-comes"],["אֲלֵיכֶם","unto-you"],["וְלֹא","and-not"],["יָבִיא","shall-bring"],["אֶת־הַתּוֹרָה","[ACC]-the-law"],["הַזֹּאת","is-this"],["לֹא־תַאַסְפוּ","do-not-receive"],["אֹתוֹ","him"],["הַבַּיְתָה","the-home"],["וְלֹא","and-not"],["תִשְׁאֲלוּ־לוֹ","ye-would-ask-him"],["לְשָׁלוֹם","for-peace"],["׃",""]] },
   { num:"יא", words:[["כִּי","because"],["הַשֹּׁאֵל","the-enquire"],["בִּשְׁלוֹמוֹ","in-his-peace"],["חָבֵר","am a companion"],["הוּא","it-is"],["לְמַעֲשָׂיו","to-His-works"],["הָרָעִים","evil"],["׃",""]] },
   { num:"יב", words:[["הַרְבֵּה","much"],["יֶשׁ־לִי","has-to-me"],["לִכְתֹּב","to-write"],["אֲלֵיכֶם","unto-you"],["וְלֹא","and-not"],["חָפַצְתִּי","I-desire"],["בִּנְיָר","in-light"],["וּבִדְיוֹ","and-with-ink"],["כִּי","because"],["אִם־אֲקַוֶּה","[compound]-I-hope"],["לָבוֹא","to-come"],["אֲלֵיכֶם","unto-you"],["וּלְדַבֵּר","and-to-speak"],["פֶּה","mouth"],["אֶל־פֶּה","to-mouth"],["לְמַעַן","in-order-that"],["תִּהְיֶה","shall-be"],["שִׂמְחָתֵנוּ","joy-of-us"],["שְׁלֵמָה","complete/perfect"],["׃",""]] },
-  { num:"יג", words:[["בְּנֵי","sons-of"],["אֲחוֹתֵךְ","sister-your"],["הַבְּחִירָה","the-choice"],["שֹׁאֲלִים","asking"],["לִשְׁלוֹמֵךְ","to-your-peace"],["אָמֵן","amen"],["׃",""]] },
+  { num:"יג", words:[["בְּנֵי","the-sons-of"],["אֲחוֹתֵךְ","sister-your"],["הַבְּחִירָה","the-choice"],["שֹׁאֲלִים","asking"],["לִשְׁלוֹמֵךְ","to-your-peace"],["אָמֵן","amen"],["׃",""]] },
 ];
 renderVerseSet(_2jn_ch1Verses, '2jn-ch1-verses');
 

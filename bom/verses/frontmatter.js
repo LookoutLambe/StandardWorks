@@ -64,7 +64,7 @@ var frontIntro = [
     ["לָשׁוֹן","a-tongue"],
     ["רִשְׁמִית","formal"],
     ["וּכְתוּבִית","and-literary"],
-    ["עַל־פְּנֵי","upon-face-of"],
+    ["עַל־פְּנֵי","upon-the-face-of"],
     ["סִגְנוֹן","a-style"],
     ["עִבְרִי","Hebrew"],
     ["מוֹדֶרְנִי","modern"],

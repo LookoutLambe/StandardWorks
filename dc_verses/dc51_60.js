@@ -477,10 +477,10 @@ var dc58_ch1Verses = [
     ["כִּי","for"],["הִנֵּה","behold"],["אֵין","there-is-no"],["נָאֶה","exceedingly-fine"],["שֶׁאֲצַוֶּה","that-I-will-command"],["בְּכָל","with-all"],["דָּבָר","things"],["כִּי","that"],["הַנֶּאֱלָץ","the-was-compelled"],["בְּכָל","with-all"],["דָּבָר","things"],["עֶבֶד","servant-of"],["עָצֵל","idle"],["הוּא","he/it"],["וְלֹא","and-not"],["חָכָם","wise"],["לָכֵן","therefore"],["אֵינֶנּוּ","we-are-not"],["מְקַבֵּל","from-received"],["שָׂכָר׃","one who hires"],["׃",""]
   ]},
   { num: "כז", words: [
-    ["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["בְנֵי","sons-of"],["אָדָם","man"],["בִּזְרִיזוּת","in-diligence"],["בְּדָבָר","in-word"],["טוֹב","good"],["וְיַעֲשׂוּ","so-they may work"],["דְבָרִים","things"],["רַבִּים","many"],["מֵרְצוֹנָם","from-their-will"],["הַחָפְשִׁי","the-free"],["וְיָבִיאוּ","and-they-shall-bring"],["צְדָקָה","a-state-of-righteousness"],["רַבָּה׃","much"],["׃",""]
+    ["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["בְנֵי","the-sons-of"],["אָדָם","man"],["בִּזְרִיזוּת","in-diligence"],["בְּדָבָר","in-word"],["טוֹב","good"],["וְיַעֲשׂוּ","so-they may work"],["דְבָרִים","things"],["רַבִּים","many"],["מֵרְצוֹנָם","from-their-will"],["הַחָפְשִׁי","the-free"],["וְיָבִיאוּ","and-they-shall-bring"],["צְדָקָה","a-state-of-righteousness"],["רַבָּה׃","much"],["׃",""]
   ]},
   { num: "כח", words: [
-    ["כִּי","for"],["הַכֹּחַ","the-power"],["בָּם","in-them"],["בְּהֵיוֹתָם","when-were-they"],["בְּנֵי","sons-of"],["חוֹרִין","free"],["לְעַצְמָם","up-unto-themselves"],["וּכְפִי","and-according-to"],["שֶׁיַּעֲשׂוּ","that-they-do"],["בְנֵי","sons-of"],["אָדָם","man"],["טוֹב","good"],["לֹא","not"],["יֹאבְדוּ","they-perish"],["שְׂכָרָם׃","their-reward"],["׃",""]
+    ["כִּי","for"],["הַכֹּחַ","the-power"],["בָּם","in-them"],["בְּהֵיוֹתָם","when-were-they"],["בְּנֵי","the-sons-of"],["חוֹרִין","free"],["לְעַצְמָם","up-unto-themselves"],["וּכְפִי","and-according-to"],["שֶׁיַּעֲשׂוּ","that-they-do"],["בְנֵי","the-sons-of"],["אָדָם","man"],["טוֹב","good"],["לֹא","not"],["יֹאבְדוּ","they-perish"],["שְׂכָרָם׃","their-reward"],["׃",""]
   ]},
   { num: "כט", words: [
     ["אַךְ","but/surely"],["הָאִישׁ","the-man"],["אֲשֶׁר","which"],["אֵינֶנּוּ","we-are-not"],["עֹשֶׂה","do"],["דָבָר","thing"],["עַד","until"],["שֶׁיְּצֻוֶּה","that-he was commanded"],["וּמְקַבֵּל","and-from-received"],["מִצְוָה","a-commandment"],["בְּלֵב","with-heart"],["מְסֻפָּק","from-doubt"],["וְשׁוֹמְרָהּ","and-keeps-her"],["בְּעַצְלוּת","in-idleness"],["נִדּוֹן","condemned"],["הוּא׃","he/it"],["׃",""]
