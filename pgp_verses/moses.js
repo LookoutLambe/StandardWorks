@@ -902,7 +902,7 @@ var ms_ch7Verses = [
     ["אַךְ","but/surely"],["חַטֹּאתָם","their-sins"],["עַל־רָאשֵׁי","upon-the-heads-of"],["אֲבוֹתָם","their-fathers"],["וְהַשָּׂטָן","and-the-Adversary"],["יִהְיֶה","shall-be"],["אֲבִיהֶם","their-father"],["וְאֻמְלָלִים","and-miserable"],["יִהְיוּ","shall-be"],["וְכָל־הַשָּׁמַיִם","and-all-the-heavens"],["יִבְכּוּ","they will weep for"],["עֲלֵיהֶם","upon-them"],["כָּל־מַעֲשֵׂה","all-work-of"],["יָדָי","hands-my"],["לָכֵן","therefore"],["הֲלֹא","do-you-not"],["יִבְכּוּ","they will weep for"],["הַשָּׁמַיִם","the-heavens"],["וְאֵלֶּה","and-these"],["יְעֻנּוּ","shall-be-afflicted"],["׃",""]
   ]},
   { num: "לח", words: [
-    ["אַךְ","but/surely"],["אֲשֶׁר","which"],["עֵינֶיךָ","your-eyes"],["רֹאוֹת","are seeing"],["יֹאבְדוּ","they-perish"],["בַּמַּבּוּל","in-the-flood"],["וְסָגַרְתִּים","and-I-shut-them"],["בֵּית","house-of"],["כֶּלֶא","imprisonment"],["הֲכִינוֹתִי","I-prepared"],["׃",""]
+    ["אַךְ","but/surely"],["אֲשֶׁר","which"],["עֵינֶיךָ","your-eyes"],["רֹאוֹת","are seeing"],["יֹאבְדוּ","they-perish"],["בַּמַּבּוּל","in-the-flood"],["וְסָגַרְתִּים","and-I-shut-them"],["בֵּית","the-house-of"],["כֶּלֶא","imprisonment"],["הֲכִינוֹתִי","I-prepared"],["׃",""]
   ]},
   { num: "לט", words: [
     ["וַאֲשֶׁר","and-who"],["בָּחַרְתִּי","I-chose"],["יִתְחַנֵּן","he sought favor"],["לְפָנַי","before-me"],["וְיִסְבֹּל","and-suffers-it"],["בְּעַד","on-behalf-of"],["חַטֹּאתָם","their-sins"],["עַד־יָשׁוּבוּ","until-they-return"],["בְּיוֹם","in-day"],["שׁוּב","again"],["בְּחִירִי","chosen one-my"],["אֵלַי","to-me"],["וְעַד","and-unto"],["הַיּוֹם","the-day"],["הַהוּא","that"],["יִהְיוּ","shall-be"],["׃",""]

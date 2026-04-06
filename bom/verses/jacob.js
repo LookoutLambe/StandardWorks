@@ -534,7 +534,7 @@ var jc_ch2Verses = [
     ["וְגַם־יַכְאִיב","and-also-it-grieves"],
     ["לִי","me"],
     ["לְדַבֵּר","to-speak"],
-    ["דִּבְרֵי","words-of"],
+    ["דִּבְרֵי","the-words-of"],
     ["עֹז","strength"],
     ["כָּאֵלֶּה","such-as-these"],
     ["עֲלֵיכֶם","concerning-you"],

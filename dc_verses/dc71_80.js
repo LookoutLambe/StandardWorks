@@ -448,7 +448,7 @@ var dc76_ch1Verses = [
     ["הֵם","they"],["כֹּהֲנִים","priests"],["וּמְלָכִים","and-kings"],["אֲשֶׁר","which"],["קִבְּלוּ","receive"],["מִמְּלוֹאוֹ","from-Millo-his"],["׃",""]
   ]},
   { num: "נז", words: [
-    ["וְהֵם","and-they"],["כֹּהֲנֵי","those-priests-of"],["עֶלְיוֹן","Most-High"],["עַל","upon"],["פִּי","mouth-of"],["מַלְכִּי","Malki-"],["צֶדֶק","righteousness"],["שֶׁהָיָה","who-was"],["עַל","upon"],["פִּי","mouth-of"],["חֲנוֹךְ","Enoch"],["שֶׁהָיָה","who-was"],["עַל","upon"],["פִּי","mouth-of"],["בֶּן","son-of"],["הַיָּחִיד׃","the-Only-Begotten"],["׃",""]
+    ["וְהֵם","and-they"],["כֹּהֲנֵי","those-priests-of"],["עֶלְיוֹן","Most-High"],["עַל","upon"],["פִּי","the-mouth-of"],["מַלְכִּי","Malki-"],["צֶדֶק","righteousness"],["שֶׁהָיָה","who-was"],["עַל","upon"],["פִּי","the-mouth-of"],["חֲנוֹךְ","Enoch"],["שֶׁהָיָה","who-was"],["עַל","upon"],["פִּי","the-mouth-of"],["בֶּן","son-of"],["הַיָּחִיד׃","the-Only-Begotten"],["׃",""]
   ]},
   { num: "נח", words: [
     ["לָכֵן","therefore"],["כַּכָּתוּב","according-to-that-the-which-is-written"],["הֵם","they"],["אֱלֹהִים","God"],["אַף","yea"],["בְּנֵי","the-sons-of"],["אֱלֹהִים׃","God"],["׃",""]

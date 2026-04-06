@@ -737,7 +737,7 @@ var dc10_ch1Verses = [
     ["אֲנִי","I"],["הוּא","he/it"],["אֲשֶׁר","which"],["אָמַרְתִּי","I-said"],["צֹאן","flocks"],["אֲחֵרוֹת","other"],["יֶשׁ","has"],["לִי","to-me"],["אֲשֶׁר","which"],["אֵינָן","are-not"],["מִן","from"],["הַמִּכְלָה","the-the fold"],["הַזֹּאת","this"],["לְתַלְמִידַי","to-disciples-of"],["וְרַבִּים","and-many"],["הָיוּ","were"],["אֲשֶׁר","which"],["לֹא","not"],["׃",""]
   ]},
   { num: "ס", words: [
-    ["וְאַרְאֶה","and-I-will-show"],["לָעָם","to-the-people"],["הַזֶּה","this"],["כִּי","that"],["הָיוּ","were"],["לִי","to-me"],["צֹאן","flocks"],["אֲחֵרוֹת","other"],["וְהֵם","and-they"],["הָיוּ","were"],["עֲנַף","branches of"],["בֵּית","house-of"],["יַעֲקֹב׃","Jacob"],["׃",""]
+    ["וְאַרְאֶה","and-I-will-show"],["לָעָם","to-the-people"],["הַזֶּה","this"],["כִּי","that"],["הָיוּ","were"],["לִי","to-me"],["צֹאן","flocks"],["אֲחֵרוֹת","other"],["וְהֵם","and-they"],["הָיוּ","were"],["עֲנַף","branches of"],["בֵּית","the-house-of"],["יַעֲקֹב׃","Jacob"],["׃",""]
   ]},
   { num: "סא", words: [
     ["וְאוֹצִיא","and-I-shall-bring-out"],["לָאוֹר","to-light"],["מַעֲשֵׂיהֶם","of-their-proceedings"],["הַנִּפְלָאִים","the-marvelous-are"],["אֲשֶׁר","which"],["עָשׂוּ","they-did/made"],["בִשְׁמִי׃","in-My-name"],["׃",""]

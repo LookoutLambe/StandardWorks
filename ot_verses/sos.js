@@ -93,7 +93,7 @@ var sos_ch5Verses = [
   { num:"יג", words:[["לְחָיָו","cheeks-his"],["כַּעֲרוּגַת","are like-the bed of"],["הַבֹּשֶׂם","the-spice"],["מִגְדְּלוֹת","towers of"],["מֶרְקָחִים","aromatic herbs"],["שִׂפְתוֹתָיו","lips-his"],["שׁוֹשַׁנִּים","Shoshannim"],["נֹטְפוֹת","dripping"],["מוֹר","myrrh"],["עֹבֵר","that-passes-away"],["׃",""]] },
   { num:"יד", words:[["יָדָיו","his-hands"],["גְּלִילֵי","rods of"],["זָהָב","gold"],["מְמֻלָּאִים","filled"],["בַּתַּרְשִׁישׁ","with-the-chrysolite"],["מֵעָיו","his-bowels"],["עֶשֶׁת","are a plate of"],["שֵׁן","their-teeth"],["מְעֻלֶּפֶת","covered"],["סַפִּירִים","sapphires"],["׃",""]] },
   { num:"טו", words:[["שׁוֹקָיו","legs-his"],["עַמּוּדֵי","pillars of"],["שֵׁשׁ","six"],["מְיֻסָּדִים","founded"],["עַל־אַדְנֵי־פָז","upon-bases of-pure gold"],["מַרְאֵהוּ","from-saw-his"],["כַּלְּבָנוֹן","like-the-Lebanon"],["בָּחוּר","a-chosen-man"],["כָּאֲרָזִים","like-cedars"],["׃",""]] },
-  { num:"טז", words:[["חִכּוֹ","mouth-his"],["מַמְתַקִּים","sweet things"],["וְכֻלּוֹ","and-all of-it"],["מַחֲמַדִּים","is desirableness"],["זֶה","this"],["דוֹדִי","O lover-my"],["וְזֶה","and-this"],["רֵעִי","companions-of"],["בְּנוֹת","the-daughters-of"],["יְרוּשָׁלָ͏ִם","Jerusalem"],["׃",""]] },
+  { num:"טז", words:[["חִכּוֹ","his-mouth"],["מַמְתַקִּים","sweet things"],["וְכֻלּוֹ","and-all of-it"],["מַחֲמַדִּים","is desirableness"],["זֶה","this"],["דוֹדִי","O lover-my"],["וְזֶה","and-this"],["רֵעִי","companions-of"],["בְּנוֹת","the-daughters-of"],["יְרוּשָׁלָ͏ִם","Jerusalem"],["׃",""]] },
 ];
 renderVerseSet(sos_ch5Verses, 'sos-ch5-verses');
 
