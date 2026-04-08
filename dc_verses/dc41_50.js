@@ -597,7 +597,7 @@ var dc45_ch1Verses = [
     ["אָז","then"],["תִּפֹּל","shall-fall"],["זְרוֹעַ","the-arm-of"],["יְהוָה","the-Lord"],["עַל","upon"],["הַגּוֹיִם׃","the-nations"],["׃",""]
   ]},
   { num: "מח", words: [
-    ["וְאָז","and-then"],["יָשִׂים","he-appointed"],["יְהוָה","the-Lord"],["רַגְלוֹ","foot-his"],["עַל","upon"],["הָהָר","the-mountain"],["הַזֶּה","this"],["וְיִבָּקַע","and-it will break forth"],["לִשְׁנַיִם","doing"],["וְהָאָרֶץ","and-the-earth"],["תִּרְעַד","it-shall-tremble"],["וְתָנוּעַ","and-it will stagger"],["אָנֶה","where?"],["וָאָנָה","and-where?"],["וְהַשָּׁמַיִם","and-the-heavens"],["גַּם","also"],["יִרְעֲשׁוּ׃","they have shaken"],["׃",""]
+    ["וְאָז","and-then"],["יָשִׂים","he-appointed"],["יְהוָה","the-Lord"],["רַגְלוֹ","his-foot"],["עַל","upon"],["הָהָר","the-mountain"],["הַזֶּה","this"],["וְיִבָּקַע","and-it will break forth"],["לִשְׁנַיִם","doing"],["וְהָאָרֶץ","and-the-earth"],["תִּרְעַד","it-shall-tremble"],["וְתָנוּעַ","and-it will stagger"],["אָנֶה","where?"],["וָאָנָה","and-where?"],["וְהַשָּׁמַיִם","and-the-heavens"],["גַּם","also"],["יִרְעֲשׁוּ׃","they have shaken"],["׃",""]
   ]},
   { num: "מט", words: [
     ["וְיְהוָה","and-the-Lord"],["יִתֵּן","shall-give"],["קוֹלוֹ","his-voice"],["וְכָל","and-all"],["אַפְסֵי","the-ends-of"],["הָאָרֶץ","the-land"],["יִשְׁמָעוּ","they listen"],["וְגוֹיֵי","and-the-nations-of"],["הָאָרֶץ","the-land"],["יִסְפְּדוּ","people will mourn"],["יִרְאוּ","shall-see"],["׃",""]

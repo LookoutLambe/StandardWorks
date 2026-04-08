@@ -258,7 +258,7 @@ var dc95_ch1Verses = [
     ["לָכֵן","therefore"],["עֲלֵיכֶם","upon-you"],["לְהִוָּסֵר","to-was-removed"],["וְלַעֲמֹד","and-to-stand"],["מוּכָחִים","proven(pl)"],["לְפָנָי׃","before-me"],["׃",""]
   ]},
   { num: "ג", words: [
-    ["כִּי","for"],["חֲטָאתֶם","sin-their"],["חֲטָאָה","this-people"],["גְדוֹלָה","great"],["מְאֹד","exceedingly"],["בַּאֲשֶׁר","because"],["לֹא","not"],["שַׂמְתֶּם","applied"],["לֵב","heart"],["אֶל־הַמִּצְוָה","to-the-commandment"],["הַגְּדוֹלָה","the-great"],["בַּכֹּל","in-all-the"],["אֲשֶׁר","which"],["נָתַתִּי","I-gave"],["לָכֶם","to-you"],["עַל","upon"],["בִּנְיַן","the-building-of"],["בֵּיתִי׃","house-my"],["׃",""]
+    ["כִּי","for"],["חֲטָאתֶם","their-sin"],["חֲטָאָה","this-people"],["גְדוֹלָה","great"],["מְאֹד","exceedingly"],["בַּאֲשֶׁר","because"],["לֹא","not"],["שַׂמְתֶּם","applied"],["לֵב","heart"],["אֶל־הַמִּצְוָה","to-the-commandment"],["הַגְּדוֹלָה","the-great"],["בַּכֹּל","in-all-the"],["אֲשֶׁר","which"],["נָתַתִּי","I-gave"],["לָכֶם","to-you"],["עַל","upon"],["בִּנְיַן","the-building-of"],["בֵּיתִי׃","house-my"],["׃",""]
   ]},
   { num: "ד", words: [
     ["לְהָכִין","to-prepare"],["אֲשֶׁר","which"],["חָפַצְתִּי","I-desire"],["לְהָכִין","to-prepare"],["אֶת־שְׁלִיחַי","[ACC]-My-apostles"],["לִזְמֹר","to-twig"],["כַּרְמִי","my-vineyard"],["לָאַחֲרוֹנָה","in-the-end"],["לְמַעַן","that"],["אוֹצִיא","Otsi"],["אֶת־מַעֲשִׂי","[ACC]-from-the-do"],["הַמּוּזָר","the-Mozr"],["לְמַעַן","that"],["אֶשְׁפֹּךְ","I-will-poured"],["אֶת־רוּחִי","[ACC]-again"],["עַל","upon"],["כָּל־בָּשָׂר׃","all-flesh"],["׃",""]
@@ -516,7 +516,7 @@ var dc98_ch1Verses = [
     ["וְאָז","and-then"],["אִם","if"],["תַּחְמֹל","you-will-had-compassion"],["עָלָיו","upon-him"],["תְּשֻׁלַּם","you-will-complete"],["עַל־צִדְקָתֶךָ","upon-your-righteousness"],["וְגַם","and-also"],["בָּנֶיךָ","thy-sons"],["וּבְנֵי","and-sons-of"],["בָנֶיךָ","your-sons"],["עַד","until"],["הַדּוֹר","the-generation"],["הַשְּׁלִישִׁי","the-third"],["וְהָרְבִיעִי׃","and-the-fourth king"],["׃",""]
   ]},
   { num: "לא", words: [
-    ["אַף","yea"],["עַל","upon"],["פִּי","the-mouth-of"],["כֵן","thus"],["אֹיִבְךָ","enemy-your"],["בְיָדֶךָ","into-your-hands"],["וְאִם","and-if"],["כְּמַעֲשָׂיו","according-to-his-works"],["צָדַקְתָּ","you are in the right"],["אִם","if"],["בִּקֵּשׁ","sought"],["נַפְשְׁךָ","your-soul"],["וְנַפְשְׁךָ","and-your-soul"],["בְּסַכָּנָה","in-danger"],["מִמֶּנּוּ","from-him"],["אֹיִבְךָ","enemy-your"],["בְיָדֶךָ","into-your-hands"],["וְצָדַקְתָּ׃","and-the-righteousness-of"],["׃",""]
+    ["אַף","yea"],["עַל","upon"],["פִּי","the-mouth-of"],["כֵן","thus"],["אֹיִבְךָ","your-enemy"],["בְיָדֶךָ","into-your-hands"],["וְאִם","and-if"],["כְּמַעֲשָׂיו","according-to-his-works"],["צָדַקְתָּ","you are in the right"],["אִם","if"],["בִּקֵּשׁ","sought"],["נַפְשְׁךָ","your-soul"],["וְנַפְשְׁךָ","and-your-soul"],["בְּסַכָּנָה","in-danger"],["מִמֶּנּוּ","from-him"],["אֹיִבְךָ","your-enemy"],["בְיָדֶךָ","into-your-hands"],["וְצָדַקְתָּ׃","and-the-righteousness-of"],["׃",""]
   ]},
   { num: "לב", words: [
     ["הִנֵּה","behold"],["זֶה","this"],["הַחֹק","the-law"],["אֲשֶׁר","which"],["נָתַתִּי","I-gave"],["לְעַבְדִּי","to-My-servant"],["נְפִי","Nephi"],["וְלַאֲבוֹתֶיךָ","and-with-your-fathers"],["יוֹסֵף","Joseph"],["וְיַעֲקֹב","and-Jacob"],["וְיִצְחָק","and-Isaac"],["וְאַבְרָהָם","and-Abraham"],["וּלְכָל־נְבִיאַי","and-for-all-prophets-of"],["וּשְׁלִיחַי","and-My-apostles"],["הַקַּדְמוֹנִים׃","the-ancient"],["׃",""]

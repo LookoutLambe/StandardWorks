@@ -3075,7 +3075,7 @@ var psa_ch147Verses = [
   { num:"י", words:[["לֹא","not"],["בִגְבוּרַת","in-the strength of"],["הַסּוּס","the-horses"],["יֶחְפָּץ","he delights in"],["לֹא־בְשׁוֹקֵי","not-in-the legs of"],["הָאִישׁ","the-man"],["יִרְצֶה","is-pleasing"],["׃",""]] },
   { num:"יא", words:[["רוֹצֶה","would-that"],["יְהֹוָה","the-LORD"],["אֶת־יְרֵאָיו","[ACC]-those fearing-him"],["אֶת־הַמְיַחֲלִים","[ACC]-those-who wait"],["לְחַסְדּוֹ","for-covenant loyalty-his"],["׃",""]] },
   { num:"יב", words:[["שַׁבְּחִי","extol"],["יְרוּשָׁלַ͏ִם","Jerusalem"],["אֶת־יְהֹוָה","[ACC]-the-LORD"],["הַלְלִי","praise"],["אֱלֹהַיִךְ","God-your"],["צִיּוֹן","Zion"],["׃",""]] },
-  { num:"יג", words:[["כִּי־חִזַּק","because-he has strengthened"],["בְּרִיחֵי","bars of"],["שְׁעָרָיִךְ","gates-your"],["בֵּרַךְ","blessed"],["בָּנַיִךְ","your-children"],["בְּקִרְבֵּךְ","in-your-midst"],["׃",""]] },
+  { num:"יג", words:[["כִּי־חִזַּק","because-he has strengthened"],["בְּרִיחֵי","bars of"],["שְׁעָרָיִךְ","your-gates"],["בֵּרַךְ","blessed"],["בָּנַיִךְ","your-children"],["בְּקִרְבֵּךְ","in-your-midst"],["׃",""]] },
   { num:"יד", words:[["הַשָּׂם־גְּבוּלֵךְ","the-who placed-territory-your"],["שָׁלוֹם","peace"],["חֵלֶב","the fat of"],["חִטִּים","wheat"],["יַשְׂבִּיעֵךְ","he satisfies-you"],["׃",""]] },
   { num:"טו", words:[["הַשֹּׁלֵחַ","the-who-sent"],["אִמְרָתוֹ","word-his"],["אָרֶץ","the-earth"],["עַד־מְהֵרָה","until-soon"],["יָרוּץ","he runs"],["דְּבָרוֹ","His-word"],["׃",""]] },
   { num:"טז", words:[["הַנֹּתֵן","the-was-given"],["שֶׁלֶג","snow"],["כַּצָּמֶר","like-the-wool"],["כְּפוֹר","frost"],["כָּאֵפֶר","like-ashes"],["יְפַזֵּר","he scatters"],["׃",""]] },

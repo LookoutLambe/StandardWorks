@@ -463,7 +463,7 @@ var dc19_ch1Verses = [
     ["אֲנִי","I"],["יֵשׁוּעַ","Yeshua"],["הַמָּשִׁיחַ","the-Messiah"],["בָּאתִי","when-I-came"],["בִּרְצוֹן","in-the-will-of"],["הָאָב","the-Father"],["וַאֲנִי","and-I"],["עֹשֶׂה","do"],["רְצוֹנוֹ׃","His-will"],["׃",""]
   ]},
   { num: "כה", words: [
-    ["וְעוֹד","and-again"],["מְצַוְּךָ","am commanding-you"],["אָנֹכִי","I"],["לֹא","not"],["תַחְמֹד","covet"],["אֵשֶׁת","the-wife-of"],["רֵעֶךָ","your-neighbor"],["וְלֹא","and-not"],["תְבַקֵּשׁ","you will seek"],["נֶפֶשׁ","soul"],["רֵעֶךָ׃","neighbor-your"],["׃",""]
+    ["וְעוֹד","and-again"],["מְצַוְּךָ","am commanding-you"],["אָנֹכִי","I"],["לֹא","not"],["תַחְמֹד","covet"],["אֵשֶׁת","the-wife-of"],["רֵעֶךָ","your-neighbor"],["וְלֹא","and-not"],["תְבַקֵּשׁ","you will seek"],["נֶפֶשׁ","soul"],["רֵעֶךָ׃","your-neighbor"],["׃",""]
   ]},
   { num: "כו", words: [
     ["וְעוֹד","and-again"],["מְצַוְּךָ","am commanding-you"],["אָנֹכִי","I"],["לֹא","not"],["תַחְמֹד","covet"],["קִנְיָנְךָ","acquisition-your"],["כִּי","that"],["אִם־תִּתְּנֶנּוּ","if-you gave-it"],["בִּנְדָבָה","in-voluntariness"],["סֵפֶר","the-book-of"],["מוֹרְמוֹן","Mormon"],["אֲשֶׁר","which"],["בּוֹ","in-him/it"],["הָאֱמֶת","the-truth"],["וּדְבַר","and-spoke"],["אֱלֹהִים׃","God"],["׃",""]
