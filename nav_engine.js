@@ -817,14 +817,24 @@
   // ── Touch / Swipe ──
   var _touchStartX = 0;
   var _touchStartY = 0;
+  var _touchStartTime = 0;
   function onTouchStart(e) {
     _touchStartX = e.touches[0].clientX;
     _touchStartY = e.touches[0].clientY;
+    _touchStartTime = Date.now();
   }
   function onTouchEnd(e) {
     var dx = e.changedTouches[0].clientX - _touchStartX;
     var dy = Math.abs(e.changedTouches[0].clientY - _touchStartY);
     var absDx = Math.abs(dx);
+    var elapsed = Date.now() - _touchStartTime;
+
+    // If user is selecting text, don't swipe
+    var sel = window.getSelection();
+    if (sel && sel.toString().length > 0) return;
+
+    // If touch lasted too long (>400ms), likely a selection attempt, not a swipe
+    if (elapsed > 400) return;
 
     // Ignore if mostly vertical scroll or too short
     if (dy > absDx || absDx < 60) return;
