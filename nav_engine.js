@@ -818,10 +818,15 @@
   var _touchStartX = 0;
   var _touchStartY = 0;
   var _touchStartTime = 0;
+  var _touchMoveCount = 0;
   function onTouchStart(e) {
     _touchStartX = e.touches[0].clientX;
     _touchStartY = e.touches[0].clientY;
     _touchStartTime = Date.now();
+    _touchMoveCount = 0;
+  }
+  function onTouchMove(e) {
+    _touchMoveCount++;
   }
   function onTouchEnd(e) {
     var dx = e.changedTouches[0].clientX - _touchStartX;
@@ -829,39 +834,49 @@
     var absDx = Math.abs(dx);
     var elapsed = Date.now() - _touchStartTime;
 
-    // If user is selecting text, don't swipe
-    var sel = window.getSelection();
-    if (sel && sel.toString().length > 0) return;
+    // A real swipe is fast (<300ms) and decisive (>80px horizontal)
+    // Anything slower is likely scrolling or text selection
+    if (elapsed > 300) return;
 
-    // If touch lasted too long (>400ms), likely a selection attempt, not a swipe
-    if (elapsed > 400) return;
+    // If very few move events, it's a tap not a swipe
+    if (_touchMoveCount < 3) return;
 
-    // Ignore if mostly vertical scroll or too short
-    if (dy > absDx || absDx < 60) return;
+    // Defer the swipe check so the browser can finalize any text selection
+    var savedDx = dx;
+    var savedDy = dy;
+    var savedAbsDx = absDx;
+    var savedStartX = _touchStartX;
+    setTimeout(function() {
+      // If user selected text, don't swipe
+      var sel = window.getSelection();
+      if (sel && sel.toString().length > 0) return;
 
-    // If sidebar is open, swipe left closes it
-    if (_sidebarEl.classList.contains('open')) {
-      if (dx < -60) closeSidebar();
-      return;
-    }
+      // Ignore if mostly vertical scroll or too short
+      if (savedDy > savedAbsDx || savedAbsDx < 60) return;
 
-    // Swipe right from left edge opens sidebar
-    if (_touchStartX < 30 && dx > 60) {
-      openSidebar();
-      return;
-    }
-
-    // RTL: Swipe right → next chapter, swipe left → previous chapter
-    // Skip if page has its own swipe handler (BOM)
-    if (!_config.skipSwipeNav) {
-      if (dx > 80) {
-        if (typeof goNext === 'function') goNext();
-        else { var nb = document.getElementById('nav-next'); if (nb && !nb.disabled) nb.click(); }
-      } else if (dx < -80) {
-        if (typeof goPrev === 'function') goPrev();
-        else { var pb = document.getElementById('nav-prev'); if (pb && !pb.disabled) pb.click(); }
+      // If sidebar is open, swipe left closes it
+      if (_sidebarEl.classList.contains('open')) {
+        if (savedDx < -60) closeSidebar();
+        return;
       }
-    }
+
+      // Swipe right from left edge opens sidebar
+      if (savedStartX < 30 && savedDx > 60) {
+        openSidebar();
+        return;
+      }
+
+      // RTL: Swipe right → next chapter, swipe left → previous chapter
+      if (!_config.skipSwipeNav) {
+        if (savedDx > 80) {
+          if (typeof goNext === 'function') goNext();
+          else { var nb = document.getElementById('nav-next'); if (nb && !nb.disabled) nb.click(); }
+        } else if (savedDx < -80) {
+          if (typeof goPrev === 'function') goPrev();
+          else { var pb = document.getElementById('nav-prev'); if (pb && !pb.disabled) pb.click(); }
+        }
+      }
+    }, 50);
   }
 
   // ── Public API ──
@@ -871,6 +886,7 @@
       createSidebar();
       document.addEventListener('keydown', onKeydown);
       document.addEventListener('touchstart', onTouchStart, { passive: true });
+      document.addEventListener('touchmove', onTouchMove, { passive: true });
       document.addEventListener('touchend', onTouchEnd, { passive: true });
 
       // Hook into existing nav-label click
