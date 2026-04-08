@@ -11,7 +11,7 @@ var dc71_ch1Verses = [
     ["אָמֵן","amen"],["זֹאת","this"],["שְׁלִיחוּת","apostleship"],["לִזְמַן","for-space-of"],["מָה","what"],["אֲשֶׁר","which"],["אֲנִי","I"],["נוֹתֵן","grants"],["לָכֶם׃","to-you"],["׃",""]
   ]},
   { num: "ד", words: [
-    ["לָכֵן","therefore"],["עִבְדוּ","work"],["בְּכַרְמִי","in-my-vineyard"],["קִרְאוּ","call"],["אֶל","to/unto"],["יוֹשְׁבֵי","the-inhabitants-of"],["הָאָרֶץ","the-land"],["וְהָעִידוּ","and-the-testified-his"],["וְהָכִינוּ","and-we-were-smitten"],["אֶת","[ACC]"],["הַדֶּרֶךְ","the-way"],["לַמִּצְווֹת","to-the-the-commandments-of"],["וְהַחֲזוֹנוֹת","and-the-revelations"],["אֲשֶׁר","which"],["יָבֹאוּ׃","shall-come"],["׃",""]
+    ["לָכֵן","therefore"],["עִבְדוּ","work"],["בְּכַרְמִי","in-my-vineyard"],["קִרְאוּ","call"],["אֶל","to"],["יוֹשְׁבֵי","the-inhabitants-of"],["הָאָרֶץ","the-land"],["וְהָעִידוּ","and-the-testified-his"],["וְהָכִינוּ","and-we-were-smitten"],["אֶת","[ACC]"],["הַדֶּרֶךְ","the-way"],["לַמִּצְווֹת","to-the-the-commandments-of"],["וְהַחֲזוֹנוֹת","and-the-revelations"],["אֲשֶׁר","which"],["יָבֹאוּ׃","shall-come"],["׃",""]
   ]},
   { num: "ה", words: [
     ["וְעַתָּה","and-now"],["הִנֵּה","behold"],["זֹאת","this"],["חָכְמָה","wisdom"],["הַקּוֹרֵא","the-calling"],["יָבִין","understand"],["וִיקַבֵּל","and-he-received"],["גַּם","also"],["כֵּן׃","so/thus"],["׃",""]
@@ -690,7 +690,7 @@ renderVerseSet(dc77_ch1Verses, 'dc77-ch1-verses');
 
 var dc78_ch1Verses = [
   { num: "א", words: [
-    ["יְהוָה","the-Lord"],["דִּבֶּר","spoke"],["אֶל","to/unto"],["יוֹסֵף","Joseph"],["סְמִית","Smith"],["הַבֵּן","the-Son"],["לֵאמֹר","saying"],["הַאֲזִינוּ","give ear"],["אֵלַי","to-me"],["נְאֻם","says"],["יְהוָה","the-Lord"],["אֱלֹהֵיכֶם","your-God"],["הַנִּסְמָכִים","the-ordained"],["לִכְהֻנָּה","to-the-priesthood"],["גְדוֹלָה","great"],["בַּעֲדָתִי","into-My-church"],["הַנֶּאֱסָפִים","the-those-gathered"],["יַחְדָּו׃","together"],["׃",""]
+    ["יְהוָה","the-Lord"],["דִּבֶּר","spoke"],["אֶל","to"],["יוֹסֵף","Joseph"],["סְמִית","Smith"],["הַבֵּן","the-Son"],["לֵאמֹר","saying"],["הַאֲזִינוּ","give ear"],["אֵלַי","to-me"],["נְאֻם","says"],["יְהוָה","the-Lord"],["אֱלֹהֵיכֶם","your-God"],["הַנִּסְמָכִים","the-ordained"],["לִכְהֻנָּה","to-the-priesthood"],["גְדוֹלָה","great"],["בַּעֲדָתִי","into-My-church"],["הַנֶּאֱסָפִים","the-those-gathered"],["יַחְדָּו׃","together"],["׃",""]
   ]},
   { num: "ב", words: [
     ["וְשִׁמְעוּ","and-hear"],["עֲצַת","the-plan-of"],["הַסּוֹמֵךְ","the-is supporting"],["אֶתְכֶם","you"],["מִמָּרוֹם","from-a high place"],["הַמְדַבֵּר","who-spoke"],["בְּאָזְנֵיכֶם","in-ears-your"],["דִּבְרֵי","the-words-of"],["חָכְמָה","wisdom"],["לְמַעַן","that"],["תִּהְיֶה","shall-be"],["לָכֶם","to-you"],["יְשׁוּעָה","salvation"],["בַּדָּבָר","in-the-thing"],["אֲשֶׁר","which"],["הִקְרַבְתֶּם","you will present"],["לְפָנַי","before-me"],["נְאֻם","says"],["יְהוָה","the-Lord"],["אֱלֹהִים׃","God"],["׃",""]

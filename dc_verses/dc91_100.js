@@ -534,7 +534,7 @@ var dc98_ch1Verses = [
     ["אָז","then"],["אֲנִי","I"],["יְהוָה","the-Lord"],["אֶתֵּן","shall-I-give"],["לָהֶם","unto-them"],["מִצְוָה","a-commandment"],["לָצֵאת","to-come-forth"],["לְמִלְחָמָה","for-battle"],["עַל","upon"],["הַגּוֹי","the-nation"],["הַהוּא","that"],["הַלָּשׁוֹן","the-language"],["אוֹ","or"],["הָעָם׃","the-people"],["׃",""]
   ]},
   { num: "לז", words: [
-    ["וַאֲנִי","and-I"],["יְהוָה","the-Lord"],["אֶלָּחֵם","I will eat"],["מִלְחֲמוֹתֵיהֶם","their-wars"],["וּמִלְחֲמוֹת","and-the wars of"],["בְּנֵיהֶם","their-children"],["וּבְנֵי","and-sons-of"],["בְנֵיהֶם","sons-their"],["עַד","until"],["מִכָּל־אֹיְבֵיהֶם","above-all-their-enemies"],["עַד","until"],["הַדּוֹר","the-generation"],["הַשְּׁלִישִׁי","the-third"],["וְהָרְבִיעִי׃","and-the-fourth king"],["׃",""]
+    ["וַאֲנִי","and-I"],["יְהוָה","the-Lord"],["אֶלָּחֵם","I will eat"],["מִלְחֲמוֹתֵיהֶם","their-wars"],["וּמִלְחֲמוֹת","and-the wars of"],["בְּנֵיהֶם","their-children"],["וּבְנֵי","and-sons-of"],["בְנֵיהֶם","their-sons"],["עַד","until"],["מִכָּל־אֹיְבֵיהֶם","above-all-their-enemies"],["עַד","until"],["הַדּוֹר","the-generation"],["הַשְּׁלִישִׁי","the-third"],["וְהָרְבִיעִי׃","and-the-fourth king"],["׃",""]
   ]},
   { num: "לח", words: [
     ["הִנֵּה","behold"],["זֹאת","this"],["דֻּגְמָה","example"],["לְכָל־הָעַמִּים","to-all-the-people"],["אָמַר","said"],["יְהוָה","the-Lord"],["אֱלֹהֵיכֶם","your-God"],["לְהַצְדָּקָה","to-the-righteousness"],["לְפָנָי׃","before-me"],["׃",""]

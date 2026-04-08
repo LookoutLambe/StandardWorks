@@ -1121,7 +1121,7 @@ var job_ch39Verses = [
   { num:"א", words:[["הֲיָדַעְתָּ","do-you-know-of"],["עֵת","time"],["לֶדֶת","the bringing forth of"],["יַעֲלֵי־סָלַע","mountain goats of-rock"],["חֹלֵל","the giving birth of"],["אַיָּלוֹת","does"],["תִּשְׁמֹר","you-keep"],["׃",""]] },
   { num:"ב", words:[["תִּסְפֹּר","will you count?"],["יְרָחִים","moons"],["תְּמַלֶּאנָה","which they complete"],["וְיָדַעְתָּ","and-you-know"],["עֵת","time"],["לִדְתָּנָה","bringing forth-they"],["׃",""]] },
   { num:"ג", words:[["תִּכְרַעְנָה","they kneel down"],["יַלְדֵיהֶן","their-young-ones"],["תְּפַלַּחְנָה","they cleave open"],["חֶבְלֵיהֶם","labor-pains-their"],["תְּשַׁלַּחְנָה","they send forth"],["׃",""]] },
-  { num:"ד", words:[["יַחְלְמוּ","they become strong"],["בְנֵיהֶם","sons-their"],["יִרְבּוּ","they may increase"],["בַבָּר","in the-open"],["יָצְאוּ","went-forth"],["וְלֹא־שָׁבוּ","and-not-repented"],["לָמוֹ","for-them"],["׃",""]] },
+  { num:"ד", words:[["יַחְלְמוּ","they become strong"],["בְנֵיהֶם","their-sons"],["יִרְבּוּ","they may increase"],["בַבָּר","in the-open"],["יָצְאוּ","went-forth"],["וְלֹא־שָׁבוּ","and-not-repented"],["לָמוֹ","for-them"],["׃",""]] },
   { num:"ה", words:[["מִי־שִׁלַּח","who-sent"],["פֶּרֶא","wild"],["חׇפְשִׁי","exempt"],["וּמֹסְרוֹת","and-the fetters of"],["עָרוֹד","the wild ass"],["מִי","who"],["פִתֵּחַ","did he loosen"],["׃",""]] },
   { num:"ו", words:[["אֲשֶׁר־שַׂמְתִּי","whose-have-I-set"],["עֲרָבָה","a desert plain"],["בֵיתוֹ","his-house"],["וּמִשְׁכְּנוֹתָיו","and-dwelling-places-its"],["מְלֵחָה","the saltiness"],["׃",""]] },
   { num:"ז", words:[["יִשְׂחַק","he-shall-laugh"],["לַהֲמוֹן","to-the tumult of"],["קִרְיָה","a town"],["תְּשֻׁאוֹת","the crashes of"],["נֹגֵשׂ","the-oppressor"],["לֹא","not"],["יִשְׁמָע","hear"],["׃",""]] },
