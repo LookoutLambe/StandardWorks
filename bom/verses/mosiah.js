@@ -1202,7 +1202,7 @@ var mo_ch16Verses = [
     ["וְלוּלֵא","and-if-not-that"],["קָם","had-risen"],["הַמָּשִׁיחַ","the-Messiah"],["מִן־הַמֵּתִים","from-the-dead"],["אוֹ","or"],["נִתֵּק","broken"],["אֶת־מוֹסְרוֹת","the-bands-of"],["הַמָּוֶת","the-death"],["לְבִלְתִּי","so-as-not-to"],["הֱיוֹת","have"],["תְּשׁוּעָה","deliverance"],["לַקֶּבֶר","the-grave"],["וּלְבִלְתִּי","and-that-death-should-have-no"],["הֱיוֹת","have"],["עֹקֶץ","sting"],["לַמָּוֶת","the-death"],["לֹא־הָיְתָה","not-was(f)"],["תְקוּמָה","resurrection"]
   ]},
   { num: "ח", words: [
-    ["אַךְ","but"],["יֵשׁ","there-is"],["תְּקוּמָה","a-resurrection"],["לָכֵן","therefore"],["אֵין","there-is-no"],["תְּשׁוּעָה","deliverance"],["לַקֶּבֶר","the-grave"],["וְעֹקֶץ","and-the-sting-of"],["הַמָּוֶת","the-death"],["נִבְלָע","is-swallowed-up"],["בַּמָּשִׁיחַ","in-the-Messiah"]
+    ["אַךְ","but"],["יֵשׁ","there"],["תְּקוּמָה","a-resurrection"],["לָכֵן","therefore"],["אֵין","there-is-no"],["תְּשׁוּעָה","deliverance"],["לַקֶּבֶר","the-grave"],["וְעֹקֶץ","and-the-sting-of"],["הַמָּוֶת","the-death"],["נִבְלָע","is-swallowed-up"],["בַּמָּשִׁיחַ","in-the-Messiah"]
   ]},
   { num: "ט", words: [
     ["הוּא","He-is"],["אוֹר","the-light"],["הָעוֹלָם","of-the-world"],["וְחַיָּיו","yea-and-the-life"],["אָכֵן","yea"],["אוֹר","a-light"],["עוֹלָם","eternal"],["אֲשֶׁר","that"],["לֹא־יֶחְשַׁךְ","not-be-darkened"],["וְחַיֵּי","yea-and-a-life"],["נֶצַח","eternal"],["אֲשֶׁר","that"],["אֵין־מָוֶת","there-can-be-no-more-death"],["עוֹד","more"]

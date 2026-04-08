@@ -9556,7 +9556,7 @@ var ch17Verses = [
     ["מוֹשֵׁל","ruler"],
     ["בַּשָּׁמַיִם","in-the-heavens"],
     ["כִּי","for"],
-    ["שָׁם","there-is"],
+    ["שָׁם","there"],
     ["כִּסְאוֹ","His-throne"],
     ["וְהָאָרֶץ","and-the-earth"],
     ["הַזֹּאת","is-this"],
