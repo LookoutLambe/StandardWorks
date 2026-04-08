@@ -169,7 +169,7 @@ var dc3_ch1Verses = [
     ["וּבְתִתְּךָ","and-because-gave-you"],["אֵת","[ACC]"],["אֲשֶׁר","which"],["נָתַן","gave"],["לְךָ","unto-you"],["אֱלֹהִים","God"],["עַיִן","eye"],["וְכֹחַ","and-power-of"],["לְתַרְגֵּם","translate"],["נָתַתָּ","suffered"],["קֹדֶשׁ","holy"],["בְּיַד","by-hand-of"],["אִישׁ","man/each"],["רָשָׁע׃","wickedness"],["׃",""]
   ]},
   { num: "יב", words: [
-    ["אֲשֶׁר","which"],["בָּזָה","he has despised"],["לַעֲצַת","unto-the-counsel-of"],["אֵל","God"],["וְהֵפֵר","and-he will break"],["הַבְטָחוֹת","the-promises-of"],["קְדוֹשׁוֹת","the-Holy-One-of(pl)"],["אֲשֶׁר","which"],["הֻבְטְחוּ","they-were-promised"],["לִפְנֵי","before"],["אֱלֹהִים","God"],["וְסָמַךְ","and-he will lay"],["עַל","upon"],["דַּעְתּוֹ","his-mind"],["וְהִתְפָּאֵר","and-honor yourself"],["בְּחָכְמָתוֹ׃","in-his-wisdom"],["׃",""]
+    ["אֲשֶׁר","which"],["בָּזָה","he has despised"],["לַעֲצַת","unto-the-counsel-of"],["אֵל","God"],["וְהֵפֵר","and-he will break"],["הַבְטָחוֹת","the-promises-of"],["קְדוֹשׁוֹת","the-Holy-One-of(pl)"],["אֲשֶׁר","which"],["הֻבְטְחוּ","they-were-promised"],["לִפְנֵי","before"],["אֱלֹהִים","God"],["וְסָמַךְ","and-shall-lay"],["עַל","upon"],["דַּעְתּוֹ","his-mind"],["וְהִתְפָּאֵר","and-honor yourself"],["בְּחָכְמָתוֹ׃","in-his-wisdom"],["׃",""]
   ]},
   { num: "יג", words: [
     ["וְזֹאת","and-this"],["הַסִּבָּה","the-cause"],["אֲשֶׁר","which"],["אָבַדְתָּ","you have perished"],["לְעֵת׃","to-time"],["׃",""]
