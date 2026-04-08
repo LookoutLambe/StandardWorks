@@ -723,7 +723,7 @@ var dc78_ch1Verses = [
     ["לָכֵן","therefore"],["מִצְוָה","a-commandment"],["אֲנִי","I"],["נֹתֵן","I-give"],["לָכֶם","to-you"],["הִכּוֹנוּ","prepare-yourselves"],["בְּקֶשֶׁר","in-a-conspiracy"],["אוֹ","or"],["בִּבְרִית","a-covenant"],["עוֹלָם","eternal"],["אֲשֶׁר","which"],["לֹא","not"],["תִשָּׁבֵר׃","it may be broken"],["׃",""]
   ]},
   { num: "יב", words: [
-    ["וְהַשּׁוֹבְרָהּ","and-the-coupon-her"],["יְאַבֵּד","he will destroy"],["אֶת","[ACC]"],["מִשְׂרָתוֹ","servant-his"],["וּמַעֲמָדוֹ","and-from-they-stood"],["בָּעֵדָה","into-the-church"],["וְיִמָּסֵר","and-he-shall-be-delivered"],["לִמְהֻלְּמוֹת","for-blows"],["הַשָּׂטָן","the-Adversary"],["עַד","until"],["יוֹם","day"],["הַגְּאֻלָּה׃","the-redemption"],["׃",""]
+    ["וְהַשּׁוֹבְרָהּ","and-the-coupon-her"],["יְאַבֵּד","he will destroy"],["אֶת","[ACC]"],["מִשְׂרָתוֹ","his-servant"],["וּמַעֲמָדוֹ","and-from-they-stood"],["בָּעֵדָה","into-the-church"],["וְיִמָּסֵר","and-he-shall-be-delivered"],["לִמְהֻלְּמוֹת","for-blows"],["הַשָּׂטָן","the-Adversary"],["עַד","until"],["יוֹם","day"],["הַגְּאֻלָּה׃","the-redemption"],["׃",""]
   ]},
   { num: "יג", words: [
     ["הִנֵּה","behold"],["זֹאת","this"],["הַהֲכָנָה","the-sincere"],["אֲשֶׁר","which"],["אֲנִי","I"],["מֵכִין","preparing"],["אֶתְכֶם","you"],["וְהַיְסוֹד","and-the-foundation"],["וְהַדֻּגְמָה","and-the-example"],["אֲשֶׁר","which"],["אֲנִי","I"],["נֹתֵן","I-give"],["לָכֶם","to-you"],["לְמַלֵּא","to-fill"],["אֶת","[ACC]"],["הַמִּצְווֹת","the-commandments"],["הַנְּתוּנוֹת","the-given"],["לָכֶם׃","to-you"],["׃",""]

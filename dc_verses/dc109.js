@@ -38,7 +38,7 @@ var dc109_ch1Verses = [
     ["לְמַעַן","in-order-that"],["יָנוּחַ","may-rest"],["כְּבוֹדְךָ","glory-your"],["עַל","upon"],["עַמְּךָ","your-people"],["וְעַל","and-upon"],["בֵּיתְךָ","your-household"],["זֶה","this"],["אֲשֶׁר","which"],["אָנוּ","we"],["לְךָ","for-you"],["עַתָּה","now"],["לְמַעַן","in-order-that"],["יִתְקַדֵּשׁ","he-will-it should be set apart"],["וְיֻקְדַּשׁ","and-he set apart as holy"],["לִהְיוֹת","to-be"],["קֹדֶשׁ","holy"],["וְשֶׁתִּהְיֶה","and-that-shall-be"],["נוֹכְחוּתְךָ","attendance-your"],["הַקְּדוֹשָׁה","the-holy(f)"],["תָמִיד","continually"],["בַּבַּיִת","in-the-house"],["הַזֶּה׃","this"],["׃",""]
   ]},
   { num: "יג", words: [
-    ["וְשֶׁכָּל","and-that-every"],["אָדָם","man"],["הַבָּא","that-comes"],["אֶל","to"],["מִפְתַּן","the threshold of"],["בֵּית","the-house-of"],["יְהוָה","the-Lord"],["יָחוּשׁ","will he enjoy"],["אֶת","[ACC]"],["גְּבוּרָתְךָ","might-your"],["לְהוֹדוֹת","to-thanksgivings"],["כִּי","because"],["קִדַּשְׁתָּ","you will consecrate"],["אוֹתוֹ","him"],["וְכִי","and-that"],["הוּא","it"],["בֵּיתֶךָ","house-your"],["מְקוֹם","the-place"],["קָדְשֶׁךָ׃","your-holiness"],["׃",""]
+    ["וְשֶׁכָּל","and-that-every"],["אָדָם","man"],["הַבָּא","that-comes"],["אֶל","to"],["מִפְתַּן","the threshold of"],["בֵּית","the-house-of"],["יְהוָה","the-Lord"],["יָחוּשׁ","will he enjoy"],["אֶת","[ACC]"],["גְּבוּרָתְךָ","might-your"],["לְהוֹדוֹת","to-thanksgivings"],["כִּי","because"],["קִדַּשְׁתָּ","you will consecrate"],["אוֹתוֹ","him"],["וְכִי","and-that"],["הוּא","it"],["בֵּיתֶךָ","your-house"],["מְקוֹם","the-place"],["קָדְשֶׁךָ׃","your-holiness"],["׃",""]
   ]},
   { num: "יד", words: [
     ["וְתֵן","and-give"],["אָבִינוּ","our-father"],["הַקָּדוֹשׁ","the-holy"],["שֶׁכָּל","that-every"],["הָעוֹבְדִים","the-worker(pl)"],["בַּבַּיִת","in-the-house"],["הַזֶּה","this"],["יִלְמְדוּ","they-may-learn"],["דִּבְרֵי","account-of"],["חָכְמָה","wisdom"],["מִתּוֹךְ","from-midst-of"],["הַסְּפָרִים","the-records"],["הַטּוֹבִים","the-good"],["בְּיוֹתֵר","exceedingly"],["דַּעַת","true-knowledge"],["אַף","yea"],["בְּלִמּוּד","in-study"],["וְגַם","and-also"],["בֶּאֱמוּנָה","with-much-faith"],["כַּאֲשֶׁר","when/as"],["אָמָרְתָּ׃","you will say"],["׃",""]
@@ -47,7 +47,7 @@ var dc109_ch1Verses = [
     ["בְּךָ","in-You"],["וִיקַבְּלוּ","and-they received it"],["מְלוֹא","the-fullness-of"],["רוּחַ","the-spirit-of"],["הַקֹּדֶשׁ","the-Holy"],["וְיִתְאַרְגְּנוּ","and-they-shall-organize"],["כְּחֻקֶּיךָ","as-decrees-your"],["וְיִהְיוּ","and-they-were"],["מוּכָנִים","prepared"],["לְהַשִּׂיג","to-obtain"],["כָּל","all"],["דָּבָר","things"],["נָחוּץ׃","necessary"],["׃",""]
   ]},
   { num: "טז", words: [
-    ["וְשֶׁיִּהְיֶה","and-that-he-shall-be"],["הַבַּיִת","the-house"],["הַזֶּה","this"],["בֵּית","the-house-of"],["תְּפִלָּה","prayer"],["בֵּית","the-house-of"],["צוֹם","fasting"],["בֵּית","the-house-of"],["אֱמוּנָה","faith"],["בֵּית","the-house-of"],["כָּבוֹד","glorious"],["וּבֵית","and-house-of"],["אֱלֹהִים","God"],["אַף","yea"],["בֵּיתֶךָ׃","house-your"],["׃",""]
+    ["וְשֶׁיִּהְיֶה","and-that-he-shall-be"],["הַבַּיִת","the-house"],["הַזֶּה","this"],["בֵּית","the-house-of"],["תְּפִלָּה","prayer"],["בֵּית","the-house-of"],["צוֹם","fasting"],["בֵּית","the-house-of"],["אֱמוּנָה","faith"],["בֵּית","the-house-of"],["כָּבוֹד","glorious"],["וּבֵית","and-house-of"],["אֱלֹהִים","God"],["אַף","yea"],["בֵּיתֶךָ׃","your-house"],["׃",""]
   ]},
   { num: "יז", words: [
     ["לְמַעַן","in-order-that"],["יִהְיוּ","shall-be"],["כָּל","all"],["בֹּאֵי","those who were entering"],["עַמְּךָ","your-people"],["אֶל","to"],["הַבַּיִת","the-house"],["הַזֶּה","this"],["בְּשֵׁם","by-name"],["יְהוָה׃","the-Lord"],["׃",""]
@@ -59,7 +59,7 @@ var dc109_ch1Verses = [
     ["וּלְמַעַן","and-that"],["יִהְיוּ","shall-be"],["כָּל","all"],["בִּרְכוֹתֵיהֶם","their-blessings"],["בְּשֵׁם","by-name"],["יְהוָה","the-Lord"],["בְּיָדַיִם","in-two hands"],["קְדוֹשׁוֹת","the holy one of(pl)"],["נְשׂוּאוֹת","one uplifted of(pl)"],["אֶל","to"],["הָעֶלְיוֹן׃","the-Most-High"],["׃",""]
   ]},
   { num: "כ", words: [
-    ["וְשֶׁלֹּא","and-that-there-should-be-no"],["יֻרְשֶׁה","a possession"],["לְשׁוּם","to-any/put"],["דָּבָר","things"],["טָמֵא","unclean"],["לָבוֹא","to-come"],["אֶל","to"],["בֵּיתֶךָ","house-your"],["לְחַלְּלוֹ׃","to-profane-it"],["׃",""]
+    ["וְשֶׁלֹּא","and-that-there-should-be-no"],["יֻרְשֶׁה","a possession"],["לְשׁוּם","to-any/put"],["דָּבָר","things"],["טָמֵא","unclean"],["לָבוֹא","to-come"],["אֶל","to"],["בֵּיתֶךָ","your-house"],["לְחַלְּלוֹ׃","to-profane-it"],["׃",""]
   ]},
   { num: "כא", words: [
     ["וְכַאֲשֶׁר","and-as"],["יִפְשְׁעוּ","they have rebelled"],["מֵעַמְּךָ","from-your-people"],["אֶחָד","one"],["מֵהֶם","of-them"],["יָשׁוּבוּ","repent"],["בִּמְהֵרָה","soon"],["בִּתְשׁוּבָה","through-repentance"],["אֵלֶיךָ","to-you(f)"],["וְיִמְצְאוּ","and-they-might-find"],["חֵן","favor"],["בְּעֵינֶיךָ","in-your-eyes"],["אֶל","to"],["הַבְּרָכוֹת","the-blessings"],["אֲשֶׁר","which"],["לְהִשָּׁפֵךְ","to-was poured out"],["עַל","upon"],["הַמְכַבְּדִים","the-honorable(pl)"],["אוֹתְךָ","you(ACC)"],["בְּבֵיתֶךָ׃","in-household-your"],["׃",""]

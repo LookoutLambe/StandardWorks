@@ -490,13 +490,13 @@ var dc19_ch1Verses = [
     ["וְאִם","and-if"],["תָּזֶל","may it distil"],["אֶת־הָעֵצוֹת","ACC-the-counsels"],["הָאֵלֶּה","these"],["תָּבוֹא","might-come"],["עָלֶיךָ","against-you"],["צָרָה","affliction"],["וְהַשְׁחָתַת","and-destruction-of"],["נַפְשְׁךָ","your-soul"],["וְקִנְיָנֶךָ׃","and-acquisition-your"],["׃",""]
   ]},
   { num: "לד", words: [
-    ["תֵּן","let-them-go-up"],["חֵלֶק","part"],["מִקִּנְיָנְךָ","from-acquisition-your"],["אַף","yea"],["מֵאַדְמֹתֶיךָ","from-the-land-of-your"],["וְאֶת־הַכֹּל","and-[ACC]-all-the"],["מִלְּבַד","besides"],["בֵּיתֶךָ׃","house-your"],["׃",""]
+    ["תֵּן","let-them-go-up"],["חֵלֶק","part"],["מִקִּנְיָנְךָ","from-acquisition-your"],["אַף","yea"],["מֵאַדְמֹתֶיךָ","from-the-land-of-your"],["וְאֶת־הַכֹּל","and-[ACC]-all-the"],["מִלְּבַד","besides"],["בֵּיתֶךָ׃","your-house"],["׃",""]
   ]},
   { num: "לה", words: [
     ["שַׁלֵּם","certainly"],["אֶת־הַחוֹב","ACC-the-debt"],["אֲשֶׁר","which"],["חַיָּב","must/obligated"],["אַתָּה","you"],["לַמַּדְפִּיס","to-the-printer (person)"],["וְהִפָּטֵר","and-to be absolved"],["מִן","from"],["הַשִּׁעְבּוּד׃","the-bondage"],["׃",""]
   ]},
   { num: "לו", words: [
-    ["עֲזֹב","Zv"],["אֶת־בֵּיתְךָ","[ACC]-household-your"],["וּמְעוֹנְךָ","and-dwelling place-your"],["זוּלָתִי","except"],["בְּחָפְצְךָ","in-desire-your"],["לִרְאוֹת","to-see"],["אֶת־בְּנֵי","[ACC]-the-sons-of"],["בֵיתֶךָ׃","house-your"],["׃",""]
+    ["עֲזֹב","Zv"],["אֶת־בֵּיתְךָ","[ACC]-household-your"],["וּמְעוֹנְךָ","and-dwelling place-your"],["זוּלָתִי","except"],["בְּחָפְצְךָ","in-desire-your"],["לִרְאוֹת","to-see"],["אֶת־בְּנֵי","[ACC]-the-sons-of"],["בֵיתֶךָ׃","your-house"],["׃",""]
   ]},
   { num: "לז", words: [
     ["וְדַבֵּר","and-speak"],["בְּחָפְשִׁי","in-free"],["אֶל־כֹּל","to/unto-all"],["הַשְׁמֵעַ","the-heard"],["הוֹכֵחַ","chastening"],["הַגֵּד","will-tell"],["אֱמֶת","true"],["בְּקוֹל","the-voice-of"],["גָּדוֹל","great"],["בְּקוֹל","the-voice-of"],["רִנָּה","into-joy"],["לֵאמֹר","saying"],["הוֹשַׁע־נָא","shall-be-I-pray"],["הוֹשַׁע־נָא","shall-be-I-pray"],["בָּרוּךְ","blessed"],["שֵׁם","the-name-of"],["יְהוָה","the-Lord"],["אֱלֹהִים׃","God"],["׃",""]

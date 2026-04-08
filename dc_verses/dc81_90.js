@@ -792,7 +792,7 @@ var dc88_ch1Verses = [
     ["הִנֵּה","behold"],["אֲשֶׁר","which"],["אַתֶּם","you"],["שׁוֹמְעִים","who listens(pl)"],["הוּא","he/it"],["כְּקוֹל","as-it-were-with-a-voice-of"],["קוֹרֵא","calling"],["בַּמִּדְבָּר","in-the-wilderness"],["בַּמִּדְבָּר","in-the-wilderness"],["כִּי","that"],["אֵינְכֶם","you-are-not"],["יְכוֹלִים","able"],["לִרְאוֹת","to-see"],["אוֹתוֹ","him"],["קוֹלִי","my-voice"],["כִּי","that"],["קוֹלִי","my-voice"],["הוּא","he/it"],["רוּחַ","spirit"],["רוּחִי","again"],["הִיא","it"],["אֱמֶת","true"],["אֱמֶת","true"],["עוֹמֶדֶת","Omdt"],["וְאֵין","and-there-is-not"],["לָהּ","it"],["קֵץ","end"],["וְאִם","and-if"],["הִיא","it"],["בָכֶם","over-you"],["תִּרְבֶּה׃","it may increase"],["׃",""]
   ]},
   { num: "סז", words: [
-    ["וְאִם","and-if"],["עֵינְכֶם","eye-your"],["טְהוֹרָה","is pure"],["לִכְבוֹדִי","to-will honor-my"],["כָּל","all"],["גּוּפְכֶם","your-body"],["יִמָּלֵא","shall-be-filled"],["אוֹר","a-light"],["וְלֹא","and-not"],["יִהְיֶה","shall-be"],["חֹשֶׁךְ","darkness"],["בָּכֶם","in-you"],["וְהַגּוּף","and-the-body"],["הַמָּלֵא","the-full-of"],["אוֹר","a-light"],["מֵבִין","who-understand"],["אֶת","[ACC]"],["הַכֹּל׃","all-the"],["׃",""]
+    ["וְאִם","and-if"],["עֵינְכֶם","your-eye"],["טְהוֹרָה","is pure"],["לִכְבוֹדִי","to-will honor-my"],["כָּל","all"],["גּוּפְכֶם","your-body"],["יִמָּלֵא","shall-be-filled"],["אוֹר","a-light"],["וְלֹא","and-not"],["יִהְיֶה","shall-be"],["חֹשֶׁךְ","darkness"],["בָּכֶם","in-you"],["וְהַגּוּף","and-the-body"],["הַמָּלֵא","the-full-of"],["אוֹר","a-light"],["מֵבִין","who-understand"],["אֶת","[ACC]"],["הַכֹּל׃","all-the"],["׃",""]
   ]},
   { num: "סח", words: [
     ["לָכֵן","therefore"],["קַדְּשׁוּ","consecrate"],["אֶת","[ACC]"],["עַצְמְכֶם","yourselves"],["לְמַעַן","that"],["מַחְשְׁבוֹתֵיכֶם","your-thoughts"],["תִּהְיֶינָה","there-shall-be(f)"],["טְהוֹרוֹת","spotless"],["לֵאלֹהִים","to-God"],["וְיָבֹאוּ","and-shall-come"],["הַיָּמִים","the-days"],["אֲשֶׁר","which"],["תִּרְאוּ","you-shall-witness"],["אוֹתוֹ","him"],["כִּי","that"],["יְגַלֶּה","He-should-discover"],["אֶת","[ACC]"],["פָּנָיו","His-face"],["לָכֶם","to-you"],["וְיִהְיֶה","and-he-shall-be"],["בְּעִתּוֹ","in-its-time"],["וּבְדַרְכּוֹ","and-by-way-its"],["וּכְפִי","and-according-to"],["רְצוֹנוֹ׃","His-will"],["׃",""]
@@ -807,7 +807,7 @@ var dc88_ch1Verses = [
     ["וְאֵלֶּה","and-these"],["אֲשֶׁר","which"],["הִזְהִירוּ","did-warn"],["בְּמַסְעוֹתֵיהֶם","in-journey-their"],["יִקְרְאוּ","they-shall-call"],["לַיהוָה","unto-the-Lord"],["בְּלִבָּם","in-their-heart"],["בָּאַזְהָרָה","in-the-warning"],["אֲשֶׁר","which"],["קִבְּלוּ","receive"],["לִזְמַן","for-space-of"],["קָצָר׃","abridged"],["׃",""]
   ]},
   { num: "עב", words: [
-    ["הִנֵּה","behold"],["וַהֲלוֹא","and-¿-not"],["אֲנִי","I"],["אֶשְׁמֹר","I-may-preserve"],["אֶת","[ACC]"],["עֶדְרֵיכֶם","flock-your"],["וַאֲקִים","Okim"],["זְקֵנִים","elders"],["וְאֶשְׁלַח","so-I may send"],["אֲלֵיהֶם׃","unto-them"],["׃",""]
+    ["הִנֵּה","behold"],["וַהֲלוֹא","and-¿-not"],["אֲנִי","I"],["אֶשְׁמֹר","I-may-preserve"],["אֶת","[ACC]"],["עֶדְרֵיכֶם","your-flock"],["וַאֲקִים","Okim"],["זְקֵנִים","elders"],["וְאֶשְׁלַח","so-I may send"],["אֲלֵיהֶם׃","unto-them"],["׃",""]
   ]},
   { num: "עג", words: [
     ["הִנֵּה","behold"],["אֲנִי","I"],["אֲמַהֵר","I-will-quickly"],["אֶת","[ACC]"],["מְלַאכְתִּי","My-work"],["בְּעִתָּהּ׃","in-the-is-her-time"],["׃",""]

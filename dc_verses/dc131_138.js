@@ -592,7 +592,7 @@ var dc136_ch1Verses = [
     ["חִדְלוּ","cease"],["לָרִיב","to-plead"],["אִישׁ","man/each"],["בְּרֵעֵהוּ","with-another"],["חִדְלוּ","cease"],["לְדַבֵּר","to-speak"],["רָע","evil"],["אִישׁ","man/each"],["עַל","upon"],["רֵעֵהוּ׃","neighbor-his"],["׃",""]
   ]},
   { num: "כד", words: [
-    ["חִדְלוּ","cease"],["מִשִּׁכָּרוֹן","from-drunkenness"],["וְיִהְיוּ","and-shall-be"],["דִבְרֵיכֶם","words-your"],["לְבִנְיַן","to-the-building-of"],["אִישׁ","man/each"],["אֶת","[ACC]"],["רֵעֵהוּ׃","neighbor-his"],["׃",""]
+    ["חִדְלוּ","cease"],["מִשִּׁכָּרוֹן","from-drunkenness"],["וְיִהְיוּ","and-shall-be"],["דִבְרֵיכֶם","your-words"],["לְבִנְיַן","to-the-building-of"],["אִישׁ","man/each"],["אֶת","[ACC]"],["רֵעֵהוּ׃","neighbor-his"],["׃",""]
   ]},
   { num: "כה", words: [
     ["אִם","if"],["תִּלְוֶה","you will borrow"],["מֵרֵעֶךָ","from-your-neighbor"],["תָּשִׁיב","recall"],["אֵת","[ACC]"],["אֲשֶׁר","which"],["לָוִיתָ","will be a wreath of"],["וְאִם","and-if"],["לֹא","not"],["תוּכַל","can"],["לְשַׁלֵּם","to-Shelem"],["לֵךְ","go"],["מִיָּד","immediately"],["וְהַגֵּד","and-declare"],["לְרֵעֶךָ","your-neighbor's"],["פֶּן","lest"],["יַרְשִׁיעֲךָ׃","it condemns as guilty-you"],["׃",""]

@@ -51,7 +51,7 @@ var dc112_ch1Verses = [
     ["יִיטַב","it-shall-be-well"],["לִבְּךָ","your-heart"],["לְפָנָי","before-Me"],["וְתָעִיד","and-you will warn"],["בִּשְׁמִי","My-name"],["לֹא","not"],["רַק","only"],["לַגּוֹיִם","unto-the-nations"],["כִּי","that"],["גַם","also"],["לַיְּהוּדִים","to-the-Jews"],["וְתִשְׁלַח","and-it sent out"],["דְּבָרִי","my-utterance"],["עַד","until"],["קְצוֹת","the-ends-of"],["הָאָרֶץ׃","the-land"],["׃",""]
   ]},
   { num: "ו", words: [
-    ["יִוָּדַע","shall-be-known"],["מוֹשָׁבְךָ","seat-your"],["בְּצִיּוֹן","in-Zion"],["וְאַל","and-do-not"],["תָּסִיר","you will remove"],["בֵּיתֶךָ","house-your"],["כִּי","that"],["יֵשׁ","there"],["לִי","to-me"],["אֲנִי","I"],["יְהוָה","the-Lord"],["מְלָאכָה","work"],["גְדוֹלָה","great"],["לְךָ","unto-you"],["לַעֲשׂוֹת","to-do"],["בְּפַרְסֵם","in-to be publicized"],["שְׁמִי","my-name"],["בִּבְנֵי","among-the-children-of"],["אָדָם׃","man"],["׃",""]
+    ["יִוָּדַע","shall-be-known"],["מוֹשָׁבְךָ","seat-your"],["בְּצִיּוֹן","in-Zion"],["וְאַל","and-do-not"],["תָּסִיר","you will remove"],["בֵּיתֶךָ","your-house"],["כִּי","that"],["יֵשׁ","there"],["לִי","to-me"],["אֲנִי","I"],["יְהוָה","the-Lord"],["מְלָאכָה","work"],["גְדוֹלָה","great"],["לְךָ","unto-you"],["לַעֲשׂוֹת","to-do"],["בְּפַרְסֵם","in-to be publicized"],["שְׁמִי","my-name"],["בִּבְנֵי","among-the-children-of"],["אָדָם׃","man"],["׃",""]
   ]},
   { num: "ז", words: [
     ["לָכֵן","therefore"],["אֱזֹר","gird up"],["מָתְנֶיךָ","loins-your"],["לַמְּלָאכָה","to-the-a-work"],["וְהַנְעֵל","and-he brought in"],["רַגְלֶיךָ","feet-your"],["כִּי","that"],["נִבְחָרְתָּ","choice"],["וְדַרְכְּךָ","and-conduct-your"],["בֶּהָרִים","in-the-mountains"],["וּבְגוֹיִם","and-in-nations"],["רַבִּים׃","many"],["׃",""]
