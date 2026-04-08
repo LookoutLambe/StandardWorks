@@ -159,7 +159,7 @@ var dc25_ch1Verses = [
     ["וּמִשְׂרַת","and-pan"],["תִּהְיֶה","shall-be"],["לְנַחֵם","to-comfort"],["אֶת־עַבְדִּי","[ACC]-My-servant"],["יוֹסֵף","Joseph"],["סְמִית","Smith"],["בַּעְלֵךְ","in-the-yoke-your"],["בְּצָרוֹתָיו","in-my-afflictions"],["בְּדִבְרֵי","with-words-of"],["תַנְחוּמִים","consolations"],["בְּרוּחַ","by-the-spirit-of"],["עֲנָוָה׃","humility"],["׃",""]
   ]},
   { num: "ו", words: [
-    ["וְתֵלְכִי","and-you will go"],["עִמּוֹ","with-him"],["בְּעֵת","at-the-time"],["לֶכְתּוֹ","departing-of-his"],["וְתִהְיִי","and-you must belong"],["לוֹ","to-him"],["לְסוֹפֶרֶת","to-Sophereth"],["בְּאֵין","in-un"],["סוֹפֵר","was secretary"],["לוֹ","to-him"],["לְמַעַן","that"],["אֶשְׁלַח","shall-I-send"],["אֶת־עַבְדִּי","[ACC]-My-servant"],["אוֹלִיבֵר","Oliver"],["קַאוּדְרִי","Cowdery"],["אֶל־כָּל־מָקוֹם","to/unto-all-place"],["אֶחְפֹּץ׃","I-will"],["׃",""]
+    ["וְתֵלְכִי","and-you will go"],["עִמּוֹ","with-him"],["בְּעֵת","at-the-time"],["לֶכְתּוֹ","departing-of-his"],["וְתִהְיִי","and-you must belong"],["לוֹ","to-him"],["לְסוֹפֶרֶת","to-Sophereth"],["בְּאֵין","in-un"],["סוֹפֵר","was secretary"],["לוֹ","to-him"],["לְמַעַן","that"],["אֶשְׁלַח","shall-I-send"],["אֶת־עַבְדִּי","[ACC]-My-servant"],["אוֹלִיבֵר","Oliver"],["קַאוּדְרִי","Cowdery"],["אֶל־כָּל־מָקוֹם","to-all-place"],["אֶחְפֹּץ׃","I-will"],["׃",""]
   ]},
   { num: "ז", words: [
     ["תַּחַת","under"],["יָדוֹ","His-hand"],["לְבָאֵר","to-explain"],["כְּתוּבִים","there-are-written"],["וּלְהוֹכִיחַ","and-to-he-reproved"],["אֶת־הָעֵדָה","[ACC]-the-church"],["כַּאֲשֶׁר","as"],["יִנָּתֵן","shall-be-delivered"],["לָךְ","unto-you"],["בְּרוּחִי׃","by-spirit-my"],["׃",""]

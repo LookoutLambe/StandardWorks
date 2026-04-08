@@ -957,7 +957,7 @@ var psa_ch50Verses = [
   { num:"א", words:[["מִזְמוֹר","a psalm"],["לְאָסָף","Asaph"],["אֵל","God"],["אֱלֹהִים","God"],["יְהֹוָה","the-LORD"],["דִּבֶּר","spoke"],["וַיִּקְרָא־אָרֶץ","and-he-called-the-earth"],["מִמִּזְרַח־שֶׁמֶשׁ","from-the-east-the-sun-of"],["עַד־מְבֹאוֹ","until-setting-its"],["׃",""]] },
   { num:"ב", words:[["מִצִּיּוֹן","out-of-Zion"],["מִכְלַל־יֹפִי","perfection of-beauty"],["אֱלֹהִים","God"],["הוֹפִיעַ","appeared"],["׃",""]] },
   { num:"ג", words:[["יָבֹא","shall-come"],["אֱלֹהֵינוּ","our-God"],["וְאַל־יֶחֱרַשׁ","and-do-not-he be silent"],["אֵשׁ־לְפָנָיו","fire-before-him"],["תֹּאכֵל","it-shall-devour"],["וּסְבִיבָיו","and-around-him"],["נִשְׂעֲרָה","it is tempestuous"],["מְאֹד","exceedingly"],["׃",""]] },
-  { num:"ד", words:[["יִקְרָא","calls"],["אֶל־הַשָּׁמַיִם","to/unto-the-heavens"],["מֵעָל","above"],["וְאֶל־הָאָרֶץ","and-the-earth"],["לָדִין","to-judge"],["עַמּוֹ","his-people"],["׃",""]] },
+  { num:"ד", words:[["יִקְרָא","calls"],["אֶל־הַשָּׁמַיִם","to-the-heavens"],["מֵעָל","above"],["וְאֶל־הָאָרֶץ","and-the-earth"],["לָדִין","to-judge"],["עַמּוֹ","his-people"],["׃",""]] },
   { num:"ה", words:[["אִסְפוּ־לִי","gather-to-me"],["חֲסִידָי","O faithful people-my"],["כֹּרְתֵי","those who made"],["בְרִיתִי","covenant-my"],["עֲלֵי־זָבַח","on-a sacrifice"],["׃",""]] },
   { num:"ו", words:[["וַיַּגִּידוּ","and-did-declare"],["שָׁמַיִם","the-heavens"],["צִדְקוֹ","His-righteousness"],["כִּי־אֱלֹהִים","because-God"],["שֹׁפֵט","judge"],["הוּא","it"],["סֶלָה","Selah"],["׃",""]] },
   { num:"ז", words:[["שִׁמְעָה","Shimeah"],["עַמִּי","my-people"],["וַאֲדַבֵּרָה","and-let me speak"],["יִשְׂרָאֵל","Israel"],["וְאָעִידָה","and-I-took"],["בָּךְ","in-You"],["אֱלֹהִים","God"],["אֱלֹהֶיךָ","your-God"],["אָנֹכִי","I"],["׃",""]] },

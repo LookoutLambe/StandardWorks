@@ -29,7 +29,7 @@ var dc31_ch1Verses = [
     ["הִנֵּה","behold"],["אֲנִי","I"],["אֹמֵר","I-say"],["לְךָ","unto-you"],["תִּהְיֶה","shall-be"],["רוֹפֵא","doctor"],["לָעֵדָה","to-the-church"],["אַךְ","but/surely"],["לֹא","not"],["לָעוֹלָם","to-the-world"],["כִּי","that"],["לֹא","not"],["יְקַבְּלוּךָ׃","they-shall-receive-you"],["׃",""]
   ]},
   { num: "יא", words: [
-    ["לֵךְ","go"],["לְדַרְכְּךָ","thy-way"],["אֶל־כָּל־מָקוֹם","to/unto-all-place"],["אֶחְפֹּץ","I-will"],["וְיִנָּתֵן","and-shall-be-given"],["לְךָ","unto-you"],["בְּיַד","by-hand-of"],["הַמְנַחֵם","the-Menahem"],["מָה","what"],["תַּעֲשֶׂה","you-make"],["וְאָנָה","and-where"],["תֵלֵךְ׃","she went"],["׃",""]
+    ["לֵךְ","go"],["לְדַרְכְּךָ","thy-way"],["אֶל־כָּל־מָקוֹם","to-all-place"],["אֶחְפֹּץ","I-will"],["וְיִנָּתֵן","and-shall-be-given"],["לְךָ","unto-you"],["בְּיַד","by-hand-of"],["הַמְנַחֵם","the-Menahem"],["מָה","what"],["תַּעֲשֶׂה","you-make"],["וְאָנָה","and-where"],["תֵלֵךְ׃","she went"],["׃",""]
   ]},
   { num: "יב", words: [
     ["הִתְפַּלֵּל","he-has-prayed"],["תָּמִיד","continually"],["פֶּן","lest"],["תָּבוֹא","might-come"],["בְנִסָּיוֹן","in-an-attempt"],["וּתְאַבֵּד","and-shall-perish"],["שְׂכָרֶךָ׃","wages-your"],["׃",""]

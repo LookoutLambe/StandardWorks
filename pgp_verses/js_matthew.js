@@ -125,7 +125,7 @@ var jsm_ch1Verses = [
     ["וְכִימֵי","and-like-the days of"],["נֹחַ","Noah"],["כֵּן","so/thus"],["בִּיאַת","the-coming-of"],["בֶּן־הָאָדָם","son-of-the-man/Adam"],["׃",""]
   ]},
   { num: "מב", words: [
-    ["כִּי","for"],["כַּיָּמִים","like the-days"],["לִפְנֵי","before"],["הַמַּבּוּל","the-flood"],["עַד","until"],["יוֹם","day"],["בֹּא","come"],["נֹחַ","Noah"],["אֶל־הַתֵּבָה","to/unto-the-ark"],["הָיוּ","were"],["אֹכְלִים","feeding-upon"],["וְשֹׁתִים","and-drinking"],["נֹשְׂאִים","bearing"],["וְנִשָּׂאוֹת","and-are lifted up"],["׃",""]
+    ["כִּי","for"],["כַּיָּמִים","like the-days"],["לִפְנֵי","before"],["הַמַּבּוּל","the-flood"],["עַד","until"],["יוֹם","day"],["בֹּא","come"],["נֹחַ","Noah"],["אֶל־הַתֵּבָה","to-the-ark"],["הָיוּ","were"],["אֹכְלִים","feeding-upon"],["וְשֹׁתִים","and-drinking"],["נֹשְׂאִים","bearing"],["וְנִשָּׂאוֹת","and-are lifted up"],["׃",""]
   ]},
   { num: "מג", words: [
     ["וְלֹא","and-not"],["יָדְעוּ","they-knew"],["עַד","until"],["בֹּא","come"],["הַמַּבּוּל","the-flood"],["וַיִּשָּׂאֵם","and-he carried off-them"],["כֻּלָּם","all-of-them"],["כֵּן","so/thus"],["בִּיאַת","the-coming-of"],["בֶּן־הָאָדָם","son-of-the-man/Adam"],["׃",""]
