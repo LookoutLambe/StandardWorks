@@ -2465,7 +2465,7 @@ NavEngine.init({
 </script>
 <script>
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js');
+  navigator.serviceWorker.register('service-worker.js?v=48').then(function(r){r.update();});
 }
 </script>
 <script>
