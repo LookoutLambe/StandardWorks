@@ -11103,7 +11103,7 @@ var n2_ch26Verses = [
     ["שָׁלוֹם","peace"],
     ["עִמּוֹ","with-Him"],
     ["עַד","until"],
-    ["עֲבֹר","passing-of"],
+    ["עֲבֹר","crossing-over"],
     ["שְׁלֹשָׁה","three"],
     ["דוֹרוֹת","generations"],
     ["וְיַעַבְרוּ","and-they-shall-pass"],
@@ -11115,7 +11115,7 @@ var n2_ch26Verses = [
   ]},
   { num:"י", words:[
     ["וְאַחֲרֵי","and-when"],
-    ["עֲבֹר","passing-of"],
+    ["עֲבֹר","crossing-over"],
     ["הַדְּבָרִים","the-these-things"],
     ["הָאֵלֶּה","these"],
     ["יָבוֹא","comes"],
