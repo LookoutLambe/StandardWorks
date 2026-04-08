@@ -3339,7 +3339,7 @@ var ch8Verses = [
   { num:"יג", words:[
     ["וַיְהִי","and-it-came-to-pass"],
     ["בְּהַבִּיטִי","as-I-looked"],
-    ["סָבִיב","round-about"],
+    ["סָבִיב","all-around"],
     ["לְמַעַן","that"],
     ["אֶמְצָא","I-might-find"],
     ["אֶת־מִשְׁפַּחְתִּי","my-family"],
@@ -3539,7 +3539,7 @@ var ch8Verses = [
     ["הָעֵץ","the-tree"],
     ["וַיִּשְׂאוּ","and-lifted"],
     ["אֶת־עֵינֵיהֶם","their-eyes"],
-    ["סָבִיב","round-about"],
+    ["סָבִיב","all-around"],
     ["כְּמִתְבּוֹשְׁשִׁים","as-ashamed"],
     ["׃",""]
   ]},
@@ -3547,7 +3547,7 @@ var ch8Verses = [
     ["וָאֶשָּׂא","and-I-lifted"],
     ["גַּם־אָנִי","also-I"],
     ["אֶת־עֵינַי","my-eyes"],
-    ["סָבִיב","round-about"],
+    ["סָבִיב","all-around"],
     ["וָאֵרֶא","and-beheld"],
     ["מֵעֵבֶר","across"],
     ["לִנְהַר","river-of"],

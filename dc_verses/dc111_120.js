@@ -237,7 +237,7 @@ var dc115_ch1Verses = [
     ["וְעוֹד","and-again"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["רְצוֹנִי","my-desire"],["הוּא","he/it"],["אֲשֶׁר","which"],["תִּבָּנֶה","built-shall-be"],["עִיר","the-city-of"],["פַּר","a young bull"],["וֶסְט","and-sin"],["מְהֵרָה","soon"],["בְּהִקָּבֵץ","shall-run-together"],["קְדוֹשַׁי׃","the-saints-of"],["׃",""]
   ]},
   { num: "יח", words: [
-    ["וְגַם","and-also"],["יִמָּנוּ","they-were-numbered"],["מְקוֹמוֹת","places"],["אֲחֵרִים","other"],["לִיתֵדוֹת","to-stakes"],["בָּאֲזוֹרִים","with-a-girdle(pl)"],["מִסָּבִיב","round-about"],["כַּאֲשֶׁר","as"],["יִגָּלוּ","be-revealed"],["לְעַבְדִּי","to-My-servant"],["יוֹסֵף","Joseph"],["מֵעֵת","from-time"],["לְעֵת׃","to-time"],["׃",""]
+    ["וְגַם","and-also"],["יִמָּנוּ","they-were-numbered"],["מְקוֹמוֹת","places"],["אֲחֵרִים","other"],["לִיתֵדוֹת","to-stakes"],["בָּאֲזוֹרִים","with-a-girdle(pl)"],["מִסָּבִיב","all-around"],["כַּאֲשֶׁר","as"],["יִגָּלוּ","be-revealed"],["לְעַבְדִּי","to-My-servant"],["יוֹסֵף","Joseph"],["מֵעֵת","from-time"],["לְעֵת׃","to-time"],["׃",""]
   ]},
   { num: "יט", words: [
     ["כִּי","for"],["הִנֵּה","behold"],["אֶהְיֶה","I-shall-be"],["עִמּוֹ","with-him"],["לִפְנֵי","before"],["הָעָם","the-people"],["כִּי","that"],["לוֹ","to-him"],["נָתַתִּי","I-gave"],["מַפְתְּחוֹת","keys-of"],["הַמַּמְלָכָה","the-kingdom"],["הַזֹּאת","this"],["וְהַשֵּׁרוּת","and-the-bracelets"],["הַזֶּה׃","this"],["כֵּן","so/thus"],["הוּא","he/it"],["אָמֵן׃","amen"],["׃",""]

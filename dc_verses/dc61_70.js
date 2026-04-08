@@ -523,7 +523,7 @@ var dc66_ch1Verses = [
     ["וְעַתָּה","and-now"],["אָמֵן","amen"],["אֲנִי","I"],["יְהוָה","the-Lord"],["אַרְאֶה","I-will-show"],["לְךָ","unto-you"],["מַה","what"],["שֶּׁאֲנִי","that-I"],["חָפֵץ","desired"],["עָלֶיךָ","against-you"],["אוֹ","or"],["מַה","what"],["רְצוֹנִי","my-desire"],["עָלֶיךָ׃","upon-you(f)"],["׃",""]
   ]},
   { num: "ה", words: [
-    ["הִנֵּה","behold"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לְךָ","unto-you"],["רְצוֹנִי","my-desire"],["בְּשׂוֹרָתִי","My-good-tidings"],["מֵאֶרֶץ","out-of-the-land-of"],["לְאֶרֶץ","to-the-land-of"],["וּמֵעִיר","and-from-city"],["לְעִיר","to-city"],["אָכֵן","yea"],["בָּאֵזוֹרִים","with-a-girdle(pl)"],["סָבִיב","round-about"],["אֲשֶׁר","which"],["לֹא","not"],["הֻכְרְזָה׃","a-proclamation"],["׃",""]
+    ["הִנֵּה","behold"],["אָמֵן","amen"],["אֲנִי","I"],["אֹמֵר","I-say"],["לְךָ","unto-you"],["רְצוֹנִי","my-desire"],["בְּשׂוֹרָתִי","My-good-tidings"],["מֵאֶרֶץ","out-of-the-land-of"],["לְאֶרֶץ","to-the-land-of"],["וּמֵעִיר","and-from-city"],["לְעִיר","to-city"],["אָכֵן","yea"],["בָּאֵזוֹרִים","with-a-girdle(pl)"],["סָבִיב","all-around"],["אֲשֶׁר","which"],["לֹא","not"],["הֻכְרְזָה׃","a-proclamation"],["׃",""]
   ]},
   { num: "ו", words: [
     ["אַל","do-not"],["יָמִים","days"],["רַבִּים","many"],["בַּמָּקוֹם","in-the-place"],["הַזֶּה","this"],["אַל","do-not"],["תַּעֲלֶה","you should offer up"],["לְאֶרֶץ","to-the-land-of"],["צִיּוֹן","Zion"],["עֲדַיִן","Din"],["אַךְ","but/surely"],["כְּפִי","according-to"],["שְׁלַח","stretch-forth"],["שְׁלָח","Shiloah"],["וְאִם","and-if"],["לֹא","not"],["אַל","do-not"],["תַּחֲשֹׁב","it is reckoned"],["עַל","upon"],["רְכוּשְׁךָ׃","property-your"],["׃",""]
