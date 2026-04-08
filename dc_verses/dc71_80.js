@@ -310,7 +310,7 @@ var dc76_ch1Verses = [
     ["כִּי","for"],["בְרוּחִי","in-again"],["וּבְכֹחִי","and-in-power-my"],["אוֹדִיעַ","I-shall-make-known"],["לָהֶם","unto-them"],["סוֹדוֹת","the-mysteries-of"],["רְצוֹנִי","my-desire"],["כֵּן","so/thus"],["גַּם","also"],["דְּבָרִים","things"],["אֲשֶׁר","which"],["עַיִן","eye"],["לֹא","not"],["רָאָתָה","it has seen"],["וְאֹזֶן","and-the ear of"],["לֹא","not"],["שָׁמְעָה","she-heard"],["וְעַל","and-upon"],["לֵב","heart"],["אָדָם","man"],["לֹא","not"],["עָלוּ׃","come up"],["׃",""]
   ]},
   { num: "יא", words: [
-    ["אֲנַחְנוּ","we"],["יוֹסֵף","Joseph"],["סְמִית","Smith"],["הַבֵּן","the-Son"],["וְסִידְנִי","and-Sidney"],["רִיגְדּוֹן","Rigdon"],["הֱיוֹתֵנוּ","that-we-be"],["בָּרוּחַ","in-the-Spirit"],["בְּיוֹם","in-day"],["הַשִּׁשָּׁה","the-six"],["עָשָׂר","[compound]"],["לַחֹדֶשׁ","of-the-month"],["הַשֵּׁנִי","the-second"],["בִּשְׁנַת","in-year-of"],["אֲדֹנֵינוּ","our-Lord"],["אֶלֶף","thousand"],["וּשְׁמֹנֶה","and-eight"],["מֵאוֹת","hundred"],["וּשְׁלֹשִׁים","and-thirty"],["וּשְׁתַּיִם׃","and-two times"],["׃",""]
+    ["אֲנַחְנוּ","we"],["יוֹסֵף","Joseph"],["סְמִית","Smith"],["הַבֵּן","the-Son"],["וְסִידְנִי","and-Sidney"],["רִיגְדּוֹן","Rigdon"],["הֱיוֹתֵנוּ","that-we-be"],["בָּרוּחַ","in-the-Spirit"],["בְּיוֹם","in-day"],["הַשִּׁשָּׁה","the-six"],["עָשָׂר","if"],["לַחֹדֶשׁ","of-the-month"],["הַשֵּׁנִי","the-second"],["בִּשְׁנַת","in-year-of"],["אֲדֹנֵינוּ","our-Lord"],["אֶלֶף","thousand"],["וּשְׁמֹנֶה","and-eight"],["מֵאוֹת","hundred"],["וּשְׁלֹשִׁים","and-thirty"],["וּשְׁתַּיִם׃","and-two times"],["׃",""]
   ]},
   { num: "יב", words: [
     ["בְּכֹחַ","by-the-power-of"],["הָרוּחַ","the-spirit"],["נִפְקְחוּ","were-opened"],["עֵינֵינוּ","our-eyes"],["וְהֵאִירָה","and-it gave light"],["לִרְאוֹת","to-see"],["וּלְהָבִין","and-to-understand"],["אֶת","[ACC]"],["דִּבְרֵי","the-words-of"],["אֱלֹהִים׃","God"],["׃",""]
@@ -671,7 +671,7 @@ var dc77_ch1Verses = [
     ["שְׁאֵלָה׃","that-these"],["בְּאֵיזֶה","in-which"],["זְמַן","time"],["יִתְמַלְּאוּ","it-shall-be-filled(they)"],["הַדְּבָרִים","the-things"],["הַנֶּאֱמָרִים","the-it-was-said"],["בַּפֶּרֶק","in-the-plunder"],["הַזֶּה׃","this"],["׃",""]
   ]},
   { num: "יא", words: [
-    ["שְׁאֵלָה׃","that-these"],["מָה","what"],["עָלֵינוּ","upon-us"],["לְהָבִין","understand-them"],["מֵאָה","of-hundred"],["אַרְבָּעִים","forty"],["וְאַרְבָּעָה","and-four"],["אֶלֶף","thousand"],["מִכָּל","above-all"],["שִׁבְטֵי","tribes-of"],["יִשְׂרָאֵל","Israel"],["שְׁנֵים","two"],["עָשָׂר","[compound]"],["אֶלֶף","thousand"],["מִכָּל","above-all"],["שֵׁבֶט׃","rod"],["׃",""]
+    ["שְׁאֵלָה׃","that-these"],["מָה","what"],["עָלֵינוּ","upon-us"],["לְהָבִין","understand-them"],["מֵאָה","of-hundred"],["אַרְבָּעִים","forty"],["וְאַרְבָּעָה","and-four"],["אֶלֶף","thousand"],["מִכָּל","above-all"],["שִׁבְטֵי","tribes-of"],["יִשְׂרָאֵל","Israel"],["שְׁנֵים","two"],["עָשָׂר","if"],["אֶלֶף","thousand"],["מִכָּל","above-all"],["שֵׁבֶט׃","rod"],["׃",""]
   ]},
   { num: "יב", words: [
     ["שְׁאֵלָה׃","that-these"],["מָה","what"],["עָלֵינוּ","upon-us"],["לְהָבִין","understand-them"],["הַשּׁוֹפָרוֹת","the-trumpets"],["הַנִּזְכֶּרֶת","the-aforementioned"],["בַּפֶּרֶק","in-the-plunder"],["הַשְּׁמִינִי","the-eighth"],["שֶׁל","of"],["הֶחָזוֹן׃","the-revelation"],["׃",""]
@@ -683,7 +683,7 @@ var dc77_ch1Verses = [
     ["שְׁאֵלָה׃","that-these"],["מָה","what"],["עָלֵינוּ","upon-us"],["לְהָבִין","understand-them"],["מִן","from"],["הַסֵּפֶר","the-book"],["הַקָּטָן","the-small"],["אֲשֶׁר","which"],["אָכַל","ate"],["יוֹחָנָן","John"],["הַנִּזְכָּר","the-said"],["בַּפֶּרֶק","in-the-plunder"],["הָעֲשִׂירִי","the-rich-my"],["שֶׁל","of"],["הֶחָזוֹן׃","the-revelation"],["׃",""]
   ]},
   { num: "טו", words: [
-    ["שְׁאֵלָה׃","that-these"],["מָה","what"],["עָלֵינוּ","upon-us"],["לְהָבִין","understand-them"],["מִשְּׁנֵי","from-two-of"],["הָעֵדִים","the-witnesses"],["בַּפֶּרֶק","in-the-plunder"],["הָאַחַד","the-one"],["עָשָׂר","[compound]"],["שֶׁל","of"],["הֶחָזוֹן׃","the-revelation"],["׃",""]
+    ["שְׁאֵלָה׃","that-these"],["מָה","what"],["עָלֵינוּ","upon-us"],["לְהָבִין","understand-them"],["מִשְּׁנֵי","from-two-of"],["הָעֵדִים","the-witnesses"],["בַּפֶּרֶק","in-the-plunder"],["הָאַחַד","the-one"],["עָשָׂר","if"],["שֶׁל","of"],["הֶחָזוֹן׃","the-revelation"],["׃",""]
   ]},
 ];
 renderVerseSet(dc77_ch1Verses, 'dc77-ch1-verses');

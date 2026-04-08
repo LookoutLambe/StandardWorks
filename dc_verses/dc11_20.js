@@ -324,7 +324,7 @@ var dc18_ch1Verses = [
     ["וְעַתָּה","and-now"],["הִנֵּה","behold"],["אֲחֵרִים","other"],["הַנִּקְרָאִים","the-called"],["לְבַשֵּׂר","to-bear the news"],["אֶת־בְּשׂוֹרָתִי","[ACC]-My-good-tidings"],["לַגּוֹיִם","unto-the-nations"],["וְלַיְּהוּדִים׃","and-the-Jews"],["׃",""]
   ]},
   { num: "כז", words: [
-    ["הֵם","they"],["שְׁנֵים","two"],["עָשָׂר","[compound]"],["וּשְׁנֵים","and-two plus"],["הֶעָשָׂר","twelve"],["יִהְיוּ","shall-be"],["תַלְמִידַי","disciples-of"],["וְיִשְׂאוּ","and-bear"],["עֲלֵיהֶם","upon-them"],["אֶת־שְׁמִי","[ACC]-my-name"],["וּשְׁנֵים","and-two plus"],["הֶעָשָׂר","twelve"],["הֵם","they"],["הַחֲפֵצִים","the-were-desirous"],["לָשֵׂאת","to-bear"],["אֶת־שְׁמִי","[ACC]-my-name"],["בְּכָל־לִבָּם׃","with-all-their-hearts"],["׃",""]
+    ["הֵם","they"],["שְׁנֵים","two"],["עָשָׂר","if"],["וּשְׁנֵים","and-two plus"],["הֶעָשָׂר","twelve"],["יִהְיוּ","shall-be"],["תַלְמִידַי","disciples-of"],["וְיִשְׂאוּ","and-bear"],["עֲלֵיהֶם","upon-them"],["אֶת־שְׁמִי","[ACC]-my-name"],["וּשְׁנֵים","and-two plus"],["הֶעָשָׂר","twelve"],["הֵם","they"],["הַחֲפֵצִים","the-were-desirous"],["לָשֵׂאת","to-bear"],["אֶת־שְׁמִי","[ACC]-my-name"],["בְּכָל־לִבָּם׃","with-all-their-hearts"],["׃",""]
   ]},
   { num: "כח", words: [
     ["וְאִם","and-if"],["יַחְפְּצוּ","desire"],["לָשֵׂאת","to-bear"],["אֶת־שְׁמִי","[ACC]-my-name"],["בְּכָל־לִבָּם","with-all-their-hearts"],["נִקְרָאִים","are-they-called"],["הֵם","they"],["לָלֶכֶת","to-go"],["בְּכָל־הָאָרֶץ","with-all-the-land"],["לְבַשֵּׂר","to-bear the news"],["אֶת־בְּשׂוֹרָתִי","[ACC]-My-good-tidings"],["לְכָל־בָּשָׂר׃","to-all-flesh"],["׃",""]
@@ -686,7 +686,7 @@ var dc20_ch1Verses = [
     ["וְיִשָּׂא","and-takes-away"],["רֹאשׁ","the-head-of"],["הַמּוֹעֲדִים","the-appointed-times"],["בְּאֵין","in-un"],["זָקֵן","the-ancient"],["אוֹ","or"],["כֹהֵן׃","serving as priests"],["׃",""]
   ]},
   { num: "נז", words: [
-    ["וְיֵעָזֵר","and-helped"],["תָּמִיד","continually"],["בְּכָל־חוֹבוֹתָיו","among-all-a debt-his"],["בָּעֵדָה","into-the-church"],["עַל־יְדֵי","by-means-of"],["הַמְשָׁרְתִים","[compound]"],["אִם","if"],["יִצְטָרֵךְ׃","he-shall-need"],["׃",""]
+    ["וְיֵעָזֵר","and-helped"],["תָּמִיד","continually"],["בְּכָל־חוֹבוֹתָיו","among-all-a debt-his"],["בָּעֵדָה","into-the-church"],["עַל־יְדֵי","by-means-of"],["הַמְשָׁרְתִים","if"],["אִם","if"],["יִצְטָרֵךְ׃","he-shall-need"],["׃",""]
   ]},
   { num: "נח", words: [
     ["אַךְ","but/surely"],["לַמּוֹרִים","to-the-archers"],["וְלַמְשָׁרְתִים","and-to-the-ministering"],["אֵין","there-is-no"],["סַמְכוּת","authority"],["לְהַטְבִּיל","to-immerse/baptize"],["אוֹ","or"],["לְחַלֵּק","to-apportion"],["אֶת־הַמִּנְחָה","ACC-the-grain-offering"],["אוֹ","or"],["לִסְמֹךְ","to-ordain"],["יָדַיִם׃","hands"],["׃",""]

@@ -1014,7 +1014,7 @@ var dc88_ch1Verses = [
     ["וְשׁוּב","and-again"],["טֶכֶס","ceremony"],["רְחִיצַת","washing-of"],["הָרַגְלַיִם","the-feet"],["יִמָּסֵר","he-shall-be-delivered"],["עַל","upon"],["יְדֵי","hands-of"],["הַנָּשִׂיא","the-prince"],["אוֹ","or"],["הַזָּקֵן","the-elder"],["הַמֵּשִׁיב","the-returning her"],["שֶׁל","of"],["הָעֵדָה׃","the-congregation"],["׃",""]
   ]},
   { num: "קמא", words: [
-    ["יַתְחִיל","he-will-she is in labor"],["בִּתְפִלָּה","in-prayer"],["וְאַחֲרֵי","and-after"],["אֲכִילַת","eating-of"],["לֶחֶם","bread"],["וְיַיִן","and-wine"],["יַחְגֹּר","he will gird himself"],["אֶת","[ACC]"],["עַצְמוֹ","himself"],["כְּפִי","according-to"],["הַדֻּגְמָה","the-example"],["הַנְּתוּנָה","the-given"],["בַּפֶּרֶק","in-the-plunder"],["הַשְּׁלֹשָׁה","the-disciples"],["עָשָׂר","[compound]"],["שֶׁל","of"],["עֵדוּת","testimony"],["יוֹחָנָן","John"],["עָלַי׃","I-must"],["אָמֵן׃","amen"],["׃",""]
+    ["יַתְחִיל","he-will-she is in labor"],["בִּתְפִלָּה","in-prayer"],["וְאַחֲרֵי","and-after"],["אֲכִילַת","eating-of"],["לֶחֶם","bread"],["וְיַיִן","and-wine"],["יַחְגֹּר","he will gird himself"],["אֶת","[ACC]"],["עַצְמוֹ","himself"],["כְּפִי","according-to"],["הַדֻּגְמָה","the-example"],["הַנְּתוּנָה","the-given"],["בַּפֶּרֶק","in-the-plunder"],["הַשְּׁלֹשָׁה","the-disciples"],["עָשָׂר","if"],["שֶׁל","of"],["עֵדוּת","testimony"],["יוֹחָנָן","John"],["עָלַי׃","I-must"],["אָמֵן׃","amen"],["׃",""]
   ]},
 ];
 renderVerseSet(dc88_ch1Verses, 'dc88-ch1-verses');
