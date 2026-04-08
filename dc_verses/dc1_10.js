@@ -483,7 +483,7 @@ var dc8_ch1Verses = [
     ["וְזֹאת","and-this"],["רוּחַ","spirit"],["הַנְּבוּאָה","the-prophecy"],["הִנֵּה","behold"],["זֹאת","this"],["הָרוּחַ","the-spirit"],["אֲשֶׁר","which"],["הֶעֱבִיר","he brought in"],["בָּהּ","in-it(f)"],["מֹשֶׁה","Moses"],["אֶת־בְּנֵי","[ACC]-the-sons-of"],["יִשְׂרָאֵל","Israel"],["בְּתוֹךְ","in-midst-of"],["יַם־סוּף","the-Red-Sea"],["בֶּחָרָבָה׃","on the-dry ground"],["׃",""]
   ]},
   { num: "ד", words: [
-    ["עַל־כֵּן","therefore"],["זֹאת","this"],["מַתָּנָתְךָ","gifts-your"],["הִתְמַסֵּר","to devote oneself"],["לָהּ","it"],["וּבָרוּךְ","and-blessed"],["אַתָּה","you"],["כִּי","that"],["תַצִּילְךָ","you will rescue them-your"],["מִיַּד","from-hand-of"],["אֹיְבֶיךָ","enemies-your"],["אֲשֶׁר","which"],["לוּלֵא","were-it-not-for"],["כֵן","thus"],["וְהֵבִיאוּ","and-he-brought-him"],["נַפְשְׁךָ","your-soul"],["לְאָבְדָן׃","to-loss-of"],["׃",""]
+    ["עַל־כֵּן","therefore"],["זֹאת","this"],["מַתָּנָתְךָ","gifts-your"],["הִתְמַסֵּר","to devote oneself"],["לָהּ","it"],["וּבָרוּךְ","and-blessed"],["אַתָּה","you"],["כִּי","that"],["תַצִּילְךָ","you will rescue them-your"],["מִיַּד","from-hand-of"],["אֹיְבֶיךָ","your-enemies"],["אֲשֶׁר","which"],["לוּלֵא","were-it-not-for"],["כֵן","thus"],["וְהֵבִיאוּ","and-he-brought-him"],["נַפְשְׁךָ","your-soul"],["לְאָבְדָן׃","to-loss-of"],["׃",""]
   ]},
   { num: "ה", words: [
     ["הוֹי","O"],["זְכֹר","remember"],["אֶת־הַדְּבָרִים","[ACC]-the-words"],["הָאֵלֶּה","these"],["וּשְׁמֹר","and-guard"],["מִצְוֹתָי","My-commandments"],["זְכֹר","remember"],["זֹאת","this"],["מַתָּנָתְךָ׃","gifts-your"],["׃",""]

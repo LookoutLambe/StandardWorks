@@ -23,7 +23,7 @@ var dc31_ch1Verses = [
     ["לְעֵת","to-time"],["׃",""]
   ]},
   { num: "ט", words: [
-    ["סְבֹל","suffer"],["בְּצָרוֹת","in-much-tribulation"],["אַל","do-not"],["תָּשִׁיב","recall"],["חֶרְפָּה","reproach"],["הַנְהֵג","the-shall-lead"],["בֵּיתְךָ","household-your"],["בַּעֲנָוָה","the-humble"],["וֶהְיֵה","and-be"],["נֶאֱמָן׃","a person faithful of"],["׃",""]
+    ["סְבֹל","suffer"],["בְּצָרוֹת","in-much-tribulation"],["אַל","do-not"],["תָּשִׁיב","recall"],["חֶרְפָּה","reproach"],["הַנְהֵג","the-shall-lead"],["בֵּיתְךָ","your-household"],["בַּעֲנָוָה","the-humble"],["וֶהְיֵה","and-be"],["נֶאֱמָן׃","a person faithful of"],["׃",""]
   ]},
   { num: "י", words: [
     ["הִנֵּה","behold"],["אֲנִי","I"],["אֹמֵר","I-say"],["לְךָ","unto-you"],["תִּהְיֶה","shall-be"],["רוֹפֵא","doctor"],["לָעֵדָה","to-the-church"],["אַךְ","but/surely"],["לֹא","not"],["לָעוֹלָם","to-the-world"],["כִּי","that"],["לֹא","not"],["יְקַבְּלוּךָ׃","they-shall-receive-you"],["׃",""]

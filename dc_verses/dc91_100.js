@@ -583,7 +583,7 @@ var dc99_ch1Verses = [
     ["וְהַמְקַבֵּל","and-the-from-received"],["אֶתְכֶם","you"],["כְּיֶלֶד","as-a-child"],["קָטָן","small"],["מְקַבֵּל","from-received"],["מַלְכוּתִי","kingdom-my"],["וְאַשְׁרֵיהֶם","and-which-their"],["כִּי","that"],["יַשִּׂיגוּ","they-obtain"],["רַחֲמִים׃","mercy"],["׃",""]
   ]},
   { num: "ד", words: [
-    ["וְהַדּוֹחֶה","and-the-pushing"],["אֶתְכֶם","you"],["יִדָּחֶה","he is pushed down"],["מֵאָבִי","of-my-Father"],["וּמִבֵּיתוֹ","and-from-house-his"],["וּנְעַרְתֶּם","and-young man(you-pl)"],["רַגְלֵיכֶם","foot-your"],["בַּמִּסְתָּרִים","in-the-hiding places"],["בַּדֶּרֶךְ","in-the-way"],["לְעֵדוּת","as-a-testimony"],["עֲלֵיהֶם׃","upon-them"],["׃",""]
+    ["וְהַדּוֹחֶה","and-the-pushing"],["אֶתְכֶם","you"],["יִדָּחֶה","he is pushed down"],["מֵאָבִי","of-my-Father"],["וּמִבֵּיתוֹ","and-from-house-his"],["וּנְעַרְתֶּם","and-young man(you-pl)"],["רַגְלֵיכֶם","your-foot"],["בַּמִּסְתָּרִים","in-the-hiding places"],["בַּדֶּרֶךְ","in-the-way"],["לְעֵדוּת","as-a-testimony"],["עֲלֵיהֶם׃","upon-them"],["׃",""]
   ]},
   { num: "ה", words: [
     ["וְהִנֵּה","and-behold"],["בָא","came"],["אֲנִי","I"],["מְהֵרָה","soon"],["לְמִשְׁפָּט","to-judgment"],["לְהוֹכִיחַ","to-convince"],["הַכֹּל","all-the"],["עַל","upon"],["מַעֲשֵׂיהֶם","of-their-proceedings"],["הָרְשָׁעִים","the-wicked"],["אֲשֶׁר","which"],["עָשׂוּ","they-did/made"],["נֶגְדִּי","before-Me"],["כַּכָּתוּב","according-to-that-the-which-is-written"],["עָלַי","I-must"],["בִּמְגִלַּת","in-the scroll of"],["הַסֵּפֶר׃","the-scroll"],["׃",""]

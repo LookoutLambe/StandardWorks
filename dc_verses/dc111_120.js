@@ -5,7 +5,7 @@ var dc111_ch1Verses = [
     ["אֲנִי","I"],["יְהוָה","the-Lord"],["אֱלֹהֵיכֶם","your-God"],["לֹא","not"],["קָצַפְתִּי","I was angry"],["עַל","upon"],["בֹּאֲכֶם","you-have-gotten-into"],["בַּמַּסָּע","in-the-quarry"],["הַזֶּה","this"],["אַף","yea"],["עַל","upon"],["׃",""]
   ]},
   { num: "ב", words: [
-    ["יֵשׁ","there"],["לִי","to-me"],["אוֹצָר","treasure"],["רַב","great"],["בָּעִיר","in-the-city"],["הַזֹּאת","this"],["לָכֶם","to-you"],["לְטוֹבַת","for-the-welfare-of"],["צִיּוֹן","Zion"],["וְעַם","and-the-people-of"],["רַב","great"],["בָּעִיר","in-the-city"],["הַזֹּאת","this"],["אֲשֶׁר","which"],["אֶאֱסֹף","I will gather"],["בְּעִתּוֹ","in-its-time"],["לְטוֹבַת","for-the-welfare-of"],["צִיּוֹן","Zion"],["עַל","upon"],["יֶדְכֶם׃","hands-your"],["׃",""]
+    ["יֵשׁ","there"],["לִי","to-me"],["אוֹצָר","treasure"],["רַב","great"],["בָּעִיר","in-the-city"],["הַזֹּאת","this"],["לָכֶם","to-you"],["לְטוֹבַת","for-the-welfare-of"],["צִיּוֹן","Zion"],["וְעַם","and-the-people-of"],["רַב","great"],["בָּעִיר","in-the-city"],["הַזֹּאת","this"],["אֲשֶׁר","which"],["אֶאֱסֹף","I will gather"],["בְּעִתּוֹ","in-its-time"],["לְטוֹבַת","for-the-welfare-of"],["צִיּוֹן","Zion"],["עַל","upon"],["יֶדְכֶם׃","your-hands"],["׃",""]
   ]},
   { num: "ג", words: [
     ["לָכֵן","therefore"],["רָאוּי","worthy"],["אֶל","to/unto"],["אֲנָשִׁים","men"],["בָּעִיר","in-the-city"],["הַזֹּאת","this"],["כַּאֲשֶׁר","as"],["תֻּנְחוּ","it rested(they)"],["וְכַאֲשֶׁר","and-when"],["יִנָּתֵן","shall-be-delivered"],["לָכֶם׃","to-you"],["׃",""]

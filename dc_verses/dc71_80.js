@@ -225,7 +225,7 @@ var dc75_ch1Verses = [
     ["וּבְכָל","and-in-all"],["בַּיִת","house"],["אֲשֶׁר","which"],["תָּבֹאוּ","should-enter"],["וִיקַבְּלוּ","and-they received it"],["אֶתְכֶם","you"],["הַנִּיחוּ","they-left/placed"],["בִּרְכַתְכֶם","a pool of-you(pl)"],["עַל","upon"],["הַבַּיִת","the-house"],["הַהוּא׃","that"],["׃",""]
   ]},
   { num: "כ", words: [
-    ["וּבְכָל","and-in-all"],["בַּיִת","house"],["אֲשֶׁר","which"],["תָּבֹאוּ","should-enter"],["וְלֹא","and-not"],["יְקַבְּלוּ","they-shall-be-received"],["אֶתְכֶם","you"],["צְאוּ","go-forth"],["מְהֵרָה","soon"],["מִן","from"],["הַבַּיִת","the-house"],["הַהוּא","that"],["וְנַעֲרוּ","and-servant-his"],["אֶת","[ACC]"],["עֲפַר","ore"],["רַגְלֵיכֶם","foot-your"],["לְעֵדוּת","as-a-testimony"],["עֲלֵיהֶם׃","upon-them"],["׃",""]
+    ["וּבְכָל","and-in-all"],["בַּיִת","house"],["אֲשֶׁר","which"],["תָּבֹאוּ","should-enter"],["וְלֹא","and-not"],["יְקַבְּלוּ","they-shall-be-received"],["אֶתְכֶם","you"],["צְאוּ","go-forth"],["מְהֵרָה","soon"],["מִן","from"],["הַבַּיִת","the-house"],["הַהוּא","that"],["וְנַעֲרוּ","and-servant-his"],["אֶת","[ACC]"],["עֲפַר","ore"],["רַגְלֵיכֶם","your-foot"],["לְעֵדוּת","as-a-testimony"],["עֲלֵיהֶם׃","upon-them"],["׃",""]
   ]},
   { num: "כא", words: [
     ["וְתִמָּלְאוּ","and-be-filled-with"],["שָׂשׂוֹן","joy"],["וְשִׂמְחָה","and-happiness"],["וּדְעוּ","and-know"],["זֹאת","this"],["כִּי","that"],["בְּיוֹם","in-day"],["הַמִּשְׁפָּט","the-judgment"],["תִּהְיוּ","you-may-stand"],["שׁוֹפְטִים","judges"],["עַל","upon"],["הַבַּיִת","the-house"],["הַהוּא","that"],["וְתַרְשִׁיעוּ","and-condemn"],["אוֹתָם׃","them"],["׃",""]
