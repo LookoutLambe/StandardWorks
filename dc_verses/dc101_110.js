@@ -137,7 +137,7 @@ var dc101_ch1Verses = [
     ["וְהַעֲמִידוּ","and-they-stationed"],["שׁוֹמְרִים","guards"],["סָבִיב","all-around"],["וּבְנוּ","and-build!(pl)"],["מִגְדָּל","tower"],["לְמַעַן","that"],["יִשְׁקִיף","he will look down"],["אֶחָד","one"],["עַל","upon"],["הָאָרֶץ","the-land"],["מִסָּבִיב","all-around"],["לִהְיוֹת","to-be"],["צוֹפֶה","is watching"],["עַל","upon"],["הַמִּגְדָּל","the-tower"],["לְבַל","that-ye"],["יִשָּׁבְרוּ","be-broken"],["עֲצֵי","the-trees-of"],["הַזַּיִת","the-olive-tree"],["בְּבוֹא","when-comes"],["הָאוֹיֵב","the-is-an-enemy"],["לְהַשְׁחִית","to-destroy"],["וְלָקַחַת","and-partake-of"],["פְּרִי","fruit"],["כַרְמִי׃","the vineyards of"],["׃",""]
   ]},
   { num: "מו", words: [
-    ["וְעַבְדֵי","and-the-servants-of"],["הָאָדוֹן","the-Lord"],["הָלְכוּ","they-went"],["וְעָשׂוּ","and-they-did-work"],["כַּאֲשֶׁר","as"],["צִוָּם","commanded-them"],["אֲדוֹנֵיהֶם","master-their"],["וְנָטְעוּ","and-they will plant"],["עֲצֵי","the-trees-of"],["הַזַּיִת","the-olive-tree"],["וּבָנוּ","and-against-us"],["מְשׂוּכָה","hedge"],["סָבִיב","all-around"],["וְהֶעֱמִידוּ","and-they-stationed"],["שׁוֹמְרִים","guards"],["וְהֵחֵלּוּ","and-began"],["לִבְנוֹת","white"],["מִגְדָּל׃","Migdol"],["׃",""]
+    ["וְעַבְדֵי","and-the-servants-of"],["הָאָדוֹן","the-Lord"],["הָלְכוּ","they-went"],["וְעָשׂוּ","and-they-did-work"],["כַּאֲשֶׁר","as"],["צִוָּם","commanded-them"],["אֲדוֹנֵיהֶם","their-master"],["וְנָטְעוּ","and-they will plant"],["עֲצֵי","the-trees-of"],["הַזַּיִת","the-olive-tree"],["וּבָנוּ","and-against-us"],["מְשׂוּכָה","hedge"],["סָבִיב","all-around"],["וְהֶעֱמִידוּ","and-they-stationed"],["שׁוֹמְרִים","guards"],["וְהֵחֵלּוּ","and-began"],["לִבְנוֹת","white"],["מִגְדָּל׃","Migdol"],["׃",""]
   ]},
   { num: "מז", words: [
     ["וְעוֹדָם","and-still"],["מְיַסְּדִים","laying"],["יְסוֹדוֹ","the-foundation-of-his"],["הֵחֵלּוּ","began"],["לֵאמֹר","saying"],["בֵּינֵיהֶם","among-them"],["מַה־צֹּרֶךְ","what-need"],["לַאֲדוֹנֵנוּ","to-the-our-Lord"],["בַּמִּגְדָּל","in-the-tower"],["הַזֶּה׃","this"],["׃",""]
@@ -149,7 +149,7 @@ var dc101_ch1Verses = [
     ["הֲלֹא","do-you-not"],["יִנָּתֵן","shall-be-delivered"],["הַכֶּסֶף","the-money"],["הַזֶּה","this"],["כִּי","that"],["אֵין","there-is-no"],["צֹרֶךְ","need"],["בָּאֵלֶּה׃","in-the-these"],["׃",""]
   ]},
   { num: "נ", words: [
-    ["וּבְהִתְוַכְּחָם","and-in-to argue-them"],["זֶה","this"],["עִם","with"],["זֶה","this"],["נַעֲשׂוּ","were-done"],["עֲצֵלִים","idle(pl)"],["מְאֹד","exceedingly"],["וְלֹא","and-not"],["שָׁמְעוּ","they-heard"],["בְּמִצְוֹת","the-commandments-of"],["אֲדוֹנֵיהֶם׃","master-their"],["׃",""]
+    ["וּבְהִתְוַכְּחָם","and-in-to argue-them"],["זֶה","this"],["עִם","with"],["זֶה","this"],["נַעֲשׂוּ","were-done"],["עֲצֵלִים","idle(pl)"],["מְאֹד","exceedingly"],["וְלֹא","and-not"],["שָׁמְעוּ","they-heard"],["בְּמִצְוֹת","the-commandments-of"],["אֲדוֹנֵיהֶם׃","their-master"],["׃",""]
   ]},
   { num: "נא", words: [
     ["וַיָּבֹא","and-came"],["הָאוֹיֵב","the-is-an-enemy"],["בַּלַּיְלָה","in-the-night"],["וַיִּפְרֹץ","and-it has increased"],["אֶת־הַמְּשׂוּכָה","term used to indicate a direct object-the-hedgerow"],["וְעַבְדֵי","and-the-servants-of"],["הָאָדוֹן","the-Lord"],["קָמוּ","have-been-fulfilled"],["וַיִּבָּהֲלוּ","and-they-were-alarmed"],["וַיָּנֻסוּ","Oinso"],["וְהָאוֹיֵב","and-the-is-an-enemy"],["הֵשְׁחִית","to destroy"],["מַעֲשֵׂיהֶם","of-their-proceedings"],["וַיְשַׁבֵּר","and-he broke in pieces"],["אֶת־עֲצֵי","[ACC]-the-trees-of"],["הַזַּיִת׃","the-you will spatter it"],["׃",""]

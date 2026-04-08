@@ -575,7 +575,7 @@ var dc87_ch1Verses = [
     ["כִּי","for"],["הִנֵּה","behold"],["מְדִינוֹת","the provinces of"],["הַדָּרוֹם","the-south"],["מִמְּדִינוֹת","from-provinces"],["הַצָּפוֹן","the-north"],["וּמְדִינוֹת","and-the provinces of"],["הַדָּרוֹם","the-south"],["תִּקְרֶאנָה","you call"],["לְגוֹיִם","for-other-nations"],["אֲחֵרִים","other"],["גַּם","also"],["לְאֻמַּת","to-the-truth"],["בְּרִיטַנְיָה","Britain"],["הַגְּדוֹלָה","the-great"],["כַּאֲשֶׁר","as"],["הִיא","it"],["נִקְרֵאת","we-will-you-called"],["וְהֵם","and-they"],["גַּם","also"],["יִקְרְאוּ","they-shall-call"],["לְגוֹיִם","for-other-nations"],["אֲחֵרִים","other"],["לְמַעַן","that"],["יָגֵנּוּ","he-shall-protect-us"],["עַל","upon"],["עַצְמָם","themselves"],["נֶגֶד","against"],["גּוֹיִם","nations/gentiles"],["אֲחֵרִים","other"],["וְאָז","and-then"],["מִלְחָמָה","war"],["תִּשָּׁפֵךְ","poured-out-be-shall"],["עַל","upon"],["כָּל","all"],["הַגּוֹיִם׃","the-nations"],["׃",""]
   ]},
   { num: "ד", words: [
-    ["וְהָיָה","and-it-shall-come-to-pass"],["אַחַר","after"],["יָמִים","days"],["רַבִּים","many"],["עֲבָדִים","bondage"],["יָקוּמוּ","they-shall-stand"],["עַל","upon"],["אֲדוֹנֵיהֶם","master-their"],["אֲשֶׁר","which"],["יְאֻסְּפוּ","he-will-they-gathered"],["וְיֻאַמְּנוּ","so-they may be verified"],["לַמִּלְחָמָה׃","to-the-battle"],["׃",""]
+    ["וְהָיָה","and-it-shall-come-to-pass"],["אַחַר","after"],["יָמִים","days"],["רַבִּים","many"],["עֲבָדִים","bondage"],["יָקוּמוּ","they-shall-stand"],["עַל","upon"],["אֲדוֹנֵיהֶם","their-master"],["אֲשֶׁר","which"],["יְאֻסְּפוּ","he-will-they-gathered"],["וְיֻאַמְּנוּ","so-they may be verified"],["לַמִּלְחָמָה׃","to-the-battle"],["׃",""]
   ]},
   { num: "ה", words: [
     ["וְהָיָה","and-it-shall-come-to-pass"],["גַּם","also"],["הַשְּׁאֵרִית","the-remnant"],["הַנִּשְׁאָרִים","the-remaining"],["בָּאָרֶץ","in-the-land"],["יְאַסְּפוּ","he-will-they-gathered"],["אֶת","[ACC]"],["עַצְמָם","themselves"],["מְאֹד","exceedingly"],["וְיֵצֵרוּ","and-the one who formed-it"],["לַגּוֹיִם","unto-the-nations"],["צָרָה","affliction"],["קָשָׁה׃","stubborn"],["׃",""]
@@ -765,7 +765,7 @@ var dc88_ch1Verses = [
     ["וְאָז","and-then"],["פָּרַשׁ","stretches-forth"],["מֵהָרִאשׁוֹן","from-the-first"],["לְמַעַן","that"],["יִפְקֹד","He-shall-visit"],["גַּם","also"],["אֶת","[ACC]"],["הַשֵּׁנִי","the-second"],["וְאֶת","and-[ACC]"],["הַשְּׁלִישִׁי","the-third"],["וְאֶת","and-[ACC]"],["הָרְבִיעִי","the-fourth"],["וְכֵן","and-thus"],["עַד","until"],["הַשְּׁנֵים","the-twelve"],["עָשָׂר׃","tithe"],["׃",""]
   ]},
   { num: "נח", words: [
-    ["וְכֵן","and-thus"],["כֻּלָּם","all-of-them"],["קִבְּלוּ","receive"],["אֶת","[ACC]"],["אוֹר","a-light"],["פְּנֵי","face-of"],["אֲדוֹנֵיהֶם","master-their"],["כָּל","all"],["אִישׁ","man/each"],["בְּשָׁעָתוֹ","during-his"],["וּבְעִתּוֹ","and-in-time-its"],["וּבְמוֹעֲדוֹ׃","and-at-appointed time-its"],["׃",""]
+    ["וְכֵן","and-thus"],["כֻּלָּם","all-of-them"],["קִבְּלוּ","receive"],["אֶת","[ACC]"],["אוֹר","a-light"],["פְּנֵי","face-of"],["אֲדוֹנֵיהֶם","their-master"],["כָּל","all"],["אִישׁ","man/each"],["בְּשָׁעָתוֹ","during-his"],["וּבְעִתּוֹ","and-in-time-its"],["וּבְמוֹעֲדוֹ׃","and-at-appointed time-its"],["׃",""]
   ]},
   { num: "נט", words: [
     ["הָחֵל","began"],["מֵהָרִאשׁוֹן","from-the-first"],["וְכֵן","and-thus"],["עַד","until"],["הָאַחֲרוֹן","the-last"],["וּמֵהָאַחֲרוֹן","and-from-the-last"],["אֶל","to"],["הָרִאשׁוֹן","the-first"],["וּמֵהָרִאשׁוֹן","and-from-the-first"],["אֶל","to"],["הָאַחֲרוֹן׃","the-last"],["׃",""]
