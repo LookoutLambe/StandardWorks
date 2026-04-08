@@ -101,7 +101,7 @@ var jsm_ch1Verses = [
     ["וְתֵכֶף","and-in a moment"],["אַחֲרֵי","after"],["צָרַת","the-afflictions-of"],["הַיָּמִים","the-days"],["הָהֵם","those"],["תֶּחְשַׁךְ","you-will-darkness"],["הַשֶּׁמֶשׁ","the-sun"],["וְהַיָּרֵחַ","and-the-moon"],["לֹא","not"],["יִתֵּן","shall-give"],["אוֹרוֹ","its-light"],["וְהַכּוֹכָבִים","the-Ohkokbim"],["יִפְּלוּ","should-fall"],["מִן־הַשָּׁמַיִם","from-the-heavens"],["וּצְבָא","and-the host of"],["הַשָּׁמַיִם","the-heavens"],["׃",""]
   ]},
   { num: "לד", words: [
-    ["אָמֵן","amen"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["הַדּוֹר","the-generation"],["אֲשֶׁר","which"],["יֵרָאוּ","appear"],["בוֹ","in-Him"],["אֵלֶּה","these"],["לֹא","not"],["יַעֲבֹר","pass-away"],["עַד","until"],["מְלֹאת","are completed"],["כֹּל","all"],["׃",""]
+    ["אָמֵן","amen"],["אֹמֵר","I-say"],["לָכֶם","to-you"],["הַדּוֹר","the-generation"],["אֲשֶׁר","which"],["יֵרָאוּ","appear"],["בוֹ","in-him"],["אֵלֶּה","these"],["לֹא","not"],["יַעֲבֹר","pass-away"],["עַד","until"],["מְלֹאת","are completed"],["כֹּל","all"],["׃",""]
   ]},
   { num: "לה", words: [
     ["אַף","yea"],["כִּי","that"],["הַשָּׁמַיִם","the-heavens"],["וְהָאָרֶץ","and-the-earth"],["יַעֲבֹרוּ","they passed over"],["דְּבָרַי","my-words"],["לֹא","not"],["יַעֲבֹרוּ","they passed over"],["כִּי","that"],["כֹּל","all"],["יִתְמַלֵּא","it-shall-be-filled"],["׃",""]
