@@ -3434,7 +3434,7 @@ var ch8Verses = [
     ["וַיִּנָּטֶה","and-extended"],
     ["עַל־שְׂפַת","upon-the-language-of"],
     ["הַנָּהָר","the-river"],
-    ["וַיּוֹבִיל","and-he-shall-bring"],
+    ["וַיּוֹבִיל","and-shall-bring"],
     ["אֶל־הָעֵץ","to-the-tree"],
     ["אֲשֶׁר","by-which"],
     ["עָמַדְתִּי","I-stood"],

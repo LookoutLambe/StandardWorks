@@ -1,0 +1,4249 @@
+EXODUS 25-32 INTERLINEAR GLOSSES
+Source: BibleHub.com Interlinear Text
+========================================
+
+EXODUS 25
+
+25:1
+  vaydabber - And spoke
+  YHWH - Yahweh
+  el - to
+  Mosheh - Moses
+  lemor - saying
+
+25:2
+  dabber - speak
+  el - to
+  bney - the sons
+  Yisrael - of Israel
+  veyiqchu - that they bring
+  li - Me
+  terumah - an offering
+  me'et - from
+  kol - every
+  ish - man
+  asher - who
+  yidvennu - gives it willingly
+  libbo - with his heart
+  tiqchu - you shall take
+  et - [direct object marker]
+  terumati - My offering
+
+25:3
+  vezo't - And this
+  hatterumah - the offering
+  asher - which
+  tiqchu - you shall take
+  me'ittam - from them
+  zahav - gold
+  vachesef - and silver
+  unechoshet - and bronze
+
+25:4
+  utechelet - blue
+  ve'argaman - purple
+  vetola'at - scarlet stuff
+  shani - scarlet [thread]
+  veshesh - fine linen
+  ve'izzim - goats' [hair]
+
+25:5
+  ve'orot - And skins
+  elim - ram
+  me'oddamim - dyed red
+  ve'orot - and skins
+  techashim - badger
+  va'atsey - and wood
+  shittim - acacia
+
+25:6
+  shemen - Oil
+  lamma'or - for the light
+  besamim - spices
+  leshemen - for oil
+  hammishchah - the anointing
+  veliqtoret - for incense
+  hassammim - the sweet
+
+25:7
+  avney - stones
+  shoham - onyx
+  ve'avney - and stones
+  millu'im - to be set
+  la'efod - in the ephod
+  velachoshen - and in the breastplate
+
+25:8
+  ve'asu - And let them make
+  li - Me
+  miqdash - a sanctuary
+  veshachanti - that I may dwell
+  betocham - among them
+
+25:9
+  kekhol - According to all
+  asher - that
+  ani - I
+  mar'eh - show
+  otecha - you
+  et - [direct object marker]
+  tavnit - the pattern
+  hammishkan - of the tabernacle
+  ve'et - and
+  tavnit - the pattern
+  kol - of all
+  kelav - its furnishings
+  vechen - and just so
+  ta'asu - you shall make [it]
+
+25:10
+  ve'asu - shall construct
+  aron - an ark
+  atsey - wood
+  shittim - of acacia
+  ammatayim - cubits
+  vachetsi - and a half
+  orko - long
+  ve'ammah - and a cubit
+  vachetsi - and a half
+  rochbo - wide
+  ve'ammah - and a cubit
+  vachetsi - and a half
+  qomato - high
+
+25:11
+  vetsippita - shall overlay
+  oto - it
+  zahav - gold
+  tahor - pure
+  mibbayit - within
+  umichuts - and without
+  tetsappennu - shall overlay it
+  ve'asita - and shall make
+  alav - on it
+  zer - molding
+  zahav - gold
+  saviv - all around
+
+25:12
+  veyatsaqta - shall cast
+  lo - for it
+  arba' - four
+  tabbe'ot - rings
+  zahav - gold
+  venatatah - and fasten
+  al - on
+  arba' - four
+  pa'amotav - feet
+  ushtey - and two
+  tabba'ot - rings
+  al - on
+  tsal'o - side
+  ha'echat - one
+  ushtey - and two
+  tabba'ot - rings
+  al - on
+  tsal'o - side
+  hashenit - the second
+
+25:13
+  ve'asita - And you shall make
+  baddey - poles
+  atsey - wood
+  shittim - acacia
+  vetsippita - and overlay
+  otam - them
+  zahav - with gold
+
+25:14
+  veheve'ta - And you shall put
+  et - [direct object marker]
+  habbaddim - the poles
+  battabba'ot - into the rings
+  al - on
+  tsal'ot - the sides
+  ha'aron - of the ark
+  laset - that may be carried
+  et - [direct object marker]
+  ha'aron - the ark
+  bahem - by them
+
+25:15
+  betabbe'ot - in the rings
+  ha'aron - of the ark
+  yihyu - shall be
+  habbaddim - the poles
+  lo - not
+  yasuru - they shall be taken
+  mimmennu - from it
+
+25:16
+  venatatta - And you shall put
+  el - into
+  ha'aron - the ark
+  et - [direct object marker]
+  ha'edut - the Testimony
+  asher - which
+  etten - I shall give
+  eleicha - to you
+
+25:17
+  ve'asita - And you shall make
+  kapporet - mercy seat
+  zahav - gold
+  tahor - pure
+  ammatayim - two cubits
+  vachetsi - and a half
+  orkah - its length
+  ve'ammah - and a cubit
+  vachetsi - and a half
+  rochbah - its width
+
+25:18
+  ve'asita - shall make
+  shnayim - two
+  keruvim - cherubim
+  zahav - of gold
+  miqshah - of hammered work
+  ta'aseh - make
+  otam - them
+  mishney - at two
+  qetsot - the ends
+  hakkapporet - of the mercy seat
+
+25:19
+  va'aseh - Make
+  keruv - cherub
+  echad - one
+  miqqatsah - end
+  mizzeh - this
+  ucheruv - and the cherub
+  echad - one
+  miqqatsah - end
+  mizzeh - this
+  min - With
+  hakkapporet - the mercy seat
+  ta'asu - you shall make
+  et - [direct object marker]
+  hakkeruvim - the cherubim
+  al - at
+  shney - two
+  qetsotav - the ends of it
+
+25:20
+  vehayu - And shall
+  hakkeruvim - the cherubim
+  porsey - stretch out
+  chenafayim - [their] wings
+  lema'lah - above
+  sochekhim - covering
+  bekhanfeyhem - with their wings
+  al - [preposition]
+  hakkapporet - the mercy seat
+  ufneyhem - and they shall face
+  ish - one
+  el - unto
+  achiv - another
+  el - toward
+  hakkapporet - the mercy seat
+  yihyu - shall be
+  peney - the faces
+  hakkeruvim - of the cherubim
+
+25:21
+  venatatta - And you shall put
+  et - [direct object marker]
+  hakkapporet - the mercy seat
+  al - on
+  ha'aron - the ark
+  milema'lah - from above/top
+  ve'el - and in
+  ha'aron - the ark
+  titten - you shall put
+  et - [direct object marker]
+  ha'edut - the testimony
+  asher - that/which
+  etten - I shall give
+  eleicha - to you
+
+25:22
+  veno'adti - And I will meet
+  lecha - with you
+  sham - there
+  vedibbarti - and I will speak
+  ittecha - with you
+  me'al - from above
+  hakkapporet - the mercy seat
+  mibbein - from between
+  shney - two
+  hakkeruvim - the cherubim
+  asher - which [are]
+  al - on
+  aron - the ark
+  ha'edut - of the Testimony
+  et - [direct object marker]
+  kol - all
+  asher - which
+  atsavveh - I will give in commandment
+  otecha - you
+  el - to
+  bney - the sons
+  Yisrael - of Israel
+
+25:23
+  ve'asita - shall make
+  shulchan - a table
+  atsey - wood
+  shittim - acacia
+  ammatayim - two cubits
+  orko - its length
+  ve'ammah - and a cubit
+  rochbo - its width
+  ve'ammah - and a cubit
+  vachetsi - and a half
+  qomato - its height
+
+25:24
+  vetsippita - And you shall overlay
+  oto - it
+  zahav - gold
+  tahor - pure
+  ve'asita - and make
+  lo - for it
+  zer - a molding
+  zahav - of gold
+  saviv - all around
+
+25:25
+  ve'asita - And you shall make
+  lo - for it
+  misgeret - a frame/rim
+  tofach - of a handbreadth
+  saviv - all around
+  ve'asita - and you shall make
+  zer - a molding/border
+  zahav - gold
+  lemisgareto - for the frame
+  saviv - all around
+
+25:26
+  ve'asita - shall make
+  lo - for it
+  arba' - four
+  tabbe'ot - rings
+  zahav - gold
+  venatatah - and put
+  et - [direct object marker]
+  hattabba'ot - the rings
+  al - on
+  arba' - four
+  happe'ot - the corners
+  asher - which
+  le'arba' - at four
+  raglav - its legs
+
+25:27
+  le'ummat - Close to
+  hammisgeret - the frame
+  tihyeyna - shall be
+  hattabba'ot - the rings
+  levattim - as holders
+  levaddim - for the poles
+  laset - to bear
+  et - [direct object marker]
+  hashulchan - the table
+
+25:28
+  ve'asita - shall make
+  et - [direct object marker]
+  habbaddim - the poles
+  atsey - wood
+  shittim - acacia
+  vetsippita - and overlay
+  otam - them
+  zahav - gold
+  venissa - may be carried
+  vam - with them
+  et - [direct object marker]
+  hashulchan - the table
+
+25:29
+  ve'asita - shall make
+  qe'arotav - dishes
+  vechaphphotav - pans
+  uqesotav - jars
+  umenaqiyyotav - bowls
+  asher - which
+  yussach - to pour
+  bahen - with
+  zahav - gold
+  tahor - pure
+  ta'aseh - shall make
+  otam - them
+
+25:30
+  venatatta - And you shall set
+  al - on
+  hashulchan - the table
+  lechem - of the Bread
+  panim - of the Presence
+  lefanay - before Me
+  tamid - always
+
+25:31
+  ve'asita - shall make
+  menorat - a lampstand
+  zahav - gold
+  tahor - of pure
+  miqshah - of hammered
+  te'aseh - are to be made
+  hammenorah - the lampstand
+  yerechah - its shaft
+  veqanah - and its branches
+  gevi'eyha - its bowls
+  kaphtoreira - its knobs
+  uferacheha - and its flowers
+  mimmenah - [of one piece]
+  yihyu - shall be
+
+25:32
+  veshishah - And six
+  qanim - branches
+  yotse'im - shall come out
+  mitsiddeiha - of its sides
+  sheloshah - three
+  qeney - branches
+  menorah - of the lampstand
+  mitsiddah - out of side
+  ha'echad - one
+  ushloshah - and three
+  qeney - branches
+  menorah - of the lampstand
+  mitsiddah - out of side
+  hasheni - the second
+
+25:33
+  sheloshah - Three
+  gevi'im - bowls
+  meshukqadim - made like almond [blossoms]
+  baqqaneh - on branch
+  ha'echad - the one
+  kaphtor - [with] an [ornamental] knob
+  vaferach - and a flower
+  ushloshah - and three
+  gevi'im - bowls
+  meshukqadim - made like almond [blossoms]
+  baqqaneh - on the branch
+  ha'echad - [other] one
+  kaphtor - [with] an [ornamental] knob
+  vafarach - and a flower
+  ken - so
+  lesheshet - for six
+  haqqanim - the branches
+  hayyotse'im - that come out
+  min - of
+  hammenorah - the lampstand
+
+25:34
+  uvammenorah - And On the lampstand itself
+  arba'ah - four
+  gevi'im - bowls
+  meshukqadim - [shall be] made like almond [blossoms]
+  kaphtoreira - [each with] its [ornamental] knob
+  uferacheha - and flower
+
+25:35
+  vekhaphtor - And there shall be a knob
+  tachat - under
+  shney - two
+  haqqanim - the branches
+  mimmenah - of the same
+  vekhaphtor - and a knob
+  tachat - under
+  shney - two
+  haqqanim - the branches
+  mimmenah - of the same
+  vekhaphtor - and a knob
+  tachat - under
+  shney - two
+  haqqanim - the branches
+  mimmenah - of the same
+  lesheshet - according to six
+  haqqanim - the branches
+  hayyotse'im - that extend
+  min - from
+  hammenorah - the lampstand
+
+25:36
+  kaphtoreyhem - Their knobs
+  uqenotam - and their branches
+  mimmenah - [of one piece]
+  yihyu - [shall be]
+  kullah - all of it [shall be]
+  miqshah - hammered piece
+  achat - one
+  zahav - of gold
+  tahor - pure
+
+25:37
+  ve'asita - shall make
+  et - [direct object marker]
+  neroteha - lamps
+  shiv'ah - seven
+  vehe'elah - shall mount
+  et - [direct object marker]
+  neroteha - lamps
+  vehe'ir - to shed/give light
+  al - on
+  ever - space/region across
+  paneiha - front/face
+
+25:38
+  umalqacheha - And its wick-trimmers
+  umachttoteha - and their trays
+  zahav - of gold
+  tahor - pure
+
+25:39
+  kikkar - A talent
+  zahav - of gold
+  tahor - pure
+  ya'aseh - shall be made
+  otah - it
+  et - with
+  kol - all
+  hakkelim - utensils
+  ha'elleh - these
+
+25:40
+  ur'eh - And see
+  va'aseh - that you make
+  betavnitam - according to the pattern
+  asher - which
+  attah - you
+  mor'eh - was shown
+  bahar - on the mountain
+
+
+EXODUS 26
+
+26:1
+  ve'et - Moreover
+  hammishkan - the tabernacle
+  ta'aseh - you shall make
+  eser - ten
+  yeri'ot - curtains
+  shesh - linen
+  moshzar - fine woven
+  utechelet - and blue
+  ve'argaman - and purple
+  vetola'at - and scarlet
+  shani - thread
+  keruvim - cherubim
+  ma'aseh - with designs
+  choshev - of artistic
+  ta'aseh - you shall weave
+  otam - them
+
+26:2
+  orekh - the length
+  hayyeri'ah - curtain
+  ha'achat - of each
+  shemoneh - eight
+  ve'esrim - and twenty
+  ba'ammah - cubits
+  verocha - and the width
+  arba' - four
+  ba'ammah - cubits
+  hayyeri'ah - curtain
+  ha'echat - of each
+  middah - measurement
+  achat - one
+  lekhol - all
+  hayyeri'ot - the curtains
+
+26:3
+  chamesh - Five
+  hayyeri'ot - curtains
+  tihyeyna - shall be
+  chovrot - coupled
+  ishah - one
+  el - to
+  achotah - another
+  vechamesh - and five
+  yeri'ot - [the other] curtains
+  chovrot - [shall be] coupled
+  ishah - one
+  el - to
+  achotah - another
+
+26:4
+  ve'asita - shall make
+  lula'ot - loops
+  techelet - of blue
+  al - on
+  sefat - the edge
+  hayyeri'ah - of the curtain
+  ha'echat - one
+  miqqatsah - on the selvedge
+  bachobaret - of the [one] set
+  vechen - and likewise
+  ta'aseh - you shall do
+  bisfat - on edge
+  hayyeri'ah - of [other] curtain
+  haqqitsonah - [the outer
+  bammachberet - of
+  hashenit - the second [set]
+
+26:5
+  chamishim - Fifty
+  lula'ot - loops
+  ta'aseh - you shall make
+  bayyeri'ah - in the curtain
+  ha'echat - one
+  vachamishim - and fifty
+  lula'ot - loops
+  ta'aseh - you shall make
+  biqtseh - on the edge
+  hayyeri'ah - of the curtain
+  asher - that [is]
+  bammachberet - on the end
+  hashenit - of the second [set]
+  maqbilot - that may be clasped
+  hallula'ot - the loops
+  ishah - one
+  el - to
+  achotah - another
+
+26:6
+  ve'asita - shall make
+  chamishim - fifty
+  qarsey - clasps
+  zahav - of gold
+  vechibbarta - and join
+  et - [direct object marker]
+  hayyeri'ot - the curtains
+  ishah - to one
+  el - to
+  achotah - with her sister
+  baqqerasim - the clasps
+  vehayah - and it shall be
+  hammishkan - the tabernacle
+  echad - one
+
+26:7
+  ve'asita - shall make
+  yeri'ot - curtains
+  izzim - of goats'
+  le'ohel - A tent
+  al - over
+  hammishkan - the tabernacle
+  ashtey - one
+  esreh - ten
+  yeri'ot - curtains
+  ta'aseh - shall make
+  otam - them
+
+26:8
+  orekh - the length
+  hayyeri'ah - curtain
+  ha'achat - of each
+  sheloshim - thirty
+  ba'ammah - cubits
+  verocha - and the width
+  arba' - four
+  ba'ammah - cubits
+  hayyeri'ah - curtain
+  ha'echat - one
+  middah - measurement
+  achat - one
+  le'ashtey - shall have one
+  esreh - ten
+  yeri'ot - curtains
+
+26:9
+  vechibbarta - And you shall couple
+  et - [direct object marker]
+  chamesh - five
+  hayyeri'ot - curtains
+  levad - by themselves
+  ve'et - and [direct object marker]
+  shesh - six
+  hayyeri'ot - curtains
+  levad - by themselves
+  vechaPhalta - and you shall double over
+  et - [direct object marker]
+  hayyeri'ah - the curtain
+  hashishit - sixth
+  el - [preposition]
+  mul - at/against
+  peney - the forefront
+  ha'ohel - of the tent
+
+26:10
+  ve'asita - shall make
+  chamishim - fifty
+  lula'ot - loops
+  al - on
+  sefat - the edge
+  hayyeri'ah - of the curtain
+  ha'echat - of the one
+  haqqitsonah - is outermost
+  bachobaret - the set
+  vachamishim - and fifty
+  lula'ot - loops
+  al - on
+  sefat - the edge
+  hayyeri'ah - of the curtain
+  hachoberet - set
+  hashenit - the second
+
+26:11
+  ve'asita - shall make
+  qarsey - clasps
+  nechoshet - of bronze
+  chamishim - fifty
+  veheve'ta - shall put
+  et - [direct object marker]
+  haqqerasim - the clasps
+  ballula'ot - into the loops
+  vechibbarta - and couple together
+  et - [direct object marker]
+  ha'ohel - the tent
+  vehayah - that it may be
+  echad - one
+
+26:12
+  veserach - And the remnant
+  ha'odef - that remaineth
+  biyri'ot - of the curtains
+  ha'ohel - of the tent
+  chatsi - the half
+  hayyeri'ah - curtain
+  ha'odefet - that remaineth
+  tisrach - shall hang
+  al - over
+  achorey - the back
+  hammishkan - of the tabernacle
+
+26:13
+  veha'ammah - And a cubit
+  mizzeh - on this side
+  veha'ammah - and a cubit
+  mizzeh - on this side
+  ba'odef - what remains
+  be'orekh - of the length
+  yeri'ot - of the curtains
+  ha'ohel - of the tent
+  yihyeh - shall
+  saruach - hang
+  al - over
+  tsiddey - the sides
+  hammishkan - of the tabernacle
+  mizzeh - on this side
+  umizzeh - and on this side
+  lechassoto - to cover it
+
+26:14
+  ve'asita - shall make
+  mikhseh - a covering
+  la'ohel - for the tent
+  orot - skins
+  elim - of rams'
+  me'oddamim - dyed red
+  umichseh - and a covering
+  orot - of skins
+  techashim - badger
+  milema'lah - above
+
+26:15
+  ve'asita - And you shall make
+  et - [direct object marker]
+  haqqerashim - the boards
+  lammishkan - for the tabernacle
+  atsey - wood
+  shittim - of acacia
+  omedim - standing upright
+
+26:16
+  eser - Ten
+  ammot - cubits
+  orekh - the length
+  haqqaresh - of a board
+  ve'ammah - and a cubit
+  vachatsi - and a half
+  ha'ammah - cubit
+  rocha - the width
+  haqqeresh - of board
+  ha'echad - the one
+
+26:17
+  shtey - Two
+  yadot - tenons
+  laqqeresh - in board
+  ha'echad - the one
+  meshullavot - for binding
+  ishah - one
+  el - to
+  achotah - another
+  ken - thus
+  ta'aseh - you shall make
+  lekhol - for all
+  qarshey - the boards
+  hammishkan - of the tabernacle
+
+26:18
+  ve'asita - shall make
+  et - [direct object marker]
+  haqqerashim - the boards
+  lammishkan - for the tabernacle
+  esrim - twenty
+  qeresh - boards
+  lif'at - for the side
+  negbah - the south
+  teymanah - toward the south
+
+26:19
+  ve'arba'im - And forty
+  adney - sockets
+  chesef - of silver
+  ta'aseh - You shall make
+  tachat - under
+  esrim - twenty
+  haqqaresh - the boards
+  shney - two
+  adanim - sockets
+  tachat - under
+  haqqeresh - the board
+  ha'echad - one
+  lishtey - for two
+  yedotav - its tenons
+  ushney - and two
+  adanim - of sockets
+  tachat - under
+  haqqeresh - the board
+  ha'echad - one
+  lishtey - for two
+  yedotav - tenons
+
+26:20
+  uletse'la - And for side
+  hammishkan - of the tabernacle
+  hashenit - the second
+  lif'at - the side
+  tsafon - north
+  esrim - twenty
+  qaresh - boards
+
+26:21
+  ve'arba'im - and forty
+  adneyhem - their sockets
+  kasef - of silver
+  shney - two
+  adanim - sockets
+  tachat - under
+  haqqeresh - the board
+  ha'echad - the one
+  ushney - and two
+  adanim - sockets
+  tachat - under
+  haqqeresh - board
+  ha'echad - the one
+
+26:22
+  uleyarketey - For the far side
+  hammishkan - of the tabernacle
+  yammah - westward
+  ta'aseh - you shall make
+  shishah - six
+  qerashim - boards
+
+26:23
+  ushney - And two
+  qerashim - boards
+  ta'aseh - you shall make
+  limqutsot - for the corners
+  hammishkan - of the tabernacle
+  bayyarkatayim - two back
+
+26:24
+  veyihyu - shall form
+  to'amim - shall be double
+  millematah - beneath
+  veyachdav - together
+  yihyu - shall form
+  tammim - shall be complete
+  al - unto
+  rosho - top
+  el - about
+  hattabba'at - ring
+  ha'echat - to the first
+  ken - thus
+  yihyeh - shall form
+  lishneyhem - both
+  lishney - the two
+  hamiqtso'ot - corners
+  yihyu - shall form
+
+26:25
+  vehayu - become
+  shemonah - shall be eight
+  qerashim - boards
+  ve'adneyhem - their sockets
+  chesef - of silver
+  shishah - six
+  asar - teen [forming sixteen]
+  adanim - sockets
+  shney - two
+  adanim - sockets
+  tachat - under
+  haqqeresh - board
+  ha'echad - the one
+  ushney - and two
+  adanim - sockets
+  tachat - under
+  haqqeresh - board
+  ha'echad - the one
+
+26:26
+  ve'asita - shall make
+  verichim - bars
+  atsey - wood
+  shittim - of acacia
+  chamishah - five
+  leqarshey - the boards
+  tsela' - side
+  hammishkan - of the tabernacle
+  ha'echad - one
+
+26:27
+  vachamishah - And five
+  verichim - bars
+  leqarshey - for the boards
+  tsela' - side
+  hammishkan - of the tabernacle
+  hashenit - the second
+  vachamishah - and five
+  verichim - bars
+  leqarshey - for the boards
+  tsela' - of the side
+  hammishkan - of the tabernacle
+  layyarkatayim - for the rear
+  yammah - westward
+
+26:28
+  vehabberiach - And the bar
+  hattichon - middle
+  betoch - through the midst
+  haqqerashim - of the boards
+  mavriach - shall pass
+  min - from
+  haqqatseh - end
+  el - to
+  haqqatseh - end
+
+26:29
+  ve'et - And
+  haqqerashim - the boards
+  tetsappeh - You shall overlay
+  zahav - with gold
+  ve'et - and
+  tabbe'oteyhem - their rings
+  ta'aseh - of make
+  zahav - gold
+  battim - [as] holders
+  labberichim - for the bars
+  vetsippita - and overlay
+  et - [direct object marker]
+  habberichim - the bars
+  zahav - with gold
+
+26:30
+  vahaqemota - And you shall raise up
+  et - [direct object marker]
+  hammishkan - the tabernacle
+  kemishpato - according to its pattern
+  asher - which
+  horeyta - you were shown
+  bahar - on the mountain
+
+26:31
+  ve'asita - shall make
+  farokhet - a veil
+  techelet - of blue
+  ve'argaman - and purple
+  vetola'at - and scarlet stuff
+  shani - and scarlet
+  veshesh - and linen
+  moshzar - fine woven
+  ma'aseh - an design
+  choshev - with artistic
+  ya'aseh - shall be woven
+  otah - it
+  keruvim - of cherubim
+
+26:32
+  venatatah - shall hang
+  otah - it
+  al - upon
+  arba'ah - four
+  ammuday - pillars
+  shittim - of acacia
+  metsuppim - overlaid
+  zahav - with gold
+  vaveyhem - their hooks
+  zahav - gold
+  al - upon
+  arba'ah - four
+  adney - sockets
+  chasef - of silver
+
+26:33
+  venatatah - shall hang
+  et - [direct object marker]
+  happarokhet - the veil
+  tachat - under
+  haqqerasim - the clasps
+  veheve'ta - and shall bring
+  shammah - there
+  mibbeit - within
+  lapparokhet - the veil
+  et - [direct object marker]
+  aron - the ark
+  ha'edut - of the testimony
+  vehivdilah - and shall be a divider
+  happarokhet - the veil
+  lachem - for you
+  bein - between
+  haqqodesh - the holy place
+  uvein - and between
+  qodesh - holy
+  haqqodashim - the most holy
+
+26:34
+  venatata - And you shall put
+  et - [direct object marker]
+  hakkapporet - the mercy seat
+  al - upon
+  aron - the ark
+  ha'edut - of the testimony
+  beqodesh - in the holy
+  haqqodashim - of holies
+
+26:35
+  vesamta - shall set
+  et - [direct object marker]
+  hashulchan - the table
+  michuts - without
+  lapparokhet - the veil
+  ve'et - and [direct object marker]
+  hammenorah - the lampstand
+  nokhach - opposite
+  hashulchan - the table
+  al - on
+  tsela' - the side
+  hammishkan - of the tabernacle
+  teymanah - toward the south
+  vehashulchan - and the table
+  titten - you shall put
+  al - on
+  tsela' - the side
+  tsafon - north
+
+26:36
+  ve'asita - shall make
+  masakh - a screen
+  lefetach - the doorway
+  ha'ohel - of the tent
+  techelet - of blue
+  ve'argaman - and purple
+  vetola'at - and scarlet stuff
+  shani - scarlet
+  veshesh - and fine linen
+  moshzar - twisted/fine woven
+  ma'aseh - the work
+  roqem - of a weaver
+
+26:37
+  ve'asita - shall make
+  lammasakh - the screen
+  chamishah - five
+  ammuday - pillars
+  shittim - of acacia
+  vetsippita - and overlay
+  otam - them
+  zahav - gold
+  vaveyhem - their hooks
+  zahav - gold
+  veyatsaqta - and you shall cast
+  lahem - for them
+  chamishah - five
+  adney - sockets
+  nechoshet - of bronze
+
+
+EXODUS 27
+
+27:1
+  ve'asita - shall make
+  et - [direct object marker]
+  hammizbeach - the altar
+  atsey - wood
+  shittim - of acacia
+  chamesh - five
+  ammot - cubits
+  orekh - long
+  vechamesh - and five
+  ammot - cubits
+  rocha - wide
+  ravu'a - shall be square
+  yihyeh - become
+  hammizbeach - the altar
+  veshalosh - and three
+  ammot - cubits
+  qomato - its height
+
+27:2
+  ve'asita - shall make
+  qarnotav - horns
+  al - on
+  arba' - four
+  pinnotav - corners
+  mimmennu - of it
+  tihyeyna - shall be
+  qarnotav - horns
+  vetsippita - shall overlay
+  oto - it
+  nechoshet - bronze
+
+27:3
+  ve'asita - shall make
+  sirotav - pails
+  ledassheno - removing/receive ashes
+  veya'av - shovels
+  umizreqotav - basins
+  umizlegotav - forks
+  umachtotav - firepans
+  lekhol - all
+  kelav - utensils
+  ta'aseh - shall make
+  nechoshet - bronze
+
+27:4
+  ve'asita - shall make
+  lo - for it
+  mikhbar - a grate
+  ma'aseh - of work
+  reshet - of net
+  nechoshet - of bronze
+  ve'asita - and you shall make
+  al - on
+  hareshet - the network
+  arba' - four
+  tabbe'ot - rings
+  nechoshet - bronze
+  al - at
+  arba' - four
+  qetsotav - its corners
+
+27:5
+  venatatah - And you shall put
+  otah - it
+  tachat - under
+  karkov - the rim
+  hammizbeach - of the altar
+  millematah - beneath
+  vehayetah - that may be
+  hareshet - the net
+  ad - even to
+  chatsi - midway up
+  hammizbeach - the altar
+
+27:6
+  ve'asita - And you shall make
+  vaddim - poles
+  lammizbeach - for the altar
+  baddey - poles
+  atsey - of wood
+  shittim - acacia
+  vetsippita - and overlay
+  otam - them
+  nechoshet - with bronze
+
+27:7
+  vehuva - shall be put
+  et - [direct object marker]
+  baddav - the poles
+  battabba'ot - in the rings
+  vehayu - and shall be
+  habbaddim - the poles
+  al - on
+  shtey - two
+  tsal'ot - the sides
+  hammizbeach - of the altar
+  bis'et - to bear
+  oto - it
+
+27:8
+  nevuv - Hollow
+  luchot - with boards
+  ta'aseh - You shall make
+  oto - it
+  ka'asher - as
+  her'ah - it was shown
+  otecha - you
+  bahar - on the mountain
+  ken - so
+  ya'asu - shall they make [it]
+
+27:9
+  ve'asita - shall make
+  et - [direct object marker]
+  chatsar - the court
+  hammishkan - of the tabernacle
+  lif'at - for the side
+  negev - the south
+  teymanah - southward
+  qela'im - hangings
+  lechatser - for the court
+  shesh - linen
+  moshzar - fine woven
+  me'ah - a hundred
+  ba'ammah - cubits
+  orekh - long
+  lappe'ah - for side
+  ha'echat - one
+
+27:10
+  ve'ammudav - And its pillars
+  esrim - twenty
+  ve'adneyhem - and their sockets
+  esrim - twenty
+  nechoshet - bronze
+  vavey - the hooks
+  ha'ammudim - of the pillars
+  vachashuqeyhem - and their bands
+  kasef - silver
+
+27:11
+  vechen - And Likewise
+  lif'at - along the side
+  tsafon - north
+  ba'orekh - the length
+  qela'im - of [there shall be] hangings
+  me'ah - a hundred [cubits]
+  orekh - long
+  ve'ammudav - with its pillars
+  esrim - twenty
+  ve'adneyhem - and their sockets
+  esrim - of twenty
+  nechoshet - bronze
+  vavey - and the hooks
+  ha'ammudim - of the pillars
+  vachashuqeyhem - and their bands
+  kasef - of silver
+
+27:12
+  verocha - And along the width
+  hechatser - of the court
+  lif'at - on the side
+  yam - west
+  qela'im - hangings
+  chamishim - of fifty
+  ammah - cubits
+  ammudeyhem - with their pillars
+  asarah - ten
+  ve'adneyhem - and their sockets
+  asarah - ten
+
+27:13
+  verocha - And the width
+  hechatser - of the court
+  lif'at - on the side
+  qedmah - east
+  mizrachah - toward the sunrise
+  chamishim - fifty
+  ammah - cubits
+
+27:14
+  vachamesh - And five
+  esreh - [and] ten
+  ammah - cubits
+  qela'im - the hangings [shall be]
+  lachatef - on [one] side [of the gate]
+  ammudeyhem - [with] their pillars
+  sheloshah - three
+  ve'adneyhem - and their sockets
+  sheloshah - three
+
+27:15
+  velachatef - And on the side
+  hashenit - second
+  chemesh - five
+  esreh - [and] ten [cubits]
+  qela'im - [shall be] hangings
+  ammudeyhem - of [with] their pillars
+  sheloshah - three
+  ve'adneyhem - and their sockets
+  sheloshah - three
+
+27:16
+  ulesha'ar - the gate
+  hechatser - of the court
+  masakh - a screen
+  esrim - twenty
+  ammah - cubits
+  techelet - blue
+  ve'argaman - and purple
+  vetola'at - and scarlet stuff
+  shani - scarlet thread
+  veshesh - and linen
+  moshzar - twisted
+  ma'aseh - work
+  roqem - made by a weaver
+  ammudeyhem - pillars
+  arba'ah - four
+  ve'adneyhem - and sockets
+  arba'ah - four
+
+27:17
+  kol - All
+  ammuday - the pillars
+  hechatser - the court
+  saviv - around
+  mechushaqqim - shall have bands
+  kesef - of silver
+  vaveyhem - their hooks [shall be]
+  kasef - of silver
+  ve'adneyhem - and their sockets
+  nechoshet - of bronze
+
+27:18
+  orekh - the length
+  hechatser - of the court
+  me'ah - a hundred
+  va'ammah - cubits
+  verocha - and the width
+  chamishim - fifty
+  bachamishim - fifty
+  veqomah - and the height
+  chamesh - five
+  ammot - cubits
+  shesh - [made of] linen
+  moshzar - fine woven
+  ve'adneyhem - and its sockets
+  nechoshet - of bronze
+
+27:19
+  lekhol - All
+  keley - the utensils
+  hammishkan - of the tabernacle
+  bekhol - for all
+  avodato - its service
+  vekhol - and all
+  yetedotav - its pegs
+  vekhol - and all
+  yitdot - the pegs
+  hechatser - of the court
+  nechoshet - of bronze
+
+27:20
+  ve'attah - And you
+  tetsavveh - shall command
+  et - [direct object marker]
+  bney - the sons
+  Yisrael - of Israel
+  veyiqchu - that they bring
+  eleicha - you
+  shemen - oil
+  zayit - of olives
+  zach - pure
+  katit - pressed
+  lamma'or - for the light
+  leha'alot - to cause to burn
+  ner - the lamp
+  tamid - continually
+
+27:21
+  be'ohel - in the tabernacle
+  mo'ed - of meeting
+  michuts - outside
+  lapparokhet - the veil
+  asher - which
+  al - before
+  ha'edut - the testimony
+  ya'arokh - shall tend
+  oto - it
+  Aharon - Aaron
+  uvanav - and his sons
+  me'erev - from evening
+  ad - until
+  boqer - morning
+  lifney - before
+  YHWH - Yahweh
+  chuqqat - statute
+  olam - forever
+  ledorotam - to their generations
+  me'et - on behalf
+  bney - of the sons
+  Yisrael - of Israel
+
+
+EXODUS 28
+
+28:1
+  ve'attah - And you
+  haqrev - bring/take
+  eleicha - unto you
+  et - [direct object marker]
+  Aharon - Aaron
+  achicha - your brother
+  ve'et - and [direct object marker]
+  banav - his sons
+  itto - with him
+  mittoch - from among
+  bney - the sons
+  Yisrael - of Israel
+  lechahano - that he may minister as priest
+  li - to Me
+  Aharon - Aaron
+  Nadav - Nadab
+  va'Avihu - and Abihu
+  El'azar - Eleazar
+  ve'Itamar - and Ithamar
+  bney - sons
+  Aharon - Aaron's
+
+28:2
+  ve'asita - And you shall make
+  vigdey - garments
+  qodesh - holy
+  le'Aharon - for Aaron
+  achicha - your brother
+  lekhavod - for glory
+  uletif'aret - for beauty
+
+28:3
+  ve'attah - You
+  tedabber - shall speak
+  el - to
+  kol - all
+  chakhmey - wise
+  lev - hearted
+  asher - whom
+  mille'tiv - have endowed
+  ruach - the spirit
+  chochmah - of wisdom
+  ve'asu - that they may make
+  et - [direct object marker]
+  bigdey - garments
+  Aharon - Aaron's
+  leqaddesho - to consecrate him
+  lechahano - that he may minister as priest
+  li - to Me
+
+28:4
+  ve'elleh - And these
+  habbeegadim - the garments
+  asher - which
+  ya'asu - they shall make
+  choshen - a breastplate
+  ve'efod - and an ephod
+  ume'il - and a robe
+  uchetonet - and a tunic
+  tashbets - skillfully woven
+  mitsnefet - a turban
+  ve'avnet - and a sash
+  ve'asu - so they shall make
+  vigdey - garments
+  qodesh - holy
+  le'Aharon - for Aaron
+  achicha - your brother
+  ulevanav - and his sons
+  lechahano - that he may minister as priest
+  li - to Me
+
+28:5
+  vehem - And they
+  yiqchu - shall take
+  et - [direct object marker]
+  hazzahav - gold
+  ve'et - and [direct object marker]
+  hattechelet - blue
+  ve'et - and [direct object marker]
+  ha'argaman - purple
+  ve'et - and [direct object marker]
+  tola'at - yarns/worm
+  hashshani - scarlet
+  ve'et - and [direct object marker]
+  hashshesh - fine linen
+
+28:6
+  ve'asu - And they shall make
+  et - [direct object marker]
+  ha'efod - the ephod
+  zahav - of gold
+  techelet - of blue
+  ve'argaman - and purple
+  tola'at - yarns
+  shani - scarlet
+  veshesh - and linen
+  moshzar - fine woven
+  ma'aseh - worked
+  choshev - artistically
+
+28:7
+  shtey - Two
+  chetefot - shoulder straps
+  chovrot - joined
+  yihyeh - it shall have
+  lo - to it
+  el - at
+  shney - the two
+  qetsotav - edges
+  vechubar - that it may be joined together
+
+28:8
+  vecheshev - And the intricately woven band
+  afuddato - of the ephod
+  asher - which
+  alav - on it
+  kema'asehu - of the same workmanship
+  mimmennu - of the same
+  yihyeh - shall be made of
+  zahav - gold
+  techelet - blue
+  ve'argaman - and purple
+  vetola'at - and scarlet stuff
+  shani - scarlet thread
+  veshesh - and linen
+  moshzar - fine woven
+
+28:9
+  velaqachta - shall take
+  et - [direct object marker]
+  shtey - two
+  avney - stones
+  shoham - onyx
+  upittachta - and engrave
+  aleyhem - on them
+  shemot - the names
+  bney - of the sons
+  Yisrael - of Israel
+
+28:10
+  shishah - six
+  mishmotam - of their names
+  al - on
+  ha'even - stone
+  ha'echat - one
+  ve'et - and
+  shemot - names
+  hashishah - six
+  hannotarim - of the rest
+  al - on
+  ha'even - the stone
+  hashenit - second
+  ketoldotam - in order of their birth
+
+28:11
+  ma'aseh - work
+  charash - engraver
+  even - stone
+  pittuchey - engravings
+  chotam - signet
+  tefattach - shall engrave
+  et - [direct object marker]
+  shtey - two
+  ha'avanim - stones
+  al - upon/with
+  shemot - names
+  bney - sons
+  Yisrael - Israel
+  musabbot - set
+  mishbetsot - filigree settings
+  zahav - gold
+  ta'aseh - you shall make
+  otam - them
+
+28:12
+  vesamta - shall put
+  et - [direct object marker]
+  shtey - the two
+  ha'avanim - stones
+  al - on
+  kitfot - the shoulder
+  ha'efod - of the ephod
+  avney - stones
+  zikkaron - of memorial
+  livney - for the sons
+  Yisrael - of Israel
+  venasa - shall bear
+  Aharon - and Aaron
+  et - [direct object marker]
+  shemotam - their names
+  lifney - before
+  YHWH - Yahweh
+  al - on
+  shtey - two
+  chetefav - his shoulders
+  lezikkaron - as a memorial
+
+28:13
+  ve'asita - shall make
+  mishbetsot - filigree/settings
+  zahav - gold
+
+28:14
+  ushtey - and two
+  sharshrot - chains
+  zahav - gold
+  tahor - pure
+  migbalot - braided/twisted
+  ta'aseh - you shall make
+  otam - them
+  ma'aseh - work
+  avot - cordage
+  venatatah - and fasten
+  et - [direct object marker]
+  sharshrot - chains
+  ha'avotot - the corded/braided
+  al - on/to
+  hammishbetsot - the settings/filigree
+
+28:15
+  ve'asita - shall make
+  choshen - breastpiece
+  mishpat - of judgment
+  ma'aseh - the work
+  choshev - of a skillful
+  kema'aseh - the work
+  efod - of the ephod
+  ta'asennu - shall make
+  zahav - of gold
+  techelet - of blue
+  ve'argaman - and purple
+  vetola'at - and scarlet stuff
+  shani - and scarlet
+  veshesh - and fine linen
+  moshzar - twisted
+  ta'aseh - shall make
+  oto - it
+
+28:16
+  ravu'a - square
+  yihyeh - it shall be
+  kaful - doubled
+  zeret - a span
+  orko - its length
+  vezeret - and a span
+  rochbo - its width
+
+28:17
+  umilleta - And you shall set
+  vo - in it
+  millu'at - settings
+  even - of stones
+  arba'ah - four
+  turim - rows
+  aven - of stones
+  tur - row
+  odem - sardius/ruby
+  pitdah - topaz
+  uvareqet - and emerald
+  hattur - the row
+  ha'echad - the first
+
+28:18
+  vehattur - And the row
+  hasheni - second
+  nofech - turquoise
+  sappir - a sapphire
+  veyahalom - and a diamond
+
+28:19
+  vehattur - And the row
+  hashlishi - third
+  leshem - a jacinth
+  shevo - an agate
+  ve'achlamah - and an amethyst
+
+28:20
+  vehattur - And the row
+  harevi'i - fourth
+  tarshish - a beryl
+  veshoham - and an onyx
+  veyashfeh - and a jasper
+  meshubatsim - set
+  zahav - gold
+  yihyu - they shall be
+  bemillu'otam - in settings
+
+28:21
+  veha'avanim - And the stones
+  tihyeyna - shall have
+  al - upon them
+  shemot - the names
+  bney - of the sons
+  Yisrael - of Israel
+  shteim - two
+  esreh - [and] ten
+  al - according to
+  shemotam - their names
+  pittuchey - [like] the engravings
+  chotam - of a signet
+  ish - each one
+  al - with
+  shemo - its own name
+  tihyeyna - they shall be
+  lishney - according to two
+  asar - [and] ten
+  shavet - the tribes
+
+28:22
+  ve'asita - shall make
+  al - on
+  hachoshen - the breastpiece
+  sharshot - chains
+  gavlut - of twisted
+  ma'aseh - work
+  avot - cordage
+  zahav - gold
+  tahor - pure
+
+28:23
+  ve'asita - shall make
+  al - on
+  hachoshen - the breastpiece
+  shtey - two
+  tabbe'ot - rings
+  zahav - of gold
+  venatata - and shall put
+  et - [direct object marker]
+  shtey - the two
+  hattabba'ot - rings
+  al - on
+  shney - the two
+  qetsot - ends
+  hachoshen - of the breastpiece
+
+28:24
+  venatatah - shall put
+  et - [direct object marker]
+  shtey - the two
+  avotot - cords
+  hazzahav - of gold
+  al - on
+  shtey - the two
+  hattabba'ot - rings
+  el - at
+  qetsot - the ends
+  hachoshen - of the breastpiece
+
+28:25
+  ve'et - And
+  shtey - two
+  qetsot - the [other] ends
+  shtey - of two
+  ha'avotot - the braided [chains]
+  titten - you shall fasten
+  al - to
+  shtey - two
+  hammishbetsot - the settings
+  venatatah - and put them
+  al - on
+  kitefot - the shoulder straps
+  ha'efod - of the ephod
+  el - to
+  mul - of it
+  panav - the front
+
+28:26
+  ve'asita - shall make
+  shtey - two
+  tabbe'ot - rings
+  zahav - of gold
+  vesamta - and shall place
+  otam - them
+  al - on
+  shney - the two
+  qetsot - ends
+  hachoshen - of the breastpiece
+  al - on
+  sefato - the edge
+  asher - which
+  el - is toward
+  ever - side
+  ha'efod - of the ephod
+  bayitah - the inner
+
+28:27
+  ve'asita - shall make
+  shtey - two
+  tabbe'ot - rings
+  zahav - of gold
+  venatatah - and put
+  otam - them
+  al - on
+  shtey - two
+  kitefot - shoulder straps
+  ha'efod - the ephod
+  millematah - underneath
+  mimmul - toward
+  panav - its front
+  le'ummat - right at
+  mechbarto - the seam
+  mimma'al - above
+  lecheshev - the intricately woven band
+  ha'efod - of the ephod
+
+28:28
+  veyirkesu - shall bind
+  et - [direct object marker]
+  hachoshen - the breastpiece
+  mittabbe'otav - rings
+  el - to
+  tabbe'ot - rings
+  ha'efod - of the ephod
+  biftil - cord
+  techelet - blue
+  lihyot - become
+  al - above
+  cheshev - girdle
+  ha'efod - of the ephod
+  velo - so that not
+  yizzach - come loose
+  hachoshen - the breastpiece
+  me'al - from
+  ha'efod - the ephod
+
+28:29
+  venasa - shall carry
+  Aharon - Aaron
+  et - [direct object marker]
+  shemot - the names
+  bney - of the sons
+  Yisrael - of Israel
+  bechoshen - on the breastplate
+  hammishpat - of judgment
+  al - over
+  libbo - his heart
+  bevo'o - when he goes
+  el - into
+  haqqodesh - the holy [place]
+  lezikkaron - as a memorial
+  lifney - before
+  YHWH - Yahweh
+  tamid - continually
+
+28:30
+  venatatta - And you shall put
+  el - in
+  choshen - the breastplate
+  hammishpat - of judgment
+  et - [direct object marker]
+  ha'Urim - the Urim
+  ve'et - and [direct object marker]
+  haTummim - the Thummim
+  vehayu - and they shall be
+  al - over
+  lev - heart
+  Aharon - of Aaron
+  bevo'o - when he goes in
+  lifney - before
+  YHWH - Yahweh
+  venasa - so shall bear
+  Aharon - Aaron
+  et - [direct object marker]
+  mishpat - the judgment
+  bney - of the sons
+  Yisrael - of Israel
+  al - over
+  libbo - his heart
+  lifney - before
+  YHWH - Yahweh
+  tamid - continually
+
+28:31
+  ve'asita - shall make
+  et - [direct object marker]
+  me'il - the robe
+  ha'efod - of the ephod
+  kelil - all
+  techelet - of blue
+
+28:32
+  vehayah - And there shall be
+  fi - an opening
+  rosho - for his head
+  betocho - in the middle of it
+  safah - a binding
+  yihyeh - it shall have
+  lefiv - its opening
+  saviv - all around
+  ma'aseh - work
+  oreg - woven
+  kefi - like the opening in
+  tachra - a coat of mail
+  yihyeh - so that it
+  lo - to him
+  lo - not
+  yiqqarea' - does tear
+
+28:33
+  ve'asita - shall make
+  al - on
+  shulav - its hem
+  rimmonim - pomegranates
+  techelet - of blue
+  ve'argaman - and purple
+  vetola'at - and scarlet
+  shani - scarlet
+  al - on
+  shulav - its hem
+  saviv - all around
+  ufa'amoney - and bells
+  zahav - of gold
+  betocham - between them
+  saviv - all around
+
+28:34
+  pa'amon - bell
+  zahav - golden
+  verimmon - and a pomegranate
+  pa'amon - bell
+  zahav - golden
+  verimmon - and a pomegranate
+  al - upon
+  shuley - the hem
+  hamme'il - of the robe
+  saviv - all around
+
+28:35
+  vehayah - And it shall be
+  al - upon
+  Aharon - Aaron
+  lesharet - when he ministers
+  venishma' - and will be heard
+  qolo - its sound
+  bevo'o - when he goes
+  el - into
+  haqqodesh - the holy [place]
+  lifney - before
+  YHWH - Yahweh
+  uvetse'to - and when he comes out
+  velo - that not
+  yamut - he may die
+
+28:36
+  ve'asita - make
+  tsits - plate
+  zahav - gold
+  tahor - pure
+  upittachta - engrave
+  alav - on it
+  pittuchey - engravings
+  chotam - signet
+  qodesh - Holy
+  laYHWH - to the LORD
+
+28:37
+  vesamta - shall fasten
+  oto - it
+  al - on
+  petil - cord
+  techelet - blue
+  vehayah - become
+  al - on
+  hammitsnefet - the turban
+  el - about
+  mul - against
+  peney - the front
+  hammitsnefet - of the turban
+  yihyeh - it shall be
+
+28:38
+  vehayah - become
+  al - and
+  metsach - forehead
+  Aharon - Aaron's
+  venasa - shall take
+  Aharon - and Aaron
+  et - [direct object marker]
+  avon - the iniquity
+  haqqodashim - of the holy
+  asher - which
+  yaqdishu - consecrate
+  bney - the sons
+  Yisrael - of Israel
+  lekhol - to all
+  mattenot - gifts
+  qodsheyhem - their holy
+  vehayah - become
+  al - be on
+  mitscho - his forehead
+  tamid - shall always
+  leratson - may be accepted
+  lahem - unto them
+  lifney - before
+  YHWH - the LORD
+
+28:39
+  veshibbatsta - shall weave
+  hakkutonet - the tunic
+  shesh - of fine linen
+  ve'asita - and shall make
+  mitsnefet - the turban
+  shesh - of fine linen
+  ve'avnet - and the sash
+  ta'aseh - you shall make
+  ma'aseh - the work
+  roqem - woven
+
+28:40
+  velivney - For sons
+  Aharon - of Aaron
+  ta'aseh - you shall make
+  kuttonot - tunics
+  ve'asita - and you shall make
+  lahem - for them
+  avnetim - sashes
+  umigba'ot - and hats
+  ta'aseh - you shall make
+  lahem - for them
+  lekhavod - for glory
+  uletif'aret - and beauty
+
+28:41
+  vehilbashta - shall put on
+  otam - them
+  et - [direct object marker]
+  Aharon - Aaron
+  achicha - your brother
+  ve'et - and [direct object marker]
+  banav - his sons
+  itto - with him
+  umashachta - and shall anoint
+  otam - them
+  umilleta - and consecrate
+  et - [direct object marker]
+  yadam - their hands
+  veqiddashta - and sanctify
+  otam - them
+  vechiahanu - that they may serve as priests
+  li - to me
+
+28:42
+  va'aseh - shall make
+  lahem - for them
+  michnesey - trousers
+  vad - linen
+  lechassot - to cover
+  besar - flesh
+  ervah - their nakedness
+  mimmotnayim - from the waist
+  ve'ad - and to
+  yerekhayim - the thighs
+  yihyu - they shall reach
+
+28:43
+  vehayu - And they shall be
+  al - on
+  Aharon - Aaron
+  ve'al - and on
+  banav - his sons
+  bevo'am - when they come
+  el - into
+  ohel - the tent
+  mo'ed - of meeting
+  o - or
+  vegishtam - when they come near
+  el - unto
+  hammizbeach - the altar
+  lesharet - to minister
+  baqqodesh - in the holy place
+  velo - and not
+  yis'u - they do incur
+  avon - iniquity
+  vametu - and die
+  chuqqat - a statute
+  olam - forever
+  lo - to him
+  ulezar'o - and his descendants
+  acharav - after him
+
+
+EXODUS 29
+
+29:1
+  vezeh - And this
+  haddavar - the thing
+  asher - that
+  ta'aseh - you shall do
+  lahem - to them
+  leqaddesh - to consecrate
+  otam - them
+  lechahane - for ministering as priests
+  li - to Me
+  laqach - take
+  par - bull
+  echad - one
+  ben - son of
+  baqar - cattle/young
+  ve'elim - and rams
+  shenayim - two
+  temimim - without blemish
+
+29:2
+  velechem - and bread
+  matstsot - unleavened
+  vechallot - and cakes
+  matstsot - unleavened
+  belulot - mixed
+  bashshemen - with oil
+  ureqiqey - and wafers
+  matstsot - unleavened
+  meshuchim - anointed
+  bashshamen - with oil
+  solet - flour
+  chittim - of wheat
+  ta'aseh - you shall make
+  otam - them
+
+29:3
+  venatata - shall put
+  otam - them
+  al - in/upon
+  sal - basket
+  echad - one
+  vehiqravta - and bring/present
+  otam - them
+  bassal - in the basket
+  ve'et - and with
+  happar - the bull
+  ve'et - and
+  shney - two
+  ha'elim - the rams
+
+29:4
+  ve'et - And
+  Aharon - Aaron
+  ve'et - and
+  banav - his sons
+  taqriv - you shall bring
+  el - to
+  petach - the door
+  ohel - of the tabernacle
+  mo'ed - of meeting
+  verachasta - and you shall wash
+  otam - them
+  bammayim - with water
+
+29:5
+  velaqachta - shall take
+  et - [direct object marker]
+  habbegadim - the garments
+  vehilbashta - and put
+  et - [direct object marker]
+  Aharon - Aaron
+  et - [direct object marker]
+  hakkuttonet - the tunic
+  ve'et - and
+  me'il - the robe
+  ha'efod - of the ephod
+  ve'et - and
+  ha'efod - the ephod
+  ve'et - and
+  hachoshen - the breastpiece
+  ve'afadta - and gird
+  lo - him
+  becheshev - the skillfully
+  ha'efod - of the ephod
+
+29:6
+  vesamta - And you shall put
+  hammitsnefet - the turban
+  al - on
+  rosho - his head
+  venatata - and put
+  et - [direct object marker]
+  nezer - crown
+  haqqodesh - the holy
+  al - on
+  hammitsnafet - the turban
+
+29:7
+  velaqachta - And you shall take
+  et - [direct object marker]
+  shemen - oil
+  hammishchah - the anointing
+  veyatsaqta - and pour
+  al - on
+  rosho - his head
+  umashachta - and anoint
+  oto - him
+
+29:8
+  ve'et - And [direct object marker]
+  banav - his sons
+  taqriv - you shall bring
+  vehilbashtam - and put on them
+  kuttonot - tunics
+
+29:9
+  vechagarta - And you shall gird
+  otam - them
+  avnet - with sashes
+  Aharon - Aaron
+  uvanav - and his sons
+  vechabashta - and put
+  lahem - on them
+  migba'ot - the hats
+  vehayetah - and shall be
+  lahem - theirs
+  kehunnah - the priesthood
+  lechuqqat - for a statute
+  olam - perpetual
+  umilleta - So you shall consecrate
+  yad - [construct form of hand]
+  Aharon - Aaron
+  veyad - and [hand of]
+  banav - his sons
+
+29:10
+  vehiqravta - shall bring
+  et - [direct object marker]
+  happar - the bull
+  lifney - before
+  ohel - the tent
+  mo'ed - of meeting
+  vesamakh - shall lay
+  Aharon - Aaron
+  uvanav - and his sons
+  et - [direct object marker]
+  yedeyhem - their hands
+  al - on
+  rosh - the head
+  happar - of the bull
+
+29:11
+  veshachatta - And you shall kill
+  et - [direct object marker]
+  happar - the bull
+  lifney - before
+  YHWH - Yahweh/the LORD
+  petach - the doorway
+  ohel - of the tent
+  mo'ed - of meeting
+
+29:12
+  velaqachta - shall take
+  middam - of the blood
+  happar - of the bull
+  venatatah - and put
+  al - on
+  qarnot - the horns
+  hammizbeach - of the altar
+  be'etsba'echa - with your finger
+  ve'et - and
+  kol - all
+  haddam - the blood
+  tishpokh - shall pour
+  el - beside
+  yesod - the base
+  hammizbeach - of the altar
+
+29:13
+  velaqachta - And you shall take
+  et - [direct object marker]
+  kol - all
+  hachelev - the fat
+  hamechasseh - that covers
+  et - [direct object marker]
+  haqqerev - the entrails
+  ve'et - and
+  hayyoteret - the fatty lobe
+  al - to/upon
+  hakkaved - the liver
+  ve'et - and
+  shtey - two
+  hakkelayot - the kidneys
+  ve'et - and
+  hachelev - the fat
+  asher - that
+  aleyhen - on them
+  vehiqtarta - and burn/offer
+  hammizbeachah - the altar
+
+29:14
+  ve'et - But/And
+  besar - the flesh
+  happar - of the bull
+  ve'et - and
+  oro - its hide
+  ve'et - and
+  pirsho - its refuse
+  tisrof - you shall burn
+  va'esh - with fire
+  michuts - outside
+  lammachaneh - the camp
+  chattat - a sin offering
+  hu - it is
+
+29:15
+  ve'et - And
+  ha'ayil - ram
+  ha'echad - one
+  tiqqach - You shall also take
+  vesamekhu - and shall put
+  Aharon - Aaron
+  uvanav - and his sons
+  et - [direct object marker]
+  yedeyhem - their hands
+  al - on
+  rosh - the head
+  ha'ayil - of the ram
+
+29:16
+  veshachatta - And you shall kill
+  et - [direct object marker]
+  ha'ayil - the ram
+  velaqachta - and you shall take
+  et - [direct object marker]
+  damo - its blood
+  vezaraqta - and sprinkle [it]
+  al - on
+  hammizbeach - the altar
+  saviv - all around
+
+29:17
+  ve'et - And
+  ha'ayil - the ram
+  tenattach - you shall cut
+  lintachav - in pieces
+  verachasta - and wash
+  qirbo - its entrails
+  ukhera'av - and its legs
+  venatata - and put [them]
+  al - with
+  netachav - its pieces
+  ve'al - and with
+  rosho - its head
+
+29:18
+  vehiqtarta - And you shall burn
+  et - [direct object marker]
+  kol - whole
+  ha'ayil - the ram
+  hammizbeachah - on the altar
+  olah - a burnt offering
+  hu - it [is]
+  laYHWH - to Yahweh
+  reyach - a aroma
+  nichoach - sweet
+  ishsheh - an offering made by fire
+  laYHWH - to Yahweh
+  hu - it [is]
+
+29:19
+  velaqachta - shall take
+  et - [direct object marker]
+  ha'ayil - the ram
+  hasheni - the second
+  vesamakh - and shall lay
+  Aharon - Aaron
+  uvanav - and his sons
+  et - [direct object marker]
+  yedeyhem - their hands
+  al - on
+  rosh - the head
+  ha'ayil - of the ram
+
+29:20
+  veshachatta - shall slaughter
+  et - [direct object marker]
+  ha'ayil - the ram
+  velaqachta - and take
+  middamo - of his blood
+  venatatah - and put
+  al - on
+  tenukh - the lobe
+  ozen - ear
+  Aharon - of Aaron
+  ve'al - and on
+  tenukh - the lobes
+  ozen - ears
+  banav - of his sons
+  haymanit - right
+  ve'al - and on
+  bohen - the thumbs
+  yadam - hands
+  haymanit - of their right
+  ve'al - and on
+  bohen - the big toe
+  raglam - feet
+  haymanit - of their right
+  vezaraqta - and sprinkle
+  et - [direct object marker]
+  haddam - the blood
+  al - on
+  hammizbeach - the altar
+  saviv - around
+
+29:21
+  velaqachta - shall take
+  min - of/from
+  haddam - the blood
+  asher - that
+  al - on
+  hammizbeach - the altar
+  umishemen - and of oil
+  hammishchah - the anointing
+  vehizzeyta - and sprinkle
+  al - on
+  Aharon - Aaron
+  ve'al - and on
+  begadav - his garments
+  ve'al - and on
+  banav - his sons
+  ve'al - and on
+  bigdey - garments
+  vanav - his sons'
+  itto - with him
+  veqadash - and shall be consecrated
+  hu - he
+  uvegadav - and his garments
+  uvanav - and his sons
+  uvigdey - and garments
+  vanav - his sons'
+  itto - with him
+
+29:22
+  velaqachta - And you shall take
+  min - of
+  ha'ayil - the ram
+  hachelev - the fat
+  veha'alyah - and the fatty tail
+  ve'et - and
+  hachelev - the fat
+  hamechasseh - that covers
+  et - [direct object marker]
+  haqqerev - the entrails
+  ve'et - and
+  yoteret - the fatty lobe
+  hakkaved - of the liver
+  ve'et - and
+  shtey - two
+  hakkelayot - the kidneys
+  ve'et - and
+  hachelev - the fat
+  asher - that
+  alehen - on them
+  ve'et - and
+  shoq - thigh
+  hayyamin - the right
+  ki - for
+  eyl - a ram
+  millu'im - of consecration
+  hu - it is
+
+29:23
+  vekhikkar - and loaf
+  lechem - of bread
+  achat - one
+  vachallat - cake
+  lechem - of bread
+  shemen - oil
+  achat - one
+  veraqiq - and wafer
+  echad - one
+  missal - from the basket
+  hammatstsot - of the unleavened bread
+  asher - that [is]
+  lifney - before
+  YHWH - Yahweh
+
+29:24
+  vesamta - and you shall put
+  hakkol - all
+  al - in/upon
+  kappey - the hands
+  Aharon - of Aaron
+  ve'al - and in/upon
+  kappey - the hands
+  vanav - of his sons
+  vehenafta - and you shall wave
+  otam - them
+  tenufah - a wave offering
+  lifney - before
+  YHWH - Yahweh/the LORD
+
+29:25
+  velaqachta - shall take
+  otam - them
+  miyyadam - from their hands
+  vehiqtarta - and offer
+  hammizbeachah - the altar
+  al - on
+  ha'olah - the burnt offering
+  lereyach - aroma
+  nichoach - sweet/soothing
+  lifney - before
+  YHWH - Yahweh
+  ishsheh - an offering made by fire
+  hu - it is
+  laYHWH - to Yahweh
+
+29:26
+  velaqachta - shall take
+  et - [direct object marker]
+  hechazeh - the breast
+  me'eyl - of the ram
+  hammillu'im - of ordination
+  asher - his
+  le'Aharon - of Aaron
+  vehenafta - and wave
+  oto - it
+  tenufah - a wave offering
+  lifney - before
+  YHWH - Yahweh
+  vehayah - and it shall be
+  lecha - your
+  lemanah - portion
+
+29:27
+  veqiddashta - And you shall consecrate
+  et - [direct object marker]
+  chazeh - the breast
+  hattenufah - of the wave offering
+  ve'et - and
+  shoq - the thigh
+  hatterumah - of the heave offering
+  asher - which
+  hunaf - is waved
+  va'asher - and which
+  huram - is raised
+  me'eyl - from the ram
+  hammillu'im - of the consecration
+  me'asher - of that which is
+  le'Aharon - for Aaron
+  ume'asher - and that which is
+  levanav - for his sons
+
+29:28
+  vehayah - And it shall be
+  le'Aharon - for Aaron
+  ulevanav - and his sons
+  lechoq - by a statute
+  olam - forever
+  me'et - from
+  bney - the sons
+  Yisrael - of Israel
+  ki - for
+  terumah - a heave offering
+  hu - it is
+  uterumah - and a heave offering
+  yihyeh - it shall be
+  me'et - from
+  bney - the sons
+  Yisrael - of Israel
+  mizzivchey - from the sacrifices
+  shalmeyhem - of their peace offerings
+  terumatam - their heave offering
+  laYHWH - to Yahweh
+
+29:29
+  uvigdey - And garments
+  haqqodesh - the holy
+  asher - [relative pronoun]
+  le'Aharon - of Aaron
+  yihyu - shall be
+  levanav - his sons'
+  acharav - after him
+  lemoshchah - to be anointed
+  vahem - in them
+  ulemalle - and to be consecrated
+  vam - in them
+  et - [direct object marker]
+  yadam - [their hands]
+
+29:30
+  shiv'at - seven
+  yamim - days
+  yilbasham - shall put them on
+  hakkohen - is priest
+  tachtav - his stead
+  mibbanav - of his sons
+  asher - when
+  yavo - enters
+  el - into
+  ohel - the tent
+  mo'ed - of meeting
+  lesharet - to minister
+  baqqodesh - in the holy [place]
+
+29:31
+  ve'et - And
+  eyl - the ram
+  hammillu'im - of the consecration
+  tiqqach - you shall take
+  uvishalta - and boil
+  et - [direct object marker]
+  besaro - its flesh
+  bemaqom - in the place
+  qadosh - holy
+
+29:32
+  ve'akhal - shall eat
+  Aharon - Aaron
+  uvanav - and his sons
+  et - [direct object marker]
+  besar - the flesh
+  ha'ayil - of the ram
+  ve'et - and [direct object marker]
+  halleckem - the bread
+  asher - that [is]
+  bassal - in the basket
+  petach - [by] the door
+  ohel - of the tent
+  mo'ed - of meeting
+
+29:33
+  ve'akhlu - And they shall eat
+  otam - them
+  asher - which/that which
+  kuppar - atonement was made
+  bahem - with them
+  lemalle - to accomplish/fill
+  et - [direct object marker]
+  yadam - their hands
+  leqaddesh - to consecrate/sanctify
+  otam - them
+  vezar - and a stranger/outsider
+  lo - not
+  yokhal - shall eat
+  ki - because
+  qodesh - holy
+  hem - they are
+
+29:34
+  ve'im - And if
+  yivvater - remains
+  mibbesar - any of the flesh
+  hammillu'im - of the consecration offerings
+  umin - or
+  hallekhem - of the bread
+  ad - until
+  habboqer - the morning
+  vesarafta - then you shall burn
+  et - [direct object marker]
+  hannotar - the remainder
+  ba'esh - with fire
+  lo - not
+  ye'akhel - it shall be eaten
+  ki - because
+  qodesh - holy
+  hu - it [is]
+
+29:35
+  ve'asita - shall do
+  le'Aharon - to Aaron
+  ulevanav - his sons
+  kakhah - Thus
+  kekhol - to all
+  asher - that
+  tsivviti - have commanded
+  otakhah - you
+  shiv'at - Seven
+  yamim - days
+  temalle - you shall consecrate
+  yadam - them
+
+29:36
+  ufar - And a bull
+  chattat - [as] a sin offering
+  ta'aseh - you shall offer
+  layyom - every day
+  al - for
+  hakkippurim - atonement
+  vechitte'ta - and You shall cleanse
+  al - for it
+  hammizbeach - the altar
+  bekhapperkha - when you make atonement
+  alav - for it
+  umashachta - and you shall anoint
+  oto - it
+  leqaddesho - to sanctify it
+
+29:37
+  shiv'at - Seven
+  yamim - days
+  tekhapper - you shall make atonement
+  al - for
+  hammizbeach - the altar
+  veqiddashta - and consecrate
+  oto - it
+  vehayah - and shall be
+  hammizbeach - the altar
+  qodesh - most
+  qodashim - holy
+  kol - whatever
+  hannogea' - touches
+  bammizbeach - the altar
+  yiqdash - must be holy
+
+29:38
+  vezeh - And this
+  asher - what
+  ta'aseh - you shall offer
+  al - on
+  hammizbeach - the altar
+  kevasim - lambs
+  bney - of the first
+  shanah - year
+  shenayim - two
+  layyom - by day
+  tamid - continually
+
+29:39
+  et - [direct object marker]
+  hakkeves - lamb
+  ha'echad - the one
+  ta'aseh - you shall offer
+  vabboqer - in the morning
+  ve'et - and [direct object marker]
+  hakkeves - the lamb
+  hasheni - second
+  ta'aseh - you shall offer
+  bein - at
+  ha'arbayim - twilight
+
+29:40
+  ve'issaron - and shall be a tenth
+  solet - of flour
+  balul - mixed
+  beshemen - with oil
+  katit - pressed
+  reva' - a fourth
+  hahhin - of a hin
+  venesekh - and [as] a drink offering
+  revi'it - a fourth
+  hahhin - of a hin
+  yayin - of wine
+  lakkeves - with the lamb
+  ha'echad - one
+
+29:41
+  ve'et - And
+  hakkeves - the lamb
+  hasheni - second
+  ta'aseh - you shall offer
+  bein - at
+  ha'arbayim - twilight
+  keminchat - as in the grain offering
+  habboqer - the morning
+  ukheniskah - and the drink offering
+  ta'aseh - and you shall offer
+  lah - with it
+  lereyach - for a aroma
+  nichoach - sweet
+  ishsheh - an offering made by fire
+  laYHWH - to Yahweh
+
+29:42
+  olat - burnt offering
+  tamid - continual
+  ledoroteykem - throughout your generations
+  petach - the door
+  ohel - of the tent
+  mo'ed - of meeting
+  lifney - before
+  YHWH - Yahweh
+  asher - where
+  ivva'ed - I will meet
+  lakhem - you
+  shammah - there
+  ledabber - to speak
+  eleicha - with you
+  sham - there
+
+29:43
+  veno'adti - And I will meet
+  shammah - there
+  livney - with the sons
+  Yisrael - of Israel
+  veniqdash - and [the tabernacle] shall be consecrated
+  bikhvodi - by My glory
+
+29:44
+  veqiddashti - will consecrate
+  et - [direct object marker]
+  ohel - the tent
+  mo'ed - of meeting
+  ve'et - and [direct object marker]
+  hammizbeach - the altar
+  ve'et - and [direct object marker]
+  Aharon - Aaron
+  ve'et - and [direct object marker]
+  banav - his sons
+  aqaddesh - I will consecrate
+  lechahane - to minister as priests
+  li - to Me
+
+29:45
+  veshakhanti - And I will dwell
+  betokh - among
+  bney - the sons
+  Yisrael - of Israel
+  vehayiti - and will be
+  lahem - their
+  le'lohim - God
+
+29:46
+  veyade'u - shall know
+  ki - that
+  ani - I am
+  YHWH - Yahweh
+  Eloheyhem - their God
+  asher - who
+  hotseti - brought
+  otam - them
+  me'erets - out of the land
+  Mitsrayim - of Egypt
+  leshakhni - that I may dwell
+  vetokham - among them
+  ani - I am
+  YHWH - Yahweh
+  Eloheyhem - their God
+
+
+EXODUS 30
+
+30:1
+  ve'asita - And you shall make
+  mizbeach - an altar
+  miqtar - to burn
+  qetoret - incense
+  atsey - wood
+  shittim - of acacia
+  ta'aseh - you shall make
+  oto - it
+
+30:2
+  ammah - a cubit
+  orko - its length
+  ve'ammah - and a cubit
+  rochbo - its width
+  ravu'a - square
+  yihyeh - it shall be
+  ve'ammatayim - and two cubits
+  qomato - its height
+  mimmennu - of it/from it
+  qarnotav - its horns
+
+30:3
+  vetsippita - And you shall overlay
+  oto - it
+  zahav - gold
+  tahor - pure
+  et - [direct object marker]
+  gaggo - its top
+  ve'et - and [direct object marker]
+  qirotav - its sides
+  saviv - all around
+  ve'et - and [direct object marker]
+  qarnotav - its horns
+  ve'asita - and you shall make
+  lo - for it
+  zer - a molding
+  zahav - gold
+  saviv - all around
+
+30:4
+  ushtey - And two
+  tabbe'ot - rings
+  zahav - gold
+  ta'aseh - you shall make
+  lo - for it
+  mittachat - Under
+  lezero - the molding
+  al - on
+  shtey - two
+  tsal'otav - of its sides
+  ta'aseh - You shall place [them]
+  al - on
+  shney - two
+  tsiddav - its sides
+  vehayah - and they will be
+  levattim - holders
+  levaddim - for the poles
+  laset - to bear
+  oto - it
+  bahemmah - with those
+
+30:5
+  ve'asita - shall make
+  et - [direct object marker]
+  habbaddim - the poles
+  atsey - wood
+  shittim - of acacia
+  vetsippita - and overlay
+  otam - them
+  zahav - with gold
+
+30:6
+  venatatah - And you shall put
+  oto - it
+  lifney - before
+  happarokhet - the veil
+  asher - that [is]
+  al - before
+  aron - the ark
+  ha'edut - of the Testimony
+  lifney - before
+  hakkapporet - the mercy seat
+  asher - that [is]
+  al - over
+  ha'edut - the Testimony
+  asher - where
+  ivva'ed - I will meet
+  lecha - with you
+  shammah - there
+
+30:7
+  vehiqtir - and shall burn
+  alav - on it
+  Aharon - Aaron
+  qetoret - incense
+  sammim - sweet
+  babboqer - morning
+  babboqer - by morning
+  beheitivo - when he tends
+  et - [direct object marker]
+  hannerot - the lamps
+  yaqtirennah - he shall burn incense on it
+
+30:8
+  uveha'alot - And when lights
+  Aharon - Aaron
+  et - [direct object marker]
+  hannerot - the lamps
+  bein - at
+  ha'arbayim - twilight
+  yaqtirennah - he shall burn incense on it
+  qetoret - incense
+  tamid - perpetual
+  lifney - before
+  YHWH - Yahweh
+  ledoroteykem - throughout your generations
+
+30:9
+  lo - Not
+  ta'alu - You shall offer
+  alav - on it
+  qetoret - incense
+  zarah - strange
+  ve'olah - or a burnt offering
+  uminchah - or a grain offering
+  venesekh - and a drink offering
+  lo - nor
+  tisseku - shall you pour
+  alav - on it
+
+30:10
+  vechipper - shall make atonement
+  Aharon - Aaron
+  al - upon
+  qarnotav - its horns
+  achat - once
+  bashshanah - in the year
+  middam - with the blood
+  chattat - of the sin offering
+  hakkippurim - of atonement
+  achat - once
+  bashshanah - in the year
+  yechapper - he shall make atonement
+  alav - upon it
+  ledoroteykem - throughout your generations
+  qodesh - most holy
+  qodashim - holy
+  hu - it is
+  laYHWH - to Yahweh
+
+30:11
+  vaydabber - And spoke
+  YHWH - Yahweh
+  el - to
+  Mosheh - Moses
+  lemor - saying
+
+30:12
+  ki - when
+  tissa - take
+  et - [direct object marker]
+  rosh - census
+  bney - of the sons
+  Yisrael - of Israel
+  lifqudeyhem - for their number
+  venatenu - then shall give
+  ish - every man
+  kofer - a ransom
+  nafsho - for himself
+  laYHWH - to Yahweh
+  bifqod - when you number
+  otam - them
+  velo - that no
+  yihyeh - there may be
+  vahem - among them
+  negef - plague
+  bifqod - when [you] number
+  otam - them
+
+30:13
+  zeh - This
+  yittenu - shall give
+  kol - everyone
+  ha'over - passeth
+  al - among
+  happequdim - those numbered
+  machatsit - half
+  hashseqel - shekel
+  besheqel - according to the shekel
+  haqqodesh - of the sanctuary
+  esrim - twenty
+  gerah - gerahs
+  hashseqel - shekel
+  machatsit - half
+  hashseqel - shekel
+  terumah - offering
+  laYHWH - to Yahweh
+
+30:14
+  kol - Everyone
+  ha'over - passeth
+  al - and
+  happequdim - is numbered
+  mibben - old
+  esrim - twenty
+  shanah - years
+  vama'lah - and over
+  yitten - shall give
+  terumat - the contribution
+  YHWH - to the LORD
+
+30:15
+  he'ashir - The rich
+  lo - not
+  yarbeh - shall give more
+  vehaddal - and the poor
+  lo - not
+  yam'it - shall give less
+  mimmachatsit - than half
+  hashseqel - a shekel
+  latet - when [you] give
+  et - [direct object marker]
+  terumat - an offering to
+  YHWH - Yahweh
+  lekhapper - to make atonement
+  al - for
+  nafshoteykem - yourselves
+
+30:16
+  velaqachta - shall take
+  et - [direct object marker]
+  kesef - money
+  hakkippurim - the atonement
+  me'et - of
+  bney - the sons
+  Yisrael - of Israel
+  venatata - and shall give
+  oto - it
+  al - for
+  avodat - the service
+  ohel - of the tent
+  mo'ed - of meeting
+  vehayah - that it may be
+  livney - for the sons
+  Yisrael - of Israel
+  lezikkaron - a memorial
+  lifney - before
+  YHWH - Yahweh
+  lekhapper - to make atonement
+  al - for
+  nafshoteykem - yourselves
+
+30:17
+  vaydabber - And spoke
+  YHWH - Yahweh
+  el - to
+  Mosheh - Moses
+  lemor - saying
+
+30:18
+  ve'asita - and you shall make
+  kiyyor - a laver
+  nechoshet - of bronze
+  vekhano - and its base
+  nechoshet - of bronze
+  lerachtsah - for washing
+  venatata - and you shall put
+  oto - it
+  bein - between
+  ohel - the tent
+  mo'ed - of meeting
+  uvein - and between
+  hammizbeach - the altar
+  venatata - and you shall put
+  shammah - in it
+  mayim - water
+
+30:19
+  verachatsu - shall wash
+  Aharon - Aaron
+  uvanav - and his sons
+  mimmennu - from it
+  et - [direct object marker]
+  yedeyhem - their hands
+  ve'et - and [direct object marker]
+  ragleyhem - their feet
+
+30:20
+  bevo'am - When they go
+  el - into
+  ohel - the tabernacle
+  mo'ed - of meeting
+  yirchatsu - they shall wash
+  mayim - with water
+  velo - and lest
+  yamutu - they die
+  o - or
+  vegishtam - when they come near
+  el - unto
+  hammizbeach - the altar
+  lesharet - to minister
+  lehaqtir - to burn
+  ishsheh - an offering made by fire
+  laYHWH - to Yahweh
+
+30:21
+  verachatsu - shall wash
+  yedeyhem - their hands
+  veragleyhem - and their feet
+  velo - and lest / they will not
+  yamutu - die
+  vehayetah - and it shall be
+  lahem - to them
+  choq - statute
+  olam - forever / perpetual
+  lo - to him
+  ulezar'o - and his descendants
+  ledorotam - throughout their generations
+
+30:22
+  vaydabber - spoke
+  YHWH - Yahweh/the LORD
+  el - to
+  Mosheh - Moses
+  lemor - saying
+
+30:23
+  ve'attah - and you
+  qach - take
+  lecha - for yourself
+  besamim - spices
+  rosh - quality/the finest
+  mor - myrrh
+  deror - liquid/flowing
+  chamesh - five
+  me'ot - hundred [shekels]
+  veqinnemon - and cinnamon
+  besem - sweet-smelling/fragrant
+  machatsito - half as much
+  chamishim - fifty
+  uma'tayim - and two hundred [shekels]
+  uqeneh - and cane
+  vosem - sweet-smelling/fragrant
+  chamishim - fifty
+  uma'tayim - and two hundred [shekels]
+
+30:24
+  veqiddah - And cassia
+  chamesh - five
+  me'ot - hundred [shekels]
+  besheqel - according to the shekel
+  haqqodesh - of the sanctuary
+  veshemen - and of oil
+  zayit - olive
+  hin - a hin
+
+30:25
+  ve'asita - shall make
+  oto - from these
+  shemen - oil
+  mishchat - anointing
+  qodesh - holy
+  roqach - a perfume
+  mirqachat - mixture
+  ma'aseh - according to the art
+  roqeach - of the perfumer
+  shemen - oil
+  mishchat - anointing
+  qodesh - holy
+  yihyeh - it shall be
+
+30:26
+  umashachta - shall anoint
+  vo - with it
+  et - [direct object marker]
+  ohel - the tent
+  mo'ed - of meeting
+  ve'et - and
+  aron - the ark
+  ha'edut - of the testimony
+
+30:27
+  ve'et - and
+  hashulchan - the table
+  ve'et - and
+  kol - all
+  kelav - its utensils
+  ve'et - and
+  hammenorah - the lampstand
+  ve'et - and
+  keleyha - its utensils
+  ve'et - and
+  mizbach - the altar
+  haqqetoret - of incense
+
+30:28
+  ve'et - and
+  mizbach - the altar
+  ha'olah - of burnt offering
+  ve'et - and with
+  kol - all
+  kelav - its utensils
+  ve'et - and
+  hakkiyyor - the laver
+  ve'et - and
+  kanno - its base
+
+30:29
+  veqiddashta - consecrate
+  otam - them
+  vehayu - become
+  qodesh - most
+  qodashim - holy
+  kol - whatever
+  hannogea' - touches
+  bahem - them
+  yiqdash - shall be holy
+
+30:30
+  ve'et - And
+  Aharon - Aaron
+  ve'et - and
+  banav - his sons
+  timshach - you shall anoint
+  veqiddashta - and consecrate
+  otam - them
+  lechahane - may minister as priests
+  li - to Me
+
+30:31
+  ve'el - And to
+  bney - the sons
+  Yisrael - of Israel
+  tedabber - you shall speak
+  lemor - saying
+  shemen - oil
+  mishchat - anointing
+  qodesh - holy
+  yihyeh - shall be
+  zeh - this
+  li - to Me
+  ledoroteykem - throughout your generations
+
+30:32
+  al - On
+  besar - flesh
+  adam - of man
+  lo - not
+  yisakh - it shall be poured
+  uvemathkuneto - and according to its composition
+  lo - nor
+  ta'asu - shall you make
+  kamohu - [any other] like it
+  qodesh - holy
+  hu - It [is]
+  qodesh - holy
+  yihyeh - [and] it shall be
+  lakhem - to you
+
+30:33
+  ish - Anyone
+  asher - who
+  yirqach - compounds
+  kamohu - [any] like it
+  va'asher - or whoever
+  yitten - puts
+  mimmennu - [any] of it
+  al - on
+  zar - an outsider
+  venichrat - and shall be cut off
+  me'ammav - from his people
+
+30:34
+  vayyomer - said
+  YHWH - Yahweh
+  el - to
+  Mosheh - Moses
+  qach - take
+  lecha - to you
+  sammim - sweet spices
+  nataf - stacte
+  ushchelet - and onycha
+  vechelbenah - and galbanum
+  sammim - [these] sweet spices
+  ulevonah - and frankincense
+  zakkah - pure
+  bad - equal amounts
+  bevad - of each
+  yihyeh - there shall be
+
+30:35
+  ve'asita - shall make
+  otah - of these
+  qetoret - incense
+  roqach - a compound
+  ma'aseh - the art
+  roqeach - of a perfumer
+  memullach - salted
+  tahor - pure
+  qodesh - holy
+
+30:36
+  veshachaqta - And you shall beat
+  mimmenah - some of it
+  hadeq - very fine
+  venatattah - and put
+  mimmenah - some of it
+  lifney - before
+  ha'edut - the Testimony
+  be'ohel - in the tabernacle
+  mo'ed - of meeting
+  asher - where
+  ivva'ed - I will meet
+  lecha - with you
+  shammah - [adverbial marker]
+  qodesh - most holy
+  qodashim - holy
+  tihyeh - it shall be
+  lakhem - to you
+
+30:37
+  vehaqqetoret - the incense
+  asher - which
+  ta'aseh - you shall make
+  bemathkunetah - according to its composition
+  lo - not
+  ta'asu - you shall make
+  lakhem - for yourselves
+  qodesh - holy
+  tihyeh - it shall be
+  lecha - to you
+  laYHWH - for Yahweh
+
+30:38
+  ish - A man
+  asher - who
+  ya'aseh - makes
+  chamohah - like it
+  lehariach - to smell
+  bah - it
+  venichrat - and he shall be cut off
+  me'ammav - from his people
+
+
+EXODUS 31
+
+31:1
+  vaydabber - And spoke
+  YHWH - Yahweh
+  el - to
+  Mosheh - Moses
+  lemor - saying
+
+31:2
+  re'eh - See
+  qarati - I have called
+  veshem - by name
+  Betsal'el - Bezalel
+  ben - the son
+  Uri - of Uri
+  ven - the son
+  Chur - of Hur
+  lematteh - of the tribe
+  Yehudah - of Judah
+
+31:3
+  va'amalle - And I have filled
+  oto - him
+  ruach - the Spirit
+  Elohim - of God
+  bechokhmah - in wisdom
+  uvitevunah - and in understanding
+  uveda'at - and in knowledge
+  uvekhol - and in all
+  melakhah - workmanship
+
+31:4
+  lachshov - to design
+  machashavot - artistic works
+  la'asot - to work
+  bazzahav - in gold
+  uvakkesef - and in silver
+  uvanechoshet - and in bronze
+
+31:5
+  uvacharoshet - and in cutting
+  even - of stones
+  lemallot - settings
+  uvacharoshet - and in carving
+  ets - of wood
+  la'asot - to work
+  bekhol - all
+  melakhah - craftsmanship
+
+31:6
+  va'ani - And I
+  hinneh - indeed
+  natatti - I have appointed
+  itto - with him
+  et - [direct object marker]
+  Oholiav - Oholiab
+  ben - son
+  Achisamakh - of Ahisamach
+  lematteh - of the tribe
+  Dan - of Dan
+  uvelev - and in the hearts
+  kol - of all
+  chakham - that are wise
+  lev - hearted
+  natatti - I have put
+  chokhmah - wisdom
+  ve'asu - that they may make
+  et - [direct object marker]
+  kol - all
+  asher - that
+  tsivviticha - I have commanded you
+
+31:7
+  et - [direct object marker]
+  ohel - the tent
+  mo'ed - of meeting
+  ve'et - and [direct object marker]
+  ha'aron - the ark
+  la'edut - of testimony
+  ve'et - and [direct object marker]
+  hakkapporet - the mercy seat
+  asher - that/which
+  alav - on it
+  ve'et - and [direct object marker]
+  kol - all
+  keley - the furniture
+  ha'ohel - of the tabernacle
+
+31:8
+  ve'et - and
+  hashulchan - the table
+  ve'et - and
+  kelav - its utensils
+  ve'et - and
+  hammenorah - the lampstand
+  hattehorah - pure
+  ve'et - and with
+  kol - all
+  keleyha - its utensils
+  ve'et - and
+  mizbach - the altar
+  haqqetoret - of incense
+
+31:9
+  ve'et - and
+  mizbach - the altar
+  ha'olah - of burnt offering
+  ve'et - and
+  kol - all
+  kelav - its utensils
+  ve'et - and
+  hakkiyyor - the laver
+  ve'et - and
+  kanno - its base
+
+31:10
+  ve'et - and
+  bigdey - garments
+  hasserad - of the ministry
+  ve'et - and
+  bigdey - garments
+  haqqodesh - the holy
+  le'Aharon - for Aaron
+  hakkohen - the priest
+  ve'et - and
+  bigdey - the garments
+  vanav - of his sons
+  lechahane - to minister as priests
+
+31:11
+  ve'et - and
+  shemen - oil
+  hammishchah - the anointing
+  ve'et - and
+  qetoret - incense
+  hassammim - sweet
+  laqqodesh - for the holy [place]
+  kekhol - According to all
+  asher - that
+  tsivviticha - I have commanded you
+  ya'asu - they shall do
+
+31:12
+  vayyomer - And spoke
+  YHWH - Yahweh
+  el - to
+  Mosheh - Moses
+  lemor - saying
+
+31:13
+  ve'attah - and You
+  dabber - speak
+  el - to
+  bney - the sons
+  Yisrael - of Israel
+  lemor - saying
+  akh - truly
+  et - [direct object marker]
+  shabbetotay - My Sabbaths
+  tishmoru - you shall keep
+  ki - for
+  ot - a sign
+  hi - it [is]
+  beyni - between Me
+  uveyneychem - and you
+  ledoroteykem - throughout your generations
+  lada'at - that [you] may know
+  ki - that
+  ani - I [am]
+  YHWH - Yahweh
+  meqaddishkhem - who sanctifies you
+
+31:14
+  ushemartem - observe
+  et - [direct object marker]
+  hashshabbat - the sabbath
+  ki - for
+  qodesh - is holy
+  hi - he/it
+  lakhem - to you
+  mechalleleyha - profanes
+  mot - shall surely
+  yumat - be put to death
+  ki - for
+  kol - whoever
+  ha'oseh - does
+  vah - on it
+  melakhah - work
+  venichretah - and shall be cut off
+  hannefesh - person
+  hahi - that
+  miqqerev - from among
+  ammeyha - his people
+
+31:15
+  sheshet - Six
+  yamim - days
+  ye'aseh - shall be done
+  melakhah - Work
+  uvayyom - but the day
+  hashevi'i - seventh
+  shabbat - [is] the Sabbath
+  shabbaton - of rest
+  qodesh - holy
+  laYHWH - to Yahweh
+  kol - Whoever
+  ha'oseh - does
+  melakhah - [any] work
+  beyom - on day
+  hashshabbat - the Sabbath
+  mot - surely
+  yumat - he shall be put to death
+
+31:16
+  veshamru - shall observe
+  veney - the sons
+  Yisrael - of Israel
+  et - [direct object marker]
+  hashshabbat - the sabbath
+  la'asot - to celebrate
+  et - [direct object marker]
+  hashshabbat - the sabbath
+  ledorotam - throughout their generations
+  berit - covenant
+  olam - perpetual
+
+31:17
+  beyni - Between Me
+  uvein - and
+  bney - the sons
+  Yisrael - of Israel
+  ot - a sign
+  hi - it [is]
+  le'olam - forever
+  ki - for [in]
+  sheshet - six
+  yamim - days
+  asah - made
+  YHWH - Yahweh
+  et - [direct object marker]
+  hashshamayim - the heavens
+  ve'et - and
+  ha'arets - the earth
+  uvayyom - and on the day
+  hashevi'i - seventh
+  shavat - He rested
+  vayyinnafash - and was refreshed
+
+31:18
+  vayyitten - gave
+  el - unto
+  Mosheh - Moses
+  kekhaloto - when he had made an end
+  ledabber - of speaking
+  itto - with him
+  behar - on Mount
+  Sinay - Sinai
+  shney - two
+  luchot - tablets
+  ha'edut - of the Testimony
+  luchot - tablets
+  even - of stone
+  ketuvim - written
+  be'etsba' - with the finger
+  Elohim - of God
+
+
+EXODUS 32
+
+32:1
+  vayyar - And when saw
+  ha'am - the people
+  ki - that
+  voshesh - delayed
+  Mosheh - Moses
+  laredet - coming down
+  min - from
+  hahar - the mountain
+  vayyiqqahel - and gathered together
+  ha'am - the people
+  al - to
+  Aharon - Aaron
+  vayyomeru - and said
+  elav - to him
+  qum - come
+  aseh - make
+  lanu - us
+  elohim - gods
+  asher - that
+  yelekhu - shall go
+  lefaneynu - before us
+  ki - For
+  zeh - this
+  Mosheh - Moses
+  ha'ish - the man
+  asher - who
+  he'elanu - brought us up
+  me'erets - out of the land
+  Mitsrayim - of Egypt
+  lo - not
+  yada'nu - we do know
+  meh - what
+  hayah - has become
+  lo - of him
+
+32:2
+  vayyomer - said
+  alehem - to them
+  Aharon - Aaron
+  parqu - Break off
+  nizmey - earrings
+  hazzahav - the golden
+  asher - which [are]
+  be'ozney - in the ears
+  nesheykhem - of your wives
+  beneykhem - your sons
+  uvnoteykem - and your daughters
+  vehavi'u - and bring [them]
+  elay - to me
+
+32:3
+  vayyitparequ - tore/broke off
+  kol - all
+  ha'am - the people
+  et - [direct object marker]
+  nizmey - rings/earrings
+  hazzahav - the gold
+  asher - which/that
+  be'ozneyhem - in their ears
+  vayyavi'u - and brought
+  el - to
+  Aharon - Aaron
+
+32:4
+  vayyiqqach - And he received / took
+  miyyadam - from their hand
+  vayyatsar - and he fashioned
+  oto - it
+  bacheret - with an engraving tool
+  vayya'asehu - and made
+  egel - a calf
+  massechah - molded / molten
+  vayyomeru - And they said
+  elleh - these [are]
+  eloheycha - your gods
+  Yisrael - Israel
+  asher - that
+  he'elucha - brought you
+  me'erets - out of the land
+  Mitsrayim - of Egypt
+
+32:5
+  vayyar - saw
+  Aharon - Aaron
+  vayyiven - built
+  mizbeach - an altar
+  lefanav - before it
+  vayyiqra - made proclamation
+  Aharon - Aaron
+  vayyomar - and said
+  chag - a feast
+  laYHWH - to the LORD
+  machar - Tomorrow
+
+32:6
+  vayyashkimu - And they rose early
+  mimmocharot - on the next day
+  vayyya'alu - and offered
+  olot - burnt offerings
+  vayyaggishu - and brought
+  shelamim - peace offerings
+  vayyeshev - and sat down
+  ha'am - the people
+  le'ekhol - to eat
+  veshato - and drink
+  vayyaqumu - and rose up
+  letsacheq - to play
+
+32:7
+  vaydabber - spoke
+  YHWH - the LORD
+  el - to
+  Mosheh - Moses
+  lekh - go
+  red - get down
+  ki - for
+  shichet - have corrupted
+  ammecha - your people
+  asher - whom
+  he'eleyta - you brought
+  me'erets - out of the land
+  Mitsrayim - of Egypt
+
+32:8
+  saru - They have turned aside
+  maher - quickly
+  min - out
+  hadderekh - of the way
+  asher - which
+  tsivvitim - I commanded them
+  asu - they have made
+  lahem - themselves
+  egel - a calf
+  massechah - molded
+  vayyishtachavu - and worshiped
+  lo - it
+  vayyizbechu - and sacrificed
+  lo - to it
+  vayyomeru - and said
+  elleh - these [are]
+  eloheycha - your gods
+  Yisrael - Israel
+  asher - that
+  he'elucha - brought you
+  me'erets - out of the land
+  Mitsrayim - of Egypt
+
+32:9
+  vayyomer - said
+  YHWH - Yahweh
+  el - to
+  Mosheh - Moses
+  ra'iti - I have seen
+  et - [direct object marker]
+  ha'am - people
+  hazzeh - this
+  vehinneh - and indeed
+  am - a people
+  qesheh - stiff
+  oref - necked
+  hu - it [is]
+
+32:10
+  ve'attah - Now therefore
+  hannichah - let alone
+  li - Me
+  veyichar - that may burn hot
+  appi - My wrath
+  vahem - against them
+  va'akhallem - and I may consume them
+  ve'e'eseh - and I will make
+  otecha - of you
+  legoy - a nation
+  gadol - great
+
+32:11
+  vaychal - And pleaded
+  Mosheh - Moses
+  et - [direct object marker]
+  peney - with/face
+  YHWH - Yahweh
+  Elohav - his God
+  vayyomer - and said
+  lamah - why
+  YHWH - Yahweh
+  yechereh - does burn hot
+  appecha - Your wrath
+  be'ammecha - against Your people
+  asher - whom
+  hotseta - You have brought
+  me'erets - out of the land
+  Mitsrayim - of Egypt
+  bekoach - with power
+  gadol - great
+  uveyad - and with a hand
+  chazaqah - mighty
+
+32:12
+  lammah - why
+  yomeru - should speak
+  Mitsrayim - Egypt
+  lemor - and say
+  bera'ah - to harm them
+  hotsi'am - He brought them out
+  laharog - to kill
+  otam - them
+  beharim - in the mountains
+  ulekhalotam - and to consume them
+  me'al - from
+  peney - the face
+  ha'adamah - of the earth
+  shuv - Turn
+  mecharon - from fierce
+  appecha - Your wrath
+  vehinnakem - and relent
+  al - from
+  hara'ah - this harm
+  le'ammecha - to Your people
+
+32:13
+  zekhor - Remember
+  le'Avraham - Abraham
+  leYitschaq - Isaac
+  uleYisrael - and Israel
+  avadeycha - your servants
+  asher - whom
+  nishba'ta - you swore
+  lahem - to
+  bach - by your own self
+  vattedabber - and said
+  alehem - to them
+  arbeh - I will multiply
+  et - [direct object marker]
+  zar'akhem - your descendants
+  kekhochevey - as the stars
+  hashshamayim - of heaven
+  vekhol - and all
+  ha'arets - land
+  hazot - this
+  asher - that
+  amarti - I have spoken
+  etten - will give
+  lezar'akhem - to your descendants
+  venachalu - and they shall inherit
+  le'olam - forever
+
+32:14
+  vayyinnachem - So relented
+  YHWH - Yahweh
+  al - from
+  hara'ah - the harm
+  asher - which
+  dibber - He said
+  la'asot - He would do
+  le'ammo - to His people
+
+32:15
+  vayyifen - turned
+  vayyered - and went down
+  Mosheh - Moses
+  min - from
+  hahar - the mountain
+  ushney - and two
+  luchot - tablets
+  ha'edut - of the Testimony
+  beyado - in his hand
+  luchot - tablets
+  ketuvim - were written
+  mishsheney - on both
+  evreyhem - of their sides
+  mizzeh - on this [side]
+  umizzeh - and on this [side]
+  hem - they
+  ketuvim - were written
+
+32:16
+  vehalluchot - the tablets
+  ma'aseh - work
+  Elohim - of God
+  hemmah - were
+  vehammikhhtav - and the writing
+  mikhtav - writing
+  Elohim - of God
+  hu - was
+  charut - engraved
+  al - on
+  halluchot - the tablets
+
+32:17
+  vayyishma' - heard
+  Yehoshua' - Joshua
+  et - [direct object marker]
+  qol - the sound
+  ha'am - of the people
+  bere'oh - as they shouted
+  vayyomer - and he said
+  el - to
+  Mosheh - Moses
+  qol - a noise
+  milchamah - of war
+  bammachaneh - in the camp
+
+32:18
+  vayyomer - said
+  eyn - [it is] not
+  qol - the noise
+  anot - of the shout
+  gevurah - of victory
+  ve'eyn - and [it is] not
+  qol - the noise
+  anot - of the cry
+  chalushah - of defeat
+  qol - [But] the sound
+  annot - of singing
+  anochi - I
+  shome'a - hear
+
+32:19
+  vayhi - So it was
+  ka'asher - as soon as
+  qarav - he came near
+  el - unto
+  hammachaneh - the camp
+  vayyar - that he saw
+  et - [direct object marker]
+  ha'egel - the calf
+  umecholot - and the dancing
+  vayyichar - so became hot
+  af - anger
+  Mosheh - Moses'
+  vayyashlekh - and he cast
+  miyyadav - from his hands
+  et - [direct object marker]
+  halluchot - the tablets
+  vayshabber - and broke
+  otam - them
+  tachat - at the foot
+  hahar - of the mountain
+
+32:20
+  vayyiqqach - took
+  et - [direct object marker]
+  ha'egel - the calf
+  asher - which
+  asu - they had made
+  vayyisrof - and burned
+  ba'esh - in the fire
+  vayyitchan - and ground
+  ad - to
+  asher - as
+  daq - powder
+  vayyizer - and scattered
+  al - over
+  peney - the face/surface
+  hammayim - the water
+  vayyashq - and made drink
+  et - [direct object marker]
+  bney - the sons
+  Yisrael - of Israel
+
+32:21
+  vayyomer - said
+  Mosheh - Moses
+  el - to
+  Aharon - Aaron
+  meh - What
+  asah - do
+  lecha - to you
+  ha'am - people
+  hazzeh - this
+  ki - that
+  heveta - you have brought
+  alav - upon them
+  chata'ah - sin
+  gedolah - great
+
+32:22
+  vayyomer - said
+  Aharon - Aaron
+  al - not
+  yichar - burn
+  af - anger
+  adoni - my lord
+  attah - yourself
+  yada'ta - know
+  et - [direct object marker]
+  ha'am - the people
+  ki - that
+  vera' - to evil
+  hu - it/he
+
+32:23
+  vayyomeru - said
+  li - to me
+  aseh - Make
+  lanu - us
+  elohim - gods
+  asher - that
+  yelekhu - shall go
+  lefaneynu - before us
+  ki - for
+  zeh - this
+  Mosheh - Moses
+  ha'ish - the man
+  asher - who
+  he'elanu - brought us
+  me'erets - out of the land
+  Mitsrayim - of Egypt
+  lo - not
+  yada'nu - we do know
+  meh - what
+  hayah - has become
+  lo - of him
+
+32:24
+  va'omar - And I said
+  lahem - to them
+  lemi - who
+  zahav - gold
+  hitparaku - let them break [it] off
+  vayyittenu - So they gave [it]
+  li - to me
+  va'ashlikhehu - and I cast it
+  va'esh - into the fire
+  vayyetse - and came out
+  ha'egel - calf
+  hazzeh - this
+
+32:25
+  vayyar - saw
+  Mosheh - Moses
+  et - [direct object marker]
+  ha'am - the people
+  ki - for
+  faru'a - unrestrained/naked
+  hu - he/were
+  ki - for
+  fera'oh - had let loose/not restrained
+  Aharon - Aaron
+  leshimtsah - to shame/derision
+  beqameyhem - among their enemies
+
+32:26
+  vayya'amod - stood
+  Mosheh - Moses
+  besha'ar - in the gate
+  hammachaneh - of the camp
+  vayyomer - and said
+  mi - who
+  laYHWH - for the LORD
+  elay - to me
+  vayyye'asfu - and gathered themselves together
+  elav - to him
+  kol - all
+  bney - the sons
+  Levi - of Levi
+
+32:27
+  vayyomer - said
+  lahem - to them
+  koh - thus
+  amar - says
+  YHWH - Yahweh
+  Elohey - God
+  Yisrael - of Israel
+  simu - let put
+  ish - every man
+  charbo - his sword
+  al - on
+  yerekho - his side
+  ivru - go in
+  vashuvu - and out
+  misha'ar - from entrance
+  lasha'ar - to entrance
+  bammachaneh - throughout the camp
+  vehirgu - and let kill
+  ish - every man
+  et - [direct object marker]
+  achiv - his brother
+  ve'ish - and every man
+  et - [direct object marker]
+  re'ehu - his companion
+  ve'ish - and every man
+  et - [direct object marker]
+  qerovo - his neighbor
+
+32:28
+  vayya'asu - did
+  bney - the sons
+  Levi - of Levi
+  kidvar - according to the word
+  Mosheh - of Moses
+  vayyippol - and fell
+  min - of
+  ha'am - the people
+  bayyom - day
+  hahu - that
+  kishloshet - about three
+  alfey - thousand
+  ish - men
+
+32:29
+  vayyomer - said
+  Mosheh - Moses
+  mill'u - Consecrate
+  yedkhem - yourselves
+  hayyom - today
+  laYHWH - to Yahweh
+  ki - for
+  ish - every man
+  bivno - his son
+  uve'achiv - and his brother
+  velatet - may bestow
+  aleykhem - upon you
+  hayyom - this day
+  berakhah - a blessing
+
+32:30
+  vayhi - And it came to pass
+  mimmocharot - on the next day
+  vayyomer - that said
+  Mosheh - Moses
+  el - to
+  ha'am - the people
+  attem - You
+  chata'tem - have committed
+  chata'ah - a sin
+  gedolah - great
+  ve'attah - so now
+  e'eleh - I will go up
+  el - to
+  YHWH - Yahweh
+  ulay - perhaps
+  akkapperah - I can make atonement
+  be'ad - for
+  chatta'tkhem - your sin
+
+32:31
+  vayyashov - returned
+  Mosheh - Moses
+  el - to
+  YHWH - Yahweh
+  vayyomar - and said
+  anna - Oh
+  chata - has committed
+  ha'am - people
+  hazzeh - this
+  chata'ah - sin
+  gedolah - great
+  vayya'asu - and have made
+  lahem - for themselves
+  elohey - a god
+  zahav - of gold
+
+32:32
+  ve'attah - And yet now
+  im - if
+  tissa - You will forgive
+  chatta'tam - their sin
+  ve'im - but if
+  ayin - not
+  mecheni - blot me
+  na - I pray
+  missifrecha - out of Your book
+  asher - which
+  katavta - You have written
+
+32:33
+  vayyomer - said
+  YHWH - Yahweh
+  el - to
+  Mosheh - Moses
+  mi - who [is he]
+  asher - that
+  chata - has sinned
+  li - against Me
+  emchennu - I will him blot
+  missifri - out of My book
+
+32:34
+  ve'attah - now
+  lekh - go
+  necheh - lead
+  et - [direct object marker]
+  ha'am - the people
+  el - to
+  asher - of which
+  dibbarti - I have spoken
+  lach - to you
+  hinneh - Behold
+  mal'akhi - My angel
+  yelekh - shall go
+  lefaneycha - before you
+  uveyom - and in the day
+  poqdi - I visit for punishment
+  ufaqadti - and I will visit punishment
+  aleyhem - upon them
+  chatta'tam - their sin
+
+32:35
+  vayyiggof - smote
+  YHWH - the LORD
+  et - [direct object marker]
+  ha'am - the people
+  al - upon
+  asher - that which
+  asu - they did
+  et - [direct object marker]
+  ha'egel - the calf
+  asher - which
+  asah - had made
+  Aharon - Aaron
