@@ -1,4 +1,4 @@
-var defined_verses = [
+window._officialVersesData = [
  {
   "book": "1 Nephi",
   "chapter": 1,
