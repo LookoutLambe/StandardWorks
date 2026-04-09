@@ -3775,6 +3775,8 @@ function _doRenderVerses(verseData, containerId) {
     const engDiv = document.createElement('div');
     engDiv.className = 'verse-english';
     if (verseKey) engDiv.setAttribute('data-key', verseKey);
+    // If verse has inline english field (e.g. front matter), use it directly
+    if (v.english) engDiv.textContent = v.english;
     verseDiv.appendChild(engDiv);
 
     container.appendChild(verseDiv);

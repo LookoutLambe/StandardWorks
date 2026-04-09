@@ -16,7 +16,7 @@ var frontIntro = [
     ["לְשׁוֹנִיּוֹת","linguistic"],
     ["לִמּוּדִיּוֹת","educational"],
     ["וְרוּחָנִיּוֹת","and-spiritual"],
-  ]},
+  ], english:"This Hebrew translation of the Book of Mormon is an independent work undertaken for linguistic, educational, and devotional purposes It is not an official publication of The Church of Jesus Christ of Latter-day Saints, nor is it endorsed by that institution."},
   { num:"ב", words:[
     ["אֵין","there-is-no"],
     ["הוּא","he"],
@@ -33,7 +33,7 @@ var frontIntro = [
     ["הוּא","he"],
     ["נִתְמָךְ","supported"],
     ["עַל־יָדָהּ","by-it"],
-  ]},
+  ], english:"The aim of this translation is to present the text of the Book of Mormon in a form that reflects the style, vocabulary, and register of Biblical Hebrew, drawing especially upon the language of the Hebrew Bible The translator has sought to balance clarity with fidelity, favoring a formal and scriptural tone rather than a modern idiom, while remaining readable to students and readers of Biblical Hebrew."},
   { num:"ג", words:[
     ["מַטָּרַת","the-purpose-of"],
     ["הַתַּרְגּוּם","the-translation"],
@@ -68,7 +68,7 @@ var frontIntro = [
     ["סִגְנוֹן","a-style"],
     ["עִבְרִי","Hebrew"],
     ["מוֹדֶרְנִי","modern"],
-  ]},
+  ], english:"This work was produced by Chris Lambe, who holds a graduate certificate in Biblical Hebrew The translation reflects personal study, linguistic judgment, and sustained engagement with the Hebrew Scriptures While care has been taken in the rendering of the text, this translation, like all human efforts, is subject to limitation and possible error."},
   { num:"ה", words:[
     ["הַתַּרְגּוּם","the-translation"],
     ["הֻכַּן","was-prepared"],
@@ -81,7 +81,7 @@ var frontIntro = [
     ["מִתְקַדֶּמֶת","advanced"],
     ["בְּלָשׁוֹן","in-the-language-of"],
     ["הַמִּקְרָא","the-calling"],
-  ]},
+  ], english:"No claim is made that this translation represents an ancient Hebrew original Rather, it is an attempt to express the English text of the Book of Mormon through the structures and idioms of Biblical Hebrew, in order to illuminate its content, themes, and scriptural character for Hebrew readers and students of scripture."},
   { num:"ו", words:[
     ["הוּא","he"],
     ["מְשַׁקֵּף","reflects"],
@@ -94,7 +94,7 @@ var frontIntro = [
     ["מַתְמִיד","continual"],
     ["בִּכְתָבֵי","in-the-writings-of"],
     ["הַקֹּדֶשׁ","the-Holy"],
-  ]},
+  ], english:"Readers are invited to approach this work with discernment, reverence, and thoughtful comparison, and to assess its value through careful study and engagement with the text."},
   { num:"ז", words:[
     ["אַף־עַל־פִּי","although"],
     ["שֶׁנַּעֲשְׂתָה","was-made"],
@@ -346,7 +346,7 @@ var frontIntroduction = [
     ["חֲקוּקִים","engraved"],
     ["עַל־לוּחוֹת","upon-plates-of"],
     ["זָהָב","gold"],
-  ]},
+  ], english:"The Book of Mormon is a volume of holy scripture comparable to the Bible. It is a record of God’s dealings with ancient inhabitants of the Americas and contains the fulness of the everlasting gospel."},
   { num:"ג", words:[
     ["נֶעְתְּקוּ","they-were-copied"],
     ["וְקֻצְּרוּ","and-abridged"],
@@ -355,7 +355,7 @@ var frontIntroduction = [
     ["וְסוֹפֵר","and-the-scribe-of"],
     ["דִּבְרֵי","the-records-of"],
     ["הַיָּמִים","the-days"],
-  ]},
+  ], english:"The book was written by many ancient prophets by the spirit of prophecy and revelation. Their words, written on gold plates, were quoted and abridged by a prophet-historian named Mormon."},
   { num:"ד", words:[
     ["וַיְסַפֵּר","and-recounts"],
     ["הַסֵּפֶר","the-book"],
@@ -363,7 +363,7 @@ var frontIntroduction = [
     ["שְׁתֵּי","two"],
     ["מַמְלָכוֹת","kingdoms"],
     ["גְּדוֹלוֹת","great"],
-  ]},
+  ], english:"The record gives an account of two great civilizations. One came from Jerusalem in 600 B.C. and afterward separated into two nations, known as the Nephites and the Lamanites."},
   { num:"ה", words:[
     ["הָאַחַת","the-one"],
     ["יָצְאָה","went-forth"],
@@ -379,7 +379,7 @@ var frontIntroduction = [
     ["הֵם","they"],
     ["הַנְּפִים","the-Nephites"],
     ["וְהַלָּמָנִים","and-the-Lamanites"],
-  ]},
+  ], english:"The other came much earlier when the Lord confounded the tongues at the Tower of Babel. This group is known as the Jaredites."},
   { num:"ו", words:[
     ["וְהָאַחֶרֶת","and-the-other"],
     ["קָדְמָה","came-earlier"],
@@ -393,7 +393,7 @@ var frontIntroduction = [
     ["בָּבֶל","Babylon"],
     ["וְהֵם","and-they-are"],
     ["הַיָּרֶדִים","the-Jaredites"],
-  ]},
+  ], english:"After thousands of years, all were destroyed except the Lamanites, and they are among the ancestors of the American Indians. The crowning event recorded in the Book of Mormon is the personal ministry of the Lord Jesus Christ among the Nephites soon after His resurrection. It puts forth the doctrines of the gospel, outlines the plan of salvation, and tells men what they must do to gain peace in this life and eternal salvation in the life to come."},
   { num:"ז", words:[
     ["וַיְהִי","and-it-came-to-pass"],
     ["אַחֲרֵי","after"],
@@ -409,7 +409,7 @@ var frontIntroduction = [
     ["יוֹשְׁבֵי","the-inhabitants-of"],
     ["אַמֶרִיקָה","America"],
     ["הַקַּדְמוֹנִים","the-ancient"],
-  ]},
+  ], english:"After Mormon completed his writings, he delivered the account to his son Moroni, who added a few words of his own and hid up the plates in the Hill Cumorah. On September 21, 1823, the same Moroni, then a glorified, resurrected being, appeared to the Prophet Joseph Smith and instructed him relative to the ancient record and its destined translation into the English language."},
   { num:"ח", words:[
     ["רֹאשׁ","the-head-of"],
     ["הַמַּעֲשִׂים","the-events"],
@@ -425,7 +425,7 @@ var frontIntroduction = [
     ["אַחֲרֵי","after"],
     ["קוּמוֹ","His-rising"],
     ["מִן־הַמֵּתִים","from-the-dead"],
-  ]},
+  ], english:"In due course the plates were delivered to Joseph Smith, who translated them by the gift and power of God. The record is now published in many languages as a new and additional witness that Jesus Christ is the Son of the living God and that all who will come unto Him and obey the laws and ordinances of His gospel may be saved."},
   { num:"ט", words:[
     ["וְהַסֵּפֶר","and-the-book"],
     ["מְבָאֵר","explains"],
@@ -504,7 +504,7 @@ var frontIntroduction = [
     ["וַיְתַרְגְּמֵם","and-he-translated-them"],
     ["בְּמַתַּת־אֵל","by-the-gift-of-God"],
     ["וּבִגְבוּרָתוֹ","and-by-His-power"],
-  ]},
+  ], english:"Concerning this record the Prophet Joseph Smith said: “I told the brethren that the Book of Mormon was the most correct of any book on earth, and the keystone of our religion, and a man would get nearer to God by abiding by its precepts, than by any other book.” In addition to Joseph Smith, the Lord provided for eleven others to see the gold plates for themselves and to be special witnesses of the truth and divinity of the Book of Mormon."},
   { num:"יג", words:[
     ["וְעַתָּה","and-now"],
     ["יָצָא","has-gone-forth"],
@@ -538,7 +538,7 @@ var frontIntroduction = [
     ["הַנָּבִיא","the-prophet"],
     ["עַל־הַסֵּפֶר","upon-the-book"],
     ["הַזֶּה","this"],
-  ]},
+  ], english:"Their written testimonies are included herewith as “The Testimony of Three Witnesses” and “The Testimony of Eight Witnesses.” We invite all men everywhere to read the Book of Mormon, to ponder in their hearts the message it contains, and then to ask God, the Eternal Father, in the name of Christ if the book is true."},
   { num:"טו", words:[
     ["הִגַּדְתִּי","I-declared"],
     ["לָאַחִים","to-the-brethren"],
@@ -594,7 +594,7 @@ var frontIntroduction = [
     ["וְעֵדוּת","and-the-testimony-of"],
     ["שְׁמֹנָה","eight"],
     ["עֵדִים","witnesses"],
-  ]},
+  ], english:"Those who pursue this course and ask in faith will gain a testimony of its truth and divinity by the power of the Holy Ghost. (See Moroni 10:3–5.) Those who gain this divine witness from the Holy Spirit will also come to know by the same power that Jesus Christ is the Savior of the world, that Joseph Smith is His revelator and prophet in these last days, and that The Church of Jesus Christ of Latter-day Saints is the Lord’s kingdom once again established on the earth, preparatory to the Second Coming of the Messiah."},
   { num:"יח", words:[
     ["וְעַתָּה","and-now"],
     ["קֹרְאִים","we-call"],
@@ -694,7 +694,7 @@ var frontThreeWit = [
     ["אֲלֵיהֶם","unto-them"],
     ["הַמַּעֲשֶׂה","the-work"],
     ["הַזֶּה","this"],
-  ]},
+  ], english:"Be it known unto all nations, kindreds, tongues, and people, unto whom this work shall come: That we, through the grace of God the Father, and our Lord Jesus Christ, have seen the plates which contain this record, which is a record of the people of Nephi, and also of the Lamanites, their brethren, and also of the people of Jared, who came from the tower of which hath been spoken. And we also know that they have been translated by the gift and power of God, for his voice hath declared it unto us; wherefore we know of a surety that the work is true. And we also testify that we have seen the engravings which are upon the plates; and they have been shown unto us by the power of God, and not of man."},
   { num:"ב", words:[
     ["כִּי","for"],
     ["אֲנַחְנוּ","we"],
@@ -759,7 +759,7 @@ var frontThreeWit = [
     ["וְלֹא","and-not"],
     ["בְּכֹחַ","by-the-power-of"],
     ["אָדָם","man"],
-  ]},
+  ], english:"And we declare with words of soberness, that an angel of God came down from heaven, and he brought and laid before our eyes, that we beheld and saw the plates, and the engravings thereon; and we know that it is by the grace of God the Father, and our Lord Jesus Christ, that we beheld and bear record that these things are true. And it is marvelous in our eyes. Nevertheless, the voice of the Lord commanded us that we should bear record of it; wherefore, to be obedient unto the command-ments of God, we bear testimony of these things."},
   { num:"ה", words:[
     ["וּמַגִּידִים","and-declare"],
     ["אֲנַחְנוּ","we"],
@@ -814,7 +814,7 @@ var frontThreeWit = [
     ["אֲנַחְנוּ","we"],
     ["עַל־הַדְּבָרִים","upon-the-things"],
     ["הָאֵלֶּה","these"],
-  ]},
+  ], english:"And we know that if we are faithful in Christ, we shall rid our garments of the blood of all men, and be found spotless before the judgment-seat of Christ, and shall dwell with him eternally in the heavens. And the honor be to the Father, and to the Son, and to the Holy Ghost, which is one God. Amen."},
   { num:"ח", words:[
     ["וְיָדַעְנוּ","and-we-know"],
     ["כִּי־אִם","that-if"],
@@ -845,7 +845,7 @@ var frontThreeWit = [
     ["אֵל","God"],
     ["אֶחָד","one"],
     ["אָמֵן","amen"],
-  ]},
+  ], english:"Oliver Cowdery David Whitmer Martin Harris"},
 ];
 var frontEightWit = [
   // עדות שמונה עדים
@@ -860,7 +860,7 @@ var frontEightWit = [
     ["אֲלֵיהֶם","unto-them"],
     ["הַמַּעֲשֶׂה","the-work"],
     ["הַזֶּה","this"],
-  ]},
+  ], english:"Be it known unto all nations, kindreds, tongues, and people, unto whom this work shall come: That Joseph Smith, Jun., the translator of this work, has shown unto us the plates of which hath been spoken, which have the appearance of gold; and as many of the leaves as the said Smith has translated we did handle with our hands; and we also saw the engravings thereon, all of which has the appearance of ancient work, and of curious workmanship. And this we bear record with words of soberness, that the said Smith has shown unto us, for we have seen and hefted, and know of a surety that the said Smith has got the plates of which we have spoken. And we give our names unto the world, to witness unto the world that which we have seen. And we lie not, God bearing witness of it. Christian Whitmer Jacob Whitmer"},
   { num:"ב", words:[
     ["כִּי","for"],
     ["יוֹסֵף","Joseph"],
@@ -937,7 +937,7 @@ var frontEightWit = [
     ["וֵאלֹהִים","and-God"],
     ["עֵד","is-witness"],
     ["בָּזֶה","herein"],
-  ]},
+  ], english:"Peter Whitmer, Jun. John Whitmer Hiram Page Joseph Smith, Sen. Hyrum Smith Samuel H. Smith"},
 ];
 renderVerseSet(frontIntro, 'front-intro-verses');
 renderVerseSet(frontTitle, 'front-title-verses');
@@ -955,7 +955,7 @@ var frontJST = [
     ["הִגָּלוֹת","the-coming-forth-of"],
     ["סֵפֶר","the-book-of"],
     ["מוֹרְמוֹן","Mormon"],
-  ]},
+  ], english:"The Prophet Joseph Smith’s own words about the coming forth of the Book of Mormon are: “On the evening of the … twenty-first of September [1823] … I betook myself to prayer and supplication to Almighty God. …"},
   { num:"ב", words:[
     ["וַיְהִי","and-it-came-to-pass"],
     ["בָּעֶרֶב","in-the-evening"],
@@ -968,7 +968,7 @@ var frontJST = [
     ["וְתַחֲנוּנִים","and-supplication"],
     ["אֶל־אֵל","unto-God"],
     ["שַׁדַּי","Almighty"],
-  ]},
+  ], english:"“While I was thus in the act of calling upon God, I discovered a light appearing in my room, which continued to increase until the room was lighter than at noonday, when immediately a personage appeared at my bedside, standing in the air, for his feet did not touch the floor. “He had on a loose robe of most exquisite whiteness. It was a whiteness beyond anything earthly I had ever seen; nor do I believe that any earthly thing could be made to appear so exceedingly white and brilliant."},
   { num:"ג", words:[
     ["וַיְהִי","and-it-came-to-pass"],
     ["בְּהִתְפַּלְלִי","as-I-prayed"],
@@ -1026,7 +1026,7 @@ var frontJST = [
     ["רֹאשׁוֹ","his-head"],
     ["וְצַוָּארוֹ","and-his-neck"],
     ["חֲשׂוּפִים","were-uncovered"],
-  ]},
+  ], english:"His hands were naked, and his arms also, a little above the wrist; so, also, were his feet naked, as were his legs, a little above the ankles. His head and neck were also bare. I could discover that he had no other clothing on but this robe, as it was open, so that I could see into his bosom."},
   { num:"ו", words:[
     ["וָאֵרֶא","and-I-saw"],
     ["כִּי","that"],
@@ -1042,7 +1042,7 @@ var frontJST = [
     ["וָאֵרֶא","and-I-saw"],
     ["אֶת","[ACC]"],
     ["חָזֵהוּ","his-bosom"],
-  ]},
+  ], english:"“Not only was his robe exceedingly white, but his whole person was glorious beyond description, and his countenance truly like lightning. The room was exceedingly light, but not so very bright as immediately around his person. When I first looked upon him, I was afraid; but the fear soon left me."},
   { num:"ז", words:[
     ["וְלֹא","and-not"],
     ["רַק","only"],
@@ -1076,7 +1076,7 @@ var frontJST = [
     ["סָר","departed"],
     ["הַפַּחַד","the-fear"],
     ["מִמֶּנִּי","from-me"],
-  ]},
+  ], english:"“He called me by name, and said unto me that he was a messenger sent from the presence of God to me, and that his name was Moroni; that God had a work for me to do; and that my name should be had for good and evil among all nations, kindreds, and tongues, or that it should be both good and evil spoken of among all people. “He said there was a book deposited, written upon gold plates, giving an account of the former inhabitants of this continent, and the source from whence they sprang."},
   { num:"ט", words:[
     ["וַיִּקְרָא","and-called"],
     ["בִשְׁמִי","me-by-name"],
@@ -1091,7 +1091,7 @@ var frontJST = [
     ["אֵלַי","unto-me"],
     ["וּשְׁמוֹ","and-his-name"],
     ["מוֹרוֹנִי","Moroni"],
-  ]},
+  ], english:"He also said that the fulness of the everlasting Gospel was contained in it, as delivered by the Savior to the ancient inhabitants; “Also, that there were two stones in silver bows—and these stones, fastened to a breastplate, constituted what is called the Urim and Thummim—deposited with the plates; and the possession and use of these stones were what constituted ‘seers’ in ancient or former times; and that God had prepared them for the purpose of translating the book. … “Again, he told me, that when I got those plates of which he had spoken—for the time that they should be obtained was not yet fulfilled—I should not show them to any person; neither the breastplate with the Urim and Thummim; only to those to whom I should be commanded to show them; if I did I should be destroyed."},
   { num:"י", words:[
     ["וְכִי","and-that"],
     ["יֵשׁ","there-was"],
@@ -1147,7 +1147,7 @@ var frontJST = [
     ["לְיוֹשְׁבֵי","unto-the-inhabitants-of"],
     ["הָאָרֶץ","the-land"],
     ["הַקַּדְמוֹנִים","the-ancient"],
-  ]},
+  ], english:"While he was conversing with me about the plates, the vision was opened to my mind that I could see the place where the plates were deposited, and that so clearly and distinctly that I knew the place again when I visited it. “After this communication, I saw the light in the room begin to gather immediately around the person of him who had been speaking to me, and it continued to do so until the room was again left dark, except just around him; when, instantly I saw, as it were, a conduit open right up into heaven, and he ascended till he entirely disappeared, and the room was left as it had been before this heavenly light had made its appearance. “I lay musing on the singularity of the scene, and marveling greatly at what had been told to me by this extraordinary messenger; when, in the midst of my meditation, I suddenly discovered that my room was again beginning to get lighted, and in an instant, as it were, the same heavenly messenger was again by my bedside."},
   { num:"יג", words:[
     ["וַיֹּאמֶר","and-he-said"],
     ["גַּם־כִּי","also-that"],
@@ -1200,7 +1200,7 @@ var frontJST = [
     ["לְקַחְתָּם","to-take-them"],
     ["לֹא־אַרְאֵם","not-should-I-show-them"],
     ["לְאִישׁ","to-any-man"],
-  ]},
+  ], english:"“He commenced, and again related the very same things which he had done at his first visit, without the least variation; which having done, he informed me of great judgments which were coming upon the earth, with great desolations by famine, sword, and pestilence; and that these grievous judgments would come on the earth in this generation. Having related these things, he again ascended as he had done before. “By this time, so deep were the impressions made on my mind, that sleep had fled from my eyes, and I lay overwhelmed in astonishment at what I had both seen and heard."},
   { num:"טז", words:[
     ["וְגַם","and-also"],
     ["לֹא","not"],
@@ -1214,7 +1214,7 @@ var frontJST = [
     ["וְאִם־אֶעֱשֶׂה","and-if-I-do"],
     ["כֵן","so"],
     ["אָשָׁמֵד","I-shall-be-destroyed"],
-  ]},
+  ], english:"But what was my surprise when again I beheld the same messenger at my bedside, and heard him rehearse or repeat over again to me the same things as before; and added a caution to me, telling me that Satan would try to tempt me (in consequence of the indigent circumstances of my father’s family), to get the plates for the purpose of getting rich. This he forbade me, saying that I must have no other object in view in getting the plates but to glorify God, and must not be influenced by any other motive than that of building his kingdom; otherwise I could not get them. “After this third visit, he again ascended into heaven as before, and I was again left to ponder on the strangeness of what I had just experienced; when almost immediately after the heavenly messenger had ascended from me for the third time, the cock crowed, and I found that day was approaching, so that our interviews must have occupied the whole of that night."},
   { num:"יז", words:[
     ["וַיְהִי","and-it-came-to-pass"],
     ["בְּדַבְּרוֹ","as-he-spoke"],
@@ -1291,7 +1291,7 @@ var frontJST = [
     ["הַמַּלְאָךְ","the-angel"],
     ["הַנִּפְלָא","the-wondrous"],
     ["הַזֶּה","this"],
-  ]},
+  ], english:"“I shortly after arose from my bed, and, as usual, went to the necessary labors of the day; but, in attempting to work as at other times, I found my strength so exhausted as to render me entirely unable. My father, who was laboring along with me, discovered something to be wrong with me, and told me to go home."},
   { num:"כא", words:[
     ["וַיְהִי","and-it-came-to-pass"],
     ["בְּתוֹךְ","in-the-midst-of"],
@@ -1321,7 +1321,7 @@ var frontJST = [
     ["הָרִאשׁוֹן","the-first"],
     ["בְּלִי","without"],
     ["שִׁנּוּי","variation"],
-  ]},
+  ], english:"I started with the intention of going to the house; but, in attempting to cross the fence out of the field where we were, my strength entirely failed me, and I fell helpless on the ground, and for a time was quite unconscious of anything. “The first thing that I can recollect was a voice speaking unto me, calling me by name. I looked up, and beheld the same messenger standing over my head, surrounded by light as before."},
   { num:"כג", words:[
     ["וּבְכַלּוֹתוֹ","and-when-he-finished"],
     ["הוֹדִיעַ","made-known"],
@@ -1351,7 +1351,7 @@ var frontJST = [
     ["כַּאֲשֶׁר","when/as"],
     ["עָשָׂה","he-did"],
     ["בָּרִאשׁוֹנָה","at-first"],
-  ]},
+  ], english:"He then again related unto me all that he had related to me the previous night, and commanded me to go to my father and tell him of the vision and commandments which I had received. “I obeyed; I returned to my father in the field, and rehearsed the whole matter to him. He replied to me that it was of God, and told me to go and do as commanded by the messenger."},
   { num:"כה", words:[
     ["וּבָעֵת","and-at-that-time"],
     ["הַהִיא","that"],
@@ -1368,7 +1368,7 @@ var frontJST = [
     ["עַל־אֲשֶׁר","upon-which"],
     ["רָאִיתִי","I-had-seen"],
     ["וְשָׁמָעְתִּי","and-heard"],
-  ]},
+  ], english:"I left the field, and went to the place where the messenger had told me the plates were deposited; and owing to the distinctness of the vision which I had had concerning it, I knew the place the instant that I arrived there. “Convenient to the village of Manchester, Ontario county, New York, stands a hill of considerable size, and the most elevated of any in the neighborhood. On the west side of this hill, not far from the top, under a stone of considerable size, lay the plates, deposited in a stone box."},
   { num:"כו", words:[
     ["אַךְ","but"],
     ["מַה־גָּדְלָה","how-great-was"],
@@ -1384,7 +1384,7 @@ var frontJST = [
     ["וּמְשַׁנֶּה","and-repeat"],
     ["אֶת־כָּל־הַדְּבָרִים","all-the-things"],
     ["כְּמִקֹּדֶם","as-before"],
-  ]},
+  ], english:"This stone was thick and rounding in the middle on the upper side, and thinner towards the edges, so that the middle part of it was visible above the ground, but the edge all around was covered with earth. “Having removed the earth, I obtained a lever, which I got fixed under the edge of the stone, and with a little exertion raised it up. I looked in, and there indeed did I behold the plates, the Urim and Thummim, and the breastplate, as stated by the messenger."},
   { num:"כז", words:[
     ["וַיּוֹסֶף","and-Joseph"],
     ["לְהַזְהִירֵנִי","a-warning-to-me"],
@@ -1401,7 +1401,7 @@ var frontJST = [
     ["אֶת־הַלּוּחוֹת","the-plates"],
     ["לְמַעַן","that"],
     ["הֵעָשֵׁר","getting-rich"],
-  ]},
+  ], english:"The box in which they lay was formed by laying stones together in some kind of cement. In the bottom of the box were laid two stones crossways of the box, and on these stones lay the plates and the other things with them."},
   { num:"כח", words:[
     ["וַיֶּאֱסֹר","and-he-forbade"],
     ["עָלַי","me"],
@@ -1491,7 +1491,7 @@ var frontJST = [
     ["אֵלַי","me"],
     ["לָלֶכֶת","to-go"],
     ["הַבַּיְתָה","the-home"],
-  ]},
+  ], english:"“I made an attempt to take them out, but was forbidden by the messenger, and was again informed that the time for bringing them forth had not yet arrived, neither would it, until four years from that time; but he told me that I should come to that place precisely in one year from that time, and that he would there meet with me, and that I should continue to do so until the time should come for obtaining the plates. “Accordingly, as I had been commanded, I went at the end of each year, and at each time I found the same messenger there, and received instruction and intelligence from him at each of our interviews, respecting what the Lord was going to do, and how and in what manner his kingdom was to be conducted in the last days. … “At length the time arrived for obtaining the plates, the Urim and Thummim, and the breastplate."},
   { num:"לג", words:[
     ["וָאֵצֵא","and-I-started"],
     ["בְּכַוָּנָה","with-the-intention"],
@@ -1621,7 +1621,7 @@ var frontJST = [
     ["הַגְּבֹהָה","the-highest"],
     ["מִכָּל־הַגְּבָעוֹת","of-all-the-hills"],
     ["בַּסְּבִיבָה","in-the-vicinity"],
-  ]},
+  ], english:"On the twenty-second day of September, one thousand eight hundred and twenty-seven, having gone as usual at the end of another year to the place where they were deposited, the same heavenly messenger delivered them up to me with this charge: that I should be responsible for them; that if I should let them go carelessly, or through any neglect of mine, I should be cut off; but that if I would use all my endeavors to preserve them, until he, the messenger, should call for them, they should be protected. “I soon found out the reason why I had received such strict charges to keep them safe, and why it was that the messenger had said that when I had done what was required at my hand, he would call for them. For no sooner was it known that I had them, than the most strenuous exertions were used to get them from me."},
   { num:"לט", words:[
     ["בְּצַד","on-the-side"],
     ["מַעֲרָב","west-of"],
@@ -1635,7 +1635,7 @@ var frontJST = [
     ["הַלּוּחוֹת","the-plates"],
     ["בְּתֵבַת","in-a-box-of"],
     ["אֶבֶן","stone"],
-  ]},
+  ], english:"Every stratagem that could be invented was resorted to for that purpose. The persecution became more bitter and severe than before, and multitudes were on the alert continually to get them from me if possible. But by the wisdom of God, they remained safe in my hands, until I had accomplished by them what was required at my hand."},
   { num:"מ", words:[
     ["וַיְהִי","and-it-came-to-pass"],
     ["כַּאֲשֶׁר","when/as"],
@@ -1872,7 +1872,7 @@ var frontJST = [
     ["בְּסֵפֶר","in-the-book-of"],
     ["הַפְּנִינָה","the-Pearl-of"],
     ["הַיְקָרָה","the-precious"],
-  ]},
+  ], english:"When, according to arrangements, the messenger called for them, I delivered them up to him; and he has them in his charge until this day, being the second day of May, one thousand eight hundred and thirty-eight.” For a more complete account, see Joseph Smith—History in the Pearl of Great Price."},
   { num:"נ", words:[
     ["וְהַסֵּפֶר","and-the-book"],
     ["הָעַתִּיק","the-ancient"],
@@ -1918,7 +1918,7 @@ var frontBrief = [
     ["וְנֶחְקַק","and-was-engraved"],
     ["עַל־לוּחוֹת","upon-plates-of"],
     ["מַתֶּכֶת","metal"],
-  ]},
+  ], english:"The Book of Mormon is a sacred record of peoples in ancient America and was engraved upon metal plates. Sources from which this record was compiled include the following: The Plates of Nephi, which were of two kinds: the small plates and the large plates. The former were more particularly devoted to spiritual matters and the ministry and teachings of the prophets, while the latter were occupied mostly by a secular history of the peoples concerned (1 Nephi 9:2–4). From the time of Mosiah, however, the large plates also included items of major spiritual importance."},
   { num:"ב", words:[
     ["וְאֵלֶּה","and-these-are"],
     ["הַמְּקוֹרוֹת","the-sources"],
@@ -1926,7 +1926,7 @@ var frontBrief = [
     ["מֵהֶם","them"],
     ["נֶאֱסַף","was-compiled"],
     ["הַסֵּפֶר","the-book"],
-  ]},
+  ], english:"The Plates of Mormon, which consist of an abridgment by Mormon from the large plates of Nephi, with many commentaries. These plates also contained a continuation of the history by Mormon and additions by his son Moroni. The Plates of Ether, which present a history of the Jaredites. This record was abridged by Moroni, who inserted comments of his own and incorporated the record with the general history under the title “Book of Ether.” The Plates of Brass brought by the people of Lehi from Jerusalem in 600 B.C."},
   { num:"ג", words:[
     ["לוּחוֹת","the-plates-of"],
     ["נֶפִי","Nephi"],
@@ -1961,7 +1961,7 @@ var frontBrief = [
     ["דִּבְרֵי","the-words-of"],
     ["רוּחַ","spirit"],
     ["נִכְבָּדִים","major-importance"],
-  ]},
+  ], english:"These contained “the five books of Moses, … and also a record of the Jews from the beginning, … down to the commencement of the reign of Zedekiah, king of Judah; and also the prophecies of the holy prophets” (1 Nephi 5:11–13). Many quotations from these plates, citing Isaiah and other biblical and nonbiblical prophets, appear in the Book of Mormon. The Book of Mormon comprises fifteen main parts or divisions, known, with one exception, as books, usually designated by the name of their principal author. The first portion (the first six books, ending with Omni) is a translation from the small plates of Nephi. Between the books of Omni and Mosiah is an insert called the Words of Mormon. This insert connects the record engraved on the small plates with Mormon’s abridgment of the large plates."},
   { num:"ה", words:[
     ["לוּחוֹת","the-plates-of"],
     ["מוֹרְמוֹן","Mormon"],
@@ -2003,7 +2003,7 @@ var frontBrief = [
     ["לָהֶם","them"],
     ["סֵפֶר","the-book-of"],
     ["עֵתֶר","Ether"],
-  ]},
+  ], english:"The longest portion, from Mosiah through Mormon chapter 7, is a translation of Mormon’s abridgment of the large plates of Nephi. The concluding portion, from Mormon chapter 8 to the end of the volume, was engraved by Mormon’s son Moroni, who, after finishing the record of his father’s life, made an abridgment of the Jaredite record (as the book of Ether) and later added the parts known as the book of Moroni. In or about the year A.D. 421, Moroni, the last of the Nephite prophet-historians, sealed the sacred record and hid it up unto the Lord, to be brought forth in the latter days, as predicted by the voice of God through His ancient prophets. In A.D."},
   { num:"ז", words:[
     ["לוּחוֹת","the-plates-of"],
     ["הַנְּחֹשֶׁת","the-brass"],
@@ -2049,7 +2049,7 @@ var frontBrief = [
     ["נִמְצָאִים","are-found"],
     ["בְּסֵפֶר","in-the-book-of"],
     ["מוֹרְמוֹן","Mormon"],
-  ]},
+  ], english:"1823, this same Moroni, then a resurrected personage, visited the Prophet Joseph Smith and subsequently delivered the engraved plates to him. About this edition: The original title page, immediately preceding the contents page, is taken from the plates and is part of the sacred text. Introductions in a non-italic typeface, such as in 1 Nephi and immediately preceding Mosiah chapter 9, are also part of the sacred text. Introductions in italics, such as in chapter headings, are not original to the text but are study helps included for convenience in reading. Some minor errors in the text have been perpetuated in past editions of the Book of Mormon. This edition contains corrections that seem appropriate to bring the material into conformity with prepublication manuscripts and early editions edited by the Prophet Joseph Smith."},
   { num:"ט", words:[
     ["סֵפֶר","the-book-of"],
     ["מוֹרְמוֹן","Mormon"],
