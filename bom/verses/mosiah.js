@@ -1094,7 +1094,7 @@ var mo_ch15Verses = [
     ["הָאָב","the-Father"],["כִּי","because"],["הוֹרָה","teaching"],["בְּכֹחַ","by-the-power-of"],["אֱלֹהִים","God"],["וְהַבֵּן","and-the-Son"],["בַּעֲבוּר","because-of"],["הַבָּשָׂר","the-flesh"],["יִהְיֶה","thus-becoming"],["לָאָב","the-Father"],["וּלְבֵן","and-the-Son"]
   ]},
   { num: "ד", words: [
-    ["וְהֵמָּה","and-they-are"],["אֵל","God"],["אֶחָד","one"],["הוּא","he/it"],["אֲבִי","the-Eternal-Father-of"],["עוֹלָם","eternal"],["שָׁמַיִם","the-heavens"],["וָאָרֶץ","and-earth"]
+    ["וְהֵמָּה","and-they-are"],["אֵל","God"],["אֶחָד","one"],["הוּא","—"],["אֲבִי","Father-of"],["עוֹלָם","eternity"],["שָׁמַיִם","the-heavens"],["וָאָרֶץ","and-earth"]
   ]},
   { num: "ה", words: [
     ["וְכֵן","and-thus"],["הַבָּשָׂר","the-flesh"],["נִכְנָע","becoming-subject"],["לָרוּחַ","unto-the-Spirit"],["וְהַבֵּן","and-the-Son"],["לָאָב","to-the-Father"],["בִּהְיוֹתָם","being"],["אֵל","one-God"],["אֶחָד","one"],["יִסְבֹּל","he-shall-suffer"],["מַסָּה","probation"],["וְלֹא","and-yields-not"],["יִכָּנַע","he-shall-yield"],["לַמַּסָּה","to-the-temptation"],["כִּי־אִם","but-if"],["יִסְבֹּל","he-shall-suffer"],["לְהֵלָעֵג","to-be-mocked"],["וּלְהֻכּוֹת","and-scourged"],["וּלְהִדָּחוֹת","and-cast-out"],["וּלְהִכָּחֵשׁ","and-disowned"],["מֵעַמּוֹ","by-His-people"]
