@@ -1,4 +1,4 @@
-const CACHE_NAME = 'standard-works-v62';
+const CACHE_NAME = 'standard-works-v63';
 
 const CORE_ASSETS = [
   '/StandardWorks/index.html',
@@ -16,7 +16,36 @@ const CORE_ASSETS = [
   '/StandardWorks/_supplement.json',
   '/StandardWorks/crossrefs_engine.js',
   '/StandardWorks/nav_engine.js',
-  '/StandardWorks/nav_engine.css'
+  '/StandardWorks/nav_engine.css',
+  // BOM
+  '/StandardWorks/bom/bom.html',
+  '/StandardWorks/bom/manifest.json',
+  '/StandardWorks/bom/official_verses.js',
+  '/StandardWorks/bom/scripture_verses.js',
+  '/StandardWorks/bom/chapter_headings.js',
+  '/StandardWorks/bom/chapter_headings_heb.js',
+  '/StandardWorks/bom/roots_glossary.js',
+  '/StandardWorks/bom/crossrefs.js',
+  '/StandardWorks/bom/topical_guide.js',
+  '/StandardWorks/bom/verses/frontmatter.js',
+  '/StandardWorks/bom/verses/1nephi.js',
+  '/StandardWorks/bom/verses/2nephi.js',
+  '/StandardWorks/bom/verses/3nephi.js',
+  '/StandardWorks/bom/verses/4nephi.js',
+  '/StandardWorks/bom/verses/alma.js',
+  '/StandardWorks/bom/verses/enos.js',
+  '/StandardWorks/bom/verses/ether.js',
+  '/StandardWorks/bom/verses/helaman.js',
+  '/StandardWorks/bom/verses/jacob.js',
+  '/StandardWorks/bom/verses/jarom.js',
+  '/StandardWorks/bom/verses/mormon.js',
+  '/StandardWorks/bom/verses/moroni.js',
+  '/StandardWorks/bom/verses/mosiah.js',
+  '/StandardWorks/bom/verses/omni.js',
+  '/StandardWorks/bom/verses/words_of_mormon.js',
+  '/StandardWorks/bom/images/cover-dual.jpg',
+  '/StandardWorks/bom/images/cover-hebrew.jpg',
+  '/StandardWorks/bom/images/cover-interlinear.jpg'
 ];
 
 // Install — cache core assets
