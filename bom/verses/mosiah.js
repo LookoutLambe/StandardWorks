@@ -1091,7 +1091,7 @@ var mo_ch15Verses = [
     ["וּבַעֲבוּר","and-because"],["שָׁכַן","He-dwells"],["בַּבָּשָׂר","in-the-flesh"],["יִקָּרֵא","He-shall-be-called"],["בֶּן־אֱלֹהִים","the-Son-of-God"],["וְהַבָּשָׂר","and-the-flesh"],["נִכְנָע","being-subject"],["לִרְצוֹן","to-the-will-of"],["הָאָב","the-Father"],["בִּהְיוֹתוֹ","being"],["הָאָב","the-Father"],["וְהַבֵּן","and-the-Son"]
   ]},
   { num: "ג", words: [
-    ["הָאָב","the-Father"],["כִּי","because"],["הוֹרָה","teaching"],["בְּכֹחַ","by-the-power-of"],["אֱלֹהִים","God"],["וְהַבֵּן","and-the-Son"],["בַּעֲבוּר","because-of"],["הַבָּשָׂר","the-flesh"],["וַיְהִי","and-it-came-to-pass"],["לְאָב","the-Father"],["וּלְבֵן","and-Laban"]
+    ["הָאָב","the-Father"],["כִּי","because"],["הוֹרָה","teaching"],["בְּכֹחַ","by-the-power-of"],["אֱלֹהִים","God"],["וְהַבֵּן","and-the-Son"],["בַּעֲבוּר","because-of"],["הַבָּשָׂר","the-flesh"],["וַיְהִי","being"],["לְאָב","the-Father"],["וּלְבֵן","and-the-Son"]
   ]},
   { num: "ד", words: [
     ["וְהֵמָּה","and-they-are"],["אֵל","God"],["אֶחָד","one"],["הוּא","he/it"],["אֲבִי","the-Eternal-Father-of"],["עוֹלָם","eternal"],["שָׁמַיִם","the-heavens"],["וָאָרֶץ","and-earth"]
@@ -1106,7 +1106,7 @@ var mo_ch15Verses = [
     ["כֵּן","so/thus"],["יוּבַל","He-shall-be-led"],["וְיִצָּלֵב","crucified"],["וְיוּמַת","and-slain"],["וְהַבָּשָׂר","the-flesh"],["נִכְנָע","becoming-subject"],["עַד־מָוֶת","even-unto-death"],["וְרָצוֹן","the-will-of"],["הַבֵּן","the-Son"],["נִבְלָע","being-swallowed-up"],["בִּרְצוֹן","in-the-will-of"],["הָאָב","the-Father"]
   ]},
   { num: "ח", words: [
-    ["וְכֵן","and-thus"],["יְנַתֵּק","he-shall-break"],["אֱלֹהִים","God"],["אֶת־מוֹסְרוֹת","the-bands-of"],["הַמָּוֶת","the-death"],["בְּנַצְּחוֹ","having-gained-the-victory-over"],["אֶת־הַמָּוֶת","the-death"],["וַיִּתֵּן","and-he-gave"],["לַבֵּן","the-Laban"],["כֹּחַ","power"],["לְהַפְגִּיעַ","to-make-intercession"],["בְּעַד","for"],["בְּנֵי־הָאָדָם","the-children-of-men"]
+    ["וְכֵן","and-thus"],["יְנַתֵּק","he-shall-break"],["אֱלֹהִים","God"],["אֶת־מוֹסְרוֹת","the-bands-of"],["הַמָּוֶת","the-death"],["בְּנַצְּחוֹ","having-gained-the-victory-over"],["אֶת־הַמָּוֶת","the-death"],["וַיִּתֵּן","and-he-gave"],["לַבֵּן","the-Son"],["כֹּחַ","power"],["לְהַפְגִּיעַ","to-make-intercession"],["בְּעַד","for"],["בְּנֵי־הָאָדָם","the-children-of-men"]
   ]},
   { num: "ט", words: [
     ["בַּעֲלוֹתוֹ","having-ascended"],["הַשָּׁמַיְמָה","unto-the-heavens"],["מָלֵא","full-of"],["חֶסֶד","mercy"],["וְרַחֲמִים","and-compassion"],["עַל־בְּנֵי","upon-the-children-of"],["הָאָדָם","the-men"],["עֹמֵד","standing"],["בֵּינָם","betwixt-them"],["וּבֵין","and"],["הַמִּשְׁפָּט","the-judgment"],["אַחֲרֵי","after"],["נִתֵּק","broken"],["אֶת־מוֹסְרוֹת","the-bands-of"],["הַמָּוֶת","the-death"],["וַיִּשָּׂא","and-he-cast"],["אֶת־עֲוֹנָם","their-iniquity"],["וּפִשְׁעֵיהֶם","and-their-transgressions"],["וַיִּפְדֵּם","having-redeemed-them"],["וַיְמַלֵּא","and-satisfied"],["אֶת־דְּרִישׁוֹת","the-demands-of"],["הַצֶּדֶק","the-justice"]
@@ -1490,7 +1490,7 @@ var mo_ch19Verses = [
 renderVerseSet(mo_ch19Verses, 'mo-ch19-verses');
 var mo_ch20Verses = [
   { num: "א", words: [
-    ["וַיְהִי","now-there-was"],["מָקוֹם","a-place"],["בְּשֶׁמְלוֹן","in-Shemlon"],["אֲשֶׁר","which"],["בְּנוֹת","the-daughters-of"],["הַלָּמָנִים","the-Lamanites"],["נִקְהֲלוּ","gathered"],["שָׁמָּה","there"],["לָשִׁיר","to-sing"],["וְלָחוּל","and-to-dance"],["וּלְשַׂמֵּחַ","and-to-make-themselves-merry"],["אֶת","[ACC]"],["לִבָּן","Laban"]
+    ["וַיְהִי","now-there-was"],["מָקוֹם","a-place"],["בְּשֶׁמְלוֹן","in-Shemlon"],["אֲשֶׁר","which"],["בְּנוֹת","the-daughters-of"],["הַלָּמָנִים","the-Lamanites"],["נִקְהֲלוּ","gathered"],["שָׁמָּה","there"],["לָשִׁיר","to-sing"],["וְלָחוּל","and-to-dance"],["וּלְשַׂמֵּחַ","and-to-make-merry"],["אֶת","[ACC]"],["לִבָּן","their-hearts"]
   ]},
   { num: "ב", words: [
     ["וַיְהִי","and-it-came-to-pass"],["הַיּוֹם","that-the-there-was-one-day"],["וַתִּקָּהֵלְנָה","a-small-number-of-them-gathered-together"],["מִסְפָּר","a-number"],["מְעַט","small"],["מֵהֵנָּה","of-them"],["לָשִׁיר","to-sing"],["וְלָחוּל","and-to-dance"]
