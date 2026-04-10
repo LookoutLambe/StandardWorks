@@ -1,37 +1,45 @@
-const CACHE = 'bom-v1';
+const CACHE = 'bom-v2';
 const ASSETS = [
-  '/StandardWorks/bom/bom.html',
-  '/StandardWorks/bom/official_verses.js',
-  '/StandardWorks/bom/scripture_verses.js',
-  '/StandardWorks/bom/chapter_headings.js',
-  '/StandardWorks/bom/chapter_headings_heb.js',
-  '/StandardWorks/bom/roots_glossary.js',
-  '/StandardWorks/bom/crossrefs.js',
-  '/StandardWorks/bom/topical_guide.js',
-  '/StandardWorks/bom/verses/frontmatter.js',
-  '/StandardWorks/bom/verses/1nephi.js',
-  '/StandardWorks/bom/verses/2nephi.js',
-  '/StandardWorks/bom/verses/3nephi.js',
-  '/StandardWorks/bom/verses/4nephi.js',
-  '/StandardWorks/bom/verses/alma.js',
-  '/StandardWorks/bom/verses/enos.js',
-  '/StandardWorks/bom/verses/ether.js',
-  '/StandardWorks/bom/verses/helaman.js',
-  '/StandardWorks/bom/verses/jacob.js',
-  '/StandardWorks/bom/verses/jarom.js',
-  '/StandardWorks/bom/verses/mormon.js',
-  '/StandardWorks/bom/verses/moroni.js',
-  '/StandardWorks/bom/verses/mosiah.js',
-  '/StandardWorks/bom/verses/omni.js',
-  '/StandardWorks/bom/verses/words_of_mormon.js',
-  '/StandardWorks/bom/images/cover-dual.jpg',
-  '/StandardWorks/bom/images/cover-hebrew.jpg',
-  '/StandardWorks/bom/images/cover-interlinear.jpg'
+  './bom.html',
+  './official_verses.js',
+  './scripture_verses.js',
+  './chapter_headings.js',
+  './chapter_headings_heb.js',
+  './roots_glossary.js',
+  './crossrefs.js',
+  './topical_guide.js',
+  './verses/frontmatter.js',
+  './verses/1nephi.js',
+  './verses/2nephi.js',
+  './verses/3nephi.js',
+  './verses/4nephi.js',
+  './verses/alma.js',
+  './verses/enos.js',
+  './verses/ether.js',
+  './verses/helaman.js',
+  './verses/jacob.js',
+  './verses/jarom.js',
+  './verses/mormon.js',
+  './verses/moroni.js',
+  './verses/mosiah.js',
+  './verses/omni.js',
+  './verses/words_of_mormon.js',
+  './images/cover-dual.jpg',
+  './images/cover-hebrew.jpg',
+  './images/cover-interlinear.jpg'
 ];
 
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting())
+    caches.open(CACHE).then(cache =>
+      Promise.all(
+        ASSETS.map(url =>
+          cache.add(new Request(url, {cache: 'reload'})).catch(err => {
+            console.warn('[SW] Failed to cache:', url, err);
+          })
+        )
+      )
+    ).then(() => self.skipWaiting())
   );
 });
 
@@ -44,13 +52,18 @@ self.addEventListener('activate', e => {
 });
 
 self.addEventListener('fetch', e => {
+  // Only handle same-origin requests
+  if (!e.request.url.startsWith(self.location.origin)) return;
   e.respondWith(
-    caches.match(e.request).then(cached => cached || fetch(e.request).then(res => {
-      if (res.ok) {
-        const clone = res.clone();
-        caches.open(CACHE).then(c => c.put(e.request, clone));
-      }
-      return res;
-    }))
+    caches.match(e.request).then(cached => {
+      if (cached) return cached;
+      return fetch(e.request).then(res => {
+        if (res && res.ok) {
+          const clone = res.clone();
+          caches.open(CACHE).then(c => c.put(e.request, clone));
+        }
+        return res;
+      }).catch(() => cached);
+    })
   );
 });
