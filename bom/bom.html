@@ -3516,6 +3516,7 @@ body.dark-mode #return-banner a:hover { background:#c8a84e; }
   <button id="btn-heb" onclick="setMode('heb')">Hebrew Only<br>עִבְרִית</button>
   <button id="btn-dual" onclick="setMode('dual')">Dual<br>כָּפוּל</button>
   <button id="btn-translit" onclick="toggleTranslit()" title="Show/hide transliteration">Transliterate<br>תַּעְתִּיק</button>
+  <button id="btn-nikkud" onclick="toggleNikkud()" title="Show/hide vowel points">No Nikkud<br>עִיצּוּרִים</button>
 </div>
 
 <script src="official_verses.js"></script>
@@ -3810,6 +3811,16 @@ function _ensureChapterRendered(chapId) {
       }
     }
   }
+  // Strip nikkud from newly rendered chapter if no-nikkud mode is active
+  if (document.body.classList.contains('no-nikkud')) {
+    var chapEl = document.getElementById('panel-' + chapId);
+    if (chapEl) {
+      chapEl.querySelectorAll('.word-unit[data-h]').forEach(function(wu) {
+        var hwEl = wu.querySelector('.hw');
+        if (hwEl) hwEl.textContent = wu.getAttribute('data-h').replace(/[\u0591-\u05BD\u05BF-\u05C7]/g, '');
+      });
+    }
+  }
 }
 
 function setMode(mode) {
@@ -3837,6 +3848,18 @@ function toggleTranslit() {
   } catch(e) {}
 }
 
+function toggleNikkud() {
+  var isNow = document.body.classList.toggle('no-nikkud');
+  document.getElementById('btn-nikkud').classList.toggle('active', isNow);
+  document.querySelectorAll('.word-unit[data-h]').forEach(function(wu) {
+    var hwEl = wu.querySelector('.hw');
+    if (!hwEl) return;
+    var orig = wu.getAttribute('data-h');
+    hwEl.textContent = isNow ? orig.replace(/[\u0591-\u05BD\u05BF-\u05C7]/g, '') : orig;
+  });
+  try { localStorage.setItem('bom-no-nikkud', isNow ? '1' : '0'); } catch(e) {}
+}
+
 function setSize(val) {
   document.getElementById('page').style.fontSize = val + '%';
   try { localStorage.setItem('bom-font-size', val); } catch(e) {}
@@ -3851,6 +3874,13 @@ try {
     document.body.classList.add('hide-translit');
   }
 } catch(e) { document.body.classList.add('hide-translit'); }
+// Restore no-nikkud state (default: off)
+try {
+  if (localStorage.getItem('bom-no-nikkud') === '1') {
+    document.getElementById('btn-nikkud').classList.add('active');
+    document.body.classList.add('no-nikkud');
+  }
+} catch(e) {}
 </script>
 <script src="verses/frontmatter.js"></script>
 <script src="verses/1nephi.js"></script>
@@ -5265,7 +5295,7 @@ function openXrefPanel(ref, sourceVerseKey, hebrewRoot) {
       if (!engMeaning) {
         var glossEntry = window._rootGlossaryData && window._rootGlossaryData[displayText];
         if (!glossEntry) {
-          var stripped = displayText.replace(/[\u0591-\u05C7]/g, '');
+          var stripped = displayText.replace(/[\u0591-\u05BD\u05BF-\u05C7]/g, '');
           glossEntry = window._rootGlossaryData && window._rootGlossaryData[stripped];
         }
         engMeaning = glossEntry ? glossEntry.meaning : '';
@@ -5397,7 +5427,7 @@ function openRootXrefPanel(root) {
     if (!engMeaning) {
       var glossEntry = window._rootGlossaryData && window._rootGlossaryData[displayRoot];
       if (!glossEntry) {
-        var stripped = displayRoot.replace(/[\u0591-\u05C7]/g, '');
+        var stripped = displayRoot.replace(/[\u0591-\u05BD\u05BF-\u05C7]/g, '');
         glossEntry = window._rootGlossaryData && window._rootGlossaryData[stripped];
       }
       engMeaning = glossEntry ? glossEntry.meaning : '';
@@ -5770,7 +5800,7 @@ function transliterate(heb) {
   var hasNikkud = /[\u05B0-\u05BB]/.test(heb);
   if (hasNikkud) return _tlPointed(heb);
   // For unpointed text, check known dictionary
-  var clean = heb.replace(/[\u0591-\u05C7]/g, '');
+  var clean = heb.replace(/[\u0591-\u05BD\u05BF-\u05C7]/g, '');
   if (_tlKnown[clean]) return _tlKnown[clean];
   // Unpointed fallback: consonants with 'a' insertion
   var cmap = {'א':'','ב':'v','ג':'g','ד':'d','ה':'h','ו':'v','ז':'z','ח':'ch','ט':'t',
@@ -5786,7 +5816,7 @@ function transliterate(heb) {
 // Nikkud-aware transliterator: reads vowel points to produce accurate pronunciation
 function _tlPointed(text) {
   // Tetragrammaton: always read as Adonai
-  var stripped = text.replace(/[\u0591-\u05C7]/g, '');
+  var stripped = text.replace(/[\u0591-\u05BD\u05BF-\u05C7]/g, '');
   if (stripped === '\u05D9\u05D4\u05D5\u05D4') return 'Adonai'; // יהוה
   // Pratico & Van Pelt transliteration scheme (3rd Ed.)
   // Short vowels: plain. Changeable long: macron. Hatef: breve.
@@ -6033,11 +6063,17 @@ document.addEventListener('keydown', function(e) {
     }
   };
   window.addEventListener('hashchange', handleHash);
-  // Always start on landing page — user can resume via Continue Reading button
-  // Clear any leftover hash so landing is shown
-  if (window.location.hash) {
-    history.replaceState(null, '', window.location.pathname);
-  }
+  // On load: defer so all navTo wrappers (fade animation etc.) are set up first
+  setTimeout(function() {
+    if (window.location.hash) {
+      handleHash();
+    } else {
+      var saved = localStorage.getItem('bom-last-chapter');
+      if (saved && chapterOrder.indexOf(saved) >= 0) {
+        navTo(saved);
+      }
+    }
+  }, 0);
 })();
 
 // 2. CHAPTER PAGE-FLIP / FADE-IN ANIMATION
@@ -6209,7 +6245,7 @@ document.addEventListener('keydown', function(e) {
 
   // Strip Hebrew diacritics (nikkud/cantillation) to get consonantal form
   function stripNikkud(s) {
-    return s.replace(/[\u0591-\u05C7]/g, '');
+    return s.replace(/[\u0591-\u05BD\u05BF-\u05C7]/g, '');
   }
 
   // Normalize final Hebrew letters to regular form for root matching
@@ -6605,7 +6641,7 @@ function closeSearch() {
   // Keyboard handling moved to unified handler above
 })();
 
-function _stripNikkud(s) { return s.replace(/[\u0591-\u05C7]/g, ''); }
+function _stripNikkud(s) { return s.replace(/[\u0591-\u05BD\u05BF-\u05C7]/g, ''); }
 
 function doSearch(query) {
   var results = document.getElementById('search-results');
@@ -6728,7 +6764,7 @@ function buildGlossaryIndex() {
       displayHeb = sEntry.w;
       displayTranslit = sEntry.x || '';
       if (!cInfo.meaning) {
-        var consRoot = (sEntry.w || '').replace(/[\u0591-\u05C7]/g, '');
+        var consRoot = (sEntry.w || '').replace(/[\u0591-\u05BD\u05BF-\u05C7]/g, '');
         cInfo = curated[consRoot] || {};
       }
     }
@@ -6780,9 +6816,9 @@ function renderGlossaryList() {
 
   var filtered = glossaryIndex.filter(function(e) {
     if (searchVal) {
-      var svNorm = normFinals(searchVal.replace(/[\u0591-\u05C7]/g, ''));
-      var rootNorm = e.root.replace(/[\u0591-\u05C7]/g, '');
-      var dispNorm = (e.displayHeb || '').replace(/[\u0591-\u05C7]/g, '');
+      var svNorm = normFinals(searchVal.replace(/[\u0591-\u05BD\u05BF-\u05C7]/g, ''));
+      var rootNorm = e.root.replace(/[\u0591-\u05BD\u05BF-\u05C7]/g, '');
+      var dispNorm = (e.displayHeb || '').replace(/[\u0591-\u05BD\u05BF-\u05C7]/g, '');
       return rootNorm.indexOf(svNorm) === 0 || dispNorm.indexOf(svNorm) === 0 ||
              e.root.toLowerCase().indexOf(searchVal) >= 0 ||
              e.meaning.toLowerCase().indexOf(searchVal) >= 0 ||
@@ -7006,7 +7042,7 @@ var _tgData = null;
 var _tgIndex = null; // reverse lookup: stripped form -> entry id
 var _tgExpandedId = null;
 
-function _tgStripNikkud(s) { return s.replace(/[\u0591-\u05C7]/g, ''); }
+function _tgStripNikkud(s) { return s.replace(/[\u0591-\u05BD\u05BF-\u05C7]/g, ''); }
 function _tgNormFinals(s) { return s.replace(/ך/g,'כ').replace(/ם/g,'מ').replace(/ן/g,'נ').replace(/ף/g,'פ').replace(/ץ/g,'צ'); }
 
 var TG_ALEPH_BET = ['א','ב','ג','ד','ה','ו','ז','ח','ט','י','כ','ל','מ','נ','ס','ע','פ','צ','ק','ר','ש','ת'];
