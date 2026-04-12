@@ -1,4 +1,4 @@
-const CACHE = 'bom-v4';
+const CACHE = 'bom-v5';
 const ASSETS = [
   './bom.html',
   './official_verses.js',

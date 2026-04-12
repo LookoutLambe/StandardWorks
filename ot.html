@@ -342,6 +342,8 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
   .gl { font-size: 0.68em; }
   .verse-num { min-width: 24px; font-size: 1em; }
   .controls-top { padding: 5px 8px; }
+  .controls-bottom { flex-wrap: wrap; justify-content: center; gap: 4px; padding: 4px 6px; }
+  .controls-bottom button { min-height: 40px; padding: 4px 8px; }
   .landing-section-grid { grid-template-columns: repeat(7, 1fr); }
   #audio-bar { padding: 4px 8px; }
   #audio-bar .audio-label { font-size: 0.7em; }
@@ -751,6 +753,7 @@ body.dark-mode #return-banner a:hover { background:#c8a84e; }
   <button id="btn-heb" onclick="setMode('heb')">Hebrew Only<br>עִבְרִית</button>
   <button id="btn-dual" onclick="setMode('dual')">Dual<br>כָּפוּל</button>
   <button id="btn-translit" onclick="toggleTranslit()" title="Show/hide transliteration">Transliterate<br>תַּעְתִּיק</button>
+  <button id="btn-nikkud" onclick="toggleNoNikkud()" title="Hide vowel points">No Nikkud<br>עִיצּוּרִים</button>
 </div>
 
 <div class="page" id="page">
@@ -914,6 +917,9 @@ function getChapterLabel(id) {
 
 // === RENDERING ENGINE ===
 
+window._noNikkud = false;
+function _stripNikkudDisplay(s) { return s.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, ''); }
+
 function makeWordUnit(h, e, isSof) {
   if (h === '\u05C3') return '';
   h = h.replace(/\u05C3/g, '');
@@ -921,7 +927,8 @@ function makeWordUnit(h, e, isSof) {
   div.className = 'word-unit' + (isSof ? ' sof' : '');
   div.setAttribute('data-h', h);
   var gloss = e.replace(/-/g, ' ');
-  div.innerHTML = '<span class="hw">' + h + '</span><span class="tl"></span><span class="gl">' + gloss + '</span>';
+  var displayH = window._noNikkud ? _stripNikkudDisplay(h) : h;
+  div.innerHTML = '<span class="hw">' + displayH + '</span><span class="tl"></span><span class="gl">' + gloss + '</span>';
   return div;
 }
 
@@ -1163,6 +1170,18 @@ function toggleTranslit() {
   try { localStorage.setItem('ot-show-translit', btn.classList.contains('active') ? '1' : '0'); } catch(e) {}
 }
 
+function toggleNoNikkud() {
+  window._noNikkud = !window._noNikkud;
+  document.getElementById('btn-nikkud').classList.toggle('active', window._noNikkud);
+  document.querySelectorAll('.word-unit').forEach(function(unit) {
+    var hw = unit.querySelector('.hw');
+    if (!hw) return;
+    var orig = unit.getAttribute('data-h');
+    if (orig) hw.textContent = window._noNikkud ? _stripNikkudDisplay(orig) : orig;
+  });
+  try { localStorage.setItem('ot-no-nikkud', window._noNikkud ? '1' : '0'); } catch(e) {}
+}
+
 function setSize(val) {
   document.getElementById('page').style.fontSize = val + '%';
   try { localStorage.setItem('ot-font-size', val); } catch(e) {}
@@ -1199,6 +1218,12 @@ try {
 try {
   var savedSize = localStorage.getItem('ot-font-size');
   if (savedSize) { document.getElementById('page').style.fontSize = savedSize + '%'; document.getElementById('sizeSlider').value = savedSize; }
+} catch(e) {}
+try {
+  if (localStorage.getItem('ot-no-nikkud') === '1') {
+    window._noNikkud = true;
+    document.getElementById('btn-nikkud').classList.add('active');
+  }
 } catch(e) {}
 </script>
 
@@ -2465,7 +2490,8 @@ NavEngine.init({
 </script>
 <script>
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js?v=65').then(function(r){r.update();});
+  navigator.serviceWorker.register('service-worker.js?v=66').then(function(r){r.update();});
+  navigator.serviceWorker.addEventListener('controllerchange', function() { window.location.reload(); });
 }
 </script>
 <script>

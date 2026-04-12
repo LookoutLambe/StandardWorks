@@ -7686,6 +7686,7 @@ if ('serviceWorker' in navigator) {
     }).catch(function(err) {
       console.warn('[PWA] Service worker registration failed:', err);
     });
+    navigator.serviceWorker.addEventListener('controllerchange', function() { window.location.reload(); });
   });
 }
 </script>
