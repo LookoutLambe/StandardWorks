@@ -6028,6 +6028,8 @@ document.addEventListener('keydown', function(e) {
   function handleHash() {
     var hash = window.location.hash.replace('#', '');
     if (!hash) return;
+    // #home always shows the landing page
+    if (hash === 'home') { history.replaceState(null, '', window.location.pathname); return; }
     // Support friendly names: #alma-32 → al-ch32, #1-nephi-3 → ch3, #mosiah-29 → mo-ch29
     var friendlyMap = {
       '1-nephi': 'ch', '2-nephi': '2n-ch', 'jacob': 'jc-ch',
