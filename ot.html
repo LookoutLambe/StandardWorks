@@ -137,6 +137,7 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
 .verse-english ::-moz-selection { background: transparent !important; color: inherit !important; }
 
 .verse.highlighted { background: var(--highlight); border-radius: 4px; }
+.word-unit.audio-active { background: rgba(200, 168, 78, 0.45); border-radius: 3px; outline: 1px solid rgba(200, 168, 78, 0.7); }
 
 /* === CONTROLS === */
 .controls-top {
@@ -1521,6 +1522,60 @@ function closeAllPanels() {
         }
       });
     }, 20);
+  };
+})();
+
+// AUDIO WORD HIGHLIGHT + AUTO-ADVANCE
+(function() {
+  var player = document.getElementById('audio-player');
+  var _words = [];
+  var _activeIdx = -1;
+
+  function loadWords() {
+    var panel = currentChapterId ? document.getElementById('panel-' + currentChapterId) : null;
+    _words = panel ? Array.from(panel.querySelectorAll('.word-unit')) : [];
+    _activeIdx = -1;
+  }
+
+  function clearHighlight() {
+    if (_activeIdx >= 0 && _words[_activeIdx]) _words[_activeIdx].classList.remove('audio-active');
+    _activeIdx = -1;
+  }
+
+  player.addEventListener('play', function() {
+    if (!_words.length) loadWords();
+  });
+
+  player.addEventListener('timeupdate', function() {
+    if (!_words.length || !player.duration) return;
+    var idx = Math.min(Math.floor((player.currentTime / player.duration) * _words.length), _words.length - 1);
+    if (idx === _activeIdx) return;
+    clearHighlight();
+    _activeIdx = idx;
+    if (_words[idx]) {
+      _words[idx].classList.add('audio-active');
+      _words[idx].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  });
+
+  player.addEventListener('ended', function() {
+    clearHighlight();
+    var cur = currentChapterId;
+    if (!cur) return;
+    var idx = fullPageOrder.indexOf(cur);
+    var nextId = (idx >= 0 && idx < fullPageOrder.length - 1) ? fullPageOrder[idx + 1] : null;
+    if (nextId && nextId !== 'landing' && getAudioUrl(nextId)) {
+      navTo(nextId, 'next');
+      setTimeout(function() { loadWords(); player.play(); }, 700);
+    }
+  });
+
+  // Reset word list on every navigation
+  var _prevNavTo = window.navTo;
+  window.navTo = function(id, dir) {
+    clearHighlight();
+    _words = [];
+    _prevNavTo(id, dir);
   };
 })();
 
