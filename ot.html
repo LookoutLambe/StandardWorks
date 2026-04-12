@@ -1554,7 +1554,17 @@ function closeAllPanels() {
     _activeIdx = idx;
     if (_words[idx]) {
       _words[idx].classList.add('audio-active');
-      _words[idx].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // Scroll so the word stays centered between the fixed top/bottom bars
+      var el = _words[idx];
+      var rect = el.getBoundingClientRect();
+      var topBarH = 60, botBarH = 60;
+      var visibleH = window.innerHeight - topBarH - botBarH;
+      var wordCenter = rect.top + rect.height / 2;
+      var targetCenter = topBarH + visibleH / 2;
+      var diff = wordCenter - targetCenter;
+      if (Math.abs(diff) > rect.height) {
+        window.scrollBy({ top: diff, behavior: 'smooth' });
+      }
     }
   });
 
