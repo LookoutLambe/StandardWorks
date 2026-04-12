@@ -1548,12 +1548,18 @@ function closeAllPanels() {
 
   // Mechon Mamre audio begins with the cantor announcing the book/chapter name
   // before verse 1 starts — skip those intro seconds before highlighting
-  var INTRO_OFFSET = 10.5; // seconds before verse 1 begins (11 - 0.5 look-ahead)
-  var OUTRO_OFFSET = 8;   // seconds of closing after last verse
+  var OUTRO_OFFSET = 8; // seconds of closing after last verse
+
+  function getIntroOffset() {
+    // Chapter 1 of each book has a long intro (book name + chapter announcement)
+    // All other chapters just start immediately
+    var info = currentChapterId ? getBookChapter(currentChapterId) : null;
+    return (info && info.chapter === 1) ? 10.5 : 0;
+  }
 
   player.addEventListener('timeupdate', function() {
     if (!_words.length || !player.duration) return;
-    var effectiveTime = player.currentTime - INTRO_OFFSET;
+    var effectiveTime = player.currentTime - getIntroOffset();
     if (effectiveTime < 0) { clearHighlight(); return; } // still in intro
     var effectiveDuration = player.duration - INTRO_OFFSET - OUTRO_OFFSET;
     if (effectiveDuration <= 0) return;
