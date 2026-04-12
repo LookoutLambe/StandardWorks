@@ -2491,7 +2491,7 @@ NavEngine.init({
 <script>
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service-worker.js?v=66').then(function(r){r.update();});
-  navigator.serviceWorker.addEventListener('controllerchange', function() { window.location.reload(); });
+  var _swReady = false; window.addEventListener('load', function() { _swReady = true; }); navigator.serviceWorker.addEventListener('controllerchange', function() { if (_swReady) window.location.reload(); });
 }
 </script>
 <script>
