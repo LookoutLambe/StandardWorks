@@ -1,4 +1,4 @@
-const CACHE_NAME = 'standard-works-v63';
+const CACHE_NAME = 'standard-works-v64';
 
 const CORE_ASSETS = [
   '/StandardWorks/index.html',
@@ -56,11 +56,13 @@ self.addEventListener('install', event => {
   self.skipWaiting();
 });
 
-// Activate — purge ALL old caches and force clients to use new worker
+// Activate — purge only standard-works-* caches (leave bom-* caches alone)
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(keys =>
-      Promise.all(keys.map(k => k !== CACHE_NAME ? caches.delete(k) : null))
+      Promise.all(keys.map(k =>
+        k.startsWith('standard-works-') && k !== CACHE_NAME ? caches.delete(k) : null
+      ))
     ).then(() => self.clients.claim())
   );
 });

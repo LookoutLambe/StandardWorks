@@ -1,4 +1,4 @@
-const CACHE = 'bom-v3';
+const CACHE = 'bom-v4';
 const ASSETS = [
   './bom.html',
   './official_verses.js',
@@ -44,17 +44,14 @@ self.addEventListener('install', e => {
   );
 });
 
-// Activate: purge old caches, claim clients, then reload all open windows
+// Activate: purge only bom-* caches (leave standard-works-* caches alone)
 self.addEventListener('activate', e => {
   e.waitUntil(
     caches.keys().then(keys =>
-      Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
-    ).then(() => self.clients.claim()).then(() => {
-      // Tell all open tabs to reload so they get the fresh version
-      return self.clients.matchAll({type: 'window'}).then(clients => {
-        clients.forEach(client => client.navigate(client.url));
-      });
-    })
+      Promise.all(keys.map(k =>
+        k.startsWith('bom-') && k !== CACHE ? caches.delete(k) : null
+      ))
+    ).then(() => self.clients.claim())
   );
 });
 
