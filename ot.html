@@ -137,6 +137,7 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
 .verse-english ::-moz-selection { background: transparent !important; color: inherit !important; }
 
 .verse.highlighted { background: var(--highlight); border-radius: 4px; }
+.word-unit.audio-active { background: rgba(200, 168, 78, 0.45); border-radius: 3px; outline: 1px solid rgba(200, 168, 78, 0.7); }
 
 /* === CONTROLS === */
 .controls-top {
@@ -1521,6 +1522,102 @@ function closeAllPanels() {
         }
       });
     }, 20);
+  };
+})();
+
+// AUDIO WORD HIGHLIGHT + AUTO-ADVANCE (consonant-weighted timing)
+(function() {
+  var player = document.getElementById('audio-player');
+  var _words = [];
+  var _cumulative = []; // cumulative consonant-weight fractions [0, f1, f2, ..., 1]
+  var _activeIdx = -1;
+  var OUTRO_OFFSET = 8;
+
+  function stripCantillation(s) {
+    return (s || '').replace(/[\u0591-\u05C7]/g, '');
+  }
+
+  function loadWords() {
+    var panel = currentChapterId ? document.getElementById('panel-' + currentChapterId) : null;
+    _words = panel ? Array.from(panel.querySelectorAll('.word-unit')) : [];
+    _activeIdx = -1;
+    // Build consonant-weighted cumulative fractions
+    var weights = _words.map(function(el) {
+      var h = el.getAttribute('data-h') || '';
+      return Math.max(1, stripCantillation(h).length);
+    });
+    var total = weights.reduce(function(a, b) { return a + b; }, 0) || 1;
+    var sum = 0;
+    _cumulative = [0];
+    weights.forEach(function(w) { sum += w; _cumulative.push(sum / total); });
+  }
+
+  function findWordIdx(fraction) {
+    // Find which word's consonant-weighted window contains this fraction
+    for (var i = 0; i < _cumulative.length - 1; i++) {
+      if (fraction < _cumulative[i + 1]) return i;
+    }
+    return _words.length - 1;
+  }
+
+  function clearHighlight() {
+    if (_activeIdx >= 0 && _words[_activeIdx]) _words[_activeIdx].classList.remove('audio-active');
+    _activeIdx = -1;
+  }
+
+  function getIntroOffset() {
+    var info = currentChapterId ? getBookChapter(currentChapterId) : null;
+    return (info && info.chapter === 1) ? 12 : 0;
+  }
+
+  player.addEventListener('play', function() {
+    if (!_words.length) {
+      loadWords();
+      if (!_words.length) setTimeout(loadWords, 300);
+    }
+  });
+
+  player.addEventListener('timeupdate', function() {
+    if (!_words.length || !player.duration) return;
+    var introOffset = getIntroOffset();
+    var effectiveTime = player.currentTime - introOffset;
+    if (effectiveTime < 0) { clearHighlight(); return; }
+    var effectiveDuration = player.duration - introOffset - OUTRO_OFFSET;
+    if (effectiveDuration <= 0) return;
+    var fraction = Math.min(effectiveTime / effectiveDuration, 1);
+    var idx = findWordIdx(fraction);
+    if (idx === _activeIdx) return;
+    clearHighlight();
+    _activeIdx = idx;
+    if (_words[idx]) {
+      _words[idx].classList.add('audio-active');
+      var el = _words[idx];
+      var rect = el.getBoundingClientRect();
+      var topBarH = 60, botBarH = 60;
+      var visibleH = window.innerHeight - topBarH - botBarH;
+      var diff = (rect.top + rect.height / 2) - (topBarH + visibleH / 2);
+      if (Math.abs(diff) > rect.height) window.scrollBy({ top: diff, behavior: 'smooth' });
+    }
+  });
+
+  player.addEventListener('ended', function() {
+    clearHighlight();
+    var cur = currentChapterId;
+    if (!cur) return;
+    var idx = fullPageOrder.indexOf(cur);
+    var nextId = (idx >= 0 && idx < fullPageOrder.length - 1) ? fullPageOrder[idx + 1] : null;
+    if (nextId && nextId !== 'landing' && getAudioUrl(nextId)) {
+      navTo(nextId, 'next');
+      setTimeout(function() { loadWords(); player.play(); }, 700);
+    }
+  });
+
+  var _prevNavTo = window.navTo;
+  window.navTo = function(id, dir) {
+    clearHighlight();
+    _words = [];
+    _cumulative = [];
+    _prevNavTo(id, dir);
   };
 })();
 
