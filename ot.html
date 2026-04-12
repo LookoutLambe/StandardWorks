@@ -1548,7 +1548,7 @@ function closeAllPanels() {
 
   // Mechon Mamre audio begins with the cantor announcing the book/chapter name
   // before verse 1 starts — skip those intro seconds before highlighting
-  var INTRO_OFFSET = 11;  // seconds before verse 1 begins
+  var INTRO_OFFSET = 10.5; // seconds before verse 1 begins (11 - 0.5 look-ahead)
   var OUTRO_OFFSET = 8;   // seconds of closing after last verse
 
   player.addEventListener('timeupdate', function() {
