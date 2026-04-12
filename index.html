@@ -365,14 +365,13 @@ body.dark-mode .top-bar { background: #0a0a0a; }
   font-weight: 600;
   border-radius: 6px;
   cursor: pointer;
-  transition: filter 0.2s, transform 0.2s;
+  transition: all 0.2s;
   text-align: center;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.5px;
 }
 #continue-reading:hover { filter: brightness(1.1); transform: scale(1.02); }
-.cr-label { font-size: 0.72em; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.65; margin-bottom: 2px; }
-.cr-ref { font-size: 1.1em; font-weight: 700; }
-.cr-heb { font-size: 0.85em; font-family: 'David Libre', serif; direction: rtl; opacity: 0.75; margin-top: 1px; }
+.cr-ref { font-size: 1em; font-weight: 600; color: #1a1a2e; }
+.cr-heb { font-size: 0.82em; font-family: 'David Libre', serif; direction: rtl; color: #1a1a2e; margin-top: 2px; }
 
 /* ========== GLOBAL SEARCH ========== */
 .global-search-wrap {
@@ -502,7 +501,6 @@ body.dark-mode .top-bar { background: #0a0a0a; }
 
     <!-- ===== CONTINUE READING ===== -->
     <div class="continue-reading" id="continue-reading" style="display:none;" onclick="goToLastRead()">
-      <div class="cr-label">→ Continue Reading</div>
       <div class="cr-ref" id="cr-ref"></div>
       <div class="cr-heb" id="cr-heb"></div>
     </div>
@@ -718,9 +716,9 @@ function goToLastRead() {
   try {
     var data = JSON.parse(localStorage.getItem('sw-last-read'));
     if (!data || !data.label) return;
-    document.getElementById('cr-ref').textContent = data.label;
+    document.getElementById('cr-ref').textContent = '\u2192 Continue Reading: ' + data.label;
     document.getElementById('cr-heb').textContent = data.heb || '';
-    document.getElementById('continue-reading').style.display = '';
+    document.getElementById('continue-reading').style.display = 'flex';
   } catch(e) {}
 })();
 </script>
