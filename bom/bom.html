@@ -5219,12 +5219,14 @@ function parseScriptureRef(refText) {
 }
 
 function getVerseContentHtml(verseKey) {
-  // Find the verse in the DOM and extract its interlinear content
-  var verseDiv = document.querySelector('.verse[data-verse-key="' + verseKey + '"]');
+  var parts = verseKey.split('|');
+  if (parts.length < 3) return '';
+  var book = parts[0], chapter = parseInt(parts[1], 10), verseNum = parseInt(parts[2], 10);
   var html = '';
 
+  // Try DOM first (chapter already lazy-rendered)
+  var verseDiv = document.querySelector('.verse[data-verse-key="' + verseKey + '"]');
   if (verseDiv) {
-    // Extract Hebrew words + glosses from the word-flow
     var wordUnits = verseDiv.querySelectorAll('.word-unit');
     if (wordUnits.length > 0) {
       html += '<div class="xref-ref-content">';
@@ -5240,27 +5242,36 @@ function getVerseContentHtml(verseKey) {
       });
       html += '</div>';
     }
-    // Build gloss-based English summary if no official English
-    if (!window._englishMap || !window._englishMap[verseKey]) {
-      if (wordUnits.length > 0) {
-        var glossArr = [];
-        wordUnits.forEach(function(wu) {
-          var glEl = wu.querySelector('.gl');
-          if (glEl && glEl.textContent) glossArr.push(glEl.textContent);
-        });
-        if (glossArr.length > 0) {
-          html += '<div class="xref-ref-english" style="font-style:italic;">' + glossArr.join(' ') + '</div>';
+  } else {
+    // Chapter not DOM-rendered yet — build interlinear from raw _verseRegistry data
+    for (var r = 0; r < _verseRegistry.length; r++) {
+      var reg = _verseRegistry[r];
+      var bkInfo = getBookChapter(reg.chapId);
+      if (bkInfo && bkInfo.book === book && bkInfo.chapter === chapter) {
+        var v = reg.verses[verseNum - 1];
+        if (v && v.words) {
+          html += '<div class="xref-ref-content">';
+          v.words.forEach(function(w) {
+            if (w[0] === '\u05C3') return;
+            var h = w[0].replace(/\u05C3/g, '');
+            var gloss = w[1].replace(/-/g, ' ');
+            html += '<span class="xref-ref-word">';
+            html += '<span class="hw">' + h + '</span>';
+            html += '<span class="en">' + gloss + '</span>';
+            html += '</span>';
+          });
+          html += '</div>';
         }
+        break;
       }
     }
   }
 
-  // Show official English text if available
+  // Append official English text if available
   if (window._englishMap && window._englishMap[verseKey]) {
     html += '<div class="xref-ref-english">' + window._englishMap[verseKey] + '</div>';
   }
 
-  // If nothing found at all, show a message
   if (!html) {
     html = '<div class="xref-ref-nodata">Click "Go to verse" to see this verse.</div>';
   }
