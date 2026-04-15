@@ -424,23 +424,24 @@
     var targetId = getChapterTargetId(book, chapter);
     if (!url || !targetId) return;
 
-    // Add loading indicator
+    // Insert loading indicator after the title (children[1] slot), not before everything
+    var insertPoint = container.children[1] || null;
     var loadingEl = document.createElement('div');
     loadingEl.className = 'xref-ref-loading';
-    loadingEl.textContent = 'Loading Hebrew...';
+    loadingEl.textContent = 'Loading Hebrew\u2026';
     loadingEl.style.cssText = 'font-size:0.8em;color:var(--ink-light,#888);font-style:italic;padding:4px 0;';
-    container.insertBefore(loadingEl, container.firstChild);
+    container.insertBefore(loadingEl, insertPoint);
 
     loadVerseFileAsync(url, function(data) {
+      // Remember insertion point before removing loading indicator
+      var afterLoading = loadingEl.nextSibling;
       if (loadingEl.parentNode) loadingEl.parentNode.removeChild(loadingEl);
       if (!data || !data[targetId]) return;
       var verses = data[targetId];
-      // Find verse by index (verse number = array index + 1, since Hebrew nums are sequential)
       var verseData = null;
       if (verse >= 1 && verse <= verses.length) {
         verseData = verses[verse - 1];
       } else {
-        // Fallback: search by Hebrew number
         for (var i = 0; i < verses.length; i++) {
           if (hebNumToArabic(verses[i].num) === verse) { verseData = verses[i]; break; }
         }
@@ -450,7 +451,8 @@
         if (html) {
           var div = document.createElement('div');
           div.innerHTML = html;
-          container.insertBefore(div, container.firstChild);
+          // Insert where loading indicator was — after title, before English text
+          container.insertBefore(div, afterLoading);
         }
       }
     });
