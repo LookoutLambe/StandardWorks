@@ -5287,17 +5287,206 @@ function getVerseContentHtml(verseKey) {
   return html;
 }
 
+// === EXTERNAL VERSE INTERLINEAR SYSTEM ===
+// Stores interlinear word arrays for NT, PGP, OT verses keyed as 'Book|chapter|verse'
+window._extVerseRegistry = {};
+window._extLoadedFiles = {};  // filepath → true | 'pending' | false
+
+// Container-ID prefix → canonical book name (matches _abbrToFullBook values)
+var _extPrefixToBook = {
+  // New Testament
+  'matt':'Matthew','mark':'Mark','luke':'Luke','john':'John','acts':'Acts',
+  'rom':'Romans','1co':'1 Corinthians','2co':'2 Corinthians','gal':'Galatians',
+  'eph':'Ephesians','php':'Philippians','col':'Colossians',
+  '1th':'1 Thessalonians','2th':'2 Thessalonians',
+  '1ti':'1 Timothy','2ti':'2 Timothy','tit':'Titus','phm':'Philemon',
+  'heb':'Hebrews','jas':'James','1pe':'1 Peter','2pe':'2 Peter',
+  '1jn':'1 John','2jn':'2 John','3jn':'3 John','jude':'Jude','rev':'Revelation',
+  // Pearl of Great Price
+  'ms':'Moses','ab':'Abraham','jsh':'JS-H','jsm':'JS-M','aof':'A-of-F',
+  // Old Testament
+  'gen':'Genesis','exo':'Exodus','lev':'Leviticus','num':'Numbers',
+  'deu':'Deuteronomy','jos':'Joshua','jdg':'Judges','rth':'Ruth',
+  '1sa':'1 Samuel','2sa':'2 Samuel','1ki':'1 Kings','2ki':'2 Kings',
+  '1ch':'1 Chronicles','2ch':'2 Chronicles','ezr':'Ezra','neh':'Nehemiah',
+  'est':'Esther','job':'Job','psa':'Psalms','pro':'Proverbs',
+  'ecc':'Ecclesiastes','sos':'Song of Solomon','isa':'Isaiah',
+  'jer':'Jeremiah','lam':'Lamentations','eze':'Ezekiel','dan':'Daniel',
+  'hos':'Hosea','joe':'Joel','amo':'Amos','oba':'Obadiah','jon':'Jonah',
+  'mic':'Micah','nah':'Nahum','hab':'Habakkuk','zep':'Zephaniah',
+  'hag':'Haggai','zec':'Zechariah','mal':'Malachi'
+};
+
+// Canonical book name → verse file path (relative to bom.html)
+var _extBookToFile = {
+  'Matthew':'../nt_verses/matt.js','Mark':'../nt_verses/mark.js',
+  'Luke':'../nt_verses/luke.js','John':'../nt_verses/john.js',
+  'Acts':'../nt_verses/acts.js','Romans':'../nt_verses/rom.js',
+  '1 Corinthians':'../nt_verses/1co.js','2 Corinthians':'../nt_verses/2co.js',
+  'Galatians':'../nt_verses/gal.js','Ephesians':'../nt_verses/eph.js',
+  'Philippians':'../nt_verses/php.js','Colossians':'../nt_verses/col.js',
+  '1 Thessalonians':'../nt_verses/1th.js','2 Thessalonians':'../nt_verses/2th.js',
+  '1 Timothy':'../nt_verses/1ti.js','2 Timothy':'../nt_verses/2ti.js',
+  'Titus':'../nt_verses/tit.js','Philemon':'../nt_verses/phm.js',
+  'Hebrews':'../nt_verses/heb.js','James':'../nt_verses/jas.js',
+  '1 Peter':'../nt_verses/1pe.js','2 Peter':'../nt_verses/2pe.js',
+  '1 John':'../nt_verses/1jn.js','2 John':'../nt_verses/2jn.js',
+  '3 John':'../nt_verses/3jn.js','Jude':'../nt_verses/jude.js',
+  'Revelation':'../nt_verses/rev.js',
+  'Moses':'../pgp_verses/moses.js','Abraham':'../pgp_verses/abraham.js',
+  'JS-H':'../pgp_verses/js_history.js','JS-M':'../pgp_verses/js_matthew.js',
+  'A-of-F':'../pgp_verses/articles_of_faith.js',
+  'Genesis':'../ot_verses/gen.js','Exodus':'../ot_verses/exo.js',
+  'Leviticus':'../ot_verses/lev.js','Numbers':'../ot_verses/num.js',
+  'Deuteronomy':'../ot_verses/deu.js','Joshua':'../ot_verses/jos.js',
+  'Judges':'../ot_verses/jdg.js','Ruth':'../ot_verses/rth.js',
+  '1 Samuel':'../ot_verses/1sa.js','2 Samuel':'../ot_verses/2sa.js',
+  '1 Kings':'../ot_verses/1ki.js','2 Kings':'../ot_verses/2ki.js',
+  '1 Chronicles':'../ot_verses/1ch.js','2 Chronicles':'../ot_verses/2ch.js',
+  'Ezra':'../ot_verses/ezr.js','Nehemiah':'../ot_verses/neh.js',
+  'Esther':'../ot_verses/est.js','Job':'../ot_verses/job.js',
+  'Psalms':'../ot_verses/psa.js','Proverbs':'../ot_verses/pro.js',
+  'Ecclesiastes':'../ot_verses/ecc.js',
+  'Isaiah':'../ot_verses/isa.js','Jeremiah':'../ot_verses/jer.js',
+  'Lamentations':'../ot_verses/lam.js','Ezekiel':'../ot_verses/eze.js',
+  'Daniel':'../ot_verses/dan.js','Hosea':'../ot_verses/hos.js',
+  'Joel':'../ot_verses/joe.js','Amos':'../ot_verses/amo.js',
+  'Obadiah':'../ot_verses/oba.js','Jonah':'../ot_verses/jon.js',
+  'Micah':'../ot_verses/mic.js','Nahum':'../ot_verses/nah.js',
+  'Habakkuk':'../ot_verses/hab.js','Zephaniah':'../ot_verses/zep.js',
+  'Haggai':'../ot_verses/hag.js','Zechariah':'../ot_verses/zec.js',
+  'Malachi':'../ot_verses/mal.js'
+};
+
+// Install a permanent renderVerseSet wrapper that captures external book data
+// without adding it to the BOM _verseRegistry / _pendingRenders
+(function() {
+  var _origRVS = window.renderVerseSet;
+  window.renderVerseSet = function(verses, containerId) {
+    var m = containerId.match(/^(.+)-ch(\d+)-verses$/);
+    if (m && _extPrefixToBook[m[1]]) {
+      // External book — capture interlinear data, skip BOM DOM pipeline
+      var prefix = m[1], chapter = parseInt(m[2], 10);
+      var bookName = _extPrefixToBook[prefix];
+      for (var i = 0; i < verses.length; i++) {
+        window._extVerseRegistry[bookName + '|' + chapter + '|' + (i + 1)] = verses[i].words;
+      }
+      // Callbacks are fired from script.onload after ALL chapters are captured
+    } else {
+      _origRVS(verses, containerId);
+    }
+  };
+})();
+
+window._extPendingCallbacks = {};
+
+function _loadExtVerseFile(bookName, callback) {
+  var filePath = _extBookToFile[bookName];
+  if (!filePath) { if (callback) callback(); return; }
+  if (window._extLoadedFiles[filePath] === true) { if (callback) callback(); return; }
+  if (window._extLoadedFiles[filePath] === 'pending') {
+    if (callback) {
+      if (!window._extPendingCallbacks[bookName]) window._extPendingCallbacks[bookName] = [];
+      window._extPendingCallbacks[bookName].push(callback);
+    }
+    return;
+  }
+  window._extLoadedFiles[filePath] = 'pending';
+  if (callback) {
+    if (!window._extPendingCallbacks[bookName]) window._extPendingCallbacks[bookName] = [];
+    window._extPendingCallbacks[bookName].push(callback);
+  }
+  var script = document.createElement('script');
+  script.src = filePath;
+  script.onload = function() {
+    window._extLoadedFiles[filePath] = true;
+    // Fire callbacks now that ALL chapters in this file are captured
+    var cbs = window._extPendingCallbacks[bookName] || [];
+    delete window._extPendingCallbacks[bookName];
+    for (var ci = 0; ci < cbs.length; ci++) setTimeout(cbs[ci], 0);
+  };
+  script.onerror = function() {
+    window._extLoadedFiles[filePath] = false;
+    delete window._extPendingCallbacks[bookName];
+  };
+  document.head.appendChild(script);
+}
+
+// Background-load all NT + PGP files after page settles
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    var books = Object.keys(_extBookToFile).filter(function(b) {
+      var f = _extBookToFile[b];
+      return f.indexOf('/nt_verses/') !== -1 || f.indexOf('/pgp_verses/') !== -1;
+    });
+    var idx = 0;
+    function loadNext() {
+      if (idx < books.length) _loadExtVerseFile(books[idx++], loadNext);
+    }
+    loadNext();
+  }, 1500);
+});
+
+// Track the current xref panel state so we can refresh after a lazy load
+var _xrefPanelCurrentRef = null;
+var _xrefPanelCurrentSourceKey = null;
+var _xrefPanelCurrentRoot = null;
+
 function getExternalVerseHtml(refText) {
-  // Look up a non-BOM scripture reference in _scriptureVerses
-  if (!window._scriptureVerses) return '';
   var key = parseScriptureRef(refText);
-  if (key && window._scriptureVerses[key]) {
+  if (!key) return '';
+
+  // Check if we have interlinear data already loaded
+  if (window._extVerseRegistry[key]) {
+    var words = window._extVerseRegistry[key];
+    var html = '<div class="xref-ref-content">';
+    for (var i = 0; i < words.length; i++) {
+      var w = words[i];
+      if (!w[0] || w[0] === '\u05C3' || w[0] === '׃') continue;
+      var hw = w[0].replace(/\u05C3/g, '');
+      var gl = (w[1] || '').replace(/-/g, ' ');
+      html += '<span class="xref-ref-word">';
+      html += '<span class="hw">' + hw + '</span>';
+      html += '<span class="en">' + gl + '</span>';
+      html += '</span>';
+    }
+    html += '</div>';
+    if (window._scriptureVerses && window._scriptureVerses[key]) {
+      html += '<div class="xref-ref-english">' + window._scriptureVerses[key] + '</div>';
+    }
+    return html;
+  }
+
+  // Not loaded yet — trigger load and return English fallback for now
+  var parts = key.split('|');
+  var bookName = parts[0];
+  if (_extBookToFile[bookName] && window._extLoadedFiles[_extBookToFile[bookName]] !== false) {
+    _loadExtVerseFile(bookName, function() {
+      // Refresh panel if it's still showing refs from this book
+      if (_xrefPanelCurrentRef && _xrefPanelCurrentRef.refs) {
+        var stillRelevant = _xrefPanelCurrentRef.refs.some(function(r) {
+          var k = parseScriptureRef(r.replace(/\u00a0/g, ' '));
+          return k && k.indexOf(bookName + '|') === 0;
+        });
+        if (stillRelevant) {
+          openXrefPanel(_xrefPanelCurrentRef, _xrefPanelCurrentSourceKey, _xrefPanelCurrentRoot);
+        }
+      }
+    });
+  }
+
+  // English fallback while loading
+  if (window._scriptureVerses && window._scriptureVerses[key]) {
     return '<div class="xref-ref-english">' + window._scriptureVerses[key] + '</div>';
   }
   return '';
 }
 
 function openXrefPanel(ref, sourceVerseKey, hebrewRoot) {
+  // Track state so getExternalVerseHtml can refresh panel after lazy-loading ext verse files
+  _xrefPanelCurrentRef = ref;
+  _xrefPanelCurrentSourceKey = sourceVerseKey;
+  _xrefPanelCurrentRoot = hebrewRoot;
   var panel = document.getElementById('xref-panel');
   // Show Hebrew root + English meaning if available, otherwise show ref.text
   var displayText = ref.text || '';
