@@ -3760,6 +3760,8 @@ function _doRenderVerses(verseData, containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
   const bkInfo = getBookChapter(chId);
+  // Count superscriptions so numbered verses start at 1
+  const superCount = verseData.filter(v => v.num === '∗').length;
   verseData.forEach((v, idx) => {
     const verseKey = bkInfo ? (bkInfo.book + '|' + bkInfo.chapter + '|' + (idx + 1)) : '';
     const verseDiv = document.createElement('div');
@@ -3771,7 +3773,8 @@ function _doRenderVerses(verseData, containerId) {
     numDiv.textContent = v.num;
     const arabicNum = document.createElement('span');
     arabicNum.className = 'verse-num-arabic';
-    arabicNum.textContent = idx + 1;
+    // Superscription (∗) is not a numbered verse — skip the Arabic counter
+    if (v.num !== '∗') arabicNum.textContent = idx + 1 - superCount;
     numDiv.appendChild(arabicNum);
     verseDiv.appendChild(numDiv);
 
