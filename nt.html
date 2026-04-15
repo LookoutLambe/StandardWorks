@@ -948,7 +948,11 @@ function _doRenderVerses(verseData, containerId) {
 }
 
 function _ensureChapterRendered(chapId) {
-  if (_renderedChapters[chapId]) return;
+  if (_renderedChapters[chapId]) {
+    var _versesEl = document.getElementById(chapId + '-verses');
+    if (_versesEl && _versesEl.children.length > 0) return;
+    _renderedChapters[chapId] = false;
+  }
   for (var i = _pendingRenders.length - 1; i >= 0; i--) {
     if (_pendingRenders[i].chapId === chapId) {
       _doRenderVerses(_pendingRenders[i].verseData, _pendingRenders[i].containerId);
@@ -2361,7 +2365,7 @@ NavEngine.init({
 </script>
 <script>
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js?v=66').then(function(r){r.update();});
+  navigator.serviceWorker.register('service-worker.js?v=67').then(function(r){r.update();});
   var _swReady = false; window.addEventListener('load', function() { _swReady = true; }); navigator.serviceWorker.addEventListener('controllerchange', function() { if (_swReady) window.location.reload(); });
 }
 </script>

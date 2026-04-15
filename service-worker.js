@@ -1,4 +1,4 @@
-const CACHE_NAME = 'standard-works-v66';
+const CACHE_NAME = 'standard-works-v67';
 
 // Shell assets — HTML pages + shared infrastructure
 // These are small and essential; install fails gracefully if any are unavailable
