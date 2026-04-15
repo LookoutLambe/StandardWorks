@@ -564,11 +564,19 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
 }
 
 @media print {
-  .controls-top, .controls-bottom { display: none; }
-  .page { box-shadow: none; padding: 20px 40px; }
+  .controls-top, .controls-bottom, .chapter-nav, #reading-progress,
+  #glossary-panel, #xref-panel, #annotations-panel, #search-container,
+  #word-popup, #xref-popup, #share-popup, #share-overlay,
+  #sel-toolbar, #return-banner, #shortcuts-overlay { display: none !important; }
+  .page { box-shadow: none; padding: 20px 40px; max-width: 100%; }
   .page::before { display: none; }
-  .verse:hover { background: none; }
-  .chapter-nav { display: none; }
+  .verse { break-inside: avoid; page-break-inside: avoid; border-bottom: 1px solid #ccc; }
+  .verse:hover { background: none !important; }
+  .word-unit { break-inside: avoid; }
+  body { background: white !important; color: black !important; }
+  .hw { color: #1a2744 !important; }
+  .gl { color: #333 !important; opacity: 1 !important; }
+  .tl { display: none; }
 }
 
 /* Colophon styling */
@@ -5559,17 +5567,19 @@ function closeXrefPanel() {
 
 function navigateToXrefVerse(parsed) {
   if (!parsed || !parsed.hash) return;
-  // Navigate to the chapter
   window.location.hash = parsed.hash;
-  // After a short delay, scroll to the specific verse
   if (parsed.key) {
     setTimeout(function() {
       var verseEl = document.querySelector('.verse[data-verse-key="' + parsed.key + '"]');
       if (verseEl) {
         verseEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        // Brief highlight
         verseEl.style.transition = 'background 0.3s';
         verseEl.style.background = 'rgba(200,168,78,0.25)';
+        // Stamp verse number into URL: #mosiah-16:3
+        var parts = parsed.key.split('|');
+        if (parts.length >= 3) {
+          history.replaceState(null, '', window.location.hash + ':' + parts[2]);
+        }
         setTimeout(function() { verseEl.style.background = ''; }, 2000);
       }
     }, 400);
@@ -6036,12 +6046,32 @@ document.addEventListener('keydown', function(e) {
 
 // 1. URL HASH ROUTING
 (function() {
+  function scrollToVerse(verseNum) {
+    if (!verseNum || verseNum < 1) return;
+    setTimeout(function() {
+      var panel = document.querySelector('.chapter-panel[style*="block"]');
+      if (!panel) return;
+      var verses = panel.querySelectorAll('.verse');
+      var v = verses[verseNum - 1];
+      if (v) {
+        v.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        v.classList.add('highlighted');
+        setTimeout(function() { v.classList.remove('highlighted'); }, 3000);
+      }
+    }, 400);
+  }
+
   function handleHash() {
-    var hash = window.location.hash.replace('#', '');
-    if (!hash) return;
-    // #home always shows the landing page
-    if (hash === 'home') { history.replaceState(null, '', window.location.pathname); return; }
-    // Support friendly names: #alma-32 → al-ch32, #1-nephi-3 → ch3, #mosiah-29 → mo-ch29
+    var raw = window.location.hash.replace('#', '');
+    if (!raw) return;
+    if (raw === 'home') { history.replaceState(null, '', window.location.pathname); return; }
+
+    // Strip optional verse number: #mosiah-16:3 → hash='mosiah-16', verseNum=3
+    var verseNum = 0;
+    var verseMatch = raw.match(/^(.+):(\d+)$/);
+    var hash = verseMatch ? verseMatch[1] : raw;
+    if (verseMatch) verseNum = parseInt(verseMatch[2], 10);
+
     var friendlyMap = {
       '1-nephi': 'ch', '2-nephi': '2n-ch', 'jacob': 'jc-ch',
       'enos': 'en-ch', 'jarom': 'jr-ch', 'omni': 'om-ch',
@@ -6051,25 +6081,23 @@ document.addEventListener('keydown', function(e) {
     };
     // Try direct chapter ID first (e.g. #mo-ch29)
     if (chapterOrder.indexOf(hash) >= 0) {
-      navTo(hash);
-      return;
+      navTo(hash); scrollToVerse(verseNum); return;
     }
-    // Try friendly format (e.g. #alma-32)
+    // Try friendly format (e.g. #alma-32 or #alma-32:5)
     for (var name in friendlyMap) {
       var re = new RegExp('^' + name + '-(\\d+)$', 'i');
       var match = hash.match(re);
       if (match) {
         var chapId = friendlyMap[name] + match[1];
-        if (chapterOrder.indexOf(chapId) >= 0) { navTo(chapId); return; }
+        if (chapterOrder.indexOf(chapId) >= 0) { navTo(chapId); scrollToVerse(verseNum); return; }
       }
-      // Single-chapter books (e.g. #enos)
       if (hash.toLowerCase() === name) {
         var chapId2 = friendlyMap[name] + '1';
-        if (chapterOrder.indexOf(chapId2) >= 0) { navTo(chapId2); return; }
+        if (chapterOrder.indexOf(chapId2) >= 0) { navTo(chapId2); scrollToVerse(verseNum); return; }
       }
     }
   }
-  // Update hash when navigating
+  // Update hash when navigating chapters (clears verse on chapter change)
   var _navHash = window.navTo;
   window.navTo = function(id) {
     _navHash(id);
@@ -6077,7 +6105,6 @@ document.addEventListener('keydown', function(e) {
       var label = getChapterLabel(id).toLowerCase().replace(/\s+/g, '-');
       history.replaceState(null, '', '#' + label);
     } else {
-      // Clear hash when going to intro/front matter
       history.replaceState(null, '', window.location.pathname);
     }
   };
@@ -6705,7 +6732,7 @@ function doSearch(query) {
   html += '<div style="padding:12px 16px;border-top:2px solid var(--rule);direction:ltr;font-family:Crimson Pro,serif;font-size:0.85em;color:var(--ink-light);">';
   html += '<div style="font-weight:600;margin-bottom:6px;">Search other volumes:</div>';
   [{name:'Old Testament',page:'../ot.html'},{name:'New Testament',page:'../nt.html'},{name:'D&C',page:'../dc.html'},{name:'Pearl of Great Price',page:'../pgp.html'},{name:'JST',page:'../jst.html'}].forEach(function(v) {
-    html += '<a href="' + v.page + '?q=' + encodeURIComponent(query.trim()) + '" style="display:inline-block;margin:3px 4px;color:var(--accent);text-decoration:none;padding:4px 10px;border:1px solid var(--accent);border-radius:3px;font-size:0.9em;">' + v.name + '</a>';
+    html += '<a href="' + v.page + '?q=' + encodeURIComponent(query.trim()) + '" target="_blank" style="display:inline-block;margin:3px 4px;color:var(--accent);text-decoration:none;padding:4px 10px;border:1px solid var(--accent);border-radius:3px;font-size:0.9em;">' + v.name + '</a>';
   });
   html += '</div>';
   results.innerHTML = html;
@@ -6715,7 +6742,6 @@ function doSearch(query) {
 function goToSearchResult(chapId, verseIdx) {
   closeSearch();
   navTo(chapId);
-  // Highlight the target verse after a short delay
   setTimeout(function() {
     var panel = document.querySelector('.chapter-panel[style*="block"]');
     if (!panel) return;
@@ -6723,6 +6749,8 @@ function goToSearchResult(chapId, verseIdx) {
     if (verses[verseIdx]) {
       verses[verseIdx].scrollIntoView({ behavior: 'smooth', block: 'center' });
       verses[verseIdx].classList.add('highlighted');
+      // Stamp verse number into URL: #mosiah-16:3
+      history.replaceState(null, '', window.location.hash + ':' + (verseIdx + 1));
       setTimeout(function() { verses[verseIdx].classList.remove('highlighted'); }, 3000);
     }
   }, 300);
