@@ -7794,6 +7794,8 @@ updateNavButtons();
     };
     var hebText = hebHeadings[key];
     if (hebText) {
+      // Strip trailing date annotation like "בְּעֵרֶךְ 200–187 לפנה״ס." before rendering interlinear
+      hebText = hebText.replace(/\s*בְּעֵרֶךְ[\s\S]*$/, '').replace(/\s*\.\s*$/, '').trim();
       var flowDiv = document.createElement('div');
       flowDiv.className = 'heading-flow';
       var hebWords = hebText.split(/\s+/);
