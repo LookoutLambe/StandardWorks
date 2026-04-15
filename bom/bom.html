@@ -5440,13 +5440,23 @@ function _loadExtVerseFile(filePath, callback) {
   document.head.appendChild(script);
 }
 
-// Background-load all NT + PGP files after page settles
+// Background-load all verse files (NT + PGP first, then OT, then D&C)
 document.addEventListener('DOMContentLoaded', function() {
   setTimeout(function() {
-    var files = Object.keys(_extBookToFile).filter(function(b) {
+    // Collect all unique file paths from _extBookToFile (NT, PGP, OT)
+    var seen = {};
+    var files = [];
+    Object.keys(_extBookToFile).forEach(function(b) {
       var f = _extBookToFile[b];
-      return f.indexOf('/nt_verses/') !== -1 || f.indexOf('/pgp_verses/') !== -1;
-    }).map(function(b) { return _extBookToFile[b]; });
+      if (!seen[f]) { seen[f] = true; files.push(f); }
+    });
+    // Add all D&C range files
+    ['../dc_verses/dc1_10.js','../dc_verses/dc11_20.js','../dc_verses/dc21_30.js',
+     '../dc_verses/dc31_40.js','../dc_verses/dc41_50.js','../dc_verses/dc51_60.js',
+     '../dc_verses/dc61_70.js','../dc_verses/dc71_80.js','../dc_verses/dc81_90.js',
+     '../dc_verses/dc91_100.js','../dc_verses/dc101_110.js','../dc_verses/dc111_120.js',
+     '../dc_verses/dc121_130.js','../dc_verses/dc131_138.js'
+    ].forEach(function(f) { files.push(f); });
     var idx = 0;
     function loadNext() {
       if (idx < files.length) _loadExtVerseFile(files[idx++], loadNext);
@@ -5459,6 +5469,8 @@ document.addEventListener('DOMContentLoaded', function() {
 var _xrefPanelCurrentRef = null;
 var _xrefPanelCurrentSourceKey = null;
 var _xrefPanelCurrentRoot = null;
+// Stores a function that re-opens whichever panel is currently showing
+var _xrefPanelRefreshFn = null;
 
 function getExternalVerseHtml(refText) {
   var key = parseScriptureRef(refText);
@@ -5491,15 +5503,10 @@ function getExternalVerseHtml(refText) {
   var filePath = (bookName === 'D&C') ? _getDCFilePath(parts[1]) : _extBookToFile[bookName];
   if (filePath && window._extLoadedFiles[filePath] !== false) {
     _loadExtVerseFile(filePath, function() {
-      // Refresh panel if it's still showing refs from this book
-      if (_xrefPanelCurrentRef && _xrefPanelCurrentRef.refs) {
-        var stillRelevant = _xrefPanelCurrentRef.refs.some(function(r) {
-          var k = parseScriptureRef(r.replace(/\u00a0/g, ' '));
-          return k && k.split('|')[0] === bookName;
-        });
-        if (stillRelevant) {
-          openXrefPanel(_xrefPanelCurrentRef, _xrefPanelCurrentSourceKey, _xrefPanelCurrentRoot);
-        }
+      // Re-open the panel (whichever type is currently showing)
+      var panel = document.getElementById('xref-panel');
+      if (panel && panel.classList.contains('open') && _xrefPanelRefreshFn) {
+        _xrefPanelRefreshFn();
       }
     });
   }
@@ -5516,6 +5523,7 @@ function openXrefPanel(ref, sourceVerseKey, hebrewRoot) {
   _xrefPanelCurrentRef = ref;
   _xrefPanelCurrentSourceKey = sourceVerseKey;
   _xrefPanelCurrentRoot = hebrewRoot;
+  _xrefPanelRefreshFn = function() { openXrefPanel(ref, sourceVerseKey, hebrewRoot); };
   var panel = document.getElementById('xref-panel');
   // Show Hebrew root + English meaning if available, otherwise show ref.text
   var displayText = ref.text || '';
@@ -5651,6 +5659,7 @@ function openRootXrefPanel(root) {
   var entries = window._rootXrefs[root];
   if (!entries || entries.length === 0) return;
 
+  _xrefPanelRefreshFn = function() { openRootXrefPanel(root); };
   var panel = document.getElementById('xref-panel');
   var displayRoot = root;
   var engMeaning = '';
@@ -5781,6 +5790,7 @@ function openRootXrefPanel(root) {
 
 function closeXrefPanel() {
   document.getElementById('xref-panel').classList.remove('open');
+  _xrefPanelRefreshFn = null;
 }
 
 function navigateToXrefVerse(parsed) {
