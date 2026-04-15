@@ -5358,56 +5358,84 @@ var _extBookToFile = {
   'Malachi':'../ot_verses/mal.js'
 };
 
+// D&C sections are grouped in range files — map section number to file path
+function _getDCFilePath(section) {
+  var s = parseInt(section, 10);
+  if (s >= 1   && s <= 10)  return '../dc_verses/dc1_10.js';
+  if (s >= 11  && s <= 20)  return '../dc_verses/dc11_20.js';
+  if (s >= 21  && s <= 30)  return '../dc_verses/dc21_30.js';
+  if (s >= 31  && s <= 40)  return '../dc_verses/dc31_40.js';
+  if (s >= 41  && s <= 50)  return '../dc_verses/dc41_50.js';
+  if (s >= 51  && s <= 60)  return '../dc_verses/dc51_60.js';
+  if (s >= 61  && s <= 70)  return '../dc_verses/dc61_70.js';
+  if (s >= 71  && s <= 80)  return '../dc_verses/dc71_80.js';
+  if (s >= 81  && s <= 90)  return '../dc_verses/dc81_90.js';
+  if (s >= 91  && s <= 100) return '../dc_verses/dc91_100.js';
+  if (s >= 101 && s <= 110) return '../dc_verses/dc101_110.js';
+  if (s >= 111 && s <= 120) return '../dc_verses/dc111_120.js';
+  if (s >= 121 && s <= 130) return '../dc_verses/dc121_130.js';
+  if (s >= 131 && s <= 138) return '../dc_verses/dc131_138.js';
+  return null;
+}
+
 // Install a permanent renderVerseSet wrapper that captures external book data
 // without adding it to the BOM _verseRegistry / _pendingRenders
 (function() {
   var _origRVS = window.renderVerseSet;
   window.renderVerseSet = function(verses, containerId) {
+    // D&C sections: 'dc19-ch1-verses' → D&C|19|verse
+    var dcM = containerId.match(/^dc(\d+)-ch1-verses$/);
+    if (dcM) {
+      var section = parseInt(dcM[1], 10);
+      for (var i = 0; i < verses.length; i++) {
+        window._extVerseRegistry['D&C|' + section + '|' + (i + 1)] = verses[i].words;
+      }
+      return;
+    }
+    // NT / PGP / OT: 'matt-ch3-verses' → Matthew|3|verse
     var m = containerId.match(/^(.+)-ch(\d+)-verses$/);
     if (m && _extPrefixToBook[m[1]]) {
-      // External book — capture interlinear data, skip BOM DOM pipeline
       var prefix = m[1], chapter = parseInt(m[2], 10);
       var bookName = _extPrefixToBook[prefix];
       for (var i = 0; i < verses.length; i++) {
         window._extVerseRegistry[bookName + '|' + chapter + '|' + (i + 1)] = verses[i].words;
       }
-      // Callbacks are fired from script.onload after ALL chapters are captured
-    } else {
-      _origRVS(verses, containerId);
+      return;
     }
+    // BOM chapter — pass through to normal pipeline
+    _origRVS(verses, containerId);
   };
 })();
 
-window._extPendingCallbacks = {};
+window._extPendingCallbacks = {};  // keyed by filePath
 
-function _loadExtVerseFile(bookName, callback) {
-  var filePath = _extBookToFile[bookName];
+// Load a verse file by path; callbacks fire after ALL its chapters are captured
+function _loadExtVerseFile(filePath, callback) {
   if (!filePath) { if (callback) callback(); return; }
   if (window._extLoadedFiles[filePath] === true) { if (callback) callback(); return; }
   if (window._extLoadedFiles[filePath] === 'pending') {
     if (callback) {
-      if (!window._extPendingCallbacks[bookName]) window._extPendingCallbacks[bookName] = [];
-      window._extPendingCallbacks[bookName].push(callback);
+      if (!window._extPendingCallbacks[filePath]) window._extPendingCallbacks[filePath] = [];
+      window._extPendingCallbacks[filePath].push(callback);
     }
     return;
   }
   window._extLoadedFiles[filePath] = 'pending';
   if (callback) {
-    if (!window._extPendingCallbacks[bookName]) window._extPendingCallbacks[bookName] = [];
-    window._extPendingCallbacks[bookName].push(callback);
+    if (!window._extPendingCallbacks[filePath]) window._extPendingCallbacks[filePath] = [];
+    window._extPendingCallbacks[filePath].push(callback);
   }
   var script = document.createElement('script');
   script.src = filePath;
   script.onload = function() {
     window._extLoadedFiles[filePath] = true;
-    // Fire callbacks now that ALL chapters in this file are captured
-    var cbs = window._extPendingCallbacks[bookName] || [];
-    delete window._extPendingCallbacks[bookName];
+    var cbs = window._extPendingCallbacks[filePath] || [];
+    delete window._extPendingCallbacks[filePath];
     for (var ci = 0; ci < cbs.length; ci++) setTimeout(cbs[ci], 0);
   };
   script.onerror = function() {
     window._extLoadedFiles[filePath] = false;
-    delete window._extPendingCallbacks[bookName];
+    delete window._extPendingCallbacks[filePath];
   };
   document.head.appendChild(script);
 }
@@ -5415,13 +5443,13 @@ function _loadExtVerseFile(bookName, callback) {
 // Background-load all NT + PGP files after page settles
 document.addEventListener('DOMContentLoaded', function() {
   setTimeout(function() {
-    var books = Object.keys(_extBookToFile).filter(function(b) {
+    var files = Object.keys(_extBookToFile).filter(function(b) {
       var f = _extBookToFile[b];
       return f.indexOf('/nt_verses/') !== -1 || f.indexOf('/pgp_verses/') !== -1;
-    });
+    }).map(function(b) { return _extBookToFile[b]; });
     var idx = 0;
     function loadNext() {
-      if (idx < books.length) _loadExtVerseFile(books[idx++], loadNext);
+      if (idx < files.length) _loadExtVerseFile(files[idx++], loadNext);
     }
     loadNext();
   }, 1500);
@@ -5460,13 +5488,14 @@ function getExternalVerseHtml(refText) {
   // Not loaded yet — trigger load and return English fallback for now
   var parts = key.split('|');
   var bookName = parts[0];
-  if (_extBookToFile[bookName] && window._extLoadedFiles[_extBookToFile[bookName]] !== false) {
-    _loadExtVerseFile(bookName, function() {
+  var filePath = (bookName === 'D&C') ? _getDCFilePath(parts[1]) : _extBookToFile[bookName];
+  if (filePath && window._extLoadedFiles[filePath] !== false) {
+    _loadExtVerseFile(filePath, function() {
       // Refresh panel if it's still showing refs from this book
       if (_xrefPanelCurrentRef && _xrefPanelCurrentRef.refs) {
         var stillRelevant = _xrefPanelCurrentRef.refs.some(function(r) {
           var k = parseScriptureRef(r.replace(/\u00a0/g, ' '));
-          return k && k.indexOf(bookName + '|') === 0;
+          return k && k.split('|')[0] === bookName;
         });
         if (stillRelevant) {
           openXrefPanel(_xrefPanelCurrentRef, _xrefPanelCurrentSourceKey, _xrefPanelCurrentRoot);
