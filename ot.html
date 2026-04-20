@@ -1010,6 +1010,15 @@ function _ensureChapterRendered(chapId) {
       _pendingRenders.splice(i, 1);
     }
   }
+  // Fallback: if panel still empty, re-render from _verseRegistry (never cleared)
+  var _versesEl2 = document.getElementById(chapId + '-verses');
+  if (_versesEl2 && _versesEl2.children.length === 0) {
+    for (var r = 0; r < _verseRegistry.length; r++) {
+      if (_verseRegistry[r].chapId === chapId) {
+        _doRenderVerses(_verseRegistry[r].verses, chapId + '-verses');
+      }
+    }
+  }
   _renderedChapters[chapId] = true;
   if (typeof transliterate === 'function') {
     var chapContainer = document.getElementById('panel-' + chapId);
@@ -2592,7 +2601,7 @@ NavEngine.init({
 </script>
 <script>
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js?v=67').then(function(r){r.update();});
+  navigator.serviceWorker.register('service-worker.js?v=68').then(function(r){r.update();});
   var _swReady = false; window.addEventListener('load', function() { _swReady = true; }); navigator.serviceWorker.addEventListener('controllerchange', function() { if (_swReady) window.location.reload(); });
 }
 </script>
