@@ -1503,6 +1503,18 @@ function closeAllPanels() {
   async function shareVerseOnly(verseEl) {
     var text = getVerseText(verseEl);
     try {
+      // Add a shareable deep link to this verse
+      var key = verseKeyOf(verseEl) || '';
+      var verseNum = 0;
+      if (key) {
+        var ps = key.split('|');
+        verseNum = ps.length >= 3 ? parseInt(ps[2], 10) || 0 : 0;
+      }
+      var link = '';
+      if (verseNum && currentChapterId) {
+        link = window.location.origin + window.location.pathname + '#' + currentChapterId + '&v=' + verseNum;
+        text = link + '\n' + text;
+      }
       if (navigator.share) {
         await navigator.share({ text: text });
       } else {
@@ -2427,14 +2439,39 @@ window.addEventListener('scroll', function() {
 // URL HASH ROUTING
 (function() {
   function handleHash() {
-    var hash = window.location.hash.replace('#', '');
-    if (!hash) return;
-    if (chapterOrder.indexOf(hash) >= 0) { navTo(hash); return; }
+    var hashRaw = window.location.hash.replace('#', '');
+    if (!hashRaw) return;
+
+    // Support verse deep-link: #dc19-ch1&v=5 or #dc/19&v=5 (v= is verse number)
+    var parts = hashRaw.split('&');
+    var hash = parts[0] || '';
+    var vNum = 0;
+    for (var pi = 1; pi < parts.length; pi++) {
+      var kv = parts[pi].split('=');
+      if (kv[0] === 'v') vNum = parseInt(kv[1] || '0', 10) || 0;
+    }
+
+    function scrollToVerseNum(n) {
+      if (!n || n < 1) return;
+      setTimeout(function() {
+        var panel = document.querySelector('.chapter-panel[style*="block"]');
+        if (!panel) return;
+        var verses = panel.querySelectorAll('.verse');
+        var v = verses[n - 1];
+        if (v) {
+          v.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          v.classList.add('highlighted');
+          setTimeout(function() { v.classList.remove('highlighted'); }, 3000);
+        }
+      }, 350);
+    }
+
+    if (chapterOrder.indexOf(hash) >= 0) { navTo(hash); scrollToVerseNum(vNum); return; }
     // Friendly: dc/109, dc-109, section-109
     var m = hash.match(/(?:dc|section)[\/\-]?(\d+)/i);
-    if (m) { var n = parseInt(m[1], 10); if (n >= 1 && n <= 138) { navTo('dc' + n + '-ch1'); return; } }
-    if (/od[\/\-]?1/i.test(hash)) { navTo('od1-ch1'); return; }
-    if (/od[\/\-]?2/i.test(hash)) { navTo('od2-ch1'); return; }
+    if (m) { var n = parseInt(m[1], 10); if (n >= 1 && n <= 138) { navTo('dc' + n + '-ch1'); scrollToVerseNum(vNum); return; } }
+    if (/od[\/\-]?1/i.test(hash)) { navTo('od1-ch1'); scrollToVerseNum(vNum); return; }
+    if (/od[\/\-]?2/i.test(hash)) { navTo('od2-ch1'); scrollToVerseNum(vNum); return; }
   }
   handleHash();
   window.addEventListener('hashchange', handleHash);

@@ -2094,6 +2094,19 @@ function closeAllPanels() {
   async function shareVerseOnly(verseEl) {
     var text = getVerseText(verseEl);
     try {
+      // Add a shareable deep link to this verse
+      var key = verseKeyOf(verseEl) || '';
+      var verseNum = 0;
+      if (key) {
+        var ps = key.split('|');
+        verseNum = ps.length >= 3 ? parseInt(ps[2], 10) || 0 : 0;
+      }
+      var link = '';
+      // In PGP, hash is friendly (e.g. #moses-1)
+      if (verseNum) {
+        link = window.location.origin + window.location.pathname + window.location.hash.split('&')[0] + '&v=' + verseNum;
+        text = link + '\n' + text;
+      }
       if (navigator.share) {
         await navigator.share({ text: text });
       } else {
@@ -3057,25 +3070,47 @@ window.addEventListener('scroll', function() {
 
 // URL HASH ROUTING
 (function() {
+  function scrollToVerseNum(n) {
+    if (!n || n < 1) return;
+    setTimeout(function() {
+      var panel = document.querySelector('.chapter-panel[style*="block"]');
+      if (!panel) return;
+      var verses = panel.querySelectorAll('.verse');
+      var v = verses[n - 1];
+      if (v) {
+        v.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        v.classList.add('highlighted');
+        setTimeout(function() { v.classList.remove('highlighted'); }, 3000);
+      }
+    }, 350);
+  }
+
   function handleHash() {
-    var hash = window.location.hash.replace('#', '');
-    if (!hash) return;
+    var hashRaw = window.location.hash.replace('#', '');
+    if (!hashRaw) return;
+    var parts = hashRaw.split('&');
+    var hash = parts[0] || '';
+    var vNum = 0;
+    for (var pi = 1; pi < parts.length; pi++) {
+      var kv = parts[pi].split('=');
+      if (kv[0] === 'v') vNum = parseInt(kv[1] || '0', 10) || 0;
+    }
     var friendlyMap = {
       'moses': 'ms-ch', 'abraham': 'ab-ch',
       'js-matthew': 'jsm-ch', 'js-history': 'jsh-ch',
       'articles-of-faith': 'aof-ch'
     };
-    if (chapterOrder.indexOf(hash) >= 0) { navTo(hash); return; }
+    if (chapterOrder.indexOf(hash) >= 0) { navTo(hash); scrollToVerseNum(vNum); return; }
     for (var name in friendlyMap) {
       var re = new RegExp('^' + name + '-(\\d+)$', 'i');
       var match = hash.match(re);
       if (match) {
         var chapId = friendlyMap[name] + match[1];
-        if (chapterOrder.indexOf(chapId) >= 0) { navTo(chapId); return; }
+        if (chapterOrder.indexOf(chapId) >= 0) { navTo(chapId); scrollToVerseNum(vNum); return; }
       }
       if (hash.toLowerCase() === name) {
         var chapId2 = friendlyMap[name] + '1';
-        if (chapterOrder.indexOf(chapId2) >= 0) { navTo(chapId2); return; }
+        if (chapterOrder.indexOf(chapId2) >= 0) { navTo(chapId2); scrollToVerseNum(vNum); return; }
       }
     }
   }
@@ -3084,7 +3119,14 @@ window.addEventListener('scroll', function() {
     _navHash(id, slideDir);
     if (id && id !== 'landing') {
       var label = getChapterLabel(id).toLowerCase().replace(/\s+/g, '-');
-      history.replaceState(null, '', '#' + label);
+      // Keep verse deep-link if present (e.g. #moses-1&v=3)
+      var v = 0;
+      try {
+        var h = window.location.hash.replace('#','');
+        var hp = h.split('&');
+        for (var i = 1; i < hp.length; i++) { var kv = hp[i].split('='); if (kv[0] === 'v') v = parseInt(kv[1]||'0',10)||0; }
+      } catch(e) {}
+      history.replaceState(null, '', '#' + label + (v ? '&v=' + v : ''));
     } else {
       history.replaceState(null, '', window.location.pathname);
     }

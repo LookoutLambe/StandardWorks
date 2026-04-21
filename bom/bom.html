@@ -6517,6 +6517,20 @@ document.addEventListener('keydown', function(e) {
   async function shareVerseOnly(verseEl) {
     var text = getVerseText(verseEl);
     try {
+      // Add a shareable deep link to this verse (BOM supports #alma-32:5)
+      var key = verseKeyOf(verseEl) || '';
+      var verseNum = 0;
+      if (key) {
+        var ps = key.split('|');
+        verseNum = ps.length >= 3 ? parseInt(ps[2], 10) || 0 : 0;
+      }
+      var link = '';
+      if (verseNum && currentChapterId) {
+        var label = (typeof getChapterLabel === 'function') ? getChapterLabel(currentChapterId).toLowerCase().replace(/\s+/g, '-') : '';
+        if (label) link = window.location.origin + window.location.pathname + '#' + label + ':' + verseNum;
+        else link = window.location.origin + window.location.pathname + '#' + currentChapterId + ':' + verseNum;
+        text = link + '\n' + text;
+      }
       if (navigator.share) {
         await navigator.share({ text: text });
       } else {
