@@ -23,6 +23,18 @@
     footerHint: document.getElementById('footerHint'),
   };
 
+  // If anything throws during boot, show it instead of hanging on "Loading…"
+  try {
+    window.addEventListener('error', (e) => {
+      try {
+        if (els && els.progressPill) {
+          els.progressPill.textContent = 'Error loading course. Please refresh.';
+        }
+      } catch (_) {}
+      try { console.error(e && e.error ? e.error : e); } catch (_) {}
+    });
+  } catch (_) {}
+
   function randInt(n) { return Math.floor(Math.random() * n); }
   function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
@@ -553,6 +565,7 @@
     const MAN = 'הָאָדָם';
     const WOMAN = 'הָאִשָּׁה';
     const SON = 'הַבֵּן';
+    const BOOK = 'הַסֵּפֶר';
     const HOUSE = 'הַבַּיִת';
     const LAND = 'הָאָרֶץ';
     const CITY = 'הָעִיר';
