@@ -136,6 +136,9 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
 .verse-english ::-moz-selection { background: transparent !important; color: inherit !important; }
 
 .verse.highlighted { background: var(--highlight); border-radius: 4px; }
+/* Persistent user highlight (does not clear on selection/copy) */
+.verse.user-highlight { background: rgba(255, 230, 140, 0.35); border-radius: 4px; }
+body.dark-mode .verse.user-highlight { background: rgba(200, 168, 78, 0.18); }
 
 /* === CONTROLS === */
 .controls-top {
@@ -1394,19 +1397,170 @@ function closeAllPanels() {
   };
 })();
 
-// VERSE HIGHLIGHTING
+// VERSE HIGHLIGHT + COPY/SHARE (verse number menu)
 (function() {
+  var HIGHLIGHTS_KEY = 'sw-highlights-v1';
+  var menu = null;
+  var currentVerseEl = null;
+
+  function loadHighlights() {
+    try { return JSON.parse(localStorage.getItem(HIGHLIGHTS_KEY) || '{}') || {}; } catch(e) { return {}; }
+  }
+  function saveHighlights(obj) {
+    try { localStorage.setItem(HIGHLIGHTS_KEY, JSON.stringify(obj || {})); } catch(e) {}
+  }
+  function verseKeyOf(verseEl) {
+    return verseEl ? verseEl.getAttribute('data-verse-key') : null;
+  }
+  function ensureMenu() {
+    if (menu) return menu;
+    menu = document.createElement('div');
+    menu.id = 'verse-action-menu';
+    menu.style.position = 'fixed';
+    menu.style.zIndex = '9999';
+    menu.style.display = 'none';
+    menu.style.minWidth = '180px';
+    menu.style.background = 'rgba(30,34,51,0.98)';
+    menu.style.border = '1px solid rgba(200,168,78,0.35)';
+    menu.style.borderRadius = '8px';
+    menu.style.boxShadow = '0 10px 30px rgba(0,0,0,0.35)';
+    menu.style.padding = '8px';
+    menu.style.direction = 'ltr';
+    menu.style.backdropFilter = 'blur(6px)';
+
+    menu.innerHTML = '' +
+      '<button data-act="highlight" style="width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid rgba(200,168,78,0.35);background:#1e2233;color:#c8a84e;cursor:pointer;font-family:inherit;font-size:0.95em;">Highlight / Unhighlight</button>' +
+      '<button data-act="copy" style="width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid rgba(200,168,78,0.25);background:#151929;color:#e8e0d0;cursor:pointer;font-family:inherit;font-size:0.95em;">Copy verse</button>' +
+      '<button data-act="share" style="width:100%;margin:0;padding:10px 12px;border-radius:6px;border:1px solid rgba(200,168,78,0.25);background:#151929;color:#e8e0d0;cursor:pointer;font-family:inherit;font-size:0.95em;">Share verse</button>';
+
+    menu.addEventListener('click', function(e) {
+      var btn = e.target.closest('button[data-act]');
+      if (!btn) return;
+      e.preventDefault();
+      e.stopPropagation();
+      var act = btn.getAttribute('data-act');
+      if (!currentVerseEl) return;
+      if (act === 'highlight') togglePersistentHighlight(currentVerseEl);
+      else if (act === 'copy') copyVerseOnly(currentVerseEl);
+      else if (act === 'share') shareVerseOnly(currentVerseEl);
+      hideMenu();
+    });
+
+    document.body.appendChild(menu);
+    return menu;
+  }
+
+  function getVerseText(verseEl) {
+    var key = verseKeyOf(verseEl) || '';
+    var ref = key ? key.replace(/\|/g, ' ') : '';
+    var heb = '';
+    try {
+      var hws = verseEl.querySelectorAll('.word-unit .hw');
+      var parts = [];
+      for (var i = 0; i < hws.length; i++) {
+        var t = (hws[i].textContent || '').trim();
+        if (t) parts.push(t);
+      }
+      heb = parts.join(' ');
+    } catch(e) {}
+    var eng = '';
+    try {
+      var engDiv = verseEl.querySelector('.verse-english');
+      if (engDiv) eng = (engDiv.textContent || '').trim();
+    } catch(e) {}
+    var out = (ref ? ref + '\n' : '') + (heb ? heb + '\n' : '') + (eng ? eng : '');
+    return out.trim();
+  }
+
+  function togglePersistentHighlight(verseEl) {
+    var key = verseKeyOf(verseEl);
+    if (!key) return;
+    var map = loadHighlights();
+    if (map[key]) delete map[key];
+    else map[key] = { on: true, ts: Date.now() };
+    saveHighlights(map);
+    verseEl.classList.toggle('user-highlight', !!map[key]);
+  }
+
+  async function copyVerseOnly(verseEl) {
+    var text = getVerseText(verseEl);
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) await navigator.clipboard.writeText(text);
+      else {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+    } catch(e) {}
+  }
+
+  async function shareVerseOnly(verseEl) {
+    var text = getVerseText(verseEl);
+    try {
+      if (navigator.share) {
+        await navigator.share({ text: text });
+      } else {
+        await copyVerseOnly(verseEl);
+      }
+    } catch(e) {}
+  }
+
+  function applySavedHighlights(scopeEl) {
+    var map = loadHighlights();
+    (scopeEl || document).querySelectorAll('.verse[data-verse-key]').forEach(function(v) {
+      var key = verseKeyOf(v);
+      if (key && map[key]) v.classList.add('user-highlight');
+    });
+  }
+
+  function showMenuFor(numEl, verseEl) {
+    ensureMenu();
+    currentVerseEl = verseEl;
+    var rect = numEl.getBoundingClientRect();
+    var x = Math.min(rect.left, window.innerWidth - 220);
+    var y = Math.min(rect.bottom + 8, window.innerHeight - 170);
+    menu.style.left = Math.max(8, x) + 'px';
+    menu.style.top = Math.max(8, y) + 'px';
+    menu.style.display = 'block';
+  }
+  function hideMenu() {
+    if (!menu) return;
+    menu.style.display = 'none';
+    currentVerseEl = null;
+  }
+
   document.addEventListener('click', function(e) {
     var num = e.target.closest('.verse-num');
     if (!num) return;
     var verse = num.closest('.verse');
     if (!verse) return;
-    if (verse.classList.contains('highlighted')) { verse.classList.remove('highlighted'); }
-    else {
-      verse.parentElement.closest('.chapter-panel,.page').querySelectorAll('.verse.highlighted').forEach(function(v) { v.classList.remove('highlighted'); });
-      verse.classList.add('highlighted');
-    }
+    e.preventDefault();
+    e.stopPropagation();
+    showMenuFor(num, verse);
+  }, true);
+
+  document.addEventListener('click', function(e) {
+    if (menu && menu.style.display === 'block' && !e.target.closest('#verse-action-menu') && !e.target.closest('.verse-num')) hideMenu();
   });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') hideMenu();
+  });
+
+  document.addEventListener('DOMContentLoaded', function() { applySavedHighlights(document); });
+  var _origEnsure = window._ensureChapterRendered;
+  if (typeof _origEnsure === 'function') {
+    window._ensureChapterRendered = function(chapId) {
+      _origEnsure(chapId);
+      var panel = document.getElementById('panel-' + chapId);
+      if (panel) applySavedHighlights(panel);
+    };
+  }
 })();
 
 // === ROOT MAP + MORPHOLOGICAL ANALYSIS ===
