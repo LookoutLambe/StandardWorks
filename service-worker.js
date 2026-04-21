@@ -15,6 +15,7 @@ const CORE_ASSETS = [
     '/StandardWorks/images/cover-bom.jpg',
     '/StandardWorks/nav_engine.js',
     '/StandardWorks/nav_engine.css',
+    '/StandardWorks/notes_engine.js',
     '/StandardWorks/crossrefs_engine.js',
     '/StandardWorks/strongs_lookup.js',
     '/StandardWorks/strongs_roots.js',

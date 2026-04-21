@@ -100,6 +100,37 @@
 .nav-book-list::-webkit-scrollbar-track { background: #1a1a1a; }
 .nav-book-list::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
 
+/* ── Footer tools (Export/Import) ── */
+.nav-footer {
+  padding: 10px 16px;
+  border-top: 1px solid #2a2a2a;
+  background: #151515;
+  flex-shrink: 0;
+}
+.nav-footer .nf-title {
+  font-size: 0.7em;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.nav-footer .nf-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.nav-footer button {
+  flex: 1;
+  min-width: 120px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #222;
+  color: #e8e2d4;
+  cursor: pointer;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.9em;
+}
+.nav-footer button:hover { border-color: #c8a84e; background: rgba(200,168,78,0.12); }
+.nav-footer .nf-hint { margin-top: 8px; font-size: 0.75em; color: #777; line-height: 1.35; }
+
 /* ── Division Headers ── */
 .nav-division {
   padding: 12px 16px 4px; font-size: 0.72em; color: #888;

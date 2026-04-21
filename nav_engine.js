@@ -360,7 +360,27 @@
     bookList.id = 'nav-book-list';
     _sidebarEl.appendChild(bookList);
 
+    // Footer tools (notes export/import)
+    var footer = document.createElement('div');
+    footer.className = 'nav-footer';
+    footer.innerHTML =
+      '<div class="nf-title">Notes</div>' +
+      '<div class="nf-row">' +
+        '<button type="button" id="nf-export">Export</button>' +
+        '<button type="button" id="nf-import">Import</button>' +
+      '</div>' +
+      '<div class="nf-hint">Export saves a JSON backup of your notes for migration to iOS later. Import merges by default.</div>';
+    _sidebarEl.appendChild(footer);
+
     document.body.appendChild(_sidebarEl);
+
+    // Wire footer actions
+    setTimeout(function() {
+      var exportBtn = document.getElementById('nf-export');
+      var importBtn = document.getElementById('nf-import');
+      if (exportBtn) exportBtn.onclick = exportNotes;
+      if (importBtn) importBtn.onclick = importNotesPrompt;
+    }, 0);
 
     // Render initial volume
     renderVolBooks(_config.volume);
@@ -395,6 +415,65 @@
     setTimeout(_fixPagePadding, 300);
     window.addEventListener('load', _fixPagePadding);
     window.addEventListener('resize', _fixPagePadding);
+  }
+
+  function _downloadJson(filename, obj) {
+    try {
+      var blob = new Blob([JSON.stringify(obj, null, 2)], { type: 'application/json' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function() { URL.revokeObjectURL(url); }, 1000);
+    } catch(e) {
+      alert('Export failed: ' + (e && e.message ? e.message : e));
+    }
+  }
+
+  async function exportNotes() {
+    if (!window.NotesEngine || !window.NotesEngine.exportAll) {
+      alert('Notes are not available on this page yet. Open a scripture page and try again.');
+      return;
+    }
+    try {
+      var payload = await window.NotesEngine.exportAll();
+      var ts = new Date().toISOString().replace(/[:.]/g,'-');
+      _downloadJson('standard-works-notes-' + ts + '.json', payload);
+    } catch(e) {
+      alert('Export failed: ' + (e && e.message ? e.message : e));
+    }
+  }
+
+  function importNotesPrompt() {
+    if (!window.NotesEngine || !window.NotesEngine.importAll) {
+      alert('Notes are not available on this page yet. Open a scripture page and try again.');
+      return;
+    }
+    var input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'application/json,.json';
+    input.style.display = 'none';
+    input.onchange = function() {
+      var file = input.files && input.files[0];
+      if (!file) return;
+      var reader = new FileReader();
+      reader.onload = async function() {
+        try {
+          var payload = JSON.parse(reader.result);
+          await window.NotesEngine.importAll(payload, { mode: 'merge' });
+          alert('Import complete.');
+        } catch(e) {
+          alert('Import failed: ' + (e && e.message ? e.message : e));
+        }
+      };
+      reader.readAsText(file);
+    };
+    document.body.appendChild(input);
+    input.click();
+    setTimeout(function() { try { document.body.removeChild(input); } catch(e) {} }, 0);
   }
 
   // ── Render books for a volume ──
