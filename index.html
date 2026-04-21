@@ -469,7 +469,7 @@ body, button, input, select, textarea,
 .landing-subtitle, .card-title, .card-subtitle, .card-desc,
 .continue-reading, .cr-ref, .cr-heb, .cr-btn,
 #global-search, #gs-filter, #gs-results,
-#offline-downloads {
+.card-actions {
   font-family: 'David Libre', 'Georgia', serif !important;
 }
 
@@ -513,20 +513,6 @@ body, button, input, select, textarea,
     <div class="continue-reading" id="continue-reading" style="display:none;" onclick="goToLastRead()">
       <div class="cr-ref" id="cr-ref"></div>
       <div class="cr-heb" id="cr-heb"></div>
-    </div>
-
-    <!-- ===== OFFLINE DOWNLOADS ===== -->
-    <div class="continue-reading" id="offline-downloads" style="display:flex; cursor: default;" onclick="return false;">
-      <div class="cr-ref">↓ Download for Offline</div>
-      <div class="cr-heb" style="font-size:0.95em; opacity:0.9">Download a volume once, then read offline.</div>
-      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px">
-        <button class="cr-btn" type="button" onclick="event.stopPropagation(); window.location.href='ot.html?offline=1'">OT</button>
-        <button class="cr-btn" type="button" onclick="event.stopPropagation(); window.location.href='nt.html?offline=1'">NT</button>
-        <button class="cr-btn" type="button" onclick="event.stopPropagation(); window.location.href='bom/bom.html?offline=1#home'">BOM</button>
-        <button class="cr-btn" type="button" onclick="event.stopPropagation(); window.location.href='dc.html?offline=1'">D&amp;C</button>
-        <button class="cr-btn" type="button" onclick="event.stopPropagation(); window.location.href='pgp.html?offline=1'">PGP</button>
-        <button class="cr-btn" type="button" onclick="event.stopPropagation(); window.location.href='jst.html?offline=1'">JST</button>
-      </div>
     </div>
 
     <!-- ===== GLOBAL SEARCH ===== -->
@@ -641,6 +627,16 @@ body, button, input, select, textarea,
         <div class="card-label">
           <div class="card-label-en">Vocabulary Builder</div>
           <div class="card-label-he">אוצר מילים</div>
+        </div>
+        <div class="card-actions" style="margin-top:10px;">
+          <button class="cr-btn" id="offline-all-btn" type="button"
+            style="width:100%; max-width: 220px; margin: 0 auto; display:block;"
+            onclick="event.stopPropagation(); downloadAllOffline();">
+            ↓ Download all for offline
+          </button>
+          <div class="cr-heb" id="offline-all-status" style="margin-top:8px; font-size:0.92em; opacity:0.9; display:none; text-align:center;">
+            Preparing download…
+          </div>
         </div>
       </div>
 
@@ -844,6 +840,81 @@ window.addEventListener('beforeunload', function() {
   sessionStorage.removeItem('xref-return-verse');
   sessionStorage.setItem('xref-return-label', 'Home');
 });
+</script>
+
+<script>
+// ===== OFFLINE (Download all volumes) =====
+function downloadAllOffline() {
+  var btn = document.getElementById('offline-all-btn');
+  var st = document.getElementById('offline-all-status');
+  if (!btn || !st) return;
+  if (btn.dataset.busy === '1') return;
+  btn.dataset.busy = '1';
+
+  var urls = [
+    'ot.html?offline=1',
+    'nt.html?offline=1',
+    'bom/bom.html?offline=1#home',
+    'dc.html?offline=1',
+    'pgp.html?offline=1',
+    'jst.html?offline=1'
+  ];
+
+  st.style.display = '';
+  st.textContent = 'Starting offline download…';
+  btn.textContent = 'Downloading…';
+  btn.disabled = true;
+
+  // Load each volume in a hidden iframe so the service worker can cache assets/data.
+  function loadUrl(u) {
+    return new Promise(function(resolve) {
+      var f = document.createElement('iframe');
+      f.style.width = '1px';
+      f.style.height = '1px';
+      f.style.border = '0';
+      f.style.position = 'absolute';
+      f.style.left = '-9999px';
+      f.style.top = '0';
+      var done = false;
+      var t = setTimeout(function() {
+        if (done) return;
+        done = true;
+        try { f.remove(); } catch(e) {}
+        resolve(false);
+      }, 20000);
+      f.onload = function() {
+        if (done) return;
+        done = true;
+        clearTimeout(t);
+        try { f.remove(); } catch(e) {}
+        // Give a short breath for caching work to settle.
+        setTimeout(function() { resolve(true); }, 400);
+      };
+      f.src = u;
+      document.body.appendChild(f);
+    });
+  }
+
+  (async function run() {
+    var okCount = 0;
+    for (var i = 0; i < urls.length; i++) {
+      var u = urls[i];
+      st.textContent = 'Downloading ' + (i + 1) + ' of ' + urls.length + '…';
+      var ok = await loadUrl(u);
+      if (ok) okCount++;
+    }
+    st.textContent = (okCount === urls.length)
+      ? 'Done. You can now read offline.'
+      : ('Done (' + okCount + '/' + urls.length + '). If anything is missing, try again on a stronger connection.');
+    btn.textContent = '✓ Offline ready';
+    btn.disabled = true;
+  })().catch(function() {
+    st.textContent = 'Download failed. Please try again.';
+    btn.textContent = '↓ Download all for offline';
+    btn.disabled = false;
+    btn.dataset.busy = '0';
+  });
+}
 </script>
 </body>
 </html>
