@@ -185,6 +185,35 @@ function networkFirst(request, timeoutMs) {
     });
 }
 
+// Stale-while-revalidate — return cache immediately when available, refresh in background
+function staleWhileRevalidate(request, timeoutMs) {
+    return caches.match(request).then(cached => {
+          const netPromise = fetch(request).then(response => {
+                  if (response && response.ok) {
+                            const clone = response.clone();
+                            caches.open(CACHE_NAME).then(cache => cache.put(request, clone));
+                  }
+                  return response;
+          }).catch(() => null);
+
+          if (cached) {
+                  // Kick network update but don't block response
+                  if (timeoutMs && timeoutMs > 0) {
+                            Promise.race([
+                                      netPromise,
+                                      new Promise(resolve => setTimeout(resolve, timeoutMs))
+                            ]).catch(() => {});
+                  } else {
+                            netPromise.catch(() => {});
+                  }
+                  return cached;
+          }
+
+          // No cache — fall back to network-first behavior with timeout
+          return networkFirst(request, timeoutMs || 3000);
+    });
+}
+
 // Cache-first — for immutable static assets and verse data
 function cacheFirst(request) {
     return caches.match(request).then(cached => {
@@ -212,7 +241,9 @@ self.addEventListener('fetch', event => {
 
                         // HTML / JS / JSON — network-first with 3s timeout, cache fallback
                         if (/\.(html|js|json)$/.test(url.pathname)) {
-                              event.respondWith(networkFirst(event.request, 3000));
+                              // Prefer instant loads from cache when available (PWA feel),
+                              // while still updating in the background when online.
+                              event.respondWith(staleWhileRevalidate(event.request, 3000));
                               return;
                         }
 
