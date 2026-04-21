@@ -8,6 +8,7 @@
     lessonPill: document.getElementById('lessonPill'),
     exitBtn: document.getElementById('exitBtn'),
     nextBtn: document.getElementById('nextBtn'),
+    meaningsBtn: document.getElementById('meaningsBtn'),
     stepTitle: document.getElementById('stepTitle'),
     stepPrompt: document.getElementById('stepPrompt'),
     hebBig: document.getElementById('hebBig'),
@@ -53,6 +54,79 @@
   }
 
   function normalizeSpaces(s) { return String(s || '').replace(/\s+/g, ' ').trim(); }
+
+  // --- Optional tile meanings (teaching-first builds) ---
+  const MEANINGS_KEY = 'sw-course-meanings-v1';
+  let showMeanings = false;
+  try { showMeanings = localStorage.getItem(MEANINGS_KEY) === '1'; } catch (e) {}
+
+  // Minimal starter lexicon for early units (can be expanded continuously).
+  // Keys are letters-only to tolerate niqqud.
+  const WORD_MEANINGS = {
+    'כי': 'for / because / that',
+    'לא': 'not / no',
+    'אם': 'if',
+    'אל': 'to / unto',
+    'על': 'on / upon / about',
+    'מן': 'from',
+    'ו': 'and',
+    'ה': 'the',
+    'ב': 'in',
+    'ל': 'to / for',
+    'מ': 'from',
+    'כ': 'as / like',
+    'ש': 'that / which',
+    'יהוה': 'the LORD',
+    'אלהים': 'God',
+    'אמר': 'said',
+    'ויאמר': 'and he said',
+    'ויהי': 'and it came to pass',
+    'בא': 'came (m)',
+    'באה': 'came (f)',
+    'הלך': 'went',
+    'וילך': 'and he went',
+    'ראה': 'saw',
+    'וירא': 'and he saw',
+    'שמע': 'heard',
+    'וישמע': 'and he heard',
+    'אדם': 'man / human',
+    'אשה': 'woman',
+    'בן': 'son',
+    'בת': 'daughter',
+    'מלך': 'king',
+    'עם': 'people',
+    'ארץ': 'land / earth',
+    'בית': 'house',
+    'ספר': 'book',
+    'דבר': 'word / thing',
+    'ברית': 'covenant',
+    'תורה': 'law / teaching',
+    'שם': 'name',
+    'לב': 'heart',
+    'יד': 'hand',
+    'עין': 'eye',
+    'דרך': 'way / path'
+  };
+
+  function tokenMeaning(token) {
+    const key = hebLettersOnly(token);
+    if (!key) return '';
+    return WORD_MEANINGS[key] || '';
+  }
+
+  function renderTile(el, heb) {
+    if (!showMeanings) {
+      el.textContent = heb;
+      return;
+    }
+    const m = tokenMeaning(heb);
+    if (!m) {
+      el.textContent = heb;
+      return;
+    }
+    el.innerHTML = `<div style="font-weight:800; direction:rtl;">${escapeHtml(heb)}</div>` +
+      `<div style="font-size:0.72em; opacity:0.78; line-height:1.1; direction:ltr;">${escapeHtml(m)}</div>`;
+  }
 
   // Scripture-style starter content: many tiny drills (Unit 1 has 17 lessons).
   // Note: grading uses letters-only Hebrew (niqqud ignored).
@@ -1088,6 +1162,11 @@
     els.stepTitle.textContent = step.title || 'Step';
     els.stepPrompt.textContent = step.prompt || '';
 
+    // Ensure meanings toggle state is reflected.
+    if (els.meaningsBtn) {
+      els.meaningsBtn.textContent = showMeanings ? 'Meanings: On' : 'Meanings: Off';
+    }
+
     if (step.type === 'mc') {
       // If step.heb is English prompt, show in hebBig only when looks Hebrew.
       if (step.heb && /[\u05D0-\u05EA]/.test(step.heb)) {
@@ -1267,7 +1346,7 @@
       builtTokens.forEach((t, idx) => {
         const sp = document.createElement('div');
         sp.className = 'tile';
-        sp.textContent = t;
+        renderTile(sp, t);
         sp.title = 'Click to remove';
         sp.addEventListener('click', () => {
           if (locked) return;
@@ -1302,7 +1381,7 @@
     tiles.forEach((t) => {
       const btn = document.createElement('div');
       btn.className = 'tile';
-      btn.textContent = t;
+      renderTile(btn, t);
       btn.addEventListener('click', () => {
         if (locked) return;
         builtTokens.push(t);
@@ -1366,7 +1445,7 @@
       builtTokens.forEach((t, idx) => {
         const sp = document.createElement('div');
         sp.className = 'tile';
-        sp.textContent = t;
+        renderTile(sp, t);
         sp.title = 'Click to remove';
         sp.addEventListener('click', () => {
           if (locked) return;
@@ -1393,7 +1472,7 @@
     tiles.forEach((t) => {
       const btn = document.createElement('div');
       btn.className = 'tile';
-      btn.textContent = t;
+      renderTile(btn, t);
       btn.addEventListener('click', () => {
         if (locked) return;
         builtTokens.push(t);
@@ -1497,6 +1576,14 @@
   }
 
   // --- Events ---
+  if (els.meaningsBtn) {
+    els.meaningsBtn.addEventListener('click', () => {
+      showMeanings = !showMeanings;
+      try { localStorage.setItem(MEANINGS_KEY, showMeanings ? '1' : '0'); } catch (e) {}
+      // Re-render current step so tiles update immediately.
+      try { renderStep(); } catch (e) {}
+    });
+  }
   els.exitBtn.addEventListener('click', () => {
     // Keep progress.current so Resume works.
     updateResumeButton();
