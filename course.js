@@ -859,10 +859,88 @@
 
   const U3_SUBUNITS = buildUnit3Subunits();
 
+  // Unit 4: Scripture Mastery (build exact Hebrew word order)
+  function chunkHebrew(heb, maxWords) {
+    const toks = normalizeSpaces(heb).split(' ').filter(Boolean);
+    const out = [];
+    const n = Math.max(6, Math.min(12, maxWords || 10));
+    for (let i = 0; i < toks.length; i += n) {
+      out.push(toks.slice(i, i + n).join(' '));
+    }
+    return out.length ? out : [heb];
+  }
+
+  function buildUnit4Subunits() {
+    const deck = (window && window.MasteryHebrewDeck) ? window.MasteryHebrewDeck : [];
+    if (!deck || !deck.length) {
+      // Fallback: unit exists but tells user to regenerate / load deck.
+      return makePlaceholderUnit('u4', 'Unit 4: Scripture Mastery', 35).subunits;
+    }
+
+    const totalSub = 35;
+    const per = Math.max(1, Math.ceil(deck.length / totalSub));
+    const subs = [];
+    for (let si = 0; si < totalSub; si++) {
+      const start = si * per;
+      const items = deck.slice(start, start + per);
+      if (!items.length) break;
+      const sid = `u4s${si + 1}`;
+      const lessons = [];
+
+      items.forEach((it, idx) => {
+        const ref = it.ref || `Mastery ${start + idx + 1}`;
+        const full = it.hebrew || '';
+        const chunks = chunkHebrew(full, 10);
+
+        const steps = [];
+        for (let ci = 0; ci < chunks.length; ci++) {
+          steps.push({
+            type: 'bank_he_sentence',
+            title: 'Build',
+            prompt: 'Build the word order (Hebrew).',
+            en: `${ref} (part ${ci + 1}/${chunks.length})`,
+            heb: chunks[ci]
+          });
+        }
+        // Full verse build + type (letters-only grading already)
+        steps.push({
+          type: 'bank_he_sentence',
+          title: 'Build (Full)',
+          prompt: 'Build the full verse word order.',
+          en: `${ref} (full)`,
+          heb: full
+        });
+        steps.push({
+          type: 'type_he_from_en',
+          title: 'Type',
+          prompt: `Type the full verse (letters-only ok): ${ref}`,
+          heb: full
+        });
+        steps.push({
+          type: 'listen_mc',
+          title: 'Listen',
+          prompt: 'Listen, then choose what you heard.',
+          heb: chunks[0],
+          choices: [chunks[0], chunks[chunks.length - 1], 'וַיְהִי', 'לֹא'],
+          answer: chunks[0]
+        });
+
+        lessons.push(L(`${sid}l${idx + 1}`, ref, 'Build the exact Hebrew word order.', steps));
+      });
+
+      subs.push(ensureSubunitLessons(SU(sid, `Sub‑unit ${si + 1}: Mastery`, 'Build mastery verses in Hebrew word order.', lessons), 4, 6));
+    }
+
+    return subs;
+  }
+
+  const U4_SUBUNITS = buildUnit4Subunits();
+
   const COURSE = [
     { id: 'u1', title: 'Unit 1: Building blocks', desc: '8 sub‑units · short drills to make reading + writing automatic.', subunits: U1_SUBUNITS },
     { id: 'u2', title: 'Unit 2: Sentence patterns', desc: '35 sub‑units · sentence building and fluency drills.', subunits: U2_SUBUNITS },
     { id: 'u3', title: 'Unit 3: Expanding vocabulary', desc: '35 sub‑units · high-frequency vocabulary and phrases.', subunits: U3_SUBUNITS },
+    { id: 'u4', title: 'Unit 4: Scripture Mastery', desc: 'Build the exact Hebrew word order of mastery verses.', subunits: U4_SUBUNITS },
   ];
 
   // --- Progress storage ---

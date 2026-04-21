@@ -1,4 +1,4 @@
-const CACHE_NAME = 'standard-works-v71';
+const CACHE_NAME = 'standard-works-v72';
 const OFFLINE_CACHE = 'standard-works-offline-v1';
 
 // Shell assets — HTML pages + shared infrastructure
@@ -7,6 +7,7 @@ const CORE_ASSETS = [
     '/StandardWorks/index.html',
     '/StandardWorks/course.html',
     '/StandardWorks/course.js?v=3',
+    '/StandardWorks/mastery_hebrew_deck.js',
     '/StandardWorks/ot.html',
     '/StandardWorks/nt.html',
     '/StandardWorks/dc.html',
