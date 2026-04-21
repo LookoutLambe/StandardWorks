@@ -1,10 +1,12 @@
-const CACHE_NAME = 'standard-works-v70';
+const CACHE_NAME = 'standard-works-v71';
 const OFFLINE_CACHE = 'standard-works-offline-v1';
 
 // Shell assets — HTML pages + shared infrastructure
 // These are small and essential; install fails gracefully if any are unavailable
 const CORE_ASSETS = [
     '/StandardWorks/index.html',
+    '/StandardWorks/course.html',
+    '/StandardWorks/course.js?v=3',
     '/StandardWorks/ot.html',
     '/StandardWorks/nt.html',
     '/StandardWorks/dc.html',
