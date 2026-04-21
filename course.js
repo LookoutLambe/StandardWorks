@@ -10,6 +10,7 @@
     nextBtn: document.getElementById('nextBtn'),
     meaningsBtn: document.getElementById('meaningsBtn'),
     backBtn: document.getElementById('backBtn'),
+    restartBtn: document.getElementById('restartBtn'),
     stepTitle: document.getElementById('stepTitle'),
     stepPrompt: document.getElementById('stepPrompt'),
     hebBig: document.getElementById('hebBig'),
@@ -1108,7 +1109,7 @@
           btn.innerHTML = `
             <div class="nodeCircle"><div class="icon">${icon}</div></div>
             <div class="nodeLabel">${escapeHtml(l.title)}</div>
-            <div class="nodeSub">${isDone ? '✓ Completed' : (isNext ? 'Start' : 'Locked')} · ${l.steps.length} steps</div>
+            <div class="nodeSub">${isDone ? 'Review' : (isNext ? 'Start' : 'Locked')} · ${l.steps.length} steps</div>
           `;
           btn.addEventListener('click', () => startLesson(u, su, l));
           wrap.appendChild(btn);
@@ -1253,6 +1254,18 @@
       }
       renderStep();
     }
+  }
+
+  function restartLesson() {
+    if (!currentLesson || !currentUnit) return;
+    locked = false;
+    stepIdx = 0;
+    if (progress.current && progress.current.lessonId === currentLesson.id) {
+      progress.current.stepIdx = 0;
+      saveCurrentProgress();
+      updateResumeButton();
+    }
+    renderStep();
   }
 
   function speakHebrew(text) {
@@ -1803,6 +1816,9 @@
   }
   if (els.backBtn) {
     els.backBtn.addEventListener('click', prevStep);
+  }
+  if (els.restartBtn) {
+    els.restartBtn.addEventListener('click', restartLesson);
   }
   els.exitBtn.addEventListener('click', () => {
     // Keep progress.current so Resume works.
