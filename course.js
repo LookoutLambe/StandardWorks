@@ -1509,13 +1509,33 @@
     // For single words like וַיְהִי, just tile the whole token + distractors (from same unit).
     const pool = collectHebTokensFromUnit(currentUnit).filter(t => hebLettersOnly(t));
     const distract = [];
-    while (distract.length < 5 && pool.length) {
-      const p = pool[randInt(pool.length)];
-      if (hebrewEq(p, heb)) continue;
-      if (distract.some(x => hebrewEq(x, p))) continue;
+    const targetKey = hebLettersOnly(heb);
+
+    // 1) Prefer distractors from this unit
+    const poolFiltered = pool.filter(p => hebLettersOnly(p) && hebLettersOnly(p) !== targetKey);
+    let guard = 0;
+    while (distract.length < 5 && poolFiltered.length && guard++ < 200) {
+      const p = poolFiltered[randInt(poolFiltered.length)];
+      const pk = hebLettersOnly(p);
+      if (!pk || pk === targetKey) continue;
+      if (distract.some(x => hebLettersOnly(x) === pk)) continue;
       distract.push(p);
     }
-    const tiles = shuffle([...targetTokens, ...distract].slice(0, 8));
+
+    // 2) If the unit doesn't have enough variety (common early on), pull from a global pool
+    const GLOBAL_DISTRACTORS = [
+      'כִּי','לֹא','אִם','אֶל','עַל','מִן','וַיְהִי','וַיֹּאמֶר','אָמַר','בָּא','בָּאָה','יְהוָה','אֱלֹהִים','הַמֶּלֶךְ','הָעָם','הָאָרֶץ','הַבַּיִת'
+    ];
+    for (let i = 0; distract.length < 7 && i < GLOBAL_DISTRACTORS.length; i++) {
+      const p = GLOBAL_DISTRACTORS[i];
+      const pk = hebLettersOnly(p);
+      if (!pk || pk === targetKey) continue;
+      if (distract.some(x => hebLettersOnly(x) === pk)) continue;
+      distract.push(p);
+    }
+
+    // Always include at least 4 tiles (target + 3 distractors)
+    const tiles = shuffle([].concat(targetTokens, distract).slice(0, 8));
 
     builtTokens = [];
     function syncBuilt() {
