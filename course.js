@@ -1144,7 +1144,11 @@
   function speakHebrew(text) {
     try {
       if (!('speechSynthesis' in window)) return false;
-      const u = new SpeechSynthesisUtterance(text);
+      // Never vocalize the Tetragrammaton; substitute the spoken form.
+      const spoken = String(text || '')
+        .replace(/יְהוָה/g, 'אֲדֹנָי')
+        .replace(/יהוה/g, 'אדני');
+      const u = new SpeechSynthesisUtterance(spoken);
       // Prefer Hebrew voice if present.
       u.lang = 'he-IL';
       u.rate = 0.95;
