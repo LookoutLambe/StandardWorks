@@ -480,12 +480,35 @@
   // Unit 2: 35 sub‑units of practical sentence patterns (scripture vocabulary).
   // Keep it simple and repetitive: build → choose → type → listen.
   function lessonFromSentence(id, title, desc, en, heb, extra = {}) {
-    const steps = [
+    // Teach the *parts* before asking for the full sentence:
+    // build key words (with meanings when available) → then build/Type/Listen sentence.
+    const toks = normalizeSpaces(heb).split(' ').filter(Boolean);
+    const uniq = [];
+    const seen = new Set();
+    for (let i = 0; i < toks.length; i++) {
+      const t = toks[i];
+      const k = hebLettersOnly(t);
+      if (!k) continue;
+      if (seen.has(k)) continue;
+      seen.add(k);
+      uniq.push(t);
+    }
+
+    // Keep this short: introduce up to 4 tokens.
+    const intro = uniq.slice(0, 4).map(t => {
+      const m = tokenMeaning(t);
+      const prompt = m ? `Build the Hebrew: “${m}”` : 'Build this Hebrew word.';
+      return { type: 'bank_he_from_en', title: 'Build', prompt, heb: t };
+    });
+
+    const steps = intro.concat([
       buildSentence(en, heb),
       typeSentence(`Type: “${en}”`, heb),
-      ...(extra.listen ? [listenChoose(heb, extra.listen)] : []),
-      ...(extra.mc ? [{ type: 'mc', title: 'Choose', prompt: extra.mc.prompt || 'Which matches?', heb: extra.mc.hebPrompt || en, choices: extra.mc.choices, answer: extra.mc.answer }] : []),
-    ];
+    ]);
+
+    if (extra.listen) steps.push(listenChoose(heb, extra.listen));
+    if (extra.mc) steps.push({ type: 'mc', title: 'Choose', prompt: extra.mc.prompt || 'Which matches?', heb: extra.mc.hebPrompt || en, choices: extra.mc.choices, answer: extra.mc.answer });
+
     return L(id, title, desc, steps);
   }
 
