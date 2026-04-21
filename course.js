@@ -1190,6 +1190,42 @@
       els.meaningsBtn.textContent = showMeanings ? 'Meanings: On' : 'Meanings: Off';
     }
 
+    // --- Auto-teach words before any full sentence build ---
+    // If a step asks to build a full sentence, insert word-build steps immediately before it.
+    // This applies globally to all units/sub-units without hand-editing lesson content.
+    if (step && step.type === 'bank_he_sentence' && step.heb && !step._wordIntroInjected) {
+      step._wordIntroInjected = true;
+      const toks = normalizeSpaces(step.heb).split(' ').filter(Boolean);
+      const uniq = [];
+      const seen = new Set();
+      for (let i = 0; i < toks.length; i++) {
+        const t = toks[i];
+        const k = hebLettersOnly(t);
+        if (!k) continue;
+        if (seen.has(k)) continue;
+        seen.add(k);
+        uniq.push(t);
+      }
+      const introToks = uniq.slice(0, 4);
+      const introSteps = introToks.map((t, i) => {
+        const m = tokenMeaning(t);
+        const prompt = m ? `Build the Hebrew: “${m}”` : 'Build this Hebrew word.';
+        return { type: 'bank_he_from_en', title: 'Build', prompt, heb: t, _autoIntro: 1 };
+      });
+
+      if (introSteps.length) {
+        // Insert before current step, then render the first intro step.
+        currentLesson.steps.splice(stepIdx, 0, ...introSteps);
+        // Keep progress pointer consistent if resuming mid-lesson.
+        if (progress.current && progress.current.lessonId === currentLesson.id) {
+          progress.current.stepIdx = stepIdx;
+          saveCurrentProgress();
+        }
+        renderStep();
+        return;
+      }
+    }
+
     if (step.type === 'mc') {
       // If step.heb is English prompt, show in hebBig only when looks Hebrew.
       if (step.heb && /[\u05D0-\u05EA]/.test(step.heb)) {
