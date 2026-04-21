@@ -428,6 +428,24 @@
     const tokens = pickDistinctTokens(allTokens, 12);
     const examples = uniqBy(allExamples, e => hebLettersOnly(e.heb));
 
+    function makeNewWordsLesson() {
+      // Only include words we can actually gloss (teaching-first).
+      const picks = [];
+      for (let i = 0; i < tokens.length; i++) {
+        const t = tokens[i];
+        const m = tokenMeaning(t);
+        if (!m) continue;
+        // Avoid tiny single-letter prefixes unless that's the point of the sub-unit.
+        if (hebLettersOnly(t).length === 1 && su.id !== 'u1s2') continue;
+        picks.push([t, m]);
+        if (picks.length >= 6) break;
+      }
+      if (!picks.length) return null;
+      return L(`${su.id}nw`, 'New words', 'Learn the words you will build in this sub‑unit.', [
+        { type: 'match', title: 'Match', prompt: 'Match the Hebrew word to its meaning.', pairs: picks }
+      ]);
+    }
+
     function makePracticeLesson(n) {
       const steps = [];
       const s1 = makeChooseTokenStep(tokens); if (s1) steps.push(s1);
@@ -440,7 +458,10 @@
       return L(`${su.id}p${n}`, `Practice ${n}`, 'Short drill for this sub‑unit.', steps);
     }
 
+    // Start with original authored lessons (if any), but we may prepend a "New words" lesson.
     const lessons = base.slice(0, Math.max(0, maxLessons - 1)); // leave room for capstone
+    const nw = makeNewWordsLesson();
+    if (nw) lessons.unshift(nw);
     let practiceN = 1;
     while (lessons.length < Math.max(1, minLessons - 1)) {
       lessons.push(makePracticeLesson(practiceN++));
