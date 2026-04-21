@@ -468,8 +468,7 @@ body, button, input, select, textarea,
 .top-bar, .top-bar-title, .top-bar-actions,
 .landing-subtitle, .card-title, .card-subtitle, .card-desc,
 .continue-reading, .cr-ref, .cr-heb, .cr-btn,
-#global-search, #gs-filter, #gs-results,
-.card-actions {
+#global-search, #gs-filter, #gs-results {
   font-family: 'David Libre', 'Georgia', serif !important;
 }
 
@@ -628,19 +627,25 @@ body, button, input, select, textarea,
           <div class="card-label-en">Vocabulary Builder</div>
           <div class="card-label-he">אוצר מילים</div>
         </div>
-        <div class="card-actions" style="margin-top:10px;">
-          <button class="cr-btn" id="offline-all-btn" type="button"
-            style="width:100%; max-width: 220px; margin: 0 auto; display:block;"
-            onclick="event.stopPropagation(); downloadAllOffline();">
-            ↓ Download all for offline
-          </button>
-          <div class="cr-heb" id="offline-all-status" style="margin-top:8px; font-size:0.92em; opacity:0.9; display:none; text-align:center;">
-            Preparing download…
-          </div>
-        </div>
       </div>
 
     </div><!-- /card-grid -->
+
+    <!-- ===== OFFLINE DOWNLOAD (ALL) ===== -->
+    <div class="continue-reading" id="offline-all" style="display:flex; cursor: default; margin-top: 18px;" onclick="return false;">
+      <div class="cr-ref">↓ Download for Offline</div>
+      <div class="cr-heb" style="font-size:0.95em; opacity:0.9">One click to cache all volumes for offline reading.</div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; width:100%;">
+        <button class="cr-btn" id="offline-all-btn" type="button"
+          style="width:100%; display:block;"
+          onclick="event.stopPropagation(); downloadAllOffline();">
+          ↓ Download everything for offline
+        </button>
+      </div>
+      <div class="cr-heb" id="offline-all-status" style="margin-top:8px; font-size:0.92em; opacity:0.9; display:none; text-align:center; width:100%;">
+        Preparing download…
+      </div>
+    </div>
 
     <div class="landing-footer">
       <p>
