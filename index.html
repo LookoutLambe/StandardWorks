@@ -505,6 +505,20 @@ body.dark-mode .top-bar { background: #0a0a0a; }
       <div class="cr-heb" id="cr-heb"></div>
     </div>
 
+    <!-- ===== OFFLINE DOWNLOADS ===== -->
+    <div class="continue-reading" id="offline-downloads" style="display:flex; cursor: default;" onclick="return false;">
+      <div class="cr-ref">↓ Download for Offline</div>
+      <div class="cr-heb" style="font-size:0.95em; opacity:0.9">Download a volume once, then read offline.</div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px">
+        <button class="cr-btn" type="button" onclick="event.stopPropagation(); window.location.href='ot.html?offline=1'">OT</button>
+        <button class="cr-btn" type="button" onclick="event.stopPropagation(); window.location.href='nt.html?offline=1'">NT</button>
+        <button class="cr-btn" type="button" onclick="event.stopPropagation(); window.location.href='bom/bom.html?offline=1#home'">BOM</button>
+        <button class="cr-btn" type="button" onclick="event.stopPropagation(); window.location.href='dc.html?offline=1'">D&amp;C</button>
+        <button class="cr-btn" type="button" onclick="event.stopPropagation(); window.location.href='pgp.html?offline=1'">PGP</button>
+        <button class="cr-btn" type="button" onclick="event.stopPropagation(); window.location.href='jst.html?offline=1'">JST</button>
+      </div>
+    </div>
+
     <!-- ===== GLOBAL SEARCH ===== -->
     <div class="global-search-wrap">
       <input type="text" id="global-search" class="global-search-input" placeholder="Search all volumes...   (press / to focus)" autocomplete="off" aria-label="Search all volumes">
@@ -627,6 +641,7 @@ body.dark-mode .top-bar { background: #0a0a0a; }
 </div><!-- /page -->
 
 <script src="notes_engine.js"></script>
+<script src="nav_engine.js"></script>
 <script>
 
 // ===== DARK MODE =====
@@ -647,17 +662,90 @@ function toggleDark() {
   } catch(e) {}
 })();
 
-// ===== GLOBAL SEARCH =====
-var gsVolumes = [
-  { name: 'Old Testament', heb: 'תנ״ך', page: 'ot.html' },
-  { name: 'New Testament', heb: 'הברית החדשה', page: 'nt.html' },
-  { name: 'Book of Mormon', heb: 'ספר מורמון', page: 'bom/bom.html' },
-  { name: 'Doctrine & Covenants', heb: 'תורה ובריתות', page: 'dc.html' },
-  { name: 'Pearl of Great Price', heb: 'פנינת המחיר הגדול', page: 'pgp.html' }
-];
-
+// ===== GLOBAL SEARCH (Jump across volumes) =====
 var gsInput = document.getElementById('global-search');
 var gsResults = document.getElementById('gs-results');
+
+function _escapeHtml(s) {
+  return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function _volLabel(vk) {
+  try { return (window.NavEngine && window.NavEngine.VOLUMES && window.NavEngine.VOLUMES[vk]) ? window.NavEngine.VOLUMES[vk].name : vk; }
+  catch(e) { return vk; }
+}
+
+function _buildJumpUrl(entry, chNum) {
+  if (!entry) return '';
+  var vk = entry.vol;
+  var vol = window.NavEngine && window.NavEngine.VOLUMES ? window.NavEngine.VOLUMES[vk] : null;
+  if (!vol) return '';
+  var page = vol.page;
+
+  // Compute chapterId
+  var chapId = '';
+  if (entry.chId) chapId = entry.chId; // sections, etc.
+  else {
+    var n = chNum && chNum > 0 ? chNum : 1;
+    chapId = entry.prefix + (entry.vol === 'dc' ? (n + '-ch1') : ('-ch' + n));
+  }
+
+  var hash = (window.NavEngine && window.NavEngine.buildHash) ? window.NavEngine.buildHash(vk, chapId) : chapId;
+  return page + (hash ? ('#' + hash) : '');
+}
+
+function renderGsResults(q, filterVol) {
+  if (!window.NavEngine || !window.NavEngine.searchBooks) {
+    gsResults.innerHTML = '<div class="gs-hint">Search is loading…</div>';
+    gsResults.classList.add('open');
+    return;
+  }
+  var hits = window.NavEngine.searchBooks(q) || [];
+  if (filterVol && filterVol !== 'all') hits = hits.filter(function(h) { return h && h.entry && h.entry.vol === filterVol; });
+
+  if (!hits.length) {
+    gsResults.innerHTML = '<div class="gs-hint">No matches. Try “Isaiah 53”, “Mosiah 5”, “D&C 121”.</div>';
+    gsResults.classList.add('open');
+    return;
+  }
+
+  var html = '';
+  hits.forEach(function(h) {
+    var e = h.entry;
+    var url = _buildJumpUrl(e, h.chNum);
+    var left = _escapeHtml(e.en + (h.chNum ? (' ' + h.chNum) : ''));
+    var right = _escapeHtml(_volLabel(e.vol));
+    html += '<a class="gs-result-link" href="' + url + '">' +
+              '<span class="gs-heb">' + _escapeHtml(e.heb) + '</span>' +
+              '<span><strong>' + left + '</strong> <span style="opacity:0.7">· ' + right + '</span></span>' +
+            '</a>';
+  });
+  html += '<div class="gs-hint">Tip: type “Book Chapter” (example: “Mosiah 5”).</div>';
+  gsResults.innerHTML = html;
+  gsResults.classList.add('open');
+}
+
+var _gsFilter = 'all';
+// Inject a small filter dropdown next to the input (no layout shifts)
+try {
+  var wrap = gsInput && gsInput.parentElement ? gsInput.parentElement : null;
+  if (wrap && !document.getElementById('gs-filter')) {
+    var sel = document.createElement('select');
+    sel.id = 'gs-filter';
+    sel.setAttribute('aria-label', 'Search volume filter');
+    sel.style.cssText = 'margin-right:10px;border:1px solid var(--rule);border-radius:8px;padding:10px 12px;background:var(--bg);color:var(--ink);font-family:inherit;';
+    sel.innerHTML = '' +
+      '<option value="all">All</option>' +
+      '<option value="ot">OT</option>' +
+      '<option value="nt">NT</option>' +
+      '<option value="bom">BOM</option>' +
+      '<option value="dc">D&C</option>' +
+      '<option value="pgp">PGP</option>' +
+      '<option value="jst">JST</option>';
+    sel.onchange = function() { _gsFilter = sel.value; renderGsResults(gsInput.value.trim(), _gsFilter); };
+    wrap.insertBefore(sel, gsInput);
+  }
+} catch(e) {}
 
 gsInput.addEventListener('input', function() {
   var q = gsInput.value.trim();
@@ -666,23 +754,17 @@ gsInput.addEventListener('input', function() {
     gsResults.innerHTML = '';
     return;
   }
-  var html = '';
-  gsVolumes.forEach(function(v) {
-    html += '<a class="gs-result-link" href="' + v.page + '?q=' + encodeURIComponent(q) + '">'
-      + '<span class="gs-heb">' + v.heb + '</span>'
-      + '<span>Search "' + q.replace(/</g, '&lt;') + '" in <strong>' + v.name + '</strong></span>'
-      + '</a>';
-  });
-  html += '<div class="gs-hint">Press Enter to search the first volume, or click a specific volume.</div>';
-  gsResults.innerHTML = html;
-  gsResults.classList.add('open');
+  renderGsResults(q, _gsFilter);
 });
 
 gsInput.addEventListener('keydown', function(e) {
   if (e.key === 'Enter') {
     var q = gsInput.value.trim();
     if (q.length >= 2) {
-      window.location.href = 'ot.html?q=' + encodeURIComponent(q);
+      renderGsResults(q, _gsFilter);
+      // If there's a top result, go there.
+      var a = gsResults.querySelector('a.gs-result-link');
+      if (a && a.href) window.location.href = a.href;
     }
   }
   if (e.key === 'Escape') {

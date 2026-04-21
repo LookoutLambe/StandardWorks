@@ -321,6 +321,35 @@
     // Search bar
     var searchWrap = document.createElement('div');
     searchWrap.className = 'nav-search-wrap';
+
+    function _homeHref() {
+      var p = (window.location && window.location.pathname) ? window.location.pathname : '';
+      // bom/bom.html sits one folder deeper than the other volumes
+      return (p.indexOf('/bom/') >= 0 || /\\bom\\/.test(p)) ? '../index.html' : 'index.html';
+    }
+    function goHome() { window.location.href = _homeHref(); }
+    function goBack() {
+      var before = window.location.href;
+      try { window.history.back(); } catch (e) { goHome(); return; }
+      setTimeout(function() {
+        if (window.location.href === before) goHome();
+      }, 250);
+    }
+
+    var backBtn = document.createElement('button');
+    backBtn.className = 'nav-icon-btn';
+    backBtn.innerHTML = '&#8592;';
+    backBtn.title = 'Back';
+    backBtn.setAttribute('aria-label', 'Back');
+    backBtn.onclick = goBack;
+
+    var homeBtn = document.createElement('button');
+    homeBtn.className = 'nav-icon-btn';
+    homeBtn.innerHTML = '&#8962;';
+    homeBtn.title = 'Home';
+    homeBtn.setAttribute('aria-label', 'Home');
+    homeBtn.onclick = goHome;
+
     _searchInput = document.createElement('input');
     _searchInput.type = 'text';
     _searchInput.placeholder = 'Jump to verse... (e.g. Isaiah 53)';
@@ -330,6 +359,8 @@
     closeBtn.className = 'nav-close-btn';
     closeBtn.innerHTML = '\u2715';
     closeBtn.onclick = closeSidebar;
+    searchWrap.appendChild(backBtn);
+    searchWrap.appendChild(homeBtn);
     searchWrap.appendChild(_searchInput);
     searchWrap.appendChild(closeBtn);
     _sidebarEl.appendChild(searchWrap);
@@ -360,7 +391,7 @@
     bookList.id = 'nav-book-list';
     _sidebarEl.appendChild(bookList);
 
-    // Footer tools (notes export/import)
+    // Footer tools (notes export/import + bookmarks + backup)
     var footer = document.createElement('div');
     footer.className = 'nav-footer';
     footer.innerHTML =
@@ -369,7 +400,25 @@
         '<button type="button" id="nf-export">Export</button>' +
         '<button type="button" id="nf-import">Import</button>' +
       '</div>' +
-      '<div class="nf-hint">Export saves a JSON backup of your notes for migration to iOS later. Import merges by default.</div>';
+      '<div class="nf-hint">Export saves a JSON backup of your notes for migration to iOS later. Import merges by default.</div>' +
+      '<div class="nf-title" style="margin-top:12px">Bookmarks</div>' +
+      '<div class="nf-row">' +
+        '<button type="button" id="nf-bm-add">Add</button>' +
+        '<button type="button" id="nf-bm-clear">Clear</button>' +
+      '</div>' +
+      '<div id="nf-bookmarks"></div>' +
+      '<div class="nf-title" style="margin-top:12px">Backup</div>' +
+      '<div class="nf-row">' +
+        '<button type="button" id="nf-backup-export">Export</button>' +
+        '<button type="button" id="nf-backup-import">Import</button>' +
+      '</div>' +
+      '<div class="nf-hint">Backup includes notes, highlights, and bookmarks.</div>' +
+      '<div class="nf-title" style="margin-top:12px">Offline</div>' +
+      '<div class="nf-row">' +
+        '<button type="button" id="nf-offline-dl">Download</button>' +
+        '<button type="button" id="nf-offline-rm">Remove</button>' +
+      '</div>' +
+      '<div class="nf-hint" id="nf-offline-status">Checking…</div>';
     _sidebarEl.appendChild(footer);
 
     document.body.appendChild(_sidebarEl);
@@ -380,6 +429,23 @@
       var importBtn = document.getElementById('nf-import');
       if (exportBtn) exportBtn.onclick = exportNotes;
       if (importBtn) importBtn.onclick = importNotesPrompt;
+
+      var bmAdd = document.getElementById('nf-bm-add');
+      var bmClear = document.getElementById('nf-bm-clear');
+      if (bmAdd) bmAdd.onclick = addBookmarkCurrent;
+      if (bmClear) bmClear.onclick = clearBookmarks;
+      renderBookmarks();
+
+      var bex = document.getElementById('nf-backup-export');
+      var bim = document.getElementById('nf-backup-import');
+      if (bex) bex.onclick = exportBackup;
+      if (bim) bim.onclick = importBackupPrompt;
+
+      var odl = document.getElementById('nf-offline-dl');
+      var orm = document.getElementById('nf-offline-rm');
+      if (odl) odl.onclick = offlineDownloadCurrentVolume;
+      if (orm) orm.onclick = offlineRemoveCurrentVolume;
+      renderOfflineStatus();
     }, 0);
 
     // Render initial volume
@@ -474,6 +540,108 @@
     document.body.appendChild(input);
     input.click();
     setTimeout(function() { try { document.body.removeChild(input); } catch(e) {} }, 0);
+  }
+
+  // ── Offline Download (per volume) ──
+  var OFFLINE_META_KEY = 'sw-offline-volumes-v1';
+  function _loadOfflineMeta() {
+    try { return JSON.parse(localStorage.getItem(OFFLINE_META_KEY) || '{}') || {}; } catch(e) { return {}; }
+  }
+  function _saveOfflineMeta(meta) {
+    try { localStorage.setItem(OFFLINE_META_KEY, JSON.stringify(meta || {})); } catch(e) {}
+  }
+  function _offlineAssetsForCurrentVolume() {
+    if (!_config || !_config.volume) return [];
+    var vk = _config.volume;
+    if (vk === 'ot') return ['ot.html'].concat([
+      'ot_verses/gen.js','ot_verses/exo.js','ot_verses/lev.js','ot_verses/num.js','ot_verses/deu.js','ot_verses/jos.js','ot_verses/jdg.js',
+      'ot_verses/1sa.js','ot_verses/2sa.js','ot_verses/1ki.js','ot_verses/2ki.js','ot_verses/isa.js','ot_verses/jer.js','ot_verses/eze.js',
+      'ot_verses/hos.js','ot_verses/joe.js','ot_verses/amo.js','ot_verses/oba.js','ot_verses/jon.js','ot_verses/mic.js','ot_verses/nah.js',
+      'ot_verses/hab.js','ot_verses/zep.js','ot_verses/hag.js','ot_verses/zec.js','ot_verses/mal.js','ot_verses/psa.js','ot_verses/pro.js',
+      'ot_verses/job.js','ot_verses/sos.js','ot_verses/rth.js','ot_verses/lam.js','ot_verses/ecc.js','ot_verses/est.js','ot_verses/dan.js',
+      'ot_verses/ezr.js','ot_verses/neh.js','ot_verses/1ch.js','ot_verses/2ch.js'
+    ]);
+    if (vk === 'nt') return ['nt.html'].concat([
+      'nt_verses/matt.js','nt_verses/mark.js','nt_verses/luke.js','nt_verses/john.js','nt_verses/acts.js','nt_verses/rom.js','nt_verses/1co.js',
+      'nt_verses/2co.js','nt_verses/gal.js','nt_verses/eph.js','nt_verses/php.js','nt_verses/col.js','nt_verses/1th.js','nt_verses/2th.js',
+      'nt_verses/1ti.js','nt_verses/2ti.js','nt_verses/tit.js','nt_verses/phm.js','nt_verses/heb.js','nt_verses/jas.js','nt_verses/1pe.js',
+      'nt_verses/2pe.js','nt_verses/1jn.js','nt_verses/2jn.js','nt_verses/3jn.js','nt_verses/jude.js','nt_verses/rev.js'
+    ]);
+    if (vk === 'dc') return ['dc.html'].concat([
+      'dc_verses/dc1_10.js','dc_verses/dc11_20.js','dc_verses/dc21_30.js','dc_verses/dc31_40.js','dc_verses/dc41_50.js','dc_verses/dc51_60.js',
+      'dc_verses/dc61_70.js','dc_verses/dc71_80.js','dc_verses/dc81_90.js','dc_verses/dc91_100.js','dc_verses/dc101_110.js','dc_verses/dc109.js',
+      'dc_verses/dc111_120.js','dc_verses/dc121_130.js','dc_verses/dc131_138.js','dc_verses/dc_chron.js','dc_verses/dc_intro.js','dc_verses/od.js'
+    ]);
+    if (vk === 'pgp') return ['pgp.html'].concat([
+      'pgp_verses/moses.js','pgp_verses/abraham.js','pgp_verses/js_matthew.js','pgp_verses/js_history.js','pgp_verses/articles_of_faith.js','pgp_verses/pgp_intro.js'
+    ]);
+    if (vk === 'jst') return ['jst.html'];
+    if (vk === 'bom') return ['bom/bom.html'].concat([
+      'bom/official_verses.js','bom/crossrefs.js','bom/roots_glossary.js','bom/chapter_headings.js','bom/chapter_headings_heb.js',
+      'bom/scripture_verses.js','bom/topical_guide.js',
+      'bom/verses/frontmatter.js','bom/verses/1nephi.js','bom/verses/2nephi.js','bom/verses/jacob.js','bom/verses/enos.js','bom/verses/jarom.js',
+      'bom/verses/omni.js','bom/verses/words_of_mormon.js','bom/verses/mosiah.js','bom/verses/alma.js','bom/verses/helaman.js','bom/verses/3nephi.js',
+      'bom/verses/4nephi.js','bom/verses/mormon.js','bom/verses/ether.js','bom/verses/moroni.js'
+    ]);
+    return [];
+  }
+  function _postToSW(msg) {
+    return new Promise(function(resolve) {
+      if (!navigator.serviceWorker) return resolve({ error: 1 });
+      var done = false;
+      function handler(e) {
+        if (done) return;
+        var d = e.data || {};
+        if (d.type === 'offline:done') {
+          done = true;
+          navigator.serviceWorker.removeEventListener('message', handler);
+          resolve(d);
+        }
+      }
+      navigator.serviceWorker.addEventListener('message', handler);
+      var sw = navigator.serviceWorker.controller;
+      if (!sw) {
+        navigator.serviceWorker.removeEventListener('message', handler);
+        return resolve({ error: 1, noController: 1 });
+      }
+      sw.postMessage(msg);
+    });
+  }
+  function offlineDownloadCurrentVolume() {
+    var assets = _offlineAssetsForCurrentVolume();
+    if (!assets.length) return;
+    var btn = document.getElementById('nf-offline-dl');
+    if (btn) { btn.disabled = true; btn.textContent = 'Downloading…'; }
+    _postToSW({ type: 'offline:download', assets: assets }).then(function(r) {
+      var meta = _loadOfflineMeta();
+      meta[_config.volume] = { ts: Date.now(), count: assets.length };
+      _saveOfflineMeta(meta);
+      if (btn) { btn.disabled = false; btn.textContent = 'Download'; }
+      renderOfflineStatus();
+      if (r && r.noController) alert('Offline download queued. Please refresh once to enable it.');
+    });
+  }
+  function offlineRemoveCurrentVolume() {
+    var assets = _offlineAssetsForCurrentVolume();
+    if (!assets.length) return;
+    var btn = document.getElementById('nf-offline-rm');
+    if (btn) { btn.disabled = true; btn.textContent = 'Removing…'; }
+    _postToSW({ type: 'offline:remove', assets: assets }).then(function() {
+      var meta = _loadOfflineMeta();
+      delete meta[_config.volume];
+      _saveOfflineMeta(meta);
+      if (btn) { btn.disabled = false; btn.textContent = 'Remove'; }
+      renderOfflineStatus();
+    });
+  }
+  function renderOfflineStatus() {
+    if (!_sidebarEl || !_config || !_config.volume) return;
+    var el = _sidebarEl.querySelector('#nf-offline-status');
+    if (!el) return;
+    var meta = _loadOfflineMeta();
+    var m = meta[_config.volume];
+    if (!m) el.textContent = 'Not downloaded.';
+    else el.textContent = 'Downloaded (' + (m.count || '?') + ' files).';
   }
 
   // ── Render books for a volume ──
@@ -881,6 +1049,119 @@
     } catch(e) {}
   }
 
+  // ── Bookmarks ──
+  var BOOKMARKS_KEY = 'sw-bookmarks-v1';
+  function loadBookmarks() {
+    try { return JSON.parse(localStorage.getItem(BOOKMARKS_KEY) || '[]') || []; } catch(e) { return []; }
+  }
+  function saveBookmarks(list) {
+    try { localStorage.setItem(BOOKMARKS_KEY, JSON.stringify(list || [])); } catch(e) {}
+  }
+  function addBookmarkCurrent() {
+    if (!_config || !_config.volume) return;
+    var vol = VOLUMES[_config.volume];
+    if (!vol) return;
+    var chap = _config.currentChapter || 'landing';
+    if (!chap || chap === 'landing') return;
+    var bookInfo = findBook(_config.volume, chap);
+    if (!bookInfo) return;
+    var label = bookInfo.en;
+    var chNum = chap.replace(bookInfo.prefix, '');
+    if (bookInfo.ch > 1) label += ' ' + chNum;
+    var hash = buildHash(_config.volume, chap);
+    var path = vol.page + (hash ? '#' + hash : '');
+    var item = { volume: _config.volume, chapter: chap, label: label, heb: bookInfo.heb, path: path, ts: Date.now() };
+    var list = loadBookmarks().filter(function(b) { return !(b && b.volume === item.volume && b.chapter === item.chapter); });
+    list.unshift(item);
+    if (list.length > 50) list = list.slice(0, 50);
+    saveBookmarks(list);
+    renderBookmarks();
+  }
+  function clearBookmarks() {
+    saveBookmarks([]);
+    renderBookmarks();
+  }
+  function renderBookmarks() {
+    if (!_sidebarEl) return;
+    var box = _sidebarEl.querySelector('#nf-bookmarks');
+    if (!box) return;
+    var list = loadBookmarks();
+    if (!list.length) {
+      box.innerHTML = '<div class="nf-hint">No bookmarks yet.</div>';
+      return;
+    }
+    var html = '';
+    list.slice(0, 10).forEach(function(bm) {
+      var label = (bm && bm.label) ? bm.label : 'Bookmark';
+      var heb = (bm && bm.heb) ? bm.heb : '';
+      var path = (bm && bm.path) ? bm.path : '';
+      html += '<div class="nf-bm" tabindex="0" role="button" data-path="' + path.replace(/"/g,'&quot;') + '">' +
+                '<div class="nf-bm-title">' + label + '</div>' +
+                (heb ? '<div class="nf-bm-heb" dir="rtl">' + heb + '</div>' : '') +
+              '</div>';
+    });
+    box.innerHTML = html;
+    box.querySelectorAll('.nf-bm').forEach(function(row) {
+      row.onclick = function() {
+        var p = row.getAttribute('data-path');
+        if (p) window.location.href = p;
+      };
+      row.onkeydown = function(e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); row.click(); }
+      };
+    });
+  }
+
+  // ── Backup (Notes + Highlights + Bookmarks) ──
+  function exportBackup() {
+    var payload = { version: 1, exportedAt: new Date().toISOString(), bookmarks: loadBookmarks(), highlights: null, notes: null };
+    try { payload.highlights = JSON.parse(localStorage.getItem('sw-highlights-v1') || '{}') || {}; } catch(e) { payload.highlights = {}; }
+    var pNotes = (window.NotesEngine && typeof window.NotesEngine.exportAll === 'function')
+      ? window.NotesEngine.exportAll().then(function(n) { payload.notes = n || []; })
+      : Promise.resolve();
+    pNotes.then(function() {
+      try {
+        var blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'standard-works-backup.json';
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function() { URL.revokeObjectURL(url); a.remove(); }, 0);
+      } catch(e) { alert('Export failed.'); }
+    });
+  }
+  function importBackupPrompt() {
+    var input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'application/json';
+    input.onchange = function(e) {
+      var file = e.target.files && e.target.files[0];
+      if (!file) return;
+      var reader = new FileReader();
+      reader.onload = function() {
+        try {
+          var payload = JSON.parse(reader.result || '{}');
+          if (payload && Array.isArray(payload.bookmarks)) saveBookmarks(payload.bookmarks);
+          if (payload && payload.highlights) localStorage.setItem('sw-highlights-v1', JSON.stringify(payload.highlights || {}));
+          var p = Promise.resolve();
+          if (payload && payload.notes && window.NotesEngine && typeof window.NotesEngine.importAll === 'function') {
+            p = window.NotesEngine.importAll(payload.notes, { mode: 'merge' });
+          }
+          p.then(function() {
+            renderBookmarks();
+            alert('Import complete.');
+            try { if (typeof applySavedHighlights === 'function') applySavedHighlights(); } catch(e) {}
+            try { if (typeof addNoteMarkers === 'function') addNoteMarkers(); } catch(e) {}
+          });
+        } catch(err) { alert('Import failed (invalid JSON).'); }
+      };
+      reader.readAsText(file);
+    };
+    input.click();
+  }
+
   // ── Keyboard Shortcuts ──
   function onKeydown(e) {
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
@@ -994,6 +1275,22 @@
         var data = localStorage.getItem('sw-last-read');
         return data ? JSON.parse(data) : null;
       } catch(e) { return null; }
+    },
+    offline: {
+      downloadThisVolume: offlineDownloadCurrentVolume,
+      removeThisVolume: offlineRemoveCurrentVolume,
+      status: function() {
+        try {
+          var meta = _loadOfflineMeta();
+          return meta && _config && _config.volume ? (meta[_config.volume] || null) : null;
+        } catch(e) { return null; }
+      }
+    },
+    searchBooks: function(query) {
+      return searchBooks(query);
+    },
+    buildHash: function(volKey, chapterId) {
+      return buildHash(volKey, chapterId);
     },
     VOLUMES: VOLUMES
   };

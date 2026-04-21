@@ -922,13 +922,13 @@ body.dark-mode .landing-book-card { background: linear-gradient(170deg, #0a0f1a 
 body.dark-mode .landing-book-card .card-subtitle { color: #888; }
 
 /* === PANEL OVERLAY === */
-#panel-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.4); z-index: 1000; }
+#panel-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.4); z-index: 3000; }
 #panel-overlay.open { display: block; }
 
 /* === GLOSSARY PANEL === */
 #glossary-panel {
   display: none; position: fixed; top: 0; left: 0; bottom: 0; width: 380px; max-width: 90vw;
-  background: var(--bg); border-right: 2px solid var(--accent); z-index: 1100;
+  background: var(--bg); border-right: 2px solid var(--accent); z-index: 3100;
   overflow-y: auto; padding: 16px; font-family: 'Crimson Pro', serif;
   transform: translateX(-100%); transition: transform 0.25s ease;
 }
@@ -969,7 +969,7 @@ body.dark-mode .glossary-form-chip { background: #2a2a2a; }
 /* === ANNOTATIONS PANEL === */
 #annotations-panel {
   display: none; position: fixed; top: 0; right: 0; bottom: 0; width: 360px; max-width: 90vw;
-  background: var(--bg); border-left: 2px solid var(--accent); z-index: 1100;
+  background: var(--bg); border-left: 2px solid var(--accent); z-index: 3100;
   overflow-y: auto; padding: 16px; font-family: 'Crimson Pro', serif;
   transform: translateX(100%); transition: transform 0.25s ease;
 }
@@ -2569,7 +2569,11 @@ function transliterate(heb) {
     return heb.split('\u05BE').map(function(p) { return transliterate(p); }).join('-');
   }
   var hasNikkud = /[\u05B0-\u05BB]/.test(heb);
-  if (hasNikkud) return _tlPointed(heb);
+  if (hasNikkud) {
+    var consonantsOnly = heb.replace(/[\u0591-\u05C7\u05B0-\u05BB\u05BD\u05BF\u05C1\u05C2]/g, '');
+    if (consonantsOnly === '\u05E8\u05E2') return 'ra';
+    return _tlPointed(heb);
+  }
   var clean = heb.replace(/[\u0591-\u05C7]/g, '');
   if (_tlKnown[clean]) return _tlKnown[clean];
   var cmap = {'\u05D0':'','\u05D1':'v','\u05D2':'g','\u05D3':'d','\u05D4':'h','\u05D5':'v','\u05D6':'z','\u05D7':'ch','\u05D8':'t',
@@ -2663,7 +2667,7 @@ function _tlPointed(text) {
       var nxt = tokens[t+1];
       var nxtIsLast = (t+1 === len-1);
       var suffixLetters = '\u05DD\u05DF\u05DA';
-      var qGadolMono = '\u05D0\u05D1 \u05D3\u05DE \u05E9\u05DE \u05E2\u05D3 \u05E2\u05DC \u05E2\u05DD \u05E8\u05D1 \u05D9\u05D3 \u05D7\u05DF \u05D9\u05DE';
+      var qGadolMono = '\u05D0\u05D1 \u05D3\u05DE \u05E9\u05DE \u05E2\u05D3 \u05E2\u05DC \u05E2\u05DD \u05E8\u05D1 \u05E8\u05E2 \u05D9\u05D3 \u05D7\u05DF \u05D9\u05DE';
       var twoC = tk.c + nxt.c;
       if (nxtIsLast && !nxt.vowel && nxt.c !== '\u05D4' && suffixLetters.indexOf(nxt.c) < 0) {
         var realVowels = 0;
@@ -4109,17 +4113,17 @@ window.addEventListener('scroll', function() {
       '1-john': 'jst1jn-ch',
       'revelation': 'jstrev-ch'
     };
-    if (chapterOrder.indexOf(hash) >= 0) { navTo(hash); scrollToVerseNum(vNum); return; }
+    if (chapterOrder.indexOf(hash) >= 0) { window.__swNavFromHash = true; try { navTo(hash); } finally { window.__swNavFromHash = false; } scrollToVerseNum(vNum); return; }
     for (var name in friendlyMap) {
       var re = new RegExp('^' + name + '-(\\d+)$', 'i');
       var match = hash.match(re);
       if (match) {
         var chapId = friendlyMap[name] + match[1];
-        if (chapterOrder.indexOf(chapId) >= 0) { navTo(chapId); scrollToVerseNum(vNum); return; }
+        if (chapterOrder.indexOf(chapId) >= 0) { window.__swNavFromHash = true; try { navTo(chapId); } finally { window.__swNavFromHash = false; } scrollToVerseNum(vNum); return; }
       }
       if (hash.toLowerCase() === name) {
         var chapId2 = friendlyMap[name] + '1';
-        if (chapterOrder.indexOf(chapId2) >= 0) { navTo(chapId2); scrollToVerseNum(vNum); return; }
+        if (chapterOrder.indexOf(chapId2) >= 0) { window.__swNavFromHash = true; try { navTo(chapId2); } finally { window.__swNavFromHash = false; } scrollToVerseNum(vNum); return; }
       }
     }
   }
@@ -4135,15 +4139,12 @@ window.addEventListener('scroll', function() {
         var hp = h.split('&');
         for (var i = 1; i < hp.length; i++) { var kv = hp[i].split('='); if (kv[0] === 'v') v = parseInt(kv[1]||'0',10)||0; }
       } catch(e) {}
-      history.replaceState(null, '', '#' + label + (v ? '&v=' + v : ''));
+      history[window.__swNavFromHash ? 'replaceState' : 'pushState'](null, '', '#' + label + (v ? '&v=' + v : ''));
     } else {
-      history.replaceState(null, '', window.location.pathname);
+      history[window.__swNavFromHash ? 'replaceState' : 'pushState'](null, '', window.location.pathname);
     }
   };
   window.addEventListener('hashchange', handleHash);
-  if (window.location.hash) {
-    history.replaceState(null, '', window.location.pathname);
-  }
 })();
 
 </script>

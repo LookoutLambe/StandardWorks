@@ -1,4 +1,5 @@
-const CACHE_NAME = 'standard-works-v69';
+const CACHE_NAME = 'standard-works-v70';
+const OFFLINE_CACHE = 'standard-works-offline-v1';
 
 // Shell assets — HTML pages + shared infrastructure
 // These are small and essential; install fails gracefully if any are unavailable
@@ -151,6 +152,37 @@ self.addEventListener('install', event => {
         );
 });
 
+// Messages from pages — offline download / removal
+self.addEventListener('message', event => {
+  const msg = event.data || {};
+  if (!msg || !msg.type) return;
+  const reply = (payload) => {
+    try { event.source && event.source.postMessage(payload); } catch(e) {}
+  };
+
+  if (msg.type === 'offline:download') {
+    const assets = Array.isArray(msg.assets) ? msg.assets : [];
+    event.waitUntil(
+      caches.open(OFFLINE_CACHE).then(cache =>
+        Promise.all(assets.map(u => cache.add(u).catch(() => null)))
+      ).then(() => reply({ type: 'offline:done', op: 'download' }))
+       .catch(() => reply({ type: 'offline:done', op: 'download', error: 1 }))
+    );
+    return;
+  }
+
+  if (msg.type === 'offline:remove') {
+    const assets = Array.isArray(msg.assets) ? msg.assets : [];
+    event.waitUntil(
+      caches.open(OFFLINE_CACHE).then(cache =>
+        Promise.all(assets.map(u => cache.delete(u).catch(() => null)))
+      ).then(() => reply({ type: 'offline:done', op: 'remove' }))
+       .catch(() => reply({ type: 'offline:done', op: 'remove', error: 1 }))
+    );
+    return;
+  }
+});
+
 // Activate — purge only standard-works-* caches (leave bom-* caches alone)
 self.addEventListener('activate', event => {
     event.waitUntil(
@@ -229,25 +261,68 @@ function cacheFirst(request) {
     });
 }
 
+// Online-first with timeout, fallback to OFFLINE_CACHE then default caches
+function networkFirstWithOfflineFallback(request, timeoutMs) {
+  return new Promise(resolve => {
+    let settled = false;
+    const done = (resp) => { if (!settled) { settled = true; clearTimeout(timer); resolve(resp); } };
+
+    const timer = setTimeout(() => {
+      caches.open(OFFLINE_CACHE).then(c => c.match(request)).then(cached => {
+        if (cached) done(cached);
+        else caches.match(request).then(any => done(any || Response.error()));
+      });
+    }, timeoutMs || 2500);
+
+    fetch(request).then(response => {
+      if (response && response.ok) {
+        const clone = response.clone();
+        // Refresh both caches: shell cache + offline cache (if it exists there)
+        caches.open(CACHE_NAME).then(cache => cache.put(request, clone.clone())).catch(() => {});
+        caches.open(OFFLINE_CACHE).then(cache => cache.put(request, clone)).catch(() => {});
+        done(response);
+      } else {
+        caches.open(OFFLINE_CACHE).then(c => c.match(request)).then(cached => done(cached || response));
+      }
+    }).catch(() => {
+      caches.open(OFFLINE_CACHE).then(c => c.match(request)).then(cached => {
+        if (cached) done(cached);
+        else caches.match(request).then(any => done(any || Response.error()));
+      });
+    });
+  });
+}
+
 // Fetch — route by asset type
 self.addEventListener('fetch', event => {
     if (event.request.method !== 'GET') return;
     const url = new URL(event.request.url);
 
-                        // Verse data — cache-first (immutable per deploy, critical for offline book navigation)
-                        if (/\/(ot|nt|dc|pgp|jst|bom)_verses\//.test(url.pathname) || /\/bom\/scripture_verses\.js$/.test(url.pathname)) {
-                              event.respondWith(cacheFirst(event.request));
-                              return;
-                        }
+                        // Offline downloaded assets — ONLINE FIRST (opposite of cache-first),
+                        // fallback to offline cache when offline/slow.
+                        event.respondWith(
+                          caches.open(OFFLINE_CACHE).then(c =>
+                            c.match(event.request).then(hit => {
+                              if (hit) return networkFirstWithOfflineFallback(event.request, 2500);
 
-                        // HTML / JS / JSON — network-first with 3s timeout, cache fallback
-                        if (/\.(html|js|json)$/.test(url.pathname)) {
-                              // Prefer instant loads from cache when available (PWA feel),
-                              // while still updating in the background when online.
-                              event.respondWith(staleWhileRevalidate(event.request, 3000));
-                              return;
-                        }
+                              // Verse data — cache-first (immutable per deploy, critical for offline book navigation)
+                              if (/\/(ot|nt|dc|pgp|jst|bom)_verses\//.test(url.pathname) ||
+                                  /\/bom\/scripture_verses\.js$/.test(url.pathname) ||
+                                  /\/bom\/verses\//.test(url.pathname) ||
+                                  /\/bom\/(official_verses|crossrefs|chapter_headings|chapter_headings_heb|topical_guide|roots_glossary)\.js$/.test(url.pathname)) {
+                                return cacheFirst(event.request);
+                              }
 
-                        // Static assets (images, icons, fonts) — cache-first for speed
-                        event.respondWith(cacheFirst(event.request));
+                              // HTML / JS / JSON — SWR for app feel
+                              if (/\.(html|js|json)$/.test(url.pathname)) {
+                                return staleWhileRevalidate(event.request, 3000);
+                              }
+
+                              // Static assets (images, icons, fonts) — cache-first for speed
+                              return cacheFirst(event.request);
+                            })
+                          )
+                        );
+                        return;
+
 });

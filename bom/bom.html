@@ -804,7 +804,7 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   height: 100vh;
   background: var(--bg);
   border-left: 2px solid var(--rule);
-  z-index: 1200;
+  z-index: 3100;
   transition: right 0.3s;
   overflow-y: auto;
   padding: 20px;
@@ -976,14 +976,14 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
 /* === ROOT GLOSSARY === */
 #glossary-panel {
   position: fixed; top: 0; left: -400px; width: 380px; height: 100vh;
-  background: var(--bg); border-right: 2px solid var(--rule); z-index: 1200;
+  background: var(--bg); border-right: 2px solid var(--rule); z-index: 3100;
   transition: left 0.3s; overflow-y: auto; padding: 0; direction: ltr;
   font-family: 'Crimson Pro', serif; display: flex; flex-direction: column;
 }
 #glossary-panel.open { left: 0; }
 #panel-overlay {
   position: fixed; inset: 0; background: rgba(0,0,0,0.4);
-  z-index: 1000; display: none; cursor: pointer;
+  z-index: 3000; display: none; cursor: pointer;
 }
 #panel-overlay.open { display: block; }
 .glossary-header {
@@ -1256,7 +1256,7 @@ body.dark-mode #xref-popup { background: #252525; border-color: #d4af37; color: 
 /* === CROSS-REFERENCE SLIDE PANEL === */
 #xref-panel {
   position: fixed; top: 0; right: -400px; width: 380px; height: 100vh;
-  background: var(--bg); border-left: 2px solid var(--accent); z-index: 1200;
+  background: var(--bg); border-left: 2px solid var(--accent); z-index: 3100;
   transition: right 0.3s ease; overflow-y: auto; padding: 0; direction: ltr;
   font-family: 'Crimson Pro', serif; box-shadow: -4px 0 20px rgba(0,0,0,0.3);
 }
@@ -1616,7 +1616,7 @@ body.dark-mode #return-banner a:hover { background:#c8a84e; }
   <div id="ann-list"></div>
 </div>
 
-<div id="panel-overlay" onclick="closeGlossary();closeAnnotationsPanel();"></div>
+<div id="panel-overlay" onclick="closeGlossary();closeAnnotationsPanel();closeXrefPanel();closeSearch();closeSharePopup();"></div>
 
 <!-- Navigation Panel — now rendered by nav_engine.js -->
 <div id="glossary-panel" role="dialog" aria-label="Root Glossary">
@@ -6094,7 +6094,13 @@ function transliterate(heb) {
   }
   // Use nikkud-aware parser if vowel points present (includes stress marking)
   var hasNikkud = /[\u05B0-\u05BB]/.test(heb);
-  if (hasNikkud) return _tlPointed(heb);
+  if (hasNikkud) {
+    // Practico-style convention for a few common 2-letter unpointed roots,
+    // even when the source text carries unexpected pointing.
+    var consonantsOnly = heb.replace(/[\u0591-\u05C7\u05B0-\u05BB\u05BD\u05BF\u05C1\u05C2]/g, '');
+    if (consonantsOnly === 'רע') return 'ra';
+    return _tlPointed(heb);
+  }
   // For unpointed text, check known dictionary
   var clean = heb.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, '');
   if (_tlKnown[clean]) return _tlKnown[clean];
@@ -6219,7 +6225,7 @@ function _tlPointed(text) {
       // Rule 1: monosyllabic closed syllable (e.g. כָּל kol, חָק choq)
       // Only apply when this is the ONLY real vowel in the word
       // Exclude known qamets-gadol monosyllables: אָב (av), דָּם (dam), שָׁם (sham), etc.
-      var qGadolMono = '\u05D0\u05D1 \u05D3\u05DE \u05E9\u05DE \u05E2\u05D3 \u05E2\u05DC \u05E2\u05DD \u05E8\u05D1 \u05D9\u05D3 \u05D7\u05DF \u05D9\u05DE'; // אב דם שם עד על עם רב יד חן ים
+      var qGadolMono = '\u05D0\u05D1 \u05D3\u05DE \u05E9\u05DE \u05E2\u05D3 \u05E2\u05DC \u05E2\u05DD \u05E8\u05D1 \u05E8\u05E2 \u05D9\u05D3 \u05D7\u05DF \u05D9\u05DE'; // אב דם שם עד על עם רב רע יד חן ים
       var twoC = tk.c + nxt.c;
       if (nxtIsLast && !nxt.vowel && nxt.c !== '\u05D4' && suffixLetters.indexOf(nxt.c) < 0) {
         var realVowels = 0;
@@ -6356,7 +6362,7 @@ document.addEventListener('keydown', function(e) {
     };
     // Try direct chapter ID first (e.g. #mo-ch29)
     if (chapterOrder.indexOf(hash) >= 0) {
-      navTo(hash); scrollToVerse(verseNum); return;
+      window.__swNavFromHash = true; try { navTo(hash); } finally { window.__swNavFromHash = false; } scrollToVerse(verseNum); return;
     }
     // Try friendly format (e.g. #alma-32 or #alma-32:5)
     for (var name in friendlyMap) {
@@ -6364,11 +6370,11 @@ document.addEventListener('keydown', function(e) {
       var match = hash.match(re);
       if (match) {
         var chapId = friendlyMap[name] + match[1];
-        if (chapterOrder.indexOf(chapId) >= 0) { navTo(chapId); scrollToVerse(verseNum); return; }
+        if (chapterOrder.indexOf(chapId) >= 0) { window.__swNavFromHash = true; try { navTo(chapId); } finally { window.__swNavFromHash = false; } scrollToVerse(verseNum); return; }
       }
       if (hash.toLowerCase() === name) {
         var chapId2 = friendlyMap[name] + '1';
-        if (chapterOrder.indexOf(chapId2) >= 0) { navTo(chapId2); scrollToVerse(verseNum); return; }
+        if (chapterOrder.indexOf(chapId2) >= 0) { window.__swNavFromHash = true; try { navTo(chapId2); } finally { window.__swNavFromHash = false; } scrollToVerse(verseNum); return; }
       }
     }
   }
@@ -6378,9 +6384,9 @@ document.addEventListener('keydown', function(e) {
     _navHash(id);
     if (id && !id.startsWith('front-') && id !== 'intro') {
       var label = getChapterLabel(id).toLowerCase().replace(/\s+/g, '-');
-      history.replaceState(null, '', '#' + label);
+      history[window.__swNavFromHash ? 'replaceState' : 'pushState'](null, '', '#' + label);
     } else {
-      history.replaceState(null, '', window.location.pathname);
+      history[window.__swNavFromHash ? 'replaceState' : 'pushState'](null, '', window.location.pathname);
     }
   };
   window.addEventListener('hashchange', handleHash);
