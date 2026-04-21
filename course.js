@@ -338,7 +338,7 @@
   }
 
   function ensureSubunitLessons(subunit, minLessons = 4, maxLessons = 5) {
-    const su = { ...subunit };
+    const su = Object.assign({}, subunit);
     const base = (su.lessons || []).slice();
 
     // Always reserve the last slot for a capstone.
@@ -842,7 +842,10 @@
     COURSE.forEach((u, ui) => {
       const unit = document.createElement('div');
       unit.className = 'unit' + (u.id === 'u1' ? ' open' : '');
-      const allLessons = (u.subunits || []).flatMap(su => su.lessons || []);
+      const allLessons = [];
+      (u.subunits || []).forEach(su => {
+        (su.lessons || []).forEach(l => { allLessons.push(l); });
+      });
       const doneCount = allLessons.filter(l => progress.completed && progress.completed[l.id]).length;
       unit.innerHTML = `
         <div class="u-top">
@@ -889,7 +892,7 @@
         `;
         const track = suWrap.querySelector('.track');
         suLessons.forEach((l, liLocal) => {
-          const globalIdx = idxById.get(l.id) ?? 0;
+          const globalIdx = idxById.has(l.id) ? idxById.get(l.id) : 0;
           const isDone = !!(progress.completed && progress.completed[l.id]);
           const prevOk = prevDoneByIndex(globalIdx);
           const isNext = !isDone && prevOk;
