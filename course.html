@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scripture Hebrew Course</title>
+  <meta name="theme-color" content="#1e2233" />
+  <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #faf8f2;
+      --bg-deep: #f0ece0;
+      --ink: #1a1a1a;
+      --ink-light: #444;
+      --accent: #c8a84e;
+      --rule: #d6ceb8;
+      --header-bg: #1e2233;
+      --header-text: #c8a84e;
+      --card-bg: #ffffff;
+      --danger: #b94a3a;
+      --ok: #2f7d4a;
+      --green: #2f7d4a;
+      --green2: #1f6a3d;
+    }
+    body.dark-mode {
+      --bg: #333333;
+      --bg-deep: #2a2a2a;
+      --ink: #e8e0d0;
+      --ink-light: #b0a890;
+      --accent: #d4af37;
+      --rule: #444444;
+      --header-bg: #0a0a0a;
+      --header-text: #d4af37;
+      --card-bg: #1a1a2e;
+      --danger: #e27a6a;
+      --ok: #60c27e;
+      --green: #60c27e;
+      --green2: #9fe0b9;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: 'David Libre', 'Georgia', serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 14px;
+      background: var(--header-bg);
+      border-bottom: 2px solid var(--accent);
+    }
+    .topbar .title {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+    .topbar .title .en {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--header-text);
+      font-size: 1.05em;
+    }
+    .topbar .title .he {
+      color: var(--header-text);
+      opacity: 0.92;
+      font-weight: 600;
+      direction: rtl;
+      font-size: 0.95em;
+    }
+    .topbar .actions { display: flex; align-items: center; gap: 10px; }
+    .iconbtn {
+      appearance: none;
+      border: 1px solid rgba(200,168,78,0.35);
+      background: rgba(255,255,255,0.05);
+      color: var(--header-text);
+      padding: 7px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.95em;
+      line-height: 1;
+    }
+    .iconbtn:hover { background: rgba(200,168,78,0.12); }
+
+    .wrap { max-width: 980px; margin: 0 auto; padding: 18px 16px 70px; }
+    .panel {
+      background: var(--card-bg);
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      box-shadow: 0 8px 26px rgba(0,0,0,0.10);
+      overflow: hidden;
+    }
+    .panel-head {
+      padding: 14px 16px;
+      background: linear-gradient(180deg, rgba(200,168,78,0.12), rgba(200,168,78,0.03));
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .panel-head .hint {
+      color: var(--ink-light);
+      font-size: 0.95em;
+      line-height: 1.45;
+      max-width: 640px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 0.9em;
+      background: rgba(0,0,0,0.03);
+      color: var(--ink-light);
+      white-space: nowrap;
+    }
+    body.dark-mode .pill { background: rgba(255,255,255,0.05); }
+
+    .path {
+      padding: 16px;
+      border-top: 1px solid var(--rule);
+      background: linear-gradient(180deg, rgba(0,0,0,0.00), rgba(0,0,0,0.02));
+    }
+    body.dark-mode .path { background: linear-gradient(180deg, rgba(255,255,255,0.00), rgba(255,255,255,0.03)); }
+    .unit {
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      padding: 14px 14px 12px;
+      background: var(--bg);
+      margin-bottom: 12px;
+    }
+    .unit .u-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .unit .u-title { font-weight: 700; font-size: 1.05em; }
+    .unit .u-desc { color: var(--ink-light); line-height: 1.45; margin-top: 4px; font-size: 0.95em; }
+    .unit .u-meta { color: var(--ink-light); font-size: 0.85em; opacity: 0.9; }
+    .unit .u-toggle {
+      appearance: none;
+      border: 1px solid var(--rule);
+      background: var(--card-bg);
+      color: var(--ink);
+      padding: 8px 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .unit .u-toggle:hover { border-color: var(--accent); background: rgba(200,168,78,0.06); }
+    .unitBody { display: none; }
+    .unit.open .unitBody { display: block; }
+    .subunit {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px dashed rgba(0,0,0,0.14);
+    }
+    body.dark-mode .subunit { border-top-color: rgba(255,255,255,0.12); }
+    .subhead {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .subhead .s-title { font-weight: 800; }
+    .subhead .s-desc { color: var(--ink-light); font-size: 0.92em; line-height: 1.35; }
+    .subhead .s-meta { color: var(--ink-light); font-size: 0.85em; opacity: 0.9; }
+    .lessons {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    @media (min-width: 820px) { .lessons { grid-template-columns: 1fr 1fr; } }
+    .lessonBtn {
+      appearance: none;
+      border: 1px solid rgba(47,125,74,0.35);
+      border-radius: 14px;
+      background: var(--card-bg);
+      padding: 12px 12px 11px;
+      text-align: left;
+      cursor: pointer;
+      transition: transform 0.08s ease, border-color 0.15s ease, background 0.15s ease;
+      min-height: 74px;
+    }
+    .lessonBtn:hover { transform: translateY(-1px); border-color: rgba(47,125,74,0.7); background: rgba(47,125,74,0.06); }
+    .lessonBtn:disabled { opacity: 0.65; cursor: not-allowed; transform: none; }
+    .lessonBtn .t { font-weight: 700; }
+    .lessonBtn .d { margin-top: 4px; color: var(--ink-light); font-size: 0.92em; line-height: 1.4; }
+    .lessonBtn .k { margin-top: 6px; font-size: 0.82em; color: var(--ink-light); opacity: 0.9; }
+
+    /* Lesson path (track) */
+    .track {
+      position: relative;
+      margin-top: 14px;
+      padding: 10px 0 4px;
+      min-height: 120px;
+    }
+    .track::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 50%;
+      width: 6px;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.06);
+      border-radius: 999px;
+    }
+    body.dark-mode .track::before { background: rgba(255,255,255,0.10); }
+
+    .nodeWrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      margin: 14px 0;
+    }
+    .nodeWrap.left { justify-content: flex-start; }
+    .nodeWrap.right { justify-content: flex-end; }
+    @media (max-width: 600px) {
+      .nodeWrap.left, .nodeWrap.right { justify-content: center; }
+    }
+
+    .nodeBtn {
+      appearance: none;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      width: 220px;
+      max-width: 220px;
+    }
+    .nodeBtn:disabled { cursor: not-allowed; opacity: 0.6; }
+
+    .nodeCircle {
+      width: 74px;
+      height: 74px;
+      border-radius: 999px;
+      border: 6px solid rgba(0,0,0,0.12);
+      background: #e9e6dc;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.10);
+      transition: transform 0.08s ease, border-color 0.15s ease, background 0.15s ease;
+    }
+    body.dark-mode .nodeCircle { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.14); }
+    .nodeBtn:hover .nodeCircle { transform: translateY(-1px); border-color: rgba(200,168,78,0.5); }
+
+    .nodeCircle .icon {
+      font-size: 1.6em;
+      line-height: 1;
+      color: rgba(0,0,0,0.45);
+    }
+    body.dark-mode .nodeCircle .icon { color: rgba(255,255,255,0.7); }
+
+    .nodeBtn.next .nodeCircle {
+      background: rgba(47,125,74,0.14);
+      border-color: rgba(47,125,74,0.45);
+    }
+    .nodeBtn.next .nodeCircle .icon { color: var(--green); }
+    .nodeBtn.completed .nodeCircle {
+      background: rgba(47,125,74,0.20);
+      border-color: rgba(47,125,74,0.70);
+    }
+    .nodeBtn.completed .nodeCircle .icon { color: var(--green); }
+    .nodeBtn.locked .nodeCircle { opacity: 0.65; }
+
+    .nodeLabel {
+      font-weight: 700;
+      text-align: center;
+    }
+    .nodeSub {
+      color: var(--ink-light);
+      font-size: 0.88em;
+      line-height: 1.35;
+      text-align: center;
+    }
+
+    .runner {
+      display: none;
+      padding: 16px;
+      border-top: 1px solid var(--rule);
+      background: linear-gradient(180deg, rgba(200,168,78,0.06), rgba(0,0,0,0.00));
+    }
+    .runner.show { display: block; }
+    .card {
+      border: 1px solid var(--rule);
+      background: var(--bg);
+      border-radius: 14px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .stepTitle { font-weight: 700; font-size: 1.05em; }
+    .prompt { margin-top: 10px; color: var(--ink-light); line-height: 1.55; }
+    .hebBig { margin-top: 12px; font-size: 2.15em; font-weight: 700; direction: rtl; letter-spacing: 0.02em; }
+
+    .tiles, .bank {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .tile {
+      border: 1px solid var(--rule);
+      background: var(--card-bg);
+      padding: 10px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      user-select: none;
+      font-weight: 700;
+      direction: rtl;
+    }
+    .tile:hover { border-color: var(--accent); }
+    .tile.used { opacity: 0.45; cursor: not-allowed; }
+
+    .choices {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 14px;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (min-width: 720px) { .choices { grid-template-columns: 1fr 1fr; } }
+    .choiceBtn {
+      border: 1px solid var(--rule);
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 12px 12px;
+      cursor: pointer;
+      text-align: left;
+      transition: border-color 0.15s ease, background 0.15s ease, transform 0.08s ease;
+    }
+    .choiceBtn:hover { border-color: var(--accent); background: rgba(200,168,78,0.06); transform: translateY(-1px); }
+    .choiceBtn.correct { border-color: rgba(47,125,74,0.8); background: rgba(47,125,74,0.10); }
+    .choiceBtn.wrong { border-color: rgba(185,74,58,0.8); background: rgba(185,74,58,0.10); }
+
+    .typeWrap { margin: 14px auto 0; max-width: 560px; display: none; }
+    .typeWrap input {
+      width: 100%;
+      padding: 12px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--rule);
+      background: var(--card-bg);
+      color: var(--ink);
+      font-size: 1.05em;
+      text-align: center;
+      font-family: 'David Libre', serif;
+    }
+    .typeActions { display: flex; gap: 10px; justify-content: center; margin-top: 10px; flex-wrap: wrap; }
+    .btn {
+      appearance: none;
+      border: 1px solid var(--rule);
+      background: var(--bg);
+      color: var(--ink);
+      padding: 10px 12px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 700;
+      min-width: 120px;
+    }
+    .btn.primary { border-color: rgba(47,125,74,0.45); background: rgba(47,125,74,0.10); }
+    .btn:hover { border-color: var(--accent); }
+    .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+    .feedback { margin-top: 12px; color: var(--ink-light); line-height: 1.55; }
+    .footerHint { margin-top: 12px; color: var(--ink-light); font-size: 0.92em; opacity: 0.9; }
+    .runnerTop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="title">
+      <div class="en">Scripture Hebrew Course</div>
+      <div class="he">קורס עברית מן הכתובים</div>
+    </div>
+    <div class="actions">
+      <button class="iconbtn" type="button" onclick="window.location.href='index.html'">⌂ Home</button>
+      <button class="iconbtn" type="button" id="darkBtn" title="Toggle dark mode">🌙</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="panel">
+      <div class="panel-head">
+        <div class="hint">
+          Short, practical lessons for Biblical Hebrew using scripture vocabulary and sentence patterns.
+          Build sentences, translate, and optionally practice listening & speaking (when supported).
+        </div>
+        <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end;">
+          <button class="iconbtn" id="resumeBtn" type="button" style="display:none; border-color: rgba(47,125,74,0.45);">
+            Resume
+          </button>
+          <div class="pill" id="progressPill">Loading…</div>
+        </div>
+      </div>
+
+      <div class="path" id="pathView">
+        <div id="units"></div>
+      </div>
+
+      <div class="runner" id="runnerView">
+        <div class="runnerTop">
+          <div class="pill" id="lessonPill">Lesson</div>
+          <div style="display:flex; gap:10px; flex-wrap: wrap;">
+            <button class="btn" id="exitBtn" type="button">Exit</button>
+            <button class="btn primary" id="nextBtn" type="button">Next</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="stepTitle" id="stepTitle">…</div>
+          <div class="prompt" id="stepPrompt"></div>
+          <div class="hebBig" id="hebBig" style="display:none;"></div>
+
+          <div class="tiles" id="tiles" style="display:none;"></div>
+          <div class="bank" id="bank" style="display:none;"></div>
+
+          <div class="choices" id="choices" style="display:none;"></div>
+
+          <div class="typeWrap" id="typeWrap">
+            <input id="typeInput" type="text" autocomplete="off" spellcheck="false" placeholder="Type…" />
+            <div class="typeActions">
+              <button class="btn primary" id="checkBtn" type="button">Check</button>
+              <button class="btn" id="hearBtn" type="button" title="Listen">Listen</button>
+              <button class="btn" id="speakBtn" type="button" title="Speak">Speak</button>
+            </div>
+          </div>
+
+          <div class="feedback" id="feedback"></div>
+          <div class="footerHint" id="footerHint"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function initDark() {
+      try {
+        if (localStorage.getItem('sw-dark') === '1') document.body.classList.add('dark-mode');
+      } catch (e) {}
+      var btn = document.getElementById('darkBtn');
+      function syncIcon() { btn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙'; }
+      btn.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        try { localStorage.setItem('sw-dark', document.body.classList.contains('dark-mode') ? '1' : '0'); } catch(e) {}
+        syncIcon();
+      });
+      syncIcon();
+    })();
+  </script>
+  <script src="course.js"></script>
+</body>
+</html>
+
