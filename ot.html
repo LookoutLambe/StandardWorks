@@ -140,6 +140,16 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
 /* Persistent user highlight (does not clear on selection/copy) */
 .verse.user-highlight { background: rgba(255, 230, 140, 0.35); border-radius: 4px; }
 body.dark-mode .verse.user-highlight { background: rgba(200, 168, 78, 0.18); }
+.verse-num.has-note::after {
+  content: '•';
+  display: inline-block;
+  margin-left: 6px;
+  color: var(--accent);
+  font-size: 1.2em;
+  line-height: 1;
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
 .word-unit.audio-active { background: rgba(200, 168, 78, 0.45); border-radius: 3px; outline: 1px solid rgba(200, 168, 78, 0.7); }
 
 /* === CONTROLS === */
@@ -1693,6 +1703,7 @@ function closeAllPanels() {
 
     menu.innerHTML = '' +
       '<button data-act="highlight" style="width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid rgba(200,168,78,0.35);background:#1e2233;color:#c8a84e;cursor:pointer;font-family:inherit;font-size:0.95em;">Highlight / Unhighlight</button>' +
+      '<button data-act="note" style="width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid rgba(200,168,78,0.25);background:#151929;color:#e8e0d0;cursor:pointer;font-family:inherit;font-size:0.95em;">Note</button>' +
       '<button data-act="copy" style="width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid rgba(200,168,78,0.25);background:#151929;color:#e8e0d0;cursor:pointer;font-family:inherit;font-size:0.95em;">Copy verse</button>' +
       '<button data-act="share" style="width:100%;margin:0;padding:10px 12px;border-radius:6px;border:1px solid rgba(200,168,78,0.25);background:#151929;color:#e8e0d0;cursor:pointer;font-family:inherit;font-size:0.95em;">Share verse</button>';
 
@@ -1703,10 +1714,10 @@ function closeAllPanels() {
       e.stopPropagation();
       var act = btn.getAttribute('data-act');
       if (!currentVerseEl) return;
-      if (act === 'highlight') togglePersistentHighlight(currentVerseEl);
-      else if (act === 'copy') copyVerseOnly(currentVerseEl);
-      else if (act === 'share') shareVerseOnly(currentVerseEl);
-      hideMenu();
+      if (act === 'highlight') { togglePersistentHighlight(currentVerseEl); hideMenu(); }
+      else if (act === 'note') { openNoteEditor(currentVerseEl); hideMenu(); }
+      else if (act === 'copy') { copyVerseOnly(currentVerseEl); hideMenu(); }
+      else if (act === 'share') { shareVerseOnly(currentVerseEl); hideMenu(); }
     });
 
     document.body.appendChild(menu);
@@ -1743,6 +1754,78 @@ function closeAllPanels() {
     else map[key] = { on: true, ts: Date.now() };
     saveHighlights(map);
     verseEl.classList.toggle('user-highlight', !!map[key]);
+  }
+
+  function applyNoteMarker(verseEl, hasNote) {
+    var num = verseEl ? verseEl.querySelector('.verse-num') : null;
+    if (!num) return;
+    num.classList.toggle('has-note', !!hasNote);
+  }
+
+  function ensureNoteModal() {
+    var existing = document.getElementById('note-modal');
+    if (existing) return existing;
+    var overlay = document.createElement('div');
+    overlay.id = 'note-modal';
+    overlay.style.position = 'fixed';
+    overlay.style.left = '0';
+    overlay.style.top = '0';
+    overlay.style.right = '0';
+    overlay.style.bottom = '0';
+    overlay.style.background = 'rgba(0,0,0,0.45)';
+    overlay.style.zIndex = '10000';
+    overlay.style.display = 'none';
+    overlay.innerHTML =
+      '<div id="note-modal-card" style="max-width:720px;width:92%;margin:10vh auto;background:var(--bg);color:var(--ink);border:2px solid var(--accent);border-radius:10px;box-shadow:0 14px 40px rgba(0,0,0,0.35);padding:16px;direction:ltr;font-family:Crimson Pro,serif;">' +
+        '<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;">' +
+          '<div style="font-weight:700;color:var(--accent);font-size:1.05em;" id="note-modal-title">Note</div>' +
+          '<button id="note-modal-close" style="border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer;">Close</button>' +
+        '</div>' +
+        '<textarea id="note-modal-text" style="width:100%;min-height:180px;resize:vertical;border:1px solid var(--rule);border-radius:8px;padding:10px 12px;font-family:Crimson Pro,serif;font-size:1em;line-height:1.4;background:var(--bg-deep);color:var(--ink);"></textarea>' +
+        '<div style="display:flex;justify-content:flex-end;gap:10px;margin-top:12px;">' +
+          '<button id="note-modal-delete" style="border:1px solid rgba(180,60,60,0.4);background:transparent;color:#b43c3c;border-radius:8px;padding:8px 12px;cursor:pointer;">Delete</button>' +
+          '<button id="note-modal-save" style="border:1px solid var(--accent);background:var(--accent);color:#1e2233;border-radius:8px;padding:8px 12px;cursor:pointer;font-weight:700;">Save</button>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(overlay);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) hideNoteModal();
+    });
+    document.getElementById('note-modal-close').addEventListener('click', function() { hideNoteModal(); });
+    return overlay;
+  }
+
+  function hideNoteModal() {
+    var overlay = document.getElementById('note-modal');
+    if (overlay) overlay.style.display = 'none';
+  }
+
+  async function openNoteEditor(verseEl) {
+    var key = verseKeyOf(verseEl);
+    if (!key || !window.NotesEngine) return;
+    ensureNoteModal();
+    var title = document.getElementById('note-modal-title');
+    title.textContent = key.replace(/\|/g, ' ');
+    var ta = document.getElementById('note-modal-text');
+    var existing = await window.NotesEngine.getNote(key);
+    ta.value = existing && existing.text ? existing.text : '';
+    document.getElementById('note-modal').style.display = 'block';
+    setTimeout(function() { try { ta.focus(); ta.selectionStart = ta.value.length; } catch(e) {} }, 0);
+
+    var saveBtn = document.getElementById('note-modal-save');
+    var delBtn = document.getElementById('note-modal-delete');
+
+    saveBtn.onclick = async function() {
+      await window.NotesEngine.upsertNote(key, ta.value);
+      applyNoteMarker(verseEl, (ta.value || '').trim().length > 0);
+      hideNoteModal();
+    };
+    delBtn.onclick = async function() {
+      ta.value = '';
+      await window.NotesEngine.deleteNote(key);
+      applyNoteMarker(verseEl, false);
+      hideNoteModal();
+    };
   }
 
   async function copyVerseOnly(verseEl) {
@@ -1794,6 +1877,20 @@ function closeAllPanels() {
     });
   }
 
+  async function applySavedNotes(scopeEl) {
+    if (!window.NotesEngine) return;
+    var verses = (scopeEl || document).querySelectorAll('.verse[data-verse-key]');
+    for (var i = 0; i < verses.length; i++) {
+      var v = verses[i];
+      var key = verseKeyOf(v);
+      if (!key) continue;
+      try {
+        var note = await window.NotesEngine.getNote(key);
+        applyNoteMarker(v, !!(note && note.text));
+      } catch(e) {}
+    }
+  }
+
   function showMenuFor(numEl, verseEl) {
     ensureMenu();
     currentVerseEl = verseEl;
@@ -1830,14 +1927,14 @@ function closeAllPanels() {
   });
 
   // Apply highlights after chapters render / on load
-  document.addEventListener('DOMContentLoaded', function() { applySavedHighlights(document); });
+  document.addEventListener('DOMContentLoaded', function() { applySavedHighlights(document); applySavedNotes(document); });
   // Patch _ensureChapterRendered to apply highlights to newly-rendered chapter
   var _origEnsure = window._ensureChapterRendered;
   if (typeof _origEnsure === 'function') {
     window._ensureChapterRendered = function(chapId) {
       _origEnsure(chapId);
       var panel = document.getElementById('panel-' + chapId);
-      if (panel) applySavedHighlights(panel);
+      if (panel) { applySavedHighlights(panel); applySavedNotes(panel); }
     };
   }
 })();
@@ -2807,6 +2904,7 @@ window.addEventListener('scroll', function() {
 })();
 
 </script>
+<script src="notes_engine.js"></script>
 <script src="nav_engine.js"></script>
 <script>
 NavEngine.init({
