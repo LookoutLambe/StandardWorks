@@ -9,6 +9,7 @@
     exitBtn: document.getElementById('exitBtn'),
     nextBtn: document.getElementById('nextBtn'),
     meaningsBtn: document.getElementById('meaningsBtn'),
+    backBtn: document.getElementById('backBtn'),
     stepTitle: document.getElementById('stepTitle'),
     stepPrompt: document.getElementById('stepPrompt'),
     hebBig: document.getElementById('hebBig'),
@@ -1240,6 +1241,20 @@
     }
   }
 
+  function prevStep() {
+    if (!currentLesson) return;
+    if (stepIdx > 0) {
+      stepIdx--;
+      locked = false;
+      if (progress.current && progress.current.lessonId === currentLesson.id) {
+        progress.current.stepIdx = stepIdx;
+        saveCurrentProgress();
+        updateResumeButton();
+      }
+      renderStep();
+    }
+  }
+
   function speakHebrew(text) {
     try {
       if (!('speechSynthesis' in window)) return false;
@@ -1785,6 +1800,9 @@
       // Re-render current step so tiles update immediately.
       try { renderStep(); } catch (e) {}
     });
+  }
+  if (els.backBtn) {
+    els.backBtn.addEventListener('click', prevStep);
   }
   els.exitBtn.addEventListener('click', () => {
     // Keep progress.current so Resume works.
