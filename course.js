@@ -1039,6 +1039,7 @@
   let builtTokens = [];
   let attempts = 0;
   const MAX_ATTEMPTS = 3;
+  const AUTO_ADVANCE_MS = 550;
 
   function showPath() {
     els.runnerView.classList.remove('show');
@@ -1087,6 +1088,19 @@
     } else {
       els.feedback.innerHTML = `<span style="color:var(--danger); font-weight:700;">Not quite.</span> ${extraHtml}`;
     }
+  }
+
+  function autoAdvanceSoon() {
+    // If already on next, avoid double-advancing.
+    try { if (els.nextBtn && els.nextBtn.disabled) return; } catch (e) {}
+    setTimeout(() => {
+      try {
+        // Only advance if still in runner and step already graded/locked.
+        if (!currentLesson) return;
+        if (!locked) return;
+        nextStep();
+      } catch (e) {}
+    }, AUTO_ADVANCE_MS);
   }
 
   function startLesson(u, su, l, startAtStep = 0) {
@@ -1351,6 +1365,7 @@
           });
           setCorrectWrong(true, '');
           els.nextBtn.disabled = false;
+          autoAdvanceSoon();
           return;
         }
 
@@ -1431,6 +1446,7 @@
           locked = true;
           setCorrectWrong(true, '');
           els.nextBtn.disabled = false;
+          autoAdvanceSoon();
         }
       }
     }
@@ -1465,6 +1481,7 @@
         locked = true;
         setCorrectWrong(true, '');
         els.nextBtn.disabled = false;
+        autoAdvanceSoon();
         return;
       }
       attempts++;
@@ -1523,6 +1540,7 @@
           locked = true;
           setCorrectWrong(true, '');
           els.nextBtn.disabled = false;
+          autoAdvanceSoon();
         }
       }
     }
@@ -1555,6 +1573,7 @@
         locked = true;
         setCorrectWrong(true, '');
         els.nextBtn.disabled = false;
+        autoAdvanceSoon();
         return;
       }
       attempts++;
@@ -1591,6 +1610,7 @@
         locked = true;
         setCorrectWrong(true, '');
         els.nextBtn.disabled = false;
+        autoAdvanceSoon();
         return;
       }
       attempts++;
