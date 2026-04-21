@@ -245,9 +245,14 @@
   var _breadcrumbEl = null;
   var _searchInput = null;
   var _searchResults = null;
+  var _libraryEl = null;
+  var _tabsRowEl = null;
+  var _bookListEl = null;
   var _activeVolTab = null;
   var _expandedBook = null;
   var _searchIdx = -1;
+  var _focusedBookId = null;
+  var _viewMode = 'library'; // 'library' | 'books'
 
   // ── Build flat search index ──
   var _searchIndex = [];
@@ -350,6 +355,21 @@
     homeBtn.setAttribute('aria-label', 'Home');
     homeBtn.onclick = goHome;
 
+    var libraryBtn = document.createElement('button');
+    libraryBtn.className = 'nav-icon-btn';
+    libraryBtn.innerHTML = '&#9776;'; // ☰
+    libraryBtn.title = 'Library';
+    libraryBtn.setAttribute('aria-label', 'Library');
+    libraryBtn.onclick = function() {
+      try {
+        _focusedBookId = null;
+        if (_searchInput) _searchInput.value = '';
+        if (_searchResults) { _searchResults.classList.remove('open'); _searchResults.innerHTML = ''; }
+        _searchIdx = -1;
+        setViewMode('library');
+      } catch(e) {}
+    };
+
     _searchInput = document.createElement('input');
     _searchInput.type = 'text';
     _searchInput.placeholder = 'Jump to verse... (e.g. Isaiah 53)';
@@ -361,6 +381,7 @@
     closeBtn.onclick = closeSidebar;
     searchWrap.appendChild(backBtn);
     searchWrap.appendChild(homeBtn);
+    searchWrap.appendChild(libraryBtn);
     searchWrap.appendChild(_searchInput);
     searchWrap.appendChild(closeBtn);
     _sidebarEl.appendChild(searchWrap);
@@ -370,9 +391,16 @@
     _searchResults.className = 'nav-search-results';
     _sidebarEl.appendChild(_searchResults);
 
+    // Library view container (default)
+    _libraryEl = document.createElement('div');
+    _libraryEl.id = 'nav-library';
+    _libraryEl.className = 'nav-library';
+    _sidebarEl.appendChild(_libraryEl);
+
     // Volume tabs
-    var tabsRow = document.createElement('div');
-    tabsRow.className = 'nav-vol-tabs';
+    _tabsRowEl = document.createElement('div');
+    _tabsRowEl.className = 'nav-vol-tabs';
+    _tabsRowEl.id = 'nav-vol-tabs';
     var volKeys = ['ot','nt','bom','dc','pgp','jst'];
     volKeys.forEach(function(vk) {
       var vol = VOLUMES[vk];
@@ -381,15 +409,15 @@
       tab.setAttribute('data-vol', vk);
       tab.innerHTML = '<span class="vt-heb">' + vol.abbr + '</span><span class="vt-en">' + vol.name + '</span>';
       tab.onclick = function() { switchVolTab(vk); };
-      tabsRow.appendChild(tab);
+      _tabsRowEl.appendChild(tab);
     });
-    _sidebarEl.appendChild(tabsRow);
+    _sidebarEl.appendChild(_tabsRowEl);
 
     // Book list container
-    var bookList = document.createElement('div');
-    bookList.className = 'nav-book-list';
-    bookList.id = 'nav-book-list';
-    _sidebarEl.appendChild(bookList);
+    _bookListEl = document.createElement('div');
+    _bookListEl.className = 'nav-book-list';
+    _bookListEl.id = 'nav-book-list';
+    _sidebarEl.appendChild(_bookListEl);
 
     // Footer tools (notes export/import + bookmarks + backup)
     var footer = document.createElement('div');
@@ -448,8 +476,8 @@
       renderOfflineStatus();
     }, 0);
 
-    // Render initial volume
-    renderVolBooks(_config.volume);
+    // Default: show Library view
+    setViewMode('library');
 
     // Breadcrumb
     _breadcrumbEl = document.getElementById('nav-breadcrumb');
@@ -481,6 +509,85 @@
     setTimeout(_fixPagePadding, 300);
     window.addEventListener('load', _fixPagePadding);
     window.addEventListener('resize', _fixPagePadding);
+  }
+
+  function setViewMode(mode) {
+    _viewMode = mode === 'books' ? 'books' : 'library';
+    if (_libraryEl) _libraryEl.style.display = (_viewMode === 'library') ? 'block' : 'none';
+    if (_tabsRowEl) _tabsRowEl.style.display = (_viewMode === 'books') ? 'flex' : 'none';
+    if (_bookListEl) _bookListEl.style.display = (_viewMode === 'books') ? 'block' : 'none';
+    if (_viewMode === 'library') renderLibrary();
+  }
+
+  function renderLibrary() {
+    if (!_libraryEl) return;
+    var last = null;
+    try { last = localStorage.getItem('sw-last-read'); last = last ? JSON.parse(last) : null; } catch(e) { last = null; }
+    var meta = _loadOfflineMeta();
+    var bms = loadBookmarks();
+
+    function tile(vk) {
+      var v = VOLUMES[vk];
+      var m = meta ? meta[vk] : null;
+      var status = m ? ('Downloaded') : ('Not downloaded');
+      return '' +
+        '<div class="nl-tile" data-vol="' + vk + '" tabindex="0" role="button">' +
+          '<div class="nl-top">' +
+            '<div class="nl-abbr">' + (v.abbr || vk.toUpperCase()) + '</div>' +
+            '<div class="nl-name">' + v.name + '</div>' +
+          '</div>' +
+          '<div class="nl-sub">' + status + '</div>' +
+        '</div>';
+    }
+
+    var html = '';
+    html += '<div class="nl-sec-title">Library</div>';
+
+    if (last && last.path) {
+      html += '<div class="nl-card nl-last" id="nl-last" tabindex="0" role="button">' +
+                '<div class="nl-card-title">Continue</div>' +
+                '<div class="nl-card-text">' + (last.label || 'Continue reading') + '</div>' +
+                (last.heb ? '<div class="nl-card-heb" dir="rtl">' + last.heb + '</div>' : '') +
+              '</div>';
+    }
+
+    if (bms && bms.length) {
+      html += '<div class="nl-sec-title" style="margin-top:10px">Bookmarks</div>';
+      html += '<div class="nl-bm-list">';
+      bms.slice(0, 3).forEach(function(bm) {
+        html += '<div class="nl-bm" data-path="' + (bm.path || '').replace(/"/g,'&quot;') + '" tabindex="0" role="button">' +
+                  '<div class="nl-bm-title">' + (bm.label || 'Bookmark') + '</div>' +
+                  (bm.heb ? '<div class="nl-bm-heb" dir="rtl">' + bm.heb + '</div>' : '') +
+                '</div>';
+      });
+      html += '</div>';
+    }
+
+    html += '<div class="nl-sec-title" style="margin-top:10px">Volumes</div>';
+    html += '<div class="nl-grid">' + ['ot','nt','bom','dc','pgp','jst'].map(tile).join('') + '</div>';
+
+    _libraryEl.innerHTML = html;
+
+    var lastEl = document.getElementById('nl-last');
+    if (lastEl && last && last.path) {
+      lastEl.onclick = function() { window.location.href = last.path; };
+      lastEl.onkeydown = function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); lastEl.click(); } };
+    }
+    _libraryEl.querySelectorAll('.nl-bm').forEach(function(el) {
+      el.onclick = function() { var p = el.getAttribute('data-path'); if (p) window.location.href = p; };
+      el.onkeydown = function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); } };
+    });
+    _libraryEl.querySelectorAll('.nl-tile').forEach(function(el) {
+      function go() {
+        var vk = el.getAttribute('data-vol');
+        if (!vk) return;
+        _focusedBookId = null;
+        setViewMode('books');
+        switchVolTab(vk);
+      }
+      el.onclick = go;
+      el.onkeydown = function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } };
+    });
   }
 
   function _downloadJson(filename, obj) {
@@ -663,8 +770,18 @@
 
     // D&C special: show section number grid instead of book list
     if (volKey === 'dc') {
+      _focusedBookId = null;
       renderDCSections(list, vol);
       return;
+    }
+
+    // Focus mode: show only chapters for one specific book (but keep tabs)
+    if (_focusedBookId) {
+      var focusRow = document.createElement('div');
+      focusRow.className = 'nav-book-row nav-focus-row';
+      focusRow.innerHTML = '<span><span class="nb-en">← All books</span></span><span class="nb-heb">הַכֹּל</span>';
+      focusRow.onclick = function() { _focusedBookId = null; renderVolBooks(volKey); };
+      list.appendChild(focusRow);
     }
 
     vol.divisions.forEach(function(div) {
@@ -672,9 +789,10 @@
         var divEl = document.createElement('div');
         divEl.className = 'nav-division';
         divEl.textContent = div.name;
-        list.appendChild(divEl);
+        if (!_focusedBookId) list.appendChild(divEl);
       }
       div.books.forEach(function(book) {
+        if (_focusedBookId && book.id !== _focusedBookId) return;
         // Book row
         var row = document.createElement('div');
         row.className = 'nav-book-row' + (book.ch === 1 ? ' single-ch' : '');
@@ -701,7 +819,7 @@
         // Chapter grid (hidden)
         if (book.ch > 1) {
           var grid = document.createElement('div');
-          grid.className = 'nav-ch-grid';
+          grid.className = 'nav-ch-grid' + (_focusedBookId ? ' open' : '');
           grid.setAttribute('data-book', book.id);
           for (var c = 1; c <= book.ch; c++) {
             var cell = document.createElement('div');
@@ -720,9 +838,19 @@
     });
 
     // Auto-expand current book if on this volume
-    if (volKey === _config.volume && _config.currentChapter) {
+    if (!_focusedBookId && volKey === _config.volume && _config.currentChapter) {
       autoExpandCurrentBook();
     }
+  }
+
+  function focusBook(volKey, bookId) {
+    _focusedBookId = bookId || null;
+    setViewMode('books');
+    renderVolBooks(volKey);
+    setTimeout(function() {
+      var grid = _sidebarEl ? _sidebarEl.querySelector('.nav-ch-grid[data-book="' + bookId + '"]') : null;
+      if (grid) grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
   }
 
   // ── D&C special rendering (section grid) ──
@@ -882,6 +1010,7 @@
 
   // ── Switch volume tab ──
   function switchVolTab(volKey) {
+    _focusedBookId = null;
     renderVolBooks(volKey);
   }
 
@@ -899,6 +1028,8 @@
     _overlayEl.classList.add('open');
     document.body.style.overflow = 'hidden';
     setTimeout(function() { _searchInput.focus(); }, 300);
+    // Default to Library when opening
+    setViewMode('library');
   }
 
   function closeSidebar() {
@@ -976,9 +1107,22 @@
   function executeSearchResult(r) {
     var chNum = r.chNum || 1;
     if (chNum > r.entry.ch) chNum = r.entry.ch;
-    var chId = r.entry.prefix + chNum;
-    if (r.entry.isSection) chId = r.entry.chId;
-    navigateToChapter(r.entry.vol, chId);
+    // If user typed a chapter number, jump there. Otherwise focus the book’s chapters.
+    if (r.entry.isSection) {
+      navigateToChapter(r.entry.vol, r.entry.chId);
+      return;
+    }
+    if (r.chNum) {
+      var chId = r.entry.prefix + chNum;
+      navigateToChapter(r.entry.vol, chId);
+      return;
+    }
+    // Focus the selected book so only its chapter grid shows.
+    _searchInput.value = '';
+    _searchResults.classList.remove('open');
+    _searchResults.innerHTML = '';
+    _searchIdx = -1;
+    focusBook(r.entry.vol, r.entry.id);
   }
 
   // ── Breadcrumb ──

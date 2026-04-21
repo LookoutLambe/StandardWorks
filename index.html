@@ -46,7 +46,7 @@ body.dark-mode {
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: 'Crimson Pro', 'Georgia', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   background: var(--bg);
   color: var(--ink);
   min-height: 100vh;
@@ -461,6 +461,16 @@ body.dark-mode .top-bar { background: #0a0a0a; }
   .card-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* === FORCE UI FONT (David Libre) === */
+body, button, input, select, textarea,
+.top-bar, .top-bar-title, .top-bar-actions,
+.landing-subtitle, .card-title, .card-subtitle, .card-desc,
+.continue-reading, .cr-ref, .cr-heb, .cr-btn,
+#global-search, #gs-filter, #gs-results,
+#offline-downloads {
+  font-family: 'David Libre', 'Georgia', serif !important;
 }
 
 </style>

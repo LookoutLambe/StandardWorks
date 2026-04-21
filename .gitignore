@@ -1,3 +1,10 @@
 _cache/
 _milon/
 _morphhb/
+
+# Local-only iOS/PWA settings (do not commit)
+ios.webapp.local.json
+
+# Generated audit outputs (do not commit)
+_audit_gloss_report.json
+_audit_gloss_report.summary.txt

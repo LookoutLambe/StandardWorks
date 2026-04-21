@@ -157,7 +157,7 @@ body.dark-mode .verse.user-highlight { background: rgba(200, 168, 78, 0.18); }
   background: #1e2233; color: #c8a84e;
   display: flex; justify-content: center; align-items: center;
   padding: 6px 12px; gap: 12px; flex-wrap: wrap;
-  font-family: 'Crimson Pro', serif; font-size: 0.9em;
+  font-family: 'David Libre', serif; font-size: 0.9em;
   direction: ltr;
 }
 .controls-bottom {
@@ -165,13 +165,13 @@ body.dark-mode .verse.user-highlight { background: rgba(200, 168, 78, 0.18); }
   background: #1e2233;
   display: flex; justify-content: center;
   padding: 6px 0; gap: 4px;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', serif;
   direction: ltr;
 }
 .controls-bottom button {
   background: transparent; border: 1px solid #3a3f55;
   color: #8a7a4a; padding: 4px 14px; border-radius: 3px;
-  cursor: pointer; font-family: 'Crimson Pro', serif;
+  cursor: pointer; font-family: 'David Libre', serif;
   font-size: 0.78em; line-height: 1.3; text-align: center;
   transition: all 0.15s;
 }
@@ -205,9 +205,9 @@ body.dark-mode .verse.user-highlight { background: rgba(200, 168, 78, 0.18); }
 }
 .popup-close { position: absolute; top: 4px; right: 8px; cursor: pointer; color: #888; font-size: 14px; }
 .popup-hebrew { font-size: 2em; font-weight: 700; color: var(--ink); margin-bottom: 4px; text-align: center; }
-.popup-translit { font-family: 'Crimson Pro', serif; font-size: 1em; color: var(--ink-light); text-align: center; margin-bottom: 4px; direction: ltr; font-style: italic; }
-.popup-gloss { font-family: 'Crimson Pro', serif; font-size: 1.1em; color: var(--accent); text-align: center; margin-bottom: 8px; direction: ltr; font-weight: 600; }
-.popup-detail { font-family: 'Crimson Pro', serif; font-size: 0.8em; color: var(--ink-light); direction: ltr; line-height: 1.5; }
+.popup-translit { font-family: 'David Libre', serif; font-size: 1em; color: var(--ink-light); text-align: center; margin-bottom: 4px; direction: ltr; font-style: italic; }
+.popup-gloss { font-family: 'David Libre', serif; font-size: 1.1em; color: var(--accent); text-align: center; margin-bottom: 8px; direction: ltr; font-weight: 600; }
+.popup-detail { font-family: 'David Libre', serif; font-size: 0.8em; color: var(--ink-light); direction: ltr; line-height: 1.5; }
 .popup-detail span { font-weight: 600; }
 
 /* === SEARCH === */
@@ -585,6 +585,17 @@ body.dark-mode #xref-panel { background: #252525; border-color: #d4af37; }
 body.dark-mode #return-banner { background:#2a2a2a; border-color:#444; }
 body.dark-mode #return-banner a { background:#d4af37; color:#1a1a1a; }
 body.dark-mode #return-banner a:hover { background:#c8a84e; }
+
+/* === FORCE UI FONT (David Libre) === */
+body, button, input, select, textarea,
+.chapter-label-en, .gl, .tl,
+.popup-translit, .popup-gloss, .popup-detail, .popup-strong,
+#search-input, .search-result-ref,
+.landing-hero .subtitle-en, .landing-sec-btn .sec-num,
+.sel-color-row-label, #sel-note-input, #sel-note-save,
+#return-banner, #note-modal-card {
+  font-family: 'David Libre', serif !important;
+}
 </style>
 </head>
 <body>
@@ -884,13 +895,92 @@ function getChapterLabel(id) {
 window._noNikkud = false;
 function _stripNikkudDisplay(s) { return s.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, ''); }
 
+// Prefer morphology-aware glossing (BLB/BibleHub-style) when possible.
+// Note: true morphology requires a per-word morph tag; until then, we at least
+// account for common Hebrew prefixes/suffixes + Strong's lemma gloss.
+window._useStrongsMorphGloss = true;
+
+function _stripHebrewMarks(s) { return (s || '').replace(/[\u0591-\u05C7]/g, ''); }
+
+function _guessAffixParts(heb) {
+  var h = (heb || '').replace(/\u05C3/g, '');
+  var noMarks = _stripHebrewMarks(h);
+  var s = noMarks.replace(/[\u05BE]/g, '');
+
+  var prefixTokens = [];
+  var i = 0;
+  while (i < s.length) {
+    var ch = s[i];
+    if (ch === 'ו') { prefixTokens.push('and'); i++; continue; }
+    if (ch === 'ב') { prefixTokens.push('in'); i++; continue; }
+    if (ch === 'ל') { prefixTokens.push('to'); i++; continue; }
+    if (ch === 'כ') { prefixTokens.push('as'); i++; continue; }
+    if (ch === 'מ') { prefixTokens.push('from'); i++; continue; }
+    if (ch === 'ש') { prefixTokens.push('that'); i++; continue; }
+    if (ch === 'ה') { prefixTokens.push('the'); i++; continue; }
+    break;
+  }
+
+  var base = s.slice(i);
+
+  var suffixToken = '';
+  var sufMap = [
+    ['יהם', 'their'], ['יהן', 'their'], ['יכם', 'your'], ['יכן', 'your'],
+    ['ינו', 'our'], ['ני', 'my'], ['י', 'my'],
+    ['ך', 'your'], ['כם', 'your'], ['כן', 'your'],
+    ['ו', 'his'], ['ה', 'her'], ['ם', 'their'], ['ן', 'their']
+  ];
+  for (var si = 0; si < sufMap.length; si++) {
+    var suf = sufMap[si][0];
+    if (base.length > suf.length + 1 && base.endsWith(suf)) {
+      suffixToken = sufMap[si][1];
+      base = base.slice(0, -suf.length);
+      break;
+    }
+  }
+
+  return { prefixTokens: prefixTokens, base: base, suffixToken: suffixToken };
+}
+
+function _strongsGlossForHebrew(hebBase) {
+  if (!hebBase || !window._strongsLookup || !window._strongsRoots) return '';
+  var sNum = _strongsLookup[hebBase] || _strongsLookup[_stripHebrewMarks(hebBase)] || '';
+  if (!sNum || !_strongsRoots[sNum]) return '';
+  return (_strongsRoots[sNum].g || '').trim();
+}
+
+function computeGlossFromHebrew(heb, fallbackGloss) {
+  try {
+    if (!window._useStrongsMorphGloss) return fallbackGloss;
+    var parts = _guessAffixParts(heb);
+    var lemmaGloss = _strongsGlossForHebrew(parts.base);
+    if (!lemmaGloss) return fallbackGloss;
+
+    var tokens = [];
+    parts.prefixTokens.forEach(function(t) { if (t) tokens.push(t); });
+    if (parts.suffixToken) tokens.push(parts.suffixToken);
+
+    var lg = lemmaGloss.replace(/\s+/g, ' ').trim();
+    if (lg.split(' ').length > 5) lg = lg.split(' ').slice(0, 3).join(' ');
+
+    var composed = '';
+    if (tokens.length > 0) composed = tokens.join('-') + '-' + lg;
+    else composed = lg;
+
+    return composed.replace(/-/g, ' ').trim();
+  } catch (e) {
+    return fallbackGloss;
+  }
+}
+
 function makeWordUnit(h, e, isSof) {
   if (h === '\u05C3') return '';
   h = h.replace(/\u05C3/g, '');
   var div = document.createElement('div');
   div.className = 'word-unit' + (isSof ? ' sof' : '');
   div.setAttribute('data-h', h);
-  var gloss = e.replace(/-/g, ' ');
+  var baseGloss = e.replace(/-/g, ' ');
+  var gloss = computeGlossFromHebrew(h, baseGloss);
   var displayH = window._noNikkud ? _stripNikkudDisplay(h) : h;
   div.innerHTML = '<span class="hw">' + displayH + '</span><span class="tl"></span><span class="gl">' + gloss + '</span>';
   return div;

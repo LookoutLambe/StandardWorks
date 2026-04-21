@@ -156,7 +156,7 @@ body.dark-mode .verse.user-highlight { background: rgba(200, 168, 78, 0.18); }
   background: #1e2233; color: #c8a84e;
   display: flex; justify-content: center; align-items: center;
   padding: 6px 12px; gap: 12px; flex-wrap: wrap;
-  font-family: 'Crimson Pro', serif; font-size: 0.9em;
+  font-family: 'David Libre', serif; font-size: 0.9em;
   direction: ltr;
 }
 .controls-bottom {
@@ -164,13 +164,13 @@ body.dark-mode .verse.user-highlight { background: rgba(200, 168, 78, 0.18); }
   background: #1e2233;
   display: flex; justify-content: center;
   padding: 6px 0; gap: 4px;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', serif;
   direction: ltr;
 }
 .controls-bottom button {
   background: transparent; border: 1px solid #3a3f55;
   color: #8a7a4a; padding: 4px 14px; border-radius: 3px;
-  cursor: pointer; font-family: 'Crimson Pro', serif;
+  cursor: pointer; font-family: 'David Libre', serif;
   font-size: 0.78em; line-height: 1.3; text-align: center;
   transition: all 0.15s;
 }
@@ -204,9 +204,9 @@ body.dark-mode .verse.user-highlight { background: rgba(200, 168, 78, 0.18); }
 }
 .popup-close { position: absolute; top: 4px; right: 8px; cursor: pointer; color: #888; font-size: 14px; }
 .popup-hebrew { font-size: 2em; font-weight: 700; color: var(--ink); margin-bottom: 4px; text-align: center; }
-.popup-translit { font-family: 'Crimson Pro', serif; font-size: 1em; color: var(--ink-light); text-align: center; margin-bottom: 4px; direction: ltr; font-style: italic; }
-.popup-gloss { font-family: 'Crimson Pro', serif; font-size: 1.1em; color: var(--accent); text-align: center; margin-bottom: 8px; direction: ltr; font-weight: 600; }
-.popup-detail { font-family: 'Crimson Pro', serif; font-size: 0.8em; color: var(--ink-light); direction: ltr; line-height: 1.5; }
+.popup-translit { font-family: 'David Libre', serif; font-size: 1em; color: var(--ink-light); text-align: center; margin-bottom: 4px; direction: ltr; font-style: italic; }
+.popup-gloss { font-family: 'David Libre', serif; font-size: 1.1em; color: var(--accent); text-align: center; margin-bottom: 8px; direction: ltr; font-weight: 600; }
+.popup-detail { font-family: 'David Libre', serif; font-size: 0.8em; color: var(--ink-light); direction: ltr; line-height: 1.5; }
 .popup-detail span { font-weight: 600; }
 
 /* === SEARCH === */
@@ -559,6 +559,18 @@ body.dark-mode #xref-panel { background: #252525; border-color: #d4af37; }
 body.dark-mode #return-banner { background:#2a2a2a; border-color:#444; }
 body.dark-mode #return-banner a { background:#d4af37; color:#1a1a1a; }
 body.dark-mode #return-banner a:hover { background:#c8a84e; }
+
+/* === FORCE UI FONT (David Libre) === */
+body, button, input, select, textarea,
+.chapter-label-en, .gl, .tl,
+.popup-translit, .popup-gloss, .popup-detail, .popup-strong,
+#search-input, .search-result-ref,
+.landing-hero .subtitle-en, .landing-sec-btn .sec-num,
+.sel-color-row-label, #sel-note-input, #sel-note-save,
+#return-banner, #note-modal-card,
+#dc-chron-table, .share-btn {
+  font-family: 'David Libre', serif !important;
+}
 </style>
 </head>
 <body>
@@ -872,6 +884,78 @@ function getChapterLabel(id) {
 window._noNikkud = false;
 function _stripNikkudDisplay(s) { return s.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, ''); }
 
+// Morphology-aware gloss (non-breaking): keep the displayed gloss as-is,
+// but compute a Strong's-derived "morph gloss" shown in the popup for auditing.
+window._useMorphGlossPopup = true;
+function _stripHebrewMarks(s) { return (s || '').replace(/[\u0591-\u05C7]/g, ''); }
+function _guessAffixPartsForMorphGloss(heb) {
+  var h = (heb || '').replace(/\u05C3/g, '');
+  var s = _stripHebrewMarks(h).replace(/[\u05BE]/g, '');
+  var prefixTokens = [];
+  var i = 0;
+  while (i < s.length) {
+    var ch = s[i];
+    if (ch === 'ו') { prefixTokens.push('and'); i++; continue; }
+    if (ch === 'ב') { prefixTokens.push('in'); i++; continue; }
+    if (ch === 'ל') { prefixTokens.push('to'); i++; continue; }
+    if (ch === 'כ') { prefixTokens.push('as'); i++; continue; }
+    if (ch === 'מ') { prefixTokens.push('from'); i++; continue; }
+    if (ch === 'ש') { prefixTokens.push('that'); i++; continue; }
+    if (ch === 'ה') { prefixTokens.push('the'); i++; continue; }
+    break;
+  }
+  var base = s.slice(i);
+  var suffixToken = '';
+  var sufMap = [
+    ['יהם', 'their'], ['יהן', 'their'], ['יכם', 'your'], ['יכן', 'your'],
+    ['ינו', 'our'], ['ני', 'my'], ['י', 'my'],
+    ['ך', 'your'], ['כם', 'your'], ['כן', 'your'],
+    ['ו', 'his'], ['ה', 'her'], ['ם', 'their'], ['ן', 'their']
+  ];
+  for (var si = 0; si < sufMap.length; si++) {
+    var suf = sufMap[si][0];
+    if (base.length > suf.length + 1 && base.endsWith(suf)) {
+      suffixToken = sufMap[si][1];
+      base = base.slice(0, -suf.length);
+      break;
+    }
+  }
+  return { prefixTokens: prefixTokens, base: base, suffixToken: suffixToken };
+}
+function computeMorphGloss(heb) {
+  try {
+    if (!window._useMorphGlossPopup) return '';
+    if (!window._strongsLookup || !window._strongsRoots) return '';
+    var parts = _guessAffixPartsForMorphGloss(heb);
+    // Use a Strong's lookup strategy similar to the popup (surface + prefix-stripped + stripped marks).
+    var surface = (heb || '').replace(/\u05C3/g, '');
+    var stripped = (typeof stripPrefixes === 'function') ? stripPrefixes(surface) : surface;
+    var baseForLookup = parts.base || stripped;
+    if (!baseForLookup) return '';
+    var sNum =
+      _strongsLookup[surface] ||
+      _strongsLookup[stripped] ||
+      _strongsLookup[baseForLookup] ||
+      _strongsLookup[_stripHebrewMarks(surface)] ||
+      _strongsLookup[_stripHebrewMarks(stripped)] ||
+      _strongsLookup[_stripHebrewMarks(baseForLookup)] ||
+      '';
+    if (!sNum || !_strongsRoots[sNum]) return '';
+    var lemmaGloss = (_strongsRoots[sNum].g || '').trim();
+    if (!lemmaGloss) return '';
+    // Keep it short like interlinear glosses.
+    lemmaGloss = lemmaGloss.replace(/\s+/g, ' ').trim();
+    if (lemmaGloss.split(' ').length > 5) lemmaGloss = lemmaGloss.split(' ').slice(0, 3).join(' ');
+    var tokens = [];
+    parts.prefixTokens.forEach(function(t) { if (t) tokens.push(t); });
+    if (parts.suffixToken) tokens.push(parts.suffixToken);
+    var composed = tokens.length ? (tokens.join('-') + '-' + lemmaGloss) : lemmaGloss;
+    return composed.replace(/-/g, ' ').trim();
+  } catch (e) {
+    return '';
+  }
+}
+
 function makeWordUnit(h, e, isSof) {
   if (h === '\u05C3') return '';
   h = h.replace(/\u05C3/g, '');
@@ -879,6 +963,8 @@ function makeWordUnit(h, e, isSof) {
   div.className = 'word-unit' + (isSof ? ' sof' : '');
   div.setAttribute('data-h', h);
   var gloss = e.replace(/-/g, ' ');
+  // Preserve curated gloss; add morph gloss for popup auditing.
+  div.setAttribute('data-mgl', computeMorphGloss(h));
   var displayH = window._noNikkud ? _stripNikkudDisplay(h) : h;
   div.innerHTML = '<span class="hw">' + displayH + '</span><span class="tl"></span><span class="gl">' + gloss + '</span>';
   return div;
@@ -1845,6 +1931,9 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
     document.getElementById('popup-translit').textContent = transliterate(hText);
     popupGl.textContent = gText;
 
+    // Morph gloss (non-breaking): compare Strong's-derived gloss vs curated gloss
+    var morphGloss = wu.getAttribute('data-mgl') || computeMorphGloss(hText) || '';
+
     // Strong's H-number
     var strongsNum = '';
     if (window._strongsLookup) {
@@ -1863,6 +1952,11 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
     var rInfo = rootFreq[root];
     var sInfo = wordFreq[hText];
     var detailHtml = '';
+    if (morphGloss) {
+      detailHtml += '<div style="direction:ltr;margin-bottom:6px;font-size:0.9em;color:var(--ink-light)">' +
+        '<strong>Morph gloss:</strong> <span style="color:var(--ink)">' + morphGloss + '</span>' +
+        '</div>';
+    }
     if (rInfo) {
       var verseCount = rInfo.verseRefs ? Object.keys(rInfo.verseRefs).length : 0;
       var rootDisplay = '', rootMeaning = '';

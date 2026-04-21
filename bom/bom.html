@@ -1540,6 +1540,17 @@ body.dark-mode #return-banner { background:#2a2a2a; border-color:#444; }
 body.dark-mode #return-banner a { background:#d4af37; color:#1a1a1a; }
 body.dark-mode #return-banner a:hover { background:#c8a84e; }
 
+/* === FORCE UI FONT (David Libre) === */
+body, button, input, select, textarea,
+.chapter-label-en, .gl, .tl,
+.popup-translit, .popup-gloss, .popup-detail, .popup-strong,
+#search-input, .search-result-ref,
+.landing-hero .subtitle-en, .landing-sec-btn .sec-num,
+.sel-color-row-label, #sel-note-input, #sel-note-save,
+#return-banner, #note-modal-card {
+  font-family: 'David Libre', serif !important;
+}
+
 </style>
 </head>
 <body>
@@ -3744,6 +3755,105 @@ function scheduleAdjacentPrefetch() {
 
 // RENDERER
 
+// Morphology-aware gloss (non-breaking): keep displayed gloss as-is,
+// compute a Strong's-derived "morph gloss" for popup auditing.
+window._useMorphGlossPopup = true;
+function _stripHebrewMarks(s) { return (s || '').replace(/[\u0591-\u05C7]/g, ''); }
+function _stripPrefixesForMorphGloss(w) {
+  // Copy of the BOM popup's stripPrefixes(), but global so computeMorphGloss can use it.
+  // Removes maqaf-joined particles first and then strips common prefixes (1–2 layers).
+  w = (w || '').replace(/\u05C3/g, '');
+  w = w.replace(/^.*־/, '');
+  var prefixes = [
+    /^וְ/, /^וַ/, /^וּ/, /^וָ/, /^וֶ/,
+    /^הַ/, /^הָ/, /^הֶ/,
+    /^בְּ/, /^בַּ/, /^בִּ/, /^בָּ/, /^בֶּ/, /^בְ/, /^בַ/, /^בִ/,
+    /^לְ/, /^לַ/, /^לִ/, /^לָ/, /^לֶ/,
+    /^מִ/, /^מֵ/, /^מְ/, /^מַ/,
+    /^כְּ/, /^כַּ/, /^כְ/, /^כַ/,
+    /^שֶׁ/, /^שֶ/
+  ];
+  var stripped = w;
+  for (var i = 0; i < prefixes.length; i++) {
+    if (prefixes[i].test(stripped) && stripped.replace(prefixes[i], '').length >= 2) {
+      stripped = stripped.replace(prefixes[i], '');
+      break;
+    }
+  }
+  for (var j = 0; j < prefixes.length; j++) {
+    if (prefixes[j].test(stripped) && stripped.replace(prefixes[j], '').length >= 2) {
+      stripped = stripped.replace(prefixes[j], '');
+      break;
+    }
+  }
+  return stripped;
+}
+function _guessAffixPartsForMorphGloss(heb) {
+  var h = (heb || '').replace(/\u05C3/g, '');
+  var s = _stripHebrewMarks(h).replace(/[\u05BE]/g, '');
+  var prefixTokens = [];
+  var i = 0;
+  while (i < s.length) {
+    var ch = s[i];
+    if (ch === 'ו') { prefixTokens.push('and'); i++; continue; }
+    if (ch === 'ב') { prefixTokens.push('in'); i++; continue; }
+    if (ch === 'ל') { prefixTokens.push('to'); i++; continue; }
+    if (ch === 'כ') { prefixTokens.push('as'); i++; continue; }
+    if (ch === 'מ') { prefixTokens.push('from'); i++; continue; }
+    if (ch === 'ש') { prefixTokens.push('that'); i++; continue; }
+    if (ch === 'ה') { prefixTokens.push('the'); i++; continue; }
+    break;
+  }
+  var base = s.slice(i);
+  var suffixToken = '';
+  var sufMap = [
+    ['יהם', 'their'], ['יהן', 'their'], ['יכם', 'your'], ['יכן', 'your'],
+    ['ינו', 'our'], ['ני', 'my'], ['י', 'my'],
+    ['ך', 'your'], ['כם', 'your'], ['כן', 'your'],
+    ['ו', 'his'], ['ה', 'her'], ['ם', 'their'], ['ן', 'their']
+  ];
+  for (var si = 0; si < sufMap.length; si++) {
+    var suf = sufMap[si][0];
+    if (base.length > suf.length + 1 && base.endsWith(suf)) {
+      suffixToken = sufMap[si][1];
+      base = base.slice(0, -suf.length);
+      break;
+    }
+  }
+  return { prefixTokens: prefixTokens, base: base, suffixToken: suffixToken };
+}
+function computeMorphGloss(heb) {
+  try {
+    if (!window._useMorphGlossPopup) return '';
+    if (!window._strongsLookup || !window._strongsRoots) return '';
+    var parts = _guessAffixPartsForMorphGloss(heb);
+    var surface = (heb || '').replace(/\u05C3/g, '');
+    var stripped = _stripPrefixesForMorphGloss(surface);
+    var baseForLookup = parts.base || stripped;
+    if (!baseForLookup) return '';
+    var sNum =
+      _strongsLookup[surface] ||
+      _strongsLookup[stripped] ||
+      _strongsLookup[baseForLookup] ||
+      _strongsLookup[_stripHebrewMarks(surface)] ||
+      _strongsLookup[_stripHebrewMarks(stripped)] ||
+      _strongsLookup[_stripHebrewMarks(baseForLookup)] ||
+      '';
+    if (!sNum || !_strongsRoots[sNum]) return '';
+    var lemmaGloss = (_strongsRoots[sNum].g || '').trim();
+    if (!lemmaGloss) return '';
+    lemmaGloss = lemmaGloss.replace(/\s+/g, ' ').trim();
+    if (lemmaGloss.split(' ').length > 5) lemmaGloss = lemmaGloss.split(' ').slice(0, 3).join(' ');
+    var tokens = [];
+    parts.prefixTokens.forEach(function(t) { if (t) tokens.push(t); });
+    if (parts.suffixToken) tokens.push(parts.suffixToken);
+    var composed = tokens.length ? (tokens.join('-') + '-' + lemmaGloss) : lemmaGloss;
+    return composed.replace(/-/g, ' ').trim();
+  } catch (e) {
+    return '';
+  }
+}
+
 function makeWordUnit(h, e, isSof) {
   if (h === '\u05C3') return '';
   h = h.replace(/\u05C3/g, '');  // strip embedded sof pasuk (CSS ::after adds it)
@@ -3751,6 +3861,8 @@ function makeWordUnit(h, e, isSof) {
   div.className = 'word-unit' + (isSof ? ' sof' : '');
   div.setAttribute('data-h', h);
   var gloss = e.replace(/-/g, ' ');
+  // Preserve curated gloss; add morph gloss for popup auditing.
+  div.setAttribute('data-mgl', computeMorphGloss(h));
   div.innerHTML = `<span class="hw">${h}</span><span class="tl"></span><span class="gl">${gloss}</span>`;
   return div;
 }
@@ -6975,6 +7087,9 @@ document.addEventListener('keydown', function(e) {
     document.getElementById('popup-translit').textContent = transliterate(hText);
     popupGl.textContent = gText;
 
+    // Morph gloss (non-breaking): compare Strong's-derived gloss vs curated gloss
+    var morphGloss = wu.getAttribute('data-mgl') || computeMorphGloss(hText) || '';
+
     // Strong's H-number lookup
     var popupStrong = document.getElementById('popup-strong');
     var strongsNum = '';
@@ -6994,6 +7109,11 @@ document.addEventListener('keydown', function(e) {
     var rInfo = rootFreq[root];
     var sInfo = wordFreq[hText];
     var detailHtml = '';
+    if (morphGloss) {
+      detailHtml += '<div style="direction:ltr;margin-bottom:6px;font-size:0.9em;color:#b0a890">' +
+        '<strong>Morph gloss:</strong> <span style="color:#e8e0d0">' + morphGloss + '</span>' +
+        '</div>';
+    }
 
     // Root-based total (the main count)
     if (rInfo) {
