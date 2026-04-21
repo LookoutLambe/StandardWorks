@@ -252,8 +252,8 @@
 
     L('u1l11', 'כִּי', 'for/because/that', [
       mcHeb('כִּי', 'for/because', ['not', 'if', 'to/unto']),
-      buildSentence('For the LORD said.', 'כִּי יְהוָה אָמַר'),
-      typeSentence('Type: “For the LORD said.”', 'כִּי יְהוָה אָמַר'),
+      buildSentence('For the LORD said.', 'כִּי אָמַר יְהוָה'),
+      typeSentence('Type: “For the LORD said.”', 'כִּי אָמַר יְהוָה'),
     ]),
 
     L('u1l12', 'Prepositions: אֶל / עַל', 'to/unto · on/upon', [
@@ -558,7 +558,7 @@
       lessonFromSentence('u2s7l2', 'He did not come', 'Negation + verb.', 'He did not come.', `לֹא בָּא`),
     ]);
     add(8, 'Because/that (כִּי)', 'Reason clauses.', [
-      lessonFromSentence('u2s8l1', 'For the LORD said', 'כִּי + clause.', 'For the LORD said.', `כִּי ${LORD} אָמַר`),
+      lessonFromSentence('u2s8l1', 'For the LORD said', 'כִּי + clause.', 'For the LORD said.', `כִּי אָמַר ${LORD}`),
       lessonFromSentence('u2s8l2', 'Because …', 'כִּי as “because”.', 'Because the word is true.', `כִּי ${WORD} אֱמֶת`),
     ]);
 
