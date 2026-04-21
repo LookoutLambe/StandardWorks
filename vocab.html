@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vocabulary Builder · Hebrew</title>
+  <meta name="theme-color" content="#1e2233" />
+  <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #faf8f2;
+      --bg-deep: #f0ece0;
+      --ink: #1a1a1a;
+      --ink-light: #444;
+      --accent: #c8a84e;
+      --rule: #d6ceb8;
+      --header-bg: #1e2233;
+      --header-text: #c8a84e;
+      --card-bg: #ffffff;
+      --danger: #b94a3a;
+      --ok: #2f7d4a;
+    }
+    body.dark-mode {
+      --bg: #333333;
+      --bg-deep: #2a2a2a;
+      --ink: #e8e0d0;
+      --ink-light: #b0a890;
+      --accent: #d4af37;
+      --rule: #444444;
+      --header-bg: #0a0a0a;
+      --header-text: #d4af37;
+      --card-bg: #1a1a2e;
+      --danger: #e27a6a;
+      --ok: #60c27e;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: 'David Libre', 'Georgia', serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 14px;
+      background: var(--header-bg);
+      border-bottom: 2px solid var(--accent);
+    }
+    .topbar .title {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      line-height: 1.05;
+    }
+    .topbar .title .en {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--header-text);
+      font-size: 1.05em;
+    }
+    .topbar .title .he {
+      color: var(--header-text);
+      opacity: 0.92;
+      font-weight: 600;
+      direction: rtl;
+      font-size: 0.95em;
+    }
+    .topbar .actions { display: flex; align-items: center; gap: 10px; }
+    .iconbtn {
+      appearance: none;
+      border: 1px solid rgba(200,168,78,0.35);
+      background: rgba(255,255,255,0.05);
+      color: var(--header-text);
+      padding: 7px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.95em;
+      line-height: 1;
+    }
+    .iconbtn:hover { background: rgba(200,168,78,0.12); }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 18px 16px 60px; }
+
+    .panel {
+      background: var(--card-bg);
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      box-shadow: 0 8px 26px rgba(0,0,0,0.10);
+      overflow: hidden;
+    }
+    .panel-head {
+      padding: 14px 16px;
+      background: linear-gradient(180deg, rgba(200,168,78,0.12), rgba(200,168,78,0.03));
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .panel-head .hint {
+      color: var(--ink-light);
+      font-size: 0.95em;
+      line-height: 1.45;
+      max-width: 620px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 0.9em;
+      background: rgba(0,0,0,0.03);
+      color: var(--ink-light);
+      white-space: nowrap;
+    }
+    body.dark-mode .pill { background: rgba(255,255,255,0.05); }
+
+    .settings {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 12px;
+      padding: 14px 16px 16px;
+    }
+    .field {
+      grid-column: span 12;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .field label {
+      font-size: 0.85em;
+      color: var(--ink-light);
+      letter-spacing: 0.02em;
+    }
+    .field select, .field input {
+      font-family: 'David Libre', serif;
+      font-size: 1em;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--rule);
+      background: var(--bg);
+      color: var(--ink);
+      outline: none;
+    }
+    .field select:focus, .field input:focus { border-color: var(--accent); }
+    .field.row { flex-direction: row; align-items: center; gap: 10px; }
+    .field.row label { margin: 0; }
+
+    @media (min-width: 780px) {
+      .field.mode { grid-column: span 4; }
+      .field.deck { grid-column: span 4; }
+      .field.choices { grid-column: span 4; }
+      .field.toggle { grid-column: span 6; }
+    }
+
+    .game {
+      padding: 18px 16px 16px;
+      border-top: 1px solid var(--rule);
+      background: linear-gradient(180deg, rgba(0,0,0,0.00), rgba(0,0,0,0.02));
+    }
+    body.dark-mode .game { background: linear-gradient(180deg, rgba(255,255,255,0.00), rgba(255,255,255,0.03)); }
+
+    .card {
+      border: 1px solid var(--rule);
+      background: var(--bg);
+      border-radius: 14px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .heb {
+      font-size: 2.2em;
+      font-weight: 700;
+      direction: rtl;
+      letter-spacing: 0.02em;
+      margin-bottom: 8px;
+    }
+    .meta {
+      color: var(--ink-light);
+      font-size: 0.92em;
+      margin-bottom: 10px;
+      direction: ltr;
+    }
+    .prompt {
+      font-size: 1.1em;
+      margin-top: 6px;
+      margin-bottom: 10px;
+      direction: ltr;
+    }
+    .choices {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    @media (min-width: 700px) { .choices { grid-template-columns: 1fr 1fr; } }
+
+    .choiceBtn {
+      font-family: 'David Libre', serif;
+      font-size: 1em;
+      padding: 12px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--rule);
+      background: var(--card-bg);
+      color: var(--ink);
+      cursor: pointer;
+      transition: transform 0.08s ease, background 0.15s ease, border-color 0.15s ease;
+      text-align: left;
+    }
+    .choiceBtn:hover { transform: translateY(-1px); border-color: var(--accent); }
+    .choiceBtn.correct { border-color: var(--ok); background: rgba(47,125,74,0.10); }
+    .choiceBtn.wrong { border-color: var(--danger); background: rgba(185,74,58,0.10); }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 14px;
+    }
+    .btn {
+      font-family: 'David Libre', serif;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--rule);
+      background: var(--card-bg);
+      color: var(--ink);
+      cursor: pointer;
+    }
+    .btn.primary { border-color: var(--accent); background: rgba(200,168,78,0.10); }
+    .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    .small {
+      margin-top: 12px;
+      text-align: center;
+      color: var(--ink-light);
+      font-size: 0.92em;
+      line-height: 1.5;
+    }
+    .small code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+
+    .game-picker {
+      padding: 16px;
+      border-top: 1px solid var(--rule);
+      background: linear-gradient(180deg, rgba(200,168,78,0.06), rgba(0,0,0,0.00));
+    }
+    .gp-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      font-size: 1.35em;
+      margin-bottom: 8px;
+    }
+    .gp-sub {
+      color: var(--ink-light);
+      line-height: 1.5;
+      margin-bottom: 12px;
+      max-width: 760px;
+    }
+    .gp-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 820px) { .gp-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .gp-card {
+      border: 1px solid var(--rule);
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 14px 14px 12px;
+      cursor: pointer;
+      transition: transform 0.08s ease, border-color 0.15s ease, background 0.15s ease;
+      min-height: 120px;
+    }
+    .gp-card:hover { transform: translateY(-1px); border-color: var(--accent); background: rgba(200,168,78,0.06); }
+    .gp-card .t { font-weight: 700; font-size: 1.05em; margin-bottom: 6px; }
+    .gp-card .d { color: var(--ink-light); line-height: 1.45; font-size: 0.95em; }
+    .gp-card .k { margin-top: 10px; font-size: 0.85em; color: var(--ink-light); opacity: 0.85; }
+    .gp-card .lvl {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78em;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--rule);
+      color: var(--ink-light);
+      background: rgba(0,0,0,0.03);
+      margin-bottom: 8px;
+    }
+    body.dark-mode .gp-card .lvl { background: rgba(255,255,255,0.06); }
+
+    /* Difficulty color-coding */
+    .gp-card[data-level="beginner"] { border-color: rgba(70, 160, 105, 0.45); }
+    .gp-card[data-level="beginner"]:hover { border-color: rgba(70, 160, 105, 0.75); background: rgba(70, 160, 105, 0.08); }
+    .gp-card[data-level="beginner"] .lvl { border-color: rgba(70, 160, 105, 0.45); background: rgba(70, 160, 105, 0.10); color: #1f6a3d; }
+    body.dark-mode .gp-card[data-level="beginner"] .lvl { color: #9fe0b9; }
+
+    .gp-card[data-level="intermediate"] { border-color: rgba(55, 120, 200, 0.40); }
+    .gp-card[data-level="intermediate"]:hover { border-color: rgba(55, 120, 200, 0.72); background: rgba(55, 120, 200, 0.08); }
+    .gp-card[data-level="intermediate"] .lvl { border-color: rgba(55, 120, 200, 0.40); background: rgba(55, 120, 200, 0.10); color: #1f4f8f; }
+    body.dark-mode .gp-card[data-level="intermediate"] .lvl { color: #a8c9ff; }
+
+    .gp-card[data-level="advanced"] { border-color: rgba(150, 90, 210, 0.40); }
+    .gp-card[data-level="advanced"]:hover { border-color: rgba(150, 90, 210, 0.72); background: rgba(150, 90, 210, 0.08); }
+    .gp-card[data-level="advanced"] .lvl { border-color: rgba(150, 90, 210, 0.40); background: rgba(150, 90, 210, 0.10); color: #5a2e86; }
+    body.dark-mode .gp-card[data-level="advanced"] .lvl { color: #e2c7ff; }
+
+    .sub-picker {
+      display: none;
+      padding: 16px;
+      border-top: 1px solid var(--rule);
+      background: linear-gradient(180deg, rgba(200,168,78,0.05), rgba(0,0,0,0.00));
+    }
+    .sub-picker.show { display: block; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="title">
+      <div class="en">Vocabulary Builder</div>
+      <div class="he">אֹצַר מִלִּים</div>
+    </div>
+    <div class="actions">
+      <button class="iconbtn" type="button" onclick="window.location.href='index.html'">⌂ Home</button>
+      <button class="iconbtn" type="button" id="darkBtn" title="Toggle dark mode">🌙</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="panel">
+      <div class="panel-head">
+        <div class="hint">
+          Practice Hebrew vocabulary from the words used throughout the project (Strong’s-based). This is a first version: quick drills, local progress, and no account needed.
+        </div>
+        <div class="pill" id="statsPill">Loading…</div>
+      </div>
+
+      <div class="game-picker" id="gamePicker">
+        <div class="gp-title">Choose a game</div>
+        <div class="gp-sub">
+          Start where you are: beginner → intermediate → advanced. You can change decks and settings after you start.
+        </div>
+        <div class="gp-grid">
+          <div class="gp-card" data-game="beginner" data-level="beginner">
+            <div class="lvl">Beginner</div>
+            <div class="t">Beginner</div>
+            <div class="d">Start from zero: letters, final forms, prefixes, and the first 25 common words.</div>
+            <div class="k">Best for: brand‑new learners</div>
+          </div>
+          <div class="gp-card" data-game="mc" data-level="intermediate">
+            <div class="lvl">Intermediate</div>
+            <div class="t">Multiple Choice</div>
+            <div class="d">Fast recognition drills. Hebrew ↔ English with a streak counter.</div>
+            <div class="k">Best for: speed + exposure</div>
+          </div>
+          <div class="gp-card" data-game="typing" data-level="intermediate">
+            <div class="lvl">Intermediate</div>
+            <div class="t">Typing (Recall)</div>
+            <div class="d">Type the answer. Hebrew spelling checks ignore nikkud (letters only).</div>
+            <div class="k">Best for: real memory + spelling</div>
+          </div>
+          <div class="gp-card" data-game="flash" data-level="intermediate">
+            <div class="lvl">Intermediate</div>
+            <div class="t">Flashcards</div>
+            <div class="d">Self-check. Reveal the meaning, then move on.</div>
+            <div class="k">Best for: low-stress review</div>
+          </div>
+          <div class="gp-card" data-game="mastery" data-level="advanced">
+            <div class="lvl">Advanced</div>
+            <div class="t">Scripture Mastery</div>
+            <div class="d">Hebrew cloze: fill in missing words from mastery verses.</div>
+            <div class="k">Best for: memorization + typing</div>
+          </div>
+          <div class="gp-card" data-game="stems" data-level="advanced">
+            <div class="lvl">Advanced</div>
+            <div class="t">Verb Stems (Binyanim)</div>
+            <div class="d">Identify Qal / Nifal / Piel / Pual / Hifil / Hofal / Hitpael from real forms.</div>
+            <div class="k">Best for: advanced morphology</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-picker" id="beginnerPicker">
+        <div class="gp-title">Beginner games</div>
+        <div class="gp-sub">
+          These drills ignore nikkud and focus on recognition and a small core vocabulary.
+        </div>
+        <div class="gp-grid">
+          <div class="gp-card" data-beginner="letters" data-level="beginner">
+            <div class="lvl">Beginner</div>
+            <div class="t">Aleph‑Bet</div>
+            <div class="d">Recognize Hebrew letters (including finals).</div>
+            <div class="k">Game: choose the letter name</div>
+          </div>
+          <div class="gp-card" data-beginner="finals" data-level="beginner">
+            <div class="lvl">Beginner</div>
+            <div class="t">Final Forms</div>
+            <div class="d">Match ך ם ן ף ץ with כ מ נ פ צ.</div>
+            <div class="k">Game: match the pair</div>
+          </div>
+          <div class="gp-card" data-beginner="lookalikes" data-level="beginner">
+            <div class="lvl">Beginner</div>
+            <div class="t">Look‑Alike Letters</div>
+            <div class="d">Train the common confusions: ד/ר, ה/ח/ת, ב/כ, כ/פ, etc.</div>
+            <div class="k">Game: pick the correct letter</div>
+          </div>
+          <div class="gp-card" data-beginner="prefixes" data-level="beginner">
+            <div class="lvl">Beginner</div>
+            <div class="t">Prefixes</div>
+            <div class="d">Learn ו ה ב ל מ כ ש as “and/the/in/to/from/as/that”.</div>
+            <div class="k">Game: what does the prefix mean?</div>
+          </div>
+          <div class="gp-card" data-beginner="common25" data-level="beginner">
+            <div class="lvl">Beginner</div>
+            <div class="t">Common 25</div>
+            <div class="d">A tiny starter deck from the most frequent project words.</div>
+            <div class="k">Game: Hebrew → English</div>
+          </div>
+          <div class="gp-card" data-beginner="particles" data-level="beginner">
+            <div class="lvl">Beginner</div>
+            <div class="t">Common Particles</div>
+            <div class="d">Quick wins: את, לא, כן, כי, אם, על, אל, עם, מן, כל, זה…</div>
+            <div class="k">Game: Hebrew → English</div>
+          </div>
+        </div>
+        <div class="controls" style="margin-top:14px;">
+          <button class="btn" id="beginnerBackBtn" type="button">← Back</button>
+        </div>
+      </div>
+
+      <div class="settings">
+        <div class="field mode">
+          <label for="modeSel">Mode</label>
+          <select id="modeSel">
+            <option value="heb_to_eng">Hebrew → English (multiple choice)</option>
+            <option value="eng_to_heb">English → Hebrew (multiple choice)</option>
+            <option value="type_eng_from_heb">Hebrew → English (typing)</option>
+            <option value="type_heb_from_eng">English → Hebrew (typing, letters only)</option>
+            <option value="flashcard">Flashcards (show/hide meaning)</option>
+          </select>
+        </div>
+
+        <div class="field deck">
+          <label for="deckSel">Deck</label>
+          <select id="deckSel">
+            <option value="project_freq_all">Project (most common · all volumes)</option>
+            <option value="project_freq_ot">Project (most common · OT)</option>
+            <option value="project_freq_nt">Project (most common · NT)</option>
+            <option value="project_freq_bom">Project (most common · BOM)</option>
+            <option value="project_freq_dc">Project (most common · D&C)</option>
+            <option value="project_freq_pgp">Project (most common · PGP)</option>
+            <option value="project_freq_jst">Project (most common · JST)</option>
+            <option value="project_surface_all">Project phrases (scripture gloss · all volumes)</option>
+            <option value="project_surface_ot">Project phrases (scripture gloss · OT)</option>
+            <option value="project_surface_nt">Project phrases (scripture gloss · NT)</option>
+            <option value="project_surface_bom">Project phrases (scripture gloss · BOM)</option>
+            <option value="project_surface_dc">Project phrases (scripture gloss · D&C)</option>
+            <option value="project_surface_pgp">Project phrases (scripture gloss · PGP)</option>
+            <option value="project_surface_jst">Project phrases (scripture gloss · JST)</option>
+            <option value="strongs_hebrew_core">Strong’s Hebrew (core words)</option>
+            <option value="strongs_hebrew_all">Strong’s Hebrew (all with gloss)</option>
+          </select>
+        </div>
+
+        <div class="field choices">
+          <label for="choiceCount">Choices</label>
+          <select id="choiceCount">
+            <option value="4">4 choices</option>
+            <option value="6">6 choices</option>
+            <option value="8">8 choices</option>
+          </select>
+        </div>
+
+        <div class="field choices">
+          <label for="minFreq">Minimum frequency (project decks)</label>
+          <select id="minFreq">
+            <option value="1">1+ (include rare)</option>
+            <option value="2">2+</option>
+            <option value="5" selected>5+ (recommended)</option>
+            <option value="10">10+</option>
+            <option value="25">25+</option>
+          </select>
+        </div>
+
+        <div class="field toggle row">
+          <label for="showStrongs">Show Strong’s #</label>
+          <input id="showStrongs" type="checkbox" checked />
+        </div>
+
+        <div class="field choices">
+          <label for="glossSource">English gloss source</label>
+          <select id="glossSource">
+            <option value="scripture" selected>Scripture wording (recommended)</option>
+            <option value="strongs">Strong’s dictionary wording</option>
+          </select>
+        </div>
+
+        <div class="field toggle row">
+          <label for="skipNames">Skip likely names</label>
+          <input id="skipNames" type="checkbox" checked />
+        </div>
+      </div>
+
+      <div class="game">
+        <div class="card">
+          <div class="heb" id="frontHeb">…</div>
+          <div class="meta" id="frontMeta"></div>
+          <div class="prompt" id="prompt"></div>
+          <div id="typeWrap" style="display:none; margin: 10px auto 0; max-width: 520px;">
+            <input id="typeInput" type="text" autocomplete="off" spellcheck="false"
+                   style="width:100%; padding:12px 12px; border-radius:12px; border:1px solid var(--rule); background: var(--card-bg); color: var(--ink); font-size: 1.05em; text-align:center;"
+                   placeholder="Type your answer…" />
+            <div style="display:flex; gap:10px; justify-content:center; margin-top:10px;">
+              <button class="btn primary" id="submitBtn" type="button">Check</button>
+              <button class="btn" id="showAnswerBtn" type="button">Show answer</button>
+            </div>
+            <div class="small" id="typeFeedback" style="margin-top:10px;"></div>
+          </div>
+          <div class="choices" id="choices"></div>
+          <div class="controls">
+            <button class="btn" id="revealBtn" type="button">Reveal</button>
+            <button class="btn primary" id="nextBtn" type="button">Next</button>
+            <button class="btn" id="resetBtn" type="button">Reset stats</button>
+          </div>
+          <div class="small" id="footerHint">
+            Tip: press <code>Space</code> to reveal, <code>Enter</code> for next.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="strongs_roots.js"></script>
+  <script src="vocab_decks.js"></script>
+  <script src="verb_stems_deck.js"></script>
+  <script src="mastery_hebrew_deck.js"></script>
+  <script>
+    (function initDark() {
+      try {
+        if (localStorage.getItem('sw-dark') === '1') document.body.classList.add('dark-mode');
+      } catch (e) {}
+      var btn = document.getElementById('darkBtn');
+      function syncIcon() { btn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙'; }
+      btn.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        try { localStorage.setItem('sw-dark', document.body.classList.contains('dark-mode') ? '1' : '0'); } catch(e) {}
+        syncIcon();
+      });
+      syncIcon();
+    })();
+  </script>
+  <script src="vocab.js"></script>
+</body>
+</html>
+
