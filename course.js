@@ -111,9 +111,38 @@
   };
 
   function tokenMeaning(token) {
-    const key = hebLettersOnly(token);
-    if (!key) return '';
-    return WORD_MEANINGS[key] || '';
+    const key0 = hebLettersOnly(token);
+    if (!key0) return '';
+    const direct = WORD_MEANINGS[key0];
+    if (direct) return direct;
+
+    // Heuristic prefix handling so common forms like הָאָרֶץ / וְהָאָב get an English prompt.
+    // We keep this intentionally simple (teaching-first, not a full morphology engine).
+    function resolve(k, depth = 0) {
+      if (!k || depth > 2) return '';
+      if (WORD_MEANINGS[k]) return WORD_MEANINGS[k];
+
+      // Definite article
+      if (k.startsWith('ה') && k.length > 1) {
+        const base = resolve(k.slice(1), depth + 1);
+        if (base) return 'the ' + base;
+      }
+
+      // Single-letter prefixes
+      const p = k[0];
+      const rest = k.slice(1);
+      const base = resolve(rest, depth + 1);
+      if (!base) return '';
+      if (p === 'ו') return 'and ' + base;
+      if (p === 'ב') return 'in ' + base;
+      if (p === 'ל') return 'to/for ' + base;
+      if (p === 'מ') return 'from ' + base;
+      if (p === 'כ') return 'as/like ' + base;
+      if (p === 'ש') return 'that/which ' + base;
+      return '';
+    }
+
+    return resolve(key0) || '';
   }
 
   function renderTile(el, heb) {
@@ -520,7 +549,7 @@
     // Keep this short: introduce up to 4 tokens.
     const intro = uniq.slice(0, 4).map(t => {
       const m = tokenMeaning(t);
-      const prompt = m ? `Build the Hebrew: “${m}”` : `Build this Hebrew word: ${t}`;
+      const prompt = m ? `Build the Hebrew: “${m}”` : 'Build this Hebrew word.';
       return { type: 'bank_he_from_en', title: 'Build', prompt, heb: t };
     });
 
@@ -1354,7 +1383,7 @@
       const introToks = uniq.slice(0, 4);
       const introSteps = introToks.map((t, i) => {
         const m = tokenMeaning(t);
-        const prompt = m ? `Build the Hebrew: “${m}”` : `Build this Hebrew word: ${t}`;
+        const prompt = m ? `Build the Hebrew: “${m}”` : 'Build this Hebrew word.';
         return { type: 'bank_he_from_en', title: 'Build', prompt, heb: t, _autoIntro: 1 };
       });
 
