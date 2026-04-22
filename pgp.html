@@ -139,6 +139,15 @@ body {
   margin-top: 10px;
   text-align: center;
 }
+.heading-flow { direction: rtl; text-align: center; max-width: 720px; margin: 10px auto 4px; padding: 0 8px; display: flex; flex-wrap: wrap; gap: 1px; align-items: flex-start; justify-content: center; }
+.heading-flow .word-unit { margin: 1px 3px; }
+.heading-flow .hw { font-size: 1.5em; }
+.heading-flow .tl { font-size: 0.72em; }
+.heading-flow .gl { font-size: 0.65em; }
+.heading-flow .arr-tl { font-size: 0.72em; transform: scale(1.4); }
+.heading-flow .arr-gl { font-size: 0.65em; transform: scale(1.4); }
+.heading-flow .arr { padding: 2px 0 4px; margin: 1px 0; }
+.heading-sep { color: var(--accent); margin: 0 4px; align-self: center; font-size: 1.1em; opacity: 0.6; }
 
 /* Nav links */
 .chapter-nav {
@@ -3181,18 +3190,71 @@ _ensureChapterRendered = function(chapId) {
         var ht = (typeof _pgpChapterHeadingsHeb !== 'undefined') ? _pgpChapterHeadingsHeb[key] : '';
         if (ht) {
           var headingEl2 = document.querySelector('#panel-' + chapId + ' .chapter-heading');
-          if (headingEl2 && !headingEl2.querySelector('.chapter-summary-he')) {
-            var ph = document.createElement('div');
-            ph.className = 'chapter-summary-he';
-            ph.setAttribute('dir', 'rtl');
-            ph.textContent = ht;
-            headingEl2.appendChild(ph);
+          if (headingEl2 && !headingEl2.querySelector('.heading-flow')) {
+            _renderHeadingInterlinear(ht, headingEl2);
           }
         }
       }
     }
   } catch(e) {}
 };
+
+function _renderHeadingInterlinear(hebText, container) {
+  if (!hebText) return;
+  hebText = hebText.replace(/\s*בְּעֵרֶךְ[\s\S]*$/, '').replace(/\s*\.\s*$/, '').trim();
+  var raw = hebText.split(/\s+/);
+  var realWords = raw.filter(function(w) { return w && w !== '—' && w !== '–'; });
+  var flow = document.createElement('div');
+  flow.className = 'heading-flow';
+  flow.setAttribute('dir', 'rtl');
+  var realIdx = 0;
+  raw.forEach(function(hw) {
+    if (!hw) return;
+    if (hw === '—' || hw === '–') {
+      var sep = document.createElement('span');
+      sep.className = 'heading-sep';
+      sep.textContent = hw;
+      flow.appendChild(sep);
+      return;
+    }
+    var isLast = (realIdx === realWords.length - 1);
+    var stripped = hw.replace(/[.,;:!?()־]/g, '');
+    var gloss = '';
+    try {
+      if (typeof computeMorphGloss === 'function') {
+        gloss = computeMorphGloss(stripped) || '';
+      }
+    } catch(e) {}
+    if (!gloss && window.wordFreq) {
+      var wf = window.wordFreq[hw] || window.wordFreq[stripped];
+      if (!wf && typeof window.stripPrefixes === 'function') {
+        wf = window.wordFreq[window.stripPrefixes(stripped)];
+      }
+      if (wf && wf.glosses) {
+        var top = Object.entries(wf.glosses).sort(function(a,b){return b[1]-a[1];})[0];
+        if (top) gloss = top[0];
+      }
+    }
+    var tl = '';
+    try { if (typeof transliterate === 'function') tl = transliterate(hw); } catch(e) {}
+    var wu = document.createElement('div');
+    wu.className = 'word-unit';
+    wu.setAttribute('data-h', hw);
+    wu.innerHTML = '<span class="hw">' + hw + '</span><span class="tl">' + tl + '</span><span class="gl">' + gloss + '</span>';
+    var group = document.createElement('span');
+    group.className = 'word-group';
+    group.appendChild(wu);
+    if (!isLast) {
+      var chev = document.createElement('span');
+      chev.className = 'arr';
+      chev.innerHTML = '<span class="arr-hw">​</span><span class="arr-tl">‹</span><span class="arr-gl">‹</span>';
+      group.appendChild(chev);
+    }
+    flow.appendChild(group);
+    realIdx++;
+  });
+  container.appendChild(flow);
+}
 
 // DARK MODE
 function toggleDarkMode() {
