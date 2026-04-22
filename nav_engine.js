@@ -461,7 +461,8 @@
     setTimeout(function() {
       function _courseHref() {
         var p = (window.location && window.location.pathname) ? window.location.pathname : '';
-        return (p.indexOf('/bom/') >= 0 || /\\bom\\/.test(p)) ? '../course.html' : 'course.html';
+        // Course removed
+        return null;
       }
       function _vocabHref() {
         var p = (window.location && window.location.pathname) ? window.location.pathname : '';
@@ -469,7 +470,9 @@
       }
       var learnCourse = document.getElementById('nf-learn-course');
       var learnVocab = document.getElementById('nf-learn-vocab');
-      if (learnCourse) learnCourse.onclick = function() { window.location.href = _courseHref(); };
+      if (learnCourse) {
+        learnCourse.onclick = function() { alert('Learning course has been removed.'); };
+      }
       if (learnVocab) learnVocab.onclick = function() { window.location.href = _vocabHref(); };
 
       var exportBtn = document.getElementById('nf-export');
@@ -542,8 +545,6 @@
     if (!_libraryEl) return;
     var last = null;
     try { last = localStorage.getItem('sw-last-read'); last = last ? JSON.parse(last) : null; } catch(e) { last = null; }
-    var cprog = null;
-    try { cprog = localStorage.getItem('sw-course-progress-v1'); cprog = cprog ? JSON.parse(cprog) : null; } catch(e) { cprog = null; }
     var meta = _loadOfflineMeta();
     var bms = loadBookmarks();
 
@@ -572,18 +573,7 @@
               '</div>';
     }
 
-    // Continue Learning (Course)
-    if (cprog && cprog.current && cprog.current.lessonId && !(cprog.completed && cprog.completed[cprog.current.lessonId])) {
-      html += '<div class="nl-card nl-last" id="nl-learn" tabindex="0" role="button" style="margin-top:10px; border-color: rgba(47,125,74,0.35);">' +
-                '<div class="nl-card-title">Continue Learning</div>' +
-                '<div class="nl-card-text">Resume your Hebrew course</div>' +
-              '</div>';
-    } else {
-      html += '<div class="nl-card nl-last" id="nl-learn" tabindex="0" role="button" style="margin-top:10px; border-color: rgba(47,125,74,0.35);">' +
-                '<div class="nl-card-title">Learn</div>' +
-                '<div class="nl-card-text">Scripture Hebrew Course · Vocabulary Builder</div>' +
-              '</div>';
-    }
+    // Learning course removed
 
     if (bms && bms.length) {
       html += '<div class="nl-sec-title" style="margin-top:10px">Bookmarks</div>';
@@ -611,9 +601,7 @@
     var learnEl = document.getElementById('nl-learn');
     if (learnEl) {
       learnEl.onclick = function() {
-        var p = (window.location && window.location.pathname) ? window.location.pathname : '';
-        var href = (p.indexOf('/bom/') >= 0 || /\\bom\\/.test(p)) ? '../course.html' : 'course.html';
-        window.location.href = href;
+        alert('Learning course has been removed.');
       };
       learnEl.onkeydown = function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); learnEl.click(); } };
     }

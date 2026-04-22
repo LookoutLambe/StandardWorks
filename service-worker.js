@@ -5,8 +5,6 @@ const OFFLINE_CACHE = 'standard-works-offline-v1';
 // These are small and essential; install fails gracefully if any are unavailable
 const CORE_ASSETS = [
     '/StandardWorks/index.html',
-    '/StandardWorks/course.html',
-    '/StandardWorks/course.js?v=3',
     '/StandardWorks/mastery_hebrew_deck.js',
     '/StandardWorks/ot.html',
     '/StandardWorks/nt.html',

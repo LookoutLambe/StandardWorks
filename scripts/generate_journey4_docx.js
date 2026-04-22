@@ -17,13 +17,13 @@ const fs = require("fs");
 const path = require("path");
 
 // ============================================================
-// Aleph Trail - Journey 1: Beginnings
-// Curriculum DOCX generator (seed document)
+// Aleph Trail - Journey 4: Lehi's Family
+// Curriculum DOCX generator (sourced from curriculum/journey4.json)
 //
 // Run:
-//   npm run journey1:docx
+//   npm run journey4:docx
 // Output:
-//   ./out/Aleph_Trail_Journey_1_Beginnings.docx
+//   ./out/Aleph_Trail_Journey_4_Lehis_Family.docx
 // ============================================================
 
 const HEBREW_FONT = "SBL Hebrew";
@@ -44,13 +44,6 @@ function h2(text) {
     spacing: { before: 360, after: 180 },
   });
 }
-function h3(text) {
-  return new Paragraph({
-    heading: HeadingLevel.HEADING_3,
-    children: [new TextRun({ text, bold: true, size: 24, font: HEAD_FONT })],
-    spacing: { before: 240, after: 120 },
-  });
-}
 function p(text, opts = {}) {
   return new Paragraph({
     children: [new TextRun({ text, size: 22, font: BODY_FONT, ...opts })],
@@ -60,9 +53,7 @@ function p(text, opts = {}) {
 function mixed(runs) {
   return new Paragraph({
     children: runs.map((r) => {
-      if (r.hebrew) {
-        return new TextRun({ text: r.text, size: 26, font: HEBREW_FONT, rtl: true });
-      }
+      if (r.hebrew) return new TextRun({ text: r.text, size: 26, font: HEBREW_FONT, rtl: true });
       return new TextRun({
         text: r.text,
         size: 22,
@@ -118,8 +109,7 @@ function lessonTable(rows) {
     });
   }
 
-  const columnWidths = [720, 1800, 2200, 2320, 2320];
-
+  const columnWidths = [720, 2200, 2000, 2220, 2220];
   return new Table({
     width: { size: 9360, type: WidthType.DXA },
     columnWidths,
@@ -129,7 +119,7 @@ function lessonTable(rows) {
         children: [
           headerCell("#", columnWidths[0]),
           headerCell("Focus", columnWidths[1]),
-          headerCell("Verse / Source", columnWidths[2]),
+          headerCell("Verse", columnWidths[2]),
           headerCell("New Roots / Vocab", columnWidths[3]),
           headerCell("Exit Skill", columnWidths[4]),
         ],
@@ -150,16 +140,12 @@ function lessonTable(rows) {
   });
 }
 
-// ============================================================
-// LESSON DATA — sourced from curriculum/journey1.json
-// ============================================================
-
-function loadJourney1() {
-  const p = path.resolve(__dirname, "..", "curriculum", "journey1.json");
-  if (!fs.existsSync(p)) {
-    throw new Error("Missing curriculum/journey1.json. Run: npm run journey:import-text -- curriculum/journey1_v1.txt journey1");
+function loadJourney4() {
+  const pth = path.resolve(__dirname, "..", "curriculum", "journey4.json");
+  if (!fs.existsSync(pth)) {
+    throw new Error("Missing curriculum/journey4.json. Run: npm run journey:import-text -- curriculum/journey4_v1.txt journey4");
   }
-  const j = JSON.parse(fs.readFileSync(p, "utf8"));
+  const j = JSON.parse(fs.readFileSync(pth, "utf8"));
   const lessons = Array.isArray(j.lessons) ? j.lessons : [];
   return { meta: j, lessons };
 }
@@ -169,39 +155,37 @@ function vocabLooksHebrew(vocab) {
 }
 
 function buildDoc() {
-  const { meta, lessons } = loadJourney1();
+  const { lessons } = loadJourney4();
+
   const doc = new Document({
     sections: [
       {
         properties: {},
         children: [
           h1("Aleph Trail"),
-          p("Journey 1: Beginnings (Genesis 1–11)"),
-          mixed([
-            { text: "Purpose: ", bold: true },
-            { text: "Aleph‑bet mastery, niqqud scaffolding, and real‑verse reading from day one." },
-          ]),
+          p("Journey 4: Lehi's Family (Sefer Mormon: 1 Nephi 1–18 + key echoes)"),
           mixed([
             { text: "Exit skill: ", bold: true },
-            { text: "Read Genesis 1 aloud with comprehension." },
+            { text: "Read 1 Nephi 8:1–33 aloud in full (Tree of Life vision)." },
           ]),
           p(""),
-          h2("Lesson Map (40 lessons)"),
-          p("Each lesson is designed to follow the same rhythm: chant → root → patterns → verse assembly → comprehension → chant."),
+          h2(`Lesson Map (${lessons.length} lessons)`),
+          p("Each lesson follows the same rhythm: chant → root → patterns → verse assembly → comprehension → chant."),
           lessonTable(
             lessons.map((l) => ({
               num: l.num,
               focus: l.focus || l.title || "",
               verse: (l.verse && l.verse.ref) || "",
-              vocab: (l.vocab && l.vocab.raw) || ((l.roots && l.roots.raw) ? `Roots: ${l.roots.raw}` : ""),
+              vocab:
+                (l.vocab && l.vocab.raw) ||
+                ((l.roots && l.roots.raw) ? `Roots: ${l.roots.raw}` : ""),
               vocabHebrew: vocabLooksHebrew((l.vocab && l.vocab.raw) || ""),
               exit: l.exit || "",
             }))
           ),
           pageBreak(),
           h2("Notes"),
-          p("This DOCX is generated from a single lesson data array so it can stay in sync with the in-app Journey plan."),
-          p("Next: replace the TBD rows with the final verse-by-verse scope and the new roots introduced each day."),
+          p("This DOCX is generated from the same JSON used for in-app lesson data, so the curriculum stays consistent everywhere."),
         ],
       },
     ],
@@ -212,7 +196,7 @@ function buildDoc() {
 
 async function main() {
   const outDir = path.resolve(__dirname, "..", "out");
-  const outPath = path.join(outDir, "Aleph_Trail_Journey_1_Beginnings.docx");
+  const outPath = path.join(outDir, "Aleph_Trail_Journey_4_Lehis_Family.docx");
   fs.mkdirSync(outDir, { recursive: true });
 
   const doc = buildDoc();

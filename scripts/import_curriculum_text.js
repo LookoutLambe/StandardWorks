@@ -20,6 +20,51 @@ function normalize(s) {
   return String(s || "").replace(/\r/g, "").replace(/[ \t]+/g, " ").trim();
 }
 
+function isHebrewish(s) {
+  return /[\u05D0-\u05EA]/.test(String(s || ""));
+}
+
+function isTranslitLine(s) {
+  const t = String(s || "").trim();
+  if (!t) return false;
+  if (isHebrewish(t)) return false;
+  // very simple: allow latin letters, spaces, apostrophes, hyphens
+  return /^[A-Za-z][A-Za-z '\-–—]+$/.test(t);
+}
+
+function parseRootsList(s) {
+  const t = normalize(s);
+  if (!t) return [];
+  // Pull out root-looking items like א־מ־ר or א-מ-ר
+  const hits = t.match(/[\u05D0-\u05EA](?:[־-][\u05D0-\u05EA]){1,3}/g) || [];
+  // Normalize hyphen to maqaf
+  return Array.from(new Set(hits.map((x) => x.replace(/-/g, "־"))));
+}
+
+function parseMiniGames(s) {
+  const t = normalize(s);
+  if (!t) return [];
+  // Strip parenthetical details first so commas inside ( ... ) don't split items.
+  const noParens = normalize(t.replace(/\([^)]*\)/g, ""));
+  return noParens
+    .split(",")
+    .map((x) => normalize(x.replace(/[.]+$/g, "")))
+    .filter(Boolean);
+}
+
+function parseVocabPairs(s) {
+  // Keep the raw text AND attempt to extract "HEB (english)" pairs.
+  const raw = normalize(s);
+  if (!raw) return { raw: "", items: [] };
+  const items = [];
+  const re = /([\u05D0-\u05EA][\u0591-\u05C7\u05D0-\u05EA־\-]+)\s*\(([^)]+)\)/g;
+  let m;
+  while ((m = re.exec(raw)) !== null) {
+    items.push({ heb: normalize(m[1]), en: normalize(m[2]) });
+  }
+  return { raw, items };
+}
+
 function parseLessonsFromText(text) {
   const t = String(text || "").replace(/\r/g, "");
   const blockRe = /(^|\n)Lesson\s+(\d{1,3})\.\s+([^\n]+)\n([\s\S]*?)(?=\nLesson\s+\d{1,3}\.|$)/g;
@@ -36,15 +81,50 @@ function parseLessonsFromText(text) {
       return mm ? normalize(mm[1]) : "";
     }
 
+    // Verse block often looks like:
+    // Verse: Gen 1:1 (hearing only)
+    // <Hebrew line>
+    // <transliteration line>
+    // Gloss: ...
+    const verseRef = pick("Verse");
+    let hebrewLine = "";
+    let translitLine = "";
+    if (verseRef) {
+      const vrRe = /Verse\s*:\s*[^\n]+\n([\s\S]*?)(?=\nGloss\s*:|\nTeaching focus\s*:|\nRoot\(s\)\s+introduced\s*:|\nNew vocabulary\s*:|\nMini-games used\s*:|\nExit check\s*:|$)/i;
+      const mm2 = body.match(vrRe);
+      if (mm2 && mm2[1]) {
+        const lines = mm2[1]
+          .split("\n")
+          .map((x) => x.trim())
+          .filter(Boolean);
+        if (lines[0] && isHebrewish(lines[0])) hebrewLine = lines[0];
+        if (lines[1] && isTranslitLine(lines[1])) translitLine = lines[1];
+      }
+    }
+
+    const rootsRaw = pick("Root\\(s\\) introduced");
+    const vocabRaw = pick("New vocabulary");
+    const gamesRaw = pick("Mini-games used");
+
     lessons.push({
       num,
       title,
-      verse: pick("Verse"),
+      verse: {
+        ref: verseRef,
+        hebrew: hebrewLine,
+        translit: translitLine,
+      },
       gloss: pick("Gloss"),
       focus: pick("Teaching focus"),
-      roots: pick("Root\\(s\\) introduced"),
-      vocab: pick("New vocabulary"),
-      games: pick("Mini-games used"),
+      roots: {
+        raw: rootsRaw,
+        items: parseRootsList(rootsRaw),
+      },
+      vocab: parseVocabPairs(vocabRaw),
+      games: {
+        raw: gamesRaw,
+        items: parseMiniGames(gamesRaw),
+      },
       exit: pick("Exit check"),
     });
   }
@@ -74,6 +154,7 @@ async function main() {
     id: journeyId,
     importedFrom: abs,
     importedAt: new Date().toISOString(),
+    schemaVersion: 2,
     lessons,
   };
 

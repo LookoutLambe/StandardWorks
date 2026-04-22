@@ -4,6 +4,10 @@
   "type": "commonjs",
   "scripts": {
     "journey1:docx": "node scripts/generate_journey1_docx.js",
+    "journey3:docx": "node scripts/generate_journey3_docx.js",
+    "journey4:docx": "node scripts/generate_journey4_docx.js",
+    "journey5:docx": "node scripts/generate_journey5_docx.js",
+    "serve": "npx --yes http-server . -c-1 -p 5173",
     "journey:import-docx": "node scripts/import_curriculum_docx.js",
     "journey:import-text": "node scripts/import_curriculum_text.js"
   },

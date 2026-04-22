@@ -1,0 +1,2014 @@
+{
+  "id": "journey4",
+  "importedFrom": "C:\\Users\\chris\\Desktop\\Standard Works Project\\curriculum\\journey4_v1.txt",
+  "importedAt": "2026-04-22T17:11:05.929Z",
+  "schemaVersion": 2,
+  "lessons": [
+    {
+      "num": "1",
+      "title": "I, Nephi, Having Been Born",
+      "verse": {
+        "ref": "1 Nephi 1:1",
+        "hebrew": "אֲנִי נְפִי נוֹלַדְתִּי לְהוֹרִים טוֹבִים עַל־כֵּן לֻמַּדְתִּי בְּכָל־תּוֹרַת אָבִי",
+        "translit": "ani Nefi noladti le-horim tovim al-ken lumadti be-chol-torat avi"
+      },
+      "gloss": "I, Nephi, having been born to good parents, therefore was I taught in all the learning of my father.",
+      "focus": "Introduce the Niphal noladti (I was born). Introduce לִמֵּד in Pual lumadti (I was taught). Reinforce תּוֹרָה (Torah, learning, instruction) as the noun of י־ר־ה. The child immediately recognizes תּוֹרָה from Journey 3 lesson 40. This recognition is the first taste of convergent validation.",
+      "roots": {
+        "raw": "Reinforce י־ל־ד (Niphal), ל־מ־ד (Pual), י־ר־ה (noun).",
+        "items": [
+          "י־ל־ד",
+          "ל־מ־ד",
+          "י־ר־ה"
+        ]
+      },
+      "vocab": {
+        "raw": "הוֹרִים (parents), תּוֹרָה (Torah, learning).",
+        "items": [
+          {
+            "heb": "הוֹרִים",
+            "en": "parents"
+          },
+          {
+            "heb": "תּוֹרָה",
+            "en": "Torah, learning"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Convergent Validation Highlight (the word torah glows to mark recognition across Standard Works), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Convergent Validation Highlight",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child recognizes torah from Journey 3 and recites the opening verse."
+    },
+    {
+      "num": "2",
+      "title": "Many Afflictions in My Days",
+      "verse": {
+        "ref": "1 Nephi 1:1b",
+        "hebrew": "וַאֲנִי רָאִיתִי צָרוֹת רַבּוֹת בְּיָמַי",
+        "translit": "va-ani ra'iti tzarot rabot be-yamai"
+      },
+      "gloss": "And I, having seen many afflictions in my days.",
+      "focus": "Introduce צָרָה (affliction, distress) in feminine plural. Reinforce ר־א־ה in 1cs perfect with emphatic pronoun.",
+      "roots": {
+        "raw": "צ־ר־ר (to be narrow, to distress).",
+        "items": [
+          "צ־ר־ר"
+        ]
+      },
+      "vocab": {
+        "raw": "צָרָה (affliction).",
+        "items": [
+          {
+            "heb": "צָרָה",
+            "en": "affliction"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 1b and identifies the emphatic va-ani construction."
+    },
+    {
+      "num": "3",
+      "title": "The Goodness of God",
+      "verse": {
+        "ref": "1 Nephi 1:1c",
+        "hebrew": "וּלְמַדְתִּי גַּם־כֵּן אֶת־טוֹב יְהוָה בְּכָל־יָמַי",
+        "translit": "u-lamadti gam-ken et-tov YHVH be-chol-yamai"
+      },
+      "gloss": "And I have learned also the goodness of the LORD in all my days.",
+      "focus": "Introduce ל־מ־ד in Qal 1cs perfect. Reinforce the construct tov YHVH (goodness of the LORD).",
+      "roots": {
+        "raw": "ל־מ־ד (to learn).",
+        "items": [
+          "ל־מ־ד"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Binyan Builder (Qal vs Pual of l-m-d from lesson 1), Construct Chain Builder, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Binyan Builder",
+          "Construct Chain Builder",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child distinguishes lamad (he learned) from lumad (he was taught)."
+    },
+    {
+      "num": "4",
+      "title": "A Record of My Proceedings",
+      "verse": {
+        "ref": "1 Nephi 1:1d",
+        "hebrew": "עַל־כֵּן אֶעֱשֶׂה שֵׁפֶר שֶׁל־מַעֲשַׂי בְּיָמַי",
+        "translit": "al-ken e'eseh sefer shel-ma'asai be-yamai"
+      },
+      "gloss": "Therefore I make a record of my proceedings in my days.",
+      "focus": "Introduce מַעֲשֶׂה (deed, act) in plural with 1cs suffix. Introduce סֵפֶר (book, scroll) — the child connects this to the root ס־פ־ר learned in Journey 2 lesson 11. Another moment of recognition.",
+      "roots": {
+        "raw": "Reinforce ס־פ־ר (sefer as noun).",
+        "items": [
+          "ס־פ־ר"
+        ]
+      },
+      "vocab": {
+        "raw": "סֵפֶר (book, scroll), מַעֲשֶׂה (deed, work).",
+        "items": [
+          {
+            "heb": "סֵפֶר",
+            "en": "book, scroll"
+          },
+          {
+            "heb": "מַעֲשֶׂה",
+            "en": "deed, work"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Noun Family Highlight (sofer scribe, sefer book, lispor to count), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Noun Family Highlight",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child names three nouns / verbs from the s-p-r family."
+    },
+    {
+      "num": "5",
+      "title": "Lehi Prayed to the LORD",
+      "verse": {
+        "ref": "1 Nephi 1:5",
+        "hebrew": "עַל־כֵּן לֵחִי אָבִי הָלַךְ וְהִתְפַּלֵּל אֶל־יְהוָה בְּכָל־לֵב בְּעַד עַמּוֹ",
+        "translit": "al-ken Lechi avi halach ve-hitpalel el-YHVH be-chol-lev be'ad amo"
+      },
+      "gloss": "Therefore Lehi my father went and prayed to the LORD with all his heart on behalf of his people.",
+      "focus": "Introduce the Hithpael hitpalel (he prayed). Introduce פ־ל־ל (to pray, intercede, judge). Introduce the preposition בְּעַד (on behalf of).",
+      "roots": {
+        "raw": "פ־ל־ל (to pray, intercede).",
+        "items": [
+          "פ־ל־ל"
+        ]
+      },
+      "vocab": {
+        "raw": "לֵחִי (Lehi).",
+        "items": [
+          {
+            "heb": "לֵחִי",
+            "en": "Lehi"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Binyan Builder (Hithpael prominent), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Binyan Builder",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child forms Hithpael of p-l-l and recognizes the prayer root."
+    },
+    {
+      "num": "6",
+      "title": "A Pillar of Fire Came",
+      "verse": {
+        "ref": "1 Nephi 1:6",
+        "hebrew": "וַיָּבֹא עַמּוּד־אֵשׁ וַיַּעֲמֹד לְפָנָיו עַל־צוּר",
+        "translit": "va-yavo amud-esh va-ya'amod lefanav al-tzur"
+      },
+      "gloss": "And there came a pillar of fire and stood before him upon a rock.",
+      "focus": "Introduce עַמּוּד (pillar). Introduce צוּר (rock, stronghold). The child recognizes amud-esh from Exodus (pillar of fire in the wilderness). Strong intertextual echo.",
+      "roots": {
+        "raw": "Reinforce ע־מ־ד (to stand).",
+        "items": [
+          "ע־מ־ד"
+        ]
+      },
+      "vocab": {
+        "raw": "עַמּוּד (pillar), צוּר (rock).",
+        "items": [
+          {
+            "heb": "עַמּוּד",
+            "en": "pillar"
+          },
+          {
+            "heb": "צוּר",
+            "en": "rock"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Intertextual Echo Highlight (pillar of fire echoes Exodus), Construct Chain Builder, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Intertextual Echo Highlight",
+          "Construct Chain Builder",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child names the Exodus parallel (pillar of fire leading Israel in the wilderness)."
+    },
+    {
+      "num": "7",
+      "title": "Lehi Saw and Heard Much",
+      "verse": {
+        "ref": "1 Nephi 1:6b",
+        "hebrew": "וְרָאָה וְשָׁמַע רַבּוֹת",
+        "translit": "ve-ra'a ve-shama rabot"
+      },
+      "gloss": "And he saw and heard much.",
+      "focus": "Short consolidation verse. Reinforce ר־א־ה and ש־מ־ע, the two verbs of prophetic reception.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Memorization Reward, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Memorization Reward",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child recites the verse from memory."
+    },
+    {
+      "num": "8",
+      "title": "He Cast Himself on His Bed",
+      "verse": {
+        "ref": "1 Nephi 1:7",
+        "hebrew": "וַיִּפֹּל עַל־מִטָּתוֹ כְּאִישׁ נִרְדָּם מֵרֹב עֲצַב",
+        "translit": "va-yipol al-mitato ke-ish nirdam me-rov atzav"
+      },
+      "gloss": "And he fell upon his bed as a man overcome from great sorrow.",
+      "focus": "Reinforce נ־פ־ל from Journey 2 lesson 57. Introduce the Niphal nirdam (fast asleep, overcome, from ר־ד־מ). Introduce the adjective רָב (great, much).",
+      "roots": {
+        "raw": "ר־ד־מ (to be fast asleep).",
+        "items": [
+          "ר־ד־מ"
+        ]
+      },
+      "vocab": {
+        "raw": "מִטָּה (bed), עֶצֶב (sorrow).",
+        "items": [
+          {
+            "heb": "מִטָּה",
+            "en": "bed"
+          },
+          {
+            "heb": "עֶצֶב",
+            "en": "sorrow"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 7 aloud with minimal support."
+    },
+    {
+      "num": "9",
+      "title": "Take Thy Family and Depart",
+      "verse": {
+        "ref": "1 Nephi 2:2",
+        "hebrew": "וַיְצַו אֹתוֹ יְהוָה לַאמֹר קַח־נָא אֶת־מִשְׁפַּחְתְּךָ וְצֵא לַמִּדְבָּר",
+        "translit": "va-yetzav oto YHVH lemor kach-na et-mishpachtecha ve-tze la-midbar"
+      },
+      "gloss": "And the LORD commanded him, saying, Take now your family and go forth into the wilderness.",
+      "focus": "Introduce the Piel va-yetzav (he commanded, from ts-v-h, reinforced from Journey 3 lesson 64). Reinforce the imperative kach from Journey 2 lesson 20. Introduce מִדְבָּר (wilderness). Strong echo of Genesis 12:1 (lech-lecha).",
+      "roots": {
+        "raw": "Reinforce צ־ו־ה, ל־ק־ח, י־צ־א.",
+        "items": [
+          "צ־ו־ה",
+          "ל־ק־ח",
+          "י־צ־א"
+        ]
+      },
+      "vocab": {
+        "raw": "מִדְבָּר (wilderness), מִשְׁפָּחָה (family, reinforced).",
+        "items": [
+          {
+            "heb": "מִדְבָּר",
+            "en": "wilderness"
+          },
+          {
+            "heb": "מִשְׁפָּחָה",
+            "en": "family, reinforced"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Intertextual Echo Highlight (Abrahamic call parallel), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Intertextual Echo Highlight",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child identifies the Genesis 12:1 parallel without being told."
+    },
+    {
+      "num": "10",
+      "title": "He Was Obedient to the Word",
+      "verse": {
+        "ref": "1 Nephi 2:3",
+        "hebrew": "וַיְהִי שֹׁמֵעַ בְּקוֹל יְהוָה עַל־כֵּן לֹא עָשָׂה דָבָר מִבַּד אֲשֶׁר צִוָּהוּ יְהוָה",
+        "translit": "va-yehi shomea be-kol YHVH al-ken lo asa davar mi-bad asher tzivahu YHVH"
+      },
+      "gloss": "And he was hearkening to the voice of the LORD, therefore he did not a thing apart from what the LORD commanded him.",
+      "focus": "Reinforce the idiom shomea be-kol (hearkening to the voice, i.e. obeying). Reinforce the Piel perfect with 3ms suffix tzivahu.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "מִבַּד (apart from, without).",
+        "items": [
+          {
+            "heb": "מִבַּד",
+            "en": "apart from, without"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Idiom Highlight (obedience idiom from Exodus), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Idiom Highlight",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child recognizes the obedience idiom from Journey 3."
+    },
+    {
+      "num": "11",
+      "title": "He Left His House",
+      "verse": {
+        "ref": "1 Nephi 2:4",
+        "hebrew": "וַיַּעֲזֹב אֶת־בֵּיתוֹ וְאֶת־נַחֲלָתוֹ וְאֶת־זְהָבוֹ וְאֶת־כַּסְפּוֹ",
+        "translit": "va-ya'azov et-beito ve-et-nachalato ve-et-zehavo ve-et-kaspo"
+      },
+      "gloss": "And he left his house and his inheritance and his gold and his silver.",
+      "focus": "Introduce ע־ז־ב (to leave, forsake). Introduce נַחֲלָה (inheritance), a weighty covenant term. Reinforce זָהָב (gold, from Journey 1) and כֶּסֶף (silver, from Journey 2).",
+      "roots": {
+        "raw": "ע־ז־ב (to leave, forsake).",
+        "items": [
+          "ע־ז־ב"
+        ]
+      },
+      "vocab": {
+        "raw": "נַחֲלָה (inheritance).",
+        "items": [
+          {
+            "heb": "נַחֲלָה",
+            "en": "inheritance"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Possessive Suffix Chain Builder, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Possessive Suffix Chain Builder",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child forms a chain of possessive suffixes and recognizes nachala as a covenant term."
+    },
+    {
+      "num": "12",
+      "title": "They Pitched Tents in the Valley",
+      "verse": {
+        "ref": "1 Nephi 2:6",
+        "hebrew": "וַיִּטַּע אָהֳלוֹ בְּגֵי־הַנָּהָר",
+        "translit": "va-yita aholo be-gei-ha-nahar"
+      },
+      "gloss": "And he pitched his tent in the valley of the river.",
+      "focus": "Reinforce נ־ט־ה (to pitch, stretch). Introduce גַּיְא (valley) and נָהָר (river).",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "גַּיְא (valley), נָהָר (river).",
+        "items": [
+          {
+            "heb": "גַּיְא",
+            "en": "valley"
+          },
+          {
+            "heb": "נָהָר",
+            "en": "river"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Construct Chain Builder, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Construct Chain Builder",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 6 with minimal support."
+    },
+    {
+      "num": "13",
+      "title": "Nephi Had Great Desires",
+      "verse": {
+        "ref": "1 Nephi 2:16",
+        "hebrew": "אֲנִי נְפִי הָיוּ־לִי תְּשׁוּקוֹת רַבּוֹת לָדַעַת אֶת־סִתְרֵי יְהוָה",
+        "translit": "ani Nefi hayu-li teshukot rabot ladaat et-sitrei YHVH"
+      },
+      "gloss": "I, Nephi, had great desires to know the mysteries of the LORD.",
+      "focus": "Introduce תְּשׁוּקָה (desire, from sh-v-k). Introduce סוֹד / סֵתֶר (mystery, secret counsel). Reinforce the infinitive construct la-da'at (to know).",
+      "roots": {
+        "raw": "ש־ו־ק (to desire), ס־ת־ר (to hide, conceal).",
+        "items": [
+          "ש־ו־ק",
+          "ס־ת־ר"
+        ]
+      },
+      "vocab": {
+        "raw": "תְּשׁוּקָה (desire), סֵתֶר (secret, mystery).",
+        "items": [
+          {
+            "heb": "תְּשׁוּקָה",
+            "en": "desire"
+          },
+          {
+            "heb": "סֵתֶר",
+            "en": "secret, mystery"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Infinitive Builder, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Infinitive Builder",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 16."
+    },
+    {
+      "num": "14",
+      "title": "I Cried to the LORD",
+      "verse": {
+        "ref": "1 Nephi 2:16b",
+        "hebrew": "וָאֶזְעַק אֶל־יְהוָה",
+        "translit": "va-ez'ak el-YHVH"
+      },
+      "gloss": "And I cried unto the LORD.",
+      "focus": "Introduce ז־ע־ק (to cry out). Short, memorable verse.",
+      "roots": {
+        "raw": "ז־ע־ק (to cry out).",
+        "items": [
+          "ז־ע־ק"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites verse 16b from memory."
+    },
+    {
+      "num": "15",
+      "title": "The LORD Visited Me",
+      "verse": {
+        "ref": "1 Nephi 2:16c",
+        "hebrew": "וַיִּפְקְדֵנִי יְהוָה וַיָּרֶךְ אֶת־לִבִּי",
+        "translit": "va-yifkedeni YHVH va-yarech et-libi"
+      },
+      "gloss": "And the LORD visited me and softened my heart.",
+      "focus": "Reinforce פ־ק־ד from Journey 2 lesson 58 (a covenant-memory verb). Introduce ר־כ־כ (to be soft) in Hiphil (soften).",
+      "roots": {
+        "raw": "ר־כ־כ (to be soft).",
+        "items": [
+          "ר־כ־כ"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Covenant Vocabulary Review, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Covenant Vocabulary Review",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child recognizes p-k-d as the covenant-visiting verb from Joseph's deathbed."
+    },
+    {
+      "num": "16",
+      "title": "Blessed Art Thou, Nephi",
+      "verse": {
+        "ref": "1 Nephi 2:19",
+        "hebrew": "בָּרוּךְ אַתָּה נְפִי בַּעֲבוּר אֱמוּנָתְךָ",
+        "translit": "baruch ata Nefi ba'avur emunatcha"
+      },
+      "gloss": "Blessed are you, Nephi, because of your faith.",
+      "focus": "Introduce the blessing formula baruch ata. Introduce אֱמוּנָה (faith, faithfulness) from א־מ־נ, the noun form of the root learned in Journey 2 lesson 10 and reinforced as emet in Journey 3 lesson 54. Convergent validation: faith and truth share a root.",
+      "roots": {
+        "raw": "Reinforce א־מ־נ.",
+        "items": [
+          "א־מ־נ"
+        ]
+      },
+      "vocab": {
+        "raw": "אֱמוּנָה (faith, faithfulness).",
+        "items": [
+          {
+            "heb": "אֱמוּנָה",
+            "en": "faith, faithfulness"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort (emunah, emet, ne'eman all from a-m-n), Verse Builder, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child names three words from the a-m-n family and connects them."
+    },
+    {
+      "num": "17",
+      "title": "Laman and Lemuel Murmured",
+      "verse": {
+        "ref": "1 Nephi 3:5",
+        "hebrew": "וַיִּלֹּנוּ לָמָן וּלְמוּאֵל עַל אֲבִיהֶם",
+        "translit": "va-yilonu Laman u-Lemuel al avihem"
+      },
+      "gloss": "And Laman and Lemuel murmured against their father.",
+      "focus": "Introduce ל־ו־נ (to murmur, complain). Reinforce 3mp imperfect with vav-consecutive.",
+      "roots": {
+        "raw": "ל־ו־נ (to murmur).",
+        "items": [
+          "ל־ו־נ"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort (murmuring will reappear in Numbers), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 5 and identifies the 3mp vav-consecutive form."
+    },
+    {
+      "num": "18",
+      "title": "I Will Go and Do",
+      "verse": {
+        "ref": "1 Nephi 3:7",
+        "hebrew": "אֵלֵךְ וְאֶעֱשֶׂה אֶת־הַדָּבָר אֲשֶׁר צִוָּה יְהוָה",
+        "translit": "elech ve-e'eseh et-ha-davar asher tziva YHVH"
+      },
+      "gloss": "I will go and do what the LORD has commanded.",
+      "focus": "The most famous verse in 1 Nephi. Reinforce 1cs imperfect of h-l-k and a-s-h. Reinforce Piel perfect of ts-v-h. This verse is a Journey-defining memorization target.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Memorization Reward (highest priority), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Memorization Reward",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child recites verse 7 from memory in Hebrew. This is a major milestone."
+    },
+    {
+      "num": "19",
+      "title": "For the LORD Giveth No Command",
+      "verse": {
+        "ref": "1 Nephi 3:7b",
+        "hebrew": "כִּי יְהוָה לֹא־יִתֵּן מִצְוָה לִבְנֵי־אָדָם כִּי אִם־יְכִין לָהֶם דֶּרֶךְ לַעֲשׂוֹת אֲשֶׁר צִוָּה",
+        "translit": "ki YHVH lo-yiten mitzva li-vnei-adam ki im-yachin lahem derech la'asot asher tziva"
+      },
+      "gloss": "For the LORD gives no commandment to the children of men unless he prepares a way for them to do what he has commanded.",
+      "focus": "Reinforce מִצְוָה from Journey 3 lesson 64. Introduce the Hiphil יָכִין (he prepares, establishes, from כ־ו־נ).",
+      "roots": {
+        "raw": "כ־ו־נ (to be established, prepare).",
+        "items": [
+          "כ־ו־נ"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Convergent Validation Highlight (mitzvah glows), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Convergent Validation Highlight",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 7b and recognizes mitzvah from Journey 3."
+    },
+    {
+      "num": "20",
+      "title": "We Went Up to Jerusalem",
+      "verse": {
+        "ref": "1 Nephi 3:9",
+        "hebrew": "וַנַּעַל יְרוּשָׁלָיְמָה",
+        "translit": "va-na'al Yerushalayma"
+      },
+      "gloss": "And we went up to Jerusalem.",
+      "focus": "Reinforce ע־ל־ה in 1cp with vav-consecutive. Reinforce the directional he on Jerusalem.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "יְרוּשָׁלַיִם (Jerusalem).",
+        "items": [
+          {
+            "heb": "יְרוּשָׁלַיִם",
+            "en": "Jerusalem"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Directional He Match, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Directional He Match",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child forms 1cp imperfect with vav-consecutive."
+    },
+    {
+      "num": "21",
+      "title": "Laban Sought Our Lives",
+      "verse": {
+        "ref": "1 Nephi 3:25",
+        "hebrew": "וַיִּגָּזֵל לָבָן אֶת־כָּל־רְכוּשֵׁנוּ וַיְבַקֵּשׁ אֶת־נַפְשׁוֹתֵינוּ",
+        "translit": "va-yigazel Lavan et-kol-rechusheinu va-yevakesh et-nafshoteinu"
+      },
+      "gloss": "And Laban seized all our property and sought our lives.",
+      "focus": "Introduce ג־ז־ל (to seize, rob). Introduce ב־ק־שׁ in Piel (to seek). Reinforce נֶפֶשׁ in plural with 1cp suffix.",
+      "roots": {
+        "raw": "ג־ז־ל (to seize), ב־ק־שׁ (to seek).",
+        "items": [
+          "ג־ז־ל",
+          "ב־ק־ש"
+        ]
+      },
+      "vocab": {
+        "raw": "רְכוּשׁ (property, possessions).",
+        "items": [
+          {
+            "heb": "רְכוּשׁ",
+            "en": "property, possessions"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Binyan Builder (ב־ק־שׁ Piel), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Binyan Builder",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 25 and recognizes the idiom \"to seek the soul / life\" as hostile intent."
+    },
+    {
+      "num": "22",
+      "title": "The Spirit Constrained Me",
+      "verse": {
+        "ref": "1 Nephi 4:10",
+        "hebrew": "וְרוּחַ יְהוָה הֵצִיקַנִי לַהֲרֹג אֶת־לָבָן",
+        "translit": "ve-ruach YHVH hetzikani la-harog et-Lavan"
+      },
+      "gloss": "And the Spirit of the LORD constrained me to slay Laban.",
+      "focus": "Introduce רוּחַ (spirit, wind, breath). Introduce the Hiphil hetzikani (constrained me, from ts-v-k). Introduce ה־ר־ג (to slay).",
+      "roots": {
+        "raw": "צ־ו־ק (to constrain, narrow), ה־ר־ג (to slay).",
+        "items": [
+          "צ־ו־ק",
+          "ה־ר־ג"
+        ]
+      },
+      "vocab": {
+        "raw": "רוּחַ (spirit, wind, breath).",
+        "items": [
+          {
+            "heb": "רוּחַ",
+            "en": "spirit, wind, breath"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 10 and names ruach as a key term (breath / wind / spirit)."
+    },
+    {
+      "num": "23",
+      "title": "Better That One Man Should Perish",
+      "verse": {
+        "ref": "1 Nephi 4:13",
+        "hebrew": "טוֹב כִּי יֹאבַד אִישׁ אֶחָד מִלְּאַבֵּד אֻמָּה שְׁלֵמָה בְּלֹא אֱמוּנָה וּמָרָה",
+        "translit": "tov ki yovad ish echad mi-le-abed uma shelema be-lo emuna u-mara"
+      },
+      "gloss": "Better that one man should perish than that a whole nation should dwindle in unbelief and perish.",
+      "focus": "Introduce א־ב־ד (to perish, be lost). Introduce אֻמָּה (nation, people) and שָׁלֵם (whole, complete).",
+      "roots": {
+        "raw": "א־ב־ד (to perish).",
+        "items": [
+          "א־ב־ד"
+        ]
+      },
+      "vocab": {
+        "raw": "אֻמָּה (nation), שָׁלֵם (whole).",
+        "items": [
+          {
+            "heb": "אֻמָּה",
+            "en": "nation"
+          },
+          {
+            "heb": "שָׁלֵם",
+            "en": "whole"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Verse Builder, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child reads verse 13 and identifies the root sh-l-m family (shalem, shalom, shalem)."
+    },
+    {
+      "num": "24",
+      "title": "I Smote Off His Head",
+      "verse": {
+        "ref": "1 Nephi 4:18",
+        "hebrew": "וָאֶכְרֹת אֶת־רֹאשׁוֹ בְּחַרְבּוֹ",
+        "translit": "va-echrot et-rosho be-charbo"
+      },
+      "gloss": "And I cut off his head with his sword.",
+      "focus": "Reinforce כ־ר־ת (to cut) from Journey 2 lesson 12. Introduce חֶרֶב (sword). Reinforce רֹאשׁ (head).",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "חֶרֶב (sword).",
+        "items": [
+          {
+            "heb": "חֶרֶב",
+            "en": "sword"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort (note the intensity-range of karat from covenant-cutting to beheading), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 18 and connects the root k-r-t to both covenant-cutting and violent cutting."
+    },
+    {
+      "num": "25",
+      "title": "I Saw in My Dream",
+      "verse": {
+        "ref": "1 Nephi 8:2",
+        "hebrew": "הִנֵּה חָלַמְתִּי חֲלוֹם",
+        "translit": "hineh chalamti chalom"
+      },
+      "gloss": "Behold, I dreamed a dream.",
+      "focus": "Reinforce ח־ל־מ (to dream) from Journey 2 lesson 33. The cognate accusative construction (dreamed a dream) is a classic Hebrew figura etymologica.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Cognate Accusative Highlight, Verse Builder, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Cognate Accusative Highlight",
+          "Verse Builder",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites verse 2 and identifies the cognate accusative."
+    },
+    {
+      "num": "26",
+      "title": "I Beheld a Man",
+      "verse": {
+        "ref": "1 Nephi 8:5",
+        "hebrew": "וָאֵרֶא אִישׁ וְהוּא לָבוּשׁ בִּגְלִים לְבָנִים",
+        "translit": "va-ere ish ve-hu lavush bgadim levanim"
+      },
+      "gloss": "And I beheld a man, and he was clothed in white robes.",
+      "focus": "Introduce ל־ב־שׁ (to clothe, wear). Introduce בֶּגֶד (garment) and לָבָן (white, cognate with the Laban name learned earlier).",
+      "roots": {
+        "raw": "ל־ב־שׁ (to clothe).",
+        "items": [
+          "ל־ב־ש"
+        ]
+      },
+      "vocab": {
+        "raw": "בֶּגֶד (garment), לָבָן (white).",
+        "items": [
+          {
+            "heb": "בֶּגֶד",
+            "en": "garment"
+          },
+          {
+            "heb": "לָבָן",
+            "en": "white"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 5."
+    },
+    {
+      "num": "27",
+      "title": "He Spake to Me and Bade Me Follow",
+      "verse": {
+        "ref": "1 Nephi 8:6",
+        "hebrew": "וַיְדַבֵּר אֵלַי וַיְצַוֵּנִי לְלֶכֶת אַחֲרָיו",
+        "translit": "va-yedaber elai va-yetzaveni la-lechet acharav"
+      },
+      "gloss": "And he spoke to me and commanded me to go after him.",
+      "focus": "Reinforce ד־ב־ר in Piel. Reinforce צ־ו־ה in Piel with 1cs suffix. Introduce אַחַר (after).",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "אַחַר (after).",
+        "items": [
+          {
+            "heb": "אַחַר",
+            "en": "after"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 6 and identifies two Piel verbs."
+    },
+    {
+      "num": "28",
+      "title": "A Dark and Dreary Wilderness",
+      "verse": {
+        "ref": "1 Nephi 8:7",
+        "hebrew": "וָאֶתְהַלֵּךְ בְּמִדְבָּר חָשׁוּךְ וְשָׁמֵם",
+        "translit": "va-ethalech be-midbar chashuch ve-shamem"
+      },
+      "gloss": "And I walked in a dark and desolate wilderness.",
+      "focus": "Introduce the Hithpael ethalech (I walked about, iterative). Introduce חָשׁוּךְ (dark, from ch-sh-k) and שָׁמֵם (desolate, from sh-m-m).",
+      "roots": {
+        "raw": "ח־שׁ־כ (to be dark), שׁ־מ־מ (to be desolate).",
+        "items": [
+          "ח־ש",
+          "מ־מ"
+        ]
+      },
+      "vocab": {
+        "raw": "חֹשֶׁךְ (darkness, reinforced from Genesis 1).",
+        "items": [
+          {
+            "heb": "חֹשֶׁךְ",
+            "en": "darkness, reinforced from Genesis 1"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Binyan Builder, Shoresh Sort, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Binyan Builder",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 7."
+    },
+    {
+      "num": "29",
+      "title": "A Tree Whose Fruit Was Desirable",
+      "verse": {
+        "ref": "1 Nephi 8:10",
+        "hebrew": "וָאֵרֶא עֵץ אֲשֶׁר פִּרְיוֹ נֶחְמָד לְהָשִׂים בָּשָׂר שָׂמֵחַ",
+        "translit": "va-ere etz asher piryo nechmad lehasim basar sameach"
+      },
+      "gloss": "And I beheld a tree whose fruit was desirable to make one happy.",
+      "focus": "Strong intertextual echo of Genesis 2:9 and 3:6 (the Tree of Life and the forbidden tree). Introduce נֶחְמָד (desirable, Niphal participle of ch-m-d). Introduce שָׂמֵחַ (happy, from s-m-ch).",
+      "roots": {
+        "raw": "ח־מ־ד (to desire), שׂ־מ־ח (to be happy).",
+        "items": [
+          "ח־מ־ד",
+          "מ־ח"
+        ]
+      },
+      "vocab": {
+        "raw": "פְּרִי (fruit, reinforced).",
+        "items": [
+          {
+            "heb": "פְּרִי",
+            "en": "fruit, reinforced"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Genesis Echo Highlight (the tree whose fruit is desirable echoes Genesis 3:6), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Genesis Echo Highlight",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child names the Genesis parallel."
+    },
+    {
+      "num": "30",
+      "title": "I Partook of the Fruit",
+      "verse": {
+        "ref": "1 Nephi 8:11",
+        "hebrew": "וָאֹכַל מִפִּרְיוֹ וּמָתוֹק הוּא מְאֹד",
+        "translit": "va-ochal mi-piryo u-matok hu meod"
+      },
+      "gloss": "And I ate of its fruit, and it was exceedingly sweet.",
+      "focus": "Reinforce the eating-of-fruit construction (echoing Eden). Introduce מָתוֹק (sweet, reinforcing m-t-k from Journey 3 lesson 40).",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "מָתוֹק (sweet).",
+        "items": [
+          {
+            "heb": "מָתוֹק",
+            "en": "sweet"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Genesis Echo Highlight, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Genesis Echo Highlight",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 11 and names the Eden parallel (eating fruit from a tree)."
+    },
+    {
+      "num": "31",
+      "title": "I Saw a River of Water",
+      "verse": {
+        "ref": "1 Nephi 8:13",
+        "hebrew": "וָאֵרֶא נְהַר־מַיִם וְהוּא רָץ לְצַד הָעֵץ",
+        "translit": "va-ere nehar-mayim ve-hu ratz le-tzad ha-etz"
+      },
+      "gloss": "And I saw a river of water, and it ran alongside the tree.",
+      "focus": "Introduce ר־ו־צ (to run). Reinforce נָהָר in construct.",
+      "roots": {
+        "raw": "ר־ו־צ (to run).",
+        "items": [
+          "ר־ו־צ"
+        ]
+      },
+      "vocab": {
+        "raw": "צַד (side).",
+        "items": [
+          {
+            "heb": "צַד",
+            "en": "side"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Construct Chain Builder, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Construct Chain Builder",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 13."
+    },
+    {
+      "num": "32",
+      "title": "A Rod of Iron",
+      "verse": {
+        "ref": "1 Nephi 8:19",
+        "hebrew": "וָאֵרֶא שֵׁבֶט בַּרְזֶל וְהוּא הוֹלֵךְ לְאֹרֶךְ הַנָּהָר",
+        "translit": "va-ere shevet barzel ve-hu holech le-orech ha-nahar"
+      },
+      "gloss": "And I beheld a rod of iron, and it extended along the river.",
+      "focus": "Introduce בַּרְזֶל (iron). Reinforce שֵׁבֶט from Journey 2 lesson 55 (scepter of Judah); here it is a rod. Introduce אֹרֶךְ (length).",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "בַּרְזֶל (iron), אֹרֶךְ (length).",
+        "items": [
+          {
+            "heb": "בַּרְזֶל",
+            "en": "iron"
+          },
+          {
+            "heb": "אֹרֶךְ",
+            "en": "length"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Construct Chain Builder, Shoresh Sort, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Construct Chain Builder",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 19."
+    },
+    {
+      "num": "33",
+      "title": "A Great and Spacious Building",
+      "verse": {
+        "ref": "1 Nephi 8:26",
+        "hebrew": "וָאֵרֶא בַּיִת גָּדוֹל וְרָחָב עֹמֵד כְּאִלּוּ בָּאַוֵּר מֵעַל לָאָרֶץ",
+        "translit": "va-ere bayit gadol ve-rachav omed ke-ilu ba-avir me-al la-aretz"
+      },
+      "gloss": "And I beheld a great and spacious building standing as if in the air above the earth.",
+      "focus": "Introduce רָחָב (wide, spacious). Introduce אַוֵּר (air, atmosphere). Introduce the hypothetical particle כְּאִלּוּ (as if).",
+      "roots": {
+        "raw": "ר־ח־ב (to be wide).",
+        "items": [
+          "ר־ח־ב"
+        ]
+      },
+      "vocab": {
+        "raw": "אַוֵּר (air).",
+        "items": [
+          {
+            "heb": "אַוֵּר",
+            "en": "air"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Hypothetical Builder (as if X), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Hypothetical Builder",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 26."
+    },
+    {
+      "num": "34",
+      "title": "Hold Fast to the Rod",
+      "verse": {
+        "ref": "1 Nephi 8:30",
+        "hebrew": "אֲחֹז בְּשֵׁבֶט הַבַּרְזֶל וְלֵךְ עַד־הָעֵץ",
+        "translit": "achoz be-shevet ha-barzel ve-lech ad-ha-etz"
+      },
+      "gloss": "Hold fast to the rod of iron and go unto the tree.",
+      "focus": "Introduce א־ח־ז (to hold fast, grasp) as Qal imperative. Reinforce lech. A weighty exhortation.",
+      "roots": {
+        "raw": "א־ח־ז (to hold fast).",
+        "items": [
+          "א־ח־ז"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Imperative Chain Builder, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Imperative Chain Builder",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites verse 30 from memory and names its covenant imagery."
+    },
+    {
+      "num": "35",
+      "title": "My Soul Delighteth",
+      "verse": {
+        "ref": "2 Nephi 4:16",
+        "hebrew": "הִנֵּה נַפְשִׁי תִּתְעַנֵּג בִּדְבַר יְהוָה",
+        "translit": "hineh nafshi titaneg bi-dvar YHVH"
+      },
+      "gloss": "Behold, my soul delights in the word of the LORD.",
+      "focus": "Introduce ע־נ־ג (to delight) in Hithpael. Reinforce the Hithpael prefix pattern. Note: Hithpael titaneg carries a reflexive-intensive sense (delights itself).",
+      "roots": {
+        "raw": "ע־נ־ג (to delight).",
+        "items": [
+          "ע־נ־ג"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Binyan Builder (Hithpael), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Binyan Builder",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child forms Hithpael of a familiar root."
+    },
+    {
+      "num": "36",
+      "title": "Nevertheless I Know in Whom I Have Trusted",
+      "verse": {
+        "ref": "2 Nephi 4:19",
+        "hebrew": "אַף עַל־פִּי־כֵן אֲנִי יוֹדֵעַ בְּמִי בָטַחְתִּי",
+        "translit": "af al-pi-chen ani yodea be-mi batachti"
+      },
+      "gloss": "Nevertheless, I know in whom I have trusted.",
+      "focus": "Introduce ב־ט־ח (to trust). Introduce the concessive idiom af al-pi-chen (nevertheless). Reinforce the interrogative mi as a relative (whom).",
+      "roots": {
+        "raw": "ב־ט־ח (to trust).",
+        "items": [
+          "ב־ט־ח"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort (Hebrew has multiple trust-roots: a-m-n, b-t-ch), Verse Builder, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child distinguishes b-t-ch (to trust) from a-m-n (to be firm / believe)."
+    },
+    {
+      "num": "37",
+      "title": "My God Hath Been My Support",
+      "verse": {
+        "ref": "2 Nephi 4:20",
+        "hebrew": "אֱלֹהַי הָיָה לִי לְמִסְעָד בִּימֵי נְדוֹדִי בַּמִּדְבָּר",
+        "translit": "Elohai haya li le-mis'ad be-yemei nedudi ba-midbar"
+      },
+      "gloss": "My God has been my support in the days of my wandering in the wilderness.",
+      "focus": "Introduce מִסְעָד (support, from s-ayin-d, to sustain). Introduce נ־ד־ד (to wander) in verbal noun form nedudim.",
+      "roots": {
+        "raw": "ס־ע־ד (to support), נ־ד־ד (to wander).",
+        "items": [
+          "ס־ע־ד",
+          "נ־ד־ד"
+        ]
+      },
+      "vocab": {
+        "raw": "מִסְעָד (support).",
+        "items": [
+          {
+            "heb": "מִסְעָד",
+            "en": "support"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 20."
+    },
+    {
+      "num": "38",
+      "title": "Preserved Me Upon the Waters",
+      "verse": {
+        "ref": "2 Nephi 4:20b",
+        "hebrew": "שָׁמַר אֹתִי עַל־פְּנֵי הַיָּם הַגָּדוֹל",
+        "translit": "shamar oti al-pnei ha-yam ha-gadol"
+      },
+      "gloss": "He kept me upon the face of the great sea.",
+      "focus": "Reinforce ש־מ־ר (to keep, guard). Reinforce yam as the sea, now a large symbolic sea.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 20b fluently."
+    },
+    {
+      "num": "39",
+      "title": "Awake, My Soul",
+      "verse": {
+        "ref": "2 Nephi 4:28",
+        "hebrew": "הָקִיצָה נַפְשִׁי אַל־תֵּעָצְבִי עוֹד",
+        "translit": "hakitza nafshi al-te'atzvi od"
+      },
+      "gloss": "Awake, my soul, be grieved no longer.",
+      "focus": "Introduce the Hiphil imperative hakitza (awake!) from k-v-tz. Reinforce al-te'atzvi (negative Niphal imperative feminine singular, from Journey 3 lesson 52 in 2mp form). Poetic apostrophe to the soul.",
+      "roots": {
+        "raw": "ק־ו־צ (to awake, Hiphil).",
+        "items": [
+          "ק־ו־צ"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Binyan Builder, Gender Sort, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Binyan Builder",
+          "Gender Sort",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites verse 28 and identifies the feminine singular negative imperative."
+    },
+    {
+      "num": "40",
+      "title": "Rejoice, O My Heart",
+      "verse": {
+        "ref": "2 Nephi 4:30",
+        "hebrew": "גִּילִי לִבִּי וְאַל־תִּפֹּלִי עוֹד",
+        "translit": "gili libi ve-al-tipoli od"
+      },
+      "gloss": "Rejoice, my heart, and fall no more.",
+      "focus": "Introduce ג־י־ל (to rejoice, exult). Reinforce n-p-l in negative feminine imperative.",
+      "roots": {
+        "raw": "ג־י־ל (to rejoice, exult).",
+        "items": [
+          "ג־י־ל"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort (joy-verbs: s-m-ch, g-y-l, r-n-n), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child names three joy-verbs."
+    },
+    {
+      "num": "41",
+      "title": "I Will Trust in Thee Forever",
+      "verse": {
+        "ref": "2 Nephi 4:34",
+        "hebrew": "אֲנִי אֶבְטַח בְּךָ לְעוֹלָם",
+        "translit": "ani evtach becha le-olam"
+      },
+      "gloss": "I will trust in you forever.",
+      "focus": "Short, weighty covenant-trust verse. Reinforce b-t-ch in 1cs imperfect.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites verse 34 from memory."
+    },
+    {
+      "num": "42",
+      "title": "O Lord, Wilt Thou Redeem My Soul",
+      "verse": {
+        "ref": "2 Nephi 4:31",
+        "hebrew": "יְהוָה הֲתִגְאַל אֶת־נַפְשִׁי",
+        "translit": "YHVH ha-tig'al et-nafshi"
+      },
+      "gloss": "O LORD, wilt thou redeem my soul?",
+      "focus": "Introduce ג־א־ל (to redeem, act as kinsman-redeemer). This is the foundational go'el root, central to Chris's Covenant King commentary on Mosiah. The child meets it here for the first time in restoration scripture; it will recur heavily in Journey 6.",
+      "roots": {
+        "raw": "ג־א־ל (to redeem, act as go'el).",
+        "items": [
+          "ג־א־ל"
+        ]
+      },
+      "vocab": {
+        "raw": "גְּאֻלָּה (redemption, previewed).",
+        "items": [
+          {
+            "heb": "גְּאֻלָּה",
+            "en": "redemption, previewed"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Covenant Vocabulary Highlight (goel / geulah glow with special treatment), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Covenant Vocabulary Highlight",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child recognizes goel as the kinsman-redeemer root and begins to track it."
+    },
+    {
+      "num": "43",
+      "title": "Hearken, O House of Jacob",
+      "verse": {
+        "ref": "1 Nephi 20:1",
+        "hebrew": "שִׁמְעוּ זֹאת בֵּית־יַעֲקֹב הַנִּקְרָאִים בְּשֵׁם יִשְׂרָאֵל",
+        "translit": "shim'u zot beit-Ya'akov ha-nikra'im be-shem Yisrael"
+      },
+      "gloss": "Hear this, house of Jacob, who are called by the name of Israel.",
+      "focus": "Reinforce the 2mp imperative shim'u. Introduce the Niphal participle plural ha-nikra'im (those who are called).",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Binyan Builder, Participle Match, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Binyan Builder",
+          "Participle Match",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads Isaiah 48:1 in its Sefer Nephi form."
+    },
+    {
+      "num": "44",
+      "title": "I Am He, I Am the First",
+      "verse": {
+        "ref": "1 Nephi 20:12",
+        "hebrew": "אֲנִי־הוּא אֲנִי רִאשׁוֹן אַף אֲנִי אַחֲרוֹן",
+        "translit": "ani-hu ani rishon af ani acharon"
+      },
+      "gloss": "I am he, I am the first, also I am the last.",
+      "focus": "The divine self-identification. Reinforce rishon and introduce אַחֲרוֹן (last). Echo of Isaiah 44:6 and Revelation 1:8 (for parents, this is the Alpha-Omega identity in Hebrew).",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "אַחֲרוֹן (last).",
+        "items": [
+          {
+            "heb": "אַחֲרוֹן",
+            "en": "last"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Memorization Reward, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Memorization Reward",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child recites the divine self-identification."
+    },
+    {
+      "num": "45",
+      "title": "Hearken, O Ye House of Israel",
+      "verse": {
+        "ref": "1 Nephi 21:1",
+        "hebrew": "הַקְשִׁיבוּ אִיִּים אֵלַי וְהַאֲזִינוּ לְאֻמִּים מֵרָחוֹק",
+        "translit": "hakshivu iyim elai ve-ha'azinu le'umim me-rachok"
+      },
+      "gloss": "Listen, O isles, unto me, and hearken, ye peoples, from afar.",
+      "focus": "Introduce ק־שׁ־ב (to pay attention) and א־ז־נ (to give ear) in Hiphil. Two parallel hearing-verbs in poetic synonymy.",
+      "roots": {
+        "raw": "ק־שׁ־ב, א־ז־נ (both Hiphil: pay attention / give ear).",
+        "items": [
+          "ק־ש",
+          "א־ז־נ"
+        ]
+      },
+      "vocab": {
+        "raw": "אִי (island, isle), לְאֹם (people, nation).",
+        "items": [
+          {
+            "heb": "אִי",
+            "en": "island, isle"
+          },
+          {
+            "heb": "לְאֹם",
+            "en": "people, nation"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort (hearing-verbs: sh-m-a, k-sh-v, a-z-n), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child names three hearing-verbs."
+    },
+    {
+      "num": "46",
+      "title": "Can a Woman Forget Her Nursing Child",
+      "verse": {
+        "ref": "1 Nephi 21:15",
+        "hebrew": "הֲתִשְׁכַּח אִשָּׁה עוּלָהּ מֵרַחֵם בֶּן־בִּטְנָהּ",
+        "translit": "ha-tishkach isha ula me-rachem ben-bitna"
+      },
+      "gloss": "Can a woman forget her nursing child, from compassion on the son of her womb?",
+      "focus": "Introduce ש־כ־ח (to forget). Reinforce ר־ח־מ from Journey 3 lesson 53 (thirteen attributes). Introduce בֶּטֶן (womb).",
+      "roots": {
+        "raw": "ש־כ־ח (to forget).",
+        "items": [
+          "ש־כ־ח"
+        ]
+      },
+      "vocab": {
+        "raw": "עוּל (nursing child), בֶּטֶן (womb).",
+        "items": [
+          {
+            "heb": "עוּל",
+            "en": "nursing child"
+          },
+          {
+            "heb": "בֶּטֶן",
+            "en": "womb"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child connects rachem (compassion) back to rachum (merciful) from Journey 3."
+    },
+    {
+      "num": "47",
+      "title": "I Have Graven Thee Upon the Palms",
+      "verse": {
+        "ref": "1 Nephi 21:16",
+        "hebrew": "הֵן עַל־כַּפַּיִם חַקֹּתִיךְ",
+        "translit": "hen al-kapayim chakotikh"
+      },
+      "gloss": "Behold, I have graven you upon the palms.",
+      "focus": "Introduce ח־ק־ק (reinforced from Journey 2 lesson 55, now as graven). Introduce כַּף (palm, hollow of hand) in dual. A beloved verse.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "כַּף (palm, dual kapayim).",
+        "items": [
+          {
+            "heb": "כַּף",
+            "en": "palm, dual kapayim"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Dual Match, Memorization Reward, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Dual Match",
+          "Memorization Reward",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child recites verse 16 from memory."
+    },
+    {
+      "num": "48",
+      "title": "Arise, Shine",
+      "verse": {
+        "ref": "2 Nephi 24:3 (from Isaiah 60:1) selection",
+        "hebrew": "קוּמִי אוֹרִי כִּי־בָא אוֹרֵךְ",
+        "translit": "kumi ori ki-va orech"
+      },
+      "gloss": "Arise, shine, for your light has come.",
+      "focus": "Feminine imperatives kumi and ori. Reinforce the name of Aleph Trail (ori = my light / shine!). A memorable liturgical verse.",
+      "roots": {
+        "raw": "Reinforce א־ו־ר.",
+        "items": [
+          "א־ו־ר"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Feminine Imperative Match, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Feminine Imperative Match",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites the arise-shine verse."
+    },
+    {
+      "num": "49",
+      "title": "All Nations Shall Flow Unto It",
+      "verse": {
+        "ref": "2 Nephi 12:2 (Isaiah 2:2)",
+        "hebrew": "וְנָהֲרוּ אֵלָיו כָּל־הַגּוֹיִם",
+        "translit": "ve-naharu elav kol-ha-goyim"
+      },
+      "gloss": "And all the nations shall flow unto it.",
+      "focus": "Introduce נ־ה־ר (to flow, from which nahar, river, also derives).",
+      "roots": {
+        "raw": "נ־ה־ר (to flow).",
+        "items": [
+          "נ־ה־ר"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort (nahar as river, naharu as they flowed), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse and names the noun-verb connection for n-h-r."
+    },
+    {
+      "num": "50",
+      "title": "They Shall Beat Their Swords",
+      "verse": {
+        "ref": "2 Nephi 12:4 (Isaiah 2:4)",
+        "hebrew": "וְכִתְּתוּ חַרְבוֹתָם לְאִתִּים",
+        "translit": "ve-kitetu charvotam le-itim"
+      },
+      "gloss": "And they shall beat their swords into plowshares.",
+      "focus": "Introduce כ־ת־ת (to beat, crush) in Piel. Reinforce chevev (sword). Introduce אֵת (plowshare, a farming implement).",
+      "roots": {
+        "raw": "כ־ת־ת (to beat).",
+        "items": [
+          "כ־ת־ת"
+        ]
+      },
+      "vocab": {
+        "raw": "אֵת (plowshare).",
+        "items": [
+          {
+            "heb": "אֵת",
+            "en": "plowshare"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Memorization Reward, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Memorization Reward",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child recites the swords-to-plowshares verse."
+    },
+    {
+      "num": "51",
+      "title": "Build a Ship",
+      "verse": {
+        "ref": "1 Nephi 17:8",
+        "hebrew": "בְּנֵה־לְךָ אֳנִיָּה לְתַכְנִית אֲשֶׁר אַרְאֶךָּ",
+        "translit": "bneh-lecha oniya le-tachnit asher ar'eka"
+      },
+      "gloss": "Build for yourself a ship after the pattern which I will show you.",
+      "focus": "Reinforce ב־נ־ה. Introduce אֳנִיָּה (ship) and תַּכְנִית (pattern, model).",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "אֳנִיָּה (ship), תַּכְנִית (pattern).",
+        "items": [
+          {
+            "heb": "אֳנִיָּה",
+            "en": "ship"
+          },
+          {
+            "heb": "תַּכְנִית",
+            "en": "pattern"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Verse Builder, Intertextual Echo Highlight (\"show you a pattern\" echoes the tabernacle instructions in Exodus 25).",
+        "items": [
+          "Chant Along",
+          "Verse Builder",
+          "Intertextual Echo Highlight"
+        ]
+      },
+      "exit": "Child reads verse 8 and names the tabernacle-pattern parallel."
+    },
+    {
+      "num": "52",
+      "title": "The Lord Remembers His People",
+      "verse": {
+        "ref": "1 Nephi 17:30",
+        "hebrew": "וְיִזְכֹּר יְהוָה אֶת־עַמּוֹ בְּיוֹם צָרָתָם",
+        "translit": "ve-yizkor YHVH et-amo be-yom tzaratam"
+      },
+      "gloss": "And the LORD remembers his people in the day of their affliction.",
+      "focus": "Strong covenant-memory language. Reinforce z-k-r from Journey 3 lesson 7 and lesson 28. Reinforce tzara from Journey 4 lesson 2.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Covenant Vocabulary Review, Verse Builder, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Covenant Vocabulary Review",
+          "Verse Builder",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites verse 30 and connects it to the Exodus covenant-remembering."
+    },
+    {
+      "num": "53",
+      "title": "Moses Smote the Rock",
+      "verse": {
+        "ref": "1 Nephi 17:29",
+        "hebrew": "וַיַּךְ מֹשֶׁה אֶת־הַצּוּר בְּמַטֵּהוּ וַיֵּצְאוּ מַיִם",
+        "translit": "va-yach Moshe et-ha-tzur be-matehu va-yetze'u mayim"
+      },
+      "gloss": "And Moses smote the rock with his rod, and waters came forth.",
+      "focus": "Introduce נ־כ־ה (to strike, smite) in Hiphil vav-consecutive (va-yach). A classic Exodus image embedded in Nephi.",
+      "roots": {
+        "raw": "נ־כ־ה (to strike).",
+        "items": [
+          "נ־כ־ה"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Exodus Echo Highlight, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Exodus Echo Highlight",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child names the Exodus parallel (Moses striking the rock in Exodus 17)."
+    },
+    {
+      "num": "54",
+      "title": "They Tempted God in the Wilderness",
+      "verse": {
+        "ref": "1 Nephi 17:30b",
+        "hebrew": "וַיְנַסּוּ אֶת־אֱלֹהִים בַּמִּדְבָּר",
+        "translit": "va-yenasu et-Elohim ba-midbar"
+      },
+      "gloss": "And they tempted God in the wilderness.",
+      "focus": "Introduce נ־ס־ה (to test, try). Reinforce midbar. Echo of Numbers 14.",
+      "roots": {
+        "raw": "נ־ס־ה (to test, try).",
+        "items": [
+          "נ־ס־ה"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 30b."
+    },
+    {
+      "num": "55",
+      "title": "The Lord Can Do All Things",
+      "verse": {
+        "ref": "1 Nephi 17:50",
+        "hebrew": "אִם־יְהוָה יְדַבֵּר אֶל־הָאָרֶץ לִהְיוֹת וַתְּהִי",
+        "translit": "im-YHVH yedaber el-ha-aretz lihyot va-tehi"
+      },
+      "gloss": "If the LORD should speak unto the earth to be, it would be.",
+      "focus": "A concise statement of divine creative power. Echo of Genesis 1.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Genesis 1 Echo Highlight, Verse Builder, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Genesis 1 Echo Highlight",
+          "Verse Builder",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites the verse and connects it to Genesis 1 \"let there be.\""
+    },
+    {
+      "num": "56",
+      "title": "The Winds Ceased",
+      "verse": {
+        "ref": "1 Nephi 18:21",
+        "hebrew": "וַיִּפְסְקוּ הָרוּחוֹת וַיִּשְׁקוֹט הַיָּם",
+        "translit": "va-yifseku ha-ruchot va-yishkot ha-yam"
+      },
+      "gloss": "And the winds ceased and the sea became calm.",
+      "focus": "Introduce פ־ס־ק (to cease) and שׁ־ק־ט (to be quiet).",
+      "roots": {
+        "raw": "פ־ס־ק, שׁ־ק־ט.",
+        "items": [
+          "פ־ס־ק",
+          "ק־ט"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 21."
+    },
+    {
+      "num": "57",
+      "title": "We Arrived at the Land of Promise",
+      "verse": {
+        "ref": "1 Nephi 18:23",
+        "hebrew": "וַנַּגִּיעַ אֶל־אֶרֶץ הַהַבְטָחָה",
+        "translit": "va-nagia el-eretz ha-havtacha"
+      },
+      "gloss": "And we arrived at the land of promise.",
+      "focus": "Reinforce נ־ג־ע (reinforced from Journey 2 lesson 33). Introduce הַבְטָחָה (promise, from b-t-ch, reinforced from Journey 4 lesson 36 as trust).",
+      "roots": {
+        "raw": "None new; noun expansion.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "הַבְטָחָה (promise).",
+        "items": [
+          {
+            "heb": "הַבְטָחָה",
+            "en": "promise"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort (trust and promise share b-t-ch), Verse Builder, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child connects the root b-t-ch across trust and promise."
+    },
+    {
+      "num": "58",
+      "title": "We Pitched Tents",
+      "verse": {
+        "ref": "1 Nephi 18:23b",
+        "hebrew": "וַנִּטַּע אֹהָלֵינוּ",
+        "translit": "va-nita ohaleinu"
+      },
+      "gloss": "And we pitched our tents.",
+      "focus": "Reinforce n-t-a (pitching tents, echoing Abraham and Lehi's earlier pitching). Reinforce ohel in plural with 1cp suffix.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Verse Builder, Intertextual Echo Highlight (tent-pitching as patriarchal signature).",
+        "items": [
+          "Chant Along",
+          "Verse Builder",
+          "Intertextual Echo Highlight"
+        ]
+      },
+      "exit": "Child reads verse 23b and names the patriarchal parallel."
+    },
+    {
+      "num": "59",
+      "title": "Consolidation Before Exit",
+      "verse": {
+        "ref": "Review and reading",
+        "hebrew": "",
+        "translit": ""
+      },
+      "gloss": "Consolidation lesson before Journey 4 exit. The child reads 1 Nephi 3:7, 1 Nephi 8:30, and 2 Nephi 4:34 (three memorization targets) from memory.",
+      "focus": "No new content.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Memorization Showcase, Chant Along.",
+        "items": [
+          "Memorization Showcase",
+          "Chant Along"
+        ]
+      },
+      "exit": "Child recites all three verses from memory smoothly."
+    },
+    {
+      "num": "60",
+      "title": "Journey 4 Exit: 1 Nephi 8:1-33",
+      "verse": {
+        "ref": "Lehi's full Tree of Life vision read aloud",
+        "hebrew": "",
+        "translit": ""
+      },
+      "gloss": "Journey 4 exit. The child reads 1 Nephi 8:1-33 aloud in full, the complete Tree of Life vision narrative.",
+      "focus": "All Journey 1-4 grammar and vocabulary consolidated. No new content.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Final Scroll Reader, Memorization Showcase, Parent Submission Flow.",
+        "items": [
+          "Final Scroll Reader",
+          "Memorization Showcase",
+          "Parent Submission Flow"
+        ]
+      },
+      "exit": "Child records themselves reading 1 Nephi 8:1-33 aloud. Parent approves. Journey 4 complete. Journey 5 (Land and Kings) unlocks."
+    }
+  ]
+}
