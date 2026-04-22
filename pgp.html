@@ -119,6 +119,26 @@ body {
   text-align: center;
   direction: ltr;
 }
+.chapter-summary-en {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.92em;
+  color: var(--ink);
+  direction: ltr;
+  line-height: 1.55;
+  opacity: 0.9;
+  margin-top: 10px;
+  text-align: center;
+}
+.chapter-summary-he {
+  font-family: 'David Libre', serif;
+  font-size: 1.05em;
+  color: var(--ink);
+  direction: rtl;
+  line-height: 1.65;
+  opacity: 0.92;
+  margin-top: 10px;
+  text-align: center;
+}
 
 /* Nav links */
 .chapter-nav {
@@ -1760,6 +1780,10 @@ try {
 <!-- English text for dual mode -->
 <script src="pgp_english.js"></script>
 
+<!-- Chapter headings (official study summaries) -->
+<script src="pgp_chapter_headings.js"></script>
+<script src="pgp_chapter_headings_heb.js"></script>
+
 <!-- Verse data files -->
 <script src="pgp_verses/pgp_intro.js"></script>
 <script src="pgp_verses/moses.js"></script>
@@ -2565,7 +2589,7 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
           return '<span style="font-family:David Libre,serif">' + pair[0] + '</span> (' + pair[1] + 'x)';
         }).join(', ');
       }
-      detailHtml += '<br><span style="cursor:pointer;color:var(--accent);text-decoration:underline;font-size:0.9em;" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">View all references \u2192</span>';
+      detailHtml += '<br><span style="cursor:pointer;color:var(--accent);text-decoration:underline;font-size:0.9em;" onclick="event.stopPropagation();closePopup();openRootXrefPanel(\'' + root.replace(/'/g,"\\'") + '\')">View all references \u2192</span>';
     } else {
       detailHtml += '<span>Occurrences:</span> ' + (sInfo ? sInfo.count : 1);
     }
@@ -3139,6 +3163,35 @@ _ensureChapterRendered = function(chapId) {
   _origEnsureRendered(chapId);
   setTimeout(applyAllAnnotations, 50);
   if (window._crossrefsLoaded && typeof addCrossRefMarkers === 'function') setTimeout(addCrossRefMarkers, 100);
+  try {
+    if (typeof _pgpChapterHeadings !== 'undefined' && typeof getBookChapter === 'function') {
+      var bc = getBookChapter(chapId);
+      if (bc && bc.book) {
+        var key = bc.book + ' ' + (bc.chapter || 1);
+        var text = _pgpChapterHeadings[key];
+        if (text) {
+          var headingEl = document.querySelector('#panel-' + chapId + ' .chapter-heading');
+          if (headingEl && !headingEl.querySelector('.chapter-summary-en')) {
+            var p = document.createElement('div');
+            p.className = 'chapter-summary-en';
+            p.textContent = text;
+            headingEl.appendChild(p);
+          }
+        }
+        var ht = (typeof _pgpChapterHeadingsHeb !== 'undefined') ? _pgpChapterHeadingsHeb[key] : '';
+        if (ht) {
+          var headingEl2 = document.querySelector('#panel-' + chapId + ' .chapter-heading');
+          if (headingEl2 && !headingEl2.querySelector('.chapter-summary-he')) {
+            var ph = document.createElement('div');
+            ph.className = 'chapter-summary-he';
+            ph.setAttribute('dir', 'rtl');
+            ph.textContent = ht;
+            headingEl2.appendChild(ph);
+          }
+        }
+      }
+    }
+  } catch(e) {}
 };
 
 // DARK MODE

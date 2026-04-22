@@ -514,6 +514,12 @@ body, button, input, select, textarea,
       <div class="cr-heb" id="cr-heb"></div>
     </div>
 
+    <!-- ===== CONTINUE LEARNING ===== -->
+    <div class="continue-reading" id="continue-learning" style="display:none; margin-top:12px; background:rgba(18,65,43,0.12); border-color: rgba(47,125,74,0.35);" onclick="goToLearning()">
+      <div class="cr-ref" id="cl-ref"></div>
+      <div class="cr-heb" id="cl-sub" style="direction:ltr; font-family:'Crimson Pro', serif;"></div>
+    </div>
+
     <!-- ===== GLOBAL SEARCH ===== -->
     <div class="global-search-wrap">
       <input type="text" id="global-search" class="global-search-input" placeholder="Search all volumes...   (press / to focus)" autocomplete="off" aria-label="Search all volumes">
@@ -843,6 +849,25 @@ function goToLastRead() {
     document.getElementById('cr-ref').textContent = '\u2192 Continue Reading: ' + data.label;
     document.getElementById('cr-heb').textContent = data.heb || '';
     document.getElementById('continue-reading').style.display = 'flex';
+  } catch(e) {}
+})();
+</script>
+<script>
+// ===== CONTINUE LEARNING =====
+function goToLearning() {
+  try { window.location.href = 'course.html'; } catch(e) {}
+}
+(function showContinueLearning() {
+  try {
+    var p = localStorage.getItem('sw-course-progress-v1');
+    if (!p) return;
+    var prog = JSON.parse(p);
+    if (!prog) return;
+    var cur = prog.current || null;
+    var label = (cur && cur.unitId) ? (cur.unitId + ' · ' + (cur.subunitId || '')).trim() : '';
+    document.getElementById('cl-ref').textContent = '\u2192 Continue Learning: Scripture Hebrew Course';
+    document.getElementById('cl-sub').textContent = label ? ('Resume at ' + label) : 'Resume your last lesson';
+    document.getElementById('continue-learning').style.display = 'flex';
   } catch(e) {}
 })();
 </script>

@@ -189,6 +189,39 @@
     return null;
   }
 
+  // Accept full book names too (e.g. "1 John 3:4")
+  function parseFullBookScriptureRef(refText) {
+    var norm = String(refText || '').replace(/\u00a0/g, ' ').trim();
+    var m = norm.match(/^(.+?)\s+(\d+):(\d+)/);
+    if (!m) return null;
+    var book = m[1].trim();
+    var ch = m[2], vs = m[3];
+    // Only accept books we can route/cross-link
+    if (_bookToVolume[book]) return book + '|' + ch + '|' + vs;
+    return null;
+  }
+
+  function classifyRefText(refText) {
+    var norm = String(refText || '').replace(/\u00a0/g, ' ').trim();
+    if (!norm) return { type: 'unknown', text: '' };
+    if (norm.indexOf('TG ') === 0) return { type: 'tg', text: norm.substring(3).trim() };
+    if (norm.indexOf('BD ') === 0) return { type: 'bd', text: norm.substring(3).trim() };
+    if (norm.indexOf('Bible Dictionary ') === 0) return { type: 'bd', text: norm.substring('Bible Dictionary '.length).trim() };
+    // Scripture (abbr or full)
+    var k = parseScriptureRef(norm) || parseFullBookScriptureRef(norm);
+    if (k) return { type: 'scripture', key: k, text: norm };
+    return { type: 'other', text: norm };
+  }
+
+  function studyHelpsUrl(kind, topic) {
+    var t = String(topic || '').trim();
+    if (!t) return null;
+    // churchofjesuschrist.org scripture study helps
+    if (kind === 'tg') return 'https://www.churchofjesuschrist.org/study/scriptures/tg/' + encodeURIComponent(t.toLowerCase().replace(/\s+/g, '-')) + '?lang=eng';
+    if (kind === 'bd') return 'https://www.churchofjesuschrist.org/study/scriptures/bd/' + encodeURIComponent(t.toLowerCase().replace(/\s+/g, '-')) + '?lang=eng';
+    return null;
+  }
+
   // ── Verse file mapping for dynamic interlinear loading ──
   var _verseFileCache = {}; // url → { targetId → [verseArray] }
 
@@ -719,23 +752,23 @@
 
     if (ref.refs && ref.refs.length > 0) {
       var lastBookPrefix = '';
+      var studyHelps = { tg: {}, bd: {}, other: {} };
       ref.refs.forEach(function(r) {
         var rNorm = r.replace(/\u00a0/g, ' ');
-        // Skip TG (Topical Guide) entries
-        if (rNorm.indexOf('TG ') === 0) return;
 
-        // Resolve abbreviated continuation references
+        // Resolve abbreviated continuation references for scripture abbreviations like "49:1"
         var foundPrefix = '';
         for (var abbr in _abbrToFullBook) {
           if (rNorm.indexOf(abbr) === 0) { foundPrefix = abbr; break; }
         }
         var fullRef = rNorm;
-        if (foundPrefix) {
-          lastBookPrefix = foundPrefix;
-        } else if (/^\d/.test(rNorm) && lastBookPrefix) {
-          fullRef = lastBookPrefix + ' ' + rNorm;
-        } else if (!foundPrefix && !/^\d/.test(rNorm)) {
-          // Not a known book abbreviation and not a verse continuation — likely a TG topic
+        if (foundPrefix) lastBookPrefix = foundPrefix;
+        else if (/^\d/.test(rNorm) && lastBookPrefix) fullRef = lastBookPrefix + ' ' + rNorm;
+
+        var cls = classifyRefText(fullRef);
+        if (cls.type !== 'scripture') {
+          var bucket = (cls.type === 'tg' || cls.type === 'bd') ? cls.type : 'other';
+          if (cls.text) studyHelps[bucket][cls.text] = true;
           return;
         }
 
@@ -746,7 +779,7 @@
         titleDiv.className = 'xref-ref-title';
 
         // Check if this is an internal reference (in the current volume)
-        var refKey = parseScriptureRef(fullRef);
+        var refKey = cls.key;
         var isInternal = refKey && window._crossrefMap[refKey];
 
         var titleSpan = document.createElement('span');
@@ -827,6 +860,49 @@
 
         refsContainer.appendChild(card);
       });
+
+      // Study Helps section (TG / BD / Other)
+      var tgKeys = Object.keys(studyHelps.tg);
+      var bdKeys = Object.keys(studyHelps.bd);
+      var otherKeys = Object.keys(studyHelps.other);
+      if (tgKeys.length || bdKeys.length || otherKeys.length) {
+        var sh = document.createElement('div');
+        sh.className = 'xref-ref-card';
+        sh.style.borderStyle = 'dashed';
+        sh.style.opacity = '0.98';
+        var title = document.createElement('div');
+        title.className = 'xref-ref-title';
+        title.textContent = 'Study Helps';
+        sh.appendChild(title);
+
+        function addHelp(kind, label, items) {
+          if (!items || !items.length) return;
+          var sec = document.createElement('div');
+          sec.style.cssText = 'padding:8px 0 0; font-size:0.92em;';
+          var h = document.createElement('div');
+          h.style.cssText = 'font-weight:700; opacity:0.85; padding:2px 0;';
+          h.textContent = label + ' (' + items.length + ')';
+          sec.appendChild(h);
+          items.slice(0, 40).forEach(function(t) {
+            var row = document.createElement('div');
+            row.style.cssText = 'padding:2px 0;';
+            var a = document.createElement('a');
+            a.textContent = (kind === 'other') ? t : (label + ': ' + t);
+            a.href = (kind === 'other') ? ('https://www.churchofjesuschrist.org/search?lang=eng&query=' + encodeURIComponent(t)) : (studyHelpsUrl(kind, t) || '#');
+            a.target = '_blank';
+            a.rel = 'noopener';
+            a.style.cssText = 'color:var(--accent,#c8a84e); text-decoration: underline;';
+            row.appendChild(a);
+            sec.appendChild(row);
+          });
+          sh.appendChild(sec);
+        }
+        addHelp('tg', 'Topical Guide', tgKeys.sort());
+        addHelp('bd', 'Bible Dictionary', bdKeys.sort());
+        addHelp('other', 'Other', otherKeys.sort());
+
+        refsContainer.appendChild(sh);
+      }
     } else {
       var noData = document.createElement('div');
       noData.className = 'xref-ref-nodata';
@@ -958,81 +1034,122 @@
     var refsContainer = document.getElementById('xref-panel-refs');
     refsContainer.innerHTML = '';
 
-    // Deduplicate
-    var seen = {};
+    // Aggregate all refs across markers (don’t drop TG/BD/etc)
+    var seenScripture = {};
+    var studyHelps = { tg: {}, bd: {}, other: {} };
     var lastBookPrefix = '';
     entries.forEach(function(e) {
-      if (e.ref.refs) {
-        e.ref.refs.forEach(function(r) {
-          var rNorm = r.replace(/\u00a0/g, ' ');
-          // Skip TG (Topical Guide) entries
-          if (rNorm.indexOf('TG ') === 0) return;
-          var foundPrefix = '';
-          for (var abbr in _abbrToFullBook) {
-            if (rNorm.indexOf(abbr) === 0) { foundPrefix = abbr; break; }
-          }
-          var fullRef = rNorm;
-          if (foundPrefix) {
-            lastBookPrefix = foundPrefix;
-          } else if (/^\d/.test(rNorm) && lastBookPrefix) {
-            fullRef = lastBookPrefix + ' ' + rNorm;
-          } else if (!foundPrefix && !/^\d/.test(rNorm)) {
-            // Not a known book abbreviation — likely a TG topic name
-            return;
-          }
+      if (!e || !e.ref || !e.ref.refs) return;
+      e.ref.refs.forEach(function(r) {
+        var rNorm = String(r || '').replace(/\u00a0/g, ' ').trim();
+        if (!rNorm) return;
 
-          if (!seen[fullRef]) {
-            seen[fullRef] = true;
-            var card = document.createElement('div');
-            card.className = 'xref-ref-card';
-            var titleDiv = document.createElement('div');
-            titleDiv.className = 'xref-ref-title';
-            var titleSpan = document.createElement('span');
-            titleSpan.textContent = fullRef;
-            titleDiv.appendChild(titleSpan);
-            card.appendChild(titleDiv);
+        // Resolve abbreviated continuation references for scripture abbreviations like "49:1"
+        var foundPrefix = '';
+        for (var abbr in _abbrToFullBook) {
+          if (rNorm.indexOf(abbr) === 0) { foundPrefix = abbr; break; }
+        }
+        var fullRef = rNorm;
+        if (foundPrefix) lastBookPrefix = foundPrefix;
+        else if (/^\d/.test(rNorm) && lastBookPrefix) fullRef = lastBookPrefix + ' ' + rNorm;
 
-            // Show verse text
-            var extHtml = getExternalVerseHtml(fullRef);
-            if (extHtml) {
-              var extDiv = document.createElement('div');
-              extDiv.innerHTML = extHtml;
-              card.appendChild(extDiv);
-            }
-
-            // Load Hebrew interlinear for cross-volume references
-            var rk = parseScriptureRef(fullRef);
-            if (rk) {
-              loadExternalInterlinear(rk, card);
-            }
-
-            // Add "Open Full Chapter" link for cross-volume references
-            if (rk) {
-              var cUrl = buildCrossVolumeUrl(rk, e.verseKey);
-              if (cUrl) {
-                var cDiv = document.createElement('div');
-                cDiv.style.cssText = 'padding:4px 0;font-size:0.85em;';
-                var cLink = document.createElement('a');
-                cLink.href = cUrl;
-                cLink.onclick = (function(sv) {
-                  return function() {
-                    sessionStorage.setItem('xref-return-from', window.location.pathname + window.location.hash);
-                    sessionStorage.setItem('xref-return-verse', sv);
-                    sessionStorage.setItem('xref-return-set', '1');
-                  };
-                })(e.verseKey);
-                cLink.style.cssText = 'color:var(--accent,#c8a84e);text-decoration:none;font-weight:600;';
-                cLink.textContent = 'Open Full Chapter \u2192';
-                cDiv.appendChild(cLink);
-                card.appendChild(cDiv);
-              }
-            }
-
-            refsContainer.appendChild(card);
-          }
-        });
-      }
+        var cls = classifyRefText(fullRef);
+        if (cls.type === 'scripture') {
+          if (!seenScripture[cls.text]) seenScripture[cls.text] = { key: cls.key, text: cls.text, sourceVerseKey: e.verseKey };
+        } else {
+          var bucket = (cls.type === 'tg' || cls.type === 'bd') ? cls.type : 'other';
+          if (cls.text) studyHelps[bucket][cls.text] = true;
+        }
+      });
     });
+
+    // Render scripture refs (unique)
+    Object.keys(seenScripture).sort().forEach(function(fullRef) {
+      var info = seenScripture[fullRef];
+      var card = document.createElement('div');
+      card.className = 'xref-ref-card';
+      var titleDiv = document.createElement('div');
+      titleDiv.className = 'xref-ref-title';
+      var titleSpan = document.createElement('span');
+      titleSpan.textContent = fullRef;
+      titleDiv.appendChild(titleSpan);
+      card.appendChild(titleDiv);
+
+      var extHtml = getExternalVerseHtml(fullRef);
+      if (extHtml) {
+        var extDiv = document.createElement('div');
+        extDiv.innerHTML = extHtml;
+        card.appendChild(extDiv);
+      }
+
+      if (info.key) loadExternalInterlinear(info.key, card);
+
+      if (info.key) {
+        var cUrl = buildCrossVolumeUrl(info.key, info.sourceVerseKey || '');
+        if (cUrl) {
+          var cDiv = document.createElement('div');
+          cDiv.style.cssText = 'padding:4px 0;font-size:0.85em;';
+          var cLink = document.createElement('a');
+          cLink.href = cUrl;
+          cLink.onclick = (function(sv) {
+            return function() {
+              sessionStorage.setItem('xref-return-from', window.location.pathname + window.location.hash);
+              sessionStorage.setItem('xref-return-verse', sv);
+              sessionStorage.setItem('xref-return-set', '1');
+            };
+          })(info.sourceVerseKey || '');
+          cLink.style.cssText = 'color:var(--accent,#c8a84e);text-decoration:none;font-weight:600;';
+          cLink.textContent = 'Open Full Chapter \u2192';
+          cDiv.appendChild(cLink);
+          card.appendChild(cDiv);
+        }
+      }
+
+      refsContainer.appendChild(card);
+    });
+
+    // Render Study Helps
+    var tgKeys = Object.keys(studyHelps.tg);
+    var bdKeys = Object.keys(studyHelps.bd);
+    var otherKeys = Object.keys(studyHelps.other);
+    if (tgKeys.length || bdKeys.length || otherKeys.length) {
+      var sh = document.createElement('div');
+      sh.className = 'xref-ref-card';
+      sh.style.borderStyle = 'dashed';
+      sh.style.opacity = '0.98';
+      var title = document.createElement('div');
+      title.className = 'xref-ref-title';
+      title.textContent = 'Study Helps';
+      sh.appendChild(title);
+
+      function addHelp(kind, label, items) {
+        if (!items || !items.length) return;
+        var sec = document.createElement('div');
+        sec.style.cssText = 'padding:8px 0 0; font-size:0.92em;';
+        var h = document.createElement('div');
+        h.style.cssText = 'font-weight:700; opacity:0.85; padding:2px 0;';
+        h.textContent = label + ' (' + items.length + ')';
+        sec.appendChild(h);
+        items.slice(0, 60).forEach(function(t) {
+          var row = document.createElement('div');
+          row.style.cssText = 'padding:2px 0;';
+          var a = document.createElement('a');
+          a.textContent = (kind === 'other') ? t : (label + ': ' + t);
+          a.href = (kind === 'other') ? ('https://www.churchofjesuschrist.org/search?lang=eng&query=' + encodeURIComponent(t)) : (studyHelpsUrl(kind, t) || '#');
+          a.target = '_blank';
+          a.rel = 'noopener';
+          a.style.cssText = 'color:var(--accent,#c8a84e); text-decoration: underline;';
+          row.appendChild(a);
+          sec.appendChild(row);
+        });
+        sh.appendChild(sec);
+      }
+      addHelp('tg', 'Topical Guide', tgKeys.sort());
+      addHelp('bd', 'Bible Dictionary', bdKeys.sort());
+      addHelp('other', 'Other', otherKeys.sort());
+
+      refsContainer.appendChild(sh);
+    }
 
     panel.scrollTop = 0;
     panel.classList.add('open');
