@@ -1,0 +1,12 @@
+{
+  "name": "standard-works-project",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "journey1:docx": "node scripts/generate_journey1_docx.js"
+  },
+  "dependencies": {
+    "docx": "^9.5.1"
+  }
+}
+
