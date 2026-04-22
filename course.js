@@ -5,6 +5,7 @@
     runnerView: document.getElementById('runnerView'),
     progressPill: document.getElementById('progressPill'),
     resumeBtn: document.getElementById('resumeBtn'),
+    trackBar: document.getElementById('trackBar'),
     lessonPill: document.getElementById('lessonPill'),
     exitBtn: document.getElementById('exitBtn'),
     nextBtn: document.getElementById('nextBtn'),
@@ -1011,21 +1012,85 @@
 
   const U4_SUBUNITS = buildUnit4Subunits();
 
-  const COURSE = [
+  const COURSE_SEED = [
     { id: 'u1', title: 'Journey 1: Beginnings', desc: 'Genesis 1–11 · learn the Aleph‑bet, niqqud, and read real verses from day one.', subunits: U1_SUBUNITS },
     { id: 'u2', title: 'Journey 2: The Fathers', desc: 'Genesis 12–50 · build roots + forms through real narrative passages.', subunits: U2_SUBUNITS },
     { id: 'u3', title: 'Journey 3: Out of Egypt', desc: 'Exodus + selected Numbers · verbs, patterns, and covenant vocabulary.', subunits: U3_SUBUNITS },
     { id: 'u4', title: 'Journey 4: Scroll Mastery', desc: 'Assemble and read verses in Hebrew word order (no ads, no timers).', subunits: U4_SUBUNITS },
   ];
 
+  // --- Multi-track: OT / NT / BOM / D&C / PGP ---
+  const TRACK_KEY = 'alephtrail-track-v1';
+  const TRACKS = [
+    { id: 'ot', label: 'OT' },
+    { id: 'nt', label: 'NT' },
+    { id: 'bom', label: 'BOM' },
+    { id: 'dc', label: 'D&C' },
+    { id: 'pgp', label: 'PGP' },
+  ];
+
+  function loadTrack() {
+    try {
+      const t = localStorage.getItem(TRACK_KEY) || 'ot';
+      return TRACKS.some(x => x.id === t) ? t : 'ot';
+    } catch (e) {
+      return 'ot';
+    }
+  }
+  function saveTrack(t) { try { localStorage.setItem(TRACK_KEY, t); } catch (e) {} }
+
+  let currentTrack = loadTrack();
+
+  function prefixCourse(course, trackId) {
+    // Deep-ish clone and prefix ids to avoid collisions across tracks.
+    return (course || []).map(u => ({
+      id: `${trackId}-${u.id}`,
+      title: u.title,
+      desc: u.desc,
+      subunits: (u.subunits || []).map(su => ({
+        id: `${trackId}-${su.id}`,
+        title: su.title,
+        desc: su.desc,
+        lessons: (su.lessons || []).map(l => ({
+          id: `${trackId}-${l.id}`,
+          title: l.title,
+          desc: l.desc,
+          steps: (l.steps || []).slice(),
+        })),
+      })),
+    }));
+  }
+
+  function buildPlaceholderCourse(trackId) {
+    // Keep the same Journey structure but mark as “in progress”.
+    const c = [
+      makePlaceholderUnit('u1', 'Journey 1: Beginnings', 8),
+      makePlaceholderUnit('u2', 'Journey 2: The Fathers', 8),
+      makePlaceholderUnit('u3', 'Journey 3: Out of Egypt', 8),
+      makePlaceholderUnit('u4', 'Journey 4: Scroll Mastery', 8),
+    ];
+    // makePlaceholderUnit returns {id,title,desc,subunits}; match seed format.
+    const normalized = c.map(x => ({ id: x.id, title: x.title, desc: x.desc, subunits: x.subunits }));
+    return prefixCourse(normalized, trackId);
+  }
+
+  function getCourseForTrack(trackId) {
+    if (trackId === 'ot') return prefixCourse(COURSE_SEED, 'ot');
+    // Other tracks will be filled with real verses next; keep playable placeholders now.
+    return buildPlaceholderCourse(trackId);
+  }
+
+  let COURSE = getCourseForTrack(currentTrack);
+
   // --- Progress storage ---
-  const PROG_KEY = 'sw-course-progress-v1';
+  function progKeyForTrack(trackId) { return `alephtrail-progress-${trackId}-v1`; }
+  function currentProgKey() { return progKeyForTrack(currentTrack); }
   function loadProgress() {
-    try { return JSON.parse(localStorage.getItem(PROG_KEY) || '{}') || {}; }
+    try { return JSON.parse(localStorage.getItem(currentProgKey()) || '{}') || {}; }
     catch (e) { return {}; }
   }
   function saveProgress(p) {
-    try { localStorage.setItem(PROG_KEY, JSON.stringify(p)); } catch (e) {}
+    try { localStorage.setItem(currentProgKey(), JSON.stringify(p)); } catch (e) {}
   }
 
   let progress = loadProgress(); // { completed: { [lessonId]: true }, xp: number }
@@ -1091,7 +1156,7 @@
     els.units.innerHTML = '';
     COURSE.forEach((u, ui) => {
       const unit = document.createElement('div');
-      unit.className = 'unit' + (u.id === 'u1' ? ' open' : '');
+      unit.className = 'unit' + (ui === 0 ? ' open' : '');
       const allLessons = [];
       (u.subunits || []).forEach(su => {
         (su.lessons || []).forEach(l => { allLessons.push(l); });
@@ -1958,8 +2023,37 @@
   });
 
   // Init
+  function renderTrackBar() {
+    if (!els.trackBar) return;
+    els.trackBar.innerHTML = '';
+    TRACKS.forEach(t => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'trackbtn' + (t.id === currentTrack ? ' active' : '');
+      b.textContent = t.label;
+      b.addEventListener('click', () => {
+        if (t.id === currentTrack) return;
+        currentTrack = t.id;
+        saveTrack(currentTrack);
+        // Rebind course + progress for the selected track
+        COURSE = getCourseForTrack(currentTrack);
+        progress = loadProgress();
+        if (!progress.completed) progress.completed = {};
+        if (!Number.isFinite(progress.xp)) progress.xp = 0;
+        if (!progress.current) progress.current = null;
+        updateProgressPill();
+        updateResumeButton();
+        renderTrackBar();
+        renderPath();
+        showPath();
+      });
+      els.trackBar.appendChild(b);
+    });
+  }
+
   updateProgressPill();
   updateResumeButton();
+  renderTrackBar();
   renderPath();
   showPath();
 })();

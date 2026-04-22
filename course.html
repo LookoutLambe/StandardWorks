@@ -132,6 +132,33 @@
       line-height: 1.45;
       max-width: 640px;
     }
+    .trackbar {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .trackbtn {
+      appearance: none;
+      border: 1px solid var(--rule);
+      background: rgba(0,0,0,0.02);
+      color: var(--ink);
+      padding: 8px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 800;
+      font-size: 0.88em;
+      letter-spacing: 0.01em;
+      transition: transform 0.08s ease, border-color 0.15s ease, background 0.15s ease;
+      user-select: none;
+    }
+    body.dark-mode .trackbtn { background: rgba(255,255,255,0.06); }
+    .trackbtn:hover { transform: translateY(-1px); border-color: rgba(200,168,78,0.65); }
+    .trackbtn.active {
+      border-color: rgba(47,125,74,0.65);
+      background: rgba(47,125,74,0.10);
+    }
     .pill {
       display: inline-flex;
       align-items: center;
@@ -489,10 +516,11 @@
     <div class="panel">
       <div class="panel-head">
         <div class="hint">
-          Short, practical lessons for Biblical Hebrew using scripture vocabulary and sentence patterns.
-          Build sentences, translate, and optionally practice listening & speaking (when supported).
+          Root-first Hebrew reading through real scripture.
+          Pick a track, walk the trail, and learn to read.
         </div>
-        <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end;">
+        <div class="trackbar">
+          <div id="trackBar" style="display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end;"></div>
           <button class="iconbtn" id="resumeBtn" type="button" style="display:none; border-color: rgba(47,125,74,0.45);">
             Resume
           </button>
