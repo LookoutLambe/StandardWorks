@@ -520,7 +520,7 @@
     // Keep this short: introduce up to 4 tokens.
     const intro = uniq.slice(0, 4).map(t => {
       const m = tokenMeaning(t);
-      const prompt = m ? `Build the Hebrew: “${m}”` : 'Build this Hebrew word.';
+      const prompt = m ? `Build the Hebrew: “${m}”` : `Build this Hebrew word: ${t}`;
       return { type: 'bank_he_from_en', title: 'Build', prompt, heb: t };
     });
 
@@ -1354,7 +1354,7 @@
       const introToks = uniq.slice(0, 4);
       const introSteps = introToks.map((t, i) => {
         const m = tokenMeaning(t);
-        const prompt = m ? `Build the Hebrew: “${m}”` : 'Build this Hebrew word.';
+        const prompt = m ? `Build the Hebrew: “${m}”` : `Build this Hebrew word: ${t}`;
         return { type: 'bank_he_from_en', title: 'Build', prompt, heb: t, _autoIntro: 1 };
       });
 
