@@ -8062,6 +8062,23 @@ updateNavButtons();
     label.className = 'chapter-label-en';
     label.textContent = 'Chapter ' + num;
     heading.appendChild(label);
+    // Restore original heading format: English summary + Hebrew under it (no interlinear)
+    var sumEn = document.createElement('p');
+    sumEn.className = 'chapter-summary';
+    sumEn.textContent = text;
+    heading.appendChild(sumEn);
+
+    var hebHeadings = (typeof _chapterHeadingsHeb !== 'undefined') ? _chapterHeadingsHeb : {};
+    var hebTextPlain = hebHeadings[key] || '';
+    if (hebTextPlain) {
+      hebTextPlain = hebTextPlain.replace(/\s*בְּעֵרֶךְ[\s\S]*$/, '').replace(/\s*\.\s*$/, '').trim();
+      var sumHe = document.createElement('p');
+      sumHe.className = 'chapter-summary-heb';
+      sumHe.setAttribute('dir', 'rtl');
+      sumHe.textContent = hebTextPlain;
+      heading.appendChild(sumHe);
+    }
+    continue;
     // Add Hebrew chapter heading as interlinear word-units if available
     var hebHeadings = (typeof _chapterHeadingsHeb !== 'undefined') ? _chapterHeadingsHeb : {};
     // Heading-specific gloss overrides for words whose verse-data lookup gives wrong/missing results

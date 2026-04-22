@@ -21,6 +21,10 @@
       --ok: #2f7d4a;
       --green: #2f7d4a;
       --green2: #1f6a3d;
+      --blue: #1f6fe5;
+      --shadow-lg: 0 18px 40px rgba(0,0,0,0.14);
+      --shadow-md: 0 10px 22px rgba(0,0,0,0.12);
+      --shadow-sm: 0 6px 14px rgba(0,0,0,0.10);
     }
     body.dark-mode {
       --bg: #333333;
@@ -45,6 +49,20 @@
       background: var(--bg);
       color: var(--ink);
     }
+    /* Subtle "app" background texture */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(1200px 420px at 10% 0%, rgba(47,125,74,0.10), transparent 60%),
+        radial-gradient(900px 360px at 90% 10%, rgba(31,111,229,0.08), transparent 55%),
+        radial-gradient(800px 380px at 50% 100%, rgba(200,168,78,0.10), transparent 60%);
+      opacity: 0.9;
+      z-index: 0;
+    }
+    body > * { position: relative; z-index: 1; }
     .topbar {
       position: sticky;
       top: 0;
@@ -95,7 +113,7 @@
       background: var(--card-bg);
       border: 1px solid var(--rule);
       border-radius: 14px;
-      box-shadow: 0 8px 26px rgba(0,0,0,0.10);
+      box-shadow: var(--shadow-lg);
       overflow: hidden;
     }
     .panel-head {
@@ -223,6 +241,21 @@
       border-radius: 999px;
     }
     body.dark-mode .track::before { background: rgba(255,255,255,0.10); }
+    /* Give the path a little “pipe” depth */
+    .track::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: calc(50% + 1px);
+      width: 2px;
+      transform: translateX(-50%);
+      background: rgba(255,255,255,0.50);
+      border-radius: 999px;
+      opacity: 0.45;
+      pointer-events: none;
+    }
+    body.dark-mode .track::after { background: rgba(255,255,255,0.35); opacity: 0.30; }
 
     .nodeWrap {
       position: relative;
@@ -256,33 +289,65 @@
       height: 74px;
       border-radius: 999px;
       border: 6px solid rgba(0,0,0,0.12);
-      background: #e9e6dc;
+      background: radial-gradient(circle at 30% 25%, rgba(255,255,255,0.95), rgba(233,230,220,0.95) 52%, rgba(215,210,195,0.95) 100%);
       display: grid;
       place-items: center;
-      box-shadow: 0 10px 22px rgba(0,0,0,0.10);
-      transition: transform 0.08s ease, border-color 0.15s ease, background 0.15s ease;
+      box-shadow: var(--shadow-md);
+      transition: transform 0.10s ease, border-color 0.18s ease, background 0.18s ease, filter 0.18s ease;
+      position: relative;
     }
     body.dark-mode .nodeCircle { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.14); }
     .nodeBtn:hover .nodeCircle { transform: translateY(-1px); border-color: rgba(200,168,78,0.5); }
+    .nodeCircle::before {
+      content: "";
+      position: absolute;
+      inset: 6px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 25%, rgba(255,255,255,0.55), transparent 55%);
+      mix-blend-mode: screen;
+      opacity: 0.75;
+      pointer-events: none;
+    }
+    .nodeCircle::after {
+      content: "";
+      position: absolute;
+      inset: -6px;
+      border-radius: 999px;
+      box-shadow:
+        inset 0 3px 0 rgba(255,255,255,0.65),
+        inset 0 -6px 10px rgba(0,0,0,0.10);
+      pointer-events: none;
+      opacity: 0.85;
+    }
 
     .nodeCircle .icon {
       font-size: 1.6em;
       line-height: 1;
       color: rgba(0,0,0,0.45);
+      filter: drop-shadow(0 1px 0 rgba(255,255,255,0.55));
     }
     body.dark-mode .nodeCircle .icon { color: rgba(255,255,255,0.7); }
 
     .nodeBtn.next .nodeCircle {
-      background: rgba(47,125,74,0.14);
-      border-color: rgba(47,125,74,0.45);
+      background: radial-gradient(circle at 30% 25%, rgba(255,255,255,0.95), rgba(96,194,126,0.25) 45%, rgba(47,125,74,0.20) 100%);
+      border-color: rgba(47,125,74,0.60);
     }
     .nodeBtn.next .nodeCircle .icon { color: var(--green); }
     .nodeBtn.completed .nodeCircle {
-      background: rgba(47,125,74,0.20);
-      border-color: rgba(47,125,74,0.70);
+      background: radial-gradient(circle at 30% 25%, rgba(255,255,255,0.95), rgba(96,194,126,0.32) 48%, rgba(47,125,74,0.26) 100%);
+      border-color: rgba(47,125,74,0.78);
     }
     .nodeBtn.completed .nodeCircle .icon { color: var(--green); }
     .nodeBtn.locked .nodeCircle { opacity: 0.65; }
+    /* "Next" node gets a gentle bounce like Duolingo */
+    @keyframes bob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-2px); }
+    }
+    .nodeBtn.next .nodeCircle { animation: bob 1.4s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .nodeBtn.next .nodeCircle { animation: none; }
+    }
 
     .nodeLabel {
       font-weight: 700;
@@ -293,6 +358,17 @@
       font-size: 0.88em;
       line-height: 1.35;
       text-align: center;
+    }
+    /* Makes the path feel less like "raw files": add micro-separators + cardiness */
+    .subunit {
+      border-radius: 14px;
+      padding: 14px 14px 10px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.35));
+      box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+    }
+    body.dark-mode .subunit {
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      box-shadow: 0 10px 28px rgba(0,0,0,0.16);
     }
 
     .runner {

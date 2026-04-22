@@ -1105,7 +1105,7 @@
           btn.disabled = isLocked;
           btn.setAttribute('aria-label', l.title);
 
-          const icon = isDone ? '★' : (isNext ? '★' : '🔒');
+          const icon = isLocked ? '🔒' : 'ה';
           btn.innerHTML = `
             <div class="nodeCircle"><div class="icon">${icon}</div></div>
             <div class="nodeLabel">${escapeHtml(l.title)}</div>

@@ -11,3 +11,6 @@ _audit_gloss_report.summary.txt
 
 # Generated mastery build debug output (do not commit)
 _mastery_hebrew_missing.json
+
+# Chapter-heading gloss build artifacts (do not commit)
+heading_gloss_he_en.partial.json
