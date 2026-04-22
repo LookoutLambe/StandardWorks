@@ -1012,16 +1012,35 @@
 
   const U4_SUBUNITS = buildUnit4Subunits();
 
-  const COURSE_SEED = [
-    { id: 'u1', title: 'Journey 1: Beginnings', desc: 'Genesis 1–11 · learn the Aleph‑bet, niqqud, and read real verses from day one.', subunits: U1_SUBUNITS },
-    { id: 'u2', title: 'Journey 2: The Fathers', desc: 'Genesis 12–50 · build roots + forms through real narrative passages.', subunits: U2_SUBUNITS },
-    { id: 'u3', title: 'Journey 3: Out of Egypt', desc: 'Exodus + selected Numbers · verbs, patterns, and covenant vocabulary.', subunits: U3_SUBUNITS },
-    { id: 'u4', title: 'Journey 4: Scroll Mastery', desc: 'Assemble and read verses in Hebrew word order (no ads, no timers).', subunits: U4_SUBUNITS },
+  // Seed content we have today (will be replaced by real-verse Journeys).
+  const OT_SEED = [
+    { id: 'j1', title: 'Journey 1: Beginnings', desc: 'Genesis 1–11 · Aleph‑bet, niqqud, simple syntax. Exit: read Genesis 1 aloud.', subunits: U1_SUBUNITS },
+    { id: 'j2', title: 'Journey 2: The Fathers', desc: 'Genesis 12–50 · Qal system, construct chain. Exit: read the Akedah (Genesis 22).', subunits: U2_SUBUNITS },
+    { id: 'j3', title: 'Journey 3: Out of Egypt', desc: 'Exodus + selected Numbers · derived stems + covenant vocabulary. Exit: Exodus 14 + the Shema.', subunits: U3_SUBUNITS },
   ];
+
+  function buildSevenJourneysCourse() {
+    // We keep the Journey scaffolding now, and progressively swap in real verse-driven lessons.
+    // For Journeys 4–7, we provide playable placeholders until seeded.
+    const j4 = makePlaceholderUnit('j4', "Journey 4: Lehi's Family", 8);
+    const j5 = makePlaceholderUnit('j5', 'Journey 5: The Land and the Kings', 8);
+    const j6 = makePlaceholderUnit('j6', 'Journey 6: Covenant King', 8);
+    const j7 = makePlaceholderUnit('j7', 'Journey 7: Prophets, Writings, and Restoration', 8);
+
+    // Override descriptions to match the revised architecture.
+    j4.desc = "1 Nephi 1–18 (Sefer Mormon) · the pivot: Tanakh-density in restoration scripture. Exit: 1 Nephi 1 + Nephi’s Psalm (2 Nephi 4).";
+    j5.desc = 'Joshua/Judges/Samuel + selected Kings · narrative mastery. Exit: 1 Samuel 3 + Psalm 23.';
+    j6.desc = 'Mosiah in full (Sefer Mormon) · covenant renewal pattern. Exit: Mosiah 2–5.';
+    j7.desc = 'Isaiah + Psalms + Jonah + selected D&C + Moses 1 + Abraham 3. Exit: Jonah + Moses 1 + D&C 84.';
+
+    const placeholderJourneys = [j4, j5, j6, j7].map(x => ({ id: x.id, title: x.title, desc: x.desc, subunits: x.subunits }));
+    return OT_SEED.concat(placeholderJourneys);
+  }
 
   // --- Multi-track: OT / NT / BOM / D&C / PGP ---
   const TRACK_KEY = 'alephtrail-track-v1';
   const TRACKS = [
+    { id: 'trail', label: 'Trail' },
     { id: 'ot', label: 'OT' },
     { id: 'nt', label: 'NT' },
     { id: 'bom', label: 'BOM' },
@@ -1031,10 +1050,10 @@
 
   function loadTrack() {
     try {
-      const t = localStorage.getItem(TRACK_KEY) || 'ot';
-      return TRACKS.some(x => x.id === t) ? t : 'ot';
+      const t = localStorage.getItem(TRACK_KEY) || 'trail';
+      return TRACKS.some(x => x.id === t) ? t : 'trail';
     } catch (e) {
-      return 'ot';
+      return 'trail';
     }
   }
   function saveTrack(t) { try { localStorage.setItem(TRACK_KEY, t); } catch (e) {} }
@@ -1064,10 +1083,13 @@
   function buildPlaceholderCourse(trackId) {
     // Keep the same Journey structure but mark as “in progress”.
     const c = [
-      makePlaceholderUnit('u1', 'Journey 1: Beginnings', 8),
-      makePlaceholderUnit('u2', 'Journey 2: The Fathers', 8),
-      makePlaceholderUnit('u3', 'Journey 3: Out of Egypt', 8),
-      makePlaceholderUnit('u4', 'Journey 4: Scroll Mastery', 8),
+      makePlaceholderUnit('j1', 'Journey 1: Beginnings', 8),
+      makePlaceholderUnit('j2', 'Journey 2: The Fathers', 8),
+      makePlaceholderUnit('j3', 'Journey 3: Out of Egypt', 8),
+      makePlaceholderUnit('j4', "Journey 4: Lehi's Family", 8),
+      makePlaceholderUnit('j5', 'Journey 5: The Land and the Kings', 8),
+      makePlaceholderUnit('j6', 'Journey 6: Covenant King', 8),
+      makePlaceholderUnit('j7', 'Journey 7: Prophets, Writings, and Restoration', 8),
     ];
     // makePlaceholderUnit returns {id,title,desc,subunits}; match seed format.
     const normalized = c.map(x => ({ id: x.id, title: x.title, desc: x.desc, subunits: x.subunits }));
@@ -1075,7 +1097,8 @@
   }
 
   function getCourseForTrack(trackId) {
-    if (trackId === 'ot') return prefixCourse(COURSE_SEED, 'ot');
+    if (trackId === 'trail') return prefixCourse(buildSevenJourneysCourse(), 'trail');
+    if (trackId === 'ot') return prefixCourse(OT_SEED, 'ot');
     // Other tracks will be filled with real verses next; keep playable placeholders now.
     return buildPlaceholderCourse(trackId);
   }
