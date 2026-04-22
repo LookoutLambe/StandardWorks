@@ -1,0 +1,113 @@
+ALEPH TRAIL
+A Reading Course in Biblical and Restoration Hebrew for Children
+Journey 1: Beginnings
+Full Verse-by-Verse Curriculum, Lessons 1 to 40
+Prepared for Chris
+Design Draft v1.0
+ 
+How to Read This Document
+This is the complete curriculum specification for Journey 1 of Aleph Trail, the Hebrew reading course for children. Journey 1 covers Genesis 1 through 11 and takes a child from no Hebrew at all to reading the first chapter of Genesis aloud with comprehension. It runs 40 lessons, each 8 to 12 minutes in length, designed to be completed one per day.
+The document is organized into five units of eight lessons each. Every lesson is built around a real verse from Tanakh, chosen for root frequency and grammatical cleanliness. No invented sentences appear anywhere in the course. Each lesson specifies its verse, its teaching focus, the root or roots introduced, new vocabulary, which mini-games the lesson uses, and the exit check that confirms the child mastered the lesson before moving on.
+The curriculum is designed for LDS families but contains nothing that would prevent Jewish, Christian, or Messianic families from using it. The restoration scripture content does not appear until Journey 4 and later Journeys. Journey 1 is pure Tanakh.
+Design Principles in Force
+Every pedagogical choice in this Journey follows these principles:
+•	Root-first, not word-first. Every new vocabulary unit introduces a shoresh, and the child meets the family of words derived from it before encountering the next root.
+•	Real Tanakh from day one. The child sees Genesis 1:1 in lesson one, even though they cannot yet parse it. By lesson 10 they can read it aloud with understanding.
+•	Hear it before parsing. Every verse is heard with traditional cantillation before the child is asked any analytical question about it.
+•	Mikraic register, pre-exilic vocabulary. All instructional Hebrew in the app follows the same vocabulary constraints Chris uses in his translation work. No rabbinic or modern Hebrew leaks in.
+•	VSO word order taught implicitly through verse reassembly. The child never sees a grammar rule labeled VSO. They reconstruct verses until the pattern is internal.
+•	Niqqud scaffolding that fades. Journey 1 is fully pointed throughout. The fading begins in Journey 2.
+Aleph-Bet and Niqqud Introduction Pace
+The aleph-bet is introduced in groups of four letters per lesson during Unit 1. The order is visual-similarity first, not alphabetical, because a child's hand and eye learn to distinguish shapes before they learn to order them. The traditional order is taught in lesson 8 once every letter is already familiar. Final letters are introduced alongside their regular form so the child never has to relearn.
+Niqqud is introduced one point at a time starting in lesson 3, anchored to real words the child already knows from hearing Genesis 1 sung. By lesson 8 all vowel points are in use. Shva, dagesh, and mappiq are taught in Unit 2 as the child encounters them in verse reassembly.
+ 
+Unit 1. The First Light (Lessons 1 to 8)
+Source text: Genesis 1:1 through 1:5. This unit teaches the full aleph-bet, introduces niqqud through real words, and ends with the child reading the first five verses of Genesis aloud. Every lesson opens and closes with the child hearing verses 1 through 5 chanted, building melody-memory of the text before any analytical work.
+Lesson 1. The First Word
+Verse: Genesis 1:1 (hearing only)
+בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ
+bereshit bara Elohim et ha-shamayim ve-et ha-aretz
+Gloss: In the beginning God created the heavens and the earth.
+Teaching focus: Introduce the first four letters: א, ב, ג, ד. The child sees them in context of בְּרֵאשִׁית and בָּרָא before learning their names. Hebrew reads right to left: this is the primary mechanical lesson.
+Root(s) introduced: None yet. Letters only.
+New vocabulary: בְּרֵאשִׁית (beginning), בָּרָא (he created). The child learns these two words whole, as sight-chunks, before they can parse them.
+Mini-games used: Chant Along (hear Genesis 1:1 three times with cantillation), Letter Tap (tap א, ב, ג, ד as they appear), Scroll Reader stage 1 (trace each letter's direction of writing).
+Exit check: Child can name and draw א, ב, ג, ד and recite Genesis 1:1 along with the audio.
+
+Lesson 2. Letters Five to Eight
+Verse: Genesis 1:1 (continued)
+בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ
+bereshit bara Elohim et ha-shamayim ve-et ha-aretz
+Gloss: In the beginning God created the heavens and the earth.
+Teaching focus: Introduce ה, ו, ז, ח. The child notices ה appearing in הַשָּׁמַיִם and הָאָרֶץ and begins to sense that this letter has a job (definite article, not yet named).
+Root(s) introduced: None yet.
+New vocabulary: הַשָּׁמַיִם (the heavens), הָאָרֶץ (the earth). Still taught as whole chunks.
+Mini-games used: Chant Along, Letter Tap across all eight letters learned so far, Picture Match (tap the picture of sky when the audio says הַשָּׁמַיִם).
+Exit check: Child can distinguish ה from ח reliably and can point to הַשָּׁמַיִם and הָאָרֶץ in written Genesis 1:1.
+
+Lesson 3. Letters Nine to Twelve and the First Vowel
+Verse: Genesis 1:2 opening
+וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ
+ve-ha-aretz hayta tohu va-vohu
+Gloss: And the earth was chaos and void.
+Teaching focus: Introduce ט, י, כ, ל. Introduce the first vowel point: qamatz (the long "a" sound), using הָאָרֶץ as the anchor word. The child hears the qamatz under letters they already know.
+Root(s) introduced: None yet.
+New vocabulary: תֹהוּ (chaos, formless), וָבֹהוּ (and void).
+Mini-games used: Chant Along, Vowel Tap (tap every qamatz you see on the screen), Verse Builder stage 1 (assemble "ha-aretz" from letter tiles).
+Exit check: Child recognizes qamatz and can read הָאָרֶץ aloud unassisted.
+
+Lesson 4. Letters Thirteen to Sixteen and the Second Vowel
+Verse: Genesis 1:2 continued
+וְחֹשֶׁךְ עַל־פְּנֵי תְהוֹם
+ve-choshech al-penei tehom
+Gloss: And darkness was over the face of the deep.
+Teaching focus: Introduce מ (and its final form ם), נ (and ן), ס, ע. Introduce holam (the long "o" sound). The child sees חֹשֶׁךְ and recognizes the ch sound they heard in the audio.
+Root(s) introduced: None yet. Letters and vowels only.
+New vocabulary: חֹשֶׁךְ (darkness), תְהוֹם (deep).
+Mini-games used: Chant Along, Letter Tap (final forms), Vowel Tap (qamatz and holam), Verse Builder (assemble חֹשֶׁךְ).
+Exit check: Child can identify final mem and final nun and can read חֹשֶׁךְ aloud.
+
+Lesson 5. Letters Seventeen to Twenty and the Third Vowel
+Verse: Genesis 1:3
+וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וַיְהִי־אוֹר
+va-yomer Elohim yehi or va-yehi or
+Gloss: And God said, Let there be light. And there was light.
+Teaching focus: Introduce פ (and ף), צ (and ץ), ק, ר. Introduce tzere (the "ei" sound) through the word בְּרֵאשִׁית which the child has been chanting for four days. The meeting of letter and name finally clicks.
+Root(s) introduced: א־מ־ר (to say), first root introduced. The child meets it in וַיֹּאמֶר and is told explicitly: this word family means saying.
+New vocabulary: אוֹר (light), יְהִי (let there be), וַיֹּאמֶר (and he said).
+Mini-games used: Chant Along, Shoresh Sort stage 1 (two words share the root א־מ־ר, one does not, tap the outsider), Vowel Tap, Picture Match (tap the picture of light).
+Exit check: Child recognizes the root א־מ־ר when it appears in two different forms and can read אוֹר aloud.
+
+Lesson 6. The Last Letters and a Fourth Vowel
+Verse: Genesis 1:4
+וַיַּרְא אֱלֹהִים אֶת־הָאוֹר כִּי־טוֹב וַיַּבְדֵּל אֱלֹהִים בֵּין הָאוֹר וּבֵין הַחֹשֶׁךְ
+va-yar Elohim et-ha-or ki-tov va-yavdel Elohim bein ha-or u-vein ha-choshech
+Gloss: And God saw the light, that it was good, and God separated between the light and the darkness.
+Teaching focus: Introduce ש (both shin and sin), ת. Twenty-two letters complete. Introduce chirik (the "i" sound) through כִּי. Introduce the word טוֹב as a reading reward.
+Root(s) introduced: ר־א־ה (to see). The child meets it in וַיַּרְא.
+New vocabulary: טוֹב (good), כִּי (that, because), בֵּין (between).
+Mini-games used: Chant Along, full Letter Tap across all 22 letters, Shoresh Sort, Vowel Tap, Verse Builder (assemble כִּי־טוֹב).
+Exit check: Child can read and name every letter of the aleph-bet and can read טוֹב and כִּי aloud.
+
+Lesson 7. The Rest of the Vowels
+Verse: Genesis 1:5
+וַיִּקְרָא אֱלֹהִים לָאוֹר יוֹם וְלַחֹשֶׁךְ קָרָא לָיְלָה וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר יוֹם אֶחָד
+va-yikra Elohim la-or yom ve-la-choshech kara layla va-yehi erev va-yehi voker yom echad
+Gloss: And God called the light day, and the darkness he called night. And there was evening and there was morning, day one.
+Teaching focus: Introduce patach, segol, shuruk, kubutz, shva. All vowels now in play. The child sees the full vocalization system applied to a verse they have heard for seven days.
+Root(s) introduced: ק־ר־א (to call, to read). Introduced in וַיִּקְרָא and קָרָא.
+New vocabulary: יוֹם (day), לַיְלָה (night), עֶרֶב (evening), בֹקֶר (morning), אֶחָד (one).
+Mini-games used: Chant Along, Vowel Tap (all vowels), Shoresh Sort (three members of ק־ר־א family), Picture Match (day, night, evening, morning).
+Exit check: Child can read יוֹם, לַיְלָה, עֶרֶב, בֹקֶר, אֶחָד aloud and identify all standard vowel points.
+
+Lesson 8. The Aleph-Bet Song and First Reading
+Verse: Genesis 1:1 through 1:5 in full
+בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ
+Gloss: In the beginning God created the heavens and the earth, plus verses 2 through 5.
+Teaching focus: Teach the aleph-bet in its traditional order with a sung melody (an original melody, not copyrighted). Then: the child reads Genesis 1:1 through 1:5 aloud in full with audio support. This is the unit exit.
+Root(s) introduced: Review of א־מ־ר, ר־א־ה, ק־ר־א.
+New vocabulary: No new vocabulary. Consolidation.
+Mini-games used: Aleph-Bet Song (sing-along), Chant Along, Scroll Reader (the child reads verses 1 to 5 aloud, recording optional), Verse Builder (assemble verse 1 from scrambled words).
+Exit check: Child records themselves reading Genesis 1:1 through 1:5 aloud. Parent or teacher reviews. Unit 1 complete.
+
+<REDACTED: remainder of pasted Journey 1 spec continues in chat and should be copied into this file if you want import automation.>

@@ -3,10 +3,13 @@
   "private": true,
   "type": "commonjs",
   "scripts": {
-    "journey1:docx": "node scripts/generate_journey1_docx.js"
+    "journey1:docx": "node scripts/generate_journey1_docx.js",
+    "journey:import-docx": "node scripts/import_curriculum_docx.js",
+    "journey:import-text": "node scripts/import_curriculum_text.js"
   },
   "dependencies": {
-    "docx": "^9.5.1"
+    "docx": "^9.5.1",
+    "mammoth": "^1.6.0"
   }
 }
 

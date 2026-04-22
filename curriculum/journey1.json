@@ -1,0 +1,95 @@
+{
+  "id": "journey1",
+  "importedFrom": "C:\\Users\\chris\\Desktop\\Standard Works Project\\curriculum\\journey1_v1.txt",
+  "importedAt": "2026-04-22T15:55:21.701Z",
+  "lessons": [
+    {
+      "num": "1",
+      "title": "The First Word",
+      "verse": "Genesis 1:1 (hearing only)",
+      "gloss": "In the beginning God created the heavens and the earth.",
+      "focus": "Introduce the first four letters: א, ב, ג, ד. The child sees them in context of בְּרֵאשִׁית and בָּרָא before learning their names. Hebrew reads right to left: this is the primary mechanical lesson.",
+      "roots": "None yet. Letters only.",
+      "vocab": "בְּרֵאשִׁית (beginning), בָּרָא (he created). The child learns these two words whole, as sight-chunks, before they can parse them.",
+      "games": "Chant Along (hear Genesis 1:1 three times with cantillation), Letter Tap (tap א, ב, ג, ד as they appear), Scroll Reader stage 1 (trace each letter's direction of writing).",
+      "exit": "Child can name and draw א, ב, ג, ד and recite Genesis 1:1 along with the audio."
+    },
+    {
+      "num": "2",
+      "title": "Letters Five to Eight",
+      "verse": "Genesis 1:1 (continued)",
+      "gloss": "In the beginning God created the heavens and the earth.",
+      "focus": "Introduce ה, ו, ז, ח. The child notices ה appearing in הַשָּׁמַיִם and הָאָרֶץ and begins to sense that this letter has a job (definite article, not yet named).",
+      "roots": "None yet.",
+      "vocab": "הַשָּׁמַיִם (the heavens), הָאָרֶץ (the earth). Still taught as whole chunks.",
+      "games": "Chant Along, Letter Tap across all eight letters learned so far, Picture Match (tap the picture of sky when the audio says הַשָּׁמַיִם).",
+      "exit": "Child can distinguish ה from ח reliably and can point to הַשָּׁמַיִם and הָאָרֶץ in written Genesis 1:1."
+    },
+    {
+      "num": "3",
+      "title": "Letters Nine to Twelve and the First Vowel",
+      "verse": "Genesis 1:2 opening",
+      "gloss": "And the earth was chaos and void.",
+      "focus": "Introduce ט, י, כ, ל. Introduce the first vowel point: qamatz (the long \"a\" sound), using הָאָרֶץ as the anchor word. The child hears the qamatz under letters they already know.",
+      "roots": "None yet.",
+      "vocab": "תֹהוּ (chaos, formless), וָבֹהוּ (and void).",
+      "games": "Chant Along, Vowel Tap (tap every qamatz you see on the screen), Verse Builder stage 1 (assemble \"ha-aretz\" from letter tiles).",
+      "exit": "Child recognizes qamatz and can read הָאָרֶץ aloud unassisted."
+    },
+    {
+      "num": "4",
+      "title": "Letters Thirteen to Sixteen and the Second Vowel",
+      "verse": "Genesis 1:2 continued",
+      "gloss": "And darkness was over the face of the deep.",
+      "focus": "Introduce מ (and its final form ם), נ (and ן), ס, ע. Introduce holam (the long \"o\" sound). The child sees חֹשֶׁךְ and recognizes the ch sound they heard in the audio.",
+      "roots": "None yet. Letters and vowels only.",
+      "vocab": "חֹשֶׁךְ (darkness), תְהוֹם (deep).",
+      "games": "Chant Along, Letter Tap (final forms), Vowel Tap (qamatz and holam), Verse Builder (assemble חֹשֶׁךְ).",
+      "exit": "Child can identify final mem and final nun and can read חֹשֶׁךְ aloud."
+    },
+    {
+      "num": "5",
+      "title": "Letters Seventeen to Twenty and the Third Vowel",
+      "verse": "Genesis 1:3",
+      "gloss": "And God said, Let there be light. And there was light.",
+      "focus": "Introduce פ (and ף), צ (and ץ), ק, ר. Introduce tzere (the \"ei\" sound) through the word בְּרֵאשִׁית which the child has been chanting for four days. The meeting of letter and name finally clicks.",
+      "roots": "א־מ־ר (to say), first root introduced. The child meets it in וַיֹּאמֶר and is told explicitly: this word family means saying.",
+      "vocab": "אוֹר (light), יְהִי (let there be), וַיֹּאמֶר (and he said).",
+      "games": "Chant Along, Shoresh Sort stage 1 (two words share the root א־מ־ר, one does not, tap the outsider), Vowel Tap, Picture Match (tap the picture of light).",
+      "exit": "Child recognizes the root א־מ־ר when it appears in two different forms and can read אוֹר aloud."
+    },
+    {
+      "num": "6",
+      "title": "The Last Letters and a Fourth Vowel",
+      "verse": "Genesis 1:4",
+      "gloss": "And God saw the light, that it was good, and God separated between the light and the darkness.",
+      "focus": "Introduce ש (both shin and sin), ת. Twenty-two letters complete. Introduce chirik (the \"i\" sound) through כִּי. Introduce the word טוֹב as a reading reward.",
+      "roots": "ר־א־ה (to see). The child meets it in וַיַּרְא.",
+      "vocab": "טוֹב (good), כִּי (that, because), בֵּין (between).",
+      "games": "Chant Along, full Letter Tap across all 22 letters, Shoresh Sort, Vowel Tap, Verse Builder (assemble כִּי־טוֹב).",
+      "exit": "Child can read and name every letter of the aleph-bet and can read טוֹב and כִּי aloud."
+    },
+    {
+      "num": "7",
+      "title": "The Rest of the Vowels",
+      "verse": "Genesis 1:5",
+      "gloss": "And God called the light day, and the darkness he called night. And there was evening and there was morning, day one.",
+      "focus": "Introduce patach, segol, shuruk, kubutz, shva. All vowels now in play. The child sees the full vocalization system applied to a verse they have heard for seven days.",
+      "roots": "ק־ר־א (to call, to read). Introduced in וַיִּקְרָא and קָרָא.",
+      "vocab": "יוֹם (day), לַיְלָה (night), עֶרֶב (evening), בֹקֶר (morning), אֶחָד (one).",
+      "games": "Chant Along, Vowel Tap (all vowels), Shoresh Sort (three members of ק־ר־א family), Picture Match (day, night, evening, morning).",
+      "exit": "Child can read יוֹם, לַיְלָה, עֶרֶב, בֹקֶר, אֶחָד aloud and identify all standard vowel points."
+    },
+    {
+      "num": "8",
+      "title": "The Aleph-Bet Song and First Reading",
+      "verse": "Genesis 1:1 through 1:5 in full",
+      "gloss": "In the beginning God created the heavens and the earth, plus verses 2 through 5.",
+      "focus": "Teach the aleph-bet in its traditional order with a sung melody (an original melody, not copyrighted). Then: the child reads Genesis 1:1 through 1:5 aloud in full with audio support. This is the unit exit.",
+      "roots": "Review of א־מ־ר, ר־א־ה, ק־ר־א.",
+      "vocab": "No new vocabulary. Consolidation.",
+      "games": "Aleph-Bet Song (sing-along), Chant Along, Scroll Reader (the child reads verses 1 to 5 aloud, recording optional), Verse Builder (assemble verse 1 from scrambled words).",
+      "exit": "Child records themselves reading Genesis 1:1 through 1:5 aloud. Parent or teacher reviews. Unit 1 complete."
+    }
+  ]
+}

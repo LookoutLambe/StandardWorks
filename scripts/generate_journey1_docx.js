@@ -151,30 +151,25 @@ function lessonTable(rows) {
 }
 
 // ============================================================
-// LESSON DATA — Journey 1: Beginnings (40 lessons)
-// Seeded with lessons 1–3 from your example; remaining lessons are placeholders.
-// Replace/expand this array as you finalize the verse-by-verse plan.
+// LESSON DATA — sourced from curriculum/journey1.json
 // ============================================================
 
-const lessons = [
-  { num: "1", focus: "Aleph, Bet, Gimel, Dalet", verse: "Gen 1:1 (heard only)", vocab: "א ב ג ד — sounds and shapes", vocabHebrew: true, exit: "Identify and write 4 letters" },
-  { num: "2", focus: "Hey, Vav, Zayin, Chet, Tet", verse: "Gen 1:1 (heard only)", vocab: "ה ו ז ח ט", vocabHebrew: true, exit: "9 letters, right-to-left direction" },
-  { num: "3", focus: "Yod, Kaf, Lamed, Mem, Nun", verse: "Gen 1:1 (heard, echo)", vocab: "י כ ל מ נ + finals ך ם ן", vocabHebrew: true, exit: "14 letters, final forms recognized" },
-];
+function loadJourney1() {
+  const p = path.resolve(__dirname, "..", "curriculum", "journey1.json");
+  if (!fs.existsSync(p)) {
+    throw new Error("Missing curriculum/journey1.json. Run: npm run journey:import-text -- curriculum/journey1_v1.txt journey1");
+  }
+  const j = JSON.parse(fs.readFileSync(p, "utf8"));
+  const lessons = Array.isArray(j.lessons) ? j.lessons : [];
+  return { meta: j, lessons };
+}
 
-while (lessons.length < 40) {
-  const n = lessons.length + 1;
-  lessons.push({
-    num: String(n),
-    focus: "TBD",
-    verse: "TBD",
-    vocab: "TBD",
-    vocabHebrew: false,
-    exit: "TBD",
-  });
+function vocabLooksHebrew(vocab) {
+  return /[\u05D0-\u05EA]/.test(String(vocab || ""));
 }
 
 function buildDoc() {
+  const { meta, lessons } = loadJourney1();
   const doc = new Document({
     sections: [
       {
@@ -193,7 +188,16 @@ function buildDoc() {
           p(""),
           h2("Lesson Map (40 lessons)"),
           p("Each lesson is designed to follow the same rhythm: chant → root → patterns → verse assembly → comprehension → chant."),
-          lessonTable(lessons),
+          lessonTable(
+            lessons.map((l) => ({
+              num: l.num,
+              focus: l.focus || l.title || "",
+              verse: l.verse || "",
+              vocab: l.vocab || (l.roots ? `Roots: ${l.roots}` : ""),
+              vocabHebrew: vocabLooksHebrew(l.vocab),
+              exit: l.exit || "",
+            }))
+          ),
           pageBreak(),
           h2("Notes"),
           p("This DOCX is generated from a single lesson data array so it can stay in sync with the in-app Journey plan."),
