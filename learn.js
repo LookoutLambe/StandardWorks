@@ -25,6 +25,7 @@
   var elStageList = document.getElementById('stage-list');
   var btnExport = document.getElementById('export-progress-btn');
   var btnImport = document.getElementById('import-progress-btn');
+  var btnUnlockAll = document.getElementById('unlock-all-btn');
 
   function clamp(n, a, b) { return Math.max(a, Math.min(b, n)); }
   function now() { return Date.now(); }
@@ -82,6 +83,8 @@
     version: 2,
     stageId: null,
     mode: 'stage', // 'stage' | 'review'
+    unlockAll: false,
+    hasSeenMap: false,
     total: 0,
     correct: 0,
     streak: 0,
@@ -105,7 +108,7 @@
   }
 
   function resetState() {
-    state = { version: 2, stageId: null, mode: 'stage', total: 0, correct: 0, streak: 0, cards: {} };
+    state = { version: 2, stageId: null, mode: 'stage', unlockAll: false, hasSeenMap: false, total: 0, correct: 0, streak: 0, cards: {} };
     saveState();
   }
 
@@ -144,6 +147,7 @@
 
   function isStageUnlocked(stage) {
     if (!stage || !stage.unlock) return true;
+    if (state.unlockAll) return true;
     if (stage.unlock.type === 'start') return true;
     if (stage.unlock.type === 'after') return isStageMastered(stage.unlock.stageId);
     return true;
@@ -467,11 +471,18 @@
     mapModal.classList.add('open');
     mapModal.setAttribute('aria-hidden', 'false');
     renderMap();
+    try {
+      if (btnUnlockAll) btnUnlockAll.textContent = state.unlockAll ? 'Lock progression' : 'Unlock all';
+    } catch (e) {}
   }
   function closeMap() {
     if (!mapModal) return;
     mapModal.classList.remove('open');
     mapModal.setAttribute('aria-hidden', 'true');
+    if (!state.hasSeenMap) {
+      state.hasSeenMap = true;
+      saveState();
+    }
   }
   function refreshMapIfOpen() {
     if (!mapModal) return;
@@ -579,6 +590,8 @@
     if (!state.stageId) state.stageId = defaultStageId();
     if (!state.stageId && getStages().length) state.stageId = getStages()[0].id;
     if (state.mode !== 'review' && state.mode !== 'stage') state.mode = 'stage';
+    if (typeof state.unlockAll !== 'boolean') state.unlockAll = false;
+    if (typeof state.hasSeenMap !== 'boolean') state.hasSeenMap = false;
     saveState();
 
     if (btnDark) btnDark.onclick = toggleDark;
@@ -605,12 +618,22 @@
         if (!payload || !payload.state) return alert('Invalid progress file.');
         var s = payload.state;
         if (!s || s.version !== 2) return alert('Unsupported progress version.');
-        state = Object.assign({ version: 2, stageId: null, total: 0, correct: 0, streak: 0, cards: {} }, s);
+        state = Object.assign({ version: 2, stageId: null, mode: 'stage', unlockAll: false, hasSeenMap: false, total: 0, correct: 0, streak: 0, cards: {} }, s);
         if (!state.cards) state.cards = {};
+        if (typeof state.unlockAll !== 'boolean') state.unlockAll = false;
+        if (typeof state.hasSeenMap !== 'boolean') state.hasSeenMap = false;
         saveState();
         closeMap();
         next();
       });
+    };
+
+    if (btnUnlockAll) btnUnlockAll.onclick = function() {
+      state.unlockAll = !state.unlockAll;
+      saveState();
+      renderMap();
+      renderMeta();
+      if (btnUnlockAll) btnUnlockAll.textContent = state.unlockAll ? 'Lock progression' : 'Unlock all';
     };
 
     document.addEventListener('keydown', onKeydown);
@@ -623,6 +646,12 @@
     } catch (e) {}
 
     next();
+
+    // On first entry, show the learning map so users can see the full scope.
+    // Only do this if they haven't started answering yet.
+    if (!state.hasSeenMap && !state.total) {
+      setTimeout(function() { openMap(); }, 50);
+    }
   }
 
   init();

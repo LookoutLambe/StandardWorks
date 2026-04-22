@@ -1445,6 +1445,8 @@
     },
     openToBook: function(bookId) {
       openSidebar();
+      // Ensure we're in the "Books" view (not Library)
+      try { setViewMode('books'); } catch(e) {}
       // Find which volume has this book
       var volKeys = ['ot','nt','bom','dc','pgp','jst'];
       for (var v = 0; v < volKeys.length; v++) {
@@ -1452,7 +1454,17 @@
         for (var d = 0; d < vol.divisions.length; d++) {
           for (var b = 0; b < vol.divisions[d].books.length; b++) {
             if (vol.divisions[d].books[b].id === bookId) {
-              switchVolTab(volKeys[v]);
+              var volKey = volKeys[v];
+              // For multi-chapter books, focus mode is the cleanest UX (chapters open immediately).
+              try {
+                if (typeof focusBook === 'function') {
+                  focusBook(volKey, bookId);
+                  return;
+                }
+              } catch(e) {}
+
+              // Fallback: switch tab and open the chapter grid
+              switchVolTab(volKey);
               setTimeout(function() {
                 var grid = _sidebarEl.querySelector('.nav-ch-grid[data-book="' + bookId + '"]');
                 var row = grid ? grid.previousElementSibling : null;
