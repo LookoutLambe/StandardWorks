@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn Biblical Hebrew · Reading Game</title>
+  <meta name="theme-color" content="#1e2233" />
+  <link rel="manifest" href="manifest.json">
+  <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="nav_engine.css">
+  <style>
+    :root {
+      --bg: #faf8f2;
+      --bg-deep: #f0ece0;
+      --ink: #1a1a1a;
+      --ink-light: #444;
+      --accent: #c8a84e;
+      --rule: #d6ceb8;
+      --header-bg: #1e2233;
+      --card-bg: #1e2233;
+      --ok: #2f7d4a;
+      --bad: #b33a2b;
+    }
+    body.dark-mode {
+      --bg: #333333;
+      --bg-deep: #2a2a2a;
+      --ink: #e8e0d0;
+      --ink-light: #b0a890;
+      --accent: #d4af37;
+      --rule: #444444;
+      --header-bg: #0a0a0a;
+      --card-bg: #1a1a2e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'David Libre', 'Georgia', serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+    .top {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 52px;
+      background: var(--header-bg);
+      border-bottom: 2px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+    }
+    .top .title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--accent);
+    }
+    .top .actions {
+      position: absolute;
+      right: 16px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .icon-btn {
+      background: none;
+      border: none;
+      color: var(--accent);
+      cursor: pointer;
+      font-size: 1.15em;
+      padding: 6px;
+      border-radius: 6px;
+    }
+    .icon-btn:hover { background: rgba(200, 168, 78, 0.15); }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 72px 18px 48px;
+    }
+    .hdr {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .hdr h1 {
+      margin: 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2em;
+      font-weight: 650;
+    }
+    .sub {
+      margin-top: 6px;
+      color: var(--ink-light);
+      font-family: 'Crimson Pro', serif;
+      font-style: italic;
+    }
+    .meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .pill {
+      border: 1px solid var(--rule);
+      background: var(--bg-deep);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-family: 'Crimson Pro', serif;
+      font-size: 0.95em;
+      color: var(--ink);
+    }
+
+    .card {
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      background: rgba(30,34,51,0.03);
+      padding: 18px;
+      margin-top: 14px;
+    }
+    .prompt {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 148px;
+      border-radius: 12px;
+      background: var(--card-bg);
+      color: var(--accent);
+      border: 1px solid rgba(200,168,78,0.28);
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .prompt .big {
+      font-size: 4.2em;
+      line-height: 1;
+      font-weight: 600;
+    }
+    .prompt .small {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.05em;
+      margin-top: 8px;
+      color: rgba(200,168,78,0.92);
+    }
+    .choices {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    @media (min-width: 720px) {
+      .choices { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+    .choice {
+      border: 1px solid var(--rule);
+      background: var(--bg);
+      color: var(--ink);
+      border-radius: 10px;
+      padding: 12px 10px;
+      cursor: pointer;
+      font-size: 1.05em;
+      font-family: 'David Libre', serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      transition: transform 0.12s, background 0.12s, border-color 0.12s;
+      user-select: none;
+    }
+    .choice:hover { transform: translateY(-1px); border-color: rgba(200,168,78,0.65); }
+    .choice:disabled { opacity: 0.55; cursor: default; transform: none; }
+    .choice.ok { border-color: rgba(47,125,74,0.65); background: rgba(47,125,74,0.12); }
+    .choice.bad { border-color: rgba(179,58,43,0.65); background: rgba(179,58,43,0.10); }
+
+    .row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 14px;
+    }
+    .btn {
+      border: 1px solid var(--rule);
+      background: var(--bg-deep);
+      color: var(--ink);
+      border-radius: 10px;
+      padding: 10px 12px;
+      cursor: pointer;
+      font-family: 'Crimson Pro', serif;
+      font-size: 1em;
+    }
+    .btn.primary {
+      border-color: rgba(200,168,78,0.55);
+      background: rgba(200,168,78,0.16);
+    }
+    .btn:hover { border-color: rgba(200,168,78,0.65); }
+    .btn:disabled { opacity: 0.55; cursor: default; }
+
+    .feedback {
+      font-family: 'Crimson Pro', serif;
+      color: var(--ink-light);
+      min-height: 22px;
+    }
+    .feedback strong { color: var(--ink); }
+    .kbd {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      padding: 1px 6px;
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      background: var(--bg);
+      font-size: 0.9em;
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 80;
+      padding: 18px;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal {
+      width: min(860px, 100%);
+      max-height: min(80vh, 720px);
+      overflow: auto;
+      background: var(--bg);
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      box-shadow: 0 14px 50px rgba(0,0,0,0.25);
+    }
+    .modal-header {
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--rule);
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      z-index: 2;
+    }
+    .modal-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 650;
+      font-size: 1.35em;
+      margin: 0;
+    }
+    .stage-list { padding: 10px 12px 16px; display: grid; gap: 10px; }
+    .stage-row {
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: 12px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      background: rgba(30,34,51,0.03);
+    }
+    .stage-row.locked { opacity: 0.55; }
+    .stage-left { min-width: 0; }
+    .stage-name { font-family: 'Crimson Pro', serif; font-size: 1.05em; font-weight: 650; }
+    .stage-desc { font-family: 'Crimson Pro', serif; color: var(--ink-light); margin-top: 2px; }
+    .stage-right { display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end; }
+    .bar {
+      width: 160px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--bg-deep);
+      border: 1px solid var(--rule);
+      overflow: hidden;
+    }
+    .bar > div { height: 100%; background: rgba(47,125,74,0.75); width: 0%; }
+  </style>
+</head>
+<body>
+  <div class="top">
+    <div class="title">Learn Biblical Hebrew</div>
+    <div class="actions">
+      <button class="icon-btn" id="dark-btn" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
+      <button class="icon-btn" id="review-btn" title="Daily review" aria-label="Daily review">✓</button>
+      <button class="icon-btn" id="map-btn" title="Learning map" aria-label="Learning map">☰</button>
+      <button class="icon-btn" id="home-btn" title="Home" aria-label="Home">⌂</button>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="hdr">
+      <div>
+        <h1>Reading Game</h1>
+        <div class="sub">Start at letters. Build up to reading pointed Biblical Hebrew fluently.</div>
+      </div>
+      <div class="meta">
+        <div class="pill"><span id="mode-pill">Mode: Stage</span></div>
+        <div class="pill"><span id="stage-pill">Stage: Letters</span></div>
+        <div class="pill"><span id="streak-pill">Streak: 0</span></div>
+        <div class="pill"><span id="acc-pill">Accuracy: 0%</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="prompt" id="prompt">
+        <div>
+          <div class="big" id="prompt-big">א</div>
+          <div class="small" id="prompt-small">Pick the correct name.</div>
+        </div>
+      </div>
+
+      <div class="choices" id="choices"></div>
+
+      <div class="row">
+        <div class="feedback" id="feedback">
+          Tip: press <span class="kbd">1</span>–<span class="kbd">4</span> to answer.
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn" id="reset-btn" type="button">Reset progress</button>
+          <button class="btn primary" id="next-btn" type="button" disabled>Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="map-modal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Learning map">
+      <div class="modal-header">
+        <div>
+          <div class="modal-title">Learning Map</div>
+          <div class="sub" style="margin-top:2px;">Unlock stages by mastering the current one. Review due cards every day.</div>
+        </div>
+        <div style="display:flex; gap:10px; align-items:center;">
+          <button class="btn" id="export-progress-btn" type="button">Export</button>
+          <button class="btn" id="import-progress-btn" type="button">Import</button>
+          <button class="btn primary" id="close-map-btn" type="button">Close</button>
+        </div>
+      </div>
+      <div class="stage-list" id="stage-list"></div>
+    </div>
+  </div>
+
+  <script src="nav_engine.js"></script>
+  <script src="learn.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,373 @@
+{
+  "version": 1,
+  "title": "Learn to Read Biblical Hebrew (Van Pelt–style progression)",
+  "disclaimer": "Original exercises and datasets; not copied from any copyrighted workbook.",
+  "stages": [
+    {
+      "id": "letters-1",
+      "title": "Alphabet I — Names",
+      "desc": "Recognize the 22 consonants by name.",
+      "unlock": { "type": "start" },
+      "mastery": { "targetPct": 85, "minSeenEach": 4 },
+      "cards": [
+        { "id": "ltr-aleph", "type": "mcq", "prompt": { "he": "א", "hint": "Pick the correct letter name." }, "answer": { "en": "ʾālef" }, "choices": ["bēt","gīmel","ʾālef","dālet"] },
+        { "id": "ltr-bet",   "type": "mcq", "prompt": { "he": "ב", "hint": "Pick the correct letter name." }, "answer": { "en": "bēt" }, "choices": ["bēt","mēm","nūn","rēš"] },
+        { "id": "ltr-gimel", "type": "mcq", "prompt": { "he": "ג", "hint": "Pick the correct letter name." }, "answer": { "en": "gīmel" }, "choices": ["gīmel","hē","kāf","tāw"] },
+        { "id": "ltr-dalet", "type": "mcq", "prompt": { "he": "ד", "hint": "Pick the correct letter name." }, "answer": { "en": "dālet" }, "choices": ["dālet","yōd","ṣādē","ʿayin"] },
+        { "id": "ltr-he",    "type": "mcq", "prompt": { "he": "ה", "hint": "Pick the correct letter name." }, "answer": { "en": "hē" }, "choices": ["hē","wāw","ṭēt","qōp"] },
+        { "id": "ltr-vav",   "type": "mcq", "prompt": { "he": "ו", "hint": "Pick the correct letter name." }, "answer": { "en": "wāw" }, "choices": ["wāw","rēš","lāmed","pē"] },
+        { "id": "ltr-zayin", "type": "mcq", "prompt": { "he": "ז", "hint": "Pick the correct letter name." }, "answer": { "en": "zāyin" }, "choices": ["zāyin","šīn","sāmek","tāw"] },
+        { "id": "ltr-het",   "type": "mcq", "prompt": { "he": "ח", "hint": "Pick the correct letter name." }, "answer": { "en": "ḥēt" }, "choices": ["ḥēt","bēt","mēm","qōp"] },
+        { "id": "ltr-tet",   "type": "mcq", "prompt": { "he": "ט", "hint": "Pick the correct letter name." }, "answer": { "en": "ṭēt" }, "choices": ["ṭēt","tāw","dālet","gīmel"] },
+        { "id": "ltr-yod",   "type": "mcq", "prompt": { "he": "י", "hint": "Pick the correct letter name." }, "answer": { "en": "yōd" }, "choices": ["yōd","wāw","hē","ʿayin"] },
+        { "id": "ltr-kaf",   "type": "mcq", "prompt": { "he": "כ", "hint": "Pick the correct letter name." }, "answer": { "en": "kāf" }, "choices": ["kāf","qōp","rēš","ṣādē"] },
+        { "id": "ltr-lamed", "type": "mcq", "prompt": { "he": "ל", "hint": "Pick the correct letter name." }, "answer": { "en": "lāmed" }, "choices": ["lāmed","mēm","nūn","sāmek"] },
+        { "id": "ltr-mem",   "type": "mcq", "prompt": { "he": "מ", "hint": "Pick the correct letter name." }, "answer": { "en": "mēm" }, "choices": ["mēm","nūn","pē","dālet"] },
+        { "id": "ltr-nun",   "type": "mcq", "prompt": { "he": "נ", "hint": "Pick the correct letter name." }, "answer": { "en": "nūn" }, "choices": ["nūn","mēm","ṭēt","hē"] },
+        { "id": "ltr-samekh","type": "mcq", "prompt": { "he": "ס", "hint": "Pick the correct letter name." }, "answer": { "en": "sāmek" }, "choices": ["sāmek","ṣādē","šīn","ʿayin"] },
+        { "id": "ltr-ayin",  "type": "mcq", "prompt": { "he": "ע", "hint": "Pick the correct letter name." }, "answer": { "en": "ʿayin" }, "choices": ["ʿayin","ʾālef","hē","yōd"] },
+        { "id": "ltr-pe",    "type": "mcq", "prompt": { "he": "פ", "hint": "Pick the correct letter name." }, "answer": { "en": "pē" }, "choices": ["pē","bēt","kāf","tāw"] },
+        { "id": "ltr-tsade", "type": "mcq", "prompt": { "he": "צ", "hint": "Pick the correct letter name." }, "answer": { "en": "ṣādē" }, "choices": ["ṣādē","zāyin","sāmek","qōp"] },
+        { "id": "ltr-qof",   "type": "mcq", "prompt": { "he": "ק", "hint": "Pick the correct letter name." }, "answer": { "en": "qōp" }, "choices": ["qōp","kāf","gīmel","ʿayin"] },
+        { "id": "ltr-resh",  "type": "mcq", "prompt": { "he": "ר", "hint": "Pick the correct letter name." }, "answer": { "en": "rēš" }, "choices": ["rēš","dālet","bēt","hē"] },
+        { "id": "ltr-shin",  "type": "mcq", "prompt": { "he": "ש", "hint": "Pick the correct letter name." }, "answer": { "en": "šīn/śīn" }, "choices": ["šīn/śīn","sāmek","ṣādē","tāw"] },
+        { "id": "ltr-tav",   "type": "mcq", "prompt": { "he": "ת", "hint": "Pick the correct letter name." }, "answer": { "en": "tāw" }, "choices": ["tāw","ṭēt","dālet","rēš"] }
+      ]
+    },
+    {
+      "id": "letters-2",
+      "title": "Alphabet II — Final Forms",
+      "desc": "Recognize the 5 final forms (ך ם ן ף ץ) and their normal forms.",
+      "unlock": { "type": "after", "stageId": "letters-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 4 },
+      "cards": [
+        { "id": "final-kaf", "type": "mcq", "prompt": { "he": "ך", "hint": "Which normal letter is this final form?" }, "answer": { "en": "כ" }, "choices": ["כ","מ","נ","פ"] },
+        { "id": "final-mem", "type": "mcq", "prompt": { "he": "ם", "hint": "Which normal letter is this final form?" }, "answer": { "en": "מ" }, "choices": ["מ","צ","ט","ל"] },
+        { "id": "final-nun", "type": "mcq", "prompt": { "he": "ן", "hint": "Which normal letter is this final form?" }, "answer": { "en": "נ" }, "choices": ["נ","ו","י","ר"] },
+        { "id": "final-pe",  "type": "mcq", "prompt": { "he": "ף", "hint": "Which normal letter is this final form?" }, "answer": { "en": "פ" }, "choices": ["פ","ב","כ","ק"] },
+        { "id": "final-tsade","type":"mcq","prompt": { "he": "ץ", "hint": "Which normal letter is this final form?" }, "answer": { "en": "צ" }, "choices": ["צ","ש","ס","ע"] }
+      ]
+    },
+    {
+      "id": "vowels-1",
+      "title": "Pointing I — Vowel Names",
+      "desc": "Recognize the main vowel points.",
+      "unlock": { "type": "after", "stageId": "letters-2" },
+      "mastery": { "targetPct": 85, "minSeenEach": 4 },
+      "cards": [
+        { "id": "v-qamats", "type": "mcq", "prompt": { "he": "בָ", "hint": "Name the vowel (ignore the consonant)." }, "answer": { "en": "qamats (ā)" }, "choices": ["qamats (ā)","patah (a)","tsere (ē)","hireq (i)"] },
+        { "id": "v-patah",  "type": "mcq", "prompt": { "he": "בַ", "hint": "Name the vowel (ignore the consonant)." }, "answer": { "en": "patah (a)" }, "choices": ["patah (a)","qamats (ā)","qibbuts (u)","holam (ō)"] },
+        { "id": "v-tsere",  "type": "mcq", "prompt": { "he": "בֵ", "hint": "Name the vowel (ignore the consonant)." }, "answer": { "en": "tsere (ē)" }, "choices": ["tsere (ē)","segol (e)","shureq (û)","holem (ō)"] },
+        { "id": "v-segol",  "type": "mcq", "prompt": { "he": "בֶ", "hint": "Name the vowel (ignore the consonant)." }, "answer": { "en": "segol (e)" }, "choices": ["segol (e)","tsere (ē)","hireq (i)","patah (a)"] },
+        { "id": "v-hireq",  "type": "mcq", "prompt": { "he": "בִ", "hint": "Name the vowel (ignore the consonant)." }, "answer": { "en": "hireq (i)" }, "choices": ["hireq (i)","holam (ō)","qamats (ā)","segol (e)"] },
+        { "id": "v-holam",  "type": "mcq", "prompt": { "he": "בֹ", "hint": "Name the vowel (ignore the consonant)." }, "answer": { "en": "holam (ō)" }, "choices": ["holam (ō)","qibbuts (u)","tsere (ē)","patah (a)"] },
+        { "id": "v-qibbuts","type":"mcq","prompt": { "he": "בֻ", "hint": "Name the vowel (ignore the consonant)." }, "answer": { "en": "qibbuts (u)" }, "choices": ["qibbuts (u)","shureq (û)","segol (e)","hireq (i)"] },
+        { "id": "v-shureq","type":"mcq","prompt": { "he": "בוּ", "hint": "Name the vowel (ignore the consonant)." }, "answer": { "en": "shureq (û)" }, "choices": ["shureq (û)","holam (ō)","qibbuts (u)","qamats (ā)"] },
+        { "id": "v-hateph-segol","type":"mcq","prompt": { "he": "אֱ", "hint": "Name the vowel (ignore the consonant)." }, "answer": { "en": "ḥateph segol (ĕ)" }, "choices": ["ḥateph segol (ĕ)","segol (e)","shewa","tsere (ē)"] },
+        { "id": "v-hateph-patah","type":"mcq","prompt": { "he": "אֲ", "hint": "Name the vowel (ignore the consonant)." }, "answer": { "en": "ḥateph patah (ă)" }, "choices": ["ḥateph patah (ă)","patah (a)","qamats (ā)","shewa"] },
+        { "id": "v-hateph-qamats","type":"mcq","prompt": { "he": "אֳ", "hint": "Name the vowel (ignore the consonant)." }, "answer": { "en": "ḥateph qamats (ŏ)" }, "choices": ["ḥateph qamats (ŏ)","holam (ō)","qamats (ā)","qibbuts (u)"] }
+      ]
+    },
+    {
+      "id": "syllables-1",
+      "title": "Syllables I — Open vs Closed",
+      "desc": "Recognize open/closed syllables using simple examples.",
+      "unlock": { "type": "after", "stageId": "vowels-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 4 },
+      "cards": [
+        { "id": "syl-1", "type": "mcq", "prompt": { "he": "בָּ", "hint": "Is this syllable open or closed?" }, "answer": { "en": "open" }, "choices": ["open","closed","(depends)","unknown"] },
+        { "id": "syl-2", "type": "mcq", "prompt": { "he": "בַּר", "hint": "Is this syllable open or closed?" }, "answer": { "en": "closed" }, "choices": ["open","closed","(depends)","unknown"] },
+        { "id": "syl-3", "type": "mcq", "prompt": { "he": "מֶ", "hint": "Is this syllable open or closed?" }, "answer": { "en": "open" }, "choices": ["open","closed","(depends)","unknown"] },
+        { "id": "syl-4", "type": "mcq", "prompt": { "he": "מֶל", "hint": "Is this syllable open or closed?" }, "answer": { "en": "closed" }, "choices": ["open","closed","(depends)","unknown"] }
+      ]
+    },
+    {
+      "id": "words-1",
+      "title": "Word Reading I — One Syllable",
+      "desc": "Read simple pointed syllables/words (transliteration choices).",
+      "unlock": { "type": "after", "stageId": "syllables-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 4 },
+      "cards": [
+        { "id": "w1-1", "type": "mcq", "prompt": { "he": "בָּר", "hint": "Choose the best transliteration." }, "answer": { "en": "bār" }, "choices": ["bār","bēr","bēr","bôr"] },
+        { "id": "w1-2", "type": "mcq", "prompt": { "he": "מֶל", "hint": "Choose the best transliteration." }, "answer": { "en": "mel" }, "choices": ["mil","mel","mal","mol"] },
+        { "id": "w1-3", "type": "mcq", "prompt": { "he": "בִּן", "hint": "Choose the best transliteration." }, "answer": { "en": "bin" }, "choices": ["ben","bin","ban","bon"] },
+        { "id": "w1-4", "type": "mcq", "prompt": { "he": "שׁוּר", "hint": "Choose the best transliteration." }, "answer": { "en": "šûr" }, "choices": ["šôr","šûr","sûr","šēr"] }
+      ]
+    },
+    {
+      "id": "dagesh-1",
+      "title": "Pointing II — Dagesh",
+      "desc": "Recognize dagesh (dot in a consonant) and basic reading impact.",
+      "unlock": { "type": "after", "stageId": "words-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 3 },
+      "cards": [
+        { "id": "dag-1", "type": "mcq", "prompt": { "he": "בָּ", "hint": "What does the dot in בּ mark here?" }, "answer": { "en": "dagesh" }, "choices": ["dagesh","sin dot","holem","shewa"] },
+        { "id": "dag-2", "type": "mcq", "prompt": { "he": "כָּ", "hint": "What does the dot in כּ mark here?" }, "answer": { "en": "dagesh" }, "choices": ["dagesh","mappiq","meteg","qamats"] },
+        { "id": "dag-3", "type": "mcq", "prompt": { "he": "בָ / בָּ", "hint": "Which pair shows dagesh present?" }, "answer": { "en": "בָּ" }, "choices": ["בָ","בָּ","(both)","(neither)"] }
+      ]
+    },
+    {
+      "id": "begadkephat-1",
+      "title": "Reading I — Begadkephat (Hard/Soft)",
+      "desc": "Read ב כ פ with/without dagesh in simple, beginner-friendly examples.",
+      "unlock": { "type": "after", "stageId": "dagesh-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 3 },
+      "cards": [
+        { "id": "bgdk-1", "type": "mcq", "prompt": { "he": "בּ", "hint": "Best beginner reading value?" }, "answer": { "en": "b" }, "choices": ["b","v","p","f"] },
+        { "id": "bgdk-2", "type": "mcq", "prompt": { "he": "ב", "hint": "Best beginner reading value (no dagesh)?" }, "answer": { "en": "v" }, "choices": ["v","b","k","ḵ"] },
+        { "id": "bgdk-3", "type": "mcq", "prompt": { "he": "כּ", "hint": "Best beginner reading value?" }, "answer": { "en": "k" }, "choices": ["k","ḵ","p","f"] },
+        { "id": "bgdk-4", "type": "mcq", "prompt": { "he": "כ", "hint": "Best beginner reading value (no dagesh)?" }, "answer": { "en": "ḵ (kh)" }, "choices": ["ḵ (kh)","k","h","ḥ"] },
+        { "id": "bgdk-5", "type": "mcq", "prompt": { "he": "פּ", "hint": "Best beginner reading value?" }, "answer": { "en": "p" }, "choices": ["p","f","b","v"] },
+        { "id": "bgdk-6", "type": "mcq", "prompt": { "he": "פ", "hint": "Best beginner reading value (no dagesh)?" }, "answer": { "en": "f" }, "choices": ["f","p","v","b"] },
+        { "id": "bgdk-7", "type": "mcq", "prompt": { "he": "גּ", "hint": "In begadkephat awareness, this is the 'hard' value." }, "answer": { "en": "g" }, "choices": ["g","ḡ (gh)","d","t"] },
+        { "id": "bgdk-8", "type": "mcq", "prompt": { "he": "דּ", "hint": "In begadkephat awareness, this is the 'hard' value." }, "answer": { "en": "d" }, "choices": ["d","ḏ (th)","t","k"] },
+        { "id": "bgdk-9", "type": "mcq", "prompt": { "he": "תּ", "hint": "In begadkephat awareness, this is the 'hard' value." }, "answer": { "en": "t" }, "choices": ["t","ṯ (th)","d","ṭ"] },
+        { "id": "bgdk-10", "type": "mcq", "prompt": { "he": "בּ / ב", "hint": "Which pair correctly matches hard/soft?" }, "answer": { "en": "b / v" }, "choices": ["b / v","v / b","b / b","v / v"] }
+      ]
+    },
+    {
+      "id": "shin-sin",
+      "title": "Alphabet III — Shin / Sin Dots",
+      "desc": "Distinguish שׁ (shin) from שׂ (sin).",
+      "unlock": { "type": "after", "stageId": "begadkephat-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 3 },
+      "cards": [
+        { "id": "ss-1", "type": "mcq", "prompt": { "he": "שׁ", "hint": "Which is this?" }, "answer": { "en": "shin (š)" }, "choices": ["shin (š)","sin (ś/s)","samekh (s)","tsade (ṣ)"] },
+        { "id": "ss-2", "type": "mcq", "prompt": { "he": "שׂ", "hint": "Which is this?" }, "answer": { "en": "sin (ś/s)" }, "choices": ["sin (ś/s)","shin (š)","zayin (z)","resh (r)"] },
+        { "id": "ss-3", "type": "mcq", "prompt": { "he": "שָׁלוֹם", "hint": "First consonant is..." }, "answer": { "en": "shin (š)" }, "choices": ["shin (š)","sin (ś/s)","samekh (s)","tsade (ṣ)"] }
+      ]
+    },
+    {
+      "id": "shewa-1",
+      "title": "Pointing III — Shewa",
+      "desc": "Recognize shewa (ְ) and read it as silent or very short vowel in beginner practice.",
+      "unlock": { "type": "after", "stageId": "shin-sin" },
+      "mastery": { "targetPct": 85, "minSeenEach": 3 },
+      "cards": [
+        { "id": "shw-1", "type": "mcq", "prompt": { "he": "בְּ", "hint": "Name this sign under the consonant." }, "answer": { "en": "shewa" }, "choices": ["shewa","hireq","segol","meteg"] },
+        { "id": "shw-2", "type": "mcq", "prompt": { "he": "מֶלֶךְ", "hint": "Which letter has shewa?" }, "answer": { "en": "כְ (final kaf)" }, "choices": ["מֶ","לֶ","כְ (final kaf)","none"] },
+        { "id": "shw-3", "type": "mcq", "prompt": { "he": "בְּרָכָה", "hint": "In beginner reading, the first syllable is closest to..." }, "answer": { "en": "bə-" }, "choices": ["bā-","bə-","bē-","bi-"] }
+      ]
+    },
+    {
+      "id": "syllables-2",
+      "title": "Syllables II — Mark the Break",
+      "desc": "Choose the best syllable division in simple words.",
+      "unlock": { "type": "after", "stageId": "shewa-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 3 },
+      "cards": [
+        { "id": "syl2-1", "type": "mcq", "prompt": { "he": "מֶלֶךְ", "hint": "Best division?" }, "answer": { "en": "me·leḵ" }, "choices": ["me·leḵ","mel·eḵ","me·leḵ","mē·lēḵ"] },
+        { "id": "syl2-2", "type": "mcq", "prompt": { "he": "בְּרָכָה", "hint": "Best division?" }, "answer": { "en": "bə·rā·ḵā" }, "choices": ["bə·rā·ḵā","bər·āḵ·ā","bə·rāḵ·ā","bə·rā·kā"] },
+        { "id": "syl2-3", "type": "mcq", "prompt": { "he": "דָּבָר", "hint": "Best division?" }, "answer": { "en": "dā·vār" }, "choices": ["dā·vār","dav·ār","dāv·ar","dā·var"] }
+      ]
+    },
+    {
+      "id": "words-2",
+      "title": "Word Reading II — Two Syllables",
+      "desc": "Read common two-syllable words (transliteration choices).",
+      "unlock": { "type": "after", "stageId": "syllables-2" },
+      "mastery": { "targetPct": 85, "minSeenEach": 4 },
+      "cards": [
+        { "id": "w2-1", "type": "mcq", "prompt": { "he": "מֶלֶךְ", "hint": "Choose the best transliteration." }, "answer": { "en": "meleḵ" }, "choices": ["meleḵ","mālaḵ","mēlēḵ","moleḵ"] },
+        { "id": "w2-2", "type": "mcq", "prompt": { "he": "דָּבָר", "hint": "Choose the best transliteration." }, "answer": { "en": "dāvār" }, "choices": ["dāvār","dēver","dīvar","dōvōr"] },
+        { "id": "w2-3", "type": "mcq", "prompt": { "he": "בְּרָכָה", "hint": "Choose the best transliteration." }, "answer": { "en": "bərāḵā" }, "choices": ["bərāḵā","bārāḵ","bērēḵā","barākā"] },
+        { "id": "w2-4", "type": "mcq", "prompt": { "he": "שָׁלוֹם", "hint": "Choose the best transliteration." }, "answer": { "en": "šālôm" }, "choices": ["šālôm","śālôm","šəlōm","šālām"] },
+        { "id": "w2-5", "type": "mcq", "prompt": { "he": "תּוֹרָה", "hint": "Choose the best transliteration." }, "answer": { "en": "tôrā" }, "choices": ["tôrā","tārā","tērē","tûrā"] },
+        { "id": "w2-6", "type": "mcq", "prompt": { "he": "אֱמֶת", "hint": "Choose the best transliteration." }, "answer": { "en": "ʾĕmet" }, "choices": ["ʾĕmet","ʾāmat","ʾēmēt","ʾōmot"] },
+        { "id": "w2-7", "type": "mcq", "prompt": { "he": "חָכְמָה", "hint": "Choose the best transliteration." }, "answer": { "en": "ḥoḵmā" }, "choices": ["ḥoḵmā","ḥāḵmā","ḥokmē","ḥuḵmā"] }
+      ]
+    },
+    {
+      "id": "prefixes-1",
+      "title": "Syntax II — Common Prefixes (Reading)",
+      "desc": "Recognize common prefixes (וְ, הַ, בְּ, לְ, כְּ) on simple words.",
+      "unlock": { "type": "after", "stageId": "words-2" },
+      "mastery": { "targetPct": 85, "minSeenEach": 3 },
+      "cards": [
+        { "id": "pre-1", "type": "mcq", "prompt": { "he": "וְמֶלֶךְ", "hint": "The prefix וְ most often means..." }, "answer": { "en": "and" }, "choices": ["and","in","to/for","the"] },
+        { "id": "pre-2", "type": "mcq", "prompt": { "he": "הַמֶּלֶךְ", "hint": "The prefix הַ most often marks..." }, "answer": { "en": "the (definite article)" }, "choices": ["the (definite article)","and","to/for","in"] },
+        { "id": "pre-3", "type": "mcq", "prompt": { "he": "בַּבַּיִת", "hint": "The prefix בְּ most often means..." }, "answer": { "en": "in/at" }, "choices": ["in/at","and","like/as","to/for"] },
+        { "id": "pre-4", "type": "mcq", "prompt": { "he": "לַמֶּלֶךְ", "hint": "The prefix לְ most often means..." }, "answer": { "en": "to/for" }, "choices": ["to/for","in/at","and","the"] },
+        { "id": "pre-5", "type": "mcq", "prompt": { "he": "כַּמֶּלֶךְ", "hint": "The prefix כְּ most often means..." }, "answer": { "en": "like/as" }, "choices": ["like/as","to/for","in/at","and"] },
+        { "id": "pre-6", "type": "mcq", "prompt": { "he": "וְ", "hint": "This prefix is most often pronounced..." }, "answer": { "en": "wə-" }, "choices": ["wə-","wa-","wī-","wō-"] },
+        { "id": "pre-7", "type": "mcq", "prompt": { "he": "בְּ", "hint": "This prefix is most often pronounced..." }, "answer": { "en": "bə-" }, "choices": ["bə-","bā-","bē-","bi-"] },
+        { "id": "pre-8", "type": "mcq", "prompt": { "he": "לְ", "hint": "This prefix is most often pronounced..." }, "answer": { "en": "lə-" }, "choices": ["lə-","lā-","lê-","li-"] },
+        { "id": "pre-9", "type": "mcq", "prompt": { "he": "כְּ", "hint": "This prefix is most often pronounced..." }, "answer": { "en": "kə-" }, "choices": ["kə-","kā-","kē-","ki-"] }
+      ]
+    },
+    {
+      "id": "article-1",
+      "title": "Syntax III — The Article (Assimilation)",
+      "desc": "Recognize basic assimilation patterns of הַ with certain consonants in beginner reading.",
+      "unlock": { "type": "after", "stageId": "prefixes-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 3 },
+      "cards": [
+        { "id": "art-1", "type": "mcq", "prompt": { "he": "הַמֶּלֶךְ", "hint": "Why does מ have a dagesh?" }, "answer": { "en": "article assimilation (dagesh forte)" }, "choices": ["article assimilation (dagesh forte)","begadkephat hardening","sin dot","it’s a vowel mark"] },
+        { "id": "art-2", "type": "mcq", "prompt": { "he": "הַסֵּפֶר", "hint": "Why does ס have a dagesh?" }, "answer": { "en": "article assimilation (dagesh forte)" }, "choices": ["article assimilation (dagesh forte)","begadkephat hardening","mappiq","meteg"] },
+        { "id": "art-3", "type": "mcq", "prompt": { "he": "בַּבַּיִת", "hint": "This form most likely reflects..." }, "answer": { "en": "prefix + article (b + ha-)" }, "choices": ["prefix + article (b + ha-)","construct chain","plural ending","a verb form"] },
+        { "id": "art-4", "type": "mcq", "prompt": { "he": "לַסֵּפֶר", "hint": "This form most likely reflects..." }, "answer": { "en": "prefix + article (l + ha-)" }, "choices": ["prefix + article (l + ha-)","construct chain","plural ending","a verb form"] },
+        { "id": "art-5", "type": "mcq", "prompt": { "he": "כַּמֶּלֶךְ", "hint": "This form most likely reflects..." }, "answer": { "en": "prefix + article (k + ha-)" }, "choices": ["prefix + article (k + ha-)","a verb stem","a plural ending","a construct chain"] }
+      ]
+    },
+    {
+      "id": "words-3",
+      "title": "Word Reading III — Short Phrases",
+      "desc": "Read short, pointed phrases (one word at a time).",
+      "unlock": { "type": "after", "stageId": "article-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 4 },
+      "cards": [
+        { "id": "p-1", "type": "mcq", "prompt": { "he": "מֶלֶךְ טוֹב", "hint": "Read the first word." }, "answer": { "en": "meleḵ" }, "choices": ["meleḵ","malk","mēleḵ","mōleḵ"] },
+        { "id": "p-2", "type": "mcq", "prompt": { "he": "מֶלֶךְ טוֹב", "hint": "Read the second word." }, "answer": { "en": "ṭôv" }, "choices": ["ṭôv","ṭāv","tôv","ṭuv"] },
+        { "id": "p-3", "type": "mcq", "prompt": { "he": "דָּבָר טוֹב", "hint": "Read the first word." }, "answer": { "en": "dāvār" }, "choices": ["dāvār","dēver","dōvōr","dīvar"] },
+        { "id": "p-4", "type": "mcq", "prompt": { "he": "שָׁלוֹם לָכֶם", "hint": "Read the second word." }, "answer": { "en": "lāḵem" }, "choices": ["lāḵem","leḵem","lōḵem","lākām"] },
+        { "id": "p-5", "type": "mcq", "prompt": { "he": "וְהַמֶּלֶךְ", "hint": "Read the whole phrase (best)." }, "answer": { "en": "wəhamméleḵ" }, "choices": ["wəhamméleḵ","wāhamméleḵ","wehammālaḵ","wəhammōleḵ"] },
+        { "id": "p-6", "type": "mcq", "prompt": { "he": "בַּבַּיִת", "hint": "Read the whole word (best)." }, "answer": { "en": "babbáyit" }, "choices": ["babbáyit","bābbáyit","bəbbáyit","bibbáyit"] },
+        { "id": "p-7", "type": "mcq", "prompt": { "he": "לַמֶּלֶךְ", "hint": "Read the whole word (best)." }, "answer": { "en": "lamméleḵ" }, "choices": ["lamméleḵ","lāmmeleḵ","ləmméleḵ","lomméleḵ"] },
+        { "id": "p-8", "type": "mcq", "prompt": { "he": "כַּמֶּלֶךְ", "hint": "Read the whole word (best)." }, "answer": { "en": "kamméleḵ" }, "choices": ["kamméleḵ","kāmméleḵ","kəmméleḵ","kommēleḵ"] }
+      ]
+    },
+    {
+      "id": "construct-1",
+      "title": "Syntax I — Construct Chain (Reading)",
+      "desc": "Recognize simple construct relationships while reading.",
+      "unlock": { "type": "after", "stageId": "words-3" },
+      "mastery": { "targetPct": 85, "minSeenEach": 3 },
+      "cards": [
+        { "id": "con-1", "type": "mcq", "prompt": { "he": "בֵּית מֶלֶךְ", "hint": "This most naturally reads as..." }, "answer": { "en": "house of (a) king" }, "choices": ["house of (a) king","the king is a house","king of (a) house","houses are kings"] },
+        { "id": "con-2", "type": "mcq", "prompt": { "he": "דְּבַר הַמֶּלֶךְ", "hint": "This most naturally reads as..." }, "answer": { "en": "word of the king" }, "choices": ["word of the king","the king is a word","word to the king","kings of the word"] },
+        { "id": "con-3", "type": "mcq", "prompt": { "he": "מֶלֶךְ יִשְׂרָאֵל", "hint": "This most naturally reads as..." }, "answer": { "en": "king of Israel" }, "choices": ["king of Israel","Israel of king","the king is Israel","king to Israel"] }
+      ]
+    },
+    {
+      "id": "verbs-1",
+      "title": "Verbs I — Qal Perfect (Pattern)",
+      "desc": "Recognize the basic Qal perfect pattern with the model verb קָטַל.",
+      "unlock": { "type": "after", "stageId": "construct-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 3 },
+      "cards": [
+        { "id": "vqalp-1", "type": "mcq", "prompt": { "he": "קָטַל", "hint": "This is best described as..." }, "answer": { "en": "Qal perfect (3ms model)" }, "choices": ["Qal perfect (3ms model)","Qal imperfect (3ms)","Piel perfect (3ms)","Niphal imperfect (3ms)"] },
+        { "id": "vqalp-2", "type": "mcq", "prompt": { "he": "קָטְלָה", "hint": "This is best described as..." }, "answer": { "en": "Qal perfect (3fs model)" }, "choices": ["Qal perfect (3fs model)","Qal imperfect (3fs)","Qal infinitive construct","Qal participle"] },
+        { "id": "vqalp-3", "type": "mcq", "prompt": { "he": "קָטְלוּ", "hint": "This is best described as..." }, "answer": { "en": "Qal perfect (3cp model)" }, "choices": ["Qal perfect (3cp model)","Qal imperfect (3cp)","Qal jussive","Qal imperative"] }
+      ]
+    },
+    {
+      "id": "verbs-2",
+      "title": "Verbs II — Qal Imperfect (Pattern)",
+      "desc": "Recognize the basic Qal imperfect pattern with the model verb יִקְטֹל.",
+      "unlock": { "type": "after", "stageId": "verbs-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 3 },
+      "cards": [
+        { "id": "vqali-1", "type": "mcq", "prompt": { "he": "יִקְטֹל", "hint": "This is best described as..." }, "answer": { "en": "Qal imperfect (3ms model)" }, "choices": ["Qal imperfect (3ms model)","Qal perfect (3ms)","Hiphil imperfect (3ms)","Niphal perfect (3ms)"] },
+        { "id": "vqali-2", "type": "mcq", "prompt": { "he": "תִּקְטֹל", "hint": "This is best described as..." }, "answer": { "en": "Qal imperfect (2ms/3fs model)" }, "choices": ["Qal imperfect (2ms/3fs model)","Qal perfect (2ms)","Qal cohortative","Qal participle"] },
+        { "id": "vqali-3", "type": "mcq", "prompt": { "he": "נִקְטֹל", "hint": "This is best described as..." }, "answer": { "en": "Qal imperfect (1cp model)" }, "choices": ["Qal imperfect (1cp model)","Niphal imperfect (1cp)","Qal perfect (1cp)","Piel imperfect (1cp)"] }
+      ]
+    },
+    {
+      "id": "verbs-3",
+      "title": "Verbs III — Participles (Pattern)",
+      "desc": "Recognize Qal active participle patterns in reading.",
+      "unlock": { "type": "after", "stageId": "verbs-2" },
+      "mastery": { "targetPct": 85, "minSeenEach": 3 },
+      "cards": [
+        { "id": "vpart-1", "type": "mcq", "prompt": { "he": "קֹטֵל", "hint": "This form is best described as..." }, "answer": { "en": "Qal active participle (ms model)" }, "choices": ["Qal active participle (ms model)","Qal perfect (3ms)","Qal imperfect (3ms)","Qal infinitive absolute"] },
+        { "id": "vpart-2", "type": "mcq", "prompt": { "he": "קֹטְלִים", "hint": "This form is best described as..." }, "answer": { "en": "Qal active participle (mp model)" }, "choices": ["Qal active participle (mp model)","Qal perfect (3mp)","Qal imperfect (3mp)","Qal imperative (mp)"] },
+        { "id": "vpart-3", "type": "mcq", "prompt": { "he": "קֹטֶלֶת", "hint": "This form is best described as..." }, "answer": { "en": "Qal active participle (fs model)" }, "choices": ["Qal active participle (fs model)","Qal perfect (3fs)","Qal imperfect (3fs)","Qal infinitive construct"] }
+      ]
+    },
+    {
+      "id": "stems-1",
+      "title": "Verbs IV — Major Stems (Spot the Pattern)",
+      "desc": "Recognize Niphal / Piel / Hiphil pattern signals in simplified examples.",
+      "unlock": { "type": "after", "stageId": "verbs-3" },
+      "mastery": { "targetPct": 85, "minSeenEach": 3 },
+      "cards": [
+        { "id": "stem-1", "type": "mcq", "prompt": { "he": "נִקְטַל", "hint": "This form most likely signals..." }, "answer": { "en": "Niphal perfect (model)" }, "choices": ["Niphal perfect (model)","Qal perfect (model)","Piel perfect (model)","Hiphil perfect (model)"] },
+        { "id": "stem-2", "type": "mcq", "prompt": { "he": "קִטֵּל", "hint": "This form most likely signals..." }, "answer": { "en": "Piel perfect (model)" }, "choices": ["Piel perfect (model)","Niphal perfect (model)","Qal imperfect (model)","Hiphil imperfect (model)"] },
+        { "id": "stem-3", "type": "mcq", "prompt": { "he": "הִקְטִיל", "hint": "This form most likely signals..." }, "answer": { "en": "Hiphil perfect (model)" }, "choices": ["Hiphil perfect (model)","Qal perfect (model)","Piel perfect (model)","Niphal imperfect (model)"] }
+      ]
+    },
+    {
+      "id": "furtive-1",
+      "title": "Reading II — Furtive Pataḥ (Awareness)",
+      "desc": "Recognize the pattern of pataḥ before final ח/ע/ה in common words (beginner awareness).",
+      "unlock": { "type": "after", "stageId": "stems-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 3 },
+      "cards": [
+        { "id": "fur-1", "type": "mcq", "prompt": { "he": "רוּחַ", "hint": "Best beginner reading (end sound)?" }, "answer": { "en": "-aḥ (pataḥ before final ח)" }, "choices": ["-aḥ (pataḥ before final ח)","-ḥa","-ā","-ēḥ"] },
+        { "id": "fur-2", "type": "mcq", "prompt": { "he": "שָׂמֵחַ", "hint": "Best beginner reading (end sound)?" }, "answer": { "en": "-aḥ" }, "choices": ["-aḥ","-ḥa","-ō","-eḥ"] },
+        { "id": "fur-3", "type": "mcq", "prompt": { "he": "גָּבוֹהַּ", "hint": "Best beginner reading (end sound)?" }, "answer": { "en": "-a (before final ה)" }, "choices": ["-a (before final ה)","-hā","-eh","-ōh"] }
+      ]
+    },
+    {
+      "id": "weak-verbs-1",
+      "title": "Verbs V — Weak Verbs (Awareness Track)",
+      "desc": "Spot common weak-verb families in labels (I-nun, I-yod/waw, III-he).",
+      "unlock": { "type": "after", "stageId": "furtive-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 3 },
+      "cards": [
+        { "id": "wk-1", "type": "mcq", "prompt": { "he": "נָתַן", "hint": "This root is commonly categorized as..." }, "answer": { "en": "I-nun (weak)" }, "choices": ["I-nun (weak)","III-he (weak)","geminate (II=III)","strong"] },
+        { "id": "wk-2", "type": "mcq", "prompt": { "he": "יָשַׁב", "hint": "This root is commonly categorized as..." }, "answer": { "en": "I-yod (weak)" }, "choices": ["I-yod (weak)","I-nun (weak)","II-waw/yod (hollow)","strong"] },
+        { "id": "wk-3", "type": "mcq", "prompt": { "he": "בָּנָה", "hint": "This root is commonly categorized as..." }, "answer": { "en": "III-he (weak)" }, "choices": ["III-he (weak)","I-nun (weak)","II=III (geminate)","strong"] }
+      ]
+    },
+    {
+      "id": "capstone-1",
+      "title": "Capstone — Genesis 1:1 (Reading)",
+      "desc": "Read words from a classic pointed verse (practice-only, not a translation exercise).",
+      "unlock": { "type": "after", "stageId": "weak-verbs-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 4 },
+      "cards": [
+        { "id": "gen-1", "type": "mcq", "prompt": { "he": "בְּרֵאשִׁית", "hint": "Choose the best transliteration." }, "answer": { "en": "bərēʾšît" }, "choices": ["bərēʾšît","bārāšāt","bərōšôt","bərēšît"] },
+        { "id": "gen-2", "type": "mcq", "prompt": { "he": "בָּרָא", "hint": "Choose the best transliteration." }, "answer": { "en": "bārāʾ" }, "choices": ["bārāʾ","bērēʾ","bōrōʾ","bārîʾ"] },
+        { "id": "gen-3", "type": "mcq", "prompt": { "he": "אֱלֹהִים", "hint": "Choose the best transliteration." }, "answer": { "en": "ʾĕlōhîm" }, "choices": ["ʾĕlōhîm","ʾalāhîm","ʾĕlōhām","ʾōlōhîm"] },
+        { "id": "gen-4", "type": "mcq", "prompt": { "he": "הַשָּׁמַיִם", "hint": "Choose the best transliteration." }, "answer": { "en": "haššāmayim" }, "choices": ["haššāmayim","hašāmayim","haššəmāyim","hašēmîm"] },
+        { "id": "gen-5", "type": "mcq", "prompt": { "he": "וְאֵת", "hint": "Choose the best transliteration." }, "answer": { "en": "wəʾēt" }, "choices": ["wəʾēt","wāʾet","wəʾat","waʾēt"] },
+        { "id": "gen-6", "type": "mcq", "prompt": { "he": "הָאָרֶץ", "hint": "Choose the best transliteration." }, "answer": { "en": "hāʾāreṣ" }, "choices": ["hāʾāreṣ","hāʾērēṣ","haʾāraṣ","hāʾārōṣ"] },
+
+        { "id": "gen-g1", "type": "mcq", "prompt": { "he": "בְּרֵאשִׁית", "hint": "Choose the best gloss." }, "answer": { "gloss": "in (the) beginning" }, "choices": ["in (the) beginning","the heavens","and the earth","he created"] },
+        { "id": "gen-g2", "type": "mcq", "prompt": { "he": "בָּרָא", "hint": "Choose the best gloss." }, "answer": { "gloss": "he created" }, "choices": ["he created","in the beginning","God","the earth"] },
+        { "id": "gen-g3", "type": "mcq", "prompt": { "he": "אֱלֹהִים", "hint": "Choose the best gloss." }, "answer": { "gloss": "God" }, "choices": ["God","he created","the heavens","and"] },
+        { "id": "gen-g4", "type": "mcq", "prompt": { "he": "הַשָּׁמַיִם", "hint": "Choose the best gloss." }, "answer": { "gloss": "the heavens" }, "choices": ["the heavens","the earth","in the beginning","God"] },
+        { "id": "gen-g5", "type": "mcq", "prompt": { "he": "הָאָרֶץ", "hint": "Choose the best gloss." }, "answer": { "gloss": "the earth" }, "choices": ["the earth","the heavens","and","he created"] }
+      ]
+    },
+    {
+      "id": "capstone-2",
+      "title": "Capstone — Psalm 23:1 (Reading)",
+      "desc": "Read common words from a famous verse (practice-only).",
+      "unlock": { "type": "after", "stageId": "capstone-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 4 },
+      "cards": [
+        { "id": "ps23-1", "type": "mcq", "prompt": { "he": "יְהוָה", "hint": "Choose the best transliteration (reading practice)." }, "answer": { "en": "YHWH (yəhwāh)" }, "choices": ["YHWH (yəhwāh)","yāhû","yəhōwā","yōhē"] },
+        { "id": "ps23-2", "type": "mcq", "prompt": { "he": "רֹעִי", "hint": "Choose the best transliteration." }, "answer": { "en": "rōʿî" }, "choices": ["rōʿî","rōʾî","rāʿî","rûʿî"] },
+        { "id": "ps23-3", "type": "mcq", "prompt": { "he": "לֹא", "hint": "Choose the best transliteration." }, "answer": { "en": "lōʾ" }, "choices": ["lōʾ","lāʾ","luʾ","lēʾ"] },
+        { "id": "ps23-4", "type": "mcq", "prompt": { "he": "אֶחְסָר", "hint": "Choose the best transliteration." }, "answer": { "en": "ʾeḥsār" }, "choices": ["ʾeḥsār","ʾaḥsēr","ʾiḥsōr","ʾeḥsōr"] },
+
+        { "id": "ps23-g1", "type": "mcq", "prompt": { "he": "יְהוָה", "hint": "Choose the best gloss." }, "answer": { "gloss": "the LORD" }, "choices": ["the LORD","my shepherd","I will not","lack"] },
+        { "id": "ps23-g2", "type": "mcq", "prompt": { "he": "רֹעִי", "hint": "Choose the best gloss." }, "answer": { "gloss": "my shepherd" }, "choices": ["my shepherd","the LORD","I will not","lack"] },
+        { "id": "ps23-g3", "type": "mcq", "prompt": { "he": "לֹא", "hint": "Choose the best gloss." }, "answer": { "gloss": "not" }, "choices": ["not","the LORD","my shepherd","lack"] },
+        { "id": "ps23-g4", "type": "mcq", "prompt": { "he": "אֶחְסָר", "hint": "Choose the best gloss (best-fit)." }, "answer": { "gloss": "I lack / I will lack" }, "choices": ["I lack / I will lack","I create","I shepherd","I walk"] }
+      ]
+    },
+    {
+      "id": "capstone-3",
+      "title": "Capstone — Deuteronomy 6:4 (Shema) (Reading)",
+      "desc": "Read words from the Shema (practice-only).",
+      "unlock": { "type": "after", "stageId": "capstone-2" },
+      "mastery": { "targetPct": 85, "minSeenEach": 4 },
+      "cards": [
+        { "id": "dt64-1", "type": "mcq", "prompt": { "he": "שְׁמַע", "hint": "Choose the best transliteration." }, "answer": { "en": "šəmaʿ" }, "choices": ["šəmaʿ","šāmāʿ","səmaʿ","šəmeʿ"] },
+        { "id": "dt64-2", "type": "mcq", "prompt": { "he": "יִשְׂרָאֵל", "hint": "Choose the best transliteration." }, "answer": { "en": "yiśrāʾēl" }, "choices": ["yiśrāʾēl","yišrāʾēl","yisrāʾāl","yiśrōʾēl"] },
+        { "id": "dt64-3", "type": "mcq", "prompt": { "he": "יְהוָה", "hint": "Choose the best transliteration (reading practice)." }, "answer": { "en": "YHWH (yəhwāh)" }, "choices": ["YHWH (yəhwāh)","yəhōwā","yāhû","yōhē"] },
+        { "id": "dt64-4", "type": "mcq", "prompt": { "he": "אֱלֹהֵינוּ", "hint": "Choose the best transliteration." }, "answer": { "en": "ʾĕlōhênû" }, "choices": ["ʾĕlōhênû","ʾĕlōhînû","ʾĕlōhānû","ʾĕlōhēnō"] },
+        { "id": "dt64-5", "type": "mcq", "prompt": { "he": "אֶחָד", "hint": "Choose the best transliteration." }, "answer": { "en": "ʾeḥād" }, "choices": ["ʾeḥād","ʾaḥēd","ʾeḥēd","ʾōḥād"] },
+
+        { "id": "dt64-g1", "type": "mcq", "prompt": { "he": "שְׁמַע", "hint": "Choose the best gloss." }, "answer": { "gloss": "hear! / listen!" }, "choices": ["hear! / listen!","Israel","our God","one"] },
+        { "id": "dt64-g2", "type": "mcq", "prompt": { "he": "יִשְׂרָאֵל", "hint": "Choose the best gloss." }, "answer": { "gloss": "Israel" }, "choices": ["Israel","hear!","our God","one"] },
+        { "id": "dt64-g3", "type": "mcq", "prompt": { "he": "אֱלֹהֵינוּ", "hint": "Choose the best gloss." }, "answer": { "gloss": "our God" }, "choices": ["our God","the LORD","Israel","one"] },
+        { "id": "dt64-g4", "type": "mcq", "prompt": { "he": "אֶחָד", "hint": "Choose the best gloss." }, "answer": { "gloss": "one" }, "choices": ["one","our God","hear!","Israel"] }
+      ]
+    }
+  ]
+}
+
