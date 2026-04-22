@@ -178,6 +178,22 @@
   function listenChoose(heb, choices) { return { type: 'listen_mc', title: 'Listen', prompt: 'Listen, then choose what you heard.', heb, choices, answer: heb }; }
   function speakRepeat(heb) { return { type: 'speak_repeat', title: 'Speak', prompt: 'Optional: say it aloud.', heb }; }
 
+  function rootIntro(root, forms = [], gloss = '') {
+    return {
+      type: 'root_intro',
+      title: 'Shoresh',
+      prompt: 'Meet today’s root (shoresh).',
+      root,
+      forms,
+      gloss
+    };
+  }
+
+  // Odd-one-out: two share a root, one doesn't
+  function shoreshSort(prompt, options, answerIdx) {
+    return { type: 'shoresh_sort', title: 'Shoresh Sort', prompt, options, answerIdx };
+  }
+
   const UNIT1 = [
     L('u1l1', 'Particles I', 'את / לא / כי / אם / אל / על', [
       { type: 'match', title: 'Match', prompt: 'Match the Hebrew particle to its meaning.', pairs: [
@@ -210,6 +226,7 @@
     ]),
 
     L('u1l3', 'אב / אם', 'father / mother (biblical forms)', [
+      rootIntro('א־ב', ['אָב', 'אֲבִי', 'אָבוֹת'], 'father / fathers'),
       mcHeb('אָב', 'father', ['mother', 'son', 'daughter']),
       mcHeb('אֵם', 'mother', ['father', 'son', 'daughter']),
       buildWord('Build: “father”', 'אָב'),
@@ -219,6 +236,7 @@
     ]),
 
     L('u1l4', 'בן / בת', 'son / daughter', [
+      rootIntro('ב־נ', ['בֵּן', 'בָּנִים', 'בָּנוֹת'], 'son / sons / daughters'),
       mcHeb('בֵּן', 'son', ['daughter', 'father', 'mother']),
       mcHeb('בַּת', 'daughter', ['son', 'father', 'mother']),
       buildWord('Build: “son”', 'בֵּן'),
@@ -302,6 +320,11 @@
     ]),
 
     L('u1l14', 'Mini sentences', 'repeat practical patterns', [
+      shoreshSort('Which word does NOT share the same root as the other two?', [
+        { heb: 'וַיֹּאמֶר', root: 'א־מ־ר' },
+        { heb: 'אָמַר', root: 'א־מ־ר' },
+        { heb: 'בָּא', root: 'ב־ו־א' },
+      ], 2),
       buildSentence('He came.', 'הוּא בָּא'),
       buildSentence('She came.', 'הִיא בָּאָה'),
       buildSentence('And he said.', 'וַיֹּאמֶר'),
@@ -989,10 +1012,10 @@
   const U4_SUBUNITS = buildUnit4Subunits();
 
   const COURSE = [
-    { id: 'u1', title: 'Unit 1: Building blocks', desc: '8 sub‑units · short drills to make reading + writing automatic.', subunits: U1_SUBUNITS },
-    { id: 'u2', title: 'Unit 2: Sentence patterns', desc: '35 sub‑units · sentence building and fluency drills.', subunits: U2_SUBUNITS },
-    { id: 'u3', title: 'Unit 3: Expanding vocabulary', desc: '35 sub‑units · high-frequency vocabulary and phrases.', subunits: U3_SUBUNITS },
-    { id: 'u4', title: 'Unit 4: Scripture Mastery', desc: 'Build the exact Hebrew word order of mastery verses.', subunits: U4_SUBUNITS },
+    { id: 'u1', title: 'Journey 1: Beginnings', desc: 'Genesis 1–11 · learn the Aleph‑bet, niqqud, and read real verses from day one.', subunits: U1_SUBUNITS },
+    { id: 'u2', title: 'Journey 2: The Fathers', desc: 'Genesis 12–50 · build roots + forms through real narrative passages.', subunits: U2_SUBUNITS },
+    { id: 'u3', title: 'Journey 3: Out of Egypt', desc: 'Exodus + selected Numbers · verbs, patterns, and covenant vocabulary.', subunits: U3_SUBUNITS },
+    { id: 'u4', title: 'Journey 4: Scroll Mastery', desc: 'Assemble and read verses in Hebrew word order (no ads, no timers).', subunits: U4_SUBUNITS },
   ];
 
   // --- Progress storage ---
@@ -1411,6 +1434,74 @@
       }
       renderMultipleChoice(step.choices, step.answer, { rtl: false });
       els.footerHint.textContent = 'Tip: click an answer. You have 3 tries.';
+      return;
+    }
+
+    if (step.type === 'root_intro') {
+      // Root-first teaching: show the shoresh and a few related forms.
+      els.hebBig.style.display = '';
+      els.hebBig.textContent = String(step.root || '').trim();
+      const forms = Array.isArray(step.forms) ? step.forms.filter(Boolean).slice(0, 6) : [];
+      const gloss = String(step.gloss || '').trim();
+      els.feedback.innerHTML =
+        (gloss ? `<div style="margin-top:6px; opacity:0.92; direction:ltr;">Meaning: <strong>${escapeHtml(gloss)}</strong></div>` : '') +
+        (forms.length ? `<div style="margin-top:10px; opacity:0.95;">Family:</div>
+          <div style="margin-top:8px; display:flex; gap:10px; flex-wrap:wrap; justify-content:center; direction:rtl;">
+            ${forms.map(f => `<span style="border:1px solid var(--rule); background: var(--card-bg); padding:8px 12px; border-radius:999px; font-weight:800;">${escapeHtml(f)}</span>`).join('')}
+          </div>` : '');
+      els.footerHint.textContent = 'Tip: the root stays the same; the pattern changes.';
+      els.nextBtn.disabled = false;
+      return;
+    }
+
+    if (step.type === 'shoresh_sort') {
+      // Odd-one-out by root. We show Hebrew options; correctness based on answerIdx.
+      const opts = Array.isArray(step.options) ? step.options : [];
+      els.stepTitle.textContent = step.title || 'Shoresh Sort';
+      els.stepPrompt.textContent = step.prompt || 'Choose the odd one out.';
+      els.choices.style.display = '';
+      els.choices.innerHTML = '';
+      const correctIdx = Number.isFinite(step.answerIdx) ? step.answerIdx : 0;
+      opts.forEach((o, idx) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'choiceBtn';
+        btn.style.direction = 'rtl';
+        btn.innerHTML = `<div style="font-weight:900; font-size:1.15em; direction:rtl;">${escapeHtml(o && o.heb ? o.heb : '')}</div>` +
+          `<div style="opacity:0.78; font-size:0.85em; direction:ltr;">root: ${escapeHtml(o && o.root ? o.root : '')}</div>`;
+        btn.addEventListener('click', () => {
+          if (locked) return;
+          const isCorrect = idx === correctIdx;
+          if (isCorrect) {
+            locked = true;
+            Array.from(els.choices.querySelectorAll('.choiceBtn')).forEach((b, bi) => {
+              if (bi === correctIdx) b.classList.add('correct');
+              b.disabled = true;
+            });
+            setCorrectWrong(true, '');
+            els.nextBtn.disabled = false;
+            autoAdvanceSoon();
+            return;
+          }
+          attempts++;
+          btn.classList.add('wrong');
+          btn.disabled = true;
+          if (attempts < MAX_ATTEMPTS) {
+            setCorrectWrong(false, ` <span style="opacity:0.9">${escapeHtml(attemptsHint())}</span>`);
+            return;
+          }
+          locked = true;
+          Array.from(els.choices.querySelectorAll('.choiceBtn')).forEach((b, bi) => {
+            if (bi === correctIdx) b.classList.add('correct');
+            b.disabled = true;
+          });
+          const ansHeb = (opts[correctIdx] && opts[correctIdx].heb) ? opts[correctIdx].heb : '';
+          setCorrectWrong(false, ` ${revealAnswerHtml(ansHeb, true)}`);
+          els.nextBtn.disabled = false;
+        });
+        els.choices.appendChild(btn);
+      });
+      els.footerHint.textContent = 'Tip: look for the shared root letters.';
       return;
     }
 
