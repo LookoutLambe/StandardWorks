@@ -1,6 +1,7 @@
 // vocab.js — Vocabulary Builder game
 (function() {
   const LS_KEY = 'sw-vocab-stats-v1';
+  const LS_SAVED = 'sw-saved-strongs-v1'; // shared with dictionary.html
 
   function $(id) { return document.getElementById(id); }
 
@@ -80,6 +81,27 @@
   function buildDeck() {
     const roots = window._strongsRoots || {};
     const decks = window.VocabDecks || null;
+
+    // Saved deck (picked in Dictionary)
+    if (els.deckSel.value === 'saved_words') {
+      let saved = [];
+      try {
+        const raw = localStorage.getItem(LS_SAVED);
+        saved = raw ? JSON.parse(raw) : [];
+      } catch {}
+      if (!Array.isArray(saved)) saved = [];
+      const items = [];
+      for (const s of saved) {
+        if (typeof s !== 'string' || !/^H\d{4}$/.test(s)) continue;
+        const e = roots[s];
+        if (!e || !e.w) continue;
+        const heb = String(e.w).trim();
+        const gloss = String(e.g || '').trim();
+        if (!heb) continue;
+        items.push({ strongs: s, heb, strongsGloss: gloss, scriptureGloss: '', gloss: gloss });
+      }
+      return items;
+    }
 
     // Frequency decks generated from actual project texts
     if (els.deckSel.value.startsWith('project_freq_') && decks) {

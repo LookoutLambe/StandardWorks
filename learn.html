@@ -145,6 +145,56 @@
       margin-top: 8px;
       color: rgba(200,168,78,0.92);
     }
+    .prompt-tools {
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin: 10px 0 14px;
+    }
+    .mini-btn {
+      border: 1px solid rgba(200,168,78,0.35);
+      background: rgba(30,34,51,0.08);
+      color: var(--ink);
+      border-radius: 10px;
+      padding: 8px 10px;
+      cursor: pointer;
+      font-family: 'Crimson Pro', serif;
+      font-size: 0.95em;
+    }
+    .mini-btn:hover { border-color: rgba(200,168,78,0.65); }
+    .mini-btn:disabled { opacity: 0.55; cursor: default; }
+    .breakdown {
+      display:none;
+      border: 1px dashed var(--rule);
+      background: var(--bg-deep);
+      border-radius: 10px;
+      padding: 10px 12px;
+      margin: 10px 0 12px;
+      font-family: 'Crimson Pro', serif;
+      color: var(--ink-light);
+      line-height: 1.55;
+    }
+    .breakdown.open { display:block; }
+    .typein {
+      display:none;
+      gap:10px;
+      align-items:center;
+      margin: 8px 0 14px;
+    }
+    .typein.open { display:flex; }
+    .typein input {
+      flex: 1;
+      min-width: 200px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--rule);
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.05em;
+      outline: none;
+    }
     .choices {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -284,6 +334,8 @@
     <div class="title">Learn Biblical Hebrew</div>
     <div class="actions">
       <button class="icon-btn" id="dark-btn" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
+      <button class="icon-btn" id="weak-btn" title="Weak list" aria-label="Weak list">★</button>
+      <button class="icon-btn" id="conf-btn" title="Confusion drill" aria-label="Confusion drill">≋</button>
       <button class="icon-btn" id="review-btn" title="Daily review" aria-label="Daily review">✓</button>
       <button class="icon-btn" id="map-btn" title="Learning map" aria-label="Learning map">☰</button>
       <button class="icon-btn" id="home-btn" title="Home" aria-label="Home">⌂</button>
@@ -310,6 +362,19 @@
           <div class="big" id="prompt-big">א</div>
           <div class="small" id="prompt-small">Pick the correct name.</div>
         </div>
+      </div>
+
+      <div class="prompt-tools">
+        <button class="mini-btn" id="audio-btn" type="button">🔊 Audio</button>
+        <button class="mini-btn" id="breakdown-btn" type="button">⟂ Breakdown</button>
+        <button class="mini-btn" id="dict-btn" type="button">📖 Dictionary</button>
+      </div>
+      <div class="breakdown" id="breakdown"></div>
+      <div class="breakdown" id="lesson"></div>
+
+      <div class="typein" id="typein">
+        <input id="typein-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type your answer…">
+        <button class="btn primary" id="typein-submit" type="button">Submit</button>
       </div>
 
       <div class="choices" id="choices"></div>
@@ -344,7 +409,24 @@
     </div>
   </div>
 
+  <div class="modal-backdrop" id="weak-modal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Weak list">
+      <div class="modal-header">
+        <div>
+          <div class="modal-title">Weak List</div>
+          <div class="sub" style="margin-top:2px;">Cards you miss often or recently. Use Weak Practice to strengthen them.</div>
+        </div>
+        <div style="display:flex; gap:10px; align-items:center;">
+          <button class="btn" id="weak-practice-btn" type="button">Weak practice</button>
+          <button class="btn primary" id="close-weak-btn" type="button">Close</button>
+        </div>
+      </div>
+      <div class="stage-list" id="weak-list"></div>
+    </div>
+  </div>
+
   <script src="nav_engine.js"></script>
+  <script src="strongs_lookup.js"></script>
   <script src="learn.js"></script>
 </body>
 </html>

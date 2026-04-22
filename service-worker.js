@@ -8,6 +8,8 @@ const CORE_ASSETS = [
     '/StandardWorks/learn.html',
     '/StandardWorks/learn.js',
     '/StandardWorks/curriculum/learn_hebrew.json',
+    '/StandardWorks/dictionary.html',
+    '/StandardWorks/dictionary.js',
     '/StandardWorks/mastery_hebrew_deck.js',
     '/StandardWorks/ot.html',
     '/StandardWorks/nt.html',

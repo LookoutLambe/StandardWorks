@@ -18,6 +18,8 @@
   var btnReset = document.getElementById('reset-btn');
   var btnDark = document.getElementById('dark-btn');
   var btnHome = document.getElementById('home-btn');
+  var btnWeak = document.getElementById('weak-btn');
+  var btnConf = document.getElementById('conf-btn');
   var btnReview = document.getElementById('review-btn');
   var btnMap = document.getElementById('map-btn');
   var mapModal = document.getElementById('map-modal');
@@ -26,6 +28,18 @@
   var btnExport = document.getElementById('export-progress-btn');
   var btnImport = document.getElementById('import-progress-btn');
   var btnUnlockAll = document.getElementById('unlock-all-btn');
+  var weakModal = document.getElementById('weak-modal');
+  var btnCloseWeak = document.getElementById('close-weak-btn');
+  var btnWeakPractice = document.getElementById('weak-practice-btn');
+  var elWeakList = document.getElementById('weak-list');
+  var btnAudio = document.getElementById('audio-btn');
+  var btnBreakdown = document.getElementById('breakdown-btn');
+  var btnDict = document.getElementById('dict-btn');
+  var elBreakdown = document.getElementById('breakdown');
+  var elLesson = document.getElementById('lesson');
+  var typeinWrap = document.getElementById('typein');
+  var typeinInput = document.getElementById('typein-input');
+  var btnTypeinSubmit = document.getElementById('typein-submit');
 
   function clamp(n, a, b) { return Math.max(a, Math.min(b, n)); }
   function now() { return Date.now(); }
@@ -45,6 +59,30 @@
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;');
+  }
+
+  function stripCantillationAndMeteg(s) {
+    // Keep vowel points (nikkud), drop cantillation marks and meteg to match lookup build normalization.
+    return String(s || '')
+      .replace(/[\u0591-\u05AF]/g, '')
+      .replace(/\u05BD/g, '')
+      .normalize('NFC');
+  }
+
+  function resolveStrongsFromHebrew(he) {
+    if (!he) return '';
+    var lookup = window._strongsLookup || null;
+    if (!lookup) return '';
+    var nfc = String(he).normalize('NFC');
+    var k1 = stripCantillationAndMeteg(nfc);
+    return lookup[k1] || lookup[nfc] || '';
+  }
+
+  function dictHrefForStrongs(hNum) {
+    if (!hNum) return '';
+    var p = (window.location && window.location.pathname) ? window.location.pathname : '';
+    var base = (p.indexOf('/bom/') >= 0 || /\\bom\\/.test(p)) ? '../dictionary.html' : 'dictionary.html';
+    return base + '#' + encodeURIComponent(hNum);
   }
 
   function downloadJson(filename, obj) {
@@ -82,13 +120,15 @@
   var state = {
     version: 2,
     stageId: null,
-    mode: 'stage', // 'stage' | 'review'
+    mode: 'stage', // 'stage' | 'review' | 'weak'
     unlockAll: false,
     hasSeenMap: false,
     total: 0,
     correct: 0,
     streak: 0,
-    cards: {} // { [cardId]: { reps, ease, interval, due, seen, correct } }
+    cards: {}, // { [cardId]: { reps, ease, interval, due, seen, correct, wrong, lastWrong } }
+    confusions: {}, // { "correct||wrong": count }
+    recent: [] // recent card ids (avoid repeats)
   };
 
   function loadState() {
@@ -108,8 +148,21 @@
   }
 
   function resetState() {
-    state = { version: 2, stageId: null, mode: 'stage', unlockAll: false, hasSeenMap: false, total: 0, correct: 0, streak: 0, cards: {} };
+    state = { version: 2, stageId: null, mode: 'stage', unlockAll: false, hasSeenMap: false, total: 0, correct: 0, streak: 0, cards: {}, confusions: {}, recent: [] };
     saveState();
+  }
+
+  function pushRecent(cardId) {
+    if (!cardId) return;
+    if (!state.recent) state.recent = [];
+    state.recent = state.recent.filter(function(x) { return x !== cardId; });
+    state.recent.unshift(cardId);
+    state.recent = state.recent.slice(0, 15);
+  }
+  function isRecent(cardId) {
+    if (!cardId) return false;
+    var r = state.recent || [];
+    return r.indexOf(cardId) >= 0;
   }
 
   function accuracyPct() {
@@ -155,7 +208,7 @@
 
   function cardStats(cardId) {
     if (!state.cards[cardId]) {
-      state.cards[cardId] = { reps: 0, ease: 2.5, interval: 0, due: 0, seen: 0, correct: 0 };
+      state.cards[cardId] = { reps: 0, ease: 2.5, interval: 0, due: 0, seen: 0, correct: 0, wrong: 0, lastWrong: 0 };
     }
     return state.cards[cardId];
   }
@@ -207,6 +260,7 @@
     var cs = cardStats(cardId);
     cs.seen += 1;
     if (wasCorrect) cs.correct += 1;
+    else { cs.wrong = (cs.wrong || 0) + 1; cs.lastWrong = now(); }
 
     var quality = wasCorrect ? 5 : 2;
     var ease = cs.ease || 2.5;
@@ -248,6 +302,9 @@
     }
 
     var pool = dueCards.length ? dueCards : cards;
+    // Avoid repeats if possible
+    var nonRecent = pool.filter(function(c) { return !isRecent(c.id); });
+    if (nonRecent.length >= 3) pool = nonRecent;
     // Weight: newer and weaker get priority
     var weights = [];
     var sum = 0;
@@ -285,6 +342,9 @@
       if (d <= now()) due.push(all[k]);
     }
     var pool = due.length ? due : all;
+    // Avoid repeats if possible
+    var nonRecent = pool.filter(function(x) { return !isRecent(x.card.id); });
+    if (nonRecent.length >= 6) pool = nonRecent;
 
     // Weight: new + weak + due (if in due pool, they’re all due already)
     var weights = [];
@@ -307,6 +367,86 @@
     return pool[pool.length - 1];
   }
 
+  function getWeakCards(limit) {
+    var stages = unlockedStages();
+    var items = [];
+    for (var i = 0; i < stages.length; i++) {
+      var stg = stages[i];
+      var cards = Array.isArray(stg.cards) ? stg.cards : [];
+      for (var j = 0; j < cards.length; j++) {
+        var c = cards[j];
+        // Don't include lessons in weak practice (they're informational)
+        if (c && c.type === 'lesson') continue;
+        var cs = cardStats(c.id);
+        if (!cs.seen) continue;
+        var acc = cs.correct / Math.max(1, cs.seen);
+        var wrong = cs.wrong || 0;
+        var recencyDays = cs.lastWrong ? ((now() - cs.lastWrong) / (24 * 60 * 60 * 1000)) : 999;
+
+        // Weak if missed at least once AND either low accuracy or recent miss.
+        if (wrong < 1) continue;
+        if (!(acc < 0.8 || recencyDays < 14)) continue;
+
+        // Score: lower accuracy + more wrong + more recent wrong.
+        var recencyBoost = Math.max(0, 14 - recencyDays); // 0..14
+        var score = (1 - acc) * 100 + wrong * 8 + recencyBoost * 2;
+        items.push({ stage: stg, card: c, stats: cs, score: score, acc: acc, recencyDays: recencyDays });
+      }
+    }
+    items.sort(function(a, b) { return b.score - a.score; });
+    return items.slice(0, Math.max(0, limit || 40));
+  }
+
+  function pickNextWeakCard() {
+    var weak = getWeakCards(200);
+    if (!weak.length) return null;
+    // Avoid repeats if possible
+    var pool = weak.filter(function(x) { return !isRecent(x.card && x.card.id); });
+    if (pool.length >= 6) weak = pool;
+    // Weight toward top-ranked weak cards.
+    var sum = 0;
+    var weights = [];
+    for (var i = 0; i < weak.length; i++) {
+      var w = 1 + (weak.length - i) / weak.length * 3; // 4..1
+      weights.push(w);
+      sum += w;
+    }
+    var r = Math.random() * sum;
+    for (var j = 0; j < weak.length; j++) {
+      r -= weights[j];
+      if (r <= 0) return weak[j];
+    }
+    return weak[0];
+  }
+
+  function _confKey(correctLabel, wrongLabel) {
+    return String(correctLabel || '') + '||' + String(wrongLabel || '');
+  }
+  function recordConfusion(correctLabel, wrongLabel) {
+    if (!correctLabel || !wrongLabel) return;
+    if (!state.confusions) state.confusions = {};
+    var k = _confKey(correctLabel, wrongLabel);
+    state.confusions[k] = (state.confusions[k] || 0) + 1;
+  }
+
+  function topConfusions(limit) {
+    var out = [];
+    var m = state.confusions || {};
+    Object.keys(m).forEach(function(k) {
+      out.push({ key: k, count: m[k] || 0 });
+    });
+    out.sort(function(a, b) { return (b.count || 0) - (a.count || 0); });
+    return out.slice(0, Math.max(0, limit || 50));
+  }
+
+  function startConfusionDrill() {
+    state.mode = 'weak'; // use weak pipeline but pick from confusion set via flag on round
+    state._confDrill = true;
+    saveState();
+    closeMap(); closeWeak();
+    next();
+  }
+
   function normalizeMcq(card) {
     // Ensure correct answer present in choices, unique, length 4.
     var ans =
@@ -317,6 +457,14 @@
     var choices = Array.isArray(card.choices) ? card.choices.map(String) : [];
     if (ans && choices.indexOf(ans) < 0) choices.push(ans);
     choices = Array.from(new Set(choices));
+    // If choices are missing, try to seed from confusion history for this correct answer.
+    if (choices.length < 4 && ans && state.confusions) {
+      var conf = topConfusions(200)
+        .map(function(x) { return x.key.split('||'); })
+        .filter(function(pair) { return pair[0] === ans && pair[1]; })
+        .map(function(pair) { return pair[1]; });
+      conf.forEach(function(w) { if (choices.length < 4) choices.push(w); });
+    }
     while (choices.length < 4) choices.push(choices[Math.floor(Math.random() * choices.length)] || ans || '?');
     choices = shuffle(choices).slice(0, 4);
     if (ans && choices.indexOf(ans) < 0) choices[Math.floor(Math.random() * 4)] = ans;
@@ -327,11 +475,62 @@
     var stg = getStageById(state.stageId) || getStageById(defaultStageId());
     if (!stg) return;
 
+    if (state.mode === 'weak') {
+      var pickW = (state._confDrill && state.confusions && Object.keys(state.confusions).length)
+        ? (function() {
+            var list = topConfusions(200);
+            if (!list.length) return null;
+            // Pick weighted
+            var sum = 0; var weights = [];
+            for (var i = 0; i < list.length; i++) { var w = Math.max(1, (list[i].count || 1)); weights.push(w); sum += w; }
+            var r = Math.random() * sum;
+            var chosen = list[0];
+            for (var j = 0; j < list.length; j++) { r -= weights[j]; if (r <= 0) { chosen = list[j]; break; } }
+            var parts = chosen.key.split('||');
+            var correct = parts[0]; var wrong = parts[1];
+            // Find a card whose answer matches correct label
+            var stages = unlockedStages();
+            for (var s = 0; s < stages.length; s++) {
+              var cards = Array.isArray(stages[s].cards) ? stages[s].cards : [];
+              for (var c = 0; c < cards.length; c++) {
+                var cd = cards[c];
+                var a =
+                  (cd.answer && cd.answer.en) ? String(cd.answer.en) :
+                  (cd.answer && cd.answer.gloss) ? String(cd.answer.gloss) :
+                  (cd.answer && cd.answer.text) ? String(cd.answer.text) : '';
+                if (a === correct) {
+                  // Ensure wrong is included as distractor via choices
+                  cd = Object.assign({}, cd);
+                  var baseChoices = Array.isArray(cd.choices) ? cd.choices.slice() : [];
+                  if (wrong && baseChoices.indexOf(wrong) < 0) baseChoices.push(wrong);
+                  cd.choices = baseChoices;
+                  return { stage: stages[s], card: cd };
+                }
+              }
+            }
+            return null;
+          })()
+        : pickNextWeakCard();
+      if (!pickW || !pickW.card) return;
+      stg = pickW.stage;
+      var cardW = pickW.card;
+      // Track recent to prevent loops
+      pushRecent(cardW.id);
+      var cfgW = normalizeMcq(cardW);
+      round = { stage: stg, card: cardW, answered: false, correctIdx: cfgW.choices.indexOf(cfgW.ans), choices: cfgW.choices };
+      return;
+    }
+
     if (state.mode === 'review') {
       var pick = pickNextCardAcrossUnlocked();
       if (!pick || !pick.card) return;
       stg = pick.stage;
       var card = pick.card;
+      pushRecent(card.id);
+      if (card.type === 'lesson' || card.type === 'type') {
+        round = { stage: stg, card: card, answered: false, correctIdx: -1, choices: [] };
+        return;
+      }
       if (card.type === 'mcq') {
         var cfgR = normalizeMcq(card);
         var correctIdxR = cfgR.choices.indexOf(cfgR.ans);
@@ -353,6 +552,12 @@
 
     var card = pickNextCard(stg);
     if (!card) return;
+    pushRecent(card.id);
+
+    if (card.type === 'lesson' || card.type === 'type') {
+      round = { stage: stg, card: card, answered: false, correctIdx: -1, choices: [] };
+      return;
+    }
 
     if (card.type === 'mcq') {
       var cfg = normalizeMcq(card);
@@ -378,6 +583,7 @@
     var prog = stg ? stageProgress(stg.id) : { pct: 0, due: 0, total: 0 };
     if (elMode) {
       if (state.mode === 'review') elMode.textContent = 'Mode: Review (' + totalDueAcrossUnlocked() + ' due)';
+      else if (state.mode === 'weak') elMode.textContent = 'Mode: Weak practice';
       else elMode.textContent = 'Mode: Stage';
     }
     if (elStage) elStage.textContent = 'Stage: ' + title + ' · ' + prog.pct + '%';
@@ -397,9 +603,36 @@
     if (elPromptSmall) elPromptSmall.textContent = hint;
 
     if (elChoices) elChoices.innerHTML = '';
+    if (elBreakdown) { elBreakdown.classList.remove('open'); elBreakdown.innerHTML = ''; }
+    if (elLesson) { elLesson.classList.remove('open'); elLesson.innerHTML = ''; }
+    if (typeinWrap) typeinWrap.classList.remove('open');
     btnNext.disabled = true;
 
     setFeedback('Tip: press <span class="kbd">1</span>–<span class="kbd">4</span> to answer. Press <span class="kbd">Enter</span> for next.');
+
+    if (card.type === 'lesson') {
+      // A lesson card is informational: show content and allow Continue.
+      var title = (card.prompt && card.prompt.title) ? String(card.prompt.title) : 'Lesson';
+      if (elPromptBig) elPromptBig.textContent = title;
+      if (elPromptSmall) elPromptSmall.textContent = hint || 'Read, then continue.';
+      if (elLesson) {
+        elLesson.innerHTML = card.contentHtml ? String(card.contentHtml) : '<div>No lesson content.</div>';
+        elLesson.classList.add('open');
+      }
+      btnNext.disabled = false;
+      btnNext.textContent = 'Continue';
+      return;
+    }
+
+    // Non-lesson cards use "Next"
+    btnNext.textContent = 'Next';
+
+    if (card.type === 'type') {
+      if (typeinWrap) typeinWrap.classList.add('open');
+      if (typeinInput) { typeinInput.value = ''; typeinInput.focus(); }
+      if (btnTypeinSubmit) btnTypeinSubmit.disabled = false;
+      return;
+    }
 
     if (card.type === 'mcq') {
       round.choices.forEach(function(label, idx) {
@@ -413,17 +646,33 @@
     }
   }
 
+  function openDictionaryForCurrentCard() {
+    if (!round || !round.card) return;
+    var card = round.card;
+    var he = card.prompt && card.prompt.he ? String(card.prompt.he) : '';
+    if (!he) { setFeedback('No Hebrew prompt to look up on this card.'); return; }
+    var hNum = resolveStrongsFromHebrew(he);
+    if (!hNum) { setFeedback('No Strong’s entry found for this form.'); return; }
+    window.location.href = dictHrefForStrongs(hNum);
+  }
+
   function answer(idx) {
     if (!round || round.answered) return;
     round.answered = true;
 
     var card = round.card;
     var ok = idx === round.correctIdx;
+    var chosenLabel = (round.choices && typeof idx === 'number') ? String(round.choices[idx] || '') : '';
 
     state.total += 1;
     if (ok) state.correct += 1;
     state.streak = ok ? (state.streak + 1) : 0;
     schedule(card.id, ok);
+    if (!ok) {
+      // record confusion (correct vs chosen label) for MCQ
+      var correctLabel = (round.choices && round.correctIdx >= 0) ? String(round.choices[round.correctIdx] || '') : '';
+      recordConfusion(correctLabel, chosenLabel);
+    }
     saveState();
 
     var buttons = elChoices.querySelectorAll('button.choice');
@@ -438,8 +687,34 @@
       (card.answer && card.answer.gloss) ? String(card.answer.gloss) :
       (card.answer && card.answer.text) ? String(card.answer.text) :
       '';
-    if (ok) setFeedback('<strong>Correct.</strong> Answer: <strong>' + safeHtml(ans) + '</strong>.');
-    else setFeedback('<strong>Not quite.</strong> Answer: <strong>' + safeHtml(ans) + '</strong>.');
+    var why = card.explain ? String(card.explain) : '';
+    var ref = (card.meta && card.meta.ref) ? String(card.meta.ref) : '';
+    var extra = '';
+    if (ref) extra += ' <span style="opacity:0.75">(' + safeHtml(ref) + ')</span>';
+    var stageId = (round && round.stage && round.stage.id) ? String(round.stage.id) : '';
+    var isExam = /^final-/.test(stageId) || /exam/i.test(stageId);
+    var actions = '';
+    if (isExam && !ok) {
+      actions =
+        '<div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap; align-items:center;">' +
+          '<button class="btn primary" data-action="weak" type="button">Practice weak</button>' +
+          '<button class="btn" data-action="review" type="button">Review due</button>' +
+          '<button class="btn" data-action="dict" type="button">Open dictionary</button>' +
+        '</div>';
+    }
+    if (ok) setFeedback('<strong>Correct.</strong> Answer: <strong>' + safeHtml(ans) + '</strong>.' + extra + (why ? '<br><span style=\"opacity:0.9\"><strong>Why:</strong> ' + safeHtml(why) + '</span>' : '') + actions);
+    else setFeedback('<strong>Not quite.</strong> Answer: <strong>' + safeHtml(ans) + '</strong>.' + extra + (why ? '<br><span style=\"opacity:0.9\"><strong>Why:</strong> ' + safeHtml(why) + '</span>' : '') + actions);
+
+    if (actions && elFeedback) {
+      elFeedback.querySelectorAll('button[data-action]').forEach(function(b) {
+        b.onclick = function() {
+          var a = b.getAttribute('data-action');
+          if (a === 'weak') { state.mode = 'weak'; state._confDrill = false; saveState(); closeMap(); closeWeak(); next(); }
+          else if (a === 'review') { state.mode = 'review'; saveState(); closeMap(); closeWeak(); next(); }
+          else if (a === 'dict') { openDictionaryForCurrentCard(); }
+        };
+      });
+    }
 
     renderMeta();
 
@@ -459,10 +734,98 @@
     btnNext.focus();
   }
 
+  function normalizeText(s) {
+    return String(s || '')
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, ' ')
+      .replace(/[.,;:!?'"()]/g, '');
+  }
+
+  function submitTypein() {
+    if (!round || !round.card || round.answered) return;
+    var card = round.card;
+    var expected =
+      (card.answer && card.answer.text) ? String(card.answer.text) :
+      (card.answer && card.answer.en) ? String(card.answer.en) :
+      (card.answer && card.answer.gloss) ? String(card.answer.gloss) : '';
+    var got = typeinInput ? typeinInput.value : '';
+    var ok = normalizeText(got) === normalizeText(expected);
+    // Fake MCQ answer path using index=-1 (no confusion)
+    round.choices = [expected];
+    round.correctIdx = 0;
+    answer(ok ? 0 : 0);
+  }
+
+  function renderBreakdownForCard(card) {
+    if (!elBreakdown || !card) return;
+    var parts = card.breakdown;
+    if (!parts && card.prompt && card.prompt.he) {
+      // basic heuristic: detect common prefixes and article
+      var he = String(card.prompt.he);
+      var items = [];
+      var rest = he;
+      function take(re, label, gloss) {
+        var m = rest.match(re);
+        if (!m) return false;
+        items.push({ label: label, he: m[0], gloss: gloss });
+        rest = rest.slice(m[0].length);
+        return true;
+      }
+      take(/^וְ/, 'prefix', 'and (wə-)');
+      take(/^הַ/, 'article', 'the (ha-)');
+      take(/^בַּ|^בְּ|^בְ/, 'prefix', 'in/at (bə-/ba-)');
+      take(/^לַ|^לְ/, 'prefix', 'to/for (lə-/la-)');
+      take(/^כַּ|^כְ/, 'prefix', 'like/as (kə-/ka-)');
+      items.push({ label: 'word', he: rest, gloss: '' });
+      parts = items;
+    }
+    if (!parts || !parts.length) {
+      elBreakdown.innerHTML = 'No breakdown available for this card yet.';
+      elBreakdown.classList.add('open');
+      return;
+    }
+    var html = '<div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">';
+    parts.forEach(function(p) {
+      html += '<div class="pill"><span style="font-family:David Libre, serif; direction:rtl">' + safeHtml(p.he || '') + '</span>' +
+        (p.gloss ? (' <span style="opacity:0.75">· ' + safeHtml(p.gloss) + '</span>') : '') +
+        '</div>';
+    });
+    html += '</div>';
+    elBreakdown.innerHTML = html;
+    elBreakdown.classList.add('open');
+  }
+
+  function speakHebrew(text) {
+    try {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      var u = new SpeechSynthesisUtterance(String(text || ''));
+      u.lang = 'he-IL';
+      // pick a Hebrew voice if available
+      var voices = window.speechSynthesis.getVoices ? window.speechSynthesis.getVoices() : [];
+      var v = null;
+      for (var i = 0; i < voices.length; i++) {
+        if ((voices[i].lang || '').toLowerCase().indexOf('he') === 0) { v = voices[i]; break; }
+      }
+      if (v) u.voice = v;
+      window.speechSynthesis.speak(u);
+    } catch (e) {}
+  }
+
   function next() {
     makeRound();
     renderRound();
     refreshMapIfOpen();
+  }
+
+  function completeLessonIfNeeded() {
+    if (!round || !round.card) return false;
+    if (round.card.type !== 'lesson') return false;
+    // Mark as "learned" for scheduling, but don't affect accuracy/streak.
+    schedule(round.card.id, true);
+    saveState();
+    return true;
   }
 
   // ── Map UI ──
@@ -484,6 +847,46 @@
       saveState();
     }
   }
+
+  function openWeak() {
+    if (!weakModal) return;
+    weakModal.classList.add('open');
+    weakModal.setAttribute('aria-hidden', 'false');
+    renderWeakList();
+  }
+  function closeWeak() {
+    if (!weakModal) return;
+    weakModal.classList.remove('open');
+    weakModal.setAttribute('aria-hidden', 'true');
+  }
+
+  function renderWeakList() {
+    if (!elWeakList) return;
+    var weak = getWeakCards(60);
+    if (!weak.length) {
+      elWeakList.innerHTML = '<div class="stage-row"><div class="stage-left"><div class="stage-name">No weak cards yet</div><div class="stage-desc">Answer a few cards first. Missed cards will show up here.</div></div></div>';
+      return;
+    }
+    var html = '';
+    weak.forEach(function(w) {
+      var he = (w.card.prompt && w.card.prompt.he) ? String(w.card.prompt.he) : '';
+      var hint = (w.card.prompt && w.card.prompt.hint) ? String(w.card.prompt.hint) : '';
+      var accPct = Math.round((w.acc || 0) * 100);
+      var wrong = w.stats && w.stats.wrong ? w.stats.wrong : 0;
+      html += '' +
+        '<div class="stage-row">' +
+          '<div class="stage-left">' +
+            '<div class="stage-name"><span style="font-family:David Libre, serif; font-size:1.15em; margin-right:10px;">' + safeHtml(he) + '</span> <span style="opacity:0.75">' + safeHtml(w.stage.title) + '</span></div>' +
+            '<div class="stage-desc">' + safeHtml(hint) + '</div>' +
+          '</div>' +
+          '<div class="stage-right">' +
+            '<div class="pill">Acc: ' + accPct + '%</div>' +
+            '<div class="pill">Misses: ' + wrong + '</div>' +
+          '</div>' +
+        '</div>';
+    });
+    elWeakList.innerHTML = html;
+  }
   function refreshMapIfOpen() {
     if (!mapModal) return;
     if (mapModal.classList.contains('open')) renderMap();
@@ -493,8 +896,23 @@
     if (!elStageList) return;
     var stages = getStages();
     var html = '';
+    var lastUnit = null;
     for (var i = 0; i < stages.length; i++) {
       var stg = stages[i];
+      var unit = stg.unit || null;
+      if (unit && unit !== lastUnit) {
+        html += '' +
+          '<div class="stage-row" style="background:rgba(200,168,78,0.10); border-style:solid;">' +
+            '<div class="stage-left">' +
+              '<div class="stage-name">' + safeHtml(unit) + '</div>' +
+              '<div class="stage-desc">Unit</div>' +
+            '</div>' +
+            '<div class="stage-right"></div>' +
+          '</div>';
+        lastUnit = unit;
+      } else if (!unit) {
+        lastUnit = null;
+      }
       var unlocked = isStageUnlocked(stg);
       var prog = stageProgress(stg.id);
       var isActive = stg.id === state.stageId;
@@ -521,6 +939,11 @@
         var stg = getStageById(id);
         if (!stg || !isStageUnlocked(stg)) return;
         state.stageId = id;
+        // Picking a stage from the map should always enter Stage mode,
+        // otherwise users stay stuck in Weak/Review and it feels like a loop.
+        state.mode = 'stage';
+        state._confDrill = false;
+        state.recent = [];
         saveState();
         closeMap();
         next();
@@ -553,11 +976,22 @@
   function onKeydown(e) {
     if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable)) return;
     if (e.key === 'd' || e.key === 'D') toggleDark();
-    if (e.key === 'Escape') closeMap();
+    if (e.key === 'Escape') { closeMap(); closeWeak(); }
     if (e.key === 'm' || e.key === 'M') { if (mapModal && mapModal.classList.contains('open')) closeMap(); else openMap(); }
     if (e.key === 'r' || e.key === 'R') { toggleReviewMode(); }
+    if (e.key === 'w' || e.key === 'W') { if (weakModal && weakModal.classList.contains('open')) closeWeak(); else openWeak(); }
+    if (e.key === 'c' || e.key === 'C') { startConfusionDrill(); }
+    if (e.key === 'b' || e.key === 'B') { if (round && round.card) renderBreakdownForCard(round.card); }
     if (!round || !round.card) return;
     if (!round.answered) {
+      if (round.card && round.card.type === 'lesson') {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); if (completeLessonIfNeeded()) next(); }
+        return;
+      }
+      if (round.card && round.card.type === 'type') {
+        if (e.key === 'Enter') { e.preventDefault(); submitTypein(); }
+        return;
+      }
       if (e.key === '1') answer(0);
       if (e.key === '2') answer(1);
       if (e.key === '3') answer(2);
@@ -571,6 +1005,15 @@
     state.mode = (state.mode === 'review') ? 'stage' : 'review';
     saveState();
     closeMap();
+    closeWeak();
+    next();
+  }
+
+  function startWeakPractice() {
+    state.mode = 'weak';
+    saveState();
+    closeMap();
+    closeWeak();
     next();
   }
 
@@ -589,19 +1032,27 @@
 
     if (!state.stageId) state.stageId = defaultStageId();
     if (!state.stageId && getStages().length) state.stageId = getStages()[0].id;
-    if (state.mode !== 'review' && state.mode !== 'stage') state.mode = 'stage';
+    if (state.mode !== 'review' && state.mode !== 'stage' && state.mode !== 'weak') state.mode = 'stage';
     if (typeof state.unlockAll !== 'boolean') state.unlockAll = false;
     if (typeof state.hasSeenMap !== 'boolean') state.hasSeenMap = false;
     saveState();
 
     if (btnDark) btnDark.onclick = toggleDark;
     if (btnHome) btnHome.onclick = function() { window.location.href = homeHref(); };
+    if (btnWeak) btnWeak.onclick = openWeak;
+    if (btnConf) btnConf.onclick = startConfusionDrill;
     if (btnReview) btnReview.onclick = toggleReviewMode;
     if (btnMap) btnMap.onclick = openMap;
     if (btnCloseMap) btnCloseMap.onclick = closeMap;
     if (mapModal) mapModal.onclick = function(e) { if (e.target === mapModal) closeMap(); };
+    if (btnCloseWeak) btnCloseWeak.onclick = closeWeak;
+    if (btnWeakPractice) btnWeakPractice.onclick = startWeakPractice;
+    if (weakModal) weakModal.onclick = function(e) { if (e.target === weakModal) closeWeak(); };
 
-    if (btnNext) btnNext.onclick = next;
+    if (btnNext) btnNext.onclick = function() {
+      if (completeLessonIfNeeded()) return next();
+      return next();
+    };
     if (btnReset) btnReset.onclick = function() {
       if (!confirm('Reset your Learn Hebrew progress?')) return;
       resetState();
@@ -636,6 +1087,15 @@
       if (btnUnlockAll) btnUnlockAll.textContent = state.unlockAll ? 'Lock progression' : 'Unlock all';
     };
 
+    if (btnAudio) btnAudio.onclick = function() {
+      if (round && round.card && round.card.prompt && round.card.prompt.he) speakHebrew(round.card.prompt.he);
+    };
+    if (btnBreakdown) btnBreakdown.onclick = function() {
+      if (round && round.card) renderBreakdownForCard(round.card);
+    };
+    if (btnDict) btnDict.onclick = openDictionaryForCurrentCard;
+    if (btnTypeinSubmit) btnTypeinSubmit.onclick = submitTypein;
+
     document.addEventListener('keydown', onKeydown);
 
     // Ensure SW is registered (consistent with index.html behavior)
@@ -648,8 +1108,11 @@
     next();
 
     // On first entry, show the learning map so users can see the full scope.
+    // Default to "Unlock all" so it’s obvious this is more than the alphabet.
     // Only do this if they haven't started answering yet.
     if (!state.hasSeenMap && !state.total) {
+      state.unlockAll = true;
+      saveState();
       setTimeout(function() { openMap(); }, 50);
     }
   }

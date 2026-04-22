@@ -7,11 +7,12 @@
       "id": "letters-1",
       "title": "Alphabet I — Names",
       "desc": "Recognize the 22 consonants by name.",
+      "unit": "Unit 1 — Reading Foundations",
       "unlock": { "type": "start" },
       "mastery": { "targetPct": 85, "minSeenEach": 4 },
       "cards": [
         { "id": "ltr-aleph", "type": "mcq", "prompt": { "he": "א", "hint": "Pick the correct letter name." }, "answer": { "en": "ʾālef" }, "choices": ["bēt","gīmel","ʾālef","dālet"] },
-        { "id": "ltr-bet",   "type": "mcq", "prompt": { "he": "ב", "hint": "Pick the correct letter name." }, "answer": { "en": "bēt" }, "choices": ["bēt","mēm","nūn","rēš"] },
+        { "id": "ltr-bet",   "type": "mcq", "prompt": { "he": "ב", "hint": "Pick the correct letter name." }, "answer": { "en": "bēt" }, "choices": ["bēt","mēm","nūn","rēš"], "explain": "This is ב (bet). With dagesh (בּ) it’s usually read b; without dagesh it often reads v in later stages." },
         { "id": "ltr-gimel", "type": "mcq", "prompt": { "he": "ג", "hint": "Pick the correct letter name." }, "answer": { "en": "gīmel" }, "choices": ["gīmel","hē","kāf","tāw"] },
         { "id": "ltr-dalet", "type": "mcq", "prompt": { "he": "ד", "hint": "Pick the correct letter name." }, "answer": { "en": "dālet" }, "choices": ["dālet","yōd","ṣādē","ʿayin"] },
         { "id": "ltr-he",    "type": "mcq", "prompt": { "he": "ה", "hint": "Pick the correct letter name." }, "answer": { "en": "hē" }, "choices": ["hē","wāw","ṭēt","qōp"] },
@@ -38,6 +39,7 @@
       "id": "letters-2",
       "title": "Alphabet II — Final Forms",
       "desc": "Recognize the 5 final forms (ך ם ן ף ץ) and their normal forms.",
+      "unit": "Unit 1 — Reading Foundations",
       "unlock": { "type": "after", "stageId": "letters-1" },
       "mastery": { "targetPct": 85, "minSeenEach": 4 },
       "cards": [
@@ -49,10 +51,37 @@
       ]
     },
     {
+      "id": "nikkud-lesson",
+      "title": "Lesson — Nikkud (Vowel Pointing)",
+      "desc": "Learn what nikkud is, where it goes, and what the dots do.",
+      "unit": "Unit 1 — Reading Foundations",
+      "unlock": { "type": "after", "stageId": "letters-2" },
+      "mastery": { "targetPct": 85, "minSeenEach": 1 },
+      "cards": [
+        {
+          "id": "lesson-nikkud-1",
+          "type": "lesson",
+          "prompt": { "title": "Nikkud (נִקּוּד)", "hint": "Read this once. Then continue to a short quiz." },
+          "contentHtml": "<div style=\"font-family:'Crimson Pro',serif; line-height:1.7; color:var(--ink);\">\n  <div style=\"font-size:1.05em; margin-bottom:10px;\">\n    <strong>Nikkud</strong> (\"dotting\") are the small marks <em>above</em> and <em>below</em> Hebrew consonants that show <strong>vowels</strong> and a few other pronunciation cues.\n    Biblical Hebrew is mostly written with consonants; nikkud tells you how to <strong>read</strong> what’s on the page.\n  </div>\n\n  <div style=\"margin:12px 0; padding:10px 12px; background:var(--bg-deep); border:1px solid var(--rule); border-radius:10px;\">\n    <div style=\"font-weight:650; margin-bottom:6px;\">Why we use א (aleph) in examples</div>\n    <div>א is usually <strong>silent</strong>, so it’s a great “base letter” for learning vowels. You can focus on the vowel mark itself.</div>\n  </div>\n\n  <div style=\"margin:12px 0; padding:10px 12px; background:var(--bg-deep); border:1px solid var(--rule); border-radius:10px;\">\n    <div style=\"font-weight:650; margin-bottom:6px;\">1) The “full” vowels (most common)</div>\n    <div style=\"display:flex; gap:10px; flex-wrap:wrap; align-items:center;\">\n      <div class=\"pill\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.2em;\">אַ</span> <span style=\"opacity:0.75\">patah (a)</span></div>\n      <div class=\"pill\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.2em;\">אָ</span> <span style=\"opacity:0.75\">qamats (ā)</span></div>\n      <div class=\"pill\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.2em;\">אֶ</span> <span style=\"opacity:0.75\">segol (e)</span></div>\n      <div class=\"pill\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.2em;\">אֵ</span> <span style=\"opacity:0.75\">tsere (ē)</span></div>\n      <div class=\"pill\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.2em;\">אִ</span> <span style=\"opacity:0.75\">hireq (i)</span></div>\n      <div class=\"pill\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.2em;\">אֹ</span> <span style=\"opacity:0.75\">holam (ō)</span></div>\n      <div class=\"pill\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.2em;\">אֻ</span> <span style=\"opacity:0.75\">qibbuts (u)</span></div>\n      <div class=\"pill\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.2em;\">אוּ</span> <span style=\"opacity:0.75\">shureq (û)</span></div>\n    </div>\n    <div style=\"margin-top:8px; color:var(--ink-light);\">Rule of thumb: the vowel mark belongs to the consonant it’s on (under/over it).</div>\n  </div>\n\n  <div style=\"margin:12px 0; padding:10px 12px; background:var(--bg-deep); border:1px solid var(--rule); border-radius:10px;\">\n    <div style=\"font-weight:650; margin-bottom:6px;\">2) The ḥateph (\"reduced\") vowels</div>\n    <div style=\"display:flex; gap:10px; flex-wrap:wrap; align-items:center;\">\n      <div class=\"pill\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.2em;\">אֱ</span> <span style=\"opacity:0.75\">ḥateph segol (ĕ)</span></div>\n      <div class=\"pill\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.2em;\">אֲ</span> <span style=\"opacity:0.75\">ḥateph patah (ă)</span></div>\n      <div class=\"pill\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.2em;\">אֳ</span> <span style=\"opacity:0.75\">ḥateph qamats (ŏ)</span></div>\n    </div>\n    <div style=\"margin-top:8px; color:var(--ink-light);\">These often appear with gutturals (א ה ח ע). For now, learn the shapes and names.</div>\n  </div>\n\n  <div style=\"margin:12px 0; padding:10px 12px; background:var(--bg-deep); border:1px solid var(--rule); border-radius:10px;\">\n    <div style=\"font-weight:650; margin-bottom:6px;\">3) Shewa (ְ) is special</div>\n    <div style=\"font-size:1.35em; font-family:'David Libre',serif; direction:rtl;\">אְ</div>\n    <div>Shewa can be very short (often like <strong>ə</strong>) or silent depending on position. We’ll practice it step‑by‑step later.</div>\n  </div>\n\n  <div style=\"margin:12px 0; padding:10px 12px; background:var(--bg-deep); border:1px solid var(--rule); border-radius:10px;\">\n    <div style=\"font-weight:650; margin-bottom:6px;\">4) Dots can be vowels OR consonant marks</div>\n    <div style=\"font-size:1.35em; font-family:'David Libre',serif; direction:rtl;\">בָּ / בָ</div>\n    <div>The dot <strong>inside</strong> a letter is often <strong>dagesh</strong> (a consonant mark). The vowel is still the mark under/over the letter.</div>\n    <div style=\"margin-top:6px; color:var(--ink-light);\">Important: not every letter can take dagesh; aleph usually does not.</div>\n  </div>\n\n  <div style=\"margin:12px 0; padding:10px 12px; background:var(--bg-deep); border:1px solid var(--rule); border-radius:10px;\">\n    <div style=\"font-weight:650; margin-bottom:6px;\">5) Shin / Sin dots (they change the consonant)</div>\n    <div style=\"display:flex; gap:12px; flex-wrap:wrap; align-items:center;\">\n      <div class=\"pill\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.2em;\">שׁ</span> <span style=\"opacity:0.75\">shin (š)</span></div>\n      <div class=\"pill\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.2em;\">שׂ</span> <span style=\"opacity:0.75\">sin (ś/s)</span></div>\n    </div>\n    <div style=\"margin-top:8px; color:var(--ink-light);\">Dot on the <strong>right</strong> = שׁ (sh). Dot on the <strong>left</strong> = שׂ (s).</div>\n  </div>\n\n  <div style=\"margin:12px 0; padding:10px 12px; background:var(--bg-deep); border:1px solid var(--rule); border-radius:10px;\">\n    <div style=\"font-weight:650; margin-bottom:6px;\">6) Mappiq (הּ) — a dot in final ה</div>\n    <div style=\"font-size:1.35em; font-family:'David Libre',serif; direction:rtl;\">הּ</div>\n    <div>Sometimes a dot in <strong>final ה</strong> indicates the ה is pronounced (often called <strong>mappiq</strong>).</div>\n  </div>\n\n  <div style=\"margin:12px 0; padding:10px 12px; background:var(--bg-deep); border:1px solid var(--rule); border-radius:10px;\">\n    <div style=\"font-weight:650; margin-bottom:6px;\">7) (Later) Cantillation marks</div>\n    <div style=\"color:var(--ink-light);\">Cantillation/accents help with chanting and phrasing. For beginner reading, we can ignore them at first.</div>\n  </div>\n\n  <div style=\"margin-top:10px; color:var(--ink-light);\">Next you’ll do a quiz, then you’ll start recognizing each vowel point by name.</div>\n</div>"
+        },
+        { "id": "nq-1", "type": "mcq", "prompt": { "he": "אָ", "hint": "In general, nikkud primarily helps you see…" }, "answer": { "en": "vowels" }, "choices": ["vowels","only consonants","chapter numbers","English glosses"], "explain": "Nikkud primarily marks vowel sounds (and a few pronunciation cues)." },
+        { "id": "nq-2", "type": "mcq", "prompt": { "he": "אֹ", "hint": "This vowel mark is…" }, "answer": { "en": "holam (ō)" }, "choices": ["holam (ō)","qibbuts (u)","hireq (i)","segol (e)"], "explain": "Holam is the dot above-left, typically reading ō." },
+        { "id": "nq-3", "type": "mcq", "prompt": { "he": "אֻ", "hint": "This vowel mark is…" }, "answer": { "en": "qibbuts (u)" }, "choices": ["qibbuts (u)","shureq (û)","qamats (ā)","tsere (ē)"], "explain": "Qibbuts is the three dots under a letter, usually reading u." },
+        { "id": "nq-4", "type": "mcq", "prompt": { "he": "אוּ", "hint": "This vowel spelling is called…" }, "answer": { "en": "shureq (û)" }, "choices": ["shureq (û)","holam (ō)","qibbuts (u)","hireq (i)"], "explain": "Shureq is a vav with a dot, usually reading û." },
+        { "id": "nq-5", "type": "mcq", "prompt": { "he": "אֱ", "hint": "This is a..." }, "answer": { "en": "ḥateph segol (ĕ)" }, "choices": ["ḥateph segol (ĕ)","segol (e)","shewa","tsere (ē)"], "explain": "Ḥateph vowels are reduced vowels, common with gutturals." },
+        { "id": "nq-6", "type": "mcq", "prompt": { "he": "אְ", "hint": "The two vertical dots under the letter are called…" }, "answer": { "en": "shewa" }, "choices": ["shewa","hireq","holam","meteg"], "explain": "Shewa (ְ) is a special sign that can be very short or silent depending on position." },
+        { "id": "nq-7", "type": "mcq", "prompt": { "he": "בָּ", "hint": "The dot inside the ב is most often called…" }, "answer": { "en": "dagesh" }, "choices": ["dagesh","qamats","tsere","shewa"], "explain": "A dot inside certain consonants is often dagesh (a consonant mark)." },
+        { "id": "nq-8", "type": "mcq", "prompt": { "he": "שׁ", "hint": "This letter is read as…" }, "answer": { "en": "shin (š)" }, "choices": ["shin (š)","sin (ś/s)","samekh (s)","tsade (ṣ)"], "explain": "Dot on the right = שׁ (sh)." },
+        { "id": "nq-9", "type": "mcq", "prompt": { "he": "שׂ", "hint": "This letter is read as…" }, "answer": { "en": "sin (ś/s)" }, "choices": ["sin (ś/s)","shin (š)","zayin (z)","resh (r)"], "explain": "Dot on the left = שׂ (s)." },
+        { "id": "nq-10", "type": "mcq", "prompt": { "he": "הּ", "hint": "A dot in final ה is often called…" }, "answer": { "en": "mappiq" }, "choices": ["mappiq","dagesh","holam","shewa"], "explain": "Mappiq indicates the final ה is pronounced (in certain contexts)." }
+      ]
+    },
+    {
       "id": "vowels-1",
       "title": "Pointing I — Vowel Names",
       "desc": "Recognize the main vowel points.",
-      "unlock": { "type": "after", "stageId": "letters-2" },
+      "unit": "Unit 1 — Reading Foundations",
+      "unlock": { "type": "after", "stageId": "nikkud-lesson" },
       "mastery": { "targetPct": 85, "minSeenEach": 4 },
       "cards": [
         { "id": "v-qamats", "type": "mcq", "prompt": { "he": "בָ", "hint": "Name the vowel (ignore the consonant)." }, "answer": { "en": "qamats (ā)" }, "choices": ["qamats (ā)","patah (a)","tsere (ē)","hireq (i)"] },
@@ -72,6 +101,7 @@
       "id": "syllables-1",
       "title": "Syllables I — Open vs Closed",
       "desc": "Recognize open/closed syllables using simple examples.",
+      "unit": "Unit 1 — Reading Foundations",
       "unlock": { "type": "after", "stageId": "vowels-1" },
       "mastery": { "targetPct": 85, "minSeenEach": 4 },
       "cards": [
@@ -85,6 +115,7 @@
       "id": "words-1",
       "title": "Word Reading I — One Syllable",
       "desc": "Read simple pointed syllables/words (transliteration choices).",
+      "unit": "Unit 1 — Reading Foundations",
       "unlock": { "type": "after", "stageId": "syllables-1" },
       "mastery": { "targetPct": 85, "minSeenEach": 4 },
       "cards": [
@@ -98,6 +129,7 @@
       "id": "dagesh-1",
       "title": "Pointing II — Dagesh",
       "desc": "Recognize dagesh (dot in a consonant) and basic reading impact.",
+      "unit": "Unit 1 — Reading Foundations",
       "unlock": { "type": "after", "stageId": "words-1" },
       "mastery": { "targetPct": 85, "minSeenEach": 3 },
       "cards": [
@@ -110,6 +142,7 @@
       "id": "begadkephat-1",
       "title": "Reading I — Begadkephat (Hard/Soft)",
       "desc": "Read ב כ פ with/without dagesh in simple, beginner-friendly examples.",
+      "unit": "Unit 1 — Reading Foundations",
       "unlock": { "type": "after", "stageId": "dagesh-1" },
       "mastery": { "targetPct": 85, "minSeenEach": 3 },
       "cards": [
@@ -181,6 +214,7 @@
       "id": "prefixes-1",
       "title": "Syntax II — Common Prefixes (Reading)",
       "desc": "Recognize common prefixes (וְ, הַ, בְּ, לְ, כְּ) on simple words.",
+      "unit": "Unit 2 — Nouns & Syntax Basics",
       "unlock": { "type": "after", "stageId": "words-2" },
       "mastery": { "targetPct": 85, "minSeenEach": 3 },
       "cards": [
@@ -199,6 +233,7 @@
       "id": "article-1",
       "title": "Syntax III — The Article (Assimilation)",
       "desc": "Recognize basic assimilation patterns of הַ with certain consonants in beginner reading.",
+      "unit": "Unit 2 — Nouns & Syntax Basics",
       "unlock": { "type": "after", "stageId": "prefixes-1" },
       "mastery": { "targetPct": 85, "minSeenEach": 3 },
       "cards": [
@@ -210,9 +245,323 @@
       ]
     },
     {
+      "id": "nouns-1",
+      "title": "Lesson — Nouns & Adjectives (Gender/Number)",
+      "desc": "Understand gender/number and how adjectives agree in simple phrases.",
+      "unit": "Unit 2 — Nouns & Syntax Basics",
+      "unlock": { "type": "after", "stageId": "article-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 1 },
+      "cards": [
+        {
+          "id": "lesson-nouns-1",
+          "type": "lesson",
+          "prompt": { "title": "Nouns & Adjectives", "hint": "Read, then take the quiz." },
+          "contentHtml": "<div style=\"font-family:'Crimson Pro',serif; line-height:1.7; color:var(--ink);\">\n  <div style=\"font-size:1.05em; margin-bottom:10px;\"><strong>Hebrew nouns</strong> have <strong>gender</strong> (masculine/feminine) and <strong>number</strong> (singular/plural). Adjectives usually <strong>agree</strong> with the noun in gender/number.</div>\n  <div style=\"margin:12px 0; padding:10px 12px; background:var(--bg-deep); border:1px solid var(--rule); border-radius:10px;\">\n    <div style=\"font-weight:650; margin-bottom:6px;\">Common plural endings (basic)</div>\n    <div class=\"pill\">Masculine plural often: <span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.1em;\">־ים</span> (‑îm)</div>\n    <div class=\"pill\" style=\"margin-top:8px;\">Feminine plural often: <span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.1em;\">־וֹת</span> (‑ôt)</div>\n  </div>\n  <div style=\"margin:12px 0; padding:10px 12px; background:var(--bg-deep); border:1px solid var(--rule); border-radius:10px;\">\n    <div style=\"font-weight:650; margin-bottom:6px;\">Adjective agreement (simple)</div>\n    <div style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.35em;\">מֶלֶךְ טוֹב</div>\n    <div>Both words are masculine singular (“a good king”). In more advanced stages you’ll learn patterns and exceptions.</div>\n  </div>\n</div>"
+        },
+        { "id": "nns-1", "type": "mcq", "prompt": { "he": "־ים", "hint": "This ending most often marks…" }, "answer": { "en": "masculine plural" }, "choices": ["masculine plural","feminine plural","dual","definite article"], "explain": "‑îm is a common masculine plural ending." },
+        { "id": "nns-2", "type": "mcq", "prompt": { "he": "־וֹת", "hint": "This ending most often marks…" }, "answer": { "en": "feminine plural" }, "choices": ["feminine plural","masculine plural","construct chain","verb stem"], "explain": "‑ôt is a common feminine plural ending." },
+        { "id": "nns-3", "type": "mcq", "prompt": { "he": "מֶלֶךְ טוֹב", "hint": "This phrase is best read as…" }, "answer": { "en": "a good king" }, "choices": ["a good king","good kings","the good king","king of good"], "explain": "Noun + adjective (basic reading); both are masculine singular here." }
+      ]
+    },
+    {
+      "id": "suffixes-1",
+      "title": "Lesson — Pronominal Suffixes (Very Basic)",
+      "desc": "Recognize simple possessive suffixes (my/your/his) in reading.",
+      "unit": "Unit 2 — Nouns & Syntax Basics",
+      "unlock": { "type": "after", "stageId": "nouns-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 1 },
+      "cards": [
+        {
+          "id": "lesson-suf-1",
+          "type": "lesson",
+          "prompt": { "title": "Pronominal Suffixes", "hint": "Read, then quiz." },
+          "contentHtml": "<div style=\"font-family:'Crimson Pro',serif; line-height:1.7; color:var(--ink);\">\n  <div style=\"font-size:1.05em; margin-bottom:10px;\">Hebrew often attaches pronouns directly to a noun: <strong>my / your / his / her</strong>. These are called <strong>pronominal suffixes</strong>.</div>\n  <div style=\"margin:12px 0; padding:10px 12px; background:var(--bg-deep); border:1px solid var(--rule); border-radius:10px;\">\n    <div style=\"font-weight:650; margin-bottom:6px;\">Simple examples (reading)</div>\n    <div class=\"pill\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.15em;\">מֶלֶךְ</span> = king</div>\n    <div class=\"pill\" style=\"margin-top:8px;\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.15em;\">מַלְכִּי</span> = my king</div>\n    <div class=\"pill\" style=\"margin-top:8px;\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.15em;\">מַלְכּוֹ</span> = his king</div>\n  </div>\n  <div style=\"color:var(--ink-light);\">We’ll expand these patterns a lot later. For now, learn to recognize the idea.</div>\n</div>"
+        },
+        { "id": "suf-1", "type": "mcq", "prompt": { "he": "מַלְכִּי", "hint": "Best gloss?" }, "answer": { "en": "my king" }, "choices": ["my king","his king","the king","kings"], "explain": "‑î is a common “my” suffix in many nouns." },
+        { "id": "suf-2", "type": "mcq", "prompt": { "he": "מַלְכּוֹ", "hint": "Best gloss?" }, "answer": { "en": "his king" }, "choices": ["his king","my king","their king","king of"], "explain": "‑ô often marks “his” on many nouns." }
+      ]
+    },
+    {
+      "id": "prep-1",
+      "title": "Lesson — Prepositions & Conjunctions (Meaning)",
+      "desc": "Learn key small words and prefixes that drive comprehension: and/in/to/as/from/with.",
+      "unit": "Unit 2 — Nouns & Syntax Basics",
+      "unlock": { "type": "after", "stageId": "suffixes-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 2 },
+      "cards": [
+        {
+          "id": "lesson-prep-1",
+          "type": "lesson",
+          "prompt": { "title": "Prepositions & Conjunctions", "hint": "These are the glue of Hebrew sentences." },
+          "contentHtml": "<div style=\"font-family:'Crimson Pro',serif; line-height:1.7; color:var(--ink);\">\n  <div style=\"font-size:1.05em; margin-bottom:10px;\">A huge amount of comprehension comes from recognizing <strong>small words</strong>:</div>\n  <div style=\"margin:12px 0; padding:10px 12px; background:var(--bg-deep); border:1px solid var(--rule); border-radius:10px;\">\n    <div class=\"pill\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.15em;\">וְ</span> = and</div>\n    <div class=\"pill\" style=\"margin-top:8px;\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.15em;\">בְּ</span> = in / at</div>\n    <div class=\"pill\" style=\"margin-top:8px;\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.15em;\">לְ</span> = to / for</div>\n    <div class=\"pill\" style=\"margin-top:8px;\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.15em;\">כְּ</span> = as / like</div>\n    <div class=\"pill\" style=\"margin-top:8px;\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.15em;\">מִן</span> = from</div>\n    <div class=\"pill\" style=\"margin-top:8px;\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.15em;\">עִם</span> = with</div>\n  </div>\n  <div style=\"color:var(--ink-light);\">At first, focus on meaning, not full morphology.</div>\n</div>"
+        },
+        { "id": "prep-q1", "type": "mcq", "prompt": { "he": "וְ", "hint": "Meaning?" }, "answer": { "en": "and" }, "choices": ["and","in","to/for","from"] },
+        { "id": "prep-q2", "type": "mcq", "prompt": { "he": "בְּ", "hint": "Meaning?" }, "answer": { "en": "in / at" }, "choices": ["in / at","and","from","like/as"] },
+        { "id": "prep-q3", "type": "mcq", "prompt": { "he": "לְ", "hint": "Meaning?" }, "answer": { "en": "to / for" }, "choices": ["to / for","with","from","the (article)"] },
+        { "id": "prep-q4", "type": "mcq", "prompt": { "he": "כְּ", "hint": "Meaning?" }, "answer": { "en": "as / like" }, "choices": ["as / like","in / at","and","of"] },
+        { "id": "prep-q5", "type": "mcq", "prompt": { "he": "מִן", "hint": "Meaning?" }, "answer": { "en": "from" }, "choices": ["from","to/for","and","with"] },
+        { "id": "prep-q6", "type": "mcq", "prompt": { "he": "עִם", "hint": "Meaning?" }, "answer": { "en": "with" }, "choices": ["with","from","in / at","as / like"] },
+        { "id": "prep-q7", "type": "mcq", "prompt": { "he": "וּבַּבַּיִת", "hint": "Best sense (very roughly)?" }, "answer": { "en": "and in the house" }, "choices": ["and in the house","the house of","to the house","with a house"], "explain": "וּ (and) + בַּ (in the) + בַּיִת (house)." }
+      ]
+    },
+    {
+      "id": "fusion-1",
+      "title": "Drill — Preposition + Article Fusion (Meaning)",
+      "desc": "Comprehension drill for ב/ל/כ + the article (בַּ / לַ / כַּ).",
+      "unit": "Unit 2 — Nouns & Syntax Basics",
+      "unlock": { "type": "after", "stageId": "prep-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 2 },
+      "cards": [
+        {
+          "id": "lesson-fus-1",
+          "type": "lesson",
+          "prompt": { "title": "Fusion Forms", "hint": "These show up constantly." },
+          "contentHtml": "<div style=\"font-family:'Crimson Pro',serif; line-height:1.7; color:var(--ink);\">\n  <div style=\"font-size:1.05em; margin-bottom:10px;\">Three very common prepositions are often written as prefixes:</div>\n  <div class=\"pill\" style=\"margin-top:8px;\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.15em;\">בְּ</span> = in/at</div>\n  <div class=\"pill\" style=\"margin-top:8px;\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.15em;\">לְ</span> = to/for</div>\n  <div class=\"pill\" style=\"margin-top:8px;\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.15em;\">כְּ</span> = as/like</div>\n  <div style=\"margin-top:12px;\">When the <strong>article</strong> joins them, you often see:</div>\n  <div class=\"pill\" style=\"margin-top:8px;\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.15em;\">בַּ</span> = in the…</div>\n  <div class=\"pill\" style=\"margin-top:8px;\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.15em;\">לַ</span> = to the…</div>\n  <div class=\"pill\" style=\"margin-top:8px;\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.15em;\">כַּ</span> = like the…</div>\n</div>"
+        },
+        { "id": "fus-1", "type": "mcq", "prompt": { "he": "בַּבַּיִת", "hint": "Best meaning?" }, "answer": { "en": "in the house" }, "choices": ["in the house","to the house","like the house","house of"] },
+        { "id": "fus-2", "type": "mcq", "prompt": { "he": "לַמֶּלֶךְ", "hint": "Best meaning?" }, "answer": { "en": "to the king" }, "choices": ["to the king","in the king","like the king","king of"] },
+        { "id": "fus-3", "type": "mcq", "prompt": { "he": "כַּמֶּלֶךְ", "hint": "Best meaning?" }, "answer": { "en": "like the king" }, "choices": ["like the king","to the king","in the king","the king of"] }
+      ]
+    },
+    {
+      "id": "pronouns-1",
+      "title": "Lesson — Pronouns & Demonstratives (Who/This/That)",
+      "desc": "Comprehension: recognize common pronouns (who?) and demonstratives (this/that/these/those) in simple phrases.",
+      "unit": "Unit 2 — Pronouns & Demonstratives",
+      "unlock": { "type": "after", "stageId": "fusion-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 2 },
+      "cards": [
+        {
+          "id": "lesson-pro-1",
+          "type": "lesson",
+          "prompt": { "title": "Pronouns & Demonstratives", "hint": "These words unlock sentence comprehension fast." },
+          "contentHtml": "<div style=\"font-family:'Crimson Pro',serif; line-height:1.7; color:var(--ink);\">\n  <div style=\"font-size:1.05em; margin-bottom:10px;\">In this module you’ll learn to recognize:</div>\n  <div class=\"pill\" style=\"margin-top:8px;\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.15em;\">מִי</span> = who?</div>\n  <div class=\"pill\" style=\"margin-top:8px;\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.15em;\">זֶה</span> = this (ms)</div>\n  <div class=\"pill\" style=\"margin-top:8px;\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.15em;\">זֹאת</span> = this (fs)</div>\n  <div class=\"pill\" style=\"margin-top:8px;\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.15em;\">אֵלֶּה</span> = these</div>\n  <div class=\"pill\" style=\"margin-top:8px;\"><span style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.15em;\">הֵם / הֵן</span> = they (mp / fp) (recognition only for now)</div>\n  <div style=\"margin-top:12px; color:var(--ink-light);\">We’ll expand the full pronoun system later; here we focus on high-payoff comprehension items.</div>\n</div>"
+        },
+        { "id": "pro-1", "type": "mcq", "prompt": { "he": "מִי", "hint": "Meaning?" }, "answer": { "en": "who?" }, "choices": ["who?","what?","this","those"] },
+        { "id": "pro-2", "type": "mcq", "prompt": { "he": "זֶה", "hint": "Meaning?" }, "answer": { "en": "this (masc. sg.)" }, "choices": ["this (masc. sg.)","this (fem. sg.)","these","who?"] },
+        { "id": "pro-3", "type": "mcq", "prompt": { "he": "זֹאת", "hint": "Meaning?" }, "answer": { "en": "this (fem. sg.)" }, "choices": ["this (fem. sg.)","this (masc. sg.)","these","and"] },
+        { "id": "pro-4", "type": "mcq", "prompt": { "he": "אֵלֶּה", "hint": "Meaning?" }, "answer": { "en": "these" }, "choices": ["these","those","this (ms)","who?"] },
+        { "id": "pro-5", "type": "mcq", "prompt": { "he": "זֶה הַמֶּלֶךְ", "hint": "Best sense?" }, "answer": { "en": "this is the king / this (one) is the king" }, "choices": ["this is the king / this (one) is the king","the king is good","in the house","house of the king"] },
+        { "id": "pro-6", "type": "mcq", "prompt": { "he": "אֵלֶּה מְלָכִים", "hint": "Best sense?" }, "answer": { "en": "these are kings / these kings" }, "choices": ["these are kings / these kings","the kings’ house","to the king","and in the house"] }
+      ]
+    },
+    {
+      "id": "object-1",
+      "title": "Lesson — Direct Object Marker (אֵת)",
+      "desc": "Comprehension: recognize אֵת as marking a definite direct object (very basic).",
+      "unit": "Unit 3 — Nouns in Relationships",
+      "unlock": { "type": "after", "stageId": "pronouns-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 2 },
+      "cards": [
+        {
+          "id": "lesson-obj-1",
+          "type": "lesson",
+          "prompt": { "title": "אֵת (Object Marker)", "hint": "This is one of the highest-payoff comprehension markers." },
+          "contentHtml": "<div style=\"font-family:'Crimson Pro',serif; line-height:1.7; color:var(--ink);\">\n  <div style=\"font-size:1.05em; margin-bottom:10px;\"><strong>אֵת</strong> often marks a <strong>definite direct object</strong>. It usually doesn’t translate into English, but it tells you <em>which noun is the object</em>.</div>\n  <div style=\"margin:12px 0; padding:10px 12px; background:var(--bg-deep); border:1px solid var(--rule); border-radius:10px;\">\n    <div style=\"font-family:'David Libre',serif; direction:rtl; font-size:1.35em;\">אֵת הַמֶּלֶךְ</div>\n    <div>“(the) king” is marked as the object.</div>\n  </div>\n  <div style=\"color:var(--ink-light);\">In real Hebrew, אֵת has more patterns (including suffixes). We’ll add those later.</div>\n</div>"
+        },
+        { "id": "obj-1", "type": "mcq", "prompt": { "he": "אֵת", "hint": "This most often signals…" }, "answer": { "en": "a definite direct object marker" }, "choices": ["a definite direct object marker","the definite article","a preposition meaning 'with'","a verb prefix"] },
+        { "id": "obj-2", "type": "mcq", "prompt": { "he": "אֵת הַמֶּלֶךְ", "hint": "Which part is the object?" }, "answer": { "en": "הַמֶּלֶךְ" }, "choices": ["הַמֶּלֶךְ","אֵת","הַ","וְ"], "explain": "אֵת points to the object noun phrase." },
+        { "id": "obj-3", "type": "mcq", "prompt": { "he": "אֵת הַבַּיִת", "hint": "Best sense (very roughly)?" }, "answer": { "en": "(the) house (as the object)" }, "choices": ["(the) house (as the object)","in the house","house of the king","and the house"], "explain": "You can think: “(… ) [OBJECT] the house.”" }
+      ]
+    },
+    {
+      "id": "syntax-wo-1",
+      "title": "Lesson — Basic Sentence Sense (Word Order)",
+      "desc": "Build comprehension by spotting subject/verb/object and simple clauses.",
+      "unit": "Unit 3 — Nouns in Relationships",
+      "unlock": { "type": "after", "stageId": "object-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 2 },
+      "cards": [
+        {
+          "id": "lesson-wo-1",
+          "type": "lesson",
+          "prompt": { "title": "Word Order (Starter)", "hint": "Hebrew can start with the verb a lot." },
+          "contentHtml": "<div style=\"font-family:'Crimson Pro',serif; line-height:1.7; color:var(--ink);\">\n  <div style=\"font-size:1.05em; margin-bottom:10px;\">Biblical Hebrew commonly uses <strong>VSO</strong> (verb–subject–object) in narrative, but you’ll also see SVO and other patterns.</div>\n  <div style=\"margin:12px 0; padding:10px 12px; background:var(--bg-deep); border:1px solid var(--rule); border-radius:10px;\">\n    <div style=\"font-weight:650; margin-bottom:6px;\">Starter goal</div>\n    <div>When you see a short clause, practice asking:</div>\n    <div class=\"pill\" style=\"margin-top:8px;\">What is the <strong>verb</strong>?</div>\n    <div class=\"pill\" style=\"margin-top:8px;\">Who is doing it (<strong>subject</strong>)?</div>\n    <div class=\"pill\" style=\"margin-top:8px;\">What is affected (<strong>object</strong>)?</div>\n  </div>\n</div>"
+        },
+        { "id": "wo-q1", "type": "mcq", "prompt": { "he": "הַמֶּלֶךְ טוֹב", "hint": "This is best understood as…" }, "answer": { "en": "the king is good / a good king (context decides)" }, "choices": ["the king is good / a good king (context decides)","the king of good","good is the king","king to good"], "explain": "Without a verb, Hebrew can form a noun-adjective phrase or a verbless clause. Context decides." },
+        { "id": "wo-q2", "type": "mcq", "prompt": { "he": "וְהַמֶּלֶךְ", "hint": "What does the leading וְ contribute?" }, "answer": { "en": "and" }, "choices": ["and","in","to/for","of"] },
+        { "id": "wo-q3", "type": "mcq", "prompt": { "he": "בֵּית מֶלֶךְ", "hint": "Construct sense?" }, "answer": { "en": "house of (a) king" }, "choices": ["house of (a) king","a house and a king","the king is a house","house to a king"] }
+      ]
+    },
+    {
+      "id": "clauses-1",
+      "title": "Drill — Clause Comprehension (Who did what?)",
+      "desc": "Practice answering: who is the subject, what is the object, and what does the clause mean (roughly).",
+      "unit": "Unit 3 — Nouns in Relationships",
+      "unlock": { "type": "after", "stageId": "syntax-wo-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 2 },
+      "cards": [
+        {
+          "id": "lesson-cl-1",
+          "type": "lesson",
+          "prompt": { "title": "Clause Drill", "hint": "Don’t panic about every detail—aim for the core meaning." },
+          "contentHtml": "<div style=\"font-family:'Crimson Pro',serif; line-height:1.7; color:var(--ink);\">\n  <div style=\"font-size:1.05em; margin-bottom:10px;\">In this drill, you’ll answer simple comprehension questions about a short clause:</div>\n  <div class=\"pill\" style=\"margin-top:8px;\">Who is the <strong>subject</strong>?</div>\n  <div class=\"pill\" style=\"margin-top:8px;\">What is the <strong>object</strong> (if any)?</div>\n  <div class=\"pill\" style=\"margin-top:8px;\">What is the <strong>rough meaning</strong>?</div>\n  <div style=\"margin-top:12px; color:var(--ink-light);\">We’ll keep the Hebrew very short and heavily supported.</div>\n</div>"
+        },
+        {
+          "id": "cl-1a",
+          "type": "mcq",
+          "prompt": { "he": "הַמֶּלֶךְ רֹאֶה", "hint": "Who is the subject?" },
+          "answer": { "en": "the king" },
+          "choices": ["the king","the house","the word","Israel"],
+          "explain": "In a verbless-looking two-word clause, the noun phrase is typically the subject: “the king …”.",
+          "breakdown": [{ "he": "הַמֶּלֶךְ", "gloss": "the king" }, { "he": "רֹאֶה", "gloss": "seeing / sees (participle idea)" }]
+        },
+        {
+          "id": "cl-1b",
+          "type": "mcq",
+          "prompt": { "he": "הַמֶּלֶךְ רֹאֶה", "hint": "Best rough meaning?" },
+          "answer": { "en": "the king sees / is seeing" },
+          "choices": ["the king sees / is seeing","the king of seeing","seeing is the king","the king and the house"],
+          "explain": "Treat this as a simple clause: subject + participle/verb idea."
+        },
+        {
+          "id": "cl-2a",
+          "type": "mcq",
+          "prompt": { "he": "דְּבַר הַמֶּלֶךְ", "hint": "What is the relationship?" },
+          "answer": { "en": "construct: X of Y" },
+          "choices": ["construct: X of Y","subject + verb","object marker","preposition + noun"],
+          "explain": "This is a classic construct chain pattern: “word of the king”."
+        },
+        {
+          "id": "cl-2b",
+          "type": "mcq",
+          "prompt": { "he": "דְּבַר הַמֶּלֶךְ", "hint": "Best gloss?" },
+          "answer": { "en": "word of the king" },
+          "choices": ["word of the king","the king speaks","word to the king","the word and the king"]
+        },
+        {
+          "id": "cl-3a",
+          "type": "mcq",
+          "prompt": { "he": "וְהַמֶּלֶךְ טוֹב", "hint": "What does וְ add?" },
+          "answer": { "en": "and" },
+          "choices": ["and","in","to/for","from"]
+        },
+        {
+          "id": "cl-3b",
+          "type": "mcq",
+          "prompt": { "he": "וְהַמֶּלֶךְ טוֹב", "hint": "Best rough meaning?" },
+          "answer": { "en": "and the king is good / and (the) good king (context)" },
+          "choices": ["and the king is good / and (the) good king (context)","and king of good","and good is king","and to the king"]
+        }
+      ]
+    },
+    {
+      "id": "translate-1",
+      "title": "Drill — Translation Ladder (Gloss → Smooth)",
+      "desc": "Comprehension drill: choose a gloss, then type a simple smooth translation.",
+      "unit": "Unit 3 — Nouns in Relationships",
+      "unlock": { "type": "after", "stageId": "clauses-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 2 },
+      "cards": [
+        {
+          "id": "lesson-tr-1",
+          "type": "lesson",
+          "prompt": { "title": "Translation Ladder", "hint": "Step 1: gloss. Step 2: smooth English." },
+          "contentHtml": "<div style=\"font-family:'Crimson Pro',serif; line-height:1.7; color:var(--ink);\">\n  <div style=\"font-size:1.05em; margin-bottom:10px;\">You’ll translate in two steps:</div>\n  <div class=\"pill\" style=\"margin-top:8px;\"><strong>Gloss</strong>: word-for-word-ish meaning</div>\n  <div class=\"pill\" style=\"margin-top:8px;\"><strong>Smooth</strong>: simple, natural English</div>\n  <div style=\"margin-top:12px; color:var(--ink-light);\">For typing, capitalization and punctuation don’t matter.</div>\n</div>"
+        },
+
+        { "id": "tr-1a", "type": "mcq", "prompt": { "he": "בֵּית הַמֶּלֶךְ", "hint": "Step 1 — best gloss?" }, "answer": { "en": "house of the king" }, "choices": ["house of the king","the king is a house","in the king’s house","and the king"] },
+        { "id": "tr-1b", "type": "type", "prompt": { "he": "בֵּית הַמֶּלֶךְ", "hint": "Step 2 — type a smooth translation (simple)." }, "answer": { "text": "the king's house" }, "explain": "One smooth option: “the king’s house”." },
+
+        { "id": "tr-2a", "type": "mcq", "prompt": { "he": "בַּבַּיִת", "hint": "Step 1 — best gloss?" }, "answer": { "en": "in the house" }, "choices": ["in the house","to the house","house of","with the house"] },
+        { "id": "tr-2b", "type": "type", "prompt": { "he": "בַּבַּיִת", "hint": "Step 2 — type a smooth translation." }, "answer": { "text": "in the house" } },
+
+        { "id": "tr-3a", "type": "mcq", "prompt": { "he": "וְהַמֶּלֶךְ טוֹב", "hint": "Step 1 — best gloss?" }, "answer": { "en": "and the king (is) good" }, "choices": ["and the king (is) good","and king of good","in the king","to the good king"] },
+        { "id": "tr-3b", "type": "type", "prompt": { "he": "וְהַמֶּלֶךְ טוֹב", "hint": "Step 2 — type a smooth translation." }, "answer": { "text": "and the king is good" } }
+      ]
+    },
+    {
+      "id": "qal-parse-1",
+      "title": "Drill — Qal Parsing (Person/Number/Gender)",
+      "desc": "Comprehension drill: identify what the form is (not just how it sounds).",
+      "unit": "Unit 4 — Verbs (Core System)",
+      "unlock": { "type": "after", "stageId": "translate-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 2 },
+      "cards": [
+        { "id": "qp-1", "type": "mcq", "prompt": { "he": "קָטַל", "hint": "Parse (model)?" }, "answer": { "en": "Qal perfect 3ms" }, "choices": ["Qal perfect 3ms","Qal imperfect 3ms","Qal perfect 3fs","Qal participle ms"], "explain": "Default model: qāṭal = perfect 3ms." },
+        { "id": "qp-2", "type": "mcq", "prompt": { "he": "קָטְלָה", "hint": "Parse (model)?" }, "answer": { "en": "Qal perfect 3fs" }, "choices": ["Qal perfect 3fs","Qal perfect 2ms","Qal imperfect 3fs","Qal participle fs"], "explain": "‑ā(h) ending in the model set signals 3fs perfect here." },
+        { "id": "qi-1", "type": "mcq", "prompt": { "he": "יִקְטֹל", "hint": "Parse (model)?" }, "answer": { "en": "Qal imperfect 3ms" }, "choices": ["Qal imperfect 3ms","Qal perfect 3ms","Hiphil imperfect 3ms","Niphal perfect 3ms"], "explain": "yiqṭōl is the standard imperfect 3ms model." },
+        { "id": "qi-2", "type": "mcq", "prompt": { "he": "תִּקְטֹל", "hint": "Parse (model)?" }, "answer": { "en": "Qal imperfect 2ms or 3fs (same form)" }, "choices": ["Qal imperfect 2ms or 3fs (same form)","Qal perfect 2ms","Qal imperfect 1cs","Qal perfect 3fs"], "explain": "t‑ prefix can mark 2ms or 3fs in the imperfect; context disambiguates." },
+        { "id": "qi-3", "type": "mcq", "prompt": { "he": "נִקְטֹל", "hint": "Parse (model)?" }, "answer": { "en": "Qal imperfect 1cp" }, "choices": ["Qal imperfect 1cp","Qal perfect 1cp","Niphal imperfect 1cp","Qal participle mp"], "explain": "n‑ prefix in the imperfect model set is 1cp (we)." }
+      ]
+    },
+    {
+      "id": "midterm-1",
+      "title": "Midterm (Checkpoint)",
+      "desc": "Mixed comprehension checkpoint across everything you’ve unlocked so far.",
+      "unit": "Unit 4 — Midterm Exam",
+      "unlock": { "type": "after", "stageId": "qal-parse-1" },
+      "mastery": { "targetPct": 90, "minSeenEach": 1 },
+      "cards": [
+        {
+          "id": "lesson-mid-1",
+          "type": "lesson",
+          "prompt": { "title": "Midterm Checkpoint", "hint": "Aim for accuracy. Review mode is your friend." },
+          "contentHtml": "<div style=\"font-family:'Crimson Pro',serif; line-height:1.7; color:var(--ink);\">\n  <div style=\"font-size:1.05em; margin-bottom:10px;\">This checkpoint mixes reading + grammar comprehension:</div>\n  <div class=\"pill\" style=\"margin-top:8px;\">Vowels / shewa / dagesh basics</div>\n  <div class=\"pill\" style=\"margin-top:8px;\">Article + fusion forms (בַּ/לַ/כַּ)</div>\n  <div class=\"pill\" style=\"margin-top:8px;\">Construct chains</div>\n  <div class=\"pill\" style=\"margin-top:8px;\">Pronouns/demonstratives</div>\n  <div class=\"pill\" style=\"margin-top:8px;\">Qal perfect/imperfect model parsing</div>\n</div>"
+        },
+
+        { "id": "mid-1", "type": "mcq", "prompt": { "he": "וְ", "hint": "Meaning?" }, "answer": { "en": "and" }, "choices": ["and","in","to/for","from"] },
+        { "id": "mid-2", "type": "mcq", "prompt": { "he": "בַּבַּיִת", "hint": "Best meaning?" }, "answer": { "en": "in the house" }, "choices": ["in the house","to the house","like the house","house of"] },
+        { "id": "mid-3", "type": "mcq", "prompt": { "he": "לַמֶּלֶךְ", "hint": "Best meaning?" }, "answer": { "en": "to the king" }, "choices": ["to the king","in the king","like the king","king of"] },
+        { "id": "mid-4", "type": "mcq", "prompt": { "he": "כַּמֶּלֶךְ", "hint": "Best meaning?" }, "answer": { "en": "like the king" }, "choices": ["like the king","to the king","in the king","the king of"] },
+
+        { "id": "mid-5", "type": "mcq", "prompt": { "he": "זֶה", "hint": "Meaning?" }, "answer": { "en": "this (masc. sg.)" }, "choices": ["this (masc. sg.)","this (fem. sg.)","these","who?"] },
+        { "id": "mid-6", "type": "mcq", "prompt": { "he": "אֵלֶּה", "hint": "Meaning?" }, "answer": { "en": "these" }, "choices": ["these","those","this (ms)","who?"] },
+        { "id": "mid-7", "type": "mcq", "prompt": { "he": "מִי", "hint": "Meaning?" }, "answer": { "en": "who?" }, "choices": ["who?","what?","this","those"] },
+
+        { "id": "mid-8", "type": "mcq", "prompt": { "he": "בֵּית הַמֶּלֶךְ", "hint": "Best gloss?" }, "answer": { "en": "house of the king" }, "choices": ["house of the king","the king is a house","to the king’s house","and the king is house"] },
+        { "id": "mid-9", "type": "mcq", "prompt": { "he": "דְּבַר הַמֶּלֶךְ", "hint": "Best gloss?" }, "answer": { "en": "word of the king" }, "choices": ["word of the king","the king speaks","word to the king","the word and the king"] },
+
+        { "id": "mid-10", "type": "mcq", "prompt": { "he": "קָטַל", "hint": "Parse (model)?" }, "answer": { "en": "Qal perfect 3ms" }, "choices": ["Qal perfect 3ms","Qal imperfect 3ms","Qal perfect 3fs","Qal participle ms"] },
+        { "id": "mid-11", "type": "mcq", "prompt": { "he": "יִקְטֹל", "hint": "Parse (model)?" }, "answer": { "en": "Qal imperfect 3ms" }, "choices": ["Qal imperfect 3ms","Qal perfect 3ms","Hiphil imperfect 3ms","Niphal perfect 3ms"] },
+        { "id": "mid-12", "type": "mcq", "prompt": { "he": "תִּקְטֹל", "hint": "Parse (model)?" }, "answer": { "en": "Qal imperfect 2ms or 3fs (same form)" }, "choices": ["Qal imperfect 2ms or 3fs (same form)","Qal perfect 2ms","Qal imperfect 1cs","Qal perfect 3fs"] }
+      ]
+    },
+    {
+      "id": "construct-suf-1",
+      "title": "Drill — Construct + Suffixes (Meaning)",
+      "desc": "Combine noun relationships and pronominal suffixes into one comprehension task.",
+      "unit": "Unit 3 — Nouns in Relationships",
+      "unlock": { "type": "after", "stageId": "construct-1" },
+      "mastery": { "targetPct": 85, "minSeenEach": 2 },
+      "cards": [
+        {
+          "id": "lesson-cs-1",
+          "type": "lesson",
+          "prompt": { "title": "Construct + Suffix", "hint": "Now you’ll read relationships like “X of Y” plus “my/his”." },
+          "contentHtml": "<div style=\"font-family:'Crimson Pro',serif; line-height:1.7; color:var(--ink);\">\n  <div style=\"font-size:1.05em; margin-bottom:10px;\">Comprehension grows fast when you can combine:</div>\n  <div class=\"pill\" style=\"margin-top:8px;\"><strong>Construct</strong>: <span style=\"font-family:'David Libre',serif; direction:rtl;\">בֵּית</span> = “house of …”</div>\n  <div class=\"pill\" style=\"margin-top:8px;\"><strong>Suffix</strong>: <span style=\"font-family:'David Libre',serif; direction:rtl;\">מַלְכִּי</span> = “my king”</div>\n  <div style=\"margin-top:12px;\">Goal: read the whole phrase as one meaning unit.</div>\n</div>"
+        },
+        {
+          "id": "cs-1",
+          "type": "mcq",
+          "prompt": { "he": "בֵּית מַלְכִּי", "hint": "Best gloss?" },
+          "answer": { "en": "house of my king" },
+          "choices": ["house of my king","my house of king","king of my house","the house and my king"],
+          "breakdown": [{ "he": "בֵּית", "gloss": "house of" }, { "he": "מַלְכִּי", "gloss": "my king" }]
+        },
+        {
+          "id": "cs-2",
+          "type": "mcq",
+          "prompt": { "he": "דְּבַר מַלְכּוֹ", "hint": "Best gloss?" },
+          "answer": { "en": "word of his king" },
+          "choices": ["word of his king","his word of king","word to his king","the word is king"],
+          "explain": "Keep it simple: construct chain “word of …” + suffix “his …”.",
+          "breakdown": [{ "he": "דְּבַר", "gloss": "word of" }, { "he": "מַלְכּוֹ", "gloss": "his king" }]
+        },
+        {
+          "id": "cs-3",
+          "type": "mcq",
+          "prompt": { "he": "בֵּית הַמֶּלֶךְ", "hint": "Best gloss?" },
+          "answer": { "en": "house of the king" },
+          "choices": ["house of the king","the house is king","to the king’s house","and the king is house"]
+        }
+      ]
+    },
+    {
       "id": "words-3",
       "title": "Word Reading III — Short Phrases",
       "desc": "Read short, pointed phrases (one word at a time).",
+      "unit": "Unit 2 — Nouns & Syntax Basics",
       "unlock": { "type": "after", "stageId": "article-1" },
       "mastery": { "targetPct": 85, "minSeenEach": 4 },
       "cards": [
@@ -221,7 +570,7 @@
         { "id": "p-3", "type": "mcq", "prompt": { "he": "דָּבָר טוֹב", "hint": "Read the first word." }, "answer": { "en": "dāvār" }, "choices": ["dāvār","dēver","dōvōr","dīvar"] },
         { "id": "p-4", "type": "mcq", "prompt": { "he": "שָׁלוֹם לָכֶם", "hint": "Read the second word." }, "answer": { "en": "lāḵem" }, "choices": ["lāḵem","leḵem","lōḵem","lākām"] },
         { "id": "p-5", "type": "mcq", "prompt": { "he": "וְהַמֶּלֶךְ", "hint": "Read the whole phrase (best)." }, "answer": { "en": "wəhamméleḵ" }, "choices": ["wəhamméleḵ","wāhamméleḵ","wehammālaḵ","wəhammōleḵ"] },
-        { "id": "p-6", "type": "mcq", "prompt": { "he": "בַּבַּיִת", "hint": "Read the whole word (best)." }, "answer": { "en": "babbáyit" }, "choices": ["babbáyit","bābbáyit","bəbbáyit","bibbáyit"] },
+        { "id": "p-6", "type": "mcq", "prompt": { "he": "בַּבַּיִת", "hint": "Read the whole word (best)." }, "answer": { "en": "babbáyit" }, "choices": ["babbáyit","bābbáyit","bəbbáyit","bibbáyit"], "explain": "בַּ is the prefix בְּ + the article הַ (“in the…”). The doubled בּ shows assimilation (dagesh forte).", "breakdown": [{"he":"בַּ","gloss":"in + the"},{"he":"בַּיִת","gloss":"house"}] },
         { "id": "p-7", "type": "mcq", "prompt": { "he": "לַמֶּלֶךְ", "hint": "Read the whole word (best)." }, "answer": { "en": "lamméleḵ" }, "choices": ["lamméleḵ","lāmmeleḵ","ləmméleḵ","lomméleḵ"] },
         { "id": "p-8", "type": "mcq", "prompt": { "he": "כַּמֶּלֶךְ", "hint": "Read the whole word (best)." }, "answer": { "en": "kamméleḵ" }, "choices": ["kamméleḵ","kāmméleḵ","kəmméleḵ","kommēleḵ"] }
       ]
@@ -230,6 +579,7 @@
       "id": "construct-1",
       "title": "Syntax I — Construct Chain (Reading)",
       "desc": "Recognize simple construct relationships while reading.",
+      "unit": "Unit 3 — Nouns in Relationships",
       "unlock": { "type": "after", "stageId": "words-3" },
       "mastery": { "targetPct": 85, "minSeenEach": 3 },
       "cards": [
@@ -242,6 +592,7 @@
       "id": "verbs-1",
       "title": "Verbs I — Qal Perfect (Pattern)",
       "desc": "Recognize the basic Qal perfect pattern with the model verb קָטַל.",
+      "unit": "Unit 4 — Verbs (Core System)",
       "unlock": { "type": "after", "stageId": "construct-1" },
       "mastery": { "targetPct": 85, "minSeenEach": 3 },
       "cards": [
@@ -254,6 +605,7 @@
       "id": "verbs-2",
       "title": "Verbs II — Qal Imperfect (Pattern)",
       "desc": "Recognize the basic Qal imperfect pattern with the model verb יִקְטֹל.",
+      "unit": "Unit 4 — Verbs (Core System)",
       "unlock": { "type": "after", "stageId": "verbs-1" },
       "mastery": { "targetPct": 85, "minSeenEach": 3 },
       "cards": [
@@ -266,6 +618,7 @@
       "id": "verbs-3",
       "title": "Verbs III — Participles (Pattern)",
       "desc": "Recognize Qal active participle patterns in reading.",
+      "unit": "Unit 4 — Verbs (Core System)",
       "unlock": { "type": "after", "stageId": "verbs-2" },
       "mastery": { "targetPct": 85, "minSeenEach": 3 },
       "cards": [
@@ -278,7 +631,8 @@
       "id": "stems-1",
       "title": "Verbs IV — Major Stems (Spot the Pattern)",
       "desc": "Recognize Niphal / Piel / Hiphil pattern signals in simplified examples.",
-      "unlock": { "type": "after", "stageId": "verbs-3" },
+      "unit": "Unit 5 — Stem Awareness",
+      "unlock": { "type": "after", "stageId": "midterm-1" },
       "mastery": { "targetPct": 85, "minSeenEach": 3 },
       "cards": [
         { "id": "stem-1", "type": "mcq", "prompt": { "he": "נִקְטַל", "hint": "This form most likely signals..." }, "answer": { "en": "Niphal perfect (model)" }, "choices": ["Niphal perfect (model)","Qal perfect (model)","Piel perfect (model)","Hiphil perfect (model)"] },
@@ -325,7 +679,7 @@
         { "id": "gen-6", "type": "mcq", "prompt": { "he": "הָאָרֶץ", "hint": "Choose the best transliteration." }, "answer": { "en": "hāʾāreṣ" }, "choices": ["hāʾāreṣ","hāʾērēṣ","haʾāraṣ","hāʾārōṣ"] },
 
         { "id": "gen-g1", "type": "mcq", "prompt": { "he": "בְּרֵאשִׁית", "hint": "Choose the best gloss." }, "answer": { "gloss": "in (the) beginning" }, "choices": ["in (the) beginning","the heavens","and the earth","he created"] },
-        { "id": "gen-g2", "type": "mcq", "prompt": { "he": "בָּרָא", "hint": "Choose the best gloss." }, "answer": { "gloss": "he created" }, "choices": ["he created","in the beginning","God","the earth"] },
+        { "id": "gen-g2", "type": "mcq", "prompt": { "he": "בָּרָא", "hint": "Choose the best gloss." }, "answer": { "gloss": "he created" }, "choices": ["he created","in the beginning","God","the earth"], "meta": { "ref": "Gen 1:1" }, "explain": "This is a verb form used here with a 3ms subject (“he created”)." },
         { "id": "gen-g3", "type": "mcq", "prompt": { "he": "אֱלֹהִים", "hint": "Choose the best gloss." }, "answer": { "gloss": "God" }, "choices": ["God","he created","the heavens","and"] },
         { "id": "gen-g4", "type": "mcq", "prompt": { "he": "הַשָּׁמַיִם", "hint": "Choose the best gloss." }, "answer": { "gloss": "the heavens" }, "choices": ["the heavens","the earth","in the beginning","God"] },
         { "id": "gen-g5", "type": "mcq", "prompt": { "he": "הָאָרֶץ", "hint": "Choose the best gloss." }, "answer": { "gloss": "the earth" }, "choices": ["the earth","the heavens","and","he created"] }
@@ -362,7 +716,7 @@
         { "id": "dt64-4", "type": "mcq", "prompt": { "he": "אֱלֹהֵינוּ", "hint": "Choose the best transliteration." }, "answer": { "en": "ʾĕlōhênû" }, "choices": ["ʾĕlōhênû","ʾĕlōhînû","ʾĕlōhānû","ʾĕlōhēnō"] },
         { "id": "dt64-5", "type": "mcq", "prompt": { "he": "אֶחָד", "hint": "Choose the best transliteration." }, "answer": { "en": "ʾeḥād" }, "choices": ["ʾeḥād","ʾaḥēd","ʾeḥēd","ʾōḥād"] },
 
-        { "id": "dt64-g1", "type": "mcq", "prompt": { "he": "שְׁמַע", "hint": "Choose the best gloss." }, "answer": { "gloss": "hear! / listen!" }, "choices": ["hear! / listen!","Israel","our God","one"] },
+        { "id": "dt64-g1", "type": "mcq", "prompt": { "he": "שְׁמַע", "hint": "Choose the best gloss." }, "answer": { "gloss": "hear! / listen!" }, "choices": ["hear! / listen!","Israel","our God","one"], "meta": { "ref": "Deut 6:4" } },
         { "id": "dt64-g2", "type": "mcq", "prompt": { "he": "יִשְׂרָאֵל", "hint": "Choose the best gloss." }, "answer": { "gloss": "Israel" }, "choices": ["Israel","hear!","our God","one"] },
         { "id": "dt64-g3", "type": "mcq", "prompt": { "he": "אֱלֹהֵינוּ", "hint": "Choose the best gloss." }, "answer": { "gloss": "our God" }, "choices": ["our God","the LORD","Israel","one"] },
         { "id": "dt64-g4", "type": "mcq", "prompt": { "he": "אֶחָד", "hint": "Choose the best gloss." }, "answer": { "gloss": "one" }, "choices": ["one","our God","hear!","Israel"] }

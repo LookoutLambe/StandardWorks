@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dictionary · Hebrew</title>
+  <meta name="theme-color" content="#1e2233" />
+  <link rel="manifest" href="manifest.json">
+  <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="nav_engine.css">
+  <style>
+    :root{
+      --bg:#faf8f2; --bg-deep:#f0ece0; --ink:#1a1a1a; --ink-light:#444;
+      --accent:#c8a84e; --rule:#d6ceb8; --header-bg:#1e2233; --header-text:#c8a84e;
+      --card-bg:#ffffff; --danger:#b94a3a; --ok:#2f7d4a;
+    }
+    body.dark-mode{
+      --bg:#333; --bg-deep:#2a2a2a; --ink:#e8e0d0; --ink-light:#b0a890;
+      --accent:#d4af37; --rule:#444; --header-bg:#0a0a0a; --header-text:#d4af37;
+      --card-bg:#1a1a2e; --danger:#e27a6a; --ok:#60c27e;
+    }
+    *{box-sizing:border-box;}
+    body{margin:0; font-family:'David Libre','Georgia',serif; background:var(--bg); color:var(--ink);}
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      height:54px; display:flex; align-items:center; justify-content:space-between;
+      padding:0 14px; background:var(--header-bg); border-bottom:2px solid var(--accent);
+    }
+    .title{display:flex; flex-direction:column; line-height:1.05;}
+    .title .en{font-family:'Cormorant Garamond',serif; font-weight:600; letter-spacing:0.04em; color:var(--header-text); font-size:1.05em;}
+    .title .he{color:var(--header-text); opacity:0.92; font-weight:600; direction:rtl; font-size:0.95em;}
+    .actions{display:flex; align-items:center; gap:10px;}
+    .iconbtn{appearance:none; border:1px solid rgba(200,168,78,0.35); background:rgba(255,255,255,0.05); color:var(--header-text); padding:7px 10px; border-radius:8px; cursor:pointer; font-size:0.95em; line-height:1;}
+    .iconbtn:hover{background:rgba(200,168,78,0.12);}
+    .wrap{max-width:980px; margin:0 auto; padding:18px 16px 60px;}
+    .panel{background:var(--card-bg); border:1px solid var(--rule); border-radius:14px; box-shadow:0 8px 26px rgba(0,0,0,0.10); overflow:hidden;}
+    .panel-head{padding:14px 16px; background:linear-gradient(180deg, rgba(200,168,78,0.12), rgba(200,168,78,0.03)); border-bottom:1px solid var(--rule);}
+    .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center;}
+    .q{flex:1; min-width:220px;}
+    input[type="search"]{
+      width:100%; padding:12px 12px; border-radius:10px; border:1px solid var(--rule);
+      background:var(--bg); color:var(--ink); font-size:1.05em;
+    }
+    .pill{display:inline-flex; align-items:center; gap:8px; border:1px solid var(--rule); border-radius:999px; padding:7px 12px; background:var(--bg-deep); color:var(--ink); font-size:0.95em;}
+    .content{display:grid; grid-template-columns: 1fr; gap:14px; padding:16px;}
+    @media (min-width: 900px){ .content{grid-template-columns: 1.2fr 0.8fr;} }
+    .list{border:1px solid var(--rule); border-radius:12px; overflow:hidden; background:rgba(0,0,0,0.02);}
+    .item{padding:12px 12px; border-bottom:1px solid var(--rule); cursor:pointer;}
+    .item:hover{background:rgba(200,168,78,0.10);}
+    .item:last-child{border-bottom:none;}
+    .heb{font-size:1.55em; direction:rtl;}
+    .meta{color:var(--ink-light); font-size:0.92em; margin-top:4px;}
+    .entry{border:1px solid var(--rule); border-radius:12px; padding:14px; background:rgba(0,0,0,0.02);}
+    .entry h2{margin:0 0 6px 0; font-size:1.6em;}
+    .btn{appearance:none; border:1px solid var(--rule); background:var(--bg-deep); color:var(--ink); padding:10px 12px; border-radius:10px; cursor:pointer; font-weight:650;}
+    .btn.primary{border-color:rgba(200,168,78,0.55); background:rgba(200,168,78,0.22);}
+    .btn.danger{border-color:rgba(185,74,58,0.55); background:rgba(185,74,58,0.14);}
+    .small{font-size:0.92em; color:var(--ink-light); margin-top:10px; line-height:1.45;}
+    code{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="title">
+      <div class="en">Dictionary</div>
+      <div class="he">מִלּוֹן</div>
+    </div>
+    <div class="actions">
+      <button class="iconbtn" id="darkBtn" type="button" title="Toggle dark mode">🌙</button>
+      <button class="iconbtn" id="homeBtn" type="button" title="Home">⌂</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="panel">
+      <div class="panel-head">
+        <div class="row">
+          <div class="q">
+            <input id="q" type="search" placeholder="Search Hebrew (אָב), English (father), or Strong’s (H0001) …" autocomplete="off" spellcheck="false" />
+          </div>
+          <div class="pill" id="countPill">Loading…</div>
+          <button class="btn" id="savedBtn" type="button">Saved</button>
+        </div>
+      </div>
+      <div class="content">
+        <div class="list" id="list"></div>
+        <div class="entry" id="entry">
+          <h2 style="opacity:0.85">Search a word</h2>
+          <div class="small">Tip: paste any Hebrew word form — if it exists in your Strong’s lookup, we’ll jump to its entry.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="strongs_lookup.js"></script>
+  <script src="strongs_roots.js"></script>
+  <script src="dictionary.js"></script>
+  <script src="nav_engine.js"></script>
+</body>
+</html>

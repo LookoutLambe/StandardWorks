@@ -431,6 +431,7 @@
       '<div class="nf-row">' +
         '<button type="button" id="nf-learn-course">Course</button>' +
         '<button type="button" id="nf-learn-vocab">Vocab</button>' +
+        '<button type="button" id="nf-learn-dict">Dict</button>' +
       '</div>' +
       '<div class="nf-hint">Jump into guided lessons or vocabulary practice.</div>' +
       '<div class="nf-title">Notes</div>' +
@@ -471,8 +472,13 @@
         var p = (window.location && window.location.pathname) ? window.location.pathname : '';
         return (p.indexOf('/bom/') >= 0 || /\\bom\\/.test(p)) ? '../vocab.html' : 'vocab.html';
       }
+      function _dictHref() {
+        var p = (window.location && window.location.pathname) ? window.location.pathname : '';
+        return (p.indexOf('/bom/') >= 0 || /\\bom\\/.test(p)) ? '../dictionary.html' : 'dictionary.html';
+      }
       var learnCourse = document.getElementById('nf-learn-course');
       var learnVocab = document.getElementById('nf-learn-vocab');
+      var learnDict = document.getElementById('nf-learn-dict');
       if (learnCourse) {
         learnCourse.onclick = function() {
           var href = _courseHref();
@@ -481,6 +487,7 @@
         };
       }
       if (learnVocab) learnVocab.onclick = function() { window.location.href = _vocabHref(); };
+      if (learnDict) learnDict.onclick = function() { window.location.href = _dictHref(); };
 
       var exportBtn = document.getElementById('nf-export');
       var importBtn = document.getElementById('nf-import');
@@ -587,6 +594,13 @@
               '<div class="nl-card-heb" dir="rtl">לִמּוּד עִבְרִית</div>' +
             '</div>';
 
+    // Dictionary (Strong's)
+    html += '<div class="nl-card" id="nl-dict" tabindex="0" role="button" style="margin-top:10px">' +
+              '<div class="nl-card-title">Dictionary</div>' +
+              '<div class="nl-card-text">Strong’s Hebrew lookup + saved deck</div>' +
+              '<div class="nl-card-heb" dir="rtl">מִלּוֹן</div>' +
+            '</div>';
+
     if (bms && bms.length) {
       html += '<div class="nl-sec-title" style="margin-top:10px">Bookmarks</div>';
       html += '<div class="nl-bm-list">';
@@ -626,6 +640,16 @@
         window.location.href = href;
       };
       learnHebEl.onkeydown = function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); learnHebEl.click(); } };
+    }
+
+    var dictEl = document.getElementById('nl-dict');
+    if (dictEl) {
+      dictEl.onclick = function() {
+        var p = (window.location && window.location.pathname) ? window.location.pathname : '';
+        var href = (p.indexOf('/bom/') >= 0 || /\\bom\\/.test(p)) ? '../dictionary.html' : 'dictionary.html';
+        window.location.href = href;
+      };
+      dictEl.onkeydown = function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); dictEl.click(); } };
     }
     _libraryEl.querySelectorAll('.nl-bm').forEach(function(el) {
       el.onclick = function() { var p = el.getAttribute('data-path'); if (p) window.location.href = p; };
