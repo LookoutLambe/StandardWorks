@@ -2,7 +2,7 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ספר מורמון — Hebrew Interlinear</title>
 <meta name="description" content="Hebrew Interlinear Book of Mormon — Classical Biblical Hebrew, Word-by-Word">
 <link rel="manifest" href="manifest.json">
@@ -14,7 +14,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
 <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../nav_engine.css?v=6">
+<link rel="stylesheet" href="../nav_engine.css?v=7">
 <link rel="stylesheet" href="../xref_study_panel.css?v=6">
 <style>
 
@@ -440,15 +440,34 @@ body.hide-gloss.hide-translit .arr { display: none; }
   align-items: center;
   gap: 12px;
   flex-shrink: 1;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
   direction: ltr;
 }
 @media (max-width: 600px) {
-  .controls-top { gap: 4px; padding: 4px 6px; font-size: 0.85em; }
+  .controls-top {
+    gap: 4px;
+    padding: max(4px, env(safe-area-inset-top, 0px)) max(6px, env(safe-area-inset-left, 0px)) 4px max(6px, env(safe-area-inset-right, 0px));
+    font-size: 0.85em;
+  }
   .controls-top .nav-prev, .controls-top .nav-next { padding: 8px 12px; font-size: 1em; min-height: 44px; }
   .controls-top .tools-group label span.label-text { display: none; }
-  .controls-top .tools-group button { min-height: 44px; min-width: 44px; font-size: 1.1em; }
-  .controls-bottom { gap: 4px; padding: 4px 6px; font-size: 0.78em; flex-wrap: wrap; justify-content: center; }
+  .controls-top .tools-group button { min-height: 44px; min-width: 44px; font-size: 1.05em; }
+  .controls-top .tools-group {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    max-width: 100%;
+    overflow-x: visible;
+  }
+  .controls-bottom {
+    gap: 4px;
+    padding: 6px max(6px, env(safe-area-inset-left, 0px)) max(8px, env(safe-area-inset-bottom, 0px)) max(6px, env(safe-area-inset-right, 0px));
+    font-size: 0.78em;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .controls-bottom button { min-height: 40px; padding: 5px 8px; }
 }
 
@@ -554,14 +573,23 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
 
 /* Responsive */
 @media (max-width: 700px) {
-  .page { padding: 55px 18px 50px; }
+  .page {
+    padding: 55px max(14px, env(safe-area-inset-right, 0px)) max(52px, calc(110px + env(safe-area-inset-bottom, 0px))) max(14px, env(safe-area-inset-left, 0px));
+  }
   .page::before { display: none; }
   .hw { font-size: 1.5em; }
   .gl { font-size: 0.68em; }
   .verse { gap: 8px; }
   .word-flow { margin: 0; }
-  .controls-top { padding: 4px 8px; gap: 4px; font-size: 0.82em; }
-  .controls-bottom { padding: 5px 8px; font-size: 0.82em; }
+  .controls-top {
+    padding: max(4px, env(safe-area-inset-top, 0px)) max(8px, env(safe-area-inset-right, 0px)) 4px max(8px, env(safe-area-inset-left, 0px));
+    gap: 4px;
+    font-size: 0.82em;
+  }
+  .controls-bottom {
+    padding: 5px max(8px, env(safe-area-inset-left, 0px)) max(10px, env(safe-area-inset-bottom, 0px)) max(8px, env(safe-area-inset-right, 0px));
+    font-size: 0.82em;
+  }
 }
 
 @media print {
@@ -8482,7 +8510,7 @@ try {
 } catch(e) {}
 </script>
 
-<script src="../nav_engine.js?v=6"></script>
+<script src="../nav_engine.js?v=7"></script>
 <script src="../xref_study_panel.js?v=6"></script>
 <script>
 NavEngine.init({
@@ -8496,7 +8524,7 @@ NavEngine.init({
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('./sw.js?v=6').then(function(reg) {
+    navigator.serviceWorker.register('./sw.js?v=7').then(function(reg) {
       try { reg.update(); } catch (e) {}
       console.log('[PWA] Service worker registered:', reg.scope);
     }).catch(function(err) {

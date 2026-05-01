@@ -311,6 +311,25 @@
   }
 
   // ── Create DOM ──
+  /** Reserve space for fixed header + optional breadcrumb + footer (iOS PWA / Safari). */
+  function syncReaderPageChromePadding() {
+    var pageEl = document.querySelector('.page');
+    var ct = document.querySelector('.controls-top');
+    var cb = document.querySelector('.controls-bottom');
+    if (!pageEl || !ct) return;
+    var bc = document.getElementById('nav-breadcrumb');
+    var topPx;
+    if (bc && bc.classList.contains('visible')) {
+      topPx = ct.offsetHeight + bc.offsetHeight + 16;
+    } else {
+      topPx = ct.offsetHeight + 12;
+    }
+    pageEl.style.paddingTop = topPx + 'px';
+    if (cb) {
+      pageEl.style.paddingBottom = (cb.offsetHeight + 20) + 'px';
+    }
+  }
+
   function createSidebar() {
     // Overlay
     _overlayEl = document.createElement('div');
@@ -449,18 +468,10 @@
     }
     updateBreadcrumb();
 
-    // Ensure page padding always clears the fixed nav bar (varies by screen size)
+    // Ensure page padding clears fixed header + breadcrumb + footer (layout varies by screen / iOS safe areas)
     function _fixPagePadding() {
-      var ct = document.querySelector('.controls-top');
-      var pageEl = document.querySelector('.page');
-      if (ct && pageEl) {
-        var needed = ct.offsetHeight + 12;
-        if (parseInt(getComputedStyle(pageEl).paddingTop, 10) < needed) {
-          pageEl.style.setProperty('padding-top', needed + 'px', 'important');
-        }
-      }
+      syncReaderPageChromePadding();
     }
-    // Run after layout settles and on window load/resize
     setTimeout(_fixPagePadding, 50);
     setTimeout(_fixPagePadding, 300);
     window.addEventListener('load', _fixPagePadding);
@@ -1207,6 +1218,7 @@
       _breadcrumbEl.classList.remove('visible');
       var pageEl = document.querySelector('.page');
       if (pageEl) pageEl.style.paddingTop = '';
+      setTimeout(syncReaderPageChromePadding, 0);
       return;
     }
     var vol = VOLUMES[_config.volume];
@@ -1230,10 +1242,8 @@
     if (ct) {
       var bcTop = ct.offsetHeight;
       _breadcrumbEl.style.top = bcTop + 'px';
-      // Defer padding update so breadcrumb offsetHeight is computed after display:block
       setTimeout(function() {
-        var pageEl = document.querySelector('.page');
-        if (pageEl) pageEl.style.paddingTop = (bcTop + _breadcrumbEl.offsetHeight + 16) + 'px';
+        syncReaderPageChromePadding();
       }, 0);
     }
   }
