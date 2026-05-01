@@ -1,4 +1,4 @@
-const CACHE_NAME = 'standard-works-v72';
+const CACHE_NAME = 'standard-works-v73';
 const OFFLINE_CACHE = 'standard-works-offline-v1';
 
 // Shell assets — HTML pages + shared infrastructure
@@ -22,6 +22,8 @@ const CORE_ASSETS = [
     '/StandardWorks/images/cover-bom.jpg',
     '/StandardWorks/nav_engine.js',
     '/StandardWorks/nav_engine.css',
+    '/StandardWorks/xref_study_panel.css',
+    '/StandardWorks/xref_study_panel.js',
     '/StandardWorks/notes_engine.js',
     '/StandardWorks/crossrefs_engine.js',
     '/StandardWorks/strongs_lookup.js',

@@ -1,6 +1,8 @@
-const CACHE = 'bom-v5';
+const CACHE = 'bom-v6';
 const ASSETS = [
   './bom.html',
+  '../xref_study_panel.css',
+  '../xref_study_panel.js',
   './official_verses.js',
   './scripture_verses.js',
   './chapter_headings.js',

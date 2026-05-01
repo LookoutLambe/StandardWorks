@@ -14,8 +14,8 @@
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
 <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../nav_engine.css">
-<link rel="stylesheet" href="../xref_study_panel.css">
+<link rel="stylesheet" href="../nav_engine.css?v=6">
+<link rel="stylesheet" href="../xref_study_panel.css?v=6">
 <style>
 
 :root {
@@ -8482,8 +8482,8 @@ try {
 } catch(e) {}
 </script>
 
-<script src="../nav_engine.js"></script>
-<script src="../xref_study_panel.js"></script>
+<script src="../nav_engine.js?v=6"></script>
+<script src="../xref_study_panel.js?v=6"></script>
 <script>
 NavEngine.init({
   volume: 'bom',
@@ -8496,7 +8496,8 @@ NavEngine.init({
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('./sw.js').then(function(reg) {
+    navigator.serviceWorker.register('./sw.js?v=6').then(function(reg) {
+      try { reg.update(); } catch (e) {}
       console.log('[PWA] Service worker registered:', reg.scope);
     }).catch(function(err) {
       console.warn('[PWA] Service worker registration failed:', err);
