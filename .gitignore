@@ -18,3 +18,6 @@ heading_gloss_he_en.partial.json
 # Node / generated docs (do not commit)
 node_modules/
 out/
+
+# Local PDF build script (optional; not used by the web app)
+Hebrew BOM/_build_scripts/generate_bom_with_footnotes_from_webapp.js
