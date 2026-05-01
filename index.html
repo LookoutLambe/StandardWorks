@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#1e2233">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
-<link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="nav_engine.css">
 <style>
 
@@ -25,7 +25,11 @@
   --header-bg: #1e2233;
   --header-text: #c8a84e;
   --highlight: rgba(200, 168, 78, 0.10);
-  --card-bg: #1e2233;
+  /* Same blue family as Interlinear badge — cards & search hits */
+  --volume-card-blue-top: #5b94d6;
+  --volume-card-blue-mid: #2f5f9e;
+  --volume-card-blue-deep: #285892;
+  --card-bg: #2f5f9e;
 }
 
 body.dark-mode {
@@ -40,7 +44,10 @@ body.dark-mode {
   --header-bg: #0a0a0a;
   --header-text: #d4af37;
   --highlight: rgba(200, 168, 78, 0.15);
-  --card-bg: #1a1a2e;
+  --volume-card-blue-top: #4d82c4;
+  --volume-card-blue-mid: #3d6fa8;
+  --volume-card-blue-deep: #356598;
+  --card-bg: #3d6fa8;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -70,7 +77,7 @@ body {
 body.dark-mode .top-bar { background: #0a0a0a; }
 
 .top-bar-title {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'David Libre', serif;
   font-size: 1.15em;
   font-weight: 600;
   color: var(--accent);
@@ -162,28 +169,67 @@ body.dark-mode .top-bar { background: #0a0a0a; }
   text-align: center;
   padding: 40px 0 10px;
 }
+/* Secondary hero lines share one size; Hebrew title is largest; INTERLINEAR is a badge (see below) */
+.landing-he-en,
 .landing-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.6em;
+  font-family: 'David Libre', serif;
+  font-size: 1.15em;
+  line-height: 1.35;
+}
+.landing-title {
   font-weight: 600;
   color: var(--ink);
-  line-height: 1.2;
   margin-bottom: 8px;
 }
 .landing-title-hebrew {
   font-family: 'David Libre', serif;
-  font-size: 1.8em;
+  font-size: 2.65em;
   font-weight: 700;
   color: var(--accent);
   direction: rtl;
-  margin-bottom: 12px;
-}
-.landing-subtitle {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.15em;
-  color: var(--ink-light);
-  font-style: italic;
   margin-bottom: 6px;
+  line-height: 1.2;
+}
+.landing-he-en {
+  color: var(--ink-light);
+  font-weight: 500;
+  margin-bottom: 14px;
+  letter-spacing: 0.02em;
+}
+.landing-interlinear-kicker {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-family: 'David Libre', serif;
+  font-weight: 600;
+  color: #faf8f2;
+  background: #2f5f9e;
+  padding: 10px 22px 11px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  line-height: 1.25;
+  box-shadow: 0 2px 6px rgba(47, 95, 158, 0.35);
+}
+.landing-interlinear-kicker .lie-en {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.landing-interlinear-kicker .lie-he {
+  font-family: 'David Libre', serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: none;
+  direction: rtl;
+}
+body.dark-mode .landing-interlinear-kicker {
+  background: #3d6fa8;
+  color: #faf8f2;
+}
+.landing-interlinear-kicker + .landing-title {
+  margin-top: 0;
 }
 .landing-description {
   font-size: 0.95em;
@@ -211,6 +257,29 @@ body.dark-mode .top-bar { background: #0a0a0a; }
   max-width: 880px;
   margin: 0 auto;
   padding: 0 8px;
+}
+/* Second row (DC / PGP / JST) + pair row use the same 3-column tracks */
+@media (min-width: 601px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* Last row: two tiles centered (same width as columns above; gutter centers line up) */
+.card-grid-pair {
+  grid-column: 1 / -1;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+}
+.card-grid-pair .scripture-card {
+  flex: 0 0 calc((100% - 48px) / 3);
+  width: calc((100% - 48px) / 3);
+  max-width: calc((100% - 48px) / 3);
+  min-width: 0;
 }
 
 /* ========== SCRIPTURE CARD ========== */
@@ -245,58 +314,47 @@ body.dark-mode .top-bar { background: #0a0a0a; }
   box-shadow: 0 8px 28px rgba(0,0,0,0.25), 0 2px 8px rgba(0,0,0,0.12);
 }
 
-/* Book cover styles — each volume gets a distinct look */
-.card-cover.ot {
-  background: linear-gradient(170deg, #0d1a2e 0%, #162744 100%);
-  border: 1px solid #2a4060;
-}
-.card-cover.nt {
-  background: linear-gradient(170deg, #0d1a2e 0%, #162744 100%);
-  border: 1px solid #2a4060;
-}
-.card-cover.bom {
-  background: linear-gradient(170deg, #0a1628 0%, #1a3050 100%);
-  border: 1px solid #2a4a70;
-}
-.card-cover.dc {
-  background: linear-gradient(170deg, #0d1a2e 0%, #162744 100%);
-  border: 1px solid #2a4060;
-}
-.card-cover.pgp {
-  background: linear-gradient(170deg, #0d1a2e 0%, #162744 100%);
-  border: 1px solid #2a4060;
-}
+/* Volume tiles — unified medium blue (matches Interlinear badge) */
+.card-cover.ot,
+.card-cover.nt,
+.card-cover.bom,
+.card-cover.dc,
+.card-cover.pgp,
 .card-cover.jst {
-  background: linear-gradient(170deg, #0d1a2e 0%, #162744 100%);
-  border: 1px solid #2a4060;
+  background: linear-gradient(
+    170deg,
+    var(--volume-card-blue-top) 0%,
+    var(--volume-card-blue-mid) 52%,
+    var(--volume-card-blue-deep) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.22);
 }
 
 
 .card-cover-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.15em;
+  font-family: 'David Libre', serif;
+  font-size: 1.05em;
   font-weight: 600;
-  color: #c8a84e;
+  color: #ffffff;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   line-height: 1.35;
 }
 .card-cover .rule-top,
 .card-cover .rule-bottom {
   width: 55%;
   height: 1px;
-  background: #c8a84e;
-  opacity: 0.5;
+  background: rgba(255, 255, 255, 0.55);
   margin: 10px auto;
 }
 
 .card-cover-hebrew {
   font-family: 'David Libre', serif;
-  font-size: 1.1em;
-  font-weight: 500;
-  color: #c8a84e;
+  font-size: 1.12em;
+  font-weight: 600;
+  color: #ffffff;
   direction: rtl;
-  margin-top: 4px;
+  margin-top: 0;
   line-height: 1.4;
 }
 
@@ -305,7 +363,7 @@ body.dark-mode .top-bar { background: #0a0a0a; }
   text-align: center;
 }
 .card-label-en {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'David Libre', serif;
   font-size: 0.95em;
   font-weight: 600;
   color: var(--ink);
@@ -323,9 +381,9 @@ body.dark-mode .top-bar { background: #0a0a0a; }
   position: absolute;
   bottom: 10px;
   right: 10px;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', serif;
   font-size: 0.6em;
-  color: #c8a84e;
+  color: #ffffff;
   background: rgba(0,0,0,0.6);
   padding: 2px 8px;
   border-radius: 3px;
@@ -341,7 +399,7 @@ body.dark-mode .top-bar { background: #0a0a0a; }
 .placeholder-panel .back-btn {
   display: inline-block;
   margin-bottom: 32px;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', serif;
   font-size: 0.95em;
   color: var(--accent);
   background: none;
@@ -355,7 +413,7 @@ body.dark-mode .top-bar { background: #0a0a0a; }
   background: rgba(200, 168, 78, 0.1);
 }
 .placeholder-title {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'David Libre', serif;
   font-size: 2em;
   font-weight: 600;
   color: var(--accent);
@@ -404,7 +462,7 @@ body.dark-mode .top-bar { background: #0a0a0a; }
   max-width: 340px;
   margin: 0 auto 24px;
   padding: 12px 32px;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', serif;
   font-size: 1.1em;
   font-weight: 600;
   border-radius: 6px;
@@ -426,7 +484,7 @@ body.dark-mode .top-bar { background: #0a0a0a; }
 .global-search-input {
   width: 100%;
   padding: 10px 16px;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', serif;
   font-size: 1em;
   background: var(--bg-deep);
   color: var(--ink);
@@ -456,17 +514,20 @@ body.dark-mode .top-bar { background: #0a0a0a; }
   padding: 10px 14px;
   margin-bottom: 6px;
   background: var(--card-bg);
-  border: 1px solid var(--rule);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 6px;
   color: var(--accent);
   text-decoration: none;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', serif;
   font-size: 0.95em;
   transition: background 0.15s, transform 0.15s;
 }
 .gs-result-link:hover {
-  background: #2a2f44;
+  background: var(--volume-card-blue-deep);
   transform: translateY(-1px);
+}
+body.dark-mode .gs-result-link:hover {
+  background: var(--volume-card-blue-deep);
 }
 .gs-result-link .gs-heb {
   font-family: 'David Libre', serif;
@@ -485,31 +546,53 @@ body.dark-mode .top-bar { background: #0a0a0a; }
 
 .study-tools-strip {
   max-width: 560px;
-  margin: 18px auto 0;
-  padding: 12px 16px;
+  margin: 18px auto 32px;
+  padding: 12px 28px;
   text-align: center;
   font-size: 0.88em;
-  color: var(--ink-light);
+  color: #1a1a2e;
   line-height: 1.9;
-  border: 1px solid var(--rule-light);
-  border-radius: 8px;
-  background: rgba(200, 168, 78, 0.06);
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.2s;
 }
 .study-tools-strip a {
-  color: var(--accent);
+  color: #1a1a2e;
   text-decoration: none;
   font-weight: 600;
 }
-.study-tools-strip a:hover { text-decoration: underline; }
-.study-tools-strip .sts-dot { margin: 0 8px; opacity: 0.45; user-select: none; }
+.study-tools-strip a:hover {
+  text-decoration: underline;
+}
+.study-tools-strip .sts-dot {
+  margin: 0 8px;
+  color: #1a1a2e;
+  opacity: 0.45;
+  user-select: none;
+}
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 600px) {
-  .landing-title { font-size: 1.8em; }
-  .landing-title-hebrew { font-size: 1.4em; }
+  .landing-title-hebrew { font-size: 2.1em; }
+  .landing-he-en,
+  .landing-title { font-size: 1.05em; }
+  .landing-interlinear-kicker {
+    padding: 8px 14px 9px;
+    gap: 4px;
+  }
+  .landing-interlinear-kicker .lie-en { font-size: 0.68rem; letter-spacing: 0.1em; }
+  .landing-interlinear-kicker .lie-he { font-size: 0.82rem; }
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px 16px;
+  }
+  .card-grid-pair .scripture-card {
+    flex: 0 0 calc((100% - 16px) / 2);
+    width: calc((100% - 16px) / 2);
+    max-width: calc((100% - 16px) / 2);
   }
   .card-cover-title { font-size: 0.95em; }
   .card-cover-hebrew { font-size: 0.9em; }
@@ -520,17 +603,16 @@ body.dark-mode .top-bar { background: #0a0a0a; }
     grid-template-columns: repeat(2, 1fr);
     gap: 16px 12px;
   }
-}
-@media (min-width: 800px) {
-  .card-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .card-grid-pair .scripture-card {
+    flex: 0 0 calc((100% - 12px) / 2);
+    width: calc((100% - 12px) / 2);
+    max-width: calc((100% - 12px) / 2);
   }
 }
-
 /* === FORCE UI FONT (David Libre) === */
 body, button, input, select, textarea,
 .top-bar, .top-bar-title, .top-bar-actions,
-.landing-subtitle, .card-title, .card-subtitle, .card-desc,
+.card-title, .card-subtitle, .card-desc,
 .continue-reading, .cr-ref, .cr-heb, .cr-btn,
 #global-search, #gs-filter, #gs-results {
   font-family: 'David Libre', 'Georgia', serif !important;
@@ -563,9 +645,13 @@ body, button, input, select, textarea,
   <div class="panel active" id="panel-landing">
 
     <div class="landing-header">
-      <div class="landing-title">Scriptures &amp; Study Resources</div>
       <div class="landing-title-hebrew">כתבי הקודש</div>
-      <div class="landing-subtitle">Hebrew Interlinear Edition</div>
+      <div class="landing-he-en">The Holy Scriptures</div>
+      <div class="landing-interlinear-kicker">
+        <span class="lie-he">מהדורה בין־שורתית</span>
+        <span class="lie-en">Interlinear Edition</span>
+      </div>
+      <div class="landing-title">Scriptures &amp; Study Resources</div>
       <div class="landing-description">
         Study the Standard Works in Hebrew with word-by-word interlinear translation,
         transliteration, and English glosses.
@@ -583,7 +669,7 @@ body, button, input, select, textarea,
     <!-- ===== CONTINUE LEARNING ===== -->
     <div class="continue-reading" id="continue-learning" style="display:none; margin-top:12px; background:rgba(18,65,43,0.12); border-color: rgba(47,125,74,0.35);" onclick="goToLearning()">
       <div class="cr-ref" id="cl-ref"></div>
-      <div class="cr-heb" id="cl-sub" style="direction:ltr; font-family:'Crimson Pro', serif;"></div>
+      <div class="cr-heb" id="cl-sub" style="direction:ltr; font-family:'David Libre', serif;"></div>
     </div>
 
     <!-- ===== GLOBAL SEARCH ===== -->
@@ -606,14 +692,14 @@ body, button, input, select, textarea,
       <div class="scripture-card" onclick="window.location.href='ot.html'">
         <div class="card-cover ot">
           <div class="rule-top"></div>
-          <div class="card-cover-title">Old<br>Testament</div>
+          <div class="card-cover-hebrew">תנ״ך</div>
           <div class="rule-bottom"></div>
-          <div class="card-cover-hebrew">תַּנַ״ךְ</div>
+          <div class="card-cover-title">Old<br>Testament</div>
           <div class="rule-bottom"></div>
         </div>
         <div class="card-label">
           <div class="card-label-en">Old Testament</div>
-          <div class="card-label-he">תַּנַ״ךְ</div>
+          <div class="card-label-he">תנ״ך</div>
         </div>
       </div>
 
@@ -621,9 +707,9 @@ body, button, input, select, textarea,
       <div class="scripture-card" onclick="window.location.href='nt.html'">
         <div class="card-cover nt">
           <div class="rule-top"></div>
-          <div class="card-cover-title">New<br>Testament</div>
-          <div class="rule-bottom"></div>
           <div class="card-cover-hebrew">הברית<br>החדשה</div>
+          <div class="rule-bottom"></div>
+          <div class="card-cover-title">New<br>Testament</div>
           <div class="rule-bottom"></div>
         </div>
         <div class="card-label">
@@ -636,9 +722,9 @@ body, button, input, select, textarea,
       <div class="scripture-card" onclick="window.location.href='bom/bom.html#home'">
         <div class="card-cover bom">
           <div class="rule-top"></div>
-          <div class="card-cover-title">The<br>Book of<br>Mormon</div>
-          <div class="rule-bottom"></div>
           <div class="card-cover-hebrew">ספר<br>מורמון</div>
+          <div class="rule-bottom"></div>
+          <div class="card-cover-title">The<br>Book of<br>Mormon</div>
           <div class="rule-bottom"></div>
         </div>
         <div class="card-label">
@@ -651,9 +737,9 @@ body, button, input, select, textarea,
       <div class="scripture-card" onclick="window.location.href='dc.html'">
         <div class="card-cover dc">
           <div class="rule-top"></div>
-          <div class="card-cover-title">Doctrine<br>and<br>Covenants</div>
-          <div class="rule-bottom"></div>
           <div class="card-cover-hebrew">תורה<br>ובריתות</div>
+          <div class="rule-bottom"></div>
+          <div class="card-cover-title">Doctrine<br>and<br>Covenants</div>
           <div class="rule-bottom"></div>
         </div>
         <div class="card-label">
@@ -666,9 +752,9 @@ body, button, input, select, textarea,
       <div class="scripture-card" onclick="window.location.href='pgp.html'">
         <div class="card-cover pgp">
           <div class="rule-top"></div>
-          <div class="card-cover-title">Pearl<br>of Great<br>Price</div>
-          <div class="rule-bottom"></div>
           <div class="card-cover-hebrew">פנינת<br>המחיר הגדול</div>
+          <div class="rule-bottom"></div>
+          <div class="card-cover-title">Pearl<br>of Great<br>Price</div>
           <div class="rule-bottom"></div>
         </div>
         <div class="card-label">
@@ -682,9 +768,9 @@ body, button, input, select, textarea,
       <div class="scripture-card" onclick="window.location.href='jst.html'">
         <div class="card-cover jst">
           <div class="rule-top"></div>
-          <div class="card-cover-title">Joseph<br>Smith<br>Translation</div>
-          <div class="rule-bottom"></div>
           <div class="card-cover-hebrew">תרגום<br>ג׳וזף סמית</div>
+          <div class="rule-bottom"></div>
+          <div class="card-cover-title">Joseph<br>Smith<br>Translation</div>
           <div class="rule-bottom"></div>
         </div>
         <div class="card-label">
@@ -693,13 +779,14 @@ body, button, input, select, textarea,
         </div>
       </div>
 
+      <div class="card-grid-pair">
       <!-- Vocabulary Builder -->
       <div class="scripture-card" onclick="window.location.href='vocab.html'">
-        <div class="card-cover vocab" style="background: linear-gradient(170deg, #2a1a0d 0%, #4a2d14 55%, #1a120a 100%); border: 1px solid #6b4a22;">
+        <div class="card-cover vocab" style="background: linear-gradient(170deg, #3d2619 0%, #5c3a22 55%, #2a1e14 100%); border: 1px solid #7d5a35;">
           <div class="rule-top"></div>
-          <div class="card-cover-title">Vocab<br>Builder</div>
-          <div class="rule-bottom"></div>
           <div class="card-cover-hebrew">אֹצַר<br>מִלִּים</div>
+          <div class="rule-bottom"></div>
+          <div class="card-cover-title">Vocab<br>Builder</div>
           <div class="rule-bottom"></div>
         </div>
         <div class="card-label">
@@ -710,11 +797,11 @@ body, button, input, select, textarea,
 
       <!-- Learn Biblical Hebrew -->
       <div class="scripture-card" onclick="window.location.href='learn.html'">
-        <div class="card-cover learn" style="background: linear-gradient(170deg, #0f2a2a 0%, #173a3a 55%, #0b1f1f 100%); border: 1px solid #2f6a6a;">
+        <div class="card-cover learn" style="background: linear-gradient(170deg, #1a3c3c 0%, #265050 55%, #142a2a 100%); border: 1px solid #3d7a7a;">
           <div class="rule-top"></div>
-          <div class="card-cover-title">Learn<br>Hebrew</div>
-          <div class="rule-bottom"></div>
           <div class="card-cover-hebrew">לִמּוּד<br>עִבְרִית</div>
+          <div class="rule-bottom"></div>
+          <div class="card-cover-title">Learn<br>Hebrew</div>
           <div class="rule-bottom"></div>
           <div class="card-badge">NEW</div>
         </div>
@@ -722,6 +809,7 @@ body, button, input, select, textarea,
           <div class="card-label-en">Learn Biblical Hebrew</div>
           <div class="card-label-he">לימוד עברית</div>
         </div>
+      </div>
       </div>
 
     </div><!-- /card-grid -->
