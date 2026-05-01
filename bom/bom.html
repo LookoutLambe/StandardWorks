@@ -623,7 +623,7 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   .controls-top, .controls-bottom, .chapter-nav, #reading-progress,
   #glossary-panel, #xref-panel, #annotations-panel, #search-container,
   #word-popup, #xref-popup, #share-popup, #share-overlay,
-  #sel-toolbar, #return-banner, #shortcuts-overlay { display: none !important; }
+  #sel-toolbar, #return-banner, #shortcuts-overlay, .safari-browser-tip { display: none !important; }
   .page { box-shadow: none; padding: 20px 40px; max-width: 100%; }
   .page::before { display: none; }
   .verse { break-inside: avoid; page-break-inside: avoid; border-bottom: 1px solid #ccc; }
@@ -660,6 +660,37 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
 
 .colophon .word-unit .gl {
   font-size: 0.65em;
+}
+
+/* iOS Safari: browser chrome cannot be hidden by CSS/JS — only Home Screen launch is standalone */
+.safari-browser-tip {
+  display: none;
+  margin: 0 auto 14px;
+  max-width: 700px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  background: rgba(30, 34, 51, 0.06);
+  color: var(--ink);
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.82em;
+  line-height: 1.4;
+  direction: ltr;
+  text-align: center;
+}
+.safari-browser-tip.show { display: block; }
+.safari-browser-tip strong { color: var(--accent); font-weight: 600; }
+.safari-browser-tip button {
+  margin-top: 10px;
+  padding: 7px 16px;
+  border-radius: 6px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #1e2233;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95em;
 }
 
 /* Chapter divider */
@@ -1777,6 +1808,11 @@ body, button, input, select, textarea,
 <!-- Navigation now handled by nav_engine.js -->
 
 <div class="page" id="page" role="main">
+
+  <div id="safari-browser-tip" class="safari-browser-tip" role="status" aria-live="polite" hidden>
+    Safari always shows the bottom toolbar while you browse in a tab. To hide it and use the full screen like an app, tap <strong>Share</strong> → <strong>Add to Home Screen</strong>, then open <strong>ספר מורמון</strong> from your Home Screen (not from Safari).
+    <div><button type="button" id="safari-browser-tip-dismiss">OK, got it</button></div>
+  </div>
 
   <div class="book-header" id="book-header" style="display:none">
     <div class="book-title" id="main-book-title">ספר מורמון</div>
@@ -8549,9 +8585,41 @@ NavEngine.init({
 });
 </script>
 <script>
+(function() {
+  function isStandalone() {
+    try {
+      if (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) return true;
+      if (window.matchMedia && window.matchMedia('(display-mode: fullscreen)').matches) return true;
+    } catch (e) {}
+    return window.navigator.standalone === true;
+  }
+  function isIOS() {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent)
+      || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  }
+  function run() {
+    var tip = document.getElementById('safari-browser-tip');
+    var btn = document.getElementById('safari-browser-tip-dismiss');
+    if (!tip || !btn) return;
+    if (!isIOS() || isStandalone()) return;
+    try {
+      if (localStorage.getItem('bom-dismiss-safari-tip') === '1') return;
+    } catch (e) {}
+    tip.removeAttribute('hidden');
+    tip.classList.add('show');
+    btn.addEventListener('click', function() {
+      tip.style.display = 'none';
+      try { localStorage.setItem('bom-dismiss-safari-tip', '1'); } catch (e) {}
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
+  else run();
+})();
+</script>
+<script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('./sw.js?v=8').then(function(reg) {
+    navigator.serviceWorker.register('./sw.js?v=9').then(function(reg) {
       try { reg.update(); } catch (e) {}
       console.log('[PWA] Service worker registered:', reg.scope);
     }).catch(function(err) {

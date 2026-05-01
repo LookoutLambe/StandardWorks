@@ -5,6 +5,7 @@
   "start_url": "/StandardWorks/bom/bom.html",
   "scope": "/StandardWorks/bom/",
   "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "browser"],
   "background_color": "#1a1a2e",
   "theme_color": "#1a1a2e",
   "orientation": "portrait-primary",
