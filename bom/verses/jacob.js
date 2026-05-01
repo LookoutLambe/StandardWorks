@@ -1577,7 +1577,7 @@ var jc_ch4Verses = [
     ["הָאֲהוּבִים","the-beloved"],
     ["וּבָנֵינוּ","and-our-children"],
     ["יְקַבְּלוּם","he-will-receive-them"],
-    ["בְּלֵב","with-hearts-of"],
+    ["בְּלֵב","with-the-hearts-of"],
     ["תּוֹדָה","thanksgiving"],
     ["וְיַבִּיטוּ","and-they-shall-look-upon"],
     ["בָהֶם","them"],
@@ -1654,7 +1654,7 @@ var jc_ch4Verses = [
     ["לְאַבְרָהָם","unto-Abraham"],
     ["בַּמִּדְבָּר","in-the-wilderness"],
     ["בְּהִשָּׁמְעוֹ","in-his-being-obedient"],
-    ["לְמִצְוֹת","to-commandments-of"],
+    ["לְמִצְוֹת","to-the-commandments-of"],
     ["אֱלֹהִים","God"],
     ["בְּהַקְרִיבוֹ","in-his-offering-up"],
     ["אֶת־בְּנוֹ","his-son"],
@@ -2164,7 +2164,7 @@ var jc_ch5Verses = [
     ["וַיְהִי","and-it-came-to-pass"],["כִּי","that"],["בָּכָה","wept"],["אֲדוֹן","the-master-of"],["הַכֶּרֶם","the-vineyard"],["וַיֹּאמֶר","and-said"],["אֶל־הָעֶבֶד","unto-the-servant"],["מַה־עוֹד","what-more"],["יָכֹלְתִּי","could-I-have-done"],["לַעֲשׂוֹת","to-do"],["לְכַרְמִי","for-my-vineyard"],
   ]},
   { num:"מב", words:[
-    ["הִנֵּה","behold"],["יָדַעְתִּי","I-knew"],["כִּי","that"],["כָּל־פְּרִי","all-the-fruit-of"],["הַכֶּרֶם","the-vineyard"],["זוּלָת","save-it-were"],["אֵלֶּה","these"],["נִשְׁחַת","had-become-corrupt"],["וְעַתָּה","and-now"],["גַּם־אֵלֶּה","even-these"],["אֲשֶׁר","which"],["הוֹצִיאוּ","had-once-brought-forth"],["פַּעַם","once"],["פְּרִי","fruit"],["טוֹב","good"],["נִשְׁחְתוּ","have-become-corrupt"],["וְעַתָּה","and-now"],["לֹא","not"],["יִצְלְחוּ","are-good-for"],["כָּל־עֲצֵי","all-the-trees-of"],["כַרְמִי","my-vineyard"],["לִדְבַר","to-word-of"],["זוּלָת","save-it-be"],["לְהִכָּרֵת","to-be-hewn-down"],["וּלְהַשְׁלִיכָם","and-cast-them"],["אֶל־הָאֵשׁ","into-the-fire"],
+    ["הִנֵּה","behold"],["יָדַעְתִּי","I-knew"],["כִּי","that"],["כָּל־פְּרִי","all-the-fruit-of"],["הַכֶּרֶם","the-vineyard"],["זוּלָת","save-it-were"],["אֵלֶּה","these"],["נִשְׁחַת","had-become-corrupt"],["וְעַתָּה","and-now"],["גַּם־אֵלֶּה","even-these"],["אֲשֶׁר","which"],["הוֹצִיאוּ","had-once-brought-forth"],["פַּעַם","once"],["פְּרִי","fruit"],["טוֹב","good"],["נִשְׁחְתוּ","have-become-corrupt"],["וְעַתָּה","and-now"],["לֹא","not"],["יִצְלְחוּ","are-good-for"],["כָּל־עֲצֵי","all-the-trees-of"],["כַרְמִי","my-vineyard"],["לִדְבַר","to-the-word-of"],["זוּלָת","save-it-be"],["לְהִכָּרֵת","to-be-hewn-down"],["וּלְהַשְׁלִיכָם","and-cast-them"],["אֶל־הָאֵשׁ","into-the-fire"],
   ]},
   { num:"מג", words:[
     ["וְהִנֵּה","and-behold"],["הָאַחֲרוֹן","the-last"],["הַזֶּה","this"],["אֲשֶׁר","whose"],["יָבֵשׁ","has-withered-away"],["עֲנָפוֹ","its-branch"],["נָטַעְתִּי","I-have-planted"],["בְּמָקוֹם","in-a-spot"],["טוֹב","good"],["הָאֲדָמָה","of-the-ground"],["אָכֵן","yea"],["בְּמָקוֹם","in-a-spot"],["הַנִּבְחָר","the-was-chosen"],["לִי","unto-me"],["מִכָּל־חֶלְקֵי","above-all-the-parts-of"],["כַרְמִי","my-vineyard"],
@@ -2287,7 +2287,7 @@ var jc_ch6Verses = [
     ["וּמַה־רַב־חֶסֶד","and-how-great-mercy"],["אֱלֹהֵינוּ","our-God"],["אֵלֵינוּ","unto-us"],["כִּי","for"],["זוֹכֵר","He-remembers"],["אֶת־בֵּית","the-house-of"],["יִשְׂרָאֵל","Israel"],["גַּם־שָׁרָשִׁים","both-roots"],["גַּם־עֲנָפִים","and-branches"],["וְהוּא","and-He"],["פֹּרֵשׂ","stretches-forth"],["יָדָיו","His-hands"],["אֲלֵיהֶם","unto-them"],["כָּל־הַיּוֹם","all-the-day-long"],["וְהֵם","and-they-are"],["עַם־קְשֵׁה־עֹרֶף","a-people-stiff-of-neck"],["וּמְמָרִים","and-gainsaying"],["אַךְ","but"],["כָּל־אֲשֶׁר","as-many-as-which"],["לֹא־יַקְשׁוּ","not-harden"],["אֶת־לְבָבָם","their-hearts"],["יִוָּשְׁעוּ","they-shall-be-saved"],["בְּמַלְכוּתוֹ","in-His-kingdom"],
   ]},
   { num:"ה", words:[
-    ["לָכֵן","therefore"],["אַחַי","my-brethren"],["הָאֲהוּבִים","the-beloved"],["אֶתְחַנֵּן","I-shall-beseech"],["אֲלֵיכֶם","of-you"],["בְּדִבְרֵי","in-words-of"],["כֹּבֶד","soberness"],["כִּי","that"],["תָשׁוּבוּ","you-would-repent"],["וְתָבֹאוּ","and-come"],["בְּכָל־לֵב","with-full-of-heart"],["וְתִדְבְּקוּ","and-cleave"],["בֵאלֹהִים","unto-God"],["כַּאֲשֶׁר","when/as"],["דָּבֵק","He-cleaves"],["הוּא","He"],["בָּכֶם","unto-you"],["וּבְעוֹד","and-while"],["זְרוֹעַ","the-arm-of"],["רַחֲמָיו","His-mercy"],["נְטוּיָה","is-stretched-out"],["אֲלֵיכֶם","towards-you"],["בְּאוֹר","in-the-light-of"],["הַיּוֹם","the-day"],["אַל־תַּקְשׁוּ","do-not-harden"],["לְבַבְכֶם","your-hearts"],
+    ["לָכֵן","therefore"],["אַחַי","my-brethren"],["הָאֲהוּבִים","the-beloved"],["אֶתְחַנֵּן","I-shall-beseech"],["אֲלֵיכֶם","of-you"],["בְּדִבְרֵי","in-the-words-of"],["כֹּבֶד","soberness"],["כִּי","that"],["תָשׁוּבוּ","you-would-repent"],["וְתָבֹאוּ","and-come"],["בְּכָל־לֵב","with-full-of-heart"],["וְתִדְבְּקוּ","and-cleave"],["בֵאלֹהִים","unto-God"],["כַּאֲשֶׁר","when/as"],["דָּבֵק","He-cleaves"],["הוּא","He"],["בָּכֶם","unto-you"],["וּבְעוֹד","and-while"],["זְרוֹעַ","the-arm-of"],["רַחֲמָיו","His-mercy"],["נְטוּיָה","is-stretched-out"],["אֲלֵיכֶם","towards-you"],["בְּאוֹר","in-the-light-of"],["הַיּוֹם","the-day"],["אַל־תַּקְשׁוּ","do-not-harden"],["לְבַבְכֶם","your-hearts"],
   ]},
   { num:"ו", words:[
     ["אָכֵן","yea"],["הַיּוֹם","the-today"],["אִם־בְּקֹלוֹ","if-His-voice"],["תִשְׁמָעוּ","you-will-hear"],["אַל־תַּקְשׁוּ","do-not-harden"],["לְבַבְכֶם","your-hearts"],["כִּי","for"],["לָמָּה","why"],["תָמוּתוּ","will-you-die"],

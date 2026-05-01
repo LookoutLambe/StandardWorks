@@ -2,7 +2,7 @@
 (function() {
 var aof_ch1Verses = [
   { num: "א", words: [
-    ["מַאֲמִינִים","believing"],["אֲנַחְנוּ","we"],["בֵּאלֹהִים","in-God"],["הָאָב","the-Father"],["הַנִּצְחִי","the-Eternal"],["וּבִבְנוֹ","and-in-His-Son"],["יֵשׁוּעַ","Yeshua"],["הַמָּשִׁיחַ","the-Messiah"],["וּבְרוּחַ","and-in-spirit-of"],["הַקֹּדֶשׁ","the-Holy"],["׃",""]
+    ["מַאֲמִינִים","believing"],["אֲנַחְנוּ","we"],["בֵּאלֹהִים","in-God"],["הָאָב","the-Father"],["הַנִּצְחִי","the-Eternal"],["וּבִבְנוֹ","and-in-His-Son"],["יֵשׁוּעַ","Yeshua"],["הַמָּשִׁיחַ","the-Messiah"],["וּבְרוּחַ","and-in-the-spirit-of"],["הַקֹּדֶשׁ","the-Holy"],["׃",""]
   ]},
   { num: "ב", words: [
     ["מַאֲמִינִים","believing"],["אֲנַחְנוּ","we"],["כִּי","that"],["הָאָדָם","the-man/Adam"],["יֵעָנֵשׁ","he will be fined"],["עַל־חֲטָאָיו","upon-their-sins"],["שֶׁלּוֹ","Shiloh"],["וְלֹא","and-not"],["עַל־פֶּשַׁע","upon-the-transgression-of"],["אָדָם","man"],["׃",""]

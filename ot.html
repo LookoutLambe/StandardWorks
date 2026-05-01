@@ -996,10 +996,10 @@ function getChapterLabel(id) {
 window._noNikkud = false;
 function _stripNikkudDisplay(s) { return s.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, ''); }
 
-// Prefer morphology-aware glossing (BLB/BibleHub-style) when possible.
-// Note: true morphology requires a per-word morph tag; until then, we at least
-// account for common Hebrew prefixes/suffixes + Strong's lemma gloss.
-window._useStrongsMorphGloss = true;
+// OT interlinear English under each Hebrew word comes from ot_verses/*.js (curated
+// per-word glosses — WLC interlinear, aligned with Blue Letter Bible). Do not
+// replace them with Strong's-lemma heuristics here; popups still link Strong's on tap.
+window._useStrongsMorphGloss = false;
 
 function _stripHebrewMarks(s) { return (s || '').replace(/[\u0591-\u05C7]/g, ''); }
 
