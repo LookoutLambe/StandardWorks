@@ -1,4 +1,4 @@
-const CACHE = 'bom-v12';
+const CACHE = 'bom-v13';
 const ASSETS = [
   './bom.html',
   '../xref_study_panel.css',
@@ -9,6 +9,7 @@ const ASSETS = [
   './chapter_headings_heb.js',
   './roots_glossary.js',
   './crossrefs.js',
+  './bom_inverse_crossrefs.js',
   './topical_guide.js',
   './verses/frontmatter.js',
   './verses/1nephi.js',

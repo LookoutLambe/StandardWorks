@@ -4183,6 +4183,7 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
 <script src="official_verses.js"></script>
 <script src="crossrefs.js?v=23"></script>
 <script src="roots_glossary.js?v=23"></script>
+<script src="../bom/bom_inverse_crossrefs.js?v=1"></script>
 <script src="chapter_headings.js"></script>
 <script src="chapter_headings_heb.js?v=3"></script>
 <script src="scripture_verses.js"></script>
@@ -5916,6 +5917,73 @@ function getExternalVerseHtml(refText) {
   return '';
 }
 
+function normalizeXrefExternalLabel(s) {
+  if (!s) return s;
+  var t = String(s).replace(/\u00a0/g, ' ').trim();
+  if (/^Ex\s/i.test(t) && !/^Ex\./i.test(t)) t = t.replace(/^Ex\s/i, 'Ex. ');
+  if (/^Deut\s/i.test(t) && !/^Deut\./i.test(t)) t = t.replace(/^Deut\s/i, 'Deut. ');
+  if (/^Isa\s/i.test(t) && !/^Isa\./i.test(t)) t = t.replace(/^Isa\s/i, 'Isa. ');
+  return t;
+}
+
+function appendStandardWorksInverseCards(refsContainer, bomVerseKeys) {
+  var data = window._bomInverseXrefsData;
+  if (!data || !refsContainer) return;
+  var keys = Array.isArray(bomVerseKeys) ? bomVerseKeys : (bomVerseKeys ? [bomVerseKeys] : []);
+  var collected = [];
+  var seenDedupe = {};
+  keys.forEach(function(vk) {
+    if (!vk || !data[vk]) return;
+    data[vk].forEach(function(row) {
+      var id = row.dedupeId || (row.sourceKey + '|' + (row.marker || '') + '|' + (row.anchorText || ''));
+      if (seenDedupe[id]) return;
+      seenDedupe[id] = true;
+      collected.push(row);
+    });
+  });
+  if (collected.length === 0) return;
+
+  var heading = document.createElement('div');
+  heading.style.cssText = 'font-weight:bold;color:#c8a84e;margin:12px 0 6px;font-size:0.9em;border-bottom:1px solid #444;padding-bottom:4px;';
+  heading.textContent = 'Cited in Standard Works footnotes (' + collected.length + ')';
+  refsContainer.appendChild(heading);
+
+  collected.forEach(function(row) {
+    var displayRef = row.displayRef || '';
+    var card = document.createElement('div');
+    card.className = 'xref-ref-card';
+
+    var titleDiv = document.createElement('div');
+    titleDiv.className = 'xref-ref-title';
+    var titleSpan = document.createElement('span');
+    titleSpan.textContent = displayRef;
+    titleDiv.appendChild(titleSpan);
+    card.appendChild(titleDiv);
+
+    var metaBits = [];
+    if (row.volumeTag) metaBits.push(row.volumeTag);
+    if (row.marker) metaBits.push('marker ' + row.marker);
+    if (row.anchorText) metaBits.push('\u201c' + row.anchorText + '\u201d');
+    if (metaBits.length) {
+      var meta = document.createElement('div');
+      meta.style.cssText = 'font-size:0.82em;color:#9aa3bc;margin-top:4px;line-height:1.35;';
+      meta.textContent = metaBits.join(' \u00b7 ');
+      card.appendChild(meta);
+    }
+
+    var extLookup = normalizeXrefExternalLabel(displayRef);
+    var extHtml = getExternalVerseHtml(extLookup);
+    if (!extHtml && extLookup && extLookup !== displayRef) extHtml = getExternalVerseHtml(displayRef);
+    if (extHtml) {
+      var extDiv = document.createElement('div');
+      extDiv.innerHTML = extHtml;
+      card.appendChild(extDiv);
+    }
+
+    refsContainer.appendChild(card);
+  });
+}
+
 function openXrefPanel(ref, sourceVerseKey, hebrewRoot) {
   var panel = document.getElementById('xref-panel');
   // Show Hebrew root + English meaning if available, otherwise show ref.text
@@ -6017,6 +6085,8 @@ function openXrefPanel(ref, sourceVerseKey, hebrewRoot) {
       refsContainer.appendChild(card);
     });
   }
+
+  appendStandardWorksInverseCards(refsContainer, sourceVerseKey);
 
   // Close the old popup if open
   document.getElementById('xref-popup').style.display = 'none';
@@ -6180,6 +6250,14 @@ function openRootXrefPanel(root) {
       refsContainer.appendChild(card);
     });
   });
+
+  var inverseVerseKeys = [];
+  entries.forEach(function(entry) {
+    if (entry.verseKey && inverseVerseKeys.indexOf(entry.verseKey) < 0) {
+      inverseVerseKeys.push(entry.verseKey);
+    }
+  });
+  appendStandardWorksInverseCards(refsContainer, inverseVerseKeys);
 
   document.getElementById('xref-popup').style.display = 'none';
   panel.scrollTop = 0;

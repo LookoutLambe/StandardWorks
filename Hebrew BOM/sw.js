@@ -1,4 +1,4 @@
-var CACHE_NAME = 'hebrew-bom-v23';
+var CACHE_NAME = 'hebrew-bom-v24';
 
 // Use relative paths resolved from service worker scope
 var BASE = self.registration.scope;
@@ -7,6 +7,7 @@ var PRECACHE_FILES = [
   'BOM.html',
   'official_verses.js',
   'crossrefs.js',
+  '../bom/bom_inverse_crossrefs.js',
   'roots_glossary.js',
   'chapter_headings.js',
   'chapter_headings_heb.js',
