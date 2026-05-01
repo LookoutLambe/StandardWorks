@@ -623,7 +623,9 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   .controls-top, .controls-bottom, .chapter-nav, #reading-progress,
   #glossary-panel, #xref-panel, #annotations-panel, #search-container,
   #word-popup, #xref-popup, #share-popup, #share-overlay,
-  #sel-toolbar, #return-banner, #shortcuts-overlay, .safari-browser-tip { display: none !important; }
+  #sel-toolbar, #return-banner, #shortcuts-overlay, .safari-browser-tip {
+    display: none !important;
+  }
   .page { box-shadow: none; padding: 20px 40px; max-width: 100%; }
   .page::before { display: none; }
   .verse { break-inside: avoid; page-break-inside: avoid; border-bottom: 1px solid #ccc; }
@@ -693,16 +695,8 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   font-size: 0.95em;
 }
 
-/* Immersive reading: double-tap (touch) or double-click (#page) toggles fixed chrome */
-body.reader-chrome-hidden .controls-top,
-body.reader-chrome-hidden .controls-bottom {
-  display: none !important;
-}
-body.reader-chrome-hidden #nav-breadcrumb {
-  display: none !important;
-}
-body.reader-chrome-hidden #reading-progress,
-body.reader-chrome-hidden #book-progress-bar {
+/* Immersive reading: double-tap (touch) or double-click (#page) hides bottom mode bar only — header + breadcrumb stay */
+body.reader-footer-hidden .controls-bottom {
   display: none !important;
 }
 @media (max-width: 900px) {
@@ -8591,8 +8585,14 @@ try {
 
 <script>
 try {
-  if (localStorage.getItem('bom-reader-chrome-hidden') === '1') {
-    document.body.classList.add('reader-chrome-hidden');
+  var _rf = localStorage.getItem('bom-reader-footer-hidden');
+  var _rfLegacy = localStorage.getItem('bom-reader-chrome-hidden');
+  if (_rf === '1' || _rfLegacy === '1') {
+    document.body.classList.add('reader-footer-hidden');
+    if (_rfLegacy === '1' && _rf !== '1') {
+      localStorage.setItem('bom-reader-footer-hidden', '1');
+      localStorage.removeItem('bom-reader-chrome-hidden');
+    }
   }
 } catch (e) {}
 </script>
@@ -8613,21 +8613,22 @@ NavEngine.init({
   function ignoreTarget(el) {
     return el && el.closest && el.closest(SEL_IGNORE);
   }
-  function toggleReaderChrome() {
-    document.body.classList.toggle('reader-chrome-hidden');
+  function toggleReadingFooterBar() {
+    document.body.classList.toggle('reader-footer-hidden');
     try {
-      localStorage.setItem('bom-reader-chrome-hidden', document.body.classList.contains('reader-chrome-hidden') ? '1' : '0');
+      localStorage.setItem('bom-reader-footer-hidden', document.body.classList.contains('reader-footer-hidden') ? '1' : '0');
+      localStorage.removeItem('bom-reader-chrome-hidden');
     } catch (e) {}
     window.dispatchEvent(new Event('resize'));
   }
-  function bindReaderChromeToggle(pageEl) {
+  function bindReadingFooterToggle(pageEl) {
     if (!pageEl) return;
     var lastTap = 0;
     pageEl.addEventListener('touchend', function(e) {
       if (ignoreTarget(e.target)) return;
       var now = Date.now();
       if (lastTap && now - lastTap < 420 && now - lastTap > 40) {
-        toggleReaderChrome();
+        toggleReadingFooterBar();
         lastTap = 0;
         return;
       }
@@ -8636,10 +8637,10 @@ NavEngine.init({
     pageEl.addEventListener('dblclick', function(e) {
       if (ignoreTarget(e.target)) return;
       e.preventDefault();
-      toggleReaderChrome();
+      toggleReadingFooterBar();
     });
   }
-  bindReaderChromeToggle(document.getElementById('page'));
+  bindReadingFooterToggle(document.getElementById('page'));
 })();
 </script>
 <script>
@@ -8677,7 +8678,7 @@ NavEngine.init({
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('./sw.js?v=10').then(function(reg) {
+    navigator.serviceWorker.register('./sw.js?v=11').then(function(reg) {
       try { reg.update(); } catch (e) {}
       console.log('[PWA] Service worker registered:', reg.scope);
     }).catch(function(err) {
