@@ -395,7 +395,7 @@
 
     _searchInput = document.createElement('input');
     _searchInput.type = 'text';
-    _searchInput.placeholder = 'Jump to verse... (e.g. Isaiah 53)';
+    _searchInput.placeholder = 'Jump to verse… (e.g. Isaiah 53) — / or Ctrl+K';
     _searchInput.oninput = onSearchInput;
     _searchInput.onkeydown = onSearchKeydown;
     var closeBtn = document.createElement('button');
@@ -443,6 +443,23 @@
     _sidebarEl.appendChild(_bookListEl);
 
     document.body.appendChild(_sidebarEl);
+
+    // Offline indicator (site-wide when NavEngine is initialized)
+    var offBanner = document.createElement('div');
+    offBanner.id = 'nav-offline-banner';
+    offBanner.setAttribute('role', 'status');
+    offBanner.setAttribute('aria-live', 'polite');
+    offBanner.style.cssText = 'display:none;position:fixed;bottom:0;left:0;right:0;z-index:6000;padding:10px 16px;text-align:center;font-size:0.88em;line-height:1.35;background:#3d2914;color:#f5e6c8;border-top:1px solid var(--accent,#c8a84e);font-family:\'David Libre\',Georgia,serif;';
+    offBanner.textContent = 'You appear to be offline. Reconnect to load new pages, or open a volume you already saved for offline reading.';
+    function syncOfflineBanner() {
+      try {
+        offBanner.style.display = typeof navigator !== 'undefined' && navigator.onLine === false ? 'block' : 'none';
+      } catch (e) {}
+    }
+    window.addEventListener('online', syncOfflineBanner);
+    window.addEventListener('offline', syncOfflineBanner);
+    document.body.appendChild(offBanner);
+    setTimeout(syncOfflineBanner, 0);
 
     // Study tools live in #xref-panel (right drawer); wired after DOM/markup loads
     setTimeout(function() {
@@ -1042,6 +1059,16 @@
     // Save reading position
     saveReadingPosition(volKey, chapterId, book);
 
+    // Home hub (index.html): always load the target volume page
+    if (_config && _config.hub) {
+      var volHub = VOLUMES[volKey];
+      if (!volHub) return;
+      var urlHub = (_config.basePath || '') + volHub.page;
+      var hashHub = buildHash(volKey, chapterId);
+      window.location.href = urlHub + (hashHub ? '#' + hashHub : '');
+      return;
+    }
+
     if (volKey === _config.volume) {
       // Same volume — use page's navTo
       _config.currentChapter = chapterId;
@@ -1132,6 +1159,31 @@
   function toggleSidebar() {
     if (_sidebarEl && _sidebarEl.classList.contains('open')) closeSidebar();
     else openSidebar();
+  }
+
+  /** Open sidebar and focus the jump search field ( / and Ctrl+K ) */
+  function openSidebarAndFocusSearch() {
+    if (!_sidebarEl) return;
+    var wasOpen = _sidebarEl.classList.contains('open');
+    if (!wasOpen) openSidebar();
+    setTimeout(function() {
+      try {
+        if (_searchInput) {
+          _searchInput.focus();
+          _searchInput.select();
+        }
+      } catch (e) {}
+    }, wasOpen ? 0 : 220);
+  }
+
+  function isTypingFocusTarget(el) {
+    if (!el || !el.tagName) return false;
+    var t = el.tagName.toUpperCase();
+    if (t === 'INPUT' || t === 'TEXTAREA' || t === 'SELECT') return true;
+    try {
+      if (el.isContentEditable) return true;
+    } catch (e) {}
+    return false;
   }
 
   // ── Search input handler ──
@@ -1271,6 +1323,11 @@
     var hash = buildHash(volKey, chapterId);
     var url = vol.page + (hash ? '#' + hash : '');
     try {
+      if (_config && volKey === _config.volume && typeof window !== 'undefined' && window.location && window.location.hash && window.location.hash.length > 1) {
+        url = vol.page + window.location.hash;
+      }
+    } catch (e) {}
+    try {
       localStorage.setItem('sw-last-read', JSON.stringify({
         volume: volKey, chapter: chapterId, label: label,
         heb: bookInfo ? bookInfo.heb : '', path: url, timestamp: Date.now()
@@ -1392,11 +1449,36 @@
 
   // ── Keyboard Shortcuts ──
   function onKeydown(e) {
-    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
+    if (isTypingFocusTarget(e.target)) return;
+    try {
+      if (_config && _config.hub && window.location.pathname) {
+        var pn = window.location.pathname.replace(/\\/g, '/');
+        var onHub = /(^|\/)index\.html$/i.test(pn) || pn === '/' || pn.endsWith('/');
+        if (onHub) {
+          var modHub = e.ctrlKey || e.metaKey;
+          if (e.key === '/' || (modHub && (e.key === 'k' || e.key === 'K'))) return;
+        }
+      }
+    } catch (err) {}
+    var mod = e.ctrlKey || e.metaKey;
+    if (mod && (e.key === 'k' || e.key === 'K')) {
+      e.preventDefault();
+      openSidebarAndFocusSearch();
+      return;
+    }
+    if (e.key === '/') {
+      e.preventDefault();
+      openSidebarAndFocusSearch();
+      return;
+    }
     if (e.key === 'b' || e.key === 'B' || e.key === 'm' || e.key === 'M') {
-      e.preventDefault(); toggleSidebar();
-    } else if (e.key === '/' || e.key === 's' || e.key === 'S') {
-      if (!_sidebarEl.classList.contains('open')) { e.preventDefault(); openSidebar(); }
+      e.preventDefault();
+      toggleSidebar();
+    } else if (e.key === 's' || e.key === 'S') {
+      if (!_sidebarEl.classList.contains('open')) {
+        e.preventDefault();
+        openSidebar();
+      }
     } else if (e.key === 'Escape') {
       closeSidebar();
     }
@@ -1450,6 +1532,7 @@
   window.NavEngine = {
     init: function(config) {
       _config = config;
+      if (_config) _config.hub = !!_config.hub;
       createSidebar();
       document.addEventListener('keydown', onKeydown);
       document.addEventListener('touchstart', onTouchStart, { passive: true });
@@ -1462,6 +1545,7 @@
       }
     },
     open: openSidebar,
+    openJumpSearch: openSidebarAndFocusSearch,
     close: closeSidebar,
     toggle: toggleSidebar,
     update: function(chapterId) {
