@@ -1136,6 +1136,7 @@ body, button, input, select, textarea,
   font-family: 'David Libre', serif !important;
 }
 </style>
+<link rel="stylesheet" href="xref_study_panel.css">
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -1332,15 +1333,61 @@ body, button, input, select, textarea,
   <button class="ann-export-btn" onclick="exportAnnotations()">Export Annotations (JSON)</button>
 </div>
 
-<!-- Cross-Reference Panel -->
+<!-- Cross-Reference / Study Panel -->
 <div id="xref-panel">
   <div class="xref-panel-header">
-    <h3>Cross-References</h3>
+    <h3>Study</h3>
     <span class="xref-panel-close" onclick="closeXrefPanel()">&#10005;</span>
   </div>
-  <div class="xref-panel-word"></div>
-  <div class="xref-panel-category"></div>
-  <div id="xref-panel-refs"></div>
+  <div class="xref-study-tabs" role="tablist" aria-label="Study panel">
+    <button type="button" class="xref-study-tab active" data-xref-tab="refs" aria-selected="true">Refs</button>
+    <button type="button" class="xref-study-tab" data-xref-tab="bookmarks" aria-selected="false">Bookmarks</button>
+    <button type="button" class="xref-study-tab" data-xref-tab="notes" aria-selected="false">Notes</button>
+    <button type="button" class="xref-study-tab" data-xref-tab="more" aria-selected="false">More</button>
+  </div>
+  <div id="xref-pane-refs" class="xref-pane active" data-pane="refs">
+    <div class="xref-panel-word"></div>
+    <div class="xref-panel-category"></div>
+    <div id="xref-panel-refs"></div>
+  </div>
+  <div id="xref-pane-bookmarks" class="xref-pane" data-pane="bookmarks">
+    <p class="study-pane-hint">Saved places — jump back anytime.</p>
+    <div class="study-btn-row">
+      <button type="button" id="xref-bm-add">Add current</button>
+      <button type="button" id="xref-bm-clear">Clear all</button>
+    </div>
+    <div id="xref-bookmarks-list"></div>
+  </div>
+  <div id="xref-pane-notes" class="xref-pane" data-pane="notes">
+    <p class="study-pane-hint">Highlights, underlines, and verse-level notes.</p>
+    <div class="study-btn-row">
+      <button type="button" id="xref-open-annotations">Annotation list</button>
+    </div>
+    <p class="study-pane-sub">Notebook export/import (merge) for backup or moving devices.</p>
+    <div class="study-btn-row">
+      <button type="button" id="xref-ne-export">Export</button>
+      <button type="button" id="xref-ne-import">Import</button>
+    </div>
+  </div>
+  <div id="xref-pane-more" class="xref-pane" data-pane="more">
+    <p class="study-pane-hint">Learning</p>
+    <div class="study-btn-row study-btn-row-stack">
+      <button type="button" id="xref-sp-course">Course</button>
+      <button type="button" id="xref-sp-vocab">Vocab</button>
+      <button type="button" id="xref-sp-dict">Dictionary</button>
+    </div>
+    <p class="study-pane-sub">Full backup — notes, highlights, bookmarks.</p>
+    <div class="study-btn-row">
+      <button type="button" id="xref-bk-export">Export backup</button>
+      <button type="button" id="xref-bk-import">Import backup</button>
+    </div>
+    <p class="study-pane-sub">Offline cache for this volume</p>
+    <div class="study-btn-row">
+      <button type="button" id="xref-offline-dl">Download</button>
+      <button type="button" id="xref-offline-rm">Remove</button>
+    </div>
+    <p class="study-pane-status" id="xref-offline-status"></p>
+  </div>
 </div>
 
 <div class="controls-top">
@@ -1357,6 +1404,7 @@ body, button, input, select, textarea,
     <span style="color:#3a3f55">│</span>
     <button id="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
     <button id="search-toggle" style="background:transparent;border:1px solid #3a3f55;color:#c8a84e;padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openSearch()" title="Search" aria-label="Search">🔍</button>
+    <button type="button" id="study-drawer-toggle" style="background:transparent;border:1px solid #3a3f55;color:#c8a84e;padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openXrefStudyAt('refs')" title="Cross references" aria-label="Study drawer">📌</button>
   </div>
 </div>
 
@@ -4238,5 +4286,6 @@ window.addEventListener('resize', function() {
     </table>
   </div>
 </div>
+<script src="xref_study_panel.js"></script>
 </body>
 </html>

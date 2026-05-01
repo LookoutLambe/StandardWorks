@@ -10,17 +10,18 @@
 }
 #nav-overlay.open { display: block; opacity: 1; }
 
-/* ── Sidebar Panel ── */
+/* ── Sidebar Panel (palette matches right #xref-panel / Study drawer) ── */
 #nav-sidebar {
   position: fixed; top: 0; left: 0; bottom: 0; z-index: 5001;
   width: 360px; max-width: 90vw;
-  background: #1a1a1a; color: #e8e2d4;
+  background: var(--bg, #faf8f2);
+  color: var(--ink, #1a1a1a);
   transform: translateX(-100%);
   transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex; flex-direction: column;
   font-family: 'David Libre', 'Georgia', serif;
-  border-right: 1px solid #333;
-  box-shadow: 4px 0 24px rgba(0,0,0,0.4);
+  border-right: 2px solid var(--accent, #c8a84e);
+  box-shadow: 4px 0 20px rgba(0,0,0,0.12);
   overflow: hidden;
 }
 #nav-sidebar.open { transform: translateX(0); }
@@ -28,61 +29,76 @@
 /* ── Search Bar ── */
 .nav-search-wrap {
   display: flex; align-items: center; gap: 8px;
-  padding: 12px 16px; border-bottom: 1px solid #2a2a2a;
-  background: #151515; flex-shrink: 0;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--rule, #d6ceb8);
+  background: var(--bg-deep, #f0ece0);
+  flex-shrink: 0;
 }
 .nav-search-wrap input {
-  flex: 1; background: #222; border: 1px solid #333; border-radius: 6px;
-  padding: 8px 12px; color: #e8e2d4; font-size: 0.95em;
+  flex: 1;
+  background: var(--bg, #faf8f2);
+  border: 1px solid var(--rule, #d6ceb8);
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: var(--ink, #1a1a1a);
+  font-size: 0.95em;
   font-family: 'David Libre', serif;
   outline: none; transition: border-color 0.2s;
 }
-.nav-search-wrap input::placeholder { color: #666; }
-.nav-search-wrap input:focus { border-color: #c8a84e; }
+.nav-search-wrap input::placeholder { color: var(--ink-light, #888); opacity: 0.85; }
+.nav-search-wrap input:focus { border-color: var(--accent, #c8a84e); }
 .nav-icon-btn {
-  background: none; border: none; color: #888; font-size: 1.15em;
+  background: none; border: none;
+  color: var(--ink-light, #444);
+  font-size: 1.15em;
   cursor: pointer; padding: 4px 6px; line-height: 1;
 }
-.nav-icon-btn:hover { color: #e8e2d4; }
+.nav-icon-btn:hover { color: var(--accent, #c8a84e); }
 .nav-close-btn {
-  background: none; border: none; color: #888; font-size: 1.4em;
+  background: none; border: none;
+  color: var(--ink-light, #444);
+  font-size: 1.4em;
   cursor: pointer; padding: 4px 8px; line-height: 1;
 }
-.nav-close-btn:hover { color: #e8e2d4; }
+.nav-close-btn:hover { color: var(--accent, #c8a84e); }
 
 /* ── Footer: bookmarks ── */
 .nf-bm {
-  border: 1px solid #333;
+  border: 1px solid var(--rule, #d6ceb8);
   border-radius: 8px;
   padding: 10px 10px;
   margin-top: 8px;
-  background: rgba(255,255,255,0.03);
+  background: rgba(255,255,255,0.35);
   cursor: pointer;
 }
-.nf-bm:hover { border-color: rgba(200,168,78,0.65); background: rgba(200,168,78,0.08); }
-.nf-bm-title { font-size: 0.95em; color: #e8e2d4; }
-.nf-bm-heb { font-family: 'SBL Hebrew','David Libre',serif; font-size: 1.05em; color: #c8a84e; margin-top: 2px; }
+.nf-bm:hover { border-color: var(--accent, #c8a84e); background: rgba(200,168,78,0.08); }
+.nf-bm-title { font-size: 0.95em; color: var(--ink, #1a1a1a); }
+.nf-bm-heb { font-family: 'SBL Hebrew','David Libre',serif; font-size: 1.05em; color: var(--accent, #c8a84e); margin-top: 2px; }
 
 /* ── Search Results ── */
 .nav-search-results {
-  display: none; background: #1e1e1e; border-bottom: 1px solid #2a2a2a;
+  display: none;
+  background: var(--bg-deep, #f0ece0);
+  border-bottom: 1px solid var(--rule, #d6ceb8);
   max-height: 280px; overflow-y: auto; flex-shrink: 0;
 }
 .nav-search-results.open { display: block; }
 .nav-search-result {
   display: flex; justify-content: space-between; align-items: center;
-  padding: 10px 16px; cursor: pointer; border-bottom: 1px solid #222;
+  padding: 10px 16px; cursor: pointer;
+  border-bottom: 1px solid var(--rule-light, #e8e2d4);
   transition: background 0.15s;
 }
 .nav-search-result:hover, .nav-search-result.active { background: rgba(200,168,78,0.12); }
-.nav-search-result .sr-name { font-size: 0.95em; }
-.nav-search-result .sr-heb { font-family: 'SBL Hebrew','David Libre',serif; font-size: 1em; color: #c8a84e; }
-.nav-search-result .sr-vol { font-size: 0.75em; color: #888; margin-left: 8px; }
+.nav-search-result .sr-name { font-size: 0.95em; color: var(--ink, #1a1a1a); }
+.nav-search-result .sr-heb { font-family: 'SBL Hebrew','David Libre',serif; font-size: 1em; color: var(--accent, #c8a84e); }
+.nav-search-result .sr-vol { font-size: 0.75em; color: var(--ink-light, #888); margin-left: 8px; }
 
 /* ── Volume Tabs ── */
 .nav-vol-tabs {
   display: flex; flex-shrink: 0;
-  border-bottom: 1px solid #2a2a2a; background: #151515;
+  border-bottom: 1px solid var(--rule, #d6ceb8);
+  background: var(--bg-deep, #f0ece0);
 }
 .nav-vol-tab {
   flex: 1; text-align: center; padding: 10px 4px 8px; cursor: pointer;
@@ -92,72 +108,108 @@
 }
 .nav-vol-tab:hover { background: rgba(200,168,78,0.08); }
 .nav-vol-tab.active {
-  border-bottom-color: #c8a84e;
+  border-bottom-color: var(--accent, #c8a84e);
   background: rgba(200,168,78,0.1);
 }
 .nav-vol-tab .vt-heb {
   display: block; font-family: 'SBL Hebrew','David Libre',serif;
-  font-size: 0.85em; color: #c8a84e; line-height: 1.2;
+  font-size: 0.85em; color: var(--accent, #c8a84e); line-height: 1.2;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .nav-vol-tab .vt-en {
-  display: block; font-size: 0.6em; color: #888; margin-top: 2px;
+  display: block; font-size: 0.6em; color: var(--ink-light, #888); margin-top: 2px;
   text-transform: uppercase; letter-spacing: 0.05em;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.nav-vol-tab.active .vt-heb { color: #e8c860; }
-.nav-vol-tab.active .vt-en { color: #c8a84e; }
+.nav-vol-tab.active .vt-heb { color: var(--accent-light, #d4b96a); }
+.nav-vol-tab.active .vt-en { color: var(--accent, #c8a84e); }
 
 /* ── Library view ── */
 .nav-library { flex: 1; overflow-y: auto; padding: 12px 16px 16px; }
 .nl-sec-title {
-  font-size: 0.72em; color: #888; text-transform: uppercase;
+  font-size: 0.72em; color: var(--ink-light, #888); text-transform: uppercase;
   letter-spacing: 0.12em; font-weight: 700; margin: 6px 0 10px;
 }
 .nl-card {
-  border: 1px solid #333; border-radius: 10px; padding: 12px;
-  background: rgba(255,255,255,0.03); cursor: pointer;
+  border: 1px solid var(--rule, #d6ceb8); border-radius: 10px; padding: 12px;
+  background: rgba(255,255,255,0.35); cursor: pointer;
 }
-.nl-card:hover { border-color: rgba(200,168,78,0.65); background: rgba(200,168,78,0.08); }
-.nl-card-title { font-size: 0.8em; color: #888; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; }
-.nl-card-text { color: #e8e2d4; font-size: 1.05em; margin-top: 6px; }
-.nl-card-heb { color: #c8a84e; font-family: 'SBL Hebrew','David Libre',serif; font-size: 1.2em; margin-top: 4px; }
+.nl-card:hover { border-color: var(--accent, #c8a84e); background: rgba(200,168,78,0.08); }
+.nl-card-title { font-size: 0.8em; color: var(--ink-light, #888); text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; }
+.nl-card-text { color: var(--ink, #1a1a1a); font-size: 1.05em; margin-top: 6px; }
+.nl-card-heb { color: var(--accent, #c8a84e); font-family: 'SBL Hebrew','David Libre',serif; font-size: 1.2em; margin-top: 4px; }
 .nl-bm-list { display: grid; gap: 8px; }
-.nl-bm { border: 1px solid #333; border-radius: 10px; padding: 10px; background: rgba(255,255,255,0.02); cursor: pointer; }
-.nl-bm:hover { border-color: rgba(200,168,78,0.65); background: rgba(200,168,78,0.08); }
-.nl-bm-title { color: #e8e2d4; font-size: 0.95em; }
-.nl-bm-heb { color: #c8a84e; font-family: 'SBL Hebrew','David Libre',serif; font-size: 1.1em; margin-top: 2px; }
+.nl-bm { border: 1px solid var(--rule, #d6ceb8); border-radius: 10px; padding: 10px; background: rgba(255,255,255,0.25); cursor: pointer; }
+.nl-bm:hover { border-color: var(--accent, #c8a84e); background: rgba(200,168,78,0.08); }
+.nl-bm-title { color: var(--ink, #1a1a1a); font-size: 0.95em; }
+.nl-bm-heb { color: var(--accent, #c8a84e); font-family: 'SBL Hebrew','David Libre',serif; font-size: 1.1em; margin-top: 2px; }
 .nl-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
 .nl-tile {
-  border: 1px solid #333; border-radius: 12px; padding: 12px;
-  background: rgba(255,255,255,0.02); cursor: pointer;
+  border: 1px solid var(--rule, #d6ceb8); border-radius: 12px; padding: 12px;
+  background: rgba(255,255,255,0.25); cursor: pointer;
 }
-.nl-tile:hover { border-color: rgba(200,168,78,0.65); background: rgba(200,168,78,0.08); }
+.nl-tile:hover { border-color: var(--accent, #c8a84e); background: rgba(200,168,78,0.08); }
 .nl-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
-.nl-abbr { color: #c8a84e; font-weight: 700; letter-spacing: 0.08em; }
-.nl-name { color: #e8e2d4; font-size: 0.95em; opacity: 0.95; }
-.nl-sub { margin-top: 6px; font-size: 0.8em; color: #888; }
+.nl-abbr { color: var(--accent, #c8a84e); font-weight: 700; letter-spacing: 0.08em; }
+.nl-name { color: var(--ink, #1a1a1a); font-size: 0.95em; opacity: 0.95; }
+.nl-sub { margin-top: 6px; font-size: 0.8em; color: var(--ink-light, #888); }
 
 /* ── Book List (scrollable area) ── */
 .nav-book-list {
   flex: 1; overflow-y: auto; overflow-x: hidden;
   padding: 8px 0;
-  scrollbar-width: thin; scrollbar-color: #444 #1a1a1a;
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule, #d6ceb8) var(--bg-deep, #f0ece0);
 }
 .nav-book-list::-webkit-scrollbar { width: 6px; }
-.nav-book-list::-webkit-scrollbar-track { background: #1a1a1a; }
-.nav-book-list::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
+.nav-book-list::-webkit-scrollbar-track { background: var(--bg-deep, #f0ece0); }
+.nav-book-list::-webkit-scrollbar-thumb { background: var(--rule, #d6ceb8); border-radius: 3px; }
 
 /* ── Footer tools (Export/Import) ── */
 .nav-footer {
-  padding: 10px 16px;
-  border-top: 1px solid #2a2a2a;
-  background: #151515;
+  padding: 6px 12px 10px;
+  border-top: 1px solid var(--rule, #d6ceb8);
+  background: var(--bg-deep, #f0ece0);
   flex-shrink: 0;
+  max-height: 42vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.nav-footer .nf-details {
+  border-bottom: 1px solid var(--rule-light, #e8e2d4);
+}
+.nav-footer .nf-details:last-child { border-bottom: none; }
+.nav-footer summary.nf-sum {
+  list-style: none;
+  cursor: pointer;
+  font-size: 0.7em;
+  color: var(--ink-light, #888);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  padding: 10px 4px 8px;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.nav-footer summary.nf-sum::-webkit-details-marker { display: none; }
+.nav-footer summary.nf-sum::after {
+  content: '\25BE';
+  font-size: 0.85em;
+  color: var(--ink-light, #888);
+  transition: transform 0.2s;
+}
+.nav-footer .nf-details[open] summary.nf-sum::after {
+  transform: rotate(-180deg);
+}
+.nav-footer .nf-details-inner {
+  padding: 0 0 10px;
 }
 .nav-footer .nf-title {
   font-size: 0.7em;
-  color: #888;
+  color: var(--ink-light, #888);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-weight: 700;
@@ -169,21 +221,23 @@
   min-width: 120px;
   padding: 8px 10px;
   border-radius: 6px;
-  border: 1px solid #333;
-  background: #222;
-  color: #e8e2d4;
+  border: 1px solid var(--rule, #d6ceb8);
+  background: var(--bg, #faf8f2);
+  color: var(--ink, #1a1a1a);
   cursor: pointer;
   font-family: 'David Libre', serif;
   font-size: 0.9em;
 }
-.nav-footer button:hover { border-color: #c8a84e; background: rgba(200,168,78,0.12); }
-.nav-footer .nf-hint { margin-top: 8px; font-size: 0.75em; color: #777; line-height: 1.35; }
+.nav-footer button:hover { border-color: var(--accent, #c8a84e); background: rgba(200,168,78,0.12); }
+.nav-footer .nf-hint { margin-top: 8px; font-size: 0.75em; color: var(--ink-light, #888); line-height: 1.35; }
 
 /* ── Division Headers ── */
 .nav-division {
-  padding: 12px 16px 4px; font-size: 0.72em; color: #888;
+  padding: 12px 16px 4px; font-size: 0.72em; color: var(--ink-light, #888);
   text-transform: uppercase; letter-spacing: 0.1em;
-  font-weight: 600; border-top: 1px solid #2a2a2a; margin-top: 4px;
+  font-weight: 600;
+  border-top: 1px solid var(--rule-light, #e8e2d4);
+  margin-top: 4px;
 }
 .nav-division:first-child { border-top: none; margin-top: 0; }
 
@@ -202,14 +256,15 @@
 .nav-book-row.nav-focus-row:hover { background: rgba(200,168,78,0.16); }
 .nav-book-row .nb-heb {
   font-family: 'SBL Hebrew','David Libre',serif; font-size: 1em;
-  color: #c8a84e; direction: rtl;
+  color: var(--accent, #c8a84e); direction: rtl;
 }
-.nav-book-row .nb-en { font-size: 0.88em; color: #bbb; }
+.nav-book-row .nb-en { font-size: 0.88em; color: var(--ink-light, #888); }
 .nav-book-row .nb-ch {
-  font-size: 0.7em; color: #666; margin-left: 6px; white-space: nowrap;
+  font-size: 0.7em; color: var(--ink-light, #888); margin-left: 6px; white-space: nowrap;
+  opacity: 0.9;
 }
 .nav-book-row .nb-arrow {
-  font-size: 0.7em; color: #666; transition: transform 0.2s; margin-right: 4px;
+  font-size: 0.7em; color: var(--ink-light, #888); transition: transform 0.2s; margin-right: 4px;
 }
 .nav-book-row.expanded .nb-arrow { transform: rotate(90deg); }
 .nav-book-row.single-ch { cursor: pointer; }
@@ -217,27 +272,90 @@
 /* ── Chapter Grid ── */
 .nav-ch-grid {
   display: none; grid-template-columns: repeat(7, 1fr); gap: 4px;
-  padding: 6px 16px 10px; background: rgba(0,0,0,0.15);
+  padding: 6px 16px 10px;
+  background: rgba(0,0,0,0.04);
 }
 .nav-ch-grid.open { display: grid; }
 .nav-ch-cell {
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  padding: 6px 2px; border-radius: 4px; cursor: pointer;
-  background: #252525; border: 1px solid #333;
+  padding: 6px 2px; border-radius: 6px; cursor: pointer;
+  background: var(--bg, #faf8f2);
+  border: 1px solid var(--rule, #d6ceb8);
   transition: background 0.15s, border-color 0.15s;
   min-height: 38px;
 }
-.nav-ch-cell:hover { background: rgba(200,168,78,0.15); border-color: #c8a84e; }
+.nav-ch-cell:hover { background: rgba(200,168,78,0.12); border-color: var(--accent, #c8a84e); }
 .nav-ch-cell.current {
-  background: rgba(200,168,78,0.25); border-color: #c8a84e;
+  background: rgba(200,168,78,0.18); border-color: var(--accent, #c8a84e);
 }
 .nav-ch-cell .ch-heb {
   font-family: 'SBL Hebrew','David Libre',serif; font-size: 0.85em;
-  color: #c8a84e; line-height: 1.1;
+  color: var(--accent, #c8a84e); line-height: 1.1;
 }
-.nav-ch-cell .ch-num { font-size: 0.65em; color: #888; }
-.nav-ch-cell.current .ch-heb { color: #e8c860; }
-.nav-ch-cell.current .ch-num { color: #c8a84e; }
+.nav-ch-cell .ch-num { font-size: 0.65em; color: var(--ink-light, #888); }
+.nav-ch-cell.current .ch-heb { color: var(--accent-light, #d4b96a); }
+.nav-ch-cell.current .ch-num { color: var(--accent, #c8a84e); }
+
+/* ── Dark mode: left panel matches right #xref-panel / Study drawer ── */
+body.dark-mode #nav-sidebar {
+  background: #252525;
+  color: var(--ink, #e8e0d0);
+  border-right-color: #d4af37;
+  box-shadow: 4px 0 24px rgba(0,0,0,0.45);
+}
+body.dark-mode .nav-search-wrap {
+  background: #2a2a2a;
+  border-bottom-color: #444444;
+}
+body.dark-mode .nav-search-wrap input {
+  background: #333333;
+  border-color: #444444;
+  color: var(--ink, #e8e0d0);
+}
+body.dark-mode .nav-search-results {
+  background: #2a2a2a;
+  border-bottom-color: #444444;
+}
+body.dark-mode .nav-search-result {
+  border-bottom-color: #383838;
+}
+body.dark-mode .nav-search-result .sr-name { color: var(--ink, #e8e0d0); }
+body.dark-mode .nav-vol-tabs {
+  background: #2a2a2a;
+  border-bottom-color: #444444;
+}
+body.dark-mode .nav-book-list::-webkit-scrollbar-track { background: #252525; }
+body.dark-mode .nav-book-list::-webkit-scrollbar-thumb { background: #444444; }
+body.dark-mode .nav-book-list { scrollbar-color: #444444 #252525; }
+body.dark-mode .nav-footer {
+  background: #2a2a2a;
+  border-top-color: #444444;
+}
+body.dark-mode .nav-footer .nf-details { border-bottom-color: #383838; }
+body.dark-mode .nav-footer button {
+  background: #333333;
+  border-color: #444444;
+  color: var(--ink, #e8e0d0);
+}
+body.dark-mode .nl-card,
+body.dark-mode .nl-bm,
+body.dark-mode .nl-tile {
+  border-color: #444444;
+  background: rgba(255,255,255,0.04);
+}
+body.dark-mode .nl-card-text,
+body.dark-mode .nl-bm-title,
+body.dark-mode .nl-name { color: var(--ink, #e8e0d0); }
+body.dark-mode .nf-bm {
+  border-color: #444444;
+  background: rgba(255,255,255,0.04);
+}
+body.dark-mode .nav-ch-grid { background: rgba(0,0,0,0.2); }
+body.dark-mode .nav-ch-cell {
+  background: #333333;
+  border-color: #444444;
+}
+body.dark-mode .nav-division { border-top-color: #383838; }
 
 /* ── Breadcrumb ── */
 #nav-breadcrumb {
@@ -279,6 +397,7 @@ body.dark-mode .continue-reading .cr-ref { color: rgba(232, 226, 212, 0.92); }
 /* ── Mobile ── */
 @media (max-width: 600px) {
   #nav-sidebar { width: 90vw; }
+  .nav-footer { max-height: 38vh; }
   .nav-ch-grid { grid-template-columns: repeat(5, 1fr); gap: 5px; }
   .nav-ch-cell { min-height: 44px; padding: 8px 2px; }
   .nav-book-row { padding: 10px 16px; }

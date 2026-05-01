@@ -423,96 +423,16 @@
     _bookListEl.id = 'nav-book-list';
     _sidebarEl.appendChild(_bookListEl);
 
-    // Footer tools (notes export/import + bookmarks + backup)
-    var footer = document.createElement('div');
-    footer.className = 'nav-footer';
-    footer.innerHTML =
-      '<div class="nf-title">Learn</div>' +
-      '<div class="nf-row">' +
-        '<button type="button" id="nf-learn-course">Course</button>' +
-        '<button type="button" id="nf-learn-vocab">Vocab</button>' +
-        '<button type="button" id="nf-learn-dict">Dict</button>' +
-      '</div>' +
-      '<div class="nf-hint">Jump into guided lessons or vocabulary practice.</div>' +
-      '<div class="nf-title">Notes</div>' +
-      '<div class="nf-row">' +
-        '<button type="button" id="nf-export">Export</button>' +
-        '<button type="button" id="nf-import">Import</button>' +
-      '</div>' +
-      '<div class="nf-hint">Export saves a JSON backup of your notes for migration to iOS later. Import merges by default.</div>' +
-      '<div class="nf-title" style="margin-top:12px">Bookmarks</div>' +
-      '<div class="nf-row">' +
-        '<button type="button" id="nf-bm-add">Add</button>' +
-        '<button type="button" id="nf-bm-clear">Clear</button>' +
-      '</div>' +
-      '<div id="nf-bookmarks"></div>' +
-      '<div class="nf-title" style="margin-top:12px">Backup</div>' +
-      '<div class="nf-row">' +
-        '<button type="button" id="nf-backup-export">Export</button>' +
-        '<button type="button" id="nf-backup-import">Import</button>' +
-      '</div>' +
-      '<div class="nf-hint">Backup includes notes, highlights, and bookmarks.</div>' +
-      '<div class="nf-title" style="margin-top:12px">Offline</div>' +
-      '<div class="nf-row">' +
-        '<button type="button" id="nf-offline-dl">Download</button>' +
-        '<button type="button" id="nf-offline-rm">Remove</button>' +
-      '</div>' +
-      '<div class="nf-hint" id="nf-offline-status">Checking…</div>';
-    _sidebarEl.appendChild(footer);
-
     document.body.appendChild(_sidebarEl);
 
-    // Wire footer actions
+    // Study tools live in #xref-panel (right drawer); wired after DOM/markup loads
     setTimeout(function() {
-      function _courseHref() {
-        var p = (window.location && window.location.pathname) ? window.location.pathname : '';
-        return (p.indexOf('/bom/') >= 0 || /\\bom\\/.test(p)) ? '../learn.html' : 'learn.html';
-      }
-      function _vocabHref() {
-        var p = (window.location && window.location.pathname) ? window.location.pathname : '';
-        return (p.indexOf('/bom/') >= 0 || /\\bom\\/.test(p)) ? '../vocab.html' : 'vocab.html';
-      }
-      function _dictHref() {
-        var p = (window.location && window.location.pathname) ? window.location.pathname : '';
-        return (p.indexOf('/bom/') >= 0 || /\\bom\\/.test(p)) ? '../dictionary.html' : 'dictionary.html';
-      }
-      var learnCourse = document.getElementById('nf-learn-course');
-      var learnVocab = document.getElementById('nf-learn-vocab');
-      var learnDict = document.getElementById('nf-learn-dict');
-      if (learnCourse) {
-        learnCourse.onclick = function() {
-          var href = _courseHref();
-          if (!href) return;
-          window.location.href = href;
-        };
-      }
-      if (learnVocab) learnVocab.onclick = function() { window.location.href = _vocabHref(); };
-      if (learnDict) learnDict.onclick = function() { window.location.href = _dictHref(); };
-
-      var exportBtn = document.getElementById('nf-export');
-      var importBtn = document.getElementById('nf-import');
-      if (exportBtn) exportBtn.onclick = exportNotes;
-      if (importBtn) importBtn.onclick = importNotesPrompt;
-
-      var bmAdd = document.getElementById('nf-bm-add');
-      var bmClear = document.getElementById('nf-bm-clear');
-      if (bmAdd) bmAdd.onclick = addBookmarkCurrent;
-      if (bmClear) bmClear.onclick = clearBookmarks;
+      mountStudyToolsIntoXrefPanel();
       renderBookmarks();
-
-      var bex = document.getElementById('nf-backup-export');
-      var bim = document.getElementById('nf-backup-import');
-      if (bex) bex.onclick = exportBackup;
-      if (bim) bim.onclick = importBackupPrompt;
-
-      var odl = document.getElementById('nf-offline-dl');
-      var orm = document.getElementById('nf-offline-rm');
-      if (odl) odl.onclick = offlineDownloadCurrentVolume;
-      if (orm) orm.onclick = offlineRemoveCurrentVolume;
       renderOfflineStatus();
     }, 0);
 
-    // Default: show Library view
+    // Default: show Library view (reader pages switch to Books when sidebar opens)
     setViewMode('library');
 
     // Breadcrumb
@@ -795,7 +715,7 @@
   function offlineDownloadCurrentVolume() {
     var assets = _offlineAssetsForCurrentVolume();
     if (!assets.length) return;
-    var btn = document.getElementById('nf-offline-dl');
+    var btn = document.getElementById('xref-offline-dl');
     if (btn) { btn.disabled = true; btn.textContent = 'Downloading…'; }
     _postToSW({ type: 'offline:download', assets: assets }).then(function(r) {
       var meta = _loadOfflineMeta();
@@ -809,7 +729,7 @@
   function offlineRemoveCurrentVolume() {
     var assets = _offlineAssetsForCurrentVolume();
     if (!assets.length) return;
-    var btn = document.getElementById('nf-offline-rm');
+    var btn = document.getElementById('xref-offline-rm');
     if (btn) { btn.disabled = true; btn.textContent = 'Removing…'; }
     _postToSW({ type: 'offline:remove', assets: assets }).then(function() {
       var meta = _loadOfflineMeta();
@@ -820,13 +740,81 @@
     });
   }
   function renderOfflineStatus() {
-    if (!_sidebarEl || !_config || !_config.volume) return;
-    var el = _sidebarEl.querySelector('#nf-offline-status');
+    if (!_config || !_config.volume) return;
+    var el = document.getElementById('xref-offline-status');
     if (!el) return;
     var meta = _loadOfflineMeta();
     var m = meta[_config.volume];
     if (!m) el.textContent = 'Not downloaded.';
     else el.textContent = 'Downloaded (' + (m.count || '?') + ' files).';
+  }
+
+  /** Wire Study panel buttons (learn / notes migration / bookmarks / backup / offline) — lives in page HTML (#xref-pane-*) */
+  function mountStudyToolsIntoXrefPanel() {
+    if (!document.getElementById('xref-pane-more')) return;
+    function courseHref() {
+      var p = (window.location && window.location.pathname) ? window.location.pathname : '';
+      return (p.indexOf('/bom/') >= 0 || /\\bom\\/.test(p)) ? '../learn.html' : 'learn.html';
+    }
+    function vocabHref() {
+      var p = (window.location && window.location.pathname) ? window.location.pathname : '';
+      return (p.indexOf('/bom/') >= 0 || /\\bom\\/.test(p)) ? '../vocab.html' : 'vocab.html';
+    }
+    function dictHref() {
+      var p = (window.location && window.location.pathname) ? window.location.pathname : '';
+      return (p.indexOf('/bom/') >= 0 || /\\bom\\/.test(p)) ? '../dictionary.html' : 'dictionary.html';
+    }
+    var lc = document.getElementById('xref-sp-course');
+    if (lc) lc.onclick = function() { window.location.href = courseHref(); };
+    var lv = document.getElementById('xref-sp-vocab');
+    if (lv) lv.onclick = function() { window.location.href = vocabHref(); };
+    var ld = document.getElementById('xref-sp-dict');
+    if (ld) ld.onclick = function() { window.location.href = dictHref(); };
+
+    var ex = document.getElementById('xref-ne-export');
+    var im = document.getElementById('xref-ne-import');
+    if (ex) ex.onclick = exportNotes;
+    if (im) im.onclick = importNotesPrompt;
+
+    var bmAdd = document.getElementById('xref-bm-add');
+    var bmClr = document.getElementById('xref-bm-clear');
+    if (bmAdd) bmAdd.onclick = addBookmarkCurrent;
+    if (bmClr) bmClr.onclick = clearBookmarks;
+
+    var bex = document.getElementById('xref-bk-export');
+    var bim = document.getElementById('xref-bk-import');
+    if (bex) bex.onclick = exportBackup;
+    if (bim) bim.onclick = importBackupPrompt;
+
+    var odl = document.getElementById('xref-offline-dl');
+    var orm = document.getElementById('xref-offline-rm');
+    if (odl) odl.onclick = offlineDownloadCurrentVolume;
+    if (orm) orm.onclick = offlineRemoveCurrentVolume;
+
+    var ann = document.getElementById('xref-open-annotations');
+    if (ann) {
+      ann.onclick = function() {
+        try {
+          if (typeof closeXrefPanel === 'function') closeXrefPanel();
+        } catch (e) {}
+        try {
+          if (typeof openAnnotationsPanel === 'function') openAnnotationsPanel();
+        } catch (e2) {}
+      };
+    }
+  }
+
+  function scrollNavReadingPositionIntoView() {
+    if (!_bookListEl) return;
+    var cur = _bookListEl.querySelector('.nav-ch-cell.current');
+    if (cur) {
+      try { cur.scrollIntoView({ block: 'center', behavior: 'smooth' }); } catch (e) {}
+      return;
+    }
+    var openGrid = _bookListEl.querySelector('.nav-ch-grid.open');
+    if (openGrid) {
+      try { openGrid.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (e2) {}
+    }
   }
 
   // ── Render books for a volume ──
@@ -1105,9 +1093,18 @@
     _sidebarEl.classList.add('open');
     _overlayEl.classList.add('open');
     document.body.style.overflow = 'hidden';
-    setTimeout(function() { _searchInput.focus(); }, 300);
-    // Default to Library when opening
-    setViewMode('library');
+    var inReader = _config && _config.volume &&
+      _config.currentChapter && _config.currentChapter !== 'landing';
+    if (inReader) {
+      setViewMode('books');
+      switchVolTab(_config.volume);
+      setTimeout(scrollNavReadingPositionIntoView, 200);
+    } else {
+      setViewMode('library');
+      setTimeout(function() {
+        try { _searchInput.focus(); } catch (e) {}
+      }, 250);
+    }
   }
 
   function closeSidebar() {
@@ -1304,12 +1301,11 @@
     renderBookmarks();
   }
   function renderBookmarks() {
-    if (!_sidebarEl) return;
-    var box = _sidebarEl.querySelector('#nf-bookmarks');
+    var box = document.getElementById('xref-bookmarks-list');
     if (!box) return;
     var list = loadBookmarks();
     if (!list.length) {
-      box.innerHTML = '<div class="nf-hint">No bookmarks yet.</div>';
+      box.innerHTML = '<p class="study-pane-hint">No bookmarks yet. Use Add current while reading.</p>';
       return;
     }
     var html = '';
@@ -1317,13 +1313,13 @@
       var label = (bm && bm.label) ? bm.label : 'Bookmark';
       var heb = (bm && bm.heb) ? bm.heb : '';
       var path = (bm && bm.path) ? bm.path : '';
-      html += '<div class="nf-bm" tabindex="0" role="button" data-path="' + path.replace(/"/g,'&quot;') + '">' +
-                '<div class="nf-bm-title">' + label + '</div>' +
-                (heb ? '<div class="nf-bm-heb" dir="rtl">' + heb + '</div>' : '') +
+      html += '<div class="xf-bookmark-item" tabindex="0" role="button" data-path="' + path.replace(/"/g,'&quot;') + '">' +
+                '<div class="xf-bm-title">' + label + '</div>' +
+                (heb ? '<div class="xf-bm-heb" dir="rtl">' + heb + '</div>' : '') +
               '</div>';
     });
     box.innerHTML = html;
-    box.querySelectorAll('.nf-bm').forEach(function(row) {
+    box.querySelectorAll('.xf-bookmark-item').forEach(function(row) {
       row.onclick = function() {
         var p = row.getAttribute('data-path');
         if (p) window.location.href = p;
@@ -1526,6 +1522,9 @@
     buildHash: function(volKey, chapterId) {
       return buildHash(volKey, chapterId);
     },
+    refreshBookmarksUI: renderBookmarks,
+    renderOfflineStatusPublic: renderOfflineStatus,
+    mountStudyToolsIntoXrefPanel: mountStudyToolsIntoXrefPanel,
     VOLUMES: VOLUMES
   };
 })();

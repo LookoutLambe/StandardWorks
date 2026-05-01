@@ -849,7 +849,6 @@ var ch2Verses = [
     ["יְהוָה","the-Lord"],
     ["בְּרוּחַ","in-the-Spirit"],
     ["קָדְשׁוֹ","his-holiness"],
-    ["וַיְהִי","and-it-came-to-pass"],
     ["וַיַּאֲמֵן","and-he-believed"],
     ["בִּדְבָרָי","in-my-words"],
     ["׃",""]
