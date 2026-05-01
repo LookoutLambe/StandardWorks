@@ -14,7 +14,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
 <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../nav_engine.css?v=7">
+<link rel="stylesheet" href="../nav_engine.css?v=8">
 <link rel="stylesheet" href="../xref_study_panel.css?v=6">
 <style>
 
@@ -447,28 +447,55 @@ body.hide-gloss.hide-translit .arr { display: none; }
 }
 @media (max-width: 600px) {
   .controls-top {
-    gap: 4px;
-    padding: max(4px, env(safe-area-inset-top, 0px)) max(6px, env(safe-area-inset-left, 0px)) 4px max(6px, env(safe-area-inset-right, 0px));
-    font-size: 0.85em;
+    gap: 3px;
+    padding: max(3px, env(safe-area-inset-top, 0px)) max(5px, env(safe-area-inset-left, 0px)) 3px max(5px, env(safe-area-inset-right, 0px));
+    font-size: 0.78em;
   }
-  .controls-top .nav-prev, .controls-top .nav-next { padding: 8px 12px; font-size: 1em; min-height: 44px; }
+  .controls-top .nav-row { gap: 5px; align-items: center; }
+  /* Home link uses inline padding — tighten on narrow screens */
+  .controls-top .nav-row > a[href*="index"] {
+    padding: 3px 6px !important;
+    font-size: 0.8em !important;
+  }
+  .controls-top .nav-prev, .controls-top .nav-next {
+    padding: 3px 8px;
+    font-size: 0.8em;
+    min-height: 32px;
+  }
   .controls-top .tools-group label span.label-text { display: none; }
-  .controls-top .tools-group button { min-height: 44px; min-width: 44px; font-size: 1.05em; }
+  .controls-top .tools-group button {
+    min-height: 32px;
+    min-width: 32px;
+    font-size: 0.85em;
+    padding: 3px 6px;
+  }
+  .controls-top button {
+    padding: 3px 8px;
+    font-size: 0.8em;
+  }
   .controls-top .tools-group {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 6px;
+    gap: 4px;
     max-width: 100%;
     overflow-x: visible;
   }
+  .controls-top input[type="range"] {
+    width: 56px;
+  }
   .controls-bottom {
-    gap: 4px;
-    padding: 6px max(6px, env(safe-area-inset-left, 0px)) max(8px, env(safe-area-inset-bottom, 0px)) max(6px, env(safe-area-inset-right, 0px));
-    font-size: 0.78em;
+    gap: 3px;
+    padding: 4px max(5px, env(safe-area-inset-left, 0px)) max(6px, env(safe-area-inset-bottom, 0px)) max(5px, env(safe-area-inset-right, 0px));
+    font-size: 0.72em;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .controls-bottom button { min-height: 40px; padding: 5px 8px; }
+  .controls-bottom button {
+    min-height: 30px;
+    padding: 2px 5px;
+    font-size: 0.62em;
+    line-height: 1.12;
+  }
 }
 
 .controls-top button, .controls-bottom button {
@@ -574,7 +601,7 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
 /* Responsive */
 @media (max-width: 700px) {
   .page {
-    padding: 55px max(14px, env(safe-area-inset-right, 0px)) max(52px, calc(110px + env(safe-area-inset-bottom, 0px))) max(14px, env(safe-area-inset-left, 0px));
+    padding: 48px max(14px, env(safe-area-inset-right, 0px)) max(44px, calc(86px + env(safe-area-inset-bottom, 0px))) max(14px, env(safe-area-inset-left, 0px));
   }
   .page::before { display: none; }
   .hw { font-size: 1.5em; }
@@ -582,13 +609,13 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   .verse { gap: 8px; }
   .word-flow { margin: 0; }
   .controls-top {
-    padding: max(4px, env(safe-area-inset-top, 0px)) max(8px, env(safe-area-inset-right, 0px)) 4px max(8px, env(safe-area-inset-left, 0px));
-    gap: 4px;
-    font-size: 0.82em;
+    padding: max(3px, env(safe-area-inset-top, 0px)) max(6px, env(safe-area-inset-right, 0px)) 3px max(6px, env(safe-area-inset-left, 0px));
+    gap: 3px;
+    font-size: 0.78em;
   }
   .controls-bottom {
-    padding: 5px max(8px, env(safe-area-inset-left, 0px)) max(10px, env(safe-area-inset-bottom, 0px)) max(8px, env(safe-area-inset-right, 0px));
-    font-size: 0.82em;
+    padding: 4px max(6px, env(safe-area-inset-left, 0px)) max(8px, env(safe-area-inset-bottom, 0px)) max(6px, env(safe-area-inset-right, 0px));
+    font-size: 0.74em;
   }
 }
 
@@ -8510,7 +8537,7 @@ try {
 } catch(e) {}
 </script>
 
-<script src="../nav_engine.js?v=7"></script>
+<script src="../nav_engine.js?v=8"></script>
 <script src="../xref_study_panel.js?v=6"></script>
 <script>
 NavEngine.init({
@@ -8524,7 +8551,7 @@ NavEngine.init({
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('./sw.js?v=7').then(function(reg) {
+    navigator.serviceWorker.register('./sw.js?v=8').then(function(reg) {
       try { reg.update(); } catch (e) {}
       console.log('[PWA] Service worker registered:', reg.scope);
     }).catch(function(err) {

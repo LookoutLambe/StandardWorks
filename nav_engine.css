@@ -411,8 +411,8 @@ body.dark-mode .continue-reading .cr-ref { color: rgba(232, 226, 212, 0.92); }
 /* On small screens the controls-top wraps to 2+ rows (~100px). No !important — NavEngine may raise padding for breadcrumb. */
 @media (max-width: 600px) {
   .page {
-    padding-top: 130px;
-    padding-bottom: calc(128px + env(safe-area-inset-bottom, 0px));
+    padding-top: 118px;
+    padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px));
     padding-left: max(12px, env(safe-area-inset-left, 0px));
     padding-right: max(12px, env(safe-area-inset-right, 0px));
   }
