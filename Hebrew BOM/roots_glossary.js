@@ -17,7 +17,10 @@ window._rootGlossaryData = {
     "biblicalRefs": [
       {"ref": "Isa 55:11", "note": "My word (\u05d3\u05b0\u05d1\u05b8\u05e8\u05b4\u05d9) shall not return to me empty"},
       {"ref": "Ps 33:6", "note": "By the word (\u05d3\u05b0\u05d1\u05b7\u05e8) of the LORD the heavens were made"},
-      {"ref": "Deut 8:3", "note": "Man lives by every word (\u05de\u05d5\u05b9\u05e6\u05b8\u05d0) from the mouth of the LORD"}
+      {"ref": "Deut 8:3", "note": "Man lives by every word (\u05de\u05d5\u05b9\u05e6\u05b8\u05d0) from the mouth of the LORD"},
+      {"ref": "Ex 33:11", "note": "The LORD spoke to Moses face to face, as a man speaks with his friend (\u05de\u05d9\u05e9\u05c1\u05e8\u05d1\u05e2\u05d5)"},
+      {"ref": "Isa 45:23", "note": "By myself I have sworn; every tongue shall confess (\u05d9\u05d9\u05e9\u05c1\u05d1\u05e2)"},
+      {"ref": "—", "note": "\u05de\u05e4\u05d9 \u05d9\u05d4\u05d5\u05d4 — Tanakh idiom for divine utterance (\u201cfrom the mouth of the LORD\u201d); contrast \u05e2\u05dd \u05d9\u05d4\u05d5\u05d4 (\u201cwith the LORD\u201d) in the English of 1 Ne. 3:1"}
     ]
   },
   "את": {

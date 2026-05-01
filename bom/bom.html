@@ -3754,8 +3754,8 @@ body, button, input, select, textarea,
 </div>
 
 <script src="official_verses.js"></script>
-<script src="crossrefs.js"></script>
-<script src="roots_glossary.js"></script>
+<script src="crossrefs.js?v=23"></script>
+<script src="roots_glossary.js?v=23"></script>
 <script src="chapter_headings.js"></script>
 <script src="chapter_headings_heb.js?v=3"></script>
 <script src="scripture_verses.js"></script>
@@ -6045,6 +6045,25 @@ function openRootXrefPanel(root) {
   var refsContainer = document.getElementById('xref-panel-refs');
   refsContainer.innerHTML = '';
 
+  function xrefCanonKey(s) {
+    if (!s) return '';
+    var t = String(s).replace(/\u00a0/g, ' ').trim();
+    t = t.replace(/^Ex\.?\s/i, 'Ex. ');
+    t = t.replace(/^Deut\.?\s/i, 'Deut. ');
+    t = t.replace(/^Isa\.?\s/i, 'Isa. ');
+    t = t.replace(/^Ps\.?\s/i, 'Ps. ');
+    t = t.replace(/\s+/g, ' ');
+    return t.toLowerCase();
+  }
+  function xrefNormalizeOtLabel(s) {
+    if (!s) return s;
+    var t = String(s).replace(/\u00a0/g, ' ').trim();
+    if (/^Ex\s/i.test(t) && !/^Ex\./i.test(t)) t = t.replace(/^Ex\s/i, 'Ex. ');
+    if (/^Deut\s/i.test(t) && !/^Deut\./i.test(t)) t = t.replace(/^Deut\s/i, 'Deut. ');
+    if (/^Isa\s/i.test(t) && !/^Isa\./i.test(t)) t = t.replace(/^Isa\s/i, 'Isa. ');
+    return t;
+  }
+
   // Deduplicate refs (same ref text from different verses)
   var seen = {};
   var uniqueRefs = [];
@@ -6054,13 +6073,40 @@ function openRootXrefPanel(root) {
         var rNorm = r.replace(/\u00a0/g, ' ');
         // Skip TG-prefixed entries
         if (rNorm.indexOf('TG ') === 0) return;
-        if (!seen[rNorm]) {
-          seen[rNorm] = true;
+        var ck = xrefCanonKey(rNorm);
+        if (!seen[ck]) {
+          seen[ck] = true;
           uniqueRefs.push({ refText: rNorm, word: entry.ref.text, category: entry.ref.category, verseKey: entry.verseKey });
         }
       });
     }
   });
+
+  // Tanakh parallels from roots glossary (always merged; survives stale crossrefs.js cache)
+  var glossRoot = window._rootGlossaryData && window._rootGlossaryData[root];
+  if (glossRoot && glossRoot.biblicalRefs && glossRoot.biblicalRefs.length) {
+    glossRoot.biblicalRefs.forEach(function(br, gi) {
+      var raw = (br.ref || '').replace(/\u00a0/g, ' ').trim();
+      var note = (br.note || '').trim();
+      var isDash = raw === '\u2014' || raw === '-' || raw === '\u2013';
+      var isNoteOnly = !raw || isDash;
+      var label = isNoteOnly ? '' : xrefNormalizeOtLabel(raw);
+      var dedupeKey = label ? xrefCanonKey(label) : xrefCanonKey('gloss-note-' + gi + '-' + note.slice(0, 40));
+      if (seen[dedupeKey]) return;
+      seen[dedupeKey] = true;
+      var titleLine = isNoteOnly ? note : (label || raw);
+      if (isNoteOnly && titleLine.length > 120) titleLine = titleLine.slice(0, 117) + '\u2026';
+      uniqueRefs.push({
+        refText: titleLine,
+        rawOtRef: isNoteOnly ? '' : (label || raw),
+        word: 'Tanakh',
+        category: 'cross-ref',
+        verseKey: '',
+        glossaryNote: note,
+        fromGlossary: true
+      });
+    });
+  }
 
   // Group by category (skip TG — Topical Guide entries are copyrighted)
   var groups = { 'cross-ref': [], 'gst': [], 'other': [] };
@@ -6118,6 +6164,13 @@ function openRootXrefPanel(root) {
 
       card.appendChild(titleDiv);
 
+      if (u.fromGlossary && u.glossaryNote && u.rawOtRef) {
+        var gn = document.createElement('div');
+        gn.style.cssText = 'font-size:0.84em;color:#9aa3bc;margin-top:5px;line-height:1.35;font-family:SBL Hebrew,serif;';
+        gn.textContent = u.glossaryNote;
+        card.appendChild(gn);
+      }
+
       // Show verse content for BOM refs
       if (parsed && parsed.key) {
         var contentHtml = getVerseContentHtml(parsed.key);
@@ -6127,7 +6180,9 @@ function openRootXrefPanel(root) {
           card.appendChild(contentDiv);
         }
       } else if (!/^TG |^BD |^GS /.test(u.refText)) {
-        var extHtml = getExternalVerseHtml(u.refText);
+        var extLookup = u.rawOtRef ? xrefNormalizeOtLabel(u.rawOtRef) : xrefNormalizeOtLabel(u.refText);
+        var extHtml = getExternalVerseHtml(extLookup);
+        if (!extHtml && extLookup && extLookup !== u.refText) extHtml = getExternalVerseHtml(u.refText);
         if (extHtml) {
           var extDiv = document.createElement('div');
           extDiv.innerHTML = extHtml;

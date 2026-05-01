@@ -202,8 +202,8 @@ for (const book of BOOKS) {
       const footnotes = [];
       for (const ref of refs) {
         const hebrewRefs = (ref.refs || [])
-          .filter(r => /\d+:\d+/.test(r))
-          .map(r => translateRef(r));
+          .map(r => (/\d+:\d+/.test(r) ? translateRef(r) : r))
+          .filter(Boolean);
         if (hebrewRefs.length > 0) {
           const fnText = hebrewRefs.join('; ').replace(/\d+/g, n => hebrewNum(parseInt(n)));
           footnotes.push({ marker: hebMarker(ref.marker), text: fnText });

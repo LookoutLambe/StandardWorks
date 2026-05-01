@@ -1,4 +1,4 @@
-const CACHE = 'bom-v11';
+const CACHE = 'bom-v12';
 const ASSETS = [
   './bom.html',
   '../xref_study_panel.css',
