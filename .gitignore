@@ -21,3 +21,6 @@ out/
 
 # Local PDF build script (optional; not used by the web app)
 Hebrew BOM/_build_scripts/generate_bom_with_footnotes_from_webapp.js
+
+# Book / print PDFs — keep local or distribute via KDP; do not commit binaries
+*.pdf
