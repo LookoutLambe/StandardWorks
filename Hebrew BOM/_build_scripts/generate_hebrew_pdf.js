@@ -89,7 +89,12 @@ const REF_TO_HEBREW = {
 
 // Convert Latin footnote markers to Hebrew letters
 const MARKER_TO_HEB = { a:'א', b:'ב', c:'ג', d:'ד', e:'ה', f:'ו', g:'ז', h:'ח', i:'ט', j:'י', k:'כ', l:'ל' };
+const LATIN_MARKER_ORDER = 'abcdefghijkl';
 function hebMarker(m) { return MARKER_TO_HEB[m] || m; }
+/** Earlier Latin marker wins (a before b) — one superscript + one footnote line per anchor position */
+function compareLatinMarker(a, b) {
+  return LATIN_MARKER_ORDER.indexOf(a) - LATIN_MARKER_ORDER.indexOf(b);
+}
 
 // Sort abbreviations longest-first for greedy matching
 const REF_ABBRS = Object.keys(REF_TO_HEBREW).sort((a, b) => b.length - a.length);
@@ -159,9 +164,11 @@ for (const book of BOOKS) {
       const englishText = v.english || '';
       const englishWords = englishText.split(/\s+/);
 
-      const markerPositions = {};
+      /** word index -> cross-refs anchored there (merge to one head + one footer block) */
+      const positionRefs = {};
       for (const ref of refs) {
         let placed = false;
+        let hebIdx = 0;
         const searchText = (ref.text || '').toLowerCase().trim();
         if (!searchText) continue;
 
@@ -175,24 +182,20 @@ for (const book of BOOKS) {
           }
           if (engIdx >= 0) {
             const ratio = engIdx / Math.max(englishWords.length, 1);
-            const hebIdx = Math.min(Math.round(ratio * hebrewWords.length), hebrewWords.length - 1);
-            if (!markerPositions[hebIdx]) markerPositions[hebIdx] = [];
-            markerPositions[hebIdx].push(ref.marker);
+            hebIdx = Math.min(Math.round(ratio * hebrewWords.length), hebrewWords.length - 1);
             placed = true;
           }
         }
-        if (!placed) {
-          if (!markerPositions[0]) markerPositions[0] = [];
-          markerPositions[0].push(ref.marker);
-        }
+        if (!positionRefs[hebIdx]) positionRefs[hebIdx] = [];
+        positionRefs[hebIdx].push(ref);
       }
 
       let verseHtml = `<b class="vn">${hebrewNum(v.verse)}</b>\u00A0`;
       for (let i = 0; i < hebrewWords.length; i++) {
-        if (markerPositions[i]) {
-          for (const m of markerPositions[i]) {
-            verseHtml += `<sup class="xm">${hebMarker(m)}</sup>`;
-          }
+        const group = positionRefs[i];
+        if (group && group.length > 0) {
+          const sorted = [...group].sort((x, y) => compareLatinMarker(x.marker, y.marker));
+          verseHtml += `<sup class="xm">${hebMarker(sorted[0].marker)}</sup>`;
         }
         verseHtml += hebrewWords[i];
         if (i < hebrewWords.length - 1) verseHtml += ' ';
@@ -200,17 +203,28 @@ for (const book of BOOKS) {
       verseHtml += ' \u05C3';
 
       const footnotes = [];
-      for (const ref of refs) {
-        const hebrewRefs = (ref.refs || [])
-          .map(r => (/\d+:\d+/.test(r) ? translateRef(r) : r))
-          .filter(Boolean);
-        if (hebrewRefs.length > 0) {
-          const fnText = hebrewRefs.join('; ').replace(/\d+/g, n => hebrewNum(parseInt(n)));
-          footnotes.push({ marker: hebMarker(ref.marker), text: fnText });
+      const positionKeys = Object.keys(positionRefs).map(Number).sort((a, b) => a - b);
+      for (const hebIdx of positionKeys) {
+        const group = positionRefs[hebIdx];
+        const sorted = [...group].sort((x, y) => compareLatinMarker(x.marker, y.marker));
+        const primary = sorted[0].marker;
+        const pieces = [];
+        for (const ref of sorted) {
+          const hebrewRefs = (ref.refs || [])
+            .map(r => (/\d+:\d+/.test(r) ? translateRef(r) : r))
+            .filter(Boolean);
+          if (hebrewRefs.length > 0) {
+            pieces.push(hebrewRefs.join('; ').replace(/\d+/g, n => hebrewNum(parseInt(n))));
+          }
+        }
+        if (pieces.length > 0) {
+          footnotes.push({
+            marker: hebMarker(primary),
+            text: pieces.join('; ')
+          });
         }
       }
 
-      // Sort footnotes by marker letter (alef, bet, gimel...)
       footnotes.sort((a, b) => {
         const order = 'אבגדהוזחטיכל';
         return order.indexOf(a.marker) - order.indexOf(b.marker);
@@ -388,7 +402,8 @@ async function main() {
     while (cur < total) {
       const pageItems = [];
       let fnAccum = '';
-      let pageFnChapter = 0; // track chapter for footnote headings
+      // null = no verse processed yet on this page; avoid spurious פרק when chapter !== 0
+      let pageFnChapter = null;
 
       // Clear test column
       testCol.innerHTML = '';
@@ -416,8 +431,8 @@ async function main() {
 
         // Project new footnote area
         let projFnAccum = fnAccum;
-        // Add chapter heading in footnotes when chapter changes (multi-chapter books)
-        if (el.type === 'verse' && el.fnHtml && el.multiChapter && el.chapter !== pageFnChapter) {
+        // Add פרק in footnotes only when chapter changes mid-page (not at page start)
+        if (el.type === 'verse' && el.fnHtml && el.multiChapter && pageFnChapter !== null && el.chapter !== pageFnChapter) {
           projFnAccum += '<div class="fn-ch">\u05E4\u05E8\u05E7 ' + el.chapterHeb + '</div>';
         }
         if (el.fnHtml) projFnAccum += el.fnHtml;
@@ -445,7 +460,7 @@ async function main() {
           const nextEl = meta[cur + 1];
           let testFnAccum = projFnAccum;
           // Account for chapter heading in footnotes for next verse
-          if (nextEl.fnHtml && nextEl.multiChapter && nextEl.chapter !== (el.type === 'verse' ? el.chapter : pageFnChapter)) {
+          if (nextEl.fnHtml && nextEl.multiChapter && pageFnChapter !== null && nextEl.chapter !== pageFnChapter) {
             testFnAccum += '<div class="fn-ch">\u05E4\u05E8\u05E7 ' + (nextEl.chapterHeb || '') + '</div>';
           }
           if (nextEl.fnHtml) testFnAccum += nextEl.fnHtml;
@@ -632,13 +647,16 @@ async function main() {
     let fnHtml = '';
     if (pg.footnotes.length > 0) {
       let lastVN = '';
-      let lastCh = 0;
+      let lastCh = null;
       for (const fn of pg.footnotes) {
-        // Add chapter heading when chapter changes (multi-chapter books only)
-        if (fn.chapter !== lastCh && fn.multiChapter) {
-          fnHtml += `<div class="fn-ch">\u05E4\u05E8\u05E7 ${hebrewNum(fn.chapter)}</div>`;
-          lastCh = fn.chapter;
-          lastVN = ''; // reset so verse number shows after chapter heading
+        if (fn.multiChapter) {
+          if (lastCh === null) {
+            lastCh = fn.chapter;
+          } else if (fn.chapter !== lastCh) {
+            fnHtml += `<div class="fn-ch">\u05E4\u05E8\u05E7 ${hebrewNum(fn.chapter)}</div>`;
+            lastCh = fn.chapter;
+            lastVN = '';
+          }
         }
         const showV = fn.verseNum !== lastVN;
         fnHtml += `<div class="fn-line">`;

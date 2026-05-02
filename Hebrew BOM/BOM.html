@@ -5661,15 +5661,101 @@ function addCrossRefMarkers() {
     var engText = (window._englishMap && window._englishMap[key]) ? window._englishMap[key].toLowerCase() : '';
     var engWords = engText ? engText.split(/\s+/) : [];
 
-    // For each cross-ref marker, try to place it inline on the matching word
-    refs.forEach(function(ref) {
+    var LATIN_MARKER_ORDER = 'abcdefghijklmnopqrstuvwxyz';
+    function compareLatinMarker(a, b) {
+      return LATIN_MARKER_ORDER.indexOf(a.marker) - LATIN_MARKER_ORDER.indexOf(b.marker);
+    }
+    /** Placement index for grouping (no DOM markers yet). Matches PDF merge logic. */
+    function computeCrossRefPlacement(ref, xrefRefs) {
+      if (!ref.text) return 0;
+      var searchText = ref.text.toLowerCase().trim();
+      var searchWords = searchText.split(/[\s-]+/);
+      var searchStems = searchWords.map(simpleStem).filter(function(s) { return s.length >= 3; });
+      var i, e, gl, gl2;
+      for (i = 0; i < wordUnits.length; i++) {
+        gl = glossList[i];
+        if (!gl || gl.length < 2) continue;
+        var isMatch = (gl === searchText) || (gl.indexOf(searchText) !== -1) || (gl.length >= 3 && searchText.indexOf(gl) !== -1);
+        if (isMatch) return i;
+      }
+      if (searchStems.length > 0) {
+        for (i = 0; i < wordUnits.length; i++) {
+          gl2 = glossList[i];
+          if (!gl2 || gl2.length < 2) continue;
+          var glossWords = gl2.split(/[\s]+/);
+          var glossStems = glossWords.map(simpleStem).filter(function(s) { return s.length >= 3; });
+          var stemMatch = false;
+          for (var si = 0; si < searchStems.length && !stemMatch; si++) {
+            for (var gi = 0; gi < glossStems.length && !stemMatch; gi++) {
+              if (glossStems[gi].indexOf(searchStems[si]) === 0 || searchStems[si].indexOf(glossStems[gi]) === 0) {
+                stemMatch = true;
+              }
+            }
+          }
+          if (stemMatch) return i;
+        }
+      }
+      if (engWords.length > 0 && wordUnits.length > 0) {
+        var engIdx = -1;
+        for (e = 0; e < engWords.length; e++) {
+          var ew = engWords[e].replace(/[.,;:!?'"()]/g, '');
+          if (ew === searchText || ew.indexOf(searchText) !== -1 || searchText.indexOf(ew) !== -1) {
+            engIdx = e;
+            break;
+          }
+          var ewStem = simpleStem(ew);
+          if (ewStem.length >= 3 && searchStems.some(function(ss) { return ewStem.indexOf(ss) === 0 || ss.indexOf(ewStem) === 0; })) {
+            engIdx = e;
+            break;
+          }
+        }
+        if (engIdx !== -1) {
+          var ratio = engIdx / Math.max(engWords.length, 1);
+          return Math.min(Math.round(ratio * wordUnits.length), wordUnits.length - 1);
+        }
+      }
+      var denom = Math.max(xrefRefs.length, 1);
+      return Math.round((xrefRefs.indexOf(ref) / denom) * (wordUnits.length - 1));
+    }
+    function mergeCrossRefGroup(group) {
+      var sorted = group.slice().sort(compareLatinMarker);
+      var merged = {
+        marker: sorted[0].marker,
+        text: sorted.map(function(r) { return r.text; }).filter(Boolean).join('; '),
+        refs: [],
+        category: 'cross-ref'
+      };
+      sorted.forEach(function(r) {
+        (r.refs || []).forEach(function(x) { merged.refs.push(x); });
+      });
+      return merged;
+    }
+
+    var xrefRefs = refs.filter(function(r) { return r.category === 'cross-ref'; });
+    var otherRefs = refs.filter(function(r) { return r.category !== 'cross-ref'; });
+
+    var xrefGroups = {};
+    xrefRefs.forEach(function(ref) {
+      var idx = computeCrossRefPlacement(ref, xrefRefs);
+      var safeIdx = Math.max(0, Math.min(idx, wordUnits.length - 1));
+      if (!xrefGroups[safeIdx]) xrefGroups[safeIdx] = [];
+      xrefGroups[safeIdx].push(ref);
+    });
+    var mergedCrossRows = [];
+    Object.keys(xrefGroups).sort(function(a, b) { return Number(a) - Number(b); }).forEach(function(k) {
+      mergedCrossRows.push({ idx: Number(k), ref: mergeCrossRefGroup(xrefGroups[k]) });
+    });
+    mergedCrossRows.forEach(function(row) {
+      attachMarker(wordUnits[row.idx], row.ref);
+    });
+
+    otherRefs.forEach(function(ref) {
       var placed = false;
       if (ref.text) {
         var searchText = ref.text.toLowerCase().trim();
         var searchWords = searchText.split(/[\s-]+/);
         var searchStems = searchWords.map(simpleStem).filter(function(s) { return s.length >= 3; });
 
-        // Strategy 1: Direct gloss match (exact or substring)
         for (var i = 0; i < wordUnits.length; i++) {
           if (wordUnits[i].querySelector('.xref-marker[data-marker="' + ref.marker + '"]')) continue;
           var gl = glossList[i];
@@ -5682,7 +5768,6 @@ function addCrossRefMarkers() {
           }
         }
 
-        // Strategy 2: Word-split + stem matching on glosses
         if (!placed && searchStems.length > 0) {
           for (var i2 = 0; i2 < wordUnits.length; i2++) {
             if (wordUnits[i2].querySelector('.xref-marker[data-marker="' + ref.marker + '"]')) continue;
@@ -5706,7 +5791,6 @@ function addCrossRefMarkers() {
           }
         }
 
-        // Strategy 3: Find word position in official English text, map to Hebrew word
         if (!placed && engWords.length > 0 && wordUnits.length > 0) {
           var engIdx = -1;
           for (var e = 0; e < engWords.length; e++) {
@@ -5715,7 +5799,6 @@ function addCrossRefMarkers() {
               engIdx = e;
               break;
             }
-            // Also try stem match on English text
             var ewStem = simpleStem(ew);
             if (ewStem.length >= 3 && searchStems.some(function(ss) { return ewStem.indexOf(ss) === 0 || ss.indexOf(ewStem) === 0; })) {
               engIdx = e;
@@ -5735,7 +5818,6 @@ function addCrossRefMarkers() {
           }
         }
 
-        // Strategy 4: Place on verse number area (never dump at end as standalone text)
         if (!placed && wordUnits.length > 0) {
           var vIdx = Math.round((refs.indexOf(ref) / refs.length) * (wordUnits.length - 1));
           attachMarker(wordUnits[vIdx], ref);
@@ -5749,7 +5831,17 @@ function addCrossRefMarkers() {
       var engMarkersSpan = document.createElement('span');
       engMarkersSpan.className = 'xref-markers';
       engMarkersSpan.style.cssText = 'display:inline; margin-left:4px;';
-      refs.forEach(function(ref) {
+      mergedCrossRows.forEach(function(row) {
+        var sup = document.createElement('sup');
+        sup.className = 'xref-marker';
+        sup.textContent = row.ref.marker;
+        sup.onclick = (function(r) { return function(e) {
+          e.stopPropagation();
+          openXrefPanel(r, key);
+        }; })(row.ref);
+        engMarkersSpan.appendChild(sup);
+      });
+      otherRefs.forEach(function(ref) {
         var sup = document.createElement('sup');
         sup.className = 'xref-marker';
         sup.textContent = ref.marker;
