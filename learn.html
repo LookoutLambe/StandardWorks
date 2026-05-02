@@ -269,24 +269,36 @@
       inset: 0;
       background: rgba(0,0,0,0.45);
       display: none;
-      align-items: center;
+      /* flex-start: avoids vertical center clipping when Safari's vh is wrong */
+      align-items: flex-start;
       justify-content: center;
       z-index: 80;
-      padding: 18px;
+      padding: max(10px, env(safe-area-inset-top, 0px))
+        max(14px, env(safe-area-inset-right, 0px))
+        max(12px, env(safe-area-inset-bottom, 0px))
+        max(14px, env(safe-area-inset-left, 0px));
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
     }
     .modal-backdrop.open { display: flex; }
     .modal {
       width: min(860px, 100%);
-      max-height: min(80vh, 720px);
-      overflow: auto;
+      /* Last wins among supported units: dvh > svh > vh (Safari mobile URL bar) */
+      max-height: min(720px, calc(100vh - 28px));
+      max-height: min(720px, calc(100svh - 28px));
+      max-height: min(720px, calc(100dvh - 28px));
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      margin-bottom: auto;
       background: var(--bg);
       border: 1px solid var(--rule);
       border-radius: 12px;
       box-shadow: 0 14px 50px rgba(0,0,0,0.25);
     }
     .modal-header {
-      position: sticky;
-      top: 0;
+      flex-shrink: 0;
       background: var(--bg);
       border-bottom: 1px solid var(--rule);
       padding: 14px 16px;
@@ -294,10 +306,9 @@
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      z-index: 2;
       flex-wrap: wrap;
     }
-    .modal-header > div:first-child { flex: 1 1 100%; min-width: 260px; }
+    .modal-header > div:first-child { flex: 1 1 100%; min-width: 0; }
     .modal-header > div:last-child { flex: 1 1 auto; width: 100%; justify-content: flex-end; flex-wrap: wrap; }
     .modal-title {
       font-family: 'Cormorant Garamond', serif;
@@ -305,7 +316,17 @@
       font-size: 1.35em;
       margin: 0;
     }
-    .stage-list { padding: 10px 12px 16px; display: grid; gap: 10px; }
+    .stage-list {
+      padding: 10px 12px 16px;
+      display: grid;
+      gap: 10px;
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
+      touch-action: pan-y;
+    }
     .stage-row {
       border: 1px solid var(--rule);
       border-radius: 10px;
