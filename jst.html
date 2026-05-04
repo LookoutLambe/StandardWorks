@@ -1136,6 +1136,7 @@ body, button, input, select, textarea,
   font-family: 'David Libre', serif !important;
 }
 </style>
+<link rel="stylesheet" href="nav_engine.css">
 <link rel="stylesheet" href="xref_study_panel.css">
 </head>
 <body>
@@ -4286,6 +4287,16 @@ window.addEventListener('resize', function() {
     </table>
   </div>
 </div>
+<script src="nav_engine.js"></script>
+<script>
+(function() {
+  try {
+    if (window.NavEngine && window.NavEngine.installReaderFooterChrome) {
+      window.NavEngine.installReaderFooterChrome();
+    }
+  } catch (e) {}
+})();
+</script>
 <script src="xref_study_panel.js"></script>
 </body>
 </html>

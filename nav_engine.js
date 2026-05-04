@@ -1528,6 +1528,64 @@
     }
   }
 
+  // ── Site-wide reader footer hide (double-tap touch / double-click) ──
+  var READ_FTR_LS = 'sw-reader-footer-hidden';
+  var READ_FTR_LS_LEGACY = 'bom-reader-footer-hidden';
+  var _readFtrInstalled = false;
+
+  function installReaderFooterChrome() {
+    if (_readFtrInstalled) return;
+    if (!document.querySelector('.controls-bottom')) return;
+    _readFtrInstalled = true;
+
+    try {
+      var sw = localStorage.getItem(READ_FTR_LS);
+      var leg = localStorage.getItem(READ_FTR_LS_LEGACY);
+      if (sw === '1' || leg === '1') {
+        document.body.classList.add('reader-footer-hidden');
+        if (leg === '1' && sw !== '1') {
+          localStorage.setItem(READ_FTR_LS, '1');
+          localStorage.removeItem(READ_FTR_LS_LEGACY);
+        }
+      }
+    } catch (e) {}
+
+    var SEL_IGNORE = '.controls-top, .controls-bottom, #nav-breadcrumb, #nav-sidebar, #nav-overlay, .nav-search-wrap, .nav-search-results, .nav-library, .nav-vol-tabs, .nav-book-list, #xref-panel.open, #word-popup, #search-container.open, #search-results.open, #glossary-panel, #annotations-panel, #share-popup, #share-overlay, #shortcuts-overlay.open, #sel-toolbar, .safari-browser-tip, button, a[href], input, textarea, select, label, [role="dialog"]';
+    function ignoreTarget(el) {
+      return el && el.closest && el.closest(SEL_IGNORE);
+    }
+    function toggleReadingFooterBar() {
+      if (!document.querySelector('.controls-bottom')) return;
+      document.body.classList.toggle('reader-footer-hidden');
+      try {
+        localStorage.setItem(READ_FTR_LS, document.body.classList.contains('reader-footer-hidden') ? '1' : '0');
+        localStorage.removeItem(READ_FTR_LS_LEGACY);
+      } catch (e2) {}
+      try { window.dispatchEvent(new Event('resize')); } catch (e3) {}
+    }
+
+    var lastTap = 0;
+    document.addEventListener('touchend', function(e) {
+      if (!document.querySelector('.controls-bottom')) return;
+      if (!e.changedTouches || e.changedTouches.length !== 1) return;
+      if (ignoreTarget(e.target)) return;
+      var now = Date.now();
+      if (lastTap && now - lastTap < 420 && now - lastTap > 40) {
+        toggleReadingFooterBar();
+        lastTap = 0;
+        return;
+      }
+      lastTap = now;
+    }, { passive: true });
+
+    document.addEventListener('dblclick', function(e) {
+      if (!document.querySelector('.controls-bottom')) return;
+      if (ignoreTarget(e.target)) return;
+      e.preventDefault();
+      toggleReadingFooterBar();
+    });
+  }
+
   // ── Public API ──
   window.NavEngine = {
     init: function(config) {
@@ -1543,6 +1601,7 @@
       if (navLabel) {
         navLabel.onclick = function(e) { e.stopPropagation(); toggleSidebar(); };
       }
+      installReaderFooterChrome();
     },
     open: openSidebar,
     openJumpSearch: openSidebarAndFocusSearch,
@@ -1619,6 +1678,7 @@
     refreshBookmarksUI: renderBookmarks,
     renderOfflineStatusPublic: renderOfflineStatus,
     mountStudyToolsIntoXrefPanel: mountStudyToolsIntoXrefPanel,
-    VOLUMES: VOLUMES
+    VOLUMES: VOLUMES,
+    installReaderFooterChrome: installReaderFooterChrome
   };
 })();

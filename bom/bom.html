@@ -695,14 +695,6 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   font-size: 0.95em;
 }
 
-/* Immersive reading: double-tap (touch) or double-click (#page) hides bottom mode bar only — header + breadcrumb stay */
-body.reader-footer-hidden .controls-bottom {
-  display: none !important;
-}
-@media (max-width: 900px) {
-  #page { touch-action: manipulation; }
-}
-
 /* Chapter divider */
 
 /* Adjust page — no permanent sidebar */
@@ -8810,19 +8802,6 @@ try {
 } catch(e) {}
 </script>
 
-<script>
-try {
-  var _rf = localStorage.getItem('bom-reader-footer-hidden');
-  var _rfLegacy = localStorage.getItem('bom-reader-chrome-hidden');
-  if (_rf === '1' || _rfLegacy === '1') {
-    document.body.classList.add('reader-footer-hidden');
-    if (_rfLegacy === '1' && _rf !== '1') {
-      localStorage.setItem('bom-reader-footer-hidden', '1');
-      localStorage.removeItem('bom-reader-chrome-hidden');
-    }
-  }
-} catch (e) {}
-</script>
 <script src="../nav_engine.js?v=9"></script>
 <script src="../xref_study_panel.js?v=6"></script>
 <script>
@@ -8833,42 +8812,6 @@ NavEngine.init({
   skipSwipeNav: true,
   onNavigate: function(id) { navTo(id); }
 });
-</script>
-<script>
-(function() {
-  var SEL_IGNORE = '.controls-top, .controls-bottom, #nav-breadcrumb, #nav-sidebar, #nav-overlay, #xref-panel.open, #word-popup, #search-container.open, #search-results.open, #glossary-panel, #annotations-panel, #share-popup, #share-overlay, #shortcuts-overlay.open, #sel-toolbar, button, a[href], input, textarea, select, label, .safari-browser-tip';
-  function ignoreTarget(el) {
-    return el && el.closest && el.closest(SEL_IGNORE);
-  }
-  function toggleReadingFooterBar() {
-    document.body.classList.toggle('reader-footer-hidden');
-    try {
-      localStorage.setItem('bom-reader-footer-hidden', document.body.classList.contains('reader-footer-hidden') ? '1' : '0');
-      localStorage.removeItem('bom-reader-chrome-hidden');
-    } catch (e) {}
-    window.dispatchEvent(new Event('resize'));
-  }
-  function bindReadingFooterToggle(pageEl) {
-    if (!pageEl) return;
-    var lastTap = 0;
-    pageEl.addEventListener('touchend', function(e) {
-      if (ignoreTarget(e.target)) return;
-      var now = Date.now();
-      if (lastTap && now - lastTap < 420 && now - lastTap > 40) {
-        toggleReadingFooterBar();
-        lastTap = 0;
-        return;
-      }
-      lastTap = now;
-    }, { passive: true });
-    pageEl.addEventListener('dblclick', function(e) {
-      if (ignoreTarget(e.target)) return;
-      e.preventDefault();
-      toggleReadingFooterBar();
-    });
-  }
-  bindReadingFooterToggle(document.getElementById('page'));
-})();
 </script>
 <script>
 (function() {

@@ -3,6 +3,7 @@ nul
 .claude/
 
 # Generated/local output files
+pdf-output/
 _local_output/
 __pycache__/
 Scribus/

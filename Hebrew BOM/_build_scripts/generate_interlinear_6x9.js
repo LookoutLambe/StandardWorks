@@ -1,6 +1,7 @@
-// Generate 6×9 Schottenstein-style Interlinear Hebrew BOM PDF
-// Two columns, Hebrew word on top + English gloss below, chevron arrows
-// No commentary — interlinear fills the full text area
+// Interlinear Hebrew BOM PDF (verse files → paginated HTML → PDF)
+// Verse structure matches bom.html: _doRenderVerses (Hebrew num from data + Arabic index) + renderWords
+// (gloss hyphens → spaces, full word list with ׃ for sof pasuk, chevrons ‹/«). Print CSS is denser than the web app.
+// Page: US Letter 8.5×11; running headers use hebrewNum() for chapter only — verse keys are data verse.num strings.
 const puppeteer = require('puppeteer');
 const { PDFDocument } = require('pdf-lib');
 const fs = require('fs');
@@ -36,7 +37,7 @@ const BOOKS = [
   { name: 'Moroni',           hebrew: 'מוֹרוֹנִי',          chapters: 10, prefix: 'mr_ch' },
 ];
 
-// Hebrew numerals (gematria)
+// Hebrew numerals (gematria) — chapters only; verse markers come from verse files as Hebrew strings (א…יא…)
 function hebrewNum(n) {
   if (n <= 0) return String(n);
   const ones = ['','א','ב','ג','ד','ה','ו','ז','ח','ט'];
@@ -51,17 +52,75 @@ function hebrewNum(n) {
   return result;
 }
 
-// ─── Page layout (points) ────────────────────────────────────────────
-const PAGE_W    = 8.5 * 72;      // 612pt  (8.5 inches)
-const PAGE_H    = 11 * 72;       // 792pt  (11 inches)
-const GUTTER    = 0.75 * 72;     // 54pt (inside/spine margin)
-const OUTER     = 0.6 * 72;      // 43pt (outside margin)
-const TOP_M     = 0.5 * 72;      // 36pt
-const BOT_M     = 0.4 * 72;      // 28.8pt
-const COL_GAP   = 0.2 * 72;      // 14.4pt
-const HEADER_H  = 12;
-const HEADER_GAP = 3;
-const PAGE_NUM_H = 10;
+function escapeHtml(s) {
+  if (s == null) return '';
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+/** Interlinear HTML aligned with bom.html: renderWords + _doRenderVerses (verse-num + word-flow + word-unit). */
+function renderVerseHtml(el, pageAttrs) {
+  const rawWords = (el.words || []).filter(p => p && p[0]);
+  if (rawWords.length === 0) return '';
+
+  const verseLabel = el.verseLabel !== undefined ? el.verseLabel : el.num;
+  const verseArabic = el.verseArabic !== undefined ? el.verseArabic : null;
+  const dataA =
+    pageAttrs && (pageAttrs.ch != null || pageAttrs.vs != null)
+      ? ` data-ch="${escapeHtml(String(pageAttrs.ch ?? ''))}" data-vs="${escapeHtml(String(pageAttrs.vs ?? ''))}"`
+      : '';
+
+  const realWords = rawWords.filter(([h]) => h !== '\u05C3');
+  const lastRealIdx = realWords.length - 1;
+  let realCount = 0;
+  let wordFlow = '';
+
+  rawWords.forEach(([h, e], i) => {
+    if (h === '\u05C3') return;
+    const isSof = (i + 1 < rawWords.length && rawWords[i + 1][0] === '\u05C3') || (realCount === lastRealIdx);
+    const isLastWord = realCount === lastRealIdx;
+    const sym = isLastWord ? '\u00ab' : '\u2039';
+    let hw = h.replace(/\u05C3/g, '');
+    const gloss = (e || '').replace(/-/g, ' ');
+    wordFlow += `<span class="word-group"><span class="word-unit${isSof ? ' sof' : ''}"><span class="hw">${escapeHtml(hw)}</span><span class="gl">${escapeHtml(gloss)}</span></span><span class="arr">${sym}</span></span>`;
+    realCount++;
+  });
+
+  let numHtml = '';
+  if (verseLabel != null && verseLabel !== '') {
+    numHtml = `<div class="verse-num"><span class="vn-heb">${escapeHtml(String(verseLabel))}</span>`;
+    if (verseArabic != null && verseArabic !== '') {
+      numHtml += `<span class="verse-num-arabic">${verseArabic}</span>`;
+    }
+    numHtml += '</div>';
+  }
+
+  return `<div class="verse"${dataA}>${numHtml}<div class="word-flow">${wordFlow}</div></div>`;
+}
+
+// ─── Page layout (points) — US Letter 8.5×11, KDP-ready — tuned for ~540 interior pages ───
+const PAGE_W    = 8.5 * 72;      // 612pt
+const PAGE_H    = 11 * 72;       // 792pt
+const GUTTER    = 0.58 * 72;     // inside/spine
+const OUTER     = 0.52 * 72;     // outside — wider columns → fewer wraps
+const TOP_M     = 0.42 * 72;
+const BOT_M     = 0.40 * 72;
+const COL_GAP   = 0.14 * 72;     // column gutter
+const HEADER_H  = 10;
+const HEADER_GAP = 0;
+const PAGE_NUM_H = 8;
+
+// Interlinear band (.arr-top height must match .wh line box)
+// Print density — tuned with web-style verse row (Hebrew + Arabic index) to land near KDP 540
+const HEB_PT     = 10.85;
+const HEB_LH     = 1.08;
+const ENG_PT     = 6.95;
+const ENG_LH     = 1.02;
+const ARR_TOP_PT = HEB_PT * HEB_LH;
+const VN_PT      = Math.min(11.5, HEB_PT - 1.2); // verse letter: visually subordinate to Hebrew line
 const CONTENT_H = PAGE_H - TOP_M - BOT_M - HEADER_H - HEADER_GAP - PAGE_NUM_H;
 const TEXT_AREA_W = PAGE_W - GUTTER - OUTER;
 const COL_W     = (TEXT_AREA_W - COL_GAP) / 2;
@@ -207,14 +266,20 @@ async function main() {
         elements.push({ type: 'chapter-heading', book: bookData.name, bookHebrew: bookData.hebrew,
                          chapter: ch.num, hebrew: `פרק ${hebrewNum(ch.num)}` });
       }
-      for (const verse of ch.verses) {
+      const superCount = ch.verses.filter(v => v.num === '∗').length;
+      ch.verses.forEach((verse, idx) => {
+        const verseArabic = verse.num === '∗' ? null : (idx + 1 - superCount);
         elements.push({
-          type: 'verse', book: bookData.name, bookHebrew: bookData.hebrew,
-          chapter: ch.num, verse: verse.num,
+          type: 'verse',
+          book: bookData.name,
+          bookHebrew: bookData.hebrew,
+          chapter: ch.num,
+          verseLabel: verse.num,
+          verseArabic,
           bookChapters: bookData.chapters.length,
           words: verse.words
         });
-      }
+      });
     }
   }
   console.log(`  ${elements.length} elements`);
@@ -223,37 +288,14 @@ async function main() {
   // Uses CSS multi-column in the browser to measure what fits on each page
   console.log('Step 3: Paginating in browser...');
 
-  function renderWordHtml(heb, eng, addSof = false) {
-    const gloss = (eng || '').replace(/-/g, '\u2011'); // non-breaking hyphens
-    // sof pasuk attached inside .wh so it can never orphan onto its own line
-    const sofMark = addSof ? '<span class="sof">׃</span>' : '';
-    return `<span class="wp"><span class="wh">${heb}${sofMark}</span><span class="we">${gloss}</span></span>`;
-  }
-
-  function renderVerseHtml(el) {
-    const words = el.words.filter(p => p[0] && p[0] !== '׃');
-    if (words.length === 0) return '';
-    let html = '';
-    if (el.verse) html += `<span class="vn">${el.verse}</span>`;
-    for (let i = 0; i < words.length; i++) {
-      const isLast = (i === words.length - 1);
-      html += renderWordHtml(words[i][0], words[i][1], isLast);
-      if (!isLast) html += `<span class="arr-pair"><span class="arr-top"></span><span class="arr">&#x2039;</span></span>`;
-    }
-    return html;
-  }
-
   function renderColophonHtml(colVerses) {
     let html = '';
     for (const v of colVerses) {
-      const words = (v.words || []).filter(p => p[0] && p[0] !== '׃');
-      html += `<div class="col-v">`;
-      for (let i = 0; i < words.length; i++) {
-        const isLast = (i === words.length - 1);
-        html += renderWordHtml(words[i][0], words[i][1], isLast);
-        if (!isLast) html += `<span class="arr-pair"><span class="arr-top"></span><span class="arr">&#x2039;</span></span>`;
-      }
-      html += `</div>`;
+      html += renderVerseHtml({
+        words: v.words || [],
+        verseLabel: '',
+        verseArabic: null
+      });
     }
     return html;
   }
@@ -263,7 +305,7 @@ async function main() {
     if (el.type === 'book-title') return `<div class="bt">${el.hebrew}</div>`;
     if (el.type === 'chapter-heading') return `<div class="ch">${el.hebrew}</div>`;
     if (el.type === 'colophon') return `<div class="colophon">${renderColophonHtml(el.verses)}</div>`;
-    if (el.type === 'verse') return `<div class="v">${renderVerseHtml(el)}</div>`;
+    if (el.type === 'verse') return renderVerseHtml(el);
     return '';
   });
 
@@ -278,30 +320,30 @@ async function main() {
     else if (el.type === 'colophon')
       storageDivs += `<div class="colophon" data-i="${i}">${renderColophonHtml(el.verses)}</div>\n`;
     else if (el.type === 'verse')
-      storageDivs += `<div class="v" data-i="${i}">${renderVerseHtml(el)}</div>\n`;
+      storageDivs += `<div data-i="${i}">${renderVerseHtml(el)}</div>\n`;
   }
 
   const sharedCSS = `
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   font-family: 'David Libre', 'David', serif;
-  font-size: 11pt;
-  line-height: 1.3;
+  font-size: 12pt;
+  line-height: 1.35;
   direction: rtl;
   background: white;
   color: #1a1a1a;
 }
 .bt {
-  text-align: center; font-size: 16pt; font-weight: 700;
+  text-align: center; font-size: 19pt; font-weight: 700;
   padding: 5pt 0 1pt; column-span: all;
 }
 .bt-eng {
   text-align: center; font-family: 'David Libre', serif;
-  font-size: 8pt; font-weight: 600; color: #555;
+  font-size: 9.5pt; font-weight: 600; color: #555;
   direction: ltr; margin-bottom: 2pt; column-span: all;
 }
 .ch {
-  text-align: center; font-size: 11pt; font-weight: 700;
+  text-align: center; font-size: 14pt; font-weight: 700;
   padding: 2pt 0 1pt; border-top: 0.5pt solid #aaa;
   border-bottom: 0.5pt solid #aaa; margin: 2pt 0 1pt;
   break-after: avoid;
@@ -313,66 +355,101 @@ body {
   background: white;
   position: relative; z-index: 1;
 }
-.col-v { margin-bottom: 0.5pt; text-align: justify; text-align-last: right; }
-.v {
-  display: block; margin-bottom: 2pt;
+/* ── Interlinear: same DOM semantics as bom.html; print CSS keeps gloss single-line for density ── */
+.verse {
+  display: flex;
+  align-items: flex-start;
+  gap: 4.5pt;
+  margin-bottom: 0.85pt;
+  padding: 1pt 0 1.5pt;
+  border-bottom: none;
+  box-sizing: border-box;
+}
+.colophon .verse { padding: 0.5pt 0; margin-bottom: 0.25pt; }
+.verse-num {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2.5pt;
+  min-width: 22pt;
+  max-width: 36pt;
+  padding-top: 2.5pt;
+  font-size: ${VN_PT}pt;
+  font-weight: 700;
+  color: #5a9fc4;
+  line-height: 1;
+}
+.vn-heb { flex-shrink: 0; }
+.verse-num-arabic {
+  display: inline;
+  font-size: 6.6pt;
+  font-weight: 500;
+  opacity: 0.78;
+  font-family: 'David Libre', serif;
+  color: #5a9fc4;
+}
+.word-flow {
+  flex: 1;
   text-align: justify;
   text-align-last: right;
+  direction: rtl;
+  min-width: 0;
 }
-.vn {
-  display: inline-block;
-  font-size: 9pt; font-weight: 700; color: #555;
-  margin-left: 1pt; vertical-align: top;
-  padding-top: 1pt;
-}
-.wp {
-  display: inline-block;
-  margin: 0 1pt 1pt 1pt;
+.word-group {
+  display: inline-flex;
+  align-items: flex-start;
   vertical-align: top;
-  /* inner flexbox column centers .wh and .we relative to the widest child */
-  display: -webkit-inline-box;
+  direction: rtl;
+}
+.word-unit {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-}
-/* Override inline-flex display for justification: Chromium honours inline-block for text-align:justify */
-.v { text-align: justify; text-align-last: right; }
-.wh {
-  display: block;
-  font-family: 'David Libre', serif;
-  font-size: 13pt; font-weight: 700;
-  line-height: 1.15; color: #1a2744;
-  text-align: center; white-space: nowrap;
-}
-.we {
-  display: block;
-  font-family: 'David Libre', serif;
-  font-size: 5.5pt;
-  color: #555; direction: ltr;
-  line-height: 1.1; white-space: nowrap;
-  text-align: center;
-}
-/* Chevron centered between word pairs at the English-gloss level */
-.arr-pair {
-  display: inline-flex; flex-direction: column; align-items: center;
+  padding: 1px 1.5pt 3pt;
+  margin: 0 2.5pt;
+  min-width: 18pt;
   vertical-align: top;
 }
-.arr-top {
-  /* Explicit height matches .wh (13pt × 1.15) with no content — zero width */
-  display: block; height: 14.95pt; font-size: 0;
+.hw {
+  font-family: 'David Libre', serif;
+  font-size: ${HEB_PT}pt;
+  font-weight: 700;
+  line-height: ${HEB_LH};
+  color: #1a2744;
+  white-space: nowrap;
+  direction: rtl;
+  text-align: center;
+}
+.gl {
+  font-family: 'David Libre', serif;
+  font-size: ${ENG_PT}pt;
+  font-style: italic;
+  color: #1a2744;
+  line-height: ${ENG_LH};
+  text-align: center;
+  direction: ltr;
+  white-space: nowrap;
+  margin-top: 0.5px;
+  opacity: 0.88;
+}
+.word-unit.sof .hw::after {
+  content: ' ׃';
+  color: #1a2744;
 }
 .arr {
-  display: block; text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  padding: 4pt 0 2pt;
+  margin: 0 0.5px;
+  opacity: 0.7;
+  direction: ltr;
+  unicode-bidi: isolate;
+  color: #b8943a;
   font-family: 'Times New Roman', 'David Libre', serif;
-  font-size: 8pt; color: #888; line-height: 0.85;
-  direction: ltr; unicode-bidi: bidi-override;
-}
-.sof {
-  font-family: 'David Libre', serif;
-  font-size: 13pt; font-weight: 700;
-  margin-right: 1pt; vertical-align: baseline;
-  line-height: inherit; color: #1a2744;
-  display: inline; white-space: nowrap;
+  font-size: 9.5pt;
+  line-height: 1;
 }`;
 
   const pagHtml = `<!DOCTYPE html><html lang="he" dir="rtl"><head><meta charset="UTF-8">
@@ -382,6 +459,7 @@ ${sharedCSS}
 #test-col {
   width: ${TEXT_AREA_W}pt;
   column-count: 2; column-gap: ${COL_GAP}pt; column-fill: auto;
+  column-rule: 0.5pt solid #bbb;
   overflow: hidden; direction: rtl;
 }
 </style></head><body>
@@ -415,15 +493,17 @@ ${sharedCSS}
     });
 
     function overflows() {
-      if (testCol.scrollWidth > testCol.clientWidth + 1) return true;
+      if (testCol.scrollWidth > testCol.clientWidth + 2) return true;
+      // Multi-column: measuring only the last child misses clipped blocks (headers showed e.g. …–ז while verse ז was hidden).
+      if (testCol.scrollHeight > testCol.clientHeight + 2) return true;
       const last = testCol.lastElementChild;
       if (!last) return false;
       const cRect = testCol.getBoundingClientRect();
       const rects = last.getClientRects();
       if (rects.length === 0) return true;
       for (const r of rects) {
-        if (r.left < cRect.left - 1) return true;
-        if (r.bottom > cRect.bottom + 1) return true;
+        if (r.left < cRect.left - 2) return true;
+        if (r.bottom > cRect.bottom + 2) return true;
       }
       return false;
     }
@@ -534,16 +614,34 @@ ${sharedCSS}
         curBookHebrew = el.hebrew;
         curBookEng = el.book;
       }
-      if (el.type === 'verse') {
-        if (!pg.startChapter) {
-          pg.startChapter = el.chapter;
-          pg.startVerse = el.verse;
+    }
+
+    // Header verse range: always from first verse on page → last verse on page (document order).
+    // Incremental !startChapter logic was wrong for chapter 1 vs 0 and easier to desync.
+    const verseEls = indices.map(i => elements[i]).filter(e => e.type === 'verse');
+    if (verseEls.length > 0) {
+      const first = verseEls[0];
+      const last = verseEls[verseEls.length - 1];
+      pg.startChapter = first.chapter;
+      pg.startVerse = first.verseLabel;
+      pg.endChapter = last.chapter;
+      pg.endVerse = last.verseLabel;
+      pg.bookHebrew = first.bookHebrew || '';
+      pg.bookEng = first.book || '';
+    } else {
+      for (let i = indices.length - 1; i >= 0; i--) {
+        const el = elements[indices[i]];
+        if (el.bookHebrew) {
+          pg.bookHebrew = el.bookHebrew;
+          break;
         }
-        pg.endChapter = el.chapter;
-        pg.endVerse = el.verse;
+        if (el.type === 'book-title') {
+          pg.bookHebrew = el.hebrew;
+          break;
+        }
       }
-      pg.bookHebrew = el.bookHebrew || curBookHebrew;
-      pg.bookEng = el.book || curBookEng;
+      if (!pg.bookHebrew) pg.bookHebrew = curBookHebrew;
+      if (!pg.bookEng) pg.bookEng = curBookEng;
     }
 
     pages.push(pg);
@@ -572,7 +670,7 @@ ${sharedCSS}
       } else if (el.type === 'colophon') {
         contentHtml += `<div class="colophon">${renderColophonHtml(el.verses)}</div>`;
       } else if (el.type === 'verse') {
-        contentHtml += `<div class="v">${renderVerseHtml(el)}</div>`;
+        contentHtml += renderVerseHtml(el, { ch: el.chapter, vs: el.verseLabel });
       }
     }
 
@@ -663,9 +761,15 @@ ${sharedCSS}
       const breakBefore = i > 0 ? 'page-break-before:always;' : '';
       // Title flows with its content — just force a new page before each section
       contentHtml += `<div class="fm-sec-hdr" style="${breakBefore}">${fmSec.title}</div>\n`;
-      for (const verse of fmSec.verses) {
-        contentHtml += `<div class="v">${renderVerseHtml(verse)}</div>\n`;
-      }
+      const fmSuper = fmSec.verses.filter(v => v.num === '∗').length;
+      fmSec.verses.forEach((verse, idx) => {
+        const verseArabic = verse.num === '∗' ? null : (idx + 1 - fmSuper);
+        contentHtml += `${renderVerseHtml({
+          words: verse.words,
+          verseLabel: verse.num,
+          verseArabic
+        })}\n`;
+      });
     }
 
     // TOC comes AFTER all front matter sections
@@ -683,7 +787,6 @@ ${sharedCSS}
 @page { size: ${PAGE_W / 72}in ${PAGE_H / 72}in; margin: ${TOP_M / 72}in ${GUTTER / 72}in ${BOT_M / 72}in ${GUTTER / 72}in; }
 ${sharedCSS}
 body { padding: 0; }
-.v { text-align: justify; text-align-last: right; margin-bottom: 2pt; }
 .fm-sec-hdr {
   font-size: 18pt; font-weight: 700; text-align: center;
   margin-bottom: 8pt; padding-bottom: 5pt;
@@ -703,10 +806,8 @@ ${contentHtml}
   const fmPageCount = (fmHtml.match(/class="fm-page/g) || []).length;
   console.log(`  Front matter: ${fmPageCount} pages`);
 
-  let pagesHtml = '';
-  for (let i = 0; i < pages.length; i++) pagesHtml += renderPageHtml(pages[i], i + 1);
-
-  const finalHtml = `<!DOCTYPE html><html lang="he" dir="rtl"><head><meta charset="UTF-8">
+  function buildBodyHtmlDocument(bodyPagesHtml) {
+    return `<!DOCTYPE html><html lang="he" dir="rtl"><head><meta charset="UTF-8">
 <style>${fontFaceCSS}
 @page { size: ${PAGE_W / 72}in ${PAGE_H / 72}in; margin: 0; }
 ${sharedCSS}
@@ -768,12 +869,66 @@ ${sharedCSS}
 }
 </style></head><body>
 ${fmHtml}
-${pagesHtml}
+${bodyPagesHtml}
 </body></html>`;
+  }
 
-  const htmlPath = path.join(__dirname, '_interlinear_6x9_pages.html');
+  /** After layout, verse blocks that fall outside .content (column overflow) are clipped but remain in the DOM. Snap headers to actually visible .verse nodes. */
+  async function snapHeadersToVisibleVerses(browserInst, htmlPathForSnap, pagesArr) {
+    const url = 'file:///' + htmlPathForSnap.replace(/\\/g, '/');
+    const tab = await browserInst.newPage();
+    await tab.goto(url, { waitUntil: 'networkidle0', timeout: 120000 });
+    await tab.evaluate(() => document.fonts.ready);
+    await new Promise(r => setTimeout(r, 1500));
+    const rows = await tab.evaluate(() => {
+      const pageEls = Array.from(document.querySelectorAll('body > .page'));
+      return pageEls.map(pageEl => {
+        const content = pageEl.querySelector('.content');
+        if (!content) return null;
+        const cr = content.getBoundingClientRect();
+        const verseEls = Array.from(pageEl.querySelectorAll('.content .verse'));
+        const vis = verseEls.filter(v => {
+          const r = v.getBoundingClientRect();
+          return r.top >= cr.top - 1 && r.bottom <= cr.bottom + 1
+            && r.left >= cr.left - 1 && r.right <= cr.right + 1;
+        });
+        if (!vis.length) return null;
+        const f = vis[0];
+        const l = vis[vis.length - 1];
+        return {
+          ch0: f.getAttribute('data-ch'),
+          v0: f.getAttribute('data-vs'),
+          ch1: l.getAttribute('data-ch'),
+          v1: l.getAttribute('data-vs'),
+        };
+      });
+    });
+    await tab.close();
+    for (let i = 0; i < pagesArr.length; i++) {
+      const row = rows[i];
+      if (!row || row.ch0 == null || row.ch0 === '') continue;
+      const p = pagesArr[i];
+      p.startChapter = parseInt(row.ch0, 10) || p.startChapter;
+      p.endChapter = parseInt(row.ch1, 10) || p.endChapter;
+      p.startVerse = row.v0 != null ? row.v0 : p.startVerse;
+      p.endVerse = row.v1 != null ? row.v1 : p.endVerse;
+    }
+  }
+
+  let pagesHtml = '';
+  for (let i = 0; i < pages.length; i++) pagesHtml += renderPageHtml(pages[i], i + 1);
+
+  const htmlPath = path.join(__dirname, '_interlinear_letter_pages.html');
+  let finalHtml = buildBodyHtmlDocument(pagesHtml);
   fs.writeFileSync(htmlPath, finalHtml, 'utf8');
   console.log(`  Final HTML: ${(finalHtml.length / 1024 / 1024).toFixed(1)} MB`);
+
+  console.log('  Snapping headers to visible verses (layout pass)...');
+  await snapHeadersToVisibleVerses(browser, htmlPath, pages);
+  pagesHtml = '';
+  for (let i = 0; i < pages.length; i++) pagesHtml += renderPageHtml(pages[i], i + 1);
+  finalHtml = buildBodyHtmlDocument(pagesHtml);
+  fs.writeFileSync(htmlPath, finalHtml, 'utf8');
 
   // ── Step 6: Render PDF in batches ──
   console.log('Step 6: Rendering PDF in batches...');
@@ -933,18 +1088,20 @@ ${bodyContent}
     for (const pg of copied) merged.addPage(pg);
   }
 
-  const outputPath = path.join(BASE, 'Hebrew_Interlinear_BOM_6x9.pdf');
+  const outputPath = path.join(BASE, 'Hebrew_Interlinear_BOM_8p5x11.pdf');
   const mergedBytes = await merged.save();
   fs.writeFileSync(outputPath, mergedBytes);
 
   const stats = fs.statSync(outputPath);
-  const totalPages = fmPageCount + pages.length;
+  const totalPages = merged.getPageCount();
   console.log(`\nPDF: ${outputPath}`);
-  console.log(`  Pages: ${totalPages} (${fmPageCount} front + ${pages.length} body)`);
+  console.log(`  Pages: ${totalPages} (title/front batches + interlinear FM + ${pages.length} body)`);
   console.log(`  Size: ${(stats.size / 1024 / 1024).toFixed(1)} MB`);
-  if (totalPages > 828) {
-    console.log(`  NOTE: ${totalPages} pages exceeds KDP 6x9 limit of 828.`);
-    console.log('  PDF generated successfully. Manual trimming may be needed for KDP submission.');
+  const PAGE_TARGET_KDP = 540;
+  if (totalPages > PAGE_TARGET_KDP) {
+    console.log(`  NOTE: ${totalPages} pages — KDP target was ~${PAGE_TARGET_KDP}; tighten HEB_PT/ENG_PT/margins in this script if you need fewer pages.`);
+  } else if (totalPages < PAGE_TARGET_KDP - 20) {
+    console.log(`  NOTE: ${totalPages} pages is well under ${PAGE_TARGET_KDP}; you can loosen typography slightly if desired.`);
   }
 
   await browser.close();

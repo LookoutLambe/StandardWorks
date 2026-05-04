@@ -430,3 +430,11 @@ body.dark-mode .continue-reading .cr-ref { color: rgba(232, 226, 212, 0.92); }
   0%, 100% { opacity: 0.3; }
   50% { opacity: 0.7; width: 6px; }
 }
+
+/* ── Immersive reading (site-wide): double-tap / double-click hides bottom mode bar only ── */
+body.reader-footer-hidden .controls-bottom {
+  display: none !important;
+}
+@media (max-width: 900px) {
+  #page, .page { touch-action: manipulation; }
+}

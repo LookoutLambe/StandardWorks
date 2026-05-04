@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "pdf": "node _build_scripts/generate_hebrew_pdf.js",
+    "pdf:prince": "node _build_scripts/build_prince_pdf.js",
+    "pdf:vivliostyle": "node _build_scripts/build_vivliostyle_pdf.js",
+    "pdf:flow": "node _build_scripts/build_hebrew_flow_manuscript.js"
+  },
   "dependencies": {
     "adm-zip": "^0.5.16",
     "pdf-lib": "^1.17.1",
@@ -6,6 +12,7 @@
     "serve": "^14.2.5"
   },
   "devDependencies": {
+    "@vivliostyle/cli": "^10.5.0",
     "canvas": "^3.2.1"
   }
 }
