@@ -1,4 +1,4 @@
-const CACHE_NAME = 'standard-works-v73';
+const CACHE_NAME = 'standard-works-v74';
 const OFFLINE_CACHE = 'standard-works-offline-v1';
 
 // Shell assets — HTML pages + shared infrastructure
@@ -319,6 +319,14 @@ self.addEventListener('fetch', event => {
                                   /\/bom\/verses\//.test(url.pathname) ||
                                   /\/bom\/(official_verses|crossrefs|chapter_headings|chapter_headings_heb|topical_guide|roots_glossary)\.js$/.test(url.pathname)) {
                                 return cacheFirst(event.request);
+                              }
+
+                              // Shared nav/chrome scripts — network-first (not SWR). Root SW still intercepts
+                              // ../nav_engine.js when a narrower-scope SW (e.g. bom/sw.js) controls the page;
+                              // stale-while-revalidate would serve old JS on first paint and break touch gestures.
+                              if (/\/nav_engine\.(js|css)$/.test(url.pathname) ||
+                                  /\/xref_study_panel\.(js|css)$/.test(url.pathname)) {
+                                return networkFirst(event.request, 4000);
                               }
 
                               // HTML / JS / JSON — SWR for app feel

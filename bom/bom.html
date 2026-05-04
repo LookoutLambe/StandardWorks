@@ -8848,7 +8848,7 @@ NavEngine.init({
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('./sw.js?v=11').then(function(reg) {
+    navigator.serviceWorker.register('./sw.js?v=12').then(function(reg) {
       try { reg.update(); } catch (e) {}
       console.log('[PWA] Service worker registered:', reg.scope);
     }).catch(function(err) {
