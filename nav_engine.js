@@ -1550,9 +1550,16 @@
       }
     } catch (e) {}
 
-    var SEL_IGNORE = '.controls-top, .controls-bottom, #nav-breadcrumb, #nav-sidebar, #nav-overlay, .nav-search-wrap, .nav-search-results, .nav-library, .nav-vol-tabs, .nav-book-list, #xref-panel.open, #word-popup, #search-container.open, #search-results.open, #glossary-panel, #annotations-panel, #share-popup, #share-overlay, #shortcuts-overlay.open, #sel-toolbar, .safari-browser-tip, button, a[href], input, textarea, select, label, [role="dialog"]';
+    var SEL_IGNORE = '.controls-top, .controls-bottom, #nav-breadcrumb, #nav-sidebar, #nav-overlay, .nav-search-wrap, .nav-search-results, .nav-library, .nav-vol-tabs, .nav-book-list, #xref-panel.open, #word-popup, #search-container.open, #search-results.open, #glossary-panel, #annotations-panel, #share-popup, #share-overlay, #shortcuts-overlay.open, #sel-toolbar, #verse-action-menu, .safari-browser-tip, .global-search-wrap, #gs-results, button, input, textarea, select, [role="dialog"]';
+    var SEL_READING = '#page, .page';
     function ignoreTarget(el) {
       return el && el.closest && el.closest(SEL_IGNORE);
+    }
+    function readingSurfaceEl(el) {
+      if (!el) return null;
+      if (el.nodeType === 3 && el.parentElement) el = el.parentElement;
+      if (!el || el.nodeType !== 1 || !el.closest) return null;
+      return el.closest(SEL_READING) ? el : null;
     }
     function toggleReadingFooterBar() {
       if (!document.querySelector('.controls-bottom')) return;
@@ -1567,20 +1574,25 @@
     var lastTap = 0;
     document.addEventListener('touchend', function(e) {
       if (!document.querySelector('.controls-bottom')) return;
-      if (!e.changedTouches || e.changedTouches.length !== 1) return;
-      if (ignoreTarget(e.target)) return;
+      var ct = e.changedTouches;
+      if (!ct || ct.length < 1) return;
+      var tEl = readingSurfaceEl(e.target);
+      if (!tEl) return;
+      if (ignoreTarget(tEl)) return;
       var now = Date.now();
-      if (lastTap && now - lastTap < 420 && now - lastTap > 40) {
+      if (lastTap && now - lastTap < 580 && now - lastTap > 12) {
         toggleReadingFooterBar();
         lastTap = 0;
         return;
       }
       lastTap = now;
-    }, { passive: true });
+    }, { passive: true, capture: true });
 
     document.addEventListener('dblclick', function(e) {
       if (!document.querySelector('.controls-bottom')) return;
-      if (ignoreTarget(e.target)) return;
+      var tEl = readingSurfaceEl(e.target);
+      if (!tEl) return;
+      if (ignoreTarget(tEl)) return;
       e.preventDefault();
       toggleReadingFooterBar();
     });
