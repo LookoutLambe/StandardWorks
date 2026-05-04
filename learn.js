@@ -1101,7 +1101,7 @@
     // Ensure SW is registered (consistent with index.html behavior)
     try {
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js?v=74').then(function(r){ try { r.update(); } catch(e) {} });
+        navigator.serviceWorker.register('service-worker.js?v=75').then(function(r){ try { r.update(); } catch(e) {} });
       }
     } catch (e) {}
 

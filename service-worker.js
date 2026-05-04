@@ -1,5 +1,5 @@
-const CACHE_NAME = 'standard-works-v74';
-const OFFLINE_CACHE = 'standard-works-offline-v1';
+const CACHE_NAME = 'standard-works-v75';
+const OFFLINE_CACHE = 'standard-works-offline-v2';
 
 // Shell assets — HTML pages + shared infrastructure
 // These are small and essential; install fails gracefully if any are unavailable
@@ -172,7 +172,14 @@ self.addEventListener('message', event => {
     const assets = Array.isArray(msg.assets) ? msg.assets : [];
     event.waitUntil(
       caches.open(OFFLINE_CACHE).then(cache =>
-        Promise.all(assets.map(u => cache.add(u).catch(() => null)))
+        Promise.all(assets.map(u =>
+          fetch(typeof u === 'string' ? u : String(u), { cache: 'reload', credentials: 'same-origin' })
+            .then(function(res) {
+              if (!res || !res.ok) return null;
+              return cache.put(typeof u === 'string' ? u : String(u), res.clone());
+            })
+            .catch(function() { return null; })
+        ))
       ).then(() => reply({ type: 'offline:done', op: 'download' }))
        .catch(() => reply({ type: 'offline:done', op: 'download', error: 1 }))
     );
@@ -191,13 +198,17 @@ self.addEventListener('message', event => {
   }
 });
 
-// Activate — purge only standard-works-* caches (leave bom-* caches alone)
+// Activate — purge old **shell** caches only (standard-works-vNN), not the offline bucket
+// (standard-works-offline-v*) or bom-* caches.
 self.addEventListener('activate', event => {
     event.waitUntil(
           caches.keys().then(keys =>
-                  Promise.all(keys.map(k =>
-                            k.startsWith('standard-works-') && k !== CACHE_NAME ? caches.delete(k) : null
-                                             ))
+                  Promise.all(keys.map(k => {
+                            if (/^standard-works-v\d+$/.test(k) && k !== CACHE_NAME) return caches.delete(k);
+                            // Drop legacy offline bucket so migrated installs repopulate current assets in v2.
+                            if (k === 'standard-works-offline-v1') return caches.delete(k);
+                            return null;
+                  }))
                                  ).then(() => self.clients.claim())
         );
 });
@@ -212,7 +223,7 @@ function networkFirst(request, timeoutMs) {
                                    caches.match(request).then(cached => { if (cached) done(cached); });
                            }, timeoutMs);
 
-                           fetch(request).then(response => {
+                           fetch(request, { cache: 'no-cache' }).then(response => {
                                    if (response && response.ok) {
                                              const clone = response.clone();
                                              caches.open(CACHE_NAME).then(cache => cache.put(request, clone));
@@ -229,7 +240,7 @@ function networkFirst(request, timeoutMs) {
 // Stale-while-revalidate — return cache immediately when available, refresh in background
 function staleWhileRevalidate(request, timeoutMs) {
     return caches.match(request).then(cached => {
-          const netPromise = fetch(request).then(response => {
+          const netPromise = fetch(request, { cache: 'no-cache' }).then(response => {
                   if (response && response.ok) {
                             const clone = response.clone();
                             caches.open(CACHE_NAME).then(cache => cache.put(request, clone));
@@ -259,7 +270,7 @@ function staleWhileRevalidate(request, timeoutMs) {
 function cacheFirst(request) {
     return caches.match(request).then(cached => {
           if (cached) return cached;
-          return fetch(request).then(response => {
+          return fetch(request, { cache: 'no-cache' }).then(response => {
                   if (response && response.ok) {
                             const clone = response.clone();
                             caches.open(CACHE_NAME).then(cache => cache.put(request, clone));
@@ -282,7 +293,7 @@ function networkFirstWithOfflineFallback(request, timeoutMs) {
       });
     }, timeoutMs || 2500);
 
-    fetch(request).then(response => {
+    fetch(request, { cache: 'no-cache' }).then(response => {
       if (response && response.ok) {
         const clone = response.clone();
         // Refresh both caches: shell cache + offline cache (if it exists there)
