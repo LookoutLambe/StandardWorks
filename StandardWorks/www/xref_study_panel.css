@@ -1,0 +1,134 @@
+/* Tabbed Study panel (cross-refs + bookmarks + notes + more) — loaded with scripture volumes */
+
+#xref-panel {
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 0 !important;
+}
+#xref-panel .xref-panel-header {
+  flex-shrink: 0;
+}
+.xref-study-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--rule-light);
+  background: var(--bg-deep);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.xref-study-tab {
+  flex: 1;
+  min-width: 72px;
+  padding: 8px 6px;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'David Libre', 'Crimson Pro', Georgia, serif;
+  font-size: 0.82em;
+  cursor: pointer;
+}
+.xref-study-tab.active {
+  border-color: var(--accent);
+  background: rgba(200, 168, 78, 0.12);
+  color: var(--accent);
+  font-weight: 600;
+}
+.xref-pane {
+  display: none;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  overflow-y: auto;
+}
+.xref-pane.active {
+  display: flex;
+}
+#xref-pane-bookmarks,
+#xref-pane-notes,
+#xref-pane-more {
+  padding: 12px 16px 24px;
+  gap: 10px;
+}
+.study-pane-hint {
+  font-size: 0.85em;
+  color: var(--ink-light);
+  line-height: 1.45;
+  margin: 0;
+}
+.study-pane-sub {
+  font-size: 0.8em;
+  color: var(--ink-light);
+  margin: 8px 0 0;
+  line-height: 1.4;
+}
+.study-pane-status {
+  font-size: 0.8em;
+  color: var(--ink-light);
+  margin: 0;
+}
+.study-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.study-btn-row-stack {
+  flex-direction: column;
+}
+.study-btn-row button {
+  flex: 1;
+  min-width: 100px;
+  padding: 9px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--rule);
+  background: var(--bg-deep);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+.study-btn-row button:hover {
+  border-color: var(--accent);
+  background: rgba(200, 168, 78, 0.1);
+}
+.xf-bookmark-item {
+  border: 1px solid var(--rule-light);
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+  background: rgba(0, 0, 0, 0.02);
+  cursor: pointer;
+}
+.xf-bookmark-item:first-of-type { margin-top: 4px; }
+.xf-bookmark-item:hover {
+  border-color: var(--accent);
+  background: rgba(200, 168, 78, 0.08);
+}
+.xf-bookmark-item .xf-bm-title { font-size: 0.95em; color: var(--ink); }
+.xf-bookmark-item .xf-bm-heb {
+  font-family: 'David Libre', 'SBL Hebrew', serif;
+  font-size: 1.05em;
+  color: var(--accent);
+  margin-top: 4px;
+  direction: rtl;
+}
+
+body.dark-mode .xref-study-tabs {
+  background: #252525;
+  border-bottom-color: #444;
+}
+body.dark-mode .xref-study-tab {
+  background: #1f1f1f;
+  color: var(--ink);
+}
+body.dark-mode .study-btn-row button {
+  background: #252525;
+  border-color: #444;
+}
+
+@media (max-width: 600px) {
+  .xref-study-tab { min-width: 64px; font-size: 0.76em; padding: 7px 4px; }
+}

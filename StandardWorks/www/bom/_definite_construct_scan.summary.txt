@@ -1,0 +1,246 @@
+BOM definite construct chain gloss scan
+Generated: 2026-05-01T16:20:42.353Z
+Findings: 1827
+By type: {"construct_chain_possible_missing_of":1246,"double_the_gloss_pair":581}
+
+First 80 findings (review):
+construct_chain_possible_missing_of | 1nephi.js ch1-verses vד [24]
+  יְרוּשָׁלַיִם → Jerusalem
+  הַגְּדוֹלָה → the-great
+double_the_gloss_pair | 1nephi.js ch1-verses vו [11]
+  הַדְּבָרִים → the-things
+  הָרַבִּים → the-many
+construct_chain_possible_missing_of | 1nephi.js ch2-verses vיג [4]
+  יְרוּשָׁלַיִם → Jerusalem
+  הָעִיר → the-city
+double_the_gloss_pair | 1nephi.js ch2-verses vיג [5]
+  הָעִיר → the-city
+  הַגְּדוֹלָה → the-great
+construct_chain_possible_missing_of | 1nephi.js ch3-verses vה [5]
+  קָשָׁה → hard
+  הַדָּבָר → the-thing
+construct_chain_possible_missing_of | 1nephi.js ch3-verses vיב [3]
+  אֶת־הַסְּפָרִים → the-records
+  הַחֲרוּתִים → the-engraved
+construct_chain_possible_missing_of | 1nephi.js ch3-verses vיד [12]
+  אֶל־אָבִינוּ → to-our-father
+  הַמִּדְבָּרָה → the-wilderness-ward
+construct_chain_possible_missing_of | 1nephi.js ch3-verses vטו [8]
+  אֶל־אָבִינוּ → to-our-father
+  הַמִּדְבָּרָה → the-wilderness-ward
+construct_chain_possible_missing_of | 1nephi.js ch3-verses vכד [5]
+  אֶת־הַסְּפָרִים → the-records
+  הַחֲרוּתִים → the-engraved
+construct_chain_possible_missing_of | 1nephi.js ch3-verses vכח [14]
+  אֲחֵיהֶם → their-brothers
+  הַקְּטַנִּים → the-younger
+construct_chain_possible_missing_of | 1nephi.js ch3-verses vכט [15]
+  אֶת־אֲחִיכֶם → your-brother
+  הַקָּטֹן → the-younger
+construct_chain_possible_missing_of | 1nephi.js ch3-verses vל [2]
+  דִבֶּר → spoke
+  הַמַּלְאָךְ → the-angel
+construct_chain_possible_missing_of | 1nephi.js ch4-verses vג [4]
+  אֱמֶת → true
+  הַדָּבָר → the-thing
+construct_chain_possible_missing_of | 1nephi.js ch4-verses vה [11]
+  נֶפִי → Nephi
+  הָעִירָה → the-city-ward
+construct_chain_possible_missing_of | 1nephi.js ch4-verses vכא [7]
+  אֶת־הַחֶרֶב → the-sword
+  הַחֲגוּרָה → the-girded
+construct_chain_possible_missing_of | 1nephi.js ch4-verses vכד [8]
+  אֶל־אַחַי → to-my-brothers
+  הַגְּדֹלִים → the-elder
+construct_chain_possible_missing_of | 1nephi.js ch4-verses vכו [9]
+  אֲשֶׁר → whom
+  הָרָגְתִּי → the-I-slew
+construct_chain_possible_missing_of | 1nephi.js ch4-verses vלג [14]
+  אִתָּנוּ → with-us
+  הַמִּדְבָּרָה → the-wilderness-ward
+construct_chain_possible_missing_of | 1nephi.js ch4-verses vלד [17]
+  אִם־תֵּרֵד → if-you-go-down
+  הַמִּדְבָּרָה → the-wilderness-ward
+construct_chain_possible_missing_of | 1nephi.js ch5-verses vי [8]
+  אֶת־הַסְּפָרִים → the-records
+  הַחֲרוּתִים → the-engraved
+construct_chain_possible_missing_of | 1nephi.js ch5-verses vיא [13]
+  אֲבוֹתֵינוּ → our-parents
+  הָרִאשֹׁנִים → the-first
+double_the_gloss_pair | 1nephi.js ch5-verses vיג [1]
+  הַנְּבִיאִים → the-prophets
+  הַקְּדוֹשִׁים → the-holy
+construct_chain_possible_missing_of | 1nephi.js ch7-verses vה [6]
+  אִתָּנוּ → with-us
+  הַמִּדְבָּרָה → the-wilderness-ward
+construct_chain_possible_missing_of | 1nephi.js ch7-verses vח [12]
+  אַחַי → my-brothers
+  הַגְּדֹלִים → the-elder
+construct_chain_possible_missing_of | 1nephi.js ch7-verses vח [22]
+  אֲחִיכֶם → your-brother
+  הַקָּטֹן → the-younger
+construct_chain_possible_missing_of | 1nephi.js ch7-verses vיא [3]
+  אֶת־הַדְּבָרִים → the-things
+  הַגְּדֹלִים → the-great
+construct_chain_possible_missing_of | 1nephi.js ch7-verses vיח [6]
+  נִתְּקוּ → burst
+  הַחֲבָלִים → the-cords
+construct_chain_possible_missing_of | 1nephi.js ch8-verses vיג [11]
+  אֵצֶל → near
+  הָעֵץ → the-tree
+construct_chain_possible_missing_of | 1nephi.js ch8-verses vכג [9]
+  תָעוּ → wandered-off
+  הַהֹלְכִים → the-ones-walking
+construct_chain_possible_missing_of | 1nephi.js ch10-verses vג [3]
+  גַּם־הָעִיר → even-the-city
+  הַגְּדוֹלָה → the-great
+construct_chain_possible_missing_of | 1nephi.js ch10-verses vיד [9]
+  קִבְּלוּ → receive
+  הַגּוֹיִם → the-nations
+double_the_gloss_pair | 1nephi.js ch10-verses vיד [14]
+  הַזַּיִת → the-olive
+  הָרִאשׁוֹנִים → the-natural
+construct_chain_possible_missing_of | 1nephi.js ch10-verses vיד [21]
+  אֶת־מְשִׁיחַ → Messiah
+  הָאֱמֶת → the-true
+construct_chain_possible_missing_of | 1nephi.js ch11-verses vב [1]
+  אֵלַי → to-me
+  הָרוּחַ → the-Spirit
+construct_chain_possible_missing_of | 1nephi.js ch11-verses vד [1]
+  אֵלַי → to-me
+  הָרוּחַ → the-Spirit
+construct_chain_possible_missing_of | 1nephi.js ch11-verses vח [1]
+  אֵלַי → to-me
+  הָרוּחַ → the-Spirit
+construct_chain_possible_missing_of | 1nephi.js ch11-verses vיג [2]
+  אֶת־הָעִיר → the-city
+  הַגְּדוֹלָה → the-great
+construct_chain_possible_missing_of | 1nephi.js ch11-verses vיט [10]
+  אֵלַי → to-me
+  הַמַּלְאָךְ → the-angel
+construct_chain_possible_missing_of | 1nephi.js ch11-verses vכא [1]
+  אֵלַי → to-me
+  הַמַּלְאָךְ → the-angel
+construct_chain_possible_missing_of | 1nephi.js ch11-verses vכו [1]
+  אֵלַי → to-me
+  הַמַּלְאָךְ → the-angel
+construct_chain_possible_missing_of | 1nephi.js ch11-verses vכז [11]
+  יָכִין → prepares
+  הַדֶּרֶךְ → the-way
+construct_chain_possible_missing_of | 1nephi.js ch11-verses vל [2]
+  אֵלַי → to-me
+  הַמַּלְאָךְ → the-angel
+construct_chain_possible_missing_of | 1nephi.js ch11-verses vלב [2]
+  אֵלַי → to-me
+  הַמַּלְאָךְ → the-angel
+double_the_gloss_pair | 1nephi.js ch11-verses vלו [4]
+  הַבִּנְיָן → the-building
+  הַגָּדוֹל → the-great
+construct_chain_possible_missing_of | 1nephi.js ch12-verses vא [1]
+  אֵלַי → to-me
+  הַמַּלְאָךְ → the-angel
+construct_chain_possible_missing_of | 1nephi.js ch12-verses vה [19]
+  יְהוָה → the-Lord
+  הַגְּדֹלִים → the-great
+construct_chain_possible_missing_of | 1nephi.js ch12-verses vח [1]
+  אֵלַי → to-me
+  הַמַּלְאָךְ → the-angel
+double_the_gloss_pair | 1nephi.js ch12-verses vח [8]
+  הַשֶּׂה → the-Lamb
+  הַנִּבְחָרִים → the-chosen
+construct_chain_possible_missing_of | 1nephi.js ch12-verses vיא [1]
+  אֵלַי → to-me
+  הַמַּלְאָךְ → the-angel
+construct_chain_possible_missing_of | 1nephi.js ch12-verses vיא [16]
+  אֵלַי → to-me
+  הַמַּלְאָךְ → the-angel
+construct_chain_possible_missing_of | 1nephi.js ch12-verses vיד [1]
+  אֵלַי → to-me
+  הַמַּלְאָךְ → the-angel
+construct_chain_possible_missing_of | 1nephi.js ch12-verses vטז [1]
+  אֵלַי → to-me
+  הַמַּלְאָךְ → the-angel
+double_the_gloss_pair | 1nephi.js ch12-verses vטז [6]
+  הַמַּיִם → the-waters
+  הַטְּמֵאִים → the-filthy
+double_the_gloss_pair | 1nephi.js ch12-verses vיז [4]
+  הַשָּׂטָן → the-Adversary
+  הַמְעַוְּרוֹת → the-blinding
+construct_chain_possible_missing_of | 1nephi.js ch12-verses vכב [1]
+  אֵלַי → to-me
+  הַמַּלְאָךְ → the-angel
+construct_chain_possible_missing_of | 1nephi.js ch13-verses vא [1]
+  אֵלַי → to-me
+  הַמַּלְאָךְ → the-angel
+construct_chain_possible_missing_of | 1nephi.js ch13-verses vב [1]
+  אֵלַי → to-me
+  הַמַּלְאָךְ → the-angel
+construct_chain_possible_missing_of | 1nephi.js ch13-verses vה [1]
+  אֵלַי → to-me
+  הַמַּלְאָךְ → the-angel
+construct_chain_possible_missing_of | 1nephi.js ch13-verses vו [1]
+  אֶת־הָעֵדָה → the-congregation
+  הַגְּדוֹלָה → the-great
+construct_chain_possible_missing_of | 1nephi.js ch13-verses vח [1]
+  אֵלַי → to-me
+  הַמַּלְאָךְ → the-angel
+double_the_gloss_pair | 1nephi.js ch13-verses vח [16]
+  הָעֵדָה → the-congregation
+  הַגְּדוֹלָה → the-great
+construct_chain_possible_missing_of | 1nephi.js ch13-verses vיא [1]
+  אֵלַי → to-me
+  הַמַּלְאָךְ → the-angel
+construct_chain_possible_missing_of | 1nephi.js ch13-verses vטז [3]
+  נִכְנְעוּ → humbled-themselves
+  הַגּוֹיִם → the-nations
+construct_chain_possible_missing_of | 1nephi.js ch13-verses vכא [1]
+  אֵלַי → to-me
+  הַמַּלְאָךְ → the-angel
+construct_chain_possible_missing_of | 1nephi.js ch13-verses vכג [8]
+  אֵלַי → to-me
+  הַסֵּפֶר → the-book
+construct_chain_possible_missing_of | 1nephi.js ch13-verses vכד [6]
+  יָצָא → came-forth
+  הַסֵּפֶר → the-book
+double_the_gloss_pair | 1nephi.js ch13-verses vכו [10]
+  הָעֵדָה → the-congregation
+  הַגְּדוֹלָה → the-great
+construct_chain_possible_missing_of | 1nephi.js ch13-verses vכו [20]
+  רַבִּים → many
+  הַבְּרוּרִים → the-plain
+construct_chain_possible_missing_of | 1nephi.js ch13-verses vכז [5]
+  יְהוָה → the-Lord
+  הַיְשָׁרִים → the-right
+double_the_gloss_pair | 1nephi.js ch13-verses vכח [7]
+  הָעֵדָה → the-congregation
+  הַגְּדוֹלָה → the-great
+double_the_gloss_pair | 1nephi.js ch13-verses vכט [4]
+  הַדְּבָרִים → the-things
+  הַבְּרוּרִים → the-plain
+double_the_gloss_pair | 1nephi.js ch13-verses vכט [27]
+  הַדְּבָרִים → the-things
+  הַבְּרוּרִים → the-plain
+double_the_gloss_pair | 1nephi.js ch13-verses vל [13]
+  הָאָרֶץ → the-earth
+  הַנִּבְחֶרֶת → the-choice
+double_the_gloss_pair | 1nephi.js ch13-verses vלב [16]
+  הַחֲלָקִים → the-parts
+  הַבְּרוּרִים → the-plain
+double_the_gloss_pair | 1nephi.js ch13-verses vלב [24]
+  הָעֵדָה → the-congregation
+  הַנִּתְעָבָה → the-abominable
+double_the_gloss_pair | 1nephi.js ch13-verses vלד [32]
+  הַדְּבָרִים → the-things
+  הַבְּרוּרִים → the-plain
+double_the_gloss_pair | 1nephi.js ch13-verses vלד [39]
+  הָעֵדָה → the-congregation
+  הַנִּתְעֶבֶת → the-abominable
+construct_chain_possible_missing_of | 1nephi.js ch13-verses vלד [43]
+  נְאֻם → says
+  הַשֶּׂה → the-Lamb
+construct_chain_possible_missing_of | 1nephi.js ch13-verses vלד [59]
+  נְאֻם → says
+  הַשֶּׂה → the-Lamb
+construct_chain_possible_missing_of | 1nephi.js ch13-verses vלו [5]
+  נְאֻם → says
+  הַשֶּׂה → the-Lamb

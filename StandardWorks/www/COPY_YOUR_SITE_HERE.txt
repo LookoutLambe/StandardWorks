@@ -1,0 +1,11 @@
+Copy everything from your "Standard Works Project" folder into this www folder
+so that index.html sits next to this file:
+
+  www/index.html
+  www/nav_engine.css
+  www/dc_verses/
+  ... (all HTML, CSS, JS, assets)
+
+Then open StandardWorks.xcodeproj on a Mac and Run.
+
+Optional: delete this .txt file after copying.
