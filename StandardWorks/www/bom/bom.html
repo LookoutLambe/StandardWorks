@@ -2,10 +2,42 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="UTF-8">
+<script>document.documentElement.classList.add('sw-shell-pending');</script>
+<script>(function(){var h=(location.hostname||'').toLowerCase(),p=location.pathname.split('/').filter(Boolean),gh=h.slice(-10)==='github.io'&&p.length>0,m='../'+(gh?'manifest.github.json':'manifest.json');document.write('<link rel="manifest" href="'+m+'" id="sw-manifest-link">');})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ספר מורמון — Hebrew Interlinear</title>
-<meta name="description" content="Hebrew Interlinear Book of Mormon — Classical Biblical Hebrew, Word-by-Word">
-<link rel="manifest" href="../manifest.json">
+<link rel="canonical" id="canonical-link" href="https://sefermormon.com/bom/bom.html">
+<title>Sefer Mormon — Hebrew Interlinear Book of Mormon</title>
+<meta name="description" content="Read the Book of Mormon in Classical Biblical Hebrew with word-by-word English glosses, transliteration, and roots. Sefer Mormon interlinear edition online.">
+<meta property="og:title" content="Sefer Mormon — Hebrew Interlinear Book of Mormon">
+<meta property="og:description" content="Read the Book of Mormon in Classical Biblical Hebrew with word-by-word English glosses, transliteration, and roots.">
+<meta property="og:image" content="https://sefermormon.com/bom/images/cover-interlinear.jpg">
+<meta property="og:url" content="https://sefermormon.com/bom/bom.html">
+<meta property="og:type" content="book">
+<meta property="og:site_name" content="Sefer Mormon">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sefer Mormon — Hebrew Interlinear Book of Mormon">
+<meta name="twitter:description" content="Classical Biblical Hebrew Book of Mormon with interlinear English glosses and transliteration.">
+<meta name="twitter:image" content="https://sefermormon.com/bom/images/cover-interlinear.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Sefer Mormon",
+  "alternateName": "The Book of Mormon in Classical Biblical Hebrew",
+  "author": { "@type": "Person", "name": "Chris Lambe" },
+  "inLanguage": "he",
+  "bookFormat": "https://schema.org/EBook",
+  "image": "https://sefermormon.com/bom/images/cover-interlinear.jpg",
+  "url": "https://sefermormon.com/bom/bom.html",
+  "sameAs": "https://www.amazon.com/dp/B0GVZFM6YR",
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "Amazon ASIN",
+    "value": "B0GVZFM6YR"
+  }
+}
+</script>
+<script>(function(){var h=(location.hostname||'').toLowerCase(),p=location.pathname.split('/').filter(Boolean),gh=h.slice(-10)==='github.io',base=gh&&p.length?location.origin+'/'+p[0]:location.origin,root=(h==='sefermormon.com'?'https://sefermormon.com':base).replace(/\/$/,''),page=root+'/bom/bom.html',c=document.getElementById('canonical-link');if(c)c.href=page;var o=document.querySelector('meta[property="og:url"]');if(o)o.content=page;})();</script>
 <meta name="theme-color" content="#1e2233">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -14,12 +46,9 @@
 <link rel="icon" type="image/png" sizes="192x192" href="../icons/icon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="../icons/icon-180.png">
 <link rel="apple-touch-icon" href="../icons/icon-192.png">
-<style>
-@font-face { font-family: "David Libre"; font-weight: 400; font-style: normal; src: url("/fonts/david-libre-400.woff2") format("woff2"); }
-@font-face { font-family: "David Libre"; font-weight: 500; font-style: normal; src: url("/fonts/david-libre-500.woff2") format("woff2"); }
-@font-face { font-family: "David Libre"; font-weight: 700; font-style: normal; src: url("/fonts/david-libre-700.woff2") format("woff2"); }
-</style>
-<link rel="stylesheet" href="../nav_engine.css?v=9">
+<link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../nav_engine.css?v=25">
+<link rel="stylesheet" href="../site_chrome.css?v=26">
 <link rel="stylesheet" href="../xref_study_panel.css?v=6">
 <style>
 
@@ -28,15 +57,15 @@
   --bg-deep: #f0ece0;
   --ink: #1a1a1a;
   --ink-light: #444;
-  --accent: #c8a84e;
-  --accent-light: #d4b96a;
+  --accent: #dbb958;
+  --accent-light: #e8cc78;
   --rule: #d6ceb8;
   --rule-light: #e8e2d4;
   --gloss: #333;
   --verse-num: #7fb3d3;
-  --highlight: rgba(200, 168, 78, 0.10);
+  --highlight: rgba(219, 185, 88, 0.12);
   --header-bg: #1e2233;
-  --header-text: #c8a84e;
+  --header-text: #dbb958;
   --row-alt: #fdf8eb;
 }
 
@@ -49,7 +78,7 @@ html { overflow-x: hidden; }
   top: -100px;
   left: 0;
   background: #1e2233;
-  color: #c8a84e;
+  color: #dbb958;
   padding: 10px 20px;
   z-index: 9999;
   font-size: 1em;
@@ -58,7 +87,7 @@ html { overflow-x: hidden; }
 .skip-link:focus { top: 0; }
 
 /* Focus visible ring for keyboard navigation */
-*:focus-visible { outline: 2px solid #c8a84e; outline-offset: 2px; }
+*:focus-visible { outline: 2px solid #dbb958; outline-offset: 2px; }
 body.dark-mode *:focus-visible { outline-color: #d4af37; }
 
 body {
@@ -68,13 +97,10 @@ body {
   min-height: 100vh;
 }
 
-/* Double-tap anywhere to toggle the bottom bar (mobile/PWA) */
-body.hide-bottom-bar .controls-bottom { display: none !important; }
-@media (max-width: 700px) {
-  body.hide-bottom-bar .page {
-    /* keep safe-area inset, reclaim bottom bar space */
-    padding-bottom: max(18px, env(safe-area-inset-bottom, 0px));
-  }
+/* Collapsed footer: mode bar hidden by nav_engine (.reader-footer-hidden); do not add extra page buffer here */
+body.hide-bottom-bar #sw-reader-footer .controls-bottom,
+body.hide-bottom-bar .controls-bottom.sw-footer-modes {
+  display: none !important;
 }
 
 .page {
@@ -138,7 +164,7 @@ body.hide-bottom-bar .controls-bottom { display: none !important; }
   letter-spacing: 0.06em;
 }
 .chapter-label-en {
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.95em;
   font-variant: small-caps;
   letter-spacing: 0.08em;
@@ -148,7 +174,7 @@ body.hide-bottom-bar .controls-bottom { display: none !important; }
   direction: ltr;
 }
 .chapter-summary {
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.85em;
   font-style: italic;
   color: var(--gloss);
@@ -185,7 +211,7 @@ body.hide-bottom-bar .controls-bottom { display: none !important; }
 .heading-flow .arr-gl { font-size: 0.65em; transform: scale(1.4); }
 .heading-flow .arr { padding: 2px 0 4px; margin: 1px 0; }
 .chapter-summary-tl {
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.8em;
   font-style: normal;
   color: var(--accent);
@@ -224,7 +250,7 @@ body.hide-translit .chapter-summary-tl { display: none; }
   direction: rtl;
 }
 .title-interlinear .tw .tg {
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.8em;
   font-style: italic;
   color: var(--gloss);
@@ -238,16 +264,16 @@ body.hide-translit .chapter-summary-tl { display: none; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 0;
-  margin-bottom: 12px;
-  font-family: 'Crimson Pro', serif;
-  font-size: 0.95em;
+  padding: 4px 0;
+  margin-bottom: 4px;
+  font-family: 'David Libre', 'Georgia', serif;
+  font-size: 0.9em;
 }
 
 .chapter-nav a {
   color: var(--accent);
   text-decoration: none;
-  padding: 4px 12px;
+  padding: 2px 8px;
   border: 1px solid var(--rule);
   border-radius: 3px;
   transition: all 0.2s;
@@ -272,7 +298,7 @@ body.hide-translit .chapter-summary-tl { display: none; }
 }
 
 .verse:hover {
-  background: rgba(200, 168, 78, 0.14);
+  background: rgba(219, 185, 88, 0.14);
 }
 
 .verse:last-child {
@@ -296,7 +322,7 @@ body.hide-translit .chapter-summary-tl { display: none; }
   font-weight: 400;
   opacity: 0.7;
   margin-top: 2px;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   color: var(--verse-num);
 }
 
@@ -337,7 +363,7 @@ body.hide-translit .chapter-summary-tl { display: none; }
 }
 
 .tl {
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.78em;
   font-style: normal;
   color: #1a2744;
@@ -350,7 +376,7 @@ body.hide-translit .chapter-summary-tl { display: none; }
 }
 body.hide-translit .tl { display: none; }
 .gl {
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.72em;
   font-style: italic;
   color: #1a2744;
@@ -364,17 +390,29 @@ body.hide-translit .tl { display: none; }
   margin-top: 1px;
   opacity: 0.85;
 }
-/* Native selection: Hebrew tier only (gloss/translit not part of drag selection) */
+/* Native selection: Hebrew tier only (wrapper none + .hw text — fixes iOS selecting stacked tl/gl) */
+.word-unit .hw {
+  user-select: text;
+  -webkit-user-select: text;
+  touch-action: auto;
+  -webkit-touch-callout: default;
+}
+@media (max-width: 900px) {
+  #page .word-flow,
+  #page .word-unit .hw {
+    touch-action: auto !important;
+  }
+}
 .word-unit .gl,
 .word-unit .tl,
 .arr .arr-tl,
 .arr .arr-gl {
-  user-select: none;
-  -webkit-user-select: none;
+  user-select: none !important;
+  -webkit-user-select: none !important;
 }
 body.english-only .word-unit .gl {
-  user-select: text;
-  -webkit-user-select: text;
+  user-select: text !important;
+  -webkit-user-select: text !important;
 }
 .word-group {
   display: inline-flex;
@@ -419,13 +457,13 @@ body.hide-gloss.hide-translit .arr { display: none; }
   left: 0;
   right: 0;
   background: #1e2233;
-  color: #c8a84e;
+  color: #dbb958;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
   padding: 6px 12px 6px;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.9em;
   z-index: 100;
 }
@@ -436,21 +474,21 @@ body.hide-gloss.hide-translit .arr { display: none; }
   left: 0;
   right: 0;
   background: #1e2233;
-  color: #c8a84e;
+  color: #dbb958;
   display: flex;
   direction: ltr;
   justify-content: center;
   align-items: center;
-  gap: 12px;
-  padding: 6px 12px;
-  font-family: 'Crimson Pro', serif;
-  font-size: 0.9em;
+  gap: 8px;
+  padding: 3px 10px;
+  font-family: 'David Libre', 'Georgia', serif;
+  font-size: 0.82em;
   z-index: 100;
 }
 .controls-top .nav-prev, .controls-top .nav-next {
   background: transparent;
-  border: 1px solid #c8a84e;
-  color: #c8a84e;
+  border: 1px solid #dbb958;
+  color: #dbb958;
   padding: 5px 10px;
   border-radius: 3px;
   cursor: pointer;
@@ -516,31 +554,31 @@ body.hide-gloss.hide-translit .arr { display: none; }
     width: 56px;
   }
   .controls-bottom {
-    gap: 3px;
-    padding: 4px max(5px, env(safe-area-inset-left, 0px)) max(6px, env(safe-area-inset-bottom, 0px)) max(5px, env(safe-area-inset-right, 0px));
-    font-size: 0.72em;
+    gap: 2px;
+    padding: 2px max(4px, env(safe-area-inset-left, 0px)) max(3px, env(safe-area-inset-bottom, 0px)) max(4px, env(safe-area-inset-right, 0px));
+    font-size: 0.68em;
     flex-wrap: wrap;
     justify-content: center;
   }
   .controls-bottom button {
-    min-height: 30px;
-    padding: 2px 5px;
-    font-size: 0.62em;
-    line-height: 1.12;
+    min-height: 24px;
+    padding: 1px 4px;
+    font-size: 0.58em;
+    line-height: 1.1;
   }
 }
 
 .controls-top button, .controls-bottom button {
   background: transparent;
   border: 1px solid #3a3f55;
-  color: #c8a84e;
-  padding: 5px 14px;
+  color: #dbb958;
+  padding: 3px 10px;
   border-radius: 3px;
   cursor: pointer;
-  font-family: 'Crimson Pro', serif;
-  font-size: 0.95em;
+  font-family: 'David Libre', 'Georgia', serif;
+  font-size: 0.88em;
   transition: all 0.2s;
-  line-height: 1.2;
+  line-height: 1.15;
   flex-shrink: 0;
 }
 
@@ -592,7 +630,7 @@ body.dual-mode .verse-english {
   display: block;
   flex: 1 1 0;
   min-width: 0;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.92em;
   line-height: 1.65;
   color: var(--ink);
@@ -685,7 +723,7 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   font-weight: 600;
   letter-spacing: 0.12em;
   margin-bottom: 12px;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
 }
 
 .colophon .word-unit .hw {
@@ -706,7 +744,7 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   border: 1px solid var(--accent);
   background: rgba(30, 34, 51, 0.06);
   color: var(--ink);
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.82em;
   line-height: 1.4;
   direction: ltr;
@@ -745,12 +783,13 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   margin-top: 40px;
   padding-top: 8px;
 }
-#start-reading-btn {
+#start-reading-btn,
+#continue-reading-btn {
   background: var(--accent);
   color: #1a1a2e;
   border: none;
   padding: 12px 32px;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-size: 1.1em;
   font-weight: 600;
   border-radius: 6px;
@@ -758,7 +797,8 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   transition: all 0.2s;
   letter-spacing: 0.5px;
 }
-#start-reading-btn:hover { filter: brightness(1.1); transform: scale(1.02); }
+#start-reading-btn:hover,
+#continue-reading-btn:hover { filter: brightness(1.1); transform: scale(1.02); }
 /* nav dropdown styles moved to nav_engine.css */
 
 /* Keyboard shortcuts overlay */
@@ -810,7 +850,7 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
 
 /* === VERSE HIGHLIGHTING === */
 .verse.highlighted {
-  background: rgba(200, 168, 78, 0.08);
+  background: rgba(219, 185, 88, 0.08);
   border-radius: 6px;
   box-shadow: inset 3px 0 0 var(--accent);
   padding-left: 8px;
@@ -821,7 +861,7 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
 .verse.user-highlight {
   background: rgba(255, 230, 140, 0.30);
   border-radius: 6px;
-  box-shadow: inset 3px 0 0 rgba(200, 168, 78, 0.9);
+  box-shadow: inset 3px 0 0 rgba(219, 185, 88, 0.9);
   padding-left: 8px;
   margin-left: -8px;
 }
@@ -861,10 +901,10 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   z-index: 200;
   background: #fff;
   color: var(--ink);
-  border: 2px solid #c8a84e;
+  border: 2px solid #dbb958;
   border-radius: 8px;
   padding: 14px 18px;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.95em;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
   min-width: 180px;
@@ -882,7 +922,7 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   margin-bottom: 4px;
 }
 #word-popup .popup-translit {
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-style: italic;
   font-size: 1.0em;
   color: var(--ink-light);
@@ -891,7 +931,7 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   direction: ltr;
 }
 #word-popup .popup-gloss {
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-size: 1.1em;
   color: var(--accent);
   text-align: center;
@@ -900,14 +940,14 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   direction: ltr;
 }
 #word-popup .popup-detail {
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.8em;
   color: var(--ink-light);
   line-height: 1.5;
   direction: ltr;
 }
 #word-popup .popup-detail span { font-weight: 600; }
-#word-popup .popup-strong { font-family: 'Crimson Pro', serif; font-size: 0.85em; color: var(--ink-light); text-align: center; margin-bottom: 4px; direction: ltr; }
+#word-popup .popup-strong { font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; color: var(--ink-light); text-align: center; margin-bottom: 4px; direction: ltr; }
 #word-popup .popup-strong a { color: var(--accent); text-decoration: none; }
 #word-popup .popup-strong a:hover { text-decoration: underline; }
 #word-popup .popup-close {
@@ -932,10 +972,10 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   margin-top: 12px;
   padding: 14px 16px;
   border-radius: 8px;
-  border: 1px solid #c8a84e;
-  background: rgba(200, 168, 78, 0.12);
+  border: 1px solid #dbb958;
+  background: rgba(219, 185, 88, 0.12);
   color: #8a7028;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-size: 1.05em;
   font-weight: 600;
   cursor: pointer;
@@ -943,7 +983,7 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   touch-action: manipulation;
 }
 .word-unit { cursor: pointer; }
-.word-unit:hover { background: rgba(200,168,78,0.06); border-radius: 4px; }
+.word-unit:hover { background: rgba(219,185,88,0.06); border-radius: 4px; }
 
 /* === MOBILE POPUP ENLARGEMENT === */
 @media (max-width: 600px) {
@@ -976,7 +1016,7 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   overflow-y: auto;
   padding: 20px;
   direction: ltr;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
 }
 #annotations-panel.open { right: 0; }
 #annotations-panel h3 {
@@ -996,7 +1036,7 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   border: 1px solid var(--rule);
   border-radius: 4px;
   cursor: pointer;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.85em;
   color: var(--ink-light);
   text-align: center;
@@ -1023,7 +1063,7 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   border-radius: 4px;
   background: var(--bg);
   color: var(--ink);
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.88em;
   line-height: 1.5;
   resize: vertical;
@@ -1040,7 +1080,7 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.85em;
 }
 /* Floating selection toolbar */
@@ -1053,18 +1093,18 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
 }
 #sel-toolbar.visible { display: flex; }
 #sel-toolbar button {
-  background: transparent; border: none; color: #c8a84e; cursor: pointer;
+  background: transparent; border: none; color: #dbb958; cursor: pointer;
   font-size: 1.1em; padding: 6px 8px; border-radius: 4px; transition: background 0.15s;
   width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
   font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', emoji;
 }
 #sel-toolbar button:hover { background: #2a2f44; }
-#sel-toolbar button.active { background: #c8a84e; color: #1e2233; }
+#sel-toolbar button.active { background: #dbb958; color: #1e2233; }
 .sel-subpanel {
   display: none; padding: 6px; border-top: 1px solid #3a3f55;
 }
 .sel-row { display: flex; align-items: center; gap: 6px; }
-.sel-label { font-size: 0.7em; color: #9a9ab0; min-width: 18px; font-family: 'Crimson Pro',serif; }
+.sel-label { font-size: 0.7em; color: #9a9ab0; min-width: 18px; font-family: 'David Libre', 'Georgia', serif; }
 .sel-color {
   width: 26px; height: 26px; border-radius: 50%; border: 2px solid transparent;
   cursor: pointer; transition: transform 0.15s, border-color 0.15s;
@@ -1076,17 +1116,17 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   cursor: pointer; display: flex; align-items: center; justify-content: center;
   font-size: 0.75em; color: #999; background: transparent;
 }
-.sel-eraser:hover { border-color: #c8a84e; color: #c8a84e; }
+.sel-eraser:hover { border-color: #dbb958; color: #dbb958; }
 .sel-note-row { display: flex; gap: 6px; align-items: flex-end; border-top: 1px solid #333; padding-top: 6px; margin-top: 6px; }
 .sel-note-input {
   flex: 1; background: #161824; border: 1px solid #444; border-radius: 6px;
-  color: #e0ddd4; font-family: 'Crimson Pro',serif; font-size: 0.8em;
+  color: #e0ddd4; font-family: 'David Libre', 'Georgia', serif; font-size: 0.8em;
   padding: 5px 8px; resize: none; outline: none; min-height: 36px;
 }
 .sel-note-input:focus { border-color: var(--accent); }
 .sel-note-save {
   background: var(--accent); color: #1a1a2e; border: none; border-radius: 6px;
-  padding: 6px 12px; font-family: 'Crimson Pro',serif; font-size: 0.8em;
+  padding: 6px 12px; font-family: 'David Libre', 'Georgia', serif; font-size: 0.8em;
   cursor: pointer; font-weight: 600; white-space: nowrap;
 }
 .sel-note-save:hover { opacity: 0.85; }
@@ -1096,14 +1136,19 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   #sel-toolbar button { width: 32px; height: 32px; font-size: 1em; }
 }
 body.hide-sel-toolbar #sel-toolbar { display: none !important; pointer-events: none !important; }
-#sel-toolbar-mode-toggle.active { background: rgba(200,168,78,0.18) !important; border-color: #c8a84e !important; color: #e8d9a8 !important; }
-/* Suppress iOS native selection callout */
-.word-unit { -webkit-touch-callout: none; }
+#sel-toolbar-mode-toggle.active { background: rgba(219,185,88,0.18) !important; border-color: #dbb958 !important; color: #e8d9a8 !important; }
+/* Suppress iOS callout on gloss/translit only — not on .hw (blocks highlight UI) */
+.word-unit .tl,
+.word-unit .gl,
+.arr .arr-tl,
+.arr .arr-gl {
+  -webkit-touch-callout: none;
+}
 /* Share popup */
 #share-popup {
   display: none; position: fixed; z-index: 400; direction: ltr; text-align: left;
   background: #1e2233; color: #e8e0d0; border: 1px solid var(--accent);
-  border-radius: 10px; padding: 14px 18px; font-family: 'Crimson Pro',serif;
+  border-radius: 10px; padding: 14px 18px; font-family: 'David Libre', 'Georgia', serif;
   box-shadow: 0 4px 24px rgba(0,0,0,0.5); max-width: 320px; min-width: 260px;
   top: 50%; left: 50%; transform: translate(-50%,-50%);
 }
@@ -1123,7 +1168,7 @@ body.hide-sel-toolbar #sel-toolbar { display: none !important; pointer-events: n
 .share-btn {
   display: flex; align-items: center; gap: 6px; background: #252840;
   border: 1px solid #3a3f55; border-radius: 8px; padding: 8px 14px;
-  color: #e8e0d0; font-family: 'Crimson Pro',serif; font-size: 0.82em;
+  color: #e8e0d0; font-family: 'David Libre', 'Georgia', serif; font-size: 0.82em;
   cursor: pointer; transition: all 0.15s; min-width: 100px; justify-content: center;
 }
 .share-btn:hover { background: #2a2f44; border-color: var(--accent); color: #fff; }
@@ -1147,7 +1192,7 @@ body.hide-sel-toolbar #sel-toolbar { display: none !important; pointer-events: n
   position: fixed; top: 0; left: -400px; width: 380px; height: 100vh;
   background: var(--bg); border-right: 2px solid var(--rule); z-index: 3100;
   transition: left 0.3s; overflow-y: auto; padding: 0; direction: ltr;
-  font-family: 'Crimson Pro', serif; display: flex; flex-direction: column;
+  font-family: 'David Libre', 'Georgia', serif; display: flex; flex-direction: column;
 }
 #glossary-panel.open { left: 0; }
 #panel-overlay {
@@ -1164,7 +1209,7 @@ body.hide-sel-toolbar #sel-toolbar { display: none !important; pointer-events: n
 .glossary-controls { padding: 12px 20px; border-bottom: 1px solid var(--rule-light); flex-shrink: 0; }
 #glossary-search {
   width: 100%; padding: 8px 12px; border: 1px solid var(--rule); border-radius: 4px;
-  background: var(--bg); color: var(--ink); font-family: 'David Libre','Crimson Pro',serif;
+  background: var(--bg); color: var(--ink); font-family: 'David Libre','David Libre', 'Georgia', serif;
   font-size: 0.95em; outline: none; margin-bottom: 8px; box-sizing: border-box;
 }
 #glossary-search:focus { border-color: var(--accent); }
@@ -1172,13 +1217,13 @@ body.hide-sel-toolbar #sel-toolbar { display: none !important; pointer-events: n
 .glossary-tab {
   flex: 1; padding: 5px 8px; border: 1px solid var(--rule); border-radius: 3px;
   background: transparent; color: var(--ink-light); cursor: pointer;
-  font-family: 'Crimson Pro',serif; font-size: 0.8em; transition: all 0.15s;
+  font-family: 'David Libre', 'Georgia', serif; font-size: 0.8em; transition: all 0.15s;
 }
 .glossary-tab:hover { background: var(--highlight); }
 .glossary-tab.active { background: var(--accent); color: #1e2233; border-color: var(--accent); font-weight: 600; }
 .glossary-sort { font-size: 0.8em; color: var(--ink-light); }
 .glossary-sort select {
-  font-family: 'Crimson Pro',serif; font-size: 1em; padding: 2px 4px;
+  font-family: 'David Libre', 'Georgia', serif; font-size: 1em; padding: 2px 4px;
   border: 1px solid var(--rule); border-radius: 3px; background: var(--bg); color: var(--ink);
 }
 #glossary-list { flex: 1; overflow-y: auto; padding: 0 20px 80px; }
@@ -1199,44 +1244,44 @@ body.hide-sel-toolbar #sel-toolbar { display: none !important; pointer-events: n
 .glossary-form-chip:hover { background: var(--accent); color: #fff; }
 .glossary-example-link { color: var(--accent); cursor: pointer; text-decoration: none; font-weight: 500; }
 .glossary-example-link:hover { text-decoration: underline; }
-.glossary-biblical-section { margin-top: 10px; padding: 10px 12px; background: rgba(200,168,78,0.06); border-radius: 6px; border: 1px solid rgba(200,168,78,0.15); }
+.glossary-biblical-section { margin-top: 10px; padding: 10px 12px; background: rgba(219,185,88,0.06); border-radius: 6px; border: 1px solid rgba(219,185,88,0.15); }
 .glossary-biblical-section > strong { display: block; margin-bottom: 6px; color: var(--accent); font-size: 0.9em; }
 .glossary-biblical-list { font-size: 0.92em; line-height: 1.6; }
 .glossary-biblical-ref { margin: 3px 0; }
 .glossary-biblical-ref-key { font-weight: 600; color: var(--ink); white-space: nowrap; }
 .glossary-biblical-ref-note { color: var(--ink-light); }
-body.dark-mode .glossary-biblical-section { background: rgba(200,168,78,0.05); border-color: rgba(200,168,78,0.12); }
+body.dark-mode .glossary-biblical-section { background: rgba(219,185,88,0.05); border-color: rgba(219,185,88,0.12); }
 .glossary-refs-section { margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--rule-light); }
 .glossary-refs-section > strong { display: block; margin-bottom: 6px; color: var(--ink); }
 .glossary-refs-book { margin: 3px 0; line-height: 1.6; }
 .glossary-refs-book-name { font-weight: 600; color: var(--ink); margin-right: 4px; }
 .glossary-ref-link { color: var(--accent); cursor: pointer; text-decoration: none; padding: 1px 2px; border-radius: 2px; }
-.glossary-ref-link:hover { text-decoration: underline; background: rgba(200,168,78,0.12); }
+.glossary-ref-link:hover { text-decoration: underline; background: rgba(219,185,88,0.12); }
 .glossary-refs-toggle { display: inline-block; margin-top: 6px; color: var(--accent); cursor: pointer; font-size: 0.9em; font-weight: 500; }
 .glossary-refs-toggle:hover { text-decoration: underline; }
 .glossary-refs-overflow { margin-top: 2px; }
 .glossary-highlight-btn {
   display: inline-block; margin-top: 6px; padding: 4px 10px; background: transparent;
   border: 1px solid var(--accent); border-radius: 3px; color: var(--accent);
-  cursor: pointer; font-family: 'Crimson Pro',serif; font-size: 0.85em;
+  cursor: pointer; font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em;
 }
 .glossary-highlight-btn:hover { background: var(--accent); color: #1e2233; }
 .glossary-category-header {
   font-size: 0.75em; color: var(--accent); text-transform: uppercase; letter-spacing: 1px;
   padding: 12px 0 4px; border-bottom: 1px solid var(--rule); font-weight: 600;
 }
-.word-unit.glossary-highlighted { background: rgba(200,168,78,0.25); border-radius: 4px; box-shadow: 0 0 0 2px rgba(200,168,78,0.3); }
+.word-unit.glossary-highlighted { background: rgba(219,185,88,0.25); border-radius: 4px; box-shadow: 0 0 0 2px rgba(219,185,88,0.3); }
 body.dark-mode #glossary-panel { background: #252525; border-color: #444444; }
 body.dark-mode #glossary-search { background: #2a2a2a; color: #e8e0d0; border-color: #444444; }
 body.dark-mode .glossary-sort select { background: #2a2a2a; color: #e8e0d0; border-color: #444444; }
-body.dark-mode .glossary-entry:hover { background: rgba(200,168,78,0.08); }
+body.dark-mode .glossary-entry:hover { background: rgba(219,185,88,0.08); }
 body.dark-mode .glossary-form-chip { background: #383838; }
 @media (max-width: 600px) { #glossary-panel { width: 55%; left: -55%; } }
 
 /* === TOPICAL GUIDE === */
 .tg-page-header { text-align: center; margin-bottom: 20px; }
 .tg-page-title {
-  font-family: 'Cormorant Garamond','Crimson Pro',serif; font-size: 1.6em;
+  font-family: 'Cormorant Garamond','David Libre', 'Georgia', serif; font-size: 1.6em;
   font-weight: 600; color: var(--accent); margin: 0 0 4px; letter-spacing: 0.03em;
 }
 .tg-page-title-heb {
@@ -1270,7 +1315,7 @@ body.dark-mode .glossary-form-chip { background: #383838; }
 #tg-list { flex: 1; padding-bottom: 30px; }
 .tg-section-header {
   background: #1a2744; padding: 8px 16px;
-  font-size: 1.3em; font-weight: 700; color: #c8a84e;
+  font-size: 1.3em; font-weight: 700; color: #dbb958;
   font-family: 'David Libre', serif; border-bottom: 1px solid #1a2744;
 }
 .tg-entry { padding: 12px 16px; border-bottom: 1px solid var(--rule-light); cursor: pointer; }
@@ -1297,7 +1342,7 @@ body.dark-mode .glossary-form-chip { background: #383838; }
   display: block; padding: 4px 10px; cursor: pointer; color: var(--accent);
   font-size: 0.95em; text-decoration: underline; direction: ltr; text-align: left;
 }
-.tg-ref:hover { background: rgba(200,168,78,0.1); border-radius: 4px; }
+.tg-ref:hover { background: rgba(219,185,88,0.1); border-radius: 4px; }
 .tg-ref-heb {
   font-family: 'David Libre', serif; direction: rtl; unicode-bidi: isolate;
   color: var(--accent); text-decoration: none; font-size: 0.88em; margin-left: 8px;
@@ -1308,7 +1353,7 @@ body.dark-mode .glossary-form-chip { background: #383838; }
   padding: 4px 12px; border: 1px solid var(--accent); border-radius: 14px;
   font-size: 0.85em; color: var(--accent); cursor: pointer; background: none;
 }
-.tg-related-chip:hover { background: rgba(200,168,78,0.15); }
+.tg-related-chip:hover { background: rgba(219,185,88,0.15); }
 .tg-cat-row {
   display: flex; flex-wrap: wrap; gap: 8px; padding: 10px 0; justify-content: center;
 }
@@ -1318,11 +1363,11 @@ body.dark-mode .glossary-form-chip { background: #383838; }
   font-weight: 500;
 }
 .tg-cat-chip.active { background: var(--accent); color: #fff; }
-.tg-cat-chip:hover { background: rgba(200,168,78,0.15); }
+.tg-cat-chip:hover { background: rgba(219,185,88,0.15); }
 .tg-cat-chip.active:hover { background: var(--accent); }
 .tg-empty { padding: 40px; text-align: center; color: var(--ink-light); font-style: italic; font-size: 1.05em; }
 body.dark-mode #tg-search { background: #2a2a2a; color: #e8e0d0; border-color: #444; }
-body.dark-mode .tg-section-header { background: #1a2744; color: #c8a84e; }
+body.dark-mode .tg-section-header { background: #1a2744; color: #dbb958; }
 body.dark-mode .tg-expanded { background: #2a2a2a; border-color: #444; }
 
 /* === CROSS-REFERENCES === */
@@ -1334,7 +1379,7 @@ body.dark-mode .tg-expanded { background: #2a2a2a; border-color: #444; }
   vertical-align: super;
   line-height: 0;
   margin: 0 1px;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-weight: 600;
   opacity: 0.7;
   transition: opacity 0.2s;
@@ -1343,16 +1388,16 @@ body.dark-mode .tg-expanded { background: #2a2a2a; border-color: #444; }
 body.hide-gloss .xref-marker, body.dual-mode .xref-marker { font-size: 0.5em; }
 /* Note markers on verses */
 .note-marker {
-  display: inline-block; font-size: 0.55em; color: #c8a84e; cursor: pointer;
-  vertical-align: super; line-height: 0; margin: 0 2px; font-family: 'Crimson Pro', serif;
+  display: inline-block; font-size: 0.55em; color: #dbb958; cursor: pointer;
+  vertical-align: super; line-height: 0; margin: 0 2px; font-family: 'David Libre', 'Georgia', serif;
   font-weight: 700; opacity: 0.8; transition: opacity 0.2s;
 }
 .note-marker:hover { opacity: 1; }
 .xref-note-card {
   padding: 14px 16px; border-bottom: 1px solid var(--rule-light);
-  border-left: 3px solid #c8a84e; margin: 8px 0; background: rgba(200,168,78,0.06);
+  border-left: 3px solid #dbb958; margin: 8px 0; background: rgba(219,185,88,0.06);
 }
-.xref-note-card .xref-note-label { font-size: 0.75em; color: #c8a84e; text-transform: uppercase; font-weight: 600; margin-bottom: 4px; }
+.xref-note-card .xref-note-label { font-size: 0.75em; color: #dbb958; text-transform: uppercase; font-weight: 600; margin-bottom: 4px; }
 .xref-note-card .xref-note-text { font-size: 0.92em; color: var(--ink); line-height: 1.5; white-space: pre-wrap; }
 .xref-note-card .xref-note-edit { font-size: 0.8em; color: var(--accent); cursor: pointer; margin-top: 6px; display: inline-block; }
 .xref-note-card .xref-note-edit:hover { text-decoration: underline; }
@@ -1376,7 +1421,7 @@ body.dark-mode .word-unit.xref-linked:hover .gl { color: #85c1e9 !important; }
   border: 1px solid var(--accent);
   border-radius: 8px;
   padding: 12px 16px;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.92em;
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
   max-width: 320px;
@@ -1427,7 +1472,7 @@ body.dark-mode #xref-popup { background: #252525; border-color: #d4af37; color: 
   position: fixed; top: 0; right: -400px; width: 380px; height: 100vh;
   background: var(--bg); border-left: 2px solid var(--accent); z-index: 3100;
   transition: right 0.3s ease; overflow-y: auto; padding: 0; direction: ltr;
-  font-family: 'Crimson Pro', serif; box-shadow: -4px 0 20px rgba(0,0,0,0.3);
+  font-family: 'David Libre', 'Georgia', serif; box-shadow: -4px 0 20px rgba(0,0,0,0.3);
 }
 #xref-panel.open { right: 0; }
 .xref-panel-header {
@@ -1442,7 +1487,7 @@ body.dark-mode #xref-popup { background: #252525; border-color: #d4af37; color: 
   cursor: pointer; font-size: 1.3em; color: var(--ink-light);
   padding: 2px 6px; border-radius: 4px;
 }
-.xref-panel-close:hover { background: rgba(200,168,78,0.15); color: var(--accent); }
+.xref-panel-close:hover { background: rgba(219,185,88,0.15); color: var(--accent); }
 .xref-panel-word {
   font-weight: 600; color: var(--accent); font-size: 1.1em;
   padding: 12px 16px 0;
@@ -1469,7 +1514,7 @@ body.dark-mode #xref-popup { background: #252525; border-color: #d4af37; color: 
   padding: 2px 8px; border: 1px solid var(--rule); border-radius: 3px;
   text-decoration: none; white-space: nowrap;
 }
-.xref-ref-goto:hover { background: rgba(200,168,78,0.15); color: var(--accent); border-color: var(--accent); }
+.xref-ref-goto:hover { background: rgba(219,185,88,0.15); color: var(--accent); border-color: var(--accent); }
 .xref-ref-content {
   direction: rtl; display: flex; flex-wrap: wrap; gap: 4px 8px;
   margin: 6px 0; line-height: 1.7;
@@ -1484,7 +1529,7 @@ body.dark-mode #xref-popup { background: #252525; border-color: #d4af37; color: 
 .xref-ref-english {
   direction: ltr; font-size: 0.88em; color: var(--ink-light);
   line-height: 1.5; margin-top: 6px; padding: 8px 10px;
-  background: rgba(200,168,78,0.05); border-radius: 4px; border-left: 3px solid var(--accent);
+  background: rgba(219,185,88,0.05); border-radius: 4px; border-left: 3px solid var(--accent);
   text-align: justify;
 }
 .xref-ref-nodata {
@@ -1505,7 +1550,7 @@ body.dark-mode {
   --rule-light: #383838;
   --gloss: #c0b898;
   --verse-num: #7fb3d3;
-  --highlight: rgba(200, 168, 78, 0.15);
+  --highlight: rgba(219, 185, 88, 0.15);
   --header-bg: #d4af37;
   --header-text: #d4af37;
   --row-alt: #2e2e2e;
@@ -1517,8 +1562,8 @@ body.dark-mode .tl { color: var(--gloss); }
 body.dark-mode .page { background: #333333; }
 body.dark-mode .controls-top, body.dark-mode .controls-bottom { background: #0a0a0a; }
 body.dark-mode .verse { border-color: #383838; }
-body.dark-mode .verse:hover { background: rgba(200, 168, 78, 0.08); }
-body.dark-mode .word-unit:hover { background: rgba(200, 168, 78, 0.10); }
+body.dark-mode .verse:hover { background: rgba(219, 185, 88, 0.08); }
+body.dark-mode .word-unit:hover { background: rgba(219, 185, 88, 0.10); }
 body.dark-mode .book-label { color: #e8e0d0; }
 body.dark-mode #word-popup { background: #252525; border-color: #d4af37; color: #e8e0d0; }
 body.dark-mode #word-popup-overlay { background: rgba(0, 0, 0, 0.5); }
@@ -1534,7 +1579,7 @@ body.dark-mode .chapter-summary { color: #b8b0a0; }
 body.dark-mode #search-container { background: #252525; border-color: #444444; }
 body.dark-mode #search-input { background: #2a2a2a; color: #e8e0d0; border-color: #444444; }
 body.dark-mode #search-results { background: #252525; }
-body.dark-mode .verse.highlighted { background: rgba(200, 168, 78, 0.12); }
+body.dark-mode .verse.highlighted { background: rgba(219, 185, 88, 0.12); }
 body.dark-mode #annotations-panel { background: #252525; border-color: #444444; }
 body.dark-mode .ann-note-textarea { background: #2a2a2a; border-color: #444444; color: #e8e0d0; }
 body.dark-mode .ann-tab { border-color: #444444; color: #b0a890; }
@@ -1562,11 +1607,11 @@ body.dark-mode .glossary-close, body.dark-mode .notes-close { color: #b0a890; }
 body.dark-mode #search-input::placeholder,
 body.dark-mode #glossary-search::placeholder { color: #666; }
 body.dark-mode #search-results .search-result { color: #e8e0d0; }
-body.dark-mode #search-results .search-result:hover { background: rgba(200,168,78,0.08); }
+body.dark-mode #search-results .search-result:hover { background: rgba(219,185,88,0.08); }
 #dark-mode-toggle {
   background: transparent;
   border: 1px solid #3a3f55;
-  color: #c8a84e;
+  color: #dbb958;
   padding: 5px 10px;
   border-radius: 3px;
   cursor: pointer;
@@ -1594,7 +1639,7 @@ body.dark-mode #search-results .search-result:hover { background: rgba(200,168,7
   border-radius: 4px;
   background: #12142a;
   color: #e8e0d0;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-size: 1em;
   outline: none;
 }
@@ -1622,7 +1667,7 @@ body.dark-mode #search-results .search-result:hover { background: rgba(200,168,7
 }
 .search-result:hover { background: #2a2f44; }
 .search-result-ref {
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-weight: 600;
   color: var(--accent);
   font-size: 0.9em;
@@ -1638,7 +1683,7 @@ body.dark-mode #search-results .search-result:hover { background: rgba(200,168,7
   text-overflow: ellipsis;
 }
 .search-result-text mark {
-  background: rgba(200,168,78,0.25);
+  background: rgba(219,185,88,0.25);
   color: var(--accent);
   border-radius: 2px;
   padding: 0 2px;
@@ -1692,7 +1737,7 @@ body.dark-mode #nav-progress-text { color: #6a6550; }
   transform: translateX(-50%);
   background: rgba(26,39,68,0.88);
   color: #fff;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-size: 14px;
   padding: 8px 20px;
   border-radius: 20px;
@@ -1708,12 +1753,12 @@ body.dark-mode #nav-progress-text { color: #6a6550; }
 body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
 
 
-#return-banner { display:none; position:fixed; top:46px; left:0; right:0; z-index:99; background:#fff; padding:8px 20px; text-align:center; font-family:'Crimson Pro',serif; font-size:0.95em; border-bottom:1px solid #e8e2d4; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
-#return-banner a { display:inline-block; background:#c8a84e; color:#fff; text-decoration:none; padding:6px 18px; border-radius:4px; font-weight:600; font-size:0.9em; }
+#return-banner { display:none; position:fixed; top:46px; left:0; right:0; z-index:99; background:#fff; padding:8px 20px; text-align:center; font-family:'David Libre', 'Georgia', serif; font-size:0.95em; border-bottom:1px solid #e8e2d4; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
+#return-banner a { display:inline-block; background:#dbb958; color:#fff; text-decoration:none; padding:6px 18px; border-radius:4px; font-weight:600; font-size:0.9em; }
 #return-banner a:hover { background:#b8942e; }
 body.dark-mode #return-banner { background:#2a2a2a; border-color:#444; }
 body.dark-mode #return-banner a { background:#d4af37; color:#1a1a1a; }
-body.dark-mode #return-banner a:hover { background:#c8a84e; }
+body.dark-mode #return-banner a:hover { background:#dbb958; }
 
 /* === FORCE UI FONT (David Libre) === */
 body, button, input, select, textarea,
@@ -1915,8 +1960,8 @@ body, button, input, select, textarea,
 
       <!-- English titles -->
       <div style="margin-bottom:30px;direction:ltr">
-        <div style="font-family:'Cormorant Garamond','Crimson Pro',serif;font-size:1.6em;font-weight:600;color:var(--ink);letter-spacing:0.04em;margin-bottom:10px">The Book of Mormon</div>
-        <div style="font-family:'Cormorant Garamond','Crimson Pro',serif;font-size:1.15em;font-weight:400;color:var(--ink);letter-spacing:0.04em">Another Testament of Jesus Christ</div>
+        <h1 style="font-family:'Cormorant Garamond','David Libre', 'Georgia', serif;font-size:1.6em;font-weight:600;color:var(--ink);letter-spacing:0.04em;margin:0 0 10px">Sefer Mormon: The Book of Mormon in Classical Biblical Hebrew</h1>
+        <p style="font-family:'Cormorant Garamond','David Libre', 'Georgia', serif;font-size:1.15em;font-weight:400;color:var(--ink);letter-spacing:0.04em;margin:0">Another Testament of Jesus Christ · Hebrew Interlinear</p>
       </div>
 
       <div class="ornament" style="margin:20px 0">· · ◆ · ·</div>
@@ -1929,7 +1974,7 @@ body, button, input, select, textarea,
 
       <div class="ornament" style="margin:24px 0">· · ◆ · ·</div>
 
-      <div style="font-family:'Crimson Pro',serif;font-size:0.9em;color:var(--ink-light);margin-bottom:20px;line-height:1.6">
+      <div style="font-family:'David Libre', 'Georgia', serif;font-size:0.9em;color:var(--ink-light);margin-bottom:20px;line-height:1.6">
         Hebrew Interlinear Edition<br>
         Classical Biblical Hebrew · Word-by-Word
       </div>
@@ -1937,6 +1982,9 @@ body, button, input, select, textarea,
 
       <div style="margin-top:30px">
         <button id="start-reading-btn" onclick="startReading()" style="margin-bottom:12px">Start Reading: 1 Nephi 1 →</button>
+      </div>
+      <div id="continue-reading-wrap" style="margin-top:0;display:none">
+        <button id="continue-reading-btn" onclick="continueReading()">Continue Reading →</button>
       </div>
       <div style="margin-top:8px">
         <button class="glossary-highlight-btn" onclick="navTo('intro')" style="font-size:1em;padding:8px 20px">To the Reader →</button>
@@ -1954,32 +2002,33 @@ body, button, input, select, textarea,
       <div style="margin-top:12px;font-size:0.9em">
         <a href="mailto:chris@sefermormon.com" style="color:var(--accent);text-decoration:none">chris@sefermormon.com</a>
       </div>
-      <div style="margin-top:6px;font-size:0.85em;color:var(--ink-light)">
-        GitHub: <a href="https://github.com/LookoutLambe/StandardWorks" target="_blank" style="color:var(--accent);text-decoration:none">LookoutLambe/StandardWorks</a>
-      </div>
       <div style="margin-top:24px">
-        <div style="font-family:'Crimson Pro',serif;font-size:0.85em;color:var(--ink-light);font-style:italic;margin-bottom:10px">Available in print on Amazon</div>
+        <div style="font-family:'David Libre', 'Georgia', serif;font-size:0.85em;color:var(--ink-light);font-style:italic;margin-bottom:10px">Available in print</div>
         <div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin:0 0 8px">
           <a href="https://www.amazon.com/dp/B0GVZFM6YR" target="_blank" rel="noopener" style="text-decoration:none;text-align:center">
-            <img src="images/cover-interlinear.jpg" alt="Hebrew Book of Mormon Interlinear Edition" style="height:210px;width:auto;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.25);border:1px solid var(--rule)">
-            <div style="font-family:'Crimson Pro',serif;font-size:0.82em;color:var(--accent);margin-top:6px;font-weight:500">Interlinear Edition</div>
+            <img src="images/cover-interlinear.jpg?v=3" alt="Hebrew Book of Mormon Interlinear Edition" style="height:210px;width:auto;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.25);border:1px solid var(--rule)">
+            <div style="font-family:'David Libre', 'Georgia', serif;font-size:0.82em;color:var(--accent);margin-top:6px;font-weight:500">Interlinear Edition (Soft Cover)</div>
           </a>
           <a href="https://www.amazon.com/dp/B0DVTJC9HJ" target="_blank" rel="noopener" style="text-decoration:none;text-align:center">
-            <img src="images/cover-hebrew.jpg" alt="Hebrew Book of Mormon" style="height:210px;width:auto;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.25);border:1px solid var(--rule)">
-            <div style="font-family:'Crimson Pro',serif;font-size:0.82em;color:var(--accent);margin-top:6px;font-weight:500">Full Hebrew Edition</div>
+            <img src="images/cover-hebrew.jpg?v=3" alt="Hebrew Book of Mormon" style="height:210px;width:auto;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.25);border:1px solid var(--rule)">
+            <div style="font-family:'David Libre', 'Georgia', serif;font-size:0.82em;color:var(--accent);margin-top:6px;font-weight:500">Full Hebrew Edition (Soft Cover)</div>
+          </a>
+          <a href="https://www.lulu.com/shop/christopher-lambe/%D7%A1%D7%A4%D7%A8-%D7%9E%D7%95%D7%A8%D7%9E%D7%95%D7%9F/hardcover/product-2m87weq.html" target="_blank" rel="noopener" style="text-decoration:none;text-align:center">
+            <img src="images/cover-hardcover.jpg?v=2" alt="Hebrew Book of Mormon — Hardcover" style="height:210px;width:auto;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.25);border:1px solid var(--rule)">
+            <div style="font-family:'David Libre', 'Georgia', serif;font-size:0.82em;color:var(--accent);margin-top:6px;font-weight:500">Hardcover Edition</div>
           </a>
           <a href="https://www.amazon.com/dp/B0GGQZG9K9" target="_blank" rel="noopener" style="text-decoration:none;text-align:center">
             <img src="images/cover-dual.jpg" alt="Dual Language Book of Mormon" style="height:210px;width:auto;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.25);border:1px solid var(--rule)">
-            <div style="font-family:'Crimson Pro',serif;font-size:0.82em;color:var(--accent);margin-top:6px;font-weight:500">Dual Language Edition</div>
+            <div style="font-family:'David Libre', 'Georgia', serif;font-size:0.82em;color:var(--accent);margin-top:6px;font-weight:500">Dual Language Edition (Soft Cover)</div>
           </a>
           <a href="https://www.amazon.com/dp/B0H11CV516" target="_blank" rel="noopener" style="text-decoration:none;text-align:center">
-            <img src="images/cover-triple.jpg?v=2" alt="Triple Combination" style="height:210px;width:auto;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.25);border:1px solid var(--rule)">
-            <div style="font-family:'Crimson Pro',serif;font-size:0.82em;color:var(--accent);margin-top:6px;font-weight:500">Triple Combination</div>
+            <img src="images/cover-triple.jpg?v=4" alt="Triple Combination" style="height:210px;width:auto;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.25);border:1px solid var(--rule)">
+            <div style="font-family:'David Libre', 'Georgia', serif;font-size:0.82em;color:var(--accent);margin-top:6px;font-weight:500">Triple Combination (Soft Cover)</div>
           </a>
         </div>
       </div>
       <div style="text-align:center;margin-top:28px">
-        <a href="../index.html" style="font-family:'Crimson Pro',serif;color:var(--accent);text-decoration:none;border:1px solid var(--accent);padding:8px 24px;border-radius:4px;font-size:0.95em;direction:ltr;display:inline-block">← Standard Works Home</a>
+        <a href="../index.html" style="font-family:'David Libre', 'Georgia', serif;color:var(--accent);text-decoration:none;border:1px solid var(--accent);padding:8px 24px;border-radius:4px;font-size:0.95em;direction:ltr;display:inline-block">← Standard Works Home</a>
       </div>
     </div>
   </div>
@@ -2003,11 +2052,11 @@ body, button, input, select, textarea,
         <div style="display:flex;justify-content:center;gap:24px;direction:rtl;margin:12px 0">
           <div style="display:flex;flex-direction:column;align-items:center">
             <span style="font-family:'David Libre',serif;font-size:1.3em;font-weight:bold">וְעַתָּה</span>
-            <span style="font-family:'Crimson Pro',serif;font-size:0.85em;font-style:italic;color:#666;direction:ltr">and-now / and-at-this-time</span>
+            <span style="font-family:'David Libre', 'Georgia', serif;font-size:0.85em;font-style:italic;color:#666;direction:ltr">and-now / and-at-this-time</span>
           </div>
           <div style="display:flex;flex-direction:column;align-items:center">
             <span style="font-family:'David Libre',serif;font-size:1.3em;font-weight:bold">בִּהְיוֹת</span>
-            <span style="font-family:'Crimson Pro',serif;font-size:0.85em;font-style:italic;color:#666;direction:ltr">in-being / while-being</span>
+            <span style="font-family:'David Libre', 'Georgia', serif;font-size:0.85em;font-style:italic;color:#666;direction:ltr">in-being / while-being</span>
           </div>
         </div>
         <p style="font-size:0.92em;line-height:1.7;color:#444;margin:10px 0 10px">
@@ -2052,15 +2101,15 @@ body, button, input, select, textarea,
         <div style="font-size:0.92em;line-height:1.6;color:#444">
           Read the verse as covenant credentials that turn on a center point. Here, the center is <span style="font-size:1.05em;font-weight:700" dir="rtl">חֶסֶד יְהוָה</span>:
         </div>
-        <div style="font-family:'Crimson Pro',serif;font-size:0.92em;line-height:1.7;color:#333;margin-top:10px">
+        <div style="font-family:'David Libre', 'Georgia', serif;font-size:0.92em;line-height:1.7;color:#333;margin-top:10px">
           <div style="display:grid;grid-template-columns:56px 1fr minmax(220px, 0.9fr);gap:6px 12px;align-items:baseline">
             <div><strong>A</strong></div>
-            <div dir="rtl">אָנֹכִי נֶפִי בֶּן־אָב חָסִיד וּלְאֵם חֲסִידָה</div>
+            <div dir="rtl">אָנֹכִי נֶפִי בֶּן־אָב חָסִיד וְאֵם חֲסִידָה</div>
             <div style="color:#666">I, Nephi… born of covenant-faithful parents</div>
 
             <div><strong>B</strong></div>
-            <div dir="rtl">אֲשֶׁר חִנְּכוּנִי בְּמוּסַר אָבִי וּבְדַעְתּוֹ</div>
-            <div style="color:#666">they taught me (discipline + learning)</div>
+            <div dir="rtl">אֲשֶׁר חִנְּכוּנִי <span style="font-size:1.05em;font-weight:700">מְעַט</span> בְּכָל־מוּסַר אָבִי וּבְדַעְתּוֹ</div>
+            <div style="color:#666">they taught me <em>somewhat</em> in all my father’s learning (מְעַט)</div>
 
             <div><strong>C</strong></div>
             <div dir="rtl">רַב־עֳנִי רָאוּ עֵינַי בִּימֵי חַיַּי</div>
@@ -2116,7 +2165,7 @@ body, button, input, select, textarea,
       <hr style="width:180px;margin:0 auto 20px;border:none;border-top:1px solid #ccc">
 
       <p style="font-size:0.95em;line-height:1.7;color:#333;margin-bottom:14px">
-        The Hebrew in this volume follows a strict discipline: Classical Biblical Hebrew constrained to vocabulary and forms attested before 600 BC. This is the register scholars call Mikraic — the language of the Mikra, the Hebrew Bible. No post-biblical vocabulary. No rabbinic constructions. No modern coinages.
+        The Hebrew in this volume follows a strict discipline: Classical Biblical Hebrew constrained to vocabulary and forms attested before 600 BC. This is the register scholars call Mikraic — the language of the Mikra, the Hebrew Bible. No post-biblical vocabulary. No rabbinic constructions. No modern coinages, except a small set of theological terms built from biblical roots and documented separately.
       </p>
       <p style="font-size:0.95em;line-height:1.7;color:#333;margin-bottom:14px">
         Where a concept in the Book of Mormon has no single pre-exilic Hebrew equivalent, the approach is what I call a hybrid or controlled adaptation: faithful where theology demands precision, idiomatic where Hebrew demands naturalness. The word order follows the Verb-Subject-Object pattern native to biblical narrative. The covenant terminology maps directly onto its Tanakh parallels.
@@ -2146,9 +2195,6 @@ body, button, input, select, textarea,
         <h3 style="font-size:1.1em;color:#222;margin-bottom:8px">Feedback Welcome</h3>
         <p style="font-size:0.9em;line-height:1.6;color:#555;max-width:600px;margin:0 auto 12px;direction:ltr">
           If you spot a gloss that could be clearer, a root connection worth highlighting, or have thoughts and suggestions (or even want to help expand features like cross-references or a fuller root glossary), please reach out!
-        </p>
-        <p style="font-size:0.9em;margin:8px 0">
-          <a href="https://github.com/LookoutLambe/StandardWorks" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500">GitHub: LookoutLambe/StandardWorks</a>
         </p>
         <p style="font-size:0.9em;margin:8px 0">
           <a href="https://www.amazon.com/dp/B0DVTJC9HJ" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500">Also available in print on Amazon</a>
@@ -2364,7 +2410,7 @@ body, button, input, select, textarea,
         <div class="tw"><span class="th">מבוא</span><span class="tg">Introduction-of</span></div>
         <div class="tw"><span class="th">המתרגם</span><span class="tg">the-Translator</span></div>
       </div>
-      <div id="front-intro-verses"></div>
+      <div id="front-translator-verses"></div>
     </div>
   </div>
 
@@ -2375,7 +2421,7 @@ body, button, input, select, textarea,
         <div class="tw"><span class="th">ספר</span><span class="tg">The-Book-of</span></div>
         <div class="tw"><span class="th">מורמון</span><span class="tg">Mormon</span></div>
       </div>
-      <div id="front-title-verses"></div>
+      <div id="front-titlepage-verses"></div>
     </div>
   </div>
 
@@ -2397,7 +2443,7 @@ body, button, input, select, textarea,
         <div class="tw"><span class="th">שלשת</span><span class="tg">Three-of</span></div>
         <div class="tw"><span class="th">העדים</span><span class="tg">the-Witnesses</span></div>
       </div>
-      <div id="front-three-wit-verses"></div>
+      <div id="front-three-verses"></div>
       <p style="font-size:1em;line-height:2;color:#444;text-align:center;margin-top:16px;font-family:'David Libre','SBL Hebrew','Noto Serif Hebrew',serif">
 אוֹלִיבֶר קַאוּדֶרִי<br>דָּוִד וִיטְמֶר<br>מַרְטִין הַרִיס
       </p>
@@ -2412,7 +2458,7 @@ body, button, input, select, textarea,
         <div class="tw"><span class="th">שמונה</span><span class="tg">Eight</span></div>
         <div class="tw"><span class="th">עדים</span><span class="tg">Witnesses</span></div>
       </div>
-      <div id="front-eight-wit-verses"></div>
+      <div id="front-eight-verses"></div>
       <p style="font-size:1em;line-height:2;color:#444;text-align:center;margin-top:16px;font-family:'David Libre','SBL Hebrew','Noto Serif Hebrew',serif">
 כְּרִיסְטְיָן וִיטְמֶר<br>יַעֲקֹב וִיטְמֶר<br>פֶּטְרוּס וִיטְמֶר הַצָּעִיר<br>יוֹחָנָן וִיטְמֶר<br>חִירָם פֵּיג׳<br>יוֹסֵף סְמִית הַזָּקֵן<br>חִירָם סְמִית<br>שְׁמוּאֵל ה׳ סְמִית
       </p>
@@ -2428,7 +2474,7 @@ body, button, input, select, textarea,
         <div class="tw"><span class="th">יוסף</span><span class="tg">Joseph</span></div>
         <div class="tw"><span class="th">סמית</span><span class="tg">Smith</span></div>
       </div>
-      <div id="front-jst-verses"></div>
+      <div id="front-js-verses"></div>
     </div>
   </div>
 
@@ -2630,15 +2676,6 @@ body, button, input, select, textarea,
   <!-- 2 NEPHI -->
   <!-- ═══════════════════════════════════════ -->
 
-  <div class="chapter-panel" id="panel-2n-colophon" style="display:none">
-    <div class="book-header" style="padding-top:30px">
-      <div class="book-title">נֶפִי ב׳</div>
-      <div class="book-subtitle">דִּבְרֵי מוֹת לֶחִי וַיִּמְרְדוּ אֲחֵי נֶפִי בּוֹ</div>
-    </div>
-    <div class="ornament">· · ◆ · ·</div>
-    <div id="2n-colophon-verses"></div>
-  </div>
-
   <div class="chapter-panel" id="panel-2n-ch1" style="display:none">
     <div class="chapter-heading"><h2>פרק א</h2></div>
     <div id="2n-ch1-verses"></div>
@@ -2807,15 +2844,6 @@ body, button, input, select, textarea,
   <!-- ═══════════════════════════════════════ -->
   <!-- JACOB -->
   <!-- ═══════════════════════════════════════ -->
-
-  <div class="chapter-panel" id="panel-jc-colophon" style="display:none">
-    <div class="book-header" style="padding-top:30px">
-      <div class="book-title" style="font-size:2em">יַעֲקֹב</div>
-      <div class="book-subtitle">אֲחִי נֶפִי</div>
-    </div>
-    <div class="ornament">· · ◆ · ·</div>
-    <div id="jc-colophon-verses"></div>
-  </div>
 
   <div class="chapter-panel" id="panel-jc-ch1" style="display:none">
     <div class="chapter-heading"><h2>פרק א</h2></div>
@@ -3793,7 +3821,7 @@ body, button, input, select, textarea,
 
 <div class="controls-top">
   <div class="nav-row">
-    <a href="../index.html" style="background:transparent;border:1px solid #3a3f55;color:#c8a84e;padding:5px 10px;border-radius:3px;text-decoration:none;font-size:0.95em;line-height:1;display:flex;align-items:center;" title="Standard Works Home" aria-label="Standard Works Home">🏠</a>
+    <a href="../index.html" style="background:transparent;border:1px solid #3a3f55;color:#dbb958;padding:5px 10px;border-radius:3px;text-decoration:none;font-size:0.95em;line-height:1;display:flex;align-items:center;" title="Standard Works Home" aria-label="Standard Works Home">🏠</a>
     <button class="nav-prev" id="nav-prev" onclick="goPrev()" disabled aria-label="Previous chapter">⬅️</button>
     <span class="nav-label-wrap">
       <span id="nav-label" tabindex="0" role="button" aria-label="Open navigation">Book of Mormon ▾</span>
@@ -3836,18 +3864,38 @@ body, button, input, select, textarea,
   <button id="btn-nikkud" onclick="toggleNikkud()" title="Show/hide vowel points">No Nikkud<br>עִיצּוּרִים</button>
 </div>
 
-<script src="official_verses.js?v=4"></script>
+<script src="bom_book_loader.js?v=3"></script>
+<script src="bom_lazy_assets.js?v=1"></script>
 <script src="crossrefs.js?v=23"></script>
 <script src="roots_glossary.js?v=23"></script>
 <script src="bom_inverse_crossrefs.js?v=1"></script>
 <script src="chapter_headings.js"></script>
-<script src="chapter_headings_heb.js?v=3"></script>
-<script src="scripture_verses.js"></script>
+<script src="chapter_headings_heb.js?v=6"></script>
 <script src="topical_guide.js"></script>
 <script src="../notes_engine.js"></script>
-<script src="../strongs_lookup.js"></script>
-<script src="../strongs_roots.js"></script>
+<script src="../interlinear_gloss.js?v=1"></script>
 <script>
+(function readerTouchBurstTracker() {
+  var recentEnds = [];
+  document.addEventListener('touchend', function(e) {
+    if (!e.target.closest('#page')) return;
+    if (e.target.closest('#sel-toolbar, #word-popup, #search-container, #glossary-panel, #annotations-panel, #sw-reader-footer, #sw-top-bar, .controls-top, .controls-bottom, button, input, textarea, select')) return;
+    if (e.target.closest('.word-flow, .word-unit, .verse, .heading-flow')) return;
+    try {
+      var sel = window.getSelection();
+      if (sel && !sel.isCollapsed && /\S/.test((sel.toString() || '').replace(/\u00a0/g, ' '))) return;
+    } catch (eSel) {}
+    var now = Date.now();
+    recentEnds.push(now);
+    recentEnds = recentEnds.filter(function(t) { return now - t < 550; });
+  }, { passive: true, capture: true });
+  window.__readerTouchBurstLen = function() {
+    var now = Date.now();
+    recentEnds = recentEnds.filter(function(t) { return now - t < 550; });
+    return recentEnds.length;
+  };
+  window.__readerTouchBurstClear = function() { recentEnds = []; };
+})();
 
 // CHAPTER 1 VERSES
 
@@ -3873,7 +3921,7 @@ body, button, input, select, textarea,
 
 // CHAPTER 12 VERSES
 
-function navTo(id, slideDir) {
+function navTo(id, slideDir, _bookReady) {
   const isLanding = id === 'landing';
   const isTopicalGuide = id === 'topical-guide';
   const isFront = id.startsWith('front-');
@@ -3954,8 +4002,14 @@ function navTo(id, slideDir) {
     subEl.textContent = '1 Nephi'; subEl.style.display = '';
   }
 
+  // Load per-book verse JS on demand (~5MB saved on initial landing)
+  if (!_bookReady && !isLanding && !isTopicalGuide && typeof ensureBomBookForChapId === 'function') {
+    ensureBomBookForChapId(id, function() { navTo(id, slideDir, true); });
+    return;
+  }
+
   // Lazy-render chapter DOM on first visit (saves mobile memory)
-  if (!isLanding && !isIntro && !isFront && !isTopicalGuide) {
+  if (!isLanding && !isTopicalGuide) {
     _ensureChapterRendered(id);
   }
   // Render topical guide content when navigating to it
@@ -4002,10 +4056,18 @@ function scheduleAdjacentPrefetch() {
   function isChapter(id) {
     return id && id !== 'landing' && id !== 'intro' && !id.startsWith('front-') && id !== 'topical-guide';
   }
+  function prefetch(id) {
+    if (!isChapter(id)) return;
+    if (typeof ensureBomBookForChapId === 'function') {
+      ensureBomBookForChapId(id, function() { _ensureChapterRendered(id); });
+    } else {
+      _ensureChapterRendered(id);
+    }
+  }
   function run() {
     try {
-      if (isChapter(nextId)) _ensureChapterRendered(nextId);
-      if (isChapter(prevId)) _ensureChapterRendered(prevId);
+      prefetch(nextId);
+      prefetch(prevId);
     } catch (e) {}
   }
 
@@ -4140,7 +4202,7 @@ function makeWordUnit(h, e, isSof) {
   const div = document.createElement('div');
   div.className = 'word-unit' + (isSof ? ' sof' : '');
   div.setAttribute('data-h', h);
-  var gloss = e.replace(/-/g, ' ');
+  var gloss = augmentGlossWithPrefixes(h, e.replace(/-/g, ' '));
   // Preserve curated gloss; add morph gloss for popup auditing.
   div.setAttribute('data-mgl', computeMorphGloss(h));
   div.innerHTML = `<span class="hw">${h}</span><span class="tl"></span><span class="gl">${gloss}</span>`;
@@ -4329,34 +4391,7 @@ try {
   }
 } catch(e) {}
 </script>
-<script src="verses/frontmatter.js"></script>
-<script src="verses/1nephi.js"></script>
-<script src="verses/2nephi.js"></script>
-<script src="verses/jacob.js"></script>
-<script src="verses/enos.js"></script>
-<script src="verses/jarom.js"></script>
-<script src="verses/omni.js"></script>
-<script src="verses/words_of_mormon.js"></script>
-<script src="verses/mosiah.js?v=5"></script>
-<script src="verses/alma.js"></script>
-<script src="verses/helaman.js"></script>
-<script src="verses/3nephi.js"></script>
-<script src="verses/4nephi.js"></script>
-<script src="verses/mormon.js"></script>
-<script src="verses/ether.js"></script>
-<script src="verses/moroni.js"></script>
 <script>
-
-// Immediately render all front matter (small content, don't lazy-load)
-(function() {
-  for (var i = _pendingRenders.length - 1; i >= 0; i--) {
-    if (_pendingRenders[i].chapId.indexOf('front-') === 0) {
-      _doRenderVerses(_pendingRenders[i].verseData, _pendingRenders[i].containerId);
-      _renderedChapters[_pendingRenders[i].chapId] = true;
-      _pendingRenders.splice(i, 1);
-    }
-  }
-})();
 
 // PREV / NEXT CHAPTER NAVIGATION (bottom bar)
 var currentChapterId = null;
@@ -4609,6 +4644,28 @@ var _selTier = '';       // 'hw', 'tl', or 'gl'
 var _selMode = '';       // 'word' (word-units) or 'text' (any text)
 var SW_SEL_TB_LS = 'sw-hide-sel-toolbar';
 
+function _hasReadableSelection() {
+  try {
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed) return false;
+    return /\S/.test((sel.toString() || '').replace(/\u00a0/g, ' '));
+  } catch (e) { return false; }
+}
+
+function _selRangeContainsNode(sel, node) {
+  if (!sel || !sel.rangeCount || !node) return false;
+  try {
+    if (typeof sel.containsNode === 'function') return sel.containsNode(node, true);
+  } catch (e1) {}
+  try {
+    var range = sel.getRangeAt(0);
+    var nr = document.createRange();
+    nr.selectNodeContents(node);
+    return range.compareBoundaryPoints(Range.END_TO_START, nr) < 0 &&
+      range.compareBoundaryPoints(Range.START_TO_END, nr) > 0;
+  } catch (e2) { return false; }
+}
+
 function _isSelReadingSurface(el) {
   if (!el || !el.closest) return false;
   return !!el.closest('.chapter-panel, .verse, .word-flow, .heading-flow, .word-unit, #main-content, #page, .book-header, .landing-hero, .landing-content');
@@ -4678,7 +4735,7 @@ function _getSelectedWordUnits(sel) {
   wordUnits.forEach(function(wu) {
     var tierEl = wu.querySelector('.' + tier);
     if (!tierEl) return;
-    if (sel.containsNode(tierEl, true)) {
+    if (_selRangeContainsNode(sel, tierEl)) {
       result.push(wu);
     }
   });
@@ -4907,29 +4964,37 @@ function openNoteInXrefPanel(verseKey) {
   panel.classList.add('open');
 }
 
-// Listen for text selection events
+// Listen for text selection events — match OT: never dismiss toolbar / close nav while touching verse text
+var _bomSelGuardUntil = 0;
 document.addEventListener('mouseup', function(e) {
   if (e.target.closest('#sel-toolbar')) return;
   setTimeout(_showSelToolbar, 10);
 });
 document.addEventListener('touchend', function(e) {
   if (e.target.closest('#sel-toolbar')) return;
-  setTimeout(_showSelToolbar, 300);
+  setTimeout(function() {
+    if (_hasReadableSelection()) _bomSelGuardUntil = Date.now() + 900;
+    _showSelToolbar();
+  }, 300);
 });
+var _selToolbarLastInteract = 0;
 document.addEventListener('mousedown', function(e) {
-  if (e.target.closest('#sel-toolbar')) return;
+  if (e.target.closest('#sel-toolbar')) { _selToolbarLastInteract = Date.now(); return; }
   if (e.target.closest('#nav-sidebar') || e.target.closest('#nav-overlay')) return;
-  if (!_isSelReadingSurface(e.target)) _hideSelToolbar();
+  if (_isSelReadingSurface(e.target)) return;
+  _hideSelToolbar();
   if (window.NavEngine) NavEngine.close();
   var sh = document.getElementById('shortcuts-overlay');
   if (sh && sh.classList.contains('open')) closeShortcuts();
 });
 document.addEventListener('touchstart', function(e) {
-  if (e.target.closest('#sel-toolbar')) return;
-  if (e.touches.length > 1) return; // don't dismiss on pinch-to-zoom
-  if (!_isSelReadingSurface(e.target)) _hideSelToolbar();
+  if (e.target.closest('#sel-toolbar')) { _selToolbarLastInteract = Date.now(); return; }
+  if (e.touches && e.touches.length > 1) return;
+  if (_isSelReadingSurface(e.target)) return;
+  _hideSelToolbar();
 });
 document.addEventListener('selectionchange', function() {
+  if (Date.now() - _selToolbarLastInteract < 500) return;
   var sel = window.getSelection();
   if (sel && !sel.isCollapsed && sel.toString().trim()) return;
   var tb = document.getElementById('sel-toolbar');
@@ -5126,7 +5191,7 @@ function selToolbarCopy() {
   }
   navigator.clipboard.writeText(text).then(function() {
     var btn = document.getElementById('sel-btn-copy');
-    if (btn) { btn.style.color = '#c8a84e'; setTimeout(function() { btn.style.color = ''; }, 1200); }
+    if (btn) { btn.style.color = '#dbb958'; setTimeout(function() { btn.style.color = ''; }, 1200); }
   });
 }
 
@@ -5285,7 +5350,7 @@ function renderAnnotationsList() {
           var wu = document.querySelector('.word-unit[data-wid="' + e.wid + '"]');
           var tierEl = wu ? wu.querySelector('.' + e.tier) : null;
           var wText = tierEl ? tierEl.textContent : e.wid.split('|')[3];
-          var fontStyle = e.tier === 'hw' ? 'font-family:\'David Libre\',serif;direction:rtl' : 'font-family:\'Crimson Pro\',serif';
+          var fontStyle = e.tier === 'hw' ? 'font-family:\'David Libre\',serif;direction:rtl' : 'font-family:\'David Libre\',serif';
           html += '<span style="' + fontStyle + '">' + wText + '</span> ';
         });
         html += '</div></div>';
@@ -5308,7 +5373,7 @@ function renderAnnotationsList() {
     // Add new note area
     html += '<div style="margin-top:16px;border-top:1px solid var(--rule);padding-top:12px;">';
     html += '<label style="font-size:0.85em;color:var(--ink-light);">Add note for current verse:</label>';
-    html += '<select id="ann-note-verse" style="width:100%;padding:6px;margin:6px 0;border:1px solid var(--rule);border-radius:4px;background:var(--bg);color:var(--ink);font-family:\'Crimson Pro\',serif;font-size:0.85em;">';
+    html += '<select id="ann-note-verse" style="width:100%;padding:6px;margin:6px 0;border:1px solid var(--rule);border-radius:4px;background:var(--bg);color:var(--ink);font-family:\'David Libre\',serif;font-size:0.85em;">';
     // Populate with visible verses
     var visPanel = document.querySelector('.chapter-panel[style*="block"]');
     if (visPanel) {
@@ -6013,30 +6078,29 @@ function _loadExtVerseFile(filePath, callback) {
   document.head.appendChild(script);
 }
 
-// Background-load all verse files (NT + PGP first, then OT, then D&C)
-document.addEventListener('DOMContentLoaded', function() {
-  setTimeout(function() {
-    // Collect all unique file paths from _extBookToFile (NT, PGP, OT)
-    var seen = {};
-    var files = [];
-    Object.keys(_extBookToFile).forEach(function(b) {
-      var f = _extBookToFile[b];
-      if (!seen[f]) { seen[f] = true; files.push(f); }
-    });
-    // Add all D&C range files
-    ['../dc_verses/dc1_10.js','../dc_verses/dc11_20.js','../dc_verses/dc21_30.js',
-     '../dc_verses/dc31_40.js','../dc_verses/dc41_50.js','../dc_verses/dc51_60.js',
-     '../dc_verses/dc61_70.js','../dc_verses/dc71_80.js','../dc_verses/dc81_90.js',
-     '../dc_verses/dc91_100.js','../dc_verses/dc101_110.js','../dc_verses/dc111_120.js',
-     '../dc_verses/dc121_130.js','../dc_verses/dc131_138.js'
-    ].forEach(function(f) { files.push(f); });
-    var idx = 0;
-    function loadNext() {
-      if (idx < files.length) _loadExtVerseFile(files[idx++], loadNext);
-    }
-    loadNext();
-  }, 1500);
-});
+// Defer cross-volume verse preload until xref panel is opened (saves ~10MB+ parse on BOM landing)
+window.scheduleExtVersePreload = function() {
+  if (window._extPreloadStarted) return;
+  window._extPreloadStarted = true;
+  var seen = {};
+  var files = [];
+  Object.keys(_extBookToFile).forEach(function(b) {
+    var f = _extBookToFile[b];
+    if (!seen[f]) { seen[f] = true; files.push(f); }
+  });
+  ['../dc_verses/dc1_10.js','../dc_verses/dc11_20.js','../dc_verses/dc21_30.js',
+   '../dc_verses/dc31_40.js','../dc_verses/dc41_50.js','../dc_verses/dc51_60.js',
+   '../dc_verses/dc61_70.js','../dc_verses/dc71_80.js','../dc_verses/dc81_90.js',
+   '../dc_verses/dc91_100.js','../dc_verses/dc101_110.js','../dc_verses/dc111_120.js',
+   '../dc_verses/dc121_130.js','../dc_verses/dc131_138.js'
+  ].forEach(function(f) { files.push(f); });
+  var idx = 0;
+  function loadNext() {
+    if (idx < files.length) _loadExtVerseFile(files[idx++], loadNext);
+  }
+  if ('requestIdleCallback' in window) requestIdleCallback(loadNext, { timeout: 12000 });
+  else setTimeout(loadNext, 2000);
+};
 
 // Track the current xref panel state so we can refresh after a lazy load
 var _xrefPanelCurrentRef = null;
@@ -6120,7 +6184,7 @@ function appendStandardWorksInverseCards(refsContainer, bomVerseKeys) {
   if (collected.length === 0) return;
 
   var heading = document.createElement('div');
-  heading.style.cssText = 'font-weight:bold;color:#c8a84e;margin:12px 0 6px;font-size:0.9em;border-bottom:1px solid #444;padding-bottom:4px;';
+  heading.style.cssText = 'font-weight:bold;color:#dbb958;margin:12px 0 6px;font-size:0.9em;border-bottom:1px solid #444;padding-bottom:4px;';
   heading.textContent = 'Cited in Standard Works footnotes (' + collected.length + ')';
   refsContainer.appendChild(heading);
 
@@ -6161,6 +6225,8 @@ function appendStandardWorksInverseCards(refsContainer, bomVerseKeys) {
 }
 
 function openXrefPanel(ref, sourceVerseKey, hebrewRoot) {
+  if (typeof scheduleExtVersePreload === 'function') scheduleExtVersePreload();
+  if (typeof ensureScriptureVerses === 'function') ensureScriptureVerses(function() {});
   // Track state so getExternalVerseHtml can refresh panel after lazy-loading ext verse files
   _xrefPanelCurrentRef = ref;
   _xrefPanelCurrentSourceKey = sourceVerseKey;
@@ -6413,7 +6479,7 @@ function openRootXrefPanel(root) {
     if (items.length === 0) return;
 
     var heading = document.createElement('div');
-    heading.style.cssText = 'font-weight:bold;color:#c8a84e;margin:12px 0 6px;font-size:0.9em;border-bottom:1px solid #444;padding-bottom:4px;';
+    heading.style.cssText = 'font-weight:bold;color:#dbb958;margin:12px 0 6px;font-size:0.9em;border-bottom:1px solid #444;padding-bottom:4px;';
     heading.textContent = catLabels[cat] + ' (' + items.length + ')';
     refsContainer.appendChild(heading);
 
@@ -6509,7 +6575,7 @@ function navigateToXrefVerse(parsed) {
       if (verseEl) {
         verseEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
         verseEl.style.transition = 'background 0.3s';
-        verseEl.style.background = 'rgba(200,168,78,0.25)';
+        verseEl.style.background = 'rgba(219,185,88,0.25)';
         // Stamp verse number into URL: #mosiah-16:3
         var parts = parsed.key.split('|');
         if (parts.length >= 3) {
@@ -6544,10 +6610,12 @@ setTimeout(loadCrossRefs, 500);
 
 function getBookChapter(chId) {
   var bookMap = {
-    'ch': '1 Nephi', '2n-ch': '2 Nephi', 'jc-ch': 'Jacob',
+    'ch': '1 Nephi', '2n-ch': '2 Nephi',
+    'jc-ch': 'Jacob',
     'en-ch': 'Enos', 'jr-ch': 'Jarom', 'om-ch': 'Omni',
     'wm-ch': 'Words of Mormon', 'mo-ch': 'Mosiah', 'al-ch': 'Alma',
-    'he-ch': 'Helaman', '3n-ch': '3 Nephi', '4n-ch': '4 Nephi',
+    'he-ch': 'Helaman', '3n-ch': '3 Nephi',
+    '4n-ch': '4 Nephi',
     'mm-ch': 'Mormon', 'et-ch': 'Ether', 'mr-ch': 'Moroni'
   };
   for (var prefix in bookMap) {
@@ -6571,11 +6639,24 @@ function loadEnglishText() {
     window._englishLoaded = true;
     populateEnglishDivs();
   }
-  // Use pre-loaded data from <script src="official_verses.js"> if available
+  function afterOfficialReady() {
+    if (window.defined_verses || window._officialVersesData) {
+      processData(window.defined_verses || window._officialVersesData);
+      return;
+    }
+    fetchOrXhrOfficial();
+  }
   if (window.defined_verses || window._officialVersesData) {
     processData(window.defined_verses || window._officialVersesData);
     return;
   }
+  if (typeof ensureOfficialVerses === 'function') {
+    ensureOfficialVerses(afterOfficialReady);
+    return;
+  }
+  fetchOrXhrOfficial();
+
+  function fetchOrXhrOfficial() {
   // Fallback: try fetch, then XHR
   if (typeof fetch !== 'undefined' && window.location.protocol !== 'file:') {
     fetch('official_verses.json?v=4')
@@ -6587,6 +6668,7 @@ function loadEnglishText() {
       });
   } else {
     loadViaXHR('official_verses.json?v=4', processData);
+  }
   }
 }
 
@@ -6638,7 +6720,8 @@ function getChapterLabel(id) {
     'ch': '1 Nephi', '2n-ch': '2 Nephi', 'jc-ch': 'Jacob',
     'en-ch': 'Enos', 'jr-ch': 'Jarom', 'om-ch': 'Omni',
     'wm-ch': 'Words of Mormon', 'mo-ch': 'Mosiah', 'al-ch': 'Alma',
-    'he-ch': 'Helaman', '3n-ch': '3 Nephi', '4n-ch': '4 Nephi',
+    'he-ch': 'Helaman', '3n-ch': '3 Nephi',
+    '4n-ch': '4 Nephi',
     'mm-ch': 'Mormon', 'et-ch': 'Ether', 'mr-ch': 'Moroni'
   };
   var singleChapter = {'en-ch':1,'jr-ch':1,'om-ch':1,'wm-ch':1,'4n-ch':1};
@@ -6661,34 +6744,60 @@ function getChapterLabel(id) {
   };
 })();
 
+// "Start Reading" always begins at 1 Nephi 1
 function startReading() {
-  var last = localStorage.getItem('bom-last-chapter');
-  if (last && chapterOrder.indexOf(last) >= 0) {
-    navTo(last);
+  navTo('ch1');
+}
+
+// "Continue Reading" jumps to the farthest chapter the reader has reached
+function continueReading() {
+  var far = localStorage.getItem('bom-farthest-chapter');
+  if (far && chapterOrder.indexOf(far) >= 0) { navTo(far); } else { navTo('ch1'); }
+}
+
+// Show/refresh the Continue Reading button based on saved farthest progress
+function updateContinueButton() {
+  var wrap = document.getElementById('continue-reading-wrap');
+  var btn = document.getElementById('continue-reading-btn');
+  if (!wrap || !btn) return;
+  var far = localStorage.getItem('bom-farthest-chapter');
+  if (far && chapterOrder.indexOf(far) > 0) {
+    var label = typeof getChapterLabel === 'function' ? getChapterLabel(far) : far;
+    btn.textContent = 'Continue Reading \u2014 ' + label + ' \u2192';
+    wrap.style.display = '';
   } else {
-    navTo('ch1');
+    wrap.style.display = 'none';
   }
 }
 
-// Save current chapter to localStorage on every navigation
+// Save last chapter + track farthest-reached chapter on every navigation
 (function() {
   var _nav = navTo;
-  window.navTo = function(id) {
-    _nav(id);
+  window.navTo = function() {
+    _nav.apply(null, arguments);
+    var id = arguments[0];
     if (id && !id.startsWith('front-') && id !== 'intro' && id !== 'landing' && id !== 'topical-guide') {
       try { localStorage.setItem('bom-last-chapter', id); } catch(e) {}
+      try {
+        var nIdx = chapterOrder.indexOf(id);
+        var fIdx = chapterOrder.indexOf(localStorage.getItem('bom-farthest-chapter'));
+        if (nIdx >= 0 && nIdx > fIdx) { localStorage.setItem('bom-farthest-chapter', id); }
+      } catch(e) {}
     }
+    try { updateContinueButton(); } catch(e) {}
   };
 })();
 
-// Update Start Reading button text if there's a saved chapter
+// Seed farthest from last-read (for readers from before this feature), then render the button
 (function() {
-  var last = localStorage.getItem('bom-last-chapter');
-  var btn = document.getElementById('start-reading-btn');
-  if (last && btn) {
-    var label = typeof getChapterLabel === 'function' ? getChapterLabel(last) : last;
-    btn.textContent = 'Continue Reading \u2014 ' + label + ' \u2192';
-  }
+  try {
+    var far = localStorage.getItem('bom-farthest-chapter');
+    var last = localStorage.getItem('bom-last-chapter');
+    if (!far && last && chapterOrder.indexOf(last) >= 0) {
+      localStorage.setItem('bom-farthest-chapter', last);
+    }
+  } catch(e) {}
+  updateContinueButton();
 })();
 
 // Unified panel close
@@ -6727,7 +6836,7 @@ var _tlKnown = {
   'ירא':'yare','ירד':'yarad','ירש':'yarash','ישב':'yashav','ישע':'yasha',
   'ישר':'yashar','כהן':'kohen','כון':'kun','כפר':'kafar','כרת':'karat',
   'כתב':'katav','לחם':'lacham','למד':'lamad','לקח':'laqach','מלא':'male',
-  'מלך':'melekh','משח':'mashach','משל':'mashal','משפט':'mishpat','מות':'mut',
+  'מלך':'melekh','מלכות':'malkhut','מלכו':'malkhu','משח':'mashach','משל':'mashal','משפט':'mishpat','מות':'mut',
   'נבא':'nava','נגד':'nagad','נפל':'nafal','נפש':'nefesh','נשא':'nasa',
   'נתן':'natan','ספר':'sefer','עבד':'avad','עבר':'avar','עלה':'alah',
   'עלם':'olam','עמד':'amad','ענה':'anah','עשה':'asah','פקד':'paqad',
@@ -6740,7 +6849,7 @@ var _tlKnown = {
   'קדש':'qodesh','חק':'choq','חרב':'chorev','עלם':'olam',
   'אזן':'ozen','חפן':'chofen','קרבן':'qorban','שרש':'shoresh',
   // Common roots (unpointed)
-  'מוסר':'musar','אלהים':'elohim','יהוה':'Adonai','נביא':'navi',
+  'מוסר':'musar','אלהים':'elohim','יהוה':'Adonai','ליהוה':'la-Adonai','ביהוה':'ba-Adonai','מיהוה':'me-Adonai','כיהוה':'ke-Adonai','ויהוה':'ve-Adonai','וליהוה':'ve-la-Adonai','היהוה':'ha-Adonai','נביא':'navi',
   'תורה':'torah','שלום':'shalom','ברית':'berit','כהן':'kohen',
   'נפש':'nefesh','רוח':'ruach','משיח':'mashiach','תפלה':'tefilah',
   'אמונה':'emunah','תשובה':'teshuvah','גאולה':'geulah',
@@ -6756,12 +6865,13 @@ function transliterate(heb) {
     return heb.split('\u05BE').map(function(p) { return transliterate(p); }).join('-');
   }
   // Use nikkud-aware parser if vowel points present (includes stress marking)
-  var hasNikkud = /[\u05B0-\u05BB]/.test(heb);
+  var hasNikkud = /[\u05B0-\u05BC]/.test(heb);
   if (hasNikkud) {
     // Practico-style convention for a few common 2-letter unpointed roots,
     // even when the source text carries unexpected pointing.
     var consonantsOnly = heb.replace(/[\u0591-\u05C7\u05B0-\u05BB\u05BD\u05BF\u05C1\u05C2]/g, '');
     if (consonantsOnly === 'רע') return 'ra';
+    if (_tlKnown[consonantsOnly]) return _tlKnown[consonantsOnly];
     return _tlPointed(heb);
   }
   // For unpointed text, check known dictionary
@@ -6782,6 +6892,13 @@ function transliterate(heb) {
 function _tlPointed(text) {
   // Tetragrammaton: always read as Adonai
   var stripped = text.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, '');
+  if (stripped === '\u05D5\u05DC\u05D9\u05D4\u05D5\u05D4') return 've-la-Adonai';
+  if (stripped === '\u05D4\u05D9\u05D4\u05D5\u05D4') return 'ha-Adonai';
+  if (stripped === '\u05DC\u05D9\u05D4\u05D5\u05D4') return 'la-Adonai'; // לַיהוָה (qere)
+  if (stripped === '\u05D1\u05D9\u05D4\u05D5\u05D4') return 'ba-Adonai';
+  if (stripped === '\u05DE\u05D9\u05D4\u05D5\u05D4') return 'me-Adonai';
+  if (stripped === '\u05DB\u05D9\u05D4\u05D5\u05D4') return 'ke-Adonai';
+  if (stripped === '\u05D5\u05D9\u05D4\u05D5\u05D4') return 've-Adonai';
   if (stripped === '\u05D9\u05D4\u05D5\u05D4') return 'Adonai'; // יהוה
   // Pratico & Van Pelt transliteration scheme (3rd Ed.)
   // Short vowels: plain. Changeable long: macron. Hatef: breve.
@@ -6823,6 +6940,7 @@ function _tlPointed(text) {
     else c = cmap[tk.c] || '';
     // Shuruk: vav + dagesh + no vowel = û (unchangeable long, circumflex)
     if (tk.c === '\u05D5' && tk.dag && !tk.vowel) {
+      if (t > 0 && tokens[t-1].c === '\u05D0' && !tokens[t-1].vowel) { segments.push({c:'\u02BE', v:'\u00FB'}); continue; }
       if (segments.length > 0) segments[segments.length-1].v = '\u00FB';
       else segments.push({c:'', v:'\u00FB'});
       continue;
@@ -6831,6 +6949,7 @@ function _tlPointed(text) {
     // Only treat as mater lectionis if previous consonant has no vowel yet;
     // otherwise the vav is a root consonant bearing cholam (e.g. עֲוֹנוֹת)
     if (tk.c === '\u05D5' && tk.vowel === '\u05B9') {
+      if (t > 0 && tokens[t-1].c === '\u05D0' && !tokens[t-1].vowel) { segments.push({c:'\u02BE', v:'\u00F4'}); continue; }
       var prevSeg = segments.length > 0 ? segments[segments.length-1] : null;
       if (!prevSeg) { segments.push({c:'', v:'\u00F4'}); continue; }
       if (!prevSeg.v) { prevSeg.v = '\u00F4'; continue; }
@@ -6838,6 +6957,10 @@ function _tlPointed(text) {
     }
     // Cholam male variant: vav after cholam on prev consonant = silent
     if (tk.c === '\u05D5' && !tk.vowel && !tk.dag && t > 0 && tokens[t-1].vowel === '\u05B9') continue;
+    if (tk.c === '\u05D0' && !tk.vowel && !tk.dag && t < len - 1) {
+      var nxtAv = tokens[t + 1];
+      if (nxtAv.c === '\u05D5' && (nxtAv.vowel === '\u05B9' || (nxtAv.dag && !nxtAv.vowel))) continue;
+    }
     // Final he without vowel = silent
     if (tk.c === '\u05D4' && isLast && !tk.vowel) continue;
     // Chiriq male: yod after chiriq = î (unchangeable long, circumflex)
@@ -6862,20 +6985,19 @@ function _tlPointed(text) {
     var nextTok = t < len-1 ? tokens[t+1] : null;
     // Shva rules: nach (silent) vs na (voiced as 'e')
     if (tk.vowel === '\u05B0') {
-      // P&VP: vocal sheva = ĕ (breve), silent sheva = nothing
+      // Sheva na (vocal ĕ): under dagesh, or opens a syllable. Sheva nach (silent): closes prior syllable when no dagesh.
       if (isLast) v = '';
-      // Dagesh forte: shva under a doubled consonant is always na (voiced)
-      else if (tk.dag && bgdkpt.indexOf(tk.c) < 0) v = '\u0115';
-      // Dagesh forte in bgdkpt after a vowel (not word-initial) = also na
-      else if (tk.dag && bgdkpt.indexOf(tk.c) >= 0 && t > 0 && prevVowel && prevVowel !== '\u05B0') v = '\u0115';
-      else if (prevVowel === '\u05B9') v = '';
-      else if (prevVowel === '\u05B4') v = '';
+      else if (tk.dag) v = '\u0115';
+      else if (t > 0 && !tk.dag && prevVowel === '\u05B7' && nextTok) {
+        var n2sh = t + 2 < len ? tokens[t + 2] : null;
+        if (nextTok.vowel === '\u05B4' || nextTok.vowel === '\u05B5' || nextTok.vowel === '\u05B6') v = '';
+        else if (!nextTok.vowel && (nextTok.dag || (n2sh && n2sh.c === '\u05D5' && n2sh.dag && !n2sh.vowel))) v = '';
+      }
+      else if (t > 0 && (prevVowel === '\u05B4' || prevVowel === '\u05B5' || prevVowel === '\u05B6' || prevVowel === '\u05B9')) v = '';
       else if (prevVowel === '\u05B7') v = '';
-      else if (prevVowel === '\u05B6') v = '';
       else if (prevVowel === '\u05BB') v = '';
       else if (t > 0 && tokens[t-1].c === '\u05D5' && tokens[t-1].dag && !tokens[t-1].vowel) v = '';
       else if (nextTok && bgdkpt.indexOf(nextTok.c) >= 0 && nextTok.dag) v = '';
-      // Sheva before final consonant with no vowel = nach (closes syllable)
       else if (nextTok && (t + 1 === len - 1) && !nextTok.vowel) v = '';
       else if (prevVowel === '\u05B0') v = '\u0115';
       else v = '\u0115';
@@ -6913,6 +7035,8 @@ function _tlPointed(text) {
       segments.push({c: 'h', v: '', ov: '', hc: tk.c, dag: true});
       continue;
     }
+    if (tk.c === '\u05D0' && tk.vowel) { segments.push({c: '\u02BE', v: v, ov: tk.vowel || '', hc: tk.c, dag: !!tk.dag}); continue; }
+    if (tk.c === '\u05E2' && tk.vowel) { segments.push({c: '\u02BF', v: v, ov: tk.vowel || '', hc: tk.c, dag: !!tk.dag}); continue; }
     segments.push({c: c, v: v, ov: tk.vowel || '', hc: tk.c, dag: !!tk.dag});
   }
 
@@ -7051,8 +7175,9 @@ document.addEventListener('keydown', function(e) {
   }
   // Update hash when navigating chapters (clears verse on chapter change)
   var _navHash = window.navTo;
-  window.navTo = function(id) {
-    _navHash(id);
+  window.navTo = function() {
+    _navHash.apply(null, arguments);
+    var id = arguments[0];
     if (id && !id.startsWith('front-') && id !== 'intro') {
       var label = getChapterLabel(id).toLowerCase().replace(/\s+/g, '-');
       history[window.__swNavFromHash ? 'replaceState' : 'pushState'](null, '', '#' + label);
@@ -7065,24 +7190,22 @@ document.addEventListener('keydown', function(e) {
   setTimeout(function() {
     if (window.location.hash) {
       handleHash();
-    } else {
-      var saved = localStorage.getItem('bom-last-chapter');
-      if (saved && chapterOrder.indexOf(saved) >= 0) {
-        navTo(saved);
-      }
     }
+    // No hash: stay on the landing page so the reader can choose
+    // "Start Reading" (1 Nephi 1) or "Continue Reading" (farthest point).
   }, 0);
 })();
 
 // 2. CHAPTER PAGE-FLIP / FADE-IN ANIMATION
 (function() {
   var _navFade = window.navTo;
-  window.navTo = function(id, slideDir) {
+  window.navTo = function() {
+    var slideDir = arguments[1];
     // Remove fade and slide classes from all panels first
     document.querySelectorAll('.chapter-panel').forEach(function(p) {
       p.classList.remove('fade-in', 'slide-left', 'slide-right');
     });
-    _navFade(id, slideDir);
+    _navFade.apply(null, arguments);
     // Add animation to the newly visible panel
     setTimeout(function() {
       document.querySelectorAll('.chapter-panel').forEach(function(p) {
@@ -7123,7 +7246,7 @@ document.addEventListener('keydown', function(e) {
     menu.style.display = 'none';
     menu.style.minWidth = '180px';
     menu.style.background = 'rgba(30,34,51,0.98)';
-    menu.style.border = '1px solid rgba(200,168,78,0.35)';
+    menu.style.border = '1px solid rgba(219,185,88,0.35)';
     menu.style.borderRadius = '8px';
     menu.style.boxShadow = '0 10px 30px rgba(0,0,0,0.35)';
     menu.style.padding = '8px';
@@ -7131,10 +7254,10 @@ document.addEventListener('keydown', function(e) {
     menu.style.backdropFilter = 'blur(6px)';
 
     menu.innerHTML = '' +
-      '<button data-act=\"highlight\" style=\"width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid rgba(200,168,78,0.35);background:#1e2233;color:#c8a84e;cursor:pointer;font-family:inherit;font-size:0.95em;\">Highlight / Unhighlight</button>' +
-      '<button data-act=\"note\" style=\"width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid rgba(200,168,78,0.25);background:#151929;color:#e8e0d0;cursor:pointer;font-family:inherit;font-size:0.95em;\">Note</button>' +
-      '<button data-act=\"copy\" style=\"width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid rgba(200,168,78,0.25);background:#151929;color:#e8e0d0;cursor:pointer;font-family:inherit;font-size:0.95em;\">Copy verse</button>' +
-      '<button data-act=\"share\" style=\"width:100%;margin:0;padding:10px 12px;border-radius:6px;border:1px solid rgba(200,168,78,0.25);background:#151929;color:#e8e0d0;cursor:pointer;font-family:inherit;font-size:0.95em;\">Share verse</button>';
+      '<button data-act=\"highlight\" style=\"width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid rgba(219,185,88,0.35);background:#1e2233;color:#dbb958;cursor:pointer;font-family:inherit;font-size:0.95em;\">Highlight / Unhighlight</button>' +
+      '<button data-act=\"note\" style=\"width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid rgba(219,185,88,0.25);background:#151929;color:#e8e0d0;cursor:pointer;font-family:inherit;font-size:0.95em;\">Note</button>' +
+      '<button data-act=\"copy\" style=\"width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid rgba(219,185,88,0.25);background:#151929;color:#e8e0d0;cursor:pointer;font-family:inherit;font-size:0.95em;\">Copy verse</button>' +
+      '<button data-act=\"share\" style=\"width:100%;margin:0;padding:10px 12px;border-radius:6px;border:1px solid rgba(219,185,88,0.25);background:#151929;color:#e8e0d0;cursor:pointer;font-family:inherit;font-size:0.95em;\">Share verse</button>';
 
     menu.addEventListener('click', function(e) {
       var btn = e.target.closest('button[data-act]');
@@ -7205,12 +7328,12 @@ document.addEventListener('keydown', function(e) {
     overlay.style.zIndex = '10000';
     overlay.style.display = 'none';
     overlay.innerHTML =
-      '<div id=\"note-modal-card\" style=\"max-width:720px;width:92%;margin:10vh auto;background:var(--bg);color:var(--ink);border:2px solid var(--accent);border-radius:10px;box-shadow:0 14px 40px rgba(0,0,0,0.35);padding:16px;direction:ltr;font-family:Crimson Pro,serif;\">' +
+      '<div id=\"note-modal-card\" style=\"max-width:720px;width:92%;margin:10vh auto;background:var(--bg);color:var(--ink);border:2px solid var(--accent);border-radius:10px;box-shadow:0 14px 40px rgba(0,0,0,0.35);padding:16px;direction:ltr;font-family:David Libre,serif;\">' +
         '<div style=\"display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;\">' +
           '<div style=\"font-weight:700;color:var(--accent);font-size:1.05em;\" id=\"note-modal-title\">Note</div>' +
           '<button id=\"note-modal-close\" style=\"border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer;\">Close</button>' +
         '</div>' +
-        '<textarea id=\"note-modal-text\" style=\"width:100%;min-height:180px;resize:vertical;border:1px solid var(--rule);border-radius:8px;padding:10px 12px;font-family:Crimson Pro,serif;font-size:1em;line-height:1.4;background:var(--bg-deep);color:var(--ink);\"></textarea>' +
+        '<textarea id=\"note-modal-text\" style=\"width:100%;min-height:180px;resize:vertical;border:1px solid var(--rule);border-radius:8px;padding:10px 12px;font-family:David Libre,serif;font-size:1em;line-height:1.4;background:var(--bg-deep);color:var(--ink);\"></textarea>' +
         '<div style=\"display:flex;justify-content:flex-end;gap:10px;margin-top:12px;\">' +
           '<button id=\"note-modal-delete\" style=\"border:1px solid rgba(180,60,60,0.4);background:transparent;color:#b43c3c;border-radius:8px;padding:8px 12px;cursor:pointer;\">Delete</button>' +
           '<button id=\"note-modal-save\" style=\"border:1px solid var(--accent);background:var(--accent);color:#1e2233;border-radius:8px;padding:8px 12px;cursor:pointer;font-weight:700;\">Save</button>' +
@@ -7626,6 +7749,36 @@ document.addEventListener('keydown', function(e) {
 
   window._popupWordUnit = null; // Track currently selected word-unit for annotations
 
+  var _bomWordDown = null;
+  var _bomWordDrag = false;
+  var _bomTouchDrag = false;
+  document.addEventListener('mousedown', function(e) {
+    if (!e.target.closest('.word-unit .hw, .word-unit .gl')) return;
+    _bomWordDrag = false;
+    _bomWordDown = { x: e.clientX, y: e.clientY };
+  }, true);
+  document.addEventListener('mousemove', function(e) {
+    if (!_bomWordDown) return;
+    if (Math.abs(e.clientX - _bomWordDown.x) > 5 || Math.abs(e.clientY - _bomWordDown.y) > 5) {
+      _bomWordDrag = true;
+    }
+  }, true);
+  document.addEventListener('mouseup', function() { _bomWordDown = null; }, true);
+  document.addEventListener('touchstart', function(e) {
+    if (!e.target.closest('.word-unit .hw, .word-unit .gl')) return;
+    var t = e.touches[0];
+    _bomTouchDrag = false;
+    _bomWordDown = { x: t.clientX, y: t.clientY };
+  }, { passive: true, capture: true });
+  document.addEventListener('touchmove', function(e) {
+    if (!_bomWordDown) return;
+    var t = e.touches[0];
+    if (Math.abs(t.clientX - _bomWordDown.x) > 8 || Math.abs(t.clientY - _bomWordDown.y) > 8) {
+      _bomTouchDrag = true;
+    }
+  }, { passive: true, capture: true });
+  document.addEventListener('touchend', function() { _bomWordDown = null; }, { passive: true, capture: true });
+
   document.addEventListener('click', function(e) {
     // Don't close popup when clicking toolbar
     if (e.target.closest('#sel-toolbar')) return;
@@ -7634,6 +7787,16 @@ document.addEventListener('keydown', function(e) {
     var wu = e.target.closest('.word-unit');
     if (!wu) { closePopup(); return; }
     if (e.target.closest('.verse-num')) return; // don't trigger on verse nums
+    if (_bomWordDrag || _bomTouchDrag) {
+      _bomWordDrag = false;
+      _bomTouchDrag = false;
+      return;
+    }
+    if (_hasReadableSelection() || Date.now() < _bomSelGuardUntil) return;
+    if ('ontouchstart' in window && window.__readerTouchBurstLen && window.__readerTouchBurstLen() >= 2) {
+      window.__readerTouchBurstClear();
+      return;
+    }
 
     var hw = wu.querySelector('.hw');
     var gl = wu.querySelector('.gl');
@@ -7758,6 +7921,11 @@ document.addEventListener('keydown', function(e) {
     var tgWordKey = _tgNormFinals(_tgStripNikkud(hText));
     var tgRootKey = _tgNormFinals(_tgStripNikkud(root));
     var tgEntryId = tgIdx[tgWordKey] || tgIdx[tgRootKey] || null;
+    // Inflected forms (prefixes/suffixes) aren't all listed per entry; when the root is a
+    // Strong's number, resolve it to its Hebrew lemma and match that (e.g. H1350 -> גָּאַל -> גאל).
+    if (!tgEntryId && /^H\d+$/.test(root) && window._strongsRoots && _strongsRoots[root] && _strongsRoots[root].w) {
+      tgEntryId = tgIdx[_tgNormFinals(_tgStripNikkud(_strongsRoots[root].w))] || null;
+    }
     if (tgEntryId) {
       var tgEntries = getTgData();
       var tgEntry = tgEntries.find(function(e) { return e.id === tgEntryId; });
@@ -7944,14 +8112,14 @@ function doSearch(query) {
     }
   }
   if (matches.length === 0) {
-    results.innerHTML = '<div style="color:#888;padding:12px;font-family:Crimson Pro,serif;">No results found</div>';
+    results.innerHTML = '<div style="color:#888;padding:12px;font-family:David Libre,serif;">No results found</div>';
     results.classList.add('open');
     return;
   }
   var shown = matches.length > MAX_RESULTS ? matches.slice(0, MAX_RESULTS) : matches;
   var countMsg = matches.length + ' result' + (matches.length !== 1 ? 's' : '') + ' found';
   if (matches.length > MAX_RESULTS) countMsg = 'Showing ' + MAX_RESULTS + ' of ' + matches.length + ' results';
-  var html = '<div style="color:#c8a84e;padding:8px 12px;font-size:0.85em;font-family:Crimson Pro,serif;border-bottom:1px solid #2a2f44;">' + countMsg + '</div>';
+  var html = '<div style="color:#dbb958;padding:8px 12px;font-size:0.85em;font-family:David Libre,serif;border-bottom:1px solid #2a2f44;">' + countMsg + '</div>';
   shown.forEach(function(m) {
     var preview = m.english.length > 80 ? m.english.substring(0, 80) + '...' : m.english;
     // Highlight match in preview
@@ -7962,10 +8130,10 @@ function doSearch(query) {
     html += '<div class="search-result" onclick="goToSearchResult(\'' + m.chapId + '\',' + m.verseIdx + ')">';
     html += '<div class="search-result-ref">' + m.ref + '</div>';
     html += '<div class="search-result-text">' + m.hebrew.substring(0, 60) + '</div>';
-    html += '<div style="color:#888;font-size:0.8em;font-family:Crimson Pro,serif;">' + preview + '</div>';
+    html += '<div style="color:#888;font-size:0.8em;font-family:David Libre,serif;">' + preview + '</div>';
     html += '</div>';
   });
-  html += '<div style="padding:12px 16px;border-top:2px solid var(--rule);direction:ltr;font-family:Crimson Pro,serif;font-size:0.85em;color:var(--ink-light);">';
+  html += '<div style="padding:12px 16px;border-top:2px solid var(--rule);direction:ltr;font-family:David Libre,serif;font-size:0.85em;color:var(--ink-light);">';
   html += '<div style="font-weight:600;margin-bottom:6px;">Search other volumes:</div>';
   [{name:'Old Testament',page:'../ot.html'},{name:'New Testament',page:'../nt.html'},{name:'D&C',page:'../dc.html'},{name:'Pearl of Great Price',page:'../pgp.html'},{name:'JST',page:'../jst.html'}].forEach(function(v) {
     html += '<a href="' + v.page + '?q=' + encodeURIComponent(query.trim()) + '" target="_blank" style="display:inline-block;margin:3px 4px;color:var(--accent);text-decoration:none;padding:4px 10px;border:1px solid var(--accent);border-radius:3px;font-size:0.9em;">' + v.name + '</a>';
@@ -8324,6 +8492,7 @@ function openGlossaryAtRoot(rootKey) {
 var _tgData = null;
 var _tgIndex = null; // reverse lookup: stripped form -> entry id
 var _tgExpandedId = null;
+var _tgReturnId = null; // entry to return to when "Back to Topical Guide" is clicked
 
 function _tgStripNikkud(s) { return s.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, ''); }
 function _tgNormFinals(s) { return s.replace(/ך/g,'כ').replace(/ם/g,'מ').replace(/ן/g,'נ').replace(/ף/g,'פ').replace(/ץ/g,'צ'); }
@@ -8546,7 +8715,7 @@ function renderTgEntry(entry) {
       var snippet = ref.snippet ? ' <span class="tg-ref-snippet">— ' + ref.snippet + '</span>' : '';
       var hebLabel = _tgHebRefLabel(ref.chapterId, ref.verse);
       var hebSpan = hebLabel ? ' <span class="tg-ref-heb">' + hebLabel + '</span>' : '';
-      html += '<span class="tg-ref" onclick="event.stopPropagation();goToTgVerse(\'' + ref.chapterId + '\')">' +
+      html += '<span class="tg-ref" onclick="event.stopPropagation();goToTgVerse(\'' + ref.chapterId + '\',' + (ref.verse || 0) + ')">' +
         ref.label + hebSpan + snippet + '</span>';
     });
     // Related entries
@@ -8593,9 +8762,56 @@ function navigateTgRelated(relId) {
   }, 50);
 }
 
-function goToTgVerse(chapterId) {
-  navTo(chapterId);
+function goToTgVerse(chapterId, verse) {
+  // Remember the entry we came from so the reader can pop back to the list.
+  _tgReturnId = _tgExpandedId || _tgReturnId;
+  if (verse && verse > 0) {
+    // Route through the hash so the existing handler navigates AND scrolls/highlights the verse.
+    var h = '#' + chapterId + ':' + verse;
+    if (window.location.hash === h) { handleTgHashJump(chapterId, verse); } else { window.location.hash = h; }
+  } else {
+    navTo(chapterId);
+  }
+  showTgReturnBtn();
 }
+
+// Fallback when the hash is already set (hashchange wouldn't fire)
+function handleTgHashJump(chapterId, verse) {
+  if (typeof navTo === 'function') navTo(chapterId);
+}
+
+function returnToTg() {
+  var btn = document.getElementById('tg-return-btn');
+  if (btn) btn.style.display = 'none';
+  openTopicalGuide(_tgReturnId || undefined);
+}
+
+function showTgReturnBtn() {
+  var btn = document.getElementById('tg-return-btn');
+  if (!btn) {
+    btn = document.createElement('div');
+    btn.id = 'tg-return-btn';
+    btn.style.cssText = 'position:fixed;left:14px;bottom:84px;z-index:2147483600';
+    btn.innerHTML = '<button type="button" style="background:var(--accent,#d4af37);color:#15182b;border:none;border-radius:22px;padding:10px 18px;font:600 0.9em/1 \'David Libre\',Georgia,serif;box-shadow:0 3px 10px rgba(0,0,0,0.35);cursor:pointer">&#8592; Topical Guide</button>';
+    btn.querySelector('button').addEventListener('click', returnToTg);
+    document.body.appendChild(btn);
+  }
+  btn.style.display = '';
+}
+
+// Hide the return button (and forget the entry) when leaving the reading flow
+(function() {
+  var _navTgRet = window.navTo;
+  window.navTo = function() {
+    _navTgRet.apply(null, arguments);
+    var id = arguments[0];
+    if (id === 'landing' || id === 'topical-guide' || id === 'intro' || (id && id.indexOf('front-') === 0)) {
+      var btn = document.getElementById('tg-return-btn');
+      if (btn) btn.style.display = 'none';
+      if (id !== 'topical-guide') _tgReturnId = null;
+    }
+  };
+})();
 
 // Debounced topical guide search
 (function() {
@@ -8906,39 +9122,6 @@ applyAllAnnotations();
 // Add note markers to verses that have notes
 addNoteMarkers();
 
-// Swipe navigation: left = next page, right = previous page (never while selecting text; no center-screen swipe from reading text)
-(function() {
-  var startX = 0, startY = 0, startTime = 0;
-  var startTarget = null;
-  document.addEventListener('touchstart', function(e) {
-    var t = e.touches[0];
-    startX = t.clientX;
-    startY = t.clientY;
-    startTime = Date.now();
-    startTarget = e.target;
-  }, { passive: true });
-  document.addEventListener('touchend', function(e) {
-    try {
-      var sel = window.getSelection();
-      if (sel && sel.rangeCount > 0 && !sel.isCollapsed && /\S/.test((sel.toString() || '').replace(/\u00a0/g, ' '))) return;
-    } catch (err) {}
-    var t = e.changedTouches[0];
-    var dx = t.clientX - startX;
-    var dy = t.clientY - startY;
-    var dt = Date.now() - startTime;
-    var w = window.innerWidth || 360;
-    var edgeZ = w * 0.15;
-    // Quick horizontal flick only (slow drag = text selection)
-    if (Math.abs(dx) <= 70 || Math.abs(dx) <= Math.abs(dy) * 1.5 || dt >= 500) return;
-    // Gesture began on reading text: chapter swipe only from screen edges (avoids drag-select flipping pages)
-    if (startTarget && startTarget.closest && startTarget.closest('.word-flow, .word-unit, .arr, .verse-english')) {
-      if (startX > edgeZ && startX < w - edgeZ) return;
-    }
-    if (dx > 0) goNext();  // swipe right = next (Hebrew book direction)
-    else goPrev();         // swipe left = prev
-  }, { passive: true });
-})();
-
 // Navigation hint toast — shows once per session on first chapter load
 (function() {
   var hintKey = 'bom-nav-hint-seen';
@@ -8949,7 +9132,7 @@ addNoteMarkers();
     if (!el) return;
     var isMobile = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
     el.textContent = isMobile
-      ? '\u2190 Swipe \u2192 for prev/next chapter'
+      ? 'Use \u05d4\u05d1\u05d0 / \u05d4\u05e7\u05d5\u05d3\u05dd below for prev/next chapter'
       : '\u2190 Arrow keys \u2192 for prev/next chapter';
     el.classList.add('show');
     setTimeout(function() { el.classList.remove('show'); }, 4000);
@@ -8976,14 +9159,15 @@ try {
 } catch(e) {}
 </script>
 
-<script src="../nav_engine.js?v=14"></script>
+<script src="../site_chrome.js?v=28" data-sw-volume="bom"></script>
+<script src="../nav_engine.js?v=25"></script>
 <script src="../xref_study_panel.js?v=6"></script>
 <script>
 NavEngine.init({
   volume: 'bom',
   currentChapter: currentChapterId || 'landing',
   basePath: '../',
-  preferBooksOnOpen: true,
+  preferBooksOnOpen: false,
   skipSwipeNav: true,
   onNavigate: function(id) { navTo(id); }
 });
@@ -9021,47 +9205,6 @@ NavEngine.init({
 })();
 </script>
 <script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    // Emergency cache reset (service worker + caches). Usage:
-    //   bom.html?reset_sw=1
-    try {
-      if (new URLSearchParams(window.location.search).get('reset_sw') === '1') {
-        Promise.resolve()
-          .then(function() { return navigator.serviceWorker.getRegistrations(); })
-          .then(function(regs) { return Promise.all((regs || []).map(function(r) { return r.unregister(); })); })
-          .then(function() {
-            if (!('caches' in window)) return [];
-            return caches.keys().then(function(keys) { return Promise.all(keys.map(function(k) { return caches.delete(k); })); });
-          })
-          .then(function() {
-            try { sessionStorage.clear(); } catch(e) {}
-            // Keep localStorage notes by default; only clear if explicitly requested.
-            if (new URLSearchParams(window.location.search).get('reset_ls') === '1') {
-              try { localStorage.clear(); } catch(e) {}
-            }
-          })
-          .then(function() {
-            var url = new URL(window.location.href);
-            url.searchParams.delete('reset_sw');
-            url.searchParams.delete('reset_ls');
-            window.location.replace(url.toString());
-          });
-        return;
-      }
-    } catch(e) {}
-
-    navigator.serviceWorker.register('./sw.js?v=20').then(function(reg) {
-      try { reg.update(); } catch (e) {}
-      console.log('[PWA] Service worker registered:', reg.scope);
-    }).catch(function(err) {
-      console.warn('[PWA] Service worker registration failed:', err);
-    });
-    navigator.serviceWorker.addEventListener('controllerchange', function() { window.location.reload(); });
-  });
-}
-</script>
-<script>
 function _showReturnBanner() {
   if (sessionStorage.getItem('xref-returning')) { sessionStorage.removeItem('xref-returning'); return; }
   var f = sessionStorage.getItem('xref-return-from');
@@ -9077,7 +9220,7 @@ function _showReturnBanner() {
   document.getElementById('return-verse').textContent = t;
   document.getElementById('return-link').href = f;
   var b = document.getElementById('return-banner');
-  var ct = document.querySelector('.controls-top');
+  var ct = (window.swHeaderBar && window.swHeaderBar());
   if (ct) b.style.top = ct.offsetHeight + 'px';
   b.style.display = 'block';
 }
@@ -9086,7 +9229,7 @@ window.addEventListener('pageshow', function(e) { if (e.persisted) _showReturnBa
 window.addEventListener('resize', function() {
   var b = document.getElementById('return-banner');
   if (b.style.display === 'block') {
-    var ct = document.querySelector('.controls-top');
+    var ct = (window.swHeaderBar && window.swHeaderBar());
     if (ct) b.style.top = ct.offsetHeight + 'px';
   }
 });
@@ -9094,7 +9237,7 @@ window.addEventListener('resize', function() {
 
 <!-- Keyboard Shortcuts Overlay -->
 <div id="shortcuts-overlay">
-  <div style="background:var(--bg);border:2px solid var(--accent);border-radius:8px;padding:24px;max-width:420px;width:90%;max-height:80vh;overflow-y:auto;direction:ltr;font-family:'Crimson Pro',serif;">
+  <div style="background:var(--bg);border:2px solid var(--accent);border-radius:8px;padding:24px;max-width:420px;width:90%;max-height:80vh;overflow-y:auto;direction:ltr;font-family:'David Libre', 'Georgia', serif;">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
       <h3 style="font-family:'Cormorant Garamond',serif;color:var(--accent);font-size:1.3em;margin:0;">Keyboard Shortcuts</h3>
       <span onclick="closeShortcuts()" style="cursor:pointer;color:var(--ink-light);font-size:1.3em;">&times;</span>

@@ -1,0 +1,656 @@
+{
+  "id": "journey2",
+  "importedFrom": "C:\\Users\\chris\\Desktop\\Standard Works Project\\curriculum\\journey2_v1.txt",
+  "importedAt": "2026-04-22T16:56:15.622Z",
+  "schemaVersion": 2,
+  "lessons": [
+    {
+      "num": "1",
+      "title": "Get Thee Out",
+      "verse": {
+        "ref": "Genesis 12:1",
+        "hebrew": "וַיֹּאמֶר יְהוָה אֶל־אַבְרָם לֶךְ־לְךָ מֵאַרְצְךָ וּמִמּוֹלַדְתְּךָ וּמִבֵּית אָבִיךָ אֶל־הָאָרֶץ אֲשֶׁר אַרְאֶךָּ",
+        "translit": "va-yomer YHVH el-Avram lech-lecha me-artzecha u-mi-moladtecha u-mi-beit avicha el-ha-aretz asher ar'eka"
+      },
+      "gloss": "And the LORD said to Abram, Go forth from your land and from your kindred and from your father's house to the land that I will show you.",
+      "focus": "Introduce the masculine singular imperative through לֶךְ (go). Introduce the idiom לֶךְ־לְךָ (go for yourself, a reflexive emphasis). Introduce the 2ms possessive suffix chain (-cha) through artzecha, moladtecha, avicha.",
+      "roots": {
+        "raw": "ה־ל־כ (to go, walk).",
+        "items": [
+          "ה־ל־כ"
+        ]
+      },
+      "vocab": {
+        "raw": "אֶרֶץ (land, reinforced), מוֹלֶדֶת (kindred, native place), בַּיִת (house), אָב (father).",
+        "items": [
+          {
+            "heb": "אֶרֶץ",
+            "en": "land, reinforced"
+          },
+          {
+            "heb": "מוֹלֶדֶת",
+            "en": "kindred, native place"
+          },
+          {
+            "heb": "בַּיִת",
+            "en": "house"
+          },
+          {
+            "heb": "אָב",
+            "en": "father"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Imperative Match, Possessive Chain Builder (the child sees \"your land, your kindred, your father's house\" building up), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Imperative Match",
+          "Possessive Chain Builder",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 1 aloud with support and recites לֶךְ־לְךָ with its gloss."
+    },
+    {
+      "num": "2",
+      "title": "I Will Make of Thee a Great Nation",
+      "verse": {
+        "ref": "Genesis 12:2",
+        "hebrew": "וְאֶעֶשְׂךָ לְגוֹי גָּדוֹל וַאֲבָרֶכְךָ וַאֲגַדְּלָה שְׁמֶךָ וֶהְיֵה בְּרָכָה",
+        "translit": "ve-e'es'cha le-goi gadol va-avarech'cha va-agadla shmecha veheyeh berakha"
+      },
+      "gloss": "And I will make of you a great nation, and I will bless you, and I will make your name great, and be a blessing.",
+      "focus": "Introduce the 1cs imperfect with suffix (ve-e'es'cha, and I will make you). Introduce the Piel stem through אֲבָרֶכְךָ. Reinforce the noun בְּרָכָה from the root ב־ר־ך learned in Journey 1 lesson 19.",
+      "roots": {
+        "raw": "Reinforce ב־ר־ך, ג־ד־ל.",
+        "items": [
+          "ב־ר־ך",
+          "ג־ד־ל"
+        ]
+      },
+      "vocab": {
+        "raw": "גּוֹי (nation), שֵׁם (name), בְּרָכָה (blessing).",
+        "items": [
+          {
+            "heb": "גּוֹי",
+            "en": "nation"
+          },
+          {
+            "heb": "שֵׁם",
+            "en": "name"
+          },
+          {
+            "heb": "בְּרָכָה",
+            "en": "blessing"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort (ב־ר־ך family across Piel and noun forms), Binyan Builder (Qal vs Piel of ב־ר־ך), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Binyan Builder",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child distinguishes Qal and Piel forms of ב־ר־ך and reads the verse with support."
+    },
+    {
+      "num": "3",
+      "title": "All Families Blessed in Thee",
+      "verse": {
+        "ref": "Genesis 12:3",
+        "hebrew": "וַאֲבָרֲכָה מְבָרְכֶיךָ וּמְקַלֶּלְךָ אָאֹר וְנִבְרְכוּ בְךָ כֹּל מִשְׁפְּחֹת הָאֲדָמָה",
+        "translit": "va-avaracha mevarcheicha u-mekallelcha a'or ve-nivrechu vecha kol mishpechot ha-adama"
+      },
+      "gloss": "And I will bless those who bless you, and him who curses you I will curse, and in you all the families of the earth shall be blessed.",
+      "focus": "Introduce the Qal participle plural מְבָרְכֶיךָ (those blessing you) and its opposite מְקַלֶּלְךָ (he who curses you). Introduce the Niphal stem passively through נִבְרְכוּ (shall be blessed). This verse is the foundational Abrahamic covenant text.",
+      "roots": {
+        "raw": "ק־ל־ל (to curse, make light).",
+        "items": [
+          "ק־ל־ל"
+        ]
+      },
+      "vocab": {
+        "raw": "מִשְׁפָּחָה (family).",
+        "items": [
+          {
+            "heb": "מִשְׁפָּחָה",
+            "en": "family"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Participle Match, Opposite Pairs (bless vs curse), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Participle Match",
+          "Opposite Pairs",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 3 aloud with support and can explain in one sentence why this verse matters."
+    },
+    {
+      "num": "4",
+      "title": "Abram Went",
+      "verse": {
+        "ref": "Genesis 12:4",
+        "hebrew": "וַיֵּלֶךְ אַבְרָם כַּאֲשֶׁר דִּבֶּר אֵלָיו יְהוָה",
+        "translit": "va-yelech Avram ka-asher diber elav YHVH"
+      },
+      "gloss": "And Abram went as the LORD had spoken to him.",
+      "focus": "Introduce the 3ms Qal imperfect va-yelech (and he went). Introduce ד־ב־ר (to speak) in its Piel form diber. Introduce the conjunction כַּאֲשֶׁר (just as, when).",
+      "roots": {
+        "raw": "ד־ב־ר (to speak).",
+        "items": [
+          "ד־ב־ר"
+        ]
+      },
+      "vocab": {
+        "raw": "כַּאֲשֶׁר (as, just as).",
+        "items": [
+          {
+            "heb": "כַּאֲשֶׁר",
+            "en": "as, just as"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child recognizes ד־ב־ר as a Piel-pattern root (speaking is typically Piel in BH)."
+    },
+    {
+      "num": "5",
+      "title": "To Thy Seed Will I Give",
+      "verse": {
+        "ref": "Genesis 12:7",
+        "hebrew": "וַיֵּרָא יְהוָה אֶל־אַבְרָם וַיֹּאמֶר לְזַרְעֲךָ אֶתֵּן אֶת־הָאָרֶץ הַזֹּאת",
+        "translit": "va-yera YHVH el-Avram va-yomer le-zar'acha eten et-ha-aretz ha-zot"
+      },
+      "gloss": "And the LORD appeared to Abram and said, To your seed I will give this land.",
+      "focus": "Introduce the Niphal stem through וַיֵּרָא (he appeared, was seen). Introduce the 1cs imperfect אֶתֵּן (I will give). The Abrahamic covenant's land promise, explicit.",
+      "roots": {
+        "raw": "Reinforce ר־א־ה (now in Niphal), נ־ת־נ.",
+        "items": [
+          "ר־א־ה",
+          "נ־ת־נ"
+        ]
+      },
+      "vocab": {
+        "raw": "זֹאת (this, feminine demonstrative, reinforced).",
+        "items": [
+          {
+            "heb": "זֹאת",
+            "en": "this, feminine demonstrative, reinforced"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Binyan Builder (Qal vs Niphal of ר־א־ה), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Binyan Builder",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child distinguishes va-yar (and he saw) from va-yera (and he appeared, was seen)."
+    },
+    {
+      "num": "6",
+      "title": "An Altar to the LORD",
+      "verse": {
+        "ref": "Genesis 12:8",
+        "hebrew": "וַיַּעְתֵּק מִשָּׁם הָהָרָה וַיֵּט אָהֳלֹה בֵּית־אֵל מִיָּם וְהָעַי מִקֶּדֶם וַיִּבֶן־שָׁם מִזְבֵּחַ לַיהוָה וַיִּקְרָא בְּשֵׁם יְהוָה",
+        "translit": "va-ya'tek mi-sham ha-hara va-yet aholoh Beit-El mi-yam ve-ha-Ai mi-kedem va-yiven sham mizbeach la-YHVH va-yikra be-shem YHVH"
+      },
+      "gloss": "And he moved from there to the mountain, and pitched his tent with Beth-El on the west and Ai on the east, and built there an altar to the LORD and called on the name of the LORD.",
+      "focus": "Introduce ב־נ־ה (to build, reinforced from Journey 1 lesson 39), now in its va-yiven form. Introduce מִזְבֵּחַ (altar) from ז־ב־ח (to sacrifice). Introduce the directional he (ha-hara, toward the mountain). Introduce directional vocabulary יָם (west, literally sea) and קֶדֶם (east).",
+      "roots": {
+        "raw": "ז־ב־ח (to sacrifice).",
+        "items": [
+          "ז־ב־ח"
+        ]
+      },
+      "vocab": {
+        "raw": "אֹהֶל (tent), מִזְבֵּחַ (altar), בֵּית־אֵל (Beth-El, place name).",
+        "items": [
+          {
+            "heb": "אֹהֶל",
+            "en": "tent"
+          },
+          {
+            "heb": "מִזְבֵּחַ",
+            "en": "altar"
+          },
+          {
+            "heb": "בֵּית־אֵל",
+            "en": "Beth-El, place name"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Directional Tap (tap east, west, north, south), Shoresh Sort, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Directional Tap",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child can name the four cardinal directions in Hebrew and identifies מִזְבֵּחַ as \"altar.\""
+    },
+    {
+      "num": "7",
+      "title": "Separate Thyself",
+      "verse": {
+        "ref": "Genesis 13:9",
+        "hebrew": "הֲלֹא כָל־הָאָרֶץ לְפָנֶיךָ הִפָּרֶד נָא מֵעָלָי",
+        "translit": "ha-lo kol-ha-aretz lefanecha hipared na me-alai"
+      },
+      "gloss": "Is not all the land before you? Separate yourself, please, from me.",
+      "focus": "Introduce the interrogative particle ה prefix (ha-lo, is it not). Introduce the Niphal imperative הִפָּרֶד (separate yourself). Introduce the particle נָא (please, marker of polite request).",
+      "roots": {
+        "raw": "פ־ר־ד (to separate, divide).",
+        "items": [
+          "פ־ר־ד"
+        ]
+      },
+      "vocab": {
+        "raw": "לִפְנֵי (before, in front of), נָא (please).",
+        "items": [
+          {
+            "heb": "לִפְנֵי",
+            "en": "before, in front of"
+          },
+          {
+            "heb": "נָא",
+            "en": "please"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Binyan Builder (Qal vs Niphal imperative), Question Tap (turn a statement into a question with ה), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Binyan Builder",
+          "Question Tap",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child forms a yes/no question in Hebrew by adding the interrogative ה."
+    },
+    {
+      "num": "8",
+      "title": "Lift Up Thine Eyes",
+      "verse": {
+        "ref": "Genesis 13:14",
+        "hebrew": "וַיהוָה אָמַר אֶל־אַבְרָם שָׂא נָא עֵינֶיךָ וּרְאֵה מִן־הַמָּקוֹם אֲשֶׁר־אַתָּה שָׁם צָפֹנָה וָנֶגְבָּה וָקֵדְמָה וָיָמָּה",
+        "translit": "va-YHVH amar el-Avram sa na eineicha u-r'eh min-ha-makom asher-ata sham tzafona va-negba va-kedma va-yama"
+      },
+      "gloss": "And the LORD said to Abram, Lift up your eyes and see from the place where you are, northward and southward and eastward and westward.",
+      "focus": "Introduce two imperatives in sequence: שָׂא (lift up, from נ־שׂ־א) and רְאֵה (see, imperative of ר־א־ה). Complete the four cardinal directions with all four directional-he endings. This verse is the Abrahamic land grant in its widest form.",
+      "roots": {
+        "raw": "נ־שׂ־א (to lift, carry, bear).",
+        "items": [
+          "נ־ש"
+        ]
+      },
+      "vocab": {
+        "raw": "צָפוֹן (north), נֶגֶב (south, dry country), עַיִן (eye, reinforced).",
+        "items": [
+          {
+            "heb": "צָפוֹן",
+            "en": "north"
+          },
+          {
+            "heb": "נֶגֶב",
+            "en": "south, dry country"
+          },
+          {
+            "heb": "עַיִן",
+            "en": "eye, reinforced"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Imperative Match, Four-Directions Tap (all four directions with the directional he), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Imperative Match",
+          "Four-Directions Tap",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child recites the four directions in Hebrew with the directional he ending: tzafona, negba, kedma, yama."
+    },
+    {
+      "num": "9",
+      "title": "Fear Not, Abram",
+      "verse": {
+        "ref": "Genesis 15:1",
+        "hebrew": "אַל־תִּירָא אַבְרָם אָנֹכִי מָגֵן לָךְ שְׂכָרְךָ הַרְבֵּה מְאֹד",
+        "translit": "al-tira Avram anochi magen lach secharcha harbeh meod"
+      },
+      "gloss": "Fear not, Abram, I am a shield to you, your reward is very great.",
+      "focus": "Introduce the negative imperative אַל followed by imperfect (al-tira, do not fear). Reinforce אָנֹכִי from Journey 1 lesson 32. Introduce the Hiphil infinitive absolute הַרְבֵּה (greatly, from ר־ב־ה to be many).",
+      "roots": {
+        "raw": "י־ר־א (to fear).",
+        "items": [
+          "י־ר־א"
+        ]
+      },
+      "vocab": {
+        "raw": "מָגֵן (shield), שָׂכָר (reward, wage), הַרְבֵּה (much, greatly).",
+        "items": [
+          {
+            "heb": "מָגֵן",
+            "en": "shield"
+          },
+          {
+            "heb": "שָׂכָר",
+            "en": "reward, wage"
+          },
+          {
+            "heb": "הַרְבֵּה",
+            "en": "much, greatly"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Negation Tap (positive vs negative imperative), Shoresh Sort, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Negation Tap",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child forms a negative imperative (do not fear, do not eat) using אַל plus imperfect."
+    },
+    {
+      "num": "10",
+      "title": "He Believed in the LORD",
+      "verse": {
+        "ref": "Genesis 15:6",
+        "hebrew": "וְהֶאֱמִן בַּיהוָה וַיַּחְשְׁבֶהָ לּוֹ צְדָקָה",
+        "translit": "ve-he'emin ba-YHVH va-yachsheveha lo tzedaka"
+      },
+      "gloss": "And he believed in the LORD, and he reckoned it to him as righteousness.",
+      "focus": "Introduce the Hiphil stem through הֶאֱמִן (he believed, caused-to-be-firm, from א־מ־נ). Introduce צְדָקָה (righteousness), a vocabulary word that will recur hundreds of times. Introduce ח־שׁ־ב (to think, reckon).",
+      "roots": {
+        "raw": "א־מ־נ (to be firm, trust), צ־ד־ק (to be righteous), ח־שׁ־ב (to think, reckon).",
+        "items": [
+          "א־מ־נ",
+          "צ־ד־ק",
+          "ח־ש"
+        ]
+      },
+      "vocab": {
+        "raw": "צְדָקָה (righteousness).",
+        "items": [
+          {
+            "heb": "צְדָקָה",
+            "en": "righteousness"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Binyan Builder (Qal vs Hiphil), Memorization Reward (this verse is short and weighty).",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Binyan Builder",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites verse 6 from memory in Hebrew."
+    },
+    {
+      "num": "11",
+      "title": "Count the Stars",
+      "verse": {
+        "ref": "Genesis 15:5",
+        "hebrew": "הַבֶּט־נָא הַשָּׁמַיְמָה וּסְפֹר הַכּוֹכָבִים אִם־תּוּכַל לִסְפֹּר אֹתָם כֹּה יִהְיֶה זַרְעֶךָ",
+        "translit": "habet-na ha-shamayma u-sefor ha-kochavim im-tuchal lispor otam koh yihyeh zar'echa"
+      },
+      "gloss": "Look now toward the heavens and count the stars, if you are able to count them. So shall your seed be.",
+      "focus": "Introduce the Hiphil imperative הַבֶּט (look). Introduce ס־פ־ר (to count, also to scribe), a root Chris will recognize as the source of sefer (book). Introduce the conditional אִם (if) and תּוּכַל (you are able).",
+      "roots": {
+        "raw": "נ־ב־ט (to look), ס־פ־ר (to count, to scribe), י־כ־ל (to be able).",
+        "items": [
+          "נ־ב־ט",
+          "ס־פ־ר",
+          "י־כ־ל"
+        ]
+      },
+      "vocab": {
+        "raw": "כּוֹכָב (star, reinforced), כֹּה (so, thus), אִם (if).",
+        "items": [
+          {
+            "heb": "כּוֹכָב",
+            "en": "star, reinforced"
+          },
+          {
+            "heb": "כֹּה",
+            "en": "so, thus"
+          },
+          {
+            "heb": "אִם",
+            "en": "if"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Conditional Builder (if X then Y), Picture Match (tap the night sky with stars).",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Conditional Builder",
+          "Picture Match"
+        ]
+      },
+      "exit": "Child builds a simple conditional sentence using אִם."
+    },
+    {
+      "num": "12",
+      "title": "The Cutting of the Covenant",
+      "verse": {
+        "ref": "Genesis 15:18",
+        "hebrew": "בַּיּוֹם הַהוּא כָּרַת יְהוָה אֶת־אַבְרָם בְּרִית לֵאמֹר לְזַרְעֲךָ נָתַתִּי אֶת־הָאָרֶץ הַזֹּאת",
+        "translit": "ba-yom ha-hu karat YHVH et-Avram berit lemor le-zar'acha natati et-ha-aretz ha-zot"
+      },
+      "gloss": "On that day the LORD cut with Abram a covenant, saying, To your seed I have given this land.",
+      "focus": "Introduce the idiom כָּרַת בְּרִית (to cut a covenant), the ancient Near Eastern technical term for covenant ratification. Introduce the infinitive construct לֵאמֹר (saying, speech introducer). Reinforce בְּרִית from Journey 1 lesson 35.",
+      "roots": {
+        "raw": "כ־ר־ת (to cut).",
+        "items": [
+          "כ־ר־ת"
+        ]
+      },
+      "vocab": {
+        "raw": "No new core vocabulary; focus is on the covenant idiom.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Covenant Idiom Highlight (the phrase כָּרַת בְּרִית glows and plays a distinct sound), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Covenant Idiom Highlight",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child explains that \"to cut a covenant\" is the Hebrew way of saying \"to establish a covenant\" and connects it to the imagery of Genesis 15."
+    },
+    {
+      "num": "13",
+      "title": "I Am God Almighty",
+      "verse": {
+        "ref": "Genesis 17:1",
+        "hebrew": "אֲנִי־אֵל שַׁדַּי הִתְהַלֵּךְ לְפָנַי וֶהְיֵה תָמִים",
+        "translit": "ani-El Shaddai hithalech lefanai veheyeh tamim"
+      },
+      "gloss": "I am God Almighty, walk before me and be perfect.",
+      "focus": "Introduce the divine title אֵל שַׁדַּי. Introduce the Hithpael stem through הִתְהַלֵּךְ (walk about, go about oneself). Introduce תָמִים (perfect, complete, unblemished).",
+      "roots": {
+        "raw": "Reinforce ה־ל־כ in Hithpael form.",
+        "items": [
+          "ה־ל־כ"
+        ]
+      },
+      "vocab": {
+        "raw": "אֵל (God, short form), שַׁדַּי (Almighty), תָמִים (perfect, blameless).",
+        "items": [
+          {
+            "heb": "אֵל",
+            "en": "God, short form"
+          },
+          {
+            "heb": "שַׁדַּי",
+            "en": "Almighty"
+          },
+          {
+            "heb": "תָמִים",
+            "en": "perfect, blameless"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Binyan Builder (Qal vs Hithpael of ה־ל־כ), Shoresh Sort.",
+        "items": [
+          "Chant Along",
+          "Binyan Builder",
+          "Shoresh Sort"
+        ]
+      },
+      "exit": "Child recognizes the Hithpael prefix הִתְ־ and identifies it as the reflexive/iterative stem."
+    },
+    {
+      "num": "14",
+      "title": "Abraham, Father of Many",
+      "verse": {
+        "ref": "Genesis 17:5",
+        "hebrew": "וְלֹא־יִקָּרֵא עוֹד אֶת־שִׁמְךָ אַבְרָם וְהָיָה שִׁמְךָ אַבְרָהָם כִּי אַב־הֲמוֹן גּוֹיִם נְתַתִּיךָ",
+        "translit": "ve-lo-yikare od et-shimcha Avram ve-haya shimcha Avraham ki av-hamon goyim netaticha"
+      },
+      "gloss": "Your name shall no longer be called Abram but your name shall be Abraham, for father of a multitude of nations I have made you.",
+      "focus": "Introduce the name change and the Hebrew pun: Avram (exalted father) becomes Avraham (father of a multitude, av-hamon). Introduce the 1cs perfect with 2ms suffix (netaticha, I have made you).",
+      "roots": {
+        "raw": "Reinforce נ־ת־נ with object suffix.",
+        "items": [
+          "נ־ת־נ"
+        ]
+      },
+      "vocab": {
+        "raw": "הָמוֹן (multitude), אַב (father in construct).",
+        "items": [
+          {
+            "heb": "הָמוֹן",
+            "en": "multitude"
+          },
+          {
+            "heb": "אַב",
+            "en": "father in construct"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Name Pun Highlight, Verse Builder, Suffix Match (gave you / gave him / gave them).",
+        "items": [
+          "Chant Along",
+          "Name Pun Highlight",
+          "Verse Builder",
+          "Suffix Match"
+        ]
+      },
+      "exit": "Child explains the pun between Avram and Avraham in their own words."
+    },
+    {
+      "num": "15",
+      "title": "The Sign of the Covenant",
+      "verse": {
+        "ref": "Genesis 17:11",
+        "hebrew": "וּנְמַלְתֶּם אֵת בְּשַׂר עָרְלַתְכֶם וְהָיָה לְאוֹת בְּרִית בֵּינִי וּבֵינֵיכֶם",
+        "translit": "u-nemaltem et besar orlatchem ve-haya le-ot berit beini u-veinechem"
+      },
+      "gloss": "And you shall circumcise the flesh of your foreskin, and it shall be for a sign of covenant between me and between you.",
+      "focus": "Introduce the 2mp perfect with vav-consecutive (u-nemaltem, and you shall circumcise). Reinforce אוֹת and בְּרִית as the covenant-sign vocabulary from Journey 1 lesson 38. Introduce מ־ו־ל (to circumcise).",
+      "roots": {
+        "raw": "מ־ו־ל (to circumcise).",
+        "items": [
+          "מ־ו־ל"
+        ]
+      },
+      "vocab": {
+        "raw": "עָרְלָה (foreskin), בָּשָׂר (flesh, reinforced).",
+        "items": [
+          {
+            "heb": "עָרְלָה",
+            "en": "foreskin"
+          },
+          {
+            "heb": "בָּשָׂר",
+            "en": "flesh, reinforced"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Verse Builder, Covenant Vocabulary Review (child sees אוֹת and בְּרִית glow together).",
+        "items": [
+          "Chant Along",
+          "Verse Builder",
+          "Covenant Vocabulary Review"
+        ]
+      },
+      "exit": "Child reads verse 11 aloud and names this as a covenant sign alongside the rainbow of Genesis 9."
+    },
+    {
+      "num": "16",
+      "title": "Sarah Shall Bear a Son",
+      "verse": {
+        "ref": "Genesis 17:19",
+        "hebrew": "אֲבָל שָׂרָה אִשְׁתְּךָ יֹלֶדֶת לְךָ בֵּן וְקָרָאתָ אֶת־שְׁמוֹ יִצְחָק",
+        "translit": "aval Sarah ishtecha yoledet lecha ben ve-karata et-shemo Yitzchak"
+      },
+      "gloss": "But Sarah your wife shall bear you a son, and you shall call his name Isaac.",
+      "focus": "Introduce the Qal feminine participle יֹלֶדֶת (bearing, giving birth). Introduce the name Yitzchak (Isaac), which means \"he laughs,\" from צ־ח־ק. Introduce the particle אֲבָל (but, however).",
+      "roots": {
+        "raw": "י־ל־ד (to bear, give birth), צ־ח־ק (to laugh).",
+        "items": [
+          "י־ל־ד",
+          "צ־ח־ק"
+        ]
+      },
+      "vocab": {
+        "raw": "בֵּן (son), אִשָּׁה (wife, reinforced).",
+        "items": [
+          {
+            "heb": "בֵּן",
+            "en": "son"
+          },
+          {
+            "heb": "אִשָּׁה",
+            "en": "wife, reinforced"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Name Meaning Highlight (Isaac = he laughs, tied to Sarah's laughter in Genesis 18), Shoresh Sort.",
+        "items": [
+          "Chant Along",
+          "Name Meaning Highlight",
+          "Shoresh Sort"
+        ]
+      },
+      "exit": "Child explains the meaning of the name Yitzchak."
+    }
+  ]
+}

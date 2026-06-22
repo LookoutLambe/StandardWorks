@@ -190,6 +190,7 @@
         { name: '', books: [
           { id:'ms', en:'Moses', heb:'\u05DE\u05D5\u05B9\u05E9\u05B6\u05C1\u05D4', ch:8, prefix:'ms-ch' },
           { id:'ab', en:'Abraham', heb:'\u05D0\u05B7\u05D1\u05B0\u05E8\u05B8\u05D4\u05B8\u05DD', ch:5, prefix:'ab-ch' },
+          { id:'abfac', en:'Facsimiles', heb:'\u05E4\u05B7\u05E7\u05B0\u05E1\u05B4\u05D9\u05DE\u05B4\u05D9\u05DC\u05B0\u05D9\u05B8\u05D4', ch:3, prefix:'ab-fac' },
           { id:'jsm', en:'JS\u2014Matthew', heb:'\u05D9\u05D5\u05B9\u05E1\u05B5\u05E3 \u05E1\u05DE\u05D9\u05EA\u2014\u05DE\u05EA\u05EA\u05D9\u05D4\u05D5', ch:1, prefix:'jsm-ch' },
           { id:'jsh', en:'JS\u2014History', heb:'\u05D9\u05D5\u05B9\u05E1\u05B5\u05E3 \u05E1\u05DE\u05D9\u05EA\u2014\u05D4\u05D9\u05E1\u05D8\u05D5\u05E8\u05D9\u05D4', ch:1, prefix:'jsh-ch' },
           { id:'aof', en:'Articles of Faith', heb:'\u05E2\u05B4\u05E7\u05B0\u05E8\u05B5\u05D9 \u05D4\u05B8\u05D0\u05B1\u05DE\u05D5\u05BC\u05E0\u05B8\u05D4', ch:1, prefix:'aof-ch' }
@@ -289,10 +290,11 @@
   function searchBooks(query) {
     if (!query || query.length < 1) return [];
     var q = query.toLowerCase().trim();
-    // Try to parse "Book Chapter" pattern
-    var chMatch = q.match(/^(.+?)\s+(\d+)$/);
-    var bookQ = chMatch ? chMatch[1] : q;
-    var chNum = chMatch ? parseInt(chMatch[2], 10) : 0;
+    // Parse "Book", "Book Chapter", or "Book Chapter:Verse" / "Book Chapter.Verse"
+    var refMatch = q.match(/^(.+?)(?:\s+(\d+)(?:[:.](\d+))?)?$/);
+    var bookQ = refMatch ? refMatch[1] : q;
+    var chNum = refMatch && refMatch[2] ? parseInt(refMatch[2], 10) : 0;
+    var verseNum = refMatch && refMatch[3] ? parseInt(refMatch[3], 10) : 0;
 
     var results = [];
     _searchIndex.forEach(function(entry) {
@@ -303,7 +305,7 @@
       else if (enLower.indexOf(bookQ) >= 0) score = 60;
       else if (entry.heb.indexOf(q) >= 0) score = 70;
       if (score > 0) {
-        results.push({ entry: entry, score: score, chNum: chNum });
+        results.push({ entry: entry, score: score, chNum: chNum, verseNum: verseNum });
       }
     });
     results.sort(function(a, b) { return b.score - a.score; });
@@ -311,10 +313,15 @@
   }
 
   // ── Create DOM ──
+  function getTopBar() {
+    return (typeof window.swHeaderBar === 'function' && window.swHeaderBar()) ||
+      document.querySelector('.controls-top');
+  }
+
   /** Reserve space for fixed header + optional breadcrumb + footer (iOS PWA / Safari). */
   function syncReaderPageChromePadding() {
     var pageEl = document.querySelector('.page');
-    var ct = document.querySelector('.controls-top');
+    var ct = getTopBar();
     var cb = document.querySelector('.controls-bottom');
     if (!pageEl || !ct) return;
     var bc = document.getElementById('nav-breadcrumb');
@@ -325,16 +332,16 @@
       topPx = ct.offsetHeight + 12;
     }
     pageEl.style.paddingTop = topPx + 'px';
-    if (cb) {
-      var dockEl = document.getElementById('nav-quick-dock');
-      var dockExtra = 0;
+    var footerEl = getReaderFooter();
+    if (footerEl) {
+      var footerH = 0;
       try {
-        if (dockEl) {
-          var st = window.getComputedStyle(dockEl);
-          if (st.display !== 'none' && st.visibility !== 'hidden') dockExtra = dockEl.offsetHeight || 0;
-        }
-      } catch (eDock) {}
-      pageEl.style.paddingBottom = (cb.offsetHeight + dockExtra + 20) + 'px';
+        var stF = window.getComputedStyle(footerEl);
+        if (stF.display !== 'none' && stF.visibility !== 'hidden') footerH = footerEl.offsetHeight || 0;
+      } catch (eFoot) {}
+      pageEl.style.paddingBottom = (footerH + 20) + 'px';
+    } else if (cb) {
+      pageEl.style.paddingBottom = (cb.offsetHeight + 20) + 'px';
     }
   }
 
@@ -372,47 +379,23 @@
       }, 250);
     }
 
-    var backBtn = document.createElement('button');
-    backBtn.className = 'nav-icon-btn';
-    backBtn.innerHTML = '&#8592;';
-    backBtn.title = 'Back';
-    backBtn.setAttribute('aria-label', 'Back');
-    backBtn.onclick = goBack;
-
     var homeBtn = document.createElement('button');
-    homeBtn.className = 'nav-icon-btn';
-    homeBtn.innerHTML = '&#8962;';
+    homeBtn.className = 'nav-icon-btn nav-home-btn';
+    homeBtn.innerHTML = '🏠';
     homeBtn.title = 'Home';
     homeBtn.setAttribute('aria-label', 'Home');
     homeBtn.onclick = goHome;
 
-    var libraryBtn = document.createElement('button');
-    libraryBtn.className = 'nav-icon-btn';
-    libraryBtn.innerHTML = '&#9776;'; // ☰
-    libraryBtn.title = 'Library';
-    libraryBtn.setAttribute('aria-label', 'Library');
-    libraryBtn.onclick = function() {
-      try {
-        _focusedBookId = null;
-        if (_searchInput) _searchInput.value = '';
-        if (_searchResults) { _searchResults.classList.remove('open'); _searchResults.innerHTML = ''; }
-        _searchIdx = -1;
-        setViewMode('library');
-      } catch(e) {}
-    };
-
     _searchInput = document.createElement('input');
     _searchInput.type = 'text';
-    _searchInput.placeholder = 'Jump to verse… (e.g. Isaiah 53) — / or Ctrl+K';
+    _searchInput.placeholder = 'Jump to verse… (e.g. Mosiah 5:12) — / or Ctrl+K';
     _searchInput.oninput = onSearchInput;
     _searchInput.onkeydown = onSearchKeydown;
     var closeBtn = document.createElement('button');
     closeBtn.className = 'nav-close-btn';
     closeBtn.innerHTML = '\u2715';
     closeBtn.onclick = closeSidebar;
-    searchWrap.appendChild(backBtn);
     searchWrap.appendChild(homeBtn);
-    searchWrap.appendChild(libraryBtn);
     searchWrap.appendChild(_searchInput);
     searchWrap.appendChild(closeBtn);
     _sidebarEl.appendChild(searchWrap);
@@ -458,7 +441,7 @@
     offBanner.id = 'nav-offline-banner';
     offBanner.setAttribute('role', 'status');
     offBanner.setAttribute('aria-live', 'polite');
-    offBanner.style.cssText = 'display:none;position:fixed;bottom:0;left:0;right:0;z-index:6000;padding:10px 16px;text-align:center;font-size:0.88em;line-height:1.35;background:#3d2914;color:#f5e6c8;border-top:1px solid var(--accent,#c8a84e);font-family:\'David Libre\',Georgia,serif;';
+    offBanner.style.cssText = 'display:none;position:fixed;bottom:0;left:0;right:0;z-index:6000;padding:10px 16px;text-align:center;font-size:0.88em;line-height:1.35;background:#3d2914;color:#f5e6c8;border-top:1px solid var(--accent,#dbb958);font-family:\'David Libre\',Georgia,serif;';
     offBanner.textContent = 'You appear to be offline. Reconnect to load new pages, or open a volume you already saved for offline reading.';
     function syncOfflineBanner() {
       try {
@@ -481,19 +464,15 @@
     // Some volume landing pages want the hamburger to open directly to Books.
     setViewMode(_config && _config.preferBooksOnOpen ? 'books' : 'library');
 
-    // Breadcrumb
+    // Breadcrumb (header slot when site chrome is active)
     _breadcrumbEl = document.getElementById('nav-breadcrumb');
     if (!_breadcrumbEl) {
       _breadcrumbEl = document.createElement('div');
       _breadcrumbEl.id = 'nav-breadcrumb';
-      var controlsTop = document.querySelector('.controls-top');
-      if (controlsTop && controlsTop.nextElementSibling) {
-        controlsTop.parentNode.insertBefore(_breadcrumbEl, controlsTop.nextElementSibling);
-      } else if (controlsTop) {
-        controlsTop.parentNode.appendChild(_breadcrumbEl);
-      }
     }
+    mountBreadcrumbInHeader();
     updateBreadcrumb();
+    ensureContinueReadingChip();
 
     // Ensure page padding clears fixed header + breadcrumb + footer (layout varies by screen / iOS safe areas)
     function _fixPagePadding() {
@@ -522,15 +501,12 @@
 
     function tile(vk) {
       var v = VOLUMES[vk];
-      var m = meta ? meta[vk] : null;
-      var status = m ? ('Downloaded') : ('Not downloaded');
       return '' +
         '<div class="nl-tile" data-vol="' + vk + '" tabindex="0" role="button">' +
           '<div class="nl-top">' +
-            '<div class="nl-abbr">' + (v.abbr || vk.toUpperCase()) + '</div>' +
             '<div class="nl-name">' + v.name + '</div>' +
+            '<div class="nl-heb" dir="rtl" lang="he">' + v.heb + '</div>' +
           '</div>' +
-          '<div class="nl-sub">' + status + '</div>' +
         '</div>';
     }
 
@@ -544,13 +520,6 @@
                 (last.heb ? '<div class="nl-card-heb" dir="rtl">' + last.heb + '</div>' : '') +
               '</div>';
     }
-
-    // Dictionary (Strong's)
-    html += '<div class="nl-card" id="nl-dict" tabindex="0" role="button" style="margin-top:10px">' +
-              '<div class="nl-card-title">Dictionary</div>' +
-              '<div class="nl-card-text">Strong’s Hebrew lookup + saved deck</div>' +
-              '<div class="nl-card-heb" dir="rtl">מִלּוֹן</div>' +
-            '</div>';
 
     if (bms && bms.length) {
       html += '<div class="nl-sec-title" style="margin-top:10px">Bookmarks</div>';
@@ -570,20 +539,14 @@
     _libraryEl.innerHTML = html;
 
     var lastEl = document.getElementById('nl-last');
-    if (lastEl && last && last.path) {
-      lastEl.onclick = function() { window.location.href = last.path; };
-      lastEl.onkeydown = function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); lastEl.click(); } };
+    if (lastEl && last) {
+      var lastUrl = resolveLastReadUrl(last);
+      if (lastUrl) {
+        lastEl.onclick = function() { window.location.href = lastUrl; };
+        lastEl.onkeydown = function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); lastEl.click(); } };
+      }
     }
 
-    var dictEl = document.getElementById('nl-dict');
-    if (dictEl) {
-      dictEl.onclick = function() {
-        var p = (window.location && window.location.pathname) ? window.location.pathname : '';
-        var href = (p.indexOf('/bom/') >= 0 || /\\bom\\/.test(p)) ? '../dictionary.html' : 'dictionary.html';
-        window.location.href = href;
-      };
-      dictEl.onkeydown = function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); dictEl.click(); } };
-    }
     _libraryEl.querySelectorAll('.nl-bm').forEach(function(el) {
       el.onclick = function() { var p = el.getAttribute('data-path'); if (p) window.location.href = p; };
       el.onkeydown = function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); } };
@@ -697,7 +660,7 @@
     if (vk === 'bom') return ['bom/bom.html'].concat([
       'bom/official_verses.js','bom/crossrefs.js','bom/roots_glossary.js','bom/chapter_headings.js','bom/chapter_headings_heb.js',
       'bom/scripture_verses.js','bom/topical_guide.js',
-      'bom/verses/frontmatter.js','bom/verses/1nephi.js','bom/verses/2nephi.js','bom/verses/jacob.js','bom/verses/enos.js','bom/verses/jarom.js',
+      'bom/verses/frontmatter.js','bom/verses/1nephi.js','bom/verses/book_colophons.js','bom/verses/2nephi.js','bom/verses/jacob.js','bom/verses/enos.js','bom/verses/jarom.js',
       'bom/verses/omni.js','bom/verses/words_of_mormon.js','bom/verses/mosiah.js','bom/verses/alma.js','bom/verses/helaman.js','bom/verses/3nephi.js',
       'bom/verses/4nephi.js','bom/verses/mormon.js','bom/verses/ether.js','bom/verses/moroni.js'
     ]);
@@ -1027,10 +990,12 @@
   }
 
   // ── Navigate to a chapter ──
-  function navigateToChapter(volKey, chapterId, book) {
+  function navigateToChapter(volKey, chapterId, book, verseNum) {
     closeSidebar();
     // Save reading position
     saveReadingPosition(volKey, chapterId, book);
+
+    var verseSuffix = (verseNum && verseNum > 0) ? '-v' + verseNum : '';
 
     // Home hub (index.html): always load the target volume page
     if (_config && _config.hub) {
@@ -1038,7 +1003,7 @@
       if (!volHub) return;
       var urlHub = (_config.basePath || '') + volHub.page;
       var hashHub = buildHash(volKey, chapterId);
-      window.location.href = urlHub + (hashHub ? '#' + hashHub : '');
+      window.location.href = urlHub + (hashHub ? '#' + hashHub + verseSuffix : '');
       return;
     }
 
@@ -1046,7 +1011,7 @@
       // Same volume — use page's navTo
       _config.currentChapter = chapterId;
       try {
-        if (_config.onNavigate) _config.onNavigate(chapterId);
+        if (_config.onNavigate) _config.onNavigate(chapterId, verseNum || 0);
       } catch(e) {
         console.error('NavEngine: navigation error for', chapterId, e);
       }
@@ -1058,7 +1023,7 @@
       var url = _config.basePath + vol.page;
       // Build hash from chapterId
       var hash = buildHash(volKey, chapterId);
-      window.location.href = url + (hash ? '#' + hash : '');
+      window.location.href = url + (hash ? '#' + hash + verseSuffix : '');
     }
   }
 
@@ -1073,7 +1038,10 @@
         'he-ch': 'helaman-', '3n-ch': '3-nephi-', '4n-ch': '4-nephi-',
         'mm-ch': 'mormon-', 'et-ch': 'ether-', 'mr-ch': 'moroni-'
       };
-      for (var prefix in bomHashes) {
+      if (chapterId.indexOf('-colophon') > 0) return chapterId;
+      var bomPrefixes = Object.keys(bomHashes).sort(function(a, b) { return b.length - a.length; });
+      for (var i = 0; i < bomPrefixes.length; i++) {
+        var prefix = bomPrefixes[i];
         if (chapterId.indexOf(prefix) === 0) {
           var num = chapterId.replace(prefix, '');
           return bomHashes[prefix] + num;
@@ -1106,7 +1074,7 @@
     document.body.style.overflow = 'hidden';
     var inReader = _config && _config.volume &&
       _config.currentChapter && _config.currentChapter !== 'landing';
-    if (inReader || (_config && _config.preferBooksOnOpen)) {
+    if (inReader) {
       setViewMode('books');
       switchVolTab(_config.volume);
       setTimeout(scrollNavReadingPositionIntoView, 200);
@@ -1220,12 +1188,12 @@
     if (chNum > r.entry.ch) chNum = r.entry.ch;
     // If user typed a chapter number, jump there. Otherwise focus the book’s chapters.
     if (r.entry.isSection) {
-      navigateToChapter(r.entry.vol, r.entry.chId);
+      navigateToChapter(r.entry.vol, r.entry.chId, null, r.verseNum || 0);
       return;
     }
     if (r.chNum) {
       var chId = r.entry.prefix + chNum;
-      navigateToChapter(r.entry.vol, chId);
+      navigateToChapter(r.entry.vol, chId, null, r.verseNum || 0);
       return;
     }
     // Focus the selected book so only its chapter grid shows.
@@ -1236,21 +1204,66 @@
     focusBook(r.entry.vol, r.entry.id);
   }
 
+  function mountBreadcrumbInHeader() {
+    if (!_breadcrumbEl) return;
+    var slot = document.getElementById('sw-chrome-location');
+    if (slot) {
+      if (_breadcrumbEl.parentNode !== slot) slot.appendChild(_breadcrumbEl);
+      return;
+    }
+    var controlsTop = getTopBar();
+    if (controlsTop && _breadcrumbEl.parentNode !== controlsTop.parentNode) {
+      if (controlsTop.nextElementSibling) {
+        controlsTop.parentNode.insertBefore(_breadcrumbEl, controlsTop.nextElementSibling);
+      } else {
+        controlsTop.parentNode.appendChild(_breadcrumbEl);
+      }
+    }
+  }
+
+  function syncHeaderChromeLayout() {
+    try {
+      if (typeof window.swSyncChromeLayout === 'function') window.swSyncChromeLayout();
+    } catch (e) {}
+    setTimeout(syncReaderPageChromePadding, 0);
+  }
+
+  function isSameReadingPlace(last) {
+    if (!last || !last.path) return true;
+    try {
+      var a = new URL(last.path, window.location.origin);
+      var b = new URL(window.location.pathname + window.location.hash, window.location.origin);
+      return a.pathname === b.pathname && a.hash === b.hash;
+    } catch (e) {
+      return String(last.path) === String(window.location.pathname + window.location.hash);
+    }
+  }
+
+  function ensureContinueReadingChip() {
+    /* Continue reading is on index.html only — not in the site header */
+  }
+
   // ── Breadcrumb ──
   function updateBreadcrumb() {
     if (!_breadcrumbEl) return;
+    mountBreadcrumbInHeader();
     if (!_config.currentChapter || _config.currentChapter === 'landing') {
       _breadcrumbEl.classList.remove('visible');
-      var pageEl = document.querySelector('.page');
-      if (pageEl) pageEl.style.paddingTop = '';
-      setTimeout(syncReaderPageChromePadding, 0);
+      _breadcrumbEl.innerHTML = '';
+      syncChapterCenterBtn('');
+      syncHeaderChromeLayout();
       return;
     }
     var vol = VOLUMES[_config.volume];
     if (!vol) return;
 
     var bookInfo = findBook(_config.volume, _config.currentChapter);
-    if (!bookInfo) { _breadcrumbEl.classList.remove('visible'); return; }
+    if (!bookInfo) {
+      _breadcrumbEl.classList.remove('visible');
+      syncChapterCenterBtn('');
+      syncHeaderChromeLayout();
+      return;
+    }
 
     var chNum = _config.currentChapter.replace(bookInfo.prefix, '');
     var bcHtml = '<span onclick="NavEngine.openToVolume(\'' + _config.volume + '\')">' + vol.heb + ' \u00B7 ' + vol.name + '</span>';
@@ -1258,31 +1271,30 @@
     bcHtml += '<span onclick="NavEngine.openToBook(\'' + bookInfo.id + '\')">' + bookInfo.heb + ' \u00B7 ' + bookInfo.en + '</span>';
     if (bookInfo.ch > 1) {
       bcHtml += '<span class="bc-sep">\u203A</span>';
-      bcHtml += '<span>\u05E4\u05E8\u05E7 ' + toHebNum(parseInt(chNum,10)) + ' \u00B7 Chapter ' + chNum + '</span>';
+      bcHtml += '<span onclick="NavEngine.openCurrentBookChapters()">\u05E4\u05E8\u05E7 ' + toHebNum(parseInt(chNum, 10)) + ' \u00B7 Chapter ' + chNum + '</span>';
     }
     _breadcrumbEl.innerHTML = bcHtml;
     _breadcrumbEl.classList.add('visible');
-    // Position below controls-top and push page content down
-    var ct = document.querySelector('.controls-top');
-    if (ct) {
-      var bcTop = ct.offsetHeight;
-      _breadcrumbEl.style.top = bcTop + 'px';
-      setTimeout(function() {
-        syncReaderPageChromePadding();
-      }, 0);
-    }
+    syncChapterCenterBtn(dockChapterDisplayLabel(_config.currentChapter));
+    syncHeaderChromeLayout();
   }
 
   function findBook(volKey, chapterId) {
     var vol = VOLUMES[volKey];
     if (!vol) return null;
+    var best = null;
+    var bestLen = -1;
     for (var d = 0; d < vol.divisions.length; d++) {
       var books = vol.divisions[d].books;
       for (var b = 0; b < books.length; b++) {
-        if (chapterId.indexOf(books[b].prefix) === 0) return books[b];
+        var prefix = books[b].prefix;
+        if (chapterId.indexOf(prefix) === 0 && prefix.length > bestLen) {
+          best = books[b];
+          bestLen = prefix.length;
+        }
       }
     }
-    return null;
+    return best;
   }
 
   // ── Reading Position Memory ──
@@ -1296,8 +1308,15 @@
     var hash = buildHash(volKey, chapterId);
     var url = vol.page + (hash ? '#' + hash : '');
     try {
+      // Only reuse browser hash when it already matches this chapter (NavEngine.update
+      // runs before bom.html updates history, so location.hash is often stale).
       if (_config && volKey === _config.volume && typeof window !== 'undefined' && window.location && window.location.hash && window.location.hash.length > 1) {
-        url = vol.page + window.location.hash;
+        var cur = window.location.hash.replace(/^#/, '');
+        var verseMatch = cur.match(/^(.+):(\d+)$/);
+        var curBase = verseMatch ? verseMatch[1] : cur;
+        if (hash && curBase === hash) {
+          url = vol.page + window.location.hash;
+        }
       }
     } catch (e) {}
     try {
@@ -1306,6 +1325,19 @@
         heb: bookInfo ? bookInfo.heb : '', path: url, timestamp: Date.now()
       }));
     } catch(e) {}
+  }
+
+  function resolveLastReadUrl(data) {
+    if (!data) return null;
+    var vol = data.volume && VOLUMES[data.volume];
+    if (vol && data.chapter) {
+      var hash = buildHash(data.volume, data.chapter);
+      if (hash) {
+        var page = (data.path && data.path.split('#')[0]) || vol.page;
+        return page + '#' + hash;
+      }
+    }
+    return data.path || null;
   }
 
   // ── Bookmarks ──
@@ -1471,7 +1503,6 @@
     var dx = e.changedTouches[0].clientX - _touchStartX;
     var dy = Math.abs(e.changedTouches[0].clientY - _touchStartY);
     var absDx = Math.abs(dx);
-    var edgeZone = _screenW * 0.15; // 15% from each edge
 
     // Ignore if mostly vertical scroll or too short
     if (dy > absDx || absDx < 60) return;
@@ -1488,24 +1519,7 @@
       return;
     }
 
-    // Chapter navigation: ONLY from screen edges to avoid blocking text selection
-    // Left edge swipe or right edge swipe (not from the middle where text is)
-    if (!_config.skipSwipeNav && (_touchStartX < edgeZone || _touchStartX > _screenW - edgeZone)) {
-      try {
-        var sel = window.getSelection();
-        if (sel && sel.rangeCount > 0 && !sel.isCollapsed) {
-          var st = (sel.toString() || '').replace(/\u00a0/g, ' ');
-          if (/\S/.test(st)) return;
-        }
-      } catch (eSel) {}
-      if (dx > 80) {
-        if (typeof goNext === 'function') goNext();
-        else { var nb = document.getElementById('nav-next'); if (nb && !nb.disabled) nb.click(); }
-      } else if (dx < -80) {
-        if (typeof goPrev === 'function') goPrev();
-        else { var pb = document.getElementById('nav-prev'); if (pb && !pb.disabled) pb.click(); }
-      }
-    }
+    // Chapter prev/next: footer bar only (no horizontal swipe — avoids fighting text selection / highlights)
   }
 
   // ── Torah quick dock (בית + חמש חומשים) below the mode bar ──
@@ -1563,36 +1577,211 @@
     }
   }
 
+  function getReaderFooter() {
+    return document.getElementById('sw-reader-footer');
+  }
+
+  function createChapterNavButton(which, heb, enLabel) {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'nqd-nav-btn nqd-nav-' + which;
+    btn.id = which === 'prev' ? 'nqd-nav-prev' : 'nqd-nav-next';
+    btn.setAttribute('aria-label', which === 'prev' ? 'Previous chapter' : 'Next chapter');
+    btn.innerHTML =
+      '<span class="nqd-nav-he" dir="rtl" lang="he">' + heb + '</span>' +
+      '<span class="nqd-nav-en" dir="ltr">' + enLabel + '</span>';
+    btn.onclick = function() { triggerChapterNav(which); };
+    return btn;
+  }
+
   function syncQuickDockActive() {
-    var dock = document.getElementById('nav-quick-dock');
+    var dock = getReaderFooter();
     if (!dock || !_config) return;
     var cur = _config.currentChapter || '';
     dock.querySelectorAll('.nqd-item[data-dock-vol]').forEach(function(el) {
       var v = el.getAttribute('data-dock-vol');
       el.classList.toggle('active', !!v && _config.volume === v);
     });
-    dock.querySelectorAll('.nqd-item[data-torah-prefix]').forEach(function(el) {
-      var px = el.getAttribute('data-torah-prefix') || '';
-      el.classList.toggle('active', _config.volume === 'ot' && px && cur.indexOf(px) === 0);
-    });
   }
 
-  function syncTorahDockRow() {
-    var dock = document.getElementById('nav-quick-dock');
-    if (!dock || !_quickDockInstalled) return;
-    var row = dock.querySelector('.nqd-torah');
-    if (!row) return;
-    var show = _config && _config.volume === 'ot';
-    row.style.display = show ? 'flex' : 'none';
-    syncQuickDockLayout();
+  function getCurrentChapterId() {
+    var cur = _config && _config.currentChapter;
+    if (cur && cur !== 'landing') return cur;
+    try {
+      if (typeof window.currentChapterId !== 'undefined' && window.currentChapterId) return window.currentChapterId;
+    } catch (e) {}
+    return null;
+  }
+
+  function getAdjacentChapterIds() {
+    var cur = getCurrentChapterId();
+    if (!cur) return { prev: null, next: null };
+
+    if (typeof window.chapterOrder !== 'undefined' && Array.isArray(window.chapterOrder)) {
+      var cidx = window.chapterOrder.indexOf(cur);
+      if (cidx >= 0) {
+        return {
+          prev: cidx > 0 ? window.chapterOrder[cidx - 1] : null,
+          next: cidx < window.chapterOrder.length - 1 ? window.chapterOrder[cidx + 1] : null
+        };
+      }
+    }
+
+    if (typeof window.fullPageOrder !== 'undefined' && Array.isArray(window.fullPageOrder)) {
+      var pageId = cur;
+      try {
+        if (typeof window.currentPageId !== 'undefined' && window.currentPageId) pageId = window.currentPageId;
+      } catch (e2) {}
+      var pidx = window.fullPageOrder.indexOf(pageId);
+      if (pidx < 0) pidx = window.fullPageOrder.indexOf(cur);
+      if (pidx >= 0) {
+        return {
+          prev: pidx > 0 ? window.fullPageOrder[pidx - 1] : null,
+          next: pidx < window.fullPageOrder.length - 1 ? window.fullPageOrder[pidx + 1] : null
+        };
+      }
+    }
+    return { prev: null, next: null };
+  }
+
+  function chapterShortLabel(chapterId) {
+    if (!chapterId) return '';
+    try {
+      if (typeof window.getChapterLabel === 'function') {
+        return String(window.getChapterLabel(chapterId)).replace(/\s*\u25BE\s*$/g, '').trim();
+      }
+    } catch (e) {}
+    if (!_config || !_config.volume) return '';
+    var bookInfo = findBook(_config.volume, chapterId);
+    if (!bookInfo) return '';
+    var chNum = chapterId.replace(bookInfo.prefix, '');
+    var label = bookInfo.en;
+    if (bookInfo.ch > 1) label += ' ' + chNum;
+    return label;
+  }
+
+  function setDockNavButtonLabels(btn, hebDefault, enDefault, destLabel) {
+    if (!btn) return;
+    var he = btn.querySelector('.nqd-nav-he');
+    var en = btn.querySelector('.nqd-nav-en');
+    if (he) he.textContent = hebDefault;
+    if (en) {
+      if (destLabel) en.textContent = destLabel;
+      else en.textContent = enDefault;
+    }
+  }
+
+  function dockChapterDisplayLabel(chapterId) {
+    if (!chapterId) return '';
+    try {
+      if (typeof window.getChapterLabel === 'function') {
+        return String(window.getChapterLabel(chapterId)).replace(/\s*\u25BE\s*$/g, '').trim();
+      }
+    } catch (e) {}
+    try {
+      if (typeof window.getBookProgress === 'function') {
+        var progress = window.getBookProgress(chapterId);
+        if (progress) {
+          var main = progress.bookName || '';
+          if (progress.totalChapters > 1 && progress.chapterNum) main += ' ' + progress.chapterNum;
+          return main.trim();
+        }
+      }
+    } catch (e2) {}
+    return chapterShortLabel(chapterId);
+  }
+
+  function syncChapterCenterBtn(label) {
+    var center = document.getElementById('nqd-chapter-now');
+    if (!center) return;
+    var text = label || dockChapterDisplayLabel(getCurrentChapterId());
+    if (!text) {
+      try {
+        var navLabel = document.getElementById('nav-label');
+        if (navLabel) {
+          var clone = navLabel.cloneNode(true);
+          var prog = clone.querySelector('#nav-progress-text');
+          if (prog) prog.remove();
+          text = (clone.textContent || '').replace(/\s*\u25BE\s*$/g, '').replace(/\s+/g, ' ').trim();
+        }
+      } catch (e) {}
+    }
+    center.textContent = text || '\u05E4\u05E8\u05E7\u05D9\u05DD';
+    center.title = text ? ('\u05E4\u05EA\u05D7 \u05E8\u05E9\u05D9\u05DE\u05EA \u05E4\u05E8\u05E7\u05D9\u05DD \u00B7 ' + text) : '\u05E4\u05EA\u05D7 \u05E8\u05E9\u05D9\u05DE\u05EA \u05E4\u05E8\u05E7\u05D9\u05DD';
+  }
+
+  function openCurrentBookChapters() {
+    if (!_config || !_config.volume) {
+      openSidebar();
+      return;
+    }
+    var cur = getCurrentChapterId();
+    var bookInfo = cur ? findBook(_config.volume, cur) : null;
+    if (bookInfo) {
+      try {
+        if (typeof focusBook === 'function') {
+          focusBook(_config.volume, bookInfo.id);
+          return;
+        }
+      } catch (e) {}
+      if (window.NavEngine && typeof NavEngine.openToBook === 'function') NavEngine.openToBook(bookInfo.id);
+      return;
+    }
+    openSidebar();
+    try { setViewMode('books'); } catch (e2) {}
+    switchVolTab(_config.volume);
+  }
+
+  function syncDockChapterNav() {
+    var dockPrev = document.getElementById('nqd-nav-prev');
+    var dockNext = document.getElementById('nqd-nav-next');
+    if (!dockPrev || !dockNext) return;
+    var prev = document.getElementById('nav-prev');
+    var next = document.getElementById('nav-next');
+    if (prev) dockPrev.disabled = !!prev.disabled;
+    if (next) dockNext.disabled = !!next.disabled;
+
+    var peers = getAdjacentChapterIds();
+    var prevLabel = dockChapterDisplayLabel(peers.prev);
+    var nextLabel = dockChapterDisplayLabel(peers.next);
+    setDockNavButtonLabels(dockPrev, '\u05D4\u05E7\u05D5\u05B9\u05D3\u05B5\u05DD', 'Prev', prevLabel);
+    setDockNavButtonLabels(dockNext, '\u05D4\u05D1\u05B8\u05D0', 'Next', nextLabel);
+    syncChapterCenterBtn(dockChapterDisplayLabel(getCurrentChapterId()));
+  }
+
+  function hookDockChapterNavSync() {
+    if (window._swDockNavHooked) return;
+    window._swDockNavHooked = true;
+    var orig = window.updateNavButtons;
+    if (typeof orig === 'function') {
+      window.updateNavButtons = function() {
+        orig.apply(this, arguments);
+        syncDockChapterNav();
+      };
+    }
+    syncDockChapterNav();
+  }
+
+  function triggerChapterNav(direction) {
+    if (direction === 'prev') {
+      if (typeof goPrev === 'function') { goPrev(); return; }
+      var p = document.getElementById('nav-prev');
+      if (p && !p.disabled) p.click();
+      return;
+    }
+    if (typeof goNext === 'function') { goNext(); return; }
+    var n = document.getElementById('nav-next');
+    if (n && !n.disabled) n.click();
   }
 
   function syncQuickDockLayout() {
-    var dock = document.getElementById('nav-quick-dock');
-    if (!dock || !_quickDockInstalled) return;
+    var footer = getReaderFooter();
+    if (!footer || !_quickDockInstalled) return;
     try {
-      dock.style.display = 'flex';
-      document.documentElement.style.setProperty('--sw-quick-dock-h', dock.offsetHeight + 'px');
+      footer.style.display = 'flex';
+      var h = footer.offsetHeight + 'px';
+      document.documentElement.style.setProperty('--sw-reader-footer-h', h);
+      document.documentElement.style.setProperty('--sw-quick-dock-h', h);
     } catch (e) {}
     syncReaderPageChromePadding();
   }
@@ -1616,86 +1805,48 @@
   function createQuickDock() {
     if (_quickDockInstalled) return;
     if (_config && _config.hub) return;
-    if (!document.querySelector('.controls-bottom')) return;
+    var modeBar = document.querySelector('.controls-bottom');
+    if (!modeBar) return;
 
     _quickDockInstalled = true;
     document.body.classList.add('sw-has-quick-dock');
 
-    var dock = document.createElement('nav');
-    dock.id = 'nav-quick-dock';
-    dock.setAttribute('aria-label', 'ניווט מהיר — כרכים');
+    var footer = document.createElement('footer');
+    footer.id = 'sw-reader-footer';
+    footer.className = 'sw-reader-footer';
+    footer.setAttribute('role', 'contentinfo');
+    footer.setAttribute('aria-label', 'Reader footer');
 
-    var rowVol = document.createElement('div');
-    rowVol.className = 'nqd-row nqd-volumes';
-    rowVol.setAttribute('role', 'toolbar');
-
-    var homeBtn = document.createElement('button');
-    homeBtn.type = 'button';
-    homeBtn.className = 'nqd-item nqd-home';
-    homeBtn.innerHTML = HOME_ICON_SVG + '<span class="nqd-lbl">בית</span>';
-    homeBtn.title = 'כתבי הקודש — דף הבית';
-    homeBtn.onclick = function() {
-      window.location.href = dockHomeHref();
+    var rowNav = document.createElement('div');
+    rowNav.className = 'nqd-row nqd-chapter-nav';
+    rowNav.setAttribute('role', 'toolbar');
+    rowNav.setAttribute('aria-label', 'Chapter navigation');
+    /* RTL: first item sits on the right — Previous right, Next left */
+    rowNav.appendChild(createChapterNavButton('prev', '\u05D4\u05E7\u05D5\u05B9\u05D3\u05B5\u05DD', 'Prev'));
+    var centerBtn = document.createElement('button');
+    centerBtn.type = 'button';
+    centerBtn.className = 'nqd-chapter-now';
+    centerBtn.id = 'nqd-chapter-now';
+    centerBtn.setAttribute('dir', 'ltr');
+    centerBtn.setAttribute('lang', 'en');
+    centerBtn.setAttribute('aria-label', 'Open chapter list');
+    centerBtn.textContent = '\u05E4\u05E8\u05E7\u05D9\u05DD';
+    centerBtn.onclick = function(e) {
+      e.stopPropagation();
+      openCurrentBookChapters();
     };
-    rowVol.appendChild(homeBtn);
+    rowNav.appendChild(centerBtn);
+    rowNav.appendChild(createChapterNavButton('next', '\u05D4\u05D1\u05B8\u05D0', 'Next'));
+    rowNav.setAttribute('title', 'Double-tap or double-click anywhere to show or hide reading modes');
+    footer.appendChild(rowNav);
 
-    var volDockMeta = [
-      { key: 'ot', label: VOLUMES.ot.abbr, title: VOLUMES.ot.heb },
-      { key: 'nt', label: VOLUMES.nt.abbr, title: VOLUMES.nt.heb },
-      { key: 'bom', label: '\u05E1\u05D5\u05DE\u05F4\u05DE', title: VOLUMES.bom.heb },
-      { key: 'dc', label: '\u05DC\u05D5\u05F4\u05D1', title: VOLUMES.dc.heb },
-      { key: 'pgp', label: VOLUMES.pgp.abbr, title: VOLUMES.pgp.heb }
-    ];
+    modeBar.classList.add('sw-footer-modes');
+    footer.appendChild(modeBar);
 
-    for (var vi = 0; vi < volDockMeta.length; vi++) {
-      var meta = volDockMeta[vi];
-      var cid = firstChapterIdForVolume(meta.key);
-      if (!cid) continue;
-      var vbtn = document.createElement('button');
-      vbtn.type = 'button';
-      vbtn.className = 'nqd-item';
-      vbtn.setAttribute('data-dock-vol', meta.key);
-      vbtn.innerHTML = BOOK_ICON_SVG + '<span class="nqd-lbl">' + meta.label + '</span>';
-      vbtn.title = meta.title;
-      (function(vk, chapterId) {
-        vbtn.onclick = function() {
-          navigateToChapter(vk, chapterId);
-        };
-      })(meta.key, cid);
-      rowVol.appendChild(vbtn);
-    }
-
-    dock.appendChild(rowVol);
-
-    var torahDiv = VOLUMES.ot && VOLUMES.ot.divisions && VOLUMES.ot.divisions[0];
-    var torahBooks = torahDiv && torahDiv.books ? torahDiv.books : null;
-    if (torahBooks && torahBooks.length >= 5) {
-      var rowTorah = document.createElement('div');
-      rowTorah.className = 'nqd-row nqd-torah';
-      rowTorah.setAttribute('aria-label', 'חמש חומשי תורה');
-      rowTorah.style.display = 'none';
-
-      for (var ti = 0; ti < 5; ti++) {
-        var bk = torahBooks[ti];
-        var tbtn = document.createElement('button');
-        tbtn.type = 'button';
-        tbtn.className = 'nqd-item nqd-torah-btn';
-        tbtn.setAttribute('data-torah-prefix', bk.prefix);
-        tbtn.innerHTML = BOOK_ICON_SVG + '<span class="nqd-lbl">' + stripNikkudForDock(bk.heb) + '</span>';
-        tbtn.title = bk.en + ' · ' + bk.heb;
-        (function(bookRef) {
-          tbtn.onclick = function() {
-            navigateToChapter('ot', getTorahDockTargetChapter(bookRef));
-          };
-        })(bk);
-        rowTorah.appendChild(tbtn);
-      }
-      dock.appendChild(rowTorah);
-    }
-
-    document.body.appendChild(dock);
+    document.body.appendChild(footer);
+    document.body.classList.add('sw-footer-ready');
     syncQuickDockActive();
-    syncTorahDockRow();
+    hookDockChapterNavSync();
 
     window.addEventListener(
       'resize',
@@ -1707,6 +1858,11 @@
 
     setTimeout(syncQuickDockLayout, 0);
     setTimeout(syncQuickDockLayout, 300);
+    setTimeout(function() {
+      try {
+        if (typeof window.swMarkShellReady === 'function') window.swMarkShellReady();
+      } catch (eReady) {}
+    }, 0);
   }
 
   // ── Site-wide reader footer hide (double-tap touch / double-click) ──
@@ -1737,25 +1893,31 @@
       }
     } catch (e) {}
 
-    // Do not use bare `button` / `input` here — verse UIs and in-page controls use those tags too.
+    // Overlays / panels only — footer, header, and reading surface accept double-tap to collapse.
     var SEL_IGNORE =
-      '.controls-top, .controls-bottom, #nav-quick-dock, #nav-breadcrumb, #nav-sidebar, #nav-overlay, ' +
+      '#nav-sidebar, #nav-overlay, ' +
       '.nav-search-wrap, .nav-search-results, .nav-library, .nav-vol-tabs, .nav-book-list, ' +
       '#xref-panel.open, #word-popup, #search-container.open, #search-results.open, ' +
       '#glossary-panel, #annotations-panel, #share-popup, #share-overlay, #shortcuts-overlay.open, ' +
       '#sel-toolbar, #verse-action-menu, .safari-browser-tip, .global-search-wrap, #gs-results, ' +
-      '[role="dialog"], ' +
-      '.controls-top button, .controls-bottom button, #nav-quick-dock button, #nav-sidebar button, ' +
-      '.controls-top input, .controls-bottom input, #nav-sidebar input, .nav-search-wrap input';
-    var SEL_READING = '#page, .page';
-    function ignoreTarget(el) {
-      return el && el.closest && el.closest(SEL_IGNORE);
-    }
-    function readingSurfaceEl(el) {
-      if (!el) return null;
+      '[role="dialog"]';
+    var SEL_INTERACTIVE =
+      'button, a[href], input, textarea, select, label[for], [role="button"], [role="link"], [contenteditable="true"]';
+    function collapseGestureTarget(el) {
+      if (!el) return false;
       if (el.nodeType === 3 && el.parentElement) el = el.parentElement;
-      if (!el || el.nodeType !== 1 || !el.closest) return null;
-      return el.closest(SEL_READING) ? el : null;
+      if (!el || el.nodeType !== 1 || !el.closest) return false;
+      if (el.closest(SEL_IGNORE)) return false;
+      if (el.closest(SEL_INTERACTIVE)) return false;
+      return true;
+    }
+    function hasReadableTextSelection() {
+      try {
+        var sel = window.getSelection();
+        return !!(sel && !sel.isCollapsed && /\S/.test((sel.toString() || '').replace(/\u00a0/g, ' ')));
+      } catch (eSel) {
+        return false;
+      }
     }
     function toggleReadingFooterBar() {
       if (!document.querySelector('.controls-bottom')) return;
@@ -1769,23 +1931,30 @@
       try {
         window.dispatchEvent(new Event('resize'));
       } catch (e3) {}
+      requestAnimationFrame(function() {
+        syncQuickDockLayout();
+        syncDockChapterNav();
+      });
     }
 
     var lastTap = 0;
+    function doubleTapWindowMs() {
+      var tapWin = 650;
+      try {
+        if ('ontouchstart' in window || (navigator.maxTouchPoints || 0) > 0) tapWin = 850;
+      } catch (eTap) {}
+      return tapWin;
+    }
+
     document.addEventListener(
       'touchend',
       function(e) {
         if (!document.querySelector('.controls-bottom')) return;
         var ct = e.changedTouches;
         if (!ct || ct.length !== 1) return;
-        var tEl = readingSurfaceEl(e.target);
-        if (!tEl) return;
-        if (ignoreTarget(tEl)) return;
+        if (!collapseGestureTarget(e.target)) return;
         var now = Date.now();
-        var tapWin = 650;
-        try {
-          if ('ontouchstart' in window || (navigator.maxTouchPoints || 0) > 0) tapWin = 850;
-        } catch (eTap) {}
+        var tapWin = doubleTapWindowMs();
         if (lastTap && now - lastTap < tapWin && now - lastTap > 12) {
           toggleReadingFooterBar();
           lastTap = 0;
@@ -1800,9 +1969,8 @@
       'dblclick',
       function(e) {
         if (!document.querySelector('.controls-bottom')) return;
-        var tEl = readingSurfaceEl(e.target);
-        if (!tEl) return;
-        if (ignoreTarget(tEl)) return;
+        if (!collapseGestureTarget(e.target)) return;
+        if (hasReadableTextSelection()) return;
         e.preventDefault();
         toggleReadingFooterBar();
       },
@@ -1813,8 +1981,12 @@
   // ── Public API ──
   window.NavEngine = {
     init: function(config) {
-      _config = config;
-      if (_config) _config.hub = !!_config.hub;
+      _config = config || {};
+      _config.hub = !!_config.hub;
+      // Reader pages use pinned footer prev/next; disable chapter swipe unless explicitly opted in
+      if (_config.skipSwipeNav !== false && document.querySelector('.controls-bottom')) {
+        _config.skipSwipeNav = true;
+      }
       createSidebar();
       document.addEventListener('keydown', onKeydown);
       document.addEventListener('touchstart', onTouchStart, { passive: true });
@@ -1848,8 +2020,10 @@
       saveReadingPosition(_config.volume, chapterId);
       rememberTorahDockChapter(chapterId);
       syncQuickDockActive();
-      syncTorahDockRow();
+      syncDockChapterNav();
+      ensureContinueReadingChip();
     },
+    openCurrentBookChapters: openCurrentBookChapters,
     openToVolume: function(volKey) {
       openSidebar();
       // Ensure we're in the "Books" view (not Library)
@@ -1898,6 +2072,9 @@
         var data = localStorage.getItem('sw-last-read');
         return data ? JSON.parse(data) : null;
       } catch(e) { return null; }
+    },
+    resolveLastReadUrl: function(data) {
+      return resolveLastReadUrl(data || this.getLastRead());
     },
     offline: {
       downloadThisVolume: offlineDownloadCurrentVolume,

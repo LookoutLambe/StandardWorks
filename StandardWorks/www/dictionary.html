@@ -2,16 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <script>(function(){var h=(location.hostname||'').toLowerCase(),p=location.pathname.split('/').filter(Boolean),gh=h.slice(-10)==='github.io'&&p.length>0,m=gh?'manifest.github.json':'manifest.json';document.write('<link rel="manifest" href="'+m+'" id="sw-manifest-link">');})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dictionary · Hebrew</title>
   <meta name="theme-color" content="#1e2233" />
-  <link rel="manifest" href="manifest.json">
-  <style>
-@font-face { font-family: "David Libre"; font-weight: 400; font-style: normal; src: url("/fonts/david-libre-400.woff2") format("woff2"); }
-@font-face { font-family: "David Libre"; font-weight: 500; font-style: normal; src: url("/fonts/david-libre-500.woff2") format("woff2"); }
-@font-face { font-family: "David Libre"; font-weight: 700; font-style: normal; src: url("/fonts/david-libre-700.woff2") format("woff2"); }
-</style>
+  <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="nav_engine.css">
+  <link rel="stylesheet" href="site_chrome.css">
   <style>
     :root{
       --bg:#faf8f2; --bg-deep:#f0ece0; --ink:#1a1a1a; --ink-light:#444;
@@ -64,7 +61,7 @@
   </style>
 </head>
 <body>
-  <div class="topbar">
+  <div class="topbar dict-legacy-topbar">
     <div class="title">
       <div class="en">Dictionary</div>
       <div class="he">מִלּוֹן</div>
@@ -75,7 +72,7 @@
     </div>
   </div>
 
-  <div class="wrap">
+  <div class="wrap dict-wrap">
     <div class="panel">
       <div class="panel-head">
         <div class="row">
@@ -99,6 +96,7 @@
   <script src="strongs_lookup.js"></script>
   <script src="strongs_roots.js"></script>
   <script src="dictionary.js"></script>
+  <script src="site_chrome.js"></script>
   <script src="nav_engine.js"></script>
 </body>
 </html>

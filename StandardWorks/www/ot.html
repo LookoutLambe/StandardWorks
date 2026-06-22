@@ -2,18 +2,16 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="UTF-8">
+<script>document.documentElement.classList.add('sw-shell-pending');</script>
+<script>(function(){var h=(location.hostname||'').toLowerCase(),p=location.pathname.split('/').filter(Boolean),gh=h.slice(-10)==='github.io'&&p.length>0,m=gh?'manifest.github.json':'manifest.json';document.write('<link rel="manifest" href="'+m+'" id="sw-manifest-link">');})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>כתבי הקודש — Tanakh / Old Testament</title>
 <meta name="description" content="Hebrew Interlinear Tanakh (Old Testament) — Masoretic Text, Word-by-Word">
 <meta name="theme-color" content="#1e2233">
-<link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
-<style>
-@font-face { font-family: "David Libre"; font-weight: 400; font-style: normal; src: url("/fonts/david-libre-400.woff2") format("woff2"); }
-@font-face { font-family: "David Libre"; font-weight: 500; font-style: normal; src: url("/fonts/david-libre-500.woff2") format("woff2"); }
-@font-face { font-family: "David Libre"; font-weight: 700; font-style: normal; src: url("/fonts/david-libre-700.woff2") format("woff2"); }
-</style>
-<link rel="stylesheet" href="nav_engine.css">
+<link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="nav_engine.css?v=25">
+<link rel="stylesheet" href="site_chrome.css?v=26">
 <link rel="stylesheet" href="xref_study_panel.css">
 <style>
 
@@ -73,22 +71,22 @@ body {
 
 .chapter-heading { text-align: center; padding: 16px 0 20px; border-bottom: 2px solid var(--rule); margin-bottom: 24px; }
 .chapter-heading h2 { font-size: 1.6em; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
-.chapter-label-en { font-family: 'Crimson Pro', serif; font-size: 0.85em; color: var(--ink-light); direction: ltr; letter-spacing: 0.04em; }
-.chapter-summary-en { font-family: 'Crimson Pro', serif; font-size: 0.92em; color: var(--ink); direction: ltr; line-height: 1.55; opacity: 0.9; margin-top: 10px; text-align: center; }
+.chapter-label-en { font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; color: var(--ink-light); direction: ltr; letter-spacing: 0.04em; }
+.chapter-summary-en { font-family: 'David Libre', 'Georgia', serif; font-size: 0.92em; color: var(--ink); direction: ltr; line-height: 1.55; opacity: 0.9; margin-top: 10px; text-align: center; }
 .chapter-summary-he { font-family: 'David Libre', serif; font-size: 1.05em; color: var(--ink); direction: rtl; line-height: 1.65; opacity: 0.92; margin-top: 10px; text-align: center; }
 
 /* === INTERLINEAR CORE === */
 .verse { display: flex; align-items: flex-start; gap: 10px; border-bottom: 1px solid var(--rule-light); padding: 12px 0; direction: rtl; transition: background 0.2s; }
 .verse:hover { background: var(--highlight); }
 .verse-num { font-family: 'David Libre', serif; font-size: 1.2em; font-weight: 700; color: var(--verse-num); min-width: 30px; text-align: center; padding-top: 3px; cursor: pointer; user-select: none; flex-shrink: 0; line-height: 1.2; }
-.verse-num .verse-num-arabic { display: block; font-size: 0.55em; color: var(--ink-light); font-weight: 400; font-family: 'Crimson Pro', serif; opacity: 0.7; }
+.verse-num .verse-num-arabic { display: block; font-size: 0.55em; color: var(--ink-light); font-weight: 400; font-family: 'David Libre', 'Georgia', serif; opacity: 0.7; }
 .word-flow { display: flex; flex-wrap: wrap; gap: 1px; align-items: flex-start; flex: 1; direction: rtl; }
 .word-group { display: inline-flex; align-items: stretch; vertical-align: top; direction: rtl; }
 .word-unit { display: inline-flex; flex-direction: column; align-items: center; padding: 3px 5px; border-radius: 3px; cursor: pointer; transition: background 0.15s; line-height: 1.2; user-select: none; -webkit-user-select: none; }
 .word-unit:hover { background: var(--highlight); }
 .hw { font-size: 1.85em; font-weight: 500; line-height: 1.5; color: #1a2744; direction: rtl; unicode-bidi: bidi-override; white-space: nowrap; }
-.gl { font-family: 'Crimson Pro', serif; font-size: 0.72em; color: var(--gloss); direction: ltr; text-align: center; white-space: nowrap; font-style: italic; }
-.tl { font-family: 'Crimson Pro', serif; font-size: 0.78em; color: var(--ink-light); direction: ltr; text-align: center; white-space: nowrap; opacity: 0.7; }
+.gl { font-family: 'David Libre', 'Georgia', serif; font-size: 0.72em; color: var(--gloss); direction: ltr; text-align: center; white-space: nowrap; font-style: italic; }
+.tl { font-family: 'David Libre', 'Georgia', serif; font-size: 0.78em; color: var(--ink-light); direction: ltr; text-align: center; white-space: nowrap; opacity: 0.7; }
 .arr { display: inline-flex; flex-direction: column; align-items: center; justify-content: flex-end; color: var(--accent); font-family: 'Times New Roman', Times, serif; font-style: normal; font-weight: normal; vertical-align: top; padding: 3px 0 6px; margin: 2px 0; opacity: 0.75; direction: ltr; unicode-bidi: isolate; line-height: 1.2; user-select: none; -webkit-user-select: none; }
 .arr-hw { flex-grow: 1; visibility: hidden; max-width: 0; }
 .arr-tl { font-size: 0.78em; line-height: 1.2; margin-top: 2px; visibility: visible; transform: scale(1.8); }
@@ -124,7 +122,7 @@ body.dual-mode .verse-english {
   display: block;
   flex: 1 1 0;
   min-width: 0;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.92em;
   line-height: 1.65;
   color: var(--ink);
@@ -189,15 +187,15 @@ body.dark-mode .verse.user-highlight { background: rgba(200, 168, 78, 0.18); }
   position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
   background: #1e2233;
   display: flex; justify-content: center;
-  padding: 6px 0; gap: 4px;
+  padding: 3px 0; gap: 3px;
   font-family: 'David Libre', serif;
   direction: ltr;
 }
 .controls-bottom button {
   background: transparent; border: 1px solid #3a3f55;
-  color: #8a7a4a; padding: 4px 14px; border-radius: 3px;
+  color: #8a7a4a; padding: 2px 10px; border-radius: 3px;
   cursor: pointer; font-family: 'David Libre', serif;
-  font-size: 0.78em; line-height: 1.3; text-align: center;
+  font-size: 0.72em; line-height: 1.3; text-align: center;
   transition: all 0.15s;
 }
 .controls-bottom button:hover { background: #2a2f44; color: #c8a84e; }
@@ -298,7 +296,7 @@ body.audio-bar-open .page { padding-top: 95px; }
   border: 1px solid #c8a84e;
   background: rgba(200, 168, 78, 0.12);
   color: #8a7028;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
   font-size: 1.05em;
   font-weight: 600;
   cursor: pointer;
@@ -306,9 +304,9 @@ body.audio-bar-open .page { padding-top: 95px; }
   touch-action: manipulation;
 }
 .popup-hebrew { font-size: 2em; font-weight: 700; color: var(--ink); margin-bottom: 4px; text-align: center; }
-.popup-translit { font-family: 'Crimson Pro', serif; font-size: 1em; color: var(--ink-light); text-align: center; margin-bottom: 4px; direction: ltr; font-style: italic; }
-.popup-gloss { font-family: 'Crimson Pro', serif; font-size: 1.1em; color: var(--accent); text-align: center; margin-bottom: 8px; direction: ltr; font-weight: 600; }
-.popup-detail { font-family: 'Crimson Pro', serif; font-size: 0.8em; color: var(--ink-light); direction: ltr; line-height: 1.5; }
+.popup-translit { font-family: 'David Libre', 'Georgia', serif; font-size: 1em; color: var(--ink-light); text-align: center; margin-bottom: 4px; direction: ltr; font-style: italic; }
+.popup-gloss { font-family: 'David Libre', 'Georgia', serif; font-size: 1.1em; color: var(--accent); text-align: center; margin-bottom: 8px; direction: ltr; font-weight: 600; }
+.popup-detail { font-family: 'David Libre', 'Georgia', serif; font-size: 0.8em; color: var(--ink-light); direction: ltr; line-height: 1.5; }
 .popup-detail span { font-weight: 600; }
 
 /* === SEARCH === */
@@ -319,7 +317,7 @@ body.audio-bar-open .page { padding-top: 95px; }
   transition: top 0.2s ease; direction: ltr;
 }
 #search-container.open { top: 0; }
-#search-input { flex: 1; border: 1px solid var(--rule); padding: 8px 12px; border-radius: 4px; font-size: 1em; font-family: 'Crimson Pro', serif; }
+#search-input { flex: 1; border: 1px solid var(--rule); padding: 8px 12px; border-radius: 4px; font-size: 1em; font-family: 'David Libre', 'Georgia', serif; }
 #search-close { cursor: pointer; font-size: 1.2em; color: #888; padding: 4px 8px; }
 #search-results {
   display: none; position: fixed; top: 50px; left: 0; right: 0; z-index: 149;
@@ -329,7 +327,7 @@ body.audio-bar-open .page { padding-top: 95px; }
 #search-results.open { display: block; }
 .search-result { padding: 10px 16px; cursor: pointer; border-bottom: 1px solid var(--rule-light); direction: rtl; }
 .search-result:hover { background: var(--highlight); }
-.search-result-ref { font-family: 'Crimson Pro', serif; font-size: 0.8em; color: var(--accent); direction: ltr; margin-bottom: 2px; }
+.search-result-ref { font-family: 'David Libre', 'Georgia', serif; font-size: 0.8em; color: var(--accent); direction: ltr; margin-bottom: 2px; }
 .search-result-text { font-size: 1em; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 /* nav dropdown styles moved to nav_engine.css */
@@ -355,7 +353,7 @@ body.audio-bar-open .page { padding-top: 95px; }
 #nav-hint {
   position: fixed; bottom: 64px; left: 50%; transform: translateX(-50%);
   background: rgba(26,39,68,0.88); color: #fff;
-  font-family: 'Crimson Pro', serif; font-size: 14px;
+  font-family: 'David Libre', 'Georgia', serif; font-size: 14px;
   padding: 8px 20px; border-radius: 20px; z-index: 9999;
   pointer-events: none; opacity: 0; transition: opacity 0.5s ease;
   white-space: nowrap; direction: ltr;
@@ -366,13 +364,13 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
 /* === LANDING PAGE === */
 .landing-hero { text-align: center; padding: 40px 20px 30px; }
 .landing-hero h1 { font-size: 2.2em; color: var(--accent); margin-bottom: 6px; font-weight: 700; }
-.landing-hero .subtitle-en { font-family: 'Crimson Pro', serif; font-size: 1.1em; color: var(--ink-light); letter-spacing: 0.08em; direction: ltr; }
+.landing-hero .subtitle-en { font-family: 'David Libre', 'Georgia', serif; font-size: 1.1em; color: var(--ink-light); letter-spacing: 0.08em; direction: ltr; }
 .landing-hero .subtitle-heb { font-size: 1.3em; color: var(--ink); margin-top: 4px; }
 .landing-divider { border: none; border-top: 2px solid var(--rule); margin: 20px auto; max-width: 200px; }
 .landing-sections { max-width: 600px; margin: 0 auto 30px; padding: 0 12px; }
 .landing-section-group { margin-bottom: 16px; }
 .landing-section-group h3 {
-  font-family: 'Crimson Pro', serif; font-size: 0.85em; color: var(--ink-light);
+  font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; color: var(--ink-light);
   letter-spacing: 0.08em; direction: ltr; margin-bottom: 8px; text-align: center;
 }
 .landing-section-grid {
@@ -386,10 +384,10 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
 }
 .landing-sec-btn:hover { transform: scale(1.05); box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-color: var(--accent); }
 .landing-sec-btn .sec-heb { font-family: 'David Libre', serif; font-size: 0.85em; font-weight: 700; color: #c8a84e; }
-.landing-sec-btn .sec-num { font-family: 'Crimson Pro', serif; font-size: 0.65em; color: #5a6a80; }
+.landing-sec-btn .sec-num { font-family: 'David Libre', 'Georgia', serif; font-size: 0.65em; color: #5a6a80; }
 .landing-back { text-align: center; margin-top: 20px; }
 .landing-back a {
-  font-family: 'Crimson Pro', serif; color: var(--accent);
+  font-family: 'David Libre', 'Georgia', serif; color: var(--accent);
   text-decoration: none; font-size: 0.95em;
   border: 1px solid var(--rule); padding: 8px 20px; border-radius: 4px;
   transition: all 0.2s; direction: ltr; display: inline-block;
@@ -402,7 +400,7 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
   display: flex; justify-content: space-between; align-items: center;
   padding: 10px 16px; background: var(--header-bg); color: var(--header-text);
   border-radius: 6px; cursor: pointer; transition: all 0.15s;
-  font-family: 'Crimson Pro', serif; direction: ltr;
+  font-family: 'David Libre', 'Georgia', serif; direction: ltr;
 }
 .landing-book-btn:hover { background: #2a3050; transform: translateX(2px); }
 .landing-book-btn .book-he { font-family: 'David Libre', serif; font-size: 1.2em; direction: rtl; min-width: 120px; text-align: right; }
@@ -425,8 +423,8 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
   .gl { font-size: 0.68em; }
   .verse-num { min-width: 24px; font-size: 1em; }
   .controls-top { padding: 5px 8px; }
-  .controls-bottom { flex-wrap: wrap; justify-content: center; gap: 4px; padding: 4px 6px; }
-  .controls-bottom button { min-height: 40px; padding: 4px 8px; }
+  .controls-bottom { flex-wrap: wrap; justify-content: center; gap: 2px; padding: 2px 5px; }
+  .controls-bottom button { min-height: 28px; padding: 2px 6px; font-size: 0.7em; }
   .landing-section-grid { grid-template-columns: repeat(7, 1fr); }
   #audio-bar { padding: 4px 8px; }
   #audio-bar .audio-label { font-size: 0.7em; }
@@ -485,18 +483,18 @@ body.dark-mode .landing-book-btn:hover { background: #1a1a2a; }
 #glossary-panel {
   display: none; position: fixed; top: 0; left: 0; bottom: 0; width: 380px; max-width: 90vw;
   background: var(--bg); border-right: 2px solid var(--accent); z-index: 3100;
-  overflow-y: auto; padding: 16px; font-family: 'Crimson Pro', serif;
+  overflow-y: auto; padding: 16px; font-family: 'David Libre', 'Georgia', serif;
   transform: translateX(-100%); transition: transform 0.25s ease;
 }
 #glossary-panel.open { display: block; transform: translateX(0); }
 .glossary-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
 .glossary-header h3 { font-size: 1.3em; color: var(--accent); margin: 0; }
 .glossary-close { cursor: pointer; font-size: 1.4em; color: var(--ink-light); padding: 4px 8px; }
-#glossary-search { width: 100%; padding: 8px 12px; border: 1px solid var(--rule); border-radius: 4px; font-size: 1em; font-family: 'Crimson Pro', serif; margin-bottom: 8px; background: var(--bg); color: var(--ink); }
+#glossary-search { width: 100%; padding: 8px 12px; border: 1px solid var(--rule); border-radius: 4px; font-size: 1em; font-family: 'David Libre', 'Georgia', serif; margin-bottom: 8px; background: var(--bg); color: var(--ink); }
 .glossary-controls { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
-.glossary-tab { background: transparent; border: 1px solid var(--rule); color: var(--ink-light); padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; font-family: 'Crimson Pro', serif; }
+.glossary-tab { background: transparent; border: 1px solid var(--rule); color: var(--ink-light); padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; }
 .glossary-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
-#glossary-sort-select { border: 1px solid var(--rule); padding: 4px 6px; border-radius: 3px; font-size: 0.8em; font-family: 'Crimson Pro', serif; background: var(--bg); color: var(--ink); }
+#glossary-sort-select { border: 1px solid var(--rule); padding: 4px 6px; border-radius: 3px; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; background: var(--bg); color: var(--ink); }
 .glossary-entry { border: 1px solid var(--rule-light); border-radius: 6px; padding: 10px 12px; margin-bottom: 6px; cursor: pointer; transition: all 0.15s; }
 .glossary-entry:hover { border-color: var(--accent); }
 .glossary-entry-header { display: flex; align-items: baseline; gap: 4px; }
@@ -510,7 +508,7 @@ body.dark-mode .landing-book-btn:hover { background: #1a1a2a; }
 .glossary-forms-list { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; direction: rtl; }
 .glossary-form-chip { display: inline-block; font-family: 'David Libre', serif; font-size: 1.1em; background: var(--bg-deep); padding: 2px 8px; border-radius: 4px; cursor: pointer; direction: rtl; }
 .glossary-form-chip:hover { background: var(--accent); color: #fff; }
-.glossary-highlight-btn { display: block; margin-top: 8px; background: var(--accent); color: #fff; border: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-family: 'Crimson Pro', serif; font-size: 0.85em; }
+.glossary-highlight-btn { display: block; margin-top: 8px; background: var(--accent); color: #fff; border: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; }
 .glossary-highlighted { background: rgba(200,168,78,0.25) !important; border-radius: 3px; }
 .glossary-refs-section { margin-top: 8px; font-size: 0.85em; }
 .glossary-refs-book { margin: 2px 0; }
@@ -530,7 +528,7 @@ body.dark-mode .glossary-form-chip { background: #2a2a2a; }
 #annotations-panel {
   display: none; position: fixed; top: 0; right: 0; bottom: 0; width: 360px; max-width: 90vw;
   background: var(--bg); border-left: 2px solid var(--accent); z-index: 3100;
-  overflow-y: auto; padding: 16px; font-family: 'Crimson Pro', serif;
+  overflow-y: auto; padding: 16px; font-family: 'David Libre', 'Georgia', serif;
   transform: translateX(100%); transition: transform 0.25s ease;
 }
 #annotations-panel.open { display: block; transform: translateX(0); }
@@ -538,9 +536,9 @@ body.dark-mode .glossary-form-chip { background: #2a2a2a; }
 .ann-panel-header h3 { font-size: 1.3em; color: var(--accent); margin: 0; }
 .ann-panel-close { cursor: pointer; font-size: 1.4em; color: var(--ink-light); padding: 4px 8px; }
 .ann-tabs { display: flex; gap: 4px; margin-bottom: 12px; }
-.ann-tab { background: transparent; border: 1px solid var(--rule); color: var(--ink-light); padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; font-family: 'Crimson Pro', serif; }
+.ann-tab { background: transparent; border: 1px solid var(--rule); color: var(--ink-light); padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; }
 .ann-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
-.ann-export-btn { background: var(--accent); color: #fff; border: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-family: 'Crimson Pro', serif; font-size: 0.85em; margin-top: 12px; }
+.ann-export-btn { background: var(--accent); color: #fff; border: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; margin-top: 12px; }
 .ann-item { padding: 8px; border: 1px solid var(--rule-light); border-radius: 4px; margin-bottom: 6px; font-size: 0.85em; }
 .ann-item-ref { font-weight: 600; color: var(--accent); margin-bottom: 4px; }
 .ann-item-text { color: var(--ink); direction: rtl; }
@@ -570,7 +568,7 @@ body.dark-mode #annotations-panel { background: #333333; border-color: #d4af37; 
   display: none; padding: 6px; border-top: 1px solid #3a3f55;
 }
 .sel-color-row { display: flex; gap: 3px; margin-bottom: 3px; align-items: center; }
-.sel-color-row-label { font-size: 0.6em; color: #8a7a4a; min-width: 12px; font-family: 'Crimson Pro', serif; }
+.sel-color-row-label { font-size: 0.6em; color: #8a7a4a; min-width: 12px; font-family: 'David Libre', 'Georgia', serif; }
 .sel-color {
   width: 22px; height: 22px; border-radius: 50%; cursor: pointer;
   border: 2px solid transparent; transition: all 0.15s;
@@ -578,8 +576,8 @@ body.dark-mode #annotations-panel { background: #333333; border-color: #d4af37; 
 .sel-color:hover { transform: scale(1.2); }
 .sel-color.active { border-color: #fff; box-shadow: 0 0 4px rgba(255,255,255,0.5); }
 #sel-note-row { display: none; padding: 6px; border-top: 1px solid #3a3f55; }
-#sel-note-input { width: 180px; height: 60px; font-size: 0.8em; font-family: 'Crimson Pro', serif; padding: 6px; border-radius: 4px; border: 1px solid #3a3f55; background: #0a0f1a; color: #e8e0d0; resize: none; }
-#sel-note-save { background: #c8a84e; color: #1e2233; border: none; padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; margin-top: 4px; font-family: 'Crimson Pro', serif; }
+#sel-note-input { width: 180px; height: 60px; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; padding: 6px; border-radius: 4px; border: 1px solid #3a3f55; background: #0a0f1a; color: #e8e0d0; resize: none; }
+#sel-note-save { background: #c8a84e; color: #1e2233; border: none; padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; margin-top: 4px; font-family: 'David Libre', 'Georgia', serif; }
 @media (max-width: 600px) {
   #sel-toolbar { flex-direction: row; flex-wrap: wrap; max-width: 200px; }
   #sel-toolbar button { width: 32px; height: 32px; font-size: 1em; }
@@ -593,14 +591,14 @@ body.hide-sel-toolbar #sel-toolbar { display: none !important; pointer-events: n
   background: var(--bg); border: 2px solid var(--accent); border-radius: 12px;
   padding: 24px; z-index: 1200; min-width: 280px; max-width: 90vw;
   box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'David Libre', 'Georgia', serif;
 }
 #share-popup.open { display: block; }
 #share-popup h3 { color: var(--accent); margin-bottom: 16px; }
 .share-btns { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
 .share-btn {
   background: var(--header-bg); color: var(--header-text); border: none;
-  padding: 8px 16px; border-radius: 6px; cursor: pointer; font-family: 'Crimson Pro', serif;
+  padding: 8px 16px; border-radius: 6px; cursor: pointer; font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.9em; transition: all 0.15s;
 }
 .share-btn:hover { opacity: 0.85; transform: scale(1.03); }
@@ -608,7 +606,7 @@ body.hide-sel-toolbar #sel-toolbar { display: none !important; pointer-events: n
 body.dark-mode #share-popup { background: #333333; border-color: #d4af37; }
 
 /* === ENHANCED POPUP (Strong's + Root) === */
-.popup-strong { font-family: 'Crimson Pro', serif; font-size: 0.85em; color: var(--ink-light); text-align: center; margin-bottom: 4px; direction: ltr; }
+.popup-strong { font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; color: var(--ink-light); text-align: center; margin-bottom: 4px; direction: ltr; }
 .popup-strong a { color: var(--accent); text-decoration: none; }
 .popup-strong a:hover { text-decoration: underline; }
 
@@ -652,7 +650,7 @@ body.dark-mode .word-unit.xref-linked:hover .gl { color: #85c1e9 !important; }
   position: fixed; top: 0; right: -400px; width: 380px; height: 100vh;
   background: var(--bg); border-left: 2px solid var(--accent); z-index: 1200;
   transition: right 0.3s ease; overflow-y: auto; padding: 0; direction: ltr;
-  font-family: 'Crimson Pro', serif; box-shadow: -4px 0 20px rgba(0,0,0,0.3);
+  font-family: 'David Libre', 'Georgia', serif; box-shadow: -4px 0 20px rgba(0,0,0,0.3);
 }
 #xref-panel.open { right: 0; }
 .xref-panel-header {
@@ -698,7 +696,7 @@ body.dark-mode .word-unit.xref-linked:hover .gl { color: #85c1e9 !important; }
 .xref-ref-nodata { font-size: 0.85em; color: var(--ink-light); font-style: italic; padding: 16px; }
 body.dark-mode #xref-panel { background: #252525; border-color: #d4af37; }
 
-#return-banner { display:none; position:fixed; top:46px; left:0; right:0; z-index:99; background:#fff; padding:8px 20px; text-align:center; font-family:'Crimson Pro',serif; font-size:0.95em; border-bottom:1px solid #e8e2d4; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
+#return-banner { display:none; position:fixed; top:46px; left:0; right:0; z-index:99; background:#fff; padding:8px 20px; text-align:center; font-family:'David Libre', 'Georgia', serif; font-size:0.95em; border-bottom:1px solid #e8e2d4; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
 #return-banner a { display:inline-block; background:#c8a84e; color:#fff; text-decoration:none; padding:6px 18px; border-radius:4px; font-weight:600; font-size:0.9em; }
 #return-banner a:hover { background:#b8942e; }
 body.dark-mode #return-banner { background:#2a2a2a; border-color:#444; }
@@ -926,6 +924,7 @@ body, button, input, select, textarea,
   </main>
 </div>
 
+<script src="interlinear_gloss.js?v=1"></script>
 <script>
 (function readerTouchBurstTracker() {
   var recentEnds = [];
@@ -1191,7 +1190,7 @@ function makeWordUnit(h, e, isSof) {
   var div = document.createElement('div');
   div.className = 'word-unit' + (isSof ? ' sof' : '');
   div.setAttribute('data-h', h);
-  var baseGloss = e.replace(/-/g, ' ');
+  var baseGloss = augmentGlossWithPrefixes(h, e.replace(/-/g, ' '));
   var gloss = computeGlossFromHebrew(h, baseGloss);
   var displayH = window._noNikkud ? _stripNikkudDisplay(h) : h;
   div.innerHTML = '<span class="hw">' + displayH + '</span><span class="tl"></span><span class="gl">' + gloss + '</span>';
@@ -1413,7 +1412,7 @@ function updateAudioSource(chId) {
 
 function positionAudioBar() {
   var bar = document.getElementById('audio-bar');
-  var header = document.querySelector('.controls-top');
+  var header = window.swHeaderBar && window.swHeaderBar();
   if (header && bar.classList.contains('visible')) {
     bar.style.top = header.offsetHeight + 'px';
   }
@@ -1560,7 +1559,7 @@ try {
 <script src="ot_verses/joe.js"></script>
 <script src="ot_verses/amo.js"></script>
 <script src="ot_verses/oba.js"></script>
-<script src="ot_verses/jon.js"></script>
+<script src="ot_verses/jon.js?v=20260523b"></script>
 <script src="ot_verses/mic.js"></script>
 <script src="ot_verses/nah.js"></script>
 <script src="ot_verses/hab.js"></script>
@@ -1638,7 +1637,7 @@ var _tlKnown = {
   '\u05D9\u05E8\u05D0':'yare','\u05D9\u05E8\u05D3':'yarad','\u05D9\u05E8\u05E9':'yarash','\u05D9\u05E9\u05D1':'yashav','\u05D9\u05E9\u05E2':'yasha',
   '\u05D9\u05E9\u05E8':'yashar','\u05DB\u05D4\u05DF':'kohen','\u05DB\u05D5\u05DF':'kun','\u05DB\u05E4\u05E8':'kafar','\u05DB\u05E8\u05EA':'karat',
   '\u05DB\u05EA\u05D1':'katav','\u05DC\u05D7\u05DD':'lacham','\u05DC\u05DE\u05D3':'lamad','\u05DC\u05E7\u05D7':'laqach','\u05DE\u05DC\u05D0':'male',
-  '\u05DE\u05DC\u05DA':'melekh','\u05DE\u05E9\u05D7':'mashach','\u05DE\u05E9\u05DC':'mashal','\u05DE\u05E9\u05E4\u05D8':'mishpat','\u05DE\u05D5\u05EA':'mut',
+  '\u05DE\u05DC\u05DA':'melekh','\u05DE\u05DC\u05DB\u05D5\u05EA':'malkhut','\u05DE\u05DC\u05DB\u05D5':'malkhu','\u05DE\u05E9\u05D7':'mashach','\u05DE\u05E9\u05DC':'mashal','\u05DE\u05E9\u05E4\u05D8':'mishpat','\u05DE\u05D5\u05EA':'mut',
   '\u05E0\u05D1\u05D0':'nava','\u05E0\u05D2\u05D3':'nagad','\u05E0\u05E4\u05DC':'nafal','\u05E0\u05E4\u05E9':'nefesh','\u05E0\u05E9\u05D0':'nasa',
   '\u05E0\u05EA\u05DF':'natan','\u05E1\u05E4\u05E8':'sefer','\u05E2\u05D1\u05D3':'avad','\u05E2\u05D1\u05E8':'avar','\u05E2\u05DC\u05D4':'alah',
   '\u05E2\u05DC\u05DD':'olam','\u05E2\u05DE\u05D3':'amad','\u05E2\u05E0\u05D4':'anah','\u05E2\u05E9\u05D4':'asah','\u05E4\u05E7\u05D3':'paqad',
@@ -1646,7 +1645,7 @@ var _tlKnown = {
   '\u05E7\u05D5\u05DC':'qol','\u05E7\u05E8\u05D0':'qara','\u05E7\u05E8\u05D1':'qarav','\u05E8\u05D0\u05D4':'raah','\u05E8\u05D0\u05E9':'rosh',
   '\u05E8\u05D5\u05D7':'ruach','\u05E8\u05D7\u05DD':'racham','\u05E9\u05D5\u05D1':'shuv','\u05E9\u05DC\u05D7':'shalach','\u05E9\u05DC\u05DD':'shalam',
   '\u05E9\u05DE\u05E2':'shama','\u05E9\u05DE\u05E8':'shamar','\u05E9\u05E4\u05D8':'shafat','\u05EA\u05D5\u05E8':'torah',
-  '\u05D0\u05DC\u05D4\u05D9\u05DD':'elohim','\u05D9\u05D4\u05D5\u05D4':'Adonai','\u05E0\u05D1\u05D9\u05D0':'navi','\u05EA\u05D5\u05E8\u05D4':'torah',
+  '\u05D0\u05DC\u05D4\u05D9\u05DD':'elohim','\u05D9\u05D4\u05D5\u05D4':'Adonai','\u05DC\u05D9\u05D4\u05D5\u05D4':'la-Adonai','\u05D1\u05D9\u05D4\u05D5\u05D4':'ba-Adonai','\u05DE\u05D9\u05D4\u05D5\u05D4':'me-Adonai','\u05DB\u05D9\u05D4\u05D5\u05D4':'ke-Adonai','\u05D5\u05D9\u05D4\u05D5\u05D4':'ve-Adonai','\u05D5\u05DC\u05D9\u05D4\u05D5\u05D4':'ve-la-Adonai','\u05D4\u05D9\u05D4\u05D5\u05D4':'ha-Adonai','\u05E0\u05D1\u05D9\u05D0':'navi','\u05EA\u05D5\u05E8\u05D4':'torah',
   '\u05E9\u05DC\u05D5\u05DD':'shalom','\u05D1\u05E8\u05D9\u05EA':'berit','\u05E0\u05E4\u05E9':'nefesh','\u05E8\u05D5\u05D7':'ruach',
   '\u05DE\u05E9\u05D9\u05D7':'mashiach','\u05EA\u05E4\u05DC\u05D4':'tefilah','\u05D0\u05DE\u05D5\u05E0\u05D4':'emunah','\u05EA\u05E9\u05D5\u05D1\u05D4':'teshuvah','\u05D2\u05D0\u05D5\u05DC\u05D4':'geulah'
 };
@@ -1654,10 +1653,11 @@ var _tlKnown = {
 function transliterate(heb) {
   if (heb.indexOf(' ') >= 0) return heb.split(' ').map(function(p) { return transliterate(p); }).join(' ');
   if (heb.indexOf('\u05BE') >= 0) return heb.split('\u05BE').map(function(p) { return transliterate(p); }).join('-');
-  var hasNikkud = /[\u05B0-\u05BB]/.test(heb);
+  var hasNikkud = /[\u05B0-\u05BC]/.test(heb);
   if (hasNikkud) {
     var consonantsOnly = heb.replace(/[\u0591-\u05C7\u05B0-\u05BB\u05BD\u05BF\u05C1\u05C2]/g, '');
     if (consonantsOnly === '\u05E8\u05E2') return 'ra';
+    if (_tlKnown[consonantsOnly]) return _tlKnown[consonantsOnly];
     return _tlPointed(heb);
   }
   var clean = heb.replace(/[\u0591-\u05C7]/g, '');
@@ -1675,6 +1675,13 @@ function transliterate(heb) {
 
 function _tlPointed(text) {
   var stripped = text.replace(/[\u0591-\u05C7]/g, '');
+  if (stripped === '\u05D5\u05DC\u05D9\u05D4\u05D5\u05D4') return 've-la-Adonai';
+  if (stripped === '\u05D4\u05D9\u05D4\u05D5\u05D4') return 'ha-Adonai';
+  if (stripped === '\u05DC\u05D9\u05D4\u05D5\u05D4') return 'la-Adonai';
+  if (stripped === '\u05D1\u05D9\u05D4\u05D5\u05D4') return 'ba-Adonai';
+  if (stripped === '\u05DE\u05D9\u05D4\u05D5\u05D4') return 'me-Adonai';
+  if (stripped === '\u05DB\u05D9\u05D4\u05D5\u05D4') return 'ke-Adonai';
+  if (stripped === '\u05D5\u05D9\u05D4\u05D5\u05D4') return 've-Adonai';
   if (stripped === '\u05D9\u05D4\u05D5\u05D4') return 'Adonai';
   var vmap = {};
   vmap['\u05B0']='\u0115'; vmap['\u05B1']='\u0115'; vmap['\u05B2']='\u0103'; vmap['\u05B3']='\u014F';
@@ -1710,16 +1717,22 @@ function _tlPointed(text) {
     else if (tk.dag && dmap[tk.c]) c = dmap[tk.c];
     else c = cmap[tk.c] || '';
     if (tk.c === '\u05D5' && tk.dag && !tk.vowel) {
+      if (t > 0 && tokens[t-1].c === '\u05D0' && !tokens[t-1].vowel) { segments.push({c:'\u02BE', v:'\u00FB'}); continue; }
       if (segments.length > 0) segments[segments.length-1].v = '\u00FB';
       else segments.push({c:'', v:'\u00FB'});
       continue;
     }
     if (tk.c === '\u05D5' && tk.vowel === '\u05B9') {
+      if (t > 0 && tokens[t-1].c === '\u05D0' && !tokens[t-1].vowel) { segments.push({c:'\u02BE', v:'\u00F4'}); continue; }
       if (segments.length > 0) segments[segments.length-1].v = '\u00F4';
       else segments.push({c:'', v:'\u00F4'});
       continue;
     }
     if (tk.c === '\u05D5' && !tk.vowel && !tk.dag && t > 0 && tokens[t-1].vowel === '\u05B9') continue;
+    if (tk.c === '\u05D0' && !tk.vowel && !tk.dag && t < len - 1) {
+      var nxtAv = tokens[t + 1];
+      if (nxtAv.c === '\u05D5' && (nxtAv.vowel === '\u05B9' || (nxtAv.dag && !nxtAv.vowel))) continue;
+    }
     if (tk.c === '\u05D4' && isLast && !tk.vowel) continue;
     if (tk.c === '\u05D9' && !tk.vowel && t > 0 && tokens[t-1].vowel === '\u05B4') {
       if (segments.length > 0) segments[segments.length-1].v = '\u00EE'; continue;
@@ -1736,10 +1749,13 @@ function _tlPointed(text) {
     var nextTok = t < len-1 ? tokens[t+1] : null;
     if (tk.vowel === '\u05B0') {
       if (isLast) v = '';
-      else if (tk.dag && bgdkpt.indexOf(tk.c) < 0) v = '\u0115';
-      else if (tk.dag && bgdkpt.indexOf(tk.c) >= 0 && t > 0 && prevVowel && prevVowel !== '\u05B0') v = '\u0115';
-      else if (prevVowel === '\u05B9') v = '';
-      else if (prevVowel === '\u05B4') v = '';
+      else if (tk.dag) v = '\u0115';
+      else if (t > 0 && !tk.dag && prevVowel === '\u05B7' && nextTok) {
+        var n2sh = t + 2 < len ? tokens[t + 2] : null;
+        if (nextTok.vowel === '\u05B4' || nextTok.vowel === '\u05B5' || nextTok.vowel === '\u05B6') v = '';
+        else if (!nextTok.vowel && (nextTok.dag || (n2sh && n2sh.c === '\u05D5' && n2sh.dag && !n2sh.vowel))) v = '';
+      }
+      else if (t > 0 && (prevVowel === '\u05B4' || prevVowel === '\u05B5' || prevVowel === '\u05B6' || prevVowel === '\u05B9')) v = '';
       else if (t > 0 && tokens[t-1].c === '\u05D5' && tokens[t-1].dag && !tokens[t-1].vowel) v = '';
       else if (nextTok && bgdkpt.indexOf(nextTok.c) >= 0 && nextTok.dag) v = '';
       else if (nextTok && (t + 1 === len - 1) && !nextTok.vowel) v = '';
@@ -1764,6 +1780,8 @@ function _tlPointed(text) {
     var isBgdkptForte = tk.dag && bgdkpt.indexOf(tk.c) >= 0 && t > 0 && prevVowel && prevVowel !== '\u05B0';
     if (isDagForte || isBgdkptForte) segments.push({c: c, v: '', ov: '', hc: tk.c, dag: false, doubled: true});
     if (tk.c === '\u05D4' && isLast && tk.dag && !tk.vowel) { segments.push({c: 'h', v: '', ov: '', hc: tk.c, dag: true}); continue; }
+    if (tk.c === '\u05D0' && tk.vowel) { segments.push({c: '\u02BE', v: v, ov: tk.vowel || '', hc: tk.c, dag: !!tk.dag}); continue; }
+    if (tk.c === '\u05E2' && tk.vowel) { segments.push({c: '\u02BF', v: v, ov: tk.vowel || '', hc: tk.c, dag: !!tk.dag}); continue; }
     segments.push({c: c, v: v, ov: tk.vowel || '', hc: tk.c, dag: !!tk.dag});
   }
   var gutturals = '\u05D7\u05E2\u05D4';
@@ -2055,12 +2073,12 @@ function closeAllPanels() {
     overlay.style.zIndex = '10000';
     overlay.style.display = 'none';
     overlay.innerHTML =
-      '<div id="note-modal-card" style="max-width:720px;width:92%;margin:10vh auto;background:var(--bg);color:var(--ink);border:2px solid var(--accent);border-radius:10px;box-shadow:0 14px 40px rgba(0,0,0,0.35);padding:16px;direction:ltr;font-family:Crimson Pro,serif;">' +
+      '<div id="note-modal-card" style="max-width:720px;width:92%;margin:10vh auto;background:var(--bg);color:var(--ink);border:2px solid var(--accent);border-radius:10px;box-shadow:0 14px 40px rgba(0,0,0,0.35);padding:16px;direction:ltr;font-family:David Libre,serif;">' +
         '<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;">' +
           '<div style="font-weight:700;color:var(--accent);font-size:1.05em;" id="note-modal-title">Note</div>' +
           '<button id="note-modal-close" style="border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer;">Close</button>' +
         '</div>' +
-        '<textarea id="note-modal-text" style="width:100%;min-height:180px;resize:vertical;border:1px solid var(--rule);border-radius:8px;padding:10px 12px;font-family:Crimson Pro,serif;font-size:1em;line-height:1.4;background:var(--bg-deep);color:var(--ink);"></textarea>' +
+        '<textarea id="note-modal-text" style="width:100%;min-height:180px;resize:vertical;border:1px solid var(--rule);border-radius:8px;padding:10px 12px;font-family:David Libre,serif;font-size:1em;line-height:1.4;background:var(--bg-deep);color:var(--ink);"></textarea>' +
         '<div style="display:flex;justify-content:flex-end;gap:10px;margin-top:12px;">' +
           '<button id="note-modal-delete" style="border:1px solid rgba(180,60,60,0.4);background:transparent;color:#b43c3c;border-radius:8px;padding:8px 12px;cursor:pointer;">Delete</button>' +
           '<button id="note-modal-save" style="border:1px solid var(--accent);background:var(--accent);color:#1e2233;border-radius:8px;padding:8px 12px;cursor:pointer;font-weight:700;">Save</button>' +
@@ -2797,20 +2815,22 @@ function selToolbarClearAll() {
 }
 
 // Selection event listeners — do not dismiss on taps inside verse text (fixes double-tap / drag / native copy)
+var _selToolbarLastInteract = 0;
 document.addEventListener('mouseup', function(e) { if (!e.target.closest('#sel-toolbar')) setTimeout(_showSelToolbar, 10); });
 document.addEventListener('touchend', function(e) { if (!e.target.closest('#sel-toolbar')) setTimeout(_showSelToolbar, 300); });
 document.addEventListener('mousedown', function(e) {
-  if (e.target.closest('#sel-toolbar')) return;
+  if (e.target.closest('#sel-toolbar')) { _selToolbarLastInteract = Date.now(); return; }
   if (_isSelReadingSurface(e.target)) return;
   _hideSelToolbar();
 });
 document.addEventListener('touchstart', function(e) {
-  if (e.target.closest('#sel-toolbar')) return;
+  if (e.target.closest('#sel-toolbar')) { _selToolbarLastInteract = Date.now(); return; }
   if (e.touches && e.touches.length > 1) return;
   if (_isSelReadingSurface(e.target)) return;
   _hideSelToolbar();
 });
 document.addEventListener('selectionchange', function() {
+  if (Date.now() - _selToolbarLastInteract < 500) return;
   var sel = window.getSelection();
   if (sel && !sel.isCollapsed && sel.toString().trim()) return;
   var tb = document.getElementById('sel-toolbar');
@@ -3163,7 +3183,7 @@ function doSearch(query) {
     if (hebStripped.indexOf(qStripped) >= 0 || si.english.toLowerCase().indexOf(q) >= 0 || si.hebrew.indexOf(q) >= 0) matches.push(si);
   }
   if (matches.length === 0) {
-    results.innerHTML = '<div style="padding:12px;color:#888;font-family:Crimson Pro,serif;">No results found</div>';
+    results.innerHTML = '<div style="padding:12px;color:#888;font-family:David Libre,serif;">No results found</div>';
     results.classList.add('open'); return;
   }
   var html = '';
@@ -3173,7 +3193,7 @@ function doSearch(query) {
     html += '<div class="search-result-ref">' + m.ref + '</div>';
     html += '<div class="search-result-text">' + displayText + '</div></div>';
   });
-  html += '<div style="padding:12px 16px;border-top:2px solid var(--rule);direction:ltr;font-family:Crimson Pro,serif;font-size:0.85em;color:var(--ink-light);">';
+  html += '<div style="padding:12px 16px;border-top:2px solid var(--rule);direction:ltr;font-family:David Libre,serif;font-size:0.85em;color:var(--ink-light);">';
   html += '<div style="font-weight:600;margin-bottom:6px;">Search other volumes:</div>';
   [{name:'New Testament',page:'nt.html'},{name:'Book of Mormon',page:'bom/bom.html'},{name:'D&C',page:'dc.html'},{name:'Pearl of Great Price',page:'pgp.html'},{name:'JST',page:'jst.html'}].forEach(function(v) {
     html += '<a href="' + v.page + '?q=' + encodeURIComponent(query.trim()) + '" style="display:inline-block;margin:3px 4px;color:var(--accent);text-decoration:none;padding:4px 10px;border:1px solid var(--accent);border-radius:3px;font-size:0.9em;">' + v.name + '</a>';
@@ -3292,13 +3312,15 @@ window.addEventListener('scroll', function() {
 
 </script>
 <script src="notes_engine.js"></script>
-<script src="nav_engine.js"></script>
+<script src="site_chrome.js?v=23" data-sw-volume="ot"></script>
+<script src="nav_engine.js?v=25"></script>
 <script src="xref_study_panel.js"></script>
 <script>
 NavEngine.init({
   volume: 'ot',
   currentChapter: currentChapterId || 'landing',
   basePath: '',
+  skipSwipeNav: true,
   onNavigate: function(id) { navTo(id); }
 });
 </script>
@@ -3318,12 +3340,6 @@ NavEngine.init({
 })();
 </script>
 <script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js?v=83').then(function(r){r.update();});
-  var _swReady = false; window.addEventListener('load', function() { _swReady = true; }); navigator.serviceWorker.addEventListener('controllerchange', function() { if (_swReady) window.location.reload(); });
-}
-</script>
-<script>
 function _showReturnBanner() {
   if (sessionStorage.getItem('xref-returning')) { sessionStorage.removeItem('xref-returning'); return; }
   var f = sessionStorage.getItem('xref-return-from');
@@ -3339,7 +3355,7 @@ function _showReturnBanner() {
   document.getElementById('return-verse').textContent = t;
   document.getElementById('return-link').href = f;
   var b = document.getElementById('return-banner');
-  var ct = document.querySelector('.controls-top');
+  var ct = window.swHeaderBar && window.swHeaderBar();
   if (ct) b.style.top = ct.offsetHeight + 'px';
   b.style.display = 'block';
 }
@@ -3350,7 +3366,7 @@ window.addEventListener('pageshow', function(e) { if (e.persisted) _showReturnBa
 window.addEventListener('resize', function() {
   var b = document.getElementById('return-banner');
   if (b.style.display === 'block') {
-    var ct = document.querySelector('.controls-top');
+    var ct = window.swHeaderBar && window.swHeaderBar();
     if (ct) b.style.top = ct.offsetHeight + 'px';
   }
 });
@@ -3358,7 +3374,7 @@ window.addEventListener('resize', function() {
 
 <!-- Keyboard Shortcuts Overlay -->
 <div id="shortcuts-overlay">
-  <div style="background:var(--bg);border:2px solid var(--accent);border-radius:8px;padding:24px;max-width:420px;width:90%;max-height:80vh;overflow-y:auto;direction:ltr;font-family:'Crimson Pro',serif;">
+  <div style="background:var(--bg);border:2px solid var(--accent);border-radius:8px;padding:24px;max-width:420px;width:90%;max-height:80vh;overflow-y:auto;direction:ltr;font-family:'David Libre', 'Georgia', serif;">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
       <h3 style="font-family:'Cormorant Garamond',serif;color:var(--accent);font-size:1.3em;margin:0;">Keyboard Shortcuts</h3>
       <span onclick="closeShortcuts()" style="cursor:pointer;color:var(--ink-light);font-size:1.3em;">&times;</span>

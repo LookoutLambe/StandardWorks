@@ -9245,7 +9245,7 @@ window._ntCrossrefsData = {
       "refs": [
         "Isa. 8:14 (13–15)",
         "Luke 2:34",
-        "Rom. 9:32 (28���33)",
+        "Rom. 9:32 (28–33)",
         "1 Pet. 2:8 (6–8)"
       ],
       "category": "cross-ref"
@@ -68822,7 +68822,7 @@ window._ntCrossrefsData = {
       "marker": "d",
       "text": "slanderers",
       "refs": [
-        "TG��Slander"
+        "TG—Slander"
       ],
       "category": "tg"
     },

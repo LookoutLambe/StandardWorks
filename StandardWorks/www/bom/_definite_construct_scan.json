@@ -1394,7 +1394,7 @@
       "he1": "הָאֲחֵרִים",
       "gloss1": "the-other",
       "he2": "הַנֹּתְנִים",
-      "gloss2": "the-which-give"
+      "gloss2": "which-give"
     },
     {
       "type": "double_the_gloss_pair",
@@ -1691,7 +1691,7 @@
       "he1": "הָאֵימָה",
       "gloss1": "the-terror",
       "he2": "הָאוֹסְרִים",
-      "gloss2": "the-which-bind"
+      "gloss2": "which-bind"
     },
     {
       "type": "double_the_gloss_pair",
@@ -1702,7 +1702,7 @@
       "he1": "הַמּוֹסְרוֹת",
       "gloss1": "the-chains",
       "he2": "הָאוֹסְרִים",
-      "gloss2": "the-which-bind"
+      "gloss2": "which-bind"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -1724,7 +1724,7 @@
       "he1": "הַמּוֹסֵרוֹת",
       "gloss1": "the-chains",
       "he2": "הָאוֹסְרִים",
-      "gloss2": "the-which-bind"
+      "gloss2": "which-bind"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -1768,7 +1768,7 @@
       "he1": "הָעֹנֶשׁ",
       "gloss1": "the-punishment",
       "he2": "הַקָּבוּעַ",
-      "gloss2": "the-which-is-affixed"
+      "gloss2": "which-is-affixed"
     },
     {
       "type": "double_the_gloss_pair",
@@ -1779,7 +1779,7 @@
       "he1": "הָאֹשֶׁר",
       "gloss1": "the-happiness",
       "he2": "הַקָּבוּעַ",
-      "gloss2": "the-which-is-affixed"
+      "gloss2": "which-is-affixed"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -1900,7 +1900,7 @@
       "he1": "הַכְּתוּבִים",
       "gloss1": "the-scriptures",
       "he2": "הַחֲקוּקִים",
-      "gloss2": "the-which-are-engraven"
+      "gloss2": "which-are-engraven"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -2219,7 +2219,7 @@
       "he1": "הַמָּוֶת",
       "gloss1": "the-death",
       "he2": "הָעוֹבֵר",
-      "gloss2": "the-which-passes"
+      "gloss2": "which-passes"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -2395,7 +2395,7 @@
       "he1": "הָאֹשֶׁר",
       "gloss1": "the-happiness",
       "he2": "הַמּוּכָן",
-      "gloss2": "the-which-is-prepared"
+      "gloss2": "which-is-prepared"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -2879,7 +2879,7 @@
       "he1": "רַבּוֹת",
       "gloss1": "many",
       "he2": "הַגּוֹרְמוֹת",
-      "gloss2": "the-which-cause"
+      "gloss2": "which-cause"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -2912,7 +2912,7 @@
       "he1": "הַדְּבָרִים",
       "gloss1": "the-things",
       "he2": "הַחֲתוּמִים",
-      "gloss2": "the-which-are-sealed"
+      "gloss2": "which-are-sealed"
     },
     {
       "type": "double_the_gloss_pair",
@@ -2923,7 +2923,7 @@
       "he1": "הַדְּבָרִים",
       "gloss1": "the-things",
       "he2": "הַחֲתוּמִים",
-      "gloss2": "the-which-are-sealed"
+      "gloss2": "which-are-sealed"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -2934,7 +2934,7 @@
       "he1": "אֶת־הַדְּבָרִים",
       "gloss1": "the-words",
       "he2": "הַחֲתוּמִים",
-      "gloss2": "the-which-are-sealed"
+      "gloss2": "which-are-sealed"
     },
     {
       "type": "double_the_gloss_pair",
@@ -2945,7 +2945,7 @@
       "he1": "הַסֵּפֶר",
       "gloss1": "the-book",
       "he2": "הַחֲתוּמִים",
-      "gloss2": "the-which-were-sealed"
+      "gloss2": "which-were-sealed"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -3242,7 +3242,7 @@
       "he1": "הַקֹּדֶשׁ",
       "gloss1": "the-Holiness",
       "he2": "הַמֵּעִיד",
-      "gloss2": "the-which-bears-record-of"
+      "gloss2": "which-bears-record-of"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -3396,7 +3396,7 @@
       "he1": "רַבִּים",
       "gloss1": "many",
       "he2": "הַכְּתוּבִים",
-      "gloss2": "the-which-are-written"
+      "gloss2": "which-are-written"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -4683,7 +4683,7 @@
       "he1": "הַקֹּדֶשׁ",
       "gloss1": "the-Holy",
       "he2": "הַמֵּעִיד",
-      "gloss2": "the-which-bears-record-of"
+      "gloss2": "which-bears-record-of"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -5387,7 +5387,7 @@
       "he1": "הֶעָרִים",
       "gloss1": "the-cities",
       "he2": "הַשְּׂרוּפוֹת",
-      "gloss2": "the-which-had-been-burned"
+      "gloss2": "which-had-been-burned"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -7202,7 +7202,7 @@
       "he1": "הָאָרֶץ",
       "gloss1": "the-land",
       "he2": "הַנִּקְרֵאת",
-      "gloss2": "the-which-is-called"
+      "gloss2": "which-is-called"
     },
     {
       "type": "double_the_gloss_pair",
@@ -7312,7 +7312,7 @@
       "he1": "הָאָרֶץ",
       "gloss1": "the-land",
       "he2": "הַנִּקְרֵאת",
-      "gloss2": "the-which-is-called"
+      "gloss2": "which-is-called"
     },
     {
       "type": "double_the_gloss_pair",
@@ -8170,7 +8170,7 @@
       "he1": "אָמַר",
       "gloss1": "said",
       "he2": "הַכָּתוּב",
-      "gloss2": "the-which-is-written"
+      "gloss2": "which-is-written"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -9270,7 +9270,7 @@
       "he1": "אֶת־הַמּוֹעֵד",
       "gloss1": "the-season",
       "he2": "הַקָּבוּעַ׃",
-      "gloss2": "the-which-is-affixed"
+      "gloss2": "which-is-affixed"
     },
     {
       "type": "double_the_gloss_pair",
@@ -9281,7 +9281,7 @@
       "he1": "הַמּוֹעֵד",
       "gloss1": "the-season",
       "he2": "הַקָּבוּעַ",
-      "gloss2": "the-which-is-affixed"
+      "gloss2": "which-is-affixed"
     },
     {
       "type": "double_the_gloss_pair",
@@ -9292,7 +9292,7 @@
       "he1": "הַמּוֹעֲדִים",
       "gloss1": "the-appointed-times",
       "he2": "הַקְּבוּעִים",
-      "gloss2": "the-which-were-fastened"
+      "gloss2": "which-were-fastened"
     },
     {
       "type": "double_the_gloss_pair",
@@ -13305,7 +13305,7 @@
       "verseNum": "יב",
       "index": 4,
       "he1": "הַכָּתוּב",
-      "gloss1": "the-which-is-written",
+      "gloss1": "which-is-written",
       "he2": "הָאוֹמֵר",
       "gloss2": "the-say"
     },
@@ -14044,7 +14044,7 @@
       "he1": "חֲלָקִים",
       "gloss1": "parts",
       "he2": "הַנִּקְרָאִים",
-      "gloss2": "the-which-are-called"
+      "gloss2": "which-are-called"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -15650,7 +15650,7 @@
       "he1": "יְהוָה",
       "gloss1": "the-Lord",
       "he2": "הַמֵּעִיד",
-      "gloss2": "the-which-bears-record-of"
+      "gloss2": "which-bears-record-of"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -16046,7 +16046,7 @@
       "he1": "הַדָּבָר",
       "gloss1": "the-word",
       "he2": "הָרֹפֵא",
-      "gloss2": "the-which-heals"
+      "gloss2": "which-heals"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -16123,7 +16123,7 @@
       "he1": "הַדְּבָרִים",
       "gloss1": "the-things",
       "he2": "הַכְּתוּבִים",
-      "gloss2": "the-which-were-written"
+      "gloss2": "which-were-written"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -16651,7 +16651,7 @@
       "he1": "אֶת־הָעֲנָפִים",
       "gloss1": "the-branches",
       "he2": "הַמּוֹצִיאִים",
-      "gloss2": "the-which-bring-forth"
+      "gloss2": "which-bring-forth"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -17641,7 +17641,7 @@
       "he1": "אָמַר",
       "gloss1": "said",
       "he2": "הַכָּתוּב",
-      "gloss2": "the-which-is-written"
+      "gloss2": "which-is-written"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -19214,7 +19214,7 @@
       "he1": "קָדִים",
       "gloss1": "the-east",
       "he2": "הַמֵּבִיא",
-      "gloss2": "the-which-brings"
+      "gloss2": "which-brings"
     },
     {
       "type": "double_the_gloss_pair",
@@ -19269,7 +19269,7 @@
       "he1": "פֶּרֶא",
       "gloss1": "wild",
       "he2": "הַבּוֹרֵחַ",
-      "gloss2": "the-which-flees"
+      "gloss2": "which-flees"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -19346,7 +19346,7 @@
       "he1": "אֶת־הַסְּפָרִים",
       "gloss1": "the-records",
       "he2": "הַחֲרוּתִים",
-      "gloss2": "the-which-were-engraven"
+      "gloss2": "which-were-engraven"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -19357,7 +19357,7 @@
       "he1": "אֶת־הַמּוֹשָׁבוֹת",
       "gloss1": "the-seats",
       "he2": "הַמֻּבְדָּלִים",
-      "gloss2": "the-which-were-set-apart"
+      "gloss2": "which-were-set-apart"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -19423,7 +19423,7 @@
       "he1": "הַדְּבָרִים",
       "gloss1": "the-words",
       "he2": "הַכְּתוּבִים",
-      "gloss2": "the-which-are-written"
+      "gloss2": "which-are-written"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -19511,7 +19511,7 @@
       "he1": "אֶל־מָקוֹם",
       "gloss1": "to-a-place",
       "he2": "הַנִּקְרָא",
-      "gloss2": "the-which-was-called"
+      "gloss2": "which-was-called"
     },
     {
       "type": "construct_chain_possible_missing_of",
@@ -19753,7 +19753,7 @@
       "he1": "אֶת־הַמַּשָּׂא",
       "gloss1": "the-burdens",
       "he2": "הַמּוּשָׂם",
-      "gloss2": "the-which-are-put"
+      "gloss2": "which-are-put"
     },
     {
       "type": "double_the_gloss_pair",
@@ -19962,7 +19962,7 @@
       "he1": "הָאֲבָנִים",
       "gloss1": "the-stones",
       "he2": "הַקְּבוּעִים",
-      "gloss2": "the-which-were-fastened"
+      "gloss2": "which-were-fastened"
     },
     {
       "type": "double_the_gloss_pair",
@@ -20072,7 +20072,7 @@
       "he1": "אֶת־כָּל־הַדְּבָרִים",
       "gloss1": "all-the-things",
       "he2": "הַבָּאִים",
-      "gloss2": "the-which-are-to-come"
+      "gloss2": "which-are-to-come"
     },
     {
       "type": "construct_chain_possible_missing_of",

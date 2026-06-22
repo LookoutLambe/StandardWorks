@@ -44408,7 +44408,7 @@ window._otCrossrefsData = {
       "marker": "a",
       "text": "inherit",
       "refs": [
-        "Deut. 9:1 (1��6)",
+        "Deut. 9:1 (1–6)",
         "Josh. 1:11 (1–18)"
       ],
       "category": "cross-ref"
@@ -144383,7 +144383,7 @@ window._otCrossrefsData = {
       "marker": "a",
       "text": "return",
       "refs": [
-        "2 Kgs. 23:3 (2��3)"
+        "2 Kgs. 23:3 (2–3)"
       ],
       "category": "cross-ref"
     }
@@ -147887,7 +147887,7 @@ window._otCrossrefsData = {
       "text": "among",
       "refs": [
         "2 Ne. 23:15",
-        "Alma 59:6 (5��6)"
+        "Alma 59:6 (5–6)"
       ],
       "category": "cross-ref"
     },
@@ -169311,7 +169311,7 @@ window._otCrossrefsData = {
       "marker": "a",
       "text": "mountain",
       "refs": [
-        "Isa. 2:2 (1���3)"
+        "Isa. 2:2 (1–3)"
       ],
       "category": "cross-ref"
     },

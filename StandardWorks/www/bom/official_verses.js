@@ -3,7 +3,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 1,
   "verse": 1,
-  "hebrew": "אָנֹכִי נֶפִי בֶּן־אָב חָסִיד וּלְאֵם חֲסִידָה  אֲשֶׁר חִנְּכוּנִי בְּמוּסַר אָבִי וּבְדַעְתּוֹ רַב־עֳנִי רָאוּ עֵינַי בִּימֵי חַיַּי וְאַף לֹא־עֲזָבַנִי חֶסֶד יְהוָה כָּל־הַיָּמִים וַיִּתֶּן־לִי אֱלֹהִים בִּינָה לָדַעַת סוֹדוֹ וְחַסְדּוֹ עַל־כֵּן אָשִׂימָה אֶת־דִּבְרֵי יָמַי בַּסֵּפֶר׃",
+  "hebrew": "אָנֹכִי נֶפִי בֶּן־אָב חָסִיד וְאֵם חֲסִידָה  אֲשֶׁר חִנְּכוּנִי מְעַט בְּכָל־מוּסַר אָבִי וּבְדַעְתּוֹ רַב־עֳנִי רָאוּ עֵינַי בִּימֵי חַיַּי וְאַף לֹא־עֲזָבַנִי חֶסֶד יְהוָה כָּל־הַיָּמִים וַיִּתֶּן־לִי אֱלֹהִים בִּינָה לָדַעַת סוֹדוֹ וְחַסְדּוֹ עַל־כֵּן אָשִׂימָה אֶת־דִּבְרֵי יָמַי בַּסֵּפֶר׃",
   "english": "I, Nephi, having been born of goodly parents, therefore I was taught somewhat in all the learning of my father; and having seen many afflictions in the course of my days, nevertheless, having been highly favored of the Lord in all my days; yea, having had a great knowledge of the goodness and the mysteries of God, therefore I make a record of my proceedings in my days."
  },
  {
@@ -24,28 +24,28 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 1,
   "verse": 4,
-  "hebrew": "וַיְהִי בִּשְׁנַת אַחַת לְמַלְכוּת צִדְקִיָּהוּ מֶלֶךְ יְהוּדָה וְלֵחִי אָבִי הָיָה יֹשֵׁב בִּירוּשָׁלַיִם כָּל־יָמָיו וּבַשָּׁנָה הַהִיא בָּאוּ נְבִיאִים רַבִּים וַיִּנָּבְאוּ אֶל־הָעָם לֵאמֹר שׁוּבוּ פֶּן־תִּשָּׁחֵת הָעִיר יְרוּשָׁלַיִם הַגְּדוֹלָה׃",
+  "hebrew": "וַיְהִי בִּשְׁנַת אַחַת לְמַלְכוּת צִדְקִיָּהוּ מֶלֶךְ יְהוּדָה וְלֶחִי אָבִי הָיָה יֹשֵׁב בִּירוּשָׁלַיִם כָּל־יָמָיו וּבַשָּׁנָה הַהִיא בָּאוּ נְבִיאִים רַבִּים וַיִּנָּבְאוּ אֶל־הָעָם לֵאמֹר שׁוּבוּ פֶּן־תִּשָּׁחֵת הָעִיר יְרוּשָׁלַיִם הַגְּדוֹלָה׃",
   "english": "For it came to pass in the commencement of the first year of the reign of Zedekiah, king of Judah, (my father, Lehi, having dwelt at Jerusalem in all his days); and in that same year there came many prophets, prophesying unto the people that they must repent, or the great city Jerusalem must be destroyed."
  },
  {
   "book": "1 Nephi",
   "chapter": 1,
   "verse": 5,
-  "hebrew": "וַיֵּצֵא אָבִי לֵחִי וַיִּתְפַּלֵּל אֶל־יְהוָה בְּכָל־לִבּוֹ בְּעַד עַמּוֹ׃",
+  "hebrew": "וַיֵּצֵא אָבִי לֶחִי וַיִּתְפַּלֵּל אֶל־יְהוָה בְּכָל־לִבּוֹ בְּעַד עַמּוֹ׃",
   "english": "Wherefore it came to pass that my father, Lehi, as he went forth prayed unto the Lord, yea, even with all his heart, in behalf of his people."
  },
  {
   "book": "1 Nephi",
   "chapter": 1,
   "verse": 6,
-  "hebrew": "וַיְהִי בְּהִתְפַּלְלוֹ אֶל־יְהוָה וַיָּבֹא עַמּוּד־אֵשׁ וַיִּשְׁכֹּן עַל־הַצּוּר לְפָנָיו וַיַּרְא  וַיָּשָׁמַע אֵת הַדְּבָרִים הָרַבִּים וּמִפְּנֵי אֲשֶׁר רָאָה וְשָׁמַע וַיֶּחֱרַד וַיִּרְעַד מְאֹד׃",
+  "hebrew": "וַיְהִי בְּהִתְפַּלְלוֹ אֶל־יְהוָה וַיָּבֹא עַמּוּד־אֵשׁ וַיִּשְׁכֹּן עַל־הַצּוּר לְפָנָיו וַיַּרְא וַיִּשְׁמַע אֵת הַדְּבָרִים הָרַבִּים וּמִפְּנֵי אֲשֶׁר רָאָה וְשָׁמַע וַיֶּחֱרַד וַיִּרְעַד מְאֹד׃",
   "english": "And it came to pass as he prayed unto the Lord, there came a pillar of fire and dwelt upon a rock before him; and he saw and heard much; and because of the things which he saw and heard he did quake and tremble exceedingly."
  },
  {
   "book": "1 Nephi",
   "chapter": 1,
   "verse": 7,
-  "hebrew": "וַיָּשָׁב אֶל־בֵּיתוֹ בִּירוּשָׁלַיִם וַיִּפֹּל עַל־מִשְׁכָּבוֹ וַיִּגְבְּרוּ עָלָיו רוּחַ יְהוָה וְהַדְּבָרִים אֲשֶׁר רָאָה׃",
+  "hebrew": "וַיָּשָׁב אֶל־בֵּיתוֹ בִּירוּשָׁלַיִם וַיִּפֹּל עַל־מִשְׁכָּבוֹ וַתִּגְבַּר עָלָיו רוּחַ יְהוָה וְהַדְּבָרִים אֲשֶׁר רָאָה׃",
   "english": "And it came to pass that he returned to his own house at Jerusalem; and he cast himself upon his  bed, being overcome with the Spirit and the things which he had seen."
  },
  {
@@ -122,7 +122,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 1,
   "verse": 18,
-  "hebrew": "לָכֵן רְצוֹנִי כִּי תֵדְעוּ אַחֲרֵי הֶרְאוֹת יְהוָה נִפְלָאוֹת רַבּוֹת לְאָבִי לֵחִי עַל־יְרוּשָׁלַיִם אֲשֶׁר  תִּשָּׁחֵת הִנֵּה יָצָא בְּקֶרֶב הָעָם וַיָּחֶל לְהִנָּבֵא וּלְהַגִּיד לָהֶם הַדְּבָרִים אֲשֶׁר גַּם־רָאָה וְגַם־שָׁמַע׃",
+  "hebrew": "לָכֵן רְצוֹנִי כִּי תֵדְעוּ אַחֲרֵי הֶרְאוֹת יְהוָה נִפְלָאוֹת רַבּוֹת לְאָבִי לֶחִי עַל־יְרוּשָׁלַיִם אֲשֶׁר  תִּשָּׁחֵת הִנֵּה יָצָא בְּקֶרֶב הָעָם וַיָּחֶל לְהִנָּבֵא וּלְהַגִּיד לָהֶם הַדְּבָרִים אֲשֶׁר גַּם־רָאָה וְגַם־שָׁמַע׃",
   "english": "Therefore, I would that ye should know, that after the Lord had shown so many marvelous  things unto my father, Lehi, yea, concerning the destruction of Jerusalem, behold he went forth among the people, and began to prophesy and to declare unto them concerning the things which he had both seen and heard."
  },
  {
@@ -297,7 +297,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 2,
   "verse": 23,
-  "hebrew": "כִּי הִנֵּה בַּיּוֹם אֲשֶׁר יִמְרְדוּ־בִי וְאָרֹר אָאֹר אֹתָם בִּמְאֵרָה חֲזָקָה וְלֹא יִהְיֶה לָהֶם כֹּחַ עַל־זַרְעֲךָ זוּלָתִי אִם־יִמְרְדוּ־בִי גַּם־הֵם׃",
+  "hebrew": "כִּי הִנֵּה בַּיּוֹם אֲשֶׁר יִמְרְדוּ־בִי וְאָרֹר אָאֹר אֹתָם בִּמְאֵרָה חֲזָקָה וְלֹא יִהְיֶה לָהֶם כֹּחַ עַל־זַרְעֲךָ זוּלַת אִם־יִמְרְדוּ־בִי גַּם־הֵם׃",
   "english": "For behold, in that day that they shall rebel against me, I will curse them even with a sore curse, and they shall have no power over thy seed except they shall rebel against me also."
  },
  {
@@ -1515,7 +1515,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 10,
   "verse": 10,
-  "hebrew": "וְאַחֲרֵי טָבְלוֹ אֶת־הַמָּשִׁיחַ בַּמַּיִם יִרְאֶה וְיָעִיד כִּי טָבַל אֶת־שֵׂה הָאֱלֹהִים אֲשֶׁר יִשָּׂא אֶת־חַטֹּאת הָעוֹלָם׃",
+  "hebrew": "וְאַחֲרֵי טָבְלוֹ אֶת־הַמָּשִׁיחַ בַּמַּיִם יִרְאֶה וְיָעִיד כִּי טָבַל אֶת־שֵׂה־אֱלֹהִים אֲשֶׁר יִשָּׂא אֶת־חַטֹּאת הָעוֹלָם׃",
   "english": "And after he had baptized the Messiah with water, he should behold and bear record that he had baptized the Lamb of God, who should take away the sins of the world."
  },
  {
@@ -1564,7 +1564,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 10,
   "verse": 17,
-  "hebrew": "וַיְהִי אַחֲרֵי שָׁמְעִי נֶפִי אֶת־כָּל־דִּבְרֵי אָבִי עַל־הַדְּבָרִים אֲשֶׁר רָאָה בֶחָזוֹן וְהַדְּבָרִים אֲשֶׁר דִּבֶּר בְּכֹחַ רוּחַ הַקֹּדֶשׁ אֲשֶׁר קִבֵּל בֶּאֱמוּנָתוֹ בְּבֶן־הָאֱלֹהִים וְהוּא הַמָּשִׁיחַ אֲשֶׁר יָבוֹא וָאֶתְאָו גַם־אָנֹכִי לִרְאוֹת וְלִשְׁמֹעַ וְלָדַעַת אֶת־הַדְּבָרִים הָאֵלֶּה בְּכֹחַ רוּחַ הַקֹּדֶשׁ אֲשֶׁר הוּא מַתַּת אֱלֹהִים לְכָל־דֹרְשָׁיו כִּימֵי עוֹלָם כֵּן בְּיוֹם הִגָּלוֹתוֹ לִבְנֵי הָאָדָם׃",
+  "hebrew": "וַיְהִי אַחֲרֵי שָׁמְעִי נֶפִי אֶת־כָּל־דִּבְרֵי אָבִי עַל־הַדְּבָרִים אֲשֶׁר רָאָה בֶחָזוֹן וְהַדְּבָרִים אֲשֶׁר דִּבֶּר בְּכֹחַ רוּחַ הַקֹּדֶשׁ אֲשֶׁר קִבֵּל בֶּאֱמוּנָתוֹ בְּבֶּן־אֱלֹהִים וְהוּא הַמָּשִׁיחַ אֲשֶׁר יָבוֹא וָאֶתְאָו גַם־אָנֹכִי לִרְאוֹת וְלִשְׁמֹעַ וְלָדַעַת אֶת־הַדְּבָרִים הָאֵלֶּה בְּכֹחַ רוּחַ הַקֹּדֶשׁ אֲשֶׁר הוּא מַתַּת אֱלֹהִים לְכָל־דֹרְשָׁיו כִּימֵי עוֹלָם כֵּן בְּיוֹם הִגָּלוֹתוֹ לִבְנֵי הָאָדָם׃",
   "english": "And it came to pass after I, Nephi, having heard all the words of my father, concerning the things which he saw in a vision, and also the things which he spake by the power of the Holy Ghost, which power he received by faith on the Son of God—and the Son of God was the Messiah who should come—I, Nephi, was desirous also that I might see, and hear, and know of these things, by the power of the Holy Ghost, which is the gift of God unto all those who diligently seek him, as well in times of old as in the time that he should manifest himself unto the children of men."
  },
  {
@@ -1648,7 +1648,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 11,
   "verse": 7,
-  "hebrew": "וְהִנֵּה הַדָּבָר הַזֶּה יִהְיֶה לְךָ לְאוֹת כִּי אַחֲרֵי רְאוֹתְךָ אֶת־הָעֵץ אֲשֶׁר נָשָׂא אֶת־הַפְּרִי אֲשֶׁר טָעַם אָבִיךָ תִּרְאֶה גַּם־אִישׁ יוֹרֵד מִן־הַשָּׁמַיִם וְאֹתוֹ תִּרְאוּ וְאַחֲרֵי אֲשֶׁר רְאִיתֶם אֹתוֹ תָּעִידוּ כִּי הוּא בֶּן־הָאֱלֹהִים׃",
+  "hebrew": "וְהִנֵּה הַדָּבָר הַזֶּה יִהְיֶה לְךָ לְאוֹת כִּי אַחֲרֵי רְאוֹתְךָ אֶת־הָעֵץ אֲשֶׁר נָשָׂא אֶת־הַפְּרִי אֲשֶׁר טָעַם אָבִיךָ תִּרְאֶה גַּם־אִישׁ יוֹרֵד מִן־הַשָּׁמַיִם וְאֹתוֹ תִּרְאוּ וְאַחֲרֵי אֲשֶׁר רְאִיתֶם אֹתוֹ תָּעִידוּ כִּי הוּא בֶּן־אֱלֹהִים׃",
   "english": "And behold this thing shall be given unto thee for a sign, that after thou hast beheld the tree which bore the fruit which thy father tasted, thou shalt also behold a man descending out of heaven, and him shall ye witness; and after ye have witnessed him ye shall bear record that it is the Son of God."
  },
  {
@@ -1725,7 +1725,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 11,
   "verse": 18,
-  "hebrew": "וַיֹּאמֶר אֵלַי הִנֵּה הָעַלְמָה אֲשֶׁר רָאִיתָ הִיא אֵם בֶּן־הָאֱלֹהִים כְּדֶרֶךְ בָּשָׂר׃",
+  "hebrew": "וַיֹּאמֶר אֵלַי הִנֵּה הָעַלְמָה אֲשֶׁר רָאִיתָ הִיא הָאֵם בֶּן־אֱלֹהִים כְּדֶרֶךְ בָּשָׂר׃",
   "english": "And he said unto me: Behold, the virgin whom thou seest is the mother of the Son of God, after the manner of the flesh."
  },
  {
@@ -1746,7 +1746,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 11,
   "verse": 21,
-  "hebrew": "וַיֹּאמֶר אֵלַי הַמַּלְאָךְ רְאֵה שֵׂה הָאֱלֹהִים הִנֵּה הוּא בֶּן־אֵל עוֹלָם הֲיָדַעְתָּ פִּתְרוֹן הָעֵץ אֲשֶׁר רָאָה אָבִיךָ׃",
+  "hebrew": "וַיֹּאמֶר אֵלַי הַמַּלְאָךְ רְאֵה שֵׂה־אֱלֹהִים הִנֵּה הוּא בֶּן־אֵל עוֹלָם הֲיָדַעְתָּ פִּתְרוֹן הָעֵץ אֲשֶׁר רָאָה אָבִיךָ׃",
   "english": "And the angel said unto me: Behold the Lamb of God, yea, even the Son of the Eternal Father! Knowest thou the meaning of the tree which thy father saw?"
  },
  {
@@ -1767,7 +1767,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 11,
   "verse": 24,
-  "hebrew": "וַיְהִי אַחֲרֵי אָמְרוֹ אֶת־הַדְּבָרִים הָאֵלֶּה וַיֹּאמֶר אֵלַי רְאֵה וָאַבִּיט וָאֵרֶא אֶת־בֶּן־הָאֱלֹהִים מִתְהַלֵּךְ בְּתוֹךְ בְּנֵי הָאָדָם וָאֵרֶא רַבִּים נֹפְלִים לְרַגְלָיו וּמִשְׁתַּחֲוִים לוֹ׃",
+  "hebrew": "וַיְהִי אַחֲרֵי אָמְרוֹ אֶת־הַדְּבָרִים הָאֵלֶּה וַיֹּאמֶר אֵלַי רְאֵה וָאַבִּיט וָאֵרֶא אֶת־בֶּן־אֱלֹהִים מִתְהַלֵּךְ בְּתוֹךְ בְּנֵי הָאָדָם וָאֵרֶא רַבִּים נֹפְלִים לְרַגְלָיו וּמִשְׁתַּחֲוִים לוֹ׃",
   "english": "And after he had said these words, he said unto me: Look! And I looked, and I beheld the Son of God going forth among the children of men; and I saw many fall down at his feet and worship him."
  },
  {
@@ -1788,7 +1788,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 11,
   "verse": 27,
-  "hebrew": "וָאַבִּיט וָאֵרֶא אֶת־גּוֹאֵל הָעוֹלָם אֲשֶׁר דִּבֶּר עָלָיו אָבִי וָאֵרֶא גַם אֶת־הַנָּבִיא אֲשֶׁר יָכִין הַדֶּרֶךְ לְפָנָיו וַיֵּלֶךְ שֵׂה הָאֱלֹהִים וַיִּטָּבֵל עַל־יָדוֹ וַיְהִי אַחֲרֵי הִטָּבְלוֹ וָאֵרֶא אֶת־הַשָּׁמַיִם נִפְתָּחִים וְרוּחַ הַקֹּדֶשׁ יוֹרֶדֶת מִן־הַשָּׁמַיִם וַתָּנַח עָלָיו בְּתַבְנִית יוֹנָה׃",
+  "hebrew": "וָאַבִּיט וָאֵרֶא אֶת־גּוֹאֵל הָעוֹלָם אֲשֶׁר דִּבֶּר עָלָיו אָבִי וָאֵרֶא גַם אֶת־הַנָּבִיא אֲשֶׁר יָכִין הַדֶּרֶךְ לְפָנָיו וַיֵּלֶךְ שֵׂה־אֱלֹהִים וַיִּטָּבֵל עַל־יָדוֹ וַיְהִי אַחֲרֵי הִטָּבְלוֹ וָאֵרֶא אֶת־הַשָּׁמַיִם נִפְתָּחִים וְרוּחַ הַקֹּדֶשׁ יוֹרֶדֶת מִן־הַשָּׁמַיִם וַתָּנַח עָלָיו בְּתַבְנִית יוֹנָה׃",
   "english": "And I looked and beheld the Redeemer of the world, of whom my father had spoken; and I also beheld the prophet who should prepare the way before him. And the Lamb of God went forth and was baptized of him; and after he was baptized, I beheld the heavens open, and the Holy Ghost come down out of heaven and abide upon him in the form of a dove."
  },
  {
@@ -1816,14 +1816,14 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 11,
   "verse": 31,
-  "hebrew": "וַיֹּאמֶר אֵלַי שֵׁנִית לֵאמֹר רְאֵה וָאַבִּיט וָאֵרֶא אֶת־שֵׂה הָאֱלֹהִים מִתְהַלֵּךְ בְּתוֹךְ בְּנֵי הָאָדָם וָאֵרֶא הֲמוֹנֵי עָם חוֹלִים וּמְעֻנִּים בְּכָל־מִינֵי מַדְוֵי וּבְשֵׁדִים וּבְרוּחוֹת טֻמְאָה וַיֹּאמֶר הַמַּלְאָךְ וַיַּרְאֵנִי אֶת־כָּל־אֵלֶּה וַיְרַפְּאֵם כֹּחַ שֵׂה הָאֱלֹהִים וַיְגָרֶשׁ אֶת־הַשֵּׁדִים וְאֶת־רוּחוֹת הַטֻּמְאָה׃",
+  "hebrew": "וַיֹּאמֶר אֵלַי שֵׁנִית לֵאמֹר רְאֵה וָאַבִּיט וָאֵרֶא אֶת־שֵׂה־אֱלֹהִים מִתְהַלֵּךְ בְּתוֹךְ בְּנֵי הָאָדָם וָאֵרֶא הֲמוֹנֵי עָם חוֹלִים וּמְעֻנִּים בְּכָל־מִינֵי מַדְוֵי וּבְשֵׁדִים וּבְרוּחוֹת טֻמְאָה וַיֹּאמֶר הַמַּלְאָךְ וַיַּרְאֵנִי אֶת־כָּל־אֵלֶּה וַיְרַפְּאֵם כֹּחַ שֵׂה־אֱלֹהִים וַיְגָרֶשׁ אֶת־הַשֵּׁדִים וְאֶת־רוּחוֹת הַטֻּמְאָה׃",
   "english": "And he spake unto me again, saying: Look! And I looked, and I beheld the Lamb of God going forth among the children of men. And I beheld multitudes of people who were sick, and who were afflicted with all manner of diseases, and with devils and unclean spirits; and the angel spake and showed all these things unto me. And they were healed by the power of the Lamb of God; and the devils and the unclean spirits were cast out."
  },
  {
   "book": "1 Nephi",
   "chapter": 11,
   "verse": 32,
-  "hebrew": "וַיֹּאמֶר שֵׁנִית אֵלַי הַמַּלְאָךְ לֵאמֹר רְאֵה וָאַבִּיט וָאֵרֶא אֶת־שֵׂה הָאֱלֹהִים כִּי לְקָחוּהוּ הָעָם אָכֵן נִשְׁפַּט בֶּן־אֵל עוֹלָם מֵעִם הָעוֹלָם וָאֵרֶא וָאָעִד׃",
+  "hebrew": "וַיֹּאמֶר שֵׁנִית אֵלַי הַמַּלְאָךְ לֵאמֹר רְאֵה וָאַבִּיט וָאֵרֶא אֶת־שֵׂה־אֱלֹהִים כִּי לְקָחוּהוּ הָעָם אָכֵן נִשְׁפַּט בֶּן־אֵל עוֹלָם מֵעִם הָעוֹלָם וָאֵרֶא וָאָעִד׃",
   "english": "And it came to pass that the angel spake unto me again, saying: Look! And I looked and beheld the Lamb of God, that he was taken by the people; yea, the Son of the everlasting God was judged of the world; and I saw and bear record."
  },
  {
@@ -1893,7 +1893,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 12,
   "verse": 6,
-  "hebrew": "וָאֵרֶא אֶת־הַשָּׁמַיִם נִפְתָּחִים וְאֶת־שֵׂה הָאֱלֹהִים יֹרֵד מִן־הַשָּׁמַיִם וַיֵּרֶד וַיִּתְרָאֶה אֲלֵיהֶם׃",
+  "hebrew": "וָאֵרֶא אֶת־הַשָּׁמַיִם נִפְתָּחִים וְאֶת־שֵׂה־אֱלֹהִים יֹרֵד מִן־הַשָּׁמַיִם וַיֵּרֶד וַיִּתְרָאֶה אֲלֵיהֶם׃",
   "english": "And I saw the heavens open, and the Lamb of God descending out of heaven; and he came down and showed himself unto them."
  },
  {
@@ -1921,14 +1921,14 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 12,
   "verse": 10,
-  "hebrew": "וְיִשְׁפְּטוּ שְׁנֵים עָשָׂר הַמְשָׁרְתִים הָאֵלֶּה אֲשֶׁר חָזִיתָ אֶת־זַרְעֶךָ וְהִנֵּה צַדִּיקִים הֵמָּה לְעוֹלָם כִּי מֵאֱמוּנָתָם בְּשֵׂה הָאֱלֹהִים לָבְנוּ בִגְדֵיהֶם בְּדָמוֹ׃",
+  "hebrew": "וְיִשְׁפְּטוּ שְׁנֵים עָשָׂר הַמְשָׁרְתִים הָאֵלֶּה אֲשֶׁר חָזִיתָ אֶת־זַרְעֶךָ וְהִנֵּה צַדִּיקִים הֵמָּה לְעוֹלָם כִּי מֵאֱמוּנָתָם בְּשֵׂה־אֱלֹהִים לָבְנוּ בִגְדֵיהֶם בְּדָמוֹ׃",
   "english": "And these twelve ministers whom thou beholdest shall judge thy seed. And, behold, they are righteous forever; for because of their faith in the Lamb of God their garments are made white in his blood."
  },
  {
   "book": "1 Nephi",
   "chapter": 12,
   "verse": 11,
-  "hebrew": "וַיֹּאמֶר אֵלַי הַמַּלְאָךְ רְאֵה וָאַבִּיט וָאֵרֶא שְׁלֹשָׁה דוֹרוֹת עֹבְרִים בִּצְדָקָה וּבִגְדֵיהֶם לְבָנִים כִּבְגְדֵי שֵׂה הָאֱלֹהִים וַיֹּאמֶר אֵלַי הַמַּלְאָךְ הֻלְבְּנוּ אֵלֶּה בְּדַם הַשֶּׂה בַּעֲבוּר אֱמוּנָתָם בּוֹ׃",
+  "hebrew": "וַיֹּאמֶר אֵלַי הַמַּלְאָךְ רְאֵה וָאַבִּיט וָאֵרֶא שְׁלֹשָׁה דוֹרוֹת עֹבְרִים בִּצְדָקָה וּבִגְדֵיהֶם לְבָנִים כִּבְגְדֵי שֵׂה־אֱלֹהִים וַיֹּאמֶר אֵלַי הַמַּלְאָךְ הֻלְבְּנוּ אֵלֶּה בְּדַם הַשֶּׂה בַּעֲבוּר אֱמוּנָתָם בּוֹ׃",
   "english": "And the angel said unto me: Look! And I looked, and beheld three generations pass away in righteous– ness; and their garments were white even like unto the Lamb of God. And the angel said unto me: These are made white in the blood of the Lamb, because of their faith in him."
  },
  {
@@ -1977,7 +1977,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 12,
   "verse": 18,
-  "hebrew": "וְהַבִּנְיָן הַגָּדוֹל וְהָרָחָב אֲשֶׁר רָאָה אָבִיךָ הוּא הַבְלֵי שָׁוְא וּגְאוֹן בְּנֵי הָאָדָם וּתְהוֹם גְּדוֹלָה וְנוֹרָאָה מַפְרִידָה בֵּינֵיהֶם אָכֵן דְּבַר־צִדְקַת אֵל עוֹלָם וְהַמָּשִׁיחַ אֲשֶׁר הוּא שֵׂה הָאֱלֹהִים אֲשֶׁר מֵעִידָה עָלָיו רוּחַ הַקֹּדֶשׁ מֵרֵאשִׁית הָעוֹלָם וְעַד־עוֹלָם׃",
+  "hebrew": "וְהַבִּנְיָן הַגָּדוֹל וְהָרָחָב אֲשֶׁר רָאָה אָבִיךָ הוּא הַבְלֵי שָׁוְא וּגְאוֹן בְּנֵי הָאָדָם וּתְהוֹם גְּדוֹלָה וְנוֹרָאָה מַפְרִידָה בֵּינֵיהֶם אָכֵן דְּבַר־צִדְקַת אֵל עוֹלָם וְהַמָּשִׁיחַ אֲשֶׁר הוּא שֵׂה־אֱלֹהִים אֲשֶׁר מֵעִידָה עָלָיו רוּחַ הַקֹּדֶשׁ מֵרֵאשִׁית הָעוֹלָם וְעַד־עוֹלָם׃",
   "english": "And the large and spacious building, which thy father saw, is vain imaginations and the pride of the children of men. And a great and a terrible gulf divideth them; yea, even the word of the justice of the Eternal God, and the Messiah who is the Lamb of God, of whom the Holy Ghost beareth record, from the beginning of the world until this time, and from this time henceforth and forever."
  },
  {
@@ -2180,7 +2180,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 13,
   "verse": 24,
-  "hebrew": "וַיֹּאמֶר אֵלַי מַלְאַךְ יְהוָה רָאִיתָ כִּי יָצָא הַסֵּפֶר מִפִּי יְהוּדִי וַיְהִי בְּצֵאתוֹ מִפִּי הַיְּהוּדִי הָיָה בוֹ מְלֹא בְּשׂוֹרַת יְהוָה אֲשֶׁר מְעִידִים שְׁנֵים עָשָׂר הַשְּׁלוּחִים כָּאֱמֶת אֲשֶׁר בְּשֵׂה הָאֱלֹהִים׃",
+  "hebrew": "וַיֹּאמֶר אֵלַי מַלְאַךְ יְהוָה רָאִיתָ כִּי יָצָא הַסֵּפֶר מִפִּי יְהוּדִי וַיְהִי בְּצֵאתוֹ מִפִּי הַיְּהוּדִי הָיָה בוֹ מְלֹא בְּשׂוֹרַת יְהוָה אֲשֶׁר מְעִידִים שְׁנֵים עָשָׂר הַשְּׁלוּחִים כָּאֱמֶת אֲשֶׁר בְּשֵׂה־אֱלֹהִים׃",
   "english": "And the angel of the Lord said unto me: Thou hast beheld that the book proceeded forth from the mouth of a Jew; and when it proceeded forth from the mouth of a Jew it contained the fulness of the gospel of the Lord, of whom the twelve apostles bear record; and they bear record according to the truth which is in the Lamb of God."
  },
  {
@@ -2208,14 +2208,14 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 13,
   "verse": 28,
-  "hebrew": "לָכֵן וָאֵרֶא כִּי אַחֲרֵי עֲבֹר הַסֵּפֶר בִּידֵי הָעֵדָה הַגְּדוֹלָה וְהַנִּתְעָבָה הּוּסְרוּ דְּבָרִים רַבִּים בְּרוּרִים וִיקָרִים מִן־הַסֵּפֶר אֲשֶׁר הוּא סֵפֶר שֵׂה הָאֱלֹהִים׃",
+  "hebrew": "לָכֵן וָאֵרֶא כִּי אַחֲרֵי עֲבֹר הַסֵּפֶר בִּידֵי הָעֵדָה הַגְּדוֹלָה וְהַנִּתְעָבָה הּוּסְרוּ דְּבָרִים רַבִּים בְּרוּרִים וִיקָרִים מִן־הַסֵּפֶר אֲשֶׁר הוּא סֵפֶר שֵׂה־אֱלֹהִים׃",
   "english": "Wherefore, thou seest that after the book hath gone forth through the hands of the great and abominable church, that there are many plain and precious things taken away from the book, which is the book of the Lamb of God."
  },
  {
   "book": "1 Nephi",
   "chapter": 13,
   "verse": 29,
-  "hebrew": "וַיְהִי אַחֲרֵי אֲשֶׁר הוּסְרוּ הַדְּבָרִים הַבְּרוּרִים וְהַיְקָרִים הָאֵלֶּה וַיֵּצֵא אֶל־כָּל־הַגּוֹיִם וְאַחֲרֵי צֵאתוֹ אֶל־כָּל־הַגּוֹיִם אַף מֵעֵבֶר לַמַּיִם הָרַבִּים אֲשֶׁר רָאִיתָ עִם־הַגּוֹיִם אֲשֶׁר יָצְאוּ מִן־הַשֶּׁבִי וְהִנְּךָ רֹאֶה כִּי בַּעֲבוּר הַדְּבָרִים הַבְּרוּרִים וְהַיְקָרִים הָרַבִּים אֲשֶׁר הוּסְרוּ מִן־הַסֵּפֶר אֲשֶׁר הָיוּ בְרוּרִים לְהָבִין בְּנֵי הָאָדָם כְּתֹם שֵׂה הָאֱלֹהִים בַּעֲבוּר הַדְּבָרִים הָאֵלֶּה אֲשֶׁר הוּסְרוּ מִבְּשׂוֹרַת הַשֶּׂה נִכְשְׁלוּ עַם רַב מְאֹד וַיְהִי לַשָּׂטָן מֶמְשָׁלָה גְדוֹלָה בָּהֶם׃",
+  "hebrew": "וַיְהִי אַחֲרֵי אֲשֶׁר הוּסְרוּ הַדְּבָרִים הַבְּרוּרִים וְהַיְקָרִים הָאֵלֶּה וַיֵּצֵא אֶל־כָּל־הַגּוֹיִם וְאַחֲרֵי צֵאתוֹ אֶל־כָּל־הַגּוֹיִם אַף מֵעֵבֶר לַמַּיִם הָרַבִּים אֲשֶׁר רָאִיתָ עִם־הַגּוֹיִם אֲשֶׁר יָצְאוּ מִן־הַשֶּׁבִי וְהִנְּךָ רֹאֶה כִּי בַּעֲבוּר הַדְּבָרִים הַבְּרוּרִים וְהַיְקָרִים הָרַבִּים אֲשֶׁר הוּסְרוּ מִן־הַסֵּפֶר אֲשֶׁר הָיוּ בְרוּרִים לְהָבִין בְּנֵי הָאָדָם כְּתֹם שֵׂה־אֱלֹהִים בַּעֲבוּר הַדְּבָרִים הָאֵלֶּה אֲשֶׁר הוּסְרוּ מִבְּשׂוֹרַת הַשֶּׂה נִכְשְׁלוּ עַם רַב מְאֹד וַיְהִי לַשָּׂטָן מֶמְשָׁלָה גְדוֹלָה בָּהֶם׃",
   "english": "And after these plain and precious things were taken away it goeth forth unto all the nations of the Gentiles; and after it goeth forth unto all the nations of the Gentiles, yea, even across the many waters which thou hast seen  with the Gentiles which have gone forth out of captivity, thou seest—because of the many plain and precious things which have been taken out of the book, which were plain unto the understanding of the children of men, according to the plainness which is in the Lamb of God—because of these things which are taken away out of the gospel of the Lamb, an exceedingly great many do stumble, yea, insomuch that Satan hath great power over them."
  },
  {
@@ -2243,14 +2243,14 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 13,
   "verse": 33,
-  "hebrew": "לָכֵן כֹּה אָמַר שֵׂה הָאֱלֹהִים אֶחֹן אֶת־הַגּוֹיִם עַד־פָּקְדִי אֶת־שְׁאֵרִית בֵּית יִשְׂרָאֵל בְּמִשְׁפָּט גָּדוֹל׃",
+  "hebrew": "לָכֵן כֹּה אָמַר שֵׂה־אֱלֹהִים אֶחֹן אֶת־הַגּוֹיִם עַד־פָּקְדִי אֶת־שְׁאֵרִית בֵּית יִשְׂרָאֵל בְּמִשְׁפָּט גָּדוֹל׃",
   "english": "Wherefore saith the Lamb of God: I will be merciful unto the Gentiles, unto the visiting of the remnant of the house of Israel in great judgment."
  },
  {
   "book": "1 Nephi",
   "chapter": 13,
   "verse": 34,
-  "hebrew": "וַיְדַבֵּר אֵלַי מַלְאַךְ יְהוָה לֵאמֹר כֹּה אָמַר שֵׂה הָאֱלֹהִים אַחֲרֵי אֲשֶׁר פָּקַדְתִּי אֶת־שְׁאֵרִית בֵּית יִשְׂרָאֵל וְהַשְּׁאֵרִית הַזֹּאת זֶרַע אָבִיךָ הִיא לָכֵן אַחֲרֵי פָקְדִי אוֹתָם בַּמִּשְׁפָּט וְהִכֵּיתִים בְּיַד הַגּוֹיִם וְאַחֲרֵי כָשְׁלוּ הַגּוֹיִם כִּשָּׁלוֹן גָּדוֹל עַל־דְּבַר הַדְּבָרִים הַבְּרוּרִים וְהַיְקָרִים מִבְּשׂוֹרַת הַשֶּׂה אֲשֶׁר מָנְעָה הָעֵדָה הַנִּתְעֶבֶת אֵם הַזּוֹנוֹת נְאֻם הַשֶּׂה חָנֹן אָחֹן אֶת־הַגּוֹיִם בַּיּוֹם הַהוּא וְהוֹצֵאתִי לָהֶם בְּכֹחִי רֹב בְּשׂוֹרָתִי אֲשֶׁר תִּהְיֶה בְּרוּרָה וִיקָרָה נְאֻם הַשֶּׂה׃",
+  "hebrew": "וַיְדַבֵּר אֵלַי מַלְאַךְ יְהוָה לֵאמֹר כֹּה אָמַר שֵׂה־אֱלֹהִים אַחֲרֵי אֲשֶׁר פָּקַדְתִּי אֶת־שְׁאֵרִית בֵּית יִשְׂרָאֵל וְהַשְּׁאֵרִית הַזֹּאת זֶרַע אָבִיךָ הִיא לָכֵן אַחֲרֵי פָקְדִי אוֹתָם בַּמִּשְׁפָּט וְהִכֵּיתִים בְּיַד הַגּוֹיִם וְאַחֲרֵי כָשְׁלוּ הַגּוֹיִם כִּשָּׁלוֹן גָּדוֹל עַל־דְּבַר הַדְּבָרִים הַבְּרוּרִים וְהַיְקָרִים מִבְּשׂוֹרַת הַשֶּׂה אֲשֶׁר מָנְעָה הָעֵדָה הַנִּתְעֶבֶת אֵם הַזּוֹנוֹת נְאֻם הַשֶּׂה חָנֹן אָחֹן אֶת־הַגּוֹיִם בַּיּוֹם הַהוּא וְהוֹצֵאתִי לָהֶם בְּכֹחִי רֹב בְּשׂוֹרָתִי אֲשֶׁר תִּהְיֶה בְּרוּרָה וִיקָרָה נְאֻם הַשֶּׂה׃",
   "english": "And it came to pass that the angel of the Lord spake unto me, saying: Behold, saith the Lamb of God, after I have visited the remnant of the house of Israel—and this remnant of whom I speak is the seed of thy father—wherefore, after I have visited them in judgment, and smitten them by the hand of the Gentiles, and after the Gentiles do stumble exceedingly, because of the most plain and precious parts of the gospel of the Lamb which have been kept back by that abominable church, which is the mother of harlots, saith the Lamb—I will be merciful unto the Gentiles in that day, insomuch that I will bring forth unto them, in mine own power, much of my gospel, which shall be plain and precious, saith the Lamb."
  },
  {
@@ -2278,7 +2278,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 13,
   "verse": 38,
-  "hebrew": "וָאֵרֶא אֶת־שְׁאֵרִית זֶרַע אַחַי וְגַם אֶת־סֵפֶר שֵׂה הָאֱלֹהִים אֲשֶׁר יָצָא מִפִּי הַיְּהוּדִי כִּי יָצָא מִן־הַגּוֹיִם אֶל־שְׁאֵרִית זֶרַע אַחָי׃",
+  "hebrew": "וָאֵרֶא אֶת־שְׁאֵרִית זֶרַע אַחַי וְגַם אֶת־סֵפֶר שֵׂה־אֱלֹהִים אֲשֶׁר יָצָא מִפִּי הַיְּהוּדִי כִּי יָצָא מִן־הַגּוֹיִם אֶל־שְׁאֵרִית זֶרַע אַחָי׃",
   "english": "And it came to pass that I beheld the remnant of the seed of my brethren, and also the book of the Lamb of God, which had proceeded forth from the mouth of the Jew, that it came forth from the Gentiles unto the remnant of the seed of my brethren."
  },
  {
@@ -2292,7 +2292,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 13,
   "verse": 40,
-  "hebrew": "וַיֹּאמֶר אֵלַי הַמַּלְאָךְ לֵאמֹר יְקַיְּמוּ הַסְּפָרִים הָאַחֲרוֹנִים הָאֵלֶּה אֲשֶׁר רָאִיתָ בֵּין הַגּוֹיִם אֶת־אֱמֶת הָרִאשׁוֹנִים אֲשֶׁר לִשְׁנֵים עָשָׂר שְׁלוּחֵי הַשֶּׂה וְיוֹדִיעוּ אֶת־הַדְּבָרִים הַבְּרוּרִים וְהַיְּקָרִים אֲשֶׁר הוּסְרוּ מֵהֶם וְיוֹדִיעוּ לְכָל־הַמִּשְׁפָּחוֹת וְהַלְּשֹׁנוֹת וְהָעַמִּים כִּי שֵׂה הָאֱלֹהִים הוּא בֶּן־אֵל עוֹלָם וּמוֹשִׁיעַ הָעוֹלָם וְכִי עַל־כָּל־בְּנֵי הָאָדָם לָבוֹא אֵלָיו וְאִם־לֹא לֹא יִוָּשֵׁעוּ׃",
+  "hebrew": "וַיֹּאמֶר אֵלַי הַמַּלְאָךְ לֵאמֹר יְקַיְּמוּ הַסְּפָרִים הָאַחֲרוֹנִים הָאֵלֶּה אֲשֶׁר רָאִיתָ בֵּין הַגּוֹיִם אֶת־אֱמֶת הָרִאשׁוֹנִים אֲשֶׁר לִשְׁנֵים עָשָׂר שְׁלוּחֵי הַשֶּׂה וְיוֹדִיעוּ אֶת־הַדְּבָרִים הַבְּרוּרִים וְהַיְּקָרִים אֲשֶׁר הוּסְרוּ מֵהֶם וְיוֹדִיעוּ לְכָל־הַמִּשְׁפָּחוֹת וְהַלְּשֹׁנוֹת וְהָעַמִּים כִּי שֵׂה־אֱלֹהִים הוּא בֶּן־אֵל עוֹלָם וּמוֹשִׁיעַ הָעוֹלָם וְכִי עַל־כָּל־בְּנֵי הָאָדָם לָבוֹא אֵלָיו וְאִם־לֹא לֹא יִוָּשֵׁעוּ׃",
   "english": "And the angel spake unto me, saying: These last records, which thou hast seen among the Gentiles, shall establish the truth of the first, which are of the twelve apostles of the Lamb, and shall make known the plain and precious things which have been taken away from them; and shall make known to all kindreds, tongues, and people, that the Lamb of God is the Son of the Eternal Father, and the Savior of the world; and that all men must come unto him, or they cannot be saved."
  },
  {
@@ -2313,21 +2313,21 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 14,
   "verse": 1,
-  "hebrew": "וַיְהִי אִם יִשְׁמְעוּ הַגּוֹיִם אֶל־שֶׂה הָאֱלֹהִים בַּיּוֹם הַהוּא אֲשֶׁר יִגָּלֶה לָהֶם בְּדָבָר וְגַם בִּגְבוּרָתוֹ בְּפֹעַל לְהָסִיר מִכְשׁוֹלֵיהֶם׃",
+  "hebrew": "וַיְהִי אִם יִשְׁמְעוּ הַגּוֹיִם אֶל־שֶׂה־אֱלֹהִים בַּיּוֹם הַהוּא אֲשֶׁר יִגָּלֶה לָהֶם בְּדָבָר וְגַם בִּגְבוּרָתוֹ בְּפֹעַל לְהָסִיר מִכְשׁוֹלֵיהֶם׃",
   "english": "And it shall come to pass, that if the Gentiles shall hearken unto the Lamb of God in that day that he shall manifest himself unto them in word, and also in power, in very deed, unto the taking away of their stumbling blocks—"
  },
  {
   "book": "1 Nephi",
   "chapter": 14,
   "verse": 2,
-  "hebrew": "וְאִם לֹא יַקְשׁוּ אֶת־לְבָבָם לְשֶׂה הָאֱלֹהִים וְהָיוּ בְּתוֹךְ זֶרַע אָבִיךָ וְאַף בְּבֵית יִשְׂרָאֵל וְהָיוּ לְעַם בָּרוּךְ עַל־אֶרֶץ הַנַּחֲלָה לְעוֹלָם וְלֹא יֵרְדוּ עוֹד לַשְּׁבִי וְלֹא יִכָּלֵם עוֹד בֵּית יִשְׂרָאֵל׃",
+  "hebrew": "וְאִם לֹא יַקְשׁוּ אֶת־לְבָבָם לְשֶׂה־אֱלֹהִים וְהָיוּ בְּתוֹךְ זֶרַע אָבִיךָ וְאַף בְּבֵית יִשְׂרָאֵל וְהָיוּ לְעַם בָּרוּךְ עַל־אֶרֶץ הַנַּחֲלָה לְעוֹלָם וְלֹא יֵרְדוּ עוֹד לַשְּׁבִי וְלֹא יִכָּלֵם עוֹד בֵּית יִשְׂרָאֵל׃",
   "english": "And harden not their hearts against the Lamb of God, they shall be numbered among the seed of thy father; yea, they shall be numbered among the house of Israel; and they shall be a blessed people upon the promised land forever; they shall be no more brought down into captivity; and the house of Israel shall no more be confounded."
  },
  {
   "book": "1 Nephi",
   "chapter": 14,
   "verse": 3,
-  "hebrew": "וְהַבּוֹר הַגָּדוֹל אֲשֶׁר כָּרוּ לָהֶם הָעֵדָה הַגְּדוֹלָה וְהַנִּתְעָבָה הַהִיא אֲשֶׁר יָסַד הַשָּׂטָן וּבָנָיו לְמַעַן הוֹרִיד נַפְשׁוֹת בְּנֵי־אָדָם שְׁאוֹלָה הִנֵּה הַבּוֹר הַגָּדוֹל אֲשֶׁר כָּרוּ לְהַשְׁחִית בְּנֵי־אָדָם יִמָּלֵא בְּכֹרָיו לְהַשְׁחִיתָם כָּלָה נְאֻם שֶׂה הָאֱלֹהִים לֹא הַשְׁחָתַת הַנֶּפֶשׁ כִּי אִם־הַשְׁלָכָתָהּ בַּשְּׁאוֹל אֲשֶׁר אֵין־לָהּ קֵץ׃",
+  "hebrew": "וְהַבּוֹר הַגָּדוֹל אֲשֶׁר כָּרוּ לָהֶם הָעֵדָה הַגְּדוֹלָה וְהַנִּתְעָבָה הַהִיא אֲשֶׁר יָסַד הַשָּׂטָן וּבָנָיו לְמַעַן הוֹרִיד נַפְשׁוֹת בְּנֵי־אָדָם שְׁאוֹלָה הִנֵּה הַבּוֹר הַגָּדוֹל אֲשֶׁר כָּרוּ לְהַשְׁחִית בְּנֵי־אָדָם יִמָּלֵא בְּכֹרָיו לְהַשְׁחִיתָם כָּלָה נְאֻם שֶׂה־אֱלֹהִים לֹא הַשְׁחָתַת הַנֶּפֶשׁ כִּי אִם־הַשְׁלָכָתָהּ בַּשְּׁאוֹל אֲשֶׁר אֵין־לָהּ קֵץ׃",
   "english": "And that great pit, which hath been digged for them by that great and abominable church, which was founded by the devil and his children, that he might lead away the souls of men down to hell—yea, that great pit which hath been digged for the destruction of men shall be filled by those who digged it, unto their utter destruction, saith the Lamb of God; not the destruction of the soul, save it be the casting of it into that hell which hath no end."
  },
  {
@@ -2348,14 +2348,14 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 14,
   "verse": 6,
-  "hebrew": "לָכֵן אוֹי לַגּוֹיִם אִם־יַקְשׁוּ אֶת־לְבָבָם לְשֶׂה הָאֱלֹהִים׃",
+  "hebrew": "לָכֵן אוֹי לַגּוֹיִם אִם־יַקְשׁוּ אֶת־לְבָבָם לְשֶׂה־אֱלֹהִים׃",
   "english": "Therefore, wo be unto the Gentiles if it so be that they harden their hearts against the Lamb of God."
  },
  {
   "book": "1 Nephi",
   "chapter": 14,
   "verse": 7,
-  "hebrew": "כִּי הִנֵּה יָמִים בָּאִים נְאֻם שֶׂה הָאֱלֹהִים וְעָשִׂיתִי מַעֲשֶׂה גָדוֹל וָפֶלֶא בְּקֶרֶב בְּנֵי הָאָדָם מַעֲשֶׂה אֲשֶׁר יִהְיֶה לְעוֹלָם אוֹ לְשָׁלוֹם וּלְחַיֵּי עוֹלָם אוֹ לְמָסְרָם לִקְשִׁי לִבָּם וּלְעִוְרוֹן עֵינֵיהֶם לְהוֹרִידָם לַשְּׁבִי וְגַם לַשַּׁחַת גַּם־בַּגּוּף גַּם־בָּרוּחַ כְּשְׁבִי הַשָּׂטָן אֲשֶׁר דִּבַּרְתִּי׃",
+  "hebrew": "כִּי הִנֵּה יָמִים בָּאִים נְאֻם שֶׂה־אֱלֹהִים וְעָשִׂיתִי מַעֲשֶׂה גָדוֹל וָפֶלֶא בְּקֶרֶב בְּנֵי הָאָדָם מַעֲשֶׂה אֲשֶׁר יִהְיֶה לְעוֹלָם אוֹ לְשָׁלוֹם וּלְחַיֵּי עוֹלָם אוֹ לְמָסְרָם לִקְשִׁי לִבָּם וּלְעִוְרוֹן עֵינֵיהֶם לְהוֹרִידָם לַשְּׁבִי וְגַם לַשַּׁחַת גַּם־בַּגּוּף גַּם־בָּרוּחַ כְּשְׁבִי הַשָּׂטָן אֲשֶׁר דִּבַּרְתִּי׃",
   "english": "For the time cometh, saith the Lamb of God, that I will work a great and a marvelous work among the children of men; a work which shall be everlasting, either on the one hand or on the other—either to the convincing of them unto peace and life eternal, or unto the deliverance of them to the hardness of their hearts and the blindness of their minds unto their being brought down into captivity, and also into destruction, both temporally and spiritually, according to the captivity of the devil, of which I have spoken."
  },
  {
@@ -2376,7 +2376,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 14,
   "verse": 10,
-  "hebrew": "וַיֹּאמֶר אֵלַי הִנֵּה אֵין כִּי אִם־שְׁתֵּי עֵדוֹת הָאַחַת עֲדַת שֶׂה הָאֱלֹהִים וְהַשֵּׁנִית עֲדַת הַשָּׂטָן וְלָכֵן כָּל־אֲשֶׁר לֹא יִהְיֶה לַעֲדַת שֶׂה הָאֱלֹהִים יִהְיֶה לָעֵדָה הַגְּדוֹלָה הַהִיא אֵם הַתּוֹעֵבוֹת וְהִיא זוֹנַת כָּל־הָאָרֶץ׃",
+  "hebrew": "וַיֹּאמֶר אֵלַי הִנֵּה אֵין כִּי אִם־שְׁתֵּי עֵדוֹת הָאַחַת עֲדַת שֶׂה־אֱלֹהִים וְהַשֵּׁנִית עֲדַת הַשָּׂטָן וְלָכֵן כָּל־אֲשֶׁר לֹא יִהְיֶה לַעֲדַת שֶׂה־אֱלֹהִים יִהְיֶה לָעֵדָה הַגְּדוֹלָה הַהִיא אֵם הַתּוֹעֵבוֹת וְהִיא זוֹנַת כָּל־הָאָרֶץ׃",
   "english": "And he said unto me: Behold there are save two churches only; the one is the church of the Lamb of God, and the other is the church of the devil; wherefore, whoso belongeth not to the church of the Lamb of God belongeth to that great church, which is the mother of abominations; and she is the whore of all the earth."
  },
  {
@@ -2390,21 +2390,21 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 14,
   "verse": 12,
-  "hebrew": "וָאֵרֶא אֶת־עֲדַת שֶׂה הָאֱלֹהִים וּמִסְפָּרָם מְעַט מִפְּנֵי רִשְׁעַת וְתוֹעֲבוֹת הַזּוֹנָה הַיֹּשֶׁבֶת עַל־מַיִם רַבִּים אַךְ רָאִיתִי אֶת־עֲדַת הַשֶּׂה אֲשֶׁר הָיוּ קְדוֹשֵׁי הָאֱלֹהִים וְהָיוּ גַּם עַל־פְּנֵי כָל־הָאָרֶץ וּמֶמְשַׁלְתָּם עַל־פְּנֵי הָאָרֶץ מְעַט מִפְּנֵי רִשְׁעַת הַזּוֹנָה הַגְּדוֹלָה אֲשֶׁר רָאִיתִי׃",
+  "hebrew": "וָאֵרֶא אֶת־עֲדַת שֶׂה־אֱלֹהִים וּמִסְפָּרָם מְעַט מִפְּנֵי רִשְׁעַת וְתוֹעֲבוֹת הַזּוֹנָה הַיֹּשֶׁבֶת עַל־מַיִם רַבִּים אַךְ רָאִיתִי אֶת־עֲדַת הַשֶּׂה אֲשֶׁר הָיוּ קְדוֹשֵׁי הָאֱלֹהִים וְהָיוּ גַּם עַל־פְּנֵי כָל־הָאָרֶץ וּמֶמְשַׁלְתָּם עַל־פְּנֵי הָאָרֶץ מְעַט מִפְּנֵי רִשְׁעַת הַזּוֹנָה הַגְּדוֹלָה אֲשֶׁר רָאִיתִי׃",
   "english": "And it came to pass that I beheld the church of the Lamb of God, and its numbers were few, because of the wickedness and abominations of the whore who sat upon many waters; nevertheless, I beheld that the church of the Lamb, who were the saints of God, were also upon all the face of the earth; and their dominions upon the face of the earth were small, because of the wickedness of the great whore whom I saw."
  },
  {
   "book": "1 Nephi",
   "chapter": 14,
   "verse": 13,
-  "hebrew": "וָאֵרֶא כִּי קִבְּצָה אֵם הַתּוֹעֵבוֹת הַגְּדוֹלָה הֲמוֹנִים עַל־פְּנֵי כָל־הָאָרֶץ מִכָּל־הַגּוֹיִם לְהִלָּחֵם בְּשֶׂה הָאֱלֹהִים׃",
+  "hebrew": "וָאֵרֶא כִּי קִבְּצָה אֵם הַתּוֹעֵבוֹת הַגְּדוֹלָה הֲמוֹנִים עַל־פְּנֵי כָל־הָאָרֶץ מִכָּל־הַגּוֹיִם לְהִלָּחֵם בְּשֶׂה־אֱלֹהִים׃",
   "english": "And it came to pass that I beheld that the great mother of abominations did gather together multitudes upon the face of all the earth, among all the nations of the Gentiles, to fight against the Lamb of God."
  },
  {
   "book": "1 Nephi",
   "chapter": 14,
   "verse": 14,
-  "hebrew": "וָאֵרֶא נֶפִי אֶת־גְּבוּרַת שֶׂה הָאֱלֹהִים וַתֵּרֶד עַל־קְדוֹשֵׁי עֲדַת הַשֶּׂה וְעַל־עַם בְּרִית יְהוָה הַנְּפוֹצִים עַל־פְּנֵי כָל־הָאָרֶץ וַיֵּאָזְרוּ בְּצֶדֶק וּגְבוּרַת אֱלֹהִים בְּכָבוֹד גָּדוֹל׃",
+  "hebrew": "וָאֵרֶא נֶפִי אֶת־גְּבוּרַת שֶׂה־אֱלֹהִים וַתֵּרֶד עַל־קְדוֹשֵׁי עֲדַת הַשֶּׂה וְעַל־עַם בְּרִית יְהוָה הַנְּפוֹצִים עַל־פְּנֵי כָל־הָאָרֶץ וַיֵּאָזְרוּ בְּצֶדֶק וּגְבוּרַת אֱלֹהִים בְּכָבוֹד גָּדוֹל׃",
   "english": "And it came to pass that I, Nephi, beheld the power of the Lamb of God, that it descended upon the saints of the church of the Lamb, and upon the covenant people of the Lord, who were scattered upon all the face of the earth; and they were armed with righteousness and with the power of God in great glory."
  },
  {
@@ -3181,7 +3181,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 17,
   "verse": 20,
-  "hebrew": "וְכָמוֹךָ אָבִינוּ מוּבָל בִּשְׁגְעוֹן לִבּוֹ הִנֵּה הוֹצִיאָנוּ מֵאֶרֶץ יְרוּשָׁלַיִם וְנַדְנוּ בַמִּדְבָּר שָׁנִים רַבּוֹת אֵלֶּה וְנָשֵׁינוּ עָמְלוּ בִּהְיוֹתָן הָרוֹת וַתֵּלַדְנָה בָנִים בַּמִּדְבָּר וַתִּסְבֹּלְנָה כָּל־דָּבָר זוּלָתִי הַמָּוֶת וְטוֹב הָיָה לָהֶן לוּ מֵתוּ בְּטֶרֶם צֵאתָן מִירוּשָׁלַיִם מִסְּבֹל הַצָּרוֹת הָאֵלֶּה׃",
+  "hebrew": "וְכָמוֹךָ אָבִינוּ מוּבָל בִּשְׁגְעוֹן לִבּוֹ הִנֵּה הוֹצִיאָנוּ מֵאֶרֶץ יְרוּשָׁלַיִם וְנַדְנוּ בַמִּדְבָּר שָׁנִים רַבּוֹת אֵלֶּה וְנָשֵׁינוּ עָמְלוּ בִּהְיוֹתָן הָרוֹת וַתֵּלַדְנָה בָנִים בַּמִּדְבָּר וַתִּסְבֹּלְנָה כָּל־דָּבָר זוּלַת הַמָּוֶת וְטוֹב הָיָה לָהֶן לוּ מֵתוּ בְּטֶרֶם צֵאתָן מִירוּשָׁלַיִם מִסְּבֹל הַצָּרוֹת הָאֵלֶּה׃",
   "english": "And thou art like unto our father, led away by the foolish imaginations of his heart; yea, he hath led us out of the land of Jerusalem, and we have wandered in the wilderness for these many years; and our women have toiled, being big with child; and they have borne children in the wilderness and suffered all things, save it were death; and it would have been better that they had died before they came out of Jerusalem than to have suffered these afflictions."
  },
  {
@@ -3342,7 +3342,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 17,
   "verse": 43,
-  "hebrew": "וְעַתָּה אַחֲרֵי כָּל־הַדְּבָרִים הָאֵלֶּה הִגִּיעַ הָעֵת וְהָיוּ לְרָשָׁע אַף כִּמְעַט עַד־תֻּמָּם וְלֹא יָדַעְתִּי אוּלַי הֵם כַּיּוֹם הַזֶּה קְרוֹבִים לְהִשָּׁמֵד יָדַעְתִּי בּוֹא יָבוֹא יוֹם שָׁמְדָם זוּלָתִי מְעַטִּים אֲשֶׁר יוּבְלוּ בַּשֶּׁבִי׃",
+  "hebrew": "וְעַתָּה אַחֲרֵי כָּל־הַדְּבָרִים הָאֵלֶּה הִגִּיעַ הָעֵת וְהָיוּ לְרָשָׁע אַף כִּמְעַט עַד־תֻּמָּם וְלֹא יָדַעְתִּי אוּלַי הֵם כַּיּוֹם הַזֶּה קְרוֹבִים לְהִשָּׁמֵד יָדַעְתִּי בּוֹא יָבוֹא יוֹם שָׁמְדָם זוּלַת מְעַטִּים אֲשֶׁר יוּבְלוּ בַּשֶּׁבִי׃",
   "english": "And now, after all these things, the time has come that they have become wicked, yea, nearly unto ripeness; and I know not but they are at this day about to be destroyed; for I know that the day must surely come that they must be destroyed, save a few only, who shall be led away into captivity."
  },
  {
@@ -3433,14 +3433,14 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 18,
   "verse": 1,
-  "hebrew": "וַיִּשְׁתַּחֲווּ לַיהוָה וַיֵּלְכוּ אִתִּי וַנַּעֲשֶׂה עֲצֵי מַעֲשֵׂה חֹשֵׁב וַיַּרְאֵנִי יְהוָה מֵעֵת לְעֵת אֵיךְ אֶעֱבֹד אֶת־עֲצֵי הָאֳנִיָּה׃",
+  "hebrew": "וַיִּשְׁתַּחֲווּ לַיהוָה וַיֵּלְכוּ אִתִּי וַנַּחְרֹשׁ עֲצֵי מַעֲשֵׂה חֹשֵׁב וַיַּרְאֵנִי יְהוָה מֵעֵת לְעֵת אֵיךְ אֶחֱרֹשׁ אֶת־עֲצֵי הָאֳנִיָּה׃",
   "english": "And it came to pass that they did worship the Lord, and did go forth with me; and we did work timbers of curious workmanship. And the Lord did show me from time to time after what manner I should work the timbers of the ship."
  },
  {
   "book": "1 Nephi",
   "chapter": 18,
   "verse": 2,
-  "hebrew": "וְלֹא עָבַדְתִּי נֶפִי אֶת־הָעֵצִים כְּדֶרֶךְ אָדָם וְלֹא בָנִיתִי אֶת־הָאֳנִיָּה כְּמַעֲשֵׂה אָדָם כִּי אִם־כַּאֲשֶׁר הוֹרַנִי יְהוָה לָכֵן לֹא כְדֶרֶךְ אָדָם הָיְתָה׃",
+  "hebrew": "וְלֹא חָרַשְׁתִּי נֶפִי אֶת־הָעֵצִים כְּדֶרֶךְ אָדָם וְלֹא בָנִיתִי אֶת־הָאֳנִיָּה כְּמַעֲשֵׂה אָדָם כִּי־אִם כַּאֲשֶׁר הוֹרַנִי יְהוָה לָכֵן לֹא כְדֶרֶךְ אָדָם הָיְתָה׃",
   "english": "Now I, Nephi, did not work the timbers after the manner which was learned by men, neither did I build the ship after the manner of men; but I did build it after the manner which the Lord had shown unto me; wherefore, it was not after the manner of men."
  },
  {
@@ -3454,21 +3454,21 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 18,
   "verse": 4,
-  "hebrew": "וַיְהִי אַחֲרֵי כַּלּוֹתִי אֶת־הָאֳנִיָּה כִּדְבַר יְהוָה וַיִּרְאוּ אַחַי כִּי טוֹבָה הִיא וְכִי מַעֲשֶׂהָ נָאָה מְאֹד וַיִּכָּנְעוּ שֵׁנִית לִפְנֵי יְהוָה׃",
+  "hebrew": "אַחֲרֵי כַּלּוֹתִי אֶת־הָאֳנִיָּה כִּדְבַר יְהוָה וַיִּרְאוּ אַחַי כִּי טוֹבָה הִיא וְכִי מַעֲשֶׂהָ נָאָה מְאֹד וַיִּכָּנְעוּ שֵׁנִית לִפְנֵי יְהוָה׃",
   "english": "And it came to pass that after I had finished the ship, according to the word of the Lord, my brethren beheld that it was good, and that the workmanship thereof was exceedingly fine;  wherefore, they did humble themselves again before the Lord."
  },
  {
   "book": "1 Nephi",
   "chapter": 18,
   "verse": 5,
-  "hebrew": "וַיָּבֹא קוֹל יְהוָה אֶל־אָבִי כִּי נָקוּם וְנֵרֵד אֶל־הָאֳנִיָּה׃",
+  "hebrew": "וַיָּבֹא קוֹל־יְהוָה אֶל־אָבִי אֲשֶׁר נָקוּם וְנֵרֵד אֶל־הָאֳנִיָּה׃",
   "english": "And it came to pass that the voice of the Lord came unto my father, that we should arise and go down into the ship."
  },
  {
   "book": "1 Nephi",
   "chapter": 18,
   "verse": 6,
-  "hebrew": "וַיְהִי מִמָּחֳרָת אַחֲרֵי הֲכִינוֹתֵנוּ אֶת־כָּל־הַדְּבָרִים פְּרִי רַב וּבָשָׂר מִן־הַמִּדְבָּר וּדְבַשׁ לָרֹב וְצֵידָה כַּאֲשֶׁר צִוָּנוּ יְהוָה וַנֵּרֶד כֻּלָּנוּ אֶל־הָאֳנִיָּה עִם־כָּל־מַשָּׂאֵנוּ וְזַרְעֵנוּ וְכָל־אֲשֶׁר הֵבֵאנוּ אִתָּנוּ אִישׁ כְּפִי גִילוֹ עִם־נָשֵׁינוּ וְיַלְדֵינוּ׃",
+  "hebrew": "וַיְהִי מִמָּחֳרָת אַחֲרֵי הֲכִינוֹתֵנוּ אֶת־כָּל־הַדְּבָרִים פְּרִי רַב וּבָשָׂר מִן־הַמִּדְבָּר וּדְבַשׁ לָרֹב וְצֵידָה כַּאֲשֶׁר צִוָּנוּ יְהוָה וַנֵּרֶד כֻּלָּנוּ אֶל־הָאֳנִיָּה עִם־כָּל־מַשָּׂאֵנוּ וְזַרְעֵנוּ וְכָל־אֲשֶׁר הֵבֵאנוּ אִתָּנוּ אִישׁ לְפִי שָׁנָיו עִם־נָשֵׁינוּ וְיַלְדֵינוּ׃",
   "english": "And it came to pass that on the morrow, after we had prepared all things, much fruits and meat from the wilderness, and honey in abundance, and provisions according to that which the Lord had commanded us, we did go down into the ship, with all our loading and our seeds, and whatsoever thing we had brought with us, every one according to his age; wherefore, we did all go down into the ship, with our wives and our children."
  },
  {
@@ -3482,42 +3482,42 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 18,
   "verse": 8,
-  "hebrew": "וַיְהִי אַחֲרֵי רִדְתֵּנוּ כֻלָּנוּ אֶל־הָאֳנִיָּה וַנִּקַּח אִתָּנוּ צֵידָתֵנוּ וְהַדְּבָרִים אֲשֶׁר צֻוֵּינוּ וַנֵּצֵא אֶל־הַיָּם וַנִּנָּשֵׂא לִפְנֵי הָרוּחַ אֶל־אֶרֶץ הַנַּחֲלָה׃",
+  "hebrew": "אַחֲרֵי רִדְתֵּנוּ כֻלָּנוּ אֶל־הָאֳנִיָּה וַנִּקַּח אִתָּנוּ צֵידָתֵנוּ וְהַדְּבָרִים אֲשֶׁר צֻוֵּינוּ וַנֵּצֵא אֶל־הַיָּם וַנִּנָּשֵׂא לִפְנֵי הָרוּחַ אֶל־אֶרֶץ הַנַּחֲלָה׃",
   "english": "And it came to pass after we had all gone down into the ship, and had taken with us our provisions and things which had been commanded us, we did put forth into the sea and were driven forth before the wind towards the promised land."
  },
  {
   "book": "1 Nephi",
   "chapter": 18,
   "verse": 9,
-  "hebrew": "וְאַחֲרֵי הִנָּשְׂאֵנוּ לִפְנֵי הָרוּחַ יָמִים רַבִּים הִנֵּה הֵחֵלּוּ אַחַי וּבְנֵי יִשְׁמָעֵאל וְגַם נְשֵׁיהֶם לְשַׂמֵּחַ אֶת־עַצְמָם עַד כִּי הֵחֵלּוּ לִרְקֹד וּלְזַמֵּר וּלְדַבֵּר בְּפַחֲזוּת רַבָּה עַד כִּי שָׁכְחוּ בְּאֵיזֶה כֹחַ הוּבְאוּ שָׁמָּה אַף הִתְנַשְּׂאוּ לְפַחֲזוּת יְתֵרָה׃",
+  "hebrew": "וְאַחֲרֵי הִנָּשְׂאֵנוּ לִפְנֵי הָרוּחַ יָמִים רַבִּים הִנֵּה הֵחֵלּוּ אַחַי וּבְנֵי יִשְׁמָעֵאל וְגַם נְשֵׁיהֶם לְצַחֵק עַד־כִּי הֵחֵלּוּ לִרְקֹד וּלְזַמֵּר וּלְדַבֵּר בְּפַחֲזוּת רַבָּה עַד־כִּי שָׁכְחוּ בְּאֵיזֶה כֹחַ הוּבְאוּ שָׁמָּה אַף הִתְנַשְּׂאוּ לְפַחֲזוּת יְתֵרָה׃",
   "english": "And after we had been driven forth before the wind for the space of many days, behold, my brethren and the sons of Ishmael and also their wives began to make themselves merry, insomuch that they began to dance, and to sing, and to speak with much rudeness, yea, even that they did forget by what power they had been brought thither; yea, they were lifted up unto exceeding rudeness."
  },
  {
   "book": "1 Nephi",
   "chapter": 18,
   "verse": 10,
-  "hebrew": "וָאָחֵל נֶפִי לִירֹא מְאֹד פֶּן־יֶחֱרֶה אַף יְהוָה בָּנוּ וְיַכֵּנוּ בַּעֲבוּר עֲוֹנֵנוּ וְנִבָּלַע בִּמְצוּלוֹת הַיָּם וָאֲדַבֵּר אֲלֵיהֶם בְּכֹבֶד רֹאשׁ וַיִּכְעֲסוּ עָלַי לֵאמֹר לֹא נִתֵּן לְאָחִינוּ הַצָּעִיר לִמְשֹׁל בָּנוּ׃",
+  "hebrew": "וָאָחֵל נֶפִי לִירֹא מְאֹד פֶּן־יֶחֱרֶה אַף־יְהוָה בָּנוּ וְיַכֵּנוּ בַּעֲבוּר עֲוֹנֵנוּ וְנִבָּלַע בִּמְצוּלוֹת הַיָּם וָאֲדַבֵּר אֲלֵיהֶם בְּדִבְרֵי מוּסָר וַיִּכְעֲסוּ עָלַי לֵאמֹר לֹא נִתֵּן לְאָחִינוּ הַצָּעִיר לִמְשֹׁל בָּנוּ׃",
   "english": "And I, Nephi, began to fear exceedingly lest the Lord should be angry with us, and smite us because of our iniquity, that we should be swallowed up in the depths of the sea; wherefore, I, Nephi, began to speak to them with much soberness; but behold they were angry with me, saying: We will not that our younger brother shall be a ruler over us."
  },
  {
   "book": "1 Nephi",
   "chapter": 18,
   "verse": 11,
-  "hebrew": "וַיִּקְחוּ לָמָן וּלְמוּאֵל אוֹתִי וַיַּאַסְרוּנִי בַּחֲבָלִים וַיַּעֲשׂוּ לִי בְּקֹשִׁי רַב אַךְ הֶחֱרִישׁ יְהוָה לְמַעַן הַרְאוֹת כֹּחוֹ לְקַיֵּם דְּבָרוֹ אֲשֶׁר דִּבֶּר עַל־הָרְשָׁעִים׃",
+  "hebrew": "וַיִּקְחוּ לָמָן וּלְמוּאֵל אוֹתִי וַיַּאַסְרוּנִי בַּחֲבָלִים וַיַּעֲשׂוּ לִי בְּקֹשִׁי רַב אַךְ הֶחֱרִישׁ יְהוָה לְמַעַן הַרְאוֹת כֹּחוֹ לְהָקִים דְּבָרוֹ אֲשֶׁר־דִּבֶּר עַל־הָרְשָׁעִים׃",
   "english": "And it came to pass that Laman and Lemuel did take me and bind me with cords, and they did treat me with much harshness; nevertheless, the Lord did suffer it that he might show forth his power, unto the fulfilling of his word which he had spoken concerning the wicked."
  },
  {
   "book": "1 Nephi",
   "chapter": 18,
   "verse": 12,
-  "hebrew": "וַיְהִי אַחֲרֵי אָסְרָם אוֹתִי עַד אֲשֶׁר לֹא יָכֹלְתִּי לְהִתְנוֹעֵעַ וַיַּחְדַּל כְּלִי הַמּוֹרֶה הַדֶּרֶךְ אֲשֶׁר הֵכִין יְהוָה מֵעֲבֹד׃",
+  "hebrew": "אַחֲרֵי אָסְרָם אוֹתִי עַד־אֲשֶׁר לֹא־יָכֹלְתִּי לְהִתְנוֹעֵעַ וַיַּחְדַּל כְּלִי הַמּוֹרֶה הַדֶּרֶךְ אֲשֶׁר הֵכִין יְהוָה מֵעֲבֹד׃",
   "english": "And it came to pass that after they had bound me insomuch that I could not move, the compass, which had been prepared of the Lord, did cease to work."
  },
  {
   "book": "1 Nephi",
   "chapter": 18,
   "verse": 13,
-  "hebrew": "לָכֵן לֹא יָדְעוּ אָנָה יְנַהֲגוּ אֶת־הָאֳנִיָּה עַד כִּי קָמָה סַעֲרָה גְדוֹלָה סַעַר גָּדוֹל וְנוֹרָא וַנִּדַּח אָחוֹר עַל־פְּנֵי הַמַּיִם שְׁלֹשָׁה יָמִים וַיָּחֵלּוּ לִירֹא מְאֹד פֶּן־יִטְבְּעוּ בַיָּם אַךְ לֹא הִתִּירוּנִי׃",
+  "hebrew": "לָכֵן לֹא־יָדְעוּ אָנָה יְנַהֲגוּ אֶת־הָאֳנִיָּה עַד־כִּי קָמָה סַעֲרָה גְדוֹלָה סַעַר גָּדוֹל וְנוֹרָא וַנִּדַּח אָחוֹר עַל־פְּנֵי הַמַּיִם שְׁלֹשָׁה יָמִים וַיָּחֵלּוּ לִירֹא מְאֹד פֶּן־יִטְבְּעוּ בַיָּם אַךְ לֹא הִתִּירוּנִי׃",
   "english": "Wherefore, they knew not whither they should steer the ship, insomuch that there arose a great storm, yea, a great and terrible tempest, and we were driven back upon the waters for the space of three days; and they began to be frightened exceedingly lest they should be drowned in the sea; nevertheless they did not loose me."
  },
  {
@@ -3545,7 +3545,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 18,
   "verse": 17,
-  "hebrew": "וְעַתָּה דִּבֶּר אָבִי לֶחִי דְּבָרִים רַבִּים אֲלֵיהֶם וְגַם אֶל־בְּנֵי יִשְׁמָעֵאל אַךְ הִנֵּה אַיֵּם אִיְּמוּ עַל־כָּל־הַמְדַבֵּר בַּעֲדִי וְהוֹרַי זְקֵנִים וַיִּסְבְּלוּ צַעַר רַב בַּעֲבוּר בְּנֵיהֶם וַיּוּרְדוּ עַד־עַרְשָׂם דְּוָי׃",
+  "hebrew": "וְעַתָּה דִּבֶּר אָבִי לֶחִי דְּבָרִים רַבִּים אֲלֵיהֶם וְגַם אֶל־בְּנֵי יִשְׁמָעֵאל אַךְ הִנֵּה הִפִּילוּ אֵימָתָם עַל־כָּל־הַמְדַבֵּר בַּעֲדִי וְהוֹרַי זְקֵנִים וַיִּסְבְּלוּ צַעַר רַב בַּעֲבוּר בְּנֵיהֶם וַיּוּרְדוּ עַד־עַרְשָׂם דְּוָי׃",
   "english": "Now my father, Lehi, had said many things unto them, and also unto the sons of Ishmael; but, behold, they did breathe out much threatenings against anyone that should speak for me; and my parents being stricken in years, and having suffered much grief because of their children, they were brought down, yea, even upon their sick– beds."
  },
  {
@@ -3566,28 +3566,28 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 18,
   "verse": 20,
-  "hebrew": "וְלֹא הָיָה דָבָר אֵין זוּלָתִי כֹחַ אֱלֹהִים אֲשֶׁר אִיֵּם עֲלֵיהֶם בְּכִלָּיוֹן יָכוֹל לְהַטּוֹת אֶת־לִבָּם לָכֵן כִּרְאוֹתָם כִּי הָיוּ קְרוֹבִים לְהִבָּלַע בִּמְצוּלוֹת הַיָּם וַיִּנָּחֲמוּ עַל־אֲשֶׁר עָשׂוּ עַד הִתִּירוּנִי׃",
+  "hebrew": "וְלֹא־הָיָה דָבָר אֵין זוּלַת כֹּחַ אֱלֹהִים אֲשֶׁר הִפִּיל אֵימָתוֹ עֲלֵיהֶם בְּכִלָּיוֹן יָכוֹל לְהַטּוֹת אֶת־לִבָּם לָכֵן כִּרְאוֹתָם כִּי הָיוּ קְרוֹבִים לְהִבָּלַע בִּמְצוּלוֹת הַיָּם וַיִּנָּחֲמוּ עַל־אֲשֶׁר עָשׂוּ עַד הִתִּירוּנִי׃",
   "english": "And there was nothing save it were the power of God, which threatened them with destruction, could soften their hearts; wherefore, when they saw that they were about to be swallowed up in the depths of the sea they repented of the thing which they had done, insomuch that they loosed me."
  },
  {
   "book": "1 Nephi",
   "chapter": 18,
   "verse": 21,
-  "hebrew": "וַיְהִי אַחֲרֵי הַתִּירָם אוֹתִי וָאֶקַּח אֶת־כְּלִי הַמּוֹרֶה הַדֶּרֶךְ וַיַּעַשׂ כַּאֲשֶׁר חָפַצְתִּי וַיְהִי וָאֶתְפַּלֵּל אֶל־יְהוָה וְאַחֲרֵי הִתְפַּלְלִי וַיִּשְׁכְּכוּ הָרוּחוֹת וַתִּשְׁקֹט הַסַּעֲרָה וַתְּהִי דְּמָמָה רַבָּה׃",
+  "hebrew": "אַחֲרֵי הַתִּירָם אוֹתִי וָאֶקַּח אֶת־כְּלִי הַמּוֹרֶה הַדֶּרֶךְ וַיַּעַשׂ כַּאֲשֶׁר חָפַצְתִּי וָאֶתְפַּלֵּל אֶל־יְהוָה וְאַחֲרֵי הִתְפַּלְלִי וַיִּשְׁכְּכוּ הָרוּחוֹת וַתִּשְׁקֹט הַסַּעֲרָה וַתְּהִי דְּמָמָה רַבָּה׃",
   "english": "And it came to pass after they had loosed me, behold, I took the compass, and it did work whither I desired it. And it came to pass that I prayed unto the Lord; and after I had prayed the winds did cease, and the storm did cease, and there was a great calm."
  },
  {
   "book": "1 Nephi",
   "chapter": 18,
   "verse": 22,
-  "hebrew": "וָאַנְהִג נֶפִי אֶת־הָאֳנִיָּה וַנִּפְלַח שֵׁנִית אֶל־אֶרֶץ הַנַּחֲלָה׃",
+  "hebrew": "וָאַנְהִג נֶפִי אֶת־הָאֳנִיָּה וַנֵּלֶךְ שֵׁנִית אֶל־אֶרֶץ הַנַּחֲלָה׃",
   "english": "And it came to pass that I, Nephi, did guide the ship, that we sailed again towards the promised land."
  },
  {
   "book": "1 Nephi",
   "chapter": 18,
   "verse": 23,
-  "hebrew": "וַיְהִי אַחֲרֵי פְּלָחֵנוּ יָמִים רַבִּים וַנָּבֹא אֶל־אֶרֶץ הַנַּחֲלָה וַנֵּצֵא אֶל־הָאָרֶץ וַנִּטַּע אֶת־אָהֳלֵינוּ וַנִּקְרָא לָהּ אֶרֶץ הַנַּחֲלָה׃",
+  "hebrew": "אַחֲרֵי לֶכְתֵּנוּ יָמִים רַבִּים וַנָּבֹא אֶל־אֶרֶץ הַנַּחֲלָה וַנֵּצֵא אֶל־הָאָרֶץ וַנִּטַּע אֶת־אָהֳלֵינוּ וַנִּקְרָא לָהּ אֶרֶץ הַנַּחֲלָה׃",
   "english": "And it came to pass that after we had sailed for the space of many days we did arrive at the promised land; and we went forth upon the land,  and did pitch our tents; and we did call it the promised land."
  },
  {
@@ -3601,49 +3601,49 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 18,
   "verse": 25,
-  "hebrew": "וַנִּמְצָא בְּאֶרֶץ הַנַּחֲלָה בְּמַסָּעֵנוּ בַמִּדְבָּר כִּי יֶשׁ חַיּוֹת בַּיְּעָרִים מִכָּל־מִין גַּם־הַפָּרָה וְהַשּׁוֹר וְהַחֲמוֹר וְהַסּוּס וְהָעֵז וּשְׂעִיר הַבָּר וְכָל־מִינֵי חַיּוֹת הַבָּר אֲשֶׁר לְתַשְׁמִישׁ הָאָדָם וַנִּמְצָא כָל־מִינֵי מַתֶּכֶת גַּם־זָהָב וָכֶסֶף וּנְחֹשֶׁת׃",
+  "hebrew": "וַנִּמְצָא בְּאֶרֶץ הַנַּחֲלָה בְּמַסָּעֵנוּ בַמִּדְבָּר כִּי יֶשׁ חַיּוֹת בַּיְּעָרִים מִכָּל־מִין גַּם־הַפָּרָה וְהַשּׁוֹר וְהַחֲמוֹר וְהַסּוּס וְהָעֵז וּשְׂעִיר הַשָּׂדֶה וְכָל־חַיַּת הַשָּׂדֶה אֲשֶׁר לְצֹרֶךְ הָאָדָם וַנִּמְצָא זָהָב וָכֶסֶף וּנְחֹשֶׁת וְכָל־מִינֵי בַּרְזֶל׃",
   "english": "And it came to pass that we did find upon the land of promise, as we journeyed in the wilderness, that there were beasts in the forests of every kind, both the cow and the ox, and the ass and the horse, and the goat and the wild goat, and all manner of wild animals, which were for the use of men. And we did find all manner of ore, both of gold, and of silver, and of copper."
  },
  {
   "book": "1 Nephi",
   "chapter": 19,
   "verse": 1,
-  "hebrew": "וַיְהִי כִּי צִוַּנִי יְהוָה וָאַעַשׂ לוּחֹת מַתֶּכֶת לְמַעַן אֶחְקֹק עֲלֵיהֶם אֶת־דִּבְרֵי עַמִּי וָאֶחְקֹק עַל־הַלֻּחֹת אֲשֶׁר עָשִׂיתִי אֶת־דִּבְרֵי אָבִי וְגַם־מַסְעֵינוּ בַמִּדְבָּר וּנְבוּאַת אָבִי וְגַם נְבוּאוֹתַי הָרַבּוֹת חָקַקְתִּי עֲלֵיהֶם׃",
+  "hebrew": "כִּי צִוַּנִי יְהוָה וָאַעַשׂ לוּחֹת מַתֶּכֶת לְמַעַן אֶחְקֹק עֲלֵיהֶם אֶת־דִּבְרֵי עַמִּי וָאֶחְקֹק עַל־הַלֻּחֹת אֲשֶׁר עָשִׂיתִי אֶת־דִּבְרֵי אָבִי וְגַם־מַסְעֵינוּ בַמִּדְבָּר וּנְבוּאַת אָבִי וְגַם נְבוּאוֹתַי הָרַבּוֹת חָקַקְתִּי עֲלֵיהֶם׃",
   "english": "And it came to pass that the Lord commanded me, wherefore I did make plates of ore that I might engraven upon them the record of my people. And upon the plates which I made I did engraven the record of my father, and also our journeyings in the wilderness, and the prophecies of my father; and also many of mine own prophecies have I engraven upon them."
  },
  {
   "book": "1 Nephi",
   "chapter": 19,
   "verse": 2,
-  "hebrew": "וְלֹא יָדַעְתִּי בָּעֵת הַהִיא בַּעֲשׂוֹתִי אֹתָם כִּי יְצַוֵּנִי יְהוָה לַעֲשׂוֹת אֶת־הַלֻּחֹת הָאֵלֶּה לָכֵן דִּבְרֵי אָבִי וְתוֹלְדֹת אֲבֹתָיו וְרֹב כָּל־קֹרֹתֵינוּ בַמִּדְבָּר חֲקוּקִים עַל־הַלֻּחֹת הָרִאשֹׁנוֹת אֲשֶׁר דִּבַּרְתִּי עַל־כֵּן הַדְּבָרִים אֲשֶׁר הָיוּ לִפְנֵי עֲשׂוֹתִי אֶת־הַלֻּחֹת הָאֵלֶּה בֶּאֱמֶת עַל־הַלֻּחֹת הָרִאשֹׁנוֹת נִזְכָּרִים הֵם׃",
+  "hebrew": "וְלֹא־יָדַעְתִּי בָּעֵת הַהִיא בַּעֲשׂוֹתִי אֹתָם כִּי יְצַוֵּנִי יְהוָה לַעֲשׂוֹת אֶת־הַלֻּחֹת הָאֵלֶּה לָכֵן דִּבְרֵי אָבִי וְתוֹלְדֹת אֲבֹתָיו וְרֹב כָּל־מַעֲשֵׂינוּ בַמִּדְבָּר חֲקוּקִים עַל־הַלֻּחֹת הָרִאשֹׁנוֹת אֲשֶׁר דִּבַּרְתִּי עַל־כֵּן הַדְּבָרִים אֲשֶׁר הָיוּ לִפְנֵי עֲשׂוֹתִי אֶת־הַלֻּחֹת הָאֵלֶּה בֶּאֱמֶת עַל־הַלֻּחֹת הָרִאשֹׁנוֹת נִזְכָּרִים הֵם׃",
   "english": "And I knew not at the time when I made them that I should be commanded of the Lord to make these plates; wherefore, the record of my father, and the genealogy of his fathers, and the more part of all our proceedings in the wilderness are engraven upon those first plates of which I have spoken; wherefore, the things which transpired before I made these plates are, of a truth, more particularly made mention upon the first plates."
  },
  {
   "book": "1 Nephi",
   "chapter": 19,
   "verse": 3,
-  "hebrew": "וַיְהִי אַחֲרֵי עֲשׂוֹתִי אֶת־הַלֻּחֹת הָאֵלֶּה כְּמִצְוַת יְהוָה וָאֲקַבֵּל נֶפִי מִצְוָה כִּי יִכָּתְבוּ דִּבְרֵי הַמְשָׁרְתִים וְהַנְּבוּאוֹת הַחֲלָקִים הַבְּרוּרִים וְהַיְקָרִים מֵהֶם עַל־הַלֻּחֹת הָאֵלֶּה וְכִי הַדְּבָרִים הַכְּתוּבִים יִשָּׁמְרוּ לְהוֹרוֹת אֶת־עַמִּי אֲשֶׁר יִירְשׁוּ אֶת־הָאָרֶץ וּלְמַעַן מְזִמּוֹת אֲחֵרוֹת אֲשֶׁר יְדוּעוֹת לַיהוָה׃",
+  "hebrew": "אַחֲרֵי עֲשׂוֹתִי אֶת־הַלֻּחֹת הָאֵלֶּה כְּמִצְוַת יְהוָה וָאֲקַבֵּל נֶפִי מִצְוָה כִּי יִכָּתְבוּ דִּבְרֵי הַמְשָׁרְתִים וְהַנְּבוּאוֹת הַחֲלָקִים הַבְּרוּרִים וְהַיְקָרִים מֵהֶם עַל־הַלֻּחֹת הָאֵלֶּה וְכִי הַדְּבָרִים הַכְּתוּבִים יִשָּׁמְרוּ לְהוֹרוֹת אֶת־עַמִּי אֲשֶׁר יִירְשׁוּ אֶת־הָאָרֶץ וּלְמַעַן מַחֲשָׁבוֹת אֲחֵרוֹת אֲשֶׁר יְדוּעוֹת לַיהוָה׃",
   "english": "And after I had made these plates by way of commandment, I, Nephi, received a commandment that the ministry and the prophecies, the more plain and precious parts of them, should be written upon these plates; and that the things which were written should be kept for the instruction of my people, who should possess the land, and also for otherwise purposes, which purposes are known unto the Lord."
  },
  {
   "book": "1 Nephi",
   "chapter": 19,
   "verse": 4,
-  "hebrew": "לָכֵן כָּתַבְתִּי נֶפִי עַל־הַלֻּחֹת הָאֲחֵרִים הַנֹּתְנִים חֶשְׁבּוֹן אוֹ הַנֹּתְנִים חֶשְׁבּוֹן גָּדוֹל אֲשֶׁר לַמִּלְחָמוֹת וְלַמְּרִיבוֹת וְלַהַשְׁמָדוֹת אֲשֶׁר לְעַמִּי וְזֹאת עָשִׂיתִי וָאֲצַוֶּה אֶת־עַמִּי מַה־יַּעֲשׂוּ אַחֲרֵי לֶכְתִּי וְכִי הַלֻּחֹת הָאֵלֶּה יָעָבְרוּ מִדּוֹר לְדוֹר אוֹ מִנָּבִיא לְנָבִיא עַד אֲשֶׁר יְצַוֶּה יְהוָה עוֹד׃",
+  "hebrew": "לָכֵן כָּתַבְתִּי נֶפִי עַל־הַלֻּחֹת הָאֲחֵרִים הַמְסַפְּרִים אוֹ הַמַּרְבִּים לְסַפֵּר אֶת־הַמִּלְחָמוֹת וְאֶת־הַמְּרִיבוֹת וְאֶת־הַשְּׁמָמוֹת אֲשֶׁר לְעַמִּי וְזֹאת עָשִׂיתִי וָאֲצַוֶּה אֶת־עַמִּי מַה־יַּעֲשׂוּ אַחֲרֵי מוֹתִי וְכִי הַלֻּחֹת הָאֵלֶּה יַעַבְרוּ מִדּוֹר לְדוֹר אוֹ מִנָּבִיא לְנָבִיא עַד־אֲשֶׁר יְצַוֶּה יְהוָה עוֹד׃",
   "english": "Wherefore, I, Nephi, did make a record upon the other plates, which gives an account, or which gives a greater account of the wars and contentions and destructions of my people. And this have I done, and commanded my people what they should do after I was gone; and that these plates should be handed down from one generation to another, or from one prophet to another, until further commandments of the Lord."
  },
  {
   "book": "1 Nephi",
   "chapter": 19,
   "verse": 5,
-  "hebrew": "וְחֶשְׁבּוֹן עֲשִׂיָּתִי אֶת־הַלֻּחֹת הָאֵלֶּה יִנָּתֵן אַחֲרֵי־כֵן וְהִנֵּה אֶמְשִׁיךְ כַּאֲשֶׁר דִּבַּרְתִּי וְזֹאת אֶעֱשֶׂה לְמַעַן יִשָּׁמְרוּ הַדְּבָרִים הַקְּדוֹשִׁים לְדַעַת עַמִּי׃",
+  "hebrew": "וְעַל עֲשִׂיָּתִי אֶת־הַלֻּחֹת הָאֵלֶּה יְסֻפַּר אַחֲרֵי־כֵן וְהִנֵּה אֹסִיף לְסַפֵּר כַּאֲשֶׁר דִּבַּרְתִּי וְזֹאת אֶעֱשֶׂה לְמַעַן יִשָּׁמְרוּ הַדְּבָרִים הַקְּדוֹשִׁים לְדַעַת עַמִּי׃",
   "english": "And an account of my making these plates shall be given hereafter; and then, behold, I proceed according to that which I have spoken;  and this I do that the more sacred things may be kept for the knowledge of my people."
  },
  {
   "book": "1 Nephi",
   "chapter": 19,
   "verse": 6,
-  "hebrew": "אַךְ לֹא אֶכְתֹּב דָּבָר עַל־הַלֻּחֹת זוּלָתִי אֲשֶׁר אֶחְשֹׁב כִּי קָדוֹשׁ הוּא וְעַתָּה אִם־אֶשְׁגֶּה גַּם שָׁגוּ הָרִאשֹׁנִים לֹא לְמַעַן אֶפְטֹר עַצְמִי בַּעֲבוּר אֲנָשִׁים אֲחֵרִים אַךְ בַּעֲבוּר הַחֻלְשָׁה אֲשֶׁר בִּי כְּפִי הַבָּשָׂר אֶפְטֹר עַצְמִי׃",
+  "hebrew": "אַךְ לֹא אֶכְתֹּב דָּבָר עַל־הַלֻּחֹת זוּלַת אֲשֶׁר אֶחְשֹׁב כִּי קָדוֹשׁ הוּא וְעַתָּה אִם־אֶשְׁגֶּה גַּם שָׁגוּ הָרִאשֹׁנִים לֹא לְמַעַן אֶצְטַדֵּק בַּעֲבוּר אֲנָשִׁים אֲחֵרִים אַךְ בַּעֲבוּר אֲשֶׁר רָפֶה אֲנֹכִי כְּפִי הַבָּשָׂר אֶצְטַדָּק׃",
   "english": "Nevertheless, I do not write anything upon plates save it be that I think it be sacred. And now, if I do err, even did they err of old; not that I would excuse myself because of other men, but because of the weakness which is in me, according to the flesh, I would excuse myself."
  },
  {
@@ -3657,21 +3657,21 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 19,
   "verse": 8,
-  "hebrew": "וְהִנֵּה יָבוֹא כְּדִבְרֵי הַמַּלְאָךְ בְּשֵׁשׁ מֵאוֹת שָׁנָה מֵעֵת צֵאת אָבִי מִירוּשָׁלָיִם׃",
+  "hebrew": "וְהִנֵּה יָבוֹא כְּדִבְרֵי הַמַּלְאָךְ בְּשֵׁשׁ מֵאוֹת שָׁנָה מֵעֵת צֵאת אָבִי מִירוּשָׁלַיִם׃",
   "english": "And behold he cometh, according to the words of the angel, in six hundred years from the time my father left Jerusalem."
  },
  {
   "book": "1 Nephi",
   "chapter": 19,
   "verse": 9,
-  "hebrew": "וְהָעוֹלָם בַּעֲוֹנָם יִשְׁפְּטוּהוּ לְאַיִן לָכֵן יַכּוּהוּ וְהוּא יִסְבֹּל וְיַכּוּהוּ וְהוּא יִסְבֹּל הֵן יָרְקוּ עָלָיו וְהוּא יִסְבֹּל בַּעֲבוּר חַסְדּוֹ וְאֹרֶךְ רוּחוֹ לִבְנֵי הָאָדָם׃",
+  "hebrew": "וְהָעוֹלָם בַּעֲוֹנָם יִשְׁפְּטוּהוּ לְאַיִן לָכֵן יַכּוּהוּ וְהוּא יִסְבֹּל וְיַכּוּהוּ וְהוּא יִסְבֹּל הֵן יָרְקוּ עָלָיו וְהוּא יִסְבֹּל בַּעֲבוּר חַסְדּוֹ וְאֶרֶךְ אַפּוֹ לִבְנֵי־הָאָדָם׃",
   "english": "And the world, because of their iniquity, shall judge him to be a thing of naught; wherefore they scourge him, and he suffereth it; and they smite him, and he suffereth it. Yea, they spit upon him, and he suffereth it, because of his loving kindness and his long– suffering towards the children of men."
  },
  {
   "book": "1 Nephi",
   "chapter": 19,
   "verse": 10,
-  "hebrew": "וֵאלֹהֵי אֲבוֹתֵינוּ אֲשֶׁר הוּצְאוּ מִמִּצְרַיִם מִבֵּית עֲבָדִים וְגַם נִשְׁמְרוּ בַּמִּדְבָּר עַל־יָדוֹ הֵן אֱלֹהֵי אַבְרָהָם וְיִצְחָק וְיַעֲקֹב יִתֵּן אֶת־נַפְשׁוֹ כְּדִבְרֵי הַמַּלְאָךְ כְּאָדָם בִּידֵי רְשָׁעִים לְהִנָּשֵׂא כְּדִבְרֵי זֶנוֹךְ וּלְהִתָּלוֹת עַל־עֵץ כְּדִבְרֵי נְעוּם וּלְהִקָּבֵר בְּקֶבֶר כְּדִבְרֵי זֶנוֹס אֲשֶׁר דִּבֵּר עַל־שְׁלֹשֶׁת יְמֵי הַחֹשֶׁךְ אֲשֶׁר יִהְיוּ לְאוֹת אֲשֶׁר יִנָּתֵן עַל־מוֹתוֹ לְיֹשְׁבֵי אִיֵּי הַיָּם אַף כִּי לִבְנֵי בֵּית יִשְׂרָאֵל׃",
+  "hebrew": "וֵאלֹהֵי אֲבוֹתֵינוּ אֲשֶׁר הוּצְאוּ מִמִּצְרַיִם מִבֵּית עֲבָדִים וְגַם נִשְׁמְרוּ בַּמִּדְבָּר עַל־יָדוֹ הֵן אֱלֹהֵי אַבְרָהָם וְיִצְחָק וְיַעֲקֹב יִתֵּן אֶת־נַפְשׁוֹ כְּדִבְרֵי הַמַּלְאָךְ כְּאָדָם בִּידֵי רְשָׁעִים לְהִנָּשֵׂא כְּדִבְרֵי זֶנוֹךְ וּלְהִתָּלוֹת עַל־עֵץ כְּדִבְרֵי נְעוּם וּלְהִקָּבֵר בְּקֶבֶר כְּדִבְרֵי זֶנוֹס אֲשֶׁר דִּבֵּר עַל־שְׁלֹשֶׁת יְמֵי הַחֹשֶׁךְ אֲשֶׁר יִהְיוּ לְאוֹת אֲשֶׁר יִנָּתֵן עַל־מוֹתוֹ לְיֹשְׁבֵי אִיֵּי הַיָּם אַף־כִּי לִבְנֵי בֵּית־יִשְׂרָאֵל׃",
   "english": "And the God of our fathers, who were led out of Egypt, out of bon– dage, and also were preserved in the wilderness by him, yea, the God of Abraham, and of Isaac, and the God of Jacob, yieldeth himself, according to the words of the angel, as a man, into the hands of wicked men, to be lifted up, according to the words of Zenock, and to be crucified, according to the words of Neum, and to be buried in a sepulchre, according to the words of Zenos, which he spake concerning the three days of darkness, which should be a sign given of his death unto those who should inhabit the isles of the sea, more especially given unto those who are of the house of Israel."
  },
  {
@@ -3685,14 +3685,14 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 19,
   "verse": 12,
-  "hebrew": "וְכָל־הַדְּבָרִים הָאֵלֶּה בּוֹא יָבֹאוּ אָמַר הַנָּבִיא זֶנוֹס וְיִבָּקְעוּ צוּרֵי הָאָרֶץ וּבַעֲבוּר אַנְחַת הָאָרֶץ יִפָּעֲלוּ רַבִּים מִמַּלְכֵי אִיֵּי הַיָּם בְּרוּחַ אֱלֹהִים לִקְרֹא אֱלֹהֵי הַבְּרִיאָה סֹבֵל׃",
+  "hebrew": "וְכָל־הַדְּבָרִים הָאֵלֶּה בּוֹא יָבֹאוּ אָמַר הַנָּבִיא זֶנוֹס וְיִבָּקְעוּ צוּרֵי הָאָרֶץ וּבַעֲבוּר אַנְחַת הָאָרֶץ יִתְעוֹרְרוּ רַבִּים מִמַּלְכֵי אִיֵּי הַיָּם בְּרוּחַ אֱלֹהִים לִקְרֹא אֱלֹהֵי הַבְּרִיאָה סֹבֵל׃",
   "english": "And all these things must surely come, saith the prophet Zenos. And the rocks of the earth must rend; and because of the groanings of the earth, many of the kings of the isles of the sea shall be wrought upon by the Spirit of God, to exclaim: The God of nature suffers."
  },
  {
   "book": "1 Nephi",
   "chapter": 19,
   "verse": 13,
-  "hebrew": "וְלַאֲשֶׁר בִּירוּשָׁלַיִם אָמַר הַנָּבִיא יֻכּוּ בְּיַד כָּל־הָעַמִּים כִּי תָלוּ אֶת־אֱלֹהֵי יִשְׂרָאֵל עַל־עֵץ וַיַּטּוּ  לְבָבָם מִמֶּנּוּ וַיִּמְאֲסוּ אוֹתוֹת וּמוֹפְתִים וּגְבוּרַת וּכְבוֹד אֱלֹהֵי יִשְׂרָאֵל׃",
+  "hebrew": "וְלַאֲשֶׁר בִּירוּשָׁלַיִם אָמַר הַנָּבִיא יֻכּוּ בְּיַד כָּל־הָעַמִּים כִּי תָלוּ אֶת־אֱלֹהֵי יִשְׂרָאֵל עַל־עֵץ וַיַּטּוּ לְבָבָם מִמֶּנּוּ וַיִּמְאֲסוּ אוֹתוֹת וּמוֹפְתִים וּגְבוּרַת אֱלֹהֵי יִשְׂרָאֵל וּכְבוֹדוֹ׃",
   "english": "And as for those who are at Jerusalem, saith the prophet, they shall be scourged by all people, because they crucify the God of Israel, and turn  their hearts aside, rejecting signs and wonders, and the power and glory of the God of Israel."
  },
  {
@@ -3706,7 +3706,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 19,
   "verse": 15,
-  "hebrew": "אָכֵן בְּבוֹא הַיּוֹם הַהוּא אָמַר הַנָּבִיא כַּאֲשֶׁר לֹא יָסוּרוּ עוֹד לְבָבָם מִקְּדוֹשׁ יִשְׂרָאֵל אָז יִזְכֹּר אֶת־הַבְּרִיתוֹת אֲשֶׁר כָּרַת לַאֲבוֹתָם׃",
+  "hebrew": "אָכֵן בְּבוֹא הַיּוֹם הַהוּא אָמַר הַנָּבִיא כַּאֲשֶׁר לֹא יַטּוּ עוֹד לְבָבָם מִקְּדוֹשׁ יִשְׂרָאֵל אָז יִזְכֹּר אֶת־הַבְּרִיתוֹת אֲשֶׁר כָּרַת לַאֲבוֹתָם׃",
   "english": "Nevertheless, when that day cometh, saith the prophet, that they no more turn aside their hearts against the Holy One of Israel, then will he remember the covenants which he made to their fathers."
  },
  {
@@ -3734,14 +3734,14 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 19,
   "verse": 19,
-  "hebrew": "לָכֵן אֲדַבֵּר אֶל־כָּל־בֵּית יִשְׂרָאֵל אִם יִהְיֶה כִּי יַשִּׂיגוּ אֶת־הַדְּבָרִים הָאֵלֶּה׃",
+  "hebrew": "לָכֵן אֲדַבֵּר אֶל־כָּל־בֵּית יִשְׂרָאֵל אִם־יִהְיֶה כִּי יַשִּׂיגוּ אֶת־הַדְּבָרִים הָאֵלֶּה׃",
   "english": "Wherefore, I speak unto all the house of Israel, if it so be that they should obtain these things."
  },
  {
   "book": "1 Nephi",
   "chapter": 19,
   "verse": 20,
-  "hebrew": "כִּי הִנֵּה יֵשׁ־לִי מַעֲשֵׂי הָרוּחַ אֲשֶׁר יְיַגְּעוּנִי עַד כִּי רָפוּ כָּל־מִפְרְקוֹתַי בַּעֲבוּר אֲשֶׁר בִּירוּשָׁלָיִם כִּי לוּלֵא הָיָה יְהוָה חַנּוּן לְהַרְאוֹתֵנִי אוֹדוֹתָם כַּאֲשֶׁר הֶרְאָה לִנְבִיאֵי קֶדֶם גַּם־אֲנִי הָיִיתִי אֹבֵד׃",
+  "hebrew": "כִּי הִנֵּה יֵשׁ־לִי מַעֲשֵׂי הָרוּחַ אֲשֶׁר יְיַגְּעוּנִי עַד־כִּי רָפוּ כָּל־עֲצָמַי בַּעֲבוּר אֲשֶׁר בִּירוּשָׁלַיִם כִּי לוּלֵא הָיָה יְהוָה חַנּוּן לְהַרְאוֹתֵנִי אוֹדוֹתָם כַּאֲשֶׁר הֶרְאָה לִנְבִיאֵי קֶדֶם גַּם־אֲנִי הָיִיתִי אֹבֵד׃",
   "english": "For behold, I have workings in the spirit, which doth weary me even that all my joints are weak, for those who are at Jerusalem; for had not the Lord been merciful, to show unto me concerning them, even as he had prophets of old, I should have perished also."
  },
  {
@@ -3755,7 +3755,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 19,
   "verse": 22,
-  "hebrew": "וָאֲלַמֵּד נֶפִי אֶת־אַחַי אֶת־הַדְּבָרִים הָאֵלֶּה וַיְהִי וָאֶקְרָא לָהֶם דְּבָרִים רַבִּים אֲשֶׁר חֲקוּקִים עַל־לוּחוֹת הַנְּחֹשֶׁת לְמַעַן יֵדְעוּ אֶת־מַעֲשֵׂי יְהוָה בַּאֲרָצוֹת אֲחֵרוֹת בְּקֶרֶב עַם־קֶדֶם׃",
+  "hebrew": "וָאֲלַמֵּד נֶפִי אֶת־אַחַי אֶת־הַדְּבָרִים הָאֵלֶּה וָאֶקְרָא לָהֶם דְּבָרִים רַבִּים אֲשֶׁר חֲקוּקִים עַל־לוּחוֹת הַנְּחֹשֶׁת לְמַעַן יֵדְעוּ אֶת־מַעֲשֵׂי יְהוָה בַּאֲרָצוֹת אֲחֵרוֹת בְּקֶרֶב עַם קֶדֶם׃",
   "english": "Now it came to pass that I, Nephi, did teach my brethren these things; and it came to pass that I did read many things to them, which were engraven upon the plates of brass, that they might know concerning the doings of the Lord in other lands, among people of old."
  },
  {
@@ -3769,7 +3769,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 19,
   "verse": 24,
-  "hebrew": "לָכֵן דִּבַּרְתִּי אֲלֵיהֶם לֵאמֹר שִׁמְעוּ דִּבְרֵי הַנָּבִיא אַתֶּם שְׁאֵרִית בֵּית יִשְׂרָאֵל עָנָף אֲשֶׁר נִכְרַת שִׁמְעוּ דִּבְרֵי הַנָּבִיא אֲשֶׁר נִכְתְּבוּ לְכָל־בֵּית יִשְׂרָאֵל וְהַמְשִׁילוּם אֲלֵיכֶם לְמַעַן תִּהְיֶה לָכֶם תִּקְוָה כַּאֲחֵיכֶם אֲשֶׁר נִכְרַתֶּם מֵהֶם כִּי כָּכָה כָּתַב הַנָּבִיא׃",
+  "hebrew": "לָכֵן דִּבַּרְתִּי אֲלֵיהֶם לֵאמֹר שִׁמְעוּ דִּבְרֵי הַנָּבִיא אַתֶּם שְׁאֵרִית בֵּית־יִשְׂרָאֵל עָנָף אֲשֶׁר נִכְרַת שִׁמְעוּ דִּבְרֵי הַנָּבִיא אֲשֶׁר נִכְתְּבוּ לְכָל־בֵּית יִשְׂרָאֵל וְהַמְשִׁילוּם אֲלֵיכֶם לְמַעַן תִּהְיֶה לָכֶם תִּקְוָה כַּאֲחֵיכֶם אֲשֶׁר נִכְרַתֶּם מֵהֶם כִּי כָּכָה כָּתַב הַנָּבִיא׃",
   "english": "Wherefore I spake unto them, saying: Hear ye the words of the prophet, ye who are a remnant of the house of Israel, a branch who have been broken off; hear ye the words of the prophet, which were written unto all the house of Israel, and liken them unto yourselves, that ye may have hope as well as your brethren from  whom ye have been broken off; for after this manner has the prophet written."
  },
  {
@@ -4112,7 +4112,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 1,
-  "hebrew": "וַיְהִי אַחֲרֵי קָרְאִי נֶפִי אֶת־הַדְּבָרִים הָאֵלֶּה הַחֲקוּקִים עַל־לוּחוֹת הַנְּחֹשֶׁת וַיָּבֹאוּ אֵלַי אַחַי וַיֹּאמְרוּ לִי מַה־פִּתְרוֹן הַדְּבָרִים אֲשֶׁר קָרָאתָ הֲיוּבְנוּ כְּדִבְרֵי רוּחַ אֲשֶׁר יִהְיוּ כְּפִי הָרוּחַ וְלֹא כְּפִי הַבָּשָׂר׃",
+  "hebrew": "אַחֲרֵי קָרְאִי נֶפִי אֶת־הַדְּבָרִים הָאֵלֶּה הַחֲקוּקִים עַל־לוּחוֹת הַנְּחֹשֶׁת וַיָּבֹאוּ אֵלַי אַחַי וַיֹּאמְרוּ לִי מַה־פִּתְרוֹן הַדְּבָרִים אֲשֶׁר קָרָאתָ הֲיוּבְנוּ כְּדִבְרֵי רוּחַ אֲשֶׁר יִהְיוּ כְּפִי הָרוּחַ וְלֹא כְּפִי הַבָּשָׂר׃",
   "english": "And now it came to pass that after I, Nephi, had read these things which were engraven upon the plates of brass, my brethren came unto me and said unto me: What meaneth these things which ye have read? Behold, are they to be understood according to things which are spiritual, which shall come to pass according to the spirit and not the flesh?"
  },
  {
@@ -4126,7 +4126,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 3,
-  "hebrew": "לָכֵן הַדְּבָרִים אֲשֶׁר קָרָאתִי הֵם דִּבְרֵי הָעוֹלָם הַזֶּה וְגַם דִּבְרֵי הָרוּחַ כִּי נִרְאֶה כִּי בֵית יִשְׂרָאֵל בְּמוֹקְדָם אוֹ בִּמְאֻחָר יִתְפַּזֵּר עַל־כָּל־פְּנֵי הָאָרֶץ וְגַם בְּתוֹךְ כָּל־הַגּוֹיִם׃",
+  "hebrew": "לָכֵן הַדְּבָרִים אֲשֶׁר קָרָאתִי הֵם דִּבְרֵי הָעוֹלָם הַזֶּה וְגַם דִּבְרֵי הָרוּחַ כִּי נִרְאֶה כִּי בֵית־יִשְׂרָאֵל בְּמוֹקְדָם אוֹ בִּמְאֻחָר יִתְפַּזֵּר עַל־כָּל־פְּנֵי הָאָרֶץ וְגַם בְּתוֹךְ כָּל־הַגּוֹיִם׃",
   "english": "Wherefore, the things of which I have read are things pertaining to things both temporal and spiritual; for it appears that the house of Israel, sooner or later, will be scattered upon all the face of the earth, and also among all nations."
  },
  {
@@ -4140,7 +4140,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 5,
-  "hebrew": "וּמֵאָז הוּבְלוּ נִבְּאוּ הַדְּבָרִים הָאֵלֶּה עֲלֵיהֶם וְגַם עַל־כָּל־אֲשֶׁר יִתְפַּזְּרוּ וְיִבֹּהלוּ אַחֲרֵי־כֵן בַּעֲבוּר קְדוֹשׁ יִשְׂרָאֵל כִּי נֶגְדּוֹ יַקְשׁוּ לִבָּם לָכֵן יִתְפַּזְּרוּ בְּכָל־הַגּוֹיִם וְהָיוּ לְשִׂנְאַת כָּל־אָדָם׃",
+  "hebrew": "וּמֵאָז הוּבְלוּ נִבְּאוּ הַדְּבָרִים הָאֵלֶּה עֲלֵיהֶם וְגַם עַל־כָּל־אֲשֶׁר יִתְפַּזְּרוּ וְנָבוֹכוּ אַחֲרֵי־כֵן בַּעֲבוּר קְדוֹשׁ־יִשְׂרָאֵל כִּי נֶגְדּוֹ יַקְשׁוּ לִבָּם לָכֵן יִתְפַּזְּרוּ בְּכָל־הַגּוֹיִם וְהָיוּ לְשִׂנְאַת כָּל־אָדָם׃",
   "english": "And since they have been led away, these things have been prophesied concerning them, and also concerning all those who shall hereafter be scattered and be confounded, because of the Holy One of Israel; for against him will they harden their hearts; wherefore, they shall be scattered among all nations and shall be hated of all men."
  },
  {
@@ -4161,21 +4161,21 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 8,
-  "hebrew": "וְאַחֲרֵי הִתְפַּזֵּר זַרְעֵנוּ יָחֵל יְהוָה אֱלֹהִים לַעֲשׂוֹת פֶּלֶא בַּגּוֹיִם אֲשֶׁר יִהְיֶה לְטוֹבָה גְדוֹלָה לְזַרְעֵנוּ לָכֵן נִמְשַׁל לִהְיוֹתָם מְכֻלְכָּלִים בַּגּוֹיִם וּנְשׂוּאִים בִּזְרוֹעוֹתֵיהֶם וְעַל־כִּתְפֵיהֶם׃",
+  "hebrew": "וְאַחֲרֵי הִתְפַּזֵּר זַרְעֵנוּ יָחֵל יְהוָה אֱלֹהִים לַעֲשׂוֹת פֶּלֶא בַּגּוֹיִם אֲשֶׁר יִהְיֶה לְטוֹבָה גְדוֹלָה לְזַרְעֵנוּ לָכֵן נִמְשַׁל לִהְיוֹתָם מְכֻלְכָּלִים בַּגּוֹיִם וּנְשׂוּאִים בִּזְרוֹעוֹתֵיהֶם וְעַל כִּתְפֵיהֶם׃",
   "english": "And after our seed is scattered the Lord God will proceed to do a marvelous work among the Gentiles, which shall be of great worth unto our seed; wherefore, it is likened unto their being nourished by the Gentiles and being carried in their arms and upon their shoulders."
  },
  {
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 9,
-  "hebrew": "וְהָיָה גַם־לְטוֹבָה לַגּוֹיִם וְלֹא רַק לַגּוֹיִם כִּי אִם לְכָל־בֵּית יִשְׂרָאֵל לְהוֹדִיעַ בְּרִיתוֹת אֲבִי הַשָּׁמַיִם לְאַבְרָהָם לֵאמֹר בְּזַרְעֲךָ יִתֵּבָּרְכוּ כָּל־מִשְׁפְּחוֹת הָאֲדָמָה׃",
+  "hebrew": "וְהָיָה גַם־לְטוֹבָה לַגּוֹיִם וְלֹא רַק לַגּוֹיִם כִּי־אִם לְכָל־בֵּית יִשְׂרָאֵל לְהוֹדִיעַ בְּרִיתוֹת אֲבִי הַשָּׁמַיִם לְאַבְרָהָם לֵאמֹר בְּזַרְעֲךָ יִתְבָּרְכוּ כָּל־מִשְׁפְּחוֹת הָאֲדָמָה׃",
   "english": "And it shall also be of worth unto the Gentiles; and not only unto the Gentiles but unto all the house of Israel, unto the making known of the covenants of the Father of heaven unto Abraham, saying: In thy seed shall all the kindreds of the earth be blessed."
  },
  {
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 10,
-  "hebrew": "וְרָצִיתִי אַחַי כִּי תֵדְעוּ אֲשֶׁר לֹא יִתְבָּרְכוּ כָּל־מִשְׁפְּחוֹת הָאֲדָמָה עַד אֲשֶׁר יֶחֱשֹׂף זְרוֹעוֹ לְעֵינֵי הַגּוֹיִם׃",
+  "hebrew": "וְרָצִיתִי אַחַי כִּי תֵדְעוּ אֲשֶׁר לֹא יִתְבָּרְכוּ כָּל־מִשְׁפְּחוֹת הָאֲדָמָה עַד־אֲשֶׁר יֶחֱשֹׂף זְרוֹעוֹ לְעֵינֵי הַגּוֹיִם׃",
   "english": "And I would, my brethren, that ye should know that all the kindreds of the earth cannot be blessed unless he shall make bare his arm in the eyes of the nations."
  },
  {
@@ -4189,7 +4189,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 12,
-  "hebrew": "לָכֵן יוֹצִיאֵם שֵׁנִית מִשְּׁבִי וְנִקְבְּצוּ יַחְדָּו אֶל־אַרְצוֹת נַחֲלָתָם וְיוּצְאוּ מֵאֹפֶל וּמֵחֹשֶׁךְ וְיָדְעוּ כִּי יְהוָה מוֹשִׁיעָם וְגוֹאֲלָם אֲבִיר יִשְׂרָאֵל׃",
+  "hebrew": "לָכֵן יוֹצִיאֵם שֵׁנִית מִשְּׁבִי וְנִקְבְּצוּ יַחְדָּו אֶל־אַרְצוֹת נַחֲלָתָם וְיוּצְאוּ מֵאֹפֶל וּמֵחֹשֶׁךְ וְיָדְעוּ כִּי־יְהוָה מוֹשִׁיעָם וְגוֹאֲלָם אֲבִיר יִשְׂרָאֵל׃",
   "english": "Wherefore, he will bring them again out of captivity, and they shall be gathered together to the lands of their inheritance; and they shall be brought out of obscurity and out of darkness; and they shall know that the Lord is their Savior and their Redeemer, the Mighty One of Israel."
  },
  {
@@ -4203,77 +4203,77 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 14,
-  "hebrew": "וְכָל־גּוֹי אֲשֶׁר יִלָּחֵם בְּךָ בֵּית יִשְׂרָאֵל יָשׁוּב אִישׁ עַל־רֵעֵהוּ וְנָפְלוּ בַשַּׁחַת אֲשֶׁר כָּרוּ לְלִכֹּד עַם־יְהוָה וְכָל־הַנִּלְחָמִים בְּצִיּוֹן יִשָּׁמֵדוּ וְהַזּוֹנָה הַגְּדוֹלָה אֲשֶׁר הִטְּתָה דַרְכֵי יְהוָה הַיְשָׁרִים הֵן הָעֵדָה הַגְּדוֹלָה וְהַנִּתְעֶבֶת תִּפֹּל לֶעָפָר וְגָדוֹל יִהְיֶה מַפַּלְתָּהּ׃",
+  "hebrew": "וְכָל־גּוֹי אֲשֶׁר יִלָּחֵם בְּךָ בֵּית־יִשְׂרָאֵל יָשׁוּב אִישׁ עַל־רֵעֵהוּ וְנָפְלוּ בַשַּׁחַת אֲשֶׁר כָּרוּ לִלְכֹּד עַם־יְהוָה וְכָל־הַנִּלְחָמִים בְּצִיּוֹן יִשָּׁמֵדוּ וְהַזּוֹנָה הַגְּדוֹלָה אֲשֶׁר הִטְּתָה דַרְכֵי יְהוָה הַיְשָׁרִים הֵן הָעֵדָה הַגְּדוֹלָה וְהַנִּתְעֶבֶת תִּפֹּל לֶעָפָר וְגָדוֹל יִהְיֶה מַפַּלְתָּהּ׃",
   "english": "And every nation which shall war against thee, O house of Israel, shall be turned one against another, and they shall fall into the pit which they digged to ensnare the people of the Lord. And all that fight against Zion shall be destroyed, and that great whore, who hath perverted the right ways of the Lord, yea, that great and abominable church, shall tumble to the dust and great shall be the fall of it."
  },
  {
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 15,
-  "hebrew": "כִּי הִנֵּה אָמַר הַנָּבִיא מְהֵרָה יָבוֹא עֵת אֲשֶׁר לֹא־יִהְיֶה לְשָׂטָן עוֹד כֹּחַ עַל־לִבּוֹת בְּנֵי הָאָדָם כִּי קָרוֹב הַיּוֹם אֲשֶׁר כָּל־הַזֵּדִים וְעֹשֵׂי הָרִשְׁעָה יִהְיוּ כְּקַשׁ וְהַיּוֹם בָּא אֲשֶׁר יִשָּׂרֵפוּ׃",
+  "hebrew": "כִּי הִנֵּה אָמַר הַנָּבִיא מְהֵרָה יָבוֹא עֵת אֲשֶׁר לֹא־יִהְיֶה לְשָׂטָן עוֹד כֹּחַ עַל־לִבּוֹת בְּנֵי־הָאָדָם כִּי קָרוֹב הַיּוֹם אֲשֶׁר כָּל־הַזֵּדִים וְעֹשֵׂי הָרִשְׁעָה יִהְיוּ כְּקַשׁ וְהַיּוֹם בָּא אֲשֶׁר יִשָּׂרֵפוּ׃",
   "english": "For behold, saith the prophet, the time cometh speedily that Satan shall have no more power over the hearts of the children of men; for the day soon cometh that all the proud and they who do wickedly shall be as stubble; and the day cometh that they must be burned."
  },
  {
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 16,
-  "hebrew": "כִּי קָרוֹב הַיּוֹם אֲשֶׁר תִּשָּׁפֵךְ חֲמַת אֱלֹהִים בִּמְלוֹאָהּ עַל־כָּל־בְּנֵי הָאָדָם כִּי לֹא יִתֵּן לָרְשָׁעִים לְהַשְׁחִית אֶת־הַצַּדִּיקִים׃",
+  "hebrew": "כִּי קָרוֹב הַיּוֹם אֲשֶׁר תִּשָּׁפֵךְ חֲמַת אֱלֹהִים בִּמְלוֹאָהּ עַל־כָּל־בְּנֵי הָאָדָם כִּי־לֹא יִתֵּן לָרְשָׁעִים לְהַשְׁחִית אֶת־הַצַּדִּיקִים׃",
   "english": "For the time soon cometh that the fulness of the wrath of God shall be poured out upon all the children of men; for he will not suffer that the wicked shall destroy the righteous."
  },
  {
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 17,
-  "hebrew": "לָכֵן יִשְׁמֹר אֶת־הַצַּדִּיקִים בִּגְבוּרָתוֹ אַף כִּי תָבוֹא חֲמָתוֹ בִּמְלוֹאָהּ וְהַצַּדִּיקִים יִנָּצְלוּ עַד לְהַשְׁמִיד אֶת־אוֹיְבֵיהֶם בָּאֵשׁ לָכֵן אַל־יִירְאוּ הַצַּדִּיקִים כִּי כֹה אָמַר הַנָּבִיא יִוָּשְׁעוּ אַף כִּי כְבָאֵשׁ׃",
+  "hebrew": "לָכֵן יִשְׁמֹר אֶת־הַצַּדִּיקִים בִּגְבוּרָתוֹ אַף־כִּי תָבוֹא חֲמָתוֹ בִּמְלוֹאָהּ וְהַצַּדִּיקִים יִנָּצְלוּ עַד־לְהַשְׁמִיד אֶת־אוֹיְבֵיהֶם בָּאֵשׁ לָכֵן אַל־יִירְאוּ הַצַּדִּיקִים כִּי־כֹה אָמַר הַנָּבִיא יִוָּשְׁעוּ אַף־כִּי כְבָאֵשׁ׃",
   "english": "Wherefore, he will preserve the righteous by his power, even if it so be that the fulness of his wrath must come, and the righteous be preserved, even unto the destruction of their enemies by fire. Wherefore, the righteous need not fear; for thus saith the prophet, they shall be saved, even if it so be as by fire."
  },
  {
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 18,
-  "hebrew": "הִנֵּה אַחַי אֹמֵר אֲנִי לָכֶם כִּי הַדְּבָרִים הָאֵלֶּה יָבֹאוּ מְהֵרָה הֵן דָּם וָאֵשׁ וְתִימְרוֹת עָשָׁן יָבֹאוּ וְהָיוֹ יִהְיוּ עַל־פְּנֵי הָאָרֶץ הַזֹּאת וּבָאוּ עַל־הָאָדָם כְּפִי הַבָּשָׂר אִם־יַקְשׁוּ אֶת־לִבָּם נֶגֶד קְדוֹשׁ יִשְׂרָאֵל׃",
+  "hebrew": "הִנֵּה אַחַי אֹמֵר אֲנִי לָכֶם כִּי הַדְּבָרִים הָאֵלֶּה יָבֹאוּ מְהֵרָה הֵן דָּם וָאֵשׁ וְתִימְרוֹת עָשָׁן יָבֹאוּ וְהָיוֹ יִהְיוּ עַל־פְּנֵי הָאָרֶץ הַזֹּאת וּבָאוּ עַל־הָאָדָם כְּפִי הַבָּשָׂר אִם־יַקְשׁוּ אֶת־לִבָּם נֶגֶד קְדוֹשׁ־יִשְׂרָאֵל׃",
   "english": "Behold, my brethren, I say unto you, that these things must shortly come; yea, even blood, and fire, and vapor of smoke must come; and it must needs be upon the face of this earth; and it cometh unto men according to the flesh if it so be that they will harden their hearts against the Holy One of Israel."
  },
  {
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 19,
-  "hebrew": "כִּי הִנֵּה הַצַּדִּיקִים לֹא יֹאבֵדוּ כִּי בּוֹא יָבוֹא הַזְּמָן אֲשֶׁר כָּל־הַנִּלְחָמִים בְּצִיּוֹן יִכָּרֵתוּ׃",
+  "hebrew": "כִּי הִנֵּה הַצַּדִּיקִים לֹא יֹאבֵדוּ כִּי בּוֹא יָבוֹא הָעֵת אֲשֶׁר כָּל־הַנִּלְחָמִים בְּצִיּוֹן יִכָּרֵתוּ׃",
   "english": "For behold, the righteous shall not perish; for the time surely must come that all they who fight against Zion shall be cut off."
  },
  {
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 20,
-  "hebrew": "וַיְהוָה יָכִין דֶּרֶךְ לְעַמּוֹ לְמַלֵּא אֶת־דִּבְרֵי מֹשֶׁה אֲשֶׁר דִּבֵּר לֵאמֹר נָבִיא יָקִים לָכֶם יְהוָה אֱלֹהֵיכֶם כָּמֹנִי אֵלָיו תִּשְׁמָעוּן בְּכֹל אֲשֶׁר יְדַבֵּר אֲלֵיכֶם וְהָיָה כָּל־אֲשֶׁר לֹא־יִשְׁמַע אֶל־הַנָּבִיא הַהוּא וְנִכְרַת מֵעַמָּיו׃",
+  "hebrew": "וַיהוָה יָכִין דֶּרֶךְ לְעַמּוֹ לְהַשְׁלִים אֶת־דִּבְרֵי מֹשֶׁה אֲשֶׁר דִּבֵּר לֵאמֹר נָבִיא יָקִים לָכֶם יְהוָה אֱלֹהֵיכֶם כָּמֹנִי אֵלָיו תִּשְׁמָעוּן בְּכֹל אֲשֶׁר יְדַבֵּר אֲלֵיכֶם וְהָיָה כָּל־אֲשֶׁר לֹא־יִשְׁמַע אֶל־הַנָּבִיא הַהוּא וְנִכְרַת מֵעַמָּיו׃",
   "english": "And the Lord will surely prepare a way for his people, unto the fulfill– ing of the words of Moses, which he spake, saying: A prophet shall the Lord your God raise up unto you, like unto me; him shall ye hear in all things whatsoever he shall say unto you. And it shall come to pass that all those who will not hear that prophet shall be cut off from among the people."
  },
  {
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 21,
-  "hebrew": "וְעַתָּה מַגִּיד נֶפִי לָכֶם כִּי הַנָּבִיא הַזֶּה אֲשֶׁר דִּבֶּר עָלָיו מֹשֶׁה הוּא קְדוֹשׁ יִשְׂרָאֵל לָכֵן יַעֲשֶׂה מִשְׁפָּט בְּצֶדֶק׃",
+  "hebrew": "וְעַתָּה מַגִּיד נֶפִי לָכֶם כִּי הַנָּבִיא הַזֶּה אֲשֶׁר־דִּבֶּר עָלָיו מֹשֶׁה הוּא קְדוֹשׁ־יִשְׂרָאֵל לָכֵן יַעֲשֶׂה מִשְׁפָּט בְּצֶדֶק׃",
   "english": "And now I, Nephi, declare unto you, that this prophet of whom Moses spake was the Holy One of Israel; wherefore, he shall execute judgment in righteousness."
  },
  {
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 22,
-  "hebrew": "וְהַצַּדִּיקִים אַל־יִירָאוּ כִּי הֵם אֲשֶׁר לֹא יֵבוֹשׁוּ אַךְ הִיא מַמְלֶכֶת הַשָּׂטָן אֲשֶׁר תִּבָּנֶה בֵּין בְּנֵי הָאָדָם מַמְלָכָה הַנּוֹסְדָה בֵינֵיהֶם אֲשֶׁר בַּבָּשָׂר׃",
+  "hebrew": "וְהַצַּדִּיקִים אַל־יִירָאוּ כִּי הֵם אֲשֶׁר לֹא־יֵבוֹשׁוּ אַךְ הִיא מַמְלֶכֶת הַשָּׂטָן אֲשֶׁר תִּבָּנֶה בֵּין בְּנֵי־הָאָדָם מַמְלָכָה הַנּוֹסְדָה בֵינֵיהֶם אֲשֶׁר בַּבָּשָׂר׃",
   "english": "And the righteous need not fear, for they are those who shall not be confounded. But it is the kingdom of the devil, which shall be built up among the children of men, which kingdom is established among them which are in the flesh—"
  },
  {
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 23,
-  "hebrew": "כִּי מְהֵרָה יָבוֹא הַזְּמָן אֲשֶׁר כָּל־הָעֵדוֹת הַנִּבְנוֹת לְבֶצַע וְכָל־הַנִּבְנִים לִמְשׁוֹל בַּבָּשָׂר וְהַנִּבְנִים לִהְיוֹת נִכְבָּדִים בְּעֵינֵי הָעוֹלָם וְהַמְבַקְשִׁים תַּאֲווֹת הַבָּשָׂר וְדִבְרֵי הָעוֹלָם וַעֲשׂוֹת כָּל־רֶשַׁע הֵן כָּל־אֲשֶׁר לְמַמְלֶכֶת הַשָּׂטָן עֲלֵיהֶם לִירֹא וְלִרְעֹד וְלָחוּל הֵם אֲשֶׁר יוּשְׁפְּלוּ לֶעָפָר הֵם אֲשֶׁר יִכְלוּ כְּקַשׁ וְזֶה כְּדִבְרֵי הַנָּבִיא׃",
+  "hebrew": "כִּי מְהֵרָה יָבוֹא הָעֵת אֲשֶׁר כָּל־הָעֵדוֹת הַנִּבְנוֹת לְבֶצַע וְכָל־הַנִּבְנִים לִמְשׁוֹל בַּבָּשָׂר וְהַנִּבְנִים לִהְיוֹת נִכְבָּדִים בְּעֵינֵי הָעוֹלָם וְהַמְבַקְשִׁים תַּאֲווֹת הַבָּשָׂר וְדִבְרֵי הָעוֹלָם וַעֲשׂוֹת כָּל־רֶשַׁע הֵן כָּל־אֲשֶׁר לְמַמְלֶכֶת הַשָּׂטָן עֲלֵיהֶם לִירֹא וְלִרְעֹד וְלָחוּל הֵם אֲשֶׁר יוּשְׁפְּלוּ לֶעָפָר הֵם אֲשֶׁר יִכְלוּ כְּקַשׁ וְזֶה כְּדִבְרֵי הַנָּבִיא׃",
   "english": "For the time speedily shall come that all churches which are built up to get gain, and all those who are built up to get power over the flesh, and those who are built up to become popular in the eyes of the world, and those who seek the lusts of the flesh and the things of the world, and to do all manner of iniquity; yea, in fine, all those who belong to the kingdom of the devil are they who need fear, and tremble, and quake; they are those who must be brought low in the dust; they are those who must be consumed as stubble; and this is according to the words of the prophet."
  },
  {
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 24,
-  "hebrew": "וּמְהֵרָה יָבוֹא הַזְּמָן אֲשֶׁר הַצַּדִּיקִים יוּבְלוּ כְּעֶגְלֵי מַרְבֵּק וּקְדוֹשׁ יִשְׂרָאֵל יִמְלֹךְ בְּמֶמְשָׁלָה וּגְבוּרָה וְעֹז וְכָבוֹד גָּדוֹל׃",
+  "hebrew": "וּמְהֵרָה יָבוֹא הָעֵת אֲשֶׁר הַצַּדִּיקִים יוּבְלוּ כְּעֶגְלֵי מַרְבֵּק וּקְדוֹשׁ יִשְׂרָאֵל יִמְלֹךְ בְּמֶמְשָׁלָה וּגְבוּרָה וְעֹז וְכָבוֹד גָּדוֹל׃",
   "english": "And the time cometh speedily that the righteous must be led up as calves of the stall, and the Holy One of Israel must reign in dominion, and might, and power, and great glory."
  },
  {
@@ -4287,7 +4287,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 26,
-  "hebrew": "וּבִגְלַל צִדְקַת עַמּוֹ אֵין לְשָׂטָן כֹּחַ לָכֵן לֹא יוּכַל לְהִשְׁתַּחְרֵר לִזְמַן שָׁנִים רַבּוֹת כִּי אֵין־לוֹ כֹּחַ עַל־לִבּוֹת הָעָם כִּי בַצֶּדֶק יִשְׁכֹּנוּ וּקְדוֹשׁ יִשְׂרָאֵל מוֹלֵךְ׃",
+  "hebrew": "וּבִגְלַל צִדְקַת עַמּוֹ אֵין לְשָׂטָן כֹּחַ לָכֵן לֹא־יוּכַל לָצֵאת לַחָפְשִׁי יָמִים רַבִּים כִּי אֵין־לוֹ כֹּחַ עַל־לִבּוֹת הָעָם כִּי בַצֶּדֶק יִשְׁכֹּנוּ וּקְדוֹשׁ יִשְׂרָאֵל מוֹלֵךְ׃",
   "english": "And because of the righteousness of his people, Satan has no power; wherefore, he cannot be loosed for the space of many years; for he hath no power over the hearts of the people, for they dwell in righteous– ness, and the Holy One of Israel reigneth."
  },
  {
@@ -4308,7 +4308,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 29,
-  "hebrew": "וְעַתָּה כָּלָה נֶפִי לְדַבֵּר כִּי לֹא אֶעֱרֹב לְדַבֵּר עוֹד כָּעֵת עַל־הַדְּבָרִים הָאֵלֶּה׃",
+  "hebrew": "וְעַתָּה כָּלָה נֶפִי לְדַבֵּר כִּי־לֹא אֶעֱרֹב לְדַבֵּר עוֹד כָּעֵת עַל־הַדְּבָרִים הָאֵלֶּה׃",
   "english": "And now I, Nephi, make an end; for I durst not speak further as yet concerning these things."
  },
  {
@@ -4322,14 +4322,14 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 31,
-  "hebrew": "לָכֵן אַל־תַּחְשְׁבוּ כִּי רַק אֲנִי וְאָבִי הָיִינוּ הַמְּעִידִים וְגַם לִמַּדְנוּ אוֹתָם לָכֵן אִם־תִּשְׁמְעוּ לַמִּצְוֹת וְתַחֲזִיקוּ עַד־הַקֵּץ תִּוָּשְׁעוּ בַּיּוֹם הָאַחֲרוֹן וְכֵן הוּא׃ אָמֵן׃",
+  "hebrew": "לָכֵן אַל־תַּחְשְׁבוּ כִּי רַק אֲנִי וְאָבִי הָיִינוּ הַמְּעִידִים וְגַם לִמַּדְנוּ אוֹתָם לָכֵן אִם־תִּשְׁמְעוּ לַמִּצְוֹת וְתַחֲזִיקוּ עַד־הַקֵּץ תִּוָּשְׁעוּ בַּיּוֹם הָאַחֲרוֹן וְכֵן הוּא אָמֵן׃",
   "english": "Wherefore, ye need not suppose that I and my father are the only ones that have testified, and also taught them. Wherefore, if ye shall be obedient to the commandments, and endure to the end, ye shall be saved at the last day. And thus it is. Amen."
  },
  {
   "book": "2 Nephi",
   "chapter": 1,
   "verse": 1,
-  "hebrew": "וַיְהִי אַחֲרֵי כַלּוֹתִי נֶפִי לְלַמֵּד אֶת־אַחַי וַיְדַבֵּר אֲלֵיהֶם גַּם־אָבִינוּ לֶחִי דְּבָרִים רַבִּים וַיְסַפֵּר לָהֶם אֵת אֲשֶׁר־עָשָׂה יְהוָה גְּדֹלוֹת בְּהוֹצִיאָם מֵאֶרֶץ יְרוּשָׁלָיִם׃",
+  "hebrew": "אַחֲרֵי כַלּוֹתִי נֶפִי לְלַמֵּד אֶת־אַחַי וַיְדַבֵּר אֲלֵיהֶם גַּם־אָבִינוּ לֶחִי דְּבָרִים רַבִּים וַיְסַפֵּר לָהֶם אֵת אֲשֶׁר־עָשָׂה יְהוָה גְּדֹלוֹת בְּהוֹצִיאָם מֵאֶרֶץ יְרוּשָׁלָיִם׃",
   "english": "And now it came to pass that after I, Nephi, had made an end of teaching my brethren, our father, Lehi, also spake many things unto them, and rehearsed unto them, how great things the Lord had done for them in bringing them out of the land of Jerusalem."
  },
  {
@@ -4357,14 +4357,14 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 1,
   "verse": 5,
-  "hebrew": "אַךְ אָמַר אַף־עַל־פִּי צָרוֹתֵינוּ קִבַּלְנוּ אֶרֶץ הַנַּחֲלָה אֶרֶץ בְּחִירָה מִכָּל־הָאֲרָצוֹת אֶרֶץ אֲשֶׁר כָּרַת־לִי יְהוָה אֱלֹהִים לְנַחֲלַת זַרְעִי לִי וּלְבָנַי עַד־עוֹלָם וּלְכָל־הַמּוּבָלִים מֵאֲרָצוֹת אֲחֵרוֹת בְּיַד יְהוָה׃",
+  "hebrew": "אַךְ אָמַר אַף־עַל־פִּי צָרוֹתֵינוּ קִבַּלְנוּ אֶרֶץ הַנַּחֲלָה אֶרֶץ נִבְחֶרֶת מִכָּל־הָאֲרָצוֹת אֶרֶץ אֲשֶׁר נִשְׁבַּע־לִי יְהוָה אֱלֹהִים לְנַחֲלַת זַרְעִי לִי וּלְבָנַי עַד־עוֹלָם וּלְכָל־הַמּוּבָלִים מֵאֲרָצוֹת אֲחֵרוֹת בְּיַד־יְהוָה׃",
   "english": "But, said he, notwithstanding our afflictions, we have obtained a land of promise, a land which is choice above all other lands; a land which the Lord God hath covenanted with me should be a land for the inheritance of my seed. Yea, the Lord hath covenanted this land unto me, and to my children forever, and also all those who should be led out of other countries by the hand of the Lord."
  },
  {
   "book": "2 Nephi",
   "chapter": 1,
   "verse": 6,
-  "hebrew": "לָכֵן אֲנִי לֶחִי נִבֵּאתִי כְּפִי פְעֻלַּת הָרוּחַ אֲשֶׁר בִּי כִּי לֹא יָבֹא אִישׁ אֶל־הָאָרֶץ הַזֹּאת בִּלְתִּי אִם־יוּבַל בְּיַד יְהוָה׃",
+  "hebrew": "לָכֵן אֲנִי לֶחִי נִבֵּאתִי כְּפִי פְעֻלַּת הָרוּחַ אֲשֶׁר בִּי כִּי־לֹא יָבֹא אִישׁ אֶל־הָאָרֶץ הַזֹּאת בִּלְתִּי אִם־יוּבַל בְּיַד־יְהוָה׃",
   "english": "Wherefore, I, Lehi, prophesy according to the workings of the Spirit which is in me, that there shall none come into this land save they shall be brought by the hand of the Lord."
  },
  {
@@ -4378,7 +4378,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 1,
   "verse": 8,
-  "hebrew": "וְחָכְמָה הִיא כִּי תִּסָּתֵר הָאָרֶץ הַזֹּאת מִדַּעַת הַגּוֹיִם כִּי יִשְׁטְפוּהָ גּוֹיִם רַבִּים עַד אֲשֶׁר לֹא־יִהְיֶה מָקוֹם לְנַחֲלָה׃",
+  "hebrew": "וְחָכְמָה הִיא כִּי תִּסָּתֵר הָאָרֶץ הַזֹּאת מִדַּעַת הַגּוֹיִם כִּי יִשְׁטְפוּהָ גּוֹיִם רַבִּים עַד־אֲשֶׁר לֹא־יִהְיֶה מָקוֹם לְנַחֲלָה׃",
   "english": "And behold, it is wisdom that this land should be kept as yet from the knowledge of other nations; for behold, many nations would overrun the land, that there would be no place for an inheritance."
  },
  {
@@ -4420,7 +4420,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 1,
   "verse": 14,
-  "hebrew": "הָקִיצוּ וְקוּמוּ מֵעָפָר וְשִׁמְעוּ דִּבְרֵי אָב רוֹעֵד אֲשֶׁר תָּשִׂימוּ אֵבָרָיו בִּמְהֵרָה בַּקֶּבֶר הַקַּר וְהַדּוּמָם מִמֶּנּוּ לֹא יָשׁוּב הֹלֵךְ עוֹד יָמִים מִסְפָּר וְאֵלֵךְ בְּדֶרֶךְ כָּל־הָאָרֶץ׃",
+  "hebrew": "הָקִיצוּ וְקוּמוּ מֵעָפָר וְשִׁמְעוּ דִּבְרֵי אָב רוֹעֵד אֲשֶׁר תָּשִׂימוּ אֵבָרָיו בִּמְהֵרָה בַּקֶּבֶר הַקַּר וְהַדּוּמָם מִמֶּנּוּ לֹא־יָשׁוּב הֹלֵךְ עוֹד יָמִים מִסְפָּר וְאֵלֵךְ בְּדֶרֶךְ כָּל־הָאָרֶץ׃",
   "english": "Awake! and arise from the dust, and hear the words of a trembling parent, whose limbs ye must soon lay down in the cold and silent grave, from whence no traveler can return; a few more days and I go the way of all the earth."
  },
  {
@@ -4441,7 +4441,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 1,
   "verse": 17,
-  "hebrew": "לִבִּי כָבֵד בְּיָגוֹן מֵעֵת לְעֵת כִּי יָרֵאתִי פֶּן בִּגְלַל קְשִׁי לְבַבְכֶם יָבֹא יְהוָה אֱלֹהֵיכֶם בִּמְלוֹא חֲרוֹן אַפּוֹ עֲלֵיכֶם וְנִכְרַתֶּם וְנִשְׁמַדְתֶּם לָנֶצַח׃",
+  "hebrew": "לִבִּי כָבֵד בְּיָגוֹן מֵעֵת לְעֵת כִּי יָרֵאתִי פֶּן בַּעֲבוּר קְשִׁי לְבַבְכֶם יָבֹא יְהוָה אֱלֹהֵיכֶם בִּמְלוֹא חֲרוֹן אַפּוֹ עֲלֵיכֶם וְנִכְרַתֶּם וְנִשְׁמַדְתֶּם לָנֶצַח׃",
   "english": "My heart hath been weighed down with sorrow from time to time, for I have feared, lest for the hardness of your hearts the Lord your God should come out in the fulness of his wrath upon you, that ye be cut off and destroyed forever;"
  },
  {
@@ -4455,7 +4455,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 1,
   "verse": 19,
-  "hebrew": "הוֹי בָּנַי לְבַל יָבֹאוּ עֲלֵיכֶם הַדְּבָרִים הָאֵלֶּה אֶלָּא תִּהְיוּ עַם בָּחוּר וְאָהוּב לַיהוָה אַךְ רְצוֹנוֹ יֵעָשֶׂה כִּי דְרָכָיו צֶדֶק לְעוֹלָם׃",
+  "hebrew": "הוֹי בָּנַי לְבַל יָבֹאוּ עֲלֵיכֶם הַדְּבָרִים הָאֵלֶּה כִּי אִם־תִּהְיוּ עַם בָּחוּר וְאָהוּב לַיהוָה אַךְ רְצוֹנוֹ יֵעָשֶׂה כִּי דְרָכָיו צֶדֶק לְעוֹלָם׃",
   "english": "O my sons, that these things might not come upon you, but that ye might be a choice and a favored people of the Lord. But behold, his will be done; for his ways are righteousness forever."
  },
  {
@@ -4469,21 +4469,21 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 1,
   "verse": 21,
-  "hebrew": "וְעַתָּה לְמַעַן תִּשְׂמַח נַפְשִׁי בָכֶם וְיָצֵא לִבִּי מִן־הָעוֹלָם בְּשִׂמְחָה בַּעֲבוּרְכֶם לְבִלְתִּי אֵרֵד בְּיָגוֹן לַקָּבֶר קוּמוּ מֵעָפָר בָּנַי וִהְיוּ לַאֲנָשִׁים נֶחֱרָצִים בְּדֵעָה אַחַת וּבְלֵב אֶחָד מְאֻחָדִים בְּכֹל לְבַל תֵּרְדוּ לַשֶּׁבִי׃",
+  "hebrew": "וְעַתָּה לְמַעַן תִּשְׂמַח נַפְשִׁי בָכֶם וְתֵצֵא נַפְשִׁי מִן־הָעוֹלָם בְּשִׂמְחָה בַּעֲבוּרְכֶם לְבִלְתִּי אֵרֵד בְּיָגוֹן לַקָּבֶר קוּמוּ מֵעָפָר בָּנַי וִהְיוּ לַאֲנָשִׁים נֶחֱרָצִים בְּדֵעָה אַחַת וּבְלֵב אֶחָד מְאֻחָדִים בְּכֹל לְבַל תֵּרְדוּ לַשֶּׁבִי׃",
   "english": "And now that my soul might have joy in you, and that my heart might leave this world with gladness because of you, that I might not be brought down with grief and sorrow to the grave, arise from the dust, my sons, and be men, and be determined in one mind and in one heart, united in all things, that ye may not come down into captivity;"
  },
  {
   "book": "2 Nephi",
   "chapter": 1,
   "verse": 22,
-  "hebrew": "לְבַל תְּקֻלְלוּ קְלָלָה קָשָׁה וְלְבַל תָּבִיאוּ זַעַם אֵל צַדִּיק עֲלֵיכֶם לְהַשְׁמָדָה לְהַשְׁמָדַת עוֹלָם נֶפֶשׁ וָגוּף׃",
+  "hebrew": "לְבַל תְּקֻלְלוּ קְלָלָה קָשָׁה וּלְבַל תָּבִיאוּ זַעַם אֵל צַדִּיק עֲלֵיכֶם לְהַשְׁמָדַת עוֹלָם נֶפֶשׁ וָגוּף׃",
   "english": "That ye may not be cursed with a sore cursing; and also, that ye may not incur the displeasure of a just God upon you, unto the destruction, yea, the eternal destruction of both soul and body."
  },
  {
   "book": "2 Nephi",
   "chapter": 1,
   "verse": 23,
-  "hebrew": "הָקִיצוּ בָנַי לִבְשׁוּ שִׁרְיוֹן הַצֶּדֶק נַתְּקוּ הַמּוֹסֵרוֹת הָאוֹסְרִים אֶתְכֶם וּצְאוּ מֵאֹפֶל וְקוּמוּ מֵעָפָר׃",
+  "hebrew": "הָקִיצוּ בָנַי לִבְשׁוּ שִׁרְיוֹן הַצֶּדֶק נַתְּקוּ הַמּוֹסְרוֹת הָאוֹסְרִים אֶתְכֶם וּצְאוּ מֵאֹפֶל וְקוּמוּ מֵעָפָר׃",
   "english": "Awake, my sons; put on the armor of righteousness. Shake off the chains with which ye are bound, and come forth out of obscurity, and arise from the dust."
  },
  {
@@ -4497,49 +4497,49 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 1,
   "verse": 25,
-  "hebrew": "וַאֲנִי יָרֵא וְחָרֵד מְאֹד בַּעֲבוּרְכֶם פֶּן־יִסְבֹּל שֵׁנִית כִּי הֶאֱשַׁמְתֶּם אוֹתוֹ כִּי בִקֵּשׁ שְׂרָרָה וּמֶמְשָׁלָה עֲלֵיכֶם אַךְ יָדַעְתִּי כִּי לֹא בִקֵּשׁ שְׂרָרָה וּמֶמְשָׁלָה עֲלֵיכֶם כִּי אִם כְּבוֹד אֱלֹהִים וְטוּבַתְכֶם לְעוֹלָם׃",
+  "hebrew": "וַאֲנִי יָרֵא וְחָרֵד מְאֹד בַּעֲבוּרְכֶם פֶּן־יִסְבֹּל שֵׁנִית כִּי הֶאֱשַׁמְתֶּם אוֹתוֹ כִּי בִקֵּשׁ שְׂרָרָה וּמֶמְשָׁלָה עֲלֵיכֶם אַךְ יָדַעְתִּי כִּי־לֹא בִקֵּשׁ שְׂרָרָה וּמֶמְשָׁלָה עֲלֵיכֶם כִּי־אִם כְּבוֹד אֱלֹהִים וְטוּבַתְכֶם לְעוֹלָם׃",
   "english": "And I exceedingly fear and tremble because of you, lest he shall suffer again; for behold, ye have accused him that he sought power and authority over you; but I know that he hath not sought for power nor authority over you, but he hath sought the glory of God, and your own eternal welfare."
  },
  {
   "book": "2 Nephi",
   "chapter": 1,
   "verse": 26,
-  "hebrew": "וַתְּלוֹנְנוּ כִּי הָיָה בָרוּר אֲלֵיכֶם אֲמַרְתֶּם כִּי דִּבֶּר בְּחִדּוּד אֲמַרְתֶּם כִּי כָעַס עֲלֵיכֶם אַךְ הָיָה חִדּוּדוֹ חִדּוּד כֹּחַ דְּבַר אֱלֹהִים אֲשֶׁר בּוֹ וַאֲשֶׁר קְרָאתֶם כַּעַס הָיְתָה הָאֱמֶת כְּפִי אֲשֶׁר בֵּאלֹהִים אֲשֶׁר לֹא יָכֹל לַעֲצֹר בְּגַלּוֹתוֹ בְּעֹז עֲוֹנוֹתֵיכֶם׃",
+  "hebrew": "וַתְּלוֹנְנוּ כִּי הָיָה בָרוּר אֲלֵיכֶם אֲמַרְתֶּם כִּי דִּבֶּר קָשׁוֹת אֲמַרְתֶּם כִּי כָעַס עֲלֵיכֶם אַךְ הָיָה קֹשִׁי דְבָרוֹ קֹשִׁי כֹּחַ דְּבַר־אֱלֹהִים אֲשֶׁר־בּוֹ וַאֲשֶׁר קְרָאתֶם כַּעַס הָיְתָה הָאֱמֶת כְּפִי אֲשֶׁר בֵּאלֹהִים אֲשֶׁר לֹא־יָכֹל לַעֲצֹר בְּגַלּוֹתוֹ בְּעֹז עֲוֹנוֹתֵיכֶם׃",
   "english": "And ye have murmured because he hath been plain unto you. Ye say that he hath used sharpness; ye say that he hath been angry with you; but behold, his sharpness was the sharpness of the power of the word of God, which was in him; and that which ye call anger was the truth, according to that which is in God, which he could not restrain, manifesting boldly concerning your iniquities."
  },
  {
   "book": "2 Nephi",
   "chapter": 1,
   "verse": 27,
-  "hebrew": "וְהָיָה כֹּחַ אֱלֹהִים עִמּוֹ עַד לְצַוּוֹתוֹ אֶתְכֶם לִשְׁמֹעַ אַךְ לֹא הוּא כִּי אִם־רוּחַ יְהוָה אֲשֶׁר בּוֹ אֲשֶׁר פָּתַח פִּיו לְדַבֵּר וְלֹא יָכֹל לִסְגֹּר׃",
+  "hebrew": "וְהָיָה כֹּחַ אֱלֹהִים עִמּוֹ עַד לְצַוּוֹתוֹ אֶתְכֶם לִשְׁמֹעַ אַךְ לֹא הוּא כִּי אִם־רוּחַ יְהוָה אֲשֶׁר־בּוֹ אֲשֶׁר פָּתַח פִּיו לְדַבֵּר וְלֹא־יָכֹל לִסְגֹּר׃",
   "english": "And it must needs be that the power of God must be with him, even unto his commanding you that ye must obey. But behold, it was not he, but it was the Spirit of the Lord which was in him, which opened his mouth to utterance that he could not shut it."
  },
  {
   "book": "2 Nephi",
   "chapter": 1,
   "verse": 28,
-  "hebrew": "וְעַתָּה בְּנִי לָמָן וּלְמוּאֵל וְסָם וּבָנַי בְּנֵי יִשְׁמָעֵאל אִם־תִּשְׁמְעוּ לְקוֹל נֶפִי לֹא תֹאבֵדוּ וְאִם תִּשְׁמְעוּ אֵלָיו אַנִּיחַ לָכֶם בְּרָכָה בְּרָכָתִי הָרִאשׁוֹנָה׃",
+  "hebrew": "וְעַתָּה בְּנִי לָמָן וּלְמוּאֵל וְסָם וּבָנַי בְּנֵי יִשְׁמָעֵאל אִם־תִּשְׁמְעוּ לְקוֹל נֶפִי לֹא תֹאבֵדוּ וְאִם־תִּשְׁמְעוּ אֵלָיו אַנִּיחַ לָכֶם בְּרָכָה בְּרָכָתִי הָרִאשׁוֹנָה׃",
   "english": "And now my son, Laman, and also Lemuel and Sam, and also my sons who are the sons of Ishmael, behold, if ye will hearken unto the voice of Nephi ye shall not perish. And if ye will hearken unto him I leave unto you a blessing, yea, even my first blessing."
  },
  {
   "book": "2 Nephi",
   "chapter": 1,
   "verse": 29,
-  "hebrew": "אַךְ אִם לֹא תִשְׁמְעוּ אֵלָיו אֶקַּח מִכֶּם בְּרָכָתִי הָרִאשׁוֹנָה וְעָלָיו תָּנוּחַ׃",
+  "hebrew": "אַךְ אִם־לֹא תִשְׁמְעוּ אֵלָיו אֶקַּח מִכֶּם בְּרָכָתִי הָרִאשׁוֹנָה וְעָלָיו תָּנוּחַ׃",
   "english": "But if ye will not hearken unto him I take away my first blessing, yea, even my blessing, and it shall rest upon him."
  },
  {
   "book": "2 Nephi",
   "chapter": 1,
   "verse": 30,
-  "hebrew": "וְעַתָּה זֹרָם אֲדַבֵּר אֵלֶיךָ אַתָּה עֶבֶד לָבָן אַךְ הוּצֵאתָ מִירוּשָׁלַיִם וְיָדַעְתִּי כִּי אַתָּה אוֹהֵב נֶאֱמָן לִבְנִי נֶפִי לְעוֹלָם׃",
+  "hebrew": "וְעַתָּה זֹרָם אֲדַבֵּר אֵלֶיךָ אַתָּה עֶבֶד לָבָן אַךְ הוּצֵאתָ מִירוּשָׁלַיִם וְיָדַעְתִּי כִּי־אַתָּה אוֹהֵב נֶאֱמָן לִבְנִי נֶפִי לְעוֹלָם׃",
   "english": "And now Zoram, I speak unto you: Behold, thou art the servant of Laban; nevertheless, thou hast been brought out of the land of Jerusalem, and I know that thou art a true friend unto my son, Nephi, forever."
  },
  {
   "book": "2 Nephi",
   "chapter": 1,
   "verse": 31,
-  "hebrew": "לָכֵן בַּעֲבוּר נֶאֱמָנוּתְךָ יְבֹרַךְ זַרְעֲךָ עִם־זַרְעוֹ וְיָשְׁבוּ בְהַצְלָחָה יָמִים רַבִּים עַל־פְּנֵי הָאָרֶץ הַזֹּאת וְאֵין דָּבָר זוּלָתִי עָוֹן יַזִּיק לְהַצְלָחָתָם עַל־פְּנֵי הָאָרֶץ הַזֹּאת לְעוֹלָם׃",
+  "hebrew": "לָכֵן בַּעֲבוּר נֶאֱמָנוּתְךָ יְבֹרַךְ זַרְעֲךָ עִם־זַרְעוֹ וְיָשְׁבוּ בְהַצְלָחָה יָמִים רַבִּים עַל־פְּנֵי הָאָרֶץ הַזֹּאת וְאֵין דָּבָר זוּלַת עָוֹן יַזִּיק לְהַצְלָחָתָם עַל־פְּנֵי הָאָרֶץ הַזֹּאת לְעוֹלָם׃",
   "english": "Wherefore, because thou hast been faithful thy seed shall be blessed with his seed, that they dwell in prosperity long upon the face of this land; and nothing, save it shall be iniquity among them, shall harm or disturb their prosperity upon the face of this land forever."
  },
  {
@@ -4574,14 +4574,14 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 2,
   "verse": 4,
-  "hebrew": "רָאִיתָ בִּנְעוּרֶיךָ כְּבוֹדוֹ לָכֵן מְבֹרָךְ אַתָּה כַּאֲשֶׁר יְשָׁרֵת בַּבָּשָׂר כִּי אַחַת הִיא הָרוּחַ אֶתְמוֹל הַיּוֹם וּלְעוֹלָם וְהַדֶּרֶךְ מוּכָנָה מִנְּפִילַת הָאָדָם וְהַיְשׁוּעָה חִנָּם׃",
+  "hebrew": "רָאִיתָ בִּנְעוּרֶיךָ כְּבוֹדוֹ לָכֵן מְבֹרָךְ אַתָּה כַּאֲשֶׁר יְשָׁרֵת בַּבָּשָׂר כִּי אַחַת הִיא הָרוּחַ תְּמוֹל הַיּוֹם וְעַד־עוֹלָם וְהַדֶּרֶךְ מוּכָנָה מִנְּפִילַת הָאָדָם וְהַיְשׁוּעָה חִנָּם׃",
   "english": "And thou hast beheld in thy youth his glory; wherefore, thou art blessed even as they unto whom he shall minister in the flesh; for the Spirit is the same, yesterday, today, and forever. And the way is prepared from the fall of man, and salvation is free."
  },
  {
   "book": "2 Nephi",
   "chapter": 2,
   "verse": 5,
-  "hebrew": "וְהוֹרוּ בְנֵי־אָדָם דַי לָדַעַת טוֹב מֵרָע וְנִתְּנָה לָהֶם הַתּוֹרָה וּבַתּוֹרָה לֹא־יִצְדַּק כָּל־בָּשָׂר אוֹ בַתּוֹרָה נִכְרָתוּ הֵן בְּתוֹרַת הָעוֹלָם נִכְרָתוּ וּבְתוֹרַת הָרוּחַ יֹאבְדוּ מִן־הַטּוֹב וְהָיוּ אֻמְלָלִים לְעוֹלָם׃",
+  "hebrew": "וְהֻרוּ בְנֵי־אָדָם דַי לָדַעַת טוֹב מֵרָע וְנִתְּנָה לָהֶם הַתּוֹרָה וּבַתּוֹרָה לֹא־יִצְדַּק כָּל־בָּשָׂר אוֹ בַתּוֹרָה נִכְרָתוּ הֵן בְּתוֹרַת הָעוֹלָם נִכְרָתוּ וּבְתוֹרַת הָרוּחַ יֹאבְדוּ מִן־הַטּוֹב וְהָיוּ אֻמְלָלִים לְעוֹלָם׃",
   "english": "And men are instructed sufficiently that they know good from evil. And the law is given unto men. And by the law no flesh is justified; or, by the law men are cut off. Yea, by the temporal law they were cut off; and also, by the spiritual law they perish from that which is good, and become miserable forever."
  },
  {
@@ -4623,21 +4623,21 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 2,
   "verse": 11,
-  "hebrew": "כִּי הָיוֹ יִהְיֶה זֶה לְעֻמַּת זֶה בְּכָל־דָּבָר אִם לֹא כֵן בְּכוֹרִי בַמִּדְבָּר לֹא יָבֹא צֶדֶק וְלֹא רֶשַׁע וְלֹא קְדֻשָּׁה וְלֹא אֻמְלָלוּת וְלֹא טוֹב וְלֹא רָע לָכֵן מְעֹרָבִים כָּל־הַדְּבָרִים לְאֶחָד וְאִם גּוּף אֶחָד יִשָּׁאֵר כְּמֵת בְּלִי חַיִּים וּמָוֶת בְּלִי שְׁחִיתוּת וְאַל־שְׁחִיתוּת בְּלִי אֹשֶׁר וְאֻמְלָלוּת בְּלִי חוּשׁ וְאַל־חוּשׁ׃",
+  "hebrew": "כִּי הָיוֹ יִהְיֶה זֶה לְעֻמַּת זֶה בְּכָל־דָּבָר אִם־לֹא כֵן בְּכוֹרִי בַמִּדְבָּר לֹא יָבֹא צֶדֶק וְלֹא רֶשַׁע וְלֹא קְדֻשָּׁה וְלֹא יָגוֹן וְלֹא טוֹב וְלֹא רָע לָכֵן מְעֹרָבִים כָּל־הַדְּבָרִים לְאֶחָד וְאִם גְּוִיָּה אַחַת תִּשָּׁאֵר כְּמֵתָה בְּלִי חַיִּים וּמָוֶת בְּלִי שַׁחַת וּבְלִי־שַׁחַת בְּלִי אֹשֶׁר וְיָגוֹן בְּלִי דַּעַת וְלֹא־דַּעַת׃",
   "english": "For it must needs be, that there is an opposition in all things. If not so, my first– born in the wilderness, righteousness could not be brought to pass, neither wickedness, neither holiness nor misery, neither good nor bad. Wherefore, all things must needs be a compound in one; wherefore, if it should be one body it must needs remain as dead, having no life neither death, nor corruption nor incorruption, happiness nor misery, neither sense nor insensibility."
  },
  {
   "book": "2 Nephi",
   "chapter": 2,
   "verse": 12,
-  "hebrew": "לָכֵן נִבְרָא לְדָבָר רֵיק וְאֵין מְזִמָּה בְּהִבָּרְאוֹ וְזֶה מַשְׁחִית חָכְמַת אֵל וַעֲצָתוֹ לְעוֹלָם וְכֹחוֹ וְחַסְדּוֹ וְצִדְקָתוֹ׃",
+  "hebrew": "לָכֵן נִבְרָא לְדָבָר רֵיק וְאֵין תַּכְלִית בְּהִבָּרְאוֹ וְזֶה מַשְׁחִית חָכְמַת אֵל וַעֲצָתוֹ לְעוֹלָם וְכֹחוֹ וְחַסְדּוֹ וְצִדְקָתוֹ׃",
   "english": "Wherefore, it must needs have been created for a thing of naught; wherefore there would have been no purpose in the end of its creation. Wherefore, this thing must needs destroy the wisdom of God and his eternal purposes, and also the power, and the mercy, and the justice of God."
  },
  {
   "book": "2 Nephi",
   "chapter": 2,
   "verse": 13,
-  "hebrew": "וְאִם תֹּאמְרוּ אֵין תּוֹרָה תֹּאמְרוּ אֵין חֵטְא וְאִם אֵין חֵטְא אֵין צֶדֶק וְאִם אֵין צֶדֶק אֵין אֹשֶׁר וְאִם אֵין צֶדֶק וְאֹשֶׁר אֵין עֹנֶשׁ וְאֻמְלָלוּת וְאִם אֵין אֵלֶּה אֵין אֱלֹהִים וְאִם אֵין אֱלֹהִים אֵינֶנּוּ וְהָאָרֶץ אֵינֶנָּה כִּי לֹא נִבְרְאוּ דְּבָרִים עֹשִׂים וְנַעֲשִׂים לָכֵן הַכֹּל אֹבֵד׃",
+  "hebrew": "וְאִם תֹּאמְרוּ אֵין תּוֹרָה תֹּאמְרוּ אֵין חֵטְא וְאִם־אֵין חֵטְא אֵין צֶדֶק וְאִם־אֵין צֶדֶק אֵין אֹשֶׁר וְאִם־אֵין צֶדֶק וְאֹשֶׁר אֵין עֹנֶשׁ וְיָגוֹן וְאִם־אֵין אֵלֶּה אֵין אֱלֹהִים וְאִם־אֵין אֱלֹהִים אֵינֶנּוּ וְהָאָרֶץ אֵינֶנָּה כִּי־לֹא נִבְרְאוּ דְּבָרִים עֹשִׂים וְנַעֲשִׂים לָכֵן הַכֹּל אֹבֵד׃",
   "english": "And if ye shall say there is no law, ye shall also say there is no sin. If ye shall say there is no sin, ye shall also say there is no righteousness. And if there be no righteousness there be no happiness. And if there be no righteousness nor happiness there be no punishment nor misery. And if these things are not there is no God. And if there is no God we are not, neither the earth; for there could have been no creation of things, neither to act nor to be acted upon; wherefore, all things must have vanished away."
  },
  {
@@ -4665,14 +4665,14 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 2,
   "verse": 17,
-  "hebrew": "וַאֲנִי לֶחִי כְּפִי הַדְּבָרִים אֲשֶׁר קָרָאתִי מֻכְרָח לְשַׁעֵר כִּי מַלְאַךְ אֱלֹהִים כַּכָּתוּב נָפַל מִשָּׁמַיִם לָכֵן הָיָה לְשָׂטָן כִּי בִקֵּשׁ הָרָע לִפְנֵי אֱלֹהִים׃",
+  "hebrew": "וַאֲנִי לֶחִי כְּפִי הַדְּבָרִים אֲשֶׁר קָרָאתִי כֵן אָחְשֹׁב כִּי מַלְאַךְ אֱלֹהִים כַּכָּתוּב נָפַל מִשָּׁמַיִם לָכֵן הָיָה לְשָׂטָן כִּי בִקֵּשׁ הָרָע לִפְנֵי אֱלֹהִים׃",
   "english": "And I, Lehi, according to the things which I have read, must needs suppose that an angel of God, according to that which is written, had fallen from heaven; wherefore, he became a devil, having sought that which was evil before God."
  },
  {
   "book": "2 Nephi",
   "chapter": 2,
   "verse": 18,
-  "hebrew": "וּבִנְפֹלוֹ מִשָּׁמַיִם וַיְהִי אֻמְלָל לְעוֹלָם בִּקֵּשׁ אֻמְלָלוּת כָּל־הָאָדָם לָכֵן אָמַר לְחַוָּה הוּא הַנָּחָשׁ הַקַּדְמוֹנִי הוּא הַשָּׂטָן אֲבִי כָל־הַכְּזָבִים אָמַר אִכְלוּ מִן־הַפְּרִי הָאָסוּר וְלֹא תָמוּתוּ כִּי תִהְיוּ כֵאלֹהִים יֹדְעֵי טוֹב וָרָע׃",
+  "hebrew": "וּבִנְפֹלוֹ מִשָּׁמַיִם וַיְהִי אֻמְלָל לְעוֹלָם בִּקֵּשׁ יָגוֹן לְכָל־הָאָדָם לָכֵן אָמַר לְחַוָּה הוּא הַנָּחָשׁ הַקַּדְמוֹנִי הוּא הַשָּׂטָן אֲבִי כָל־הַכְּזָבִים אָמַר אִכְלוּ מִן־הַפְּרִי הָאָסוּר וְלֹא תָמוּתוּ כִּי תִהְיוּ כֵאלֹהִים יֹדְעֵי טוֹב וָרָע׃",
   "english": "And because he had fallen from heaven, and had become miserable forever, he sought also the misery of all mankind. Wherefore, he said unto Eve, yea, even that old serpent, who is the devil, who is the father of all lies, wherefore he said: Partake of the forbidden fruit, and ye shall not die, but ye shall be as God, knowing good and evil."
  },
  {
@@ -4693,7 +4693,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 2,
   "verse": 21,
-  "hebrew": "וַיַּאֲרִיכוּ יְמֵי בְנֵי הָאָדָם כִּרְצוֹן אֱלֹהִים לְמַעַן יָשׁוּבוּ בְּעוֹדָם בַּבָּשָׂר לָכֵן הָיוּ בִּימֵי מַסָּה וַיֻּאַרְכוּ יְמֵיהֶם כְּפִי מִצְוֹת יְהוָה אֱלֹהִים לִבְנֵי הָאָדָם כִּי צִוָּה כִּי יָשׁוּבוּ כֻלָּם כִּי הֶרְאָה לָהֶם כִּי אָבְדוּ בַּעֲבוּר פֶּשַׁע הוֹרֵיהֶם׃",
+  "hebrew": "וַיִּאָרְכוּ יְמֵי בְנֵי הָאָדָם כִּרְצוֹן אֱלֹהִים לְמַעַן יָשׁוּבוּ בְּעוֹדָם בַּבָּשָׂר לָכֵן הָיוּ בִּימֵי מַסָּה וַיֻּאַרְכוּ יְמֵיהֶם כְּפִי מִצְוֹת יְהוָה אֱלֹהִים לִבְנֵי־הָאָדָם כִּי־צִוָּה כִּי יָשׁוּבוּ כֻלָּם כִּי הֶרְאָה לָהֶם כִּי אָבְדוּ בַּעֲבוּר פֶּשַׁע הוֹרֵיהֶם׃",
   "english": "And the days of the children of men were prolonged, according to the will of God, that they might repent while in the flesh; wherefore, their state became a state of probation, and their time was lengthened, according to the commandments which the Lord God gave unto the children of men. For he gave commandment that all men must repent; for he showed unto all men that they were lost, because of the transgression of their parents."
  },
  {
@@ -4707,7 +4707,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 2,
   "verse": 23,
-  "hebrew": "וְלֹא הָיוּ לָהֶם בָּנִים וְנִשְׁאָרוּ בְּתֻמָּם בְּלִי שִׂמְחָה כִּי לֹא יָדְעוּ אֻמְלָלוּת לֹא עָשׂוּ טוֹב כִּי לֹא יָדְעוּ חֵטְא׃",
+  "hebrew": "וְלֹא־הָיוּ לָהֶם בָּנִים וְנִשְׁאָרוּ בְּתֻמָּם בְּלִי שִׂמְחָה כִּי־לֹא יָדְעוּ יָגוֹן לֹא עָשׂוּ טוֹב כִּי־לֹא יָדְעוּ חֵטְא׃",
   "english": "And they would have had no children; wherefore they would have remained in a state of innocence, having no joy, for they  knew no misery; doing no good, for they knew no sin."
  },
  {
@@ -4721,7 +4721,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 2,
   "verse": 25,
-  "hebrew": "נָפַל אָדָם לְמַעַן יִהְיוּ בְנֵי הָאָדָם וּבְנֵי הָאָדָם קַיָּמִים לְמַעַן יִהְיֶה לָהֶם אֹשֶׁר׃",
+  "hebrew": "נָפַל אָדָם לְמַעַן יִהְיוּ בְנֵי־הָאָדָם וּבְנֵי־הָאָדָם קַיָּמִים לְמַעַן יִהְיֶה לָהֶם שִׂמְחָה׃",
   "english": "Adam fell that men might be; and men are, that they might have joy."
  },
  {
@@ -4812,7 +4812,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 3,
   "verse": 8,
-  "hebrew": "וְאֶתֵּן לוֹ מִצְוָה לְבִלְתִּי עֲשׂוֹת מְלָאכָה אַחֶרֶת זוּלָתִי אֲשֶׁר אֲצַוֶּנּוּ וַאֲגַדְּלֶנּוּ בְּעֵינַי כִּי יַעֲשֶׂה מְלַאכְתִּי׃",
+  "hebrew": "וְאֶתֵּן־לוֹ מִצְוָה לְבִלְתִּי עֲשׂוֹת מְלָאכָה אַחֶרֶת זוּלַת אֲשֶׁר אֲצַוֶּנּוּ וַאֲגַדְּלֶנּוּ בְּעֵינַי כִּי יַעֲשֶׂה מְלַאכְתִּי׃",
   "english": "And I will give unto him a commandment that he shall do none other work, save the work which I shall command him. And I will make him great in mine eyes; for he shall do my work."
  },
  {
@@ -4847,7 +4847,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 3,
   "verse": 13,
-  "hebrew": "וּמֵחֻלְשָׁה יִתְחַזֵּק בַּיּוֹם אֲשֶׁר תָּחֵל מְלַאכְתִּי בְּכָל־עַמִּי לַהֲשִׁיבְךָ בֵּית יִשְׂרָאֵל אָמַר יְהוָה׃",
+  "hebrew": "וּמִכִּשְּׁלוֹן יִתְחַזֵּק בַּיּוֹם אֲשֶׁר תָּחֵל מְלַאכְתִּי בְּכָל־עַמִּי לַהֲשִׁיבְךָ בֵּית־יִשְׂרָאֵל אָמַר יְהוָה׃",
   "english": "And out of weakness he shall be made strong, in that day when my work shall commence among all my people, unto the restoring thee, O house of Israel, saith the Lord."
  },
  {
@@ -4889,7 +4889,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 3,
   "verse": 19,
-  "hebrew": "וְהַדְּבָרִים אֲשֶׁר יִכְתֹּב יִהְיוּ הַנְּחוּצִים בְּחָכְמָתִי לָלֶכֶת לִפְרִי חֲלָצֶיךָ וְהָיָה כְּפְרִי חֲלָצֶיךָ צָעַק אֲלֵיהֶם מִן־הֶעָפָר כִּי יָדַעְתִּי אֱמוּנָתָם׃",
+  "hebrew": "וְהַדְּבָרִים אֲשֶׁר יִכְתֹּב יִהְיוּ הַנְּחוּצִים בְּחָכְמָתִי לָלֶכֶת לִפְרִי חֲלָצֶיךָ וְהָיָה כִּפְרִי חֲלָצֶיךָ כְּצַעֲקָם מִן־הֶעָפָר כִּי יָדַעְתִּי אֱמוּנָתָם׃",
   "english": "And the words which he shall write shall be the words which are expedient in my wisdom should go forth unto the fruit of thy loins. And it shall be as if the fruit of thy loins had cried unto them from the dust; for I know their faith."
  },
  {
@@ -4903,7 +4903,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 3,
   "verse": 21,
-  "hebrew": "בַּעֲבוּר אֱמוּנָתָם יֵצְאוּ דְבָרֵיהֶם מִפִּי אֶל־אֲחֵיהֶם פְּרִי חֲלָצֶיךָ וְאֶת־חֻלְשַׁת דְּבָרֵיהֶם אֲחַזֵּק בֶּאֱמוּנָתָם לְהַזְכִּיר בְּרִיתִי אֲשֶׁר כָּרַתִּי לַאֲבוֹתֶיךָ׃",
+  "hebrew": "בַּעֲבוּר אֱמוּנָתָם יֵצְאוּ דְבָרֵיהֶם מִפִּי אֶל־אֲחֵיהֶם פְּרִי חֲלָצֶיךָ וְדִבְרֵיהֶם הָרָפִים אֲחַזֵּק בֶּאֱמוּנָתָם לְהַזְכִּיר בְּרִיתִי אֲשֶׁר כָּרַתִּי לַאֲבוֹתֶיךָ׃",
   "english": "Because of their faith their words shall proceed forth out of my mouth unto their brethren who are the fruit of thy loins; and the weakness of their words will I make strong in their faith, unto the remembering of my covenant which I made unto thy fathers."
  },
  {
@@ -4966,7 +4966,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 4,
   "verse": 5,
-  "hebrew": "אַךְ בָּנַי וּבְנֹתַי לֹא אוּכַל לָרֶדֶת שְׁאוֹלָה בְּלִי בֵרַכְתִּי אֶתְכֶם כִּי יָדַעְתִּי אִם־תֵּלְכוּ בַדֶּרֶךְ הַיְשָׁרָה לֹא תָסוּרוּ מִמֶּנָּה׃",
+  "hebrew": "אַךְ בָּנַי וּבְנֹתַי לֹא אוּכַל לָרֶדֶת שְׁאוֹלָה אִם־לֹא אֲבָרֵךְ אֶתְכֶם כִּי יָדַעְתִּי אִם־תֵּלְכוּ בַדֶּרֶךְ הַיְשָׁרָה לֹא תָסוּרוּ מִמֶּנָּה׃",
   "english": "But behold, my sons and my daughters, I cannot go down to my grave save I should leave a blessing upon you; for behold, I know that if ye are brought up in the way ye should go ye will not depart from it."
  },
  {
@@ -5127,7 +5127,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 4,
   "verse": 28,
-  "hebrew": "עוּרִי נַפְשִׁי אַל־תּוֹסִיפִי לִנְפֹּל בַּחֵטְא שִׂמְחִי לִבִּי אַל־תִּתְּנִי עוֹד מָקוֹם לְאוֹיֵב נַפְשִׁי׃",
+  "hebrew": "עוּרִי נַפְשִׁי אַל־תּוֹסִיפִי לִנְפֹּל בַּחֵטְא שְׂמַח לִבִּי אַל־תִּתְּנִי עוֹד מָקוֹם לְאוֹיֵב נַפְשִׁי׃",
   "english": "Awake, my soul! No longer droop in sin. Rejoice, O my heart, and give place no more for the enemy of my soul."
  },
  {
@@ -5141,7 +5141,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 4,
   "verse": 30,
-  "hebrew": "שִׂמְחִי לִבִּי וּזְעַקִי אֶל־יְהוָה וְאִמְרִי יְהוָה אֲהַלֶלְךָ לְעוֹלָם תָּגֵל נַפְשִׁי בָּךְ אֱלֹהַי צוּר יְשׁוּעָתִי׃",
+  "hebrew": "שְׂמַח לִבִּי וּזְעַק אֶל־יְהוָה וְאִמְרִי יְהוָה אֲהַלֶלְךָ לְעוֹלָם תָּגֵל נַפְשִׁי בָּךְ אֱלֹהַי צוּר יְשׁוּעָתִי׃",
   "english": "Rejoice, O my heart, and cry unto the Lord, and say: O Lord, I will praise thee forever; yea, my soul will rejoice in thee, my God, and the rock of my salvation."
  },
  {
@@ -5281,7 +5281,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 5,
   "verse": 15,
-  "hebrew": "וָאֲלַמֵּד עַמִּי לִבְנוֹת וְלַעֲבֹד בְּכָל־מְלֶאכֶת עֵץ וּבַרְזֶל וּנְחֹשֶׁת וּנְחוּשָׁה וּפְלָדָה וְזָהָב וָכֶסֶף וְכָל־מַחְצָב יָקָר אֲשֶׁר נִמְצָא לָרֹב׃",
+  "hebrew": "וָאֲלַמֵּד עַמִּי לִבְנוֹת וְלַעֲבֹד בְּכָל־מְלֶאכֶת עֵץ וּבַרְזֶל וּנְחֹשֶׁת וּפְלָדָה וְזָהָב וָכֶסֶף וְכָל־מַחְצָב יָקָר אֲשֶׁר נִמְצָא לָרֹב׃",
   "english": "And I did teach my people to build buildings, and to work in all manner of wood, and of iron, and of copper, and of brass, and of steel, and of gold, and of silver, and of precious ores, which were in great abundance."
  },
  {
@@ -5323,7 +5323,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 5,
   "verse": 21,
-  "hebrew": "וַיָּבֵא עֲלֵיהֶם קְלָלָה קְלָלָה נִמְרֶצֶת בַּעֲוֹנָם כִּי הִקְשׁוּ לִבָּם נֶגְדּוֹ וַיְהִי כַּחַלָּמִישׁ וּלְמַעַן לֹא־יִהְיוּ לְמַחְמָד לְעַמִּי הֵם הַלְּבָנִים וְהַיָּפִים וְהַנְּעִימִים וַיָּבֵא יְהוָה אֱלֹהִים עֲלֵיהֶם עוֹר שָׁחוֹר׃",
+  "hebrew": "וַיָּבֵא עֲלֵיהֶם קְלָלָה קְלָלָה נִמְרֶצֶת בַּעֲוֹנָם כִּי הִקְשׁוּ לִבָּם נֶגְדּוֹ וַיְהִי כַּחַלָּמִישׁ וּלְמַעַן לֹא־יְפַתּוּ אֶת־עַמִּי הֵם הַלְּבָנִים וְהַיָּפִים וְהַנְּעִימִים וַיָּבֵא יְהוָה אֱלֹהִים עֲלֵיהֶם עוֹר שָׁחוֹר׃",
   "english": "And he had caused the cursing to come upon them, yea, even a sore cursing, because of their iniquity. For behold, they had hardened their hearts against him, that they had become like unto a flint; wherefore, as they were white, and exceedingly fair and delightsome, that they might not be enticing unto my people the Lord God did cause a skin of blackness to come upon them."
  },
  {
@@ -5400,7 +5400,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 5,
   "verse": 32,
-  "hebrew": "וָאֶחְרֹט אֵת הַיָּשָׁר בְּעֵינֵי אֱלֹהִים וְאִם־יִרְצֶה עַמִּי בְּדִבְרֵי אֱלֹהִים וְרָצוּ בַחֲרִיטוֹתַי אֲשֶׁר עַל־הַלּוּחוֹת הָאֵלֶּה׃",
+  "hebrew": "וָאֶחְרֹט אֵת הַיָּשָׁר בְּעֵינֵי אֱלֹהִים וְאִם־יִרְצֶה עַמִּי בְּדִבְרֵי אֱלֹהִים וְרָצוּ בַחֲקוּקַי אֲשֶׁר עַל־הַלּוּחוֹת הָאֵלֶּה׃",
   "english": "And I engraved that which is pleasing unto God. And if my people are pleased with the things of God they will be pleased with mine engravings which are upon these plates."
  },
  {
@@ -5421,21 +5421,21 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 6,
   "verse": 1,
-  "hebrew": "דִּבְרֵי יַעֲקֹב אֲחִי נֶפִי אֲשֶׁר דִּבֶּר אֶל־עַם נֶפִי׃",
+  "hebrew": "דִּבְרֵי יַעֲקֹב אֲחִי נֶפִי אֲשֶׁר־דִּבֶּר אֶל־עַם נֶפִי׃",
   "english": "The words of Jacob, the brother of Nephi, which he spake unto the people of Nephi:"
  },
  {
   "book": "2 Nephi",
   "chapter": 6,
   "verse": 2,
-  "hebrew": "אַחַי הָאֲהוּבִים אֲנִי יַעֲקֹב קְרָאַנִי אֱלֹהִים וַיִּסְמְכֵנִי לְפִי סֵדֶר קָדְשׁוֹ וַיְקַדְּשֵׁנִי נֶפִי אָחִי אֲשֶׁר תַּבִּיטוּ אֵלָיו כְּמֶלֶךְ אוֹ כְשֹׁמֵר וַעֲלָיו תִּשָּׁעֲנוּ לְבִטְחָה יְדַעְתֶּם כִּי דִבַּרְתִּי אֲלֵיכֶם דְּבָרִים רַבִּים מְאֹד׃",
+  "hebrew": "אַחַי הָאֲהוּבִים אֲנִי יַעֲקֹב קְרָאַנִי אֱלֹהִים וַיִּסְמְכֵנִי לְפִי סֵדֶר קָדְשׁוֹ וַיְקַדְּשֵׁנִי נֶפִי אָחִי אֲשֶׁר תַּבִּיטוּ אֵלָיו כְּמֶלֶךְ אוֹ כְשֹׁמֵר וַעֲלָיו תִּשָּׁעֲנוּ לְבִטְחָה הִנֵּה יְדַעְתֶּם כִּי־דִבַּרְתִּי אֲלֵיכֶם דְּבָרִים רַבִּים מְאֹד׃",
   "english": "Behold, my beloved brethren, I, Jacob, having been called of God, and ordained after the manner of his holy order, and having been consecrated by my brother Nephi, unto whom ye look as a king or a protector, and on whom ye depend for safety, behold ye know that I have spoken unto you exceedingly many things."
  },
  {
   "book": "2 Nephi",
   "chapter": 6,
   "verse": 3,
-  "hebrew": "אַךְ אֲדַבֵּר אֲלֵיכֶם עוֹד כִּי חָפַצְתִּי בְּטוֹב נַפְשֹׁתֵיכֶם אָכֵן גָּדְלָה דְאָגָתִי בַּעֲדֶכֶם וִידַעְתֶּם כִּי כֵּן הָיְתָה מֵעוֹלָם כִּי הִזְהַרְתִּי אֶתְכֶם בְּכָל־שְׁקִידָה וְלִמַּדְתִּי אֶתְכֶם דִּבְרֵי אָבִי וְדִבַּרְתִּי אֲלֵיכֶם עַל־כָּל־הַכָּתוּב מִיּוֹם בָּרָא אֱלֹהִים׃",
+  "hebrew": "אַךְ אֲדַבֵּר אֲלֵיכֶם עוֹד כִּי חָפַצְתִּי בְּטוֹב נַפְשֹׁתֵיכֶם אָכֵן גָּדְלָה דְאָגָתִי בַּעֲדֶכֶם וִידַעְתֶּם כִּי כֵּן הָיְתָה מֵעוֹלָם כִּי הִזְהַרְתִּי אֶתְכֶם בְּכָל־שְׁקִידָה וְלִמַּדְתִּי אֶתְכֶם דִּבְרֵי אָבִי וְדִבַּרְתִּי אֲלֵיכֶם עַל־כָּל־הַכָּתוּב מִבְּרִיאַת הָעוֹלָם׃",
   "english": "Nevertheless, I speak unto you again; for I am desirous for the welfare of your souls. Yea, mine anxiety is great for you; and ye yourselves know that it ever has been. For I have exhorted you with all diligence; and I have taught you the words of my father; and I have spoken unto you concerning all things which are written, from the creation of the world."
  },
  {
@@ -5449,14 +5449,14 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 6,
   "verse": 5,
-  "hebrew": "וְעַתָּה הַדְּבָרִים אֲשֶׁר אֶקְרָא הֵם אֲשֶׁר דִּבֶּר יְשַׁעְיָהוּ עַל־כָּל־בֵּית יִשְׂרָאֵל לָכֵן יִדְמוּ לָכֶם כִּי מִבֵּית יִשְׂרָאֵל אַתֶּם וְדִבֶּר יְשַׁעְיָהוּ דְּבָרִים רַבִּים אֲשֶׁר יִדְמוּ לָכֶם כִּי מִבֵּית יִשְׂרָאֵל אַתֶּם׃",
+  "hebrew": "וְעַתָּה הַדְּבָרִים אֲשֶׁר אֶקְרָא הֵם אֲשֶׁר־דִּבֶּר יְשַׁעְיָהוּ עַל־כָּל־בֵּית יִשְׂרָאֵל לָכֵן יִדְמוּ לָכֶם כִּי מִבֵּית יִשְׂרָאֵל אַתֶּם וְדִבֶּר יְשַׁעְיָהוּ דְּבָרִים רַבִּים אֲשֶׁר יִדְמוּ לָכֶם כִּי מִבֵּית יִשְׂרָאֵל אַתֶּם׃",
   "english": "And now, the words which I shall read are they which Isaiah spake concerning all the house of Israel; wherefore, they may be likened unto you, for ye are of the house of Israel. And there are many things which have been spoken by Isaiah  which may be likened unto you, because ye are of the house of Israel."
  },
  {
   "book": "2 Nephi",
   "chapter": 6,
   "verse": 6,
-  "hebrew": "וְאֵלֶּה הַדְּבָרִים כֹּה אָמַר יְהוִה אֱלֹהִים הִנֵּה אֶשָּׂא יָדִי אֶל־הַגּוֹיִם וְאָרִים נִסִּי אֶל־הָעַמִּים וְהֵבִיאוּ בָנַיִךְ בִּזְרוֹעֹתָם וּבְנֹתַיִךְ עַל־כָּתֵף תִּנָּשֶׂאנָה׃",
+  "hebrew": "וְאֵלֶּה הַדְּבָרִים כֹּה־אָמַר יְהוִה אֱלֹהִים הִנֵּה אֶשָּׂא יָדִי אֶל־הַגּוֹיִם וְאָרִים נִסִּי אֶל־הָעַמִּים וְהֵבִיאוּ בָנַיִךְ בִּזְרוֹעֹתָם וּבְנֹתַיִךְ עַל־כָּתֵף תִּנָּשֶׂאנָה׃",
   "english": "And now these are the words: Thus saith the Lord God: Behold, I will lift up mine hand to the Gentiles, and set up my standard to the people; and they shall bring thy sons in their arms, and thy daughters shall be carried upon their shoulders."
  },
  {
@@ -5477,98 +5477,98 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 6,
   "verse": 9,
-  "hebrew": "אַךְ הֶרְאַנִי יְהוָה כִּי יָשׁוּבוּ וְהֶרְאַנִי גַם כִּי יֵרָאֶה אֲלֵיהֶם יְהוָה אֱלֹהִים קְדוֹשׁ יִשְׂרָאֵל בַּבָּשָׂר וְאַחֲרֵי הֵרָאוֹתוֹ יְיַסְּרוּהוּ וִיצַלְּבוּהוּ כִּדְבַר הַמַּלְאָךְ אֲשֶׁר דִּבֶּר אֵלָי׃",
+  "hebrew": "אַךְ הֶרְאַנִי יְהוָה כִּי יָשׁוּבוּ וְגַם הֶרְאַנִי כִּי יֵרָאֶה אֲלֵהֶם יְהוָה אֱלֹהִים קְדוֹשׁ־יִשְׂרָאֵל בַּבָּשָׂר וְאַחֲרֵי הֵרָאוֹתוֹ יַכּוּהוּ וְיִתְלוּהוּ עַל־עֵץ כִּדְבַר הַמַּלְאָךְ אֲשֶׁר־דִּבֶּר אֵלָי׃",
   "english": "Nevertheless, the Lord has shown unto me that they should return again. And he also has shown unto me that the Lord God, the Holy One of Israel, should manifest himself unto them in the flesh; and after he should manifest himself they should scourge him and crucify him, according to the words of the angel who spake it unto me."
  },
  {
   "book": "2 Nephi",
   "chapter": 6,
   "verse": 10,
-  "hebrew": "וְאַחֲרֵי הַקְשׁוֹתָם אֶת־לִבָּם וְהַקְשׁוֹתָם עָרְפָּם נֶגֶד קְדוֹשׁ יִשְׂרָאֵל הִנֵּה יָבֹאוּ מִשְׁפְּטֵי קְדוֹשׁ יִשְׂרָאֵל עֲלֵיהֶם וּבָא הַיּוֹם וְיֻכּוּ וְיְעֻנּוּ׃",
+  "hebrew": "וְאַחֲרֵי הַקְשׁוֹתָם אֶת־לִבָּם וְאֶת־עָרְפָּם נֶגֶד קְדוֹשׁ־יִשְׂרָאֵל הִנֵּה יָבֹאוּ מִשְׁפְּטֵי קְדוֹשׁ־יִשְׂרָאֵל עֲלֵיהֶם וּבָא הַיּוֹם אֲשֶׁר יֻכּוּ וִיעֻנּוּ׃",
   "english": "And after they have hardened their hearts and stiffened their necks against the Holy One of Israel, behold the judgments of the Holy One of Israel shall come upon them. And the day cometh that they shall be smitten and afflicted."
  },
  {
   "book": "2 Nephi",
   "chapter": 6,
   "verse": 11,
-  "hebrew": "לָכֵן אַחֲרֵי הִנָּדְפָם הֵנָּה וָהֵנָּה כִּי כֵן אָמַר הַמַּלְאָךְ יְעֻנּוּ רַבִּים בַּבָּשָׂר וְלֹא יִנָּתְנוּ לָמוּת בַּעֲבוּר תְּפִלּוֹת הַנֶּאֱמָנִים יְפֻזְּרוּ וְיֻכּוּ וְיִשָּׂנְאוּ אַךְ יְרַחֵם יְהוָה עֲלֵיהֶם כַּאֲשֶׁר יָבֹאוּ לְדַעַת גֹּאֲלָם יִקָּבְצוּ יַחְדָּו שׁוּב אֶל־אַרְצוֹת נַחֲלָתָם׃",
+  "hebrew": "לָכֵן אַחֲרֵי הִנָּדְפָם הֵנָּה וָהֵנָּה כִּי־כֵן אָמַר הַמַּלְאָךְ יְעֻנּוּ רַבִּים בַּבָּשָׂר וְלֹא יִנָּתְנוּ לָמוּת בַּעֲבוּר תְּפִלּוֹת הַנֶּאֱמָנִים יְפֻזְּרוּ וְיֻכּוּ וְיִשָּׂנְאוּ אַךְ יְרַחֵם יְהוָה עֲלֵיהֶם כַּאֲשֶׁר יֵדְעוּ אֶת־גֹּאֲלָם יִקָּבְצוּ יַחְדָּו וְשָׁבוּ אֶל־אַרְצוֹת נַחֲלָתָם׃",
   "english": "Wherefore, after they are driven to and fro, for thus saith the angel, many shall be afflicted in the flesh, and shall not be suffered to perish, because of the prayers of the faithful; they shall be scattered, and smitten, and hated; nevertheless, the Lord will be merciful unto them, that when they shall come to the knowledge of their Redeemer, they shall be gathered together again to the lands of their inheritance."
  },
  {
   "book": "2 Nephi",
   "chapter": 6,
   "verse": 12,
-  "hebrew": "וּבָרוּכִים הַגּוֹיִם אֲשֶׁר כָּתַב עֲלֵיהֶם הַנָּבִיא כִּי אִם־יָשׁוּבוּ וְלֹא יִלָּחֲמוּ בְצִיּוֹן וְלֹא יִתְחַבְּרוּ אֶל־הָעֵדָה הַגְּדוֹלָה וְהַנִּתְעָבָה יִוָּשֵׁעוּ כִּי יְקַיֵּם יְהוָה אֱלֹהִים אֶת־בְּרִיתוֹתָיו אֲשֶׁר כָּרַת לְבָנָיו וְעַל־זֹאת כָּתַב הַנָּבִיא אֶת־הַדְּבָרִים הָאֵלֶּה׃",
+  "hebrew": "וּבָרוּכִים הַגּוֹיִם אֲשֶׁר כָּתַב עֲלֵיהֶם הַנָּבִיא אִם־יָשׁוּבוּ וְלֹא יִלָּחֲמוּ בְצִיּוֹן וְלֹא יִתְחַבְּרוּ אֶל־הָעֵדָה הַגְּדוֹלָה וְהַנִּתְעָבָה יִוָּשֵׁעוּ כִּי יְקַיֵּם יְהוָה אֱלֹהִים אֶת־בְּרִיתוֹ אֲשֶׁר כָּרַת עִם־בָּנָיו וְעַל־זֹאת כָּתַב הַנָּבִיא אֶת־הַדְּבָרִים הָאֵלֶּה׃",
   "english": "And blessed are the Gentiles, they of whom the prophet has written; for behold, if it so be that they shall repent and fight not against Zion, and do not unite themselves to that great and abominable church, they shall be saved; for the Lord God will fulfil his covenants which he has made unto his children; and for this cause the prophet has written these things."
  },
  {
   "book": "2 Nephi",
   "chapter": 6,
   "verse": 13,
-  "hebrew": "לָכֵן יְלַחֲכוּ הַנִּלְחָמִים בְּצִיּוֹן וּבְעַם בְּרִית יְהוָה עֲפַר רַגְלֵיהֶם וְלֹא יֵבוֹשׁ עַם יְהוָה כִּי עַם יְהוָה הֵם הַמְחַכִּים לוֹ כִּי עוֹדָם מְחַכִּים לְבוֹא הַמָּשִׁיחַ׃",
+  "hebrew": "לָכֵן יְלַחֲכוּ הַנִּלְחָמִים בְּצִיּוֹן וּבְעַם בְּרִית יְהוָה עֲפַר רַגְלֵיהֶם וְלֹא יֵבוֹשׁ עַם־יְהוָה כִּי עַם־יְהוָה הֵם הַקֹּוִים לוֹ כִּי עוֹדָם קֹוִים לְבוֹא הַמָּשִׁיחַ׃",
   "english": "Wherefore, they that fight against Zion and the covenant people of the Lord shall lick up the dust of their feet; and the people of the Lord shall not be ashamed. For the people of the Lord are they who wait for him; for they still wait for the coming of the Messiah."
  },
  {
   "book": "2 Nephi",
   "chapter": 6,
   "verse": 14,
-  "hebrew": "וְהִנֵּה כִּדְבַר הַנָּבִיא יָשִׁיב הַמָּשִׁיחַ יָדוֹ שֵׁנִית לְגָאֳלָם לָכֵן יֵרָאֶה אֲלֵיהֶם בְּכֹחַ וּבְכָבוֹד גָּדוֹל  לְהַשְׁמִיד אֹיְבֵיהֶם בַּיּוֹם הַהוּא אֲשֶׁר יַאֲמִינוּ בוֹ וְלֹא יַשְׁמִיד כָּל־הַמַּאֲמִינִים בּוֹ׃",
+  "hebrew": "וְהִנֵּה כִּדְבַר הַנָּבִיא יוֹסִיף הַמָּשִׁיחַ שֵׁנִית יָדוֹ לְגָאֳלָם לָכֵן יֵרָאֶה אֲלֵיהֶם בְּכֹחַ וּבְכָבוֹד גָּדוֹל לְהַשְׁמִיד אוֹיְבֵיהֶם בַּיּוֹם הַהוּא כַּאֲשֶׁר יַאֲמִינוּ בוֹ וְכָל־הַמַּאֲמִינִים בּוֹ לֹא יַשְׁמִיד׃",
   "english": "And behold, according to the words of the prophet, the Messiah will set himself again the second time to recover them; wherefore, he will manifest himself unto them in power and great  glory, unto the destruction of their enemies, when that day cometh when they shall believe in him; and none will he destroy that believe in him."
  },
  {
   "book": "2 Nephi",
   "chapter": 6,
   "verse": 15,
-  "hebrew": "וְהֻשְׁמְדוּ אֲשֶׁר לֹא יַאֲמִינוּ בוֹ גַּם־בָּאֵשׁ וְגַם־בַּסּוּפָה וְגַם־בָּרַעַשׁ וְגַם־בִּשְׁפִיכוּת דָּמִים וְגַם־בַּדֶּבֶר וְגַם־בָּרָעָב וְיָדְעוּ כִּי יְהוָה הוּא הָאֱלֹהִים קְדוֹשׁ יִשְׂרָאֵל׃",
+  "hebrew": "וְכָל־אֲשֶׁר לֹא־יַאֲמִינוּ בוֹ יֻשְׁמָדוּ בָּאֵשׁ וּבַסּוּפָה וּבָרַעַשׁ וּבִשְׁפִיכוּת דָּמִים וּבַדֶּבֶר וּבָרָעָב וְיָדְעוּ כִּי־יְהוָה הוּא הָאֱלֹהִים קְדוֹשׁ־יִשְׂרָאֵל׃",
   "english": "And they that believe not in him shall be destroyed, both by fire, and by tempest, and by earthquakes, and by bloodsheds, and by pestilence, and by famine. And they shall know that the Lord is God, the Holy One of Israel."
  },
  {
   "book": "2 Nephi",
   "chapter": 6,
   "verse": 16,
-  "hebrew": "הֲיֻקַּח מִגִּבּוֹר טֶרֶף וְאִם־יִמָּלֵט שְׁבִי־צֶדֶק׃",
+  "hebrew": "הֲיֻקַּח מִגִּבּוֹר מַלְקוֹחַ וְאִם־שְׁבִי צַדִּיק יִמָּלֵט׃",
   "english": "For shall the prey be taken from the mighty, or the lawful captive delivered?"
  },
  {
   "book": "2 Nephi",
   "chapter": 6,
   "verse": 17,
-  "hebrew": "אַךְ כֹּה אָמַר יְהוָה גַּם־שְׁבִי הַגִּבּוֹר יֻקָּח וְטֶרֶף הֶעָרִיץ יִמָּלֵט כִּי אֵל גִּבּוֹר יַצִּיל עַם בְּרִיתוֹ כִּי כֹה אָמַר יְהוָה אֶת־יְרִיבֵךְ אָנֹכִי אָרִיב׃",
+  "hebrew": "אַךְ כֹּה־אָמַר יְהוָה גַּם־שְׁבִי גִבּוֹר יֻקָּח וּמַלְקוֹחַ עָרִיץ יִמָּלֵט כִּי אֵל גִּבּוֹר יַצִּיל עַם בְּרִיתוֹ כִּי־כֹה אָמַר יְהוָה אֶת־יְרִיבֵךְ אָנֹכִי אָרִיב׃",
   "english": "But thus saith the Lord: Even the captives of the mighty shall be taken away, and the prey of the terrible shall be delivered; for the Mighty God shall deliver his covenant people. For thus saith the Lord: I will contend with them that contendeth with thee—"
  },
  {
   "book": "2 Nephi",
   "chapter": 6,
   "verse": 18,
-  "hebrew": "וְהַאֲכַלְתִּי אֶת־מוֹנַיִךְ אֶת־בְּשָׂרָם וְכֶעָסִיס יִשְׁכְּרוּן דָּמָם וְיָדַע כָל־בָּשָׂר כִּי אֲנִי יְהוָה מוֹשִׁיעֵךְ וְגֹאֲלֵךְ אֲבִיר יַעֲקֹב׃",
+  "hebrew": "וְהַאֲכַלְתִּי אֶת־מוֹנַיִךְ אֶת־בְּשָׂרָם וְכֶעָסִיס דָּמָם יִשְׁכָּרוּן וְיָדְעוּ כָל־בָּשָׂר כִּי־אֲנִי יְהוָה מוֹשִׁיעֵךְ וְגֹאֲלֵךְ אֲבִיר יַעֲקֹב׃",
   "english": "And I will feed them that oppress thee, with their own flesh; and they shall be drunken with their own blood as with sweet wine; and all flesh shall know that I the Lord am thy Savior and thy Redeemer, the Mighty One of Jacob."
  },
  {
   "book": "2 Nephi",
   "chapter": 7,
   "verse": 1,
-  "hebrew": "אָכֵן כִּי כֹה אָמַר יְהוָה הַשִׁלַּחְתִּיךְ אִם הִזְנַחְתִּיךְ לָעַד כִּי כֹה אָמַר יְהוָה אַיֵּה סֵפֶר כְּרִיתוּת אִמְּכֶם לְמִי שִׁלַּחְתִּיךְ וּלְמִי מִנּוֹשַׁי מְכַרְתִּי אֶתְכֶם אָכֵן לְמִי מְכַרְתִּי אֶתְכֶם הִנֵּה בַּעֲוֹנֹתֵיכֶם נִמְכַּרְתֶּם וּבְפִשְׁעֵיכֶם שֻׁלְּחָה אִמְּכֶם׃",
+  "hebrew": "אָכֵן כִּי־כֹה אָמַר יְהוָה הַשִׁלַּחְתִּיךְ אִם הִזְנַחְתִּיךְ לָעַד כִּי־כֹה אָמַר יְהוָה אַיֵּה סֵפֶר כְּרִיתוּת אִמְּכֶם לְמִי שִׁלַּחְתִּיךְ וּלְמִי מִנּוֹשַׁי מְכַרְתִּי אֶתְכֶם אָכֵן לְמִי מְכַרְתִּי אֶתְכֶם הִנֵּה בַּעֲוֹנֹתֵיכֶם נִמְכַּרְתֶּם וּבְפִשְׁעֵיכֶם שֻׁלְּחָה אִמְּכֶם׃",
   "english": "Yea, for thus saith the Lord: Have I put thee away, or have I cast thee off forever? For thus saith the Lord: Where is the bill of your mother's divorcement? To whom have I put thee away, or to which of my creditors have I sold you? Yea, to whom have I sold you? Behold, for your iniquities have ye sold yourselves, and for your transgressions is your mother put away."
  },
  {
   "book": "2 Nephi",
   "chapter": 7,
   "verse": 2,
-  "hebrew": "לָכֵן בָּאתִי וְאֵין אִישׁ קָרָאתִי אָכֵן וְאֵין עוֹנֶה בֵּית יִשְׂרָאֵל הֲקָצוֹר קָצְרָה יָדִי מִפְּדוּת אִם־אֵין־בִּי כֹחַ לְהַצִּיל הִנֵּה בְּגַעֲרָתִי אַחֲרִיב יָם אָשִׂים נְהָרוֹת מִדְבָּר וְתִבְאַשׁ דְּגָתָם מֵאֵין מַיִם וְיָמוּתוּ בַצָּמָא׃",
+  "hebrew": "לָכֵן בָּאתִי וְאֵין אִישׁ קָרָאתִי אָכֵן וְאֵין עוֹנֶה בֵּית־יִשְׂרָאֵל הֲקָצוֹר קָצְרָה יָדִי מִפְּדוּת אִם־אֵין־בִּי כֹחַ לְהַצִּיל הִנֵּה בְּגַעֲרָתִי אַחֲרִיב יָם אָשִׂים נְהָרוֹת מִדְבָּר וְתִבְאַשׁ דְּגָתָם מֵאֵין מַיִם וְיָמוּתוּ בַצָּמָא׃",
   "english": "Wherefore, when I came, there was no man; when I called, yea, there was none to answer. O house of Israel, is my hand shortened at all that it cannot redeem, or have I no power to deliver? Behold, at my rebuke I dry up the sea, I make their rivers a wilderness and their fish to stink because the waters are dried up, and they die because of thirst."
  },
  {
   "book": "2 Nephi",
   "chapter": 7,
   "verse": 3,
-  "hebrew": "וְהִלְבַּשְׁתִּי שָׁמַיִם קַדְרוּת וְשַׂמְתִּי שַׂק כְּסוּתָם׃",
+  "hebrew": "אַלְבִּישׁ שָׁמַיִם קַדְרוּת וְשַׂק אָשִׂים כְּסוּתָם׃",
   "english": "I clothe the heavens with blackness, and I make sackcloth their covering."
  },
  {
   "book": "2 Nephi",
   "chapter": 7,
   "verse": 4,
-  "hebrew": "נָתַן יְהוָה אֱלֹהִים לִי לְשׁוֹן לִמּוּדִים לָדַעַת לַדְבֵּר דָּבָר בְּעִתּוֹ אֵלֶיךָ בֵּית יִשְׂרָאֵל בִּהְיוֹתְכֶם יְגֵעִים יָעִיר בַּבֹּקֶר בַּבֹּקֶר יָעִיר לִי אֹזֶן לִשְׁמֹעַ כַּלִּמּוּדִים׃",
+  "hebrew": "נָתַן יְהוָה אֱלֹהִים לִי לְשׁוֹן לִמּוּדִים לָדַעַת לְדַבֵּר דָּבָר בְּעִתּוֹ אֵלֶיךָ בֵּית־יִשְׂרָאֵל בִּהְיוֹתְכֶם יְגֵעִים יָעִיר בַּבֹּקֶר בַּבֹּקֶר יָעִיר לִי אֹזֶן לִשְׁמֹעַ כַּלִּמּוּדִים׃",
   "english": "The Lord God hath given me the tongue of the learned, that I should know how to speak a word in season unto thee, O house of Israel. When ye are weary he waketh morning by morning. He waketh mine ear to hear as the learned."
  },
  {
@@ -5603,7 +5603,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 7,
   "verse": 9,
-  "hebrew": "כִּי יַעֲזֹר לִי יְהוָה אֱלֹהִים וְכָל־מַרְשִׁיעַי הִנֵּה כֻלָּם כַּבֶּגֶד יִבְלוּ וְיֹאכְלֵם עָשׁ׃",
+  "hebrew": "כִּי יַעֲזֹר לִי יְהוָה אֱלֹהִים וְכָל־מַרְשִׁיעַי הִנֵּה כֻלָּם כַּבֶּגֶד יִבְלוּ עָשׁ יֹאכְלֵם׃",
   "english": "For the Lord God will help me. And all they who shall condemn me, behold, all they shall wax old as a garment, and the moth shall eat them up."
  },
  {
@@ -5638,7 +5638,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 8,
   "verse": 3,
-  "hebrew": "כִּי־נִחַם יְהוָה צִיּוֹן יְנַחֵם כָּל־חָרְבֹתֶיהָ וְשָׂם מִדְבָּרָהּ כְּעֵדֶן וְעַרְבָתָהּ כְּגַן־יְהוָה וְנִמְצָא בָהּ שָׂשׂוֹן וְשִׂמְחָה תּוֹדָה וְקוֹל זִמְרָה׃",
+  "hebrew": "כִּי־נִחַם יְהוָה צִיּוֹן יְנַחֵם כָּל־חָרְבֹתֶיהָ וְשָׂם מִדְבָּרָהּ כְּעֵדֶן וְעַרְבָתָהּ כְּגַן־יְהוָה שָׂשׂוֹן וְשִׂמְחָה יִמָּצֵא בָהּ תּוֹדָה וְקוֹל זִמְרָה׃",
   "english": "For the Lord shall comfort Zion, he will comfort all her waste places; and he will make her wilderness like Eden, and her desert like the garden of the Lord. Joy and gladness shall be found therein, thanks giving and the voice of melody."
  },
  {
@@ -5694,7 +5694,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 8,
   "verse": 11,
-  "hebrew": "לָכֵן יָשׁוּבוּ פְּדוּיֵי יְהוָה וּבָאוּ צִיּוֹן בְּרִנָּה וְשִׂמְחַת עוֹלָם וְקֹדֶשׁ עַל־רֹאשָׁם שָׂשׂוֹן וְשִׂמְחָה יַשִּׂיגוּ נָסוּ יָגוֹן וַאֲנָחָה׃",
+  "hebrew": "לָכֵן יָשׁוּבוּ פְּדוּיֵי יְהוָה וּבָאוּ צִיּוֹן בְּרִנָּה וְשִׂמְחַת עוֹלָם וְקֹדֶשׁ עַל־רֹאשָׁם שָׂשׂוֹן וְשִׂמְחָה יַשִּׂיגוּון נָסוּ יָגוֹן וַאֲנָחָה׃",
   "english": "Therefore, the redeemed of the Lord shall return, and come with singing unto Zion; and everlasting joy and holiness shall be upon their heads; and they shall obtain gladness and joy; sorrow and mourning shall flee away."
  },
  {
@@ -5750,14 +5750,14 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 8,
   "verse": 19,
-  "hebrew": "בָּאוּ לָךְ שְׁנֵי בָנַיִךְ אֲשֶׁר יָנוּדוּ לָךְ שֹׁד וְשֶׁבֶר וְהָרָעָב וְהַחֶרֶב בְּמִי אֲנַחֲמֵךְ׃",
+  "hebrew": "בָּאוּ לָךְ שְׁנֵי בָנַיִךְ אֲשֶׁר יָנוּדוּ לָךְ הַשֹּׁד וְהַשֶּׁבֶר וְהָרָעָב וְהַחֶרֶב בְּמִי אֲנַחֲמֵךְ׃",
   "english": "These two sons are come unto thee, who shall be sorry for thee—thy desolation and destruction, and the famine and the sword—and by whom shall I comfort thee?"
  },
  {
   "book": "2 Nephi",
   "chapter": 8,
   "verse": 20,
-  "hebrew": "עָלְפוּ בָנַיִךְ זוּלָתִי שְׁנֵי אֵלֶּה שָׁכְבוּ בְּרֹאשׁ כָּל־חוּצוֹת כְּתוֹא מִכְמָר מְלֵאִים חֲמַת יְהוָה גַּעֲרַת אֱלֹהָיִךְ׃",
+  "hebrew": "עָלְפוּ בָנַיִךְ זוּלַת שְׁנֵי אֵלֶּה שָׁכְבוּ בְּרֹאשׁ כָּל־חוּצוֹת כְּתוֹא מִכְמָר מְלֵאִים חֲמַת יְהוָה גַּעֲרַת אֱלֹהָיִךְ׃",
   "english": "Thy sons have fainted, save these two; they lie at the head of all the streets; as a wild bull in a net, they are full of the fury of the Lord, the rebuke of thy God."
  },
  {
@@ -5785,14 +5785,14 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 8,
   "verse": 24,
-  "hebrew": "עוּרִי עוּרִי לִבְשִׁי עֻזֵּךְ צִיּוֹן לִבְשִׁי בִּגְדֵי תִפְאַרְתֵּךְ יְרוּשָׁלַיִם עִיר הַקֹּדֶשׁ כִּי לֹא יוֹסִיף יָבֹא־בָךְ עוֹד עָרֵל וְטָמֵא׃",
+  "hebrew": "עוּרִי עוּרִי לִבְשִׁי עֻזֵּךְ צִיּוֹן לִבְשִׁי בִּגְדֵי תִפְאַרְתֵּךְ יְרוּשָׁלַיִם עִיר הַקֹּדֶשׁ כִּי־לֹא יוֹסִיף יָבֹא־בָךְ עוֹד עָרֵל וְטָמֵא׃",
   "english": "Awake, awake, put on thy strength, O Zion; put on thy beautiful garments, O Jerusalem, the holy city; for henceforth there shall no more come into thee the uncircumcised and the unclean."
  },
  {
   "book": "2 Nephi",
   "chapter": 8,
   "verse": 25,
-  "hebrew": "הִתְנַעֲרִי מֵעָפָר קוּמִי שְׁבִי יְרוּשָׁלָיִם הִתְפַּתְּחִי מוֹסְרֵי צַוָּארֵךְ שְׁבִיָּה בַּת־צִיּוֹן׃",
+  "hebrew": "הִתְנַעֲרִי מֵעָפָר קוּמִי שְּׁבִי יְרוּשָׁלַיִם הִתְפַּתְּחִי מוֹסְרֵי צַוָּארֵךְ שְׁבִיָּה בַּת־צִיּוֹן׃",
   "english": "Shake thyself from the dust; arise, sit down, O Jerusalem; loose thyself from the bands of thy neck, O captive daughter of Zion."
  },
  {
@@ -5806,7 +5806,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 2,
-  "hebrew": "דִבֶּר אֶל־הַיְּהוּדִים בְּפִי נְבִיאָיו הַקְּדוֹשִׁים מִדּוֹר דּוֹר עַד־יָשׁוּבוּ אֶל־עֲדָתוֹ וְצֹאן אֱלֹהִים וְיִקָּבְצוּ אֶל־אַרְצוֹת נַחֲלָתָם וְיִכּוֹנוּ בְכָל־אַרְצוֹת הַהַבְטָחָה׃",
+  "hebrew": "דִבֶּר אֶל־הַיְּהוּדִים בְּפִי נְבִיאָיו הַקְּדוֹשִׁים מִדּוֹר דּוֹר עַד־יָשׁוּבוּ אֶל־עֲדָתוֹ וְצֹאן אֱלֹהִים וְיִקָּבְצוּ אֶל־אַרְצוֹת נַחֲלָתָם וְיִכּוֹנוּ בְכָל־אַרְצוֹת הַשְּׁבוּעָה׃",
   "english": "That he has spoken unto the Jews, by the mouth of his holy prophets, even from the beginning down, from generation to generation, until the time comes that they shall be restored to the true church and fold of God; when they shall be gathered home to the lands of their inheritance, and shall be established in all their lands of promise."
  },
  {
@@ -5827,35 +5827,35 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 5,
-  "hebrew": "הֵן בַגּוּף יֵרָאֶה לְיֹשְׁבֵי יְרוּשָׁלַיִם מְקוֹם מוֹצָאֵנוּ נָכוֹן הוּא בְתוֹכָם יָאֶה לַבּוֹרֵא הַגָּדוֹל לְהִכָּנַע לָאָדָם בַּבָּשָׂר וּמוּת בְּעַד־כֹל לְמַעַן יִכָּנְעוּ כֹל לוֹ׃",
+  "hebrew": "הֵן בַגּוּף יֵרָאֶה לְיֹשְׁבֵי יְרוּשָׁלַיִם מְקוֹם מוֹצָאֵנוּ נָכוֹן הוּא בְתוֹכָם יָאֶה לַבּוֹרֵא הַגָּדוֹל לְהִכָּנַע לָאָדָם בַּבָּשָׂר וְלָמוּת בְּעַד־כֹל לְמַעַן יִכָּנְעוּ כֹל לוֹ׃",
   "english": "Yea, I know that ye know that in the body he shall show himself unto those at Jerusalem, from whence we came; for it is expedient that it should be among them; for it behooveth the great Creator that he suffereth himself to become subject unto man in the flesh, and die for all men, that all men might become subject unto him."
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 6,
-  "hebrew": "עָבַר הַמָּוֶת עַל־כָּל־אָדָם לְמַלֵּא חֶסֶד הַבּוֹרֵא הַגָּדוֹל הָיָה עַל־כֹחַ תְּחִיָּה לִהְיוֹת וּבָאָה הַתְּחִיָּה לָאָדָם מִפְּנֵי הַנְּפִילָה וְהַנְּפִילָה מִפְּנֵי הַפֶּשַׁע וּבִנְפֹל הָאָדָם נִכְרְתוּ מִלִּפְנֵי יְהוָה׃",
+  "hebrew": "עָבַר הַמָּוֶת עַל־כָּל־אָדָם לְהַשְׁלִים חֶסֶד הַבּוֹרֵא הַגָּדוֹל הָיוֹ יִהְיֶה כֹחַ תְּחִיָּה וּבָאָה הַתְּחִיָּה לָאָדָם מִפְּנֵי הַנְּפִילָה וְהַנְּפִילָה מִפְּנֵי הַפֶּשַׁע וּבִנְפֹל הָאָדָם נִכְרְתוּ מִלִּפְנֵי יְהוָה׃",
   "english": "For as death hath passed upon all men, to fulfil the merciful plan of the great Creator, there must needs be a power of resurrection, and the resurrection must needs come unto man by reason of the fall; and the fall came by reason of transgression; and because man became fallen they were cut off from the presence of the Lord."
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 7,
-  "hebrew": "לָכֵן הָיוֹ תִהְיֶה כַּפָּרָה עַד־עוֹלָם לוּלֵא כַפָּרָה עַד־עוֹלָם לֹא יִלְבַּשׁ הַשָּׁחוּת בְּלִי־שָׁחוּת לָכֵן עָמַד הַמִּשְׁפָּט הָרִאשׁוֹן הַבָּא עַל־הָאָדָם עָלָיו לָעַד וְאִם כֵּן שָׁכַב הַבָּשָׂר לְרִקָּבוֹן וְנָפַל לַעֲפַר אֶרֶץ אִמּוֹ לְבִלְתִּי קוּם עוֹד׃",
+  "hebrew": "לָכֵן הָיוֹ תִהְיֶה כַּפָּרָה עַד־עוֹלָם לוּלֵא כַפָּרָה עַד־עוֹלָם לֹא יִלְבַּשׁ הַשַּׁחַת בְּלִי־שַׁחַת לָכֵן עָמַד הַמִּשְׁפָּט הָרִאשׁוֹן הַבָּא עַל־הָאָדָם עָלָיו לָעַד וְאִם־כֵּן שָׁכַב הַבָּשָׂר לְרִקָּבוֹן וְנָפַל לַעֲפַר אֶרֶץ אִמּוֹ לְבִלְתִּי קוּם עוֹד׃",
   "english": "Wherefore, it must needs be an infinite atonement—save it should be an infinite atonement this corruption could not put on incorruption. Wherefore, the first judgment which came upon man must needs have remained to an endless duration. And if so, this flesh must have laid down to rot and to crumble to its mother earth, to rise no more."
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 8,
-  "hebrew": "הוֹ חָכְמַת אֱלֹהִים חַסְדּוֹ וְחִנּוֹ כִּי אִם־לֹא יָקוּם הַבָּשָׂר עוֹד הָיוֹ תִהְיֶינָה רוּחוֹתֵינוּ נִכְנָעוֹת לַמַּלְאָךְ הַנֹּפֵל מִלִּפְנֵי אֵל עוֹלָם וַיְהִי לְשָׂטָן לְבִלְתִּי קוּם עוֹד׃",
+  "hebrew": "הוֹ חָכְמַת אֱלֹהִים חַסְדּוֹ וְחִנּוֹ כִּי אִם־לֹא יָקוּם הַבָּשָׂר עוֹד הָיוֹ תִהְיֶינָה רוּחוֹתֵינוּ נִכְנָעוֹת לַמַּלְאָךְ הַנֹּפֵל מִלִּפְנֵי אֵל עוֹלָם לְשָׂטָן לְבִלְתִּי קוּם עוֹד׃",
   "english": "O the wisdom of God, his mercy and grace! For behold, if the flesh should rise no more our spirits must become subject to that angel who fell from before the presence of the Eternal God, and became the devil, to rise no more."
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 9,
-  "hebrew": "וְהָיוּ רוּחוֹתֵינוּ כְמוֹהוּ הָיִינוּ שְׂטָנִים מַלְאָכִים לְשָׂטָן נִכְרָתִים מִלִּפְנֵי אֱלֹהֵינוּ יֹשְׁבִים עִם־אֲבִי הַכְּזָבִים בְּעָמָל כָּמוֹהוּ הוּא הַמַּתְעֶה אֶת־הָאָדָם וְאֶת־אִשְׁתּוֹ הַמִּתְחַפֵּשׂ כִּמְעַט לְמַלְאַךְ אוֹר וַיָּסֵת בְּנֵי הָאָדָם לְקֶשֶׁר רֶצַח וּלְכָל־מַעֲשֵׂה חֹשֶׁךְ׃",
+  "hebrew": "וְהָיוּ רוּחוֹתֵינוּ כְמוֹהוּ הָיִינוּ שְׂטָנִים מַלְאָכִים לְשָׂטָן נִכְרָתִים מִלִּפְנֵי אֱלֹהֵינוּ יֹשְׁבִים עִם־אֲבִי הַכְּזָבִים בְּעָמָל כָּמוֹהוּ הוּא הַמַּתְעֶה אֶת־הָאָדָם וְאֶת־אִשְׁתּוֹ הַמִּתְחַפֵּשׂ כִּמְעַט לְמַלְאַךְ אוֹר וַיָּסֵת בְּנֵי־הָאָדָם לְקֶשֶׁר רֶצַח וּלְכָל־מַעֲשֵׂה חֹשֶׁךְ׃",
   "english": "And our spirits must have become like unto him, and we become devils, angels to a devil, to be shut out from the presence of our God, and to remain with the father of lies, in misery, like unto himself; yea, to that being who beguiled our first parents, who transformeth himself nigh unto an angel of light, and stirreth up the children of men unto secret combinations of murder and all manner of secret works of darkness."
  },
  {
@@ -5869,14 +5869,14 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 11,
-  "hebrew": "דֶּרֶךְ הַהַצָּלָה לֵאלֹהֵינוּ קְדוֹשׁ יִשְׂרָאֵל יִתֵּן הַמָּוֶת הָעוֹבֵר מֵתָיו הַקֶּבֶר׃",
+  "hebrew": "דֶּרֶךְ הַהַצָּלָה לֵאלֹהֵינוּ קְדוֹשׁ־יִשְׂרָאֵל יִתֵּן הַמָּוֶת הָעוֹבֵר מֵתָיו הַקֶּבֶר׃",
   "english": "And because of the way of deliverance of our God, the Holy One of Israel, this death, of which I have spoken, which is the temporal, shall deliver up its dead; which death is the grave."
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 12,
-  "hebrew": "וְיִתֵּן מוֹת הָרוּחַ מֵתָיו שְׁאוֹל לָכֵן יִתְּנוּ מָוֶת וּשְׁאוֹל מֵתֵיהֶם וְיִתֵּן שְׁאוֹל רוּחוֹת שְׁבוּיָיו וְיִתֵּן הַקֶּבֶר גּוּפוֹת שְׁבוּיָיו וְשָׁבוּ גּוּפוֹת וְרוּחוֹת הָאָדָם אִישׁ אֶל־רֵעֵהוּ בְּכֹחַ תְּחִיַּת קְדוֹשׁ יִשְׂרָאֵל׃",
+  "hebrew": "וְיִתֵּן מוֹת הָרוּחַ מֵתָיו שְׁאוֹל לָכֵן יִתְּנוּ מָוֶת וּשְׁאוֹל מֵתֵיהֶם וְיִתֵּן שְׁאוֹל רוּחוֹת שְׁבוּיָיו וְיִתֵּן הַקֶּבֶר גּוּפוֹת שְׁבוּיָיו וְשָׁבוּ גּוּפוֹת וְרוּחוֹת הָאָדָם אִישׁ אֶל־רֵעֵהוּ בְּכֹחַ תְּחִיַּת קְדוֹשׁ־יִשְׂרָאֵל׃",
   "english": "And this death of which I have spoken, which is the spiritual death, shall deliver up its dead; which spiritual death is hell; wherefore, death and hell must deliver up their dead, and hell must deliver up its captive spirits, and the grave must deliver up its captive bodies, and the bodies and the spirits of men will be restored one to the other; and it is by the power of the resurrection of the Holy One of Israel."
  },
  {
@@ -5897,42 +5897,42 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 15,
-  "hebrew": "יַעַבְרוּ כָל־אָדָם מִן־הַמָּוֶת הָרִאשׁוֹן לַחַיִּים בְּלִי־מָוֶת וְיַעַמְדוּ לִפְנֵי כִסֵּא־מִשְׁפַּט קְדוֹשׁ יִשְׂרָאֵל וְאָז יָבֹא הַמִּשְׁפָּט וְיִשָּׁפְטוּ כְּמִשְׁפַּט אֱלֹהִים׃",
+  "hebrew": "יַעַבְרוּ כָל־אָדָם מִן־הַמָּוֶת הָרִאשׁוֹן לַחַיִּים בְּלִי־מָוֶת וְיַעַמְדוּ לִפְנֵי כִסֵּא־מִשְׁפַּט קְדוֹשׁ־יִשְׂרָאֵל וְאָז יָבֹא הַמִּשְׁפָּט וְיִשָּׁפְטוּ כְּמִשְׁפַּט אֱלֹהִים׃",
   "english": "And it shall come to pass that when all men shall have passed from this first death unto life, insomuch as they have become immortal, they must appear before the judgment–seat of the Holy One of Israel; and then cometh the judgment, and then must they be judged according to the holy judgment of God."
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 16,
-  "hebrew": "וְאָמְנָם חַי־יְהוָה כִּי דִבֶּר יְהוָה אֱלֹהִים וְהוּא דְּבַר עוֹלָמוֹ לֹא יַעֲבֹר יִשָּׁאֲרוּ הַצַּדִּיקִים צַדִּיקִים וְיִשָּׁאֲרוּ הַטְּמֵאִים טְמֵאִים לָכֵן הַטְּמֵאִים הֵם הַשָּׂטָן וּמַלְאָכָיו וְיֵלְכוּ אֶל־אֵשׁ עוֹלָם הַמּוּכָנָה לָהֶם וְעָנְשָׁם יַם־אֵשׁ וְגָפְרִית לַהֲבָתוֹ עוֹלָה לְעוֹלְמֵי עוֹלָמִים אֵין קֵץ׃",
+  "hebrew": "וְאָמְנָם חַי־יְהוָה כִּי דִבֶּר יְהוָה אֱלֹהִים וְהוּא דְּבַר עוֹלָמוֹ לֹא־יַעֲבֹר יִשָּׁאֲרוּ הַצַּדִּיקִים צַדִּיקִים וְיִשָּׁאֲרוּ הַטְּמֵאִים טְמֵאִים לָכֵן הַטְּמֵאִים הֵם הַשָּׂטָן וּמַלְאָכָיו וְיֵלְכוּ אֶל־אֵשׁ עוֹלָם הַמּוּכָנָה לָהֶם וְעָנְשָׁם יַם־אֵשׁ וְגָפְרִית לַהֲבָתוֹ עוֹלָה לְעוֹלְמֵי עוֹלָמִים אֵין־קֵץ׃",
   "english": "And assuredly, as the Lord liveth, for the Lord God hath spoken it, and it is his eternal word, which cannot pass away, that they who are righteous shall be righteous still, and they who are filthy shall be filthy still; wherefore, they who are filthy are the devil and his angels; and they shall go away into everlasting fire; prepared for them; and their torment is as a lake  of fire and brimstone, whose flame ascendeth up forever and ever and has no end."
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 17,
-  "hebrew": "הוֹ גֹדֶל וּמִשְׁפַּט אֱלֹהֵינוּ מְבַצֵּעַ כָּל־דְּבָרָיו יָצְאוּ מִפִּיו וְהָיוֹ יִתְמַלֵּא חֻקּוֹ׃",
+  "hebrew": "הוֹ גֹדֶל וּמִשְׁפַּט אֱלֹהֵינוּ מְבַצֵּעַ כָּל־דְּבָרָיו יָצְאוּ מִפִּיו וְהָיוֹ יִשָּׁלֵם חֻקּוֹ׃",
   "english": "O the greatness and the justice of our God! For he executeth all his words, and they have gone forth out of his mouth, and his law must be fulfilled."
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 18,
-  "hebrew": "אַךְ הִנֵּה הַצַּדִּיקִים קְדוֹשֵׁי קְדוֹשׁ יִשְׂרָאֵל הַמַּאֲמִינִים בִּקְדוֹשׁ יִשְׂרָאֵל הַנֹּשְׂאִים עֲצֵי הָעוֹלָם וּבוֹזִים חֶרְפָּתוֹ יִירְשׁוּ מַלְכוּתוֹ הַמּוּכָנָה לָהֶם מִיּוֹם יְסוֹד הָעוֹלָם וְתִהְיֶה שִׂמְחָתָם מְלֵאָה לָעַד׃",
+  "hebrew": "אַךְ הִנֵּה הַצַּדִּיקִים קְדוֹשֵׁי קְדוֹשׁ־יִשְׂרָאֵל הַמַּאֲמִינִים בִּקְדוֹשׁ יִשְׂרָאֵל הַנֹּשְׂאִים עֲצֵי הָעוֹלָם וּבוֹזִים חֶרְפָּתוֹ יִירְשׁוּ מַלְכוּתוֹ הַמּוּכָנָה לָהֶם מִיּוֹם יְסוֹד הָעוֹלָם וְתִהְיֶה שִׂמְחָתָם מְלֵאָה לָעַד׃",
   "english": "But, behold, the righteous, the saints of the Holy One of Israel, they who have believed in the Holy One of Israel, they who have endured the crosses of the world, and despised the shame of it, they shall inherit the kingdom of God, which was prepared for them from the foundation of the world, and their joy shall be full forever."
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 19,
-  "hebrew": "הוֹ מַה־רַב חֶסֶד אֱלֹהֵינוּ קְדוֹשׁ יִשְׂרָאֵל יַצִּיל קְדוֹשָׁיו מִן־הַמִּפְלֶצֶת הַנּוֹרָאָה הַשָּׂטָן וְהַמָּוֶת וּשְׁאוֹל וּבְאֵר הָאֵשׁ וְהַגָּפְרִית עֹנֶשׁ עוֹלָם׃",
+  "hebrew": "הוֹ מַה־רַב חֶסֶד אֱלֹהֵינוּ קְדוֹשׁ־יִשְׂרָאֵל יַצִּיל קְדוֹשָׁיו מִן־הַמִּפְלֶצֶת הַנּוֹרָאָה הַשָּׂטָן וְהַמָּוֶת וּשְׁאוֹל וּבְאֵר הָאֵשׁ וְהַגָּפְרִית עֹנֶשׁ עוֹלָם׃",
   "english": "O the greatness of the mercy of our God, the Holy One of Israel! For he delivereth his saints from that awful monster the devil, and death, and hell, and that lake of fire and brimstone, which is endless torment."
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 20,
-  "hebrew": "הוֹ נוֹרָא בִּקְדֻשָּׁה אֱלֹהֵינוּ יֹדֵעַ כָּל־דָּבָר אֵין דָּבָר בִּלְתִּי יְדָעוֹ׃",
+  "hebrew": "הוֹ נוֹרָא בִּקְדֻשָּׁה אֱלֹהֵינוּ יֹדֵעַ כָּל־דָּבָר אֵין־דָּבָר בִּלְתִּי יְדָעוֹ׃",
   "english": "O how great the holiness of our God! For he knoweth all things, and there is not anything save he knows it."
  },
  {
@@ -5953,49 +5953,49 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 23,
-  "hebrew": "וְצִוָּה כָּל־אָדָם לָשׁוּב וּלְהִטָּבֵל בִּשְׁמוֹ בֶּאֱמוּנָה שְׁלֵמָה בִּקְדוֹשׁ יִשְׂרָאֵל אִם לֹא לֹא יִוָּשְׁעוּ בְּמַלְכוּתוֹ׃",
+  "hebrew": "וְצִוָּה כָּל־אָדָם לָשׁוּב וּלְהִטָּבֵל בִּשְׁמוֹ בֶּאֱמוּנָה שְׁלֵמָה בִּקְדוֹשׁ יִשְׂרָאֵל אִם־לֹא לֹא יִוָּשְׁעוּ בְּמַלְכוּתוֹ׃",
   "english": "And he commandeth all men that they must repent, and be baptized in his name, having perfect faith in the Holy One of Israel, or they cannot be saved in the kingdom of God."
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 24,
-  "hebrew": "וְאִם לֹא יָשׁוּבוּ וְלֹא יַאֲמִינוּ בִשְׁמוֹ וְלֹא יִטָּבְלוּ בִשְׁמוֹ וְלֹא יַעַמְדוּ עַד־הַקֵּץ הָיוֹ יִדּוֹנוּ כִּי כֵן דִבֶּר יְהוָה אֱלֹהִים קְדוֹשׁ יִשְׂרָאֵל׃",
+  "hebrew": "וְאִם־לֹא יָשׁוּבוּ וְלֹא יַאֲמִינוּ בִשְׁמוֹ וְלֹא יִטָּבְלוּ בִשְׁמוֹ וְלֹא יַעַמְדוּ עַד־הַקֵּץ הָיוֹ יִדּוֹנוּ כִּי־כֵן דִבֶּר יְהוָה אֱלֹהִים קְדוֹשׁ־יִשְׂרָאֵל׃",
   "english": "And if they will not repent and believe in his name, and be baptized in his name, and endure to the end, they must be damned; for the Lord God, the Holy One of Israel, has spoken it."
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 25,
-  "hebrew": "לָכֵן נָתַן חֹק וּבְאֵין חֹק אֵין עֹנֶשׁ וּבְאֵין עֹנֶשׁ אֵין־הַרְשָׁעָה וּבְאֵין הַרְשָׁעָה יִדְרְשׁוּ רַחֲמֵי קְדוֹשׁ יִשְׂרָאֵל בַּעֲבוּר הַכַּפָּרָה נִגְאֲלוּ בְּכֹחוֹ׃",
+  "hebrew": "לָכֵן נָתַן חֹק וּבְאֵין חֹק אֵין עֹנֶשׁ וּבְאֵין עֹנֶשׁ אֵין מַרְשִׁיעַ וּבְאֵין מַרְשִׁיעַ יִדְרְשׁוּ רַחֲמֵי קְדוֹשׁ־יִשְׂרָאֵל בַּעֲבוּר הַכַּפָּרָה נִגְאֲלוּ בְּכֹחוֹ׃",
   "english": "Wherefore, he has given a law; and where there is no law given there is no punishment; and where there is no punishment there is no condemnation; and where there is no condemnation the mercies of the Holy One of Israel have claim upon them, because of the atonement; for they are delivered by the power of him."
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 26,
-  "hebrew": "כִּי הַכַּפָּרָה תְּמַלֵּא מִשְׁפְּטֵי צִדְקוֹ עַל־כָּל־אֲשֶׁר לֹא נִתַּן לָהֶם הַחֹק וְנִצְּלוּ מִן־הַמִּפְלֶצֶת הַנּוֹרָאָה הַמָּוֶת וּשְׁאוֹל וְהַשָּׂטָן וּבְאֵר הָאֵשׁ וְהַגָּפְרִית עֹנֶשׁ עוֹלָם וְהוּשְׁבוּ אֶל־הָאֱלֹהִים אֲשֶׁר נָתַן לָהֶם נְשָׁמָה הוּא קְדוֹשׁ יִשְׂרָאֵל׃",
+  "hebrew": "כִּי הַכַּפָּרָה תְּמַלֵּא מִשְׁפְּטֵי צִדְקוֹ עַל־כָּל־אֲשֶׁר לֹא נִתַּן לָהֶם הַחֹק וְנִצְּלוּ מִן־הַמִּפְלֶצֶת הַנּוֹרָאָה הַמָּוֶת וּשְׁאוֹל וְהַשָּׂטָן וּבְאֵר הָאֵשׁ וְהַגָּפְרִית עֹנֶשׁ עוֹלָם וְהוּשְׁבוּ אֶל־הָאֱלֹהִים אֲשֶׁר־נָתַן לָהֶם נְשָׁמָה הוּא קְדוֹשׁ־יִשְׂרָאֵל׃",
   "english": "For the atonement satisfieth the demands of his justice upon all those who have not the law given to them, that they are delivered from that awful monster, death and hell, and the devil, and the lake of fire and brimstone, which is endless torment; and they are restored to that God who gave them breath, which is the Holy One of Israel."
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 27,
-  "hebrew": "אַךְ אוֹי לָאִישׁ נִתַּן לוֹ הַחֹק כָּל־מִצְוֹת אֱלֹהִים כָּמוֹנוּ וַיַּעֲבֹר עֲלֵיהֶן וַיְבַזְבֵּז יְמֵי מַסָּתוֹ נוֹרָא מְצָבוֹ׃",
+  "hebrew": "אַךְ אוֹי לָאִישׁ נִתַּן־לוֹ הַחֹק כָּל־מִצְוֹת אֱלֹהִים כָּמוֹנוּ וַיַּעֲבֹר עֲלֵיהֶן וַיְבַזְבֵּז יְמֵי מַסָּתוֹ נוֹרָא מְצָבוֹ׃",
   "english": "But wo unto him that has the law given, yea, that has all the commandments of God, like unto us, and that transgresseth them, and that wasteth the days of his probation, for awful is his state!"
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 28,
-  "hebrew": "הוֹי עֲצַת הָרָע הַמַּעֲרִים הוֹי הֶבֶל וּרְפִיוֹן וְסִכְלוּת הָאָדָם בִּהְיוֹתָם מְלֻמָּדִים יַחְשְׁבוּ חֲכָמִים וְלֹא יִשְׁמְעוּ לַעֲצַת אֱלֹהִים יַזְנִיחוּהָ בְּחָשְׁבָם יֹדְעִים מֵעַצְמָם לָכֵן חָכְמָתָם סִכְלוּת לֹא תוֹעִיל לָהֶם וְיֹאבֵדוּ׃",
+  "hebrew": "הוֹי עֲצַת הָרָע הַמַּעֲרִים הוֹי הֶבֶל וּרְפִיוֹן וְאִוֶּלֶת הָאָדָם בִּהְיוֹתָם מְלֻמָּדִים יַחְשְׁבוּ חֲכָמִים וְלֹא יִשְׁמְעוּ לַעֲצַת אֱלֹהִים יַזְנִיחוּהָ בְּחָשְׁבָם יֹדְעִים מִלִּבָּם לָכֵן חָכְמָתָם אִוֶּלֶת לֹא תוֹעִיל לָהֶם וְיֹאבֵדוּ׃",
   "english": "O that cunning plan of the evil one! O the vainness, and the frailties, and the foolishness of men! When they are learned they think they are wise, and they hearken not unto the counsel of God, for they set it aside, supposing they know of themselves, wherefore, their wisdom is foolishness and it profiteth them not. And they shall perish."
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 29,
-  "hebrew": "אַךְ טוֹב לִהְיוֹת מְלֻמָּד אִם יִשְׁמְעוּ לַעֲצַת אֱלֹהִים׃",
+  "hebrew": "אַךְ טוֹב לִהְיוֹת מְלֻמָּד אִם־יִשְׁמְעוּ לַעֲצַת אֱלֹהִים׃",
   "english": "But to be learned is good if they hearken unto the counsels of God."
  },
  {
@@ -6065,28 +6065,28 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 39,
-  "hebrew": "הוֹי אַחַי הָאֲהוּבִים זִכְרוּ נוֹרְאוֹת הַפֶּשַׁע נֶגֶד אֵל הַקֹּדֶשׁ וְנוֹרְאוֹת הַהִנָּתְנוּת לַמַּעֲרִים זִכְרוּ הַמַּחְשָׁבָה בַּבָּשָׂר מָוֶת וְהַמַּחְשָׁבָה בָּרוּחַ חַיֵּי עוֹלָם׃",
+  "hebrew": "הוֹי אַחַי הָאֲהוּבִים זִכְרוּ נוֹרְאוֹת הַפֶּשַׁע נֶגֶד אֵל הַקֹּדֶשׁ וְנוֹרְאוֹת הַהִנָּתְנוּת לַמַּעֲרִים זִכְרוּ הַמַּחְשָׁבָה בַּבָּשָׂר מָוֶת וְהַמַּחְשָׁבָה בָּרוּחַ חַיֵּי־עוֹלָם׃",
   "english": "O, my beloved brethren, remember the awfulness in transgressing against that Holy God, and also the awfulness of yielding to the enticings of that cunning one. Remember, to be carnally–minded is death, and to be spiritually–minded is life eternal."
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 40,
-  "hebrew": "הוֹי אַחַי הָאֲהוּבִים הַטּוּ אָזְנְכֶם לִדְבָרָי זִכְרוּ גְּדֻלַּת קְדוֹשׁ יִשְׂרָאֵל אַל־תֹּאמְרוּ דִּבַּרְתִּי דְבָרִים קָשִׁים עֲלֵיכֶם אִם־תֹּאמְרוּ כֵּן תְּגַדְּפוּ נֶגֶד הָאֱמֶת דִּבַּרְתִּי דִּבְרֵי עֹשֵׂכֶם יָדַעְתִּי דִבְרֵי אֱמֶת קָשִׁים נֶגֶד כָּל־טֻמְאָה אַךְ הַצַּדִּיקִים לֹא יִירָאוּם אוֹהְבִים הָאֱמֶת וְלֹא יִמּוֹטוּ׃",
+  "hebrew": "הוֹי אַחַי הָאֲהוּבִים הַטּוּ אָזְנְכֶם לִדְבָרָי זִכְרוּ גְּדֻלַּת קְדוֹשׁ־יִשְׂרָאֵל אַל־תֹּאמְרוּ דִּבַּרְתִּי דְבָרִים קָשִׁים עֲלֵיכֶם אִם־תֹּאמְרוּ כֵּן תְּגַדְּפוּ נֶגֶד הָאֱמֶת דִּבַּרְתִּי דִּבְרֵי עֹשֵׂכֶם יָדַעְתִּי דִבְרֵי אֱמֶת קָשִׁים נֶגֶד כָּל־טֻמְאָה אַךְ הַצַּדִּיקִים לֹא יִירָאוּם אוֹהְבִים הָאֱמֶת וְלֹא יִמּוֹטוּ׃",
   "english": "O, my beloved brethren, give ear to my words. Remember the greatness of the Holy One of Israel. Do not say that I have spoken hard things against you; for if ye do, ye will revile against the truth; for I have spoken the words of your Maker. I know that the words of truth are hard against all uncleanness; but the righteous fear them not, for they love the truth and are not shaken."
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 41,
-  "hebrew": "לָכֵן אַחַי הָאֲהוּבִים בֹּאוּ אֶל־יְהוָה קְדוֹשׁ יִשְׂרָאֵל זִכְרוּ יְשָׁרִים אֹרְחוֹתָיו צָרָה הַדֶּרֶךְ לָאָדָם אַךְ יְשָׁרָה לְפָנָיו וְשֹׁמֵר הַשַּׁעַר קְדוֹשׁ יִשְׂרָאֵל לֹא יַעֲמִיד שָׁם מְשָׁרֵת אֵין דֶּרֶךְ אַחֶרֶת זוּלָתִי בַשַּׁעַר לֹא יוּכַל לְהִנָּתֵל יְהוָה אֱלֹהִים שְׁמוֹ׃",
+  "hebrew": "לָכֵן אַחַי הָאֲהוּבִים בֹּאוּ אֶל־יְהוָה קְדוֹשׁ־יִשְׂרָאֵל זִכְרוּ יְשָׁרִים אֹרְחוֹתָיו צָרָה הַדֶּרֶךְ לָאָדָם אַךְ יְשָׁרָה לְפָנָיו וְשֹׁמֵר הַשַּׁעַר קְדוֹשׁ־יִשְׂרָאֵל לֹא יַעֲמִיד שָׁם מְשָׁרֵת אֵין דֶּרֶךְ אַחֶרֶת זוּלַת בַשַּׁעַר לֹא יְרֻמֶּה יְהוָה אֱלֹהִים שְׁמוֹ׃",
   "english": "O then, my beloved brethren, come unto the Lord, the Holy One. Remember that his paths are righteous. Behold, the way for man is narrow, but it lieth in a straight course before him, and the keeper of the gate is the Holy One of Israel; and he employeth no servant there; and there is none other way save it be by the  gate; for he cannot be deceived, for the Lord God is his name."
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 42,
-  "hebrew": "וְכָל־דּוֹפֵק יִפְתַּח לוֹ וְהַחֲכָמִים וְהַמְּלֻמָּדִים וְהָעֲשִׁירִים הַמִּתְגָּאִים בְּלִמּוּדָם וּבְחָכְמָתָם וּבְעָשְׁרָם הֵם יִמְאָסֵם אִם לֹא יַשְׁלִיכוּ אֵלֶּה וְיַחְשְׁבוּ עַצְמָם כִּכְסִילִים לִפְנֵי אֱלֹהִים וְיֵרְדוּ בְּעִמְקֵי הָעֲנָוָה לֹא יִפְתַּח לָהֶם׃",
+  "hebrew": "וְכָל־דּוֹפֵק יִפְתַּח לוֹ וְהַחֲכָמִים וְהַמְּלֻמָּדִים וְהָעֲשִׁירִים הַמִּתְגָּאִים בְּלִמּוּדָם וּבְחָכְמָתָם וּבְעָשְׁרָם הֵם יִמְאָסֵם אִם־לֹא יַשְׁלִיכוּ אֵלֶּה וְיַחְשְׁבוּ נַפְשָׁם כִּכְסִילִים בְּעֵינֵיהֶם לִפְנֵי אֱלֹהִים וְיֵרְדוּ בְּעִמְקֵי הָעֲנָוָה לֹא יִפְתַּח לָהֶם׃",
   "english": "And whoso knocketh, to him will he open; and the wise, and the learned, and they that are rich, who are puffed up because of their learning, and their wisdom, and their riches—yea, they are they whom he despiseth; and save they shall cast these things away, and consider themselves fools before God, and come down in the depths of humility, he will not open unto them."
  },
  {
@@ -6107,21 +6107,21 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 45,
-  "hebrew": "הוֹי אַחַי הָאֲהוּבִים סוּרוּ מֵחַטֹּאתֵיכֶם נַתְּקוּ כְּבָלָיו הַמַּאַסְּרֶכֶם בֹּאוּ אֶל־הָאֱלֹהִים צוּר יְשׁוּעַתְכֶם׃",
+  "hebrew": "הוֹי אַחַי הָאֲהוּבִים סוּרוּ מֵחַטֹּאתֵיכֶם נַתְּקוּ כְּבָלָיו הָאוֹסֵר אֶתְכֶם בֹּאוּ אֶל־הָאֱלֹהִים צוּר יְשׁוּעַתְכֶם׃",
   "english": "O, my beloved brethren, turn away from your sins; shake off the chains of him that would bind you fast; come unto that God who is the rock of your salvation."
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 46,
-  "hebrew": "הָכִינוּ נַפְשֹׁתֵיכֶם לַיּוֹם הַנִּכְבָּד יִנָּתֵן מִשְׁפָּט לַצַּדִּיקִים יוֹם הַדִּין לְמַעַן לֹא תִרְתְּעוּ בְּפַחַד נוֹרָא לְמַעַן לֹא תִזְכְּרוּ אַשְׁמַתְכֶם הַנּוֹרָאָה בִּשְׁלֵמוּת וְהָיוֹ תִקְרְאוּ קָדוֹשׁ קָדוֹשׁ מִשְׁפָּטֶיךָ יְהוָה אֱלֹהֵי צְבָאוֹת אַךְ יָדַעְתִּי אַשְׁמָתִי עָבַרְתִּי תוֹרָתֶךָ וּפְשָׁעַי לִי וְלָקְחָנִי הַשָּׂטָן וָאֱהִי לְטֶרֶף לְעָמְלוֹ הַנּוֹרָא׃",
+  "hebrew": "הָכִינוּ נַפְשֹׁתֵיכֶם לַיּוֹם הַנִּכְבָּד יִנָּתֵן מִשְׁפָּט לַצַּדִּיקִים יוֹם הַדִּין לְמַעַן לֹא תֵּחַתּוּ בְּפַחַד נוֹרָא לְמַעַן לֹא תִזְכְּרוּ אַשְׁמַתְכֶם הַנּוֹרָאָה בִּשְׁלֵמוּת וְהָיוֹ תִקְרְאוּ קָדוֹשׁ קָדוֹשׁ מִשְׁפָּטֶיךָ יְהוָה אֱלֹהֵי צְבָאוֹת אַךְ יָדַעְתִּי אַשְׁמָתִי עָבַרְתִּי תוֹרָתֶךָ וּפְשָׁעַי לִי וְלָקְחָנִי הַשָּׂטָן וָאֱהִי לְטֶרֶף לְעָמְלוֹ הַנּוֹרָא׃",
   "english": "Prepare your souls for that glorious day when justice shall be administered unto the righteous, even the day of judgment, that ye may not shrink with awful fear; that ye may not remember your awful guilt in perfectness, and be constrained to exclaim: Holy, holy are thy judgments, O Lord God Almighty—but I know my guilt; I transgressed thy law, and my transgressions are mine; and the devil hath obtained me, that I am a prey to his awful misery."
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 47,
-  "hebrew": "אַךְ אַחַי הֲנָכוֹן אָעִיר אֶתְכֶם לְאֵימַת הַדְּבָרִים הָאֵלֶּה הַאֶעֲכֹר נַפְשֹׁתֵיכֶם אִם־טָהֲרוּ מַחְשְׁבוֹתֵיכֶם הַאֲדַבֵּר בְּרִירוּת אֲלֵיכֶם כִּבְרִירוּת הָאֱמֶת אִם־נִקֵּיתֶם מֵחֵטְא׃",
+  "hebrew": "אַךְ אַחַי הֲנָכוֹן אָעִיר אֶתְכֶם לְאֵימַת הַדְּבָרִים הָאֵלֶּה הַאֶעֲכֹר נַפְשֹׁתֵיכֶם אִם־טָהֲרוּ מַחְשְׁבוֹתֵיכֶם הַאֲדַבֵּר נְכֹחָה אֲלֵיכֶם כַּאֲשֶׁר נְכֹחָה הָאֱמֶת אִם־נִקֵּיתֶם מֵחֵטְא׃",
   "english": "But behold, my brethren, is it expedient that I should awake you to an awful reality of these things? Would I harrow up your souls if your minds were pure? Would I be plain unto you according to the plainness of the truth if ye were freed from sin?"
  },
  {
@@ -6149,7 +6149,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 51,
-  "hebrew": "לָכֵן אַל־תִּשְׁקְלוּ כֶסֶף בְּעַד לֹא־לָחֶם וִיגִיעֲכֶם בְּעַד לֹא יַשְׂבִּיעַ שִׁמְעוּ שָׁמוֹעַ אֵלַי וְזִכְרוּ הַדְּבָרִים  דִּבַּרְתִּי וּבֹאוּ אֶל־קְדוֹשׁ יִשְׂרָאֵל וְאִכְלוּ לֹא יִכְלֶה וְלֹא יִשָּׁחֵת וְתִתְעַנַּג נַפְשְׁכֶם בַּדָּשֶׁן׃",
+  "hebrew": "לָכֵן אַל־תִּשְׁקְלוּ כֶסֶף בְּעַד לֹא־לָחֶם וִיגִיעֲכֶם בְּעַד לֹא יַשְׂבִּיעַ שִׁמְעוּ שָׁמוֹעַ אֵלַי וְזִכְרוּ הַדְּבָרִים דִּבַּרְתִּי וּבֹאוּ אֶל־קְדוֹשׁ יִשְׂרָאֵל וְאִכְלוּ לֹא יִכְלֶה וְלֹא יִשָּׁחֵת וְתִתְעַנַּג נַפְשְׁכֶם בַּדָּשֶׁן׃",
   "english": "Wherefore, do not spend money for that which is of no worth, nor your labor for that which cannot satisfy. Hearken diligently unto me, and remember the words which I have  spoken; and come unto the Holy One of Israel, and feast upon that which perisheth not, neither can be corrupted, and let your soul delight in fatness."
  },
  {
@@ -6163,14 +6163,14 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 53,
-  "hebrew": "וּרְאוּ מַה־גָּדְלוּ בְּרִיתוֹת יְהוָה וּמַה־גָּדְלוּ חֲסָדָיו לִבְנֵי הָאָדָם בַּעֲבוּר גְּדֻלָּתוֹ וְחַסְדּוֹ וְרַחֲמָיו הִבְטִיחַ לָנוּ לֹא יֻשְׁמַד זַרְעֵנוּ כָּלִיל לְפִי הַבָּשָׂר יִשְׁמְרֵם וּבַדּוֹרוֹת הַבָּאִים יִהְיוּ לְעֵנָף צֶדֶק לְבֵית יִשְׂרָאֵל׃",
+  "hebrew": "וּרְאוּ מַה־גָּדְלוּ בְּרִיתוֹת יְהוָה וּמַה־גָּדְלוּ חֲסָדָיו לִבְנֵי־הָאָדָם בַּעֲבוּר גְּדֻלָּתוֹ וְחַסְדּוֹ וְרַחֲמָיו הִבְטִיחַ לָנוּ לֹא יֻשְׁמַד זַרְעֵנוּ כָּלִיל לְפִי הַבָּשָׂר יִשְׁמְרֵם וּבַדּוֹרוֹת הַבָּאִים יִהְיוּ לְעָנָף צֶדֶק לְבֵית יִשְׂרָאֵל׃",
   "english": "And behold how great the covenants of the Lord, and how great his condescensions unto the children of men; and because of his greatness, and his grace and mercy, he has promised unto us that our seed shall not utterly be destroyed, according to the flesh, but that he would preserve them; and in future generations they shall become a righteous branch unto the house of Israel."
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 54,
-  "hebrew": "וְעַתָּה אַחַי אֲדַבֵּר אֲלֵיכֶם עוֹד אַךְ לְמָחָר אַגִּיד לָכֶם שְׁאֵרִית דְּבָרָי׃ אָמֵן׃",
+  "hebrew": "וְעַתָּה אַחַי אֲדַבֵּר אֲלֵיכֶם עוֹד אַךְ לְמָחָר אַגִּיד לָכֶם שְׁאֵרִית דְּבָרָי אָמֵן׃",
   "english": "And now, my brethren, I would speak unto you more; but on the morrow I will declare unto you the remainder of my words. Amen."
  },
  {
@@ -8361,7 +8361,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 25,
   "verse": 5,
-  "hebrew": "אָכֵן תִתְעַנֵּג נַפְשִׁי בְּדִבְרֵי יְשַׁעְיָהוּ כִּי יָצָאתִי מִירוּשָׁלַיִם וְרָאוּ עֵינַי דִּבְרֵי הַיְּהוּדִים וְיָדַעְתִּי כִּי יָבִינוּ דִּבְרֵי הַנְּבִיאִים וְאֵין עַם אַחֵר מֵבִין הַדְּבָרִים אֲשֶׁר דֻּבְּרוּ לָהֶם כָּמוֹהֶם זוּלָתִי אִם־יֻלְמְדוּ כְּדֶרֶךְ הַיְּהוּדִים׃",
+  "hebrew": "אָכֵן תִתְעַנֵּג נַפְשִׁי בְּדִבְרֵי יְשַׁעְיָהוּ כִּי יָצָאתִי מִירוּשָׁלַיִם וְרָאוּ עֵינַי דִּבְרֵי הַיְּהוּדִים וְיָדַעְתִּי כִּי יָבִינוּ דִּבְרֵי הַנְּבִיאִים וְאֵין עַם אַחֵר מֵבִין הַדְּבָרִים אֲשֶׁר דֻּבְּרוּ לָהֶם כָּמוֹהֶם זוּלַת אִם־יֻלְמְדוּ כְּדֶרֶךְ הַיְּהוּדִים׃",
   "english": "Yea, and my soul delighteth in the words of Isaiah, for I came out from Jerusalem, and mine eyes hath beheld the things of the Jews, and I know that the Jews do understand the things of the prophets, and there is none other people that understand the things which were spoken unto the Jews like unto them, save it be that they are taught after the manner of the things of the Jews."
  },
  {
@@ -8396,7 +8396,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 25,
   "verse": 10,
-  "hebrew": "לָכֵן הֻגַּד לָהֶם עַל־הַשְּׁמָד אֲשֶׁר יָבוֹא עֲלֵיהֶם מִיָּד אַחֲרֵי צֵאת אָבִי מִירוּשָׁלַיִם אַךְ הִקְשׁוּ לִבָּם וּכְפִי נְבוּאָתִי נִשְׁמְדוּ זוּלָתִי הַמּוּבָאִים שְׁבִי בָּבֶלָה׃",
+  "hebrew": "לָכֵן הֻגַּד לָהֶם עַל־הַשְּׁמָד אֲשֶׁר יָבוֹא עֲלֵיהֶם מִיָּד אַחֲרֵי צֵאת אָבִי מִירוּשָׁלַיִם אַךְ הִקְשׁוּ לִבָּם וּכְפִי נְבוּאָתִי נִשְׁמְדוּ זוּלַת הַמּוּבָאִים שְׁבִי בָּבֶלָה׃",
   "english": "Wherefore, it hath been told them concerning the destruction which should come upon them, immediately after my father left Jerusalem; nevertheless, they hardened their hearts; and according to my prophecy they have been destroyed, save it be those which are carried away captive into Babylon."
  },
  {
@@ -8452,7 +8452,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 25,
   "verse": 18,
-  "hebrew": "לָכֵן יוֹצִיא דְבָרָיו אֲלֵיהֶם אֲשֶׁר יִשְׁפְּטוּם בַּיּוֹם הָאַחֲרוֹן כִּי נִתְּנוּ לְהוֹכִיחָם בַּמָּשִׁיחַ הָאֲמִתִּי אֲשֶׁר מָאֲסוּ בוֹ וּלְהוֹכִיחָם כִּי לֹא יְצַפּוּ עוֹד לְמָשִׁיחַ יָבוֹא כִּי לֹא יָבוֹא אַחֵר זוּלָתִי מְשִׁיחַ שֶׁקֶר אֲשֶׁר יַתְעֶה הָעָם כִּי אֵין זוּלָתִי מָשִׁיחַ אֶחָד אֲשֶׁר דִּבְּרוּ עָלָיו הַנְּבִיאִים וְהוּא אֲשֶׁר יִמָּאֵס בִּידֵי הַיְּהוּדִים׃",
+  "hebrew": "לָכֵן יוֹצִיא דְבָרָיו אֲלֵיהֶם אֲשֶׁר יִשְׁפְּטוּם בַּיּוֹם הָאַחֲרוֹן כִּי נִתְּנוּ לְהוֹכִיחָם בַּמָּשִׁיחַ הָאֲמִתִּי אֲשֶׁר מָאֲסוּ בוֹ וּלְהוֹכִיחָם כִּי לֹא יְצַפּוּ עוֹד לְמָשִׁיחַ יָבוֹא כִּי לֹא יָבוֹא אַחֵר זוּלַת מְשִׁיחַ שֶׁקֶר אֲשֶׁר יַתְעֶה הָעָם כִּי אֵין זוּלַת מָשִׁיחַ אֶחָד אֲשֶׁר דִּבְּרוּ עָלָיו הַנְּבִיאִים וְהוּא אֲשֶׁר יִמָּאֵס בִּידֵי הַיְּהוּדִים׃",
   "english": "Wherefore, he shall bring forth his words unto them, which words shall judge them at the last day, for they shall be given them for the purpose of convincing them of the true Messiah, who was rejected by them; and unto the convincing of them that they need not look forward any more for a Messiah to come, for there should not any come, save it should be a false Messiah which should deceive the people; for there is save one Messiah spoken of by the prophets, and that Messiah is he who should be rejected of the Jews."
  },
  {
@@ -8466,7 +8466,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 25,
   "verse": 20,
-  "hebrew": "וְעַתָּה אַחַי דִּבַּרְתִּי בְיֹשֶׁר לְמַעַן לֹא תִשְׁגּוּ וְחַי יְהוָה אֱלֹהִים אֲשֶׁר הֶעֱלָה יִשְׂרָאֵל מֵאֶרֶץ מִצְרַיִם וַיִּתֵּן לְמֹשֶׁה כֹּחַ לְרַפֵּא הָעָם אַחֲרֵי נְשִׁיכַת הַנְּחָשִׁים  הַשְּׂרָפִים אִם־יִשְׂאוּ עֵינֵיהֶם אֶל־הַנָּחָשׁ אֲשֶׁר הֵרִים לִפְנֵיהֶם וְנָתַן־לוֹ כֹּחַ לְהַכּוֹת הַסֶּלַע וְיֵצְאוּ מָיִם אָכֵן הִנֵּה אֹמֵר לָכֶם כַּאֲשֶׁר אֱמֶת הַדְּבָרִים הָאֵלֶּה וְחַי יְהוָה אֱלֹהִים אֵין שֵׁם אַחֵר נִתָּן תַּחַת הַשָּׁמַיִם זוּלָתִי יֵשׁוּעַ הַמָּשִׁיחַ אֲשֶׁר דִּבַּרְתִּי עָלָיו אֲשֶׁר־בּוֹ יוּכַל אָדָם לְהִוָּשַׁע׃",
+  "hebrew": "וְעַתָּה אַחַי דִּבַּרְתִּי בְיֹשֶׁר לְמַעַן לֹא תִשְׁגּוּ וְחַי יְהוָה אֱלֹהִים אֲשֶׁר הֶעֱלָה יִשְׂרָאֵל מֵאֶרֶץ מִצְרַיִם וַיִּתֵּן לְמֹשֶׁה כֹּחַ לְרַפֵּא הָעָם אַחֲרֵי נְשִׁיכַת הַנְּחָשִׁים  הַשְּׂרָפִים אִם־יִשְׂאוּ עֵינֵיהֶם אֶל־הַנָּחָשׁ אֲשֶׁר הֵרִים לִפְנֵיהֶם וְנָתַן־לוֹ כֹּחַ לְהַכּוֹת הַסֶּלַע וְיֵצְאוּ מָיִם אָכֵן הִנֵּה אֹמֵר לָכֶם כַּאֲשֶׁר אֱמֶת הַדְּבָרִים הָאֵלֶּה וְחַי יְהוָה אֱלֹהִים אֵין שֵׁם אַחֵר נִתָּן תַּחַת הַשָּׁמַיִם זוּלַת יֵשׁוּעַ הַמָּשִׁיחַ אֲשֶׁר דִּבַּרְתִּי עָלָיו אֲשֶׁר־בּוֹ יוּכַל אָדָם לְהִוָּשַׁע׃",
   "english": "And now, my brethren, I have spoken plainly that ye cannot err. And as the Lord God liveth that brought Israel up out of the land of Egypt, and gave unto Moses power that he should heal  the nations after they had been bitten by the poisonous serpents, if they would cast their eyes unto the serpent which he did raise up before them, and also gave him power that he should smite the rock and the water should come forth; yea, behold I say unto you, that as these things are true, and as the Lord God liveth, there is none other name given under heaven save it be this Jesus Christ, of which I have spoken, whereby man can be saved."
  },
  {
@@ -8851,14 +8851,14 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 27,
   "verse": 12,
-  "hebrew": "לָכֵן בַּיּוֹם הַהוּא כַּאֲשֶׁר יִנָּתֵן הַסֵּפֶר לָאִישׁ אֲשֶׁר דִּבַּרְתִּי יִסָּתֵר הַסֵּפֶר מֵעֵינֵי הָעוֹלָם וְלֹא־יִרְאוּהוּ עֵינַיִם זוּלָתִי שְׁלֹשָׁה עֵדִים אֲשֶׁר יִרְאוּהוּ בְּכֹחַ אֱלֹהִים מִלְּבַד הָאִישׁ אֲשֶׁר יִנָּתֵן לוֹ הַסֵּפֶר וְיָעִידוּ עַל־אֱמֶת הַסֵּפֶר וְהַדְּבָרִים אֲשֶׁר בּוֹ׃",
+  "hebrew": "לָכֵן בַּיּוֹם הַהוּא כַּאֲשֶׁר יִנָּתֵן הַסֵּפֶר לָאִישׁ אֲשֶׁר דִּבַּרְתִּי יִסָּתֵר הַסֵּפֶר מֵעֵינֵי הָעוֹלָם וְלֹא־יִרְאוּהוּ עֵינַיִם זוּלַת שְׁלֹשָׁה עֵדִים אֲשֶׁר יִרְאוּהוּ בְּכֹחַ אֱלֹהִים מִלְּבַד הָאִישׁ אֲשֶׁר יִנָּתֵן לוֹ הַסֵּפֶר וְיָעִידוּ עַל־אֱמֶת הַסֵּפֶר וְהַדְּבָרִים אֲשֶׁר בּוֹ׃",
   "english": "Wherefore, at that day when the book shall be delivered unto the man of whom I have spoken, the book shall be hid from the eyes of the world, that the eyes of none shall behold it save it be that three witnesses shall behold it, by the power of God, besides him to whom the book shall be delivered; and they shall testify to the truth of the book and the things therein."
  },
  {
   "book": "2 Nephi",
   "chapter": 27,
   "verse": 13,
-  "hebrew": "וְאֵין אַחֵר אֲשֶׁר יִרְאֶה אוֹתוֹ זוּלָתִי מְתֵי מְעַט כִּרְצוֹן אֱלֹהִים לָשֵׂאת עֵדוּת דְּבָרוֹ לִבְנֵי הָאָדָם כִּי אָמַר אֲדֹנָי יְהוִה כִּי דִּבְרֵי הַנֶּאֱמָנִים יֵאָמְרוּ כְּמוֹ מִן־הַמֵּתִים׃",
+  "hebrew": "וְאֵין אַחֵר אֲשֶׁר יִרְאֶה אוֹתוֹ זוּלַת מְתֵי מְעַט כִּרְצוֹן אֱלֹהִים לָשֵׂאת עֵדוּת דְּבָרוֹ לִבְנֵי הָאָדָם כִּי אָמַר אֲדֹנָי יְהוִה כִּי דִּבְרֵי הַנֶּאֱמָנִים יֵאָמְרוּ כְּמוֹ מִן־הַמֵּתִים׃",
   "english": "And there is none other which shall view it, save it be a few according to the will of God, to bear testimony of his word unto the children of men; for the Lord God hath said that the words of the faithful should speak as if it were from the dead."
  },
  {
@@ -9110,7 +9110,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 28,
   "verse": 14,
-  "hebrew": "נוֹשְׂאִים עֹרֶף קָשֶׁה וְרֹאשׁ רָם הֵן וּבִגְלַל גַּאֲוָה וָרֶשַׁע וְתוֹעֵבוֹת וּזְנוּנִים תָּעוּ כֻלָּם זוּלָתִי מְעַטִּים הַהֹלְכִים בַּעֲנָוָה אַחֲרֵי הַמָּשִׁיחַ וְגַם־הֵם נִמְשָׁכִים פְּעָמִים רַבּוֹת לִתְעוֹת כִּי נִלְמְדוּ בְּמִצְוֹת אֲנָשִׁים׃",
+  "hebrew": "נוֹשְׂאִים עֹרֶף קָשֶׁה וְרֹאשׁ רָם הֵן וּבִגְלַל גַּאֲוָה וָרֶשַׁע וְתוֹעֵבוֹת וּזְנוּנִים תָּעוּ כֻלָּם זוּלַת מְעַטִּים הַהֹלְכִים בַּעֲנָוָה אַחֲרֵי הַמָּשִׁיחַ וְגַם־הֵם נִמְשָׁכִים פְּעָמִים רַבּוֹת לִתְעוֹת כִּי נִלְמְדוּ בְּמִצְוֹת אֲנָשִׁים׃",
   "english": "They wear stiff necks and high heads; yea, and because of pride, and wickedness, and abominations, and whoredoms, they have all gone astray save it be a few, who are the humble followers of Christ; nevertheless, they are led, that in many instances they do err because they are taught by the precepts of men."
  },
  {
@@ -9229,7 +9229,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 28,
   "verse": 31,
-  "hebrew": "אָרוּר הַבּוֹטֵחַ בָּאָדָם וְשָׂם בָּשָׂר זְרֹעוֹ וְשֹׁמֵעַ לְמִצְוֹת אֲנָשִׁים זוּלָתִי אִם־נִתְּנוּ בְּכֹחַ רוּחַ הַקֹּדֶשׁ׃",
+  "hebrew": "אָרוּר הַבּוֹטֵחַ בָּאָדָם וְשָׂם בָּשָׂר זְרֹעוֹ וְשֹׁמֵעַ לְמִצְוֹת אֲנָשִׁים זוּלַת אִם־נִתְּנוּ בְּכֹחַ רוּחַ הַקֹּדֶשׁ׃",
   "english": "Cursed is he that putteth his trust in man, or maketh flesh his arm, or shall hearken unto the precepts of men, save their precepts shall be given by the power of the Holy Ghost."
  },
  {
@@ -9278,7 +9278,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 29,
   "verse": 6,
-  "hebrew": "כְּסִיל אַתָּה הָאֹמֵר תּוֹרָה הִנֵּה תּוֹרָתֵנוּ וְדַי לָנוּ׃ הֲקִבַּלְתֶּם תּוֹרָה זוּלָתִי מִיַּד הַיְּהוּדִים׃",
+  "hebrew": "כְּסִיל אַתָּה הָאֹמֵר תּוֹרָה הִנֵּה תּוֹרָתֵנוּ וְדַי לָנוּ׃ הֲקִבַּלְתֶּם תּוֹרָה זוּלַת מִיַּד הַיְּהוּדִים׃",
   "english": "Thou fool, that shall say: A Bible, we have got a Bible, and we need no more Bible. Have ye obtained a Bible save it were by the Jews?"
  },
  {
@@ -9348,7 +9348,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 30,
   "verse": 2,
-  "hebrew": "כִּי הִנֵּה אֹמֵר אֲנִי לָכֶם כִּי כָל־הַגּוֹיִם אֲשֶׁר יָשׁוּבוּ הֵמָּה עַם בְּרִית יְהוָה וְכָל־הַיְּהוּדִים אֲשֶׁר לֹא  יָשׁוּבוּ הִכָּרֵת יִכָּרֵתוּ כִּי לֹא יִכְרֹת יְהוָה בְּרִית אֶלָּא עִם־הַשָּׁבִים וְהַמַּאֲמִינִים בִּבְנוֹ קְדוֹשׁ יִשְׂרָאֵל׃",
+  "hebrew": "כִּי הִנֵּה אֹמֵר אֲנִי לָכֶם כִּי כָל־הַגּוֹיִם אֲשֶׁר יָשׁוּבוּ הֵמָּה עַם בְּרִית יְהוָה וְכָל־הַיְּהוּדִים אֲשֶׁר לֹא  יָשׁוּבוּ הִכָּרֵת יִכָּרֵתוּ כִּי לֹא יִכְרֹת יְהוָה בְּרִית כִּי־אִם עִם־הַשָּׁבִים וְהַמַּאֲמִינִים בִּבְנוֹ קְדוֹשׁ יִשְׂרָאֵל׃",
   "english": "For behold, I say unto you that as many of the Gentiles as will repent are the covenant people of the Lord; and as many of the Jews as will not repent shall be cast off; for the Lord covenanteth  with none save it be with them that repent and believe in his Son, who is the Holy One of Israel."
  },
  {
@@ -9474,7 +9474,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 31,
   "verse": 2,
-  "hebrew": "לָכֵן הַדְּבָרִים אֲשֶׁר כָּתַבְתִּי דַּי לִי זוּלָתִי דְבָרִים מְעַטִּים אֲשֶׁר עָלַי לְדַבֵּר עַל־תּוֹרַת הַמָּשִׁיחַ לָכֵן אֲדַבְּרָה אֲלֵיכֶם בְּיֹשֶׁר כְּיֹשֶׁר נְבוּאָתִי׃",
+  "hebrew": "לָכֵן הַדְּבָרִים אֲשֶׁר כָּתַבְתִּי דַּי לִי זוּלַת דְבָרִים מְעַטִּים אֲשֶׁר עָלַי לְדַבֵּר עַל־תּוֹרַת הַמָּשִׁיחַ לָכֵן אֲדַבְּרָה אֲלֵיכֶם בְּיֹשֶׁר כְּיֹשֶׁר נְבוּאָתִי׃",
   "english": "Wherefore, the things which I have written sufficeth me, save it be a few words which I must speak concerning the doctrine of Christ; wherefore, I shall speak unto you plainly, according to the plainness of my prophesying."
  },
  {
@@ -9488,21 +9488,21 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 31,
   "verse": 4,
-  "hebrew": "לָכֵן חָפַצְתִּי כִּי תִזְכְּרוּ אֲשֶׁר דִּבַּרְתִּי אֲלֵיכֶם עַל־הַנָּבִיא אֲשֶׁר הֶרְאַנִי יְהוָה אֲשֶׁר יִטְבֹּל אֶת־שֵׂה הָאֱלֹהִים אֲשֶׁר יָסִיר חַטֹּאת הָעוֹלָם׃",
+  "hebrew": "לָכֵן חָפַצְתִּי כִּי תִזְכְּרוּ אֲשֶׁר דִּבַּרְתִּי אֲלֵיכֶם עַל־הַנָּבִיא אֲשֶׁר הֶרְאַנִי יְהוָה אֲשֶׁר יִטְבֹּל אֶת־שֵׂה־אֱלֹהִים אֲשֶׁר יָסִיר חַטֹּאת הָעוֹלָם׃",
   "english": "Wherefore, I would that ye should remember that I have spoken unto you concerning that prophet which the Lord showed unto me, that should baptize the Lamb of God, which should take away the sins of the world."
  },
  {
   "book": "2 Nephi",
   "chapter": 31,
   "verse": 5,
-  "hebrew": "וְעַתָּה אִם־שֵׂה הָאֱלֹהִים וְהוּא קָדוֹשׁ הָיָה לוֹ צֹרֶךְ לְהִטָּבֵל בַּמַּיִם לְמַלֵּא כָל־צְדָקָה הוֹי כַּמָּה יוֹתֵר עָלֵינוּ אֲנַחְנוּ הַטְּמֵאִים לְהִטָּבֵל אַף בַּמָּיִם׃",
+  "hebrew": "וְעַתָּה אִם־שֵׂה־אֱלֹהִים וְהוּא קָדוֹשׁ הָיָה לוֹ צֹרֶךְ לְהִטָּבֵל בַּמַּיִם לְמַלֵּא כָל־צְדָקָה הוֹי כַּמָּה יוֹתֵר עָלֵינוּ אֲנַחְנוּ הַטְּמֵאִים לְהִטָּבֵל אַף בַּמָּיִם׃",
   "english": "And now, if the Lamb of God, he being holy, should have need to be baptized by water, to fulfil all righteousness, O then, how much more need have we, being unholy, to be baptized, yea, even by water!"
  },
  {
   "book": "2 Nephi",
   "chapter": 31,
   "verse": 6,
-  "hebrew": "וְעַתָּה אֶשְׁאַל מִכֶּם אַחַי הָאֲהוּבִים בַּמֶּה מִלֵּא שֵׂה הָאֱלֹהִים כָּל־צְדָקָה בְּהִטָּבְלוֹ בַמָּיִם׃",
+  "hebrew": "וְעַתָּה אֶשְׁאַל מִכֶּם אַחַי הָאֲהוּבִים בַּמֶּה מִלֵּא שֵׂה־אֱלֹהִים כָּל־צְדָקָה בְּהִטָּבְלוֹ בַמָּיִם׃",
   "english": "And now, I would ask of you, my beloved brethren, wherein the Lamb of God did fulfil all righteousness in being baptized by water?"
  },
  {
@@ -9768,7 +9768,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 33,
   "verse": 14,
-  "hebrew": "וְאַתֶּם אֲשֶׁר לֹא תֹאבוּ לָקַחַת מִטּוּב אֱלֹהִים וְלֹא תְכַבְּדוּ אֶת־דִּבְרֵי הַיְּהוּדִים וְגַם אֶת־דְּבָרַי וְאֶת־הַדְּבָרִים אֲשֶׁר יֵצְאוּ מִפִּי שֵׂה הָאֱלֹהִים הִנֵּה אֹמֵר לָכֶם שְׁלוֹם עוֹלָמִים כִּי הַדְּבָרִים הָאֵלֶּה יַרְשִׁיעוּ אֶתְכֶם בַּיּוֹם הָאַחֲרוֹן׃",
+  "hebrew": "וְאַתֶּם אֲשֶׁר לֹא תֹאבוּ לָקַחַת מִטּוּב אֱלֹהִים וְלֹא תְכַבְּדוּ אֶת־דִּבְרֵי הַיְּהוּדִים וְגַם אֶת־דְּבָרַי וְאֶת־הַדְּבָרִים אֲשֶׁר יֵצְאוּ מִפִּי שֵׂה־אֱלֹהִים הִנֵּה אֹמֵר לָכֶם שְׁלוֹם עוֹלָמִים כִּי הַדְּבָרִים הָאֵלֶּה יַרְשִׁיעוּ אֶתְכֶם בַּיּוֹם הָאַחֲרוֹן׃",
   "english": "And you that will not partake of the goodness of God, and respect the words of the Jews, and also my words, and the words which shall proceed forth out of the mouth of the Lamb of God, behold, I bid you an everlasting farewell, for these words shall condemn you at the last day."
  },
  {
@@ -10265,7 +10265,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 4,
   "verse": 2,
-  "hebrew": "אַךְ כָּל־הַדְּבָרִים אֲשֶׁר נִכְתֹּב עַל־כָּל־דָּבָר זוּלָתִי הַלּוּחוֹת יֹאבְדוּ וְיִכְלוּ אַךְ נוּכַל לִכְתֹּב מִלִּים מְעַטּוֹת עַל־הַלּוּחוֹת אֲשֶׁר יִתְּנוּ לְבָנֵינוּ וְגַם לְאַחֵינוּ הָאֲהוּבִים מְעַט דַּעַת עָלֵינוּ אוֹ עַל־אֲבוֹתֵיהֶם׃",
+  "hebrew": "אַךְ כָּל־הַדְּבָרִים אֲשֶׁר נִכְתֹּב עַל־כָּל־דָּבָר זוּלַת הַלּוּחוֹת יֹאבְדוּ וְיִכְלוּ אַךְ נוּכַל לִכְתֹּב מִלִּים מְעַטּוֹת עַל־הַלּוּחוֹת אֲשֶׁר יִתְּנוּ לְבָנֵינוּ וְגַם לְאַחֵינוּ הָאֲהוּבִים מְעַט דַּעַת עָלֵינוּ אוֹ עַל־אֲבוֹתֵיהֶם׃",
   "english": "But whatsoever things we write upon anything save it be upon plates must perish and vanish away; but we can write a few words upon plates, which will give our children, and also our beloved brethren, a small degree of knowledge concerning us, or concerning their fathers—"
  },
  {
@@ -10440,7 +10440,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 5,
   "verse": 9,
-  "hebrew": "קַח אֶת־עַנְפֵי זַיִת הַבַּר וְהַרְכֵּב אוֹתָם תַּחְתָּם וְאֵלֶּה אֲשֶׁר קָטַפְתִּי אַשְׁלִיךְ אֶל־הָאֵשׁ וְאֶשְׂרְפֵם לְמַעַן לֹא־יַפְרִיעוּ אֶת־אַדְמַת כַרְמִי׃",
+  "hebrew": "קַח אֶת־עַנְפֵי זַיִת הַבַּר וְהַרְכֵּב אוֹתָם תַּחְתָּם וְאֵלֶּה אֲשֶׁר קָטַפְתִּי אַשְׁלִיךְ אֶל־הָאֵשׁ וְאֶשְׂרְפֵם לְמַעַן לֹא־יַפְרִיעוּ אֶת־אַדְמַת כַּרְמִי׃",
   "english": "Take thou the branches of the wild olive– tree, and graft them in, in the stead thereof; and these which I have plucked off I will cast into the fire and burn them, that they may not cumber the ground of my vineyard."
  },
  {
@@ -10496,7 +10496,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 5,
   "verse": 17,
-  "hebrew": "וַיְהִי כִּי הִבִּיט אֲדוֹן הַכֶּרֶם וַיַּרְא אֶת־הָעֵץ אֲשֶׁר הֻרְכְּבוּ בּוֹ עַנְפֵי הַזַּיִת הַבָּר וְהִנֵּה צָמַח וַיָּחֵל לָתֵת פֶּרִי וַיַּרְא כִּי טוֹב הוּא וּפִרְיוֹ דָּמָה לַפְּרִי הַטִּבְעִי׃",
+  "hebrew": "וַיְהִי כִּי הִבִּיט אֲדוֹן הַכֶּרֶם וַיַּרְא אֶת־הָעֵץ אֲשֶׁר הֻרְכְּבוּ בּוֹ עַנְפֵי הַזַּיִת הַבָּר וְהִנֵּה צָמַח וַיָּחֵל לָתֵת פְּרִי וַיַּרְא כִּי טוֹב הוּא וּפִרְיוֹ דָּמָה לַפְּרִי הַטִּבְעִי׃",
   "english": "And it came to pass that the Lord of the vineyard looked and beheld the tree in the which the wild olive branches had been grafted; and it had sprung forth and begun to bear fruit. And he beheld that it was good; and the fruit thereof was like unto the natural fruit."
  },
  {
@@ -10545,7 +10545,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 5,
   "verse": 24,
-  "hebrew": "וַיְהִי כִּי אָמַר אֲדוֹן הַכֶּרֶם שׁוּב אֶל־עַבְדּוֹ הַבֵּט־נָא הֵנָּה וּרְאֵה עָנָף אַחֵר גַּם־כֵּן אֲשֶׁר נָטָעְתִּי הִנֵּה טִפַּחְתִּיו גַּם־אוֹתוֹ וַיּוֹצֵא פֶּרִי׃",
+  "hebrew": "וַיְהִי כִּי אָמַר אֲדוֹן הַכֶּרֶם שׁוּב אֶל־עַבְדּוֹ הַבֵּט־נָא הֵנָּה וּרְאֵה עָנָף אַחֵר גַּם־כֵּן אֲשֶׁר נָטָעְתִּי הִנֵּה טִפַּחְתִּיו גַּם־אוֹתוֹ וַיּוֹצֵא פְּרִי׃",
   "english": "And it came to pass that the Lord of the vineyard said again unto his servant: Look hither, and behold another branch also, which I have planted; behold that I have nourished it also, and it hath brought forth fruit."
  },
  {
@@ -10671,14 +10671,14 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 5,
   "verse": 42,
-  "hebrew": "הִנֵּה יָדַעְתִּי כִּי כָּל־פְּרִי הַכֶּרֶם זוּלָת אֵלֶּה נִשְׁחַת וְעַתָּה גַּם־אֵלֶּה אֲשֶׁר הוֹצִיאוּ פַּעַם פְּרִי טוֹב נִשְׁחְתוּ וְעַתָּה לֹא יִצְלְחוּ כָּל־עֲצֵי כַרְמִי לִדְבַר זוּלָת לְהִכָּרֵת וּלְהַשְׁלִיכָם אֶל־הָאֵשׁ׃",
+  "hebrew": "הִנֵּה יָדַעְתִּי כִּי כָּל־פְּרִי הַכֶּרֶם זוּלָת אֵלֶּה נִשְׁחַת וְעַתָּה גַּם־אֵלֶּה אֲשֶׁר הוֹצִיאוּ פַּעַם פְּרִי טוֹב נִשְׁחְתוּ וְעַתָּה לֹא יִצְלְחוּ כָּל־עֲצֵי כַּרְמִי לִדְבַר זוּלָת לְהִכָּרֵת וּלְהַשְׁלִיכָם אֶל־הָאֵשׁ׃",
   "english": "Behold, I knew that all the fruit of the vineyard, save it were these, had become corrupted. And now these which have once brought forth good fruit have also become corrupted; and now all the trees of my vineyard are good for nothing save it be to be hewn down and cast into the fire."
  },
  {
   "book": "Jacob",
   "chapter": 5,
   "verse": 43,
-  "hebrew": "וְהִנֵּה הָאַחֲרוֹן הַזֶּה אֲשֶׁר יָבֵשׁ עֲנָפוֹ נָטַעְתִּי בְּמָקוֹם טוֹב הָאֲדָמָה אָכֵן בְּמָקוֹם הַנִּבְחָר לִי מִכָּל־חֶלְקֵי כַרְמִי׃",
+  "hebrew": "וְהִנֵּה הָאַחֲרוֹן הַזֶּה אֲשֶׁר יָבֵשׁ עֲנָפוֹ נָטַעְתִּי בְּמָקוֹם טוֹב הָאֲדָמָה אָכֵן בְּמָקוֹם הַנִּבְחָר לִי מִכָּל־חֶלְקֵי כַּרְמִי׃",
   "english": "And behold this last, whose branch hath withered away, I did plant in a good spot of ground; yea, even that which was choice unto me above all other parts of the land of my vineyard."
  },
  {
@@ -10706,7 +10706,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 5,
   "verse": 47,
-  "hebrew": "אַךְ מַה־עוֹד יָכֹלְתִּי לַעֲשׂוֹת בְּכַרְמִי הֲרָפְתָה יָדִי מִטַּפֵּחַ אוֹתוֹ לֹא כִּי טִפַּחְתִּי אוֹתוֹ וָאֶעְדֹּר סְבִיבוֹ וָאֶזְמֹר אוֹתוֹ וָאֲזַבְּלֵהוּ וָאֶפְרֹשׂ יָדִי כִּמְעַט כָּל־הַיּוֹם וְהַקֵּץ קָרֵב וַיֵּצַר לִי כִּי אֶכְרֹת אֶת־כָּל־עֲצֵי כַרְמִי וְאַשְׁלִיכֵם אֶל־הָאֵשׁ לִשְׂרֹף מִי הוּא אֲשֶׁר הִשְׁחִית אֶת־כַּרְמִי׃",
+  "hebrew": "אַךְ מַה־עוֹד יָכֹלְתִּי לַעֲשׂוֹת בְּכַרְמִי הֲרָפְתָה יָדִי מִטַּפֵּחַ אוֹתוֹ לֹא כִּי טִפַּחְתִּי אוֹתוֹ וָאֶעְדֹּר סְבִיבוֹ וָאֶזְמֹר אוֹתוֹ וָאֲזַבְּלֵהוּ וָאֶפְרֹשׂ יָדִי כִּמְעַט כָּל־הַיּוֹם וְהַקֵּץ קָרֵב וַיֵּצַר לִי כִּי אֶכְרֹת אֶת־כָּל־עֲצֵי כַּרְמִי וְאַשְׁלִיכֵם אֶל־הָאֵשׁ לִשְׂרֹף מִי הוּא אֲשֶׁר הִשְׁחִית אֶת־כַּרְמִי׃",
   "english": "But what could I have done more in my vineyard? Have I slackened mine hand, that I have not nourished it, Nay, I have nourished it, and I have digged about it, and I have pruned it, and I have dunged it; and I have stretched forth mine hand almost all the day long, and the end draweth nigh. And it grieveth me that I should hew down all the trees of my vineyard, and cast them into the fire that they should be burned. Who is it that has corrupted my vineyard?"
  },
  {
@@ -10734,7 +10734,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 5,
   "verse": 51,
-  "hebrew": "וַיֹּאמֶר הָאָדוֹן אָכֵן אָחוּס עָלָיו עוֹד מְעַט כִּי יֵצַר לִי לְאַבֵּד אֶת־עֲצֵי כַרְמִי׃",
+  "hebrew": "וַיֹּאמֶר הָאָדוֹן אָכֵן אָחוּס עָלָיו עוֹד מְעַט כִּי יֵצַר לִי לְאַבֵּד אֶת־עֲצֵי כַּרְמִי׃",
   "english": "And the Lord said: Yea, I will spare it a little longer, for it grieveth me that I should lose the trees of my vineyard."
  },
  {
@@ -10755,7 +10755,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 5,
   "verse": 54,
-  "hebrew": "וְהִנֵּה שָׁרְשֵׁי עַנְפֵי הָעֵץ הַטִּבְעִיִּים אֲשֶׁר נָטַעְתִּי בְּכָל־אֲשֶׁר חָפַצְתִּי עוֹדָם חַיִּים לָכֵן לְמַעַן אֶשְׁמְרֵם גַם־אוֹתָם לְמַטְרָתִי אֶקַּח מֵעַנְפֵי הָעֵץ הַזֶּה וְאַרְכִּיבֵם בָּהֶם אָכֵן אַרְכִּיב בָּהֶם אֶת־עַנְפֵי עֵץ אִמָּם לְמַעַן אֶשְׁמֹר גַם אֶת־הַשָּׁרָשִׁים לִי אוּלַי בִּהְיוֹתָם חֲזָקִים דַּיָּם יוֹצִיאוּ לִי פְּרִי טוֹב וְעוֹד אֶתְפָּאֵר בִּפְרִי כַרְמִי׃",
+  "hebrew": "וְהִנֵּה שָׁרְשֵׁי עַנְפֵי הָעֵץ הַטִּבְעִיִּים אֲשֶׁר נָטַעְתִּי בְּכָל־אֲשֶׁר חָפַצְתִּי עוֹדָם חַיִּים לָכֵן לְמַעַן אֶשְׁמְרֵם גַם־אוֹתָם לְמַטְרָתִי אֶקַּח מֵעַנְפֵי הָעֵץ הַזֶּה וְאַרְכִּיבֵם בָּהֶם אָכֵן אַרְכִּיב בָּהֶם אֶת־עַנְפֵי עֵץ אִמָּם לְמַעַן אֶשְׁמֹר גַם אֶת־הַשָּׁרָשִׁים לִי אוּלַי בִּהְיוֹתָם חֲזָקִים דַּיָּם יוֹצִיאוּ לִי פְּרִי טוֹב וְעוֹד אֶתְפָּאֵר בִּפְרִי כַּרְמִי׃",
   "english": "And, behold, the roots of the natural branches of the tree which I planted whithersoever I would are yet alive; wherefore, that I may preserve them also for mine own purpose, I will take of the branches of this tree, and I will graft them in unto them. Yea, I will graft in unto them the branches of their mother tree, that I may preserve the roots also unto mine own self, that when they shall be sufficiently strong perhaps they may bring forth good fruit unto me, and I may yet have glory in the fruit of my vineyard."
  },
  {
@@ -10797,7 +10797,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 5,
   "verse": 60,
-  "hebrew": "וְיַעַן שָׁמַרְתִּי אֶת־הָעֲנָפִים הַטִּבְעִיִּים וְשָׁרְשֵׁיהֶם וְיַעַן הִרְכַּבְתִּי שׁוּב אֶת־הָעֲנָפִים הַטִּבְעִיִּים בְּעֵץ אִמָּם וְשָׁמַרְתִּי אֶת־שָׁרְשֵׁי עֵץ אִמָּם אוּלַי יוֹצִיאוּ שׁוּב עֲצֵי כַרְמִי פְּרִי טוֹב וְאֶשְׂמַח שׁוּב בִּפְרִי כַרְמִי וְאוּלַי אֶשְׂמַח מְאֹד כִּי שָׁמַרְתִּי אֶת־הַשָּׁרָשִׁים וְעַנְפֵי הַפְּרִי הָרִאשׁוֹן׃",
+  "hebrew": "וְיַעַן שָׁמַרְתִּי אֶת־הָעֲנָפִים הַטִּבְעִיִּים וְשָׁרְשֵׁיהֶם וְיַעַן הִרְכַּבְתִּי שׁוּב אֶת־הָעֲנָפִים הַטִּבְעִיִּים בְּעֵץ אִמָּם וְשָׁמַרְתִּי אֶת־שָׁרְשֵׁי עֵץ אִמָּם אוּלַי יוֹצִיאוּ שׁוּב עֲצֵי כַּרְמִי פְּרִי טוֹב וְאֶשְׂמַח שׁוּב בִּפְרִי כַּרְמִי וְאוּלַי אֶשְׂמַח מְאֹד כִּי שָׁמַרְתִּי אֶת־הַשָּׁרָשִׁים וְעַנְפֵי הַפְּרִי הָרִאשׁוֹן׃",
   "english": "And because that I have preserved the natural branches and the roots thereof, and that I have grafted in the natural branches again into their mother tree, and have preserved the roots of their mother tree, that, perhaps, the trees of my vineyard may bring forth again good fruit; and that I may have joy again in the fruit of my vineyard, and, perhaps, that I may rejoice exceedingly that I have preserved the roots and the branches of the first fruit—"
  },
  {
@@ -10832,14 +10832,14 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 5,
   "verse": 65,
-  "hebrew": "וּבְהַחִלָּם לִצְמֹחַ תְּפַנּוּ אֶת־הָעֲנָפִים הַמּוֹצִיאִים פְּרִי מַר לְפִי כֹּחַ הַטּוֹב וְגָדְלוֹ וְלֹא תְפַנּוּ אֶת־הָרַע כֻּלּוֹ בְּפַעַם אַחַת פֶּן־יִהְיוּ שָׁרְשֵׁיהֶם חֲזָקִים מִדַּי לַהַרְכָּבָה וְתֹאבַד הַהַרְכָּבָה וְאֹבַד אֶת־עֲצֵי כַרְמִי׃",
+  "hebrew": "וּבְהַחִלָּם לִצְמֹחַ תְּפַנּוּ אֶת־הָעֲנָפִים הַמּוֹצִיאִים פְּרִי מַר לְפִי כֹּחַ הַטּוֹב וְגָדְלוֹ וְלֹא תְפַנּוּ אֶת־הָרַע כֻּלּוֹ בְּפַעַם אַחַת פֶּן־יִהְיוּ שָׁרְשֵׁיהֶם חֲזָקִים מִדַּי לַהַרְכָּבָה וְתֹאבַד הַהַרְכָּבָה וְאֹבַד אֶת־עֲצֵי כַּרְמִי׃",
   "english": "And as they begin to grow ye shall clear away the branches which bring forth bitter fruit, according to the strength of the good and the size thereof; and ye shall not clear away the bad thereof all at once, lest the roots thereof should be too strong for the graft, and the graft thereof shall perish, and I lose the trees of my vineyard."
  },
  {
   "book": "Jacob",
   "chapter": 5,
   "verse": 66,
-  "hebrew": "כִּי יֵצַר לִי לְאַבֵּד אֶת־עֲצֵי כַרְמִי לָכֵן תְּפַנּוּ אֶת־הָרַע כַּאֲשֶׁר יִגְדַּל הַטּוֹב לְמַעַן יִהְיוּ הַשֹּׁרֶשׁ וְהָרֹאשׁ שָׁוִים בְּכֹחָם עַד אֲשֶׁר יִגְבַּר הַטּוֹב עַל־הָרַע וְיִכָּרֵת הָרַע וְיֻשְׁלַךְ אֶל־הָאֵשׁ לְמַעַן לֹא יַכְבִּידוּ עַל־אַדְמַת כַרְמִי וְכָכָה אֶטַאֲטֵא אֶת־הָרַע מִכַּרְמִי׃",
+  "hebrew": "כִּי יֵצַר לִי לְאַבֵּד אֶת־עֲצֵי כַּרְמִי לָכֵן תְּפַנּוּ אֶת־הָרַע כַּאֲשֶׁר יִגְדַּל הַטּוֹב לְמַעַן יִהְיוּ הַשֹּׁרֶשׁ וְהָרֹאשׁ שָׁוִים בְּכֹחָם עַד אֲשֶׁר יִגְבַּר הַטּוֹב עַל־הָרַע וְיִכָּרֵת הָרַע וְיֻשְׁלַךְ אֶל־הָאֵשׁ לְמַעַן לֹא יַכְבִּידוּ עַל־אַדְמַת כַּרְמִי וְכָכָה אֶטַאֲטֵא אֶת־הָרַע מִכַּרְמִי׃",
   "english": "For it grieveth me that I should lose the trees of my vineyard; wherefore ye shall clear away the bad according as the good shall grow, that the root and the top may be equal in strength, until the good shall overcome the bad, and the bad be hewn down and cast into the fire, that they cumber not the ground of my vineyard; and thus will I sweep away the bad out of my vineyard."
  },
  {
@@ -10860,7 +10860,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 5,
   "verse": 69,
-  "hebrew": "וְהַשְׁלֵךְ יֻשְׁלַךְ הָרַע מִכָּל־אַדְמַת כַרְמִי כִּי הִנֵּה רַק הַפַּעַם הַזֹּאת אֶזְמֹר אֶת־כַּרְמִי׃",
+  "hebrew": "וְהַשְׁלֵךְ יֻשְׁלַךְ הָרַע מִכָּל־אַדְמַת כַּרְמִי כִּי הִנֵּה רַק הַפַּעַם הַזֹּאת אֶזְמֹר אֶת־כַּרְמִי׃",
   "english": "And the bad shall be cast away, yea, even out of all the land of my vineyard; for behold, only this once will I prune my vineyard."
  },
  {
@@ -10902,14 +10902,14 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 5,
   "verse": 75,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר רָאָה אֲדוֹן הַכֶּרֶם כִּי טוֹב פִּרְיוֹ וְכִּי לֹא־נִשְׁחַת עוֹד כַּרְמוֹ וַיִּקְרָא לַעֲבָדָיו וַיֹּאמֶר אֲלֵיהֶם הִנֵּה בַּפַּעַם הָאַחֲרוֹנָה הַזֹּאת טִפַּחְנוּ אֶת־כַּרְמִי וְהִנְּךָ רֹאֶה כִּי עָשִׂיתִי כִּרְצוֹנִי וְשָׁמַרְתִּי אֶת־הַפְּרִי הַטִּבְעִי כִּי טוֹב הוּא כַּאֲשֶׁר הָיָה בָּרִאשׁוֹנָה וּבְרוּכִים אַתֶּם כִּי הֱיִיתֶם חֲרוּצִים בַּעֲבֹדַתְכֶם עִמִּי בְּכַרְמִי וּשְׁמַרְתֶּם אֶת־מִצְוֹתַי וַהֲבֵאתֶם אֵלַי שׁוּב אֶת־הַפְּרִי הַטִּבְעִי וְכַרְמִי לֹא נִשְׁחַת עוֹד וְהָרַע הֻשְׁלָךְ הִנֵּה תִּשְׂמְחוּ עִמִּי בִּגְלַל פְּרִי כַרְמִי׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר רָאָה אֲדוֹן הַכֶּרֶם כִּי טוֹב פִּרְיוֹ וְכִּי לֹא־נִשְׁחַת עוֹד כַּרְמוֹ וַיִּקְרָא לַעֲבָדָיו וַיֹּאמֶר אֲלֵיהֶם הִנֵּה בַּפַּעַם הָאַחֲרוֹנָה הַזֹּאת טִפַּחְנוּ אֶת־כַּרְמִי וְהִנְּךָ רֹאֶה כִּי עָשִׂיתִי כִּרְצוֹנִי וְשָׁמַרְתִּי אֶת־הַפְּרִי הַטִּבְעִי כִּי טוֹב הוּא כַּאֲשֶׁר הָיָה בָּרִאשׁוֹנָה וּבְרוּכִים אַתֶּם כִּי הֱיִיתֶם חֲרוּצִים בַּעֲבֹדַתְכֶם עִמִּי בְּכַרְמִי וּשְׁמַרְתֶּם אֶת־מִצְוֹתַי וַהֲבֵאתֶם אֵלַי שׁוּב אֶת־הַפְּרִי הַטִּבְעִי וְכַרְמִי לֹא נִשְׁחַת עוֹד וְהָרַע הֻשְׁלָךְ הִנֵּה תִּשְׂמְחוּ עִמִּי בִּגְלַל פְּרִי כַּרְמִי׃",
   "english": "And it came to pass that when the Lord of the vineyard saw that his fruit was good, and that his vineyard was no more corrupt, he called up his servants, and said unto them: Behold, for this last time have we nourished my vineyard; and thou beholdest that I have done according to my will; and I have preserved the natural fruit, that it is good, even like as it was in the beginning. And blessed art thou; for because ye have been diligent in laboring with me in my vineyard, and have kept my command– ments, and have brought unto me again the natural fruit, that my vineyard is no more corrupted, and the bad is cast away, behold ye shall have joy with me because of the fruit of my vineyard."
  },
  {
   "book": "Jacob",
   "chapter": 5,
   "verse": 76,
-  "hebrew": "כִּי הִנֵּה זְמַן רַב אֶצְבֹּר מִפְּרִי כַרְמִי לִי לְמוֹעֵד אֲשֶׁר יָבוֹא מְהֵרָה וּבַפַּעַם הָאַחֲרוֹנָה טִפַּחְתִּי אֶת־כַּרְמִי וְזָמַרְתִּיו וְעָדַרְתִּי סְבִיבוֹ וְזִבַּלְתִּיו לָכֵן אֶצְבֹּר לִי מִן־הַפְּרִי זְמַן רַב כַּאֲשֶׁר דִּבַּרְתִּי׃",
+  "hebrew": "כִּי הִנֵּה זְמַן רַב אֶצְבֹּר מִפְּרִי כַּרְמִי לִי לְמוֹעֵד אֲשֶׁר יָבוֹא מְהֵרָה וּבַפַּעַם הָאַחֲרוֹנָה טִפַּחְתִּי אֶת־כַּרְמִי וְזָמַרְתִּיו וְעָדַרְתִּי סְבִיבוֹ וְזִבַּלְתִּיו לָכֵן אֶצְבֹּר לִי מִן־הַפְּרִי זְמַן רַב כַּאֲשֶׁר דִּבַּרְתִּי׃",
   "english": "For behold, for a long time will I lay up of the fruit of my vineyard unto mine own self against the season, which speedily cometh; and for the last time have I nourished my vineyard, and pruned it, and dug about it, and dunged it; wherefore I will lay up unto mine own self of the fruit, for a long time, according to that which I have spoken."
  },
  {
@@ -11105,7 +11105,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 7,
   "verse": 14,
-  "hebrew": "וָאֹמַר אֵלָיו מִי אָנֹכִי כִּי אֲנַסֶּה אֶת־אֱלֹהִים לְהַרְאוֹתְךָ אוֹת בַּדָּבָר אֲשֶׁר יָדַעְתָּ כִּי אֱמֶת הוּא וְעוֹד תַּכְחִישֶׁנּוּ כִּי מִן־הַשָּׂטָן אָתָּה אַךְ לֹא רְצוֹנִי יֵעָשֶׂה אֶלָּא אִם־יַכֶּה אוֹתְךָ אֱלֹהִים יְהִי־זֹאת לְךָ לְאוֹת כִּי יֵשׁ־לוֹ כֹּחַ גַּם בַּשָּׁמַיִם גַּם בָּאָרֶץ וְגַם כִּי יָבוֹא הַמָּשִׁיחַ וּרְצוֹנְךָ יְהוָה יֵעָשֶׂה וְלֹא רְצוֹנִי׃",
+  "hebrew": "וָאֹמַר אֵלָיו מִי אָנֹכִי כִּי אֲנַסֶּה אֶת־אֱלֹהִים לְהַרְאוֹתְךָ אוֹת בַּדָּבָר אֲשֶׁר יָדַעְתָּ כִּי אֱמֶת הוּא וְעוֹד תַּכְחִישֶׁנּוּ כִּי מִן־הַשָּׂטָן אָתָּה אַךְ לֹא רְצוֹנִי יֵעָשֶׂה זוּלַת אִם־יַכֶּה אוֹתְךָ אֱלֹהִים יְהִי־זֹאת לְךָ לְאוֹת כִּי יֵשׁ־לוֹ כֹּחַ גַּם בַּשָּׁמַיִם גַּם בָּאָרֶץ וְגַם כִּי יָבוֹא הַמָּשִׁיחַ וּרְצוֹנְךָ יְהוָה יֵעָשֶׂה וְלֹא רְצוֹנִי׃",
   "english": "And I said unto him: What am I that I should tempt God to show unto thee a sign in the thing which thou knowest to be true? Yet thou wilt deny it, because thou art of the devil. Nevertheless, not my will be done; but if God shall smite thee, let that be a sign unto thee that he has power, both in heaven and in earth; and also, that Christ shall come. And thy will, O Lord, be done, and not mine."
  },
  {
@@ -11854,7 +11854,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 1,
   "verse": 4,
-  "hebrew": "כִּי לֹא יִתָּכֵן כִּי יָכֹל לֶחִי אָבִינוּ לִזְכֹּר אֶת־כָּל־הַדְּבָרִים הָאֵלֶּה לְלַמְּדָם לְבָנָיו לוּלֵא עֶזְרַת הַלֻּחוֹת הָאֵלֶּה כִּי בִהְיוֹתוֹ מְלֻמָּד בִּשְׂפַת הַמִּצְרִים יָכֹל לִקְרֹא אֶת־הַחֲרוּתוֹת הָאֵלֶּה וּלְלַמְּדָן לְבָנָיו לְמַעַן יוּכְלוּ לְלַמְּדָן לִבְנֵיהֶם וְכָכָה עֹשִׂים אֶת־מִצְוֹת אֱלֹהִים עַד־הָעֵת הַזֹּאת׃",
+  "hebrew": "כִּי לֹא יִתָּכֵן כִּי יָכֹל לֶחִי אָבִינוּ לִזְכֹּר אֶת־כָּל־הַדְּבָרִים הָאֵלֶּה לְלַמְּדָם לְבָנָיו לוּלֵא עֶזְרַת הַלֻּחוֹת הָאֵלֶּה כִּי בִהְיוֹתוֹ מְלֻמָּד בִּכְתַב מִצְרַיִם יָכֹל לִקְרֹא אֶת־הַחֲרוּתוֹת הָאֵלֶּה וּלְלַמְּדָן לְבָנָיו לְמַעַן יוּכְלוּ לְלַמְּדָן לִבְנֵיהֶם וְכָכָה עֹשִׂים אֶת־מִצְוֹת אֱלֹהִים עַד־הָעֵת הַזֹּאת׃",
   "english": "For it were not possible that our father, Lehi, could have remembered all these things, to have taught them to his children, except it were for the help of these plates; for he having been taught in the language of the Egyptians therefore he could read these engravings, and teach them to his children, that thereby they could teach them to their children, and so fulfilling the command– ments of God, even down to this present time."
  },
  {
@@ -13135,7 +13135,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 8,
   "verse": 16,
-  "hebrew": "וַיֹּאמֶר עַמּוֹן כִּי הָרֹאֶה הוּא מְגַלֶּה וְגַם נָבִיא וּמַתָּנָה גְדוֹלָה מִזֹּאת לֹא־יוּכַל אִישׁ לָשֵׂאת זוּלָתִי אִם־יֵשׁ־לוֹ כֹּחַ אֱלֹהִים אֲשֶׁר אֵין לְאִישׁ אַךְ יוּכַל אִישׁ לָשֵׂאת כֹּחַ גָּדוֹל מֵאֵת אֱלֹהִים׃",
+  "hebrew": "וַיֹּאמֶר עַמּוֹן כִּי הָרֹאֶה הוּא מְגַלֶּה וְגַם נָבִיא וּמַתָּנָה גְדוֹלָה מִזֹּאת לֹא־יוּכַל אִישׁ לָשֵׂאת זוּלַת אִם־יֵשׁ־לוֹ כֹּחַ אֱלֹהִים אֲשֶׁר אֵין לְאִישׁ אַךְ יוּכַל אִישׁ לָשֵׂאת כֹּחַ גָּדוֹל מֵאֵת אֱלֹהִים׃",
   "english": "And Ammon said that a seer is a revelator and a prophet also; and a gift which is greater can no man have, except he should possess the power of God, which no man can; yet a man may have great power given him from God."
  },
  {
@@ -13618,7 +13618,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 11,
   "verse": 23,
-  "hebrew": "וְהָיָה כִּי אִם לֹא יָשׁוּב הָעָם הַזֶּה וְיִפְנֶה אֶל־יְהוָה אֱלֹהָיו וְהָיוּ לַעֲבָדִים וְאֵין מַצִּיל זוּלָתִי יְהוָה אֱלֹהִים צְבָאוֹת׃",
+  "hebrew": "וְהָיָה כִּי אִם לֹא יָשׁוּב הָעָם הַזֶּה וְיִפְנֶה אֶל־יְהוָה אֱלֹהָיו וְהָיוּ לַעֲבָדִים וְאֵין מַצִּיל זוּלַת יְהוָה אֱלֹהִים צְבָאוֹת׃",
   "english": "And it shall come to pass that except this people repent and turn unto the Lord their God, they shall be brought into bondage; and none shall deliver them, except it be the Lord the Almighty God."
  },
  {
@@ -14115,7 +14115,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 13,
   "verse": 28,
-  "hebrew": "וְעוֹד אֹמֵר אֲנִי לָכֶם כִּי לֹא־תָבֹא הַיְשׁוּעָה בַּתּוֹרָה לְבַדָּהּ וְלוּלֵי הַכִּפֻּרִים אֲשֶׁר יַעֲשֶׂה אֱלֹהִים בְּעַצְמוֹ לְחַטֹּאת עַמּוֹ וַעֲוֹנוֹתֵיהֶם כִּי אָז אָבֹד יֹאבֵדוּ אַף עִם־תּוֹרַת מֹשֶׁה׃",
+  "hebrew": "וְעוֹד אֹמֵר אֲנִי לָכֶם כִּי לֹא־תָבֹא הַיְשׁוּעָה בַּתּוֹרָה לְבַדָּהּ וְלוּלֵי הַכִּפֻּרִים אֲשֶׁר יַעֲשֶׂה־אֱלֹהִים בְּעַצְמוֹ לְחַטֹּאת עַמּוֹ וַעֲוֹנוֹתֵיהֶם כִּי אָז אָבֹד יֹאבֵדוּ אַף עִם־תּוֹרַת מֹשֶׁה׃",
   "english": "And moreover, I say unto you, that salvation doth not come by the law alone; and were it not for the atonement, which God himself shall make for the sins and iniquities of his people, that they must unavoidably perish, notwithstanding the law of Moses."
  },
  {
@@ -14843,7 +14843,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 18,
   "verse": 19,
-  "hebrew": "וַיְצַוֵּם לְבִלְתִּי לַמֵּד דָּבָר זוּלָתִי הַדְּבָרִים אֲשֶׁר לִמְּדָם וַאֲשֶׁר נֶאֶמְרוּ בְּפִי נְבִיאֵי הַקֹּדֶשׁ׃",
+  "hebrew": "וַיְצַוֵּם לְבִלְתִּי לַמֵּד דָּבָר זוּלַת הַדְּבָרִים אֲשֶׁר לִמְּדָם וַאֲשֶׁר נֶאֶמְרוּ בְּפִי נְבִיאֵי הַקֹּדֶשׁ׃",
   "english": "And he commanded them that they should teach nothing save it were the things which he had taught, and which had been spoken by the mouth of the holy prophets."
  },
  {
@@ -15081,7 +15081,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 19,
   "verse": 18,
-  "hebrew": "וַיְהִי כִּי שָׁלַח גִּדְעוֹן אֲנָשִׁים בַּסֵּתֶר הַמִּדְבָּרָה לְבַקֵּשׁ אֶת־הַמֶּלֶךְ וְאֵת אֲשֶׁר אִתּוֹ וַיְהִי כִּי פָגְשׁוּ אֶת־הָעָם בַּמִּדְבָּר זוּלָתִי הַמֶּלֶךְ וְכֹהֲנָיו׃",
+  "hebrew": "וַיְהִי כִּי שָׁלַח גִּדְעוֹן אֲנָשִׁים בַּסֵּתֶר הַמִּדְבָּרָה לְבַקֵּשׁ אֶת־הַמֶּלֶךְ וְאֵת אֲשֶׁר אִתּוֹ וַיְהִי כִּי פָגְשׁוּ אֶת־הָעָם בַּמִּדְבָּר זוּלַת הַמֶּלֶךְ וְכֹהֲנָיו׃",
   "english": "And it came to pass that Gideon sent men into the wilderness secretly, to search for the king and those that were with him. And it came to pass that they met the people in the wilderness, all save the king and his priests."
  },
  {
@@ -15802,7 +15802,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 23,
   "verse": 14,
-  "hebrew": "וְגַם אַל־תִּבְטְחוּ בְּאִישׁ לִהְיוֹת מוֹרֶה אוֹ מְשָׁרֵת לָכֶם זוּלָתִי אִם־הוּא אִישׁ אֱלֹהִים הַהֹלֵךְ בִּדְרָכָיו וְשֹׁמֵר מִצְוֹתָיו׃",
+  "hebrew": "וְגַם אַל־תִּבְטְחוּ בְּאִישׁ לִהְיוֹת מוֹרֶה אוֹ מְשָׁרֵת לָכֶם זוּלַת אִם־הוּא אִישׁ אֱלֹהִים הַהֹלֵךְ בִּדְרָכָיו וְשֹׁמֵר מִצְוֹתָיו׃",
   "english": "And also trust no one to be your teacher nor your minister, except he be a man of God, walking in his ways and keeping his commandments."
  },
  {
@@ -15865,7 +15865,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 23,
   "verse": 23,
-  "hebrew": "כִּי הִנְנִי מַרְאֶה לָכֶם כִּי הוּבְאוּ לְעַבְדוּת וְאֵין מוֹשִׁיעַ לָהֶם זוּלָתִי יְהוָה אֱלֹהֵיהֶם הוּא אֱלֹהֵי אַבְרָהָם וְיִצְחָק וְיַעֲקֹב׃",
+  "hebrew": "כִּי הִנְנִי מַרְאֶה לָכֶם כִּי הוּבְאוּ לְעַבְדוּת וְאֵין מוֹשִׁיעַ לָהֶם זוּלַת יְהוָה אֱלֹהֵיהֶם הוּא אֱלֹהֵי אַבְרָהָם וְיִצְחָק וְיַעֲקֹב׃",
   "english": "For behold, I will show unto you that they were brought into bondage, and none could deliver them but the Lord their God, yea, even the God of Abraham and Isaac and of Jacob."
  },
  {
@@ -16026,7 +16026,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 24,
   "verse": 7,
-  "hebrew": "וַיָּחֵלּוּ הַלָּמָנִים לִרְבּוֹת בְּעֹשֶׁר וַיִּסְחֲרוּ אִישׁ אֶת־רֵעֵהוּ וַיִּגְדְּלוּ מְאֹד וַיִּהְיוּ לְעַם עָרוּם וְחָכָם בְּחָכְמַת הָעוֹלָם עַם עָרוּם מְאֹד וַיִּשְׂמְחוּ בְּכָל־רֶשַׁע וְשָׁלָל זוּלָתִי בֵּין אֲחֵיהֶם׃",
+  "hebrew": "וַיָּחֵלּוּ הַלָּמָנִים לִרְבּוֹת בְּעֹשֶׁר וַיִּסְחֲרוּ אִישׁ אֶת־רֵעֵהוּ וַיִּגְדְּלוּ מְאֹד וַיִּהְיוּ לְעַם עָרוּם וְחָכָם בְּחָכְמַת הָעוֹלָם עַם עָרוּם מְאֹד וַיִּשְׂמְחוּ בְּכָל־רֶשַׁע וְשָׁלָל זוּלַת בֵּין אֲחֵיהֶם׃",
   "english": "And thus the Lamanites began to increase in riches, and began to trade one with another and wax great, and began to be a cunning and a wise people, as to the wisdom of the world, yea, a very cunning people, delighting in all manner of wickedness and plunder, except it were among their own brethren."
  },
  {
@@ -16124,7 +16124,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 24,
   "verse": 21,
-  "hebrew": "וַיִּשְׁפְּכוּ תוֹדָתָם לֵאלֹהִים בְּעֵמֶק אַלְמָא כִּי הָיָה רַב־חֶסֶד אֲלֵיהֶם וַיָּקֵל אֶת־מַשָּׂאָם וַיַּצִּילֵם מֵעַבְדוּת כִּי הָיוּ בְעַבְדוּת וְאֵין מוֹשִׁיעַ זוּלָתִי יְהוָה אֱלֹהֵיהֶם׃",
+  "hebrew": "וַיִּשְׁפְּכוּ תוֹדָתָם לֵאלֹהִים בְּעֵמֶק אַלְמָא כִּי הָיָה רַב־חֶסֶד אֲלֵיהֶם וַיָּקֵל אֶת־מַשָּׂאָם וַיַּצִּילֵם מֵעַבְדוּת כִּי הָיוּ בְעַבְדוּת וְאֵין מוֹשִׁיעַ זוּלַת יְהוָה אֱלֹהֵיהֶם׃",
   "english": "Yea, and in the valley of Alma they poured out their thanks to God because he had been merciful unto them, and eased their burdens, and had delivered them out of bondage; for they were in bondage, and none could deliver them except it were the Lord their God."
  },
  {
@@ -16306,7 +16306,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 25,
   "verse": 22,
-  "hebrew": "וְכֵן אַף כִּי הָיוּ עֵדוֹת רַבּוֹת הָיוּ כֻלָּם עֵדָה אַחַת אַף עֵדַת הָאֱלֹהִים כִּי לֹא הִטִּיפוּ בְּכָל־הָעֵדוֹת זוּלָתִי תְּשׁוּבָה וֶאֱמוּנָה בֵּאלֹהִים׃",
+  "hebrew": "וְכֵן אַף כִּי הָיוּ עֵדוֹת רַבּוֹת הָיוּ כֻלָּם עֵדָה אַחַת אַף עֵדַת הָאֱלֹהִים כִּי לֹא הִטִּיפוּ בְּכָל־הָעֵדוֹת זוּלַת תְּשׁוּבָה וֶאֱמוּנָה בֵּאלֹהִים׃",
   "english": "And thus, notwithstanding there being many churches they were all one church, yea, even the church of God; for there was nothing preached in all the churches except it were repentance and faith in God."
  },
  {
@@ -16684,7 +16684,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 27,
   "verse": 13,
-  "hebrew": "וַיִּקְרָא עוֹד לֵאמֹר אַלְמָא קוּם וַעֲמֹד לָמָּה תִּרְדֹּף אֶת־עֲדַת הָאֱלֹהִים כִּי כֹה אָמַר יְהוָה זֹאת עֲדָתִי וַאֲנִי אֲקִימֶנָּה וְלֹא־יַפִּילֶנָּה דָּבָר זוּלָתִי פֶּשַׁע עַמִּי׃",
+  "hebrew": "וַיִּקְרָא עוֹד לֵאמֹר אַלְמָא קוּם וַעֲמֹד לָמָּה תִּרְדֹּף אֶת־עֲדַת הָאֱלֹהִים כִּי כֹה אָמַר יְהוָה זֹאת עֲדָתִי וַאֲנִי אֲקִימֶנָּה וְלֹא־יַפִּילֶנָּה דָּבָר זוּלַת פֶּשַׁע עַמִּי׃",
   "english": "Nevertheless he cried again, saying: Alma, arise and stand forth, for why persecutes thou the church of God? For the Lord hath said: This is my church, and I will establish it; and nothing shall overthrow it, save it is the transgression of my people."
  },
  {
@@ -16719,7 +16719,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 27,
   "verse": 18,
-  "hebrew": "וְעַתָּה אַלְמָא וַאֲשֶׁר אִתּוֹ נָפְלוּ שֵׁנִית אָרְצָה כִּי גָדוֹל הָיָה תְּמִהוֹנָם כִּי רָאוּ בְעֵינֵיהֶם אֶת־מַלְאַךְ יְהוָה וְקוֹלוֹ הָיָה כְּרַעַם אֲשֶׁר הִרְעִישׁ אֶת־הָאָרֶץ וַיֵּדְעוּ כִּי אֵין דָּבָר זוּלָתִי כֹּחַ הָאֱלֹהִים אֲשֶׁר יוּכַל לְהַרְעִישׁ אֶת־הָאָרֶץ וּלְהַרְעִידָהּ כְּאִלּוּ תִּבָּקַע׃",
+  "hebrew": "וְעַתָּה אַלְמָא וַאֲשֶׁר אִתּוֹ נָפְלוּ שֵׁנִית אָרְצָה כִּי גָדוֹל הָיָה תְּמִהוֹנָם כִּי רָאוּ בְעֵינֵיהֶם אֶת־מַלְאַךְ יְהוָה וְקוֹלוֹ הָיָה כְּרַעַם אֲשֶׁר הִרְעִישׁ אֶת־הָאָרֶץ וַיֵּדְעוּ כִּי אֵין דָּבָר זוּלַת כֹּחַ הָאֱלֹהִים אֲשֶׁר יוּכַל לְהַרְעִישׁ אֶת־הָאָרֶץ וּלְהַרְעִידָהּ כְּאִלּוּ תִּבָּקַע׃",
   "english": "And now Alma and those that were with him fell again to the earth, for great was their astonishment; for with their own eyes they had beheld an angel of the Lord; and his voice was as thunder, which shook the earth; and they knew that there was nothing save the power of God that could shake the earth and cause it to tremble as though it would part asunder."
  },
  {
@@ -17853,7 +17853,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 3,
   "verse": 5,
-  "hebrew": "וְרָאשֵׁי הַלָּמָנִים מְגֻלָּחִים וְהֵם עֲרֻמִּים זוּלָתִי עוֹר אֲשֶׁר חָגְרוּ בְּמָתְנֵיהֶם וְגַם שִׁרְיוֹנָם אֲשֶׁר חָגְרוּ עֲלֵיהֶם וְקַשְׁתוֹתֵיהֶם וְחִצֵּיהֶם וְאַבְנֵיהֶם וְקַלְּעוֹתֵיהֶם וְכֵן הָלְאָה׃",
+  "hebrew": "וְרָאשֵׁי הַלָּמָנִים מְגֻלָּחִים וְהֵם עֲרֻמִּים זוּלַת עוֹר אֲשֶׁר חָגְרוּ בְּמָתְנֵיהֶם וְגַם שִׁרְיוֹנָם אֲשֶׁר חָגְרוּ עֲלֵיהֶם וְקַשְׁתוֹתֵיהֶם וְחִצֵּיהֶם וְאַבְנֵיהֶם וְקַלְּעוֹתֵיהֶם וְכֵן הָלְאָה׃",
   "english": "Now the heads of the Lamanites were shorn; and they were naked, save it were skin which was girded about their loins, and also their armor, which was girded about them, and their bows, and their arrows, and their stones, and their slings, and so forth."
  },
  {
@@ -17916,7 +17916,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 3,
   "verse": 14,
-  "hebrew": "וְכֵן בָּא דְבַר הָאֱלֹהִים כִּי אֵלֶּה הַדְּבָרִים אֲשֶׁר אָמַר לְנֶפִי הִנֵּה אֶת־הַלָּמָנִים קִלַּלְתִּי וְשַׂמְתִּי עֲלֵיהֶם אוֹת לְמַעַן יִבָּדְלוּ הֵם וְזַרְעָם מִמְּךָ וּמִזַּרְעֲךָ מֵהַיּוֹם הַזֶּה וְעַד־עוֹלָם זוּלָתִי יָשׁוּבוּ מֵרָעָתָם וְיִפְנוּ אֵלַי וְרִחַמְתִּים׃",
+  "hebrew": "וְכֵן בָּא דְבַר הָאֱלֹהִים כִּי אֵלֶּה הַדְּבָרִים אֲשֶׁר אָמַר לְנֶפִי הִנֵּה אֶת־הַלָּמָנִים קִלַּלְתִּי וְשַׂמְתִּי עֲלֵיהֶם אוֹת לְמַעַן יִבָּדְלוּ הֵם וְזַרְעָם מִמְּךָ וּמִזַּרְעֲךָ מֵהַיּוֹם הַזֶּה וְעַד־עוֹלָם זוּלַת יָשׁוּבוּ מֵרָעָתָם וְיִפְנוּ אֵלַי וְרִחַמְתִּים׃",
   "english": "Thus the word of God is fulfilled, for these are the words which he said to Nephi: Behold, the Lamanites have I cursed, and I will set a mark on them that they and their seed may be separated from thee and thy seed, from this time henceforth and forever, except they repent of their wickedness and turn to me that I may have mercy upon them."
  },
  {
@@ -18140,7 +18140,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 4,
   "verse": 19,
-  "hebrew": "וְזֹאת עָשָׂה לְמַעַן יֵצֵא בְעַצְמוֹ בְּקֶרֶב עַמּוֹ אוֹ בְּקֶרֶב עַם נֶפִי לִדְרֹשׁ לָהֶם אֶת־דְּבַר־יְהוָה לְעוֹרְרָם לִזְכֹּר אֶת־מִשְׁמַרְתָּם וּלְהַפִּיל בִּדְבַר הָאֱלֹהִים אֶת־כָּל־הַגַּאֲוָה וְהָעָרְמָה וְכָל־הַמְּרִיבוֹת אֲשֶׁר בְּקֶרֶב עַמּוֹ בִּרְאוֹתוֹ כִּי אֵין דֶּרֶךְ לַהֲשִׁיבָם זוּלָתִי בְּהָעִיד בָּם עֵדוּת טְהוֹרָה׃",
+  "hebrew": "וְזֹאת עָשָׂה לְמַעַן יֵצֵא בְעַצְמוֹ בְּקֶרֶב עַמּוֹ אוֹ בְּקֶרֶב עַם נֶפִי לִדְרֹשׁ לָהֶם אֶת־דְּבַר־יְהוָה לְעוֹרְרָם לִזְכֹּר אֶת־מִשְׁמַרְתָּם וּלְהַפִּיל בִּדְבַר הָאֱלֹהִים אֶת־כָּל־הַגַּאֲוָה וְהָעָרְמָה וְכָל־הַמְּרִיבוֹת אֲשֶׁר בְּקֶרֶב עַמּוֹ בִּרְאוֹתוֹ כִּי אֵין דֶּרֶךְ לַהֲשִׁיבָם זוּלַת בְּהָעִיד בָּם עֵדוּת טְהוֹרָה׃",
   "english": "And this he did that he himself might go forth among his people, or among the people of Nephi, that he might preach the word of God unto them, to stir them up in remembrance of their duty, and that he might pull down, by the word of God, all the pride and craftiness and all the contentions which were among his people, seeing no way that he might reclaim them save it were in bearing down in pure testimony against them."
  },
  {
@@ -18294,7 +18294,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 5,
   "verse": 21,
-  "hebrew": "אֹמֵר אֲנִי לָכֶם בַּיּוֹם הַהוּא תֵּדְעוּ כִּי לֹא תוּכְלוּ לְהִוָּשַׁע כִּי לֹא יִוָּשַׁע אִישׁ זוּלָתִי נִכְבְּסוּ בְּגָדָיו לְלָבָן וּבִגְדֵיכֶם עֲלֵיהֶם לְהִטָּהֵר עַד אֲשֶׁר יְטֹהֲרוּ מִכָּל־כֶּתֶם בְּדַם זֶה אֲשֶׁר דִּבְּרוּ עָלָיו אֲבוֹתֵינוּ כִּי יָבוֹא לִפְדּוֹת אֶת־עַמּוֹ מֵחַטֹּאתָם׃",
+  "hebrew": "אֹמֵר אֲנִי לָכֶם בַּיּוֹם הַהוּא תֵּדְעוּ כִּי לֹא תוּכְלוּ לְהִוָּשַׁע כִּי לֹא יִוָּשַׁע אִישׁ זוּלַת נִכְבְּסוּ בְּגָדָיו לְלָבָן וּבִגְדֵיכֶם עֲלֵיהֶם לְהִטָּהֵר עַד אֲשֶׁר יְטֹהֲרוּ מִכָּל־כֶּתֶם בְּדַם זֶה אֲשֶׁר דִּבְּרוּ עָלָיו אֲבוֹתֵינוּ כִּי יָבוֹא לִפְדּוֹת אֶת־עַמּוֹ מֵחַטֹּאתָם׃",
   "english": "I say unto you, ye will know at that day that ye cannot be saved; for there can no man be saved except his garments are washed white; yea, his garments must be purified until they are cleansed from all stain, through the blood of him of whom it has been spoken by our fathers, who should come to redeem his people from their sins."
  },
  {
@@ -18322,7 +18322,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 5,
   "verse": 25,
-  "hebrew": "אֹמֵר אֲנִי לָכֶם לֹא זוּלָתִי תַּעֲשׂוּ אֶת־בּוֹרַאֲכֶם לְכוֹזֵב מֵרֹאשׁ אוֹ תַּחְשְׁבוּ כִּי כוֹזֵב הוּא מֵרֹאשׁ לֹא תוּכְלוּ לַחְשֹׁב כִּי יִהְיֶה לְכָזֶה מָקוֹם בְּמַלְכוּת הַשָּׁמַיִם כִּי יֻשְׁלְכוּ הַחוּצָה כִּי הֵם בְּנֵי מַלְכוּת הַשָּׂטָן׃",
+  "hebrew": "אֹמֵר אֲנִי לָכֶם לֹא זוּלַת תַּעֲשׂוּ אֶת־בּוֹרַאֲכֶם לְכוֹזֵב מֵרֹאשׁ אוֹ תַּחְשְׁבוּ כִּי כוֹזֵב הוּא מֵרֹאשׁ לֹא תוּכְלוּ לַחְשֹׁב כִּי יִהְיֶה לְכָזֶה מָקוֹם בְּמַלְכוּת הַשָּׁמַיִם כִּי יֻשְׁלְכוּ הַחוּצָה כִּי הֵם בְּנֵי מַלְכוּת הַשָּׂטָן׃",
   "english": "I say unto you, Nay; except ye make our Creator a liar from the beginning, or suppose that he is a liar from the beginning, ye cannot suppose that such can have place in the kingdom of heaven; but they shall be cast out for they are the children of the kingdom of the devil."
  },
  {
@@ -18497,7 +18497,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 5,
   "verse": 50,
-  "hebrew": "כֹּה אָמְרָה הָרוּחַ שׁוּבוּ כָּל־אַפְסֵי אָרֶץ כִּי קְרוֹבָה מַלְכוּת הַשָּׁמַיִם לָבוֹא כִּי בֶּן־הָאֱלֹהִים בָּא בִּכְבוֹדוֹ  בִּגְבוּרָתוֹ בַּהֲדָרוֹ בְּכֹחוֹ וּבְמֶמְשַׁלְתּוֹ הִנֵּה אַחַי הָאֲהוּבִים אֹמֵר לָכֶם כִּי הָרוּחַ אוֹמֶרֶת רְאוּ כְּבוֹד מֶלֶךְ כָּל־הָאָרֶץ וְגַם מֶלֶךְ הַשָּׁמַיִם יָאִיר מְהֵרָה מְאֹד בֵּין כָּל־בְּנֵי הָאָדָם׃",
+  "hebrew": "כֹּה אָמְרָה הָרוּחַ שׁוּבוּ כָּל־אַפְסֵי אָרֶץ כִּי קְרוֹבָה מַלְכוּת הַשָּׁמַיִם לָבוֹא כִּי בֶּן־אֱלֹהִים בָּא בִּכְבוֹדוֹ  בִּגְבוּרָתוֹ בַּהֲדָרוֹ בְּכֹחוֹ וּבְמֶמְשַׁלְתּוֹ הִנֵּה אַחַי הָאֲהוּבִים אֹמֵר לָכֶם כִּי הָרוּחַ אוֹמֶרֶת רְאוּ כְּבוֹד מֶלֶךְ כָּל־הָאָרֶץ וְגַם מֶלֶךְ הַשָּׁמַיִם יָאִיר מְהֵרָה מְאֹד בֵּין כָּל־בְּנֵי הָאָדָם׃",
   "english": "Yea, thus saith the Spirit: Repent, all ye ends of the earth, for the kingdom of heaven is soon  at hand; yea, the Son of God cometh in his glory, in his might, majesty, power, and dominion. Yea, my beloved brethren, I say unto you, that the Spirit saith: Behold the glory of the King of all the earth; and also the King of heaven shall very soon shine forth among all the children of men."
  },
  {
@@ -18539,7 +18539,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 5,
   "verse": 56,
-  "hebrew": "וְעַתָּה אֹמֵר לָכֶם כִּי כָּל־הַמַּתְמִידִים בְּרִשְׁעַתְכֶם אֵלֶּה הֵם אֲשֶׁר יִכָּרְתוּ וְיֻשְׁלְכוּ לָאֵשׁ זוּלָתִי יָשׁוּבוּ מְהֵרָה׃",
+  "hebrew": "וְעַתָּה אֹמֵר לָכֶם כִּי כָּל־הַמַּתְמִידִים בְּרִשְׁעַתְכֶם אֵלֶּה הֵם אֲשֶׁר יִכָּרְתוּ וְיֻשְׁלְכוּ לָאֵשׁ זוּלַת יָשׁוּבוּ מְהֵרָה׃",
   "english": "And finally, all ye that will persist in your wickedness, I say unto you that these are they who shall be hewn down and cast into the fire except they speedily repent."
  },
  {
@@ -18637,7 +18637,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 6,
   "verse": 8,
-  "hebrew": "וַיֵּלֶךְ אַלְמָא וַיָּחֶל לְהַגִּיד אֶת־דְּבַר־יְהוָה לָעֵדָה אֲשֶׁר נוֹסְדָה בְּעֵמֶק גִּדְעוֹן כְּפִי חֲזוֹן אֱמֶת הַדָּבָר אֲשֶׁר דִּבְּרוּ אֲבוֹתָיו וּכְפִי רוּחַ הַנְּבוּאָה אֲשֶׁר הָיָה בּוֹ כְּעֵדוּת יֵשׁוּעַ הַמָּשִׁיחַ בֶּן־הָאֱלֹהִים אֲשֶׁר יָבוֹא לִפְדּוֹת אֶת־עַמּוֹ מֵחַטֹּאתֵיהֶם וּכְפִי הַסֵּדֶר הַקָּדוֹשׁ אֲשֶׁר נִקְרָא בוֹ וְכֵן כָּתוּב׃ אָמֵן׃",
+  "hebrew": "וַיֵּלֶךְ אַלְמָא וַיָּחֶל לְהַגִּיד אֶת־דְּבַר־יְהוָה לָעֵדָה אֲשֶׁר נוֹסְדָה בְּעֵמֶק גִּדְעוֹן כְּפִי חֲזוֹן אֱמֶת הַדָּבָר אֲשֶׁר דִּבְּרוּ אֲבוֹתָיו וּכְפִי רוּחַ הַנְּבוּאָה אֲשֶׁר הָיָה בּוֹ כְּעֵדוּת יֵשׁוּעַ הַמָּשִׁיחַ בֶּן־אֱלֹהִים אֲשֶׁר יָבוֹא לִפְדּוֹת אֶת־עַמּוֹ מֵחַטֹּאתֵיהֶם וּכְפִי הַסֵּדֶר הַקָּדוֹשׁ אֲשֶׁר נִקְרָא בוֹ וְכֵן כָּתוּב׃ אָמֵן׃",
   "english": "And Alma went and began to declare the word of God unto the church which was established in the valley of Gideon, according to the revelation of the truth of the word which had been spoken by his fathers, and according to the spirit of prophecy which was in him, according to the testimony of Jesus Christ, the Son of God, who should come to redeem his people from their sins, and the holy order by which he was called. And thus it is written. Amen."
  },
  {
@@ -18700,14 +18700,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 7,
   "verse": 9,
-  "hebrew": "אַךְ הִנֵּה הָרוּחַ אָמַר לִי כָּזֹאת לֵאמֹר קְרָא אֶל־הָעָם הַזֶּה וְאָמַרְתָּ שׁוּבוּ וְהָכִינוּ דֶּרֶךְ יְהוָה וְלְכוּ בְּאֹרְחוֹתָיו הַיְשָׁרִים כִּי הִנֵּה מַלְכוּת הַשָּׁמַיִם קְרוֹבָה וּבֶן־הָאֱלֹהִים בָּא עַל־פְּנֵי הָאָרֶץ׃",
+  "hebrew": "אַךְ הִנֵּה הָרוּחַ אָמַר לִי כָּזֹאת לֵאמֹר קְרָא אֶל־הָעָם הַזֶּה וְאָמַרְתָּ שׁוּבוּ וְהָכִינוּ דֶּרֶךְ יְהוָה וְלְכוּ בְּאֹרְחוֹתָיו הַיְשָׁרִים כִּי הִנֵּה מַלְכוּת הַשָּׁמַיִם קְרוֹבָה וּבֶּן־אֱלֹהִים בָּא עַל־פְּנֵי הָאָרֶץ׃",
   "english": "But behold, the Spirit hath said this much unto me, saying: Cry unto this people, saying—Repent ye, and prepare the way of the Lord, and walk in his paths, which are straight; for behold, the kingdom of heaven is at hand, and the Son of God cometh upon the face of the earth."
  },
  {
   "book": "Alma",
   "chapter": 7,
   "verse": 10,
-  "hebrew": "וְהִנֵּה יִוָּלֵד מִמִּרְיָם בִּירוּשָׁלַיִם אֲשֶׁר הִיא אֶרֶץ אֲבוֹתֵינוּ וְהִיא עַלְמָה כְּלִי יָקָר וּבָחוּר אֲשֶׁר תְּכֻסֶּה וְתַהַר בְּכֹחַ רוּחַ הַקֹּדֶשׁ וְתֵלֵד בֵּן אָכֵן בֶּן־הָאֱלֹהִים׃",
+  "hebrew": "וְהִנֵּה יִוָּלֵד מִמִּרְיָם בִּירוּשָׁלַיִם אֲשֶׁר הִיא אֶרֶץ אֲבוֹתֵינוּ וְהִיא עַלְמָה כְּלִי יָקָר וּבָחוּר אֲשֶׁר תְּכֻסֶּה וְתַהַר בְּכֹחַ רוּחַ הַקֹּדֶשׁ וְתֵלֵד בֵּן אָכֵן בֶּן־אֱלֹהִים׃",
   "english": "And behold, he shall be born of Mary, at Jerusalem which is the land of our forefathers, she being a virgin, a precious and chosen vessel, who shall be overshadowed and conceive by the power of the Holy Ghost, and bring forth a son, yea, even the Son of God."
  },
  {
@@ -18728,14 +18728,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 7,
   "verse": 13,
-  "hebrew": "וְעַתָּה הָרוּחַ יוֹדֵעַ כׇּל־דָּבָר אַךְ בֶּן־הָאֱלֹהִים יִסְבֹּל כְּהַבָּשָׂר לְמַעַן יִשָּׂא חֲטָאֵי עַמּוֹ לְמַעַן יִמְחֶה פִּשְׁעֵיהֶם כְּכֹחַ גְּאֻלָּתוֹ וְהִנֵּה זֹאת הָעֵדוּת אֲשֶׁר בִּי׃",
+  "hebrew": "וְעַתָּה הָרוּחַ יוֹדֵעַ כׇּל־דָּבָר אַךְ בֶּן־אֱלֹהִים יִסְבֹּל כְּהַבָּשָׂר לְמַעַן יִשָּׂא חֲטָאֵי עַמּוֹ לְמַעַן יִמְחֶה פִּשְׁעֵיהֶם כְּכֹחַ גְּאֻלָּתוֹ וְהִנֵּה זֹאת הָעֵדוּת אֲשֶׁר בִּי׃",
   "english": "Now the Spirit knoweth all things; nevertheless the Son of God suffereth according to the flesh that he might take upon him the sins of his people, that he might blot out their transgressions according to the power of his deliverance; and now behold, this is the testimony which is in me."
  },
  {
   "book": "Alma",
   "chapter": 7,
   "verse": 14,
-  "hebrew": "וְעַתָּה אֹמֵר אֲנִי לָכֶם כִּי עֲלֵיכֶם לָשׁוּב וּלְהִוָּלֵד מֵחָדָשׁ כִּי הָרוּחַ אוֹמֵר אִם לֹא תִוָּלְדוּ מֵחָדָשׁ לֹא תוּכְלוּ לִירֹשׁ מַלְכוּת הַשָּׁמָיִם לָכֵן בּוֹאוּ וְהִטָּבְלוּ לָשׁוּב לְמַעַן תְּטֹהֲרוּ מֵחֲטָאֵיכֶם לְמַעַן תִּהְיֶה לָכֶם אֱמוּנָה בְּשֵׂה הָאֱלֹהִים הַנּוֹשֵׂא חֲטָאֵי הָעוֹלָם הַגִּבּוֹר לְהוֹשִׁיעַ וּלְטַהֵר מִכָּל־עָוֺן׃",
+  "hebrew": "וְעַתָּה אֹמֵר אֲנִי לָכֶם כִּי עֲלֵיכֶם לָשׁוּב וּלְהִוָּלֵד מֵחָדָשׁ כִּי הָרוּחַ אוֹמֵר אִם לֹא תִוָּלְדוּ מֵחָדָשׁ לֹא תוּכְלוּ לִירֹשׁ מַלְכוּת הַשָּׁמָיִם לָכֵן בּוֹאוּ וְהִטָּבְלוּ לָשׁוּב לְמַעַן תְּטֹהֲרוּ מֵחֲטָאֵיכֶם לְמַעַן תִּהְיֶה לָכֶם אֱמוּנָה בְּשֵׂה־אֱלֹהִים הַנּוֹשֵׂא חֲטָאֵי הָעוֹלָם הַגִּבּוֹר לְהוֹשִׁיעַ וּלְטַהֵר מִכָּל־עָוֺן׃",
   "english": "Now I say unto you that ye must repent, and be born again; for the Spirit saith if ye are not born again ye cannot inherit the kingdom of heaven; therefore come and be baptized unto repentance, that ye may be washed from your sins, that ye may have faith on the Lamb of God, who taketh away the sins of the world, who is mighty to save and to cleanse from all unrighteousness."
  },
  {
@@ -19113,7 +19113,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 9,
   "verse": 9,
-  "hebrew": "הֲלֹא תִזְכְּרוּ כִּי אָבִינוּ לֵחִי הוּצָא מִירוּשָׁלַיִם בְּיַד אֱלֹהִים הֲלֹא תִזְכְּרוּ כִּי כֻלָּם נִנְהֲגוּ עַל־יָדוֹ דֶּרֶךְ הַמִּדְבָּר׃",
+  "hebrew": "הֲלֹא תִזְכְּרוּ כִּי אָבִינוּ לֶחִי הוּצָא מִירוּשָׁלַיִם בְּיַד אֱלֹהִים הֲלֹא תִזְכְּרוּ כִּי כֻלָּם נִנְהֲגוּ עַל־יָדוֹ דֶּרֶךְ הַמִּדְבָּר׃",
   "english": "Do ye not remember that our father, Lehi, was brought out of Jerusalem by the hand of God? Do ye not remember that they were all led by him through the wilderness?"
  },
  {
@@ -19141,7 +19141,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 9,
   "verse": 13,
-  "hebrew": "הִנֵּה הֲלֹא תִזְכְּרוּ אֶת־הַדְּבָרִים אֲשֶׁר דִּבֶּר אֶל־לֵחִי לֵאמֹר כַּאֲשֶׁר תִּשְׁמְרוּ אֶת־מִצְוֺתַי תַּצְלִיחוּ בָאָרֶץ וְשׁוּב נֶאֱמַר כַּאֲשֶׁר לֹא תִשְׁמְרוּ אֶת־מִצְוֺתַי תִּכָּרֵתוּ מִלִּפְנֵי יְהוָה׃",
+  "hebrew": "הִנֵּה הֲלֹא תִזְכְּרוּ אֶת־הַדְּבָרִים אֲשֶׁר דִּבֶּר אֶל־לֶחִי לֵאמֹר כַּאֲשֶׁר תִּשְׁמְרוּ אֶת־מִצְוֺתַי תַּצְלִיחוּ בָאָרֶץ וְשׁוּב נֶאֱמַר כַּאֲשֶׁר לֹא תִשְׁמְרוּ אֶת־מִצְוֺתַי תִּכָּרֵתוּ מִלִּפְנֵי יְהוָה׃",
   "english": "Behold, do ye not remember the words which he spake unto Lehi, saying that: Inasmuch as ye shall keep my command– ments, ye shall prosper in the land? And again it is said that: Inasmuch as ye will not keep my commandments ye shall be cut off from the presence of the Lord."
  },
  {
@@ -19232,7 +19232,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 9,
   "verse": 26,
-  "hebrew": "וְלֹא יָמִים רַבִּים מֵהֵנָּה יָבֹא בֶן־הָאֱלֹהִים בִּכְבוֹדוֹ וּכְבוֹדוֹ יִהְיֶה כְבוֹד יְחִיד הָאָב מָלֵא חֵן וְצֶדֶק וֶאֱמֶת מָלֵא אֹרֶךְ רוּחַ רַחֲמִים וְאֶרֶךְ־אַפַּיִם מַהֵר לִשְׁמֹעַ זַעֲקַת עַמּוֹ וְלַעֲנוֹת תְּפִלָּתָם׃",
+  "hebrew": "וְלֹא יָמִים רַבִּים מֵהֵנָּה יָבֹא בֶּן־אֱלֹהִים בִּכְבוֹדוֹ וּכְבוֹדוֹ יִהְיֶה כְבוֹד יְחִיד הָאָב מָלֵא חֵן וְצֶדֶק וֶאֱמֶת מָלֵא אֹרֶךְ רוּחַ רַחֲמִים וְאֶרֶךְ־אַפַּיִם מַהֵר לִשְׁמֹעַ זַעֲקַת עַמּוֹ וְלַעֲנוֹת תְּפִלָּתָם׃",
   "english": "And not many days hence the Son of God shall come in his glory; and his glory shall be the glory of the Only Begotten of the Father, full of grace, equity, and truth, full of patience, mercy, and long– suffering, quick to hear the cries of his people and to answer their prayers."
  },
  {
@@ -19449,7 +19449,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 10,
   "verse": 23,
-  "hebrew": "אַךְ בִּתְפִלּוֹת הַצַּדִּיקִים נֶחְמַל עֲלֵיכֶם וְעַתָּה לָכֵן אִם תְּגָרְשׁוּ אֶת־הַצַּדִּיקִים מִקִּרְבְּכֶם אָז לֹא יַעֲצֹר יְהוָה אֶת־יָדוֹ כִּי בַחֲרוֹן אַפּוֹ יֵצֵא נֶגְדְּכֶם אָז תֻּכּוּ בָּרָעָב וּבַדֶּבֶר וּבֶחָרֶב וְהָעֵת קְרוֹבָה זוּלָתִי תָשׁוּבוּ׃",
+  "hebrew": "אַךְ בִּתְפִלּוֹת הַצַּדִּיקִים נֶחְמַל עֲלֵיכֶם וְעַתָּה לָכֵן אִם תְּגָרְשׁוּ אֶת־הַצַּדִּיקִים מִקִּרְבְּכֶם אָז לֹא יַעֲצֹר יְהוָה אֶת־יָדוֹ כִּי בַחֲרוֹן אַפּוֹ יֵצֵא נֶגְדְּכֶם אָז תֻּכּוּ בָּרָעָב וּבַדֶּבֶר וּבֶחָרֶב וְהָעֵת קְרוֹבָה זוּלַת תָשׁוּבוּ׃",
   "english": "But it is by the prayers of the righteous that ye are spared; now therefore, if ye will cast out the righteous from among you then will not the Lord stay his hand; but in his fierce anger he will come out against you; then ye shall be smitten by famine, and by pestilence, and by the sword; and the time is soon at hand except ye repent."
  },
  {
@@ -19736,7 +19736,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 11,
   "verse": 32,
-  "hebrew": "וַיֹּסֶף זִיזְרוֹם לֵאמֹר מִי הוּא אֲשֶׁר יָבוֹא הֲבֶן־הָאֱלֹהִים הוּא׃",
+  "hebrew": "וַיֹּסֶף זִיזְרוֹם לֵאמֹר מִי הוּא אֲשֶׁר יָבוֹא הֲבֶּן־אֱלֹהִים הוּא׃",
   "english": "And Zeezrom said again: Who is he that shall come? Is it the Son of God?"
  },
  {
@@ -19757,7 +19757,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 11,
   "verse": 35,
-  "hebrew": "וַיֹּאמֶר זִיזְרוֹם אֶל־הָעָם שִׂימוּ נָא לֵב לַדְּבָרִים הָאֵלֶּה כִּי אָמַר יֵשׁ אֵל אֶחָד וְאַף אָמַר כִּי בֶן־הָאֱלֹהִים יָבוֹא וְלֹא יוֹשִׁיעַ אֶת־עַמּוֹ וְיֵשׁ־לוֹ מֶמְשָׁלָה לְצַוּוֹת אֶת־הָאֱלֹהִים׃",
+  "hebrew": "וַיֹּאמֶר זִיזְרוֹם אֶל־הָעָם שִׂימוּ נָא לֵב לַדְּבָרִים הָאֵלֶּה כִּי אָמַר יֵשׁ אֵל אֶחָד וְאַף אָמַר כִּי בֶּן־אֱלֹהִים יָבוֹא וְלֹא יוֹשִׁיעַ אֶת־עַמּוֹ וְיֵשׁ־לוֹ מֶמְשָׁלָה לְצַוּוֹת אֶת־הָאֱלֹהִים׃",
   "english": "Now Zeezrom said unto the people: See that ye remember these things; for he said there is but one God; yet he saith that the Son of God shall come, but he shall not save his people—as though he had authority to command God."
  },
  {
@@ -19778,7 +19778,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 11,
   "verse": 38,
-  "hebrew": "וַיֹּסֶף זִיזְרוֹם לֵאמֹר לוֹ הֲבֶן־הָאֱלֹהִים הוּא אֲבִי הָעוֹלָמִים׃",
+  "hebrew": "וַיֹּסֶף זִיזְרוֹם לֵאמֹר לוֹ הֲבֶּן־אֱלֹהִים הוּא אֲבִי הָעוֹלָמִים׃",
   "english": "Now Zeezrom saith again unto him: Is the Son of God the very Eternal Father?"
  },
  {
@@ -19799,7 +19799,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 11,
   "verse": 41,
-  "hebrew": "לָכֵן הָרְשָׁעִים נִשְׁאָרִים כְּלֹא־הָיְתָה גְאֻלָּה זוּלָתִי הַתֵּר מוֹסְרוֹת הַמָּוֶת כִּי הִנֵּה יָבוֹא יוֹם אֲשֶׁר כׇּל־הַמֵּתִים יָקוּמוּ וְיַעַמְדוּ לִפְנֵי אֱלֹהִים וְיִשָּׁפְטוּ כְּמַעֲשֵׂיהֶם׃",
+  "hebrew": "לָכֵן הָרְשָׁעִים נִשְׁאָרִים כְּלֹא־הָיְתָה גְאֻלָּה זוּלַת הַתֵּר מוֹסְרוֹת הַמָּוֶת כִּי הִנֵּה יָבוֹא יוֹם אֲשֶׁר כׇּל־הַמֵּתִים יָקוּמוּ וְיַעַמְדוּ לִפְנֵי אֱלֹהִים וְיִשָּׁפְטוּ כְּמַעֲשֵׂיהֶם׃",
   "english": "Therefore the wicked remain as though there had been no redemption made, except it be the loosing of the bands of death; for behold, the day cometh that all shall rise from the dead and stand before God, and be judged according to their works."
  },
  {
@@ -20205,7 +20205,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 13,
   "verse": 16,
-  "hebrew": "וְהַחֻקּוֹת הָאֵלֶּה נִתְּנוּ בַּדֶּרֶךְ הַזֹּאת לְמַעַן יַבִּיטוּ הָעָם אֶל־בֶּן־הָאֱלֹהִים בִּהְיוֹתוֹ כִּדְמוּת סִדְרָם אוֹ בִּהְיוֹתוֹ סִדְרָם וְזֹאת לְמַעַן יַבִּיטוּ אֵלָיו לְהִסָּלַח חַטֹּאתָם לְמַעַן יָבֹאוּ אֶל־מְנוּחַת יְהוָה׃",
+  "hebrew": "וְהַחֻקּוֹת הָאֵלֶּה נִתְּנוּ בַּדֶּרֶךְ הַזֹּאת לְמַעַן יַבִּיטוּ הָעָם אֶל־בֶּן־אֱלֹהִים בִּהְיוֹתוֹ כִּדְמוּת סִדְרָם אוֹ בִּהְיוֹתוֹ סִדְרָם וְזֹאת לְמַעַן יַבִּיטוּ אֵלָיו לְהִסָּלַח חַטֹּאתָם לְמַעַן יָבֹאוּ אֶל־מְנוּחַת יְהוָה׃",
   "english": "Now these ordinances were given after this manner, that thereby the people might look forward on the Son of God, it being a type of his order, or it being his order, and this that they might look forward to him for a remission of their sins, that they might enter into the rest of the Lord."
  },
  {
@@ -20506,7 +20506,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 14,
   "verse": 28,
-  "hebrew": "וַיֵּצְאוּ אַלְמָא וַאֲמוּלֵק מִן־הַכֶּלֶא וְלֹא־נִזּוֹקוּ כִּי נָתַן יְהוָה לָהֶם כֹּחַ כְּאֱמוּנָתָם בַּמָּשִׁיחַ וַיֵּצְאוּ מִיָּד מִן־הַכֶּלֶא וַיֻּתְּרוּ מֵאֲסוּרֵיהֶם וְהַכֶּלֶא נָפַל אָרְצָה וְכׇל־נֶפֶשׁ בְּתוֹךְ קִירוֹתָיו מֵתָה זוּלָתִי אַלְמָא וַאֲמוּלֵק וַיֵּצְאוּ מִיָּד אֶל־הָעִיר׃",
+  "hebrew": "וַיֵּצְאוּ אַלְמָא וַאֲמוּלֵק מִן־הַכֶּלֶא וְלֹא־נִזּוֹקוּ כִּי נָתַן יְהוָה לָהֶם כֹּחַ כְּאֱמוּנָתָם בַּמָּשִׁיחַ וַיֵּצְאוּ מִיָּד מִן־הַכֶּלֶא וַיֻּתְּרוּ מֵאֲסוּרֵיהֶם וְהַכֶּלֶא נָפַל אָרְצָה וְכׇל־נֶפֶשׁ בְּתוֹךְ קִירוֹתָיו מֵתָה זוּלַת אַלְמָא וַאֲמוּלֵק וַיֵּצְאוּ מִיָּד אֶל־הָעִיר׃",
   "english": "And Alma and Amulek came forth out of the prison, and they were not hurt; for the Lord had granted unto them power, according to their faith which was in Christ. And they straightway came forth out of the prison; and they were loosed from their bands; and the prison had fallen to the earth, and every soul within the walls thereof, save it were Alma and Amulek, was slain; and they straightway came forth into the city."
  },
  {
@@ -20779,14 +20779,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 16,
   "verse": 19,
-  "hebrew": "מַגִּידִים דְּבָרִים אֲשֶׁר צְרִיכִים לָבוֹא בְּקָרוֹב אָכֵן מַגִּידִים בִּיאַת בֶּן־הָאֱלֹהִים עִנּוּיָיו וּמוֹתוֹ וְגַם תְּחִיַּת הַמֵּתִים׃",
+  "hebrew": "מַגִּידִים דְּבָרִים אֲשֶׁר צְרִיכִים לָבוֹא בְּקָרוֹב אָכֵן מַגִּידִים בִּיאַת בֶּן־אֱלֹהִים עִנּוּיָיו וּמוֹתוֹ וְגַם תְּחִיַּת הַמֵּתִים׃",
   "english": "Holding forth things which must shortly come; yea, holding forth the coming of the Son of God, his sufferings and death, and also the resurrection of the dead."
  },
  {
   "book": "Alma",
   "chapter": 16,
   "verse": 20,
-  "hebrew": "וְרַבִּים מִן־הָעָם שָׁאֲלוּ עַל־הַמָּקוֹם אֲשֶׁר יָבֹא שָׁם בֶּן־הָאֱלֹהִים וַיְלַמְּדוּ אוֹתָם כִּי יֵרָאֶה אֲלֵיהֶם אַחֲרֵי תְּחִיָּתוֹ וְאֶת־זֹאת שָׁמַע הָעָם בְּשִׂמְחָה וְגִילָה רַבָּה׃",
+  "hebrew": "וְרַבִּים מִן־הָעָם שָׁאֲלוּ עַל־הַמָּקוֹם אֲשֶׁר יָבֹא שָׁם בֶּן־אֱלֹהִים וַיְלַמְּדוּ אוֹתָם כִּי יֵרָאֶה אֲלֵיהֶם אַחֲרֵי תְּחִיָּתוֹ וְאֶת־זֹאת שָׁמַע הָעָם בְּשִׂמְחָה וְגִילָה רַבָּה׃",
   "english": "And many of the people did inquire concerning the place where the Son of God should come; and they were taught that he would appear unto them after his resurrection; and this the people did hear with great joy and gladness."
  },
  {
@@ -21059,7 +21059,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 17,
   "verse": 38,
-  "hebrew": "וְעַתָּה שִׁשָּׁה מֵהֶם נָפְלוּ בַּקֶּלַע אַךְ לֹא הֵמִית אִישׁ זוּלָתִי מַנְהִיגָם בְּחַרְבּוֹ וַיְקַצֵּץ אֶת־כָּל־הַזְּרוֹעוֹת אֲשֶׁר הוּרְמוּ נֶגְדּוֹ וְלֹא מְעַטּוֹת הָיוּ׃",
+  "hebrew": "וְעַתָּה שִׁשָּׁה מֵהֶם נָפְלוּ בַּקֶּלַע אַךְ לֹא הֵמִית אִישׁ זוּלַת מַנְהִיגָם בְּחַרְבּוֹ וַיְקַצֵּץ אֶת־כָּל־הַזְּרוֹעוֹת אֲשֶׁר הוּרְמוּ נֶגְדּוֹ וְלֹא מְעַטּוֹת הָיוּ׃",
   "english": "Now six of them had fallen by the sling, but he slew none save it were their leader with his sword; and he smote off as many of their arms as were lifted against him, and they were not a few."
  },
  {
@@ -21430,7 +21430,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 19,
   "verse": 9,
-  "hebrew": "וַיֹּאמֶר עַמּוֹן אֵלֶיהָ הֲתַאֲמִינִי זֹאת וַתֹּאמֶר אֵלָיו אֵין לִי עֵד זוּלָתִי דְבָרְךָ וּדְבַר עֲבָדֵינוּ וְאַף־עַל־פִּי־כֵן מַאֲמִינָה אֲנִי כִּי יִהְיֶה כַּאֲשֶׁר אָמַרְתָּ׃",
+  "hebrew": "וַיֹּאמֶר עַמּוֹן אֵלֶיהָ הֲתַאֲמִינִי זֹאת וַתֹּאמֶר אֵלָיו אֵין לִי עֵד זוּלַת דְבָרְךָ וּדְבַר עֲבָדֵינוּ וְאַף־עַל־פִּי־כֵן מַאֲמִינָה אֲנִי כִּי יִהְיֶה כַּאֲשֶׁר אָמַרְתָּ׃",
   "english": "And Ammon said unto her: Believest thou this? And she said unto him: I have had no witness save thy word, and the word of our servants; nevertheless I believe that it shall be according as thou hast said."
  },
  {
@@ -21479,7 +21479,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 19,
   "verse": 16,
-  "hebrew": "וַיִּקְרְאוּ בְּשֵׁם יְהוָה בְּכָל־כֹּחָם עַד כִּי נָפְלוּ כֻלָּם אַרְצָה זוּלָתִי אִשָּׁה אַחַת מִנְּשֵׁי הַלָּמָנִים וּשְׁמָהּ אָבִישׁ וְהִיא נֶהֶפְכָה אֶל־יְהוָה זֶה שָׁנִים רַבּוֹת בִּגְלַל מַרְאֵה אָבִיהָ הַנִּפְלָא׃",
+  "hebrew": "וַיִּקְרְאוּ בְּשֵׁם יְהוָה בְּכָל־כֹּחָם עַד כִּי נָפְלוּ כֻלָּם אַרְצָה זוּלַת אִשָּׁה אַחַת מִנְּשֵׁי הַלָּמָנִים וּשְׁמָהּ אָבִישׁ וְהִיא נֶהֶפְכָה אֶל־יְהוָה זֶה שָׁנִים רַבּוֹת בִּגְלַל מַרְאֵה אָבִיהָ הַנִּפְלָא׃",
   "english": "And it came to pass that they did call on the name of the Lord, in their might, even until they had all fallen to the earth, save it were one of the Lamanitish women, whose name was Abish, she having been converted unto the Lord for many  years, on account of a remarkable vision of her father—"
  },
  {
@@ -21654,7 +21654,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 20,
   "verse": 5,
-  "hebrew": "וַיֹּאמֶר עַמּוֹן אֵלָיו לֹא הִגִּיד לִי אִישׁ זוּלָתִי אֱלֹהִים וַיֹּאמֶר אֵלַי לֵךְ וְהַצֵּל אֶת־אַחֶיךָ כִּי הֵם בַּכֶּלֶא בְּאֶרֶץ מִדּוֹנִי׃",
+  "hebrew": "וַיֹּאמֶר עַמּוֹן אֵלָיו לֹא הִגִּיד לִי אִישׁ זוּלַת אֱלֹהִים וַיֹּאמֶר אֵלַי לֵךְ וְהַצֵּל אֶת־אַחֶיךָ כִּי הֵם בַּכֶּלֶא בְּאֶרֶץ מִדּוֹנִי׃",
   "english": "And Ammon said unto him: No one hath told me, save it be God; and he said unto me—Go and deliver thy brethren, for they are in prison in the land of Middoni."
  },
  {
@@ -21878,7 +21878,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 21,
   "verse": 7,
-  "hebrew": "וַיֹּאמֶר אֵלָיו אַהֲרֹן הֲתַאֲמִין כִּי יָבוֹא בֶּן־הָאֱלֹהִים לִגְאֹל אֶת־בְּנֵי הָאָדָם מֵחַטֹּאתֵיהֶם׃",
+  "hebrew": "וַיֹּאמֶר אֵלָיו אַהֲרֹן הֲתַאֲמִין כִּי יָבוֹא בֶּן־אֱלֹהִים לִגְאֹל אֶת־בְּנֵי הָאָדָם מֵחַטֹּאתֵיהֶם׃",
   "english": "Now Aaron said unto him: Believest thou that the Son of God shall come to redeem mankind from their sins?"
  },
  {
@@ -21997,7 +21997,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 22,
   "verse": 1,
-  "hebrew": "וְעַתָּה בִּהְיוֹת עַמּוֹן מְלַמֵּד אֶת־עַם לָמוֹנִי תָּמִיד נָשׁוּבָה אֶל־דִּבְרֵי אַהֲרֹן וְאֶחָיו כִּי אַחֲרֵי צֵאתוֹ מֵאֶרֶץ מִדּוֹנִי הוֹבִילָה אוֹתוֹ הָרוּחַ אֶל־אֶרֶץ נֶפִי אֶל־בֵּית הַמֶּלֶךְ הַמֹּשֵׁל בְּכָל־הָאָרֶץ זוּלָתִי אֶרֶץ יִשְׁמָעֵאל וְהוּא אֲבִי לָמוֹנִי׃",
+  "hebrew": "וְעַתָּה בִּהְיוֹת עַמּוֹן מְלַמֵּד אֶת־עַם לָמוֹנִי תָּמִיד נָשׁוּבָה אֶל־דִּבְרֵי אַהֲרֹן וְאֶחָיו כִּי אַחֲרֵי צֵאתוֹ מֵאֶרֶץ מִדּוֹנִי הוֹבִילָה אוֹתוֹ הָרוּחַ אֶל־אֶרֶץ נֶפִי אֶל־בֵּית הַמֶּלֶךְ הַמֹּשֵׁל בְּכָל־הָאָרֶץ זוּלַת אֶרֶץ יִשְׁמָעֵאל וְהוּא אֲבִי לָמוֹנִי׃",
   "english": "Now, as Ammon was thus teaching the people of Lamoni continually, we will return to the account of Aaron and his brethren; for after he departed from the land of Middoni he was led by the Spirit to the land of Nephi, even to the house of the king which was over all the land save it were the land of Ishmael; and he was the father of Lamoni."
  },
  {
@@ -22333,7 +22333,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 23,
   "verse": 14,
-  "hebrew": "וְהָעֲמָלֵקִים לֹא נֶהְפְּכוּ זוּלָתִי אֶחָד וְלֹא אִישׁ מִן־הָעֲמוּלוֹנִים כִּי אִם־הִקְשׁוּ אֶת־לְבָבָם וְגַם אֶת־לְבַב הַלָּמָנִים בְּאוֹתוֹ חֵלֶק הָאָרֶץ בְּכָל־מְקוֹם מוֹשְׁבוֹתֵיהֶם כֵּן בְּכָל־כַּפְרֵיהֶם וּבְכָל־עָרֵיהֶם׃",
+  "hebrew": "וְהָעֲמָלֵקִים לֹא נֶהְפְּכוּ זוּלַת אֶחָד וְלֹא אִישׁ מִן־הָעֲמוּלוֹנִים כִּי אִם־הִקְשׁוּ אֶת־לְבָבָם וְגַם אֶת־לְבַב הַלָּמָנִים בְּאוֹתוֹ חֵלֶק הָאָרֶץ בְּכָל־מְקוֹם מוֹשְׁבוֹתֵיהֶם כֵּן בְּכָל־כַּפְרֵיהֶם וּבְכָל־עָרֵיהֶם׃",
   "english": "And the Amalekites were not converted, save only one; neither were any of the Amulonites; but they did harden their hearts, and also the hearts of the Lamanites in that part of the land wheresoever they dwelt, yea, and all their villages and all their cities."
  },
  {
@@ -22837,7 +22837,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 26,
   "verse": 21,
-  "hebrew": "וְעַתָּה הִנֵּה אַחַי מִי הָאִישׁ הַטִּבְעִי אֲשֶׁר יֵדַע אֶת־אֵלֶּה אֹמֵר אֲנִי לָכֶם אֵין יוֹדֵעַ אֶת־אֵלֶּה זוּלָתִי הַשָּׁב׃",
+  "hebrew": "וְעַתָּה הִנֵּה אַחַי מִי הָאִישׁ הַטִּבְעִי אֲשֶׁר יֵדַע אֶת־אֵלֶּה אֹמֵר אֲנִי לָכֶם אֵין יוֹדֵעַ אֶת־אֵלֶּה זוּלַת הַשָּׁב׃",
   "english": "And now behold, my brethren, what natural man is there that knoweth these things? I say unto you, there is none that knoweth these things, save it be the penitent."
  },
  {
@@ -23075,7 +23075,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 27,
   "verse": 18,
-  "hebrew": "הֲלֹא שִׂמְחָה גְדוֹלָה הִיא זֹאת הִנֵּה זוֹ הַשִּׂמְחָה אֲשֶׁר לֹא־יִקָּחֶנָּה אִישׁ זוּלָתִי הַשָּׁב בֶּאֱמֶת וּשְׁפַל־רוּחַ הַמְבַקֵּשׁ אֹשֶׁר׃",
+  "hebrew": "הֲלֹא שִׂמְחָה גְדוֹלָה הִיא זֹאת הִנֵּה זוֹ הַשִּׂמְחָה אֲשֶׁר לֹא־יִקָּחֶנָּה אִישׁ זוּלַת הַשָּׁב בֶּאֱמֶת וּשְׁפַל־רוּחַ הַמְבַקֵּשׁ אֹשֶׁר׃",
   "english": "Now was not this exceeding joy? Behold, this is joy which none receiveth save it be the truly penitent and humble seeker of happiness."
  },
  {
@@ -23607,14 +23607,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 30,
   "verse": 33,
-  "hebrew": "וְאַף עִם הָעֲבוֹדוֹת הָרַבּוֹת אֲשֶׁר עָשִׂיתִי בָּעֵדָה מֵעוֹלָם לֹא לָקַחְתִּי אֲפִלּוּ סֶנִין אֶחָד בְּעַד עֲבוֹדָתִי וְלֹא אֶחָד מֵאַחַי זוּלָתִי בְּכִסֵּא הַמִּשְׁפָּט וְאָז לָקַחְנוּ רַק כְּפִי הַחֹק בְּעַד עֵתֵנוּ׃",
+  "hebrew": "וְאַף עִם הָעֲבוֹדוֹת הָרַבּוֹת אֲשֶׁר עָשִׂיתִי בָּעֵדָה מֵעוֹלָם לֹא לָקַחְתִּי אֲפִלּוּ סֶנִין אֶחָד בְּעַד עֲבוֹדָתִי וְלֹא אֶחָד מֵאַחַי זוּלַת בְּכִסֵּא הַמִּשְׁפָּט וְאָז לָקַחְנוּ רַק כְּפִי הַחֹק בְּעַד עֵתֵנוּ׃",
   "english": "And notwithstanding the many labors which I have performed in the church, I have never received so much as even one senine for my labor; neither has any of my brethren, save it were in the judgment– seat; and then we have received only according to law for our time."
  },
  {
   "book": "Alma",
   "chapter": 30,
   "verse": 34,
-  "hebrew": "וְעַתָּה אִם אֵין אֲנַחְנוּ מְקַבְּלִים דָּבָר בְּעַד עֲבוֹדָתֵנוּ בָּעֵדָה מַה־בֶּצַע לָנוּ לַעֲבֹד בָּעֵדָה זוּלָתִי לְהַגִּיד הָאֱמֶת לְמַעַן תִּהְיֶה לָנוּ שִׂמְחָה בְּשִׂמְחַת אַחֵינוּ׃",
+  "hebrew": "וְעַתָּה אִם אֵין אֲנַחְנוּ מְקַבְּלִים דָּבָר בְּעַד עֲבוֹדָתֵנוּ בָּעֵדָה מַה־בֶּצַע לָנוּ לַעֲבֹד בָּעֵדָה זוּלַת לְהַגִּיד הָאֱמֶת לְמַעַן תִּהְיֶה לָנוּ שִׂמְחָה בְּשִׂמְחַת אַחֵינוּ׃",
   "english": "And now, if we do not receive anything for our labors in the church, what doth it profit us to labor in the church save it were to declare the truth, that we may have rejoicings in the joy of our brethren?"
  },
  {
@@ -23656,7 +23656,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 30,
   "verse": 40,
-  "hebrew": "וְעַתָּה מַה־עֵדוּת יֶשׁ־לְךָ כִּי אֵין אֱלֹהִים אוֹ כִּי הַמָּשִׁיחַ לֹא יָבֹא אֲנִי אוֹמֵר לְךָ כִּי אֵין לְךָ זוּלָתִי דְבָרְךָ לְבַד׃",
+  "hebrew": "וְעַתָּה מַה־עֵדוּת יֶשׁ־לְךָ כִּי אֵין אֱלֹהִים אוֹ כִּי הַמָּשִׁיחַ לֹא יָבֹא אֲנִי אוֹמֵר לְךָ כִּי אֵין לְךָ זוּלַת דְבָרְךָ לְבַד׃",
   "english": "And now what evidence have ye that there is no God, or that Christ cometh not? I say unto you that ye have none, save it be your word only."
  },
  {
@@ -23691,7 +23691,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 30,
   "verse": 45,
-  "hebrew": "וְאַף־עַל־פִּי־כֵן אַתָּה הוֹלֵךְ מַסִּיט לֵב הָעָם הַזֶּה מֵעִיד לָהֶם כִּי אֵין אֱלֹהִים וְאַף־עַל־פִּי־כֵן תְּכַחֵשׁ נֶגֶד כָּל־הָעֵדִים הָאֵלֶּה וַיֹּאמֶר כֵּן אֲכַחֵשׁ אֶלָּא אִם תַּרְאֵנִי אוֹת׃",
+  "hebrew": "וְאַף־עַל־פִּי־כֵן אַתָּה הוֹלֵךְ מַסִּיט לֵב הָעָם הַזֶּה מֵעִיד לָהֶם כִּי אֵין אֱלֹהִים וְאַף־עַל־פִּי־כֵן תְּכַחֵשׁ נֶגֶד כָּל־הָעֵדִים הָאֵלֶּה וַיֹּאמֶר כֵּן אֲכַחֵשׁ זוּלַת אִם תַּרְאֵנִי אוֹת׃",
   "english": "And yet do ye go about, leading away the hearts of this people, testifying unto them there is no God? And yet will ye deny against all these witnesses? And he said: Yea, I will deny, except ye shall show me a sign."
  },
  {
@@ -23712,7 +23712,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 30,
   "verse": 48,
-  "hebrew": "וַיֹּאמֶר קוֹרִיהוֹר אֵלָיו אֵינֶנִּי מְכַחֵשׁ כִּי יֵשׁ אֱלֹהִים אַךְ אֵינֶנִּי מַאֲמִין כִּי יֵשׁ אֱלֹהִים וַאֲנִי גַם אוֹמֵר כִּי אַתֶּם לֹא יוֹדְעִים כִּי יֵשׁ אֱלֹהִים וְאֶלָּא אִם תַּרְאוּנִי אוֹת לֹא אַאֲמִין׃",
+  "hebrew": "וַיֹּאמֶר קוֹרִיהוֹר אֵלָיו אֵינֶנִּי מְכַחֵשׁ כִּי יֵשׁ אֱלֹהִים אַךְ אֵינֶנִּי מַאֲמִין כִּי יֵשׁ אֱלֹהִים וַאֲנִי גַם אוֹמֵר כִּי אַתֶּם לֹא יוֹדְעִים כִּי יֵשׁ אֱלֹהִים וְזוּלַת אִם תַּרְאוּנִי אוֹת לֹא אַאֲמִין׃",
   "english": "Now Korihor said unto him: I do not deny the existence of a God, but I do not believe that there is a God; and I say also, that ye do not know that there is a God; and except ye show me a sign, I will not believe."
  },
  {
@@ -23740,7 +23740,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 30,
   "verse": 52,
-  "hebrew": "וַיִּשְׁלַח קוֹרִיהוֹר יָדוֹ וַיִּכְתֹּב לֵאמֹר אֲנִי יוֹדֵעַ כִּי אֲנִי אִלֵּם כִּי לֹא אוּכַל לְדַבֵּר וַאֲנִי יוֹדֵעַ כִּי אֵין דָּבָר זוּלָתִי כֹּחַ אֱלֹהִים יָכוֹל לְהָבִיא זֹאת עָלַי אָכֵן וַאֲנִי תָמִיד יָדַעְתִּי כִּי יֵשׁ אֱלֹהִים׃",
+  "hebrew": "וַיִּשְׁלַח קוֹרִיהוֹר יָדוֹ וַיִּכְתֹּב לֵאמֹר אֲנִי יוֹדֵעַ כִּי אֲנִי אִלֵּם כִּי לֹא אוּכַל לְדַבֵּר וַאֲנִי יוֹדֵעַ כִּי אֵין דָּבָר זוּלַת כֹּחַ אֱלֹהִים יָכוֹל לְהָבִיא זֹאת עָלַי אָכֵן וַאֲנִי תָמִיד יָדַעְתִּי כִּי יֵשׁ אֱלֹהִים׃",
   "english": "And Korihor put forth his hand and wrote, saying: I know that I am dumb, for I cannot speak; and I know that nothing save it were the power of God could bring this upon me; yea, and I always knew that there was a God."
  },
  {
@@ -24216,7 +24216,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 32,
   "verse": 22,
-  "hebrew": "וְעַתָּה הִנֵּה אֹמֵר אֲנִי לָכֶם וַאֲנִי חָפֵץ כִּי תִזְכְּרוּ כִּי עֹשֶׂה אֱלֹהִים חֶסֶד לְכָל־הַמַּאֲמִינִים בִּשְׁמוֹ לָכֵן חָפֵץ הוּא בָּרִאשׁוֹנָה כִּי תַאֲמִינוּ אָכֵן בִּדְבָרוֹ׃",
+  "hebrew": "וְעַתָּה הִנֵּה אֹמֵר אֲנִי לָכֶם וַאֲנִי חָפֵץ כִּי תִזְכְּרוּ כִּי עֹשֶׂה־אֱלֹהִים חֶסֶד לְכָל־הַמַּאֲמִינִים בִּשְׁמוֹ לָכֵן חָפֵץ הוּא בָּרִאשׁוֹנָה כִּי תַאֲמִינוּ אָכֵן בִּדְבָרוֹ׃",
   "english": "And now, behold, I say unto you, and I would that ye should remember, that God is merciful unto all who believe on his name; therefore he desireth, in the first place, that ye should believe, yea, even on his word."
  },
  {
@@ -24251,7 +24251,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 32,
   "verse": 27,
-  "hebrew": "וְעַתָּה הִנֵּה עוֹרְרוּ חוּשֵׁיכֶם וְנַסּוּ אֶת־דְּבָרַי בְּגַרְגִּיר אֱמוּנָה וְאִם־לֹא תוּכְלוּ אֶלָּא לַחְפֹּץ יִפְעַל הַחֵפֶץ בָּכֶם עַד כִּי תַאֲמִינוּ וְתִתְּנוּ מָקוֹם לִדְבָרָי׃",
+  "hebrew": "וְעַתָּה הִנֵּה עוֹרְרוּ חוּשֵׁיכֶם וְנַסּוּ אֶת־דְּבָרַי בְּגַרְגִּיר אֱמוּנָה וְאִם־לֹא תוּכְלוּ כִּי־אִם לַחְפֹּץ יִפְעַל הַחֵפֶץ בָּכֶם עַד כִּי תַאֲמִינוּ וְתִתְּנוּ מָקוֹם לִדְבָרָי׃",
   "english": "But behold, if ye will awake and arouse your faculties, even to an experiment upon my words, and exercise a particle of faith, yea, even if ye can no more than desire to believe, let this desire work in you, even until ye believe in a manner that ye can give place for a portion of my words."
  },
  {
@@ -24461,7 +24461,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 33,
   "verse": 14,
-  "hebrew": "וְעַתָּה הִנֵּה אַחַי אֶשְׁאַל הַאִם קְרָאתֶם בַּכְּתוּבִים וְאִם קְרָאתֶם אֵיךְ תּוּכְלוּ לִכְפֹּר בְּבֶן־הָאֱלֹהִים׃",
+  "hebrew": "וְעַתָּה הִנֵּה אַחַי אֶשְׁאַל הַאִם קְרָאתֶם בַּכְּתוּבִים וְאִם קְרָאתֶם אֵיךְ תּוּכְלוּ לִכְפֹּר בְּבֶּן־אֱלֹהִים׃",
   "english": "Now behold, my brethren, I would ask if ye have read the scriptures? If ye have, how can ye disbelieve on the Son of God?"
  },
  {
@@ -24482,14 +24482,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 33,
   "verse": 17,
-  "hebrew": "וְעַתָּה אַחַי הִנֵּה רְאִיתֶם כִּי נָבִיא שֵׁנִי מִקֶּדֶם הֵעִיד עַל־בֶּן־הָאֱלֹהִים וּבַעֲבוּר כִּי לֹא הֵבִינוּ הָעָם אֶת־דְּבָרָיו וַיִּסְקְלֻהוּ עַד־מָוֶת׃",
+  "hebrew": "וְעַתָּה אַחַי הִנֵּה רְאִיתֶם כִּי נָבִיא שֵׁנִי מִקֶּדֶם הֵעִיד עַל־בֶּן־אֱלֹהִים וּבַעֲבוּר כִּי לֹא הֵבִינוּ הָעָם אֶת־דְּבָרָיו וַיִּסְקְלֻהוּ עַד־מָוֶת׃",
   "english": "And now, my brethren, ye see that a second prophet of old has testified of the Son of God, and because the people would not understand his words they stoned him to death."
  },
  {
   "book": "Alma",
   "chapter": 33,
   "verse": 18,
-  "hebrew": "אַךְ הִנֵּה לֹא כָל־זֹאת לֹא אֵלֶּה לְבַדָּם דִּבְּרוּ עַל־בֶּן־הָאֱלֹהִים׃",
+  "hebrew": "אַךְ הִנֵּה לֹא כָל־זֹאת לֹא אֵלֶּה לְבַדָּם דִּבְּרוּ עַל־בֶּן־אֱלֹהִים׃",
   "english": "But behold, this is not all; these are not the only ones who have spoken concerning the Son of God."
  },
  {
@@ -24517,7 +24517,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 33,
   "verse": 22,
-  "hebrew": "אִם־כֵּן אוֹי יָבֹא עֲלֵיכֶם וְאִם־לֹא כֵן שְׂאוּ עֵינֵיכֶם וְהָחֵלּוּ לְהַאֲמִין בְּבֶן־הָאֱלֹהִים כִּי יָבֹא לִפְדּוֹת אֶת־עַמּוֹ וְכִי יְעֻנֶּה וְיָמוּת לְכַפֵּר עַל־חַטֹּאתָם וְכִי יָקוּם מִן־הַמֵּתִים אֲשֶׁר יָבִיא תְּחִיַּת הַמֵּתִים וְכׇל־בְּנֵי הָאָדָם יַעַמְדוּ לְפָנָיו לְהִשָּׁפֵט בְּיוֹם הַדִּין הָאַחֲרוֹן כְּמַעֲשֵׂיהֶם׃",
+  "hebrew": "אִם־כֵּן אוֹי יָבֹא עֲלֵיכֶם וְאִם־לֹא כֵן שְׂאוּ עֵינֵיכֶם וְהָחֵלּוּ לְהַאֲמִין בְּבֶּן־אֱלֹהִים כִּי יָבֹא לִפְדּוֹת אֶת־עַמּוֹ וְכִי יְעֻנֶּה וְיָמוּת לְכַפֵּר עַל־חַטֹּאתָם וְכִי יָקוּם מִן־הַמֵּתִים אֲשֶׁר יָבִיא תְּחִיַּת הַמֵּתִים וְכׇל־בְּנֵי הָאָדָם יַעַמְדוּ לְפָנָיו לְהִשָּׁפֵט בְּיוֹם הַדִּין הָאַחֲרוֹן כְּמַעֲשֵׂיהֶם׃",
   "english": "If so, wo shall come upon you; but if not so, then cast about your eyes and begin to believe in the Son of God, that he will come to redeem his people, and that he shall suffer and die to atone for their sins; and that he shall rise again from the dead, which shall bring to pass the resurrection, that all men shall stand before him, to be judged at the last and judgment day, according to their works."
  },
  {
@@ -24538,7 +24538,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 34,
   "verse": 2,
-  "hebrew": "אַחַי חֹשֵׁב אֲנִי כִּי לֹא יִתָּכֵן כִּי לֹא תֵדְעוּ אֶת־הַדְּבָרִים אֲשֶׁר נֶאֶמְרוּ עַל־בּוֹא הַמָּשִׁיחַ אֲשֶׁר אֲנַחְנוּ מְלַמְּדִים כִּי הוּא בֶּן־הָאֱלֹהִים אָכֵן יָדַעְתִּי כִּי הַדְּבָרִים הָאֵלֶּה נִלְמְדוּ לָכֶם לָרֹב טֶרֶם סַרְתֶּם מֵעִמָּנוּ׃",
+  "hebrew": "אַחַי חֹשֵׁב אֲנִי כִּי לֹא יִתָּכֵן כִּי לֹא תֵדְעוּ אֶת־הַדְּבָרִים אֲשֶׁר נֶאֶמְרוּ עַל־בּוֹא הַמָּשִׁיחַ אֲשֶׁר אֲנַחְנוּ מְלַמְּדִים כִּי הוּא בֶּן־אֱלֹהִים אָכֵן יָדַעְתִּי כִּי הַדְּבָרִים הָאֵלֶּה נִלְמְדוּ לָכֶם לָרֹב טֶרֶם סַרְתֶּם מֵעִמָּנוּ׃",
   "english": "My brethren, I think that it is impossible that ye should be ignorant of the things which have been spoken concerning the coming of Christ, who is taught by us to be the Son of God; yea, I know that these things were taught unto you bountifully before your dissension from among us."
  },
  {
@@ -24559,7 +24559,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 34,
   "verse": 5,
-  "hebrew": "וְרָאִינוּ כִּי אֲשֶׁר בְּלִבְּכֶם הוּא אִם־הַדָּבָר בְּבֶן־הָאֱלֹהִים אוֹ אִם־לֹא יִהְיֶה מָשִׁיחַ׃",
+  "hebrew": "וְרָאִינוּ כִּי אֲשֶׁר בְּלִבְּכֶם הוּא אִם־הַדָּבָר בְּבֶּן־אֱלֹהִים אוֹ אִם־לֹא יִהְיֶה מָשִׁיחַ׃",
   "english": "And we have beheld that the great question which is in your minds is whether the word be in the Son of God, or whether there shall be no Christ."
  },
  {
@@ -24573,7 +24573,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 34,
   "verse": 7,
-  "hebrew": "אָחִי קָרָא עַל־דִּבְרֵי זֶנוֹס כִּי הַגְּאֻלָּה בָּאָה דֶּרֶךְ בֶּן־הָאֱלֹהִים וְגַם עַל־דִּבְרֵי זֶנוֹק וְגַם פָּנָה אֶל־מֹשֶׁה לְהוֹכִיחַ כִּי אֱמֶת הַדְּבָרִים הָאֵלֶּה׃",
+  "hebrew": "אָחִי קָרָא עַל־דִּבְרֵי זֶנוֹס כִּי הַגְּאֻלָּה בָּאָה דֶּרֶךְ בֶּן־אֱלֹהִים וְגַם עַל־דִּבְרֵי זֶנוֹק וְגַם פָּנָה אֶל־מֹשֶׁה לְהוֹכִיחַ כִּי אֱמֶת הַדְּבָרִים הָאֵלֶּה׃",
   "english": "My brother has called upon the words of Zenos, that redemption cometh through the Son of God, and also upon the words of Zenock; and  also he has appealed unto Moses, to prove that these things are true."
  },
  {
@@ -24622,7 +24622,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 34,
   "verse": 14,
-  "hebrew": "וְהִנֵּה זֶה כׇּל־טַעַם הַתּוֹרָה כֻּלָּהּ מוֹרָה אֶל־זֶבַח הַגָּדוֹל וְהָאַחֲרוֹן וְהַזֶּבַח הַהוּא יִהְיֶה בֶּן־הָאֱלֹהִים אָכֵן עוֹלָמִי וְנִצְחִי׃",
+  "hebrew": "וְהִנֵּה זֶה כׇּל־טַעַם הַתּוֹרָה כֻּלָּהּ מוֹרָה אֶל־זֶבַח הַגָּדוֹל וְהָאַחֲרוֹן וְהַזֶּבַח הַהוּא יִהְיֶה בֶּן־אֱלֹהִים אָכֵן עוֹלָמִי וְנִצְחִי׃",
   "english": "And behold, this is the whole meaning of the law, every whit pointing to that great and last sacrifice; and that great and last sacrifice will be the Son of God, yea, infinite and eternal."
  },
  {
@@ -24937,7 +24937,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 36,
   "verse": 2,
-  "hebrew": "וַאֲנִי מְבַקֵּשׁ כִּי תַעֲשֶׂה כַּאֲשֶׁר עָשִׂיתִי בְּזׇכְרִי אֶת־שְׁבִי אֲבוֹתֵינוּ כִּי הָיוּ בְּעֶבְדוּת וְאֵין מוֹשִׁיעַ לָהֶם זוּלָתִי אֱלֹהֵי אַבְרָהָם וֵאלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב וַיַּצִּילֵם מִצָּרָתָם׃",
+  "hebrew": "וַאֲנִי מְבַקֵּשׁ כִּי תַעֲשֶׂה כַּאֲשֶׁר עָשִׂיתִי בְּזׇכְרִי אֶת־שְׁבִי אֲבוֹתֵינוּ כִּי הָיוּ בְּעֶבְדוּת וְאֵין מוֹשִׁיעַ לָהֶם זוּלַת אֱלֹהֵי אַבְרָהָם וֵאלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב וַיַּצִּילֵם מִצָּרָתָם׃",
   "english": "I would that ye should do as I have done, in remembering the captivity of our fathers; for they were in bondage, and none could deliver them except it was the God of Abraham, and the God of Isaac, and the God of Jacob; and he surely did deliver them in their afflictions."
  },
  {
@@ -25525,7 +25525,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 38,
   "verse": 9,
-  "hebrew": "וְעַתָּה בְּנִי סִפַּרְתִּי לְךָ זֹאת לְמַעַן תִּלְמַד חׇכְמָה לְמַעַן תִּלְמַד מִמֶּנִּי כִּי אֵין דֶּרֶךְ אַחֶרֶת אֲשֶׁר בָּהּ יוּכַל הָאָדָם לְהִוָּשַׁע זוּלָתִי בַּמָּשִׁיחַ וְעַל־יָדוֹ הִנֵּה הוּא חַיֵּי הָעוֹלָם וְאוֹר הָעוֹלָם הִנֵּה הוּא דְּבַר הָאֱמֶת וְהַצֶּדֶק׃",
+  "hebrew": "וְעַתָּה בְּנִי סִפַּרְתִּי לְךָ זֹאת לְמַעַן תִּלְמַד חׇכְמָה לְמַעַן תִּלְמַד מִמֶּנִּי כִּי אֵין דֶּרֶךְ אַחֶרֶת אֲשֶׁר בָּהּ יוּכַל הָאָדָם לְהִוָּשַׁע זוּלַת בַּמָּשִׁיחַ וְעַל־יָדוֹ הִנֵּה הוּא חַיֵּי הָעוֹלָם וְאוֹר הָעוֹלָם הִנֵּה הוּא דְּבַר הָאֱמֶת וְהַצֶּדֶק׃",
   "english": "And now, my son, I have told you this that ye may learn wisdom, that ye may learn of me that there is no other way or means whereby man can be saved, only in and through Christ. Behold, he is the life and the light of the world. Behold, he is the word of truth and righteous– ness."
  },
  {
@@ -25721,7 +25721,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 40,
   "verse": 3,
-  "hebrew": "הִנֵּה הוּא מֵבִיא אֶת־תְּחִיַּת הַמֵּתִים אַךְ הִנֵּה בְּנִי הַתְּחִיָּה טֶרֶם בָּאָה עַתָּה אֲגַלֶּה לְךָ סוֹד אָכֵן יֵשׁ סוֹדוֹת רַבִּים אֲשֶׁר נִשְׁמָרִים וְאֵין אִישׁ יוֹדֵעַ אוֹתָם זוּלָתִי אֱלֹהִים בְּעַצְמוֹ אַךְ אַגִּיד לְךָ דָּבָר אֶחָד אֲשֶׁר דָּרַשְׁתִּי בְּחָרִיצוּת מֵאֱלֹהִים לְמַעַן אֵדַע וְהוּא עַל־דְּבַר הַתְּחִיָּה׃",
+  "hebrew": "הִנֵּה הוּא מֵבִיא אֶת־תְּחִיַּת הַמֵּתִים אַךְ הִנֵּה בְּנִי הַתְּחִיָּה טֶרֶם בָּאָה עַתָּה אֲגַלֶּה לְךָ סוֹד אָכֵן יֵשׁ סוֹדוֹת רַבִּים אֲשֶׁר נִשְׁמָרִים וְאֵין אִישׁ יוֹדֵעַ אוֹתָם זוּלַת אֱלֹהִים בְּעַצְמוֹ אַךְ אַגִּיד לְךָ דָּבָר אֶחָד אֲשֶׁר דָּרַשְׁתִּי בְּחָרִיצוּת מֵאֱלֹהִים לְמַעַן אֵדַע וְהוּא עַל־דְּבַר הַתְּחִיָּה׃",
   "english": "Behold, he bringeth to pass the resurrection of the dead. But behold, my son, the resurrection is not yet. Now, I unfold unto you a mystery; nevertheless, there are many mysteries which are kept, that no one knoweth them save God himself. But I show unto you one thing which I have inquired diligently of God that I might know—that is concerning the resurrection."
  },
  {
@@ -25826,7 +25826,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 40,
   "verse": 18,
-  "hebrew": "הִנֵּה אֹמֵר אֲנִי לְךָ לֹא אֶלָּא כַּוָּנָתָהּ כִּי יְאֻחַד הָרוּחַ עִם־גּוּף אֵלֶּה מִימֵי אָדָם עַד־תְּחִיַּת הַמָּשִׁיחַ׃",
+  "hebrew": "הִנֵּה אֹמֵר אֲנִי לְךָ לֹא כִּי־אִם כַּוָּנָתָהּ כִּי יְאֻחַד הָרוּחַ עִם־גּוּף אֵלֶּה מִימֵי אָדָם עַד־תְּחִיַּת הַמָּשִׁיחַ׃",
   "english": "Behold, I say unto you, Nay; but it meaneth the reuniting of the soul with the body, of those from the days of Adam down to the resurrection of Christ."
  },
  {
@@ -26078,7 +26078,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 42,
   "verse": 13,
-  "hebrew": "לָכֵן עַל־פִּי הַצֶּדֶק לֹא תוּכַל עֲצַת הַגְּאֻלָּה לָבוֹא רַק אִם־יָשׁוּבוּ בְּנֵי הָאָדָם בְּעֵת הַנִּסָּיוֹן הַזֹּאת אָכֵן בְּעֵת הַהֲכָנָה הַזֹּאת כִּי לוּלֵא זֹאת לֹא יוּכַל הַחֶסֶד לִפְעֹל כְּפִי בְּרִיתוֹ אֶלָּא אִם־יַשְׁחִית אֶת־מִשְׁפַּט הַצֶּדֶק וּמִשְׁפַּט הַצֶּדֶק לֹא יוּכַל לְהִשָּׁחֵת כִּי אִם־כֵּן יֶחְדַּל אֱלֹהִים מִהְיוֹת אֱלֹהִים׃",
+  "hebrew": "לָכֵן עַל־פִּי הַצֶּדֶק לֹא תוּכַל עֲצַת הַגְּאֻלָּה לָבוֹא רַק אִם־יָשׁוּבוּ בְּנֵי הָאָדָם בְּעֵת הַנִּסָּיוֹן הַזֹּאת אָכֵן בְּעֵת הַהֲכָנָה הַזֹּאת כִּי לוּלֵא זֹאת לֹא יוּכַל הַחֶסֶד לִפְעֹל כְּפִי בְּרִיתוֹ זוּלַת אִם־יַשְׁחִית אֶת־מִשְׁפַּט הַצֶּדֶק וּמִשְׁפַּט הַצֶּדֶק לֹא יוּכַל לְהִשָּׁחֵת כִּי אִם־כֵּן יֶחְדַּל אֱלֹהִים מִהְיוֹת אֱלֹהִים׃",
   "english": "Therefore, according to justice, the plan of redemption could not be brought about, only on conditions of repentance of men in this probationary state, yea, this preparatory state; for except it were for these conditions, mercy could not take effect except it should destroy the work of justice. Now the work of justice could not be destroyed; if so, God would cease to be God."
  },
  {
@@ -26092,14 +26092,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 42,
   "verse": 15,
-  "hebrew": "וְעַתָּה לֹא תוּכַל עֲצַת הַחֶסֶד לָבוֹא אֶלָּא אִם־תֵּעָשֶׂה כַּפָּרָה לָכֵן אֱלֹהִים בְּעַצְמוֹ מְכַפֵּר עַל־ חַטֹּאות הָעוֹלָם לְהָבִיא אֶת־עֲצַת הַחֶסֶד הַנֶּאֱמָן לְקַיֵּם אֶת־מִשְׁפַּט הַצֶּדֶק לְמַעַן יִהְיֶה אֱלֹהִים אֵל שָׁלֵם וְצַדִּיק וְקַיָּם בְּחַסְדּוֹ׃",
+  "hebrew": "וְעַתָּה לֹא תוּכַל עֲצַת הַחֶסֶד לָבוֹא זוּלַת אִם־תֵּעָשֶׂה כַּפָּרָה לָכֵן אֱלֹהִים בְּעַצְמוֹ מְכַפֵּר עַל־ חַטֹּאות הָעוֹלָם לְהָבִיא אֶת־עֲצַת הַחֶסֶד הַנֶּאֱמָן לְקַיֵּם אֶת־מִשְׁפַּט הַצֶּדֶק לְמַעַן יִהְיֶה אֱלֹהִים אֵל שָׁלֵם וְצַדִּיק וְקַיָּם בְּחַסְדּוֹ׃",
   "english": "And now, the plan of mercy could not be brought about except an atonement should be  made; therefore God himself atoneth for the sins of the world, to bring about the plan of mercy, to appease the demands of justice, that God might be a perfect, just God, and a merciful God also."
  },
  {
   "book": "Alma",
   "chapter": 42,
   "verse": 16,
-  "hebrew": "וְעַתָּה לֹא יוּכְלוּ לָשׁוּב לִבְנֵי הָאָדָם אֶלָּא אִם־יֵשׁ עֹנֶשׁ אֲשֶׁר הוּא גַּם־עוֹלָמִי כְּחַיֵּי הַנֶּפֶשׁ נָתוּן לְעֻמַּת עֲצַת הָאֹשֶׁר אֲשֶׁר הִיא עוֹלָמִית גַּם־כֵּן כְּחַיֵּי הַנֶּפֶשׁ׃",
+  "hebrew": "וְעַתָּה לֹא יוּכְלוּ לָשׁוּב לִבְנֵי הָאָדָם זוּלַת אִם־יֵשׁ עֹנֶשׁ אֲשֶׁר הוּא גַּם־עוֹלָמִי כְּחַיֵּי הַנֶּפֶשׁ נָתוּן לְעֻמַּת עֲצַת הָאֹשֶׁר אֲשֶׁר הִיא עוֹלָמִית גַּם־כֵּן כְּחַיֵּי הַנֶּפֶשׁ׃",
   "english": "Now, repentance could not come unto men except there were a punishment, which also was eternal as the life of the soul should be, affixed opposite to the plan of happiness, which was as eternal also as the life of the soul."
  },
  {
@@ -26155,7 +26155,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 42,
   "verse": 24,
-  "hebrew": "כִּי הִנֵּה הַצֶּדֶק עֹשֶׂה אֶת־כׇּל־מִשְׁפָּטָיו וְגַם הַחֶסֶד דּוֹרֵשׁ אֶת־כׇּל־אֲשֶׁר לוֹ כְּפִי הַבְּרִית וְכֵן אֵין נוֹשָׁעִים אֶלָּא הַשָּׁבִים בֶּאֱמֶת׃",
+  "hebrew": "כִּי הִנֵּה הַצֶּדֶק עֹשֶׂה אֶת־כׇּל־מִשְׁפָּטָיו וְגַם הַחֶסֶד דּוֹרֵשׁ אֶת־כׇּל־אֲשֶׁר לוֹ כְּפִי הַבְּרִית וְכֵן אֵין נוֹשָׁעִים כִּי־אִם הַשָּׁבִים בֶּאֱמֶת׃",
   "english": "For behold, justice exerciseth all his demands, and also mercy claimeth all which is her own; and thus, none but the truly penitent are saved."
  },
  {
@@ -26218,7 +26218,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 43,
   "verse": 2,
-  "hebrew": "וְעַתָּה לֹא נֹאמַר עוֹד עַל־קְרִיאָתָם זוּלָתִי כִּי קָרְאוּ אֶת־הַדָּבָר וְאֶת־הָאֱמֶת כְּרוּחַ הַנְּבוּאָה וְהַחָזוֹן וַיִּקְרְאוּ כְּסֵדֶר אֱלֹהִים הַקָּדוֹשׁ אֲשֶׁר בּוֹ נִקְרָאוּ׃",
+  "hebrew": "וְעַתָּה לֹא נֹאמַר עוֹד עַל־קְרִיאָתָם זוּלַת כִּי קָרְאוּ אֶת־הַדָּבָר וְאֶת־הָאֱמֶת כְּרוּחַ הַנְּבוּאָה וְהַחָזוֹן וַיִּקְרְאוּ כְּסֵדֶר אֱלֹהִים הַקָּדוֹשׁ אֲשֶׁר בּוֹ נִקְרָאוּ׃",
   "english": "Now we shall say no more concerning their preaching, except that they preached the word, and the truth, according to the spirit of prophecy and revelation; and they preached after the holy order of God by which they were called."
  },
  {
@@ -26344,7 +26344,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 43,
   "verse": 20,
-  "hebrew": "וְצְבָא זֶרַהֶמְנָה לֹא הָיָה מוּכָן בְּדָבָר כָּזֶה כִּי הָיוּ לָהֶם רַק חַרְבוֹתֵיהֶם וְחַרְמְשׁוֹתֵיהֶם קַשְׁתוֹתֵיהֶם וְחִצֵּיהֶם אַבְנֵיהֶם וְקַלְּעֵיהֶם וְהָיוּ עֵירֻמִּים מִלְּבַד עוֹר אֲשֶׁר חָגְרוּ עַל־מָתְנֵיהֶם כֻּלָּם הָיוּ עֵירֻמִּים זוּלָתִי הַזּוֹרָמִים וְהָעֲמָלֵקִים׃",
+  "hebrew": "וְצְבָא זֶרַהֶמְנָה לֹא הָיָה מוּכָן בְּדָבָר כָּזֶה כִּי הָיוּ לָהֶם רַק חַרְבוֹתֵיהֶם וְחַרְמְשׁוֹתֵיהֶם קַשְׁתוֹתֵיהֶם וְחִצֵּיהֶם אַבְנֵיהֶם וְקַלְּעֵיהֶם וְהָיוּ עֵירֻמִּים מִלְּבַד עוֹר אֲשֶׁר חָגְרוּ עַל־מָתְנֵיהֶם כֻּלָּם הָיוּ עֵירֻמִּים זוּלַת הַזּוֹרָמִים וְהָעֲמָלֵקִים׃",
   "english": "Now the army of Zerahemnah was not prepared with any such thing; they had only their swords and their cimeters, their bows and their arrows, their stones and their slings; and they were naked, save it were a skin which was girded about their loins; yea, all were naked, save it were the Zoramites and the Amalekites;"
  },
  {
@@ -26519,7 +26519,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 43,
   "verse": 45,
-  "hebrew": "אַךְ הַנֶּפִיִּים הָיוּ מְעוֹרָרִים בְּסִבָּה טוֹבָה יוֹתֵר כִּי לֹא נִלְחֲמוּ לְמַעַן מַלְכוּת וְלֹא לְמַעַן שִׁלְטוֹן אֶלָּא נִלְחֲמוּ עַל־בָּתֵּיהֶם וְעַל־דְּרוֹרָם וְעַל־נְשֵׁיהֶם וְעַל־יַלְדֵיהֶם וְעַל־כָּל־אֲשֶׁר לָהֶם וְעַל־חֻקֵּי עֲבוֹדָתָם וְקְהִלָּתָם׃",
+  "hebrew": "אַךְ הַנֶּפִיִּים הָיוּ מְעוֹרָרִים בְּסִבָּה טוֹבָה יוֹתֵר כִּי לֹא נִלְחֲמוּ לְמַעַן מַלְכוּת וְלֹא לְמַעַן שִׁלְטוֹן כִּי־אִם נִלְחֲמוּ עַל־בָּתֵּיהֶם וְעַל־דְּרוֹרָם וְעַל־נְשֵׁיהֶם וְעַל־יַלְדֵיהֶם וְעַל־כָּל־אֲשֶׁר לָהֶם וְעַל־חֻקֵּי עֲבוֹדָתָם וְקְהִלָּתָם׃",
   "english": "Nevertheless, the Nephites were inspired by a better cause, for they were not fighting for monarchy nor power but they were fighting for their homes and their liberties, their wives and their children, and their all, yea, for their rites of worship and their church."
  },
  {
@@ -26610,7 +26610,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 44,
   "verse": 4,
-  "hebrew": "עַתָּה רוֹאִים אַתֶּם כִּי זוֹ אֱמוּנַת אֱלֹהִים הָאֱמֶת אָכֵן רוֹאִים אַתֶּם כִּי יִתְמֹךְ אֱלֹהִים וְיִשְׁמֹר וְיִנְצֹר אוֹתָנוּ כָּל־עוֹד נֶאֱמָנִים אָנוּ לוֹ וְלֶאֱמוּנָתֵנוּ וּלְדָתֵנוּ וּלְעוֹלָם לֹא יִתֵּן יְהוָה כִּי נֻשְׁמַד אֶלָּא אִם־נִפֹּל בְּפֶשַׁע וּנְכַחֵשׁ בֶּאֱמוּנָתֵנוּ׃",
+  "hebrew": "עַתָּה רוֹאִים אַתֶּם כִּי זוֹ אֱמוּנַת אֱלֹהִים הָאֱמֶת אָכֵן רוֹאִים אַתֶּם כִּי יִתְמֹךְ אֱלֹהִים וְיִשְׁמֹר וְיִנְצֹר אוֹתָנוּ כָּל־עוֹד נֶאֱמָנִים אָנוּ לוֹ וְלֶאֱמוּנָתֵנוּ וּלְדָתֵנוּ וּלְעוֹלָם לֹא יִתֵּן יְהוָה כִּי נֻשְׁמַד זוּלַת אִם־נִפֹּל בְּפֶשַׁע וּנְכַחֵשׁ בֶּאֱמוּנָתֵנוּ׃",
   "english": "Now ye see that this is the true faith of God; yea, ye see that God will support, and keep, and preserve us, so long as we are faithful unto him, and unto our faith, and our religion; and never will the Lord suffer that we shall be destroyed except we should fall into transgression and deny our faith."
  },
  {
@@ -26659,7 +26659,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 44,
   "verse": 11,
-  "hebrew": "וְעַתָּה לֹא אוּכַל לְהָשִׁיב אֶת־הַדְּבָרִים אֲשֶׁר דִּבַּרְתִּי לָכֵן חַי־יְהוָה לֹא תֵצְאוּ אֶלָּא אִם־תֵּצְאוּ בִּשְׁבוּעָה כִּי לֹא תָשׁוּבוּ עוֹד נֶגְדֵּנוּ לַמִּלְחָמָה וְעַתָּה כִּי בְּיָדֵינוּ אַתֶּם נִשְׁפֹּךְ אֶת־דִּמְכֶם עַל־הָאָרֶץ אוֹ תִכָּנְעוּ לַדְּבָרִים אֲשֶׁר הִצַּעְתִּי׃",
+  "hebrew": "וְעַתָּה לֹא אוּכַל לְהָשִׁיב אֶת־הַדְּבָרִים אֲשֶׁר דִּבַּרְתִּי לָכֵן חַי־יְהוָה לֹא תֵצְאוּ זוּלַת אִם־תֵּצְאוּ בִּשְׁבוּעָה כִּי לֹא תָשׁוּבוּ עוֹד נֶגְדֵּנוּ לַמִּלְחָמָה וְעַתָּה כִּי בְּיָדֵינוּ אַתֶּם נִשְׁפֹּךְ אֶת־דִּמְכֶם עַל־הָאָרֶץ אוֹ תִכָּנְעוּ לַדְּבָרִים אֲשֶׁר הִצַּעְתִּי׃",
   "english": "Now I cannot recall the words which I have spoken, therefore as the Lord liveth, ye shall not depart except ye depart with an oath that ye will not return again against us to war. Now as ye are in our hands we will spill your blood upon the ground, or ye shall submit to the conditions which I have proposed."
  },
  {
@@ -26848,7 +26848,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 45,
   "verse": 14,
-  "hebrew": "אַךְ כָּל־הַנִּשְׁאָר וְלֹא יֻשְׁמַד בַּיּוֹם הַגָּדוֹל וְהַנּוֹרָא הַהוּא יִמָּנֶה בֵּין הַלָּמָנִים וְיִהְיֶה כָּמוֹהֶם כֻּלָּם זוּלָתִי מְעַטִּים אֲשֶׁר יִקָּרְאוּ תַּלְמִידֵי יְהוָה וְאוֹתָם יִרְדְּפוּ הַלָּמָנִים עַד אֲשֶׁר יִכָּחֲדוּ וְעַתָּה בַּעֲבוּר עָוֹן תִּתְמַלֵּא הַנְּבוּאָה הַזֹּאת׃",
+  "hebrew": "אַךְ כָּל־הַנִּשְׁאָר וְלֹא יֻשְׁמַד בַּיּוֹם הַגָּדוֹל וְהַנּוֹרָא הַהוּא יִמָּנֶה בֵּין הַלָּמָנִים וְיִהְיֶה כָּמוֹהֶם כֻּלָּם זוּלַת מְעַטִּים אֲשֶׁר יִקָּרְאוּ תַּלְמִידֵי יְהוָה וְאוֹתָם יִרְדְּפוּ הַלָּמָנִים עַד אֲשֶׁר יִכָּחֲדוּ וְעַתָּה בַּעֲבוּר עָוֹן תִּתְמַלֵּא הַנְּבוּאָה הַזֹּאת׃",
   "english": "But whosoever remaineth, and is not destroyed in that great and dreadful day, shall be numbered among the Lamanites, and shall become like unto them, all, save it be a few who shall be called the disciples of the Lord; and them shall the Lamanites pursue even until they shall become extinct. And now, because of iniquity, this prophecy shall be fulfilled."
  },
  {
@@ -30103,7 +30103,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 58,
   "verse": 31,
-  "hebrew": "וְכָל־הֶעָרִים אֲשֶׁר לָקְחוּ הַלָּמָנִים הִנָּם בְּיָדֵינוּ בָּעֵת הַזֹּאת וַאֲבוֹתֵינוּ וְנָשֵׁינוּ וְיַלְדֵינוּ שָׁבִים אֶל־בָּתֵּיהֶם זוּלָתִי אֵלֶּה אֲשֶׁר נִשְׁבּוּ וְהוּבְלוּ בְּיַד הַלָּמָנִים׃",
+  "hebrew": "וְכָל־הֶעָרִים אֲשֶׁר לָקְחוּ הַלָּמָנִים הִנָּם בְּיָדֵינוּ בָּעֵת הַזֹּאת וַאֲבוֹתֵינוּ וְנָשֵׁינוּ וְיַלְדֵינוּ שָׁבִים אֶל־בָּתֵּיהֶם זוּלַת אֵלֶּה אֲשֶׁר נִשְׁבּוּ וְהוּבְלוּ בְּיַד הַלָּמָנִים׃",
   "english": "And those cities which had been taken by the Lamanites, all of them are at this period of time in our possession; and our fathers and our women and our children are returning to their homes, all save it be those who have been taken prisoners and carried off by the Lamanites."
  },
  {
@@ -30579,7 +30579,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 61,
   "verse": 9,
-  "hebrew": "וְעַתָּה בְּאִגַּרְתְּךָ הוֹכַחְתָּ אוֹתִי אַךְ אֵין הַדָּבָר מַשְׁנֶה לֹא כָעַסְתִּי כִּי אִם־שָׂמַחְתִּי בְּגֹדֶל לְבָבֶךָ אֲנִי פָּהוֹרָן לֹא אֲבַקֵּשׁ שִׁלְטוֹן זוּלָתִי לְהַחֲזִיק בְּכִסֵּא מִשְׁפָּטִי לְמַעַן אֶשְׁמֹר אֶת־מִשְׁפְּטֵי וּדְרוֹר עַמִּי נַפְשִׁי עוֹמֶדֶת אֵיתָן בַּדְּרוֹר אֲשֶׁר חִפְּשָׁנוּ בּוֹ אֱלֹהִים׃",
+  "hebrew": "וְעַתָּה בְּאִגַּרְתְּךָ הוֹכַחְתָּ אוֹתִי אַךְ אֵין הַדָּבָר מַשְׁנֶה לֹא כָעַסְתִּי כִּי אִם־שָׂמַחְתִּי בְּגֹדֶל לְבָבֶךָ אֲנִי פָּהוֹרָן לֹא אֲבַקֵּשׁ שִׁלְטוֹן זוּלַת לְהַחֲזִיק בְּכִסֵּא מִשְׁפָּטִי לְמַעַן אֶשְׁמֹר אֶת־מִשְׁפְּטֵי וּדְרוֹר עַמִּי נַפְשִׁי עוֹמֶדֶת אֵיתָן בַּדְּרוֹר אֲשֶׁר חִפְּשָׁנוּ בּוֹ אֱלֹהִים׃",
   "english": "And now, in your epistle you have censured me, but it mattereth not; I am not angry, but do rejoice in the greatness of your heart. I, Pahoran, do not seek for power, save only to retain my judgment– seat that I may preserve the rights and the liberty of my people. My soul standeth fast in that liberty in the which God hath made us free."
  },
  {
@@ -30908,7 +30908,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 62,
   "verse": 35,
-  "hebrew": "וַיַּחֲנוּ לַלָּיְלָה כִּי הִנֵּה הַנֶּפִיִּים  וְגַם הַלָּמָנִים עֲיֵפִים מֵרֹב הַמַּסָּע לָכֵן לֹא חָשְׁבוּ מַחֲשָׁבוֹת בַּלַּיְלָה זוּלָתִי טֵאַנְקוּם כִּי חָרָה אַפּוֹ מְאֹד בְּעַמּוֹרוֹן כִּי חָשַׁב כִּי עַמּוֹרוֹן וַעֲמָלִיקְיָה אָחִיו הָיוּ גֹּרֶם הַמִּלְחָמָה הַגְּדוֹלָה וְהָאֲרֻכָּה הַזֹּאת בֵּינֵיהֶם וּבֵין הַלָּמָנִים אֲשֶׁר גָּרְמָה לְכָל־כָּךְ הַרְבֵּה מִלְחָמָה וּשְׁפִיכוּת דָּמִים הֵן וּלְרָעָב רַב כָּזֶה׃",
+  "hebrew": "וַיַּחֲנוּ לַלָּיְלָה כִּי הִנֵּה הַנֶּפִיִּים  וְגַם הַלָּמָנִים עֲיֵפִים מֵרֹב הַמַּסָּע לָכֵן לֹא חָשְׁבוּ מַחֲשָׁבוֹת בַּלַּיְלָה זוּלַת טֵאַנְקוּם כִּי חָרָה אַפּוֹ מְאֹד בְּעַמּוֹרוֹן כִּי חָשַׁב כִּי עַמּוֹרוֹן וַעֲמָלִיקְיָה אָחִיו הָיוּ גֹּרֶם הַמִּלְחָמָה הַגְּדוֹלָה וְהָאֲרֻכָּה הַזֹּאת בֵּינֵיהֶם וּבֵין הַלָּמָנִים אֲשֶׁר גָּרְמָה לְכָל־כָּךְ הַרְבֵּה מִלְחָמָה וּשְׁפִיכוּת דָּמִים הֵן וּלְרָעָב רַב כָּזֶה׃",
   "english": "And thus they did encamp for the night. For behold, the Nephites and the Lamanites also were weary because of the greatness of the march; therefore they did not resolve upon any stratagem in the night– time, save it were Teancum; for he was exceedingly angry with Ammoron, insomuch that he considered that Ammoron, and Amalickiah his brother, had been the cause of this great and lasting war between them and the Lamanites, which had been the cause of so much war and bloodshed, yea, and so much famine."
  },
  {
@@ -31314,7 +31314,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 1,
   "verse": 24,
-  "hebrew": "וּבְחָשְׁבוֹ כִּי עִקַּר כֹּחָם בְּתוֹךְ הָאָרֶץ לָכֵן צָעַד קָדִימָה וְלֹא נָתַן לָהֶם זְמַן לְהִתְקַבֵּץ זוּלָתִי בַּחֲבוּרוֹת קְטַנּוֹת וְכָכָה נָפְלוּ עֲלֵיהֶם וַיַּפִּילוּם אָרְצָה׃",
+  "hebrew": "וּבְחָשְׁבוֹ כִּי עִקַּר כֹּחָם בְּתוֹךְ הָאָרֶץ לָכֵן צָעַד קָדִימָה וְלֹא נָתַן לָהֶם זְמַן לְהִתְקַבֵּץ זוּלַת בַּחֲבוּרוֹת קְטַנּוֹת וְכָכָה נָפְלוּ עֲלֵיהֶם וַיַּפִּילוּם אָרְצָה׃",
   "english": "And, supposing that their greatest strength was in the center of the land, therefore he did march forth, giving them no time to assemble themselves together save it were in small bodies; and in this manner they did fall upon them and cut them down to the earth."
  },
  {
@@ -31489,7 +31489,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 3,
   "verse": 1,
-  "hebrew": "וַיְהִי בִּשְׁנַת הָאַרְבָּעִים וְשָׁלֹשׁ לְמַלְכוּת הַשֹּׁפְטִים לֹא הָיְתָה מְרִיבָה בְּקֶרֶב עַם נֶפִי זוּלָתִי גַּאֲוָה מְעַט אֲשֶׁר הָיְתָה בַּקְּהִלָּה אֲשֶׁר גָּרְמָה לִפְלָגִים קְטַנִּים בֵּין הָעָם וְהַדְּבָרִים הָאֵלֶּה יֻשְּׁבוּ בִּכְלוֹת שְׁנַת הָאַרְבָּעִים וְשָׁלֹשׁ׃",
+  "hebrew": "וַיְהִי בִּשְׁנַת הָאַרְבָּעִים וְשָׁלֹשׁ לְמַלְכוּת הַשֹּׁפְטִים לֹא הָיְתָה מְרִיבָה בְּקֶרֶב עַם נֶפִי זוּלַת גַּאֲוָה מְעַט אֲשֶׁר הָיְתָה בַּקְּהִלָּה אֲשֶׁר גָּרְמָה לִפְלָגִים קְטַנִּים בֵּין הָעָם וְהַדְּבָרִים הָאֵלֶּה יֻשְּׁבוּ בִּכְלוֹת שְׁנַת הָאַרְבָּעִים וְשָׁלֹשׁ׃",
   "english": "And now it came to pass in the forty and third year of the reign of the judges, there was no contention among the people of Nephi save it were a little pride which was in the church, which did cause some little dissensions among the people, which affairs were settled in the ending of the forty and third year."
  },
  {
@@ -31524,7 +31524,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 3,
   "verse": 6,
-  "hebrew": "וְעַתָּה לֹא הָיָה חֵלֶק מִן־הָאָרֶץ שָׁמֵם זוּלָתִי מֵעֵצִים אַךְ מֵרֹב הַשְׁחָתַת הָעָם אֲשֶׁר יָשְׁבוּ בָאָרֶץ לְפָנִים נִקְרְאָה שְׁמָמָה׃",
+  "hebrew": "וְעַתָּה לֹא הָיָה חֵלֶק מִן־הָאָרֶץ שָׁמֵם זוּלַת מֵעֵצִים אַךְ מֵרֹב הַשְׁחָתַת הָעָם אֲשֶׁר יָשְׁבוּ בָאָרֶץ לְפָנִים נִקְרְאָה שְׁמָמָה׃",
   "english": "And now no part of the land was desolate, save it were for timber; but because of the greatness of the destruction of the people who had before inhabited the land it was called desolate."
  },
  {
@@ -31643,7 +31643,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 3,
   "verse": 23,
-  "hebrew": "וַיְהִי בִּשְׁנַת הָאַרְבָּעִים וָתֵשַׁע לְמַלְכוּת הַשֹּׁפְטִים וַיְהִי שָׁלוֹם מִתְמִיד בָּאָרֶץ זוּלָתִי הַקְּשָׁרִים הַסּוֹדִיִּים אֲשֶׁר הֵקִים גָּדִיאַנְטוֹן הַשּׁוֹדֵד בְּחֶלְקֵי הָאָרֶץ הַנּוֹשָׁבִים אֲשֶׁר בָּעֵת הַהִיא לֹא נוֹדְעוּ לְרָאשֵׁי הַמֶּמְשָׁלָה לָכֵן לֹא הֻשְׁמְדוּ מִן־הָאָרֶץ׃",
+  "hebrew": "וַיְהִי בִּשְׁנַת הָאַרְבָּעִים וָתֵשַׁע לְמַלְכוּת הַשֹּׁפְטִים וַיְהִי שָׁלוֹם מִתְמִיד בָּאָרֶץ זוּלַת הַקְּשָׁרִים הַסּוֹדִיִּים אֲשֶׁר הֵקִים גָּדִיאַנְטוֹן הַשּׁוֹדֵד בְּחֶלְקֵי הָאָרֶץ הַנּוֹשָׁבִים אֲשֶׁר בָּעֵת הַהִיא לֹא נוֹדְעוּ לְרָאשֵׁי הַמֶּמְשָׁלָה לָכֵן לֹא הֻשְׁמְדוּ מִן־הָאָרֶץ׃",
   "english": "And it came to pass in the forty and ninth year of the reign of the judges, there was continual peace established in the land, all save it were the secret combinations which Gadianton the robber had established in the more settled parts of the land, which at that time were not known unto those who were at the head of government; therefore they were not destroyed out of the land."
  },
  {
@@ -31713,7 +31713,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 3,
   "verse": 33,
-  "hebrew": "וּבִשְׁנַת הַחֲמִשִּׁים וְאַחַת לְמַלְכוּת הַשֹּׁפְטִים הָיָה גַם־שָׁלוֹם זוּלָתִי הַגַּאֲוָה אֲשֶׁר הֵחֵלָּה לָבוֹא בַּקְּהִלָּה לֹא בִּקְהִלַּת אֱלֹהִים כִּי אִם־בְּלֵב הָעָם הָאֹמְרִים כִּי הֵם לִקְהִלַּת אֱלֹהִים׃",
+  "hebrew": "וּבִשְׁנַת הַחֲמִשִּׁים וְאַחַת לְמַלְכוּת הַשֹּׁפְטִים הָיָה גַם־שָׁלוֹם זוּלַת הַגַּאֲוָה אֲשֶׁר הֵחֵלָּה לָבוֹא בַּקְּהִלָּה לֹא בִּקְהִלַּת אֱלֹהִים כִּי אִם־בְּלֵב הָעָם הָאֹמְרִים כִּי הֵם לִקְהִלַּת אֱלֹהִים׃",
   "english": "And in the fifty and first year of the reign of the judges there was peace also, save it were the pride which began to enter into the church—not into the church of God, but into the hearts of the people who professed to belong to the church of God—"
  },
  {
@@ -31734,7 +31734,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 3,
   "verse": 36,
-  "hebrew": "וַיְהִי כִּי כָּלְתָה שְׁנַת הַחֲמִשִּׁים וּשְׁתַּיִם גַּם־כֵּן בְּשָׁלוֹם זוּלָתִי הַגַּאֲוָה הַגְּדוֹלָה מְאֹד אֲשֶׁר נִכְנְסָה בְּלֵב הָעָם וַיְהִי מִפְּנֵי עָשְׁרָם הַגָּדוֹל מְאֹד וְהַצְלָחָתָם בָּאָרֶץ וַתִּגְדַּל עֲלֵיהֶם מִיּוֹם לְיוֹם׃",
+  "hebrew": "וַיְהִי כִּי כָּלְתָה שְׁנַת הַחֲמִשִּׁים וּשְׁתַּיִם גַּם־כֵּן בְּשָׁלוֹם זוּלַת הַגַּאֲוָה הַגְּדוֹלָה מְאֹד אֲשֶׁר נִכְנְסָה בְּלֵב הָעָם וַיְהִי מִפְּנֵי עָשְׁרָם הַגָּדוֹל מְאֹד וְהַצְלָחָתָם בָּאָרֶץ וַתִּגְדַּל עֲלֵיהֶם מִיּוֹם לְיוֹם׃",
   "english": "And it came to pass that the fifty and second year ended in peace also, save it were the exceedingly great pride which had gotten into the hearts of the people; and it was because of their exceedingly great riches and their prosperity in the land; and it did grow upon them from day to day."
  },
  {
@@ -31944,7 +31944,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 5,
   "verse": 3,
-  "hebrew": "הֵן וְלֹא זֹאת בִּלְבָד הָיוּ עַם־קְשֵׁה־עֹרֶף עַד כִּי לֹא יָכְלוּ לְהִשָּׁלֵט בַּחֹק וּבַמִּשְׁפָּט זוּלָתִי לְהַשְׁחָתָם׃",
+  "hebrew": "הֵן וְלֹא זֹאת בִּלְבָד הָיוּ עַם־קְשֵׁה־עֹרֶף עַד כִּי לֹא יָכְלוּ לְהִשָּׁלֵט בַּחֹק וּבַמִּשְׁפָּט זוּלַת לְהַשְׁחָתָם׃",
   "english": "Yea, and this was not all; they were a stiffnecked people, insomuch that they could not be governed by the law nor justice, save it were to their destruction."
  },
  {
@@ -31986,7 +31986,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 5,
   "verse": 9,
-  "hebrew": "זִכְרוּ זִכְרוּ בָּנַי אֶת־דִּבְרֵי הַמֶּלֶךְ בִּנְיָמִין אֲשֶׁר דִּבֵּר אֶל־עַמּוֹ הֵן זִכְרוּ כִּי אֵין דֶּרֶךְ אַחֶרֶת אֲשֶׁר בָּהּ יוּכַל הָאָדָם לְהִוָּשַׁע זוּלָתִי בְּדַם כַּפָּרַת יֵשׁוּעַ הַמָּשִׁיחַ אֲשֶׁר יָבוֹא הֵן זִכְרוּ כִּי הוּא בָּא לִגְאֹל אֶת־הָעוֹלָם׃",
+  "hebrew": "זִכְרוּ זִכְרוּ בָּנַי אֶת־דִּבְרֵי הַמֶּלֶךְ בִּנְיָמִין אֲשֶׁר דִּבֵּר אֶל־עַמּוֹ הֵן זִכְרוּ כִּי אֵין דֶּרֶךְ אַחֶרֶת אֲשֶׁר בָּהּ יוּכַל הָאָדָם לְהִוָּשַׁע זוּלַת בְּדַם כַּפָּרַת יֵשׁוּעַ הַמָּשִׁיחַ אֲשֶׁר יָבוֹא הֵן זִכְרוּ כִּי הוּא בָּא לִגְאֹל אֶת־הָעוֹלָם׃",
   "english": "O remember, remember, my sons, the words which king Benjamin spake unto his people; yea, remember that there is no other way nor means whereby man can be saved, only through the atoning blood of Jesus Christ, who shall come, yea, remember that he cometh to redeem the world."
  },
  {
@@ -32735,7 +32735,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 7,
   "verse": 23,
-  "hebrew": "כִּי הִנֵּה כֹּה אָמַר יְהוָה לֹא אַרְאֶה לָרְשָׁעִים אֶת־כֹּחִי לְאֶחָד יוֹתֵר מֵהָאַחֵר זוּלָתִי לַשָּׁבִים מֵחַטֹּאתֵיהֶם וּמַקְשִׁיבִים לִדְבָרַי וְעַתָּה לָכֵן רוֹצֶה אֲנִי כִּי תִּרְאוּ אַחַי כִּי יִיטַב לַלָּמָנִים מִכֶּם אִם לֹא תָשׁוּבוּ׃",
+  "hebrew": "כִּי הִנֵּה כֹּה אָמַר יְהוָה לֹא אַרְאֶה לָרְשָׁעִים אֶת־כֹּחִי לְאֶחָד יוֹתֵר מֵהָאַחֵר זוּלַת לַשָּׁבִים מֵחַטֹּאתֵיהֶם וּמַקְשִׁיבִים לִדְבָרַי וְעַתָּה לָכֵן רוֹצֶה אֲנִי כִּי תִּרְאוּ אַחַי כִּי יִיטַב לַלָּמָנִים מִכֶּם אִם לֹא תָשׁוּבוּ׃",
   "english": "For behold, thus saith the Lord: I will not show unto the wicked of my strength, to one more than the other, save it be unto those that repent of their sins, and hearken unto my words. Now therefore, I would that ye should behold, my brethren, that it shall be better for the Lamanites than for you except ye shall repent."
  },
  {
@@ -32924,7 +32924,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 8,
   "verse": 21,
-  "hebrew": "וְעַתָּה הֲתָרִיבוּ כִּי חָרְבָה יְרוּשָׁלַיִם הֲתֹאמְרוּ כִּי לֹא נֶהֶרְגוּ בְּנֵי צִדְקִיָּהוּ זוּלָתִי מוּלֵק הֵן הַאִם לֹא תִרְאוּ כִּי זֶרַע צִדְקִיָּהוּ אִתָּנוּ וְהֵם גֹּרְשׁוּ מֵאֶרֶץ יְרוּשָׁלַיִם אַךְ הִנֵּה לֹא זֶה הַכֹּל׃",
+  "hebrew": "וְעַתָּה הֲתָרִיבוּ כִּי חָרְבָה יְרוּשָׁלַיִם הֲתֹאמְרוּ כִּי לֹא נֶהֶרְגוּ בְּנֵי צִדְקִיָּהוּ זוּלַת מוּלֵק הֵן הַאִם לֹא תִרְאוּ כִּי זֶרַע צִדְקִיָּהוּ אִתָּנוּ וְהֵם גֹּרְשׁוּ מֵאֶרֶץ יְרוּשָׁלַיִם אַךְ הִנֵּה לֹא זֶה הַכֹּל׃",
   "english": "And now will you dispute that Jerusalem was destroyed? Will ye say that the sons of Zedekiah were not slain, all except it were Mulek? Yea, and do ye not behold that the seed of Zedekiah are with us, and they were driven out of the land of Jerusalem? But behold, this is not all—"
  },
  {
@@ -32945,7 +32945,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 8,
   "verse": 24,
-  "hebrew": "וְעַתָּה כִּי יוֹדְעִים אַתֶּם אֶת־הַדְּבָרִים הָאֵלֶּה וְלֹא תוּכְלוּ לְהַכְחִישָׁם זוּלָתִי בְּשֶׁקֶר לָכֵן בָּזֹאת חֲטָאתֶם כִּי מְאַסְתֶּם אֶת־כָּל־הַדְּבָרִים הָאֵלֶּה אַף עַל כָּל־הָאוֹתוֹת אֲשֶׁר קִבַּלְתֶּם הֵן קִבַּלְתֶּם אֶת־הַכֹּל גַּם דְּבָרִים בַּשָּׁמַיִם וְכָל־אֲשֶׁר בָּאָרֶץ לְעֵדוּת כִּי אֱמֶת הֵם׃",
+  "hebrew": "וְעַתָּה כִּי יוֹדְעִים אַתֶּם אֶת־הַדְּבָרִים הָאֵלֶּה וְלֹא תוּכְלוּ לְהַכְחִישָׁם זוּלַת בְּשֶׁקֶר לָכֵן בָּזֹאת חֲטָאתֶם כִּי מְאַסְתֶּם אֶת־כָּל־הַדְּבָרִים הָאֵלֶּה אַף עַל כָּל־הָאוֹתוֹת אֲשֶׁר קִבַּלְתֶּם הֵן קִבַּלְתֶּם אֶת־הַכֹּל גַּם דְּבָרִים בַּשָּׁמַיִם וְכָל־אֲשֶׁר בָּאָרֶץ לְעֵדוּת כִּי אֱמֶת הֵם׃",
   "english": "And now, seeing ye know these things and cannot deny them except ye shall lie, therefore in this ye have sinned, for ye have rejected all these things, notwithstanding so many evidences which ye have received; yea, even ye have received all things, both things in heaven, and all things which are in the earth, as a witness that they are true."
  },
  {
@@ -33225,7 +33225,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 9,
   "verse": 36,
-  "hebrew": "וְאָז יֹאמַר לָכֶם כִּי לֹא יָדַעְתִּי נֶפִי דָּבָר עַל־הַדָּבָר זוּלָתִי אֲשֶׁר נִתַּן לִי בְּכֹחַ אֱלֹהִים וְאָז תֵּדְעוּ כִּי אִישׁ יָשָׁר אֲנִי וְכִי נִשְׁלַחְתִּי אֲלֵיכֶם מֵאֵת אֱלֹהִים׃",
+  "hebrew": "וְאָז יֹאמַר לָכֶם כִּי לֹא יָדַעְתִּי נֶפִי דָּבָר עַל־הַדָּבָר זוּלַת אֲשֶׁר נִתַּן לִי בְּכֹחַ אֱלֹהִים וְאָז תֵּדְעוּ כִּי אִישׁ יָשָׁר אֲנִי וְכִי נִשְׁלַחְתִּי אֲלֵיכֶם מֵאֵת אֱלֹהִים׃",
   "english": "And then shall he say unto you, that I, Nephi, know nothing concerning the matter save it were given unto me by the power of God. And then shall ye know that I am an honest man, and that I am sent unto you from God."
  },
  {
@@ -33547,7 +33547,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 11,
   "verse": 22,
-  "hebrew": "וְגַם־שָׁלוֹם הָיָה לָהֶם בִּשְׁנַת שִׁבְעִים וּשְׁמֹנֶה זוּלָתִי מְרִיבוֹת מְעַטּוֹת עַל־דִּבְרֵי הַתּוֹרָה אֲשֶׁר הוּשְׂמוּ בְּיַד הַנְּבִיאִים׃",
+  "hebrew": "וְגַם־שָׁלוֹם הָיָה לָהֶם בִּשְׁנַת שִׁבְעִים וּשְׁמֹנֶה זוּלַת מְרִיבוֹת מְעַטּוֹת עַל־דִּבְרֵי הַתּוֹרָה אֲשֶׁר הוּשְׂמוּ בְּיַד הַנְּבִיאִים׃",
   "english": "And also they had peace in the seventy and eighth year, save it were a few contentions concerning the points of doctrine which had been laid down by the prophets."
  },
  {
@@ -33680,7 +33680,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 12,
   "verse": 3,
-  "hebrew": "וְכֵן נִרְאֶה כִּי זוּלָתִי יְיַסֵּר יְהוָה אֶת־עַמּוֹ בְּצָרוֹת רַבּוֹת הֵן זוּלָתִי יִפְקְדֵם בְּמָוֶת וּבְחִתָּה וּבְרָעָב וּבְכָל־מִינֵי דֶבֶר לֹא יִזְכְּרוּהוּ׃",
+  "hebrew": "וְכֵן נִרְאֶה כִּי זוּלַת יְיַסֵּר יְהוָה אֶת־עַמּוֹ בְּצָרוֹת רַבּוֹת הֵן זוּלַת יִפְקְדֵם בְּמָוֶת וּבְחִתָּה וּבְרָעָב וּבְכָל־מִינֵי דֶבֶר לֹא יִזְכְּרוּהוּ׃",
   "english": "And thus we see that except the Lord doth chasten his people with many afflictions, yea, except he doth visit them with death and with terror, and with famine and with all manner of pestilence, they will not remember him."
  },
  {
@@ -33883,7 +33883,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 13,
   "verse": 6,
-  "hebrew": "הֵן הַשְׁחָתָה כְבֵדָה עֹמֶדֶת עַל הָעָם הַזֶּה וּבוֹא תָבוֹא עַל־הָעָם הַזֶּה וְאֵין מוֹשִׁיעַ לָעָם הַזֶּה זוּלָתִי הַתְּשׁוּבָה וְהָאֱמוּנָה בַּיְהוָה יֵשׁוּעַ הַמָּשִׁיחַ אֲשֶׁר בּוֹא יָבוֹא לָעוֹלָם וְיִסְבֹּל מַכְאוֹבִים רַבִּים וְיֵהָרֵג בְּעַד עַמּוֹ׃",
+  "hebrew": "הֵן הַשְׁחָתָה כְבֵדָה עֹמֶדֶת עַל הָעָם הַזֶּה וּבוֹא תָבוֹא עַל־הָעָם הַזֶּה וְאֵין מוֹשִׁיעַ לָעָם הַזֶּה זוּלַת הַתְּשׁוּבָה וְהָאֱמוּנָה בַּיְהוָה יֵשׁוּעַ הַמָּשִׁיחַ אֲשֶׁר בּוֹא יָבוֹא לָעוֹלָם וְיִסְבֹּל מַכְאוֹבִים רַבִּים וְיֵהָרֵג בְּעַד עַמּוֹ׃",
   "english": "Yea, heavy destruction awaiteth this people, and it surely cometh unto this people, and nothing can save this people save it be repentance and faith on the Lord Jesus Christ, who surely shall come into the world, and shall suffer many things and shall be slain for his people."
  },
  {
@@ -33967,14 +33967,14 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 13,
   "verse": 18,
-  "hebrew": "וְהָיָה נְאֻם יְהוָה צְבָאוֹת הֵן אֱלֹהֵינוּ הַגָּדוֹל וְהָאֱמֶת כִּי כָל־הַטּוֹמֵן מַטְמוֹנִים בָּאָרֶץ לֹא יִמְצָאֵם עוֹד בִּגְלַל הַקְּלָלָה הַגְּדוֹלָה אֲשֶׁר עַל־הָאָרֶץ זוּלָתִי אִם־צַדִּיק הוּא וְיִטְמְנֵם לַיהוָה׃",
+  "hebrew": "וְהָיָה נְאֻם יְהוָה צְבָאוֹת הֵן אֱלֹהֵינוּ הַגָּדוֹל וְהָאֱמֶת כִּי כָל־הַטּוֹמֵן מַטְמוֹנִים בָּאָרֶץ לֹא יִמְצָאֵם עוֹד בִּגְלַל הַקְּלָלָה הַגְּדוֹלָה אֲשֶׁר עַל־הָאָרֶץ זוּלַת אִם־צַדִּיק הוּא וְיִטְמְנֵם לַיהוָה׃",
   "english": "And it shall come to pass, saith the Lord of Hosts, yea, our great and true God, that whoso shall hide up treasures in the earth shall find them again no more, because of the great curse of the land, save he be a righteous man and shall hide it up unto the Lord."
  },
  {
   "book": "Helaman",
   "chapter": 13,
   "verse": 19,
-  "hebrew": "כִּי רוֹצֶה אֲנִי נְאֻם יְהוָה כִּי יִטְמְנוּ מַטְמוֹנֵיהֶם לִי וְאָרוּר אֲשֶׁר לֹא יִטְמֹן מַטְמוֹנָיו לִי כִּי אֵין טוֹמֵן מַטְמוֹנָיו לִי זוּלָתִי הַצַּדִּיק וַאֲשֶׁר לֹא יִטְמֹן מַטְמוֹנָיו לִי אָרוּר הוּא וְגַם הַמַּטְמוֹן וְאֵין פּוֹדֶה בִּגְלַל קִלְלַת הָאָרֶץ׃",
+  "hebrew": "כִּי רוֹצֶה אֲנִי נְאֻם יְהוָה כִּי יִטְמְנוּ מַטְמוֹנֵיהֶם לִי וְאָרוּר אֲשֶׁר לֹא יִטְמֹן מַטְמוֹנָיו לִי כִּי אֵין טוֹמֵן מַטְמוֹנָיו לִי זוּלַת הַצַּדִּיק וַאֲשֶׁר לֹא יִטְמֹן מַטְמוֹנָיו לִי אָרוּר הוּא וְגַם הַמַּטְמוֹן וְאֵין פּוֹדֶה בִּגְלַל קִלְלַת הָאָרֶץ׃",
   "english": "For I will, saith the Lord, that they shall hide up their treasures unto me; and cursed be they who hide not up their treasures unto me; for none hideth up their treasures unto me save it be the righteous; and he that hideth not up his treasures unto me, cursed is he, and also the treasure, and none shall redeem it because of the curse of the land."
  },
  {
@@ -34128,7 +34128,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 14,
   "verse": 2,
-  "hebrew": "וַיֹּאמֶר אֲלֵיהֶם הִנֵּה אֶתֵּן לָכֶם אוֹת כִּי עוֹד חָמֵשׁ שָׁנִים תָּבֹאנָה וְאַחֲרֵיהֶן יָבוֹא בֶּן־הָאֱלֹהִים לִגְאֹל אֶת־כָּל־הַמַּאֲמִינִים בִּשְׁמוֹ׃",
+  "hebrew": "וַיֹּאמֶר אֲלֵיהֶם הִנֵּה אֶתֵּן לָכֶם אוֹת כִּי עוֹד חָמֵשׁ שָׁנִים תָּבֹאנָה וְאַחֲרֵיהֶן יָבוֹא בֶּן־אֱלֹהִים לִגְאֹל אֶת־כָּל־הַמַּאֲמִינִים בִּשְׁמוֹ׃",
   "english": "And behold, he said unto them: Behold, I give unto you a sign; for five years more cometh, and behold, then cometh the Son of God to redeem all those who shall believe on his name."
  },
  {
@@ -34170,7 +34170,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 14,
   "verse": 8,
-  "hebrew": "וְהָיָה כָּל־הַמַּאֲמִין בְּבֶן־הָאֱלֹהִים יִחְיֶה חַיֵּי עוֹלָם׃",
+  "hebrew": "וְהָיָה כָּל־הַמַּאֲמִין בְּבֶּן־אֱלֹהִים יִחְיֶה חַיֵּי עוֹלָם׃",
   "english": "And it shall come to pass that whosoever shall believe on the Son of God, the same shall have everlasting life."
  },
  {
@@ -34198,7 +34198,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 14,
   "verse": 12,
-  "hebrew": "וְגַם לְמַעַן תֵּדְעוּ אֶת־בּוֹא יֵשׁוּעַ הַמָּשִׁיחַ בֶּן־הָאֱלֹהִים אֲבִי הַשָּׁמַיִם וְהָאָרֶץ יוֹצֵר הַכֹּל מֵרֵאשִׁית וּלְמַעַן תֵּדְעוּ אֶת־אֹתוֹת בּוֹאוֹ לְמַעַן תַּאֲמִינוּ בִּשְׁמוֹ׃",
+  "hebrew": "וְגַם לְמַעַן תֵּדְעוּ אֶת־בּוֹא יֵשׁוּעַ הַמָּשִׁיחַ בֶּן־אֱלֹהִים אֲבִי הַשָּׁמַיִם וְהָאָרֶץ יוֹצֵר הַכֹּל מֵרֵאשִׁית וּלְמַעַן תֵּדְעוּ אֶת־אֹתוֹת בּוֹאוֹ לְמַעַן תַּאֲמִינוּ בִּשְׁמוֹ׃",
   "english": "And also that ye might know of the coming of Jesus Christ, the Son of God, the Father of heaven and of earth, the Creator of all things from the beginning; and that ye might know of the signs of his coming, to the intent that ye might believe on his name."
  },
  {
@@ -34534,7 +34534,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 16,
   "verse": 12,
-  "hebrew": "וְלֹא הָיְתָה תְּמוּרָה גְּדוֹלָה בְּדִבְרֵי הָעָם זוּלָתִי כִּי הֵחֵל הָעָם לְהַקְשׁוֹת יוֹתֵר בְּעָוֺן וְלַעֲשׂוֹת יוֹתֵר וָיוֹתֵר אֵת אֲשֶׁר נֶגֶד מִצְוֺת אֱלֹהִים בִּשְׁנַת תֵּשַׁע וּשְׁמוֹנִים לְמֶמְשֶׁלֶת הַשֹּׁפְטִים׃",
+  "hebrew": "וְלֹא הָיְתָה תְּמוּרָה גְּדוֹלָה בְּדִבְרֵי הָעָם זוּלַת כִּי הֵחֵל הָעָם לְהַקְשׁוֹת יוֹתֵר בְּעָוֺן וְלַעֲשׂוֹת יוֹתֵר וָיוֹתֵר אֵת אֲשֶׁר נֶגֶד מִצְוֺת אֱלֹהִים בִּשְׁנַת תֵּשַׁע וּשְׁמוֹנִים לְמֶמְשֶׁלֶת הַשֹּׁפְטִים׃",
   "english": "And there was but little alteration in the affairs of the people, save it were the people began to be more hardened in iniquity, and do more and more of that which was contrary to the commandments of God, in the eighty and ninth year of the reign of the judges."
  },
  {
@@ -34555,7 +34555,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 16,
   "verse": 15,
-  "hebrew": "וְאַף־עַל־פִּי־כֵן הֵחֵל הָעָם לְהַקְשׁוֹת אֶת־לִבָּם כֻּלָּם זוּלָתִי הַחֵלֶק הַמַּאֲמִין בֵּיוֹתֵר בֵּין הַנְּפִיאִים וְגַם בֵּין הַלְמָנִים וַיָּחֵלּוּ לְהִשָּׁעֵן עַל־כֹּחָם וְעַל־חָכְמָתָם לֵאמֹר׃",
+  "hebrew": "וְאַף־עַל־פִּי־כֵן הֵחֵל הָעָם לְהַקְשׁוֹת אֶת־לִבָּם כֻּלָּם זוּלַת הַחֵלֶק הַמַּאֲמִין בֵּיוֹתֵר בֵּין הַנְּפִיאִים וְגַם בֵּין הַלְמָנִים וַיָּחֵלּוּ לְהִשָּׁעֵן עַל־כֹּחָם וְעַל־חָכְמָתָם לֵאמֹר׃",
   "english": "Nevertheless, the people began to harden their hearts, all save it were the most believing part of them, both of the Nephites and also of the Lamanites, and began to depend upon their own strength and upon their own wisdom, saying:"
  },
  {
@@ -34576,7 +34576,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 16,
   "verse": 18,
-  "hebrew": "אֵין זֶה נָכוֹן כִּי יָבוֹא יְצוּר כְּמוֹ מָשִׁיחַ וְאִם כֵּן וְהוּא בֶּן־הָאֱלֹהִים אֲבִי הַשָּׁמַיִם וְהָאָרֶץ כַּאֲשֶׁר נֶאֱמַר מַדּוּעַ לֹא יַרְאֶה אֶת־עַצְמוֹ אֵלֵינוּ כְּמוֹ לָאֵלֶּה אֲשֶׁר יִהְיוּ בִּירוּשָׁלַיִם׃",
+  "hebrew": "אֵין זֶה נָכוֹן כִּי יָבוֹא יְצוּר כְּמוֹ מָשִׁיחַ וְאִם כֵּן וְהוּא בֶּן־אֱלֹהִים אֲבִי הַשָּׁמַיִם וְהָאָרֶץ כַּאֲשֶׁר נֶאֱמַר מַדּוּעַ לֹא יַרְאֶה אֶת־עַצְמוֹ אֵלֵינוּ כְּמוֹ לָאֵלֶּה אֲשֶׁר יִהְיוּ בִּירוּשָׁלַיִם׃",
   "english": "That it is not reasonable that such a being as a Christ shall come; if so, and he be the Son of God, the Father of heaven and of earth, as it has been spoken, why will he not show himself unto us as well as unto them who shall be at Jerusalem?"
  },
  {
@@ -34737,7 +34737,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 1,
   "verse": 17,
-  "hebrew": "וַיָּחֵלּוּ לָדַעַת כִּי בֶן־הָאֱלֹהִים עָתִיד לְהֵרָאוֹת בְּקָרוֹב הֵן כָּל־הָעָם עַל־פְּנֵי כָל־הָאָרֶץ מִמַּעֲרָב וְעַד־מִזְרָח גַּם בְּאֶרֶץ צָפוֹן וּבְאֶרֶץ דָּרוֹם הִשְׁתּוֹמְמוּ מְאֹד עַד כִּי נָפְלוּ אָרְצָה׃",
+  "hebrew": "וַיָּחֵלּוּ לָדַעַת כִּי בֶּן־אֱלֹהִים עָתִיד לְהֵרָאוֹת בְּקָרוֹב הֵן כָּל־הָעָם עַל־פְּנֵי כָל־הָאָרֶץ מִמַּעֲרָב וְעַד־מִזְרָח גַּם בְּאֶרֶץ צָפוֹן וּבְאֶרֶץ דָּרוֹם הִשְׁתּוֹמְמוּ מְאֹד עַד כִּי נָפְלוּ אָרְצָה׃",
   "english": "And they began to know that the Son of God must shortly appear; yea, in fine, all the people upon the face of the whole earth from the west to the east, both in the land north and in the land south, were so exceedingly astonished that they fell to the earth."
  },
  {
@@ -34786,7 +34786,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 1,
   "verse": 24,
-  "hebrew": "וְלֹא הָיוּ מְרִיבוֹת זוּלָתִי מְעַטִּים אֲשֶׁר הֵחֵלּוּ לִדְרֹשׁ מְבַקְשִׁים לְהוֹכִיחַ מִן־הַכְּתוּבִים כִּי לֹא נָכוֹן עוֹד לִשְׁמֹר אֶת־תּוֹרַת מֹשֶׁה וּבַדָּבָר הַזֶּה שָׁגוּ כִּי לֹא הֵבִינוּ אֶת־הַכְּתוּבִים׃",
+  "hebrew": "וְלֹא הָיוּ מְרִיבוֹת זוּלַת מְעַטִּים אֲשֶׁר הֵחֵלּוּ לִדְרֹשׁ מְבַקְשִׁים לְהוֹכִיחַ מִן־הַכְּתוּבִים כִּי לֹא נָכוֹן עוֹד לִשְׁמֹר אֶת־תּוֹרַת מֹשֶׁה וּבַדָּבָר הַזֶּה שָׁגוּ כִּי לֹא הֵבִינוּ אֶת־הַכְּתוּבִים׃",
   "english": "And there were no contentions, save it were a few that began to preach, endeavoring to prove by the scriptures that it was no more expedient to observe the law of Moses. Now in this thing they did err, having not understood the scriptures."
  },
  {
@@ -34807,7 +34807,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 1,
   "verse": 27,
-  "hebrew": "וַתַּעֲבֹר גַּם שְׁנַת שָׁלֹשׁ וְתִשְׁעִים בְּשָׁלוֹם זוּלָתִי שׁוֹדְדֵי גְדִיאַנְטוֹן אֲשֶׁר יָשְׁבוּ בֶּהָרִים אֲשֶׁר הִשְׁחִיתוּ אֶת־הָאָרֶץ כִּי חֲזָקִים הָיוּ מִבְצְרֵיהֶם וּמְקוֹמוֹת סִתְרָם עַד כִּי לֹא יָכְלוּ הָעָם לְהִתְגַּבֵּר עֲלֵיהֶם לָכֵן רָצְחוּ רְצִיחוֹת רַבּוֹת וַיַּעֲשׂוּ טֶבַח רַב בָּעָם׃",
+  "hebrew": "וַתַּעֲבֹר גַּם שְׁנַת שָׁלֹשׁ וְתִשְׁעִים בְּשָׁלוֹם זוּלַת שׁוֹדְדֵי גְדִיאַנְטוֹן אֲשֶׁר יָשְׁבוּ בֶּהָרִים אֲשֶׁר הִשְׁחִיתוּ אֶת־הָאָרֶץ כִּי חֲזָקִים הָיוּ מִבְצְרֵיהֶם וּמְקוֹמוֹת סִתְרָם עַד כִּי לֹא יָכְלוּ הָעָם לְהִתְגַּבֵּר עֲלֵיהֶם לָכֵן רָצְחוּ רְצִיחוֹת רַבּוֹת וַיַּעֲשׂוּ טֶבַח רַב בָּעָם׃",
   "english": "And it came to pass that the ninety and third year did also pass away in peace, save it were for the Gadianton robbers, who dwelt upon the mountains, who did infest the land; for so strong were their holds and their secret places that the people could not overpower them; therefore they did commit many murders, and did do much slaughter among the people."
  },
  {
@@ -35038,7 +35038,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 3,
   "verse": 11,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר קִבֵּל לָכוֹנֵאוּס אֶת־הָאִגֶּרֶת הַזֹּאת וַיִּשְׁתּוֹמֵם מְאֹד בִּגְלַל עֹז פָּנִים גִּדְיָנְהִי בְּדָרְשׁוֹ אֶת־ אֲחֻזַּת אֶרֶץ הַנְּפִיִּים וְגַם בְּאַיְּמוֹ עַל־הָעָם וְנָקְמוֹ נִקְמַת אֲשֶׁר לֹא־עֻוְּתוּ זוּלָתִי כִּי הֵרֵעוּ לְעַצְמָם בְּפָרְשָׁם אֶל־הַשּׁוֹדְדִים הָרְשָׁעִים וְהַנִּתְעָבִים הָאֵלֶּה׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר קִבֵּל לָכוֹנֵאוּס אֶת־הָאִגֶּרֶת הַזֹּאת וַיִּשְׁתּוֹמֵם מְאֹד בִּגְלַל עֹז פָּנִים גִּדְיָנְהִי בְּדָרְשׁוֹ אֶת־ אֲחֻזַּת אֶרֶץ הַנְּפִיִּים וְגַם בְּאַיְּמוֹ עַל־הָעָם וְנָקְמוֹ נִקְמַת אֲשֶׁר לֹא־עֻוְּתוּ זוּלַת כִּי הֵרֵעוּ לְעַצְמָם בְּפָרְשָׁם אֶל־הַשּׁוֹדְדִים הָרְשָׁעִים וְהַנִּתְעָבִים הָאֵלֶּה׃",
   "english": "And now it came to pass when Lachoneus received this epistle he was exceedingly  astonished, because of the boldness of Giddianhi demanding the possession of the land of the Nephites, and also of threatening the people and avenging the wrongs of those that had received no wrong, save it were they had wronged themselves by dissenting away unto those wicked and abominable robbers."
  },
  {
@@ -35052,7 +35052,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 3,
   "verse": 13,
-  "hebrew": "הֵן הוֹצִיא כְּרוּז בְּכָל־הָעָם לֶאֱסֹף יַחַד אֶת־נְשֵׁיהֶם וְטַפָּם צֹאנָם וּבְקָרָם וְכָל־רְכוּשָׁם זוּלָתִי אַדְמָתָם אֶל־מָקוֹם אֶחָד׃",
+  "hebrew": "הֵן הוֹצִיא כְּרוּז בְּכָל־הָעָם לֶאֱסֹף יַחַד אֶת־נְשֵׁיהֶם וְטַפָּם צֹאנָם וּבְקָרָם וְכָל־רְכוּשָׁם זוּלַת אַדְמָתָם אֶל־מָקוֹם אֶחָד׃",
   "english": "Yea, he sent a proclamation among all the people, that they should gather together their women, and their children, their flocks and their herds, and all their substance, save it were their land, unto one place."
  },
  {
@@ -35094,7 +35094,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 3,
   "verse": 19,
-  "hebrew": "וַיְהִי מִנְהַג כָּל־הַנְּפִיִּים לְמַנּוֹת לְשָׂרֵי צְבָאוֹתֵיהֶם זוּלָתִי בִּימֵי רִשְׁעָתָם אִישׁ אֲשֶׁר יֵשׁ בּוֹ רוּחַ הַחָזוֹן וְגַם הַנְּבוּאָה לָכֵן הָיָה גִּדְגִּדּוֹנִי זֶה נָבִיא גָּדוֹל בֵּינֵיהֶם כַּאֲשֶׁר גַּם הַשֹּׁפֵט הָרֹאשׁ׃",
+  "hebrew": "וַיְהִי מִנְהַג כָּל־הַנְּפִיִּים לְמַנּוֹת לְשָׂרֵי צְבָאוֹתֵיהֶם זוּלַת בִּימֵי רִשְׁעָתָם אִישׁ אֲשֶׁר יֵשׁ בּוֹ רוּחַ הַחָזוֹן וְגַם הַנְּבוּאָה לָכֵן הָיָה גִּדְגִּדּוֹנִי זֶה נָבִיא גָּדוֹל בֵּינֵיהֶם כַּאֲשֶׁר גַּם הַשֹּׁפֵט הָרֹאשׁ׃",
   "english": "Now it was the custom among all the Nephites to appoint for their chief captains, (save it were in their times of wickedness) some one that had the spirit of revelation and also prophecy; therefore, this Gidgiddoni was a great prophet among them, as also was the chief judge."
  },
  {
@@ -35157,28 +35157,28 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 4,
   "verse": 2,
-  "hebrew": "וְהִנֵּה לֹא הָיוּ חַיּוֹת שָׂדֶה וְצַיִד בָּאֲרָצוֹת הָהֵן אֲשֶׁר עָזְבוּ הַנְּפִיִּים וְלֹא הָיָה צַיִד לַשּׁוֹדְדִים זוּלָתִי בַּמִּדְבָּר׃",
+  "hebrew": "וְהִנֵּה לֹא הָיוּ חַיּוֹת שָׂדֶה וְצַיִד בָּאֲרָצוֹת הָהֵן אֲשֶׁר עָזְבוּ הַנְּפִיִּים וְלֹא הָיָה צַיִד לַשּׁוֹדְדִים זוּלַת בַּמִּדְבָּר׃",
   "english": "But behold, there were no wild beasts nor game in those lands which had been deserted by the Nephites, and there was no game for the robbers save it were in the wilderness."
  },
  {
   "book": "3 Nephi",
   "chapter": 4,
   "verse": 3,
-  "hebrew": "וְלֹא יָכְלוּ הַשּׁוֹדְדִים לְהִתְקַיֵּם זוּלָתִי בַּמִּדְבָּר מֵחֹסֶר אֹכֶל כִּי עָזְבוּ הַנְּפִיִּים אֶת־אַרְצוֹתֵיהֶם שְׁמָמָה וַיַּאַסְפוּ אֶת־צֹאנָם וּבְקָרָם וְכָל־רְכוּשָׁם וַיִּהְיוּ לְגוּף אֶחָד׃",
+  "hebrew": "וְלֹא יָכְלוּ הַשּׁוֹדְדִים לְהִתְקַיֵּם זוּלַת בַּמִּדְבָּר מֵחֹסֶר אֹכֶל כִּי עָזְבוּ הַנְּפִיִּים אֶת־אַרְצוֹתֵיהֶם שְׁמָמָה וַיַּאַסְפוּ אֶת־צֹאנָם וּבְקָרָם וְכָל־רְכוּשָׁם וַיִּהְיוּ לְגוּף אֶחָד׃",
   "english": "And the robbers could not exist save it were in the wilderness, for the want of food; for the Nephites had left their lands desolate, and had gathered their flocks and their herds and all their substance, and they were in one body."
  },
  {
   "book": "3 Nephi",
   "chapter": 4,
   "verse": 4,
-  "hebrew": "לָכֵן לֹא הָיָה לַשּׁוֹדְדִים מָקוֹם לִשְׁלֹל וּלְהַשִּׂיג אֹכֶל זוּלָתִי לָבוֹא בְּמִלְחָמָה גְלוּיָה נֶגֶד הַנְּפִיִּים  וְהַנְּפִיִּים  בִּהְיוֹתָם גּוּף אֶחָד וּבִהְיוֹת לָהֶם מִסְפָּר כֹּה רַב וּבְשָׁמְרָם לְעַצְמָם צֵידָה וְסוּסִים וּמִקְנֶה וְצֹאן מִכָּל לְמַעַן יוּכְלוּ לְהִתְקַיֵּם שֶׁבַע שָׁנִים אֲשֶׁר בָּהֶן קִוּוּ לְהַשְׁמִיד אֶת־הַשּׁוֹדְדִים מֵעַל פְּנֵי הָאָרֶץ וְכֵן עָבְרָה שְׁנַת שְׁמוֹנֶה עֶשְׂרֵה׃",
+  "hebrew": "לָכֵן לֹא הָיָה לַשּׁוֹדְדִים מָקוֹם לִשְׁלֹל וּלְהַשִּׂיג אֹכֶל זוּלַת לָבוֹא בְּמִלְחָמָה גְלוּיָה נֶגֶד הַנְּפִיִּים  וְהַנְּפִיִּים  בִּהְיוֹתָם גּוּף אֶחָד וּבִהְיוֹת לָהֶם מִסְפָּר כֹּה רַב וּבְשָׁמְרָם לְעַצְמָם צֵידָה וְסוּסִים וּמִקְנֶה וְצֹאן מִכָּל לְמַעַן יוּכְלוּ לְהִתְקַיֵּם שֶׁבַע שָׁנִים אֲשֶׁר בָּהֶן קִוּוּ לְהַשְׁמִיד אֶת־הַשּׁוֹדְדִים מֵעַל פְּנֵי הָאָרֶץ וְכֵן עָבְרָה שְׁנַת שְׁמוֹנֶה עֶשְׂרֵה׃",
   "english": "Therefore, there was no chance for the robbers to plunder and to obtain food, save it were to come up in open battle against the Nephites; and the Nephites being in one body, and having so great a number, and having reserved for themselves provisions, and horses and cattle, and flocks of every kind, that they might subsist for the space of seven years, in the which time they did hope to destroy the robbers from off the face of the land; and thus the eighteenth year did pass away."
  },
  {
   "book": "3 Nephi",
   "chapter": 4,
   "verse": 5,
-  "hebrew": "וַיְהִי בִּשְׁנַת תְּשַׁע עֶשְׂרֵה וַיִּמְצָא גִּדְיָנְהִי כִּי נָכוֹן לוֹ לַעֲלוֹת לַמִּלְחָמָה נֶגֶד הַנְּפִיִּים כִּי לֹא הָיָה דֶּרֶךְ לְהִתְקַיֵּם זוּלָתִי לִשְׁלֹל וְלִגְזֹל וְלִרְצֹחַ׃",
+  "hebrew": "וַיְהִי בִּשְׁנַת תְּשַׁע עֶשְׂרֵה וַיִּמְצָא גִּדְיָנְהִי כִּי נָכוֹן לוֹ לַעֲלוֹת לַמִּלְחָמָה נֶגֶד הַנְּפִיִּים כִּי לֹא הָיָה דֶּרֶךְ לְהִתְקַיֵּם זוּלַת לִשְׁלֹל וְלִגְזֹל וְלִרְצֹחַ׃",
   "english": "And it came to pass that in the nineteenth year Giddianhi found that it was expedient that he should go up to battle against the Nephites, for there was no way that they could subsist save it were to plunder and rob and murder."
  },
  {
@@ -35276,7 +35276,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 4,
   "verse": 19,
-  "hebrew": "וּבִגְלַל מִעוּט הַצֵּידָה בֵּין הַשּׁוֹדְדִים כִּי הִנֵּה לֹא הָיָה לָהֶם דָּבָר זוּלָתִי בָשָׂר לְמִחְיָתָם אֲשֶׁר הִשִּׂיגוּ בַּמִּדְבָּר׃",
+  "hebrew": "וּבִגְלַל מִעוּט הַצֵּידָה בֵּין הַשּׁוֹדְדִים כִּי הִנֵּה לֹא הָיָה לָהֶם דָּבָר זוּלַת בָשָׂר לְמִחְיָתָם אֲשֶׁר הִשִּׂיגוּ בַּמִּדְבָּר׃",
   "english": "And because of the scantiness of provisions among the robbers—for behold, they had nothing save it were meat for their subsistence, which meat they did obtain in the wilderness;"
  },
  {
@@ -35465,7 +35465,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 5,
   "verse": 13,
-  "hebrew": "הִנֵּה אֲנִי תַּלְמִיד יֵשׁוּעַ הַמָּשִׁיחַ בֶּן־הָאֱלֹהִים נִקְרֵאתִי מִפִּיו לְהַגִּיד אֶת־דְּבָרוֹ בְּקֶרֶב עַמּוֹ לְמַעַן יִהְיוּ לָהֶם חַיֵּי עוֹלָם׃",
+  "hebrew": "הִנֵּה אֲנִי תַּלְמִיד יֵשׁוּעַ הַמָּשִׁיחַ בֶּן־אֱלֹהִים נִקְרֵאתִי מִפִּיו לְהַגִּיד אֶת־דְּבָרוֹ בְּקֶרֶב עַמּוֹ לְמַעַן יִהְיוּ לָהֶם חַיֵּי עוֹלָם׃",
   "english": "Behold, I am a disciple of Jesus Christ, the Son of God. I have been called of him to declare his word among his people, that they might have everlasting life."
  },
  {
@@ -35514,7 +35514,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 5,
   "verse": 20,
-  "hebrew": "מוֹרְמוֹן אָנֹכִי וְצֶאֱצָא טָהוֹר לְלֶחִי יֵשׁ לִי דָּבָר לְבָרֵךְ אֶת־אֱלֹהַי וּמוֹשִׁיעִי יֵשׁוּעַ הַמָּשִׁיחַ כִּי הוֹצִיא אֶת־אֲבוֹתֵינוּ מֵאֶרֶץ יְרוּשָׁלַיִם וְלֹא יָדַע אִישׁ זוּלָתִי הוּא וְאֵלֶּה אֲשֶׁר הוֹצִיא מִן־הָאָרֶץ הַהִיא וְכִי נָתַן לִי וּלְעַמִּי דַּעַת רַבָּה לִישׁוּעַת נַפְשׁוֹתֵינוּ׃",
+  "hebrew": "מוֹרְמוֹן אָנֹכִי וְצֶאֱצָא טָהוֹר לְלֶחִי יֵשׁ לִי דָּבָר לְבָרֵךְ אֶת־אֱלֹהַי וּמוֹשִׁיעִי יֵשׁוּעַ הַמָּשִׁיחַ כִּי הוֹצִיא אֶת־אֲבוֹתֵינוּ מֵאֶרֶץ יְרוּשָׁלַיִם וְלֹא יָדַע אִישׁ זוּלַת הוּא וְאֵלֶּה אֲשֶׁר הוֹצִיא מִן־הָאָרֶץ הַהִיא וְכִי נָתַן לִי וּלְעַמִּי דַּעַת רַבָּה לִישׁוּעַת נַפְשׁוֹתֵינוּ׃",
   "english": "I am Mormon, and a pure descendant of Lehi. I have reason to bless my God and my Savior Jesus Christ, that he brought our fathers out of the land of Jerusalem, (and no one knew it save it were himself and those whom he brought out of that land) and that he hath given me and my people so much knowledge unto the salvation of our souls."
  },
  {
@@ -35556,7 +35556,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 5,
   "verse": 26,
-  "hebrew": "וְאָז יֵדְעוּ אֶת־גֹּאֲלָם אֲשֶׁר הוּא יֵשׁוּעַ הַמָּשִׁיחַ בֶּן־הָאֱלֹהִים וְאָז יִקָּבְצוּ מֵאַרְבַּע כַּנְפוֹת הָאָרֶץ אֶל־אַרְצוֹתֵיהֶם אֲשֶׁר נָפוֹצוּ מִשָּׁם הֵן כַּחַי יְהוָה כֵּן יִהְיֶה ׃  אָמֵן׃",
+  "hebrew": "וְאָז יֵדְעוּ אֶת־גֹּאֲלָם אֲשֶׁר הוּא יֵשׁוּעַ הַמָּשִׁיחַ בֶּן־אֱלֹהִים וְאָז יִקָּבְצוּ מֵאַרְבַּע כַּנְפוֹת הָאָרֶץ אֶל־אַרְצוֹתֵיהֶם אֲשֶׁר נָפוֹצוּ מִשָּׁם הֵן כַּחַי יְהוָה כֵּן יִהְיֶה ׃  אָמֵן׃",
   "english": "And then shall they know their Redeemer, who is Jesus Christ, the Son of God; and then shall they be gathered in from the four quarters of the earth unto their own lands, from whence they have been dispersed; yea, as the Lord liveth so shall it be. Amen."
  },
  {
@@ -35591,7 +35591,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 6,
   "verse": 5,
-  "hebrew": "וְעַתָּה לֹא הָיָה דָבָר בְּכָל־הָאָרֶץ לִמְנֹעַ אֶת־הָעָם מֵהַצְלִיחַ תָּמִיד זוּלָתִי אִם־יִפְּלוּ בְפֶשַׁע׃",
+  "hebrew": "וְעַתָּה לֹא הָיָה דָבָר בְּכָל־הָאָרֶץ לִמְנֹעַ אֶת־הָעָם מֵהַצְלִיחַ תָּמִיד זוּלַת אִם־יִפְּלוּ בְפֶשַׁע׃",
   "english": "And now there was nothing in all the land to hinder the people from prospering continually, except they should fall into transgression."
  },
  {
@@ -35647,14 +35647,14 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 6,
   "verse": 13,
-  "hebrew": "מִקְצָתָם הִתְנַשְּׂאוּ בְגַאֲוָה וַאֲחֵרִים הָיוּ עֲנָוִים מְאֹד מִקְצָתָם הֵשִׁיבוּ חֶרְפָּה תַּחַת חֶרְפָּה בְּעוֹד אֲחֵרִים קִבְּלוּ חֶרְפָּה וּרְדִיפוֹת וְכָל־צָרוֹת וְלֹא פָנוּ לְהָשִׁיב חֶרְפָּה אֶלָּא הָיוּ עֲנָוִים וְנִכְנָעִים לִפְנֵי הָאֱלֹהִים׃",
+  "hebrew": "מִקְצָתָם הִתְנַשְּׂאוּ בְגַאֲוָה וַאֲחֵרִים הָיוּ עֲנָוִים מְאֹד מִקְצָתָם הֵשִׁיבוּ חֶרְפָּה תַּחַת חֶרְפָּה בְּעוֹד אֲחֵרִים קִבְּלוּ חֶרְפָּה וּרְדִיפוֹת וְכָל־צָרוֹת וְלֹא פָנוּ לְהָשִׁיב חֶרְפָּה כִּי־אִם הָיוּ עֲנָוִים וְנִכְנָעִים לִפְנֵי הָאֱלֹהִים׃",
   "english": "Some were lifted up in pride, and others were exceedingly humble; some did return railing for railing, while others would receive railing and persecution and all manner of afflictions, and would not turn and revile again, but were humble and penitent before God."
  },
  {
   "book": "3 Nephi",
   "chapter": 6,
   "verse": 14,
-  "hebrew": "וַיְהִי שִׁוְיוֹן גָּדוֹל בְּכָל־הָאָרֶץ עַד כִּי הֵחֵלָּה הָעֵדָה לְהִתְפָּרֵק הֵן עַד כִּי בִּשְׁנַת שְׁלֹשִׁים הִתְפָּרְקָה הָעֵדָה בְּכָל־הָאָרֶץ זוּלָתִי בֵּין מְעַט הַלָּמָנִים אֲשֶׁר הָשְׁבוּ לֶאֱמוּנַת אֱמֶת וְלֹא סָרוּ מִמֶּנָּה כִּי הָיוּ חֲזָקִים וְאֵיתָנִים וּבִלְתִּי מָטִים רוֹצִים בְּכָל־חָרִיצוּת לִשְׁמֹר אֶת־מִצְוֺת יְהוָה׃",
+  "hebrew": "וַיְהִי שִׁוְיוֹן גָּדוֹל בְּכָל־הָאָרֶץ עַד כִּי הֵחֵלָּה הָעֵדָה לְהִתְפָּרֵק הֵן עַד כִּי בִּשְׁנַת שְׁלֹשִׁים הִתְפָּרְקָה הָעֵדָה בְּכָל־הָאָרֶץ זוּלַת בֵּין מְעַט הַלָּמָנִים אֲשֶׁר הָשְׁבוּ לֶאֱמוּנַת אֱמֶת וְלֹא סָרוּ מִמֶּנָּה כִּי הָיוּ חֲזָקִים וְאֵיתָנִים וּבִלְתִּי מָטִים רוֹצִים בְּכָל־חָרִיצוּת לִשְׁמֹר אֶת־מִצְוֺת יְהוָה׃",
   "english": "And thus there became a great inequality in all the land, insomuch that the church began to be broken up; yea, insomuch that in the thirtieth year the church was broken up in all the land save it were among a few of the Lamanites who were converted unto the true faith; and they would not depart from it, for they were firm, and steadfast, and immovable, willing with all diligence to keep the commandments of the Lord."
  },
  {
@@ -35710,7 +35710,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 6,
   "verse": 22,
-  "hebrew": "וְעַתָּה לֹא הָיָה עוֹרֵךְ דִּין אוֹ שׁוֹפֵט אוֹ כֹּהֵן גָּדוֹל אֲשֶׁר יוּכַל לְהַרְשִׁיעַ אִישׁ לְמִיתָה זוּלָתִי אִם־נֶחְתַּם גְּזַר דִּינָם בִּידֵי מוֹשֵׁל הָאָרֶץ׃",
+  "hebrew": "וְעַתָּה לֹא הָיָה עוֹרֵךְ דִּין אוֹ שׁוֹפֵט אוֹ כֹּהֵן גָּדוֹל אֲשֶׁר יוּכַל לְהַרְשִׁיעַ אִישׁ לְמִיתָה זוּלַת אִם־נֶחְתַּם גְּזַר דִּינָם בִּידֵי מוֹשֵׁל הָאָרֶץ׃",
   "english": "Now there was no lawyer nor judge nor high priest that could have power to condemn any one to death save their condemnation was signed by the governor of the land."
  },
  {
@@ -35724,7 +35724,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 6,
   "verse": 24,
-  "hebrew": "וְהִנֵּה זֶה הָיָה מְנַגֵּד אֶת־חֻקֵּי הָאָרֶץ כִּי יוּמַת אִישׁ זוּלָתִי בִּרְשׁוּת מוֹשֵׁל הָאָרֶץ׃",
+  "hebrew": "וְהִנֵּה זֶה הָיָה מְנַגֵּד אֶת־חֻקֵּי הָאָרֶץ כִּי יוּמַת אִישׁ זוּלַת בִּרְשׁוּת מוֹשֵׁל הָאָרֶץ׃",
   "english": "Now behold, this was contrary to the laws of the land, that any man should be put to death except they had power from the governor of the land—"
  },
  {
@@ -35794,7 +35794,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 7,
   "verse": 4,
-  "hebrew": "וְהִנֵּה לֹא הָיָה אִישׁ בֵּינֵיהֶם זוּלָתִי הָיוּ לוֹ מִשְׁפָּחָה רַבָּה וּקְרוֹבִים וְרֵעִים רַבִּים לָכֵן הָיוּ שִׁבְטֵיהֶם גְּדוֹלִים מְאֹד׃",
+  "hebrew": "וְהִנֵּה לֹא הָיָה אִישׁ בֵּינֵיהֶם זוּלַת הָיוּ לוֹ מִשְׁפָּחָה רַבָּה וּקְרוֹבִים וְרֵעִים רַבִּים לָכֵן הָיוּ שִׁבְטֵיהֶם גְּדוֹלִים מְאֹד׃",
   "english": "Now behold, there was no man among them save he had much family and many kindreds and friends; therefore their tribes became exceedingly great."
  },
  {
@@ -35843,7 +35843,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 7,
   "verse": 11,
-  "hebrew": "וַיְהִי וְלֹא הָיוּ חֲזָקִים בְּמִסְפָּרָם כְּשִׁבְטֵי הָעָם אֲשֶׁר הִתְאַחֲדוּ זוּלָתִי רָאשֵׁיהֶם הֵקִימוּ חֻקִּים אִישׁ לְשִׁבְטוֹ וְאַף־עַל־פִּי־כֵן הָיוּ אוֹיְבִים וְאַף כִּי לֹא הָיוּ עַם צַדִּיק הָיוּ מְאֻחָדִים בְּשִׂנְאַת אֵלֶּה אֲשֶׁר כָּרְתוּ בְרִית לְהַשְׁחִית אֶת־הַמֶּמְשָׁלָה׃",
+  "hebrew": "וַיְהִי וְלֹא הָיוּ חֲזָקִים בְּמִסְפָּרָם כְּשִׁבְטֵי הָעָם אֲשֶׁר הִתְאַחֲדוּ זוּלַת רָאשֵׁיהֶם הֵקִימוּ חֻקִּים אִישׁ לְשִׁבְטוֹ וְאַף־עַל־פִּי־כֵן הָיוּ אוֹיְבִים וְאַף כִּי לֹא הָיוּ עַם צַדִּיק הָיוּ מְאֻחָדִים בְּשִׂנְאַת אֵלֶּה אֲשֶׁר כָּרְתוּ בְרִית לְהַשְׁחִית אֶת־הַמֶּמְשָׁלָה׃",
   "english": "And it came to pass that they were not so strong in number as the tribes of the people, who were united together save it were their leaders did establish their laws, every one according to his tribe; nevertheless they were enemies; notwithstanding they were not a righteous people, yet they were united in the hatred of those who had entered into a covenant to destroy the government."
  },
  {
@@ -35955,7 +35955,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 8,
   "verse": 1,
-  "hebrew": "וַיְהִי כְּפִי סִפְרֵנוּ וְיוֹדְעִים אֲנַחְנוּ כִּי אֱמֶת סִפְרֵנוּ כִּי הִנֵּה אִישׁ צַדִּיק שָׁמַר אֶת־הַסֵּפֶר כִּי עָשָׂה בֶאֱמֶת נִפְלָאוֹת רַבּוֹת בְּשֵׁם יֵשׁוּעַ וְלֹא הָיָה אִישׁ אֲשֶׁר יָכֹל לַעֲשׂוֹת נֵס בְּשֵׁם יֵשׁוּעַ זוּלָתִי נִטְהַר כֻּלּוֹ מֵעֲוֺנוֹ׃",
+  "hebrew": "וַיְהִי כְּפִי סִפְרֵנוּ וְיוֹדְעִים אֲנַחְנוּ כִּי אֱמֶת סִפְרֵנוּ כִּי הִנֵּה אִישׁ צַדִּיק שָׁמַר אֶת־הַסֵּפֶר כִּי עָשָׂה בֶאֱמֶת נִפְלָאוֹת רַבּוֹת בְּשֵׁם יֵשׁוּעַ וְלֹא הָיָה אִישׁ אֲשֶׁר יָכֹל לַעֲשׂוֹת נֵס בְּשֵׁם יֵשׁוּעַ זוּלַת נִטְהַר כֻּלּוֹ מֵעֲוֺנוֹ׃",
   "english": "And now it came to pass that according to our record, and we know our record to be true, for behold, it was a just man who did keep the record—for he truly did many miracles in the name of Jesus; and there was not any man who could do a miracle in the name of Jesus save he were cleansed every whit from his iniquity—"
  },
  {
@@ -36060,7 +36060,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 8,
   "verse": 16,
-  "hebrew": "וְיֵשׁ אֲשֶׁר נִשְׂאוּ בַּסּוּפָה וְאָנָה הָלְכוּ לֹא יָדַע אִישׁ זוּלָתִי יוֹדְעִים כִּי נִשְׂאוּ׃",
+  "hebrew": "וְיֵשׁ אֲשֶׁר נִשְׂאוּ בַּסּוּפָה וְאָנָה הָלְכוּ לֹא יָדַע אִישׁ זוּלַת יוֹדְעִים כִּי נִשְׂאוּ׃",
   "english": "And there were some who were carried away in the whirlwind; and whither they went no man knoweth, save they know that they were carried away."
  },
  {
@@ -36228,7 +36228,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 9,
   "verse": 15,
-  "hebrew": "הִנֵּה אָנֹכִי יֵשׁוּעַ הַמָּשִׁיחַ בֶּן־הָאֱלֹהִים אָנֹכִי בָרָאתִי אֶת־הַשָּׁמַיִם וְאֶת־הָאָרֶץ וְכָל־אֲשֶׁר בָּם הָיִיתִי עִם־הָאָב מֵרֵאשִׁית אָנֹכִי בָאָב וְהָאָב בִּי וּבִי כִּבֵּד הָאָב אֶת־שְׁמוֹ׃",
+  "hebrew": "הִנֵּה אָנֹכִי יֵשׁוּעַ הַמָּשִׁיחַ בֶּן־אֱלֹהִים אָנֹכִי בָרָאתִי אֶת־הַשָּׁמַיִם וְאֶת־הָאָרֶץ וְכָל־אֲשֶׁר בָּם הָיִיתִי עִם־הָאָב מֵרֵאשִׁית אָנֹכִי בָאָב וְהָאָב בִּי וּבִי כִּבֵּד הָאָב אֶת־שְׁמוֹ׃",
   "english": "Behold, I am Jesus Christ the Son of God. I created the heavens and the earth, and all things that in them are. I was with the Father from the beginning. I am in the Father, and the Father in me; and in me hath the Father glorified his name."
  },
  {
@@ -36396,7 +36396,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 10,
   "verse": 17,
-  "hebrew": "הִנֵּה יַעֲקֹב אָבִינוּ גַם־הוּא הֵעִיד עַל־שְׁאֵרִית זֶרַע יוֹסֵף וְהִנֵּה הֲלֹא אֲנַחְנוּ שְׁאֵרִית זֶרַע יוֹסֵף וְהַדְּבָרִים הָאֵלֶּה הַמְעִידִים עָלֵינוּ הֲלֹא הֵמָּה כְתוּבִים עַל־לוּחוֹת הַנְּחֹשֶׁת אֲשֶׁר הוֹצִיא לֵחִי אָבִינוּ מִירוּשָׁלָיִם׃",
+  "hebrew": "הִנֵּה יַעֲקֹב אָבִינוּ גַם־הוּא הֵעִיד עַל־שְׁאֵרִית זֶרַע יוֹסֵף וְהִנֵּה הֲלֹא אֲנַחְנוּ שְׁאֵרִית זֶרַע יוֹסֵף וְהַדְּבָרִים הָאֵלֶּה הַמְעִידִים עָלֵינוּ הֲלֹא הֵמָּה כְתוּבִים עַל־לוּחוֹת הַנְּחֹשֶׁת אֲשֶׁר הוֹצִיא לֶחִי אָבִינוּ מִירוּשָׁלָיִם׃",
   "english": "Behold, our father Jacob also testified concerning a remnant of the seed of Joseph. And behold, are not we a remnant of the seed of Joseph? And these things which testify of us, are they not written upon the plates of brass which our father Lehi brought out of Jerusalem?"
  },
  {
@@ -38685,7 +38685,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 20,
   "verse": 31,
-  "hebrew": "וְהֶאֱמִינוּ בִי כִּי אֲנִי יֵשׁוּעַ הַמָּשִׁיחַ בֶּן־הָאֱלֹהִים וְהִתְפַּלְּלוּ אֶל־הָאָב בִּשְׁמִי׃",
+  "hebrew": "וְהֶאֱמִינוּ בִי כִּי אֲנִי יֵשׁוּעַ הַמָּשִׁיחַ בֶּן־אֱלֹהִים וְהִתְפַּלְּלוּ אֶל־הָאָב בִּשְׁמִי׃",
   "english": "And they shall believe in me, that I am Jesus Christ, the Son of God, and shall pray unto the Father in my name."
  },
  {
@@ -39749,7 +39749,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 27,
   "verse": 32,
-  "hebrew": "אַךְ הִנֵּה מִתְעַצֵּב אֲנִי בִּגְלַל הַדּוֹר הָרְבִיעִי מִן־הַדּוֹר הַזֶּה כִּי יוּבְלוּ שְׁבִי עַל־יָדוֹ כְּמוֹ בֶּן־הָאֲבַדּוֹן כִּי יִמְכְּרוּנִי בְּכֶסֶף וּבְזָהָב וּבַאֲשֶׁר עָשׁ מַשְׁחִית וְגַנָּבִים חוֹתְרִים וְגוֹנְבִים וּבַיּוֹם הַהוּא אֶפְקֹד אוֹתָם בַּהֲשִׁיבִי מַעֲשֵׂיהֶם עַל־רֹאשָׁם׃",
+  "hebrew": "אַךְ הִנֵּה מִתְעַצֵּב אֲנִי בִּגְלַל הַדּוֹר הָרְבִיעִי מִן־הַדּוֹר הַזֶּה כִּי יוּבְלוּ שְׁבִי עַל־יָדוֹ כְּמוֹ בֶּן־אֲבַדּוֹן כִּי יִמְכְּרוּנִי בְּכֶסֶף וּבְזָהָב וּבַאֲשֶׁר עָשׁ מַשְׁחִית וְגַנָּבִים חוֹתְרִים וְגוֹנְבִים וּבַיּוֹם הַהוּא אֶפְקֹד אוֹתָם בַּהֲשִׁיבִי מַעֲשֵׂיהֶם עַל־רֹאשָׁם׃",
   "english": "But behold, it sorroweth me because of the fourth generation from this generation, for they are led away captive by him even as was the son of perdition; for they will sell me for silver and for gold, and for that which moth doth corrupt and which thieves can break through and steal. And in that day will I visit them, even in turning their works upon their own heads."
  },
  {
@@ -40085,7 +40085,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 29,
   "verse": 7,
-  "hebrew": "הֵן וְאוֹי לְמִי הָאֹמֵר בַּיּוֹם הַהוּא לְמַעַן בֶּצַע כִּי לֹא יוּכַל לְהֵעָשׂוֹת נֵס עַל־יְדֵי יֵשׁוּעַ הַמָּשִׁיחַ כִּי הָעֹשֶׂה זֹאת יִהְיֶה כְּבֶן־הָאֲבַדּוֹן אֲשֶׁר לֹא הָיָה לוֹ רַחֲמִים כִּדְבַר הַמָּשִׁיחַ׃",
+  "hebrew": "הֵן וְאוֹי לְמִי הָאֹמֵר בַּיּוֹם הַהוּא לְמַעַן בֶּצַע כִּי לֹא יוּכַל לְהֵעָשׂוֹת נֵס עַל־יְדֵי יֵשׁוּעַ הַמָּשִׁיחַ כִּי הָעֹשֶׂה זֹאת יִהְיֶה כְּבֶּן־אֲבַדּוֹן אֲשֶׁר לֹא הָיָה לוֹ רַחֲמִים כִּדְבַר הַמָּשִׁיחַ׃",
   "english": "Yea, and wo unto him that shall say at that day, to get gain, that there can be no miracle wrought by Jesus Christ; for he that doeth this shall become like unto the son of perdition, for whom there was no mercy, according to the word of Christ!"
  },
  {
@@ -41310,7 +41310,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 6,
   "verse": 6,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר אָסַפְנוּ אֶת־כָּל־עַמֵּנוּ יַחְדָּו אֶל־אֶרֶץ כּוּמוֹרָה וְהִנֵּה זָקַנְתִּי מוֹרְמוֹן וָאֵדַע כִּי־זֹאת הַמִּלְחָמָה הָאַחֲרוֹנָה לְעַמִּי וּבַאֲשֶׁר צִוַּנִי יְהוָה לְבִלְתִּי תֵת אֶת־הַכְּתָבִים הַקְּדוֹשִׁים אֲשֶׁר הָעָבְרוּ מֵאֲבוֹתֵינוּ לִנְפֹּל בִּידֵי הַלָּמָנִים כִּי יַשְׁחִיתוּם לָכֵן עָשִׂיתִי אֶת־הַסֵּפֶר הַזֶּה מִלּוּחוֹת נֶפִי וָאַטְמֵן בְּגִבְעַת כּוּמוֹרָה אֶת־כָּל־הַכְּתָבִים אֲשֶׁר הָפְקְדוּ בְּיָדִי מֵאֵת יְהוָה זוּלָתִי הַלּוּחוֹת הָאֵלֶּה הַמְעַטִּים אֲשֶׁר נָתַתִּי לִבְנִי מוֹרוֹנִי׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר אָסַפְנוּ אֶת־כָּל־עַמֵּנוּ יַחְדָּו אֶל־אֶרֶץ כּוּמוֹרָה וְהִנֵּה זָקַנְתִּי מוֹרְמוֹן וָאֵדַע כִּי־זֹאת הַמִּלְחָמָה הָאַחֲרוֹנָה לְעַמִּי וּבַאֲשֶׁר צִוַּנִי יְהוָה לְבִלְתִּי תֵת אֶת־הַכְּתָבִים הַקְּדוֹשִׁים אֲשֶׁר הָעָבְרוּ מֵאֲבוֹתֵינוּ לִנְפֹּל בִּידֵי הַלָּמָנִים כִּי יַשְׁחִיתוּם לָכֵן עָשִׂיתִי אֶת־הַסֵּפֶר הַזֶּה מִלּוּחוֹת נֶפִי וָאַטְמֵן בְּגִבְעַת כּוּמוֹרָה אֶת־כָּל־הַכְּתָבִים אֲשֶׁר הָפְקְדוּ בְּיָדִי מֵאֵת יְהוָה זוּלַת הַלּוּחוֹת הָאֵלֶּה הַמְעַטִּים אֲשֶׁר נָתַתִּי לִבְנִי מוֹרוֹנִי׃",
   "english": "And it came to pass that when we had gathered in all our people in one to the land of Cumorah, behold I, Mormon, began to be old; and knowing it to be the last struggle of my people, and having been commanded of the Lord that I should not suffer the records which had been handed down by our fathers, which were sacred, to fall into the hands of the Lamanites, (for the Lamanites would destroy them) therefore I made this record out of the plates of Nephi, and hid up in the hill Cumorah all the records which had been entrusted to me by the hand of the Lord, save it were these few plates which I gave unto my son Moroni."
  },
  {
@@ -41345,7 +41345,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 6,
   "verse": 11,
-  "hebrew": "וַיְהִי אַחֲרֵי עָבְרָם וַיַּכּוּ אֶת־כָּל־עַמִּי זוּלָתִי עֶשְׂרִים וְאַרְבָּעָה מֵאִתָּנוּ וּבָהֶם בְּנִי מוֹרוֹנִי וַאֲנַחְנוּ הַנִּשְׁאָרִים מֵחַלְלֵי עַמֵּנוּ רָאִינוּ מִמָּחֳרָת בְּשׁוּב הַלָּמָנִים אֶל־מַחֲנֵיהֶם מֵרֹאשׁ גִּבְעַת כּוּמוֹרָה אֶת־עֲשֶׂרֶת אֲלָפִים מֵעַמִּי אֲשֶׁר נִגְדְּעוּ וַאֲנִי בְּרֹאשָׁם׃",
+  "hebrew": "וַיְהִי אַחֲרֵי עָבְרָם וַיַּכּוּ אֶת־כָּל־עַמִּי זוּלַת עֶשְׂרִים וְאַרְבָּעָה מֵאִתָּנוּ וּבָהֶם בְּנִי מוֹרוֹנִי וַאֲנַחְנוּ הַנִּשְׁאָרִים מֵחַלְלֵי עַמֵּנוּ רָאִינוּ מִמָּחֳרָת בְּשׁוּב הַלָּמָנִים אֶל־מַחֲנֵיהֶם מֵרֹאשׁ גִּבְעַת כּוּמוֹרָה אֶת־עֲשֶׂרֶת אֲלָפִים מֵעַמִּי אֲשֶׁר נִגְדְּעוּ וַאֲנִי בְּרֹאשָׁם׃",
   "english": "And when they had gone through and hewn down all my people save it were twenty and four of us, (among whom was my son Moroni) and we having survived the dead of our people, did behold on the morrow, when the Lamanites had returned unto their camps, from the top of the hill Cumorah, the ten thousand of my people who were hewn down, being led in the front by me."
  },
  {
@@ -41373,7 +41373,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 6,
   "verse": 15,
-  "hebrew": "וַיְהִי כִּי נָפְלוּ עוֹד עֲשָׂרָה בֶּחָרֶב אִישׁ עִם־עֲשֶׂרֶת אֲלָפָיו הֵן כָּל־עַמִּי נָפְלוּ זוּלָתִי הָעֶשְׂרִים וְאַרְבָּעָה אֲשֶׁר אִתִּי וּמְעַט אֲשֶׁר נִמְלְטוּ אֶל־אַרְצוֹת הַנֶּגֶב וּמְעַט אֲשֶׁר נָפְלוּ אֶל־הַלָּמָנִים וּבְשָׂרָם וְעַצְמוֹתֵיהֶם וְדָמָם שׁוֹכְבִים עַל־פְּנֵי הָאֲדָמָה נֶעֶזְבוּ בִּידֵי הֹרְגֵיהֶם לְהֵרָקֵב עַל־הָאָרֶץ וּלְהִתְפּוֹרֵר וְלָשׁוּב אֶל־אֲדָמָתָם׃",
+  "hebrew": "וַיְהִי כִּי נָפְלוּ עוֹד עֲשָׂרָה בֶּחָרֶב אִישׁ עִם־עֲשֶׂרֶת אֲלָפָיו הֵן כָּל־עַמִּי נָפְלוּ זוּלַת הָעֶשְׂרִים וְאַרְבָּעָה אֲשֶׁר אִתִּי וּמְעַט אֲשֶׁר נִמְלְטוּ אֶל־אַרְצוֹת הַנֶּגֶב וּמְעַט אֲשֶׁר נָפְלוּ אֶל־הַלָּמָנִים וּבְשָׂרָם וְעַצְמוֹתֵיהֶם וְדָמָם שׁוֹכְבִים עַל־פְּנֵי הָאֲדָמָה נֶעֶזְבוּ בִּידֵי הֹרְגֵיהֶם לְהֵרָקֵב עַל־הָאָרֶץ וּלְהִתְפּוֹרֵר וְלָשׁוּב אֶל־אֲדָמָתָם׃",
   "english": "And it came to pass that there were ten more who did fall by the sword, with their ten thousand each; yea, even all my people, save it were those twenty and four who were with me, and also a few who had escaped into the south countries, and a few who had deserted over unto the Lamanites, had fallen; and their flesh, and bones, and blood lay upon the face of the earth, being left by the hands of those who slew them to molder upon the land, and to crumble and to return to their mother earth."
  },
  {
@@ -41450,7 +41450,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 7,
   "verse": 4,
-  "hebrew": "דְּעוּ כִּי עֲלֵיכֶם לְהַשְׁלִיךְ אֶת־כְּלֵי מִלְחַמְתְּכֶם וְלֹא תִשְׂמְחוּ עוֹד בִּשְׁפִיכַת דָּמִים וְאַל־תִּקְחוּם שֵׁנִית זוּלָתִי אִם־יְצַוֶּה אֱלֹהִים׃",
+  "hebrew": "דְּעוּ כִּי עֲלֵיכֶם לְהַשְׁלִיךְ אֶת־כְּלֵי מִלְחַמְתְּכֶם וְלֹא תִשְׂמְחוּ עוֹד בִּשְׁפִיכַת דָּמִים וְאַל־תִּקְחוּם שֵׁנִית זוּלַת אִם־יְצַוֶּה אֱלֹהִים׃",
   "english": "Know ye that ye must lay down your weapons of war, and delight no more in the shedding of blood, and take them not again, save it be that God shall command you."
  },
  {
@@ -41555,14 +41555,14 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 8,
   "verse": 9,
-  "hebrew": "וְעַתָּה הִנֵּה לֹא אוֹסִיף לְדַבֵּר עֲלֵיהֶם כִּי אֵין נוֹתָר זוּלָתִי הַלָּמָנִים וְשׁוֹדְדִים עַל־פְּנֵי הָאָרֶץ׃",
+  "hebrew": "וְעַתָּה הִנֵּה לֹא אוֹסִיף לְדַבֵּר עֲלֵיהֶם כִּי אֵין נוֹתָר זוּלַת הַלָּמָנִים וְשׁוֹדְדִים עַל־פְּנֵי הָאָרֶץ׃",
   "english": "And now, behold, I say no more concerning them, for there are none save it be the Lamanites and robbers that do exist upon the face of the land."
  },
  {
   "book": "Mormon",
   "chapter": 8,
   "verse": 10,
-  "hebrew": "וְאֵין יוֹדְעִים אֶת־אֱלֹהֵי אֱמֶת זוּלָתִי תַּלְמִידֵי יֵשׁוּעַ אֲשֶׁר נִשְׁאֲרוּ בָאָרֶץ עַד אֲשֶׁר גָּדְלָה רִשְׁעַת הָעָם וְלֹא־נָתַן יְהוָה לָהֶם לְהִשָּׁאֵר עִם־הָעָם וְאִם־הֵם עַל־פְּנֵי הָאָרֶץ לֹא יָדַע אִישׁ׃",
+  "hebrew": "וְאֵין יוֹדְעִים אֶת־אֱלֹהֵי אֱמֶת זוּלַת תַּלְמִידֵי יֵשׁוּעַ אֲשֶׁר נִשְׁאֲרוּ בָאָרֶץ עַד אֲשֶׁר גָּדְלָה רִשְׁעַת הָעָם וְלֹא־נָתַן יְהוָה לָהֶם לְהִשָּׁאֵר עִם־הָעָם וְאִם־הֵם עַל־פְּנֵי הָאָרֶץ לֹא יָדַע אִישׁ׃",
   "english": "And there are none that do know the true God save it be the disciples of Jesus, who did tarry in the land until the wickedness of the people was so great that the Lord would not suffer them to remain with the people; and whether they be upon the face of the land no man knoweth."
  },
  {
@@ -41597,7 +41597,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 8,
   "verse": 15,
-  "hebrew": "כִּי אֵין כֹּחַ לְאִישׁ לְהוֹצִיאוֹ לָאוֹר זוּלָתִי אִם־נִתַּן לוֹ מֵאֵת אֱלֹהִים כִּי חָפֵץ אֱלֹהִים כִּי יֵעָשֶׂה בְּעַיִן יְחִידָה לִכְבוֹדוֹ אוֹ לְטוֹבַת עַם בְּרִית יְהוָה הַקַּדְמוֹנִים וְהַנְּפוֹצִים זֶה יָמִים רַבִּים׃",
+  "hebrew": "כִּי אֵין כֹּחַ לְאִישׁ לְהוֹצִיאוֹ לָאוֹר זוּלַת אִם־נִתַּן לוֹ מֵאֵת אֱלֹהִים כִּי חָפֵץ אֱלֹהִים כִּי יֵעָשֶׂה בְּעַיִן יְחִידָה לִכְבוֹדוֹ אוֹ לְטוֹבַת עַם בְּרִית יְהוָה הַקַּדְמוֹנִים וְהַנְּפוֹצִים זֶה יָמִים רַבִּים׃",
   "english": "For none can have power to bring it to light save it be given him of God; for God wills that it shall be done with an eye single to his glory, or the welfare of the ancient and long dispersed covenant people of the Lord."
  },
  {
@@ -41744,7 +41744,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 8,
   "verse": 36,
-  "hebrew": "וְיָדַעְתִּי כִּי תִתְהַלְּכוּ בִּגְאוֹן לְבַבְכֶם וְאֵין זוּלָתִי מְעַטִּים אֲשֶׁר לֹא יִתְנַשְּׂאוּ בִּגְאוֹן לְבָבָם לִלְבֹּשׁ בְּגָדִים יְקָרִים מְאֹד לְקִנְאָה וּמְרִיבוֹת וְשִׂנְאָה וּרְדִיפוֹת וְכָל־מִינֵי עֲוֹנוֹת וּקְהִלּוֹתֵיכֶם הֵן כֻּלָּן נִטְמְאוּ מִפְּנֵי גְאוֹן לְבַבְכֶם׃",
+  "hebrew": "וְיָדַעְתִּי כִּי תִתְהַלְּכוּ בִּגְאוֹן לְבַבְכֶם וְאֵין זוּלַת מְעַטִּים אֲשֶׁר לֹא יִתְנַשְּׂאוּ בִּגְאוֹן לְבָבָם לִלְבֹּשׁ בְּגָדִים יְקָרִים מְאֹד לְקִנְאָה וּמְרִיבוֹת וְשִׂנְאָה וּרְדִיפוֹת וְכָל־מִינֵי עֲוֹנוֹת וּקְהִלּוֹתֵיכֶם הֵן כֻּלָּן נִטְמְאוּ מִפְּנֵי גְאוֹן לְבַבְכֶם׃",
   "english": "And I know that ye do walk in the pride of your hearts; and there are none save a few only who do not lift themselves up in the pride of their hearts, unto the wearing of very fine apparel, unto envying, and strifes, and malice, and persecutions, and all manner of iniquities; and your churches, yea, even every one, have become polluted because of the pride of your hearts."
  },
  {
@@ -41793,14 +41793,14 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 9,
   "verse": 2,
-  "hebrew": "הֲתַאֲמִינוּ בְּיוֹם פְּקֻדַּתְכֶם הִנֵּה בְּבוֹא יְהוָה הֵן בַּיּוֹם הַגָּדוֹל הַהוּא כַּאֲשֶׁר תִּגָּלֵל הָאָרֶץ כַּסֵּפֶר וְהַיְסוֹדוֹת יִמַּסּוּ בְּחֹם נוֹרָא הֵן בַּיּוֹם הַגָּדוֹל הַהוּא כַּאֲשֶׁר תּוּבְאוּ לַעֲמֹד לִפְנֵי שֵׂה הָאֱלֹהִים הֲתֹאמְרוּ אָז כִּי אֵין אֱלֹהִים׃",
+  "hebrew": "הֲתַאֲמִינוּ בְּיוֹם פְּקֻדַּתְכֶם הִנֵּה בְּבוֹא יְהוָה הֵן בַּיּוֹם הַגָּדוֹל הַהוּא כַּאֲשֶׁר תִּגָּלֵל הָאָרֶץ כַּסֵּפֶר וְהַיְסוֹדוֹת יִמַּסּוּ בְּחֹם נוֹרָא הֵן בַּיּוֹם הַגָּדוֹל הַהוּא כַּאֲשֶׁר תּוּבְאוּ לַעֲמֹד לִפְנֵי שֵׂה־אֱלֹהִים הֲתֹאמְרוּ אָז כִּי אֵין אֱלֹהִים׃",
   "english": "Behold, will ye believe in the day of your visitation—behold, when the Lord shall come, yea, even that great day when the earth shall be rolled together as a scroll, and the elements shall melt with fervent heat, yea, in that great day when ye shall be brought to stand before the Lamb of God—then will ye say that there is no God?"
  },
  {
   "book": "Mormon",
   "chapter": 9,
   "verse": 3,
-  "hebrew": "הֲתַכְחִישׁוּ עוֹד בַּמָּשִׁיחַ אוֹ הֲתוּכְלוּ לִרְאוֹת אֶת־שֵׂה הָאֱלֹהִים הֲתַחְשְׁבוּ כִּי תֵשְׁבוּ אִתּוֹ בְּהַכִּירְכֶם אַשְׁמַתְכֶם הֲתַחְשְׁבוּ כִּי תוּכְלוּ לִשְׂמֹחַ בָּשֶׁבֶת עִם־הַקָּדוֹשׁ הַהוּא בְּעוֹד נַפְשׁוֹתֵיכֶם מְיֻסָּרוֹת בְּהַכָּרַת אַשְׁמַתְכֶם כִּי פְּרַעְתֶּם אֶת־תּוֹרוֹתָיו׃",
+  "hebrew": "הֲתַכְחִישׁוּ עוֹד בַּמָּשִׁיחַ אוֹ הֲתוּכְלוּ לִרְאוֹת אֶת־שֵׂה־אֱלֹהִים הֲתַחְשְׁבוּ כִּי תֵשְׁבוּ אִתּוֹ בְּהַכִּירְכֶם אַשְׁמַתְכֶם הֲתַחְשְׁבוּ כִּי תוּכְלוּ לִשְׂמֹחַ בָּשֶׁבֶת עִם־הַקָּדוֹשׁ הַהוּא בְּעוֹד נַפְשׁוֹתֵיכֶם מְיֻסָּרוֹת בְּהַכָּרַת אַשְׁמַתְכֶם כִּי פְּרַעְתֶּם אֶת־תּוֹרוֹתָיו׃",
   "english": "Then will ye longer deny the Christ, or can ye behold the Lamb of God? Do ye suppose that ye shall dwell with him under a consciousness of your guilt? Do ye suppose that ye could be happy to dwell with that holy Being, when your souls are racked with a consciousness of guilt that ye have ever abused his laws?"
  },
  {
@@ -42472,7 +42472,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 2,
   "verse": 19,
-  "hebrew": "וְהִנֵּה אֲדֹנָי אֵין בָּהֶן אוֹר אָנָה נַנְהִיג וְגַם נִגְוַע כִּי לֹא נוּכַל לִנְשֹׁם בָּהֶן זוּלָתִי הָאֲוִיר אֲשֶׁר בְּתוֹכָן לָכֵן נִגְוָע׃",
+  "hebrew": "וְהִנֵּה אֲדֹנָי אֵין בָּהֶן אוֹר אָנָה נַנְהִיג וְגַם נִגְוַע כִּי לֹא נוּכַל לִנְשֹׁם בָּהֶן זוּלַת הָאֲוִיר אֲשֶׁר בְּתוֹכָן לָכֵן נִגְוָע׃",
   "english": "And behold, O Lord, in them there is no light; whither shall we steer? And also we shall perish, for in them we cannot breathe, save it is the air which is in them; therefore we shall perish."
  },
  {
@@ -42514,7 +42514,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 2,
   "verse": 25,
-  "hebrew": "וְהִנֵּה אֲנִי מֵכִין אֶתְכֶם לִקְרַאת הַדְּבָרִים הָאֵלֶּה כִּי לֹא תוּכְלוּ לַעֲבֹר אֶת־הַתְּהוֹם הַגָּדוֹל הַזֶּה זוּלָתִי אֲכִין אֶתְכֶם לִקְרַאת גַּלֵּי הַיָּם וְהָרוּחוֹת אֲשֶׁר יָצְאוּ וְהַמַּבּוּלִים אֲשֶׁר יָבוֹאוּ לָכֵן מָה תַחְפְּצוּ כִּי אָכִין לָכֶם לְמַעַן יִהְיֶה לָכֶם אוֹר בְּהִבָּלְעֲכֶם בְּמַעֲמַקֵּי הַיָּם׃",
+  "hebrew": "וְהִנֵּה אֲנִי מֵכִין אֶתְכֶם לִקְרַאת הַדְּבָרִים הָאֵלֶּה כִּי לֹא תוּכְלוּ לַעֲבֹר אֶת־הַתְּהוֹם הַגָּדוֹל הַזֶּה זוּלַת אֲכִין אֶתְכֶם לִקְרַאת גַּלֵּי הַיָּם וְהָרוּחוֹת אֲשֶׁר יָצְאוּ וְהַמַּבּוּלִים אֲשֶׁר יָבוֹאוּ לָכֵן מָה תַחְפְּצוּ כִּי אָכִין לָכֶם לְמַעַן יִהְיֶה לָכֶם אוֹר בְּהִבָּלְעֲכֶם בְּמַעֲמַקֵּי הַיָּם׃",
   "english": "And behold, I prepare you against these things; for ye cannot cross this great deep save I prepare you against the waves of the sea, and the winds which have gone forth, and the floods which shall come. Therefore what will ye that I should prepare for you that ye may have light when ye are swallowed up in the depths of the sea?"
  },
  {
@@ -42731,7 +42731,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 4,
   "verse": 3,
-  "hebrew": "וְעַתָּה אַחֲרֵי כֵן סָרוּ כֻלָּם מֵאֱמוּנָה וְאֵין נוֹתָר זוּלָתִי הַלָּמָנִים וְהֵם מָאֲסוּ אֶת־בְּשׂוֹרַת הַמָּשִׁיחַ לָכֵן צֻוֵּיתִי לְהַטְמִינָם שֵׁנִית בָּאֲדָמָה׃",
+  "hebrew": "וְעַתָּה אַחֲרֵי כֵן סָרוּ כֻלָּם מֵאֱמוּנָה וְאֵין נוֹתָר זוּלַת הַלָּמָנִים וְהֵם מָאֲסוּ אֶת־בְּשׂוֹרַת הַמָּשִׁיחַ לָכֵן צֻוֵּיתִי לְהַטְמִינָם שֵׁנִית בָּאֲדָמָה׃",
   "english": "And now, after that, they have all dwindled in unbelief; and there is none save it be the Lamanites, and they have rejected the gospel of Christ; therefore I am commanded that I should hide them up again in the earth."
  },
  {
@@ -42794,7 +42794,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 4,
   "verse": 12,
-  "hebrew": "וְכָל־דָּבָר הַמַּדְרִיךְ אֶת־בְּנֵי הָאָדָם לַעֲשׂוֹת טוֹב מִמֶּנִּי הוּא כִּי אֵין טוֹב זוּלָתִי מִמֶּנִּי אֲנִי הוּא הַמּוֹלִיךְ אֶת־בְּנֵי הָאָדָם לְכָל־טוֹב וְהַלֹּא מַאֲמִין בִּדְבָרַי לֹא יַאֲמִין בִּי כִּי אֲנִי הוּא וְהַלֹּא מַאֲמִין בִּי לֹא יַאֲמִין בָּאָב אֲשֶׁר שְׁלָחַנִי כִּי הִנֵּה אֲנִי הָאָב אֲנִי הָאוֹר וְהַחַיִּים וֶאֱמֶת הָעוֹלָם׃",
+  "hebrew": "וְכָל־דָּבָר הַמַּדְרִיךְ אֶת־בְּנֵי הָאָדָם לַעֲשׂוֹת טוֹב מִמֶּנִּי הוּא כִּי אֵין טוֹב זוּלַת מִמֶּנִּי אֲנִי הוּא הַמּוֹלִיךְ אֶת־בְּנֵי הָאָדָם לְכָל־טוֹב וְהַלֹּא מַאֲמִין בִּדְבָרַי לֹא יַאֲמִין בִּי כִּי אֲנִי הוּא וְהַלֹּא מַאֲמִין בִּי לֹא יַאֲמִין בָּאָב אֲשֶׁר שְׁלָחַנִי כִּי הִנֵּה אֲנִי הָאָב אֲנִי הָאוֹר וְהַחַיִּים וֶאֱמֶת הָעוֹלָם׃",
   "english": "And whatsoever thing persuadeth men to do good is of me; for good cometh of none save it be of me. I am the same that leadeth men to all good; he that will not believe my words will not believe me—that I am; and he that will not believe me will not believe the Father who sent me. For behold, I am the Father, I am the light, and the life, and the truth of the world."
  },
  {
@@ -42850,7 +42850,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 5,
   "verse": 1,
-  "hebrew": "וְעַתָּה אֲנִי מוֹרוֹנִי כָּתַבְתִּי אֶת־הַדְּבָרִים אֲשֶׁר צֻוֵּיתִי כְּפִי זִכְרוֹנִי וְהִגַּדְתִּי לָכֶם אֶת־הַדְּבָרִים אֲשֶׁר חָתַמְתִּי לָכֵן אַל־תִּגְּעוּ בָם לְמַעַן תִּפְתְּרוּ כִּי נֶאֱסַר הַדָּבָר הַזֶּה עֲלֵיכֶם זוּלָתִי כַּאֲשֶׁר תִּהְיֶה חָכְמָה בֵּאלֹהִים׃",
+  "hebrew": "וְעַתָּה אֲנִי מוֹרוֹנִי כָּתַבְתִּי אֶת־הַדְּבָרִים אֲשֶׁר צֻוֵּיתִי כְּפִי זִכְרוֹנִי וְהִגַּדְתִּי לָכֶם אֶת־הַדְּבָרִים אֲשֶׁר חָתַמְתִּי לָכֵן אַל־תִּגְּעוּ בָם לְמַעַן תִּפְתְּרוּ כִּי נֶאֱסַר הַדָּבָר הַזֶּה עֲלֵיכֶם זוּלַת כַּאֲשֶׁר תִּהְיֶה חָכְמָה בֵּאלֹהִים׃",
   "english": "And now I, Moroni, have written the words which were commanded me, according to my memory; and I have told you the things which I have sealed up; therefore touch them not in order that ye may translate; for that thing is forbidden you, except by and by it shall be wisdom in God."
  },
  {
@@ -43074,7 +43074,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 6,
   "verse": 27,
-  "hebrew": "וַיְהִי כִּי גַם בְּנֵי יֶרֶד לֹא אָבוּ זוּלָתִי אֶחָד וַיִּמָּשַׁח אוֹרִיהָה לְמֶלֶךְ עַל־הָעָם׃",
+  "hebrew": "וַיְהִי כִּי גַם בְּנֵי יֶרֶד לֹא אָבוּ זוּלַת אֶחָד וַיִּמָּשַׁח אוֹרִיהָה לְמֶלֶךְ עַל־הָעָם׃",
   "english": "And it came to pass that neither would the sons of Jared, even all save it were one; and Orihah was anointed to be king over the people."
  },
  {
@@ -43487,7 +43487,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 9,
   "verse": 3,
-  "hebrew": "וַיַּזְהֵר יְהוָה אֶת־עֹמֶר בַּחֲלוֹם כִּי יֵצֵא מִן־הָאָרֶץ וַיֵּצֵא עֹמֶר מִן־הָאָרֶץ עִם־מִשְׁפַּחְתּוֹ וַיִּסַּע יָמִים רַבִּים וַיַּעֲבֹר וַיָּבֹא עַל־פְּנֵי גִבְעַת שִׁים וַיַּעֲבֹר עַל־פְּנֵי הַמָּקוֹם אֲשֶׁר הֻשְׁמְדוּ בוֹ הַנְּפִיִּים וּמִשָּׁם קֵדְמָה וַיָּבֹא אֶל־מָקוֹם אֲשֶׁר נִקְרָא אַבְלוֹם עַל־חוֹף הַיָּם וַיֶּט שָׁם אָהֳלוֹ וְגַם בָּנָיו וּבְנוֹתָיו וְכָל־בֵּיתוֹ זוּלָתִי יֶרֶד וּמִשְׁפַּחְתּוֹ׃",
+  "hebrew": "וַיַּזְהֵר יְהוָה אֶת־עֹמֶר בַּחֲלוֹם כִּי יֵצֵא מִן־הָאָרֶץ וַיֵּצֵא עֹמֶר מִן־הָאָרֶץ עִם־מִשְׁפַּחְתּוֹ וַיִּסַּע יָמִים רַבִּים וַיַּעֲבֹר וַיָּבֹא עַל־פְּנֵי גִבְעַת שִׁים וַיַּעֲבֹר עַל־פְּנֵי הַמָּקוֹם אֲשֶׁר הֻשְׁמְדוּ בוֹ הַנְּפִיִּים וּמִשָּׁם קֵדְמָה וַיָּבֹא אֶל־מָקוֹם אֲשֶׁר נִקְרָא אַבְלוֹם עַל־חוֹף הַיָּם וַיֶּט שָׁם אָהֳלוֹ וְגַם בָּנָיו וּבְנוֹתָיו וְכָל־בֵּיתוֹ זוּלַת יֶרֶד וּמִשְׁפַּחְתּוֹ׃",
   "english": "And the Lord warned Omer in a dream that he should depart out of the land; wherefore Omer departed out of the land with his family, and traveled many days, and came over and passed by the hill of Shim, and came over by the place where the Nephites were destroyed, and from thence eastward, and came to a place which was called Ablom, by the seashore, and there he pitched his tent, and also his sons and his daughters, and all his household, save it were Jared and his family."
  },
  {
@@ -43550,7 +43550,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 9,
   "verse": 12,
-  "hebrew": "וַתָּחֶל מִלְחָמָה בֵּין בְּנֵי אָכִישׁ וּבֵין אָכִישׁ וַתִּמְשֹׁךְ יָמִים רַבִּים עַד הַשְׁמִיד כִּמְעַט אֶת־כָּל־עַם הַמַּמְלָכָה הֵן אֶת־כֻּלָּם זוּלָתִי שְׁלֹשִׁים נְפָשׁוֹת וְהַנָּסִים עִם־בֵּית עֹמֶר׃",
+  "hebrew": "וַתָּחֶל מִלְחָמָה בֵּין בְּנֵי אָכִישׁ וּבֵין אָכִישׁ וַתִּמְשֹׁךְ יָמִים רַבִּים עַד הַשְׁמִיד כִּמְעַט אֶת־כָּל־עַם הַמַּמְלָכָה הֵן אֶת־כֻּלָּם זוּלַת שְׁלֹשִׁים נְפָשׁוֹת וְהַנָּסִים עִם־בֵּית עֹמֶר׃",
   "english": "And there began to be a war between the sons of Akish and Akish, which lasted for the space of many years, yea, unto the destruction of nearly all the people of the kingdom, yea, even all, save it were thirty souls, and they who fled with the house of Omer."
  },
  {
@@ -43718,7 +43718,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 10,
   "verse": 1,
-  "hebrew": "וַיְהִי כִּי שֵׁז אֲשֶׁר הָיָה מִזֶּרַע חֵת כִּי מֵת חֵת בָּרָעָב וְכָל־בֵּיתוֹ זוּלָתִי שֵׁז לָכֵן הֵחֵל שֵׁז לִבְנוֹת שֵׁנִית עַם שָׁבוּר׃",
+  "hebrew": "וַיְהִי כִּי שֵׁז אֲשֶׁר הָיָה מִזֶּרַע חֵת כִּי מֵת חֵת בָּרָעָב וְכָל־בֵּיתוֹ זוּלַת שֵׁז לָכֵן הֵחֵל שֵׁז לִבְנוֹת שֵׁנִית עַם שָׁבוּר׃",
   "english": "And it came to pass that Shez, who was a descendant of Heth—for Heth had perished by the famine, and all his household save it were Shez—wherefore, Shez began to build up again a broken people."
  },
  {
@@ -44460,7 +44460,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 13,
   "verse": 9,
-  "hebrew": "וְיִהְיוּ שָׁמַיִם חֲדָשִׁים וְאֶרֶץ חֲדָשָׁה וְהָיוּ כְּמוֹ הַיְשָׁנִים זוּלָתִי עָבְרוּ הַיְשָׁנִים וְכָל־הַדְּבָרִים נִהְיוּ חֲדָשִׁים׃",
+  "hebrew": "וְיִהְיוּ שָׁמַיִם חֲדָשִׁים וְאֶרֶץ חֲדָשָׁה וְהָיוּ כְּמוֹ הַיְשָׁנִים זוּלַת עָבְרוּ הַיְשָׁנִים וְכָל־הַדְּבָרִים נִהְיוּ חֲדָשִׁים׃",
   "english": "And there shall be a new heaven and a new earth; and they shall be like unto the old save the old have passed away, and all things have become new."
  },
  {
@@ -44544,7 +44544,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 13,
   "verse": 21,
-  "hebrew": "וְאִם־לֹא יֻשְׁמְדוּ הֵם וְכָל־בֵּיתוֹ זוּלָתִי הוּא וְהוּא יִחְיֶה רַק לִרְאוֹת הִתְמַלְּאוּת הַנְּבוּאוֹת אֲשֶׁר נֶאֶמְרוּ עַל־עַם אַחֵר הַמְּקַבֵּל אֶת־הָאָרֶץ לְנַחֲלָה וְיִקְבְּרוּ אוֹתוֹ וְכָל־נֶפֶשׁ תֻּשְׁמַד זוּלָתִי כוֹרִיַנְטוּמְר׃",
+  "hebrew": "וְאִם־לֹא יֻשְׁמְדוּ הֵם וְכָל־בֵּיתוֹ זוּלַת הוּא וְהוּא יִחְיֶה רַק לִרְאוֹת הִתְמַלְּאוּת הַנְּבוּאוֹת אֲשֶׁר נֶאֶמְרוּ עַל־עַם אַחֵר הַמְּקַבֵּל אֶת־הָאָרֶץ לְנַחֲלָה וְיִקְבְּרוּ אוֹתוֹ וְכָל־נֶפֶשׁ תֻּשְׁמַד זוּלַת כוֹרִיַנְטוּמְר׃",
   "english": "Otherwise they should be destroyed, and all his household save it were himself. And he should only live to see the fulfilling of the prophecies which had been spoken concerning another people receiving the land for their inheritance; and Coriantumr should receive a burial by them; and every soul should be destroyed save it were Coriantumr."
  },
  {
@@ -44915,7 +44915,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 15,
   "verse": 12,
-  "hebrew": "וַיְהִי כִּי קִבְּצוּ אֶת־כָּל־הָעָם אֲשֶׁר עַל־פְּנֵי כָל־הָאָרֶץ אֲשֶׁר לֹא נֶהֶרְגוּ זוּלָתִי אֶתֶר׃",
+  "hebrew": "וַיְהִי כִּי קִבְּצוּ אֶת־כָּל־הָעָם אֲשֶׁר עַל־פְּנֵי כָל־הָאָרֶץ אֲשֶׁר לֹא נֶהֶרְגוּ זוּלַת אֶתֶר׃",
   "english": "And it came to pass that they did gather together all the people upon all the face of the land, who had not been slain, save it was Ether."
  },
  {
@@ -44992,7 +44992,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 15,
   "verse": 23,
-  "hebrew": "וּמִמָּחֳרָת נִלְחֲמוּ שֵׁנִית וּכְבוֹא הַלַּיְלָה נָפְלוּ כֻלָּם בֶּחָרֶב זוּלָתִי חֲמִשִּׁים וּשְׁנַיִם מֵעַם כוֹרִיַנְטוּמְר וְשִׁשִּׁים וְתִשְׁעָה מֵעַם שִׁיז׃",
+  "hebrew": "וּמִמָּחֳרָת נִלְחֲמוּ שֵׁנִית וּכְבוֹא הַלַּיְלָה נָפְלוּ כֻלָּם בֶּחָרֶב זוּלַת חֲמִשִּׁים וּשְׁנַיִם מֵעַם כוֹרִיַנְטוּמְר וְשִׁשִּׁים וְתִשְׁעָה מֵעַם שִׁיז׃",
   "english": "And on the morrow they fought again; and when the night came they had all fallen by the sword save it were fifty and two of the people of Coriantumr, and sixty and nine of the people of Shiz."
  },
  {
@@ -45034,7 +45034,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 15,
   "verse": 29,
-  "hebrew": "לָכֵן רָדַף אַחֲרֵיהֶם וּמִמָּחֳרָת הִשִּׂיגָם וַיִּלָּחֲמוּ שֵׁנִית בֶּחָרֶב וַיְהִי כַּאֲשֶׁר נָפְלוּ כֻלָּם בֶּחָרֶב זוּלָתִי כוֹרִיַנְטוּמְר וְשִׁיז וְהִנֵּה הִתְעַלֵּף שִׁיז מֵאָבְדַן דָּמוֹ׃",
+  "hebrew": "לָכֵן רָדַף אַחֲרֵיהֶם וּמִמָּחֳרָת הִשִּׂיגָם וַיִּלָּחֲמוּ שֵׁנִית בֶּחָרֶב וַיְהִי כַּאֲשֶׁר נָפְלוּ כֻלָּם בֶּחָרֶב זוּלַת כוֹרִיַנְטוּמְר וְשִׁיז וְהִנֵּה הִתְעַלֵּף שִׁיז מֵאָבְדַן דָּמוֹ׃",
   "english": "Wherefore, he did pursue them, and on the morrow he did overtake them; and they fought again with the sword. And it came to pass that when they had all fallen by the sword, save it were Coriantumr and Shiz, behold Shiz had fainted with the loss of blood."
  },
  {
@@ -45552,7 +45552,7 @@ window._officialVersesData = [
   "book": "Moroni",
   "chapter": 7,
   "verse": 44,
-  "hebrew": "וְאִם־כֵּן אֱמוּנָתוֹ וְתִקְוָתוֹ הָבֶל כִּי אֵין נִרְצֶה לִפְנֵי אֱלֹהִים זוּלָתִי הֶעָנָו וּשְׁפַל הַלֵּב וְאִם־יִהְיֶה אִישׁ עָנָו וּשְׁפַל לֵב וּמוֹדֶה בְּכֹחַ רוּחַ הַקֹּדֶשׁ כִּי יֵשׁוּעַ  הוּא הַמָּשִׁיחַ הֲלֹא יִהְיֶה לוֹ חֶסֶד כִּי אִם־אֵין לוֹ חֶסֶד אֵינֶנּוּ מְאוּמָה לָכֵן יִהְיֶה לוֹ חֶסֶד׃",
+  "hebrew": "וְאִם־כֵּן אֱמוּנָתוֹ וְתִקְוָתוֹ הָבֶל כִּי אֵין נִרְצֶה לִפְנֵי אֱלֹהִים זוּלַת הֶעָנָו וּשְׁפַל הַלֵּב וְאִם־יִהְיֶה אִישׁ עָנָו וּשְׁפַל לֵב וּמוֹדֶה בְּכֹחַ רוּחַ הַקֹּדֶשׁ כִּי יֵשׁוּעַ  הוּא הַמָּשִׁיחַ הֲלֹא יִהְיֶה לוֹ חֶסֶד כִּי אִם־אֵין לוֹ חֶסֶד אֵינֶנּוּ מְאוּמָה לָכֵן יִהְיֶה לוֹ חֶסֶד׃",
   "english": "If so, his faith and hope is vain, for none is acceptable before God, save the meek and lowly in heart; and if a man be meek and lowly in heart, and confesses by the power of the Holy  Ghost that Jesus is the Christ, he must needs have charity; for if he have not charity he is nothing; wherefore he must needs have charity."
  },
  {
@@ -45923,7 +45923,7 @@ window._officialVersesData = [
   "book": "Moroni",
   "chapter": 9,
   "verse": 19,
-  "hebrew": "וַיֶּחֶזְקוּ בְּסוּרָם וַיִּהְיוּ כְּחַיּוֹת כֻּלָּם לֹא יַחְמְלוּ עַל־אִישׁ לֹא זָקֵן וְלֹא צָעִיר וְיִשְׂמְחוּ בְּכָל־דָּבָר זוּלָתִי הַטּוֹב וְעִנּוּי נָשֵׁינוּ וִילָדֵינוּ עַל־כָּל־פְּנֵי הָאָרֶץ הַזֹּאת גָּדְלָה מִכֹּל לֹא־תוּכַל לָשׁוֹן לְסַפֵּר וְלֹא יִכָּתֵב׃",
+  "hebrew": "וַיֶּחֶזְקוּ בְּסוּרָם וַיִּהְיוּ כְּחַיּוֹת כֻּלָּם לֹא יַחְמְלוּ עַל־אִישׁ לֹא זָקֵן וְלֹא צָעִיר וְיִשְׂמְחוּ בְּכָל־דָּבָר זוּלַת הַטּוֹב וְעִנּוּי נָשֵׁינוּ וִילָדֵינוּ עַל־כָּל־פְּנֵי הָאָרֶץ הַזֹּאת גָּדְלָה מִכֹּל לֹא־תוּכַל לָשׁוֹן לְסַפֵּר וְלֹא יִכָּתֵב׃",
   "english": "And they have become strong in their perversion; and they are alike brutal, sparing none, neither old nor young; and they delight in everything save that which is good; and the suffering of our women and our children upon all the face of this land doth exceed everything; yea, tongue cannot tell, neither can it be written."
  },
  {
@@ -46105,7 +46105,7 @@ window._officialVersesData = [
   "book": "Moroni",
   "chapter": 10,
   "verse": 19,
-  "hebrew": "וַאֲנִי מַזְהִיר אֶתְכֶם אַחַי הָאֲהוּבִים כִּי תִזְכְּרוּ שֶׁהוּא הוּא אֶתְמוֹל הַיּוֹם וּלְעוֹלָם וְכָל־הַמַּתָּנוֹת הָאֵלֶּה אֲשֶׁר דִּבַּרְתִּי עֲלֵיהֶן אֲשֶׁר לָרוּחַ הֵנָּה לֹא תִכָּלֶינָה לְעוֹלָם כָּל־עוֹד תַּעֲמֹד הָאָרֶץ זוּלָתִי בְּאֵין אֱמוּנַת בְּנֵי הָאָדָם׃",
+  "hebrew": "וַאֲנִי מַזְהִיר אֶתְכֶם אַחַי הָאֲהוּבִים כִּי תִזְכְּרוּ שֶׁהוּא הוּא אֶתְמוֹל הַיּוֹם וּלְעוֹלָם וְכָל־הַמַּתָּנוֹת הָאֵלֶּה אֲשֶׁר דִּבַּרְתִּי עֲלֵיהֶן אֲשֶׁר לָרוּחַ הֵנָּה לֹא תִכָּלֶינָה לְעוֹלָם כָּל־עוֹד תַּעֲמֹד הָאָרֶץ זוּלַת בְּאֵין אֱמוּנַת בְּנֵי הָאָדָם׃",
   "english": "And I would exhort you, my beloved brethren, that ye remember that he is the same yesterday, today, and forever, and that all these gifts of which I have spoken, which are spiritual, never will be done away, even as long as the world shall stand, only according to the unbelief of the children of men."
  },
  {

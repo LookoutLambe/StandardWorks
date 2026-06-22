@@ -1,0 +1,724 @@
+ALEPH TRAIL
+A Reading Course in Biblical and Restoration Hebrew for Children
+Journey 4: Lehi's Family
+1 Nephi 1 through 18 from Sefer Mormon: Departure, Vision, Journey to the Promised Land
+Full Verse-by-Verse Curriculum, 60 Lessons
+Prepared for Chris
+Design Draft v1.0
+ 
+Journey 4 Overview
+Source text: 1 Nephi 1 through 18 from Chris's Classical Biblical Hebrew translation (Sefer Mormon). Journey 4 is the pivot Journey of the course. For the first time the child opens restoration scripture in Hebrew, and they immediately recognize that the Hebrew sounds just like the Hebrew of Genesis 12. The covenant vocabulary they anchored in Journey 3 (chesed, berit, mitzvah, torah, yeshua) begins to reappear, and the child experiences convergent validation as recognition rather than argument.
+Journey 4 is 60 lessons across seven units. The child reads Nephi's opening autobiographical formula, the Tree of Life vision (which echoes Genesis 2 and 3), Nephi's psalm (which draws on the Psalter and introduces Hithpael in its most expressive form), and the sea voyage to the promised land (which echoes Exodus 14). Each echo is felt, not explained.
+Alternate Path for Non-LDS Users
+For subscribers outside the LDS tradition, Journey 4 offers an alternate path covering Isaiah 40 through 55 (Second Isaiah) with the same grammar targets and same pedagogical arc. The Aleph Trail app detects the user's chosen path during onboarding and serves the appropriate lesson sequence. Both paths converge at Journey 5. The parent companion material for the LDS path includes the non-LDS-path verses as optional supplementary reading.
+Pedagogical Note for Parents
+Journey 4 opens Sefer Mormon, Chris's Classical Biblical Hebrew translation of the Book of Mormon. The translation follows strict pre-exilic Mikraic register, the same register the child has been reading since Journey 1. If the parent compares Genesis 12:1 with 1 Nephi 2:2, they will see the same grammatical patterns and the same covenant vocabulary. This is not a coincidence. Chris has designed his translation so that the Hebrew of 1 Nephi testifies of the same God in the same language as the Hebrew of Genesis. This is convergent validation, delivered at the level of language rather than argument.
+ 
+Unit 1. Nephi's Opening (Lessons 1 to 8)
+Source text: 1 Nephi 1 in full. Nephi's autobiographical formula, Lehi's prayer, the pillar of fire, the book handed from the heavens. The opening chapter establishes the whole literary framework of the Book of Mormon and does so with Hebrew that feels like a direct continuation of the patriarchal narratives.
+Lesson 1. I, Nephi, Having Been Born
+Verse: 1 Nephi 1:1
+אֲנִי נְפִי נוֹלַדְתִּי לְהוֹרִים טוֹבִים עַל־כֵּן לֻמַּדְתִּי בְּכָל־תּוֹרַת אָבִי
+ani Nefi noladti le-horim tovim al-ken lumadti be-chol-torat avi
+Gloss: I, Nephi, having been born to good parents, therefore was I taught in all the learning of my father.
+Teaching focus: Introduce the Niphal noladti (I was born). Introduce לִמֵּד in Pual lumadti (I was taught). Reinforce תּוֹרָה (Torah, learning, instruction) as the noun of י־ר־ה. The child immediately recognizes תּוֹרָה from Journey 3 lesson 40. This recognition is the first taste of convergent validation.
+Root(s) introduced: Reinforce י־ל־ד (Niphal), ל־מ־ד (Pual), י־ר־ה (noun).
+New vocabulary: הוֹרִים (parents), תּוֹרָה (Torah, learning).
+Mini-games used: Chant Along, Convergent Validation Highlight (the word torah glows to mark recognition across Standard Works), Verse Builder.
+Exit check: Child recognizes torah from Journey 3 and recites the opening verse.
+
+Lesson 2. Many Afflictions in My Days
+Verse: 1 Nephi 1:1b
+וַאֲנִי רָאִיתִי צָרוֹת רַבּוֹת בְּיָמַי
+va-ani ra'iti tzarot rabot be-yamai
+Gloss: And I, having seen many afflictions in my days.
+Teaching focus: Introduce צָרָה (affliction, distress) in feminine plural. Reinforce ר־א־ה in 1cs perfect with emphatic pronoun.
+Root(s) introduced: צ־ר־ר (to be narrow, to distress).
+New vocabulary: צָרָה (affliction).
+Mini-games used: Chant Along, Shoresh Sort, Verse Builder.
+Exit check: Child reads verse 1b and identifies the emphatic va-ani construction.
+
+Lesson 3. The Goodness of God
+Verse: 1 Nephi 1:1c
+וּלְמַדְתִּי גַּם־כֵּן אֶת־טוֹב יְהוָה בְּכָל־יָמַי
+u-lamadti gam-ken et-tov YHVH be-chol-yamai
+Gloss: And I have learned also the goodness of the LORD in all my days.
+Teaching focus: Introduce ל־מ־ד in Qal 1cs perfect. Reinforce the construct tov YHVH (goodness of the LORD).
+Root(s) introduced: ל־מ־ד (to learn).
+New vocabulary: None new.
+Mini-games used: Chant Along, Binyan Builder (Qal vs Pual of l-m-d from lesson 1), Construct Chain Builder, Verse Builder.
+Exit check: Child distinguishes lamad (he learned) from lumad (he was taught).
+
+Lesson 4. A Record of My Proceedings
+Verse: 1 Nephi 1:1d
+עַל־כֵּן אֶעֱשֶׂה שֵׁפֶר שֶׁל־מַעֲשַׂי בְּיָמַי
+al-ken e'eseh sefer shel-ma'asai be-yamai
+Gloss: Therefore I make a record of my proceedings in my days.
+Teaching focus: Introduce מַעֲשֶׂה (deed, act) in plural with 1cs suffix. Introduce סֵפֶר (book, scroll) — the child connects this to the root ס־פ־ר learned in Journey 2 lesson 11. Another moment of recognition.
+Root(s) introduced: Reinforce ס־פ־ר (sefer as noun).
+New vocabulary: סֵפֶר (book, scroll), מַעֲשֶׂה (deed, work).
+Mini-games used: Chant Along, Shoresh Sort, Noun Family Highlight (sofer scribe, sefer book, lispor to count), Verse Builder.
+Exit check: Child names three nouns / verbs from the s-p-r family.
+
+Lesson 5. Lehi Prayed to the LORD
+Verse: 1 Nephi 1:5
+עַל־כֵּן לֵחִי אָבִי הָלַךְ וְהִתְפַּלֵּל אֶל־יְהוָה בְּכָל־לֵב בְּעַד עַמּוֹ
+al-ken Lechi avi halach ve-hitpalel el-YHVH be-chol-lev be'ad amo
+Gloss: Therefore Lehi my father went and prayed to the LORD with all his heart on behalf of his people.
+Teaching focus: Introduce the Hithpael hitpalel (he prayed). Introduce פ־ל־ל (to pray, intercede, judge). Introduce the preposition בְּעַד (on behalf of).
+Root(s) introduced: פ־ל־ל (to pray, intercede).
+New vocabulary: לֵחִי (Lehi).
+Mini-games used: Chant Along, Binyan Builder (Hithpael prominent), Verse Builder.
+Exit check: Child forms Hithpael of p-l-l and recognizes the prayer root.
+
+Lesson 6. A Pillar of Fire Came
+Verse: 1 Nephi 1:6
+וַיָּבֹא עַמּוּד־אֵשׁ וַיַּעֲמֹד לְפָנָיו עַל־צוּר
+va-yavo amud-esh va-ya'amod lefanav al-tzur
+Gloss: And there came a pillar of fire and stood before him upon a rock.
+Teaching focus: Introduce עַמּוּד (pillar). Introduce צוּר (rock, stronghold). The child recognizes amud-esh from Exodus (pillar of fire in the wilderness). Strong intertextual echo.
+Root(s) introduced: Reinforce ע־מ־ד (to stand).
+New vocabulary: עַמּוּד (pillar), צוּר (rock).
+Mini-games used: Chant Along, Intertextual Echo Highlight (pillar of fire echoes Exodus), Construct Chain Builder, Verse Builder.
+Exit check: Child names the Exodus parallel (pillar of fire leading Israel in the wilderness).
+
+Lesson 7. Lehi Saw and Heard Much
+Verse: 1 Nephi 1:6b
+וְרָאָה וְשָׁמַע רַבּוֹת
+ve-ra'a ve-shama rabot
+Gloss: And he saw and heard much.
+Teaching focus: Short consolidation verse. Reinforce ר־א־ה and ש־מ־ע, the two verbs of prophetic reception.
+Root(s) introduced: None new.
+New vocabulary: None new.
+Mini-games used: Chant Along, Memorization Reward, Verse Builder.
+Exit check: Child recites the verse from memory.
+
+Lesson 8. He Cast Himself on His Bed
+Verse: 1 Nephi 1:7
+וַיִּפֹּל עַל־מִטָּתוֹ כְּאִישׁ נִרְדָּם מֵרֹב עֲצַב
+va-yipol al-mitato ke-ish nirdam me-rov atzav
+Gloss: And he fell upon his bed as a man overcome from great sorrow.
+Teaching focus: Reinforce נ־פ־ל from Journey 2 lesson 57. Introduce the Niphal nirdam (fast asleep, overcome, from ר־ד־מ). Introduce the adjective רָב (great, much).
+Root(s) introduced: ר־ד־מ (to be fast asleep).
+New vocabulary: מִטָּה (bed), עֶצֶב (sorrow).
+Mini-games used: Chant Along, Shoresh Sort, Verse Builder.
+Exit check: Child reads verse 7 aloud with minimal support.
+
+ 
+Unit 2. The Call and the Departure (Lessons 9 to 16)
+Source text: 1 Nephi 2. Lehi's command to depart into the wilderness, the family's flight from Jerusalem, Nephi's prayer of faith. This chapter intentionally echoes Abraham's lech-lecha from Genesis 12:1, which the child read in Journey 2 lesson 1.
+Lesson 9. Take Thy Family and Depart
+Verse: 1 Nephi 2:2
+וַיְצַו אֹתוֹ יְהוָה לַאמֹר קַח־נָא אֶת־מִשְׁפַּחְתְּךָ וְצֵא לַמִּדְבָּר
+va-yetzav oto YHVH lemor kach-na et-mishpachtecha ve-tze la-midbar
+Gloss: And the LORD commanded him, saying, Take now your family and go forth into the wilderness.
+Teaching focus: Introduce the Piel va-yetzav (he commanded, from ts-v-h, reinforced from Journey 3 lesson 64). Reinforce the imperative kach from Journey 2 lesson 20. Introduce מִדְבָּר (wilderness). Strong echo of Genesis 12:1 (lech-lecha).
+Root(s) introduced: Reinforce צ־ו־ה, ל־ק־ח, י־צ־א.
+New vocabulary: מִדְבָּר (wilderness), מִשְׁפָּחָה (family, reinforced).
+Mini-games used: Chant Along, Intertextual Echo Highlight (Abrahamic call parallel), Verse Builder.
+Exit check: Child identifies the Genesis 12:1 parallel without being told.
+
+Lesson 10. He Was Obedient to the Word
+Verse: 1 Nephi 2:3
+וַיְהִי שֹׁמֵעַ בְּקוֹל יְהוָה עַל־כֵּן לֹא עָשָׂה דָבָר מִבַּד אֲשֶׁר צִוָּהוּ יְהוָה
+va-yehi shomea be-kol YHVH al-ken lo asa davar mi-bad asher tzivahu YHVH
+Gloss: And he was hearkening to the voice of the LORD, therefore he did not a thing apart from what the LORD commanded him.
+Teaching focus: Reinforce the idiom shomea be-kol (hearkening to the voice, i.e. obeying). Reinforce the Piel perfect with 3ms suffix tzivahu.
+Root(s) introduced: None new.
+New vocabulary: מִבַּד (apart from, without).
+Mini-games used: Chant Along, Idiom Highlight (obedience idiom from Exodus), Verse Builder.
+Exit check: Child recognizes the obedience idiom from Journey 3.
+
+Lesson 11. He Left His House
+Verse: 1 Nephi 2:4
+וַיַּעֲזֹב אֶת־בֵּיתוֹ וְאֶת־נַחֲלָתוֹ וְאֶת־זְהָבוֹ וְאֶת־כַּסְפּוֹ
+va-ya'azov et-beito ve-et-nachalato ve-et-zehavo ve-et-kaspo
+Gloss: And he left his house and his inheritance and his gold and his silver.
+Teaching focus: Introduce ע־ז־ב (to leave, forsake). Introduce נַחֲלָה (inheritance), a weighty covenant term. Reinforce זָהָב (gold, from Journey 1) and כֶּסֶף (silver, from Journey 2).
+Root(s) introduced: ע־ז־ב (to leave, forsake).
+New vocabulary: נַחֲלָה (inheritance).
+Mini-games used: Chant Along, Possessive Suffix Chain Builder, Verse Builder.
+Exit check: Child forms a chain of possessive suffixes and recognizes nachala as a covenant term.
+
+Lesson 12. They Pitched Tents in the Valley
+Verse: 1 Nephi 2:6
+וַיִּטַּע אָהֳלוֹ בְּגֵי־הַנָּהָר
+va-yita aholo be-gei-ha-nahar
+Gloss: And he pitched his tent in the valley of the river.
+Teaching focus: Reinforce נ־ט־ה (to pitch, stretch). Introduce גַּיְא (valley) and נָהָר (river).
+Root(s) introduced: None new.
+New vocabulary: גַּיְא (valley), נָהָר (river).
+Mini-games used: Chant Along, Construct Chain Builder, Verse Builder.
+Exit check: Child reads verse 6 with minimal support.
+
+Lesson 13. Nephi Had Great Desires
+Verse: 1 Nephi 2:16
+אֲנִי נְפִי הָיוּ־לִי תְּשׁוּקוֹת רַבּוֹת לָדַעַת אֶת־סִתְרֵי יְהוָה
+ani Nefi hayu-li teshukot rabot ladaat et-sitrei YHVH
+Gloss: I, Nephi, had great desires to know the mysteries of the LORD.
+Teaching focus: Introduce תְּשׁוּקָה (desire, from sh-v-k). Introduce סוֹד / סֵתֶר (mystery, secret counsel). Reinforce the infinitive construct la-da'at (to know).
+Root(s) introduced: ש־ו־ק (to desire), ס־ת־ר (to hide, conceal).
+New vocabulary: תְּשׁוּקָה (desire), סֵתֶר (secret, mystery).
+Mini-games used: Chant Along, Shoresh Sort, Infinitive Builder, Verse Builder.
+Exit check: Child reads verse 16.
+
+Lesson 14. I Cried to the LORD
+Verse: 1 Nephi 2:16b
+וָאֶזְעַק אֶל־יְהוָה
+va-ez'ak el-YHVH
+Gloss: And I cried unto the LORD.
+Teaching focus: Introduce ז־ע־ק (to cry out). Short, memorable verse.
+Root(s) introduced: ז־ע־ק (to cry out).
+New vocabulary: None new.
+Mini-games used: Chant Along, Shoresh Sort, Memorization Reward.
+Exit check: Child recites verse 16b from memory.
+
+Lesson 15. The LORD Visited Me
+Verse: 1 Nephi 2:16c
+וַיִּפְקְדֵנִי יְהוָה וַיָּרֶךְ אֶת־לִבִּי
+va-yifkedeni YHVH va-yarech et-libi
+Gloss: And the LORD visited me and softened my heart.
+Teaching focus: Reinforce פ־ק־ד from Journey 2 lesson 58 (a covenant-memory verb). Introduce ר־כ־כ (to be soft) in Hiphil (soften).
+Root(s) introduced: ר־כ־כ (to be soft).
+New vocabulary: None new.
+Mini-games used: Chant Along, Covenant Vocabulary Review, Verse Builder.
+Exit check: Child recognizes p-k-d as the covenant-visiting verb from Joseph's deathbed.
+
+Lesson 16. Blessed Art Thou, Nephi
+Verse: 1 Nephi 2:19
+בָּרוּךְ אַתָּה נְפִי בַּעֲבוּר אֱמוּנָתְךָ
+baruch ata Nefi ba'avur emunatcha
+Gloss: Blessed are you, Nephi, because of your faith.
+Teaching focus: Introduce the blessing formula baruch ata. Introduce אֱמוּנָה (faith, faithfulness) from א־מ־נ, the noun form of the root learned in Journey 2 lesson 10 and reinforced as emet in Journey 3 lesson 54. Convergent validation: faith and truth share a root.
+Root(s) introduced: Reinforce א־מ־נ.
+New vocabulary: אֱמוּנָה (faith, faithfulness).
+Mini-games used: Chant Along, Shoresh Sort (emunah, emet, ne'eman all from a-m-n), Verse Builder, Memorization Reward.
+Exit check: Child names three words from the a-m-n family and connects them.
+
+ 
+Unit 3. The Brass Plates (Lessons 17 to 24)
+Source text: 1 Nephi 3 and 4. The return to Jerusalem for the brass plates, Laman and Lemuel's murmuring, Nephi's declaration of faith, the confrontation with Laban. Chapter 4's most famous verse (I will go and do) is a Journey-defining memorization target.
+Lesson 17. Laman and Lemuel Murmured
+Verse: 1 Nephi 3:5
+וַיִּלֹּנוּ לָמָן וּלְמוּאֵל עַל אֲבִיהֶם
+va-yilonu Laman u-Lemuel al avihem
+Gloss: And Laman and Lemuel murmured against their father.
+Teaching focus: Introduce ל־ו־נ (to murmur, complain). Reinforce 3mp imperfect with vav-consecutive.
+Root(s) introduced: ל־ו־נ (to murmur).
+New vocabulary: None new.
+Mini-games used: Chant Along, Shoresh Sort (murmuring will reappear in Numbers), Verse Builder.
+Exit check: Child reads verse 5 and identifies the 3mp vav-consecutive form.
+
+Lesson 18. I Will Go and Do
+Verse: 1 Nephi 3:7
+אֵלֵךְ וְאֶעֱשֶׂה אֶת־הַדָּבָר אֲשֶׁר צִוָּה יְהוָה
+elech ve-e'eseh et-ha-davar asher tziva YHVH
+Gloss: I will go and do what the LORD has commanded.
+Teaching focus: The most famous verse in 1 Nephi. Reinforce 1cs imperfect of h-l-k and a-s-h. Reinforce Piel perfect of ts-v-h. This verse is a Journey-defining memorization target.
+Root(s) introduced: None new.
+New vocabulary: None new.
+Mini-games used: Chant Along, Memorization Reward (highest priority), Verse Builder.
+Exit check: Child recites verse 7 from memory in Hebrew. This is a major milestone.
+
+Lesson 19. For the LORD Giveth No Command
+Verse: 1 Nephi 3:7b
+כִּי יְהוָה לֹא־יִתֵּן מִצְוָה לִבְנֵי־אָדָם כִּי אִם־יְכִין לָהֶם דֶּרֶךְ לַעֲשׂוֹת אֲשֶׁר צִוָּה
+ki YHVH lo-yiten mitzva li-vnei-adam ki im-yachin lahem derech la'asot asher tziva
+Gloss: For the LORD gives no commandment to the children of men unless he prepares a way for them to do what he has commanded.
+Teaching focus: Reinforce מִצְוָה from Journey 3 lesson 64. Introduce the Hiphil יָכִין (he prepares, establishes, from כ־ו־נ).
+Root(s) introduced: כ־ו־נ (to be established, prepare).
+New vocabulary: None new.
+Mini-games used: Chant Along, Shoresh Sort, Convergent Validation Highlight (mitzvah glows), Verse Builder.
+Exit check: Child reads verse 7b and recognizes mitzvah from Journey 3.
+
+Lesson 20. We Went Up to Jerusalem
+Verse: 1 Nephi 3:9
+וַנַּעַל יְרוּשָׁלָיְמָה
+va-na'al Yerushalayma
+Gloss: And we went up to Jerusalem.
+Teaching focus: Reinforce ע־ל־ה in 1cp with vav-consecutive. Reinforce the directional he on Jerusalem.
+Root(s) introduced: None new.
+New vocabulary: יְרוּשָׁלַיִם (Jerusalem).
+Mini-games used: Chant Along, Directional He Match, Verse Builder.
+Exit check: Child forms 1cp imperfect with vav-consecutive.
+
+Lesson 21. Laban Sought Our Lives
+Verse: 1 Nephi 3:25
+וַיִּגָּזֵל לָבָן אֶת־כָּל־רְכוּשֵׁנוּ וַיְבַקֵּשׁ אֶת־נַפְשׁוֹתֵינוּ
+va-yigazel Lavan et-kol-rechusheinu va-yevakesh et-nafshoteinu
+Gloss: And Laban seized all our property and sought our lives.
+Teaching focus: Introduce ג־ז־ל (to seize, rob). Introduce ב־ק־שׁ in Piel (to seek). Reinforce נֶפֶשׁ in plural with 1cp suffix.
+Root(s) introduced: ג־ז־ל (to seize), ב־ק־שׁ (to seek).
+New vocabulary: רְכוּשׁ (property, possessions).
+Mini-games used: Chant Along, Shoresh Sort, Binyan Builder (ב־ק־שׁ Piel), Verse Builder.
+Exit check: Child reads verse 25 and recognizes the idiom "to seek the soul / life" as hostile intent.
+
+Lesson 22. The Spirit Constrained Me
+Verse: 1 Nephi 4:10
+וְרוּחַ יְהוָה הֵצִיקַנִי לַהֲרֹג אֶת־לָבָן
+ve-ruach YHVH hetzikani la-harog et-Lavan
+Gloss: And the Spirit of the LORD constrained me to slay Laban.
+Teaching focus: Introduce רוּחַ (spirit, wind, breath). Introduce the Hiphil hetzikani (constrained me, from ts-v-k). Introduce ה־ר־ג (to slay).
+Root(s) introduced: צ־ו־ק (to constrain, narrow), ה־ר־ג (to slay).
+New vocabulary: רוּחַ (spirit, wind, breath).
+Mini-games used: Chant Along, Shoresh Sort, Verse Builder.
+Exit check: Child reads verse 10 and names ruach as a key term (breath / wind / spirit).
+
+Lesson 23. Better That One Man Should Perish
+Verse: 1 Nephi 4:13
+טוֹב כִּי יֹאבַד אִישׁ אֶחָד מִלְּאַבֵּד אֻמָּה שְׁלֵמָה בְּלֹא אֱמוּנָה וּמָרָה
+tov ki yovad ish echad mi-le-abed uma shelema be-lo emuna u-mara
+Gloss: Better that one man should perish than that a whole nation should dwindle in unbelief and perish.
+Teaching focus: Introduce א־ב־ד (to perish, be lost). Introduce אֻמָּה (nation, people) and שָׁלֵם (whole, complete).
+Root(s) introduced: א־ב־ד (to perish).
+New vocabulary: אֻמָּה (nation), שָׁלֵם (whole).
+Mini-games used: Chant Along, Shoresh Sort, Verse Builder, Memorization Reward.
+Exit check: Child reads verse 13 and identifies the root sh-l-m family (shalem, shalom, shalem).
+
+Lesson 24. I Smote Off His Head
+Verse: 1 Nephi 4:18
+וָאֶכְרֹת אֶת־רֹאשׁוֹ בְּחַרְבּוֹ
+va-echrot et-rosho be-charbo
+Gloss: And I cut off his head with his sword.
+Teaching focus: Reinforce כ־ר־ת (to cut) from Journey 2 lesson 12. Introduce חֶרֶב (sword). Reinforce רֹאשׁ (head).
+Root(s) introduced: None new.
+New vocabulary: חֶרֶב (sword).
+Mini-games used: Chant Along, Shoresh Sort (note the intensity-range of karat from covenant-cutting to beheading), Verse Builder.
+Exit check: Child reads verse 18 and connects the root k-r-t to both covenant-cutting and violent cutting.
+
+ 
+Unit 4. Lehi's Vision of the Tree of Life (Lessons 25 to 34)
+Source text: 1 Nephi 8. Lehi's vision of the Tree of Life, the rod of iron, the great and spacious building. This is the single most iconic chapter in the Book of Mormon and the heart of Chris's Desired Tree commentary. The child reads the full chapter across ten lessons.
+Lesson 25. I Saw in My Dream
+Verse: 1 Nephi 8:2
+הִנֵּה חָלַמְתִּי חֲלוֹם
+hineh chalamti chalom
+Gloss: Behold, I dreamed a dream.
+Teaching focus: Reinforce ח־ל־מ (to dream) from Journey 2 lesson 33. The cognate accusative construction (dreamed a dream) is a classic Hebrew figura etymologica.
+Root(s) introduced: None new.
+New vocabulary: None new.
+Mini-games used: Chant Along, Cognate Accusative Highlight, Verse Builder, Memorization Reward.
+Exit check: Child recites verse 2 and identifies the cognate accusative.
+
+Lesson 26. I Beheld a Man
+Verse: 1 Nephi 8:5
+וָאֵרֶא אִישׁ וְהוּא לָבוּשׁ בִּגְלִים לְבָנִים
+va-ere ish ve-hu lavush bgadim levanim
+Gloss: And I beheld a man, and he was clothed in white robes.
+Teaching focus: Introduce ל־ב־שׁ (to clothe, wear). Introduce בֶּגֶד (garment) and לָבָן (white, cognate with the Laban name learned earlier).
+Root(s) introduced: ל־ב־שׁ (to clothe).
+New vocabulary: בֶּגֶד (garment), לָבָן (white).
+Mini-games used: Chant Along, Shoresh Sort, Verse Builder.
+Exit check: Child reads verse 5.
+
+Lesson 27. He Spake to Me and Bade Me Follow
+Verse: 1 Nephi 8:6
+וַיְדַבֵּר אֵלַי וַיְצַוֵּנִי לְלֶכֶת אַחֲרָיו
+va-yedaber elai va-yetzaveni la-lechet acharav
+Gloss: And he spoke to me and commanded me to go after him.
+Teaching focus: Reinforce ד־ב־ר in Piel. Reinforce צ־ו־ה in Piel with 1cs suffix. Introduce אַחַר (after).
+Root(s) introduced: None new.
+New vocabulary: אַחַר (after).
+Mini-games used: Chant Along, Verse Builder.
+Exit check: Child reads verse 6 and identifies two Piel verbs.
+
+Lesson 28. A Dark and Dreary Wilderness
+Verse: 1 Nephi 8:7
+וָאֶתְהַלֵּךְ בְּמִדְבָּר חָשׁוּךְ וְשָׁמֵם
+va-ethalech be-midbar chashuch ve-shamem
+Gloss: And I walked in a dark and desolate wilderness.
+Teaching focus: Introduce the Hithpael ethalech (I walked about, iterative). Introduce חָשׁוּךְ (dark, from ch-sh-k) and שָׁמֵם (desolate, from sh-m-m).
+Root(s) introduced: ח־שׁ־כ (to be dark), שׁ־מ־מ (to be desolate).
+New vocabulary: חֹשֶׁךְ (darkness, reinforced from Genesis 1).
+Mini-games used: Chant Along, Binyan Builder, Shoresh Sort, Verse Builder.
+Exit check: Child reads verse 7.
+
+Lesson 29. A Tree Whose Fruit Was Desirable
+Verse: 1 Nephi 8:10
+וָאֵרֶא עֵץ אֲשֶׁר פִּרְיוֹ נֶחְמָד לְהָשִׂים בָּשָׂר שָׂמֵחַ
+va-ere etz asher piryo nechmad lehasim basar sameach
+Gloss: And I beheld a tree whose fruit was desirable to make one happy.
+Teaching focus: Strong intertextual echo of Genesis 2:9 and 3:6 (the Tree of Life and the forbidden tree). Introduce נֶחְמָד (desirable, Niphal participle of ch-m-d). Introduce שָׂמֵחַ (happy, from s-m-ch).
+Root(s) introduced: ח־מ־ד (to desire), שׂ־מ־ח (to be happy).
+New vocabulary: פְּרִי (fruit, reinforced).
+Mini-games used: Chant Along, Genesis Echo Highlight (the tree whose fruit is desirable echoes Genesis 3:6), Verse Builder.
+Exit check: Child names the Genesis parallel.
+
+Lesson 30. I Partook of the Fruit
+Verse: 1 Nephi 8:11
+וָאֹכַל מִפִּרְיוֹ וּמָתוֹק הוּא מְאֹד
+va-ochal mi-piryo u-matok hu meod
+Gloss: And I ate of its fruit, and it was exceedingly sweet.
+Teaching focus: Reinforce the eating-of-fruit construction (echoing Eden). Introduce מָתוֹק (sweet, reinforcing m-t-k from Journey 3 lesson 40).
+Root(s) introduced: None new.
+New vocabulary: מָתוֹק (sweet).
+Mini-games used: Chant Along, Genesis Echo Highlight, Verse Builder.
+Exit check: Child reads verse 11 and names the Eden parallel (eating fruit from a tree).
+
+Lesson 31. I Saw a River of Water
+Verse: 1 Nephi 8:13
+וָאֵרֶא נְהַר־מַיִם וְהוּא רָץ לְצַד הָעֵץ
+va-ere nehar-mayim ve-hu ratz le-tzad ha-etz
+Gloss: And I saw a river of water, and it ran alongside the tree.
+Teaching focus: Introduce ר־ו־צ (to run). Reinforce נָהָר in construct.
+Root(s) introduced: ר־ו־צ (to run).
+New vocabulary: צַד (side).
+Mini-games used: Chant Along, Shoresh Sort, Construct Chain Builder, Verse Builder.
+Exit check: Child reads verse 13.
+
+Lesson 32. A Rod of Iron
+Verse: 1 Nephi 8:19
+וָאֵרֶא שֵׁבֶט בַּרְזֶל וְהוּא הוֹלֵךְ לְאֹרֶךְ הַנָּהָר
+va-ere shevet barzel ve-hu holech le-orech ha-nahar
+Gloss: And I beheld a rod of iron, and it extended along the river.
+Teaching focus: Introduce בַּרְזֶל (iron). Reinforce שֵׁבֶט from Journey 2 lesson 55 (scepter of Judah); here it is a rod. Introduce אֹרֶךְ (length).
+Root(s) introduced: None new.
+New vocabulary: בַּרְזֶל (iron), אֹרֶךְ (length).
+Mini-games used: Chant Along, Construct Chain Builder, Shoresh Sort, Verse Builder.
+Exit check: Child reads verse 19.
+
+Lesson 33. A Great and Spacious Building
+Verse: 1 Nephi 8:26
+וָאֵרֶא בַּיִת גָּדוֹל וְרָחָב עֹמֵד כְּאִלּוּ בָּאַוֵּר מֵעַל לָאָרֶץ
+va-ere bayit gadol ve-rachav omed ke-ilu ba-avir me-al la-aretz
+Gloss: And I beheld a great and spacious building standing as if in the air above the earth.
+Teaching focus: Introduce רָחָב (wide, spacious). Introduce אַוֵּר (air, atmosphere). Introduce the hypothetical particle כְּאִלּוּ (as if).
+Root(s) introduced: ר־ח־ב (to be wide).
+New vocabulary: אַוֵּר (air).
+Mini-games used: Chant Along, Hypothetical Builder (as if X), Verse Builder.
+Exit check: Child reads verse 26.
+
+Lesson 34. Hold Fast to the Rod
+Verse: 1 Nephi 8:30
+אֲחֹז בְּשֵׁבֶט הַבַּרְזֶל וְלֵךְ עַד־הָעֵץ
+achoz be-shevet ha-barzel ve-lech ad-ha-etz
+Gloss: Hold fast to the rod of iron and go unto the tree.
+Teaching focus: Introduce א־ח־ז (to hold fast, grasp) as Qal imperative. Reinforce lech. A weighty exhortation.
+Root(s) introduced: א־ח־ז (to hold fast).
+New vocabulary: None new.
+Mini-games used: Chant Along, Shoresh Sort, Imperative Chain Builder, Memorization Reward.
+Exit check: Child recites verse 30 from memory and names its covenant imagery.
+
+ 
+Unit 5. Nephi's Psalm (Lessons 35 to 42)
+Source text: 2 Nephi 4:16-35 (selected verses). Nephi's psalm of lament, the first substantial poetic passage in restoration scripture. The Hebrew form is designed to sound like Psalm 22 and Psalm 51. This unit introduces the Hithpael in its most expressive emotional form and deepens the child's familiarity with parallelism.
+Lesson 35. My Soul Delighteth
+Verse: 2 Nephi 4:16
+הִנֵּה נַפְשִׁי תִּתְעַנֵּג בִּדְבַר יְהוָה
+hineh nafshi titaneg bi-dvar YHVH
+Gloss: Behold, my soul delights in the word of the LORD.
+Teaching focus: Introduce ע־נ־ג (to delight) in Hithpael. Reinforce the Hithpael prefix pattern. Note: Hithpael titaneg carries a reflexive-intensive sense (delights itself).
+Root(s) introduced: ע־נ־ג (to delight).
+New vocabulary: None new.
+Mini-games used: Chant Along, Binyan Builder (Hithpael), Verse Builder.
+Exit check: Child forms Hithpael of a familiar root.
+
+Lesson 36. Nevertheless I Know in Whom I Have Trusted
+Verse: 2 Nephi 4:19
+אַף עַל־פִּי־כֵן אֲנִי יוֹדֵעַ בְּמִי בָטַחְתִּי
+af al-pi-chen ani yodea be-mi batachti
+Gloss: Nevertheless, I know in whom I have trusted.
+Teaching focus: Introduce ב־ט־ח (to trust). Introduce the concessive idiom af al-pi-chen (nevertheless). Reinforce the interrogative mi as a relative (whom).
+Root(s) introduced: ב־ט־ח (to trust).
+New vocabulary: None new.
+Mini-games used: Chant Along, Shoresh Sort (Hebrew has multiple trust-roots: a-m-n, b-t-ch), Verse Builder, Memorization Reward.
+Exit check: Child distinguishes b-t-ch (to trust) from a-m-n (to be firm / believe).
+
+Lesson 37. My God Hath Been My Support
+Verse: 2 Nephi 4:20
+אֱלֹהַי הָיָה לִי לְמִסְעָד בִּימֵי נְדוֹדִי בַּמִּדְבָּר
+Elohai haya li le-mis'ad be-yemei nedudi ba-midbar
+Gloss: My God has been my support in the days of my wandering in the wilderness.
+Teaching focus: Introduce מִסְעָד (support, from s-ayin-d, to sustain). Introduce נ־ד־ד (to wander) in verbal noun form nedudim.
+Root(s) introduced: ס־ע־ד (to support), נ־ד־ד (to wander).
+New vocabulary: מִסְעָד (support).
+Mini-games used: Chant Along, Shoresh Sort, Verse Builder.
+Exit check: Child reads verse 20.
+
+Lesson 38. Preserved Me Upon the Waters
+Verse: 2 Nephi 4:20b
+שָׁמַר אֹתִי עַל־פְּנֵי הַיָּם הַגָּדוֹל
+shamar oti al-pnei ha-yam ha-gadol
+Gloss: He kept me upon the face of the great sea.
+Teaching focus: Reinforce ש־מ־ר (to keep, guard). Reinforce yam as the sea, now a large symbolic sea.
+Root(s) introduced: None new.
+New vocabulary: None new.
+Mini-games used: Chant Along, Verse Builder.
+Exit check: Child reads verse 20b fluently.
+
+Lesson 39. Awake, My Soul
+Verse: 2 Nephi 4:28
+הָקִיצָה נַפְשִׁי אַל־תֵּעָצְבִי עוֹד
+hakitza nafshi al-te'atzvi od
+Gloss: Awake, my soul, be grieved no longer.
+Teaching focus: Introduce the Hiphil imperative hakitza (awake!) from k-v-tz. Reinforce al-te'atzvi (negative Niphal imperative feminine singular, from Journey 3 lesson 52 in 2mp form). Poetic apostrophe to the soul.
+Root(s) introduced: ק־ו־צ (to awake, Hiphil).
+New vocabulary: None new.
+Mini-games used: Chant Along, Binyan Builder, Gender Sort, Memorization Reward.
+Exit check: Child recites verse 28 and identifies the feminine singular negative imperative.
+
+Lesson 40. Rejoice, O My Heart
+Verse: 2 Nephi 4:30
+גִּילִי לִבִּי וְאַל־תִּפֹּלִי עוֹד
+gili libi ve-al-tipoli od
+Gloss: Rejoice, my heart, and fall no more.
+Teaching focus: Introduce ג־י־ל (to rejoice, exult). Reinforce n-p-l in negative feminine imperative.
+Root(s) introduced: ג־י־ל (to rejoice, exult).
+New vocabulary: None new.
+Mini-games used: Chant Along, Shoresh Sort (joy-verbs: s-m-ch, g-y-l, r-n-n), Verse Builder.
+Exit check: Child names three joy-verbs.
+
+Lesson 41. I Will Trust in Thee Forever
+Verse: 2 Nephi 4:34
+אֲנִי אֶבְטַח בְּךָ לְעוֹלָם
+ani evtach becha le-olam
+Gloss: I will trust in you forever.
+Teaching focus: Short, weighty covenant-trust verse. Reinforce b-t-ch in 1cs imperfect.
+Root(s) introduced: None new.
+New vocabulary: None new.
+Mini-games used: Chant Along, Memorization Reward.
+Exit check: Child recites verse 34 from memory.
+
+Lesson 42. O Lord, Wilt Thou Redeem My Soul
+Verse: 2 Nephi 4:31
+יְהוָה הֲתִגְאַל אֶת־נַפְשִׁי
+YHVH ha-tig'al et-nafshi
+Gloss: O LORD, wilt thou redeem my soul?
+Teaching focus: Introduce ג־א־ל (to redeem, act as kinsman-redeemer). This is the foundational go'el root, central to Chris's Covenant King commentary on Mosiah. The child meets it here for the first time in restoration scripture; it will recur heavily in Journey 6.
+Root(s) introduced: ג־א־ל (to redeem, act as go'el).
+New vocabulary: גְּאֻלָּה (redemption, previewed).
+Mini-games used: Chant Along, Covenant Vocabulary Highlight (goel / geulah glow with special treatment), Verse Builder.
+Exit check: Child recognizes goel as the kinsman-redeemer root and begins to track it.
+
+ 
+Unit 6. Isaiah in Sefer Nephi (Lessons 43 to 50)
+Source text: selected verses from 1 Nephi 20-22, which quote Isaiah 48-49, and from 2 Nephi 11-24 (Isaiah quotations). This unit is a hinge: the child encounters Isaiah for the first time, embedded in Nephi's record. These are verses Chris's Sefer Mormon translates in the same Mikraic register as the Isaiah original, so the Hebrew should match the Tanakh Isaiah when the child reaches it in Journey 7.
+Lesson 43. Hearken, O House of Jacob
+Verse: 1 Nephi 20:1
+שִׁמְעוּ זֹאת בֵּית־יַעֲקֹב הַנִּקְרָאִים בְּשֵׁם יִשְׂרָאֵל
+shim'u zot beit-Ya'akov ha-nikra'im be-shem Yisrael
+Gloss: Hear this, house of Jacob, who are called by the name of Israel.
+Teaching focus: Reinforce the 2mp imperative shim'u. Introduce the Niphal participle plural ha-nikra'im (those who are called).
+Root(s) introduced: None new.
+New vocabulary: None new.
+Mini-games used: Chant Along, Binyan Builder, Participle Match, Verse Builder.
+Exit check: Child reads Isaiah 48:1 in its Sefer Nephi form.
+
+Lesson 44. I Am He, I Am the First
+Verse: 1 Nephi 20:12
+אֲנִי־הוּא אֲנִי רִאשׁוֹן אַף אֲנִי אַחֲרוֹן
+ani-hu ani rishon af ani acharon
+Gloss: I am he, I am the first, also I am the last.
+Teaching focus: The divine self-identification. Reinforce rishon and introduce אַחֲרוֹן (last). Echo of Isaiah 44:6 and Revelation 1:8 (for parents, this is the Alpha-Omega identity in Hebrew).
+Root(s) introduced: None new.
+New vocabulary: אַחֲרוֹן (last).
+Mini-games used: Chant Along, Memorization Reward, Verse Builder.
+Exit check: Child recites the divine self-identification.
+
+Lesson 45. Hearken, O Ye House of Israel
+Verse: 1 Nephi 21:1
+הַקְשִׁיבוּ אִיִּים אֵלַי וְהַאֲזִינוּ לְאֻמִּים מֵרָחוֹק
+hakshivu iyim elai ve-ha'azinu le'umim me-rachok
+Gloss: Listen, O isles, unto me, and hearken, ye peoples, from afar.
+Teaching focus: Introduce ק־שׁ־ב (to pay attention) and א־ז־נ (to give ear) in Hiphil. Two parallel hearing-verbs in poetic synonymy.
+Root(s) introduced: ק־שׁ־ב, א־ז־נ (both Hiphil: pay attention / give ear).
+New vocabulary: אִי (island, isle), לְאֹם (people, nation).
+Mini-games used: Chant Along, Shoresh Sort (hearing-verbs: sh-m-a, k-sh-v, a-z-n), Verse Builder.
+Exit check: Child names three hearing-verbs.
+
+Lesson 46. Can a Woman Forget Her Nursing Child
+Verse: 1 Nephi 21:15
+הֲתִשְׁכַּח אִשָּׁה עוּלָהּ מֵרַחֵם בֶּן־בִּטְנָהּ
+ha-tishkach isha ula me-rachem ben-bitna
+Gloss: Can a woman forget her nursing child, from compassion on the son of her womb?
+Teaching focus: Introduce ש־כ־ח (to forget). Reinforce ר־ח־מ from Journey 3 lesson 53 (thirteen attributes). Introduce בֶּטֶן (womb).
+Root(s) introduced: ש־כ־ח (to forget).
+New vocabulary: עוּל (nursing child), בֶּטֶן (womb).
+Mini-games used: Chant Along, Shoresh Sort, Verse Builder.
+Exit check: Child connects rachem (compassion) back to rachum (merciful) from Journey 3.
+
+Lesson 47. I Have Graven Thee Upon the Palms
+Verse: 1 Nephi 21:16
+הֵן עַל־כַּפַּיִם חַקֹּתִיךְ
+hen al-kapayim chakotikh
+Gloss: Behold, I have graven you upon the palms.
+Teaching focus: Introduce ח־ק־ק (reinforced from Journey 2 lesson 55, now as graven). Introduce כַּף (palm, hollow of hand) in dual. A beloved verse.
+Root(s) introduced: None new.
+New vocabulary: כַּף (palm, dual kapayim).
+Mini-games used: Chant Along, Dual Match, Memorization Reward, Verse Builder.
+Exit check: Child recites verse 16 from memory.
+
+Lesson 48. Arise, Shine
+Verse: 2 Nephi 24:3 (from Isaiah 60:1) selection
+קוּמִי אוֹרִי כִּי־בָא אוֹרֵךְ
+kumi ori ki-va orech
+Gloss: Arise, shine, for your light has come.
+Teaching focus: Feminine imperatives kumi and ori. Reinforce the name of Aleph Trail (ori = my light / shine!). A memorable liturgical verse.
+Root(s) introduced: Reinforce א־ו־ר.
+New vocabulary: None new.
+Mini-games used: Chant Along, Feminine Imperative Match, Memorization Reward.
+Exit check: Child recites the arise-shine verse.
+
+Lesson 49. All Nations Shall Flow Unto It
+Verse: 2 Nephi 12:2 (Isaiah 2:2)
+וְנָהֲרוּ אֵלָיו כָּל־הַגּוֹיִם
+ve-naharu elav kol-ha-goyim
+Gloss: And all the nations shall flow unto it.
+Teaching focus: Introduce נ־ה־ר (to flow, from which nahar, river, also derives).
+Root(s) introduced: נ־ה־ר (to flow).
+New vocabulary: None new.
+Mini-games used: Chant Along, Shoresh Sort (nahar as river, naharu as they flowed), Verse Builder.
+Exit check: Child reads verse and names the noun-verb connection for n-h-r.
+
+Lesson 50. They Shall Beat Their Swords
+Verse: 2 Nephi 12:4 (Isaiah 2:4)
+וְכִתְּתוּ חַרְבוֹתָם לְאִתִּים
+ve-kitetu charvotam le-itim
+Gloss: And they shall beat their swords into plowshares.
+Teaching focus: Introduce כ־ת־ת (to beat, crush) in Piel. Reinforce chevev (sword). Introduce אֵת (plowshare, a farming implement).
+Root(s) introduced: כ־ת־ת (to beat).
+New vocabulary: אֵת (plowshare).
+Mini-games used: Chant Along, Memorization Reward, Verse Builder.
+Exit check: Child recites the swords-to-plowshares verse.
+
+ 
+Unit 7. The Sea Voyage and Exit (Lessons 51 to 60)
+Source text: 1 Nephi 17 and 18. Nephi builds a ship, the crossing of the great waters, arrival in the promised land. Chapter 17 contains the Exodus-recital, where Nephi explicitly invokes Moses and the Red Sea — a moment of deliberate convergent validation within the Book of Mormon text itself. The child reads this passage and recognizes the Exodus vocabulary from Journey 3.
+Lesson 51. Build a Ship
+Verse: 1 Nephi 17:8
+בְּנֵה־לְךָ אֳנִיָּה לְתַכְנִית אֲשֶׁר אַרְאֶךָּ
+bneh-lecha oniya le-tachnit asher ar'eka
+Gloss: Build for yourself a ship after the pattern which I will show you.
+Teaching focus: Reinforce ב־נ־ה. Introduce אֳנִיָּה (ship) and תַּכְנִית (pattern, model).
+Root(s) introduced: None new.
+New vocabulary: אֳנִיָּה (ship), תַּכְנִית (pattern).
+Mini-games used: Chant Along, Verse Builder, Intertextual Echo Highlight ("show you a pattern" echoes the tabernacle instructions in Exodus 25).
+Exit check: Child reads verse 8 and names the tabernacle-pattern parallel.
+
+Lesson 52. The Lord Remembers His People
+Verse: 1 Nephi 17:30
+וְיִזְכֹּר יְהוָה אֶת־עַמּוֹ בְּיוֹם צָרָתָם
+ve-yizkor YHVH et-amo be-yom tzaratam
+Gloss: And the LORD remembers his people in the day of their affliction.
+Teaching focus: Strong covenant-memory language. Reinforce z-k-r from Journey 3 lesson 7 and lesson 28. Reinforce tzara from Journey 4 lesson 2.
+Root(s) introduced: None new.
+New vocabulary: None new.
+Mini-games used: Chant Along, Covenant Vocabulary Review, Verse Builder, Memorization Reward.
+Exit check: Child recites verse 30 and connects it to the Exodus covenant-remembering.
+
+Lesson 53. Moses Smote the Rock
+Verse: 1 Nephi 17:29
+וַיַּךְ מֹשֶׁה אֶת־הַצּוּר בְּמַטֵּהוּ וַיֵּצְאוּ מַיִם
+va-yach Moshe et-ha-tzur be-matehu va-yetze'u mayim
+Gloss: And Moses smote the rock with his rod, and waters came forth.
+Teaching focus: Introduce נ־כ־ה (to strike, smite) in Hiphil vav-consecutive (va-yach). A classic Exodus image embedded in Nephi.
+Root(s) introduced: נ־כ־ה (to strike).
+New vocabulary: None new.
+Mini-games used: Chant Along, Shoresh Sort, Exodus Echo Highlight, Verse Builder.
+Exit check: Child names the Exodus parallel (Moses striking the rock in Exodus 17).
+
+Lesson 54. They Tempted God in the Wilderness
+Verse: 1 Nephi 17:30b
+וַיְנַסּוּ אֶת־אֱלֹהִים בַּמִּדְבָּר
+va-yenasu et-Elohim ba-midbar
+Gloss: And they tempted God in the wilderness.
+Teaching focus: Introduce נ־ס־ה (to test, try). Reinforce midbar. Echo of Numbers 14.
+Root(s) introduced: נ־ס־ה (to test, try).
+New vocabulary: None new.
+Mini-games used: Chant Along, Verse Builder.
+Exit check: Child reads verse 30b.
+
+Lesson 55. The Lord Can Do All Things
+Verse: 1 Nephi 17:50
+אִם־יְהוָה יְדַבֵּר אֶל־הָאָרֶץ לִהְיוֹת וַתְּהִי
+im-YHVH yedaber el-ha-aretz lihyot va-tehi
+Gloss: If the LORD should speak unto the earth to be, it would be.
+Teaching focus: A concise statement of divine creative power. Echo of Genesis 1.
+Root(s) introduced: None new.
+New vocabulary: None new.
+Mini-games used: Chant Along, Genesis 1 Echo Highlight, Verse Builder, Memorization Reward.
+Exit check: Child recites the verse and connects it to Genesis 1 "let there be."
+
+Lesson 56. The Winds Ceased
+Verse: 1 Nephi 18:21
+וַיִּפְסְקוּ הָרוּחוֹת וַיִּשְׁקוֹט הַיָּם
+va-yifseku ha-ruchot va-yishkot ha-yam
+Gloss: And the winds ceased and the sea became calm.
+Teaching focus: Introduce פ־ס־ק (to cease) and שׁ־ק־ט (to be quiet).
+Root(s) introduced: פ־ס־ק, שׁ־ק־ט.
+New vocabulary: None new.
+Mini-games used: Chant Along, Shoresh Sort, Verse Builder.
+Exit check: Child reads verse 21.
+
+Lesson 57. We Arrived at the Land of Promise
+Verse: 1 Nephi 18:23
+וַנַּגִּיעַ אֶל־אֶרֶץ הַהַבְטָחָה
+va-nagia el-eretz ha-havtacha
+Gloss: And we arrived at the land of promise.
+Teaching focus: Reinforce נ־ג־ע (reinforced from Journey 2 lesson 33). Introduce הַבְטָחָה (promise, from b-t-ch, reinforced from Journey 4 lesson 36 as trust).
+Root(s) introduced: None new; noun expansion.
+New vocabulary: הַבְטָחָה (promise).
+Mini-games used: Chant Along, Shoresh Sort (trust and promise share b-t-ch), Verse Builder, Memorization Reward.
+Exit check: Child connects the root b-t-ch across trust and promise.
+
+Lesson 58. We Pitched Tents
+Verse: 1 Nephi 18:23b
+וַנִּטַּע אֹהָלֵינוּ
+va-nita ohaleinu
+Gloss: And we pitched our tents.
+Teaching focus: Reinforce n-t-a (pitching tents, echoing Abraham and Lehi's earlier pitching). Reinforce ohel in plural with 1cp suffix.
+Root(s) introduced: None new.
+New vocabulary: None new.
+Mini-games used: Chant Along, Verse Builder, Intertextual Echo Highlight (tent-pitching as patriarchal signature).
+Exit check: Child reads verse 23b and names the patriarchal parallel.
+
+Lesson 59. Consolidation Before Exit
+Verse: Review and reading
+Gloss: Consolidation lesson before Journey 4 exit. The child reads 1 Nephi 3:7, 1 Nephi 8:30, and 2 Nephi 4:34 (three memorization targets) from memory.
+Teaching focus: No new content.
+Root(s) introduced: None new.
+New vocabulary: None new.
+Mini-games used: Memorization Showcase, Chant Along.
+Exit check: Child recites all three verses from memory smoothly.
+
+Lesson 60. Journey 4 Exit: 1 Nephi 8:1-33
+Verse: Lehi's full Tree of Life vision read aloud
+Gloss: Journey 4 exit. The child reads 1 Nephi 8:1-33 aloud in full, the complete Tree of Life vision narrative.
+Teaching focus: All Journey 1-4 grammar and vocabulary consolidated. No new content.
+Root(s) introduced: None new.
+New vocabulary: None new.
+Mini-games used: Final Scroll Reader, Memorization Showcase, Parent Submission Flow.
+Exit check: Child records themselves reading 1 Nephi 8:1-33 aloud. Parent approves. Journey 4 complete. Journey 5 (Land and Kings) unlocks.
+
+ 
+Appendix A. Key New Roots Introduced in Journey 4
+•	פ־ל־ל (to pray, intercede) — lesson 5, Hithpael prominence
+•	ע־ז־ב (to leave, forsake) — lesson 11
+•	א־ב־ד (to perish, be lost) — lesson 23
+•	ל־ב־שׁ (to clothe, wear) — lesson 26
+•	ח־מ־ד (to desire) — lesson 29
+•	ב־ט־ח (to trust) — lesson 36, covenant-trust
+•	ג־א־ל (to redeem, kinsman-redeemer) — lesson 42, THE go'el root
+•	ש־כ־ח (to forget) — lesson 46
+•	ק־שׁ־ב (to pay attention, Hiphil) — lesson 45
+•	א־ז־נ (to give ear, Hiphil) — lesson 45
+•	כ־ת־ת (to beat, crush, Piel) — lesson 50
+•	נ־כ־ה (to strike, smite, Hiphil) — lesson 53
+•	נ־ס־ה (to test, try) — lesson 54
+Appendix B. The Go'el Root Introduction
+Journey 4 introduces ג־א־ל (goel, to redeem as kinsman-redeemer) for the first time in the course. This root is the single most important piece of theological vocabulary Chris's Covenant King commentary on Mosiah will build on. Once introduced here in 2 Nephi 4:31, the root reappears in Ruth (Journey 7), throughout Isaiah (Journey 7), and most heavily in Mosiah (Journey 6).
+The Aleph Trail app tracks this root as a high-frequency covenant term. Every time the child sees it, it receives the gentle gold-treatment highlight reserved for foundational covenant vocabulary (alongside berit, chesed, mitzvah, torah). By the end of the course, the child has encountered goel dozens of times and intuits its meaning without translation.
+Appendix C. Convergent Validation Moments in Journey 4
+Journey 4 is designed so that the child experiences the convergent validation framework as recognition, not argument. The explicit recognition moments in this Journey are:
+•	Lesson 1: torah appears in 1 Nephi 1:1, recognized from Journey 3 lesson 40.
+•	Lesson 4: sefer appears, recognized from Journey 2 lesson 11.
+•	Lesson 9: the Genesis 12:1 lech-lecha pattern is echoed in 1 Nephi 2:2.
+•	Lesson 19: mitzvah reappears from Journey 3 lesson 64.
+•	Lesson 29: the tree whose fruit is desirable echoes Genesis 3:6.
+•	Lesson 46: rachem echoes rachum from Exodus 34:6 (the thirteen attributes).
+•	Lesson 53: Moses smiting the rock echoes Exodus 17.
+•	Lesson 55: the earth obeying the divine word echoes Genesis 1.
+These echoes are never explained in-lesson to the child. They are allowed to surface as recognition. The parent companion material names them explicitly so parents can reinforce the pattern if they choose.
+Appendix D. Journey 4 Exit to Journey 5
+On Journey 4 completion, the child's scribe avatar earns a prophetic robe. The menorah lights four times. Journey 5 (Land and Kings) unlocks, returning to Tanakh material with Joshua, Judges, Samuel, and Kings. The child now has the foundational covenant vocabulary of both Tanakh and Sefer Mormon anchored in active use.
+
