@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>document.documentElement.classList.add('sw-shell-pending');</script>
+<script>(function(){var h=(location.hostname||'').toLowerCase(),p=location.pathname.split('/').filter(Boolean),gh=h.slice(-10)==='github.io'&&p.length>0,m=gh?'manifest.github.json':'manifest.json';document.write('<link rel="manifest" href="'+m+'" id="sw-manifest-link">');})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<script>(function(){var h=(location.hostname||'').toLowerCase(),p=location.pathname.split('/').filter(Boolean),gh=h.slice(-10)==='github.io',base=gh&&p.length?location.origin+'/'+p[0]:location.origin,root=(h==='sefermormon.com'?'https://sefermormon.com':base).replace(/\/$/,'');window._swSiteRoot=root;})();</script>
+<link rel="canonical" id="canonical-link" href="https://sefermormon.com/">
+<title>Sefer Mormon — The Book of Mormon in Classical Biblical Hebrew</title>
+<meta name="description" content="Study the Standard Works in Hebrew with word-by-word interlinear translation, transliteration, and English glosses. The Book of Mormon in pre-exilic Classical Biblical Hebrew.">
+<meta property="og:title" content="כתבי הקודש — Hebrew Interlinear Standard Works">
+<meta property="og:description" content="Study the Standard Works in Hebrew with word-by-word interlinear translation, transliteration, and English glosses. The Book of Mormon in pre-exilic Classical Biblical Hebrew.">
+<meta property="og:image" content="https://sefermormon.com/bom/images/cover-hebrew.jpg">
+<meta property="og:url" content="https://sefermormon.com/">
+<meta property="og:type" content="book">
+<meta property="og:site_name" content="Sefer Mormon">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sefer Mormon — The Book of Mormon in Classical Biblical Hebrew">
+<meta name="twitter:description" content="Study the Standard Works in Hebrew with word-by-word interlinear translation, transliteration, and English glosses. The Book of Mormon in pre-exilic Classical Biblical Hebrew.">
+<meta name="twitter:image" content="https://sefermormon.com/bom/images/cover-hebrew.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Sefer Mormon",
+      "url": "https://sefermormon.com/",
+      "description": "Hebrew interlinear Standard Works — Old Testament, New Testament, Book of Mormon, Doctrine and Covenants, and Pearl of Great Price.",
+      "inLanguage": ["en", "he"]
+    },
+    {
+      "@type": "Book",
+      "name": "Sefer Mormon",
+      "alternateName": "The Book of Mormon in Classical Biblical Hebrew",
+      "author": { "@type": "Person", "name": "Chris Lambe" },
+      "inLanguage": "he",
+      "bookFormat": "https://schema.org/Paperback",
+      "image": "https://sefermormon.com/bom/images/cover-hebrew.jpg",
+      "url": "https://sefermormon.com/bom/bom.html",
+      "sameAs": "https://www.amazon.com/dp/B0DVTJC9HJ",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Amazon ASIN",
+        "value": "B0DVTJC9HJ"
+      }
+    }
+  ]
+}
+</script>
+<script>(function(){var r=window._swSiteRoot||'https://sefermormon.com',u=r+'/',c=document.getElementById('canonical-link');if(c)c.href=u;var o=document.querySelector('meta[property="og:url"]');if(o)o.content=u;})();</script>
+<meta name="theme-color" content="#1e2233">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="כתבי הקודש">
+<link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="nav_engine.css?v=25">
+<link rel="stylesheet" href="site_chrome.css?v=26">
+<style>
+
+/* ========== THEME ========== */
+:root {
+  --bg: #faf8f2;
+  --bg-deep: #f0ece0;
+  --ink: #1a1a1a;
+  --ink-light: #444;
+  --accent: #dbb958;
+  --accent-light: #e8cc78;
+  --rule: #d6ceb8;
+  --rule-light: #e8e2d4;
+  --header-bg: #1e2233;
+  --header-text: #dbb958;
+  --highlight: rgba(200, 168, 78, 0.10);
+  /* Same blue family as Interlinear badge — cards & search hits */
+  --volume-card-blue-top: #1e2233;
+  --volume-card-blue-mid: #1e2233;
+  --volume-card-blue-deep: #2a3050;
+  --card-bg: #1e2233;
+}
+
+body.dark-mode {
+  --bg: #333333;
+  --bg-deep: #2a2a2a;
+  --ink: #e8e0d0;
+  --ink-light: #b0a890;
+  --accent: #d4af37;
+  --accent-light: #e8c84e;
+  --rule: #444444;
+  --rule-light: #383838;
+  --header-bg: #0a0a0a;
+  --header-text: #d4af37;
+  --highlight: rgba(200, 168, 78, 0.15);
+  --volume-card-blue-top: #4d82c4;
+  --volume-card-blue-mid: #3d6fa8;
+  --volume-card-blue-deep: #356598;
+  --card-bg: #3d6fa8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'David Libre', 'Georgia', serif;
+  background: var(--bg);
+  color: var(--ink);
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ========== PAGE CONTAINER ========== */
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 24px 40px;
+}
+
+/* ========== PANELS ========== */
+.panel { display: none; }
+.panel.active { display: block; }
+#panel-landing.panel.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+#panel-landing > * {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.hub-footer {
+  margin-top: 48px;
+  padding: 40px 16px 20px;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+  color: var(--ink-light);
+  line-height: 1.65;
+}
+.hub-footer-contact {
+  font-size: 0.85em;
+  margin: 0 0 16px;
+}
+.hub-footer-contact a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.hub-footer-contact a:hover { text-decoration: underline; }
+.hub-footer-notice {
+  max-width: 520px;
+  margin: 0 auto 18px;
+  padding: 12px 20px;
+  background: rgba(200, 168, 78, 0.12);
+  border: 1px solid var(--rule-light);
+  border-radius: 6px;
+  font-size: 0.88em;
+  line-height: 1.6;
+}
+.hub-footer-notice p {
+  margin: 0;
+}
+.hub-footer-notice p + p {
+  margin-top: 10px;
+}
+.hub-footer-notice-he {
+  direction: rtl;
+  font-family: 'David Libre', serif;
+}
+.hub-footer-disclaimer {
+  max-width: 520px;
+  margin: 0 auto 14px;
+  font-size: 0.78em;
+  line-height: 1.6;
+}
+.hub-footer-disclaimer-he {
+  direction: rtl;
+  font-family: 'David Libre', serif;
+  margin: 0 0 10px;
+}
+.hub-footer-disclaimer-en {
+  margin: 0;
+}
+.hub-footer-copy {
+  margin: 0;
+  font-size: 0.75em;
+  opacity: 0.85;
+}
+
+.global-search-wrap {
+  margin-top: 8px;
+}
+
+/* ========== LANDING PAGE (legacy styles) ========== */
+.landing-header {
+  text-align: center;
+  padding: 8px 0 4px;
+  max-width: 640px;
+  margin: 0 auto 4px;
+}
+/* Interlinear badge first; then Hebrew title largest; secondary lines below */
+.landing-he-en,
+.landing-title {
+  font-family: 'David Libre', serif;
+  font-size: 1.15em;
+  line-height: 1.35;
+}
+.landing-title {
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.landing-subline {
+  font-family: 'David Libre', serif;
+  font-size: 1.05em;
+  color: var(--ink-light);
+  margin-bottom: 12px;
+}
+.landing-title-hebrew {
+  font-family: 'David Libre', serif;
+  font-size: 2.65em;
+  font-weight: 700;
+  color: var(--accent);
+  direction: rtl;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+.landing-he-en {
+  color: var(--ink-light);
+  font-weight: 500;
+  margin-bottom: 14px;
+  letter-spacing: 0.02em;
+}
+.landing-interlinear-kicker {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-family: 'David Libre', serif;
+  font-weight: 600;
+  background: #2f5f9e;
+  padding: 22px 48px 24px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  line-height: 1.35;
+  box-shadow: 0 5px 16px rgba(47, 95, 158, 0.42);
+}
+/* Both lines cream-white on blue; Hebrew is the larger primary line */
+.landing-interlinear-kicker .lie-en {
+  font-size: 1.28rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #faf8f2;
+}
+.landing-interlinear-kicker .lie-he {
+  font-family: 'David Libre', serif;
+  font-size: 2.15rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: none;
+  direction: rtl;
+  color: #faf8f2;
+}
+body.dark-mode .landing-interlinear-kicker {
+  background: #3d6fa8;
+}
+body.dark-mode .landing-interlinear-kicker .lie-he,
+body.dark-mode .landing-interlinear-kicker .lie-en {
+  color: #faf8f2;
+}
+.landing-description {
+  font-size: 0.95em;
+  color: var(--ink-light);
+  max-width: 600px;
+  margin: 16px auto 0;
+  line-height: 1.6;
+}
+.landing-app-store {
+  text-align: center;
+  margin: 22px auto 0;
+  max-width: 640px;
+}
+.landing-app-store-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  padding: 12px 22px;
+  background: var(--header-bg);
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.landing-app-store-link:hover {
+  background: var(--accent);
+  color: var(--header-bg);
+  border-color: var(--accent-light);
+}
+.landing-app-store-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+body.dark-mode .landing-app-store-link { background: #0a0a0a; }
+body.dark-mode .landing-app-store-link:hover {
+  color: #0a0a0a;
+}
+.landing-app-store-sub {
+  margin-top: 8px;
+  font-size: 0.88em;
+  color: var(--ink-light);
+  line-height: 1.45;
+  direction: rtl;
+}
+
+/* ========== DIVIDER ========== */
+.diamond-divider {
+  text-align: center;
+  padding: 16px 0 20px;
+  color: var(--accent);
+  font-size: 0.7em;
+  letter-spacing: 12px;
+}
+.diamond-divider::before { content: "· · ◆ · ·"; }
+
+/* ========== CARD GRID ========== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+  gap: 28px 24px;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+/* Second row (DC / PGP / JST) uses the same 3-column tracks */
+@media (min-width: 601px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ========== SCRIPTURE CARD ========== */
+.scripture-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.scripture-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-cover {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 18px 14px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18), 0 1px 4px rgba(0,0,0,0.10);
+  transition: box-shadow 0.2s;
+}
+.scripture-card:hover .card-cover {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.25), 0 2px 8px rgba(0,0,0,0.12);
+}
+
+/* Volume tiles — unified medium blue (matches Interlinear badge) */
+.card-cover.ot,
+.card-cover.nt,
+.card-cover.bom,
+.card-cover.dc,
+.card-cover.pgp,
+.card-cover.jst {
+  background: linear-gradient(
+    170deg,
+    var(--volume-card-blue-top) 0%,
+    var(--volume-card-blue-mid) 52%,
+    var(--volume-card-blue-deep) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+
+.card-cover-title {
+  font-family: 'David Libre', serif;
+  font-size: 1.05em;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.35;
+}
+.card-cover .rule-top,
+.card-cover .rule-bottom {
+  width: 55%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.55);
+  margin: 10px auto;
+}
+
+.card-cover-hebrew {
+  font-family: 'David Libre', serif;
+  font-size: 1.12em;
+  font-weight: 600;
+  color: #ffffff;
+  direction: rtl;
+  margin-top: 0;
+  line-height: 1.4;
+}
+
+.card-label {
+  margin-top: 12px;
+  text-align: center;
+}
+.card-label-en {
+  font-family: 'David Libre', serif;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: var(--ink);
+}
+.card-label-he {
+  font-family: 'David Libre', serif;
+  font-size: 0.85em;
+  color: var(--ink-light);
+  direction: rtl;
+  margin-top: 2px;
+}
+
+/* Coming soon badge */
+.card-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-family: 'David Libre', serif;
+  font-size: 0.6em;
+  color: #ffffff;
+  background: rgba(0,0,0,0.6);
+  padding: 2px 8px;
+  border-radius: 3px;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+/* ========== PLACEHOLDER PANEL ========== */
+.placeholder-panel {
+  text-align: center;
+  padding: 80px 20px;
+}
+.placeholder-panel .back-btn {
+  display: inline-block;
+  margin-bottom: 32px;
+  font-family: 'David Libre', serif;
+  font-size: 0.95em;
+  color: var(--accent);
+  background: none;
+  border: 1px solid var(--accent);
+  padding: 8px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.placeholder-panel .back-btn:hover {
+  background: rgba(200, 168, 78, 0.1);
+}
+.placeholder-title {
+  font-family: 'David Libre', serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.placeholder-hebrew {
+  font-family: 'David Libre', serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--ink-light);
+  direction: rtl;
+  margin-bottom: 24px;
+}
+.placeholder-message {
+  font-size: 1.1em;
+  color: var(--ink-light);
+  font-style: italic;
+}
+
+/* ========== FOOTER ========== */
+.landing-footer {
+  text-align: center;
+  padding: 40px 0 20px;
+  border-top: 1px solid var(--rule);
+  margin-top: 48px;
+}
+.landing-footer p {
+  font-size: 0.85em;
+  color: var(--ink-light);
+  line-height: 1.7;
+}
+.landing-footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.landing-footer a:hover { text-decoration: underline; }
+
+/* ========== CONTINUE READING / CONTINUE LEARNING ========== */
+#continue-reading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: var(--accent, #dbb958);
+  color: var(--header-bg, #1e2233);
+  max-width: 520px;
+  width: calc(100% - 32px);
+  margin: 0 auto 24px;
+  padding: 22px 40px 26px;
+  font-family: 'David Libre', serif;
+  font-size: 1.05em;
+  font-weight: 600;
+  border: 2px solid var(--header-bg, #1e2233);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  text-align: center;
+  letter-spacing: 0.03em;
+  box-sizing: border-box;
+  box-shadow: 0 4px 14px rgba(30, 34, 51, 0.18);
+}
+#continue-reading:hover {
+  background: var(--accent-light, #e8cc78);
+  transform: scale(1.02);
+}
+#continue-reading .cr-ref {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--header-bg, #1e2233);
+  line-height: 1.35;
+}
+/* Hebrew book name — readable size (was 0.82em of parent, far too small) */
+#continue-reading .cr-heb {
+  font-size: 1.7rem;
+  font-weight: 700;
+  font-family: 'David Libre', serif;
+  direction: rtl;
+  color: var(--header-bg, #1e2233);
+  margin-top: 0;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+}
+
+/* ========== GLOBAL SEARCH ========== */
+.global-search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 520px;
+  margin: 0 auto 8px;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+.global-search-wrap #gs-filter {
+  flex-shrink: 0;
+  margin: 0;
+}
+.global-search-input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  padding: 10px 16px;
+  font-family: 'David Libre', serif;
+  font-size: 1em;
+  background: var(--bg-deep);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.global-search-input:focus {
+  border-color: var(--accent);
+}
+.global-search-input::placeholder {
+  color: var(--ink-light);
+  opacity: 0.7;
+}
+.global-search-results {
+  margin-top: 12px;
+  display: none;
+}
+.global-search-results.open {
+  display: block;
+}
+.gs-result-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  margin-bottom: 6px;
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: var(--accent);
+  text-decoration: none;
+  font-family: 'David Libre', serif;
+  font-size: 0.95em;
+  transition: background 0.15s, transform 0.15s;
+}
+.gs-result-link:hover {
+  background: var(--volume-card-blue-deep);
+  transform: translateY(-1px);
+}
+body.dark-mode .gs-result-link:hover {
+  background: var(--volume-card-blue-deep);
+}
+.gs-result-link .gs-heb {
+  font-family: 'David Libre', serif;
+  font-size: 1.1em;
+  min-width: 60px;
+  text-align: center;
+  direction: rtl;
+}
+.gs-hint {
+  text-align: center;
+  font-size: 0.82em;
+  color: var(--ink-light);
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 600px) {
+  #continue-reading {
+    padding: 18px 22px 22px;
+    max-width: 100%;
+    width: calc(100% - 24px);
+  }
+  #continue-reading .cr-heb {
+    font-size: 1.45rem;
+  }
+  .landing-title-hebrew { font-size: 2.1em; }
+  .landing-he-en,
+  .landing-title { font-size: 1.05em; }
+  .landing-interlinear-kicker {
+    padding: 18px 26px 20px;
+    gap: 9px;
+  }
+  .landing-interlinear-kicker .lie-en { font-size: 1.12rem; letter-spacing: 0.09em; }
+  .landing-interlinear-kicker .lie-he { font-size: 1.85rem; }
+  .landing-app-store {
+    padding: 18px 20px 20px;
+    width: calc(100% - 24px);
+  }
+  .landing-app-store-he { font-size: 1.35rem; }
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 16px;
+  }
+  .card-cover-title { font-size: 0.95em; }
+  .card-cover-hebrew { font-size: 0.9em; }
+  .page { padding: 62px 16px 30px; padding-top: calc(62px + env(safe-area-inset-top, 0px)); }
+}
+@media (max-width: 380px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 12px;
+  }
+}
+/* === FORCE UI FONT (David Libre) === */
+body, button, input, select, textarea,
+.top-bar, .top-bar-title, .top-bar-actions,
+.card-title, .card-subtitle, .card-desc,
+.continue-reading, .cr-ref, .cr-heb, .cr-btn,
+#global-search, #gs-filter, #gs-results,
+.landing-app-store-link, .landing-app-store-sub {
+  font-family: 'David Libre', 'Georgia', serif !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- ===== PAGE ===== -->
+<div class="page">
+
+  <!-- ===== LANDING PANEL ===== -->
+  <div class="panel active" id="panel-landing">
+
+    <div class="landing-header">
+      <div class="landing-interlinear-kicker">
+        <span class="lie-he">מהדורה בין־שורתית</span>
+        <span class="lie-en">Interlinear Edition</span>
+      </div>
+      <div class="landing-title-hebrew">כתבי הקודש</div>
+      <div class="landing-he-en">Standard Works</div>
+      <p class="landing-subline">Scriptures &amp; Study Resources · Word-by-word Hebrew &amp; English glosses</p>
+      <div class="landing-description">
+        Study the Old and New Testaments, the Book of Mormon, Doctrine and Covenants, Pearl of Great Price, and Joseph Smith Translation in Hebrew—with interlinear translation, transliteration, and English glosses for each word. The Book of Mormon is rendered in pre-exilic Classical Biblical Hebrew, the Mikraic register of Isaiah and Jeremiah.
+      </div>
+    </div>
+
+    <div class="diamond-divider" aria-hidden="true"></div>
+
+    <!-- ===== CONTINUE READING ===== -->
+    <div class="continue-reading" id="continue-reading" style="display:none;" onclick="goToLastRead()">
+      <div class="cr-ref" id="cr-ref"></div>
+      <div class="cr-heb" id="cr-heb"></div>
+    </div>
+
+    <!-- ===== GLOBAL SEARCH ===== -->
+    <div class="global-search-wrap">
+      <input type="text" id="global-search" class="global-search-input" placeholder="Search all volumes…   (press / or Ctrl+K)" autocomplete="off" aria-label="Search all volumes">
+      <div class="global-search-results" id="gs-results"></div>
+    </div>
+
+    <!-- ===== CARD GRID ===== -->
+    <div class="card-grid">
+
+      <!-- Old Testament -->
+      <div class="scripture-card" onclick="window.location.href='ot.html'">
+        <div class="card-cover ot">
+          <div class="rule-top"></div>
+          <div class="card-cover-hebrew">תנ״ך</div>
+          <div class="rule-bottom"></div>
+          <div class="card-cover-title">Old<br>Testament</div>
+          <div class="rule-bottom"></div>
+        </div>
+        <div class="card-label">
+          <div class="card-label-en">Old Testament</div>
+          <div class="card-label-he">תנ״ך</div>
+        </div>
+      </div>
+
+      <!-- New Testament -->
+      <div class="scripture-card" onclick="window.location.href='nt.html'">
+        <div class="card-cover nt">
+          <div class="rule-top"></div>
+          <div class="card-cover-hebrew">הברית<br>החדשה</div>
+          <div class="rule-bottom"></div>
+          <div class="card-cover-title">New<br>Testament</div>
+          <div class="rule-bottom"></div>
+        </div>
+        <div class="card-label">
+          <div class="card-label-en">New Testament</div>
+          <div class="card-label-he">הברית החדשה</div>
+        </div>
+      </div>
+
+      <!-- Book of Mormon -->
+      <div class="scripture-card" onclick="window.location.href='bom/bom.html#home'">
+        <div class="card-cover bom">
+          <div class="rule-top"></div>
+          <div class="card-cover-hebrew">ספר<br>מורמון</div>
+          <div class="rule-bottom"></div>
+          <div class="card-cover-title">The<br>Book of<br>Mormon</div>
+          <div class="rule-bottom"></div>
+        </div>
+        <div class="card-label">
+          <div class="card-label-en">The Book of Mormon</div>
+          <div class="card-label-he">ספר מורמון</div>
+        </div>
+      </div>
+
+      <!-- Doctrine and Covenants -->
+      <div class="scripture-card" onclick="window.location.href='dc.html'">
+        <div class="card-cover dc">
+          <div class="rule-top"></div>
+          <div class="card-cover-hebrew">הלקח<br>והבריתות</div>
+          <div class="rule-bottom"></div>
+          <div class="card-cover-title">Doctrine<br>and<br>Covenants</div>
+          <div class="rule-bottom"></div>
+        </div>
+        <div class="card-label">
+          <div class="card-label-en">Doctrine and Covenants</div>
+          <div class="card-label-he">הלקח והבריתות</div>
+        </div>
+      </div>
+
+      <!-- Pearl of Great Price -->
+      <div class="scripture-card" onclick="window.location.href='pgp.html'">
+        <div class="card-cover pgp">
+          <div class="rule-top"></div>
+          <div class="card-cover-hebrew">פנינת<br>המחיר הגדול</div>
+          <div class="rule-bottom"></div>
+          <div class="card-cover-title">Pearl<br>of Great<br>Price</div>
+          <div class="rule-bottom"></div>
+        </div>
+        <div class="card-label">
+          <div class="card-label-en">Pearl of Great Price</div>
+          <div class="card-label-he">פנינת המחיר הגדול</div>
+        </div>
+      </div>
+
+
+      <!-- Joseph Smith Translation -->
+      <div class="scripture-card" onclick="window.location.href='jst.html'">
+        <div class="card-cover jst">
+          <div class="rule-top"></div>
+          <div class="card-cover-hebrew">תרגום<br>ג׳וזף סמית</div>
+          <div class="rule-bottom"></div>
+          <div class="card-cover-title">Joseph<br>Smith<br>Translation</div>
+          <div class="rule-bottom"></div>
+        </div>
+        <div class="card-label">
+          <div class="card-label-en">Joseph Smith Translation</div>
+          <div class="card-label-he">תרגום ג׳וזף סמית</div>
+        </div>
+      </div>
+
+    </div><!-- /card-grid -->
+
+    <footer class="hub-footer">
+      <p class="hub-footer-contact">
+        Hebrew Interlinear Standard Works<br>
+        <a href="mailto:chris@sefermormon.com">chris@sefermormon.com</a>
+      </p>
+      <div class="hub-footer-notice">
+        <p class="hub-footer-notice-he" lang="he" dir="rtl">האתר עדיין בבנייה. האנגלית הבין־שורתית מתעדכנת מעת לעת.</p>
+        <p class="hub-footer-notice-en" lang="en">This app is still in progress. The interlinear English is updated from time to time.</p>
+      </div>
+      <div class="hub-footer-disclaimer">
+        <p class="hub-footer-disclaimer-he" lang="he" dir="rtl">
+          זהו פרויקט עצמאי והוא אינו משויך לכנסיית ישוע המשיח של קדושי הימים האחרונים, אינו מאושר על ידיה ואינו מקושר אליה באופן רשמי.
+        </p>
+        <p class="hub-footer-disclaimer-en" lang="en">
+          This is an independent project and is not affiliated with, endorsed by, or officially connected to The Church of Jesus Christ of Latter-day Saints.
+        </p>
+      </div>
+      <p class="hub-footer-copy">&copy; 2026 Chris Lambe. All rights reserved.</p>
+    </footer>
+
+  </div><!-- /panel-landing -->
+
+
+</div><!-- /page -->
+
+<script src="site_chrome.js?v=24"></script>
+<script src="notes_engine.js"></script>
+<script src="nav_engine.js?v=25"></script>
+<script>
+(function hubNavBoot() {
+  try {
+    if (typeof NavEngine === 'undefined' || !NavEngine.init) return;
+    NavEngine.init({
+      volume: 'bom',
+      currentChapter: 'landing',
+      basePath: '',
+      hub: true,
+      preferBooksOnOpen: false,
+      skipSwipeNav: true,
+      onNavigate: function() {}
+    });
+  } catch (e) {}
+})();
+</script>
+<script>
+
+// ===== GLOBAL SEARCH (Jump across volumes) =====
+var gsInput = document.getElementById('global-search');
+var gsResults = document.getElementById('gs-results');
+
+function _escapeHtml(s) {
+  return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function _volLabel(vk) {
+  try { return (window.NavEngine && window.NavEngine.VOLUMES && window.NavEngine.VOLUMES[vk]) ? window.NavEngine.VOLUMES[vk].name : vk; }
+  catch(e) { return vk; }
+}
+
+function _buildJumpUrl(entry, chNum) {
+  if (!entry) return '';
+  var vk = entry.vol;
+  var vol = window.NavEngine && window.NavEngine.VOLUMES ? window.NavEngine.VOLUMES[vk] : null;
+  if (!vol) return '';
+  var page = vol.page;
+
+  // Compute chapterId
+  var chapId = '';
+  if (entry.chId) chapId = entry.chId; // sections, etc.
+  else {
+    var n = chNum && chNum > 0 ? chNum : 1;
+    chapId = entry.prefix + (entry.vol === 'dc' ? (n + '-ch1') : ('-ch' + n));
+  }
+
+  var hash = (window.NavEngine && window.NavEngine.buildHash) ? window.NavEngine.buildHash(vk, chapId) : chapId;
+  return page + (hash ? ('#' + hash) : '');
+}
+
+function renderGsResults(q, filterVol) {
+  if (!window.NavEngine || !window.NavEngine.searchBooks) {
+    gsResults.innerHTML = '<div class="gs-hint">Search is loading…</div>';
+    gsResults.classList.add('open');
+    return;
+  }
+  var hits = window.NavEngine.searchBooks(q) || [];
+  if (filterVol && filterVol !== 'all') hits = hits.filter(function(h) { return h && h.entry && h.entry.vol === filterVol; });
+
+  if (!hits.length) {
+    gsResults.innerHTML = '<div class="gs-hint">No matches. Try “Isaiah 53”, “Mosiah 5”, “D&C 121”.</div>';
+    gsResults.classList.add('open');
+    return;
+  }
+
+  var html = '';
+  hits.forEach(function(h) {
+    var e = h.entry;
+    var url = _buildJumpUrl(e, h.chNum);
+    var left = _escapeHtml(e.en + (h.chNum ? (' ' + h.chNum) : ''));
+    var right = _escapeHtml(_volLabel(e.vol));
+    html += '<a class="gs-result-link" href="' + url + '">' +
+              '<span class="gs-heb">' + _escapeHtml(e.heb) + '</span>' +
+              '<span><strong>' + left + '</strong> <span style="opacity:0.7">· ' + right + '</span></span>' +
+            '</a>';
+  });
+  html += '<div class="gs-hint">Tip: type “Book Chapter” (example: “Mosiah 5”).</div>';
+  gsResults.innerHTML = html;
+  gsResults.classList.add('open');
+}
+
+var _gsFilter = 'all';
+// Inject a small filter dropdown next to the input (no layout shifts)
+try {
+  var wrap = gsInput && gsInput.parentElement ? gsInput.parentElement : null;
+  if (wrap && !document.getElementById('gs-filter')) {
+    var sel = document.createElement('select');
+    sel.id = 'gs-filter';
+    sel.setAttribute('aria-label', 'Search volume filter');
+    sel.style.cssText = 'border:1px solid var(--rule);border-radius:8px;padding:10px 12px;background:var(--bg);color:var(--ink);font-family:inherit;';
+    sel.innerHTML = '' +
+      '<option value="all">All</option>' +
+      '<option value="ot">OT</option>' +
+      '<option value="nt">NT</option>' +
+      '<option value="bom">BOM</option>' +
+      '<option value="dc">D&C</option>' +
+      '<option value="pgp">PGP</option>' +
+      '<option value="jst">JST</option>';
+    sel.onchange = function() { _gsFilter = sel.value; renderGsResults(gsInput.value.trim(), _gsFilter); };
+    wrap.insertBefore(sel, gsInput);
+  }
+} catch(e) {}
+
+gsInput.addEventListener('input', function() {
+  var q = gsInput.value.trim();
+  if (q.length < 2) {
+    gsResults.classList.remove('open');
+    gsResults.innerHTML = '';
+    return;
+  }
+  renderGsResults(q, _gsFilter);
+});
+
+gsInput.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    var q = gsInput.value.trim();
+    if (q.length >= 2) {
+      renderGsResults(q, _gsFilter);
+      // If there's a top result, go there.
+      var a = gsResults.querySelector('a.gs-result-link');
+      if (a && a.href) window.location.href = a.href;
+    }
+  }
+  if (e.key === 'Escape') {
+    gsInput.blur();
+    gsResults.classList.remove('open');
+    gsResults.innerHTML = '';
+  }
+});
+
+// ===== KEYBOARD SHORTCUTS =====
+document.addEventListener('keydown', function(e) {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') return;
+  if ((e.ctrlKey || e.metaKey) && (e.key === 'k' || e.key === 'K')) {
+    e.preventDefault();
+    if (gsInput) gsInput.focus();
+    return;
+  }
+  if (e.key === '/') {
+    e.preventDefault();
+    if (gsInput) gsInput.focus();
+    return;
+  }
+  if (e.key === 'd' || e.key === 'D') {
+    toggleDark();
+  }
+});
+
+</script>
+<script>
+// ===== CONTINUE READING =====
+function goToLastRead() {
+  try {
+    var data = JSON.parse(localStorage.getItem('sw-last-read'));
+    var url = window.NavEngine && NavEngine.resolveLastReadUrl
+      ? NavEngine.resolveLastReadUrl(data)
+      : (data && data.path);
+    if (url) window.location.href = url;
+  } catch(e) {}
+}
+(function showContinueReading() {
+  try {
+    var data = JSON.parse(localStorage.getItem('sw-last-read'));
+    if (!data || !data.label) return;
+    document.getElementById('cr-ref').textContent = '\u2192 Continue Reading: ' + data.label;
+    document.getElementById('cr-heb').textContent = data.heb || '';
+    document.getElementById('continue-reading').style.display = 'flex';
+  } catch(e) {}
+})();
+</script>
+<script>
+window.addEventListener('beforeunload', function() {
+  if (sessionStorage.getItem('xref-returning')) return;
+  if (sessionStorage.getItem('xref-return-set')) { sessionStorage.removeItem('xref-return-set'); return; }
+  sessionStorage.setItem('xref-return-from', window.location.pathname + window.location.hash);
+  sessionStorage.removeItem('xref-return-verse');
+  sessionStorage.setItem('xref-return-label', 'Home');
+});
+</script>
+</body>
+</html>

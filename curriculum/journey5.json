@@ -1,0 +1,1926 @@
+{
+  "id": "journey5",
+  "importedFrom": "C:\\Users\\chris\\Desktop\\Standard Works Project\\curriculum\\journey5_v1.txt",
+  "importedAt": "2026-04-22T17:14:38.354Z",
+  "schemaVersion": 2,
+  "lessons": [
+    {
+      "num": "1",
+      "title": "Be Strong and of Good Courage",
+      "verse": {
+        "ref": "Joshua 1:6",
+        "hebrew": "חֲזַק וֶאֱמָץ",
+        "translit": "chazak ve-ematz"
+      },
+      "gloss": "Be strong and of good courage.",
+      "focus": "Short, weighty covenant-commission verse. Reinforce ח־ז־ק from Journey 2 lesson 56. Introduce א־מ־צ (to be brave). This imperative pair will repeat three times in Joshua 1.",
+      "roots": {
+        "raw": "א־מ־צ (to be brave).",
+        "items": [
+          "א־מ־צ"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Memorization Reward, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Memorization Reward",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child recites chazak ve-ematz from memory."
+    },
+    {
+      "num": "2",
+      "title": "Turn Not from It to Right or Left",
+      "verse": {
+        "ref": "Joshua 1:7",
+        "hebrew": "אַל־תָּסוּר מִמֶּנּוּ יָמִין וּשְׂמֹאול",
+        "translit": "al-tasur mimenu yamin u-smol"
+      },
+      "gloss": "Turn not from it to the right hand or to the left.",
+      "focus": "Reinforce ס־ו־ר from Journey 2 lesson 55. Introduce יָמִין (right hand) and שְׂמֹאל (left hand).",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "יָמִין (right), שְׂמֹאל (left).",
+        "items": [
+          {
+            "heb": "יָמִין",
+            "en": "right"
+          },
+          {
+            "heb": "שְׂמֹאל",
+            "en": "left"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Directional Sort, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Directional Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child names right and left in Hebrew."
+    },
+    {
+      "num": "3",
+      "title": "Meditate on the Torah Day and Night",
+      "verse": {
+        "ref": "Joshua 1:8",
+        "hebrew": "וְהָגִיתָ בּוֹ יוֹמָם וָלָיְלָה",
+        "translit": "ve-hagita bo yomam va-layla"
+      },
+      "gloss": "And you shall meditate on it day and night.",
+      "focus": "Introduce ה־ג־ה (to meditate, murmur). Introduce the adverbial yomam (by day). Echoes of Psalm 1.",
+      "roots": {
+        "raw": "ה־ג־ה (to meditate, murmur).",
+        "items": [
+          "ה־ג־ה"
+        ]
+      },
+      "vocab": {
+        "raw": "יוֹמָם (by day, adverb).",
+        "items": [
+          {
+            "heb": "יוֹמָם",
+            "en": "by day, adverb"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 8."
+    },
+    {
+      "num": "4",
+      "title": "The People Passed Over",
+      "verse": {
+        "ref": "Joshua 3:17",
+        "hebrew": "וְכָל־יִשְׂרָאֵל עֹבְרִים בֶּחָרֶבָה עַד אֲשֶׁר־תַּמּוּ כָּל־הַגּוֹי לַעֲבֹר אֶת־הַיַּרְדֵּן",
+        "translit": "ve-chol-Yisrael ovrim be-charava ad asher-tamu kol-ha-goi la'avor et-ha-Yarden"
+      },
+      "gloss": "And all Israel passed over on dry ground, until all the nation had finished crossing the Jordan.",
+      "focus": "Reinforce ע־ב־ר (to pass over, from Journey 3 lesson 53). Introduce ת־מ־מ (to be complete) and חָרָבָה (dry ground). Strong echo of Exodus 14.",
+      "roots": {
+        "raw": "ת־מ־מ (to be complete, finish).",
+        "items": [
+          "ת־מ־מ"
+        ]
+      },
+      "vocab": {
+        "raw": "חָרָבָה (dry ground), יַרְדֵּן (Jordan).",
+        "items": [
+          {
+            "heb": "חָרָבָה",
+            "en": "dry ground"
+          },
+          {
+            "heb": "יַרְדֵּן",
+            "en": "Jordan"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Intertextual Echo Highlight (Exodus 14 parallel), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Intertextual Echo Highlight",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child names the Red Sea parallel."
+    },
+    {
+      "num": "5",
+      "title": "Twelve Stones for a Memorial",
+      "verse": {
+        "ref": "Joshua 4:7",
+        "hebrew": "וְהָיוּ הָאֲבָנִים הָאֵלֶּה לְזִכָּרוֹן לִבְנֵי יִשְׂרָאֵל עַד־עוֹלָם",
+        "translit": "ve-hayu ha-avanim ha-eleh le-zikaron li-vnei Yisrael ad-olam"
+      },
+      "gloss": "And these stones shall be a memorial to the children of Israel forever.",
+      "focus": "Reinforce zikaron from Journey 3 lesson 28. Reinforce אֶבֶן (stone) in plural.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Covenant Vocabulary Review (zikaron glows), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Covenant Vocabulary Review",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child recognizes zikaron and names Passover as another zikaron."
+    },
+    {
+      "num": "6",
+      "title": "Take Off Your Sandals",
+      "verse": {
+        "ref": "Joshua 5:15",
+        "hebrew": "שַׁל־נַעַלְךָ מֵעַל רַגְלֶךָ כִּי הַמָּקוֹם אֲשֶׁר אַתָּה עֹמֵד עָלָיו קֹדֶשׁ הוּא",
+        "translit": "shal-na'alcha me-al raglecha ki ha-makom asher ata omed alav kodesh hu"
+      },
+      "gloss": "Take off your sandal from your foot, for the place on which you are standing is holy.",
+      "focus": "Exact echo of Exodus 3:5 (Journey 3 lesson 10). The child recognizes the verse. This is a deliberate convergent moment.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Echo Recognition Highlight, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Echo Recognition Highlight",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child names the Exodus 3:5 parallel from memory."
+    },
+    {
+      "num": "7",
+      "title": "The Walls Fell Down",
+      "verse": {
+        "ref": "Joshua 6:20",
+        "hebrew": "וַיָּרֵעוּ הָעָם וַיִּתְקְעוּ בַּשֹּׁפָרוֹת וַתִּפֹּל הַחוֹמָה תַּחְתֶּיהָ",
+        "translit": "va-yare'u ha-am va-yitke'u ba-shofarot va-tipol ha-choma tachteha"
+      },
+      "gloss": "And the people shouted and blew the trumpets, and the wall fell down.",
+      "focus": "Introduce ר־ו־ע (to shout) in Hiphil. Introduce ת־ק־ע (to blow) in Qal. Introduce שׁוֹפָר (ram's horn) and חוֹמָה (wall).",
+      "roots": {
+        "raw": "ר־ו־ע (to shout), ת־ק־ע (to blow, blast).",
+        "items": [
+          "ר־ו־ע",
+          "ת־ק־ע"
+        ]
+      },
+      "vocab": {
+        "raw": "שׁוֹפָר (shofar, ram's horn), חוֹמָה (wall).",
+        "items": [
+          {
+            "heb": "שׁוֹפָר",
+            "en": "shofar, ram's horn"
+          },
+          {
+            "heb": "חוֹמָה",
+            "en": "wall"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 20 aloud."
+    },
+    {
+      "num": "8",
+      "title": "Choose You This Day",
+      "verse": {
+        "ref": "Joshua 24:15",
+        "hebrew": "בַּחֲרוּ לָכֶם הַיּוֹם אֶת־מִי תַעֲבֹדוּן",
+        "translit": "bacharu lachem ha-yom et-mi ta'avodun"
+      },
+      "gloss": "Choose this day whom you will serve.",
+      "focus": "Introduce ב־ח־ר (to choose). Reinforce ע־ב־ד. The paragogic nun on ta'avodun (poetic / emphatic form). Joshua's farewell covenant-renewal.",
+      "roots": {
+        "raw": "ב־ח־ר (to choose).",
+        "items": [
+          "ב־ח־ר"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Memorization Reward, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Memorization Reward",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child recites verse 15."
+    },
+    {
+      "num": "9",
+      "title": "They Forsook the LORD",
+      "verse": {
+        "ref": "Judges 2:12",
+        "hebrew": "וַיַּעַזְבוּ אֶת־יְהוָה אֱלֹהֵי אֲבוֹתָם",
+        "translit": "va-ya'azvu et-YHVH Elohei avotam"
+      },
+      "gloss": "And they forsook the LORD, God of their fathers.",
+      "focus": "Reinforce ע־ז־ב from Journey 4 lesson 11. The Judges cycle opens.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 12."
+    },
+    {
+      "num": "10",
+      "title": "The LORD Raised Up Judges",
+      "verse": {
+        "ref": "Judges 2:16",
+        "hebrew": "וַיָּקֶם יְהוָה שֹׁפְטִים וַיּוֹשִׁיעוּם מִיַּד שֹׁסֵיהֶם",
+        "translit": "va-yakem YHVH shoftim va-yoshi'um mi-yad shoseihem"
+      },
+      "gloss": "And the LORD raised up judges, and they saved them from the hand of their plunderers.",
+      "focus": "Introduce the Hiphil va-yakem from k-v-m. Introduce שׁ־פ־ט (to judge) as Qal active participle. Reinforce y-sh-a in Hiphil (yoshi'um, they delivered them).",
+      "roots": {
+        "raw": "ש־פ־ט (to judge).",
+        "items": [
+          "ש־פ־ט"
+        ]
+      },
+      "vocab": {
+        "raw": "שׁוֹפֵט (judge).",
+        "items": [
+          {
+            "heb": "שׁוֹפֵט",
+            "en": "judge"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Binyan Builder, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Binyan Builder",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child recognizes shofet and connects it to mishpat (judgment)."
+    },
+    {
+      "num": "11",
+      "title": "Deborah the Prophetess",
+      "verse": {
+        "ref": "Judges 4:4",
+        "hebrew": "וּדְבוֹרָה אִשָּׁה נְבִיאָה הִיא שֹׁפְטָה אֶת־יִשְׂרָאֵל בָּעֵת הַהִיא",
+        "translit": "u-Dvora isha nevi'a hi shofta et-Yisrael ba-et ha-hi"
+      },
+      "gloss": "And Deborah, a prophetess, was judging Israel at that time.",
+      "focus": "Introduce נְבִיאָה (prophetess, feminine of navi). Introduce the Qal active participle feminine singular shofta.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "נְבִיאָה (prophetess), נָבִיא (prophet).",
+        "items": [
+          {
+            "heb": "נְבִיאָה",
+            "en": "prophetess"
+          },
+          {
+            "heb": "נָבִיא",
+            "en": "prophet"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Gender Sort (masculine vs feminine participle), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Gender Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child forms feminine participle."
+    },
+    {
+      "num": "12",
+      "title": "Awake, Awake, Deborah",
+      "verse": {
+        "ref": "Judges 5:12",
+        "hebrew": "עוּרִי עוּרִי דְּבוֹרָה עוּרִי עוּרִי דַּבְּרִי־שִׁיר",
+        "translit": "uri uri Dvora uri uri dabri-shir"
+      },
+      "gloss": "Awake, awake, Deborah, awake, awake, utter a song.",
+      "focus": "Introduce ע־ו־ר (to awake) in Qal feminine imperative. Reinforce ד־ב־ר in Piel feminine imperative. The song of Deborah, a very ancient piece of Hebrew poetry.",
+      "roots": {
+        "raw": "ע־ו־ר (to awake).",
+        "items": [
+          "ע־ו־ר"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Feminine Imperative Chain, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Feminine Imperative Chain",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites the awakening refrain."
+    },
+    {
+      "num": "13",
+      "title": "The LORD Is with Thee",
+      "verse": {
+        "ref": "Judges 6:12",
+        "hebrew": "יְהוָה עִמְּךָ גִּבּוֹר הֶחָיִל",
+        "translit": "YHVH imcha gibor he-chayil"
+      },
+      "gloss": "The LORD is with you, mighty man of valor.",
+      "focus": "Introduce גִּבּוֹר (mighty one) and חַיִל (strength, valor).",
+      "roots": {
+        "raw": "ג־ב־ר (to be strong).",
+        "items": [
+          "ג־ב־ר"
+        ]
+      },
+      "vocab": {
+        "raw": "גִּבּוֹר (mighty), חַיִל (strength, valor, army).",
+        "items": [
+          {
+            "heb": "גִּבּוֹר",
+            "en": "mighty"
+          },
+          {
+            "heb": "חַיִל",
+            "en": "strength, valor, army"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Verse Builder, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites verse 12."
+    },
+    {
+      "num": "14",
+      "title": "Peace Be Unto Thee",
+      "verse": {
+        "ref": "Judges 6:23",
+        "hebrew": "שָׁלוֹם לָךְ אַל־תִּירָא",
+        "translit": "shalom lach al-tira"
+      },
+      "gloss": "Peace be to you, do not fear.",
+      "focus": "Short, weighty verse. Reinforce shalom and al-tira. The standard divine reassurance formula.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Formula Highlight (do-not-fear is a divine formula across Tanakh), Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Formula Highlight",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites the verse."
+    },
+    {
+      "num": "15",
+      "title": "The LORD Our Peace",
+      "verse": {
+        "ref": "Judges 6:24",
+        "hebrew": "וַיִּבֶן שָׁם גִּדְעוֹן מִזְבֵּחַ לַיהוָה וַיִּקְרָא־לוֹ יְהוָה שָׁלוֹם",
+        "translit": "va-yiven sham Gid'on mizbeach la-YHVH va-yikra-lo YHVH shalom"
+      },
+      "gloss": "And Gideon built there an altar to the LORD and called it YHVH Shalom.",
+      "focus": "Reinforce b-n-h and the altar-building formula from Genesis 12:8. Reinforce shalom. A divine-name-of-place formula.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "גִּדְעוֹן (Gideon).",
+        "items": [
+          {
+            "heb": "גִּדְעוֹן",
+            "en": "Gideon"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Divine Name Highlight, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Divine Name Highlight",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 24 and names other divine-name-of-place formulas (YHVH Yireh in Genesis 22)."
+    },
+    {
+      "num": "16",
+      "title": "A Sword for the LORD and for Gideon",
+      "verse": {
+        "ref": "Judges 7:20",
+        "hebrew": "חֶרֶב לַיהוָה וּלְגִדְעוֹן",
+        "translit": "cherev la-YHVH u-le-Gid'on"
+      },
+      "gloss": "A sword for the LORD and for Gideon.",
+      "focus": "Short, memorable battle-cry. Reinforce cherev.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites the battle-cry."
+    },
+    {
+      "num": "17",
+      "title": "Hannah Prayed",
+      "verse": {
+        "ref": "1 Samuel 1:10",
+        "hebrew": "וְהִיא מָרַת נָפֶשׁ וַתִּתְפַּלֵּל עַל־יְהוָה וּבָכֹה תִבְכֶּה",
+        "translit": "ve-hi marat nafesh va-titpalel al-YHVH u-vacho tivkeh"
+      },
+      "gloss": "And she was bitter of soul and prayed to the LORD and wept bitterly.",
+      "focus": "Reinforce Hithpael of p-l-l from Journey 4 lesson 5. Introduce מַר (bitter). Reinforce the emphatic infinitive absolute plus imperfect (bacho tivkeh, surely she wept).",
+      "roots": {
+        "raw": "מ־ר־ר (to be bitter).",
+        "items": [
+          "מ־ר־ר"
+        ]
+      },
+      "vocab": {
+        "raw": "מַר (bitter).",
+        "items": [
+          {
+            "heb": "מַר",
+            "en": "bitter"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 10."
+    },
+    {
+      "num": "18",
+      "title": "My Heart Rejoices in the LORD",
+      "verse": {
+        "ref": "1 Samuel 2:1",
+        "hebrew": "עָלַץ לִבִּי בַּיהוָה רָמָה קַרְנִי בַּיהוָה",
+        "translit": "alatz libi ba-YHVH rama karni ba-YHVH"
+      },
+      "gloss": "My heart rejoices in the LORD, my horn is exalted in the LORD.",
+      "focus": "Introduce ע־ל־צ (to rejoice). Introduce the horn-of-strength metaphor (karni, my horn).",
+      "roots": {
+        "raw": "ע־ל־צ (to rejoice).",
+        "items": [
+          "ע־ל־צ"
+        ]
+      },
+      "vocab": {
+        "raw": "קֶרֶן (horn).",
+        "items": [
+          {
+            "heb": "קֶרֶן",
+            "en": "horn"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort (joy-verbs now four: s-m-ch, g-y-l, r-n-n, a-l-tz), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child names four joy-verbs."
+    },
+    {
+      "num": "19",
+      "title": "Samuel, Samuel",
+      "verse": {
+        "ref": "1 Samuel 3:10",
+        "hebrew": "וַיָּבֹא יְהוָה וַיִּתְיַצַּב וַיִּקְרָא כְפַעַם־בְּפַעַם שְׁמוּאֵל שְׁמוּאֵל",
+        "translit": "va-yavo YHVH va-yityatzav va-yikra ke-fa'am-be-fa'am Shmuel Shmuel"
+      },
+      "gloss": "And the LORD came and stood and called as at other times, Samuel, Samuel.",
+      "focus": "Introduce the Hithpael va-yityatzav (he stationed himself). Introduce פַּעַם (time, occurrence).",
+      "roots": {
+        "raw": "י־צ־ב (to station, in Hithpael to present oneself).",
+        "items": [
+          "י־צ־ב"
+        ]
+      },
+      "vocab": {
+        "raw": "פַּעַם (time, occurrence), שְׁמוּאֵל (Samuel).",
+        "items": [
+          {
+            "heb": "פַּעַם",
+            "en": "time, occurrence"
+          },
+          {
+            "heb": "שְׁמוּאֵל",
+            "en": "Samuel"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Binyan Builder, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Binyan Builder",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 10."
+    },
+    {
+      "num": "20",
+      "title": "Speak, for Thy Servant Heareth",
+      "verse": {
+        "ref": "1 Samuel 3:10b",
+        "hebrew": "דַּבֵּר כִּי שֹׁמֵעַ עַבְדֶּךָ",
+        "translit": "daber ki shomea avdecha"
+      },
+      "gloss": "Speak, for your servant hears.",
+      "focus": "Short, weighty response. Reinforce the Piel imperative daber. Reinforce the Qal participle shomea.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites verse 10b from memory."
+    },
+    {
+      "num": "21",
+      "title": "Give Us a King",
+      "verse": {
+        "ref": "1 Samuel 8:6",
+        "hebrew": "תְּנָה־לָּנוּ מֶלֶךְ לְשָׁפְטֵנוּ",
+        "translit": "tena-lanu melech le-shoftenu"
+      },
+      "gloss": "Give us a king to judge us.",
+      "focus": "Reinforce n-t-n imperative. Reinforce the infinitive construct with suffix le-shoftenu (to judge us). The king-request moment.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Infinitive Plus Suffix Builder, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Infinitive Plus Suffix Builder",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 6."
+    },
+    {
+      "num": "22",
+      "title": "To Obey Is Better than Sacrifice",
+      "verse": {
+        "ref": "1 Samuel 15:22",
+        "hebrew": "הִנֵּה שְׁמֹעַ מִזֶּבַח טוֹב לְהַקְשִׁיב מֵחֵלֶב אֵילִים",
+        "translit": "hineh shmoa mi-zevach tov le-hakshiv me-chelev eilim"
+      },
+      "gloss": "Behold, to hear is better than sacrifice, to hearken than the fat of rams.",
+      "focus": "Introduce the infinitive construct shmoa (to hear). Introduce חֵלֶב (fat) and אַיִל (ram). A major prophetic theme.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "חֵלֶב (fat), אַיִל (ram).",
+        "items": [
+          {
+            "heb": "חֵלֶב",
+            "en": "fat"
+          },
+          {
+            "heb": "אַיִל",
+            "en": "ram"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Memorization Reward, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Memorization Reward",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child recites the obedience-greater-than-sacrifice verse."
+    },
+    {
+      "num": "23",
+      "title": "Man Looks at the Outward Appearance",
+      "verse": {
+        "ref": "1 Samuel 16:7",
+        "hebrew": "הָאָדָם יִרְאֶה לַעֵינַיִם וַיהוָה יִרְאֶה לַלֵּבָב",
+        "translit": "ha-adam yir'eh la-einayim va-YHVH yir'eh la-levav"
+      },
+      "gloss": "Man looks at the eyes, but the LORD looks at the heart.",
+      "focus": "Reinforce r-a-h. Reinforce the heart / eyes contrast. Reinforce levav (extended heart form from Journey 3 lesson 63).",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Memorization Reward, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Memorization Reward",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child recites verse 7."
+    },
+    {
+      "num": "24",
+      "title": "I Come in the Name of the LORD",
+      "verse": {
+        "ref": "1 Samuel 17:45",
+        "hebrew": "אָנֹכִי בָא אֵלֶיךָ בְּשֵׁם יְהוָה צְבָאוֹת",
+        "translit": "anochi va elecha be-shem YHVH tzeva'ot"
+      },
+      "gloss": "I come against you in the name of the LORD of hosts.",
+      "focus": "Introduce צְבָאוֹת (hosts, armies). A new divine-title expansion: YHVH Tzeva'ot.",
+      "roots": {
+        "raw": "צ־ב־א (to go to war, serve, assemble).",
+        "items": [
+          "צ־ב־א"
+        ]
+      },
+      "vocab": {
+        "raw": "צָבָא (host, army), צְבָאוֹת (hosts).",
+        "items": [
+          {
+            "heb": "צָבָא",
+            "en": "host, army"
+          },
+          {
+            "heb": "צְבָאוֹת",
+            "en": "hosts"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Divine Title Highlight, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Divine Title Highlight",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites David's declaration."
+    },
+    {
+      "num": "25",
+      "title": "The LORD Is My Shepherd",
+      "verse": {
+        "ref": "Psalm 23:1",
+        "hebrew": "יְהוָה רֹעִי לֹא אֶחְסָר",
+        "translit": "YHVH ro'i lo echsar"
+      },
+      "gloss": "The LORD is my shepherd, I shall not lack.",
+      "focus": "Introduce ר־ע־ה (to shepherd). Introduce ח־ס־ר (to lack). The opening of Psalm 23, which the child now has the Hebrew to begin reading in its original language.",
+      "roots": {
+        "raw": "ר־ע־ה (to shepherd), ח־ס־ר (to lack).",
+        "items": [
+          "ר־ע־ה",
+          "ח־ס־ר"
+        ]
+      },
+      "vocab": {
+        "raw": "רֹעֶה (shepherd).",
+        "items": [
+          {
+            "heb": "רֹעֶה",
+            "en": "shepherd"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Memorization Reward (the most famous Hebrew psalm verse), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Memorization Reward",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child recites Psalm 23:1 from memory."
+    },
+    {
+      "num": "26",
+      "title": "He Leads Me Beside Still Waters",
+      "verse": {
+        "ref": "Psalm 23:2",
+        "hebrew": "בִּנְאוֹת דֶּשֶׁא יַרְבִּיצֵנִי עַל־מֵי מְנֻחוֹת יְנַהֲלֵנִי",
+        "translit": "bi-n'ot deshe yarbitzeni al-mei menuchot yenahaleni"
+      },
+      "gloss": "In pastures of grass he makes me lie down, beside waters of rest he leads me.",
+      "focus": "Introduce the Hiphil yarbitzeni (he makes me lie down, from r-v-tz). Introduce the Piel yenahaleni (he leads me, from n-h-l). Introduce מְנוּחָה (rest).",
+      "roots": {
+        "raw": "ר־ב־צ (to lie down), נ־ה־ל (to lead gently), נ־ו־ח (rest).",
+        "items": [
+          "ר־ב־צ",
+          "נ־ה־ל",
+          "נ־ו־ח"
+        ]
+      },
+      "vocab": {
+        "raw": "דֶּשֶׁא (grass), מְנוּחָה (rest).",
+        "items": [
+          {
+            "heb": "דֶּשֶׁא",
+            "en": "grass"
+          },
+          {
+            "heb": "מְנוּחָה",
+            "en": "rest"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Binyan Builder, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Binyan Builder",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites Psalm 23:2."
+    },
+    {
+      "num": "27",
+      "title": "Though I Walk Through the Valley",
+      "verse": {
+        "ref": "Psalm 23:4",
+        "hebrew": "גַּם כִּי־אֵלֵךְ בְּגֵיא צַלְמָוֶת לֹא־אִירָא רָע כִּי־אַתָּה עִמָּדִי",
+        "translit": "gam ki-elech be-gei tzalmavet lo-ira ra ki-ata imadi"
+      },
+      "gloss": "Even if I walk through the valley of deep shadow, I shall not fear evil, for you are with me.",
+      "focus": "Introduce צַלְמָוֶת (deep shadow, death-shadow). Reinforce imadi (with me).",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "צַלְמָוֶת (deep shadow).",
+        "items": [
+          {
+            "heb": "צַלְמָוֶת",
+            "en": "deep shadow"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Memorization Reward, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Memorization Reward",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child recites Psalm 23:4."
+    },
+    {
+      "num": "28",
+      "title": "Goodness and Mercy Shall Follow Me",
+      "verse": {
+        "ref": "Psalm 23:6",
+        "hebrew": "אַךְ טוֹב וָחֶסֶד יִרְדְּפוּנִי כָּל־יְמֵי חַיָּי",
+        "translit": "ach tov va-chesed yirdefuni kol-yemei chayai"
+      },
+      "gloss": "Surely goodness and chesed shall pursue me all the days of my life.",
+      "focus": "Reinforce chesed from Journey 3 lesson 54. Introduce ר־ד־פ (to pursue). A strong convergent moment: chesed anchored in Exodus 34 now appears in Psalm 23.",
+      "roots": {
+        "raw": "ר־ד־פ (to pursue).",
+        "items": [
+          "ר־ד־פ"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Chesed Highlight (special treatment), Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Chesed Highlight",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites Psalm 23:6 and names chesed."
+    },
+    {
+      "num": "29",
+      "title": "Create in Me a Clean Heart",
+      "verse": {
+        "ref": "Psalm 51:12",
+        "hebrew": "לֵב טָהוֹר בְּרָא־לִי אֱלֹהִים",
+        "translit": "lev tahor bra-li Elohim"
+      },
+      "gloss": "Create in me a clean heart, O God.",
+      "focus": "Reinforce ב־ר־א from Journey 1 lesson 1. Introduce טָהוֹר (clean, pure). A weighty echo: the creation verb now applied to the heart.",
+      "roots": {
+        "raw": "ט־ה־ר (to be clean, pure).",
+        "items": [
+          "ט־ה־ר"
+        ]
+      },
+      "vocab": {
+        "raw": "טָהוֹר (clean, pure).",
+        "items": [
+          {
+            "heb": "טָהוֹר",
+            "en": "clean, pure"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort (b-r-a now both cosmos and heart), Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites Psalm 51:12 and names the creation echo."
+    },
+    {
+      "num": "30",
+      "title": "Restore the Joy of Thy Salvation",
+      "verse": {
+        "ref": "Psalm 51:14",
+        "hebrew": "הָשִׁיבָה לִּי שְׂשׂוֹן יִשְׁעֶךָ",
+        "translit": "hashiva li sason yish'echa"
+      },
+      "gloss": "Restore to me the joy of your salvation.",
+      "focus": "Reinforce sh-v-b in Hiphil imperative. Reinforce y-sh-a (noun yesha / yish'echa, your salvation). Introduce שָׂשׂוֹן (joy, a fifth joy-word).",
+      "roots": {
+        "raw": "שׂ־ו־שׂ (to rejoice).",
+        "items": [
+          "ו־ש"
+        ]
+      },
+      "vocab": {
+        "raw": "שָׂשׂוֹן (joy).",
+        "items": [
+          {
+            "heb": "שָׂשׂוֹן",
+            "en": "joy"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child names five joy-words."
+    },
+    {
+      "num": "31",
+      "title": "I Will Establish Thy Throne Forever",
+      "verse": {
+        "ref": "2 Samuel 7:13",
+        "hebrew": "וְכוֹנַנְתִּי אֶת־כִּסֵּא מַמְלַכְתּוֹ עַד־עוֹלָם",
+        "translit": "ve-chonanti et-kise mamlachto ad-olam"
+      },
+      "gloss": "And I will establish the throne of his kingdom forever.",
+      "focus": "Reinforce k-v-n (to establish). Introduce כִּסֵּא (throne). Reinforce mamlacha. The Davidic covenant.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "כִּסֵּא (throne).",
+        "items": [
+          {
+            "heb": "כִּסֵּא",
+            "en": "throne"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Construct Chain Builder, Covenant Vocabulary Review, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Construct Chain Builder",
+          "Covenant Vocabulary Review",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads the Davidic-covenant verse."
+    },
+    {
+      "num": "32",
+      "title": "And Thy House Shall Be Established",
+      "verse": {
+        "ref": "2 Samuel 7:16",
+        "hebrew": "וְנֶאְמַן בֵּיתְךָ וּמַמְלַכְתְּךָ עַד־עוֹלָם",
+        "translit": "ve-ne'eman beitcha u-mamlachtecha ad-olam"
+      },
+      "gloss": "And your house and your kingdom shall be established forever.",
+      "focus": "Reinforce a-m-n in Niphal ne'eman (established, faithful). A critical covenant verse.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort (a-m-n family: emet, emunah, ne'eman, amen), Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child names four words from the a-m-n family."
+    },
+    {
+      "num": "33",
+      "title": "Give Thy Servant an Understanding Heart",
+      "verse": {
+        "ref": "1 Kings 3:9",
+        "hebrew": "וְנָתַתָּ לְעַבְדְּךָ לֵב שֹׁמֵעַ",
+        "translit": "ve-natata le-avdecha lev shomea"
+      },
+      "gloss": "And you shall give your servant a hearing heart.",
+      "focus": "Reinforce lev shomea (hearing heart), a uniquely Hebrew idiom for wisdom. Solomon's famous prayer.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Idiom Highlight, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Idiom Highlight",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites the hearing-heart verse."
+    },
+    {
+      "num": "34",
+      "title": "The Two Mothers",
+      "verse": {
+        "ref": "1 Kings 3:26",
+        "hebrew": "וַתֹּאמֶר הָאִשָּׁה אֲשֶׁר־בְּנָהּ הַחַי אֶל־הַמֶּלֶךְ כִּי־נִכְמְרוּ רַחֲמֶיהָ עַל־בְּנָהּ",
+        "translit": "va-tomer ha-isha asher-bnah ha-chai el-ha-melech ki-nikhmeru rachameha al-bnah"
+      },
+      "gloss": "And the woman whose son was the living one said to the king, for her compassion yearned upon her son.",
+      "focus": "Introduce the Niphal nikhmeru (were kindled, yearned). Reinforce rachamim (plural of rechem, womb, as compassion). Connect to rachum / rachem from Journey 3 and Journey 4.",
+      "roots": {
+        "raw": "כ־מ־ר (to be kindled, yearn).",
+        "items": [
+          "כ־מ־ר"
+        ]
+      },
+      "vocab": {
+        "raw": "רַחֲמִים (compassion, plural of womb).",
+        "items": [
+          {
+            "heb": "רַחֲמִים",
+            "en": "compassion, plural of womb"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort (r-ch-m family: womb, compassion, merciful one), Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child names three words from the r-ch-m family."
+    },
+    {
+      "num": "35",
+      "title": "Solomon Built the House",
+      "verse": {
+        "ref": "1 Kings 6:1",
+        "hebrew": "וַיִּבֶן הַבַּיִת לַיהוָה",
+        "translit": "va-yiven ha-bayit la-YHVH"
+      },
+      "gloss": "And he built the house to the LORD.",
+      "focus": "Reinforce b-n-h. Introduce בַּיִת (house) as the temple-house usage.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child recognizes \"the house\" as the temple."
+    },
+    {
+      "num": "36",
+      "title": "The Holy of Holies",
+      "verse": {
+        "ref": "1 Kings 6:16",
+        "hebrew": "לְקֹדֶשׁ הַקֳּדָשִׁים",
+        "translit": "le-kodesh ha-kodashim"
+      },
+      "gloss": "For the holy of holies.",
+      "focus": "Reinforce kodesh. Introduce the construct superlative kodesh ha-kodashim (holiest of all, literally holy of the holies). A key Hebrew grammatical pattern (superlative by construct).",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "קֹדֶשׁ הַקֳּדָשִׁים (Holy of Holies).",
+        "items": [
+          {
+            "heb": "הַקֳּדָשִׁים",
+            "en": "Holy of Holies"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Superlative Construct Highlight, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Superlative Construct Highlight",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child forms a superlative by construct (king of kings, song of songs, etc.)."
+    },
+    {
+      "num": "37",
+      "title": "The Glory of the LORD Filled the House",
+      "verse": {
+        "ref": "1 Kings 8:11",
+        "hebrew": "וּכְבוֹד־יְהוָה מָלֵא אֶת־בֵּית יְהוָה",
+        "translit": "u-chvod-YHVH male et-beit YHVH"
+      },
+      "gloss": "And the glory of the LORD filled the house of the LORD.",
+      "focus": "Reinforce kavod from Journey 3 lesson 52. Introduce מ־ל־א (to fill). The temple's theophanic moment.",
+      "roots": {
+        "raw": "מ־ל־א (to fill).",
+        "items": [
+          "מ־ל־א"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Verse Builder, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child reads verse 11."
+    },
+    {
+      "num": "38",
+      "title": "Has God Indeed Dwelt on Earth",
+      "verse": {
+        "ref": "1 Kings 8:27",
+        "hebrew": "הַאֻמְנָם יֵשֵׁב אֱלֹהִים עַל־הָאָרֶץ",
+        "translit": "ha-umnam yeshev Elohim al-ha-aretz"
+      },
+      "gloss": "Will God indeed dwell upon the earth?",
+      "focus": "Introduce the emphatic interrogative ha-umnam (indeed?). Reinforce y-sh-v.",
+      "roots": {
+        "raw": "Reinforce a-m-n.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "אֻמְנָם (truly, indeed).",
+        "items": [
+          {
+            "heb": "אֻמְנָם",
+            "en": "truly, indeed"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 27."
+    },
+    {
+      "num": "39",
+      "title": "Forgive Thy People",
+      "verse": {
+        "ref": "1 Kings 8:30",
+        "hebrew": "וְשָׁמַעְתָּ אֶל־תְּחִנַּת עַבְדְּךָ וְעַמְּךָ יִשְׂרָאֵל וְסָלַחְתָּ",
+        "translit": "ve-shamata el-techinat avdecha ve-amcha Yisrael ve-salachta"
+      },
+      "gloss": "And you shall hear the supplication of your servant and of your people Israel, and forgive.",
+      "focus": "Introduce ח־נ־נ (noun תְּחִנָּה, supplication) in construct. Introduce ס־ל־ח (to forgive). Reinforce the forgiveness-vocabulary.",
+      "roots": {
+        "raw": "ס־ל־ח (to forgive).",
+        "items": [
+          "ס־ל־ח"
+        ]
+      },
+      "vocab": {
+        "raw": "תְּחִנָּה (supplication).",
+        "items": [
+          {
+            "heb": "תְּחִנָּה",
+            "en": "supplication"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 30."
+    },
+    {
+      "num": "40",
+      "title": "The LORD Our God Be with Us",
+      "verse": {
+        "ref": "1 Kings 8:57",
+        "hebrew": "יְהִי יְהוָה אֱלֹהֵינוּ עִמָּנוּ כַּאֲשֶׁר הָיָה עִם־אֲבֹתֵינוּ",
+        "translit": "yehi YHVH Eloheinu imanu ka-asher haya im-avoteinu"
+      },
+      "gloss": "May the LORD our God be with us as he was with our fathers.",
+      "focus": "Reinforce the jussive yehi (may he be). A covenant-accompaniment formula.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Memorization Reward, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Memorization Reward",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child recites verse 57."
+    },
+    {
+      "num": "41",
+      "title": "As the LORD Lives",
+      "verse": {
+        "ref": "1 Kings 17:1",
+        "hebrew": "חַי־יְהוָה אֱלֹהֵי יִשְׂרָאֵל אֲשֶׁר עָמַדְתִּי לְפָנָיו",
+        "translit": "chai-YHVH Elohei Yisrael asher amadti lefanav"
+      },
+      "gloss": "As the LORD, God of Israel, lives, before whom I stand.",
+      "focus": "Introduce the oath formula chai-YHVH (by the life of the LORD). Reinforce a-m-d.",
+      "roots": {
+        "raw": "Reinforce ח־י־ה in noun sense.",
+        "items": [
+          "ח־י־ה"
+        ]
+      },
+      "vocab": {
+        "raw": "חַי (living).",
+        "items": [
+          {
+            "heb": "חַי",
+            "en": "living"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Oath Formula Highlight, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Oath Formula Highlight",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites the oath."
+    },
+    {
+      "num": "42",
+      "title": "Answer Me, O LORD",
+      "verse": {
+        "ref": "1 Kings 18:37",
+        "hebrew": "עֲנֵנִי יְהוָה עֲנֵנִי",
+        "translit": "aneni YHVH aneni"
+      },
+      "gloss": "Answer me, O LORD, answer me.",
+      "focus": "Introduce ע־נ־ה (to answer) in imperative with 1cs suffix. Double invocation. Elijah on Carmel.",
+      "roots": {
+        "raw": "ע־נ־ה (to answer).",
+        "items": [
+          "ע־נ־ה"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites Elijah's plea."
+    },
+    {
+      "num": "43",
+      "title": "The LORD, He Is God",
+      "verse": {
+        "ref": "1 Kings 18:39",
+        "hebrew": "יְהוָה הוּא הָאֱלֹהִים יְהוָה הוּא הָאֱלֹהִים",
+        "translit": "YHVH hu ha-Elohim YHVH hu ha-Elohim"
+      },
+      "gloss": "The LORD, he is God; the LORD, he is God.",
+      "focus": "The concluding refrain of the Carmel contest, doubled. Every word is familiar.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Memorization Reward (high priority; this refrain is sung at Yom Kippur).",
+        "items": [
+          "Chant Along",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites the refrain from memory."
+    },
+    {
+      "num": "44",
+      "title": "A Still Small Voice",
+      "verse": {
+        "ref": "1 Kings 19:12",
+        "hebrew": "וְאַחַר הָאֵשׁ קוֹל דְּמָמָה דַקָּה",
+        "translit": "ve-achar ha-esh kol demama daka"
+      },
+      "gloss": "And after the fire, a sound of thin silence.",
+      "focus": "Introduce דְּמָמָה (silence) and דַּק (thin, fine). A famously untranslatable phrase.",
+      "roots": {
+        "raw": "ד־מ־מ (to be silent), ד־ק־ק (to be thin).",
+        "items": [
+          "ד־מ־מ",
+          "ד־ק־ק"
+        ]
+      },
+      "vocab": {
+        "raw": "דְּמָמָה (silence), דַּק (thin).",
+        "items": [
+          {
+            "heb": "דְּמָמָה",
+            "en": "silence"
+          },
+          {
+            "heb": "דַּק",
+            "en": "thin"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Memorization Reward, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Memorization Reward",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child recites the still-small-voice phrase."
+    },
+    {
+      "num": "45",
+      "title": "A Chariot of Fire and Horses of Fire",
+      "verse": {
+        "ref": "2 Kings 2:11",
+        "hebrew": "וְהִנֵּה רֶכֶב־אֵשׁ וְסוּסֵי אֵשׁ",
+        "translit": "ve-hineh rechev-esh ve-susei esh"
+      },
+      "gloss": "And behold, a chariot of fire and horses of fire.",
+      "focus": "Introduce רֶכֶב (chariot) and סוּס (horse) in construct.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "רֶכֶב (chariot), סוּס (horse).",
+        "items": [
+          {
+            "heb": "רֶכֶב",
+            "en": "chariot"
+          },
+          {
+            "heb": "סוּס",
+            "en": "horse"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Construct Chain Builder, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Construct Chain Builder",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 11."
+    },
+    {
+      "num": "46",
+      "title": "Elisha, Elisha, My Father",
+      "verse": {
+        "ref": "2 Kings 2:12",
+        "hebrew": "אָבִי אָבִי רֶכֶב יִשְׂרָאֵל וּפָרָשָׁיו",
+        "translit": "avi avi rechev Yisrael u-farashav"
+      },
+      "gloss": "My father, my father, the chariot of Israel and its horsemen.",
+      "focus": "Introduce פָּרָשׁ (horseman). The mourning cry of Elisha at Elijah's departure.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "פָּרָשׁ (horseman).",
+        "items": [
+          {
+            "heb": "פָּרָשׁ",
+            "en": "horseman"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 12."
+    },
+    {
+      "num": "47",
+      "title": "Naaman Dipped Seven Times",
+      "verse": {
+        "ref": "2 Kings 5:14",
+        "hebrew": "וַיֵּרֶד וַיִּטְבֹּל בַּיַּרְדֵּן שֶׁבַע פְּעָמִים",
+        "translit": "va-yered va-yitbol ba-Yarden sheva pe'amim"
+      },
+      "gloss": "And he went down and dipped in the Jordan seven times.",
+      "focus": "Reinforce y-r-d. Introduce ט־ב־ל (to dip, immerse).",
+      "roots": {
+        "raw": "ט־ב־ל (to dip, immerse).",
+        "items": [
+          "ט־ב־ל"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 14."
+    },
+    {
+      "num": "48",
+      "title": "His Flesh Was Restored",
+      "verse": {
+        "ref": "2 Kings 5:14b",
+        "hebrew": "וַיָּשָׁב בְּשָׂרוֹ כִּבְשַׂר נַעַר קָטֹן וַיִּטְהָר",
+        "translit": "va-yashov besaro ki-vsar na'ar katon va-yithar"
+      },
+      "gloss": "And his flesh returned as the flesh of a small lad, and he was clean.",
+      "focus": "Reinforce sh-v-b. Reinforce t-h-r from Journey 5 lesson 29 (in verb form now). Introduce קָטֹן (small).",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "קָטֹן (small).",
+        "items": [
+          {
+            "heb": "קָטֹן",
+            "en": "small"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 14b."
+    },
+    {
+      "num": "49",
+      "title": "Those with Us Are More",
+      "verse": {
+        "ref": "2 Kings 6:16",
+        "hebrew": "אַל־תִּירָא כִּי רַבִּים אֲשֶׁר אִתָּנוּ מֵאֲשֶׁר אוֹתָם",
+        "translit": "al-tira ki rabim asher itanu me-asher otam"
+      },
+      "gloss": "Do not fear, for those with us are more than those with them.",
+      "focus": "Reinforce al-tira. Reinforce rav / rabim.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites verse 16."
+    },
+    {
+      "num": "50",
+      "title": "Open His Eyes",
+      "verse": {
+        "ref": "2 Kings 6:17",
+        "hebrew": "יְהוָה פְּקַח־נָא אֶת־עֵינָיו וְיִרְאֶה",
+        "translit": "YHVH pekach-na et-einav ve-yir'eh"
+      },
+      "gloss": "O LORD, open his eyes that he may see.",
+      "focus": "Introduce פ־ק־ח (to open the eyes). Short, weighty petition.",
+      "roots": {
+        "raw": "פ־ק־ח (to open eyes).",
+        "items": [
+          "פ־ק־ח"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites the petition."
+    },
+    {
+      "num": "51",
+      "title": "They Forsook the LORD",
+      "verse": {
+        "ref": "2 Kings 17:16",
+        "hebrew": "וַיַּעַזְבוּ אֶת־כָּל־מִצְוֹת יְהוָה אֱלֹהֵיהֶם",
+        "translit": "va-ya'azvu et-kol-mitzvot YHVH Eloheihem"
+      },
+      "gloss": "And they forsook all the commandments of the LORD their God.",
+      "focus": "Reinforce a-z-b and mitzva in plural.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Covenant Vocabulary Review, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Covenant Vocabulary Review",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 16."
+    },
+    {
+      "num": "52",
+      "title": "Because They Obeyed Not",
+      "verse": {
+        "ref": "2 Kings 17:14",
+        "hebrew": "וְלֹא שָׁמְעוּ וַיַּקְשׁוּ אֶת־עָרְפָּם",
+        "translit": "ve-lo sham'u va-yakshu et-orpam"
+      },
+      "gloss": "And they did not listen and stiffened their necks.",
+      "focus": "Reinforce kshe-oref (stiff-necked) from Journey 3 lesson 50.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 14 and recognizes the stiff-necked idiom from Exodus."
+    },
+    {
+      "num": "53",
+      "title": "The Book of the Law Was Found",
+      "verse": {
+        "ref": "2 Kings 22:8",
+        "hebrew": "סֵפֶר הַתּוֹרָה מָצָאתִי בְּבֵית יְהוָה",
+        "translit": "sefer ha-torah matzati be-veit YHVH"
+      },
+      "gloss": "I have found the book of the Torah in the house of the LORD.",
+      "focus": "Reinforce sefer and torah. Reinforce matzati from Journey 3 lesson 9 (or earlier matza). The discovery of Deuteronomy.",
+      "roots": {
+        "raw": "מ־צ־א (to find, reinforced).",
+        "items": [
+          "מ־צ־א"
+        ]
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Verse Builder, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Verse Builder",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites verse 8 and names the \"book of the torah.\""
+    },
+    {
+      "num": "54",
+      "title": "He Read Aloud",
+      "verse": {
+        "ref": "2 Kings 23:2",
+        "hebrew": "וַיִּקְרָא בְאָזְנֵיהֶם אֶת־כָּל־דִּבְרֵי סֵפֶר הַבְּרִית",
+        "translit": "va-yikra ve-ozneihem et-kol-divrei sefer ha-berit"
+      },
+      "gloss": "And he read in their ears all the words of the book of the covenant.",
+      "focus": "Reinforce q-r-a and sefer. Reinforce berit. A covenant-renewal moment.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Covenant Vocabulary Review, Verse Builder.",
+        "items": [
+          "Chant Along",
+          "Covenant Vocabulary Review",
+          "Verse Builder"
+        ]
+      },
+      "exit": "Child reads verse 2."
+    },
+    {
+      "num": "55",
+      "title": "Return, Ye Backsliding Children",
+      "verse": {
+        "ref": "Jeremiah 3:14",
+        "hebrew": "שׁוּבוּ בָנִים שׁוֹבָבִים",
+        "translit": "shuvu banim shovavim"
+      },
+      "gloss": "Return, backsliding children.",
+      "focus": "Reinforce sh-v-b in plural imperative. Introduce שׁוֹבָב (backsliding, Polel participle).",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "שׁוֹבָב (backsliding).",
+        "items": [
+          {
+            "heb": "שׁוֹבָב",
+            "en": "backsliding"
+          }
+        ]
+      },
+      "games": {
+        "raw": "Chant Along, Shoresh Sort, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Shoresh Sort",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites Jeremiah's plea."
+    },
+    {
+      "num": "56",
+      "title": "I Will Make a New Covenant",
+      "verse": {
+        "ref": "Jeremiah 31:31",
+        "hebrew": "הִנֵּה יָמִים בָּאִים וְכָרַתִּי בְּרִית חֲדָשָׁה",
+        "translit": "hineh yamim ba'im ve-charati berit chadasha"
+      },
+      "gloss": "Behold, the days are coming, and I will cut a new covenant.",
+      "focus": "Reinforce the covenant-cutting idiom from Genesis 15 (Journey 2 lesson 12). Reinforce chadasha (feminine of chadash). A major prophetic passage.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Covenant Vocabulary Review, Intertextual Echo Highlight (cut a covenant from Abraham to Jeremiah), Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Covenant Vocabulary Review",
+          "Intertextual Echo Highlight",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child names the Genesis 15 parallel."
+    },
+    {
+      "num": "57",
+      "title": "I Will Write It on Their Heart",
+      "verse": {
+        "ref": "Jeremiah 31:33",
+        "hebrew": "וְעַל־לִבָּם אֶכְתְּבֶנָּה",
+        "translit": "ve-al-libam echtevena"
+      },
+      "gloss": "And upon their heart will I write it.",
+      "focus": "Reinforce k-t-v. The interior covenant image.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites verse 33."
+    },
+    {
+      "num": "58",
+      "title": "They Shall All Know Me",
+      "verse": {
+        "ref": "Jeremiah 31:34",
+        "hebrew": "כִּי־כוּלָּם יֵדְעוּ אוֹתִי",
+        "translit": "ki-kulam yed'u oti"
+      },
+      "gloss": "For all of them shall know me.",
+      "focus": "Reinforce y-d-a. A defining promise of the new covenant.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Chant Along, Memorization Reward.",
+        "items": [
+          "Chant Along",
+          "Memorization Reward"
+        ]
+      },
+      "exit": "Child recites verse 34."
+    },
+    {
+      "num": "59",
+      "title": "Consolidation Before Exit",
+      "verse": {
+        "ref": "Review",
+        "hebrew": "",
+        "translit": ""
+      },
+      "gloss": "Consolidation lesson. The child reads Psalm 23 in full and Joshua 1:6-9 in full.",
+      "focus": "No new content.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Memorization Showcase, Scroll Reader.",
+        "items": [
+          "Memorization Showcase",
+          "Scroll Reader"
+        ]
+      },
+      "exit": "Child reads Psalm 23 and Joshua 1:6-9 smoothly."
+    },
+    {
+      "num": "60",
+      "title": "Journey 5 Exit: Psalm 23 and the Davidic Covenant",
+      "verse": {
+        "ref": "Psalm 23 in full and 2 Samuel 7:12-16",
+        "hebrew": "",
+        "translit": ""
+      },
+      "gloss": "Journey 5 exit. The child reads Psalm 23 in full and 2 Samuel 7:12-16 (the Davidic covenant) aloud.",
+      "focus": "All Journey 1-5 grammar and vocabulary consolidated.",
+      "roots": {
+        "raw": "None new.",
+        "items": []
+      },
+      "vocab": {
+        "raw": "None new.",
+        "items": []
+      },
+      "games": {
+        "raw": "Final Scroll Reader, Memorization Showcase, Parent Submission Flow.",
+        "items": [
+          "Final Scroll Reader",
+          "Memorization Showcase",
+          "Parent Submission Flow"
+        ]
+      },
+      "exit": "Child records themselves reading Psalm 23 and 2 Sam 7:12-16. Parent approves. Journey 5 complete. Journey 6 (Covenant King) unlocks."
+    }
+  ]
+}

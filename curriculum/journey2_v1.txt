@@ -1,0 +1,198 @@
+ALEPH TRAIL
+A Reading Course in Biblical and Restoration Hebrew for Children
+Journey 2: The Fathers
+Genesis 12 to 50: Abraham, Isaac, Jacob, Joseph
+Full Verse-by-Verse Curriculum, 60 Lessons
+Prepared for Chris
+Design Draft v1.0
+ 
+Journey 2 Overview
+Source text: Genesis 12 through 50. Journey 2 picks up where Journey 1 ended, moving from the primeval history into the patriarchal narratives. The pedagogical goals of this Journey are: complete the Qal verbal system across all persons and both aspects (perfect and imperfect), master the construct chain, introduce the first two categories of weak verbs (hollow roots and III-he roots), begin niqqud fading on high-frequency words, and build the covenant vocabulary that will be central to every subsequent Journey.
+Journey 2 is 60 lessons, organized into seven units. The child ends this Journey able to read Genesis 22 (the Akedah) aloud unassisted, and able to narrate the lives of Abraham, Isaac, Jacob, and Joseph in simple Hebrew sentences.
+Design Principles Carried Forward
+•	Root-first pedagogy continues. Every new lesson anchors a root, not an isolated word.
+•	Real Tanakh throughout. No invented sentences.
+•	Mikraic register. Pre-exilic vocabulary only.
+•	VSO word order internalized through continued verse-reassembly.
+•	Niqqud fading begins at lesson 15 for high-frequency words (names of God, common verbs in familiar forms). Full niqqud remains on every new word.
+ 
+Unit 1. The Call of Abram (Lessons 1 to 8)
+Source text: Genesis 12:1 through 13:18. Introduces the imperative system through God's command to Abram, the infinitive construct through purpose clauses, and the covenant framework through the promise of land and seed.
+Lesson 1. Get Thee Out
+Verse: Genesis 12:1
+וַיֹּאמֶר יְהוָה אֶל־אַבְרָם לֶךְ־לְךָ מֵאַרְצְךָ וּמִמּוֹלַדְתְּךָ וּמִבֵּית אָבִיךָ אֶל־הָאָרֶץ אֲשֶׁר אַרְאֶךָּ
+va-yomer YHVH el-Avram lech-lecha me-artzecha u-mi-moladtecha u-mi-beit avicha el-ha-aretz asher ar'eka
+Gloss: And the LORD said to Abram, Go forth from your land and from your kindred and from your father's house to the land that I will show you.
+Teaching focus: Introduce the masculine singular imperative through לֶךְ (go). Introduce the idiom לֶךְ־לְךָ (go for yourself, a reflexive emphasis). Introduce the 2ms possessive suffix chain (-cha) through artzecha, moladtecha, avicha.
+Root(s) introduced: ה־ל־כ (to go, walk).
+New vocabulary: אֶרֶץ (land, reinforced), מוֹלֶדֶת (kindred, native place), בַּיִת (house), אָב (father).
+Mini-games used: Chant Along, Imperative Match, Possessive Chain Builder (the child sees "your land, your kindred, your father's house" building up), Verse Builder.
+Exit check: Child reads verse 1 aloud with support and recites לֶךְ־לְךָ with its gloss.
+
+Lesson 2. I Will Make of Thee a Great Nation
+Verse: Genesis 12:2
+וְאֶעֶשְׂךָ לְגוֹי גָּדוֹל וַאֲבָרֶכְךָ וַאֲגַדְּלָה שְׁמֶךָ וֶהְיֵה בְּרָכָה
+ve-e'es'cha le-goi gadol va-avarech'cha va-agadla shmecha veheyeh berakha
+Gloss: And I will make of you a great nation, and I will bless you, and I will make your name great, and be a blessing.
+Teaching focus: Introduce the 1cs imperfect with suffix (ve-e'es'cha, and I will make you). Introduce the Piel stem through אֲבָרֶכְךָ. Reinforce the noun בְּרָכָה from the root ב־ר־ך learned in Journey 1 lesson 19.
+Root(s) introduced: Reinforce ב־ר־ך, ג־ד־ל.
+New vocabulary: גּוֹי (nation), שֵׁם (name), בְּרָכָה (blessing).
+Mini-games used: Chant Along, Shoresh Sort (ב־ר־ך family across Piel and noun forms), Binyan Builder (Qal vs Piel of ב־ר־ך), Verse Builder.
+Exit check: Child distinguishes Qal and Piel forms of ב־ר־ך and reads the verse with support.
+
+Lesson 3. All Families Blessed in Thee
+Verse: Genesis 12:3
+וַאֲבָרֲכָה מְבָרְכֶיךָ וּמְקַלֶּלְךָ אָאֹר וְנִבְרְכוּ בְךָ כֹּל מִשְׁפְּחֹת הָאֲדָמָה
+va-avaracha mevarcheicha u-mekallelcha a'or ve-nivrechu vecha kol mishpechot ha-adama
+Gloss: And I will bless those who bless you, and him who curses you I will curse, and in you all the families of the earth shall be blessed.
+Teaching focus: Introduce the Qal participle plural מְבָרְכֶיךָ (those blessing you) and its opposite מְקַלֶּלְךָ (he who curses you). Introduce the Niphal stem passively through נִבְרְכוּ (shall be blessed). This verse is the foundational Abrahamic covenant text.
+Root(s) introduced: ק־ל־ל (to curse, make light).
+New vocabulary: מִשְׁפָּחָה (family).
+Mini-games used: Chant Along, Participle Match, Opposite Pairs (bless vs curse), Verse Builder.
+Exit check: Child reads verse 3 aloud with support and can explain in one sentence why this verse matters.
+
+Lesson 4. Abram Went
+Verse: Genesis 12:4
+וַיֵּלֶךְ אַבְרָם כַּאֲשֶׁר דִּבֶּר אֵלָיו יְהוָה
+va-yelech Avram ka-asher diber elav YHVH
+Gloss: And Abram went as the LORD had spoken to him.
+Teaching focus: Introduce the 3ms Qal imperfect va-yelech (and he went). Introduce ד־ב־ר (to speak) in its Piel form diber. Introduce the conjunction כַּאֲשֶׁר (just as, when).
+Root(s) introduced: ד־ב־ר (to speak).
+New vocabulary: כַּאֲשֶׁר (as, just as).
+Mini-games used: Chant Along, Shoresh Sort, Verse Builder.
+Exit check: Child recognizes ד־ב־ר as a Piel-pattern root (speaking is typically Piel in BH).
+
+Lesson 5. To Thy Seed Will I Give
+Verse: Genesis 12:7
+וַיֵּרָא יְהוָה אֶל־אַבְרָם וַיֹּאמֶר לְזַרְעֲךָ אֶתֵּן אֶת־הָאָרֶץ הַזֹּאת
+va-yera YHVH el-Avram va-yomer le-zar'acha eten et-ha-aretz ha-zot
+Gloss: And the LORD appeared to Abram and said, To your seed I will give this land.
+Teaching focus: Introduce the Niphal stem through וַיֵּרָא (he appeared, was seen). Introduce the 1cs imperfect אֶתֵּן (I will give). The Abrahamic covenant's land promise, explicit.
+Root(s) introduced: Reinforce ר־א־ה (now in Niphal), נ־ת־נ.
+New vocabulary: זֹאת (this, feminine demonstrative, reinforced).
+Mini-games used: Chant Along, Binyan Builder (Qal vs Niphal of ר־א־ה), Verse Builder.
+Exit check: Child distinguishes va-yar (and he saw) from va-yera (and he appeared, was seen).
+
+Lesson 6. An Altar to the LORD
+Verse: Genesis 12:8
+וַיַּעְתֵּק מִשָּׁם הָהָרָה וַיֵּט אָהֳלֹה בֵּית־אֵל מִיָּם וְהָעַי מִקֶּדֶם וַיִּבֶן־שָׁם מִזְבֵּחַ לַיהוָה וַיִּקְרָא בְּשֵׁם יְהוָה
+va-ya'tek mi-sham ha-hara va-yet aholoh Beit-El mi-yam ve-ha-Ai mi-kedem va-yiven sham mizbeach la-YHVH va-yikra be-shem YHVH
+Gloss: And he moved from there to the mountain, and pitched his tent with Beth-El on the west and Ai on the east, and built there an altar to the LORD and called on the name of the LORD.
+Teaching focus: Introduce ב־נ־ה (to build, reinforced from Journey 1 lesson 39), now in its va-yiven form. Introduce מִזְבֵּחַ (altar) from ז־ב־ח (to sacrifice). Introduce the directional he (ha-hara, toward the mountain). Introduce directional vocabulary יָם (west, literally sea) and קֶדֶם (east).
+Root(s) introduced: ז־ב־ח (to sacrifice).
+New vocabulary: אֹהֶל (tent), מִזְבֵּחַ (altar), בֵּית־אֵל (Beth-El, place name).
+Mini-games used: Chant Along, Directional Tap (tap east, west, north, south), Shoresh Sort, Verse Builder.
+Exit check: Child can name the four cardinal directions in Hebrew and identifies מִזְבֵּחַ as "altar."
+
+Lesson 7. Separate Thyself
+Verse: Genesis 13:9
+הֲלֹא כָל־הָאָרֶץ לְפָנֶיךָ הִפָּרֶד נָא מֵעָלָי
+ha-lo kol-ha-aretz lefanecha hipared na me-alai
+Gloss: Is not all the land before you? Separate yourself, please, from me.
+Teaching focus: Introduce the interrogative particle ה prefix (ha-lo, is it not). Introduce the Niphal imperative הִפָּרֶד (separate yourself). Introduce the particle נָא (please, marker of polite request).
+Root(s) introduced: פ־ר־ד (to separate, divide).
+New vocabulary: לִפְנֵי (before, in front of), נָא (please).
+Mini-games used: Chant Along, Binyan Builder (Qal vs Niphal imperative), Question Tap (turn a statement into a question with ה), Verse Builder.
+Exit check: Child forms a yes/no question in Hebrew by adding the interrogative ה.
+
+Lesson 8. Lift Up Thine Eyes
+Verse: Genesis 13:14
+וַיהוָה אָמַר אֶל־אַבְרָם שָׂא נָא עֵינֶיךָ וּרְאֵה מִן־הַמָּקוֹם אֲשֶׁר־אַתָּה שָׁם צָפֹנָה וָנֶגְבָּה וָקֵדְמָה וָיָמָּה
+va-YHVH amar el-Avram sa na eineicha u-r'eh min-ha-makom asher-ata sham tzafona va-negba va-kedma va-yama
+Gloss: And the LORD said to Abram, Lift up your eyes and see from the place where you are, northward and southward and eastward and westward.
+Teaching focus: Introduce two imperatives in sequence: שָׂא (lift up, from נ־שׂ־א) and רְאֵה (see, imperative of ר־א־ה). Complete the four cardinal directions with all four directional-he endings. This verse is the Abrahamic land grant in its widest form.
+Root(s) introduced: נ־שׂ־א (to lift, carry, bear).
+New vocabulary: צָפוֹן (north), נֶגֶב (south, dry country), עַיִן (eye, reinforced).
+Mini-games used: Chant Along, Imperative Match, Four-Directions Tap (all four directions with the directional he), Verse Builder.
+Exit check: Child recites the four directions in Hebrew with the directional he ending: tzafona, negba, kedma, yama.
+
+ 
+Unit 2. Covenant and Promise (Lessons 9 to 16)
+Source text: Genesis 15 through 17. The covenant cuts. Chapter 15 introduces the cutting-covenant ceremony and the explicit promise of seed. Chapter 17 gives the sign of circumcision. These are the two most theologically weighty chapters of the Abraham cycle.
+Lesson 9. Fear Not, Abram
+Verse: Genesis 15:1
+אַל־תִּירָא אַבְרָם אָנֹכִי מָגֵן לָךְ שְׂכָרְךָ הַרְבֵּה מְאֹד
+al-tira Avram anochi magen lach secharcha harbeh meod
+Gloss: Fear not, Abram, I am a shield to you, your reward is very great.
+Teaching focus: Introduce the negative imperative אַל followed by imperfect (al-tira, do not fear). Reinforce אָנֹכִי from Journey 1 lesson 32. Introduce the Hiphil infinitive absolute הַרְבֵּה (greatly, from ר־ב־ה to be many).
+Root(s) introduced: י־ר־א (to fear).
+New vocabulary: מָגֵן (shield), שָׂכָר (reward, wage), הַרְבֵּה (much, greatly).
+Mini-games used: Chant Along, Negation Tap (positive vs negative imperative), Shoresh Sort, Verse Builder.
+Exit check: Child forms a negative imperative (do not fear, do not eat) using אַל plus imperfect.
+
+Lesson 10. He Believed in the LORD
+Verse: Genesis 15:6
+וְהֶאֱמִן בַּיהוָה וַיַּחְשְׁבֶהָ לּוֹ צְדָקָה
+ve-he'emin ba-YHVH va-yachsheveha lo tzedaka
+Gloss: And he believed in the LORD, and he reckoned it to him as righteousness.
+Teaching focus: Introduce the Hiphil stem through הֶאֱמִן (he believed, caused-to-be-firm, from א־מ־נ). Introduce צְדָקָה (righteousness), a vocabulary word that will recur hundreds of times. Introduce ח־שׁ־ב (to think, reckon).
+Root(s) introduced: א־מ־נ (to be firm, trust), צ־ד־ק (to be righteous), ח־שׁ־ב (to think, reckon).
+New vocabulary: צְדָקָה (righteousness).
+Mini-games used: Chant Along, Shoresh Sort, Binyan Builder (Qal vs Hiphil), Memorization Reward (this verse is short and weighty).
+Exit check: Child recites verse 6 from memory in Hebrew.
+
+Lesson 11. Count the Stars
+Verse: Genesis 15:5
+הַבֶּט־נָא הַשָּׁמַיְמָה וּסְפֹר הַכּוֹכָבִים אִם־תּוּכַל לִסְפֹּר אֹתָם כֹּה יִהְיֶה זַרְעֶךָ
+habet-na ha-shamayma u-sefor ha-kochavim im-tuchal lispor otam koh yihyeh zar'echa
+Gloss: Look now toward the heavens and count the stars, if you are able to count them. So shall your seed be.
+Teaching focus: Introduce the Hiphil imperative הַבֶּט (look). Introduce ס־פ־ר (to count, also to scribe), a root Chris will recognize as the source of sefer (book). Introduce the conditional אִם (if) and תּוּכַל (you are able).
+Root(s) introduced: נ־ב־ט (to look), ס־פ־ר (to count, to scribe), י־כ־ל (to be able).
+New vocabulary: כּוֹכָב (star, reinforced), כֹּה (so, thus), אִם (if).
+Mini-games used: Chant Along, Shoresh Sort, Conditional Builder (if X then Y), Picture Match (tap the night sky with stars).
+Exit check: Child builds a simple conditional sentence using אִם.
+
+Lesson 12. The Cutting of the Covenant
+Verse: Genesis 15:18
+בַּיּוֹם הַהוּא כָּרַת יְהוָה אֶת־אַבְרָם בְּרִית לֵאמֹר לְזַרְעֲךָ נָתַתִּי אֶת־הָאָרֶץ הַזֹּאת
+ba-yom ha-hu karat YHVH et-Avram berit lemor le-zar'acha natati et-ha-aretz ha-zot
+Gloss: On that day the LORD cut with Abram a covenant, saying, To your seed I have given this land.
+Teaching focus: Introduce the idiom כָּרַת בְּרִית (to cut a covenant), the ancient Near Eastern technical term for covenant ratification. Introduce the infinitive construct לֵאמֹר (saying, speech introducer). Reinforce בְּרִית from Journey 1 lesson 35.
+Root(s) introduced: כ־ר־ת (to cut).
+New vocabulary: No new core vocabulary; focus is on the covenant idiom.
+Mini-games used: Chant Along, Covenant Idiom Highlight (the phrase כָּרַת בְּרִית glows and plays a distinct sound), Verse Builder.
+Exit check: Child explains that "to cut a covenant" is the Hebrew way of saying "to establish a covenant" and connects it to the imagery of Genesis 15.
+
+Lesson 13. I Am God Almighty
+Verse: Genesis 17:1
+אֲנִי־אֵל שַׁדַּי הִתְהַלֵּךְ לְפָנַי וֶהְיֵה תָמִים
+ani-El Shaddai hithalech lefanai veheyeh tamim
+Gloss: I am God Almighty, walk before me and be perfect.
+Teaching focus: Introduce the divine title אֵל שַׁדַּי. Introduce the Hithpael stem through הִתְהַלֵּךְ (walk about, go about oneself). Introduce תָמִים (perfect, complete, unblemished).
+Root(s) introduced: Reinforce ה־ל־כ in Hithpael form.
+New vocabulary: אֵל (God, short form), שַׁדַּי (Almighty), תָמִים (perfect, blameless).
+Mini-games used: Chant Along, Binyan Builder (Qal vs Hithpael of ה־ל־כ), Shoresh Sort.
+Exit check: Child recognizes the Hithpael prefix הִתְ־ and identifies it as the reflexive/iterative stem.
+
+Lesson 14. Abraham, Father of Many
+Verse: Genesis 17:5
+וְלֹא־יִקָּרֵא עוֹד אֶת־שִׁמְךָ אַבְרָם וְהָיָה שִׁמְךָ אַבְרָהָם כִּי אַב־הֲמוֹן גּוֹיִם נְתַתִּיךָ
+ve-lo-yikare od et-shimcha Avram ve-haya shimcha Avraham ki av-hamon goyim netaticha
+Gloss: Your name shall no longer be called Abram but your name shall be Abraham, for father of a multitude of nations I have made you.
+Teaching focus: Introduce the name change and the Hebrew pun: Avram (exalted father) becomes Avraham (father of a multitude, av-hamon). Introduce the 1cs perfect with 2ms suffix (netaticha, I have made you).
+Root(s) introduced: Reinforce נ־ת־נ with object suffix.
+New vocabulary: הָמוֹן (multitude), אַב (father in construct).
+Mini-games used: Chant Along, Name Pun Highlight, Verse Builder, Suffix Match (gave you / gave him / gave them).
+Exit check: Child explains the pun between Avram and Avraham in their own words.
+
+Lesson 15. The Sign of the Covenant
+Verse: Genesis 17:11
+וּנְמַלְתֶּם אֵת בְּשַׂר עָרְלַתְכֶם וְהָיָה לְאוֹת בְּרִית בֵּינִי וּבֵינֵיכֶם
+u-nemaltem et besar orlatchem ve-haya le-ot berit beini u-veinechem
+Gloss: And you shall circumcise the flesh of your foreskin, and it shall be for a sign of covenant between me and between you.
+Teaching focus: Introduce the 2mp perfect with vav-consecutive (u-nemaltem, and you shall circumcise). Reinforce אוֹת and בְּרִית as the covenant-sign vocabulary from Journey 1 lesson 38. Introduce מ־ו־ל (to circumcise).
+Root(s) introduced: מ־ו־ל (to circumcise).
+New vocabulary: עָרְלָה (foreskin), בָּשָׂר (flesh, reinforced).
+Mini-games used: Chant Along, Verse Builder, Covenant Vocabulary Review (child sees אוֹת and בְּרִית glow together).
+Exit check: Child reads verse 11 aloud and names this as a covenant sign alongside the rainbow of Genesis 9.
+
+Lesson 16. Sarah Shall Bear a Son
+Verse: Genesis 17:19
+אֲבָל שָׂרָה אִשְׁתְּךָ יֹלֶדֶת לְךָ בֵּן וְקָרָאתָ אֶת־שְׁמוֹ יִצְחָק
+aval Sarah ishtecha yoledet lecha ben ve-karata et-shemo Yitzchak
+Gloss: But Sarah your wife shall bear you a son, and you shall call his name Isaac.
+Teaching focus: Introduce the Qal feminine participle יֹלֶדֶת (bearing, giving birth). Introduce the name Yitzchak (Isaac), which means "he laughs," from צ־ח־ק. Introduce the particle אֲבָל (but, however).
+Root(s) introduced: י־ל־ד (to bear, give birth), צ־ח־ק (to laugh).
+New vocabulary: בֵּן (son), אִשָּׁה (wife, reinforced).
+Mini-games used: Chant Along, Name Meaning Highlight (Isaac = he laughs, tied to Sarah's laughter in Genesis 18), Shoresh Sort.
+Exit check: Child explains the meaning of the name Yitzchak.

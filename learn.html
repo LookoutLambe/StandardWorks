@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirect — Learn Biblical Hebrew</title>
+  <meta http-equiv="refresh" content="0;url=learn/index.html" />
+  <script>
+    location.replace(
+      (function () {
+        var p = location.pathname || ''
+        var i = p.lastIndexOf('/')
+        var base = i >= 0 ? p.slice(0, i + 1) : ''
+        return base + 'learn/index.html'
+      })(),
+    )
+  </script>
+</head>
+<body>
+  <p style="font-family: system-ui, sans-serif; padding: 1.5rem">
+    The Hebrew course lives at <a href="learn/index.html">learn/index.html</a>.
+  </p>
+</body>
+</html>
