@@ -219,7 +219,7 @@ var dc82_ch1Verses = [
     ["יְקַבֵּל","shall receive"],
     ["מִשְׁפָּט","condemnation"],
     ["גָּדוֹל","greater"],
-    ["יוֹתֵר׃","the."],
+    ["יוֹתֵר׃","(more)."],
     ["׃",""]
   ]},
   { num: "ד", words: [
@@ -1239,8 +1239,8 @@ var dc84_ch1Verses = [
     ["הֵקִים","raised up"],
     ["וְהוּא","being"],
     ["מָלֵא","filled with"],
-    ["רוּחַ","the Spirit"],
-    ["הַקֹּדֶשׁ","Holy"],
+    ["רוּחַ","the Holy Ghost"],
+    ["הַקֹּדֶשׁ",""],
     ["מִבֶּטֶן","from the womb of"],
     ["אִמּוֹ׃","his mother."],
     ["׃",""]
@@ -1918,8 +1918,8 @@ var dc84_ch1Verses = [
     ["חֲטָאִים","sins"],
     ["תְּקַבֵּל","shall receive"],
     ["אֶת",""],
-    ["רוּחַ","the Spirit"],
-    ["הַקֹּדֶשׁ׃","Holy."],
+    ["רוּחַ","the Holy Ghost"],
+    ["הַקֹּדֶשׁ׃",""],
     ["׃",""]
   ]},
   { num: "סה", words: [
@@ -2030,8 +2030,8 @@ var dc84_ch1Verses = [
     ["לְמַעַן","that"],
     ["יְקַבְּלוּ","they may receive"],
     ["אֶת",""],
-    ["רוּחַ","the Spirit"],
-    ["הַקֹּדֶשׁ","Holy"],
+    ["רוּחַ","the Holy Ghost"],
+    ["הַקֹּדֶשׁ",""],
     ["יִהְיוּ","shall be"],
     ["מֻרְשָׁעִים","damned"],
     ["וְלֹא","and not"],
@@ -3780,8 +3780,8 @@ var dc88_ch1Verses = [
     ["יִשְׁכֹּן","it may abide"],
     ["בְּלִבְּכֶם","in your hearts"],
     ["אַף","even"],
-    ["רוּחַ","the Spirit"],
-    ["הַקֹּדֶשׁ","Holy"],
+    ["רוּחַ","the Holy Ghost"],
+    ["הַקֹּדֶשׁ",""],
     ["שֶׁל","of"],
     ["הַהַבְטָחָה","promise-;"],
     ["אֲשֶׁר","-which"],
@@ -6624,8 +6624,8 @@ var dc88_ch1Verses = [
     ["יִהְיֶה","it may become"],
     ["לְמִקְדָּשׁ","a sanctuary"],
     ["מִשְׁכַּן","a tabernacle of"],
-    ["רוּחַ","the Spirit"],
-    ["הַקֹּדֶשׁ","Holy"],
+    ["רוּחַ","the Holy Ghost"],
+    ["הַקֹּדֶשׁ",""],
     ["לְבִנְיַנְכֶם׃","to your edification."],
     ["׃",""]
   ]},

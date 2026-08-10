@@ -1,3 +1,0 @@
-builtAt=2026-05-08T20:20:14.336Z
-package=bbh-biblical-hebrew@0.0.0
-sourceRev=unknown

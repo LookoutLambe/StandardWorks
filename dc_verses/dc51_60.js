@@ -1156,8 +1156,8 @@ var dc53_ch1Verses = [
     ["חֲטָאִים","sins"],
     ["כִּדְבָרִי","according to my word"],
     ["וְקַבָּלַת","and (the) reception of"],
-    ["רוּחַ","(the) Spirit"],
-    ["הַקֹּדֶשׁ","the Holy"],
+    ["רוּחַ","the Holy Ghost"],
+    ["הַקֹּדֶשׁ",""],
     ["בִּסְמִיכַת","by (the) laying on of"],
     ["יָדָיִם׃","hands"],
     ["׃",""]
@@ -1445,8 +1445,8 @@ var dc55_ch1Verses = [
     ["סְלִיחַת","(a) remission of"],
     ["חֲטָאֶיךָ","thy sins"],
     ["וְקַבָּלַת","and (a) reception of"],
-    ["רוּחַ","(the) Spirit"],
-    ["הַקֹּדֶשׁ","the Holy"],
+    ["רוּחַ","the Holy Ghost"],
+    ["הַקֹּדֶשׁ",""],
     ["בִּסְמִיכַת","by (the) laying on of"],
     ["יָדָיִם׃","hands"],
     ["׃",""]
@@ -1492,8 +1492,8 @@ var dc55_ch1Verses = [
     ["לְךָ","(unto thee)"],
     ["כֹּחַ","power"],
     ["לָתֵת","to give"],
-    ["רוּחַ","(the) Spirit"],
-    ["הַקֹּדֶשׁ׃","the Holy"],
+    ["רוּחַ","the Holy Ghost"],
+    ["הַקֹּדֶשׁ׃",""],
     ["׃",""]
   ]},
   { num: "ד", words: [

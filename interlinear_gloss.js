@@ -15,7 +15,12 @@
     if (!g || /\bfrom\b/i.test(g)) return g;
 
     var h = String(heb).replace(/\u05C3/g, '');
-    if (/^מִ/.test(h) || /^מִן/.test(h)) return 'from ' + g;
+    // Directional "from" is only unambiguous as explicit מִן־ or double-mem
+    // מִמ (from + a mem-initial word, e.g. מִמִּצְרַיִם "from Egypt", מִמֶּנּוּ
+    // "from him"). A bare מִ- is usually a root/preformative letter, not the
+    // preposition (מִצְרַיִם "Egypt", מִשְׁפָּט "judgment", מִי "who"), so it
+    // must NOT trigger "from".
+    if (/^מִן/.test(h) || /^מִמ/.test(h)) return 'from ' + g;
 
     if (/^מֵ/.test(h)) {
       var bare = h.replace(/[\u0591-\u05C7]/g, '');

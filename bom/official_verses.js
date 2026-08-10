@@ -10,7 +10,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 1,
   "verse": 2,
-  "hebrew": "וְאֶכְתֹּב בִּלְשׁוֹן אָבִי בִּכְתַב מִצְרַיִם אֲשֶׁר שָׂמוּ אֲבוֹתַי לִדְבַר יְהוּדִית׃",
+  "hebrew": "וָאֶכְתֹּב סֵפֶר בִּלְשׁוֹן אָבִי הֲלֹא הִיא לֶקַח הַיְּהוּדִים וּשְׂפַת מִצְרָיִם׃",
   "english": "Yea, I make a record in the language of my father, which consists of the learning of the Jews and the language of the Egyptians."
  },
  {
@@ -45,7 +45,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 1,
   "verse": 7,
-  "hebrew": "וַיָּשָׁב אֶל־בֵּיתוֹ בִּירוּשָׁלַיִם וַיִּפֹּל עַל־מִשְׁכָּבוֹ וַתִּגְבַּר עָלָיו רוּחַ יְהוָה וְהַדְּבָרִים אֲשֶׁר רָאָה׃",
+  "hebrew": "וַיָּשָׁב אֶל־בֵּיתוֹ בִּירוּשָׁלַיִם וַיִּפֹּל עַל־מִשְׁכָּבוֹ וַיִּגְבַּר עָלָיו רוּחַ יְהוָה וְהַדְּבָרִים אֲשֶׁר רָאָה׃",
   "english": "And it came to pass that he returned to his own house at Jerusalem; and he cast himself upon his  bed, being overcome with the Spirit and the things which he had seen."
  },
  {
@@ -108,7 +108,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 1,
   "verse": 16,
-  "hebrew": "וְעַתָּה לֹא אֶכְתֹּב כָּל־דִּבְרֵי אָבִי כִּי כָתַב דְּבָרִים רַבִּים אֲשֶׁר רָאָה בַּמַּרְאוֹת וּבַחֲלֹמוֹת וְגַם־כָתַב דְּבָרִים רַבִּים אֲשֶׁר נִבָּא וְדִבֶּר אֶל־בָּנָיו וְאֶת־כֻּלָּם לֹא אֶכְתֹּב׃",
+  "hebrew": "וְעַתָּה לֹא אֶכְתֹּב כָּל־דִּבְרֵי אָבִי כִּי כָּתַב דְּבָרִים רַבִּים אֲשֶׁר רָאָה בַּמַּרְאוֹת וּבַחֲלֹמוֹת וְגַם־כָתַב דְּבָרִים רַבִּים אֲשֶׁר נִבָּא וְדִבֶּר אֶל־בָּנָיו וְאֶת־כֻּלָּם לֹא אֶכְתֹּב׃",
   "english": "And now I, Nephi, do not make a full account of the things which my father hath written, for he hath written many things which he saw in visions and in dreams; and he also hath written many things which he prophesied and spake unto his children, of which I shall not make a full account."
  },
  {
@@ -143,7 +143,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 2,
   "verse": 1,
-  "hebrew": "וַיֹּאמֶר יְהוָה אֶל־אָבִי בַּחֲלוֹם לֵאמֹר בָּרוּךְ אַתָּה לֶחִי עַל אֲשֶׁר עָשִׂיתָ וְעַל אֲשֶׁר הָיִיתָ נֶאֱמָן וַתַּגֵּד לָעָם הַזֶּה אֵת אֲשֶׁר צִוִּיתִיךָ וְהִנֵּה הֵם מְבַקְשִׁים אֶת־נַפְשֶׁךָ׃",
+  "hebrew": "וַיֹּאמֶר יְהוָה אֶל־אָבִי בַּחֲלוֹם לֵאמֹר בָּרוּךְ אַתָּה לֶחִי עַל אֲשֶׁר עָשִׂיתָ וְעַל אֲשֶׁר הָיִיתָ נֶאֱמָן וַתַּגֵּד לָעָם הַזֶּה אֶת־אֲשֶׁר צִוִּיתִיךָ וְהִנֵּה הֵם מְבַקְשִׁים אֶת־נַפְשֶׁךָ׃",
   "english": "For behold, it came to pass that the Lord spake unto my father, yea, even in a dream, and said unto him: Blessed art thou Lehi, because of the things which thou hast done; and because thou hast been faithful and declared unto this people the things which I commanded thee, behold, they seek to take away thy life."
  },
  {
@@ -171,7 +171,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 2,
   "verse": 5,
-  "hebrew": "וַיֵּרֶד אֶל־גְּבוּל יַם־סוּף וַיֵּלֶךְ בַּמִּדְבָּר בַּגְּבוּל הַקָּרוֹב אֶל־יַם־סוּף הוּא וּמִשְׁפַּחְתּוֹ אִמִּי שָׂרְיָה וְאַחַי הַגְּדֹלִים לָמָן וּלְמוּאֵל וְסָם׃",
+  "hebrew": "וַיֵּרֶד אֶל־גְּבוּל יַם־סוּף וַיֵּלֶךְ בַּמִּדְבָּר בַּגְּבוּל הַקָּרוֹב אֶל־יַם־סוּף הוּא וּמִשְׁפַּחְתּוֹ אִמִּי שְׂרָיָה וְאַחַי הַגְּדֹלִים לָמָן וּלְמוּאֵל וְסָם׃",
   "english": "And he came down by the borders near the shore of the Red Sea; and he traveled in the wilderness in the borders which are nearer the Red Sea; and he did travel in the wilderness with his family, which consisted of my mother, Sariah, and my elder brothers, who were Laman, Lemuel, and Sam."
  },
  {
@@ -255,7 +255,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 2,
   "verse": 17,
-  "hebrew": "וָאֲדַבֵּר אֶל־סָם וָאַגֵּד לוֹ אֵת אֲשֶׁר הֶרְאָה לִי יְהוָה בְּרוּחַ קָדְשׁוֹ וַיַּאֲמֵן בִּדְבָרָי׃",
+  "hebrew": "וָאֲדַבֵּר אֶל־סָם וָאַגֵּד לוֹ אֶת־אֲשֶׁר הֶרְאָה לִי יְהוָה בְּרוּחַ קָדְשׁוֹ וַיַּאֲמֵן בִּדְבָרָי׃",
   "english": "And I spake unto Sam, making known unto him the things which the Lord had manifested unto me by his Holy Spirit. And it came to pass that he believed in my words."
  },
  {
@@ -339,7 +339,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 3,
   "verse": 5,
-  "hebrew": "וְעַתָּה הִנֵּה אַחֶיךָ מַלִּינִים לֵאמֹר קָשָׁה הַדָּבָר אֲשֶׁר דָּרַשְׁתִּי מֵאִתָּם וְהִנֵּה לֹא דָרַשְׁתִּי כִּי אִם־מִצְוַת יְהוָה הִיא׃",
+  "hebrew": "וְעַתָּה הִנֵּה אַחֶיךָ מַלִּינִים לֵאמֹר קָשֶׁה הַדָּבָר אֲשֶׁר דָּרַשְׁתִּי מֵאִתָּם וְהִנֵּה לֹא דָרַשְׁתִּי כִּי אִם־מִצְוַת יְהוָה הִיא׃",
   "english": "And now, behold thy brothers murmur, saying it is a hard thing which I have required of them; but behold I have not required it of them, but it is a commandment of the Lord."
  },
  {
@@ -353,7 +353,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 3,
   "verse": 7,
-  "hebrew": "וָאֹמַר אֶל־אָבִי אֵלְכָה וְאֶעֱשֶׂה אֵת אֲשֶׁר צִוָּה יְהוָה כִּי יָדַעְתִּי כִּי לֹא־יְצַוֶּה יְהוָה אֶת־בְּנֵי הָאָדָם דָּבָר בִּלְתִּי אִם־הֵכִין לָהֶם דֶּרֶךְ לַעֲשׂוֹת אֵת אֲשֶׁר צִוָּם׃",
+  "hebrew": "וָאֹמַר אֶל־אָבִי אֵלְכָה וְאֶעֱשֶׂה אֶת־אֲשֶׁר צִוָּה יְהוָה כִּי יָדַעְתִּי כִּי לֹא־יְצַוֶּה יְהוָה אֶת־בְּנֵי הָאָדָם דָּבָר בִּלְתִּי אִם־הֵכִין לָהֶם דֶּרֶךְ לַעֲשׂוֹת אֶת־אֲשֶׁר צִוָּם׃",
   "english": "And it came to pass that I, Nephi, said unto my father: I will go and do the things which the Lord hath commanded, for I know that the Lord giveth no commandments unto the children of men, save he shall prepare a way for them that they may accomplish the thing which he commandeth them."
  },
  {
@@ -402,14 +402,14 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 3,
   "verse": 14,
-  "hebrew": "וַיָּנָס לָמָן מִפָּנָיו וַיַּגֵּד־לָנוּ אֵת כָּל־אֲשֶׁר עָשָׂה לָבָן וַנִּתְעַצֵּב וַיַּחְפְּצוּ אַחַי לָשׁוּב אֶל־אָבִינוּ הַמִּדְבָּרָה׃",
+  "hebrew": "וַיָּנָס לָמָן מִפָּנָיו וַיַּגֵּד־לָנוּ אֶת־כָּל־אֲשֶׁר עָשָׂה לָבָן וַנִּתְעַצֵּב וַיַּחְפְּצוּ אַחַי לָשׁוּב אֶל־אָבִינוּ הַמִּדְבָּרָה׃",
   "english": "But Laman fled out of his presence, and told the things which Laban had done, unto us. And we began to be exceedingly sorrowful, and my brethren were about to return unto my father in the wilderness."
  },
  {
   "book": "1 Nephi",
   "chapter": 3,
   "verse": 15,
-  "hebrew": "וְהִנֵּה וָאֹמַר אֲלֵיהֶם חַי־יְהוָה וְחַי נַפְשֵׁנוּ לֹא נֵרֵד אֶל־אָבִינוּ הַמִּדְבָּרָה עַד אֲשֶׁר נַעֲשֶׂה אֵת אֲשֶׁר צִוָּה יְהוָה אֹתָנוּ׃",
+  "hebrew": "וְהִנֵּה וָאֹמַר אֲלֵיהֶם חַי־יְהוָה וְחַי נַפְשֵׁנוּ לֹא נֵרֵד אֶל־אָבִינוּ הַמִּדְבָּרָה עַד אֲשֶׁר נַעֲשֶׂה אֶת־אֲשֶׁר צִוָּה יְהוָה אֹתָנוּ׃",
   "english": "But behold I said unto them that: As the Lord liveth, and as we live, we will not go down unto our father in the wilderness until we have accomplished the thing which the Lord hath commanded us."
  },
  {
@@ -563,7 +563,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 4,
   "verse": 6,
-  "hebrew": "וַיַּנְחֵנִי הָרוּחַ וְלֹא יָדַעְתִּי מֵרֹאשׁ אֵת אֲשֶׁר אֶעֱשֶׂה׃",
+  "hebrew": "וַיַּנְחֵנִי הָרוּחַ וְלֹא יָדַעְתִּי מֵרֹאשׁ אֶת־אֲשֶׁר אֶעֱשֶׂה׃",
   "english": "And I was led by the Spirit, not knowing beforehand the things which I should do."
  },
  {
@@ -794,7 +794,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 5,
   "verse": 1,
-  "hebrew": "וַיְהִי אַחֲרֵי רִדְתֵּנוּ הַמִּדְבָּרָה אֶל־אָבִינוּ וְהִנֵּה וַיִּמָּלֵא אָבִינוּ שִׂמְחָה וְגַם אִמִּי שָׂרְיָה שָׂמֹחַ שָׂמְחָה כִּי אָכֵן הִתְאַבְּלָה עָלֵינוּ׃",
+  "hebrew": "וַיְהִי אַחֲרֵי רִדְתֵּנוּ הַמִּדְבָּרָה אֶל־אָבִינוּ וְהִנֵּה וַיִּמָּלֵא אָבִינוּ שִׂמְחָה וְגַם אִמִּי שְׂרָיָה שָׂמֹחַ שָׂמְחָה כִּי אָכֵן הִתְאַבְּלָה עָלֵינוּ׃",
   "english": "And it came to pass that after we had come down into the wilderness unto our father, behold, he was filled with joy, and also my mother, Sariah, was exceedingly glad, for she truly had mourned because of us."
  },
  {
@@ -829,7 +829,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 5,
   "verse": 6,
-  "hebrew": "וּבַדְּבָרִים הָאֵלֶּה נִחַם אָבִי לֶחִי אֶת־אִמִּי שָׂרְיָה עָלֵינוּ בְּלֶכְתֵּנוּ בַּמִּדְבָּר אֶל־אֶרֶץ יְרוּשָׁלָיִם לָקַחַת אֶת־סֵפֶר הַיְּהוּדִים׃",
+  "hebrew": "וּבַדְּבָרִים הָאֵלֶּה נִחַם אָבִי לֶחִי אֶת־אִמִּי שְׂרָיָה עָלֵינוּ בְּלֶכְתֵּנוּ בַּמִּדְבָּר אֶל־אֶרֶץ יְרוּשָׁלָיִם לָקַחַת אֶת־סֵפֶר הַיְּהוּדִים׃",
   "english": "And after this manner of language did my father, Lehi, comfort my mother, Sariah, concerning us, while we journeyed in the  wilderness up to the land of Jerusalem, to obtain the record of the Jews."
  },
  {
@@ -843,7 +843,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 5,
   "verse": 8,
-  "hebrew": "וַתֹּאמֶר לֵאמֹר עַתָּה יָדַעְתִּי לְנָכוֹן כִּי־צִוָּה יְהוָה אֶת־אִישִׁי לִבְרֹחַ הַמִּדְבָּרָה וְגַם יָדַעְתִּי לְנָכוֹן כִּי־שָׁמַר יְהוָה אֶת־בָּנַי וַיַּצִּילֵם מִיַּד לָבָן וַיִּתֵּן־לָהֶם כֹּחַ לַעֲשׂוֹת אֵת אֲשֶׁר צִוָּם יְהוָה וּבַדְּבָרִים הָאֵלֶּה דִּבֵּרָה׃",
+  "hebrew": "וַתֹּאמֶר לֵאמֹר עַתָּה יָדַעְתִּי לְנָכוֹן כִּי־צִוָּה יְהוָה אֶת־אִישִׁי לִבְרֹחַ הַמִּדְבָּרָה וְגַם יָדַעְתִּי לְנָכוֹן כִּי־שָׁמַר יְהוָה אֶת־בָּנַי וַיַּצִּילֵם מִיַּד לָבָן וַיִּתֵּן־לָהֶם כֹּחַ לַעֲשׂוֹת אֶת־אֲשֶׁר צִוָּם יְהוָה וּבַדְּבָרִים הָאֵלֶּה דִּבֵּרָה׃",
   "english": "And she spake, saying: Now I know of a surety that the Lord hath commanded my husband to flee into the wilderness; yea, and I also know of a surety that the Lord hath protected my sons, and delivered them out of the hands of Laban, and given them power whereby they could accomplish the thing which the Lord hath commanded them. And after this manner of language did she speak."
  },
  {
@@ -976,7 +976,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 6,
   "verse": 5,
-  "hebrew": "עַל־כֵּן אֵת הַטּוֹב בְּעֵינֵי הָעוֹלָם לֹא אֶכְתֹּב כִּי אִם־הַטּוֹב בְּעֵינֵי הָאֱלֹהִים וּבְעֵינֵי אֲשֶׁר לֹא מִן־הָעוֹלָם הֵמָּה׃",
+  "hebrew": "עַל־כֵּן אֶת־הַטּוֹב בְּעֵינֵי הָעוֹלָם לֹא אֶכְתֹּב כִּי אִם־הַטּוֹב בְּעֵינֵי הָאֱלֹהִים וּבְעֵינֵי אֲשֶׁר לֹא מִן־הָעוֹלָם הֵמָּה׃",
   "english": "Wherefore, the things which are pleasing unto the world I do not write, but the things which are pleasing unto God and unto those who are not of the world."
  },
  {
@@ -1130,7 +1130,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 7,
   "verse": 21,
-  "hebrew": "וָאֶסְלַח לָהֶם בְּלֵב שָׁלֵם אֵת כָּל־אֲשֶׁר עָשׂוּ וָאַזְהִיר אֹתָם לְהִתְפַּלֵּל אֶל־יְהוָה אֱלֹהֵיהֶם כִּי יִסְלַח לָהֶם וַיְהִי כֵן וַיַּעֲשׂוּ וַיְהִי אַחֲרֵי הִתְפַּלְּלָם אֶל־יְהוָה וַנָּשָׁב לָלֶכֶת בְּמַסָּעֵנוּ אֶל־אֹהֶל אָבִינוּ׃",
+  "hebrew": "וָאֶסְלַח לָהֶם בְּלֵב שָׁלֵם אֶת־כָּל־אֲשֶׁר עָשׂוּ וָאַזְהִיר אֹתָם לְהִתְפַּלֵּל אֶל־יְהוָה אֱלֹהֵיהֶם כִּי יִסְלַח לָהֶם וַיְהִי כֵן וַיַּעֲשׂוּ וַיְהִי אַחֲרֵי הִתְפַּלְּלָם אֶל־יְהוָה וַנָּשָׁב לָלֶכֶת בְּמַסָּעֵנוּ אֶל־אֹהֶל אָבִינוּ׃",
   "english": "And it came to pass that I did frankly forgive them all that they had done, and I did exhort them that they would pray unto the Lord their God for forgiveness. And it came to pass that they did so. And after they had done praying unto the Lord we did again travel on our journey towards the tent of our father."
  },
  {
@@ -1235,7 +1235,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 8,
   "verse": 14,
-  "hebrew": "וָאַבִּיט לִרְאוֹת מֵאַיִן יָבֹא וָאֵרֶא אֶת־רֹאשׁוֹ מֵרָחוֹק מְעָט וָאֵרֶא בְּרֹאשׁוֹ אֶת־שָׂרְיָה אִמְּכֶם וְאֶת־סָם וְאֶת־נֶפִי וַיַּעַמְדוּ כְּלֹא יָדְעוּ אָנָה יֵלֵכוּ׃",
+  "hebrew": "וָאַבִּיט לִרְאוֹת מֵאַיִן יָבֹא וָאֵרֶא אֶת־רֹאשׁוֹ מֵרָחוֹק מְעָט וָאֵרֶא בְּרֹאשׁוֹ אֶת־שְׂרָיָה אִמְּכֶם וְאֶת־סָם וְאֶת־נֶפִי וַיַּעַמְדוּ כְּלֹא יָדְעוּ אָנָה יֵלֵכוּ׃",
   "english": "And I looked to behold from whence it came; and I saw the head thereof a little way off; and at the head thereof I beheld your mother Sariah, and Sam, and Nephi; and they stood as if they knew not whither they should go."
  },
  {
@@ -1277,7 +1277,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 8,
   "verse": 20,
-  "hebrew": "וָאֵרֶא גַּם־אֹרַח צָרוֹר צַר וַיַּעֲבֹר אֵצֶל מַטֵּה הַבַּרְזֶל עַד־הָעֵץ אֲשֶׁר עָמַדְתִּי אֶצְלוֹ וְגַם־הוֹבִיל אֵצֶל רֹאשׁ הַמַּעְיָן אֶל־שָׂדֶה גָּדוֹל וְרָחָב כְּתֵבֵל׃",
+  "hebrew": "וָאֵרֶא גַּם־אֹרַח צָרוּר צַר וַיַּעֲבֹר אֵצֶל מַטֵּה הַבַּרְזֶל עַד־הָעֵץ אֲשֶׁר עָמַדְתִּי אֶצְלוֹ וְגַם־הוֹבִיל אֵצֶל רֹאשׁ הַמַּעְיָן אֶל־שָׂדֶה גָּדוֹל וְרָחָב כְּתֵבֵל׃",
   "english": "And I also beheld a strait and narrow path, which came along by the rod of iron, even to the tree by which I stood; and it also led by the head of the fountain, unto a large and spacious field, as if it had been a world."
  },
  {
@@ -1550,7 +1550,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 10,
   "verse": 15,
-  "hebrew": "וּבְלָשׁוֹן כָּזֹאת נִבָּא אָבִי וַיְדַבֵּר אֶל־אַחַי וְגַם דְּבָרִים רַבִּים אֲחֵרִים אֲשֶׁר לֹא אֶכְתֹּב בַּסֵּפֶר הַזֶּה כִּי כָתַבְתִּי אֶת־אֲשֶׁר טוֹב בְּעֵינַי בְּסִפְרִי הָאַחֵר׃",
+  "hebrew": "וּבְלָשׁוֹן כָּזֹאת נִבָּא אָבִי וַיְדַבֵּר אֶל־אַחַי וְגַם דְּבָרִים רַבִּים אֲחֵרִים אֲשֶׁר לֹא אֶכְתֹּב בַּסֵּפֶר הַזֶּה כִּי כָּתַבְתִּי אֶת־אֲשֶׁר טוֹב בְּעֵינַי בְּסִפְרִי הָאַחֵר׃",
   "english": "And after this manner of language did my father prophesy and speak unto my brethren, and also many more things which I do not write in this book; for I have written as many of them as were expedient for me in mine other book."
  },
  {
@@ -1788,7 +1788,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 11,
   "verse": 27,
-  "hebrew": "וָאַבִּיט וָאֵרֶא אֶת־גּוֹאֵל הָעוֹלָם אֲשֶׁר דִּבֶּר עָלָיו אָבִי וָאֵרֶא גַם אֶת־הַנָּבִיא אֲשֶׁר יָכִין הַדֶּרֶךְ לְפָנָיו וַיֵּלֶךְ שֵׂה־אֱלֹהִים וַיִּטָּבֵל עַל־יָדוֹ וַיְהִי אַחֲרֵי הִטָּבְלוֹ וָאֵרֶא אֶת־הַשָּׁמַיִם נִפְתָּחִים וְרוּחַ הַקֹּדֶשׁ יוֹרֶדֶת מִן־הַשָּׁמַיִם וַתָּנַח עָלָיו בְּתַבְנִית יוֹנָה׃",
+  "hebrew": "וָאַבִּיט וָאֵרֶא אֶת־גּוֹאֵל הָעוֹלָם אֲשֶׁר דִּבֶּר עָלָיו אָבִי וָאֵרֶא גַם אֶת־הַנָּבִיא אֲשֶׁר יָכִין הַדֶּרֶךְ לְפָנָיו וַיֵּלֶךְ שֵׂה־אֱלֹהִים וַיִּטָּבֵל עַל־יָדוֹ וַיְהִי אַחֲרֵי הִטָּבְלוֹ וָאֵרֶא אֶת־הַשָּׁמַיִם נִפְתָּחִים וְרוּחַ הַקֹּדֶשׁ יוֹרֵד מִן־הַשָּׁמַיִם וַיָּנַח עָלָיו בְּתַבְנִית יוֹנָה׃",
   "english": "And I looked and beheld the Redeemer of the world, of whom my father had spoken; and I also beheld the prophet who should prepare the way before him. And the Lamb of God went forth and was baptized of him; and after he was baptized, I beheld the heavens open, and the Holy Ghost come down out of heaven and abide upon him in the form of a dove."
  },
  {
@@ -1900,7 +1900,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 12,
   "verse": 7,
-  "hebrew": "וְגַם וָאֵרֶא וָאָעִיד כִּי נָפְלָה רוּחַ הַקֹּדֶשׁ עַל־שְׁנֵים עָשָׂר אֲחֵרִים וַיִּמָּשְׁחוּ מֵאֱלֹהִים וַיִּבָּחֲרוּ׃",
+  "hebrew": "וְגַם וָאֵרֶא וָאָעִיד כִּי נָפַל רוּחַ הַקֹּדֶשׁ עַל־שְׁנֵים עָשָׂר אֲחֵרִים וַיִּמָּשְׁחוּ מֵאֱלֹהִים וַיִּבָּחֲרוּ׃",
   "english": "And I also saw and bear record that the Holy Ghost fell upon twelve others; and they were ordained of God, and chosen."
  },
  {
@@ -1977,7 +1977,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 12,
   "verse": 18,
-  "hebrew": "וְהַבִּנְיָן הַגָּדוֹל וְהָרָחָב אֲשֶׁר רָאָה אָבִיךָ הוּא הַבְלֵי שָׁוְא וּגְאוֹן בְּנֵי הָאָדָם וּתְהוֹם גְּדוֹלָה וְנוֹרָאָה מַפְרִידָה בֵּינֵיהֶם אָכֵן דְּבַר־צִדְקַת אֵל עוֹלָם וְהַמָּשִׁיחַ אֲשֶׁר הוּא שֵׂה־אֱלֹהִים אֲשֶׁר מֵעִידָה עָלָיו רוּחַ הַקֹּדֶשׁ מֵרֵאשִׁית הָעוֹלָם וְעַד־עוֹלָם׃",
+  "hebrew": "וְהַבִּנְיָן הַגָּדוֹל וְהָרָחָב אֲשֶׁר רָאָה אָבִיךָ הוּא הַבְלֵי שָׁוְא וּגְאוֹן בְּנֵי הָאָדָם וּתְהוֹם גְּדוֹלָה וְנוֹרָאָה מַפְרִידָה בֵּינֵיהֶם אָכֵן דְּבַר־צִדְקַת אֵל עוֹלָם וְהַמָּשִׁיחַ אֲשֶׁר הוּא שֵׂה־אֱלֹהִים אֲשֶׁר מֵעִיד עָלָיו רוּחַ הַקֹּדֶשׁ מֵרֵאשִׁית הָעוֹלָם וְעַד־עוֹלָם׃",
   "english": "And the large and spacious building, which thy father saw, is vain imaginations and the pride of the children of men. And a great and a terrible gulf divideth them; yea, even the word of the justice of the Eternal God, and the Messiah who is the Lamb of God, of whom the Holy Ghost beareth record, from the beginning of the world until this time, and from this time henceforth and forever."
  },
  {
@@ -2096,14 +2096,14 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 13,
   "verse": 12,
-  "hebrew": "וָאַבִּיט וָאֵרֶא אִישׁ בֵּין הַגּוֹיִם אֲשֶׁר נִבְדַּל מִזֶּרַע אַחַי בַּמַּיִם הָרַבִּים וָאֵרֶא אֶת־רוּחַ אֱלֹהִים כִּי יָרְדָה וַתִּפְעַל בָּאִישׁ וַיֵּלֶךְ עַל־הַמַּיִם הָרַבִּים עַד־זֶרַע אַחַי אֲשֶׁר בְּאֶרֶץ הַנַּחֲלָה׃",
+  "hebrew": "וָאַבִּיט וָאֵרֶא אִישׁ בֵּין הַגּוֹיִם אֲשֶׁר נִבְדַּל מִזֶּרַע אַחַי בַּמַּיִם הָרַבִּים וָאֵרֶא אֶת־רוּחַ אֱלֹהִים כִּי יָרַד וַיִּפְעַל בָּאִישׁ וַיֵּלֶךְ עַל־הַמַּיִם הָרַבִּים עַד־זֶרַע אַחַי אֲשֶׁר בְּאֶרֶץ הַנַּחֲלָה׃",
   "english": "And I looked and beheld a man among the Gentiles, who was separated from the seed of my brethren by the many waters; and I beheld the Spirit of God, that it came down and wrought upon the man; and he went forth upon the many waters, even unto the seed of my brethren, who were in the promised land."
  },
  {
   "book": "1 Nephi",
   "chapter": 13,
   "verse": 13,
-  "hebrew": "וָאֵרֶא אֶת־רוּחַ אֱלֹהִים כִּי פָעֲלָה בְּגוֹיִם אֲחֵרִים וַיֵּצְאוּ מִן־הַשֶּׁבִי עַל־הַמַּיִם הָרַבִּים׃",
+  "hebrew": "וָאֵרֶא אֶת־רוּחַ אֱלֹהִים כִּי פָעַל בְּגוֹיִם אֲחֵרִים וַיֵּצְאוּ מִן־הַשֶּׁבִי עַל־הַמַּיִם הָרַבִּים׃",
   "english": "And it came to pass that I beheld the Spirit of God, that it wrought upon other Gentiles; and they went forth out of captivity, upon the many waters."
  },
  {
@@ -2313,21 +2313,21 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 14,
   "verse": 1,
-  "hebrew": "וַיְהִי אִם יִשְׁמְעוּ הַגּוֹיִם אֶל־שֶׂה־אֱלֹהִים בַּיּוֹם הַהוּא אֲשֶׁר יִגָּלֶה לָהֶם בְּדָבָר וְגַם בִּגְבוּרָתוֹ בְּפֹעַל לְהָסִיר מִכְשׁוֹלֵיהֶם׃",
+  "hebrew": "וַיְהִי אִם יִשְׁמְעוּ הַגּוֹיִם אֶל־שֵׂה־אֱלֹהִים בַּיּוֹם הַהוּא אֲשֶׁר יִגָּלֶה לָהֶם בְּדָבָר וְגַם בִּגְבוּרָתוֹ בְּפֹעַל לְהָסִיר מִכְשׁוֹלֵיהֶם׃",
   "english": "And it shall come to pass, that if the Gentiles shall hearken unto the Lamb of God in that day that he shall manifest himself unto them in word, and also in power, in very deed, unto the taking away of their stumbling blocks—"
  },
  {
   "book": "1 Nephi",
   "chapter": 14,
   "verse": 2,
-  "hebrew": "וְאִם לֹא יַקְשׁוּ אֶת־לְבָבָם לְשֶׂה־אֱלֹהִים וְהָיוּ בְּתוֹךְ זֶרַע אָבִיךָ וְאַף בְּבֵית יִשְׂרָאֵל וְהָיוּ לְעַם בָּרוּךְ עַל־אֶרֶץ הַנַּחֲלָה לְעוֹלָם וְלֹא יֵרְדוּ עוֹד לַשְּׁבִי וְלֹא יִכָּלֵם עוֹד בֵּית יִשְׂרָאֵל׃",
+  "hebrew": "וְאִם לֹא יַקְשׁוּ אֶת־לְבָבָם לְשֵׂה־אֱלֹהִים וְהָיוּ בְּתוֹךְ זֶרַע אָבִיךָ וְאַף בְּבֵית יִשְׂרָאֵל וְהָיוּ לְעַם בָּרוּךְ עַל־אֶרֶץ הַנַּחֲלָה לְעוֹלָם וְלֹא יֵרְדוּ עוֹד לַשְּׁבִי וְלֹא יִכָּלֵם עוֹד בֵּית יִשְׂרָאֵל׃",
   "english": "And harden not their hearts against the Lamb of God, they shall be numbered among the seed of thy father; yea, they shall be numbered among the house of Israel; and they shall be a blessed people upon the promised land forever; they shall be no more brought down into captivity; and the house of Israel shall no more be confounded."
  },
  {
   "book": "1 Nephi",
   "chapter": 14,
   "verse": 3,
-  "hebrew": "וְהַבּוֹר הַגָּדוֹל אֲשֶׁר כָּרוּ לָהֶם הָעֵדָה הַגְּדוֹלָה וְהַנִּתְעָבָה הַהִיא אֲשֶׁר יָסַד הַשָּׂטָן וּבָנָיו לְמַעַן הוֹרִיד נַפְשׁוֹת בְּנֵי־אָדָם שְׁאוֹלָה הִנֵּה הַבּוֹר הַגָּדוֹל אֲשֶׁר כָּרוּ לְהַשְׁחִית בְּנֵי־אָדָם יִמָּלֵא בְּכֹרָיו לְהַשְׁחִיתָם כָּלָה נְאֻם שֶׂה־אֱלֹהִים לֹא הַשְׁחָתַת הַנֶּפֶשׁ כִּי אִם־הַשְׁלָכָתָהּ בַּשְּׁאוֹל אֲשֶׁר אֵין־לָהּ קֵץ׃",
+  "hebrew": "וְהַבּוֹר הַגָּדוֹל אֲשֶׁר כָּרוּ לָהֶם הָעֵדָה הַגְּדוֹלָה וְהַנִּתְעָבָה הַהִיא אֲשֶׁר יָסַד הַשָּׂטָן וּבָנָיו לְמַעַן הוֹרִיד נַפְשׁוֹת בְּנֵי־אָדָם שְׁאוֹלָה הִנֵּה הַבּוֹר הַגָּדוֹל אֲשֶׁר כָּרוּ לְהַשְׁחִית בְּנֵי־אָדָם יִמָּלֵא בְּכֹרָיו לְהַשְׁחִיתָם כָּלָה נְאֻם שֵׂה־אֱלֹהִים לֹא הַשְׁחָתַת הַנֶּפֶשׁ כִּי אִם־הַשְׁלָכָתָהּ בַּשְּׁאוֹל אֲשֶׁר אֵין־לָהּ קֵץ׃",
   "english": "And that great pit, which hath been digged for them by that great and abominable church, which was founded by the devil and his children, that he might lead away the souls of men down to hell—yea, that great pit which hath been digged for the destruction of men shall be filled by those who digged it, unto their utter destruction, saith the Lamb of God; not the destruction of the soul, save it be the casting of it into that hell which hath no end."
  },
  {
@@ -2348,14 +2348,14 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 14,
   "verse": 6,
-  "hebrew": "לָכֵן אוֹי לַגּוֹיִם אִם־יַקְשׁוּ אֶת־לְבָבָם לְשֶׂה־אֱלֹהִים׃",
+  "hebrew": "לָכֵן אוֹי לַגּוֹיִם אִם־יַקְשׁוּ אֶת־לְבָבָם לְשֵׂה־אֱלֹהִים׃",
   "english": "Therefore, wo be unto the Gentiles if it so be that they harden their hearts against the Lamb of God."
  },
  {
   "book": "1 Nephi",
   "chapter": 14,
   "verse": 7,
-  "hebrew": "כִּי הִנֵּה יָמִים בָּאִים נְאֻם שֶׂה־אֱלֹהִים וְעָשִׂיתִי מַעֲשֶׂה גָדוֹל וָפֶלֶא בְּקֶרֶב בְּנֵי הָאָדָם מַעֲשֶׂה אֲשֶׁר יִהְיֶה לְעוֹלָם אוֹ לְשָׁלוֹם וּלְחַיֵּי עוֹלָם אוֹ לְמָסְרָם לִקְשִׁי לִבָּם וּלְעִוְרוֹן עֵינֵיהֶם לְהוֹרִידָם לַשְּׁבִי וְגַם לַשַּׁחַת גַּם־בַּגּוּף גַּם־בָּרוּחַ כְּשְׁבִי הַשָּׂטָן אֲשֶׁר דִּבַּרְתִּי׃",
+  "hebrew": "כִּי הִנֵּה יָמִים בָּאִים נְאֻם שֵׂה־אֱלֹהִים וְעָשִׂיתִי מַעֲשֶׂה גָדוֹל וָפֶלֶא בְּקֶרֶב בְּנֵי הָאָדָם מַעֲשֶׂה אֲשֶׁר יִהְיֶה לְעוֹלָם אוֹ לְשָׁלוֹם וּלְחַיֵּי עוֹלָם אוֹ לְמָסְרָם לִקְשִׁי לִבָּם וּלְעִוְרוֹן עֵינֵיהֶם לְהוֹרִידָם לַשְּׁבִי וְגַם לַשַּׁחַת גַּם־בַּגּוּף גַּם־בָּרוּחַ כְּשְׁבִי הַשָּׂטָן אֲשֶׁר דִּבַּרְתִּי׃",
   "english": "For the time cometh, saith the Lamb of God, that I will work a great and a marvelous work among the children of men; a work which shall be everlasting, either on the one hand or on the other—either to the convincing of them unto peace and life eternal, or unto the deliverance of them to the hardness of their hearts and the blindness of their minds unto their being brought down into captivity, and also into destruction, both temporally and spiritually, according to the captivity of the devil, of which I have spoken."
  },
  {
@@ -2376,7 +2376,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 14,
   "verse": 10,
-  "hebrew": "וַיֹּאמֶר אֵלַי הִנֵּה אֵין כִּי אִם־שְׁתֵּי עֵדוֹת הָאַחַת עֲדַת שֶׂה־אֱלֹהִים וְהַשֵּׁנִית עֲדַת הַשָּׂטָן וְלָכֵן כָּל־אֲשֶׁר לֹא יִהְיֶה לַעֲדַת שֶׂה־אֱלֹהִים יִהְיֶה לָעֵדָה הַגְּדוֹלָה הַהִיא אֵם הַתּוֹעֵבוֹת וְהִיא זוֹנַת כָּל־הָאָרֶץ׃",
+  "hebrew": "וַיֹּאמֶר אֵלַי הִנֵּה אֵין כִּי אִם־שְׁתֵּי עֵדוֹת הָאַחַת עֲדַת שֵׂה־אֱלֹהִים וְהַשֵּׁנִית עֲדַת הַשָּׂטָן וְלָכֵן כָּל־אֲשֶׁר לֹא יִהְיֶה לַעֲדַת שֵׂה־אֱלֹהִים יִהְיֶה לָעֵדָה הַגְּדוֹלָה הַהִיא אֵם הַתּוֹעֵבוֹת וְהִיא זוֹנַת כָּל־הָאָרֶץ׃",
   "english": "And he said unto me: Behold there are save two churches only; the one is the church of the Lamb of God, and the other is the church of the devil; wherefore, whoso belongeth not to the church of the Lamb of God belongeth to that great church, which is the mother of abominations; and she is the whore of all the earth."
  },
  {
@@ -2390,21 +2390,21 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 14,
   "verse": 12,
-  "hebrew": "וָאֵרֶא אֶת־עֲדַת שֶׂה־אֱלֹהִים וּמִסְפָּרָם מְעַט מִפְּנֵי רִשְׁעַת וְתוֹעֲבוֹת הַזּוֹנָה הַיֹּשֶׁבֶת עַל־מַיִם רַבִּים אַךְ רָאִיתִי אֶת־עֲדַת הַשֶּׂה אֲשֶׁר הָיוּ קְדוֹשֵׁי הָאֱלֹהִים וְהָיוּ גַּם עַל־פְּנֵי כָל־הָאָרֶץ וּמֶמְשַׁלְתָּם עַל־פְּנֵי הָאָרֶץ מְעַט מִפְּנֵי רִשְׁעַת הַזּוֹנָה הַגְּדוֹלָה אֲשֶׁר רָאִיתִי׃",
+  "hebrew": "וָאֵרֶא אֶת־עֲדַת שֵׂה־אֱלֹהִים וּמִסְפָּרָם מְעַט מִפְּנֵי רִשְׁעַת וְתוֹעֲבוֹת הַזּוֹנָה הַיֹּשֶׁבֶת עַל־מַיִם רַבִּים אַךְ רָאִיתִי אֶת־עֲדַת הַשֶּׂה אֲשֶׁר הָיוּ קְדוֹשֵׁי הָאֱלֹהִים וְהָיוּ גַּם עַל־פְּנֵי כָל־הָאָרֶץ וּמֶמְשַׁלְתָּם עַל־פְּנֵי הָאָרֶץ מְעַט מִפְּנֵי רִשְׁעַת הַזּוֹנָה הַגְּדוֹלָה אֲשֶׁר רָאִיתִי׃",
   "english": "And it came to pass that I beheld the church of the Lamb of God, and its numbers were few, because of the wickedness and abominations of the whore who sat upon many waters; nevertheless, I beheld that the church of the Lamb, who were the saints of God, were also upon all the face of the earth; and their dominions upon the face of the earth were small, because of the wickedness of the great whore whom I saw."
  },
  {
   "book": "1 Nephi",
   "chapter": 14,
   "verse": 13,
-  "hebrew": "וָאֵרֶא כִּי קִבְּצָה אֵם הַתּוֹעֵבוֹת הַגְּדוֹלָה הֲמוֹנִים עַל־פְּנֵי כָל־הָאָרֶץ מִכָּל־הַגּוֹיִם לְהִלָּחֵם בְּשֶׂה־אֱלֹהִים׃",
+  "hebrew": "וָאֵרֶא כִּי קִבְּצָה אֵם הַתּוֹעֵבוֹת הַגְּדוֹלָה הֲמוֹנִים עַל־פְּנֵי כָל־הָאָרֶץ מִכָּל־הַגּוֹיִם לְהִלָּחֵם בְּשֵׂה־אֱלֹהִים׃",
   "english": "And it came to pass that I beheld that the great mother of abominations did gather together multitudes upon the face of all the earth, among all the nations of the Gentiles, to fight against the Lamb of God."
  },
  {
   "book": "1 Nephi",
   "chapter": 14,
   "verse": 14,
-  "hebrew": "וָאֵרֶא נֶפִי אֶת־גְּבוּרַת שֶׂה־אֱלֹהִים וַתֵּרֶד עַל־קְדוֹשֵׁי עֲדַת הַשֶּׂה וְעַל־עַם בְּרִית יְהוָה הַנְּפוֹצִים עַל־פְּנֵי כָל־הָאָרֶץ וַיֵּאָזְרוּ בְּצֶדֶק וּגְבוּרַת אֱלֹהִים בְּכָבוֹד גָּדוֹל׃",
+  "hebrew": "וָאֵרֶא נֶפִי אֶת־גְּבוּרַת שֵׂה־אֱלֹהִים וַתֵּרֶד עַל־קְדוֹשֵׁי עֲדַת הַשֶּׂה וְעַל־עַם בְּרִית יְהוָה הַנְּפוֹצִים עַל־פְּנֵי כָל־הָאָרֶץ וַיֵּאָזְרוּ בְּצֶדֶק וּגְבוּרַת אֱלֹהִים בְּכָבוֹד גָּדוֹל׃",
   "english": "And it came to pass that I, Nephi, beheld the power of the Lamb of God, that it descended upon the saints of the church of the Lamb, and upon the covenant people of the Lord, who were scattered upon all the face of the earth; and they were armed with righteousness and with the power of God in great glory."
  },
  {
@@ -2467,7 +2467,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 14,
   "verse": 23,
-  "hebrew": "וְלָכֵן הַדְּבָרִים אֲשֶׁר יִכְתֹּב יְשָׁרִים וֶאֱמֶת הֵמָּה וְהִנֵּה כְתוּבִים בַּסֵּפֶר אֲשֶׁר רָאִיתָ יוֹצֵא מִפִּי הַיְּהוּדִי וּבְצֵאתָם מִפִּי הַיְּהוּדִי אוֹ בְּצֵאת הַסֵּפֶר מִפִּי הַיְּהוּדִי הָיוּ הַדְּבָרִים הַכְּתוּבִים בְּרוּרִים וּטְהוֹרִים וִיקָרִים מְאֹד וְקַלִּים לְהָבִין לְכֹל׃",
+  "hebrew": "וְלָכֵן הַדְּבָרִים אֲשֶׁר יִכְתֹּב יְשָׁרִים וֶאֱמֶת הֵמָּה וְהִנֵּה כְּתוּבִים בַּסֵּפֶר אֲשֶׁר רָאִיתָ יוֹצֵא מִפִּי הַיְּהוּדִי וּבְצֵאתָם מִפִּי הַיְּהוּדִי אוֹ בְּצֵאת הַסֵּפֶר מִפִּי הַיְּהוּדִי הָיוּ הַדְּבָרִים הַכְּתוּבִים בְּרוּרִים וּטְהוֹרִים וִיקָרִים מְאֹד וְקַלִּים לְהָבִין לְכֹל׃",
   "english": "Wherefore, the things which he shall write are just and true; and behold they are written in the book which thou beheld proceeding out of the mouth of the Jew; and at the time they proceeded out of the mouth of the Jew, or, at the time the book proceeded out of the mouth of the Jew, the things which were written were plain and pure, and most precious and easy to the understanding of all men."
  },
  {
@@ -2845,7 +2845,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 16,
   "verse": 11,
-  "hebrew": "וַנֶּאֱסֹף אֵת כָּל־אֲשֶׁר נִשָּׂא לַמִּדְבָּר וְאֵת כָּל־יֶתֶר צֵידָתֵנוּ אֲשֶׁר נָתַן לָנוּ יְהוָה וַנִּקַּח זֶרַע מִכָּל־מִין לָשֵׂאת לַמִּדְבָּר׃",
+  "hebrew": "וַנֶּאֱסֹף אֶת־כָּל־אֲשֶׁר נִשָּׂא לַמִּדְבָּר וְאֵת כָּל־יֶתֶר צֵידָתֵנוּ אֲשֶׁר נָתַן לָנוּ יְהוָה וַנִּקַּח זֶרַע מִכָּל־מִין לָשֵׂאת לַמִּדְבָּר׃",
   "english": "And it came to pass that we did gather together whatsoever things we should carry into the wilderness, and all the remainder of our provisions which the Lord had given unto us; and we did take seed of every kind that we might carry into the wilderness."
  },
  {
@@ -3062,7 +3062,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 17,
   "verse": 3,
-  "hebrew": "וְכֵן רָאִינוּ כִּי עָשֹׂה תֵעָשֶׂינָה מִצְוֹת־אֱלֹהִים וְאִם יִשְׁמְרוּ בְנֵי הָאָדָם אֶת־מִצְוֹתָיו יְכַלְכְּלֵם וִיחַזְּקֵם וְיָכִין לָהֶם דֶּרֶךְ לַעֲשׂוֹת אֵת אֲשֶׁר צִוָּם לָכֵן הֵכִין לָנוּ דֶּרֶךְ בְּשִׁבְתֵּנוּ בַּמִּדְבָּר׃",
+  "hebrew": "וְכֵן רָאִינוּ כִּי עָשֹׂה תֵעָשֶׂינָה מִצְוֹת־אֱלֹהִים וְאִם יִשְׁמְרוּ בְנֵי הָאָדָם אֶת־מִצְוֹתָיו יְכַלְכְּלֵם וִיחַזְּקֵם וְיָכִין לָהֶם דֶּרֶךְ לַעֲשׂוֹת אֶת־אֲשֶׁר צִוָּם לָכֵן הֵכִין לָנוּ דֶּרֶךְ בְּשִׁבְתֵּנוּ בַּמִּדְבָּר׃",
   "english": "And thus we see that the command– ments of God must be fulfilled. And if it so be that the children of men keep the command– ments of God he doth nourish them, and strengthen them, and provide means whereby they can accomplish the thing which he has commanded them; wherefore, he did provide means for us while we did sojourn in the wilderness."
  },
  {
@@ -3076,7 +3076,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 17,
   "verse": 5,
-  "hebrew": "וַנָּבֹא אֶל־הָאָרֶץ אֲשֶׁר קָרָאנוּ שְׁפַע מִפְּנֵי רֹב פִּרְיָהּ וְדְבַשׁ־בָּר וְכָל־הַדְּבָרִים הָאֵלֶּה הֵכִין יְהוָה לְמַעַן לֹא נִסְפֶּה וַנֵּרֶא אֶת־הַיָּם אֲשֶׁר קָרָאנוּ אִירְיַנְתוּם אֲשֶׁר פֵּרוּשׁוֹ מַיִם רַבִּים׃",
+  "hebrew": "וַנָּבֹא אֶל־הָאָרֶץ אֲשֶׁר קָרָאנוּ שְׁפַע מִפְּנֵי רֹב פִּרְיָהּ וּדְבַשׁ־בָּר וְכָל־הַדְּבָרִים הָאֵלֶּה הֵכִין יְהוָה לְמַעַן לֹא נִסְפֶּה וַנֵּרֶא אֶת־הַיָּם אֲשֶׁר קָרָאנוּ אִירְיַנְתוּם אֲשֶׁר פֵּרוּשׁוֹ מַיִם רַבִּים׃",
   "english": "And we did come to the land which we called Bountiful, because of its much fruit and also wild honey; and all these things were prepared of the Lord that we might not perish. And we beheld the sea, which we called Irreantum, which, being interpreted, is many waters."
  },
  {
@@ -3321,7 +3321,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 17,
   "verse": 40,
-  "hebrew": "וְהוּא אֹהֵב אֶת־אֲשֶׁר יִרְצוּ בּוֹ לִהְיוֹת לָהֶם לֵאלֹהִים הִנֵּה אָהַב אֶת־אֲבוֹתֵינוּ וַיִּכְרֹת בְּרִית אִתָּם אֵת אַבְרָהָם וְאֵת יִצְחָק וְאֵת יַעֲקֹב וַיִּזְכֹּר בְּרִיתוֹ אֲשֶׁר כָּרָת לָכֵן הוֹצִיאָם מֵאֶרֶץ מִצְרָיִם׃",
+  "hebrew": "וְהוּא אֹהֵב אֶת־אֲשֶׁר יִרְצוּ בּוֹ לִהְיוֹת לָהֶם לֵאלֹהִים הִנֵּה אָהַב אֶת־אֲבוֹתֵינוּ וַיִּכְרֹת בְּרִית אִתָּם אֶת־אַבְרָהָם וְאֶת־יִצְחָק וְאֶת־יַעֲקֹב וַיִּזְכֹּר בְּרִיתוֹ אֲשֶׁר כָּרָת לָכֵן הוֹצִיאָם מֵאֶרֶץ מִצְרָיִם׃",
   "english": "And he loveth those who will have him to be their God. Behold, he loved our fathers, and he covenanted with them, yea, even Abraham, Isaac, and Jacob; and he remembered the covenants which he had made; wherefore, he did bring them out of the land of Egypt."
  },
  {
@@ -3454,7 +3454,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 18,
   "verse": 4,
-  "hebrew": "אַחֲרֵי כַּלּוֹתִי אֶת־הָאֳנִיָּה כִּדְבַר יְהוָה וַיִּרְאוּ אַחַי כִּי טוֹבָה הִיא וְכִי מַעֲשֶׂהָ נָאָה מְאֹד וַיִּכָּנְעוּ שֵׁנִית לִפְנֵי יְהוָה׃",
+  "hebrew": "אַחֲרֵי כַּלּוֹתִי אֶת־הָאֳנִיָּה כִּדְבַר יְהוָה וַיִּרְאוּ אַחַי כִּי טוֹבָה הִיא וְכִי מַעֲשֶׂהָ נָאֶה מְאֹד וַיִּכָּנְעוּ שֵׁנִית לִפְנֵי יְהוָה׃",
   "english": "And it came to pass that after I had finished the ship, according to the word of the Lord, my brethren beheld that it was good, and that the workmanship thereof was exceedingly fine;  wherefore, they did humble themselves again before the Lord."
  },
  {
@@ -3748,7 +3748,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 19,
   "verse": 21,
-  "hebrew": "וְהִנֵּה הֶרְאָה לִנְבִיאֵי קֶדֶם אֶת־כָּל־הַדְּבָרִים אֲשֶׁר עֲלֵיהֶם וְגַם הֶרְאָה לְרַבִּים אֶת־אֲשֶׁר עָלֵינוּ לָכֵן עָלֵינוּ לָדַעַת אוֹדוֹתָם כִּי כְתוּבִים הֵם עַל־לוּחוֹת הַנְּחֹשֶׁת׃",
+  "hebrew": "וְהִנֵּה הֶרְאָה לִנְבִיאֵי קֶדֶם אֶת־כָּל־הַדְּבָרִים אֲשֶׁר עֲלֵיהֶם וְגַם הֶרְאָה לְרַבִּים אֶת־אֲשֶׁר עָלֵינוּ לָכֵן עָלֵינוּ לָדַעַת אוֹדוֹתָם כִּי כְּתוּבִים הֵם עַל־לוּחוֹת הַנְּחֹשֶׁת׃",
   "english": "And he surely did show unto the prophets of old all things concerning them; and also he did show unto many concerning us; wherefore, it must needs be that we know concerning them for they are written upon the plates of brass."
  },
  {
@@ -3846,7 +3846,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 20,
   "verse": 11,
-  "hebrew": "לְמֲַנִי לְמֲַנִי אֶעֱשֶׂה כִּי לֹא אֶתֵּן שְׁמִי לְהֵחָלֵל וּכְבוֹדִי לְאַחֵר לֹא־אֶתֵּן׃",
+  "hebrew": "לְמַעֲנִי לְמַעֲנִי אֶעֱשֶׂה כִּי לֹא אֶתֵּן שְׁמִי לְהֵחָלֵל וּכְבוֹדִי לְאַחֵר לֹא־אֶתֵּן׃",
   "english": "For mine own sake, yea, for mine own sake will I do this, for I will not suffer my name to be polluted, and I will not give my glory unto another."
  },
  {
@@ -4329,7 +4329,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 1,
   "verse": 1,
-  "hebrew": "אַחֲרֵי כַלּוֹתִי נֶפִי לְלַמֵּד אֶת־אַחַי וַיְדַבֵּר אֲלֵיהֶם גַּם־אָבִינוּ לֶחִי דְּבָרִים רַבִּים וַיְסַפֵּר לָהֶם אֵת אֲשֶׁר־עָשָׂה יְהוָה גְּדֹלוֹת בְּהוֹצִיאָם מֵאֶרֶץ יְרוּשָׁלָיִם׃",
+  "hebrew": "אַחֲרֵי כַלּוֹתִי נֶפִי לְלַמֵּד אֶת־אַחַי וַיְדַבֵּר אֲלֵיהֶם גַּם־אָבִינוּ לֶחִי דְּבָרִים רַבִּים וַיְסַפֵּר לָהֶם אֶת־אֲשֶׁר עָשָׂה יְהוָה גְּדֹלוֹת בְּהוֹצִיאָם מֵאֶרֶץ יְרוּשָׁלָיִם׃",
   "english": "And now it came to pass that after I, Nephi, had made an end of teaching my brethren, our father, Lehi, also spake many things unto them, and rehearsed unto them, how great things the Lord had done for them in bringing them out of the land of Jerusalem."
  },
  {
@@ -4574,7 +4574,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 2,
   "verse": 4,
-  "hebrew": "רָאִיתָ בִּנְעוּרֶיךָ כְּבוֹדוֹ לָכֵן מְבֹרָךְ אַתָּה כַּאֲשֶׁר יְשָׁרֵת בַּבָּשָׂר כִּי אַחַת הִיא הָרוּחַ תְּמוֹל הַיּוֹם וְעַד־עוֹלָם וְהַדֶּרֶךְ מוּכָנָה מִנְּפִילַת הָאָדָם וְהַיְשׁוּעָה חִנָּם׃",
+  "hebrew": "רָאִיתָ בִּנְעוּרֶיךָ כְּבוֹדוֹ לָכֵן מְבֹרָךְ אַתָּה כַּאֲשֶׁר יְשָׁרֵת בַּבָּשָׂר כִּי אֶחָד הוּא הָרוּחַ תְּמוֹל הַיּוֹם וְעַד־עוֹלָם וְהַדֶּרֶךְ מוּכָנָה מִנְּפִילַת הָאָדָם וְהַיְשׁוּעָה חִנָּם׃",
   "english": "And thou hast beheld in thy youth his glory; wherefore, thou art blessed even as they unto whom he shall minister in the flesh; for the Spirit is the same, yesterday, today, and forever. And the way is prepared from the fall of man, and salvation is free."
  },
  {
@@ -4595,7 +4595,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 2,
   "verse": 7,
-  "hebrew": "הוּא מַקְרִיב עַצְמוֹ קָרְבַּן חַטָּאת לְהָקִים חֻקַּת הַתּוֹרָה לְכֹל אֲשֶׁר לָהֶם לֵב נִשְׁבָּר וְרוּחַ נִדְכָּאָה וּלְזוּלָתָם לֹא תָקוּם חֻקַּת הַתּוֹרָה׃",
+  "hebrew": "הוּא מַקְרִיב עַצְמוֹ קָרְבַּן חַטָּאת לְהָקִים חֻקַּת הַתּוֹרָה לְכֹל אֲשֶׁר לָהֶם לֵב־נִשְׁבָּר וְרוּחַ נִדְכָּה וּלְזוּלָתָם לֹא תָקוּם חֻקַּת הַתּוֹרָה׃",
   "english": "Behold, he offereth himself a sacrifice for sin, to answer the ends of the law, unto all those who have a broken heart and a contrite spirit; and unto none else can the ends of the law be answered."
  },
  {
@@ -4651,7 +4651,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 2,
   "verse": 15,
-  "hebrew": "לְהָבִיא עֲצָתוֹ לְעוֹלָם לְאַחֲרִית הָאָדָם אַחֲרֵי בְרֹאוֹ אֶת־אָב וָאֵם הָרִאשׁוֹנִים וְאֶת־חַיַּת הַשָּׂדֶה וְאֶת־עוֹף הַשָּׁמַיִם וְאֵת כָּל אֲשֶׁר עָשָׂה לֹא יִכּוֹן הַדָּבָר אִם לֹא יִהְיֶה זֶה לְעֻמַּת זֶה גַּם הַפְּרִי הֶאָסוּר לְעֻמַּת עֵץ הַחַיִּים הָאֶחָד מָתוֹק וְהָאֶחָד מָר׃",
+  "hebrew": "לְהָבִיא עֲצָתוֹ לְעוֹלָם לְאַחֲרִית הָאָדָם אַחֲרֵי בְרֹאוֹ אֶת־אָב וָאֵם הָרִאשׁוֹנִים וְאֶת־חַיַּת הַשָּׂדֶה וְאֶת־עוֹף הַשָּׁמַיִם וְאֶת־כָּל־אֲשֶׁר עָשָׂה לֹא יִכּוֹן הַדָּבָר אִם לֹא יִהְיֶה זֶה לְעֻמַּת זֶה גַּם הַפְּרִי הֶאָסוּר לְעֻמַּת עֵץ הַחַיִּים הָאֶחָד מָתוֹק וְהָאֶחָד מָר׃",
   "english": "And to bring about his eternal purposes in the end of man, after he had created our first parents, and the beasts of the field and the fowls of the air, and in fine, all things which are created, it must needs be that there was an opposition; even the forbidden fruit in opposition to the tree of life; the one being sweet and the other bitter."
  },
  {
@@ -5106,7 +5106,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 4,
   "verse": 25,
-  "hebrew": "וְעַל־כַּנְפֵי רוּחוֹ נִשָּׂא גוּפִי עַל־הָרִים גְּבֹהִים מְאֹד וַתִּרְאֶינָה עֵינַי דְּבָרִים גְּדוֹלִים מֵאָדָם עַל־כֵּן צֻוֵּיתִי לְבִלְתִּי כָתְבָם׃",
+  "hebrew": "וְעַל־כַּנְפֵי רוּחוֹ נִשָּׂא גוּפִי עַל־הָרִים גְּבֹהִים מְאֹד וַתִּרְאֶינָה עֵינַי דְּבָרִים גְּדוֹלִים מֵאָדָם עַל־כֵּן צֻוֵּיתִי לְבִלְתִּי כָּתְבָם׃",
   "english": "And upon the wings of his Spirit hath my body been carried away upon exceedingly high mountains. And mine eyes have beheld great things, yea, even too great for man; therefore I was bidden that I should not write them."
  },
  {
@@ -5155,7 +5155,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 4,
   "verse": 32,
-  "hebrew": "תִּסָּגֵרְנָה שַׁעֲרֵי שְׁאוֹל תָּמִיד לְפָנַי כִּי נִשְׁבָּר לִבִּי וְרוּחִי נִדְכָּאָה יְהוָה אַל־תִּסְגֹּר שַׁעֲרֵי צִדְקְךָ לְפָנַי לְמַעַן אֵלֵךְ בִּנְתִיב הָעֵמֶק הַשָּׁפֵל לְמַעַן אֶשְׁמֹר הַדֶּרֶךְ הַיְשָׁרָה׃",
+  "hebrew": "תִּסָּגֵרְנָה שַׁעֲרֵי שְׁאוֹל תָּמִיד לְפָנַי כִּי נִשְׁבָּר לִבִּי וְרוּחִי נִדְכָּה יְהוָה אַל־תִּסְגֹּר שַׁעֲרֵי צִדְקְךָ לְפָנַי לְמַעַן אֵלֵךְ בִּנְתִיב הָעֵמֶק הַשָּׁפֵל לְמַעַן אֶשְׁמֹר הַדֶּרֶךְ הַיְשָׁרָה׃",
   "english": "May the gates of hell be shut continually before me, because that my heart is broken and my spirit is contrite! O Lord, wilt thou not shut the gates of thy righteousness before me, that I may walk in the path of the low valley, that I may be strict in the plain road!"
  },
  {
@@ -5274,7 +5274,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 5,
   "verse": 14,
-  "hebrew": "וָאֶקַּח נֶפִי אֶת־חֶרֶב לָבָן וָאַעַשׂ כְּמַתְכֻּנְתָּהּ חֲרָבוֹת רַבּוֹת פֶּן־יָבֹאוּ עָלֵינוּ הַלְּמָנִים וְיַשְׁמִידוּנוּ כִּי יָדַעְתִּי שִׂנְאָתָם אֵלַי וְאֶל־בָּנַי וְאֶל־עַמִּי׃",
+  "hebrew": "וָאֶקַּח נֶפִי אֶת־חֶרֶב לָבָן וָאַעַשׂ כְּמַתְכֻּנְתָּהּ חֲרָבוֹת רַבּוֹת פֶּן־יָבֹאוּ עָלֵינוּ הַלָּמָנִים וְיַשְׁמִידוּנוּ כִּי יָדַעְתִּי שִׂנְאָתָם אֵלַי וְאֶל־בָּנַי וְאֶל־עַמִּי׃",
   "english": "And I, Nephi, did take the sword of Laban, and after the manner of it did make many swords, lest by any means the people who were now called Lamanites should come upon us and destroy us; for I knew their hatred towards me and my children and those who were called my people."
  },
  {
@@ -5400,7 +5400,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 5,
   "verse": 32,
-  "hebrew": "וָאֶחְרֹט אֵת הַיָּשָׁר בְּעֵינֵי אֱלֹהִים וְאִם־יִרְצֶה עַמִּי בְּדִבְרֵי אֱלֹהִים וְרָצוּ בַחֲקוּקַי אֲשֶׁר עַל־הַלּוּחוֹת הָאֵלֶּה׃",
+  "hebrew": "וָאֶחְרֹט אֶת־הַיָּשָׁר בְּעֵינֵי אֱלֹהִים וְאִם־יִרְצֶה עַמִּי בְּדִבְרֵי אֱלֹהִים וְרָצוּ בַחֲקוּקַי אֲשֶׁר עַל־הַלּוּחוֹת הָאֵלֶּה׃",
   "english": "And I engraved that which is pleasing unto God. And if my people are pleased with the things of God they will be pleased with mine engravings which are upon these plates."
  },
  {
@@ -6359,7 +6359,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 11,
   "verse": 2,
-  "hebrew": "וְעַתָּה אֶכְתֹּב נְפִי עוֹד מִדִּבְרֵי יְשַׁעְיָהוּ כִּי תִתְעַנֵּג נַפְשִׁי בִּדְבָרָיו כִּי אֲדַמֶּה דְבָרָיו לְעַמִּי וַאֲשַׁלְּחֵם לְכָל־בָּנַי כִּי רָאֹה רָאָה אֶת־גֹּאֲלִי כַּאֲשֶׁר רָאִיתִיו׃",
+  "hebrew": "וְעַתָּה אֶכְתֹּב נֶפִי עוֹד מִדִּבְרֵי יְשַׁעְיָהוּ כִּי תִתְעַנֵּג נַפְשִׁי בִּדְבָרָיו כִּי אֲדַמֶּה דְבָרָיו לְעַמִּי וַאֲשַׁלְּחֵם לְכָל־בָּנַי כִּי רָאֹה רָאָה אֶת־גֹּאֲלִי כַּאֲשֶׁר רָאִיתִיו׃",
   "english": "And now I, Nephi, write more of the words of Isaiah, for my soul delighteth in his words. For I will liken his words unto my people, and I will send them forth unto all my children, for he verily saw my Redeemer, even as I have seen him."
  },
  {
@@ -7178,7 +7178,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 17,
   "verse": 14,
-  "hebrew": "לָכֵן יִתֵּן אֲדֹנָי הוּא לָכֶם אוֹת הִנֵּה הָאַלְמָא הָרָה וְיֹלֶדֶת בֵּן וְקָרָאת שְׁמוֹ עִמָּנוּ אֵל׃",
+  "hebrew": "לָכֵן יִתֵּן אֲדֹנָי הוּא לָכֶם אוֹת הִנֵּה הָעַלְמָה הָרָה וְיֹלֶדֶת בֵּן וְקָרָאת שְׁמוֹ עִמָּנוּ אֵל׃",
   "english": "Therefore, the Lord himself shall give you a sign—Behold, a virgin shall conceive, and shall bear a son, and shall call his name Immanuel."
  },
  {
@@ -8333,7 +8333,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 25,
   "verse": 1,
-  "hebrew": "וְעַתָּה אֲדַבֵּר נְפִי מְעַט עַל־הַדְּבָרִים אֲשֶׁר כָּתַבְתִּי אֲשֶׁר דֻּבְּרוּ בְּפִי יְשַׁעְיָהוּ כִּי הִנֵּה דִּבֶּר יְשַׁעְיָהוּ דְּבָרִים רַבִּים אֲשֶׁר קָשׁוּ לְהָבִין לְרַבִּים מֵעַמִּי כִּי לֹא יָדְעוּ דֶּרֶךְ נְבוּאַת הַיְּהוּדִים׃",
+  "hebrew": "וְעַתָּה אֲדַבֵּר נֶפִי מְעַט עַל־הַדְּבָרִים אֲשֶׁר כָּתַבְתִּי אֲשֶׁר דֻּבְּרוּ בְּפִי יְשַׁעְיָהוּ כִּי הִנֵּה דִּבֶּר יְשַׁעְיָהוּ דְּבָרִים רַבִּים אֲשֶׁר קָשׁוּ לְהָבִין לְרַבִּים מֵעַמִּי כִּי לֹא יָדְעוּ דֶּרֶךְ נְבוּאַת הַיְּהוּדִים׃",
   "english": "Now I, Nephi, do speak somewhat concerning the words which I have written, which have been spoken by the mouth of Isaiah. For behold, Isaiah spake many things which were hard for many of my people to understand; for they know not concerning the manner of prophesying among the Jews."
  },
  {
@@ -8368,7 +8368,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 25,
   "verse": 6,
-  "hebrew": "אַךְ הִנֵּה לֹא לִמַּדְתִּי בָנַי כְּדֶרֶךְ הַיְּהוּדִים אַךְ יָשַׁבְתִּי בִּירוּשָׁלַיִם לָכֵן יָדַעְתִּי הַמְּקוֹמוֹת סְבִיבוֹתֶיהָ וְהִזְכַּרְתִּי לְבָנַי מִשְׁפְּטֵי אֱלֹהִים אֲשֶׁר בָּאוּ עַל־הַיְּהוּדִים כְּכֹל אֲשֶׁר דִּבֶּר יְשַׁעְיָהוּ וְאֵינֶנִּי כוֹתְבָם׃",
+  "hebrew": "אַךְ הִנֵּה לֹא לִמַּדְתִּי בָנַי כְּדֶרֶךְ הַיְּהוּדִים אַךְ יָשַׁבְתִּי בִּירוּשָׁלַיִם לָכֵן יָדַעְתִּי הַמְּקוֹמוֹת סְבִיבוֹתֶיהָ וְהִזְכַּרְתִּי לְבָנַי מִשְׁפְּטֵי אֱלֹהִים אֲשֶׁר בָּאוּ עַל־הַיְּהוּדִים כְּכֹל אֲשֶׁר דִּבֶּר יְשַׁעְיָהוּ וְאֵינֶנִּי כּוֹתְבָם׃",
   "english": "But behold, I, Nephi, have not taught my children after the manner of the Jews; but behold, I, of myself, have dwelt at Jerusalem, wherefore I know concerning the regions round about; and I have made mention unto my children concerning the judgments of God, which hath come to pass among the Jews, unto my children, according to all that which Isaiah hath spoken, and I do not write them."
  },
  {
@@ -9467,7 +9467,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 31,
   "verse": 1,
-  "hebrew": "וְעַתָּה אֲכַלֶּה נְפִי אֶת־נְבוּאָתִי אֲלֵיכֶם אַחַי הָאֲהוּבִים וְלֹא אוּכַל לִכְתֹּב כִּי אִם־דְּבָרִים מְעַטִּים אֲשֶׁר יָדֹעַ יָדַעְתִּי כִּי הָיֹה יִהְיוּ וְלֹא אוּכַל לִכְתֹּב כִּי אִם־מְעַט מִדִּבְרֵי אָחִי יַעֲקֹב׃",
+  "hebrew": "וְעַתָּה אֲכַלֶּה נֶפִי אֶת־נְבוּאָתִי אֲלֵיכֶם אַחַי הָאֲהוּבִים וְלֹא אוּכַל לִכְתֹּב כִּי אִם־דְּבָרִים מְעַטִּים אֲשֶׁר יָדֹעַ יָדַעְתִּי כִּי הָיֹה יִהְיוּ וְלֹא אוּכַל לִכְתֹּב כִּי אִם־מְעַט מִדִּבְרֵי אָחִי יַעֲקֹב׃",
   "english": "And now I, Nephi, make an end of my prophesying unto you, my beloved brethren. And I cannot write but a few things, which I know must surely come to pass; neither can I write but a few of the words of my brother Jacob."
  },
  {
@@ -9516,7 +9516,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 31,
   "verse": 8,
-  "hebrew": "לָכֵן אַחֲרֵי אֲשֶׁר נִטְבַּל בַּמַּיִם יָרְדָה רוּחַ הַקֹּדֶשׁ עָלָיו בִּדְמוּת יוֹנָה׃",
+  "hebrew": "לָכֵן אַחֲרֵי אֲשֶׁר נִטְבַּל בַּמַּיִם יָרַד רוּחַ הַקֹּדֶשׁ עָלָיו בִּדְמוּת יוֹנָה׃",
   "english": "Wherefore, after he was baptized with water the Holy Ghost descended upon him in the form of a dove."
  },
  {
@@ -9628,7 +9628,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 32,
   "verse": 3,
-  "hebrew": "מַלְאָכִים מְדַבְּרִים בְּכֹחַ רוּחַ הַקֹּדֶשׁ לָכֵן מְדַבְּרִים דִּבְרֵי הַמָּשִׁיחַ לָכֵן אָמַרְתִּי לָכֶם הִתְעַנְּגוּ עַל־דִּבְרֵי הַמָּשִׁיחַ כִּי הִנֵּה דִּבְרֵי הַמָּשִׁיחַ הַגֵּד יַגִּידוּ לָכֶם אֵת כָּל־אֲשֶׁר תַּעֲשׂוּן׃",
+  "hebrew": "מַלְאָכִים מְדַבְּרִים בְּכֹחַ רוּחַ הַקֹּדֶשׁ לָכֵן מְדַבְּרִים דִּבְרֵי הַמָּשִׁיחַ לָכֵן אָמַרְתִּי לָכֶם הִתְעַנְּגוּ עַל־דִּבְרֵי הַמָּשִׁיחַ כִּי הִנֵּה דִּבְרֵי הַמָּשִׁיחַ הַגֵּד יַגִּידוּ לָכֶם אֶת־כָּל־אֲשֶׁר תַּעֲשׂוּן׃",
   "english": "Angels speak by the power of the Holy Ghost; wherefore, they speak the words of Christ. Wherefore, I said unto you, feast upon the words of Christ; for behold, the words of Christ will tell you all things what ye should do."
  },
  {
@@ -9684,14 +9684,14 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 33,
   "verse": 2,
-  "hebrew": "אַךְ הִנֵּה רַבִּים מַקְשִׁים לִבָּם נֶגֶד רוּחַ הַקֹּדֶשׁ וְאֵין לָהּ מָקוֹם בָּם לָכֵן יַשְׁלִיכוּ דְבָרִים רַבִּים הַכְּתוּבִים וְיַחְשְׁבוּם לְאָיִן׃",
+  "hebrew": "אַךְ הִנֵּה רַבִּים מַקְשִׁים לִבָּם נֶגֶד רוּחַ הַקֹּדֶשׁ וְאֵין לוֹ מָקוֹם בָּם לָכֵן יַשְׁלִיכוּ דְבָרִים רַבִּים הַכְּתוּבִים וְיַחְשְׁבוּם לְאָיִן׃",
   "english": "But behold, there are many that harden their hearts against the Holy Spirit, that it hath no place in them; wherefore, they cast many things away which are written and esteem them as things of naught."
  },
  {
   "book": "2 Nephi",
   "chapter": 33,
   "verse": 3,
-  "hebrew": "אַךְ כָּתַבְתִּי נֶפִי אֵת אֲשֶׁר כָּתַבְתִּי וַאֲחַשְּׁבֵהוּ לְיָקָר מְאֹד וּבִפְרָט לְעַמִּי כִּי אֶתְפַּלֵּל בַּעֲדָם תָּמִיד יוֹמָם וְתַרְטַבְנָה עֵינַי כָרִי לָיְלָה בַּעֲבוּרָם וָאֶזְעַק לֵאלֹהַי בֶּאֱמוּנָה וְיָדַעְתִּי כִּי שָׁמוֹעַ יִשְׁמַע זַעֲקָתִי׃",
+  "hebrew": "אַךְ כָּתַבְתִּי נֶפִי אֶת־אֲשֶׁר כָּתַבְתִּי וַאֲחַשְּׁבֵהוּ לְיָקָר מְאֹד וּבִפְרָט לְעַמִּי כִּי אֶתְפַּלֵּל בַּעֲדָם תָּמִיד יוֹמָם וְתַרְטַבְנָה עֵינַי כָרִי לָיְלָה בַּעֲבוּרָם וָאֶזְעַק לֵאלֹהַי בֶּאֱמוּנָה וְיָדַעְתִּי כִּי שָׁמוֹעַ יִשְׁמַע זַעֲקָתִי׃",
   "english": "But I, Nephi, have written what I have written, and I esteem it as of great worth, and especially unto my people. For I pray continually for them by day, and mine eyes water my pillow by night, because of them; and I cry unto my God in faith, and I know that he will hear my cry."
  },
  {
@@ -10363,7 +10363,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 4,
   "verse": 16,
-  "hebrew": "אַךְ הִנֵּה עַל־פִּי הַכְּתוּבִים תִּהְיֶה הָאֶבֶן הַזֹּאת לְיְסוֹד גָּדוֹל וְאַחֲרוֹן וּבָטוּחַ יְחִידִי אֲשֶׁר עָלָיו יוּכְלוּ הַיְּהוּדִים לִבְנוֹת׃",
+  "hebrew": "אַךְ הִנֵּה עַל־פִּי הַכְּתוּבִים תִּהְיֶה הָאֶבֶן הַזֹּאת לִיסוֹד גָּדוֹל וְאַחֲרוֹן וּבָטוּחַ יְחִידִי אֲשֶׁר עָלָיו יוּכְלוּ הַיְּהוּדִים לִבְנוֹת׃",
   "english": "But behold, according to the scriptures, this stone shall become the great, and the last, and the only sure foundation, upon which the Jews can build."
  },
  {
@@ -10895,7 +10895,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 5,
   "verse": 74,
-  "hebrew": "וְכָכָה עָבְדוּ בְּכָל־כֹּחָם כְּמִצְוֹת אֲדוֹן הַכֶּרֶם עַד אֲשֶׁר הֻשְׁלַךְ הָרַע מִן־הַכֶּרֶם וַיִּשְׁמֹר הָאָדוֹן לוֹ כִּי הָיוּ הָעֵצִים שׁוּב לְפְרִי טִבְעִי וַיִּהְיוּ כְּגוּף אֶחָד וְהָיוּ הַפֵּרוֹת שָׁוִים וַיִּשְׁמֹר אֲדוֹן הַכֶּרֶם לוֹ אֶת־הַפְּרִי הַטִּבְעִי אֲשֶׁר הָיָה יָקָר לוֹ מֵרֵאשִׁית׃",
+  "hebrew": "וְכָכָה עָבְדוּ בְּכָל־כֹּחָם כְּמִצְוֹת אֲדוֹן הַכֶּרֶם עַד אֲשֶׁר הֻשְׁלַךְ הָרַע מִן־הַכֶּרֶם וַיִּשְׁמֹר הָאָדוֹן לוֹ כִּי הָיוּ הָעֵצִים שׁוּב לִפְרִי טִבְעִי וַיִּהְיוּ כְּגוּף אֶחָד וְהָיוּ הַפֵּרוֹת שָׁוִים וַיִּשְׁמֹר אֲדוֹן הַכֶּרֶם לוֹ אֶת־הַפְּרִי הַטִּבְעִי אֲשֶׁר הָיָה יָקָר לוֹ מֵרֵאשִׁית׃",
   "english": "And thus they labored, with all diligence, according to the command– ments of the Lord of the vineyard, even until the bad had been cast away out of the vineyard, and the Lord had preserved unto himself that the trees had become again the natural fruit; and they became like unto one body; and the fruits were equal; and the Lord of the vineyard had preserved unto himself the natural fruit, which was most precious unto him from the beginning."
  },
  {
@@ -11049,7 +11049,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 7,
   "verse": 6,
-  "hebrew": "וַיְהִי כִּי בָּא אֵלַי וּבַדֶּרֶךְ הַזֹּאת דִּבֶּר אֵלַי לֵאמֹר אָחִי יַעֲקֹב בִּקַּשְׁתִּי תַּאֲנָה רַבָּה לְדַבֵּר אֵלֶיךָ כִּי שָׁמַעְתִּי וְגַם יָדַעְתִּי כִּי אַתָּה הוֹלֵךְ הָלוֹךְ וְדָרֹשׁ אֵת אֲשֶׁר תִּקְרָא לוֹ הַבְּשׂוֹרָה אוֹ תּוֹרַת הַמָּשִׁיחַ׃",
+  "hebrew": "וַיְהִי כִּי בָּא אֵלַי וּבַדֶּרֶךְ הַזֹּאת דִּבֶּר אֵלַי לֵאמֹר אָחִי יַעֲקֹב בִּקַּשְׁתִּי תַּאֲנָה רַבָּה לְדַבֵּר אֵלֶיךָ כִּי שָׁמַעְתִּי וְגַם יָדַעְתִּי כִּי אַתָּה הוֹלֵךְ הָלוֹךְ וְדָרֹשׁ אֶת־אֲשֶׁר תִּקְרָא לוֹ הַבְּשׂוֹרָה אוֹ תּוֹרַת הַמָּשִׁיחַ׃",
   "english": "And it came to pass that he came unto me, and on this wise did he speak unto me, saying: Brother Jacob, I have sought much opportunity that I might speak unto you; for I have heard and also know that thou goest about much, preaching that which ye call the gospel, or the doctrine of Christ."
  },
  {
@@ -11084,7 +11084,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 7,
   "verse": 11,
-  "hebrew": "וָאֹמַר אֵלָיו אִם־כֵּן לֹא הֲבִינוֹתָ אוֹתָם כִּי הֵם מְעִידִים בֶּאֱמֶת עַל־הַמָּשִׁיחַ הִנֵּה אֹמֵר לְךָ כִּי לֹא כָתְבוּ הַנְּבִיאִים וְלֹא נִבְּאוּ בִּלְתִּי אִם־דִּבְּרוּ עַל־הַמָּשִׁיחַ הַזֶּה׃",
+  "hebrew": "וָאֹמַר אֵלָיו אִם־כֵּן לֹא הֲבִינוֹתָ אוֹתָם כִּי הֵם מְעִידִים בֶּאֱמֶת עַל־הַמָּשִׁיחַ הִנֵּה אֹמֵר לְךָ כִּי לֹא כָּתְבוּ הַנְּבִיאִים וְלֹא נִבְּאוּ בִּלְתִּי אִם־דִּבְּרוּ עַל־הַמָּשִׁיחַ הַזֶּה׃",
   "english": "And I said unto him: Then ye do not understand them; for they truly testify of Christ. Behold, I say unto you that none of the prophets have written, nor prophesied, save they have spoken concerning this Christ."
  },
  {
@@ -11175,7 +11175,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 7,
   "verse": 24,
-  "hebrew": "וַיְהִי כִּי חֻשְּׁבוּ דְרָכִים רַבּוֹת לְהָשִׁיב וּלְהַחֲזִיר אֶת־הַלְּמָנִים אֶל־דַּעַת הָאֱמֶת אַךְ הָיָה הַכֹּל לַשָּׁוְא כִּי שָׂשׂוּ בְּמִלְחָמוֹת וּבִשְׁפִיכוּת דָּמִים וַתְּהִי לָהֶם שִׂנְאַת עוֹלָם אֵלֵינוּ אֲחֵיהֶם וַיְבַקְשׁוּ בְּכֹחַ כְּלֵי נִשְׁקָם לְהַשְׁמִידֵנוּ תָּמִיד׃",
+  "hebrew": "וַיְהִי כִּי חֻשְּׁבוּ דְרָכִים רַבּוֹת לְהָשִׁיב וּלְהַחֲזִיר אֶת־הַלָּמָנִים אֶל־דַּעַת הָאֱמֶת אַךְ הָיָה הַכֹּל לַשָּׁוְא כִּי שָׂשׂוּ בְּמִלְחָמוֹת וּבִשְׁפִיכוּת דָּמִים וַתְּהִי לָהֶם שִׂנְאַת עוֹלָם אֵלֵינוּ אֲחֵיהֶם וַיְבַקְשׁוּ בְּכֹחַ כְּלֵי נִשְׁקָם לְהַשְׁמִידֵנוּ תָּמִיד׃",
   "english": "And it came to pass that many means were devised to reclaim and restore the Lamanites to the knowledge of the truth; but it all was vain, for they delighted in wars and bloodshed, and they had an eternal hatred against us, their brethren. And they sought by the power of their arms to destroy us continually."
  },
  {
@@ -11189,7 +11189,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 7,
   "verse": 26,
-  "hebrew": "וַיְהִי כִּי הִזְקַנְתִּי יַעֲקֹב וְנִכְתָּבִים דִּבְרֵי הָעָם הַזֶּה עַל־לוּחוֹת נֶפִי הָאֲחֵרִים לָכֵן אֲכַלֶּה אֶת־הַסֵּפֶר הַזֶּה מַגִּיד כִּי כָתַבְתִּי כְּפִי מֵיטַב דַּעְתִּי לֵאמֹר כִּי עָבַר הַזְּמָן עִמָּנוּ וְגַם עָבְרוּ חַיֵּינוּ כַּחֲלוֹם הָיִינוּ עַם בּוֹדֵד וְקוֹדֵר נוֹדְדִים מֻשְׁלָכִים מִירוּשָׁלַיִם נוֹלָדִים בְּצָרָה בַּמִּדְבָּר וּשְׂנוּאִים לַאֲחֵינוּ אֲשֶׁר הֵבִיאוּ מִלְחָמוֹת וּמְרִיבוֹת לָכֵן בָּכִינוּ אֶת־יָמֵינוּ׃",
+  "hebrew": "וַיְהִי כִּי הִזְקַנְתִּי יַעֲקֹב וְנִכְתָּבִים דִּבְרֵי הָעָם הַזֶּה עַל־לוּחוֹת נֶפִי הָאֲחֵרִים לָכֵן אֲכַלֶּה אֶת־הַסֵּפֶר הַזֶּה מַגִּיד כִּי כָּתַבְתִּי כְּפִי מֵיטַב דַּעְתִּי לֵאמֹר כִּי עָבַר הַזְּמָן עִמָּנוּ וְגַם עָבְרוּ חַיֵּינוּ כַּחֲלוֹם הָיִינוּ עַם בּוֹדֵד וְקוֹדֵר נוֹדְדִים מֻשְׁלָכִים מִירוּשָׁלַיִם נוֹלָדִים בְּצָרָה בַּמִּדְבָּר וּשְׂנוּאִים לַאֲחֵינוּ אֲשֶׁר הֵבִיאוּ מִלְחָמוֹת וּמְרִיבוֹת לָכֵן בָּכִינוּ אֶת־יָמֵינוּ׃",
   "english": "And it came to pass that I, Jacob, began to be old; and the record of this people being kept on the other plates of Nephi, wherefore, I conclude this record, declaring that I have written according to the best of my knowledge, by saying that the time passed away with us, and also our lives passed away like as it were unto us a dream, we being a lonesome and a solemn people, wanderers, cast out from Jerusalem, born in tribulation, in a wilderness, and hated of our brethren, which caused wars and contentions; wherefore, we did mourn out our days."
  },
  {
@@ -11413,7 +11413,7 @@ window._officialVersesData = [
   "book": "Jarom",
   "chapter": 1,
   "verse": 4,
-  "hebrew": "וְרַבִּים בְּתוֹכֵנוּ אֲשֶׁר לָהֶם חֶזְיוֹנוֹת רַבִּים כִּי לֹא כֻלָּם קְשֵׁי־עֹרֶף וְכָל־אֲשֶׁר אֵינָם קְשֵׁי־עֹרֶף וְיֵשׁ לָהֶם אֱמוּנָה יֵשׁ לָהֶם חִבּוּר עִם־רוּחַ הַקֹּדֶשׁ הַמְגַלָּה לִבְנֵי־הָאָדָם כְּפִי אֱמוּנָתָם׃",
+  "hebrew": "וְרַבִּים בְּתוֹכֵנוּ אֲשֶׁר לָהֶם חֶזְיוֹנוֹת רַבִּים כִּי לֹא כֻלָּם קְשֵׁי־עֹרֶף וְכָל־אֲשֶׁר אֵינָם קְשֵׁי־עֹרֶף וְיֵשׁ לָהֶם אֱמוּנָה יֵשׁ לָהֶם חִבּוּר עִם־רוּחַ הַקֹּדֶשׁ הַמְגַלֶּה לִבְנֵי־הָאָדָם כְּפִי אֱמוּנָתָם׃",
   "english": "And there are many among us who have many revelations, for they are not all stiffnecked. And as many as are not stiffnecked and have faith, have communion with the Holy Spirit, which maketh manifest unto the children of men, according to their faith."
  },
  {
@@ -11553,7 +11553,7 @@ window._officialVersesData = [
   "book": "Omni",
   "chapter": 1,
   "verse": 9,
-  "hebrew": "וְעַתָּה אֲנִי כְּמִישׁ כֹּתֵב אֶת־הַדְּבָרִים הַמְּעַטִּים אֲשֶׁר אֶכְתֹּב בַּסֵּפֶר הַזֶּה עִם־אָחִי כִּי הִנֵּה רָאִיתִי אֶת־הָאַחֲרוֹן אֲשֶׁר כָּתַב כִּי כְתָבוֹ בְּיָדוֹ וַיִּכְתְּבֵהוּ בַּיּוֹם אֲשֶׁר מְסָרָם אֵלָי וּבַדֶּרֶךְ הַזֹּאת אָנוּ שׁוֹמְרִים אֶת־הַכְּתָבִים כִּי הוּא כְּפִי מִצְוַת אֲבוֹתֵינוּ וַאֲכַלֶּה׃",
+  "hebrew": "וְעַתָּה אֲנִי כְּמִישׁ כֹּתֵב אֶת־הַדְּבָרִים הַמְּעַטִּים אֲשֶׁר אֶכְתֹּב בַּסֵּפֶר הַזֶּה עִם־אָחִי כִּי הִנֵּה רָאִיתִי אֶת־הָאַחֲרוֹן אֲשֶׁר כָּתַב כִּי כְּתָבוֹ בְּיָדוֹ וַיִּכְתְּבֵהוּ בַּיּוֹם אֲשֶׁר מְסָרָם אֵלָי וּבַדֶּרֶךְ הַזֹּאת אָנוּ שׁוֹמְרִים אֶת־הַכְּתָבִים כִּי הוּא כְּפִי מִצְוַת אֲבוֹתֵינוּ וַאֲכַלֶּה׃",
   "english": "Now I, Chemish, write what few things I write, in the same book with my brother; for behold, I saw the last which he wrote, that he wrote it with his own hand; and he wrote it in the day that he delivered them unto me. And after this manner we keep the records, for it is according to the commandments of our fathers. And I make an end."
  },
  {
@@ -11609,7 +11609,7 @@ window._officialVersesData = [
   "book": "Omni",
   "chapter": 1,
   "verse": 17,
-  "hebrew": "וּבָעֵת אֲשֶׁר מְצָאָם מוֹשִׁיָּה הָיוּ לְעַם רַב מְאֹד אַךְ הָיוּ לָהֶם מִלְחָמוֹת וּמְרִיבוֹת קָשׁוֹת רַבּוֹת וַיִּפְּלוּ בַחֶרֶב מֵעֵת לְעֵת וּשְׂפָתָם נִשְׁחֲתָה וְלֹא הֵבִיאוּ כְתָבִים עִמָּם וַיְכַחֲשׁוּ בּוֹרְאָם וְלֹא יָכְלוּ מוֹשִׁיָּה וְעַמּוֹ לְהָבִין אוֹתָם׃",
+  "hebrew": "וּבָעֵת אֲשֶׁר מְצָאָם מוֹשִׁיָּה הָיוּ לְעַם רַב מְאֹד אַךְ הָיוּ לָהֶם מִלְחָמוֹת וּמְרִיבוֹת קָשׁוֹת רַבּוֹת וַיִּפְּלוּ בַחֶרֶב מֵעֵת לְעֵת וּשְׂפָתָם נִשְׁחֲתָה וְלֹא הֵבִיאוּ כְּתָבִים עִמָּם וַיְכַחֲשׁוּ בּוֹרְאָם וְלֹא יָכְלוּ מוֹשִׁיָּה וְעַמּוֹ לְהָבִין אוֹתָם׃",
   "english": "And at the time that Mosiah discovered them, they had become exceedingly numerous. Nevertheless, they had had many wars and serious contentions, and had fallen by the sword from time to time; and their language had become corrupted; and they had brought no records with them; and they denied the being of their Creator; and Mosiah, nor the people of Mosiah, could understand them."
  },
  {
@@ -11707,7 +11707,7 @@ window._officialVersesData = [
   "book": "Words of Mormon",
   "chapter": 1,
   "verse": 1,
-  "hebrew": "וְעַתָּה קָרוֹב מוֹרְמוֹן לִמְסֹר אֶת־הַכְּתָבִים אֲשֶׁר עָשִׂיתִי בְּיַד בְּנִי מוֹרוֹנִי הִנֵּה רָאִיתִי כִּמְעַט אֶת־כָּל־הַשְׁמָדַת עַמִּי הַנֶּפִים׃",
+  "hebrew": "וְעַתָּה קָרוֹב מוֹרְמוֹן לִמְסֹר אֶת־הַכְּתָבִים אֲשֶׁר עָשִׂיתִי בְּיַד בְּנִי מוֹרוֹנִי הִנֵּה רָאִיתִי כִּמְעַט אֶת־כָּל־הַשְׁמָדַת עַמִּי הַנֶּפִיִּים׃",
   "english": "And now I, Mormon, being about to deliver up the record which I have been making into the hands of my son Moroni, behold I have witnessed almost all the destruction of my people, the Nephites."
  },
  {
@@ -11721,7 +11721,7 @@ window._officialVersesData = [
   "book": "Words of Mormon",
   "chapter": 1,
   "verse": 3,
-  "hebrew": "וְעַתָּה אֲדַבֵּר מְעַט עַל־אֲשֶׁר כָּתַבְתִּי כִּי אַחֲרֵי כָתְבִי בְקִצָּרָה מִלּוּחוֹת נֶפִי עַד־מַלְכוּת בִּנְיָמִין הַמֶּלֶךְ הַזֶּה אֲשֶׁר דִּבֶּר עָלָיו עֲמָלֵקִי חִפַּשְׂתִּי בֵּין הַכְּתָבִים אֲשֶׁר נִמְסְרוּ בְּיָדִי וָאֶמְצָא אֶת־הַלֻּחוֹת הָאֵלֶּה אֲשֶׁר הֵכִילוּ אֶת־הַחֶשְׁבּוֹן הַקָּטָן הַזֶּה שֶׁל־הַנְּבִיאִים מִיַּעֲקֹב עַד־מַלְכוּת בִּנְיָמִין הַמֶּלֶךְ הַזֶּה וְגַם דִּבְרֵי נֶפִי רַבִּים׃",
+  "hebrew": "וְעַתָּה אֲדַבֵּר מְעַט עַל־אֲשֶׁר כָּתַבְתִּי כִּי אַחֲרֵי כָּתְבִי בְקִצָּרָה מִלּוּחוֹת נֶפִי עַד־מַלְכוּת בִּנְיָמִין הַמֶּלֶךְ הַזֶּה אֲשֶׁר דִּבֶּר עָלָיו עֲמָלֵקִי חִפַּשְׂתִּי בֵּין הַכְּתָבִים אֲשֶׁר נִמְסְרוּ בְּיָדִי וָאֶמְצָא אֶת־הַלֻּחוֹת הָאֵלֶּה אֲשֶׁר הֵכִילוּ אֶת־הַחֶשְׁבּוֹן הַקָּטָן הַזֶּה שֶׁל־הַנְּבִיאִים מִיַּעֲקֹב עַד־מַלְכוּת בִּנְיָמִין הַמֶּלֶךְ הַזֶּה וְגַם דִּבְרֵי נֶפִי רַבִּים׃",
   "english": "And now, I speak somewhat concerning that which I have written; for after I had made an abridgment from the plates of Nephi, down to the reign of this king Benjamin, of whom Amaleki spake, I searched among the records which had been delivered into my hands, and I found these plates, which contained this small account of the prophets, from Jacob down to the reign of this king Benjamin, and also many of the words of Nephi."
  },
  {
@@ -11770,7 +11770,7 @@ window._officialVersesData = [
   "book": "Words of Mormon",
   "chapter": 1,
   "verse": 10,
-  "hebrew": "לָכֵן וַיְהִי אַחֲרֵי מָסַר עֲמָלֵקִי אֶת־הַלֻּחוֹת הָאֵלֶּה בְּיַד הַמֶּלֶךְ בִּנְיָמִין לְקָחָם וַיָּשֶׂם אוֹתָם עִם־הַלֻּחוֹת הָאֲחֵרִים אֲשֶׁר הֵכִילוּ כְתָבִים אֲשֶׁר נִמְסְרוּ מִדּוֹר לְדוֹר עַל־יְדֵי הַמְּלָכִים עַד־יְמֵי הַמֶּלֶךְ בִּנְיָמִין׃",
+  "hebrew": "לָכֵן וַיְהִי אַחֲרֵי מָסַר עֲמָלֵקִי אֶת־הַלֻּחוֹת הָאֵלֶּה בְּיַד הַמֶּלֶךְ בִּנְיָמִין לְקָחָם וַיָּשֶׂם אוֹתָם עִם־הַלֻּחוֹת הָאֲחֵרִים אֲשֶׁר הֵכִילוּ כְּתָבִים אֲשֶׁר נִמְסְרוּ מִדּוֹר לְדוֹר עַל־יְדֵי הַמְּלָכִים עַד־יְמֵי הַמֶּלֶךְ בִּנְיָמִין׃",
   "english": "Wherefore, it came to pass that after Amaleki had delivered up these plates into the hands of king Benjamin, he took them and put them with the other plates, which contained records which had been handed down by the kings, from generation to generation until the days of king Benjamin."
  },
  {
@@ -11840,7 +11840,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 1,
   "verse": 2,
-  "hebrew": "וַיְהִי כִּי הָיוּ לוֹ שְׁלֹשָׁה בָנִים וַיִּקְרָא אֶת־שְׁמוֹתָם מוֹשִׁיָּה וְהֵלוֹרוּם וְהֵלָמָן וַיְצַו לְלַמְּדָם בְּכָל־שְׂפַת אֲבוֹתָיו לְמַעַן יִהְיוּ לַאֲנָשֵׁי תְבוּנָה וּלְמַעַן יֵדְעוּ אֶת־הַנְּבוּאוֹת אֲשֶׁר דִּבְּרוּ אֲבוֹתֵיהֶם אֲשֶׁר נִמְסְרוּ לָהֶם בְּיַד יְהוָה׃",
+  "hebrew": "וַיְהִי כִּי הָיוּ לוֹ שְׁלֹשָׁה בָנִים וַיִּקְרָא אֶת־שְׁמוֹתָם מוֹשִׁיָּה וְהֵלוֹרוּם וְהֵילָמָן וַיְצַו לְלַמְּדָם בְּכָל־שְׂפַת אֲבוֹתָיו לְמַעַן יִהְיוּ לַאֲנָשֵׁי תְבוּנָה וּלְמַעַן יֵדְעוּ אֶת־הַנְּבוּאוֹת אֲשֶׁר דִּבְּרוּ אֲבוֹתֵיהֶם אֲשֶׁר נִמְסְרוּ לָהֶם בְּיַד יְהוָה׃",
   "english": "And it came to pass that he had three sons; and he called their names Mosiah, and Helorum, and Helaman. And he caused that they should be taught in all the language of his fathers, that thereby they might become men of understanding; and that they might know concerning the prophecies which had been spoken by the mouths of their fathers, which were delivered them by the hand of the Lord."
  },
  {
@@ -12204,7 +12204,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 2,
   "verse": 36,
-  "hebrew": "וְעַתָּה אַחַי אַחֲרֵי יְדַעְתֶּם וְלֻמַּדְתֶּם אֶת־כָּל־הַדְּבָרִים הָאֵלֶּה אִם־תַּעַבְרוּ וְתֵלְכוּ נֶגֶד הַדְּבָרִים אֲשֶׁר נֶאֶמְרוּ וְתִמְנְעוּ אֶת־עַצְמְכֶם מֵרוּחַ יְהוָה עַד אֲשֶׁר אֵין לָהּ מָקוֹם בָּכֶם לְהוֹרֹתְכֶם בִּנְתִיבוֹת הַחָכְמָה לְמַעַן תְּבֹרְכוּ וְתַצְלִיחוּ וְתִשָּׁמְרוּ׃",
+  "hebrew": "וְעַתָּה אַחַי אַחֲרֵי יְדַעְתֶּם וְלֻמַּדְתֶּם אֶת־כָּל־הַדְּבָרִים הָאֵלֶּה אִם־תַּעַבְרוּ וְתֵלְכוּ נֶגֶד הַדְּבָרִים אֲשֶׁר נֶאֶמְרוּ וְתִמְנְעוּ אֶת־עַצְמְכֶם מֵרוּחַ יְהוָה עַד אֲשֶׁר אֵין לוֹ מָקוֹם בָּכֶם לְהוֹרֹתְכֶם בִּנְתִיבוֹת הַחָכְמָה לְמַעַן תְּבֹרְכוּ וְתַצְלִיחוּ וְתִשָּׁמְרוּ׃",
   "english": "And now, I say unto you, my brethren, that after ye have known and have been taught all these things, if ye should transgress and go contrary to that which has been spoken, that ye do withdraw yourselves from the Spirit of the Lord, that it may have no place in you to guide you in wisdom’s paths that ye may be blessed, prospered, and preserved—"
  },
  {
@@ -12246,7 +12246,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 3,
   "verse": 1,
-  "hebrew": "וְעוֹד אַחַי אֶקְרָא לִבְּכֶם כִּי יֵשׁ־לִי עוֹד לְדַבֵּר אֲלֵיכֶם וְהִנֵּה אַגִּיד לָכֶם אֵת אֲשֶׁר יָבוֹא׃",
+  "hebrew": "וְעוֹד אַחַי אֶקְרָא לִבְּכֶם כִּי יֵשׁ־לִי עוֹד לְדַבֵּר אֲלֵיכֶם וְהִנֵּה אַגִּיד לָכֶם אֶת־אֲשֶׁר יָבוֹא׃",
   "english": "And again my brethren, I would call your attention, for I have somewhat more to speak unto you; for behold, I have things to tell you concerning that which is to come."
  },
  {
@@ -12344,7 +12344,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 3,
   "verse": 15,
-  "hebrew": "וְהֶרְאָה לָהֶם אוֹתוֹת וּמוֹפְתִים וְדְמֻיּוֹת וּצְלָלִים רַבִּים עַל־בּוֹאוֹ וְגַם דִּבְּרוּ נְבִיאֵי קֹדֶשׁ עַל־בּוֹאוֹ וְאַף־עַל־פִּי־כֵן הִקְשׁוּ אֶת־לִבָּם וְלֹא הֵבִינוּ כִּי לֹא תוֹעִיל תּוֹרַת מֹשֶׁה בְּלִי כַפָּרַת דָּמוֹ׃",
+  "hebrew": "וְהֶרְאָה לָהֶם אוֹתוֹת וּמוֹפְתִים וּדְמֻיּוֹת וּצְלָלִים רַבִּים עַל־בּוֹאוֹ וְגַם דִּבְּרוּ נְבִיאֵי קֹדֶשׁ עַל־בּוֹאוֹ וְאַף־עַל־פִּי־כֵן הִקְשׁוּ אֶת־לִבָּם וְלֹא הֵבִינוּ כִּי לֹא תוֹעִיל תּוֹרַת מֹשֶׁה בְּלִי כַפָּרַת דָּמוֹ׃",
   "english": "And many signs, and wonders, and types, and shadows showed he unto them, concerning his coming; and also holy prophets spake unto them concerning his coming; and yet they hardened their hearts, and understood not that the law of Moses availeth nothing except it were through the atonement of his blood."
  },
  {
@@ -12449,7 +12449,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 4,
   "verse": 3,
-  "hebrew": "וַיְהִי אַחֲרֵי דַבְּרָם אֶת־הַדְּבָרִים הָאֵלֶּה וַתָּנַח עֲלֵיהֶם רוּחַ יְהוָה וַיִּמָּלְאוּ שִׂמְחָה כִּי קִבְּלוּ סְלִיחַת חַטֹּאתֵיהֶם וַיְהִי לָהֶם שְׁלוֹם־מַצְפּוּן בַּעֲבוּר אֱמוּנָתָם הַגְּדוֹלָה בְּיֵשׁוּעַ הַמָּשִׁיחַ אֲשֶׁר יָבוֹא כַּדְּבָרִים אֲשֶׁר דִּבֶּר אֲלֵיהֶם הַמֶּלֶךְ בִּנְיָמִין׃",
+  "hebrew": "וַיְהִי אַחֲרֵי דַבְּרָם אֶת־הַדְּבָרִים הָאֵלֶּה וַיָּנַח עֲלֵיהֶם רוּחַ יְהוָה וַיִּמָּלְאוּ שִׂמְחָה כִּי קִבְּלוּ סְלִיחַת חַטֹּאתֵיהֶם וַיְהִי לָהֶם שְׁלוֹם־מַצְפּוּן בַּעֲבוּר אֱמוּנָתָם הַגְּדוֹלָה בְּיֵשׁוּעַ הַמָּשִׁיחַ אֲשֶׁר יָבוֹא כַּדְּבָרִים אֲשֶׁר דִּבֶּר אֲלֵיהֶם הַמֶּלֶךְ בִּנְיָמִין׃",
   "english": "And it came to pass that after they had spoken these words the Spirit of the Lord came upon them, and they were filled with joy, having received a remission of their sins, and having peace of conscience, because of the exceeding faith which they had in Jesus Christ who should come, according to the words which king Benjamin had spoken unto them."
  },
  {
@@ -12603,7 +12603,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 4,
   "verse": 25,
-  "hebrew": "וְעַתָּה אִם־תֹּאמְרוּ זֹאת בִּלְבַבְכֶם תִּשָּׁאֲרוּ נְקִיִּים וְאִם־לֹא תֵּחָשְׁבוּ אֲשֵׁמִים וְאַשְׁמַתְכֶם צֶדֶק כִּי חָמַדְתֶּם אֵת אֲשֶׁר לֹא קִבַּלְתֶּם׃",
+  "hebrew": "וְעַתָּה אִם־תֹּאמְרוּ זֹאת בִּלְבַבְכֶם תִּשָּׁאֲרוּ נְקִיִּים וְאִם־לֹא תֵּחָשְׁבוּ אֲשֵׁמִים וְאַשְׁמַתְכֶם צֶדֶק כִּי חָמַדְתֶּם אֶת־אֲשֶׁר לֹא קִבַּלְתֶּם׃",
   "english": "And now, if ye say this in your hearts ye remain guiltless, otherwise ye are condemned; and your condemnation is just for ye covet that which ye have not received."
  },
  {
@@ -12764,14 +12764,14 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 6,
   "verse": 3,
-  "hebrew": "וַיְהִי עוֹד כַּאֲשֶׁר כִּלָּה הַמֶּלֶךְ בִּנְיָמִין אֶת־כָּל־הַדְּבָרִים הָאֵלֶּה וַיִּמְשַׁח אֶת־מֹשִׁיָּה בְנוֹ לִהְיוֹת מוֹשֵׁל וּמֶלֶךְ עַל־עַמּוֹ וַיִּתֵּן־לוֹ אֶת־כָּל־פְּקֻדּוֹת הַמַּמְלָכָה וְגַם הִפְקִיד כֹּהֲנִים לְהוֹרוֹת אֶת־הָעָם לְמַעַן יִשְׁמְעוּ וְיֵדְעוּ אֶת־מִצְוֹת אֱלֹהִים וּלְעוֹרְרָם לִזְכֹּר אֶת־הַשְּׁבוּעָה אֲשֶׁר נִשְׁבָּעוּ וַיְשַׁלַּח אֶת־הַקָּהָל וַיָּשׁוּבוּ אִישׁ לְמִשְׁפְּחֹתָיו אֶל־בָּתֵּיהֶם׃",
+  "hebrew": "וַיְהִי עוֹד כַּאֲשֶׁר כִּלָּה הַמֶּלֶךְ בִּנְיָמִין אֶת־כָּל־הַדְּבָרִים הָאֵלֶּה וַיִּמְשַׁח אֶת־מוֹשִׁיָּה בְנוֹ לִהְיוֹת מוֹשֵׁל וּמֶלֶךְ עַל־עַמּוֹ וַיִּתֵּן־לוֹ אֶת־כָּל־פְּקֻדּוֹת הַמַּמְלָכָה וְגַם הִפְקִיד כֹּהֲנִים לְהוֹרוֹת אֶת־הָעָם לְמַעַן יִשְׁמְעוּ וְיֵדְעוּ אֶת־מִצְוֹת אֱלֹהִים וּלְעוֹרְרָם לִזְכֹּר אֶת־הַשְּׁבוּעָה אֲשֶׁר נִשְׁבָּעוּ וַיְשַׁלַּח אֶת־הַקָּהָל וַיָּשׁוּבוּ אִישׁ לְמִשְׁפְּחֹתָיו אֶל־בָּתֵּיהֶם׃",
   "english": "And again, it came to pass that when king Benjamin had made an end of all these things, and had consecrated his son Mosiah to be a ruler and a king over his people, and had given him all the charges concerning the kingdom, and also had appointed priests to teach the people, that thereby they might hear and know the commandments of God, and to stir them up in remembrance of the oath which they had made, he dismissed the multitude, and they returned, every one, according to their families, to their own houses."
  },
  {
   "book": "Mosiah",
   "chapter": 6,
   "verse": 4,
-  "hebrew": "וַיָּחֶל מֹשִׁיָּה לִמְלֹךְ תַּחַת אָבִיו וַיָּחֶל לִמְלֹךְ בִּשְׁנַת הַשְּׁלֹשִׁים לְחַיָּיו וַיְהִי הַכֹּל כְּאַרְבַּע מֵאוֹת וְשִׁבְעִים וָשֵׁשׁ שָׁנִים מֵעֵת אֲשֶׁר יָצָא לֶחִי מִירוּשָׁלִָם׃",
+  "hebrew": "וַיָּחֶל מוֹשִׁיָּה לִמְלֹךְ תַּחַת אָבִיו וַיָּחֶל לִמְלֹךְ בִּשְׁנַת הַשְּׁלֹשִׁים לְחַיָּיו וַיְהִי הַכֹּל כְּאַרְבַּע מֵאוֹת וְשִׁבְעִים וָשֵׁשׁ שָׁנִים מֵעֵת אֲשֶׁר יָצָא לֶחִי מִירוּשָׁלִָם׃",
   "english": "And Mosiah began to reign in his father’s stead. And he began to reign in the thirtieth year of his age, making in the whole, about four hundred and seventy– six years from the time that Lehi left Jerusalem."
  },
  {
@@ -12785,28 +12785,28 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 6,
   "verse": 6,
-  "hebrew": "וַיֵּלֶךְ הַמֶּלֶךְ מֹשִׁיָּה בְּדַרְכֵי יְהוָה וַיִּשְׁמֹר אֶת־מִשְׁפָּטָיו וְחֻקֹּתָיו וַיִּשְׁמֹר אֶת־מִצְוֹתָיו בְּכָל־אֲשֶׁר צִוָּהוּ׃",
+  "hebrew": "וַיֵּלֶךְ הַמֶּלֶךְ מוֹשִׁיָּה בְּדַרְכֵי יְהוָה וַיִּשְׁמֹר אֶת־מִשְׁפָּטָיו וְחֻקֹּתָיו וַיִּשְׁמֹר אֶת־מִצְוֹתָיו בְּכָל־אֲשֶׁר צִוָּהוּ׃",
   "english": "And it came to pass that king Mosiah did walk in the ways of the Lord, and did observe his judgments and his statutes, and did keep his commandments in all things whatsoever he commanded him."
  },
  {
   "book": "Mosiah",
   "chapter": 6,
   "verse": 7,
-  "hebrew": "וַיַּעַשׂ הַמֶּלֶךְ מֹשִׁיָּה אֶת־עַמּוֹ לַעֲבֹד אֶת־הָאֲדָמָה וְגַם הוּא עָבַד אֶת־הָאֲדָמָה לְמַעַן לֹא יִהְיֶה לְמַשָּׂא עַל־עַמּוֹ לְמַעַן יַעֲשֶׂה כַּאֲשֶׁר עָשָׂה אָבִיו בְּכָל־דָּבָר וְלֹא הָיָה רִיב בְּכָל־עַמּוֹ שָׁלֹשׁ שָׁנִים׃",
+  "hebrew": "וַיַּעַשׂ הַמֶּלֶךְ מוֹשִׁיָּה אֶת־עַמּוֹ לַעֲבֹד אֶת־הָאֲדָמָה וְגַם הוּא עָבַד אֶת־הָאֲדָמָה לְמַעַן לֹא יִהְיֶה לְמַשָּׂא עַל־עַמּוֹ לְמַעַן יַעֲשֶׂה כַּאֲשֶׁר עָשָׂה אָבִיו בְּכָל־דָּבָר וְלֹא הָיָה רִיב בְּכָל־עַמּוֹ שָׁלֹשׁ שָׁנִים׃",
   "english": "And king Mosiah did cause his people that they should till the earth. And he also, himself, did till the earth, that thereby he might not become burdensome to his people, that he might do according to that which his father had done in all things. And there was no contention among all his people for the space of three years."
  },
  {
   "book": "Mosiah",
   "chapter": 7,
   "verse": 1,
-  "hebrew": "וַיְהִי אַחֲרֵי אֲשֶׁר הָיָה שָׁלוֹם לִמְשִׁיָּה הַמֶּלֶךְ שָׁלֹשׁ שָׁנִים וַיְבַקֵּשׁ לָדַעַת עַל־הָעָם אֲשֶׁר עָלוּ לָשֶׁבֶת בְּאֶרֶץ לֶחִי־נֶפִי אוֹ בְּעִיר לֶחִי־נֶפִי כִּי לֹא־שָׁמְעוּ עַמּוֹ מֵהֶם מֵעֵת צֵאתָם מֵאֶרֶץ זָרַחֶמְלָה וַיַּלְאוּהוּ בְּהַפְצָרָתָם׃",
+  "hebrew": "וַיְהִי אַחֲרֵי אֲשֶׁר הָיָה שָׁלוֹם לְמוֹשִׁיָּה הַמֶּלֶךְ שָׁלֹשׁ שָׁנִים וַיְבַקֵּשׁ לָדַעַת עַל־הָעָם אֲשֶׁר עָלוּ לָשֶׁבֶת בְּאֶרֶץ לֶחִי־נֶפִי אוֹ בְּעִיר לֶחִי־נֶפִי כִּי לֹא־שָׁמְעוּ עַמּוֹ מֵהֶם מֵעֵת צֵאתָם מֵאֶרֶץ זָרַחֶמְלָה וַיַּלְאוּהוּ בְּהַפְצָרָתָם׃",
   "english": "And now, it came to pass that after king Mosiah had had continual peace for the space of three years, he was desirous to know concerning the people who went up to dwell in the land of Lehi– Nephi, or in the city of Lehi– Nephi; for his people had heard nothing from them from the time they left the land of Zarahemla; therefore, they wearied him with their teasings."
  },
  {
   "book": "Mosiah",
   "chapter": 7,
   "verse": 2,
-  "hebrew": "וַיְהִי כִּי־נָתַן מְשִׁיָּה הַמֶּלֶךְ לְשִׁשָּׁה עָשָׂר אִישׁ מִגִּבּוֹרֵיהֶם לַעֲלוֹת אֶל־אֶרֶץ לֶחִי־נֶפִי לִדְרֹשׁ אֶת־אֲחֵיהֶם׃",
+  "hebrew": "וַיְהִי כִּי־נָתַן מוֹשִׁיָּה הַמֶּלֶךְ לְשִׁשָּׁה עָשָׂר אִישׁ מִגִּבּוֹרֵיהֶם לַעֲלוֹת אֶל־אֶרֶץ לֶחִי־נֶפִי לִדְרֹשׁ אֶת־אֲחֵיהֶם׃",
   "english": "And it came to pass that king Mosiah granted that sixteen of their strong men might go up to the land of Lehi– Nephi to inquire concerning their brethren."
  },
  {
@@ -12897,7 +12897,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 7,
   "verse": 15,
-  "hebrew": "כִּי הִנֵּה עֲבָדִים אֲנַחְנוּ לַלָּמָנִים וְנִגָּשִׂים בְּמַס כָּבֵד מִנְּשׂוֹא וְעַתָּה הִנֵּה יַצִּילוּנוּ אַחֵינוּ מֵעַבְדוּתֵנוּ וּמִיַּד הַלָּמָנִים וְהָיִינוּ לָהֶם לַעֲבָדִים כִּי טוֹב הֱיוֹתֵנוּ עֲבָדִים לַנְּפִים מִתֵּת מַס לְמֶלֶךְ הַלָּמָנִים׃",
+  "hebrew": "כִּי הִנֵּה עֲבָדִים אֲנַחְנוּ לַלָּמָנִים וְנִגָּשִׂים בְּמַס כָּבֵד מִנְּשׂוֹא וְעַתָּה הִנֵּה יַצִּילוּנוּ אַחֵינוּ מֵעַבְדוּתֵנוּ וּמִיַּד הַלָּמָנִים וְהָיִינוּ לָהֶם לַעֲבָדִים כִּי טוֹב הֱיוֹתֵנוּ עֲבָדִים לַנְּפִיִּים מִתֵּת מַס לְמֶלֶךְ הַלָּמָנִים׃",
   "english": "For behold, we are in bondage to the Lamanites, and are taxed with a tax which is grievous to be borne. And now, behold, our brethren will deliver us out of our bondage, or out of the hands of the Lamanites, and we will be their slaves; for it is better that we be slaves to the Nephites than to pay tribute to the king of the Lamanites."
  },
  {
@@ -13037,7 +13037,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 8,
   "verse": 2,
-  "hebrew": "וַיְצַו אֶת־עַמּוֹן לַעֲמֹד לִפְנֵי הֶהָמוֹן וּלְסַפֵּר לָהֶם אֵת כָּל־אֲשֶׁר קָרָה לַאֲחֵיהֶם מֵעֵת עֲלוֹת זֶנִיף מִן־הָאָרֶץ וְעַד־עֵת עֲלוֹתוֹ הוּא מִן־הָאָרֶץ׃",
+  "hebrew": "וַיְצַו אֶת־עַמּוֹן לַעֲמֹד לִפְנֵי הֶהָמוֹן וּלְסַפֵּר לָהֶם אֶת־כָּל־אֲשֶׁר קָרָה לַאֲחֵיהֶם מֵעֵת עֲלוֹת זֶנִיף מִן־הָאָרֶץ וְעַד־עֵת עֲלוֹתוֹ הוּא מִן־הָאָרֶץ׃",
   "english": "And he caused that Ammon should stand up before the multitude, and rehearse unto them all that had happened unto their brethren from the time that Zeniff went up out of the land even until the time that he himself came up out of the land."
  },
  {
@@ -13177,7 +13177,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 9,
   "verse": 1,
-  "hebrew": "אֲנִי זֶנִיף לֻמַּדְתִּי כָּל־שְׂפַת הַנְּפִים וָאֵדַע אֶת־אֶרֶץ נֶפִי הִיא אֶרֶץ נַחֲלַת אֲבוֹתֵינוּ הָרִאשׁוֹנָה וָאֶשָּׁלַח מְרַגֵּל בֵּין הַלָּמָנִים לְרַגֵּל אֶת־חֵילָם לְמַעַן יָבֹא צְבָאֵנוּ עֲלֵיהֶם לְהַשְׁמִידָם וּבִרְאוֹתִי אֶת־הַטּוֹב אֲשֶׁר בָּם חָפַצְתִּי כִּי לֹא יֻשְׁמְדוּ׃",
+  "hebrew": "אֲנִי זֶנִיף לֻמַּדְתִּי כָּל־שְׂפַת הַנֶּפִיִּים וָאֵדַע אֶת־אֶרֶץ נֶפִי הִיא אֶרֶץ נַחֲלַת אֲבוֹתֵינוּ הָרִאשׁוֹנָה וָאֶשָּׁלַח מְרַגֵּל בֵּין הַלָּמָנִים לְרַגֵּל אֶת־חֵילָם לְמַעַן יָבֹא צְבָאֵנוּ עֲלֵיהֶם לְהַשְׁמִידָם וּבִרְאוֹתִי אֶת־הַטּוֹב אֲשֶׁר בָּם חָפַצְתִּי כִּי לֹא יֻשְׁמְדוּ׃",
   "english": "I, Zeniff, having been taught in all the language of the Nephites, and having had a knowledge of the land of Nephi, or of the land of our fathers’ first inheritance, and having been sent as a spy among the Lamanites that I might spy out their forces, that our army might come upon them and destroy them—but when I saw that which was good among them I was desirous that they should not be destroyed."
  },
  {
@@ -13485,14 +13485,14 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 11,
   "verse": 4,
-  "hebrew": "וְכָל־אֵלֶּה לָקַח לְכַלְכֵּל אֶת־עַצְמוֹ וְאֶת־נָשָׁיו וּפִילַגְשָׁיו וְגַם אֶת־כֹּהֲנָיו וְנְשֵׁיהֶם וּפִילַגְשֵׁיהֶם וְכֵן שִׁנָּה אֶת־דִּבְרֵי הַמַּמְלָכָה׃",
+  "hebrew": "וְכָל־אֵלֶּה לָקַח לְכַלְכֵּל אֶת־עַצְמוֹ וְאֶת־נָשָׁיו וּפִילַגְשָׁיו וְגַם אֶת־כֹּהֲנָיו וּנְשֵׁיהֶם וּפִילַגְשֵׁיהֶם וְכֵן שִׁנָּה אֶת־דִּבְרֵי הַמַּמְלָכָה׃",
   "english": "And all this did he take to support himself, and his wives and his concubines; and also his priests, and their wives and their concubines; thus he had changed the affairs of the kingdom."
  },
  {
   "book": "Mosiah",
   "chapter": 11,
   "verse": 5,
-  "hebrew": "וַיָּסַר אֶת־כָּל־הַכֹּהֲנִים אֲשֶׁר קִדְּשָׁם אָבִיו וַיְקַדֵּשׁ חֲדָשִׁים תַּחְתָּם אֵת אֲשֶׁר גָּבְהוּ בִּגְאוֹן לִבָּם׃",
+  "hebrew": "וַיָּסַר אֶת־כָּל־הַכֹּהֲנִים אֲשֶׁר קִדְּשָׁם אָבִיו וַיְקַדֵּשׁ חֲדָשִׁים תַּחְתָּם אֶת־אֲשֶׁר גָּבְהוּ בִּגְאוֹן לִבָּם׃",
   "english": "For he put down all the priests that had been consecrated by his father, and consecrated new ones in their stead, such as were lifted up in the pride of their hearts."
  },
  {
@@ -13597,7 +13597,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 11,
   "verse": 20,
-  "hebrew": "וַיְהִי אִישׁ בְּתוֹכָם וּשְׁמוֹ אֲבִינָדִי וַיֵּצֵא בְתוֹכָם וַיָּחֶל לְהִנָּבֵא לֵאמֹר הִנֵּה כֹּה אָמַר יְהוָה וְכָכָה צִוָּה אֹתִי לֵאמֹר צֵא וֶאֱמֹר לָעָם הַזֶּה כֹּה אָמַר יְהוָה הוֹי עַל־הָעָם הַזֶּה כִּי רָאִיתִי תוֹעֲבֹתֵיהֶם וְרִשְׁעָתָם וְזְנוּתָם וְאִם לֹא יָשׁוּבוּ וּפָקַדְתִּי עֲלֵיהֶם בְּאַפִּי׃",
+  "hebrew": "וַיְהִי אִישׁ בְּתוֹכָם וּשְׁמוֹ אֲבִינָדִי וַיֵּצֵא בְתוֹכָם וַיָּחֶל לְהִנָּבֵא לֵאמֹר הִנֵּה כֹּה אָמַר יְהוָה וְכָכָה צִוָּה אֹתִי לֵאמֹר צֵא וֶאֱמֹר לָעָם הַזֶּה כֹּה אָמַר יְהוָה הוֹי עַל־הָעָם הַזֶּה כִּי רָאִיתִי תוֹעֲבֹתֵיהֶם וְרִשְׁעָתָם וּזְנוּתָם וְאִם לֹא יָשׁוּבוּ וּפָקַדְתִּי עֲלֵיהֶם בְּאַפִּי׃",
   "english": "And it came to pass that there was a man among them whose name was Abinadi; and he went forth among them, and began to prophesy, saying: Behold, thus saith the Lord, and thus hath he commanded me, saying, Go forth, and say unto this people, thus saith the Lord—Wo be unto this people, for I have seen their abominations, and their wickedness, and their whoredoms; and except they repent I will visit them in mine anger."
  },
  {
@@ -13954,7 +13954,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 13,
   "verse": 5,
-  "hebrew": "וַיְהִי אַחֲרֵי דַבֵּר אֲבִינָדִי אֶת־הַדְּבָרִים הָאֵלֶּה וְלֹא־הֵעֵזּוּ עַם הַמֶּלֶךְ נֹחַ לִשְׁלֹחַ בּוֹ יָד כִּי הָיְתָה רוּחַ יְהוָה עָלָיו וַיִּקְרְנוּ פָנָיו בִּמְאֹד מְאֹד כַּאֲשֶׁר קָרְנוּ פְּנֵי מֹשֶׁה בְּהַר סִינַי בְּדַבְּרוֹ עִם־יְהוָה׃",
+  "hebrew": "וַיְהִי אַחֲרֵי דַבֵּר אֲבִינָדִי אֶת־הַדְּבָרִים הָאֵלֶּה וְלֹא־הֵעֵזּוּ עַם הַמֶּלֶךְ נֹחַ לִשְׁלֹחַ בּוֹ יָד כִּי הָיָה רוּחַ יְהוָה עָלָיו וַיִּקְרְנוּ פָנָיו בִּמְאֹד מְאֹד כַּאֲשֶׁר קָרְנוּ פְּנֵי מֹשֶׁה בְּהַר סִינַי בְּדַבְּרוֹ עִם־יְהוָה׃",
   "english": "Now it came to pass after Abinadi had spoken these words that the people of king Noah durst not lay their hands on him, for the Spirit of the Lord was upon him; and his face shone with exceeding luster, even as Moses’ did while in  the mount of Sinai, while speaking with the Lord."
  },
  {
@@ -14115,7 +14115,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 13,
   "verse": 28,
-  "hebrew": "וְעוֹד אֹמֵר אֲנִי לָכֶם כִּי לֹא־תָבֹא הַיְשׁוּעָה בַּתּוֹרָה לְבַדָּהּ וְלוּלֵי הַכִּפֻּרִים אֲשֶׁר יַעֲשֶׂה־אֱלֹהִים בְּעַצְמוֹ לְחַטֹּאת עַמּוֹ וַעֲוֹנוֹתֵיהֶם כִּי אָז אָבֹד יֹאבֵדוּ אַף עִם־תּוֹרַת מֹשֶׁה׃",
+  "hebrew": "וְעוֹד אֹמֵר אֲנִי לָכֶם כִּי לֹא־תָבֹא הַיְשׁוּעָה בַּתּוֹרָה לְבַדָּהּ וְלוּלֵי הַכִּפֻּרִים אֲשֶׁר יַעֲשֵׂה־אֱלֹהִים בְּעַצְמוֹ לְחַטֹּאת עַמּוֹ וַעֲוֹנוֹתֵיהֶם כִּי אָז אָבֹד יֹאבֵדוּ אַף עִם־תּוֹרַת מֹשֶׁה׃",
   "english": "And moreover, I say unto you, that salvation doth not come by the law alone; and were it not for the atonement, which God himself shall make for the sins and iniquities of his people, that they must unavoidably perish, notwithstanding the law of Moses."
  },
  {
@@ -14206,7 +14206,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 14,
   "verse": 6,
-  "hebrew": "כֻּלָּנוּ כַּצֹּאן תָּעִינוּ פָּנִינוּ אִישׁ לְדַרְכּוֹ וַיהוָה הִפְגִּיעַ בּוֹ אֵת עֲוֹנֹת כֻּלָּנוּ׃",
+  "hebrew": "כֻּלָּנוּ כַּצֹּאן תָּעִינוּ פָּנִינוּ אִישׁ לְדַרְכּוֹ וַיהוָה הִפְגִּיעַ בּוֹ אֵת עֲוֹן כֻּלָּנוּ׃",
   "english": "All we, like sheep, have gone astray; we have turned every one to his own way; and the Lord hath laid on him the iniquities of us all."
  },
  {
@@ -14248,7 +14248,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 14,
   "verse": 12,
-  "hebrew": "לָכֵן אֲחַלֶּק־לוֹ חֵלֶק אֶת־הַגְּדוֹלִים וְיְחַלֵּק שָׁלָל אֶת־הָעֲצוּמִים יַעַן אֲשֶׁר הֶעֱרָה לַמָּוֶת נַפְשׁוֹ וְאֶת־פֹּשְׁעִים נִמְנָה וְהוּא נָשָׂא חֵטְא רַבִּים וַיַּפְגִּיעַ לַפֹּשְׁעִים׃",
+  "hebrew": "לָכֵן אֲחַלֶּק־לוֹ חֵלֶק אֶת־הַגְּדוֹלִים וִיְחַלֵּק שָׁלָל אֶת־הָעֲצוּמִים יַעַן אֲשֶׁר הֶעֱרָה לַמָּוֶת נַפְשׁוֹ וְאֶת־פֹּשְׁעִים נִמְנָה וְהוּא נָשָׂא חֵטְא רַבִּים וַיַּפְגִּיעַ לַפֹּשְׁעִים׃",
   "english": "Therefore will I divide him a portion with the great, and he shall divide the spoil with the strong; because he hath poured out his soul unto death; and he was numbered with the transgressors; and he bore the sins of many, and made intercession for the transgressors."
  },
  {
@@ -14801,7 +14801,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 18,
   "verse": 13,
-  "hebrew": "וַיְהִי כְּכַלּוֹתוֹ לְדַבֵּר וַתְּהִי עָלָיו רוּחַ יְהוָה וַיֹּאמַר הֵלָם הִנְנִי מַטְבִּילְךָ בִּגְבוּרַת אֵל שַׁדַּי לְעֵדוּת כִּי בָּאתָ בִּבְרִית לְעָבְדוֹ עַד־מוֹת גּוּפְךָ הַבָּשָׂר וְיִשָּׁפֵךְ רוּחַ יְהוָה עָלֶיךָ וְיִתֶּן־לְךָ חַיֵּי עוֹלָם בִּגְאֻלַּת הַמָּשִׁיחַ אֲשֶׁר הֵכִין מִקֶּדֶם׃",
+  "hebrew": "וַיְהִי כְּכַלּוֹתוֹ לְדַבֵּר וַיְהִי עָלָיו רוּחַ יְהוָה וַיֹּאמַר הֵלָם הִנְנִי מַטְבִּילְךָ בִּגְבוּרַת אֵל שַׁדַּי לְעֵדוּת כִּי בָּאתָ בִּבְרִית לְעָבְדוֹ עַד־מוֹת גּוּפְךָ הַבָּשָׂר וְיִשָּׁפֵךְ רוּחַ יְהוָה עָלֶיךָ וְיִתֶּן־לְךָ חַיֵּי עוֹלָם בִּגְאֻלַּת הַמָּשִׁיחַ אֲשֶׁר הֵכִין מִקֶּדֶם׃",
   "english": "And when he had said these words, the Spirit of the Lord was upon him, and he said: Helam, I baptize thee, having authority from the Almighty God, as a testimony that ye have entered into a covenant to serve him until you are dead as to the mortal body; and may the Spirit of the Lord be poured out upon you; and may he grant unto you eternal life, through the redemption of Christ, whom he has prepared from the foundation of the world."
  },
  {
@@ -14997,14 +14997,14 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 19,
   "verse": 6,
-  "hebrew": "וַיִּרְדֹּף גִּדְעוֹן אַחֲרָיו וַיְהִי קָרוֹב לַעֲלוֹת עַל־הַמִּגְדָּל לְהָמִית אֶת־הַמֶּלֶךְ וַיִּשָּׂא הַמֶּלֶךְ עֵינָיו סָבִיב אֶל־אֶרֶץ שִׁמְלוֹן וְהִנֵּה צְבָא הַלְּמָנִים בִּגְבוּל הָאָרֶץ׃",
+  "hebrew": "וַיִּרְדֹּף גִּדְעוֹן אַחֲרָיו וַיְהִי קָרוֹב לַעֲלוֹת עַל־הַמִּגְדָּל לְהָמִית אֶת־הַמֶּלֶךְ וַיִּשָּׂא הַמֶּלֶךְ עֵינָיו סָבִיב אֶל־אֶרֶץ שֶׁמְלוֹן וְהִנֵּה צְבָא הַלָּמָנִים בִּגְבוּל הָאָרֶץ׃",
   "english": "And Gideon pursued after him and was about to get upon the tower to slay the king, and the king cast his eyes round about towards the land of Shemlon, and behold, the army of the Lamanites were within the borders of the land."
  },
  {
   "book": "Mosiah",
   "chapter": 19,
   "verse": 7,
-  "hebrew": "וַיִּזְעַק הַמֶּלֶךְ בְּצָרַת נַפְשׁוֹ לֵאמֹר חוּס עָלַי גִּדְעוֹן כִּי הַלְּמָנִים עָלֵינוּ וְיַשְׁמִידוּנוּ אָכֵן יַשְׁמִידוּ אֶת־עַמִּי׃",
+  "hebrew": "וַיִּזְעַק הַמֶּלֶךְ בְּצָרַת נַפְשׁוֹ לֵאמֹר חוּס עָלַי גִּדְעוֹן כִּי הַלָּמָנִים עָלֵינוּ וְיַשְׁמִידוּנוּ אָכֵן יַשְׁמִידוּ אֶת־עַמִּי׃",
   "english": "And now the king cried out in the anguish of his soul, saying: Gideon, spare me, for the Lamanites are upon us, and they will destroy us; yea, they will destroy my people."
  },
  {
@@ -15018,21 +15018,21 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 19,
   "verse": 9,
-  "hebrew": "וַיְצַו הַמֶּלֶךְ אֶת־הָעָם לָנוּס מִפְּנֵי הַלְּמָנִים וַיֵּלֶךְ הוּא לִפְנֵיהֶם וַיָּנוּסוּ הַמִּדְבָּרָה עִם־נְשֵׁיהֶם וְטַפָּם׃",
+  "hebrew": "וַיְצַו הַמֶּלֶךְ אֶת־הָעָם לָנוּס מִפְּנֵי הַלָּמָנִים וַיֵּלֶךְ הוּא לִפְנֵיהֶם וַיָּנוּסוּ הַמִּדְבָּרָה עִם־נְשֵׁיהֶם וְטַפָּם׃",
   "english": "And the king commanded the people that they should flee before the Lamanites, and he himself did go before them, and they did flee into the wilderness, with their women and their children."
  },
  {
   "book": "Mosiah",
   "chapter": 19,
   "verse": 10,
-  "hebrew": "וַיְהִי כִּי רָדְפוּ הַלְּמָנִים אַחֲרֵיהֶם וַיַּשִּׂיגוּם וַיָּחֵלּוּ לְהַכּוֹתָם׃",
+  "hebrew": "וַיְהִי כִּי רָדְפוּ הַלָּמָנִים אַחֲרֵיהֶם וַיַּשִּׂיגוּם וַיָּחֵלּוּ לְהַכּוֹתָם׃",
   "english": "And it came to pass that the Lamanites did pursue them, and did overtake them, and began to slay them."
  },
  {
   "book": "Mosiah",
   "chapter": 19,
   "verse": 11,
-  "hebrew": "וַיְהִי כִּי צִוָּה הַמֶּלֶךְ אֶת־כָּל־הָאֲנָשִׁים לַעֲזֹב אֶת־נְשֵׁיהֶם וְאֶת־יַלְדֵיהֶם וְלָנוּס מִפְּנֵי הַלְּמָנִים׃",
+  "hebrew": "וַיְהִי כִּי צִוָּה הַמֶּלֶךְ אֶת־כָּל־הָאֲנָשִׁים לַעֲזֹב אֶת־נְשֵׁיהֶם וְאֶת־יַלְדֵיהֶם וְלָנוּס מִפְּנֵי הַלָּמָנִים׃",
   "english": "Now it came to pass that the king commanded them that all the men should leave their wives and their children, and flee before the Lamanites."
  },
  {
@@ -15046,21 +15046,21 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 19,
   "verse": 13,
-  "hebrew": "וַיְהִי כִּי הַנִּשְׁאָרִים עִם־נְשֵׁיהֶם וְיַלְדֵיהֶם הֶעֱמִידוּ אֶת־בְּנוֹתֵיהֶם הַיָּפוֹת לְהִתְחַנֵּן אֶל־הַלְּמָנִים לְבִלְתִּי הֲמִיתָם׃",
+  "hebrew": "וַיְהִי כִּי הַנִּשְׁאָרִים עִם־נְשֵׁיהֶם וְיַלְדֵיהֶם הֶעֱמִידוּ אֶת־בְּנוֹתֵיהֶם הַיָּפוֹת לְהִתְחַנֵּן אֶל־הַלָּמָנִים לְבִלְתִּי הֲמִיתָם׃",
   "english": "And it came to pass that those who tarried with their wives and their children caused that their fair daughters should stand forth and plead with the Lamanites that they would not slay them."
  },
  {
   "book": "Mosiah",
   "chapter": 19,
   "verse": 14,
-  "hebrew": "וַיְהִי כִּי חָמְלוּ הַלְּמָנִים עֲלֵיהֶם כִּי נִשְׁבּוּ בְּיֹפִי נְשֵׁיהֶם׃",
+  "hebrew": "וַיְהִי כִּי חָמְלוּ הַלָּמָנִים עֲלֵיהֶם כִּי נִשְׁבּוּ בְּיֹפִי נְשֵׁיהֶם׃",
   "english": "And it came to pass that the Lamanites had compassion on them, for they were charmed with the beauty of their women."
  },
  {
   "book": "Mosiah",
   "chapter": 19,
   "verse": 15,
-  "hebrew": "וַיַּחְמְלוּ הַלְּמָנִים עַל־חַיֵּיהֶם וַיִּשְׁבּוּם וַיְשִׁיבוּם אֶל־אֶרֶץ נֶפִי וַיִּתְּנוּ לָהֶם לָרֶשֶׁת אֶת־הָאָרֶץ וְיַסְגִּירוּ אֶת־נֹחַ הַמֶּלֶךְ בְּיַד הַלְּמָנִים וְיִתְּנוּ אֶת־רְכוּשָׁם חֲצִי כָל־אֲשֶׁר לָהֶם חֲצִי זְהָבָם וְכַסְפָּם וְכָל־חֶפְצֵיהֶם הַיְקָרִים וְכָכָה יַעֲלוּ מַס לְמֶלֶךְ הַלְּמָנִים שָׁנָה בְשָׁנָה׃",
+  "hebrew": "וַיַּחְמְלוּ הַלָּמָנִים עַל־חַיֵּיהֶם וַיִּשְׁבּוּם וַיְשִׁיבוּם אֶל־אֶרֶץ נֶפִי וַיִּתְּנוּ לָהֶם לָרֶשֶׁת אֶת־הָאָרֶץ וְיַסְגִּירוּ אֶת־נֹחַ הַמֶּלֶךְ בְּיַד הַלָּמָנִים וְיִתְּנוּ אֶת־רְכוּשָׁם חֲצִי כָל־אֲשֶׁר לָהֶם חֲצִי זְהָבָם וְכַסְפָּם וְכָל־חֶפְצֵיהֶם הַיְקָרִים וְכָכָה יַעֲלוּ מַס לְמֶלֶךְ הַלָּמָנִים שָׁנָה בְשָׁנָה׃",
   "english": "Therefore the Lamanites did spare their lives, and took them captives and carried them back to the land of Nephi, and granted unto them that they might possess the land, under the conditions that they would deliver up king Noah into the hands of the Lamanites, and deliver up their property, even one half of all they possessed, one half of their gold, and their silver, and all their precious things, and thus they should pay tribute to the king of the Lamanites from year to year."
  },
  {
@@ -15081,7 +15081,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 19,
   "verse": 18,
-  "hebrew": "וַיְהִי כִּי שָׁלַח גִּדְעוֹן אֲנָשִׁים בַּסֵּתֶר הַמִּדְבָּרָה לְבַקֵּשׁ אֶת־הַמֶּלֶךְ וְאֵת אֲשֶׁר אִתּוֹ וַיְהִי כִּי פָגְשׁוּ אֶת־הָעָם בַּמִּדְבָּר זוּלַת הַמֶּלֶךְ וְכֹהֲנָיו׃",
+  "hebrew": "וַיְהִי כִּי שָׁלַח גִּדְעוֹן אֲנָשִׁים בַּסֵּתֶר הַמִּדְבָּרָה לְבַקֵּשׁ אֶת־הַמֶּלֶךְ וְאֶת־אֲשֶׁר אִתּוֹ וַיְהִי כִּי פָגְשׁוּ אֶת־הָעָם בַּמִּדְבָּר זוּלַת הַמֶּלֶךְ וְכֹהֲנָיו׃",
   "english": "And it came to pass that Gideon sent men into the wilderness secretly, to search for the king and those that were with him. And it came to pass that they met the people in the wilderness, all save the king and his priests."
  },
  {
@@ -15109,7 +15109,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 19,
   "verse": 22,
-  "hebrew": "וַיְהִי כִּי עָמְדוּ לָשׁוּב אֶל־אֶרֶץ נֶפִי וַיִּפְגְּשׁוּ בְּאַנְשֵׁי גִדְעוֹן וַיַּגִּידוּ לָהֶם אַנְשֵׁי גִדְעוֹן אֵת כָּל־אֲשֶׁר קָרָה לִנְשֵׁיהֶם וּלְיַלְדֵיהֶם וְכִי נָתְנוּ הַלְּמָנִים לָרֶשֶׁת אֶת־הָאָרֶץ בְּהַעֲלוֹתָם מַס לַלְּמָנִים חֲצִי כָּל־רְכוּשָׁם׃",
+  "hebrew": "וַיְהִי כִּי עָמְדוּ לָשׁוּב אֶל־אֶרֶץ נֶפִי וַיִּפְגְּשׁוּ בְּאַנְשֵׁי גִדְעוֹן וַיַּגִּידוּ לָהֶם אַנְשֵׁי גִדְעוֹן אֶת־כָּל־אֲשֶׁר קָרָה לִנְשֵׁיהֶם וּלְיַלְדֵיהֶם וְכִי נָתְנוּ הַלָּמָנִים לָרֶשֶׁת אֶת־הָאָרֶץ בְּהַעֲלוֹתָם מַס לַלָּמָנִים חֲצִי כָּל־רְכוּשָׁם׃",
   "english": "And it came to pass that they were about to return to the land of Nephi, and they met the men of Gideon. And the men of Gideon told them of all that had happened to their wives and their children; and that the Lamanites had granted unto them that they might possess the land by paying a tribute to the Lamanites of one half of all they possessed."
  },
  {
@@ -15123,21 +15123,21 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 19,
   "verse": 24,
-  "hebrew": "וַיְהִי אַחֲרֵי כְּלוֹתָם אֶת־הַדָּבָר וַיָּשׁוּבוּ אֶל־אֶרֶץ נֶפִי שְׂמֵחִים כִּי לֹא נֶהֶרְגוּ נְשֵׁיהֶם וְיַלְדֵיהֶם וַיַּגִּידוּ לְגִדְעוֹן אֵת אֲשֶׁר עָשׂוּ לַמֶּלֶךְ׃",
+  "hebrew": "וַיְהִי אַחֲרֵי כְּלוֹתָם אֶת־הַדָּבָר וַיָּשׁוּבוּ אֶל־אֶרֶץ נֶפִי שְׂמֵחִים כִּי לֹא נֶהֶרְגוּ נְשֵׁיהֶם וְיַלְדֵיהֶם וַיַּגִּידוּ לְגִדְעוֹן אֶת־אֲשֶׁר עָשׂוּ לַמֶּלֶךְ׃",
   "english": "And it came to pass that after they had ended the ceremony, that they returned to the land of Nephi, rejoicing, because their wives and their children were not slain; and they told Gideon what they had done to the king."
  },
  {
   "book": "Mosiah",
   "chapter": 19,
   "verse": 25,
-  "hebrew": "וַיְהִי כִּי נִשְׁבַּע מֶלֶךְ הַלְּמָנִים לָהֶם כִּי לֹא יַהַרְגוּ עַמּוֹ אוֹתָם׃",
+  "hebrew": "וַיְהִי כִּי נִשְׁבַּע מֶלֶךְ הַלָּמָנִים לָהֶם כִּי לֹא יַהַרְגוּ עַמּוֹ אוֹתָם׃",
   "english": "And it came to pass that the king of the Lamanites made an oath unto them, that his people should not slay them."
  },
  {
   "book": "Mosiah",
   "chapter": 19,
   "verse": 26,
-  "hebrew": "וְגַם לִמְחִי בֶּן־הַמֶּלֶךְ אֲשֶׁר נָתְנוּ לוֹ הָעָם אֶת־הַמַּמְלָכָה נִשְׁבַּע לְמֶלֶךְ הַלְּמָנִים כִּי יַעֲלוּ עַמּוֹ מַס לוֹ חֲצִי כָּל־רְכוּשָׁם׃",
+  "hebrew": "וְגַם לִמְחִי בֶּן־הַמֶּלֶךְ אֲשֶׁר נָתְנוּ לוֹ הָעָם אֶת־הַמַּמְלָכָה נִשְׁבַּע לְמֶלֶךְ הַלָּמָנִים כִּי יַעֲלוּ עַמּוֹ מַס לוֹ חֲצִי כָּל־רְכוּשָׁם׃",
   "english": "And also Limhi, being the son of the king, having the kingdom conferred upon him by the people, made oath unto the king of the Lamanites that his people should pay tribute unto him, even one half of all they possessed."
  },
  {
@@ -15151,14 +15151,14 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 19,
   "verse": 28,
-  "hebrew": "וַיָּשֶׂם מֶלֶךְ הַלְּמָנִים שֹׁמְרִים סָבִיב לָאָרֶץ לְהַחֲזִיק אֶת־עַם לִמְחִי בָּאָרֶץ לְבִלְתִּי צֵאתָם הַמִּדְבָּרָה וַיְכַלְכֵּל אֶת־שֹׁמְרָיו מִן־הַמַּס אֲשֶׁר קִבֵּל מֵאֵת הַנְּפִים׃",
+  "hebrew": "וַיָּשֶׂם מֶלֶךְ הַלָּמָנִים שֹׁמְרִים סָבִיב לָאָרֶץ לְהַחֲזִיק אֶת־עַם לִמְחִי בָּאָרֶץ לְבִלְתִּי צֵאתָם הַמִּדְבָּרָה וַיְכַלְכֵּל אֶת־שֹׁמְרָיו מִן־הַמַּס אֲשֶׁר קִבֵּל מֵאֵת הַנֶּפִיִּים׃",
   "english": "And the king of the Lamanites set guards round about the land, that he might keep the people of Limhi in the land, that they might not depart into the wilderness; and he did support his guards out of the tribute which he did receive from the Nephites."
  },
  {
   "book": "Mosiah",
   "chapter": 19,
   "verse": 29,
-  "hebrew": "וַיְהִי שָׁלוֹם תָּמִיד בְּמַמְלֶכֶת לִמְחִי שְׁנָתַיִם יָמִים וְהַלְּמָנִים לֹא הִצִיקוּ לָהֶם וְלֹא בִקְשׁוּ לְהַשְׁמִידָם׃",
+  "hebrew": "וַיְהִי שָׁלוֹם תָּמִיד בְּמַמְלֶכֶת לִמְחִי שְׁנָתַיִם יָמִים וְהַלָּמָנִים לֹא הִצִיקוּ לָהֶם וְלֹא בִקְשׁוּ לְהַשְׁמִידָם׃",
   "english": "And now king Limhi did have continual peace in his kingdom for the space of two years, that the Lamanites did not molest them nor seek to destroy them."
  },
  {
@@ -15354,7 +15354,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 21,
   "verse": 2,
-  "hebrew": "וַיְהִי מִקֵּץ יָמִים רַבִּים וַיָּחֵלּוּ הַלָּמָנִים לְהִתְעוֹרֵר בְּאַף עַל־הַנְּפִים וַיָּחֵלּוּ לָבוֹא בִּגְבוּלוֹת הָאָרֶץ סָבִיב׃",
+  "hebrew": "וַיְהִי מִקֵּץ יָמִים רַבִּים וַיָּחֵלּוּ הַלָּמָנִים לְהִתְעוֹרֵר בְּאַף עַל־הַנֶּפִיִּים וַיָּחֵלּוּ לָבוֹא בִּגְבוּלוֹת הָאָרֶץ סָבִיב׃",
   "english": "And it came to pass that after many days the Lamanites began again to be stirred up in anger against the Nephites, and they began to come into the borders of the land round about."
  },
  {
@@ -15375,7 +15375,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 21,
   "verse": 5,
-  "hebrew": "וְעַתָּה גָּדְלוּ צָרוֹת הַנְּפִים מְאֹד וְאֵין דֶּרֶךְ לְהִנָּצֵל מִיָּדָם כִּי הִקִּיפוּם הַלָּמָנִים מִכָּל־עֵבֶר׃",
+  "hebrew": "וְעַתָּה גָּדְלוּ צָרוֹת הַנֶּפִיִּים מְאֹד וְאֵין דֶּרֶךְ לְהִנָּצֵל מִיָּדָם כִּי הִקִּיפוּם הַלָּמָנִים מִכָּל־עֵבֶר׃",
   "english": "And now the afflictions of the Nephites were great, and there was no way that they could deliver themselves out of their hands, for the Lamanites had surrounded them on every side."
  },
  {
@@ -15508,21 +15508,21 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 21,
   "verse": 24,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר רָאָה כִּי לֹא הֵם וְכִי אֶחָיו הֵם וְכִי בָאוּ מֵאֶרֶץ זָרַהֶמְלָה וַיִּמָּלֵא שִׂמְחָה גְדוֹלָה מְאֹד׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר רָאָה כִּי לֹא הֵם וְכִי אֶחָיו הֵם וְכִי בָאוּ מֵאֶרֶץ זָרַחֶמְלָה וַיִּמָּלֵא שִׂמְחָה גְדוֹלָה מְאֹד׃",
   "english": "But when he found that they were not, but that they were his brethren, and had come from the land of Zarahemla, he was filled with exceedingly great joy."
  },
  {
   "book": "Mosiah",
   "chapter": 21,
   "verse": 25,
-  "hebrew": "וְהִנֵּה שָׁלַח הַמֶּלֶךְ לִמְחִי לִפְנֵי בוֹא עַמּוֹן אֲנָשִׁים מְעַטִּים לְבַקֵּשׁ אֶת־אֶרֶץ זָרַהֶמְלָה וְלֹא יָכְלוּ לְמָצְאָהּ וַיִּתְעוּ בַמִּדְבָּר׃",
+  "hebrew": "וְהִנֵּה שָׁלַח הַמֶּלֶךְ לִמְחִי לִפְנֵי בוֹא עַמּוֹן אֲנָשִׁים מְעַטִּים לְבַקֵּשׁ אֶת־אֶרֶץ זָרַחֶמְלָה וְלֹא יָכְלוּ לְמָצְאָהּ וַיִּתְעוּ בַמִּדְבָּר׃",
   "english": "Now king Limhi had sent, previous to the coming of Ammon, a small number of men to search for the land of Zarahemla; but they could not find it, and they were lost in the wilderness."
  },
  {
   "book": "Mosiah",
   "chapter": 21,
   "verse": 26,
-  "hebrew": "אַךְ מָצְאוּ אֶרֶץ אֲשֶׁר יָשְׁבוּ בָהּ אֲנָשִׁים אֶרֶץ מְכֻסָּה בַּעֲצָמוֹת יְבֵשׁוֹת אֶרֶץ אֲשֶׁר יָשְׁבוּ בָהּ עָם וַתֻּשְׁחַת וַיַּחְשְׁבוּהָ לְאֶרֶץ זָרַהֶמְלָה וַיָּשׁוּבוּ אֶל־אֶרֶץ נֶפִי וַיַּגִּיעוּ אֶל־גְּבוּלוֹת הָאָרֶץ יָמִים מְעַטִּים לִפְנֵי בוֹא עַמּוֹן׃",
+  "hebrew": "אַךְ מָצְאוּ אֶרֶץ אֲשֶׁר יָשְׁבוּ בָהּ אֲנָשִׁים אֶרֶץ מְכֻסָּה בַּעֲצָמוֹת יְבֵשׁוֹת אֶרֶץ אֲשֶׁר יָשְׁבוּ בָהּ עָם וַתֻּשְׁחַת וַיַּחְשְׁבוּהָ לְאֶרֶץ זָרַחֶמְלָה וַיָּשׁוּבוּ אֶל־אֶרֶץ נֶפִי וַיַּגִּיעוּ אֶל־גְּבוּלוֹת הָאָרֶץ יָמִים מְעַטִּים לִפְנֵי בוֹא עַמּוֹן׃",
   "english": "Nevertheless, they did find a land which had been peopled; yea, a land which was covered with dry bones; yea, a land which had been peopled and which had been destroyed; and they, having supposed it to be the land of Zarahemla, returned to the land of Nephi, having arrived in the borders of the land not many days before the coming of Ammon."
  },
  {
@@ -15669,7 +15669,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 22,
   "verse": 11,
-  "hebrew": "וַיֵּצְאוּ עַם הַמֶּלֶךְ לִמְחִי בַּלַּיְלָה הַמִּדְבָּרָה עִם־צֹאנָם וּבְקָרָם וַיָּסֹבּוּ אֶת־אֶרֶץ שִׁילוֹם בַּמִּדְבָּר וַיַּטּוּ דַרְכָּם אֶל־אֶרֶץ זָרַהֶמְלָה וְעַמּוֹן וְאֶחָיו מַנְחִים אוֹתָם׃",
+  "hebrew": "וַיֵּצְאוּ עַם הַמֶּלֶךְ לִמְחִי בַּלַּיְלָה הַמִּדְבָּרָה עִם־צֹאנָם וּבְקָרָם וַיָּסֹבּוּ אֶת־אֶרֶץ שִׁילוֹם בַּמִּדְבָּר וַיַּטּוּ דַרְכָּם אֶל־אֶרֶץ זָרַחֶמְלָה וְעַמּוֹן וְאֶחָיו מַנְחִים אוֹתָם׃",
   "english": "And it came to pass that the people of king Limhi did depart by night into the wilderness with their flocks and their herds, and they went round about the land of Shilom in the wilderness, and bent their course towards the land of Zarahemla, being led by Ammon and his brethren."
  },
  {
@@ -15683,7 +15683,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 22,
   "verse": 13,
-  "hebrew": "וַיְהִי אַחֲרֵי הֱיוֹתָם יָמִים רַבִּים בַּמִּדְבָּר וַיָּבֹאוּ אֶל־אֶרֶץ זָרַהֶמְלָה וַיִּתְחַבְּרוּ אֶל־עַם מוֹשִׁיָּה וַיִּהְיוּ לוֹ לַעֲבָדִים׃",
+  "hebrew": "וַיְהִי אַחֲרֵי הֱיוֹתָם יָמִים רַבִּים בַּמִּדְבָּר וַיָּבֹאוּ אֶל־אֶרֶץ זָרַחֶמְלָה וַיִּתְחַבְּרוּ אֶל־עַם מוֹשִׁיָּה וַיִּהְיוּ לוֹ לַעֲבָדִים׃",
   "english": "And after being many days in the wilderness they arrived in the land of Zarahemla, and joined Mosiah’s people, and became his subjects."
  },
  {
@@ -15984,7 +15984,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 24,
   "verse": 1,
-  "hebrew": "וַיְהִי כִּי מָצָא אֲמוּלוֹן חֵן בְּעֵינֵי מֶלֶךְ הַלָּמָנִים וַיִּתֶּן־לוֹ הַמֶּלֶךְ וּלְאֶחָיו לִהְיוֹת מוֹרִים עַל־עַמּוֹ בְּאֶרֶץ שֶׁמְלוֹן וּבְאֶרֶץ שִׁלוֹם וּבְאֶרֶץ אֲמוּלוֹן׃",
+  "hebrew": "וַיְהִי כִּי מָצָא עָמוּלוֹן חֵן בְּעֵינֵי מֶלֶךְ הַלָּמָנִים וַיִּתֶּן־לוֹ הַמֶּלֶךְ וּלְאֶחָיו לִהְיוֹת מוֹרִים עַל־עַמּוֹ בְּאֶרֶץ שֶׁמְלוֹן וּבְאֶרֶץ שִׁילוֹם וּבְאֶרֶץ עָמוּלוֹן׃",
   "english": "And it came to pass that Amulon did gain favor in the eyes of the king of the Lamanites; therefore, the king of the Lamanites granted unto him and his brethren that they should be appointed teachers over his people, yea, even over the people who were in the land of Shemlon, and in the land of Shilom, and in the land of Amulon."
  },
  {
@@ -16005,14 +16005,14 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 24,
   "verse": 4,
-  "hebrew": "וַיָּשֶׂם מוֹרִים מֵאֲחֵי אֲמוּלוֹן בְּכָל־אֶרֶץ אֲשֶׁר יָרְשׁוּ עַמּוֹ וַיָּחֵל לְלַמֵּד אֶת־לְשׁוֹן נֶפִי לְכָל־עַם הַלָּמָנִים׃",
+  "hebrew": "וַיָּשֶׂם מוֹרִים מֵאֲחֵי עָמוּלוֹן בְּכָל־אֶרֶץ אֲשֶׁר יָרְשׁוּ עַמּוֹ וַיָּחֵל לְלַמֵּד אֶת־לְשׁוֹן נֶפִי לְכָל־עַם הַלָּמָנִים׃",
   "english": "And he appointed teachers of the brethren of Amulon in every land which was possessed by his people; and thus the language of Nephi began to be taught among all the people of the Lamanites."
  },
  {
   "book": "Mosiah",
   "chapter": 24,
   "verse": 5,
-  "hebrew": "וַיִּהְיוּ עַם יְדִידִים אִישׁ לְרֵעֵהוּ וְאַךְ לֹא־יָדְעוּ אֶת־הָאֱלֹהִים וְגַם לֹא־לִמְּדוּ אֲחֵי אֲמוּלוֹן דָּבָר עַל־יְהוָה אֱלֹהֵיהֶם וְלֹא תּוֹרַת מֹשֶׁה וְלֹא דִּבְרֵי אֲבִינָדִי׃",
+  "hebrew": "וַיִּהְיוּ עַם יְדִידִים אִישׁ לְרֵעֵהוּ וְאַךְ לֹא־יָדְעוּ אֶת־הָאֱלֹהִים וְגַם לֹא־לִמְּדוּ אֲחֵי עָמוּלוֹן דָּבָר עַל־יְהוָה אֱלֹהֵיהֶם וְלֹא תּוֹרַת מֹשֶׁה וְלֹא דִּבְרֵי אֲבִינָדִי׃",
   "english": "And they were a people friendly one with another; nevertheless they knew not God; neither did the brethren of Amulon teach them anything concerning the Lord their God, neither  the law of Moses; nor did they teach them the words of Abinadi;"
  },
  {
@@ -16033,14 +16033,14 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 24,
   "verse": 8,
-  "hebrew": "וַיְהִי כִּי הֵחֵל אֲמוּלוֹן לִמְשֹׁל בְּאַלְמָא וּבְאֶחָיו וַיָּחֵל לְרָדְפָם וַיַּעַשׂ אֶת־בָּנָיו לִרְדֹּף אֶת־בְּנֵיהֶם׃",
+  "hebrew": "וַיְהִי כִּי הֵחֵל עָמוּלוֹן לִמְשֹׁל בְּאַלְמָא וּבְאֶחָיו וַיָּחֵל לְרָדְפָם וַיַּעַשׂ אֶת־בָּנָיו לִרְדֹּף אֶת־בְּנֵיהֶם׃",
   "english": "And now it came to pass that Amulon began to exercise authority over Alma and his brethren, and began to persecute him, and cause that his children should persecute their children."
  },
  {
   "book": "Mosiah",
   "chapter": 24,
   "verse": 9,
-  "hebrew": "כִּי יָדַע אֲמוּלוֹן אֶת־אַלְמָא אֲשֶׁר הָיָה מִכֹּהֲנֵי הַמֶּלֶךְ וַאֲשֶׁר הֶאֱמִין בְּדִבְרֵי אֲבִינָדִי וַיְגֹרַשׁ מִלִּפְנֵי הַמֶּלֶךְ וַיִּחַר־אַפּוֹ בּוֹ וַיְהִי נִכְנָע לַמֶּלֶךְ לָמָן וַיִּמְשֹׁל בָּם וַיָּשֶׂם עֲלֵיהֶם מַשָּׂא וַיָּקֶם עֲלֵיהֶם נֹגְשִׂים׃",
+  "hebrew": "כִּי יָדַע עָמוּלוֹן אֶת־אַלְמָא אֲשֶׁר הָיָה מִכֹּהֲנֵי הַמֶּלֶךְ וַאֲשֶׁר הֶאֱמִין בְּדִבְרֵי אֲבִינָדִי וַיְגֹרַשׁ מִלִּפְנֵי הַמֶּלֶךְ וַיִּחַר־אַפּוֹ בּוֹ וַיְהִי נִכְנָע לַמֶּלֶךְ לָמָן וַיִּמְשֹׁל בָּם וַיָּשֶׂם עֲלֵיהֶם מַשָּׂא וַיָּקֶם עֲלֵיהֶם נֹגְשִׂים׃",
   "english": "For Amulon knew Alma, that he had been one of the king’s priests, and that it was he that believed the words of Abinadi and was driven out before the king, and therefore he was wroth with him; for he was subject to king Laman, yet he exercised authority over them, and put tasks upon them, and put task– masters over them."
  },
  {
@@ -16054,7 +16054,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 24,
   "verse": 11,
-  "hebrew": "וַיְצַו אֲמוּלוֹן לַחְדֹּל מִזַּעֲקָתָם וַיַּפְקֵד עֲלֵיהֶם שֹׁמְרִים לְשָׁמְרָם וְכָל־אֲשֶׁר יִמָּצֵא קֹרֵא בְשֵׁם אֱלֹהִים מוֹת יוּמָת׃",
+  "hebrew": "וַיְצַו עָמוּלוֹן לַחְדֹּל מִזַּעֲקָתָם וַיַּפְקֵד עֲלֵיהֶם שֹׁמְרִים לְשָׁמְרָם וְכָל־אֲשֶׁר יִמָּצֵא קֹרֵא בְשֵׁם אֱלֹהִים מוֹת יוּמָת׃",
   "english": "And Amulon commanded them that they should stop their cries; and he put guards over them to watch them, that whosoever should be found calling upon God should be put to death."
  },
  {
@@ -16152,7 +16152,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 24,
   "verse": 25,
-  "hebrew": "וַיְהִי אַחֲרֵי הֱיוֹתָם בַּמִּדְבָּר שְׁנֵים עָשָׂר יוֹם וַיָּבֹאוּ אֶל־אֶרֶץ זָרַהֶמְלָה וְגַם הַמֶּלֶךְ מוֹשִׁיָּה קִבֵּל אוֹתָם בְּשִׂמְחָה׃",
+  "hebrew": "וַיְהִי אַחֲרֵי הֱיוֹתָם בַּמִּדְבָּר שְׁנֵים עָשָׂר יוֹם וַיָּבֹאוּ אֶל־אֶרֶץ זָרַחֶמְלָה וְגַם הַמֶּלֶךְ מוֹשִׁיָּה קִבֵּל אוֹתָם בְּשִׂמְחָה׃",
   "english": "And after they had been in the wilderness twelve days they arrived in the land of Zarahemla; and king Mosiah did also receive them with joy."
  },
  {
@@ -16166,35 +16166,35 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 25,
   "verse": 2,
-  "hebrew": "וַיְהִי מִסְפַּר בְּנֵי נֶפִי וְצֶאֱצָאֵי נֶפִי מְעַט מִמִּסְפַּר עַם זָרַהֶמְלָה אֲשֶׁר הָיָה מִצֶּאֱצָאֵי מוּלֶק וְהַבָּאִים אִתּוֹ הַמִּדְבָּרָה׃",
+  "hebrew": "וַיְהִי מִסְפַּר בְּנֵי נֶפִי וְצֶאֱצָאֵי נֶפִי מְעַט מִמִּסְפַּר עַם זָרַחֶמְלָה אֲשֶׁר הָיָה מִצֶּאֱצָאֵי מוּלֶק וְהַבָּאִים אִתּוֹ הַמִּדְבָּרָה׃",
   "english": "Now there were not so many of the children of Nephi, or so many of those who were descendants of Nephi, as there were of the people of Zarahemla, who was a descendant of Mulek, and those who came with him into the wilderness."
  },
  {
   "book": "Mosiah",
   "chapter": 25,
   "verse": 3,
-  "hebrew": "וַיְהִי מִסְפַּר עַם נֶפִי וְעַם זָרַהֶמְלָה מְעַט מִמִּסְפַּר הַלָּמָנִים וְלֹא הָיוּ אַף מַחֲצִיתָם׃",
+  "hebrew": "וַיְהִי מִסְפַּר עַם נֶפִי וְעַם זָרַחֶמְלָה מְעַט מִמִּסְפַּר הַלָּמָנִים וְלֹא הָיוּ אַף מַחֲצִיתָם׃",
   "english": "And there were not so many of the people of Nephi and of the people of Zarahemla as there were of the Lamanites; yea, they were not half so numerous."
  },
  {
   "book": "Mosiah",
   "chapter": 25,
   "verse": 4,
-  "hebrew": "וְעַתָּה נִקְהֲלוּ כָּל־עַם נֶפִי וְגַם כָּל־עַם זָרַהֶמְלָה וַיֵּאָסְפוּ לִשְׁנֵי מַחֲנוֹת׃",
+  "hebrew": "וְעַתָּה נִקְהֲלוּ כָּל־עַם נֶפִי וְגַם כָּל־עַם זָרַחֶמְלָה וַיֵּאָסְפוּ לִשְׁנֵי מַחֲנוֹת׃",
   "english": "And now all the people of Nephi were assembled together, and also all the people of Zarahemla, and they were gathered together in two bodies."
  },
  {
   "book": "Mosiah",
   "chapter": 25,
   "verse": 5,
-  "hebrew": "וַיִּקְרָא מוֹשִׁיָּה וַיַּקְרֵא אֶת־סִפְרֵי זֶנִיף לִפְנֵי עַמּוֹ וַיִּקְרָא אֶת־דִּבְרֵי עַם זֶנִיף מִיּוֹם צֵאתָם מֵאֶרֶץ זָרַהֶמְלָה עַד שׁוּבָם׃",
+  "hebrew": "וַיִּקְרָא מוֹשִׁיָּה וַיַּקְרֵא אֶת־סִפְרֵי זֶנִיף לִפְנֵי עַמּוֹ וַיִּקְרָא אֶת־דִּבְרֵי עַם זֶנִיף מִיּוֹם צֵאתָם מֵאֶרֶץ זָרַחֶמְלָה עַד שׁוּבָם׃",
   "english": "And it came to pass that Mosiah did read, and caused to be read, the records of Zeniff to his people; yea, he read the records of the people of Zeniff, from the time they left the land of Zarahemla until they returned again."
  },
  {
   "book": "Mosiah",
   "chapter": 25,
   "verse": 6,
-  "hebrew": "וַיִּקְרָא גַם אֶת־דִּבְרֵי אַלְמָא וְאֶחָיו וְכָל־עֳנְיָם מִיּוֹם צֵאתָם מֵאֶרֶץ זָרַהֶמְלָה עַד־עֵת שׁוּבָם׃",
+  "hebrew": "וַיִּקְרָא גַם אֶת־דִּבְרֵי אַלְמָא וְאֶחָיו וְכָל־עֳנְיָם מִיּוֹם צֵאתָם מֵאֶרֶץ זָרַחֶמְלָה עַד־עֵת שׁוּבָם׃",
   "english": "And he also read the account of Alma and his brethren, and all their afflictions, from the time they left the land of Zarahemla until the time they returned again."
  },
  {
@@ -16236,14 +16236,14 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 25,
   "verse": 12,
-  "hebrew": "וַיְהִי כִּי בְּנֵי אֲמוּלוֹן וְאֶחָיו אֲשֶׁר לָקְחוּ מִבְּנוֹת הַלָּמָנִים לְנָשִׁים וַיֵּרַע בְּעֵינֵיהֶם דֶּרֶךְ אֲבוֹתָם וְלֹא אָבוּ עוֹד לְהִקָּרֵא בִּשְׁמוֹת אֲבוֹתָם וַיִּקְחוּ עֲלֵיהֶם אֶת־שֵׁם נֶפִי לְמַעַן יִקָּרְאוּ בְּנֵי נֶפִי וַיִּתְיַחֲסוּ בְּתוֹךְ הַנִּקְרָאִים נְפִיִּים׃",
+  "hebrew": "וַיְהִי כִּי בְּנֵי עָמוּלוֹן וְאֶחָיו אֲשֶׁר לָקְחוּ מִבְּנוֹת הַלָּמָנִים לְנָשִׁים וַיֵּרַע בְּעֵינֵיהֶם דֶּרֶךְ אֲבוֹתָם וְלֹא אָבוּ עוֹד לְהִקָּרֵא בִּשְׁמוֹת אֲבוֹתָם וַיִּקְחוּ עֲלֵיהֶם אֶת־שֵׁם נֶפִי לְמַעַן יִקָּרְאוּ בְּנֵי נֶפִי וַיִּתְיַחֲסוּ בְּתוֹךְ הַנִּקְרָאִים נְפִיִּים׃",
   "english": "And it came to pass that those who were the children of Amulon and his brethren, who had taken to wife the daughters of the Lamanites, were displeased with the conduct of their fathers, and they would no longer be called by the names of their fathers, therefore they took upon themselves the name of Nephi, that they might be called the children of Nephi and be numbered among those who were called Nephites."
  },
  {
   "book": "Mosiah",
   "chapter": 25,
   "verse": 13,
-  "hebrew": "וְעַתָּה כָל־עַם זָרַהֶמְלָה הִתְיַחֲסוּ עִם־הַנֶּפִיִּים כִּי לֹא נִתְּנָה הַמַּמְלָכָה כִּי אִם־לְצֶאֱצָאֵי נֶפִי׃",
+  "hebrew": "וְעַתָּה כָל־עַם זָרַחֶמְלָה הִתְיַחֲסוּ עִם־הַנֶּפִיִּים כִּי לֹא נִתְּנָה הַמַּמְלָכָה כִּי אִם־לְצֶאֱצָאֵי נֶפִי׃",
   "english": "And now all the people of Zarahemla were numbered with the Nephites, and this because the kingdom had been conferred upon none but those who were descendants of Nephi."
  },
  {
@@ -16285,7 +16285,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 25,
   "verse": 19,
-  "hebrew": "וַיִּתֵּן הַמֶּלֶךְ מוֹשִׁיָּה לְאַלְמָא לְהָקִים עֲדוֹת בְּכָל־אֶרֶץ זָרַהֶמְלָה וַיִּתֶּן־לוֹ כֹּחַ לִמְשֹׁחַ כֹּהֲנִים וּמוֹרִים עַל־כָּל־עֵדָה׃",
+  "hebrew": "וַיִּתֵּן הַמֶּלֶךְ מוֹשִׁיָּה לְאַלְמָא לְהָקִים עֲדוֹת בְּכָל־אֶרֶץ זָרַחֶמְלָה וַיִּתֶּן־לוֹ כֹּחַ לִמְשֹׁחַ כֹּהֲנִים וּמוֹרִים עַל־כָּל־עֵדָה׃",
   "english": "And it came to pass that king Mosiah granted unto Alma that he might establish churches throughout all the land of Zarahemla; and gave him power to ordain priests and teachers over every church."
  },
  {
@@ -16299,7 +16299,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 25,
   "verse": 21,
-  "hebrew": "וַיִּקָּהֲלוּ לְקְהִלּוֹת שֹׁנוֹת וַיִּקָּרְאוּ עֵדוֹת וּלְכָל־עֵדָה כֹּהֲנֶיהָ וּמוֹרֶיהָ וְכָל־כֹּהֵן מַטִּיף אֶת־הַדָּבָר כַּאֲשֶׁר נִמְסַר אֵלָיו מִפִּי אַלְמָא׃",
+  "hebrew": "וַיִּקָּהֲלוּ לִקְהִלּוֹת שֹׁנוֹת וַיִּקָּרְאוּ עֵדוֹת וּלְכָל־עֵדָה כֹּהֲנֶיהָ וּמוֹרֶיהָ וְכָל־כֹּהֵן מַטִּיף אֶת־הַדָּבָר כַּאֲשֶׁר נִמְסַר אֵלָיו מִפִּי אַלְמָא׃",
   "english": "Therefore they did assemble them– selves together in different bodies, being called churches; every church having their priests and their teachers, and every priest preaching the word according as it was delivered to him by the mouth of Alma."
  },
  {
@@ -16313,7 +16313,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 25,
   "verse": 23,
-  "hebrew": "וַיְהִי שֶׁבַע עֵדוֹת בְּאֶרֶץ זָרַהֶמְלָה וַיְהִי כָל־הֶחָפֵץ לָשֵׂאת עָלָיו אֶת־שֵׁם הַמָּשִׁיחַ אוֹ הָאֱלֹהִים וַיִּדְבַּק בַּעֲדוֹת הָאֱלֹהִים׃",
+  "hebrew": "וַיְהִי שֶׁבַע עֵדוֹת בְּאֶרֶץ זָרַחֶמְלָה וַיְהִי כָל־הֶחָפֵץ לָשֵׂאת עָלָיו אֶת־שֵׁם הַמָּשִׁיחַ אוֹ הָאֱלֹהִים וַיִּדְבַּק בַּעֲדוֹת הָאֱלֹהִים׃",
   "english": "And now there were seven churches in the land of Zarahemla. And it came to pass that whosoever were desirous to take upon them the name of Christ, or of God, they did join the churches of God;"
  },
  {
@@ -16383,7 +16383,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 26,
   "verse": 9,
-  "hebrew": "וַיְהִי וְאַלְמָא לֹא יָדַע אוֹדוֹתָם אַךְ הָיוּ עֵדִים רַבִּים נֶגְדָּם וַיַּעַמְדוּ הָעָם וַיָּעִידוּ עַל־עֲוֺנָם לָרֹב׃",
+  "hebrew": "וַיְהִי וְאַלְמָא לֹא יָדַע אוֹדוֹתָם אַךְ הָיוּ עֵדִים רַבִּים נֶגְדָּם וַיַּעַמְדוּ הָעָם וַיָּעִידוּ עַל־עֲוֹנָם לָרֹב׃",
   "english": "And it came to pass that Alma did not know concerning them; but there were many witnesses against them; yea, the people stood and testified of their iniquity in abundance."
  },
  {
@@ -16397,7 +16397,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 26,
   "verse": 11,
-  "hebrew": "וַיֹּאמֶר לַמֶּלֶךְ הִנֵּה אֵלֶּה אֲשֶׁר הֵבֵאנוּ לְפָנֶיךָ וַיַּאֲשִׁימוּם אֲחֵיהֶם וְנִתְפְּשׂוּ בַּעֲוֺנוֹת שׁוֹנִים וְלֹא שָׁבוּ מֵעֲוֺנוֹתֵיהֶם עַל־כֵּן הֲבִיאוֹנוּם לְפָנֶיךָ לְמַעַן תִּשְׁפְּטֵם כְּפִשְׁעֵיהֶם׃",
+  "hebrew": "וַיֹּאמֶר לַמֶּלֶךְ הִנֵּה אֵלֶּה אֲשֶׁר הֵבֵאנוּ לְפָנֶיךָ וַיַּאֲשִׁימוּם אֲחֵיהֶם וְנִתְפְּשׂוּ בַּעֲוֹנוֹת שׁוֹנִים וְלֹא שָׁבוּ מֵעֲוֹנוֹתֵיהֶם עַל־כֵּן הֲבִיאוֹנוּם לְפָנֶיךָ לְמַעַן תִּשְׁפְּטֵם כְּפִשְׁעֵיהֶם׃",
   "english": "And he said unto the king: Behold, here are many whom we have brought before thee, who are accused of their brethren; yea, and they have been taken in divers iniquities. And they do not repent of their iniquities; therefore we have brought them before thee, that thou mayest judge them according to their crimes."
  },
  {
@@ -16551,14 +16551,14 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 26,
   "verse": 33,
-  "hebrew": "וַיְהִי כִּשְׁמֹעַ אַלְמָא אֶת־הַדְּבָרִים הָאֵלֶּה וַיִּכְתְּבֵם לְמַעַן יִהְיוּ לוֹ וּלְמַעַן יִשְׁפֹּט אֶת־עַם הָעֵדָה הַזֹּאת עַל־פִּי מִצְוֺת אֱלֹהִים׃",
+  "hebrew": "וַיְהִי כִּשְׁמֹעַ אַלְמָא אֶת־הַדְּבָרִים הָאֵלֶּה וַיִּכְתְּבֵם לְמַעַן יִהְיוּ לוֹ וּלְמַעַן יִשְׁפֹּט אֶת־עַם הָעֵדָה הַזֹּאת עַל־פִּי מִצְוֹת אֱלֹהִים׃",
   "english": "And it came to pass when Alma had heard these words he wrote them down that he might have them, and that he might judge the people of that church according to the command– ments of God."
  },
  {
   "book": "Mosiah",
   "chapter": 26,
   "verse": 34,
-  "hebrew": "וַיֵּלֶךְ אַלְמָא וַיִּשְׁפֹּט אֶת־הַנִּתְפָּשִׂים בֶּעָוֺן עַל־פִּי דְּבַר יְהוָה׃",
+  "hebrew": "וַיֵּלֶךְ אַלְמָא וַיִּשְׁפֹּט אֶת־הַנִּתְפָּשִׂים בֶּעָוֹן עַל־פִּי דְּבַר יְהוָה׃",
   "english": "And it came to pass that Alma went and judged those that had been taken in iniquity, according to the word of the Lord."
  },
  {
@@ -16572,7 +16572,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 26,
   "verse": 36,
-  "hebrew": "וַאֲשֶׁר מֵאֲנוּ לְהִתְוַדּוֹת בְּחַטֹּאתָם וְלָשׁוּב מֵעֲוֺנָם לֹא הִתְיַחֲסוּ בְּתוֹךְ עַם הָעֵדָה וַיִּמָּחוּ שְׁמוֹתָם׃",
+  "hebrew": "וַאֲשֶׁר מֵאֲנוּ לְהִתְוַדּוֹת בְּחַטֹּאתָם וְלָשׁוּב מֵעֲוֹנָם לֹא הִתְיַחֲסוּ בְּתוֹךְ עַם הָעֵדָה וַיִּמָּחוּ שְׁמוֹתָם׃",
   "english": "And those that would not confess their sins and repent of their iniquity, the same were not numbered among the people of the church, and their names were blotted out."
  },
  {
@@ -16649,7 +16649,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 27,
   "verse": 8,
-  "hebrew": "וּבְנֵי מוֹשִׁיָּה נִמְנוּ בֵּין הַכֹּפְרִים וְגַם אֶחָד מִבְּנֵי אַלְמָא נִמְנָה בֵּינֵיהֶם וּשְׁמוֹ אַלְמָא כְּשֵׁם אָבִיו אַךְ הָיָה לְאִישׁ רָשָׁע וְעוֹבֵד אֱלִילִים וְהָיָה אִישׁ דְּבָרִים וַיְדַבֵּר חֲלָקוֹת רַבּוֹת אֶל־הָעָם וַיַּתְעֶה רַבִּים מֵהָעָם לַעֲשׂוֹת כַּעֲוֺנוֹתָיו׃",
+  "hebrew": "וּבְנֵי מוֹשִׁיָּה נִמְנוּ בֵּין הַכֹּפְרִים וְגַם אֶחָד מִבְּנֵי אַלְמָא נִמְנָה בֵּינֵיהֶם וּשְׁמוֹ אַלְמָא כְּשֵׁם אָבִיו אַךְ הָיָה לְאִישׁ רָשָׁע וְעוֹבֵד אֱלִילִים וְהָיָה אִישׁ דְּבָרִים וַיְדַבֵּר חֲלָקוֹת רַבּוֹת אֶל־הָעָם וַיַּתְעֶה רַבִּים מֵהָעָם לַעֲשׂוֹת כַּעֲוֹנוֹתָיו׃",
   "english": "Now the sons of Mosiah were numbered among the unbelievers; and also one of the sons of Alma was numbered among them, he being  called Alma, after his father; nevertheless, he became a very wicked and an idolatrous man. And he was a man of many words, and did speak much flattery to the people; therefore he led many of the people to do after the manner of his iniquities."
  },
  {
@@ -16663,7 +16663,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 27,
   "verse": 10,
-  "hebrew": "וַיְהִי בְּלֶכְתּוֹ לְהַשְׁחִית אֶת־עֲדַת הָאֱלֹהִים כִּי הָלַךְ בַּסֵּתֶר עִם־בְּנֵי מוֹשִׁיָּה לְהַשְׁחִית אֶת־הָעֵדָה וּלְהַתְעוֹת אֶת־עַם יְהוָה נֶגֶד מִצְוֺת אֱלֹהִים וְאַף הַמֶּלֶךְ׃",
+  "hebrew": "וַיְהִי בְּלֶכְתּוֹ לְהַשְׁחִית אֶת־עֲדַת הָאֱלֹהִים כִּי הָלַךְ בַּסֵּתֶר עִם־בְּנֵי מוֹשִׁיָּה לְהַשְׁחִית אֶת־הָעֵדָה וּלְהַתְעוֹת אֶת־עַם יְהוָה נֶגֶד מִצְוֹת אֱלֹהִים וְאַף הַמֶּלֶךְ׃",
   "english": "And now it came to pass that while he was going about to destroy the church of God, for he did go about secretly with the sons of Mosiah seeking to destroy the church, and to lead astray the people of the Lord, contrary to the commandments of God, or even the king—"
  },
  {
@@ -16733,21 +16733,21 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 27,
   "verse": 20,
-  "hebrew": "וַיְסַפְּרוּ לְאָבִיו אֵת כָּל־אֲשֶׁר קָרָה לָהֶם וַיִּשְׂמַח אָבִיו כִּי יָדַע כִּי הָיָה זֶה כֹּחַ אֱלֹהִים׃",
+  "hebrew": "וַיְסַפְּרוּ לְאָבִיו אֶת־כָּל־אֲשֶׁר קָרָה לָהֶם וַיִּשְׂמַח אָבִיו כִּי יָדַע כִּי הָיָה זֶה כֹּחַ אֱלֹהִים׃",
   "english": "And they rehearsed unto his father all that had happened unto them; and his father rejoiced, for he knew that it was the power of God."
  },
  {
   "book": "Mosiah",
   "chapter": 27,
   "verse": 21,
-  "hebrew": "וַיַּקְהֵל הָמוֹן רַב לְמַעַן יִרְאוּ אֵת אֲשֶׁר עָשָׂה יְהוָה לִבְנוֹ וְגַם לַאֲשֶׁר הָיוּ אִתּוֹ׃",
+  "hebrew": "וַיַּקְהֵל הָמוֹן רַב לְמַעַן יִרְאוּ אֶת־אֲשֶׁר עָשָׂה יְהוָה לִבְנוֹ וְגַם לַאֲשֶׁר הָיוּ אִתּוֹ׃",
   "english": "And he caused that a multitude should be gathered together that they might witness what the Lord had done for his son, and also for those that were with him."
  },
  {
   "book": "Mosiah",
   "chapter": 27,
   "verse": 22,
-  "hebrew": "וַיַּקְהֵל אֶת־הַכֹּהֲנִים וַיָּחֵלּוּ לָצוּם וּלְהִתְפַּלֵּל אֶל־יְהוָה אֱלֹהֵיהֶם כִּי יִפְתַּח אֶת־פִּי אַלְמָא לְמַעַן יְדַבֵּר וְגַם כִּי יְקַבְּלוּ אֵבָרָיו אֶת־כֹּחָם לְמַעַן תִּפָּקַחְנָה עֵינֵי הָעָם לִרְאוֹת וְלָדַעַת אֶת־חֶסֶד הָאֵל וּכְבוֹדוֹֹ׃",
+  "hebrew": "וַיַּקְהֵל אֶת־הַכֹּהֲנִים וַיָּחֵלּוּ לָצוּם וּלְהִתְפַּלֵּל אֶל־יְהוָה אֱלֹהֵיהֶם כִּי יִפְתַּח אֶת־פִּי אַלְמָא לְמַעַן יְדַבֵּר וְגַם כִּי יְקַבְּלוּ אֵבָרָיו אֶת־כֹּחָם לְמַעַן תִּפָּקַחְנָה עֵינֵי הָעָם לִרְאוֹת וְלָדַעַת אֶת־חֶסֶד הָאֵל וּכְבוֹדוֹ׃",
   "english": "And he caused that the priests should assemble themselves together; and they began to fast, and to pray to the Lord their God that he would open the mouth of Alma, that he might speak, and also that his limbs might receive their strength—that the eyes of the people might be opened to see and know of the goodness and glory of God."
  },
  {
@@ -16796,7 +16796,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 27,
   "verse": 29,
-  "hebrew": "נִפְדְּתָה נַפְשִׁי מִמְּרִירוּת רֹאשׁ וּמִכְּבְלֵי עָוֺן הָיִיתִי בַּתְּהוֹם הָאָפֵל וְעַתָּה רָאִיתִי אֶת־אוֹר הָאֱלֹהִים הַנִּפְלָא עֻנְּתָה נַפְשִׁי בְּעִנּוּיֵי עוֹלָם אַךְ נִצַּלְתִּי וְאֵין עוֹד מַכְאוֹב לְנַפְשִׁי׃",
+  "hebrew": "נִפְדְּתָה נַפְשִׁי מִמְּרִירוּת רֹאשׁ וּמִכְּבְלֵי עָוֹן הָיִיתִי בַּתְּהוֹם הָאָפֵל וְעַתָּה רָאִיתִי אֶת־אוֹר הָאֱלֹהִים הַנִּפְלָא עֻנְּתָה נַפְשִׁי בְּעִנּוּיֵי עוֹלָם אַךְ נִצַּלְתִּי וְאֵין עוֹד מַכְאוֹב לְנַפְשִׁי׃",
   "english": "My soul hath been redeemed from the gall of bitterness and bonds of iniquity. I was in the darkest abyss; but now I behold the marvelous light of God. My soul was racked with eternal  torment; but I am snatched, and my soul is pained no more."
  },
  {
@@ -16817,14 +16817,14 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 27,
   "verse": 32,
-  "hebrew": "וַיְהִי מֵעֵת הַהִיא וָהָלְאָה וַיָּחֶל אַלְמָא לְלַמֵּד אֶת־הָעָם וַאֲשֶׁר הָיוּ עִם־אַלְמָא בְּעֵת הֵרָאוֹת הַמַּלְאָךְ אֲלֵיהֶם וַיִּסְּעוּ בְּכָל־הָאָרֶץ וַיַּשְׁמִיעוּ לְכָל־הָעָם אֵת אֲשֶׁר שָׁמְעוּ וְרָאוּ וַיַּטִּיפוּ דְּבַר־יְהוָה בְּצָרוֹת רַבּוֹת וַיִּרָדְפוּם מְאֹד הַכֹּפְרִים וַיַּכּוּם רַבִּים מֵהֶם׃",
+  "hebrew": "וַיְהִי מֵעֵת הַהִיא וָהָלְאָה וַיָּחֶל אַלְמָא לְלַמֵּד אֶת־הָעָם וַאֲשֶׁר הָיוּ עִם־אַלְמָא בְּעֵת הֵרָאוֹת הַמַּלְאָךְ אֲלֵיהֶם וַיִּסְּעוּ בְּכָל־הָאָרֶץ וַיַּשְׁמִיעוּ לְכָל־הָעָם אֶת־אֲשֶׁר שָׁמְעוּ וְרָאוּ וַיַּטִּיפוּ דְּבַר־יְהוָה בְּצָרוֹת רַבּוֹת וַיִּרָדְפוּם מְאֹד הַכֹּפְרִים וַיַּכּוּם רַבִּים מֵהֶם׃",
   "english": "And now it came to pass that Alma began from this time forward to teach the people, and those who were with Alma at the time the angel appeared unto them, traveling round about through all the land, publishing to all the people the things which they had heard and seen, and preaching the word of God in much tribulation, being greatly persecuted by those who were unbelievers, being smitten by many of them."
  },
  {
   "book": "Mosiah",
   "chapter": 27,
   "verse": 33,
-  "hebrew": "וְאַף עַל־פִּי כֵן הֵבִיאוּ נֶחָמָה רַבָּה לָעֵדָה וַיְחַזְּקוּ אֶת־אֱמוּנָתָם וַיּוֹכִיחוּם בְּאֹרֶךְ רוּחַ וּבְעָמָל רַב לִשְׁמֹר אֶת־מִצְוֺת אֱלֹהִים׃",
+  "hebrew": "וְאַף עַל־פִּי כֵן הֵבִיאוּ נֶחָמָה רַבָּה לָעֵדָה וַיְחַזְּקוּ אֶת־אֱמוּנָתָם וַיּוֹכִיחוּם בְּאֹרֶךְ רוּחַ וּבְעָמָל רַב לִשְׁמֹר אֶת־מִצְוֹת אֱלֹהִים׃",
   "english": "But notwithstanding all this, they did impart much consolation to the church, confirming their faith, and exhorting them with long– suffering and much travail to keep the commandments of God."
  },
  {
@@ -16838,7 +16838,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 27,
   "verse": 35,
-  "hebrew": "וַיִּסְּעוּ בְּכָל־אֶרֶץ זָרַהֶמְלָה וּבְקֶרֶב כָּל־הָעָם אֲשֶׁר תַּחַת מֶמְשֶׁלֶת הַמֶּלֶךְ מוֹשִׁיָּה וַיִּתְאַמְּצוּ בְּחָזְקָה לְתַקֵּן אֶת־כָּל־הָרָעוֹת אֲשֶׁר עָשׂוּ לָעֵדָה וַיִּתְוַדּוּ אֶת־כָּל־חַטֹּאתָם וַיַּגִּידוּ אֶת־כָּל־אֲשֶׁר רָאוּ וַיְבָאֲרוּ אֶת־הַנְּבוּאוֹת וְהַכְּתוּבִים לְכָל־הֶחָפֵץ לִשְׁמֹעַ׃",
+  "hebrew": "וַיִּסְּעוּ בְּכָל־אֶרֶץ זָרַחֶמְלָה וּבְקֶרֶב כָּל־הָעָם אֲשֶׁר תַּחַת מֶמְשֶׁלֶת הַמֶּלֶךְ מוֹשִׁיָּה וַיִּתְאַמְּצוּ בְּחָזְקָה לְתַקֵּן אֶת־כָּל־הָרָעוֹת אֲשֶׁר עָשׂוּ לָעֵדָה וַיִּתְוַדּוּ אֶת־כָּל־חַטֹּאתָם וַיַּגִּידוּ אֶת־כָּל־אֲשֶׁר רָאוּ וַיְבָאֲרוּ אֶת־הַנְּבוּאוֹת וְהַכְּתוּבִים לְכָל־הֶחָפֵץ לִשְׁמֹעַ׃",
   "english": "And they traveled throughout all the lands of Zarahemla, and among all the people who were under the reign of king Mosiah, zealously striving to repair all the injuries which they had done to the church, confessing all their sins, and publishing all the things which they had seen, and explaining the prophecies and the scriptures to all who desired to hear them."
  },
  {
@@ -16866,7 +16866,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 28,
   "verse": 2,
-  "hebrew": "אוּלַי יְבִיאוּם לְדַעַת אֶת־יְהוָה אֱלֹהֵיהֶם וּלְהוֹכִיחַ אוֹתָם עַל־עֲוֺן אֲבוֹתֵיהֶם וְאוּלַי יְרַפְּאוּ אוֹתָם מִשִּׂנְאָתָם אֶת־הַנֶּפִיִּים לְמַעַן יִשְׂמְחוּ גַם־הֵם בַּיהוָה אֱלֹהֵיהֶם וְהָיוּ יְדִידִים אִישׁ לְרֵעֵהוּ וְלֹא־יִהְיוּ עוֹד מְרִיבוֹת בְּכָל־הָאָרֶץ אֲשֶׁר נָתַן לָהֶם יְהוָה אֱלֹהֵיהֶם׃",
+  "hebrew": "אוּלַי יְבִיאוּם לְדַעַת אֶת־יְהוָה אֱלֹהֵיהֶם וּלְהוֹכִיחַ אוֹתָם עַל־עֲוֹן אֲבוֹתֵיהֶם וְאוּלַי יְרַפְּאוּ אוֹתָם מִשִּׂנְאָתָם אֶת־הַנֶּפִיִּים לְמַעַן יִשְׂמְחוּ גַם־הֵם בַּיהוָה אֱלֹהֵיהֶם וְהָיוּ יְדִידִים אִישׁ לְרֵעֵהוּ וְלֹא־יִהְיוּ עוֹד מְרִיבוֹת בְּכָל־הָאָרֶץ אֲשֶׁר נָתַן לָהֶם יְהוָה אֱלֹהֵיהֶם׃",
   "english": "That perhaps they might bring them to the knowledge of the Lord their God, and convince them of the iniquity of their fathers; and that perhaps they might cure them of their hatred towards the Nephites, that they might also be brought to rejoice in the Lord their God, that they might become friendly to one another, and that there should be no more contentions in all the land which the Lord their God had given them."
  },
  {
@@ -16880,7 +16880,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 28,
   "verse": 4,
-  "hebrew": "וְכָכָה פָּעַל רוּחַ יְהוָה בָּם כִּי הָיוּ מִן־הַחוֹטְאִים הַגְּרוּעִים וַיּוֹאֶל יְהוָה בְּרַחֲמָיו הָרַבִּים לַחֲמֹל עֲלֵיהֶם אַךְ סָבְלוּ מַכְאוֹב נֶפֶשׁ רַב בַּעֲבוּר עֲוֺנוֹתֵיהֶם וַיִּסְבְּלוּ הַרְבֵּה וַיִּירְאוּ פֶּן־יִמְאַסֵם יְהוָה לָנֶצַח׃",
+  "hebrew": "וְכָכָה פָּעַל רוּחַ יְהוָה בָּם כִּי הָיוּ מִן־הַחוֹטְאִים הַגְּרוּעִים וַיּוֹאֶל יְהוָה בְּרַחֲמָיו הָרַבִּים לַחֲמֹל עֲלֵיהֶם אַךְ סָבְלוּ מַכְאוֹב נֶפֶשׁ רַב בַּעֲבוּר עֲוֹנוֹתֵיהֶם וַיִּסְבְּלוּ הַרְבֵּה וַיִּירְאוּ פֶּן־יִמְאַסֵם יְהוָה לָנֶצַח׃",
   "english": "And thus did the Spirit of the Lord work upon them, for they were the very vilest of sinners. And the Lord saw fit in his infinite mercy to spare them; nevertheless they suffered much anguish of soul because of their iniquities, suffering much and fearing that they should be cast off forever."
  },
  {
@@ -16929,7 +16929,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 28,
   "verse": 11,
-  "hebrew": "וַיִּקַּח אֶת־הַסְּפָרִים הַחֲרוּתִים עַל־לוּחוֹת הַנְּחֹשֶׁת וְגַם אֶת־לוּחוֹת נֶפִי וְכָל־אֲשֶׁר שָׁמַר וְנָצַר כְּפִי מִצְוֺת אֱלֹהִים אַחֲרֵי תַרְגְּמוֹ וַיַּכְתֵּב אֶת־הַסְּפָרִים אֲשֶׁר עַל־לוּחוֹת הַזָּהָב אֲשֶׁר מָצְאוּ עַם לִמְחִי וַאֲשֶׁר נִתְּנוּ לוֹ בְּיַד לִמְחִי׃",
+  "hebrew": "וַיִּקַּח אֶת־הַסְּפָרִים הַחֲרוּתִים עַל־לוּחוֹת הַנְּחֹשֶׁת וְגַם אֶת־לוּחוֹת נֶפִי וְכָל־אֲשֶׁר שָׁמַר וְנָצַר כְּפִי מִצְוֹת אֱלֹהִים אַחֲרֵי תַרְגְּמוֹ וַיַּכְתֵּב אֶת־הַסְּפָרִים אֲשֶׁר עַל־לוּחוֹת הַזָּהָב אֲשֶׁר מָצְאוּ עַם לִמְחִי וַאֲשֶׁר נִתְּנוּ לוֹ בְּיַד לִמְחִי׃",
   "english": "Therefore he took the records which were engraven on the plates of brass, and also the plates of Nephi, and all the things which he had kept and preserved according to the command– ments of God, after having translated and caused to be written the records which were on the plates of gold which had been found by the people of Limhi, which were delivered to him by the hand of Limhi;"
  },
  {
@@ -16957,7 +16957,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 28,
   "verse": 15,
-  "hebrew": "וְנִשְׁמְרוּ וְנִצְּרוּ בְּיַד יְהוָה לְמַעַן יְגַלֶּה לְכָל־בְּרִיָּה אֲשֶׁר תִּירַשׁ אֶת־הָאָרֶץ אֶת־עֲוֺנוֹת וְתוֹעֲבוֹת עַמּוֹ׃",
+  "hebrew": "וְנִשְׁמְרוּ וְנִצְּרוּ בְּיַד יְהוָה לְמַעַן יְגַלֶּה לְכָל־בְּרִיָּה אֲשֶׁר תִּירַשׁ אֶת־הָאָרֶץ אֶת־עֲוֹנוֹת וְתוֹעֲבוֹת עַמּוֹ׃",
   "english": "And they have been kept and preserved by the hand of the Lord, that he should discover to every creature who should possess the land the iniquities and abominations of his people;"
  },
  {
@@ -17006,14 +17006,14 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 29,
   "verse": 2,
-  "hebrew": "וַיְהִי קוֹל הָעָם לֵאמֹר חָפֵצִים אָנוּ שֶׁאַהֲרֹן בְּנְךָ יִהְיֶה מַלְכֵּנוּ וּמֹשְׁלֵנוּ׃",
+  "hebrew": "וַיְהִי קוֹל הָעָם לֵאמֹר חָפֵצִים אָנוּ כִּי אַהֲרֹן בִּנְךָ יִהְיֶה מַלְכֵּנוּ וּמֹשְׁלֵנוּ׃",
   "english": "And it came to pass that the voice of the people came, saying: We are desirous that Aaron thy son should be our king and our ruler."
  },
  {
   "book": "Mosiah",
   "chapter": 29,
   "verse": 3,
-  "hebrew": "וְאַהֲרֹן עָלָה אֶל־אֶרֶץ נְפִי עַל־כֵּן לֹא־יָכֹל הַמֶּלֶךְ לָתֵת לוֹ אֶת־הַמַּמְלָכָה וְגַם־אַהֲרֹן מֵאֵן לָקַחַת עָלָיו אֶת־הַמַּמְלָכָה וְגַם כָּל־בְּנֵי מוֹשִׁיָּה לֹא אָבוּ לָקַחַת עֲלֵיהֶם אֶת־הַמַּמְלָכָה׃",
+  "hebrew": "וְאַהֲרֹן עָלָה אֶל־אֶרֶץ נֶפִי עַל־כֵּן לֹא־יָכֹל הַמֶּלֶךְ לָתֵת לוֹ אֶת־הַמַּמְלָכָה וְגַם־אַהֲרֹן מֵאֵן לָקַחַת עָלָיו אֶת־הַמַּמְלָכָה וְגַם כָּל־בְּנֵי מוֹשִׁיָּה לֹא אָבוּ לָקַחַת עֲלֵיהֶם אֶת־הַמַּמְלָכָה׃",
   "english": "Now Aaron had gone up to the land of Nephi, therefore the king could not confer the kingdom upon him; neither would Aaron take upon him the kingdom; neither were any of the sons of Mosiah willing to take upon them the kingdom."
  },
  {
@@ -17230,7 +17230,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 29,
   "verse": 34,
-  "hebrew": "וַיֹּאמֶר לָהֶם כִּי לֹא־נָכוֹן שֶׁיִּהְיוּ הַדְּבָרִים הָאֵלֶּה כִּי אִם־יִהְיֶה הַמַּשָּׂא עַל־כָּל־הָעָם לְמַעַן יִשָּׂא כָל־אִישׁ אֶת־חֶלְקוֹ׃",
+  "hebrew": "וַיֹּאמֶר לָהֶם כִּי לֹא־נָכוֹן כִּי יִהְיוּ הַדְּבָרִים הָאֵלֶּה כִּי אִם־יִהְיֶה הַמַּשָּׂא עַל־כָּל־הָעָם לְמַעַן יִשָּׂא כָל־אִישׁ אֶת־חֶלְקוֹ׃",
   "english": "And he told them that these things ought not to be; but that the burden should come upon all the people, that every man might bear his part."
  },
  {
@@ -17244,7 +17244,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 29,
   "verse": 36,
-  "hebrew": "הֵן אֶת־כָּל־עֲוֹנוֹתָיו וְתוֹעֲבוֹתָיו וְאֶת־כָּל־הַמִּלְחָמוֹת וְהַמְּרִיבוֹת וּשְׁפִיכַת הַדָּמִים וְהַגְּנֵבוֹת וְהַשְּׁלִילוֹת וַעֲשִׂיַּת הַזְּנוּת וְכָל־מִינֵי הָרֶשַׁע אֲשֶׁר לֹא יוּכְלוּ לְהִמָּנוֹת וַיַּגֵּד לָהֶם כִּי הַדְּבָרִים הָאֵלֶּה לֹא־נָכוֹן שֶׁיִּהְיוּ כִּי תּוֹעֲבַת יְהוָה הֵם׃",
+  "hebrew": "הֵן אֶת־כָּל־עֲוֹנוֹתָיו וְתוֹעֲבוֹתָיו וְאֶת־כָּל־הַמִּלְחָמוֹת וְהַמְּרִיבוֹת וּשְׁפִיכַת הַדָּמִים וְהַגְּנֵבוֹת וְהַשְּׁלִילוֹת וַעֲשִׂיַּת הַזְּנוּת וְכָל־מִינֵי הָרֶשַׁע אֲשֶׁר לֹא יוּכְלוּ לְהִמָּנוֹת וַיַּגֵּד לָהֶם כִּי הַדְּבָרִים הָאֵלֶּה לֹא־נָכוֹן כִּי יִהְיוּ כִּי תּוֹעֲבַת יְהוָה הֵם׃",
   "english": "Yea, all his iniquities and abominations, and all the wars, and contentions, and bloodshed, and the stealing, and the plun– dering, and the committing of whoredoms, and all manner of iniquities which cannot be enumerated—telling them that these things ought not to be, that they were expressly repugnant to the command– ments of God."
  },
  {
@@ -17300,7 +17300,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 29,
   "verse": 44,
-  "hebrew": "וְכָכָה הֵחֵל מִמְשַׁל הַשּׁוֹפְטִים בְּכָל־אֶרֶץ זָרַהֶמְלָה בְּקֶרֶב כָּל־הָעָם אֲשֶׁר נִקְרְאוּ נְפִיִּים וַיְהִי עַלְמָא הַשּׁוֹפֵט הָרִאשׁוֹן וְהָרֹאשׁ׃",
+  "hebrew": "וְכָכָה הֵחֵל מִמְשַׁל הַשּׁוֹפְטִים בְּכָל־אֶרֶץ זָרַחֶמְלָה בְּקֶרֶב כָּל־הָעָם אֲשֶׁר נִקְרְאוּ נְפִיִּים וַיְהִי עַלְמָא הַשּׁוֹפֵט הָרִאשׁוֹן וְהָרֹאשׁ׃",
   "english": "And thus commenced the reign of the judges throughout all the  land of Zarahemla, among all the people who were called the  Nephites; and Alma was the first and chief judge."
  },
  {
@@ -17426,7 +17426,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 1,
   "verse": 15,
-  "hebrew": "וַיְהִי כִּי תְּפָשׂוּהוּ וּשְׁמוֹ נִחוֹר וַיִּשָּׂאֻהוּ אֶל־רֹאשׁ גִּבְעַת מַנְטִי וְשֵׁם הוּבָא אוֹ יוֹתֵר נָכוֹן הוֹדָה בֵּין הַשָּׁמַיִם וְהָאָרֶץ כִּי אֲשֶׁר לִמֵּד לָעָם הָיָה נֶגֶד דְּבַר־יְהוָה וְשֵׁם מֵת מִיתַת בּוּשָׁה׃",
+  "hebrew": "וַיְהִי כִּי תְּפָשׂוּהוּ וּשְׁמוֹ נִחוֹר וַיִּשָּׂאֻהוּ אֶל־רֹאשׁ גִּבְעַת מַנְטִי וְשָׁם הוּבָא אוֹ יוֹתֵר נָכוֹן הוֹדָה בֵּין הַשָּׁמַיִם וְהָאָרֶץ כִּי אֲשֶׁר לִמֵּד לָעָם הָיָה נֶגֶד דְּבַר־יְהוָה וְשֵׁם מֵת מִיתַת בּוּשָׁה׃",
   "english": "And it came to pass that they took him; and his name was Nehor; and they carried him upon the top of the hill Manti, and there he was caused, or rather did acknowledge, between the heavens and the earth, that what he had taught to the people was contrary to the word of God; and there he suffered an ignominious death."
  },
  {
@@ -17496,7 +17496,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 1,
   "verse": 25,
-  "hebrew": "וַיְהִי זֹאת לְמַסָּה גְדוֹלָה לָעֹמְדִים בֶּאֱמוּנָה אַךְ הָיוּ חֲזָקִים וּבִלְתִּי־מָטִים בִּשְׁמִירַת מִצְוֺת הָאֱלֹהִים וַיִּשְׂאוּ בְאֹרֶךְ רוּחַ אֶת־הָרְדִיפָה אֲשֶׁר נֶעֶרְמָה עֲלֵיהֶם׃",
+  "hebrew": "וַיְהִי זֹאת לְמַסָּה גְדוֹלָה לָעֹמְדִים בֶּאֱמוּנָה אַךְ הָיוּ חֲזָקִים וּבִלְתִּי־מָטִים בִּשְׁמִירַת מִצְוֹת הָאֱלֹהִים וַיִּשְׂאוּ בְאֹרֶךְ רוּחַ אֶת־הָרְדִיפָה אֲשֶׁר נֶעֶרְמָה עֲלֵיהֶם׃",
   "english": "Now this was a great trial to those that did stand fast in the faith; nevertheless, they were steadfast and immovable in keeping the commandments of God, and they bore with patience the persecution which was heaped upon them."
  },
  {
@@ -17657,7 +17657,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 2,
   "verse": 15,
-  "hebrew": "וַיְהִי כִּי בָּאוּ הָעַמְלִיסִים עַל־גִּבְעַת אַמְנִיהוּ אֲשֶׁר מִקֶּדֶם לִנְהַר סִידוֹן הַשּׁוֹטֵף עַל־פְּנֵי אֶרֶץ זָרַהֶמְלָה וְשֵׁם הֵחֵלּוּ לַעֲשׂוֹת מִלְחָמָה עִם־הַנִּפָיִים׃",
+  "hebrew": "וַיְהִי כִּי בָּאוּ הָעַמְלִיסִים עַל־גִּבְעַת אַמְנִיהוּ אֲשֶׁר מִקֶּדֶם לִנְהַר סִידוֹן הַשּׁוֹטֵף עַל־פְּנֵי אֶרֶץ זָרַחֶמְלָה וְשֵׁם הֵחֵלּוּ לַעֲשׂוֹת מִלְחָמָה עִם־הַנִּפָיִים׃",
   "english": "And it came to pass that the Amlicites came upon the hill Amnihu, which was east of the river Sidon, which ran by the land of Zarahemla, and there they began to make war with the Nephites."
  },
  {
@@ -17720,7 +17720,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 2,
   "verse": 24,
-  "hebrew": "הִנֵּה הָלַכְנוּ אַחֲרֵי מַחֲנֵה הָעַמְלִיסִים וּלְתִמְהוֹנֵנוּ הַגָּדוֹל בְּאֶרֶץ מִינוֹן מֵעַל לְאֶרֶץ זָרַהֶמְלָה בְּדֶרֶךְ אֶרֶץ נֶפִי רָאִינוּ צְבָא רַב מִן־הַלָּמָנִים וְהִנֵּה הִתְחַבְּרוּ אֲלֵיהֶם הָעַמְלִיסִים׃",
+  "hebrew": "הִנֵּה הָלַכְנוּ אַחֲרֵי מַחֲנֵה הָעַמְלִיסִים וּלְתִמְהוֹנֵנוּ הַגָּדוֹל בְּאֶרֶץ מִינוֹן מֵעַל לְאֶרֶץ זָרַחֶמְלָה בְּדֶרֶךְ אֶרֶץ נֶפִי רָאִינוּ צְבָא רַב מִן־הַלָּמָנִים וְהִנֵּה הִתְחַבְּרוּ אֲלֵיהֶם הָעַמְלִיסִים׃",
   "english": "Behold, we followed the camp of the Amlicites, and to our great astonishment, in the land of Minon, above the land of Zarahemla, in the course of the land of Nephi, we saw a numerous host of the Lamanites; and behold, the Amlicites have joined them;"
  },
  {
@@ -17734,7 +17734,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 2,
   "verse": 26,
-  "hebrew": "וַיְהִי כִּי נָשְׂאוּ עַם נֶפִי אֶת־אָהֳלֵיהֶם וַיֵּצְאוּ מֵעֵמֶק גִּדְעוֹן אֶל־עִירָם הִיא עִיר זָרַהֶמְלָה׃",
+  "hebrew": "וַיְהִי כִּי נָשְׂאוּ עַם נֶפִי אֶת־אָהֳלֵיהֶם וַיֵּצְאוּ מֵעֵמֶק גִּדְעוֹן אֶל־עִירָם הִיא עִיר זָרַחֶמְלָה׃",
   "english": "And it came to pass that the people of Nephi took their tents, and departed out of the valley of Gideon towards their city, which was the city of Zarahemla."
  },
  {
@@ -17895,7 +17895,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 3,
   "verse": 11,
-  "hebrew": "וַיְהִי כִּי כָל־אֲשֶׁר לֹא הֶאֱמִין בְּתוֹרַת הַלָּמָנִים אַךְ הֶאֱמִין בַּסְּפָרִים אֲשֶׁר הוּצְאוּ מֵאֶרֶץ יְרוּשָׁלַיִם וְגַם בְּתוֹרַת אֲבוֹתֵיהֶם הַנְּכוֹנָה אֲשֶׁר הֶאֱמִינוּ בְּמִצְוֺת הָאֱלֹהִים וַיִּשְׁמְרוּם נִקְרְאוּ נְפִיִּים אוֹ עַם נֶפִי מֵהַיּוֹם הַהוּא וָהָלְאָה׃",
+  "hebrew": "וַיְהִי כִּי כָל־אֲשֶׁר לֹא הֶאֱמִין בְּתוֹרַת הַלָּמָנִים אַךְ הֶאֱמִין בַּסְּפָרִים אֲשֶׁר הוּצְאוּ מֵאֶרֶץ יְרוּשָׁלַיִם וְגַם בְּתוֹרַת אֲבוֹתֵיהֶם הַנְּכוֹנָה אֲשֶׁר הֶאֱמִינוּ בְּמִצְוֹת הָאֱלֹהִים וַיִּשְׁמְרוּם נִקְרְאוּ נְפִיִּים אוֹ עַם נֶפִי מֵהַיּוֹם הַהוּא וָהָלְאָה׃",
   "english": "And it came to pass that whosoever would not believe in the tradition of the Lamanites, but believed those records which were brought out of the land of Jerusalem, and also in the tradition of their fathers, which were correct, who believed in the commandments of God and kept them, were called the Nephites, or the people of Nephi, from that time forth—"
  },
  {
@@ -17937,7 +17937,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 3,
   "verse": 17,
-  "hebrew": "וְעוֹד אֹמֵר הַסָּר מֵעָלֶיךָ לֹא־יִקָּרֵא עוֹד זַרְעֶךָ וּבֵרַכְתִּי אוֹתְךָ וְאֵת כָּל־אֲשֶׁר יִקָּרֵא זַרְעֲךָ מֵעַתָּה וְעַד־עוֹלָם וְאֵלֶּה הָיוּ שְׁבֻעוֹת יְהוָה לְנֶפִי וּלְזַרְעוֹ׃",
+  "hebrew": "וְעוֹד אֹמֵר הַסָּר מֵעָלֶיךָ לֹא־יִקָּרֵא עוֹד זַרְעֶךָ וּבֵרַכְתִּי אוֹתְךָ וְאֶת־כָּל־אֲשֶׁר יִקָּרֵא זַרְעֲךָ מֵעַתָּה וְעַד־עוֹלָם וְאֵלֶּה הָיוּ שְׁבֻעוֹת יְהוָה לְנֶפִי וּלְזַרְעוֹ׃",
   "english": "And again, I say he that departeth from thee shall no more be called thy seed; and I will bless thee, and whomsoever shall be called thy seed, henceforth and forever; and these were the promises of the Lord unto Nephi and to his seed."
  },
  {
@@ -17958,7 +17958,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 3,
   "verse": 20,
-  "hebrew": "וַיְהִי כִּי לֹא יָמִים רַבִּים אַחֲרֵי הַמִּלְחָמָה אֲשֶׁר נִלְחֲמָה בְּאֶרֶץ זָרַהֶמְלָה בִּידֵי הַלָּמָנִים וְהָעַמְלִיסִים וַיָּבֹא צָבָא אַחֵר מִן־הַלָּמָנִים עַל־עַם נֶפִי בַּמָּקוֹם אֲשֶׁר פָּגַשׁ הַצָּבָא הָרִאשׁוֹן אֶת־הָעַמְלִיסִים׃",
+  "hebrew": "וַיְהִי כִּי לֹא יָמִים רַבִּים אַחֲרֵי הַמִּלְחָמָה אֲשֶׁר נִלְחֲמָה בְּאֶרֶץ זָרַחֶמְלָה בִּידֵי הַלָּמָנִים וְהָעַמְלִיסִים וַיָּבֹא צָבָא אַחֵר מִן־הַלָּמָנִים עַל־עַם נֶפִי בַּמָּקוֹם אֲשֶׁר פָּגַשׁ הַצָּבָא הָרִאשׁוֹן אֶת־הָעַמְלִיסִים׃",
   "english": "Now it came to pass that not many days after the battle which was fought in the land of Zarahemla, by the Lamanites and the Amlicites, that there was another army of the Lamanites came in upon the people of Nephi, in the same place where the first army met the Amlicites."
  },
  {
@@ -18014,7 +18014,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 4,
   "verse": 1,
-  "hebrew": "וַיְהִי בִּשְׁנַת הַשִּׁשִּׁית לִמְשֹׁל הַשֹּׁפְטִים עַל־עַם נֶפִי וְלֹא הָיוּ מְרִיבוֹת וּמִלְחָמוֹת בְּאֶרֶץ זָרַהֶמְלָה׃",
+  "hebrew": "וַיְהִי בִּשְׁנַת הַשִּׁשִּׁית לִמְשֹׁל הַשֹּׁפְטִים עַל־עַם נֶפִי וְלֹא הָיוּ מְרִיבוֹת וּמִלְחָמוֹת בְּאֶרֶץ זָרַחֶמְלָה׃",
   "english": "Now it came to pass in the sixth year of the reign of the judges over the people of Nephi, there were no contentions nor wars in the land of Zarahemla;"
  },
  {
@@ -18084,7 +18084,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 4,
   "verse": 11,
-  "hebrew": "וַיְהִי בִּתְחִלַּת הַשָּׁנָה הַתְּשִׁיעִית וַיַּרְא אַלְמָא אֶת־רִשְׁעַת הָעֵדָה וַיַּרְא גַם כִּי דְּמוּת הָעֵדָה הֵחֵלָּה לְהוֹבִיל אֶת־הַלֹּא־מַאֲמִינִים מֵעָוֺן לְעָוֺן וְכֵן הֵבִיאָה שֶׁבֶר עַל־הָעָם׃",
+  "hebrew": "וַיְהִי בִּתְחִלַּת הַשָּׁנָה הַתְּשִׁיעִית וַיַּרְא אַלְמָא אֶת־רִשְׁעַת הָעֵדָה וַיַּרְא גַם כִּי דְּמוּת הָעֵדָה הֵחֵלָּה לְהוֹבִיל אֶת־הַלֹּא־מַאֲמִינִים מֵעָוֹן לְעָוֹן וְכֵן הֵבִיאָה שֶׁבֶר עַל־הָעָם׃",
   "english": "And it came to pass in the commencement of the ninth year, Alma saw the wickedness of the church, and he saw also that the example of the church began to lead those who were unbelievers on from one piece of iniquity to another, thus bringing on the destruction of the people."
  },
  {
@@ -18112,7 +18112,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 4,
   "verse": 15,
-  "hebrew": "וַיְהִי כִּי עַלְמָא בִּרְאוֹתוֹ אֶת־עֳנִי עֲנָוֵי הָאֱלֹהִים וְהָרְדִיפוֹת אֲשֶׁר נֶעֶרְמוּ עֲלֵיהֶם בְּיַד שְׁאֵרִית עַמּוֹ וּבִרְאוֹתוֹ אֶת־כָּל־פִּלְיָתָם וַיָּחֶל לְהִתְעַצֵּב מְאֹד אַךְ רוּחַ יְהוָה לֹא סָרָה מֵעִמּוֹ׃",
+  "hebrew": "וַיְהִי כִּי עַלְמָא בִּרְאוֹתוֹ אֶת־עֳנִי עֲנָוֵי הָאֱלֹהִים וְהָרְדִיפוֹת אֲשֶׁר נֶעֶרְמוּ עֲלֵיהֶם בְּיַד שְׁאֵרִית עַמּוֹ וּבִרְאוֹתוֹ אֶת־כָּל־פִּלְיָתָם וַיָּחֶל לְהִתְעַצֵּב מְאֹד אַךְ רוּחַ יְהוָה לֹא סָר מֵעִמּוֹ׃",
   "english": "And now it came to pass that Alma, having seen the afflictions of the humble followers of God, and the persecutions which were heaped upon them by the remainder of his people, and seeing all their inequality, began to be very sorrowful; nevertheless the Spirit of the Lord did not fail him."
  },
  {
@@ -18126,14 +18126,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 4,
   "verse": 17,
-  "hebrew": "וּשְׁמוֹ הָאִישׁ נֶפִיה וַיִּמָּנֶה לְשֹׁפֵט הָרֹאשׁ וַיֵּשֶׁב עַל־כִּסֵּא הַמִּשְׁפָּט לִשְׁפֹּט וְלִמְשֹׁל בָּעָם׃",
+  "hebrew": "וּשְׁמוֹ הָאִישׁ נֶפִיחָה וַיִּמָּנֶה לְשֹׁפֵט הָרֹאשׁ וַיֵּשֶׁב עַל־כִּסֵּא הַמִּשְׁפָּט לִשְׁפֹּט וְלִמְשֹׁל בָּעָם׃",
   "english": "Now this man's name was Nephihah, and he was appointed chief judge; and he sat in the  judgment– seat to judge and to govern the people."
  },
  {
   "book": "Alma",
   "chapter": 4,
   "verse": 18,
-  "hebrew": "וְאַלְמָא לֹא־נָתַן לוֹ אֶת־מִשְׂרַת הַכֹּהֵן הַגָּדוֹל עַל־הָעֵדָה כִּי שָׁמַר אֶת־מִשְׂרַת הַכֹּהֵן הַגָּדוֹל לְעַצְמוֹ אַךְ מָסַר אֶת־כִּסֵּא הַמִּשְׁפָּט לִנֶפִיה׃",
+  "hebrew": "וְאַלְמָא לֹא־נָתַן לוֹ אֶת־מִשְׂרַת הַכֹּהֵן הַגָּדוֹל עַל־הָעֵדָה כִּי שָׁמַר אֶת־מִשְׂרַת הַכֹּהֵן הַגָּדוֹל לְעַצְמוֹ אַךְ מָסַר אֶת־כִּסֵּא הַמִּשְׁפָּט לְנֶפִיחָה׃",
   "english": "Now Alma did not grant unto him the office of being high priest over the church, but he retained the office of high priest unto himself; but he delivered the judgment–seat unto Nephihah."
  },
  {
@@ -18147,21 +18147,21 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 4,
   "verse": 20,
-  "hebrew": "וְכֵן בִּתְחִלַּת הַשָּׁנָה הַתְּשִׁיעִית לִמְשֹׁל הַשֹּׁפְטִים עַל־עַם נֶפִי מָסַר אַלְמָא אֶת־כִּסֵּא הַמִּשְׁפָּט לִנֶפִיה וַיִּתְמַסֵּר כֻּלּוֹ לִכְהֻנַּת הַקֹּדֶשׁ כְּפִי סֵדֶר הָאֱלֹהִים הַקָּדוֹשׁ לְעֵדוּת הַדָּבָר כְּפִי רוּחַ הַחָזוֹן וְהַנְּבוּאָה׃",
+  "hebrew": "וְכֵן בִּתְחִלַּת הַשָּׁנָה הַתְּשִׁיעִית לִמְשֹׁל הַשֹּׁפְטִים עַל־עַם נֶפִי מָסַר אַלְמָא אֶת־כִּסֵּא הַמִּשְׁפָּט לְנֶפִיחָה וַיִּתְמַסֵּר כֻּלּוֹ לִכְהֻנַּת הַקֹּדֶשׁ כְּפִי סֵדֶר הָאֱלֹהִים הַקָּדוֹשׁ לְעֵדוּת הַדָּבָר כְּפִי רוּחַ הַחָזוֹן וְהַנְּבוּאָה׃",
   "english": "And thus in the commencement of the ninth year of the reign of the judges over the people of Nephi, Alma delivered up the judgment–seat to Nephihah, and confined himself wholly to the high priesthood of the holy order of God, to the testimony of the word, according to the spirit of revelation and prophecy."
  },
  {
   "book": "Alma",
   "chapter": 5,
   "verse": 1,
-  "hebrew": "וַיְהִי כִּי הֵחֵל אַלְמָא לְהַגִּיד אֶת־דְּבַר־יְהוָה לָעָם בָּרִאשׁוֹנָה בְּאֶרֶץ זָרַהֶמְלָה וּמִשָּׁם בְּכָל־הָאָרֶץ׃",
+  "hebrew": "וַיְהִי כִּי הֵחֵל אַלְמָא לְהַגִּיד אֶת־דְּבַר־יְהוָה לָעָם בָּרִאשׁוֹנָה בְּאֶרֶץ זָרַחֶמְלָה וּמִשָּׁם בְּכָל־הָאָרֶץ׃",
   "english": "Now it came to pass that Alma began to deliver the word of God unto the people, first in the land of Zarahemla, and from thence throughout all the land."
  },
  {
   "book": "Alma",
   "chapter": 5,
   "verse": 2,
-  "hebrew": "וְאֵלֶּה הַדְּבָרִים אֲשֶׁר דִּבֶּר אֶל־הָעָם בָּעֵדָה אֲשֶׁר הוּקְמָה בְּעִיר זָרַהֶמְלָה כְּפִי סִפְרוֹ לֵאמֹר׃",
+  "hebrew": "וְאֵלֶּה הַדְּבָרִים אֲשֶׁר דִּבֶּר אֶל־הָעָם בָּעֵדָה אֲשֶׁר הוּקְמָה בְּעִיר זָרַחֶמְלָה כְּפִי סִפְרוֹ לֵאמֹר׃",
   "english": "And these are the words which he spake to the people in the church which was established in the city of Zarahemla, according to his own record, saying:"
  },
  {
@@ -18273,7 +18273,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 5,
   "verse": 18,
-  "hebrew": "אוֹ אֵיךְ תָּבֹאוּ לִפְנֵי כִּסֵּא מִשְׁפַּט הָאֱלֹהִים וְנַפְשֹׁתֵיכֶם מְלֵאוֹת אָשְׁמָה וַחֲרָטָה וְזִכְרוֹן כָּל־אַשְׁמַתְכֶם זִכְרוֹן שָׁלֵם לְכָל־רִשְׁעַתְכֶם זִכְרוֹן כִּי מְרִיתֶם אֶת־מִצְוֺת הָאֱלֹהִים׃",
+  "hebrew": "אוֹ אֵיךְ תָּבֹאוּ לִפְנֵי כִּסֵּא מִשְׁפַּט הָאֱלֹהִים וְנַפְשֹׁתֵיכֶם מְלֵאוֹת אָשְׁמָה וַחֲרָטָה וְזִכְרוֹן כָּל־אַשְׁמַתְכֶם זִכְרוֹן שָׁלֵם לְכָל־רִשְׁעַתְכֶם זִכְרוֹן כִּי מְרִיתֶם אֶת־מִצְוֹת הָאֱלֹהִים׃",
   "english": "Or otherwise, can ye imagine yourselves brought before the tribunal of God with your souls filled with guilt and remorse, having a remembrance of all your guilt, yea, a perfect remembrance of all your wickedness, yea, a remembrance that ye have set at defiance the commandments of God?"
  },
  {
@@ -18448,7 +18448,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 5,
   "verse": 43,
-  "hebrew": "וְעַתָּה אַחַי אֲבַקֵּשׁ כִּי תִשְׁמְעוּ אֵלַי כִּי מְדַבֵּר אֲנִי בְּכֹחַ נַפְשִׁי כִּי הִנֵּה דִּבַּרְתִּי אֲלֵיכֶם בְּבֵרוּר לְבִלְתִּי תִתְעוּ אוֹ דִּבַּרְתִּי כְּמִצְוֺת הָאֱלֹהִים׃",
+  "hebrew": "וְעַתָּה אַחַי אֲבַקֵּשׁ כִּי תִשְׁמְעוּ אֵלַי כִּי מְדַבֵּר אֲנִי בְּכֹחַ נַפְשִׁי כִּי הִנֵּה דִּבַּרְתִּי אֲלֵיכֶם בְּבֵרוּר לְבִלְתִּי תִתְעוּ אוֹ דִּבַּרְתִּי כְּמִצְוֹת הָאֱלֹהִים׃",
   "english": "And now, my brethren, I would that ye should hear me, for I speak in the energy of my soul; for behold, I have spoken unto you plainly that ye cannot err, or have spoken according to the commandments of God."
  },
  {
@@ -18490,28 +18490,28 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 5,
   "verse": 49,
-  "hebrew": "וְעַתָּה אֹמֵר לָכֶם כִּי זֶה הַסֵּדֶר אֲשֶׁר נִקְרֵאתִי אֵלָיו לִדְרֹשׁ לַאֲחַי הָאֲהוּבִים וְלְכָל־יוֹשֵׁב בָּאָרֶץ לִדְרֹשׁ לַכֹּל גַּם־זָקֵן גַּם־צָעִיר גַּם־עֶבֶד גַּם־חָפְשִׁי וְאֹמֵר לָכֶם הַזְּקֵנִים וְגַם בְּנֵי הַבֵּינַיִם וְהַדּוֹר הַקָּם לִקְרֹא לָהֶם כִּי עֲלֵיהֶם לָשׁוּב וּלְהִוָּלֵד שֵׁנִית׃",
+  "hebrew": "וְעַתָּה אֹמֵר לָכֶם כִּי זֶה הַסֵּדֶר אֲשֶׁר נִקְרֵאתִי אֵלָיו לִדְרֹשׁ לַאֲחַי הָאֲהוּבִים וּלְכָל־יוֹשֵׁב בָּאָרֶץ לִדְרֹשׁ לַכֹּל גַּם־זָקֵן גַּם־צָעִיר גַּם־עֶבֶד גַּם־חָפְשִׁי וְאֹמֵר לָכֶם הַזְּקֵנִים וְגַם בְּנֵי הַבֵּינַיִם וְהַדּוֹר הַקָּם לִקְרֹא לָהֶם כִּי עֲלֵיהֶם לָשׁוּב וּלְהִוָּלֵד שֵׁנִית׃",
   "english": "And now I say unto you that this is the order after which I am called, yea, to preach unto my beloved brethren, yea, and every one that dwelleth in the land; yea, to preach unto all, both old and young, both bond and free; yea, I say unto you the aged, and also the middle aged, and the rising generation; yea, to cry unto them that they must repent and be born again."
  },
  {
   "book": "Alma",
   "chapter": 5,
   "verse": 50,
-  "hebrew": "כֹּה אָמְרָה הָרוּחַ שׁוּבוּ כָּל־אַפְסֵי אָרֶץ כִּי קְרוֹבָה מַלְכוּת הַשָּׁמַיִם לָבוֹא כִּי בֶּן־אֱלֹהִים בָּא בִּכְבוֹדוֹ  בִּגְבוּרָתוֹ בַּהֲדָרוֹ בְּכֹחוֹ וּבְמֶמְשַׁלְתּוֹ הִנֵּה אַחַי הָאֲהוּבִים אֹמֵר לָכֶם כִּי הָרוּחַ אוֹמֶרֶת רְאוּ כְּבוֹד מֶלֶךְ כָּל־הָאָרֶץ וְגַם מֶלֶךְ הַשָּׁמַיִם יָאִיר מְהֵרָה מְאֹד בֵּין כָּל־בְּנֵי הָאָדָם׃",
+  "hebrew": "כֹּה אָמַר הָרוּחַ שׁוּבוּ כָּל־אַפְסֵי אָרֶץ כִּי קְרוֹבָה מַלְכוּת הַשָּׁמַיִם לָבוֹא כִּי בֶּן־אֱלֹהִים בָּא בִּכְבוֹדוֹ  בִּגְבוּרָתוֹ בַּהֲדָרוֹ בְּכֹחוֹ וּבְמֶמְשַׁלְתּוֹ הִנֵּה אַחַי הָאֲהוּבִים אֹמֵר לָכֶם כִּי הָרוּחַ אוֹמֵר רְאוּ כְּבוֹד מֶלֶךְ כָּל־הָאָרֶץ וְגַם מֶלֶךְ הַשָּׁמַיִם יָאִיר מְהֵרָה מְאֹד בֵּין כָּל־בְּנֵי הָאָדָם׃",
   "english": "Yea, thus saith the Spirit: Repent, all ye ends of the earth, for the kingdom of heaven is soon  at hand; yea, the Son of God cometh in his glory, in his might, majesty, power, and dominion. Yea, my beloved brethren, I say unto you, that the Spirit saith: Behold the glory of the King of all the earth; and also the King of heaven shall very soon shine forth among all the children of men."
  },
  {
   "book": "Alma",
   "chapter": 5,
   "verse": 51,
-  "hebrew": "וְגַם הָרוּחַ אוֹמֶרֶת אֵלַי קוֹרֵאת אֵלַי בְּקוֹל עָז לֵאמֹר צֵא וֶאֱמֹר לָעָם הַזֶּה שׁוּבוּ כִּי אִם־לֹא תָשׁוּבוּ לֹא תוּכְלוּ לְעוֹלָם לִירַשׁ אֶת־מַלְכוּת הַשָּׁמַיִם׃",
+  "hebrew": "וְגַם הָרוּחַ אוֹמֵר אֵלַי קוֹרֵא אֵלַי בְּקוֹל עָז לֵאמֹר צֵא וֶאֱמֹר לָעָם הַזֶּה שׁוּבוּ כִּי אִם־לֹא תָשׁוּבוּ לֹא תוּכְלוּ לְעוֹלָם לִירַשׁ אֶת־מַלְכוּת הַשָּׁמַיִם׃",
   "english": "And also the Spirit saith unto me, yea, crieth unto me with a mighty voice, saying: Go forth and say unto this people—Repent, for except ye repent ye can in nowise inherit the kingdom of heaven."
  },
  {
   "book": "Alma",
   "chapter": 5,
   "verse": 52,
-  "hebrew": "וְעוֹד אֹמֵר לָכֶם הָרוּחַ אוֹמֶרֶת הִנֵּה הַגַּרְזֶן מוּנָח עַל־שֹׁרֶשׁ הָעֵץ לָכֵן כָּל־עֵץ אֲשֶׁר אֵינֶנּוּ עֹשֶׂה פְּרִי טוֹב יִכָּרֵת וְיֻשְׁלַךְ לָאֵשׁ אֵשׁ אֲשֶׁר לֹא תֻאְכַל אֵשׁ אֲשֶׁר לֹא תִכְבֶּה הִנֵּה וְזִכְרוּ כִּי הַקָּדוֹשׁ דִּבֵּר׃",
+  "hebrew": "וְעוֹד אֹמֵר לָכֶם הָרוּחַ אוֹמֵר הִנֵּה הַגַּרְזֶן מוּנָח עַל־שֹׁרֶשׁ הָעֵץ לָכֵן כָּל־עֵץ אֲשֶׁר אֵינֶנּוּ עֹשֶׂה פְּרִי טוֹב יִכָּרֵת וְיֻשְׁלַךְ לָאֵשׁ אֵשׁ אֲשֶׁר לֹא תֻאְכַל אֵשׁ אֲשֶׁר לֹא תִכְבֶּה הִנֵּה וְזִכְרוּ כִּי הַקָּדוֹשׁ דִּבֵּר׃",
   "english": "And again I say unto you, the Spirit saith: Behold, the ax is laid at the root of the tree; therefore every tree that bringeth not forth good fruit shall be hewn down and cast into the fire, yea, a fire which cannot be consumed, even an unquenchable fire. Behold, and remember, the Holy One hath spoken it."
  },
  {
@@ -18588,7 +18588,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 6,
   "verse": 1,
-  "hebrew": "וַיְהִי אַחֲרֵי כַּלּוֹת אַלְמָא לְדַבֵּר אֶל־עַם הָעֵדָה אֲשֶׁר נוֹסְדָה בְּעִיר צָרַהֶמְלָה וַיִּסְמֹךְ כֹּהֲנִים וּזְקֵנִים בְּהַעֲלוֹת יָדָיו כְּמִשְׁפַּט הָאֱלֹהִים לִפְקֹד וְלִשְׁמֹר עַל־הָעֵדָה׃",
+  "hebrew": "וַיְהִי אַחֲרֵי כַּלּוֹת אַלְמָא לְדַבֵּר אֶל־עַם הָעֵדָה אֲשֶׁר נוֹסְדָה בְּעִיר זָרַחֶמְלָה וַיִּסְמֹךְ כֹּהֲנִים וּזְקֵנִים בְּהַעֲלוֹת יָדָיו כְּמִשְׁפַּט הָאֱלֹהִים לִפְקֹד וְלִשְׁמֹר עַל־הָעֵדָה׃",
   "english": "And now it came to pass that after Alma had made an end of speaking unto the people of the church, which was established in the city of Zarahemla, he ordained priests and elders, by laying on his hands according to the order of God, to preside and watch over the church."
  },
  {
@@ -18609,7 +18609,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 6,
   "verse": 4,
-  "hebrew": "וְכָכָה הֵחֵלּוּ לְיַסֵּד אֶת־סֵדֶר הָעֵדָה בְּעִיר צָרַהֶמְלָה׃",
+  "hebrew": "וְכָכָה הֵחֵלּוּ לְיַסֵּד אֶת־סֵדֶר הָעֵדָה בְּעִיר זָרַחֶמְלָה׃",
   "english": "And thus they began to establish the order of the church in the city of Zarahemla."
  },
  {
@@ -18630,7 +18630,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 6,
   "verse": 7,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר שָׂם עַלְמָא אֶת־הַחֻקִּים הָאֵלֶּה וַיֵּלֶךְ מֵאִתָּם מִן־הָעֵדָה אֲשֶׁר בְּעִיר זָרַהֶמְלָה וַיַּעֲבֹר מִקֶּדֶם לִנְהַר סִידוֹן אֶל־עֵמֶק גִּדְעוֹן וְשֵׁם נִבְנְתָה עִיר וַתִּקָּרֵא עִיר גִּדְעוֹן בְּעֵמֶק גִּדְעוֹן עַל־שֵׁם הָאִישׁ אֲשֶׁר הוּכָּה בַחֶרֶב בְּיַד נִחוֹר׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר שָׂם עַלְמָא אֶת־הַחֻקִּים הָאֵלֶּה וַיֵּלֶךְ מֵאִתָּם מִן־הָעֵדָה אֲשֶׁר בְּעִיר זָרַחֶמְלָה וַיַּעֲבֹר מִקֶּדֶם לִנְהַר סִידוֹן אֶל־עֵמֶק גִּדְעוֹן וְשֵׁם נִבְנְתָה עִיר וַתִּקָּרֵא עִיר גִּדְעוֹן בְּעֵמֶק גִּדְעוֹן עַל־שֵׁם הָאִישׁ אֲשֶׁר הוּכָּה בַחֶרֶב בְּיַד נִחוֹר׃",
   "english": "And now it came to pass that when Alma had made these regulations he departed from them, yea, from the church which was in the city of Zarahemla, and went over upon the east of the river Sidon, into the valley of Gideon, there  having been a city built, which was called the city of Gideon, which was in the valley that was called Gideon, being called after the man who was slain by the hand of Nehor with the sword."
  },
  {
@@ -18658,7 +18658,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 7,
   "verse": 3,
-  "hebrew": "וְהִנֵּה בָּאתִי בְּתִקְוָה גְדוֹלָה וּבְתַאֲוָה רַבָּה לִמְצֹא אֶתְכֶם כִּי נִכְנַעְתֶּם לִפְנֵי הָאֱלֹהִים וְכִי הִתְמַדְתֶּם בְּבַקָּשַׁת חַסְדּוֹ לִמְצֹא אֶתְכֶם נְקִיִּים לְפָנָיו לִמְצֹא אֶתְכֶם לֹא בַמְּבוּכָה הַנּוֹרָאָה אֲשֶׁר הָיוּ בָהּ אַחֵינוּ בְּזָרַהֶמְלָה׃",
+  "hebrew": "וְהִנֵּה בָּאתִי בְּתִקְוָה גְדוֹלָה וּבְתַאֲוָה רַבָּה לִמְצֹא אֶתְכֶם כִּי נִכְנַעְתֶּם לִפְנֵי הָאֱלֹהִים וְכִי הִתְמַדְתֶּם בְּבַקָּשַׁת חַסְדּוֹ לִמְצֹא אֶתְכֶם נְקִיִּים לְפָנָיו לִמְצֹא אֶתְכֶם לֹא בַמְּבוּכָה הַנּוֹרָאָה אֲשֶׁר הָיוּ בָהּ אַחֵינוּ בְּזָרַחֶמְלָה׃",
   "english": "And behold, I have come having great hopes and much desire that I should find that ye had humbled yourselves before God, and that ye had continued in the supplicating of his grace, that I should find that ye were blameless before him, that I should find that ye were not in the awful dilemma that our brethren were in at Zarahemla."
  },
  {
@@ -18672,7 +18672,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 7,
   "verse": 5,
-  "hebrew": "וּבוֹטֵחַ אֲנִי כְּרוּחַ אֱלֹהִים אֲשֶׁר בִּי כִּי אֶשְׂמַח גַּם עֲלֵיכֶם אַךְ לֹא חָפַצְתִּי כִּי תָבוֹא שִׂמְחָתִי עֲלֵיכֶם מֵחֲמַת צָרוֹת וְיָגוֹן רַבִּים כַּאֲשֶׁר הָיוּ לִי עַל־אַחֵינוּ בְּזָרַהֶמְלָה כִּי הִנֵּה שִׂמְחָתִי בָאָה עֲלֵיהֶם אַחֲרֵי עָבְרִי בְּצָרוֹת וְיָגוֹן רַבִּים׃",
+  "hebrew": "וּבוֹטֵחַ אֲנִי כְּרוּחַ אֱלֹהִים אֲשֶׁר בִּי כִּי אֶשְׂמַח גַּם עֲלֵיכֶם אַךְ לֹא חָפַצְתִּי כִּי תָבוֹא שִׂמְחָתִי עֲלֵיכֶם מֵחֲמַת צָרוֹת וְיָגוֹן רַבִּים כַּאֲשֶׁר הָיוּ לִי עַל־אַחֵינוּ בְּזָרַחֶמְלָה כִּי הִנֵּה שִׂמְחָתִי בָאָה עֲלֵיהֶם אַחֲרֵי עָבְרִי בְּצָרוֹת וְיָגוֹן רַבִּים׃",
   "english": "And I trust, according to the Spirit of God which is in me, that I shall also have joy over you; nevertheless I do not desire that my joy over you should come by the cause of so much afflictions and sorrow which I have had for the brethren at Zarahemla, for behold, my joy cometh over them after wading through much affliction and sorrow."
  },
  {
@@ -18700,7 +18700,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 7,
   "verse": 9,
-  "hebrew": "אַךְ הִנֵּה הָרוּחַ אָמַר לִי כָּזֹאת לֵאמֹר קְרָא אֶל־הָעָם הַזֶּה וְאָמַרְתָּ שׁוּבוּ וְהָכִינוּ דֶּרֶךְ יְהוָה וְלְכוּ בְּאֹרְחוֹתָיו הַיְשָׁרִים כִּי הִנֵּה מַלְכוּת הַשָּׁמַיִם קְרוֹבָה וּבֶּן־אֱלֹהִים בָּא עַל־פְּנֵי הָאָרֶץ׃",
+  "hebrew": "אַךְ הִנֵּה הָרוּחַ אָמַר לִי כָּזֹאת לֵאמֹר קְרָא אֶל־הָעָם הַזֶּה וְאָמַרְתָּ שׁוּבוּ וְהָכִינוּ דֶּרֶךְ יְהוָה וּלְכוּ בְּאֹרְחוֹתָיו הַיְשָׁרִים כִּי הִנֵּה מַלְכוּת הַשָּׁמַיִם קְרוֹבָה וּבֶּן־אֱלֹהִים בָּא עַל־פְּנֵי הָאָרֶץ׃",
   "english": "But behold, the Spirit hath said this much unto me, saying: Cry unto this people, saying—Repent ye, and prepare the way of the Lord, and walk in his paths, which are straight; for behold, the kingdom of heaven is at hand, and the Son of God cometh upon the face of the earth."
  },
  {
@@ -18735,21 +18735,21 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 7,
   "verse": 14,
-  "hebrew": "וְעַתָּה אֹמֵר אֲנִי לָכֶם כִּי עֲלֵיכֶם לָשׁוּב וּלְהִוָּלֵד מֵחָדָשׁ כִּי הָרוּחַ אוֹמֵר אִם לֹא תִוָּלְדוּ מֵחָדָשׁ לֹא תוּכְלוּ לִירֹשׁ מַלְכוּת הַשָּׁמָיִם לָכֵן בּוֹאוּ וְהִטָּבְלוּ לָשׁוּב לְמַעַן תְּטֹהֲרוּ מֵחֲטָאֵיכֶם לְמַעַן תִּהְיֶה לָכֶם אֱמוּנָה בְּשֵׂה־אֱלֹהִים הַנּוֹשֵׂא חֲטָאֵי הָעוֹלָם הַגִּבּוֹר לְהוֹשִׁיעַ וּלְטַהֵר מִכָּל־עָוֺן׃",
+  "hebrew": "וְעַתָּה אֹמֵר אֲנִי לָכֶם כִּי עֲלֵיכֶם לָשׁוּב וּלְהִוָּלֵד מֵחָדָשׁ כִּי הָרוּחַ אוֹמֵר אִם לֹא תִוָּלְדוּ מֵחָדָשׁ לֹא תוּכְלוּ לִירֹשׁ מַלְכוּת הַשָּׁמָיִם לָכֵן בּוֹאוּ וְהִטָּבְלוּ לָשׁוּב לְמַעַן תְּטֹהֲרוּ מֵחֲטָאֵיכֶם לְמַעַן תִּהְיֶה לָכֶם אֱמוּנָה בְּשֵׂה־אֱלֹהִים הַנּוֹשֵׂא חֲטָאֵי הָעוֹלָם הַגִּבּוֹר לְהוֹשִׁיעַ וּלְטַהֵר מִכָּל־עָוֹן׃",
   "english": "Now I say unto you that ye must repent, and be born again; for the Spirit saith if ye are not born again ye cannot inherit the kingdom of heaven; therefore come and be baptized unto repentance, that ye may be washed from your sins, that ye may have faith on the Lamb of God, who taketh away the sins of the world, who is mighty to save and to cleanse from all unrighteousness."
  },
  {
   "book": "Alma",
   "chapter": 7,
   "verse": 15,
-  "hebrew": "אָכֵן אֹמֵר אֲנִי לָכֶם בּוֹאוּ וְאַל־תִּירָאוּ וְהָסִירוּ כָל־חֵטְא הַמֵּצַר צְעָדֵיכֶם בְּנָקֵל הַכּוֹבֵל אֶתְכֶם לַשַּׁחַת אָכֵן בּוֹאוּ וּצְאוּ וְהַרְאוּ לֵאלֹהֵיכֶם כִּי רְצוֹנְכֶם לָשׁוּב מֵחֲטָאֵיכֶם וְלָבוֹא בִבְרִית עִמּוֹ לִשְׁמֹר מִצְוֺתָיו וְהָעִידוּ זֹאת לְפָנָיו הַיּוֹם בְּבוֹאֲכֶם בְּמֵי הַטְּבִילָה׃",
+  "hebrew": "אָכֵן אֹמֵר אֲנִי לָכֶם בּוֹאוּ וְאַל־תִּירָאוּ וְהָסִירוּ כָל־חֵטְא הַמֵּצַר צְעָדֵיכֶם בְּנָקֵל הַכּוֹבֵל אֶתְכֶם לַשַּׁחַת אָכֵן בּוֹאוּ וּצְאוּ וְהַרְאוּ לֵאלֹהֵיכֶם כִּי רְצוֹנְכֶם לָשׁוּב מֵחֲטָאֵיכֶם וְלָבוֹא בִבְרִית עִמּוֹ לִשְׁמֹר מִצְוֹתָיו וְהָעִידוּ זֹאת לְפָנָיו הַיּוֹם בְּבוֹאֲכֶם בְּמֵי הַטְּבִילָה׃",
   "english": "Yea, I say unto you come and fear not, and lay aside every sin, which easily doth beset you, which doth bind you down to destruction, yea, come and go forth, and show unto your God that ye are willing to repent of your sins and enter into a covenant with him to keep his command–  ments, and witness it unto him this day by going into the waters of baptism."
  },
  {
   "book": "Alma",
   "chapter": 7,
   "verse": 16,
-  "hebrew": "וְכׇל־הָעֹשֶׂה זֹאת וְשׁוֹמֵר מִצְוֺת אֱלֹהִים מֵהַיּוֹם וָהָלְאָה יִזְכֹּר אֵת אֲשֶׁר אֲנִי אֹמֵר לוֹ אָכֵן יִזְכֹּר כִּי אָמַרְתִּי לוֹ כִּי יִהְיוּ לוֹ חַיֵּי עוֹלָם כְּעֵדוּת רוּחַ הַקֹּדֶשׁ הַמֵּעִיד בִּי׃",
+  "hebrew": "וְכׇל־הָעֹשֶׂה זֹאת וְשׁוֹמֵר מִצְוֹת אֱלֹהִים מֵהַיּוֹם וָהָלְאָה יִזְכֹּר אֶת־אֲשֶׁר אֲנִי אֹמֵר לוֹ אָכֵן יִזְכֹּר כִּי אָמַרְתִּי לוֹ כִּי יִהְיוּ לוֹ חַיֵּי עוֹלָם כְּעֵדוּת רוּחַ הַקֹּדֶשׁ הַמֵּעִיד בִּי׃",
   "english": "And whosoever doeth this, and keepeth the commandments of God from thenceforth, the same will remember that I say unto him, yea, he will remember that I have said unto him, he shall have eternal life, according to the testimony of the Holy Spirit, which testifieth in me."
  },
  {
@@ -18798,7 +18798,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 7,
   "verse": 23,
-  "hebrew": "וְעַתָּה חָפַצְתִּי כִּי תִהְיוּ עֲנָוִים וּכְנוּעִים וּרְכִים נוֹחִים לְהִתְרַצּוֹת מְלֵאִים אֹרֶךְ אַפַּיִם וְאֹרֶךְ רוּחַ מְתוּנִים בְּכָל־דָּבָר שׁוֹקְדִים לִשְׁמֹר מִצְוֺת אֱלֹהִים בְּכָל־עֵת מְבַקְשִׁים כָּל־צָרְכֵיכֶם לָרוּחַ וְלַבָּשָׂר מוֹדִים תָּמִיד לֵאלֹהִים עַל כָּל־אֲשֶׁר תְּקַבְּלוּ׃",
+  "hebrew": "וְעַתָּה חָפַצְתִּי כִּי תִהְיוּ עֲנָוִים וּכְנוּעִים וּרְכִים נוֹחִים לְהִתְרַצּוֹת מְלֵאִים אֹרֶךְ אַפַּיִם וְאֹרֶךְ רוּחַ מְתוּנִים בְּכָל־דָּבָר שׁוֹקְדִים לִשְׁמֹר מִצְוֹת אֱלֹהִים בְּכָל־עֵת מְבַקְשִׁים כָּל־צָרְכֵיכֶם לָרוּחַ וְלַבָּשָׂר מוֹדִים תָּמִיד לֵאלֹהִים עַל כָּל־אֲשֶׁר תְּקַבְּלוּ׃",
   "english": "And now I would that ye should be humble, and be submissive and gentle; easy to be entreated; full of patience and long– suffering; being temperate in all things; being diligent in keeping the commandments of God at all times; asking for whatsoever things ye stand in need, both spiritual and temporal; always returning thanks unto God for whatsoever things ye do receive."
  },
  {
@@ -18833,7 +18833,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 8,
   "verse": 1,
-  "hebrew": "וַיְהִי כִּי־שָׁב עַלְמָא מֵאֶרֶץ גִּדְעוֹן אַחֲרֵי לַמְּדוֹ אֶת־עַם גִּדְעוֹן דְּבָרִים רַבִּים אֲשֶׁר לֹא יִכָּתֵבוּ וַיְיַסֵּד אֶת־סֵדֶר הָעֵדָה כַּאֲשֶׁר עָשָׂה לְפָנִים בְּאֶרֶץ זָרַהֶמְלָה וַיָּשָׁב אֶל־בֵּיתוֹ בְּזָרַהֶמְלָה לָנוּחַ מִמְּלַאכְתּוֹ אֲשֶׁר עָשָׂה׃",
+  "hebrew": "וַיְהִי כִּי־שָׁב עַלְמָא מֵאֶרֶץ גִּדְעוֹן אַחֲרֵי לַמְּדוֹ אֶת־עַם גִּדְעוֹן דְּבָרִים רַבִּים אֲשֶׁר לֹא יִכָּתֵבוּ וַיְיַסֵּד אֶת־סֵדֶר הָעֵדָה כַּאֲשֶׁר עָשָׂה לְפָנִים בְּאֶרֶץ זָרַחֶמְלָה וַיָּשָׁב אֶל־בֵּיתוֹ בְּזָרַחֶמְלָה לָנוּחַ מִמְּלַאכְתּוֹ אֲשֶׁר עָשָׂה׃",
   "english": "And now it came to pass that Alma returned from the land of Gideon, after having taught the people of Gideon many things which cannot be written, having established the order of the church, according as he had before done in the land of Zarahemla, yea, he returned to his own house at Zarahemla to rest himself from the labors which he had performed."
  },
  {
@@ -18910,7 +18910,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 8,
   "verse": 12,
-  "hebrew": "וְעַתָּה יָדַעְנוּ כִּי לֹא מֵעֲדָתְךָ אֲנַחְנוּ יָדַעְנוּ כִּי אֵין־לְךָ כֹּחַ עָלֵינוּ וְאַתָּה מָסַרְתָּ אֶת־כִּסֵּא הַמִּשְׁפָּט לִנְפִיחָה לָכֵן אֵינְךָ הַשֹּׁפֵט הָרֹאשׁ עָלֵינוּ׃",
+  "hebrew": "וְעַתָּה יָדַעְנוּ כִּי לֹא מֵעֲדָתְךָ אֲנַחְנוּ יָדַעְנוּ כִּי אֵין־לְךָ כֹּחַ עָלֵינוּ וְאַתָּה מָסַרְתָּ אֶת־כִּסֵּא הַמִּשְׁפָּט לְנֶפִיחָה לָכֵן אֵינְךָ הַשֹּׁפֵט הָרֹאשׁ עָלֵינוּ׃",
   "english": "And now we know that because we are not of thy church we know that thou hast no power over us; and thou hast delivered up the judgment– seat unto Nephihah; therefore thou art not the chief judge over us."
  },
  {
@@ -18931,7 +18931,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 8,
   "verse": 15,
-  "hebrew": "בָּרוּךְ אַתָּה עַלְמָא לָכֵן שָׂא רֹאשְׁךָ וּשְׂמַח כִּי יֶשׁ־לְךָ לִשְׂמֹחַ מְאֹד כִּי הָיִיתָ נֶאֱמָן בִּשְׁמִירַת מִצְוֺת הָאֱלֹהִים מֵעֵת אֲשֶׁר קִבַּלְתָּ דְּבָרְךָ הָרִאשׁוֹן מֵאִתּוֹ הִנֵּה אָנֹכִי הוּא אֲשֶׁר נָתַתִּי אוֹתוֹ לְךָ׃",
+  "hebrew": "בָּרוּךְ אַתָּה עַלְמָא לָכֵן שָׂא רֹאשְׁךָ וּשְׂמַח כִּי יֶשׁ־לְךָ לִשְׂמֹחַ מְאֹד כִּי הָיִיתָ נֶאֱמָן בִּשְׁמִירַת מִצְוֹת הָאֱלֹהִים מֵעֵת אֲשֶׁר קִבַּלְתָּ דְּבָרְךָ הָרִאשׁוֹן מֵאִתּוֹ הִנֵּה אָנֹכִי הוּא אֲשֶׁר נָתַתִּי אוֹתוֹ לְךָ׃",
   "english": "Blessed art thou, Alma; therefore, lift up thy head and rejoice, for thou hast great cause to rejoice; for thou hast been faithful in keeping the commandments of God from the time which thou receivedst thy first message from him. Behold, I am he that delivered it unto you."
  },
  {
@@ -18945,7 +18945,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 8,
   "verse": 17,
-  "hebrew": "כִּי הִנֵּה מְבַקְשִׁים הֵם בָּעֵת הַזֹּאת לְהַשְׁמִיד אֶת־דְּרוֹר עַמְּךָ כֹּה אָמַר יְהוָה אֲשֶׁר הוּא נֶגֶד הַחֻקִּים וְהַמִּשְׁפָּטִים וְהַמִּצְוֺת אֲשֶׁר נָתַן לְעַמּוֹ׃",
+  "hebrew": "כִּי הִנֵּה מְבַקְשִׁים הֵם בָּעֵת הַזֹּאת לְהַשְׁמִיד אֶת־דְּרוֹר עַמְּךָ כֹּה אָמַר יְהוָה אֲשֶׁר הוּא נֶגֶד הַחֻקִּים וְהַמִּשְׁפָּטִים וְהַמִּצְוֹת אֲשֶׁר נָתַן לְעַמּוֹ׃",
   "english": "For behold, they do study at this time that they may destroy the liberty of thy people, (for thus saith the Lord) which is contrary to the statutes, and judgments, and commandments which he has given unto his people."
  },
  {
@@ -19001,7 +19001,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 8,
   "verse": 25,
-  "hebrew": "אַךְ הִנֵּה צֻוֵּיתִי לָשׁוּב וּלְהִנָּבֵא לָעָם הַזֶּה אָכֵן לְהָעִיד בָּם עַל־עֲוֺנֹתֵיהֶם׃",
+  "hebrew": "אַךְ הִנֵּה צֻוֵּיתִי לָשׁוּב וּלְהִנָּבֵא לָעָם הַזֶּה אָכֵן לְהָעִיד בָּם עַל־עֲוֹנֹתֵיהֶם׃",
   "english": "But behold, I have been commanded that I should turn again and prophesy unto this people, yea, and to testify against them concerning their iniquities."
  },
  {
@@ -19022,7 +19022,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 8,
   "verse": 28,
-  "hebrew": "וַיְהִי כִּי הוֹסִיפוּ הָעָם לִגְדֹּל בַּעֲוֺנֹתֵיהֶם׃",
+  "hebrew": "וַיְהִי כִּי הוֹסִיפוּ הָעָם לִגְדֹּל בַּעֲוֹנֹתֵיהֶם׃",
   "english": "And it came to pass that the people did wax more gross in their iniquities."
  },
  {
@@ -19106,7 +19106,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 9,
   "verse": 8,
-  "hebrew": "הִנֵּה הַדּוֹר הָרָשָׁע וְהַנַּעֲוֶה אֵיךְ שְׁכַחְתֶּם אֶת־תּוֹרַת אֲבוֹתֵיכֶם אָכֵן מַה־מַּהֵר שְׁכַחְתֶּם אֶת־מִצְוֺת אֱלֹהִים׃",
+  "hebrew": "הִנֵּה הַדּוֹר הָרָשָׁע וְהַנַּעֲוֶה אֵיךְ שְׁכַחְתֶּם אֶת־תּוֹרַת אֲבוֹתֵיכֶם אָכֵן מַה־מַּהֵר שְׁכַחְתֶּם אֶת־מִצְוֹת אֱלֹהִים׃",
   "english": "Behold, O ye wicked and perverse generation, how have ye forgotten the tradition of your fathers; yea, how soon ye have forgotten the commandments of God."
  },
  {
@@ -19141,14 +19141,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 9,
   "verse": 13,
-  "hebrew": "הִנֵּה הֲלֹא תִזְכְּרוּ אֶת־הַדְּבָרִים אֲשֶׁר דִּבֶּר אֶל־לֶחִי לֵאמֹר כַּאֲשֶׁר תִּשְׁמְרוּ אֶת־מִצְוֺתַי תַּצְלִיחוּ בָאָרֶץ וְשׁוּב נֶאֱמַר כַּאֲשֶׁר לֹא תִשְׁמְרוּ אֶת־מִצְוֺתַי תִּכָּרֵתוּ מִלִּפְנֵי יְהוָה׃",
+  "hebrew": "הִנֵּה הֲלֹא תִזְכְּרוּ אֶת־הַדְּבָרִים אֲשֶׁר דִּבֶּר אֶל־לֶחִי לֵאמֹר כַּאֲשֶׁר תִּשְׁמְרוּ אֶת־מִצְוֹתַי תַּצְלִיחוּ בָאָרֶץ וְשׁוּב נֶאֱמַר כַּאֲשֶׁר לֹא תִשְׁמְרוּ אֶת־מִצְוֹתַי תִּכָּרֵתוּ מִלִּפְנֵי יְהוָה׃",
   "english": "Behold, do ye not remember the words which he spake unto Lehi, saying that: Inasmuch as ye shall keep my command– ments, ye shall prosper in the land? And again it is said that: Inasmuch as ye will not keep my commandments ye shall be cut off from the presence of the Lord."
  },
  {
   "book": "Alma",
   "chapter": 9,
   "verse": 14,
-  "hebrew": "וְעַתָּה חָפַצְתִּי כִּי תִזְכְּרוּ כַּאֲשֶׁר הַלְמָנִים לֹא שָׁמְרוּ אֶת־מִצְוֺת אֱלֹהִים נִכְרְתוּ מִלִּפְנֵי יְהוָה וְעַתָּה  רֹאִים אֲנַחְנוּ כִּי דְבַר־יְהוָה נֶאֱמַן בַּדָּבָר הַזֶּה וְהַלְמָנִים נִכְרְתוּ מִלְּפָנָיו מֵרֵאשִׁית פִּשְׁעֵיהֶם בָּאָרֶץ׃",
+  "hebrew": "וְעַתָּה חָפַצְתִּי כִּי תִזְכְּרוּ כַּאֲשֶׁר הַלָּמָנִים לֹא שָׁמְרוּ אֶת־מִצְוֹת אֱלֹהִים נִכְרְתוּ מִלִּפְנֵי יְהוָה וְעַתָּה  רֹאִים אֲנַחְנוּ כִּי דְבַר־יְהוָה נֶאֱמַן בַּדָּבָר הַזֶּה וְהַלָּמָנִים נִכְרְתוּ מִלְּפָנָיו מֵרֵאשִׁית פִּשְׁעֵיהֶם בָּאָרֶץ׃",
   "english": "Now I would that ye should remember, that inasmuch as the Lamanites have not kept the  commandments of God, they have been cut off from the presence of the Lord. Now we see that the word of the Lord has been verified in this thing, and the Lamanites have been cut off from his presence, from the beginning of their transgressions in the land."
  },
  {
@@ -19162,7 +19162,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 9,
   "verse": 16,
-  "hebrew": "כִּי שְׁבֻעוֹת רַבּוֹת נִמְשְׁכוּ אֶל־הַלְמָנִים כִּי בַּעֲבוּר תּוֹרַת אֲבוֹתָם נִגְרַם לָהֶם לַעֲמֹד בְּבוּרוּתָם עַל־כֵּן יְהוָה יְרַחֵם עֲלֵיהֶם וְיַאֲרִיךְ אֶת־יָמֵיהֶם בָּאָרֶץ׃",
+  "hebrew": "כִּי שְׁבֻעוֹת רַבּוֹת נִמְשְׁכוּ אֶל־הַלָּמָנִים כִּי בַּעֲבוּר תּוֹרַת אֲבוֹתָם נִגְרַם לָהֶם לַעֲמֹד בְּבוּרוּתָם עַל־כֵּן יְהוָה יְרַחֵם עֲלֵיהֶם וְיַאֲרִיךְ אֶת־יָמֵיהֶם בָּאָרֶץ׃",
   "english": "For there are many promises which are extended to the Lamanites; for it is because of the traditions of their fathers that caused them to remain in their state of ignorance; therefore the Lord will be merciful unto them and prolong their existence in the land."
  },
  {
@@ -19176,14 +19176,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 9,
   "verse": 18,
-  "hebrew": "וְהִנֵּה אֲנִי אֹמֵר לָכֶם אִם תַּעַמְדוּ בְרִשְׁעַתְכֶם לֹא יַאֲרִיכוּ יְמֵיכֶם בָּאָרֶץ כִּי הַלְמָנִים יִשָּׁלְחוּ עֲלֵיכֶם וְאִם לֹא תָשׁוּבוּ יָבֹאוּ בְּעֵת אֲשֶׁר לֹא תֵדְעוּ וְנִפְקַדְתֶּם כְּלָיָה גְמוּרָה וְיִהְיֶה כְּחָרוֹן אַף יְהוָה׃",
+  "hebrew": "וְהִנֵּה אֲנִי אֹמֵר לָכֶם אִם תַּעַמְדוּ בְרִשְׁעַתְכֶם לֹא יַאֲרִיכוּ יְמֵיכֶם בָּאָרֶץ כִּי הַלָּמָנִים יִשָּׁלְחוּ עֲלֵיכֶם וְאִם לֹא תָשׁוּבוּ יָבֹאוּ בְּעֵת אֲשֶׁר לֹא תֵדְעוּ וְנִפְקַדְתֶּם כְּלָיָה גְמוּרָה וְיִהְיֶה כְּחָרוֹן אַף יְהוָה׃",
   "english": "But behold, I say unto you that if ye persist in your wickedness that your days shall not be prolonged in the land, for the Lamanites shall be sent upon you; and if ye repent not they shall come in a time when you know not, and ye shall be visited with utter destruction; and it shall be according to the fierce anger of the Lord."
  },
  {
   "book": "Alma",
   "chapter": 9,
   "verse": 19,
-  "hebrew": "כִּי לֹא יִסְבֹּל אֶתְכֶם כִּי תִחְיוּ בַעֲוֺנֹתֵיכֶם לְהַשְׁחִית אֶת־עַמּוֹ אֲנִי אֹמֵר לָכֶם לֹא יְעַדֵּף לִסְבֹּל כִּי הַלְמָנִים יַשְׁמִידוּ אֶת־כָּל־עַמּוֹ הַנִּקְרָאִים עַם נֶפִי אִם יוּכַל לִהְיוֹת כִּי יִפְּלוּ בַחֲטָאִים וּפְשָׁעִים אַחֲרֵי קַבֵּל אוֹר כֹּה רַב וְדַעַת כֹּה רַב מֵיְהוָה אֱלֹהֵיהֶם׃",
+  "hebrew": "כִּי לֹא יִסְבֹּל אֶתְכֶם כִּי תִחְיוּ בַעֲוֹנֹתֵיכֶם לְהַשְׁחִית אֶת־עַמּוֹ אֲנִי אֹמֵר לָכֶם לֹא יְעַדֵּף לִסְבֹּל כִּי הַלָּמָנִים יַשְׁמִידוּ אֶת־כָּל־עַמּוֹ הַנִּקְרָאִים עַם נֶפִי אִם יוּכַל לִהְיוֹת כִּי יִפְּלוּ בַחֲטָאִים וּפְשָׁעִים אַחֲרֵי קַבֵּל אוֹר כֹּה רַב וְדַעַת כֹּה רַב מֵיְהוָה אֱלֹהֵיהֶם׃",
   "english": "For he will not suffer you that ye shall live in your iniquities, to destroy his people. I say unto you, Nay; he would rather suffer that the Lamanites might destroy all his people who are called the people of Nephi, if it were possible that they could fall into sins and transgressions, after having had so much light and so much knowledge given unto them of the Lord their God;"
  },
  {
@@ -19218,7 +19218,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 9,
   "verse": 24,
-  "hebrew": "כִּי הִנֵּה שְׁבֻעוֹת יְהוָה נִמְשְׁכוּ אֶל־הַלְמָנִים וְלֹא אֲלֵיכֶם אִם תַּעַבְרוּ כִּי הֲלֹא הִשְׁבִּיעַ יְהוָה בְּפֵרוּשׁ וְגָזַר בְּחָזְקָה אִם תַּמְרוּ בוֹ כִּי הָשֵׁמֵד תִּשָּׁמְדוּ מֵעַל פְּנֵי הָאֲדָמָה׃",
+  "hebrew": "כִּי הִנֵּה שְׁבֻעוֹת יְהוָה נִמְשְׁכוּ אֶל־הַלָּמָנִים וְלֹא אֲלֵיכֶם אִם תַּעַבְרוּ כִּי הֲלֹא הִשְׁבִּיעַ יְהוָה בְּפֵרוּשׁ וְגָזַר בְּחָזְקָה אִם תַּמְרוּ בוֹ כִּי הָשֵׁמֵד תִּשָּׁמְדוּ מֵעַל פְּנֵי הָאֲדָמָה׃",
   "english": "For behold, the promises of the Lord are extended to the Lamanites, but they are not unto you if ye transgress; for has not the Lord expressly promised and firmly decreed, that if ye will rebel against him that ye shall utterly be destroyed from off the face of the earth?"
  },
  {
@@ -19260,7 +19260,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 9,
   "verse": 30,
-  "hebrew": "וְעַתָּה אַחַי הַיְקָרִים כִּי אַחַי אַתֶּם וְרְאוּיִים אַתֶּם לְהֵאָהֵב וּרְאוּיִים אַתֶּם לְהוֹצִיא מַעֲשִׂים הָרְאוּיִים לַשָּׁבִים בִּרְאוֹתְכֶם כִּי לִבְּכֶם הִקְשָׁה מְאֹד נֶגֶד דְּבַר אֱלֹהִים וּבִרְאוֹתְכֶם כִּי עַם אָבוּד וְנוֹפֵל אַתֶּם׃",
+  "hebrew": "וְעַתָּה אַחַי הַיְקָרִים כִּי אַחַי אַתֶּם וּרְאוּיִים אַתֶּם לְהֵאָהֵב וּרְאוּיִים אַתֶּם לְהוֹצִיא מַעֲשִׂים הָרְאוּיִים לַשָּׁבִים בִּרְאוֹתְכֶם כִּי לִבְּכֶם הִקְשָׁה מְאֹד נֶגֶד דְּבַר אֱלֹהִים וּבִרְאוֹתְכֶם כִּי עַם אָבוּד וְנוֹפֵל אַתֶּם׃",
   "english": "And now, my beloved brethren, for ye are my brethren, and ye ought to be beloved, and ye ought to bring forth works which are meet for repentance, seeing that your hearts have been grossly hardened against the word of God, and seeing that ye are a lost and a fallen people."
  },
  {
@@ -19421,14 +19421,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 10,
   "verse": 19,
-  "hebrew": "אָכֵן הֵיטֵב אָמַר מוֹשִׁיָּה מַלְכֵּנוּ הָאַחֲרוֹן בְּטֶרֶם יִתֵּן אֶת־הַמַּמְלָכָה וְאֵין לוֹ עַל־מִי לְהַעֲבִירָהּ וַיַּעַשׂ כִּי יִמָּשֵׁל הָעָם הַזֶּה בְּקוֹלָם אָכֵן הֵיטֵב אָמַר כִּי אִם יָבֹא הָעֵת אֲשֶׁר יִבְחַר קוֹל הָעָם הַזֶּה בָּעָוֺן הִנֵּה אִם יָבֹא הָעֵת אֲשֶׁר יִפֹּל הָעָם הַזֶּה לְפֶשַׁע יִהְיוּ בְשֵׁלִים לְהַשְׁמָדָה׃",
+  "hebrew": "אָכֵן הֵיטֵב אָמַר מוֹשִׁיָּה מַלְכֵּנוּ הָאַחֲרוֹן בְּטֶרֶם יִתֵּן אֶת־הַמַּמְלָכָה וְאֵין לוֹ עַל־מִי לְהַעֲבִירָהּ וַיַּעַשׂ כִּי יִמָּשֵׁל הָעָם הַזֶּה בְּקוֹלָם אָכֵן הֵיטֵב אָמַר כִּי אִם יָבֹא הָעֵת אֲשֶׁר יִבְחַר קוֹל הָעָם הַזֶּה בָּעָוֹן הִנֵּה אִם יָבֹא הָעֵת אֲשֶׁר יִפֹּל הָעָם הַזֶּה לְפֶשַׁע יִהְיוּ בְשֵׁלִים לְהַשְׁמָדָה׃",
   "english": "Yea, well did Mosiah say, who was our last king, when he was about to deliver up the kingdom, having no one to confer it upon, causing that this people should be governed by their own voices—yea, well did he say that if the time should come that the voice of this people should choose iniquity, that is, if the time should come that this people should fall into transgression, they would be ripe for destruction."
  },
  {
   "book": "Alma",
   "chapter": 10,
   "verse": 20,
-  "hebrew": "וְעַתָּה אֹמֵר לָכֶם כִּי הֵיטֵב שׁוֹפֵט יְהוָה אֶת־עֲוֺנוֹתֵיכֶם הֵיטֵב קוֹרֵא אֶל־הָעָם הַזֶּה בְּקוֹל מַלְאָכָיו שׁוּבוּ שׁוּבוּ כִּי מַלְכוּת הַשָּׁמַיִם קְרוֹבָה׃",
+  "hebrew": "וְעַתָּה אֹמֵר לָכֶם כִּי הֵיטֵב שׁוֹפֵט יְהוָה אֶת־עֲוֹנוֹתֵיכֶם הֵיטֵב קוֹרֵא אֶל־הָעָם הַזֶּה בְּקוֹל מַלְאָכָיו שׁוּבוּ שׁוּבוּ כִּי מַלְכוּת הַשָּׁמַיִם קְרוֹבָה׃",
   "english": "And now I say unto you that well doth the Lord judge of your iniquities; well doth he cry unto this people, by the voice of his angels: Repent ye, repent, for the kingdom of heaven is at hand."
  },
  {
@@ -19491,7 +19491,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 10,
   "verse": 29,
-  "hebrew": "וְגַם גִּדֵּף נֶגֶד סוֹפְרֵינוּ וְשֹׁפְטֵינוּ׃",
+  "hebrew": "וְגַם גִּדֵּף אֶת־יוֹדְעֵי דִינֵנוּ וְאֶת־שֹׁפְטֵינוּ׃",
   "english": "And again, he has reviled against our lawyers, and our judges."
  },
  {
@@ -19519,7 +19519,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 11,
   "verse": 1,
-  "hebrew": "וַיְהִי בְּתוֹרַת מוֹשִׁיָּה כִּי כָל־אִישׁ אֲשֶׁר שֹׁפֵט הַתּוֹרָה אוֹ הַנִּצָּבִים לִשְׁפֹּט יִקְחוּ שְׂכָרָם כְּפִי הַיָּמִים אֲשֶׁר עָבְדוּ לִשְׁפֹּטאֶת־הַבָּאִים לִפְנֵיהֶם לַמִּשְׁפָּט׃",
+  "hebrew": "וַיְהִי בְּתוֹרַת מוֹשִׁיָּה כִּי כָל־אִישׁ אֲשֶׁר שֹׁפֵט הַתּוֹרָה אוֹ הַנִּצָּבִים לִשְׁפֹּט יִקְחוּ שְׂכָרָם כְּפִי הַיָּמִים אֲשֶׁר עָבְדוּ לִשְׁפֹּט אֶת־הַבָּאִים לִפְנֵיהֶם לַמִּשְׁפָּט׃",
   "english": "Now it was in the law of Mosiah that every man who was a judge of the law, or those who were appointed to be judges, should receive wages according to the time which they labored to judge those who were brought before them to be judged."
  },
  {
@@ -19652,28 +19652,28 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 11,
   "verse": 20,
-  "hebrew": "וַיְהִי אַךְ לְמַעַן בֶּצַע כֶּסֶף כִּי לָקְחוּ שְׂכָרָם כְּפִי עֲבֹדָתָם וַיָּסִיתוּ אֶת־הָעָם לִמְהוּמוֹת וּלְכָל־מַעֲשֵׂה רֶשַׁע לְמַעַן יַרְבּוּ לָהֶם עֲבוֹדָה וְיִקְחוּ כֶּסֶף כְּפִי הַמִּשְׁפָּטִים אֲשֶׁר הוּבְאוּ לִפְנֵיהֶם וַיָּסִיתוּ אֶת־הָעָם נֶגֶד אַלְמָא וַאֲמוּלֵק׃",
+  "hebrew": "וַיְהִי אַךְ לְמַעַן בֶּצַע כֶּסֶף כִּי לָקְחוּ שְׂכָרָם כְּפִי עֲבֹדָתָם וַיָּסִיתוּ אֶת־הָעָם לִמְהוּמוֹת וּלְכָל־מַעֲשֵׂה רֶשַׁע לְמַעַן יַרְבּוּ לָהֶם עֲבוֹדָה וְיִקְחוּ כֶּסֶף כְּפִי הַמִּשְׁפָּטִים אֲשֶׁר הוּבְאוּ לִפְנֵיהֶם וַיָּסִיתוּ אֶת־הָעָם נֶגֶד אַלְמָא וַעֲמוּלֶק׃",
   "english": "Now, it was for the sole purpose to get gain, because they received their wages according to their employ, therefore, they did stir up the people to riotings, and all manner of distur– bances and wickedness, that they might have more employ, that they might get money according to the suits which were brought before them; therefore they did stir up the people against Alma and Amulek."
  },
  {
   "book": "Alma",
   "chapter": 11,
   "verse": 21,
-  "hebrew": "וַיָּחֶל זִיזְרוֹם לִשְׁאֹל אֶת־אֲמוּלֵק לֵאמֹר הֲתַעֲנֶה לִי דְּבָרִים אֲחָדִים אֲשֶׁר אֶשְׁאָלֶךָ וְזִיזְרוֹם אִישׁ חָכָם בְּתַחְבֻּלוֹת הַשָּׂטָן לְהַשְׁחִית אֶת־הַטּוֹב וַיֹּאמֶר אֶל־אֲמוּלֵק הֲתַעֲנֶה לַשְּׁאֵלוֹת אֲשֶׁר אֶשְׁאָלֶךָ׃",
+  "hebrew": "וַיָּחֶל זִיזְרוֹם לִשְׁאֹל אֶת־עֲמוּלֶק לֵאמֹר הֲתַעֲנֶה לִי דְּבָרִים אֲחָדִים אֲשֶׁר אֶשְׁאָלֶךָ וְזִיזְרוֹם אִישׁ חָכָם בְּתַחְבֻּלוֹת הַשָּׂטָן לְהַשְׁחִית אֶת־הַטּוֹב וַיֹּאמֶר אֶל־עֲמוּלֶק הֲתַעֲנֶה לַשְּׁאֵלוֹת אֲשֶׁר אֶשְׁאָלֶךָ׃",
   "english": "And this Zeezrom began to question Amulek, saying: Will ye answer me a few questions which I shall ask you? Now Zeezrom was a man who was expert in the devices of the devil, that he might destroy that which was good; therefore, he said unto Amulek: Will ye answer the questions which I shall put unto you?"
  },
  {
   "book": "Alma",
   "chapter": 11,
   "verse": 22,
-  "hebrew": "וַיַּעַן אֲמוּלֶק אֵלָיו לֵאמֹר הֵן אִם־יִהְיֶה כְּרוּחַ יְהוָה אֲשֶׁר בִּי כִּי לֹא־אֹמַר דָּבָר אֲשֶׁר לֹא כְרוּחַ יְהוָה וַיֹּאמֶר זִיזְרוֹם אֵלָיו הִנֵּה שֵׁשׁ אָנְטִי כֶסֶף וְאֶת־כֻּלָּם אֶתֵּן־לְךָ אִם־תְּכַחֵשׁ כִּי יֵשׁ אֵל עֶלְיוֹן׃",
+  "hebrew": "וַיַּעַן עֲמוּלֶק אֵלָיו לֵאמֹר הֵן אִם־יִהְיֶה כְּרוּחַ יְהוָה אֲשֶׁר בִּי כִּי לֹא־אֹמַר דָּבָר אֲשֶׁר לֹא כְרוּחַ יְהוָה וַיֹּאמֶר זִיזְרוֹם אֵלָיו הִנֵּה שֵׁשׁ אָנְטִי כֶסֶף וְאֶת־כֻּלָּם אֶתֵּן־לְךָ אִם־תְּכַחֵשׁ כִּי יֵשׁ אֵל עֶלְיוֹן׃",
   "english": "And Amulek said unto him: Yea, if it be according to the Spirit of the Lord, which is in me; for I shall say nothing which is contrary to the Spirit of the Lord. And Zeezrom said unto him: Behold, here are six onties of silver, and all these will I give thee if thou wilt deny the existence of a Supreme Being."
  },
  {
   "book": "Alma",
   "chapter": 11,
   "verse": 23,
-  "hebrew": "וַיֹּאמֶר אֲמוּלֵק הוֹי בֶּן־שְׁאוֹל לָמָּה תְנַסֵּנִי הֲלֹא יָדַעְתָּ כִּי הַצַּדִּיק לֹא־יִכָּנַע לְמַסּוֹת כָּאֵלֶּה׃",
+  "hebrew": "וַיֹּאמֶר עֲמוּלֶק הוֹי בֶּן־שְׁאוֹל לָמָּה תְנַסֵּנִי הֲלֹא יָדַעְתָּ כִּי הַצַּדִּיק לֹא־יִכָּנַע לְמַסּוֹת כָּאֵלֶּה׃",
   "english": "Now Amulek said: O thou child of hell, why tempt ye me? Knowest thou that the righteous yieldeth to no such temptations?"
  },
  {
@@ -19701,7 +19701,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 11,
   "verse": 27,
-  "hebrew": "וַיֹּאמֶר אֲמוּלֵק הֵן יֵשׁ אֱלֹהִים חַי וֶאֱמֶת׃",
+  "hebrew": "וַיֹּאמֶר עֲמוּלֶק הֵן יֵשׁ אֱלֹהִים חַי וֶאֱמֶת׃",
   "english": "And Amulek said: Yea, there is a true and living God."
  },
  {
@@ -19750,7 +19750,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 11,
   "verse": 34,
-  "hebrew": "וַיֹּסֶף זִיזְרוֹם לֵאמֹר הֲיוֹשִׁיעַ אֶת־עַמּוֹ בְּחַטֹּאתָם וַיַּעַן אֲמוּלֵק וַיֹּאמֶר אֵלָיו אֹמֵר אֲנִי לְךָ לֹא כִּי נִמְנָע מִמֶּנּוּ לְהַכְחִישׁ אֶת־דְּבָרוֹ׃",
+  "hebrew": "וַיֹּסֶף זִיזְרוֹם לֵאמֹר הֲיוֹשִׁיעַ אֶת־עַמּוֹ בְּחַטֹּאתָם וַיַּעַן עֲמוּלֶק וַיֹּאמֶר אֵלָיו אֹמֵר אֲנִי לְךָ לֹא כִּי נִמְנָע מִמֶּנּוּ לְהַכְחִישׁ אֶת־דְּבָרוֹ׃",
   "english": "And Zeezrom said again: Shall he save his people in their sins? And Amulek answered and said unto him: I say unto you he shall not, for it is impossible for him to deny his word."
  },
  {
@@ -19764,7 +19764,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 11,
   "verse": 36,
-  "hebrew": "וַיֹּאמֶר אֲמוּלֵק אֵלָיו שֵׁנִית הִנֵּה שִׁקַּרְתָּ כִּי־תֹאמַר אָמַרְתִּי כִּי יֵשׁ־לִי מֶמְשָׁלָה לְצַוּוֹת אֶת־הָאֱלֹהִים יַעַן אָמַרְתִּי לֹא יוֹשִׁיעַ אֶת־עַמּוֹ בְּחַטֹּאתָם׃",
+  "hebrew": "וַיֹּאמֶר עֲמוּלֶק אֵלָיו שֵׁנִית הִנֵּה שִׁקַּרְתָּ כִּי־תֹאמַר אָמַרְתִּי כִּי יֵשׁ־לִי מֶמְשָׁלָה לְצַוּוֹת אֶת־הָאֱלֹהִים יַעַן אָמַרְתִּי לֹא יוֹשִׁיעַ אֶת־עַמּוֹ בְּחַטֹּאתָם׃",
   "english": "Now Amulek saith again unto him: Behold thou hast lied, for thou sayest that I spake as though I had authority to command God because I said he shall not save his people in their sins."
  },
  {
@@ -19785,7 +19785,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 11,
   "verse": 39,
-  "hebrew": "וַיֹּאמֶר אֲמוּלֵק אֵלָיו הֵן הוּא אֲבִי עוֹלְמֵי הַשָּׁמַיִם וְהָאָרֶץ וְכָל־אֲשֶׁר בָּם הוּא הָרֵאשִׁית וְהָאַחֲרִית הָרִאשׁוֹן וְהָאַחֲרוֹן׃",
+  "hebrew": "וַיֹּאמֶר עֲמוּלֶק אֵלָיו הֵן הוּא אֲבִי עוֹלְמֵי הַשָּׁמַיִם וְהָאָרֶץ וְכָל־אֲשֶׁר בָּם הוּא הָרֵאשִׁית וְהָאַחֲרִית הָרִאשׁוֹן וְהָאַחֲרוֹן׃",
   "english": "And Amulek said unto him: Yea, he is the very Eternal Father of heaven and of earth, and all things which in them are; he is the beginning and the end, the first and the last;"
  },
  {
@@ -19834,14 +19834,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 11,
   "verse": 46,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר כִּלָּה אֲמוּלֵק אֶת־הַדְּבָרִים הָאֵלֶּה וַיָּחֵלּוּ הָעָם לְהִשְׁתּוֹמֵם שֵׁנִית וְגַם זִיזְרוֹם הֵחֵל לִרְעֹד וַיִּתַּמּוּ דִּבְרֵי אֲמוּלֵק אוֹ זֹאת כָּל־אֲשֶׁר כָּתָבְתִּי׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר כִּלָּה עֲמוּלֶק אֶת־הַדְּבָרִים הָאֵלֶּה וַיָּחֵלּוּ הָעָם לְהִשְׁתּוֹמֵם שֵׁנִית וְגַם זִיזְרוֹם הֵחֵל לִרְעֹד וַיִּתַּמּוּ דִּבְרֵי עֲמוּלֶק אוֹ זֹאת כָּל־אֲשֶׁר כָּתָבְתִּי׃",
   "english": "Now, when Amulek had finished these words the people began again to be astonished, and also Zeezrom began to tremble. And thus ended the words of Amulek, or this is all that I have written."
  },
  {
   "book": "Alma",
   "chapter": 12,
   "verse": 1,
-  "hebrew": "וַיְהִי כִּרְאוֹת אַלְמָא כִּי דִּבְרֵי אֲמוּלֵק הֶחֱרִישׁוּ אֶת־זִיזְרוֹם כִּי רָאָה שֶׁאֲמוּלֵק תְּפָשׂוֹ בְּכַחֲשׁוֹ וּבְמִרְמָתוֹ לְהַשְׁמִידוֹ וַיַּרְא כִּי הֵחֵל לִרְעֹד מִפְּנֵי הַכָּרַת אַשְׁמָתוֹ וַיִּפְתַּח אֶת־פִּיו וַיָּחֶל לְדַבֵּר אֵלָיו וּלְקַיֵּם אֶת־דִּבְרֵי אֲמוּלֵק וּלְבָאֵר דְּבָרִים מֵעֵבֶר אוֹ לִפְרֹשׂ אֶת־הַכְּתוּבִים יוֹתֵר מֵאֲשֶׁר עָשָׂה אֲמוּלֵק׃",
+  "hebrew": "וַיְהִי כִּרְאוֹת אַלְמָא כִּי דִּבְרֵי עֲמוּלֶק הֶחֱרִישׁוּ אֶת־זִיזְרוֹם כִּי רָאָה שֶׁעֲמוּלֶק תְּפָשׂוֹ בְּכַחֲשׁוֹ וּבְמִרְמָתוֹ לְהַשְׁמִידוֹ וַיַּרְא כִּי הֵחֵל לִרְעֹד מִפְּנֵי הַכָּרַת אַשְׁמָתוֹ וַיִּפְתַּח אֶת־פִּיו וַיָּחֶל לְדַבֵּר אֵלָיו וּלְקַיֵּם אֶת־דִּבְרֵי עֲמוּלֶק וּלְבָאֵר דְּבָרִים מֵעֵבֶר אוֹ לִפְרֹשׂ אֶת־הַכְּתוּבִים יוֹתֵר מֵאֲשֶׁר עָשָׂה עֲמוּלֶק׃",
   "english": "Now Alma, seeing that the words of Amulek had silenced Zeezrom, for he beheld that Amulek had caught him in his lying and deceiving to destroy him, and seeing that he began to tremble under a consciousness of his guilt, he opened his mouth and began to speak unto him, and to establish the words of Amulek, and to explain things beyond, or to unfold the scriptures beyond that which Amulek had done."
  },
  {
@@ -19869,7 +19869,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 12,
   "verse": 5,
-  "hebrew": "וְעַתָּה זֹאת הָיְתָה מְזִמַּת צֹרְרְךָ וַיַּעַשׂ אֶת־כֹּחוֹ בְּךָ וְעַתָּה חָפַצְתִּי כִּי תִזְכֹּר אֵת אֲשֶׁר אֹמַר לְךָ אֹמַר לַכֹּל׃",
+  "hebrew": "וְעַתָּה זֹאת הָיְתָה מְזִמַּת צֹרְרְךָ וַיַּעַשׂ אֶת־כֹּחוֹ בְּךָ וְעַתָּה חָפַצְתִּי כִּי תִזְכֹּר אֶת־אֲשֶׁר אֹמַר לְךָ אֹמַר לַכֹּל׃",
   "english": "Now this was a plan of thine adversary, and he hath exercised his power in thee. Now I would that ye should remember that what I say unto thee I say unto all."
  },
  {
@@ -19883,14 +19883,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 12,
   "verse": 7,
-  "hebrew": "וַיְהִי כְּדַבֵּר אַלְמָא אֶת־הַדְּבָרִים הָאֵלֶּה וַיֹּסֶף זִיזְרוֹם לִרְעֹד בְּיֶתֶר שְׂאֵת כִּי נוֹכַח יוֹתֵר וָיוֹתֵר בְּכֹחַ אֱלֹהִים וְגַם נוֹכַח כִּי לְאַלְמָא וְלַאֲמוּלֵק דַּעַת אוֹתוֹ כִּי נוֹכַח שֶׁיָּדְעוּ מַחְשְׁבוֹת לִבּוֹ וּמְזִמּוֹתָיו כִּי נִתַּן לָהֶם כֹּחַ לָדַעַת אֶת־אֵלֶּה כְּרוּחַ הַנְּבוּאָה׃",
+  "hebrew": "וַיְהִי כְּדַבֵּר אַלְמָא אֶת־הַדְּבָרִים הָאֵלֶּה וַיֹּסֶף זִיזְרוֹם לִרְעֹד בְּיֶתֶר שְׂאֵת כִּי נוֹכַח יוֹתֵר וָיוֹתֵר בְּכֹחַ אֱלֹהִים וְגַם נוֹכַח כִּי לְאַלְמָא וְלַעֲמוּלֶק דַּעַת אוֹתוֹ כִּי נוֹכַח שֶׁיָּדְעוּ מַחְשְׁבוֹת לִבּוֹ וּמְזִמּוֹתָיו כִּי נִתַּן לָהֶם כֹּחַ לָדַעַת אֶת־אֵלֶּה כְּרוּחַ הַנְּבוּאָה׃",
   "english": "Now when Alma had spoken these words, Zeezrom began to tremble more exceedingly, for he was convinced more and more of the power of God; and he was also convinced that Alma and Amulek had a knowledge of him, for he was convinced that they knew the thoughts and intents of his heart; for power was given unto them that they might know of these things according to the spirit of prophecy."
  },
  {
   "book": "Alma",
   "chapter": 12,
   "verse": 8,
-  "hebrew": "וַיָּחֶל זִיזְרוֹם לִדְרֹשׁ מֵאִתָּם בְּחָזְקָה לְמַעַן יֵדַע עוֹד עַל־מַלְכוּת הָאֱלֹהִים וַיֹּאמֶר אֶל־אַלְמָא מַה־זֹּאת אֲשֶׁר דִּבֶּר אֲמוּלֵק עַל־תְּחִיַּת הַמֵּתִים כִּי כֻלָּם יָקוּמוּ מִן־הַמֵּתִים גַּם־צַדִּיק גַּם־רָשָׁע וְיוּבְאוּ לַעֲמֹד לִפְנֵי אֱלֹהִים לְהִשָּׁפֵט כְּמַעֲשֵׂיהֶם׃",
+  "hebrew": "וַיָּחֶל זִיזְרוֹם לִדְרֹשׁ מֵאִתָּם בְּחָזְקָה לְמַעַן יֵדַע עוֹד עַל־מַלְכוּת הָאֱלֹהִים וַיֹּאמֶר אֶל־אַלְמָא מַה־זֹּאת אֲשֶׁר דִּבֶּר עֲמוּלֶק עַל־תְּחִיַּת הַמֵּתִים כִּי כֻלָּם יָקוּמוּ מִן־הַמֵּתִים גַּם־צַדִּיק גַּם־רָשָׁע וְיוּבְאוּ לַעֲמֹד לִפְנֵי אֱלֹהִים לְהִשָּׁפֵט כְּמַעֲשֵׂיהֶם׃",
   "english": "And Zeezrom began to inquire of them diligently, that he might know more concerning the kingdom of God. And he said unto Alma: What does this mean which Amulek hath spoken concerning the resurrection of the dead, that all shall rise from the dead, both the just and the unjust, and are brought to stand before God to be judged according to their works?"
  },
  {
@@ -19918,7 +19918,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 12,
   "verse": 12,
-  "hebrew": "וַאֲמוּלֵק דִּבֶּר בְּגָלוּי עַל־הַמָּוֶת וְעַל־הַתְּקוּמָה מִן־הַבָּשָׂר הַזֶּה לְאֵין־מָוֶת וְעַל־הֲבָאָה לִפְנֵי כֵּס אֱלֹהִים לְהִשָּׁפֵט כְּמַעֲשֵׂינוּ׃",
+  "hebrew": "וַעֲמוּלֶק דִּבֶּר בְּגָלוּי עַל־הַמָּוֶת וְעַל־הַתְּקוּמָה מִן־הַבָּשָׂר הַזֶּה לְאֵין־מָוֶת וְעַל־הֲבָאָה לִפְנֵי כֵּס אֱלֹהִים לְהִשָּׁפֵט כְּמַעֲשֵׂינוּ׃",
   "english": "And Amulek hath spoken plainly concerning death, and being raised from this mortality to a state of immortality, and being brought before the bar of God, to be judged according to our works."
  },
  {
@@ -20002,7 +20002,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 12,
   "verse": 24,
-  "hebrew": "וְרֹאִים אָנוּ כִּי־בָא הַמָּוֶת עַל־בְּנֵי הָאָדָם הֵן הַמָּוֶת אֲשֶׁר דִּבֶּר עָלָיו אֲמוּלֵק אֲשֶׁר הוּא מוֹת הַבָּשָׂר וְאַף־עַל־פִּי־כֵן נִתַּן לָאָדָם מוֹעֵד לָשׁוּב בִּתְשׁוּבָה וַיְהִי הַחַיִּים הָאֵלֶּה לְעֵת מַסָּה עֵת לְהִכּוֹן לִקְרַאת אֱלֹהִים עֵת לְהִכּוֹן לַיָּמִים הָאֵין־קֵץ אֲשֶׁר דִּבַּרְנוּ עֲלֵיהֶם אֲשֶׁר הֵם אַחֲרֵי תְּחִיַּת הַמֵּתִים׃",
+  "hebrew": "וְרֹאִים אָנוּ כִּי־בָא הַמָּוֶת עַל־בְּנֵי הָאָדָם הֵן הַמָּוֶת אֲשֶׁר דִּבֶּר עָלָיו עֲמוּלֶק אֲשֶׁר הוּא מוֹת הַבָּשָׂר וְאַף־עַל־פִּי־כֵן נִתַּן לָאָדָם מוֹעֵד לָשׁוּב בִּתְשׁוּבָה וַיְהִי הַחַיִּים הָאֵלֶּה לְעֵת מַסָּה עֵת לְהִכּוֹן לִקְרַאת אֱלֹהִים עֵת לְהִכּוֹן לַיָּמִים הָאֵין־קֵץ אֲשֶׁר דִּבַּרְנוּ עֲלֵיהֶם אֲשֶׁר הֵם אַחֲרֵי תְּחִיַּת הַמֵּתִים׃",
   "english": "And we see that death comes upon mankind, yea, the death which has been spoken of by Amulek, which is the temporal death; neverthe– less there was a space granted unto man in which he might repent; therefore this life became a probationary state; a time to prepare to meet God; a time to prepare for that endless state which has been spoken of by us, which is after the resurrection of the dead."
  },
  {
@@ -20044,7 +20044,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 12,
   "verse": 30,
-  "hebrew": "וַיֹּאמְרוּ זֹאת הַדֶּרֶךְ אֲשֶׁר בָּהּ קָרְאוּ וְהוּכַנוּ מֵיסוֹד הָעוֹלָם כְּדַעַת אֱלֹהִים עַל־פִּי אֱמוּנָתָם הַגְּדוֹלָה וַיֹּעֲשׂוּ מַעֲשֵׂיהֶם הַטּוֹבִים בָּרִאשׁוֹנָה נָתַן לָהֶם לִבְחֹר בַּטּוֹב אוֹ בָרָע וַיִּבְחָרוּ בַטּוֹב וַיֹּעֲשׂוּ אֱמוּנָה גְדוֹלָה מְאֹד וַיִּקָּרֵאוּ בְּקֹרֵא קֹדֶשׁ הַקּוֹרֵא אֲשֶׁר הוּכַן עִם וְלְפִי גְּאֻלַּת הַהַכָּנָה לָאֵלֶּה׃",
+  "hebrew": "וַיֹּאמְרוּ זֹאת הַדֶּרֶךְ אֲשֶׁר בָּהּ קָרְאוּ וְהוּכַנוּ מֵיסוֹד הָעוֹלָם כְּדַעַת אֱלֹהִים עַל־פִּי אֱמוּנָתָם הַגְּדוֹלָה וַיֹּעֲשׂוּ מַעֲשֵׂיהֶם הַטּוֹבִים בָּרִאשׁוֹנָה נָתַן לָהֶם לִבְחֹר בַּטּוֹב אוֹ בָרָע וַיִּבְחָרוּ בַטּוֹב וַיֹּעֲשׂוּ אֱמוּנָה גְדוֹלָה מְאֹד וַיִּקָּרֵאוּ בְּקֹרֵא קֹדֶשׁ הַקּוֹרֵא אֲשֶׁר הוּכַן עִם וּלְפִי גְּאֻלַּת הַהַכָּנָה לָאֵלֶּה׃",
   "english": "And they began from that time forth to call on his name; therefore God conversed with men, and made known unto them the plan of redemption, which had been prepared from the foundation of the world; and this he made known unto them according to their faith and repentance and their holy works."
  },
  {
@@ -20100,7 +20100,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 13,
   "verse": 1,
-  "hebrew": "וְעוֹד אַחַי נֹשֵׂא אֲנִי אֶת־לְבַבְכֶם אֶל־הָעֵת אֲשֶׁר נָתַן יְהוָה אֱלֹהִים אֶת־הַמִּצְוֹת הָאֵלֶּה לְבָנָיו וְחָפַצְתִּי כִּי תִזְכְּרוּ אֵת אֲשֶׁר יְהוָה אֱלֹהִים וַיַּעֲמֵד כֹּהֲנִים בְּסֵדֶר קָדְשׁוֹ הוּא סֵדֶר בְּנוֹ לְהוֹרֹת אֶת־הַדְּבָרִים הָאֵלֶּה לָעָם׃",
+  "hebrew": "וְעוֹד אַחַי נֹשֵׂא אֲנִי אֶת־לְבַבְכֶם אֶל־הָעֵת אֲשֶׁר נָתַן יְהוָה אֱלֹהִים אֶת־הַמִּצְוֹת הָאֵלֶּה לְבָנָיו וְחָפַצְתִּי כִּי תִזְכְּרוּ אֶת־אֲשֶׁר יְהוָה אֱלֹהִים וַיַּעֲמֵד כֹּהֲנִים בְּסֵדֶר קָדְשׁוֹ הוּא סֵדֶר בְּנוֹ לְהוֹרֹת אֶת־הַדְּבָרִים הָאֵלֶּה לָעָם׃",
   "english": "And again, my brethren, I would cite your minds forward to the time when the Lord God gave these commandments unto his children; and I would that ye should remember that the Lord God ordained priests, after his holy order, which was after the order of his Son, to teach these things unto the people."
  },
  {
@@ -20324,14 +20324,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 14,
   "verse": 2,
-  "hebrew": "אַךְ רֻבָּם חָפְצוּ לְהַשְׁמִיד אֶת־אַלְמָא וַאֲמוּלֵק כִּי קָצְפוּ עַל־אַלְמָא בַּעֲבוּר נְכֹחוֹת דְּבָרָיו אֶל־זִיזְרוֹם וְגַם אָמְרוּ כִּי־שִׁקֵּר אֲמוּלֵק לָהֶם וְכִי גִּדֵּף עַל־תּוֹרָתָם וְגַם עַל־שֹׁפְטֵיהֶם וְדַיָּנֵיהֶם׃",
+  "hebrew": "אַךְ רֻבָּם חָפְצוּ לְהַשְׁמִיד אֶת־אַלְמָא וַעֲמוּלֶק כִּי קָצְפוּ עַל־אַלְמָא בַּעֲבוּר נְכֹחוֹת דְּבָרָיו אֶל־זִיזְרוֹם וְגַם אָמְרוּ כִּי־שִׁקֵּר עֲמוּלֶק לָהֶם וְכִי גִּדֵּף עַל־תּוֹרָתָם וְגַם עַל־שֹׁפְטֵיהֶם וְדַיָּנֵיהֶם׃",
   "english": "But the more part of them were desirous that they might destroy Alma and Amulek; for they were angry with Alma, because of the plainness of his words unto Zeezrom; and they also said that Amulek had lied unto them, and had reviled against their law and also against their lawyers and judges."
  },
  {
   "book": "Alma",
   "chapter": 14,
   "verse": 3,
-  "hebrew": "וַיִּקְצְפוּ גַם עַל־אַלְמָא וַאֲמוּלֵק וּבַעֲבוּר הֵעִידוּ בְנֹכַח נֶגֶד רִשְׁעָתָם וַיְבַקְשׁוּ לַהֲמִיתָם בַּסֵּתֶר׃",
+  "hebrew": "וַיִּקְצְפוּ גַם עַל־אַלְמָא וַעֲמוּלֶק וּבַעֲבוּר הֵעִידוּ בְנֹכַח נֶגֶד רִשְׁעָתָם וַיְבַקְשׁוּ לַהֲמִיתָם בַּסֵּתֶר׃",
   "english": "And they were also angry with Alma and Amulek; and because they had testified so plainly against their wickedness, they sought to put them away privily."
  },
  {
@@ -20345,7 +20345,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 14,
   "verse": 5,
-  "hebrew": "וַיֵּצְאוּ הָעָם וַיָּעִידוּ נֶגְדָּם לֵאמֹר כִּי גִּדְּפוּ עַל־הַתּוֹרָה וְעַל־דַּיָּנֵיהֶם וְשֹׁפְטֵי הָאָרֶץ וְגַם עַל־כָּל־הָעָם אֲשֶׁר בָּאָרֶץ וְגַם הֵעִידוּ כִּי יֵשׁ אֱלֹהִים אֶחָד וְכִי יִשְׁלַח אֶת־בְּנוֹ בְּתוֹךְ הָעָם אַךְ לֹא יוֹשִׁיעֵם וְכָהֵנָּה רַבּוֹת הֵעִידוּ הָעָם נֶגֶד אַלְמָא וַאֲמוּלֵק וְכָל־זֹאת לִפְנֵי שֹׁפֵט הָרֹאשׁ בָּאָרֶץ׃",
+  "hebrew": "וַיֵּצְאוּ הָעָם וַיָּעִידוּ נֶגְדָּם לֵאמֹר כִּי גִּדְּפוּ עַל־הַתּוֹרָה וְעַל־דַּיָּנֵיהֶם וְשֹׁפְטֵי הָאָרֶץ וְגַם עַל־כָּל־הָעָם אֲשֶׁר בָּאָרֶץ וְגַם הֵעִידוּ כִּי יֵשׁ אֱלֹהִים אֶחָד וְכִי יִשְׁלַח אֶת־בְּנוֹ בְּתוֹךְ הָעָם אַךְ לֹא יוֹשִׁיעֵם וְכָהֵנָּה רַבּוֹת הֵעִידוּ הָעָם נֶגֶד אַלְמָא וַעֲמוּלֶק וְכָל־זֹאת לִפְנֵי שֹׁפֵט הָרֹאשׁ בָּאָרֶץ׃",
   "english": "And the people went forth and witnessed against them—testifying that they had reviled against the law, and their lawyers and judges of the land, and also of all the people that were in the land; and also testified that here was but one God, and that he should send his Son among the people, but he should not save them; and many such things did the people testify against Alma and Amulek. Now this was done before the chief judge of the land."
  },
  {
@@ -20359,7 +20359,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 14,
   "verse": 7,
-  "hebrew": "וַיְהִי כִּי הֵחֵל לִצְעֹק אֶל־הָעָם לֵאמֹר הִנֵּה אָנֹכִי חַיָּב וְהָאֲנָשִׁים הָאֵלֶּה תְּמִימִים לִפְנֵי אֱלֹהִים וַיָּחֶל לְהַמְלִיץ בַּעֲדָם מֵהָעֵת הַהִיא וָהָלְאָה אַךְ גִּדְּפוּ אוֹתוֹ לֵאמֹר הֲגַם־אַתָּה אָחוּז בַּשָּׂטָן וַיָּרְקוּ בּוֹ וַיְגָרְשׁוּהוּ מִתּוֹכָם וְגַם אֵת כָּל־הַמַּאֲמִינִים בַּדְּבָרִים אֲשֶׁר דִּבְּרוּ אַלְמָא וַאֲמוּלֵק וַיְגָרְשׁוּם וַיִּשְׁלְחוּ אֲנָשִׁים לִרְגֹם אוֹתָם בָּאֲבָנִים׃",
+  "hebrew": "וַיְהִי כִּי הֵחֵל לִצְעֹק אֶל־הָעָם לֵאמֹר הִנֵּה אָנֹכִי חַיָּב וְהָאֲנָשִׁים הָאֵלֶּה תְּמִימִים לִפְנֵי אֱלֹהִים וַיָּחֶל לְהַמְלִיץ בַּעֲדָם מֵהָעֵת הַהִיא וָהָלְאָה אַךְ גִּדְּפוּ אוֹתוֹ לֵאמֹר הֲגַם־אַתָּה אָחוּז בַּשָּׂטָן וַיָּרְקוּ בּוֹ וַיְגָרְשׁוּהוּ מִתּוֹכָם וְגַם אֵת כָּל־הַמַּאֲמִינִים בַּדְּבָרִים אֲשֶׁר דִּבְּרוּ אַלְמָא וַעֲמוּלֶק וַיְגָרְשׁוּם וַיִּשְׁלְחוּ אֲנָשִׁים לִרְגֹם אוֹתָם בָּאֲבָנִים׃",
   "english": "And it came to pass that he began to cry unto the people, saying: Behold, I am guilty, and these men are spotless before God. And he began to plead for them from that time forth; but they reviled him, saying: Art thou also possessed with the devil? And they spit upon him, and cast him out from among them, and also all those who believed in the words which had been spoken by Alma and Amulek; and they cast them out, and sent men to cast stones at them."
  },
  {
@@ -20373,14 +20373,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 14,
   "verse": 9,
-  "hebrew": "וַיִּקְחוּ אֶת־אַלְמָא וַאֲמוּלֵק וַיּוֹלִיכוּם אֶל־מְקוֹם הַהֲרִיגָה לְמַעַן יִרְאוּ בְּהַשְׁמָדַת הַנִּשְׂרָפִים בָּאֵשׁ׃",
+  "hebrew": "וַיִּקְחוּ אֶת־אַלְמָא וַעֲמוּלֶק וַיּוֹלִיכוּם אֶל־מְקוֹם הַהֲרִיגָה לְמַעַן יִרְאוּ בְּהַשְׁמָדַת הַנִּשְׂרָפִים בָּאֵשׁ׃",
   "english": "And it came to pass that they took Alma and Amulek, and carried them forth to the place of martyrdom, that they might witness the destruction of those who were consumed by ire."
  },
  {
   "book": "Alma",
   "chapter": 14,
   "verse": 10,
-  "hebrew": "וַיְהִי כִּרְאוֹת אֲמוּלֵק אֶת־מַכְאֹבֵי הַנָּשִׁים וְהַיְלָדִים הַנִּשְׂרָפִים בָּאֵשׁ וַיִּכָּאֵב גַּם־הוּא וַיֹּאמֶר אֶל־אַלְמָא אֵיךְ נוּכַל לִרְאוֹת בַּמַּרְאֶה הַנּוֹרָא הַזֶּה לָכֵן נִשְׁלַח אֶת־יָדֵינוּ וְנַעֲשֶׂה בְכֹחַ אֱלֹהִים אֲשֶׁר בָּנוּ וְנוֹשִׁיעֵם מִן־הַלֶּהָבוֹת׃",
+  "hebrew": "וַיְהִי כִּרְאוֹת עֲמוּלֶק אֶת־מַכְאֹבֵי הַנָּשִׁים וְהַיְלָדִים הַנִּשְׂרָפִים בָּאֵשׁ וַיִּכָּאֵב גַּם־הוּא וַיֹּאמֶר אֶל־אַלְמָא אֵיךְ נוּכַל לִרְאוֹת בַּמַּרְאֶה הַנּוֹרָא הַזֶּה לָכֵן נִשְׁלַח אֶת־יָדֵינוּ וְנַעֲשֶׂה בְכֹחַ אֱלֹהִים אֲשֶׁר בָּנוּ וְנוֹשִׁיעֵם מִן־הַלֶּהָבוֹת׃",
   "english": "And when Amulek saw the pains of the women and children who were consuming in the fire, he also was pained; and he said unto Alma: How can we witness this awful scene? Therefore let us stretch forth our hands, and exercise the power of God which is in us, and save them from the flames."
  },
  {
@@ -20394,7 +20394,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 14,
   "verse": 12,
-  "hebrew": "וַיֹּאמֶר אֲמוּלֵק אֶל־אַלְמָא הִנֵּה אוּלַי יִשְׂרְפוּ גַּם־אֹתָנוּ׃",
+  "hebrew": "וַיֹּאמֶר עֲמוּלֶק אֶל־אַלְמָא הִנֵּה אוּלַי יִשְׂרְפוּ גַּם־אֹתָנוּ׃",
   "english": "Now Amulek said unto Alma: Behold, perhaps they will burn us also."
  },
  {
@@ -20408,7 +20408,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 14,
   "verse": 14,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר כָּלוּ גוּפוֹת הַמֻּשְׁלָכִים בָּאֵשׁ וְגַם הַסְּפָרִים אֲשֶׁר הֻשְׁלְכוּ עִמָּם וַיָּבֹא שֹׁפֵט הָרֹאשׁ בָּאָרֶץ וַיַּעֲמֹד לִפְנֵי אַלְמָא וַאֲמוּלֵק וְהֵם אֲסוּרִים וַיַּכֵּם בְּיָדוֹ עַל־הַלֶחִי וַיֹּאמֶר אֲלֵיהֶם אַחֲרֵי אֲשֶׁר רְאִיתֶם הֲתִדְרְשׁוּ עוֹד לָעָם הַזֶּה כִּי יֻשְׁלְכוּ בַּאֲגַם־אֵשׁ וְגָפְרִית׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר כָּלוּ גוּפוֹת הַמֻּשְׁלָכִים בָּאֵשׁ וְגַם הַסְּפָרִים אֲשֶׁר הֻשְׁלְכוּ עִמָּם וַיָּבֹא שֹׁפֵט הָרֹאשׁ בָּאָרֶץ וַיַּעֲמֹד לִפְנֵי אַלְמָא וַעֲמוּלֶק וְהֵם אֲסוּרִים וַיַּכֵּם בְּיָדוֹ עַל־הַלֶחִי וַיֹּאמֶר אֲלֵיהֶם אַחֲרֵי אֲשֶׁר רְאִיתֶם הֲתִדְרְשׁוּ עוֹד לָעָם הַזֶּה כִּי יֻשְׁלְכוּ בַּאֲגַם־אֵשׁ וְגָפְרִית׃",
   "english": "Now it came to pass that when the bodies of those who had been cast into the fire were consumed, and also the records which were cast in with them, the chief judge of the land came and stood before Alma and Amulek, as they were bound; and he smote them with his hand upon their cheeks, and said unto them: After what ye have seen, will ye preach again unto this people, that they shall be cast into a lake of fire and brimstone?"
  },
  {
@@ -20422,21 +20422,21 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 14,
   "verse": 16,
-  "hebrew": "וְהַשֹּׁפֵט הַזֶּה הָיָה עַל־פִּי סֵדֶר וֶאֱמוּנַת נְחוֹר אֲשֶׁר הָרַג אֶת־גִּדְעוֹן׃",
+  "hebrew": "וְהַשֹּׁפֵט הַזֶּה הָיָה עַל־פִּי סֵדֶר וֶאֱמוּנַת נִחוֹר אֲשֶׁר הָרַג אֶת־גִּדְעוֹן׃",
   "english": "Now this judge was after the order and faith of Nehor, who slew Gideon."
  },
  {
   "book": "Alma",
   "chapter": 14,
   "verse": 17,
-  "hebrew": "וַיְהִי כִּי אַלְמָא וַאֲמוּלֵק לֹא עָנוּהוּ דָבָר וַיַּכֵּם שֵׁנִית וַיִּתְּנֵם בְּיַד הַשּׁוֹטְרִים לְהַשְׁלִיכָם בַּכֶּלֶא׃",
+  "hebrew": "וַיְהִי כִּי אַלְמָא וַעֲמוּלֶק לֹא עָנוּהוּ דָבָר וַיַּכֵּם שֵׁנִית וַיִּתְּנֵם בְּיַד הַשּׁוֹטְרִים לְהַשְׁלִיכָם בַּכֶּלֶא׃",
   "english": "And it came to pass that Alma and Amulek answered him nothing; and he smote them again, and delivered them to the officers to be cast into prison."
  },
  {
   "book": "Alma",
   "chapter": 14,
   "verse": 18,
-  "hebrew": "וַיְהִי אַחֲרֵי הָשְׁלְכָם בַּכֶּלֶא שְׁלֹשָׁה יָמִים וַיָּבֹאוּ דַיָּנִים רַבִּים וְשֹׁפְטִים וְכֹהֲנִים וּמוֹרִים אֲשֶׁר הָיוּ מִכַּת נְחוֹר וַיָּבֹאוּ אֶל־הַכֶּלֶא לִרְאוֹתָם וַיִּשְׁאָלוּם דְּבָרִים רַבִּים וְהֵם לֹא עָנוּם דָּבָר׃",
+  "hebrew": "וַיְהִי אַחֲרֵי הָשְׁלְכָם בַּכֶּלֶא שְׁלֹשָׁה יָמִים וַיָּבֹאוּ דַיָּנִים רַבִּים וְשֹׁפְטִים וְכֹהֲנִים וּמוֹרִים אֲשֶׁר הָיוּ מִכַּת נִחוֹר וַיָּבֹאוּ אֶל־הַכֶּלֶא לִרְאוֹתָם וַיִּשְׁאָלוּם דְּבָרִים רַבִּים וְהֵם לֹא עָנוּם דָּבָר׃",
   "english": "And when they had been cast into prison three days, there came many lawyers, and judges, and priests, and teachers, who were of the profession of Nehor; and they came in unto the prison to see them, and they questioned them about many words; but they answered them nothing."
  },
  {
@@ -20471,7 +20471,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 14,
   "verse": 23,
-  "hebrew": "וַיְהִי אַחֲרֵי עָנְיָם כָּכָה יָמִים רַבִּים וַיְהִי בַּיּוֹם הַשְּׁנֵים עָשָׂר בַּחֹדֶשׁ הָעֲשִׂירִי בִּשְׁנַת עֶשֶׂר לְמַלְכוּת הַשֹּׁפְטִים עַל־עַם נֶפִי וַיָּבֹא שֹׁפֵט הָרֹאשׁ בְּאֶרֶץ עַמּוֹנִיחָה וְרַבִּים מִמּוֹרֵיהֶם וְדַיָּנֵיהֶם אֶל־הַכֶּלֶא אֲשֶׁר הָיוּ אַלְמָא וַאֲמוּלֵק אֲסוּרִים בַּעֲבֹתוֹת׃",
+  "hebrew": "וַיְהִי אַחֲרֵי עָנְיָם כָּכָה יָמִים רַבִּים וַיְהִי בַּיּוֹם הַשְּׁנֵים עָשָׂר בַּחֹדֶשׁ הָעֲשִׂירִי בִּשְׁנַת עֶשֶׂר לְמַלְכוּת הַשֹּׁפְטִים עַל־עַם נֶפִי וַיָּבֹא שֹׁפֵט הָרֹאשׁ בְּאֶרֶץ עַמּוֹנִיחָה וְרַבִּים מִמּוֹרֵיהֶם וְדַיָּנֵיהֶם אֶל־הַכֶּלֶא אֲשֶׁר הָיוּ אַלְמָא וַעֲמוּלֶק אֲסוּרִים בַּעֲבֹתוֹת׃",
   "english": "And it came to pass after they had thus suffered for many days, (and it was on the twelfth day, in the tenth month, in the tenth year of the reign of the judges over the people of Nephi) that the chief judge over the land of Ammonihah and many of their teachers and their lawyers went in unto the prison where Alma and Amulek were bound with cords."
  },
  {
@@ -20485,7 +20485,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 14,
   "verse": 25,
-  "hebrew": "וַיְהִי כִּי יָצְאוּ כֻלָּם וַיַּכּוּם אֹמְרִים הַדְּבָרִים הָאֵלֶּה עַד הָאַחֲרוֹן וַיְהִי כַּאֲשֶׁר דִּבֶּר הָאַחֲרוֹן אֲלֵיהֶם וַיְהִי כֹחַ אֱלֹהִים עַל־אַלְמָא וַאֲמוּלֵק וַיָּקוּמוּ וַיַּעַמְדוּ עַל־רַגְלֵיהֶם׃",
+  "hebrew": "וַיְהִי כִּי יָצְאוּ כֻלָּם וַיַּכּוּם אֹמְרִים הַדְּבָרִים הָאֵלֶּה עַד הָאַחֲרוֹן וַיְהִי כַּאֲשֶׁר דִּבֶּר הָאַחֲרוֹן אֲלֵיהֶם וַיְהִי כֹחַ אֱלֹהִים עַל־אַלְמָא וַעֲמוּלֶק וַיָּקוּמוּ וַיַּעַמְדוּ עַל־רַגְלֵיהֶם׃",
   "english": "And it came to pass that they all went forth and smote them, saying the same words, even until the last; and when the last had spoken unto them the power of God was upon Alma and Amulek, and they rose and stood upon their feet."
  },
  {
@@ -20499,42 +20499,42 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 14,
   "verse": 27,
-  "hebrew": "וַיְהִי כִּי גָדְלָה אֵימָתָם עַד־מְאֹד וַיִּפְּלוּ אָרְצָה וְלֹא הִגִּיעוּ אֶל־פֶּתַח הַכֶּלֶא הַחִיצוֹן וַתִּרְעַשׁ הָאָרֶץ בְּחָזְקָה וַיִּבָּקְעוּ קִירוֹת הַכֶּלֶא לִשְׁנַיִם וַיִּפְּלוּ אָרְצָה וְשֹׁפֵט הָרֹאשׁ וְהַדַּיָּנִים וְהַכֹּהֲנִים וְהַמּוֹרִים אֲשֶׁר הִכּוּ אֶת־אַלְמָא וַאֲמוּלֵק נֶהֶרְגוּ בְּנִפְלָם׃",
+  "hebrew": "וַיְהִי כִּי גָדְלָה אֵימָתָם עַד־מְאֹד וַיִּפְּלוּ אָרְצָה וְלֹא הִגִּיעוּ אֶל־פֶּתַח הַכֶּלֶא הַחִיצוֹן וַתִּרְעַשׁ הָאָרֶץ בְּחָזְקָה וַיִּבָּקְעוּ קִירוֹת הַכֶּלֶא לִשְׁנַיִם וַיִּפְּלוּ אָרְצָה וְשֹׁפֵט הָרֹאשׁ וְהַדַּיָּנִים וְהַכֹּהֲנִים וְהַמּוֹרִים אֲשֶׁר הִכּוּ אֶת־אַלְמָא וַעֲמוּלֶק נֶהֶרְגוּ בְּנִפְלָם׃",
   "english": "And it came to pass that so great was their fear that they fell to the earth, and did not obtain the outer door of the prison; and the earth shook mightily, and the walls of the prison were rent in twain, so that they fell to the earth; and the chief judge, and the lawyers, and priests, and teachers, who smote upon Alma and Amulek, were slain by the fall thereof."
  },
  {
   "book": "Alma",
   "chapter": 14,
   "verse": 28,
-  "hebrew": "וַיֵּצְאוּ אַלְמָא וַאֲמוּלֵק מִן־הַכֶּלֶא וְלֹא־נִזּוֹקוּ כִּי נָתַן יְהוָה לָהֶם כֹּחַ כְּאֱמוּנָתָם בַּמָּשִׁיחַ וַיֵּצְאוּ מִיָּד מִן־הַכֶּלֶא וַיֻּתְּרוּ מֵאֲסוּרֵיהֶם וְהַכֶּלֶא נָפַל אָרְצָה וְכׇל־נֶפֶשׁ בְּתוֹךְ קִירוֹתָיו מֵתָה זוּלַת אַלְמָא וַאֲמוּלֵק וַיֵּצְאוּ מִיָּד אֶל־הָעִיר׃",
+  "hebrew": "וַיֵּצְאוּ אַלְמָא וַעֲמוּלֶק מִן־הַכֶּלֶא וְלֹא־נִזּוֹקוּ כִּי נָתַן יְהוָה לָהֶם כֹּחַ כְּאֱמוּנָתָם בַּמָּשִׁיחַ וַיֵּצְאוּ מִיָּד מִן־הַכֶּלֶא וַיֻּתְּרוּ מֵאֲסוּרֵיהֶם וְהַכֶּלֶא נָפַל אָרְצָה וְכׇל־נֶפֶשׁ בְּתוֹךְ קִירוֹתָיו מֵתָה זוּלַת אַלְמָא וַעֲמוּלֶק וַיֵּצְאוּ מִיָּד אֶל־הָעִיר׃",
   "english": "And Alma and Amulek came forth out of the prison, and they were not hurt; for the Lord had granted unto them power, according to their faith which was in Christ. And they straightway came forth out of the prison; and they were loosed from their bands; and the prison had fallen to the earth, and every soul within the walls thereof, save it were Alma and Amulek, was slain; and they straightway came forth into the city."
  },
  {
   "book": "Alma",
   "chapter": 14,
   "verse": 29,
-  "hebrew": "וַיְהִי כִּשְׁמֹעַ הָעָם קוֹל גָּדוֹל וַיָּרוּצוּ בַּהֲמוֹנִים לָדַעַת מַה־זֹּאת וַיְהִי כִּרְאוֹתָם אֶת־אַלְמָא וַאֲמוּלֵק יֹצְאִים מִן־הַכֶּלֶא וְקִירוֹתָיו נָפְלוּ אָרְצָה וַתִּפֹּל עֲלֵיהֶם אֵימָה גְדוֹלָה וַיָּנוּסוּ מִלִּפְנֵי אַלְמָא וַאֲמוּלֵק כַּאֲשֶׁר תָּנוּס עֵז עִם־בְּנֵיהָ מִפְּנֵי שְׁנֵי אֲרָיוֹת וְכָכָה נָסוּ מִלִּפְנֵי אַלְמָא וַאֲמוּלֵק׃",
+  "hebrew": "וַיְהִי כִּשְׁמֹעַ הָעָם קוֹל גָּדוֹל וַיָּרוּצוּ בַּהֲמוֹנִים לָדַעַת מַה־זֹּאת וַיְהִי כִּרְאוֹתָם אֶת־אַלְמָא וַעֲמוּלֶק יֹצְאִים מִן־הַכֶּלֶא וְקִירוֹתָיו נָפְלוּ אָרְצָה וַתִּפֹּל עֲלֵיהֶם אֵימָה גְדוֹלָה וַיָּנוּסוּ מִלִּפְנֵי אַלְמָא וַעֲמוּלֶק כַּאֲשֶׁר תָּנוּס עֵז עִם־בְּנֵיהָ מִפְּנֵי שְׁנֵי אֲרָיוֹת וְכָכָה נָסוּ מִלִּפְנֵי אַלְמָא וַעֲמוּלֶק׃",
   "english": "Now the people having heard a great noise came running together by multitudes to know the cause of it; and when they saw Alma and Amulek coming forth out of the prison, and the walls thereof had fallen to the earth, they were struck with great fear, and fled from the presence of Alma and Amulek even as a goat fleeth with her young from two lions; and thus they did flee from the presence of Alma and Amulek."
  },
  {
   "book": "Alma",
   "chapter": 15,
   "verse": 1,
-  "hebrew": "וַיְצֻוּוּ אַלְמָא וַאֲמוּלֵק לָצֵאת מִן־הָעִיר הַהִיא וַיֵּצְאוּ וַיָּבֹאוּ אֶל־אֶרֶץ סִידוֹם וְהִנֵּה מָצְאוּ שָׁם אֶת־ כָּל־הָעָם אֲשֶׁר יָצְאוּ מֵאֶרֶץ עַמּוֹנִיחָה אֲשֶׁר גֹּרְשׁוּ וְנִרְגְּמוּ בָּאֲבָנִים כִּי הֶאֱמִינוּ בְּדִבְרֵי אַלְמָא׃",
+  "hebrew": "וַיְצֻוּוּ אַלְמָא וַעֲמוּלֶק לָצֵאת מִן־הָעִיר הַהִיא וַיֵּצְאוּ וַיָּבֹאוּ אֶל־אֶרֶץ סִידוֹם וְהִנֵּה מָצְאוּ שָׁם אֶת־ כָּל־הָעָם אֲשֶׁר יָצְאוּ מֵאֶרֶץ עַמּוֹנִיחָה אֲשֶׁר גֹּרְשׁוּ וְנִרְגְּמוּ בָּאֲבָנִים כִּי הֶאֱמִינוּ בְּדִבְרֵי אַלְמָא׃",
   "english": "And it came to pass that Alma and Amulek were commanded to depart out of that city; and they departed, and came out even into the land  of Sidom; and behold, there they found all the people who had departed out of the land of Ammonihah, who had been cast out and stoned, because they believed in the words of Alma."
  },
  {
   "book": "Alma",
   "chapter": 15,
   "verse": 2,
-  "hebrew": "וַיְסַפְּרוּ לָהֶם אֵת כָּל־אֲשֶׁר קָרָה לִנְשֵׁיהֶם וּלְיַלְדֵיהֶם וְגַם עַל־אוֹדֹתָם וְעַל־כֹּחַ הַצָּלָתָם׃",
+  "hebrew": "וַיְסַפְּרוּ לָהֶם אֶת־כָּל־אֲשֶׁר קָרָה לִנְשֵׁיהֶם וּלְיַלְדֵיהֶם וְגַם עַל־אוֹדֹתָם וְעַל־כֹּחַ הַצָּלָתָם׃",
   "english": "And they related unto them all that had happened unto their wives and children, and also concerning themselves, and of their power of deliverance."
  },
  {
   "book": "Alma",
   "chapter": 15,
   "verse": 3,
-  "hebrew": "וְגַם זִיזְרוֹם שָׁכַב חוֹלֶה בְּסִידוֹם בְּקַדַּחַת בּוֹעֶרֶת מִצָּרוֹת נַפְשׁוֹ הַגְּדוֹלוֹת עַל־רִשְׁעָתוֹ כִּי חָשַׁב כִּי אַלְמָא וַאֲמוּלֵק אֵינָם עוֹד וַיַּחְשֹׁב כִּי הוּמְתוּ בַּעֲוֺנוֹ וְהַחֵטְא הַגָּדוֹל הַזֶּה וַחֲטָאָיו הָרַבִּים הָאֲחֵרִים הֵצֵרוּ אֶת־נַפְשׁוֹ עַד אֲשֶׁר הָיְתָה כּוֹאֶבֶת מְאֹד בְּאֵין מוֹצָא לָכֵן הֵחֵל לְהִצָּרֵב בְּחֹם בּוֹעֵר׃",
+  "hebrew": "וְגַם זִיזְרוֹם שָׁכַב חוֹלֶה בְּסִידוֹם בְּקַדַּחַת בּוֹעֶרֶת מִצָּרוֹת נַפְשׁוֹ הַגְּדוֹלוֹת עַל־רִשְׁעָתוֹ כִּי חָשַׁב כִּי אַלְמָא וַעֲמוּלֶק אֵינָם עוֹד וַיַּחְשֹׁב כִּי הוּמְתוּ בַּעֲוֹנוֹ וְהַחֵטְא הַגָּדוֹל הַזֶּה וַחֲטָאָיו הָרַבִּים הָאֲחֵרִים הֵצֵרוּ אֶת־נַפְשׁוֹ עַד אֲשֶׁר הָיְתָה כּוֹאֶבֶת מְאֹד בְּאֵין מוֹצָא לָכֵן הֵחֵל לְהִצָּרֵב בְּחֹם בּוֹעֵר׃",
   "english": "And also Zeezrom lay sick at Sidom, with a burning fever, which was caused by the great tribulations of his mind on account of his wickedness, for he supposed that Alma and Amulek were no more; and he supposed that they had been slain because of his iniquity. And this great sin, and his many other sins, did harrow up his mind until it did become exceedingly sore, having no deliverance; therefore he began to be scorched with a burning heat."
  },
  {
@@ -20548,7 +20548,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 15,
   "verse": 5,
-  "hebrew": "וַיֵּלְכוּ מִיָּד וַיִּשְׁמְעוּ לַמַּלְאָךְ אֲשֶׁר שָׁלַח אֲלֵיהֶם וַיָּבֹאוּ הַבַּיְתָה אֶל־זִיזְרוֹם וַיִּמְצְאֻהוּ שֹׁכֵב עַל־מִטָּתוֹ חוֹלֶה מְאֹד בְּקַדַּחַת בּוֹעֶרֶת וְגַם נַפְשׁוֹ כּוֹאֶבֶת מְאֹד בַּעֲוֺנוֹתָיו וַיְהִי כִּרְאוֹתוֹ אוֹתָם וַיִּשְׁלַח יָדוֹ וַיִּתְחַנֵּן אֲלֵיהֶם כִּי יְרַפְּאוּהוּ׃",
+  "hebrew": "וַיֵּלְכוּ מִיָּד וַיִּשְׁמְעוּ לַמַּלְאָךְ אֲשֶׁר שָׁלַח אֲלֵיהֶם וַיָּבֹאוּ הַבַּיְתָה אֶל־זִיזְרוֹם וַיִּמְצְאֻהוּ שֹׁכֵב עַל־מִטָּתוֹ חוֹלֶה מְאֹד בְּקַדַּחַת בּוֹעֶרֶת וְגַם נַפְשׁוֹ כּוֹאֶבֶת מְאֹד בַּעֲוֹנוֹתָיו וַיְהִי כִּרְאוֹתוֹ אוֹתָם וַיִּשְׁלַח יָדוֹ וַיִּתְחַנֵּן אֲלֵיהֶם כִּי יְרַפְּאוּהוּ׃",
   "english": "And it came to pass that they went immediately, obeying the message which he had sent unto them; and they went in unto the house unto Zeezrom; and they found him upon his bed, sick, being very low with a burning fever; and his mind also was exceedingly sore because of his iniquities; and when he saw them he stretched forth his hand, and besought them that they would heal him."
  },
  {
@@ -20618,14 +20618,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 15,
   "verse": 15,
-  "hebrew": "אַךְ הָעָם אֲשֶׁר בְּאֶרֶץ עַמּוֹנִיחָה נִשְׁאֲרוּ עַם־קְשֵׁי לֵב וּקְשֵׁי עֹרֶף וְלֹא שָׁבוּ מֵחַטֹּאתֵיהֶם וַיְיַחֲסוּ אֶת־כָּל־כֹּחַ אַלְמָא וַאֲמוּלֵק לַשָּׂטָן כִּי הָיוּ מִכַּת נְחוֹר וְלֹא הֶאֱמִינוּ בִּתְשׁוּבַת חַטֹּאתֵיהֶם׃",
+  "hebrew": "אַךְ הָעָם אֲשֶׁר בְּאֶרֶץ עַמּוֹנִיחָה נִשְׁאֲרוּ עַם־קְשֵׁי לֵב וּקְשֵׁי עֹרֶף וְלֹא שָׁבוּ מֵחַטֹּאתֵיהֶם וַיְיַחֲסוּ אֶת־כָּל־כֹּחַ אַלְמָא וַעֲמוּלֶק לַשָּׂטָן כִּי הָיוּ מִכַּת נִחוֹר וְלֹא הֶאֱמִינוּ בִּתְשׁוּבַת חַטֹּאתֵיהֶם׃",
   "english": "But as to the people that were in the land of Ammonihah, they yet remained a hard– hearted and a stiffnecked people; and they repented not of their sins, ascribing all the power of Alma and Amulek to the devil; for they were of the profession of Nehor, and did not believe in the repentance of their sins."
  },
  {
   "book": "Alma",
   "chapter": 15,
   "verse": 16,
-  "hebrew": "וַיְהִי אַלְמָא וַאֲמוּלֵק וַאֲמוּלֵק עָזַב אֶת־כָּל־זְהָבוֹ וְכַסְפּוֹ וּכְלֵי חֶמְדָּתוֹ אֲשֶׁר בְּאֶרֶץ עַמּוֹנִיחָה בַּעֲבוּר דְּבַר־יְהוָה וַיִּמָּאֵס בְּעֵינֵי אֲשֶׁר הָיוּ לְפָנִים אוֹהֲבָיו וְגַם בְּעֵינֵי אָבִיו וּמִשְׁפַּחְתּוֹ׃",
+  "hebrew": "וַיְהִי אַלְמָא וַעֲמוּלֶק וַעֲמוּלֶק עָזַב אֶת־כָּל־זְהָבוֹ וְכַסְפּוֹ וּכְלֵי חֶמְדָּתוֹ אֲשֶׁר בְּאֶרֶץ עַמּוֹנִיחָה בַּעֲבוּר דְּבַר־יְהוָה וַיִּמָּאֵס בְּעֵינֵי אֲשֶׁר הָיוּ לְפָנִים אוֹהֲבָיו וְגַם בְּעֵינֵי אָבִיו וּמִשְׁפַּחְתּוֹ׃",
   "english": "And it came to pass that Alma and Amulek, Amulek having forsaken all his gold, and silver, and his precious things, which were in the land of Ammonihah, for the word of God, he being rejected by those who were once his friends and also by his father and his kindred;"
  },
  {
@@ -20639,7 +20639,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 15,
   "verse": 18,
-  "hebrew": "וְעַתָּה כַּאֲשֶׁר אָמַרְתִּי בִּרְאוֹת אַלְמָא אֶת־כָּל־הַדְּבָרִים הָאֵלֶּה לָכֵן לָקַח אֶת־אֲמוּלֵק וַיָּבֹא אֶל־אֶרֶץ זָרַהֶמְלָה וַיְבִיאֵהוּ אֶל־בֵּיתוֹ וַיְשָׁרֵת אוֹתוֹ בְּצָרוֹתָיו וַיְחַזְּקֵהוּ בַּיהוָה׃",
+  "hebrew": "וְעַתָּה כַּאֲשֶׁר אָמַרְתִּי בִּרְאוֹת אַלְמָא אֶת־כָּל־הַדְּבָרִים הָאֵלֶּה לָכֵן לָקַח אֶת־עֲמוּלֶק וַיָּבֹא אֶל־אֶרֶץ זָרַחֶמְלָה וַיְבִיאֵהוּ אֶל־בֵּיתוֹ וַיְשָׁרֵת אוֹתוֹ בְּצָרוֹתָיו וַיְחַזְּקֵהוּ בַּיהוָה׃",
   "english": "Now as I said, Alma having seen all these things, therefore he took Amulek and came over to the land of Zarahemla, and took him to his own house, and did administer unto him in his tribulations, and strengthened him in the Lord."
  },
  {
@@ -20653,7 +20653,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 16,
   "verse": 1,
-  "hebrew": "וַיְהִי בַּשָּׁנָה הָאַחַת עֶשְׂרֵה לְמֶמְשֶׁלֶת הַשֹּׁפְטִים עַל־עַם נֶפִי בַּיּוֹם הַחֲמִישִׁי לַחֹדֶשׁ הַשֵּׁנִי וַיְהִי שָׁלוֹם רַב בְּאֶרֶץ זָרַהֶמְלָה וְלֹא הָיוּ מִלְחָמוֹת וּמְרִיבוֹת מִסְפַּר שָׁנִים עַד הַיּוֹם הַחֲמִישִׁי לַחֹדֶשׁ הַשֵּׁנִי בַּשָּׁנָה הָאַחַת עֶשְׂרֵה וַיִּשָּׁמַע קוֹל מִלְחָמָה בְּכָל־הָאָרֶץ׃",
+  "hebrew": "וַיְהִי בַּשָּׁנָה הָאַחַת עֶשְׂרֵה לְמֶמְשֶׁלֶת הַשֹּׁפְטִים עַל־עַם נֶפִי בַּיּוֹם הַחֲמִישִׁי לַחֹדֶשׁ הַשֵּׁנִי וַיְהִי שָׁלוֹם רַב בְּאֶרֶץ זָרַחֶמְלָה וְלֹא הָיוּ מִלְחָמוֹת וּמְרִיבוֹת מִסְפַּר שָׁנִים עַד הַיּוֹם הַחֲמִישִׁי לַחֹדֶשׁ הַשֵּׁנִי בַּשָּׁנָה הָאַחַת עֶשְׂרֵה וַיִּשָּׁמַע קוֹל מִלְחָמָה בְּכָל־הָאָרֶץ׃",
   "english": "And it came to pass in the eleventh year of the reign of the judges over the people of Nephi, on the fifth day of the second month, there having been much peace in the land of Zarahemla, there having been no wars nor contentions for a certain number of years, even until the fifth day of the second month in the eleventh year, there was a cry of war heard throughout the land."
  },
  {
@@ -20723,7 +20723,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 16,
   "verse": 11,
-  "hebrew": "אַךְ אַחֲרֵי יָמִים רַבִּים נֶעֶרְמוּ גוּפוֹתֵיהֶם עַל־פְּנֵי הָאֲדָמָה וַיְכֻסּוּ בְּכִסּוּי קַל וְעַתָּה כֹּה גָדַל רֵיחָם עַד כִּי לֹא־בָא הָעָם לָרֶשֶׁת אֶת־אֶרֶץ עַמּוֹנִיחָה שָׁנִים רַבּוֹת וַתִּקָּרֵא שִׁמְמוֹן נְחוֹרִים כִּי הָיוּ מִכַּת נְחוֹר אֲשֶׁר הוּמְתוּ וְאַדְמוֹתֵיהֶם נִשְׁאֲרוּ שְׁמָמָה׃",
+  "hebrew": "אַךְ אַחֲרֵי יָמִים רַבִּים נֶעֶרְמוּ גוּפוֹתֵיהֶם עַל־פְּנֵי הָאֲדָמָה וַיְכֻסּוּ בְּכִסּוּי קַל וְעַתָּה כֹּה גָדַל רֵיחָם עַד כִּי לֹא־בָא הָעָם לָרֶשֶׁת אֶת־אֶרֶץ עַמּוֹנִיחָה שָׁנִים רַבּוֹת וַתִּקָּרֵא שִׁמְמוֹן נִחוֹרִים כִּי הָיוּ מִכַּת נִחוֹר אֲשֶׁר הוּמְתוּ וְאַדְמוֹתֵיהֶם נִשְׁאֲרוּ שְׁמָמָה׃",
   "english": "Nevertheless, after many days their dead bodies were heaped up upon the face of the earth, and they were covered with a shallow covering. And now so great was the scent thereof that the people did not go in to possess the land of Ammonihah for many years. And it was called Desolation of Nehors; for they were of the profession of Nehor, who were slain; and their lands remained desolate."
  },
  {
@@ -20737,7 +20737,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 16,
   "verse": 13,
-  "hebrew": "וַיֵּצְאוּ אַלְמָא וַאֲמוּלֵק לְהַטִּיף לָשׁוּב לָעָם בְּהֵיכְלֵיהֶם וּבְמִקְדְּשֵׁיהֶם וְגַם בְּבָתֵּי כְנֵסִיּוֹתֵיהֶם אֲשֶׁר נִבְנוּ כְּמִשְׁפַּט הַיְּהוּדִים׃",
+  "hebrew": "וַיֵּצְאוּ אַלְמָא וַעֲמוּלֶק לְהַטִּיף לָשׁוּב לָעָם בְּהֵיכְלֵיהֶם וּבְמִקְדְּשֵׁיהֶם וְגַם בְּבָתֵּי כְנֵסִיּוֹתֵיהֶם אֲשֶׁר נִבְנוּ כְּמִשְׁפַּט הַיְּהוּדִים׃",
   "english": "And Alma and Amulek went forth preaching repentance to the people in their temples, and in their sanctuaries, and also in their synagogues, which were built after the manner of the Jews."
  },
  {
@@ -20751,7 +20751,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 16,
   "verse": 15,
-  "hebrew": "וְכֵן יָצְאוּ אַלְמָא וַאֲמוּלֵק וְגַם רַבִּים אֲחֵרִים אֲשֶׁר נִבְחֲרוּ לַמְּלָאכָה לְהַטִּיף אֶת־הַדָּבָר בְּכָל־הָאָרֶץ וַיְהִי יִסּוּד הַקְּהִלָּה כְּלָלִי בְּכָל־הָאָרֶץ בְּכָל־הַכִּכָּר מִסָּבִיב בְּקֶרֶב כָּל־עַם הַנֶּפִיִּים ׃ וְלֹא־הָיָה הֶבְדֵּל בֵּינֵיהֶם וַיִּשְׁפֹּךְ",
+  "hebrew": "וְכֵן יָצְאוּ אַלְמָא וַעֲמוּלֶק וְגַם רַבִּים אֲחֵרִים אֲשֶׁר נִבְחֲרוּ לַמְּלָאכָה לְהַטִּיף אֶת־הַדָּבָר בְּכָל־הָאָרֶץ וַיְהִי יִסּוּד הַקְּהִלָּה כְּלָלִי בְּכָל־הָאָרֶץ בְּכָל־הַכִּכָּר מִסָּבִיב בְּקֶרֶב כָּל־עַם הַנֶּפִיִּים ׃ וְלֹא־הָיָה הֶבְדֵּל בֵּינֵיהֶם וַיִּשְׁפֹּךְ",
   "english": "And thus did Alma and Amulek go forth, and also many more who had been chosen for the work, to preach the word throughout all the land. And the establishment of the church became general throughout the land, in all the region round about, among all the people of the Nephites."
  },
  {
@@ -20800,7 +20800,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 17,
   "verse": 1,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר נָסַע אַלְמָא מֵאֶרֶץ גִּדְעוֹן נֶגְבָּה לָלֶכֶת אֶל־אֶרֶץ מַנְטִי וְהִנֵּה לְתִמָּהוֹנוֹ פָּגַע בִּבְנֵי מוֹשִׁיָּה נוֹסְעִים לְאֶרֶץ זָרַהֶמְלָה׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר נָסַע אַלְמָא מֵאֶרֶץ גִּדְעוֹן נֶגְבָּה לָלֶכֶת אֶל־אֶרֶץ מַנְטִי וְהִנֵּה לְתִמָּהוֹנוֹ פָּגַע בִּבְנֵי מוֹשִׁיָּה נוֹסְעִים לְאֶרֶץ זָרַחֶמְלָה׃",
   "english": "And now it came to pass that as Alma was journeying from the land of Gideon southward, away to the land of Manti, behold, to his astonishment, he met with the sons of Mosiah journeying towards the land of Zarahemla."
  },
  {
@@ -20842,7 +20842,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 17,
   "verse": 7,
-  "hebrew": "וַיֵּצְאוּ מֵאֶרֶץ זָרַהֶמְלָה וַיִּקְחוּ אֶת־חַרְבוֹתֵיהֶם וַחֲנִיתוֹתֵיהֶם וְקַשְׁתוֹתֵיהֶם וְחִצֵּיהֶם וְקַלָּעוֹתֵיהֶם וְזֹאת עָשׂוּ לְמַעַן יָכִינוּ לָהֶם אֹכֶל בַּמִּדְבָּר׃",
+  "hebrew": "וַיֵּצְאוּ מֵאֶרֶץ זָרַחֶמְלָה וַיִּקְחוּ אֶת־חַרְבוֹתֵיהֶם וַחֲנִיתוֹתֵיהֶם וְקַשְׁתוֹתֵיהֶם וְחִצֵּיהֶם וְקַלָּעוֹתֵיהֶם וְזֹאת עָשׂוּ לְמַעַן יָכִינוּ לָהֶם אֹכֶל בַּמִּדְבָּר׃",
   "english": "Nevertheless they departed out of the land of Zarahemla, and took their swords, and their spears, and their bows, and their arrows, and their slings; and this they did that they might provide food for themselves while in the wilderness."
  },
  {
@@ -21080,28 +21080,28 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 18,
   "verse": 2,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר הֵעִידוּ כֻּלָּם עַל־הַדְּבָרִים אֲשֶׁר רָאוּ וַיִּוָּדַע לוֹ אֱמוּנַת עַמּוֹן בִּשְׁמִירַת צֹאנוֹ וְגַם־כֹּחוֹ הַגָּדוֹל בְּהִלָּחֲמוֹ בַּמְבַקְשִׁים לַהֲרֹג אוֹתוֹ וַיִּתְמַהּ מְאֹד וַיֹּאמַר אָכֵן זֶה יוֹתֵר מֵאָדָם הֲלֹא זֶה הָרוּחַ הַגְּדוֹלָה הַשֹּׁלֵחַ עֳנָשִׁים גְּדוֹלִים כָּאֵלֶּה עַל־הָעָם הַזֶּה עַל־רְצִיחוֹתֵיהֶם׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר הֵעִידוּ כֻּלָּם עַל־הַדְּבָרִים אֲשֶׁר רָאוּ וַיִּוָּדַע לוֹ אֱמוּנַת עַמּוֹן בִּשְׁמִירַת צֹאנוֹ וְגַם־כֹּחוֹ הַגָּדוֹל בְּהִלָּחֲמוֹ בַּמְבַקְשִׁים לַהֲרֹג אוֹתוֹ וַיִּתְמַהּ מְאֹד וַיֹּאמַר אָכֵן זֶה יוֹתֵר מֵאָדָם הֲלֹא זֶה הָרוּחַ הַגָּדוֹל הַשֹּׁלֵחַ עֳנָשִׁים גְּדוֹלִים כָּאֵלֶּה עַל־הָעָם הַזֶּה עַל־רְצִיחוֹתֵיהֶם׃",
   "english": "And when they had all testified to the things which they had seen, and he had learned of the faithfulness of Ammon in preserving his flocks, and also of his great power in contending against those who sought to slay him, he was astonished exceedingly, and said: Surely, this is more than a man. Behold, is not this the Great Spirit who doth send such great punishments upon this people, because of their murders?"
  },
  {
   "book": "Alma",
   "chapter": 18,
   "verse": 3,
-  "hebrew": "וַיַּעֲנוּ אֶת־הַמֶּלֶךְ וַיֹּאמְרוּ אִם־הָרוּחַ הַגְּדוֹלָה הוּא אִם־אָדָם לֹא יָדַעְנוּ אַךְ זֹאת יָדַעְנוּ כִּי לֹא יוּכְלוּ אוֹיְבֵי הַמֶּלֶךְ לַהֲרֹג אוֹתוֹ וְגַם לֹא יוּכְלוּ לְהָפִיץ אֶת־צֹאן הַמֶּלֶךְ בִּהְיוֹתוֹ עִמָּנוּ כִּי מָהִיר הוּא וְכֹחוֹ גָּדוֹל לָכֵן יָדַעְנוּ כִּי אֹהֵב הַמֶּלֶךְ הוּא וְעַתָּה הַמֶּלֶךְ לֹא נַאֲמִין כִּי יֵשׁ לְאָדָם כֹּחַ גָּדוֹל כָּזֶה כִּי יָדַעְנוּ כִּי לֹא יוּכַל לְהֵהָרֵג׃",
+  "hebrew": "וַיַּעֲנוּ אֶת־הַמֶּלֶךְ וַיֹּאמְרוּ אִם־הָרוּחַ הַגָּדוֹל הוּא אִם־אָדָם לֹא יָדַעְנוּ אַךְ זֹאת יָדַעְנוּ כִּי לֹא יוּכְלוּ אוֹיְבֵי הַמֶּלֶךְ לַהֲרֹג אוֹתוֹ וְגַם לֹא יוּכְלוּ לְהָפִיץ אֶת־צֹאן הַמֶּלֶךְ בִּהְיוֹתוֹ עִמָּנוּ כִּי מָהִיר הוּא וְכֹחוֹ גָּדוֹל לָכֵן יָדַעְנוּ כִּי אֹהֵב הַמֶּלֶךְ הוּא וְעַתָּה הַמֶּלֶךְ לֹא נַאֲמִין כִּי יֵשׁ לְאָדָם כֹּחַ גָּדוֹל כָּזֶה כִּי יָדַעְנוּ כִּי לֹא יוּכַל לְהֵהָרֵג׃",
   "english": "And they answered the king, and said: Whether he be the Great Spirit or a man, we know not; but this much we do know, that he cannot be slain by the enemies of the king; neither can they scatter the king's flocks when he is with us, because of his expertness and great strength; therefore, we know that he is a friend to the king. And now, O king, we do not believe that a man has such great power, for we know he cannot be slain."
  },
  {
   "book": "Alma",
   "chapter": 18,
   "verse": 4,
-  "hebrew": "וַיְהִי כִּשְׁמֹעַ הַמֶּלֶךְ אֶת־הַדְּבָרִים הָאֵלֶּה וַיֹּאמֶר אֲלֵיהֶם עַתָּה יָדַעְתִּי כִּי הָרוּחַ הַגְּדוֹלָה הוּא וְיָרַד בָּעֵת הַזֹּאת לְהַצִּיל אֶת־נַפְשׁוֹתֵיכֶם לְבִלְתִּי אֲמִיתְכֶם כַּאֲשֶׁר הֵמַתִּי אֶת־אֲחֵיכֶם זֹאת הִיא הָרוּחַ הַגְּדוֹלָה אֲשֶׁר דִּבְּרוּ עָלֶיהָ אֲבוֹתֵינוּ׃",
+  "hebrew": "וַיְהִי כִּשְׁמֹעַ הַמֶּלֶךְ אֶת־הַדְּבָרִים הָאֵלֶּה וַיֹּאמֶר אֲלֵיהֶם עַתָּה יָדַעְתִּי כִּי הָרוּחַ הַגָּדוֹל הוּא וְיָרַד בָּעֵת הַזֹּאת לְהַצִּיל אֶת־נַפְשׁוֹתֵיכֶם לְבִלְתִּי אֲמִיתְכֶם כַּאֲשֶׁר הֵמַתִּי אֶת־אֲחֵיכֶם זֹאת הִיא הָרוּחַ הַגָּדוֹל אֲשֶׁר דִּבְּרוּ עָלֶיהָ אֲבוֹתֵינוּ׃",
   "english": "And now, when the king heard these words, he said unto them: Now I know that it is the Great Spirit; and he has come down at this time to preserve your lives, that I might not slay you as I did your brethren. Now this is the Great Spirit of whom our fathers have spoken."
  },
  {
   "book": "Alma",
   "chapter": 18,
   "verse": 5,
-  "hebrew": "וְזֹאת תּוֹרַת לָמוֹנִי אֲשֶׁר קִבֵּל מֵאָבִיו כִּי יֵשׁ רוּחַ גְּדוֹלָה וְאַף כִּי הֶאֱמִינוּ בָּרוּחַ הַגְּדוֹלָה חָשְׁבוּ כִּי כָל־אֲשֶׁר יַעֲשׂוּ נָכוֹן וַיָּחֶל לָמוֹנִי לִירֹא מְאֹד פֶּן־חָטָא בַּהֲרִיגַת עֲבָדָיו׃",
+  "hebrew": "וְזֹאת תּוֹרַת לָמוֹנִי אֲשֶׁר קִבֵּל מֵאָבִיו כִּי יֵשׁ רוּחַ גָּדוֹל וְאַף כִּי הֶאֱמִינוּ בָּרוּחַ הַגָּדוֹל חָשְׁבוּ כִּי כָל־אֲשֶׁר יַעֲשׂוּ נָכוֹן וַיָּחֶל לָמוֹנִי לִירֹא מְאֹד פֶּן־חָטָא בַּהֲרִיגַת עֲבָדָיו׃",
   "english": "Now this was the tradition of Lamoni, which he had received from his father, that there was a Great Spirit. Notwithstanding they believed in a Great Spirit they supposed that whatso– ever they did was right; nevertheless, Lamoni began to fear exceedingly, with fear lest he had done wrong in slaying his servants;"
  },
  {
@@ -21136,14 +21136,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 18,
   "verse": 10,
-  "hebrew": "וַיְהִי כִּשְׁמֹעַ הַמֶּלֶךְ לָמוֹנִי כִּי־עַמּוֹן מֵכִין אֶת־סוּסָיו וּמַרְכְּבוֹתָיו וַיּוֹסֶף לְהִתְפַּלֵּא עַל־אֱמוּנַת עַמּוֹן לֵאמֹר אָכֵן לֹא־הָיָה עֶבֶד בְּכָל־עֲבָדַי נֶאֱמָן כָּאִישׁ הַזֶּה כִּי זוֹכֵר הוּא אֶת־כָּל־מִצְוֺתַי לַעֲשׂוֹתָן׃",
+  "hebrew": "וַיְהִי כִּשְׁמֹעַ הַמֶּלֶךְ לָמוֹנִי כִּי־עַמּוֹן מֵכִין אֶת־סוּסָיו וּמַרְכְּבוֹתָיו וַיּוֹסֶף לְהִתְפַּלֵּא עַל־אֱמוּנַת עַמּוֹן לֵאמֹר אָכֵן לֹא־הָיָה עֶבֶד בְּכָל־עֲבָדַי נֶאֱמָן כָּאִישׁ הַזֶּה כִּי זוֹכֵר הוּא אֶת־כָּל־מִצְוֹתַי לַעֲשׂוֹתָן׃",
   "english": "Now when king Lamoni heard that Ammon was preparing his horses and his chariots he was more astonished, because of the faithfulness of Ammon, saying: Surely there has not been any servant among all my servants that has been so  faithful as this man; for even he doth remember all my commandments to execute them."
  },
  {
   "book": "Alma",
   "chapter": 18,
   "verse": 11,
-  "hebrew": "וְעַתָּה יָדַעְתִּי אָכֵן כִּי זֶה הָרוּחַ הַגְּדוֹלָה וְחָפַצְתִּי כִּי יָבֹא אֵלַי אַךְ לֹא הֵעַזְתִּי׃",
+  "hebrew": "וְעַתָּה יָדַעְתִּי אָכֵן כִּי זֶה הָרוּחַ הַגָּדוֹל וְחָפַצְתִּי כִּי יָבֹא אֵלַי אַךְ לֹא הֵעַזְתִּי׃",
   "english": "Now I surely know that this is the Great Spirit, and I would desire him that he come in unto me, but I durst not."
  },
  {
@@ -21164,7 +21164,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 18,
   "verse": 14,
-  "hebrew": "וַיִּפֶן עַמּוֹן אֶל־הַמֶּלֶךְ וַיֹּאמֶר אֵלָיו מַה־תַּחְפֹּץ כִּי אֶעֱשֶׂה לְּךָ הַמֶּלֶךְ וְלֹא־עָנָהוּ הַמֶּלֶךְ כִּמְלֹא שָׁעָה לְפִי זְמַנָּם כִּי לֹא יָדַע מַה־יֹּאמַר אֵלָיו׃",
+  "hebrew": "וַיִּפֶן עַמּוֹן אֶל־הַמֶּלֶךְ וַיֹּאמֶר אֵלָיו מַה־תַּחְפֹּץ כִּי אֶעֱשֶׂה לְךָ הַמֶּלֶךְ וְלֹא־עָנָהוּ הַמֶּלֶךְ כִּמְלֹא שָׁעָה לְפִי זְמַנָּם כִּי לֹא יָדַע מַה־יֹּאמַר אֵלָיו׃",
   "english": "Therefore Ammon turned himself unto the king, and said unto him: What wilt thou that I should do for thee, O king? And the king answered him not for the space of an hour, according to their time, for he knew not what he should say unto him."
  },
  {
@@ -21192,7 +21192,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 18,
   "verse": 18,
-  "hebrew": "וַיְהִי כִּשְׁמֹעַ הַמֶּלֶךְ אֶת־הַדְּבָרִים הָאֵלֶּה וַיּוֹסֶף לְהִתְפַּלֵּא כִּי רָאָה כִּי יָכֹל עַמּוֹן לְהָבִין מַחְשְׁבוֹתָיו וְאַף־עַל־פִּי־כֵן פָּתַח הַמֶּלֶךְ לָמוֹנִי אֶת־פִּיו וַיֹּאמֶר אֵלָיו מִי אָתָּה הַאַתָּה הָרוּחַ הַגְּדוֹלָה הַיּוֹדֵעַ כָּל־דָּבָר׃",
+  "hebrew": "וַיְהִי כִּשְׁמֹעַ הַמֶּלֶךְ אֶת־הַדְּבָרִים הָאֵלֶּה וַיּוֹסֶף לְהִתְפַּלֵּא כִּי רָאָה כִּי יָכֹל עַמּוֹן לְהָבִין מַחְשְׁבוֹתָיו וְאַף־עַל־פִּי־כֵן פָּתַח הַמֶּלֶךְ לָמוֹנִי אֶת־פִּיו וַיֹּאמֶר אֵלָיו מִי אָתָּה הַאַתָּה הָרוּחַ הַגָּדוֹל הַיּוֹדֵעַ כָּל־דָּבָר׃",
   "english": "Now when the king had heard these words, he marveled again, for he beheld that Ammon could discern his thoughts; but notwithstanding this, king Lamoni did open his mouth, and said unto him: Who art thou? Art thou that Great Spirit, who knows all things?"
  },
  {
@@ -21248,7 +21248,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 18,
   "verse": 26,
-  "hebrew": "וַיֹּאמֶר עַמּוֹן הֲתַאֲמִין כִּי יֵשׁ רוּחַ גְּדוֹלָה׃",
+  "hebrew": "וַיֹּאמֶר עַמּוֹן הֲתַאֲמִין כִּי יֵשׁ רוּחַ גָּדוֹל׃",
   "english": "And then Ammon said: Believest thou that there is a Great Spirit?"
  },
  {
@@ -21262,7 +21262,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 18,
   "verse": 28,
-  "hebrew": "וַיֹּאמֶר עַמּוֹן זֶה הוּא הָאֱלֹהִים וַיֹּסֶף עַמּוֹן לֵאמֹר אֵלָיו הֲתַאֲמִין כִּי הָרוּחַ הַגְּדוֹלָה הַזֹּאת אֲשֶׁר הִיא אֱלֹהִים בָּרָא אֶת־כָּל־אֲשֶׁר בַּשָּׁמַיִם וּבָאָרֶץ׃",
+  "hebrew": "וַיֹּאמֶר עַמּוֹן זֶה הוּא הָאֱלֹהִים וַיֹּסֶף עַמּוֹן לֵאמֹר אֵלָיו הֲתַאֲמִין כִּי הָרוּחַ הַגָּדוֹל הַזֶּה אֲשֶׁר הִיא אֱלֹהִים בָּרָא אֶת־כָּל־אֲשֶׁר בַּשָּׁמַיִם וּבָאָרֶץ׃",
   "english": "And Ammon said: This is God. And Ammon said unto him again: Believest thou that this Great Spirit, who is God, created all things which are in heaven and in the earth?"
  },
  {
@@ -21458,14 +21458,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 19,
   "verse": 13,
-  "hebrew": "כִּי כַּאֲשֶׁר חַי אַתְּ הִנֵּה רָאִיתִי אֶת־גֹּאֲלִי וְהוּא יֵצֵא וְיִוָּלֵד מֵאִשָּׁה וְיִגְאַל אֶת־כָּל־בְּנֵי הָאָדָם הַמַּאֲמִינִים בִּשְׁמוֹ וַיְהִי כְּאָמְרוֹ אֶת־הַדְּבָרִים הָאֵלֶּה וַיִּרְחַב לְבָבוֹ בְּקִרְבּוֹ וַיִּפֹּל שֵׁנִית מִשִּׂמְחָה וְגַם־הַמַּלְכָּה נָפְלָה כִּי גָבְרָה עָלֶיהָ הָרוּחַ׃",
+  "hebrew": "כִּי כַּאֲשֶׁר חַי אַתְּ הִנֵּה רָאִיתִי אֶת־גֹּאֲלִי וְהוּא יֵצֵא וְיִוָּלֵד מֵאִשָּׁה וְיִגְאַל אֶת־כָּל־בְּנֵי הָאָדָם הַמַּאֲמִינִים בִּשְׁמוֹ וַיְהִי כְּאָמְרוֹ אֶת־הַדְּבָרִים הָאֵלֶּה וַיִּרְחַב לְבָבוֹ בְּקִרְבּוֹ וַיִּפֹּל שֵׁנִית מִשִּׂמְחָה וְגַם־הַמַּלְכָּה נָפְלָה כִּי גָבַר עָלֶיהָ הָרוּחַ׃",
   "english": "For as sure as thou livest, behold, I have seen my Redeemer; and he shall come forth, and be born of a woman, and he shall redeem all mankind who believe on his name. Now, when he had said these words, his heart was swollen within him, and he sunk again with joy; and the queen also sunk down, being overpowered by the Spirit."
  },
  {
   "book": "Alma",
   "chapter": 19,
   "verse": 14,
-  "hebrew": "וַיְהִי כִּרְאוֹת עַמּוֹן אֶת־רוּחַ יְהוָה נִשְׁפֶּכֶת כְּפִי תְפִלָּתוֹ עַל־הַלָּמָנִים אֶחָיו אֲשֶׁר הֵבִיאוּ אֵבֶל רַב בְּקֶרֶב הַנֶּפִיִּים  אוֹ בְּכָל־עַם הָאֱלֹהִים בִּגְלַל עֲוֺנוֹתֵיהֶם וְתוֹרוֹתֵיהֶם וַיִּכְרַע עַל־בִּרְכָּיו וַיָּחֶל לִשְׁפֹּךְ נַפְשׁוֹ בִּתְפִלָּה וּבְהוֹדָיָה לֵאלֹהִים עַל אֲשֶׁר עָשָׂה לְאֶחָיו וְגַם־הוּא נִכְבַּשׁ בְּשִׂמְחָה וְכֵן נָפְלוּ שְׁלָשְׁתָּם אָרְצָה׃",
+  "hebrew": "וַיְהִי כִּרְאוֹת עַמּוֹן אֶת־רוּחַ יְהוָה נִשְׁפָּךְ כְּפִי תְפִלָּתוֹ עַל־הַלָּמָנִים אֶחָיו אֲשֶׁר הֵבִיאוּ אֵבֶל רַב בְּקֶרֶב הַנֶּפִיִּים  אוֹ בְּכָל־עַם הָאֱלֹהִים בִּגְלַל עֲוֹנוֹתֵיהֶם וְתוֹרוֹתֵיהֶם וַיִּכְרַע עַל־בִּרְכָּיו וַיָּחֶל לִשְׁפֹּךְ נַפְשׁוֹ בִּתְפִלָּה וּבְהוֹדָיָה לֵאלֹהִים עַל אֲשֶׁר עָשָׂה לְאֶחָיו וְגַם־הוּא נִכְבַּשׁ בְּשִׂמְחָה וְכֵן נָפְלוּ שְׁלָשְׁתָּם אָרְצָה׃",
   "english": "Now Ammon seeing the Spirit of the Lord poured out according to his prayers upon the Lamanites, his brethren, who had been the cause of so much mourning among the Nephites, or among all the people of God because of their iniquities and their traditions, he fell upon his knees, and began to pour out his soul in prayer and thanksgiving to God for what he had done for his brethren; and he was also overpowered with joy; and thus they all three had sunk to the earth."
  },
  {
@@ -21542,7 +21542,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 19,
   "verse": 25,
-  "hebrew": "וַיְהִי וְרַבִּים מֵהֶם אָמְרוּ כִּי עַמּוֹן הוּא הָרוּחַ הַגְּדוֹלָה וַאֲחֵרִים אָמְרוּ כִּי נִשְׁלַח עַל־יְדֵי הָרוּחַ הַגְּדוֹלָה׃",
+  "hebrew": "וַיְהִי וְרַבִּים מֵהֶם אָמְרוּ כִּי עַמּוֹן הוּא הָרוּחַ הַגָּדוֹל וַאֲחֵרִים אָמְרוּ כִּי נִשְׁלַח עַל־יְדֵי הָרוּחַ הַגָּדוֹל׃",
   "english": "And it came to pass that there were many among them who said that Ammon was the Great Spirit, and others said he was sent by the Great Spirit;"
  },
  {
@@ -21556,7 +21556,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 19,
   "verse": 27,
-  "hebrew": "וְיֵשׁ אֲשֶׁר אָמְרוּ כִּי נִשְׁלַח עַמּוֹן עַל־יְדֵי הָרוּחַ הַגְּדוֹלָה לְיַסְּרָם בַּעֲבוּר עֲוֺנוֹתֵיהֶם וְכִי זֹאת הָרוּחַ הַגְּדוֹלָה אֲשֶׁר תָּמִיד הָיְתָה עִם־הַנֶּפִיִּים וְהִצִּילָה אוֹתָם מִיָּדָם תָּמִיד וַיֹּאמְרוּ כִּי זֹאת הָרוּחַ הַגְּדוֹלָה אֲשֶׁר הִשְׁמִידָה רַבִּים מֵאֲחֵיהֶם הַלָּמָנִים׃",
+  "hebrew": "וְיֵשׁ אֲשֶׁר אָמְרוּ כִּי נִשְׁלַח עַמּוֹן עַל־יְדֵי הָרוּחַ הַגָּדוֹל לְיַסְּרָם בַּעֲבוּר עֲוֹנוֹתֵיהֶם וְכִי זֹאת הָרוּחַ הַגָּדוֹל אֲשֶׁר תָּמִיד הָיָה עִם־הַנֶּפִיִּים וְהִצִּילָה אוֹתָם מִיָּדָם תָּמִיד וַיֹּאמְרוּ כִּי זֹאת הָרוּחַ הַגָּדוֹל אֲשֶׁר הִשְׁמִיד רַבִּים מֵאֲחֵיהֶם הַלָּמָנִים׃",
   "english": "And there were some who said that Ammon was sent by the Great Spirit to afflict them because of their iniquities; and that it was the Great Spirit that had always attended the Nephites, who had ever delivered them out of their hands; and they said that it was this Great Spirit who had destroyed so many of their brethren, the Lamanites."
  },
  {
@@ -21703,7 +21703,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 20,
   "verse": 12,
-  "hebrew": "וַיַּגֶּד־לוֹ גַּם אֵת כָּל־אֲשֶׁר לָמָּה שָׁבַת בְּמַמְלַכְתּוֹ וְכִי לֹא־הָלַךְ אֶל־אָבִיו לַמִּשְׁתֶּה אֲשֶׁר הֵכִין׃",
+  "hebrew": "וַיַּגֶּד־לוֹ גַּם אֶת־כָּל־אֲשֶׁר לָמָּה שָׁבַת בְּמַמְלַכְתּוֹ וְכִי לֹא־הָלַךְ אֶל־אָבִיו לַמִּשְׁתֶּה אֲשֶׁר הֵכִין׃",
   "english": "And he also told him all the cause of his tarrying in his own kingdom, that he did not go  unto his father to the feast which he had prepared."
  },
  {
@@ -21843,7 +21843,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 21,
   "verse": 2,
-  "hebrew": "וְהִנֵּה בָּנוּ הַלָּמָנִים וְהָעֲמָלֵקִים וְעַם עֲמוּלוֹן עִיר גְּדוֹלָה וַיִּקְרְאוּ שְׁמָהּ יְרוּשָׁלַיִם׃",
+  "hebrew": "וְהִנֵּה בָּנוּ הַלָּמָנִים וְהָעֲמָלֵקִים וְעַם עָמוּלוֹן עִיר גְּדוֹלָה וַיִּקְרְאוּ שְׁמָהּ יְרוּשָׁלַיִם׃",
   "english": "Now the Lamanites and the Amalekites and the people of Amulon had built a great city, which was called Jerusalem."
  },
  {
@@ -21857,7 +21857,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 21,
   "verse": 4,
-  "hebrew": "וַיָּבֹא אַהֲרֹן אֶל־עִיר יְרוּשָׁלַיִם וַיָּחֶל לִדְרֹשׁ רִאשׁוֹנָה לָעֲמָלֵקִים וַיָּחֶל לִדְרֹשׁ לָהֶם בְּבָתֵּי מוֹעֲדוֹתֵיהֶם כִּי בָנוּ בָתֵּי מוֹעֵד כְּמִשְׁפַּט הַנְּהוֹרִים כִּי רַבִּים מִן־הָעֲמָלֵקִים וְהָעֲמוּלוֹנִים הָלְכוּ בְּדֶרֶךְ הַנְּהוֹרִים׃",
+  "hebrew": "וַיָּבֹא אַהֲרֹן אֶל־עִיר יְרוּשָׁלַיִם וַיָּחֶל לִדְרֹשׁ רִאשׁוֹנָה לָעֲמָלֵקִים וַיָּחֶל לִדְרֹשׁ לָהֶם בְּבָתֵּי מוֹעֲדוֹתֵיהֶם כִּי בָנוּ בָתֵּי מוֹעֵד כְּמִשְׁפַּט הַנִּחוֹרִים כִּי רַבִּים מִן־הָעֲמָלֵקִים וְהָעֲמוּלוֹנִים הָלְכוּ בְּדֶרֶךְ הַנִּחוֹרִים׃",
   "english": "And it came to pass that Aaron came to the city of Jerusalem, and first began to preach to the Amalekites. And he began to preach to them in their synagogues, for they had built synagogues after the order of the Nehors; for many of the Amalekites and the Amulonites were after the order of the Nehors."
  },
  {
@@ -21990,14 +21990,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 21,
   "verse": 23,
-  "hebrew": "וַיִּדְרֹשׁ עַמּוֹן לְעַם הַמֶּלֶךְ לָמוֹנִי וַיְלַמְּדֵם כָּל־דִּבְרֵי הַצֶּדֶק וַיּוֹכִיחֵם יוֹם יוֹם בְּכָל־חָרִיצוּת וַיַּקְשִׁיבוּ לִדְבָרוֹ וַיִּשְׁקְדוּ לִשְׁמֹר אֶת־מִצְוֺת הָאֱלֹהִים׃",
+  "hebrew": "וַיִּדְרֹשׁ עַמּוֹן לְעַם הַמֶּלֶךְ לָמוֹנִי וַיְלַמְּדֵם כָּל־דִּבְרֵי הַצֶּדֶק וַיּוֹכִיחֵם יוֹם יוֹם בְּכָל־חָרִיצוּת וַיַּקְשִׁיבוּ לִדְבָרוֹ וַיִּשְׁקְדוּ לִשְׁמֹר אֶת־מִצְוֹת הָאֱלֹהִים׃",
   "english": "And Ammon did preach unto the people of king Lamoni; and it came to pass that he did teach them all things concerning things pertaining to righteousness. And he did exhort them daily, with all diligence; and they gave  heed unto his word, and they were zealous for keeping the commandments of God."
  },
  {
   "book": "Alma",
   "chapter": 22,
   "verse": 1,
-  "hebrew": "וְעַתָּה בִּהְיוֹת עַמּוֹן מְלַמֵּד אֶת־עַם לָמוֹנִי תָּמִיד נָשׁוּבָה אֶל־דִּבְרֵי אַהֲרֹן וְאֶחָיו כִּי אַחֲרֵי צֵאתוֹ מֵאֶרֶץ מִדּוֹנִי הוֹבִילָה אוֹתוֹ הָרוּחַ אֶל־אֶרֶץ נֶפִי אֶל־בֵּית הַמֶּלֶךְ הַמֹּשֵׁל בְּכָל־הָאָרֶץ זוּלַת אֶרֶץ יִשְׁמָעֵאל וְהוּא אֲבִי לָמוֹנִי׃",
+  "hebrew": "וְעַתָּה בִּהְיוֹת עַמּוֹן מְלַמֵּד אֶת־עַם לָמוֹנִי תָּמִיד נָשׁוּבָה אֶל־דִּבְרֵי אַהֲרֹן וְאֶחָיו כִּי אַחֲרֵי צֵאתוֹ מֵאֶרֶץ מִדּוֹנִי הוֹבִיל אוֹתוֹ הָרוּחַ אֶל־אֶרֶץ נֶפִי אֶל־בֵּית הַמֶּלֶךְ הַמֹּשֵׁל בְּכָל־הָאָרֶץ זוּלַת אֶרֶץ יִשְׁמָעֵאל וְהוּא אֲבִי לָמוֹנִי׃",
   "english": "Now, as Ammon was thus teaching the people of Lamoni continually, we will return to the account of Aaron and his brethren; for after he departed from the land of Middoni he was led by the Spirit to the land of Nephi, even to the house of the king which was over all the land save it were the land of Ishmael; and he was the father of Lamoni."
  },
  {
@@ -22018,7 +22018,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 22,
   "verse": 4,
-  "hebrew": "וַיֹּאמֶר אַהֲרֹן אֶל־הַמֶּלֶךְ הִנֵּה רוּחַ יְהוָה קְרָאָה לוֹ בְּדֶרֶךְ אַחֶרֶת הָלַךְ לוֹ אֶל־אֶרֶץ יִשְׁמָעֵאל לְלַמֵּד אֶת־עַם לָמוֹנִי׃",
+  "hebrew": "וַיֹּאמֶר אַהֲרֹן אֶל־הַמֶּלֶךְ הִנֵּה רוּחַ יְהוָה קָרָא לוֹ בְּדֶרֶךְ אַחֶרֶת הָלַךְ לוֹ אֶל־אֶרֶץ יִשְׁמָעֵאל לְלַמֵּד אֶת־עַם לָמוֹנִי׃",
   "english": "And Aaron said unto the king: Behold, the Spirit of the Lord has called him another way; he has gone to the land of Ishmael, to teach the people of Lamoni."
  },
  {
@@ -22053,28 +22053,28 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 22,
   "verse": 9,
-  "hebrew": "וַיֹּאמֶר הַמֶּלֶךְ הֲהוּא הָאֱלֹהִים הָרוּחַ הַגְּדוֹלָה אֲשֶׁר הוֹצִיאָה אֶת־אֲבוֹתֵינוּ מֵאֶרֶץ יְרוּשָׁלַיִם׃",
+  "hebrew": "וַיֹּאמֶר הַמֶּלֶךְ הֲהוּא הָאֱלֹהִים הָרוּחַ הַגָּדוֹל אֲשֶׁר הוֹצִיאָה אֶת־אֲבוֹתֵינוּ מֵאֶרֶץ יְרוּשָׁלַיִם׃",
   "english": "And the king said: Is God that Great Spirit that brought our fathers out of the land of Jerusalem?"
  },
  {
   "book": "Alma",
   "chapter": 22,
   "verse": 10,
-  "hebrew": "וַיֹּאמֶר אַהֲרֹן אֵלָיו כֵּן הוּא הָרוּחַ הַגְּדוֹלָה וְהוּא בָּרָא אֶת־כָּל־אֲשֶׁר בַּשָּׁמַיִם וּבָאָרֶץ הֲתַאֲמִין בָּזֹאת׃",
+  "hebrew": "וַיֹּאמֶר אַהֲרֹן אֵלָיו כֵּן הוּא הָרוּחַ הַגָּדוֹל וְהוּא בָּרָא אֶת־כָּל־אֲשֶׁר בַּשָּׁמַיִם וּבָאָרֶץ הֲתַאֲמִין בָּזֹאת׃",
   "english": "And Aaron said unto him: Yea, he is that Great Spirit, and he created all things both in heaven and in earth. Believest thou this?"
  },
  {
   "book": "Alma",
   "chapter": 22,
   "verse": 11,
-  "hebrew": "וַיֹּאמֶר כֵּן מַאֲמִין אֲנִי כִּי הָרוּחַ הַגְּדוֹלָה בָּרְאָה אֶת־כָּל־הַדְּבָרִים וַאֲנִי מְבַקֵּשׁ כִּי תַגִּידוּ לִי אֶת־כָּל־הַדְּבָרִים הָאֵלֶּה וְאַאֲמִין בְּדִבְרֵיכֶם׃",
+  "hebrew": "וַיֹּאמֶר כֵּן מַאֲמִין אֲנִי כִּי הָרוּחַ הַגָּדוֹל בָּרָא אֶת־כָּל־הַדְּבָרִים וַאֲנִי מְבַקֵּשׁ כִּי תַגִּידוּ לִי אֶת־כָּל־הַדְּבָרִים הָאֵלֶּה וְאַאֲמִין בְּדִבְרֵיכֶם׃",
   "english": "And he said: Yea, I believe that the Great Spirit created all things, and I desire that ye should tell me concerning all these things, and I will believe thy words."
  },
  {
   "book": "Alma",
   "chapter": 22,
   "verse": 12,
-  "hebrew": "וַיְהִי כִּרְאוֹת אַהֲרֹן כִּי יַאֲמִין הַמֶּלֶךְ בִּדְבָרָיו וַיָּחֶל מִבְּרִיאַת אָדָם וַיִּקְרָא בַכְּתוּבִים לִפְנֵי הַמֶּלֶךְ אֵיךְ בָּרָא אֱלֹהִים אֶת־הָאָדָם בְּצַלְמוֹ וַיִּתֶּן־לוֹ מִצְוֺת וּבִגְלַל הַמַּעַל נָפַל הָאָדָם׃",
+  "hebrew": "וַיְהִי כִּרְאוֹת אַהֲרֹן כִּי יַאֲמִין הַמֶּלֶךְ בִּדְבָרָיו וַיָּחֶל מִבְּרִיאַת אָדָם וַיִּקְרָא בַכְּתוּבִים לִפְנֵי הַמֶּלֶךְ אֵיךְ בָּרָא אֱלֹהִים אֶת־הָאָדָם בְּצַלְמוֹ וַיִּתֶּן־לוֹ מִצְוֹת וּבִגְלַל הַמַּעַל נָפַל הָאָדָם׃",
   "english": "And it came to pass that when Aaron saw that the king would believe his words, he began from the creation of Adam, reading the scriptures unto the king—how God created man after his own image, and that God gave him commandments, and that because of transgression, man had fallen."
  },
  {
@@ -22123,14 +22123,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 22,
   "verse": 19,
-  "hebrew": "וַיָּרוּצוּ עֲבָדָיו וַיַּגִּידוּ לַמַּלְכָּה אֵת כָּל־אֲשֶׁר קָרָה לַמֶּלֶךְ וַתָּבֹא אֶל־הַמֶּלֶךְ וַתֵּרֶא אוֹתוֹ שֹׁכֵב כְּמוֹ מֵת וְגַם אֶת־אַהֲרֹן וְאֶחָיו עֹמְדִים כְּמַפִּילִים אוֹתוֹ וַתִּקְצֹף עֲלֵיהֶם וַתְּצַו אֶת־עֲבָדֶיהָ אוֹ עַבְדֵי הַמֶּלֶךְ לְתָפְשָׂם וְלַהֲרֹג אוֹתָם׃",
+  "hebrew": "וַיָּרוּצוּ עֲבָדָיו וַיַּגִּידוּ לַמַּלְכָּה אֶת־כָּל־אֲשֶׁר קָרָה לַמֶּלֶךְ וַתָּבֹא אֶל־הַמֶּלֶךְ וַתֵּרֶא אוֹתוֹ שֹׁכֵב כְּמוֹ מֵת וְגַם אֶת־אַהֲרֹן וְאֶחָיו עֹמְדִים כְּמַפִּילִים אוֹתוֹ וַתִּקְצֹף עֲלֵיהֶם וַתְּצַו אֶת־עֲבָדֶיהָ אוֹ עַבְדֵי הַמֶּלֶךְ לְתָפְשָׂם וְלַהֲרֹג אוֹתָם׃",
   "english": "And it came to pass that his servants ran and told the queen all that had happened unto the king. And she came in unto the king; and when she saw him lay as if he were dead, and also Aaron and his brethren standing as though they had been the cause of his fall, she was angry with them, and commanded that her servants, or  the servants of the king, should take them and slay them."
  },
  {
   "book": "Alma",
   "chapter": 22,
   "verse": 20,
-  "hebrew": "וְהִנֵּה רָאוּ הָעֲבָדִים אֵת אֲשֶׁר הִפִּיל אֶת־הַמֶּלֶךְ לָכֵן לֹא הֵעֵזּוּ לִשְׁלֹחַ יָדָם בְּאַהֲרֹן וּבְאֶחָיו וַיִּתְחַנְּנוּ אֶל־הַמַּלְכָּה לֵאמֹר מַדּוּעַ תְּצַוִּי לַהֲרֹג אֶת־הָאֲנָשִׁים הָאֵלֶּה וְהִנֵּה אֶחָד מֵהֶם חָזָק מִכֻּלָּנוּ לָכֵן נִפֹּל לִפְנֵיהֶם׃",
+  "hebrew": "וְהִנֵּה רָאוּ הָעֲבָדִים אֶת־אֲשֶׁר הִפִּיל אֶת־הַמֶּלֶךְ לָכֵן לֹא הֵעֵזּוּ לִשְׁלֹחַ יָדָם בְּאַהֲרֹן וּבְאֶחָיו וַיִּתְחַנְּנוּ אֶל־הַמַּלְכָּה לֵאמֹר מַדּוּעַ תְּצַוִּי לַהֲרֹג אֶת־הָאֲנָשִׁים הָאֵלֶּה וְהִנֵּה אֶחָד מֵהֶם חָזָק מִכֻּלָּנוּ לָכֵן נִפֹּל לִפְנֵיהֶם׃",
   "english": "Now the servants had seen the cause of the king's fall, therefore they durst not lay their hands on Aaron and his brethren; and they pled with the queen saying: Why commandest thou that we should slay these men, when behold one of them is mightier than us all? Therefore we shall fall before them."
  },
  {
@@ -22179,14 +22179,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 22,
   "verse": 27,
-  "hebrew": "וַיִּשְׁלַח הַמֶּלֶךְ כְּרוּז בְּכָל־הָאָרֶץ בְּקֶרֶב כָּל־עַמּוֹ אֲשֶׁר בְּכָל־אַרְצוֹ אֲשֶׁר בְּכָל־הַמְּקוֹמוֹת מִסָּבִיב הַנּוֹגֵעַ עַד־הַיָּם מִמִּזְרָח וּמִמַּעֲרָב וְהַנִּבְדָּל מֵאֶרֶץ זָרַהֶמְלָה בִּרְצוּעַת מִדְבָּר צָרָה אֲשֶׁר רָצָה מִיַּם מִזְרָח וְעַד־יַם מַעֲרָב וְסָבִיב עַל־גְּבוּלוֹת חוֹף הַיָּם וּגְבוּלוֹת הַמִּדְבָּר אֲשֶׁר בַּצָּפוֹן עַל־יַד אֶרֶץ זָרַהֶמְלָה דֶּרֶךְ גְּבוּלוֹת מַנְטִי עַל־רֹאשׁ נְהַר סִידוֹן הָרָץ מִמִּזְרָח לְמַעֲרָב וְכֵן נִבְדְּלוּ הַלָּמָנִים וְהַנֶּפִיִּים ׃",
+  "hebrew": "וַיִּשְׁלַח הַמֶּלֶךְ כְּרוּז בְּכָל־הָאָרֶץ בְּקֶרֶב כָּל־עַמּוֹ אֲשֶׁר בְּכָל־אַרְצוֹ אֲשֶׁר בְּכָל־הַמְּקוֹמוֹת מִסָּבִיב הַנּוֹגֵעַ עַד־הַיָּם מִמִּזְרָח וּמִמַּעֲרָב וְהַנִּבְדָּל מֵאֶרֶץ זָרַחֶמְלָה בִּרְצוּעַת מִדְבָּר צָרָה אֲשֶׁר רָצָה מִיַּם מִזְרָח וְעַד־יַם מַעֲרָב וְסָבִיב עַל־גְּבוּלוֹת חוֹף הַיָּם וּגְבוּלוֹת הַמִּדְבָּר אֲשֶׁר בַּצָּפוֹן עַל־יַד אֶרֶץ זָרַחֶמְלָה דֶּרֶךְ גְּבוּלוֹת מַנְטִי עַל־רֹאשׁ נְהַר סִידוֹן הָרָץ מִמִּזְרָח לְמַעֲרָב וְכֵן נִבְדְּלוּ הַלָּמָנִים וְהַנֶּפִיִּים ׃",
   "english": "And it came to pass that the king sent a proclamation throughout all the land, amongst all his people who were in all his land, who were in all the regions round about, which was bordering even to the sea, on the east and on the west, and which was divided from the land of Zarahemla by a narrow strip of wilderness, which ran from the sea east even to the sea west, and round about on the borders of the seashore, and the borders of the wilderness which was on the north by the land of Zarahemla, through the borders of Manti, by the head of the river Sidon, running from the east towards the west—and thus were the Lamanites and the Nephites divided."
  },
  {
   "book": "Alma",
   "chapter": 22,
   "verse": 28,
-  "hebrew": "וְעַתָּה הַבַּטְלָנִים בַּלָּמָנִים יָשְׁבוּ בַמִּדְבָּר וַיֵּשְׁבוּ בָּאֳהָלִים וַיִּתְפַּזְּרוּ בַמִּדְבָּר בַּמַּעֲרָב בְּאֶרֶץ נֶפִי כֵּן וְגַם בְּמַעֲרַב אֶרֶץ זָרַהֶמְלָה בַּגְּבוּלוֹת עַל־יַד חוֹף הַיָּם וּבַמַּעֲרָב בְּאֶרֶץ נֶפִי בִּמְקוֹם נַחֲלַת אֲבוֹתֵיהֶם הָרִאשׁוֹנָה וְכֵן גּוֹבֵל לְאֹרֶךְ חוֹף הַיָּם׃",
+  "hebrew": "וְעַתָּה הַבַּטְלָנִים בַּלָּמָנִים יָשְׁבוּ בַמִּדְבָּר וַיֵּשְׁבוּ בָּאֳהָלִים וַיִּתְפַּזְּרוּ בַמִּדְבָּר בַּמַּעֲרָב בְּאֶרֶץ נֶפִי כֵּן וְגַם בְּמַעֲרַב אֶרֶץ זָרַחֶמְלָה בַּגְּבוּלוֹת עַל־יַד חוֹף הַיָּם וּבַמַּעֲרָב בְּאֶרֶץ נֶפִי בִּמְקוֹם נַחֲלַת אֲבוֹתֵיהֶם הָרִאשׁוֹנָה וְכֵן גּוֹבֵל לְאֹרֶךְ חוֹף הַיָּם׃",
   "english": "Now, the more idle part of the Lamanites lived in the wilderness, and dwelt in tents; and they were spread through the wilderness on the west, in the land of Nephi; yea, and also on the west of the land of Zarahemla, in the borders by the seashore, and on the west in the land of Nephi, in the place of their fathers' first inheritance, and thus bordering along by the seashore."
  },
  {
@@ -22200,7 +22200,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 22,
   "verse": 30,
-  "hebrew": "וַתִּגְבֹּל בָּאָרֶץ אֲשֶׁר קָרְאוּ לָהּ שְׁמָמָה הַרְחֵק צָפוֹנָה עַד אֲשֶׁר־בָּאָה אֶל־הָאָרֶץ אֲשֶׁר הָיְתָה נוֹשֶׁבֶת וְנֶחְרְבָה אֲשֶׁר דִּבַּרְנוּ עַל־עַצְמוֹתֶיהָ אֲשֶׁר מָצְאוּ עַם זָרַהֶמְלָה הוּא מְקוֹם נְחִיתָתָם הָרִאשׁוֹנָה׃",
+  "hebrew": "וַתִּגְבֹּל בָּאָרֶץ אֲשֶׁר קָרְאוּ לָהּ שְׁמָמָה הַרְחֵק צָפוֹנָה עַד אֲשֶׁר־בָּאָה אֶל־הָאָרֶץ אֲשֶׁר הָיְתָה נוֹשֶׁבֶת וְנֶחְרְבָה אֲשֶׁר דִּבַּרְנוּ עַל־עַצְמוֹתֶיהָ אֲשֶׁר מָצְאוּ עַם זָרַחֶמְלָה הוּא מְקוֹם נְחִיתָתָם הָרִאשׁוֹנָה׃",
   "english": "And it bordered upon the land which they called Desolation, it being so far northward that it came into the land which had been peopled and been destroyed, of whose bones we have spoken, which was discovered by the people of Zarahemla, it being the place of their first landing."
  },
  {
@@ -22214,7 +22214,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 22,
   "verse": 32,
-  "hebrew": "וְעַתָּה הָיָה רַק מַהֲלַךְ יוֹם וָחֵצִי לְנֶפִי עַל־הַגְּבוּל בֵּין שֶׁפַע וּבֵין אֶרֶץ שְׁמָמָה מִן־הַיָּם הַמִּזְרָחִי עַד־יַם הַמַּעֲרָב וְכֵן הָיוּ אֶרֶץ נֶפִי וְאֶרֶץ זָרַהֶמְלָה מֻקָּפוֹת כִּמְעַט בַּמַּיִם וַיְהִי צַוַּאר אֲדָמָה קָטָן בֵּין הָאָרֶץ צָפוֹנָה וּבֵין הָאָרֶץ דָּרוֹמָה׃",
+  "hebrew": "וְעַתָּה הָיָה רַק מַהֲלַךְ יוֹם וָחֵצִי לְנֶפִי עַל־הַגְּבוּל בֵּין שֶׁפַע וּבֵין אֶרֶץ שְׁמָמָה מִן־הַיָּם הַמִּזְרָחִי עַד־יַם הַמַּעֲרָב וְכֵן הָיוּ אֶרֶץ נֶפִי וְאֶרֶץ זָרַחֶמְלָה מֻקָּפוֹת כִּמְעַט בַּמַּיִם וַיְהִי צַוַּאר אֲדָמָה קָטָן בֵּין הָאָרֶץ צָפוֹנָה וּבֵין הָאָרֶץ דָּרוֹמָה׃",
   "english": "And now, it was only the distance of a day and a half's journey for a Nephite, on the line Bountiful and the land Desolation, from the east to the west sea; and thus the land of Nephi and the land of Zarahemla were nearly surrounded by water, there being a small neck of land between the land northward and the land southward."
  },
  {
@@ -22557,14 +22557,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 24,
   "verse": 28,
-  "hebrew": "וְרֹב הַלָּמָנִים אֲשֶׁר הָרְגוּ רַבִּים מֵאֲחֵיהֶם הָיוּ עֲמָלֵקִים וַעֲמוּלוֹנִים וְרֻבָּם הָיוּ מִסֵּדֶר הַנְּהוֹרִים׃",
+  "hebrew": "וְרֹב הַלָּמָנִים אֲשֶׁר הָרְגוּ רַבִּים מֵאֲחֵיהֶם הָיוּ עֲמָלֵקִים וַעֲמוּלוֹנִים וְרֻבָּם הָיוּ מִסֵּדֶר הַנִּחוֹרִים׃",
   "english": "Now the greatest number of those of the Lamanites who slew so many of their brethren were Amalekites and Amulonites, the greatest number of whom were after the order of the Nehors."
  },
  {
   "book": "Alma",
   "chapter": 24,
   "verse": 29,
-  "hebrew": "וּבֵין הַמִּתְחַבְּרִים אֶל־עַם יְהוָה לֹא הָיָה אֶחָד מִן־הָעֲמָלֵקִים אוֹ הָעֲמוּלוֹנִים אוֹ מִסֵּדֶר נְהוֹר כִּי אִם־הָיוּ מִזֶּרַע לָמָן וּלְמוּאֵל מַמָּשׁ׃",
+  "hebrew": "וּבֵין הַמִּתְחַבְּרִים אֶל־עַם יְהוָה לֹא הָיָה אֶחָד מִן־הָעֲמָלֵקִים אוֹ הָעֲמוּלוֹנִים אוֹ מִסֵּדֶר נִחוֹר כִּי אִם־הָיוּ מִזֶּרַע לָמָן וּלְמוּאֵל מַמָּשׁ׃",
   "english": "Now, among those who joined the people of the Lord, there were none who were Amalekites or Amulonites, or who were of the order of Nehor, but they were actual descendants of Laman and Lemuel."
  },
  {
@@ -22585,7 +22585,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 25,
   "verse": 2,
-  "hebrew": "וַיִּקְחוּ אֶת־צִבְאוֹתֵיהֶם וַיַּעַבְרוּ אֶל־גְּבוּלוֹת אֶרֶץ זָרַהֶמְלָה וַיִּפְּלוּ עַל־הָעָם אֲשֶׁר בְּאֶרֶץ עַמּוֹנִיחָה וַיַּשְׁמִידוּם׃",
+  "hebrew": "וַיִּקְחוּ אֶת־צִבְאוֹתֵיהֶם וַיַּעַבְרוּ אֶל־גְּבוּלוֹת אֶרֶץ זָרַחֶמְלָה וַיִּפְּלוּ עַל־הָעָם אֲשֶׁר בְּאֶרֶץ עַמּוֹנִיחָה וַיַּשְׁמִידוּם׃",
   "english": "But they took their armies and went over into the borders of the land of Zarahemla, and fell upon the people who were in the land of Ammonihah, and destroyed them."
  },
  {
@@ -22662,7 +22662,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 25,
   "verse": 13,
-  "hebrew": "וַיְהִי כִּרְאוֹת הַלָּמָנִים כִּי לֹא יָכְלוּ לַנֶפִים וַיָּשׁוּבוּ אֶל־אַרְצָם וְרַבִּים מֵהֶם בָּאוּ לָשֶׁבֶת בְּאֶרֶץ יִשְׁמָעֵאל וּבְאֶרֶץ נֶפִי וַיִּתְחַבְּרוּ אֶל־עַם אֱלֹהִים הֵם עַם אַנְטִי־נֶפִי־לֶחִי׃",
+  "hebrew": "וַיְהִי כִּרְאוֹת הַלָּמָנִים כִּי לֹא יָכְלוּ לַנְּפִיִּים וַיָּשׁוּבוּ אֶל־אַרְצָם וְרַבִּים מֵהֶם בָּאוּ לָשֶׁבֶת בְּאֶרֶץ יִשְׁמָעֵאל וּבְאֶרֶץ נֶפִי וַיִּתְחַבְּרוּ אֶל־עַם אֱלֹהִים הֵם עַם אַנְטִי־נֶפִי־לֶחִי׃",
   "english": "And it came to pass that when the Lamanites saw that they could not overpower the Nephites they returned again to their own land; and many of them came over to dwell in the land of Ishmael and the land of Nephi, and did join themselves to the people of God, who were the people of Anti– Nephi– Lehi."
  },
  {
@@ -22697,7 +22697,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 26,
   "verse": 1,
-  "hebrew": "וְאֵלֶּה דִּבְרֵי עַמּוֹן אֶל־אֶחָיו לֵאמֹר אַחַי וְאֶחָי הִנֵּה אֹמֵר אֲנִי לָכֶם מַה־גָּדוֹל טַעְמֵנוּ לִשְׂמֹחַ כִּי הֲיָכֹלְנוּ לְשַׁעֵר בְּצֵאתֵנוּ מֵאֶרֶץ זָרַהֶמְלָה כִּי יִתֵּן לָנוּ אֱלֹהִים בְּרָכוֹת גְּדֹלוֹת כָּאֵלֶּה׃",
+  "hebrew": "וְאֵלֶּה דִּבְרֵי עַמּוֹן אֶל־אֶחָיו לֵאמֹר אַחַי וְאֶחָי הִנֵּה אֹמֵר אֲנִי לָכֶם מַה־גָּדוֹל טַעְמֵנוּ לִשְׂמֹחַ כִּי הֲיָכֹלְנוּ לְשַׁעֵר בְּצֵאתֵנוּ מֵאֶרֶץ זָרַחֶמְלָה כִּי יִתֵּן לָנוּ אֱלֹהִים בְּרָכוֹת גְּדֹלוֹת כָּאֵלֶּה׃",
   "english": "And now, these are the words of Ammon to his brethren, which say thus: My brothers and my brethren, behold I say unto you, how great reason have we to rejoice; for could we have supposed when we started from the land of Zarahemla that God would have granted unto us such great blessings?"
  },
  {
@@ -22753,7 +22753,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 26,
   "verse": 9,
-  "hebrew": "כִּי לוּלֵא עָלִינוּ מֵאֶרֶץ זָרַהֶמְלָה הָיוּ אַחֵינוּ הָאֲהוּבִים הָאֵלֶּה אֲשֶׁר אָהֲבוּ אֹתָנוּ אַהֲבָה רַבָּה עוֹדָם נִתְעָבִים בְּשִׂנְאָתָם אֹתָנוּ וְגַם הָיוּ זָרִים לֵאלֹהִים׃",
+  "hebrew": "כִּי לוּלֵא עָלִינוּ מֵאֶרֶץ זָרַחֶמְלָה הָיוּ אַחֵינוּ הָאֲהוּבִים הָאֵלֶּה אֲשֶׁר אָהֲבוּ אֹתָנוּ אַהֲבָה רַבָּה עוֹדָם נִתְעָבִים בְּשִׂנְאָתָם אֹתָנוּ וְגַם הָיוּ זָרִים לֵאלֹהִים׃",
   "english": "For if we had not come up out of the land of Zarahemla, these our dearly beloved brethren, who have so dearly beloved us, would still have been racked with hatred against us, yea, and they would also have been strangers to God."
  },
  {
@@ -22851,7 +22851,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 26,
   "verse": 23,
-  "hebrew": "וְעַתָּה הֲתִזְכְּרוּ אַחַי כִּי אָמַרְנוּ לְאַחֵינוּ בְּאֶרֶץ זָרַהֶמְלָה עֹלִים אֲנַחְנוּ אֶל־אֶרֶץ נֶפִי לִדְרֹשׁ לְאַחֵינוּ הַלָּמָנִים וַיִּלְעֲגוּ לָנוּ׃",
+  "hebrew": "וְעַתָּה הֲתִזְכְּרוּ אַחַי כִּי אָמַרְנוּ לְאַחֵינוּ בְּאֶרֶץ זָרַחֶמְלָה עֹלִים אֲנַחְנוּ אֶל־אֶרֶץ נֶפִי לִדְרֹשׁ לְאַחֵינוּ הַלָּמָנִים וַיִּלְעֲגוּ לָנוּ׃",
   "english": "Now do ye remember, my brethren, that we said unto our brethren in the land of Zarahemla, we go up to the land of Nephi, to preach unto our brethren, the Lamanites, and they laughed us to scorn?"
  },
  {
@@ -22984,7 +22984,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 27,
   "verse": 5,
-  "hebrew": "נְקַבְּצָה־נָּא אֶת־עַם יְהוָה הַזֶּה וְנֵרְדָה אֶל־אֶרֶץ זָרַהֶמְלָה אֶל־אַחֵינוּ הַנֶּפִיִּים  וְנִמָּלְטָה מִיַּד אֹיְבֵינוּ פֶּן־נִשָּׁמֵד׃",
+  "hebrew": "נְקַבְּצָה־נָּא אֶת־עַם יְהוָה הַזֶּה וְנֵרְדָה אֶל־אֶרֶץ זָרַחֶמְלָה אֶל־אַחֵינוּ הַנֶּפִיִּים  וְנִמָּלְטָה מִיַּד אֹיְבֵינוּ פֶּן־נִשָּׁמֵד׃",
   "english": "Let us gather together this people of the Lord, and let us go down to the land of Zarahemla to our brethren the Nephites, and flee out of the hands of our enemies, that we be not destroyed."
  },
  {
@@ -23047,14 +23047,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 27,
   "verse": 14,
-  "hebrew": "וַיַּקְהִילוּ אֶת־כָּל־עַמָּם אַף אֶת־כָּל־עַם יְהוָה וַיַּאַסְפוּ אֶת־כָּל־צֹאנָם וּבְקָרָם וַיֵּצְאוּ מִן־הָאָרֶץ וַיָּבֹאוּ אֶל־הַמִּדְבָּר הַמַּבְדִּיל בֵּין אֶרֶץ נֶפִי וּבֵין אֶרֶץ זָרַהֶמְלָה וַיָּבֹאוּ עַד־גְּבוּל הָאָרֶץ׃",
+  "hebrew": "וַיַּקְהִילוּ אֶת־כָּל־עַמָּם אַף אֶת־כָּל־עַם יְהוָה וַיַּאַסְפוּ אֶת־כָּל־צֹאנָם וּבְקָרָם וַיֵּצְאוּ מִן־הָאָרֶץ וַיָּבֹאוּ אֶל־הַמִּדְבָּר הַמַּבְדִּיל בֵּין אֶרֶץ נֶפִי וּבֵין אֶרֶץ זָרַחֶמְלָה וַיָּבֹאוּ עַד־גְּבוּל הָאָרֶץ׃",
   "english": "And they gathered together all their people, yea, all the people of the Lord, and did gather together all their flocks and herds, and departed out of the land, and came into the wilderness which divided the land of Nephi from the land of Zarahemla, and came over near the borders of the land."
  },
  {
   "book": "Alma",
   "chapter": 27,
   "verse": 15,
-  "hebrew": "וַיֹּאמֶר עַמּוֹן אֲלֵיהֶם הִנֵּה אֲנִי וְאַחַי נֵלְכָה אֶל־אֶרֶץ זָרַהֶמְלָה וְאַתֶּם שְׁבוּ פֹה עַד־שׁוּבֵנוּ וּנְנַסֶּה אֶת־לְבַב אַחֵינוּ הֲיִרְצוּ כִּי תָבֹאוּ אֶל־אַרְצָם׃",
+  "hebrew": "וַיֹּאמֶר עַמּוֹן אֲלֵיהֶם הִנֵּה אֲנִי וְאַחַי נֵלְכָה אֶל־אֶרֶץ זָרַחֶמְלָה וְאַתֶּם שְׁבוּ פֹה עַד־שׁוּבֵנוּ וּנְנַסֶּה אֶת־לְבַב אַחֵינוּ הֲיִרְצוּ כִּי תָבֹאוּ אֶל־אַרְצָם׃",
   "english": "And it came to pass that Ammon said unto them: Behold, I and my brethren will go forth into the land of Zarahemla, and ye shall remain here until we return; and we will try the hearts of our brethren, whether they will that ye shall come into their land."
  },
  {
@@ -23089,7 +23089,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 27,
   "verse": 20,
-  "hebrew": "וַיּוֹלֵךְ אַלְמָא אֶת־אֶחָיו אֶל־אֶרֶץ זָרַהֶמְלָה עַד־בֵּיתוֹ וַיָּבֹאוּ וַיַּגִּידוּ לַשֹּׁפֵט הָרֹאשׁ אֵת כָּל־אֲשֶׁר קָרָה לָהֶם בְּאֶרֶץ נֶפִי בְּקֶרֶב אֲחֵיהֶם הַלָּמָנִים׃",
+  "hebrew": "וַיּוֹלֵךְ אַלְמָא אֶת־אֶחָיו אֶל־אֶרֶץ זָרַחֶמְלָה עַד־בֵּיתוֹ וַיָּבֹאוּ וַיַּגִּידוּ לַשֹּׁפֵט הָרֹאשׁ אֶת־כָּל־אֲשֶׁר קָרָה לָהֶם בְּאֶרֶץ נֶפִי בְּקֶרֶב אֲחֵיהֶם הַלָּמָנִים׃",
   "english": "And now it came to pass that Alma conducted his brethren back to the land of Zarahemla; even to his own house. And they went and told the chief judge all the things that had happened unto them in the land of Nephi, among their brethren, the Lamanites."
  },
  {
@@ -23124,7 +23124,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 27,
   "verse": 25,
-  "hebrew": "וַיְהִי כִּשְׁמֹעַ עַמּוֹן אֶת־הַדְּבָרִים הָאֵלֶּה וַיָּשָׁב אֶל־עַם אַנְטִי־נֶפִי־לֶחִי וְגַם אַלְמָה עִמּוֹ אֶל־הַמִּדְבָּר אֲשֶׁר נָטוּ שָׁם אֶת־אָהֳלֵיהֶם וַיּוֹדִיעוּ לָהֶם אֶת־כָּל־הַדְּבָרִים הָאֵלֶּה וַיְסַפֵּר לָהֶם אַלְמָה גַּם אֶת־תְּשׁוּבָתוֹ עִם־עַמּוֹן וְאַהֲרֹן וְאֶחָיו׃",
+  "hebrew": "וַיְהִי כִּשְׁמֹעַ עַמּוֹן אֶת־הַדְּבָרִים הָאֵלֶּה וַיָּשָׁב אֶל־עַם אַנְטִי־נֶפִי־לֶחִי וְגַם אַלְמָא עִמּוֹ אֶל־הַמִּדְבָּר אֲשֶׁר נָטוּ שָׁם אֶת־אָהֳלֵיהֶם וַיּוֹדִיעוּ לָהֶם אֶת־כָּל־הַדְּבָרִים הָאֵלֶּה וַיְסַפֵּר לָהֶם אַלְמָא גַּם אֶת־תְּשׁוּבָתוֹ עִם־עַמּוֹן וְאַהֲרֹן וְאֶחָיו׃",
   "english": "Now, it came to pass that when Ammon had heard this, he returned to the people of Anti– Nephi– Lehi, and also Alma with him, into the wilderness, where they had pitched their tents, and made known unto them all these things. And Alma also related unto them his conversion, with Ammon and Aaron, and his brethren."
  },
  {
@@ -23166,7 +23166,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 28,
   "verse": 1,
-  "hebrew": "וַיְהִי אַחֲרֵי אֲשֶׁר הוּשַׁב עַם עַמּוֹן בְּאֶרֶץ יֶרְשׁוֹן וְגַם הוּקְמָה קְהִלָּה בְּאֶרֶץ יֶרְשׁוֹן וַיּוּשְׂמוּ צִבְאוֹת הַנֶּפִיִּים  סָבִיב לְאֶרֶץ יֶרְשׁוֹן אַף בְּכָל־הַגְּבוּלוֹת  סָבִיב לְאֶרֶץ זָרַהֶמְלָה וְהִנֵּה רָדְפוּ צִבְאוֹת הַלָּמָנִים אַחֲרֵי אֲחֵיהֶם אֶל־הַמִּדְבָּר׃",
+  "hebrew": "וַיְהִי אַחֲרֵי אֲשֶׁר הוּשַׁב עַם עַמּוֹן בְּאֶרֶץ יֶרְשׁוֹן וְגַם הוּקְמָה קְהִלָּה בְּאֶרֶץ יֶרְשׁוֹן וַיּוּשְׂמוּ צִבְאוֹת הַנֶּפִיִּים  סָבִיב לְאֶרֶץ יֶרְשׁוֹן אַף בְּכָל־הַגְּבוּלוֹת  סָבִיב לְאֶרֶץ זָרַחֶמְלָה וְהִנֵּה רָדְפוּ צִבְאוֹת הַלָּמָנִים אַחֲרֵי אֲחֵיהֶם אֶל־הַמִּדְבָּר׃",
   "english": "And now it came to pass that after the people of Ammon were established in the land of Jershon, and a church also established in the land of Jershon, and the armies of the Nephites  were set round about the land of Jershon, yea, in all the borders round about the land of Zarahemla; behold the armies of the Lamanites had followed their brethren into the wilderness."
  },
  {
@@ -23236,7 +23236,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 28,
   "verse": 11,
-  "hebrew": "וְגוּפוֹת אֲלָפִים רַבִּים שֹׁכְבִים בָּאֲדָמָה וְגוּפוֹת אֲלָפִים רַבִּים נִרְקָבִים בְּעֲרֵמוֹת עַל־פְּנֵי הָאֲדָמָה וְאַף אֲלָפִים רַבִּים מִתְאַבְּלִים עַל־אָבְדַן קְרוֹבֵיהֶם כִּי יֵשׁ לָהֶם לִירֹא כְּדִבְרֵי יְהוָה כִּי נִתְּנוּ לְצַעַר עוֹלָמִים׃",
+  "hebrew": "וְגוּפוֹת אֲלָפִים רַבִּים שֹׁכְבִים בָּאֲדָמָה וְגוּפוֹת אֲלָפִים רַבִּים נִרְקָבִים בַּעֲרֵמוֹת עַל־פְּנֵי הָאֲדָמָה וְאַף אֲלָפִים רַבִּים מִתְאַבְּלִים עַל־אָבְדַן קְרוֹבֵיהֶם כִּי יֵשׁ לָהֶם לִירֹא כְּדִבְרֵי יְהוָה כִּי נִתְּנוּ לְצַעַר עוֹלָמִים׃",
   "english": "And the bodies of many thousands are laid low in the earth, while the bodies of many thousands are moldering in heaps upon the face of the earth; yea, and many thousands are mourning for the loss of their kindred, because they have reason to fear, according to the promises of the Lord, that they are consigned to a state of endless wo."
  },
  {
@@ -23250,7 +23250,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 28,
   "verse": 13,
-  "hebrew": "וּבָזֹאת נִרְאֶה מַה־גָּדוֹל שֹׁנִי הָאָדָם בִּגְלַל הַחֵטְא וְהַפֶּשַׁע וְכֹחַ הַשָּׂטָן הַבָּא בְּמַחְשְׁבוֹת עָרְמָה אֲשֶׁר חָשַׁב לְלִכְדֹּ לִבּוֹת בְּנֵי־אָדָם׃",
+  "hebrew": "וּבָזֹאת נִרְאֶה מַה־גָּדוֹל שֹׁנִי הָאָדָם בִּגְלַל הַחֵטְא וְהַפֶּשַׁע וְכֹחַ הַשָּׂטָן הַבָּא בְּמַחְשְׁבוֹת עָרְמָה אֲשֶׁר חָשַׁב לִלְכֹּד לִבּוֹת בְּנֵי־אָדָם׃",
   "english": "And thus we see how great the inequality of man is because of sin and transgression, and the power of the devil, which comes by the cunning plans which he hath devised to ensnare the hearts of men."
  },
  {
@@ -23320,14 +23320,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 29,
   "verse": 9,
-  "hebrew": "יָדַעְתִּי אֵת אֲשֶׁר צִוַּנִי יְהוָה וְאֶתְפָּאֵר בּוֹ לֹא אֶתְפָּאֵר בְּעַצְמִי כִּי אִם־אֶתְפָּאֵר בַּאֲשֶׁר צִוַּנִי יְהוָה אָכֵן וְזֹאת תִּפְאַרְתִּי אוּלַי יַעֲשֵׂנִי אֱלֹהִים כְּלִי בְּיָדוֹ לְהָשִׁיב נֶפֶשׁ וְזֹאת שִׂמְחָתִי׃",
+  "hebrew": "יָדַעְתִּי אֶת־אֲשֶׁר צִוַּנִי יְהוָה וְאֶתְפָּאֵר בּוֹ לֹא אֶתְפָּאֵר בְּעַצְמִי כִּי אִם־אֶתְפָּאֵר בַּאֲשֶׁר צִוַּנִי יְהוָה אָכֵן וְזֹאת תִּפְאַרְתִּי אוּלַי יַעֲשֵׂנִי אֱלֹהִים כְּלִי בְּיָדוֹ לְהָשִׁיב נֶפֶשׁ וְזֹאת שִׂמְחָתִי׃",
   "english": "I know that which the Lord hath commanded me, and I glory in it. I do not glory of myself, but I glory in that which the Lord hath commanded me; yea, and this is my glory, that perhaps I may be an instrument in the hands of God to bring some soul to repentance; and this is my joy."
  },
  {
   "book": "Alma",
   "chapter": 29,
   "verse": 10,
-  "hebrew": "וְהִנֵּה בִּרְאוֹתִי רַבִּים מֵאַחַי שָׁבִים בֶּאֱמֶת וּבָאִים אֶל־יְהוָה אֱלֹהֵיהֶם אָז תִּמָּלֵא נַפְשִׁי שִׂמְחָה אָז  אֶזְכֹּר אֵת אֲשֶׁר עָשָׂה לִי יְהוָה אָכֵן כִּי שָׁמַע תְּפִלָּתִי אָז אֶזְכֹּר זְרוֹעַ חַסְדּוֹ אֲשֶׁר נָטָה אֵלָי׃",
+  "hebrew": "וְהִנֵּה בִּרְאוֹתִי רַבִּים מֵאַחַי שָׁבִים בֶּאֱמֶת וּבָאִים אֶל־יְהוָה אֱלֹהֵיהֶם אָז תִּמָּלֵא נַפְשִׁי שִׂמְחָה אָז  אֶזְכֹּר אֶת־אֲשֶׁר עָשָׂה לִי יְהוָה אָכֵן כִּי שָׁמַע תְּפִלָּתִי אָז אֶזְכֹּר זְרוֹעַ חַסְדּוֹ אֲשֶׁר נָטָה אֵלָי׃",
   "english": "And behold, when I see many of my brethren truly penitent, and coming to the Lord their God,  then is my soul filled with joy; then do I remember what the Lord has done for me, yea, even that he hath heard my prayer; yea, then do I remember his merciful arm which he extended towards me."
  },
  {
@@ -23383,7 +23383,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 30,
   "verse": 1,
-  "hebrew": "הִנֵּה וַיְהִי אַחֲרֵי הִתְיַשֵּׁב עַם עַמּוֹן בְּאֶרֶץ יְרְשׁוֹן אָכֵן וְגַם אַחֲרֵי נִגְרְשׁוּ הַלְמָנִים מִן־הָאָרֶץ וַיִּקְבְּרוּ מֵתֵיהֶם עַל־יְדֵי עַם הָאָרֶץ׃",
+  "hebrew": "הִנֵּה וַיְהִי אַחֲרֵי הִתְיַשֵּׁב עַם עַמּוֹן בְּאֶרֶץ יֶרְשׁוֹן אָכֵן וְגַם אַחֲרֵי נִגְרְשׁוּ הַלָּמָנִים מִן־הָאָרֶץ וַיִּקְבְּרוּ מֵתֵיהֶם עַל־יְדֵי עַם הָאָרֶץ׃",
   "english": "Behold, now it came to pass that after the people of Ammon were established in the land of Jershon, yea, and also after the Lamanites were driven out of the land, and their dead were buried by the people of the land—"
  },
  {
@@ -23397,7 +23397,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 30,
   "verse": 3,
-  "hebrew": "אָכֵן וְהָעָם שָׁמְרוּ לִשְׁמֹר אֶת־מִצְוֺת יְהוָה וַיַּחֲרִידוּ לִשְׁמֹר חֻקּוֹת אֱלֹהִים כְּפִי תּוֹרַת מֹשֶׁה כִּי לֻמְּדוּ לִשְׁמֹר אֶת־תּוֹרַת מֹשֶׁה עַד יְקֻיַּם׃",
+  "hebrew": "אָכֵן וְהָעָם שָׁמְרוּ לִשְׁמֹר אֶת־מִצְוֹת יְהוָה וַיַּחֲרִידוּ לִשְׁמֹר חֻקּוֹת אֱלֹהִים כְּפִי תּוֹרַת מֹשֶׁה כִּי לֻמְּדוּ לִשְׁמֹר אֶת־תּוֹרַת מֹשֶׁה עַד יְקֻיַּם׃",
   "english": "Yea, and the people did observe to keep the commandments of the Lord; and they were strict in observing the ordinances of God, according to the law of Moses; for they were  taught to keep the law of Moses until it should be fulfilled."
  },
  {
@@ -23418,14 +23418,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 30,
   "verse": 6,
-  "hebrew": "וַיְהִי מִקֵּץ שְׁנַת שְׁבַע־עֶשְׂרֵה וַיָּבֹא אִישׁ אֶל־אֶרֶץ זָרַהֶמְלָה וְהוּא הָיָה אוֹיֵב הַמָּשִׁיחַ כִּי הֵחֵל לִדְרֹשׁ אֶל־הָעָם נֶגֶד הַנְּבוּאוֹת אֲשֶׁר נֶאֶמְרוּ עַל־יְדֵי הַנְּבִיאִים עַל־בִּיאַת הַמָּשִׁיחַ׃",
+  "hebrew": "וַיְהִי מִקֵּץ שְׁנַת שְׁבַע־עֶשְׂרֵה וַיָּבֹא אִישׁ אֶל־אֶרֶץ זָרַחֶמְלָה וְהוּא הָיָה אוֹיֵב הַמָּשִׁיחַ כִּי הֵחֵל לִדְרֹשׁ אֶל־הָעָם נֶגֶד הַנְּבוּאוֹת אֲשֶׁר נֶאֶמְרוּ עַל־יְדֵי הַנְּבִיאִים עַל־בִּיאַת הַמָּשִׁיחַ׃",
   "english": "But it came to pass in the latter end of the seventeenth year, there came a man into the land of Zarahemla, and he was Anti– Christ, for he began to preach unto the people against the prophecies which had been spoken by the prophets, concerning the coming of Christ."
  },
  {
   "book": "Alma",
   "chapter": 30,
   "verse": 7,
-  "hebrew": "וְלֹא הָיָה חֹק נֶגֶד אֱמוּנַת אִישׁ כִּי הָיָה נֶגֶד מִצְוֺת אֱלֹהִים כִּי יִהְיֶה חֹק אֲשֶׁר יָבִיא אֲנָשִׁים לְבִלְתִּי הָיוֹת שָׁוִים׃",
+  "hebrew": "וְלֹא הָיָה חֹק נֶגֶד אֱמוּנַת אִישׁ כִּי הָיָה נֶגֶד מִצְוֹת אֱלֹהִים כִּי יִהְיֶה חֹק אֲשֶׁר יָבִיא אֲנָשִׁים לְבִלְתִּי הָיוֹת שָׁוִים׃",
   "english": "Now there was no law against a man's belief; for it was strictly contrary to the commands of God that there should be a law which should bring men on to unequal grounds."
  },
  {
@@ -23579,7 +23579,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 30,
   "verse": 29,
-  "hebrew": "וְעַתָּה כַאֲשֶׁר רָאוּ הַכֹּהֵן הַגָּדוֹל וְהַשֹּׁפֵט הָרֹאשׁ אֶת־קֹשִׁי לִבּוֹ אָכֵן כַאֲשֶׁר רָאוּ כִּי יְגַדֵּף אֲפִלּוּ נֶגֶד אֱלֹהִים לֹא נָתְנוּ מַעֲנֶה לִדְבָרָיו אַךְ גָרְמוּ לֶאֱסֹר אוֹתוֹ וּמְסָרוּהוּ בְּיַד הַשֹּׁטְרִים וְשָׁלְחוּ אוֹתוֹ אֶל־אֶרֶץ זָרַהֶמְלָה לְמַעַן יוּבָא לִפְנֵי אַלְמָא וְהַשֹּׁפֵט הָרֹאשׁ אֲשֶׁר הָיָה מוֹשֵׁל עַל־כָּל־הָאָרֶץ׃",
+  "hebrew": "וְעַתָּה כַאֲשֶׁר רָאוּ הַכֹּהֵן הַגָּדוֹל וְהַשֹּׁפֵט הָרֹאשׁ אֶת־קֹשִׁי לִבּוֹ אָכֵן כַאֲשֶׁר רָאוּ כִּי יְגַדֵּף אֲפִלּוּ נֶגֶד אֱלֹהִים לֹא נָתְנוּ מַעֲנֶה לִדְבָרָיו אַךְ גָרְמוּ לֶאֱסֹר אוֹתוֹ וּמְסָרוּהוּ בְּיַד הַשֹּׁטְרִים וְשָׁלְחוּ אוֹתוֹ אֶל־אֶרֶץ זָרַחֶמְלָה לְמַעַן יוּבָא לִפְנֵי אַלְמָא וְהַשֹּׁפֵט הָרֹאשׁ אֲשֶׁר הָיָה מוֹשֵׁל עַל־כָּל־הָאָרֶץ׃",
   "english": "Now when the high priest and the chief judge saw the hardness of his heart, yea, when they saw that he would revile even against God, they would not make any reply to his words; but they caused that he should be bound; and they delivered him up into the hands of the officers, and sent him to the land of Zarahemla, that he might be brought before Alma, and the chief judge who was governor over all the land."
  },
  {
@@ -23733,7 +23733,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 30,
   "verse": 51,
-  "hebrew": "וְעַתָּה כַאֲשֶׁר רָאָה הַשֹּׁפֵט הָרֹאשׁ זֹאת שָׁלַח יָדוֹ וַיִּכְתֹּב אֶל־קוֹרִיהוֹר לֵאמֹר הַנִּשְׁכַּחְתָּ בְּכֹחַ אֱלֹהִים בְּמִי רָצִיתָ כִּי יַרְאֶה אַלְמָא אוֹתוֹ הַרָצִיתָ כִּי יַכֶּה אֲחֵרִים לְהַרְאוֹתְךָ אוֹת הִנֵּה הֶרְאָה לְךָ אוֹת וְעַתָּה הַתַּתְוַכַּח עוֹד׃",
+  "hebrew": "וְעַתָּה כַאֲשֶׁר רָאָה הַשֹּׁפֵט הָרֹאשׁ זֹאת שָׁלַח יָדוֹ וַיִּכְתֹּב אֶל־קוֹרִיהוֹר לֵאמֹר הֲנוֹכַחְתָּ בְּכֹחַ אֱלֹהִים בְּמִי רָצִיתָ כִּי יַרְאֶה אַלְמָא אוֹתוֹ הַרָצִיתָ כִּי יַכֶּה אֲחֵרִים לְהַרְאוֹתְךָ אוֹת הִנֵּה הֶרְאָה לְךָ אוֹת וְעַתָּה הַתַּתְוַכַּח עוֹד׃",
   "english": "And now when the chief judge saw this, he put forth his hand and wrote unto Korihor, saying: Art thou convinced of the power of God? In whom did ye desire that Alma should show forth his sign? Would ye that he should afflict others, to show unto thee a sign? Behold, he has showed unto you a sign; and now will ye dispute more?"
  },
  {
@@ -23747,7 +23747,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 30,
   "verse": 53,
-  "hebrew": "אַךְ הִנֵּה הַשָּׂטָן הִטְעַנִי כִּי נִרְאָה אֵלַי בִּדְמוּת מַלְאָךְ וַיֹּאמֶר אֵלַי לֵךְ וְהַשֵּׁב אֶת־הָעָם הַזֶּה כִּי כֻלָּם תָּעוּ אַחֲרֵי אֱלוֹהַּ לֹא יָדוּעַ וַיֹּאמֶר אֵלַי אֵין אֱלֹהִים אָכֵן וַיְלַמְּדֵנִי אֵת אֲשֶׁר אָמַר וְלִמַּדְתִּי אֶת־דְּבָרָיו וְלִמַּדְתִּי אוֹתָם כִּי נָעִמוּ לַלֵּב הַגַּשְׁמִי וְלִמַּדְתִּי אוֹתָם עַד כִּי הָיְתָה לִי הַצְלָחָה רַבָּה כִּי בֶאֱמֶת הֶאֱמַנְתִּי כִּי הֵם אֱמֶת וּבַעֲבוּר זֶה הִתְנַגַּדְתִּי לָאֱמֶת עַד כִּי הֵבֵאתִי הַקְּלָלָה הַגְּדוֹלָה הַזֹּאת עָלַי׃",
+  "hebrew": "אַךְ הִנֵּה הַשָּׂטָן הִטְעַנִי כִּי נִרְאָה אֵלַי בִּדְמוּת מַלְאָךְ וַיֹּאמֶר אֵלַי לֵךְ וְהַשֵּׁב אֶת־הָעָם הַזֶּה כִּי כֻלָּם תָּעוּ אַחֲרֵי אֱלוֹהַּ לֹא יָדוּעַ וַיֹּאמֶר אֵלַי אֵין אֱלֹהִים אָכֵן וַיְלַמְּדֵנִי אֶת־אֲשֶׁר אָמַר וְלִמַּדְתִּי אֶת־דְּבָרָיו וְלִמַּדְתִּי אוֹתָם כִּי נָעִמוּ לַלֵּב הַגַּשְׁמִי וְלִמַּדְתִּי אוֹתָם עַד כִּי הָיְתָה לִי הַצְלָחָה רַבָּה כִּי בֶאֱמֶת הֶאֱמַנְתִּי כִּי הֵם אֱמֶת וּבַעֲבוּר זֶה הִתְנַגַּדְתִּי לָאֱמֶת עַד כִּי הֵבֵאתִי הַקְּלָלָה הַגְּדוֹלָה הַזֹּאת עָלַי׃",
   "english": "But behold, the devil hath deceived me; for he appeared unto me in the form of an angel, and said unto me: Go and reclaim this people, for they have all gone astray after an unknown God. And he said unto me: There is no God; yea, and he taught me that which I should say. And I have taught his words; and I taught them because they were pleasing unto the carnal mind; and I taught them, even until I had much success, insomuch that I verily believed that they were true; and for this cause I withstood the truth, even until I have brought this great curse upon me."
  },
  {
@@ -23817,7 +23817,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 31,
   "verse": 3,
-  "hebrew": "וְהַזּוֹרָמִים נִקְבְּצוּ בְּאֶרֶץ אֲשֶׁר קָרְאוּ אַנְטְיוֹנוּם אֲשֶׁר מִמִּזְרָח לְאֶרֶץ זָרַהֶמְלָה אֲשֶׁר קָרְבָה אֶל־חוֹף הַיָּם אֲשֶׁר מִנֶּגֶב לְאֶרֶץ יֶרְשׁוֹן אֲשֶׁר גָּבְלָה גַּם־בַּמִּדְבָּר נֶגְבָּה אֲשֶׁר מָלֵא לָמָנִים׃",
+  "hebrew": "וְהַזּוֹרָמִים נִקְבְּצוּ בְּאֶרֶץ אֲשֶׁר קָרְאוּ אַנְטְיוֹנוּם אֲשֶׁר מִמִּזְרָח לְאֶרֶץ זָרַחֶמְלָה אֲשֶׁר קָרְבָה אֶל־חוֹף הַיָּם אֲשֶׁר מִנֶּגֶב לְאֶרֶץ יֶרְשׁוֹן אֲשֶׁר גָּבְלָה גַּם־בַּמִּדְבָּר נֶגְבָּה אֲשֶׁר מָלֵא לָמָנִים׃",
   "english": "Now the Zoramites had gathered themselves together in a land which they called Antionum, which was east of the land of Zarahemla, which lay nearly bordering upon the seashore, which was south of the land of Jershon, which also bordered upon the wilderness south, which wilderness was full of the Lamanites."
  },
  {
@@ -23838,7 +23838,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 31,
   "verse": 6,
-  "hebrew": "וַיִּקַּח אִתּוֹ אֶת־עַמּוֹן וְאֶת־אַהֲרֹן וְאֶת־אָמְנֵר וְאֶת־הִמְנִי הִנִּיחַ בָּעֵדָה בְּזָרַהֶמְלָה אַךְ אֶת־שְׁלֹשֶׁת הָרִאשׁוֹנִים לָקַח עִמּוֹ וְגַם אֶת־עֲמוּלֵק וְאֶת־זֶעְזְרוֹם אֲשֶׁר הָיוּ בְּמֶלֶק וְגַם לָקַח שְׁנַיִם מִבָּנָיו׃",
+  "hebrew": "וַיִּקַּח אִתּוֹ אֶת־עַמּוֹן וְאֶת־אַהֲרֹן וְאֶת־אָמְנֵר וְאֶת־הִמְנִי הִנִּיחַ בָּעֵדָה בְּזָרַחֶמְלָה אַךְ אֶת־שְׁלֹשֶׁת הָרִאשׁוֹנִים לָקַח עִמּוֹ וְגַם אֶת־עֲמוּלֶק וְאֶת־זֶעְזְרוֹם אֲשֶׁר הָיוּ בְּמֶלֶק וְגַם לָקַח שְׁנַיִם מִבָּנָיו׃",
   "english": "Therefore he took Ammon, and Aaron, and Omner; and Himni he did leave in the church in Zarahemla; but the former three he took with him, and also Amulek and Zeezrom, who were at Melek; and he also took two of his sons."
  },
  {
@@ -23873,14 +23873,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 31,
   "verse": 11,
-  "hebrew": "אָכֵן יְעַקְּשׁוּ אֶת־דַּרְכֵי יְהוָה בִּדְבָרִים רַבִּים מְאֹד לָכֵן בַּעֲבוּר זֹאת יָצְאוּ אַלְמָה וְאֶחָיו אֶל־הָאָרֶץ לִקְרֹא לָהֶם אֶת־הַדָּבָר׃",
+  "hebrew": "אָכֵן יְעַקְּשׁוּ אֶת־דַּרְכֵי יְהוָה בִּדְבָרִים רַבִּים מְאֹד לָכֵן בַּעֲבוּר זֹאת יָצְאוּ אַלְמָא וְאֶחָיו אֶל־הָאָרֶץ לִקְרֹא לָהֶם אֶת־הַדָּבָר׃",
   "english": "Yea, in fine, they did pervert the ways of the Lord in very many instances; therefore, for this cause, Alma and his brethren went into the land to preach the word unto them."
  },
  {
   "book": "Alma",
   "chapter": 31,
   "verse": 12,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר בָּאוּ אֶל־הָאָרֶץ וְהִנֵּה לְתִמְהוֹנָם מָצְאוּ כִּי בָנוּ הַזּוֹרָמִים בָּתֵי כְנֵסִיּוֹת וְכִי נִקְהָלִים בְּיוֹם אֶחָד בַּשָּׁבוּעַ אֲשֶׁר קָרְאוּ לוֹ יוֹם יְהוָה וַיַּעַבְדוּ בְּדֶרֶךְ אֲשֶׁר לֹא רָאוּ אַלְמָה וְאֶחָיו מֵעוֹלָם׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר בָּאוּ אֶל־הָאָרֶץ וְהִנֵּה לְתִמְהוֹנָם מָצְאוּ כִּי בָנוּ הַזּוֹרָמִים בָּתֵי כְנֵסִיּוֹת וְכִי נִקְהָלִים בְּיוֹם אֶחָד בַּשָּׁבוּעַ אֲשֶׁר קָרְאוּ לוֹ יוֹם יְהוָה וַיַּעַבְדוּ בְּדֶרֶךְ אֲשֶׁר לֹא רָאוּ אַלְמָא וְאֶחָיו מֵעוֹלָם׃",
   "english": "Now, when they had come into the land, behold, to their astonishment they found that the Zoramites had built synagogues, and that they did gather themselves together on one day of the week, which day they did call the day of the Lord; and they did worship after a manner which Alma and his brethren had never beheld;"
  },
  {
@@ -23915,21 +23915,21 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 31,
   "verse": 17,
-  "hebrew": "וְאַתָּה הוּא אֶתְמוֹל הַיּוֹם וּלְעוֹלָם וּבְחַרְתָּנוּ לְהִוָּשַׁע וְכָל־סְבִיבוֹתֵינוּ נִבְחֲרוּ לְהִשָּׁלֵךְ בְּאַפְּךָ שְׁאוֹלָה וּבְעַד קְדֻשָּׁתְךָ זֹאת אֱלֹהִים נוֹדֶה לְּךָ וְגַם נוֹדֶה לְּךָ כִּי בְּחַרְתָּנוּ לְבִלְתִּי נִדַּח אַחֲרֵי תּוֹרוֹת אַחֵינוּ הַסְּכָלוֹת הָאֹסְרוֹת אוֹתָם בֶּאֱמוּנַת הַמָּשִׁיחַ הַמַּתְעָה אֶת־לְבָבָם לִתְעוֹת מֵעָלֶיךָ אֱלֹהֵינוּ׃",
+  "hebrew": "וְאַתָּה הוּא אֶתְמוֹל הַיּוֹם וּלְעוֹלָם וּבְחַרְתָּנוּ לְהִוָּשַׁע וְכָל־סְבִיבוֹתֵינוּ נִבְחֲרוּ לְהִשָּׁלֵךְ בְּאַפְּךָ שְׁאוֹלָה וּבְעַד קְדֻשָּׁתְךָ זֹאת אֱלֹהִים נוֹדֶה לְךָ וְגַם נוֹדֶה לְךָ כִּי בְּחַרְתָּנוּ לְבִלְתִּי נִדַּח אַחֲרֵי תּוֹרוֹת אַחֵינוּ הַסְּכָלוֹת הָאֹסְרוֹת אוֹתָם בֶּאֱמוּנַת הַמָּשִׁיחַ הַמַּתְעָה אֶת־לְבָבָם לִתְעוֹת מֵעָלֶיךָ אֱלֹהֵינוּ׃",
   "english": "But thou art the same yesterday, today, and forever; and thou hast elected us that we shall be saved, whilst all around us are elected to be cast by thy wrath down to hell; for the which holiness, O God, we thank thee; and we also thank thee that thou hast elected us, that we may not be led away after the foolish traditions of our brethren, which doth bind them down to a belief of Christ, which doth lead their hearts to wander far from thee, our God."
  },
  {
   "book": "Alma",
   "chapter": 31,
   "verse": 18,
-  "hebrew": "וְעוֹד נוֹדֶה לְּךָ אֱלֹהִים כִּי עַם בָּחוּר וְקָדוֹשׁ אֲנָחְנוּ אָמֵן׃",
+  "hebrew": "וְעוֹד נוֹדֶה לְךָ אֱלֹהִים כִּי עַם בָּחוּר וְקָדוֹשׁ אֲנָחְנוּ אָמֵן׃",
   "english": "And again we thank thee, O God, that we are a chosen and a holy people. Amen."
  },
  {
   "book": "Alma",
   "chapter": 31,
   "verse": 19,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר שָׁמְעוּ אַלְמָה וְאֶחָיו וּבָנָיו אֶת־הַתְּפִלּוֹת הָאֵלֶּה וַיִּתְמְהוּ עַד־מְאֹד׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר שָׁמְעוּ אַלְמָא וְאֶחָיו וּבָנָיו אֶת־הַתְּפִלּוֹת הָאֵלֶּה וַיִּתְמְהוּ עַד־מְאֹד׃",
   "english": "Now it came to pass that after Alma and his brethren and his sons had heard these prayers, they were astonished beyond all measure."
  },
  {
@@ -23964,7 +23964,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 31,
   "verse": 24,
-  "hebrew": "וַיְהִי כִּרְאוֹת אַלְמָה אֶת־זֹאת וַיֵּרַע לְבָבוֹ כִּי רָאָה כִּי עַם רָע וְעִקֵּשׁ הֵם אָכֵן רָאָה כִּי לִבָּם נָתוּן לַזָּהָב וְלַכֶּסֶף וּלְכָל־מִינֵי כְּלֵי חֶמְדָּה׃",
+  "hebrew": "וַיְהִי כִּרְאוֹת אַלְמָא אֶת־זֹאת וַיֵּרַע לְבָבוֹ כִּי רָאָה כִּי עַם רָע וְעִקֵּשׁ הֵם אָכֵן רָאָה כִּי לִבָּם נָתוּן לַזָּהָב וְלַכֶּסֶף וּלְכָל־מִינֵי כְּלֵי חֶמְדָּה׃",
   "english": "Now when Alma saw this his heart was grieved; for he saw that they were a wicked and a perverse people; yea, he saw that their hearts were set upon gold, and upon silver, and upon all manner of fine goods."
  },
  {
@@ -24020,7 +24020,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 31,
   "verse": 32,
-  "hebrew": "אָנָּא יְהוָה תְּנַחֵם נַפְשִׁי וְתִתֶּן־לִי הַצְלָחָה וְגַם לַעֲמִיתַי הָעֹמְדִים עִמִּי אָכֵן עַמּוֹן וְאַהֲרֹן וְאָמְנֵר וְגַם עֲמוּלֵק וְזֶעְזְרוֹם וְגַם שְׁנֵי בָנַי אָכֵן אֶת־כָּל־אֵלֶּה תְּנַחֵם יְהוָה אָכֵן תְּנַחֵם נַפְשָׁם בַּמָּשִׁיחַ׃",
+  "hebrew": "אָנָּא יְהוָה תְּנַחֵם נַפְשִׁי וְתִתֶּן־לִי הַצְלָחָה וְגַם לַעֲמִיתַי הָעֹמְדִים עִמִּי אָכֵן עַמּוֹן וְאַהֲרֹן וְאָמְנֵר וְגַם עֲמוּלֶק וְזֶעְזְרוֹם וְגַם שְׁנֵי בָנַי אָכֵן אֶת־כָּל־אֵלֶּה תְּנַחֵם יְהוָה אָכֵן תְּנַחֵם נַפְשָׁם בַּמָּשִׁיחַ׃",
   "english": "O Lord, wilt thou comfort my soul, and give unto me success, and also my fellow laborers who are with me—yea, Ammon, and Aaron, and Omner, and also Amulek and Zeezrom and also my two sons—yea, even all these wilt thou comfort, O Lord. Yea, wilt thou comfort their souls in Christ."
  },
  {
@@ -24048,7 +24048,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 31,
   "verse": 36,
-  "hebrew": "וַיְהִי כְּכַלּוֹת אַלְמָה לְדַבֵּר אֶת־הַדְּבָרִים הָאֵלֶּה וַיִּסְמֹךְ אֶת־יָדָיו עַל־כָּל־הָעֹמְדִים עִמּוֹ וְהִנֵּה כַּאֲשֶׁר סָמַךְ אֶת־יָדָיו עֲלֵיהֶם וַיִּמָּלְאוּ רוּחַ הַקֹּדֶשׁ׃",
+  "hebrew": "וַיְהִי כְּכַלּוֹת אַלְמָא לְדַבֵּר אֶת־הַדְּבָרִים הָאֵלֶּה וַיִּסְמֹךְ אֶת־יָדָיו עַל־כָּל־הָעֹמְדִים עִמּוֹ וְהִנֵּה כַּאֲשֶׁר סָמַךְ אֶת־יָדָיו עֲלֵיהֶם וַיִּמָּלְאוּ רוּחַ הַקֹּדֶשׁ׃",
   "english": "Now it came to pass that when Alma had said these words, that he clapped his hands upon all them who were with him. And behold, as he clapped his hands upon them, they were filled with the Holy Spirit."
  },
  {
@@ -24062,7 +24062,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 31,
   "verse": 38,
-  "hebrew": "וַיְהוָה הִשְׁגִּיחַ עֲלֵיהֶם לְבִלְתִּי יִרְעָבוּ וְגַם לֹא יִצְמָאוּ אָכֵן וַיִּתֵּן לָהֶם כֹּחַ לְבִלְתִּי יִסְבְּלוּ שׁוּם־צָרָה כִּי אִם־נִבְלְעָה בְּשִׂמְחַת הַמָּשִׁיחַ וַיְהִי כֵן כִּתְפִלַּת אַלְמָה כִּי הִתְפַּלֵּל בֶּאֱמוּנָה׃",
+  "hebrew": "וַיְהוָה הִשְׁגִּיחַ עֲלֵיהֶם לְבִלְתִּי יִרְעָבוּ וְגַם לֹא יִצְמָאוּ אָכֵן וַיִּתֵּן לָהֶם כֹּחַ לְבִלְתִּי יִסְבְּלוּ שׁוּם־צָרָה כִּי אִם־נִבְלְעָה בְּשִׂמְחַת הַמָּשִׁיחַ וַיְהִי כֵן כִּתְפִלַּת אַלְמָא כִּי הִתְפַּלֵּל בֶּאֱמוּנָה׃",
   "english": "And the Lord provided for them that they should hunger not, neither should they thirst; yea, and he also gave them strength, that they should suffer no manner of afflictions, save it were swallowed up in the joy of Christ. Now this was according to the prayer of Alma; and this because he prayed in faith."
  },
  {
@@ -24090,21 +24090,21 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 32,
   "verse": 4,
-  "hebrew": "וַיְהִי כְּדַבֵּר אַלְמָה וּבְלַמְּדוֹ אֶת־הָעָם עַל־גִּבְעַת אוֹנִידָה וַיָּבֹא אֵלָיו הָמוֹן רָב וְהֵם הָעָם אֲשֶׁר דִּבַּרְנוּ עֲלֵיהֶם אֲשֶׁר הָיוּ עֲנִיֵּי לֵב בַּעֲבוּר עָנְיָם בָּעוֹלָם׃",
+  "hebrew": "וַיְהִי כְּדַבֵּר אַלְמָא וּבְלַמְּדוֹ אֶת־הָעָם עַל־גִּבְעַת אוֹנִידָה וַיָּבֹא אֵלָיו הָמוֹן רָב וְהֵם הָעָם אֲשֶׁר דִּבַּרְנוּ עֲלֵיהֶם אֲשֶׁר הָיוּ עֲנִיֵּי לֵב בַּעֲבוּר עָנְיָם בָּעוֹלָם׃",
   "english": "Now, as Alma was teaching and speaking unto the people upon the hill Onidah, there came a great multitude unto him, who were those of whom we have been speaking, of whom were  poor in heart, because of their poverty as to the things of the world."
  },
  {
   "book": "Alma",
   "chapter": 32,
   "verse": 5,
-  "hebrew": "וַיָּבֹאוּ אֶל־אַלְמָה וַיֹּאמֶר הָרֹאשׁ אֲשֶׁר בָּהֶם אֵלָיו הִנֵּה מַה־יַּעֲשׂוּ אַחַי אֵלֶּה כִּי נִבְזִים הֵם בְּעֵינֵי כָל־אָדָם בַּעֲבוּר עָנְיָם וּבִפְרָט בְּעֵינֵי כֹּהֲנֵינוּ כִּי גֵרְשׁוּנוּ מִבָּתֵּי כְנֵסִיּוֹתֵינוּ אֲשֶׁר עָמַלְנוּ לִבְנוֹתָם בְּיָדֵינוּ וַיְגָרְשׁוּנוּ בַּעֲבוּר רֹב עָנְיֵנוּ וְאֵין לָנוּ מָקוֹם לְהִשְׁתַּחֲוֹת לֵאלֹהֵינוּ וְהִנֵּה מַה־נַּעֲשֶׂה׃",
+  "hebrew": "וַיָּבֹאוּ אֶל־אַלְמָא וַיֹּאמֶר הָרֹאשׁ אֲשֶׁר בָּהֶם אֵלָיו הִנֵּה מַה־יַּעֲשׂוּ אַחַי אֵלֶּה כִּי נִבְזִים הֵם בְּעֵינֵי כָל־אָדָם בַּעֲבוּר עָנְיָם וּבִפְרָט בְּעֵינֵי כֹּהֲנֵינוּ כִּי גֵרְשׁוּנוּ מִבָּתֵּי כְנֵסִיּוֹתֵינוּ אֲשֶׁר עָמַלְנוּ לִבְנוֹתָם בְּיָדֵינוּ וַיְגָרְשׁוּנוּ בַּעֲבוּר רֹב עָנְיֵנוּ וְאֵין לָנוּ מָקוֹם לְהִשְׁתַּחֲוֹת לֵאלֹהֵינוּ וְהִנֵּה מַה־נַּעֲשֶׂה׃",
   "english": "And they came unto Alma; and the one who was the foremost among them said unto him: Behold, what shall these my brethren do, for they are despised of all men because of their poverty, yea, and more especially by our priests; for they have cast us out of our synagogues which we have labored abundantly to build with our own hands; and they have cast us out because of our exceeding poverty; and we have no place to worship our God; and behold, what shall we do?"
  },
  {
   "book": "Alma",
   "chapter": 32,
   "verse": 6,
-  "hebrew": "וַיְהִי כִּשְׁמֹעַ אַלְמָה אֶת־זֹאת וַיִּסֹּב פָּנָיו אֵלָיו פִּתְאֹם וַיַּרְא בְּשִׂמְחָה גְדוֹלָה כִּי רָאָה כִּי־צָרוֹתֵיהֶם הִכְנִיעוּם בֶּאֱמֶת וְכִי נָכוֹנוּ לִשְׁמֹעַ אֶת־הַדָּבָר׃",
+  "hebrew": "וַיְהִי כִּשְׁמֹעַ אַלְמָא אֶת־זֹאת וַיִּסֹּב פָּנָיו אֵלָיו פִּתְאֹם וַיַּרְא בְּשִׂמְחָה גְדוֹלָה כִּי רָאָה כִּי־צָרוֹתֵיהֶם הִכְנִיעוּם בֶּאֱמֶת וְכִי נָכוֹנוּ לִשְׁמֹעַ אֶת־הַדָּבָר׃",
   "english": "And now when Alma heard this, he turned him about, his face immediately towards him, and he beheld with great joy; for he beheld that their afflictions had truly humbled them and that they were in a preparation to hear the word."
  },
  {
@@ -24216,7 +24216,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 32,
   "verse": 22,
-  "hebrew": "וְעַתָּה הִנֵּה אֹמֵר אֲנִי לָכֶם וַאֲנִי חָפֵץ כִּי תִזְכְּרוּ כִּי עֹשֶׂה־אֱלֹהִים חֶסֶד לְכָל־הַמַּאֲמִינִים בִּשְׁמוֹ לָכֵן חָפֵץ הוּא בָּרִאשׁוֹנָה כִּי תַאֲמִינוּ אָכֵן בִּדְבָרוֹ׃",
+  "hebrew": "וְעַתָּה הִנֵּה אֹמֵר אֲנִי לָכֶם וַאֲנִי חָפֵץ כִּי תִזְכְּרוּ כִּי עֹשֵׂה־אֱלֹהִים חֶסֶד לְכָל־הַמַּאֲמִינִים בִּשְׁמוֹ לָכֵן חָפֵץ הוּא בָּרִאשׁוֹנָה כִּי תַאֲמִינוּ אָכֵן בִּדְבָרוֹ׃",
   "english": "And now, behold, I say unto you, and I would that ye should remember, that God is merciful unto all who believe on his name; therefore he desireth, in the first place, that ye should believe, yea, even on his word."
  },
  {
@@ -24377,7 +24377,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 33,
   "verse": 2,
-  "hebrew": "וַיֹּאמֶר אֲלֵיהֶם אַלְמָה הִנֵּה אֲמַרְתֶּם כִּי לֹא תוּכְלוּ לַעֲבֹד אֶת־אֱלֹהֵיכֶם כִּי גֹרַשְׁתֶּם מִבָּתֵּי כְנֵסִיּוֹתֵיכֶם אַךְ הִנֵּה אֹמֵר אֲנִי לָכֶם אִם־תַּחְשְׁבוּ כִּי לֹא תוּכְלוּ לַעֲבֹד אֶת־אֱלֹהִים שׁוֹגִים אַתֶּם מְאֹד וַעֲלֵיכֶם לִדְרֹשׁ בַּכְּתוּבִים אִם־תַּחְשְׁבוּ כִּי לִמְּדוּ אֶתְכֶם זֹאת לֹא הֲבִינֹתֶם אוֹתָם׃",
+  "hebrew": "וַיֹּאמֶר אֲלֵיהֶם אַלְמָא הִנֵּה אֲמַרְתֶּם כִּי לֹא תוּכְלוּ לַעֲבֹד אֶת־אֱלֹהֵיכֶם כִּי גֹרַשְׁתֶּם מִבָּתֵּי כְנֵסִיּוֹתֵיכֶם אַךְ הִנֵּה אֹמֵר אֲנִי לָכֶם אִם־תַּחְשְׁבוּ כִּי לֹא תוּכְלוּ לַעֲבֹד אֶת־אֱלֹהִים שׁוֹגִים אַתֶּם מְאֹד וַעֲלֵיכֶם לִדְרֹשׁ בַּכְּתוּבִים אִם־תַּחְשְׁבוּ כִּי לִמְּדוּ אֶתְכֶם זֹאת לֹא הֲבִינֹתֶם אוֹתָם׃",
   "english": "And Alma said unto them: Behold, ye have said that ye could not worship your God because ye are cast out of your synagogues. But behold, I say unto you, if ye suppose that ye cannot worship God, ye do greatly err, and ye ought to search the scriptures; if ye suppose that they have taught you this, ye do not understand them."
  },
  {
@@ -24447,7 +24447,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 33,
   "verse": 12,
-  "hebrew": "וְעַתָּה אָמַר אַלְמָה אֲלֵיהֶם הֲתַאֲמִינוּ בַּכְּתוּבִים אֲשֶׁר נִכְתְּבוּ בִּידֵי הַקַּדְמוֹנִים׃",
+  "hebrew": "וְעַתָּה אָמַר אַלְמָא אֲלֵיהֶם הֲתַאֲמִינוּ בַּכְּתוּבִים אֲשֶׁר נִכְתְּבוּ בִּידֵי הַקַּדְמוֹנִים׃",
   "english": "And now Alma said unto them: Do ye believe those scriptures which have been written by them of old?"
  },
  {
@@ -24468,7 +24468,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 33,
   "verse": 15,
-  "hebrew": "כִּי לֹא כָתוּב כִּי זֶנוֹס לְבַדּוֹ דִּבֶּר עַל־הַדְּבָרִים הָאֵלֶּה כִּי גַּם־זֶנוֹק דִּבֶּר עֲלֵיהֶם׃",
+  "hebrew": "כִּי לֹא כָּתוּב כִּי זֶנוֹס לְבַדּוֹ דִּבֶּר עַל־הַדְּבָרִים הָאֵלֶּה כִּי גַּם־זֶנוֹק דִּבֶּר עֲלֵיהֶם׃",
   "english": "For it is not written that Zenos alone spake of these things, but Zenock also spake of these things—"
  },
  {
@@ -24531,7 +24531,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 34,
   "verse": 1,
-  "hebrew": "וַיְהִי אַחֲרֵי דַבֵּר אַלְמָא אֶת־הַדְּבָרִים הָאֵלֶּה אֲלֵיהֶם וַיֵּשֶׁב עַל־הָאָרֶץ וַיָּקָם עֲמוּלֵק וַיָּחֶל לְלַמְּדָם לֵאמֹר׃",
+  "hebrew": "וַיְהִי אַחֲרֵי דַבֵּר אַלְמָא אֶת־הַדְּבָרִים הָאֵלֶּה אֲלֵיהֶם וַיֵּשֶׁב עַל־הָאָרֶץ וַיָּקָם עֲמוּלֶק וַיָּחֶל לְלַמְּדָם לֵאמֹר׃",
   "english": "And now it came to pass that after Alma had spoken these words unto them he sat down upon the ground, and Amulek arose and began to teach them, saying:"
  },
  {
@@ -24734,7 +24734,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 34,
   "verse": 30,
-  "hebrew": "וְעַתָּה אַחַי חָפַצְתִּי כִּי אַחֲרֵי הָיוֹת לָכֶם עֵדִים רַבִּים בִּרְאוֹתְכֶם כִּי כִתְבֵי הַקֹּדֶשׁ מְעִידִים עַל־אֵלֶּה תָּבֹאוּ וְתָבִיאוּ פְּרִי הַשָּׁבִים׃",
+  "hebrew": "וְעַתָּה אַחַי חָפַצְתִּי כִּי אַחֲרֵי הָיוֹת לָכֶם עֵדִים רַבִּים בִּרְאוֹתְכֶם כִּי כִּתְבֵי הַקֹּדֶשׁ מְעִידִים עַל־אֵלֶּה תָּבֹאוּ וְתָבִיאוּ פְּרִי הַשָּׁבִים׃",
   "english": "And now, my brethren, I would that, after ye have received so many witnesses, seeing that the holy scriptures testify of these things, ye come forth and bring fruit unto repentance."
  },
  {
@@ -24818,7 +24818,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 35,
   "verse": 1,
-  "hebrew": "וַיְהִי כְּכַלּוֹת עֲמוּלֵק אֶת־הַדְּבָרִים הָאֵלֶּה וַיִּפָּרְדוּ מִן־הֶהָמוֹן וַיָּבֹאוּ אֶל־אֶרֶץ יֶרְשׁוֹן׃",
+  "hebrew": "וַיְהִי כְּכַלּוֹת עֲמוּלֶק אֶת־הַדְּבָרִים הָאֵלֶּה וַיִּפָּרְדוּ מִן־הֶהָמוֹן וַיָּבֹאוּ אֶל־אֶרֶץ יֶרְשׁוֹן׃",
   "english": "Now it came to pass that after Amulek had made an end of these words, they withdrew themselves from the multitude and came over into the land of Jershon."
  },
  {
@@ -24853,14 +24853,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 35,
   "verse": 6,
-  "hebrew": "וַיְהִי אַחֲרֵי חָקְרָם אֶת־לֵב כָּל־הָעָם וַיְגֹרְשׁוּ מִן־הָאָרֶץ אֶת־הַתּוֹמְכִים בַּדְּבָרִים אֲשֶׁר דִּבְּרוּ אַלְמָה וְאֶחָיו וְרַבִּים הָיוּ וַיָּבֹאוּ גַם־הֵם אֶל־אֶרֶץ יֶרְשׁוֹן׃",
+  "hebrew": "וַיְהִי אַחֲרֵי חָקְרָם אֶת־לֵב כָּל־הָעָם וַיְגֹרְשׁוּ מִן־הָאָרֶץ אֶת־הַתּוֹמְכִים בַּדְּבָרִים אֲשֶׁר דִּבְּרוּ אַלְמָא וְאֶחָיו וְרַבִּים הָיוּ וַיָּבֹאוּ גַם־הֵם אֶל־אֶרֶץ יֶרְשׁוֹן׃",
   "english": "And it came to pass that after they had found out the minds of all the people, those who were in favor of the words which had been spoken by Alma and his brethren were cast out of the land; and they were many; and they came over also into the land of Jershon."
  },
  {
   "book": "Alma",
   "chapter": 35,
   "verse": 7,
-  "hebrew": "וַיְשָׁרְתוּ אֲלֵיהֶם אַלְמָה וְאֶחָיו׃",
+  "hebrew": "וַיְשָׁרְתוּ אֲלֵיהֶם אַלְמָא וְאֶחָיו׃",
   "english": "And it came to pass that Alma and his brethren did minister unto them."
  },
  {
@@ -24909,7 +24909,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 35,
   "verse": 14,
-  "hebrew": "וְאַלְמָה וְעַמּוֹן וַאֲחֵיהֶם וְגַם שְׁנֵי בְנֵי אַלְמָה שָׁבוּ אֶל־אֶרֶץ זָרַהֶמְלָהאַחֲרֵי הֱיוֹתָם כֵּלִים בְּיַד אֱלֹהִים לְהָשִׁיב רַבִּים מִן־הַזּוֹרָמִים וְכָל־אֲשֶׁר הוּשְׁבוּ גֹּרְשׁוּ מֵאַרְצָם אַךְ יֵשׁ לָהֶם אֲרָצוֹת לְנַחֲלָה בְּאֶרֶץ יֶרְשׁוֹן וַיִּשְׂאוּ כְלֵי נֶשֶׁק לְהָגֵן עַל־נַפְשָׁם וְעַל־נְשֵׁיהֶם וְטַפָּם וְאַרְצוֹתֵיהֶם׃",
+  "hebrew": "וְאַלְמָא וְעַמּוֹן וַאֲחֵיהֶם וְגַם שְׁנֵי בְנֵי אַלְמָא שָׁבוּ אֶל־אֶרֶץ זָרַחֶמְלָהאַחֲרֵי הֱיוֹתָם כֵּלִים בְּיַד אֱלֹהִים לְהָשִׁיב רַבִּים מִן־הַזּוֹרָמִים וְכָל־אֲשֶׁר הוּשְׁבוּ גֹּרְשׁוּ מֵאַרְצָם אַךְ יֵשׁ לָהֶם אֲרָצוֹת לְנַחֲלָה בְּאֶרֶץ יֶרְשׁוֹן וַיִּשְׂאוּ כְלֵי נֶשֶׁק לְהָגֵן עַל־נַפְשָׁם וְעַל־נְשֵׁיהֶם וְטַפָּם וְאַרְצוֹתֵיהֶם׃",
   "english": "And Alma, and Ammon, and their brethren, and also the two sons of Alma returned to the land of Zarahemla, after having been instruments in the hands of God of bringing many of the Zoramites to repentance; and as many as were brought to repentance were driven out of their land; but they have lands for their inheritance in the land of Jershon, and they have taken up arms to defend themselves, and their wives, and children, and their lands."
  },
  {
@@ -25077,7 +25077,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 36,
   "verse": 22,
-  "hebrew": "אָכֵן דִּמִּיתִי לִרְאוֹת כַּאֲשֶׁר רָאָה לֶחִי אָבִינוּ אֶת־אֱלֹהִים יוֹשֵׁב עַל־כִּסְאוֹ מֻקָּף בְּקְהִלּוֹת מַלְאָכִים אֵין מִסְפָּר מְזַמְּרִים וּמְהַלְלִים אֶת־אֱלֹהֵיהֶם אָכֵן וַתִּכְסֹף נַפְשִׁי לִהְיוֹת שָׁם׃",
+  "hebrew": "אָכֵן דִּמִּיתִי לִרְאוֹת כַּאֲשֶׁר רָאָה לֶחִי אָבִינוּ אֶת־אֱלֹהִים יוֹשֵׁב עַל־כִּסְאוֹ מֻקָּף בִּקְהִלּוֹת מַלְאָכִים אֵין מִסְפָּר מְזַמְּרִים וּמְהַלְלִים אֶת־אֱלֹהֵיהֶם אָכֵן וַתִּכְסֹף נַפְשִׁי לִהְיוֹת שָׁם׃",
   "english": "Yea, methought I saw, even as our father Lehi saw, God sitting upon his throne, surrounded with numberless concourses of angels, in the attitude of singing and praising their God; yea, and my soul did long to be there."
  },
  {
@@ -25091,7 +25091,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 36,
   "verse": 24,
-  "hebrew": "אָכֵן וּמֵעֵת הַהִיא וְעַד־עַתָּה עָמַלְתִּי בְּלִי הֶרֶף לְהָשִׁיב נְפָשׁוֹת לְמַעַן יִטְעֲמוּ מִן־הַשִּׂמְחָה הַגְּדוֹלָה אֲשֶׁר טָעַמְתִּי וְלְמַעַן יִוָּלְדוּ גַם־הֵם לֵאלֹהִים וְיִמָּלְאוּ רוּחַ הַקֹּדֶשׁ׃",
+  "hebrew": "אָכֵן וּמֵעֵת הַהִיא וְעַד־עַתָּה עָמַלְתִּי בְּלִי הֶרֶף לְהָשִׁיב נְפָשׁוֹת לְמַעַן יִטְעֲמוּ מִן־הַשִּׂמְחָה הַגְּדוֹלָה אֲשֶׁר טָעַמְתִּי וּלְמַעַן יִוָּלְדוּ גַם־הֵם לֵאלֹהִים וְיִמָּלְאוּ רוּחַ הַקֹּדֶשׁ׃",
   "english": "Yea, and from that time even until now, I have labored without ceasing, that I might bring souls unto repentance; that I might bring them to taste of the exceeding joy of which I did taste; that they might also be born of God, and be filled with the Holy Ghost."
  },
  {
@@ -25154,7 +25154,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 37,
   "verse": 3,
-  "hebrew": "וְלוּחוֹת הַנְּחֹשֶׁת הָאֵלֶּה אֲשֶׁר עֲלֵיהֶם הַפִּתּוּחִים הָאֵלֶּה אֲשֶׁר בָּם דִּבְרֵי כִתְבֵי הַקֹּדֶשׁ וְתוֹלְדוֹת אֲבוֹתֵינוּ מֵרֵאשִׁית׃",
+  "hebrew": "וְלוּחוֹת הַנְּחֹשֶׁת הָאֵלֶּה אֲשֶׁר עֲלֵיהֶם הַפִּתּוּחִים הָאֵלֶּה אֲשֶׁר בָּם דִּבְרֵי כִּתְבֵי הַקֹּדֶשׁ וְתוֹלְדוֹת אֲבוֹתֵינוּ מֵרֵאשִׁית׃",
   "english": "And these plates of brass, which contain these engravings, which have the records of the holy scriptures upon them, which have the genealogy of our forefathers, even from the beginning—"
  },
  {
@@ -25770,7 +25770,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 40,
   "verse": 10,
-  "hebrew": "וּכְשֶׁיָּבוֹא הַמּוֹעֵד אֲשֶׁר בּוֹ יָקוּמוּ כֻלָּם אָז יֵדְעוּ כִּי יוֹדֵעַ אֱלֹהִים אֶת־כׇּל־הַמּוֹעֲדִים הַמּוּעָדִים לָאָדָם׃",
+  "hebrew": "וּבְבוֹא הַמּוֹעֵד אֲשֶׁר בּוֹ יָקוּמוּ כֻלָּם אָז יֵדְעוּ כִּי יוֹדֵעַ אֱלֹהִים אֶת־כׇּל־הַמּוֹעֲדִים הַמּוּעָדִים לָאָדָם׃",
   "english": "And when the time cometh when all shall rise, then shall they know that God knoweth all the times which are appointed unto man."
  },
  {
@@ -25959,7 +25959,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 41,
   "verse": 11,
-  "hebrew": "וְעַתָּה בְנִי כׇּל־בְּנֵי הָאָדָם אֲשֶׁר בַּבָּשָׂר אוֹ כַאֲשֶׁר אֹמַר בַּגּוּף הֵם בְּרֹאשׁ מְרוֹרִים וּבְמוֹסְרוֹת עָוֺן הֵם בְּלִי אֱלֹהִים בָּעוֹלָם וְהָלְכוּ לְעֻמַּת דֶּרֶךְ אֱלֹהִים עַל־כֵּן הֵם לְנֶגֶד דֶּרֶךְ הָאֹשֶׁר׃",
+  "hebrew": "וְעַתָּה בְנִי כׇּל־בְּנֵי הָאָדָם אֲשֶׁר בַּבָּשָׂר אוֹ כַאֲשֶׁר אֹמַר בַּגּוּף הֵם בְּרֹאשׁ מְרוֹרִים וּבְמוֹסְרוֹת עָוֹן הֵם בְּלִי אֱלֹהִים בָּעוֹלָם וְהָלְכוּ לְעֻמַּת דֶּרֶךְ אֱלֹהִים עַל־כֵּן הֵם לְנֶגֶד דֶּרֶךְ הָאֹשֶׁר׃",
   "english": "And now, my son, all men that are in a state of nature, or I would say, in a carnal state, are in the gall of bitterness and in the bonds of iniquity; they are without God in the world, and they have gone contrary to the nature of God; therefore, they are in a state contrary to the nature of happiness."
  },
  {
@@ -26211,7 +26211,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 43,
   "verse": 1,
-  "hebrew": "וַיְהִי כִּי הָלְכוּ בְּנֵי אַלְמָה בְּקֶרֶב הָעָם לְהַגִּיד לָהֶם אֶת־דְּבַר יְהוָה וְגַם אַלְמָה בְּעַצְמוֹ לֹא יָכֹל לָנוּחַ וַיֵּלֶךְ גַּם־הוּא׃",
+  "hebrew": "וַיְהִי כִּי הָלְכוּ בְּנֵי אַלְמָא בְּקֶרֶב הָעָם לְהַגִּיד לָהֶם אֶת־דְּבַר יְהוָה וְגַם אַלְמָא בְּעַצְמוֹ לֹא יָכֹל לָנוּחַ וַיֵּלֶךְ גַּם־הוּא׃",
   "english": "And now it came to pass that the sons of Alma did go forth among the people, to declare the word unto them. And Alma, also, himself, could not rest, and he also went forth."
  },
  {
@@ -26344,7 +26344,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 43,
   "verse": 20,
-  "hebrew": "וְצְבָא זֶרַהֶמְנָה לֹא הָיָה מוּכָן בְּדָבָר כָּזֶה כִּי הָיוּ לָהֶם רַק חַרְבוֹתֵיהֶם וְחַרְמְשׁוֹתֵיהֶם קַשְׁתוֹתֵיהֶם וְחִצֵּיהֶם אַבְנֵיהֶם וְקַלְּעֵיהֶם וְהָיוּ עֵירֻמִּים מִלְּבַד עוֹר אֲשֶׁר חָגְרוּ עַל־מָתְנֵיהֶם כֻּלָּם הָיוּ עֵירֻמִּים זוּלַת הַזּוֹרָמִים וְהָעֲמָלֵקִים׃",
+  "hebrew": "וּצְבָא זֶרַהֶמְנָה לֹא הָיָה מוּכָן בְּדָבָר כָּזֶה כִּי הָיוּ לָהֶם רַק חַרְבוֹתֵיהֶם וְחַרְמְשׁוֹתֵיהֶם קַשְׁתוֹתֵיהֶם וְחִצֵּיהֶם אַבְנֵיהֶם וְקַלְּעֵיהֶם וְהָיוּ עֵירֻמִּים מִלְּבַד עוֹר אֲשֶׁר חָגְרוּ עַל־מָתְנֵיהֶם כֻּלָּם הָיוּ עֵירֻמִּים זוּלַת הַזּוֹרָמִים וְהָעֲמָלֵקִים׃",
   "english": "Now the army of Zerahemnah was not prepared with any such thing; they had only their swords and their cimeters, their bows and their arrows, their stones and their slings; and they were naked, save it were a skin which was girded about their loins; yea, all were naked, save it were the Zoramites and the Amalekites;"
  },
  {
@@ -26365,14 +26365,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 43,
   "verse": 23,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר יָצְאוּ אֶל־הַמִּדְבָּר וַיִּשְׁלַח מוֹרוֹנִי מְרַגְּלִים אֶל־הַמִּדְבָּר לִצְפּוֹת עַל־מַחֲנֵיהֶם וּמוֹרוֹנִי בְּיָדְעוֹ אֶת־נְבוּאוֹת אַלְמָה שָׁלַח אֲנָשִׁים אֵלָיו לְבַקֵּשׁ כִּי יִדְרֹשׁ מֵיְהוָה אָנָה יֵלְכוּ צִבְאוֹת הַנֶּפִיִּים לְהָגֵן עַל־עַצְמָם מִפְּנֵי הַלָּמָנִים׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר יָצְאוּ אֶל־הַמִּדְבָּר וַיִּשְׁלַח מוֹרוֹנִי מְרַגְּלִים אֶל־הַמִּדְבָּר לִצְפּוֹת עַל־מַחֲנֵיהֶם וּמוֹרוֹנִי בְּיָדְעוֹ אֶת־נְבוּאוֹת אַלְמָא שָׁלַח אֲנָשִׁים אֵלָיו לְבַקֵּשׁ כִּי יִדְרֹשׁ מֵיְהוָה אָנָה יֵלְכוּ צִבְאוֹת הַנֶּפִיִּים לְהָגֵן עַל־עַצְמָם מִפְּנֵי הַלָּמָנִים׃",
   "english": "But it came to pass, as soon as they had departed into the wilderness Moroni sent spies into the wilderness to watch their camp; and Moroni, also, knowing of the prophecies of Alma, sent certain men unto him, desiring him that he should inquire of the Lord whither the armies of the Nephites should go to defend themselves against the Lamanites."
  },
  {
   "book": "Alma",
   "chapter": 43,
   "verse": 24,
-  "hebrew": "וַיְהִי דְּבַר־יְהוָה אֶל־אַלְמָה וַיַּגֵּד אַלְמָה לְמַלְאֲכֵי מוֹרוֹנִי כִּי צִבְאוֹת הַלָּמָנִים צוֹעֲדִים סָבִיב בַּמִּדְבָּר לְמַעַן יַעַבְרוּ אֶל־אֶרֶץ מַנְטִי לְמַעַן יָחֵלּוּ לְהִתְקִיף אֶת־הַחֵלֶק הַחַלָּשׁ מִן־הָעָם וַיֵּלְכוּ הַמַּלְאָכִים וַיְמַסְּרוּ אֶת־הַדָּבָר לְמוֹרוֹנִי׃",
+  "hebrew": "וַיְהִי דְּבַר־יְהוָה אֶל־אַלְמָא וַיַּגֵּד אַלְמָא לְמַלְאֲכֵי מוֹרוֹנִי כִּי צִבְאוֹת הַלָּמָנִים צוֹעֲדִים סָבִיב בַּמִּדְבָּר לְמַעַן יַעַבְרוּ אֶל־אֶרֶץ מַנְטִי לְמַעַן יָחֵלּוּ לְהִתְקִיף אֶת־הַחֵלֶק הַחַלָּשׁ מִן־הָעָם וַיֵּלְכוּ הַמַּלְאָכִים וַיְמַסְּרוּ אֶת־הַדָּבָר לְמוֹרוֹנִי׃",
   "english": "And it came to pass that the word of the Lord came unto Alma, and Alma informed the messengers of Moroni, that the armies of the Lamanites were marching round about in the wilderness, that they might come over into the land of Manti, that they might commence an attack upon the weaker part of the people. And those messengers went and delivered the message unto Moroni."
  },
  {
@@ -26519,14 +26519,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 43,
   "verse": 45,
-  "hebrew": "אַךְ הַנֶּפִיִּים הָיוּ מְעוֹרָרִים בְּסִבָּה טוֹבָה יוֹתֵר כִּי לֹא נִלְחֲמוּ לְמַעַן מַלְכוּת וְלֹא לְמַעַן שִׁלְטוֹן כִּי־אִם נִלְחֲמוּ עַל־בָּתֵּיהֶם וְעַל־דְּרוֹרָם וְעַל־נְשֵׁיהֶם וְעַל־יַלְדֵיהֶם וְעַל־כָּל־אֲשֶׁר לָהֶם וְעַל־חֻקֵּי עֲבוֹדָתָם וְקְהִלָּתָם׃",
+  "hebrew": "אַךְ הַנֶּפִיִּים הָיוּ מְעוֹרָרִים בְּסִבָּה טוֹבָה יוֹתֵר כִּי לֹא נִלְחֲמוּ לְמַעַן מַלְכוּת וְלֹא לְמַעַן שִׁלְטוֹן כִּי־אִם נִלְחֲמוּ עַל־בָּתֵּיהֶם וְעַל־דְּרוֹרָם וְעַל־נְשֵׁיהֶם וְעַל־יַלְדֵיהֶם וְעַל־כָּל־אֲשֶׁר לָהֶם וְעַל־חֻקֵּי עֲבוֹדָתָם וּקְהִלָּתָם׃",
   "english": "Nevertheless, the Nephites were inspired by a better cause, for they were not fighting for monarchy nor power but they were fighting for their homes and their liberties, their wives and their children, and their all, yea, for their rites of worship and their church."
  },
  {
   "book": "Alma",
   "chapter": 43,
   "verse": 46,
-  "hebrew": "וַיַּעֲשׂוּ אֵת אֲשֶׁר רָאוּ כְּחוֹבָתָם אֲשֶׁר חָבוּ לֵאלֹהֵיהֶם כִּי אָמַר יְהוָה לָהֶם וְגַם לַאֲבוֹתֵיהֶם כַּאֲשֶׁר לֹא תֶאְשְׁמוּ בַּפֶּשַׁע הָרִאשׁוֹן וְגַם לֹא בַשֵּׁנִי לֹא תִתְּנוּ אֶת־נַפְשְׁכֶם לְהֵהָרֵג בִּידֵי אֹיְבֵיכֶם׃",
+  "hebrew": "וַיַּעֲשׂוּ אֶת־אֲשֶׁר רָאוּ כְּחוֹבָתָם אֲשֶׁר חָבוּ לֵאלֹהֵיהֶם כִּי אָמַר יְהוָה לָהֶם וְגַם לַאֲבוֹתֵיהֶם כַּאֲשֶׁר לֹא תֶאְשְׁמוּ בַּפֶּשַׁע הָרִאשׁוֹן וְגַם לֹא בַשֵּׁנִי לֹא תִתְּנוּ אֶת־נַפְשְׁכֶם לְהֵהָרֵג בִּידֵי אֹיְבֵיכֶם׃",
   "english": "And they were doing that which they felt was the duty which they owed to their God; for the Lord had said unto them, and also unto their fathers, that: Inasmuch as ye are not guilty of the first offense, neither the second, ye shall not suffer yourselves to be slain by the hands of your enemies."
  },
  {
@@ -26694,7 +26694,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 44,
   "verse": 16,
-  "hebrew": "וַיְהִי כִּי קָצַף זֶרַהֶמְנָה מְאֹד וַיָּסֶת אֶת־שְׁאֵרִית חַיָּלָיו לְכַעַס לְהִלָּחֵם בְּחָזְקָה יוֹתֵר נֶגֶד הַנֶפִים׃",
+  "hebrew": "וַיְהִי כִּי קָצַף זֶרַהֶמְנָה מְאֹד וַיָּסֶת אֶת־שְׁאֵרִית חַיָּלָיו לְכַעַס לְהִלָּחֵם בְּחָזְקָה יוֹתֵר נֶגֶד הַנֶּפִיִּים׃",
   "english": "Now it came to pass that Zerahemnah was exceedingly wroth, and he did stir up the remainder of his soldiers to anger, to contend more powerfully against the Nephites."
  },
  {
@@ -26729,7 +26729,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 44,
   "verse": 21,
-  "hebrew": "וְעַתָּה מִסְפַּר מֵתֵיהֶם לֹא נִמְנָה מֵרֹב מִסְפָּרָם אָכֵן מִסְפַּר מֵתֵיהֶם הָיָה רַב מְאֹד גַּם בַּנֶפִים וְגַם בַּלָּמָנִים׃",
+  "hebrew": "וְעַתָּה מִסְפַּר מֵתֵיהֶם לֹא נִמְנָה מֵרֹב מִסְפָּרָם אָכֵן מִסְפַּר מֵתֵיהֶם הָיָה רַב מְאֹד גַּם בַּנְּפִיִּים וְגַם בַּלָּמָנִים׃",
   "english": "Now the number of their dead was not numbered because of the greatness of the number; yea, the number of their dead was exceedingly great, both on the Nephites and on the Lamanites."
  },
  {
@@ -26750,7 +26750,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 44,
   "verse": 24,
-  "hebrew": "וְכֵן תָּמָה הַשָּׁנָה הַשְּׁמֹנֶה עֶשְׂרֵה לְמַלְכוּת הַשֹּׁפְטִים עַל־עַם נֶפִי וְכֵן תָּם סֵפֶר אַלְמָה אֲשֶׁר נִכְתַּב עַל־לוּחוֹת נֶפִי׃",
+  "hebrew": "וְכֵן תָּמָה הַשָּׁנָה הַשְּׁמֹנֶה עֶשְׂרֵה לְמַלְכוּת הַשֹּׁפְטִים עַל־עַם נֶפִי וְכֵן תָּם סֵפֶר אַלְמָא אֲשֶׁר נִכְתַּב עַל־לוּחוֹת נֶפִי׃",
   "english": "And thus ended the eighteenth year of the reign of the judges over the people of Nephi. And thus ended the record of Alma, which was written upon the plates of Nephi."
  },
  {
@@ -26764,7 +26764,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 45,
   "verse": 2,
-  "hebrew": "וַיְהִי בַּשָּׁנָה הַתְּשַׁע עֶשְׂרֵה לְמַלְכוּת הַשֹּׁפְטִים עַל־עַם נֶפִי וַיָּבֹא אַלְמָה אֶל־הֵילָמָן בְּנוֹ וַיֹּאמֶר אֵלָיו הֲתַאֲמִין בַּדְּבָרִים אֲשֶׁר דִּבַּרְתִּי אֵלֶיךָ עַל־הַסְּפָרִים הָאֵלֶּה אֲשֶׁר נִשְׁמָרִים׃",
+  "hebrew": "וַיְהִי בַּשָּׁנָה הַתְּשַׁע עֶשְׂרֵה לְמַלְכוּת הַשֹּׁפְטִים עַל־עַם נֶפִי וַיָּבֹא אַלְמָא אֶל־הֵילָמָן בְּנוֹ וַיֹּאמֶר אֵלָיו הֲתַאֲמִין בַּדְּבָרִים אֲשֶׁר דִּבַּרְתִּי אֵלֶיךָ עַל־הַסְּפָרִים הָאֵלֶּה אֲשֶׁר נִשְׁמָרִים׃",
   "english": "And it came to pass in the nineteenth year of the reign of the judges over the people of Nephi, that Alma came unto his son Helaman and said unto him: Believest thou the words which I spake unto thee concerning those records which have been kept?"
  },
  {
@@ -26778,7 +26778,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 45,
   "verse": 4,
-  "hebrew": "וַיֹּאמֶר אַלְמָה שׁוּב הֲתַאֲמִין בְּיֵשׁוּעַ הַמָּשִׁיחַ אֲשֶׁר יָבוֹא׃",
+  "hebrew": "וַיֹּאמֶר אַלְמָא שׁוּב הֲתַאֲמִין בְּיֵשׁוּעַ הַמָּשִׁיחַ אֲשֶׁר יָבוֹא׃",
   "english": "And Alma said again: Believest thou in Jesus Christ, who shall come?"
  },
  {
@@ -26792,7 +26792,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 45,
   "verse": 6,
-  "hebrew": "וַיֹּאמֶר אֵלָיו אַלְמָה שׁוּב הֲתִשְׁמֹר אֶת־מִצְוֹתָי׃",
+  "hebrew": "וַיֹּאמֶר אֵלָיו אַלְמָא שׁוּב הֲתִשְׁמֹר אֶת־מִצְוֹתָי׃",
   "english": "And Alma said unto him again: Will ye keep my commandments?"
  },
  {
@@ -26806,7 +26806,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 45,
   "verse": 8,
-  "hebrew": "וַיֹּאמֶר אֵלָיו אַלְמָה בָּרוּךְ אַתָּה וְיַצְלִיחֲךָ יְהוָה בָּאָרֶץ הַזֹּאת׃",
+  "hebrew": "וַיֹּאמֶר אֵלָיו אַלְמָא בָּרוּךְ אַתָּה וְיַצְלִיחֲךָ יְהוָה בָּאָרֶץ הַזֹּאת׃",
   "english": "Then Alma said unto him: Blessed art thou; and the Lord shall prosper thee in this land."
  },
  {
@@ -26855,7 +26855,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 45,
   "verse": 15,
-  "hebrew": "וַיְהִי אַחֲרֵי דִבֶּר אַלְמָה אֶת־הַדְּבָרִים הָאֵלֶּה לְהֵילָמָן וַיְבָרְכֵהוּ וְגַם אֶת־בָּנָיו הָאֲחֵרִים וַיְבָרֵךְ גַּם אֶת־הָאָרֶץ לְמַעַן הַצַּדִּיקִים׃",
+  "hebrew": "וַיְהִי אַחֲרֵי דִבֶּר אַלְמָא אֶת־הַדְּבָרִים הָאֵלֶּה לְהֵילָמָן וַיְבָרְכֵהוּ וְגַם אֶת־בָּנָיו הָאֲחֵרִים וַיְבָרֵךְ גַּם אֶת־הָאָרֶץ לְמַעַן הַצַּדִּיקִים׃",
   "english": "And now it came to pass that after Alma had said these things to Helaman, he blessed him, and also his other sons; and he also blessed the earth for the righteous' sake."
  },
  {
@@ -26869,14 +26869,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 45,
   "verse": 17,
-  "hebrew": "וְעַתָּה כַּאֲשֶׁר דִּבֶּר אַלְמָה אֶת־הַדְּבָרִים הָאֵלֶּה בֵּרַךְ אֶת־הַקְּהִלָּה אָכֵן אֶת־כָּל־אֲשֶׁר יַעַמְדוּ בֶּאֱמוּנָה מֵהָעֵת הַהִיא וָהָלְאָה׃",
+  "hebrew": "וְעַתָּה כַּאֲשֶׁר דִּבֶּר אַלְמָא אֶת־הַדְּבָרִים הָאֵלֶּה בֵּרַךְ אֶת־הַקְּהִלָּה אָכֵן אֶת־כָּל־אֲשֶׁר יַעַמְדוּ בֶּאֱמוּנָה מֵהָעֵת הַהִיא וָהָלְאָה׃",
   "english": "And now, when Alma had said these words he blessed the church, yea, all those who should stand fast in the faith from that time henceforth."
  },
  {
   "book": "Alma",
   "chapter": 45,
   "verse": 18,
-  "hebrew": "וְכַאֲשֶׁר עָשָׂה אַלְמָא זֹאת יָצָא מֵאֶרֶץ זָרַהֶמְלָה לָלֶכֶת אֶל־אֶרֶץ מֶלֶק וַיְהִי כִּי לֹא נִשְׁמַע מִמֶּנּוּ עוֹד וְעַל־מוֹתוֹ וּקְבוּרָתוֹ לֹא יָדַעְנוּ׃",
+  "hebrew": "וְכַאֲשֶׁר עָשָׂה אַלְמָא זֹאת יָצָא מֵאֶרֶץ זָרַחֶמְלָה לָלֶכֶת אֶל־אֶרֶץ מֶלֶק וַיְהִי כִּי לֹא נִשְׁמַע מִמֶּנּוּ עוֹד וְעַל־מוֹתוֹ וּקְבוּרָתוֹ לֹא יָדַעְנוּ׃",
   "english": "And when Alma had done this he departed out of the land of Zarahemla, as if to go into the land of Melek. And it came to pass that he was never heard of more; as to his death or burial we know not of."
  },
  {
@@ -27149,7 +27149,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 46,
   "verse": 33,
-  "hebrew": "וַיְהִי כִּי נָס אַמָלִיקְיָה עִם־מְתֵי מְעַט מֵאֲנָשָׁיו וְהַנּוֹתָרִים נִתְּנוּ בִּידֵי מוֹרוֹנִי וַיּוּשְׁבוּ לְאֶרֶץ זַרַהֶמְלָה׃",
+  "hebrew": "וַיְהִי כִּי נָס אַמָלִיקְיָה עִם־מְתֵי מְעַט מֵאֲנָשָׁיו וְהַנּוֹתָרִים נִתְּנוּ בִּידֵי מוֹרוֹנִי וַיּוּשְׁבוּ לְאֶרֶץ זָרַחֶמְלָה׃",
   "english": "And it came to pass that Amalickiah fled with a small number of his men, and the remainder were delivered up into the hands of Moroni and were taken back into the land of Zarahemla."
  },
  {
@@ -27170,7 +27170,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 46,
   "verse": 36,
-  "hebrew": "וַיְהִי גַם כִּי צִוָּה לְהָרִים אֶת־נֵס הַדְּרוֹר עַל־כׇל־מִגְדָּל אֲשֶׁר בְּכׇל־הָאָרֶץ אֲשֶׁר הָיְתָה בִּידֵי הַנֶּפִיִּים וְכֵן נָטַע מוֹרוֹנִי אֶת־דֶּגֶל הַדְּרוֹר בְּקֶרֶב הַנֶפִים׃",
+  "hebrew": "וַיְהִי גַם כִּי צִוָּה לְהָרִים אֶת־נֵס הַדְּרוֹר עַל־כׇל־מִגְדָּל אֲשֶׁר בְּכׇל־הָאָרֶץ אֲשֶׁר הָיְתָה בִּידֵי הַנֶּפִיִּים וְכֵן נָטַע מוֹרוֹנִי אֶת־דֶּגֶל הַדְּרוֹר בְּקֶרֶב הַנֶּפִיִּים׃",
   "english": "And it came to pass also, that he caused the title of liberty to be hoisted upon every tower which was in all the land, which was possessed by the Nephites; and thus Moroni planted the standard of liberty among the Nephites."
  },
  {
@@ -27212,7 +27212,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 47,
   "verse": 1,
-  "hebrew": "וְעַתָּה נָשׁוּב בְּסִפְרֵנוּ אֶל־אַמָלִיקְיָה וְאֶל־הַנָּסִים עִמּוֹ הַמִּדְבָּרָה כִּי הִנֵּה לָקַח אֶת־הַהֹלְכִים עִמּוֹ וַיַּעַל לְאֶרֶץ נֶפִי בֵּין הַלָּמָנִים וַיָּסֶת אֶת־הַלָּמָנִים לִכְעֹס עַל־עַם נֶפִי עַד כִּי שָׁלַח מֶלֶךְ הַלָּמָנִים כְּרוּז בְּכָל־אַרְצוֹ בֵּין כָּל־עַמּוֹ כִּי יִתְקַבְּצוּ יַחְדָּו שׁוּב לָצֵאת לַמִּלְחָמָה עַל־הַנֶפִים׃",
+  "hebrew": "וְעַתָּה נָשׁוּב בְּסִפְרֵנוּ אֶל־אַמָלִיקְיָה וְאֶל־הַנָּסִים עִמּוֹ הַמִּדְבָּרָה כִּי הִנֵּה לָקַח אֶת־הַהֹלְכִים עִמּוֹ וַיַּעַל לְאֶרֶץ נֶפִי בֵּין הַלָּמָנִים וַיָּסֶת אֶת־הַלָּמָנִים לִכְעֹס עַל־עַם נֶפִי עַד כִּי שָׁלַח מֶלֶךְ הַלָּמָנִים כְּרוּז בְּכָל־אַרְצוֹ בֵּין כָּל־עַמּוֹ כִּי יִתְקַבְּצוּ יַחְדָּו שׁוּב לָצֵאת לַמִּלְחָמָה עַל־הַנֶּפִיִּים׃",
   "english": "Now we will return in our record to Amalickiah and those who had fled with him into the wilderness; for, behold, he had taken those who went with him, and went up in the land of Nephi among the Lamanites, and did stir up the Lamanites to anger against the people of Nephi, insomuch that the king of the Lamanites sent a proclamation throughout all his land, among all his people, that they should gather themselves together again to go to battle against the Nephites."
  },
  {
@@ -27247,7 +27247,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 47,
   "verse": 6,
-  "hebrew": "וַיָּשִׂימוּ אִישׁ לִהְיוֹת מֶלֶךְ וְרֹאשׁ עֲלֵיהֶם בִּהְיוֹת לִבָּם נָכוֹן בְּחָזְקָה כִּי לֹא יִכָּנְעוּ לָצֵאת נֶגֶד הַנֶפִים׃",
+  "hebrew": "וַיָּשִׂימוּ אִישׁ לִהְיוֹת מֶלֶךְ וְרֹאשׁ עֲלֵיהֶם בִּהְיוֹת לִבָּם נָכוֹן בְּחָזְקָה כִּי לֹא יִכָּנְעוּ לָצֵאת נֶגֶד הַנֶּפִיִּים׃",
   "english": "And they had appointed a man to be a king and a leader over them, being fixed in their minds with a determined resolution that they would not be subjected to go against the Nephites."
  },
  {
@@ -27352,7 +27352,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 47,
   "verse": 21,
-  "hebrew": "וַיֵּצֵא הַמֶּלֶךְ לִקְרָאתוֹ עִם־שׁוֹמְרָיו כִּי חָשַׁב כִּי מִלֵּא אַמָלִיקְיָה אֶת־מִצְוֹתָיו וְכִּי קִבֵּץ אַמָלִיקְיָה צָבָא גָּדוֹל כָּזֶה לָלֶכֶת לְהִלָּחֵם בַּנֶפִים׃",
+  "hebrew": "וַיֵּצֵא הַמֶּלֶךְ לִקְרָאתוֹ עִם־שׁוֹמְרָיו כִּי חָשַׁב כִּי מִלֵּא אַמָלִיקְיָה אֶת־מִצְוֹתָיו וְכִּי קִבֵּץ אַמָלִיקְיָה צָבָא גָּדוֹל כָּזֶה לָלֶכֶת לְהִלָּחֵם בַּנְּפִיִּים׃",
   "english": "And the king came out to meet him with his guards, for he supposed that Amalickiah had fulfilled his commands, and that Amalickiah had gathered together so great an army to go against the Nephites to battle."
  },
  {
@@ -27366,7 +27366,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 47,
   "verse": 23,
-  "hebrew": "וַיְהִי כִּי הוֹשִׁיט הַמֶּלֶךְ אֶת־יָדוֹ לַהֲקִימָם כְּמִשְׁפַּט הַלָּמָנִים לְאוֹת שָׁלוֹם אֲשֶׁר לָקְחוּ מִשְׁפָּט זֶה מֵאֵת הַנֶפִים׃",
+  "hebrew": "וַיְהִי כִּי הוֹשִׁיט הַמֶּלֶךְ אֶת־יָדוֹ לַהֲקִימָם כְּמִשְׁפַּט הַלָּמָנִים לְאוֹת שָׁלוֹם אֲשֶׁר לָקְחוּ מִשְׁפָּט זֶה מֵאֵת הַנֶּפִיִּים׃",
   "english": "And it came to pass that the king put forth his hand to raise them, as was the custom with the Lamanites, as a token of peace, which custom they had taken from the Nephites."
  },
  {
@@ -27408,7 +27408,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 47,
   "verse": 29,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר רָאוּ עַבְדֵי הַמֶּלֶךְ צָבָא רֹדֵף אַחֲרֵיהֶם וַיִּפְחֲדוּ שֵׁנִית וַיָּנוּסוּ הַמִּדְבָּרָה וַיַּעַבְרוּ אֶל־אֶרֶץ זָרַהֶמְלָהוַיִּתְחַבְּרוּ אֶל־עַם עַמּוֹן׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר רָאוּ עַבְדֵי הַמֶּלֶךְ צָבָא רֹדֵף אַחֲרֵיהֶם וַיִּפְחֲדוּ שֵׁנִית וַיָּנוּסוּ הַמִּדְבָּרָה וַיַּעַבְרוּ אֶל־אֶרֶץ זָרַחֶמְלָהוַיִּתְחַבְּרוּ אֶל־עַם עַמּוֹן׃",
   "english": "Now when the servants of the king saw an army pursuing after them, they were frightened again, and fled into the wilderness, and came over into the land of Zarahemla and joined the people of Ammon."
  },
  {
@@ -27443,7 +27443,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 47,
   "verse": 34,
-  "hebrew": "וַיְהִי כִּי לָקַח אַמָלִיקְיָה אֶת־הָעֶבֶד הַהוּא אֲשֶׁר הָרַג אֶת־הַמֶּלֶךְ וְאֵת כָּל־אֲשֶׁר הָיוּ עִמּוֹ וַיָּבֹא אֶל־הַמַּלְכָּה אֶל־הַמָּקוֹם אֲשֶׁר יָשְׁבָה וַיָּעִידוּ כֻלָּם לְפָנֶיהָ כִּי נֶהֱרַג הַמֶּלֶךְ בִּידֵי עֲבָדָיו וַיֹּאמְרוּ גַּם הֵם נָסוּ הֲלֹא זֹאת מְעִידָה נֶגְדָּם וְכֵן הִצְדִּיקוּ אֶת־הַמַּלְכָּה עַל־מוֹת הַמֶּלֶךְ׃",
+  "hebrew": "וַיְהִי כִּי לָקַח אַמָלִיקְיָה אֶת־הָעֶבֶד הַהוּא אֲשֶׁר הָרַג אֶת־הַמֶּלֶךְ וְאֶת־כָּל־אֲשֶׁר הָיוּ עִמּוֹ וַיָּבֹא אֶל־הַמַּלְכָּה אֶל־הַמָּקוֹם אֲשֶׁר יָשְׁבָה וַיָּעִידוּ כֻלָּם לְפָנֶיהָ כִּי נֶהֱרַג הַמֶּלֶךְ בִּידֵי עֲבָדָיו וַיֹּאמְרוּ גַּם הֵם נָסוּ הֲלֹא זֹאת מְעִידָה נֶגְדָּם וְכֵן הִצְדִּיקוּ אֶת־הַמַּלְכָּה עַל־מוֹת הַמֶּלֶךְ׃",
   "english": "And it came to pass that Amalickiah took the same servant that slew the king, and all them who were with him, and went in unto the queen, unto the place where she sat; and they all testified unto her that the king was slain by his own servants; and they said also: They have fled; does not this testify against them?  And thus they satisfied the queen concerning the death of the king."
  },
  {
@@ -27464,21 +27464,21 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 48,
   "verse": 1,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר יָרַשׁ אַמָלִיקְיָה אֶת־הַמַּמְלָכָה וַיָּחֶל לְהָסִית אֶת־לְבַב הַלָּמָנִים עַל־עַם נֶפִי וַיַּפְקֵד אֲנָשִׁים לְדַבֵּר אֶל־הַלָּמָנִים מֵעַל מִגְדְּלֵיהֶם נֶגֶד הַנֶפִים׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר יָרַשׁ אַמָלִיקְיָה אֶת־הַמַּמְלָכָה וַיָּחֶל לְהָסִית אֶת־לְבַב הַלָּמָנִים עַל־עַם נֶפִי וַיַּפְקֵד אֲנָשִׁים לְדַבֵּר אֶל־הַלָּמָנִים מֵעַל מִגְדְּלֵיהֶם נֶגֶד הַנֶּפִיִּים׃",
   "english": "And now it came to pass that, as soon as Amalickiah had obtained the kingdom he began to inspire the hearts of the Lamanites against the people of Nephi; yea, he did appoint men to speak unto the Lamanites from their towers, against the Nephites."
  },
  {
   "book": "Alma",
   "chapter": 48,
   "verse": 2,
-  "hebrew": "וַיָּסֶת אֶת־לְבָבָם נֶגֶד הַנֶּפִיִּים וַיְהִי בְּאַחֲרִית שְׁנַת תְּשַׁע־עֶשְׂרֵה לִמְשֹׁל הַשֹּׁפְטִים וְהוּא הִשְׂכִּיל בִּמְזִמָּתוֹ עַד־כֹּה וַיְהִי מֶלֶךְ עַל־הַלָּמָנִים וַיְבַקֵּשׁ גַּם לִמְשֹׁל בְּכָל־הָאָרֶץ וּבְכָל־הָעָם אֲשֶׁר בָּאָרֶץ גַּם בַּנֶפִים גַּם בַּלָּמָנִים׃",
+  "hebrew": "וַיָּסֶת אֶת־לְבָבָם נֶגֶד הַנֶּפִיִּים וַיְהִי בְּאַחֲרִית שְׁנַת תְּשַׁע־עֶשְׂרֵה לִמְשֹׁל הַשֹּׁפְטִים וְהוּא הִשְׂכִּיל בִּמְזִמָּתוֹ עַד־כֹּה וַיְהִי מֶלֶךְ עַל־הַלָּמָנִים וַיְבַקֵּשׁ גַּם לִמְשֹׁל בְּכָל־הָאָרֶץ וּבְכָל־הָעָם אֲשֶׁר בָּאָרֶץ גַּם בַּנְּפִיִּים גַּם בַּלָּמָנִים׃",
   "english": "And thus he did inspire their hearts against the Nephites, insomuch that in the latter end of the nineteenth year of the reign of the judges, he having accomplished his designs thus far, yea, having been made king over the Lamanites, he sought also to reign over all the land, yea, and all the people who were in the land, the Nephites as well as the Lamanites."
  },
  {
   "book": "Alma",
   "chapter": 48,
   "verse": 3,
-  "hebrew": "וְכֵן הִצְלִיחַ בִּמְזִמָּתוֹ כִּי הִקְשָׁה אֶת־לֵב הַלָּמָנִים וַיַּעֲוֵר אֶת־עֵינֵיהֶם וַיַּכְעִיסֵם עַד כִּי קָבַץ חַיִל רַב לָצֵאת לַמִּלְחָמָה עַל־הַנֶפִים׃",
+  "hebrew": "וְכֵן הִצְלִיחַ בִּמְזִמָּתוֹ כִּי הִקְשָׁה אֶת־לֵב הַלָּמָנִים וַיַּעֲוֵר אֶת־עֵינֵיהֶם וַיַּכְעִיסֵם עַד כִּי קָבַץ חַיִל רַב לָצֵאת לַמִּלְחָמָה עַל־הַנֶּפִיִּים׃",
   "english": "Therefore he had accomplished his design, for he had hardened the hearts of the Lamanites and blinded their minds, and stirred them up to anger, insomuch that he had gathered together a numerous host to go to battle against the Nephites."
  },
  {
@@ -27499,7 +27499,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 48,
   "verse": 6,
-  "hebrew": "וַיְהִי כִּי נָסְעוּ בְּמַחֲנֵיהֶם וַיִּסְעוּ לָבוֹא אֶל־אֶרֶץ זָרַהֶמְלָהדֶּרֶךְ הַמִּדְבָּר׃",
+  "hebrew": "וַיְהִי כִּי נָסְעוּ בְּמַחֲנֵיהֶם וַיִּסְעוּ לָבוֹא אֶל־אֶרֶץ זָרַחֶמְלָהדֶּרֶךְ הַמִּדְבָּר׃",
   "english": "And it came to pass that they took their camp, and moved forth toward the land of Zarahemla in the wilderness."
  },
  {
@@ -27520,7 +27520,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 48,
   "verse": 9,
-  "hebrew": "וּבְמִבְצְרֵיהֶם הָרָפִים שָׂם אֶת־רֹב הָאֲנָשִׁים וְכֵן בִּצֵּר וַיְחַזֵּק אֶת־הָאָרֶץ אֲשֶׁר בִּידֵי הַנֶפִים׃",
+  "hebrew": "וּבְמִבְצְרֵיהֶם הָרָפִים שָׂם אֶת־רֹב הָאֲנָשִׁים וְכֵן בִּצֵּר וַיְחַזֵּק אֶת־הָאָרֶץ אֲשֶׁר בִּידֵי הַנֶּפִיִּים׃",
   "english": "And in their weakest fortifications he did place the greater number of men; and thus he did fortify and strengthen the land which was possessed by the Nephites."
  },
  {
@@ -27583,7 +27583,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 48,
   "verse": 18,
-  "hebrew": "הִנֵּה הָיָה אִישׁ כְּעַמּוֹן בֶּן־מוֹשִׁיָּה וּכִבְנֵי מוֹשִׁיָּה הָאֲחֵרִים וְגַם כְּאַלְמָה וּבָנָיו כִּי כֻלָּם הָיוּ אַנְשֵׁי אֱלֹהִים׃",
+  "hebrew": "הִנֵּה הָיָה אִישׁ כְּעַמּוֹן בֶּן־מוֹשִׁיָּה וּכִבְנֵי מוֹשִׁיָּה הָאֲחֵרִים וְגַם כְּאַלְמָא וּבָנָיו כִּי כֻלָּם הָיוּ אַנְשֵׁי אֱלֹהִים׃",
   "english": "Behold, he was a man like unto Ammon, the son of Mosiah, yea, and even the other sons of Mosiah, yea, and also Alma and his sons, for they were all men of God."
  },
  {
@@ -27702,21 +27702,21 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 49,
   "verse": 10,
-  "hebrew": "וְעַתָּה לוּ יָרַד הַמֶּלֶךְ אַמָלִיקְיָה מֵאֶרֶץ נֶפִי בְּרֹאשׁ צְבָאוֹ אוּלַי הָיָה גּוֹרֵם לַלָּמָנִים לְהִלָּחֵם בַּנֶפִים בְּעִיר עַמּוֹנִיחָה כִּי הִנֵּה לֹא חָס עַל־דַּם עַמּוֹ׃",
+  "hebrew": "וְעַתָּה לוּ יָרַד הַמֶּלֶךְ אַמָלִיקְיָה מֵאֶרֶץ נֶפִי בְּרֹאשׁ צְבָאוֹ אוּלַי הָיָה גּוֹרֵם לַלָּמָנִים לְהִלָּחֵם בַּנְּפִיִּים בְּעִיר עַמּוֹנִיחָה כִּי הִנֵּה לֹא חָס עַל־דַּם עַמּוֹ׃",
   "english": "Now, if king Amalickiah had come down out of the land of Nephi, at the head of his army, perhaps he would have caused the Lamanites to have attacked the Nephites at the city of Ammonihah; for behold, he did care not for the blood of his people."
  },
  {
   "book": "Alma",
   "chapter": 49,
   "verse": 11,
-  "hebrew": "וְהִנֵּה אַמָלִיקְיָה לֹא יָרַד בְּעַצְמוֹ לַמִּלְחָמָה וְהִנֵּה לֹא הֵעֵזוּ שָׂרֵי צְבָאוֹתָיו לְהִלָּחֵם בַּנֶפִים בְּעִיר עַמּוֹנִיחָה כִּי שִׁנָּה מוֹרוֹנִי אֶת־דֶּרֶךְ הַדְּבָרִים בֵּין הַנֶּפִיִּים  עַד כִּי נִכְזְבוּ הַלָּמָנִים בִּמְקוֹמוֹת מִקְלָטָם וְלֹא יָכְלוּ לָבוֹא עֲלֵיהֶם׃",
+  "hebrew": "וְהִנֵּה אַמָלִיקְיָה לֹא יָרַד בְּעַצְמוֹ לַמִּלְחָמָה וְהִנֵּה לֹא הֵעֵזוּ שָׂרֵי צְבָאוֹתָיו לְהִלָּחֵם בַּנְּפִיִּים בְּעִיר עַמּוֹנִיחָה כִּי שִׁנָּה מוֹרוֹנִי אֶת־דֶּרֶךְ הַדְּבָרִים בֵּין הַנֶּפִיִּים  עַד כִּי נִכְזְבוּ הַלָּמָנִים בִּמְקוֹמוֹת מִקְלָטָם וְלֹא יָכְלוּ לָבוֹא עֲלֵיהֶם׃",
   "english": "But behold, Amalickiah did not come down himself to battle. And behold, his chief captains durst not attack the Nephites at the city of Ammonihah, for Moroni had altered the management of affairs among the Nephites, insomuch that the Lamanites were disappointed in their places of retreat and they could not come upon them."
  },
  {
   "book": "Alma",
   "chapter": 49,
   "verse": 12,
-  "hebrew": "לָכֵן נָסוֹגוּ הַמִּדְבָּרָה וַיִּקְחוּ אֶת־מַחֲנֵיהֶם וַיִּסְעוּ לְאֶרֶץ נֹחַ בְּחָשְׁבָם כִּי זֶה הַמָּקוֹם הַטּוֹב הַשֵּׁנִי לָבוֹא נֶגֶד הַנֶפִים׃",
+  "hebrew": "לָכֵן נָסוֹגוּ הַמִּדְבָּרָה וַיִּקְחוּ אֶת־מַחֲנֵיהֶם וַיִּסְעוּ לְאֶרֶץ נֹחַ בְּחָשְׁבָם כִּי זֶה הַמָּקוֹם הַטּוֹב הַשֵּׁנִי לָבוֹא נֶגֶד הַנֶּפִיִּים׃",
   "english": "Therefore they retreated into the wilderness, and took their camp and marched towards the land of Noah, supposing that to be the next best place for them to come against the Nephites."
  },
  {
@@ -27779,7 +27779,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 49,
   "verse": 21,
-  "hebrew": "וַיְהִי כִּי הֶעֱלוּ שָׂרֵי הַלָּמָנִים אֶת־צִבְאוֹתֵיהֶם לִפְנֵי מְבוֹא הַשַּׁעַר וַיָּחֵלּוּ לְהִלָּחֵם בַּנֶפִים לָבוֹא אֶל־מְקוֹם מִבְטַחָם אַךְ הִנֵּה הֻכּוּ אָחוֹר פַּעַם אַחַר פַּעַם עַד כִּי נֶהֶרְגוּ מַכָּה גְדוֹלָה מְאֹד׃",
+  "hebrew": "וַיְהִי כִּי הֶעֱלוּ שָׂרֵי הַלָּמָנִים אֶת־צִבְאוֹתֵיהֶם לִפְנֵי מְבוֹא הַשַּׁעַר וַיָּחֵלּוּ לְהִלָּחֵם בַּנְּפִיִּים לָבוֹא אֶל־מְקוֹם מִבְטַחָם אַךְ הִנֵּה הֻכּוּ אָחוֹר פַּעַם אַחַר פַּעַם עַד כִּי נֶהֶרְגוּ מַכָּה גְדוֹלָה מְאֹד׃",
   "english": "And it came to pass that the captains of the Lamanites brought up their armies before the place of entrance, and began to contend with the Nephites, to get into their place of security; but behold, they were driven back from time to time, insomuch that they were slain with an immense slaughter."
  },
  {
@@ -27814,7 +27814,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 49,
   "verse": 26,
-  "hebrew": "וַיְהִי כִּי חָרָה לוֹ מְאֹד עַל־עַמּוֹ כִּי לֹא הִשִּׂיג אֶת־תַּאֲוָתוֹ בַּנֶפִים וְלֹא הֵבִיאָם תַּחַת עֹל הָעַבְדוּת׃",
+  "hebrew": "וַיְהִי כִּי חָרָה לוֹ מְאֹד עַל־עַמּוֹ כִּי לֹא הִשִּׂיג אֶת־תַּאֲוָתוֹ בַּנְּפִיִּים וְלֹא הֵבִיאָם תַּחַת עֹל הָעַבְדוּת׃",
   "english": "And it came to pass that he was exceedingly angry with his people, because he had not obtained his desire over the Nephites; he had not subjected them to the yoke of bondage."
  },
  {
@@ -27849,7 +27849,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 50,
   "verse": 1,
-  "hebrew": "וַיְהִי כִּי לֹא חָדַל מוֹרוֹנִי מֵהָכִין לַמִּלְחָמָה אוֹ לְהָגֵן עַל־עַמּוֹ מִפְּנֵי הַלָּמָנִים כִּי צִוָּה אֶת־צְבָאוֹתָיו בִּתְחִלַּת שְׁנַת עֶשְׂרִים לִמְשֹׁל הַשֹּׁפְטִים לְהָחֵל לִשְׁפֹּךְ תִּלֵּי עָפָר סָבִיב כָּל־הֶעָרִים בְּכָל־הָאָרֶץ אֲשֶׁר בִּידֵי הַנֶפִים׃",
+  "hebrew": "וַיְהִי כִּי לֹא חָדַל מוֹרוֹנִי מֵהָכִין לַמִּלְחָמָה אוֹ לְהָגֵן עַל־עַמּוֹ מִפְּנֵי הַלָּמָנִים כִּי צִוָּה אֶת־צְבָאוֹתָיו בִּתְחִלַּת שְׁנַת עֶשְׂרִים לִמְשֹׁל הַשֹּׁפְטִים לְהָחֵל לִשְׁפֹּךְ תִּלֵּי עָפָר סָבִיב כָּל־הֶעָרִים בְּכָל־הָאָרֶץ אֲשֶׁר בִּידֵי הַנֶּפִיִּים׃",
   "english": "And now it came to pass that Moroni did not stop making preparations for war, or to defend his people against the Lamanites; for he caused that his armies should commence in the commencement of the twentieth year of the reign of the judges, that they should commence in digging up heaps of earth round about all the cities, throughout all the land which was possessed by the Nephites."
  },
  {
@@ -27891,7 +27891,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 50,
   "verse": 7,
-  "hebrew": "וַיְהִי כִּי צִוָּה מוֹרוֹנִי אֶת־צְבָאוֹתָיו לָצֵאת אֶל־מִדְבַּר קֶדֶם וַיֵּצְאוּ וַיְגָרְשׁוּ אֶת־כָּל־הַלָּמָנִים אֲשֶׁר בְּמִדְבַּר קֶדֶם אֶל־אַרְצוֹתָם אֲשֶׁר מִנֶּגֶב לְאֶרֶץ זַרַהֶמְלָה׃",
+  "hebrew": "וַיְהִי כִּי צִוָּה מוֹרוֹנִי אֶת־צְבָאוֹתָיו לָצֵאת אֶל־מִדְבַּר קֶדֶם וַיֵּצְאוּ וַיְגָרְשׁוּ אֶת־כָּל־הַלָּמָנִים אֲשֶׁר בְּמִדְבַּר קֶדֶם אֶל־אַרְצוֹתָם אֲשֶׁר מִנֶּגֶב לְאֶרֶץ זָרַחֶמְלָה׃",
   "english": "And it came to pass that Moroni caused that his armies should go forth into the east wilderness; yea, and they went forth and drove all the Lamanites who were in the east wilderness into their own lands, which were south of the land of Zarahemla."
  },
  {
@@ -27905,7 +27905,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 50,
   "verse": 9,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר גֵּרַשׁ מוֹרוֹנִי אֶת־כָּל־הַלָּמָנִים מִמִּדְבַּר קֶדֶם אֲשֶׁר מִצָּפוֹן לְאַרְצוֹת אֲחֻזָּתָם וַיְצַו אֶת־הַיּוֹשְׁבִים בְּאֶרֶץ זָרַהֶמְלָהוּבָאָרֶץ סָבִיב לָצֵאת אֶל־מִדְבַּר קֶדֶם עַד־גְּבוּל חוֹף הַיָּם וְלָרֶשֶׁת אֶת־הָאָרֶץ׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר גֵּרַשׁ מוֹרוֹנִי אֶת־כָּל־הַלָּמָנִים מִמִּדְבַּר קֶדֶם אֲשֶׁר מִצָּפוֹן לְאַרְצוֹת אֲחֻזָּתָם וַיְצַו אֶת־הַיּוֹשְׁבִים בְּאֶרֶץ זָרַחֶמְלָהוּבָאָרֶץ סָבִיב לָצֵאת אֶל־מִדְבַּר קֶדֶם עַד־גְּבוּל חוֹף הַיָּם וְלָרֶשֶׁת אֶת־הָאָרֶץ׃",
   "english": "And it came to pass that when Moroni had driven all the Lamanites out of the east wilderness, which was north of the lands of their own possessions, he caused that the inhabitants who were in the land of Zarahemla and in the land round about should go forth into the east wilderness, even to the borders by the seashore, and possess the land."
  },
  {
@@ -27919,7 +27919,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 50,
   "verse": 11,
-  "hebrew": "וְכֵן הִכְרִית אֶת־כָּל־מִבְצְרֵי הַלָּמָנִים בְּמִדְבַּר קֶדֶם וְגַם בַּמַּעֲרָב וַיְבַצֵּר אֶת־הַגְּבוּל בֵּין הַנֶּפִיִּים וּבֵין הַלָּמָנִים בֵּין אֶרֶץ זָרַהֶמְלָהוּבֵין אֶרֶץ נֶפִי מִיַּם מַעֲרָב עֹבֵר בְּרֹאשׁ נְהַר סִידוֹן וְהַנֶּפִיִּים יָרְשׁוּ אֶת־כָּל־הָאָרֶץ צָפוֹנָה אֵת כָּל־הָאָרֶץ אֲשֶׁר מִצְּפוֹן לְאֶרֶץ שֶׁפַע כִּרְצוֹנָם׃",
+  "hebrew": "וְכֵן הִכְרִית אֶת־כָּל־מִבְצְרֵי הַלָּמָנִים בְּמִדְבַּר קֶדֶם וְגַם בַּמַּעֲרָב וַיְבַצֵּר אֶת־הַגְּבוּל בֵּין הַנֶּפִיִּים וּבֵין הַלָּמָנִים בֵּין אֶרֶץ זָרַחֶמְלָהוּבֵין אֶרֶץ נֶפִי מִיַּם מַעֲרָב עֹבֵר בְּרֹאשׁ נְהַר סִידוֹן וְהַנֶּפִיִּים יָרְשׁוּ אֶת־כָּל־הָאָרֶץ צָפוֹנָה אֵת כָּל־הָאָרֶץ אֲשֶׁר מִצְּפוֹן לְאֶרֶץ שֶׁפַע כִּרְצוֹנָם׃",
   "english": "And thus he cut off all the strongholds of the Lamanites in the east wilderness, yea, and also on the west, fortifying the line between the Nephites and the Lamanites, between the land of Zarahemla and the land of Nephi, from the west sea, running by the head of the river Sidon—the Nephites possessing all the land northward, yea, even all the land which was northward of the land Bountiful, according to their pleasure."
  },
  {
@@ -28066,7 +28066,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 50,
   "verse": 32,
-  "hebrew": "וְהִנֵּה יָרֵא הָעָם אֲשֶׁר בְּאֶרֶץ שֶׁפַע אוֹ בָּעִקָּר מוֹרוֹנִי פֶּן־יִשְׁמְעוּ לְדִבְרֵי מוֹרִיאַנְטוֹן וְיִתְחַבְּרוּ אֶל־עַמּוֹ וְכֵן יִירַשׁ אֶת־חֶלְקֵי הָאָרֶץ הָהֵם אֲשֶׁר יָשִׂים יְסוֹד לְדְבָרִים רָעִים בְּעַם נֶפִי אֲשֶׁר יָבִיאוּ לְמַפֶּלֶת דְּרוֹרָם׃",
+  "hebrew": "וְהִנֵּה יָרֵא הָעָם אֲשֶׁר בְּאֶרֶץ שֶׁפַע אוֹ בָּעִקָּר מוֹרוֹנִי פֶּן־יִשְׁמְעוּ לְדִבְרֵי מוֹרִיאַנְטוֹן וְיִתְחַבְּרוּ אֶל־עַמּוֹ וְכֵן יִירַשׁ אֶת־חֶלְקֵי הָאָרֶץ הָהֵם אֲשֶׁר יָשִׂים יְסוֹד לִדְבָרִים רָעִים בְּעַם נֶפִי אֲשֶׁר יָבִיאוּ לְמַפֶּלֶת דְּרוֹרָם׃",
   "english": "Now behold, the people who were in the land Bountiful, or rather Moroni, feared that they would hearken to the words of Morianton and unite with his people, and thus he would obtain possession of those parts of the land, which would lay a foundation for serious consequences among the people of Nephi, yea, which consequences would lead to the overthrow of their liberty."
  },
  {
@@ -28108,7 +28108,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 50,
   "verse": 38,
-  "hebrew": "אַךְ מֵאֵן לָתֵת לְאַלְמָה לָקַחַת אֶת־הַסְּפָרִים וְהַדְּבָרִים הָהֵם אֲשֶׁר נֶחְשְׁבוּ בְּעֵינֵי אַלְמָה וַאֲבוֹתָיו לִקְדוֹשִׁים בְּיוֹתֵר לָכֵן נְתָנָם אַלְמָה לִבְנוֹ הֵילָמָן׃",
+  "hebrew": "אַךְ מֵאֵן לָתֵת לְאַלְמָא לָקַחַת אֶת־הַסְּפָרִים וְהַדְּבָרִים הָהֵם אֲשֶׁר נֶחְשְׁבוּ בְּעֵינֵי אַלְמָא וַאֲבוֹתָיו לִקְדוֹשִׁים בְּיוֹתֵר לָכֵן נְתָנָם אַלְמָא לִבְנוֹ הֵילָמָן׃",
   "english": "Nevertheless, he had refused Alma to take possession of those records and those things which were esteemed by Alma and his fathers to be most sacred; therefore Alma had conferred them upon his son, Helaman."
  },
  {
@@ -28122,7 +28122,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 50,
   "verse": 40,
-  "hebrew": "וְהִנֵּה שְׁמוֹ פָּחוֹרָן וַיֵּשֶׁב פָּחוֹרָן עַל־כִּסֵּא אָבִיו וַיָּחֶל מַלְכוּתוֹ בִּשְׁנַת עֶשְׂרִים וְאַרְבַּע לְעַם נֶפִי׃",
+  "hebrew": "וְהִנֵּה שְׁמוֹ פָּהוֹרָן וַיֵּשֶׁב פָּהוֹרָן עַל־כִּסֵּא אָבִיו וַיָּחֶל מַלְכוּתוֹ בִּשְׁנַת עֶשְׂרִים וְאַרְבַּע לְעַם נֶפִי׃",
   "english": "Now behold, his name was Pahoran. And Pahoran did fill the seat of his father, and did commence his reign in the end of the twenty and fourth year, over the people of Nephi."
  },
  {
@@ -28136,14 +28136,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 51,
   "verse": 2,
-  "hebrew": "אַךְ לֹא הֶחֱזִיקוּ יָמִים רַבִּים בְּשָׁלוֹם שָׁלֵם בָּאָרֶץ כִּי הֵחֵלָּה מְרִיבָה בָּעָם עַל־דְּבַר פָּחוֹרָן הַשֹּׁפֵט הָרֹאשׁ כִּי הִנֵּה חֵלֶק מִן־הָעָם חָפְצוּ לְשַׁנּוֹת דְּבָרִים אֲחָדִים בַּחֹק׃",
+  "hebrew": "אַךְ לֹא הֶחֱזִיקוּ יָמִים רַבִּים בְּשָׁלוֹם שָׁלֵם בָּאָרֶץ כִּי הֵחֵלָּה מְרִיבָה בָּעָם עַל־דְּבַר פָּהוֹרָן הַשֹּׁפֵט הָרֹאשׁ כִּי הִנֵּה חֵלֶק מִן־הָעָם חָפְצוּ לְשַׁנּוֹת דְּבָרִים אֲחָדִים בַּחֹק׃",
   "english": "Nevertheless, they did not long maintain an entire peace in the land, for there began to be a contention among the people concerning the chief judge Pahoran; for behold, there were a part of the people who desired that a few particular points of the law should be altered."
  },
  {
   "book": "Alma",
   "chapter": 51,
   "verse": 3,
-  "hebrew": "אַךְ הִנֵּה פָּחוֹרָן לֹא אָבָה לְשַׁנּוֹת וְלֹא לָתֵת לְשַׁנּוֹת אֶת־הַחֹק לָכֵן לֹא שָׁמַע לַאֲשֶׁר שָׁלְחוּ אֶת־קוֹלָם עִם־בַּקָּשׁוֹתֵיהֶם לְשַׁנּוֹת אֶת־הַחֹק׃",
+  "hebrew": "אַךְ הִנֵּה פָּהוֹרָן לֹא אָבָה לְשַׁנּוֹת וְלֹא לָתֵת לְשַׁנּוֹת אֶת־הַחֹק לָכֵן לֹא שָׁמַע לַאֲשֶׁר שָׁלְחוּ אֶת־קוֹלָם עִם־בַּקָּשׁוֹתֵיהֶם לְשַׁנּוֹת אֶת־הַחֹק׃",
   "english": "But behold, Pahoran would not alter nor suffer the law to be altered; therefore, he did not hearken to those who had sent in their voices with their petitions concerning the altering of the law."
  },
  {
@@ -28157,21 +28157,21 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 51,
   "verse": 5,
-  "hebrew": "וַיְהִי כִּי הַחֲפֵצִים לְהָסִיר אֶת־פָּחוֹרָן מִכִּסֵּא הַמִּשְׁפָּט נִקְרְאוּ אַנְשֵׁי־הַמֶּלֶךְ כִּי חָפְצוּ לְשַׁנּוֹת אֶת־הַחֹק לְהַפִּיל אֶת־מֶמְשֶׁלֶת הַחֹפֶשׁ וּלְהָקִים מֶלֶךְ עַל־הָאָרֶץ׃",
+  "hebrew": "וַיְהִי כִּי הַחֲפֵצִים לְהָסִיר אֶת־פָּהוֹרָן מִכִּסֵּא הַמִּשְׁפָּט נִקְרְאוּ אַנְשֵׁי־הַמֶּלֶךְ כִּי חָפְצוּ לְשַׁנּוֹת אֶת־הַחֹק לְהַפִּיל אֶת־מֶמְשֶׁלֶת הַחֹפֶשׁ וּלְהָקִים מֶלֶךְ עַל־הָאָרֶץ׃",
   "english": "And it came to pass that those who were desirous that Pahoran should be dethroned from the judgment– seat were called king– men, for they were desirous that the law should be altered in a manner to overthrow the free government and to establish a king over the land."
  },
  {
   "book": "Alma",
   "chapter": 51,
   "verse": 6,
-  "hebrew": "וְהַחֲפֵצִים כִּי יִשָּׁאֵר פָּחוֹרָן שֹׁפֵט רֹאשׁ עַל־הָאָרֶץ נָשְׂאוּ עֲלֵיהֶם אֶת־שֵׁם חָפְשִׁיִּים וְכֵן הָיְתָה הַמַּחֲלֹקֶת בֵּינֵיהֶם כִּי הַחָפְשִׁיִּים נִשְׁבְּעוּ אוֹ כָרְתוּ בְרִית לִשְׁמֹר אֶת־מִשְׁפְּטֵיהֶם וּמִשְׁפְּטֵי דָתָם בְּמֶמְשֶׁלֶת חֹפֶשׁ׃",
+  "hebrew": "וְהַחֲפֵצִים כִּי יִשָּׁאֵר פָּהוֹרָן שֹׁפֵט רֹאשׁ עַל־הָאָרֶץ נָשְׂאוּ עֲלֵיהֶם אֶת־שֵׁם חָפְשִׁיִּים וְכֵן הָיְתָה הַמַּחֲלֹקֶת בֵּינֵיהֶם כִּי הַחָפְשִׁיִּים נִשְׁבְּעוּ אוֹ כָרְתוּ בְרִית לִשְׁמֹר אֶת־מִשְׁפְּטֵיהֶם וּמִשְׁפְּטֵי דָתָם בְּמֶמְשֶׁלֶת חֹפֶשׁ׃",
   "english": "And those who were desirous that Pahoran should remain chief judge over the land took upon them the name of freemen; and thus was the division among them, for the freemen had sworn or covenanted to maintain their rights and the privileges of their religion by a free government."
  },
  {
   "book": "Alma",
   "chapter": 51,
   "verse": 7,
-  "hebrew": "וַיְהִי כִּי נִפְתְּרָה מְרִיבָתָם בְּקוֹל הָעָם וַיְהִי כִּי הָיָה קוֹל הָעָם לְטוֹבַת הַחָפְשִׁיִּים וַיִּשָּׁאֵר פָּחוֹרָן עַל־כִּסֵּא הַמִּשְׁפָּט וַתְּהִי שִׂמְחָה רַבָּה בֵּין אֲחֵי פָּחוֹרָן וְגַם רַבִּים מֵעַם הַדְּרוֹר אֲשֶׁר הֶחֱשׁוּ אֶת־אַנְשֵׁי־הַמֶּלֶךְ עַד כִּי לֹא הֵעֵזוּ לַעֲמֹד נֶגֶד וַיֵּאָלְצוּ לַעֲמֹד בְּעַד הַדְּרוֹר׃",
+  "hebrew": "וַיְהִי כִּי נִפְתְּרָה מְרִיבָתָם בְּקוֹל הָעָם וַיְהִי כִּי הָיָה קוֹל הָעָם לְטוֹבַת הַחָפְשִׁיִּים וַיִּשָּׁאֵר פָּהוֹרָן עַל־כִּסֵּא הַמִּשְׁפָּט וַתְּהִי שִׂמְחָה רַבָּה בֵּין אֲחֵי פָּהוֹרָן וְגַם רַבִּים מֵעַם הַדְּרוֹר אֲשֶׁר הֶחֱשׁוּ אֶת־אַנְשֵׁי־הַמֶּלֶךְ עַד כִּי לֹא הֵעֵזוּ לַעֲמֹד נֶגֶד וַיֵּאָלְצוּ לַעֲמֹד בְּעַד הַדְּרוֹר׃",
   "english": "And it came to pass that this matter of their contention was settled by the voice of the people. And it came to pass that the voice of the people came in favor of the freemen, and Pahoran retained the judgment– seat, which caused much rejoicing among the brethren of Pahoran and also many of the people of liberty, who also put the king– men to silence, that they durst not oppose but were obliged to maintain the cause of freedom."
  },
  {
@@ -28192,21 +28192,21 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 51,
   "verse": 10,
-  "hebrew": "אַךְ הִנֵּה נִרְאֶה כִּי שְׁבוּעָתוֹ אֲשֶׁר נִשְׁבַּע הָיְתָה נִמְהֶרֶת אַף־עַל־פִּי־כֵן הֵכִין אֶת־עַצְמוֹ וְאֶת־צְבָאוֹתָיו לָבוֹא לַמִּלְחָמָה עַל־הַנֶפִים׃",
+  "hebrew": "אַךְ הִנֵּה נִרְאֶה כִּי שְׁבוּעָתוֹ אֲשֶׁר נִשְׁבַּע הָיְתָה נִמְהֶרֶת אַף־עַל־פִּי־כֵן הֵכִין אֶת־עַצְמוֹ וְאֶת־צְבָאוֹתָיו לָבוֹא לַמִּלְחָמָה עַל־הַנֶּפִיִּים׃",
   "english": "But behold, we shall see that his promise which he made was rash; nevertheless, he did prepare himself and his armies to come to battle against the Nephites."
  },
  {
   "book": "Alma",
   "chapter": 51,
   "verse": 11,
-  "hebrew": "וְצְבָאוֹתָיו לֹא הָיוּ גְדוֹלִים כַּאֲשֶׁר הָיוּ לְפָנִים כִּי נֶהֶרְגוּ אֲלָפִים רַבִּים בְּיַד הַנֶּפִיִּים  אַךְ אַף־עַל־פִּי אָבְדָנָם הַגָּדוֹל קִבֵּץ אַמָלִיקְיָה צָבָא גָּדוֹל לְהַפְלִיא עַד כִּי לֹא יָרֵא לָרֶדֶת אֶל־אֶרֶץ זַרַהֶמְלָה׃",
+  "hebrew": "וּצְבָאוֹתָיו לֹא הָיוּ גְדוֹלִים כַּאֲשֶׁר הָיוּ לְפָנִים כִּי נֶהֶרְגוּ אֲלָפִים רַבִּים בְּיַד הַנֶּפִיִּים  אַךְ אַף־עַל־פִּי אָבְדָנָם הַגָּדוֹל קִבֵּץ אַמָלִיקְיָה צָבָא גָּדוֹל לְהַפְלִיא עַד כִּי לֹא יָרֵא לָרֶדֶת אֶל־אֶרֶץ זָרַחֶמְלָה׃",
   "english": "Now his armies were not so great as they had hitherto been, because of the many thousands who had been slain by the hand of the Nephites; but notwithstanding their great loss, Amalickiah had gathered together a wonderfully great army, insomuch that he feared not to come down to the land of Zarahemla."
  },
  {
   "book": "Alma",
   "chapter": 51,
   "verse": 12,
-  "hebrew": "וְגַם אַמָלִיקְיָה בְּעַצְמוֹ יָרַד בְּרֹאשׁ הַלָּמָנִים וַיְהִי בִּשְׁנַת עֶשְׂרִים וְחָמֵשׁ לִמְשֹׁל הַשֹּׁפְטִים וַיְהִי בָּעֵת הַהִיא אֲשֶׁר הֵחֵלּוּ לְיַשֵּׁב אֶת־עִנְיְנֵי מְרִיבוֹתָם עַל־דְּבַר פָּחוֹרָן הַשֹּׁפֵט הָרֹאשׁ׃",
+  "hebrew": "וְגַם אַמָלִיקְיָה בְּעַצְמוֹ יָרַד בְּרֹאשׁ הַלָּמָנִים וַיְהִי בִּשְׁנַת עֶשְׂרִים וְחָמֵשׁ לִמְשֹׁל הַשֹּׁפְטִים וַיְהִי בָּעֵת הַהִיא אֲשֶׁר הֵחֵלּוּ לְיַשֵּׁב אֶת־עִנְיְנֵי מְרִיבוֹתָם עַל־דְּבַר פָּהוֹרָן הַשֹּׁפֵט הָרֹאשׁ׃",
   "english": "Yea, even Amalickiah did himself come down, at the head of the Lamanites. And it was in the twenty and fifth year of the reign of the judges; and it was at the same time that they had begun to settle the affairs of their contentions concerning the chief judge, Pahoran."
  },
  {
@@ -28367,7 +28367,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 51,
   "verse": 35,
-  "hebrew": "וַיָּשָׁב בַּלָּאט אֶל־מַחֲנֵהוּ וְהִנֵּה אֲנָשָׁיו יְשֵׁנִים וַיָּעַר אוֹתָם וַיַּגֵּד לָהֶם אֵת כָּל־אֲשֶׁר עָשָׂה׃",
+  "hebrew": "וַיָּשָׁב בַּלָּאט אֶל־מַחֲנֵהוּ וְהִנֵּה אֲנָשָׁיו יְשֵׁנִים וַיָּעַר אוֹתָם וַיַּגֵּד לָהֶם אֶת־כָּל־אֲשֶׁר עָשָׂה׃",
   "english": "And he returned again privily to his own camp, and behold, his men were asleep, and he awoke them and told them all the things that he had done."
  },
  {
@@ -28465,14 +28465,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 52,
   "verse": 12,
-  "hebrew": "וְעַתָּה הַמֶּלֶךְ עַמּוֹרוֹן יָצָא מֵאֶרֶץ זָרַהֶמְלָהוַיּוֹדַע לַמַּלְכָּה עַל־דְּבַר מוֹת אָחִיו וַיְקַבֵּץ עַם רָב וַיִּצְעַד נֶגֶד הַנֶּפִיִּים בַּגְּבוּלוֹת עַל־יַם מַעֲרָב׃",
+  "hebrew": "וְעַתָּה הַמֶּלֶךְ עַמּוֹרוֹן יָצָא מֵאֶרֶץ זָרַחֶמְלָהוַיּוֹדַע לַמַּלְכָּה עַל־דְּבַר מוֹת אָחִיו וַיְקַבֵּץ עַם רָב וַיִּצְעַד נֶגֶד הַנֶּפִיִּים בַּגְּבוּלוֹת עַל־יַם מַעֲרָב׃",
   "english": "Now, the king (Ammoron) had departed out of the land of Zarahemla, and had made known unto the queen concerning the death of his brother, and had gathered together a large number of men, and had marched forth against the Nephites on the borders by the west sea."
  },
  {
   "book": "Alma",
   "chapter": 52,
   "verse": 13,
-  "hebrew": "וְכֵן בִּקֵּשׁ לְהָצֵר לַנֶּפִים וּלְהַסִּיט חֵלֶק מִכֹּחוֹתֵיהֶם לְחֵלֶק הָאָרֶץ הַהוּא בְּעוֹד צִוָּה אֶת־אֲשֶׁר הִשְׁאִיר לִירֹשׁ אֶת־הֶעָרִים אֲשֶׁר לָכַד כִּי גַם הֵם יָצֵרוּ לַנֶפִים בַּגְּבוּלוֹת עַל־יַם קֶדֶם וְיִירְשׁוּ אֶת־אַרְצוֹתָם כַּאֲשֶׁר בְּכֹחָם כְּכֹחַ צִבְאוֹתֵיהֶם׃",
+  "hebrew": "וְכֵן בִּקֵּשׁ לְהָצֵר לַנֶּפִים וּלְהַסִּיט חֵלֶק מִכֹּחוֹתֵיהֶם לְחֵלֶק הָאָרֶץ הַהוּא בְּעוֹד צִוָּה אֶת־אֲשֶׁר הִשְׁאִיר לִירֹשׁ אֶת־הֶעָרִים אֲשֶׁר לָכַד כִּי גַם הֵם יָצֵרוּ לַנְּפִיִּים בַּגְּבוּלוֹת עַל־יַם קֶדֶם וְיִירְשׁוּ אֶת־אַרְצוֹתָם כַּאֲשֶׁר בְּכֹחָם כְּכֹחַ צִבְאוֹתֵיהֶם׃",
   "english": "And thus he was endeavoring to harass the Nephites, and to draw away a part of their forces to that part of the land, while he had commanded those whom he had left to possess the cities which he had taken, that they should also harass the Nephites on the borders by the east sea, and should take possession of their lands as much as it was in their power, according to the power of their armies."
  },
  {
@@ -28556,7 +28556,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 52,
   "verse": 25,
-  "hebrew": "וְכֵן עָשׂוּ וַיַּהַרְגוּ אֶת־כָּל־הַנִּשְׁאָרִים לְהָגֵן עַל־הָעִיר אֵת כָּל־אֲשֶׁר לֹא־הִסְגִּירוּ אֶת־כְּלֵי מִלְחַמְתָּם׃",
+  "hebrew": "וְכֵן עָשׂוּ וַיַּהַרְגוּ אֶת־כָּל־הַנִּשְׁאָרִים לְהָגֵן עַל־הָעִיר אֶת־כָּל־אֲשֶׁר לֹא־הִסְגִּירוּ אֶת־כְּלֵי מִלְחַמְתָּם׃",
   "english": "And thus they did, and slew all those who had been left to protect the city, yea, all those who would not yield up their weapons of war."
  },
  {
@@ -28731,7 +28731,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 53,
   "verse": 10,
-  "hebrew": "וְעַתָּה הִנֵּה יֵשׁ־לִי דָּבָר לוֹמַר עַל־עַם עַמּוֹן אֲשֶׁר הָיוּ בַּתְּחִלָּה לָמָנִים אַךְ עַל־יְדֵי עַמּוֹן וְאֶחָיו אוֹ בֶּאֱמֶת עַל־יְדֵי כֹּחַ וּדְבַר אֱלֹהִים הֻמְרוּ אֶל־יְהוָה וַיּוּרְדוּ לְאֶרֶץ זָרַהֶמְלָהוּמֵאָז הֻגְנוּ עַל־יְדֵי הַנֶפִים׃",
+  "hebrew": "וְעַתָּה הִנֵּה יֵשׁ־לִי דָּבָר לוֹמַר עַל־עַם עַמּוֹן אֲשֶׁר הָיוּ בַּתְּחִלָּה לָמָנִים אַךְ עַל־יְדֵי עַמּוֹן וְאֶחָיו אוֹ בֶּאֱמֶת עַל־יְדֵי כֹּחַ וּדְבַר אֱלֹהִים הֻמְרוּ אֶל־יְהוָה וַיּוּרְדוּ לְאֶרֶץ זָרַחֶמְלָהוּמֵאָז הֻגְנוּ עַל־יְדֵי הַנֶּפִיִּים׃",
   "english": "And now behold, I have somewhat to say concerning the people of Ammon, who in the beginning, were Lamanites; but by Ammon and his brethren, or rather by the power and word of God, they had been converted unto the Lord; and they had been brought down into the land of  Zarahemla, and had ever since been protected by the Nephites."
  },
  {
@@ -28745,7 +28745,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 53,
   "verse": 12,
-  "hebrew": "וְלַסִּבָּה הַזֹּאת הוּרְדוּ לְאֶרֶץ זָרַהֶמְלָהוּמֵאָז הֻגְנוּ עַל־יְדֵי הַנֶפִים׃",
+  "hebrew": "וְלַסִּבָּה הַזֹּאת הוּרְדוּ לְאֶרֶץ זָרַחֶמְלָהוּמֵאָז הֻגְנוּ עַל־יְדֵי הַנֶּפִיִּים׃",
   "english": "And for this cause they were brought down into the land of Zarahemla; and they ever had been protected by the Nephites."
  },
  {
@@ -28773,7 +28773,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 53,
   "verse": 16,
-  "hebrew": "אַךְ הִנֵּה וַיְהִי כִּי הָיוּ לָהֶם בָּנִים רַבִּים אֲשֶׁר לֹא־בָאוּ בַבְּרִית לְבִלְתִּי שְׂאֵת כְּלֵי מִלְחָמָה לְהָגֵן עַל־עַצְמָם מִפְּנֵי אוֹיְבֵיהֶם לָכֵן הִתְקַבְּצוּ יַחְדָּו בָּעֵת הַזֹּאת כָּל־אֲשֶׁר יָכְלוּ לָשֵׂאת נֶשֶׁק וַיִּקְרְאוּ לְעַצְמָם נֶפִים׃",
+  "hebrew": "אַךְ הִנֵּה וַיְהִי כִּי הָיוּ לָהֶם בָּנִים רַבִּים אֲשֶׁר לֹא־בָאוּ בַבְּרִית לְבִלְתִּי שְׂאֵת כְּלֵי מִלְחָמָה לְהָגֵן עַל־עַצְמָם מִפְּנֵי אוֹיְבֵיהֶם לָכֵן הִתְקַבְּצוּ יַחְדָּו בָּעֵת הַזֹּאת כָּל־אֲשֶׁר יָכְלוּ לָשֵׂאת נֶשֶׁק וַיִּקְרְאוּ לְעַצְמָם נְפִיִּים׃",
   "english": "But behold, it came to pass they had many sons, who had not entered into a covenant that they would not take their weapons of war to defend themselves against their enemies; therefore they did assemble themselves together at this time, as many as were able to take up arms, and they called themselves Nephites."
  },
  {
@@ -28794,7 +28794,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 53,
   "verse": 19,
-  "hebrew": "וְעַתָּה הִנֵּה כַּאֲשֶׁר לֹא־הָיוּ מֵעוֹלָם לְמַכְשׁוֹל לַנֶפִים הָיוּ עַתָּה בָּעֵת הַזֹּאת לְעֵזֶר רָב כִּי נָשְׂאוּ כְּלֵי מִלְחָמָה וַיְבַקְשׁוּ כִּי יִהְיֶה הֵילָמָן לְרֹאשָׁם׃",
+  "hebrew": "וְעַתָּה הִנֵּה כַּאֲשֶׁר לֹא־הָיוּ מֵעוֹלָם לְמַכְשׁוֹל לַנְּפִיִּים הָיוּ עַתָּה בָּעֵת הַזֹּאת לְעֵזֶר רָב כִּי נָשְׂאוּ כְּלֵי מִלְחָמָה וַיְבַקְשׁוּ כִּי יִהְיֶה הֵילָמָן לְרֹאשָׁם׃",
   "english": "And now behold, as they never had hitherto been a disadvantage to the Nephites, they became now at this period of time also a great support; for they took their weapons of war, and they would that Helaman should be their leader."
  },
  {
@@ -29032,7 +29032,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 55,
   "verse": 6,
-  "hebrew": "וְעַתָּה צִוָּה מוֹרוֹנִי כִּי יֵלֵךְ לָמָן וּמִסְפַּר קָטָן מֵאֲנָשָׁיו אֶל־הַשּׁוֹמְרִים אֲשֶׁר עַל־הַנֶפִים׃",
+  "hebrew": "וְעַתָּה צִוָּה מוֹרוֹנִי כִּי יֵלֵךְ לָמָן וּמִסְפַּר קָטָן מֵאֲנָשָׁיו אֶל־הַשּׁוֹמְרִים אֲשֶׁר עַל־הַנֶּפִיִּים׃",
   "english": "Now Moroni caused that Laman and a small number of his men should go forth unto the guards who were over the Nephites."
  },
  {
@@ -29067,7 +29067,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 55,
   "verse": 11,
-  "hebrew": "וַיֹּאמְרוּ עֲיֵפִים אֲנַחְנוּ לָכֵן נִקַּח מִן־הַיָּיִן וּמְעַט מְעַט נְקַבֵּל יַיִן לְמָנוֹתֵינוּ אֲשֶׁר יְחַזְּקֵנוּ לָלֶכֶת נֶגֶד הַנֶפִים׃",
+  "hebrew": "וַיֹּאמְרוּ עֲיֵפִים אֲנַחְנוּ לָכֵן נִקַּח מִן־הַיָּיִן וּמְעַט מְעַט נְקַבֵּל יַיִן לְמָנוֹתֵינוּ אֲשֶׁר יְחַזְּקֵנוּ לָלֶכֶת נֶגֶד הַנֶּפִיִּים׃",
   "english": "For, said they: We are weary, therefore let us take of the wine, and by and by we shall receive wine for our rations, which will strengthen us to go against the Nephites."
  },
  {
@@ -29095,7 +29095,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 55,
   "verse": 15,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר רָאוּ לָמָן וַאֲנָשָׁיו כִּי נִשְׁתַּכְּרוּ כֻלָּם וַיִּפְּלוּ בְּתַרְדֵּמָה עֲמֻקָּה וַיָּשׁוּבוּ אֶל־מוֹרוֹנִי וַיַּגִּידוּ לוֹ אֵת כָּל־אֲשֶׁר קָרָה׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר רָאוּ לָמָן וַאֲנָשָׁיו כִּי נִשְׁתַּכְּרוּ כֻלָּם וַיִּפְּלוּ בְּתַרְדֵּמָה עֲמֻקָּה וַיָּשׁוּבוּ אֶל־מוֹרוֹנִי וַיַּגִּידוּ לוֹ אֶת־כָּל־אֲשֶׁר קָרָה׃",
   "english": "And now when Laman and his men saw that they were all drunken, and were in a deep sleep, they returned to Moroni and told him all the things that had happened."
  },
  {
@@ -29144,21 +29144,21 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 55,
   "verse": 22,
-  "hebrew": "וְהִנֵּה נַעֲשָׂה זֶה בַּלַּיְלָה לְמַעַן כַּאֲשֶׁר יָקִיצוּ הַלָּמָנִים בַּבֹּקֶר וְרָאוּ כִּי הֵם מֻקָּפִים בַּנֶפִים מִבַּחוּץ וּשְׁבוּיֵיהֶם חֲמוּשִׁים מִבִּפְנִים׃",
+  "hebrew": "וְהִנֵּה נַעֲשָׂה זֶה בַּלַּיְלָה לְמַעַן כַּאֲשֶׁר יָקִיצוּ הַלָּמָנִים בַּבֹּקֶר וְרָאוּ כִּי הֵם מֻקָּפִים בַּנְּפִיִּים מִבַּחוּץ וּשְׁבוּיֵיהֶם חֲמוּשִׁים מִבִּפְנִים׃",
   "english": "Now behold this was done in the nighttime, so that when the Lamanites awoke in the morning they beheld that they were surrounded by the Nephites without, and that their prisoners were armed within."
  },
  {
   "book": "Alma",
   "chapter": 55,
   "verse": 23,
-  "hebrew": "וְכֵן רָאוּ כִּי יַד הַנֶּפִיִּים  עֲלֵיהֶם וּבָזֹאת מָצְאוּ כִּי לֹא־טוֹב לְהִלָּחֵם בַּנֶפִים לָכֵן דָּרְשׁוּ שָׂרֵי צְבָאוֹתָם אֶת־כְּלֵי מִלְחַמְתָּם וַיְּבִיאוּם וַיַּפִּילוּם לְרַגְלֵי הַנֶּפִיִּים  וַיְבַקְשׁוּ רַחֲמִים׃",
+  "hebrew": "וְכֵן רָאוּ כִּי יַד הַנֶּפִיִּים  עֲלֵיהֶם וּבָזֹאת מָצְאוּ כִּי לֹא־טוֹב לְהִלָּחֵם בַּנְּפִיִּים לָכֵן דָּרְשׁוּ שָׂרֵי צְבָאוֹתָם אֶת־כְּלֵי מִלְחַמְתָּם וַיְּבִיאוּם וַיַּפִּילוּם לְרַגְלֵי הַנֶּפִיִּים  וַיְבַקְשׁוּ רַחֲמִים׃",
   "english": "And thus they saw that the Nephites had power over them; and in these circumstances they found that it was not expedient that they should fight with the Nephites; therefore their chief captains demanded their weapons of war, and they brought them forth and cast them at the feet of the Nephites, pleading for mercy."
  },
  {
   "book": "Alma",
   "chapter": 55,
   "verse": 24,
-  "hebrew": "וְהִנֵּה זֶה הָיָה חֵפֶץ מוֹרוֹנִי וַיִּקָּחֵם שְׁבוּיֵי מִלְחָמָה וַיִּירַשׁ אֶת־הָעִיר וַיְצַו לְשַׁחְרֵר אֶת־כָּל־הַשְּׁבוּיִים אֲשֶׁר הָיוּ נֶפִים וַיִּתְחַבְּרוּ אֶל־צְבָא מוֹרוֹנִי וַיִּהְיוּ לְחֹזֶק גָּדוֹל לִצְבָאוֹ׃",
+  "hebrew": "וְהִנֵּה זֶה הָיָה חֵפֶץ מוֹרוֹנִי וַיִּקָּחֵם שְׁבוּיֵי מִלְחָמָה וַיִּירַשׁ אֶת־הָעִיר וַיְצַו לְשַׁחְרֵר אֶת־כָּל־הַשְּׁבוּיִים אֲשֶׁר הָיוּ נְפִיִּים וַיִּתְחַבְּרוּ אֶל־צְבָא מוֹרוֹנִי וַיִּהְיוּ לְחֹזֶק גָּדוֹל לִצְבָאוֹ׃",
   "english": "Now behold, this was the desire of Moroni. He took them prisoners of war, and took possession of the city, and caused that all the prisoners should be liberated, who were Nephites; and they did join the army of Moroni, and were a great strength to his army."
  },
  {
@@ -29200,14 +29200,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 55,
   "verse": 30,
-  "hebrew": "וּפְעָמִים רַבּוֹת נִסּוּ לָתֵת מִיֵּינָם לַנֶפִים לְמַעַן יַשְׁמִידוּם בְּרַעַל אוֹ בְּשִׁכְרוּת׃",
+  "hebrew": "וּפְעָמִים רַבּוֹת נִסּוּ לָתֵת מִיֵּינָם לַנְּפִיִּים לְמַעַן יַשְׁמִידוּם בְּרַעַל אוֹ בְּשִׁכְרוּת׃",
   "english": "And many times did they attempt to administer of their wine to the Nephites, that they might destroy them with poison or with drunkenness."
  },
  {
   "book": "Alma",
   "chapter": 55,
   "verse": 31,
-  "hebrew": "אַךְ הִנֵּה לֹא הִתְמַהְמְהוּ הַנֶּפִיִּים לִזְכֹּר אֶת־יְהוָה אֱלֹהֵיהֶם בְּעֵת צָרָתָם זֹאת לֹא יָכְלוּ לְהִלָּכֵד בְּמוֹקְשֵׁיהֶם אָכֵן לֹא שָׁתוּ מִיֵּינָם בִּלְתִּי אִם־נָתְנוּ תְחִלָּה לְשְׁבוּיֵי הַלָּמָנִים׃",
+  "hebrew": "אַךְ הִנֵּה לֹא הִתְמַהְמְהוּ הַנֶּפִיִּים לִזְכֹּר אֶת־יְהוָה אֱלֹהֵיהֶם בְּעֵת צָרָתָם זֹאת לֹא יָכְלוּ לְהִלָּכֵד בְּמוֹקְשֵׁיהֶם אָכֵן לֹא שָׁתוּ מִיֵּינָם בִּלְתִּי אִם־נָתְנוּ תְחִלָּה לִשְׁבוּיֵי הַלָּמָנִים׃",
   "english": "But behold, the Nephites were not slow to remember the Lord their God in this their time of affliction. They could not be taken in their snares; yea, they would not partake of their wine, save they had first given to some of the Lamanite prisoners."
  },
  {
@@ -29410,7 +29410,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 56,
   "verse": 25,
-  "hebrew": "וְגַם לֹא הֵעֵזּוּ לָרֶדֶת נֶגֶד עִיר צָרַהֶמְלָה וְלֹא הֵעֵזּוּ לַעֲבֹר אֶת־רֹאשׁ סִידוֹן אֶל־עִיר נֶפִיהָה׃",
+  "hebrew": "וְגַם לֹא הֵעֵזּוּ לָרֶדֶת נֶגֶד עִיר זָרַחֶמְלָה וְלֹא הֵעֵזּוּ לַעֲבֹר אֶת־רֹאשׁ סִידוֹן אֶל־עִיר נֶפִיחָה׃",
   "english": "Neither durst they march down against the city of Zarahemla; neither durst they cross the head of Sidon, over to the city of Nephihah."
  },
  {
@@ -29431,7 +29431,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 56,
   "verse": 28,
-  "hebrew": "וְגַם נִשְׁלְחוּ אֵלֵינוּ אַלְפַּיִם אִישׁ מֵאֶרֶץ צָרַהֶמְלָה וְכֵן הָיִינוּ מוּכָנִים עִם־עֲשֶׂרֶת אֲלָפִים אִישׁ וְצֵידָה לָהֶם וְגַם לִנְשֵׁיהֶם וּלְטַפָּם׃",
+  "hebrew": "וְגַם נִשְׁלְחוּ אֵלֵינוּ אַלְפַּיִם אִישׁ מֵאֶרֶץ זָרַחֶמְלָה וְכֵן הָיִינוּ מוּכָנִים עִם־עֲשֶׂרֶת אֲלָפִים אִישׁ וְצֵידָה לָהֶם וְגַם לִנְשֵׁיהֶם וּלְטַפָּם׃",
   "english": "And also there were sent two thousand men unto us from the land of Zarahemla. And thus we were prepared with ten thousand men, and provisions for them, and also for their wives and their children."
  },
  {
@@ -29550,7 +29550,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 56,
   "verse": 45,
-  "hebrew": "וְעַתָּה אֹמַר לְךָ אָחִי הַיָּקָר מוֹרוֹנִי כִּי מֵעוֹלָם לֹא רָאִיתִי אֹמֶץ גָּדוֹל כָּזֶה אַף לֹא בְּקֶרֶב כָּל־הַנֶפִים׃",
+  "hebrew": "וְעַתָּה אֹמַר לְךָ אָחִי הַיָּקָר מוֹרוֹנִי כִּי מֵעוֹלָם לֹא רָאִיתִי אֹמֶץ גָּדוֹל כָּזֶה אַף לֹא בְּקֶרֶב כָּל־הַנֶּפִיִּים׃",
   "english": "And now I say unto you, my beloved brother Moroni, that never had I seen so great courage, nay, not amongst all the Nephites."
  },
  {
@@ -29634,7 +29634,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 56,
   "verse": 57,
-  "hebrew": "וְכַאֲשֶׁר לֹא הָיָה לָנוּ מָקוֹם לִשְׁבוּיֵינוּ לִשְׁמֹר עֲלֵיהֶם וּלְהַצִּילָם מִצִּבְאוֹת הַלָּמָנִים לָכֵן שְׁלַחְנוּם אֶל־אֶרֶץ צָרַהֶמְלָה וְעִמָּם חֵלֶק מֵאַנְשֵׁי אַנְטִיפּוּס אֲשֶׁר לֹא נֶהֶרְגוּ וְאֶת־הַנּוֹתָרִים לָקַחְתִּי וָאֲצַרְפֵם אֶל־בְּנֵי הָעַמּוֹנִים הַצְּעִירִים אֲשֶׁר לִי וַנִּשָּׂא מַסָּעֵנוּ אֶל־עִיר יְהוּדָה׃",
+  "hebrew": "וְכַאֲשֶׁר לֹא הָיָה לָנוּ מָקוֹם לִשְׁבוּיֵינוּ לִשְׁמֹר עֲלֵיהֶם וּלְהַצִּילָם מִצִּבְאוֹת הַלָּמָנִים לָכֵן שְׁלַחְנוּם אֶל־אֶרֶץ זָרַחֶמְלָה וְעִמָּם חֵלֶק מֵאַנְשֵׁי אַנְטִיפּוּס אֲשֶׁר לֹא נֶהֶרְגוּ וְאֶת־הַנּוֹתָרִים לָקַחְתִּי וָאֲצַרְפֵם אֶל־בְּנֵי הָעַמּוֹנִים הַצְּעִירִים אֲשֶׁר לִי וַנִּשָּׂא מַסָּעֵנוּ אֶל־עִיר יְהוּדָה׃",
   "english": "And as we had no place for our prisoners, that we could guard them to keep them from the armies of the Lamanites, therefore we sent them to the land of Zarahemla, and a part of those men who were not slain of Antipus, with them; and the remainder I took and joined them to my stripling Ammonites, and took our march back to the city of Judea."
  },
  {
@@ -29676,7 +29676,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 57,
   "verse": 6,
-  "hebrew": "וַיְהִי בִּתְחִלַּת הַשָּׁנָה הַתֵּשַׁע וְעֶשְׂרִים וַנְּקַבֵּל תּוֹסֶפֶת צֵידָה וְגַם תּוֹסֶפֶת לִצְבָאֵנוּ מֵאֶרֶץ צָרַהֶמְלָה וּמֵהָאָרֶץ מִסָּבִיב לְמִסְפַּר שֵׁשֶׁת אֲלָפִים אִישׁ מִלְּבַד שִׁשִּׁים מִבְּנֵי הָעַמּוֹנִים אֲשֶׁר בָּאוּ לְהִצְטָרֵף אֶל־אֲחֵיהֶם גְּדוּדִי הַקָּטָן אֲשֶׁר לִי בְּנֵי אַלְפָּיִם וְעַתָּה הִנֵּה הָיִינוּ חֲזָקִים וְגַם הָיָה לָנוּ שֶׁפַע צֵידָה אֲשֶׁר הוּבְאָה אֵלֵינוּ׃",
+  "hebrew": "וַיְהִי בִּתְחִלַּת הַשָּׁנָה הַתֵּשַׁע וְעֶשְׂרִים וַנְּקַבֵּל תּוֹסֶפֶת צֵידָה וְגַם תּוֹסֶפֶת לִצְבָאֵנוּ מֵאֶרֶץ זָרַחֶמְלָה וּמֵהָאָרֶץ מִסָּבִיב לְמִסְפַּר שֵׁשֶׁת אֲלָפִים אִישׁ מִלְּבַד שִׁשִּׁים מִבְּנֵי הָעַמּוֹנִים אֲשֶׁר בָּאוּ לְהִצְטָרֵף אֶל־אֲחֵיהֶם גְּדוּדִי הַקָּטָן אֲשֶׁר לִי בְּנֵי אַלְפָּיִם וְעַתָּה הִנֵּה הָיִינוּ חֲזָקִים וְגַם הָיָה לָנוּ שֶׁפַע צֵידָה אֲשֶׁר הוּבְאָה אֵלֵינוּ׃",
   "english": "And it came to pass that in the commencement of the twenty and ninth year, we received a supply of provisions, and also an addition to our army, from the land of Zarahemla, and from the land round about, to the number of six thousand men, besides sixty of the sons of the Ammonites who had come to join their brethren, my little band of two thousand. And now behold, we were strong, yea, and we had also plenty of provisions brought unto us."
  },
  {
@@ -29704,14 +29704,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 57,
   "verse": 10,
-  "hebrew": "וַיְהִי כִּי הִגִּיעָה צֵידָתָם וַיֹּאמְרוּ לָבוֹא אֶל־הָעִיר בַּלָּיְלָה וַאֲנַחְנוּ תַּחַת הֱיוֹתֵנוּ לָמָנִים הָיִינוּ נֶפִים לָכֵן לָקַחְנוּ אוֹתָם וְאֶת־צֵידָתָם׃",
+  "hebrew": "וַיְהִי כִּי הִגִּיעָה צֵידָתָם וַיֹּאמְרוּ לָבוֹא אֶל־הָעִיר בַּלָּיְלָה וַאֲנַחְנוּ תַּחַת הֱיוֹתֵנוּ לָמָנִים הָיִינוּ נְפִיִּים לָכֵן לָקַחְנוּ אוֹתָם וְאֶת־צֵידָתָם׃",
   "english": "At length their provisions did arrive, and they were about to enter the city by night. And we, instead of being Lamanites, were Nephites; therefore, we did take them and their provisions."
  },
  {
   "book": "Alma",
   "chapter": 57,
   "verse": 11,
-  "hebrew": "וְאַף כִּי נִכְרְתוּ הַלָּמָנִים מִתְּמִיכָתָם בַּדֶּרֶךְ הַזֹּאת עוֹד אִמְּצוּ לֵב לְהַחֲזִיק בָּעִיר לָכֵן הָיָה נָכוֹן לָקַחַת אֶת־הַצֵּידָה הַהִיא וּלְשָׁלְחָהּ לִיהוּדָה וְאֶת־שְׁבוּיֵינוּ לְאֶרֶץ צָרַהֶמְלָה׃",
+  "hebrew": "וְאַף כִּי נִכְרְתוּ הַלָּמָנִים מִתְּמִיכָתָם בַּדֶּרֶךְ הַזֹּאת עוֹד אִמְּצוּ לֵב לְהַחֲזִיק בָּעִיר לָכֵן הָיָה נָכוֹן לָקַחַת אֶת־הַצֵּידָה הַהִיא וּלְשָׁלְחָהּ לִיהוּדָה וְאֶת־שְׁבוּיֵינוּ לְאֶרֶץ זָרַחֶמְלָה׃",
   "english": "And notwithstanding the Lamanites being cut off from their support after this manner, they were still determined to maintain the city; therefore it became expedient that we should take those provisions and send them to Judea, and our prisoners to the land of Zarahemla."
  },
  {
@@ -29739,14 +29739,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 57,
   "verse": 15,
-  "hebrew": "לָכֵן הָיָה נָחוּץ לָנוּ לְהָמִיתָם אוֹ לִשְׁמֹר עֲלֵיהֶם בְּחֶרֶב שְׁלוּפָה עַד־אֶרֶץ צָרַהֶמְלָה וְגַם צֵידָתֵנוּ לֹא הָיְתָה יוֹתֵר מִמַּסְפֶּקֶת לְעַמֵּנוּ אַף עִם־מַה־שֶּׁלָּקַחְנוּ מִן־הַלָּמָנִים׃",
+  "hebrew": "לָכֵן הָיָה נָחוּץ לָנוּ לְהָמִיתָם אוֹ לִשְׁמֹר עֲלֵיהֶם בְּחֶרֶב שְׁלוּפָה עַד־אֶרֶץ זָרַחֶמְלָה וְגַם צֵידָתֵנוּ לֹא הָיְתָה יוֹתֵר מִמַּסְפֶּקֶת לְעַמֵּנוּ אַף עִם־מַה־שֶּׁלָּקַחְנוּ מִן־הַלָּמָנִים׃",
   "english": "Therefore it became expedient for us, that we should put an end to their lives, or guard them, sword in hand, down to the land of Zarahemla; and also our provisions were not any more than sufficient for our own people, notwithstanding that which we had taken from the Lamanites."
  },
  {
   "book": "Alma",
   "chapter": 57,
   "verse": 16,
-  "hebrew": "וְעַתָּה בַּמָּצוֹק הַזֶּה הָיָה הַדָּבָר חָמוּר מְאֹד לַחֲרֹץ בִּדְבַר שְׁבוּיֵי הַמִּלְחָמָה הָאֵלֶּה אַף־עַל־פִּי־כֵן חָרַצְנוּ לְשָׁלְחָם לְאֶרֶץ צָרַהֶמְלָה לָכֵן בָּחַרְנוּ חֵלֶק מֵאֲנָשֵׁינוּ וַנַּפְקִידֵם עַל־שְׁבוּיֵינוּ לָלֶכֶת לְאֶרֶץ צָרַהֶמְלָה׃",
+  "hebrew": "וְעַתָּה בַּמָּצוֹק הַזֶּה הָיָה הַדָּבָר חָמוּר מְאֹד לַחֲרֹץ בִּדְבַר שְׁבוּיֵי הַמִּלְחָמָה הָאֵלֶּה אַף־עַל־פִּי־כֵן חָרַצְנוּ לְשָׁלְחָם לְאֶרֶץ זָרַחֶמְלָה לָכֵן בָּחַרְנוּ חֵלֶק מֵאֲנָשֵׁינוּ וַנַּפְקִידֵם עַל־שְׁבוּיֵינוּ לָלֶכֶת לְאֶרֶץ זָרַחֶמְלָה׃",
   "english": "And now, in those critical circumstances, it became a very serious matter to determine concerning these prisoners of war; nevertheless, we did resolve to send them down to the land of Zarahemla; therefore we selected a part of our men, and gave them charge over our prisoners to go down to the land of Zarahemla."
  },
  {
@@ -29830,21 +29830,21 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 57,
   "verse": 28,
-  "hebrew": "וַיְהִי אַחֲרֵי אֲשֶׁר טִפַּלְנוּ כָּכָה בַּאֲנָשֵׁינוּ הַפְּצוּעִים וַנִּקְבֹּר אֶת־מֵתֵינוּ וְגַם אֶת־מֵתֵי הַלָּמָנִים אֲשֶׁר רַבִּים הָיוּ הִנֵּה שָׁאַלְנוּ אֶת־גִּד עַל־דְּבַר הַשְּׁבוּיִים אֲשֶׁר הֵחֵלּוּ לָלֶכֶת עִמָּם לְאֶרֶץ צָרַהֶמְלָה׃",
+  "hebrew": "וַיְהִי אַחֲרֵי אֲשֶׁר טִפַּלְנוּ כָּכָה בַּאֲנָשֵׁינוּ הַפְּצוּעִים וַנִּקְבֹּר אֶת־מֵתֵינוּ וְגַם אֶת־מֵתֵי הַלָּמָנִים אֲשֶׁר רַבִּים הָיוּ הִנֵּה שָׁאַלְנוּ אֶת־גִּד עַל־דְּבַר הַשְּׁבוּיִים אֲשֶׁר הֵחֵלּוּ לָלֶכֶת עִמָּם לְאֶרֶץ זָרַחֶמְלָה׃",
   "english": "And now it came to pass that after we had thus taken care of our wounded men, and had buried our dead and also the dead of the Lamanites, who were many, behold, we did inquire of Gid concerning the prisoners whom they had started to go down to the land of Zarahemla with."
  },
  {
   "book": "Alma",
   "chapter": 57,
   "verse": 29,
-  "hebrew": "וְגִד הָיָה שַׂר הַגְּדוּד אֲשֶׁר הֻפְקַד לִשְׁמֹר עֲלֵיהֶם בְּלֶכְתָּם לְאֶרֶץ צָרַהֶמְלָה׃",
+  "hebrew": "וְגִד הָיָה שַׂר הַגְּדוּד אֲשֶׁר הֻפְקַד לִשְׁמֹר עֲלֵיהֶם בְּלֶכְתָּם לְאֶרֶץ זָרַחֶמְלָה׃",
   "english": "Now Gid was the chief captain over the band who was appointed to guard them down to the land."
  },
  {
   "book": "Alma",
   "chapter": 57,
   "verse": 30,
-  "hebrew": "וְאֵלֶּה הַדְּבָרִים אֲשֶׁר אָמַר אֵלַי גִּד הִנֵּה הֵחְלוּ לָלֶכֶת לְאֶרֶץ צָרַהֶמְלָה עִם־שְׁבוּיֵינוּ וַיְהִי כִּי פָּגַשְׁנוּ אֶת־מְרַגְּלֵי צְבָאֵנוּ אֲשֶׁר נִשְׁלְחוּ לִשְׁמֹר אֶת־מַחֲנֵה הַלָּמָנִים׃",
+  "hebrew": "וְאֵלֶּה הַדְּבָרִים אֲשֶׁר אָמַר אֵלַי גִּד הִנֵּה הֵחְלוּ לָלֶכֶת לְאֶרֶץ זָרַחֶמְלָה עִם־שְׁבוּיֵינוּ וַיְהִי כִּי פָּגַשְׁנוּ אֶת־מְרַגְּלֵי צְבָאֵנוּ אֲשֶׁר נִשְׁלְחוּ לִשְׁמֹר אֶת־מַחֲנֵה הַלָּמָנִים׃",
   "english": "And now, these are the words which Gid said unto me: Behold, we did start to go down to the land of Zarahemla with our prisoners. And it came to pass that we did meet the spies of our armies, who had been sent out to watch the camp of the Lamanites."
  },
  {
@@ -29893,7 +29893,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 58,
   "verse": 1,
-  "hebrew": "וַיְהִי עַתָּה כִּי חֶפְצֵנוּ הַשֵּׁנִי הָיָה לָקַחַת אֶת־הָעִיר מַנְטִי אַךְ לֹא הָיָה בְכֹחֵנוּ לְהוֹצִיאָם מִמֶּנָּה בִּגְדוּדֵינוּ הַקְּטַנִּים כִּי זָכְרוּ אֵת אֲשֶׁר עָשִׂינוּ לִפְנֵי כֵן וְלֹא יָכֹלְנוּ לְפַתּוֹתָם לָצֵאת מִמְּצוּדוֹתֵיהֶם׃",
+  "hebrew": "וַיְהִי עַתָּה כִּי חֶפְצֵנוּ הַשֵּׁנִי הָיָה לָקַחַת אֶת־הָעִיר מַנְטִי אַךְ לֹא הָיָה בְכֹחֵנוּ לְהוֹצִיאָם מִמֶּנָּה בִּגְדוּדֵינוּ הַקְּטַנִּים כִּי זָכְרוּ אֶת־אֲשֶׁר עָשִׂינוּ לִפְנֵי כֵן וְלֹא יָכֹלְנוּ לְפַתּוֹתָם לָצֵאת מִמְּצוּדוֹתֵיהֶם׃",
   "english": "And behold, now it came to pass that our next object was to obtain the city of Manti; but behold, there was no way that we could lead them out of the city by our small bands. For behold, they remembered that which we had hitherto done; therefore we could not decoy them away from their strongholds."
  },
  {
@@ -29907,14 +29907,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 58,
   "verse": 3,
-  "hebrew": "וְגַם נָכוֹן הָיָה לְהַפְקִיד אֶת־אֲנָשֵׁינוּ לִשְׁמֹר עַל־חֶלְקֵי הָאָרֶץ אֲשֶׁר הֵשַׁבְנוּ לִרְשׁוּתֵנוּ לָכֵן נָכוֹן הָיָה לָנוּ לְחַכּוֹת עַד אֲשֶׁר נְקַבֵּל תּוֹסֶפֶת כֹּחַ מֵאֶרֶץ צָרַהֶמְלָה וְגַם תּוֹסֶפֶת צֵידָה׃",
+  "hebrew": "וְגַם נָכוֹן הָיָה לְהַפְקִיד אֶת־אֲנָשֵׁינוּ לִשְׁמֹר עַל־חֶלְקֵי הָאָרֶץ אֲשֶׁר הֵשַׁבְנוּ לִרְשׁוּתֵנוּ לָכֵן נָכוֹן הָיָה לָנוּ לְחַכּוֹת עַד אֲשֶׁר נְקַבֵּל תּוֹסֶפֶת כֹּחַ מֵאֶרֶץ זָרַחֶמְלָה וְגַם תּוֹסֶפֶת צֵידָה׃",
   "english": "Yea, and it became expedient that we should employ our men to the maintaining those parts of the land which we had regained of our possessions; therefore it became expedient that we should wait, that we might receive more strength from the land of Zarahemla and also a new supply of provisions."
  },
  {
   "book": "Alma",
   "chapter": 58,
   "verse": 4,
-  "hebrew": "וַיְהִי כִּי שָׁלַחְתִּי מַלְאָכִים אֶל־מֹשֵׁל אַרְצֵנוּ לְהוֹדִיעוֹ אֶת־דִּבְרֵי עַמֵּנוּ וַנְּחַכֶּה לְקַבֵּל צֵידָה וְעֹז מֵאֶרֶץ צָרַהֶמְלָה׃",
+  "hebrew": "וַיְהִי כִּי שָׁלַחְתִּי מַלְאָכִים אֶל־מֹשֵׁל אַרְצֵנוּ לְהוֹדִיעוֹ אֶת־דִּבְרֵי עַמֵּנוּ וַנְּחַכֶּה לְקַבֵּל צֵידָה וְעֹז מֵאֶרֶץ זָרַחֶמְלָה׃",
   "english": "And it came to pass that I thus did send an embassy to the governor of our land, to acquaint him concerning the affairs of our people. And it came to pass that we did wait to receive provisions and strength from the land of Zarahemla."
  },
  {
@@ -30047,14 +30047,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 58,
   "verse": 23,
-  "hebrew": "וַיְהִי כִּי יָרְשׁוּ גִד וְטֵאוֹמְנֶר בַּדֶּרֶךְ הַזֹּאת אֶת־מְצוּדוֹתֵיהֶם וַיְהִי כִּי הָלַכְנוּ לְדַרְכֵּנוּ אַחֲרֵי נָסְעֵנוּ הַרְבֵּה בַּמִּדְבָּר דֶּרֶךְ אֶרֶץ צָרַהֶמְלָה׃",
+  "hebrew": "וַיְהִי כִּי יָרְשׁוּ גִד וְטֵאוֹמְנֶר בַּדֶּרֶךְ הַזֹּאת אֶת־מְצוּדוֹתֵיהֶם וַיְהִי כִּי הָלַכְנוּ לְדַרְכֵּנוּ אַחֲרֵי נָסְעֵנוּ הַרְבֵּה בַּמִּדְבָּר דֶּרֶךְ אֶרֶץ זָרַחֶמְלָה׃",
   "english": "And it came to pass that Gid and Teomner by this means had obtained possession of their strongholds. And it came to pass that we took our course, after having traveled much in the wilderness towards the land of Zarahemla."
  },
  {
   "book": "Alma",
   "chapter": 58,
   "verse": 24,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר רָאוּ הַלָּמָנִים כִּי צֹעֲדִים הֵם דֶּרֶךְ אֶרֶץ צָרַהֶמְלָה וַיִּירְאוּ מְאֹד פֶּן־נֶחְבְּלָה מְזִמָּה לְהוֹבִילָם לְהַשְׁמָדָה לָכֵן הֵחֵלּוּ לָסוּג שׁוּב אֶל־הַמִּדְבָּר בַּדֶּרֶךְ אֲשֶׁר בָּאוּ בָהּ׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר רָאוּ הַלָּמָנִים כִּי צֹעֲדִים הֵם דֶּרֶךְ אֶרֶץ זָרַחֶמְלָה וַיִּירְאוּ מְאֹד פֶּן־נֶחְבְּלָה מְזִמָּה לְהוֹבִילָם לְהַשְׁמָדָה לָכֵן הֵחֵלּוּ לָסוּג שׁוּב אֶל־הַמִּדְבָּר בַּדֶּרֶךְ אֲשֶׁר בָּאוּ בָהּ׃",
   "english": "And when the Lamanites saw that they were marching towards the land of Zarahemla, they were exceedingly afraid, lest there was a plan laid to lead them on to destruction; therefore they began to retreat into the wilderness again, yea, even back by the same way which they had come."
  },
  {
@@ -30173,14 +30173,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 58,
   "verse": 41,
-  "hebrew": "וְעַתָּה מוֹרוֹנִי אָחִי הַיָּקָר יִשְׁמָרְךָ יְהוָה אֱלֹהֵינוּ אֲשֶׁר גְּאָלָנוּ וְחִפְּשָׁנוּ תָּמִיד בִּפְנֵי כְבוֹדוֹ וְיָחֹן אֶת־הָעָם הַזֶּה וְתַצְלִיחוּ לָרֶשֶׁת אֵת כָּל־אֲשֶׁר לָקְחוּ מֵאִתָּנוּ הַלָּמָנִים אֲשֶׁר הָיָה לְמִחְיָתֵנוּ וְעַתָּה הִנְנִי חוֹתֵם אֶת־אִגַּרְתִּי אֲנִי הֵילָמָן בֶּן־אַלְמָה׃",
+  "hebrew": "וְעַתָּה מוֹרוֹנִי אָחִי הַיָּקָר יִשְׁמָרְךָ יְהוָה אֱלֹהֵינוּ אֲשֶׁר גְּאָלָנוּ וְחִפְּשָׁנוּ תָּמִיד בִּפְנֵי כְבוֹדוֹ וְיָחֹן אֶת־הָעָם הַזֶּה וְתַצְלִיחוּ לָרֶשֶׁת אֶת־כָּל־אֲשֶׁר לָקְחוּ מֵאִתָּנוּ הַלָּמָנִים אֲשֶׁר הָיָה לְמִחְיָתֵנוּ וְעַתָּה הִנְנִי חוֹתֵם אֶת־אִגַּרְתִּי אֲנִי הֵילָמָן בֶּן־אַלְמָא׃",
   "english": "And now, my beloved brother, Moroni, may the Lord our God, who has redeemed us and made us free, keep you continually in his presence; yea, and may he favor this people, even that ye may have success in obtaining the possession of all that which the Lamanites have taken from us, which was for our support. And now, behold, I close mine epistle. I am Helaman, the son of Alma."
  },
  {
   "book": "Alma",
   "chapter": 59,
   "verse": 1,
-  "hebrew": "וַיְהִי בִּשְׁנַת הַשְּׁלֹשִׁים לְמִשְׁפַּט הַשֹּׁפְטִים עַל־עַם נֶפִי כַּאֲשֶׁר קִבֵּל מוֹרֹנִי וַיִּקְרָא אֶת־אִגֶּרֶת הֵלָמָן וַיִּשְׂמַח מְאֹד עַל־הַטּוֹבָה וְעַל־הַהַצְלָחָה הַגְּדוֹלָה אֲשֶׁר הָיְתָה לְהֵלָמָן בְּקַחְתּוֹ אֶת־הָאֲרָצוֹת אֲשֶׁר אָבְדוּ׃",
+  "hebrew": "וַיְהִי בִּשְׁנַת הַשְּׁלֹשִׁים לְמִשְׁפַּט הַשֹּׁפְטִים עַל־עַם נֶפִי כַּאֲשֶׁר קִבֵּל מוֹרוֹנִי וַיִּקְרָא אֶת־אִגֶּרֶת הֵילָמָן וַיִּשְׂמַח מְאֹד עַל־הַטּוֹבָה וְעַל־הַהַצְלָחָה הַגְּדוֹלָה אֲשֶׁר הָיְתָה לְהֵילָמָן בְּקַחְתּוֹ אֶת־הָאֲרָצוֹת אֲשֶׁר אָבְדוּ׃",
   "english": "Now it came to pass in the thirtieth year of the reign of the judges over the people of Nephi, after Moroni had received and had read Helaman's epistle, he was exceedingly rejoiced because of the welfare, yea, the exceeding success which Helaman had had, in obtaining those lands which were lost."
  },
  {
@@ -30194,21 +30194,21 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 59,
   "verse": 3,
-  "hebrew": "וַיִּשְׁלַח מִיָּד אִגֶּרֶת אֶל־פָּחוֹרָן לֵאמֹר כִּי יְקַבֵּץ אֲנָשִׁים לְחַזֵּק אֶת־הֵלָמָן אוֹ אֶת־צְבָאוֹת הֵלָמָן לְמַעַן יַחֲזִיק בְּקַלּוּת בַּחֵלֶק הַהוּא מִן־הָאָרֶץ אֲשֶׁר הִצְלִיחַ לְהָשִׁיב בְּאֹרַח פֶּלֶא׃",
+  "hebrew": "וַיִּשְׁלַח מִיָּד אִגֶּרֶת אֶל־פָּהוֹרָן לֵאמֹר כִּי יְקַבֵּץ אֲנָשִׁים לְחַזֵּק אֶת־הֵילָמָן אוֹ אֶת־צְבָאוֹת הֵילָמָן לְמַעַן יַחֲזִיק בְּקַלּוּת בַּחֵלֶק הַהוּא מִן־הָאָרֶץ אֲשֶׁר הִצְלִיחַ לְהָשִׁיב בְּאֹרַח פֶּלֶא׃",
   "english": "And it came to pass that he immediately sent an epistle to Pahoran, desiring that he should cause men to be gathered together to strengthen Helaman, or the armies of Helaman, insomuch that he might with ease maintain that part of the land which he had been so miraculously prospered in regaining."
  },
  {
   "book": "Alma",
   "chapter": 59,
   "verse": 4,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר שָׁלַח מוֹרֹנִי אֶת־הָאִגֶּרֶת הַזֹּאת אֶל־אֶרֶץ זָרַחֶמְלָה וַיָּחֶל לַחֲשֹׁב מַחֲשָׁבָה לָקַחַת אֶת־יֶתֶר הָאֲחֻזּוֹת וְהֶעָרִים אֲשֶׁר לָקְחוּ הַלָּמָנִים מֵהֶם׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר שָׁלַח מוֹרוֹנִי אֶת־הָאִגֶּרֶת הַזֹּאת אֶל־אֶרֶץ זָרַחֶמְלָה וַיָּחֶל לַחֲשֹׁב מַחֲשָׁבָה לָקַחַת אֶת־יֶתֶר הָאֲחֻזּוֹת וְהֶעָרִים אֲשֶׁר לָקְחוּ הַלָּמָנִים מֵהֶם׃",
   "english": "And it came to pass when Moroni had sent this epistle to the land of Zarahemla, he began again to lay a plan that he might obtain the remainder of those possessions and cities which the Lamanites had taken from them."
  },
  {
   "book": "Alma",
   "chapter": 59,
   "verse": 5,
-  "hebrew": "וַיְהִי בְּעוֹד מוֹרֹנִי מֵכִין לָצֵאת לַמִּלְחָמָה בַּלָּמָנִים וְהִנֵּה עַם נְפִיחָה הַנֶּאֱסָפִים מֵעִיר מוֹרֹנִי וּמֵעִיר לֶחִי וּמֵעִיר מוֹרִיאַנְטוֹן הֻכּוּ לִפְנֵי הַלָּמָנִים׃",
+  "hebrew": "וַיְהִי בְּעוֹד מוֹרוֹנִי מֵכִין לָצֵאת לַמִּלְחָמָה בַּלָּמָנִים וְהִנֵּה עַם נֶפִיחָה הַנֶּאֱסָפִים מֵעִיר מוֹרוֹנִי וּמֵעִיר לֶחִי וּמֵעִיר מוֹרִיאַנְטוֹן הֻכּוּ לִפְנֵי הַלָּמָנִים׃",
   "english": "And it came to pass that while Moroni was thus making preparations to go against the Lamanites to battle, behold, the people of Nephihah, who were gathered together from the city of Moroni and the city of Lehi and the city of Morianton, were attacked by the Lamanites."
  },
  {
@@ -30222,21 +30222,21 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 59,
   "verse": 7,
-  "hebrew": "וַיְהִי כִּי רַבּוּ מְאֹד וַיִּתְחַזְּקוּ יוֹם יוֹם עַל־פִּי מִצְוַת עַמּוֹרוֹן וַיָּבֹאוּ עַל־עַם נְפִיחָה וַיָּחֵלּוּ לְהַכּוֹתָם מַכָּה גְדוֹלָה מְאֹד׃",
+  "hebrew": "וַיְהִי כִּי רַבּוּ מְאֹד וַיִּתְחַזְּקוּ יוֹם יוֹם עַל־פִּי מִצְוַת עַמּוֹרוֹן וַיָּבֹאוּ עַל־עַם נֶפִיחָה וַיָּחֵלּוּ לְהַכּוֹתָם מַכָּה גְדוֹלָה מְאֹד׃",
   "english": "And thus being exceedingly numerous, yea, and receiving strength from day to day, by the command of Ammoron they came forth against the people of Nephihah, and they did begin to slay them with an exceedingly great slaughter."
  },
  {
   "book": "Alma",
   "chapter": 59,
   "verse": 8,
-  "hebrew": "וַיְהִי צִבְאוֹתֵיהֶם רַבִּים מְאֹד עַד כִּי שְׁאֵרִית עַם נְפִיחָה נֶאֶלְצוּ לָנוּס מִפְּנֵיהֶם וַיָּבֹאוּ וַיִּתְחַבְּרוּ אֶל־צְבָא מוֹרֹנִי׃",
+  "hebrew": "וַיְהִי צִבְאוֹתֵיהֶם רַבִּים מְאֹד עַד כִּי שְׁאֵרִית עַם נֶפִיחָה נֶאֶלְצוּ לָנוּס מִפְּנֵיהֶם וַיָּבֹאוּ וַיִּתְחַבְּרוּ אֶל־צְבָא מוֹרוֹנִי׃",
   "english": "And their armies were so numerous that the remainder of the people of Nephihah were obliged to flee before them; and they came even and joined the army of Moroni."
  },
  {
   "book": "Alma",
   "chapter": 59,
   "verse": 9,
-  "hebrew": "וְעַתָּה כַּאֲשֶׁר חָשַׁב מוֹרֹנִי כִּי יִשָּׁלְחוּ אֲנָשִׁים אֶל־עִיר נְפִיחָה לַעֲזֹר לָעָם לְהַחֲזִיק בָּעִיר וּבְיָדְעוֹ כִּי קַל יוֹתֵר לִשְׁמֹר אֶת־הָעִיר מִנְּפֹל בִּידֵי הַלָּמָנִים מֵאֲשֶׁר לְהָשִׁיבָהּ מִיָּדָם חָשַׁב כִּי יַחֲזִיקוּ בָּעִיר בְּקַלּוּת׃",
+  "hebrew": "וְעַתָּה כַּאֲשֶׁר חָשַׁב מוֹרוֹנִי כִּי יִשָּׁלְחוּ אֲנָשִׁים אֶל־עִיר נֶפִיחָה לַעֲזֹר לָעָם לְהַחֲזִיק בָּעִיר וּבְיָדְעוֹ כִּי קַל יוֹתֵר לִשְׁמֹר אֶת־הָעִיר מִנְּפֹל בִּידֵי הַלָּמָנִים מֵאֲשֶׁר לְהָשִׁיבָהּ מִיָּדָם חָשַׁב כִּי יַחֲזִיקוּ בָּעִיר בְּקַלּוּת׃",
   "english": "And now as Moroni had supposed that there should be men sent to the city Nephihah, to the assistance of the people to maintain that city, and knowing that it was easier to keep the city from falling into the hands of the Lamanites than to retake it from them, he supposed that they would easily maintain that city."
  },
  {
@@ -30250,7 +30250,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 59,
   "verse": 11,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר רָאָה מוֹרֹנִי כִּי אָבְדָה עִיר נְפִיחָה וַיִּתְעַצֵּב מְאֹד וַיָּחֶל לָחוּשׁ סָפֵק בִּגְלַל רִשְׁעַת הָעָם פֶּן־יִפְּלוּ בִּידֵי אֲחֵיהֶם׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר רָאָה מוֹרוֹנִי כִּי אָבְדָה עִיר נֶפִיחָה וַיִּתְעַצֵּב מְאֹד וַיָּחֶל לָחוּשׁ סָפֵק בִּגְלַל רִשְׁעַת הָעָם פֶּן־יִפְּלוּ בִּידֵי אֲחֵיהֶם׃",
   "english": "And now, when Moroni saw that the city of Nephihah was lost he was exceedingly sorrowful, and began to doubt, because of the wickedness of the people, whether they should not fall into the hands of their brethren."
  },
  {
@@ -30264,14 +30264,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 59,
   "verse": 13,
-  "hebrew": "וַיִּקְצֹף מוֹרֹנִי עַל־הַמֶּמְשָׁלָה בַּעֲבוּר רִפְיוֹן יְדֵיהֶם לִדְרוֹר אַרְצָם׃",
+  "hebrew": "וַיִּקְצֹף מוֹרוֹנִי עַל־הַמֶּמְשָׁלָה בַּעֲבוּר רִפְיוֹן יְדֵיהֶם לִדְרוֹר אַרְצָם׃",
   "english": "And it came to pass that Moroni was angry with the government, because of their indifference concerning the freedom of their country."
  },
  {
   "book": "Alma",
   "chapter": 60,
   "verse": 1,
-  "hebrew": "וַיְהִי כִּי כָּתַב שֵׁנִית אֶל־מֹשֵׁל הָאָרֶץ הוּא פָּהוֹרָן וְאֵלֶּה הַדְּבָרִים אֲשֶׁר כָּתַב לֵאמֹר הִנֵּה שׁוֹלֵחַ אֲנִי אִגַּרְתִּי אֶל־פָּהוֹרָן בְּעִיר צָרַהֶמְלָה הַשֹּׁפֵט הָרֹאשׁ וּמֹשֵׁל הָאָרֶץ וְגַם אֶל־כָּל־אֵלֶּה אֲשֶׁר נִבְחֲרוּ בְּיַד הָעָם הַזֶּה לִמְשֹׁל וּלְנַהֵל אֶת־דִּבְרֵי הַמִּלְחָמָה הַזֹּאת׃",
+  "hebrew": "וַיְהִי כִּי כָּתַב שֵׁנִית אֶל־מֹשֵׁל הָאָרֶץ הוּא פָּהוֹרָן וְאֵלֶּה הַדְּבָרִים אֲשֶׁר כָּתַב לֵאמֹר הִנֵּה שׁוֹלֵחַ אֲנִי אִגַּרְתִּי אֶל־פָּהוֹרָן בְּעִיר זָרַחֶמְלָה הַשֹּׁפֵט הָרֹאשׁ וּמֹשֵׁל הָאָרֶץ וְגַם אֶל־כָּל־אֵלֶּה אֲשֶׁר נִבְחֲרוּ בְּיַד הָעָם הַזֶּה לִמְשֹׁל וּלְנַהֵל אֶת־דִּבְרֵי הַמִּלְחָמָה הַזֹּאת׃",
   "english": "And it came to pass that he wrote again to the governor of the land, who was Pahoran, and these are the words which he wrote, saying: Behold, I direct mine epistle to Pahoran, in the city of Zarahemla, who is the chief judge and the governor over the land, and also to all those who have been chosen by this people to govern and manage the affairs of this war."
  },
  {
@@ -30334,7 +30334,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 60,
   "verse": 10,
-  "hebrew": "וְעַתָּה אַחַי הָאֲהוּבִים כִּי רְאוּיִים אַתֶּם לְהֵאָהֵב הֵן וּרְאוּיִים הֱיִיתֶם לְהִתְעוֹרֵר בְּיֶתֶר חָרִיצוּת לְטוֹבַת וְדְרוֹר הָעָם הַזֶּה אַךְ הִנֵּה עֲזַבְתֶּם אוֹתָם עַד כִּי דַּם אֲלָפִים יָבוֹא עַל־רָאשֵׁיכֶם לְנָקָם כִּי יָדַע אֱלֹהִים אֶת־כׇּל־צַעֲקוֹתֵיהֶם וְכׇל־עׇנְיָם׃",
+  "hebrew": "וְעַתָּה אַחַי הָאֲהוּבִים כִּי רְאוּיִים אַתֶּם לְהֵאָהֵב הֵן וּרְאוּיִים הֱיִיתֶם לְהִתְעוֹרֵר בְּיֶתֶר חָרִיצוּת לְטוֹבַת וּדְרוֹר הָעָם הַזֶּה אַךְ הִנֵּה עֲזַבְתֶּם אוֹתָם עַד כִּי דַּם אֲלָפִים יָבוֹא עַל־רָאשֵׁיכֶם לְנָקָם כִּי יָדַע אֱלֹהִים אֶת־כׇּל־צַעֲקוֹתֵיהֶם וְכׇל־עׇנְיָם׃",
   "english": "And now, my beloved brethren—for ye ought to be beloved; yea, and ye ought to have stirred yourselves more diligently for the welfare and the freedom of this people; but behold, ye have neglected them insomuch that the blood of thousands shall come upon your heads for vengeance; yea, for known unto God were all their cries, and all their sufferings—"
  },
  {
@@ -30474,7 +30474,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 60,
   "verse": 30,
-  "hebrew": "הִנֵּה מְחַכֶּה אֲנִי לְעֶזְרַתְכֶם וְאִם לֹא תַעַזְרוּ לִרְוָחָתֵנוּ הִנֵּה אָבוֹא אֲלֵיכֶם בְּאֶרֶץ צָרַהֶמְלָה וְהִכֵּיתִי אֶתְכֶם בֶּחָרֶב עַד אֲשֶׁר לֹא יִהְיֶה לָכֶם עוֹד כֹּחַ לְעַכֵּב אֶת־דֶּרֶךְ הָעָם הַזֶּה בִּדְבַר דְּרוֹרֵנוּ׃",
+  "hebrew": "הִנֵּה מְחַכֶּה אֲנִי לְעֶזְרַתְכֶם וְאִם לֹא תַעַזְרוּ לִרְוָחָתֵנוּ הִנֵּה אָבוֹא אֲלֵיכֶם בְּאֶרֶץ זָרַחֶמְלָה וְהִכֵּיתִי אֶתְכֶם בֶּחָרֶב עַד אֲשֶׁר לֹא יִהְיֶה לָכֶם עוֹד כֹּחַ לְעַכֵּב אֶת־דֶּרֶךְ הָעָם הַזֶּה בִּדְבַר דְּרוֹרֵנוּ׃",
   "english": "Behold, I wait for assistance from you; and, except ye do administer unto our relief, behold, I come unto you, even in the land of Zarahemla, and smite you with the sword, insomuch that ye can have no more power to impede the progress of this people in the cause of our freedom."
  },
  {
@@ -30516,7 +30516,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 60,
   "verse": 36,
-  "hebrew": "הִנְנִי מוֹרוֹנִי שַׂר צְבָאֲכֶם הָרֹאשׁ לֹא אֲבַקֵּשׁ שִׁלְטוֹן כִּי אִם־לְהַפִּילוֹ לֹא אֲבַקֵּשׁ כְּבוֹד הָעוֹלָם כִּי אִם־כְּבוֹד אֱלֹהַי וְדְרוֹר וְטוֹבַת אַרְצִי וְכֵן אֶחְתֹּם אֶת־אִגַּרְתִּי׃",
+  "hebrew": "הִנְנִי מוֹרוֹנִי שַׂר צְבָאֲכֶם הָרֹאשׁ לֹא אֲבַקֵּשׁ שִׁלְטוֹן כִּי אִם־לְהַפִּילוֹ לֹא אֲבַקֵּשׁ כְּבוֹד הָעוֹלָם כִּי אִם־כְּבוֹד אֱלֹהַי וּדְרוֹר וְטוֹבַת אַרְצִי וְכֵן אֶחְתֹּם אֶת־אִגַּרְתִּי׃",
   "english": "Behold, I am Moroni, your chief captain. I seek not for power, but to pull it down. I seek not for honor of the world, but for the glory of my God, and the freedom and welfare of my country. And thus I close mine epistle."
  },
  {
@@ -30572,7 +30572,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 61,
   "verse": 8,
-  "hebrew": "הֵם יָרְשׁוּ אֶת־הָאָרֶץ אוֹ אֶת־הָעִיר צָרַהֶמְלָה הֵקִימוּ מֶלֶךְ עֲלֵיהֶם וְהוּא כָּתַב אֶל־מֶלֶךְ הַלָּמָנִים  וַיִּכְרֹת בְּרִית עִמּוֹ בַּבְּרִית הַזֹּאת נֶאֱסַר לְהַחֲזִיק בְּעִיר צָרַהֶמְלָה אֲשֶׁר בְּהַחְזָקָה זוֹ חוֹשֵׁב יוּכְלוּ הַלָּמָנִים לִכְבּוֹשׁ אֶת־יֶתֶר הָאָרֶץ וְהוּא יֻשַׂם לְמֶלֶךְ עַל־הָעָם הַזֶּה כַּאֲשֶׁר יִכָּבְשׁוּ תַּחַת הַלָּמָנִים׃",
+  "hebrew": "הֵם יָרְשׁוּ אֶת־הָאָרֶץ אוֹ אֶת־הָעִיר זָרַחֶמְלָה הֵקִימוּ מֶלֶךְ עֲלֵיהֶם וְהוּא כָּתַב אֶל־מֶלֶךְ הַלָּמָנִים  וַיִּכְרֹת בְּרִית עִמּוֹ בַּבְּרִית הַזֹּאת נֶאֱסַר לְהַחֲזִיק בְּעִיר זָרַחֶמְלָה אֲשֶׁר בְּהַחְזָקָה זוֹ חוֹשֵׁב יוּכְלוּ הַלָּמָנִים לִכְבּוֹשׁ אֶת־יֶתֶר הָאָרֶץ וְהוּא יֻשַׂם לְמֶלֶךְ עַל־הָעָם הַזֶּה כַּאֲשֶׁר יִכָּבְשׁוּ תַּחַת הַלָּמָנִים׃",
   "english": "They have got possession of the land, or the city, of Zarahemla; they have appointed a king over them, and he hath written unto the king of  the Lamanites, in the which he hath joined an alliance with him; in the which alliance he hath agreed to maintain the city of Zarahemla, which maintenance he supposeth will enable the Lamanites to conquer the remainder of the land, and he shall be placed king over this people when they shall be conquered under the Lamanites."
  },
  {
@@ -30642,7 +30642,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 61,
   "verse": 18,
-  "hebrew": "וְנִירַשׁ אֶת־עִיר צָרַהֶמְלָה לְמַעַן נַשִּׂיג עוֹד צֵידָה לִשְׁלֹחַ אֶל־לֶחִי וְטֵאַנְקוּם הֵן נֵצֵא נֶגְדָּם בְּכֹחַ יְהוָה וְנָשִׂים קֵץ לָעָוֶל הַגָּדוֹל הַזֶּה׃",
+  "hebrew": "וְנִירַשׁ אֶת־עִיר זָרַחֶמְלָה לְמַעַן נַשִּׂיג עוֹד צֵידָה לִשְׁלֹחַ אֶל־לֶחִי וְטֵאַנְקוּם הֵן נֵצֵא נֶגְדָּם בְּכֹחַ יְהוָה וְנָשִׂים קֵץ לָעָוֶל הַגָּדוֹל הַזֶּה׃",
   "english": "And we will take possession of the city of Zarahemla, that we may obtain more food to send forth unto Lehi and Teancum; yea, we will go forth against them in the strength of the Lord, and we will put an end to this great iniquity."
  },
  {
@@ -30705,14 +30705,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 62,
   "verse": 6,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר קִבֵּץ מוֹרוֹנִי אֶת־כָּל־הָאֲנָשִׁים אֲשֶׁר יָכֹל בְּכָל־מַסָּעוֹ וַיָּבֹא לְאֶרֶץ גִּדְעוֹן וַיְחַבֵּר אֶת־כֹּחוֹתָיו עִם־פָּהוֹרָן וַיֶּחֶזְקוּ מְאֹד מְאֹד עַד כִּי חָזְקוּ מֵאַנְשֵׁי פָּכוּס אֲשֶׁר הָיָה מֶלֶךְ הַפּוֹרְשִׁים הָהֵם אֲשֶׁר גֵּרְשׁוּ אֶת־בְּנֵי הַחָפְשִׁים מֵאֶרֶץ צָרַהֶמְלָה וַיִּירְשׁוּ אֶת־הָאָרֶץ׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר קִבֵּץ מוֹרוֹנִי אֶת־כָּל־הָאֲנָשִׁים אֲשֶׁר יָכֹל בְּכָל־מַסָּעוֹ וַיָּבֹא לְאֶרֶץ גִּדְעוֹן וַיְחַבֵּר אֶת־כֹּחוֹתָיו עִם־פָּהוֹרָן וַיֶּחֶזְקוּ מְאֹד מְאֹד עַד כִּי חָזְקוּ מֵאַנְשֵׁי פָּכוּס אֲשֶׁר הָיָה מֶלֶךְ הַפּוֹרְשִׁים הָהֵם אֲשֶׁר גֵּרְשׁוּ אֶת־בְּנֵי הַחָפְשִׁים מֵאֶרֶץ זָרַחֶמְלָה וַיִּירְשׁוּ אֶת־הָאָרֶץ׃",
   "english": "And thus, when Moroni had gathered together whatsoever men he could in all his march, he came to the land of Gideon; and uniting his forces with those of Pahoran they became exceedingly strong, even stronger than the men of Pachus, who was the king of those dissenters who had driven the freemen out of the land of Zarahemla and had taken possession of the land."
  },
  {
   "book": "Alma",
   "chapter": 62,
   "verse": 7,
-  "hebrew": "וַיְהִי כִּי יָרְדוּ מוֹרוֹנִי וּפָהוֹרָן עִם־צִבְאוֹתֵיהֶם אֶל־אֶרֶץ צָרַהֶמְלָה וַיֵּצְאוּ נֶגֶד הָעִיר וַיִּפְגְּשׁוּ בְּאַנְשֵׁי פָּכוּס עַד כִּי בָאוּ לַמִּלְחָמָה׃",
+  "hebrew": "וַיְהִי כִּי יָרְדוּ מוֹרוֹנִי וּפָהוֹרָן עִם־צִבְאוֹתֵיהֶם אֶל־אֶרֶץ זָרַחֶמְלָה וַיֵּצְאוּ נֶגֶד הָעִיר וַיִּפְגְּשׁוּ בְּאַנְשֵׁי פָּכוּס עַד כִּי בָאוּ לַמִּלְחָמָה׃",
   "english": "And it came to pass that Moroni and Pahoran went down with their armies into the land of Zarahemla, and went forth against the city, and did meet the men of Pachus, insomuch that they did come to battle."
  },
  {
@@ -30740,7 +30740,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 62,
   "verse": 11,
-  "hebrew": "וַתִּכְלֶה הַשָּׁנָה הַשְּׁלֹשִׁים לְמַלְכוּת הַשֹּׁפְטִים עַל־עַם נֶפִי וּמוֹרוֹנִי וּפָהוֹרָן הֵשִׁיבוּ אֶת־הַשָּׁלוֹם לְאֶרֶץ צָרַהֶמְלָה בְּקֶרֶב עַמָּם וַיָּמִיתוּ אֶת־כׇּל־אֲשֶׁר לֹא־נֶאֶמְנוּ לִדְבַר הַדְּרוֹר׃",
+  "hebrew": "וַתִּכְלֶה הַשָּׁנָה הַשְּׁלֹשִׁים לְמַלְכוּת הַשֹּׁפְטִים עַל־עַם נֶפִי וּמוֹרוֹנִי וּפָהוֹרָן הֵשִׁיבוּ אֶת־הַשָּׁלוֹם לְאֶרֶץ זָרַחֶמְלָה בְּקֶרֶב עַמָּם וַיָּמִיתוּ אֶת־כׇּל־אֲשֶׁר לֹא־נֶאֶמְנוּ לִדְבַר הַדְּרוֹר׃",
   "english": "And thus ended the thirtieth year of the reign of the judges over the people of Nephi; Moroni and Pahoran having restored peace to the land of Zarahemla, among their own people, having inflicted death upon all those who were not true to the cause of freedom."
  },
  {
@@ -30761,7 +30761,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 62,
   "verse": 14,
-  "hebrew": "וַיְהִי כִּי הִשְׁאִירוּ מוֹרוֹנִי וּפָהוֹרָן הֲמוֹן אֲנָשִׁים רַב בְּאֶרֶץ צָרַהֶמְלָה וַיִּסְעוּ עִם־הֲמוֹן אֲנָשִׁים רַב לְאֶרֶץ נֶפִיחָה כִּי נָחְרְצוּ לְהַכְנִיעַ אֶת־הַלָּמָנִים בָּעִיר הַהִיא׃",
+  "hebrew": "וַיְהִי כִּי הִשְׁאִירוּ מוֹרוֹנִי וּפָהוֹרָן הֲמוֹן אֲנָשִׁים רַב בְּאֶרֶץ זָרַחֶמְלָה וַיִּסְעוּ עִם־הֲמוֹן אֲנָשִׁים רַב לְאֶרֶץ נֶפִיחָה כִּי נָחְרְצוּ לְהַכְנִיעַ אֶת־הַלָּמָנִים בָּעִיר הַהִיא׃",
   "english": "And it came to pass that Moroni and Pahoran, leaving a large body of men in the land of Zarahemla, took their march with a large body of men towards the land of Nephihah, being determined to overthrow the Lamanites in that city."
  },
  {
@@ -30775,7 +30775,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 62,
   "verse": 16,
-  "hebrew": "וַיְהִי אַחֲרֵי לְכָדְם אוֹתָם וַיַּכְרִיתוּ אִתָּם בְּרִית לְבַל יִשְׂאוּ עוֹד כְּלֵי מִלְחָמָה נֶגֶד הַנֶפִים׃",
+  "hebrew": "וַיְהִי אַחֲרֵי לְכָדְם אוֹתָם וַיַּכְרִיתוּ אִתָּם בְּרִית לְבַל יִשְׂאוּ עוֹד כְּלֵי מִלְחָמָה נֶגֶד הַנֶּפִיִּים׃",
   "english": "And it came to pass after they had taken them, they caused them to enter into a covenant that they would no more take up their weapons of war against the Nephites."
  },
  {
@@ -30908,7 +30908,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 62,
   "verse": 35,
-  "hebrew": "וַיַּחֲנוּ לַלָּיְלָה כִּי הִנֵּה הַנֶּפִיִּים  וְגַם הַלָּמָנִים עֲיֵפִים מֵרֹב הַמַּסָּע לָכֵן לֹא חָשְׁבוּ מַחֲשָׁבוֹת בַּלַּיְלָה זוּלַת טֵאַנְקוּם כִּי חָרָה אַפּוֹ מְאֹד בְּעַמּוֹרוֹן כִּי חָשַׁב כִּי עַמּוֹרוֹן וַעֲמָלִיקְיָה אָחִיו הָיוּ גֹּרֶם הַמִּלְחָמָה הַגְּדוֹלָה וְהָאֲרֻכָּה הַזֹּאת בֵּינֵיהֶם וּבֵין הַלָּמָנִים אֲשֶׁר גָּרְמָה לְכָל־כָּךְ הַרְבֵּה מִלְחָמָה וּשְׁפִיכוּת דָּמִים הֵן וּלְרָעָב רַב כָּזֶה׃",
+  "hebrew": "וַיַּחֲנוּ לַלָּיְלָה כִּי הִנֵּה הַנֶּפִיִּים  וְגַם הַלָּמָנִים עֲיֵפִים מֵרֹב הַמַּסָּע לָכֵן לֹא חָשְׁבוּ מַחֲשָׁבוֹת בַּלַּיְלָה זוּלַת טֵאַנְקוּם כִּי חָרָה אַפּוֹ מְאֹד בְּעַמּוֹרוֹן כִּי חָשַׁב כִּי עַמּוֹרוֹן וַאֲמָלִיקְיָה אָחִיו הָיוּ גֹּרֶם הַמִּלְחָמָה הַגְּדוֹלָה וְהָאֲרֻכָּה הַזֹּאת בֵּינֵיהֶם וּבֵין הַלָּמָנִים אֲשֶׁר גָּרְמָה לְכָל־כָּךְ הַרְבֵּה מִלְחָמָה וּשְׁפִיכוּת דָּמִים הֵן וּלְרָעָב רַב כָּזֶה׃",
   "english": "And thus they did encamp for the night. For behold, the Nephites and the Lamanites also were weary because of the greatness of the march; therefore they did not resolve upon any stratagem in the night– time, save it were Teancum; for he was exceedingly angry with Ammoron, insomuch that he considered that Ammoron, and Amalickiah his brother, had been the cause of this great and lasting war between them and the Lamanites, which had been the cause of so much war and bloodshed, yea, and so much famine."
  },
  {
@@ -30929,7 +30929,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 62,
   "verse": 38,
-  "hebrew": "וַיְהִי כִּי יָצָא מוֹרוֹנִי מִמָּחֳרָת וַיָּבֹא עַל־הַלָּמָנִים וַיַּכּוּ בָהֶם מַכָּה גְדוֹלָה מְאֹד וַיְגָרְשׁוּם מִן־הָאָרֶץ וַיָּנוּסוּ עַד כִּי לֹא שָׁבוּ בָּעֵת הַהִיא נֶגֶד הַנֶפִים׃",
+  "hebrew": "וַיְהִי כִּי יָצָא מוֹרוֹנִי מִמָּחֳרָת וַיָּבֹא עַל־הַלָּמָנִים וַיַּכּוּ בָהֶם מַכָּה גְדוֹלָה מְאֹד וַיְגָרְשׁוּם מִן־הָאָרֶץ וַיָּנוּסוּ עַד כִּי לֹא שָׁבוּ בָּעֵת הַהִיא נֶגֶד הַנֶּפִיִּים׃",
   "english": "Now it came to pass that Moroni marched forth on the morrow, and came upon the Lamanites, insomuch that they did slay them with a great slaughter; and they did drive them out of the land; and they did flee, even that they did not return at that time against the Nephites."
  },
  {
@@ -30957,7 +30957,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 62,
   "verse": 42,
-  "hebrew": "וַיְהִי אַחֲרֵי חִזֵּק מוֹרוֹנִי אֶת־חֶלְקֵי הָאָרֶץ הַחֲשׂוּפִים בְּיוֹתֵר לַלָּמָנִים עַד אֲשֶׁר הָיוּ חֲזָקִים דַּיָּם וַיָּשָׁב לְעִיר צָרַהֶמְלָה וְגַם הֵילָמָן שָׁב לִמְקוֹם נַחֲלָתוֹ וַיְהִי שָׁלוֹם שׁוּב בְּקֶרֶב עַם נֶפִי׃",
+  "hebrew": "וַיְהִי אַחֲרֵי חִזֵּק מוֹרוֹנִי אֶת־חֶלְקֵי הָאָרֶץ הַחֲשׂוּפִים בְּיוֹתֵר לַלָּמָנִים עַד אֲשֶׁר הָיוּ חֲזָקִים דַּיָּם וַיָּשָׁב לְעִיר זָרַחֶמְלָה וְגַם הֵילָמָן שָׁב לִמְקוֹם נַחֲלָתוֹ וַיְהִי שָׁלוֹם שׁוּב בְּקֶרֶב עַם נֶפִי׃",
   "english": "And it came to pass that after Moroni had fortified those parts of the land which were most exposed to the Lamanites, until they were sufficiently strong, he returned to the city of Zarahemla; and also Helaman returned to the place of his inheritance; and there was once more peace established among the people of Nephi."
  },
  {
@@ -31034,7 +31034,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 63,
   "verse": 1,
-  "hebrew": "וַיְהִי בִּתְחִלַּת שְׁנַת הַשְּׁלֹשִׁים וָשֵׁשׁ לְמַלְכוּת הַשֹּׁפְטִים עַל־עַם נֶפִי וַיִּקַּח שִׁבְלוֹן אֶת־הַדְּבָרִים הַקְּדוֹשִׁים אֲשֶׁר נִמְסְרוּ לְהֵילָמָן מִיַּד אַלְמָה׃",
+  "hebrew": "וַיְהִי בִּתְחִלַּת שְׁנַת הַשְּׁלֹשִׁים וָשֵׁשׁ לְמַלְכוּת הַשֹּׁפְטִים עַל־עַם נֶפִי וַיִּקַּח שִׁבְלוֹן אֶת־הַדְּבָרִים הַקְּדוֹשִׁים אֲשֶׁר נִמְסְרוּ לְהֵילָמָן מִיַּד אַלְמָא׃",
   "english": "And it came to pass in the commencement of the thirty and sixth year of the reign of the judges over the people of Nephi, that Shiblon took possession of those sacred things which had been delivered unto Helaman by Alma."
  },
  {
@@ -31055,7 +31055,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 63,
   "verse": 4,
-  "hebrew": "וַיְהִי בִּשְׁנַת הַשְּׁלֹשִׁים וָשֶׁבַע לְמַלְכוּת הַשֹּׁפְטִים וַתֵּצֵא חֲבוּרָה גְדוֹלָה מֵאֶרֶץ צָרַהֶמְלָה לָאָרֶץ צָפוֹנָה חֲמֵשׁת אֲלָפִים וְאַרְבַּע מֵאוֹת אִישׁ עִם־נְשֵׁיהֶם וְיַלְדֵיהֶם׃",
+  "hebrew": "וַיְהִי בִּשְׁנַת הַשְּׁלֹשִׁים וָשֶׁבַע לְמַלְכוּת הַשֹּׁפְטִים וַתֵּצֵא חֲבוּרָה גְדוֹלָה מֵאֶרֶץ זָרַחֶמְלָה לָאָרֶץ צָפוֹנָה חֲמֵשׁת אֲלָפִים וְאַרְבַּע מֵאוֹת אִישׁ עִם־נְשֵׁיהֶם וְיַלְדֵיהֶם׃",
   "english": "And it came to pass that in the thirty and seventh year of the reign of the judges, there was a large company of men, even to the amount of five thousand and four hundred men, with their wives and their children, departed out of the land of Zarahemla into the land which was northward."
  },
  {
@@ -31111,7 +31111,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 63,
   "verse": 12,
-  "hebrew": "וְהִנֵּה כָּל־הַחֲרִיטוֹת הָאֵלֶּה אֲשֶׁר הָיוּ בְּיַד הֵילָמָן נִכְתְּבוּ וְנִשְׁלְחוּ בֵּין בְּנֵי הָאָדָם בְּכָל־הָאָרֶץ מִלְּבַד הַחֲלָקִים אֲשֶׁר צִוָּה אַלְמָה לְבַל יֵצְאוּ׃",
+  "hebrew": "וְהִנֵּה כָּל־הַחֲרִיטוֹת הָאֵלֶּה אֲשֶׁר הָיוּ בְּיַד הֵילָמָן נִכְתְּבוּ וְנִשְׁלְחוּ בֵּין בְּנֵי הָאָדָם בְּכָל־הָאָרֶץ מִלְּבַד הַחֲלָקִים אֲשֶׁר צִוָּה אַלְמָא לְבַל יֵצְאוּ׃",
   "english": "Now behold, all those engravings which were in the possession  of Helaman were written and sent forth among the children of men  throughout all the land, save it were those parts which had been  commanded by Alma should not go forth."
  },
  {
@@ -31125,7 +31125,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 63,
   "verse": 14,
-  "hebrew": "וַיְהִי גַם בַּשָּׁנָה הַזֹּאת כִּי הָיוּ פוֹרְשִׁים אֲשֶׁר הָלְכוּ אֶל־הַלָּמָנִים וַיְעוֹרְרוּם שׁוּב לְכַעַס נֶגֶד הַנֶפִים׃",
+  "hebrew": "וַיְהִי גַם בַּשָּׁנָה הַזֹּאת כִּי הָיוּ פוֹרְשִׁים אֲשֶׁר הָלְכוּ אֶל־הַלָּמָנִים וַיְעוֹרְרוּם שׁוּב לְכַעַס נֶגֶד הַנֶּפִיִּים׃",
   "english": "And it came to pass also in this year that there were some dissenters who had gone forth unto the Lamanites; and they were stirred up again to anger against the Nephites."
  },
  {
@@ -31146,14 +31146,14 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 63,
   "verse": 17,
-  "hebrew": "וְכָכָה תָּם סֵפֶר אַלְמָה וְהֵילָמָן בְּנוֹ וְגַם שִׁבְלוֹן אֲשֶׁר הָיָה בְּנוֹ׃",
+  "hebrew": "וְכָכָה תָּם סֵפֶר אַלְמָא וְהֵילָמָן בְּנוֹ וְגַם שִׁבְלוֹן אֲשֶׁר הָיָה בְּנוֹ׃",
   "english": "And thus ended the account of Alma, and Helaman his son, and also Shiblon, who was his son."
  },
  {
   "book": "Helaman",
   "chapter": 1,
   "verse": 1,
-  "hebrew": "וַיְהִי בִּתְחִלַּת שְׁנַת הָאַרְבָּעִים לְמַלְכוּת הַשֹּׁפְטִים עַל־עַם נֶפִי וַתָּחֶל צָרָה קָשָׁה בְּקֶרֶב עַם הַנֶפִים׃",
+  "hebrew": "וַיְהִי בִּתְחִלַּת שְׁנַת הָאַרְבָּעִים לְמַלְכוּת הַשֹּׁפְטִים עַל־עַם נֶפִי וַתָּחֶל צָרָה קָשָׁה בְּקֶרֶב עַם הַנֶּפִיִּים׃",
   "english": "And now behold, it came to pass in the commencement of the fortieth year of the reign of the judges over the people of Nephi, there began to be a serious difficulty among the people of the Nephites."
  },
  {
@@ -31251,35 +31251,35 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 1,
   "verse": 15,
-  "hebrew": "וַיֵּרְדוּ שֵׁנִית לַעֲרֹךְ מִלְחָמָה נֶגֶד הַנְּפִיִּים וּבְרֹאשָׁם אִישׁ וּשְׁמוֹ קוֹרִיאַנְטוּמְר וְהוּא מִזֶּרַע צָרַהֶמְלָה וְהוּא פּוֹרֵשׁ מִתּוֹךְ הַנְּפִיִּים וְהוּא אִישׁ גָּדוֹל וְגִבּוֹר חָיִל׃",
+  "hebrew": "וַיֵּרְדוּ שֵׁנִית לַעֲרֹךְ מִלְחָמָה נֶגֶד הַנְּפִיִּים וּבְרֹאשָׁם אִישׁ וּשְׁמוֹ קוֹרִיאַנְטוּמְר וְהוּא מִזֶּרַע זָרַחֶמְלָה וְהוּא פּוֹרֵשׁ מִתּוֹךְ הַנְּפִיִּים וְהוּא אִישׁ גָּדוֹל וְגִבּוֹר חָיִל׃",
   "english": "And they came down again that they might pitch battle against the Nephites. And they were led by a man whose name was Coriantumr; and he was a descendant of Zarahemla; and he was a dissenter from among the Nephites; and he was a large and a mighty man."
  },
  {
   "book": "Helaman",
   "chapter": 1,
   "verse": 16,
-  "hebrew": "לָכֵן מֶלֶךְ הַלָּמָנִים וּשְׁמוֹ טוּבָלוֹת בֶּן־עַמּוֹרוֹן בְּחָשְׁבוֹ כִּי קוֹרִיאַנְטוּמְר בִּהְיוֹתוֹ גִבּוֹר חָיִל יוּכַל לַעֲמֹד נֶגֶד הַנְּפִיִּים בְּכֹחוֹ וּבְחָכְמָתוֹ הַגְּדוֹלָה עַד כִּי בְּשָׁלְחוֹ אוֹתוֹ יוּכַל לִכְבּוֹשׁ אֶת־הַנֶפִים׃",
+  "hebrew": "לָכֵן מֶלֶךְ הַלָּמָנִים וּשְׁמוֹ טוּבָלוֹת בֶּן־עַמּוֹרוֹן בְּחָשְׁבוֹ כִּי קוֹרִיאַנְטוּמְר בִּהְיוֹתוֹ גִבּוֹר חָיִל יוּכַל לַעֲמֹד נֶגֶד הַנְּפִיִּים בְּכֹחוֹ וּבְחָכְמָתוֹ הַגְּדוֹלָה עַד כִּי בְּשָׁלְחוֹ אוֹתוֹ יוּכַל לִכְבּוֹשׁ אֶת־הַנֶּפִיִּים׃",
   "english": "Therefore, the king of the Lamanites, whose name was Tubaloth, who was the son of Ammoron, supposing that Coriantumr, being a mighty man, could stand against the Nephites, with his strength and also with his great wisdom, insomuch that by sending him forth he should gain power over the Nephites—"
  },
  {
   "book": "Helaman",
   "chapter": 1,
   "verse": 17,
-  "hebrew": "לָכֵן הֵסִית אוֹתָם לְכַעַס וַיְקַבֵּץ אֶת־צְבָאוֹתָיו וַיָּשֶׂם אֶת־קוֹרִיאַנְטוּמְר לְרֹאשׁ עֲלֵיהֶם וַיַּעַשׂ כִּי יֵרְדוּ לְאֶרֶץ צָרַהֶמְלָה לְהִלָּחֵם בַּנֶפִים׃",
+  "hebrew": "לָכֵן הֵסִית אוֹתָם לְכַעַס וַיְקַבֵּץ אֶת־צְבָאוֹתָיו וַיָּשֶׂם אֶת־קוֹרִיאַנְטוּמְר לְרֹאשׁ עֲלֵיהֶם וַיַּעַשׂ כִּי יֵרְדוּ לְאֶרֶץ זָרַחֶמְלָה לְהִלָּחֵם בַּנְּפִיִּים׃",
   "english": "Therefore he did stir them up to anger, and he did gather together his armies, and he did appoint Coriantumr to be their leader, and did cause that they should march down to the land of Zarahemla to battle against the Nephites."
  },
  {
   "book": "Helaman",
   "chapter": 1,
   "verse": 18,
-  "hebrew": "וַיְהִי כִּי מֵרֹב הַמְּרִיבָה וְהַקֹּשִׁי בַּמֶּמְשָׁלָה לֹא הִצִּיבוּ דֵי שׁוֹמְרִים בְּאֶרֶץ צָרַהֶמְלָה כִּי חָשְׁבוּ כִּי לֹא יַעִזּוּ הַלָּמָנִים לָבוֹא אֶל־תּוֹךְ אַרְצָם לְהַכּוֹת אֶת־הָעִיר הַגְּדוֹלָה צָרַהֶמְלָה׃",
+  "hebrew": "וַיְהִי כִּי מֵרֹב הַמְּרִיבָה וְהַקֹּשִׁי בַּמֶּמְשָׁלָה לֹא הִצִּיבוּ דֵי שׁוֹמְרִים בְּאֶרֶץ זָרַחֶמְלָה כִּי חָשְׁבוּ כִּי לֹא יַעִזּוּ הַלָּמָנִים לָבוֹא אֶל־תּוֹךְ אַרְצָם לְהַכּוֹת אֶת־הָעִיר הַגְּדוֹלָה זָרַחֶמְלָה׃",
   "english": "And it came to pass that because of so much contention and so much difficulty in the government, that they had not kept sufficient guards in the land of Zarahemla; for they had supposed that the Lamanites durst not come into the heart of their lands to attack that great city Zarahemla."
  },
  {
   "book": "Helaman",
   "chapter": 1,
   "verse": 19,
-  "hebrew": "אַךְ וַיְהִי כִּי צָעַד קוֹרִיאַנְטוּמְר בְּרֹאשׁ צְבָאוֹ הָרַב וַיָּבֹא עַל־יֹשְׁבֵי הָעִיר וּמַסָּעָם הָיָה בְּחִפָּזוֹן גָּדוֹל מְאֹד עַד כִּי לֹא הָיָה זְמַן לַנֶפִים לְקַבֵּץ אֶת־צִבְאוֹתֵיהֶם׃",
+  "hebrew": "אַךְ וַיְהִי כִּי צָעַד קוֹרִיאַנְטוּמְר בְּרֹאשׁ צְבָאוֹ הָרַב וַיָּבֹא עַל־יֹשְׁבֵי הָעִיר וּמַסָּעָם הָיָה בְּחִפָּזוֹן גָּדוֹל מְאֹד עַד כִּי לֹא הָיָה זְמַן לַנְּפִיִּים לְקַבֵּץ אֶת־צִבְאוֹתֵיהֶם׃",
   "english": "But it came to pass that Coriantumr did march forth at the head of his numerous host, and came upon the inhabitants of the city, and their march was with such exceedingly great speed that there  was no time for the Nephites to gather together their armies."
  },
  {
@@ -31300,14 +31300,14 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 1,
   "verse": 22,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר רָאָה קוֹרִיאַנְטוּמְר כִּי יָרַשׁ אֶת־עִיר צָרַהֶמְלָה וַיַּרְא כִּי נָסוּ הַנְּפִיִּים מִפְּנֵיהֶם וְנֶהֶרְגוּ וְנִתְפְּשׂוּ וְהֻשְׁלְכוּ לַכֶּלֶא וְכִי יָרַשׁ אֶת־הַמִּבְצָר הֶחָזָק בְּכָל־הָאָרֶץ וַיִּתְחַזֵּק לִבּוֹ עַד כִּי נָכוֹן הָיָה לָצֵאת נֶגֶד כָּל־הָאָרֶץ׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר רָאָה קוֹרִיאַנְטוּמְר כִּי יָרַשׁ אֶת־עִיר זָרַחֶמְלָה וַיַּרְא כִּי נָסוּ הַנְּפִיִּים מִפְּנֵיהֶם וְנֶהֶרְגוּ וְנִתְפְּשׂוּ וְהֻשְׁלְכוּ לַכֶּלֶא וְכִי יָרַשׁ אֶת־הַמִּבְצָר הֶחָזָק בְּכָל־הָאָרֶץ וַיִּתְחַזֵּק לִבּוֹ עַד כִּי נָכוֹן הָיָה לָצֵאת נֶגֶד כָּל־הָאָרֶץ׃",
   "english": "And now when Coriantumr saw that he was in possession of the city of Zarahemla, and saw that the Nephites had fled before them, and were slain, and were taken, and were cast into prison, and that he had obtained the possession of the strongest hold in all the land, his heart took courage insomuch that he was about to go forth against all the land."
  },
  {
   "book": "Helaman",
   "chapter": 1,
   "verse": 23,
-  "hebrew": "וְעַתָּה לֹא הִתְמַהְמַהּ בְּאֶרֶץ צָרַהֶמְלָה כִּי אִם־יָצָא עִם־צָבָא גָּדוֹל לְעִיר שֶׁפַע כִּי גָמַר לָצֵאת וְלִפְרֹץ דַּרְכּוֹ בַּחֶרֶב לְמַעַן יִירַשׁ אֶת־חֶלְקֵי הָאָרֶץ בַּצָּפוֹן׃",
+  "hebrew": "וְעַתָּה לֹא הִתְמַהְמַהּ בְּאֶרֶץ זָרַחֶמְלָה כִּי אִם־יָצָא עִם־צָבָא גָּדוֹל לְעִיר שֶׁפַע כִּי גָמַר לָצֵאת וְלִפְרֹץ דַּרְכּוֹ בַּחֶרֶב לְמַעַן יִירַשׁ אֶת־חֶלְקֵי הָאָרֶץ בַּצָּפוֹן׃",
   "english": "And now he did not tarry in the land of Zarahemla, but he did march forth with a large army, even towards the city of Bountiful; for it was his determination to go forth and cut his way through with the sword, that he might obtain the north parts of the land."
  },
  {
@@ -31335,7 +31335,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 1,
   "verse": 27,
-  "hebrew": "אַךְ הִנֵּה לֹא פָחֲדוּ הַלָּמָנִים כִּרְצוֹנוֹ כִּי בָאוּ לְתוֹךְ הָאָרֶץ וַיִּלְכְּדוּ אֶת־עִיר הַמְּלוּכָה הִיא עִיר צָרַהֶמְלָה וַיַּעַבְרוּ בְּחֶלְקֵי הָאָרֶץ הָרָאשִׁיִּים וַיַּהַרְגוּ אֶת־הָעָם הֶרֶג רַב גַּם אֲנָשִׁים גַּם נָשִׁים וָטַף וַיִּירְשׁוּ עָרִים רַבּוֹת וּמִבְצָרִים רַבִּים׃",
+  "hebrew": "אַךְ הִנֵּה לֹא פָחֲדוּ הַלָּמָנִים כִּרְצוֹנוֹ כִּי בָאוּ לְתוֹךְ הָאָרֶץ וַיִּלְכְּדוּ אֶת־עִיר הַמְּלוּכָה הִיא עִיר זָרַחֶמְלָה וַיַּעַבְרוּ בְּחֶלְקֵי הָאָרֶץ הָרָאשִׁיִּים וַיַּהַרְגוּ אֶת־הָעָם הֶרֶג רַב גַּם אֲנָשִׁים גַּם נָשִׁים וָטַף וַיִּירְשׁוּ עָרִים רַבּוֹת וּמִבְצָרִים רַבִּים׃",
   "english": "But behold, the Lamanites were not frightened according to his desire, but they had come into the center of the land, and had taken the capital city which was the city of Zarahemla, and were marching through the most capital parts of the land, slaying the people with a great slaughter, both men, women, and children, taking possession of many cities and of many strongholds."
  },
  {
@@ -31349,7 +31349,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 1,
   "verse": 29,
-  "hebrew": "וְכֵן עָשָׂה וַיַּקְדִּימֵם בְּטֶרֶם בָּאוּ לְאֶרֶץ שֶׁפַע וַיִּלָּחֶם בָּם עַד כִּי הֵחֵלּוּ לָסֶגֶת אָחוֹר לְאֶרֶץ צָרַהֶמְלָה׃",
+  "hebrew": "וְכֵן עָשָׂה וַיַּקְדִּימֵם בְּטֶרֶם בָּאוּ לְאֶרֶץ שֶׁפַע וַיִּלָּחֶם בָּם עַד כִּי הֵחֵלּוּ לָסֶגֶת אָחוֹר לְאֶרֶץ זָרַחֶמְלָה׃",
   "english": "And thus he did; and he did head them before they came to the land Bountiful, and gave unto them battle, insomuch that they began to retreat back towards the land of Zarahemla."
  },
  {
@@ -31363,21 +31363,21 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 1,
   "verse": 31,
-  "hebrew": "וְעַתָּה הִנֵּה לֹא יָכְלוּ הַלָּמָנִים לָסוּג לְשׁוּם צַד לֹא צָפוֹנָה וְלֹא נֶגְבָּה וְלֹא קָדִימָה וְלֹא יָמָּה כִּי הָיוּ מֻקָּפִים מִכָּל־עֵבֶר בִּידֵי הַנֶפִים׃",
+  "hebrew": "וְעַתָּה הִנֵּה לֹא יָכְלוּ הַלָּמָנִים לָסוּג לְשׁוּם צַד לֹא צָפוֹנָה וְלֹא נֶגְבָּה וְלֹא קָדִימָה וְלֹא יָמָּה כִּי הָיוּ מֻקָּפִים מִכָּל־עֵבֶר בִּידֵי הַנֶּפִיִּים׃",
   "english": "And now, behold, the Lamanites could not retreat either way, neither on the north, nor on the south, nor on the east, nor on the west, for they were surrounded on every hand by the Nephites."
  },
  {
   "book": "Helaman",
   "chapter": 1,
   "verse": 32,
-  "hebrew": "וְכָכָה הִפִּיל קוֹרִיאַנְטוּמְר אֶת־הַלָּמָנִים לְתוֹךְ הַנְּפִיִּים  עַד כִּי הָיוּ בְּיַד הַנְּפִיִּים  וְהוּא עַצְמוֹ נֶהֱרַג וַיִּתְּנוּ הַלָּמָנִים אֶת־עַצְמָם בִּידֵי הַנֶפִים׃",
+  "hebrew": "וְכָכָה הִפִּיל קוֹרִיאַנְטוּמְר אֶת־הַלָּמָנִים לְתוֹךְ הַנְּפִיִּים  עַד כִּי הָיוּ בְּיַד הַנְּפִיִּים  וְהוּא עַצְמוֹ נֶהֱרַג וַיִּתְּנוּ הַלָּמָנִים אֶת־עַצְמָם בִּידֵי הַנֶּפִיִּים׃",
   "english": "And thus had Coriantumr plunged the Lamanites into the midst of the Nephites, insomuch that they were in the power of the Nephites, and he himself was slain, and the Lamanites did yield themselves into the hands of the Nephites."
  },
  {
   "book": "Helaman",
   "chapter": 1,
   "verse": 33,
-  "hebrew": "וַיְהִי כִּי יָרַשׁ מוֹרוֹנִיחָה אֶת־עִיר צָרַהֶמְלָה שֵׁנִית וַיַּעַשׂ כִּי יֵצְאוּ הַלָּמָנִים אֲשֶׁר נִשְׁבּוּ מִן־הָאָרֶץ בְּשָׁלוֹם׃",
+  "hebrew": "וַיְהִי כִּי יָרַשׁ מוֹרוֹנִיחָה אֶת־עִיר זָרַחֶמְלָה שֵׁנִית וַיַּעַשׂ כִּי יֵצְאוּ הַלָּמָנִים אֲשֶׁר נִשְׁבּוּ מִן־הָאָרֶץ בְּשָׁלוֹם׃",
   "english": "And it came to pass that Moronihah took possession of the city of Zarahemla again, and caused that the Lamanites who had been taken prisoners should depart out of the land in peace."
  },
  {
@@ -31391,7 +31391,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 2,
   "verse": 1,
-  "hebrew": "וַיְהִי בִּשְׁנַת הָאַרְבָּעִים וּשְׁתַּיִם לְמֶמְשֶׁלֶת הַשֹּׁפְטִים אַחֲרֵי אֲשֶׁר הֵקִים מוֹרוֹנִיחָה שׁוּב שָׁלוֹם בֵּין הַנְּפִיאִים וְהַלְמָנִים וְהִנֵּה אֵין אִישׁ לְמַלֵּא אֶת־כִּסֵּא הַמִּשְׁפָּט עַל־כֵּן הֵחֵלָּה מְרִיבָה שׁוּב בָּעָם עַל־מִי יְמַלֵּא אֶת־כִּסֵּא הַמִּשְׁפָּט׃",
+  "hebrew": "וַיְהִי בִּשְׁנַת הָאַרְבָּעִים וּשְׁתַּיִם לְמֶמְשֶׁלֶת הַשֹּׁפְטִים אַחֲרֵי אֲשֶׁר הֵקִים מוֹרוֹנִיחָה שׁוּב שָׁלוֹם בֵּין הַנֶּפִיִּים וְהַלָּמָנִים וְהִנֵּה אֵין אִישׁ לְמַלֵּא אֶת־כִּסֵּא הַמִּשְׁפָּט עַל־כֵּן הֵחֵלָּה מְרִיבָה שׁוּב בָּעָם עַל־מִי יְמַלֵּא אֶת־כִּסֵּא הַמִּשְׁפָּט׃",
   "english": "And it came to pass in the forty and second year of the reign of the judges, after Moronihah had established again peace between the Nephites and the Lamanites, behold there was no one to fill the judgment– seat; therefore there began to be a contention again among the people concerning who should fill the judgment – seat."
  },
  {
@@ -31447,7 +31447,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 2,
   "verse": 9,
-  "hebrew": "וְעַתָּה זֶה הֵיטִיב מְאֹד בְּעֵינֵי קִישְׁקוּמֶן כִּי חָשַׁב כִּי יַשְׂכִּיל בִּמְזִמָּתוֹ אַךְ הִנֵּה עֶבֶד הֵילָמָן בְּלֶכְתָּם אֶל־כִּסֵּא הַמִּשְׁפָּט דָּקַר אֶת־קִישְׁקוּמֶן עַד־לִבּוֹ וַיִּפֹּל מֵת בְּלִי נֶאֱנָק וַיָּרָץ וַיַּגֵּד לְהֵילָמָן אֵת כָּל־אֲשֶׁר רָאָה וְשָׁמַע וְעָשָׂה׃",
+  "hebrew": "וְעַתָּה זֶה הֵיטִיב מְאֹד בְּעֵינֵי קִישְׁקוּמֶן כִּי חָשַׁב כִּי יַשְׂכִּיל בִּמְזִמָּתוֹ אַךְ הִנֵּה עֶבֶד הֵילָמָן בְּלֶכְתָּם אֶל־כִּסֵּא הַמִּשְׁפָּט דָּקַר אֶת־קִישְׁקוּמֶן עַד־לִבּוֹ וַיִּפֹּל מֵת בְּלִי נֶאֱנָק וַיָּרָץ וַיַּגֵּד לְהֵילָמָן אֶת־כָּל־אֲשֶׁר רָאָה וְשָׁמַע וְעָשָׂה׃",
   "english": "Now this did please Kishkumen exceedingly, for he did suppose that he should accomplish his design; but behold, the servant of Helaman, as they were going forth unto the judgment– seat, did stab Kishkumen even to the heart, that he fell dead without a groan. And he ran and told Helaman all the things which he had seen, and heard, and done."
  },
  {
@@ -31503,7 +31503,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 3,
   "verse": 3,
-  "hebrew": "וַיְהִי בִּשְׁנַת הָאַרְבָּעִים וָשֵׁשׁ הֵן הָיְתָה מְרִיבָה רַבָּה וּפְלָגִים רַבִּים אֲשֶׁר בָּהֶם יָצְאוּ רַבִּים מְאֹד מֵאֶרֶץ צָרַהֶמְלָה וַיֵּלְכוּ לָאָרֶץ צָפוֹנָה לָרֶשֶׁת אֶת־הָאָרֶץ׃",
+  "hebrew": "וַיְהִי בִּשְׁנַת הָאַרְבָּעִים וָשֵׁשׁ הֵן הָיְתָה מְרִיבָה רַבָּה וּפְלָגִים רַבִּים אֲשֶׁר בָּהֶם יָצְאוּ רַבִּים מְאֹד מֵאֶרֶץ זָרַחֶמְלָה וַיֵּלְכוּ לָאָרֶץ צָפוֹנָה לָרֶשֶׁת אֶת־הָאָרֶץ׃",
   "english": "And it came to pass in the forty and sixth, yea, there was much contention and many dissensions; in the which there were an exceed– ingly great many who departed out of the land of Zarahemla, and went forth unto the land northward to inherit the land."
  },
  {
@@ -31587,14 +31587,14 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 3,
   "verse": 15,
-  "hebrew": "אַךְ הִנֵּה יֵשׁ סְפָרִים רַבִּים וְרִשּׁוּמִים רַבִּים מִכָּל־מִין וְהֵם נִשְׁמְרוּ בְּעִקָּר בִּידֵי הַנֶפִים׃",
+  "hebrew": "אַךְ הִנֵּה יֵשׁ סְפָרִים רַבִּים וְרִשּׁוּמִים רַבִּים מִכָּל־מִין וְהֵם נִשְׁמְרוּ בְּעִקָּר בִּידֵי הַנֶּפִיִּים׃",
   "english": "But behold, there are many books and many records of every kind, and they have been kept chiefly by the Nephites."
  },
  {
   "book": "Helaman",
   "chapter": 3,
   "verse": 16,
-  "hebrew": "וְהֵם נִמְסְרוּ מִדּוֹר לְדוֹר בִּידֵי הַנְּפִיִּים עַד אֲשֶׁר נָפְלוּ בַּעֲבֵרָה וְנִרְצְחוּ וְנִשְׁדְדוּ וְנִרְדְּפוּ וְגֹרְשׁוּ וְנֶהֶרְגוּ וְנָפוֹצוּ עַל־פְּנֵי הָאָרֶץ וְהִתְעָרְבוּ בַּלָּמָנִים עַד אֲשֶׁר לֹא נִקְרְאוּ עוֹד נֶפִים וַיִּהְיוּ רְשָׁעִים וּפְרָאִים וְאַכְזָרִים הֵן וַיִּהְיוּ לְלָמָנִים׃",
+  "hebrew": "וְהֵם נִמְסְרוּ מִדּוֹר לְדוֹר בִּידֵי הַנְּפִיִּים עַד אֲשֶׁר נָפְלוּ בַּעֲבֵרָה וְנִרְצְחוּ וְנִשְׁדְדוּ וְנִרְדְּפוּ וְגֹרְשׁוּ וְנֶהֶרְגוּ וְנָפוֹצוּ עַל־פְּנֵי הָאָרֶץ וְהִתְעָרְבוּ בַּלָּמָנִים עַד אֲשֶׁר לֹא נִקְרְאוּ עוֹד נְפִיִּים וַיִּהְיוּ רְשָׁעִים וּפְרָאִים וְאַכְזָרִים הֵן וַיִּהְיוּ לְלָמָנִים׃",
   "english": "And they have been handed down from one generation to another by the Nephites, even until they have fallen into transgression and have been murdered, plundered, and hunted, and driven forth, and slain, and scattered upon the face of the earth, and mixed with the Lamanites until they are no more called the Nephites, becoming wicked, and wild, and ferocious, yea, even becoming Lamanites."
  },
  {
@@ -31699,7 +31699,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 3,
   "verse": 31,
-  "hebrew": "וַיְהִי בַּשָּׁנָה הַזֹּאת שִׂמְחָה תְמִידִית בְּאֶרֶץ צָרַהֶמְלָה וּבְכָל־הַמְּקוֹמוֹת מִסָּבִיב הֵן בְּכָל־הָאָרֶץ אֲשֶׁר יָרְשׁוּ הַנֶפִים׃",
+  "hebrew": "וַיְהִי בַּשָּׁנָה הַזֹּאת שִׂמְחָה תְמִידִית בְּאֶרֶץ זָרַחֶמְלָה וּבְכָל־הַמְּקוֹמוֹת מִסָּבִיב הֵן בְּכָל־הָאָרֶץ אֲשֶׁר יָרְשׁוּ הַנֶּפִיִּים׃",
   "english": "And in this year there was continual rejoicing in the land of Zarahemla, and in all the regions round about, even in all the land which was possessed by the Nephites."
  },
  {
@@ -31776,7 +31776,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 4,
   "verse": 5,
-  "hebrew": "וּבִשְׁנַת הַחֲמִשִּׁים וָשֶׁבַע יָרְדוּ נֶגֶד הַנְּפִיִּים לַמִּלְחָמָה וַיָּחֵלּוּ בִּמְלֶאכֶת הַמָּוֶת הֵן עַד כִּי בִּשְׁנַת הַחֲמִשִּׁים וּשְׁמוֹנֶה לְמַלְכוּת הַשֹּׁפְטִים הִצְלִיחוּ לִירַשׁ אֶת־אֶרֶץ צָרַהֶמְלָה הֵן וְגַם אֶת־כָּל־הָאֲרָצוֹת עַד־הָאָרֶץ אֲשֶׁר אֵצֶל אֶרֶץ שֶׁפַע׃",
+  "hebrew": "וּבִשְׁנַת הַחֲמִשִּׁים וָשֶׁבַע יָרְדוּ נֶגֶד הַנְּפִיִּים לַמִּלְחָמָה וַיָּחֵלּוּ בִּמְלֶאכֶת הַמָּוֶת הֵן עַד כִּי בִּשְׁנַת הַחֲמִשִּׁים וּשְׁמוֹנֶה לְמַלְכוּת הַשֹּׁפְטִים הִצְלִיחוּ לִירַשׁ אֶת־אֶרֶץ זָרַחֶמְלָה הֵן וְגַם אֶת־כָּל־הָאֲרָצוֹת עַד־הָאָרֶץ אֲשֶׁר אֵצֶל אֶרֶץ שֶׁפַע׃",
   "english": "And in the fifty and seventh year they did come down against the Nephites to battle, and they did commence the work of death; yea, insomuch that in the fifty and eighth year of the reign of the judges they succeeded in obtaining possession of the land of Zarahemla; yea, and also all the lands, even unto the land which was near the land Bountiful."
  },
  {
@@ -31818,7 +31818,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 4,
   "verse": 11,
-  "hebrew": "וְעַתָּה הָאָבְדָן הַגָּדוֹל הַזֶּה לַנֶפִים וְהַהֶרֶג הַגָּדוֹל אֲשֶׁר הָיָה בָהֶם לֹא הָיָה קוֹרֶה לוּלֵא רִשְׁעָתָם וְתוֹעֲבוֹתֵיהֶם בְּקִרְבָּם הֵן וְגַם בְּקֶרֶב הָאֹמְרִים כִּי הֵם לִקְהִלַּת אֱלֹהִים׃",
+  "hebrew": "וְעַתָּה הָאָבְדָן הַגָּדוֹל הַזֶּה לַנְּפִיִּים וְהַהֶרֶג הַגָּדוֹל אֲשֶׁר הָיָה בָהֶם לֹא הָיָה קוֹרֶה לוּלֵא רִשְׁעָתָם וְתוֹעֲבוֹתֵיהֶם בְּקִרְבָּם הֵן וְגַם בְּקֶרֶב הָאֹמְרִים כִּי הֵם לִקְהִלַּת אֱלֹהִים׃",
   "english": "Now this great loss of the Nephites, and the great slaughter which was among them, would not have happened had it not been for their wickedness and their abomination which was among them; yea, and it was among those also who professed to belong to the church of God."
  },
  {
@@ -31888,7 +31888,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 4,
   "verse": 21,
-  "hebrew": "הֵן וַיָּחֵלּוּ לִזְכֹּר אֶת־נְבוּאוֹת אַלְמָה וְגַם אֶת־דִּבְרֵי מוֹשִׁיָּה וַיִּרְאוּ כִּי הָיוּ עַם־קְשֵׁה־עֹרֶף וַיִּבְזוּ אֶת־מִצְוֹת אֱלֹהִים׃",
+  "hebrew": "הֵן וַיָּחֵלּוּ לִזְכֹּר אֶת־נְבוּאוֹת אַלְמָא וְגַם אֶת־דִּבְרֵי מוֹשִׁיָּה וַיִּרְאוּ כִּי הָיוּ עַם־קְשֵׁה־עֹרֶף וַיִּבְזוּ אֶת־מִצְוֹת אֱלֹהִים׃",
   "english": "Yea, they began to remember the prophecies of Alma, and also the words of Mosiah; and they saw that they had been a stiffnecked people, and that they had set at naught the commandments of God."
  },
  {
@@ -31909,7 +31909,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 4,
   "verse": 24,
-  "hebrew": "וַיִּרְאוּ כִּי נַעֲשׂוּ חַלָּשִׁים כַּאֲחֵיהֶם הַלָּמָנִים וְכִי רוּחַ יְהוָה לֹא שָׁמְרָה עֲלֵיהֶם עוֹד הֵן סָרָה מֵהֶם כִּי אֵין רוּחַ יְהוָה שׁוֹכֵן בְּהֵיכְלוֹת טְמֵאִים׃",
+  "hebrew": "וַיִּרְאוּ כִּי נַעֲשׂוּ חַלָּשִׁים כַּאֲחֵיהֶם הַלָּמָנִים וְכִי רוּחַ יְהוָה לֹא שָׁמַר עֲלֵיהֶם עוֹד הֵן סָר מֵהֶם כִּי אֵין רוּחַ יְהוָה שׁוֹכֵן בְּהֵיכְלוֹת טְמֵאִים׃",
   "english": "And they saw that they had become weak, like unto their brethren, the Lamanites, and that the Spirit of the Lord did no more preserve them; yea, it had withdrawn from them because the Spirit of the Lord doth not dwell in unholy temples—"
  },
  {
@@ -31993,7 +31993,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 5,
   "verse": 10,
-  "hebrew": "וְזִכְרוּ גַם אֶת־דִּבְרֵי עֲמוּלֵק אֲשֶׁר דִּבֵּר אֶל־זֵעְזְרוֹם בְּעִיר עַמּוֹנִיהָה כִּי אָמַר אֵלָיו כִּי בּוֹא יָבוֹא יְהוָה לִגְאֹל אֶת־עַמּוֹ אַךְ לֹא יָבוֹא לִגְאֳלָם בְּחַטֹּאתֵיהֶם כִּי אִם־לִגְאֳלָם מֵחַטֹּאתֵיהֶם׃",
+  "hebrew": "וְזִכְרוּ גַם אֶת־דִּבְרֵי עֲמוּלֶק אֲשֶׁר דִּבֵּר אֶל־זֶעְזְרוֹם בְּעִיר עַמּוֹנִיחָה כִּי אָמַר אֵלָיו כִּי בּוֹא יָבוֹא יְהוָה לִגְאֹל אֶת־עַמּוֹ אַךְ לֹא יָבוֹא לִגְאֳלָם בְּחַטֹּאתֵיהֶם כִּי אִם־לִגְאֳלָם מֵחַטֹּאתֵיהֶם׃",
   "english": "And remember also the words which Amulek spake unto Zeezrom, in the city of Ammonihah; for he said unto him that the Lord surely should come to redeem his people, but that he should not come to redeem them in their sins, but to redeem them from their sins."
  },
  {
@@ -32007,7 +32007,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 5,
   "verse": 12,
-  "hebrew": "וְעַתָּה זִכְרוּ זִכְרוּ בָּנַי כִּי עֲלֵיכֶם לִבְנוֹת עַל־אֶבֶן גּוֹאֲלֵנוּ אֲשֶׁר הוּא הַמָּשִׁיחַ בֶּן־אֱלֹהִים אֶת־מוּסַדְכֶם לְמַעַן כַּאֲשֶׁר יִשְׁלַח הַשָּׂטָן אֶת־רוּחוֹתָיו הָעַזּוֹת וְחִצָּיו בַּסּוּפָה וְכַּאֲשֶׁר יַכּוּ עֲלֵיכֶם כָּל־בָּרָד וְסַעֲרוֹתָיו הָעַזּוֹת לֹא יִהְיֶה לָהֶם כֹּחַ לִמְשֹׁךְ אֶתְכֶם לְתַחַת לְתְהוֹם הָאֻמְלָלוּת וְהָאֲבַדּוֹן הַנִּצְחִי בִּגְלַל הָאֶבֶן אֲשֶׁר בְּנוּיִים אַתֶּם עָלָיו אֲשֶׁר הוּא מוּסָד מוּסָּד אֲשֶׁר אִם יִבְנוּ עָלָיו אֲנָשִׁים לֹא יוּכְלוּ לִפֹּל׃",
+  "hebrew": "וְעַתָּה זִכְרוּ זִכְרוּ בָּנַי כִּי עֲלֵיכֶם לִבְנוֹת עַל־אֶבֶן גּוֹאֲלֵנוּ אֲשֶׁר הוּא הַמָּשִׁיחַ בֶּן־אֱלֹהִים אֶת־מוּסַדְכֶם לְמַעַן כַּאֲשֶׁר יִשְׁלַח הַשָּׂטָן אֶת־רוּחוֹתָיו הָעַזּוֹת וְחִצָּיו בַּסּוּפָה וְכַּאֲשֶׁר יַכּוּ עֲלֵיכֶם כָּל־בָּרָד וְסַעֲרוֹתָיו הָעַזּוֹת לֹא יִהְיֶה לָהֶם כֹּחַ לִמְשֹׁךְ אֶתְכֶם לְתַחַת לִתְהוֹם הָאֻמְלָלוּת וְהָאֲבַדּוֹן הַנִּצְחִי בִּגְלַל הָאֶבֶן אֲשֶׁר בְּנוּיִים אַתֶּם עָלָיו אֲשֶׁר הוּא מוּסָד מוּסָּד אֲשֶׁר אִם יִבְנוּ עָלָיו אֲנָשִׁים לֹא יוּכְלוּ לִפֹּל׃",
   "english": "And now, my sons, remember, remember that it is upon the rock of our Redeemer, who is Christ, the Son of God, that ye must build your foundation; that when the devil shall send forth his mighty winds, yea, his shafts in the whirl wind, yea, when all his hail and his mighty storm shall beat upon you, it shall have no power over you to drag you down to the gulf of misery and endless wo, because of the rock upon which ye are built, which is a sure foundation, a  foundation whereon if men build they cannot fall."
  },
  {
@@ -32035,7 +32035,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 5,
   "verse": 16,
-  "hebrew": "וַאֲפִלּוּ מֵעִיר לְעִיר עַד אֲשֶׁר יָצְאוּ בְּקֶרֶב כָּל־עַם נֶפִי אֲשֶׁר בָּאָרֶץ נֶגְבָּה וּמִשָּׁם לְאֶרֶץ צָרַהֶמְלָה בֵּין הַלָּמָנִים׃",
+  "hebrew": "וַאֲפִלּוּ מֵעִיר לְעִיר עַד אֲשֶׁר יָצְאוּ בְּקֶרֶב כָּל־עַם נֶפִי אֲשֶׁר בָּאָרֶץ נֶגְבָּה וּמִשָּׁם לְאֶרֶץ זָרַחֶמְלָה בֵּין הַלָּמָנִים׃",
   "english": "And even from one city to another, until they had gone forth among all the people of Nephi who were in the land southward; and from thence into the land of Zarahemla, among the Lamanites."
  },
  {
@@ -32056,7 +32056,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 5,
   "verse": 19,
-  "hebrew": "לָכֵן דִּבְּרוּ לְתִמְהוֹן הַלָּמָנִים הַגָּדוֹל לְהוֹכִיחָם עַד כִּי שְׁמוֹנַת אֲלָפִים מִן־הַלָּמָנִים אֲשֶׁר בְּאֶרֶץ צָרַהֶמְלָה וּסְבִיבוֹתֶיהָ נִטְבְּלוּ לִתְשׁוּבָה וְנוֹכְחוּ בְּרִשְׁעַת מָסוֹרוֹת אֲבוֹתֵיהֶם׃",
+  "hebrew": "לָכֵן דִּבְּרוּ לְתִמְהוֹן הַלָּמָנִים הַגָּדוֹל לְהוֹכִיחָם עַד כִּי שְׁמוֹנַת אֲלָפִים מִן־הַלָּמָנִים אֲשֶׁר בְּאֶרֶץ זָרַחֶמְלָה וּסְבִיבוֹתֶיהָ נִטְבְּלוּ לִתְשׁוּבָה וְנוֹכְחוּ בְּרִשְׁעַת מָסוֹרוֹת אֲבוֹתֵיהֶם׃",
   "english": "Therefore they did speak unto the great astonishment of the Lamanites, to the convincing them, insomuch that there were eight thousand of the Lamanites who were in the land of Zarahemla and round about baptized unto repentance, and were convinced of the wickedness of the traditions of their fathers."
  },
  {
@@ -32112,7 +32112,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 5,
   "verse": 27,
-  "hebrew": "וְהִנֵּה כַּאֲשֶׁר דִּבְּרוּ אֶת־הַדְּבָרִים הָאֵלֶּה וַתִּרְעַשׁ הָאָרֶץ מְאֹד וַיִּרְעֲשׁוּ חוֹמוֹת הַכֶּלֶא כְּאִלּוּ יִפְּלוּ אָרְצָה אַךְ הִנֵּה לֹא נָפָלוּ וְהִנֵּה הָיוּ בַכֶּלֶא לָמָנִים וּנֶפִים פּוֹרְשִׁים׃",
+  "hebrew": "וְהִנֵּה כַּאֲשֶׁר דִּבְּרוּ אֶת־הַדְּבָרִים הָאֵלֶּה וַתִּרְעַשׁ הָאָרֶץ מְאֹד וַיִּרְעֲשׁוּ חוֹמוֹת הַכֶּלֶא כְּאִלּוּ יִפְּלוּ אָרְצָה אַךְ הִנֵּה לֹא נָפָלוּ וְהִנֵּה הָיוּ בַכֶּלֶא לָמָנִים וּנְפִיִּים פּוֹרְשִׁים׃",
   "english": "And behold, when they had said these words, the earth shook exceedingly, and the walls of the prison did shake as if they were about to tumble to the earth; but behold, they did not fall. And behold, they that were in the prison were Lamanites and Nephites who were dissenters."
  },
  {
@@ -32210,7 +32210,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 5,
   "verse": 41,
-  "hebrew": "וַיֹּאמֶר עֲמִינָדָב אֲלֵיהֶם עֲלֵיכֶם לָשׁוּב וְלִזְעֹק אֶל־הַקּוֹל עַד אֲשֶׁר תַּאֲמִינוּ בַּמָּשִׁיחַ אֲשֶׁר לִמְּדוּ אֶתְכֶם אַלְמָה וַעֲמוּלֵק וְזֵעְזְרוֹם וְכַאֲשֶׁר תַּעֲשׂוּ זֹאת יוּסַר עֲנַן הַחֹשֶׁךְ מֵעֲלֵיכֶם׃",
+  "hebrew": "וַיֹּאמֶר עֲמִינָדָב אֲלֵיהֶם עֲלֵיכֶם לָשׁוּב וְלִזְעֹק אֶל־הַקּוֹל עַד אֲשֶׁר תַּאֲמִינוּ בַּמָּשִׁיחַ אֲשֶׁר לִמְּדוּ אֶתְכֶם אַלְמָא וַעֲמוּלֶק וְזֶעְזְרוֹם וְכַאֲשֶׁר תַּעֲשׂוּ זֹאת יוּסַר עֲנַן הַחֹשֶׁךְ מֵעֲלֵיכֶם׃",
   "english": "And Aminadab said unto them: You must repent, and cry unto the voice, even until ye shall have faith in Christ, who was taught unto you by Alma, and Amulek, and Zeezrom; and when ye shall do this, the cloud of darkness shall be removed from overshadowing you."
  },
  {
@@ -32238,7 +32238,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 5,
   "verse": 45,
-  "hebrew": "וְהִנֵּה רוּחַ הַקֹּדֶשׁ שֶׁל אֱלֹהִים יָרְדָה מִן־הַשָּׁמַיִם וַתָּבֹא בְּלִבָּם וַיִּמָּלְאוּ כְּמוֹ בָאֵשׁ וַיּוּכְלוּ לְדַבֵּר דְּבָרִים נִפְלָאִים׃",
+  "hebrew": "וְהִנֵּה רוּחַ קֹדֶשׁ אֱלֹהִים יָרַד מִן־הַשָּׁמַיִם וַיָּבֹא בְּלִבָּם וַיִּמָּלְאוּ כְּמוֹ בָאֵשׁ וַיּוּכְלוּ לְדַבֵּר דְּבָרִים נִפְלָאִים׃",
   "english": "And behold, the Holy Spirit of God did come down from heaven, and did enter into their hearts, and they were filled as if with fire, and they could speak forth marvelous words."
  },
  {
@@ -32287,7 +32287,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 5,
   "verse": 52,
-  "hebrew": "וַיְהִי כִּי נָתְנוּ לַנֶפִים אֶת־אַרְצוֹת אֲחֻזָּתָם׃",
+  "hebrew": "וַיְהִי כִּי נָתְנוּ לַנְּפִיִּים אֶת־אַרְצוֹת אֲחֻזָּתָם׃",
   "english": "And it came to pass that they did yield up unto the Nephites the lands of their possession."
  },
  {
@@ -32315,7 +32315,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 6,
   "verse": 4,
-  "hebrew": "וַיְהִי כִּי יָרְדוּ לָמָנִים רַבִּים לְאֶרֶץ צָרַהֶמְלָה וַיַּגִּידוּ לְעַם הַנְּפִיִּים אֶת־דֶּרֶךְ הֲשָׁבָתָם וַיַּזְהִירוּם לֶאֱמוּנָה וְלִתְשׁוּבָה׃",
+  "hebrew": "וַיְהִי כִּי יָרְדוּ לָמָנִים רַבִּים לְאֶרֶץ זָרַחֶמְלָה וַיַּגִּידוּ לְעַם הַנְּפִיִּים אֶת־דֶּרֶךְ הֲשָׁבָתָם וַיַּזְהִירוּם לֶאֱמוּנָה וְלִתְשׁוּבָה׃",
   "english": "And it came to pass that many of the Lamanites did come down into the land of Zarahemla, and did declare unto the people of the Nephites the manner of their conversion, and did exhort them to faith and repentance."
  },
  {
@@ -32413,7 +32413,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 6,
   "verse": 18,
-  "hebrew": "וְעַתָּה הִנֵּה הָרוֹצְחִים וְהַבּוֹזְזִים הָאֵלֶּה הָיוּ חֲבוּרָה אֲשֶׁר נוֹסְדָה בִּידֵי קִישְׁקוּמֶן וְגָדִיאַנְטוֹן וְעַתָּה וַיְהִי כִּי הָיוּ רַבִּים אַף בֵּין הַנְּפִיִּים מֵחֲבוּרַת גָּדִיאַנְטוֹן אַךְ הִנֵּה הָיוּ רַבִּים יוֹתֵר בֵּין הַחֵלֶק  הָרָשָׁע שֶׁל הַלָּמָנִים וַיִּקָּרְאוּ שׁוֹדְדֵי וְרוֹצְחֵי גָּדִיאַנְטוֹן׃",
+  "hebrew": "וְעַתָּה הִנֵּה הָרוֹצְחִים וְהַבּוֹזְזִים הָאֵלֶּה הָיוּ חֲבוּרָה אֲשֶׁר נוֹסְדָה בִּידֵי קִישְׁקוּמֶן וְגָּדִיאַנְטוֹן וְעַתָּה וַיְהִי כִּי הָיוּ רַבִּים אַף בֵּין הַנְּפִיִּים מֵחֲבוּרַת גָּדִיאַנְטוֹן אַךְ הִנֵּה הָיוּ רַבִּים יוֹתֵר בֵּין הַחֵלֶק  הָרָשָׁע שֶׁל הַלָּמָנִים וַיִּקָּרְאוּ שׁוֹדְדֵי וְרוֹצְחֵי גָּדִיאַנְטוֹן׃",
   "english": "And now behold, those murderers and plunderers were a band who had been formed by Kishkumen and Gadianton. And now it had come to pass that there were many, even among the Nephites, of Gadianton’s band. But behold,  they were more numerous among the more wicked part of the Lamanites. And they were called Gadianton’s robbers and murderers."
  },
  {
@@ -32462,14 +32462,14 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 6,
   "verse": 25,
-  "hebrew": "וְעַתָּה הִנֵּה אֵלֶּה הָאָלוֹת וְהַבְּרִיתוֹת הַסּוֹדִיּוֹת אֲשֶׁר צִוָּה אַלְמָה אֶת־בְּנוֹ לְבַל יֵצְאוּ לָעוֹלָם פֶּן יִהְיוּ לְדֶרֶךְ לְהוֹרִיד אֶת־הָעָם לְהַשְׁחָתָה׃",
+  "hebrew": "וְעַתָּה הִנֵּה אֵלֶּה הָאָלוֹת וְהַבְּרִיתוֹת הַסּוֹדִיּוֹת אֲשֶׁר צִוָּה אַלְמָא אֶת־בְּנוֹ לְבַל יֵצְאוּ לָעוֹלָם פֶּן יִהְיוּ לְדֶרֶךְ לְהוֹרִיד אֶת־הָעָם לְהַשְׁחָתָה׃",
   "english": "Now behold, it is these secret oaths and covenants which Alma commanded his son should not go forth unto the world, lest they should be a means of bringing down the people unto destruction."
  },
  {
   "book": "Helaman",
   "chapter": 6,
   "verse": 26,
-  "hebrew": "וְעַתָּה הִנֵּה לֹא בָאוּ הָאָלוֹת וְהַבְּרִיתוֹת הַסּוֹדִיּוֹת הָאֵלֶּה לְגָדִיאַנְטוֹן מִן־הָרְשׁוּמוֹת אֲשֶׁר נִמְסְרוּ לְהֵילָמָן אַךְ הִנֵּה הוּשְׂמוּ בְּלֵב גָּדִיאַנְטוֹן בִּידֵי אוֹתוֹ הַיֵּשׁ אֲשֶׁר פִּתָּה אֶת־הוֹרֵינוּ הָרִאשׁוֹנִים לֶאֱכֹל מִפְּרִי הָעֵץ הָאָסוּר׃",
+  "hebrew": "וְעַתָּה הִנֵּה לֹא בָאוּ הָאָלוֹת וְהַבְּרִיתוֹת הַסּוֹדִיּוֹת הָאֵלֶּה לְגָּדִיאַנְטוֹן מִן־הָרְשׁוּמוֹת אֲשֶׁר נִמְסְרוּ לְהֵילָמָן אַךְ הִנֵּה הוּשְׂמוּ בְּלֵב גָּדִיאַנְטוֹן בִּידֵי אוֹתוֹ הַיֵּשׁ אֲשֶׁר פִּתָּה אֶת־הוֹרֵינוּ הָרִאשׁוֹנִים לֶאֱכֹל מִפְּרִי הָעֵץ הָאָסוּר׃",
   "english": "Now behold, those secret oaths and covenants did not come forth unto Gadianton from the records which were delivered unto Helaman; but behold, they were put into the heart of Gadianton by that same being who did entice our first parents to partake of the forbidden fruit—"
  },
  {
@@ -32532,7 +32532,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 6,
   "verse": 35,
-  "hebrew": "וְכָכָה רוֹאִים אֲנַחְנוּ כִּי הֵחֵלָּה רוּחַ יְהוָה לָסוּר מֵעַל הַנְּפִיִּים מִפְּנֵי רִשְׁעָתָם וְקֹשִׁי לִבָּם׃",
+  "hebrew": "וְכָכָה רוֹאִים אֲנַחְנוּ כִּי הֵחֵל רוּחַ יְהוָה לָסוּר מֵעַל הַנְּפִיִּים מִפְּנֵי רִשְׁעָתָם וְקֹשִׁי לִבָּם׃",
   "english": "And thus we see that the Spirit of the Lord began to withdraw from the Nephites, because of the wickedness and the hardness of their hearts."
  },
  {
@@ -32581,7 +32581,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 7,
   "verse": 1,
-  "hebrew": "וַיְהִי בִּשְׁנַת הַשִּׁשִּׁים וָתֵשַׁע לְמַלְכוּת הַשֹּׁפְטִים עַל־עַם הַנְּפִיִּים וַיָּשָׁב נֶפִי בֶן־הֵילָמָן לְאֶרֶץ צָרַהֶמְלָה מִן־הָאָרֶץ צָפוֹנָה׃",
+  "hebrew": "וַיְהִי בִּשְׁנַת הַשִּׁשִּׁים וָתֵשַׁע לְמַלְכוּת הַשֹּׁפְטִים עַל־עַם הַנְּפִיִּים וַיָּשָׁב נֶפִי בֶן־הֵילָמָן לְאֶרֶץ זָרַחֶמְלָה מִן־הָאָרֶץ צָפוֹנָה׃",
   "english": "Behold, now it came to pass in the sixty and ninth year of the reign of the judges over the people of the Nephites, that Nephi, the son of Helaman, returned to the land of Zarahemla from the land northward."
  },
  {
@@ -32602,7 +32602,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 7,
   "verse": 4,
-  "hebrew": "וַיַּרְא אֶת־הָעָם בְּרִשְׁעָה נוֹרָאָה כָּזֹאת וְשׁוֹדְדֵי גָדִיאַנְטוֹן יוֹשְׁבִים עַל־כִּסְאוֹת הַמִּשְׁפָּט תָּפְשׂוּ אֶת־הַכֹּחַ וְהַסַּמְכוּת בָּאָרֶץ עָזְבוּ אֶת־מִצְוֹת אֱלֹהִים וְלֹא יָשְׁרוּ כְּלָל לְפָנָיו לֹא עָשׂוּ מִשְׁפָּט לִבְנֵי הָאָדָם׃",
+  "hebrew": "וַיַּרְא אֶת־הָעָם בְּרִשְׁעָה נוֹרָאָה כָּזֹאת וְשׁוֹדְדֵי גָּדִיאַנְטוֹן יוֹשְׁבִים עַל־כִּסְאוֹת הַמִּשְׁפָּט תָּפְשׂוּ אֶת־הַכֹּחַ וְהַסַּמְכוּת בָּאָרֶץ עָזְבוּ אֶת־מִצְוֹת אֱלֹהִים וְלֹא יָשְׁרוּ כְּלָל לְפָנָיו לֹא עָשׂוּ מִשְׁפָּט לִבְנֵי הָאָדָם׃",
   "english": "And seeing the people in a state of such awful wickedness, and those Gadianton robbers filling the judgment– seats—having usurped the power and authority of the land; laying aside the commandments of God, and not in the least aright before him; doing no justice unto the children of men;"
  },
  {
@@ -32644,14 +32644,14 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 7,
   "verse": 10,
-  "hebrew": "וְהִנֵּה עַתָּה וַיְהִי כִּי הָיָה עַל־מִגְדָּל אֲשֶׁר בְּגַן נֶפִי אֲשֶׁר עַל־יַד הַמְּסִלָּה הַמּוֹבִילָה אֶל־הַשּׁוּק הָרָאשִׁי אֲשֶׁר בְּעִיר צָרַהֶמְלָה לָכֵן הִשְׁתַּחֲוָה נֶפִי עַל־הַמִּגְדָּל אֲשֶׁר בְּגַנּוֹ אֲשֶׁר הָיָה גַם קָרוֹב לְשַׁעַר הַגָּן אֲשֶׁר עָבְרָה בּוֹ הַמְּסִלָּה׃",
+  "hebrew": "וְהִנֵּה עַתָּה וַיְהִי כִּי הָיָה עַל־מִגְדָּל אֲשֶׁר בְּגַן נֶפִי אֲשֶׁר עַל־יַד הַמְּסִלָּה הַמּוֹבִילָה אֶל־הַשּׁוּק הָרָאשִׁי אֲשֶׁר בְּעִיר זָרַחֶמְלָה לָכֵן הִשְׁתַּחֲוָה נֶפִי עַל־הַמִּגְדָּל אֲשֶׁר בְּגַנּוֹ אֲשֶׁר הָיָה גַם קָרוֹב לְשַׁעַר הַגָּן אֲשֶׁר עָבְרָה בּוֹ הַמְּסִלָּה׃",
   "english": "And behold, now it came to pass that it was upon a tower, which was in the garden of Nephi, which was by the highway which led to the chief market, which was in the city of Zara– hemla; therefore, Nephi had bowed himself upon the tower which was in his garden, which tower was also near unto the garden gate by which led the highway."
  },
  {
   "book": "Helaman",
   "chapter": 7,
   "verse": 11,
-  "hebrew": "וַיְהִי כִּי עָבְרוּ אֲנָשִׁים וַיִּרְאוּ אֶת־נֶפִי שׁוֹפֵךְ נַפְשׁוֹ לֵאלֹהִים עַל־הַמִּגְדָּל וַיָּרוּצוּ וַיַּגִּידוּ לָעָם אֵת אֲשֶׁר רָאוּ וַיִּתְקַבְּצוּ הָעָם בַּהֲמוֹנִים לָדַעַת דְּבַר הָאֵבֶל הַגָּדוֹל עַל־רִשְׁעַת הָעָם׃",
+  "hebrew": "וַיְהִי כִּי עָבְרוּ אֲנָשִׁים וַיִּרְאוּ אֶת־נֶפִי שׁוֹפֵךְ נַפְשׁוֹ לֵאלֹהִים עַל־הַמִּגְדָּל וַיָּרוּצוּ וַיַּגִּידוּ לָעָם אֶת־אֲשֶׁר רָאוּ וַיִּתְקַבְּצוּ הָעָם בַּהֲמוֹנִים לָדַעַת דְּבַר הָאֵבֶל הַגָּדוֹל עַל־רִשְׁעַת הָעָם׃",
   "english": "And it came to pass that there were certain men passing by and saw Nephi as he was pouring out his soul unto God upon the tower; and they ran and told the people what they had seen, and the people came together in multitudes that they might know the cause of so great mourning for the wickedness of the people."
  },
  {
@@ -33281,14 +33281,14 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 10,
   "verse": 3,
-  "hebrew": "וַיְהִי בְּהִתְבּוֹנְנוֹ כֹּה וַיִּפֹּל רוּחוֹ מְאֹד בִּגְלַל רִשְׁעַת עַם הַנְּפִיִּים  וּמַעֲשֵׂי הַחֹשֶׁךְ הַסּוֹדִיִּים אֲשֶׁר לָהֶם  וְרִצְחֵיהֶם וּשְׁלָלֵיהֶם וְכָל־עֲוֺנוֹתֵיהֶם וַיְהִי בְּהִתְבּוֹנְנוֹ כֹּה בִּלְבָבוֹ וְהִנֵּה קוֹל בָּא אֵלָיו לֵאמֹר׃",
+  "hebrew": "וַיְהִי בְּהִתְבּוֹנְנוֹ כֹּה וַיִּפֹּל רוּחוֹ מְאֹד בִּגְלַל רִשְׁעַת עַם הַנְּפִיִּים  וּמַעֲשֵׂי הַחֹשֶׁךְ הַסּוֹדִיִּים אֲשֶׁר לָהֶם  וְרִצְחֵיהֶם וּשְׁלָלֵיהֶם וְכָל־עֲוֹנוֹתֵיהֶם וַיְהִי בְּהִתְבּוֹנְנוֹ כֹּה בִּלְבָבוֹ וְהִנֵּה קוֹל בָּא אֵלָיו לֵאמֹר׃",
   "english": "And it came to pass as he was thus pondering being much cast down because of the  wickedness of the people of the Nephites, their secret works of darkness, and their murderings, and their plunderings, and all manner of iniquities—and it came to pass as he was thus pondering in his heart, behold, a voice came unto him saying:"
  },
  {
   "book": "Helaman",
   "chapter": 10,
   "verse": 4,
-  "hebrew": "בָּרוּךְ אַתָּה נֶפִי עַל־הַדְּבָרִים אֲשֶׁר עָשִׂיתָ כִּי רָאִיתִי אֲשֶׁר הִגַּדְתָּ בְּלִי־לְאוּת אֶת־הַדָּבָר אֲשֶׁר נָתַתִּי לְךָ לָעָם הַזֶּה וְלֹא יָרֵאתָ מִפְּנֵיהֶם וְלֹא בִקַּשְׁתָּ אֶת־נַפְשְׁךָ כִּי אִם־בִּקַּשְׁתָּ אֶת־רְצוֹנִי וְלִשְׁמֹר אֶת־מִצְוֺתָי׃",
+  "hebrew": "בָּרוּךְ אַתָּה נֶפִי עַל־הַדְּבָרִים אֲשֶׁר עָשִׂיתָ כִּי רָאִיתִי אֲשֶׁר הִגַּדְתָּ בְּלִי־לְאוּת אֶת־הַדָּבָר אֲשֶׁר נָתַתִּי לְךָ לָעָם הַזֶּה וְלֹא יָרֵאתָ מִפְּנֵיהֶם וְלֹא בִקַּשְׁתָּ אֶת־נַפְשְׁךָ כִּי אִם־בִּקַּשְׁתָּ אֶת־רְצוֹנִי וְלִשְׁמֹר אֶת־מִצְוֹתָי׃",
   "english": "Blessed art thou, Nephi, for those things which thou hast done; for I have beheld how thou hast with unwearyingness declared the word, which I have given unto thee, unto this people. And thou hast not feared them, and hast not sought thine own life, but hast sought my will, and to keep my commandments."
  },
  {
@@ -33435,7 +33435,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 11,
   "verse": 6,
-  "hebrew": "וַתִּמְשֹׁךְ מְלֶאכֶת הַהֶרֶס הַזֹּאת גַּם בִּשְׁנַת שִׁבְעִים וְחָמֵשׁ כִּי הֻכְּתָה הָאָרֶץ וַתִּיבַשׁ וְלֹא־נָתְנָה דָגָן בְּעֵת הַדָּגָן וַתֻּכַּה כָל־הָאָרֶץ גַּם בַּלָּמָנִים גַּם בַּנֶפִים וַיֻּכּוּ וַיֹּאבְדוּ אֲלָפִים בִּמְקוֹמוֹת הָרָעִים בָּאָרֶץ׃",
+  "hebrew": "וַתִּמְשֹׁךְ מְלֶאכֶת הַהֶרֶס הַזֹּאת גַּם בִּשְׁנַת שִׁבְעִים וְחָמֵשׁ כִּי הֻכְּתָה הָאָרֶץ וַתִּיבַשׁ וְלֹא־נָתְנָה דָגָן בְּעֵת הַדָּגָן וַתֻּכַּה כָל־הָאָרֶץ גַּם בַּלָּמָנִים גַּם בַּנְּפִיִּים וַיֻּכּוּ וַיֹּאבְדוּ אֲלָפִים בִּמְקוֹמוֹת הָרָעִים בָּאָרֶץ׃",
   "english": "And this work of destruction did also continue in the seventy and fifth year. For the earth was smitten that it was dry, and did not yield forth grain in the season of grain; and the whole earth was smitten, even among the Lamanites as well as among the Nephites, so that they were smitten that they did perish by thousands in the more wicked parts of the land."
  },
  {
@@ -33631,7 +33631,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 11,
   "verse": 34,
-  "hebrew": "וְעַתָּה הָרָעָה הַגְּדוֹלָה הַזֹּאת אֲשֶׁר בָּאָה עַל־הָעָם בַּעֲוֺנָם עוֹרְרָה אוֹתָם שֵׁנִית לִזְכֹּר אֶת־יְהוָה אֱלֹהֵיהֶם׃",
+  "hebrew": "וְעַתָּה הָרָעָה הַגְּדוֹלָה הַזֹּאת אֲשֶׁר בָּאָה עַל־הָעָם בַּעֲוֹנָם עוֹרְרָה אוֹתָם שֵׁנִית לִזְכֹּר אֶת־יְהוָה אֱלֹהֵיהֶם׃",
   "english": "Now this great evil, which came unto the people because of their iniquity, did stir them up again in remembrance of the Lord their God."
  },
  {
@@ -33645,7 +33645,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 11,
   "verse": 36,
-  "hebrew": "וּבִשְׁנַת שְׁמוֹנִים וּשְׁתַּיִם הֵחֵלּוּ שֵׁנִית לִשְׁכֹּחַ אֶת־יְהוָה אֱלֹהֵיהֶם וּבִשְׁנַת שְׁמוֹנִים וְשָׁלֹשׁ הֵחֵלּוּ לֶחֱזֹק בְּעָוֺן וּבִשְׁנַת שְׁמוֹנִים וְאַרְבַּע לֹא הֵיטִיבוּ אֶת־דַּרְכֵיהֶם׃",
+  "hebrew": "וּבִשְׁנַת שְׁמוֹנִים וּשְׁתַּיִם הֵחֵלּוּ שֵׁנִית לִשְׁכֹּחַ אֶת־יְהוָה אֱלֹהֵיהֶם וּבִשְׁנַת שְׁמוֹנִים וְשָׁלֹשׁ הֵחֵלּוּ לֶחֱזֹק בְּעָוֹן וּבִשְׁנַת שְׁמוֹנִים וְאַרְבַּע לֹא הֵיטִיבוּ אֶת־דַּרְכֵיהֶם׃",
   "english": "And in the eighty and second year they began again to forget the Lord their God. And in the eighty and third year they began to wax strong in iniquity. And in the eighty and fourth year they did not mend their ways."
  },
  {
@@ -33687,14 +33687,14 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 12,
   "verse": 4,
-  "hebrew": "הוֹי מַה־כְּסִילִים וּמַה־רִיקִים וּמַה־רָעִים וּמַה־בְּנֵי בְלִיַּעַל וּמַה־מְמַהֲרִים לַעֲשׂוֹת עָוֺן וּמַה־מְאַחֲרִים לַעֲשׂוֹת טוֹב בְּנֵי הָאָדָם הֵן מַה־מְמַהֲרִים לִשְׁמֹעַ אֶל־דִּבְרֵי הָרָע וְלָשׂוּם אֶת־לִבָּם עַל־הַבְלֵי הָעוֹלָם׃",
+  "hebrew": "הוֹי מַה־כְּסִילִים וּמַה־רִיקִים וּמַה־רָעִים וּמַה־בְּנֵי בְלִיַּעַל וּמַה־מְמַהֲרִים לַעֲשׂוֹת עָוֹן וּמַה־מְאַחֲרִים לַעֲשׂוֹת טוֹב בְּנֵי הָאָדָם הֵן מַה־מְמַהֲרִים לִשְׁמֹעַ אֶל־דִּבְרֵי הָרָע וְלָשׂוּם אֶת־לִבָּם עַל־הַבְלֵי הָעוֹלָם׃",
   "english": "O how foolish, and how vain, and how evil, and devilish, and how quick to do iniquity, and how slow to do good, are the children of men; yea, how quick to hearken unto the words of the evil one, and to set their hearts upon the vain things of the world!"
  },
  {
   "book": "Helaman",
   "chapter": 12,
   "verse": 5,
-  "hebrew": "הֵן מַה־מְמַהֲרִים לְהִתְנַשֵּׂא בְגָאוֹן הֵן מַה־מְמַהֲרִים לְהִתְהַלֵּל וְלַעֲשׂוֹת כָּל־מִינֵי עָוֺן וּמַה־מְאַחֲרִים הֵם לִזְכֹּר אֶת־יְהוָה אֱלֹהֵיהֶם וּלְהַאֲזִין לַעֲצָתוֹ הֵן מַה־מְאַחֲרִים לָלֶכֶת בְּאָרְחוֹת חָכְמָה׃",
+  "hebrew": "הֵן מַה־מְמַהֲרִים לְהִתְנַשֵּׂא בְגָאוֹן הֵן מַה־מְמַהֲרִים לְהִתְהַלֵּל וְלַעֲשׂוֹת כָּל־מִינֵי עָוֹן וּמַה־מְאַחֲרִים הֵם לִזְכֹּר אֶת־יְהוָה אֱלֹהֵיהֶם וּלְהַאֲזִין לַעֲצָתוֹ הֵן מַה־מְאַחֲרִים לָלֶכֶת בְּאָרְחוֹת חָכְמָה׃",
   "english": "Yea, how quick to be lifted up in pride; yea, how quick to boast, and do all manner of that which is iniquity; and how slow are they to remember the Lord their God, and to give ear unto his counsels, yea, how slow to walk in wisdom’s paths!"
  },
  {
@@ -33785,7 +33785,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 12,
   "verse": 18,
-  "hebrew": "וְהִנֵּה אִם־יִטְמֹן אִישׁ מַטְמוֹן בָּאָרֶץ וְיֹאמַר יְהוָה יְהִי אָרוּר בַּעֲוֺן הַטּוֹמֵן אוֹתוֹ הִנֵּה יִהְיֶה אָרוּר׃",
+  "hebrew": "וְהִנֵּה אִם־יִטְמֹן אִישׁ מַטְמוֹן בָּאָרֶץ וְיֹאמַר יְהוָה יְהִי אָרוּר בַּעֲוֹן הַטּוֹמֵן אוֹתוֹ הִנֵּה יִהְיֶה אָרוּר׃",
   "english": "And behold, if a man hide up a treasure in the earth, and the Lord shall say—Let it be accursed, because of the iniquity of him who hath hid it up—behold, it shall be accursed."
  },
  {
@@ -33799,21 +33799,21 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 12,
   "verse": 20,
-  "hebrew": "וְהִנֵּה אִם־יֹאמַר יְהוָה לְאִישׁ בַּעֲוֺנוֹתֶיךָ תִּהְיֶה אָרוּר עַד־עוֹלָם וְנַעֲשָׂה׃",
+  "hebrew": "וְהִנֵּה אִם־יֹאמַר יְהוָה לְאִישׁ בַּעֲוֹנוֹתֶיךָ תִּהְיֶה אָרוּר עַד־עוֹלָם וְנַעֲשָׂה׃",
   "english": "And behold, if the Lord shall say unto a man—Because of thine iniquities, thou shalt be accursed forever—it shall be done."
  },
  {
   "book": "Helaman",
   "chapter": 12,
   "verse": 21,
-  "hebrew": "וְאִם־יֹאמַר יְהוָה בַּעֲוֺנוֹתֶיךָ תִּכָּרֵת מִלְּפָנַי יַעֲשֶׂה כִּי יִהְיֶה כֵן׃",
+  "hebrew": "וְאִם־יֹאמַר יְהוָה בַּעֲוֹנוֹתֶיךָ תִּכָּרֵת מִלְּפָנַי יַעֲשֶׂה כִּי יִהְיֶה כֵן׃",
   "english": "And if the Lord shall say—Because of thine iniquities thou shalt be cut off from my presence—he will cause that it shall be so."
  },
  {
   "book": "Helaman",
   "chapter": 12,
   "verse": 22,
-  "hebrew": "וְאוֹי לַאֲשֶׁר יֹאמַר לוֹ זֹאת כִּי יִהְיֶה לְעֹשֵׂה הָעָוֺן וְלֹא יוּכַל לְהִוָּשֵׁעַ לָכֵן לְמַעַן הַצִּיל בְּנֵי הָאָדָם הֻגְּדָה הַתְּשׁוּבָה׃",
+  "hebrew": "וְאוֹי לַאֲשֶׁר יֹאמַר לוֹ זֹאת כִּי יִהְיֶה לְעֹשֵׂה הָעָוֹן וְלֹא יוּכַל לְהִוָּשֵׁעַ לָכֵן לְמַעַן הַצִּיל בְּנֵי הָאָדָם הֻגְּדָה הַתְּשׁוּבָה׃",
   "english": "And wo unto him to whom he shall say this, for it shall be unto him that will do iniquity, and he cannot be saved; therefore, for this cause, that men might be saved, hath repentance been declared."
  },
  {
@@ -33848,7 +33848,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 13,
   "verse": 1,
-  "hebrew": "וַיְהִי בִּשְׁנַת שְׁמוֹנִים וָשֵׁשׁ וְעוֹד נִשְׁאֲרוּ הַנְּפִיִּים  בְּרִשְׁעָה הֵן בְּרִשְׁעָה גְדוֹלָה וְהַלָּמָנִים שָׁמְרוּ הֵיטֵב אֶת־מִצְוֺת אֱלֹהִים כְּפִי תּוֹרַת מֹשֶׁה׃",
+  "hebrew": "וַיְהִי בִּשְׁנַת שְׁמוֹנִים וָשֵׁשׁ וְעוֹד נִשְׁאֲרוּ הַנְּפִיִּים  בְּרִשְׁעָה הֵן בְּרִשְׁעָה גְדוֹלָה וְהַלָּמָנִים שָׁמְרוּ הֵיטֵב אֶת־מִצְוֹת אֱלֹהִים כְּפִי תּוֹרַת מֹשֶׁה׃",
   "english": "And now it came to pass in the eighty and sixth year, the Nephites did still remain in wicked– ness, yea in great wickedness, while the Lamanites did observe strictly to keep the commandments of God, according to the law of Moses."
  },
  {
@@ -33862,14 +33862,14 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 13,
   "verse": 3,
-  "hebrew": "אַךְ הִנֵּה קוֹל יְהוָה בָּא אֵלָיו לָשׁוּב שֵׁנִית וּלְהִתְנַבֵּא לָעָם אֵת כָּל־אֲשֶׁר יַעֲלֶה עַל־לִבּוֹ׃",
+  "hebrew": "אַךְ הִנֵּה קוֹל יְהוָה בָּא אֵלָיו לָשׁוּב שֵׁנִית וּלְהִתְנַבֵּא לָעָם אֶת־כָּל־אֲשֶׁר יַעֲלֶה עַל־לִבּוֹ׃",
   "english": "But behold, the voice of the Lord came unto him, that he should return again, and prophesy  unto the people whatsoever things should come into his heart."
  },
  {
   "book": "Helaman",
   "chapter": 13,
   "verse": 4,
-  "hebrew": "וַיְהִי וְלֹא נְתָנוּהוּ לָבוֹא הָעִירָה לָכֵן הָלַךְ וַיַּעַל עַל־הַחוֹמָה וַיִּשְׁלַח יָדוֹ וַיִּקְרָא בְּקוֹל גָּדוֹל וַיִּתְנַבֵּא לָעָם אֵת כָּל־אֲשֶׁר שָׂם יְהוָה בְּלִבּוֹ׃",
+  "hebrew": "וַיְהִי וְלֹא נְתָנוּהוּ לָבוֹא הָעִירָה לָכֵן הָלַךְ וַיַּעַל עַל־הַחוֹמָה וַיִּשְׁלַח יָדוֹ וַיִּקְרָא בְּקוֹל גָּדוֹל וַיִּתְנַבֵּא לָעָם אֶת־כָּל־אֲשֶׁר שָׂם יְהוָה בְּלִבּוֹ׃",
   "english": "And it came to pass that they would not suffer that he should enter into the city; therefore he went and got upon the wall thereof, and stretched forth his hand and cried with a loud voice, and prophesied unto the people whatsoever things the Lord put into his heart."
  },
  {
@@ -33995,21 +33995,21 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 13,
   "verse": 22,
-  "hebrew": "לֹא תִזְכְּרוּ אֶת־יְהוָה אֱלֹהֵיכֶם בַּדְּבָרִים אֲשֶׁר בֵּרַךְ אֶתְכֶם אַךְ תִּזְכְּרוּ תָמִיד אֶת־עָשְׁרְכֶם וְלֹא לְהוֹדוֹת לַיהוָה אֱלֹהֵיכֶם עֲלֵיהֶם הֵן לִבְּכֶם לֹא־נִמְשָׁךְ אֶל־יְהוָה כִּי אִם־יִגְאֶה בְּגָאוֹן רַב לְהִתְפָּאֵר  וּלְהִתְנַפֵּחַ בִּקְנָאוֹת וּמְרִיבוֹת וְשִׂנְאָה וּרְדִיפוֹת וּרְצִיחוֹת וְכָל־עֲוֺנוֹת׃",
+  "hebrew": "לֹא תִזְכְּרוּ אֶת־יְהוָה אֱלֹהֵיכֶם בַּדְּבָרִים אֲשֶׁר בֵּרַךְ אֶתְכֶם אַךְ תִּזְכְּרוּ תָמִיד אֶת־עָשְׁרְכֶם וְלֹא לְהוֹדוֹת לַיהוָה אֱלֹהֵיכֶם עֲלֵיהֶם הֵן לִבְּכֶם לֹא־נִמְשָׁךְ אֶל־יְהוָה כִּי אִם־יִגְאֶה בְּגָאוֹן רַב לְהִתְפָּאֵר  וּלְהִתְנַפֵּחַ בִּקְנָאוֹת וּמְרִיבוֹת וְשִׂנְאָה וּרְדִיפוֹת וּרְצִיחוֹת וְכָל־עֲוֹנוֹת׃",
   "english": "Ye do not remember the Lord your God in the things with which he hath blessed you, but ye do always remember your riches, not to thank the Lord your God for them; yea, your hearts are not drawn out unto the Lord, but they do swell with great pride, unto boasting, and unto great  swelling, envyings, strifes, malice, persecutions and murders, and all manner of iniquities."
  },
  {
   "book": "Helaman",
   "chapter": 13,
   "verse": 23,
-  "hebrew": "עַל־כֵּן הֵבִיא יְהוָה אֱלֹהִים קְלָלָה עַל־הָאָרֶץ וְגַם עַל־עָשְׁרְכֶם וְזֹאת בַּעֲוֺנוֹתֵיכֶם׃",
+  "hebrew": "עַל־כֵּן הֵבִיא יְהוָה אֱלֹהִים קְלָלָה עַל־הָאָרֶץ וְגַם עַל־עָשְׁרְכֶם וְזֹאת בַּעֲוֹנוֹתֵיכֶם׃",
   "english": "For this cause hath the Lord God caused that a curse should come upon the land, and also upon your riches, and this because of your iniquities."
  },
  {
   "book": "Helaman",
   "chapter": 13,
   "verse": 24,
-  "hebrew": "הֵן אוֹי לָעָם הַזֶּה בִּגְלַל הָעֵת הַזֹּאת אֲשֶׁר בָּאָה כִּי תְגָרְשׁוּ אֶת־הַנְּבִיאִים וְתִלְעֲגוּ לָהֶם וְתִרְגְּמוּ אוֹתָם בָּאֲבָנִים וְתַהַרְגוּם וְתַעֲשׂוּ לָהֶם כָּל־עָוֺן כַּאֲשֶׁר עָשׂוּ בִּימֵי קֶדֶם׃",
+  "hebrew": "הֵן אוֹי לָעָם הַזֶּה בִּגְלַל הָעֵת הַזֹּאת אֲשֶׁר בָּאָה כִּי תְגָרְשׁוּ אֶת־הַנְּבִיאִים וְתִלְעֲגוּ לָהֶם וְתִרְגְּמוּ אוֹתָם בָּאֲבָנִים וְתַהַרְגוּם וְתַעֲשׂוּ לָהֶם כָּל־עָוֹן כַּאֲשֶׁר עָשׂוּ בִּימֵי קֶדֶם׃",
   "english": "Yea, wo unto this people, because of this time which has arrived, that ye do cast out the prophets, and do mock them, and cast stones at them, and do slay them, and do all manner of iniquity unto them, even as they did of old time."
  },
  {
@@ -34023,14 +34023,14 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 13,
   "verse": 26,
-  "hebrew": "הִנֵּה רָעִים אַתֶּם מֵהֶם כִּי חַי־יְהוָה אִם־יָבוֹא נָבִיא בֵּינֵיכֶם וְיַגִּיד לָכֶם אֶת־דְּבַר יְהוָה הַמֵּעִיד עַל־חַטֹּאתֵיכֶם וַעֲוֺנוֹתֵיכֶם תִּכְעֲסוּ עָלָיו וּתְגָרְשׁוּהוּ וּתְבַקְשׁוּ בְּכָל־דֶּרֶךְ לְהַשְׁמִידוֹ הֵן תֹּאמְרוּ כִּי נְבִיא שֶׁקֶר הוּא וְחוֹטֵא וּמִן־הַשָּׂטָן כִּי מֵעִיד הוּא כִּי רָעִים מַעֲשֵׂיכֶם׃",
+  "hebrew": "הִנֵּה רָעִים אַתֶּם מֵהֶם כִּי חַי־יְהוָה אִם־יָבוֹא נָבִיא בֵּינֵיכֶם וְיַגִּיד לָכֶם אֶת־דְּבַר יְהוָה הַמֵּעִיד עַל־חַטֹּאתֵיכֶם וַעֲוֹנוֹתֵיכֶם תִּכְעֲסוּ עָלָיו וּתְגָרְשׁוּהוּ וּתְבַקְשׁוּ בְּכָל־דֶּרֶךְ לְהַשְׁמִידוֹ הֵן תֹּאמְרוּ כִּי נְבִיא שֶׁקֶר הוּא וְחוֹטֵא וּמִן־הַשָּׂטָן כִּי מֵעִיד הוּא כִּי רָעִים מַעֲשֵׂיכֶם׃",
   "english": "Behold ye are worse than they; for as the Lord liveth, if a prophet come among you and declareth unto you the word of the Lord, which testifieth of your sins and iniquities, ye are angry with him, and cast him out and seek all manner of ways to destroy him; yea, you will say that he is a false prophet, and that he is a sinner, and of the devil, because he testifieth that your deeds are evil."
  },
  {
   "book": "Helaman",
   "chapter": 13,
   "verse": 27,
-  "hebrew": "אַךְ הִנֵּה אִם־יָבוֹא אִישׁ בֵּינֵיכֶם וְיֹאמַר עֲשׂוּ זֹאת וְאֵין עָוֺן עֲשׂוּ זֹאת וְלֹא תִסְבְּלוּ הֵן יֹאמַר לְכוּ אַחֲרֵי גְאוֹן לִבְּכֶם הֵן לְכוּ אַחֲרֵי גַאֲוַת עֵינֵיכֶם וַעֲשׂוּ כְּכָל־תַּאֲוַת לִבְּכֶם וְאִם־יָבוֹא אִישׁ בֵּינֵיכֶם וְיֹאמַר כָּזֹאת תְּקַבְּלוּהוּ וְתֹאמְרוּ כִּי נָבִיא הוּא׃",
+  "hebrew": "אַךְ הִנֵּה אִם־יָבוֹא אִישׁ בֵּינֵיכֶם וְיֹאמַר עֲשׂוּ זֹאת וְאֵין עָוֹן עֲשׂוּ זֹאת וְלֹא תִסְבְּלוּ הֵן יֹאמַר לְכוּ אַחֲרֵי גְאוֹן לִבְּכֶם הֵן לְכוּ אַחֲרֵי גַאֲוַת עֵינֵיכֶם וַעֲשׂוּ כְּכָל־תַּאֲוַת לִבְּכֶם וְאִם־יָבוֹא אִישׁ בֵּינֵיכֶם וְיֹאמַר כָּזֹאת תְּקַבְּלוּהוּ וְתֹאמְרוּ כִּי נָבִיא הוּא׃",
   "english": "But behold, if a man shall come among you and shall say: Do this, and there is no iniquity; do that and ye shall not suffer; yea, he will say: Walk after the pride of your own hearts; yea, walk after the pride of your eyes, and do whatsoever your heart desireth—and if a man shall come among you and say this, ye will receive him, and say that he is a prophet."
  },
  {
@@ -34051,7 +34051,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 13,
   "verse": 30,
-  "hebrew": "הֵן הִנֵּה חֲרוֹן יְהוָה כְּבָר נִצַּת בָּכֶם הִנֵּה אֵרַר אֶת־הָאָרֶץ בַּעֲוֺנְכֶם׃",
+  "hebrew": "הֵן הִנֵּה חֲרוֹן יְהוָה כְּבָר נִצַּת בָּכֶם הִנֵּה אֵרַר אֶת־הָאָרֶץ בַּעֲוֹנְכֶם׃",
   "english": "Yea, behold, the anger of the Lord is already kindled against you; behold, he hath cursed the land because of your iniquity."
  },
  {
@@ -34100,14 +34100,14 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 13,
   "verse": 37,
-  "hebrew": "הִנֵּה סְבָבוּנוּ שֵׁדִים הֵן מֻקָּפִים אֲנַחְנוּ בְּמַלְאֲכֵי הַמְּבַקֵּשׁ לְהַשְׁחִית אֶת־נַפְשׁוֹתֵינוּ הִנֵּה גָּדְלוּ עֲוֺנוֹתֵינוּ יְהוָה הֲלֹא תָשִׁיב חֲרוֹנְךָ מֵעָלֵינוּ וְכָזֹאת תְּדַבְּרוּ בַּיָּמִים הָהֵם׃",
+  "hebrew": "הִנֵּה סְבָבוּנוּ שֵׁדִים הֵן מֻקָּפִים אֲנַחְנוּ בְּמַלְאֲכֵי הַמְּבַקֵּשׁ לְהַשְׁחִית אֶת־נַפְשׁוֹתֵינוּ הִנֵּה גָּדְלוּ עֲוֹנוֹתֵינוּ יְהוָה הֲלֹא תָשִׁיב חֲרוֹנְךָ מֵעָלֵינוּ וְכָזֹאת תְּדַבְּרוּ בַּיָּמִים הָהֵם׃",
   "english": "Behold, we are surrounded by demons, yea, we are encircled about by the angels of him who hath sought to destroy our souls. Behold, our iniquities are great. O Lord, canst thou not turn away thine anger from us? And this shall be your language in those days."
  },
  {
   "book": "Helaman",
   "chapter": 13,
   "verse": 38,
-  "hebrew": "אַךְ הִנֵּה עָבְרוּ יְמֵי נִסְיֹנְכֶם דְּחִיתֶם אֶת־יוֹם יְשׁוּעַתְכֶם עַד כִּי עָבַר הַזְּמָן לְעוֹלָם וְהַשְׁחָתַתְכֶם נָכוֹנָה הֵן בִּקַּשְׁתֶּם כָּל־יְמֵי חַיֵּיכֶם אֵת אֲשֶׁר לֹא תוּכְלוּ לְהַשִּׂיג וּבִקַּשְׁתֶּם אָשְׁרְכֶם בַּעֲשׂוֹת עָוֺן אֲשֶׁר מְנַגֵּד לְדֶרֶךְ הַצֶּדֶק אֲשֶׁר בְּרֹאשֵׁנוּ הַגָּדוֹל וְהַנִּצְחִי׃",
+  "hebrew": "אַךְ הִנֵּה עָבְרוּ יְמֵי נִסְיֹנְכֶם דְּחִיתֶם אֶת־יוֹם יְשׁוּעַתְכֶם עַד כִּי עָבַר הַזְּמָן לְעוֹלָם וְהַשְׁחָתַתְכֶם נָכוֹנָה הֵן בִּקַּשְׁתֶּם כָּל־יְמֵי חַיֵּיכֶם אֶת־אֲשֶׁר לֹא תוּכְלוּ לְהַשִּׂיג וּבִקַּשְׁתֶּם אָשְׁרְכֶם בַּעֲשׂוֹת עָוֹן אֲשֶׁר מְנַגֵּד לְדֶרֶךְ הַצֶּדֶק אֲשֶׁר בְּרֹאשֵׁנוּ הַגָּדוֹל וְהַנִּצְחִי׃",
   "english": "But behold, your days of probation are past; ye have procrastinated the day of your salvation until it is everlastingly too late, and your destruction is made sure; yea, for ye have sought all the days of your lives for that which ye could not obtain; and ye have sought for happiness in doing iniquity, which thing is contrary to the nature of that righteousness which is in our great and Eternal Head."
  },
  {
@@ -34191,7 +34191,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 14,
   "verse": 11,
-  "hebrew": "וּשְׁמַעְתֶּם אֶת־דְּבָרַי כִּי עַל־כֵּן עָלִיתִי עַל־חוֹמַת הָעִיר הַזֹּאת לְמַעַן תִּשְׁמְעוּ וְתֵדְעוּ אֶת־מִשְׁפְּטֵי אֱלֹהִים הָעֹמְדִים עֲלֵיכֶם בַּעֲוֺנֹתֵיכֶם וְגַם לְמַעַן תֵּדְעוּ אֶת־דֶּרֶךְ הַתְּשׁוּבָה׃",
+  "hebrew": "וּשְׁמַעְתֶּם אֶת־דְּבָרַי כִּי עַל־כֵּן עָלִיתִי עַל־חוֹמַת הָעִיר הַזֹּאת לְמַעַן תִּשְׁמְעוּ וְתֵדְעוּ אֶת־מִשְׁפְּטֵי אֱלֹהִים הָעֹמְדִים עֲלֵיכֶם בַּעֲוֹנֹתֵיכֶם וְגַם לְמַעַן תֵּדְעוּ אֶת־דֶּרֶךְ הַתְּשׁוּבָה׃",
   "english": "And ye shall hear my words, for, for this intent have I come up upon the walls of this city, that ye might hear and know of the judgments of God which do await you because of your iniquities, and also that ye might know the conditions of repentance;"
  },
  {
@@ -34205,7 +34205,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 14,
   "verse": 13,
-  "hebrew": "וְאִם־תַּאֲמִינוּ בִּשְׁמוֹ תָּשׁוּבוּ מִכָּל־חַטֹּאתֵיכֶם וּבָזֶהיְ כֻפְּרוּ לָכֶם בִּזְכוּתוֹ׃",
+  "hebrew": "וְאִם־תַּאֲמִינוּ בִּשְׁמוֹ תָּשׁוּבוּ מִכָּל־חַטֹּאתֵיכֶם וּבָזֶה כֻפְּרוּ לָכֶם בִּזְכוּתוֹ׃",
   "english": "And if ye believe on his name ye will repent of all your sins, that thereby ye may have a remission of them through his merits."
  },
  {
@@ -34324,7 +34324,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 14,
   "verse": 30,
-  "hebrew": "וְעַתָּה זִכְרוּ זִכְרוּ אַחַי כִּי כָל־הָאֹבֵד אֹבֵד לְנַפְשׁוֹ וְכָל־הָעֹשֶׂה עָוֺן עֹשֶׂה לְנַפְשׁוֹ כִּי הִנֵּה חָפְשִׁים אַתֶּם נִתַּן לָכֶם לִפְעֹל לְנַפְשְׁכֶם כִּי הִנֵּה נָתַן לָכֶם אֱלֹהִים דַּעַת וַיַּעַשְׂכֶם חָפְשִׁים׃",
+  "hebrew": "וְעַתָּה זִכְרוּ זִכְרוּ אַחַי כִּי כָל־הָאֹבֵד אֹבֵד לְנַפְשׁוֹ וְכָל־הָעֹשֶׂה עָוֹן עֹשֶׂה לְנַפְשׁוֹ כִּי הִנֵּה חָפְשִׁים אַתֶּם נִתַּן לָכֶם לִפְעֹל לְנַפְשְׁכֶם כִּי הִנֵּה נָתַן לָכֶם אֱלֹהִים דַּעַת וַיַּעַשְׂכֶם חָפְשִׁים׃",
   "english": "And now remember, remember, my brethren, that whosoever perisheth, perisheth unto him– self; and whosoever doeth iniquity, doeth it unto himself; for behold, ye are free; ye are permitted to act for yourselves; for behold, God hath given unto you a knowledge and he hath made you free."
  },
  {
@@ -34352,21 +34352,21 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 15,
   "verse": 3,
-  "hebrew": "הֵן אוֹי לָעָם הַזֶּה הַנִּקְרָא עַם נֶפִי אִם־לֹא יָשׁוּבוּ בִּרְאוֹתָם אֶת־כָּל־הָאֹתוֹת וְהַמּוֹפְתִים אֲשֶׁר יֵרָאוּ לָהֶם כִּי הִנֵּה הָיוּ עַם בְּחִיר יְהוָה הֵן אָהַב אֶת־עַם נֶפִי וְגַם יִסְּרָם הֵן בִּימֵי עֲוֺנוֹתֵיהֶם יִסְּרָם כִּי אֲהֵבָם׃",
+  "hebrew": "הֵן אוֹי לָעָם הַזֶּה הַנִּקְרָא עַם נֶפִי אִם־לֹא יָשׁוּבוּ בִּרְאוֹתָם אֶת־כָּל־הָאֹתוֹת וְהַמּוֹפְתִים אֲשֶׁר יֵרָאוּ לָהֶם כִּי הִנֵּה הָיוּ עַם בְּחִיר יְהוָה הֵן אָהַב אֶת־עַם נֶפִי וְגַם יִסְּרָם הֵן בִּימֵי עֲוֹנוֹתֵיהֶם יִסְּרָם כִּי אֲהֵבָם׃",
   "english": "Yea, wo unto this people who are called the people of Nephi except they shall repent, when they shall see all these signs and wonders which shall be showed unto them; for behold, they have been a chosen people of the Lord; yea, the people of Nephi hath he loved, and also hath he chastened them; yea, in the days of their iniquities hath he chastened them because he loveth them."
  },
  {
   "book": "Helaman",
   "chapter": 15,
   "verse": 4,
-  "hebrew": "אַךְ רְאוּ אַחַי אֶת־הַלָּמָנִים שָׂנֵא כִּי רָעִים מַעֲשֵׂיהֶם תָּמִיד וְזֹאת בַּעֲוֺן מָסֹרֶת אֲבוֹתֵיהֶם אַךְ הִנֵּה בָּאָה לָהֶם יְשׁוּעָה בִּקְרִיאַת הַנְּפִיִּים  וְעַל־כֵּן הֶאֱרִיךְ יְהוָה אֶת־יְמֵיהֶם׃",
+  "hebrew": "אַךְ רְאוּ אַחַי אֶת־הַלָּמָנִים שָׂנֵא כִּי רָעִים מַעֲשֵׂיהֶם תָּמִיד וְזֹאת בַּעֲוֹן מָסֹרֶת אֲבוֹתֵיהֶם אַךְ הִנֵּה בָּאָה לָהֶם יְשׁוּעָה בִּקְרִיאַת הַנְּפִיִּים  וְעַל־כֵּן הֶאֱרִיךְ יְהוָה אֶת־יְמֵיהֶם׃",
   "english": "But behold my brethren, the Lamanites hath he hated because their deeds have been evil continually, and this because of the iniquity of the tradition of their fathers. But behold, salvation hath come unto them through the preaching of the Nephites; and for this intent hath the Lord prolonged their days."
  },
  {
   "book": "Helaman",
   "chapter": 15,
   "verse": 5,
-  "hebrew": "וְרוֹצֶה אֲנִי כִּי תִרְאוּ אֲשֶׁר רֻבָּם בְּדֶרֶךְ יָשָׁר וְהוֹלְכִים הֵם בְּתֹם לִפְנֵי אֱלֹהִים וְשׁוֹמְרִים לַעֲשׂוֹת אֶת־מִצְוֺתָיו וְחֻקּוֹתָיו וּמִשְׁפָּטָיו כְּפִי תּוֹרַת מֹשֶׁה׃",
+  "hebrew": "וְרוֹצֶה אֲנִי כִּי תִרְאוּ אֲשֶׁר רֻבָּם בְּדֶרֶךְ יָשָׁר וְהוֹלְכִים הֵם בְּתֹם לִפְנֵי אֱלֹהִים וְשׁוֹמְרִים לַעֲשׂוֹת אֶת־מִצְוֹתָיו וְחֻקּוֹתָיו וּמִשְׁפָּטָיו כְּפִי תּוֹרַת מֹשֶׁה׃",
   "english": "And I would that ye should behold that the more part of them are in the path of their duty, and they do walk circumspectly before God, and they do observe to keep his command– ments and his statutes and his judgments according to the law of Moses."
  },
  {
@@ -34401,7 +34401,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 15,
   "verse": 10,
-  "hebrew": "וְעַתָּה בַּעֲבוּר חָזְקָם בְּהַאֲמִינָם בַּדָּבָר אֲשֶׁר יַאֲמִינוּ וּבַעֲבוּר אֹמֶץ לִבָּם בְּהֵאוֹרָם הִנֵּה יְבָרְכֵם יְהוָה וְיַאֲרִיךְ אֶת־יְמֵיהֶם עַל־אַף עֲוֺנָם׃",
+  "hebrew": "וְעַתָּה בַּעֲבוּר חָזְקָם בְּהַאֲמִינָם בַּדָּבָר אֲשֶׁר יַאֲמִינוּ וּבַעֲבוּר אֹמֶץ לִבָּם בְּהֵאוֹרָם הִנֵּה יְבָרְכֵם יְהוָה וְיַאֲרִיךְ אֶת־יְמֵיהֶם עַל־אַף עֲוֹנָם׃",
   "english": "And now, because of their steadfastness when they do believe in that thing which they do believe, for because of their firmness when they are once enlightened, behold, the Lord shall bless them and prolong their days, notwithstanding their iniquity—"
  },
  {
@@ -34506,7 +34506,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 16,
   "verse": 8,
-  "hebrew": "וְהִנֵּה לֹא נִשְׁמַע עוֹד עָלָיו בֵּין הַנְּפִיאִים וְכָכָה הָיוּ דִּבְרֵי הָעָם׃",
+  "hebrew": "וְהִנֵּה לֹא נִשְׁמַע עוֹד עָלָיו בֵּין הַנֶּפִיִּים וְכָכָה הָיוּ דִּבְרֵי הָעָם׃",
   "english": "And behold, he was never heard of more among the Nephites; and thus were the affairs of the people."
  },
  {
@@ -34534,7 +34534,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 16,
   "verse": 12,
-  "hebrew": "וְלֹא הָיְתָה תְּמוּרָה גְּדוֹלָה בְּדִבְרֵי הָעָם זוּלַת כִּי הֵחֵל הָעָם לְהַקְשׁוֹת יוֹתֵר בְּעָוֺן וְלַעֲשׂוֹת יוֹתֵר וָיוֹתֵר אֵת אֲשֶׁר נֶגֶד מִצְוֺת אֱלֹהִים בִּשְׁנַת תֵּשַׁע וּשְׁמוֹנִים לְמֶמְשֶׁלֶת הַשֹּׁפְטִים׃",
+  "hebrew": "וְלֹא הָיְתָה תְּמוּרָה גְּדוֹלָה בְּדִבְרֵי הָעָם זוּלַת כִּי הֵחֵל הָעָם לְהַקְשׁוֹת יוֹתֵר בְּעָוֹן וְלַעֲשׂוֹת יוֹתֵר וָיוֹתֵר אֶת־אֲשֶׁר נֶגֶד מִצְוֹת אֱלֹהִים בִּשְׁנַת תֵּשַׁע וּשְׁמוֹנִים לְמֶמְשֶׁלֶת הַשֹּׁפְטִים׃",
   "english": "And there was but little alteration in the affairs of the people, save it were the people began to be more hardened in iniquity, and do more and more of that which was contrary to the commandments of God, in the eighty and ninth year of the reign of the judges."
  },
  {
@@ -34555,7 +34555,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 16,
   "verse": 15,
-  "hebrew": "וְאַף־עַל־פִּי־כֵן הֵחֵל הָעָם לְהַקְשׁוֹת אֶת־לִבָּם כֻּלָּם זוּלַת הַחֵלֶק הַמַּאֲמִין בֵּיוֹתֵר בֵּין הַנְּפִיאִים וְגַם בֵּין הַלְמָנִים וַיָּחֵלּוּ לְהִשָּׁעֵן עַל־כֹּחָם וְעַל־חָכְמָתָם לֵאמֹר׃",
+  "hebrew": "וְאַף־עַל־פִּי־כֵן הֵחֵל הָעָם לְהַקְשׁוֹת אֶת־לִבָּם כֻּלָּם זוּלַת הַחֵלֶק הַמַּאֲמִין בֵּיוֹתֵר בֵּין הַנֶּפִיִּים וְגַם בֵּין הַלָּמָנִים וַיָּחֵלּוּ לְהִשָּׁעֵן עַל־כֹּחָם וְעַל־חָכְמָתָם לֵאמֹר׃",
   "english": "Nevertheless, the people began to harden their hearts, all save it were the most believing part of them, both of the Nephites and also of the Lamanites, and began to depend upon their own strength and upon their own wisdom, saying:"
  },
  {
@@ -34604,7 +34604,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 16,
   "verse": 22,
-  "hebrew": "וְעוֹד דְּבָרִים רַבִּים חָשַׁב הָעָם בְּלִבָּם אֲשֶׁר הָיוּ אִוֶּלֶת וָשָׁוְא וַיִּטָּרְפוּ מְאֹד כִּי הַשָּׂטָן הֵסִיתָם לַעֲשׂוֹת עָוֺן תָּמִיד הֵן הָלַךְ מַפִּיץ שְׁמוּעוֹת וּמְרִיבוֹת עַל־כָּל־פְּנֵי הָאָרֶץ לְמַעַן יַקְשֶׁה אֶת־לְבַב הָעָם נֶגֶד הַטּוֹב וְנֶגֶד אֲשֶׁר עָתִיד לָבוֹא׃",
+  "hebrew": "וְעוֹד דְּבָרִים רַבִּים חָשַׁב הָעָם בְּלִבָּם אֲשֶׁר הָיוּ אִוֶּלֶת וָשָׁוְא וַיִּטָּרְפוּ מְאֹד כִּי הַשָּׂטָן הֵסִיתָם לַעֲשׂוֹת עָוֹן תָּמִיד הֵן הָלַךְ מַפִּיץ שְׁמוּעוֹת וּמְרִיבוֹת עַל־כָּל־פְּנֵי הָאָרֶץ לְמַעַן יַקְשֶׁה אֶת־לְבַב הָעָם נֶגֶד הַטּוֹב וְנֶגֶד אֲשֶׁר עָתִיד לָבוֹא׃",
   "english": "And many more things did the people imagine up in their hearts, which were foolish and vain; and they were much disturbed, for Satan did stir them up to do iniquity continually; yea, he did go about spreading rumors and contentions upon all the face of the land, that he might harden the hearts of the people against that which was good and against that which should come."
  },
  {
@@ -34622,6 +34622,13 @@ window._officialVersesData = [
   "english": "And thus ended the ninetieth year of the reign of the judges over the people of Nephi."
  },
  {
+  "book": "Helaman",
+  "chapter": 16,
+  "verse": 25,
+  "hebrew": "וַיִּתַּם סֵפֶר הֵילָמָן כְּפִי דִּבְרֵי יְמֵי הֵילָמָן וּבָנָיו׃",
+  "english": "And thus ended the book of Helaman, according to the record of Helaman and his sons."
+ },
+ {
   "book": "3 Nephi",
   "chapter": 1,
   "verse": 1,
@@ -34632,7 +34639,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 1,
   "verse": 2,
-  "hebrew": "וְנֶפִי בֶן־הֶלָמָן יָצָא מֵאֶרֶץ זָרַחֶמְלָה וַיִּפְקֹד אֶת־בְּנוֹ נֶפִי בְּכוֹרוֹ עַל־לוּחוֹת הַנְּחֹשֶׁת וְכָל־הַסְּפָרִים אֲשֶׁר נִשְׁמְרוּ וְכָל־הַדְּבָרִים אֲשֶׁר נִשְׁמְרוּ קְדוֹשִׁים מִצֵּאת לֶחִי מִירוּשָׁלָיִם׃",
+  "hebrew": "וְנֶפִי בֶן־הֵילָמָן יָצָא מֵאֶרֶץ זָרַחֶמְלָה וַיִּפְקֹד אֶת־בְּנוֹ נֶפִי בְּכוֹרוֹ עַל־לוּחוֹת הַנְּחֹשֶׁת וְכָל־הַסְּפָרִים אֲשֶׁר נִשְׁמְרוּ וְכָל־הַדְּבָרִים אֲשֶׁר נִשְׁמְרוּ קְדוֹשִׁים מִצֵּאת לֶחִי מִירוּשָׁלָיִם׃",
   "english": "And Nephi, the son of Helaman, had departed out of the land of Zarahemla, giving charge unto his son Nephi, who was his eldest son, concerning the plates of brass, and all the records which had been kept, and all those things which had been kept sacred from the departure of Lehi out of Jerusalem."
  },
  {
@@ -34744,7 +34751,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 1,
   "verse": 18,
-  "hebrew": "כִּי יָדְעוּ כִּי הַנְּבִיאִים הֵעִידוּ עַל־הַדְּבָרִים הָאֵלֶּה שָׁנִים רַבּוֹת וְכִי הָאוֹת אֲשֶׁר נִתַּן כְּבָר הִגִּיעַ וַיָּחֵלּוּ לִירֹא בַּעֲוֺנָם וּבְכָפְרָם׃",
+  "hebrew": "כִּי יָדְעוּ כִּי הַנְּבִיאִים הֵעִידוּ עַל־הַדְּבָרִים הָאֵלֶּה שָׁנִים רַבּוֹת וְכִי הָאוֹת אֲשֶׁר נִתַּן כְּבָר הִגִּיעַ וַיָּחֵלּוּ לִירֹא בַּעֲוֹנָם וּבְכָפְרָם׃",
   "english": "For they knew that the prophets had testified of these things for many years, and that the sign which had been given was already at hand; and they began to fear because of their iniquity and their unbelief."
  },
  {
@@ -34779,7 +34786,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 1,
   "verse": 23,
-  "hebrew": "וַיֵּצֵא נֶפִי בָּעָם וְגַם רַבִּים אֲחֵרִים מַטְבִּילִים לִתְשׁוּבָה וּבָזֶה נִסְלְחוּ עֲוֺנוֹת רַבִּים וַיָּחֵל הָעָם שֵׁנִית לִהְיוֹת שָׁלוֹם בָּאָרֶץ׃",
+  "hebrew": "וַיֵּצֵא נֶפִי בָּעָם וְגַם רַבִּים אֲחֵרִים מַטְבִּילִים לִתְשׁוּבָה וּבָזֶה נִסְלְחוּ עֲוֹנוֹת רַבִּים וַיָּחֵל הָעָם שֵׁנִית לִהְיוֹת שָׁלוֹם בָּאָרֶץ׃",
   "english": "And it came to pass that Nephi went forth among the people, and also many others, baptizing unto repentance, in the which there was a great remission of sins. And thus the people began again to have peace in the land."
  },
  {
@@ -34807,7 +34814,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 1,
   "verse": 27,
-  "hebrew": "וַתַּעֲבֹר גַּם שְׁנַת שָׁלֹשׁ וְתִשְׁעִים בְּשָׁלוֹם זוּלַת שׁוֹדְדֵי גְדִיאַנְטוֹן אֲשֶׁר יָשְׁבוּ בֶּהָרִים אֲשֶׁר הִשְׁחִיתוּ אֶת־הָאָרֶץ כִּי חֲזָקִים הָיוּ מִבְצְרֵיהֶם וּמְקוֹמוֹת סִתְרָם עַד כִּי לֹא יָכְלוּ הָעָם לְהִתְגַּבֵּר עֲלֵיהֶם לָכֵן רָצְחוּ רְצִיחוֹת רַבּוֹת וַיַּעֲשׂוּ טֶבַח רַב בָּעָם׃",
+  "hebrew": "וַתַּעֲבֹר גַּם שְׁנַת שָׁלֹשׁ וְתִשְׁעִים בְּשָׁלוֹם זוּלַת שׁוֹדְדֵי גָּדִיאַנְטוֹן אֲשֶׁר יָשְׁבוּ בֶּהָרִים אֲשֶׁר הִשְׁחִיתוּ אֶת־הָאָרֶץ כִּי חֲזָקִים הָיוּ מִבְצְרֵיהֶם וּמְקוֹמוֹת סִתְרָם עַד כִּי לֹא יָכְלוּ הָעָם לְהִתְגַּבֵּר עֲלֵיהֶם לָכֵן רָצְחוּ רְצִיחוֹת רַבּוֹת וַיַּעֲשׂוּ טֶבַח רַב בָּעָם׃",
   "english": "And it came to pass that the ninety and third year did also pass away in peace, save it were for the Gadianton robbers, who dwelt upon the mountains, who did infest the land; for so strong were their holds and their secret places that the people could not overpower them; therefore they did commit many murders, and did do much slaughter among the people."
  },
  {
@@ -34821,7 +34828,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 1,
   "verse": 29,
-  "hebrew": "וַתְּהִי גַם־סִבַּת עֶצֶב רַב בֵּין הַלָּמָנִים כִּי הִנֵּה הָיוּ לָהֶם בָּנִים רַבִּים אֲשֶׁר גָּדְלוּ וַיָּחֵלּוּ לִהְיוֹת חֲזָקִים בַּשָּׁנִים וַיִּהְיוּ לְעַצְמָם וַיֻּדְּחוּ בִּידֵי מִקְצָת זוֹרָמִים בְּכִחֲשֵׁיהֶם וּבְדִבְרֵי חֲלָקוֹת לְהִתְחַבֵּר אֶל־שׁוֹדְדֵי גְדִיאַנְטוֹן׃",
+  "hebrew": "וַתְּהִי גַם־סִבַּת עֶצֶב רַב בֵּין הַלָּמָנִים כִּי הִנֵּה הָיוּ לָהֶם בָּנִים רַבִּים אֲשֶׁר גָּדְלוּ וַיָּחֵלּוּ לִהְיוֹת חֲזָקִים בַּשָּׁנִים וַיִּהְיוּ לְעַצְמָם וַיֻּדְּחוּ בִּידֵי מִקְצָת זוֹרָמִים בְּכִחֲשֵׁיהֶם וּבְדִבְרֵי חֲלָקוֹת לְהִתְחַבֵּר אֶל־שׁוֹדְדֵי גָּדִיאַנְטוֹן׃",
   "english": "And there was also a cause of much sorrow among the Lamanites; for behold, they had many children who did grow up and began to wax strong in years, that they became for themselves, and were led away by some who were Zoramites, by their lyings and their flattering words, to join those Gadianton robbers."
  },
  {
@@ -34863,7 +34870,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 2,
   "verse": 5,
-  "hebrew": "וְגַם מֵאָה שָׁנָה עָבְרוּ מִימֵי מוֹשִׁיָּה אֲשֶׁר מָלַךְ עַל־עַם הַנֶפִים׃",
+  "hebrew": "וְגַם מֵאָה שָׁנָה עָבְרוּ מִימֵי מוֹשִׁיָּה אֲשֶׁר מָלַךְ עַל־עַם הַנֶּפִיִּים׃",
   "english": "And also an hundred years had passed away since the days of Mosiah, who was king over the people of the Nephites."
  },
  {
@@ -34898,21 +34905,21 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 2,
   "verse": 10,
-  "hebrew": "וַיִּשָּׁאֵר הָעָם בְּרִשְׁעָתָם עַל־אַף הַטָּפָה וּנְבוּאָה רַבָּה אֲשֶׁר נִשְׁלְחָה בֵּינֵיהֶם וַתַּעֲבֹר כֵּן גַּם הַשָּׁנָה הָעֲשִׂירִית וְגַם הַשָּׁנָה הָאַחַת עֶשְׂרֵה עָבְרָה בְּעָוֺן׃",
+  "hebrew": "וַיִּשָּׁאֵר הָעָם בְּרִשְׁעָתָם עַל־אַף הַטָּפָה וּנְבוּאָה רַבָּה אֲשֶׁר נִשְׁלְחָה בֵּינֵיהֶם וַתַּעֲבֹר כֵּן גַּם הַשָּׁנָה הָעֲשִׂירִית וְגַם הַשָּׁנָה הָאַחַת עֶשְׂרֵה עָבְרָה בְּעָוֹן׃",
   "english": "And it came to pass that the people did still remain in wickedness, notwithstanding the much preaching and prophesying which was sent among them; and thus passed away the tenth year also; and the eleventh year also passed away in iniquity."
  },
  {
   "book": "3 Nephi",
   "chapter": 2,
   "verse": 11,
-  "hebrew": "וַיְהִי בַּשָּׁנָה הַשְּׁלֹשׁ עֶשְׂרֵה וַתָּחֵלְנָה מִלְחָמוֹת וּמְרִיבוֹת בְּכָל־הָאָרֶץ כִּי רַבּוּ שׁוֹדְדֵי גְדִיאַנְטוֹן מְאֹד וַיַּהַרְגוּ רַבִּים מִן־הָעָם וַיַּחֲרִיבוּ עָרִים רַבּוֹת וַיָּפִיצוּ מָוֶת וְהֶרֶג רַב בָּאָרֶץ עַד כִּי הָיָה נָחוּץ לְכָל־הָעָם גַּם הַנְּפִיִּים גַּם הַלָּמָנִים לָשֵׂאת נֶשֶׁק נֶגְדָּם׃",
+  "hebrew": "וַיְהִי בַּשָּׁנָה הַשְּׁלֹשׁ עֶשְׂרֵה וַתָּחֵלְנָה מִלְחָמוֹת וּמְרִיבוֹת בְּכָל־הָאָרֶץ כִּי רַבּוּ שׁוֹדְדֵי גָּדִיאַנְטוֹן מְאֹד וַיַּהַרְגוּ רַבִּים מִן־הָעָם וַיַּחֲרִיבוּ עָרִים רַבּוֹת וַיָּפִיצוּ מָוֶת וְהֶרֶג רַב בָּאָרֶץ עַד כִּי הָיָה נָחוּץ לְכָל־הָעָם גַּם הַנְּפִיִּים גַּם הַלָּמָנִים לָשֵׂאת נֶשֶׁק נֶגְדָּם׃",
   "english": "And it came to pass in the thirteenth year there began to be wars and contentions throughout all the land; for the Gadianton robbers had become so numerous, and did slay so many of the people, and did lay waste so many cities, and did spread so much death and carnage throughout the land, that it became  expedient that all the people, both the Nephites and the Lamanites, should take up arms against them."
  },
  {
   "book": "3 Nephi",
   "chapter": 2,
   "verse": 12,
-  "hebrew": "לָכֵן כָּל־הַלָּמָנִים אֲשֶׁר שָׁבוּ אֶל־יְהוָה הִתְאַחֲדוּ עִם־אֲחֵיהֶם הַנְּפִיִּים  וַיֵּאָלְצוּ לְמַעַן הַצָּלַת חַיֵּיהֶם וּנְשֵׁיהֶם וְטַפָּם לָשֵׂאת נֶשֶׁק נֶגֶד שׁוֹדְדֵי גְדִיאַנְטוֹן הֵן וְגַם לִשְׁמֹר אֶת־מִשְׁפְּטֵיהֶם וְזְכֻיּוֹת עֲדָתָם וַעֲבוֹדָתָם וְחֵרוּתָם וְחָפְשָׁתָם׃",
+  "hebrew": "לָכֵן כָּל־הַלָּמָנִים אֲשֶׁר שָׁבוּ אֶל־יְהוָה הִתְאַחֲדוּ עִם־אֲחֵיהֶם הַנְּפִיִּים  וַיֵּאָלְצוּ לְמַעַן הַצָּלַת חַיֵּיהֶם וּנְשֵׁיהֶם וְטַפָּם לָשֵׂאת נֶשֶׁק נֶגֶד שׁוֹדְדֵי גָּדִיאַנְטוֹן הֵן וְגַם לִשְׁמֹר אֶת־מִשְׁפְּטֵיהֶם וּזְכֻיּוֹת עֲדָתָם וַעֲבוֹדָתָם וְחֵרוּתָם וְחָפְשָׁתָם׃",
   "english": "Therefore, all the Lamanites who had become converted unto the Lord did unite with their brethren, the Nephites, and were compelled, for the safety of their lives and their women and their children, to take up arms against those Gadianton robbers, yea, and also to maintain their rights, and the privileges of their church and of their worship, and their freedom and their liberty."
  },
  {
@@ -34926,21 +34933,21 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 2,
   "verse": 14,
-  "hebrew": "וַיִּמָּנוּ הַלָּמָנִים הָהֵם אֲשֶׁר הִתְאַחֲדוּ עִם־הַנְּפִיִּים בֵּין הַנֶפִים׃",
+  "hebrew": "וַיִּמָּנוּ הַלָּמָנִים הָהֵם אֲשֶׁר הִתְאַחֲדוּ עִם־הַנְּפִיִּים בֵּין הַנֶּפִיִּים׃",
   "english": "And it came to pass that those Lamanites who had united with the Nephites were numbered among the Nephites;"
  },
  {
   "book": "3 Nephi",
   "chapter": 2,
   "verse": 15,
-  "hebrew": "וַתּוּסַר קִלְלָתָם מֵעֲלֵיהֶם וַיְהִי עוֹרָם לָבָן כְּעוֹר הַנֶפִים׃",
+  "hebrew": "וַתּוּסַר קִלְלָתָם מֵעֲלֵיהֶם וַיְהִי עוֹרָם לָבָן כְּעוֹר הַנֶּפִיִּים׃",
   "english": "And their curse was taken from them, and their skin became white like unto the Nephites;"
  },
  {
   "book": "3 Nephi",
   "chapter": 2,
   "verse": 16,
-  "hebrew": "וַיִּהְיוּ בַחוּרֵיהֶם וּבְנוֹתֵיהֶם יָפִים מְאֹד וַיִּמָּנוּ בֵּין הַנְּפִיִּים וַיִּקָּרְאוּ נֶפִים וְכֵן תָּמָּה הַשָּׁנָה הַשְּׁלֹשׁ עֶשְׂרֵה׃",
+  "hebrew": "וַיִּהְיוּ בַחוּרֵיהֶם וּבְנוֹתֵיהֶם יָפִים מְאֹד וַיִּמָּנוּ בֵּין הַנְּפִיִּים וַיִּקָּרְאוּ נְפִיִּים וְכֵן תָּמָּה הַשָּׁנָה הַשְּׁלֹשׁ עֶשְׂרֵה׃",
   "english": "And their young men and their daughters became exceedingly fair, and they were numbered among the Nephites, and were called Nephites. And thus ended the thirteenth year."
  },
  {
@@ -34954,14 +34961,14 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 2,
   "verse": 18,
-  "hebrew": "וְכֵן תָּמָּה הַשָּׁנָה הָאַרְבַּע עֶשְׂרֵה וּבַשָּׁנָה הַחֲמֵשׁ עֶשְׂרֵה יָצְאוּ נֶגֶד עַם נֶפִי וּבִגְלַל רִשְׁעַת עַם נֶפִי וּמְרִיבוֹתֵיהֶם וּפִלּוּגֵיהֶם הָרַבִּים הָיְתָה לְשׁוֹדְדֵי גְדִיאַנְטוֹן יָד חֲזָקָה עֲלֵיהֶם׃",
+  "hebrew": "וְכֵן תָּמָּה הַשָּׁנָה הָאַרְבַּע עֶשְׂרֵה וּבַשָּׁנָה הַחֲמֵשׁ עֶשְׂרֵה יָצְאוּ נֶגֶד עַם נֶפִי וּבִגְלַל רִשְׁעַת עַם נֶפִי וּמְרִיבוֹתֵיהֶם וּפִלּוּגֵיהֶם הָרַבִּים הָיְתָה לְשׁוֹדְדֵי גָּדִיאַנְטוֹן יָד חֲזָקָה עֲלֵיהֶם׃",
   "english": "And thus ended the fourteenth year. And in the fifteenth year they did come forth against the people of Nephi; and because of the wickedness of the people of Nephi, and their many contentions and dissensions, the Gadianton robbers did gain many advantages over them."
  },
  {
   "book": "3 Nephi",
   "chapter": 2,
   "verse": 19,
-  "hebrew": "וְכֵן תָּמָּה הַשָּׁנָה הַחֲמֵשׁ עֶשְׂרֵה וְכֵן הָיוּ הָעָם בְּעֵת צָרוֹת רַבּוֹת וְחֶרֶב הַשְׁחָתָה תְּלוּיָה מֵעֲלֵיהֶם עַד כִּי נָכוֹנוּ לִנְפֹּל בָּהּ וְזֹאת בַּעֲבוּר עֲוֺנָם׃",
+  "hebrew": "וְכֵן תָּמָּה הַשָּׁנָה הַחֲמֵשׁ עֶשְׂרֵה וְכֵן הָיוּ הָעָם בְּעֵת צָרוֹת רַבּוֹת וְחֶרֶב הַשְׁחָתָה תְּלוּיָה מֵעֲלֵיהֶם עַד כִּי נָכוֹנוּ לִנְפֹּל בָּהּ וְזֹאת בַּעֲבוּר עֲוֹנָם׃",
   "english": "And thus ended the fifteenth year, and thus were the people in a state of many afflictions; and the sword of destruction did hang over them, insomuch that they were about to be smitten down by it, and this because of their iniquity."
  },
  {
@@ -35024,7 +35031,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 3,
   "verse": 9,
-  "hebrew": "וְהִנֵּה אֲנִי גִּדְיָנְהִי וַאֲנִי מוֹשֵׁל הַחֶבְרָה הַסּוֹדִית הַזֹּאת אֲשֶׁר לִגְדִיאַנְטוֹן אֲשֶׁר הַחֶבְרָה וּמַעֲשֶׂיהָ יוֹדֵעַ אֲנִי כִּי טוֹבִים הֵם וּמִימֵי קֶדֶם הֵם וְהָעָבְרוּ אֵלֵינוּ׃",
+  "hebrew": "וְהִנֵּה אֲנִי גִּדְיָנְהִי וַאֲנִי מוֹשֵׁל הַחֶבְרָה הַסּוֹדִית הַזֹּאת אֲשֶׁר לִגָּדִיאַנְטוֹן אֲשֶׁר הַחֶבְרָה וּמַעֲשֶׂיהָ יוֹדֵעַ אֲנִי כִּי טוֹבִים הֵם וּמִימֵי קֶדֶם הֵם וְהָעָבְרוּ אֵלֵינוּ׃",
   "english": "And behold, I am Giddianhi; and I am the governor of this the secret society of Gadi– anton; which society and the works thereof I know to be good; and they are of ancient date and they have been handed down unto us."
  },
  {
@@ -35066,14 +35073,14 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 3,
   "verse": 15,
-  "hebrew": "הֵן אָמַר אֲלֵיהֶם חַי־יְהוָה אִם־לֹא תָשׁוּבוּ מִכָּל־עֲוֺנוֹתֵיכֶם וְתִזְעֲקוּ אֶל־יְהוָה לֹא תִנָּצְלוּ כְּלָל מִידֵי שׁוֹדְדֵי גְדִיאַנְטוֹן הָאֵלֶּה׃",
+  "hebrew": "הֵן אָמַר אֲלֵיהֶם חַי־יְהוָה אִם־לֹא תָשׁוּבוּ מִכָּל־עֲוֹנוֹתֵיכֶם וְתִזְעֲקוּ אֶל־יְהוָה לֹא תִנָּצְלוּ כְּלָל מִידֵי שׁוֹדְדֵי גָּדִיאַנְטוֹן הָאֵלֶּה׃",
   "english": "Yea, he said unto them: As the Lord liveth, except ye repent of all your iniquities, and cry unto the Lord, ye will in no wise be delivered out of the hands of those Gadianton robbers."
  },
  {
   "book": "3 Nephi",
   "chapter": 3,
   "verse": 16,
-  "hebrew": "וְגְדוֹלִים וְנִפְלָאִים הָיוּ דִּבְרֵי לָכוֹנֵאוּס וּנְבוּאוֹתָיו עַד כִּי הֵבִיאוּ יִרְאָה עַל־כָּל־הָעָם וַיִּתְאַמְּצוּ בְּכָל־כֹּחָם לַעֲשׂוֹת כְּדִבְרֵי לָכוֹנֵאוּס׃",
+  "hebrew": "וּגְדוֹלִים וְנִפְלָאִים הָיוּ דִּבְרֵי לָכוֹנֵאוּס וּנְבוּאוֹתָיו עַד כִּי הֵבִיאוּ יִרְאָה עַל־כָּל־הָעָם וַיִּתְאַמְּצוּ בְּכָל־כֹּחָם לַעֲשׂוֹת כְּדִבְרֵי לָכוֹנֵאוּס׃",
   "english": "And so great and marvelous were the words and prophecies of Lachoneus that they did cause fear to come upon all the people; and they did exert themselves in their might to do according to the words of Lachoneus."
  },
  {
@@ -35129,7 +35136,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 3,
   "verse": 24,
-  "hebrew": "וַיְהִי רִבְבוֹת רַבּוֹת מִן־הָעָם הַנִּקְרָאִים נֶפִים אֲשֶׁר הִתְקַבְּצוּ בָּאָרֶץ הַזֹּאת וַיְצַו לָכוֹנֵאוּס כִּי יִתְקַבְּצוּ בָּאָרֶץ דָּרוֹמָה בִּגְלַל הַקְּלָלָה הַגְּדוֹלָה אֲשֶׁר עַל־הָאָרֶץ צָפוֹנָה׃",
+  "hebrew": "וַיְהִי רִבְבוֹת רַבּוֹת מִן־הָעָם הַנִּקְרָאִים נְפִיִּים אֲשֶׁר הִתְקַבְּצוּ בָּאָרֶץ הַזֹּאת וַיְצַו לָכוֹנֵאוּס כִּי יִתְקַבְּצוּ בָּאָרֶץ דָּרוֹמָה בִּגְלַל הַקְּלָלָה הַגְּדוֹלָה אֲשֶׁר עַל־הָאָרֶץ צָפוֹנָה׃",
   "english": "And there were a great many thousand people who were called Nephites, who did gather themselves together in this land. Now Lachoneus did cause that they should gather themselves together in the land southward, because of the great curse which was upon the land northward."
  },
  {
@@ -35185,7 +35192,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 4,
   "verse": 6,
-  "hebrew": "וְלֹא הֵעֵזּוּ לְהִתְפַּשֵּׁט עַל־פְּנֵי הָאָרֶץ לִזְרֹעַ דָּגָן פֶּן יָבוֹאוּ עֲלֵיהֶם הַנְּפִיִּים וַיַּהַרְגוּם לָכֵן צִוָּה גִּדְיָנְהִי אֶת־צְבָאוֹתָיו כִּי בַּשָּׁנָה הַזֹּאת יַעֲלוּ לַמִּלְחָמָה נֶגֶד הַנֶפִים׃",
+  "hebrew": "וְלֹא הֵעֵזּוּ לְהִתְפַּשֵּׁט עַל־פְּנֵי הָאָרֶץ לִזְרֹעַ דָּגָן פֶּן יָבוֹאוּ עֲלֵיהֶם הַנְּפִיִּים וַיַּהַרְגוּם לָכֵן צִוָּה גִּדְיָנְהִי אֶת־צְבָאוֹתָיו כִּי בַּשָּׁנָה הַזֹּאת יַעֲלוּ לַמִּלְחָמָה נֶגֶד הַנֶּפִיִּים׃",
   "english": "And they durst not spread themselves upon the face of the land insomuch that they could raise grain, lest the Nephites should come upon them and slay them; therefore Giddianhi gave commandment unto his armies that in this year they should go up to battle against the Nephites."
  },
  {
@@ -35332,7 +35339,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 4,
   "verse": 27,
-  "hebrew": "וַיִּהְיוּ אֲלָפִים רַבִּים אֲשֶׁר נָתְנוּ עַצְמָם לַשֶּׁבִי לַנֶפִים וְהַנּוֹתָרִים הוּמְתוּ׃",
+  "hebrew": "וַיִּהְיוּ אֲלָפִים רַבִּים אֲשֶׁר נָתְנוּ עַצְמָם לַשֶּׁבִי לַנְּפִיִּים וְהַנּוֹתָרִים הוּמְתוּ׃",
   "english": "And there were many thousands who did yield themselves up prisoners unto the Nephites, and the remainder of them were slain."
  },
  {
@@ -35416,7 +35423,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 5,
   "verse": 6,
-  "hebrew": "וְכֵן שָׂמוּ קֵץ לְכָל־הַקְּשָׁרִים הָרְשָׁעִים וְהַסּוֹדִיִּים וְהַנִּתְעָבִים אֲשֶׁר בָּהֶם הָיָה רֶשַׁע רַב וְרְצִיחוֹת רַבּוֹת׃",
+  "hebrew": "וְכֵן שָׂמוּ קֵץ לְכָל־הַקְּשָׁרִים הָרְשָׁעִים וְהַסּוֹדִיִּים וְהַנִּתְעָבִים אֲשֶׁר בָּהֶם הָיָה רֶשַׁע רַב וּרְצִיחוֹת רַבּוֹת׃",
   "english": "And thus they did put an end to all those wicked, and secret, and abominable combi– nations, in the which there was so much wickedness, and so many murders committed."
  },
  {
@@ -35430,7 +35437,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 5,
   "verse": 8,
-  "hebrew": "וְדְבָרִים רַבִּים קָרוּ אֲשֶׁר בְּעֵינֵי חֶלְקָם הָיוּ גְּדוֹלִים וְנִפְלָאִים וְאַף־עַל־פִּי־כֵן לֹא יוּכְלוּ כֻּלָּם לְהִכָּתֵב בַּסֵּפֶר הַזֶּה הֵן הַסֵּפֶר הַזֶּה לֹא יָכִיל אֲפִילוּ חֵלֶק מֵאָה מֵאֲשֶׁר נַעֲשָׂה בֵּין עַם רַב כָּזֶה בְּעֶשְׂרִים וְחָמֵשׁ שָׁנִים׃",
+  "hebrew": "וּדְבָרִים רַבִּים קָרוּ אֲשֶׁר בְּעֵינֵי חֶלְקָם הָיוּ גְּדוֹלִים וְנִפְלָאִים וְאַף־עַל־פִּי־כֵן לֹא יוּכְלוּ כֻּלָּם לְהִכָּתֵב בַּסֵּפֶר הַזֶּה הֵן הַסֵּפֶר הַזֶּה לֹא יָכִיל אֲפִילוּ חֵלֶק מֵאָה מֵאֲשֶׁר נַעֲשָׂה בֵּין עַם רַב כָּזֶה בְּעֶשְׂרִים וְחָמֵשׁ שָׁנִים׃",
   "english": "And there had many things transpired which, in the eyes of some, would be great and marvelous; nevertheless, they cannot all be written in this book; yea, this book cannot contain even a hundredth part of what was done among so many people in the space of twenty and five years;"
  },
  {
@@ -35528,7 +35535,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 5,
   "verse": 22,
-  "hebrew": "וּבַעֲבוּר שָׁמְרוּ בְנֵי לֶחִי אֶת־מִצְוֺתָיו בֵּרְכָם וַיַּצְלִיחֵם כִּדְבָרוֹ׃",
+  "hebrew": "וּבַעֲבוּר שָׁמְרוּ בְנֵי לֶחִי אֶת־מִצְוֹתָיו בֵּרְכָם וַיַּצְלִיחֵם כִּדְבָרוֹ׃",
   "english": "And insomuch as the children of Lehi have kept his commandments he hath blessed them and prospered them according to his word."
  },
  {
@@ -35654,7 +35661,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 6,
   "verse": 14,
-  "hebrew": "וַיְהִי שִׁוְיוֹן גָּדוֹל בְּכָל־הָאָרֶץ עַד כִּי הֵחֵלָּה הָעֵדָה לְהִתְפָּרֵק הֵן עַד כִּי בִּשְׁנַת שְׁלֹשִׁים הִתְפָּרְקָה הָעֵדָה בְּכָל־הָאָרֶץ זוּלַת בֵּין מְעַט הַלָּמָנִים אֲשֶׁר הָשְׁבוּ לֶאֱמוּנַת אֱמֶת וְלֹא סָרוּ מִמֶּנָּה כִּי הָיוּ חֲזָקִים וְאֵיתָנִים וּבִלְתִּי מָטִים רוֹצִים בְּכָל־חָרִיצוּת לִשְׁמֹר אֶת־מִצְוֺת יְהוָה׃",
+  "hebrew": "וַיְהִי שִׁוְיוֹן גָּדוֹל בְּכָל־הָאָרֶץ עַד כִּי הֵחֵלָּה הָעֵדָה לְהִתְפָּרֵק הֵן עַד כִּי בִּשְׁנַת שְׁלֹשִׁים הִתְפָּרְקָה הָעֵדָה בְּכָל־הָאָרֶץ זוּלַת בֵּין מְעַט הַלָּמָנִים אֲשֶׁר הָשְׁבוּ לֶאֱמוּנַת אֱמֶת וְלֹא סָרוּ מִמֶּנָּה כִּי הָיוּ חֲזָקִים וְאֵיתָנִים וּבִלְתִּי מָטִים רוֹצִים בְּכָל־חָרִיצוּת לִשְׁמֹר אֶת־מִצְוֹת יְהוָה׃",
   "english": "And thus there became a great inequality in all the land, insomuch that the church began to be broken up; yea, insomuch that in the thirtieth year the church was broken up in all the land save it were among a few of the Lamanites who were converted unto the true faith; and they would not depart from it, for they were firm, and steadfast, and immovable, willing with all diligence to keep the commandments of the Lord."
  },
  {
@@ -35696,7 +35703,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 6,
   "verse": 20,
-  "hebrew": "וַיָּחֵלּוּ לִהְיוֹת אֲנָשִׁים מֻשְׁרֵי שָׁמַיִם וּשְׁלוּחִים עוֹמְדִים בְּקֶרֶב הָעָם בְּכָל־הָאָרֶץ מַטִּיפִים וּמְעִידִים בְּעֹז עַל־חַטֹּאת וַעֲוֺנוֹת הָעָם וּמְעִידִים לָהֶם עַל־הַגְּאֻלָּה אֲשֶׁר יַעֲשֶׂה יְהוָה לְעַמּוֹ בִּדְבָרִים אֲחֵרִים תְּקוּמַת הַמָּשִׁיחַ וַיָּעִידוּ בְּעֹז עַל־מוֹתוֹ וְיִסּוּרָיו׃",
+  "hebrew": "וַיָּחֵלּוּ לִהְיוֹת אֲנָשִׁים מֻשְׁרֵי שָׁמַיִם וּשְׁלוּחִים עוֹמְדִים בְּקֶרֶב הָעָם בְּכָל־הָאָרֶץ מַטִּיפִים וּמְעִידִים בְּעֹז עַל־חַטֹּאת וַעֲוֹנוֹת הָעָם וּמְעִידִים לָהֶם עַל־הַגְּאֻלָּה אֲשֶׁר יַעֲשֶׂה יְהוָה לְעַמּוֹ בִּדְבָרִים אֲחֵרִים תְּקוּמַת הַמָּשִׁיחַ וַיָּעִידוּ בְּעֹז עַל־מוֹתוֹ וְיִסּוּרָיו׃",
   "english": "And there began to be men inspired from heaven and sent forth, standing among the people in all the land, preaching and testifying boldly of the sins and iniquities of the people, and testifying unto them concerning the redemption which the Lord would make for his people, or in other words, the resurrection of Christ; and they did testify boldly of his death and sufferings."
  },
  {
@@ -35864,7 +35871,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 7,
   "verse": 14,
-  "hebrew": "וַיְהִי בִּשְׁנַת שְׁלֹשִׁים וְאַחַת וַיֵּחָלְקוּ לִשְׁבָטִים אִישׁ לְמִשְׁפַּחְתּוֹ וְלְקִרְבָתוֹ, וַיִּוָּעֲצוּ לְבִלְתִּי עֲשׂוֹת מִלְחָמָה אִישׁ בְּאָחִיו; וְלֹא הָיוּ לֵב אֶחָד בְּחֻקֵּיהֶם וּבְמִשְׁפָּטֵיהֶם, כִּי הָיוּ עֹשִׂים כְּפִי רָאשֵׁיהֶם וּמַנְהִיגֵיהֶם. וַיָּשִׂימוּ חֻקִּים קָשִׁים לְבִלְתִּי עֲבוֹר שֵׁבֶט בִּגְבוּל שֵׁבֶט, וַיְהִי לָהֶם שָׁלוֹם מְעָט; וַיִּסְרוּ לִבָּם מֵיְהוָה אֱלֹהֵיהֶם וַיִּרְגְּמוּ אֶת־הַנְּבִיאִים וַיְגָרְשׁוּם מִקִּרְבָּם׃",
+  "hebrew": "וַיְהִי בִּשְׁנַת שְׁלֹשִׁים וְאַחַת וַיֵּחָלְקוּ לִשְׁבָטִים אִישׁ לְמִשְׁפַּחְתּוֹ וּלְקִרְבָתוֹ וַיִּוָּעֲצוּ לְבִלְתִּי עֲשׂוֹת מִלְחָמָה אִישׁ בְּאָחִיו; וְלֹא הָיוּ לֵב אֶחָד בְּחֻקֵּיהֶם וּבְמִשְׁפָּטֵיהֶם כִּי הָיוּ עֹשִׂים כְּפִי רָאשֵׁיהֶם וּמַנְהִיגֵיהֶם. וַיָּשִׂימוּ חֻקִּים קָשִׁים לְבִלְתִּי עֲבוֹר שֵׁבֶט בִּגְבוּל שֵׁבֶט וַיְהִי לָהֶם שָׁלוֹם מְעָט; וַיִּסְרוּ לִבָּם מֵיְהוָה אֱלֹהֵיהֶם וַיִּרְגְּמוּ אֶת־הַנְּבִיאִים וַיְגָרְשׁוּם מִקִּרְבָּם׃",
   "english": "And it came to pass in the thirty and first year that they were divided into tribes, every man according to his family, kindred and friends; nevertheless they had come to an agreement that they would not go to war one with another; but they were not united as to their laws, and their manner of government, for they were established according to the minds of those who were their chiefs and their leaders. But they did establish very strict laws that one tribe should not trespass against another, insomuch that in some degree they had peace in the land; nevertheless, their hearts were turned from the Lord their God, and they did stone the prophets and did cast them out from among them."
  },
  {
@@ -35955,7 +35962,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 8,
   "verse": 1,
-  "hebrew": "וַיְהִי כְּפִי סִפְרֵנוּ וְיוֹדְעִים אֲנַחְנוּ כִּי אֱמֶת סִפְרֵנוּ כִּי הִנֵּה אִישׁ צַדִּיק שָׁמַר אֶת־הַסֵּפֶר כִּי עָשָׂה בֶאֱמֶת נִפְלָאוֹת רַבּוֹת בְּשֵׁם יֵשׁוּעַ וְלֹא הָיָה אִישׁ אֲשֶׁר יָכֹל לַעֲשׂוֹת נֵס בְּשֵׁם יֵשׁוּעַ זוּלַת נִטְהַר כֻּלּוֹ מֵעֲוֺנוֹ׃",
+  "hebrew": "וַיְהִי כְּפִי סִפְרֵנוּ וְיוֹדְעִים אֲנַחְנוּ כִּי אֱמֶת סִפְרֵנוּ כִּי הִנֵּה אִישׁ צַדִּיק שָׁמַר אֶת־הַסֵּפֶר כִּי עָשָׂה בֶאֱמֶת נִפְלָאוֹת רַבּוֹת בְּשֵׁם יֵשׁוּעַ וְלֹא הָיָה אִישׁ אֲשֶׁר יָכֹל לַעֲשׂוֹת נֵס בְּשֵׁם יֵשׁוּעַ זוּלַת נִטְהַר כֻּלּוֹ מֵעֲוֹנוֹ׃",
   "english": "And now it came to pass that according to our record, and we know our record to be true, for behold, it was a just man who did keep the record—for he truly did many miracles in the name of Jesus; and there was not any man who could do a miracle in the name of Jesus save he were cleansed every whit from his iniquity—"
  },
  {
@@ -36137,7 +36144,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 9,
   "verse": 2,
-  "hebrew": "אוֹי אוֹי לָעָם הַזֶּה אוֹי לְיוֹשְׁבֵי כָל־הָאָרֶץ אִם־לֹא יָשׁוּבוּ כִּי יִשְׂחַק הַשָּׂטָן וּמַלְאָכָיו יָגִילוּ בִּגְלַל הֲרוּגֵי בָּנַי וּבְנוֹתַי הַיָּפִים וּבִגְלַל עֲוֺנָם וְתוֹעֲבוֹתֵיהֶם נָפָלוּ׃",
+  "hebrew": "אוֹי אוֹי לָעָם הַזֶּה אוֹי לְיוֹשְׁבֵי כָל־הָאָרֶץ אִם־לֹא יָשׁוּבוּ כִּי יִשְׂחַק הַשָּׂטָן וּמַלְאָכָיו יָגִילוּ בִּגְלַל הֲרוּגֵי בָּנַי וּבְנוֹתַי הַיָּפִים וּבִגְלַל עֲוֹנָם וְתוֹעֲבוֹתֵיהֶם נָפָלוּ׃",
   "english": "Wo, wo, wo unto this people; wo unto the inhabitants of the whole earth except they shall repent; for the devil laugheth, and his angels rejoice, because of the slain of the fair sons and daughters of my people; and it is because of their iniquity and abominations that they are fallen!"
  },
  {
@@ -36158,7 +36165,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 9,
   "verse": 5,
-  "hebrew": "וְהִנֵּה אֶת־הָעִיר הַגְּדוֹלָה מוֹרוֹנִיהָה כִּסִּיתִי בֶעָפָר וְאֶת־יוֹשְׁבֶיהָ לְהַסְתִּיר עֲוֺנוֹתֵיהֶם וְתוֹעֲבוֹתֵיהֶם מִלְּפָנַי לְמַעַן לֹא יַעֲלֶה עוֹד דַּם הַנְּבִיאִים וְהַקְּדוֹשִׁים אֵלַי נֶגְדָּם׃",
+  "hebrew": "וְהִנֵּה אֶת־הָעִיר הַגְּדוֹלָה מוֹרוֹנִיהָה כִּסִּיתִי בֶעָפָר וְאֶת־יוֹשְׁבֶיהָ לְהַסְתִּיר עֲוֹנוֹתֵיהֶם וְתוֹעֲבוֹתֵיהֶם מִלְּפָנַי לְמַעַן לֹא יַעֲלֶה עוֹד דַּם הַנְּבִיאִים וְהַקְּדוֹשִׁים אֵלַי נֶגְדָּם׃",
   "english": "And behold, that great city Moronihah have I covered with earth, and the inhabitants thereof, to hide their iniquities and their abominations from before my face, that the blood of the prophets and the saints shall not come any more unto me against them."
  },
  {
@@ -36263,7 +36270,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 9,
   "verse": 20,
-  "hebrew": "וְתַקְרִיבוּ לִי לְקָרְבָּן לֵב נִשְׁבָּר וְרוּחַ נִדְכָּאָה וְכָל־הַבָּא אֵלַי בְּלֵב נִשְׁבָּר וְרוּחַ נִדְכָּאָה אוֹתוֹ אַטְבִּיל בָּאֵשׁ וּבְרוּחַ הַקֹּדֶשׁ כַּאֲשֶׁר הַלְמָנִים בֶּאֱמוּנָתָם בִּי בְּעֵת שׁוּבָם נִטְבְּלוּ בָאֵשׁ וּבְרוּחַ הַקֹּדֶשׁ וְהֵם לֹא יָדְעוּ׃",
+  "hebrew": "וְתַקְרִיבוּ לִי לְקָרְבָּן לֵב־נִשְׁבָּר וְרוּחַ נִדְכָּה וְכָל־הַבָּא אֵלַי בְּלֵב־נִשְׁבָּר וְרוּחַ נִדְכָּה אוֹתוֹ אַטְבִּיל בָּאֵשׁ וּבְרוּחַ הַקֹּדֶשׁ כַּאֲשֶׁר הַלָּמָנִים בֶּאֱמוּנָתָם בִּי בְּעֵת שׁוּבָם נִטְבְּלוּ בָאֵשׁ וּבְרוּחַ הַקֹּדֶשׁ וְהֵם לֹא יָדְעוּ׃",
   "english": "And ye shall offer for a sacrifice unto me a broken heart and a contrite spirit. And whoso cometh unto me with a broken heart and a contrite spirit, him will I baptize with fire and with the Holy Ghost, even as the Lamanites, because of their faith in me at the time of their conversion, were baptized with fire and with the Holy Ghost, and they knew it not."
  },
  {
@@ -36333,7 +36340,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 10,
   "verse": 8,
-  "hebrew": "וְעַתָּה וַיְהִי אַחֲרֵי שָׁמְעַ הָעָם אֶת־הַדְּבָרִים הָאֵלֶּה הִנֵּה הֵחֵלּוּ לִבְכּוֹת וּלְיַלֵל שֵׁנִית בִּגְלַל אֲבֵדַת קְרוֹבֵיהֶם וְיְדִידֵיהֶם׃",
+  "hebrew": "וְעַתָּה וַיְהִי אַחֲרֵי שָׁמְעַ הָעָם אֶת־הַדְּבָרִים הָאֵלֶּה הִנֵּה הֵחֵלּוּ לִבְכּוֹת וּלְיַלֵל שֵׁנִית בִּגְלַל אֲבֵדַת קְרוֹבֵיהֶם וִידִידֵיהֶם׃",
   "english": "And now it came to pass that after the people had heard these words, behold, they began to weep and howl again because of the loss of their kindred and friends."
  },
  {
@@ -36396,7 +36403,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 10,
   "verse": 17,
-  "hebrew": "הִנֵּה יַעֲקֹב אָבִינוּ גַם־הוּא הֵעִיד עַל־שְׁאֵרִית זֶרַע יוֹסֵף וְהִנֵּה הֲלֹא אֲנַחְנוּ שְׁאֵרִית זֶרַע יוֹסֵף וְהַדְּבָרִים הָאֵלֶּה הַמְעִידִים עָלֵינוּ הֲלֹא הֵמָּה כְתוּבִים עַל־לוּחוֹת הַנְּחֹשֶׁת אֲשֶׁר הוֹצִיא לֶחִי אָבִינוּ מִירוּשָׁלָיִם׃",
+  "hebrew": "הִנֵּה יַעֲקֹב אָבִינוּ גַם־הוּא הֵעִיד עַל־שְׁאֵרִית זֶרַע יוֹסֵף וְהִנֵּה הֲלֹא אֲנַחְנוּ שְׁאֵרִית זֶרַע יוֹסֵף וְהַדְּבָרִים הָאֵלֶּה הַמְעִידִים עָלֵינוּ הֲלֹא הֵמָּה כְּתוּבִים עַל־לוּחוֹת הַנְּחֹשֶׁת אֲשֶׁר הוֹצִיא לֶחִי אָבִינוּ מִירוּשָׁלָיִם׃",
   "english": "Behold, our father Jacob also testified concerning a remnant of the seed of Joseph. And behold, are not we a remnant of the seed of Joseph? And these things which testify of us, are they not written upon the plates of brass which our father Lehi brought out of Jerusalem?"
  },
  {
@@ -36830,14 +36837,14 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 12,
   "verse": 19,
-  "hebrew": "וְהִנֵּה נָתַתִּי לָכֶם אֶת־הַתּוֹרָה וּמִצְוֺת אָבִי לְמַעַן תַּאֲמִינוּ בִּי וּלְמַעַן תָּשׁוּבוּ מֵחַטֹּאתֵיכֶם וְתָבֹאוּ אֵלַי בְּלֵב נִשְׁבָּר וְרוּחַ נִדְכָּאָה הִנֵּה הַמִּצְוֺת לִפְנֵיכֶם וְהַתּוֹרָה נִמְלְאָה׃",
+  "hebrew": "וְהִנֵּה נָתַתִּי לָכֶם אֶת־הַתּוֹרָה וּמִצְוֹת אָבִי לְמַעַן תַּאֲמִינוּ בִּי וּלְמַעַן תָּשׁוּבוּ מֵחַטֹּאתֵיכֶם וְתָבֹאוּ אֵלַי בְּלֵב־נִשְׁבָּר וְרוּחַ נִדְכָּה הִנֵּה הַמִּצְוֹת לִפְנֵיכֶם וְהַתּוֹרָה נִמְלְאָה׃",
   "english": "And behold, I have given you the law and the commandments of my Father, that ye shall believe in me, and that ye shall repent of your sins, and come unto me with a broken heart and a contrite spirit. Behold, ye have the command– ments before you, and the law is fulfilled."
  },
  {
   "book": "3 Nephi",
   "chapter": 12,
   "verse": 20,
-  "hebrew": "לָכֵן בֹּאוּ אֵלַי וְהִוָּשְׁעוּ כִּי אָמֵן אֹמֵר אֲנִי לָכֶם כִּי אִם־לֹא תִשְׁמְרוּ אֶת־מִצְוֺתַי אֲשֶׁר צִוִּיתִי אֶתְכֶם בָּעֵת הַזֹּאת לֹא תָבֹאוּ בְּכָל־פָּנִים אֶל־מַלְכוּת הַשָּׁמָיִם׃",
+  "hebrew": "לָכֵן בֹּאוּ אֵלַי וְהִוָּשְׁעוּ כִּי אָמֵן אֹמֵר אֲנִי לָכֶם כִּי אִם־לֹא תִשְׁמְרוּ אֶת־מִצְוֹתַי אֲשֶׁר צִוִּיתִי אֶתְכֶם בָּעֵת הַזֹּאת לֹא תָבֹאוּ בְּכָל־פָּנִים אֶל־מַלְכוּת הַשָּׁמָיִם׃",
   "english": "Therefore come unto me and be ye saved; for verily I say unto you, that except ye shall keep my commandments, which I have commanded you at this time, ye shall in no case enter into the kingdom of heaven."
  },
  {
@@ -36963,7 +36970,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 12,
   "verse": 38,
-  "hebrew": "וְהִנֵּה כָתוּב עַיִן תַּחַת עַיִן וְשֵׁן תַּחַת שֵׁן׃",
+  "hebrew": "וְהִנֵּה כָּתוּב עַיִן תַּחַת עַיִן וְשֵׁן תַּחַת שֵׁן׃",
   "english": "And behold, it is written, an eye for an eye, and a tooth for a tooth;"
  },
  {
@@ -36998,7 +37005,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 12,
   "verse": 43,
-  "hebrew": "וְהִנֵּה כָתוּב גַּם וְאָהַבְתָּ לְרֵעֲךָ וְשָׂנֵאתָ אֶת־אֹיִבְךָ׃",
+  "hebrew": "וְהִנֵּה כָּתוּב גַּם וְאָהַבְתָּ לְרֵעֲךָ וְשָׂנֵאתָ אֶת־אֹיִבְךָ׃",
   "english": "And behold it is written also, that thou shalt love thy neighbor and hate thine enemy;"
  },
  {
@@ -37467,7 +37474,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 15,
   "verse": 1,
-  "hebrew": "וַיְהִי כְּכַלּוֹת יֵשׁוּעַ אֶת־הַדְּבָרִים הָאֵלֶּה וַיִּשָּׂא אֶת־עֵינָיו אֶל־הַקָּהָל וַיֹּאמֶר אֲלֵיהֶם הִנֵּה שְׁמַעְתֶּם אֵת אֲשֶׁר לִמַּדְתִּי טֶרֶם אֶעֱלֶה אֶל־אָבִי וְכָל־הַזֹּכֵר אֶת־דְּבָרַי וְעֹשֶׂה אֹתָם אֹתוֹ אָקִים בַּיּוֹם הָאַחֲרוֹן׃",
+  "hebrew": "וַיְהִי כְּכַלּוֹת יֵשׁוּעַ אֶת־הַדְּבָרִים הָאֵלֶּה וַיִּשָּׂא אֶת־עֵינָיו אֶל־הַקָּהָל וַיֹּאמֶר אֲלֵיהֶם הִנֵּה שְׁמַעְתֶּם אֶת־אֲשֶׁר לִמַּדְתִּי טֶרֶם אֶעֱלֶה אֶל־אָבִי וְכָל־הַזֹּכֵר אֶת־דְּבָרַי וְעֹשֶׂה אֹתָם אֹתוֹ אָקִים בַּיּוֹם הָאַחֲרוֹן׃",
   "english": "And now it came to pass that when Jesus had ended these sayings he cast his eyes round about on the multitude, and said unto them: Behold, ye have heard the things which I taught before I ascended to my Father; therefore, whoso remembereth these sayings of mine and doeth them, him will I raise up at the last day."
  },
  {
@@ -37824,7 +37831,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 17,
   "verse": 8,
-  "hebrew": "כִּי רֹאֶה אֲנִי כִּי חֲפֵצִים אַתֶּם לִרְאוֹת אֵת אֲשֶׁר עָשִׂיתִי לַאֲחֵיכֶם בִּירוּשָׁלָיִם כִּי רֹאֶה אֲנִי כִּי רַבָּה אֱמוּנַתְכֶם לְרַפְּאֹתְכֶם׃",
+  "hebrew": "כִּי רֹאֶה אֲנִי כִּי חֲפֵצִים אַתֶּם לִרְאוֹת אֶת־אֲשֶׁר עָשִׂיתִי לַאֲחֵיכֶם בִּירוּשָׁלָיִם כִּי רֹאֶה אֲנִי כִּי רַבָּה אֱמוּנַתְכֶם לְרַפְּאֹתְכֶם׃",
   "english": "For I perceive that ye desire that I should show unto you what I have done unto your brethren at Jerusalem, for I see that your faith is sufficient that I should heal you."
  },
  {
@@ -38013,7 +38020,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 18,
   "verse": 10,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר עָשׂוּ הַתַּלְמִידִים זֹאת וַיֹּאמֶר יֵשׁוּעַ אֲלֵיהֶם בְּרוּכִים אַתֶּם עַל־הַדָּבָר הַזֶּה אֲשֶׁר עֲשִׂיתֶם כִּי בָזֹאת מְלֵאתֶם אֶת־מִצְוֹתַי וְזֹאת מְעִידָה לָאָב כִּי רוֹצִים אַתֶּם לַעֲשׂוֹת אֵת אֲשֶׁר צִוִּיתִי אֶתְכֶם׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר עָשׂוּ הַתַּלְמִידִים זֹאת וַיֹּאמֶר יֵשׁוּעַ אֲלֵיהֶם בְּרוּכִים אַתֶּם עַל־הַדָּבָר הַזֶּה אֲשֶׁר עֲשִׂיתֶם כִּי בָזֹאת מְלֵאתֶם אֶת־מִצְוֹתַי וְזֹאת מְעִידָה לָאָב כִּי רוֹצִים אַתֶּם לַעֲשׂוֹת אֶת־אֲשֶׁר צִוִּיתִי אֶתְכֶם׃",
   "english": "And when the disciples had done this, Jesus said unto them: Blessed are ye for this thing which ye have done, for this is fulfilling my commandments, and this doth witness unto the Father that ye are willing to do that which I have commanded you."
  },
  {
@@ -38307,7 +38314,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 19,
   "verse": 13,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר נִטְבְּלוּ כֻלָּם וַיַּעֲלוּ מִן־הַמַּיִם וַתִּפֹּל עֲלֵיהֶם רוּחַ הַקֹּדֶשׁ וַיִּמָּלְאוּ רוּחַ הַקֹּדֶשׁ וָאֵשׁ׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר נִטְבְּלוּ כֻלָּם וַיַּעֲלוּ מִן־הַמַּיִם וַיִּפֹּל עֲלֵיהֶם רוּחַ הַקֹּדֶשׁ וַיִּמָּלְאוּ רוּחַ הַקֹּדֶשׁ וָאֵשׁ׃",
   "english": "And it came to pass when they were all baptized and had come up out of the water, the Holy Ghost did fall upon them, and they were filled with the Holy Ghost and with fire."
  },
  {
@@ -39189,7 +39196,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 23,
   "verse": 11,
-  "hebrew": "וַיֹּאמֶר אֲלֵיהֶם יֵשׁוּעַ מַדּוּעַ לֹא כְתַבְתֶּם אֶת־הַדָּבָר הַזֶּה כִּי קְדוֹשִׁים רַבִּים קָמוּ וְנִרְאוּ לְרַבִּים וַיְשָׁרְתוּ לָהֶם׃",
+  "hebrew": "וַיֹּאמֶר אֲלֵיהֶם יֵשׁוּעַ מַדּוּעַ לֹא כְּתַבְתֶּם אֶת־הַדָּבָר הַזֶּה כִּי קְדוֹשִׁים רַבִּים קָמוּ וְנִרְאוּ לְרַבִּים וַיְשָׁרְתוּ לָהֶם׃",
   "english": "And Jesus said unto them: How be it that ye have not written this thing, that many saints did arise and appear unto many and did minister unto them?"
  },
  {
@@ -39217,7 +39224,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 24,
   "verse": 1,
-  "hebrew": "וַיְצַו אוֹתָם לִכְתֹּב אֶת־הַדְּבָרִים אֲשֶׁר נָתַן הָאָב לְמַלְאָכִי אֲשֶׁר יַגִּיד לָהֶם וַיְהִי אַחֲרֵי כָתְבָם וַיְבָאֵר אוֹתָם וְאֵלֶּה הַדְּבָרִים אֲשֶׁר הִגִּיד לָהֶם לֵאמֹר כֹּה אָמַר הָאָב אֶל־מַלְאָכִי הִנְנִי שֹׁלֵחַ מַלְאָכִי וְהוּא יָכִין דֶּרֶךְ לְפָנָי וְהָאָדוֹן אֲשֶׁר אַתֶּם מְבַקְשִׁים יָבוֹא פִּתְאֹם אֶל־הֵיכָלוֹ וּמַלְאַךְ הַבְּרִית אֲשֶׁר אַתֶּם חֲפֵצִים בּוֹ הִנֵּה יָבוֹא אָמַר יְהוָה צְבָאוֹת׃",
+  "hebrew": "וַיְצַו אוֹתָם לִכְתֹּב אֶת־הַדְּבָרִים אֲשֶׁר נָתַן הָאָב לְמַלְאָכִי אֲשֶׁר יַגִּיד לָהֶם וַיְהִי אַחֲרֵי כָּתְבָם וַיְבָאֵר אוֹתָם וְאֵלֶּה הַדְּבָרִים אֲשֶׁר הִגִּיד לָהֶם לֵאמֹר כֹּה אָמַר הָאָב אֶל־מַלְאָכִי הִנְנִי שֹׁלֵחַ מַלְאָכִי וְהוּא יָכִין דֶּרֶךְ לְפָנָי וְהָאָדוֹן אֲשֶׁר אַתֶּם מְבַקְשִׁים יָבוֹא פִּתְאֹם אֶל־הֵיכָלוֹ וּמַלְאַךְ הַבְּרִית אֲשֶׁר אַתֶּם חֲפֵצִים בּוֹ הִנֵּה יָבוֹא אָמַר יְהוָה צְבָאוֹת׃",
   "english": "And it came to pass that he commanded them that they should write the words which the Father had given unto Malachi, which he should tell unto them. And it came to pass that after they were written he expounded them. And these are the words which he did tell unto them, saying: Thus said the Father unto Malachi—Behold, I will send my messenger, and he shall prepare the way before me, and the Lord whom ye seek shall suddenly come to his temple, even the messenger of the covenant, whom ye delight in; behold, he shall come, saith the Lord of Hosts."
  },
  {
@@ -39231,7 +39238,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 24,
   "verse": 3,
-  "hebrew": "וְיָשַׁב מְצָרֵף וּמְטַהֵר כֶּסֶף וְיְטַהֵר אֶת־בְּנֵי לֵוִי וְיִזַקֵּק אוֹתָם כַּזָּהָב וְכַכֶּסֶף לְמַעַן יַקְרִיבוּ לַיהוָה מִנְחָה בִּצְדָקָה׃",
+  "hebrew": "וְיָשַׁב מְצָרֵף וּמְטַהֵר כֶּסֶף וִיטַהֵר אֶת־בְּנֵי לֵוִי וְיִזַקֵּק אוֹתָם כַּזָּהָב וְכַכֶּסֶף לְמַעַן יַקְרִיבוּ לַיהוָה מִנְחָה בִּצְדָקָה׃",
   "english": "And he shall sit as a refiner and purifier of silver; and he shall purify the sons of Levi, and purge them as gold and silver, that they may offer unto the Lord an offering in righteousness."
  },
  {
@@ -40169,7 +40176,7 @@ window._officialVersesData = [
   "book": "4 Nephi",
   "chapter": 1,
   "verse": 8,
-  "hebrew": "וְגַם אֶת־זָרַהֶמְלָה הָעִיר הַגְּדוֹלָה בָּנוּ מֵחָדָשׁ׃",
+  "hebrew": "וְגַם אֶת־זָרַחֶמְלָה הָעִיר הַגְּדוֹלָה בָּנוּ מֵחָדָשׁ׃",
   "english": "Yea, even that great city Zarahemla did they cause to be built again."
  },
  {
@@ -40407,7 +40414,7 @@ window._officialVersesData = [
   "book": "4 Nephi",
   "chapter": 1,
   "verse": 42,
-  "hebrew": "וַיָּחֶל חֵלֶק הָעָם הָרָשָׁע לִבְנוֹת שֵׁנִית אֶת־שְׁבוּעוֹת וּקְשָׁרֵי גַּדְיַנְטוֹן הַנִּסְתָּרִים׃",
+  "hebrew": "וַיָּחֶל חֵלֶק הָעָם הָרָשָׁע לִבְנוֹת שֵׁנִית אֶת־שְׁבוּעוֹת וּקְשָׁרֵי גָּדִיאַנְטוֹן הַנִּסְתָּרִים׃",
   "english": "And it came to pass that the wicked part of the people began again to build up the secret oaths and combinations of Gadianton."
  },
  {
@@ -40435,7 +40442,7 @@ window._officialVersesData = [
   "book": "4 Nephi",
   "chapter": 1,
   "verse": 46,
-  "hebrew": "וַיִּתְפַּשְּׁטוּ שׁוֹדְדֵי גַּדְיַנְטוֹן עַל־כָּל־פְּנֵי הָאָרֶץ וְלֹא־הָיוּ צַדִּיקִים זוּלָת תַּלְמִידֵי יֵשׁוּעַ וַיִּצְבְּרוּ זָהָב וָכֶסֶף לָרֹב וַיִּסְחֲרוּ בְּכָל־מִינֵי מִסְחָר׃",
+  "hebrew": "וַיִּתְפַּשְּׁטוּ שׁוֹדְדֵי גָּדִיאַנְטוֹן עַל־כָּל־פְּנֵי הָאָרֶץ וְלֹא־הָיוּ צַדִּיקִים זוּלָת תַּלְמִידֵי יֵשׁוּעַ וַיִּצְבְּרוּ זָהָב וָכֶסֶף לָרֹב וַיִּסְחֲרוּ בְּכָל־מִינֵי מִסְחָר׃",
   "english": "And it came to pass that the robbers of Gadianton did spread over all the face of the land; and there were none that were righteous save it were the disciples of Jesus. And gold and  silver did they lay up in store in abundance, and did traffic in all manner of traffic."
  },
  {
@@ -40461,126 +40468,133 @@ window._officialVersesData = [
  },
  {
   "book": "Mormon",
-  "chapter": 0,
+  "chapter": 1,
+  "verse": 1,
+  "hebrew": "וְעַתָּה כֹּתֵב מוֹרְמוֹן סֵפֶר הַדְּבָרִים אֲשֶׁר רָאִיתִי וְגַם־שָׁמַעְתִּי וָאֶקְרָא לוֹ סֵפֶר מוֹרְמוֹן׃",
+  "english": "And now I, Mormon, make a record of the things which I have both seen and heard, and call it the Book of Mormon."
+ },
+ {
+  "book": "Mormon",
+  "chapter": 1,
   "verse": 2,
   "hebrew": "וּבָעֵת אֲשֶׁר הִטְמִין עַמָּרוֹן אֶת־הַסְּפָרִים לַיהוָה בָּא אֵלַי וַאֲנִי כְּבֶן־עֶשֶׂר שָׁנִים וָאָחֵל לִלְמֹד מְעַט כְּמִשְׁפַּט לֶקַח עַמִּי וַיֹּאמֶר אֵלַי עַמָּרוֹן רוֹאֶה אָנֹכִי כִּי יֶלֶד מְיֻשָּׁב אַתָּה וּמַהִיר לְהַבְחִין׃",
   "english": "And about the time that Ammaron hid up the records unto the Lord, he came unto me, (I being about ten years of age, and I began to be learned somewhat after the manner of the learning of my people) and Ammaron said unto me: I perceive that thou art a sober child, and art quick to observe;"
  },
  {
   "book": "Mormon",
-  "chapter": 0,
+  "chapter": 1,
   "verse": 3,
-  "hebrew": "לָכֵן בִּהְיוֹתְךָ כְּבֶן עֶשְׂרִים וְאַרְבַּע שָׁנִים חָפַצְתִּי כִּי תִזְכֹּר אֶת־הַדְּבָרִים אֲשֶׁר הִבְחַנְתָּ עַל־דְּבַר הָעָם הַזֶּה וּבִהְיוֹתְךָ כֵן לֵךְ אֶל־אֶרֶץ אַנְטוּם אֶל־גִּבְעָה אֲשֶׁר תִּקָּרֵא שִׁים וְשֵׁם הִפְקַדְתִּי לַיהוָה אֶת־כָּל־הַחֲרִיטוֹת הַקְּדוֹשׁוֹת עַל־דְּבַר הָעָם הַזֶּה׃",
+  "hebrew": "לָכֵן בִּהְיוֹתְךָ כְּבֶן עֶשְׂרִים וְאַרְבַּע שָׁנִים חָפַצְתִּי כִּי תִזְכֹּר אֶת־הַדְּבָרִים אֲשֶׁר הִבְחַנְתָּ עַל־דְּבַר הָעָם הַזֶּה וּבִהְיוֹתְךָ כֵן לֵךְ אֶל־אֶרֶץ אַנְטוּם אֶל־גִּבְעָה אֲשֶׁר תִּקָּרֵא שִׁים וְשָׁם הִפְקַדְתִּי לַיהוָה אֶת־כָּל־הַחֲרִיטוֹת הַקְּדוֹשׁוֹת עַל־דְּבַר הָעָם הַזֶּה׃",
   "english": "Therefore, when ye are about twenty and four years old I would that ye should remember the things that ye have observed concerning this people; and when ye are of that age go to the land Antum, unto a hill which shall be called Shim; and there have I deposited unto the Lord all the sacred engravings concerning this people."
  },
  {
   "book": "Mormon",
-  "chapter": 0,
+  "chapter": 1,
   "verse": 4,
   "hebrew": "וְהִנֵּה תִּקַּח לְךָ אֶת־לוּחוֹת נֶפִי וְאֶת־הַיֶּתֶר תַּנִּיחַ בַּמָּקוֹם אֲשֶׁר הֵם שָׁם וְתַחְרֹט עַל־לוּחוֹת נֶפִי אֶת־כָּל־הַדְּבָרִים אֲשֶׁר הִבְחַנְתָּ עַל־דְּבַר הָעָם הַזֶּה׃",
   "english": "And behold, ye shall take the plates of Nephi unto yourself, and the remainder shall ye leave in the place where they are; and ye shall engrave on the plates of Nephi all the things that ye have observed concerning this people."
  },
  {
   "book": "Mormon",
-  "chapter": 0,
+  "chapter": 1,
   "verse": 5,
   "hebrew": "וּמִזֶּרַע נֶפִי מוֹרְמוֹן וְשֵׁם אָבִי מוֹרְמוֹן זָכַרְתִּי אֶת־הַדְּבָרִים אֲשֶׁר צִוַּנִי עַמָּרוֹן׃",
   "english": "And I, Mormon, being a descendant of Nephi, (and my father’s name was Mormon) I remem– bered the things which Ammaron commanded me."
  },
  {
   "book": "Mormon",
-  "chapter": 0,
+  "chapter": 1,
   "verse": 6,
-  "hebrew": "וַיְהִי וַאֲנִי בֶּן־אַחַת עֶשְׂרֵה שָׁנָה וַיּוֹלִיכֵנִי אָבִי אֶל־הָאָרֶץ נֶגְבָּה אֶל־אֶרֶץ זָרַהֶמְלָה׃",
+  "hebrew": "וַיְהִי וַאֲנִי בֶּן־אַחַת עֶשְׂרֵה שָׁנָה וַיּוֹלִיכֵנִי אָבִי אֶל־הָאָרֶץ נֶגְבָּה אֶל־אֶרֶץ זָרַחֶמְלָה׃",
   "english": "And it came to pass that I, being eleven years old, was carried by my father into the land southward, even to the land of Zarahemla."
  },
  {
   "book": "Mormon",
-  "chapter": 0,
+  "chapter": 1,
   "verse": 7,
   "hebrew": "וַיְהִי כָל־פְּנֵי הָאָרֶץ מְכֻסִּים בִּנְיָנִים וְהָעָם רַבִּים כִּמְעַט כְּחוֹל הַיָּם׃",
   "english": "The whole face of the land had become covered with buildings, and the people were as numerous almost, as it were the sand of the sea."
  },
  {
   "book": "Mormon",
-  "chapter": 0,
+  "chapter": 1,
   "verse": 8,
   "hebrew": "וַיְהִי בַּשָּׁנָה הַזֹּאת וַתָּחֵל מִלְחָמָה בֵּין הַנְּפִיִּים אֲשֶׁר הָיוּ הַנְּפִיִּים וְהַיַּעֲקֹבִים וְהַיּוֹסֵפִים וְהַזּוֹרָמִים וַתְּהִי הַמִּלְחָמָה הַזֹּאת בֵּין הַנְּפִיִּים וּבֵין הַלָּמָנִים וְהַלְּמוּאֵלִים וְהַיִּשְׁמְעֵאלִים׃",
   "english": "And it came to pass in this year there began to be a war between the Nephites, who consisted of the Nephites and the Jacobites and the Josephites and the Zoramites; and this war was between the Nephites, and the Lamanites and the Lemuelites and the Ishmaelites."
  },
  {
   "book": "Mormon",
-  "chapter": 0,
+  "chapter": 1,
   "verse": 9,
-  "hebrew": "וְעַתָּה הַלָּמָנִים וְהַלְּמוּאֵלִים וְהַיִּשְׁמְעֵאלִים נִקְרְאוּ לָמָנִים וּשְׁנֵי הַצְּדָדִים הָיוּ נֶפִים וְלָמָנִים׃",
+  "hebrew": "וְעַתָּה הַלָּמָנִים וְהַלְּמוּאֵלִים וְהַיִּשְׁמְעֵאלִים נִקְרְאוּ לָמָנִים וּשְׁנֵי הַצְּדָדִים הָיוּ נְפִיִּים וְלָמָנִים׃",
   "english": "Now the Lamanites and the Lemuelites and the Ishmaelites were called Lamanites, and the two parties were Nephites and Lamanites."
  },
  {
   "book": "Mormon",
-  "chapter": 0,
+  "chapter": 1,
   "verse": 10,
-  "hebrew": "וַיְהִי כִּי הֵחֵלָה הַמִּלְחָמָה בֵּינֵיהֶם בִּגְבוּלוֹת זָרַהֶמְלָה עַל־מֵי סִידוֹן׃",
+  "hebrew": "וַיְהִי כִּי הֵחֵלָה הַמִּלְחָמָה בֵּינֵיהֶם בִּגְבוּלוֹת זָרַחֶמְלָה עַל־מֵי סִידוֹן׃",
   "english": "And it came to pass that the war began to be among them in the borders of Zarahemla, by the waters of Sidon."
  },
  {
   "book": "Mormon",
-  "chapter": 0,
+  "chapter": 1,
   "verse": 11,
   "hebrew": "וַיְהִי כִּי אָסְפוּ הַנְּפִיִּים  אֲנָשִׁים רַבִּים לְמַעְלָה מִשְּׁלֹשִׁים אֶלֶף וַיְהִי כִּי הָיוּ לָהֶם בַּשָּׁנָה הַזֹּאת קְרָבוֹת רַבִּים אֲשֶׁר בָּהֶם הִכּוּ הַנְּפִיִּים  אֶת־הַלָּמָנִים וַיַּהַרְגוּ מֵהֶם רַבִּים׃",
   "english": "And it came to pass that the Nephites had gathered together a great number of men, even to exceed the number of thirty thousand. And it came to pass that they did have in this same year a number of battles, in which the Nephites did beat the Lamanites and did slay many of them."
  },
  {
   "book": "Mormon",
-  "chapter": 0,
+  "chapter": 1,
   "verse": 12,
   "hebrew": "וַיְהִי כִּי נָסֹגוּ הַלָּמָנִים מִמְּזִמָּתָם וַיְהִי שָׁלוֹם בָּאָרֶץ וַיִּשָּׁאֵר הַשָּׁלוֹם כְּאַרְבַּע שָׁנִים וְלֹא הָיָה שְׁפִיכוּת דָּמִים׃",
   "english": "And it came to pass that the Lamanites withdrew their design, and there was peace settled in the land; and peace did remain for the space of about four years, that there was no bloodshed."
  },
  {
   "book": "Mormon",
-  "chapter": 0,
+  "chapter": 1,
   "verse": 13,
   "hebrew": "אַךְ גָּבַר הָרֶשַׁע עַל־פְּנֵי כָל־הָאָרֶץ עַד־אֲשֶׁר לָקַח יְהוָה אֶת־תַּלְמִידָיו הָאֲהוּבִים וַיִּשְׁבְּתוּ מַעֲשֵׂי הַנִּפְלָאוֹת וְהָרְפוּאוֹת מִפְּנֵי עֲוֹן הָעָם׃",
   "english": "But wickedness did prevail upon the face of the whole land, insomuch that the Lord did take away his beloved disciples, and the work of miracles and of healing did cease because of the iniquity of the people."
  },
  {
   "book": "Mormon",
-  "chapter": 0,
+  "chapter": 1,
   "verse": 14,
-  "hebrew": "וְלֹא־הָיוּ מַתָּנוֹת מֵאֵת יְהוָה וְרוּחַ הַקֹּדֶשׁ לֹא־בָאָה עַל־אִישׁ מִפְּנֵי רִשְׁעָתָם וּמֹעֲלָם׃",
+  "hebrew": "וְלֹא־הָיוּ מַתָּנוֹת מֵאֵת יְהוָה וְרוּחַ הַקֹּדֶשׁ לֹא־בָא עַל־אִישׁ מִפְּנֵי רִשְׁעָתָם וּמֹעֲלָם׃",
   "english": "And there were no gifts from the Lord, and the Holy Ghost did not come upon any, because of their wickedness and unbelief."
  },
  {
   "book": "Mormon",
-  "chapter": 0,
+  "chapter": 1,
   "verse": 15,
   "hebrew": "וַאֲנִי בֶּן־חֲמֵשׁ עֶשְׂרֵה שָׁנָה וְדַעְתִּי מְיֻשֶּׁבֶת מְעַט וְעַל־כֵּן בָּא אֵלַי יְהוָה וָאֶטְעַם וָאֵדַע אֶת־חֶסֶד יֵשׁוּעַ׃",
   "english": "And I, being fifteen years of age and being somewhat of a sober mind, therefore I was visited of the Lord, and tasted and knew of the goodness of Jesus."
  },
  {
   "book": "Mormon",
-  "chapter": 0,
+  "chapter": 1,
   "verse": 16,
   "hebrew": "וָאֲנַסֶּה לְהַטִּיף לָעָם הַזֶּה אַךְ נִסְגַּר פִּי וָאֻמְנַע מִלְּהַטִּיף לָהֶם כִּי הִנֵּה מָרְדוּ בִּרְצוֹנָם בֵּאלֹהֵיהֶם וְהַתַּלְמִידִים הָאֲהוּבִים נִלְקְחוּ מִן־הָאָרֶץ מִפְּנֵי עֲוֹנָם׃",
   "english": "And I did endeavor to preach unto this people, but my mouth was shut, and I was forbidden that I should preach unto them; for behold they had wilfully rebelled against their God; and the beloved disciples were taken away out of the land, because of their iniquity."
  },
  {
   "book": "Mormon",
-  "chapter": 0,
+  "chapter": 1,
   "verse": 17,
   "hebrew": "אַךְ נִשְׁאַרְתִּי בְּתוֹכָם וְנֶאֱסַר עָלַי לְהַטִּיף לָהֶם מִפְּנֵי קְשִׁי לִבָּם וּמִפְּנֵי קְשִׁי לִבָּם קֻלְּלָה הָאָרֶץ בַּעֲבוּרָם׃",
   "english": "But I did remain among them, but I was forbidden to preach unto them, because of the hardness of their hearts; and because of the hardness of their hearts the land was cursed for their sake."
  },
  {
   "book": "Mormon",
-  "chapter": 0,
+  "chapter": 1,
   "verse": 18,
-  "hebrew": "וְשׁוֹדְדֵי גַּדְיַנְטוֹן הָאֵלֶּה אֲשֶׁר בְּתוֹךְ הַלָּמָנִים מָלְאוּ אֶת־הָאָרֶץ עַד־אֲשֶׁר הֵחֵלּוּ יוֹשְׁבֶיהָ לְהַטְמִין אֶת־אוֹצְרוֹתֵיהֶם בָּאֲדָמָה וַיִּהְיוּ חַלְקְלַקִּים כִּי קִלֵּל יְהוָה אֶת־הָאָרֶץ וְלֹא יָכְלוּ לְהַחֲזִיקָם וְלֹא לְהָשִׁיבָם עוֹד׃",
+  "hebrew": "וְשׁוֹדְדֵי גָּדִיאַנְטוֹן הָאֵלֶּה אֲשֶׁר בְּתוֹךְ הַלָּמָנִים מָלְאוּ אֶת־הָאָרֶץ עַד־אֲשֶׁר הֵחֵלּוּ יוֹשְׁבֶיהָ לְהַטְמִין אֶת־אוֹצְרוֹתֵיהֶם בָּאֲדָמָה וַיִּהְיוּ חַלְקְלַקִּים כִּי קִלֵּל יְהוָה אֶת־הָאָרֶץ וְלֹא יָכְלוּ לְהַחֲזִיקָם וְלֹא לְהָשִׁיבָם עוֹד׃",
   "english": "And these Gadianton robbers, who were among the Lamanites, did infest the land, insomuch that the inhabitants thereof began to hide up their treasures in the earth; and they became slippery, because the Lord had cursed the land, that they could not hold them, nor retain them again."
  },
  {
   "book": "Mormon",
-  "chapter": 0,
+  "chapter": 1,
   "verse": 19,
   "hebrew": "וַיְהִי כִּי הָיוּ כְּשָׁפִים וּקְסָמִים וּלְחָשִׁים וַיִּפְעַל כֹּחַ הָרָע עַל־כָּל־פְּנֵי הָאָרֶץ עַד־לְמַלֵּא אֶת־כָּל־דִּבְרֵי אֲבִינָדִי וְגַם שְׁמוּאֵל הַלָּמָנִי׃",
   "english": "And it came to pass that there were sorceries, and witchcrafts, and magics; and the power of the evil one was wrought upon all the face of the land, even unto the fulfilling of all the words of Abinadi, and also Samuel the Lamanite."
@@ -40680,7 +40694,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 2,
   "verse": 14,
-  "hebrew": "וְלֹא־בָאוּ אֶל־יֵשׁוּעַ בְּלֵב נִשְׁבָּר וְרוּחַ נִדְכָּאָה כִּי אִם־קִלְּלוּ אֶת־אֱלֹהִים וַיְבַקְשׁוּ לָמוּת וְאַף־עַל־פִּי־כֵן נִלְחֲמוּ בַּחֶרֶב עַל־חַיֵּיהֶם׃",
+  "hebrew": "וְלֹא־בָאוּ אֶל־יֵשׁוּעַ בְּלֵב־נִשְׁבָּר וְרוּחַ נִדְכָּה כִּי אִם־קִלְּלוּ אֶת־אֱלֹהִים וַיְבַקְשׁוּ לָמוּת וְאַף־עַל־פִּי־כֵן נִלְחֲמוּ בַּחֶרֶב עַל־חַיֵּיהֶם׃",
   "english": "And they did not come unto Jesus with broken hearts and contrite spirits, but they did curse God, and wish to die. Nevertheless they would struggle with the sword for their lives."
  },
  {
@@ -40764,21 +40778,21 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 2,
   "verse": 26,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר נָסוּ וַנִּרְדֹּף אַחֲרֵיהֶם בְּצִבְאוֹתֵינוּ וַנִּפְגַּע בָּהֶם שֵׁנִית וַנַּכֵּם אַךְ לֹא־הָיָה עֹז יְהוָה אִתָּנוּ הֵן נֶעֱזַבְנוּ לְנַפְשֵׁנוּ וְרוּחַ יְהוָה לֹא־שָׁכְנָה בָנוּ וְעַל־כֵּן הָיִינוּ חַלָּשִׁים כְּאַחֵינוּ׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר נָסוּ וַנִּרְדֹּף אַחֲרֵיהֶם בְּצִבְאוֹתֵינוּ וַנִּפְגַּע בָּהֶם שֵׁנִית וַנַּכֵּם אַךְ לֹא־הָיָה עֹז יְהוָה אִתָּנוּ הֵן נֶעֱזַבְנוּ לְנַפְשֵׁנוּ וְרוּחַ יְהוָה לֹא־שָׁכַן בָנוּ וְעַל־כֵּן הָיִינוּ חַלָּשִׁים כְּאַחֵינוּ׃",
   "english": "And it came to pass that when they had fled we did pursue them with our armies, and did meet them again, and did beat them; nevertheless the strength of the Lord was not with us; yea, we were left to ourselves, that the Spirit of the Lord did not abide in us; therefore we had become weak like unto our brethren."
  },
  {
   "book": "Mormon",
   "chapter": 2,
   "verse": 27,
-  "hebrew": "וַיִּדְאַב לִבִּי מִפְּנֵי הָאָסוֹן הַגָּדוֹל הַזֶּה לְעַמִּי מִפְּנֵי רִשְׁעָתָם וְתוֹעֲבוֹתֵיהֶם אַךְ הִנֵּה יָצָאנוּ נֶגֶד הַלָּמָנִים וְשׁוֹדְדֵי גַּדְיַנְטוֹן עַד אֲשֶׁר יָרַשְׁנוּ שֵׁנִית אֶת־אַרְצוֹת נַחֲלָתֵנוּ׃",
+  "hebrew": "וַיִּדְאַב לִבִּי מִפְּנֵי הָאָסוֹן הַגָּדוֹל הַזֶּה לְעַמִּי מִפְּנֵי רִשְׁעָתָם וְתוֹעֲבוֹתֵיהֶם אַךְ הִנֵּה יָצָאנוּ נֶגֶד הַלָּמָנִים וְשׁוֹדְדֵי גָּדִיאַנְטוֹן עַד אֲשֶׁר יָרַשְׁנוּ שֵׁנִית אֶת־אַרְצוֹת נַחֲלָתֵנוּ׃",
   "english": "And my heart did sorrow because of this the great calamity of my people, because of their wickedness and their abominations. But behold, we did go forth against the Lamanites and the robbers of Gadianton, until we had again taken possession of the lands of our inheritance."
  },
  {
   "book": "Mormon",
   "chapter": 2,
   "verse": 28,
-  "hebrew": "וַתַּעֲבֹר הַשָּׁנָה הַשְּׁלֹשׁ מֵאוֹת אַרְבָּעִים וָתֵשַׁע וּבַשָּׁנָה הַשְּׁלֹשׁ מֵאוֹת וַחֲמִשִּׁים כָּרַתְנוּ בְרִית עִם־הַלָּמָנִים וְשׁוֹדְדֵי גַּדְיַנְטוֹן וּבָהּ חָלַקְנוּ אֶת־אַרְצוֹת נַחֲלָתֵנוּ׃",
+  "hebrew": "וַתַּעֲבֹר הַשָּׁנָה הַשְּׁלֹשׁ מֵאוֹת אַרְבָּעִים וָתֵשַׁע וּבַשָּׁנָה הַשְּׁלֹשׁ מֵאוֹת וַחֲמִשִּׁים כָּרַתְנוּ בְרִית עִם־הַלָּמָנִים וְשׁוֹדְדֵי גָּדִיאַנְטוֹן וּבָהּ חָלַקְנוּ אֶת־אַרְצוֹת נַחֲלָתֵנוּ׃",
   "english": "And the three hundred and forty and ninth year had passed away. And in the three hundred and fiftieth year we made a treaty with the Lamanites and the robbers of Gadianton, in which we did get the lands of our inheritance divided."
  },
  {
@@ -40827,7 +40841,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 3,
   "verse": 6,
-  "hebrew": "וְשֵׁם הִצַּבְנוּ אֶת־צְבָאוֹתֵינוּ לַעֲצֹר אֶת־צִבְאוֹת הַלָּמָנִים לְבִלְתִּי יִירְשׁוּ מֵאַדְמוֹתֵינוּ לָכֵן בִּצַּרְנוּ נֶגְדָּם בְּכָל־כֹּחֵנוּ׃",
+  "hebrew": "וְשָׁם הִצַּבְנוּ אֶת־צְבָאוֹתֵינוּ לַעֲצֹר אֶת־צִבְאוֹת הַלָּמָנִים לְבִלְתִּי יִירְשׁוּ מֵאַדְמוֹתֵינוּ לָכֵן בִּצַּרְנוּ נֶגְדָּם בְּכָל־כֹּחֵנוּ׃",
   "english": "And there we did place our armies, that we might stop the armies of the Lamanites, that they might not get possession of any of our lands; therefore we did fortify against them with all our force."
  },
  {
@@ -41030,7 +41044,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 4,
   "verse": 13,
-  "hebrew": "וַיְהִי כִּי יָרְשׁוּ הַלָּמָנִים אֶת־עִיר הַשְּׁמָמָה וְזֹאת מִפְּנֵי כִּי עָלָה מִסְפָּרָם עַל־מִסְפַּר הַנֶפִים׃",
+  "hebrew": "וַיְהִי כִּי יָרְשׁוּ הַלָּמָנִים אֶת־עִיר הַשְּׁמָמָה וְזֹאת מִפְּנֵי כִּי עָלָה מִסְפָּרָם עַל־מִסְפַּר הַנֶּפִיִּים׃",
   "english": "And it came to pass that the Lamanites did take possession of the city Desolation, and this because their number did exceed the number of the Nephites."
  },
  {
@@ -41065,28 +41079,28 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 4,
   "verse": 18,
-  "hebrew": "וּמֵהָעֵת הַזֹּאת וָהָלְאָה לֹא־הָיָה עוֹד לַנֶפִים כֹּחַ עַל־הַלָּמָנִים כִּי הֵחֵלוּ לְהִמָּחוֹת מִפְּנֵיהֶם כְּטַל מִפְּנֵי הַשֶּׁמֶשׁ׃",
+  "hebrew": "וּמֵהָעֵת הַזֹּאת וָהָלְאָה לֹא־הָיָה עוֹד לַנְּפִיִּים כֹּחַ עַל־הַלָּמָנִים כִּי הֵחֵלוּ לְהִמָּחוֹת מִפְּנֵיהֶם כְּטַל מִפְּנֵי הַשֶּׁמֶשׁ׃",
   "english": "And from this time forth did the Nephites gain no power over the Lamanites, but began to be swept off by them even as a dew before the sun."
  },
  {
   "book": "Mormon",
   "chapter": 4,
   "verse": 19,
-  "hebrew": "וַיְהִי כִּי יָרְדוּ הַלָּמָנִים נֶגֶד עִיר הַשְּׁמָמָה וַתְּהִי מִלְחָמָה קָשָׁה מְאֹד בְּאֶרֶץ הַשְּׁמָמָה אֲשֶׁר בָּהּ הִכּוּ אֶת־הַנֶפִים׃",
+  "hebrew": "וַיְהִי כִּי יָרְדוּ הַלָּמָנִים נֶגֶד עִיר הַשְּׁמָמָה וַתְּהִי מִלְחָמָה קָשָׁה מְאֹד בְּאֶרֶץ הַשְּׁמָמָה אֲשֶׁר בָּהּ הִכּוּ אֶת־הַנֶּפִיִּים׃",
   "english": "And it came to pass that the Lamanites did come down against the city Desolation; and there was an exceedingly sore battle fought in the land Desolation, in the which they did beat the Nephites."
  },
  {
   "book": "Mormon",
   "chapter": 4,
   "verse": 20,
-  "hebrew": "וַיָּנוּסוּ שֵׁנִית מִפְּנֵיהֶם וַיָּבֹאוּ אֶל־עִיר בֹּעַז וְשֵׁם עָמְדוּ נֶגֶד הַלָּמָנִים בְּאֹמֶץ רַב עַד־אֲשֶׁר לֹא הִכּוּם הַלָּמָנִים עַד־בּוֹאָם שֵׁנִית בַּפַּעַם הַשְּׁנִיָּה׃",
+  "hebrew": "וַיָּנוּסוּ שֵׁנִית מִפְּנֵיהֶם וַיָּבֹאוּ אֶל־עִיר בֹּעַז וְשָׁם עָמְדוּ נֶגֶד הַלָּמָנִים בְּאֹמֶץ רַב עַד־אֲשֶׁר לֹא הִכּוּם הַלָּמָנִים עַד־בּוֹאָם שֵׁנִית בַּפַּעַם הַשְּׁנִיָּה׃",
   "english": "And they fled again from before them, and they came to the city Boaz; and there they did stand against the Lamanites with exceeding boldness, insomuch that the Lamanites did not beat them until they had come again the second time."
  },
  {
   "book": "Mormon",
   "chapter": 4,
   "verse": 21,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר בָּאוּ בַּפַּעַם הַשְּׁנִיָּה נִדְחוּ הַנְּפִיִּים וַיֵּהָרְגוּ בְּהֶרֶג רַב מְאֹד וְנְשֵׁיהֶם וְיַלְדֵיהֶם הָקְרְבוּ שֵׁנִית לָאֱלִילִים׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר בָּאוּ בַּפַּעַם הַשְּׁנִיָּה נִדְחוּ הַנְּפִיִּים וַיֵּהָרְגוּ בְּהֶרֶג רַב מְאֹד וּנְשֵׁיהֶם וְיַלְדֵיהֶם הָקְרְבוּ שֵׁנִית לָאֱלִילִים׃",
   "english": "And when they had come the second time, the Nephites were driven and slaughtered with an exceedingly great slaughter; their women and their children were again sacrificed unto idols."
  },
  {
@@ -41212,7 +41226,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 5,
   "verse": 16,
-  "hebrew": "כִּי הִנֵּה רוּחַ יְהוָה כְּבָר חָדְלָה לְהֵאָבֵק עִם־אֲבוֹתֵיהֶם וְהֵם בְּלִי מָשִׁיחַ וֵאלֹהִים בָּעוֹלָם וְנִדָּפִים הֵם כַּמּוֹץ לִפְנֵי הָרוּחַ׃",
+  "hebrew": "כִּי הִנֵּה רוּחַ יְהוָה כְּבָר חָדַל לְהֵאָבֵק עִם־אֲבוֹתֵיהֶם וְהֵם בְּלִי מָשִׁיחַ וֵאלֹהִים בָּעוֹלָם וְנִדָּפִים הֵם כַּמּוֹץ לִפְנֵי הָרוּחַ׃",
   "english": "For behold, the Spirit of the Lord hath already ceased to strive with their fathers; and they are without Christ and God in the world; and they are driven about as chaff before the wind."
  },
  {
@@ -41282,14 +41296,14 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 6,
   "verse": 2,
-  "hebrew": "וָאֶכְתֹּב מוֹרְמוֹן אִגֶּרֶת אֶל־מֶלֶךְ הַלָּמָנִים וָאֶשְׁאַל מֵאִתּוֹ לָתֵת לָנוּ לֶאֱסֹף אֶת־עַמֵּנוּ אֶל־אֶרֶץ כּוּמוֹרָה אֶל־הַגִּבְעָה אֲשֶׁר־נִקְרְאָה כּוּמוֹרָה וְשֵׁם נוּכַל לְהִלָּחֵם בָּם׃",
+  "hebrew": "וָאֶכְתֹּב מוֹרְמוֹן אִגֶּרֶת אֶל־מֶלֶךְ הַלָּמָנִים וָאֶשְׁאַל מֵאִתּוֹ לָתֵת לָנוּ לֶאֱסֹף אֶת־עַמֵּנוּ אֶל־אֶרֶץ כּוּמוֹרָה אֶל־הַגִּבְעָה אֲשֶׁר־נִקְרְאָה כּוּמוֹרָה וְשָׁם נוּכַל לְהִלָּחֵם בָּם׃",
   "english": "And I, Mormon, wrote an epistle unto the king of the Lamanites, and desired of him that he would grant unto us that we might gather together our people unto the land of Cumorah, by a hill which was called Cumorah, and there we could give them battle."
  },
  {
   "book": "Mormon",
   "chapter": 6,
   "verse": 3,
-  "hebrew": "וַיְהִי כִּי נָתַן לִי מֶלֶךְ הַלָּמָנִים אֵת אֲשֶׁר שָׁאָלְתִּי׃",
+  "hebrew": "וַיְהִי כִּי נָתַן לִי מֶלֶךְ הַלָּמָנִים אֶת־אֲשֶׁר שָׁאָלְתִּי׃",
   "english": "And it came to pass that the king of the Lamanites did grant unto me the thing which I desired."
  },
  {
@@ -41366,7 +41380,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 6,
   "verse": 14,
-  "hebrew": "וְלֶמַח נָפַל עִם־עֲשֶׂרֶת אֲלָפָיו וְגִלְגַּל נָפַל עִם־עֲשֶׂרֶת אֲלָפָיו וְלִמְהָה נָפַל עִם־עֲשֶׂרֶת אֲלָפָיו וְיְנֵאוּם נָפַל עִם־עֲשֶׂרֶת אֲלָפָיו וְכוּמֵנִיהָה וּמוֹרוֹנִיהָה וְאַנְטְיוֹנוּם וְשִׁבְלוֹם וְשֵׁם וְיוֹשׁ נָפְלוּ אִישׁ עִם־עֲשֶׂרֶת אֲלָפָיו׃",
+  "hebrew": "וְלֶמַח נָפַל עִם־עֲשֶׂרֶת אֲלָפָיו וְגִלְגַּל נָפַל עִם־עֲשֶׂרֶת אֲלָפָיו וְלִמְהָה נָפַל עִם־עֲשֶׂרֶת אֲלָפָיו וִינֵאוּם נָפַל עִם־עֲשֶׂרֶת אֲלָפָיו וְכוּמֵנִיהָה וּמוֹרוֹנִיהָה וְאַנְטְיוֹנוּם וְשִׁבְלוֹם וְשֵׁם וְיוֹשׁ נָפְלוּ אִישׁ עִם־עֲשֶׂרֶת אֲלָפָיו׃",
   "english": "And Lamah had fallen with his ten thousand; and Gilgal had fallen with his ten thousand; and Limhah had fallen with his ten thousand; and Jeneum had fallen with his ten thousand; and Cumenihah, and Moronihah, and Antionum, and Shiblom, and Shem, and Josh, had fallen with their ten thousand each."
  },
  {
@@ -41471,7 +41485,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 7,
   "verse": 7,
-  "hebrew": "וְהוּא פָּעַל גְּאֻלַּת הָעוֹלָם וּבָהּ הַנִּמְצָא נָקִי לְפָנָיו בְּיוֹם הַמִּשְׁפָּט יִנָּתֶן לוֹ לָשֶׁבֶת בִּמְעוֹן אֱלֹהִים בְּמַלְכוּתוֹ לְשׁוֹרֵר תְּהִלּוֹת בְּלִי הֶפְסֵק עִם־מַקְהֲלוֹת מָרוֹם לָאָב וְלַבֵּן וְלְרוּחַ הַקֹּדֶשׁ אֲשֶׁר הֵם אֵל אֶחָד בְּאֹשֶׁר אֲשֶׁר אֵין־לוֹ קֵץ׃",
+  "hebrew": "וְהוּא פָּעַל גְּאֻלַּת הָעוֹלָם וּבָהּ הַנִּמְצָא נָקִי לְפָנָיו בְּיוֹם הַמִּשְׁפָּט יִנָּתֶן לוֹ לָשֶׁבֶת בִּמְעוֹן אֱלֹהִים בְּמַלְכוּתוֹ לְשׁוֹרֵר תְּהִלּוֹת בְּלִי הֶפְסֵק עִם־מַקְהֲלוֹת מָרוֹם לָאָב וְלַבֵּן וּלְרוּחַ הַקֹּדֶשׁ אֲשֶׁר הֵם אֵל אֶחָד בְּאֹשֶׁר אֲשֶׁר אֵין־לוֹ קֵץ׃",
   "english": "And he hath brought to pass the redemption of the world, whereby he that is found guiltless before him at the judgment day hath it given unto him to dwell in the presence of God in his kingdom, to sing ceaseless praises with the choirs above, unto the Father, and unto the Son, and unto the Holy Ghost, which are one God, in a state of happiness which hath no end."
  },
  {
@@ -41527,7 +41541,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 8,
   "verse": 5,
-  "hebrew": "הִנֵּה אָבִי עָשָׂה אֶת־הַסֵּפֶר הַזֶּה וַיִּכְתֹּב אֶת־חֶפְצוֹ וְהִנֵּה הָיִיתִי כֹתֵב גַּם־אָנִי לוּ הָיָה לִי מָקוֹם עַל־הַלּוּחוֹת אַךְ אֵין לִי וְגַם־מַתֶּכֶת אֵין לִי כִּי לְבַדִּי אָנֹכִי אָבִי נָפַל בַּמִּלְחָמָה וְכָל־מִשְׁפַּחְתִּי וְאֵין־לִי  רֵעִים וְאֵין־לִי אָנָה לָלֶכֶת וְלֹא יָדַעְתִּי כַּמָּה יִתֵּן יְהוָה לִי לִחְיוֹת׃",
+  "hebrew": "הִנֵּה אָבִי עָשָׂה אֶת־הַסֵּפֶר הַזֶּה וַיִּכְתֹּב אֶת־חֶפְצוֹ וְהִנֵּה הָיִיתִי כֹּתֵב גַּם־אָנִי לוּ הָיָה לִי מָקוֹם עַל־הַלּוּחוֹת אַךְ אֵין לִי וְגַם־מַתֶּכֶת אֵין לִי כִּי לְבַדִּי אָנֹכִי אָבִי נָפַל בַּמִּלְחָמָה וְכָל־מִשְׁפַּחְתִּי וְאֵין־לִי  רֵעִים וְאֵין־לִי אָנָה לָלֶכֶת וְלֹא יָדַעְתִּי כַּמָּה יִתֵּן יְהוָה לִי לִחְיוֹת׃",
   "english": "Behold, my father hath made this record, and he hath written the intent thereof. And behold, I would write it also if I had room upon the plates, but I have not; and ore I have none, for I am  alone. My father hath been slain in battle, and all my kinsfolk, and I have not friends nor whither to go; and how long the Lord will suffer that I may live I know not."
  },
  {
@@ -41541,7 +41555,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 8,
   "verse": 7,
-  "hebrew": "וְהִנֵּה רָדְפוּ הַלָּמָנִים אֶת־עַמִּי הַנְּפִיִּים מֵעִיר לְעִיר וּמִמָּקוֹם לְמָקוֹם עַד אֲשֶׁר אֵינָם עוֹד וַיְהִי מַפַּלְתָּם גְּדוֹלָה הֵן גָּדוֹל וְנִפְלָא שֶׁבֶר עַמִּי הַנֶפִים׃",
+  "hebrew": "וְהִנֵּה רָדְפוּ הַלָּמָנִים אֶת־עַמִּי הַנְּפִיִּים מֵעִיר לְעִיר וּמִמָּקוֹם לְמָקוֹם עַד אֲשֶׁר אֵינָם עוֹד וַיְהִי מַפַּלְתָּם גְּדוֹלָה הֵן גָּדוֹל וְנִפְלָא שֶׁבֶר עַמִּי הַנֶּפִיִּים׃",
   "english": "And behold, the Lamanites have hunted my people, the Nephites, down from city to city and from place to place, even until they are no more; and great has been their fall; yea, great and marvelous is the destruction of my people, the Nephites."
  },
  {
@@ -41618,7 +41632,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 8,
   "verse": 18,
-  "hebrew": "וְהָאוֹמֵר הַרְאֵנִי אוֹ תֻכּוּ יִשָּׁמֶר פֶּן־יְצַוֶּה אֵת אֲשֶׁר אָסַר יְהוָה׃",
+  "hebrew": "וְהָאוֹמֵר הַרְאֵנִי אוֹ תֻכּוּ יִשָּׁמֶר פֶּן־יְצַוֶּה אֶת־אֲשֶׁר אָסַר יְהוָה׃",
   "english": "And he that saith: Show unto me, or ye shall be smitten—let him beware lest he commandeth that which is forbidden of the Lord."
  },
  {
@@ -42010,7 +42024,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 9,
   "verse": 33,
-  "hebrew": "וְאִלּוּ הָיוּ לוּחוֹתֵינוּ גְּדוֹלִים דַּיָּם הָיִינוּ כוֹתְבִים בְּעִבְרִית אַךְ גַּם הָעִבְרִית שֻׁנְּתָה בְיָדֵינוּ וְאִם־יָכֹלְנוּ לִכְתֹּב בְּעִבְרִית הִנֵּה לֹא הָיָה מוּם בְּסִפְרֵנוּ׃",
+  "hebrew": "וְאִלּוּ הָיוּ לוּחוֹתֵינוּ גְּדוֹלִים דַּיָּם הָיִינוּ כּוֹתְבִים בְּעִבְרִית אַךְ גַּם הָעִבְרִית שֻׁנְּתָה בְיָדֵינוּ וְאִם־יָכֹלְנוּ לִכְתֹּב בְּעִבְרִית הִנֵּה לֹא הָיָה מוּם בְּסִפְרֵנוּ׃",
   "english": "And if our plates had been sufficiently large we should have written in Hebrew; but the Hebrew hath been altered by us also; and if we could have written in Hebrew, behold, ye would have had no imperfection in our record."
  },
  {
@@ -42262,7 +42276,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 1,
   "verse": 32,
-  "hebrew": "וְקִיב הָיָה בֶן־אוֹרִיהָה אֲשֶׁר הָיָה בֶן־יָרֶד׃",
+  "hebrew": "וְקִיב הָיָה בֶן־אוֹרִיהָה אֲשֶׁר הָיָה בֶן־יֶרֶד׃",
   "english": "And Kib was the son of Orihah, who was the son of Jared;"
  },
  {
@@ -42332,14 +42346,14 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 1,
   "verse": 42,
-  "hebrew": "וְכַאֲשֶׁר תַּעֲשֶׂה זֹאת תֵּלֵךְ בְּרֹאשָׁם אֶל־הָעֵמֶק אֲשֶׁר צָפוֹנָה וְשֵׁם אֶפָּגֵשׁ עִמְּךָ וְאֵלֵךְ לְפָנֶיךָ אֶל־אֶרֶץ נִבְחֶרֶת מִכָּל־אַרְצוֹת הָאָרֶץ׃",
+  "hebrew": "וְכַאֲשֶׁר תַּעֲשֶׂה זֹאת תֵּלֵךְ בְּרֹאשָׁם אֶל־הָעֵמֶק אֲשֶׁר צָפוֹנָה וְשָׁם אֶפָּגֵשׁ עִמְּךָ וְאֵלֵךְ לְפָנֶיךָ אֶל־אֶרֶץ נִבְחֶרֶת מִכָּל־אַרְצוֹת הָאָרֶץ׃",
   "english": "And when thou hast done this thou shalt go at the head of them down into the valley which is northward. And there will I meet thee, and I will go before thee into a land which is choice above all the lands of the earth."
  },
  {
   "book": "Ether",
   "chapter": 1,
   "verse": 43,
-  "hebrew": "וְשֵׁם אֲבָרֶכְךָ וְאֶת־זַרְעֶךָ וַאֲקִים לִי מִזַּרְעֲךָ וּמִזֶּרַע אָחִיךָ וְהַהֹלְכִים אִתְּךָ גּוֹי גָּדוֹל וְלֹא יִהְיֶה גּוֹי גָּדוֹל מִן־הַגּוֹי אֲשֶׁר אָקִים לִי מִזַּרְעֲךָ עַל־כָּל־פְּנֵי הָאָרֶץ וְכָכָה אֶעֱשֶׂה לְךָ כִּי זֶה זְמַן רַב זְעַקְתֶּם אֵלָי׃",
+  "hebrew": "וְשָׁם אֲבָרֶכְךָ וְאֶת־זַרְעֶךָ וַאֲקִים לִי מִזַּרְעֲךָ וּמִזֶּרַע אָחִיךָ וְהַהֹלְכִים אִתְּךָ גּוֹי גָּדוֹל וְלֹא יִהְיֶה גּוֹי גָּדוֹל מִן־הַגּוֹי אֲשֶׁר אָקִים לִי מִזַּרְעֲךָ עַל־כָּל־פְּנֵי הָאָרֶץ וְכָכָה אֶעֱשֶׂה לְךָ כִּי זֶה זְמַן רַב זְעַקְתֶּם אֵלָי׃",
   "english": "And there will I bless thee and thy seed, and raise up unto me of thy seed, and of the seed of thy brother, and they who shall go with thee, a great nation. And there shall be none greater than the nation which I will raise up unto me of thy seed, upon all the face of the earth. And thus I will do unto thee because this long time ye have cried unto me."
  },
  {
@@ -42458,7 +42472,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 2,
   "verse": 17,
-  "hebrew": "וַיִּבְנוּ אוֹתָן בְּאֹפֶן אֲשֶׁר הָיוּ אֲטוּמוֹת מְאֹד עַד אֲשֶׁר יַחְזִיקוּ מַיִם כַּקְּעָרָה וְתַחְתִּיתָן אֲטוּמָה כַּקְּעָרָה וְדָפְנֵיהֶן אֲטוּמוֹת כַּקְּעָרָה וְקְצוֹתֵיהֶן מְחֻדָּדוֹת וְרֹאשָׁן אָטוּם כַּקְּעָרָה וְאָרְכָּן כְּאֹרֶךְ עֵץ וְדַלְתָּן בְּהִסָּגְרָהּ אֲטוּמָה כַּקְּעָרָה׃",
+  "hebrew": "וַיִּבְנוּ אוֹתָן בְּאֹפֶן אֲשֶׁר הָיוּ אֲטוּמוֹת מְאֹד עַד אֲשֶׁר יַחְזִיקוּ מַיִם כַּקְּעָרָה וְתַחְתִּיתָן אֲטוּמָה כַּקְּעָרָה וְדָפְנֵיהֶן אֲטוּמוֹת כַּקְּעָרָה וּקְצוֹתֵיהֶן מְחֻדָּדוֹת וְרֹאשָׁן אָטוּם כַּקְּעָרָה וְאָרְכָּן כְּאֹרֶךְ עֵץ וְדַלְתָּן בְּהִסָּגְרָהּ אֲטוּמָה כַּקְּעָרָה׃",
   "english": "And they were built after a manner that they were exceedingly tight, even that they would hold water like unto a dish; and the bottom thereof was tight like unto a dish; and the sides thereof were tight like unto a dish; and the ends thereof were peaked; and the top thereof was tight like unto a dish; and the length thereof was the length of a tree; and the door thereof, when it was shut, was tight like unto a dish."
  },
  {
@@ -42633,7 +42647,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 3,
   "verse": 17,
-  "hebrew": "וְעַתָּה כַּאֲשֶׁר אֲנִי מוֹרוֹנִי אָמַרְתִּי כִּי לֹא אוּכַל לָתֵת סִפּוּר שָׁלֵם מִן־הַדְּבָרִים הָאֵלֶּה הַכְּתוּבִים לָכֵן דַּי לִי לֵאמֹר כִּי הֶרְאָה יֵשׁוּעַ אֶת־עַצְמוֹ לָאִישׁ הַזֶּה בָּרוּחַ כַּדֶּרֶךְ וְכַדְּמוּת הַגּוּף הַהוּא כַּאֲשֶׁר הֶרְאָה אֶת־עַצְמוֹ לַנֶפִים׃",
+  "hebrew": "וְעַתָּה כַּאֲשֶׁר אֲנִי מוֹרוֹנִי אָמַרְתִּי כִּי לֹא אוּכַל לָתֵת סִפּוּר שָׁלֵם מִן־הַדְּבָרִים הָאֵלֶּה הַכְּתוּבִים לָכֵן דַּי לִי לֵאמֹר כִּי הֶרְאָה יֵשׁוּעַ אֶת־עַצְמוֹ לָאִישׁ הַזֶּה בָּרוּחַ כַּדֶּרֶךְ וְכַדְּמוּת הַגּוּף הַהוּא כַּאֲשֶׁר הֶרְאָה אֶת־עַצְמוֹ לַנְּפִיִּים׃",
   "english": "And now, as I, Moroni, said I could not make a full account of these things which are written therefore it sufficeth me to say that Jesus showed himself unto this man in the spirit, even after the manner and in the likeness of the same body even as he showed himself unto the Nephites."
  },
  {
@@ -42689,7 +42703,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 3,
   "verse": 25,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר דִּבֶּר יְהוָה אֶת־הַדְּבָרִים הָאֵלֶּה וַיַּרְאֵהוּ לַאֲחִי יֶרֶד אֶת־כָּל־יוֹשְׁבֵי הָאָרֶץ אֲשֶׁר הָיוּ וְגַם אֵת כָּל־אֲשֶׁר יִהְיוּ וְלֹא מָנַע אוֹתָם מֵעֵינָיו עַד־קְצוֹת הָאָרֶץ׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר דִּבֶּר יְהוָה אֶת־הַדְּבָרִים הָאֵלֶּה וַיַּרְאֵהוּ לַאֲחִי יֶרֶד אֶת־כָּל־יוֹשְׁבֵי הָאָרֶץ אֲשֶׁר הָיוּ וְגַם אֶת־כָּל־אֲשֶׁר יִהְיוּ וְלֹא מָנַע אוֹתָם מֵעֵינָיו עַד־קְצוֹת הָאָרֶץ׃",
   "english": "And when the Lord had said these words, he showed unto the brother of Jared all the inhabitants of the earth which had been, and also all that would be; and he withheld them not from his sight, even unto the ends of the earth."
  },
  {
@@ -42738,7 +42752,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 4,
   "verse": 4,
-  "hebrew": "הִנֵּה כָתַבְתִּי עַל־הַלּוּחוֹת הָאֵלֶּה אֶת־הַדְּבָרִים בֶּאֱמֶת אֲשֶׁר רָאָה אֲחִי יֶרֶד וּמֵעוֹלָם לֹא נִגְלוּ דְּבָרִים גְּדוֹלִים מֵאֲשֶׁר נִגְלוּ לַאֲחִי יֶרֶד׃",
+  "hebrew": "הִנֵּה כָּתַבְתִּי עַל־הַלּוּחוֹת הָאֵלֶּה אֶת־הַדְּבָרִים בֶּאֱמֶת אֲשֶׁר רָאָה אֲחִי יֶרֶד וּמֵעוֹלָם לֹא נִגְלוּ דְּבָרִים גְּדוֹלִים מֵאֲשֶׁר נִגְלוּ לַאֲחִי יֶרֶד׃",
   "english": "Behold, I have written upon these plates the very things which the brother of Jared saw; and there never were greater things made manifest than those which were made manifest unto the brother of Jared."
  },
  {
@@ -42815,7 +42829,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 4,
   "verse": 15,
-  "hebrew": "הִנֵּה כַּאֲשֶׁר תִּקְרְעוּ אֶת־מָסַךְ אֵין הָאֱמוּנָה הַגּוֹרֵם לָכֶם לְהִשָּׁאֵר בְּדֶרֶךְ רִשְׁעֲכֶם הַנּוֹרָא וּקְשִׁי לְבַבְכֶם וְעִוְרוֹן דַּעְתְּכֶם אָז יִגָּלוּ הַדְּבָרִים הַגְּדוֹלִים וְהַנִּפְלָאִים אֲשֶׁר נִצְפְּנוּ מִכֶּם מִמּוֹסְדוֹת תֵּבֵל הֵן כַּאֲשֶׁר תִּקְרְאוּ אֶל־הָאָב בִּשְׁמִי בְּלֵב נִשְׁבָּר וְרוּחַ נִדְכָּאָה אָז תֵּדְעוּ כִּי זָכַר הָאָב אֶת־הַבְּרִית אֲשֶׁר כָּרַת עִם־אֲבוֹתֵיכֶם הוֹי בֵּית יִשְׂרָאֵל׃",
+  "hebrew": "הִנֵּה כַּאֲשֶׁר תִּקְרְעוּ אֶת־מָסַךְ אֵין הָאֱמוּנָה הַגּוֹרֵם לָכֶם לְהִשָּׁאֵר בְּדֶרֶךְ רִשְׁעֲכֶם הַנּוֹרָא וּקְשִׁי לְבַבְכֶם וְעִוְרוֹן דַּעְתְּכֶם אָז יִגָּלוּ הַדְּבָרִים הַגְּדוֹלִים וְהַנִּפְלָאִים אֲשֶׁר נִצְפְּנוּ מִכֶּם מִמּוֹסְדוֹת תֵּבֵל הֵן כַּאֲשֶׁר תִּקְרְאוּ אֶל־הָאָב בִּשְׁמִי בְּלֵב־נִשְׁבָּר וְרוּחַ נִדְכָּה אָז תֵּדְעוּ כִּי זָכַר הָאָב אֶת־הַבְּרִית אֲשֶׁר כָּרַת עִם־אֲבוֹתֵיכֶם הוֹי בֵּית יִשְׂרָאֵל׃",
   "english": "Behold, when ye shall rend that veil of unbelief which doth cause you to remain in your awful state of wickedness, and hardness of heart, and blindness of mind, then shall the great and marvelous things which have been hid up from the foundation of the world from you—yea, when ye shall call upon the Father in my name, with a broken heart and a contrite spirit, then shall ye know that the Father hath remem–  bered the covenant which he made unto your fathers, O house of Israel."
  },
  {
@@ -42983,7 +42997,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 6,
   "verse": 14,
-  "hebrew": "וְלְיֶרֶד אַרְבָּעָה בָנִים וַיִּקָּרְאוּ יָקוֹם וְגִלְגָּה וּמָהָה וְאוֹרִיהָה׃",
+  "hebrew": "וּלְיֶרֶד אַרְבָּעָה בָנִים וַיִּקָּרְאוּ יָקוֹם וְגִלְגָּה וּמָהָה וְאוֹרִיהָה׃",
   "english": "And Jared had four sons; and they were called Jacom, and Gilgah, and Mahah, and Orihah."
  },
  {
@@ -43123,7 +43137,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 7,
   "verse": 4,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר הָיָה כּוֹרִיהוֹר בֶּן־שְׁלֹשִׁים וּשְׁתַּיִם שָׁנָה וַיִּמְרֹד בְּאָבִיו וַיַּעֲבֹר וַיֵּשֶׁב בְּאֶרֶץ נְהוֹר וַיּוֹלֶד בָּנִים וּבָנוֹת וַיִּהְיוּ יָפִים מְאֹד וַיַּט כּוֹרִיהוֹר עַם רַב אַחֲרָיו׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר הָיָה כּוֹרִיהוֹר בֶּן־שְׁלֹשִׁים וּשְׁתַּיִם שָׁנָה וַיִּמְרֹד בְּאָבִיו וַיַּעֲבֹר וַיֵּשֶׁב בְּאֶרֶץ נִחוֹר וַיּוֹלֶד בָּנִים וּבָנוֹת וַיִּהְיוּ יָפִים מְאֹד וַיַּט כּוֹרִיהוֹר עַם רַב אַחֲרָיו׃",
   "english": "And when Corihor was thirty and two years old he rebelled against his father, and went over and dwelt in the land of Nehor; and he begat sons and daughters, and they became exceedingly fair; wherefore Corihor drew away many people after him."
  },
  {
@@ -43158,7 +43172,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 7,
   "verse": 9,
-  "hebrew": "וַיָּבֹא אֶל־הַר אֶפְרַיִם וַיָּתַךְ מִן־הָהָר וַיַּעַשׂ חֲרָבוֹת בַּרְזֶל לַאֲשֶׁר מָשַׁךְ אַחֲרָיו וְאַחֲרֵי אֲשֶׁר חִזְּקָם בַּחֲרָבוֹת וַיָּשָׁב אֶל־עִיר נְהוֹר וַיִּלָּחֶם עִם־אָחִיו כּוֹרִיהוֹר וּבָזֹאת לָכַד אֶת־הַמַּמְלָכָה וַיְשִׁיבֶהָ לְאָבִיו קִיב׃",
+  "hebrew": "וַיָּבֹא אֶל־הַר אֶפְרַיִם וַיָּתַךְ מִן־הָהָר וַיַּעַשׂ חֲרָבוֹת בַּרְזֶל לַאֲשֶׁר מָשַׁךְ אַחֲרָיו וְאַחֲרֵי אֲשֶׁר חִזְּקָם בַּחֲרָבוֹת וַיָּשָׁב אֶל־עִיר נִחוֹר וַיִּלָּחֶם עִם־אָחִיו כּוֹרִיהוֹר וּבָזֹאת לָכַד אֶת־הַמַּמְלָכָה וַיְשִׁיבֶהָ לְאָבִיו קִיב׃",
   "english": "Wherefore, he came to the hill Ephraim, and he did molten out of the hill, and made swords out of steel for those whom he had drawn away with him; and after he had armed them with swords he returned to the city Nehor and gave battle unto his brother Corihor, by which means he obtained the kingdom and restored it unto his father Kib."
  },
  {
@@ -43249,7 +43263,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 7,
   "verse": 22,
-  "hebrew": "וְלְכוֹהוֹר הָיָה בֵן וּשְׁמוֹ נִמְרוֹד וַיַּעֲזֹב נִמְרוֹד אֶת־מַמְלֶכֶת כּוֹהוֹר לְשׁוּלֶה וַיִּמְצָא חֵן בְּעֵינֵי שׁוּלֶה וַיַּרְעֵף עָלָיו טוֹבוֹת גְּדוֹלוֹת וַיַּעַשׂ בְּמַמְלֶכֶת שׁוּלֶה כְּחֶפְצוֹ׃",
+  "hebrew": "וּלְכוֹהוֹר הָיָה בֵן וּשְׁמוֹ נִמְרוֹד וַיַּעֲזֹב נִמְרוֹד אֶת־מַמְלֶכֶת כּוֹהוֹר לְשׁוּלֶה וַיִּמְצָא חֵן בְּעֵינֵי שׁוּלֶה וַיַּרְעֵף עָלָיו טוֹבוֹת גְּדוֹלוֹת וַיַּעַשׂ בְּמַמְלֶכֶת שׁוּלֶה כְּחֶפְצוֹ׃",
   "english": "And now Cohor had a son who was called Nimrod; and Nimrod gave up the kingdom of Cohor unto Shule, and he did gain favor in the eyes of Shule; wherefore Shule did bestow great favors upon him, and he did do in the kingdom of Shule according to his desires."
  },
  {
@@ -43347,7 +43361,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 8,
   "verse": 9,
-  "hebrew": "וּבַת יֶרֶד יָפָה מְאֹד וַיְהִי כִּי דִּבְּרָה עִם־אָבִיהָ וַתֹּאמֶר אֵלָיו מַדּוּעַ נֶעֱצַב אָבִי כָּל־כָּךְ הֲלֹא קָרָא אֶת־הַסֵּפֶר אֲשֶׁר הֵבִיאוּ אֲבוֹתֵינוּ מֵעֵבֶר לַתְּהוֹם הַגָּדוֹל הֲלֹא כָתוּב בוֹ עַל־הַקַּדְמוֹנִים כִּי בְּמְזִמּוֹת סוֹד הִשִּׂיגוּ מַמְלָכוֹת וְכָבוֹד גָּדוֹל׃",
+  "hebrew": "וּבַת יֶרֶד יָפָה מְאֹד וַיְהִי כִּי דִּבְּרָה עִם־אָבִיהָ וַתֹּאמֶר אֵלָיו מַדּוּעַ נֶעֱצַב אָבִי כָּל־כָּךְ הֲלֹא קָרָא אֶת־הַסֵּפֶר אֲשֶׁר הֵבִיאוּ אֲבוֹתֵינוּ מֵעֵבֶר לַתְּהוֹם הַגָּדוֹל הֲלֹא כָּתוּב בוֹ עַל־הַקַּדְמוֹנִים כִּי בְּמְזִמּוֹת סוֹד הִשִּׂיגוּ מַמְלָכוֹת וְכָבוֹד גָּדוֹל׃",
   "english": "Now the daughter of Jared was exceedingly fair. And it came to pass that she did talk with her father, and said unto him: Whereby hath my father so much sorrow? Hath he not read the record which our fathers brought across the great deep? Behold, is there not an account  concerning them of old, that they by their secret plans did obtain kingdoms and great glory?"
  },
  {
@@ -43683,7 +43697,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 9,
   "verse": 31,
-  "hebrew": "וַיֵּצְאוּ גַם־נְחָשִׁים אַרְסִיִּים עַל־פְּנֵי הָאָרֶץ וַיָּמִיתוּ עַם רָב בְּאַרְסָם וַיְהִי כִּי הֵחֵלּוּ עֶדְרֵיהֶם לָנוּס מִפְּנֵי הַנְּחָשִׁים הָאַרְסִיִּים אֶל־אֶרֶץ הַנֶּגֶב אֲשֶׁר קָרְאוּ לָהּ הַנְּפִיִּים זַרַהֶמְלָה׃",
+  "hebrew": "וַיֵּצְאוּ גַם־נְחָשִׁים אַרְסִיִּים עַל־פְּנֵי הָאָרֶץ וַיָּמִיתוּ עַם רָב בְּאַרְסָם וַיְהִי כִּי הֵחֵלּוּ עֶדְרֵיהֶם לָנוּס מִפְּנֵי הַנְּחָשִׁים הָאַרְסִיִּים אֶל־אֶרֶץ הַנֶּגֶב אֲשֶׁר קָרְאוּ לָהּ הַנְּפִיִּים זָרַחֶמְלָה׃",
   "english": "And there came forth poisonous serpents also upon the face of the land, and did poison many people. And it came to pass that their flocks began to flee before the poisonous serpents, towards the land southward, which was called by the Nephites Zarahemla."
  },
  {
@@ -43725,7 +43739,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 10,
   "verse": 2,
-  "hebrew": "וַיְהִי כִּי זָכַר שֵׁז אֶת־הַשְׁמָדַת אֲבוֹתָיו וַיָּקֶם מַמְלֶכֶת צֶדֶק כִּי זָכַר אֵת אֲשֶׁר עָשָׂה יְהוָה בַּהֲעָבִירוֹ אֶת־יֶרֶד וְאָחִיו בַּתְּהוֹם וַיֵּלֶךְ בְּדַרְכֵי יְהוָה וַיּוֹלֶד בָּנִים וּבָנוֹת׃",
+  "hebrew": "וַיְהִי כִּי זָכַר שֵׁז אֶת־הַשְׁמָדַת אֲבוֹתָיו וַיָּקֶם מַמְלֶכֶת צֶדֶק כִּי זָכַר אֶת־אֲשֶׁר עָשָׂה יְהוָה בַּהֲעָבִירוֹ אֶת־יֶרֶד וְאָחִיו בַּתְּהוֹם וַיֵּלֶךְ בְּדַרְכֵי יְהוָה וַיּוֹלֶד בָּנִים וּבָנוֹת׃",
   "english": "And it came to pass that Shez did remember the destruction of his fathers, and he did build up a righteous kingdom; for he remembered what the Lord had done in bringing Jared and his brother across the deep; and he did walk in the ways of the Lord; and he begat sons and daughters."
  },
  {
@@ -44201,7 +44215,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 12,
   "verse": 13,
-  "hebrew": "הִנֵּה בֶאֱמוּנַת אַלְמָה וַאֲמוּלֶק נָפַל בֵּית הַכֶּלֶא אָרְצָה׃",
+  "hebrew": "הִנֵּה בֶאֱמוּנַת אַלְמָא וַעֲמוּלֶק נָפַל בֵּית הַכֶּלֶא אָרְצָה׃",
   "english": "Behold, it was the faith of Alma and Amulek that caused the prison to tumble to the earth."
  },
  {
@@ -44355,7 +44369,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 12,
   "verse": 35,
-  "hebrew": "לָכֵן יָדַעְתִּי בַּדָּבָר הַזֶּה אֲשֶׁר אָמַרְתָּ כִּי אִם־אֵין לַגּוֹיִם חֶסֶד בַּעֲבוּר חֻלְשָׁתֵנוּ כִּי תִּבְחָנֵם וְתִקַּח מֵהֶם אֶת־מַתְּנָתָם הֵן גַּם אֵת אֲשֶׁר קִבְּלוּ וְתִתֵּן לַאֲשֶׁר לָהֶם לָרֹב׃",
+  "hebrew": "לָכֵן יָדַעְתִּי בַּדָּבָר הַזֶּה אֲשֶׁר אָמַרְתָּ כִּי אִם־אֵין לַגּוֹיִם חֶסֶד בַּעֲבוּר חֻלְשָׁתֵנוּ כִּי תִּבְחָנֵם וְתִקַּח מֵהֶם אֶת־מַתְּנָתָם הֵן גַּם אֶת־אֲשֶׁר קִבְּלוּ וְתִתֵּן לַאֲשֶׁר לָהֶם לָרֹב׃",
   "english": "Wherefore, I know by this thing which thou hast said, that if the Gentiles have not charity, because of our weakness, that thou wilt prove them, and take away their talent, yea, even that which they have received, and give unto them who shall have more abundantly."
  },
  {
@@ -44964,7 +44978,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 15,
   "verse": 19,
-  "hebrew": "וְהִנֵּה חָדְלָה רוּחַ יְהוָה מֵהֲגוֹת בָּם וְהַשָּׂטָן מָשַׁל בִּלְבַב הָעָם כִּי נִתְּנוּ לְקֹשִׁי לִבָּם וּלְעִוְרוֹן לִבָּם לְמַעַן יִשָּׁמֵדוּ לָכֵן שָׁבוּ לַמִּלְחָמָה׃",
+  "hebrew": "וְהִנֵּה חָדַל רוּחַ יְהוָה מֵהֲגוֹת בָּם וְהַשָּׂטָן מָשַׁל בִּלְבַב הָעָם כִּי נִתְּנוּ לְקֹשִׁי לִבָּם וּלְעִוְרוֹן לִבָּם לְמַעַן יִשָּׁמֵדוּ לָכֵן שָׁבוּ לַמִּלְחָמָה׃",
   "english": "And behold, the Spirit of the Lord had ceased striving with them, and Satan had full power over the hearts of the people; for they were given up unto the hardness of their hearts, and the blindness of their minds that they might be destroyed; wherefore they went again to battle."
  },
  {
@@ -45062,7 +45076,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 15,
   "verse": 33,
-  "hebrew": "וַיְדַבֵּר יְהוָה אֶל־אֶתֶר וַיֹּאמֶר אֵלָיו לֵךְ וַיֵּצֵא וַיַּרְא כִּי נִתְקַיְּמוּ כָּל־דִּבְרֵי יְהוָה וַיְכַל אֶת־רְשׁוּמָתוֹ וְחֵלֶק אֶחָד מִמֵּאָה לֹא כָתַבְתִּי וַיַּטְמִנֵם בַּדֶּרֶךְ אֲשֶׁר מָצְאוּם עַם לִמְחִי׃",
+  "hebrew": "וַיְדַבֵּר יְהוָה אֶל־אֶתֶר וַיֹּאמֶר אֵלָיו לֵךְ וַיֵּצֵא וַיַּרְא כִּי נִתְקַיְּמוּ כָּל־דִּבְרֵי יְהוָה וַיְכַל אֶת־רְשׁוּמָתוֹ וְחֵלֶק אֶחָד מִמֵּאָה לֹא כָּתַבְתִּי וַיַּטְמִנֵם בַּדֶּרֶךְ אֲשֶׁר מָצְאוּם עַם לִמְחִי׃",
   "english": "And the Lord spake unto Ether, and said unto him: Go forth. And he went forth, and beheld that the words of the Lord had all been fulfilled; and he finished his record; (and the hundredth part I have not written) and he hid them in a manner that the people of Limhi did find them."
  },
  {
@@ -45118,7 +45132,7 @@ window._officialVersesData = [
   "book": "Moroni",
   "chapter": 2,
   "verse": 3,
-  "hebrew": "וְעַתָּה דִּבֶּר הַמָּשִׁיחַ אֶת־הַדְּבָרִים הָאֵלֶּה אֲלֵיהֶם בְּעֵת הֵרָאוֹתוֹ הָרִאשׁוֹנָה וְהֶהָמוֹן לֹא שָׁמְעוּ אַךְ הַתַּלְמִידִים שָׁמְעוּ וְעַל כָּל־אֲשֶׁר סָמְכוּ יְדֵיהֶם נָפְלָה רוּחַ הַקֹּדֶשׁ׃",
+  "hebrew": "וְעַתָּה דִּבֶּר הַמָּשִׁיחַ אֶת־הַדְּבָרִים הָאֵלֶּה אֲלֵיהֶם בְּעֵת הֵרָאוֹתוֹ הָרִאשׁוֹנָה וְהֶהָמוֹן לֹא שָׁמְעוּ אַךְ הַתַּלְמִידִים שָׁמְעוּ וְעַל כָּל־אֲשֶׁר סָמְכוּ יְדֵיהֶם נָפַל רוּחַ הַקֹּדֶשׁ׃",
   "english": "Now Christ spake these words unto them at the time of his first appearing; and the multitude heard it not, but the disciples heard it; and on as many as they laid their hands, fell the Holy Ghost."
  },
  {
@@ -45195,7 +45209,7 @@ window._officialVersesData = [
   "book": "Moroni",
   "chapter": 6,
   "verse": 2,
-  "hebrew": "וְגַם לֹא קִבְּלוּ אִישׁ לַטְּבִילָה עַד אֲשֶׁר־בָּאוּ בְּלֵב נִשְׁבָּר וְרוּחַ נִדְכָּאָה וַיָּעִידוּ לַקָּהָל כִּי שָׁבוּ בֶּאֱמֶת מִכָּל־חַטֹּאתֵיהֶם׃",
+  "hebrew": "וְגַם לֹא קִבְּלוּ אִישׁ לַטְּבִילָה עַד אֲשֶׁר־בָּאוּ בְּלֵב־נִשְׁבָּר וְרוּחַ נִדְכָּה וַיָּעִידוּ לַקָּהָל כִּי שָׁבוּ בֶּאֱמֶת מִכָּל־חַטֹּאתֵיהֶם׃",
   "english": "Neither did they receive any unto baptism save they came forth with a broken heart and a contrite spirit, and witnessed unto the church that they truly repented of all their sins."
  },
  {
@@ -45230,7 +45244,7 @@ window._officialVersesData = [
   "book": "Moroni",
   "chapter": 6,
   "verse": 7,
-  "hebrew": "וַיִּשְׁמְרוּ מְאֹד שֶׁלֹּא יִהְיֶה עָוֺן בְּתוֹכָם וּמִי אֲשֶׁר נִמְצָא עֹשֶׂה עָוֺן וּשְׁלֹשָׁה עֵדִים מִן־הַקָּהָל הִרְשִׁיעוּהוּ לִפְנֵי הַזְּקֵנִים וְאִם לֹא שָׁבוּ וְלֹא הִתְוַדּוּ נִמְחוּ שְׁמוֹתָם וְלֹא נִמְנוּ בְּעַם הַמָּשִׁיחַ׃",
+  "hebrew": "וַיִּשְׁמְרוּ מְאֹד שֶׁלֹּא יִהְיֶה עָוֹן בְּתוֹכָם וּמִי אֲשֶׁר נִמְצָא עֹשֶׂה עָוֹן וּשְׁלֹשָׁה עֵדִים מִן־הַקָּהָל הִרְשִׁיעוּהוּ לִפְנֵי הַזְּקֵנִים וְאִם לֹא שָׁבוּ וְלֹא הִתְוַדּוּ נִמְחוּ שְׁמוֹתָם וְלֹא נִמְנוּ בְּעַם הַמָּשִׁיחַ׃",
   "english": "And they were strict to observe that there should be no iniquity among them; and whoso was found to commit iniquity, and three witnesses of the church did condemn them before the elders, and if they repented not, and confessed not, their names were blotted out, and they were not numbered among the people of Christ."
  },
  {
@@ -45587,7 +45601,7 @@ window._officialVersesData = [
   "book": "Moroni",
   "chapter": 8,
   "verse": 1,
-  "hebrew": "אִגֶּרֶת אָבִי מֹרְמוֹן אֲשֶׁר כָּתַב אֵלַי מוֹרוֹנִי וַיִּכְתֹּב אֵלַי אַחֲרֵי קְרִיאָתִי לַעֲבוֹדָה וְכָכָה כָתַב אֵלַי לֵאמֹר׃",
+  "hebrew": "אִגֶּרֶת אָבִי מֹרְמוֹן אֲשֶׁר כָּתַב אֵלַי מוֹרוֹנִי וַיִּכְתֹּב אֵלַי אַחֲרֵי קְרִיאָתִי לַעֲבוֹדָה וְכָכָה כָּתַב אֵלַי לֵאמֹר׃",
   "english": "An epistle of my father Mormon, written to me, Moroni; and it was written unto me soon after my calling to the ministry. And on this wise did he write unto me, saying:"
  },
  {
@@ -45853,7 +45867,7 @@ window._officialVersesData = [
   "book": "Moroni",
   "chapter": 9,
   "verse": 9,
-  "hebrew": "וְעַל־אַף הַתּוֹעֵבָה הַגְּדוֹלָה הַזֹּאת לַלָּמָנִים לֹא תִגְדַּל מֵאֲשֶׁר לְעַמֵּנוּ בְּמוֹרִיאַנְטוּם כִּי הִנֵּה רַבּוֹת מִבְּנוֹת הַלָּמָנִים לָקְחוּ בַשֶּׁבִי וְאַחֲרֵי גָזְלָם מֵהֶן אֵת אֲשֶׁר יָקָר וְנִכְבָּד מִכֹּל הוּא הַבֹּשֶׁת וְהַטֹּהַר׃",
+  "hebrew": "וְעַל־אַף הַתּוֹעֵבָה הַגְּדוֹלָה הַזֹּאת לַלָּמָנִים לֹא תִגְדַּל מֵאֲשֶׁר לְעַמֵּנוּ בְּמוֹרִיאַנְטוּם כִּי הִנֵּה רַבּוֹת מִבְּנוֹת הַלָּמָנִים לָקְחוּ בַשֶּׁבִי וְאַחֲרֵי גָזְלָם מֵהֶן אֶת־אֲשֶׁר יָקָר וְנִכְבָּד מִכֹּל הוּא הַבֹּשֶׁת וְהַטֹּהַר׃",
   "english": "And notwithstanding this great abomi– nation of the Lamanites, it doth not exceed that of our people in Moriantum. For behold, many of the daughters of the Lamanites have they taken prisoners; and after depriving them of that which was most dear and precious above all things, which is chastity and virtue—"
  },
  {
@@ -46161,7 +46175,7 @@ window._officialVersesData = [
   "book": "Moroni",
   "chapter": 10,
   "verse": 27,
-  "hebrew": "וַאֲנִי מַזְהִיר אֶתְכֶם לִזְכֹּר אֶת־הַדְּבָרִים הָאֵלֶּה כִּי יְמַהֵר לָבוֹא הָעֵת אֲשֶׁר תֵּדְעוּ כִּי לֹא אֲכַזֵּב כִּי תִרְאוּנִי לִפְנֵי כִּסֵּא אֱלֹהִים וְיְהוָה אֱלֹהִים יֹאמַר לָכֶם הֲלֹא הִגַּדְתִּי לָכֶם אֶת־דְּבָרַי אֲשֶׁר נִכְתְּבוּ בְּיַד הָאִישׁ הַזֶּה כְּקוֹל קוֹרֵא מִן־הַמֵּתִים אָכֵן כְּדוֹבֵר מִן־הֶעָפָר׃",
+  "hebrew": "וַאֲנִי מַזְהִיר אֶתְכֶם לִזְכֹּר אֶת־הַדְּבָרִים הָאֵלֶּה כִּי יְמַהֵר לָבוֹא הָעֵת אֲשֶׁר תֵּדְעוּ כִּי לֹא אֲכַזֵּב כִּי תִרְאוּנִי לִפְנֵי כִּסֵּא אֱלֹהִים וַיהוָה אֱלֹהִים יֹאמַר לָכֶם הֲלֹא הִגַּדְתִּי לָכֶם אֶת־דְּבָרַי אֲשֶׁר נִכְתְּבוּ בְּיַד הָאִישׁ הַזֶּה כְּקוֹל קוֹרֵא מִן־הַמֵּתִים אָכֵן כְּדוֹבֵר מִן־הֶעָפָר׃",
   "english": "And I exhort you to remember these things; for the time speedily cometh that ye shall know that I lie not, for ye shall see me at the bar of God; and the Lord God will say unto you: Did I not declare my words unto you, which were written by this man, like as one crying from the dead, yea, even as one speaking out of the dust?"
  },
  {

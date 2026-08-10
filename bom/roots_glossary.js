@@ -867,7 +867,7 @@ window._rootGlossaryData = {
     "meaning": "part",
     "category": "Uncategorized"
   },
-  "זרהמלה": {
+  "זרחמלה": {
     "meaning": "Zarahemla",
     "category": "Uncategorized"
   },
@@ -3883,7 +3883,7 @@ window._rootGlossaryData = {
     "meaning": "last",
     "category": "Uncategorized"
   },
-  "זרהמלה׃": {
+  "זרחמלה׃": {
     "meaning": "Zarahemla",
     "category": "Uncategorized"
   },

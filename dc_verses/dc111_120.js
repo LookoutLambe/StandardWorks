@@ -718,7 +718,7 @@ var dc112_ch1Verses = [
     ["כִּי","for"],
     ["לָכֶם","unto you"],
     ["הַשְּׁנֵים","the Twelve,"],
-    ["עָשָׂר","eleventh"],
+    ["עָשָׂר","[twelve]"],
     ["וְלָאֵלֶּה","and those,"],
     ["הַנְּשִׂיאוּת","the ... Presidency,"],
     ["הָרִאשׁוֹנָה","First"],

@@ -1,0 +1,6 @@
+.DS_Store
+
+# Single source of truth: the website is committed at the repo root (served by
+# GitHub Pages). The iOS app's copy is generated from it via ./sync-www.sh and
+# is NOT tracked — run the script before building/committing the app.
+StandardWorks/www/

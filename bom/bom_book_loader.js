@@ -20,11 +20,11 @@
     { match: function(id) { return id.indexOf('wm-') === 0; }, src: 'verses/words_of_mormon.js' },
     { match: function(id) { return id.indexOf('mo-') === 0; }, src: 'verses/mosiah.js?v=7' },
     { match: function(id) { return id.indexOf('al-') === 0; }, src: 'verses/alma.js?v=4' },
-    { match: function(id) { return id.indexOf('he-') === 0; }, src: 'verses/helaman.js?v=2' },
-    { match: function(id) { return id.indexOf('3n-') === 0; }, src: 'verses/3nephi.js?v=4' },
-    { match: function(id) { return id.indexOf('4n-') === 0; }, src: 'verses/4nephi.js' },
-    { match: function(id) { return id.indexOf('mm-') === 0; }, src: 'verses/mormon.js' },
-    { match: function(id) { return id.indexOf('et-') === 0; }, src: 'verses/ether.js' },
+    { match: function(id) { return id.indexOf('he-') === 0; }, src: 'verses/helaman.js?v=3' },
+    { match: function(id) { return id.indexOf('3n-') === 0; }, src: 'verses/3nephi.js?v=5' },
+    { match: function(id) { return id.indexOf('4n-') === 0; }, src: 'verses/4nephi.js?v=1' },
+    { match: function(id) { return id.indexOf('mm-') === 0; }, src: 'verses/mormon.js?v=1' },
+    { match: function(id) { return id.indexOf('et-') === 0; }, src: 'verses/ether.js?v=1' },
     { match: function(id) { return id.indexOf('mr-') === 0; }, src: 'verses/moroni.js' }
   ];
 

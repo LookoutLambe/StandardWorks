@@ -85,12 +85,15 @@ body {
 .word-unit { display: inline-flex; flex-direction: column; align-items: center; padding: 3px 5px; border-radius: 3px; cursor: pointer; transition: background 0.15s; line-height: 1.2; user-select: none; -webkit-user-select: none; }
 .word-unit:hover { background: var(--highlight); }
 .hw { font-size: 1.85em; font-weight: 500; line-height: 1.5; color: #1a2744; direction: rtl; unicode-bidi: bidi-override; white-space: nowrap; }
+/* Qamats qatan (U+05C7) coloured distinctly from ordinary qamats so the /o/ reading is visible */
+.hw .qq { color: #c0392b; }
+body.dark-mode .hw .qq { color: #ff8a80; }
 .gl { font-family: 'David Libre', 'Georgia', serif; font-size: 0.72em; color: var(--gloss); direction: ltr; text-align: center; white-space: nowrap; font-style: italic; }
 .tl { font-family: 'David Libre', 'Georgia', serif; font-size: 0.78em; color: var(--ink-light); direction: ltr; text-align: center; white-space: nowrap; opacity: 0.7; }
-.arr { display: inline-flex; flex-direction: column; align-items: center; justify-content: flex-end; color: var(--accent); font-family: 'Times New Roman', Times, serif; font-style: normal; font-weight: normal; vertical-align: top; padding: 3px 0 6px; margin: 2px 0; opacity: 0.75; direction: ltr; unicode-bidi: isolate; line-height: 1.2; user-select: none; -webkit-user-select: none; }
+.arr { display: inline-flex; flex-direction: column; align-items: center; justify-content: flex-end; color: var(--accent); font-family: 'Times New Roman', Times, serif; font-style: normal; font-weight: normal; vertical-align: top; padding: 3px 0 3px; margin: 0; opacity: 0.75; direction: ltr; unicode-bidi: isolate; line-height: 1.2; user-select: none; -webkit-user-select: none; }
 .arr-hw { flex-grow: 1; visibility: hidden; max-width: 0; }
-.arr-tl { font-size: 0.78em; line-height: 1.2; margin-top: 2px; visibility: visible; transform: scale(1.8); }
-.arr-gl { font-size: 0.72em; font-style: normal; line-height: 1.2; margin-top: 1px; visibility: visible; transform: scale(1.8); }
+.arr-tl { font-size: 0.95em; line-height: 1; margin-top: 0; visibility: visible; }
+.arr-gl { font-size: 0.9em; font-style: normal; line-height: 1; margin-top: 0; visibility: visible; }
 /* Native selection: Hebrew tier only (wrapper none + .hw text — fixes iOS selecting stacked tl/gl) */
 .word-unit .hw {
   user-select: text;
@@ -1193,6 +1196,7 @@ function makeWordUnit(h, e, isSof) {
   var baseGloss = augmentGlossWithPrefixes(h, e.replace(/-/g, ' '));
   var gloss = computeGlossFromHebrew(h, baseGloss);
   var displayH = window._noNikkud ? _stripNikkudDisplay(h) : h;
+  if (!window._noNikkud) displayH = displayH.replace(/([\u05D0-\u05EA][\u0591-\u05C6]*\u05C7[\u0591-\u05C6]*)/g, '<span class="qq">$1</span>');
   div.innerHTML = '<span class="hw">' + displayH + '</span><span class="tl"></span><span class="gl">' + gloss + '</span>';
   return div;
 }
@@ -1478,7 +1482,10 @@ function toggleNoNikkud() {
     var hw = unit.querySelector('.hw');
     if (!hw) return;
     var orig = unit.getAttribute('data-h');
-    if (orig) hw.textContent = window._noNikkud ? _stripNikkudDisplay(orig) : orig;
+    if (orig) {
+      if (window._noNikkud) hw.textContent = _stripNikkudDisplay(orig);
+      else hw.innerHTML = orig.replace(/([\u05D0-\u05EA][\u0591-\u05C6]*\u05C7[\u0591-\u05C6]*)/g, '<span class="qq">$1</span>');
+    }
   });
   try { localStorage.setItem('ot-no-nikkud', window._noNikkud ? '1' : '0'); } catch(e) {}
 }
@@ -1650,14 +1657,24 @@ var _tlKnown = {
   '\u05DE\u05E9\u05D9\u05D7':'mashiach','\u05EA\u05E4\u05DC\u05D4':'tefilah','\u05D0\u05DE\u05D5\u05E0\u05D4':'emunah','\u05EA\u05E9\u05D5\u05D1\u05D4':'teshuvah','\u05D2\u05D0\u05D5\u05DC\u05D4':'geulah'
 };
 
-function transliterate(heb) {
+function transliterate(heb) { return _tlPopular(_translitRaw(heb)); }
+function _tlPopular(s) {
+  if (!s) return s;
+  return s
+    .replace(/[\u0101\u0103\u00E2]/g,'a')
+    .replace(/[\u0113\u0115\u00EA]/g,'e')
+    .replace(/[\u012B\u00EE]/g,'i')
+    .replace(/[\u014D\u014F\u00F4]/g,'o')
+    .replace(/[\u016B\u00FB]/g,'u')
+    .replace(/[\u02BE\u02BF]/g,'')
+    .replace(/q/g,'k');
+}
+function _translitRaw(heb) {
   if (heb.indexOf(' ') >= 0) return heb.split(' ').map(function(p) { return transliterate(p); }).join(' ');
   if (heb.indexOf('\u05BE') >= 0) return heb.split('\u05BE').map(function(p) { return transliterate(p); }).join('-');
-  var hasNikkud = /[\u05B0-\u05BC]/.test(heb);
+  var hasNikkud = /[\u05B0-\u05BC\u05C7]/.test(heb);
   if (hasNikkud) {
     var consonantsOnly = heb.replace(/[\u0591-\u05C7\u05B0-\u05BB\u05BD\u05BF\u05C1\u05C2]/g, '');
-    if (consonantsOnly === '\u05E8\u05E2') return 'ra';
-    if (_tlKnown[consonantsOnly]) return _tlKnown[consonantsOnly];
     return _tlPointed(heb);
   }
   var clean = heb.replace(/[\u0591-\u05C7]/g, '');
@@ -1686,7 +1703,7 @@ function _tlPointed(text) {
   var vmap = {};
   vmap['\u05B0']='\u0115'; vmap['\u05B1']='\u0115'; vmap['\u05B2']='\u0103'; vmap['\u05B3']='\u014F';
   vmap['\u05B4']='i'; vmap['\u05B5']='\u0113'; vmap['\u05B6']='e'; vmap['\u05B7']='a';
-  vmap['\u05B8']='\u0101'; vmap['\u05B9']='\u014D'; vmap['\u05BA']='\u014D'; vmap['\u05BB']='u';
+  vmap['\u05B8']='\u0101'; vmap['\u05B9']='\u014D'; vmap['\u05BA']='\u014D'; vmap['\u05BB']='u'; vmap['\u05C7']='o';
   var cmap = {'\u05D0':'','\u05D1':'v','\u05D2':'g','\u05D3':'d','\u05D4':'h','\u05D5':'v','\u05D6':'z','\u05D7':'ch','\u05D8':'t',
     '\u05D9':'y','\u05DB':'kh','\u05DA':'kh','\u05DC':'l','\u05DE':'m','\u05DD':'m','\u05E0':'n','\u05DF':'n','\u05E1':'s',
     '\u05E2':'','\u05E4':'f','\u05E3':'f','\u05E6':'ts','\u05E5':'ts','\u05E7':'q','\u05E8':'r','\u05E9':'sh','\u05EA':'t'};
@@ -1702,7 +1719,7 @@ function _tlPointed(text) {
         if (mc === 0x05BC) { tok.dag = true; i++; }
         else if (mc === 0x05C1) { tok.shin = true; i++; }
         else if (mc === 0x05C2) { tok.shin = false; i++; }
-        else if (mc >= 0x05B0 && mc <= 0x05BB) { tok.vowel = text[i]; i++; }
+        else if ((mc >= 0x05B0 && mc <= 0x05BB) || mc === 0x05C7) { tok.vowel = text[i]; i++; }
         else if ((mc >= 0x0591 && mc <= 0x05AF) || mc === 0x05BD) { i++; }
         else break;
       }
@@ -1755,7 +1772,7 @@ function _tlPointed(text) {
         if (nextTok.vowel === '\u05B4' || nextTok.vowel === '\u05B5' || nextTok.vowel === '\u05B6') v = '';
         else if (!nextTok.vowel && (nextTok.dag || (n2sh && n2sh.c === '\u05D5' && n2sh.dag && !n2sh.vowel))) v = '';
       }
-      else if (t > 0 && (prevVowel === '\u05B4' || prevVowel === '\u05B5' || prevVowel === '\u05B6' || prevVowel === '\u05B9')) v = '';
+      else if (t > 0 && (prevVowel === '\u05B4' || prevVowel === '\u05B5' || prevVowel === '\u05B6' || prevVowel === '\u05B9' || prevVowel === '\u05C7')) v = '';
       else if (t > 0 && tokens[t-1].c === '\u05D5' && tokens[t-1].dag && !tokens[t-1].vowel) v = '';
       else if (nextTok && bgdkpt.indexOf(nextTok.c) >= 0 && nextTok.dag) v = '';
       else if (nextTok && (t + 1 === len - 1) && !nextTok.vowel) v = '';

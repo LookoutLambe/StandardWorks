@@ -430,8 +430,8 @@ body.english-only .word-unit .gl {
   font-style: normal;
   font-weight: normal;
   vertical-align: top;
-  padding: 3px 0 6px;
-  margin: 2px 0;
+  padding: 3px 0 3px;
+  margin: 0 0;
   opacity: 0.75;
   direction: ltr;
   unicode-bidi: isolate;
@@ -439,8 +439,8 @@ body.english-only .word-unit .gl {
   -webkit-user-select: none;
 }
 .arr-hw { flex-grow: 1; visibility: hidden; max-width: 0; }
-.arr-tl { font-size: 0.78em; line-height: 1.2; margin-top: 2px; visibility: visible; transform: scale(1.8); }
-.arr-gl { font-size: 0.72em; font-style: normal; line-height: 1.2; margin-top: 1px; visibility: visible; transform: scale(1.8); }
+.arr-tl { font-size: 0.95em; line-height: 1; margin-top: 0; visibility: visible; }
+.arr-gl { font-size: 0.9em; font-style: normal; line-height: 1; margin-top: 0; visibility: visible; }
 body.hide-translit .arr-tl { display: none; }
 body.hide-gloss .arr-gl { display: none; }
 body.hide-gloss.hide-translit .arr { display: none; }
@@ -1772,6 +1772,7 @@ body, button, input, select, textarea,
 }
 
 </style>
+<style>.hw .qq{color:#c0392b}body.dark-mode .hw .qq{color:#ff8a80}</style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -3864,7 +3865,7 @@ body, button, input, select, textarea,
   <button id="btn-nikkud" onclick="toggleNikkud()" title="Show/hide vowel points">No Nikkud<br>עִיצּוּרִים</button>
 </div>
 
-<script src="bom_book_loader.js?v=3"></script>
+<script src="bom_book_loader.js?v=7"></script>
 <script src="bom_lazy_assets.js?v=1"></script>
 <script src="crossrefs.js?v=23"></script>
 <script src="roots_glossary.js?v=23"></script>
@@ -4205,7 +4206,8 @@ function makeWordUnit(h, e, isSof) {
   var gloss = augmentGlossWithPrefixes(h, e.replace(/-/g, ' '));
   // Preserve curated gloss; add morph gloss for popup auditing.
   div.setAttribute('data-mgl', computeMorphGloss(h));
-  div.innerHTML = `<span class="hw">${h}</span><span class="tl"></span><span class="gl">${gloss}</span>`;
+  var displayH = document.body.classList.contains('no-nikkud') ? h.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g,'') : h.replace(/([\u05D0-\u05EA][\u0591-\u05C6]*\u05C7[\u0591-\u05C6]*)/g, '<span class="qq">$1</span>');
+  div.innerHTML = `<span class="hw">${displayH}</span><span class="tl"></span><span class="gl">${gloss}</span>`;
   return div;
 }
 
@@ -4364,7 +4366,8 @@ function toggleNikkud() {
     var hwEl = wu.querySelector('.hw');
     if (!hwEl) return;
     var orig = wu.getAttribute('data-h');
-    hwEl.textContent = isNow ? orig.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, '') : orig;
+    if (isNow) hwEl.textContent = orig.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, '');
+    else hwEl.innerHTML = orig.replace(/([\u05D0-\u05EA][\u0591-\u05C6]*\u05C7[\u0591-\u05C6]*)/g, '<span class="qq">$1</span>');
   });
   try { localStorage.setItem('bom-no-nikkud', isNow ? '1' : '0'); } catch(e) {}
 }
@@ -6855,7 +6858,19 @@ var _tlKnown = {
   'אמונה':'emunah','תשובה':'teshuvah','גאולה':'geulah',
   'שופט':'shofet','מלכות':'malkhut','נחלה':'nachalah'
 };
-function transliterate(heb) {
+function transliterate(heb) { return _tlPopular(_translitRaw(heb)); }
+function _tlPopular(s) {
+  if (!s) return s;
+  return s
+    .replace(/[\u0101\u0103\u00E2]/g,'a')
+    .replace(/[\u0113\u0115\u00EA]/g,'e')
+    .replace(/[\u012B\u00EE]/g,'i')
+    .replace(/[\u014D\u014F\u00F4]/g,'o')
+    .replace(/[\u016B\u00FB]/g,'u')
+    .replace(/[\u02BE\u02BF]/g,'')
+    .replace(/q/g,'k');
+}
+function _translitRaw(heb) {
   // Handle space-separated compounds (e.g. שְׁנֵים עָשָׂר → shenem asar)
   if (heb.indexOf(' ') >= 0) {
     return heb.split(' ').map(function(p) { return transliterate(p); }).join(' ');
@@ -6865,13 +6880,11 @@ function transliterate(heb) {
     return heb.split('\u05BE').map(function(p) { return transliterate(p); }).join('-');
   }
   // Use nikkud-aware parser if vowel points present (includes stress marking)
-  var hasNikkud = /[\u05B0-\u05BC]/.test(heb);
+  var hasNikkud = /[\u05B0-\u05BC\u05C7]/.test(heb);
   if (hasNikkud) {
     // Practico-style convention for a few common 2-letter unpointed roots,
     // even when the source text carries unexpected pointing.
     var consonantsOnly = heb.replace(/[\u0591-\u05C7\u05B0-\u05BB\u05BD\u05BF\u05C1\u05C2]/g, '');
-    if (consonantsOnly === 'רע') return 'ra';
-    if (_tlKnown[consonantsOnly]) return _tlKnown[consonantsOnly];
     return _tlPointed(heb);
   }
   // For unpointed text, check known dictionary
@@ -6905,7 +6918,7 @@ function _tlPointed(text) {
   var vmap = {};
   vmap['\u05B0']='\u0115'; vmap['\u05B1']='\u0115'; vmap['\u05B2']='\u0103'; vmap['\u05B3']='\u014F';
   vmap['\u05B4']='i'; vmap['\u05B5']='\u0113'; vmap['\u05B6']='e'; vmap['\u05B7']='a';
-  vmap['\u05B8']='\u0101'; vmap['\u05B9']='\u014D'; vmap['\u05BA']='\u014D'; vmap['\u05BB']='u';
+  vmap['\u05B8']='\u0101'; vmap['\u05B9']='\u014D'; vmap['\u05BA']='\u014D'; vmap['\u05BB']='u'; vmap['\u05C7']='o';
   // Consonants: P&VP — א/ע silent, ח=ch, ק=q
   var cmap = {'א':'','ב':'v','ג':'g','ד':'d','ה':'h','ו':'v','ז':'z','ח':'ch','ט':'t',
     'י':'y','כ':'kh','ך':'kh','ל':'l','מ':'m','ם':'m','נ':'n','ן':'n','ס':'s',
@@ -6923,7 +6936,7 @@ function _tlPointed(text) {
         if (mc === 0x05BC) { tok.dag = true; i++; }
         else if (mc === 0x05C1) { tok.shin = true; i++; }
         else if (mc === 0x05C2) { tok.shin = false; i++; }
-        else if (mc >= 0x05B0 && mc <= 0x05BB) { tok.vowel = text[i]; i++; }
+        else if ((mc >= 0x05B0 && mc <= 0x05BB) || mc === 0x05C7) { tok.vowel = text[i]; i++; }
         else if ((mc >= 0x0591 && mc <= 0x05AF) || mc === 0x05BD) { i++; }
         else break;
       }
@@ -6993,7 +7006,7 @@ function _tlPointed(text) {
         if (nextTok.vowel === '\u05B4' || nextTok.vowel === '\u05B5' || nextTok.vowel === '\u05B6') v = '';
         else if (!nextTok.vowel && (nextTok.dag || (n2sh && n2sh.c === '\u05D5' && n2sh.dag && !n2sh.vowel))) v = '';
       }
-      else if (t > 0 && (prevVowel === '\u05B4' || prevVowel === '\u05B5' || prevVowel === '\u05B6' || prevVowel === '\u05B9')) v = '';
+      else if (t > 0 && (prevVowel === '\u05B4' || prevVowel === '\u05B5' || prevVowel === '\u05B6' || prevVowel === '\u05B9' || prevVowel === '\u05C7')) v = '';
       else if (prevVowel === '\u05B7') v = '';
       else if (prevVowel === '\u05BB') v = '';
       else if (t > 0 && tokens[t-1].c === '\u05D5' && tokens[t-1].dag && !tokens[t-1].vowel) v = '';
@@ -9099,7 +9112,7 @@ updateNavButtons();
           }
         }
         wu.setAttribute('data-wid', key + '|h|' + realIdx);
-        wu.innerHTML = '<span class="hw">' + hw + '</span><span class="tl">' + transliterate(hw) + '</span><span class="gl">' + gloss + '</span>';
+        wu.innerHTML = '<span class="hw">' + hw.replace(/([א-ת][֑-׆]*ׇ[֑-׆]*)/g, '<span class="qq">$1</span>') + '</span><span class="tl">' + transliterate(hw) + '</span><span class="gl">' + gloss + '</span>';
         var chevron = document.createElement('span');
         chevron.className = 'arr';
         var sym = isLast ? '\u00ab' : '\u2039';
