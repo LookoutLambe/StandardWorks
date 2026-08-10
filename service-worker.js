@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-08-10T20-00-00';
+const BUILD_ID = '2026-08-10T21-00-00';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 

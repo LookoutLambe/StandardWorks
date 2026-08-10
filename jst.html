@@ -295,6 +295,9 @@ body.english-only .word-unit .gl {
 .arr-hw { flex-grow: 1; visibility: hidden; max-width: 0; }
 .arr-tl { font-size: 0.95em; line-height: 1; margin-top: 0; visibility: visible; }
 .arr-gl { font-size: 0.9em; font-style: normal; line-height: 1; margin-top: 0; visibility: visible; }
+/* Qamats qatan (U+05C7) coloured distinctly from ordinary qamats so the /o/ reading is visible */
+.hw .qq { color: #c0392b; }
+body.dark-mode .hw .qq { color: #ff8a80; }
 body.hide-translit .arr-tl { display: none; }
 body.hide-gloss .arr-gl { display: none; }
 body.hide-gloss.hide-translit .arr { display: none; }
@@ -1212,6 +1215,12 @@ body, button, input, select, textarea,
 #return-banner, #note-modal-card {
   font-family: 'David Libre', serif !important;
 }
+
+/* === Docked selection toolbar: RIGHT side (Hebrew is RTL), always visible while reading, no overlap === */
+#sel-toolbar{left:auto!important;right:6px!important;top:50%!important;bottom:auto!important;transform:translateY(-50%)!important;max-height:90vh;overflow-y:auto;flex-direction:column!important;flex-wrap:nowrap!important;max-width:none!important;}
+body:not(.hide-sel-toolbar) #sel-toolbar{display:flex!important;}
+body:not(.hide-sel-toolbar) #main-content{padding-right:60px!important;}
+@media (max-width:600px){body:not(.hide-sel-toolbar) #main-content{padding-right:52px!important;}}
 </style>
 <link rel="stylesheet" href="nav_engine.css?v=25">
 <link rel="stylesheet" href="site_chrome.css?v=26">
@@ -2242,7 +2251,7 @@ function makeWordUnit(h, e, isSof) {
   div.className = 'word-unit' + (isSof ? ' sof' : '');
   div.setAttribute('data-h', h);
   var gloss = augmentGlossWithPrefixes(h, e.replace(/-/g, ' '));
-  var displayH = window._noNikkud ? _stripNikkudDisplay(h) : h;
+  var displayH = window._noNikkud ? _stripNikkudDisplay(h) : h.replace(/([א-ת][֑-׆]*ׇ[֑-׆]*)/g, '<span class="qq">$1</span>');
   div.innerHTML = '<span class="hw">' + displayH + '</span><span class="tl"></span><span class="gl">' + gloss + '</span>';
   return div;
 }
@@ -3709,7 +3718,7 @@ function _isSelReadingSurface(el) {
 
 function initFloatingSelToolbarPref() {
   try {
-    if (localStorage.getItem(SW_SEL_TB_LS) === '1') document.body.classList.add('hide-sel-toolbar');
+    document.body.classList.remove('hide-sel-toolbar'); try { localStorage.removeItem(SW_SEL_TB_LS); } catch(e) {}
   } catch (e) {}
   _syncSelToolbarModeButton();
 }

@@ -4,7 +4,7 @@
 // === CH1: JST Acts 9:7 ===
 // Those with Paul see the light but do not hear the voice.
 var jstacts_ch1Verses = [
-  { num:"ז", words:[["וְהָאֲנָשִׁים","and-the-they-who"],["הַהוֹלְכִים","were-journeying"],["אִתּוֹ","with-him"],["רָאוּ","saw"],["אָכֵן","indeed"],["אֶת","[ACC]"],["הָאוֹר","the-light"],["וַיִּפְחֲדוּ","and-were-afraid"],["אַךְ","but"],["לֹא","they-heard-not"],["שָׁמְעוּ","[heard]"],["אֶת","[ACC]"],["קוֹל","the-voice-of"],["הַמְּדַבֵּר","the-him-who-spake"],["אֵלָיו","to-him"],["׃",""]] }
+  { num:"ז", words:[["וְהָאֲנָשִׁים","and-the-they-who"],["הַהוֹלְכִים","were-journeying"],["אִתּוֹ","with-him"],["רָאוּ","saw"],["אָכֵן","indeed"],["אֶת",""],["הָאוֹר","the-light"],["וַיִּפְחֲדוּ","and-were-afraid"],["אַךְ","but"],["לֹא","they-heard-not"],["שָׁמְעוּ","[heard]"],["אֶת",""],["קוֹל","the-voice-of"],["הַמְּדַבֵּר","the-him-who-spake"],["אֵלָיו","to-him"],["׃",""]] }
 ];
 renderVerseSet(jstacts_ch1Verses, 'jstacts-ch1-verses');
 

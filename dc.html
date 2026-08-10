@@ -654,6 +654,12 @@ body, button, input, select, textarea,
 #dc-chron-table, .share-btn {
   font-family: 'David Libre', serif !important;
 }
+
+/* === Docked selection toolbar: RIGHT side (Hebrew is RTL), always visible while reading, no overlap === */
+#sel-toolbar{left:auto!important;right:6px!important;top:50%!important;bottom:auto!important;transform:translateY(-50%)!important;max-height:90vh;overflow-y:auto;flex-direction:column!important;flex-wrap:nowrap!important;max-width:none!important;}
+body:not(.hide-sel-toolbar) #sel-toolbar{display:flex!important;}
+body:not(.hide-sel-toolbar) #main-content{padding-right:60px!important;}
+@media (max-width:600px){body:not(.hide-sel-toolbar) #main-content{padding-right:52px!important;}}
 </style>
 <style>.hw .qq{color:#c0392b}body.dark-mode .hw .qq{color:#ff8a80}</style>
 </head>
@@ -2372,7 +2378,7 @@ function _isSelReadingSurface(el) {
 
 function initFloatingSelToolbarPref() {
   try {
-    if (localStorage.getItem(SW_SEL_TB_LS) === '1') document.body.classList.add('hide-sel-toolbar');
+    document.body.classList.remove('hide-sel-toolbar'); try { localStorage.removeItem(SW_SEL_TB_LS); } catch(e) {}
   } catch (e) {}
   _syncSelToolbarModeButton();
 }

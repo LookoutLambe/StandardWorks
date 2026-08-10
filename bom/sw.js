@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js */
-const CACHE = 'bom-2026-08-10T20-00-00';
+const CACHE = 'bom-2026-08-10T21-00-00';
 /** Shell only — verse *.js files are always fetched fresh (see fetch handler). */
 const ASSETS = [
   './bom.html',

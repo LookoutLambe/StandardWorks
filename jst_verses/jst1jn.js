@@ -15,7 +15,7 @@ renderVerseSet(jst1jn_ch2Verses, 'jst1jn-ch2-verses');
 
 // === CH3: JST 1 John 4:12 ===
 var jst1jn_ch3Verses = [
-  { num:"יב", words:[["אֵין","no"],["אִישׁ","man"],["רָאָה","hath-seen"],["אֶת","[ACC]"],["אֱלֹהִים","God"],["מֵעוֹלָם","at-any-time"],["אֶלָּא","except"],["הַמַּאֲמִינִים","the-them-who-believe"],["אִם","if"],["נֹאהַב","we-love"],["זֶה","one"],["אֶת","another"],["זֶה","God"],["אֱלֹהִים","dwelleth"],["שׁוֹכֵן","in-us"],["בָּנוּ","and"],["וְאַהֲבָתוֹ","his-love"],["נִשְׁלְמָה","is-perfected"],["בָּנוּ","in-us"],["׃",""]] }
+  { num:"יב", words:[["אֵין","no"],["אִישׁ","man"],["רָאָה","hath-seen"],["אֶת",""],["אֱלֹהִים","God"],["מֵעוֹלָם","at-any-time"],["אֶלָּא","except"],["הַמַּאֲמִינִים","the-them-who-believe"],["אִם","if"],["נֹאהַב","we-love"],["זֶה","one"],["אֶת","another"],["זֶה","God"],["אֱלֹהִים","dwelleth"],["שׁוֹכֵן","in-us"],["בָּנוּ","and"],["וְאַהֲבָתוֹ","his-love"],["נִשְׁלְמָה","is-perfected"],["בָּנוּ","in-us"],["׃",""]] }
 ];
 renderVerseSet(jst1jn_ch3Verses, 'jst1jn-ch3-verses');
 

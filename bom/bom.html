@@ -1087,11 +1087,16 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
 /* ===== Selection Toolbar — Desktop: vertical left-side strip ===== */
 #sel-toolbar {
   display: none; position: fixed; z-index: 1300;
+  left: 8px; top: 50%; transform: translateY(-50%);
+  max-height: 92vh; overflow-y: auto;
   background: #1e2233; border: 1px solid #3a3f55; border-radius: 8px;
   padding: 6px; box-shadow: 0 4px 20px rgba(0,0,0,0.4);
   flex-direction: column; gap: 4px; align-items: center;
 }
 #sel-toolbar.visible { display: flex; }
+/* Docked left rail: stays on the left and follows scrolling while reading a chapter */
+body.in-chapter:not(.hide-sel-toolbar) #sel-toolbar { display: flex; }
+body.in-chapter #sel-toolbar { flex-direction: column; flex-wrap: nowrap; max-width: none; }
 #sel-toolbar button {
   background: transparent; border: none; color: #dbb958; cursor: pointer;
   font-size: 1.1em; padding: 6px 8px; border-radius: 4px; transition: background 0.15s;
@@ -1771,6 +1776,12 @@ body, button, input, select, textarea,
   font-family: 'David Libre', serif !important;
 }
 
+
+/* === Docked selection toolbar: RIGHT side (Hebrew is RTL), always visible while reading, no overlap === */
+#sel-toolbar{left:auto!important;right:6px!important;top:50%!important;bottom:auto!important;transform:translateY(-50%)!important;max-height:90vh;overflow-y:auto;flex-direction:column!important;flex-wrap:nowrap!important;max-width:none!important;}
+body:not(.hide-sel-toolbar) #sel-toolbar{display:flex!important;}
+body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
+@media (max-width:600px){body:not(.hide-sel-toolbar) .chapter-panel{padding-right:52px!important;}}
 </style>
 <style>.hw .qq{color:#c0392b}body.dark-mode .hw .qq{color:#ff8a80}</style>
 </head>
@@ -4034,8 +4045,10 @@ function navTo(id, slideDir, _bookReady) {
   currentPageId = id;
   if (!isFront && !isIntro && !isLanding && !isTopicalGuide) {
     currentChapterId = id;
+    document.body.classList.add('in-chapter');
   } else {
     currentChapterId = null;
+    document.body.classList.remove('in-chapter');
   }
   if (typeof updateNavButtons === 'function') updateNavButtons();
   if (window.NavEngine) NavEngine.update(currentChapterId || 'landing');
@@ -4676,7 +4689,7 @@ function _isSelReadingSurface(el) {
 
 function initFloatingSelToolbarPref() {
   try {
-    if (localStorage.getItem(SW_SEL_TB_LS) === '1') document.body.classList.add('hide-sel-toolbar');
+    document.body.classList.remove('hide-sel-toolbar'); try { localStorage.removeItem(SW_SEL_TB_LS); } catch(e) {}
   } catch (e) {}
   _syncSelToolbarModeButton();
 }
@@ -4775,27 +4788,8 @@ function _showSelToolbar() {
   var hlBtn = document.getElementById('sel-btn-highlight');
   if (hlBtn) hlBtn.classList.remove('active');
 
-  var isDesktop = window.innerWidth > 600;
-  if (isDesktop) {
-    // Desktop: float vertically above selection, centered
-    var top = rect.top - 250;
-    if (top < 10) top = rect.bottom + 10;
-    var left = rect.left + rect.width / 2 - 24;
-    if (left < 10) left = 10;
-    if (left + 52 > window.innerWidth) left = window.innerWidth - 60;
-    toolbar.style.top = top + 'px';
-    toolbar.style.left = left + 'px';
-  } else {
-    // Mobile: 2-column grid centered above selection
-    var top = rect.top - 240;
-    if (top < 10) top = rect.bottom + 10;
-    var left = rect.left + rect.width / 2 - 50;
-    if (left < 10) left = 10;
-    if (left + 100 > window.innerWidth) left = window.innerWidth - 110;
-    toolbar.style.top = top + 'px';
-    toolbar.style.left = left + 'px';
-  }
-
+  // Toolbar is docked to the left edge via CSS (stationary, follows scroll);
+  // no per-selection positioning needed.
   toolbar.classList.add('visible');
   if (_selMode === 'word') _updateSelToolbarIndicators();
 }
