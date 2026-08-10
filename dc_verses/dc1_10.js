@@ -29,7 +29,7 @@ var dc1_ch1Verses = [
   ]},
   { num: "ב", words: [
     ["כִּי","for"],
-    ["אָמְנָם","truly"],
+    ["אׇמְנָם","truly"],
     ["קוֹל","voice of"],
     ["יְהוָה","the LORD"],
     ["אֶל־כׇּל־אָדָם","to all men"],

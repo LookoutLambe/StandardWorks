@@ -1486,7 +1486,7 @@ var dc27_ch1Verses = [
     ["לְבַבְכֶם","your hearts"],
     ["וְגִילוּ","and rejoice"],
     ["וְחִגְרוּ","and gird up"],
-    ["מָתְנֵיכֶם","your loins"],
+    ["מׇתְנֵיכֶם","your loins"],
     ["וּקְחוּ","and take"],
     ["עֲלֵיכֶם","upon you my whole armor"],
     ["אֶת־כׇּל־נִשְׁקִי","acc.-all-my armor"],
@@ -1504,7 +1504,7 @@ var dc27_ch1Verses = [
   { num: "טז", words: [
     ["עִמְדוּ","stand"],
     ["אֵפוֹא","therefore"],
-    ["מָתְנֵיכֶם","having your loins"],
+    ["מׇתְנֵיכֶם","having your loins"],
     ["חֲגוּרִים","girt about"],
     ["בֶּאֱמֶת","with truth"],
     ["וְשִׁרְיוֹן","having on the breastplate of"],

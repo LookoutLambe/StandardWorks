@@ -467,7 +467,7 @@ var mo_ch7Verses = [
     ["וְעַל־כֵּן","wherefore"],["הִנַּחְתִּי","I have suffered"],["אֶתְכֶם","you"],["לְהִשָּׁמֵר","to be preserved"],["לְמַעַן","so that"],["אֶדְרֹשׁ","I might inquire"],["מִכֶּם","of you"],["וְלוּלֵא","and were it not"],["זֹאת","this"],["צִוִּיתִי","I would have caused"],["אֶת־מִשְׁמָרִי","my guards"],["לַהֲמִיתְכֶם","to have put you to death"],["נִתַּן","was given"],["לָכֶם","unto you"],["לְדַבֵּר","to speak"]
   ]},
   { num: "יב", words: [
-    ["וַיְהִי","and it came to pass"],["כִּרְאוֹת","when saw"],["עַמּוֹן","Ammon"],["כִּי","that"],["נִתַּן־לוֹ","was given unto him"],["לְדַבֵּר","to speak"],["וַיִּגַּשׁ","and he went forth"],["וַיִּשְׁתַּחוּ","and bowed himself"],["לִפְנֵי","before"],["הַמֶּלֶךְ","the king"],["וַיָּקָם","and rose up"],["וַיֹּאמֶר","and said"],["הוֹ","O"],["הַמֶּלֶךְ","king"],["מוֹדֶה","am thankful"],["אֲנִי","I am"],["לֵאלֹהִים","to God"],["הַיּוֹם","this day"],["כִּי","that"],["עוֹדֶנִּי","I am yet"],["חַי","living"],["וְנִתַּן־לִי","and was given unto me"],["לְדַבֵּר","to speak"],["וַאֲדַבְּרָה","and I will speak"],["בְּאֹמֶץ","with boldness"],["לֵב","heart"]
+    ["וַיְהִי","and it came to pass"],["כִּרְאוֹת","when saw"],["עַמּוֹן","Ammon"],["כִּי","that"],["נִתַּן־לוֹ","was given unto him"],["לְדַבֵּר","to speak"],["וַיִּגַּשׁ","and he went forth"],["וַיִּשְׁתַּחוּ","and bowed himself"],["לִפְנֵי","before"],["הַמֶּלֶךְ","the king"],["וַיָּקׇם","and rose up"],["וַיֹּאמֶר","and said"],["הוֹ","O"],["הַמֶּלֶךְ","king"],["מוֹדֶה","am thankful"],["אֲנִי","I am"],["לֵאלֹהִים","to God"],["הַיּוֹם","this day"],["כִּי","that"],["עוֹדֶנִּי","I am yet"],["חַי","living"],["וְנִתַּן־לִי","and was given unto me"],["לְדַבֵּר","to speak"],["וַאֲדַבְּרָה","and I will speak"],["בְּאֹמֶץ","with boldness"],["לֵב","heart"]
   ]},
   { num: "יג", words: [
     ["כִּי","for"],["יָדַעְתִּי","I know"],["כִּי","that"],["לוּ","if"],["יְדַעְתַּנִי","you had known me"],["לֹא־נָתַתָּ","you would not have suffered"],["לָשִׂים","to put"],["עָלַי","upon me"],["הַמּוֹסְרוֹת הָאֵלֶּה","these bands"],["כִּי־אֲנִי","for I am"],["עַמּוֹן","Ammon"],["מִזֶּרַע","a descendant of"],["זָרַחֶמְלָה","Zarahemla"],["וְעָלִיתִי","and have come up"],["מֵאֶרֶץ","out of the land of"],["זָרַחֶמְלָה","Zarahemla"],["לִדְרֹשׁ","to preach"],["אֶת־אַחֵינוּ","our brethren"],["אֲשֶׁר","whom"],["הֶעֱלָה","brought up"],["זֶנִיף","Zeniff"],["מִן־הָאָרֶץ הַהִיא","from that land"]
@@ -680,13 +680,13 @@ var mo_ch10Verses = [
     ["וָאֲצַו","and I did cause"],["אֶת־הַנָּשִׁים","the women"],["לִטְווֹת","to spin"],["וְלַעֲמֹל","and toil"],["וְלַעֲשׂוֹת","and to work"],["כׇּל־מִינֵי","all manner of"],["שֵׁשׁ","fine linen"],["וְבַד","and cloth"],["מִכׇּל־מִין","of every kind"],["לְכַסּוֹת","to cover"],["אֶת־מַעֲרֻמֵּינוּ","our nakedness"],["וַנַּצְלִיחַ","and we prospered"],["בָּאָרֶץ","in the land"],["וַיְהִי","and there was"],["לָנוּ","unto us"],["שָׁלוֹם","peace"],["תָּמִיד","continually"],["בָּאָרֶץ","in the land"],["עֶשְׂרִים","twenty"],["וּשְׁתַּיִם","and two"],["שָׁנָה","years"]
   ]},
   { num: "ו", words: [
-    ["וַיָּמָת","and died"],["לָמָן","Laman"],["הַמֶּלֶךְ","the king"],["וַיִּמְלֹךְ","and reigned"],["בְּנוֹ","his son"],["תַּחְתָּיו","in his stead"],["וַיָּחֶל","and he began"],["לְהָסִית","to stir up"],["אֶת־עַמּוֹ","his people"],["לִמְרֹד","to rebel"],["בְּעַמִּי","against my people"],["וַיָּחֵלּוּ","and they began"],["לְהִתְכּוֹנֵן","to prepare"],["לַמִּלְחָמָה","for war"],["וְלַעֲלוֹת","and to come up"],["לְהִלָּחֵם","to battle"],["בְּעַמִּי","against my people"]
+    ["וַיָּמׇת","and died"],["לָמָן","Laman"],["הַמֶּלֶךְ","the king"],["וַיִּמְלֹךְ","and reigned"],["בְּנוֹ","his son"],["תַּחְתָּיו","in his stead"],["וַיָּחֶל","and he began"],["לְהָסִית","to stir up"],["אֶת־עַמּוֹ","his people"],["לִמְרֹד","to rebel"],["בְּעַמִּי","against my people"],["וַיָּחֵלּוּ","and they began"],["לְהִתְכּוֹנֵן","to prepare"],["לַמִּלְחָמָה","for war"],["וְלַעֲלוֹת","and to come up"],["לְהִלָּחֵם","to battle"],["בְּעַמִּי","against my people"]
   ]},
   { num: "ז", words: [
     ["וָאֶשְׁלַח","and I sent"],["אֶת־מְרַגְּלַי","my spies"],["סָבִיב","round about"],["אֶרֶץ","the land of"],["שֶׁמְלוֹן","Shemlon"],["לְגַלּוֹת","to discover"],["אֶת־הֲכָנוֹתֵיהֶם","their preparations"],["לְמַעַן","so that"],["אֶשְׁמֹר","I might guard"],["מִפְּנֵיהֶם","against them"],["לְבִלְתִּי","that not"],["יָבֹאוּ","they should come"],["עַל־עַמִּי","upon my people"],["לְהַשְׁמִידָם","to destroy them"]
   ]},
   { num: "ח", words: [
-    ["וַיַּעֲלוּ","and they came up"],["מִצְּפוֹן","on the north"],["לְאֶרֶץ","of the land of"],["שִׁילֹם","Shilom"],["בַּהֲמוֹנֵיהֶם","with their hosts"],["הָרַבִּים","the many"],["אֲנָשִׁים","men"],["מְזֻיָּנִים","armed"],["בִּקְשָׁתוֹת","with bows"],["וּבְחִצִּים","and with arrows"],["וּבַחֲרָבוֹת","and with swords"],["וּבְצִמְתֵרִים","and with cimeters"],["וּבַאֲבָנִים","and with stones"],["וּבִקְלָעִים","and with slings"],["וְרָאשֵׁיהֶם","and their heads were"],["מְגֻלָּחִים","shaven"],["וַיִּהְיוּ","and they were"],["עֲרֻמִּים","naked"],["וַיַּחְגְּרוּ","and they girded"],["חֲגוֹרַת","a girdle of"],["עוֹר","skin"],["עַל־מָתְנֵיהֶם","upon their loins"]
+    ["וַיַּעֲלוּ","and they came up"],["מִצְּפוֹן","on the north"],["לְאֶרֶץ","of the land of"],["שִׁילֹם","Shilom"],["בַּהֲמוֹנֵיהֶם","with their hosts"],["הָרַבִּים","the many"],["אֲנָשִׁים","men"],["מְזֻיָּנִים","armed"],["בִּקְשָׁתוֹת","with bows"],["וּבְחִצִּים","and with arrows"],["וּבַחֲרָבוֹת","and with swords"],["וּבְצִמְתֵרִים","and with cimeters"],["וּבַאֲבָנִים","and with stones"],["וּבִקְלָעִים","and with slings"],["וְרָאשֵׁיהֶם","and their heads were"],["מְגֻלָּחִים","shaven"],["וַיִּהְיוּ","and they were"],["עֲרֻמִּים","naked"],["וַיַּחְגְּרוּ","and they girded"],["חֲגוֹרַת","a girdle of"],["עוֹר","skin"],["עַל־מׇתְנֵיהֶם","upon their loins"]
   ]},
   { num: "ט", words: [
     ["וָאַסְתִּיר","and I hid"],["אֶת־נְשֵׁי","the wives of"],["עַמִּי","my people"],["וְטַפָּם","and their children"],["בַּמִּדְבָּר","in the wilderness"],["וָאֲצַו","and I commanded"],["גַּם","also"],["אֶת־כׇּל־זְקֵנַי","all my old men"],["הַיְּכוֹלִים","that could"],["לָשֵׂאת","bear"],["נֶשֶׁק","weapons"],["וְגַם","and also"],["אֶת־כׇּל־בַּחוּרַי","all my young men"],["הַיְּכוֹלִים","that were able"],["לָשֵׂאת","to bear"],["נֶשֶׁק","weapons"],["לְהִקָּהֵל","to gather themselves"],["לָצֵאת","to come forth"],["לַמִּלְחָמָה","to battle"],["בַּלָּמָנִים","against the Lamanites"],["וָאַעֲמִידֵם","and I did place them"],["בְּמַעַרְכוֹתָם","in their ranks"],["אִישׁ","every man"],["לְפִי","according to"],["גִילוֹ","his age"]
@@ -725,7 +725,7 @@ var mo_ch10Verses = [
     ["וַנְּגָרְשֵׁם","and we drove them"],["שֵׁנִית","again"],["מֵאַרְצֵנוּ","out of our land"],["וַנַּכֵּם","and we slew them"],["מַכָּה","with a slaughter"],["גְדוֹלָה","great"],["עַד־אֲשֶׁר","until"],["לֹא","not"],["סָפַרְנוּם","we numbered them"]
   ]},
   { num: "כא", words: [
-    ["וַנָּשָׁב","and we returned"],["אֶל־אַרְצֵנוּ","to our own land"],["וַיָּשָׁב","and returned"],["עַמִּי","my people"],["לִרְעוֹת","to tend"],["אֶת־צֹאנָם","their flocks"],["וְלַעֲבֹד","and to till"],["אֶת־אַדְמָתָם","their ground"]
+    ["וַנָּשָׁב","and we returned"],["אֶל־אַרְצֵנוּ","to our own land"],["וַיָּשׇׁב","and returned"],["עַמִּי","my people"],["לִרְעוֹת","to tend"],["אֶת־צֹאנָם","their flocks"],["וְלַעֲבֹד","and to till"],["אֶת־אַדְמָתָם","their ground"]
   ]},
   { num: "כב", words: [
     ["וְעַתָּה","and now"],["אֲנִי","I"],["זָקַנְתִּי","am old"],["וָאֶתֵּן","and I conferred"],["אֶת־הַמַּמְלָכָה","the kingdom"],["לְאֶחָד","to one"],["מִבָּנַי","of my sons"],["לָכֵן","therefore"],["לֹא","not"],["אוֹסִיף","shall I add"],["לְדַבֵּר","to speak"],["וִיהִי","and may"],["יְהוָה","the Lord"],["עִם־עַמִּי","with my people"],["אָמֵן","amen"]
@@ -773,7 +773,7 @@ var mo_ch11Verses = [
     ["וַיַּעַשׂ","and he built"],["בִּנְיָנִים","buildings"],["רַבִּים","many"],["בְּאֶרֶץ","in the land of"],["שִׁילֹם","Shilom"],["וַיַּעַשׂ","and he built"],["מִגְדָּל","a tower"],["גָּדוֹל","great"],["עַל־הַגִּבְעָה","upon the hill"],["מִצְּפוֹן","north"],["לְאֶרֶץ","of the land of"],["שִׁילֹם","Shilom"],["אֲשֶׁר","which"],["הָיְתָה","had been"],["מִקְלָט","a resort"],["לִבְנֵי","for the children of"],["נֶפִי","Nephi"],["בְּעֵת","at the time"],["נָסָם","they fled"],["מִן־הָאָרֶץ","from the land"],["וְכֵן","and thus"],["עָשָׂה","he did"],["בָּעֹשֶׁר","with the riches"],["אֲשֶׁר","which"],["הִשִּׂיג","he obtained"],["מִמַּס","from the taxation of"],["עַמּוֹ","his people"]
   ]},
   { num: "יד", words: [
-    ["וַיָּשֶׂם","and he set"],["לִבּוֹ","his heart"],["עַל־עָשְׁרוֹ","upon his riches"],["וַיְבַל","and he spent"],["עִתּוֹ","his time"],["בְּהוֹלֵלוּת","in riotous living"],["עִם־נָשָׁיו","with his wives"],["וּפִילַגְשָׁיו","and his concubines"],["וְכֵן","and likewise"],["בִּלּוּ","spent"],["גַם־כֹּהֲנָיו","also his priests"],["עִתָּם","their time"],["עִם־זוֹנוֹת","with harlots"]
+    ["וַיָּשֶׂם","and he set"],["לִבּוֹ","his heart"],["עַל־עׇשְׁרוֹ","upon his riches"],["וַיְבַל","and he spent"],["עִתּוֹ","his time"],["בְּהוֹלֵלוּת","in riotous living"],["עִם־נָשָׁיו","with his wives"],["וּפִילַגְשָׁיו","and his concubines"],["וְכֵן","and likewise"],["בִּלּוּ","spent"],["גַם־כֹּהֲנָיו","also his priests"],["עִתָּם","their time"],["עִם־זוֹנוֹת","with harlots"]
   ]},
   { num: "טו", words: [
     ["וַיִּטַּע","and he planted"],["כְּרָמִים","vineyards"],["סָבִיב","round about"],["בָּאָרֶץ","in the land"],["וַיִּבֶן","and he built"],["גִּתּוֹת","wine presses"],["וַיַּעַשׂ","and made"],["יַיִן","wine"],["לָרֹב","in abundance"],["וַיְהִי","and he became"],["לְסֹבֵא","a drinker"],["יַיִן","of wine"],["וְגַם","and also"],["עַמּוֹ","his people"]
@@ -1238,7 +1238,7 @@ var mo_ch17Verses = [
     ["וַיִּקְצֹף","but was more wroth"],["הַמֶּלֶךְ","the king"],["עוֹד","more"],["וַיְצַו","and caused"],["לְגָרֵשׁ","that should be cast out"],["אֶת־אַלְמָא","Alma"],["מִתּוֹכָם","from among them"],["וַיִּשְׁלַח","and he sent"],["אֶת־עֲבָדָיו","his servants"],["אַחֲרָיו","after him"],["לַהֲרֹג","that they might slay"],["אֹתוֹ","him"]
   ]},
   { num: "ד", words: [
-    ["וַיָּנָס","but he fled"],["מִפְּנֵיהֶם","from before them"],["וַיִּסָּתֵר","and hid himself"],["וְלֹא","and not"],["מְצָאֻהוּ","did they find him"],["וַיְהִי","and he being"],["נֶחְבָּא","concealed"],["יָמִים","days"],["רַבִּים","many"],["וַיִּכְתֹּב","and he wrote"],["אֶת־כׇּל־דִּבְרֵי","all the words of"],["אֲבִינָדִי","Abinadi"]
+    ["וַיָּנׇס","but he fled"],["מִפְּנֵיהֶם","from before them"],["וַיִּסָּתֵר","and hid himself"],["וְלֹא","and not"],["מְצָאֻהוּ","did they find him"],["וַיְהִי","and he being"],["נֶחְבָּא","concealed"],["יָמִים","days"],["רַבִּים","many"],["וַיִּכְתֹּב","and he wrote"],["אֶת־כׇּל־דִּבְרֵי","all the words of"],["אֲבִינָדִי","Abinadi"]
   ]},
   { num: "ה", words: [
     ["וַיְצַו","and commanded"],["הַמֶּלֶךְ","the king"],["אֶת־שֹׁמְרָיו","his guards"],["לָסֹב","to surround"],["אֶת־אֲבִינָדִי","Abinadi"],["וּלְתָפְשׂוֹ","and to take him"],["וַיַּאַסְרֻהוּ","and bound him"],["וַיַּשְׁלִיכֻהוּ","and cast him"],["בֵּית","into"],["הַכֶּלֶא","prison"]
@@ -1286,7 +1286,7 @@ var mo_ch17Verses = [
     ["כֵּן","thus"],["יִקֹּם","shall avenge"],["אֱלֹהִים","God"],["נִקְמַת","vengeance upon"],["מַשְׁחִיתֵי","those who destroy"],["עַמּוֹ","His people"],["אָנָּא","O"],["אֱלֹהִים","God"],["קַח","take"],["נַפְשִׁי","my soul"]
   ]},
   { num: "כ", words: [
-    ["וַיְהִי","and it came to pass"],["כְּכַלּוֹת","when had finished"],["אֲבִינָדִי","Abinadi"],["אֶת־דְּבָרָיו","his words"],["וַיִּפֹּל","and he fell"],["וַיָּמָת","and he died"],["בָּאֵשׁ","by fire"],["כִּי","that"],["מֵאֵן","he refused"],["לְכַחֵשׁ","to deny"],["בְּמִצְוֹת","the commandments of"],["אֱלֹהִים","God"],["וַיַּחְתֹּם","and sealed"],["אֶת־אֱמֶת","the truth of"],["דְּבָרָיו","his words"],["בְּמוֹתוֹ","by his death"]
+    ["וַיְהִי","and it came to pass"],["כְּכַלּוֹת","when had finished"],["אֲבִינָדִי","Abinadi"],["אֶת־דְּבָרָיו","his words"],["וַיִּפֹּל","and he fell"],["וַיָּמׇת","and he died"],["בָּאֵשׁ","by fire"],["כִּי","that"],["מֵאֵן","he refused"],["לְכַחֵשׁ","to deny"],["בְּמִצְוֹת","the commandments of"],["אֱלֹהִים","God"],["וַיַּחְתֹּם","and sealed"],["אֶת־אֱמֶת","the truth of"],["דְּבָרָיו","his words"],["בְּמוֹתוֹ","by his death"]
   ]}
 ];
 renderVerseSet(mo_ch17Verses, 'mo-ch17-verses');
@@ -1400,7 +1400,7 @@ var mo_ch18Verses = [
 renderVerseSet(mo_ch18Verses, 'mo-ch18-verses');
 var mo_ch19Verses = [
   { num: "א", words: [
-    ["וַיָּשָׁב","and returned"],["צְבָא","the army of"],["הַמֶּלֶךְ","the king"],["וַיְבַקְשׁוּ","and they sought"],["לַשָּׁוְא","in vain"],["אֶת־עַם","the people of"],["יְהוָה","the Lord"]
+    ["וַיָּשׇׁב","and returned"],["צְבָא","the army of"],["הַמֶּלֶךְ","the king"],["וַיְבַקְשׁוּ","and they sought"],["לַשָּׁוְא","in vain"],["אֶת־עַם","the people of"],["יְהוָה","the Lord"]
   ]},
   { num: "ב", words: [
     ["וְהִנֵּה","and behold"],["צְבָא","the army of"],["הַמֶּלֶךְ","the king"],["מְעַט","small"],["כִּי","for"],["נִתְמַעֵט","was reduced"],["וַתָּחֶל","and there began to be"],["מַחֲלֹקֶת","a division"],["בְּיֶתֶר","among the remainder of"],["הָעָם","the people"]
@@ -1412,7 +1412,7 @@ var mo_ch19Verses = [
     ["וַיְהִי","and there was"],["אִישׁ","a man"],["בְּתוֹכָם","among them"],["וּשְׁמוֹ","whose name was"],["גִּדְעוֹן","Gideon"],["וְהוּא","and he"],["אִישׁ","was a man"],["חַיִל","of might"],["וְאֹיֵב","and an enemy"],["לַמֶּלֶךְ","to the king"],["וַיִּשְׁלֹף","and he drew"],["חַרְבּוֹ","his sword"],["וַיִּשָּׁבַע","and swore"],["בַּחֲמָתוֹ","in his wrath"],["לְהָמִית","to put to death"],["אֶת־הַמֶּלֶךְ","the king"]
   ]},
   { num: "ה", words: [
-    ["וַיִּלָּחֶם","and he fought"],["עִם־הַמֶּלֶךְ","with the king"],["וַיְהִי","and it came to pass"],["כִּרְאוֹת","when saw"],["הַמֶּלֶךְ","the king"],["כִּי־יָכֹל","that he was about to overpower"],["לוֹ","him"],["וַיָּנָס","he fled"],["וַיָּרָץ","and ran"],["וַיַּעַל","and went up"],["עַל־הַמִּגְדָּל","upon the tower"],["אֲשֶׁר","which was"],["אֵצֶל","near"],["הַהֵיכׇל","the temple"]
+    ["וַיִּלָּחֶם","and he fought"],["עִם־הַמֶּלֶךְ","with the king"],["וַיְהִי","and it came to pass"],["כִּרְאוֹת","when saw"],["הַמֶּלֶךְ","the king"],["כִּי־יָכֹל","that he was about to overpower"],["לוֹ","him"],["וַיָּנׇס","he fled"],["וַיָּרָץ","and ran"],["וַיַּעַל","and went up"],["עַל־הַמִּגְדָּל","upon the tower"],["אֲשֶׁר","which was"],["אֵצֶל","near"],["הַהֵיכׇל","the temple"]
   ]},
   { num: "ו", words: [
     ["וַיִּרְדֹּף","and pursued"],["גִּדְעוֹן","Gideon"],["אַחֲרָיו","after him"],["וַיְהִי","and was about"],["קָרוֹב","near"],["לַעֲלוֹת","to go up"],["עַל־הַמִּגְדָּל","upon the tower"],["לְהָמִית","to put to death"],["אֶת־הַמֶּלֶךְ","the king"],["וַיִּשָּׂא","and cast"],["הַמֶּלֶךְ","the king"],["עֵינָיו","his eyes"],["סָבִיב","round about"],["אֶל־אֶרֶץ","to the land of"],["שֶׁמְלוֹן","Shemlon"],["וְהִנֵּה","and behold"],["צְבָא","the army of"],["הַלָּמָנִים","the Lamanites"],["בִּגְבוּל","were within the borders of"],["הָאָרֶץ","the land"]
@@ -1571,7 +1571,7 @@ var mo_ch20Verses = [
 renderVerseSet(mo_ch20Verses, 'mo-ch20-verses');
 var mo_ch21Verses = [
   { num: "א", words: [
-    ["וַיָּשָׁב","and returned"],["לִמְחִי","Limhi"],["וְעַמּוֹ","and his people"],["אֶל־עִיר","to the city of"],["נֶפִי","Nephi"],["וַיָּחֵלּוּ","and began"],["לָשֶׁבֶת","to dwell"],["בָּאָרֶץ","in the land"],["בְּשָׁלוֹם","in peace"]
+    ["וַיָּשׇׁב","and returned"],["לִמְחִי","Limhi"],["וְעַמּוֹ","and his people"],["אֶל־עִיר","to the city of"],["נֶפִי","Nephi"],["וַיָּחֵלּוּ","and began"],["לָשֶׁבֶת","to dwell"],["בָּאָרֶץ","in the land"],["בְּשָׁלוֹם","in peace"]
   ]},
   { num: "ב", words: [
     ["וַיְהִי","and it came to pass"],["מִקֵּץ","after"],["יָמִים","many days"],["רַבִּים","many"],["וַיָּחֵלּוּ","began"],["הַלָּמָנִים","the Lamanites"],["לְהִתְעוֹרֵר","to be stirred up"],["בְּאַף","in anger"],["עַל־הַנֶּפִיִּים","against the Nephites"],["וַיָּחֵלּוּ","and they began"],["לָבוֹא","to come"],["בִּגְבוּלוֹת","into the borders of"],["הָאָרֶץ","the land"],["סָבִיב","round about"]
@@ -2192,7 +2192,7 @@ var mo_ch27Verses = [
     ["וַיַּקְהֵל","and he assembled"],["אֶת־הַכֹּהֲנִים","the priests"],["וַיָּחֵלּוּ","and they began"],["לָצוּם","to fast"],["וּלְהִתְפַּלֵּל","and to pray"],["אֶל־יְהוָה","to the Lord"],["אֱלֹהֵיהֶם","their God"],["כִּי","that"],["יִפְתַּח","He would open"],["אֶת־פִּי","the mouth of"],["אַלְמָא","Alma"],["לְמַעַן","that"],["יְדַבֵּר","he might speak"],["וְגַם","and also"],["כִּי","that"],["יְקַבְּלוּ","might receive"],["אֵבָרָיו","his limbs"],["אֶת־כֹּחָם","their strength"],["לְמַעַן","that"],["תִּפָּקַחְנָה","they might be opened"],["עֵינֵי","the eyes of"],["הָעָם","the people"],["לִרְאוֹת","to see"],["וְלָדַעַת","and to know"],["אֶת־חֶסֶד","the mercy of"],["הָאֵל","God"],["וּכְבוֹדוֹ","and His glory"]
   ]},
   { num: "כג", words: [
-    ["וַיְהִי","and it came to pass"],["אַחֲרֵי","after"],["צוּמָם","they had fasted"],["וְהִתְפַּלְלָם","and prayed"],["שְׁנֵי","two"],["יָמִים","days"],["וּשְׁתֵּי","and two"],["לֵילוֹת","nights"],["וַיְקַבְּלוּ","and they received"],["אֵבְרֵי","the limbs of"],["אַלְמָא","Alma"],["אֶת־כֹּחָם","their strength"],["וַיָּקָם","and he stood up"],["וַיָּחֶל","and began"],["לְדַבֵּר","to speak"],["אֲלֵיהֶם","unto them"],["לֵאמֹר","saying"],["הִתְנַחֲמוּ","be comforted"]
+    ["וַיְהִי","and it came to pass"],["אַחֲרֵי","after"],["צוּמָם","they had fasted"],["וְהִתְפַּלְלָם","and prayed"],["שְׁנֵי","two"],["יָמִים","days"],["וּשְׁתֵּי","and two"],["לֵילוֹת","nights"],["וַיְקַבְּלוּ","and they received"],["אֵבְרֵי","the limbs of"],["אַלְמָא","Alma"],["אֶת־כֹּחָם","their strength"],["וַיָּקׇם","and he stood up"],["וַיָּחֶל","and began"],["לְדַבֵּר","to speak"],["אֲלֵיהֶם","unto them"],["לֵאמֹר","saying"],["הִתְנַחֲמוּ","be comforted"]
   ]},
   { num: "כד", words: [
     ["כִּי","for"],["אָמַר","said he"],["שַׁבְתִּי","I have repented"],["מֵחַטֹּאתַי","of my sins"],["וּפְדָאַנִי","and have been redeemed by"],["יְהוָה","the Lord"],["הִנֵּה","behold"],["נוֹלַדְתִּי","I am born"],["מֵהָרוּחַ","of the Spirit"]

@@ -5186,7 +5186,7 @@ var dc137_ch1Verses = [
     ["הַהִיא","that"],
     ["בְּרָאֹתִי","seeing"],
     ["כִּי","that"],
-    ["וַיָּמָת","he had departed"],
+    ["וַיָּמׇת","he had departed"],
     ["מִן","from"],
     ["הַחַיִּים","life"],
     ["הָאֵלֶּה","this,"],

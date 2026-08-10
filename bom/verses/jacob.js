@@ -890,7 +890,7 @@ var jc_ch2Verses = [
     ["הִנֵּה","behold"],
     ["דָוִד","David"],
     ["וּשְׁלֹמֹה","and Solomon"],
-    ["אָמְנָם","truly"],
+    ["אׇמְנָם","truly"],
     ["הָיוּ","were"],
     ["לָהֶם","unto them"],
     ["נָשִׁים","wives"],

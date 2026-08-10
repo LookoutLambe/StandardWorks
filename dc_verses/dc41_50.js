@@ -2162,7 +2162,7 @@ var dc43_ch1Verses = [
   { num: "יט", words: [
     ["לָכֵן","wherefore"],
     ["אִזְרוּ","gird up"],
-    ["מָתְנֵיכֶם","your loins"],
+    ["מׇתְנֵיכֶם","your loins"],
     ["פֶּן","lest"],
     ["תִּמָּצְאוּ","ye be found"],
     ["בֵּין","among"],

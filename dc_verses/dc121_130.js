@@ -620,7 +620,7 @@ var dc121_ch1Verses = [
     ["׃",""]
   ]},
   { num: "לז", words: [
-    ["אָמְנָם","truly"],
+    ["אׇמְנָם","truly"],
     ["יָכוֹל","[may]"],
     ["שֶׁיִּנָּתְנוּ","That they may be conferred"],
     ["לָנוּ","upon us,"],

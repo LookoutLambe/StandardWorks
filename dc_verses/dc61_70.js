@@ -671,7 +671,7 @@ var dc61_ch1Verses = [
   ]},
   { num: "לח", words: [
     ["אִזְרוּ","gird up"],
-    ["מָתְנֵיכֶם","your loins"],
+    ["מׇתְנֵיכֶם","your loins"],
     ["וֶהְיוּ","and be"],
     ["עֵרִים","watchful"],
     ["וּשְׁקוּלִים","and (be) sober"],
@@ -1520,7 +1520,7 @@ var dc63_ch1Verses = [
     ["בְּיָדָיו","in his hands"],
     ["וֶאֱמוּנָה","and faithfulness"],
     ["עַל","upon"],
-    ["מָתְנָיו","his loins"],
+    ["מׇתְנָיו","his loins"],
     ["וְיִשָּׂא","and shall lift"],
     ["קוֹל","(a) voice of"],
     ["אַזְהָרָה","warning"],

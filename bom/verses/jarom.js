@@ -226,7 +226,7 @@ var jr_ch1Verses = [
     ["וְלֹא","and not"],
     ["הִצְלִיחוּ","did they prosper"],
     ["נֶגְדֵּנוּ","against us"],
-    ["וַיָּקָם","and was confirmed"],
+    ["וַיָּקׇם","and was confirmed"],
     ["דְּבַר־יְהוָה","the word of the Lord"],
     ["אֲשֶׁר־דִּבֶּר","which He spoke"],
     ["לַאֲבוֹתֵינוּ","unto our fathers"],

@@ -41,7 +41,7 @@ var colophonWords = [
   ["וַיִּקַּח","and took"],
   ["נֶפִי","Nephi"],
   ["אֶת־אֶחָיו","his brothers"],
-  ["וַיָּשָׁב","and returned"],
+  ["וַיָּשׇׁב","and returned"],
   ["אֶל־אֶרֶץ","to the land of"],
   ["יְרוּשָׁלַיִם","Jerusalem"],
   ["אַחֲרֵי","after"],
@@ -232,7 +232,7 @@ var ch1Verses = [
     ["׃",""]
   ]},
   { num:"ז", words:[
-    ["וַיָּשָׁב","and he returned"],
+    ["וַיָּשׇׁב","and he returned"],
     ["אֶל־בֵּיתוֹ","to his house"],
     ["בִּירוּשָׁלַיִם","in Jerusalem"],
     ["וַיִּפֹּל","and he fell"],
@@ -1154,7 +1154,7 @@ var ch3Verses = [
     ["׃",""]
   ]},
   { num:"יד", words:[
-    ["וַיָּנָס","and fled"],
+    ["וַיָּנׇס","and fled"],
     ["לָמָן","Laman"],
     ["מִפָּנָיו","from his presence"],
     ["וַיַּגֵּד־לָנוּ","and he told us"],
@@ -1832,7 +1832,7 @@ var ch4Verses = [
     ["וָאֶחְגֹּר","and I did gird on"],
     ["אֶת־שִׁרְיוֹנוֹ","his armor"],
     ["עַל","upon"],
-    ["מָתְנָי","my loins"],
+    ["מׇתְנָי","my loins"],
     ["׃",""]
   ]},
   { num:"כ", words:[
@@ -1876,7 +1876,7 @@ var ch4Verses = [
     ["אֶת־הַחֶרֶב","the sword"],
     ["הַחֲגוּרָה","girded"],
     ["עַל","about"],
-    ["מָתְנָי","my loins"],
+    ["מׇתְנָי","my loins"],
     ["׃",""]
   ]},
   { num:"כב", words:[
@@ -3227,7 +3227,7 @@ var ch8Verses = [
     ["לְהִתְפַּלֵּל","to pray"],
     ["אֶל־יְהוָה","unto the Lord"],
     ["כִּי","that"],
-    ["יְחָנֵּנִי","He would have mercy on me"],
+    ["יְחׇנֵּנִי","He would have mercy on me"],
     ["כְּרֹב","according to the multitude of"],
     ["חַסְדָּיו","His tender mercies"],
     ["׃",""]
@@ -3936,7 +3936,7 @@ var ch10Verses = [
     ["׃",""]
   ]},
   { num:"ד", words:[
-    ["וְאָמְנָם","and indeed"],
+    ["וְאׇמְנָם","and indeed"],
     ["בְּעוֹד","in yet"],
     ["שֵׁשׁ","six"],
     ["מֵאוֹת","hundred"],
@@ -4101,7 +4101,7 @@ var ch10Verses = [
     ["׃",""]
   ]},
   { num:"יב", words:[
-    ["וְאָמְנָם","and indeed"],
+    ["וְאׇמְנָם","and indeed"],
     ["הִרְבָּה","much"],
     ["אָבִי","my father"],
     ["לְדַבֵּר","to speak"],
@@ -8470,7 +8470,7 @@ var ch16Verses = [
     ["׃",""]
   ]},
   { num:"לד", words:[
-    ["וַיָּמָת","and died"],
+    ["וַיָּמׇת","and died"],
     ["יִשְׁמָעֵאל","Ishmael"],
     ["וַיִּקָּבֵר","and was buried"],
     ["בַּמָּקוֹם","in the place"],

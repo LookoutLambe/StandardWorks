@@ -2057,7 +2057,7 @@ var dc19_ch1Verses = [
     ["׃",""]
   ]},
   { num: "ד", words: [
-    ["וְאָמְנָם","and surely"],
+    ["וְאׇמְנָם","and surely"],
     ["כׇּל־אִישׁ","every man"],
     ["חַיָּב","must"],
     ["לָשׁוּב","repent"],
@@ -3049,8 +3049,8 @@ var dc20_ch1Verses = [
   { num: "כג", words: [
     ["הוּא","he"],
     ["נִצְלַב","was crucified"],
-    ["וַיָּמָת","died"],
-    ["וַיָּקָם","and rose again"],
+    ["וַיָּמׇת","died"],
+    ["וַיָּקׇם","and rose again"],
     ["בַּיּוֹם","the day"],
     ["הַשְּׁלִישִׁי׃","third"],
     ["׃",""]

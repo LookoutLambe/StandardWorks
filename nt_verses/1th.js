@@ -34,7 +34,7 @@ var _1th_ch2Verses = [
   { num:"יז", words:[["וַאֲנַחְנוּ","and-we-are"],["אַחַי","my-brothers"],["אַחֲרֵי","after"],["אֲשֶׁר־שָׁכֹלְנוּ","being-taken-from"],["אֶתְכֶם","you"],["לִזְמַן","for-space-of"],["מְעַט","somewhat"],["לְפָנִים","in-presence"],["וְלֹא","not"],["לַלֵּב","in-heart"],["חַשְׁנוּ","we-endeavoured"],["עַד־מְאֹד","exceedingly"],["לִרְאוֹת","to-see"],["פְּנֵיכֶם","your-face"],["בִּתְשׁוּקָה","with-longing"],["רַבָּה","much"],["׃",""]] },
   { num:"יח", words:[["וְעַל־כֵּן","and-therefore"],["חָפַצְנוּ","we-desired"],["לָבוֹא","to-come"],["אֲלֵיכֶם","unto-you"],["אֲנִי","I"],["פוֹלוֹס","Paul"],["פַּעַם","once"],["וּשְׁתָּיִם","and-again"],["וְהַשָׂטָן","and-Satan"],["עֲצָרָנוּ","hindered-us"],["׃",""]] },
   { num:"יט", words:[["כִּי","because"],["מִי","who"],["תִקְוָתֵנוּ","our-hope"],["וּמִי","and-who"],["שִׂמְחָתֵנוּ","our-joy"],["וַעֲטֶרֶת","and-a crown of"],["תִּפְאַרְתֵּנוּ","our-rejoicing"],["הֲלֹא","do-not"],["גַם־אַתֶּם","also-you"],["לִפְנֵי","before"],["אֲדֹנֵינוּ","our-Lord"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׁיחַ","the-Messiah"],["בְּבוֹאוֹ","at-his-coming"],["׃",""]] },
-  { num:"כ", words:[["אָמְנָם","truly"],["אַתֶּם","you-are"],["כְּבוֹדֵנוּ","our-glory"],["וְשִׂמְחָתֵנוּ","and-joy"],["׃",""]] },
+  { num:"כ", words:[["אׇמְנָם","truly"],["אַתֶּם","you-are"],["כְּבוֹדֵנוּ","our-glory"],["וְשִׂמְחָתֵנוּ","and-joy"],["׃",""]] },
 ];
 renderVerseSet(_1th_ch2Verses, '1th-ch2-verses');
 

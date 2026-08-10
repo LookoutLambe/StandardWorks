@@ -1876,7 +1876,7 @@ var dc56_ch1Verses = [
     ["מִנִּכְסֵיכֶם","of your substance"],
     ["לָעֲנִיִּים","to the poor"],
     ["כִּי","for"],
-    ["עָשְׁרְכֶם","your riches"],
+    ["עׇשְׁרְכֶם","your riches"],
     ["יַשְׁחִית","will canker"],
     ["נַפְשְׁכֶם","your souls"],
     ["וְזֹאת","and this"],
