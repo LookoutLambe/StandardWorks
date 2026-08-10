@@ -839,7 +839,7 @@ var ch2Verses = [
     ["לִי","unto me"],
     ["יְהוָה","the Lord"],
     ["בְּרוּחַ","by His Holy"],
-    ["קָדְשׁוֹ","Spirit"],
+    ["קׇדְשׁוֹ","Spirit"],
     ["וַיְהִי","and it came to pass"],
     ["וַיַּאֲמֵן","that he believed"],
     ["בִּדְבָרָי","in my words"],

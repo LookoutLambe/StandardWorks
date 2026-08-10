@@ -1421,7 +1421,7 @@ var n2_ch2Verses = [
     ["חַיֵּי־עוֹלָם","eternal life"],
     ["כִּרְצוֹן","according to the will of"],
     ["רוּחַ","the Holy Spirit"],
-    ["קָדְשׁוֹ","of His"],
+    ["קׇדְשׁוֹ","of His"],
     ["׃",""]
   ]},
       { num:"כט", words:[
@@ -3215,7 +3215,7 @@ var n2_ch6Verses = [
     ["וַיִּסְמְכֵנִי","and ordained me"],
     ["לְפִי","according to"],
     ["סֵדֶר","the order of"],
-    ["קָדְשׁוֹ","His holiness"],
+    ["קׇדְשׁוֹ","His holiness"],
     ["וַיְקַדְּשֵׁנִי","and consecrated me"],
     ["נֶפִי","Nephi"],
     ["אָחִי","my brother"],
@@ -5278,7 +5278,7 @@ var n2_ch9Verses = [
     ["בַּצֶּדֶק","in righteousness"],
     ["וַאֲהַלֵּל","and I shall praise"],
     ["שֵׁם","the name of"],
-    ["קָדְשׁוֹ","His holiness"],
+    ["קׇדְשׁוֹ","His holiness"],
     ["לֵאלֹהָי","of my God"],
     ["׃",""]
   ]},
@@ -10349,7 +10349,7 @@ var n2_ch25Verses = [
     ["וּמְרוֹמֵם","and magnifies"],
     ["לִבִּי","my heart"],
     ["שֵׁם","the name of"],
-    ["קָדְשׁוֹ","His holiness"],
+    ["קׇדְשׁוֹ","His holiness"],
     ["׃",""]
   ]},
   { num:"יד", words:[

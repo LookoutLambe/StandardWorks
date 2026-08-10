@@ -221,7 +221,7 @@ var mo_ch3Verses = [
     ["אַךְ","but"],["אוֹי","woe"],["אוֹי","woe"],["לְאִישׁ","for a man"],["הַיֹּדֵעַ","who knows"],["כִּי־מֹרֶה","that he is rebelling"],["בֵּאלֹהִים","against God"],["כִּי־לֹא","for not"],["תָבוֹא","does come"],["יְשׁוּעָה","salvation"],["לָאֵלֶּה","to such a one"],["כִּי־אִם","that only"],["בִּתְשׁוּבָה","through repentance"],["וֶאֱמוּנָה","and faith"],["בַּאֲדֹנָי","on the Lord"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׁיחַ","the Messiah"]
   ]},
   { num: "יג", words: [
-    ["וַיִּשְׁלַח","and he sent"],["יְהוָה","the Lord"],["אֱלֹהִים","God"],["אֶת־נְבִיאֵי","the prophets of"],["קָדְשׁוֹ","His holiness"],["בֵּין","among"],["כׇּל־בְּנֵי","all the children of"],["הָאָדָם","men"],["לְהַגִּיד","to declare"],["אֶת־הַדְּבָרִים הָאֵלֶּה","these things"],["לְכׇל־מִשְׁפָּחָה","to every kindred"],["וְגוֹי","and nation"],["וְלָשׁוֹן","and tongue"],["לְמַעַן","so that"],["כׇּל־הַמַּאֲמִין","whosoever believes"],["כִּי","that"],["יָבוֹא","should come"],["הַמָּשִׁיחַ","the Messiah"],["יְקַבֵּל","he shall receive"],["סְלִיחַת","remission of"],["חֲטָאָיו","his sins"],["וְיִשְׂמַח","and he shall rejoice"],["שִׂמְחָה","with joy"],["גְדוֹלָה","exceeding great"],["כְּאִלּוּ","as if"],["כְּבָר","already"],["בָּא","came"],["בְתוֹכָם","among them"]
+    ["וַיִּשְׁלַח","and he sent"],["יְהוָה","the Lord"],["אֱלֹהִים","God"],["אֶת־נְבִיאֵי","the prophets of"],["קׇדְשׁוֹ","His holiness"],["בֵּין","among"],["כׇּל־בְּנֵי","all the children of"],["הָאָדָם","men"],["לְהַגִּיד","to declare"],["אֶת־הַדְּבָרִים הָאֵלֶּה","these things"],["לְכׇל־מִשְׁפָּחָה","to every kindred"],["וְגוֹי","and nation"],["וְלָשׁוֹן","and tongue"],["לְמַעַן","so that"],["כׇּל־הַמַּאֲמִין","whosoever believes"],["כִּי","that"],["יָבוֹא","should come"],["הַמָּשִׁיחַ","the Messiah"],["יְקַבֵּל","he shall receive"],["סְלִיחַת","remission of"],["חֲטָאָיו","his sins"],["וְיִשְׂמַח","and he shall rejoice"],["שִׂמְחָה","with joy"],["גְדוֹלָה","exceeding great"],["כְּאִלּוּ","as if"],["כְּבָר","already"],["בָּא","came"],["בְתוֹכָם","among them"]
   ]},
   { num: "יד", words: [
     ["וַיַּרְא","and saw"],["יְהוָה","the Lord"],["אֱלֹהִים","God"],["כִּי","that"],["עַם־קְשֵׁה־עֹרֶף","a stiffnecked people"],["הֵם","they were"],["וַיִּתֵּן־לָהֶם","and He gave unto them"],["תּוֹרָה","a law"],["הִיא","it is"],["תּוֹרַת","the law of"],["מֹשֶׁה","Moses"]
@@ -893,7 +893,7 @@ var mo_ch12Verses = [
     ["פִּצְחוּ","break forth"],["רַנְּנוּ","sing"],["יַחְדָּו","sing together"],["חָרְבוֹת","you waste places of"],["יְרוּשָׁלִָם","Jerusalem"],["כִּי־נִחַם","for has comforted"],["יְהוָה","the Lord"],["עַמּוֹ","His people"],["גָּאַל","He has redeemed"],["יְרוּשָׁלִָם","Jerusalem"]
   ]},
   { num: "כד", words: [
-    ["חָשַׂף","has made bare"],["יְהוָה","the Lord"],["אֶת־זְרוֹעַ","the arm of"],["קָדְשׁוֹ","His holiness"],["לְעֵינֵי","in the eyes of"],["כׇּל־הַגּוֹיִם","all the nations"],["וְרָאוּ","and shall see"],["כׇּל־אַפְסֵי־אָרֶץ","all the ends of the earth"],["אֵת",""],["יְשׁוּעַת","the salvation of"],["אֱלֹהֵינוּ","our God"]
+    ["חָשַׂף","has made bare"],["יְהוָה","the Lord"],["אֶת־זְרוֹעַ","the arm of"],["קׇדְשׁוֹ","His holiness"],["לְעֵינֵי","in the eyes of"],["כׇּל־הַגּוֹיִם","all the nations"],["וְרָאוּ","and shall see"],["כׇּל־אַפְסֵי־אָרֶץ","all the ends of the earth"],["אֵת",""],["יְשׁוּעַת","the salvation of"],["אֱלֹהֵינוּ","our God"]
   ]},
   { num: "כה", words: [
     ["וַיֹּאמֶר","and said"],["אֲבִינָדִי","Abinadi"],["אֲלֵיהֶם","unto them"],["הֲכֹהֲנִים","priests"],["אַתֶּם","are you"],["וּמִתְיַמְּרִים","and pretend"],["לְהוֹרוֹת","to teach"],["אֶת־הָעָם הַזֶּה","this people"],["וּלְהָבִין","and to understand"],["רוּחַ","the spirit of"],["הַנְּבוּאָה","prophecy"],["וְעוֹד","and yet"],["תְּבַקְשׁוּ","you seek"],["לָדַעַת","to know"],["מִמֶּנִּי","from me"],["מָה","what"],["הֵמָּה","are"],["הַדְּבָרִים הָאֵלֶּה","these things"],["מֵאָן","whence"]
@@ -1175,7 +1175,7 @@ var mo_ch15Verses = [
     ["פִּצְחוּ","break forth"],["רִנָּה","into joy"],["רַנְּנוּ","sing"],["יַחְדָּו","together"],["חָרְבוֹת","you waste places of"],["יְרוּשָׁלָיִם","Jerusalem"],["כִּי־נִחַם","for has comforted"],["יְהוָה","the Lord"],["עַמּוֹ","His people"],["גָּאַל","He has redeemed"],["יְרוּשָׁלָיִם","Jerusalem"]
   ]},
   { num: "לא", words: [
-    ["חָשַׂף","has made bare"],["יְהוָה","the Lord"],["אֶת־זְרוֹעַ","the arm of"],["קָדְשׁוֹ","His holiness"],["לְעֵינֵי","in the eyes of"],["כׇל־הַגּוֹיִם","all the nations"],["וְרָאוּ","and shall see"],["כׇּל־אַפְסֵי־אָרֶץ","all the ends of the earth"],["אֵת",""],["יְשׁוּעַת","the salvation of"],["אֱלֹהֵינוּ","our God"]
+    ["חָשַׂף","has made bare"],["יְהוָה","the Lord"],["אֶת־זְרוֹעַ","the arm of"],["קׇדְשׁוֹ","His holiness"],["לְעֵינֵי","in the eyes of"],["כׇל־הַגּוֹיִם","all the nations"],["וְרָאוּ","and shall see"],["כׇּל־אַפְסֵי־אָרֶץ","all the ends of the earth"],["אֵת",""],["יְשׁוּעַת","the salvation of"],["אֱלֹהֵינוּ","our God"]
   ]}
 ];
 renderVerseSet(mo_ch15Verses, 'mo-ch15-verses');

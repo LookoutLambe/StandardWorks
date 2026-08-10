@@ -968,7 +968,7 @@ var pro_ch29Verses = [
 renderVerseSet(pro_ch29Verses, 'pro-ch29-verses');
 
 var pro_ch30Verses = [
-  { num:"א", words:[["דִּבְרֵי","account-of"],["אָגוּר","I was afraid"],["בִּן־יָקֶה","the son of-Jakeh"],["הַמַּשָּׂא","the-burdens"],["נְאֻם","says"],["הַגֶּבֶר","the-he-prevailed"],["לְאִיתִיאֵל","to-Ithiel"],["לְאִיתִיאֵל","to-Ithiel"],["וְאֻכָל","and-Ukal"],["׃",""]] },
+  { num:"א", words:[["דִּבְרֵי","account-of"],["אָגוּר","I was afraid"],["בִּן־יָקֶה","the son of-Jakeh"],["הַמַּשָּׂא","the-burdens"],["נְאֻם","says"],["הַגֶּבֶר","the-he-prevailed"],["לְאִיתִיאֵל","to-Ithiel"],["לְאִיתִיאֵל","to-Ithiel"],["וְאֻכׇל","and-Ukal"],["׃",""]] },
   { num:"ב", words:[["כִּי","because"],["בַעַר","was stupid"],["אָנֹכִי","I"],["מֵאִישׁ","that-come"],["וְלֹא־בִינַת","and-not-the understanding of"],["אָדָם","man"],["לִי","to-me"],["׃",""]] },
   { num:"ג", words:[["וְלֹא־לָמַדְתִּי","and-not-I-learned"],["חׇכְמָה","wisdom"],["וְדַעַת","and-knowledge"],["קְדֹשִׁים","holy"],["אֵדָע","I know"],["׃",""]] },
   { num:"ד", words:[["מִי","who"],["עָלָה־שָׁמַיִם","ascended-the-heavens"],["וַיֵּרַד","and-he came down"],["מִי","who"],["אָסַף־רוּחַ","gathered-spirit-of"],["בְּחׇפְנָיו","in-hands-his"],["מִי","who"],["צָרַר־מַיִם","has he wrapped-water"],["בַּשִּׂמְלָה","in-the-cloak"],["מִי","who"],["הֵקִים","had-established"],["כׇּל־אַפְסֵי־אָרֶץ","all-the-ends-of-the-earth"],["מַה־שְּׁמוֹ","what-is name-his"],["וּמַה־שֶּׁם־בְּנוֹ","yea-and-what-is the name of-his-son"],["כִּי","because"],["תֵדָע","you know"],["׃",""]] },

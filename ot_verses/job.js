@@ -75,7 +75,7 @@ renderVerseSet(job_ch3Verses, 'job-ch3-verses');
 
 var job_ch4Verses = [
   { num:"א", words:[["וַיַּעַן","and-he-answered"],["אֱלִיפַז","Eliphaz"],["הַתֵּימָנִי","the-Temanites"],["וַיֹּאמַר","and-said"],["׃",""]] },
-  { num:"ב", words:[["הֲנִסָּה","has it attempted"],["דָבָר","a word"],["אֵלֶיךָ","to-you"],["תִּלְאֶה","will you be impatient?"],["וַעְצֹר","and-to restrain"],["בְּמִלִּין","words"],["מִי","who"],["יוּכָל","could-not"],["׃",""]] },
+  { num:"ב", words:[["הֲנִסָּה","has it attempted"],["דָבָר","a word"],["אֵלֶיךָ","to-you"],["תִּלְאֶה","will you be impatient?"],["וַעְצֹר","and-to restrain"],["בְּמִלִּין","words"],["מִי","who"],["יוּכׇל","could-not"],["׃",""]] },
   { num:"ג", words:[["הִנֵּה","behold"],["יִסַּרְתָּ","you have instructed"],["רַבִּים","many"],["וְיָדַיִם","and-hands"],["רָפוֹת","slack"],["תְּחַזֵּק","you strengthened"],["׃",""]] },
   { num:"ד", words:[["כּוֹשֵׁל","one who stumbled"],["יְקִימוּן","they raised-!"],["מִלֶּיךָ","your-words"],["וּבִרְכַּיִם","and-knees"],["כֹּרְעוֹת","bending"],["תְּאַמֵּץ","you strengthened"],["׃",""]] },
   { num:"ה", words:[["כִּי","because"],["עַתָּה","now"],["תָּבוֹא","come-shall"],["אֵלֶיךָ","to-you"],["וַתֵּלֶא","and-you have become impatient"],["תִּגַּע","it will touch"],["עָדֶיךָ","to-you"],["וַתִּבָּהֵל","and-you have become dismayed"],["׃",""]] },
@@ -862,7 +862,7 @@ var job_ch31Verses = [
   { num:"כ", words:[["אִם־לֹא","if-not"],["בֵרְכוּנִי","they blessed-me"],["חֲלָצָו","people will tear out"],["וּמִגֵּז","and-from-the fleece of"],["כְּבָשַׂי","lambs-my"],["יִתְחַמָּם","he warmed himself"],["׃",""]] },
   { num:"כא", words:[["אִם־הֲנִיפוֹתִי","if-I brandished"],["עַל־יָתוֹם","upon-a fatherless one"],["יָדִי","my-hand"],["כִּי־אֶרְאֶה","because-I-shall-see"],["בַשַּׁעַר","by-the-gate"],["עֶזְרָתִי","is help-my"],["׃",""]] },
   { num:"כב", words:[["כְּתֵפִי","shoulder-my"],["מִשִּׁכְמָהֿ","from-its shoulder"],["תִפּוֹל","let it fall"],["וְאֶזְרֹעִי","and-arm-my"],["מִקָּנָהֿ","provokes to jealousy"],["תִשָּׁבֵר","let it be broken"],["׃",""]] },
-  { num:"כג", words:[["כִּי","because"],["פַחַד","the-fear-of"],["אֵלַי","to-me"],["אֵיד","calamity"],["אֵל","God"],["וּמִשְּׂאֵתוֹ","and-from-majesty-his"],["לֹא","not"],["אוּכָל","I am able"],["׃",""]] },
+  { num:"כג", words:[["כִּי","because"],["פַחַד","the-fear-of"],["אֵלַי","to-me"],["אֵיד","calamity"],["אֵל","God"],["וּמִשְּׂאֵתוֹ","and-from-majesty-his"],["לֹא","not"],["אוּכׇל","I am able"],["׃",""]] },
   { num:"כד", words:[["אִם־שַׂמְתִּי","if-have-I-set"],["זָהָב","gold"],["כִּסְלִי","confidence-my"],["וְלַכֶּתֶם","and-to-the-pure gold"],["אָמַרְתִּי","I-said"],["מִבְטַחִי","from-trusted-my"],["׃",""]] },
   { num:"כה", words:[["אִם־אֶשְׂמַח","if-I-may-rejoice"],["כִּי־רַב","because-great"],["חֵילִי","wealth-my"],["וְכִי־כַבִּיר","and-that-the-much"],["מָצְאָה","found"],["יָדִי","my-hand"],["׃",""]] },
   { num:"כו", words:[["אִם־אֶרְאֶה","if-I-shall-see"],["אוֹר","light"],["כִּי","because"],["יָהֵל","it shone"],["וְיָרֵחַ","and-moon"],["יָקָר","fine"],["הֹלֵךְ","going"],["׃",""]] },
@@ -1219,7 +1219,7 @@ renderVerseSet(job_ch41Verses, 'job-ch41-verses');
 
 var job_ch42Verses = [
   { num:"א", words:[["וַיַּעַן","and-he-answered"],["אִיּוֹב","Job"],["אֶת־יְהֹוָה","the-LORD"],["וַיֹּאמַר","and-said"],["׃",""]] },
-  { num:"ב", words:[["(ידעת)",""],["[יָדַעְתִּי]","I-know"],["כִּי־כֹל","because-all"],["תּוּכָל","you will prevail"],["וְלֹא־יִבָּצֵר","and-not-it will be withheld"],["מִמְּךָ","from-you"],["מְזִמָּה","purpose"],["׃",""]] },
+  { num:"ב", words:[["(ידעת)",""],["[יָדַעְתִּי]","I-know"],["כִּי־כֹל","because-all"],["תּוּכׇל","you will prevail"],["וְלֹא־יִבָּצֵר","and-not-it will be withheld"],["מִמְּךָ","from-you"],["מְזִמָּה","purpose"],["׃",""]] },
   { num:"ג", words:[["מִי","who"],["זֶה","this"],["מַעְלִים","is concealing"],["עֵצָה","counsel"],["בְּלִי־דָעַת","without-knowledge"],["לָכֵן","therefore"],["הִגַּדְתִּי","have-told"],["וְלֹא","and-not"],["אָבִין","I will perceive"],["נִפְלָאוֹת","wonders"],["מִמֶּנִּי","from-me"],["וְלֹא","and-not"],["אֵדָע","I know"],["׃",""]] },
   { num:"ד", words:[["שְׁמַע־נָא","hearken-I-pray"],["וְאָנֹכִי","yet-I"],["אֲדַבֵּר","I-speak"],["אֶשְׁאָלְךָ","I will ask-you"],["וְהוֹדִיעֵנִי","and-make known to-me"],["׃",""]] },
   { num:"ה", words:[["לְשֵׁמַע־אֹזֶן","to-the hearing of-an-ear"],["שְׁמַעְתִּיךָ","I have heard-you"],["וְעַתָּה","and-now"],["עֵינִי","my-eye"],["רָאָתְךָ","it has seen-you"],["׃",""]] },

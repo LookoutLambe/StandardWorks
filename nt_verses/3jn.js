@@ -2,10 +2,10 @@
 (function() {
 var _3jn_ch1Verses = [
   { num:"א", words:[["הַזָּקֵן","the-elder"],["אֶל־גָּיוֹס","unto-Gaius"],["יְדִידִי","the-wellbeloved"],["אֲשֶׁר","whom"],["אֲנִי","I"],["אֹהֵב","love"],["אֹתוֹ","him"],["בֶּאֱמֶת","in-the-truth"],["׃",""]] },
-  { num:"ב", words:[["יְדִידִי","beloved"],["רְצוֹנִי","I-wish"],["שֶׁיִּיטַב","that-may-prosper"],["לְךָ","thou"],["לְכָל־דָּבָר","above-all-things"],["וְתִהְיֶה","and-be"],["בָרִיא","in-health"],["כְּטוֹב","even-as-prospereth"],["לְנַפְשֶׁךָ","thy-soul"],["׃",""]] },
+  { num:"ב", words:[["יְדִידִי","beloved"],["רְצוֹנִי","I-wish"],["שֶׁיִּיטַב","that-may-prosper"],["לְךָ","thou"],["לְכׇל־דָּבָר","above-all-things"],["וְתִהְיֶה","and-be"],["בָרִיא","in-health"],["כְּטוֹב","even-as-prospereth"],["לְנַפְשֶׁךָ","thy-soul"],["׃",""]] },
   { num:"ג", words:[["כִּי","for"],["שָׂמַחְתִּי","I-rejoiced"],["מְאֹד","greatly"],["כַּאֲשֶׁר","when"],["בָּאוּ","came"],["אַחִים","the-brethren"],["וַיָּעִידוּ","and-testified"],["עַל־אֲמִתֶּךָ","of-thy-truth"],["אֲשֶׁר","even-as"],["מִתְהַלֵּךְ","walkest"],["אַתָּה","thou"],["בָּאֱמֶת","in-the-truth"],["׃",""]] },
   { num:"ד", words:[["אֵין","there-is-no"],["לִי","to-me"],["שִׂמְחָה","joy"],["גְדוֹלָה","greater"],["מִלִּשְׁמֹעַ","than-to-hear"],["אֶת־בָּנַי","my-children"],["מִתְהַלְּכִים","walk"],["בָּאֱמֶת","in-truth"],["׃",""]] },
-  { num:"ה", words:[["יְדִידִי","beloved"],["בֶּאֱמוּנָה","faithfully"],["כָּל־מַעֲשֶׂיךָ","thou-doest-all-thy-works"],["עִם־הָאַחִים","to-the-brethren"],["וְעִם־הָאֹרְחִים","and-to-strangers"],["׃",""]] },
+  { num:"ה", words:[["יְדִידִי","beloved"],["בֶּאֱמוּנָה","faithfully"],["כׇּל־מַעֲשֶׂיךָ","thou-doest-all-thy-works"],["עִם־הָאַחִים","to-the-brethren"],["וְעִם־הָאֹרְחִים","and-to-strangers"],["׃",""]] },
   { num:"ו", words:[["אֲשֶׁר","which"],["הֵעִידוּ","have-borne-witness"],["עַל־אַהֲבָתְךָ","of-thy-charity"],["בִּפְנֵי","before"],["הַקָּהָל","the-church"],["וְיָפֶה","and-well"],["תַעֲשֶׂה","thou-shalt-do"],["לְשַׁלַּח","to-bring-forward"],["אֹתָם","them"],["כָּרָאוּי","as-is-fitting"],["לִפְנֵי","before"],["אֱלֹהִים","God"],["׃",""]] },
   { num:"ז", words:[["כִּי","because"],["לְמַעַן","for-the-sake-of"],["שְׁמוֹ","his-name"],["יָצָאוּ","they-went-forth"],["וְלֹא","and-not"],["לָקְחוּ","took"],["דָבָר","anything"],["מִן־הַגּוֹיִם","of-the-Gentiles"],["׃",""]] },
   { num:"ח", words:[["עַל־כֵּן","therefore"],["עָלֵינוּ","we-ought"],["לְקַבֵּל","to-receive"],["אֹתָם","them"],["לְמַעַן","that"],["נִהְיֶה","we-might-be"],["עֹזְרִים","fellowhelpers"],["לָאֱמֶת","to-the-truth"],["׃",""]] },
