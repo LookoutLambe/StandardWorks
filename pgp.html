@@ -2220,7 +2220,7 @@ function _tlPointed(text) {
       else if (tk.dag && bgdkpt.indexOf(tk.c) < 0) v = '\u0115';
       else if (tk.dag && bgdkpt.indexOf(tk.c) >= 0 && t > 0 && prevVowel && prevVowel !== '\u05B0') v = '\u0115';
       else if (prevVowel === '\u05B9') v = ''; else if (prevVowel === '\u05C7') v = '';
-      else if (prevVowel === '\u05B4') v = '';
+      else if (prevVowel === '\u05B4') v = ''; else if (prevVowel === '\u05B7') v = '';
       else if (t > 0 && tokens[t-1].c === '\u05D5' && tokens[t-1].dag && !tokens[t-1].vowel) v = '';
       else if (nextTok && bgdkpt.indexOf(nextTok.c) >= 0 && nextTok.dag) v = '';
       else if (nextTok && (t + 1 === len - 1) && !nextTok.vowel) v = '';

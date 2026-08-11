@@ -1773,11 +1773,7 @@ function _tlPointed(text) {
     if (tk.vowel === '\u05B0') {
       if (isLast) v = '';
       else if (tk.dag) v = '\u0115';
-      else if (t > 0 && !tk.dag && prevVowel === '\u05B7' && nextTok) {
-        var n2sh = t + 2 < len ? tokens[t + 2] : null;
-        if (nextTok.vowel === '\u05B4' || nextTok.vowel === '\u05B5' || nextTok.vowel === '\u05B6') v = '';
-        else if (!nextTok.vowel && (nextTok.dag || (n2sh && n2sh.c === '\u05D5' && n2sh.dag && !n2sh.vowel))) v = '';
-      }
+      else if (t > 0 && !tk.dag && prevVowel === '\u05B7') v = '';  // sheva after short patach = silent (shva nach)
       else if (t > 0 && (prevVowel === '\u05B4' || prevVowel === '\u05B5' || prevVowel === '\u05B6' || prevVowel === '\u05B9' || prevVowel === '\u05C7')) v = '';
       else if (t > 0 && tokens[t-1].c === '\u05D5' && tokens[t-1].dag && !tokens[t-1].vowel) v = '';
       else if (nextTok && bgdkpt.indexOf(nextTok.c) >= 0 && nextTok.dag) v = '';
