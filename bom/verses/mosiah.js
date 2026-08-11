@@ -1292,7 +1292,7 @@ var mo_ch17Verses = [
 renderVerseSet(mo_ch17Verses, 'mo-ch17-verses');
 var mo_ch18Verses = [
   { num: "א", words: [
-    ["וַיְהִי","and it came to pass"],["אַלְמָא","Alma"],["אֲשֶׁר","who"],["בָּרַח","had fled"],["מִפְּנֵי","from"],["עַבְדֵי","the servants of"],["נֹחַ","Noah"],["הַמֶּלֶךְ","the king"],["וַיִּנָּחֵם","repented"],["עַל־חַטֹּאתָיו","of his sins"],["וַעֲוֹנוֹתָיו","and iniquities"],["וַיֵּלֶךְ","and went"],["בַּסֵּתֶר","privately"],["בְּקֶרֶב","among"],["הָעָם","the people"],["וַיָּחֶל","and began"],["לְלַמֵּד","to teach"],["אֶת־דִּבְרֵי","the words of"],["אֲבִינָדִי","Abinadi"]
+    ["וַיְהִי","and it came to pass"],["אַלְמָא","Alma"],["אֲשֶׁר","who"],["בָּרַח","had fled"],["מִפְּנֵי","from"],["עַבְדֵי","the servants of"],["נֹחַ","Noah"],["הַמֶּלֶךְ","the king"],["וַיָּשׇׁב","turned"],["מֵחַטֹּאתָיו","from his sins"],["וּמֵעֲוֹנוֹתָיו","and from his iniquities"],["וַיֵּלֶךְ","and went"],["בַּסֵּתֶר","privately"],["בְּקֶרֶב","among"],["הָעָם","the people"],["וַיָּחֶל","and began"],["לְלַמֵּד","to teach"],["אֶת־דִּבְרֵי","the words of"],["אֲבִינָדִי","Abinadi"]
   ]},
   { num: "ב", words: [
     ["וַיְלַמֵּד","yea he taught"],["עַל־הַבָּאוֹת","of things to come"],["וְגַם","and also"],["עַל־תְּחִיַּת","upon the resurrection of"],["הַמֵּתִים","the dead"],["וּפְדוּת","and the redemption of"],["הָעָם","the people"],["אֲשֶׁר","which"],["תָּבוֹא","should come"],["בִּגְבוּרַת","by the power of"],["הַמָּשִׁיחַ","the Messiah"],["וְעִנּוּיָיו","and His sufferings"],["וּמוֹתוֹ","and death"],["וּתְקוּמָתוֹ","and resurrection"],["וַעֲלִיָּתוֹ","and ascension"],["הַשָּׁמָיְמָה","into heaven"]
