@@ -1789,7 +1789,7 @@ function _tlPointed(text) {
       var nxt = tokens[t+1];
       var nxtIsLast = (t+1 === len-1);
       var suffixLetters = '\u05DD\u05DF\u05DA';
-      if (nxtIsLast && !nxt.vowel && nxt.c !== '\u05D4' && suffixLetters.indexOf(nxt.c) < 0) {
+      if (nxtIsLast && !nxt.vowel && nxt.c !== '\u05D4' && nxt.c !== '\u05D0' && nxt.c !== '\u05E2' && suffixLetters.indexOf(nxt.c) < 0) {
         var realVowels = 0;
         for (var rv = 0; rv < len; rv++) { if (tokens[rv].vowel && tokens[rv].vowel !== '\u05B0') realVowels++; }
         if (realVowels <= 1) v = 'o';
