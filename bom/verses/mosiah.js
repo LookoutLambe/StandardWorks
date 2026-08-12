@@ -1580,7 +1580,7 @@ var mo_ch21Verses = [
     ["וְלֹא־הֵעֵזּוּ","and they durst not"],["לַהֲרֹג","slay"],["אוֹתָם","them"],["בַּעֲבוּר","because of"],["הַשְּׁבוּעָה","the oath"],["אֲשֶׁר","which"],["נִשְׁבַּע","swore"],["מַלְכָּם","their king"],["לְלִמְחִי","unto Limhi"],["אַךְ","but"],["הִכּוּם","they smote them"],["עַל־הַלֶחִי","upon the cheek"],["וַיִּרְדּוּ","and ruled over"],["בָם","them"],["וַיָּשִׂימוּ","and placed"],["מַשָּׂא","burdens"],["כָּבֵד","heavy"],["עַל־גַּבָּם","upon their backs"],["וַיִּנְהֲגוּם","and drove them"],["כַּחֲמוֹר","as an ass"],["אִלֵּם","dumb"]
   ]},
   { num: "ד", words: [
-    ["אָכֵן","yea"],["כׇּל־זֹאת","all this"],["נַעֲשָׂה","was done"],["לְמַעַן","that"],["יָבֹא","might be fulfilled"],["דְּבַר־יְהוָה","the word of the Lord"]
+    ["אָכֵן","yea"],["כׇּל־זֹאת","all this"],["נַעֲשָׂה","was done"],["לְמַעַן","that"],["יִמָּלֵא","might be fulfilled"],["דְּבַר־יְהוָה","the word of the Lord"]
   ]},
   { num: "ה", words: [
     ["וְעַתָּה","and now"],["גָּדְלוּ","were great"],["צָרוֹת","the afflictions of"],["הַנֶּפִיִּים","the Nephites"],["מְאֹד","exceedingly"],["וְאֵין","and there was no"],["דֶּרֶךְ","way"],["לְהִנָּצֵל","to deliver themselves"],["מִיָּדָם","out of their hands"],["כִּי","for"],["הִקִּיפוּם","had surrounded them"],["הַלָּמָנִים","the Lamanites"],["מִכׇּל־עֵבֶר","on every side"]
