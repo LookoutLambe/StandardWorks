@@ -926,11 +926,11 @@ body:not(.hide-sel-toolbar) #main-content{padding-right:60px!important;}
 </div>
 
 <div class="page" id="page">
-  <div class="book-header" id="book-header">
+  <div class="book-header" id="book-header" style="display:none">
     <div class="book-title" id="main-book-title">תנ״ך</div>
     <div class="book-subtitle" id="main-book-subtitle">Tanakh / Old Testament</div>
   </div>
-  <div class="ornament" id="main-ornament">✦ ✦ ✦</div>
+  <div class="ornament" id="main-ornament" style="display:none">✦ ✦ ✦</div>
   <main id="main-content">
     <div class="chapter-panel" id="panel-landing" style="display:block;"></div>
   </main>
@@ -1056,16 +1056,16 @@ function getChapterLabel(id) {
 
   // Build landing page with book list by division
   var landingHtml = '<div class="landing-hero">' +
-    '<h1>\u05EA\u05B7\u05BC\u05E0\u05B7"\u05DA\u05B0</h1>' +
+    '<h1>\u05EA\u05E0\u05F4\u05DA</h1>' +
     '<div class="subtitle-en">Tanakh / Old Testament</div>' +
     '<div class="subtitle-heb">Hebrew Interlinear</div>' +
     '</div><hr class="landing-divider"><div class="landing-sections">';
 
   var cats = ['Torah', 'Neviim', 'Ketuvim'];
   var catLabels = {
-    'Torah': '\u05EA\u05BC\u05D5\u05B9\u05E8\u05B8\u05D4 / Torah',
-    'Neviim': '\u05E0\u05B0\u05D1\u05B4\u05D9\u05D0\u05B4\u05D9\u05DD / Nevi\u2019im',
-    'Ketuvim': '\u05DB\u05BC\u05B0\u05EA\u05D5\u05BC\u05D1\u05B4\u05D9\u05DD / Ketuvim'
+    'Torah': '\u05EA\u05D5\u05E8\u05D4 / Torah',
+    'Neviim': '\u05E0\u05D1\u05D9\u05D0\u05D9\u05DD / Nevi\u2019im',
+    'Ketuvim': '\u05DB\u05EA\u05D5\u05D1\u05D9\u05DD / Ketuvim'
   };
 
   cats.forEach(function(cat) {
@@ -1074,7 +1074,7 @@ function getChapterLabel(id) {
       if (book.cat !== cat) return;
       var chLabel = book.ch === 1 ? '1 chapter' : book.ch + ' chapters';
       landingHtml += '<div class="landing-book-btn" onclick="navTo(\'' + book.prefix + '-ch1\')">' +
-        '<span class="book-he">' + book.he + '</span>' +
+        '<span class="book-he">' + book.he.replace(/[\u0591-\u05C7]/g,'') + '</span>' +
         '<span class="book-en">' + book.en + '</span>' +
         '<span class="book-ch-count">' + chLabel + '</span>' +
         '</div>';
@@ -1326,7 +1326,7 @@ function navTo(id, slideDir) {
   if (!isLanding) {
     var info = getBookChapter(id);
     if (info) {
-      titleEl.innerHTML = info.bookData.he + '<br><span class="book-title-en" dir="ltr">' + info.bookData.en + '</span>';
+      titleEl.innerHTML = info.bookData.he.replace(/[\u0591-\u05C7]/g,'') + '<br><span class="book-title-en" dir="ltr">' + info.bookData.en + '</span>';
       subEl.textContent = '\u05E4\u05E8\u05E7 ' + toHebNum(info.chapter) + ' / Chapter ' + info.chapter;
       subEl.style.display = '';
     }
@@ -3372,7 +3372,7 @@ window.addEventListener('scroll', function() {
 </script>
 <script src="notes_engine.js"></script>
 <script src="site_chrome.js?v=23" data-sw-volume="ot"></script>
-<script src="nav_engine.js?v=25"></script>
+<script src="nav_engine.js?v=26"></script>
 <script src="xref_study_panel.js"></script>
 <script>
 NavEngine.init({

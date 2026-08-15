@@ -1364,63 +1364,63 @@ body:not(.hide-sel-toolbar) #main-content{padding-right:60px!important;}
 </div>
 
 <div class="page" id="page">
-  <div class="book-header" id="book-header">
-    <div class="book-title" id="main-book-title">כתבי הקודש</div>
+  <div class="book-header" id="book-header" style="display:none">
+    <div class="book-title" id="main-book-title">פנינת המחיר הגדול</div>
     <div class="book-subtitle" id="main-book-subtitle">Pearl of Great Price</div>
   </div>
-  <div class="ornament" id="main-ornament">✦ ✦ ✦</div>
+  <div class="ornament" id="main-ornament" style="display:none">✦ ✦ ✦</div>
   <main id="main-content">
 
     <!-- Landing Panel -->
     <div class="chapter-panel" id="panel-landing" style="display:block;">
       <div class="landing-hero">
-        <h1>כתבי הקודש</h1>
+        <h1>פנינת המחיר הגדול</h1>
         <div class="subtitle-en">Pearl of Great Price</div>
         <div class="subtitle-heb">Hebrew Interlinear</div>
       </div>
       <hr class="landing-divider">
       <div class="landing-books">
         <div class="landing-book-card" onclick="navTo('pgp-intro')" style="background:linear-gradient(170deg,#1a0d2e 0%,#2a1644 100%);border-color:#3a2a60;">
-          <div class="card-title">מָבוֹא</div>
+          <div class="card-title">מבוא</div>
           <div class="card-subtitle">Introduction</div>
         </div>
         <div class="landing-book-card" onclick="navTo('ms-ch1')">
-          <div class="card-title">סֵפֶר מֹשֶׁה</div>
+          <div class="card-title">ספר משה</div>
           <div class="card-subtitle">Book of Moses</div>
           <div class="card-chapters">8 Chapters · 356 Verses</div>
         </div>
         <div class="landing-book-card" onclick="navTo('ab-ch1')">
-          <div class="card-title">סֵפֶר אַבְרָהָם</div>
+          <div class="card-title">ספר אברהם</div>
           <div class="card-subtitle">Book of Abraham</div>
           <div class="card-chapters">5 Chapters · 136 Verses</div>
         </div>
         <div class="landing-book-card" onclick="navTo('ab-fac1')">
-          <div class="card-title">פַקְסִימִילְיָה א</div>
+          <div class="card-title">פקסימיליה א</div>
           <div class="card-subtitle">Facsimile No. 1</div>
           <div class="card-chapters">From the Book of Abraham</div>
         </div>
         <div class="landing-book-card" onclick="navTo('ab-fac2')">
-          <div class="card-title">פַקְסִימִילְיָה ב</div>
+          <div class="card-title">פקסימיליה ב</div>
           <div class="card-subtitle">Facsimile No. 2</div>
           <div class="card-chapters">From the Book of Abraham</div>
         </div>
         <div class="landing-book-card" onclick="navTo('ab-fac3')">
-          <div class="card-title">פַקְסִימִילְיָה ג</div>
+          <div class="card-title">פקסימיליה ג</div>
           <div class="card-subtitle">Facsimile No. 3</div>
           <div class="card-chapters">From the Book of Abraham</div>
         </div>
         <div class="landing-book-card" onclick="navTo('jsm-ch1')">
-          <div class="card-title">יוֹסֵף סְמִית מַתָּי</div>
+          <div class="card-title">יוסף סמית מתי</div>
           <div class="card-subtitle">Joseph Smith—Matthew</div>
           <div class="card-chapters">1 Chapter · 55 Verses</div>
         </div>
         <div class="landing-book-card" onclick="navTo('jsh-ch1')">
-          <div class="card-title">יוֹסֵף סְמִית — תּוֹלְדוֹת</div>
+          <div class="card-title">יוסף סמית — תולדות</div>
           <div class="card-subtitle">Joseph Smith—History</div>
           <div class="card-chapters">1 Chapter · 75 Verses</div>
         </div>
         <div class="landing-book-card" onclick="navTo('aof-ch1')">
-          <div class="card-title">אִמְרֵי הָאֱמוּנָה</div>
+          <div class="card-title">אמרי האמונה</div>
           <div class="card-subtitle">Articles of Faith</div>
           <div class="card-chapters">13 Articles</div>
         </div>
@@ -1813,19 +1813,19 @@ function navTo(id, slideDir) {
   if (isLanding) {
     // header hidden above
   } else if (id.indexOf('ms-') === 0) {
-    titleEl.textContent = 'סֵפֶר מֹשֶׁה';
+    titleEl.textContent = 'ספר משה';
     subEl.textContent = 'Book of Moses'; subEl.style.display = '';
   } else if (id.indexOf('ab-') === 0) {
-    titleEl.textContent = 'סֵפֶר אַבְרָהָם';
+    titleEl.textContent = 'ספר אברהם';
     subEl.textContent = 'Book of Abraham'; subEl.style.display = '';
   } else if (id.indexOf('jsm-') === 0) {
-    titleEl.textContent = 'יוֹסֵף סְמִית — מַתָּי';
+    titleEl.textContent = 'יוסף סמית — מתי';
     subEl.textContent = 'Joseph Smith—Matthew'; subEl.style.display = '';
   } else if (id.indexOf('jsh-') === 0) {
-    titleEl.textContent = 'יוֹסֵף סְמִית — תּוֹלְדוֹת';
+    titleEl.textContent = 'יוסף סמית — תולדות';
     subEl.textContent = 'Joseph Smith—History'; subEl.style.display = '';
   } else if (id.indexOf('aof-') === 0) {
-    titleEl.textContent = 'אִמְרֵי הָאֱמוּנָה';
+    titleEl.textContent = 'אמרי האמונה';
     subEl.textContent = 'Articles of Faith'; subEl.style.display = '';
   }
 
@@ -3719,7 +3719,7 @@ window.addEventListener('scroll', function() {
 </script>
 <script src="notes_engine.js"></script>
 <script src="site_chrome.js?v=23" data-sw-volume="pgp"></script>
-<script src="nav_engine.js?v=25"></script>
+<script src="nav_engine.js?v=26"></script>
 <script src="xref_study_panel.js"></script>
 <script>
 NavEngine.init({

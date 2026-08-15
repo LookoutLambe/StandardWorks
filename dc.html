@@ -5,7 +5,7 @@
 <script>document.documentElement.classList.add('sw-shell-pending');</script>
 <script>(function(){var h=(location.hostname||'').toLowerCase(),p=location.pathname.split('/').filter(Boolean),gh=h.slice(-10)==='github.io'&&p.length>0,m=gh?'manifest.github.json':'manifest.json';document.write('<link rel="manifest" href="'+m+'" id="sw-manifest-link">');})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>כתבי הקודש — הַלֶּקַח וְהַבְּרִיתוֹת · Doctrine and Covenants</title>
+<title>כתבי הקודש — הלקח והבריתות · Doctrine and Covenants</title>
 <meta name="description" content="הַלֶּקַח וְהַבְּרִיתוֹת — Hebrew Interlinear Doctrine and Covenants, Classical Biblical Hebrew word-by-word">
 <meta name="theme-color" content="#1e2233">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
@@ -857,11 +857,11 @@ body:not(.hide-sel-toolbar) #main-content{padding-right:60px!important;}
 </div>
 
 <div class="page" id="page">
-  <div class="book-header" id="book-header">
-    <div class="book-title" id="main-book-title">הַלֶּקַח וְהַבְּרִיתוֹת</div>
+  <div class="book-header" id="book-header" style="display:none">
+    <div class="book-title" id="main-book-title">הלקח והבריתות</div>
     <div class="book-subtitle" id="main-book-subtitle">Doctrine and Covenants</div>
   </div>
-  <div class="ornament" id="main-ornament">✦ ✦ ✦</div>
+  <div class="ornament" id="main-ornament" style="display:none">✦ ✦ ✦</div>
   <main id="main-content">
     <div class="chapter-panel" id="panel-landing" style="display:block;"></div>
     <!-- Introduction -->
@@ -948,7 +948,7 @@ function toHebNum(n) {
 
   // Build landing page with section grid
   var landingHtml = '<div class="landing-hero">' +
-    '<h1>הַלֶּקַח וְהַבְּרִיתוֹת</h1>' +
+    '<h1>הלקח והבריתות</h1>' +
     '<div class="subtitle-en">Doctrine and Covenants</div>' +
     '<div class="subtitle-heb">Hebrew Interlinear</div>' +
     '</div><hr class="landing-divider"><div class="landing-sections">';
@@ -1244,13 +1244,13 @@ function navTo(id, slideDir) {
   if (!isLanding) {
     var m = id.match(/^dc(\d+)-ch1$/);
     if (m) {
-      titleEl.textContent = 'חֵלֶק ' + toHebNum(parseInt(m[1],10));
+      titleEl.textContent = 'חלק ' + toHebNum(parseInt(m[1],10));
       subEl.textContent = 'Section ' + m[1]; subEl.style.display = '';
     } else if (id === 'od1-ch1') {
-      titleEl.textContent = 'הַכְרָזָה רִשְׁמִית א׳';
+      titleEl.textContent = 'הכרזה רשמית א׳';
       subEl.textContent = 'Official Declaration 1'; subEl.style.display = '';
     } else if (id === 'od2-ch1') {
-      titleEl.textContent = 'הַכְרָזָה רִשְׁמִית ב׳';
+      titleEl.textContent = 'הכרזה רשמית ב׳';
       subEl.textContent = 'Official Declaration 2'; subEl.style.display = '';
     }
     _ensureChapterRendered(id);
@@ -3020,7 +3020,7 @@ window.addEventListener('scroll', function() {
 </script>
 <script src="notes_engine.js"></script>
 <script src="site_chrome.js?v=28" data-sw-volume="dc"></script>
-<script src="nav_engine.js?v=25"></script>
+<script src="nav_engine.js?v=26"></script>
 <script src="xref_study_panel.js"></script>
 <script>
 NavEngine.init({

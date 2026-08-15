@@ -5,7 +5,7 @@
 <script>document.documentElement.classList.add('sw-shell-pending');</script>
 <script>(function(){var h=(location.hostname||'').toLowerCase(),p=location.pathname.split('/').filter(Boolean),gh=h.slice(-10)==='github.io'&&p.length>0,m=gh?'manifest.github.json':'manifest.json';document.write('<link rel="manifest" href="'+m+'" id="sw-manifest-link">');})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>הַבְּרִית הַחֲדָשָׁה — New Testament</title>
+<title>הברית החדשה — New Testament</title>
 <meta name="description" content="Hebrew Interlinear New Testament — Word-by-Word">
 <meta name="theme-color" content="#1e2233">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
@@ -883,11 +883,11 @@ body:not(.hide-sel-toolbar) #main-content{padding-right:60px!important;}
 </div>
 
 <div class="page" id="page">
-  <div class="book-header" id="book-header">
-    <div class="book-title" id="main-book-title">&#x05D4;&#x05B7;&#x05D1;&#x05BC;&#x05B0;&#x05E8;&#x05B4;&#x05D9;&#x05EA; &#x05D4;&#x05B7;&#x05D7;&#x05B2;&#x05D3;&#x05B8;&#x05E9;&#x05C1;&#x05B8;&#x05D4;</div>
+  <div class="book-header" id="book-header" style="display:none">
+    <div class="book-title" id="main-book-title">הברית החדשה</div>
     <div class="book-subtitle" id="main-book-subtitle">New Testament</div>
   </div>
-  <div class="ornament" id="main-ornament">&#x2726; &#x2726; &#x2726;</div>
+  <div class="ornament" id="main-ornament" style="display:none">&#x2726; &#x2726; &#x2726;</div>
   <main id="main-content">
     <div class="chapter-panel" id="panel-landing" style="display:block;"></div>
   </main>
@@ -1001,18 +1001,18 @@ function getChapterLabel(id) {
 
   // Build landing page with book list by division
   var landingHtml = '<div class="landing-hero">' +
-    '<h1>\u05D4\u05B7\u05D1\u05BC\u05B0\u05E8\u05B4\u05D9\u05EA \u05D4\u05B7\u05D7\u05B2\u05D3\u05B8\u05E9\u05C1\u05B8\u05D4</h1>' +
+    '<h1>\u05D4\u05D1\u05E8\u05D9\u05EA \u05D4\u05D7\u05D3\u05E9\u05D4</h1>' +
     '<div class="subtitle-en">New Testament</div>' +
     '<div class="subtitle-heb">Hebrew Interlinear</div>' +
     '</div><hr class="landing-divider"><div class="landing-sections">';
 
   var cats = ['Gospels', 'History', 'Pauline', 'General', 'Prophecy'];
   var catLabels = {
-    'Gospels': '\u05D1\u05B0\u05E9\u05C2\u05D5\u05E8\u05D5\u05B9\u05EA / Gospels',
+    'Gospels': '\u05D1\u05E9\u05D5\u05E8\u05D5\u05EA / Gospels',
     'History': '\u05D3\u05D1\u05E8\u05D9 \u05D4\u05D9\u05DE\u05D9\u05DD / History',
-    'Pauline': '\u05D0\u05B4\u05D2\u05BC\u05B0\u05E8\u05D5\u05B9\u05EA \u05E4\u05BC\u05D5\u05B9\u05DC\u05D5\u05BC\u05E1 / Pauline Epistles',
-    'General': '\u05D0\u05B4\u05D2\u05BC\u05B0\u05E8\u05D5\u05B9\u05EA \u05DB\u05BC\u05B0\u05DC\u05B8\u05DC\u05B4\u05D9\u05BC\u05D5\u05B9\u05EA / General Epistles',
-    'Prophecy': '\u05E0\u05B0\u05D1\u05D5\u05BC\u05D0\u05B8\u05D4 / Prophecy'
+    'Pauline': '\u05D0\u05D2\u05E8\u05D5\u05EA \u05E4\u05D5\u05DC\u05D5\u05E1 / Pauline Epistles',
+    'General': '\u05D0\u05D2\u05E8\u05D5\u05EA \u05DB\u05DC\u05DC\u05D9\u05D5\u05EA / General Epistles',
+    'Prophecy': '\u05E0\u05D1\u05D5\u05D0\u05D4 / Prophecy'
   };
 
   cats.forEach(function(cat) {
@@ -1021,7 +1021,7 @@ function getChapterLabel(id) {
       if (book.cat !== cat) return;
       var chLabel = book.ch === 1 ? '1 chapter' : book.ch + ' chapters';
       landingHtml += '<div class="landing-book-btn" onclick="navTo(\'' + book.prefix + '-ch1\')">' +
-        '<span class="book-he">' + book.he + '</span>' +
+        '<span class="book-he">' + book.he.replace(/[\u0591-\u05C7]/g,'') + '</span>' +
         '<span class="book-en">' + book.en + '</span>' +
         '<span class="book-ch-count">' + chLabel + '</span>' +
         '</div>';
@@ -1260,7 +1260,7 @@ function navTo(id, slideDir) {
   if (!isLanding) {
     var info = getBookChapter(id);
     if (info) {
-      titleEl.innerHTML = info.bookData.he + '<br><span class="book-title-en" dir="ltr">' + info.bookData.en + '</span>';
+      titleEl.innerHTML = info.bookData.he.replace(/[\u0591-\u05C7]/g,'') + '<br><span class="book-title-en" dir="ltr">' + info.bookData.en + '</span>';
       subEl.textContent = '\u05E4\u05E8\u05E7 ' + toHebNum(info.chapter) + ' / Chapter ' + info.chapter;
       subEl.style.display = '';
     }
@@ -3114,7 +3114,7 @@ window.addEventListener('scroll', function() {
 </script>
 <script src="notes_engine.js"></script>
 <script src="site_chrome.js?v=23" data-sw-volume="nt"></script>
-<script src="nav_engine.js?v=25"></script>
+<script src="nav_engine.js?v=26"></script>
 <script src="xref_study_panel.js"></script>
 <script>
 NavEngine.init({
