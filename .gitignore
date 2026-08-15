@@ -4,3 +4,6 @@
 # GitHub Pages). The iOS app's copy is generated from it via ./sync-www.sh and
 # is NOT tracked — run the script before building/committing the app.
 StandardWorks/www/
+
+# Local Claude Code config (not shared)
+.claude/

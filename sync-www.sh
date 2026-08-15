@@ -10,6 +10,7 @@ mkdir -p "$DEST"
 rsync -a --delete --delete-excluded \
   --exclude='.git/' \
   --exclude='.gitignore' \
+  --exclude='.claude/' \
   --exclude='.DS_Store' \
   --exclude='StandardWorks/' \
   --exclude='StandardWorks.xcodeproj/' \
