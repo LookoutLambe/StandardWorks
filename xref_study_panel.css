@@ -132,3 +132,7 @@ body.dark-mode .study-btn-row button {
 @media (max-width: 600px) {
   .xref-study-tab { min-width: 64px; font-size: 0.76em; padding: 7px 4px; }
 }
+
+/* Interlinear-only policy: referenced verses always render as Hebrew interlinear,
+   never as plain English text (site-wide kill switch for legacy render paths). */
+.xref-ref-english { display: none !important; }

@@ -491,12 +491,9 @@
     });
   }
 
+  // Interlinear-only policy: referenced verses are always shown as Hebrew
+  // interlinear (loaded on demand), never as plain English text.
   function getExternalVerseHtml(refText) {
-    if (!window._scriptureVerses) return '';
-    var key = parseScriptureRef(refText);
-    if (key && window._scriptureVerses[key]) {
-      return '<div class="xref-ref-english">' + window._scriptureVerses[key] + '</div>';
-    }
     return '';
   }
 
@@ -520,15 +517,6 @@
       }
     });
     html += '</div>';
-    // Gloss-based English summary
-    var glossArr = [];
-    wordUnits.forEach(function(wu) {
-      var glEl = wu.querySelector('.gl');
-      if (glEl && glEl.textContent) glossArr.push(glEl.textContent);
-    });
-    if (glossArr.length > 0) {
-      html += '<div class="xref-ref-english" style="font-style:italic;">' + glossArr.join(' ') + '</div>';
-    }
     return html;
   }
 

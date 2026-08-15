@@ -22,7 +22,7 @@
   --rule: #d6ceb8;
   --rule-light: #e8e2d4;
   --gloss: #333;
-  --verse-num: #7fb3d3;
+  --verse-num: #4a7ba6;
   --highlight: rgba(200, 168, 78, 0.10);
   --header-bg: #1e2233;
   --header-text: #c8a84e;
@@ -782,11 +782,11 @@ body.hide-gloss .word-unit { padding-bottom: 3px; }
   border-top: 1px solid #2a2f44;
   margin: 4px 12px;
 }
-body.dark-mode #nav-dropdown { background: #0a0a0a; border-color: #444444; }
-body.dark-mode .nav-panel-header { background: #0a0a0a; }
+body.dark-mode #nav-dropdown { background: #0d111c; border-color: #3a4054; }
+body.dark-mode .nav-panel-header { background: #0d111c; }
 body.dark-mode #nav-dropdown .dd-link:hover,
 body.dark-mode #nav-dropdown .dd-book:hover,
-body.dark-mode #nav-dropdown .dd-ch:hover { background: #383838; }
+body.dark-mode #nav-dropdown .dd-ch:hover { background: #303648; }
 @media (max-width: 600px) {
   #nav-dropdown { width: 85vw; max-width: 85vw; }
   #nav-dropdown .dd-chapters.open { grid-template-columns: repeat(5, 1fr); }
@@ -948,31 +948,31 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
 
 /* === DARK MODE === */
 body.dark-mode {
-  --bg: #333333;
-  --bg-deep: #2a2a2a;
+  --bg: #212736;
+  --bg-deep: #222838;
   --ink: #e8e0d0;
   --ink-light: #b0a890;
   --accent: #d4af37;
   --accent-light: #e8c84e;
-  --rule: #444444;
-  --rule-light: #383838;
+  --rule: #3a4054;
+  --rule-light: #303648;
   --gloss: #c0b898;
   --verse-num: #7fb3d3;
   --highlight: rgba(200, 168, 78, 0.15);
   --header-bg: #d4af37;
   --header-text: #d4af37;
-  --row-alt: #2e2e2e;
+  --row-alt: #262c3c;
 }
 body.dark-mode .hw { color: var(--ink); }
 body.dark-mode .word-unit.sof .hw::after { color: var(--ink); }
 body.dark-mode .gl { color: var(--gloss); }
 body.dark-mode .tl { color: var(--gloss); }
-body.dark-mode .page { background: #333333; }
-body.dark-mode .controls-top, body.dark-mode .controls-bottom { background: #0a0a0a; }
-body.dark-mode .verse { border-color: #383838; }
+body.dark-mode .page { background: #212736; }
+body.dark-mode .controls-top, body.dark-mode .controls-bottom { background: #0d111c; }
+body.dark-mode .verse { border-color: #303648; }
 body.dark-mode .verse:hover { background: rgba(200, 168, 78, 0.08); }
 body.dark-mode .word-unit:hover { background: rgba(200, 168, 78, 0.10); }
-body.dark-mode #word-popup { background: #252525; border-color: #d4af37; color: #e8e0d0; }
+body.dark-mode #word-popup { background: #272d3e; border-color: #d4af37; color: #e8e0d0; }
 body.dark-mode #word-popup-overlay { background: rgba(0, 0, 0, 0.5); }
 body.dark-mode #word-popup .popup-dismiss-mobile {
   border-color: #d4af37;
@@ -982,15 +982,15 @@ body.dark-mode #word-popup .popup-dismiss-mobile {
 body.dark-mode .book-title { color: #d4af37; }
 body.dark-mode .book-subtitle { color: #b0a890; }
 body.dark-mode .chapter-heading h2 { color: #e8e0d0; }
-body.dark-mode #search-container { background: #252525; border-color: #444444; }
-body.dark-mode #search-input { background: #2a2a2a; color: #e8e0d0; border-color: #444444; }
-body.dark-mode #search-results { background: #252525; }
+body.dark-mode #search-container { background: #272d3e; border-color: #3a4054; }
+body.dark-mode #search-input { background: #222838; color: #e8e0d0; border-color: #3a4054; }
+body.dark-mode #search-results { background: #272d3e; }
 body.dark-mode .verse.highlighted { background: rgba(200, 168, 78, 0.12); }
-body.dark-mode #search-input::placeholder { color: #666; }
+body.dark-mode #search-input::placeholder { color: #6b7288; }
 body.dark-mode #search-results .search-result { color: #e8e0d0; }
 body.dark-mode #search-results .search-result:hover { background: rgba(200,168,78,0.08); }
-body.dark-mode .landing-book-card { background: linear-gradient(170deg, #0a0f1a 0%, #111828 100%); border-color: #333; }
-body.dark-mode .landing-book-card .card-subtitle { color: #888; }
+body.dark-mode .landing-book-card { background: linear-gradient(170deg, #0a0f1a 0%, #111828 100%); border-color: #303648; }
+body.dark-mode .landing-book-card .card-subtitle { color: #8b91a5; }
 
 /* === PANEL OVERLAY === */
 #panel-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.4); z-index: 3000; }
@@ -1032,10 +1032,10 @@ body.dark-mode .landing-book-card .card-subtitle { color: #888; }
 .glossary-refs-book-name { font-weight: 600; }
 .glossary-ref-link { cursor: pointer; color: var(--accent); text-decoration: underline; }
 .glossary-ref-link:hover { color: var(--accent-light); }
-body.dark-mode #glossary-panel { background: #333333; border-color: #d4af37; }
-body.dark-mode #glossary-search { background: #2a2a2a; color: #e8e0d0; border-color: #444; }
-body.dark-mode .glossary-entry { border-color: #444; }
-body.dark-mode .glossary-form-chip { background: #2a2a2a; }
+body.dark-mode #glossary-panel { background: #212736; border-color: #d4af37; }
+body.dark-mode #glossary-search { background: #222838; color: #e8e0d0; border-color: #3a4054; }
+body.dark-mode .glossary-entry { border-color: #3a4054; }
+body.dark-mode .glossary-form-chip { background: #222838; }
 
 /* === ANNOTATIONS PANEL === */
 #annotations-panel {
@@ -1059,7 +1059,7 @@ body.dark-mode .glossary-form-chip { background: #2a2a2a; }
 .ann-hl { border-radius: 2px; }
 .ann-ul { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; }
 .note-marker { color: var(--accent); cursor: pointer; font-size: 0.7em; margin-right: 2px; }
-body.dark-mode #annotations-panel { background: #333333; border-color: #d4af37; }
+body.dark-mode #annotations-panel { background: #212736; border-color: #d4af37; }
 
 /* === SELECTION TOOLBAR === */
 #sel-toolbar {
@@ -1106,7 +1106,7 @@ body.hide-sel-toolbar #sel-toolbar { display: none !important; pointer-events: n
 .share-btn { background: var(--header-bg); color: var(--header-text); border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-family: 'David Libre', 'Georgia', serif; font-size: 0.9em; transition: all 0.15s; }
 .share-btn:hover { opacity: 0.85; transform: scale(1.03); }
 .share-close { position: absolute; top: 8px; right: 12px; cursor: pointer; color: var(--ink-light); font-size: 1.2em; }
-body.dark-mode #share-popup { background: #333333; border-color: #d4af37; }
+body.dark-mode #share-popup { background: #212736; border-color: #d4af37; }
 
 /* === ENHANCED POPUP (Strong's + Root) === */
 .popup-strong { font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; color: var(--ink-light); text-align: center; margin-bottom: 4px; direction: ltr; }
@@ -1141,10 +1141,10 @@ body.dark-mode #share-popup { background: #333333; border-color: #d4af37; }
 .xref-marker:hover { opacity: 1; text-decoration: underline; }
 body.hide-gloss .xref-marker, body.dual-mode .xref-marker { font-size: 0.5em; }
 .word-unit.xref-linked { cursor: pointer; }
-.word-unit.xref-linked .hw { color: #5dade2 !important; }
-.word-unit.xref-linked .gl { color: #5dade2 !important; }
-.word-unit.xref-linked:hover .hw { color: #85c1e9 !important; text-decoration: underline; }
-.word-unit.xref-linked:hover .gl { color: #85c1e9 !important; }
+.word-unit.xref-linked .hw { color: #2e6da4 !important; }
+.word-unit.xref-linked .gl { color: #2e6da4 !important; }
+.word-unit.xref-linked:hover .hw { color: #1f5c8f !important; text-decoration: underline; }
+.word-unit.xref-linked:hover .gl { color: #1f5c8f !important; }
 body.dark-mode .word-unit.xref-linked .hw { color: #5dade2 !important; }
 body.dark-mode .word-unit.xref-linked .gl { color: #5dade2 !important; }
 body.dark-mode .word-unit.xref-linked:hover .hw { color: #85c1e9 !important; }
@@ -1197,13 +1197,13 @@ body.dark-mode .word-unit.xref-linked:hover .gl { color: #85c1e9 !important; }
   text-align: justify;
 }
 .xref-ref-nodata { font-size: 0.85em; color: var(--ink-light); font-style: italic; padding: 16px; }
-body.dark-mode #xref-panel { background: #252525; border-color: #d4af37; }
+body.dark-mode #xref-panel { background: #272d3e; border-color: #d4af37; }
 
 #return-banner { display:none; position:fixed; top:46px; left:0; right:0; z-index:99; background:#fff; padding:8px 20px; text-align:center; font-family:'David Libre', 'Georgia', serif; font-size:0.95em; border-bottom:1px solid #e8e2d4; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
 #return-banner a { display:inline-block; background:#c8a84e; color:#fff; text-decoration:none; padding:6px 18px; border-radius:4px; font-weight:600; font-size:0.9em; }
 #return-banner a:hover { background:#b8942e; }
-body.dark-mode #return-banner { background:#2a2a2a; border-color:#444; }
-body.dark-mode #return-banner a { background:#d4af37; color:#1a1a1a; }
+body.dark-mode #return-banner { background:#222838; border-color:#3a4054; }
+body.dark-mode #return-banner a { background:#d4af37; color:#171b28; }
 body.dark-mode #return-banner a:hover { background:#c8a84e; }
 
 /* === FORCE UI FONT (David Libre) === */
