@@ -1783,6 +1783,9 @@ body, button, input, select, textarea,
 /* === Docked selection toolbar: RIGHT side (Hebrew is RTL), always visible while reading, no overlap === */
 #sel-toolbar{left:auto!important;right:6px!important;top:50%!important;bottom:auto!important;transform:translateY(-50%)!important;max-height:90vh;overflow-y:auto;flex-direction:column!important;flex-wrap:nowrap!important;max-width:none!important;}
 body:not(.hide-sel-toolbar) #sel-toolbar{display:flex!important;}
+#sel-toolbar-reopen{display:none;position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:1290;background:#1e2233;color:#c8a84e;border:1px solid #3a3f55;border-right:none;border-radius:10px 0 0 10px;padding:12px 7px;cursor:pointer;font-size:1.05em;line-height:1;box-shadow:-2px 2px 8px rgba(0,0,0,0.3);font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',emoji;}
+#sel-toolbar-reopen:hover{background:#2a2f44;}
+body.hide-sel-toolbar #sel-toolbar-reopen{display:block;}
 body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
 @media (max-width:600px){body:not(.hide-sel-toolbar) .chapter-panel{padding-right:52px!important;}}
 </style>
@@ -1818,7 +1821,7 @@ body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
 
 <!-- Selection toolbar (vertical icon strip on desktop, horizontal on mobile) -->
 <div id="sel-toolbar">
-  <button id="sel-btn-close" onclick="_hideSelToolbar()" title="Close">✕</button>
+  <button id="sel-btn-close" onclick="toggleFloatingSelToolbar(event)" title="Hide tools — reopen from the tab at the screen edge" aria-label="Hide study tools">✕</button>
   <button id="sel-btn-highlight" onclick="selToolbarToggleColors()" title="Highlight">🖍</button>
   <button id="sel-btn-note" onclick="selToolbarOpenNote()" title="Note">✎</button>
   <button id="sel-btn-copy" onclick="selToolbarCopy()" title="Copy">📋</button>
@@ -4691,9 +4694,20 @@ function _isSelReadingSurface(el) {
 }
 
 function initFloatingSelToolbarPref() {
+  // Restore the user's show/hide choice for the study-tools rail (shared across volumes)
   try {
-    document.body.classList.remove('hide-sel-toolbar'); try { localStorage.removeItem(SW_SEL_TB_LS); } catch(e) {}
+    if (localStorage.getItem(SW_SEL_TB_LS) === '1') document.body.classList.add('hide-sel-toolbar');
   } catch (e) {}
+  if (!document.getElementById('sel-toolbar-reopen')) {
+    var _selReopen = document.createElement('button');
+    _selReopen.id = 'sel-toolbar-reopen';
+    _selReopen.type = 'button';
+    _selReopen.title = 'Show study tools';
+    _selReopen.setAttribute('aria-label', 'Show study tools');
+    _selReopen.textContent = '\u{1F58D}';
+    _selReopen.onclick = function(ev) { toggleFloatingSelToolbar(ev); };
+    document.body.appendChild(_selReopen);
+  }
   _syncSelToolbarModeButton();
 }
 
