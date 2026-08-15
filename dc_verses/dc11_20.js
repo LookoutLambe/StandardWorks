@@ -15,7 +15,7 @@ var dc11_ch1Verses = [
   { num: "ב", words: [
     ["הִנֵּה","behold"],
     ["אָנֹכִי","I"],
-    ["אֵל","am God"],
+    ["יְהוָה","am God"],
     ["הַקְשִׁיבוּ","give heed"],
     ["לִדְבָרִי","unto my word"],
     ["הַחַי","the living"],
@@ -535,7 +535,7 @@ var dc12_ch1Verses = [
   { num: "ב", words: [
     ["הִנֵּה","behold"],
     ["אָנֹכִי","I"],
-    ["אֵל","am God"],
+    ["יְהוָה","am God"],
     ["הַקְשִׁיבוּ","give heed"],
     ["לִדְבָרִי","unto my word"],
     ["הַחַי","the living"],
@@ -736,7 +736,7 @@ var dc14_ch1Verses = [
   { num: "ב", words: [
     ["הִנֵּה","behold"],
     ["אָנֹכִי","I"],
-    ["אֵל","am God"],
+    ["יְהוָה","am God"],
     ["הַקְשִׁיבוּ","give heed"],
     ["לִדְבָרִי","unto my word"],
     ["הַחַי","the living"],

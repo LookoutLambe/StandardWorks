@@ -1892,7 +1892,7 @@ var dc6_ch1Verses = [
   { num: "ב", words: [
     ["הִנֵּה","behold"],
     ["אָנֹכִי","I"],
-    ["אֵל","am God"],
+    ["יְהוָה","am God"],
     ["הַקְשִׁיבוּ","give heed"],
     ["לִדְבָרִי","unto my word"],
     ["הַחַי","the living"],
