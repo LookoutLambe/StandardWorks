@@ -571,6 +571,23 @@
   }
 
   // ── Add cross-reference markers to all rendered verses ──
+  /** Top glosses actually used for this lexeme in this site's own translation. */
+  function siteGlossFor(hNum) {
+    try {
+      var rf = window.rootFreq && window.rootFreq[hNum];
+      if (!rf || !rf.glosses) return '';
+      var pairs = Object.keys(rf.glosses).map(function(k){ return [k, rf.glosses[k]]; })
+        .sort(function(a,b){ return b[1]-a[1]; });
+      var seen = {}, out = [];
+      for (var i = 0; i < pairs.length && out.length < 3; i++) {
+        var m = pairs[i][0].replace(/^(and |the |to |in |from |as |that |by |for |with |a |an |his |her |their |my |our |your |its )+/g, '').trim();
+        if (m && m.length > 1 && !seen[m]) { seen[m] = true; out.push(m); }
+      }
+      return out.join(', ');
+    } catch(e) { return ''; }
+  }
+  window.siteGlossFor = siteGlossFor;
+
   /** The word's OWN Strong's entry (lemma), as opposed to getRoot's parent root. */
   function getLemmaStrongs(hw) {
     if (!window._strongsLookup || !hw) return '';
@@ -723,22 +740,14 @@
         var sEntry = window._strongsRoots[hebrewRoot];
         displayText = sEntry.w || hebrewRoot;
         xrefTranslit = sEntry.x || '';
-        engMeaning = sEntry.g || '';
-        // Word family as secondary info (the header itself is this word's lemma)
-        if (sEntry.r && window._strongsRoots[sEntry.r]) {
-          var pEntry = window._strongsRoots[sEntry.r];
-          if (pEntry.w && pEntry.w !== sEntry.w) {
-            rootNote = 'root ' + pEntry.w + (pEntry.g ? ' \u201C' + pEntry.g + '\u201D' : '');
-          }
+        // Exactness: curated glossary first, then this site's own translation
+        // glosses; Strong's abridged one-word gloss only as a last resort.
+        var glossEntry = window._rootGlossaryData && window._rootGlossaryData[displayText];
+        if (!glossEntry) {
+          var stripped = displayText.replace(/[\u0591-\u05C7]/g, '');
+          glossEntry = window._rootGlossaryData && window._rootGlossaryData[stripped];
         }
-        if (!engMeaning) {
-          var glossEntry = window._rootGlossaryData && window._rootGlossaryData[displayText];
-          if (!glossEntry) {
-            var stripped = displayText.replace(/[\u0591-\u05C7]/g, '');
-            glossEntry = window._rootGlossaryData && window._rootGlossaryData[stripped];
-          }
-          engMeaning = glossEntry ? glossEntry.meaning : '';
-        }
+        engMeaning = (glossEntry && glossEntry.meaning) || siteGlossFor(hebrewRoot) || sEntry.g || '';
       } else {
         var glossEntry = window._rootGlossaryData && window._rootGlossaryData[hebrewRoot];
         engMeaning = glossEntry ? glossEntry.meaning : '';

@@ -6289,22 +6289,15 @@ function openXrefPanel(ref, sourceVerseKey, hebrewRoot) {
       var sEntry = window._strongsRoots[hebrewRoot];
       displayText = sEntry.w || hebrewRoot;
       xrefTranslit = sEntry.x || '';
-      engMeaning = sEntry.g || '';
-      // Word family as secondary info (the header itself is this word's lemma)
-      if (sEntry.r && window._strongsRoots[sEntry.r]) {
-        var pEntry = window._strongsRoots[sEntry.r];
-        if (pEntry.w && pEntry.w !== sEntry.w) {
-          rootNote = 'root ' + pEntry.w + (pEntry.g ? ' “' + pEntry.g + '”' : '');
-        }
+      // Exactness: curated glossary first, then this site's own translation
+      // glosses; Strong's abridged one-word gloss only as a last resort.
+      var glossEntry = window._rootGlossaryData && window._rootGlossaryData[displayText];
+      if (!glossEntry) {
+        var stripped = displayText.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, '');
+        glossEntry = window._rootGlossaryData && window._rootGlossaryData[stripped];
       }
-      if (!engMeaning) {
-        var glossEntry = window._rootGlossaryData && window._rootGlossaryData[displayText];
-        if (!glossEntry) {
-          var stripped = displayText.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, '');
-          glossEntry = window._rootGlossaryData && window._rootGlossaryData[stripped];
-        }
-        engMeaning = glossEntry ? glossEntry.meaning : '';
-      }
+      engMeaning = (glossEntry && glossEntry.meaning) ||
+        (window.siteGlossForBom ? siteGlossForBom(hebrewRoot) : '') || sEntry.g || '';
     } else {
       var glossEntry = window._rootGlossaryData && window._rootGlossaryData[hebrewRoot];
       engMeaning = glossEntry ? glossEntry.meaning : '';
@@ -7762,7 +7755,8 @@ document.addEventListener('keydown', function(e) {
       var sNum = _strongsLookup[hw] || _strongsLookup[stripped] || _strongsLookup[stripNikkud(hw)] || _strongsLookup[stripNikkud(stripped)] || '';
       if (sNum && _strongsRoots[sNum]) {
         var entry = _strongsRoots[sNum];
-        return entry.r || sNum;
+        // Word's own lexeme, not the Strong's derivation parent (separate words).
+        return sNum;
       }
     }
     // Fallback: Check root map (exact surface form)
@@ -7773,6 +7767,23 @@ document.addEventListener('keydown', function(e) {
     // Extract morphological root from consonantal form
     return extractRoot(stripNikkud(stripped2));
   }
+
+  /** Top glosses actually used for this lexeme in this site's own translation. */
+  function siteGlossForBom(hNum) {
+    try {
+      var rf = rootFreq[hNum];
+      if (!rf || !rf.glosses) return '';
+      var pairs = Object.keys(rf.glosses).map(function(k){ return [k, rf.glosses[k]]; })
+        .sort(function(a,b){ return b[1]-a[1]; });
+      var seen = {}, out = [];
+      for (var i = 0; i < pairs.length && out.length < 3; i++) {
+        var m = pairs[i][0].replace(/^(and |the |to |in |from |as |that |by |for |with |a |an |his |her |their |my |our |your |its )+/g, '').trim();
+        if (m && m.length > 1 && !seen[m]) { seen[m] = true; out.push(m); }
+      }
+      return out.join(', ');
+    } catch(e) { return ''; }
+  }
+  window.siteGlossForBom = siteGlossForBom;
 
   /** The word's OWN Strong's entry (lemma) — for display headers; getRoot's parent is for grouping. */
   function getLemmaStrongsBom(hw) {
@@ -7926,7 +7937,9 @@ document.addEventListener('keydown', function(e) {
         var rootEntry = _strongsRoots[root];
         if (rootEntry) {
           rootDisplay = '<span style="font-family:SBL Hebrew,serif">' + rootEntry.w + '</span> <span style="font-size:0.85em;opacity:0.7;">(' + rootEntry.x + ')</span>';
-          rootMeaning = rootEntry.g || '';
+          // Exactness: prefer the site's own curated/observed glosses;
+          // Strong's abridged one-word gloss only as a last resort.
+          var strongsGloss = rootEntry.g || '';
           if (!rootMeaning) {
             var consRoot = stripNikkud(rootEntry.w);
             var curatedRoot = (window._rootGlossaryData || {})[consRoot] || {};
@@ -7949,6 +7962,7 @@ document.addEventListener('keydown', function(e) {
         });
         rootMeaning = meanings.slice(0, 4).join(', ');
       }
+      if (!rootMeaning && typeof strongsGloss === 'string') rootMeaning = strongsGloss;
       detailHtml += lemmaLine + '<span style="cursor:pointer;text-decoration:underline;" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">Root ' + rootDisplay + '</span> — ' + rInfo.count + ' uses in ' + verseCount + ' verses';
       if (rootMeaning) {
         detailHtml += '<br><span style="font-style:italic;color:#b0a890;font-size:0.9em;">' + rootMeaning + '</span>';

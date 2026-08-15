@@ -2360,7 +2360,9 @@ function getRoot(hw) {
     var sNum = _strongsLookup[hw] || _strongsLookup[stripped] || _strongsLookup[_stripNikkud(hw)] || _strongsLookup[_stripNikkud(stripped)] || '';
     if (sNum && _strongsRoots[sNum]) {
       var entry = _strongsRoots[sNum];
-      return entry.r || sNum; // direct parent H-number, or self if primitive
+      // Return the word's OWN lexeme. Strong's derivation parents (entry.r) are
+      // 19th-century etymology (e.g. בן ← בנה) — separate words, not learning roots.
+      return sNum;
     }
   }
   // Fallback to old algorithmic root
@@ -2460,7 +2462,9 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
         var rootEntry = _strongsRoots[root];
         if (rootEntry) {
           rootDisplay = '<span style="font-family:David Libre,serif">' + rootEntry.w + '</span> <span style="font-size:0.85em;opacity:0.7;">(' + rootEntry.x + ')</span>';
-          rootMeaning = rootEntry.g || '';
+          // Exactness: prefer the site's own curated/observed glosses;
+          // Strong's abridged one-word gloss only as a last resort.
+          var strongsGloss = rootEntry.g || '';
           if (!rootMeaning) {
             var consRoot = _stripNikkud(rootEntry.w);
             var curatedRoot = (window._rootGlossaryData || {})[consRoot] || {};
@@ -2481,6 +2485,7 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
         });
         rootMeaning = meanings.slice(0, 4).join(', ');
       }
+      if (!rootMeaning && typeof strongsGloss === 'string') rootMeaning = strongsGloss;
       detailHtml += lemmaLine + '<span style="cursor:pointer;text-decoration:underline;" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">Root ' + rootDisplay + '</span> \u2014 ' + rInfo.count + ' uses in ' + verseCount + ' verses';
       if (rootMeaning) detailHtml += '<br><span style="font-style:italic;color:var(--ink-light);font-size:0.9em;">' + rootMeaning + '</span>';
       var formKeys = Object.keys(rInfo.forms);
