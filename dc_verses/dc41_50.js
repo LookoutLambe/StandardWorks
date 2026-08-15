@@ -4272,7 +4272,7 @@ var dc46_ch1Verses = [
     ["הַנְהָגָה","(the) administration"],
     ["כַּטּוֹב","as (is) good"],
     ["בְּעֵינֵי","in (the) eyes of"],
-    ["הָאָדוֹן","the Lord"],
+    ["יְהוָה","the Lord"],
     ["כִּרְצוֹן","according to (the) will of"],
     ["יְהוָה","the Lord"],
     ["מַתְאִים","suiting"],

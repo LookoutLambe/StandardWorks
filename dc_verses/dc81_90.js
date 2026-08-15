@@ -1273,7 +1273,7 @@ var dc84_ch1Verses = [
     ["עַמּוֹ","his people"],
     ["לַהֲכִינָם","to prepare them"],
     ["לְבוֹא","for the coming of"],
-    ["הָאָדוֹן","the Lord"],
+    ["יְהוָה","the Lord"],
     ["אֲשֶׁר","in whose"],
     ["בְּיָדוֹ","hand"],
     ["נִתְּנָה","is given"],

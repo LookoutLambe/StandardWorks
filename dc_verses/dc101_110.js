@@ -5645,7 +5645,7 @@ var dc106_ch1Verses = [
     ["אֹמֵר","say"],
     ["לָכֶם","unto you,"],
     ["בּוֹא","the coming of"],
-    ["הָאָדוֹן","the Lord"],
+    ["יְהוָה","the Lord"],
     ["קָרֵב","draweth nigh,"],
     ["וְהוּא","and it"],
     ["מַשִּׂיג","overtaketh"],
@@ -6374,7 +6374,7 @@ var dc107_ch1Verses = [
     ["יִהְיוּ","they shall be"],
     ["עֲקָרִים","unfruitful"],
     ["בְּדַעַת","in the knowledge of"],
-    ["הָאָדוֹן׃","the Lord"],
+    ["יְהוָה׃","the Lord"],
     ["׃",""]
   ]},
   { num: "לב", words: [
@@ -6417,7 +6417,7 @@ var dc107_ch1Verses = [
     ["וּמְנַהֶלֶת","and Presiding"],
     ["לְשָׁרֵת","to officiate"],
     ["בְּשֵׁם","in the name of"],
-    ["הָאָדוֹן","the Lord"],
+    ["יְהוָה","the Lord"],
     ["תַּחַת","under"],
     ["הַנְחָיַת","the direction of"],
     ["נְשִׂיאוּת","the Presidency of"],
@@ -6440,7 +6440,7 @@ var dc107_ch1Verses = [
     ["הַשִּׁבְעִים","The Seventy"],
     ["יִפְעֲלוּ","are to act"],
     ["בְּשֵׁם","in the name of"],
-    ["הָאָדוֹן","the Lord"],
+    ["יְהוָה","the Lord"],
     ["תַּחַת","under"],
     ["הַנְחָיַת","the direction of"],
     ["הַשְּׁנֵים","the Twelve"],
@@ -6622,7 +6622,7 @@ var dc107_ch1Verses = [
     ["שֶׁזַּרְעוֹ","that his posterity"],
     ["יִהְיֶה","should be"],
     ["בְּחִירֵי","the chosen of"],
-    ["הָאָדוֹן","the Lord"],
+    ["יְהוָה","the Lord"],
     ["עַד","unto"],
     ["קֵץ","the end of"],
     ["הָאָרֶץ׃","the earth"],
@@ -6744,7 +6744,7 @@ var dc107_ch1Verses = [
   { num: "מט", words: [
     ["וְהוּא","And he"],
     ["רָאָה","saw"],
-    ["אֶת־הָאָדוֹן","the Lord"],
+    ["אֶת־יְהוָה","the Lord"],
     ["וְהִתְהַלֵּךְ","and walked"],
     ["אִתּוֹ","with him"],
     ["וְהָיָה","and was"],
@@ -6838,7 +6838,7 @@ var dc107_ch1Verses = [
     ["׃",""]
   ]},
   { num: "נד", words: [
-    ["וְהָאָדוֹן","And the Lord"],
+    ["וַיהוָה","And the Lord"],
     ["נִרְאָה","appeared"],
     ["אֲלֵיהֶם","unto them"],
     ["וְהֵם","and they"],
@@ -6852,7 +6852,7 @@ var dc107_ch1Verses = [
     ["׃",""]
   ]},
   { num: "נה", words: [
-    ["וְהָאָדוֹן","And the Lord"],
+    ["וַיהוָה","And the Lord"],
     ["נִחַם","administered comfort"],
     ["אֶת־אָדָם","unto Adam"],
     ["וְאָמַר","and said"],
@@ -7331,7 +7331,7 @@ var dc107_ch1Verses = [
     ["יִזָּכֵר","it shall be had in remembrance"],
     ["עוֹד","no more"],
     ["לִפְנֵי","before"],
-    ["הָאָדוֹן","the Lord"],
+    ["יְהוָה","the Lord"],
     ["כִּי","for"],
     ["זוֹהִי","this is"],
     ["מוֹעֶצֶת","the council"],

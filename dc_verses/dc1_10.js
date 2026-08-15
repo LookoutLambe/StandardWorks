@@ -682,12 +682,12 @@ var dc2_ch1Verses = [
     ["הַבָּנִים","the children"],
     ["אֶת־הַהַבְטָחוֹת","the promises"],
     ["אֲשֶׁר","which"],
-    ["הֻבְטְחוּ","were promised"],
+    ["נִתְּנוּ","were made"],
     ["לָאָבוֹת","to the fathers"],
     ["וְלֵב","and heart of"],
     ["הַבָּנִים","the children"],
     ["יָשׁוּב","shall turn"],
-    ["אֶל־אֲבוֹתָם׃","unto their fathers"],
+    ["עַל־אֲבוֹתָם׃","to their fathers"],
     ["׃",""]
   ]},
   { num: "ג", words: [
