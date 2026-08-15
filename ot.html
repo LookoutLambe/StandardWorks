@@ -2439,6 +2439,17 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
     // Root-based frequency
     var root = wordToRoot[hText] || getRoot(hText);
     var rInfo = rootFreq[root];
+    // Lexeme line: this word's own dictionary entry (clearer for learners than the parent root)
+    var lemmaLine = '';
+    if (window.getLemmaStrongs && window._strongsRoots) {
+      var lemNum = getLemmaStrongs(hText);
+      if (lemNum && lemNum !== root && _strongsRoots[lemNum]) {
+        var lemE = _strongsRoots[lemNum];
+        lemmaLine = 'Word: <span style="font-family:David Libre,serif">' + (lemE.w || '') + '</span>' +
+          (lemE.x ? ' <span style="font-size:0.85em;opacity:0.7;">(' + lemE.x + ')</span>' : '') +
+          (lemE.g ? ' \u2014 ' + lemE.g : '') + '<br>';
+      }
+    }
     var sInfo = wordFreq[hText];
     var detailHtml = '';
     if (rInfo) {
@@ -2470,7 +2481,7 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
         });
         rootMeaning = meanings.slice(0, 4).join(', ');
       }
-      detailHtml += '<span style="cursor:pointer;text-decoration:underline;" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">Root ' + rootDisplay + '</span> \u2014 ' + rInfo.count + ' uses in ' + verseCount + ' verses';
+      detailHtml += lemmaLine + '<span style="cursor:pointer;text-decoration:underline;" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">Root ' + rootDisplay + '</span> \u2014 ' + rInfo.count + ' uses in ' + verseCount + ' verses';
       if (rootMeaning) detailHtml += '<br><span style="font-style:italic;color:var(--ink-light);font-size:0.9em;">' + rootMeaning + '</span>';
       var formKeys = Object.keys(rInfo.forms);
       if (formKeys.length > 1) {
@@ -2508,7 +2519,7 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
       directLink.addEventListener('click', function(ev) {
         ev.stopPropagation();
         closePopup();
-        openXrefPanel(JSON.parse(wu.getAttribute('data-xref-ref')), wu.getAttribute('data-xref-key'), root);
+        openXrefPanel(JSON.parse(wu.getAttribute('data-xref-ref')), wu.getAttribute('data-xref-key'), (window.getLemmaStrongs && getLemmaStrongs(hText)) || root);
       });
     }
     var xrefLink = popupDetail.querySelector('.popup-xref-link');

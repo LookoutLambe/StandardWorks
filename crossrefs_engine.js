@@ -571,6 +571,16 @@
   }
 
   // ── Add cross-reference markers to all rendered verses ──
+  /** The word's OWN Strong's entry (lemma), as opposed to getRoot's parent root. */
+  function getLemmaStrongs(hw) {
+    if (!window._strongsLookup || !hw) return '';
+    var bare = function(s) { return String(s).replace(/[\u0591-\u05C7]/g, ''); };
+    var stripped = (typeof window.stripPrefixes === 'function') ? window.stripPrefixes(hw) : hw;
+    var L = window._strongsLookup;
+    return L[hw] || L[stripped] || L[bare(hw)] || L[bare(stripped)] || '';
+  }
+  window.getLemmaStrongs = getLemmaStrongs;
+
   function addCrossRefMarkers() {
     if (!window._crossrefsLoaded) return;
 
@@ -603,7 +613,13 @@
         sup.setAttribute('data-marker', ref.marker);
         sup.textContent = ref.marker;
         var hwEl = wu.querySelector('.hw');
-        var wuRoot = (hwEl && window.getRoot) ? window.getRoot(hwEl.textContent) : '';
+        // Panel header should show this word's own lexeme (e.g. בֵּן "son"),
+        // not its etymological parent root (בָּנָה "build") — lemma first.
+        var wuRoot = '';
+        if (hwEl) {
+          wuRoot = getLemmaStrongs(hwEl.textContent) ||
+            (window.getRoot ? window.getRoot(hwEl.textContent) : '');
+        }
         sup.onclick = (function(r, rt, k) {
           return function(e) {
             e.stopPropagation();
@@ -699,6 +715,7 @@
     var displayText = ref.text || '';
     var engMeaning = '';
     var xrefTranslit = '';
+    var rootNote = '';
     if (hebrewRoot) {
       displayText = hebrewRoot;
       // Resolve Strong's H-number roots to Hebrew word + meaning
@@ -707,6 +724,13 @@
         displayText = sEntry.w || hebrewRoot;
         xrefTranslit = sEntry.x || '';
         engMeaning = sEntry.g || '';
+        // Word family as secondary info (the header itself is this word's lemma)
+        if (sEntry.r && window._strongsRoots[sEntry.r]) {
+          var pEntry = window._strongsRoots[sEntry.r];
+          if (pEntry.w && pEntry.w !== sEntry.w) {
+            rootNote = 'root ' + pEntry.w + (pEntry.g ? ' \u201C' + pEntry.g + '\u201D' : '');
+          }
+        }
         if (!engMeaning) {
           var glossEntry = window._rootGlossaryData && window._rootGlossaryData[displayText];
           if (!glossEntry) {
@@ -725,7 +749,8 @@
       ? ' <span style="font-weight:400;font-size:0.75em;opacity:0.7;">' + xrefTranslit + '</span>'
       : '';
     panel.querySelector('.xref-panel-word').innerHTML = displayText + translitHtml +
-      (engMeaning ? ' <span style="font-weight:400;font-size:0.8em;color:var(--ink-light,#888);">\u2014 ' + engMeaning + '</span>' : '');
+      (engMeaning ? ' <span style="font-weight:400;font-size:0.8em;color:var(--ink-light,#888);">\u2014 ' + engMeaning + '</span>' : '') +
+      (rootNote ? '<span style="display:block;font-weight:400;font-size:0.7em;color:var(--ink-light,#888);opacity:0.85;margin-top:2px;">' + rootNote + '</span>' : '');
 
     var catLabel = ref.category === 'cross-ref' ? 'Cross-Reference' :
       ref.category === 'heb' ? 'Hebrew/Greek' :

@@ -5550,7 +5550,12 @@ function addCrossRefMarkers() {
       sup.setAttribute('data-marker', ref.marker);
       sup.textContent = ref.marker;
       var hwEl = wu.querySelector('.hw');
-      var wuRoot = (hwEl && window.getRoot) ? window.getRoot(hwEl.textContent) : '';
+      // Lemma first (this word's own Strong's entry), parent root only as fallback
+      var wuRoot = '';
+      if (hwEl) {
+        wuRoot = (window.getLemmaStrongsBom ? getLemmaStrongsBom(hwEl.textContent) : '') ||
+          (window.getRoot ? window.getRoot(hwEl.textContent) : '');
+      }
       sup.onclick = (function(r, rt) { return function(e) {
         e.stopPropagation();
         openXrefPanel(r, key, rt);
@@ -6276,6 +6281,7 @@ function openXrefPanel(ref, sourceVerseKey, hebrewRoot) {
   var displayText = ref.text || '';
   var engMeaning = '';
   var xrefTranslit = '';
+  var rootNote = '';
   if (hebrewRoot) {
     displayText = hebrewRoot;
     // Resolve Strong's H-number roots to Hebrew word + meaning
@@ -6284,6 +6290,13 @@ function openXrefPanel(ref, sourceVerseKey, hebrewRoot) {
       displayText = sEntry.w || hebrewRoot;
       xrefTranslit = sEntry.x || '';
       engMeaning = sEntry.g || '';
+      // Word family as secondary info (the header itself is this word's lemma)
+      if (sEntry.r && window._strongsRoots[sEntry.r]) {
+        var pEntry = window._strongsRoots[sEntry.r];
+        if (pEntry.w && pEntry.w !== sEntry.w) {
+          rootNote = 'root ' + pEntry.w + (pEntry.g ? ' “' + pEntry.g + '”' : '');
+        }
+      }
       if (!engMeaning) {
         var glossEntry = window._rootGlossaryData && window._rootGlossaryData[displayText];
         if (!glossEntry) {
@@ -6299,7 +6312,7 @@ function openXrefPanel(ref, sourceVerseKey, hebrewRoot) {
     }
   }
   var translitHtml = xrefTranslit ? ' <span style="font-weight:400;font-size:0.75em;opacity:0.7;">' + xrefTranslit + '</span>' : '';
-  panel.querySelector('.xref-panel-word').innerHTML = displayText + translitHtml + (engMeaning ? ' <span style="font-weight:400;font-size:0.8em;color:var(--ink-light,#888);">\u2014 ' + engMeaning + '</span>' : '');
+  panel.querySelector('.xref-panel-word').innerHTML = displayText + translitHtml + (engMeaning ? ' <span style="font-weight:400;font-size:0.8em;color:var(--ink-light,#888);">\u2014 ' + engMeaning + '</span>' : '') + (rootNote ? '<span style="display:block;font-weight:400;font-size:0.7em;color:var(--ink-light,#888);opacity:0.85;margin-top:2px;">' + rootNote + '</span>' : '');
   var catLabel = ref.category === 'cross-ref' ? 'Cross-Reference' :
     ref.category === 'trn' ? 'Translation Note' :
     ref.category === 'heb' ? 'Hebrew/Greek' :
@@ -7761,6 +7774,15 @@ document.addEventListener('keydown', function(e) {
     return extractRoot(stripNikkud(stripped2));
   }
 
+  /** The word's OWN Strong's entry (lemma) — for display headers; getRoot's parent is for grouping. */
+  function getLemmaStrongsBom(hw) {
+    if (!window._strongsLookup || !hw) return '';
+    var stripped = stripPrefixes(hw);
+    var L = window._strongsLookup;
+    return L[hw] || L[stripped] || L[stripNikkud(hw)] || L[stripNikkud(stripped)] || '';
+  }
+  window.getLemmaStrongsBom = getLemmaStrongsBom;
+
   // Build frequency map by ROOT from _verseRegistry data (works with lazy DOM rendering)
   var rootFreq = {};  // root -> { count, glosses, forms }
   var wordToRoot = {}; // surface form -> root key
@@ -7876,6 +7898,17 @@ document.addEventListener('keydown', function(e) {
     // Show frequency: root-based total + surface form count
     var root = wordToRoot[hText] || getRoot(hText);
     var rInfo = rootFreq[root];
+    // Lexeme line: this word's own dictionary entry (clearer for learners than the parent root)
+    var lemmaLine = '';
+    if (window.getLemmaStrongsBom && window._strongsRoots) {
+      var lemNum = getLemmaStrongsBom(hText);
+      if (lemNum && lemNum !== root && _strongsRoots[lemNum]) {
+        var lemE = _strongsRoots[lemNum];
+        lemmaLine = 'Word: <span style="font-family:SBL Hebrew,serif">' + (lemE.w || '') + '</span>' +
+          (lemE.x ? ' <span style="font-size:0.85em;opacity:0.7;">(' + lemE.x + ')</span>' : '') +
+          (lemE.g ? ' \u2014 ' + lemE.g : '') + '<br>';
+      }
+    }
     var sInfo = wordFreq[hText];
     var detailHtml = '';
     if (morphGloss) {
@@ -7916,7 +7949,7 @@ document.addEventListener('keydown', function(e) {
         });
         rootMeaning = meanings.slice(0, 4).join(', ');
       }
-      detailHtml += '<span style="cursor:pointer;text-decoration:underline;" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">Root ' + rootDisplay + '</span> — ' + rInfo.count + ' uses in ' + verseCount + ' verses';
+      detailHtml += lemmaLine + '<span style="cursor:pointer;text-decoration:underline;" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">Root ' + rootDisplay + '</span> — ' + rInfo.count + ' uses in ' + verseCount + ' verses';
       if (rootMeaning) {
         detailHtml += '<br><span style="font-style:italic;color:#b0a890;font-size:0.9em;">' + rootMeaning + '</span>';
       }
