@@ -6,7 +6,8 @@ set -eu
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 DEST="$ROOT/StandardWorks/www"
 mkdir -p "$DEST"
-rsync -a --delete \
+# --delete-excluded so newly-excluded files are also purged from the mirror.
+rsync -a --delete --delete-excluded \
   --exclude='.git/' \
   --exclude='.gitignore' \
   --exclude='.DS_Store' \
@@ -15,5 +16,6 @@ rsync -a --delete \
   --exclude='README*' \
   --exclude='sync-www.sh' \
   --exclude='CNAME' \
+  --exclude='*.docx' \
   "$ROOT/" "$DEST/"
 echo "Synced repo root -> StandardWorks/www"

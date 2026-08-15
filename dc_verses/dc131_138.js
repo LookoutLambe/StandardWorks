@@ -270,7 +270,7 @@ var dc132_ch1Verses = [
     ["מִנִּיתִי","I have appointed"],
     ["בָאָרֶץ","on the earth"],
     ["לָשֵׂאת","to hold"],
-    ["אֶת־הַכֹּחַ","acc.-this power"],
+    ["אֶת־הַכֹּחַ","this power"],
     ["הַזֶּה","this"],
     ["וְאֵין","and there is never"],
     ["כִּי","for"],
@@ -2433,7 +2433,7 @@ var dc133_ch1Verses = [
   ]},
   { num: "כג", words: [
     ["יְצַוֶּה","He shall command"],
-    ["אֶת־תְּהוֹם","acc.-the deep"],
+    ["אֶת־תְּהוֹם","the deep"],
     ["רַבָּה","great"],
     ["וְתֻשַּׁב","and it shall be driven back"],
     ["אֶל־אַרְצוֹת","to the countries"],
