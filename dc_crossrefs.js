@@ -34102,6 +34102,15 @@ window._dcCrossrefsData = {
     "TG Jesus Christ, Savior"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "e",
+   "text": "Savior",
+   "refs": [
+    "Isa. 43:11",
+    "Hosea 13:4"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|76|2": [
@@ -34158,6 +34167,15 @@ window._dcCrossrefsData = {
    "text": "fail",
    "refs": [
     "Ps. 102:27 (25–27)",
+    "Heb. 1:12"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "years never fail",
+   "refs": [
+    "Ps. 102:27",
     "Heb. 1:12"
    ],
    "category": "cross-ref"
@@ -34273,6 +34291,15 @@ window._dcCrossrefsData = {
     "TG Prudence"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "e",
+   "text": "wisdom of the wise",
+   "refs": [
+    "Isa. 29:14",
+    "1 Cor. 1:19"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|76|10": [
@@ -34324,6 +34351,15 @@ window._dcCrossrefsData = {
     "1 Cor. 2:9",
     "3 Ne. 17:16 (15–25)",
     "D&C 76:116 (114–19)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "eye has not seen",
+   "refs": [
+    "Isa. 64:4",
+    "1 Cor. 2:9"
    ],
    "category": "cross-ref"
   }
@@ -34453,6 +34489,15 @@ window._dcCrossrefsData = {
     "D&C 76:65 (50, 64–65)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "resurrection of the just",
+   "refs": [
+    "John 5:29",
+    "Acts 24:15"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|76|19": [
@@ -34552,6 +34597,14 @@ window._dcCrossrefsData = {
     "2 Sam. 22:47",
     "D&C 20:17",
     "TG Jesus Christ, Resurrection"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "he lives",
+   "refs": [
+    "Job 19:25"
    ],
    "category": "cross-ref"
   }
@@ -34810,6 +34863,15 @@ window._dcCrossrefsData = {
     "Rev. 2:27 (26–27)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "vessels of wrath",
+   "refs": [
+    "Jer. 50:25",
+    "Rom. 9:22"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|76|34": [
@@ -34830,6 +34892,14 @@ window._dcCrossrefsData = {
     "TG Forgive"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "world to come",
+   "refs": [
+    "Matt. 12:32"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|76|35": [
@@ -35109,6 +35179,7 @@ window._dcCrossrefsData = {
    "marker": "f",
    "text": "worm",
    "refs": [
+    "Mark 9:44",
     "Isa. 66:24",
     "Mark 9:48 (43–48)"
    ],
@@ -35350,6 +35421,14 @@ window._dcCrossrefsData = {
     "TG Jesus Christ, Firstborn"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "church of the Firstborn",
+   "refs": [
+    "Heb. 12:23"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|76|55": [
@@ -35418,6 +35497,15 @@ window._dcCrossrefsData = {
     "D&C 107:3 (2–4)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "order of Melchizedek",
+   "refs": [
+    "Ps. 110:4",
+    "Heb. 5:6"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|76|58": [
@@ -35425,6 +35513,8 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "gods",
    "refs": [
+    "Ps. 82:6",
+    "John 10:34",
     "Ps. 82:6 (1, 6)",
     "John 10:34 (34–36)",
     "1 Cor. 8:6 (5–6)",
@@ -35465,6 +35555,14 @@ window._dcCrossrefsData = {
     "D&C 84:38 (37–38)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "all things are theirs",
+   "refs": [
+    "1 Cor. 3:22 (21–23)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|76|60": [
@@ -35483,6 +35581,8 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "glory",
    "refs": [
+    "Jer. 9:23 (23–24)",
+    "1 Cor. 1:31",
     "John 5:44 (41–44)",
     "1 Cor. 3:21 (21–23)",
     "1 Thes. 2:6"
@@ -35608,6 +35708,14 @@ window._dcCrossrefsData = {
     "TG Zion"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "Mount Zion",
+   "refs": [
+    "Heb. 12:22"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|76|67": [
@@ -35702,6 +35810,15 @@ window._dcCrossrefsData = {
     "TG Blood, Symbolism of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "f",
+   "text": "mediator of the new covenant",
+   "refs": [
+    "Heb. 12:24",
+    "1 Tim. 2:5"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|76|70": [
@@ -35834,6 +35951,15 @@ window._dcCrossrefsData = {
     "TG Gospel"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "e",
+   "text": "spirits of men kept in prison",
+   "refs": [
+    "1 Pet. 3:19 (18–20)",
+    "1 Pet. 4:6"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|76|74": [
@@ -36055,6 +36181,14 @@ window._dcCrossrefsData = {
     "D&C 7:6"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "ministering spirits",
+   "refs": [
+    "Heb. 1:14"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|76|89": [
@@ -36148,6 +36282,14 @@ window._dcCrossrefsData = {
     "TG Grace"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "e",
+   "text": "see as they are seen",
+   "refs": [
+    "1 Cor. 13:12"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|76|95": [
@@ -36172,6 +36314,14 @@ window._dcCrossrefsData = {
     "1 Cor. 15:41 (40–41)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "glory of the sun",
+   "refs": [
+    "1 Cor. 15:41 (40–42)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|76|99": [
@@ -36179,6 +36329,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "Paul",
    "refs": [
+    "1 Cor. 1:12 (11–13)",
     "1 Cor. 3:22"
    ],
    "category": "cross-ref"
@@ -36284,6 +36435,15 @@ window._dcCrossrefsData = {
     "TG Whore"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "f",
+   "text": "liars",
+   "refs": [
+    "Rev. 21:8",
+    "Rev. 22:15"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|76|104": [
@@ -36364,6 +36524,14 @@ window._dcCrossrefsData = {
     "Heb. 10:14 (12–14)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "h",
+   "text": "subdued all enemies",
+   "refs": [
+    "1 Cor. 15:25 (24–28)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|76|107": [
@@ -36422,6 +36590,15 @@ window._dcCrossrefsData = {
     "D&C 122:8 (7–8)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "trodden the wine-press",
+   "refs": [
+    "Isa. 63:3",
+    "Rev. 19:15"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|76|108": [
@@ -36450,6 +36627,14 @@ window._dcCrossrefsData = {
     "Matt. 7:13"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "stars",
+   "refs": [
+    "Gen. 22:17"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|76|110": [
@@ -36458,6 +36643,15 @@ window._dcCrossrefsData = {
    "text": "confess",
    "refs": [
     "Philip. 2:10 (9–11)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "bow the knee",
+   "refs": [
+    "Isa. 45:23",
+    "Rom. 14:11"
    ],
    "category": "cross-ref"
   }
@@ -36574,6 +36768,14 @@ window._dcCrossrefsData = {
    "refs": [
     "2 Cor. 12:4",
     "3 Ne. 28:14 (12–14)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "not lawful for man to utter",
+   "refs": [
+    "2 Cor. 12:4"
    ],
    "category": "cross-ref"
   }
