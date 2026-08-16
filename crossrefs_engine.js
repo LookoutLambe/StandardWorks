@@ -553,7 +553,52 @@
     window._crossrefMap = filtered;
     window._crossrefsLoaded = true;
     console.log('Cross-references loaded:', Object.keys(window._crossrefMap).length, 'verses');
+    seedRootXrefsFromData();
     addCrossRefMarkers();
+  }
+
+  // ── Seed the root→refs index from the full verse DATA (not just rendered DOM) ──
+  // Makes "Cross-References for root" in the word popup deterministic on first
+  // load instead of depending on which chapters the session happened to render.
+  var _rootXrefsSeeded = false;
+  function seedRootXrefsFromData() {
+    if (_rootXrefsSeeded) return;
+    if (!window._verseRegistry || !window.getBookChapter || !window.getRoot) return;
+    var map = window._crossrefMap || {};
+    try {
+      for (var ri = 0; ri < window._verseRegistry.length; ri++) {
+        var reg = window._verseRegistry[ri];
+        var bk = window.getBookChapter(reg.chapId);
+        if (!bk || !reg.verses) continue;
+        for (var vi = 0; vi < reg.verses.length; vi++) {
+          var key = bk.book + '|' + bk.chapter + '|' + (vi + 1);
+          var refs = map[key];
+          if (!refs || !refs.length) continue;
+          var words = reg.verses[vi].words || [];
+          var glosses = [];
+          for (var wi = 0; wi < words.length; wi++) {
+            glosses.push((words[wi][1] || '').toLowerCase().replace(/-/g, ' ').trim());
+          }
+          for (var fi = 0; fi < refs.length; fi++) {
+            var ref = refs[fi];
+            if (!ref.text) continue;
+            var st = ref.text.toLowerCase().trim();
+            var hit = -1;
+            for (var gi = 0; gi < glosses.length; gi++) {
+              var gl = glosses[gi];
+              if (!gl || gl.length < 2) continue;
+              if (gl === st || gl.indexOf(st) !== -1 || (gl.length >= 3 && st.indexOf(gl) !== -1)) { hit = gi; break; }
+            }
+            if (hit < 0) continue;
+            var rt = window.getRoot(words[hit][0] || '');
+            if (!rt) continue;
+            if (!window._rootXrefs[rt]) window._rootXrefs[rt] = [];
+            window._rootXrefs[rt].push({ ref: ref, verseKey: key });
+          }
+        }
+      }
+      _rootXrefsSeeded = true;
+    } catch (e) { console.warn('CrossRefs: root seed failed', e); }
   }
 
   // ── Simple English stemmer for matching ──
@@ -652,8 +697,9 @@
           wu.setAttribute('data-xref-key', key);
         }
 
-        // Index by Hebrew root
-        if (hwEl && window.getRoot) {
+        // Index by Hebrew root (legacy fallback — skipped when the data seed
+        // ran, which indexes every verse once and keeps counts stable)
+        if (!_rootXrefsSeeded && hwEl && window.getRoot) {
           var root = window.getRoot(hwEl.textContent);
           if (root) {
             if (!window._rootXrefs[root]) window._rootXrefs[root] = [];
