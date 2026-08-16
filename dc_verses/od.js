@@ -541,7 +541,7 @@ var od1_ch1Verses = [
     ["וְהֵן","and here!"],
     ["לַמֵּתִים","to the dead"],
     ["וְכִלּוּא","and restrain"],
-    ["רֵאשׁוּת","presidency"],
+    ["נְשִׂיאוּת","presidency"],
     ["הָרִאשׁוֹנָה","the first(f)"],
     ["וּשְׁנֵים","and two plus"],
     ["הֶעָשָׂר","twelve"],
@@ -921,7 +921,7 @@ var od2_ch1Verses = [
     ["לְכׇל","to all"],["מִי","who"],["שֶׁהַדָּבָר","that the thing"],["נוֹגֵעַ","it was touching"],["לוֹ:","to him"],["׃",""]
   ]},
   { num: "ב", words: [
-    ["בַּיּוֹם","in the day"],["הַשְּׁלֹשִׁים","the thirty"],["לְחֹדֶשׁ","to month"],["הַתְּשִׁיעִי","the ninth"],["שְׁנַת","year of"],["אֶלֶף","thousand"],["וּתְשַׁע","and nine"],["מֵאוֹת","hundred"],["וְשִׁבְעִים","and seventy"],["וּשְׁמוֹנֶה","and eight"],["בַּכִּנּוּס","in the gather"],["הַכְּלָלִי","the as to the me"],["הַמֵּאָה","the hundred"],["וְאַרְבָּעִים","and forty"],["וּשְׁמוֹנָה","and eight"],["שֶׁל","of"],["עֵדַת","church of"],["יֵשׁוּעַ","Yeshua"],["הַמָּשִׁיחַ","the Messiah"],["שֶׁל","of"],["קְדוֹשֵׁי","saints of"],["אַחֲרִית","final state of"],["הַיָּמִים","the days"],["הֻגַּשׁ","to be served"],["הַדָּבָר","the thing"],["הַבָּא","that comes"],["עַל","upon"],["יְדֵי","hands of"],["הַנָּשִׂיא","the prince"],["נ׳","N."],["אֶלְדוֹן","Eldon"],["טֶנֶר","Tanner"],["הַיּוֹעֵץ","the he consulted"],["הָרִאשׁוֹן","the first"],["בָּרֵאשׁוּת","in the chairmanship"],["הָרִאשׁוֹנָה","the first(f)"],["שֶׁל","of"],["הָעֵדָה:","the congregation"],["׃",""]
+    ["בַּיּוֹם","in the day"],["הַשְּׁלֹשִׁים","the thirty"],["לְחֹדֶשׁ","to month"],["הַתְּשִׁיעִי","the ninth"],["שְׁנַת","year of"],["אֶלֶף","thousand"],["וּתְשַׁע","and nine"],["מֵאוֹת","hundred"],["וְשִׁבְעִים","and seventy"],["וּשְׁמוֹנֶה","and eight"],["בַּכִּנּוּס","in the gather"],["הַכְּלָלִי","the as to the me"],["הַמֵּאָה","the hundred"],["וְאַרְבָּעִים","and forty"],["וּשְׁמוֹנָה","and eight"],["שֶׁל","of"],["עֵדַת","church of"],["יֵשׁוּעַ","Yeshua"],["הַמָּשִׁיחַ","the Messiah"],["שֶׁל","of"],["קְדוֹשֵׁי","saints of"],["אַחֲרִית","final state of"],["הַיָּמִים","the days"],["הֻגַּשׁ","to be served"],["הַדָּבָר","the thing"],["הַבָּא","that comes"],["עַל","upon"],["יְדֵי","hands of"],["הַנָּשִׂיא","the prince"],["נ׳","N."],["אֶלְדוֹן","Eldon"],["טֶנֶר","Tanner"],["הַיּוֹעֵץ","the he consulted"],["הָרִאשׁוֹן","the first"],["בַּנְּשִׂיאוּת","in the chairmanship"],["הָרִאשׁוֹנָה","the first(f)"],["שֶׁל","of"],["הָעֵדָה:","the congregation"],["׃",""]
   ]},
   { num: "ג", words: [
     ["בְּרֵאשִׁית","in beginning"],
@@ -930,7 +930,7 @@ var od2_ch1Verses = [
     ["הַשָּׁנָה","the year"],
     ["הַזֹּאת","this"],
     ["הִכְרִיזָה","he proclaimed"],
-    ["הָרֵאשׁוּת","the presidency"],
+    ["הַנְּשִׂיאוּת","the presidency"],
     ["הָרִאשׁוֹנָה","the first(f)"],
     ["כִּי","that"],
     ["הִתְגַּלּוּת","revealing itself"],
@@ -1234,7 +1234,7 @@ var od2_ch1Verses = [
     ["מֶרְיוֹן","jird (rodent)"],["ג׳","3rd"],["רוֹמְנִי","Romanian person"],["׃",""]
   ]},
   { num: "טז", words: [
-    ["הָרֵאשׁוּת","the presidency"],["הָרִאשׁוֹנָה","the first(f)"],["׃",""]
+    ["הַנְּשִׂיאוּת","the presidency"],["הָרִאשׁוֹנָה","the first(f)"],["׃",""]
   ]},
   { num: "יז", words: [
     ["בְּהַכִּירֵנוּ","in he recognized us"],
