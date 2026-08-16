@@ -23301,6 +23301,15 @@ window._dcCrossrefsData = {
     "Matt. 23:12"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "exalteth",
+   "refs": [
+    "Num. 16:28",
+    "Isa. 10:33"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|49|11": [
@@ -23372,6 +23381,8 @@ window._dcCrossrefsData = {
    "marker": "b",
    "text": "marriage",
    "refs": [
+    "Song 3:11",
+    "1 Tim. 4:3",
     "Gen. 2:24 (23–24)",
     "D&C 42:22",
     "Moses 3:24 (23–24)",
@@ -23483,6 +23494,14 @@ window._dcCrossrefsData = {
     "TG Clothing"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "use",
+   "refs": [
+    "Ps. 104:14"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|49|20": [
@@ -23542,6 +23561,14 @@ window._dcCrossrefsData = {
     "Meat"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "wasteth",
+   "refs": [
+    "Prov. 18:9"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|49|22": [
@@ -23607,6 +23634,15 @@ window._dcCrossrefsData = {
    "refs": [
     "Isa. 27:13",
     "Matt. 24:31"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "reel",
+   "refs": [
+    "Ps. 107:27",
+    "Isa. 24:20"
    ],
    "category": "cross-ref"
   }
