@@ -10254,7 +10254,8 @@ window._dcCrossrefsData = {
         "D&C 47:1",
         "69:3 (3–8)",
         "85:1",
-        "TG Record Keeping"
+        "TG Record Keeping",
+        "Mal. 3:16"
       ],
       "category": "cross-ref"
     },
@@ -10543,7 +10544,9 @@ window._dcCrossrefsData = {
       "text": "new",
       "refs": [
         "D&C 66:2",
-        "TG New and Everlasting Covenant"
+        "TG New and Everlasting Covenant",
+        "Jer. 31:31",
+        "Isa. 24:5"
       ],
       "category": "cross-ref"
     },
@@ -10598,6 +10601,14 @@ window._dcCrossrefsData = {
         "Rom. 11:34",
         "1 Cor. 2:16",
         "Jacob 4:10"
+      ],
+      "category": "cross-ref"
+    },
+    {
+      "marker": "c",
+      "text": "counsel",
+      "refs": [
+        "Isa. 40:13 (13–14)"
       ],
       "category": "cross-ref"
     }
@@ -10716,6 +10727,14 @@ window._dcCrossrefsData = {
         "TG Industry"
       ],
       "category": "tg"
+    },
+    {
+      "marker": "c",
+      "text": "unite",
+      "refs": [
+        "Isa. 56:3"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|24|1": [
@@ -11015,6 +11034,15 @@ window._dcCrossrefsData = {
         "124:99 (98–100)"
       ],
       "category": "cross-ref"
+    },
+    {
+      "marker": "g",
+      "text": "serpents",
+      "refs": [
+        "Num. 21:6",
+        "Mark 16:18"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|24|14": [
@@ -11090,7 +11118,8 @@ window._dcCrossrefsData = {
         "D&C 39:17",
         "71:4",
         "95:4",
-        "TG Millennium, Preparing a People for"
+        "TG Millennium, Preparing a People for",
+        "Lev. 25:3"
       ],
       "category": "cross-ref"
     },
@@ -11177,7 +11206,8 @@ window._dcCrossrefsData = {
       "marker": "c",
       "text": "lady",
       "refs": [
-        "TG Woman"
+        "TG Woman",
+        "2 Jn. 1:1"
       ],
       "category": "tg"
     },
@@ -11196,7 +11226,8 @@ window._dcCrossrefsData = {
       "marker": "a",
       "text": "Murmur",
       "refs": [
-        "TG Murmuring"
+        "TG Murmuring",
+        "Num. 11:1"
       ],
       "category": "tg"
     },
@@ -11688,7 +11719,8 @@ window._dcCrossrefsData = {
       "marker": "e",
       "text": "stick",
       "refs": [
-        "Ezek. 37:16"
+        "Ezek. 37:16",
+        "Ezek. 37:16 (15–19)"
       ],
       "category": "cross-ref"
     },
@@ -11846,6 +11878,14 @@ window._dcCrossrefsData = {
         "Dan. 7:22 (13, 22)"
       ],
       "category": "cross-ref"
+    },
+    {
+      "marker": "c",
+      "text": "days",
+      "refs": [
+        "Dan. 7:9 (9, 13, 22)"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|27|12": [
@@ -12000,7 +12040,8 @@ window._dcCrossrefsData = {
         "Eph. 6:11",
         "TG Children of Light",
         "Protection, Divine",
-        "War"
+        "War",
+        "Eph. 6:13 (11–18)"
       ],
       "category": "cross-ref"
     },
@@ -12112,6 +12153,14 @@ window._dcCrossrefsData = {
       "text": "also",
       "refs": [
         "John 14:3"
+      ],
+      "category": "cross-ref"
+    },
+    {
+      "marker": "d",
+      "text": "helmet",
+      "refs": [
+        "Isa. 59:17"
       ],
       "category": "cross-ref"
     }
@@ -12334,7 +12383,8 @@ window._dcCrossrefsData = {
       "text": "Satan",
       "refs": [
         "Rev. 20:10",
-        "D&C 50:4"
+        "D&C 50:4",
+        "Gen. 3:13"
       ],
       "category": "cross-ref"
     },
@@ -12841,7 +12891,8 @@ window._dcCrossrefsData = {
       "marker": "c",
       "text": "darkened",
       "refs": [
-        "TG Darkness, Physical"
+        "TG Darkness, Physical",
+        "Joel 2:31"
       ],
       "category": "tg"
     },
@@ -12954,7 +13005,8 @@ window._dcCrossrefsData = {
       "marker": "a",
       "text": "flies",
       "refs": [
-        "TG Plague"
+        "TG Plague",
+        "Ex. 8:21 (21–24)"
       ],
       "category": "tg"
     }
@@ -13160,6 +13212,14 @@ window._dcCrossrefsData = {
       "text": "come",
       "refs": [
         "John 5:29 (28–29)"
+      ],
+      "category": "cross-ref"
+    },
+    {
+      "marker": "e",
+      "text": "sleep",
+      "refs": [
+        "Dan. 12:2"
       ],
       "category": "cross-ref"
     }
@@ -13867,6 +13927,14 @@ window._dcCrossrefsData = {
         "TG God, Spirit of"
       ],
       "category": "tg"
+    },
+    {
+      "marker": "c",
+      "text": "Maker",
+      "refs": [
+        "Isa. 51:13"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|30|3": [
@@ -13931,7 +13999,8 @@ window._dcCrossrefsData = {
       "marker": "a",
       "text": "afflictions",
       "refs": [
-        "TG Affliction"
+        "TG Affliction",
+        "Isa. 63:9"
       ],
       "category": "tg"
     },
@@ -14031,6 +14100,14 @@ window._dcCrossrefsData = {
       "text": "with",
       "refs": [
         "Matt. 28:20"
+      ],
+      "category": "cross-ref"
+    },
+    {
+      "marker": "d",
+      "text": "fear",
+      "refs": [
+        "Ps. 118:6"
       ],
       "category": "cross-ref"
     }
