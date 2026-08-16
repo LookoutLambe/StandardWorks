@@ -2311,10 +2311,11 @@ var dc39_ch1Verses = [
     ["הוּא","the same"],
     ["אֲשֶׁר","which"],
     ["בָּא","came"],
-    ["בְּמֶחֱצִית","in the meridian of time"],
+    ["בְּאֶמְצַע","in the meridian of"],
+    ["הַיָּמִים","time"],
     ["אֶל","unto"],
-    ["שְׁלִי","mine own"],
-    ["וּשְׁלִי","and mine own"],
+    ["אֲשֶׁר־לִי","mine own"],
+    ["וַאֲשֶׁר־לִי","and mine own"],
     ["לֹא","not"],
     ["קִבְּלוּנִי׃","received me"]
   ]},
@@ -2331,7 +2332,8 @@ var dc39_ch1Verses = [
     ["וְכֵן","and even so"],
     ["אֶתֵּן","will I give"],
     ["לְכׇל","unto as many as"],
-    ["אֲשֶׁר","will receive me"],
+    ["אֲשֶׁר","that"],
+    ["יְקַבְּלוּנִי","will receive me"],
     ["כֹּחַ","power"],
     ["לִהְיוֹת","to become"],
     ["בָּנַי׃","my sons"]
@@ -2373,7 +2375,7 @@ var dc39_ch1Verses = [
     ["וּמְלַמֵּד","and teacheth"],
     ["דִּבְרֵי","the things of"],
     ["שָׁלוֹם","peace"],
-    ["הַמַּמְלָכָה׃","of the kingdom"]
+    ["הַמַּלְכוּת׃","of the kingdom"]
   ]},
   { num: "ז", words: [
     ["וְעַתָּה","and now"],
@@ -2403,22 +2405,22 @@ var dc39_ch1Verses = [
     ["וְהִנֵּה","and behold"],
     ["בְּרָכוֹת","blessings"],
     ["גְּדוֹלוֹת","great"],
-    ["עַל","I have bestowed upon"],
+    ["עַל","upon"],
     ["רֹאשֶׁךָ׃","thy head"]
   ]},
   { num: "ט", words: [
-    ["אַף","nevertheless"],
-    ["כִּי","for"],
+    ["אוּלָם","nevertheless"],
     ["רָאִיתָ","thou hast seen"],
     ["יָגוֹן","sorrow"],
     ["רַב","great"],
     ["כִּי","for"],
     ["פְּעָמִים","times"],
     ["רַבּוֹת","many"],
+    ["מְאַסְתַּנִי","thou hast rejected me"],
     ["בִּגְלַל","because of"],
     ["גַּאֲוָה","pride"],
     ["וּדְאָגוֹת","and the cares of"],
-    ["הָעוֹלָם׃","the world thou hast rejected me"]
+    ["הָעוֹלָם׃","the world"]
   ]},
   { num: "י", words: [
     ["אַךְ","but"],
@@ -2452,8 +2454,9 @@ var dc39_ch1Verses = [
     ["זֹאת","this"],
     ["לִמְלָאכָה","for a work"],
     ["גְדוֹלָה","greater"],
-    ["יוֹתֵר","I have prepared thee"],
-    ["תִּדְרֹשׁ","thou shalt preach"],
+    ["יוֹתֵר",""],
+    ["הֲכִינוֹתִיךָ","I have prepared thee"],
+    ["תַּטִּיף","thou shalt preach"],
     ["מְלֹא","the fulness of"],
     ["בְשׂוֹרָתִי","my gospel"],
     ["אֲשֶׁר","which"],
@@ -2475,7 +2478,7 @@ var dc39_ch1Verses = [
     ["כֹחַ","power"],
     ["יָנוּחַ","shall rest"],
     ["עָלֶיךָ","upon thee"],
-    ["יִהְיֶה","thou shalt have"],
+    ["תִּהְיֶה","thou shalt have"],
     ["לְךָ",""],
     ["אֱמוּנָה","faith"],
     ["גְדוֹלָה","great"],
@@ -2567,12 +2570,12 @@ var dc39_ch1Verses = [
     ["אַךְ","but"],
     ["לֹא","not"],
     ["אוּכַל","I cannot"],
-    ["לְהַכְחִישׁ","deny"],
-    ["דְּבָרִי׃","my word"]
+    ["לְכַחֵשׁ","deny"],
+    ["בִּדְבָרִי׃","my word"]
   ]},
   { num: "יז", words: [
     ["לָכֵן","wherefore"],
-    ["עֲמְלוּ","lay to"],
+    ["עִמְלוּ","lay to"],
     ["בְּכׇל","with all"],
     ["כֹּחֲכֶם","your might"],
     ["וְקִרְאוּ","and call"],
@@ -2618,7 +2621,7 @@ var dc39_ch1Verses = [
     ["צֵא","go forth"],
     ["הַטְבֵּל","baptizing"],
     ["בְּמַיִם","with water"],
-    ["הָכֵן","preparing"],
+    ["פַּנֵּה","preparing"],
     ["הַדֶּרֶךְ","the way"],
     ["לְפָנַי","before my face"],
     ["לְעֵת","for the time of"],
@@ -2645,8 +2648,8 @@ var dc39_ch1Verses = [
     ["מְקַבֵּל","receiveth"],
     ["אֹתִי","me"],
     ["וְיֵאָסְפוּ","and they shall be gathered"],
-    ["אֵלַי","me"],
-    ["בַּזְּמַן","in time and in eternity"],
+    ["אֵלַי","unto me"],
+    ["בַּזְּמַן","in time"],
     ["וּבַנֶּצַח׃","and in eternity"]
   ]},
   { num: "כג", words: [
@@ -2657,7 +2660,7 @@ var dc39_ch1Verses = [
     ["אֲשֶׁר","as"],
     ["תַּטְבִּילוּ","ye shall baptize"],
     ["בְמַיִם","with water"],
-    ["תָּשִׂימוּ","ye shall lay"],
+    ["תִּסְמְכוּ","ye shall lay"],
     ["יְדֵיכֶם","your hands"],
     ["וִיקַבְּלוּ","and they shall receive"],
     ["מַתַּת","the gift of"],

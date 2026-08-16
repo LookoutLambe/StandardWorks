@@ -17248,6 +17248,14 @@ window._dcCrossrefsData = {
     "TG Prophets, Rejection of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "own",
+   "refs": [
+    "John 1:11"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|39|4": [
@@ -17392,6 +17400,14 @@ window._dcCrossrefsData = {
     "Repent"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "baptized",
+   "refs": [
+    "Acts 22:16"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|39|11": [
@@ -17426,6 +17442,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "rest",
    "refs": [
+    "Isa. 11:2",
     "2 Cor. 12:9",
     "TG Deliver",
     "Guidance, Divine"
@@ -17507,6 +17524,14 @@ window._dcCrossrefsData = {
     "TG Missionary Work"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "poured",
+   "refs": [
+    "Mal. 3:10"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|39|16": [
@@ -17577,6 +17602,14 @@ window._dcCrossrefsData = {
     "Jesus Christ, Second Coming"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "preparing",
+   "refs": [
+    "Mal. 3:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|39|21": [
