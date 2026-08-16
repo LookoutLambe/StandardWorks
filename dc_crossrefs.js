@@ -24983,6 +24983,7 @@ window._dcCrossrefsData = {
    "marker": "c",
    "text": "remnant",
    "refs": [
+    "Micah 5:7 (7–8)",
     "Ps. 135:4",
     "3 Ne. 5:21 (21–26)",
     "D&C 19:27",
@@ -25105,6 +25106,14 @@ window._dcCrossrefsData = {
     "Matt. 12:20"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "victory",
+   "refs": [
+    "Isa. 42:3"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|52|12": [
@@ -25112,6 +25121,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "sift",
    "refs": [
+    "Isa. 30:28",
     "Luke 22:31"
    ],
    "category": "cross-ref"
@@ -25125,6 +25135,14 @@ window._dcCrossrefsData = {
     "Neh. 7:2",
     "Matt. 25:23",
     "D&C 132:53"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "ruler",
+   "refs": [
+    "Matt. 25:21"
    ],
    "category": "cross-ref"
   }
@@ -25163,6 +25181,14 @@ window._dcCrossrefsData = {
     "TG Ordinance"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "contrite",
+   "refs": [
+    "Ps. 51:17"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|52|16": [
@@ -25458,6 +25484,14 @@ window._dcCrossrefsData = {
     "112:21"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "recommendation",
+   "refs": [
+    "2 Cor. 3:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|52|42": [
@@ -25490,6 +25524,14 @@ window._dcCrossrefsData = {
     "TG Joy"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "time",
+   "refs": [
+    "Isa. 60:22"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|52|44": [
