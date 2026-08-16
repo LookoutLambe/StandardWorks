@@ -15289,6 +15289,14 @@ window._dcCrossrefsData = {
     "Acts 19:2 (1–6)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "repentance",
+   "refs": [
+    "Matt. 3:11"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|35|6": [
@@ -15344,6 +15352,8 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "shortened",
    "refs": [
+    "Isa. 59:1",
+    "Num. 11:23",
     "Isa. 50:2 (2–4)",
     "59:1"
    ],
@@ -15416,6 +15426,15 @@ window._dcCrossrefsData = {
     "TG Sight"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "f",
+   "text": "blind",
+   "refs": [
+    "Isa. 35:5 (5–6)",
+    "Mark 7:37"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|35|10": [
@@ -15469,6 +15488,14 @@ window._dcCrossrefsData = {
    "text": "fornication",
    "refs": [
     "Rev. 18:3"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "Babylon",
+   "refs": [
+    "Rev. 14:8"
    ],
    "category": "cross-ref"
   }
@@ -15530,6 +15557,15 @@ window._dcCrossrefsData = {
     "TG God, Spirit of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "e",
+   "text": "thresh",
+   "refs": [
+    "Micah 4:13",
+    "Hab. 3:12"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|35|14": [
@@ -15792,6 +15828,14 @@ window._dcCrossrefsData = {
     "TG Purification"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "g",
+   "text": "purified",
+   "refs": [
+    "1 Jn. 3:3 (2–3)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|35|22": [
@@ -15839,6 +15883,7 @@ window._dcCrossrefsData = {
    "marker": "b",
    "text": "shake",
    "refs": [
+    "Hag. 2:6 (6–7)",
     "D&C 21:6"
    ],
    "category": "cross-ref"
