@@ -29089,6 +29089,7 @@ window._dcCrossrefsData = {
    "marker": "d",
    "text": "whirlwind",
    "refs": [
+    "Prov. 1:27",
     "Jer. 30:23",
     "Dan. 11:40"
    ],
@@ -29332,6 +29333,14 @@ window._dcCrossrefsData = {
     "TG Death, Spiritual, Second"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "h",
+   "text": "liars",
+   "refs": [
+    "Deut. 20:8"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|63|18": [
@@ -29503,6 +29512,14 @@ window._dcCrossrefsData = {
     "TG Provoking"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "claim",
+   "refs": [
+    "Lev. 25:24"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|63|28": [
@@ -29529,6 +29546,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "purchase",
    "refs": [
+    "Jer. 32:11",
     "D&C 58:53",
     "101:70 (70–75)"
    ],
@@ -29652,6 +29670,14 @@ window._dcCrossrefsData = {
     "88:94",
     "101:24 (23–25, 66)",
     "TG Earth, Cleansing of"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "escape",
+   "refs": [
+    "1 Pet. 4:18"
    ],
    "category": "cross-ref"
   }
@@ -29893,6 +29919,14 @@ window._dcCrossrefsData = {
     "TG Death"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "appointed",
+   "refs": [
+    "Heb. 9:27"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|63|51": [
@@ -29992,6 +30026,15 @@ window._dcCrossrefsData = {
     "TG Holy Ghost, Loss of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "grieved",
+   "refs": [
+    "Isa. 63:10",
+    "Eph. 4:30"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|63|56": [
@@ -30161,6 +30204,7 @@ window._dcCrossrefsData = {
    "marker": "b",
    "text": "glory",
    "refs": [
+    "2 Cor. 4:17",
     "Rom. 8:18",
     "D&C 58:4",
     "136:31"
