@@ -31505,6 +31505,15 @@ window._dcCrossrefsData = {
     "TG Adulterer"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "troubled",
+   "refs": [
+    "Ps. 66:10",
+    "Luke 10:40 (40–41)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|66|11": [
@@ -31797,6 +31806,14 @@ window._dcCrossrefsData = {
     "Moses 1:11"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "h",
+   "text": "veil",
+   "refs": [
+    "Ex. 26:31"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|67|11": [
@@ -31823,6 +31840,14 @@ window._dcCrossrefsData = {
     "JST Ex. 33:20 (Bible Appendix)",
     "Mosiah 3:19",
     "TG Man, Natural, Not Spiritually Reborn"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "natural",
+   "refs": [
+    "1 Cor. 2:14"
    ],
    "category": "cross-ref"
   }
@@ -31945,6 +31970,14 @@ window._dcCrossrefsData = {
    "text": "power",
    "refs": [
     "Rom. 1:16"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "moved",
+   "refs": [
+    "2 Pet. 1:21"
    ],
    "category": "cross-ref"
   }
@@ -32233,6 +32266,15 @@ window._dcCrossrefsData = {
     "TG Hands, Laying on of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "lineage",
+   "refs": [
+    "Neh. 7:5",
+    "Ezra 2:62"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|68|22": [
@@ -32336,6 +32378,14 @@ window._dcCrossrefsData = {
     "D&C 29:48"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "stakes",
+   "refs": [
+    "Isa. 54:2"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|68|26": [
@@ -32393,6 +32443,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "Sabbath",
    "refs": [
+    "Ex. 20:8",
     "Alma 1:26 (26–27)",
     "D&C 59:9",
     "TG Sabbath"
