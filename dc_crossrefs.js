@@ -25563,6 +25563,14 @@ window._dcCrossrefsData = {
     "TG Election"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "election",
+   "refs": [
+    "2 Pet. 1:10"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|53|2": [
@@ -25651,6 +25659,14 @@ window._dcCrossrefsData = {
    "text": "humble",
    "refs": [
     "Jer. 44:10"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "contrite",
+   "refs": [
+    "Ps. 34:18"
    ],
    "category": "cross-ref"
   }
@@ -25773,6 +25789,7 @@ window._dcCrossrefsData = {
    "marker": "e",
    "text": "rest",
    "refs": [
+    "Jer. 6:16",
     "Ps. 72:7",
     "Matt. 11:29",
     "D&C 45:66",
