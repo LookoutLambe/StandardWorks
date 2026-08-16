@@ -33711,6 +33711,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "sheaves",
    "refs": [
+    "Ruth 2:7",
     "Ps. 126:6",
     "Alma 26:5",
     "D&C 4:4",
@@ -33728,6 +33729,14 @@ window._dcCrossrefsData = {
     "Honor"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "crowned",
+   "refs": [
+    "Prov. 12:28"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|75|6": [
@@ -33840,6 +33849,15 @@ window._dcCrossrefsData = {
     "99:4 (4–5)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "shake off the dust",
+   "refs": [
+    "Matt. 10:14",
+    "Luke 9:5"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|75|21": [
@@ -33891,6 +33909,15 @@ window._dcCrossrefsData = {
    "text": "lifted up",
    "refs": [
     "D&C 5:35"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "more tolerable",
+   "refs": [
+    "Matt. 10:15",
+    "D&C 54:8"
    ],
    "category": "cross-ref"
   }
@@ -33949,6 +33976,15 @@ window._dcCrossrefsData = {
     "TG Holy Ghost, Comforter"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "ask, and ye shall receive",
+   "refs": [
+    "Matt. 7:7",
+    "3 Ne. 27:29"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|75|28": [
