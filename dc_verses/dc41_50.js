@@ -4524,7 +4524,8 @@ var dc49_ch1Verses = [
     ["אֲלֵיהֶם׃","unto them"]
   ]},
   { num: "ד", words: [
-    ["וְעַבְדִּי","and my servant (Leman)"],
+    ["וְעַבְדִּי","and my servant"],
+    ["לֵימַן","(Leman)"],
     ["יִסָּמֵךְ","shall be ordained"],
     ["לָעֲבוֹדָה","unto the work"],
     ["הַזֹּאת","this"],
