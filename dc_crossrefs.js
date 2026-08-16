@@ -23769,6 +23769,14 @@ window._dcCrossrefsData = {
     "Spirits, Evil or Unclean"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "spirits",
+   "refs": [
+    "1 Kgs. 22:22 (22–23)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|50|3": [
@@ -23817,6 +23825,14 @@ window._dcCrossrefsData = {
     "Steadfastness"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "death",
+   "refs": [
+    "2 Sam. 15:21"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|50|6": [
@@ -23960,6 +23976,7 @@ window._dcCrossrefsData = {
    "marker": "b",
    "text": "strong",
    "refs": [
+    "Joel 3:10",
     "2 Cor. 12:10",
     "TG Strength"
    ],
@@ -24085,6 +24102,14 @@ window._dcCrossrefsData = {
     "TG Light [noun]",
     "Man, Potential to Become like Heavenly Father",
     "Perfection"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "brighter",
+   "refs": [
+    "Prov. 4:18"
    ],
    "category": "cross-ref"
   }
