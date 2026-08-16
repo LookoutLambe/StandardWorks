@@ -1309,7 +1309,7 @@ var dc18_ch1Verses = [
     ["לָדַעַת","to know"],
     ["מִמֶּנִּי","of me"],
     ["עַבְדִּי","my servant"],
-    ["אוֹלִיבֵר","Oliver"],
+    ["אוֹלִיבֶר","Oliver"],
     ["קַאוּדְרִי","Cowdery"],
     ["הִנֵּה","I give unto you"],
     ["דְבָרַי","these words"],
@@ -1433,7 +1433,7 @@ var dc18_ch1Verses = [
   ]},
   { num: "ט", words: [
     ["וְעַתָּה","and now"],
-    ["אוֹלִיבֵר","Oliver"],
+    ["אוֹלִיבֶר","Oliver"],
     ["קַאוּדְרִי","Cowdery"],
     ["אֵלֶיךָ","unto you"],
     ["אֲנִי","I"],
@@ -1854,7 +1854,7 @@ var dc18_ch1Verses = [
     ["נֹתֵן","I give"],
     ["אֲנִי","unto you"],
     ["לְךָ",""],
-    ["אוֹלִיבֵר","Oliver"],
+    ["אוֹלִיבֶר","Oliver"],
     ["קַאוּדְרִי","Cowdery"],
     ["וּלְדָוִד","and also unto David"],
     ["וִיטְמֵר","Whitmer"],
@@ -2724,7 +2724,7 @@ var dc20_ch1Verses = [
     ["׃",""]
   ]},
   { num: "ג", words: [
-    ["וּלְאוֹלִיבֵר","and to Oliver"],
+    ["וּלְאוֹלִיבֶר","and to Oliver"],
     ["קַאוּדְרִי","Cowdery"],
     ["אֲשֶׁר","who"],
     ["גַּם","also"],

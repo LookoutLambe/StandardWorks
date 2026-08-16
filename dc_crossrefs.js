@@ -16229,6 +16229,14 @@ window._dcCrossrefsData = {
     "TG Agency"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "choose",
+   "refs": [
+    "Josh. 24:15"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|38|1": [

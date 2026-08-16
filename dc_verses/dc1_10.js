@@ -2228,7 +2228,7 @@ var dc6_ch1Verses = [
   { num: "כ", words: [
     ["הִנֵּה","behold"],
     ["אַתָּה","you"],
-    ["אוֹלִיבֵר","Oliver"],
+    ["אוֹלִיבֶר","Oliver"],
     ["וְדִבַּרְתִּי","and I have spoken"],
     ["אֵלֶיךָ","unto you"],
     ["בִּגְלַל","because of"],
@@ -2763,7 +2763,7 @@ renderVerseSet(dc7_ch1Verses, 'dc7-ch1-verses');
 
 var dc8_ch1Verses = [
   { num: "א", words: [
-    ["אוֹלִיבֵר","Oliver"],
+    ["אוֹלִיבֶר","Oliver"],
     ["קַאוּדְרִי","Cowdery"],
     ["אָמֵן","verily"],
     ["אָמֵן","verily"],

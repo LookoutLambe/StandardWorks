@@ -1036,7 +1036,7 @@ var dc52_ch1Verses = [
     ["מֵהָעֵדָה","from the church"],
     ["גַּם","also"],
     ["לְעַבְדִּי","for my servant"],
-    ["אוֹלִיבֵר","Oliver"],
+    ["אוֹלִיבֶר","Oliver"],
     ["קַאוּדֶּרִי׃","Cowdery"],
     ["׃",""]
   ]},
@@ -1501,7 +1501,7 @@ var dc55_ch1Verses = [
     ["תִּסָּמֵךְ","thou shalt be ordained"],
     ["לַעֲזֹר","to assist"],
     ["לְעַבְדִּי","my servant"],
-    ["אוֹלִיבֵר","Oliver"],
+    ["אוֹלִיבֶר","Oliver"],
     ["קַאוּדֶּרִי","Cowdery"],
     ["בִּמְלֶאכֶת","in (the) work of"],
     ["הַדְּפוּס","printing"],

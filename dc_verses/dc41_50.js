@@ -4560,7 +4560,7 @@ var dc47_ch1Verses = [
     ["הַיָּמִים","the days"],
     ["תָּמִיד","continually"],
     ["כִּי","for"],
-    ["אוֹלִיבֵר","Oliver"],
+    ["אוֹלִיבֶר","Oliver"],
     ["קַאוּדֶּרִי","Cowdery"],
     ["מִנִּיתִיו","I have appointed"],
     ["לְמִשְׂרָה","to (an) office"],
