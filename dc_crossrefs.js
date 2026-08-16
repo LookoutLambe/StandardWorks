@@ -17781,6 +17781,7 @@ window._dcCrossrefsData = {
    "marker": "d",
    "text": "professed",
    "refs": [
+    "2 Chr. 7:14",
     "D&C 50:4",
     "56:1",
     "112:26"
@@ -17823,6 +17824,14 @@ window._dcCrossrefsData = {
     "TG Jesus Christ, Head of the Church"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "prayer",
+   "refs": [
+    "James 5:15"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|41|4": [
@@ -17989,6 +17998,14 @@ window._dcCrossrefsData = {
     "TG Guile"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "guile",
+   "refs": [
+    "Ps. 32:2"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|41|12": [

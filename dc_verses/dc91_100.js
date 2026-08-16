@@ -877,7 +877,7 @@ var dc93_ch1Verses = [
     ["נְיוּאֵל","Newel"],
     ["ק׳","K."],
     ["וִיטְנֵי","Whitney"],
-    ["אֶפִּסְקוֹפּוֹס","a bishop"],
+    ["פָּקִיד","a bishop"],
     ["עֲדָתִי","of my church,"],
     ["צָרִיךְ","hath need"],
     ["לְהִוָּסֵר","to be chastened,"],
@@ -3157,7 +3157,7 @@ var dc99_ch1Verses = [
     ["יְלָדֶיךָ","thy children,"],
     ["וְיִשָּׁלְחוּ","and sent up"],
     ["בְּטוּב","kindly"],
-    ["אֶל־הָאֶפִּסְקוֹפּוֹס","unto the bishop"],
+    ["אֶל־הַפָּקִיד","unto the bishop"],
     ["בְּצִיּוֹן׃","of Zion."]
   ]},
   { num: "ז", words: [

@@ -406,8 +406,8 @@ var dc82_ch1Verses = [
     ["וְכׇל","and all"],
     ["דָּבָר","things"],
     ["הַנּוֹגֵעַ","pertaining"],
-    ["לַכְּהֻנַּת","to the bishopric"],
-    ["הָעֶפִּיסְקוֹפּוֹס",""],
+    ["לַפְּקִידוּת","to the bishopric"],
+    ["הַפָּקִיד",""],
     ["גַּם","both"],
     ["בְּאֶרֶץ","in the land of"],
     ["צִיּוֹן","Zion"],
@@ -1220,7 +1220,7 @@ var dc84_ch1Verses = [
     ["וְשׁוּב","And again"],
     ["תַּפְקִידֵי","the offices of"],
     ["הַזָּקֵן","elder"],
-    ["וְהָעֶפִּיסְקוֹפּוֹס","and bishop"],
+    ["וְהַפָּקִיד","and bishop"],
     ["הֵם","are"],
     ["נִסְפָּחִים","appendages"],
     ["נְחוּצִים","necessary"],
@@ -2496,10 +2496,10 @@ var dc84_ch1Verses = [
     ["כֶּסֶף","money"],
     ["יִשְׁלְחוּ","send"],
     ["אוֹתוֹ","it up"],
-    ["לָעֶפִּיסְקוֹפּוֹס","unto the bishop"],
+    ["לַפָּקִיד","unto the bishop"],
     ["בְּצִיּוֹן","in Zion"],
     ["אוֹ","or"],
-    ["לָעֶפִּיסְקוֹפּוֹס","unto the bishop"],
+    ["לַפָּקִיד","unto the bishop"],
     ["בְּאוֹהָיוֹ","in Ohio"],
     ["לְמַעַן","that"],
     ["יֻקְדַּשׁ","it may be consecrated"],
@@ -2646,7 +2646,7 @@ var dc84_ch1Verses = [
     ["לָעֵדָה׃","unto the church."]
   ]},
   { num: "קיב", words: [
-    ["וְהָעֶפִּיסְקוֹפּוֹס","And the bishop"],
+    ["וְהַפָּקִיד","And the bishop"],
     ["נְיוּאֶל","Newel"],
     ["ק","K."],
     ["וִיטְנִי","Whitney"],
@@ -2683,7 +2683,7 @@ var dc84_ch1Verses = [
   { num: "קיד", words: [
     ["אֲבָל","Nevertheless"],
     ["יֵלֵךְ","let go"],
-    ["הָעֶפִּיסְקוֹפּוֹס","the bishop"],
+    ["הַפָּקִיד","the bishop"],
     ["לְעִיר","unto the city of"],
     ["נְיוּ","New"],
     ["יוֹרְק","York"],
@@ -2863,7 +2863,7 @@ var dc85_ch1Verses = [
     ["וְהַמְקַבְּלִים","and receive"],
     ["נַחֲלוֹת","inheritances"],
     ["כַּדִּין","legally"],
-    ["מֵהָעֶפִּיסְקוֹפּוֹס׃","from the bishop-;"]
+    ["מֵהַפָּקִיד׃","from the bishop-;"]
   ]},
   { num: "ב", words: [
     ["וְגַם","And also"],
@@ -7084,7 +7084,7 @@ var dc90_ch1Verses = [
   ]},
   { num: "כב", words: [
     ["וְיְבַקֵּשׁ","And let search"],
-    ["הָאֶפִּסְקוֹפּוֹס","the bishop"],
+    ["הַפָּקִיד","the bishop"],
     ["בְּחָרִיצוּת","diligently"],
     ["לִמְצֹא","to obtain"],
     ["סוֹכֵן","an agent"],
@@ -7211,7 +7211,7 @@ var dc90_ch1Verses = [
     ["וְתְקַבֵּל","and receive"],
     ["נַחֲלָה","an inheritance"],
     ["מִיַּד","from the hand of"],
-    ["הָאֶפִּסְקוֹפּוֹס׃","the bishop-;"]
+    ["הַפָּקִיד׃","the bishop-;"]
   ]},
   { num: "לא", words: [
     ["לְמַעַן","That"],
@@ -7287,7 +7287,7 @@ var dc90_ch1Verses = [
     ["סִידְנֵי","Sidney"],
     ["גִילְבֶּרְט","Gilbert-;"],
     ["וְגַם","-and"],
-    ["לָאֶפִּסְקוֹפּוֹס","the bishop also"],
+    ["לַפָּקִיד","the bishop also"],
     ["וְלַאֲחֵרִים","and others"],
     ["דְּבָרִים","things"],
     ["רַבִּים","many"],
