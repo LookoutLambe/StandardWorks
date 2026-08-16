@@ -26519,6 +26519,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "darkness",
    "refs": [
+    "Isa. 9:2",
     "Matt. 4:16",
     "TG Darkness, Spiritual"
    ],
@@ -27050,6 +27051,14 @@ window._dcCrossrefsData = {
     "TG Reward"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "reward",
+   "refs": [
+    "Matt. 10:42"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|58|29": [
@@ -27234,6 +27243,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "confess",
    "refs": [
+    "Prov. 28:13",
     "Num. 5:7 (6–10)",
     "D&C 19:20",
     "64:7",
@@ -27406,6 +27416,14 @@ window._dcCrossrefsData = {
     "D&C 72:24"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "haste",
+   "refs": [
+    "Isa. 52:12"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|58|57": [
@@ -27479,6 +27497,14 @@ window._dcCrossrefsData = {
     "Repent"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "chastened",
+   "refs": [
+    "Prov. 29:19"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|58|61": [
@@ -27509,6 +27535,14 @@ window._dcCrossrefsData = {
     "Signs"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "creature",
+   "refs": [
+    "Mark 16:15 (15–17)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|58|65": [
