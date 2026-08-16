@@ -463,7 +463,7 @@ var dc52_ch1Verses = [
     ["לִימָן","Lyman"],
     ["וַייְט","Wight"],
     ["וְעַבְדִּי","and my servant"],
-    ["יוֹחָנָן","John"],
+    ["ג'ון","John"],
     ["קוֹרִיל","Corrill"],
     ["יֵצְאוּ","(let them) take"],
     ["לְדַרְכָּם","their journey"],
@@ -472,7 +472,7 @@ var dc52_ch1Verses = [
   { num: "ח", words: [
     ["וְגַם","and also"],
     ["עַבְדִּי","my servant"],
-    ["יוֹחָנָן","John"],
+    ["ג'ון","John"],
     ["מֶרְדּוֹק","Murdock"],
     ["וְעַבְדִּי","and my servant"],
     ["הַיְרָם","Hyrum"],

@@ -4254,8 +4254,7 @@ var dc47_ch1Verses = [
     ["בְּעֵינַי","in mine eyes"],
     ["כִּי","that"],
     ["עַבְדִּי","my servant"],
-    ["יוֹחָנָן","John"],
-    ["וִיטְמֵר","(Whitmer)"],
+    ["ג'ון","John"],
     ["יִכְתֹּב","should write"],
     ["וְיִשְׁמֹר","and keep"],
     ["דִּבְרֵי","(the) words of"],
@@ -5532,7 +5531,7 @@ var dc50_ch1Verses = [
   { num: "לח", words: [
     ["וְגַם","and also"],
     ["עַבְדִּי","my servant"],
-    ["יוֹחָנָן","John"],
+    ["ג'ון","John"],
     ["קוֹרִיל","Corrill"],
     ["אוֹ","or"],
     ["כׇּל","all"],

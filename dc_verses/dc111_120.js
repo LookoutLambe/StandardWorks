@@ -1792,11 +1792,11 @@ var dc118_ch1Verses = [
   { num: "ו", words: [
     ["יִמָּנוּ","Let ... be appointed"],
     ["עַבְדִּי","my servant"],
-    ["יוֹחָנָן","John"],
+    ["ג'ון","John"],
     ["טֵילוֹר","Taylor,"],
     ["וְגַם","and also"],
     ["עַבְדִּי","my servant"],
-    ["יוֹחָנָן","John"],
+    ["ג'ון","John"],
     ["אי.","E."],
     ["פֵּיג","Page,"],
     ["וְגַם","and also"],

@@ -862,7 +862,7 @@ var dc15_ch1Verses = [
   { num: "א", words: [
     ["הַאֲזֵן","hearken"],
     ["עַבְדִּי","my servant"],
-    ["יוֹחָנָן","John"],
+    ["ג'ון","John"],
     ["וּשְׁמַע","and listen"],
     ["לְדִבְרֵי","to words of"],
     ["יֵשׁוּעַ","Jesus"],

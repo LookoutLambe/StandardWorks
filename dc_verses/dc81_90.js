@@ -374,7 +374,7 @@ var dc82_ch1Verses = [
     ["וְעַבְדִּי","and my servant"],
     ["יוֹסֵף","Joseph"],
     ["סְמִית","Smith"],
-    ["וְיוֹחָנָן","and John"],
+    ["וְג'ון","and John"],
     ["וִיטְמֶר","Whitmer"],
     ["וְאוֹלִיבֶר","and Oliver"],
     ["קָאוּדְרִי","Cowdery"],

@@ -2932,7 +2932,7 @@ var dc30_ch1Verses = [
     ["אֹמֵר","say"],
     ["לְךָ","unto you"],
     ["עַבְדִּי","my servant"],
-    ["יוֹחָנָן","John"],
+    ["ג'ון","John"],
     ["תָּחֵל","that thou shalt commence"],
     ["מֵעַתָּה","from this time forth"],
     ["לְהַשְׁמִיעַ","to proclaim"],

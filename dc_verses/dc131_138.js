@@ -3742,7 +3742,7 @@ var dc135_ch1Verses = [
     ["כַּדּוּרִים׃","balls."]
   ]},
   { num: "ב", words: [
-    ["יוֹחָנָן","John Taylor"],
+    ["ג'ון","John Taylor"],
     ["שְׁנַיִם","and Willard Richards, two"],
     ["מִן","of"],
     ["הַשְּׁנֵים","the"],
@@ -4197,7 +4197,7 @@ var dc135_ch1Verses = [
     ["הַמִּזְבֵּחַ","the altar"],
     ["אֲשֶׁר","that"],
     ["רָאָה","saw,"],
-    ["יוֹחָנָן","John"],
+    ["ג'ון","John"],
     ["יִצְעַק","will cry"],
     ["אֶל","unto"],
     ["יְהוָה","the Lord of"],
