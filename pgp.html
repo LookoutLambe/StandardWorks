@@ -2202,15 +2202,15 @@ function _tlPointed(text) {
     }
     if (tk.c === '\u05D5' && !tk.vowel && !tk.dag && t > 0 && tokens[t-1].vowel === '\u05B9') continue;
     if (tk.c === '\u05D4' && isLast && !tk.vowel) continue;
-    if (tk.c === '\u05D9' && !tk.vowel && t > 0 && tokens[t-1].vowel === '\u05B4') {
+    if (tk.c === '\u05D9' && !tk.vowel && !tk.dag && t > 0 && tokens[t-1].vowel === '\u05B4') {
       if (segments.length > 0) segments[segments.length-1].v = '\u00EE';
       continue;
     }
-    if (tk.c === '\u05D9' && !tk.vowel && t > 0 && tokens[t-1].vowel === '\u05B5') {
+    if (tk.c === '\u05D9' && !tk.vowel && !tk.dag && t > 0 && tokens[t-1].vowel === '\u05B5') {
       if (segments.length > 0) segments[segments.length-1].v = '\u00EA';
       continue;
     }
-    if (tk.c === '\u05D9' && !tk.vowel && t > 0 && tokens[t-1].vowel === '\u05B6') {
+    if (tk.c === '\u05D9' && !tk.vowel && !tk.dag && t > 0 && tokens[t-1].vowel === '\u05B6') {
       if (segments.length > 0) segments[segments.length-1].v = '\u00EA';
       continue;
     }
