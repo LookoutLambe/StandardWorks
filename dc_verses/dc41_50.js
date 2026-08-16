@@ -4255,6 +4255,7 @@ var dc47_ch1Verses = [
     ["כִּי","that"],
     ["עַבְדִּי","my servant"],
     ["יוֹחָנָן","John"],
+    ["וִיטְמֵר","(Whitmer)"],
     ["יִכְתֹּב","should write"],
     ["וְיִשְׁמֹר","and keep"],
     ["דִּבְרֵי","(the) words of"],
