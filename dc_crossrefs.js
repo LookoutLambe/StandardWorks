@@ -15002,6 +15002,8 @@ window._dcCrossrefsData = {
    "marker": "c",
    "text": "preparing",
    "refs": [
+    "Mal. 3:1",
+    "Isa. 40:3",
     "Matt. 3:3"
    ],
    "category": "cross-ref"
@@ -15014,6 +15016,14 @@ window._dcCrossrefsData = {
     "Millennium, Preparing a People for"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "e",
+   "text": "perverse",
+   "refs": [
+    "Deut. 32:5"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|34|7": [
@@ -15075,6 +15085,14 @@ window._dcCrossrefsData = {
     "TG Last Days"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "sun",
+   "refs": [
+    "Joel 2:31"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|34|10": [
