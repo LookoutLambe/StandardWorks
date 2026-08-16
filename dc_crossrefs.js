@@ -30419,6 +30419,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "judge",
    "refs": [
+    "Gen. 16:5",
     "1 Sam. 24:12",
     "Ps. 75:7",
     "TG Judgment"
@@ -30562,6 +30563,14 @@ window._dcCrossrefsData = {
     "TG Temptation"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "bear",
+   "refs": [
+    "Gen. 4:13"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|64|22": [
@@ -30663,6 +30672,7 @@ window._dcCrossrefsData = {
    "marker": "c",
    "text": "stubble",
    "refs": [
+    "Mal. 4:1",
     "Rev. 18:8 (6–8)"
    ],
    "category": "cross-ref"
@@ -30765,6 +30775,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "weary",
    "refs": [
+    "2 Thes. 3:13",
     "Gal. 6:9",
     "TG Dedication",
     "Laziness"
@@ -30815,6 +30826,7 @@ window._dcCrossrefsData = {
    "marker": "c",
    "text": "willing",
    "refs": [
+    "1 Chr. 28:9",
     "Isa. 1:19",
     "2 Cor. 8:12",
     "Moro. 7:8",
@@ -30877,6 +30889,14 @@ window._dcCrossrefsData = {
     "Deut. 33:17 (16–17)",
     "Hosea 7:1 (1–16)",
     "Zech. 10:7 (7–12)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "plucked",
+   "refs": [
+    "Jer. 12:14"
    ],
    "category": "cross-ref"
   }
@@ -31094,6 +31114,7 @@ window._dcCrossrefsData = {
    "marker": "d",
    "text": "stone",
    "refs": [
+    "Dan. 2:44 (44–45)",
     "Dan. 2:45 (34–45)",
     "8:25"
    ],
@@ -67755,6 +67776,16 @@ window._dcCrossrefsData = {
    "text": "destroyer",
    "refs": [
     "Ex. 12:23"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|64|6": [
+  {
+   "marker": "a",
+   "text": "occasion",
+   "refs": [
+    "Dan. 6:4"
    ],
    "category": "cross-ref"
   }
