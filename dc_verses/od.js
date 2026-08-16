@@ -100,8 +100,7 @@ var od1_ch1Verses = [
     ["נֹהַג","to end"],
     ["רִבּוּי","to end"],
     ["הַנָּשִׁים","in until"],
-    ["בָּעֵדָה׃","in until"],
-    ["׃",""]
+    ["בָּעֵדָה׃","in until"]
   ]},
   { num: "ב", words: [
     ["לְכׇל","to all"],["מִי","who"],["שֶׁהַדָּבָר","that the thing"],["נוֹגֵעַ","it was touching"],["לוֹ:","to him"],["׃",""]
@@ -211,8 +210,7 @@ var od1_ch1Verses = [
     ["בְּכׇל","with all"],
     ["מָקוֹם","place"],
     ["אַחֵר","in the he is spreading out"],
-    ["בַּשֶּׁטַח׃","in the he is spreading out"],
-    ["׃",""]
+    ["בַּשֶּׁטַח׃","in the he is spreading out"]
   ]},
   { num: "ה", words: [
     ["מִקְרֶה","chance"],
@@ -260,8 +258,7 @@ var od1_ch1Verses = [
     ["הָעֲטָרָה","according to"],
     ["לְפִי","according to"],
     ["לְלֹא","not"],
-    ["דִחוּי׃","rejected"],
-    ["׃",""]
+    ["דִחוּי׃","rejected"]
   ]},
   { num: "ו", words: [
     ["הוֹאִיל","the Lord in mercy"],
@@ -298,11 +295,10 @@ var od1_ch1Verses = [
     ["עוֹמֵד","standing"],
     ["בְּרֹאשָׁהּ","her on head"],
     ["שֶׁיַּעֲשׂוּ","that they do"],
-    ["כָּמוֹנִי׃","is like me"],
-    ["׃",""]
+    ["כָּמוֹנִי׃","is like me"]
   ]},
   { num: "ז", words: [
-    ["אֵין","there is no"],["לָעֵדָה","to the church"],["אוֹ","or"],["בְּהוֹרָאוֹת","in instruction"],["חֲבֵרַי","my companions"],["בַּתְּקוּפָה","in the course"],["הַנִּזְכֶּרֶת","the aforementioned"],["דָּבָר","a word"],["שֶׁאֶפְשָׁר","that that you could have"],["לְפָרְשׁוֹ","his to stretches forth"],["בַּהֲגָיוֹן","in meditation of"],["אוֹ","or"],["מְעוֹדֵד","is relieving"],["רִבּוּי","plurality"],["נָשִׁים","women"],["כָּלְשֶׁהוּ","as the against Lamb of(they)"],["מִן","from"],["הָעֵדָה","the congregation"],["הִשְׁתַּמֵּשׁ","to use"],["בְּלָשׁוֹן","in language of"],["כְּמַעֲבֶרֶת","as the fords"],["הוֹרָאָה","instruction"],["כָּזוֹ","as the this"],["הוּכַח","he is chastened"],["מִיָּד׃","from hand of"],["וְעַתָּה","and now"],["אֲנִי","I"],["מַכְרִיז","proclaiming"],["בָּרַבִּים","over the many people"],["כִּי","that"],["עֲצָתִי","my counsel"],["לְקְדוֹשֵׁי","of the Saints of"],["אַחֲרִית","final state of"],["הַיָּמִים","the days"],["הִיא","she"],["לְהִמָּנַע","to has withheld?"],["בְּכׇל","with all"],["נִשּׂוּאִין","marriage"],["הָאֲסוּרִים","the those imprisoned"],["בְּחֹק","in law"],["הַמְּדִינָה׃","the province"],["׃",""]
+    ["אֵין","there is no"],["לָעֵדָה","to the church"],["אוֹ","or"],["בְּהוֹרָאוֹת","in instruction"],["חֲבֵרַי","my companions"],["בַּתְּקוּפָה","in the course"],["הַנִּזְכֶּרֶת","the aforementioned"],["דָּבָר","a word"],["שֶׁאֶפְשָׁר","that that you could have"],["לְפָרְשׁוֹ","his to stretches forth"],["בַּהֲגָיוֹן","in meditation of"],["אוֹ","or"],["מְעוֹדֵד","is relieving"],["רִבּוּי","plurality"],["נָשִׁים","women"],["כָּלְשֶׁהוּ","as the against Lamb of(they)"],["מִן","from"],["הָעֵדָה","the congregation"],["הִשְׁתַּמֵּשׁ","to use"],["בְּלָשׁוֹן","in language of"],["כְּמַעֲבֶרֶת","as the fords"],["הוֹרָאָה","instruction"],["כָּזוֹ","as the this"],["הוּכַח","he is chastened"],["מִיָּד׃","from hand of"],["וְעַתָּה","and now"],["אֲנִי","I"],["מַכְרִיז","proclaiming"],["בָּרַבִּים","over the many people"],["כִּי","that"],["עֲצָתִי","my counsel"],["לְקְדוֹשֵׁי","of the Saints of"],["אַחֲרִית","final state of"],["הַיָּמִים","the days"],["הִיא","she"],["לְהִמָּנַע","to has withheld?"],["בְּכׇל","with all"],["נִשּׂוּאִין","marriage"],["הָאֲסוּרִים","the those imprisoned"],["בְּחֹק","in law"],["הַמְּדִינָה׃","the province"]
   ]},
   { num: "ח", words: [
     ["וִילְפוֹרְד","Wilford"],["וּוּדְרוּף","Woodruff"],["׃",""]
@@ -375,7 +371,7 @@ var od1_ch1Verses = [
     ["׃",""]
   ]},
   { num: "יג", words: [
-    ["עִיר","city of"],["אֲגַם","lake of"],["הַמֶּלַח","the salt"],["יוּטָא","Utah"],["הַיּוֹם","the day"],["הַשִּׁשִּׁי","the sixth"],["לְחֹדֶשׁ","to month"],["הָעֲשִׂירִי","my the rich"],["שְׁנַת","year of"],["אֶלֶף","thousand"],["וּשְׁמֹנֶה","and eight"],["מֵאוֹת","hundred"],["וְתִשְׁעִים׃","and ninety"],["׃",""]
+    ["עִיר","city of"],["אֲגַם","lake of"],["הַמֶּלַח","the salt"],["יוּטָא","Utah"],["הַיּוֹם","the day"],["הַשִּׁשִּׁי","the sixth"],["לְחֹדֶשׁ","to month"],["הָעֲשִׂירִי","my the rich"],["שְׁנַת","year of"],["אֶלֶף","thousand"],["וּשְׁמֹנֶה","and eight"],["מֵאוֹת","hundred"],["וְתִשְׁעִים׃","and ninety"]
   ]},
   { num: "יד", words: [
     ["קִטְעִים","section(pl)"],["מִשָּׁלֹשׁ","from three cities"],["נְאֻמוֹת","we will I should die"],["הַנָּשִׂיא","the prince"],["וִילְפוֹרְד","Wilford"],["וּוּדְרוּף","Woodruff"],["עַל","upon"],["הַהַכְרָזָה","a proclamation"],["׃",""]
@@ -505,8 +501,7 @@ var od1_ch1Verses = [
     ["אֱמוּנָה","faith"],
     ["אַחַת","one"],
     ["בָּעִנְיָן","in a task"],
-    ["הַזֶּה׃","this"],
-    ["׃",""]
+    ["הַזֶּה׃","this"]
   ]},
   { num: "יט", words: [
     ["הַשְּׁאֵלָה","the asked"],
@@ -1005,8 +1000,7 @@ var od2_ch1Verses = [
     ["הֵם","they"],
     ["אִשְּׁרוּהָ","they"],
     ["פֶּה","one"],
-    ["אֶחָד׃","one"],
-    ["׃",""]
+    ["אֶחָד׃","one"]
   ]},
   { num: "ד", words: [
     ["בִּקֵּשׁ","sought"],
@@ -1118,8 +1112,7 @@ var od2_ch1Verses = [
     ["אֶל","to"],
     ["יְהוָה","the LORD"],
     ["לְהַדְרָכָה","to the it trod"],
-    ["אֱלֹהִית׃","divine(f)"],
-    ["׃",""]
+    ["אֱלֹהִית׃","divine(f)"]
   ]},
   { num: "י", words: [
     ["שָׁמַע","heard"],
@@ -1226,8 +1219,7 @@ var od2_ch1Verses = [
     ["לְקַבֵּל","to receive"],
     ["כׇּל","all"],
     ["בִּרְכַּת","blessing of"],
-    ["הַבְּשׂוֹרָה׃","the good tidings"],
-    ["׃",""]
+    ["הַבְּשׂוֹרָה׃","the good tidings"]
   ]},
   { num: "יב", words: [
     ["בְּכָבוֹד","in glory"],["רַב","great"],["׃",""]
@@ -1279,14 +1271,13 @@ var od2_ch1Verses = [
     ["כׇּל","all"],
     ["הַמִּתְנַגְּדִים","who did oppose(pl)"],
     ["בְּאוֹתוֹ","in him"],
-    ["אֹפֶן׃","I turned"],
-    ["׃",""]
+    ["אֹפֶן׃","I turned"]
   ]},
   { num: "יח", words: [
-    ["הַהַצְבָּעָה","the voting"],["לִתְמֹךְ","to support"],["בְּהַצָּעָה","in the one who stoops"],["הַנַּ״ל","the aforementioned"],["הָיְתָה","was(f)"],["פֶּה","mouth"],["אֶחָד","one"],["לְטוֹבָה׃","for good"],["׃",""]
+    ["הַהַצְבָּעָה","the voting"],["לִתְמֹךְ","to support"],["בְּהַצָּעָה","in the one who stoops"],["הַנַּ״ל","the aforementioned"],["הָיְתָה","was(f)"],["פֶּה","mouth"],["אֶחָד","one"],["לְטוֹבָה׃","for good"]
   ]},
   { num: "יט", words: [
-    ["עִיר","city of"],["אֲגַם","lake of"],["הַמֶּלַח","the salt"],["יוּטָא","Utah"],["הַיּוֹם","the day"],["הַשְּׁלֹשִׁים","the thirty"],["לְחֹדֶשׁ","to month"],["הַתְּשִׁיעִי","the ninth"],["שְׁנַת","year of"],["אֶלֶף","thousand"],["וּתְשַׁע","and nine"],["מֵאוֹת","hundred"],["וְשִׁבְעִים","and seventy"],["וּשְׁמוֹנֶה׃","and eight"],["׃",""]
+    ["עִיר","city of"],["אֲגַם","lake of"],["הַמֶּלַח","the salt"],["יוּטָא","Utah"],["הַיּוֹם","the day"],["הַשְּׁלֹשִׁים","the thirty"],["לְחֹדֶשׁ","to month"],["הַתְּשִׁיעִי","the ninth"],["שְׁנַת","year of"],["אֶלֶף","thousand"],["וּתְשַׁע","and nine"],["מֵאוֹת","hundred"],["וְשִׁבְעִים","and seventy"],["וּשְׁמוֹנֶה׃","and eight"]
   ]},
 ];
 renderVerseSet(od2_ch1Verses, 'od2-ch1-verses');

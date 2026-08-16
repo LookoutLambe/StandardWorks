@@ -15,8 +15,7 @@ var dc109_ch1Verses = [
     ["הַהֹלְכִים","who walk"],
     ["בְּיֹשֶׁר","uprightly"],
     ["לְפָנֶיךָ","before thee,"],
-    ["בְּכׇל־לִבָּם׃","with all their hearts—"],
-    ["׃",""]
+    ["בְּכׇל־לִבָּם׃","with all their hearts—"]
   ]},
   { num: "ב", words: [
     ["אַתָּה","Thou"],
@@ -27,8 +26,7 @@ var dc109_ch1Verses = [
     ["בַּיִת","a house"],
     ["לִשְׁמֶךָ","to thy name"],
     ["בַּמָּקוֹם","in ... place"],
-    ["הַזֶּה׃","this [Kirtland]."],
-    ["׃",""]
+    ["הַזֶּה׃","this [Kirtland]."]
   ]},
   { num: "ג", words: [
     ["וְעַתָּה","And now"],
@@ -38,8 +36,7 @@ var dc109_ch1Verses = [
     ["כִּי","that"],
     ["עֲבָדֶיךָ","thy servants"],
     ["עָשׂוּ","have done"],
-    ["כְּמִצְוָתֶךָ׃","according to thy commandment."],
-    ["׃",""]
+    ["כְּמִצְוָתֶךָ׃","according to thy commandment."]
   ]},
   { num: "ד", words: [
     ["וְעַתָּה","And now"],
@@ -71,8 +68,7 @@ var dc109_ch1Verses = [
     ["עֲבָדֶיךָ","thy servants,"],
     ["אֲשֶׁר","which"],
     ["צִוִּיתָנוּ","thou didst command us"],
-    ["לִבְנוֹת׃","to build."],
-    ["׃",""]
+    ["לִבְנוֹת׃","to build."]
   ]},
   { num: "ה", words: [
     ["כִּי","For"],
@@ -96,8 +92,7 @@ var dc109_ch1Verses = [
     ["מָקוֹם","a place"],
     ["לְהִתְגַּלּוֹת","to manifest himself"],
     ["אֶל","to"],
-    ["עַמּוֹ׃","his people."],
-    ["׃",""]
+    ["עַמּוֹ׃","his people."]
   ]},
   { num: "ו", words: [
     ["וְכַאֲשֶׁר","And as"],
@@ -114,8 +109,7 @@ var dc109_ch1Verses = [
     ["קֹדֶשׁ","your solemn"],
     ["כַּאֲשֶׁר","as"],
     ["צִוִּיתִי","I have commanded"],
-    ["אֶתְכֶם׃","you;"],
-    ["׃",""]
+    ["אֶתְכֶם׃","you;"]
   ]},
   { num: "ז", words: [
     ["וְכַאֲשֶׁר","And as"],
@@ -141,8 +135,7 @@ var dc109_ch1Verses = [
     ["אַף","even"],
     ["בַּלִּמּוּד","by study"],
     ["וְגַם","and also"],
-    ["בָּאֱמוּנָה׃","by faith;"],
-    ["׃",""]
+    ["בָּאֱמוּנָה׃","by faith;"]
   ]},
   { num: "ח", words: [
     ["הִתְאַרְגְּנוּ","Organize yourselves;"],
@@ -165,8 +158,7 @@ var dc109_ch1Verses = [
     ["בֵּית","a house of"],
     ["סֵדֶר","order,"],
     ["בֵּית","a house of"],
-    ["אֱלֹהִים׃","God;"],
-    ["׃",""]
+    ["אֱלֹהִים׃","God;"]
   ]},
   { num: "ט", words: [
     ["לְמַעַן","that"],
@@ -185,8 +177,7 @@ var dc109_ch1Verses = [
     ["יְהוָה","the Lord,"],
     ["בְּיָדַיִם","with hands"],
     ["נְשׂוּאוֹת","uplifted"],
-    ["אֶל־עֶלְיוֹן׃","unto the Most High—"],
-    ["׃",""]
+    ["אֶל־עֶלְיוֹן׃","unto the Most High—"]
   ]},
   { num: "י", words: [
     ["וְעַתָּה","And now,"],
@@ -206,8 +197,7 @@ var dc109_ch1Verses = [
     ["תֵּעָשֶׂה","it may be done"],
     ["לִכְבוֹדְךָ","to thine honor"],
     ["וְלִרְצוֹנְךָ","and to thy ... acceptance;"],
-    ["הָאֱלֹהִי׃","divine"],
-    ["׃",""]
+    ["הָאֱלֹהִי׃","divine"]
   ]},
   { num: "יא", words: [
     ["וּבְאֹפֶן","And in a manner"],
@@ -223,8 +213,7 @@ var dc109_ch1Verses = [
     ["עַמְּךָ","thy people,"],
     ["בַּגִּלּוּיִים","in the revelations"],
     ["שֶׁנִּתְּנוּ","given"],
-    ["לָנוּ׃","unto us;"],
-    ["׃",""]
+    ["לָנוּ׃","unto us;"]
   ]},
   { num: "יב", words: [
     ["לְמַעַן","That"],
@@ -250,8 +239,7 @@ var dc109_ch1Verses = [
     ["הַקְּדוֹשָׁה","holy"],
     ["תָמִיד","continually"],
     ["בַּבַּיִת","in ... house;"],
-    ["הַזֶּה׃","this"],
-    ["׃",""]
+    ["הַזֶּה׃","this"]
   ]},
   { num: "יג", words: [
     ["וְשֶׁכׇּל","And that all"],
@@ -273,8 +261,7 @@ var dc109_ch1Verses = [
     ["הוּא","it"],
     ["בֵּיתֶךָ","is thy house,"],
     ["מְקוֹם","a place"],
-    ["קָדְשֶׁךָ׃","of thy holiness."],
-    ["׃",""]
+    ["קָדְשֶׁךָ׃","of thy holiness."]
   ]},
   { num: "יד", words: [
     ["וְתֵן","And do thou grant,"],
@@ -298,8 +285,7 @@ var dc109_ch1Verses = [
     ["וְגַם","and also"],
     ["בֶּאֱמוּנָה","by faith,"],
     ["כַּאֲשֶׁר","as"],
-    ["אָמָרְתָּ׃","thou hast said;"],
-    ["׃",""]
+    ["אָמָרְתָּ׃","thou hast said;"]
   ]},
   { num: "טו", words: [
     ["וּלְמַעַן","And that"],
@@ -316,8 +302,7 @@ var dc109_ch1Verses = [
     ["לְהַשִּׂיג","to obtain"],
     ["כׇּל","every"],
     ["דָּבָר","thing;"],
-    ["נָחוּץ׃","needful"],
-    ["׃",""]
+    ["נָחוּץ׃","needful"]
   ]},
   { num: "טז", words: [
     ["וְשֶׁיִּהְיֶה","And that ... may be"],
@@ -334,8 +319,7 @@ var dc109_ch1Verses = [
     ["וּבֵית","and ... of"],
     ["אֱלֹהִים","God,"],
     ["אַף","even"],
-    ["בֵּיתֶךָ׃","thy house;"],
-    ["׃",""]
+    ["בֵּיתֶךָ׃","thy house;"]
   ]},
   { num: "יז", words: [
     ["לְמַעַן","That"],
@@ -347,8 +331,7 @@ var dc109_ch1Verses = [
     ["הַבַּיִת","... house,"],
     ["הַזֶּה","this"],
     ["בְּשֵׁם","in the name of"],
-    ["יְהוָה׃","the Lord;"],
-    ["׃",""]
+    ["יְהוָה׃","the Lord;"]
   ]},
   { num: "יח", words: [
     ["וּלְמַעַן","That"],
@@ -359,8 +342,7 @@ var dc109_ch1Verses = [
     ["הַבַּיִת","... house"],
     ["הַזֶּה","this"],
     ["בְּשֵׁם","in the name of"],
-    ["יְהוָה׃","the Lord;"],
-    ["׃",""]
+    ["יְהוָה׃","the Lord;"]
   ]},
   { num: "יט", words: [
     ["וּלְמַעַן","And that"],
@@ -372,8 +354,7 @@ var dc109_ch1Verses = [
     ["בְּיָדַיִם","with hands,"],
     ["קְדוֹשׁוֹת","holy"],
     ["נְשׂוּאוֹת","uplifted"],
-    ["אֶל־עֶלְיוֹן׃","to the Most High;"],
-    ["׃",""]
+    ["אֶל־עֶלְיוֹן׃","to the Most High;"]
   ]},
   { num: "כ", words: [
     ["וְשֶׁלֹּא","And that no"],
@@ -384,8 +365,7 @@ var dc109_ch1Verses = [
     ["לָבוֹא","to come"],
     ["אֶל","into"],
     ["בֵּיתֶךָ","thy house"],
-    ["לְחַלְּלוֹ׃","to pollute it;"],
-    ["׃",""]
+    ["לְחַלְּלוֹ׃","to pollute it;"]
   ]},
   { num: "כא", words: [
     ["וְכַאֲשֶׁר","And when"],
@@ -409,8 +389,7 @@ var dc109_ch1Verses = [
     ["עַל","upon"],
     ["הַמְכַבְּדִים","those who shall reverence"],
     ["אוֹתְךָ","thee"],
-    ["בְּבֵיתֶךָ׃","in thy house."],
-    ["׃",""]
+    ["בְּבֵיתֶךָ׃","in thy house."]
   ]},
   { num: "כב", words: [
     ["וּמְבַקְּשִׁים","And we ask"],
@@ -432,8 +411,7 @@ var dc109_ch1Verses = [
     ["סְבִיבוֹתָם","be round about them,"],
     ["וּמַלְאָכֶיךָ","and thine angels"],
     ["שׁוֹמְרִים","have charge"],
-    ["עֲלֵיהֶם׃","over them;"],
-    ["׃",""]
+    ["עֲלֵיהֶם׃","over them;"]
   ]},
   { num: "כג", words: [
     ["וּמִן","And from"],
@@ -464,8 +442,7 @@ var dc109_ch1Verses = [
     ["הַנְּבִיאִים","the prophets,"],
     ["עַל","concerning"],
     ["אַחֲרִית","the last"],
-    ["הַיָּמִים׃","days."],
-    ["׃",""]
+    ["הַיָּמִים׃","days."]
   ]},
   { num: "כד", words: [
     ["מְבַקְּשִׁים","We ask"],
@@ -486,8 +463,7 @@ var dc109_ch1Verses = [
     ["זֶה","this"],
     ["לְכׇל","to all"],
     ["הַדּוֹרוֹת","generations"],
-    ["וּלְעוֹלָם׃","and for eternity;"],
-    ["׃",""]
+    ["וּלְעוֹלָם׃","and for eternity;"]
   ]},
   { num: "כה", words: [
     ["שֶׁכׇּל־כְּלִי","That ... weapon"],
@@ -500,8 +476,7 @@ var dc109_ch1Verses = [
     ["לָהֶם","for them"],
     ["הוּא","[himself]"],
     ["יִפֹּל","shall fall"],
-    ["בָּהּ׃","into the same himself;"],
-    ["׃",""]
+    ["בָּהּ׃","into the same himself;"]
   ]},
   { num: "כו", words: [
     ["שֶׁשׁוּם","That no"],
@@ -518,8 +493,7 @@ var dc109_ch1Verses = [
     ["שִׁמְךָ","thy name"],
     ["עָלָיו","[upon him]"],
     ["בַּבַּיִת","in ... house;"],
-    ["הַזֶּה׃","this"],
-    ["׃",""]
+    ["הַזֶּה׃","this"]
   ]},
   { num: "כז", words: [
     ["וְאִם","And if"],
@@ -531,8 +505,7 @@ var dc109_ch1Verses = [
     ["הַזֶּה","this"],
     ["יִחַר","be kindled"],
     ["אַפְּךָ","that thine anger"],
-    ["בָּהֶם׃","against them;"],
-    ["׃",""]
+    ["בָּהֶם׃","against them;"]
   ]},
   { num: "כח", words: [
     ["וְאִם","And if"],
@@ -553,8 +526,7 @@ var dc109_ch1Verses = [
     ["יִנָּצְלוּ","they may be delivered"],
     ["מִיַּד","from the hands of"],
     ["כׇּל","all"],
-    ["אוֹיְבֵיהֶם׃","their enemies."],
-    ["׃",""]
+    ["אוֹיְבֵיהֶם׃","their enemies."]
   ]},
   { num: "כט", words: [
     ["מְבַקְּשִׁים","We ask"],
@@ -585,8 +557,7 @@ var dc109_ch1Verses = [
     ["בְּהִשָּׁמַע","when ... shall be proclaimed"],
     ["בְּשׂוֹרַת","gospel"],
     ["עוֹלָם","the everlasting"],
-    ["בְּאׇזְנֵיהֶם׃","in their ears;"],
-    ["׃",""]
+    ["בְּאׇזְנֵיהֶם׃","in their ears;"]
   ]},
   { num: "ל", words: [
     ["וְשֶׁכׇּל","And that all"],
@@ -606,8 +577,7 @@ var dc109_ch1Verses = [
     ["לַכְּזָבִים","to lyings"],
     ["וְלַדִּבּוֹת","and slanders"],
     ["עַל","against"],
-    ["עַמֶּךָ׃","thy people."],
-    ["׃",""]
+    ["עַמֶּךָ׃","thy people."]
   ]},
   { num: "לא", words: [
     ["כִּי","For"],
@@ -626,8 +596,7 @@ var dc109_ch1Verses = [
     ["סָבְלוּ","they have suffered"],
     ["אֶת","[acc.]"],
     ["הַדְּבָרִים","... things."],
-    ["הָאֵלֶּה׃","these"],
-    ["׃",""]
+    ["הָאֵלֶּה׃","these"]
   ]},
   { num: "לב", words: [
     ["לָכֵן","Therefore"],
@@ -640,8 +609,7 @@ var dc109_ch1Verses = [
     ["וְגַמוּרָה","and complete"],
     ["מִתַּחַת","from under"],
     ["הָעֹל","yoke;"],
-    ["הַזֶּה׃","this"],
-    ["׃",""]
+    ["הַזֶּה׃","this"]
   ]},
   { num: "לג", words: [
     ["שְׁבֹר","Break"],
@@ -660,8 +628,7 @@ var dc109_ch1Verses = [
     ["הַזֶּה","this"],
     ["וְנַעֲשֶׂה","and do"],
     ["אֶת","[acc.]"],
-    ["מְלַאכְתֶּךָ׃","thy work."],
-    ["׃",""]
+    ["מְלַאכְתֶּךָ׃","thy work."]
   ]},
   { num: "לד", words: [
     ["יְהוָה","O Jehovah,"],
@@ -677,8 +644,7 @@ var dc109_ch1Verses = [
     ["לְפִשְׁעֵי","the transgressions of"],
     ["עַמֶּךָ","thy people,"],
     ["וְיִמָּחוּ","and let ... be blotted out"],
-    ["לָעַד׃","them ... forever."],
-    ["׃",""]
+    ["לָעַד׃","them ... forever."]
   ]},
   { num: "לה", words: [
     ["תֵּחָתֵם","Let ... be sealed"],
@@ -686,8 +652,7 @@ var dc109_ch1Verses = [
     ["מְשָׁרְתֶיךָ","thy ministers"],
     ["עֲלֵיהֶם","upon them"],
     ["בְּכֹחַ","with power"],
-    ["מִמָּרוֹם׃","from on high."],
-    ["׃",""]
+    ["מִמָּרוֹם׃","from on high."]
   ]},
   { num: "לו", words: [
     ["יִתְקַיֵּם","Let it be fulfilled"],
@@ -707,8 +672,7 @@ var dc109_ch1Verses = [
     ["לְשׁוֹנוֹת","tongues"],
     ["מְפֻצָּלוֹת","cloven"],
     ["כָּאֵשׁ","as of fire,"],
-    ["וּפֵרוּשָׁן׃","and the interpretation thereof."],
-    ["׃",""]
+    ["וּפֵרוּשָׁן׃","and the interpretation thereof."]
   ]},
   { num: "לז", words: [
     ["וְיִמָּלֵא","And let ... be filled"],
@@ -716,8 +680,7 @@ var dc109_ch1Verses = [
     ["כְּרוּחַ","as with a ... wind,"],
     ["סוֹעָה","rushing"],
     ["אַדִּירָה","mighty"],
-    ["בִּכְבוֹדֶךָ׃","with thy glory."],
-    ["׃",""]
+    ["בִּכְבוֹדֶךָ׃","with thy glory."]
   ]},
   { num: "לח", words: [
     ["שִׂים","Put"],
@@ -754,8 +717,7 @@ var dc109_ch1Verses = [
     ["יִנָּצֵל","faint"],
     ["עַמְּךָ","thy people"],
     ["בְּיוֹם","in the day of"],
-    ["צָרָה׃","trouble."],
-    ["׃",""]
+    ["צָרָה׃","trouble."]
   ]},
   { num: "לט", words: [
     ["וְכׇל","And whatsoever"],
@@ -789,8 +751,7 @@ var dc109_ch1Verses = [
     ["מִנּוּיֶיךָ","thine appointment,"],
     ["בְּשִׁירֵי","with songs of"],
     ["שִׂמְחַת","joy"],
-    ["עוֹלָם׃","everlasting"],
-    ["׃",""]
+    ["עוֹלָם׃","everlasting"]
   ]},
   { num: "מ", words: [
     ["וְעַד","And until"],
@@ -802,8 +763,7 @@ var dc109_ch1Verses = [
     ["מִשְׁפָּטֶיךָ","thy judgments"],
     ["עַל","upon"],
     ["הָעִיר","... city."],
-    ["הַהִיא׃","that"],
-    ["׃",""]
+    ["הַהִיא׃","that"]
   ]},
   { num: "מא", words: [
     ["וְכׇל","And whatsoever"],
@@ -831,8 +791,7 @@ var dc109_ch1Verses = [
     ["כַּאֲשֶׁר","according to that which"],
     ["דִּבַּרְתָּ","thou hast spoken"],
     ["בְּפִי","by the mouths of"],
-    ["נְבִיאֶיךָ׃","thy prophets."],
-    ["׃",""]
+    ["נְבִיאֶיךָ׃","thy prophets."]
   ]},
   { num: "מב", words: [
     ["אַךְ","But"],
@@ -846,8 +805,7 @@ var dc109_ch1Verses = [
     ["עֲבָדֶיךָ","thy servants"],
     ["מִיָּדָם","from their hands,"],
     ["וְטַהֵר","and cleanse them"],
-    ["מִדָּמָם׃","from their blood."],
-    ["׃",""]
+    ["מִדָּמָם׃","from their blood."]
   ]},
   { num: "מג", words: [
     ["יְהוָה","O Lord,"],
@@ -859,8 +817,7 @@ var dc109_ch1Verses = [
     ["חֲבֵרֵינוּ","[fellows]"],
     ["נַפְשׁוֹתָם","their souls"],
     ["יְקָרוֹת","are precious"],
-    ["לְפָנֶיךָ׃","before thee;"],
-    ["׃",""]
+    ["לְפָנֶיךָ׃","before thee;"]
   ]},
   { num: "מד", words: [
     ["אַךְ","But"],
@@ -877,8 +834,7 @@ var dc109_ch1Verses = [
     ["רְצוֹנְךָ","Thy will"],
     ["יְהוָה","O Lord,"],
     ["וְלֹא","and not"],
-    ["רְצוֹנֵנוּ׃","ours."],
-    ["׃",""]
+    ["רְצוֹנֵנוּ׃","ours."]
   ]},
   { num: "מה", words: [
     ["יָדַעְנוּ","We know"],
@@ -896,8 +852,7 @@ var dc109_ch1Verses = [
     ["תִשְׁפֹּךְ","thou wilt pour out"],
     ["מִשְׁפָּטֶיךָ","thy judgments,"],
     ["בְּלִי","without"],
-    ["מִדָּה׃","measure;"],
-    ["׃",""]
+    ["מִדָּה׃","measure;"]
   ]},
   { num: "מו", words: [
     ["לָכֵן","Therefore,"],
@@ -920,8 +875,7 @@ var dc109_ch1Verses = [
     ["יִהְיוּ","they may be"],
     ["מוּכָנִים","prepared"],
     ["לְיוֹם","against the day of"],
-    ["הַשְּׂרֵפָה׃","burning."],
-    ["׃",""]
+    ["הַשְּׂרֵפָה׃","burning."]
   ]},
   { num: "מז", words: [
     ["מְבַקְּשִׁים","We ask"],
@@ -949,8 +903,7 @@ var dc109_ch1Verses = [
     ["הַזֶּה","this"],
     ["אֲשֶׁר","that"],
     ["הוּשַׂם","has been put"],
-    ["עֲלֵיהֶם׃","upon them."],
-    ["׃",""]
+    ["עֲלֵיהֶם׃","upon them."]
   ]},
   { num: "מח", words: [
     ["יָדַעְתָּ","Thou knowest,"],
@@ -967,8 +920,7 @@ var dc109_ch1Verses = [
     ["צַעַר","with sorrow"],
     ["עַל","because"],
     ["מַשָּׂאָם","of their ... burdens."],
-    ["הַכָּבֵד׃","grievous"],
-    ["׃",""]
+    ["הַכָּבֵד׃","grievous"]
   ]},
   { num: "מט", words: [
     ["יְהוָה","O Lord,"],
@@ -993,8 +945,7 @@ var dc109_ch1Verses = [
     ["לֹא","not"],
     ["מַרְאֶה","make a display"],
     ["עֵדוּתְךָ","of thy testimony"],
-    ["בַּעֲדָם׃","in their behalf?"],
-    ["׃",""]
+    ["בַּעֲדָם׃","in their behalf?"]
   ]},
   { num: "נ", words: [
     ["רַחֵם","Have mercy,"],
@@ -1014,8 +965,7 @@ var dc109_ch1Verses = [
     ["מֵחַטֹּאתֵיהֶם","of their sins"],
     ["אִם","if"],
     ["תְּשׁוּבָה","repentance"],
-    ["נִמְצֵאת׃","is to be found;"],
-    ["׃",""]
+    ["נִמְצֵאת׃","is to be found;"]
   ]},
   { num: "נא", words: [
     ["וְאִם","But if"],
@@ -1029,8 +979,7 @@ var dc109_ch1Verses = [
     ["אֲשֶׁר","that which"],
     ["מִנִּיתָ","thou didst appoint"],
     ["לְצִיּוֹן","a Zion"],
-    ["לְעַמֶּךָ׃","unto thy people."],
-    ["׃",""]
+    ["לְעַמֶּךָ׃","unto thy people."]
   ]},
   { num: "נב", words: [
     ["וְאִם","And if"],
@@ -1054,8 +1003,7 @@ var dc109_ch1Verses = [
     ["וְעָנָף","and branch"],
     ["בֵּין","both"],
     ["מִתַּחַת","from under"],
-    ["הַשָּׁמַיִם׃","heaven;"],
-    ["׃",""]
+    ["הַשָּׁמַיִם׃","heaven;"]
   ]},
   { num: "נג", words: [
     ["אַךְ","But"],
@@ -1070,8 +1018,7 @@ var dc109_ch1Verses = [
     ["בְּהַבִּיטְךָ","when thou lookest"],
     ["עַל","upon"],
     ["פְּנֵי","the face of"],
-    ["מְשִׁיחֶךָ׃","thine Anointed."],
-    ["׃",""]
+    ["מְשִׁיחֶךָ׃","thine Anointed."]
   ]},
   { num: "נד", words: [
     ["רַחֵם","Have mercy,"],
@@ -1096,8 +1043,7 @@ var dc109_ch1Verses = [
     ["אֲבוֹתֵינוּ","our fathers,"],
     ["דְּהַיְנוּ","namely,"],
     ["חֻקַּת","the Constitution of"],
-    ["אַרְצֵנוּ׃","our land,"],
-    ["׃",""]
+    ["אַרְצֵנוּ׃","our land,"]
   ]},
   { num: "נה", words: [
     ["זְכֹר","Remember"],
@@ -1120,8 +1066,7 @@ var dc109_ch1Verses = [
     ["הָעֲנִיִּים","the poor,"],
     ["הַנֶּאֱדָרִים","the needy,"],
     ["וְהַנִּדְכָּאִים","and afflicted ones"],
-    ["שֶׁבָּאָרֶץ׃","of the earth;"],
-    ["׃",""]
+    ["שֶׁבָּאָרֶץ׃","of the earth;"]
   ]},
   { num: "נו", words: [
     ["לְמַעַן","That"],
@@ -1143,8 +1088,7 @@ var dc109_ch1Verses = [
     ["יִמְצְאוּ","may obtain"],
     ["חֵן","favor"],
     ["בְּעֵינֵי","in the sight of"],
-    ["כֹל׃","all;"],
-    ["׃",""]
+    ["כֹל׃","all;"]
   ]},
   { num: "נז", words: [
     ["לְמַעַן","That"],
@@ -1159,8 +1103,7 @@ var dc109_ch1Verses = [
     ["קוֹלֶךָ","thy voice,"],
     ["וְכִי","and that"],
     ["אַתָּה","thou"],
-    ["שְׁלַחְתָּנוּ׃","hast sent us;"],
-    ["׃",""]
+    ["שְׁלַחְתָּנוּ׃","hast sent us;"]
   ]},
   { num: "נח", words: [
     ["לְמַעַן","That"],
@@ -1178,8 +1121,7 @@ var dc109_ch1Verses = [
     ["קֹדֶשׁ","holy"],
     ["לִשְׁמֶךָ","to thy name,"],
     ["כַּאֲשֶׁר","as"],
-    ["צִוִּיתָם׃","thou hast commanded them."],
-    ["׃",""]
+    ["צִוִּיתָם׃","thou hast commanded them."]
   ]},
   { num: "נט", words: [
     ["מְבַקְּשִׁים","We ask"],
@@ -1203,8 +1145,7 @@ var dc109_ch1Verses = [
     ["לְמַעַן","that"],
     ["תְּקַצֵּר","may be cut short"],
     ["מְלַאכְתְּךָ","thy work"],
-    ["בִּצְדָקָה׃","in righteousness."],
-    ["׃",""]
+    ["בִּצְדָקָה׃","in righteousness."]
   ]},
   { num: "ס", words: [
     ["עַתָּה","Now"],
@@ -1222,8 +1163,7 @@ var dc109_ch1Verses = [
     ["לָנוּ","unto us,"],
     ["הַמְזוּהִים","who are identified"],
     ["עִם","with"],
-    ["הַגּוֹיִם׃","the Gentiles."],
-    ["׃",""]
+    ["הַגּוֹיִם׃","the Gentiles."]
   ]},
   { num: "סא", words: [
     ["אַךְ","But"],
@@ -1243,8 +1183,7 @@ var dc109_ch1Verses = [
     ["רַב","for a long"],
     ["בְּיוֹם","in a ... day"],
     ["עָנָן","cloudy"],
-    ["וַעֲרָפֶל׃","and dark"],
-    ["׃",""]
+    ["וַעֲרָפֶל׃","and dark"]
   ]},
   { num: "סב", words: [
     ["לָכֵן","therefore"],
@@ -1261,8 +1200,7 @@ var dc109_ch1Verses = [
     ["מִן","from"],
     ["הַשָּׁעָה","... hour,"],
     ["הַזֹּאת","this"],
-    ["לְהִגָּאֵל׃","to be redeemed;"],
-    ["׃",""]
+    ["לְהִגָּאֵל׃","to be redeemed;"]
   ]},
   { num: "סג", words: [
     ["וְעֹל","And the yoke"],
@@ -1271,8 +1209,7 @@ var dc109_ch1Verses = [
     ["לְהִשָּׁבֵר","to be broken off"],
     ["מֵעַל","from"],
     ["בֵּית","the house of"],
-    ["דָּוִד׃","David;"],
-    ["׃",""]
+    ["דָּוִד׃","David;"]
   ]},
   { num: "סד", words: [
     ["וּבְנֵי","And the children of"],
@@ -1284,8 +1221,7 @@ var dc109_ch1Verses = [
     ["אֲשֶׁר","which"],
     ["נָתַתָּ","thou didst give"],
     ["לְאַבְרָהָם","to Abraham,"],
-    ["אֲבִיהֶם׃","their father."],
-    ["׃",""]
+    ["אֲבִיהֶם׃","their father."]
   ]},
   { num: "סה", words: [
     ["וְעֲשֵׂה","And cause"],
@@ -1303,8 +1239,7 @@ var dc109_ch1Verses = [
     ["אֶל","to"],
     ["מְלוֹא","the fulness of"],
     ["בְּשׂוֹרַת","the gospel"],
-    ["עוֹלָם׃","everlasting"],
-    ["׃",""]
+    ["עוֹלָם׃","everlasting"]
   ]},
   { num: "סו", words: [
     ["לְמַעַן","that"],
@@ -1313,8 +1248,7 @@ var dc109_ch1Verses = [
     ["שְׁפִיכוּת","[shedding of]"],
     ["דָּמִים","bloodshed,"],
     ["וְיֶחְדְּלוּ","and cease their rebellions."],
-    ["מִמִּרְדֵיהֶם׃","their rebellions"],
-    ["׃",""]
+    ["מִמִּרְדֵיהֶם׃","their rebellions"]
   ]},
   { num: "סז", words: [
     ["וְיָבֹאוּ","And may ... come"],
@@ -1334,8 +1268,7 @@ var dc109_ch1Verses = [
     ["וְלְהִגָּאֵל","and be redeemed"],
     ["מֵעֹשֶׁק","from oppression,"],
     ["וְלִשְׂמֹחַ","and rejoice"],
-    ["לְפָנֶיךָ׃","before thee."],
-    ["׃",""]
+    ["לְפָנֶיךָ׃","before thee."]
   ]},
   { num: "סח", words: [
     ["יְהוָה","O Lord,"],
@@ -1368,8 +1301,7 @@ var dc109_ch1Verses = [
     ["הִשְׁתַּדֵּל","he hath ... striven"],
     ["בַּאֲמִתּוּת","sincerely"],
     ["לַעֲשׂוֹת","to do"],
-    ["רְצוֹנֶךָ׃","thy will."],
-    ["׃",""]
+    ["רְצוֹנֶךָ׃","thy will."]
   ]},
   { num: "סט", words: [
     ["רַחֵם","Have mercy,"],
@@ -1384,8 +1316,7 @@ var dc109_ch1Verses = [
     ["פָּנֶיךָ","thy"],
     ["וְיִשָּׁמְרוּ","and preserved"],
     ["בְּיַד","by ... hand."],
-    ["חֶסֶד׃","thy fostering"],
-    ["׃",""]
+    ["חֶסֶד׃","thy fostering"]
   ]},
   { num: "ע", words: [
     ["רַחֵם","Have mercy"],
@@ -1406,8 +1337,7 @@ var dc109_ch1Verses = [
     ["וְיֵדְעוּ","and know"],
     ["כִּי","that"],
     ["אַתָּה","thou art"],
-    ["אֱלֹהִים׃","God."],
-    ["׃",""]
+    ["אֱלֹהִים׃","God."]
   ]},
   { num: "עא", words: [
     ["זְכֹר","Remember,"],
@@ -1432,8 +1362,7 @@ var dc109_ch1Verses = [
     ["בְּזִכָּרוֹן","in remembrance"],
     ["עוֹלָם","everlasting"],
     ["מִדּוֹר","from generation"],
-    ["לְדוֹר׃","to generation."],
-    ["׃",""]
+    ["לְדוֹר׃","to generation."]
   ]},
   { num: "עב", words: [
     ["זְכֹר","Remember"],
@@ -1467,8 +1396,7 @@ var dc109_ch1Verses = [
     ["וּמָלְאָה","and fill"],
     ["אֶת","[acc.]"],
     ["כׇּל","the whole"],
-    ["הָאָרֶץ׃","earth;"],
-    ["׃",""]
+    ["הָאָרֶץ׃","earth;"]
   ]},
   { num: "עג", words: [
     ["לְמַעַן","That"],
@@ -1482,8 +1410,7 @@ var dc109_ch1Verses = [
     ["בָּרָה","clear"],
     ["כַחַמָּה","as the sun,"],
     ["וַאֲיֻמָּה","and terrible"],
-    ["כַּנִּדְגָּלוֹת׃","as an army with banners;"],
-    ["׃",""]
+    ["כַּנִּדְגָּלוֹת׃","as an army with banners;"]
   ]},
   { num: "עד", words: [
     ["כְּכַלָּה","And be adorned as a bride"],
@@ -1504,8 +1431,7 @@ var dc109_ch1Verses = [
     ["יִמָּלֵא","may fill"],
     ["כְבוֹדְךָ","thy glory"],
     ["אֶת","[acc.]"],
-    ["הָאָרֶץ׃","the earth;"],
-    ["׃",""]
+    ["הָאָרֶץ׃","the earth;"]
   ]},
   { num: "עה", words: [
     ["לְמַעַן","That"],
@@ -1519,8 +1445,7 @@ var dc109_ch1Verses = [
     ["נִהְיֶה","we may ... be"],
     ["עִם","with"],
     ["יְהוָה","the Lord"],
-    ["תָּמִיד׃","ever;"],
-    ["׃",""]
+    ["תָּמִיד׃","ever;"]
   ]},
   { num: "עו", words: [
     ["לְמַעַן","That"],
@@ -1540,8 +1465,7 @@ var dc109_ch1Verses = [
     ["עוֹלָם","eternal"],
     ["עַל","for"],
     ["כׇּל","all"],
-    ["סִבְלוֹתֵינוּ׃","our sufferings."],
-    ["׃",""]
+    ["סִבְלוֹתֵינוּ׃","our sufferings."]
   ]},
   { num: "עז", words: [
     ["יְהוָה","O Lord"],
@@ -1574,8 +1498,7 @@ var dc109_ch1Verses = [
     ["סוֹף","[end]"],
     ["מֵעוֹלָם","from everlasting"],
     ["עַד","to"],
-    ["עוֹלָם׃","everlasting."],
-    ["׃",""]
+    ["עוֹלָם׃","everlasting."]
   ]},
   { num: "עח", words: [
     ["שְׁמַע","O hear,"],
@@ -1597,8 +1520,7 @@ var dc109_ch1Verses = [
     ["יָדֵינוּ","our hands,"],
     ["אֲשֶׁר","which"],
     ["בָּנִינוּ","we have built"],
-    ["לִשְׁמֶךָ׃","unto thy name;"],
-    ["׃",""]
+    ["לִשְׁמֶךָ׃","unto thy name;"]
   ]},
   { num: "עט", words: [
     ["וְגַם","And also"],
@@ -1626,8 +1548,7 @@ var dc109_ch1Verses = [
     ["קוֹרְאִים","singing"],
     ["הוֹשַׁע־נָא","Hosanna"],
     ["לֵאלֹהִים","to God"],
-    ["וְלַשֶּׂה׃","and the Lamb!"],
-    ["׃",""]
+    ["וְלַשֶּׂה׃","and the Lamb!"]
   ]},
   { num: "פ", words: [
     ["וְיִלְבְּשׁוּ","And let ... be clothed with"],
@@ -1638,8 +1559,7 @@ var dc109_ch1Verses = [
     ["יָרִיעוּ","shout"],
     ["בְשִׂמְחָה","aloud for joy."],
     ["אָמֵן","Amen,"],
-    ["וְאָמֵן׃","and Amen."],
-    ["׃",""]
+    ["וְאָמֵן׃","and Amen."]
   ]}
 ];
 renderVerseSet(dc109_ch1Verses, 'dc109-ch1-verses');
