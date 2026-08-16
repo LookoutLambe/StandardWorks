@@ -14207,6 +14207,14 @@ window._dcCrossrefsData = {
         "Wages"
       ],
       "category": "cross-ref"
+    },
+    {
+      "marker": "e",
+      "text": "hire",
+      "refs": [
+        "Luke 10:7"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|31|6": [
@@ -14345,7 +14353,8 @@ window._dcCrossrefsData = {
       "marker": "c",
       "text": "with",
       "refs": [
-        "Matt. 28:20"
+        "Matt. 28:20",
+        "Jer. 1:8"
       ],
       "category": "cross-ref"
     },
