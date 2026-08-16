@@ -20123,6 +20123,14 @@ window._dcCrossrefsData = {
     "35:11 (11–16)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "nigh",
+   "refs": [
+    "Zeph. 1:14"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|43|18": [
@@ -20238,7 +20246,17 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "lightnings",
    "refs": [
+    "Ps. 144:6",
+    "Matt. 24:27",
     "Amos 4:6 (6–10)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "ears",
+   "refs": [
+    "1 Sam. 3:11"
    ],
    "category": "cross-ref"
   }
@@ -20363,6 +20381,14 @@ window._dcCrossrefsData = {
     "Salvation"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "j",
+   "text": "save",
+   "refs": [
+    "Isa. 45:17"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|43|26": [
@@ -20531,6 +20557,15 @@ window._dcCrossrefsData = {
     "TG Jesus Christ, Judge"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "quenched",
+   "refs": [
+    "Isa. 66:24",
+    "Mark 9:44 (43–48)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|43|34": [
@@ -20595,6 +20630,8 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "sober",
    "refs": [
+    "Ps. 2:10",
+    "1 Pet. 4:7",
     "Rom. 12:3",
     "D&C 18:21"
    ],
@@ -67260,6 +67297,16 @@ window._dcCrossrefsData = {
    "refs": [
     "Gen. 15:1",
     "Matt. 5:12"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|43|1": [
+  {
+   "marker": "a",
+   "text": "ear",
+   "refs": [
+    "Ps. 78:1"
    ],
    "category": "cross-ref"
   }
