@@ -27850,6 +27850,14 @@ window._dcCrossrefsData = {
     "Worship"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "devotions",
+   "refs": [
+    "Ps. 116:14"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|59|11": [
@@ -27908,6 +27916,14 @@ window._dcCrossrefsData = {
     "TG Joy"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "joy",
+   "refs": [
+    "John 16:24"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|59|15": [
@@ -28041,6 +28057,14 @@ window._dcCrossrefsData = {
     "TG Temperance"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "extortion",
+   "refs": [
+    "Num. 11:20"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|59|21": [
@@ -28256,6 +28280,14 @@ window._dcCrossrefsData = {
     "TG Forgive"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "doubt",
+   "refs": [
+    "1 Tim. 2:8"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|60|8": [
@@ -28317,6 +28349,7 @@ window._dcCrossrefsData = {
    "marker": "b",
    "text": "talent",
    "refs": [
+    "Matt. 25:18 (14–30)",
     "Matt. 25:25 (14–30)",
     "D&C 82:18"
    ],
