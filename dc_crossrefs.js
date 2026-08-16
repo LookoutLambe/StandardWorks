@@ -32712,6 +32712,14 @@ window._dcCrossrefsData = {
     "Stewardship"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "account",
+   "refs": [
+    "Gen. 41:36"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|70|5": [
@@ -32820,6 +32828,14 @@ window._dcCrossrefsData = {
     "Luke 10:7"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "hire",
+   "refs": [
+    "1 Tim. 5:18"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|70|13": [
@@ -32837,6 +32853,8 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "equal",
    "refs": [
+    "Deut. 15:10",
+    "2 Cor. 8:14",
     "D&C 49:20",
     "TG Consecration",
     "Selfishness"
@@ -32877,6 +32895,14 @@ window._dcCrossrefsData = {
     "Diligence"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "diligence",
+   "refs": [
+    "Eccl. 4:9"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|70|16": [
