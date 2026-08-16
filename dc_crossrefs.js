@@ -28583,6 +28583,14 @@ window._dcCrossrefsData = {
     "God, Love of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "anger",
+   "refs": [
+    "Isa. 12:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|61|22": [
@@ -28612,6 +28620,14 @@ window._dcCrossrefsData = {
     "Num. 2:34 (32–34)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "tents",
+   "refs": [
+    "Dan. 11:45"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|61|27": [
@@ -28623,6 +28639,14 @@ window._dcCrossrefsData = {
     "Priesthood, Power of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "rebuke",
+   "refs": [
+    "Nahum 1:4"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|61|30": [
@@ -28727,6 +28751,14 @@ window._dcCrossrefsData = {
     "1 Ne. 21:15 (14–15)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "cheer",
+   "refs": [
+    "Deut. 31:6"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|61|37": [
@@ -28758,6 +28790,14 @@ window._dcCrossrefsData = {
     "TG Temptation"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "temptation",
+   "refs": [
+    "Matt. 26:41"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|62|1": [
@@ -28775,6 +28815,7 @@ window._dcCrossrefsData = {
    "marker": "b",
    "text": "succor",
    "refs": [
+    "Ps. 20:2",
     "Heb. 2:18",
     "Alma 7:12"
    ],
@@ -28821,6 +28862,15 @@ window._dcCrossrefsData = {
    "refs": [
     "Matt. 9:2",
     "D&C 84:61"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "recorded",
+   "refs": [
+    "Dan. 10:21",
+    "Mal. 3:16"
    ],
    "category": "cross-ref"
   }
@@ -67651,6 +67701,16 @@ window._dcCrossrefsData = {
    "text": "interpretation",
    "refs": [
     "1 Cor. 12:10"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|61|19": [
+  {
+   "marker": "a",
+   "text": "destroyer",
+   "refs": [
+    "Ex. 12:23"
    ],
    "category": "cross-ref"
   }
