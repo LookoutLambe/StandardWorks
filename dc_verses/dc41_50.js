@@ -4285,7 +4285,8 @@ var dc47_ch1Verses = [
     ["לְהָרִים","lift up"],
     ["קוֹלוֹ","his voice"],
     ["בַּאֲסֵפוֹת","in meetings"],
-    ["כְּשֶׁיִּהְיֶה","whenever (it) shall be"],
+    ["כַּאֲשֶׁר","whenever"],
+    ["יִהְיֶה","(it) shall be"],
     ["נָכוֹן׃","expedient"]
   ]},
   { num: "ג", words: [
@@ -4295,14 +4296,14 @@ var dc47_ch1Verses = [
     ["לָכֶם","unto you"],
     ["יְמֻנֶּה","(it) shall be appointed"],
     ["לִשְׁמֹר","to keep"],
-    ["רִשְׁמֵי","(the) records of"],
+    ["זִכְרֹנוֹת","(the) records of"],
     ["הָעֵדָה","the church"],
     ["וְדִבְרֵי","and (the) words of"],
     ["הַיָּמִים","the days"],
     ["תָּמִיד","continually"],
     ["כִּי","for"],
     ["אוֹלִיבֶר","Oliver"],
-    ["קַאוּדֶּרִי","Cowdery"],
+    ["קַאוּדְרִי","Cowdery"],
     ["מִנִּיתִיו","I have appointed"],
     ["לְמִשְׂרָה","to (an) office"],
     ["אַחֶרֶת׃","another"]

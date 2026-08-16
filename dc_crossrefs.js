@@ -22968,6 +22968,14 @@ window._dcCrossrefsData = {
     "85:1"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "transcribing",
+   "refs": [
+    "Prov. 25:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|47|2": [
@@ -22988,6 +22996,14 @@ window._dcCrossrefsData = {
     "TG Record Keeping"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "records",
+   "refs": [
+    "Esth. 6:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|47|4": [
