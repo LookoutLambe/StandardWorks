@@ -25824,6 +25824,14 @@ window._dcCrossrefsData = {
     "TG Hands, Laying on of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "single",
+   "refs": [
+    "Matt. 6:22"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|55|2": [
@@ -25925,6 +25933,7 @@ window._dcCrossrefsData = {
    "marker": "c",
    "text": "visitation",
    "refs": [
+    "Isa. 10:3",
     "Jer. 10:15",
     "Hosea 9:7",
     "D&C 1:14 (13–14)"
@@ -25994,6 +26003,14 @@ window._dcCrossrefsData = {
     "TG Rebellion"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "heads",
+   "refs": [
+    "Obad. 1:15"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|56|5": [
@@ -26234,6 +26251,14 @@ window._dcCrossrefsData = {
     "TG Earth, Destiny of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "e",
+   "text": "fatness",
+   "refs": [
+    "Gen. 45:18"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|56|19": [
@@ -26241,6 +26266,8 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "recompense",
    "refs": [
+    "Isa. 62:11",
+    "Isa. 40:10",
     "Prov. 11:31",
     "Rev. 22:12",
     "D&C 1:10"
