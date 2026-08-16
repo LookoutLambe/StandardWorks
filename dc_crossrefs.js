@@ -41826,6 +41826,14 @@ window._dcCrossrefsData = {
     "D&C 20:82"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "day of vengeance",
+   "refs": [
+    "Isa. 63:4"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|85|4": [
@@ -41833,6 +41841,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "genealogy",
    "refs": [
+    "Ezra 2:62",
     "Ezra 2:62 (62–63)"
    ],
    "category": "cross-ref"
@@ -41854,6 +41863,8 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "still small voice",
    "refs": [
+    "1 Kgs. 19:12",
+    "Heb. 4:12",
     "1 Kgs. 19:12 (11–13)",
     "Job 4:16 (12–21)",
     "Hel. 5:30 (30–31)",
@@ -41916,6 +41927,15 @@ window._dcCrossrefsData = {
     "TG Ark of the Covenant"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "steady the ark",
+   "refs": [
+    "2 Sam. 6:6 (6–7)",
+    "1 Chr. 13:9 (9–10)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|85|9": [
@@ -41923,6 +41943,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "book of remembrance",
    "refs": [
+    "Mal. 3:16",
     "3 Ne. 24:16",
     "Moses 6:5",
     "TG Book of Remembrance"
@@ -41942,6 +41963,14 @@ window._dcCrossrefsData = {
    "text": "wailing",
    "refs": [
     "D&C 19:5"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "gnashing of teeth",
+   "refs": [
+    "Matt. 8:12"
    ],
    "category": "cross-ref"
   }
@@ -42008,6 +42037,14 @@ window._dcCrossrefsData = {
     "TG Priesthood, Qualifying for"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "Ezra",
+   "refs": [
+    "Ezra 2:61 (61–62)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|86|1": [
@@ -42024,6 +42061,14 @@ window._dcCrossrefsData = {
    "text": "wheat",
    "refs": [
     "Matt. 13:36 (6–43)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "tares",
+   "refs": [
+    "Matt. 13:25 (24–30, 36–43)"
    ],
    "category": "cross-ref"
   }
@@ -42073,6 +42118,23 @@ window._dcCrossrefsData = {
     "Rev. 12:6 (6, 14)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "whore",
+   "refs": [
+    "Rev. 17:2 (1–5)",
+    "Jer. 51:7"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "wilderness",
+   "refs": [
+    "Rev. 12:6"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|86|4": [
@@ -42120,6 +42182,15 @@ window._dcCrossrefsData = {
     "Rev. 18:8 (6–8)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "bundles",
+   "refs": [
+    "Matt. 13:30",
+    "Gen. 37:7"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|86|8": [
@@ -42150,6 +42221,14 @@ window._dcCrossrefsData = {
    "text": "hid",
    "refs": [
     "Col. 3:3 (3–4)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "hid with Christ",
+   "refs": [
+    "Col. 3:3"
    ],
    "category": "cross-ref"
   }
@@ -42199,6 +42278,7 @@ window._dcCrossrefsData = {
    "marker": "c",
    "text": "savior",
    "refs": [
+    "Rom. 11:22",
     "Obad. 1:21"
    ],
    "category": "cross-ref"
@@ -42211,6 +42291,14 @@ window._dcCrossrefsData = {
     "D&C 109:59 (59–67)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "light unto the Gentiles",
+   "refs": [
+    "Isa. 49:6"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|87|1": [
@@ -42218,6 +42306,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "wars",
    "refs": [
+    "D&C 130:12 (12–13)",
     "D&C 45:26"
    ],
    "category": "cross-ref"
@@ -42362,6 +42451,15 @@ window._dcCrossrefsData = {
     "1 Ne. 14:15"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "h",
+   "text": "full end",
+   "refs": [
+    "Jer. 30:11",
+    "Isa. 10:23"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|87|7": [
@@ -42386,6 +42484,15 @@ window._dcCrossrefsData = {
     "95:7"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "ears of the Lord of Sabaoth",
+   "refs": [
+    "James 5:4",
+    "Rev. 6:10"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|87|8": [
@@ -42405,6 +42512,15 @@ window._dcCrossrefsData = {
    "refs": [
     "Rev. 3:11",
     "D&C 1:12"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "holy places",
+   "refs": [
+    "2 Chr. 35:5",
+    "Matt. 24:15"
    ],
    "category": "cross-ref"
   }
