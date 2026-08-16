@@ -37684,6 +37684,7 @@ window._dcCrossrefsData = {
    "marker": "b",
    "text": "buffetings",
    "refs": [
+    "Prov. 18:6",
     "1 Cor. 5:5 (1–7)",
     "D&C 82:21",
     "104:10 (8–10)"
@@ -37749,6 +37750,8 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "Michael",
    "refs": [
+    "Dan. 10:21",
+    "Dan. 12:1",
     "D&C 27:11",
     "TG Adam"
    ],
@@ -37759,6 +37762,14 @@ window._dcCrossrefsData = {
    "text": "Holy One",
    "refs": [
     "D&C 107:54 (54–55)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "beginning of days",
+   "refs": [
+    "Heb. 7:3"
    ],
    "category": "cross-ref"
   }
@@ -37817,6 +37828,14 @@ window._dcCrossrefsData = {
     "TG Eternity"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "f",
+   "text": "lead you along",
+   "refs": [
+    "Jer. 31:9"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|78|19": [
@@ -37834,6 +37853,8 @@ window._dcCrossrefsData = {
    "marker": "b",
    "text": "hundred fold",
    "refs": [
+    "Gen. 26:12",
+    "Matt. 19:29",
     "Matt. 19:29 (27–29)"
    ],
    "category": "cross-ref"
@@ -37910,6 +37931,14 @@ window._dcCrossrefsData = {
     "D&C 84:38"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "steward",
+   "refs": [
+    "Luke 12:42 (42–44)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|79|1": [
@@ -37953,6 +37982,8 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "sheaves",
    "refs": [
+    "Ps. 126:6",
+    "D&C 75:5",
     "D&C 31:5"
    ],
    "category": "cross-ref"
@@ -37982,6 +38013,14 @@ window._dcCrossrefsData = {
   {
    "marker": "b",
    "text": "creature",
+   "refs": [
+    "Mark 16:15"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "every creature",
    "refs": [
     "Mark 16:15"
    ],
