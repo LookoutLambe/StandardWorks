@@ -13,8 +13,8 @@ var dc61_ch1Verses = [
     ["מֵעוֹלָם","from everlasting"],
     ["וְעַד","and unto"],
     ["עוֹלָם","everlasting"],
-    ["הָרִאשׁוֹן","the first (Alpha)"],
-    ["וְהָאַחֲרוֹן","and the last (Omega)"],
+    ["אָלֶף","Alpha"],
+    ["וְתָו","and Omega"],
     ["הַתְּחִלָּה","the beginning"],
     ["וְהַסּוֹף׃","and the end"],
     ["׃",""]
@@ -1955,8 +1955,8 @@ var dc63_ch1Verses = [
   { num: "ס", words: [
     ["הִנֵּה","behold"],
     ["אֲנִי","I (am)"],
-    ["הָרִאשׁוֹן","Alpha (the first)"],
-    ["וְהָאַחֲרוֹן","and Omega (the last)"],
+    ["אָלֶף","Alpha"],
+    ["וְתָו","and Omega"],
     ["יֵשׁוּעַ","Jesus"],
     ["הַמָּשִׁיחַ׃","the Christ"],
     ["׃",""]
@@ -4208,8 +4208,8 @@ var dc68_ch1Verses = [
   { num: "לה", words: [
     ["הִנֵּה","behold"],
     ["אֲנִי","I (am)"],
-    ["הָרִאשׁוֹן","Alpha"],
-    ["וְהָאַחֲרוֹן","and Omega"],
+    ["אָלֶף","Alpha"],
+    ["וְתָו","and Omega"],
     ["וּבָא","and (I) come"],
     ["אֲנִי","I"],
     ["מְהֵרָה","quickly"],
