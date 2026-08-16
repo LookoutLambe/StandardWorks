@@ -24777,6 +24777,14 @@ window._dcCrossrefsData = {
     "TG Unity"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "honestly",
+   "refs": [
+    "2 Kgs. 12:15"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|51|10": [
@@ -24908,6 +24916,15 @@ window._dcCrossrefsData = {
     "TG Joy"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "e",
+   "text": "steward",
+   "refs": [
+    "Luke 12:42",
+    "Matt. 25:21 (21–23)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|51|20": [
@@ -24923,6 +24940,7 @@ window._dcCrossrefsData = {
    "marker": "b",
    "text": "hour",
    "refs": [
+    "Luke 12:40",
     "Matt. 24:44"
    ],
    "category": "cross-ref"
