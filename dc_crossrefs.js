@@ -38170,6 +38170,15 @@ window._dcCrossrefsData = {
     "Isa. 35:3"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "hands which hang down",
+   "refs": [
+    "Isa. 35:3",
+    "Heb. 12:12"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|81|6": [
@@ -38201,6 +38210,7 @@ window._dcCrossrefsData = {
    "marker": "d",
    "text": "mansions",
    "refs": [
+    "John 14:2",
     "John 14:2 (2–3)",
     "D&C 59:2",
     "76:111",
@@ -38217,6 +38227,14 @@ window._dcCrossrefsData = {
    "refs": [
     "Matt. 6:14",
     "TG Forgive"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "forgive",
+   "refs": [
+    "Matt. 6:14 (14–15)"
    ],
    "category": "cross-ref"
   }
@@ -38305,6 +38323,14 @@ window._dcCrossrefsData = {
     "TG Punish"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "h",
+   "text": "much is given",
+   "refs": [
+    "Luke 12:48"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|82|4": [
@@ -38381,6 +38407,15 @@ window._dcCrossrefsData = {
     "Moses 8:29"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "none doeth good",
+   "refs": [
+    "Ps. 14:3",
+    "Rom. 3:12"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|82|7": [
@@ -38404,12 +38439,29 @@ window._dcCrossrefsData = {
     "58:43"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "sin no more",
+   "refs": [
+    "John 8:11",
+    "Ezek. 18:4"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|82|8": [
   {
    "marker": "a",
    "text": "new",
+   "refs": [
+    "John 13:34"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "new commandment",
    "refs": [
     "John 13:34"
    ],
@@ -38562,6 +38614,22 @@ window._dcCrossrefsData = {
     "D&C 113:8 (7–8)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "put on her beautiful garments",
+   "refs": [
+    "Isa. 52:1"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "h",
+   "text": "stakes",
+   "refs": [
+    "Isa. 54:2"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|82|16": [
@@ -38659,6 +38727,14 @@ window._dcCrossrefsData = {
     "D&C 42:30"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "talents",
+   "refs": [
+    "Matt. 25:16 (14–30)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|82|19": [
@@ -38685,6 +38761,14 @@ window._dcCrossrefsData = {
     "Prov. 4:21",
     "D&C 88:67",
     "TG Motivations"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "eye single",
+   "refs": [
+    "Matt. 6:22"
    ],
    "category": "cross-ref"
   }
@@ -38736,6 +38820,14 @@ window._dcCrossrefsData = {
     "Luke 16:9"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "mammon of unrighteousness",
+   "refs": [
+    "Luke 16:9"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|82|23": [
@@ -38745,6 +38837,15 @@ window._dcCrossrefsData = {
    "refs": [
     "Rom. 12:19",
     "Morm. 3:15"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "I will repay",
+   "refs": [
+    "Deut. 32:35",
+    "Rom. 12:19"
    ],
    "category": "cross-ref"
   }
@@ -38883,6 +38984,14 @@ window._dcCrossrefsData = {
     "Mosiah 4:26 (16–26)",
     "Hel. 4:12",
     "D&C 42:30 (30–39, 71)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "widows and orphans",
+   "refs": [
+    "James 1:27"
    ],
    "category": "cross-ref"
   }
