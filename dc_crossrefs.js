@@ -17728,6 +17728,15 @@ window._dcCrossrefsData = {
     "TG Apostasy of Individuals"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "e",
+   "text": "gladness",
+   "refs": [
+    "Luke 8:13",
+    "Matt. 13:20 (20–21)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|40|3": [
