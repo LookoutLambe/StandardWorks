@@ -1624,7 +1624,7 @@ var dc109_ch1Verses = [
     ["כִּסְאֶךָ","thy throne,"],
     ["שֶׁבַח","with acclamations of praise,"],
     ["קוֹרְאִים","singing"],
-    ["הוֹשַׁעְנָא","Hosanna"],
+    ["הוֹשַׁע־נָא","Hosanna"],
     ["לֵאלֹהִים","to God"],
     ["וְלַשֶּׂה׃","and the Lamb!"],
     ["׃",""]

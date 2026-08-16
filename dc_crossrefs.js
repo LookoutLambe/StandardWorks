@@ -16032,6 +16032,22 @@ window._dcCrossrefsData = {
     "Partridge, Edward, in Index"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "Mighty One",
+   "refs": [
+    "Isa. 1:24"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "forgiven",
+   "refs": [
+    "Luke 5:20"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|36|2": [
@@ -16091,6 +16107,14 @@ window._dcCrossrefsData = {
     "Mission of Latter-day Saints"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "everlasting",
+   "refs": [
+    "Rev. 14:6"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|36|6": [

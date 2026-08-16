@@ -3776,7 +3776,7 @@ var dc124_ch1Verses = [
     ["וְאַל־יַחְמֹל","and spare not,"],
     ["בִּשְׂמָחָה","with joy"],
     ["וָגִיל","and rejoicing,"],
-    ["וּבְהוֹשַׁעְנָא","and with hosannas"],
+    ["וּבְהוֹשַׁע־נָא","and with hosannas"],
     ["לַיֹּשֵׁב","to him that sitteth"],
     ["עַל־הַכִּסֵּא","upon the throne"],
     ["לְעוֹלָם","forever"],
