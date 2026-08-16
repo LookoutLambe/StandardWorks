@@ -18150,6 +18150,7 @@ window._dcCrossrefsData = {
    "marker": "d",
    "text": "people",
    "refs": [
+    "Jer. 32:38",
     "Zech. 8:8"
    ],
    "category": "cross-ref"
@@ -18417,6 +18418,14 @@ window._dcCrossrefsData = {
     "132:27"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "forgiveness",
+   "refs": [
+    "Matt. 12:32"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|42|19": [
@@ -18484,6 +18493,7 @@ window._dcCrossrefsData = {
    "marker": "b",
    "text": "cleave",
    "refs": [
+    "Gen. 2:24",
     "Gen. 2:24 (23–24)",
     "D&C 49:15 (15–16)",
     "Moses 3:24 (23–24)",
@@ -18550,6 +18560,14 @@ window._dcCrossrefsData = {
    "refs": [
     "John 8:11",
     "TG Forgive"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "forsaketh",
+   "refs": [
+    "Prov. 28:13"
    ],
    "category": "cross-ref"
   }
@@ -18865,6 +18883,14 @@ window._dcCrossrefsData = {
     "TG Love"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "least",
+   "refs": [
+    "Matt. 25:40"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|42|39": [
@@ -19033,6 +19059,15 @@ window._dcCrossrefsData = {
     "Rev. 14:13"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "lay",
+   "refs": [
+    "Mark 16:18",
+    "James 5:14 (14–15)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|42|45": [
@@ -19080,6 +19115,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "taste",
    "refs": [
+    "Matt. 16:28",
     "John 8:52 (51–52)"
    ],
    "category": "cross-ref"
@@ -19531,6 +19567,15 @@ window._dcCrossrefsData = {
     "Sexual Immorality"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "fornication",
+   "refs": [
+    "Mal. 2:14",
+    "Matt. 19:9"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|42|75": [
@@ -19589,6 +19634,14 @@ window._dcCrossrefsData = {
     "TG Witness"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "witnesses",
+   "refs": [
+    "Deut. 19:15"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|42|81": [
@@ -19683,6 +19736,14 @@ window._dcCrossrefsData = {
     "TG Reconciliation"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "e",
+   "text": "alone",
+   "refs": [
+    "Matt. 18:15"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|42|89": [
