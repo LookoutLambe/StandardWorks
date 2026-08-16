@@ -116,10 +116,38 @@
       });
   }
 
+  /** "Update ready" banner — shown instead of yanking the page out from
+      under a reader; a fresh page (first 10s) still reloads silently. */
+  function showUpdateBanner() {
+    if (document.getElementById('sw-update-banner')) return;
+    var bar = document.createElement('div');
+    bar.id = 'sw-update-banner';
+    bar.setAttribute('role', 'status');
+    bar.style.cssText = 'position:fixed;left:50%;transform:translateX(-50%);' +
+      'bottom:calc(110px + env(safe-area-inset-bottom, 0px));z-index:6000;' +
+      'background:#1e2233;color:#e8d9a8;border:1px solid #c8a84e;border-radius:24px;' +
+      'padding:10px 18px;font-family:inherit;font-size:0.95em;line-height:1.3;' +
+      'box-shadow:0 4px 18px rgba(0,0,0,0.35);cursor:pointer;display:flex;' +
+      'align-items:center;gap:10px;max-width:92vw;';
+    var label = document.createElement('span');
+    label.textContent = 'עדכון זמין · Update ready — tap to refresh';
+    bar.appendChild(label);
+    var close = document.createElement('span');
+    close.textContent = '✕';
+    close.setAttribute('aria-label', 'Dismiss');
+    close.style.cssText = 'opacity:0.7;padding:0 2px;';
+    close.addEventListener('click', function (e) { e.stopPropagation(); bar.remove(); });
+    bar.appendChild(close);
+    bar.addEventListener('click', function () { location.reload(); });
+    document.body.appendChild(bar);
+  }
+
+  var loadedAt = Date.now();
   navigator.serviceWorker.addEventListener('controllerchange', function () {
     if (reloadOnce) return;
     reloadOnce = true;
-    location.reload();
+    if (Date.now() - loadedAt < 10000) { location.reload(); return; }
+    showUpdateBanner();
   });
 
   document.addEventListener('visibilitychange', function () {
