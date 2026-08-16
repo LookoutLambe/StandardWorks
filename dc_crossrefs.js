@@ -6506,6 +6506,15 @@ window._dcCrossrefsData = {
         "TG Darkness, Spiritual"
       ],
       "category": "tg"
+    },
+    {
+      "marker": "h",
+      "text": "living",
+      "refs": [
+        "Matt. 16:16",
+        "Deut. 5:26"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|14|10": [
@@ -6728,6 +6737,14 @@ window._dcCrossrefsData = {
         "1 Ne. 2:5"
       ],
       "category": "cross-ref"
+    },
+    {
+      "marker": "j",
+      "text": "face",
+      "refs": [
+        "Ex. 33:11"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|17|3": [
@@ -6801,6 +6818,14 @@ window._dcCrossrefsData = {
         "D&C 5:35",
         "9:14",
         "27:18"
+      ],
+      "category": "cross-ref"
+    },
+    {
+      "marker": "e",
+      "text": "sufficient",
+      "refs": [
+        "2 Cor. 12:9"
       ],
       "category": "cross-ref"
     }
@@ -7020,7 +7045,8 @@ window._dcCrossrefsData = {
       "refs": [
         "Isa. 43:4",
         "TG Life, Sanctity of",
-        "Worth of Souls"
+        "Worth of Souls",
+        "Ps. 116:15"
       ],
       "category": "cross-ref"
     },
@@ -7066,7 +7092,8 @@ window._dcCrossrefsData = {
       "refs": [
         "Isa. 53:4 (4–5)",
         "TG Jesus Christ, Atonement through",
-        "Pain"
+        "Pain",
+        "Isa. 53:4"
       ],
       "category": "cross-ref"
     },
@@ -66851,6 +66878,17 @@ window._dcCrossrefsData = {
       "text": "mouth",
       "refs": [
         "2 Sam. 1:16"
+      ],
+      "category": "cross-ref"
+    }
+  ],
+  "D&C|14|11": [
+    {
+      "marker": "a",
+      "text": "reward",
+      "refs": [
+        "Gen. 15:1",
+        "Matt. 5:12"
       ],
       "category": "cross-ref"
     }
