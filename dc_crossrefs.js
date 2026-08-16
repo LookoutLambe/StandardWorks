@@ -22484,6 +22484,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "profit",
    "refs": [
+    "Isa. 48:17",
     "Deut. 10:13 (12–13)"
    ],
    "category": "cross-ref"
@@ -22599,6 +22600,7 @@ window._dcCrossrefsData = {
    "marker": "d",
    "text": "thanksgiving",
    "refs": [
+    "Philip. 4:6",
     "Ps. 34:1 (1–3)",
     "69:30 (30–31)",
     "Alma 34:38",
@@ -22642,6 +22644,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "seek",
    "refs": [
+    "1 Cor. 12:31",
     "1 Cor. 12:31",
     "D&C 11:10"
    ],
@@ -22724,6 +22727,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "differences",
    "refs": [
+    "1 Cor. 12:5",
     "Moro. 10:8"
    ],
    "category": "cross-ref"
@@ -22745,6 +22749,14 @@ window._dcCrossrefsData = {
    "text": "Spirit",
    "refs": [
     "1 Cor. 12:7 (3–8)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "operations",
+   "refs": [
+    "1 Cor. 12:6 (6–7)"
    ],
    "category": "cross-ref"
   }
@@ -22802,6 +22814,14 @@ window._dcCrossrefsData = {
     "TG Miracle"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "miracles",
+   "refs": [
+    "1 Cor. 12:10"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|46|22": [
@@ -67373,6 +67393,16 @@ window._dcCrossrefsData = {
    "text": "ear",
    "refs": [
     "Ps. 78:1"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|46|25": [
+  {
+   "marker": "a",
+   "text": "interpretation",
+   "refs": [
+    "1 Cor. 12:10"
    ],
    "category": "cross-ref"
   }
