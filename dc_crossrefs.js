@@ -36898,6 +36898,14 @@ window._dcCrossrefsData = {
     "TG Celestial Glory"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "f",
+   "text": "sea of glass",
+   "refs": [
+    "Rev. 4:6"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|77|2": [
@@ -36952,6 +36960,14 @@ window._dcCrossrefsData = {
     "Moses 3:19"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "four beasts",
+   "refs": [
+    "Rev. 4:6 (6–9)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|77|3": [
@@ -37003,6 +37019,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "eyes",
    "refs": [
+    "Rev. 4:8",
     "Zech. 3:9",
     "Rev. 5:6"
    ],
@@ -37048,6 +37065,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "elders",
    "refs": [
+    "Rev. 4:4",
     "Rev. 4:4 (4, 10)"
    ],
    "category": "cross-ref"
@@ -37093,6 +37111,14 @@ window._dcCrossrefsData = {
     "TG Earth, Destiny of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "book",
+   "refs": [
+    "Rev. 5:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|77|7": [
@@ -37157,6 +37183,14 @@ window._dcCrossrefsData = {
     "D&C 133:72 (71–73)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "four angels",
+   "refs": [
+    "Rev. 7:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|77|9": [
@@ -37199,6 +37233,14 @@ window._dcCrossrefsData = {
     "TG Restoration of the Gospel"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "f",
+   "text": "angel",
+   "refs": [
+    "Rev. 7:2 (2–3)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|77|10": [
@@ -37237,6 +37279,14 @@ window._dcCrossrefsData = {
     "TG Jesus Christ, Firstborn"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "sealing",
+   "refs": [
+    "Rev. 7:4 (4–8)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|77|12": [
@@ -37244,6 +37294,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "trumpets",
    "refs": [
+    "Gen. 2:1 (1–3)",
     "Rev. 8:2"
    ],
    "category": "cross-ref"
@@ -37328,6 +37379,14 @@ window._dcCrossrefsData = {
     "Mal. 4:5"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "ninth chapter",
+   "refs": [
+    "Rev. 9:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|77|14": [
@@ -37355,6 +37414,15 @@ window._dcCrossrefsData = {
    "refs": [
     "Matt. 17:11",
     "TG Restoration of the Gospel"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "little book",
+   "refs": [
+    "Rev. 10:2 (2, 9–10)",
+    "Ezek. 3:1 (1–3)"
    ],
    "category": "cross-ref"
   }
@@ -37392,6 +37460,15 @@ window._dcCrossrefsData = {
    "refs": [
     "Amos 9:15 (14–15)",
     "TG Israel, Land of"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "two witnesses",
+   "refs": [
+    "Rev. 11:3 (3–12)",
+    "Zech. 4:14"
    ],
    "category": "cross-ref"
   }
