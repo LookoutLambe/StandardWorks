@@ -20823,6 +20823,8 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "advocate",
    "refs": [
+    "Prov. 22:23",
+    "1 Jn. 2:1",
     "Isa. 59:16",
     "D&C 62:1",
     "TG Jesus Christ, Advocate"
@@ -20905,6 +20907,14 @@ window._dcCrossrefsData = {
     "John 9:4",
     "Heb. 3:13",
     "D&C 64:23 (23–25)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "harden",
+   "refs": [
+    "Ps. 95:8"
    ],
    "category": "cross-ref"
   }
@@ -21038,6 +21048,14 @@ window._dcCrossrefsData = {
     "Luke 7:27"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "standard",
+   "refs": [
+    "Isa. 11:10 (10–12)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|45|10": [
@@ -21045,6 +21063,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "reason",
    "refs": [
+    "Isa. 1:18",
     "Isa. 41:21",
     "D&C 50:10 (10–12)"
    ],
@@ -21109,6 +21128,8 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "strangers",
    "refs": [
+    "Gen. 23:4",
+    "Heb. 11:13",
     "Gen. 15:13",
     "1 Pet. 2:11",
     "TG Stranger"
@@ -21165,6 +21186,14 @@ window._dcCrossrefsData = {
     "Jesus Christ, Second Coming"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "plainly",
+   "refs": [
+    "Deut. 27:8"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|45|17": [
@@ -21352,6 +21381,7 @@ window._dcCrossrefsData = {
    "marker": "c",
    "text": "fail",
    "refs": [
+    "Josh. 2:11",
     "Luke 21:26"
    ],
    "category": "cross-ref"
@@ -21398,6 +21428,8 @@ window._dcCrossrefsData = {
    "marker": "b",
    "text": "light",
    "refs": [
+    "Isa. 58:8",
+    "Isa. 9:2",
     "D&C 45:36",
     "TG Light [noun]"
    ],
@@ -21434,6 +21466,7 @@ window._dcCrossrefsData = {
    "marker": "c",
    "text": "precepts",
    "refs": [
+    "Isa. 29:13",
     "Titus 1:14",
     "D&C 3:6 (6–7)",
     "46:7",
@@ -21518,6 +21551,7 @@ window._dcCrossrefsData = {
    "marker": "b",
    "text": "sword",
    "refs": [
+    "Isa. 2:4",
     "D&C 63:33"
    ],
    "category": "cross-ref"
@@ -21875,6 +21909,14 @@ window._dcCrossrefsData = {
     "TG Earth, Cleansing of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "calamity",
+   "refs": [
+    "Prov. 1:26 (26–27)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|45|51": [
@@ -22425,6 +22467,14 @@ window._dcCrossrefsData = {
    "text": "terrible",
    "refs": [
     "Zeph. 2:11"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "fear",
+   "refs": [
+    "Ex. 15:15 (14–16)"
    ],
    "category": "cross-ref"
   }
