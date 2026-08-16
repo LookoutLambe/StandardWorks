@@ -220,7 +220,8 @@ window._dcCrossrefsData = {
       "text": "decreed",
       "refs": [
         "Isa. 10:22 (21–34)",
-        "Matt. 24:34"
+        "Matt. 24:34",
+        "Job 22:28"
       ],
       "category": "cross-ref"
     },
@@ -301,6 +302,7 @@ window._dcCrossrefsData = {
         "Ezek. 7:4",
         "Mosiah 12:1",
         "D&C 56:19",
+        "Ps. 62:12",
         "TG Jesus Christ, Judge"
       ],
       "category": "cross-ref"
@@ -372,7 +374,8 @@ window._dcCrossrefsData = {
         "Ezek. 21:3",
         "D&C 35:14",
         "84:114",
-        "85:3"
+        "85:3",
+        "Isa. 34:5"
       ],
       "category": "cross-ref"
     }
@@ -642,6 +645,15 @@ window._dcCrossrefsData = {
         "TG Trust Not in the Arm of Flesh"
       ],
       "category": "cross-ref"
+    },
+    {
+      "marker": "d",
+      "text": "arm",
+      "refs": [
+        "2 Chr. 32:8",
+        "Jer. 17:5"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|1|20": [
@@ -905,6 +917,7 @@ window._dcCrossrefsData = {
       "refs": [
         "Lev. 5:17 (17–19)",
         "D&C 24:2",
+        "Hab. 1:13",
         "TG Sin"
       ],
       "category": "cross-ref"
@@ -1207,6 +1220,14 @@ window._dcCrossrefsData = {
         "TG Sustaining Church Leaders"
       ],
       "category": "tg"
+    },
+    {
+      "marker": "g",
+      "text": "pass",
+      "refs": [
+        "Matt. 24:35"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|1|39": [
@@ -1304,7 +1325,9 @@ window._dcCrossrefsData = {
       "marker": "b",
       "text": "frustrated",
       "refs": [
-        "Jer. 1:8 (7–8)"
+        "Jer. 1:8 (7–8)",
+        "Ps. 33:11 (10–11)",
+        "Job 42:2"
       ],
       "category": "cross-ref"
     }
@@ -1336,6 +1359,15 @@ window._dcCrossrefsData = {
       "refs": [
         "1 Ne. 10:19 (18–19)",
         "D&C 35:1"
+      ],
+      "category": "cross-ref"
+    },
+    {
+      "marker": "d",
+      "text": "crooked",
+      "refs": [
+        "Judg. 5:6",
+        "Deut. 5:32"
       ],
       "category": "cross-ref"
     }
@@ -1376,6 +1408,7 @@ window._dcCrossrefsData = {
         "Amos 6:13 (13–14)",
         "Mosiah 11:19",
         "D&C 84:73",
+        "Jer. 9:23",
         "TG Boast"
       ],
       "category": "cross-ref"
@@ -1560,6 +1593,15 @@ window._dcCrossrefsData = {
         "D&C 10:3"
       ],
       "category": "cross-ref"
+    },
+    {
+      "marker": "b",
+      "text": "merciful",
+      "refs": [
+        "Deut. 4:31",
+        "Ex. 34:6"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|3|11": [
@@ -1610,6 +1652,14 @@ window._dcCrossrefsData = {
         "Jacob 4:10",
         "TG Haughtiness",
         "Pride"
+      ],
+      "category": "cross-ref"
+    },
+    {
+      "marker": "b",
+      "text": "understanding",
+      "refs": [
+        "Prov. 3:5"
       ],
       "category": "cross-ref"
     }
@@ -1880,6 +1930,15 @@ window._dcCrossrefsData = {
         "D&C 88:85"
       ],
       "category": "cross-ref"
+    },
+    {
+      "marker": "d",
+      "text": "heart",
+      "refs": [
+        "Deut. 6:5",
+        "Mark 12:30"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|4|3": [
@@ -2009,6 +2068,8 @@ window._dcCrossrefsData = {
       "marker": "b",
       "text": "temperance",
       "refs": [
+        "Prov. 25:28",
+        "2 Pet. 1:5 (5–7)",
         "TG Temperance"
       ],
       "category": "tg"
@@ -2017,6 +2078,7 @@ window._dcCrossrefsData = {
       "marker": "c",
       "text": "patience",
       "refs": [
+        "Prov. 25:15",
         "TG Patience"
       ],
       "category": "tg"
@@ -2072,6 +2134,7 @@ window._dcCrossrefsData = {
       "text": "Ask",
       "refs": [
         "Matt. 7:7 (7–8)",
+        "Matt. 7:7",
         "TG Prayer"
       ],
       "category": "cross-ref"
@@ -2149,6 +2212,14 @@ window._dcCrossrefsData = {
       "refs": [
         "D&C 3:12",
         "6:25 (25, 28)"
+      ],
+      "category": "cross-ref"
+    },
+    {
+      "marker": "b",
+      "text": "feign",
+      "refs": [
+        "1 Kgs. 12:33"
       ],
       "category": "cross-ref"
     }
@@ -2230,6 +2301,14 @@ window._dcCrossrefsData = {
         "God, Indignation of"
       ],
       "category": "tg"
+    },
+    {
+      "marker": "d",
+      "text": "faith",
+      "refs": [
+        "Deut. 32:20"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|5|9": [
@@ -2360,6 +2439,7 @@ window._dcCrossrefsData = {
       "marker": "e",
       "text": "born",
       "refs": [
+        "John 3:5",
         "TG Baptism",
         "Holy Ghost, Baptism of",
         "Man, New, Spiritually Reborn"
@@ -2406,6 +2486,7 @@ window._dcCrossrefsData = {
         "D&C 29:8",
         "35:11 (11–16)",
         "43:17 (17–27)",
+        "Isa. 28:18",
         "TG Last Days"
       ],
       "category": "cross-ref"
@@ -2442,6 +2523,14 @@ window._dcCrossrefsData = {
         "D&C 133:41",
         "TG Jesus Christ, Prophecies about",
         "Jesus Christ, Second Coming"
+      ],
+      "category": "cross-ref"
+    },
+    {
+      "marker": "f",
+      "text": "emptied",
+      "refs": [
+        "Isa. 24:3"
       ],
       "category": "cross-ref"
     }
@@ -2492,6 +2581,14 @@ window._dcCrossrefsData = {
         "TG Peer Influence"
       ],
       "category": "tg"
+    },
+    {
+      "marker": "d",
+      "text": "uprightly",
+      "refs": [
+        "Gen. 17:1"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|5|22": [
@@ -2754,6 +2851,14 @@ window._dcCrossrefsData = {
         "TG Treasure"
       ],
       "category": "tg"
+    },
+    {
+      "marker": "d",
+      "text": "white",
+      "refs": [
+        "John 4:35"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|6|4": [
@@ -3473,6 +3578,7 @@ window._dcCrossrefsData = {
         "Mosiah 7:30",
         "Alma 9:28",
         "D&C 1:10",
+        "Gal. 6:7",
         "TG Harvest"
       ],
       "category": "cross-ref"
@@ -3499,6 +3605,7 @@ window._dcCrossrefsData = {
       "marker": "a",
       "text": "flock",
       "refs": [
+        "Luke 12:32",
         "TG Church",
         "Sheep"
       ],
@@ -3556,6 +3663,14 @@ window._dcCrossrefsData = {
         "TG Doubt"
       ],
       "category": "tg"
+    },
+    {
+      "marker": "d",
+      "text": "faint",
+      "refs": [
+        "Isa. 7:4"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|6|37": [
@@ -3590,6 +3705,14 @@ window._dcCrossrefsData = {
         "TG Kingdom of God, in Heaven"
       ],
       "category": "tg"
+    },
+    {
+      "marker": "e",
+      "text": "wounds",
+      "refs": [
+        "John 20:27 (25–27)"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|7|1": [
@@ -3707,6 +3830,14 @@ window._dcCrossrefsData = {
         "D&C 76:88"
       ],
       "category": "cross-ref"
+    },
+    {
+      "marker": "c",
+      "text": "flaming",
+      "refs": [
+        "Ps. 104:4"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|7|7": [
@@ -3802,6 +3933,14 @@ window._dcCrossrefsData = {
         "D&C 5:16"
       ],
       "category": "cross-ref"
+    },
+    {
+      "marker": "h",
+      "text": "liveth",
+      "refs": [
+        "1 Sam. 20:3"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|8|2": [
@@ -3853,6 +3992,14 @@ window._dcCrossrefsData = {
         "TG Israel, Deliverance of"
       ],
       "category": "cross-ref"
+    },
+    {
+      "marker": "b",
+      "text": "Red Sea",
+      "refs": [
+        "Ex. 14:21"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|8|4": [
@@ -3879,6 +4026,14 @@ window._dcCrossrefsData = {
         "Ex. 23:22 (20–23)",
         "D&C 105:15",
         "136:40"
+      ],
+      "category": "cross-ref"
+    },
+    {
+      "marker": "d",
+      "text": "apply",
+      "refs": [
+        "Deut. 10:20"
       ],
       "category": "cross-ref"
     }
@@ -3919,6 +4074,14 @@ window._dcCrossrefsData = {
         "TG God, Works of"
       ],
       "category": "tg"
+    },
+    {
+      "marker": "c",
+      "text": "faint",
+      "refs": [
+        "Isa. 7:4"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|8|10": [
@@ -3956,6 +4119,14 @@ window._dcCrossrefsData = {
         "TG Sacred"
       ],
       "category": "tg"
+    },
+    {
+      "marker": "c",
+      "text": "faith",
+      "refs": [
+        "Matt. 9:29"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|9|1": [
@@ -4082,6 +4253,7 @@ window._dcCrossrefsData = {
       "marker": "e",
       "text": "burn",
       "refs": [
+        "Ps. 39:3",
         "TG Inspiration",
         "Revelation"
       ],
@@ -4093,6 +4265,14 @@ window._dcCrossrefsData = {
       "refs": [
         "D&C 8:2 (2–3)",
         "TG Holy Ghost, Source of Testimony"
+      ],
+      "category": "cross-ref"
+    },
+    {
+      "marker": "g",
+      "text": "right",
+      "refs": [
+        "Deut. 13:14"
       ],
       "category": "cross-ref"
     }
@@ -4167,6 +4347,7 @@ window._dcCrossrefsData = {
       "marker": "b",
       "text": "temptation",
       "refs": [
+        "Deut. 6:16",
         "TG Temptation"
       ],
       "category": "tg"
@@ -4195,6 +4376,15 @@ window._dcCrossrefsData = {
       "refs": [
         "D&C 5:35",
         "17:8"
+      ],
+      "category": "cross-ref"
+    },
+    {
+      "marker": "d",
+      "text": "hair",
+      "refs": [
+        "Luke 21:18",
+        "1 Sam. 14:45"
       ],
       "category": "cross-ref"
     }
@@ -4567,6 +4757,14 @@ window._dcCrossrefsData = {
         "28:8 (7–23)",
         "Moses 4:4",
         "TG Gossip"
+      ],
+      "category": "cross-ref"
+    },
+    {
+      "marker": "c",
+      "text": "flatters",
+      "refs": [
+        "Prov. 29:5"
       ],
       "category": "cross-ref"
     }
@@ -5110,6 +5308,14 @@ window._dcCrossrefsData = {
         "Last Days"
       ],
       "category": "cross-ref"
+    },
+    {
+      "marker": "b",
+      "text": "hen",
+      "refs": [
+        "Matt. 23:37"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|10|66": [
@@ -5120,6 +5326,14 @@ window._dcCrossrefsData = {
         "TG Living Water"
       ],
       "category": "tg"
+    },
+    {
+      "marker": "b",
+      "text": "freely",
+      "refs": [
+        "Rev. 22:17"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|10|67": [
@@ -5155,6 +5369,14 @@ window._dcCrossrefsData = {
       "text": "against",
       "refs": [
         "Luke 11:23"
+      ],
+      "category": "cross-ref"
+    },
+    {
+      "marker": "c",
+      "text": "declares",
+      "refs": [
+        "Deut. 13:1 (12:32)"
       ],
       "category": "cross-ref"
     }
@@ -5507,6 +5729,7 @@ window._dcCrossrefsData = {
       "marker": "f",
       "text": "humbly",
       "refs": [
+        "Micah 6:8",
         "TG Humility"
       ],
       "category": "tg"
@@ -5678,7 +5901,8 @@ window._dcCrossrefsData = {
       "text": "obtain",
       "refs": [
         "Alma 17:2 (2–3)",
-        "D&C 84:85"
+        "D&C 84:85",
+        "Prov. 4:5 (5–7)"
       ],
       "category": "cross-ref"
     },
@@ -6006,6 +6230,14 @@ window._dcCrossrefsData = {
         "D&C 124:113"
       ],
       "category": "cross-ref"
+    },
+    {
+      "marker": "d",
+      "text": "temperate",
+      "refs": [
+        "Prov. 16:32"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|13|1": [
@@ -6088,6 +6320,14 @@ window._dcCrossrefsData = {
         "TG Righteousness"
       ],
       "category": "tg"
+    },
+    {
+      "marker": "i",
+      "text": "offering",
+      "refs": [
+        "Mal. 3:3"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|14|1": [
@@ -66581,6 +66821,36 @@ window._dcCrossrefsData = {
       "refs": [
         "John 21:24",
         "TG True"
+      ],
+      "category": "cross-ref"
+    }
+  ],
+  "D&C|5|29": [
+    {
+      "marker": "a",
+      "text": "trouble",
+      "refs": [
+        "Isa. 7:13"
+      ],
+      "category": "cross-ref"
+    }
+  ],
+  "D&C|5|30": [
+    {
+      "marker": "a",
+      "text": "pages",
+      "refs": [
+        "Jer. 36:23"
+      ],
+      "category": "cross-ref"
+    }
+  ],
+  "D&C|10|31": [
+    {
+      "marker": "a",
+      "text": "mouth",
+      "refs": [
+        "2 Sam. 1:16"
       ],
       "category": "cross-ref"
     }
