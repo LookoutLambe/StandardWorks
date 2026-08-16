@@ -39174,6 +39174,8 @@ window._dcCrossrefsData = {
    "marker": "c",
    "text": "cloud",
    "refs": [
+    "1 Kgs. 8:10 (10–11)",
+    "Ex. 40:34",
     "Ex. 33:9",
     "40:34",
     "Num. 14:14",
@@ -39260,6 +39262,8 @@ window._dcCrossrefsData = {
    "marker": "b",
    "text": "Melchizedek",
    "refs": [
+    "Gen. 14:18",
+    "Heb. 7:1",
     "Gen. 14:18 (17–20)",
     "JST Gen. 14:25–40 (Bible Appendix)",
     "Alma 13:14 (1–19)",
@@ -39483,6 +39487,15 @@ window._dcCrossrefsData = {
     "TG God, Privilege of Seeing"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "see the face of God",
+   "refs": [
+    "Ex. 33:20",
+    "John 1:18"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|84|23": [
@@ -39566,6 +39579,15 @@ window._dcCrossrefsData = {
     "Heb. 3:11",
     "4:1 (1–11)",
     "Jacob 1:7 (7–8)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "rest",
+   "refs": [
+    "Ps. 95:11 (8–11)",
+    "Heb. 3:11"
    ],
    "category": "cross-ref"
   }
@@ -39692,6 +39714,14 @@ window._dcCrossrefsData = {
     "Luke 1:15"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "i",
+   "text": "womb",
+   "refs": [
+    "Luke 1:15"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|84|28": [
@@ -39797,6 +39827,7 @@ window._dcCrossrefsData = {
    "marker": "b",
    "text": "offering",
    "refs": [
+    "Mal. 3:3",
     "D&C 128:24"
    ],
    "category": "cross-ref"
@@ -39947,6 +39978,15 @@ window._dcCrossrefsData = {
     "1 Jn. 4:6 (1–6)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "receiveth me",
+   "refs": [
+    "Matt. 10:40",
+    "John 13:20"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|84|37": [
@@ -40079,6 +40119,15 @@ window._dcCrossrefsData = {
     "D&C 98:11"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "every word",
+   "refs": [
+    "Deut. 8:3",
+    "Matt. 4:4"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|84|45": [
@@ -40124,6 +40173,7 @@ window._dcCrossrefsData = {
    "marker": "b",
    "text": "light",
    "refs": [
+    "John 1:9",
     "Rom. 2:15 (6–16)",
     "TG Conscience",
     "Intelligence",
@@ -40353,6 +40403,14 @@ window._dcCrossrefsData = {
     "D&C 42:13 (13–29)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "Book of Mormon",
+   "refs": [
+    "2 Ne. 27:14"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|84|58": [
@@ -40448,6 +40506,14 @@ window._dcCrossrefsData = {
     "Priesthood, Magnifying Callings within"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "every creature",
+   "refs": [
+    "Mark 16:15"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|84|63": [
@@ -40475,6 +40541,7 @@ window._dcCrossrefsData = {
    "marker": "c",
    "text": "friends",
    "refs": [
+    "John 15:14 (14–15)",
     "Ex. 33:11",
     "John 15:14 (13–15)",
     "Ether 12:39",
@@ -40525,6 +40592,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "signs",
    "refs": [
+    "Mark 16:17 (17–18)",
     "Mark 16:17",
     "TG Holy Ghost, Gifts of",
     "Miracle",
@@ -40579,6 +40647,14 @@ window._dcCrossrefsData = {
     "TG Sight"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "blind",
+   "refs": [
+    "Isa. 35:5 (5–6)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|84|71": [
@@ -40596,6 +40672,8 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "poison",
    "refs": [
+    "Ps. 58:4",
+    "Mark 16:18",
     "Acts 28:3 (3–9)",
     "D&C 24:13",
     "124:99 (98–100)"
@@ -40705,6 +40783,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "purse",
    "refs": [
+    "Luke 9:3",
     "Matt. 10:9 (9–10)",
     "Luke 10:4",
     "22:35 (35–36)",
@@ -40734,6 +40813,8 @@ window._dcCrossrefsData = {
    "marker": "c",
    "text": "hire",
    "refs": [
+    "Luke 10:7",
+    "1 Tim. 5:18",
     "D&C 31:5"
    ],
    "category": "cross-ref"
@@ -40761,6 +40842,7 @@ window._dcCrossrefsData = {
    "marker": "c",
    "text": "hair",
    "refs": [
+    "1 Sam. 14:45",
     "Luke 21:18"
    ],
    "category": "cross-ref"
@@ -40771,6 +40853,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "thought",
    "refs": [
+    "Matt. 6:25 (25–34)",
     "Matt. 6:25",
     "Luke 12:22"
    ],
@@ -40793,6 +40876,14 @@ window._dcCrossrefsData = {
     "TG Nature, Earth"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "lilies",
+   "refs": [
+    "Matt. 6:28 (28–29)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|84|83": [
@@ -40859,6 +40950,15 @@ window._dcCrossrefsData = {
     "TG Teaching with the Spirit"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "same hour",
+   "refs": [
+    "Matt. 10:19",
+    "Luke 21:14 (14–15)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|84|86": [
@@ -40921,6 +41021,14 @@ window._dcCrossrefsData = {
     "TG Angels"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "before your face",
+   "refs": [
+    "Isa. 52:12"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|84|90": [
@@ -40930,6 +41038,14 @@ window._dcCrossrefsData = {
    "refs": [
     "Matt. 10:42",
     "Mark 9:41"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "reward",
+   "refs": [
+    "Matt. 10:42"
    ],
    "category": "cross-ref"
   }
@@ -40953,6 +41069,14 @@ window._dcCrossrefsData = {
     "Luke 9:5",
     "D&C 60:15",
     "TG Wash"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "feet",
+   "refs": [
+    "Luke 9:5"
    ],
    "category": "cross-ref"
   }
@@ -41029,6 +41153,15 @@ window._dcCrossrefsData = {
     "TG Singing"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "eye to eye",
+   "refs": [
+    "Isa. 52:8",
+    "Jer. 31:34"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|84|99": [
@@ -41076,6 +41209,14 @@ window._dcCrossrefsData = {
     "TG Abrahamic Covenant"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "f",
+   "text": "brought again Zion",
+   "refs": [
+    "Isa. 52:8 (8–10)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|84|100": [
@@ -41301,6 +41442,7 @@ window._dcCrossrefsData = {
    "marker": "c",
    "text": "head",
    "refs": [
+    "1 Cor. 12:21",
     "1 Cor. 12:21"
    ],
    "category": "cross-ref"
@@ -41422,6 +41564,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "desolate",
    "refs": [
+    "Matt. 23:38",
     "Luke 13:35"
    ],
    "category": "cross-ref"
@@ -41476,6 +41619,15 @@ window._dcCrossrefsData = {
     "Warn"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "desolation of abomination",
+   "refs": [
+    "Dan. 11:31",
+    "Matt. 24:15"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|84|118": [
@@ -41507,6 +41659,8 @@ window._dcCrossrefsData = {
    "marker": "d",
    "text": "shake",
    "refs": [
+    "Hag. 2:6 (6–7)",
+    "Heb. 12:26",
     "Joel 2:10",
     "D&C 43:18",
     "45:33 (33, 48)",
