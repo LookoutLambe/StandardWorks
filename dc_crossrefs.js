@@ -16375,6 +16375,14 @@ window._dcCrossrefsData = {
     "TG Jesus Christ, Atonement through"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "e",
+   "text": "pleaded",
+   "refs": [
+    "Isa. 53:12"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|38|5": [
@@ -16591,6 +16599,7 @@ window._dcCrossrefsData = {
    "marker": "f",
    "text": "tares",
    "refs": [
+    "Matt. 13:30 (24–30)",
     "D&C 86:7",
     "88:94",
     "101:66"
@@ -16602,6 +16611,14 @@ window._dcCrossrefsData = {
    "text": "burned",
    "refs": [
     "Matt. 13:30"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "h",
+   "text": "reap",
+   "refs": [
+    "Rev. 14:15 (15–16)"
    ],
    "category": "cross-ref"
   }
@@ -16634,6 +16651,14 @@ window._dcCrossrefsData = {
    "text": "weakness",
    "refs": [
     "Heb. 8:12"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "unbelief",
+   "refs": [
+    "Heb. 3:12"
    ],
    "category": "cross-ref"
   }
@@ -16804,6 +16829,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "teach",
    "refs": [
+    "Jer. 31:34",
     "Ex. 35:34",
     "Heb. 3:13",
     "Moro. 10:9 (9–10)",
@@ -16854,6 +16880,14 @@ window._dcCrossrefsData = {
     "TG God, Justice of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "clothed",
+   "refs": [
+    "James 2:3 (2–4)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|38|27": [
