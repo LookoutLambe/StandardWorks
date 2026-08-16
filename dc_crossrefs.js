@@ -33129,6 +33129,7 @@ window._dcCrossrefsData = {
    "marker": "b",
    "text": "account",
    "refs": [
+    "Luke 16:2",
     "D&C 42:32 (30–42)"
    ],
    "category": "cross-ref"
@@ -33156,6 +33157,7 @@ window._dcCrossrefsData = {
    "marker": "b",
    "text": "mansions",
    "refs": [
+    "John 14:2",
     "D&C 59:2"
    ],
    "category": "cross-ref"
@@ -33290,6 +33292,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "certificate",
    "refs": [
+    "Isa. 8:16",
     "D&C 20:64 (64, 84)",
     "52:41",
     "72:19 (18–26)",
@@ -33495,6 +33498,14 @@ window._dcCrossrefsData = {
     "Sanctification"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "sanctified",
+   "refs": [
+    "1 Cor. 7:14"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|74|3": [
@@ -33533,6 +33544,14 @@ window._dcCrossrefsData = {
     "TG Traditions of Men"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "traditions",
+   "refs": [
+    "Matt. 15:2 (2–6)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|74|5": [
