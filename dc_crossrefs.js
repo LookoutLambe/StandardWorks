@@ -8303,6 +8303,14 @@ window._dcCrossrefsData = {
         "23:6"
       ],
       "category": "cross-ref"
+    },
+    {
+      "marker": "c",
+      "text": "private",
+      "refs": [
+        "Matt. 6:6"
+      ],
+      "category": "cross-ref"
     }
   ],
   "D&C|19|29": [
@@ -8452,7 +8460,8 @@ window._dcCrossrefsData = {
       "text": "bondage",
       "refs": [
         "Prov. 22:7",
-        "TG Bondage, Physical"
+        "TG Bondage, Physical",
+        "Ex. 21:2"
       ],
       "category": "cross-ref"
     }
@@ -8562,6 +8571,14 @@ window._dcCrossrefsData = {
       "text": "come",
       "refs": [
         "Matt. 11:28 (28–30)"
+      ],
+      "category": "cross-ref"
+    },
+    {
+      "marker": "c",
+      "text": "wisely",
+      "refs": [
+        "1 Sam. 18:14"
       ],
       "category": "cross-ref"
     }
