@@ -20697,6 +20697,14 @@ window._dcCrossrefsData = {
     "109:54"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "organize",
+   "refs": [
+    "Esth. 8:11"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|44|5": [
@@ -20706,6 +20714,14 @@ window._dcCrossrefsData = {
    "refs": [
     "Lev. 26:7 (1–13)",
     "2 Ne. 4:33 (16–35)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "bond",
+   "refs": [
+    "Ps. 107:14"
    ],
    "category": "cross-ref"
   }
