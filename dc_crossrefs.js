@@ -50298,6 +50298,14 @@ window._dcCrossrefsData = {
     "D&C 60:4"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "my jewels",
+   "refs": [
+    "Mal. 3:17"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|101|4": [
@@ -50318,6 +50326,14 @@ window._dcCrossrefsData = {
     "Gen. 22:2 (1–14)",
     "Jacob 4:5",
     "D&C 132:51"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "even as Abraham",
+   "refs": [
+    "Gen. 22:2 (1–14)"
    ],
    "category": "cross-ref"
   }
@@ -50399,6 +50415,15 @@ window._dcCrossrefsData = {
     "Alma 5:38 (38–42)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "slow to hearken",
+   "refs": [
+    "Ps. 58:4 (4–5)",
+    "Prov. 1:28 (24–28)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|101|8": [
@@ -50450,6 +50475,14 @@ window._dcCrossrefsData = {
     "D&C 98:22 (21–22)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "in wrath remember mercy",
+   "refs": [
+    "Hab. 3:2"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|101|10": [
@@ -50480,6 +50513,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "watch-tower",
    "refs": [
+    "Isa. 21:8 (6–8)",
     "Ezek. 3:17",
     "33:9 (6–10)"
    ],
@@ -50508,6 +50542,15 @@ window._dcCrossrefsData = {
     "TG Comfort",
     "Israel, Restoration of",
     "Mourning"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "shall be comforted",
+   "refs": [
+    "Isa. 61:2 (1–3)",
+    "Matt. 5:4"
    ],
    "category": "cross-ref"
   }
@@ -50540,6 +50583,14 @@ window._dcCrossrefsData = {
     "Ex. 14:13",
     "Ps. 46:10",
     "Jer. 9:3"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "be still and know",
+   "refs": [
+    "Ps. 46:10"
    ],
    "category": "cross-ref"
   }
@@ -50584,6 +50635,15 @@ window._dcCrossrefsData = {
     "103:11"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "waste places of Zion",
+   "refs": [
+    "Isa. 52:9",
+    "Isa. 51:11"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|101|20": [
@@ -50601,6 +50661,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "stakes",
    "refs": [
+    "Isa. 54:2",
     "D&C 82:13",
     "115:18 (6, 17–18)",
     "TG Stake"
@@ -50656,6 +50717,15 @@ window._dcCrossrefsData = {
     "Isa. 40:5",
     "D&C 38:8",
     "93:1"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "veil of the covering",
+   "refs": [
+    "Isa. 25:7",
+    "Isa. 40:5"
    ],
    "category": "cross-ref"
   }
@@ -50722,6 +50792,14 @@ window._dcCrossrefsData = {
     "TG Earth, Destiny of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "e",
+   "text": "elements shall melt",
+   "refs": [
+    "2 Pet. 3:10 (10–12)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|101|26": [
@@ -50740,6 +50818,15 @@ window._dcCrossrefsData = {
     "TG Peace"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "enmity of beasts",
+   "refs": [
+    "Isa. 11:6 (6–9)",
+    "Isa. 65:25"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|101|27": [
@@ -50786,6 +50873,14 @@ window._dcCrossrefsData = {
     "63:50 (49–50)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "as the age of a tree",
+   "refs": [
+    "Isa. 65:20 (20–22)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|101|31": [
@@ -50809,6 +50904,14 @@ window._dcCrossrefsData = {
     "88:96 (96–98)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "twinkling of an eye",
+   "refs": [
+    "1 Cor. 15:52"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|101|32": [
@@ -50829,6 +50932,14 @@ window._dcCrossrefsData = {
    "refs": [
     "D&C 98:12",
     "121:28 (26–33)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "he shall reveal all things",
+   "refs": [
+    "1 Cor. 2:10 (9–10)"
    ],
    "category": "cross-ref"
   }
@@ -50895,6 +51006,14 @@ window._dcCrossrefsData = {
     "TG Joy"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "fear not even unto death",
+   "refs": [
+    "Rev. 2:10"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|101|37": [
@@ -50928,6 +51047,14 @@ window._dcCrossrefsData = {
     "TG Patience"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "in patience possess your souls",
+   "refs": [
+    "Luke 21:19"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|101|39": [
@@ -50951,6 +51078,14 @@ window._dcCrossrefsData = {
     "Salt"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "salt of the earth",
+   "refs": [
+    "Matt. 5:13"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|101|40": [
@@ -50959,6 +51094,15 @@ window._dcCrossrefsData = {
    "text": "salt",
    "refs": [
     "D&C 103:10"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "lose its savor",
+   "refs": [
+    "Matt. 5:13",
+    "Luke 14:34 (34–35)"
    ],
    "category": "cross-ref"
   }
@@ -50997,6 +51141,15 @@ window._dcCrossrefsData = {
     "124:114"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "he that exalteth himself",
+   "refs": [
+    "Matt. 23:12",
+    "Luke 14:11"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|101|43": [
@@ -51027,6 +51180,15 @@ window._dcCrossrefsData = {
     "Jacob 5:3 (3–77)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "twelve olive trees",
+   "refs": [
+    "Isa. 5:1 (1–7)",
+    "Matt. 21:33 (33–41)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|101|45": [
@@ -51037,6 +51199,14 @@ window._dcCrossrefsData = {
     "Ezek. 33:2 (2, 7)",
     "3 Ne. 16:18",
     "TG Watchman"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "watchman upon the tower",
+   "refs": [
+    "Ezek. 33:2 (2–7)"
    ],
    "category": "cross-ref"
   }
@@ -51151,6 +51321,14 @@ window._dcCrossrefsData = {
     "Matt. 25:21 (20–23)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "faithful and wise steward",
+   "refs": [
+    "Luke 12:42 (42–44)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|101|62": [
@@ -51228,6 +51406,14 @@ window._dcCrossrefsData = {
     "Reward"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "wheat and the tares",
+   "refs": [
+    "Matt. 13:30 (24–30)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|101|66": [
@@ -51248,6 +51434,14 @@ window._dcCrossrefsData = {
     "D&C 63:34 (33–34)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "bound in bundles",
+   "refs": [
+    "Matt. 13:30"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|101|68": [
@@ -51257,6 +51451,14 @@ window._dcCrossrefsData = {
    "refs": [
     "D&C 58:56",
     "63:24"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "not in haste, nor by flight",
+   "refs": [
+    "Isa. 52:12"
    ],
    "category": "cross-ref"
   }
@@ -51414,6 +51616,14 @@ window._dcCrossrefsData = {
     "TG Prayer"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "the woman and the unjust judge",
+   "refs": [
+    "Luke 18:1 (1–8)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|101|86": [
@@ -51435,6 +51645,15 @@ window._dcCrossrefsData = {
     "Zech. 2:13",
     "D&C 121:1 (1, 4)",
     "123:6"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "out of his hiding place",
+   "refs": [
+    "Isa. 26:21",
+    "Isa. 28:21"
    ],
    "category": "cross-ref"
   }
@@ -51485,6 +51704,15 @@ window._dcCrossrefsData = {
     "124:8"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "gnashing of teeth",
+   "refs": [
+    "Matt. 8:12",
+    "Matt. 22:13"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|101|92": [
@@ -51503,6 +51731,14 @@ window._dcCrossrefsData = {
    "text": "excuse",
    "refs": [
     "Rom. 1:20 (18–21)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "without excuse",
+   "refs": [
+    "Rom. 1:20"
    ],
    "category": "cross-ref"
   }
@@ -51581,6 +51817,14 @@ window._dcCrossrefsData = {
     "Isa. 65:21",
     "D&C 64:34",
     "TG Millennium"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "they shall build and another shall not inherit",
+   "refs": [
+    "Isa. 65:21 (21–22)"
    ],
    "category": "cross-ref"
   }
@@ -69342,6 +69586,16 @@ window._dcCrossrefsData = {
    "text": "effectual door",
    "refs": [
     "1 Cor. 16:9"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|101|49": [
+  {
+   "marker": "a",
+   "text": "exchangers",
+   "refs": [
+    "Matt. 25:27"
    ],
    "category": "cross-ref"
   }
