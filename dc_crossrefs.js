@@ -58262,6 +58262,14 @@ window._dcCrossrefsData = {
     "D&C 18:28"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "alms",
+   "refs": [
+    "Acts 10:4 (2–4, 31)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|112|3": [
@@ -58270,7 +58278,16 @@ window._dcCrossrefsData = {
    "text": "abased",
    "refs": [
     "Matt. 23:12",
-    "Luke 14:11"
+    "Luke 14:11",
+    "D&C 101:42"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "forgiven",
+   "refs": [
+    "Matt. 9:2"
    ],
    "category": "cross-ref"
   }
@@ -58295,6 +58312,24 @@ window._dcCrossrefsData = {
     "21:12",
     "90:9 (8–9)",
     "107:33"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "Jews",
+   "refs": [
+    "Acts 13:46 (46–47)",
+    "Rom. 1:16"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "ends of the earth",
+   "refs": [
+    "Isa. 48:20",
+    "Ps. 22:27"
    ],
    "category": "cross-ref"
   }
@@ -58324,6 +58359,24 @@ window._dcCrossrefsData = {
     "TG Missionary Work"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "morning by morning",
+   "refs": [
+    "Ex. 16:21",
+    "Isa. 50:4"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "slumber",
+   "refs": [
+    "Ps. 121:4 (3–4)",
+    "Isa. 5:27"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|112|6": [
@@ -58335,6 +58388,15 @@ window._dcCrossrefsData = {
     "Micah 4:2"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "publishing my name",
+   "refs": [
+    "Ex. 9:16",
+    "Ps. 22:22"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|112|7": [
@@ -58343,6 +58405,26 @@ window._dcCrossrefsData = {
    "text": "gird",
    "refs": [
     "Eph. 6:15 (14–17)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "gird up thy loins",
+   "refs": [
+    "Jer. 1:17",
+    "Job 38:3",
+    "1 Pet. 1:13"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "shod",
+   "refs": [
+    "Ezek. 16:10",
+    "2 Chr. 28:15",
+    "Eph. 6:15"
    ],
    "category": "cross-ref"
   }
@@ -58357,6 +58439,16 @@ window._dcCrossrefsData = {
     "2 Ne. 20:33"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "brought low",
+   "refs": [
+    "Isa. 2:12 (11–17)",
+    "Luke 1:52",
+    "Matt. 23:12"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|112|9": [
@@ -58366,6 +58458,23 @@ window._dcCrossrefsData = {
    "refs": [
     "Luke 17:2",
     "2 Tim. 4:2"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "slanderer",
+   "refs": [
+    "Prov. 10:18"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "perverseness",
+   "refs": [
+    "Prov. 4:24",
+    "6:12"
    ],
    "category": "cross-ref"
   }
@@ -58389,6 +58498,15 @@ window._dcCrossrefsData = {
     "TG Guidance, Divine"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "by the hand",
+   "refs": [
+    "Isa. 41:13",
+    "42:6"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|112|11": [
@@ -58399,6 +58517,25 @@ window._dcCrossrefsData = {
     "Matt. 5:43 (43–48)",
     "TG Charity",
     "Love"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "partial",
+   "refs": [
+    "Lev. 19:15",
+    "Deut. 1:17",
+    "James 2:1 (1–9)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "as for thyself",
+   "refs": [
+    "Lev. 19:18",
+    "Matt. 22:39"
    ],
    "category": "cross-ref"
   }
@@ -58463,6 +58600,25 @@ window._dcCrossrefsData = {
     "Man, New, Spiritually Reborn"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "harden",
+   "refs": [
+    "Ps. 95:8",
+    "2 Kgs. 17:14"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "heal them",
+   "refs": [
+    "Isa. 6:10",
+    "Matt. 13:15",
+    "3 Ne. 9:13"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|112|14": [
@@ -58480,6 +58636,24 @@ window._dcCrossrefsData = {
    "text": "feed",
    "refs": [
     "John 21:16 (15–17)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "take up your cross",
+   "refs": [
+    "Matt. 16:24",
+    "Mark 8:34"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "feed my sheep",
+   "refs": [
+    "John 21:16 (15–17)",
+    "Ezek. 34:2 (2–3)"
    ],
    "category": "cross-ref"
   }
@@ -58510,6 +58684,14 @@ window._dcCrossrefsData = {
     "TG Priesthood, Keys of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "the man",
+   "refs": [
+    "2 Sam. 12:7"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|112|17": [
@@ -58530,6 +58712,25 @@ window._dcCrossrefsData = {
     "1 Cor. 16:9"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "effectual door",
+   "refs": [
+    "1 Cor. 16:9",
+    "Acts 14:27",
+    "Col. 4:3"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "proclaim my name",
+   "refs": [
+    "Ex. 33:19",
+    "Isa. 12:4"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|112|20": [
@@ -58539,6 +58740,16 @@ window._dcCrossrefsData = {
    "refs": [
     "D&C 84:35",
     "TG Teachable"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "receiveth me",
+   "refs": [
+    "Matt. 10:40 (40–41)",
+    "Luke 10:16",
+    "John 13:20"
    ],
    "category": "cross-ref"
   }
@@ -58593,7 +58804,17 @@ window._dcCrossrefsData = {
    "refs": [
     "Gen. 6:11 (5–6, 11–13)",
     "Ps. 14:1",
-    "D&C 10:21 (20–23)"
+    "D&C 10:21 (20–23)",
+    "Gen. 6:12"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "darkness covereth",
+   "refs": [
+    "Isa. 60:2",
+    "D&C 38:11"
    ],
    "category": "cross-ref"
   }
@@ -58627,6 +58848,25 @@ window._dcCrossrefsData = {
     "TG Mourning"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "day of wrath",
+   "refs": [
+    "Zeph. 1:15 (14–18)",
+    "Isa. 13:9",
+    "Joel 2:2 (1–2)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "whirlwind",
+   "refs": [
+    "Isa. 66:15",
+    "Jer. 30:23"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|112|25": [
@@ -58643,6 +58883,16 @@ window._dcCrossrefsData = {
    "text": "begin",
    "refs": [
     "1 Pet. 4:17 (17–18)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "begin at my house",
+   "refs": [
+    "1 Pet. 4:17",
+    "Ezek. 9:6",
+    "Jer. 25:29"
    ],
    "category": "cross-ref"
   }
@@ -58687,6 +58937,15 @@ window._dcCrossrefsData = {
     "Blaspheme"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "professed to know",
+   "refs": [
+    "Titus 1:16",
+    "Matt. 7:23 (21–23)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|112|27": [
@@ -58695,6 +58954,15 @@ window._dcCrossrefsData = {
    "text": "in",
    "refs": [
     "D&C 107:33 (33–39)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "weary yourselves",
+   "refs": [
+    "Isa. 7:13",
+    "43:24"
    ],
    "category": "cross-ref"
   }
@@ -58715,6 +58983,15 @@ window._dcCrossrefsData = {
    "refs": [
     "Mark 16:15 (15–16)",
     "D&C 18:28"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "preach my gospel",
+   "refs": [
+    "Mark 16:15",
+    "Amos 7:16"
    ],
    "category": "cross-ref"
   }
@@ -58744,6 +59021,15 @@ window._dcCrossrefsData = {
     "TG Damnation"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "believeth and is baptized",
+   "refs": [
+    "Mark 16:16",
+    "3 Ne. 11:33 (33–34)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|112|30": [
@@ -58784,6 +59070,16 @@ window._dcCrossrefsData = {
     "TG Restoration of the Gospel"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "fulness of times",
+   "refs": [
+    "Eph. 1:10",
+    "D&C 27:13",
+    "128:18"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|112|31": [
@@ -58813,6 +59109,15 @@ window._dcCrossrefsData = {
     "TG Priesthood, History of"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "from heaven",
+   "refs": [
+    "Gal. 1:12",
+    "D&C 110:12 (11–16)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|112|33": [
@@ -58832,6 +59137,17 @@ window._dcCrossrefsData = {
    "refs": [
     "Ezek. 34:10",
     "D&C 72:3"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "blood",
+   "refs": [
+    "Ezek. 3:18 (18–21)",
+    "33:6 (6–8)",
+    "Jacob 1:19",
+    "D&C 88:81 (81–82)"
    ],
    "category": "cross-ref"
   }
@@ -58855,6 +59171,27 @@ window._dcCrossrefsData = {
     "Reward"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "I come quickly",
+   "refs": [
+    "Rev. 22:12",
+    "Isa. 40:10",
+    "D&C 33:18"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "Alpha and Omega",
+   "refs": [
+    "Rev. 1:8",
+    "22:13",
+    "D&C 19:1",
+    "38:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|113|1": [
@@ -70978,6 +71315,17 @@ window._dcCrossrefsData = {
     "Isa. 45:3",
     "D&C 6:7",
     "38:39"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|112|18": [
+  {
+   "marker": "a",
+   "text": "a little season",
+   "refs": [
+    "Isa. 63:18",
+    "D&C 105:9 (9, 13)"
    ],
    "category": "cross-ref"
   }
