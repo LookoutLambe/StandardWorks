@@ -3716,7 +3716,7 @@ var dc10_ch1Verses = [
     ["חֲרוּתִים","are engraved"],
     ["עַל","upon"],
     ["לֻחוֹת","plates of"],
-    ["נְפִי׃","Nephi"]
+    ["נֶפִי׃","Nephi"]
   ]},
   { num: "לט", words: [
     ["אָכֵן","yea"],
@@ -3733,7 +3733,7 @@ var dc10_ch1Verses = [
     ["יוֹתֵר","more"],
     ["עַל","upon"],
     ["לֻחוֹת","plates of"],
-    ["נְפִי׃","Nephi"]
+    ["נֶפִי׃","Nephi"]
   ]},
   { num: "מ", words: [
     ["וְעַתָּה","and now"],
@@ -3742,7 +3742,7 @@ var dc10_ch1Verses = [
     ["הַחֲרוּתִים","the engraved"],
     ["עַל","upon"],
     ["לֻחוֹת","plates of"],
-    ["נְפִי","Nephi"],
+    ["נֶפִי","Nephi"],
     ["מְפֹרָשִׁים","detailed"],
     ["יוֹתֵר","more"],
     ["עַל","concerning"],
@@ -3762,7 +3762,7 @@ var dc10_ch1Verses = [
     ["אֲשֶׁר","which"],
     ["עַל","upon"],
     ["לֻחוֹת","plates of"],
-    ["נְפִי","Nephi"],
+    ["נֶפִי","Nephi"],
     ["עַד","until"],
     ["בֹּאֲךָ","your coming"],
     ["לִימֵי","to days of"],
@@ -3812,7 +3812,7 @@ var dc10_ch1Verses = [
     ["אוֹ","or"],
     ["קִצּוּר","abridgment of"],
     ["דִּבְרֵי","account of"],
-    ["נְפִי׃","Nephi"]
+    ["נֶפִי׃","Nephi"]
   ]},
   { num: "מה", words: [
     ["הִנֵּה","behold"],
@@ -3821,7 +3821,7 @@ var dc10_ch1Verses = [
     ["חֲרוּתִים","engraved"],
     ["עַל","upon"],
     ["לֻחוֹת","plates of"],
-    ["נְפִי","Nephi"],
+    ["נֶפִי","Nephi"],
     ["אֲשֶׁר","which"],
     ["מֵאִירִים","give light"],
     ["יוֹתֵר","more"],
@@ -3836,7 +3836,7 @@ var dc10_ch1Verses = [
     ["אֶת־הַחֵלֶק","the part"],
     ["הָרִאשׁוֹן","the first"],
     ["מֵחֲרוּתוֹת","of the engravings of"],
-    ["נְפִי","Nephi"],
+    ["נֶפִי","Nephi"],
     ["וְתוֹצִיאֶנּוּ","and bring it forth"],
     ["בַּמְּלָאכָה","in the work"],
     ["הַזֹּאת׃","this"]

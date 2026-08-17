@@ -2751,7 +2751,7 @@ var dc98_ch1Verses = [
     ["אֲשֶׁר","which"],
     ["נָתַתִּי","I gave"],
     ["לְעַבְדִּי","unto my servant"],
-    ["נְפִי","Nephi,"],
+    ["נֶפִי","Nephi,"],
     ["וְלַאֲבוֹתֶיךָ","and thy fathers,"],
     ["יוֹסֵף","Joseph,"],
     ["וְיַעֲקֹב","and Jacob,"],
