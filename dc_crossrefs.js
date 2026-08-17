@@ -59547,6 +59547,53 @@ window._dcCrossrefsData = {
     "D&C 118:5"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "settle up his business",
+   "refs": [
+    "2 Kgs. 20:1",
+    "Isa. 38:1"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "merchandise",
+   "refs": [
+    "Prov. 31:18",
+    "Isa. 23:18"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "a mission",
+   "refs": [
+    "Ps. 78:49",
+    "D&C 112:1 (1, 30)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "the twelve",
+   "refs": [
+    "Matt. 10:1 (1–5)",
+    "D&C 18:26 (26–33)",
+    "107:23 (23–24)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "bear glad tidings",
+   "refs": [
+    "Isa. 52:7",
+    "61:1",
+    "Nahum 1:15"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|114|2": [
@@ -59582,6 +59629,36 @@ window._dcCrossrefsData = {
    "text": "bishopric",
    "refs": [
     "Acts 1:20 (20–26)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "deny my name",
+   "refs": [
+    "Isa. 59:13",
+    "Josh. 24:27",
+    "D&C 76:4"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "planted in their stead",
+   "refs": [
+    "Ps. 80:8 (8–9)",
+    "Jer. 24:6",
+    "2 Sam. 7:10"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "their bishopric",
+   "refs": [
+    "Ps. 109:8",
+    "Acts 1:20 (20, 25–26)",
+    "D&C 64:40 (39–40)"
    ],
    "category": "cross-ref"
   }
