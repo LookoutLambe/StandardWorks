@@ -54381,6 +54381,16 @@ window._dcCrossrefsData = {
     "D&C 84:14"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "Melchizedek was such a great high priest",
+   "refs": [
+    "Gen. 14:18",
+    "Heb. 7:1 (1–4)",
+    "Alma 13:14 (14–19)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|107|4": [
@@ -54521,6 +54531,15 @@ window._dcCrossrefsData = {
     "TG Priesthood, Aaronic"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "conferred upon Aaron",
+   "refs": [
+    "Ex. 28:1 (1–4)",
+    "Num. 18:1 (1–7)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|107|14": [
@@ -54570,6 +54589,15 @@ window._dcCrossrefsData = {
    "text": "Aaron",
    "refs": [
     "Neh. 11:22"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "literal descendant of Aaron",
+   "refs": [
+    "Num. 3:10",
+    "Ezra 2:62 (61–62)"
    ],
    "category": "cross-ref"
   }
@@ -54674,6 +54702,22 @@ window._dcCrossrefsData = {
     "TG Jesus Christ, Messenger of the Covenant"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "g",
+   "text": "the mysteries of the kingdom",
+   "refs": [
+    "Matt. 13:11"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "h",
+   "text": "church of the Firstborn",
+   "refs": [
+    "Heb. 12:23"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|107|20": [
@@ -54727,6 +54771,14 @@ window._dcCrossrefsData = {
     "Repent"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "g",
+   "text": "the ministering of angels",
+   "refs": [
+    "Heb. 1:14"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|107|21": [
@@ -54795,6 +54847,15 @@ window._dcCrossrefsData = {
     "TG Witness"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "special witnesses of the name of Christ",
+   "refs": [
+    "Acts 1:8 (8, 22)",
+    "Acts 10:39 (39–41)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|107|24": [
@@ -54898,6 +54959,14 @@ window._dcCrossrefsData = {
     "Virtue"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "temperance, patience, godliness",
+   "refs": [
+    "2 Pet. 1:5 (5–7)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|107|31": [
@@ -54906,6 +54975,14 @@ window._dcCrossrefsData = {
    "text": "unfruitful",
    "refs": [
     "2 Pet. 1:8 (5–8)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "shall not be unfruitful",
+   "refs": [
+    "2 Pet. 1:8"
    ],
    "category": "cross-ref"
   }
@@ -55056,6 +55133,14 @@ window._dcCrossrefsData = {
     "Moses 6:22 (10–25)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "instituted in the days of Adam",
+   "refs": [
+    "Moses 6:7"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|107|42": [
@@ -55102,6 +55187,15 @@ window._dcCrossrefsData = {
     "Gen. 5:3"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "the express likeness of his father",
+   "refs": [
+    "Gen. 5:3",
+    "Moses 6:10"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|107|48": [
@@ -55135,6 +55229,15 @@ window._dcCrossrefsData = {
     "Walking with God"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "walked with God",
+   "refs": [
+    "Gen. 5:24",
+    "Heb. 11:5"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|107|52": [
@@ -55160,6 +55263,7 @@ window._dcCrossrefsData = {
    "marker": "b",
    "text": "Adam-ondi-Ahman",
    "refs": [
+    "D&C 116:1",
     "Dan. 7:13 (13–14)",
     "D&C 78:15 (15–20)",
     "116"
@@ -55177,6 +55281,15 @@ window._dcCrossrefsData = {
     "TG Adam"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "Michael, the prince, the archangel",
+   "refs": [
+    "Dan. 10:13",
+    "Jude 1:9"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|107|55": [
@@ -55185,6 +55298,14 @@ window._dcCrossrefsData = {
    "text": "prince",
    "refs": [
     "D&C 78:16"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "a multitude of nations shall come of thee",
+   "refs": [
+    "Gen. 17:5 (4–6)"
    ],
    "category": "cross-ref"
   }
@@ -55206,6 +55327,14 @@ window._dcCrossrefsData = {
    "refs": [
     "Moses 6:46 (5, 46)",
     "TG Scriptures, Lost"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "the book of Enoch",
+   "refs": [
+    "Jude 1:14 (14–15)"
    ],
    "category": "cross-ref"
   }
@@ -55401,6 +55530,15 @@ window._dcCrossrefsData = {
     "TG Counselor"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "a judge in Israel",
+   "refs": [
+    "Deut. 17:9 (8–13)",
+    "Ex. 18:21 (13–26)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|107|74": [
@@ -55586,6 +55724,15 @@ window._dcCrossrefsData = {
     "103:16 (16–21)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "like unto Moses",
+   "refs": [
+    "Num. 12:7 (6–8)",
+    "Deut. 34:10"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|107|92": [
@@ -55623,6 +55770,14 @@ window._dcCrossrefsData = {
     "Holy Ghost, Gifts of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "e",
+   "text": "a seer, a revelator, a translator and a prophet",
+   "refs": [
+    "Mosiah 8:13 (13–18)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|107|93": [
@@ -55677,6 +55832,14 @@ window._dcCrossrefsData = {
     "Zeal"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "let every man learn his duty",
+   "refs": [
+    "1 Cor. 12:18 (14–27)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|107|100": [
@@ -55701,6 +55864,15 @@ window._dcCrossrefsData = {
     "Worthiness"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "he that is slothful",
+   "refs": [
+    "Prov. 6:6 (6–11)",
+    "Matt. 25:26 (24–30)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|108|1": [
@@ -70101,6 +70273,17 @@ window._dcCrossrefsData = {
    "text": "joy in heaven",
    "refs": [
     "Luke 15:7 (7, 10)"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|107|3": [
+  {
+   "marker": "a",
+   "text": "after the Order of the Son of God",
+   "refs": [
+    "Ps. 110:4",
+    "Heb. 5:6"
    ],
    "category": "cross-ref"
   }
