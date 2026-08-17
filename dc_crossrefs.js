@@ -56034,6 +56034,16 @@ window._dcCrossrefsData = {
     "Dan. 9:4 (4, 9)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "who keepest covenant and showest mercy",
+   "refs": [
+    "Deut. 7:9",
+    "1 Kgs. 8:23",
+    "Neh. 1:5"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|109|2": [
@@ -56042,6 +56052,15 @@ window._dcCrossrefsData = {
    "text": "build",
    "refs": [
     "D&C 88:119"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "build a house to thy name",
+   "refs": [
+    "1 Kgs. 8:20 (17–20)",
+    "2 Chr. 6:10"
    ],
    "category": "cross-ref"
   }
@@ -56142,6 +56161,15 @@ window._dcCrossrefsData = {
     "1 Kgs. 8:17"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "a house of prayer",
+   "refs": [
+    "Isa. 56:7",
+    "D&C 88:119"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|109|9": [
@@ -56186,6 +56214,15 @@ window._dcCrossrefsData = {
     "2 Chr. 7:2 (2–3)",
     "D&C 84:5",
     "109:37"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "that thy glory may rest down",
+   "refs": [
+    "1 Kgs. 8:11 (10–11)",
+    "2 Chr. 7:1 (1–3)"
    ],
    "category": "cross-ref"
   }
@@ -56246,6 +56283,14 @@ window._dcCrossrefsData = {
     "TG Reverence"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "when thy people transgress",
+   "refs": [
+    "1 Kgs. 8:33 (33–40)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|109|22": [
@@ -56296,6 +56341,23 @@ window._dcCrossrefsData = {
     "22:14"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "no weapon formed against them shall prosper",
+   "refs": [
+    "Isa. 54:17"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "he who diggeth a pit",
+   "refs": [
+    "Ps. 7:15",
+    "Prov. 26:27"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|109|26": [
@@ -56326,6 +56388,15 @@ window._dcCrossrefsData = {
     "TG Protection, Divine"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "thou wilt fight for thy people",
+   "refs": [
+    "Ex. 14:14",
+    "Deut. 1:30"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|109|29": [
@@ -56406,6 +56477,15 @@ window._dcCrossrefsData = {
     "TG Sin"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "blotted out forever",
+   "refs": [
+    "Isa. 43:25",
+    "Acts 3:19"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|109|35": [
@@ -56437,6 +56517,14 @@ window._dcCrossrefsData = {
     "Acts 2:3"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "as upon those on the day of Pentecost",
+   "refs": [
+    "Acts 2:2 (1–4)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|109|37": [
@@ -56456,6 +56544,14 @@ window._dcCrossrefsData = {
     "D&C 84:5",
     "109:12",
     "TG God, Manifestations of"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "as with a rushing mighty wind",
+   "refs": [
+    "Acts 2:2"
    ],
    "category": "cross-ref"
   }
@@ -56485,6 +56581,14 @@ window._dcCrossrefsData = {
     "TG Earth, Cleansing of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "seal up the law",
+   "refs": [
+    "Isa. 8:16"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|109|39": [
@@ -56501,6 +56605,15 @@ window._dcCrossrefsData = {
    "text": "Zion",
    "refs": [
     "Isa. 35:10"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "songs of everlasting joy",
+   "refs": [
+    "Isa. 35:10",
+    "Isa. 51:11"
    ],
    "category": "cross-ref"
   }
@@ -56535,6 +56648,15 @@ window._dcCrossrefsData = {
     "Grace"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "thy will be done, not ours",
+   "refs": [
+    "Luke 22:42",
+    "Matt. 26:39"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|109|45": [
@@ -56546,6 +56668,15 @@ window._dcCrossrefsData = {
     "Wickedness"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "judgments without measure",
+   "refs": [
+    "Isa. 5:14",
+    "Jer. 30:11"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|109|46": [
@@ -56557,6 +56688,15 @@ window._dcCrossrefsData = {
     "TG Seal",
     "Sealing",
     "Testimony"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "the day of burning",
+   "refs": [
+    "Mal. 4:1",
+    "2 Pet. 3:10"
    ],
    "category": "cross-ref"
   }
@@ -56634,6 +56774,15 @@ window._dcCrossrefsData = {
     "TG Martyrdom"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "how long",
+   "refs": [
+    "Ps. 13:1 (1–2)",
+    "Rev. 6:10"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|109|50": [
@@ -56656,6 +56805,14 @@ window._dcCrossrefsData = {
     "105:2"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "make bare thine arm",
+   "refs": [
+    "Isa. 52:10"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|109|52": [
@@ -56667,6 +56824,14 @@ window._dcCrossrefsData = {
     "Punish"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "root and branch",
+   "refs": [
+    "Mal. 4:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|109|53": [
@@ -56678,6 +56843,15 @@ window._dcCrossrefsData = {
     "Grace"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "gracious and merciful",
+   "refs": [
+    "Ex. 34:6",
+    "Joel 2:13"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|109|54": [
@@ -56723,6 +56897,14 @@ window._dcCrossrefsData = {
     "Truth"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "that their hearts may be softened",
+   "refs": [
+    "Prov. 21:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|109|57": [
@@ -56810,6 +56992,15 @@ window._dcCrossrefsData = {
     "Ezek. 30:3"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "scattered upon the mountains",
+   "refs": [
+    "Ezek. 34:6 (5–6)",
+    "Ezek. 34:12"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|109|62": [
@@ -56830,6 +57021,15 @@ window._dcCrossrefsData = {
    "refs": [
     "1 Kgs. 11:39",
     "TG Israel, Restoration of"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "the yoke of bondage",
+   "refs": [
+    "Isa. 14:25",
+    "Gal. 5:1"
    ],
    "category": "cross-ref"
   }
@@ -56960,6 +57160,14 @@ window._dcCrossrefsData = {
     "65:2"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "the kingdom set up without hands",
+   "refs": [
+    "Dan. 2:34 (34–35, 44–45)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|109|73": [
@@ -56978,6 +57186,14 @@ window._dcCrossrefsData = {
     "Song 6:10",
     "D&C 5:14",
     "105:31"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "fair as the moon, clear as the sun",
+   "refs": [
+    "Song 6:10"
    ],
    "category": "cross-ref"
   }
@@ -57003,6 +57219,15 @@ window._dcCrossrefsData = {
     "D&C 49:23"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "the mountains flow down at thy presence",
+   "refs": [
+    "Isa. 64:1 (1–3)",
+    "Isa. 40:4"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|109|75": [
@@ -57011,6 +57236,14 @@ window._dcCrossrefsData = {
    "text": "caught up",
    "refs": [
     "1 Thes. 4:17"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "caught up in the cloud to meet thee",
+   "refs": [
+    "1 Thes. 4:17 (16–17)"
    ],
    "category": "cross-ref"
   }
@@ -57057,6 +57290,15 @@ window._dcCrossrefsData = {
    "refs": [
     "Heb. 11:40",
     "TG Suffering"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "palms in our hands, crowns of glory",
+   "refs": [
+    "Rev. 7:9 (9–10)",
+    "Rev. 4:4"
    ],
    "category": "cross-ref"
   }
@@ -57130,6 +57372,15 @@ window._dcCrossrefsData = {
     "TG Jesus Christ, Lamb of God"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "f",
+   "text": "seraphs around thy throne",
+   "refs": [
+    "Isa. 6:2 (2–3)",
+    "Rev. 5:11 (11–13)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|109|80": [
@@ -57149,6 +57400,15 @@ window._dcCrossrefsData = {
    "text": "shout",
    "refs": [
     "Ps. 132:16"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "let thy saints shout for joy",
+   "refs": [
+    "2 Chr. 6:41",
+    "Ps. 132:9 (9, 16)"
    ],
    "category": "cross-ref"
   }
@@ -70327,6 +70587,17 @@ window._dcCrossrefsData = {
    "refs": [
     "Ps. 110:4",
     "Heb. 5:6"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|109|41": [
+  {
+   "marker": "a",
+   "text": "this untoward generation",
+   "refs": [
+    "Deut. 32:5",
+    "Acts 2:40"
    ],
    "category": "cross-ref"
   }
