@@ -46872,6 +46872,14 @@ window._dcCrossrefsData = {
     "TG Light of Christ"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "true light",
+   "refs": [
+    "John 1:9"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|93|3": [
@@ -46883,6 +46891,15 @@ window._dcCrossrefsData = {
     "14:10",
     "17:22",
     "D&C 50:43"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "Father in me",
+   "refs": [
+    "John 10:38",
+    "John 17:21 (21–23)"
    ],
    "category": "cross-ref"
   }
@@ -46983,6 +47000,14 @@ window._dcCrossrefsData = {
     "Salvation"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "the Word",
+   "refs": [
+    "John 1:1 (1–14)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|93|9": [
@@ -47026,6 +47051,14 @@ window._dcCrossrefsData = {
     "TG Jesus Christ, Glory of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "grace and truth",
+   "refs": [
+    "John 1:14"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|93|12": [
@@ -47041,6 +47074,14 @@ window._dcCrossrefsData = {
   {
    "marker": "b",
    "text": "grace",
+   "refs": [
+    "John 1:16"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "grace for grace",
    "refs": [
     "John 1:16"
    ],
@@ -47087,6 +47128,15 @@ window._dcCrossrefsData = {
     "TG Witness of the Father"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "dove",
+   "refs": [
+    "Matt. 3:16 (16–17)",
+    "John 1:32 (32–34)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|93|17": [
@@ -47254,6 +47304,14 @@ window._dcCrossrefsData = {
     "TG Knowledge"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "truth is knowledge",
+   "refs": [
+    "John 8:32"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|93|25": [
@@ -47389,6 +47447,14 @@ window._dcCrossrefsData = {
     "TG Creation"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "f",
+   "text": "in the beginning with God",
+   "refs": [
+    "Abr. 3:22 (21–23)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|93|30": [
@@ -47472,6 +47538,14 @@ window._dcCrossrefsData = {
     "Resurrection"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "elements are eternal",
+   "refs": [
+    "Abr. 3:24"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|93|34": [
@@ -47523,6 +47597,15 @@ window._dcCrossrefsData = {
     "2 Ne. 19:17"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "temples",
+   "refs": [
+    "1 Cor. 3:16 (16–17)",
+    "1 Cor. 6:19"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|93|36": [
@@ -47551,6 +47634,14 @@ window._dcCrossrefsData = {
    "text": "light",
    "refs": [
     "D&C 88:7 (6–13)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "glory of God is intelligence",
+   "refs": [
+    "Prov. 4:7"
    ],
    "category": "cross-ref"
   }
@@ -47678,6 +47769,15 @@ window._dcCrossrefsData = {
     "TG Children of Light"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "bring up your children in light",
+   "refs": [
+    "Prov. 22:6",
+    "Eph. 6:4"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|93|42": [
@@ -47898,6 +47998,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "pattern",
    "refs": [
+    "Ex. 25:9 (9, 40)",
     "Heb. 8:5",
     "D&C 52:14",
     "95:14",
@@ -48071,6 +48172,16 @@ window._dcCrossrefsData = {
     "TG Temptation"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "f",
+   "text": "whom I love I chasten",
+   "refs": [
+    "Prov. 3:12",
+    "Heb. 12:6",
+    "Rev. 3:19"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|95|3": [
@@ -48117,6 +48228,14 @@ window._dcCrossrefsData = {
     "TG Holy Ghost, Gifts of"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "pour out my Spirit",
+   "refs": [
+    "Joel 2:28"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|95|5": [
@@ -48131,6 +48250,14 @@ window._dcCrossrefsData = {
     "TG Called of God",
     "Election",
     "Worthiness"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "few are chosen",
+   "refs": [
+    "Matt. 22:14"
    ],
    "category": "cross-ref"
   }
@@ -48150,6 +48277,15 @@ window._dcCrossrefsData = {
    "refs": [
     "Deut. 28:29 (15–45)",
     "TG Darkness, Spiritual"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "walking in darkness at noon-day",
+   "refs": [
+    "Deut. 28:29",
+    "Isa. 59:10"
    ],
    "category": "cross-ref"
   }
@@ -48230,6 +48366,14 @@ window._dcCrossrefsData = {
     "TG Election"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "endow with power",
+   "refs": [
+    "Luke 24:49"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|95|9": [
@@ -48548,6 +48692,15 @@ window._dcCrossrefsData = {
     "3 Ne. 14:19"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "ax is laid",
+   "refs": [
+    "Matt. 3:10",
+    "Luke 3:9"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|97|8": [
@@ -48588,6 +48741,15 @@ window._dcCrossrefsData = {
     "Moses 5:23"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "broken heart and contrite spirit",
+   "refs": [
+    "Ps. 51:17",
+    "Ps. 34:18"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|97|9": [
@@ -48596,6 +48758,15 @@ window._dcCrossrefsData = {
    "text": "tree",
    "refs": [
     "Ps. 1:3 (1–3)",
+    "Jer. 17:8"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "tree planted",
+   "refs": [
+    "Ps. 1:3",
     "Jer. 17:8"
    ],
    "category": "cross-ref"
@@ -48833,6 +49004,15 @@ window._dcCrossrefsData = {
     "Zion"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "the pure in heart",
+   "refs": [
+    "Ps. 24:4",
+    "Matt. 5:8"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|97|22": [
@@ -48844,6 +49024,15 @@ window._dcCrossrefsData = {
     "Isa. 66:15",
     "Jer. 23:19",
     "TG Vengeance"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "whirlwind",
+   "refs": [
+    "Prov. 1:27",
+    "Isa. 66:15"
    ],
    "category": "cross-ref"
   }
@@ -48987,6 +49176,14 @@ window._dcCrossrefsData = {
     "TG Thanksgiving"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "give thanks",
+   "refs": [
+    "1 Thes. 5:16 (16–18)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|98|2": [
@@ -49005,6 +49202,14 @@ window._dcCrossrefsData = {
     "D&C 133:45"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "ears of the Lord of Sabaoth",
+   "refs": [
+    "James 5:4"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|98|3": [
@@ -49021,6 +49226,14 @@ window._dcCrossrefsData = {
    "text": "good",
    "refs": [
     "D&C 122:7"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "work together for your good",
+   "refs": [
+    "Rom. 8:28"
    ],
    "category": "cross-ref"
   }
@@ -49133,6 +49346,15 @@ window._dcCrossrefsData = {
     "D&C 84:44 (43–44)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "every word",
+   "refs": [
+    "Deut. 8:3",
+    "Matt. 4:4"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|98|12": [
@@ -49158,6 +49380,14 @@ window._dcCrossrefsData = {
     "Abr. 3:25"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "line upon line",
+   "refs": [
+    "Isa. 28:10 (10, 13)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|98|13": [
@@ -49171,6 +49401,15 @@ window._dcCrossrefsData = {
     "D&C 101:35",
     "103:27 (27–28)",
     "TG Martyrdom"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "layeth down his life",
+   "refs": [
+    "Matt. 10:39",
+    "Mark 8:35"
    ],
    "category": "cross-ref"
   }
@@ -49225,6 +49464,14 @@ window._dcCrossrefsData = {
     "D&C 2:2"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "hearts of the children",
+   "refs": [
+    "Mal. 4:6 (5–6)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|98|17": [
@@ -49248,6 +49495,14 @@ window._dcCrossrefsData = {
     "76:111",
     "81:6",
     "106:8"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "mansions",
+   "refs": [
+    "John 14:2 (1–3)"
    ],
    "category": "cross-ref"
   }
@@ -49310,6 +49565,14 @@ window._dcCrossrefsData = {
     "Matt. 16:18",
     "D&C 33:13",
     "109:26"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "gates of hell",
+   "refs": [
+    "Matt. 16:18"
    ],
    "category": "cross-ref"
   }
@@ -49508,6 +49771,14 @@ window._dcCrossrefsData = {
     "TG Forgive"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "seventy times seven",
+   "refs": [
+    "Matt. 18:22 (21–22)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|98|44": [
@@ -49551,6 +49822,15 @@ window._dcCrossrefsData = {
    "marker": "c",
    "text": "third",
    "refs": [
+    "Deut. 5:9"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "third and fourth generation",
+   "refs": [
+    "Ex. 20:5",
     "Deut. 5:9"
    ],
    "category": "cross-ref"
@@ -49631,6 +49911,14 @@ window._dcCrossrefsData = {
     "1 Cor. 2:4"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "he that receiveth you",
+   "refs": [
+    "Matt. 10:40"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|99|3": [
@@ -49658,6 +49946,14 @@ window._dcCrossrefsData = {
     "TG Mercy"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "little child",
+   "refs": [
+    "Matt. 18:5 (1–5)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|99|4": [
@@ -49674,6 +49970,15 @@ window._dcCrossrefsData = {
    "text": "feet",
    "refs": [
     "D&C 75:20 (19–22)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "cleanse your feet",
+   "refs": [
+    "Matt. 10:14",
+    "Luke 9:5"
    ],
    "category": "cross-ref"
   }
@@ -49693,6 +49998,15 @@ window._dcCrossrefsData = {
    "refs": [
     "Jude 1:15 (14–15)",
     "TG Jesus Christ, Judge"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "volume of the book",
+   "refs": [
+    "Ps. 40:7",
+    "Heb. 10:7"
    ],
    "category": "cross-ref"
   }
@@ -49778,6 +50092,15 @@ window._dcCrossrefsData = {
    "refs": [
     "Matt. 10:19 (19–20)",
     "D&C 84:85"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "in the very hour",
+   "refs": [
+    "Matt. 10:19 (19–20)",
+    "Luke 12:12"
    ],
    "category": "cross-ref"
   }
@@ -49884,6 +50207,14 @@ window._dcCrossrefsData = {
     "Rom. 8:28",
     "D&C 90:24",
     "105:40"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "all things work together",
+   "refs": [
+    "Rom. 8:28"
    ],
    "category": "cross-ref"
   }
@@ -69001,6 +69332,16 @@ window._dcCrossrefsData = {
    "text": "occasion",
    "refs": [
     "Dan. 6:4"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|100|3": [
+  {
+   "marker": "a",
+   "text": "effectual door",
+   "refs": [
+    "1 Cor. 16:9"
    ],
    "category": "cross-ref"
   }
