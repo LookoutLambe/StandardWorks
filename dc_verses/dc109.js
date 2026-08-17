@@ -1389,7 +1389,7 @@ var dc109_ch1Verses = [
     ["יָפָה","fair"],
     ["כַלְּבָנָה","as the moon,"],
     ["בָּרָה","clear"],
-    ["כַחַמָּה","as the sun,"],
+    ["כַּחַמָּה","as the sun,"],
     ["וַאֲיֻמָּה","and terrible"],
     ["כַּנִּדְגָּלוֹת׃","as an army with banners;"]
   ]},

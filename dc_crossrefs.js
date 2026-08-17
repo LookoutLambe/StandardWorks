@@ -2385,6 +2385,14 @@ window._dcCrossrefsData = {
     "109:73"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "clear as the moon, and fair as the sun",
+   "refs": [
+    "Song 6:10"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|5|15": [
@@ -12904,6 +12912,21 @@ window._dcCrossrefsData = {
     "TG World, End of"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "the sun shall be darkened, and the moon shall be turned into blood",
+   "refs": [
+    "Joel 2:31 (30–31)",
+    "Isa. 13:10",
+    "Matt. 24:29",
+    "Rev. 6:12",
+    "D&C 34:9",
+    "45:42",
+    "88:87",
+    "133:49"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|29|15": [
@@ -15091,6 +15114,30 @@ window._dcCrossrefsData = {
    "text": "sun",
    "refs": [
     "Joel 2:31"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "the sun shall be darkened, and the moon shall be turned into blood",
+   "refs": [
+    "Joel 2:31 (30–31)",
+    "Isa. 13:10",
+    "Matt. 24:29",
+    "Rev. 6:12",
+    "D&C 29:14",
+    "45:42",
+    "88:87",
+    "133:49"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "moon",
+   "refs": [
+    "Joel 2:31",
+    "Rev. 6:12"
    ],
    "category": "cross-ref"
   }
