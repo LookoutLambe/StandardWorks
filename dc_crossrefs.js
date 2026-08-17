@@ -55895,6 +55895,14 @@ window._dcCrossrefsData = {
     "TG Peace of God"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "let your soul be at rest",
+   "refs": [
+    "Ps. 116:7"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|108|3": [
@@ -55906,6 +55914,15 @@ window._dcCrossrefsData = {
     "Vow"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "observing your vows",
+   "refs": [
+    "Deut. 23:21 (21–23)",
+    "Eccl. 5:4 (4–5)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|108|4": [
@@ -55913,6 +55930,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "solemn assembly",
    "refs": [
+    "Joel 1:14",
     "D&C 88:70",
     "95:7",
     "109:6 (6–10)"
@@ -55925,6 +55943,14 @@ window._dcCrossrefsData = {
    "refs": [
     "D&C 88:85",
     "105:7 (7, 33)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "wait patiently",
+   "refs": [
+    "Ps. 37:7"
    ],
    "category": "cross-ref"
   }
@@ -55957,6 +55983,14 @@ window._dcCrossrefsData = {
     "Luke 22:32"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "strengthen your brethren",
+   "refs": [
+    "Luke 22:32"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|108|8": [
@@ -55968,6 +56002,15 @@ window._dcCrossrefsData = {
     "2 Ne. 9:19 (18–19)",
     "D&C 105:8",
     "TG Deliver"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "I am with you",
+   "refs": [
+    "Matt. 28:20",
+    "Isa. 41:10"
    ],
    "category": "cross-ref"
   }

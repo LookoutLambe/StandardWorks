@@ -7400,7 +7400,7 @@ var dc108_ch1Verses = [
     ["יְהוָה","the Lord"],
     ["אֵלֶיךָ","unto you,"],
     ["עַבְדִּי","my servant"],
-    ["לַיְמָן","Lyman:"],
+    ["לִימָן","Lyman:"],
     ["נִסְלְחוּ","are forgiven"],
     ["חַטֹּאתֶיךָ","Your sins"],
     ["לְךָ","you,"],
@@ -7423,15 +7423,14 @@ var dc108_ch1Verses = [
     ["מַעֲמָדְךָ","your ... standing,"],
     ["הָרוּחָנִי","spiritual"],
     ["וְאַל","and ... no"],
-    ["תִּתְנַגֵּד","resist"],
+    ["תַּמְרֶה","resist (rebel against)"],
     ["עוֹד","more"],
-    ["לְקוֹלִי׃","my voice."]
+    ["אֶת־קוֹלִי׃","my voice."]
   ]},
   { num: "ג", words: [
     ["וְקוּם","And arise up"],
-    ["וֶהְיֵה","and be"],
-    ["זָהִיר","careful"],
-    ["יוֹתֵר","more"],
+    ["וְהִשָּׁמֵר","and be careful (take heed)"],
+    ["מְאֹד","exceedingly"],
     ["מֵעַתָּה","henceforth"],
     ["בִּשְׁמִירַת","in observing"],
     ["נְדָרֶיךָ","your vows,"],
@@ -7444,14 +7443,15 @@ var dc108_ch1Verses = [
     ["מְאֹד׃","exceeding"]
   ]},
   { num: "ד", words: [
-    ["הַמְתֵּן","Wait"],
-    ["בְּסַבְלָנוּת","patiently"],
+    ["הִתְחוֹלֵל","Wait patiently"],
+    
     ["עַד","until"],
-    ["שֶׁתִּקָּרֵא","shall be called"],
+    ["אֲשֶׁר","(that)"],
+    ["תִּקָּרֵא","shall be called"],
     ["עֲצֶרֶת","the ... assembly"],
     ["הַקֹּדֶשׁ","solemn"],
-    ["עַל","[upon]"],
-    ["יְדֵי","of"],
+    ["בְּיַד","by the hand of"],
+    
     ["עֲבָדַי","my servants,"],
     ["אָז","then"],
     ["תִּזָּכֵר","you shall be remembered"],
@@ -7474,7 +7474,8 @@ var dc108_ch1Verses = [
     ["הָאָב","the Father"],
     ["לְךָ","unto you"],
     ["אִם","if"],
-    ["תַּמְשִׁיךְ","you continue"],
+    ["תּוֹסִיף","you continue"],
+    ["לִהְיוֹת","to be"],
     ["נֶאֱמָן׃","faithful."]
   ]},
   { num: "ו", words: [
@@ -7482,7 +7483,8 @@ var dc108_ch1Verses = [
     ["עָלֶיךָ","upon you"],
     ["בַּיּוֹם","in ... day"],
     ["הַהוּא","that"],
-    ["שֶׁתִּהְיֶה","that ... shall"],
+    ["אֲשֶׁר","(that)"],
+    ["תִּהְיֶה","shall"],
     ["לְךָ","you"],
     ["זְכוּת","have right"],
     ["לְהַטִּיף","to preach"],
@@ -7490,8 +7492,8 @@ var dc108_ch1Verses = [
     ["בְּכׇל־אֲשֶׁר","wheresoever"],
     ["אֶשְׁלָחֲךָ","I shall send you,"],
     ["מֵעַתָּה","from henceforth"],
-    ["מֵאוֹתוֹ","from that"],
-    ["זְמַן׃","time."]
+    ["מֵהָעֵת","from the time"],
+    ["הַהִיא׃","that."]
   ]},
   { num: "ז", words: [
     ["לָכֵן","Therefore,"],
