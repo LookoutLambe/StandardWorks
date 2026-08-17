@@ -7448,8 +7448,8 @@ var dc108_ch1Verses = [
     ["עַד","until"],
     ["אֲשֶׁר","(that)"],
     ["תִּקָּרֵא","shall be called"],
-    ["עֲצֶרֶת","the ... assembly"],
-    ["הַקֹּדֶשׁ","solemn"],
+    ["עֲצָרָה","the solemn assembly"],
+    
     ["בְּיַד","by the hand of"],
     
     ["עֲבָדַי","my servants,"],

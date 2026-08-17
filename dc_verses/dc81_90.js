@@ -4664,8 +4664,8 @@ var dc88_ch1Verses = [
     ["בַּמָּקוֹם","in place"],
     ["הַזֶּה","this"],
     ["וְקִרְאוּ","and call"],
-    ["עֲצָרָה","an assembly"],
-    ["קֹדֶשׁ","solemn (holy)"],
+    ["עֲצָרָה","a solemn assembly"],
+    
     ["אַף","even"],
     ["אֲשֶׁר","of those"],
     ["הֵם","(who)"],
@@ -5641,8 +5641,8 @@ var dc88_ch1Verses = [
     ["לָכֶם","unto you"],
     ["רֵעַי","my friends"],
     ["קִרְאוּ","call"],
-    ["אֶת־עֲצָרַתְכֶם","your assembly"],
-    ["הַקֹּדֶשׁ","solemn (holy)"],
+    ["אֶת־עֲצָרַתְכֶם","your solemn assembly"],
+    
     ["כַּאֲשֶׁר","as"],
     ["צִוִּיתִי","I have commanded"],
     ["אֶתְכֶם׃","you."]

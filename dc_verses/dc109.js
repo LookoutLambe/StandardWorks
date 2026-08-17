@@ -106,8 +106,8 @@ var dc109_ch1Verses = [
     ["רֵעֶיךָ","thy friends,"],
     ["לֵאמֹר","saying—"],
     ["קִרְאוּ","Call"],
-    ["עֲצֶרֶת","assembly,"],
-    ["קֹדֶשׁ","your solemn"],
+    ["עֲצָרַתְכֶם","your solemn assembly,"],
+    
     ["כַּאֲשֶׁר","as"],
     ["צִוִּיתִי","I have commanded"],
     ["אֶתְכֶם׃","you;"]
@@ -192,8 +192,8 @@ var dc109_ch1Verses = [
     ["עַמְּךָ","thy people,"],
     ["בְּחַסְדְּךָ","with thy grace,"],
     ["בְּקָרְאֵנוּ","in calling"],
-    ["אֶת־עֲצֶרֶת","our assembly"],
-    ["הַקֹּדֶשׁ","solemn,"],
+    ["אֶת־עֲצָרָתֵנוּ","our solemn assembly,"],
+    
     ["לְמַעַן","that"],
     ["תֵּעָשֶׂה","it may be done"],
     ["לִכְבוֹדְךָ","to thine honor"],
