@@ -6988,7 +6988,11 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "כבוד": {
-    "meaning": "glory",
+    "meaning": "weight, honor, respect (from כבד, to be heavy)",
+    "category": "Quality"
+  },
+  "כבד": {
+    "meaning": "to be heavy, weighty; to honor",
     "category": "Quality"
   },
   "גאות": {
