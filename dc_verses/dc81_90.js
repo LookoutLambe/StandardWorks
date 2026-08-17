@@ -992,8 +992,7 @@ var dc84_ch1Verses = [
     ["עִם","with"],
     ["הַכְּהֻנָּה","the priesthood"],
     ["אֲשֶׁר","which is"],
-    ["עַל","after"],
-    ["סֵדֶר","the order of"],
+    ["עַל־דִּבְרָתִי","after the order of"],
     ["אֱלֹהִים","God"],
     ["הַקָּדוֹשׁ","the holiest"],
     ["מִכֹּל׃","(of all)."]
