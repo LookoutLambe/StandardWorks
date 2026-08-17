@@ -1425,8 +1425,7 @@ var dc101_ch1Verses = [
     ["חֲכָמִים","wise men"],
     ["וּמוֹשְׁלִים","and rulers"],
     ["וְיֵדְעוּ","and know"],
-    ["אֵת","[that]"],
-    ["אֲשֶׁר","which"],
+    ["אֵת־אֲשֶׁר","which"],
     ["לֹא","not"],
     ["הִתְבּוֹנְנוּ","they have ... considered"],
     ["מֵעוֹלָם׃","never;"]
@@ -7436,8 +7435,7 @@ var dc110_ch1Verses = [
   ]},
   { num: "ב", words: [
     ["רָאִינוּ","We saw"],
-    ["אֶת","[acc.]"],
-    ["יְהוָה","the Lord"],
+    ["אֶת־יְהוָה","the Lord"],
     ["עֹמֵד","standing"],
     ["עַל","upon"],
     ["מַעֲקֵה","the breastwork of"],
@@ -7523,8 +7521,7 @@ var dc110_ch1Verses = [
     ["כִּי","For"],
     ["הִנֵּה","behold,"],
     ["קִבַּלְתִּי","I have accepted"],
-    ["אֶת","[acc.]"],
-    ["הַבַּיִת","house,"],
+    ["אֶת־הַבַּיִת","house,"],
     ["הַזֶּה","this"],
     ["וּשְׁמִי","and my name"],
     ["יִהְיֶה","shall be"],
@@ -7549,8 +7546,7 @@ var dc110_ch1Verses = [
     ["מִצְווֹתַי","my commandments,"],
     ["וְלֹא","and ... not"],
     ["יְחַלְּלוּ","do ... pollute"],
-    ["אֶת","[acc.]"],
-    ["בֵּית","house."],
+    ["אֶת־בֵּית","house."],
     ["הַקֹּדֶשׁ","holy"],
     ["הַזֶּה׃","this"]
   ]},
@@ -7693,8 +7689,7 @@ var dc110_ch1Verses = [
     ["פֶּן","lest"],
     ["אָבוֹא","[I come]"],
     ["וְהִכֵּיתִי","be smitten"],
-    ["אֶת","[acc.]"],
-    ["הָאָרֶץ","the whole earth"],
+    ["אֶת־הָאָרֶץ","the whole earth"],
     ["חֵרֶם׃","with a curse—"]
   ]},
   { num: "טז", words: [

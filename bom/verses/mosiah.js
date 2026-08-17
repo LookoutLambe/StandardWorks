@@ -893,7 +893,7 @@ var mo_ch12Verses = [
     ["פִּצְחוּ","break forth"],["רַנְּנוּ","sing"],["יַחְדָּו","sing together"],["חָרְבוֹת","you waste places of"],["יְרוּשָׁלִָם","Jerusalem"],["כִּי־נִחַם","for has comforted"],["יְהוָה","the Lord"],["עַמּוֹ","His people"],["גָּאַל","He has redeemed"],["יְרוּשָׁלִָם","Jerusalem"]
   ]},
   { num: "כד", words: [
-    ["חָשַׂף","has made bare"],["יְהוָה","the Lord"],["אֶת־זְרוֹעַ","the arm of"],["קׇדְשׁוֹ","His holiness"],["לְעֵינֵי","in the eyes of"],["כׇּל־הַגּוֹיִם","all the nations"],["וְרָאוּ","and shall see"],["כׇּל־אַפְסֵי־אָרֶץ","all the ends of the earth"],["אֵת",""],["יְשׁוּעַת","the salvation of"],["אֱלֹהֵינוּ","our God"]
+    ["חָשַׂף","has made bare"],["יְהוָה","the Lord"],["אֶת־זְרוֹעַ","the arm of"],["קׇדְשׁוֹ","His holiness"],["לְעֵינֵי","in the eyes of"],["כׇּל־הַגּוֹיִם","all the nations"],["וְרָאוּ","and shall see"],["כׇּל־אַפְסֵי־אָרֶץ","all the ends of the earth"],["אֵת־יְשׁוּעַת","the salvation of"],["אֱלֹהֵינוּ","our God"]
   ]},
   { num: "כה", words: [
     ["וַיֹּאמֶר","and said"],["אֲבִינָדִי","Abinadi"],["אֲלֵיהֶם","unto them"],["הֲכֹהֲנִים","priests"],["אַתֶּם","are you"],["וּמִתְיַמְּרִים","and pretend"],["לְהוֹרוֹת","to teach"],["אֶת־הָעָם הַזֶּה","this people"],["וּלְהָבִין","and to understand"],["רוּחַ","the spirit of"],["הַנְּבוּאָה","prophecy"],["וְעוֹד","and yet"],["תְּבַקְשׁוּ","you seek"],["לָדַעַת","to know"],["מִמֶּנִּי","from me"],["מָה","what"],["הֵמָּה","are"],["הַדְּבָרִים הָאֵלֶּה","these things"],["מֵאָן","whence"]
@@ -980,7 +980,7 @@ var mo_ch13Verses = [
     ["וְעֹשֶׂה","and showing"],["חֶסֶד","mercy"],["לַאֲלָפִים","unto thousands"],["לְאֹהֲבַי","of them that love Me"],["וּלְשֹׁמְרֵי","and to those who keep"],["מִצְוֹתָי","My commandments"]
   ]},
   { num: "טו", words: [
-    ["לֹא","you shall not"],["תִשָּׂא","take"],["אֶת־שֵׁם־יְהוָה","the name of the Lord"],["אֱלֹהֶיךָ","your God"],["לַשָּׁוְא","in vain"],["כִּי־לֹא","for will not"],["יְנַקֶּה","shall He hold guiltless"],["יְהוָה","the Lord"],["אֵת",""],["אֲשֶׁר־יִשָּׂא","him that takes"],["אֶת־שְׁמוֹ","His name"],["לַשָּׁוְא","in vain"]
+    ["לֹא","you shall not"],["תִשָּׂא","take"],["אֶת־שֵׁם־יְהוָה","the name of the Lord"],["אֱלֹהֶיךָ","your God"],["לַשָּׁוְא","in vain"],["כִּי־לֹא","for will not"],["יְנַקֶּה","shall He hold guiltless"],["יְהוָה","the Lord"],["אֵת־אֲשֶׁר־יִשָּׂא","him that takes"],["אֶת־שְׁמוֹ","His name"],["לַשָּׁוְא","in vain"]
   ]},
   { num: "טז", words: [
     ["זָכוֹר","remember"],["אֶת־יוֹם","the day"],["הַשַּׁבָּת","the sabbath"],["לְקַדְּשׁוֹ","to keep it holy"]
@@ -1061,7 +1061,7 @@ var mo_ch14Verses = [
     ["וְהוּא","but He"],["מְחֹלָל","was wounded"],["מִפְּשָׁעֵינוּ","for our transgressions"],["מְדֻכָּא","He was bruised"],["מֵעֲוֹנֹתֵינוּ","for our iniquities"],["מוּסַר","the chastisement of"],["שְׁלוֹמֵנוּ","our peace"],["עָלָיו","was upon Him"],["וּבַחֲבֻרָתוֹ","and with His stripes"],["נִרְפָּא","are healed"],["לָנוּ","unto us"]
   ]},
   { num: "ו", words: [
-    ["כֻּלָּנוּ","all we"],["כַּצֹּאן","like sheep"],["תָּעִינוּ","have gone astray"],["פָּנִינוּ","we have turned"],["אִישׁ","every one"],["לְדַרְכּוֹ","to his own way"],["וַיהוָה","and the Lord"],["הִפְגִּיעַ","has laid"],["בּוֹ","on Him"],["אֵת",""],["עֲוֹן","the iniquity of"],["כֻּלָּנוּ","us all"]
+    ["כֻּלָּנוּ","all we"],["כַּצֹּאן","like sheep"],["תָּעִינוּ","have gone astray"],["פָּנִינוּ","we have turned"],["אִישׁ","every one"],["לְדַרְכּוֹ","to his own way"],["וַיהוָה","and the Lord"],["הִפְגִּיעַ","has laid"],["בּוֹ","on Him"],["אֵת־עֲוֹן","the iniquity of"],["כֻּלָּנוּ","us all"]
   ]},
   { num: "ז", words: [
     ["נִגַּשׂ","He was oppressed"],["וְהוּא","and He was"],["נַעֲנֶה","was afflicted"],["וְלֹא","yet not"],["פָתַח","did He open"],["אֶת־פִּיהוּ","His mouth"],["מוּבָל","He is brought"],["כַּשֶּׂה","as a lamb"],["לַטֶּבַח","to the slaughter"],["וּכְרָחֵל","and as a sheep"],["לִפְנֵי","before"],["גֹזְזֶיהָ","her shearers"],["אִלֶּמֶת","is dumb"],["כֵּן","so"],["לֹא","not"],["פָתַח","did He open"],["אֶת־פִּיהוּ","His mouth"]
@@ -1076,7 +1076,7 @@ var mo_ch14Verses = [
     ["וַיהוָה","and the Lord"],["חָפֵץ","was pleased"],["לְדַכְּאוֹ","to bruise Him"],["נָתַן","He has put"],["אוֹתוֹ","Him"],["לְיָגוֹן","to grief"],["כִּי","that"],["תָּשִׂים","should put"],["נַפְשׁוֹ","His soul"],["אָשָׁם","an offering for sin"],["יִרְאֶה","He shall see"],["זֶרַע","His seed"],["יַאֲרִיךְ","shall He prolong"],["יָמִים","days"],["וְחֵפֶץ","and the pleasure of"],["יְהוָה","the Lord"],["בְּיָדוֹ","in His hand"],["יִצְלָח","shall prosper"]
   ]},
   { num: "יא", words: [
-    ["יִרְאֶה","He shall see"],["אֶת־עֲמַל","the travail of"],["נַפְשׁוֹ","His soul"],["וְיִשְׂבָּע","and shall be satisfied"],["בְּדַעְתּוֹ","by His knowledge"],["יַצְדִּיק","shall justify"],["עַבְדִּי","my servant"],["הַצַּדִּיק","righteous"],["רַבִּים","many"],["כִּי","for"],["יִסְבֹּל","He shall bear"],["אֶת",""],["עֲוֹנֹתָם","their iniquities"]
+    ["יִרְאֶה","He shall see"],["אֶת־עֲמַל","the travail of"],["נַפְשׁוֹ","His soul"],["וְיִשְׂבָּע","and shall be satisfied"],["בְּדַעְתּוֹ","by His knowledge"],["יַצְדִּיק","shall justify"],["עַבְדִּי","my servant"],["הַצַּדִּיק","righteous"],["רַבִּים","many"],["כִּי","for"],["יִסְבֹּל","He shall bear"],["אֶת־עֲוֹנֹתָם","their iniquities"]
   ]},
   { num: "יב", words: [
     ["לָכֵן","therefore"],["אֲחַלֶּק־לוֹ","will I divide unto Him"],["חֵלֶק","a portion"],["אֶת־הַגְּדוֹלִים","with the great"],["וִיְחַלֵּק","and He shall divide"],["שָׁלָל","the spoil"],["אֶת־הָעֲצוּמִים","with the strong"],["יַעַן","because"],["אֲשֶׁר","which"],["הֶעֱרָה","has poured out"],["לַמָּוֶת","unto death"],["נַפְשׁוֹ","His soul"],["וְאֶת־פֹּשְׁעִים","and with the transgressors"],["נִמְנָה","was He numbered"],["וְהוּא","and He"],["נָשָׂא","bore"],["חֵטְא","the sin of"],["רַבִּים","many"],["וַיַּפְגִּיעַ","and made intercession"],["לַפֹּשְׁעִים","for the transgressors"]
@@ -1169,13 +1169,13 @@ var mo_ch15Verses = [
     ["וְעַתָּה","and now"],["אֹמַר","I say"],["לָכֶם","unto you"],["כִּי","that"],["יָבוֹא","shall come"],["עֵת","a time"],["אֲשֶׁר","that"],["יְשׁוּעַת","the salvation of"],["יְהוָה","the Lord"],["תֻּגַּד","shall be declared"],["לְכׇל־גּוֹי","to every nation"],["וּמִשְׁפָּחָה","and kindred"],["וְלָשׁוֹן","and tongue"],["וָעָם","and people"]
   ]},
   { num: "כט", words: [
-    ["הֵן","yea"],["יְהוָה","Lord"],["צֹפַיִךְ","thy watchmen"],["יָרִימוּ","shall lift up"],["קוֹל","the voice"],["יַחְדָּו","together"],["יְרַנֵּנוּ","shall they sing"],["כִּי","for"],["עַיִן","eye"],["בְּעַיִן","to eye"],["יִרְאוּ","shall they see"],["בְּשׁוּב","when"],["יְהוָה","the Lord"],["אֶת",""],["צִיּוֹן","Zion"]
+    ["הֵן","yea"],["יְהוָה","Lord"],["צֹפַיִךְ","thy watchmen"],["יָרִימוּ","shall lift up"],["קוֹל","the voice"],["יַחְדָּו","together"],["יְרַנֵּנוּ","shall they sing"],["כִּי","for"],["עַיִן","eye"],["בְּעַיִן","to eye"],["יִרְאוּ","shall they see"],["בְּשׁוּב","when"],["יְהוָה","the Lord"],["אֶת־צִיּוֹן","Zion"]
   ]},
   { num: "ל", words: [
     ["פִּצְחוּ","break forth"],["רִנָּה","into joy"],["רַנְּנוּ","sing"],["יַחְדָּו","together"],["חָרְבוֹת","you waste places of"],["יְרוּשָׁלָיִם","Jerusalem"],["כִּי־נִחַם","for has comforted"],["יְהוָה","the Lord"],["עַמּוֹ","His people"],["גָּאַל","He has redeemed"],["יְרוּשָׁלָיִם","Jerusalem"]
   ]},
   { num: "לא", words: [
-    ["חָשַׂף","has made bare"],["יְהוָה","the Lord"],["אֶת־זְרוֹעַ","the arm of"],["קׇדְשׁוֹ","His holiness"],["לְעֵינֵי","in the eyes of"],["כׇל־הַגּוֹיִם","all the nations"],["וְרָאוּ","and shall see"],["כׇּל־אַפְסֵי־אָרֶץ","all the ends of the earth"],["אֵת",""],["יְשׁוּעַת","the salvation of"],["אֱלֹהֵינוּ","our God"]
+    ["חָשַׂף","has made bare"],["יְהוָה","the Lord"],["אֶת־זְרוֹעַ","the arm of"],["קׇדְשׁוֹ","His holiness"],["לְעֵינֵי","in the eyes of"],["כׇל־הַגּוֹיִם","all the nations"],["וְרָאוּ","and shall see"],["כׇּל־אַפְסֵי־אָרֶץ","all the ends of the earth"],["אֵת־יְשׁוּעַת","the salvation of"],["אֱלֹהֵינוּ","our God"]
   ]}
 ];
 renderVerseSet(mo_ch15Verses, 'mo-ch15-verses');

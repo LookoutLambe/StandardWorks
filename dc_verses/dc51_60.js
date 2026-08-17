@@ -22,8 +22,7 @@ var dc51_ch1Verses = [
     ["תּוֹרֹת","directions"],
     ["אֵיךְ","how"],
     ["לַעֲרֹךְ","to organize"],
-    ["אֶת",""],
-    ["הָעָם","the people"],
+    ["אֶת־הָעָם","the people"],
     ["הַזֶּה׃","this"]
   ]},
   { num: "ב", words: [
@@ -2313,8 +2312,7 @@ var dc58_ch1Verses = [
     ["עַל","upon"],
     ["לְבַבְכֶם","your heart"],
     ["וּתְקַבְּלוּ","and (may) receive"],
-    ["אֶת",""],
-    ["הַבָּא׃","that which is to come"]
+    ["אֶת־הַבָּא׃","that which is to come"]
   ]},
   { num: "ו", words: [
     ["הִנֵּה","behold"],
@@ -2712,8 +2710,7 @@ var dc58_ch1Verses = [
     ["יְהוָה","the Lord"],
     ["כִּי","that"],
     ["אֲנַקֶּה","I should hold guiltless"],
-    ["אֵת",""],
-    ["אֲשֶׁר","him who"],
+    ["אֵת־אֲשֶׁר","him who"],
     ["לֹא","not"],
     ["יִשְׁמַע","obeys"],
     ["מִצְוֹתָי׃","my commandments"]
@@ -3285,8 +3282,7 @@ var dc58_ch1Verses = [
     ["בְּרִיאָה","creature"],
     ["וְאֹתוֹת","and signs"],
     ["יִלְווּ","shall follow"],
-    ["אֶת",""],
-    ["הַמַּאֲמִינִים׃","them that believe"]
+    ["אֶת־הַמַּאֲמִינִים׃","them that believe"]
   ]},
   { num: "סה", words: [
     ["וְהִנֵּה","and behold"],
@@ -3380,8 +3376,7 @@ var dc59_ch1Verses = [
     ["לֵאמֹר","saying"],
     ["כֹּה","thus"],
     ["וְאָהַבְתָּ","thou shalt love"],
-    ["אֵת",""],
-    ["יְהוָה","the Lord"],
+    ["אֵת־יְהוָה","the Lord"],
     ["אֱלֹהֶיךָ","thy God"],
     ["בְּכׇל","with all"],
     ["לְבָבְךָ","thy heart"],
@@ -3643,8 +3638,7 @@ var dc59_ch1Verses = [
     ["דָּבָר","thing"],
     ["יַעֲצִיב","doth offend"],
     ["אָדָם","man"],
-    ["אֶת",""],
-    ["אֱלֹהִים","God"],
+    ["אֶת־אֱלֹהִים","God"],
     ["וְאֵין","and (is) no"],
     ["אֲשֶׁר","(against him) whom"],
     ["יִבְעַר","is kindled"],
@@ -3946,8 +3940,7 @@ var dc60_ch1Verses = [
     ["עִתְּךָ","thy time"],
     ["וְלֹא","and not"],
     ["תִטְמֹן","shalt thou bury"],
-    ["אֶת",""],
-    ["כִּשְׁרוֹנְךָ","thy talent"],
+    ["אֶת־כִּשְׁרוֹנְךָ","thy talent"],
     ["לְבַל","that not"],
     ["יִוָּדַע׃","(it) be known"]
   ]},

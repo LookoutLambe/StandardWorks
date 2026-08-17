@@ -131,7 +131,7 @@ var ms_ch1Verses = [
 renderVerseSet(ms_ch1Verses, 'ms-ch1-verses');
 var ms_ch2Verses = [
   { num: "א", words: [
-    ["וַיְהִי","And it came to pass"],["כִּי","that"],["דִּבֶּר","spake"],["יְהוָה","the Lord"],["אֶל־מֹשֶׁה","unto Moses,"],["לֵאמֹר","saying:"],["הִנֵּה","Behold,"],["אֲנִי","I"],["מְגַלֶּה","reveal"],["לְךָ","unto thee"],["עַל־הַשָּׁמַיִם","concerning heavens"],["הָאֵלֶּה","these,"],["וְעַל־הָאָרֶץ","and earth"],["הַזֹּאת","this;"],["כְּתֹב","write"],["אֶת־הַדְּבָרִים","the words"],["אֲשֶׁר","which"],["אֲדַבֵּר","I speak"],["אֵלֶיךָ","unto thee."],["׃",""],["אֲנִי","I am"],["הָרִאשׁוֹן","the Beginning"],["וַאֲנִי","and I am"],["הָאַחֲרוֹן","the End,"],["אֵל","God"],["שַׁדַּי","Almighty;"],["׃",""],["בִּבְנִי","by mine Only Begotten"],["יְחִידִי","Son"],["בָּרָאתִי","I created"],["אֶת־אֵלֶּה","these things;"],["אֵת","yea,"],["הַשָּׁמַיִם","the heavens"],["וּבְרֵאשִׁית","in the beginning"],["בָּרָאתִי","I created"],["אֶת־הַשָּׁמַיִם","the heaven"],["וְאֶת־הָאָרֶץ","and the earth"],["אֲשֶׁר","upon which"],["אַתָּה","thou"],["עֹמֵד","standest."],["עָלֶיהָ","upon it"],["׃",""]
+    ["וַיְהִי","And it came to pass"],["כִּי","that"],["דִּבֶּר","spake"],["יְהוָה","the Lord"],["אֶל־מֹשֶׁה","unto Moses,"],["לֵאמֹר","saying:"],["הִנֵּה","Behold,"],["אֲנִי","I"],["מְגַלֶּה","reveal"],["לְךָ","unto thee"],["עַל־הַשָּׁמַיִם","concerning heavens"],["הָאֵלֶּה","these,"],["וְעַל־הָאָרֶץ","and earth"],["הַזֹּאת","this;"],["כְּתֹב","write"],["אֶת־הַדְּבָרִים","the words"],["אֲשֶׁר","which"],["אֲדַבֵּר","I speak"],["אֵלֶיךָ","unto thee."],["׃",""],["אֲנִי","I am"],["הָרִאשׁוֹן","the Beginning"],["וַאֲנִי","and I am"],["הָאַחֲרוֹן","the End,"],["אֵל","God"],["שַׁדַּי","Almighty;"],["׃",""],["בִּבְנִי","by mine Only Begotten"],["יְחִידִי","Son"],["בָּרָאתִי","I created"],["אֶת־אֵלֶּה","these things;"],["אֵת־הַשָּׁמַיִם","the heavens"],["וּבְרֵאשִׁית","in the beginning"],["בָּרָאתִי","I created"],["אֶת־הַשָּׁמַיִם","the heaven"],["וְאֶת־הָאָרֶץ","and the earth"],["אֲשֶׁר","upon which"],["אַתָּה","thou"],["עֹמֵד","standest."],["עָלֶיהָ","upon it"],["׃",""]
   ]},
   { num: "ב", words: [
     ["וְהָאָרֶץ","And the earth"],["הָיְתָה","was"],["תֹהוּ","without form,"],["וָבֹהוּ","and void;"],["וַאֲנִי","and I,"],["אֱלֹהִים","God,"],["הֵבֵאתִי","caused"],["חֹשֶׁךְ","darkness"],["עַל־פְּנֵי","to come up upon the face of"],["תְהוֹם","the deep;"],["וְרוּחִי","and my Spirit"],["מְרַחֶפֶת","moved"],["עַל־פְּנֵי","upon the face of"],["הַמָּיִם","the water."],["׃",""]
@@ -257,13 +257,13 @@ var ms_ch3Verses = [
     ["וְנָהָר","And a river"],["יֹצֵא","went out"],["מֵעֵדֶן","of Eden"],["לְהַשְׁקוֹת","to water"],["אֶת־הַגָּן","the garden,"],["וּמִשָּׁם","and from thence"],["יִפָּרֵד","it was parted,"],["וְהָיָה","and became"],["לְאַרְבָּעָה","into four"],["רָאשִׁים","heads."],["׃",""]
   ]},
   { num: "יא", words: [
-    ["שֵׁם","The name of"],["הָאֶחָד","the first"],["פִּישׁוֹן","is Pison;"],["הוּא","that"],["הַסֹּבֵב","is it which compasseth"],["אֵת",""],["כׇּל־אֶרֶץ","the whole land of"],["הַחֲוִילָה","Havilah,"],["אֲשֶׁר־שָׁם","where there is"],["הַזָּהָב","gold;"],["׃",""]
+    ["שֵׁם","The name of"],["הָאֶחָד","the first"],["פִּישׁוֹן","is Pison;"],["הוּא","that"],["הַסֹּבֵב","is it which compasseth"],["אֵת־כׇּל־אֶרֶץ","the whole land of"],["הַחֲוִילָה","Havilah,"],["אֲשֶׁר־שָׁם","where there is"],["הַזָּהָב","gold;"],["׃",""]
   ]},
   { num: "יב", words: [
     ["וּזְהַב","And the gold of"],["הָאָרֶץ","the land"],["הַהִוא","that"],["טוֹב","is good;"],["שָׁם","there is"],["הַבְּדֹלַח","bdellium,"],["וְאֶבֶן","and stone of"],["הַשֹּׁהַם","onyx."],["׃",""]
   ]},
   { num: "יג", words: [
-    ["וְשֵׁם","And the name of"],["הַנָּהָר","the river"],["הַשֵּׁנִי","second"],["גִּיחוֹן","is Gihon;"],["הוּא","the same"],["הַסֹּבֵב","is it that compasseth"],["אֵת",""],["כׇּל־אֶרֶץ","the whole land of"],["כּוּשׁ","Ethiopia."],["׃",""]
+    ["וְשֵׁם","And the name of"],["הַנָּהָר","the river"],["הַשֵּׁנִי","second"],["גִּיחוֹן","is Gihon;"],["הוּא","the same"],["הַסֹּבֵב","is it that compasseth"],["אֵת־כׇּל־אֶרֶץ","the whole land of"],["כּוּשׁ","Ethiopia."],["׃",""]
   ]},
   { num: "יד", words: [
     ["וְשֵׁם","And the name of"],["הַנָּהָר","the river"],["הַשְּׁלִישִׁי","third"],["חִדֶּקֶל","is Hiddekel;"],["הוּא","that"],["הַהֹלֵךְ","is it which goeth toward"],["קִדְמַת","the east of"],["אַשּׁוּר","Assyria."],["וְהַנָּהָר","And the river"],["הָרְבִיעִי","fourth"],["הוּא","that"],["פְרָת","is Euphrates."],["׃",""]

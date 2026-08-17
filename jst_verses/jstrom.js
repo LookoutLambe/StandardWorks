@@ -4,8 +4,8 @@
 // === CH1: JST Romans 3:5–8 ===
 // A person cannot do evil to bring about good.
 var jstrom_ch1Verses = [
-  { num:"ה", words:[["אַךְ","but"],["אִם","if"],["נִשְׁאַר","we-remain"],["בְּעַוְלָתֵנוּ","in-our-unrighteousness"],["וּמְשַׁבְּחִים","and-commend"],["אֶת",""],["צִדְקַת","the-righteousness-of"],["אֱלֹהִים","God"],["אֵיךְ","how-dare"],["נֵעֵז","we-say"],["לוֹמַר","[say]"],["אֱלֹהִים","God-is"],["עַוָּל","unrighteous"],["הַנּוֹקֵם","the-who-taketh-vengeance"],["אֲדַבֵּר","I-speak"],["כְּאָדָם","as-a-man"],["הַיָּרֵא","the-who-feareth"],["אֱלֹהִים","God"],["׃",""]] },
-  { num:"ו", words:[["חָלִילָה","God-forbid"],["כִּי","for"],["אָז","then"],["אֵיךְ","how"],["יִשְׁפֹּט","shall-judge"],["אֱלֹהִים","God"],["אֶת",""],["הָעוֹלָם","the-world"],["׃",""]] },
+  { num:"ה", words:[["אַךְ","but"],["אִם","if"],["נִשְׁאַר","we-remain"],["בְּעַוְלָתֵנוּ","in-our-unrighteousness"],["וּמְשַׁבְּחִים","and-commend"],["אֶת־צִדְקַת","the-righteousness-of"],["אֱלֹהִים","God"],["אֵיךְ","how-dare"],["נֵעֵז","we-say"],["לוֹמַר","[say]"],["אֱלֹהִים","God-is"],["עַוָּל","unrighteous"],["הַנּוֹקֵם","the-who-taketh-vengeance"],["אֲדַבֵּר","I-speak"],["כְּאָדָם","as-a-man"],["הַיָּרֵא","the-who-feareth"],["אֱלֹהִים","God"],["׃",""]] },
+  { num:"ו", words:[["חָלִילָה","God-forbid"],["כִּי","for"],["אָז","then"],["אֵיךְ","how"],["יִשְׁפֹּט","shall-judge"],["אֱלֹהִים","God"],["אֶת־הָעוֹלָם","the-world"],["׃",""]] },
   { num:"ז", words:[["כִּי","for"],["אִם","if"],["אֱמֶת","the-truth-of"],["אֱלֹהִים","God"],["הִרְבְּתָה","hath-more-abounded"],["עַל","through"],["יְדֵי","my"],["שִׁקְרִי","lie"],["כִּנְקָרָא","as-it-is-called"],["עַל","of"],["יְדֵי","the"],["הַיְּהוּדִים","the-Jews"],["לִכְבוֹדוֹ","unto-his-glory"],["מַדּוּעַ","why-yet"],["עוֹד","am-I-also"],["נִשְׁפָּט","judged"],["אֲנִי","as"],["כְּחוֹטֵא","a-sinner"],["וְלֹא","and-not"],["מִתְקַבֵּל","received"],["כִּי","because"],["מוֹצִיאִים","we-are-slanderously"],["עָלֵינוּ","reported"],["דִּבָּה","[reported]"],["׃",""]] },
   { num:"ח", words:[["וּמִקְצָתָם","and-some"],["מַאֲשִׁימִים","affirm"],["כִּי","that"],["אוֹמְרִים","we-say"],["אֲנַחְנוּ","[we]"],["אֲשֶׁר","which"],["דִּינָם","damnation"],["צוֹדֵק","is-just"],["נַעֲשֶׂה","let-us-do"],["רָע","evil"],["לְמַעַן","that"],["יָבוֹא","may-come"],["טוֹב","good"],["אַךְ","but"],["זֶה","this-is"],["שֶׁקֶר","false"],["׃",""]] }
 ];
@@ -17,7 +17,7 @@ var jstrom_ch2Verses = [
   { num:"ב", words:[["כִּי","for"],["אִם","if"],["אַבְרָהָם","Abraham"],["הֻצְדַּק","were-justified"],["עַל","by"],["פִּי","the-law-of"],["מַעֲשִׂים","works"],["יֵשׁ","he-hath"],["לוֹ","to-glory"],["לְהִתְפָּאֵר","in-himself"],["בְּעַצְמוֹ","but"],["אַךְ","not-of"],["לֹא","God"],["מֵאֱלֹהִים","[God]"],["׃",""]] },
   { num:"ג", words:[["כִּי","for"],["מַה","what"],["אוֹמֵר","saith"],["הַכָּתוּב","the-scripture"],["הֶאֱמִין","believed"],["אַבְרָהָם","Abraham"],["בֵּאלֹהִים","God"],["וַיֵּחָשֵׁב","and-it-was-counted"],["לוֹ","unto-him"],["לִצְדָקָה","for-righteousness"],["׃",""]] },
   { num:"ד", words:[["וְלַעוֹשֶׂה","now-to-him-that-worketh"],["מַעֲשִׂים","[works]"],["הַשָּׂכָר","is-the-reward"],["אֵינוֹ","not-reckoned"],["נֶחְשָׁב","of"],["מִחֶסֶד","grace"],["כִּי","but"],["אִם","of"],["מִחוֹב","debt"],["׃",""]] },
-  { num:"ה", words:[["אַךְ","but"],["לְמִי","to-him-that"],["שֶׁלֹּא","seeketh-not"],["מְבַקֵּשׁ","to-be-justified"],["לְהִצָּדֵק","by"],["עַל","the-law-of"],["פִּי","works"],["מַעֲשִׂים","but"],["אֶלָּא","believeth"],["מַאֲמִין","on"],["בְּמִי","him"],["שֶׁמַּצְדִּיק","who-justifieth-not"],["אֶת","the-ungodly"],["הָרָשָׁע","the-his-faith"],["אֱמוּנָתוֹ","is-counted"],["נֶחְשֶׁבֶת","for"],["לוֹ","righteousness"],["לִצְדָקָה","[righteousness]"],["׃",""]] }
+  { num:"ה", words:[["אַךְ","but"],["לְמִי","to-him-that"],["שֶׁלֹּא","seeketh-not"],["מְבַקֵּשׁ","to-be-justified"],["לְהִצָּדֵק","by"],["עַל","the-law-of"],["פִּי","works"],["מַעֲשִׂים","but"],["אֶלָּא","believeth"],["מַאֲמִין","on"],["בְּמִי","him"],["שֶׁמַּצְדִּיק","who-justifieth-not"],["אֶת־הָרָשָׁע","the-his-faith"],["אֱמוּנָתוֹ","is-counted"],["נֶחְשֶׁבֶת","for"],["לוֹ","righteousness"],["לִצְדָקָה","[righteousness]"],["׃",""]] }
 ];
 renderVerseSet(jstrom_ch2Verses, 'jstrom-ch2-verses');
 
@@ -30,14 +30,14 @@ var jstrom_ch3Verses = [
   { num:"ז", words:[["מָה","what"],["נֹאמַר","shall-we-say"],["אֵפוֹא","then"],["הֲהַתּוֹרָה","is-the-law"],["חֵטְא","sin"],["חָלִילָה","God-forbid"],["לֹא","nay"],["יָדַעְתִּי","I-had-not-known"],["חֵטְא","sin"],["אֶלָּא","but"],["עַל","by"],["יְדֵי","the"],["הַתּוֹרָה","the-law"],["כִּי","for"],["לֹא","I-had-not-known"],["יָדַעְתִּי","lust"],["תַּאֲוָה","except"],["לוּלֵא","the-law"],["הַתּוֹרָה","the-had-said"],["אָמְרָה","thou-shalt-not"],["לֹא","covet"],["תַחְמֹד","[covet]"],["׃",""]] },
   { num:"ט", words:[["כִּי","for"],["פַּעַם","once"],["הָיִיתִי","I-was"],["חַי","alive"],["בְּלִי","without"],["עֲבֵרַת","transgression-of"],["הַתּוֹרָה","the-law"],["אַךְ","but"],["כַּאֲשֶׁר","when"],["בָּאָה","came"],["מִצְוַת","the-commandment-of"],["הַמָּשִׁיחַ","the-Christ"],["חָיָה","revived"],["הַחֵטְא","the-sin"],["וָאָמוּת","and-I-died"],["אֲנִי","[I]"],["׃",""]] },
   { num:"כד", words:[["אוֹי","O"],["לִי","wretched"],["אִישׁ","man"],["אֻמְלָל","that-I-am"],["מִי","who"],["יַצִּילֵנִי","shall-deliver-me"],["מִגּוּף","from-the-body-of"],["הַמָּוֶת","the-this-death"],["הַזֶּה","[this]"],["׃",""]] },
-  { num:"כה", words:[["מוֹדֶה","I-thank"],["אֲנִי","[I]"],["לֵאלֹהִים","God"],["עַל","through"],["יְדֵי","[by]"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׁיחַ","the-Christ"],["אֲדוֹנֵינוּ","our-Lord"],["אֵפוֹא","so-then"],["בַּשֵּׂכֶל","with-the-mind"],["אֲנִי","I-myself"],["עַצְמִי","serve"],["מְשָׁרֵת","the-law-of"],["אֶת","God"],["תּוֹרַת","but"],["אֱלֹהִים","with-the-flesh"],["אַךְ","the-law-of"],["בַּבָּשָׂר","the-sin"],["תּוֹרַת","[sin]"],["הַחֵטְא","the-[sin]"],["׃",""]] }
+  { num:"כה", words:[["מוֹדֶה","I-thank"],["אֲנִי","[I]"],["לֵאלֹהִים","God"],["עַל","through"],["יְדֵי","[by]"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׁיחַ","the-Christ"],["אֲדוֹנֵינוּ","our-Lord"],["אֵפוֹא","so-then"],["בַּשֵּׂכֶל","with-the-mind"],["אֲנִי","I-myself"],["עַצְמִי","serve"],["מְשָׁרֵת","the-law-of"],["אֶת־תּוֹרַת","but"],["אֱלֹהִים","with-the-flesh"],["אַךְ","the-law-of"],["בַּבָּשָׂר","the-sin"],["תּוֹרַת","[sin]"],["הַחֵטְא","the-[sin]"],["׃",""]] }
 ];
 renderVerseSet(jstrom_ch3Verses, 'jstrom-ch3-verses');
 
 // === CH4: JST Romans 8:8 ===
 // Those who follow after the flesh cannot please God.
 var jstrom_ch4Verses = [
-  { num:"ח", words:[["וְכֵן","so-then"],["הַהוֹלְכִים","they-that"],["אַחֲרֵי","follow-after"],["הַבָּשָׂר","the-flesh"],["אֵינָם","cannot"],["יְכוֹלִים","please"],["לְרַצּוֹת","[please]"],["אֶת",""],["אֱלֹהִים","God"],["אַךְ","but"],["הַהוֹלְכִים","they-that"],["אַחֲרֵי","follow-after"],["הָרוּחַ","the-Spirit"],["בִּדְבָרִים","in-things-of"],["הָרוּחַ","the-Spirit"],["׃",""]] }
+  { num:"ח", words:[["וְכֵן","so-then"],["הַהוֹלְכִים","they-that"],["אַחֲרֵי","follow-after"],["הַבָּשָׂר","the-flesh"],["אֵינָם","cannot"],["יְכוֹלִים","please"],["לְרַצּוֹת","[please]"],["אֶת־אֱלֹהִים","God"],["אַךְ","but"],["הַהוֹלְכִים","they-that"],["אַחֲרֵי","follow-after"],["הָרוּחַ","the-Spirit"],["בִּדְבָרִים","in-things-of"],["הָרוּחַ","the-Spirit"],["׃",""]] }
 ];
 renderVerseSet(jstrom_ch4Verses, 'jstrom-ch4-verses');
 
