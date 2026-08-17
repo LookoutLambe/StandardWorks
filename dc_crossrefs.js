@@ -52134,6 +52134,15 @@ window._dcCrossrefsData = {
     "60:13"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "fill up the measure of their iniquities",
+   "refs": [
+    "Gen. 15:16",
+    "Matt. 23:32"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|103|4": [
@@ -52230,6 +52239,15 @@ window._dcCrossrefsData = {
     "D&C 38:20"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "kingdoms of the world",
+   "refs": [
+    "Dan. 7:27 (18, 27)",
+    "Rev. 11:15"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|103|8": [
@@ -52267,6 +52285,23 @@ window._dcCrossrefsData = {
     "Obad. 1:21"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "a light unto the world",
+   "refs": [
+    "Isa. 49:6",
+    "Matt. 5:14"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "saviors of men",
+   "refs": [
+    "Obad. 1:21"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|103|10": [
@@ -52277,6 +52312,14 @@ window._dcCrossrefsData = {
     "Matt. 5:13",
     "D&C 101:39 (39–41)",
     "TG Salt"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "salt which has lost its savor",
+   "refs": [
+    "Matt. 5:13"
    ],
    "category": "cross-ref"
   }
@@ -52299,6 +52342,14 @@ window._dcCrossrefsData = {
     "D&C 84:3 (2–5)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "waste places of Zion",
+   "refs": [
+    "Isa. 52:9"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|103|12": [
@@ -52313,6 +52364,14 @@ window._dcCrossrefsData = {
     "112:13",
     "TG Probation",
     "Test"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "after tribulation cometh the blessing",
+   "refs": [
+    "D&C 58:4 (3–4)"
    ],
    "category": "cross-ref"
   }
@@ -52337,6 +52396,15 @@ window._dcCrossrefsData = {
     "Mosiah 7:19",
     "Alma 36:28",
     "D&C 107:91 (91–92)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "like as Moses led",
+   "refs": [
+    "Ex. 3:10 (7–10)",
+    "Deut. 18:15"
    ],
    "category": "cross-ref"
   }
@@ -52366,6 +52434,15 @@ window._dcCrossrefsData = {
     "TG Bondage, Physical"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "stretched-out arm",
+   "refs": [
+    "Deut. 4:34",
+    "Ex. 6:6"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|103|18": [
@@ -52395,6 +52472,14 @@ window._dcCrossrefsData = {
     "D&C 84:24 (23–28)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "let not your hearts faint",
+   "refs": [
+    "Deut. 20:3"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|103|20": [
@@ -52419,6 +52504,15 @@ window._dcCrossrefsData = {
    "text": "possess",
    "refs": [
     "D&C 100:13"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "mine angel shall go before you",
+   "refs": [
+    "Ex. 23:20 (20–23)",
+    "Ex. 33:14 (14–15)"
    ],
    "category": "cross-ref"
   }
@@ -52501,6 +52595,14 @@ window._dcCrossrefsData = {
     "105:30 (15, 30)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "third and fourth generation",
+   "refs": [
+    "Ex. 20:5"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|103|27": [
@@ -52522,6 +52624,15 @@ window._dcCrossrefsData = {
     "124:54"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "layeth down his life",
+   "refs": [
+    "Matt. 10:39",
+    "Matt. 16:25"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|103|30": [
@@ -52532,6 +52643,14 @@ window._dcCrossrefsData = {
     "D&C 101:55"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "by tens, twenties, fifties",
+   "refs": [
+    "Ex. 18:21 (21, 25)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|103|31": [
@@ -52540,6 +52659,15 @@ window._dcCrossrefsData = {
    "text": "not",
    "refs": [
     "D&C 82:10"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "ask and ye shall receive",
+   "refs": [
+    "Matt. 7:7",
+    "John 16:24"
    ],
    "category": "cross-ref"
   }
