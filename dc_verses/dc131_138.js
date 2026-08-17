@@ -3497,7 +3497,7 @@ var dc134_ch1Verses = [
     ["שֶׁהַדִּין","provided that"],
     ["יִהְיֶה","such dealings be"],
     ["עַל","for"],
-    ["חֲבֵרוּת","fellowship"],
+    ["חֶבְרָה","fellowship"],
     ["וְעַל","and for"],
     ["מַעֲמָד","standing"],
     ["טוֹב","and good"],

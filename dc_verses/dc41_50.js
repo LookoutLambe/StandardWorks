@@ -1364,7 +1364,7 @@ var dc42_ch1Verses = [
     ["בָּכֶם","among you"],
     ["אֲשֶׁר",""],
     ["גֵּרֵשׁ","having put away"],
-    ["אֶת־חֲבֶרְתּוֹ","their companions"],
+    ["אֶת־חֲבֶרְתּוֹ","his companion (wife)"],
     ["בִּגְלַל","for the cause of"],
     ["זְנוּת","fornication"],
     ["אוֹ","or"],
