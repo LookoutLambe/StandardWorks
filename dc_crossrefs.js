@@ -42582,6 +42582,15 @@ window._dcCrossrefsData = {
     "132:19 (19, 26, 49)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "another Comforter",
+   "refs": [
+    "John 14:16 (16–26)",
+    "Eph. 1:13"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|88|4": [
@@ -42657,6 +42666,14 @@ window._dcCrossrefsData = {
     "Truth"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "descended below all things",
+   "refs": [
+    "Eph. 4:10 (8–10)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|88|7": [
@@ -42720,6 +42737,14 @@ window._dcCrossrefsData = {
    "refs": [
     "Ps. 139:7 (7–12)",
     "Jer. 23:24"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "immensity of space",
+   "refs": [
+    "Job 5:9"
    ],
    "category": "cross-ref"
   }
@@ -42862,6 +42887,15 @@ window._dcCrossrefsData = {
     "TG Earth, Destiny of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "e",
+   "text": "meek shall inherit the earth",
+   "refs": [
+    "Ps. 37:11",
+    "Matt. 5:5"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|88|18": [
@@ -43146,6 +43180,14 @@ window._dcCrossrefsData = {
     "101:31"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "spiritual body",
+   "refs": [
+    "1 Cor. 15:44 (42–44)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|88|29": [
@@ -43278,6 +43320,14 @@ window._dcCrossrefsData = {
     "Alma 7:21",
     "Morm. 9:14",
     "TG Filthiness"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "filthy still",
+   "refs": [
+    "Rev. 22:11"
    ],
    "category": "cross-ref"
   }
@@ -43423,6 +43473,14 @@ window._dcCrossrefsData = {
     "God, Perfection of"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "round about",
+   "refs": [
+    "Acts 17:28 (24–28)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|88|42": [
@@ -43491,6 +43549,14 @@ window._dcCrossrefsData = {
    "text": "power",
    "refs": [
     "D&C 88:13 (7–13)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "wings",
+   "refs": [
+    "Ps. 104:19 (19–23)"
    ],
    "category": "cross-ref"
   }
@@ -43562,6 +43628,14 @@ window._dcCrossrefsData = {
     "D&C 93:28",
     "101:32 (32–34)",
     "TG Revelation"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "light shineth in darkness",
+   "refs": [
+    "John 1:5"
    ],
    "category": "cross-ref"
   }
@@ -43707,6 +43781,23 @@ window._dcCrossrefsData = {
     "49:26"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "draw near unto me",
+   "refs": [
+    "James 4:8",
+    "Jer. 29:13 (12–14)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "knock",
+   "refs": [
+    "Matt. 7:7 (7–8)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|88|64": [
@@ -43810,6 +43901,14 @@ window._dcCrossrefsData = {
     "TG Discernment, Spiritual"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "eye be single",
+   "refs": [
+    "Matt. 6:22 (22–23)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|88|68": [
@@ -43889,6 +43988,8 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "solemn assembly",
    "refs": [
+    "Joel 1:14",
+    "Joel 2:15",
     "D&C 88:117 (117–19)",
     "124:39",
     "TG Solemn Assembly"
@@ -44223,6 +44324,14 @@ window._dcCrossrefsData = {
     "TG Seal"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "bind up the law",
+   "refs": [
+    "Isa. 8:16"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|88|85": [
@@ -44273,6 +44382,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "liberty",
    "refs": [
+    "Gal. 5:1",
     "1 Cor. 7:22",
     "Mosiah 5:8",
     "TG Liberty"
@@ -44375,6 +44485,24 @@ window._dcCrossrefsData = {
     "Rev. 8:12"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "sun shall hide his face",
+   "refs": [
+    "Isa. 13:10",
+    "Joel 2:31 (30–31)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "h",
+   "text": "fig tree",
+   "refs": [
+    "Rev. 6:13",
+    "Isa. 34:4"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|88|88": [
@@ -44431,6 +44559,14 @@ window._dcCrossrefsData = {
     "Last Days"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "hearts shall fail",
+   "refs": [
+    "Luke 21:26"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|88|92": [
@@ -44456,6 +44592,7 @@ window._dcCrossrefsData = {
    "marker": "c",
    "text": "Bridegroom",
    "refs": [
+    "Matt. 25:6 (1–13)",
     "Matt. 25:6",
     "D&C 33:17",
     "133:19 (10, 19)"
@@ -44550,6 +44687,7 @@ window._dcCrossrefsData = {
    "marker": "c",
    "text": "scroll",
    "refs": [
+    "Isa. 34:4",
     "Rev. 6:14"
    ],
    "category": "cross-ref"
@@ -44561,6 +44699,14 @@ window._dcCrossrefsData = {
     "TG Jesus Christ, Second Coming"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "e",
+   "text": "silence in heaven",
+   "refs": [
+    "Rev. 8:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|88|96": [
@@ -44568,6 +44714,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "caught up",
    "refs": [
+    "1 Thes. 4:17 (16–17)",
     "1 Thes. 4:16 (16–17)",
     "D&C 76:102",
     "84:100",
@@ -44603,6 +44750,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "first fruits",
    "refs": [
+    "1 Cor. 15:23 (20–23)",
     "1 Cor. 15:23 (1–58)"
    ],
    "category": "cross-ref"
@@ -44621,6 +44769,8 @@ window._dcCrossrefsData = {
    "marker": "b",
    "text": "prison",
    "refs": [
+    "1 Pet. 4:6",
+    "1 Pet. 3:19",
     "D&C 76:73 (71–74)",
     "138:8",
     "Moses 7:57",
@@ -44675,6 +44825,14 @@ window._dcCrossrefsData = {
     "TG Millennium"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "rest of the dead",
+   "refs": [
+    "Rev. 20:5"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|88|102": [
@@ -44743,6 +44901,15 @@ window._dcCrossrefsData = {
     "Heb. 1:8"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "every knee shall bow",
+   "refs": [
+    "Isa. 45:23",
+    "Philip. 2:10"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|88|105": [
@@ -44752,6 +44919,15 @@ window._dcCrossrefsData = {
    "refs": [
     "Rev. 14:8",
     "D&C 1:16"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "she is fallen",
+   "refs": [
+    "Rev. 14:8",
+    "Rev. 18:2"
    ],
    "category": "cross-ref"
   }
@@ -44782,6 +44958,15 @@ window._dcCrossrefsData = {
     "19:15",
     "D&C 76:107",
     "133:50 (46–53)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "trodden the wine-press",
+   "refs": [
+    "Isa. 63:3",
+    "Rev. 19:15"
    ],
    "category": "cross-ref"
   }
@@ -44895,6 +45080,22 @@ window._dcCrossrefsData = {
     "TG Millennium"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "f",
+   "text": "time no longer",
+   "refs": [
+    "Rev. 10:6"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "Satan shall be bound",
+   "refs": [
+    "Rev. 20:2 (1–3)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|88|111": [
@@ -44918,6 +45119,15 @@ window._dcCrossrefsData = {
     "TG Adam"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "Michael",
+   "refs": [
+    "Rev. 12:7 (7–9)",
+    "Jude 1:9"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|88|113": [
@@ -45046,6 +45256,14 @@ window._dcCrossrefsData = {
     "109:7 (7, 14)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "best books",
+   "refs": [
+    "D&C 109:7 (7, 14)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|88|119": [
@@ -45068,6 +45286,14 @@ window._dcCrossrefsData = {
     "109:8 (2–9)",
     "115:8",
     "TG Temple"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "house of God",
+   "refs": [
+    "D&C 109:8"
    ],
    "category": "cross-ref"
   }
@@ -45165,6 +45391,14 @@ window._dcCrossrefsData = {
     "TG Covet"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "love one another",
+   "refs": [
+    "John 13:34 (34–35)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|88|124": [
@@ -45230,6 +45464,14 @@ window._dcCrossrefsData = {
     "Peacemakers"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "bond of perfectness",
+   "refs": [
+    "Col. 3:14"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|88|126": [
@@ -45384,6 +45626,14 @@ window._dcCrossrefsData = {
     "Worship"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "utterance",
+   "refs": [
+    "Acts 2:4"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|88|138": [
@@ -45419,6 +45669,14 @@ window._dcCrossrefsData = {
   {
    "marker": "b",
    "text": "pattern",
+   "refs": [
+    "John 13:5 (4–17)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "washing of feet",
    "refs": [
     "John 13:5 (4–17)"
    ],
