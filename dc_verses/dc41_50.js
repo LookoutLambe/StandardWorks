@@ -453,7 +453,7 @@ var dc42_ch1Verses = [
     ["וְהַכֹּהֲנִים","and the priests"],
     ["וְהַמּוֹרִים","and teachers"],
     ["יְלַמְּדוּ","shall teach"],
-    ["יְסוֹדֵי","the principles of"],
+    ["עִקְּרֵי","the principles of"],
     ["בְּשׂוֹרָתִי","my gospel"],
     ["הַכְּתוּבִים","which are written"],
     ["בַּמִּקְרָא","in the Bible"],
@@ -803,10 +803,10 @@ var dc42_ch1Verses = [
     ["כַּאֲשֶׁר","as"],
     ["יְמֻנֶּה","shall be appointed"],
     ["בְּיַד","by"],
-    ["סוֹד","the high council of"],
+    ["סַנְהֶדְרִין","the high council of"],
     ["הַזְּקֵנִים","the church"],
     ["וְהַפָּקִיד","and the bishop"],
-    ["וְסוֹדוֹ׃","and his council"]
+    ["וְסַנְהֶדְרִינוֹ׃","and his council"]
   ]},
   { num: "לה", words: [
     ["וּלְחֵפֶץ","and for the purpose of"],

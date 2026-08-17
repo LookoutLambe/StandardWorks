@@ -4802,7 +4802,7 @@ var dc88_ch1Verses = [
     ["הֵיטֵב","more perfectly"],
     
     ["בְּלֶקַח","in theory (teaching)"],
-    ["בִּיסוֹד","in principle"],
+    ["בְּעִקָּר","in principle"],
     ["בְּתוֹרָה","in doctrine"],
     ["בְּחֻקַּת","in the law of"],
     ["הַבְּשׂוֹרָה","the gospel"],
@@ -6218,7 +6218,7 @@ var dc89_ch1Verses = [
   ]},
   { num: "ג", words: [
     ["נִתָּן","Given"],
-    ["כִּיסוֹד","for a principle"],
+    ["כְּעִקָּר","for a principle"],
     ["עִם","with"],
     ["הַבְטָחָה","promise"],
     ["נָכוֹן","adapted"],
