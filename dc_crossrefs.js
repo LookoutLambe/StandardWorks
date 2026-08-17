@@ -59200,7 +59200,8 @@ window._dcCrossrefsData = {
    "text": "Stem of Jesse",
    "refs": [
     "Isa. 11:1 (1–5)",
-    "TG Jesus Christ, Davidic Descent of"
+    "TG Jesus Christ, Davidic Descent of",
+    "2 Ne. 21:1 (1–5)"
    ],
    "category": "cross-ref"
   }
@@ -59210,7 +59211,9 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "rod",
    "refs": [
-    "Ps. 110:2 (1–4)"
+    "Ps. 110:2 (1–4)",
+    "Isa. 11:1",
+    "2 Ne. 21:1"
    ],
    "category": "cross-ref"
   }
@@ -59233,6 +59236,15 @@ window._dcCrossrefsData = {
     "D&C 110:16 (11–16)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "laid upon him",
+   "refs": [
+    "Jer. 22:28",
+    "D&C 86:8 (8–11)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|113|5": [
@@ -59240,7 +59252,9 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "root of Jesse",
    "refs": [
-    "2 Ne. 21:10 (10–12)"
+    "2 Ne. 21:10 (10–12)",
+    "Isa. 11:10",
+    "2 Ne. 21:10"
    ],
    "category": "cross-ref"
   }
@@ -59277,7 +59291,9 @@ window._dcCrossrefsData = {
    "refs": [
     "Isa. 30:17",
     "D&C 45:9",
-    "TG Ensign"
+    "TG Ensign",
+    "Isa. 11:12 (10, 12)",
+    "5:26"
    ],
    "category": "cross-ref"
   },
@@ -59289,6 +59305,25 @@ window._dcCrossrefsData = {
     "Last Days"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "f",
+   "text": "rightly belongs",
+   "refs": [
+    "Deut. 21:17",
+    "Jer. 32:8 (7–8)",
+    "Abr. 1:2 (2–4)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "last days",
+   "refs": [
+    "Isa. 2:2",
+    "Micah 4:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|113|8": [
@@ -59355,6 +59390,33 @@ window._dcCrossrefsData = {
     "TG Birthright"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "h",
+   "text": "authority",
+   "refs": [
+    "Isa. 52:1",
+    "D&C 107:8 (8–9)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "i",
+   "text": "lineage",
+   "refs": [
+    "Neh. 7:5",
+    "Ezra 2:62",
+    "Abr. 2:11 (9–11)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "j",
+   "text": "was lost",
+   "refs": [
+    "1 Sam. 9:3 (3, 20)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|113|10": [
@@ -59390,6 +59452,42 @@ window._dcCrossrefsData = {
    "refs": [
     "Isa. 52:2 (2, 6–8)",
     "TG Bondage, Spiritual"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "exhorted to return",
+   "refs": [
+    "Ezek. 3:21 (17–21)",
+    "Deut. 30:2 (1–3)",
+    "Isa. 52:2 (1–3)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "speak to them",
+   "refs": [
+    "Isa. 52:6 (6–8)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "curses",
+   "refs": [
+    "Deut. 28:15 (15–68)",
+    "2 Ne. 6:11 (10–11)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "h",
+   "text": "scattered",
+   "refs": [
+    "Isa. 11:12",
+    "D&C 45:24 (24–25)"
    ],
    "category": "cross-ref"
   }
@@ -71326,6 +71424,28 @@ window._dcCrossrefsData = {
    "refs": [
     "Isa. 63:18",
     "D&C 105:9 (9, 13)"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|113|7": [
+  {
+   "marker": "a",
+   "text": "Put on thy strength",
+   "refs": [
+    "Isa. 52:1",
+    "3 Ne. 20:36 (36–37)"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|113|9": [
+  {
+   "marker": "a",
+   "text": "bands of her neck",
+   "refs": [
+    "Isa. 52:2",
+    "3 Ne. 20:37"
    ],
    "category": "cross-ref"
   }
