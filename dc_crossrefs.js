@@ -45760,6 +45760,14 @@ window._dcCrossrefsData = {
     "TG Warn"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "conspiring men",
+   "refs": [
+    "Ps. 10:2"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|89|5": [
@@ -45775,6 +45783,8 @@ window._dcCrossrefsData = {
    "marker": "b",
    "text": "wine",
    "refs": [
+    "Prov. 20:1",
+    "Isa. 5:11",
     "Lev. 10:9 (9–11)",
     "Isa. 5:22 (11, 22)",
     "Rom. 14:21 (20–23)",
@@ -45824,6 +45834,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "herbs",
    "refs": [
+    "Gen. 1:29 (29–30)",
     "Gen. 1:29",
     "D&C 59:17 (17–20)"
    ],
@@ -45876,6 +45887,14 @@ window._dcCrossrefsData = {
     "TG Temperance"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "flesh of beasts",
+   "refs": [
+    "Gen. 9:3 (3–4)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|89|13": [
@@ -45903,6 +45922,15 @@ window._dcCrossrefsData = {
    "refs": [
     "Dan. 1:12 (6–20)",
     "BD Corn"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "staff of life",
+   "refs": [
+    "Lev. 26:26",
+    "Ezek. 4:16"
    ],
    "category": "cross-ref"
   }
@@ -45954,6 +45982,14 @@ window._dcCrossrefsData = {
     "TG Health"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "health to their navel",
+   "refs": [
+    "Prov. 3:8"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|89|19": [
@@ -45990,6 +46026,15 @@ window._dcCrossrefsData = {
     "Testimony"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "hidden treasures",
+   "refs": [
+    "Isa. 45:3",
+    "Col. 2:3"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|89|20": [
@@ -46011,6 +46056,14 @@ window._dcCrossrefsData = {
     "D&C 84:80"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "run and not be weary",
+   "refs": [
+    "Isa. 40:31"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|89|21": [
@@ -46029,6 +46082,14 @@ window._dcCrossrefsData = {
     "Ex. 12:23 (23, 29)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "destroying angel",
+   "refs": [
+    "Ex. 12:23 (21–23)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|90|1": [
@@ -46039,6 +46100,14 @@ window._dcCrossrefsData = {
     "TG Forgive"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "prayers have come up",
+   "refs": [
+    "Acts 10:4"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|90|2": [
@@ -46057,6 +46126,14 @@ window._dcCrossrefsData = {
     "TG Jesus Christ, Prophecies about"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "keys of the kingdom",
+   "refs": [
+    "Matt. 16:19"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|90|3": [
@@ -46110,6 +46187,14 @@ window._dcCrossrefsData = {
    "text": "rains",
    "refs": [
     "Matt. 7:25"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "storms",
+   "refs": [
+    "Matt. 7:27 (24–27)"
    ],
    "category": "cross-ref"
   }
@@ -46178,6 +46263,15 @@ window._dcCrossrefsData = {
     "Ether 13:12 (10–12)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "Gentiles first",
+   "refs": [
+    "Rom. 1:16",
+    "1 Ne. 13:42"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|90|10": [
@@ -46211,6 +46305,14 @@ window._dcCrossrefsData = {
     "Deut. 33:17 (13–17)",
     "Hosea 14:8 (4–9)",
     "D&C 133:26 (26–30)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "arm of the Lord",
+   "refs": [
+    "Isa. 52:10"
    ],
    "category": "cross-ref"
   }
@@ -46263,6 +46365,14 @@ window._dcCrossrefsData = {
     "TG Testimony"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "g",
+   "text": "his own tongue",
+   "refs": [
+    "Acts 2:6 (6–8)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|90|12": [
@@ -46377,6 +46487,15 @@ window._dcCrossrefsData = {
    "refs": [
     "D&C 88:121",
     "TG Pride"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "high-mindedness",
+   "refs": [
+    "Rom. 11:20",
+    "Ps. 2:10"
    ],
    "category": "cross-ref"
   }
@@ -46499,6 +46618,14 @@ window._dcCrossrefsData = {
     "Covenants"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "all things work together",
+   "refs": [
+    "Rom. 8:28"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|90|25": [
@@ -46577,6 +46704,7 @@ window._dcCrossrefsData = {
    "marker": "b",
    "text": "chasten",
    "refs": [
+    "Heb. 12:6 (5–11)",
     "D&C 84:58",
     "TG Chastening"
    ],
