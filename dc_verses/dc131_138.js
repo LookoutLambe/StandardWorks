@@ -3977,7 +3977,7 @@ var dc135_ch1Verses = [
     ["בַּמָּקוֹם","the place"],
     ["אֲשֶׁר","which"],
     ["הֲכִינוֹתִי","I have prepared"],
-    ["בְּהֵיכְלֵי","in the mansions of"],
+    ["בִּמְעוֹנוֹת","in the mansions of"],
     ["אָבִי","my Father."],
     ["וְעַתָּה","And now"],
     ["אֲנִי","I"],

@@ -54208,6 +54208,24 @@ window._dcCrossrefsData = {
     "Wages"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "seeking diligently the kingdom",
+   "refs": [
+    "Matt. 6:33",
+    "Luke 12:31"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "the laborer is worthy of his hire",
+   "refs": [
+    "Luke 10:7",
+    "1 Tim. 5:18"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|106|4": [
@@ -54228,6 +54246,15 @@ window._dcCrossrefsData = {
     "1 Thes. 5:2"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "as a thief in the night",
+   "refs": [
+    "1 Thes. 5:2 (2–6)",
+    "2 Pet. 3:10"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|106|5": [
@@ -54244,6 +54271,24 @@ window._dcCrossrefsData = {
    "text": "overtake",
    "refs": [
     "Rev. 16:15 (15–16)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "gird up your loins",
+   "refs": [
+    "1 Pet. 1:13",
+    "Luke 12:35"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "children of light",
+   "refs": [
+    "1 Thes. 5:5",
+    "John 12:36"
    ],
    "category": "cross-ref"
   }
@@ -54286,6 +54331,15 @@ window._dcCrossrefsData = {
     "76:111",
     "81:6",
     "98:18"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "a crown in the mansions",
+   "refs": [
+    "John 14:2",
+    "2 Tim. 4:8"
    ],
    "category": "cross-ref"
   }
@@ -70037,6 +70091,16 @@ window._dcCrossrefsData = {
    "text": "pledge the properties",
    "refs": [
     "Deut. 24:10 (10–13)"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|106|6": [
+  {
+   "marker": "a",
+   "text": "joy in heaven",
+   "refs": [
+    "Luke 15:7 (7, 10)"
    ],
    "category": "cross-ref"
   }

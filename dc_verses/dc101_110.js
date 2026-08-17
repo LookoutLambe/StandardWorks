@@ -5371,8 +5371,8 @@ var dc106_ch1Verses = [
     ["אֲשֶׁר","that"],
     ["עַבְדִּי","my servant"],
     ["וָרֶן","Warren"],
-    ["א׳","A."],
-    ["קַאוּדֶּרִי","Cowdery"],
+    ["אֵי.","A."],
+    ["קַאוּדְרִי","Cowdery"],
     ["יְמֻנֶּה","should be appointed"],
     ["וְיֻסְמַךְ","and ordained"],
     ["לְכֹהֵן","a ... priest"],
@@ -5382,13 +5382,13 @@ var dc106_ch1Verses = [
     ["עֵדָתִי","my church,"],
     ["בְּאֶרֶץ","in the land of"],
     ["דְּרוֹר","Freedom"],
-    ["וּבָאֵזוֹרִים","and the regions"],
-    ["הַסּוֹבְבִים׃","round about;"]
+    ["וּבַסְּבִיבוֹת׃","and the regions round about;"],
+    
   ]},
   { num: "ב", words: [
     ["וְיַטִּיף","And should preach"],
     ["בְּשׂוֹרָתִי","my ... gospel,"],
-    ["הַנִּצָּחָה","everlasting"],
+    ["הַנִּצְחִית","everlasting"],
     ["וְיָרִים","and lift up"],
     ["קוֹלוֹ","his voice"],
     ["וְיַזְהִיר","and warn"],
@@ -5398,7 +5398,7 @@ var dc106_ch1Verses = [
     ["בִּמְקוֹמוֹ","in his own place,"],
     ["אַךְ","but"],
     ["בַּמְּחוֹזוֹת","in the ... counties;"],
-    ["הַסְּמוּכִים׃","adjoining"]
+    ["הַסְּמוּכוֹת׃","adjoining"]
   ]},
   { num: "ג", words: [
     ["וְיַקְדִּישׁ","And devote"],
@@ -5414,13 +5414,13 @@ var dc106_ch1Verses = [
     ["לוֹ","unto him,"],
     ["עַתָּה","now"],
     ["מְבַקֵּשׁ","seeking"],
-    ["בְּחָרִיצוּת","diligently"],
+    ["הֵיטֵב","diligently"],
     ["מַלְכוּת","the kingdom of"],
     ["הַשָּׁמַיִם","heaven"],
     ["וְצִדְקָתָהּ","and its righteousness,"],
     ["וְכׇל־הַדְּבָרִים","and all ... things"],
     ["הַנְּחוּצִים","necessary"],
-    ["יְהֻסְּפוּ","shall be added"],
+    ["יִוָּסְפוּ","shall be added"],
     ["עָלָיו","thereunto;"],
     ["כִּי","for"],
     ["הַפּוֹעֵל","the laborer"],
@@ -5440,7 +5440,7 @@ var dc106_ch1Verses = [
     ["מַשִּׂיג","overtaketh"],
     ["אֶת־הָעוֹלָם","the world"],
     ["כְּגַנָּב","as a thief"],
-    ["בַּלָּיְלָה׃","in the night—"]
+    ["בַּלַּיְלָה׃","in the night—"]
   ]},
   { num: "ה", words: [
     ["לָכֵן","Therefore,"],
@@ -5471,8 +5471,8 @@ var dc106_ch1Verses = [
     ["עַבְדִּי","my servant"],
     ["וָרֶן","Warren"],
     ["לְשַׁרְבִיטִי","to my scepter,"],
-    ["וְהִבְדִּיל","and separated"],
-    ["עַצְמוֹ","himself"],
+    ["וְנִבְדַּל","and separated himself"],
+    
     ["מִמְּלֶאכֶת","from the crafts of"],
     ["בְּנֵי","[sons of]"],
     ["אָדָם׃","men;"]
@@ -5490,7 +5490,7 @@ var dc106_ch1Verses = [
     ["אֲרוֹמְמֶנּוּ","I will lift him up"],
     ["כַּאֲשֶׁר","inasmuch as"],
     ["יַשְׁפִּיל","he will humble"],
-    ["עַצְמוֹ","himself"],
+    ["נַפְשׁוֹ","himself"],
     ["לְפָנָי׃","before me."]
   ]},
   { num: "ח", words: [
@@ -5502,7 +5502,7 @@ var dc106_ch1Verses = [
     ["בָּהֶם","[in them]"],
     ["יַעֲמֹד","he may stand;"],
     ["וְאִם","and if"],
-    ["יַמְשִׁיךְ","he continue"],
+    ["יוֹסִיף","he continue"],
     ["לִהְיוֹת","to be"],
     ["עֵד","a ... witness"],
     ["נֶאֱמָן","faithful"],
@@ -5511,7 +5511,7 @@ var dc106_ch1Verses = [
     ["הֲכִינוֹתִי","I have prepared"],
     ["לוֹ","for him"],
     ["עֲטָרָה","a crown"],
-    ["בְּהֵיכְלֵי","in the mansions of"],
+    ["בִּמְעוֹנוֹת","in the mansions of"],
     ["אָבִי","my Father."],
     ["כֵּן","Even"],
     ["יְהִי","so."],

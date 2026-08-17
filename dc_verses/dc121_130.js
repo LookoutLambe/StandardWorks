@@ -3315,7 +3315,7 @@ var dc124_ch1Verses = [
     ["וִילְיָם","William"],
     ["וְיִקְרָא","and proclaim"],
     ["בְשׂוֹרָתִי","my gospel"],
-    ["הַנִּצַּחַת","everlasting"],
+    ["הַנִּצְחִית","everlasting"],
     ["בְּקוֹל","with a voice,"],
     ["חָזָק","loud"],
     ["וּבְשִׂמְחָה","and with joy,"],
