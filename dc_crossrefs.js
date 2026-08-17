@@ -52791,6 +52791,14 @@ window._dcCrossrefsData = {
     "TG Mocking"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "not to be mocked",
+   "refs": [
+    "Gal. 6:7"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|104|7": [
@@ -52847,6 +52855,14 @@ window._dcCrossrefsData = {
     "TG Devil"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "buffetings of Satan",
+   "refs": [
+    "1 Cor. 5:5"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|104|10": [
@@ -52894,6 +52910,14 @@ window._dcCrossrefsData = {
     "D&C 72:3 (3–5, 16–22)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "stewards over earthly blessings",
+   "refs": [
+    "Luke 16:2 (1–12)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|104|14": [
@@ -52913,6 +52937,15 @@ window._dcCrossrefsData = {
    "refs": [
     "Ps. 19:1",
     "24:1"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "I stretched out the heavens",
+   "refs": [
+    "Isa. 45:12",
+    "Jer. 10:12"
    ],
    "category": "cross-ref"
   }
@@ -52936,6 +52969,15 @@ window._dcCrossrefsData = {
     "D&C 88:17"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "the poor shall be exalted",
+   "refs": [
+    "1 Sam. 2:7 (7–8)",
+    "Luke 1:52 (52–53)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|104|17": [
@@ -52957,6 +52999,22 @@ window._dcCrossrefsData = {
     "TG Agency"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "enough and to spare",
+   "refs": [
+    "Luke 15:17"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "agents unto themselves",
+   "refs": [
+    "2 Ne. 2:16 (14–16)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|104|18": [
@@ -52994,6 +53052,23 @@ window._dcCrossrefsData = {
    "text": "hell",
    "refs": [
     "Luke 16:23 (20–31)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "lift up his eyes in hell",
+   "refs": [
+    "Luke 16:23 (19–31)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "the poor and the needy",
+   "refs": [
+    "Deut. 15:11",
+    "Prov. 31:9"
    ],
    "category": "cross-ref"
   }
@@ -53158,6 +53233,14 @@ window._dcCrossrefsData = {
     "TG Consecration"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "all these properties are mine",
+   "refs": [
+    "Hag. 2:8"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|104|56": [
@@ -53271,6 +53354,15 @@ window._dcCrossrefsData = {
     "TG Debt"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "pay all your debts",
+   "refs": [
+    "Rom. 13:8",
+    "Ps. 37:21"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|104|79": [
@@ -53307,6 +53399,14 @@ window._dcCrossrefsData = {
     "TG Deliver"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "soften the hearts",
+   "refs": [
+    "Prov. 21:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|104|81": [
@@ -69804,6 +69904,27 @@ window._dcCrossrefsData = {
    "text": "appeal",
    "refs": [
     "Deut. 17:8 (8–9)"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|104|15": [
+  {
+   "marker": "a",
+   "text": "all things are mine",
+   "refs": [
+    "Ps. 24:1",
+    "Ps. 50:12"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|104|85": [
+  {
+   "marker": "a",
+   "text": "pledge the properties",
+   "refs": [
+    "Deut. 24:10 (10–13)"
    ],
    "category": "cross-ref"
   }
