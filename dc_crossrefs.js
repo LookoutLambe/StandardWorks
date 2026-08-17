@@ -58017,6 +58017,25 @@ window._dcCrossrefsData = {
     "TG God, Mercy of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "displeased",
+   "refs": [
+    "Deut. 1:34",
+    "Isa. 57:16"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "follies",
+   "refs": [
+    "Prov. 5:23",
+    "14:24",
+    "Eccl. 7:25"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|111|2": [
@@ -58026,7 +58045,26 @@ window._dcCrossrefsData = {
    "refs": [
     "Acts 18:10 (9–11)",
     "Rom. 1:13",
-    "TG Treasure"
+    "TG Treasure",
+    "Gen. 33:9"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "gather",
+   "refs": [
+    "Isa. 56:8",
+    "D&C 29:7 (7–8)",
+    "33:6"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "your instrumentality",
+   "refs": [
+    "1 Chr. 25:2 (2, 6)"
    ],
    "category": "cross-ref"
   }
@@ -58040,6 +58078,14 @@ window._dcCrossrefsData = {
     "Missionary Work"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "acquaintance",
+   "refs": [
+    "Num. 12:6"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|111|4": [
@@ -58058,6 +58104,32 @@ window._dcCrossrefsData = {
     "TG Shame"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "hands",
+   "refs": [
+    "Josh. 6:2",
+    "Judg. 1:2"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "power over it",
+   "refs": [
+    "Gen. 1:28"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "gold and silver",
+   "refs": [
+    "Gen. 13:2",
+    "Hag. 2:8"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|111|5": [
@@ -58065,7 +58137,17 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "debts",
    "refs": [
-    "D&C 64:27 (27–29)"
+    "D&C 64:27 (27–29)",
+    "Ezek. 18:7"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "Concern not",
+   "refs": [
+    "Jer. 17:8",
+    "Matt. 6:34 (25–34)"
    ],
    "category": "cross-ref"
   }
@@ -58088,6 +58170,25 @@ window._dcCrossrefsData = {
     "TG God, Spirit of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "my will",
+   "refs": [
+    "Ps. 40:8",
+    "D&C 88:63 (63–65)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "flow",
+   "refs": [
+    "Num. 24:7",
+    "Isa. 45:8",
+    "48:21"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|111|11": [
@@ -58095,7 +58196,8 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "wise",
    "refs": [
-    "Matt. 10:16"
+    "Matt. 10:16",
+    "Gen. 3:1"
    ],
    "category": "cross-ref"
   },
@@ -58113,6 +58215,25 @@ window._dcCrossrefsData = {
    "refs": [
     "Rom. 8:28",
     "D&C 100:15"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "order all things",
+   "refs": [
+    "Prov. 16:9",
+    "20:24"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "ye are able to receive",
+   "refs": [
+    "John 16:12",
+    "D&C 50:40",
+    "78:18"
    ],
    "category": "cross-ref"
   }
@@ -70792,6 +70913,71 @@ window._dcCrossrefsData = {
     "D&C 34:8",
     "45:39",
     "133:10"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|111|6": [
+  {
+   "marker": "a",
+   "text": "mercifully",
+   "refs": [
+    "Gen. 24:12",
+    "Isa. 54:8 (7–8)",
+    "D&C 97:18 (18–21)"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|111|7": [
+  {
+   "marker": "a",
+   "text": "Tarry",
+   "refs": [
+    "Gen. 19:16",
+    "Hab. 2:3"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|111|9": [
+  {
+   "marker": "a",
+   "text": "by hire",
+   "refs": [
+    "Gen. 30:16",
+    "Deut. 24:15"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "inquire diligently",
+   "refs": [
+    "Deut. 13:14",
+    "17:4"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "founders",
+   "refs": [
+    "Josh. 6:26",
+    "Isa. 14:32"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|111|10": [
+  {
+   "marker": "a",
+   "text": "treasures",
+   "refs": [
+    "Prov. 2:4 (3–5)",
+    "Isa. 45:3",
+    "D&C 6:7",
+    "38:39"
    ],
    "category": "cross-ref"
   }

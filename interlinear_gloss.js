@@ -41,7 +41,9 @@
   function augmentGlossWithPrefixes(heb, gloss) {
     if (!gloss || !heb) return gloss;
     var g = String(gloss).trim();
-    if (!g || /\bfrom\b/i.test(g)) return g;
+    // "than" is the SAME mem in its comparative sense (מֵחֵלֶב "more than the fat"),
+    // so a gloss carrying either word already accounts for the preposition.
+    if (!g || /\b(from|than)\b/i.test(g)) return g;
 
     var h = String(heb).replace(/\u05C3/g, '');
     // Directional "from" is only unambiguous as explicit מִן־ or double-mem

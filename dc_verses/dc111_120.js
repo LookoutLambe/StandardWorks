@@ -12,11 +12,11 @@ var dc111_ch1Verses = [
     ["בַּמַּסָּע","journey,"],
     ["הַזֶּה","this"],
     ["אַף","notwithstanding"],
-    ["שְׁטוּתְכֶם׃","your follies."]
+    ["אִוַּלְתְּכֶם׃","your follies."]
   ]},
   { num: "ב", words: [
-    ["יֵשׁ","I have"],
-    ["לִי","[to me]"],
+    ["יֶשׁ־לִי","I have"],
+    
     ["אוֹצָר","treasure"],
     ["רַב","much"],
     ["בָּעִיר","in ... city"],
@@ -33,14 +33,14 @@ var dc111_ch1Verses = [
     ["בְּעִתּוֹ","in due time"],
     ["לְטוֹבַת","for the benefit of"],
     ["צִיּוֹן","Zion,"],
-    ["עַל","through"],
-    ["יֶדְכֶם׃","your instrumentality."]
+    ["עַל־יֶדְכֶם׃","through your instrumentality."],
+    
   ]},
   { num: "ג", words: [
-    ["לָכֵן","therefore"],
-    ["רָאוּי","worthy"],
+    ["לָכֵן","Therefore"],
+    ["נָכוֹן","it is expedient"],
     ["לְהִתְוַדֵּעַ","to form acquaintance"],
-    ["אֶל","you should form acquaintance with"],
+    ["אֶל","with"],
     ["אֲנָשִׁים","men"],
     ["בָּעִיר","in ... city,"],
     ["הַזֹּאת","this"],
@@ -52,15 +52,14 @@ var dc111_ch1Verses = [
   ]},
   { num: "ד", words: [
     ["וְהָיָה","And it shall come to pass"],
-    ["בְעִתּוֹ","in due time"],
-    ["אֶתֵּן","that I will give"],
+    ["בְּעִתּוֹ","in due time"],
+    ["וְנָתַתִּי","that I will give"],
     ["אֶת־הָעִיר","city"],
     ["הַזֹּאת","this"],
     ["בְּיֶדְכֶם","into your hands,"],
-    ["וְתִהְיֶה","that ... shall have"],
-    ["לָכֶם","you"],
-    ["שְׁלִיטָה","power"],
+    ["וּמְשַׁלְתֶּם","that ye shall have power"],
     ["בָּהּ","over it,"],
+    
     ["עַד","insomuch"],
     ["כִּי","that"],
     ["לֹא","not"],
@@ -69,7 +68,7 @@ var dc111_ch1Verses = [
     ["וְעׇשְׁרָהּ","and its wealth"],
     ["בְּזָהָב","pertaining to gold"],
     ["וּבְכֶסֶף","and silver"],
-    ["תִּהְיֶה","shall be"],
+    ["יִהְיֶה","shall be"],
     ["לָכֶם׃","yours."]
   ]},
   { num: "ה", words: [
@@ -101,28 +100,31 @@ var dc111_ch1Verses = [
     ["וְהַמָּקוֹם","And the place"],
     ["אֲשֶׁר","where"],
     ["רְצוֹנִי","it is my will"],
-    ["בּוֹ","that you should tarry"],
-    ["בְּעִקָּר","for the main,"],
+    ["כִּי","that"],
+    ["תֵּשְׁבוּ","you should tarry"],
+    ["בּוֹ","in it"],
+    ["לָרֹב","for the main,"],
     ["יִוָּדַע","shall be signalized"],
     ["לָכֶם","unto you"],
     ["בִּשְׁלוֹם","by the peace"],
     ["רוּחִי","of my Spirit"],
     ["וּבְכֹחָהּ","and ... power"],
     ["אֲשֶׁר","that"],
-    ["תִּזֹּל","shall flow"],
+    ["יִזַּל","shall flow"],
     ["אֲלֵיכֶם׃","unto you."]
   ]},
   { num: "ט", words: [
     ["אֶת־הַמָּקוֹם","place"],
     ["הַזֶּה","This"],
     ["תּוּכְלוּ","you may"],
-    ["לְהַשִּׂיג","obtain by hire."],
+    ["לִשְׂכֹּר","obtain by hire."],
     ["וְדִרְשׁוּ","And inquire"],
     ["הֵיטֵב","diligently"],
-    ["עַל","concerning"],
-    ["יֹשְׁבֵי","the ... inhabitants"],
-    ["הָעִיר","and founders of this city;"],
-    ["הַקַּדְמוֹנִים׃","more ancient"]
+    ["אֶת־יֹשְׁבֵי","concerning the inhabitants of"],
+    ["הָעִיר","city"],
+    ["הַזֹּאת","this"],
+    ["הַקַּדְמוֹנִים","more ancient"],
+    ["וּמְיַסְּדֶיהָ׃","and its founders."]
   ]},
   { num: "י", words: [
     ["כִּי","For"],
@@ -135,19 +137,20 @@ var dc111_ch1Verses = [
     ["הַזֹּאת׃","this"]
   ]},
   { num: "יא", words: [
-    ["לָכֵן","therefore"],
+    ["לָכֵן","Therefore,"],
     ["הֱיוּ","be ye"],
     ["עֲרוּמִים","wise"],
     ["כַּנְּחָשִׁים","as ... as serpents"],
     ["וּבְכׇל־זֹאת","and yet"],
     ["בְּלֹא","without"],
     ["חֵטְא","sin;"],
-    ["וַאֲנִי","and I"],
-    ["אֲסַדֵּר","I will order"],
+    ["וַאֲנִי","And I"],
+    ["אָכִין","will order"],
     ["כׇּל־דָּבָר","all things"],
     ["לְטוֹבַתְכֶם","for your good,"],
-    ["כְּפִי","according to"],
-    ["שֶׁתּוּכְלוּ","ye are able"],
+    ["כְּפִי","according as"],
+    ["אֲשֶׁר","(that)"],
+    ["תּוּכְלוּ","ye are able"],
     ["לְקַבֵּל","to receive them."],
     ["אָמֵן׃","Amen."]
   ]}
