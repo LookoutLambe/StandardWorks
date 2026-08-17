@@ -53500,6 +53500,15 @@ window._dcCrossrefsData = {
     "Welfare"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "impart of their substance",
+   "refs": [
+    "Deut. 15:11",
+    "Mosiah 4:26"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|105|4": [
@@ -53553,6 +53562,7 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "chastened",
    "refs": [
+    "Heb. 12:6 (5–11)",
     "Deut. 11:2 (1–8)",
     "D&C 95:1",
     "TG Chastening",
@@ -53598,6 +53608,15 @@ window._dcCrossrefsData = {
     "2 Ne. 6:17",
     "D&C 108:8",
     "TG Deliver"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "Where is their God",
+   "refs": [
+    "Ps. 42:3 (3, 10)",
+    "Joel 2:17"
    ],
    "category": "cross-ref"
   }
@@ -53657,6 +53676,14 @@ window._dcCrossrefsData = {
     "95:8"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "endowed with power from on high",
+   "refs": [
+    "Luke 24:49"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|105|12": [
@@ -53681,6 +53708,16 @@ window._dcCrossrefsData = {
     "Isa. 49:25",
     "D&C 98:37",
     "TG Protection, Divine"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "I will fight your battles",
+   "refs": [
+    "Ex. 14:14",
+    "Deut. 1:30",
+    "2 Chr. 20:17"
    ],
    "category": "cross-ref"
   }
@@ -53721,6 +53758,14 @@ window._dcCrossrefsData = {
     "58:57",
     "84:3 (3–4, 31)",
     "103:35"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "the destroyer",
+   "refs": [
+    "Ex. 12:23"
    ],
    "category": "cross-ref"
   }
@@ -53772,6 +53817,15 @@ window._dcCrossrefsData = {
     "TG Faith"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "a trial of their faith",
+   "refs": [
+    "Gen. 22:1 (1–14)",
+    "Ether 12:6"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|105|24": [
@@ -53832,6 +53886,14 @@ window._dcCrossrefsData = {
     "Gen. 47:6 (1–12)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "as I softened the heart of Pharaoh",
+   "refs": [
+    "Ex. 7:3 (3–4)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|105|28": [
@@ -53880,6 +53942,14 @@ window._dcCrossrefsData = {
     "D&C 97:22"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "third and fourth generation",
+   "refs": [
+    "Ex. 20:5"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|105|31": [
@@ -53899,6 +53969,14 @@ window._dcCrossrefsData = {
     "Song 6:10",
     "D&C 5:14",
     "109:73"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "fair as the sun, clear as the moon",
+   "refs": [
+    "Song 6:10"
    ],
    "category": "cross-ref"
   }
@@ -53921,6 +53999,15 @@ window._dcCrossrefsData = {
     "Submissiveness"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "the kingdom of Zion is the kingdom of our God",
+   "refs": [
+    "Rev. 11:15",
+    "Dan. 2:44"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|105|33": [
@@ -54016,6 +54103,14 @@ window._dcCrossrefsData = {
     "Deut. 20:10"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "sue for peace",
+   "refs": [
+    "Deut. 20:10 (10–12)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|105|39": [
@@ -54035,6 +54130,15 @@ window._dcCrossrefsData = {
     "Peacemakers"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "lift up an ensign of peace",
+   "refs": [
+    "Isa. 5:26",
+    "Isa. 11:12"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|105|40": [
@@ -54045,6 +54149,14 @@ window._dcCrossrefsData = {
     "Rom. 8:28",
     "D&C 90:24",
     "100:15"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "make proposals for peace",
+   "refs": [
+    "Deut. 20:10"
    ],
    "category": "cross-ref"
   }
