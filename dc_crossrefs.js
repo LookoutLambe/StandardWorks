@@ -51863,6 +51863,14 @@ window._dcCrossrefsData = {
     "D&C 107:73 (72–75)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "settling difficulties",
+   "refs": [
+    "Deut. 17:8 (8–13)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|102|4": [
@@ -51923,6 +51931,14 @@ window._dcCrossrefsData = {
     "TG Justice"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "according to equity",
+   "refs": [
+    "Isa. 11:4 (3–4)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|102|17": [
@@ -51962,6 +51978,14 @@ window._dcCrossrefsData = {
     "TG Common Consent"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "the president shall give his decision",
+   "refs": [
+    "Deut. 17:9 (9–11)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|102|20": [
@@ -51970,6 +51994,15 @@ window._dcCrossrefsData = {
    "text": "error",
    "refs": [
     "Isa. 56:1"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "impartially",
+   "refs": [
+    "Deut. 10:17",
+    "Deut. 1:17"
    ],
    "category": "cross-ref"
   }
@@ -51992,6 +52025,14 @@ window._dcCrossrefsData = {
     "TG Revelation"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "obtain the mind of the Lord",
+   "refs": [
+    "James 1:5"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|102|26": [
@@ -52003,6 +52044,14 @@ window._dcCrossrefsData = {
     "Order"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "a copy of their proceedings",
+   "refs": [
+    "Deut. 17:18"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|102|28": [
@@ -69596,6 +69645,37 @@ window._dcCrossrefsData = {
    "text": "exchangers",
    "refs": [
     "Matt. 25:27"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|102|3": [
+  {
+   "marker": "a",
+   "text": "unanimous voice",
+   "refs": [
+    "Ex. 24:3"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|102|12": [
+  {
+   "marker": "a",
+   "text": "cast lots",
+   "refs": [
+    "Prov. 16:33",
+    "Acts 1:26"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|102|27": [
+  {
+   "marker": "a",
+   "text": "appeal",
+   "refs": [
+    "Deut. 17:8 (8–9)"
    ],
    "category": "cross-ref"
   }
