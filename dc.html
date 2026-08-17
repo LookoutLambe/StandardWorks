@@ -69,6 +69,8 @@ body {
 .ornament { text-align: center; padding: 6px 0 12px; color: var(--accent); font-size: 1.2em; letter-spacing: 0.5em; }
 
 .chapter-heading { text-align: center; padding: 16px 0 20px; border-bottom: 2px solid var(--rule); margin-bottom: 24px; }
+.chapter-heading:empty { display: none; }
+.chapter-heading > .chapter-summary-en:first-child, .chapter-heading > .chapter-summary-he:first-child { margin-top: 0; }
 .chapter-heading h2 { font-size: 1.6em; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
 .chapter-label-en { font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; color: var(--ink-light); direction: ltr; letter-spacing: 0.04em; }
 .chapter-summary-en { font-family: 'David Libre', 'Georgia', serif; font-size: 0.92em; color: var(--ink); direction: ltr; line-height: 1.55; opacity: 0.9; margin-top: 10px; text-align: center; }
@@ -996,8 +998,8 @@ function toHebNum(n) {
     div.className = 'chapter-panel';
     div.id = 'panel-' + panelId;
     div.style.display = 'none';
-    div.innerHTML = '<div class="chapter-heading"><h2>חֵלֶק ' + toHebNum(n) + '</h2>' +
-      '<div class="chapter-label-en">Section ' + n + '</div></div>' +
+    // Title lives in #book-header; this div only hosts the section summary.
+    div.innerHTML = '<div class="chapter-heading"></div>' +
       '<div id="' + panelId + '-verses"></div>';
     mainContent.appendChild(div);
   });
@@ -1005,14 +1007,11 @@ function toHebNum(n) {
   // OD panels
   ['od1','od2'].forEach(function(od, idx) {
     var panelId = od + '-ch1';
-    var hebLabel = idx === 0 ? 'הַכְרָזָה רִשְׁמִית א׳' : 'הַכְרָזָה רִשְׁמִית ב׳';
-    var engLabel = idx === 0 ? 'Official Declaration 1' : 'Official Declaration 2';
     var div = document.createElement('div');
     div.className = 'chapter-panel';
     div.id = 'panel-' + panelId;
     div.style.display = 'none';
-    div.innerHTML = '<div class="chapter-heading"><h2>' + hebLabel + '</h2>' +
-      '<div class="chapter-label-en">' + engLabel + '</div></div>' +
+    div.innerHTML = '<div class="chapter-heading"></div>' +
       '<div id="' + panelId + '-verses"></div>';
     mainContent.appendChild(div);
   });

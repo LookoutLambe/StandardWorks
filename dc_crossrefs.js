@@ -57428,7 +57428,8 @@ window._dcCrossrefsData = {
    "refs": [
     "D&C 76:12 (10, 12, 19)",
     "136:32",
-    "138:11"
+    "138:11",
+    "Eph. 1:18"
    ],
    "category": "cross-ref"
   },
@@ -57439,6 +57440,15 @@ window._dcCrossrefsData = {
     "TG Understanding"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "veil",
+   "refs": [
+    "Ex. 34:33 (33–35)",
+    "2 Cor. 3:16 (13–16)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|110|2": [
@@ -57470,6 +57480,22 @@ window._dcCrossrefsData = {
     "D&C 137:4"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "paved work",
+   "refs": [
+    "Ex. 24:10"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "pulpit",
+   "refs": [
+    "Neh. 8:4"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|110|3": [
@@ -57490,7 +57516,9 @@ window._dcCrossrefsData = {
     "Ex. 34:29 (29–35)",
     "Rev. 1:16",
     "Hel. 5:36",
-    "JS—H 1:32"
+    "JS—H 1:32",
+    "Dan. 12:3",
+    "Acts 26:13"
    ],
    "category": "cross-ref"
   },
@@ -57512,6 +57540,14 @@ window._dcCrossrefsData = {
     "TG Jesus Christ, Jehovah"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "e",
+   "text": "white like the pure snow",
+   "refs": [
+    "Dan. 7:9"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|110|4": [
@@ -57542,6 +57578,29 @@ window._dcCrossrefsData = {
     "Jesus Christ, Relationships with the Father"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "the first and the last",
+   "refs": [
+    "Isa. 44:6",
+    "48:12",
+    "Rev. 1:17 (17–18)",
+    "22:13"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "advocate",
+   "refs": [
+    "Job 33:23",
+    "1 Jn. 2:1",
+    "D&C 29:5",
+    "45:3 (3–5)",
+    "62:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|110|5": [
@@ -57550,7 +57609,8 @@ window._dcCrossrefsData = {
    "text": "forgiven",
    "refs": [
     "Luke 5:21",
-    "TG Forgive"
+    "TG Forgive",
+    "Matt. 9:2"
    ],
    "category": "cross-ref"
   },
@@ -57561,6 +57621,15 @@ window._dcCrossrefsData = {
     "TG Joy"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "lift up your heads",
+   "refs": [
+    "Ps. 24:7 (7–9)",
+    "Luke 21:28"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|110|6": [
@@ -57568,7 +57637,9 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "built",
    "refs": [
-    "D&C 109:4 (4–5)"
+    "D&C 109:4 (4–5)",
+    "1 Kgs. 8:44 (43–44)",
+    "2 Chr. 6:34"
    ],
    "category": "cross-ref"
   }
@@ -57579,7 +57650,8 @@ window._dcCrossrefsData = {
    "text": "accepted",
    "refs": [
     "2 Chr. 7:16",
-    "TG Dedication"
+    "TG Dedication",
+    "1 Kgs. 9:3"
    ],
    "category": "cross-ref"
   },
@@ -57598,6 +57670,16 @@ window._dcCrossrefsData = {
     "TG God, Manifestations of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "my name shall be here",
+   "refs": [
+    "Deut. 12:5 (5, 11)",
+    "1 Kgs. 8:29",
+    "9:3"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|110|8": [
@@ -57627,6 +57709,15 @@ window._dcCrossrefsData = {
     "TG Holiness"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "keep my commandments",
+   "refs": [
+    "1 Kgs. 9:4 (4–6)",
+    "2 Chr. 7:17 (17–22)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|110|9": [
@@ -57647,6 +57738,15 @@ window._dcCrossrefsData = {
     "D&C 95:8 (8–9)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "poured out",
+   "refs": [
+    "Joel 2:28 (28–29)",
+    "Mal. 3:10"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|110|10": [
@@ -57656,6 +57756,16 @@ window._dcCrossrefsData = {
    "refs": [
     "Zech. 12:10",
     "D&C 105:12"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "fame",
+   "refs": [
+    "Josh. 6:27",
+    "1 Kgs. 10:1",
+    "Ezek. 16:14"
    ],
    "category": "cross-ref"
   }
@@ -57704,7 +57814,8 @@ window._dcCrossrefsData = {
     "D&C 29:7",
     "45:43",
     "127:6",
-    "TG Israel, Gathering of"
+    "TG Israel, Gathering of",
+    "Deut. 30:4 (3–4)"
    ],
    "category": "cross-ref"
   },
@@ -57713,7 +57824,18 @@ window._dcCrossrefsData = {
    "text": "north",
    "refs": [
     "D&C 133:26",
-    "TG Israel, Ten Lost Tribes of"
+    "TG Israel, Ten Lost Tribes of",
+    "Jer. 16:15 (14–15)",
+    "23:8 (7–8)",
+    "31:8"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "four parts of the earth",
+   "refs": [
+    "Isa. 11:12"
    ],
    "category": "cross-ref"
   }
@@ -57749,7 +57871,10 @@ window._dcCrossrefsData = {
    "marker": "d",
    "text": "generations",
    "refs": [
-    "Gen. 18:18 (17–19)"
+    "Gen. 18:18 (17–19)",
+    "Gen. 12:3",
+    "22:18",
+    "28:14"
    ],
    "category": "cross-ref"
   },
@@ -57787,6 +57912,16 @@ window._dcCrossrefsData = {
     "TG Translated Beings"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "taken to heaven without tasting death",
+   "refs": [
+    "Gen. 5:24",
+    "2 Kgs. 2:11 (1–11)",
+    "Heb. 11:5"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|110|15": [
@@ -57794,7 +57929,11 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "turn",
    "refs": [
-    "JS—H 1:39 (38–39)"
+    "JS—H 1:39 (38–39)",
+    "Mal. 4:6",
+    "3 Ne. 25:6",
+    "D&C 2:2 (1–3)",
+    "128:17 (17–18)"
    ],
    "category": "cross-ref"
   },
@@ -57807,6 +57946,15 @@ window._dcCrossrefsData = {
     "Salvation for the Dead"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "curse",
+   "refs": [
+    "Zech. 5:3 (3–4)",
+    "D&C 2:3"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|110|16": [
@@ -57835,7 +57983,28 @@ window._dcCrossrefsData = {
    "refs": [
     "Zeph. 1:14",
     "TG Jesus Christ, Second Coming",
-    "Last Days"
+    "Last Days",
+    "Joel 2:11",
+    "Mal. 4:5"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "by this ye may know",
+   "refs": [
+    "Num. 16:28"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "even at the doors",
+   "refs": [
+    "Matt. 24:33",
+    "Mark 13:29",
+    "James 5:9",
+    "D&C 45:38 (37–38)"
    ],
    "category": "cross-ref"
   }
@@ -70598,6 +70767,31 @@ window._dcCrossrefsData = {
    "refs": [
     "Deut. 32:5",
     "Acts 2:40"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|110|14": [
+  {
+   "marker": "a",
+   "text": "Malachi",
+   "refs": [
+    "Mal. 4:5 (5–6)",
+    "3 Ne. 25:5 (5–6)",
+    "D&C 2:1 (1–3)",
+    "JS—H 1:38 (36–39)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "great and dreadful day",
+   "refs": [
+    "Joel 2:31",
+    "Zeph. 1:14 (14–15)",
+    "D&C 34:8",
+    "45:39",
+    "133:10"
    ],
    "category": "cross-ref"
   }
