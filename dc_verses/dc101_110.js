@@ -6560,7 +6560,7 @@ var dc107_ch1Verses = [
     ["לְעֵמֶק","into the valley of"],
     ["אָדָם","Adam-"],
     ["עוֹנְדִי","ondi-"],
-    ["אַחְמָן","Ahman"],
+    ["אַהְמָן","Ahman"],
     ["וְשָׁם","and there"],
     ["הֶעֱנִיק","bestowed"],
     ["לָהֶם","upon them"],

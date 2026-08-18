@@ -1534,7 +1534,7 @@ var dc95_ch1Verses = [
     ["לְבֵית","for the house (school) of"],
     ["שְׁלִיחַי","mine apostles,"],
     ["אָמַר","saith"],
-    ["בֶּן־אַחְמָן","Son Ahman;"],
+    ["בֶּן־אַהְמָן","Son Ahman;"],
     ["אוֹ","or,"],
     ["בְמִלִּים","in ... words,"],
     ["אֲחֵרוֹת","other"],

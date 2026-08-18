@@ -4118,7 +4118,7 @@ var dc78_ch1Verses = [
     ["אֲשֶׁר","who"],
     ["יִסֵּד","hath established"],
     ["אֶת־יְסוֹדוֹת","the foundations of"],
-    ["אָדָם־עוֹנְדִי־אַחְמָן׃","Adam-ondi-Ahman-;"]
+    ["אָדָם־עוֹנְדִי־אַהְמָן׃","Adam-ondi-Ahman-;"]
   ]},
   { num: "טז", words: [
     ["אֲשֶׁר","Who"],
