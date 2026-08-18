@@ -65158,6 +65158,16 @@ window._dcCrossrefsData = {
     "TG Witness"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "two or three witnesses",
+   "refs": [
+    "Deut. 19:15",
+    "2 Cor. 13:1",
+    "Matt. 18:16"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|128|4": [
@@ -65354,6 +65364,23 @@ window._dcCrossrefsData = {
     "TG Knowledge"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "that which is natural first",
+   "refs": [
+    "1 Cor. 15:46 (44–49)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "the key of knowledge",
+   "refs": [
+    "Luke 11:52",
+    "D&C 84:19 (19–21)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|128|15": [
@@ -65374,6 +65401,14 @@ window._dcCrossrefsData = {
     "TG Perfection"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "without us cannot be made perfect",
+   "refs": [
+    "Heb. 11:40 (39–40)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|128|17": [
@@ -65384,6 +65419,16 @@ window._dcCrossrefsData = {
     "TG Restoration of the Gospel"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "Elijah the prophet",
+   "refs": [
+    "Mal. 4:5 (5–6)",
+    "D&C 2:1 (1–3)",
+    "110:13 (13–16)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|128|18": [
@@ -65455,6 +65500,16 @@ window._dcCrossrefsData = {
     "Alma 32:23"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "i",
+   "text": "hid from the wise, revealed unto babes",
+   "refs": [
+    "Matt. 11:25",
+    "Luke 10:21",
+    "1 Cor. 1:27 (26–29)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|128|19": [
@@ -65502,6 +65557,26 @@ window._dcCrossrefsData = {
     "Isa. 26:19",
     "Hosea 14:5",
     "D&C 121:45"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "how beautiful upon the mountains",
+   "refs": [
+    "Isa. 52:7",
+    "Nahum 1:15",
+    "Rom. 10:15"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "as the dews of Carmel",
+   "refs": [
+    "Ps. 133:3",
+    "Deut. 32:2",
+    "Micah 5:7"
    ],
    "category": "cross-ref"
   }
@@ -65652,6 +65727,16 @@ window._dcCrossrefsData = {
     "TG Hope"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "i",
+   "text": "line upon line, precept upon precept",
+   "refs": [
+    "Isa. 28:10 (10, 13)",
+    "2 Ne. 28:30",
+    "D&C 98:12"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|128|22": [
@@ -65712,6 +65797,16 @@ window._dcCrossrefsData = {
     "D&C 76:73 (72–74)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "the prisoners shall go free",
+   "refs": [
+    "Isa. 61:1",
+    "42:7",
+    "Zech. 9:11 (11–12)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|128|23": [
@@ -65749,6 +65844,17 @@ window._dcCrossrefsData = {
     "Immortality"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "e",
+   "text": "let the mountains shout for joy",
+   "refs": [
+    "Isa. 44:23",
+    "49:13",
+    "55:12",
+    "Ps. 96:11 (11–12)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|128|24": [
@@ -65826,6 +65932,25 @@ window._dcCrossrefsData = {
     "TG Genealogy and Temple Work",
     "Mission of Latter-day Saints",
     "Salvation for the Dead"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "i",
+   "text": "who shall abide the day of his coming",
+   "refs": [
+    "Mal. 3:2 (1–3)",
+    "Joel 2:11",
+    "Rev. 6:17"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "j",
+   "text": "an offering in righteousness",
+   "refs": [
+    "Mal. 3:3 (3–4)",
+    "Ps. 51:19"
    ],
    "category": "cross-ref"
   }
@@ -72901,6 +73026,40 @@ window._dcCrossrefsData = {
     "Ps. 24:4",
     "73:1",
     "D&C 97:21"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|128|6": [
+  {
+   "marker": "a",
+   "text": "the books were opened",
+   "refs": [
+    "Rev. 20:12 (12–13)",
+    "Dan. 7:10",
+    "D&C 88:2"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|128|10": [
+  {
+   "marker": "a",
+   "text": "upon this rock",
+   "refs": [
+    "Matt. 16:18 (18–19)",
+    "Eph. 2:20"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|128|16": [
+  {
+   "marker": "a",
+   "text": "baptized for the dead",
+   "refs": [
+    "1 Cor. 15:29",
+    "D&C 124:29 (29–36)"
    ],
    "category": "cross-ref"
   }
