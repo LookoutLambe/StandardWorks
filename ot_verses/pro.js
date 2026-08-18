@@ -287,7 +287,7 @@ var pro_ch9Verses = [
   { num:"יד", words:[["וְיָשְׁבָה","and-she will dwell"],["לְפֶתַח","for-the entrance of"],["בֵּיתָהּ","house-her"],["עַל־כִּסֵּא","upon-throne"],["מְרֹמֵי","the heights of"],["קָרֶת","the town"],["׃",""]] },
   { num:"טו", words:[["לִקְרֹא","to-read"],["לְעֹבְרֵי־דָרֶךְ","to-those who pass by of-a path"],["הַמְיַשְּׁרִים","those-who make straight"],["אֹרְחוֹתָם","paths-their"],["׃",""]] },
   { num:"טז", words:[["מִי־פֶתִי","who-naivete"],["יָסֻר","he turned aside"],["הֵנָּה","hither"],["וַחֲסַר־לֵב","and-one lacking of-heart"],["וְאָמְרָה","and-she will say"],["לּוֹ","upon-him"],["׃",""]] },
-  { num:"יז", words:[["מַיִם־גְּנוּבִים","water-stolen"],["יִמְתָּקוּ","they are sweet"],["וְלֶחֶם","and-was food"],["סְתָרִים","secret places"],["יִנְעָם","it will be pleasant"],["׃",""]] },
+  { num:"יז", words:[["מַיִם־גְּנוּבִים","water-stolen"],["יִמְתָּקוּ","they are sweet"],["וְלֶחֶם","and-bread"],["סְתָרִים","secret places"],["יִנְעָם","it will be pleasant"],["׃",""]] },
   { num:"יח", words:[["וְלֹא־יָדַע","and-not-he-knew"],["כִּי־רְפָאִים","because-the-shades"],["שָׁם","there"],["בְּעִמְקֵי","in-the-depths-of"],["שְׁאוֹל","Sheol"],["קְרֻאֶיהָ","invited ones-her"],["׃",""]] },
 ];
 renderVerseSet(pro_ch9Verses, 'pro-ch9-verses');
@@ -1031,7 +1031,7 @@ var pro_ch31Verses = [
   { num:"כד", words:[["סָדִין","linen garments"],["עָשְׂתָה","did(f)"],["וַתִּמְכֹּר","and-she sold"],["וַחֲגוֹר","and-a belt"],["נָתְנָה","was-given(f)"],["לַכְּנַעֲנִי","to the-Canaanites"],["׃",""]] },
   { num:"כה", words:[["עֹז־וְהָדָר","strength-of-and-majesty"],["לְבוּשָׁהּ","clothing-her"],["וַתִּשְׂחַק","and-she laughed"],["לְיוֹם","to-day"],["אַחֲרוֹן","the-last"],["׃",""]] },
   { num:"כו", words:[["פִּיהָ","mouth-its"],["פָּתְחָה","she opens"],["בְחׇכְמָה","in-wisdom"],["וְתוֹרַת","and-law-of"],["חֶסֶד","mercy"],["עַל־לְשׁוֹנָהּ","upon-tongue-her"],["׃",""]] },
-  { num:"כז", words:[["צוֹפִיָּה","she is watching over"],["[הֲלִיכוֹת]","the processions of"],["בֵּיתָהּ","house-her"],["וְלֶחֶם","and-was food"],["עַצְלוּת","idleness"],["לֹא","not"],["תֹאכֵל","she will eat"],["׃",""]] },
+  { num:"כז", words:[["צוֹפִיָּה","she is watching over"],["[הֲלִיכוֹת]","the processions of"],["בֵּיתָהּ","house-her"],["וְלֶחֶם","and-bread"],["עַצְלוּת","idleness"],["לֹא","not"],["תֹאכֵל","she will eat"],["׃",""]] },
   { num:"כח", words:[["קָמוּ","have-been-fulfilled"],["בָנֶיהָ","sons-her"],["וַיְאַשְּׁרוּהָ","and-they called blessed-her"],["בַּעְלָהּ","her-husband"],["וַיְהַלְלָהּ","and-he praised-her"],["׃",""]] },
   { num:"כט", words:[["רַבּוֹת","many"],["בָּנוֹת","daughters"],["עָשׂוּ","they-did"],["חָיִל","of-valor"],["וְאַתְּ","and-you"],["עָלִית","you have gone up"],["עַל־כֻּלָּנָה","upon-all of-them"],["׃",""]] },
   { num:"ל", words:[["שֶׁקֶר","false"],["הַחֵן","the-grace"],["וְהֶבֶל","and-vain"],["הַיֹּפִי","the-beauty"],["אִשָּׁה","a-woman"],["יִרְאַת־יְהֹוָה","the-fear-of-the-LORD"],["הִיא","she"],["תִתְהַלָּל","she will be praised"],["׃",""]] },

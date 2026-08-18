@@ -73,7 +73,7 @@ var sos_ch4Verses = [
   { num:"יג", words:[["שְׁלָחַיִךְ","shoots-your"],["פַּרְדֵּס","are a garden of"],["רִמּוֹנִים","pomegranates"],["עִם","with"],["פְּרִי","fruit"],["מְגָדִים","choice"],["כְּפָרִים","henna plants"],["עִם־נְרָדִים","with-nard plants"],["׃",""]] },
   { num:"יד", words:[["נֵרְדְּ","nard"],["וְכַרְכֹּם","and-saffron"],["קָנֶה","reeds"],["וְקִנָּמוֹן","and-cinnamon"],["עִם","with"],["כׇּל־עֲצֵי","all-the-trees-of"],["לְבוֹנָה","frankincense"],["מֹר","are myrrh"],["וַאֲהָלוֹת","and-aloes"],["עִם","with"],["כׇּל־רָאשֵׁי","all-the-heads-of"],["בְשָׂמִים","spices"],["׃",""]] },
   { num:"טו", words:[["מַעְיַן","a-fountain-of"],["גַּנִּים","Gannim"],["בְּאֵר","Beer"],["מַיִם","water"],["חַיִּים","living"],["וְנֹזְלִים","and-streams"],["מִן־לְבָנוֹן","from-Lebanon"],["׃",""]] },
-  { num:"טז", words:[["עוּרִי","awake"],["צָפוֹן","the-north"],["וּבוֹאִי","and-come"],["תֵימָן","the south"],["הָפִיחִי","make breathe"],["גַנִּי","garden-my"],["יִזְּלוּ","they flow"],["בְשָׂמָיו","spices-its"],["יָבֹא","shall-come"],["דוֹדִי","O lover-my"],["לְגַנּוֹ","to-garden-his"],["וְיֹאכַל","also-and-devour"],["פְּרִי","fruit"],["מְגָדָיו","choice-its"],["׃",""]] },
+  { num:"טז", words:[["עוּרִי","awake"],["צָפוֹן","the-north"],["וּבוֹאִי","and-come"],["תֵימָן","the south"],["הָפִיחִי","make breathe"],["גַנִּי","garden-my"],["יִזְּלוּ","they flow"],["בְשָׂמָיו","spices-its"],["יָבֹא","shall-come"],["דוֹדִי","O lover-my"],["לְגַנּוֹ","to-garden-his"],["וְיֹאכַל","and-let-him-eat"],["פְּרִי","fruit"],["מְגָדָיו","choice-its"],["׃",""]] },
 ];
 renderVerseSet(sos_ch4Verses, 'sos-ch4-verses');
 
