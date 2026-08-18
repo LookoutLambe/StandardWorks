@@ -62077,6 +62077,16 @@ window._dcCrossrefsData = {
     "Jer. 20:7 (7–9)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "the ends of the earth",
+   "refs": [
+    "Isa. 52:10",
+    "Ps. 22:27",
+    "D&C 1:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|122|2": [
@@ -62087,6 +62097,16 @@ window._dcCrossrefsData = {
     "TG Counsel"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "the pure in heart",
+   "refs": [
+    "Ps. 24:4",
+    "73:1",
+    "Matt. 5:8"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|122|3": [
@@ -62125,6 +62145,24 @@ window._dcCrossrefsData = {
     "TG Protection, Divine"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "a small moment",
+   "refs": [
+    "Isa. 54:7 (7–8)",
+    "D&C 121:7"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "thy God shall stand by thee",
+   "refs": [
+    "Isa. 41:10",
+    "2 Tim. 4:17"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|122|5": [
@@ -62142,6 +62180,15 @@ window._dcCrossrefsData = {
    "text": "perils",
    "refs": [
     "2 Cor. 11:26 (23–28)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "perils among false brethren",
+   "refs": [
+    "2 Cor. 11:26 (24–27)",
+    "Gal. 2:4"
    ],
    "category": "cross-ref"
   }
@@ -62172,6 +62219,26 @@ window._dcCrossrefsData = {
    "text": "wolves",
    "refs": [
     "Luke 10:3"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "a sword drawn",
+   "refs": [
+    "Num. 22:23",
+    "Josh. 5:13",
+    "1 Chr. 21:16"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "like wolves",
+   "refs": [
+    "Ps. 22:16",
+    "Ezek. 22:27",
+    "Matt. 7:15"
    ],
    "category": "cross-ref"
   }
@@ -62229,6 +62296,53 @@ window._dcCrossrefsData = {
     "2 Ne. 2:11"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "cast into the pit",
+   "refs": [
+    "Gen. 37:24 (20, 24)",
+    "Jer. 38:6"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "the sentence of death",
+   "refs": [
+    "Jer. 26:11 (11, 16)",
+    "Deut. 19:6",
+    "2 Cor. 1:9"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "h",
+   "text": "the heavens gather blackness",
+   "refs": [
+    "Jer. 4:28",
+    "Joel 2:10",
+    "Rev. 6:12"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "i",
+   "text": "the elements",
+   "refs": [
+    "2 Pet. 3:10 (10, 12)",
+    "D&C 101:25"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "j",
+   "text": "the jaws of hell gape open",
+   "refs": [
+    "Isa. 5:14",
+    "Ps. 22:13"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|122|8": [
@@ -62248,6 +62362,17 @@ window._dcCrossrefsData = {
     "Heb. 2:17 (9–18)",
     "D&C 76:107",
     "88:6"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "the Son of Man descended below all",
+   "refs": [
+    "Isa. 53:3 (3–5)",
+    "Phil. 2:8 (7–8)",
+    "Heb. 2:9",
+    "D&C 88:6"
    ],
    "category": "cross-ref"
   }
@@ -62301,6 +62426,27 @@ window._dcCrossrefsData = {
     "2 Ne. 8:7 (7–12)",
     "D&C 3:7",
     "98:14"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "their bounds are set",
+   "refs": [
+    "Ps. 104:9",
+    "Job 14:5",
+    "38:11",
+    "Jer. 5:22"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "fear not what man can do",
+   "refs": [
+    "Ps. 56:11 (4, 11)",
+    "Heb. 13:6",
+    "Isa. 51:12 (12–13)"
    ],
    "category": "cross-ref"
   }
