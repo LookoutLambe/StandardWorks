@@ -424,7 +424,7 @@ var job_ch15Verses = [
   { num:"לא", words:[["אַל־יַאֲמֵן","do-not-he trust"],["בַּשָּׁו","the-they are ashamed"],["נִתְעָה","he has been led astray"],["כִּי־שָׁוְא","because-falsehood"],["תִּהְיֶה","shall-be"],["תְמוּרָתוֹ","recompense-his"],["׃",""]] },
   { num:"לב", words:[["בְּלֹא־יוֹמוֹ","without-His-day"],["תִּמָּלֵא","shall-be-filled"],["וְכִפָּתוֹ","and-palm branch-his"],["לֹא","not"],["רַעֲנָנָה","it will grow luxuriant"],["׃",""]] },
   { num:"לג", words:[["יַחְמֹס","he will wrong"],["כַּגֶּפֶן","like-the-vine"],["בִּסְרוֹ","unripe grapes-his"],["וְיַשְׁלֵךְ","and-he will shed"],["כַּזַּיִת","like-the-olive tree"],["נִצָּתוֹ","blossom-his"],["׃",""]] },
-  { num:"לד", words:[["כִּי־עֲדַת","because-church-of"],["חָנֵף","a-hypocrite"],["גַּלְמוּד","is barren"],["וְאֵשׁ","and-fire"],["אָכְלָה","it consumed"],["אׇהֳלֵי־שֹׁחַד","would-that-a-bribe"],["׃",""]] },
+  { num:"לד", words:[["כִּי־עֲדַת","because-congregation-of"],["חָנֵף","a-hypocrite"],["גַּלְמוּד","is barren"],["וְאֵשׁ","and-fire"],["אָכְלָה","it consumed"],["אׇהֳלֵי־שֹׁחַד","would-that-a-bribe"],["׃",""]] },
   { num:"לה", words:[["הָרֹה","the-they conceive"],["עָמָל","grievousness"],["וְיָלֹד","and-they give birth to"],["אָוֶן","iniquity"],["וּבִטְנָם","and-belly-their"],["תָּכִין","you will establish"],["מִרְמָה","deceit"],["׃",""]] },
 ];
 renderVerseSet(job_ch15Verses, 'job-ch15-verses');
@@ -436,7 +436,7 @@ var job_ch16Verses = [
   { num:"ד", words:[["גַּם","also"],["אָנֹכִי","I"],["כָּכֶם","as-you"],["אֲדַבֵּרָה","I will speak"],["לוּ","if"],["יֵשׁ","there"],["נַפְשְׁכֶם","souls"],["תַּחַת","under"],["נַפְשִׁי","my-life"],["אַחְבִּירָה","I will make join"],["עֲלֵיכֶם","over-you"],["בְּמִלִּים","in-words"],["וְאָנִיעָה","and-I will shake"],["עֲלֵיכֶם","over-you"],["בְּמוֹ","with"],["רֹאשִׁי","my-head"],["׃",""]] },
   { num:"ה", words:[["אֲאַמִּצְכֶם","I will strengthen-you"],["בְּמוֹ־פִי","with-Pi"],["וְנִיד","and-the condolence of"],["שְׂפָתַי","my-lips"],["יַחְשֹׂךְ","it will restrain"],["׃",""]] },
   { num:"ו", words:[["אִם־אֲדַבְּרָה","if-let-me-speak"],["לֹא־יֵחָשֵׂךְ","not-it will be restrained"],["כְּאֵבִי","pain-my"],["וְאַחְדְּלָה","and-I will cease"],["מַה־מִּנִּי","what-Destiny"],["יַהֲלֹךְ","will it go"],["׃",""]] },
-  { num:"ז", words:[["אַךְ־עַתָּה","but-now"],["הֶלְאָנִי","he has made weary-me"],["הֲשִׁמּוֹתָ","you have devastated"],["כׇּל־עֲדָתִי","all-My-church"],["׃",""]] },
+  { num:"ז", words:[["אַךְ־עַתָּה","but-now"],["הֶלְאָנִי","he has made weary-me"],["הֲשִׁמּוֹתָ","you have devastated"],["כׇּל־עֲדָתִי","all-My-congregation"],["׃",""]] },
   { num:"ח", words:[["וַתִּקְמְטֵנִי","and-you have seized-me"],["לְעֵד","is-a-witness"],["הָיָה","was"],["וַיָּקׇם","and-he-arose"],["בִּי","against-me"],["כַחֲשִׁי","leanness-my"],["בְּפָנַי","in-face-my"],["יַעֲנֶה","he will answer"],["׃",""]] },
   { num:"ט", words:[["אַפּוֹ","His-wrath"],["טָרַף","it has torn me"],["וַיִּשְׂטְמֵנִי","and-it has assailed-me"],["חָרַק","he has gnashed"],["עָלַי","I-must"],["בְּשִׁנָּיו","with-teeth-his"],["צָרִי","opponent-my"],["יִלְטֹשׁ","he-will-to sharpen"],["עֵינָיו","their-eyes"],["לִי","to-me"],["׃",""]] },
   { num:"י", words:[["פָּעֲרוּ","people have opened wide"],["עָלַי","I-must"],["בְּפִיהֶם","in-their-mouths"],["בְּחֶרְפָּה","in-scorn"],["הִכּוּ","they-were-smitten"],["לְחָיָי","cheeks-my"],["יַחַד","oft"],["עָלַי","I-must"],["יִתְמַלָּאוּן","they mass themselves-!"],["׃",""]] },
