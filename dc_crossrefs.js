@@ -66671,6 +66671,14 @@ window._dcCrossrefsData = {
     "BD Heaven"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "heavens",
+   "refs": [
+    "2 Cor. 12:2"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|131|2": [
@@ -66715,6 +66723,15 @@ window._dcCrossrefsData = {
     "TG Marriage, Celestial"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "f",
+   "text": "marriage",
+   "refs": [
+    "D&C 132:19 (15–20)",
+    "Mal. 2:14"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|131|4": [
@@ -66780,7 +66797,10 @@ window._dcCrossrefsData = {
     "Education",
     "Ignorance",
     "Knowledge",
-    "Learn"
+    "Learn",
+    "Deut. 4:42",
+    "Josh. 20:3",
+    "Hosea 4:6"
    ],
    "category": "cross-ref"
   }
