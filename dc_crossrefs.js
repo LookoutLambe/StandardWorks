@@ -70442,6 +70442,14 @@ window._dcCrossrefsData = {
     "2 Sam. 1:23"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "not divided",
+   "refs": [
+    "2 Sam. 1:23"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|135|4": [
@@ -70470,6 +70478,23 @@ window._dcCrossrefsData = {
     "TG Purity"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "lamb to the slaughter",
+   "refs": [
+    "Isa. 53:7",
+    "Acts 8:32"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "conscience void of offense",
+   "refs": [
+    "Acts 24:16"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|135|5": [
@@ -70478,7 +70503,8 @@ window._dcCrossrefsData = {
    "text": "testators",
    "refs": [
     "1 Tim. 2:6",
-    "Heb. 9:16 (16–17)"
+    "Heb. 9:16 (16–17)",
+    "Heb. 9:17 (16-17)"
    ],
    "category": "cross-ref"
   },
@@ -70488,6 +70514,24 @@ window._dcCrossrefsData = {
    "refs": [
     "Heb. 9:17",
     "TG Testimony"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "judgment-seat",
+   "refs": [
+    "Rom. 14:10",
+    "Ether 12:38 (36-38)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "garments are not spotted",
+   "refs": [
+    "Jacob 1:19",
+    "Isa. 63:3"
    ],
    "category": "cross-ref"
   }
@@ -70516,6 +70560,23 @@ window._dcCrossrefsData = {
     "TG Reward"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "how much more",
+   "refs": [
+    "1 Sam. 14:30"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "stones of beauty",
+   "refs": [
+    "Prov. 17:8",
+    "Zech. 9:16"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|135|7": [
@@ -70529,6 +70590,14 @@ window._dcCrossrefsData = {
    "text": "altar",
    "refs": [
     "Rev. 6:9"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "under the altar",
+   "refs": [
+    "Rev. 6:9 (9-10)"
    ],
    "category": "cross-ref"
   }
