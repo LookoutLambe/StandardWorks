@@ -62477,6 +62477,15 @@ window._dcCrossrefsData = {
     "TG Injustice"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "amount of damages",
+   "refs": [
+    "Lev. 27:23",
+    "Esth. 7:4"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|123|3": [
@@ -62516,6 +62525,25 @@ window._dcCrossrefsData = {
     "121:4 (1, 4)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "without excuse",
+   "refs": [
+    "Rom. 1:20",
+    "Job 32:3"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "his mighty arm",
+   "refs": [
+    "Isa. 53:1",
+    "52:10",
+    "D&C 133:3"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|123|7": [
@@ -62553,6 +62581,26 @@ window._dcCrossrefsData = {
     "Moses 7:49"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "creeds of the fathers",
+   "refs": [
+    "Jer. 16:19",
+    "Matt. 15:9 (8–9)",
+    "JS—H 1:19"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "the whole earth groaneth",
+   "refs": [
+    "Rom. 8:22 (19–22)",
+    "Ex. 2:23",
+    "Moses 7:48 (48–49)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|123|8": [
@@ -62572,6 +62620,25 @@ window._dcCrossrefsData = {
     "TG Hell"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "an iron yoke",
+   "refs": [
+    "Deut. 28:48",
+    "Jer. 28:14"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "fetters of hell",
+   "refs": [
+    "Ps. 2:3",
+    "107:14",
+    "2 Ne. 1:13"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|123|9": [
@@ -62591,6 +62658,16 @@ window._dcCrossrefsData = {
     "D&C 98:13",
     "103:27 (27–28)",
     "124:54"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "the widows and fatherless",
+   "refs": [
+    "Ex. 22:22 (22–24)",
+    "Deut. 10:18",
+    "James 1:27"
    ],
    "category": "cross-ref"
   }
@@ -62641,6 +62718,16 @@ window._dcCrossrefsData = {
     "TG Mission of Latter-day Saints"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "blinded by the craftiness of men",
+   "refs": [
+    "Eph. 4:14",
+    "2 Cor. 4:4",
+    "D&C 76:75"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|123|13": [
@@ -62658,6 +62745,16 @@ window._dcCrossrefsData = {
    "refs": [
     "1 Cor. 4:5",
     "TG Secret Combinations"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "the hidden things of darkness",
+   "refs": [
+    "1 Cor. 4:5",
+    "Dan. 2:22",
+    "D&C 1:3"
    ],
    "category": "cross-ref"
   }
@@ -62681,6 +62778,14 @@ window._dcCrossrefsData = {
     "1 Ne. 16:29",
     "Alma 37:6 (6–8)",
     "D&C 64:33"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "a ship and a small helm",
+   "refs": [
+    "James 3:4 (4–5)"
    ],
    "category": "cross-ref"
   }
@@ -62708,6 +62813,25 @@ window._dcCrossrefsData = {
    "refs": [
     "Ex. 14:13",
     "Isa. 30:15"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "stand still to see the salvation of God",
+   "refs": [
+    "Ex. 14:13",
+    "2 Chr. 20:17",
+    "Ps. 46:10"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "his arm revealed",
+   "refs": [
+    "Isa. 53:1",
+    "52:10"
    ],
    "category": "cross-ref"
   }
@@ -72382,6 +72506,29 @@ window._dcCrossrefsData = {
    "refs": [
     "Isa. 18:2",
     "D&C 133:8"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|123|5": [
+  {
+   "marker": "a",
+   "text": "speaking falsehood",
+   "refs": [
+    "Deut. 13:5",
+    "Isa. 59:13"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|123|11": [
+  {
+   "marker": "a",
+   "text": "the pure in heart",
+   "refs": [
+    "Ps. 24:4",
+    "73:1",
+    "D&C 97:21"
    ],
    "category": "cross-ref"
   }
