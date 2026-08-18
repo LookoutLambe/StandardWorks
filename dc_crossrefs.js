@@ -71474,6 +71474,14 @@ window._dcCrossrefsData = {
     "Moses 1:11"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "whether in the body",
+   "refs": [
+    "2 Cor. 12:2 (2-3)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|137|2": [
@@ -71512,6 +71520,14 @@ window._dcCrossrefsData = {
    "text": "circling",
    "refs": [
     "Ezek. 1:4 (4–25)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "circling flames of fire",
+   "refs": [
+    "Gen. 3:24"
    ],
    "category": "cross-ref"
   }
@@ -71561,6 +71577,14 @@ window._dcCrossrefsData = {
    "refs": [
     "Rev. 21:21 (10–27)",
     "D&C 110:2"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "paved with gold",
+   "refs": [
+    "Rev. 21:21"
    ],
    "category": "cross-ref"
   }
@@ -71651,6 +71675,14 @@ window._dcCrossrefsData = {
     "TG Baptism, Essential"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "gather Israel the second time",
+   "refs": [
+    "Isa. 11:11"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|137|7": [
@@ -71726,6 +71758,15 @@ window._dcCrossrefsData = {
     "Motivations"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "according to their works",
+   "refs": [
+    "Jer. 17:10",
+    "Rev. 20:12"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|137|10": [
@@ -71752,6 +71793,16 @@ window._dcCrossrefsData = {
     "TG Salvation of Little Children"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "years of accountability",
+   "refs": [
+    "Isa. 7:16",
+    "D&C 68:27",
+    "Moro. 8:8 (8-12)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|138|1": [
