@@ -480,7 +480,7 @@ var dc112_ch1Verses = [
     ["וְעַבְדִּי","and my servant"],
     ["סִידְנִי","Sidney,"],
     ["וְעַבְדִּי","and my servant"],
-    ["הַיְרָם","Hyrum,"],
+    ["חִירָם","Hyrum,"],
     ["לָבוֹא׃","[come]"]
   ]},
   { num: "יח", words: [
