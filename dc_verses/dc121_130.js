@@ -6361,7 +6361,7 @@ var dc129_ch1Verses = [
     ["מִינֵי","kinds"],
     ["בְּרִיּוֹת","of beings"],
     ["בַּשָּׁמַיִם","in heaven,"],
-    ["הָרִאשׁוֹן","namely, the first:"],
+    ["הָרִאשׁוֹן","First"],
     ["מַלְאָכִים","Angels,"],
     ["בְּנֵי","who are"],
     ["תְחִיָּה","resurrected personages,"],
