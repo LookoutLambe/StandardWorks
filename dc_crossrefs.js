@@ -64577,6 +64577,37 @@ window._dcCrossrefsData = {
     "TG Jesus Christ, Taking the Name of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "called by my name",
+   "refs": [
+    "2 Chr. 7:14",
+    "Amos 9:12",
+    "Jer. 14:9",
+    "Isa. 43:7"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "gather themselves together",
+   "refs": [
+    "D&C 29:8 (7–8)",
+    "101:22 (21–22)",
+    "Isa. 11:12"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "in store for a time to come",
+   "refs": [
+    "Ps. 31:19",
+    "Deut. 32:34",
+    "D&C 121:27"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|125|3": [
@@ -64585,7 +64616,10 @@ window._dcCrossrefsData = {
    "text": "Zarahemla",
    "refs": [
     "Omni 1:14 (14, 18)",
-    "Alma 2:26"
+    "Alma 2:26",
+    "Omni 1:13 (12–19)",
+    "Mosiah 1:1",
+    "Alma 5:2"
    ],
    "category": "cross-ref"
   }
@@ -64603,6 +64637,27 @@ window._dcCrossrefsData = {
     "TG Stake"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "east, west, north and south",
+   "refs": [
+    "Ps. 107:3",
+    "Isa. 43:5 (5–6)",
+    "Luke 13:29",
+    "D&C 33:6"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "their inheritance",
+   "refs": [
+    "Num. 34:2 (2, 13)",
+    "Josh. 11:23",
+    "D&C 85:1 (1, 7)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|126|1": [

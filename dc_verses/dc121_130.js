@@ -4548,8 +4548,8 @@ renderVerseSet(dc124_ch1Verses, 'dc124-ch1-verses');
 
 var dc125_ch1Verses = [
   { num: "א", words: [
-    ["מָה","What is"],
-    ["רְצוֹן","the will of"],
+    ["מַה־רְצוֹן","What is the will of"],
+    
     ["יְהוָה","the Lord"],
     ["עַל","concerning"],
     ["הַקְּדוֹשִׁים","the saints"],
@@ -4565,10 +4565,11 @@ var dc125_ch1Verses = [
     ["אֹמֵר","say"],
     ["לָכֶם","unto you,"],
     ["אִם","if"],
-    ["הַנִּקְרָאִים","those who call themselves"],
-    ["עַל","by"],
-    ["שְׁמִי","my name"],
-    ["וְהַמְנַסִּים","and are essaying"],
+    ["אֲשֶׁר","those"],
+    ["נִקְרָא־שְׁמִי","whom my name is called"],
+    ["עֲלֵיהֶם","upon"],
+    
+    ["וְהַמְבַקְשִׁים","and are essaying"],
     ["לִהְיוֹת","to be"],
     ["קְדוֹשַׁי","my saints,"],
     ["אִם","if"],
@@ -4582,8 +4583,8 @@ var dc125_ch1Verses = [
     ["אֲשֶׁר","which"],
     ["אֲיַעֵד","I shall appoint"],
     ["לָהֶם","unto them"],
-    ["עַל","by"],
-    ["יְדֵי","..."],
+    ["עַל־יְדֵי","by the hand of"],
+    
     ["עַבְדִּי","my servant"],
     ["יוֹסֵף","Joseph,"],
     ["וְיִבְנוּ","and build up"],
@@ -4594,7 +4595,7 @@ var dc125_ch1Verses = [
     ["נְכוֹנִים","prepared"],
     ["לַאֲשֶׁר","for that which"],
     ["צָפוּן","is in store"],
-    ["לְעֵת","for a time"],
+    ["לָעֵת","for the time"],
     ["הַבָּאָה׃","to come."]
   ]},
   { num: "ג", words: [
@@ -4609,10 +4610,10 @@ var dc125_ch1Verses = [
     ["וְיִקָּרֵא","and let be named"],
     ["עָלֶיהָ","upon it"],
     ["שֵׁם","the name of"],
-    ["זְרַחֶמְלָה׃","Zarahemla"]
+    ["זָרַחֶמְלָה׃","Zarahemla."]
   ]},
   { num: "ד", words: [
-    ["וְכׇל־הַבָּאִים","and all-those who come"],
+    ["וְכׇל־הַבָּאִים","and all those who come"],
     ["מִמִּזְרָח","from the east,"],
     ["וּמִמַּעֲרָב","and the west,"],
     ["מִצָּפוֹן","and the north,"],
@@ -4625,8 +4626,8 @@ var dc125_ch1Verses = [
     ["בָּהּ","in the same,"],
     ["וְגַם","and also"],
     ["בְּעִיר","in the city"],
-    ["נַשְׁוִיל","Nashville"],
-    ["אוֹ","of Nashville, or"],
+    ["נַשְׁוִיל","Nashville,"],
+    ["אוֹ","or"],
     ["בְּעִיר","in the city"],
     ["נָאווּ","of Nauvoo,"],
     ["וּבְכׇל־הַיְּתֵדוֹת","and in all the stakes"],
