@@ -71945,6 +71945,14 @@ window._dcCrossrefsData = {
     "88:99"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "spirits in prison",
+   "refs": [
+    "1 Pet. 3:19"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|138|11": [
@@ -72207,6 +72215,14 @@ window._dcCrossrefsData = {
     "TG Joy"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "g",
+   "text": "bone to his bone",
+   "refs": [
+    "Ezek. 37:7 (1-14)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|138|18": [
@@ -72580,6 +72596,14 @@ window._dcCrossrefsData = {
     "Teachable"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "acceptable day of the Lord",
+   "refs": [
+    "Isa. 61:2"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|138|32": [
@@ -72740,7 +72764,9 @@ window._dcCrossrefsData = {
    "refs": [
     "Dan. 7:9 (9–14)",
     "2 Ne. 2:20",
-    "D&C 27:11"
+    "D&C 27:11",
+    "Dan. 7:9 (9-13)",
+    "116:1"
    ],
    "category": "cross-ref"
   }
@@ -72807,6 +72833,14 @@ window._dcCrossrefsData = {
    "refs": [
     "Gen. 5:3",
     "Moses 6:10"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "express image",
+   "refs": [
+    "Gen. 5:3"
    ],
    "category": "cross-ref"
   }
@@ -72895,6 +72929,14 @@ window._dcCrossrefsData = {
     "TG Spirits in Prison"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "bind up the broken-hearted",
+   "refs": [
+    "Isa. 61:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|138|43": [
@@ -72914,6 +72956,14 @@ window._dcCrossrefsData = {
     "TG Resurrection"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "valley of dry bones",
+   "refs": [
+    "Ezek. 37:1 (1-14)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|138|44": [
@@ -72923,6 +72973,15 @@ window._dcCrossrefsData = {
    "refs": [
     "Dan. 2:44 (44–45)",
     "TG Kingdom of God, on Earth"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "never to be destroyed",
+   "refs": [
+    "Dan. 2:44 (44-45)",
+    "7:14"
    ],
    "category": "cross-ref"
   }
@@ -72935,6 +72994,14 @@ window._dcCrossrefsData = {
     "BD Elias"
    ],
    "category": "bd"
+  },
+  {
+   "marker": "b",
+   "text": "Mount of Transfiguration",
+   "refs": [
+    "Matt. 17:3 (1-9)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|138|46": [
@@ -73003,6 +73070,14 @@ window._dcCrossrefsData = {
     "Sealing"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "smitten with a curse",
+   "refs": [
+    "Mal. 4:6 (5-6)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|138|49": [
@@ -73787,6 +73862,37 @@ window._dcCrossrefsData = {
    "text": "able bodied and expert",
    "refs": [
     "Deut. 1:13"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|138|7": [
+  {
+   "marker": "a",
+   "text": "Christ hath suffered",
+   "refs": [
+    "1 Pet. 3:18"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|138|9": [
+  {
+   "marker": "a",
+   "text": "in the days of Noah",
+   "refs": [
+    "1 Pet. 3:20",
+    "Gen. 6:3 (3-22)"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|138|10": [
+  {
+   "marker": "a",
+   "text": "preached to them that are dead",
+   "refs": [
+    "1 Pet. 4:6"
    ],
    "category": "cross-ref"
   }
