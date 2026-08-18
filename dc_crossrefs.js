@@ -60378,6 +60378,15 @@ window._dcCrossrefsData = {
     "D&C 114:2"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "fill the place of those fallen",
+   "refs": [
+    "Acts 1:20 (20, 25–26)",
+    "D&C 114:2"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|118|2": [
@@ -60411,6 +60420,26 @@ window._dcCrossrefsData = {
     "TG Promise"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "lowliness and long-suffering",
+   "refs": [
+    "Eph. 4:2",
+    "Col. 3:12",
+    "Gal. 5:22"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "an effectual door",
+   "refs": [
+    "1 Cor. 16:9",
+    "Acts 14:27",
+    "D&C 112:19"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|118|5": [
@@ -60452,6 +60481,16 @@ window._dcCrossrefsData = {
     "82:18 (17–19)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "surplus property",
+   "refs": [
+    "Ex. 26:12",
+    "Lev. 25:27",
+    "Acts 4:34 (34–35)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|119|2": [
@@ -60475,6 +60514,16 @@ window._dcCrossrefsData = {
     "120"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "beginning of the tithing",
+   "refs": [
+    "Mal. 3:8 (8–10)",
+    "Gen. 14:20",
+    "D&C 64:23 (23–24)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|119|4": [
@@ -60485,6 +60534,26 @@ window._dcCrossrefsData = {
     "TG Tithing"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "one-tenth of all their increase",
+   "refs": [
+    "Deut. 14:22 (22–23)",
+    "Lev. 27:30 (30–32)",
+    "Num. 18:26 (26–28)",
+    "Mal. 3:10"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "a standing law forever",
+   "refs": [
+    "Ex. 12:14",
+    "Lev. 16:34"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|119|5": [
@@ -60505,6 +60574,15 @@ window._dcCrossrefsData = {
     "TG Zion"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "most holy",
+   "refs": [
+    "Ex. 29:37",
+    "Ezek. 43:12"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|119|7": [
@@ -60513,6 +60591,15 @@ window._dcCrossrefsData = {
    "text": "stakes",
    "refs": [
     "D&C 82:13"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "an ensample",
+   "refs": [
+    "1 Pet. 5:3",
+    "1 Tim. 4:12"
    ],
    "category": "cross-ref"
   }
@@ -60534,6 +60621,25 @@ window._dcCrossrefsData = {
     "Church Organization"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "high council",
+   "refs": [
+    "D&C 102:1 (1–2)",
+    "107:36 (36–37)",
+    "115:3"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "disposed of by a council",
+   "refs": [
+    "D&C 119:1 (1–4)",
+    "Acts 6:2 (2–6)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|121|1": [
@@ -71872,6 +71978,17 @@ window._dcCrossrefsData = {
     "Matt. 21:12",
     "Mark 11:15",
     "John 2:15 (14–16)"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|118|4": [
+  {
+   "marker": "a",
+   "text": "over the great waters",
+   "refs": [
+    "Isa. 18:2",
+    "D&C 133:8"
    ],
    "category": "cross-ref"
   }
