@@ -64778,6 +64778,29 @@ window._dcCrossrefsData = {
     "John 15:25"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "prosecutions",
+   "refs": [
+    "Ex. 23:2 (2–3)",
+    "Deut. 25:1",
+    "Isa. 1:23",
+    "Prov. 22:23",
+    "Job 13:18"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "justice or right",
+   "refs": [
+    "Gen. 18:19",
+    "Ps. 33:5",
+    "Prov. 21:3",
+    "Isa. 56:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|127|2": [
