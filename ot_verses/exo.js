@@ -6,7 +6,7 @@ var exo_ch1Verses = [
   { num:"ג", words:[["יִשָּׂשכָר","Issachar"],["זְבוּלֻן","Zebulun"],["וּבִנְיָמִן","and-Benjamin"],["׃",""]] },
   { num:"ד", words:[["דָּן","Dan"],["וְנַפְתָּלִי","and-Naphtali"],["גָּד","Gad"],["וְאָשֵׁר","and-Asher"],["׃",""]] },
   { num:"ה", words:[["וַיְהִי","and-it-came-to-pass"],["כׇּל־נֶפֶשׁ","all-soul"],["יֹצְאֵי","those which came out of"],["יֶרֶךְ־יַעֲקֹב","the thigh of-Jacob"],["שִׁבְעִים","seventy"],["נָפֶשׁ","souls"],["וְיוֹסֵף","and-Joseph"],["הָיָה","was"],["בְמִצְרָיִם","in-Egypt"],["׃",""]] },
-  { num:"ו", words:[["וַיָּמׇת","and-he-died"],["יוֹסֵף","Joseph"],["וְכׇל־אֶחָיו","and-all-his-elder"],["וְכֹל","and-the-whole"],["הַדּוֹר","the-generation"],["הַהוּא","that"],["׃",""]] },
+  { num:"ו", words:[["וַיָּמׇת","and-he-died"],["יוֹסֵף","Joseph"],["וְכׇל־אֶחָיו","and-all-his-brethren"],["וְכֹל","and-the-whole"],["הַדּוֹר","the-generation"],["הַהוּא","that"],["׃",""]] },
   { num:"ז", words:[["וּבְנֵי","and-sons-of"],["יִשְׂרָאֵל","Israel"],["פָּרוּ","they-were-fruitful"],["וַיִּשְׁרְצוּ","and-they swarmed"],["וַיִּרְבּוּ","and-they-did-multiply"],["וַיַּעַצְמוּ","and-waxed-great"],["בִּמְאֹד","with-exceeding"],["מְאֹד","exceedingly"],["וַתִּמָּלֵא","and-was-filled(f)"],["הָאָרֶץ","the-earth"],["אֹתָם","them"],["׃",""]] },
   { num:"ח", words:[["וַיָּקׇם","and-may he carry out"],["מֶלֶךְ־חָדָשׁ","king-of-fresh/new"],["עַל־מִצְרָיִם","upon-Egypt"],["אֲשֶׁר","which"],["לֹא־יָדַע","not-he-knew"],["אֶת־יוֹסֵף","Joseph"],["׃",""]] },
   { num:"ט", words:[["וַיֹּאמֶר","and-said"],["אֶל־עַמּוֹ","unto-his-people"],["הִנֵּה","behold"],["עַם","people"],["בְּנֵי","the-sons-of"],["יִשְׂרָאֵל","Israel"],["רַב","great"],["וְעָצוּם","and-mighty"],["מִמֶּנּוּ","from-him"],["׃",""]] },
