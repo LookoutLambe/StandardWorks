@@ -66125,6 +66125,15 @@ window._dcCrossrefsData = {
     "Man, Potential to Become like Heavenly Father"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "we shall see him as he is",
+   "refs": [
+    "1 John 3:2",
+    "Moro. 7:48"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|130|2": [
@@ -66173,6 +66182,14 @@ window._dcCrossrefsData = {
    "refs": [
     "Alma 34:36",
     "D&C 130:22"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "make our abode with him",
+   "refs": [
+    "John 14:23 (21–23)"
    ],
    "category": "cross-ref"
   }
@@ -66261,6 +66278,16 @@ window._dcCrossrefsData = {
     "Isa. 33:14"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "a sea of glass and fire",
+   "refs": [
+    "Rev. 4:6",
+    "15:2",
+    "D&C 77:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|130|8": [
@@ -66271,6 +66298,16 @@ window._dcCrossrefsData = {
     "TG Urim and Thummim"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "Urim and Thummim",
+   "refs": [
+    "Ex. 28:30",
+    "Num. 27:21",
+    "D&C 17:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|130|9": [
@@ -66313,6 +66350,16 @@ window._dcCrossrefsData = {
     "TG Jesus Christ, King"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "f",
+   "text": "like unto crystal",
+   "refs": [
+    "Rev. 4:6",
+    "21:11",
+    "D&C 77:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|130|10": [
@@ -66329,6 +66376,14 @@ window._dcCrossrefsData = {
    "text": "higher",
    "refs": [
     "Abr. 3:3 (3–17)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "a white stone",
+   "refs": [
+    "Rev. 2:17"
    ],
    "category": "cross-ref"
   }
@@ -66349,6 +66404,16 @@ window._dcCrossrefsData = {
     "Isa. 62:2",
     "65:15",
     "Mosiah 5:12 (9–14)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "a new name written",
+   "refs": [
+    "Rev. 2:17",
+    "3:12",
+    "Isa. 62:2"
    ],
    "category": "cross-ref"
   }
@@ -66417,6 +66482,15 @@ window._dcCrossrefsData = {
     "TG Resurrection"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "intelligence rises with us",
+   "refs": [
+    "D&C 93:36 (36–37)",
+    "Prov. 4:7"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|130|19": [
@@ -66474,6 +66548,16 @@ window._dcCrossrefsData = {
     "Ex. 32:29",
     "Deut. 11:27 (26–28)",
     "D&C 132:5"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "a law irrevocably decreed",
+   "refs": [
+    "D&C 88:38 (36–39)",
+    "Job 28:26",
+    "Jer. 33:25"
    ],
    "category": "cross-ref"
   }
@@ -66537,6 +66621,16 @@ window._dcCrossrefsData = {
    "refs": [
     "2 Tim. 1:14",
     "TG Holy Ghost, Mission of"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "a body of flesh and bones",
+   "refs": [
+    "Luke 24:39",
+    "D&C 129:1 (1–2)",
+    "Gen. 1:27"
    ],
    "category": "cross-ref"
   }
