@@ -62864,6 +62864,15 @@ window._dcCrossrefsData = {
     "35:13"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "the weak things of the earth",
+   "refs": [
+    "1 Cor. 1:27 (26–29)",
+    "D&C 1:19 (19, 23)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|124|2": [
@@ -62956,6 +62965,25 @@ window._dcCrossrefsData = {
     "1 Pet. 1:24"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "as grass, and their glory as the flower",
+   "refs": [
+    "Isa. 40:6 (6–8)",
+    "1 Pet. 1:24 (24–25)",
+    "James 1:10 (10–11)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "without excuse",
+   "refs": [
+    "Rom. 1:20",
+    "D&C 123:6"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|124|8": [
@@ -62995,6 +63023,16 @@ window._dcCrossrefsData = {
     "112:24"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "gnashing of teeth",
+   "refs": [
+    "Matt. 8:12",
+    "13:42",
+    "Ps. 112:10"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|124|9": [
@@ -63025,6 +63063,15 @@ window._dcCrossrefsData = {
    "refs": [
     "Isa. 60:6 (6, 11–17)",
     "61:6 (4–6)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "kings with your gold and silver",
+   "refs": [
+    "Isa. 60:9 (5, 9–11)",
+    "60:16"
    ],
    "category": "cross-ref"
   }
@@ -63067,6 +63114,16 @@ window._dcCrossrefsData = {
    "refs": [
     "Ex. 19:4",
     "Isa. 40:31"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "wings of eagles",
+   "refs": [
+    "Ex. 19:4",
+    "Isa. 40:31",
+    "Deut. 32:11"
    ],
    "category": "cross-ref"
   }
@@ -63214,6 +63271,15 @@ window._dcCrossrefsData = {
     "60:13"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "the fir tree and the pine",
+   "refs": [
+    "Isa. 60:13",
+    "41:19"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|124|27": [
@@ -63268,6 +63334,16 @@ window._dcCrossrefsData = {
     "138:33",
     "TG Baptism for the Dead",
     "Salvation for the Dead"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "baptized for the dead",
+   "refs": [
+    "1 Cor. 15:29",
+    "D&C 128:12 (12–18)",
+    "127:5 (5–9)"
    ],
    "category": "cross-ref"
   }
@@ -63336,6 +63412,16 @@ window._dcCrossrefsData = {
     "35:11",
     "Ezek. 37:27",
     "TG Temple"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "a tabernacle in the wilderness",
+   "refs": [
+    "Ex. 25:8 (8–9)",
+    "26:1 (1–37)",
+    "Heb. 8:5"
    ],
    "category": "cross-ref"
   }
@@ -63450,6 +63536,16 @@ window._dcCrossrefsData = {
     "D&C 27:13",
     "76:106",
     "112:30"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "hid from before the foundation of the world",
+   "refs": [
+    "1 Cor. 2:7",
+    "Eph. 3:9 (9–11)",
+    "Rom. 16:25 (25–26)"
    ],
    "category": "cross-ref"
   }
@@ -63884,6 +63980,16 @@ window._dcCrossrefsData = {
     "D&C 107:40 (39–40)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "patriarchal blessings",
+   "refs": [
+    "Gen. 27:27 (27–29)",
+    "48:14 (14–20)",
+    "49:1 (1–28)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|124|92": [
@@ -64220,6 +64326,25 @@ window._dcCrossrefsData = {
    "text": "hour",
    "refs": [
     "Rev. 3:10"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "the Holy Spirit of promise",
+   "refs": [
+    "Eph. 1:13 (13–14)",
+    "4:30",
+    "D&C 132:7 (7, 18–19)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "the day of redemption",
+   "refs": [
+    "Eph. 4:30",
+    "D&C 88:16 (16–17)"
    ],
    "category": "cross-ref"
   }
