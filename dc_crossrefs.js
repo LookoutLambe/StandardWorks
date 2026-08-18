@@ -70657,6 +70657,15 @@ window._dcCrossrefsData = {
     "TG Apostles"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "captains of hundreds",
+   "refs": [
+    "Ex. 18:21 (21,25)",
+    "Deut. 1:15"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|136|4": [
@@ -70854,6 +70863,14 @@ window._dcCrossrefsData = {
     "TG Covet"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "covet not",
+   "refs": [
+    "Ex. 20:17"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|136|21": [
@@ -70873,6 +70890,15 @@ window._dcCrossrefsData = {
     "Ex. 3:6",
     "Matt. 22:32",
     "1 Ne. 19:10"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "name of the Lord in vain",
+   "refs": [
+    "Ex. 20:7",
+    "Deut. 5:11"
    ],
    "category": "cross-ref"
   }
@@ -70900,6 +70926,15 @@ window._dcCrossrefsData = {
     "Ezek. 20:34 (33–34)",
     "Hosea 13:9",
     "D&C 38:33"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "arm is stretched out",
+   "refs": [
+    "Isa. 5:25",
+    "2 Ne. 20:4"
    ],
    "category": "cross-ref"
   }
@@ -71020,6 +71055,15 @@ window._dcCrossrefsData = {
     "TG Stewardship"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "wise steward",
+   "refs": [
+    "Isa. 22:15",
+    "Luke 12:42"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|136|28": [
@@ -71138,6 +71182,15 @@ window._dcCrossrefsData = {
     "TG Chastening"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "bear chastisement",
+   "refs": [
+    "Prov. 3:11",
+    "Heb. 12:6"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|136|32": [
@@ -71251,6 +71304,14 @@ window._dcCrossrefsData = {
    "refs": [
     "Rev. 19:2",
     "Morm. 8:41 (40–41)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "crieth from the ground",
+   "refs": [
+    "Gen. 4:10"
    ],
    "category": "cross-ref"
   }
@@ -73665,6 +73726,16 @@ window._dcCrossrefsData = {
    "text": "clothe the heavens",
    "refs": [
     "Isa. 50:3"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|136|7": [
+  {
+   "marker": "a",
+   "text": "able bodied and expert",
+   "refs": [
+    "Deut. 1:13"
    ],
    "category": "cross-ref"
   }
