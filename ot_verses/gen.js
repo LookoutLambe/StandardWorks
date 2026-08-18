@@ -756,7 +756,7 @@ var gen_ch24Verses = [
 renderVerseSet(gen_ch24Verses, 'gen-ch24-verses');
 
 var gen_ch25Verses = [
-  { num:"א", words:[["וַיֹּסֶף","and continued"],["אַבְרָהָם","Abraham"],["וַיִּקַּח","and took"],["אִשָּׁה","a woman"],["וּשְׁמָהּ","and there"],["קְטוּרָה","was Keturah"],["׃",""]] },
+  { num:"א", words:[["וַיֹּסֶף","and continued"],["אַבְרָהָם","Abraham"],["וַיִּקַּח","and took"],["אִשָּׁה","a woman"],["וּשְׁמָהּ","and her name was"],["קְטוּרָה","Keturah"],["׃",""]] },
   { num:"ב", words:[["וַתֵּלֶד","and bore"],["לוֹ","him"],["אֶת־זִמְרָן","Zimran"],["וְאֶת־יׇקְשָׁן","and Jokshan"],["וְאֶת־מְדָן","and Medan"],["וְאֶת־מִדְיָן","and Midian"],["וְאֶת־יִשְׁבָּק","and Ishbak"],["וְאֶת־שׁוּחַ","and Shuah"],["׃",""]] },
   { num:"ג", words:[["וְיׇקְשָׁן","and Jokshan"],["יָלַד","begat"],["אֶת־שְׁבָא","Sheba"],["וְאֶת־דְּדָן","and Dedan"],["וּבְנֵי","and sons of"],["דְדָן","Dedan"],["הָיוּ","were"],["אַשּׁוּרִם","Asshurites"],["וּלְטוּשִׁם","and Letushim"],["וּלְאֻמִּים","and Leummites"],["׃",""]] },
   { num:"ד", words:[["וּבְנֵי","and sons of"],["מִדְיָן","Midian"],["עֵיפָה","were Ephah"],["וָעֵפֶר","and Epher"],["וַחֲנֹךְ","and Hanoch"],["וַאֲבִידָע","and Abida"],["וְאֶלְדָּעָה","and Eldaah"],["כׇּל־אֵלֶּה","all these"],["בְּנֵי","the sons of"],["קְטוּרָה","Keturah"],["׃",""]] },
