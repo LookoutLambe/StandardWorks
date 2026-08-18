@@ -345,7 +345,7 @@ var pro_ch11Verses = [
   { num:"יד", words:[["בְּאֵין","in-un"],["תַּחְבֻּלוֹת","wise directions"],["יִפׇּל־עָם","he fell-a-people"],["וּתְשׁוּעָה","and-victory"],["בְּרֹב","much"],["יוֹעֵץ","Counselor"],["׃",""]] },
   { num:"טו", words:[["רַע־יֵרוֹעַ","evil-he is harmed"],["כִּי־עָרַב","because-he stood surety for"],["זָר","strange"],["וְשֹׂנֵא","and-one who hates"],["תֹקְעִים","those striking hands"],["בּוֹטֵחַ","is secure"],["׃",""]] },
   { num:"טז", words:[["אֵשֶׁת־חֵן","the-wife-of-favor"],["תִּתְמֹךְ","she lays hold of"],["כָּבוֹד","glorious"],["וְעָרִיצִים","and-ruthless people"],["יִתְמְכוּ־עֹשֶׁר","they take hold of-riches"],["׃",""]] },
-  { num:"יז", words:[["גֹּמֵל","is dealing bountifully with"],["נַפְשׁוֹ","his-soul"],["אִישׁ","a-man"],["חָסֶד","covenant loyalty"],["וְעֹכֵר","and-is troubling"],["שְׁאֵרוֹ","relative-his"],["אַכְזָרִי","cruel"],["׃",""]] },
+  { num:"יז", words:[["גֹּמֵל","is dealing bountifully with"],["נַפְשׁוֹ","his-soul"],["אִישׁ","a-man"],["חָסֶד","mercy"],["וְעֹכֵר","and-is troubling"],["שְׁאֵרוֹ","relative-his"],["אַכְזָרִי","cruel"],["׃",""]] },
   { num:"יח", words:[["רָשָׁע","wicked"],["עֹשֶׂה","do"],["פְעֻלַּת־שָׁקֶר","the-working-of-false"],["וְזֹרֵעַ","and-one who sows"],["צְדָקָה","a-state-of-righteousness"],["שֶׂכֶר","wages of"],["אֱמֶת","truth"],["׃",""]] },
   { num:"יט", words:[["כֵּן־צְדָקָה","thus-a-state-of-righteousness"],["לְחַיִּים","to-alive/living"],["וּמְרַדֵּף","and-one who pursues"],["רָעָה","evil"],["לְמוֹתוֹ","to-his-death"],["׃",""]] },
   { num:"כ", words:[["תּוֹעֲבַת","an-abomination-before"],["יְהֹוָה","the-LORD"],["עִקְּשֵׁי־לֵב","perverse people of-heart"],["וּרְצוֹנוֹ","and-his-will"],["תְּמִימֵי","people blameless of"],["דָרֶךְ","a path"],["׃",""]] },
