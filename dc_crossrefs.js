@@ -64767,6 +64767,17 @@ window._dcCrossrefsData = {
     "TG Accountability"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "persecute me without a cause",
+   "refs": [
+    "Ps. 35:19",
+    "69:4",
+    "119:161",
+    "John 15:25"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|127|2": [
@@ -64813,6 +64824,34 @@ window._dcCrossrefsData = {
     "TG Test"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "deep waters",
+   "refs": [
+    "Ps. 69:2 (1–2)",
+    "Isa. 43:2"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "glory in tribulation",
+   "refs": [
+    "Rom. 5:3 (3–5)",
+    "2 Cor. 12:9 (9–10)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "h",
+   "text": "ordained before the foundation of the world",
+   "refs": [
+    "Jer. 1:5",
+    "Eph. 1:4",
+    "Abr. 3:23"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|127|3": [
@@ -64842,6 +64881,16 @@ window._dcCrossrefsData = {
     "TG Oppression"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "a recompense upon their oppressors",
+   "refs": [
+    "Isa. 3:11",
+    "Obad. 1:15",
+    "D&C 121:23 (23–25)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|127|4": [
@@ -64872,6 +64921,26 @@ window._dcCrossrefsData = {
     "Reward"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "let not your hands be slack",
+   "refs": [
+    "2 Chr. 15:7",
+    "Zeph. 3:16",
+    "Heb. 12:12"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "so persecuted they the prophets",
+   "refs": [
+    "Matt. 5:12 (11–12)",
+    "Luke 6:23",
+    "Acts 7:52"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|127|5": [
@@ -64904,6 +64973,16 @@ window._dcCrossrefsData = {
     "D&C 128:2 (2–4, 7)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "a recorder and eye-witness",
+   "refs": [
+    "Deut. 19:15",
+    "2 Cor. 13:1",
+    "D&C 128:3 (2–4)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|127|7": [
@@ -64922,6 +65001,16 @@ window._dcCrossrefsData = {
     "TG Priesthood, Keys of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "bound in heaven",
+   "refs": [
+    "Matt. 16:19",
+    "18:18",
+    "D&C 128:8 (8–10)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|127|8": [
@@ -64940,6 +65029,16 @@ window._dcCrossrefsData = {
     "TG Priesthood, Melchizedek"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "restore many things",
+   "refs": [
+    "Acts 3:21",
+    "Mal. 4:6",
+    "D&C 86:10"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|127|9": [
@@ -64949,6 +65048,16 @@ window._dcCrossrefsData = {
    "refs": [
     "D&C 128:24",
     "TG Record Keeping"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "the archives of my temple",
+   "refs": [
+    "Ezra 6:1 (1–2)",
+    "Esth. 6:1",
+    "Mal. 3:16"
    ],
    "category": "cross-ref"
   }
@@ -64962,6 +65071,16 @@ window._dcCrossrefsData = {
     "TG Satan"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "the prince of this world",
+   "refs": [
+    "John 14:30",
+    "12:31",
+    "16:11"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|127|12": [
@@ -64971,6 +65090,16 @@ window._dcCrossrefsData = {
    "refs": [
     "D&C 124:125",
     "TG Seer"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "prophet and seer",
+   "refs": [
+    "1 Sam. 9:9",
+    "D&C 21:1",
+    "107:92"
    ],
    "category": "cross-ref"
   }
