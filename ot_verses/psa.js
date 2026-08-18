@@ -2283,7 +2283,7 @@ var psa_ch107Verses = [
   { num:"לג", words:[["יָשֵׂם","may he appoint"],["נְהָרוֹת","their-rivers"],["לְמִדְבָּר","to-the-wilderness-of"],["וּמֹצָאֵי","and-springs of"],["מַיִם","water"],["לְצִמָּאוֹן","into-thirsty ground"],["׃",""]] },
   { num:"לד", words:[["אֶרֶץ","the-land-of"],["פְּרִי","fruit"],["לִמְלֵחָה","into-saltiness"],["מֵרָעַת","from-the evil of"],["יוֹשְׁבֵי","the-inhabitants-of"],["בָהּ","therein"],["׃",""]] },
   { num:"לה", words:[["יָשֵׂם","may he appoint"],["מִדְבָּר","the-wilderness"],["לַאֲגַם־מַיִם","into-a pool of-water"],["וְאֶרֶץ","and-land-of"],["צִיָּה","dry"],["לְמֹצָאֵי","into-springs of"],["מָיִם","water"],["׃",""]] },
-  { num:"לו", words:[["וַיּוֹשֶׁב","and-he caused to dwell"],["שָׁם","there"],["רְעֵבִים","the-hungry"],["וַיְכוֹנְנוּ","Oikonno"],["עִיר","the-city-of"],["מוֹשָׁב","dwelling"],["׃",""]] },
+  { num:"לו", words:[["וַיּוֹשֶׁב","and-he caused to dwell"],["שָׁם","there"],["רְעֵבִים","the-hungry"],["וַיְכוֹנְנוּ","and-they-established"],["עִיר","the-city-of"],["מוֹשָׁב","dwelling"],["׃",""]] },
   { num:"לז", words:[["וַיִּזְרְעוּ","and-he-his-seed"],["שָׂדוֹת","fields"],["וַיִּטְּעוּ","and-they planted"],["כְרָמִים","vineyards"],["וַיַּעֲשׂוּ","and-they-did"],["פְּרִי","fruit"],["תְבוּאָה","produce"],["׃",""]] },
   { num:"לח", words:[["וַיְבָרְכֵם","and-they-were-blessed"],["וַיִּרְבּוּ","and-they-did-multiply"],["מְאֹד","exceedingly"],["וּבְהֶמְתָּם","and-cattle-their"],["לֹא","not"],["יַמְעִיט","but-little-should-be-required"],["׃",""]] },
   { num:"לט", words:[["וַיִּמְעֲטוּ","and-they became few"],["וַיָּשֹׁחוּ","and-they were bowed down"],["מֵעֹצֶר","from-the pressure of"],["רָעָה","evil"],["וְיָגוֹן","and-sorrow"],["׃",""]] },
