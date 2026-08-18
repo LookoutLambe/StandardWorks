@@ -18,10 +18,10 @@ var dc131_ch1Verses = [
     ["בְּסֵדֶר","into the order of"],
     ["הַכְּהֻנָּה","the priesthood"],
     ["הַזֶּה","this"],
-    ["בְּרִית־עוֹלָם","[meaning the everlasting covenant"],
-    ["הַחֲדָשָׁה","the new,"],
-    ["בְּרִית","the covenant"],
-    ["אִשָּׁה׃","of marriage];"]
+    ["בְּרִית־עוֹלָם","everlasting covenant"],
+    ["הַחֲדָשָׁה","new"],
+    ["בְּרִית","covenant"],
+    ["אִשָּׁה׃","marriage"]
   ]},
   { num: "ג", words: [
     ["וְאִם","And if"],
