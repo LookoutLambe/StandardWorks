@@ -60116,6 +60116,25 @@ window._dcCrossrefsData = {
     "D&C 104:14"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "repent of all their sins",
+   "refs": [
+    "Ezek. 18:21 (21–23)",
+    "Isa. 55:7"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "covetous desires",
+   "refs": [
+    "Ex. 18:21",
+    "Ps. 119:36",
+    "1 Tim. 6:10"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|117|5": [
@@ -60147,6 +60166,25 @@ window._dcCrossrefsData = {
     "1 Ne. 17:37"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "fowls of heaven",
+   "refs": [
+    "Ps. 50:10 (10–12)",
+    "Gen. 1:26",
+    "Job 12:7 (7–10)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "made the earth",
+   "refs": [
+    "Isa. 45:12",
+    "Jer. 27:5"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|117|7": [
@@ -60166,6 +60204,16 @@ window._dcCrossrefsData = {
     "39:13",
     "49:25",
     "TG Earth, Renewal of"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "bud and blossom",
+   "refs": [
+    "Isa. 27:6",
+    "35:1 (1–2)",
+    "D&C 49:24 (24–25)"
    ],
    "category": "cross-ref"
   }
@@ -60195,6 +60243,23 @@ window._dcCrossrefsData = {
     "Eden"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "the drop",
+   "refs": [
+    "Isa. 40:15"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "weightier matters",
+   "refs": [
+    "Matt. 23:23",
+    "Luke 11:42"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|117|10": [
@@ -60203,6 +60268,15 @@ window._dcCrossrefsData = {
    "text": "faithful",
    "refs": [
     "Matt. 25:23"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "faithful over a few things",
+   "refs": [
+    "Matt. 25:21 (21, 23)",
+    "Luke 16:10 (10–12)"
    ],
    "category": "cross-ref"
   }
@@ -60231,6 +60305,14 @@ window._dcCrossrefsData = {
     "D&C 72:8 (6–8)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "Nicolaitane band",
+   "refs": [
+    "Rev. 2:6 (6, 15)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|117|12": [
@@ -60238,6 +60320,16 @@ window._dcCrossrefsData = {
    "marker": "a",
    "text": "Oliver Granger",
    "category": "ie"
+  },
+  {
+   "marker": "b",
+   "text": "in remembrance",
+   "refs": [
+    "Mal. 3:16",
+    "Ps. 112:6",
+    "Prov. 10:7"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|117|13": [
@@ -60248,6 +60340,33 @@ window._dcCrossrefsData = {
     "TG Self-Sacrifice"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "contend earnestly",
+   "refs": [
+    "Jude 1:3"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "when he falls he shall rise",
+   "refs": [
+    "Prov. 24:16",
+    "Micah 7:8"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "sacrifice",
+   "refs": [
+    "1 Sam. 15:22",
+    "Ps. 51:17 (16–17)",
+    "Hosea 6:6"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|118|1": [
@@ -71731,6 +71850,28 @@ window._dcCrossrefsData = {
    "refs": [
     "1 Kgs. 7:51",
     "2 Chr. 5:1"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|117|15": [
+  {
+   "marker": "a",
+   "text": "let no man despise",
+   "refs": [
+    "1 Tim. 4:12"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|117|16": [
+  {
+   "marker": "a",
+   "text": "tables of the moneychangers",
+   "refs": [
+    "Matt. 21:12",
+    "Mark 11:15",
+    "John 2:15 (14–16)"
    ],
    "category": "cross-ref"
   }
