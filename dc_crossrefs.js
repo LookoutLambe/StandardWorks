@@ -59694,6 +59694,15 @@ window._dcCrossrefsData = {
     "TG Jesus Christ, Head of the Church"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "high council",
+   "refs": [
+    "D&C 102:1 (1–2)",
+    "107:36 (36–37)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|115|4": [
@@ -59762,6 +59771,26 @@ window._dcCrossrefsData = {
     "TG Nations"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "e",
+   "text": "Arise and shine forth",
+   "refs": [
+    "Isa. 60:1 (1–3)",
+    "D&C 82:14"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "a standard for the nations",
+   "refs": [
+    "Isa. 11:12",
+    "49:22",
+    "62:10",
+    "D&C 45:9"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|115|6": [
@@ -59809,6 +59838,26 @@ window._dcCrossrefsData = {
     "D&C 1:13 (13–14)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "a defense and a refuge",
+   "refs": [
+    "Isa. 25:4",
+    "4:6 (5–6)",
+    "D&C 45:66 (66–71)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "without mixture",
+   "refs": [
+    "Rev. 14:10",
+    "Ps. 75:8",
+    "D&C 19:15"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|115|7": [
@@ -59819,6 +59868,25 @@ window._dcCrossrefsData = {
     "Ex. 3:5",
     "Josh. 5:15",
     "D&C 101:64"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "most holy",
+   "refs": [
+    "Ex. 29:37",
+    "26:33 (33–34)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "ground is holy",
+   "refs": [
+    "Ex. 3:5",
+    "Josh. 5:15",
+    "Acts 7:33"
    ],
    "category": "cross-ref"
   }
@@ -59871,6 +59939,15 @@ window._dcCrossrefsData = {
     "D&C 124:45 (45–54)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "lay the foundation",
+   "refs": [
+    "Ezra 3:10 (10–11)",
+    "Hag. 2:18"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|115|13": [
@@ -59879,6 +59956,16 @@ window._dcCrossrefsData = {
    "text": "debt",
    "refs": [
     "D&C 104:86 (78–86)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "get in debt",
+   "refs": [
+    "Deut. 28:12",
+    "Ps. 37:21",
+    "Rom. 13:8"
    ],
    "category": "cross-ref"
   }
@@ -59891,6 +59978,16 @@ window._dcCrossrefsData = {
     "Num. 8:4",
     "Heb. 8:5",
     "D&C 97:10"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "according to the pattern",
+   "refs": [
+    "Ex. 25:9 (9, 40)",
+    "1 Chr. 28:11 (11–12, 19)",
+    "Heb. 8:5"
    ],
    "category": "cross-ref"
   }
@@ -59915,6 +60012,17 @@ window._dcCrossrefsData = {
     "TG Priesthood, Keys of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "keys of this kingdom",
+   "refs": [
+    "Matt. 16:19",
+    "D&C 81:2",
+    "112:16 (16, 32)",
+    "128:20"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|116|1": [
@@ -71570,6 +71678,38 @@ window._dcCrossrefsData = {
    "refs": [
     "Isa. 52:2",
     "3 Ne. 20:37"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|115|9": [
+  {
+   "marker": "a",
+   "text": "foundation",
+   "refs": [
+    "Isa. 28:16",
+    "1 Kgs. 6:37"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|115|12": [
+  {
+   "marker": "a",
+   "text": "cornerstone",
+   "refs": [
+    "Job 38:6",
+    "Ps. 118:22",
+    "Zech. 4:7"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "finished",
+   "refs": [
+    "1 Kgs. 7:51",
+    "2 Chr. 5:1"
    ],
    "category": "cross-ref"
   }
