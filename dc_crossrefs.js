@@ -70168,6 +70168,14 @@ window._dcCrossrefsData = {
     "Punish"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "amenable to him",
+   "refs": [
+    "Num. 3:9"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|134|5": [
@@ -70322,6 +70330,15 @@ window._dcCrossrefsData = {
     "TG Deliver"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "encroachments",
+   "refs": [
+    "Deut. 19:14",
+    "Prov. 22:28"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|134|12": [
