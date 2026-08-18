@@ -6357,8 +6357,8 @@ renderVerseSet(dc128_ch1Verses, 'dc128-ch1-verses');
 
 var dc129_ch1Verses = [
   { num: "א", words: [
-    ["שְׁנֵי","two"],
-    ["מִינֵי","There are kinds"],
+    ["שְׁנֵי","There are two"],
+    ["מִינֵי","kinds"],
     ["בְּרִיּוֹת","of beings"],
     ["בַּשָּׁמַיִם","in heaven,"],
     ["מַלְאָכִים","namely: Angels,"],
@@ -6366,23 +6366,24 @@ var dc129_ch1Verses = [
     ["תְחִיָּה","resurrected personages,"],
     ["בְּגוּף","having bodies"],
     ["בָּשָׂר","of flesh"],
-    ["וָעֶצֶם׃","and bones—"]
+    ["וַעֲצָמוֹת׃","and bones—"]
   ]},
   { num: "ב", words: [
     ["כַּאֲשֶׁר","For instance,"],
     ["אָמַר","said:"],
     ["יֵשׁוּעַ","Jesus"],
-    ["מַשּׁוּנִי","Handle me"],
+    ["מַשְׁשׁוּנִי","Handle me"],
     ["וּרְאוּ","and see,"],
     ["כִּי","for"],
-    ["רוּחַ","a spirit hath"],
-    ["אֵין","not"],
-    ["לוֹ","..."],
+    ["רוּחַ","a spirit"],
+    ["אֵין","hath not"],
+    ["לוֹ","to it"],
     ["בָּשָׂר","flesh"],
-    ["וָעֶצֶם","and bones,"],
+    ["וַעֲצָמוֹת","and bones,"],
     ["כַּאֲשֶׁר","as"],
-    ["רְאִיתֶם","ye see"],
-    ["בִּי׃","me have."]
+    ["אַתֶּם","ye"],
+    ["רֹאִים","see"],
+    ["בִּי׃","in me."]
   ]},
   { num: "ג", words: [
     ["וְהַשֵּׁנִי","Secondly:"],
@@ -6391,23 +6392,23 @@ var dc129_ch1Verses = [
     ["שְׁלֵמִים","made perfect,"],
     ["אֲשֶׁר","they who"],
     ["לֹא","not"],
-    ["קָמוּ","are"],
-    ["עוֹד","..."],
+    ["קָמוּ","are risen"],
+    ["עוֹד","yet"],
     ["לִתְחִיָּה","resurrected,"],
-    ["וְיֵשׁ","but inherit"],
-    ["לָהֶם","..."],
-    ["אוֹתוֹ","the same"],
-    ["הַכָּבוֹד׃","glory."]
+    ["וְיֵשׁ","but have"],
+    ["לָהֶם","unto them"],
+    ["הַכָּבוֹד","the ... glory"],
+    ["הַהוּא׃","same."]
   ]},
   { num: "ד", words: [
     ["כַּאֲשֶׁר","When"],
     ["יָבוֹא","comes"],
-    ["שָׁלִיחַ","a messenger"],
+    ["צִיר","a messenger"],
     ["וְיֹאמַר","saying"],
-    ["כִּי","..."],
-    ["דְבַר","he has a message"],
-    ["אֱלֹהִים","from God,"],
-    ["בְּפִיו","..."],
+    ["כִּי","that"],
+    ["דְבַר","the word of"],
+    ["אֱלֹהִים","God"],
+    ["בְּפִיו","is in his mouth,"],
     ["הוֹשֵׁט","offer"],
     ["לוֹ","him"],
     ["אֶת־יָדְךָ","your hand"],
@@ -6420,11 +6421,11 @@ var dc129_ch1Verses = [
     ["אִם","If"],
     ["מַלְאָךְ","an angel"],
     ["הוּא","he be"],
-    ["יִלְחַץ","he will do so,"],
-    ["אֶת־יָדְךָ","..."],
+    ["יִלְחַץ","he will grasp"],
+    ["אֶת־יָדְךָ","your hand,"],
     ["וְתִמְצָא","and you will feel"],
-    ["יָד","..."],
-    ["בְּיָדוֹ׃","his hand."]
+    ["יָד","a hand"],
+    ["בְּיָדוֹ׃","in his."]
   ]},
   { num: "ו", words: [
     ["אִם","If he be"],
@@ -6434,25 +6435,26 @@ var dc129_ch1Verses = [
     ["יָבוֹא","he will come"],
     ["בִכְבוֹדוֹ","in his glory;"],
     ["כִּי","for"],
-    ["לֹא","..."],
-    ["יֵרָאֶה","is the only way he can appear—"],
-    ["אֶלָּא","that"],
-    ["כֵּן׃","..."]
+    ["לֹא","not"],
+    ["יֵרָאֶה","can he appear"],
+    ["כִּי","but"],
+    ["אִם","only"],
+    ["כֵּן׃","thus."]
   ]},
   { num: "ז", words: [
-    ["בִּקַּשְׁתָּ","Ask"],
+    ["בַּקֵּשׁ","Ask"],
     ["מִמֶּנּוּ","him"],
     ["לִלְחֹץ","to shake hands"],
     ["יָדְךָ","with you,"],
     ["וְלֹא","but he will not"],
     ["יִלְחָץ","move,"],
-    ["כִּי","because it is"],
-    ["לֹא","..."],
-    ["יַעֲשֶׂה","contrary to the order"],
-    ["צַדִּיק","of heaven for a just man"],
-    ["מִרְמָה","to deceive;"],
-    ["וְאֶת","but"],
-    ["דְּבָרוֹ","his message"],
+    ["כִּי","because"],
+    ["לֹא","not"],
+    ["יַעֲשֶׂה","will do"],
+    ["צַדִּיק","a just man"],
+    ["מִרְמָה","deceit;"],
+    ["וְאֶת־דְּבָרוֹ","but his message"],
+    
     ["יַגִּיד׃","he will still deliver"]
   ]},
   { num: "ח", words: [
@@ -6464,14 +6466,14 @@ var dc129_ch1Verses = [
     ["וּבִקַּשְׁתָּ","when you ask"],
     ["מִמֶּנּוּ","him"],
     ["לִלְחֹץ","to shake hands"],
-    ["יָדְךָ","..."],
-    ["יוֹשִׁיט","he will offer you"],
+    ["יָדְךָ","with you,"],
+    ["יוֹשִׁיט","he will offer"],
     ["יָדוֹ","his hand,"],
     ["וְלֹא","and not"],
     ["תִמְצָא","you will feel"],
     ["מְאוּמָה","anything;"],
-    ["וּבָזֶה","you may therefore detect him."],
-    ["תַּכִּירֶנּוּ׃","you may detect him"]
+    ["וּבָזֶה","and by this"],
+    ["תַּכִּירֶנּוּ׃","you may detect him."]
   ]},
   { num: "ט", words: [
     ["אֵלֶּה","These are"],
@@ -6479,14 +6481,13 @@ var dc129_ch1Verses = [
     ["מַפְתְּחוֹת","keys"],
     ["גְּדוֹלִים","grand"],
     ["אֲשֶׁר","whereby"],
-    ["בָּהֶם","..."],
+    ["בָּהֶם","by them"],
     ["תֵּדַע","you may know"],
     ["אִם","whether"],
-    ["כׇּל","any"],
-    ["שֵׁרוּת","administration"],
-    ["מֵאֵת","is from"],
-    ["הָאֱלֹהִים","God."],
-    ["הוּא׃","..."]
+    ["כׇּל־מַלְאָכוּת","any administration"],
+    ["מֵאֵת","from"],
+    ["הָאֱלֹהִים","God"],
+    ["הוּא׃","it be."]
   ]}
 ];
 renderVerseSet(dc129_ch1Verses, 'dc129-ch1-verses');

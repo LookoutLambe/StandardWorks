@@ -65987,6 +65987,16 @@ window._dcCrossrefsData = {
     "Matt. 27:52 (52–53)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "flesh and bones",
+   "refs": [
+    "Luke 24:39",
+    "Gen. 2:23",
+    "D&C 130:22"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|129|3": [
@@ -66016,6 +66026,16 @@ window._dcCrossrefsData = {
     "TG Man, Potential to Become like Heavenly Father"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "just men made perfect",
+   "refs": [
+    "Heb. 12:23",
+    "D&C 76:69",
+    "132:37"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|129|7": [
@@ -66055,6 +66075,15 @@ window._dcCrossrefsData = {
     "D&C 131:8 (7–8)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "an angel of light",
+   "refs": [
+    "2 Cor. 11:14",
+    "D&C 128:20"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|129|9": [
@@ -66064,6 +66093,16 @@ window._dcCrossrefsData = {
    "refs": [
     "1 Jn. 4:1 (1–6)",
     "TG Discernment, Spiritual"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "three grand keys",
+   "refs": [
+    "1 John 4:1 (1–3)",
+    "D&C 46:23 (16, 23)",
+    "50:31 (31–33)"
    ],
    "category": "cross-ref"
   }
@@ -73060,6 +73099,29 @@ window._dcCrossrefsData = {
    "refs": [
     "1 Cor. 15:29",
     "D&C 124:29 (29–36)"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|129|2": [
+  {
+   "marker": "a",
+   "text": "Handle me and see",
+   "refs": [
+    "Luke 24:39 (36–43)",
+    "John 20:27 (24–29)"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|129|4": [
+  {
+   "marker": "a",
+   "text": "a messenger from God",
+   "refs": [
+    "Prov. 13:17",
+    "Hag. 1:13",
+    "Mal. 2:7"
    ],
    "category": "cross-ref"
   }
