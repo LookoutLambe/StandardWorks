@@ -60045,6 +60045,27 @@ window._dcCrossrefsData = {
     "TG Adam"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "Ancient of Days",
+   "refs": [
+    "Dan. 7:9 (9–14, 22)",
+    "D&C 27:11",
+    "138:38 (38–39)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "visit his people",
+   "refs": [
+    "Gen. 50:24",
+    "Ex. 3:16",
+    "Luke 1:68",
+    "D&C 107:53 (53–57)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|117|1": [
