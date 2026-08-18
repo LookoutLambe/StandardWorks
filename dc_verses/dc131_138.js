@@ -20,8 +20,7 @@ var dc131_ch1Verses = [
     ["הַזֶּה","this"],
     ["בְּרִית־עוֹלָם","everlasting covenant"],
     ["הַחֲדָשָׁה","new"],
-    ["בְּרִית","covenant"],
-    ["אִשָּׁה׃","marriage"]
+    ["בְּרִית־אִשָּׁה׃","covenant of marriage"]
   ]},
   { num: "ג", words: [
     ["וְאִם","And if"],
