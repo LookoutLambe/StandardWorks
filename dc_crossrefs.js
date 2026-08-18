@@ -64677,6 +64677,26 @@ window._dcCrossrefsData = {
     "D&C 18:28 (27–28)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "as in times past",
+   "refs": [
+    "Gen. 31:2",
+    "Ex. 5:7 (7–8)",
+    "1 Sam. 21:5"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "your offering is acceptable",
+   "refs": [
+    "Mal. 3:4",
+    "Ps. 51:19 (17, 19)",
+    "D&C 97:8 (8–9)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|126|2": [
@@ -64687,6 +64707,16 @@ window._dcCrossrefsData = {
     "TG Good Works"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "your labor and toil",
+   "refs": [
+    "1 Thes. 2:9",
+    "2 Cor. 11:27",
+    "Rev. 2:2"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|126|3": [
@@ -64707,6 +64737,16 @@ window._dcCrossrefsData = {
     "Family, Love within"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "take care of your family",
+   "refs": [
+    "1 Tim. 5:8",
+    "D&C 75:28 (24, 28)",
+    "83:2 (2, 4)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|127|1": [
