@@ -4723,8 +4723,8 @@ var dc127_ch1Verses = [
     
     ["וּמִשְׁפָּט","and right"],
     ["בַּהֲקִימָם","in the getting up of"],
-    ["אֶת־מִשְׁפְּטֵיהֶם","their prosecutions"],
-    ["עָלָי","against me"],
+    ["אֶת־רִיבָם","their prosecutions"],
+    ["עָלַי","against me"],
     ["וְיַעַן","and forasmuch"],
     ["כׇּל־טַעֲנוֹתֵיהֶם","all their pretensions"],
     ["מְיֻסָּדוֹת","are founded"],
