@@ -60661,6 +60661,16 @@ window._dcCrossrefsData = {
     "Isa. 45:15"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "pavilion",
+   "refs": [
+    "Ps. 27:5",
+    "18:11",
+    "31:20"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|121|2": [
@@ -60703,6 +60713,16 @@ window._dcCrossrefsData = {
     "TG Compassion"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "bowels moved with compassion",
+   "refs": [
+    "Isa. 63:15",
+    "Jer. 31:20",
+    "Hosea 11:8"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|121|4": [
@@ -60774,6 +60794,16 @@ window._dcCrossrefsData = {
     "Luke 18:7"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "avenge us of our wrongs",
+   "refs": [
+    "Num. 31:2",
+    "Deut. 32:43",
+    "Rev. 6:10"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|121|6": [
@@ -60811,6 +60841,15 @@ window._dcCrossrefsData = {
    "text": "small",
    "refs": [
     "Isa. 54:7"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "a small moment",
+   "refs": [
+    "Isa. 54:7 (7–8)",
+    "2 Cor. 4:17"
    ],
    "category": "cross-ref"
   }
@@ -60867,6 +60906,15 @@ window._dcCrossrefsData = {
     "Jer. 1:19 (7–19)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "melt as the hoar frost",
+   "refs": [
+    "Ps. 68:2",
+    "Micah 1:4"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|121|12": [
@@ -60908,6 +60956,24 @@ window._dcCrossrefsData = {
     "TG Test"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "e",
+   "text": "change the times and seasons",
+   "refs": [
+    "Dan. 2:21",
+    "Acts 1:7"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "taken in their craftiness",
+   "refs": [
+    "Job 5:13",
+    "1 Cor. 3:19"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|121|13": [
@@ -60989,6 +61055,15 @@ window._dcCrossrefsData = {
     "D&C 64:16"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "lift up the heel",
+   "refs": [
+    "Ps. 41:9",
+    "John 13:18"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|121|17": [
@@ -61006,6 +61081,16 @@ window._dcCrossrefsData = {
    "text": "children",
    "refs": [
     "Eph. 5:6 (2–6)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "children of disobedience",
+   "refs": [
+    "Eph. 2:2",
+    "5:6",
+    "Col. 3:6"
    ],
    "category": "cross-ref"
   }
@@ -61028,6 +61113,16 @@ window._dcCrossrefsData = {
     "Slander"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "swear falsely",
+   "refs": [
+    "Lev. 19:12",
+    "Zech. 5:4",
+    "Ex. 20:16"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|121|19": [
@@ -61048,6 +61143,15 @@ window._dcCrossrefsData = {
     "Salvation"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "c",
+   "text": "offended my little ones",
+   "refs": [
+    "Matt. 18:6 (6–7)",
+    "Mark 9:42"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|121|20": [
@@ -61064,6 +61168,15 @@ window._dcCrossrefsData = {
    "text": "despised",
    "refs": [
     "Prov. 24:24 (23–26)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "basket and barns",
+   "refs": [
+    "Deut. 28:17 (16–19)",
+    "Hag. 1:6 (6, 9)"
    ],
    "category": "cross-ref"
   }
@@ -61086,6 +61199,16 @@ window._dcCrossrefsData = {
    "refs": [
     "Matt. 18:6",
     "D&C 54:5"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "a millstone about their necks",
+   "refs": [
+    "Matt. 18:6",
+    "Mark 9:42",
+    "Judg. 9:53"
    ],
    "category": "cross-ref"
   }
@@ -61112,6 +61235,16 @@ window._dcCrossrefsData = {
    "text": "generation",
    "refs": [
     "Matt. 12:34",
+    "23:33"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "generation of vipers",
+   "refs": [
+    "Matt. 3:7",
+    "12:34",
     "23:33"
    ],
    "category": "cross-ref"
@@ -61364,6 +61497,17 @@ window._dcCrossrefsData = {
     "D&C 84:24"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "g",
+   "text": "the Council of the Eternal God",
+   "refs": [
+    "Ps. 89:7 (5–8)",
+    "Job 15:8",
+    "Jer. 23:18",
+    "Abr. 3:22 (22–28)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|121|33": [
@@ -61412,6 +61556,16 @@ window._dcCrossrefsData = {
     "D&C 63:31",
     "95:5 (5–6)",
     "TG Called of God"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "many are called, but few are chosen",
+   "refs": [
+    "Matt. 22:14",
+    "20:16",
+    "D&C 121:40"
    ],
    "category": "cross-ref"
   }
@@ -61481,6 +61635,15 @@ window._dcCrossrefsData = {
    "refs": [
     "D&C 107:30",
     "TG Righteousness"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "principles of righteousness",
+   "refs": [
+    "Heb. 5:12",
+    "D&C 107:99 (99–100)"
    ],
    "category": "cross-ref"
   }
@@ -61560,6 +61723,15 @@ window._dcCrossrefsData = {
    "refs": [
     "Micah 3:5",
     "1 Ne. 11:35 (34–36)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "kick against the pricks",
+   "refs": [
+    "Acts 9:5",
+    "26:14"
    ],
    "category": "cross-ref"
   }
@@ -61643,6 +61815,26 @@ window._dcCrossrefsData = {
     "Patience"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "love unfeigned",
+   "refs": [
+    "Rom. 12:9",
+    "2 Cor. 6:6",
+    "1 Pet. 1:22"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "by long-suffering and gentleness",
+   "refs": [
+    "Prov. 25:15",
+    "Gal. 5:22 (22–23)",
+    "Eph. 4:2"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|121|42": [
@@ -61688,6 +61880,16 @@ window._dcCrossrefsData = {
     "Sincere"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "f",
+   "text": "without guile",
+   "refs": [
+    "Ps. 32:2",
+    "John 1:47",
+    "1 Pet. 2:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|121|43": [
@@ -61723,6 +61925,24 @@ window._dcCrossrefsData = {
     "TG Charity"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "e",
+   "text": "moved upon by the Holy Ghost",
+   "refs": [
+    "2 Pet. 1:21",
+    "D&C 68:4 (3–4)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "lest he esteem thee to be his enemy",
+   "refs": [
+    "Job 33:10",
+    "Gal. 4:16"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|121|44": [
@@ -61733,6 +61953,15 @@ window._dcCrossrefsData = {
     "TG Dependability"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "the cords of death",
+   "refs": [
+    "Ps. 18:4 (4–5)",
+    "116:3"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|121|45": [
@@ -61783,6 +62012,15 @@ window._dcCrossrefsData = {
     "D&C 128:19"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "f",
+   "text": "distil as the dews",
+   "refs": [
+    "Deut. 32:2",
+    "Micah 5:7"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|121|46": [
@@ -61808,6 +62046,15 @@ window._dcCrossrefsData = {
    "text": "dominion",
    "refs": [
     "Dan. 7:14"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "an everlasting dominion",
+   "refs": [
+    "Dan. 7:14",
+    "Ps. 145:13"
    ],
    "category": "cross-ref"
   }
