@@ -501,7 +501,7 @@ var pro_ch15Verses = [
 renderVerseSet(pro_ch15Verses, 'pro-ch15-verses');
 
 var pro_ch16Verses = [
-  { num:"א", words:[["לְאָדָם","to-man"],["מַעַרְכֵי־לֵב","the plans of-heart"],["וּמֵיְהֹוָה","and-is from-Yahweh"],["מַעֲנֵה","the answer of"],["לָשׁוֹן","tongue"],["׃",""]] },
+  { num:"א", words:[["לְאָדָם","to-man"],["מַעַרְכֵי־לֵב","the plans of-heart"],["וּמֵיְהֹוָה","and-is from the LORD"],["מַעֲנֵה","the answer of"],["לָשׁוֹן","tongue"],["׃",""]] },
   { num:"ב", words:[["כׇּל־דַּרְכֵי־אִישׁ","all-the-ways-of-man-of"],["זַךְ","are pure"],["בְּעֵינָיו","in-His-eyes"],["וְתֹכֵן","and-is weighing"],["רוּחוֹת","spirits-of"],["יְהֹוָה","the-LORD"],["׃",""]] },
   { num:"ג", words:[["גֹּל","roll"],["אֶל־יְהֹוָה","to-the-Lord"],["מַעֲשֶׂיךָ","Your-works"],["וְיִכֹּנוּ","so-they may be established"],["מַחְשְׁבֹתֶיךָ","thoughts-your"],["׃",""]] },
   { num:"ד", words:[["כֹּל","all"],["פָּעַל","it-wrought"],["יְהֹוָה","the-LORD"],["לַמַּעֲנֵהוּ","for-the-purpose-its"],["וְגַם־רָשָׁע","and-also-wicked"],["לְיוֹם","to-day"],["רָעָה","evil"],["׃",""]] },
@@ -533,7 +533,7 @@ var pro_ch16Verses = [
   { num:"ל", words:[["עֹצֶה","one who shuts"],["עֵינָיו","their-eyes"],["לַחְשֹׁב","devised"],["תַּהְפֻּכוֹת","perverse things"],["קֹרֵץ","he is winking"],["שְׂפָתָיו","His-lips"],["כִּלָּה","all-of-it(f)"],["רָעָה","evil"],["׃",""]] },
   { num:"לא", words:[["עֲטֶרֶת","crown-of"],["תִּפְאֶרֶת","the-beauty-of"],["שֵׂיבָה","gray hair"],["בְּדֶרֶךְ","after-the-manner-of"],["צְדָקָה","a-state-of-righteousness"],["תִּמָּצֵא","will it be found"],["׃",""]] },
   { num:"לב", words:[["טוֹב","good"],["אֶרֶךְ","long of"],["אַפַּיִם","with-face"],["מִגִּבּוֹר","from-the-mighty"],["וּמֹשֵׁל","and-a-ruler"],["בְּרוּחוֹ","in-His-Spirit"],["מִלֹּכֵד","more than-one who captures"],["עִיר","the-city-of"],["׃",""]] },
-  { num:"לג", words:[["בַּחֵיק","in the-bosom"],["יוּטַל","he-shall-be-thrust-down"],["אֶת־הַגּוֹרָל","the-lot"],["וּמֵיְהֹוָה","and-is from-Yahweh"],["כׇּל־מִשְׁפָּטוֹ","all-seat"],["׃",""]] },
+  { num:"לג", words:[["בַּחֵיק","in the-bosom"],["יוּטַל","he-shall-be-thrust-down"],["אֶת־הַגּוֹרָל","the-lot"],["וּמֵיְהֹוָה","and-is from the LORD"],["כׇּל־מִשְׁפָּטוֹ","all-seat"],["׃",""]] },
 ];
 renderVerseSet(pro_ch16Verses, 'pro-ch16-verses');
 
@@ -611,7 +611,7 @@ var pro_ch19Verses = [
   { num:"יא", words:[["שֵׂכֶל","insight"],["אָדָם","man"],["הֶאֱרִיךְ","he-prolonged"],["אַפּוֹ","His-wrath"],["וְתִפְאַרְתּוֹ","and-splendor-his"],["עֲבֹר","crossing-over"],["עַל־פָּשַׁע","upon-he has rebelled"],["׃",""]] },
   { num:"יב", words:[["נַהַם","is a roaring"],["כַּכְּפִיר","like-the-young lion"],["זַעַף","the rage of"],["מֶלֶךְ","the-king-of"],["וּכְטַל","and-is like-dew"],["עַל־עֵשֶׂב","upon-herb"],["רְצוֹנוֹ","His-will"],["׃",""]] },
   { num:"יג", words:[["הַוֺּת","the craving of"],["לְאָבִיו","unto-his-father"],["בֵּן","a-son"],["כְּסִיל","you-fool"],["וְדֶלֶף","and-are a dripping"],["טֹרֵד","continuous"],["מִדְיְנֵי","the contentions of"],["אִשָּׁה","a-woman"],["׃",""]] },
-  { num:"יד", words:[["בַּיִת","house"],["וָהוֹן","and-wealth"],["נַחֲלַת","the-first-inheritance-of"],["אָבוֹת","the-fathers"],["וּמֵיְהֹוָה","and-is from-Yahweh"],["אִשָּׁה","a-woman"],["מַשְׂכָּלֶת","prudent"],["׃",""]] },
+  { num:"יד", words:[["בַּיִת","house"],["וָהוֹן","and-wealth"],["נַחֲלַת","the-first-inheritance-of"],["אָבוֹת","the-fathers"],["וּמֵיְהֹוָה","and-is from the LORD"],["אִשָּׁה","a-woman"],["מַשְׂכָּלֶת","prudent"],["׃",""]] },
   { num:"טו", words:[["עַצְלָה","laziness"],["תַּפִּיל","you will cast"],["תַּרְדֵּמָה","deep-sleep"],["וְנֶפֶשׁ","and-soul"],["רְמִיָּה","deceit"],["תִרְעָב","he will be hungry"],["׃",""]] },
   { num:"טז", words:[["שֹׁמֵר","who keeps"],["מִצְוָה","commandment"],["שֹׁמֵר","who keeps"],["נַפְשׁוֹ","his-soul"],["בּוֹזֵה","the one who despises"],["דְרָכָיו","His-ways"],["(יומת)",""],["[יָמוּת]","the days"],["׃",""]] },
   { num:"יז", words:[["מַלְוֵה","is lending to"],["יְהֹוָה","the-LORD"],["חוֹנֵן","is showing favor"],["דָּל","the poor"],["וּגְמֻלוֹ","and-recompense-his"],["יְשַׁלֶּם־לוֹ","he repays-him"],["׃",""]] },
@@ -695,7 +695,7 @@ var pro_ch21Verses = [
   { num:"כח", words:[["עֵד־כְּזָבִים","false-witness-liars"],["יֹאבֵד","does-perish"],["וְאִישׁ","and-the-man-of"],["שׁוֹמֵעַ","who listens"],["לָנֶצַח","forever"],["יְדַבֵּר","speaks"],["׃",""]] },
   { num:"כט", words:[["הֵעֵז","Hz"],["אִישׁ","a-man"],["רָשָׁע","wicked"],["בְּפָנָיו","by-own presence-his"],["וְיָשָׁר","and-upright"],["הוּא","he"],["(יכין",""],["דרכיו)",""],["[יָבִין","will he understand"],["דַּרְכּוֹ]","his-way"],["׃",""]] },
   { num:"ל", words:[["אֵין","there-is-no"],["חׇכְמָה","wisdom"],["וְאֵין","and-has-no"],["תְּבוּנָה","is understanding"],["וְאֵין","and-has-no"],["עֵצָה","counsel"],["לְנֶגֶד","before"],["יְהֹוָה","the-LORD"],["׃",""]] },
-  { num:"לא", words:[["סוּס","a horse"],["מוּכָן","prepared"],["לְיוֹם","to-day"],["מִלְחָמָה","war"],["וְלַיהֹוָה","and-to-Yahweh"],["הַתְּשׁוּעָה","the-deliverance"],["׃",""]] },
+  { num:"לא", words:[["סוּס","a horse"],["מוּכָן","prepared"],["לְיוֹם","to-day"],["מִלְחָמָה","war"],["וְלַיהֹוָה","and-to the LORD"],["הַתְּשׁוּעָה","the-deliverance"],["׃",""]] },
 ];
 renderVerseSet(pro_ch21Verses, 'pro-ch21-verses');
 
@@ -962,7 +962,7 @@ var pro_ch29Verses = [
   { num:"כג", words:[["גַּאֲוַת","pride-of"],["אָדָם","man"],["תַּשְׁפִּילֶנּוּ","it will bring low-him"],["וּשְׁפַל־רוּחַ","and-lowly-of-spirit-of"],["יִתְמֹךְ","shall-uphold"],["כָּבוֹד","glorious"],["׃",""]] },
   { num:"כד", words:[["חוֹלֵק","one who has shares"],["עִם־גַּנָּב","with-a-thief"],["שׂוֹנֵא","one who hates"],["נַפְשׁוֹ","his-soul"],["אָלָה","an oath"],["יִשְׁמַע","hearkens-to"],["וְלֹא","and-not"],["יַגִּיד","shall-declare"],["׃",""]] },
   { num:"כה", words:[["חֶרְדַּת","fear of"],["אָדָם","man"],["יִתֵּן","shall-give"],["מוֹקֵשׁ","will be a snare"],["וּבוֹטֵחַ","and-trusting"],["בַּיהֹוָה","in-the-LORD"],["יְשֻׂגָּב","he will be set on high"],["׃",""]] },
-  { num:"כו", words:[["רַבִּים","many"],["מְבַקְשִׁים","seek"],["פְּנֵי־מוֹשֵׁל","face-of-ruler"],["וּמֵיְהֹוָה","and-is from-Yahweh"],["מִשְׁפַּט־אִישׁ","judgment-man-of"],["׃",""]] },
+  { num:"כו", words:[["רַבִּים","many"],["מְבַקְשִׁים","seek"],["פְּנֵי־מוֹשֵׁל","face-of-ruler"],["וּמֵיְהֹוָה","and-is from the LORD"],["מִשְׁפַּט־אִישׁ","judgment-man-of"],["׃",""]] },
   { num:"כז", words:[["תּוֹעֲבַת","an-abomination-before"],["צַדִּיקִים","just"],["אִישׁ","a-man"],["עָוֶל","iniquity"],["וְתוֹעֲבַת","and-the-abominations-of"],["רָשָׁע","wicked"],["יְשַׁר־דָּרֶךְ","a person upright of-a way"],["׃",""]] },
 ];
 renderVerseSet(pro_ch29Verses, 'pro-ch29-verses');
