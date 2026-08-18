@@ -68390,6 +68390,14 @@ window._dcCrossrefsData = {
     "Alma 46:8"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "his temple",
+   "refs": [
+    "Mal. 3:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|133|3": [
@@ -68640,6 +68648,15 @@ window._dcCrossrefsData = {
     "Ps. 122:1 (1–9)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "Lord's house",
+   "refs": [
+    "Isa. 2:2",
+    "Micah 4:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|133|14": [
@@ -68756,6 +68773,14 @@ window._dcCrossrefsData = {
     "Rev. 7:4 (1–4)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "foreheads",
+   "refs": [
+    "Rev. 14:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|133|19": [
@@ -68781,6 +68806,14 @@ window._dcCrossrefsData = {
     "21:25 (23–25)",
     "D&C 45:48 (48–53)",
     "TG Jesus Christ, Second Coming"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "mount of Olivet",
+   "refs": [
+    "Zech. 14:4"
    ],
    "category": "cross-ref"
   }
@@ -68989,6 +69022,15 @@ window._dcCrossrefsData = {
     "Gen. 49:26",
     "Hab. 3:6",
     "D&C 49:25"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "everlasting hills",
+   "refs": [
+    "Hab. 3:6",
+    "Gen. 49:26"
    ],
    "category": "cross-ref"
   }
@@ -69215,6 +69257,14 @@ window._dcCrossrefsData = {
     "D&C 88:95"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "rend the heavens",
+   "refs": [
+    "Isa. 64:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|133|41": [
@@ -69231,6 +69281,14 @@ window._dcCrossrefsData = {
     "TG Earth, Cleansing of"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "melting fire",
+   "refs": [
+    "Isa. 64:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|133|43": [
@@ -69239,6 +69297,14 @@ window._dcCrossrefsData = {
    "text": "terrible",
    "refs": [
     "Deut. 10:21"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "terrible things",
+   "refs": [
+    "Isa. 64:2"
    ],
    "category": "cross-ref"
   }
@@ -69273,6 +69339,15 @@ window._dcCrossrefsData = {
     "D&C 98:2"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "eye seen",
+   "refs": [
+    "Isa. 64:3",
+    "1 Cor. 2:9"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|133|46": [
@@ -69294,6 +69369,14 @@ window._dcCrossrefsData = {
     "TG Jesus Christ, Second Coming"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "dyed garments",
+   "refs": [
+    "Isa. 63:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|133|47": [
@@ -69313,6 +69396,14 @@ window._dcCrossrefsData = {
     "Dan. 9:16"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "mighty to save",
+   "refs": [
+    "Isa. 63:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|133|48": [
@@ -69322,6 +69413,14 @@ window._dcCrossrefsData = {
    "refs": [
     "Gen. 49:11 (11–12)",
     "Rev. 19:13 (11–15)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "treadeth in the wine-vat",
+   "refs": [
+    "Isa. 63:2"
    ],
    "category": "cross-ref"
   }
@@ -69362,6 +69461,14 @@ window._dcCrossrefsData = {
     "88:106"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "trodden the wine-press",
+   "refs": [
+    "Isa. 63:3"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|133|51": [
@@ -69393,6 +69500,14 @@ window._dcCrossrefsData = {
     "Vengeance"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "day of vengeance",
+   "refs": [
+    "Isa. 63:4"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|133|52": [
@@ -69407,6 +69522,14 @@ window._dcCrossrefsData = {
   {
    "marker": "b",
    "text": "goodness",
+   "refs": [
+    "Isa. 63:7"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "loving kindness",
    "refs": [
     "Isa. 63:7"
    ],
@@ -69440,6 +69563,14 @@ window._dcCrossrefsData = {
     "TG Jesus Christ, Redeemer"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "angel of his presence",
+   "refs": [
+    "Isa. 63:9"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|133|54": [
@@ -69660,6 +69791,15 @@ window._dcCrossrefsData = {
     "Deut. 32:30 (29–30)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "h",
+   "text": "two shall put to flight",
+   "refs": [
+    "Deut. 32:30",
+    "Isa. 60:22"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|133|59": [
@@ -69724,6 +69864,15 @@ window._dcCrossrefsData = {
     "JS—H 1:40"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "written by the hand of Moses",
+   "refs": [
+    "Deut. 18:19",
+    "Acts 3:22 (22-23)"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|133|64": [
@@ -69767,6 +69916,14 @@ window._dcCrossrefsData = {
     "JS—M 1:4"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "burn as an oven",
+   "refs": [
+    "Mal. 4:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|133|66": [
@@ -69798,6 +69955,14 @@ window._dcCrossrefsData = {
     "Hosea 13:14"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "my arm",
+   "refs": [
+    "Isa. 50:2"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|133|68": [
@@ -69811,12 +69976,28 @@ window._dcCrossrefsData = {
     "TG Drought"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "dry up the sea",
+   "refs": [
+    "Isa. 50:2"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|133|70": [
   {
    "marker": "a",
    "text": "this",
+   "refs": [
+    "Isa. 50:11"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "lie down in sorrow",
    "refs": [
     "Isa. 50:11"
    ],
@@ -69872,6 +70053,14 @@ window._dcCrossrefsData = {
     "Luke 13:28",
     "D&C 19:5",
     "101:91 (90–91)"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "gnashing of teeth",
+   "refs": [
+    "Matt. 8:12"
    ],
    "category": "cross-ref"
   }
@@ -73380,6 +73569,16 @@ window._dcCrossrefsData = {
    "text": "Alpha and Omega",
    "refs": [
     "Rev. 1:8"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|133|69": [
+  {
+   "marker": "a",
+   "text": "clothe the heavens",
+   "refs": [
+    "Isa. 50:3"
    ],
    "category": "cross-ref"
   }
