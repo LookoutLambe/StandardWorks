@@ -18,10 +18,10 @@ var dc131_ch1Verses = [
     ["בְּסֵדֶר","into the order of"],
     ["הַכְּהֻנָּה","the priesthood"],
     ["הַזֶּה","this"],
-    ["בְּרִית־עוֹלָם","[meaning the new and everlasting"],
-    ["הַחֲדָשָׁה","covenant"],
-    ["בְּרִית","of"],
-    ["הַנִּשּׂוּאִים׃","marriage];"]
+    ["בְּרִית־עוֹלָם","[meaning the everlasting covenant"],
+    ["הַחֲדָשָׁה","the new,"],
+    ["בְּרִית","the covenant"],
+    ["אִשָּׁה׃","of marriage];"]
   ]},
   { num: "ג", words: [
     ["וְאִם","And if"],
@@ -438,8 +438,8 @@ var dc132_ch1Verses = [
     ["עִמּוֹ","with him,"],
     ["אֵין","not"],
     ["לִבְרִיתָם","their covenant"],
-    ["וּלְנִשּׂוּאֵיהֶם","and marriage are"],
-    ["תֹּקֶף","of force"],
+    ["וּלְחֻפָּתָם","and their marriage"],
+    ["תֹּקֶף","are of force"],
     ["בְּמוֹתָם","when they are dead,"],
     ["וּבְצֵאתָם","and when they are out"],
     ["מִן","of"],
