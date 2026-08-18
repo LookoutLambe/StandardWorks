@@ -484,8 +484,8 @@ var dc109_ch1Verses = [
     ["בָּהּ׃","into the same himself;"]
   ]},
   { num: "כו", words: [
-    ["שֶׁשׁוּם","That no"],
-    ["קֶשֶׁר","combination"],
+    ["אֲשֶׁר","That"],
+    ["כׇּל־קֶשֶׁר","no combination"],
     ["רֶשַׁע","of wickedness"],
     ["לֹא","[not]"],
     ["יִגְבַּר","shall have power"],
@@ -1053,7 +1053,8 @@ var dc109_ch1Verses = [
     ["הָעֲנִיִּים","the poor,"],
     ["הָאֶבְיוֹנִים","the needy,"],
     ["וְהַנִּדְכָּאִים","and afflicted ones"],
-    ["שֶׁבָּאָרֶץ׃","of the earth;"]
+    ["אֲשֶׁר","who are"],
+    ["בָּאָרֶץ׃","of the earth;"]
   ]},
   { num: "נו", words: [
     ["לְמַעַן","That"],

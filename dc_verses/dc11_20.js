@@ -2421,7 +2421,8 @@ var dc19_ch1Verses = [
     ["וְאֶת־מְעוֹנֶךָ","and home"],
     ["זוּלָתִי","except"],
     ["בְּעֵת","when"],
-    ["שֶׁתַּחְפֹּץ","thou shalt desire"],
+    ["אֲשֶׁר","that"],
+    ["תַּחְפֹּץ","thou shalt desire"],
     ["לִרְאוֹת","to see"],
     ["אֶת־בְּנֵי","thy"],
     ["בֵיתֶךָ׃","family"]
