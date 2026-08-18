@@ -67030,6 +67030,14 @@ window._dcCrossrefsData = {
     "TG Priesthood, Keys of"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "j",
+   "text": "Holy Spirit of promise",
+   "refs": [
+    "Eph. 1:13"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|132|8": [
@@ -67169,6 +67177,14 @@ window._dcCrossrefsData = {
     "D&C 132:7 (7, 46–47)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "Holy Spirit of promise",
+   "refs": [
+    "Eph. 1:13"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|132|19": [
@@ -67275,6 +67291,22 @@ window._dcCrossrefsData = {
     "Family, Patriarchal"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "l",
+   "text": "Holy Spirit of promise",
+   "refs": [
+    "Eph. 1:13"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "m",
+   "text": "continuation of the seeds",
+   "refs": [
+    "Ps. 126:6"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|132|20": [
@@ -67349,6 +67381,23 @@ window._dcCrossrefsData = {
     "D&C 132:30 (30–31)"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "strait is the gate",
+   "refs": [
+    "Matt. 7:14",
+    "3 Ne. 14:14"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "continuation of the lives",
+   "refs": [
+    "Ps. 126:6"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|132|23": [
@@ -67418,6 +67467,15 @@ window._dcCrossrefsData = {
     "John 5:43"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "Broad is the gate",
+   "refs": [
+    "Matt. 7:13",
+    "3 Ne. 14:13"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|132|26": [
@@ -67426,7 +67484,8 @@ window._dcCrossrefsData = {
    "text": "Holy Spirit of promise",
    "refs": [
     "D&C 88:3 (3–4)",
-    "132:19 (7, 19–20)"
+    "132:19 (7, 19–20)",
+    "Eph. 1:13"
    ],
    "category": "cross-ref"
   },
@@ -67578,6 +67637,14 @@ window._dcCrossrefsData = {
     "Hosea 1:10"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "stars of heaven",
+   "refs": [
+    "Gen. 22:17"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|132|31": [
@@ -67587,6 +67654,14 @@ window._dcCrossrefsData = {
    "refs": [
     "D&C 86:9 (8–11)",
     "110:12"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "b",
+   "text": "continuation of the works",
+   "refs": [
+    "Ps. 126:6"
    ],
    "category": "cross-ref"
   }
@@ -67656,6 +67731,15 @@ window._dcCrossrefsData = {
     "Gen. 15:6",
     "Jacob 4:5",
     "TG Righteousness"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "d",
+   "text": "Thou shalt not kill",
+   "refs": [
+    "Ex. 20:13",
+    "Gen. 22:2 (2–12)"
    ],
    "category": "cross-ref"
   }
@@ -67902,6 +67986,22 @@ window._dcCrossrefsData = {
     "TG Remission of Sins"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "d",
+   "text": "bind on earth",
+   "refs": [
+    "Matt. 16:19"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "remit",
+   "refs": [
+    "John 20:23"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|132|47": [
@@ -68036,7 +68136,8 @@ window._dcCrossrefsData = {
    "text": "faithful",
    "refs": [
     "Matt. 25:21 (14–28)",
-    "D&C 52:13"
+    "D&C 52:13",
+    "Matt. 25:21 (21–23)"
    ],
    "category": "cross-ref"
   }
@@ -68076,6 +68177,14 @@ window._dcCrossrefsData = {
    "refs": [
     "D&C 132:22 (22–24)",
     "TG Family, Eternal"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "multiply him",
+   "refs": [
+    "Gen. 22:17"
    ],
    "category": "cross-ref"
   }
@@ -68172,6 +68281,15 @@ window._dcCrossrefsData = {
     "1 Jn. 5:18"
    ],
    "category": "cross-ref"
+  },
+  {
+   "marker": "e",
+   "text": "as was Aaron",
+   "refs": [
+    "Heb. 5:4",
+    "Ex. 28:1"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|132|61": [
@@ -68182,6 +68300,14 @@ window._dcCrossrefsData = {
     "TG Marriage, Plural"
    ],
    "category": "tg"
+  },
+  {
+   "marker": "b",
+   "text": "give her consent",
+   "refs": [
+    "Deut. 13:9"
+   ],
+   "category": "cross-ref"
   }
  ],
  "D&C|132|62": [
@@ -68210,6 +68336,14 @@ window._dcCrossrefsData = {
    "text": "glorified",
    "refs": [
     "Moses 1:39"
+   ],
+   "category": "cross-ref"
+  },
+  {
+   "marker": "c",
+   "text": "multiply and replenish",
+   "refs": [
+    "Gen. 1:28"
    ],
    "category": "cross-ref"
   }
@@ -73236,6 +73370,16 @@ window._dcCrossrefsData = {
     "Prov. 13:17",
     "Hag. 1:13",
     "Mal. 2:7"
+   ],
+   "category": "cross-ref"
+  }
+ ],
+ "D&C|132|66": [
+  {
+   "marker": "a",
+   "text": "Alpha and Omega",
+   "refs": [
+    "Rev. 1:8"
    ],
    "category": "cross-ref"
   }
