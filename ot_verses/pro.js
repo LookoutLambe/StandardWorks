@@ -163,7 +163,7 @@ renderVerseSet(pro_ch5Verses, 'pro-ch5-verses');
 var pro_ch6Verses = [
   { num:"א", words:[["בְּנִי","my-son"],["אִם־עָרַבְתָּ","if-you have stood surety"],["לְרֵעֶךָ","your-neighbor's"],["תָּקַעְתָּ","you have struck"],["לַזָּר","for the-stranger"],["כַּפֶּיךָ","the-hands-your"],["׃",""]] },
   { num:"ב", words:[["נוֹקַשְׁתָּ","you have been ensnared"],["בְאִמְרֵי־פִיךָ","by-the words of-is mouth-your"],["נִלְכַּדְתָּ","you have been caught"],["בְּאִמְרֵי־פִיךָ","in-said-my-is mouth-your"],["׃",""]] },
-  { num:"ג", words:[["עֲשֵׂה","do!"],["זֹאת","this"],["אֵפוֹא","Fo"],["בְּנִי","my-son"],["וְהִנָּצֵל","and-deliver yourself"],["כִּי־בָאתָ","because-you-came"],["בְכַף־רֵעֶךָ","in-the palm of-your-neighbor"],["לֵךְ","go"],["הִתְרַפֵּס","humble yourself"],["וּרְהַב","and-importune"],["רֵעֶיךָ","companions-of-your"],["׃",""]] },
+  { num:"ג", words:[["עֲשֵׂה","do!"],["זֹאת","this"],["אֵפוֹא","then"],["בְּנִי","my-son"],["וְהִנָּצֵל","and-deliver yourself"],["כִּי־בָאתָ","because-you-came"],["בְכַף־רֵעֶךָ","in-the palm of-your-neighbor"],["לֵךְ","go"],["הִתְרַפֵּס","humble yourself"],["וּרְהַב","and-importune"],["רֵעֶיךָ","companions-of-your"],["׃",""]] },
   { num:"ד", words:[["אַל־תִּתֵּן","do-not-you-shall-give"],["שֵׁנָה","sleep"],["לְעֵינֶיךָ","to-eyes-your"],["וּתְנוּמָה","and-slumber"],["לְעַפְעַפֶּיךָ","to-eyelids-your"],["׃",""]] },
   { num:"ה", words:[["הִנָּצֵל","deliver yourself"],["כִּצְבִי","as-the-chased"],["מִיָּד","immediately"],["וּכְצִפּוֹר","and-like-a bird"],["מִיַּד","from-the-hand-of"],["יָקוּשׁ","a fowler"],["׃",""]] },
   { num:"ו", words:[["לֵךְ־אֶל־נְמָלָה","go-to-an ant"],["עָצֵל","idle"],["רְאֵה","behold"],["דְרָכֶיהָ","ways-its"],["וַחֲכָם","and-become wise"],["׃",""]] },

@@ -238,7 +238,7 @@ var job_ch9Verses = [
   { num:"כא", words:[["תׇּם־אָנִי","the-end-I"],["לֹא־אֵדַע","not-I-shall-know"],["נַפְשִׁי","my-life"],["אֶמְאַס","I reject"],["חַיָּי","my-days"],["׃",""]] },
   { num:"כב", words:[["אַחַת","one"],["הִיא","she"],["עַל־כֵּן","therefore"],["אָמַרְתִּי","I-said"],["תָּם","ended"],["וְרָשָׁע","and-the wicked"],["הוּא","he"],["מְכַלֶּה","an-end"],["׃",""]] },
   { num:"כג", words:[["אִם־שׁוֹט","if-a-scourge"],["יָמִית","shall-He-slay"],["פִּתְאֹם","suddenly"],["לְמַסַּת","the despair of"],["נְקִיִּם","innocent"],["יִלְעָג","he mocks"],["׃",""]] },
-  { num:"כד", words:[["אֶרֶץ","the-land-of"],["נִתְּנָה","was-given(f)"],["בְיַד־רָשָׁע","by-the hand of-wicked"],["פְּנֵי־שֹׁפְטֶיהָ","face-of-judges-its"],["יְכַסֶּה","he-covered"],["אִם־לֹא","if-not"],["אֵפוֹא","Fo"],["מִי־הוּא","who-it-is"],["׃",""]] },
+  { num:"כד", words:[["אֶרֶץ","the-land-of"],["נִתְּנָה","was-given(f)"],["בְיַד־רָשָׁע","by-the hand of-wicked"],["פְּנֵי־שֹׁפְטֶיהָ","face-of-judges-its"],["יְכַסֶּה","he-covered"],["אִם־לֹא","if-not"],["אֵפוֹא","then"],["מִי־הוּא","who-it-is"],["׃",""]] },
   { num:"כה", words:[["וְיָמַי","and-days-my"],["קַלּוּ","they were abated"],["מִנִּי־רָץ","some of-he ran"],["בָּרְחוּ","fled"],["לֹא־רָאוּ","not-saw"],["טוֹבָה","good"],["׃",""]] },
   { num:"כו", words:[["חָלְפוּ","passed-away"],["עִם־אֳנִיּוֹת","with-I"],["אֵבֶה","reed"],["כְּנֶשֶׁר","like-an eagle"],["יָטוּשׂ","which it rushes"],["עֲלֵי־אֹכֶל","on-food"],["׃",""]] },
   { num:"כז", words:[["אִם־אׇמְרִי","if-was an Amorite"],["אֶשְׁכְּחָה","I will forget"],["שִׂיחִי","complaint-my"],["אֶעֶזְבָה","I will let loose"],["פָנַי","my-face"],["וְאַבְלִיגָה","and-I will be cheerful"],["׃",""]] },
