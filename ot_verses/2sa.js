@@ -694,7 +694,7 @@ var _2sa_ch22Verses = [
   { num:"כז", words:[["עִם־נָבָר","with-one who purifies himself"],["תִּתָּבָר","you show yourself pure"],["וְעִם־עִקֵּשׁ","and-with-perverse"],["תִּתַּפָּל","you show yourself twisted"],["׃",""]] },
   { num:"כח", words:[["וְאֶת־עַם","and-people"],["עָנִי","poor"],["תּוֹשִׁיעַ","you save"],["וְעֵינֶיךָ","and-eyes-your"],["עַל־רָמִים","upon-haughty people"],["תַּשְׁפִּיל","you bring them low"],["׃",""]] },
   { num:"כט", words:[["כִּי־אַתָּה","that-you"],["נֵירִי","are lamp-my"],["יְהֹוָה","the-LORD"],["וַיהֹוָה","and-the-LORD"],["יַגִּיהַּ","he lightens"],["חׇשְׁכִּי","darkness-my"],["׃",""]] },
-  { num:"ל", words:[["כִּי","because"],["בְכָה","by-you"],["אָרוּץ","I will run"],["גְּדוּד","troop"],["בֵּאלֹהַי","in-God-of"],["אֲדַלֶּג־שׁוּר","I leap over-Shor"],["׃",""]] },
+  { num:"ל", words:[["כִּי","because"],["בְכָה","by-you"],["אָרוּץ","I will run"],["גְּדוּד","troop"],["בֵּאלֹהַי","in-God-of"],["אֲדַלֶּג־שׁוּר","I-have-leaped-over-a-wall"],["׃",""]] },
   { num:"לא", words:[["הָאֵל","the-God"],["תָּמִים","intent"],["דַּרְכּוֹ","his-way"],["אִמְרַת","the-word-of"],["יְהֹוָה","the-LORD"],["צְרוּפָה","is refined"],["מָגֵן","a-protector"],["הוּא","he"],["לְכֹל","for-all"],["הַחֹסִים","the-those-who seek refuge"],["בּוֹ","against-him"],["׃",""]] },
   { num:"לב", words:[["כִּי","because"],["מִי־אֵל","who-God"],["מִבַּלְעֲדֵי","from-except"],["יְהֹוָה","the-LORD"],["וּמִי","and-whoso"],["צוּר","the-rock-of"],["מִבַּלְעֲדֵי","from-except"],["אֱלֹהֵינוּ","our-God"],["׃",""]] },
   { num:"לג", words:[["הָאֵל","the-God"],["מָעוּזִּי","is place of refuge-my"],["חָיִל","of-valor"],["וַיַּתֵּר","and-he-permitted"],["תָּמִים","intent"],["(דרכו)",""],["[דַּרְכִּי]","who bent"],["׃",""]] },
