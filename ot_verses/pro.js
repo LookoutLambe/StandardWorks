@@ -1010,7 +1010,7 @@ var pro_ch31Verses = [
   { num:"ג", words:[["אַל־תִּתֵּן","do-not-you-shall-give"],["לַנָּשִׁים","to-the-women"],["חֵילֶךָ","your-strength"],["וּדְרָכֶיךָ","and-ways-your"],["לַמְחוֹת","to-wiping out"],["מְלָכִין","kings"],["׃",""]] },
   { num:"ד", words:[["אַל","do-not"],["לַמְלָכִים","for-kings"],["לְמוֹאֵל","O Lemuel"],["אַל","do-not"],["לַמְלָכִים","for-kings"],["שְׁתוֹ־יָיִן","to drink-wine"],["וּלְרוֹזְנִים","and-for-rulers"],["(או)",""],["[אֵי]","I-"],["שֵׁכָר","strong-drink"],["׃",""]] },
   { num:"ה", words:[["פֶּן־יִשְׁתֶּה","lest-he-drinks"],["וְיִשְׁכַּח","and-he may forget"],["מְחֻקָּק","what is decreed"],["וִישַׁנֶּה","and-he may change"],["דִּין","endless-damnation"],["כׇּל־בְּנֵי־עֹנִי","all-sons-of-misery"],["׃",""]] },
-  { num:"ו", words:[["תְּנוּ־שֵׁכָר","give!-strong-drink"],["לְאוֹבֵד","to-one who is perishing"],["וְיַיִן","and-wine"],["לְמָרֵי","to-people bitter of"],["נָפֶשׁ","souls"],["׃",""]] },
+  { num:"ו", words:[["תְּנוּ־שֵׁכָר","give-strong-drink"],["לְאוֹבֵד","to-one who is perishing"],["וְיַיִן","and-wine"],["לְמָרֵי","to-people bitter of"],["נָפֶשׁ","souls"],["׃",""]] },
   { num:"ז", words:[["יִשְׁתֶּה","he-drinks"],["וְיִשְׁכַּח","and-he may forget"],["רִישׁוֹ","poverty-his"],["וַעֲמָלוֹ","and-trouble-his"],["לֹא","not"],["יִזְכׇּר־עוֹד","he remembered-any-more"],["׃",""]] },
   { num:"ח", words:[["פְּתַח־פִּיךָ","open your mouth"],["לְאִלֵּם","for-the dumb"],["אֶל־דִּין","to-endless-damnation"],["כׇּל־בְּנֵי","all-sons-of"],["חֲלוֹף","passing away"],["׃",""]] },
   { num:"ט", words:[["פְּתַח־פִּיךָ","open your mouth"],["שְׁפׇט־צֶדֶק","judged-righteousness"],["וְדִין","and-judgment of"],["עָנִי","poor"],["וְאֶבְיוֹן","and-needy"],["׃",""]] },
@@ -1035,7 +1035,7 @@ var pro_ch31Verses = [
   { num:"כח", words:[["קָמוּ","have-been-fulfilled"],["בָנֶיהָ","sons-her"],["וַיְאַשְּׁרוּהָ","and-they called blessed-her"],["בַּעְלָהּ","her-husband"],["וַיְהַלְלָהּ","and-he praised-her"],["׃",""]] },
   { num:"כט", words:[["רַבּוֹת","many"],["בָּנוֹת","daughters"],["עָשׂוּ","they-did"],["חָיִל","of-valor"],["וְאַתְּ","and-you"],["עָלִית","you have gone up"],["עַל־כֻּלָּנָה","upon-all of-them"],["׃",""]] },
   { num:"ל", words:[["שֶׁקֶר","false"],["הַחֵן","the-grace"],["וְהֶבֶל","and-vain"],["הַיֹּפִי","the-beauty"],["אִשָּׁה","a-woman"],["יִרְאַת־יְהֹוָה","the-fear-of-the-LORD"],["הִיא","she"],["תִתְהַלָּל","she will be praised"],["׃",""]] },
-  { num:"לא", words:[["תְּנוּ־לָהּ","give!-it"],["מִפְּרִי","of-fruit-of"],["יָדֶיהָ","hands-her"],["וִיהַלְלוּהָ","and-let them praise-her"],["בַשְּׁעָרִים","in the-gates"],["מַעֲשֶׂיהָ","work-her"],["׃",""]] },
+  { num:"לא", words:[["תְּנוּ־לָהּ","give-it"],["מִפְּרִי","of-fruit-of"],["יָדֶיהָ","hands-her"],["וִיהַלְלוּהָ","and-let them praise-her"],["בַשְּׁעָרִים","in the-gates"],["מַעֲשֶׂיהָ","work-her"],["׃",""]] },
 ];
 renderVerseSet(pro_ch31Verses, 'pro-ch31-verses');
 
