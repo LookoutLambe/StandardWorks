@@ -503,7 +503,7 @@ renderVerseSet(pro_ch15Verses, 'pro-ch15-verses');
 var pro_ch16Verses = [
   { num:"א", words:[["לְאָדָם","to-man"],["מַעַרְכֵי־לֵב","the plans of-heart"],["וּמֵיְהֹוָה","and-is from the LORD"],["מַעֲנֵה","the answer of"],["לָשׁוֹן","tongue"],["׃",""]] },
   { num:"ב", words:[["כׇּל־דַּרְכֵי־אִישׁ","all-the-ways-of-man-of"],["זַךְ","are pure"],["בְּעֵינָיו","in-his-eyes"],["וְתֹכֵן","and-is weighing"],["רוּחוֹת","spirits-of"],["יְהֹוָה","the-LORD"],["׃",""]] },
-  { num:"ג", words:[["גֹּל","roll"],["אֶל־יְהֹוָה","to-the-Lord"],["מַעֲשֶׂיךָ","Your-works"],["וְיִכֹּנוּ","so-they may be established"],["מַחְשְׁבֹתֶיךָ","thoughts-your"],["׃",""]] },
+  { num:"ג", words:[["גֹּל","roll"],["אֶל־יְהֹוָה","to-the-Lord"],["מַעֲשֶׂיךָ","your-works"],["וְיִכֹּנוּ","so-they may be established"],["מַחְשְׁבֹתֶיךָ","thoughts-your"],["׃",""]] },
   { num:"ד", words:[["כֹּל","all"],["פָּעַל","it-wrought"],["יְהֹוָה","the-LORD"],["לַמַּעֲנֵהוּ","for-the-purpose-its"],["וְגַם־רָשָׁע","and-also-wicked"],["לְיוֹם","to-day"],["רָעָה","evil"],["׃",""]] },
   { num:"ה", words:[["תּוֹעֲבַת","an-abomination-before"],["יְהֹוָה","the-LORD"],["כׇּל־גְּבַהּ־לֵב","all-the haughty of-heart"],["יָד","hands"],["לְיָד","to-hand"],["לֹא","not"],["יִנָּקֶה","he will go unpunished"],["׃",""]] },
   { num:"ו", words:[["בְּחֶסֶד","in-the-grace-of"],["וֶאֱמֶת","and-true"],["יְכֻפַּר","shall-be-atoned"],["עָוֺן","iniquity"],["וּבְיִרְאַת","and-is by-the fear of"],["יְהֹוָה","the-LORD"],["סוּר","depart"],["מֵרָע","from-evil"],["׃",""]] },
