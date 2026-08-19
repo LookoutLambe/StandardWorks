@@ -114,7 +114,7 @@ var sos_ch6Verses = [
 renderVerseSet(sos_ch6Verses, 'sos-ch6-verses');
 
 var sos_ch7Verses = [
-  { num:"א", words:[["שׁוּבִי","return"],["שׁוּבִי","return"],["הַשּׁוּלַמִּית","the-O-Shulammite woman"],["שׁוּבִי","return"],["שׁוּבִי","return"],["וְנֶחֱזֶה־בָּךְ","so-we may look-in-You"],["מַה־תֶּחֱזוּ","what-will you look"],["בַּשּׁוּלַמִּית","on the-Shulammite woman"],["כִּמְחֹלַת","like-the dance of"],["הַמַּחֲנָיִם","the-two groups"],["׃",""]] },
+  { num:"א", words:[["שׁוּבִי","return"],["שׁוּבִי","return"],["הַשּׁוּלַמִּית","the-Shulammite woman"],["שׁוּבִי","return"],["שׁוּבִי","return"],["וְנֶחֱזֶה־בָּךְ","so-we may look-in-You"],["מַה־תֶּחֱזוּ","what-will you look"],["בַּשּׁוּלַמִּית","on the-Shulammite woman"],["כִּמְחֹלַת","like-the dance of"],["הַמַּחֲנָיִם","the-two groups"],["׃",""]] },
   { num:"ב", words:[["מַה־יָּפוּ","what-they are beautiful"],["פְעָמַיִךְ","feet-your"],["בַּנְּעָלִים","the-dry-shod"],["בַּת־נָדִיב","daughter-of-willing person"],["חַמּוּקֵי","the curves of"],["יְרֵכַיִךְ","thighs-your"],["כְּמוֹ","like"],["חֲלָאִים","jewels"],["מַעֲשֵׂה","work-of"],["יְדֵי","hands-of"],["אׇמָּן","amen"],["׃",""]] },
   { num:"ג", words:[["שׇׁרְרֵךְ","navel-your"],["אַגַּן","is the bowl of"],["הַסַּהַר","the-roundness"],["אַל־יֶחְסַר","do-not-fail"],["הַמָּזֶג","the-mixed wine"],["בִּטְנֵךְ","belly-your"],["עֲרֵמַת","is a heap of"],["חִטִּים","wheat"],["סוּגָה","fenced around"],["בַּשּׁוֹשַׁנִּים","among the-lilies"],["׃",""]] },
   { num:"ד", words:[["שְׁנֵי","two"],["שָׁדַיִךְ","breasts-your"],["כִּשְׁנֵי","as-two"],["עֳפָרִים","fawns"],["תׇּאֳמֵי","twins of"],["צְבִיָּה","a gazelle"],["׃",""]] },
@@ -144,7 +144,7 @@ var sos_ch8Verses = [
   { num:"י", words:[["אֲנִי","I"],["חוֹמָה","a wall"],["וְשָׁדַי","and-breasts-my"],["כַּמִּגְדָּלוֹת","the-are like-towers"],["אָז","then"],["הָיִיתִי","I-was"],["בְעֵינָיו","with-their-eyes"],["כְּמוֹצְאֵת","like-one who finds"],["שָׁלוֹם","peace"],["׃",""]] },
   { num:"יא", words:[["כֶּרֶם","a-vineyard"],["הָיָה","was"],["לִשְׁלֹמֹה","to-Solomon"],["בְּבַעַל","at-Baal"],["הָמוֹן","a-multitude"],["נָתַן","gave"],["אֶת־הַכֶּרֶם","the-vineyard"],["לַנֹּטְרִים","to-the-those who keep"],["אִישׁ","a-man"],["יָבִא","he will bring"],["בְּפִרְיוֹ","for-fruit-its"],["אֶלֶף","thousand"],["כָּסֶף","silver"],["׃",""]] },
   { num:"יב", words:[["כַּרְמִי","my-vineyard"],["שֶׁלִּי","which-to-me"],["לְפָנָי","before-Me"],["הָאֶלֶף","the-one thousand"],["לְךָ","for-you"],["שְׁלֹמֹה","Solomon"],["וּמָאתַיִם","and-two hundred"],["לְנֹטְרִים","to-those who keep"],["אֶת־פִּרְיוֹ","was-his-fruit"],["׃",""]] },
-  { num:"יג", words:[["הַיּוֹשֶׁבֶת","the-O-inhabitant-of"],["בַּגַּנִּים","in the-gardens"],["חֲבֵרִים","united"],["מַקְשִׁיבִים","are listening"],["לְקוֹלֵךְ","for-voice-your"],["הַשְׁמִיעִנִי","make hear-me"],["׃",""]] },
+  { num:"יג", words:[["הַיּוֹשֶׁבֶת","the-inhabitant-of"],["בַּגַּנִּים","in the-gardens"],["חֲבֵרִים","united"],["מַקְשִׁיבִים","are listening"],["לְקוֹלֵךְ","for-voice-your"],["הַשְׁמִיעִנִי","make hear-me"],["׃",""]] },
   { num:"יד", words:[["בְּרַח","flee"],["דּוֹדִי","my-beloved"],["וּדְמֵה־לְךָ","and-be like-for-you"],["לִצְבִי","beautiful"],["אוֹ","or"],["לְעֹפֶר","the fawn of"],["הָאַיָּלִים","the-deer"],["עַל","upon"],["הָרֵי","the mountains of"],["בְשָׂמִים","spices"],["׃",""]] },
 ];
 renderVerseSet(sos_ch8Verses, 'sos-ch8-verses');
