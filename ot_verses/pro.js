@@ -285,7 +285,7 @@ var pro_ch9Verses = [
   { num:"יב", words:[["אִם־חָכַמְתָּ","if-you are wise"],["חָכַמְתָּ","you are wise"],["לָּךְ","to-you"],["וְלַצְתָּ","and-you mock"],["לְבַדְּךָ","to-alone-you"],["תִשָּׂא","take"],["׃",""]] },
   { num:"יג", words:[["אֵשֶׁת","the-wife-of"],["כְּסִילוּת","folly"],["הֹמִיָּה","is boisterous"],["פְּתַיּוּת","naivete"],["וּבַל־יָדְעָה","and-not-she had known"],["מָּה","whatever"],["׃",""]] },
   { num:"יד", words:[["וְיָשְׁבָה","and-she will dwell"],["לְפֶתַח","for-the entrance of"],["בֵּיתָהּ","house-her"],["עַל־כִּסֵּא","upon-throne"],["מְרֹמֵי","the heights of"],["קָרֶת","the town"],["׃",""]] },
-  { num:"טו", words:[["לִקְרֹא","to-read"],["לְעֹבְרֵי־דָרֶךְ","to-those who pass by of-a path"],["הַמְיַשְּׁרִים","those-who make straight"],["אֹרְחוֹתָם","paths-their"],["׃",""]] },
+  { num:"טו", words:[["לִקְרֹא","to call"],["לְעֹבְרֵי־דָרֶךְ","to-those who pass by of-a path"],["הַמְיַשְּׁרִים","those-who make straight"],["אֹרְחוֹתָם","paths-their"],["׃",""]] },
   { num:"טז", words:[["מִי־פֶתִי","who-naivete"],["יָסֻר","he turned aside"],["הֵנָּה","hither"],["וַחֲסַר־לֵב","and-one lacking of-heart"],["וְאָמְרָה","and-she will say"],["לּוֹ","upon-him"],["׃",""]] },
   { num:"יז", words:[["מַיִם־גְּנוּבִים","water-stolen"],["יִמְתָּקוּ","they are sweet"],["וְלֶחֶם","and-bread"],["סְתָרִים","secret places"],["יִנְעָם","it will be pleasant"],["׃",""]] },
   { num:"יח", words:[["וְלֹא־יָדַע","and-not-he-knew"],["כִּי־רְפָאִים","because-the-shades"],["שָׁם","there"],["בְּעִמְקֵי","in-the-depths-of"],["שְׁאוֹל","Sheol"],["קְרֻאֶיהָ","invited ones-her"],["׃",""]] },
