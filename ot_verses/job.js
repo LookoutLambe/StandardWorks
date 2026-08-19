@@ -471,7 +471,7 @@ var job_ch17Verses = [
   { num:"יג", words:[["אִם־אֲקַוֶּה","if-Koh"],["שְׁאוֹל","Sheol"],["בֵּיתִי","my-house"],["בַּחֹשֶׁךְ","in-the-darkness"],["רִפַּדְתִּי","I have spread out"],["יְצוּעָי","beds-my"],["׃",""]] },
   { num:"יד", words:[["לַשַּׁחַת","to-the-destruction"],["קָרָאתִי","called"],["אָבִי","my-father"],["אָתָּה","you-are"],["אִמִּי","my-mother"],["וַאֲחֹתִי","and-sister-my"],["לָרִמָּה","to the-maggot"],["׃",""]] },
   { num:"טו", words:[["וְאַיֵּה","and-where-is"],["אֵפוֹ","then"],["תִקְוָתִי","is hope-my"],["וְתִקְוָתִי","and-hope-my"],["מִי","who"],["יְשׁוּרֶנָּה","will he observe-it"],["׃",""]] },
-  { num:"טז", words:[["בַּדֵּי","the-poles of"],["שְׁאֹל","Sheol"],["תֵּרַדְנָה","will they go down?"],["אִם־יַחַד","if-oft"],["עַל־עָפָר","upon-the-earth"],["נָחַת","will we descend"],["׃",""]] },
+  { num:"טז", words:[["בַּדֵּי","the-bars of"],["שְׁאֹל","Sheol"],["תֵּרַדְנָה","will they go down?"],["אִם־יַחַד","if-oft"],["עַל־עָפָר","upon-the-earth"],["נָחַת","will we descend"],["׃",""]] },
 ];
 renderVerseSet(job_ch17Verses, 'job-ch17-verses');
 
