@@ -1179,7 +1179,7 @@ var psa_ch62Verses = [
   { num:"א", words:[["לַמְנַצֵּחַ","to-the-chief-musician"],["עַל־יְדוּתוּן","upon-Jeduthun"],["מִזְמוֹר","a-psalm"],["לְדָוִד","of-David"],["׃",""]] },
   { num:"ב", words:[["אַךְ","but"],["אֶל־אֱלֹהִים","unto-God"],["דּוּמִיָּה","silence"],["נַפְשִׁי","my-soul"],["מִמֶּנּוּ","from-him"],["יְשׁוּעָתִי","is-my-salvation"],["׃",""]] },
   { num:"ג", words:[["אַךְ־הוּא","but-it-is"],["צוּרִי","my-rock"],["וִישׁוּעָתִי","and-My-salvation"],["מִשְׂגַּבִּי","my-high-tower"],["לֹא־אֶמּוֹט","I-shall-not-be-moved"],["רַבָּה","much"],["׃",""]] },
-  { num:"ד", words:[["עַד־אָנָה","how-long"],["תְּהוֹתְתוּ","will you attack"],["עַל־אִישׁ","upon-man/each"],["תְּרָצְּחוּ","you will be murdered"],["כֻלְּכֶם","all-of-you"],["כְּקִיר","like-a wall"],["נָטוּי","bent down"],["גָּדֵר","a wall"],["הַדְּחוּיָה","the-pushed down"],["׃",""]] },
+  { num:"ד", words:[["עַד־אָנָה","how-long"],["תְּהוֹתְתוּ","will you attack"],["עַל־אִישׁ","upon a man"],["תְּרָצְּחוּ","you will be murdered"],["כֻלְּכֶם","all-of-you"],["כְּקִיר","like-a wall"],["נָטוּי","bent down"],["גָּדֵר","a wall"],["הַדְּחוּיָה","the-pushed down"],["׃",""]] },
   { num:"ה", words:[["אַךְ","but"],["מִשְּׂאֵתוֹ","from-loftiness-his"],["יָעֲצוּ","they-have-devised"],["לְהַדִּיחַ","to-lead-astray"],["יִרְצוּ","will-have"],["כָזָב","falsehood"],["בְּפִיו","in-his-mouth"],["יְבָרֵכוּ","they bless"],["וּבְקִרְבָּם","and-in-inner being-their"],["יְקַלְלוּ־סֶלָה","they curse-Selah"],["׃",""]] },
   { num:"ו", words:[["אַךְ","but"],["לֵאלֹהִים","God"],["דּוֹמִּי","be silent"],["נַפְשִׁי","my-soul"],["כִּי־מִמֶּנּוּ","because-from-him"],["תִּקְוָתִי","my-hope"],["׃",""]] },
   { num:"ז", words:[["אַךְ־הוּא","but-it-is"],["צוּרִי","my-rock"],["וִישׁוּעָתִי","and-My-salvation"],["מִשְׂגַּבִּי","my-high-tower"],["לֹא","not"],["אֶמּוֹט","I-am-moved"],["׃",""]] },
@@ -1647,7 +1647,7 @@ var psa_ch80Verses = [
   { num:"טו", words:[["אֱלֹהִים","God"],["צְבָאוֹת","of-Hosts"],["שׁוּב־נָא","again-I-pray"],["הַבֵּט","look"],["מִשָּׁמַיִם","from-heaven"],["וּרְאֵה","and-behold"],["וּפְקֹד","and-attend to"],["גֶּפֶן","vines"],["זֹאת","this"],["׃",""]] },
   { num:"טז", words:[["וְכַנָּה","and-the root"],["אֲשֶׁר־נָטְעָה","which-it planted"],["יְמִינֶךָ","Your-right-hand"],["וְעַל־בֵּן","and-upon-a-son"],["אִמַּצְתָּה","whom you made strong"],["לָּךְ","to-you"],["׃",""]] },
   { num:"יז", words:[["שְׂרֻפָה","it is burned"],["בָאֵשׁ","in-fire"],["כְּסוּחָה","it is cut down"],["מִגַּעֲרַת","from-the rebuke of"],["פָּנֶיךָ","Your-face"],["יֹאבֵדוּ","shall-perish"],["׃",""]] },
-  { num:"יח", words:[["תְּהִי־יָדְךָ","let it be-your-hand"],["עַל־אִישׁ","upon-man/each"],["יְמִינֶךָ","Your-right-hand"],["עַל־בֶּן־אָדָם","upon-the-son-of-man"],["אִמַּצְתָּ","whom you have made strong"],["לָּךְ","to-you"],["׃",""]] },
+  { num:"יח", words:[["תְּהִי־יָדְךָ","let it be-your-hand"],["עַל־אִישׁ","upon a man"],["יְמִינֶךָ","Your-right-hand"],["עַל־בֶּן־אָדָם","upon-the-son-of-man"],["אִמַּצְתָּ","whom you have made strong"],["לָּךְ","to-you"],["׃",""]] },
   { num:"יט", words:[["וְלֹא־נָסוֹג","and-not-it had turned back"],["מִמֶּךָּ","from-you"],["תְּחַיֵּנוּ","you will give life-us"],["וּבְשִׁמְךָ","and-in-your-name"],["נִקְרָא","called-was"],["׃",""]] },
   { num:"כ", words:[["יְהֹוָה","the-LORD"],["אֱלֹהִים","God"],["צְבָאוֹת","of-Hosts"],["הֲשִׁיבֵנוּ","restore-us"],["הָאֵר","the-make shine"],["פָּנֶיךָ","Your-face"],["וְנִוָּשֵׁעָה","so-let us be delivered"],["׃",""]] },
 ];
