@@ -2215,7 +2215,7 @@ var psa_ch106Verses = [
   { num:"יז", words:[["תִּפְתַּח־אֶרֶץ","you-open-land-of"],["וַתִּבְלַע","and-it swallowed"],["דָּתָן","Dathan"],["וַתְּכַס","and-she covered"],["עַל־עֲדַת","upon-the-congregation-of"],["אֲבִירָם","Abiram"],["׃",""]] },
   { num:"יח", words:[["וַתִּבְעַר־אֵשׁ","and-it burned-fire"],["בַּעֲדָתָם","among-company-their"],["לֶהָבָה","a-flame"],["תְּלַהֵט","it kindles"],["רְשָׁעִים","the-wicked"],["׃",""]] },
   { num:"יט", words:[["יַעֲשׂוּ־עֵגֶל","shall-yield-a calf of"],["בְּחֹרֵב","at-Horeb"],["וַיִּשְׁתַּחֲווּ","and-they-worshipped"],["לְמַסֵּכָה","to-a molten image"],["׃",""]] },
-  { num:"כ", words:[["וַיָּמִירוּ","and-they exchanged"],["אֶת־כְּבוֹדָם","glory-their"],["בְּתַבְנִית","in-form-of"],["שׁוֹר","oxen"],["אֹכֵל","ate"],["עֵשֶׂב","herb"],["׃",""]] },
+  { num:"כ", words:[["וַיָּמִירוּ","and-they exchanged"],["אֶת־כְּבוֹדָם","glory-their"],["בְּתַבְנִית","in-form-of"],["שׁוֹר","an ox"],["אֹכֵל","ate"],["עֵשֶׂב","herb"],["׃",""]] },
   { num:"כא", words:[["שָׁכְחוּ","have-they-forgotten"],["אֵל","God"],["מוֹשִׁיעָם","their-Savior"],["עֹשֶׂה","do"],["גְדֹלוֹת","great things"],["בְּמִצְרָיִם","in-Egypt"],["׃",""]] },
   { num:"כב", words:[["נִפְלָאוֹת","wonders"],["בְּאֶרֶץ","in-the-land-of"],["חָם","Ham"],["נוֹרָאוֹת","awesome deeds"],["עַל־יַם־סוּף","upon the Red Sea"],["׃",""]] },
   { num:"כג", words:[["וַיֹּאמֶר","and-said"],["לְהַשְׁמִידָם","to-destroy-them"],["לוּלֵי","if-not-for"],["מֹשֶׁה","Moses"],["בְחִירוֹ","chosen one-his"],["עָמַד","stood"],["בַּפֶּרֶץ","in the-breach"],["לְפָנָיו","before-Him"],["לְהָשִׁיב","to-he-restored"],["חֲמָתוֹ","His-fury"],["מֵהַשְׁחִית","from-destroying"],["׃",""]] },

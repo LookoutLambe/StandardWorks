@@ -662,7 +662,7 @@ renderVerseSet(job_ch23Verses, 'job-ch23-verses');
 var job_ch24Verses = [
   { num:"א", words:[["מַדּוּעַ","why"],["מִשַּׁדַּי","from-the-Almighty"],["לֹא־נִצְפְּנוּ","not-can-we-expect-our/-us"],["עִתִּים","times"],["וְיֹדְעָו","and-they will know"],["לֹא־חָזוּ","not-they-beheld"],["יָמָיו","his-days"],["׃",""]] },
   { num:"ב", words:[["גְּבֻלוֹת","boundaries"],["יַשִּׂיגוּ","they-obtain"],["עֵדֶר","fold"],["גָּזְלוּ","the-spoil-of-his"],["וַיִּרְעוּ","and-they have pastured them"],["׃",""]] },
-  { num:"ג", words:[["חֲמוֹר","a-donkey"],["יְתוֹמִים","fatherless ones"],["יִנְהָגוּ","they drive away"],["יַחְבְּלוּ","they take as pledge"],["שׁוֹר","oxen"],["אַלְמָנָה","a widow"],["׃",""]] },
+  { num:"ג", words:[["חֲמוֹר","a-donkey"],["יְתוֹמִים","fatherless ones"],["יִנְהָגוּ","they drive away"],["יַחְבְּלוּ","they take as pledge"],["שׁוֹר","an ox"],["אַלְמָנָה","a widow"],["׃",""]] },
   { num:"ד", words:[["יַטּוּ","they-shall-turn"],["אֶבְיֹנִים","needy people"],["מִדָּרֶךְ","from-the path"],["יַחַד","oft"],["חֻבְּאוּ","they are made to hide themselves"],["עֲנִיֵּי־אָרֶץ","from-the-poor-of-the-earth"],["׃",""]] },
   { num:"ה", words:[["הֵן","yea"],["פְּרָאִים","wild"],["בַּמִּדְבָּר","in-the-wilderness"],["יָצְאוּ","went-forth"],["בְּפׇעֳלָם","in-deed-their"],["מְשַׁחֲרֵי","seeking"],["לַטָּרֶף","for-the-food"],["עֲרָבָה","a desert plain"],["לוֹ","him"],["לֶחֶם","bread"],["לַנְּעָרִים","to the-young men"],["׃",""]] },
   { num:"ו", words:[["בַּשָּׂדֶה","in-the-field"],["בְּלִילוֹ","fodder-its"],["[יִקְצוֹרוּ]","they harvest"],["וְכֶרֶם","and-the vineyard of"],["רָשָׁע","wicked"],["יְלַקֵּשׁוּ","they glean"],["׃",""]] },
@@ -753,7 +753,7 @@ var job_ch28Verses = [
   { num:"ז", words:[["נָתִיב","the path"],["לֹא־יְדָעוֹ","not-He-knows"],["עָיִט","a bird of prey"],["וְלֹא","and-not"],["שְׁזָפַתּוּ","it caught sight of-him"],["עֵין","the-eye-of"],["אַיָּה","Aiah"],["׃",""]] },
   { num:"ח", words:[["בְנֵי־שָׁחַץ","sons-of-pride"],["לֹא־עָדָה","not-was Adah"],["עָלָיו","upon-him"],["שָׁחַל","a lion"],["׃",""]] },
   { num:"ט", words:[["בַּחַלָּמִישׁ","on the-flint"],["שָׁלַח","sent"],["יָדוֹ","his-hand"],["הָפַךְ","it has turned"],["מִשֹּׁרֶשׁ","from-the root"],["הָרִים","mountains"],["׃",""]] },
-  { num:"י", words:[["בַּצּוּרוֹת","in the-rocks"],["יְאֹרִים","shafts"],["בִּקֵּעַ","he ripped open"],["וְכׇל־יְקָר","and-all-the honor of"],["רָאֲתָה","she-saw"],["עֵינוֹ","His-all-searching-eye"],["׃",""]] },
+  { num:"י", words:[["בַּצּוּרוֹת","in the-rocks"],["יְאֹרִים","shafts"],["בִּקֵּעַ","he ripped open"],["וְכׇל־יְקָר","and-all-the honor of"],["רָאֲתָה","she-saw"],["עֵינוֹ","his eye"],["׃",""]] },
   { num:"יא", words:[["מִבְּכִי","from-weeping"],["נְהָרוֹת","their-rivers"],["חִבֵּשׁ","he restrains"],["וְתַעֲלֻמָהּ","and-secret-her"],["יֹצִא","he brings out"],["אוֹר","light"],["׃",""]] },
   { num:"יב", words:[["וְהַחׇכְמָה","and-the-wisdom"],["מֵאַיִן","whence"],["תִּמָּצֵא","will it be found"],["וְאֵי","and-where?"],["זֶה","this"],["מְקוֹם","the-place"],["בִּינָה","shall-come-to-understanding"],["׃",""]] },
   { num:"יג", words:[["לֹא־יָדַע","not-he-knew"],["אֱנוֹשׁ","Enos"],["עֶרְכָּהּ","valuation-its"],["וְלֹא","and-not"],["תִמָּצֵא","it will be found"],["בְּאֶרֶץ","in-the-land-of"],["הַחַיִּים","the-life"],["׃",""]] },
