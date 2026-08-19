@@ -383,7 +383,7 @@ var job_ch14Verses = [
   { num:"טז", words:[["כִּי־עַתָּה","because-now"],["צְעָדַי","steps-my"],["תִּסְפּוֹר","you will count"],["לֹא־תִשְׁמֹר","not-you-will-kept"],["עַל־חַטָּאתִי","upon-is sin-my"],["׃",""]] },
   { num:"יז", words:[["חָתֻם","sealed up"],["בִּצְרוֹר","in-the bundle of"],["פִּשְׁעִי","is transgression-my"],["וַתִּטְפֹּל","and-you have smeared"],["עַל־עֲוֺנִי","upon-affliction"],["׃",""]] },
   { num:"יח", words:[["וְאוּלָם","nevertheless"],["הַר־נוֹפֵל","mountain-is falling"],["יִבּוֹל","it crumbles away"],["וְצוּר","and-the-rock-of"],["יֶעְתַּק","it moves"],["מִמְּקֹמוֹ","from-place-his"],["׃",""]] },
-  { num:"יט", words:[["אֲבָנִים","stones"],["שָׁחֲקוּ","they rub away"],["מַיִם","water"],["תִּשְׁטֹף־סְפִיחֶיהָ","it washes off-self-sown grain-its"],["עֲפַר־אָרֶץ","ore-the-earth"],["וְתִקְוַת","and-hope-of"],["אֱנוֹשׁ","Enos"],["הֶאֱבַדְתָּ","you destroy"],["׃",""]] },
+  { num:"יט", words:[["אֲבָנִים","stones"],["שָׁחֲקוּ","they rub away"],["מַיִם","water"],["תִּשְׁטֹף־סְפִיחֶיהָ","it washes off-self-sown grain-its"],["עֲפַר־אָרֶץ","the dust of the earth"],["וְתִקְוַת","and-hope-of"],["אֱנוֹשׁ","Enos"],["הֶאֱבַדְתָּ","you destroy"],["׃",""]] },
   { num:"כ", words:[["תִּתְקְפֵהוּ","you overpower-him"],["לָנֶצַח","forever"],["וַיַּהֲלֹךְ","and-he went"],["מְשַׁנֶּה","from-year"],["פָנָיו","His-face"],["וַתְּשַׁלְּחֵהוּ","and-you sent away-him"],["׃",""]] },
   { num:"כא", words:[["יִכְבְּדוּ","they are honored"],["בָנָיו","their-sons"],["וְלֹא","and-not"],["יֵדָע","let it know"],["וְיִצְעֲרוּ","and-they may be insignificant"],["וְלֹא־יָבִין","and-not-understand"],["לָמוֹ","for-them"],["׃",""]] },
   { num:"כב", words:[["אַךְ־בְּשָׂרוֹ","but-his-skin"],["עָלָיו","upon-him"],["יִכְאָב","it is in pain"],["וְנַפְשׁוֹ","and-his-soul"],["עָלָיו","upon-him"],["תֶּאֱבָל","it mourns"],["׃",""]] },
@@ -738,7 +738,7 @@ var job_ch27Verses = [
   { num:"יט", words:[["עָשִׁיר","rich"],["יִשְׁכַּב","he-shall-lie-down"],["וְלֹא","and-not"],["יֵאָסֵף","gathered"],["עֵינָיו","their-eyes"],["פָּקַח","he opens"],["וְאֵינֶנּוּ","and-it-is-not"],["׃",""]] },
   { num:"כ", words:[["תַּשִּׂיגֵהוּ","it overtakes-him"],["כַמַּיִם","like-the-water"],["בַּלָּהוֹת","the-sudden terror"],["לַיְלָה","night"],["גְּנָבַתּוּ","which it has stolen-it"],["סוּפָה","a storm-wind"],["׃",""]] },
   { num:"כא", words:[["יִשָּׂאֵהוּ","it carries-it"],["קָדִים","the-east"],["וְיֵלַךְ","so-he may go"],["וִישָׂעֲרֵהוּ","and-it will whirl away-him"],["מִמְּקֹמוֹ","from-place-his"],["׃",""]] },
-  { num:"כב", words:[["וְיַשְׁלֵךְ","and-he will shed"],["עָלָיו","upon-him"],["וְלֹא","and-not"],["יַחְמֹל","shall-He-spare"],["מִיָּדוֹ","from-His-hand"],["בָּרוֹחַ","in-the-Spirit"],["יִבְרָח","will he flee"],["׃",""]] },
+  { num:"כב", words:[["וְיַשְׁלֵךְ","and-he will shed"],["עָלָיו","upon-him"],["וְלֹא","and-not"],["יַחְמֹל","shall-He-spare"],["מִיָּדוֹ","from-his-hand"],["בָּרוֹחַ","in-the-Spirit"],["יִבְרָח","will he flee"],["׃",""]] },
   { num:"כג", words:[["יִשְׂפֹּק","it will suffice"],["עָלֵימוֹ","on-them"],["כַפֵּימוֹ","the-hands-their"],["וְיִשְׁרֹק","so-he may hiss"],["עָלָיו","upon-him"],["מִמְּקֹמוֹ","from-place-his"],["׃",""]] },
 ];
 renderVerseSet(job_ch27Verses, 'job-ch27-verses');
@@ -884,7 +884,7 @@ var job_ch31Verses = [
 renderVerseSet(job_ch31Verses, 'job-ch31-verses');
 
 var job_ch32Verses = [
-  { num:"א", words:[["וַיִּשְׁבְּתוּ","and-ceased"],["שְׁלֹשֶׁת","three-of"],["הָאֲנָשִׁים","the-men"],["הָאֵלֶּה","these"],["מֵעֲנוֹת","from-answering"],["אֶת־אִיּוֹב","Job"],["כִּי","because"],["הוּא","he"],["צַדִּיק","righteous"],["בְּעֵינָיו","in-His-eyes"],["׃",""]] },
+  { num:"א", words:[["וַיִּשְׁבְּתוּ","and-ceased"],["שְׁלֹשֶׁת","three-of"],["הָאֲנָשִׁים","the-men"],["הָאֵלֶּה","these"],["מֵעֲנוֹת","from-answering"],["אֶת־אִיּוֹב","Job"],["כִּי","because"],["הוּא","he"],["צַדִּיק","righteous"],["בְּעֵינָיו","in-his-eyes"],["׃",""]] },
   { num:"ב", words:[["וַיִּחַר","and-burned"],["אַף","yea"],["אֱלִיהוּא","Elihu"],["בֶן־בַּרַכְאֵל","son-of-Barakel"],["הַבּוּזִי","the-Buzite"],["מִמִּשְׁפַּחַת","of-the-family-of"],["רָם","is-exalted"],["בְּאִיּוֹב","on-Job"],["חָרָה","burned"],["אַפּוֹ","His-wrath"],["עַל־צַדְּקוֹ","upon-justified-he"],["נַפְשׁוֹ","his-soul"],["מֵאֱלֹהִים","by-God"],["׃",""]] },
   { num:"ג", words:[["וּבִשְׁלֹשֶׁת","and-on-the three"],["רֵעָיו","companions-of-his"],["חָרָה","burned"],["אַפּוֹ","His-wrath"],["עַל","upon"],["אֲשֶׁר","which"],["לֹא־מָצְאוּ","not-found"],["מַעֲנֶה","from-answered"],["וַיַּרְשִׁיעוּ","and-they had condemned as guilty"],["אֶת־אִיּוֹב","Job"],["׃",""]] },
   { num:"ד", words:[["וֶאֱלִיהוּ","and-Elihu"],["חִכָּה","he-waited"],["אֶת־אִיּוֹב","Job"],["בִּדְבָרִים","with-things"],["כִּי","because"],["זְקֵנִים־הֵמָּה","elders-they-are"],["מִמֶּנּוּ","from-him"],["לְיָמִים","to-days"],["׃",""]] },
@@ -1175,7 +1175,7 @@ var job_ch40Verses = [
   { num:"כא", words:[["תַּחַת־צֶאֱלִים","under-thorny lotus plants"],["יִשְׁכָּב","will he lie down"],["בְּסֵתֶר","in-the cover of"],["קָנֶה","reeds"],["וּבִצָּה","and-swamp"],["׃",""]] },
   { num:"כב", words:[["יְסֻכֻּהוּ","they cover-it"],["צֶאֱלִים","thorny lotus plants"],["צִלְלוֹ","shade-his"],["יְסֻבּוּהוּ","they surround-it"],["עַרְבֵי־נָחַל","the poplars of-a wadi"],["׃",""]] },
   { num:"כג", words:[["הֵן","yea"],["יַעֲשֹׁק","it is violent"],["נָהָר","the-river"],["לֹא","not"],["יַחְפּוֹז","it is alarmed"],["יִבְטַח","trusts"],["כִּי־יָגִיחַ","because-it bursts forth"],["יַרְדֵּן","Jordan"],["אֶל־פִּיהוּ","to-His-mouth"],["׃",""]] },
-  { num:"כד", words:[["בְּעֵינָיו","in-His-eyes"],["יִקָּחֶנּוּ","will anyone take?-it"],["בְּמוֹקְשִׁים","with-snares"],["יִנְקׇב־אָף","will anyone pierce?-anger"],["׃",""]] },
+  { num:"כד", words:[["בְּעֵינָיו","in-his-eyes"],["יִקָּחֶנּוּ","will anyone take?-it"],["בְּמוֹקְשִׁים","with-snares"],["יִנְקׇב־אָף","will anyone pierce?-anger"],["׃",""]] },
   { num:"כה", words:[["תִּמְשֹׁךְ","will you draw out?"],["לִוְיָתָן","Leviathan"],["בְּחַכָּה","with-a fish hook"],["וּבְחֶבֶל","and-with-a cord"],["תַּשְׁקִיעַ","will you hold down?"],["לְשֹׁנוֹ","tongue-its"],["׃",""]] },
   { num:"כו", words:[["הֲתָשִׂים","will you put"],["אַגְמֹן","bulrushes"],["בְּאַפּוֹ","in-His-anger"],["וּבְחוֹחַ","and-with-a hook"],["תִּקֹּב","you/she-will-crutch"],["לֶחֱיוֹ","jaw-its"],["׃",""]] },
   { num:"כז", words:[["הֲיַרְבֶּה","will it multiply"],["אֵלֶיךָ","to-you"],["תַּחֲנוּנִים","supplications"],["אִם־יְדַבֵּר","if-speaks"],["אֵלֶיךָ","to-you"],["רַכּוֹת","were weak"],["׃",""]] },
