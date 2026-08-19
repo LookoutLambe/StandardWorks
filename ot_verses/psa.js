@@ -556,7 +556,7 @@ var psa_ch31Verses = [
 renderVerseSet(psa_ch31Verses, 'psa-ch31-verses');
 
 var psa_ch32Verses = [
-  { num:"א", words:[["לְדָוִד","of-David"],["מַשְׂכִּיל","any-who-understand"],["אַשְׁרֵי","blessed-are"],["נְשׂוּי־פֶּשַׁע","is one who is forgiven of-the-transgression-of"],["כְּסוּי","a covering of"],["חֲטָאָה","this-people"],["׃",""]] },
+  { num:"א", words:[["לְדָוִד","of-David"],["מַשְׂכִּיל","any-who-understand"],["אַשְׁרֵי","blessed-are"],["נְשׂוּי־פֶּשַׁע","is one who is forgiven of-the-transgression-of"],["כְּסוּי","a covering of"],["חֲטָאָה","a sin"],["׃",""]] },
   { num:"ב", words:[["אַשְׁרֵי־אָדָם","blessed-are-man"],["לֹא","not"],["יַחְשֹׁב","he-thinks"],["יְהֹוָה","the-LORD"],["לוֹ","him"],["עָוֺן","iniquity"],["וְאֵין","and-has-no"],["בְּרוּחוֹ","in-His-Spirit"],["רְמִיָּה","not-deceitful"],["׃",""]] },
   { num:"ג", words:[["כִּי־הֶחֱרַשְׁתִּי","because-I kept quiet"],["בָּלוּ","they have worn out"],["עֲצָמָי","my-bones"],["בְּשַׁאֲגָתִי","in-cry of distress-my"],["כׇּל־הַיּוֹם","all-the-day"],["׃",""]] },
   { num:"ד", words:[["כִּי","because"],["יוֹמָם","by-day"],["וָלַיְלָה","and-a-night"],["תִּכְבַּד","it-burdens"],["עָלַי","upon-me"],["יָדֶךָ","your-hand"],["נֶהְפַּךְ","it was changed"],["לְשַׁדִּי","juice-my"],["בְּחַרְבֹנֵי","by-the dry heat of"],["קַיִץ","summer fruit"],["סֶלָה","Selah"],["׃",""]] },

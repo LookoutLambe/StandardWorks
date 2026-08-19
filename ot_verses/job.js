@@ -183,7 +183,7 @@ var job_ch7Verses = [
   { num:"יז", words:[["מָה־אֱנוֹשׁ","what-Enos"],["כִּי","because"],["תְגַדְּלֶנּוּ","you will make great-him"],["וְכִי־תָשִׁית","and-that-you will set"],["אֵלָיו","to-him"],["לִבֶּךָ","your-heart"],["׃",""]] },
   { num:"יח", words:[["וַתִּפְקְדֶנּוּ","and-you have visited-him"],["לִבְקָרִים","to-mornings"],["לִרְגָעִים","to-moments"],["תִּבְחָנֶנּוּ","you test-him"],["׃",""]] },
   { num:"יט", words:[["כַּמָּה","the-how"],["לֹא־תִשְׁעֶה","not-will you look away"],["מִמֶּנִּי","from-me"],["לֹא־תַרְפֵּנִי","not-will you let alone?-me"],["עַד־בִּלְעִי","until-swallow-I"],["רֻקִּי","spittle-my"],["׃",""]] },
-  { num:"כ", words:[["חָטָאתִי","have I sinned"],["מָה","what"],["אֶפְעַל","work"],["לָךְ","to-you"],["נֹצֵר","maintaining"],["הָאָדָם","the-man"],["לָמָה","to-the-what"],["שַׂמְתַּנִי","have you set-me"],["לְמִפְגָּע","to-a target"],["לָךְ","to-you"],["וָאֶהְיֶה","and-I have been"],["עָלַי","I-must"],["לְמַשָּׂא","a-burden"],["׃",""]] },
+  { num:"כ", words:[["חָטָאתִי","have I sinned"],["מָה","what"],["אֶפְעַל","work"],["לָךְ","to-you"],["נֹצֵר","maintaining"],["הָאָדָם","the-man"],["לָמָה","why"],["שַׂמְתַּנִי","have you set-me"],["לְמִפְגָּע","to-a target"],["לָךְ","to-you"],["וָאֶהְיֶה","and-I have been"],["עָלַי","I-must"],["לְמַשָּׂא","a-burden"],["׃",""]] },
   { num:"כא", words:[["וּמֶה","and-what"],["לֹא־תִשָּׂא","not-take"],["פִשְׁעִי","transgression-my"],["וְתַעֲבִיר","so-may you take away?"],["אֶת־עֲוֺנִי","affliction"],["כִּי־עַתָּה","because-now"],["לֶעָפָר","to-the-dust"],["אֶשְׁכָּב","I will lie down"],["וְשִׁחַרְתַּנִי","and-you will look for-me"],["וְאֵינֶנִּי","and-I-am-not"],["׃",""]] },
 ];
 renderVerseSet(job_ch7Verses, 'job-ch7-verses');
