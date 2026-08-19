@@ -1093,8 +1093,7 @@ function getChapterLabel(id) {
       div.className = 'chapter-panel';
       div.id = 'panel-' + panelId;
       div.style.display = 'none';
-      div.innerHTML = '<div class="chapter-heading"><h2>\u05E4\u05E8\u05E7 ' + toHebNum(ch) + '</h2>' +
-        '<div class="chapter-label-en">Chapter ' + ch + '</div></div>' +
+      div.innerHTML = '<div class="chapter-heading"></div>' +
         '<div id="' + panelId + '-verses"></div>';
       mainContent.appendChild(div);
     }
