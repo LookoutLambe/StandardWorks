@@ -544,7 +544,7 @@ renderVerseSet(jos_ch18Verses, 'jos-ch18-verses');
 
 var jos_ch19Verses = [
   { num:"א", words:[["וַיֵּצֵא","and-went-out"],["הַגּוֹרָל","the-lot"],["הַשֵּׁנִי","the-second"],["לְשִׁמְעוֹן","for-Simeon"],["לְמַטֵּה","of-the tribe of"],["בְנֵי־שִׁמְעוֹן","sons-of-Simeon"],["לְמִשְׁפְּחוֹתָם","to-clans-their"],["וַיְהִי","and-it-came-to-pass"],["נַחֲלָתָם","their-inheritance"],["בְּתוֹךְ","among"],["נַחֲלַת","the-inheritance-of"],["בְּנֵי־יְהוּדָה","sons-of-Judah"],["׃",""]] },
-  { num:"ב", words:[["וַיְהִי","and-it-came-to-pass"],["לָהֶם","to-them"],["בְּנַחֲלָתָם","in-inheritance-their"],["בְּאֵר־שֶׁבַע","Beersheba"],["וְשֶׁבַע","and-seven"],["וּמוֹלָדָה","and-Moladah"],["׃",""]] },
+  { num:"ב", words:[["וַיְהִי","and-it-came-to-pass"],["לָהֶם","to-them"],["בְּנַחֲלָתָם","in-inheritance-their"],["בְּאֵר־שֶׁבַע","Beer-sheba"],["וְשֶׁבַע","and-seven"],["וּמוֹלָדָה","and-Moladah"],["׃",""]] },
   { num:"ג", words:[["וַחֲצַר","and-Hazar"],["שׁוּעָל","Shual"],["וּבָלָה","and-Balah"],["וָעָצֶם","and-Ezem"],["׃",""]] },
   { num:"ד", words:[["וְאֶלְתּוֹלַד","and-Eltolad"],["וּבְתוּל","and-Bethul"],["וְחׇרְמָה","and-Hormah"],["׃",""]] },
   { num:"ה", words:[["וְצִקְלַג","and-Ziklag"],["וּבֵית־הַמַּרְכָּבוֹת","and-the-house-of-Marcaboth"],["וַחֲצַר","and-Hazar"],["סוּסָה","Susah"],["׃",""]] },
