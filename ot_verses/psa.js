@@ -2487,7 +2487,7 @@ var psa_ch118Verses = [
   { num:"כב", words:[["אֶבֶן","stone"],["מָאֲסוּ","rejected"],["הַבּוֹנִים","the-builders"],["הָיְתָה","was"],["לְרֹאשׁ","the-head-of"],["פִּנָּה","corner"],["׃",""]] },
   { num:"כג", words:[["מֵאֵת","from"],["יְהֹוָה","the-LORD"],["הָיְתָה","was"],["זֹּאת","this(f)"],["הִיא","she"],["נִפְלָאת","it is wonderful"],["בְּעֵינֵינוּ","in-our-eyes"],["׃",""]] },
   { num:"כד", words:[["זֶה־הַיּוֹם","this-the-day"],["עָשָׂה","he-did"],["יְהֹוָה","the-LORD"],["נָגִילָה","we-do-rejoice"],["וְנִשְׂמְחָה","and-rejoice-with"],["בוֹ","in-him"],["׃",""]] },
-  { num:"כה", words:[["אָנָּא","O-God"],["יְהֹוָה","the-LORD"],["הוֹשִׁיעָה","save"],["נָּא","now"],["אָנָּא","O-God"],["יְהֹוָה","the-LORD"],["הַצְלִיחָה","grant success-!"],["נָּא","now"],["׃",""]] },
+  { num:"כה", words:[["אָנָּא","I-beseech-you"],["יְהֹוָה","the-LORD"],["הוֹשִׁיעָה","save"],["נָּא","now"],["אָנָּא","I-beseech-you"],["יְהֹוָה","the-LORD"],["הַצְלִיחָה","grant success-!"],["נָּא","now"],["׃",""]] },
   { num:"כו", words:[["בָּרוּךְ","blessed"],["הַבָּא","that-comes"],["בְּשֵׁם","by-name"],["יְהֹוָה","the-LORD"],["בֵּרַכְנוּכֶם","we bless-you"],["מִבֵּית","from-the-house-of"],["יְהֹוָה","the-LORD"],["׃",""]] },
   { num:"כז", words:[["אֵל","God"],["יְהֹוָה","the-LORD"],["וַיָּאֶר","and-he-shone"],["לָנוּ","us"],["אִסְרוּ־חַג","bind-festival of"],["בַּעֲבֹתִים","in-the-clouds-of(pl)"],["עַד־קַרְנוֹת","until-the horns of"],["הַמִּזְבֵּחַ","the-altar"],["׃",""]] },
   { num:"כח", words:[["אֵלִי","my-God"],["אַתָּה","you"],["וְאוֹדֶךָּ","and-I will give thanks to-you"],["אֱלֹהַי","my-God"],["אֲרוֹמְמֶךָּ","I-will-extol-You"],["׃",""]] },
