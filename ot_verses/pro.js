@@ -993,7 +993,7 @@ var pro_ch30Verses = [
   { num:"כג", words:[["תַּחַת","under"],["שְׂנוּאָה","was hated"],["כִּי","because"],["תִבָּעֵל","she will be married"],["וְשִׁפְחָה","and-female servants"],["כִּי־תִירַשׁ","because-you-shall-inherit"],["גְּבִרְתָּהּ","prevailed-of-her"],["׃",""]] },
   { num:"כד", words:[["אַרְבָּעָה","four"],["הֵם","they"],["קְטַנֵּי־אָרֶץ","sin-my-the-earth"],["וְהֵמָּה","and-they"],["חֲכָמִים","wise"],["מְחֻכָּמִים","made wise"],["׃",""]] },
   { num:"כה", words:[["הַנְּמָלִים","the-ants"],["עַם","people"],["לֹא־עָז","not-mighty"],["וַיָּכִינוּ","and-they-prepared"],["בַקַּיִץ","in the-summer"],["לַחְמָם","for food-their"],["׃",""]] },
-  { num:"כו", words:[["שְׁפַנִּים","rock badgers"],["עַם","people"],["לֹא־עָצוּם","not-mighty"],["וַיָּשִׂימוּ","and-began-to-put"],["בַסֶּלַע","in the-rocks"],["בֵּיתָם","their-house"],["׃",""]] },
+  { num:"כו", words:[["שְׁפַנִּים","rock badgers"],["עַם","people"],["לֹא־עָצוּם","not-mighty"],["וַיָּשִׂימוּ","and-they-put"],["בַסֶּלַע","in the-rocks"],["בֵּיתָם","their-house"],["׃",""]] },
   { num:"כז", words:[["מֶלֶךְ","the-king-of"],["אֵין","there-is-no"],["לָאַרְבֶּה","to the-locust"],["וַיֵּצֵא","and-went-out"],["חֹצֵץ","dividing"],["כֻּלּוֹ","entirely"],["׃",""]] },
   { num:"כח", words:[["שְׂמָמִית","a lizard"],["בְּיָדַיִם","in-two hands"],["תְּתַפֵּשׂ","you will grasp"],["וְהִיא","and-she-was"],["בְּהֵיכְלֵי","in-their-pleasant"],["מֶלֶךְ","the-king-of"],["׃",""]] },
   { num:"כט", words:[["שְׁלֹשָׁה","three"],["הֵמָּה","they"],["מֵיטִיבֵי","are doing well of"],["צָעַד","he-did-march-forth"],["וְאַרְבָּעָה","and-four"],["מֵיטִבֵי","are doing well"],["לָכֶת","to walk"],["׃",""]] },
