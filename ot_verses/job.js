@@ -4,7 +4,7 @@ var job_ch1Verses = [
   { num:"א", words:[["אִישׁ","a-man"],["הָיָה","was"],["בְאֶרֶץ־עוּץ","in-the land of-were Uz"],["אִיּוֹב","Job"],["שְׁמוֹ","his-name"],["וְהָיָה","and-be"],["הָאִישׁ","the-man"],["הַהוּא","that"],["תָּם","ended"],["וְיָשָׁר","and-upright"],["וִירֵא","and-fearing"],["אֱלֹהִים","God"],["וְסָר","then-shall-depart"],["מֵרָע","from-evil"],["׃",""]] },
   { num:"ב", words:[["וַיִּוָּלְדוּ","and-they were born"],["לוֹ","him"],["שִׁבְעָה","seven"],["בָנִים","children"],["וְשָׁלוֹשׁ","and-three"],["בָּנוֹת","daughters"],["׃",""]] },
   { num:"ג", words:[["וַיְהִי","and-it-came-to-pass"],["מִקְנֵהוּ","livestock-his"],["שִׁבְעַת","seven-of"],["אַלְפֵי־צֹאן","many-thousands-flocks"],["וּשְׁלֹשֶׁת","and-the three"],["אַלְפֵי","many-thousands"],["גְמַלִּים","camels"],["וַחֲמֵשׁ","and-five"],["מֵאוֹת","hundred"],["צֶמֶד־בָּקָר","a pair of-of-the-herd"],["וַחֲמֵשׁ","and-five"],["מֵאוֹת","hundred"],["אֲתוֹנוֹת","female donkeys"],["וַעֲבֻדָּה","and-service"],["רַבָּה","much"],["מְאֹד","exceedingly"],["וַיְהִי","and-it-came-to-pass"],["הָאִישׁ","the-man"],["הַהוּא","that"],["גָּדוֹל","great"],["מִכׇּל־בְּנֵי־קֶדֶם","from-all-sons-of-old"],["׃",""]] },
-  { num:"ד", words:[["וְהָלְכוּ","and-they-shall-depart"],["בָנָיו","their-sons"],["וְעָשׂוּ","and-they-did-work"],["מִשְׁתֶּה","feast"],["בֵּית","the-house-of"],["אִישׁ","a-man"],["יוֹמוֹ","His-day"],["וְשָׁלְחוּ","and-they-sent-forth"],["וְקָרְאוּ","and-called-upon"],["לִשְׁלֹשֶׁת","to-three"],["אַחְיֹתֵיהֶם","sister"],["לֶאֱכֹל","to-eat"],["וְלִשְׁתּוֹת","and-to-drink"],["עִמָּהֶם","with-them"],["׃",""]] },
+  { num:"ד", words:[["וְהָלְכוּ","and-they-shall-depart"],["בָנָיו","their-sons"],["וְעָשׂוּ","and-they-did-work"],["מִשְׁתֶּה","feast"],["בֵּית","the-house-of"],["אִישׁ","a-man"],["יוֹמוֹ","his-day"],["וְשָׁלְחוּ","and-they-sent-forth"],["וְקָרְאוּ","and-called-upon"],["לִשְׁלֹשֶׁת","to-three"],["אַחְיֹתֵיהֶם","sister"],["לֶאֱכֹל","to-eat"],["וְלִשְׁתּוֹת","and-to-drink"],["עִמָּהֶם","with-them"],["׃",""]] },
   { num:"ה", words:[["וַיְהִי","and-it-came-to-pass"],["כִּי","because"],["הִקִּיפוּ","they-surrounded"],["יְמֵי","the-days-of"],["הַמִּשְׁתֶּה","the-feast"],["וַיִּשְׁלַח","and-sent"],["אִיּוֹב","Job"],["וַיְקַדְּשֵׁם","and-he sanctified-them"],["וְהִשְׁכִּים","and-he rose early"],["בַּבֹּקֶר","in-the-morning"],["וְהֶעֱלָה","and-he will bring up"],["עֹלוֹת","burnt-offerings"],["מִסְפַּר","so-many-of"],["כֻּלָּם","all-of-them"],["כִּי","because"],["אָמַר","said"],["אִיּוֹב","Job"],["אוּלַי","perhaps"],["חָטְאוּ","sinned"],["בָנַי","my-sons"],["וּבֵרְכוּ","and-bless"],["אֱלֹהִים","God"],["בִּלְבָבָם","in-their-hearts"],["כָּכָה","thus"],["יַעֲשֶׂה","he-shall-do"],["אִיּוֹב","Job"],["כׇּל־הַיָּמִים","all-the-days"],["׃",""]] },
   { num:"ו", words:[["וַיְהִי","and-it-came-to-pass"],["הַיּוֹם","the-day"],["וַיָּבֹאוּ","and-they-came"],["בְּנֵי","the-sons-of"],["הָאֱלֹהִים","the-God"],["לְהִתְיַצֵּב","to-hold ground"],["עַל־יְהֹוָה","upon-the-LORD"],["וַיָּבוֹא","and-he came"],["גַם־הַשָּׂטָן","also-the-Adversary"],["בְּתוֹכָם","among-them"],["׃",""]] },
   { num:"ז", words:[["וַיֹּאמֶר","and-said"],["יְהֹוָה","the-LORD"],["אֶל־הַשָּׂטָן","to-the-Adversary"],["מֵאַיִן","whence"],["תָּבֹא","comes"],["וַיַּעַן","and-he-answered"],["הַשָּׂטָן","the-Adversary"],["אֶת־יְהֹוָה","the-LORD"],["וַיֹּאמַר","and-said"],["מִשּׁוּט","from-roving about"],["בָּאָרֶץ","in-the-land"],["וּמֵהִתְהַלֵּךְ","and-from-going about"],["בָּהּ","in-it"],["׃",""]] },
@@ -44,7 +44,7 @@ var job_ch2Verses = [
 renderVerseSet(job_ch2Verses, 'job-ch2-verses');
 
 var job_ch3Verses = [
-  { num:"א", words:[["אַחֲרֵי־כֵן","hereafter"],["פָּתַח","opened"],["אִיּוֹב","Job"],["אֶת־פִּיהוּ","His-mouth"],["וַיְקַלֵּל","and-cursed"],["אֶת־יוֹמוֹ","His-day"],["׃",""]] },
+  { num:"א", words:[["אַחֲרֵי־כֵן","hereafter"],["פָּתַח","opened"],["אִיּוֹב","Job"],["אֶת־פִּיהוּ","his-mouth"],["וַיְקַלֵּל","and-cursed"],["אֶת־יוֹמוֹ","his-day"],["׃",""]] },
   { num:"ב", words:[["וַיַּעַן","and-he-answered"],["אִיּוֹב","Job"],["וַיֹּאמַר","and-said"],["׃",""]] },
   { num:"ג", words:[["יֹאבַד","shall-perish"],["יוֹם","day"],["אִוָּלֶד","which I was born"],["בּוֹ","against-him"],["וְהַלַּיְלָה","and-the-night"],["אָמַר","said"],["הֹרָה","he has been conceived"],["גָבֶר","a man"],["׃",""]] },
   { num:"ד", words:[["הַיּוֹם","the-day"],["הַהוּא","that"],["יְהִי־חֹשֶׁךְ","let-this-be-darkness"],["אַל־יִדְרְשֵׁהוּ","do-not-he care for-it"],["אֱלוֹהַּ","Loh"],["מִמַּעַל","above"],["וְאַל־תּוֹפַע","and-do-not-it shine forth"],["עָלָיו","upon-him"],["נְהָרָה","daylight"],["׃",""]] },
@@ -284,7 +284,7 @@ var job_ch11Verses = [
   { num:"ב", words:[["הֲרֹב","a multitude of"],["דְּבָרִים","things"],["לֹא","not"],["יֵעָנֶה","will it be answered"],["וְאִם־אִישׁ","and-if-man-of"],["שְׂפָתַיִם","lips"],["יִצְדָּק","will he be righteous"],["׃",""]] },
   { num:"ג", words:[["בַּדֶּיךָ","the-empty boasts-your"],["מְתִים","men"],["יַחֲרִישׁוּ","he will keep silent(they)"],["וַתִּלְעַג","and-have you mocked?"],["וְאֵין","and-has-no"],["מַכְלִם","is one who puts to shame"],["׃",""]] },
   { num:"ד", words:[["וַתֹּאמֶר","and-said"],["זַךְ","are pure"],["לִקְחִי","teaching-my"],["וּבַר","and-clean"],["הָיִיתִי","I-was"],["בְעֵינֶיךָ","with-own eyes-your"],["׃",""]] },
-  { num:"ה", words:[["וְאוּלָם","nevertheless"],["מִי־יִתֵּן","would-that"],["אֱלוֹהַּ","Loh"],["דַּבֵּר","to-speak"],["וְיִפְתַּח","and-he may open"],["שְׂפָתָיו","His-lips"],["עִמָּךְ","with-you"],["׃",""]] },
+  { num:"ה", words:[["וְאוּלָם","nevertheless"],["מִי־יִתֵּן","would-that"],["אֱלוֹהַּ","Loh"],["דַּבֵּר","to-speak"],["וְיִפְתַּח","and-he may open"],["שְׂפָתָיו","his-lips"],["עִמָּךְ","with-you"],["׃",""]] },
   { num:"ו", words:[["וְיַגֶּד־לְךָ","so-may he tell-for-you"],["תַּעֲלֻמוֹת","the secrets of"],["חׇכְמָה","wisdom"],["כִּי־כִפְלַיִם","because-double"],["לְתוּשִׁיָּה","belongs to-sound wisdom"],["וְדַע","and-know"],["כִּי־יַשֶּׁה","that-he-lends"],["לְךָ","for-you"],["אֱלוֹהַּ","Loh"],["מֵעֲוֺנֶךָ","dwelling place-your"],["׃",""]] },
   { num:"ז", words:[["הַחֵקֶר","the searching of"],["אֱלוֹהַּ","Loh"],["תִּמְצָא","she-will-find"],["אִם","if"],["עַד־תַּכְלִית","until-purpose/end-of"],["שַׁדַּי","Almighty"],["תִּמְצָא","she-will-find"],["׃",""]] },
   { num:"ח", words:[["גׇּבְהֵי","in-pride"],["שָׁמַיִם","the-heavens"],["מַה־תִּפְעָל","what-will you do"],["עֲמֻקָּה","deep"],["מִשְּׁאוֹל","from-Sheol"],["מַה־תֵּדָע","what-will you know"],["׃",""]] },
@@ -370,7 +370,7 @@ var job_ch14Verses = [
   { num:"ג", words:[["אַף־עַל־זֶה","yea-upon-this"],["פָּקַחְתָּ","do you open"],["עֵינֶךָ","your-eye"],["וְאֹתִי","and-me"],["תָבִיא","you will bring"],["בְמִשְׁפָּט","in-judgment"],["עִמָּךְ","with-you"],["׃",""]] },
   { num:"ד", words:[["מִי־יִתֵּן","would-that"],["טָהוֹר","pure"],["מִטָּמֵא","from-an unclean thing"],["לֹא","not"],["אֶחָד","one"],["׃",""]] },
   { num:"ה", words:[["אִם־חֲרוּצִים","if-diligent"],["יָמָיו","his-days"],["מִסְפַּר־חֳדָשָׁיו","so-many-of-months-his"],["אִתָּךְ","with-you"],["חֻקָּו","His-decree"],["עָשִׂיתָ","you-did"],["וְלֹא","and-not"],["יַעֲבֹר","pass-away"],["׃",""]] },
-  { num:"ו", words:[["שְׁעֵה","look away"],["מֵעָלָיו","from-with-him"],["וְיֶחְדָּל","so-he may cease"],["עַד־יִרְצֶה","until-is-pleasing"],["כְּשָׂכִיר","like-a hired laborer"],["יוֹמוֹ","His-day"],["׃",""]] },
+  { num:"ו", words:[["שְׁעֵה","look away"],["מֵעָלָיו","from-with-him"],["וְיֶחְדָּל","so-he may cease"],["עַד־יִרְצֶה","until-is-pleasing"],["כְּשָׂכִיר","like-a hired laborer"],["יוֹמוֹ","his-day"],["׃",""]] },
   { num:"ז", words:[["כִּי","because"],["יֵשׁ","there"],["לָעֵץ","unto-the-tree"],["תִּקְוָה","hope"],["אִם־יִכָּרֵת","if-he-shall-be-cut-off"],["וְעוֹד","and-again"],["יַחֲלִיף","it will sprout afresh"],["וְיֹנַקְתּוֹ","and-young shoots-its"],["לֹא","not"],["תֶחְדָּל","it will fail"],["׃",""]] },
   { num:"ח", words:[["אִם־יַזְקִין","if-it will grow old"],["בָּאָרֶץ","in-the-land"],["שׇׁרְשׁוֹ","the root-his"],["וּבֶעָפָר","and-in the-dust"],["יָמוּת","who-shall-die"],["גִּזְעוֹ","stump-its"],["׃",""]] },
   { num:"ט", words:[["מֵרֵיחַ","from-the scent of"],["מַיִם","water"],["יַפְרִחַ","it will show buds"],["וְעָשָׂה","and-done"],["קָצִיר","harvest"],["כְּמוֹ־נָטַע","like-a-plant"],["׃",""]] },
@@ -422,7 +422,7 @@ var job_ch15Verses = [
   { num:"כט", words:[["לֹא־יֶעְשַׁר","not-he will be rich"],["וְלֹא־יָקוּם","and-not-he-shall-rise"],["חֵילוֹ","army-his"],["וְלֹא־יִטֶּה","and-not-it will stretch out"],["לָאָרֶץ","to-the-ground"],["מִנְלָם","property-their"],["׃",""]] },
   { num:"ל", words:[["לֹא־יָסוּר","not-shall-be-taken-away"],["מִנִּי־חֹשֶׁךְ","some of-darkness"],["יֹנַקְתּוֹ","young shoots-its"],["תְּיַבֵּשׁ","it will dry up"],["שַׁלְהָבֶת","a flame"],["וְיָסוּר","so-he may depart"],["בְּרוּחַ","in-the-Spirit"],["פִּיו","his-mouth"],["׃",""]] },
   { num:"לא", words:[["אַל־יַאֲמֵן","do-not-he trust"],["בַּשָּׁו","the-they are ashamed"],["נִתְעָה","he has been led astray"],["כִּי־שָׁוְא","because-falsehood"],["תִּהְיֶה","shall-be"],["תְמוּרָתוֹ","recompense-his"],["׃",""]] },
-  { num:"לב", words:[["בְּלֹא־יוֹמוֹ","without-His-day"],["תִּמָּלֵא","shall-be-filled"],["וְכִפָּתוֹ","and-palm branch-his"],["לֹא","not"],["רַעֲנָנָה","it will grow luxuriant"],["׃",""]] },
+  { num:"לב", words:[["בְּלֹא־יוֹמוֹ","without-his-day"],["תִּמָּלֵא","shall-be-filled"],["וְכִפָּתוֹ","and-palm branch-his"],["לֹא","not"],["רַעֲנָנָה","it will grow luxuriant"],["׃",""]] },
   { num:"לג", words:[["יַחְמֹס","he will wrong"],["כַּגֶּפֶן","like-the-vine"],["בִּסְרוֹ","unripe grapes-his"],["וְיַשְׁלֵךְ","and-he will shed"],["כַּזַּיִת","like-the-olive tree"],["נִצָּתוֹ","blossom-his"],["׃",""]] },
   { num:"לד", words:[["כִּי־עֲדַת","because-congregation-of"],["חָנֵף","a-hypocrite"],["גַּלְמוּד","is barren"],["וְאֵשׁ","and-fire"],["אָכְלָה","it consumed"],["אׇהֳלֵי־שֹׁחַד","would-that-a-bribe"],["׃",""]] },
   { num:"לה", words:[["הָרֹה","the-they conceive"],["עָמָל","grievousness"],["וְיָלֹד","and-they give birth to"],["אָוֶן","iniquity"],["וּבִטְנָם","and-belly-their"],["תָּכִין","you will establish"],["מִרְמָה","deceit"],["׃",""]] },
@@ -486,7 +486,7 @@ var job_ch18Verses = [
   { num:"ח", words:[["כִּי־שֻׁלַּח","because-he was sent"],["בְּרֶשֶׁת","in-a net"],["בְּרַגְלָיו","his-feet"],["וְעַל־שְׂבָכָה","and-upon-a network"],["יִתְהַלָּךְ","he walks about"],["׃",""]] },
   { num:"ט", words:[["יֹאחֵז","it takes hold"],["בְּעָקֵב","on-a heel"],["פָּח","a trap"],["יַחֲזֵק","it takes hold"],["עָלָיו","upon-him"],["צַמִּים","a snare"],["׃",""]] },
   { num:"י", words:[["טָמוּן","is-contained"],["בָּאָרֶץ","in-the-land"],["חַבְלוֹ","rope-his"],["וּמַלְכֻּדְתּוֹ","and-trap-his"],["עֲלֵי","on"],["נָתִיב","the path"],["׃",""]] },
-  { num:"יא", words:[["סָבִיב","all-around"],["בִּעֲתֻהוּ","they terrify-him"],["בַלָּהוֹת","the-sudden terror"],["וֶהֱפִיצֻהוּ","and-they scatter-him"],["לְרַגְלָיו","at-His-feet"],["׃",""]] },
+  { num:"יא", words:[["סָבִיב","all-around"],["בִּעֲתֻהוּ","they terrify-him"],["בַלָּהוֹת","the-sudden terror"],["וֶהֱפִיצֻהוּ","and-they scatter-him"],["לְרַגְלָיו","at-his-feet"],["׃",""]] },
   { num:"יב", words:[["יְהִי־רָעֵב","let-this-be-hungry"],["אֹנוֹ","manly vigor-his"],["וְאֵיד","and-disaster"],["נָכוֹן","expedient"],["לְצַלְעוֹ","for-stumbling-his"],["׃",""]] },
   { num:"יג", words:[["יֹאכַל","he-shall-eat"],["בַּדֵּי","the-poles of"],["עוֹרוֹ","skin-his"],["יֹאכַל","he-shall-eat"],["בַּדָּיו","the-poles-its"],["בְּכוֹר","the firstborn of"],["מָוֶת","death"],["׃",""]] },
   { num:"יד", words:[["יִנָּתֵק","to-be-broken-off"],["מֵאׇהֳלוֹ","from-the tent of-his"],["מִבְטַחוֹ","his-trust"],["וְתַצְעִדֵהוּ","and-it makes march-him"],["לְמֶלֶךְ","king"],["בַּלָּהוֹת","the-sudden terror"],["׃",""]] },
@@ -495,7 +495,7 @@ var job_ch18Verses = [
   { num:"יז", words:[["זִכְרוֹ־אָבַד","memory-his-perished"],["מִנִּי־אָרֶץ","some of-the-earth"],["וְלֹא־שֵׁם","and-not-name-of"],["לוֹ","him"],["עַל־פְּנֵי־חוּץ","upon-the-face-of-except"],["׃",""]] },
   { num:"יח", words:[["יֶהְדְּפֻהוּ","people drive-him"],["מֵאוֹר","rather-than-light"],["אֶל־חֹשֶׁךְ","to-darkness"],["וּמִתֵּבֵל","and-from-the world"],["יְנִדֻּהוּ","they chase away-him"],["׃",""]] },
   { num:"יט", words:[["לֹא־נִין","not-posterity"],["לוֹ","him"],["וְלֹא־נֶכֶד","and-not-progeny"],["בְּעַמּוֹ","against-his-people"],["וְאֵין","and-has-no"],["שָׂרִיד","a survivor"],["בִּמְגוּרָיו","in-sojourning-places-his"],["׃",""]] },
-  { num:"כ", words:[["עַל־יוֹמוֹ","upon-His-day"],["נָשַׁמּוּ","they are appalled"],["אַחֲרֹנִים","behind"],["וְקַדְמֹנִים","and-those before"],["אָחֲזוּ","laid-hold"],["שָׂעַר","a shudder"],["׃",""]] },
+  { num:"כ", words:[["עַל־יוֹמוֹ","upon-his-day"],["נָשַׁמּוּ","they are appalled"],["אַחֲרֹנִים","behind"],["וְקַדְמֹנִים","and-those before"],["אָחֲזוּ","laid-hold"],["שָׂעַר","a shudder"],["׃",""]] },
   { num:"כא", words:[["אַךְ־אֵלֶּה","but-these"],["מִשְׁכְּנוֹת","from-dwelt"],["עַוָּל","an evil-doer"],["וְזֶה","and-this"],["מְקוֹם","the-place"],["לֹא־יָדַע־אֵל","not-he-knew-God"],["׃",""]] },
 ];
 renderVerseSet(job_ch18Verses, 'job-ch18-verses');
@@ -626,7 +626,7 @@ var job_ch22Verses = [
   { num:"יט", words:[["יִרְאוּ","shall-see"],["צַדִּיקִים","just"],["וְיִשְׂמָחוּ","and-rejoice"],["וְנָקִי","and-an innocent person"],["יִלְעַג־לָמוֹ","he mocks-for-them"],["׃",""]] },
   { num:"כ", words:[["אִם־לֹא","if-not"],["נִכְחַד","he has been destroyed"],["קִימָנוּ","adversary-our"],["וְיִתְרָם","and-excess-their"],["אָכְלָה","it consumed"],["אֵשׁ","fire"],["׃",""]] },
   { num:"כא", words:[["הַסְכֶּן־נָא","be reconciled-I-pray"],["עִמּוֹ","with-him"],["וּשְׁלָם","and-peace"],["בָּהֶם","in-them"],["תְּבוֹאַתְךָ","it will come to-you"],["טוֹבָה","good"],["׃",""]] },
-  { num:"כב", words:[["קַח־נָא","take-I-pray"],["מִפִּיו","from-his-mouth"],["תּוֹרָה","Torah/law"],["וְשִׂים","and-put"],["אֲמָרָיו","words-his"],["בִּלְבָבֶךָ","in-heart-your"],["׃",""]] },
+  { num:"כב", words:[["קַח־נָא","take-I-pray"],["מִפִּיו","from-his-mouth"],["תּוֹרָה","Law"],["וְשִׂים","and-put"],["אֲמָרָיו","words-his"],["בִּלְבָבֶךָ","in-heart-your"],["׃",""]] },
   { num:"כג", words:[["אִם־תָּשׁוּב","if-return"],["עַד־שַׁדַּי","until-Almighty"],["תִּבָּנֶה","built-shall-be"],["תַּרְחִיק","you will remove"],["עַוְלָה","injustice"],["מֵאׇהֳלֶךָ","from-tent-your"],["׃",""]] },
   { num:"כד", words:[["וְשִׁית־עַל־עָפָר","and-put-upon-the-earth"],["בָּצֶר","gold"],["וּכְצוּר","and-as-the-rock-of"],["נְחָלִים","streams"],["אוֹפִיר","Ophir"],["׃",""]] },
   { num:"כה", words:[["וְהָיָה","and-be"],["שַׁדַּי","Almighty"],["בְּצָרֶיךָ","gold-your"],["וְכֶסֶף","and-silver"],["תּוֹעָפוֹת","heaps"],["לָךְ","to-you"],["׃",""]] },
@@ -1003,7 +1003,7 @@ var job_ch35Verses = [
   { num:"יג", words:[["אַךְ־שָׁוְא","but-falsehood"],["לֹא־יִשְׁמַע","not-hearkens-to"],["אֵל","God"],["וְשַׁדַּי","and-the Almighty"],["לֹא","not"],["יְשׁוּרֶנָּה","will he observe-it"],["׃",""]] },
   { num:"יד", words:[["אַף","yea"],["כִּי־תֹאמַר","that-you-say"],["לֹא","not"],["תְשׁוּרֶנּוּ","you observe-him"],["דִּין","endless-damnation"],["לְפָנָיו","before-him"],["וּתְחוֹלֵל","so-you may wait"],["לוֹ","him"],["׃",""]] },
   { num:"טו", words:[["וְעַתָּה","and-now"],["כִּי־אַיִן","because-they-are-nothing"],["פָּקַד","He-visited"],["אַפּוֹ","His-wrath"],["וְלֹא־יָדַע","and-not-he-knew"],["בַּפַּשׁ","in-the-folly"],["מְאֹד","exceedingly"],["׃",""]] },
-  { num:"טז", words:[["וְאִיּוֹב","and-Job"],["הֶבֶל","the-vanities"],["יִפְצֶה־פִּיהוּ","he opens-His-mouth"],["בִּבְלִי־דַעַת","with-no-knowledge"],["מִלִּין","words"],["יַכְבִּר","he multiplies"],["׃",""]] },
+  { num:"טז", words:[["וְאִיּוֹב","and-Job"],["הֶבֶל","the-vanities"],["יִפְצֶה־פִּיהוּ","he opens-his-mouth"],["בִּבְלִי־דַעַת","with-no-knowledge"],["מִלִּין","words"],["יַכְבִּר","he multiplies"],["׃",""]] },
 ];
 renderVerseSet(job_ch35Verses, 'job-ch35-verses');
 
@@ -1174,7 +1174,7 @@ var job_ch40Verses = [
   { num:"כ", words:[["כִּי־בוּל","because-the beasts of"],["הָרִים","mountains"],["יִשְׂאוּ־לוֹ","shall-lift-up-him"],["וְכׇל־חַיַּת","and-all-beasts-of"],["הַשָּׂדֶה","the-field"],["יְשַׂחֲקוּ־שָׁם","they play-there-is"],["׃",""]] },
   { num:"כא", words:[["תַּחַת־צֶאֱלִים","under-thorny lotus plants"],["יִשְׁכָּב","will he lie down"],["בְּסֵתֶר","in-the cover of"],["קָנֶה","reeds"],["וּבִצָּה","and-swamp"],["׃",""]] },
   { num:"כב", words:[["יְסֻכֻּהוּ","they cover-it"],["צֶאֱלִים","thorny lotus plants"],["צִלְלוֹ","shade-his"],["יְסֻבּוּהוּ","they surround-it"],["עַרְבֵי־נָחַל","the poplars of-a wadi"],["׃",""]] },
-  { num:"כג", words:[["הֵן","yea"],["יַעֲשֹׁק","it is violent"],["נָהָר","the-river"],["לֹא","not"],["יַחְפּוֹז","it is alarmed"],["יִבְטַח","trusts"],["כִּי־יָגִיחַ","because-it bursts forth"],["יַרְדֵּן","Jordan"],["אֶל־פִּיהוּ","to-His-mouth"],["׃",""]] },
+  { num:"כג", words:[["הֵן","yea"],["יַעֲשֹׁק","it is violent"],["נָהָר","the-river"],["לֹא","not"],["יַחְפּוֹז","it is alarmed"],["יִבְטַח","trusts"],["כִּי־יָגִיחַ","because-it bursts forth"],["יַרְדֵּן","Jordan"],["אֶל־פִּיהוּ","to-his-mouth"],["׃",""]] },
   { num:"כד", words:[["בְּעֵינָיו","in-his-eyes"],["יִקָּחֶנּוּ","will anyone take?-it"],["בְּמוֹקְשִׁים","with-snares"],["יִנְקׇב־אָף","will anyone pierce?-anger"],["׃",""]] },
   { num:"כה", words:[["תִּמְשֹׁךְ","will you draw out?"],["לִוְיָתָן","Leviathan"],["בְּחַכָּה","with-a fish hook"],["וּבְחֶבֶל","and-with-a cord"],["תַּשְׁקִיעַ","will you hold down?"],["לְשֹׁנוֹ","tongue-its"],["׃",""]] },
   { num:"כו", words:[["הֲתָשִׂים","will you put"],["אַגְמֹן","bulrushes"],["בְּאַפּוֹ","in-His-anger"],["וּבְחוֹחַ","and-with-a hook"],["תִּקֹּב","you/she-will-crutch"],["לֶחֱיוֹ","jaw-its"],["׃",""]] },

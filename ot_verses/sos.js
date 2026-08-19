@@ -2,7 +2,7 @@
 (function() {
 var sos_ch1Verses = [
   { num:"א", words:[["שִׁיר","a song"],["הַשִּׁירִים","the-songs"],["אֲשֶׁר","which"],["לִשְׁלֹמֹה","to-Solomon"],["׃",""]] },
-  { num:"ב", words:[["יִשָּׁקֵנִי","let him kiss-me"],["מִנְּשִׁיקוֹת","from-the kisses of"],["פִּיהוּ","His-mouth"],["כִּי־טוֹבִים","because-good"],["דֹּדֶיךָ","love-your"],["מִיָּיִן","from-wine"],["׃",""]] },
+  { num:"ב", words:[["יִשָּׁקֵנִי","let him kiss-me"],["מִנְּשִׁיקוֹת","from-the kisses of"],["פִּיהוּ","his-mouth"],["כִּי־טוֹבִים","because-good"],["דֹּדֶיךָ","love-your"],["מִיָּיִן","from-wine"],["׃",""]] },
   { num:"ג", words:[["לְרֵיחַ","to-an odor of"],["שְׁמָנֶיךָ","oils-your"],["טוֹבִים","good"],["שֶׁמֶן","oil"],["תּוּרַק","which it is poured out"],["שְׁמֶךָ","your-name"],["עַל־כֵּן","therefore"],["עֲלָמוֹת","alamoth"],["אֲהֵבוּךָ","they love-you"],["׃",""]] },
   { num:"ד", words:[["מׇשְׁכֵנִי","draw-me"],["אַחֲרֶיךָ","after-you"],["נָּרוּצָה","let us run"],["הֱבִיאַנִי","he has brought-me"],["הַמֶּלֶךְ","the-king"],["חֲדָרָיו","chambers-his"],["נָגִילָה","we-do-rejoice"],["וְנִשְׂמְחָה","and-rejoice-with"],["בָּךְ","in-You"],["נַזְכִּירָה","let us bring to remembrance"],["דֹדֶיךָ","love-your"],["מִיַּיִן","from-wine"],["מֵישָׁרִים","uprightness"],["אֲהֵבוּךָ","they love-you"],["׃",""]] },
   { num:"ה", words:[["שְׁחוֹרָה","am black"],["אֲנִי","I"],["וְנָאוָה","and-lovely"],["בְּנוֹת","the-daughters-of"],["יְרוּשָׁלָ͏ִם","Jerusalem"],["כְּאׇהֳלֵי","like-the tents of"],["קֵדָר","Kedar"],["כִּירִיעוֹת","like-the tent curtains of"],["שְׁלֹמֹה","Solomon"],["׃",""]] },
