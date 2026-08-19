@@ -210,7 +210,7 @@ var ecc_ch9Verses = [
   { num:"טו", words:[["וּמָצָא","and-he will find"],["בָהּ","in-her"],["אִישׁ","a-man"],["מִסְכֵּן","poor"],["חָכָם","wise"],["וּמִלַּט־הוּא","and-he delivered-it-is"],["אֶת־הָעִיר","the-city"],["בְּחׇכְמָתוֹ","in-his-wisdom"],["וְאָדָם","and-Adam"],["לֹא","not"],["זָכַר","remembered"],["אֶת־הָאִישׁ","the-man"],["הַמִּסְכֵּן","the-poor"],["הַהוּא","that"],["׃",""]] },
   { num:"טז", words:[["וְאָמַרְתִּי","and-I will say"],["אָנִי","I"],["טוֹבָה","good"],["חׇכְמָה","wisdom"],["מִגְּבוּרָה","more than-strength"],["וְחׇכְמַת","and-wisdom of"],["הַמִּסְכֵּן","the-poor"],["בְּזוּיָה","is despised"],["וּדְבָרָיו","and-his-words"],["אֵינָם","they-are-not"],["נִשְׁמָעִים","are listened to"],["׃",""]] },
   { num:"יז", words:[["דִּבְרֵי","account-of"],["חֲכָמִים","wise"],["בְּנַחַת","carefully-down"],["נִשְׁמָעִים","are listened to"],["מִזַּעֲקַת","from-the cry of"],["מוֹשֵׁל","ruler"],["בַּכְּסִילִים","in-the-fools"],["׃",""]] },
-  { num:"יח", words:[["טוֹבָה","good"],["חׇכְמָה","wisdom"],["מִכְּלֵי","more than-weapons of"],["קְרָב","battle"],["וְחוֹטֶא","and-a sinner"],["אֶחָד","one"],["יְאַבֵּד","he will destroy"],["טוֹבָה","good"],["הַרְבֵּה","much"],["׃",""]] },
+  { num:"יח", words:[["טוֹבָה","good"],["חׇכְמָה","wisdom"],["מִכְּלֵי","than weapons of"],["קְרָב","battle"],["וְחוֹטֶא","and-a sinner"],["אֶחָד","one"],["יְאַבֵּד","he will destroy"],["טוֹבָה","good"],["הַרְבֵּה","much"],["׃",""]] },
 ];
 renderVerseSet(ecc_ch9Verses, 'ecc-ch9-verses');
 
