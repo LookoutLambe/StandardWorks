@@ -701,7 +701,7 @@ renderVerseSet(pro_ch21Verses, 'pro-ch21-verses');
 
 var pro_ch22Verses = [
   { num:"א", words:[["נִבְחָר","was-chosen"],["שֵׁם","the-name-of"],["מֵעֹשֶׁר","more than-wealth"],["רָב","much"],["מִכֶּסֶף","some of-the silver of"],["וּמִזָּהָב","and-more than-gold"],["חֵן","favor"],["טוֹב","good"],["׃",""]] },
-  { num:"ב", words:[["עָשִׁיר","rich"],["וָרָשׁ","and-the poor"],["נִפְגָּשׁוּ","they meet together"],["עֹשֵׂה","that-doeth"],["כֻלָּם","all-of-them"],["יְהֹוָה","the-LORD"],["׃",""]] },
+  { num:"ב", words:[["עָשִׁיר","rich"],["וָרָשׁ","and-the poor"],["נִפְגָּשׁוּ","they meet together"],["עֹשֵׂה","that-does"],["כֻלָּם","all-of-them"],["יְהֹוָה","the-LORD"],["׃",""]] },
   { num:"ג", words:[["עָרוּם","cunning"],["רָאָה","he-saw"],["רָעָה","evil"],["(ויסתר)",""],["[וְנִסְתָּר]","and-he hides himself"],["וּפְתָיִים","and-naive people"],["עָבְרוּ","passed"],["וְנֶעֱנָשׁוּ","and-they are punished"],["׃",""]] },
   { num:"ד", words:[["עֵקֶב","for"],["עֲנָוָה","humility"],["יִרְאַת","the-fear-of"],["יְהֹוָה","the-LORD"],["עֹשֶׁר","riches"],["וְכָבוֹד","and-glory"],["וְחַיִּים","and-life"],["׃",""]] },
   { num:"ה", words:[["צִנִּים","thorns"],["פַּחִים","snares"],["בְּדֶרֶךְ","after-the-manner-of"],["עִקֵּשׁ","perverse"],["שׁוֹמֵר","the keeper of"],["נַפְשׁוֹ","his-soul"],["יִרְחַק","it will be too far"],["מֵהֶם","of-them"],["׃",""]] },
