@@ -59,13 +59,13 @@ var pro_ch2Verses = [
   { num:"יט", words:[["כׇּל־בָּאֶיהָ","all-those who go to-her"],["לֹא","not"],["יְשׁוּבוּן","they will turn back"],["וְלֹא־יַשִּׂיגוּ","and-not-they-obtain"],["אׇרְחוֹת","the paths of"],["חַיִּים","living"],["׃",""]] },
   { num:"כ", words:[["לְמַעַן","in-order-that"],["תֵּלֵךְ","should-go"],["בְּדֶרֶךְ","after-the-manner-of"],["טוֹבִים","good"],["וְאׇרְחוֹת","and-he travels"],["צַדִּיקִים","just"],["תִּשְׁמֹר","you-keep"],["׃",""]] },
   { num:"כא", words:[["כִּי־יְשָׁרִים","because-just"],["יִשְׁכְּנוּ־אָרֶץ","they-may-dwell-the-earth"],["וּתְמִימִים","and-blameless"],["יִוָּתְרוּ","they will remain"],["בָהּ","in it"],["׃",""]] },
-  { num:"כב", words:[["וּרְשָׁעִים","and-wicked-men"],["מֵאֶרֶץ","from-the-land-of"],["יִכָּרֵתוּ","cut-off"],["וּבוֹגְדִים","and-treacherous people"],["יִסְּחוּ","they will be torn away"],["מִמֶּנָּה","from-he-appointed"],["׃",""]] },
+  { num:"כב", words:[["וּרְשָׁעִים","and-wicked-men"],["מֵאֶרֶץ","from-the-land-of"],["יִכָּרֵתוּ","cut-off"],["וּבוֹגְדִים","and-treacherous people"],["יִסְּחוּ","they will be torn away"],["מִמֶּנָּה","from it"],["׃",""]] },
 ];
 renderVerseSet(pro_ch2Verses, 'pro-ch2-verses');
 
 var pro_ch3Verses = [
   { num:"א", words:[["בְּנִי","my-son"],["תּוֹרָתִי","my-law"],["אַל־תִּשְׁכָּח","do-not-you will forget"],["וּמִצְוֺתַי","and-commandments-my"],["יִצֹּר","let it keep"],["לִבֶּךָ","your-heart"],["׃",""]] },
-  { num:"ב", words:[["כִּי","because"],["אֹרֶךְ","he-was-long"],["יָמִים","days"],["וּשְׁנוֹת","and-years of"],["חַיִּים","living"],["וְשָׁלוֹם","and-peace"],["יוֹסִיפוּ","further"],["לָךְ","to-you"],["׃",""]] },
+  { num:"ב", words:[["כִּי","because"],["אֹרֶךְ","the length of"],["יָמִים","days"],["וּשְׁנוֹת","and-years of"],["חַיִּים","living"],["וְשָׁלוֹם","and-peace"],["יוֹסִיפוּ","further"],["לָךְ","to-you"],["׃",""]] },
   { num:"ג", words:[["חֶסֶד","mercy"],["וֶאֱמֶת","and-true"],["אַל־יַעַזְבֻךָ","do-not-they leave-you"],["קׇשְׁרֵם","bind-them"],["עַל־גַּרְגְּרוֹתֶיךָ","upon-necks-your"],["כׇּתְבֵם","to-write-them"],["עַל־לוּחַ","upon-the tablet of"],["לִבֶּךָ","your-heart"],["׃",""]] },
   { num:"ד", words:[["וּמְצָא־חֵן","and-find-favor"],["וְשֵׂכֶל־טוֹב","and-insight-good"],["בְּעֵינֵי","in-the-eyes-of"],["אֱלֹהִים","God"],["וְאָדָם","and-Adam"],["׃",""]] },
   { num:"ה", words:[["בְּטַח","trust"],["אֶל־יְהֹוָה","to-the-Lord"],["בְּכׇל־לִבֶּךָ","in-all-heart-your"],["וְאֶל־בִּינָתְךָ","and-own understanding-your"],["אַל־תִּשָּׁעֵן","do-not-you depend"],["׃",""]] },
@@ -79,7 +79,7 @@ var pro_ch3Verses = [
   { num:"יג", words:[["אַשְׁרֵי","blessed-are"],["אָדָם","man"],["מָצָא","found"],["חׇכְמָה","wisdom"],["וְאָדָם","and-Adam"],["יָפִיק","who he obtains"],["תְּבוּנָה","is understanding"],["׃",""]] },
   { num:"יד", words:[["כִּי","because"],["טוֹב","good"],["סַחְרָהּ","profit-her"],["מִסְּחַר־כָּסֶף","than the gain of silver"],["וּמֵחָרוּץ","and-more than-gold"],["תְּבוּאָתָהּ","produce-its"],["׃",""]] },
   { num:"טו", words:[["יְקָרָה","precious"],["הִיא","she"],["[מִפְּנִינִים]","is more than-pearls"],["וְכׇל־חֲפָצֶיךָ","and-all-pleasures-your"],["לֹא","not"],["יִשְׁווּ־בָהּ","they compare-in-her"],["׃",""]] },
-  { num:"טז", words:[["אֹרֶךְ","he-was-long"],["יָמִים","days"],["בִּימִינָהּ","is in-right hand-her"],["בִּשְׂמֹאולָהּ","are in-left hand-her"],["עֹשֶׁר","riches"],["וְכָבוֹד","and-glory"],["׃",""]] },
+  { num:"טז", words:[["אֹרֶךְ","the length of"],["יָמִים","days"],["בִּימִינָהּ","is in-right hand-her"],["בִּשְׂמֹאולָהּ","are in-left hand-her"],["עֹשֶׁר","riches"],["וְכָבוֹד","and-glory"],["׃",""]] },
   { num:"יז", words:[["דְּרָכֶיהָ","ways-her"],["דַרְכֵי־נֹעַם","ways-of-the kindness of"],["וְכׇל־נְתִיבוֹתֶיהָ","and-all-pathways-her"],["שָׁלוֹם","peace"],["׃",""]] },
   { num:"יח", words:[["עֵץ־חַיִּים","a-tree-living"],["הִיא","she"],["לַמַּחֲזִיקִים","to-the-those who take hold"],["בָּהּ","in-it"],["וְתֹמְכֶיהָ","and-those who hold fast to-her"],["מְאֻשָּׁר","the-people"],["׃",""]] },
   { num:"יט", words:[["יְהֹוָה","the-LORD"],["בְּחׇכְמָה","in-wisdom"],["יָסַד־אָרֶץ","he-shall-be-founded-the-earth"],["כּוֹנֵן","he-were-ready"],["שָׁמַיִם","the-heavens"],["בִּתְבוּנָה","with-understanding"],["׃",""]] },
@@ -705,7 +705,7 @@ var pro_ch22Verses = [
   { num:"ג", words:[["עָרוּם","cunning"],["רָאָה","he-saw"],["רָעָה","evil"],["(ויסתר)",""],["[וְנִסְתָּר]","and-he hides himself"],["וּפְתָיִים","and-naive people"],["עָבְרוּ","passed"],["וְנֶעֱנָשׁוּ","and-they are punished"],["׃",""]] },
   { num:"ד", words:[["עֵקֶב","for"],["עֲנָוָה","humility"],["יִרְאַת","the-fear-of"],["יְהֹוָה","the-LORD"],["עֹשֶׁר","riches"],["וְכָבוֹד","and-glory"],["וְחַיִּים","and-life"],["׃",""]] },
   { num:"ה", words:[["צִנִּים","thorns"],["פַּחִים","snares"],["בְּדֶרֶךְ","after-the-manner-of"],["עִקֵּשׁ","perverse"],["שׁוֹמֵר","the keeper of"],["נַפְשׁוֹ","his-soul"],["יִרְחַק","it will be too far"],["מֵהֶם","of-them"],["׃",""]] },
-  { num:"ו", words:[["חֲנֹךְ","train"],["לַנַּעַר","for the-lad"],["עַל־פִּי","according-to"],["דַרְכּוֹ","way-his"],["גַּם","also"],["כִּי־יַזְקִין","because-it will grow old"],["לֹא־יָסוּר","not-shall-be-taken-away"],["מִמֶּנָּה","from-he-appointed"],["׃",""]] },
+  { num:"ו", words:[["חֲנֹךְ","train"],["לַנַּעַר","for the-lad"],["עַל־פִּי","according-to"],["דַרְכּוֹ","way-his"],["גַּם","also"],["כִּי־יַזְקִין","because-it will grow old"],["לֹא־יָסוּר","not-shall-be-taken-away"],["מִמֶּנָּה","from it"],["׃",""]] },
   { num:"ז", words:[["עָשִׁיר","rich"],["בְּרָשִׁים","over-poor people"],["יִמְשׁוֹל","he rules"],["וְעֶבֶד","and-the-servant-of"],["לֹוֶה","is borrowing"],["לְאִישׁ","for-a-man"],["מַלְוֶה","a lender"],["׃",""]] },
   { num:"ח", words:[["זוֹרֵעַ","one who sows"],["עַוְלָה","injustice"],["(יקצור)",""],["[יִקְצׇר־]אָוֶן","he-shall-reap-Aven"],["וְשֵׁבֶט","and-a rod"],["עֶבְרָתוֹ","fury-his"],["יִכְלֶה","perishes"],["׃",""]] },
   { num:"ט", words:[["טוֹב־עַיִן","good-eye"],["הוּא","he"],["יְבֹרָךְ","will-bless"],["כִּי־נָתַן","because-was-given"],["מִלַּחְמוֹ","some of-food-his"],["לַדָּל","to-the-poor person"],["׃",""]] },
@@ -824,7 +824,7 @@ var pro_ch25Verses = [
   { num:"יב", words:[["נֶזֶם","a ring of"],["זָהָב","gold"],["וַחֲלִי־כָתֶם","and-Hali-pure gold"],["מוֹכִיחַ","is an arbiter"],["חָכָם","wise"],["עַל־אֹזֶן","upon-an-ear"],["שֹׁמָעַת","listening"],["׃",""]] },
   { num:"יג", words:[["כְּצִנַּת־שֶׁלֶג","is like-the cold of-snow"],["בְּיוֹם","in-the-day-of"],["קָצִיר","harvest"],["צִיר","an envoy"],["נֶאֱמָן","more-faithful"],["לְשֹׁלְחָיו","to-those who send-him"],["וְנֶפֶשׁ","and-soul"],["אֲדֹנָיו","his-master"],["יָשִׁיב","He-shall-turn-away"],["׃",""]] },
   { num:"יד", words:[["נְשִׂיאִים","were leaders"],["וְרוּחַ","and-spirit-of"],["וְגֶשֶׁם","and-Geshem"],["אָיִן","not"],["אִישׁ","a-man"],["מִתְהַלֵּל","who boasts"],["בְּמַתַּת־שָׁקֶר","by-the-gift-false"],["׃",""]] },
-  { num:"טו", words:[["בְּאֹרֶךְ","in-he-was-long"],["אַפַּיִם","with-face"],["יְפֻתֶּה","he will be persuaded"],["קָצִין","be-our-ruler"],["וְלָשׁוֹן","tongue"],["רַכָּה","soft"],["תִּשְׁבׇּר־גָּרֶם","it may be broken-bone"],["׃",""]] },
+  { num:"טו", words:[["בְּאֹרֶךְ","in the length of"],["אַפַּיִם","with-face"],["יְפֻתֶּה","he will be persuaded"],["קָצִין","be-our-ruler"],["וְלָשׁוֹן","tongue"],["רַכָּה","soft"],["תִּשְׁבׇּר־גָּרֶם","it may be broken-bone"],["׃",""]] },
   { num:"טז", words:[["דְּבַשׁ","honey"],["מָצָאתָ","found"],["אֱכֹל","eat it"],["דַּיֶּךָּ","sufficiency-your"],["פֶּן־תִּשְׂבָּעֶנּוּ","lest-you should be surfeited with-it"],["וַהֲקֵאתוֹ","and-you will vomit up-it"],["׃",""]] },
   { num:"יז", words:[["הֹקַר","make rare"],["רַגְלְךָ","your-foot"],["מִבֵּית","from-the-house-of"],["רֵעֶךָ","your-neighbor"],["פֶּן־יִשְׂבָּעֲךָ","lest-he should be surfeited with-you"],["וּשְׂנֵאֶךָ","and-he will hate-you"],["׃",""]] },
   { num:"יח", words:[["מֵפִיץ","a war-club"],["וְחֶרֶב","and-sword-of"],["וְחֵץ","and-an arrow of"],["שָׁנוּן","the-sharp-pointed"],["אִישׁ","a-man"],["עֹנֶה","answer"],["בְרֵעֵהוּ","against-neighbor-his"],["עֵד","witness"],["שָׁקֶר","false"],["׃",""]] },

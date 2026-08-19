@@ -348,7 +348,7 @@ var psa_ch21Verses = [
   { num:"ב", words:[["יְהֹוָה","the-LORD"],["בְּעׇזְּךָ","in-strength-your"],["יִשְׂמַח־מֶלֶךְ","rejoices-king-of"],["וּבִישׁוּעָתְךָ","and-in-deliverance-your"],["מַה־[יָּגֶל]","what-it may roll on"],["(יגיל)",""],["מְאֹד","exceedingly"],["׃",""]] },
   { num:"ג", words:[["תַּאֲוַת","desire of"],["לִבּוֹ","his-heart"],["נָתַתָּה","you-gave"],["לּוֹ","upon-him"],["וַאֲרֶשֶׁת","and-the request of"],["שְׂפָתָיו","his-lips"],["בַּל־מָנַעְתָּ","not-you withheld"],["סֶּלָה","Selah"],["׃",""]] },
   { num:"ד", words:[["כִּי־תְקַדְּמֶנּוּ","because-you meet-him"],["בִּרְכוֹת","blessings-of"],["טוֹב","good"],["תָּשִׁית","you will set"],["לְרֹאשׁוֹ","to-head-his"],["עֲטֶרֶת","crown-of"],["פָּז","pure gold"],["׃",""]] },
-  { num:"ה", words:[["חַיִּים","life"],["שָׁאַל","he asked"],["מִמְּךָ","from-you"],["נָתַתָּה","you-gave"],["לּוֹ","upon-him"],["אֹרֶךְ","he-was-long"],["יָמִים","days"],["עוֹלָם","forever"],["וָעֶד","and-ever"],["׃",""]] },
+  { num:"ה", words:[["חַיִּים","life"],["שָׁאַל","he asked"],["מִמְּךָ","from-you"],["נָתַתָּה","you-gave"],["לּוֹ","upon-him"],["אֹרֶךְ","the length of"],["יָמִים","days"],["עוֹלָם","forever"],["וָעֶד","and-ever"],["׃",""]] },
   { num:"ו", words:[["גָּדוֹל","proud-things"],["כְּבוֹדוֹ","his-glory"],["בִּישׁוּעָתֶךָ","in-Your-salvation"],["הוֹד","splendor"],["וְהָדָר","and-honor"],["תְּשַׁוֶּה","you place"],["עָלָיו","upon-him"],["׃",""]] },
   { num:"ז", words:[["כִּי־תְשִׁיתֵהוּ","because-you give-him"],["בְרָכוֹת","blessings"],["לָעַד","forever"],["תְּחַדֵּהוּ","you make rejoice-him"],["בְשִׂמְחָה","in-joy"],["אֶת־פָּנֶיךָ","Your-face"],["׃",""]] },
   { num:"ח", words:[["כִּי־הַמֶּלֶךְ","because-the-king"],["בֹּטֵחַ","are trusting"],["בַּיהֹוָה","in-the-LORD"],["וּבְחֶסֶד","and-by-charity"],["עֶלְיוֹן","Most-High"],["בַּל־יִמּוֹט","not-it is moved"],["׃",""]] },
@@ -1893,7 +1893,7 @@ var psa_ch91Verses = [
   { num:"יג", words:[["עַל־שַׁחַל","upon-a lion"],["וָפֶתֶן","and-a cobra"],["תִּדְרֹךְ","it will tread"],["תִּרְמֹס","you will trample"],["כְּפִיר","a young lion of"],["וְתַנִּין","and-a serpent"],["׃",""]] },
   { num:"יד", words:[["כִּי","because"],["בִי","with-me"],["חָשַׁק","he loved"],["וַאֲפַלְּטֵהוּ","and-I will deliver-him"],["אֲשַׂגְּבֵהוּ","I will set on high-him"],["כִּי־יָדַע","because-he-knew"],["שְׁמִי","my-name"],["׃",""]] },
   { num:"טו", words:[["יִקְרָאֵנִי","he will call out to-me"],["וְאֶעֱנֵהוּ","and-I will answer-him"],["עִמּוֹ־אָנֹכִי","with-him-I"],["בְצָרָה","in-trouble"],["אֲחַלְּצֵהוּ","I will rescue-him"],["וַאֲכַבְּדֵהוּ","and-I will honor-him"],["׃",""]] },
-  { num:"טז", words:[["אֹרֶךְ","he-was-long"],["יָמִים","days"],["אַשְׂבִּיעֵהוּ","I will satisfy-him"],["וְאַרְאֵהוּ","and-I will let look-him"],["בִּישׁוּעָתִי","on-salvation-my"],["׃",""]] },
+  { num:"טז", words:[["אֹרֶךְ","the length of"],["יָמִים","days"],["אַשְׂבִּיעֵהוּ","I will satisfy-him"],["וְאַרְאֵהוּ","and-I will let look-him"],["בִּישׁוּעָתִי","on-salvation-my"],["׃",""]] },
 ];
 renderVerseSet(psa_ch91Verses, 'psa-ch91-verses');
 
@@ -2811,7 +2811,7 @@ var psa_ch132Verses = [
   { num:"ח", words:[["קוּמָה","arise"],["יְהֹוָה","the-LORD"],["לִמְנוּחָתֶךָ","to-resting place-your"],["אַתָּה","you"],["וַאֲרוֹן","and-the ark of"],["עֻזֶּךָ","your-strength"],["׃",""]] },
   { num:"ט", words:[["כֹּהֲנֶיךָ","priests-your"],["יִלְבְּשׁוּ־צֶדֶק","may they be clothed-righteousness"],["וַחֲסִידֶיךָ","and-faithful people-your"],["יְרַנֵּנוּ","shall-they-sing"],["׃",""]] },
   { num:"י", words:[["בַּעֲבוּר","because-of"],["דָּוִד","David"],["עַבְדֶּךָ","your-servant"],["אַל־תָּשֵׁב","do-not-shall-sit"],["פְּנֵי","face-of"],["מְשִׁיחֶךָ","anointed-your"],["׃",""]] },
-  { num:"יא", words:[["נִשְׁבַּע־יְהֹוָה","swore-the-LORD"],["לְדָוִד","of-David"],["אֱמֶת","truth"],["לֹא־יָשׁוּב","not-repent"],["מִמֶּנָּה","from-he-appointed"],["מִפְּרִי","of-fruit-of"],["בִטְנְךָ","womb-your"],["אָשִׁית","I-will-set-him"],["לְכִסֵּא־לָךְ","to-the-throne-for you"],["׃",""]] },
+  { num:"יא", words:[["נִשְׁבַּע־יְהֹוָה","swore-the-LORD"],["לְדָוִד","of-David"],["אֱמֶת","truth"],["לֹא־יָשׁוּב","not-repent"],["מִמֶּנָּה","from it"],["מִפְּרִי","of-fruit-of"],["בִטְנְךָ","womb-your"],["אָשִׁית","I-will-set-him"],["לְכִסֵּא־לָךְ","to-the-throne-for you"],["׃",""]] },
   { num:"יב", words:[["אִם־יִשְׁמְרוּ","if-they-keep"],["בָנֶיךָ","your-sons"],["בְּרִיתִי","My-ancient-covenant"],["וְעֵדֹתִי","and-testimonies-my"],["זוֹ","this"],["אֲלַמְּדֵם","I will teach-them"],["גַּם־בְּנֵיהֶם","also-their-children"],["עֲדֵי־עַד","will be to-until"],["יֵשְׁבוּ","dwell-shall"],["לְכִסֵּא־לָךְ","to-the-throne-for you"],["׃",""]] },
   { num:"יג", words:[["כִּי־בָחַר","because-chose"],["יְהֹוָה","the-LORD"],["בְּצִיּוֹן","in-Zion"],["אִוָּהּ","he has desired-it"],["לְמוֹשָׁב","for-habitation"],["לוֹ","him"],["׃",""]] },
   { num:"יד", words:[["זֹאת־מְנוּחָתִי","this-my-rest"],["עֲדֵי־עַד","will be to-until"],["פֹּה־אֵשֵׁב","here-I will remain"],["כִּי","because"],["אִוִּתִיהָ","I have desired-it"],["׃",""]] },
