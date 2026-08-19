@@ -58,7 +58,7 @@ var pro_ch2Verses = [
   { num:"יח", words:[["כִּי","because"],["שָׁחָה","it has sunk down"],["אֶל־מָוֶת","to-death"],["בֵּיתָהּ","house-her"],["וְאֶל־רְפָאִים","and-the-shades"],["מַעְגְּלֹתֶיהָ","tracks-her"],["׃",""]] },
   { num:"יט", words:[["כׇּל־בָּאֶיהָ","all-those who go to-her"],["לֹא","not"],["יְשׁוּבוּן","they will turn back"],["וְלֹא־יַשִּׂיגוּ","and-not-they-obtain"],["אׇרְחוֹת","the paths of"],["חַיִּים","living"],["׃",""]] },
   { num:"כ", words:[["לְמַעַן","in-order-that"],["תֵּלֵךְ","should-go"],["בְּדֶרֶךְ","after-the-manner-of"],["טוֹבִים","good"],["וְאׇרְחוֹת","and-he travels"],["צַדִּיקִים","just"],["תִּשְׁמֹר","you-keep"],["׃",""]] },
-  { num:"כא", words:[["כִּי־יְשָׁרִים","because-just"],["יִשְׁכְּנוּ־אָרֶץ","they-may-dwell-the-earth"],["וּתְמִימִים","and-blameless"],["יִוָּתְרוּ","they will remain"],["בָהּ","in-her"],["׃",""]] },
+  { num:"כא", words:[["כִּי־יְשָׁרִים","because-just"],["יִשְׁכְּנוּ־אָרֶץ","they-may-dwell-the-earth"],["וּתְמִימִים","and-blameless"],["יִוָּתְרוּ","they will remain"],["בָהּ","in it"],["׃",""]] },
   { num:"כב", words:[["וּרְשָׁעִים","and-wicked-men"],["מֵאֶרֶץ","from-the-land-of"],["יִכָּרֵתוּ","cut-off"],["וּבוֹגְדִים","and-treacherous people"],["יִסְּחוּ","they will be torn away"],["מִמֶּנָּה","from-he-appointed"],["׃",""]] },
 ];
 renderVerseSet(pro_ch2Verses, 'pro-ch2-verses');
