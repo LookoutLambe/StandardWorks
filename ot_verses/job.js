@@ -108,7 +108,7 @@ var job_ch5Verses = [
   { num:"ז", words:[["כִּי־אָדָם","because-man"],["לְעָמָל","to-trouble"],["יוּלָּד","he is born"],["וּבְנֵי־רֶשֶׁף","and-sons-of-plague"],["יַגְבִּיהוּ","they make high"],["עוּף","to fly"],["׃",""]] },
   { num:"ח", words:[["אוּלָם","nevertheless"],["אֲנִי","I"],["אֶדְרֹשׁ","I-might-inquire"],["אֶל־אֵל","unto-God"],["וְאֶל־אֱלֹהִים","and-God"],["אָשִׂים","shall-I-put"],["דִּבְרָתִי","plea-my"],["׃",""]] },
   { num:"ט", words:[["עֹשֶׂה","do"],["גְדֹלוֹת","great things"],["וְאֵין","and-has-no"],["חֵקֶר","a-search"],["נִפְלָאוֹת","wonders"],["עַד־אֵין","until-there-is-no"],["מִסְפָּר","number"],["׃",""]] },
-  { num:"י", words:[["הַנֹּתֵן","the-was-given"],["מָטָר","rain"],["עַל־פְּנֵי־אָרֶץ","upon-the-face-of-the-earth"],["וְשֹׁלֵחַ","and-who sends"],["מַיִם","water"],["עַל־פְּנֵי","upon-the-face-of"],["חוּצוֹת","the-streets"],["׃",""]] },
+  { num:"י", words:[["הַנֹּתֵן","the-one-giving"],["מָטָר","rain"],["עַל־פְּנֵי־אָרֶץ","upon-the-face-of-the-earth"],["וְשֹׁלֵחַ","and-who sends"],["מַיִם","water"],["עַל־פְּנֵי","upon-the-face-of"],["חוּצוֹת","the-streets"],["׃",""]] },
   { num:"יא", words:[["לָשׂוּם","to-put"],["שְׁפָלִים","lowly people"],["לְמָרוֹם","to-a high place"],["וְקֹדְרִים","and-mourners"],["שָׂגְבוּ","they are high"],["יֶשַׁע","safety"],["׃",""]] },
   { num:"יב", words:[["מֵפֵר","who frustrates"],["מַחְשְׁבוֹת","purposes-of"],["עֲרוּמִים","crafty people"],["וְלֹא־תַעֲשֶׂנָה","and-not-they carry out"],["יְדֵיהֶם","their-hands"],["תֻּשִׁיָּה","sound wisdom"],["׃",""]] },
   { num:"יג", words:[["לֹכֵד","who catches"],["חֲכָמִים","wise"],["בְּעׇרְמָם","when-are crafty-they"],["וַעֲצַת","and-the-plan-of"],["נִפְתָּלִים","tortuous people"],["נִמְהָרָה","it is hasty"],["׃",""]] },
