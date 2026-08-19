@@ -637,7 +637,7 @@ var pro_ch20Verses = [
   { num:"ד", words:[["מֵחֹרֶף","from-winter"],["עָצֵל","idle"],["לֹא־יַחֲרֹשׁ","not-he plows"],["(ישאל)",""],["[וְשָׁאַל]","and-Sheal"],["בַּקָּצִיר","in-the-harvest"],["וָאָיִן","and-there is not"],["׃",""]] },
   { num:"ה", words:[["מַיִם","water"],["עֲמֻקִּים","deep"],["עֵצָה","counsel"],["בְלֶב־אִישׁ","in-the heart of-man-of"],["וְאִישׁ","and-the-man-of"],["תְּבוּנָה","is understanding"],["יִדְלֶנָּה","he draws out-it"],["׃",""]] },
   { num:"ו", words:[["רׇב־אָדָם","much-man"],["יִקְרָא","calls"],["אִישׁ","a-man"],["חַסְדּוֹ","His-lovingkindness"],["וְאִישׁ","and-the-man-of"],["אֱמוּנִים","faithful people"],["מִי","who"],["יִמְצָא","shall-find"],["׃",""]] },
-  { num:"ז", words:[["מִתְהַלֵּךְ","walking"],["בְּתֻמּוֹ","in-integrity-his"],["צַדִּיק","righteous"],["אַשְׁרֵי","blessed-are"],["בָנָיו","their-sons"],["אַחֲרָיו","after-him"],["׃",""]] },
+  { num:"ז", words:[["מִתְהַלֵּךְ","walking"],["בְּתֻמּוֹ","in-integrity-his"],["צַדִּיק","righteous"],["אַשְׁרֵי","blessed-are"],["בָנָיו","his-sons"],["אַחֲרָיו","after-him"],["׃",""]] },
   { num:"ח", words:[["מֶלֶךְ","the-king-of"],["יוֹשֵׁב","sitting"],["עַל־כִּסֵּא־דִין","upon-the-throne-of-judgment-of"],["מְזָרֶה","is winnowing"],["בְעֵינָיו","with-their-eyes"],["כׇּל־רָע","all-evil"],["׃",""]] },
   { num:"ט", words:[["מִי־יֹאמַר","who-He-says"],["זִכִּיתִי","I have kept pure"],["לִבִּי","my-heart"],["טָהַרְתִּי","I am pure"],["מֵחַטָּאתִי","from-sin-my"],["׃",""]] },
   { num:"י", words:[["אֶבֶן","stone"],["וָאֶבֶן","and-I-built"],["אֵיפָה","an-ephah"],["וְאֵיפָה","and-a measure"],["תּוֹעֲבַת","an-abomination-before"],["יְהֹוָה","the-LORD"],["גַּם־שְׁנֵיהֶם","also-the-two"],["׃",""]] },
