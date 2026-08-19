@@ -760,7 +760,7 @@ var job_ch28Verses = [
   { num:"יד", words:[["תְּהוֹם","gulf"],["אָמַר","said"],["לֹא","not"],["בִי־הִיא","against-Me-it-is"],["וְיָם","and-the sea"],["אָמַר","said"],["אֵין","there-is-no"],["עִמָּדִי","against-me"],["׃",""]] },
   { num:"טו", words:[["לֹא־יֻתַּן","not-Itn"],["סְגוֹר","fine gold"],["תַּחְתֶּיהָ","in place-its"],["וְלֹא","and-not"],["יִשָּׁקֵל","it will be weighed"],["כֶּסֶף","money"],["מְחִירָהּ","price-its"],["׃",""]] },
   { num:"טז", words:[["לֹא־תְסֻלֶּה","not-it will be paid"],["בְּכֶתֶם","in-the gold of"],["אוֹפִיר","Ophir"],["בְּשֹׁהַם","in-onyx"],["יָקָר","fine"],["וְסַפִּיר","and-sapphire"],["׃",""]] },
-  { num:"יז", words:[["לֹא־יַעַרְכֶנָּה","not-it will be comparable to-it"],["זָהָב","gold"],["וּזְכוֹכִית","and-glass"],["וּתְמוּרָתָהּ","and-is exchange-its"],["כְּלִי־פָז","the-ball-pure gold"],["׃",""]] },
+  { num:"יז", words:[["לֹא־יַעַרְכֶנָּה","not-it will be comparable to-it"],["זָהָב","gold"],["וּזְכוֹכִית","and-glass"],["וּתְמוּרָתָהּ","and-is exchange-its"],["כְּלִי־פָז","the-vessel-pure gold"],["׃",""]] },
   { num:"יח", words:[["רָאמוֹת","Ramoth"],["וְגָבִישׁ","and-crystal"],["לֹא","not"],["יִזָּכֵר","to-be-remembered"],["וּמֶשֶׁךְ","and-Meshech"],["חׇכְמָה","wisdom"],["מִפְּנִינִים","is more than-pearls"],["׃",""]] },
   { num:"יט", words:[["לֹא־יַעַרְכֶנָּה","not-it will be comparable to-it"],["פִּטְדַת־כּוּשׁ","topaz of-Cush"],["בְּכֶתֶם","in-the gold of"],["טָהוֹר","pure"],["לֹא","not"],["תְסֻלֶּה","it will be paid"],["׃",""]] },
   { num:"כ", words:[["וְהַחׇכְמָה","and-the-wisdom"],["מֵאַיִן","whence"],["תָּבוֹא","come-shall"],["וְאֵי","and-where?"],["זֶה","this"],["מְקוֹם","the-place"],["בִּינָה","shall-come-to-understanding"],["׃",""]] },
