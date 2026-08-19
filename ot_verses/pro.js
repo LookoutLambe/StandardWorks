@@ -1026,7 +1026,7 @@ var pro_ch31Verses = [
   { num:"יט", words:[["יָדֶיהָ","hands-her"],["שִׁלְּחָה","she stretches out"],["בַכִּישׁוֹר","on the-distaff"],["וְכַפֶּיהָ","and-the-palms-her"],["תָּמְכוּ","they-supported"],["פָלֶךְ","the spindle"],["׃",""]] },
   { num:"כ", words:[["כַּפָּהּ","the-hand-her"],["פָּרְשָׂה","she spreads out"],["לֶעָנִי","for the-poor person"],["וְיָדֶיהָ","and-hands-her"],["שִׁלְּחָה","she stretches out"],["לָאֶבְיוֹן","for the-needy person"],["׃",""]] },
   { num:"כא", words:[["לֹא־תִירָא","not-you must be afraid"],["לְבֵיתָהּ","to-household-her"],["מִשָּׁלֶג","from-snow"],["כִּי","because"],["כׇל־בֵּיתָהּ","all-house-her"],["לָבֻשׁ","is clothed"],["שָׁנִים","years"],["׃",""]] },
-  { num:"כב", words:[["מַרְבַדִּים","coverings"],["עָשְׂתָה־לָּהּ","did-to-her"],["שֵׁשׁ","six"],["וְאַרְגָּמָן","and-purple"],["לְבוּשָׁהּ","clothing-her"],["׃",""]] },
+  { num:"כב", words:[["מַרְבַדִּים","coverings"],["עָשְׂתָה־לָּהּ","did-to-her"],["שֵׁשׁ","fine linen"],["וְאַרְגָּמָן","and-purple"],["לְבוּשָׁהּ","clothing-her"],["׃",""]] },
   { num:"כג", words:[["נוֹדָע","was-known"],["בַּשְּׁעָרִים","at the-gates"],["בַּעְלָהּ","her-husband"],["בְּשִׁבְתּוֹ","as-he-sat"],["עִם־זִקְנֵי־אָרֶץ","with-the-elders-of-the-earth"],["׃",""]] },
   { num:"כד", words:[["סָדִין","linen garments"],["עָשְׂתָה","did"],["וַתִּמְכֹּר","and-she sold"],["וַחֲגוֹר","and-a belt"],["נָתְנָה","gave"],["לַכְּנַעֲנִי","to the-Canaanites"],["׃",""]] },
   { num:"כה", words:[["עֹז־וְהָדָר","strength-of-and-majesty"],["לְבוּשָׁהּ","clothing-her"],["וַתִּשְׂחַק","and-she laughed"],["לְיוֹם","to-day"],["אַחֲרוֹן","the-last"],["׃",""]] },
