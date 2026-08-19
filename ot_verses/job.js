@@ -236,7 +236,7 @@ var job_ch9Verses = [
   { num:"יט", words:[["אִם־לְכֹחַ","if-to-the-power-of"],["אַמִּיץ","strong"],["הִנֵּה","behold"],["וְאִם־לְמִשְׁפָּט","and-if-to-judgment"],["מִי","who"],["יוֹעִידֵנִי","will he summon-me"],["׃",""]] },
   { num:"כ", words:[["אִם־אֶצְדָּק","if-I am righteous"],["פִּי","the-mouth-of"],["יַרְשִׁיעֵנִי","it will condemn as guilty-me"],["תׇּם־אָנִי","the-end-I"],["וַיַּעְקְשֵׁנִי","and-it declared guilty-me"],["׃",""]] },
   { num:"כא", words:[["תׇּם־אָנִי","the-end-I"],["לֹא־אֵדַע","not-I-shall-know"],["נַפְשִׁי","my-life"],["אֶמְאַס","I reject"],["חַיָּי","my-days"],["׃",""]] },
-  { num:"כב", words:[["אַחַת","one"],["הִיא","she"],["עַל־כֵּן","therefore"],["אָמַרְתִּי","I-said"],["תָּם","ended"],["וְרָשָׁע","and-the wicked"],["הוּא","he"],["מְכַלֶּה","an-end"],["׃",""]] },
+  { num:"כב", words:[["אַחַת","one"],["הִיא","it is"],["עַל־כֵּן","therefore"],["אָמַרְתִּי","I-said"],["תָּם","ended"],["וְרָשָׁע","and-the wicked"],["הוּא","he"],["מְכַלֶּה","an-end"],["׃",""]] },
   { num:"כג", words:[["אִם־שׁוֹט","if-a-scourge"],["יָמִית","shall-He-slay"],["פִּתְאֹם","suddenly"],["לְמַסַּת","the despair of"],["נְקִיִּם","innocent"],["יִלְעָג","he mocks"],["׃",""]] },
   { num:"כד", words:[["אֶרֶץ","the-land-of"],["נִתְּנָה","was-given"],["בְיַד־רָשָׁע","by-the hand of-wicked"],["פְּנֵי־שֹׁפְטֶיהָ","face-of-judges-its"],["יְכַסֶּה","he-covered"],["אִם־לֹא","if-not"],["אֵפוֹא","then"],["מִי־הוּא","who-it-is"],["׃",""]] },
   { num:"כה", words:[["וְיָמַי","and-days-my"],["קַלּוּ","they were abated"],["מִנִּי־רָץ","some of-he ran"],["בָּרְחוּ","fled"],["לֹא־רָאוּ","not-saw"],["טוֹבָה","good"],["׃",""]] },
@@ -771,7 +771,7 @@ var job_ch28Verses = [
   { num:"כה", words:[["לַעֲשׂוֹת","to-do"],["לָרוּחַ","unto-the-Spirit"],["מִשְׁקָל","weight"],["וּמַיִם","and-water"],["תִּכֵּן","he has measured"],["בְּמִדָּה","with-a measure"],["׃",""]] },
   { num:"כו", words:[["בַּעֲשֹׂתוֹ","when-acts-he"],["לַמָּטָר","for the-rain"],["חֹק","law"],["וְדֶרֶךְ","and-the-way-of"],["לַחֲזִיז","for-the storm of"],["קֹלוֹת","thunders"],["׃",""]] },
   { num:"כז", words:[["אָז","then"],["רָאָהּ","he saw-it"],["וַיְסַפְּרָהּ","and-he recounted-it"],["הֱכִינָהּ","he established-it"],["וְגַם־חֲקָרָהּ","and-also-he examined-it"],["׃",""]] },
-  { num:"כח", words:[["וַיֹּאמֶר","and-said"],["לָאָדָם","for-man"],["הֵן","yea"],["יִרְאַת","the-fear-of"],["אֲדֹנָי","Lord"],["הִיא","she"],["חׇכְמָה","wisdom"],["וְסוּר","and-to turn"],["מֵרָע","from-evil"],["בִּינָה","shall-come-to-understanding"],["׃",""]] },
+  { num:"כח", words:[["וַיֹּאמֶר","and-said"],["לָאָדָם","for-man"],["הֵן","yea"],["יִרְאַת","the-fear-of"],["אֲדֹנָי","Lord"],["הִיא","it is"],["חׇכְמָה","wisdom"],["וְסוּר","and-to turn"],["מֵרָע","from-evil"],["בִּינָה","shall-come-to-understanding"],["׃",""]] },
 ];
 renderVerseSet(job_ch28Verses, 'job-ch28-verses');
 
@@ -851,7 +851,7 @@ var job_ch31Verses = [
   { num:"ט", words:[["אִם־נִפְתָּה","if-it has been deceived"],["לִבִּי","my-heart"],["עַל־אִשָּׁה","upon-a-woman"],["וְעַל־פֶּתַח","and-upon-the-door-of"],["רֵעִי","companions-of"],["אָרָבְתִּי","I have lain in wait"],["׃",""]] },
   { num:"י", words:[["תִּטְחַן","let her grind"],["לְאַחֵר","to-another"],["אִשְׁתִּי","my-wife"],["וְעָלֶיהָ","and-upon-it"],["יִכְרְעוּן","let them bow down"],["אֲחֵרִין","others"],["׃",""]] },
   { num:"יא", words:[["כִּי־[הִיא]","because-it-is"],["(הוא)",""],["זִמָּה","there-could-not"],["(והיא)",""],["[וְהוּא]","and-he"],["עָוֺן","iniquity"],["פְּלִילִים","assessments"],["׃",""]] },
-  { num:"יב", words:[["כִּי","because"],["אֵשׁ","fire"],["הִיא","she"],["עַד־אֲבַדּוֹן","until-Abaddon"],["תֹּאכֵל","it-shall-devour"],["וּבְכׇל־תְּבוּאָתִי","and-in-all-produce-my"],["תְשָׁרֵשׁ","it will root up"],["׃",""]] },
+  { num:"יב", words:[["כִּי","because"],["אֵשׁ","fire"],["הִיא","it is"],["עַד־אֲבַדּוֹן","until-Abaddon"],["תֹּאכֵל","it-shall-devour"],["וּבְכׇל־תְּבוּאָתִי","and-in-all-produce-my"],["תְשָׁרֵשׁ","it will root up"],["׃",""]] },
   { num:"יג", words:[["אִם־אֶמְאַס","if-I reject"],["מִשְׁפַּט","judgment"],["עַבְדִּי","my-servant"],["וַאֲמָתִי","and-female servant-my"],["בְּרִבָם","in-complaint-their"],["עִמָּדִי","against-me"],["׃",""]] },
   { num:"יד", words:[["וּמָה","and-what"],["אֶעֱשֶׂה","I-do"],["כִּי־יָקוּם","because-he-shall-rise"],["אֵל","God"],["וְכִי־יִפְקֹד","and-that-He-shall-visit"],["מָה","what"],["אֲשִׁיבֶנּוּ","I will bring back-him"],["׃",""]] },
   { num:"טו", words:[["הֲלֹא־בַבֶּטֶן","do-not-in the-belly"],["עֹשֵׂנִי","the one who made-me"],["עָשָׂהוּ","who he made-him"],["וַיְכֻנֶנּוּ","and-did prepare us?-he"],["בָּרֶחֶם","in the-womb"],["אֶחָד","one"],["׃",""]] },
