@@ -21,7 +21,7 @@ var pro_ch1Verses = [
   { num:"יח", words:[["וְהֵם","and-they"],["לְדָמָם","for-own blood-their"],["יֶאֱרֹבוּ","they lie in wait"],["יִצְפְּנוּ","they lie hidden"],["לְנַפְשֹׁתָם","for-own life-their"],["׃",""]] },
   { num:"יט", words:[["כֵּן","thus"],["אׇרְחוֹת","the paths of"],["כׇּל־בֹּצֵעַ","all-one who gains unjustly"],["בָּצַע","unjust gain"],["אֶת־נֶפֶשׁ","soul"],["בְּעָלָיו","owner-its"],["יִקָּח","he will take"],["׃",""]] },
   { num:"כ", words:[["חׇכְמוֹת","wisdom"],["בַּחוּץ","in-the-except"],["תָּרֹנָּה","it cries aloud"],["בָּרְחֹבוֹת","in the-open places"],["תִּתֵּן","you-shall-give"],["קוֹלָהּ","voice-her"],["׃",""]] },
-  { num:"כא", words:[["בְּרֹאשׁ","in-the-gall-of"],["הֹמִיּוֹת","noisy places"],["תִּקְרָא","you-call"],["בְּפִתְחֵי","at-the entrances of"],["שְׁעָרִים","measures"],["בָּעִיר","in-the-city"],["אֲמָרֶיהָ","her-words"],["תֹאמֵר","she utters"],["׃",""]] },
+  { num:"כא", words:[["בְּרֹאשׁ","in the top of"],["הֹמִיּוֹת","noisy places"],["תִּקְרָא","you-call"],["בְּפִתְחֵי","at-the entrances of"],["שְׁעָרִים","measures"],["בָּעִיר","in-the-city"],["אֲמָרֶיהָ","her-words"],["תֹאמֵר","she utters"],["׃",""]] },
   { num:"כב", words:[["עַד־מָתַי","until-when"],["פְּתָיִם","O naive people"],["תְּאֵהֲבוּ־פֶתִי","will you love-naivete"],["וְלֵצִים","and-mockers"],["לָצוֹן","mockery"],["חָמְדוּ","do they delight in?"],["לָהֶם","to-them"],["וּכְסִילִים","and-O fools"],["יִשְׂנְאוּ־דָעַת","will they hate?-knowledge"],["׃",""]] },
   { num:"כג", words:[["תָּשׁוּבוּ","you-will-turn"],["לְתוֹכַחְתִּי","to-rebuke-my"],["הִנֵּה","behold"],["אַבִּיעָה","I will pour forth"],["לָכֶם","to-you"],["רוּחִי","my-spirit"],["אוֹדִיעָה","let me declare"],["דְבָרַי","my-words"],["אֶתְכֶם","you"],["׃",""]] },
   { num:"כד", words:[["יַעַן","because"],["קָרָאתִי","called"],["וַתְּמָאֵנוּ","and-you refused"],["נָטִיתִי","I have turned aside"],["יָדִי","my-hand"],["וְאֵין","and-has-no"],["מַקְשִׁיב","was an attentive one"],["׃",""]] },
@@ -766,7 +766,7 @@ var pro_ch23Verses = [
   { num:"לא", words:[["אַל־תֵּרֶא","do-not-you see"],["יַּיִן","wine"],["כִּי","because"],["יִתְאַדָּם","it will be red"],["כִּי־יִתֵּן","because-shall-give"],["[בַּכּוֹס]","in the-cup"],["עֵינוֹ","his eye"],["יִתְהַלֵּךְ","it will go"],["בְּמֵישָׁרִים","with-equity"],["׃",""]] },
   { num:"לב", words:[["אַחֲרִיתוֹ","posterity-his"],["כְּנָחָשׁ","like-a snake"],["יִשָּׁךְ","someone will pay interest"],["וּכְצִפְעֹנִי","and-like-a viper"],["יַפְרִשׁ","it will sting"],["׃",""]] },
   { num:"לג", words:[["עֵינֶיךָ","your-eyes"],["יִרְאוּ","shall-see"],["זָרוֹת","strange"],["וְלִבְּךָ","and-heart-your"],["יְדַבֵּר","speaks"],["תַּהְפֻּכוֹת","perverse things"],["׃",""]] },
-  { num:"לד", words:[["וְהָיִיתָ","you-were"],["כְּשֹׁכֵב","like-one who lies down"],["בְּלֶב־יָם","in-the heart of-the-sea"],["וּכְשֹׁכֵב","and-like-one who lies down"],["בְּרֹאשׁ","in-the-gall-of"],["חִבֵּל","a mast"],["׃",""]] },
+  { num:"לד", words:[["וְהָיִיתָ","you-were"],["כְּשֹׁכֵב","like-one who lies down"],["בְּלֶב־יָם","in-the heart of-the-sea"],["וּכְשֹׁכֵב","and-like-one who lies down"],["בְּרֹאשׁ","in the top of"],["חִבֵּל","a mast"],["׃",""]] },
   { num:"לה", words:[["בַל־חָלִיתִי","not-I was sick"],["הֲלָמוּנִי","they beat-me"],["בַּל־יָדָעְתִּי","not-I-know"],["מָתַי","when"],["אָקִיץ","will I awake"],["אוֹסִיף","more"],["אֲבַקְשֶׁנּוּ","I will seek-it"],["עוֹד","any-more"],["׃",""]] },
 ];
 renderVerseSet(pro_ch23Verses, 'pro-ch23-verses');
