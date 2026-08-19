@@ -281,7 +281,7 @@ renderVerseSet(job_ch10Verses, 'job-ch10-verses');
 
 var job_ch11Verses = [
   { num:"א", words:[["וַיַּעַן","and-he-answered"],["צֹפַר","Zophar"],["הַנַּעֲמָתִי","the-Naamathite"],["וַיֹּאמַר","and-said"],["׃",""]] },
-  { num:"ב", words:[["הֲרֹב","a multitude of"],["דְּבָרִים","things"],["לֹא","not"],["יֵעָנֶה","will it be answered"],["וְאִם־אִישׁ","and-if-man-of"],["שְׂפָתַיִם","languages"],["יִצְדָּק","will he be righteous"],["׃",""]] },
+  { num:"ב", words:[["הֲרֹב","a multitude of"],["דְּבָרִים","things"],["לֹא","not"],["יֵעָנֶה","will it be answered"],["וְאִם־אִישׁ","and-if-man-of"],["שְׂפָתַיִם","lips"],["יִצְדָּק","will he be righteous"],["׃",""]] },
   { num:"ג", words:[["בַּדֶּיךָ","the-empty boasts-your"],["מְתִים","men"],["יַחֲרִישׁוּ","he will keep silent(they)"],["וַתִּלְעַג","and-have you mocked?"],["וְאֵין","and-has-no"],["מַכְלִם","is one who puts to shame"],["׃",""]] },
   { num:"ד", words:[["וַתֹּאמֶר","and-said"],["זַךְ","are pure"],["לִקְחִי","teaching-my"],["וּבַר","and-clean"],["הָיִיתִי","I-was"],["בְעֵינֶיךָ","with-own eyes-your"],["׃",""]] },
   { num:"ה", words:[["וְאוּלָם","nevertheless"],["מִי־יִתֵּן","would-that"],["אֱלוֹהַּ","Loh"],["דַּבֵּר","to-speak"],["וְיִפְתַּח","and-he may open"],["שְׂפָתָיו","His-lips"],["עִמָּךְ","with-you"],["׃",""]] },
