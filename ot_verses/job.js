@@ -626,7 +626,7 @@ var job_ch22Verses = [
   { num:"יט", words:[["יִרְאוּ","shall-see"],["צַדִּיקִים","just"],["וְיִשְׂמָחוּ","and-rejoice"],["וְנָקִי","and-an innocent person"],["יִלְעַג־לָמוֹ","he mocks-for-them"],["׃",""]] },
   { num:"כ", words:[["אִם־לֹא","if-not"],["נִכְחַד","he has been destroyed"],["קִימָנוּ","adversary-our"],["וְיִתְרָם","and-excess-their"],["אָכְלָה","it consumed"],["אֵשׁ","fire"],["׃",""]] },
   { num:"כא", words:[["הַסְכֶּן־נָא","be reconciled-I-pray"],["עִמּוֹ","with-him"],["וּשְׁלָם","and-peace"],["בָּהֶם","in-them"],["תְּבוֹאַתְךָ","it will come to-you"],["טוֹבָה","good"],["׃",""]] },
-  { num:"כב", words:[["קַח־נָא","take-I-pray"],["מִפִּיו","from-his-mouth"],["תּוֹרָה","Torah/law"],["וְשִׂים","and-Shim"],["אֲמָרָיו","words-his"],["בִּלְבָבֶךָ","in-heart-your"],["׃",""]] },
+  { num:"כב", words:[["קַח־נָא","take-I-pray"],["מִפִּיו","from-his-mouth"],["תּוֹרָה","Torah/law"],["וְשִׂים","and-put"],["אֲמָרָיו","words-his"],["בִּלְבָבֶךָ","in-heart-your"],["׃",""]] },
   { num:"כג", words:[["אִם־תָּשׁוּב","if-return"],["עַד־שַׁדַּי","until-Almighty"],["תִּבָּנֶה","built-shall-be"],["תַּרְחִיק","you will remove"],["עַוְלָה","injustice"],["מֵאׇהֳלֶךָ","from-tent-your"],["׃",""]] },
   { num:"כד", words:[["וְשִׁית־עַל־עָפָר","and-put-upon-the-earth"],["בָּצֶר","gold"],["וּכְצוּר","and-as-the-rock-of"],["נְחָלִים","streams"],["אוֹפִיר","Ophir"],["׃",""]] },
   { num:"כה", words:[["וְהָיָה","and-be"],["שַׁדַּי","Almighty"],["בְּצָרֶיךָ","gold-your"],["וְכֶסֶף","and-silver"],["תּוֹעָפוֹת","heaps"],["לָךְ","to-you"],["׃",""]] },

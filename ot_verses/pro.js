@@ -217,7 +217,7 @@ var pro_ch7Verses = [
   { num:"טו", words:[["עַל־כֵּן","therefore"],["יָצָאתִי","I-came-out"],["לִקְרָאתֶךָ","to-meet-you"],["לְשַׁחֵר","to-seek"],["פָּנֶיךָ","your-face"],["וָאֶמְצָאֶךָּ","and-I have found-you"],["׃",""]] },
   { num:"טז", words:[["מַרְבַדִּים","coverings"],["רָבַדְתִּי","I have spread"],["עַרְשִׂי","couch-my"],["חֲטֻבוֹת","colored fabrics"],["אֵטוּן","linen of"],["מִצְרָיִם","Egypt"],["׃",""]] },
   { num:"יז", words:[["נַפְתִּי","I have sprinkled"],["מִשְׁכָּבִי","bed-my"],["מֹר","are myrrh"],["אֲהָלִים","aloes"],["וְקִנָּמוֹן","and-cinnamon"],["׃",""]] },
-  { num:"יח", words:[["לְכָה","you-have"],["נִרְוֶה","let us take our fill of"],["דֹדִים","love"],["עַד־הַבֹּקֶר","until-the-of-the-herd"],["נִתְעַלְּסָה","let us delight ourselves"],["בׇּאֳהָבִים","with-love"],["׃",""]] },
+  { num:"יח", words:[["לְכָה","you-have"],["נִרְוֶה","let us take our fill of"],["דֹדִים","love"],["עַד־הַבֹּקֶר","until-the-morning"],["נִתְעַלְּסָה","let us delight ourselves"],["בׇּאֳהָבִים","with-love"],["׃",""]] },
   { num:"יט", words:[["כִּי","because"],["אֵין","there-is-no"],["הָאִישׁ","the-man"],["בְּבֵיתוֹ","in-his-house"],["הָלַךְ","went"],["בְּדֶרֶךְ","after-the-manner-of"],["מֵרָחוֹק","from-far"],["׃",""]] },
   { num:"כ", words:[["צְרוֹר־הַכֶּסֶף","the bag of-the-money"],["לָקַח","took"],["בְּיָדוֹ","in-his-hand"],["לְיוֹם","to-day"],["הַכֵּסֶא","the-full moon"],["יָבֹא","shall-come"],["בֵיתוֹ","his-house"],["׃",""]] },
   { num:"כא", words:[["הִטַּתּוּ","she turns-him"],["בְּרֹב","much"],["לִקְחָהּ","persuasiveness-her"],["בְּחֵלֶק","in-part-of"],["שְׂפָתֶיהָ","lips-her"],["תַּדִּיחֶנּוּ","she impels-him"],["׃",""]] },

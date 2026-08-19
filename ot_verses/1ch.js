@@ -261,7 +261,7 @@ var _1ch_ch6Verses = [
   { num:"כא", words:[["בֶּן־אֶלְקָנָה","son-of-Elkanah"],["בֶּן־יוֹאֵל","son-of-Joel"],["בֶּן־עֲזַרְיָה","son-of-Azariah"],["בֶּן־צְפַנְיָה","son-of-Zephaniah"],["׃",""]] },
   { num:"כב", words:[["בֶּן־תַּחַת","son-of-under"],["בֶּן־אַסִּיר","son-of-the-prisoners"],["בֶּן־אֶבְיָסָף","son-of-Ebiasaph"],["בֶּן־קֹרַח","son-of-Korah"],["׃",""]] },
   { num:"כג", words:[["בֶּן־יִצְהָר","son-of-Izhar"],["בֶּן־קְהָת","son-of-Kohath"],["בֶּן־לֵוִי","son-of-Levi"],["בֶּן־יִשְׂרָאֵל","son-of-Israel"],["׃",""]] },
-  { num:"כד", words:[["וְאָחִיו","and-another"],["אָסָף","Asaph"],["הָעֹמֵד","the-who-stands"],["עַל־יְמִינוֹ","upon-right hand-his"],["אָסָף","Asaph"],["בֶּן־בֶּרֶכְיָהוּ","son-of-Berekiah"],["בֶּן־שִׁמְעָא","son-of-Shimea"],["׃",""]] },
+  { num:"כד", words:[["וְאָחִיו","and-his-brother"],["אָסָף","Asaph"],["הָעֹמֵד","the-who-stands"],["עַל־יְמִינוֹ","upon-right hand-his"],["אָסָף","Asaph"],["בֶּן־בֶּרֶכְיָהוּ","son-of-Berekiah"],["בֶּן־שִׁמְעָא","son-of-Shimea"],["׃",""]] },
   { num:"כה", words:[["בֶּן־מִיכָאֵל","son-of-Michael"],["בֶּן־בַּעֲשֵׂיָה","son-of-Baaseiah"],["בֶּן־מַלְכִּיָּה","son-of-Malkijah"],["׃",""]] },
   { num:"כו", words:[["בֶּן־אֶתְנִי","son-of-Ethni"],["בֶן־זֶרַח","son-of-Zerah"],["בֶּן־עֲדָיָה","son-of-Adaiah"],["׃",""]] },
   { num:"כז", words:[["בֶּן־אֵיתָן","son-of-firm"],["בֶּן־זִמָּה","son-of-there-could-not"],["בֶּן־שִׁמְעִי","son-of-was Shimei"],["׃",""]] },
