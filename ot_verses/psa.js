@@ -1437,7 +1437,7 @@ var psa_ch73Verses = [
   { num:"יד", words:[["וָאֱהִי","and-I-was"],["נָגוּעַ","stricken"],["כׇּל־הַיּוֹם","all-the-day"],["וְתוֹכַחְתִּי","and-rebuke-my"],["לַבְּקָרִים","has been to the-mornings"],["׃",""]] },
   { num:"טו", words:[["אִם־אָמַרְתִּי","if-I-said"],["אֲסַפְּרָה","I-will-tell-of"],["כְמוֹ","like"],["הִנֵּה","behold"],["דוֹר","are a generation of"],["בָּנֶיךָ","thy-sons"],["בָגָדְתִּי","I dealt treacherously with"],["׃",""]] },
   { num:"טז", words:[["וָאֲחַשְּׁבָה","and-I thought"],["לָדַעַת","to-know"],["זֹאת","this"],["עָמָל","trouble"],["(היא)",""],["[הוּא]","he/it"],["בְעֵינָי","in-view-my"],["׃",""]] },
-  { num:"יז", words:[["עַד־אָבוֹא","until-I-will-come"],["אֶל־מִקְדְּשֵׁי־אֵל","to-the sanctuari of-God"],["אָבִינָה","I considered"],["לְאַחֲרִיתָם","end-their"],["׃",""]] },
+  { num:"יז", words:[["עַד־אָבוֹא","until-I-will-come"],["אֶל־מִקְדְּשֵׁי־אֵל","to-the sanctuaries of-God"],["אָבִינָה","I considered"],["לְאַחֲרִיתָם","end-their"],["׃",""]] },
   { num:"יח", words:[["אַךְ","but"],["בַּחֲלָקוֹת","in-the-flattering-things"],["תָּשִׁית","you will set"],["לָמוֹ","for-them"],["הִפַּלְתָּם","you make fall-them"],["לְמַשּׁוּאוֹת","to-deceptions"],["׃",""]] },
   { num:"יט", words:[["אֵיךְ","how"],["הָיוּ","were"],["לְשַׁמָּה","desolate"],["כְרָגַע","like-a moment"],["סָפוּ","they come to an end"],["תַמּוּ","they are finished"],["מִן־בַּלָּהוֹת","from-the-sudden terror"],["׃",""]] },
   { num:"כ", words:[["כַּחֲלוֹם","as-if-a-dream"],["מֵהָקִיץ","from-when awakes"],["אֲדֹנָי","Lord"],["בָּעִיר","in-the-city"],["צַלְמָם","image-their"],["תִּבְזֶה","you will despise"],["׃",""]] },
