@@ -163,7 +163,7 @@ var lam_ch5Verses = [
   { num:"יב", words:[["שָׂרִים","princes"],["בְּיָדָם","into-their-hands"],["נִתְלוּ","they have been hanged"],["פְּנֵי","face-of"],["זְקֵנִים","elders"],["לֹא","not"],["נֶהְדָּרוּ","they have been honored"],["׃",""]] },
   { num:"יג", words:[["בַּחוּרִים","Bahurim"],["טְחוֹן","a mill"],["נָשָׂאוּ","they lifted up"],["וּנְעָרִים","and-young"],["בָּעֵץ","into-the-tree"],["כָּשָׁלוּ","they will stumble"],["׃",""]] },
   { num:"יד", words:[["זְקֵנִים","elders"],["מִשַּׁעַר","from-gate"],["שָׁבָתוּ","they have ceased"],["בַּחוּרִים","Bahurim"],["מִנְּגִינָתָם","from-music-their"],["׃",""]] },
-  { num:"טו", words:[["שָׁבַת","He-ceased"],["מְשׂוֹשׂ","is the joy of"],["לִבֵּנוּ","our-heart"],["נֶהְפַּךְ","it was changed"],["לְאֵבֶל","mourning"],["מְחֹלֵנוּ","dancing-our"],["׃",""]] },
+  { num:"טו", words:[["שָׁבַת","He-rested"],["מְשׂוֹשׂ","is the joy of"],["לִבֵּנוּ","our-heart"],["נֶהְפַּךְ","it was changed"],["לְאֵבֶל","mourning"],["מְחֹלֵנוּ","dancing-our"],["׃",""]] },
   { num:"טז", words:[["נָפְלָה","fell"],["עֲטֶרֶת","crown-of"],["רֹאשֵׁנוּ","head-our"],["אוֹי־נָא","woe-be-I-pray"],["לָנוּ","us"],["כִּי","because"],["חָטָאנוּ","sinned-us"],["׃",""]] },
   { num:"יז", words:[["עַל־זֶה","upon-this"],["הָיָה","was"],["דָוֶה","faint"],["לִבֵּנוּ","our-heart"],["עַל־אֵלֶּה","upon-these"],["חָשְׁכוּ","they have grown dim"],["עֵינֵינוּ","our-eyes"],["׃",""]] },
   { num:"יח", words:[["עַל","upon"],["הַר־צִיּוֹן","mount-Zion"],["שֶׁשָּׁמֵם","that-is desolate"],["שׁוּעָלִים","foxes"],["הִלְּכוּ־בוֹ","they go about-in-Him"],["׃",""]] },

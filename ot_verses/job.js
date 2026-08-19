@@ -1055,7 +1055,7 @@ var job_ch37Verses = [
   { num:"ח", words:[["וַתָּבוֹא","and-she went"],["חַיָּה","living"],["בְמוֹ־אָרֶב","in-a lair"],["וּבִמְעוֹנֹתֶיהָ","and-in-dens-its"],["תִשְׁכֹּן","be-dwelt-in"],["׃",""]] },
   { num:"ט", words:[["מִן־הַחֶדֶר","from-the-room"],["תָּבוֹא","come-shall"],["סוּפָה","a storm-wind"],["וּמִמְּזָרִים","and-from-the scattering winds"],["קָרָה","happened"],["׃",""]] },
   { num:"י", words:[["מִנִּשְׁמַת־אֵל","from-the breathing of-God"],["יִתֶּן־קָרַח","he will give-ice"],["וְרֹחַב","and-the breadth"],["מַיִם","water"],["בְּמוּצָק","is-constraint"],["׃",""]] },
-  { num:"יא", words:[["אַף־בְּרִי","yea-with-moisture"],["יַטְרִיחַ","he burdens"],["עָב","the-clouds"],["יָפִיץ","he scatters"],["עֲנַן","cloud"],["אוֹרוֹ","its-light"],["׃",""]] },
+  { num:"יא", words:[["אַף־בְּרִי","yea-with-moisture"],["יַטְרִיחַ","he burdens"],["עָב","the-clouds"],["יָפִיץ","he scatters"],["עֲנַן","the cloud of"],["אוֹרוֹ","its-light"],["׃",""]] },
   { num:"יב", words:[["וְהוּא","and-he"],["מְסִבּוֹת","round about"],["מִתְהַפֵּךְ","was tumbling"],["בְּתַחְבּוּלֹתָו","in-guidance"],["לְפׇעֳלָם","to-work-their"],["כֹּל","all"],["אֲשֶׁר","which"],["יְצַוֵּם","he commands-them"],["עַל־פְּנֵי","upon-the-face-of"],["תֵבֵל","the-world"],["אָרְצָה","to-the-earth"],["׃",""]] },
   { num:"יג", words:[["אִם־לְשֵׁבֶט","if-to-the tribe of"],["אִם־לְאַרְצוֹ","if-to-own land-his"],["אִם־לְחֶסֶד","if-to-mercy"],["יַמְצִאֵהוּ","he makes find-it"],["׃",""]] },
   { num:"יד", words:[["הַאֲזִינָה","give-ear"],["זֹּאת","this"],["אִיּוֹב","Job"],["עֲמֹד","shall-stand"],["וְהִתְבּוֹנֵן","and-consider diligently"],["נִפְלְאוֹת","wonders-of"],["אֵל","God"],["׃",""]] },
