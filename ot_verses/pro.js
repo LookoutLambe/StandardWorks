@@ -1005,15 +1005,15 @@ var pro_ch30Verses = [
 renderVerseSet(pro_ch30Verses, 'pro-ch30-verses');
 
 var pro_ch31Verses = [
-  { num:"א", words:[["דִּבְרֵי","account-of"],["לְמוּאֵל","Lemuel"],["מֶלֶךְ","the-king-of"],["מַשָּׂא","the-burden-of"],["אֲשֶׁר־יִסְּרַתּוּ","whose-she instructed-him"],["אִמּוֹ","His-mother"],["׃",""]] },
+  { num:"א", words:[["דִּבְרֵי","account-of"],["לְמוּאֵל","Lemuel"],["מֶלֶךְ","the-king-of"],["מַשָּׂא","the-burden-of"],["אֲשֶׁר־יִסְּרַתּוּ","which-she instructed-him"],["אִמּוֹ","His-mother"],["׃",""]] },
   { num:"ב", words:[["מַה־בְּרִי","what-with-moisture"],["וּמַה־בַּר־בִּטְנִי","yea-and-what-olive-tree-belly-my"],["וּמֶה","and-what"],["בַּר־נְדָרָי","olive-tree-vows-my"],["׃",""]] },
   { num:"ג", words:[["אַל־תִּתֵּן","do-not-you-shall-give"],["לַנָּשִׁים","to-the-women"],["חֵילֶךָ","your-strength"],["וּדְרָכֶיךָ","and-ways-your"],["לַמְחוֹת","to-wiping out"],["מְלָכִין","kings"],["׃",""]] },
   { num:"ד", words:[["אַל","do-not"],["לַמְלָכִים","for-kings"],["לְמוֹאֵל","O Lemuel"],["אַל","do-not"],["לַמְלָכִים","for-kings"],["שְׁתוֹ־יָיִן","to drink-wine"],["וּלְרוֹזְנִים","and-for-rulers"],["(או)",""],["[אֵי]","I-"],["שֵׁכָר","strong-drink"],["׃",""]] },
   { num:"ה", words:[["פֶּן־יִשְׁתֶּה","lest-he-drinks"],["וְיִשְׁכַּח","and-he may forget"],["מְחֻקָּק","what is decreed"],["וִישַׁנֶּה","and-he may change"],["דִּין","endless-damnation"],["כׇּל־בְּנֵי־עֹנִי","all-sons-of-misery"],["׃",""]] },
   { num:"ו", words:[["תְּנוּ־שֵׁכָר","give!-strong-drink"],["לְאוֹבֵד","to-one who is perishing"],["וְיַיִן","and-wine"],["לְמָרֵי","to-people bitter of"],["נָפֶשׁ","souls"],["׃",""]] },
   { num:"ז", words:[["יִשְׁתֶּה","he-drinks"],["וְיִשְׁכַּח","and-he may forget"],["רִישׁוֹ","poverty-his"],["וַעֲמָלוֹ","and-trouble-his"],["לֹא","not"],["יִזְכׇּר־עוֹד","he remembered-any-more"],["׃",""]] },
-  { num:"ח", words:[["פְּתַח־פִּיךָ","open-Pik"],["לְאִלֵּם","for-the dumb"],["אֶל־דִּין","to-endless-damnation"],["כׇּל־בְּנֵי","all-sons-of"],["חֲלוֹף","passing away"],["׃",""]] },
-  { num:"ט", words:[["פְּתַח־פִּיךָ","open-Pik"],["שְׁפׇט־צֶדֶק","judged-righteousness"],["וְדִין","and-judgment of"],["עָנִי","poor"],["וְאֶבְיוֹן","and-needy"],["׃",""]] },
+  { num:"ח", words:[["פְּתַח־פִּיךָ","open your mouth"],["לְאִלֵּם","for-the dumb"],["אֶל־דִּין","to-endless-damnation"],["כׇּל־בְּנֵי","all-sons-of"],["חֲלוֹף","passing away"],["׃",""]] },
+  { num:"ט", words:[["פְּתַח־פִּיךָ","open your mouth"],["שְׁפׇט־צֶדֶק","judged-righteousness"],["וְדִין","and-judgment of"],["עָנִי","poor"],["וְאֶבְיוֹן","and-needy"],["׃",""]] },
   { num:"י", words:[["אֵשֶׁת־חַיִל","the-wife-of-might"],["מִי","who"],["יִמְצָא","shall-find"],["וְרָחֹק","and-is far"],["מִפְּנִינִים","is more than-pearls"],["מִכְרָהּ","price-her"],["׃",""]] },
   { num:"יא", words:[["בָּטַח","it trusts"],["בָּהּ","in-it(f)"],["לֵב","heart"],["בַּעְלָהּ","her-husband"],["וְשָׁלָל","and-plunder"],["לֹא","not"],["יֶחְסָר","he lacks"],["׃",""]] },
   { num:"יב", words:[["גְּמָלַתְהוּ","she feeds-him"],["טוֹב","good"],["וְלֹא־רָע","and-not-evil"],["כֹּל","all"],["יְמֵי","the-days-of"],["חַיֶּיהָ","life-her"],["׃",""]] },
