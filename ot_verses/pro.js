@@ -752,7 +752,7 @@ var pro_ch23Verses = [
   { num:"יז", words:[["אַל־יְקַנֵּא","do-not-is-envious"],["לִבְּךָ","your-heart"],["בַּחַטָּאִים","sinners"],["כִּי","because"],["אִם־בְּיִרְאַת־יְהֹוָה","if-in-the-fear-of-the-LORD"],["כׇּל־הַיּוֹם","all-the-day"],["׃",""]] },
   { num:"יח", words:[["כִּי","because"],["אִם־יֵשׁ","if-there-is"],["אַחֲרִית","final-state-of"],["וְתִקְוָתְךָ","and-hope-your"],["לֹא","not"],["תִכָּרֵת","it will be cut off"],["׃",""]] },
   { num:"יט", words:[["שְׁמַע־אַתָּה","hearken-you"],["בְנִי","my-son"],["וַחֲכָם","and-become wise"],["וְאַשֵּׁר","and-guide"],["בַּדֶּרֶךְ","in-the-way"],["לִבֶּךָ","your-heart"],["׃",""]] },
-  { num:"כ", words:[["אַל־תְּהִי","do-not-be"],["בְסֹבְאֵי־יָיִן","among-drunkards of-wine"],["בְּזֹלְלֵי","among-gluttons of"],["בָשָׂר","carnal"],["לָמוֹ","for-them"],["׃",""]] },
+  { num:"כ", words:[["אַל־תְּהִי","do-not-be"],["בְסֹבְאֵי־יָיִן","among-drunkards of-wine"],["בְּזֹלְלֵי","among-gluttons of"],["בָשָׂר","flesh"],["לָמוֹ","for-them"],["׃",""]] },
   { num:"כא", words:[["כִּי־סֹבֵא","because-a drunkard"],["וְזוֹלֵל","and-a glutton"],["יִוָּרֵשׁ","he will become impoverished"],["וּקְרָעִים","and-rags"],["תַּלְבִּישׁ","it will clothe them"],["נוּמָה","drowsiness"],["׃",""]] },
   { num:"כב", words:[["שְׁמַע","hearken"],["לְאָבִיךָ","for-father-your"],["זֶה","this"],["יְלָדֶךָ","he begot-you"],["וְאַל־תָּבוּז","and-do-not-you despise"],["כִּי־זָקְנָה","because-she is old"],["אִמֶּךָ","your-mother"],["׃",""]] },
   { num:"כג", words:[["אֱמֶת","truth"],["קְנֵה","buy"],["וְאַל־תִּמְכֹּר","and-do-not-you have sold"],["חׇכְמָה","wisdom"],["וּמוּסָר","and-discipline"],["וּבִינָה","and-understanding"],["׃",""]] },
