@@ -187,7 +187,7 @@ var hos_ch10Verses = [
 renderVerseSet(hos_ch10Verses, 'hos-ch10-verses');
 
 var hos_ch11Verses = [
-  { num:"א", words:[["כִּי","because"],["נַעַר","a-young-man"],["יִשְׂרָאֵל","Israel"],["וָאֹהֲבֵהוּ","and-I loved-him"],["וּמִמִּצְרַיִם","and-from-Egypt"],["קָרָאתִי","called"],["לִבְנִי","upon-my-son"],["׃",""]] },
+  { num:"א", words:[["כִּי","because"],["נַעַר","a-young-man"],["יִשְׂרָאֵל","Israel"],["וָאֹהֲבֵהוּ","and-I loved-him"],["וּמִמִּצְרַיִם","and-from-Egypt"],["קָרָאתִי","called"],["לִבְנִי","my son"],["׃",""]] },
   { num:"ב", words:[["קָרְאוּ","called-upon"],["לָהֶם","to-them"],["כֵּן","thus"],["הָלְכוּ","went"],["מִפְּנֵיהֶם","from-before-them"],["לַבְּעָלִים","the-Baals"],["יְזַבֵּחוּ","they sacrifice"],["וְלַפְּסִלִים","and-to the-idols"],["יְקַטֵּרוּן","they made smoke"],["׃",""]] },
   { num:"ג", words:[["וְאָנֹכִי","yet-I"],["תִרְגַּלְתִּי","I taught to walk"],["לְאֶפְרַיִם","of-Ephraim"],["קָחָם","he took-them"],["עַל־זְרוֹעֹתָיו","upon-arms-his"],["וְלֹא","and-not"],["יָדְעוּ","they-knew"],["כִּי","because"],["רְפָאתִים","I had healed-them"],["׃",""]] },
   { num:"ד", words:[["בְּחַבְלֵי","with-the-bands-of"],["אָדָם","man"],["אֶמְשְׁכֵם","I drew-them"],["בַּעֲבֹתוֹת","in-cords"],["אַהֲבָה","love"],["וָאֶהְיֶה","and-I have been"],["לָהֶם","to-them"],["כִּמְרִימֵי","like-those who lift"],["עֹל","yoke"],["עַל","upon"],["לְחֵיהֶם","jaws-their"],["וְאַט","and-I incline"],["אֵלָיו","to-him"],["אוֹכִיל","I feed him"],["׃",""]] },
