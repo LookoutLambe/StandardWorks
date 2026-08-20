@@ -374,7 +374,7 @@ var psa_ch22Verses = [
   { num:"י", words:[["כִּי־אַתָּה","that-you"],["גֹחִי","were drawing forth-me"],["מִבָּטֶן","from-the belly"],["מַבְטִיחִי","were making trust-me"],["עַל־שְׁדֵי","upon-the breasts of"],["אִמִּי","my-mother"],["׃",""]] },
   { num:"יא", words:[["עָלֶיךָ","to-You"],["הׇשְׁלַכְתִּי","I cast out"],["מֵרָחֶם","from-the womb"],["מִבֶּטֶן","from-the-womb"],["אִמִּי","my-mother"],["אֵלִי","my-God"],["אָתָּה","you-are"],["׃",""]] },
   { num:"יב", words:[["אַל־תִּרְחַק","do-not-you be far"],["מִמֶּנִּי","from-me"],["כִּי־צָרָה","because-affliction"],["קְרוֹבָה","near"],["כִּי־אֵין","because-there-is-no"],["עוֹזֵר","the-helper"],["׃",""]] },
-  { num:"יג", words:[["סְבָבוּנִי","they surrounded-me"],["פָּרִים","young bulls"],["רַבִּים","many"],["אַבִּירֵי","mighty bulls of"],["בָשָׁן","Bashan"],["כִּתְּרוּנִי","they have encircled-me"],["׃",""]] },
+  { num:"יג", words:[["סְבָבוּנִי","they surrounded-me"],["פָּרִים","bullocks"],["רַבִּים","many"],["אַבִּירֵי","mighty bulls of"],["בָשָׁן","Bashan"],["כִּתְּרוּנִי","they have encircled-me"],["׃",""]] },
   { num:"יד", words:[["פָּצוּ","has-opened"],["עָלַי","upon-me"],["פִּיהֶם","his-mouth"],["אַרְיֵה","a lion"],["טֹרֵף","O one who tears"],["וְשֹׁאֵג","and-roaring"],["׃",""]] },
   { num:"טו", words:[["כַּמַּיִם","as-the-waters"],["נִשְׁפַּכְתִּי","I have been poured out"],["וְהִתְפָּרְדוּ","and-they have become dislocated"],["כׇּל־עַצְמוֹתָי","all-my-bones"],["הָיָה","was"],["לִבִּי","my-heart"],["כַּדּוֹנָג","like-the-wax"],["נָמֵס","it has melted"],["בְּתוֹךְ","among"],["מֵעָי","my-inward parts"],["׃",""]] },
   { num:"טז", words:[["יָבֵשׁ","it-has-withered-away"],["כַּחֶרֶשׂ","like-earthenware"],["כֹּחִי","my-strength"],["וּלְשׁוֹנִי","and-my-tongue"],["מֻדְבָּק","has been made to cling to"],["מַלְקוֹחָי","my-jaws"],["וְלַעֲפַר־מָוֶת","and-to-the dust of-death"],["תִּשְׁפְּתֵנִי","you put-me"],["׃",""]] },
@@ -1001,7 +1001,7 @@ var psa_ch51Verses = [
   { num:"יח", words:[["כִּי","because"],["לֹא־תַחְפֹּץ","not-you-will-desired"],["זֶבַח","sacrifice"],["וְאֶתֵּנָה","so-let me give it"],["עוֹלָה","ascends-up"],["לֹא","not"],["תִרְצֶה","you are pleased with"],["׃",""]] },
   { num:"יט", words:[["זִבְחֵי","sacrifices-of"],["אֱלֹהִים","God"],["רוּחַ","spirit"],["נִשְׁבָּרָה","her-broken"],["לֵב־נִשְׁבָּר","heart-was-broken"],["וְנִדְכֶּה","and-crushed"],["אֱלֹהִים","God"],["לֹא","not"],["תִבְזֶה","you despise"],["׃",""]] },
   { num:"כ", words:[["הֵיטִיבָה","do good to"],["בִרְצוֹנְךָ","by-Your-favor"],["אֶת־צִיּוֹן","Zion"],["תִּבְנֶה","you-shall-build"],["חוֹמוֹת","the-walls-of"],["יְרוּשָׁלָ͏ִם","Jerusalem"],["׃",""]] },
-  { num:"כא", words:[["אָז","then"],["תַּחְפֹּץ","do-you-desire"],["זִבְחֵי־צֶדֶק","sacrifices-of-righteousness"],["עוֹלָה","ascends-up"],["וְכָלִיל","and-the whole offering"],["אָז","then"],["יַעֲלוּ","they-go-up"],["עַל־מִזְבַּחֲךָ","upon-your-altar"],["פָרִים","young bulls"],["׃",""]] },
+  { num:"כא", words:[["אָז","then"],["תַּחְפֹּץ","do-you-desire"],["זִבְחֵי־צֶדֶק","sacrifices-of-righteousness"],["עוֹלָה","ascends-up"],["וְכָלִיל","and-the whole offering"],["אָז","then"],["יַעֲלוּ","they-go-up"],["עַל־מִזְבַּחֲךָ","upon-your-altar"],["פָרִים","bullocks"],["׃",""]] },
 ];
 renderVerseSet(psa_ch51Verses, 'psa-ch51-verses');
 
