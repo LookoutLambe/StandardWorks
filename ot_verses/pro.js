@@ -156,7 +156,7 @@ var pro_ch5Verses = [
   { num:"כ", words:[["וְלָמָּה","and-why"],["תִשְׁגֶּה","will you go astray"],["בְנִי","my-son"],["בְזָרָה","with-a strange woman"],["וּתְחַבֵּק","may you embrace?"],["חֵק","the bosom of"],["נׇכְרִיָּה","foreign"],["׃",""]] },
   { num:"כא", words:[["כִּי","because"],["נֹכַח","opposite to"],["עֵינֵי","the-eyes-of"],["יְהֹוָה","the-LORD"],["דַּרְכֵי־אִישׁ","the-ways-of-man-of"],["וְכׇל־מַעְגְּלֹתָיו","and-all-tracks-his"],["מְפַלֵּס","he is making level"],["׃",""]] },
   { num:"כב", words:[["יִלְכְּדֻנוֹ","they will seize-him"],["אֶת־הָרָשָׁע","the-more-wicked"],["וּבְחַבְלֵי","and-by-the cords of"],["חַטָּאתוֹ","the-crime"],["יִתָּמֵךְ","he will be held"],["׃",""]] },
-  { num:"כג", words:[["הוּא","he"],["יָמוּת","who-shall-die"],["בְּאֵין","in-un"],["מוּסָר","discipline"],["וּבְרֹב","and-His-great"],["אִוַּלְתּוֹ","foolishness-his"],["יִשְׁגֶּה","man-can-err"],["׃",""]] },
+  { num:"כג", words:[["הוּא","he"],["יָמוּת","he-shall-die"],["בְּאֵין","in-un"],["מוּסָר","discipline"],["וּבְרֹב","and-His-great"],["אִוַּלְתּוֹ","foolishness-his"],["יִשְׁגֶּה","man-can-err"],["׃",""]] },
 ];
 renderVerseSet(pro_ch5Verses, 'pro-ch5-verses');
 
@@ -186,7 +186,7 @@ var pro_ch6Verses = [
   { num:"כג", words:[["כִּי","because"],["נֵר","lamp"],["מִצְוָה","commandment"],["וְתוֹרָה","and-the law"],["אוֹר","light"],["וְדֶרֶךְ","and-the-way-of"],["חַיִּים","living"],["תּוֹכְחוֹת","rebukes of"],["מוּסָר","discipline"],["׃",""]] },
   { num:"כד", words:[["לִשְׁמׇרְךָ","to-the-keeps-your"],["מֵאֵשֶׁת","from-the wife of"],["רָע","evil"],["מֵחֶלְקַת","from-smoothness of"],["לָשׁוֹן","tongue"],["נׇכְרִיָּה","foreign"],["׃",""]] },
   { num:"כה", words:[["אַל־תַּחְמֹד","do-not-you desire"],["יׇפְיָהּ","fair-ones-of-her"],["בִּלְבָבֶךָ","in-heart-your"],["וְאַל־תִּקָּחֲךָ","and-do-not-she capture-you"],["בְּעַפְעַפֶּיהָ","with-eyelids-her"],["׃",""]] },
-  { num:"כו", words:[["כִּי","because"],["בְעַד־אִשָּׁה","in-until-a-woman"],["זוֹנָה","harlot"],["עַד־כִּכַּר־לָחֶם","until-a loaf of-food"],["וְאֵשֶׁת","and-the-wife-of"],["אִישׁ","a-man"],["נֶפֶשׁ","soul"],["יְקָרָה","precious"],["תָצוּד","she hunts"],["׃",""]] },
+  { num:"כו", words:[["כִּי","because"],["בְעַד־אִשָּׁה","for-a-woman"],["זוֹנָה","harlot"],["עַד־כִּכַּר־לָחֶם","until-a loaf of-food"],["וְאֵשֶׁת","and-the-wife-of"],["אִישׁ","a-man"],["נֶפֶשׁ","soul"],["יְקָרָה","precious"],["תָצוּד","she hunts"],["׃",""]] },
   { num:"כז", words:[["הֲיַחְתֶּה","will he snatch up"],["אִישׁ","a-man"],["אֵשׁ","fire"],["בְּחֵיקוֹ","in-bosom-his"],["וּבְגָדָיו","and-garments-his"],["לֹא","not"],["תִשָּׂרַפְנָה","will they be burned?"],["׃",""]] },
   { num:"כח", words:[["אִם־יְהַלֵּךְ","if-it will go"],["אִישׁ","a-man"],["עַל־הַגֶּחָלִים","upon-the-burning coals"],["וְרַגְלָיו","and-his-feet"],["לֹא","not"],["תִכָּוֶינָה","will they be scorched"],["׃",""]] },
   { num:"כט", words:[["כֵּן","thus"],["הַבָּא","that-comes"],["אֶל־אֵשֶׁת","to-the-wife-of"],["רֵעֵהוּ","his-fellow"],["לֹא","not"],["יִנָּקֶה","he will go unpunished"],["כׇּל־הַנֹּגֵעַ","all-the-one-who-touches"],["בָּהּ","in-it"],["׃",""]] },
@@ -473,7 +473,7 @@ var pro_ch15Verses = [
   { num:"ז", words:[["שִׂפְתֵי","the lips of"],["חֲכָמִים","wise"],["יְזָרוּ","they scatter"],["דָעַת","knowledge"],["וְלֵב","and-heart"],["כְּסִילִים","fools"],["לֹא־כֵן","so"],["׃",""]] },
   { num:"ח", words:[["זֶבַח","sacrifice"],["רְשָׁעִים","wicked-men"],["תּוֹעֲבַת","an-abomination-before"],["יְהֹוָה","the-LORD"],["וּתְפִלַּת","and-is the prayer of"],["יְשָׁרִים","just"],["רְצוֹנוֹ","His-will"],["׃",""]] },
   { num:"ט", words:[["תּוֹעֲבַת","an-abomination-before"],["יְהֹוָה","the-LORD"],["דֶּרֶךְ","through"],["רָשָׁע","wicked"],["וּמְרַדֵּף","and-one who pursues"],["צְדָקָה","a-state-of-righteousness"],["יֶאֱהָב","he loves"],["׃",""]] },
-  { num:"י", words:[["מוּסָר","discipline"],["רָע","evil"],["לְעֹזֵב","is for-one who forsakes"],["אֹרַח","path"],["שׂוֹנֵא","one who hates"],["תוֹכַחַת","rebuke"],["יָמוּת","who-shall-die"],["׃",""]] },
+  { num:"י", words:[["מוּסָר","discipline"],["רָע","evil"],["לְעֹזֵב","is for-one who forsakes"],["אֹרַח","path"],["שׂוֹנֵא","one who hates"],["תוֹכַחַת","rebuke"],["יָמוּת","he-shall-die"],["׃",""]] },
   { num:"יא", words:[["שְׁאוֹל","Sheol"],["וַאֲבַדּוֹן","and-they-perished"],["נֶגֶד","against"],["יְהֹוָה","the-LORD"],["אַף","yea"],["כִּי־לִבּוֹת","because-the-hearts-of"],["בְּנֵי־אָדָם","the-children-of-men"],["׃",""]] },
   { num:"יב", words:[["לֹא","not"],["יֶאֱהַב־לֵץ","every-man-should-love-mocker/scoffer"],["הוֹכֵחַ","chastening"],["לוֹ","him"],["אֶל־חֲכָמִים","to-wise"],["לֹא","not"],["יֵלֵךְ","he-must-go"],["׃",""]] },
   { num:"יג", words:[["לֵב","heart"],["שָׂמֵחַ","happy"],["יֵיטִב","it will make good"],["פָּנִים","face"],["וּבְעַצְּבַת־לֵב","and-by-sorrow of-heart"],["רוּחַ","the-spirit-of"],["נְכֵאָה","is stricken"],["׃",""]] },
@@ -745,7 +745,7 @@ var pro_ch23Verses = [
   { num:"י", words:[["אַל־תַּסֵּג","do-not-you displace"],["גְּבוּל","border-of"],["עוֹלָם","eternal"],["וּבִשְׂדֵי","and-in-the fields of"],["יְתוֹמִים","fatherless ones"],["אַל־תָּבֹא","do-not-comes"],["׃",""]] },
   { num:"יא", words:[["כִּי־גֹאֲלָם","because-redeemer-their"],["חָזָק","strong"],["הוּא־יָרִיב","it-is-who-pleads-the-cause-of"],["אֶת־רִיבָם","their-disputation"],["אִתָּךְ","with-you"],["׃",""]] },
   { num:"יב", words:[["הָבִיאָה","bring"],["לַמּוּסָר","for-the-correction"],["לִבֶּךָ","your-heart"],["וְאׇזְנֶךָ","and-ear-your"],["לְאִמְרֵי־דָעַת","to-the words of-knowledge"],["׃",""]] },
-  { num:"יג", words:[["אַל־תִּמְנַע","do-not-you have withheld"],["מִנַּעַר","from-young man"],["מוּסָר","discipline"],["כִּי־תַכֶּנּוּ","because-you will strike-him"],["בַשֵּׁבֶט","with the-rod"],["לֹא","not"],["יָמוּת","who-shall-die"],["׃",""]] },
+  { num:"יג", words:[["אַל־תִּמְנַע","do-not-you have withheld"],["מִנַּעַר","from-young man"],["מוּסָר","discipline"],["כִּי־תַכֶּנּוּ","because-you will strike-him"],["בַשֵּׁבֶט","with the-rod"],["לֹא","not"],["יָמוּת","he-shall-die"],["׃",""]] },
   { num:"יד", words:[["אַתָּה","you"],["בַּשֵּׁבֶט","with-the-rod"],["תַּכֶּנּוּ","you will strike-him"],["וְנַפְשׁוֹ","and-his-soul"],["מִשְּׁאוֹל","from-Sheol"],["תַּצִּיל","you will rescue them"],["׃",""]] },
   { num:"טו", words:[["בְּנִי","my-son"],["אִם־חָכַם","if-it is wise"],["לִבֶּךָ","your-heart"],["יִשְׂמַח","rejoices"],["לִבִּי","my-heart"],["גַם־אָנִי","also-I"],["׃",""]] },
   { num:"טז", words:[["וְתַעְלֹזְנָה","so-they may rejoice"],["כִלְיוֹתָי","kidneys-my"],["בְּדַבֵּר","when-a-man-speaks"],["שְׂפָתֶיךָ","lips-your"],["מֵישָׁרִים","uprightness"],["׃",""]] },
