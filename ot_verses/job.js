@@ -1040,7 +1040,7 @@ var job_ch36Verses = [
   { num:"ל", words:[["הֵן־פָּרַשׂ","yea-stretches-forth"],["עָלָיו","upon-him"],["אוֹרוֹ","its-light"],["וְשׇׁרְשֵׁי","and-the roots of"],["הַיָּם","the-sea"],["כִּסָּה","He-has-covered"],["׃",""]] },
   { num:"לא", words:[["כִּי־בָם","because-in-them"],["יָדִין","he will judge"],["עַמִּים","peoples"],["יִתֶּן־אֹכֶל","he will give-food"],["לְמַכְבִּיר","to-abundance"],["׃",""]] },
   { num:"לב", words:[["עַל־כַּפַּיִם","upon-the-palms-of-My-hands"],["כִּסָּה־אוֹר","He-has-covered-light"],["וַיְצַו","and-commanded"],["עָלֶיהָ","upon-it"],["בְמַפְגִּיעַ","in-an assailant"],["׃",""]] },
-  { num:"לג", words:[["יַגִּיד","shall-declare"],["עָלָיו","upon-him"],["רֵעוֹ","his-roar"],["מִקְנֶה","from-he-acquired"],["אַף","moreover"],["עַל־עוֹלֶה","upon-to-exceed"],["׃",""]] },
+  { num:"לג", words:[["יַגִּיד","shall-declare"],["עָלָיו","upon-him"],["רֵעוֹ","his-roar"],["מִקְנֶה","livestock"],["אַף","moreover"],["עַל־עוֹלֶה","upon-to-exceed"],["׃",""]] },
 ];
 renderVerseSet(job_ch36Verses, 'job-ch36-verses');
 
