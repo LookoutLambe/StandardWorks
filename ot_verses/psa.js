@@ -656,7 +656,7 @@ var psa_ch35Verses = [
 renderVerseSet(psa_ch35Verses, 'psa-ch35-verses');
 
 var psa_ch36Verses = [
-  { num:"א", words:[["לַמְנַצֵּחַ","to-the-chief-musician"],["לְעֶבֶד־יְהֹוָה","to-be-an-unprofitable-servant-the-LORD"],["לְדָוִד","of-David"],["׃",""]] },
+  { num:"א", words:[["לַמְנַצֵּחַ","to-the-chief-musician"],["לְעֶבֶד־יְהֹוָה","of-the-servant-of-the-LORD"],["לְדָוִד","of-David"],["׃",""]] },
   { num:"ב", words:[["נְאֻם־פֶּשַׁע","says-the-transgression-of"],["לָרָשָׁע","unto-the-wicked"],["בְּקֶרֶב","among"],["לִבִּי","my-heart"],["אֵין־פַּחַד","there-is-no-dread"],["אֱלֹהִים","God"],["לְנֶגֶד","before"],["עֵינָיו","his-eyes"],["׃",""]] },
   { num:"ג", words:[["כִּי־הֶחֱלִיק","because-he-did-flatter-them"],["אֵלָיו","to-him"],["בְּעֵינָיו","a-vile-person-is-despised"],["לִמְצֹא","to-find"],["עֲוֺנוֹ","his-iniquity"],["לִשְׂנֹא","that-they-should-hate"],["׃",""]] },
   { num:"ד", words:[["דִּבְרֵי־פִיו","account-of-his-mouth"],["אָוֶן","iniquity"],["וּמִרְמָה","and-deception"],["חָדַל","ceased"],["לְהַשְׂכִּיל","to-make wise"],["לְהֵיטִיב","to-do good"],["׃",""]] },
@@ -986,7 +986,7 @@ var psa_ch51Verses = [
   { num:"ג", words:[["חׇנֵּנִי","be-gracious-to-me"],["אֱלֹהִים","God"],["כְּחַסְדֶּךָ","as-your-kindness"],["כְּרֹב","according-to-the-multitude-of"],["רַחֲמֶיךָ","your-compassion"],["מְחֵה","wipe out"],["פְשָׁעָי","my-transgressions"],["׃",""]] },
   { num:"ד", words:[["(הרבה)",""],["[הֶרֶב]","proud-things"],["כַּבְּסֵנִי","the-wash-me"],["מֵעֲוֺנִי","from-my-iniquity"],["וּמֵחַטָּאתִי","and-from-my-sin"],["טַהֲרֵנִי","cleanse-me"],["׃",""]] },
   { num:"ה", words:[["כִּי־פְשָׁעַי","because-my-transgressions"],["אֲנִי","I"],["אֵדָע","I know"],["וְחַטָּאתִי","and-my-sin"],["נֶגְדִּי","before-Me"],["תָמִיד","continually"],["׃",""]] },
-  { num:"ו", words:[["לְךָ","for-you"],["לְבַדְּךָ","to-alone-you"],["חָטָאתִי","have I sinned"],["וְהָרַע","and-the-bad"],["בְּעֵינֶיךָ","in-your-eyes"],["עָשִׂיתִי","I-made"],["לְמַעַן","in-order-that"],["תִּצְדַּק","you may be just"],["בְּדׇבְרֶךָ","in-your-word"],["תִּזְכֶּה","you will be pure"],["בְשׇׁפְטֶךָ","when-you-judging"],["׃",""]] },
+  { num:"ו", words:[["לְךָ","for-you"],["לְבַדְּךָ","to-alone-you"],["חָטָאתִי","have I sinned"],["וְהָרַע","and-the-bad"],["בְּעֵינֶיךָ","in-your-eyes"],["עָשִׂיתִי","I-made"],["לְמַעַן","in-order-that"],["תִּצְדַּק","you may be just"],["בְּדׇבְרֶךָ","in-your-word"],["תִּזְכֶּה","you will be pure"],["בְשׇׁפְטֶךָ","when-you-judge"],["׃",""]] },
   { num:"ז", words:[["הֵן־בְּעָווֹן","yea-in-iniquity"],["חוֹלָלְתִּי","I was brought forth"],["וּבְחֵטְא","and-in-sin"],["יֶחֱמַתְנִי","she conceived-me"],["אִמִּי","my-mother"],["׃",""]] },
   { num:"ח", words:[["הֵן־אֱמֶת","yea-truth"],["חָפַצְתָּ","you-desired"],["בַטֻּחוֹת","in the-covered places"],["וּבְסָתֻם","and-in-a place kept secret"],["חׇכְמָה","wisdom"],["תוֹדִיעֵנִי","you cause to know-me"],["׃",""]] },
   { num:"ט", words:[["תְּחַטְּאֵנִי","you will cleanse from sin-me"],["בְאֵזוֹב","with-hyssop"],["וְאֶטְהָר","so-I may be pure"],["תְּכַבְּסֵנִי","you will wash-me"],["וּמִשֶּׁלֶג","and-more than-snow"],["אַלְבִּין","I will become white"],["׃",""]] },

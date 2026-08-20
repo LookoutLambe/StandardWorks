@@ -1179,7 +1179,7 @@ var job_ch40Verses = [
   { num:"כה", words:[["תִּמְשֹׁךְ","will you draw out?"],["לִוְיָתָן","Leviathan"],["בְּחַכָּה","with-a fish hook"],["וּבְחֶבֶל","and-with-a cord"],["תַּשְׁקִיעַ","will you hold down?"],["לְשֹׁנוֹ","its-tongue"],["׃",""]] },
   { num:"כו", words:[["הֲתָשִׂים","will you put"],["אַגְמֹן","bulrushes"],["בְּאַפּוֹ","in-His-anger"],["וּבְחוֹחַ","and-with-a hook"],["תִּקֹּב","you-will-crutch"],["לֶחֱיוֹ","its-jaw"],["׃",""]] },
   { num:"כז", words:[["הֲיַרְבֶּה","will it multiply"],["אֵלֶיךָ","to-you"],["תַּחֲנוּנִים","supplications"],["אִם־יְדַבֵּר","if-speaks"],["אֵלֶיךָ","to-you"],["רַכּוֹת","were weak"],["׃",""]] },
-  { num:"כח", words:[["הֲיִכְרֹת","will it make"],["בְּרִית","covenant-of"],["עִמָּךְ","with-you"],["תִּקָּחֶנּוּ","you will take-him"],["לְעֶבֶד","to-be-an-unprofitable-servant"],["עוֹלָם","eternal"],["׃",""]] },
+  { num:"כח", words:[["הֲיִכְרֹת","will it make"],["בְּרִית","covenant-of"],["עִמָּךְ","with-you"],["תִּקָּחֶנּוּ","you will take-him"],["לְעֶבֶד","for-a-servant"],["עוֹלָם","eternal"],["׃",""]] },
   { num:"כט", words:[["הַתְשַׂחֶק־בּוֹ","will you play-against-him"],["כַּצִּפּוֹר","like-the-bird"],["וְתִקְשְׁרֶנּוּ","and-will you bind?-it"],["לְנַעֲרוֹתֶיךָ","for-your-girls"],["׃",""]] },
   { num:"ל", words:[["יִכְרוּ","will they bargain?"],["עָלָיו","upon-him"],["חַבָּרִים","partners"],["יֶחֱצוּהוּ","will they divide?-it"],["בֵּין","among"],["כְּנַעֲנִים","merchants"],["׃",""]] },
   { num:"לא", words:[["הַתְמַלֵּא","will you fill"],["בְשֻׂכּוֹת","with-harpoons"],["עוֹרוֹ","his-skin"],["וּבְצִלְצַל","and-with-a spear of"],["דָּגִים","fish"],["רֹאשׁוֹ","his-head"],["׃",""]] },
