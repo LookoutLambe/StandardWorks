@@ -256,7 +256,7 @@ var eze_ch11Verses = [
   { num:"כב", words:[["וַיִּשְׂאוּ","and-lifted"],["הַכְּרוּבִים","the-cherubim"],["אֶת־כַּנְפֵיהֶם","their-wings"],["וְהָאוֹפַנִּים","and-the-wheels"],["לְעֻמָּתָם","close by-them"],["וּכְבוֹד","and-glory-of"],["אֱלֹהֵי־יִשְׂרָאֵל","God-of-Israel"],["עֲלֵיהֶם","upon-them"],["מִלְמָעְלָה","from-above"],["׃",""]] },
   { num:"כג", words:[["וַיַּעַל","and-he-ascended"],["כְּבוֹד","the-glory-of"],["יְהֹוָה","the-LORD"],["מֵעַל","from-upon"],["תּוֹךְ","the-center-of"],["הָעִיר","the-city"],["וַיַּעֲמֹד","and-stood"],["עַל־הָהָר","upon-the-mountain"],["אֲשֶׁר","which"],["מִקֶּדֶם","of-old"],["לָעִיר","to-the-city-of"],["׃",""]] },
   { num:"כד", words:[["וְרוּחַ","and-spirit-of"],["נְשָׂאַתְנִי","it lifted up-me"],["כַשְׂדִּימָה","to Chaldea"],["אֶל־הַגּוֹלָה","to-the-exiles"],["בַּמַּרְאֶה","upon-the-scene"],["בְּרוּחַ","in-the-Spirit"],["אֱלֹהִים","God"],["וַיַּעַל","and-he-ascended"],["מֵעָלַי","from-me"],["הַמַּרְאֶה","the-vision"],["אֲשֶׁר","which"],["רָאִיתִי","I-saw"],["׃",""]] },
-  { num:"כה", words:[["וָאֲדַבֵּר","and-I-spoke"],["אֶל־הַגּוֹלָה","to-the-exiles"],["אֵת־כׇּל־דִּבְרֵי","all-account-of"],["יְהֹוָה","the-LORD"],["אֲשֶׁר","which"],["הֶרְאָנִי","he had shown-me"],["׃",""]] },
+  { num:"כה", words:[["וָאֲדַבֵּר","and-I-spoke"],["אֶל־הַגּוֹלָה","to-the-exiles"],["אֵת־כׇּל־דִּבְרֵי","all-the-words-of"],["יְהֹוָה","the-LORD"],["אֲשֶׁר","which"],["הֶרְאָנִי","he had shown-me"],["׃",""]] },
 ];
 renderVerseSet(eze_ch11Verses, 'eze-ch11-verses');
 

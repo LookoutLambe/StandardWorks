@@ -512,7 +512,7 @@ var job_ch19Verses = [
   { num:"ט", words:[["כְּבוֹדִי","my-honor"],["מֵעָלַי","from-me"],["הִפְשִׁיט","he has stripped off"],["וַיָּסַר","for-he-put-down"],["עֲטֶרֶת","crown-of"],["רֹאשִׁי","my-head"],["׃",""]] },
   { num:"י", words:[["יִתְּצֵנִי","he has torn down-me"],["סָבִיב","all-around"],["וָאֵלַךְ","and-I have gone"],["וַיַּסַּע","and-he led out"],["כָּעֵץ","like-the-tree"],["תִּקְוָתִי","my-hope"],["׃",""]] },
   { num:"יא", words:[["וַיַּחַר","and-he has kindled"],["עָלַי","upon-me"],["אַפּוֹ","His-wrath"],["וַיַּחְשְׁבֵנִי","and-supposed-me"],["לוֹ","to-him"],["כְצָרָיו","like-his-foes"],["׃",""]] },
-  { num:"יב", words:[["יַחַד","oft"],["יָבֹאוּ","come"],["גְדוּדָיו","his-troops"],["וַיָּסֹלּוּ","and-they have piled up"],["עָלַי","upon-me"],["דַּרְכָּם","their-journey"],["וַיַּחֲנוּ","they-pitched-their-tents"],["סָבִיב","all-around"],["לְאׇהֳלִי","the tent of-my"],["׃",""]] },
+  { num:"יב", words:[["יַחַד","oft"],["יָבֹאוּ","come"],["גְדוּדָיו","his-troops"],["וַיָּסֹלּוּ","and-they have piled up"],["עָלַי","upon-me"],["דַּרְכָּם","their-journey"],["וַיַּחֲנוּ","and-they-encamped"],["סָבִיב","all-around"],["לְאׇהֳלִי","the tent of-my"],["׃",""]] },
   { num:"יג", words:[["אַחַי","my-brothers"],["מֵעָלַי","from-me"],["הִרְחִיק","he has put far away"],["וְיֹדְעַי","and-my-acquaintances"],["אַךְ־זָרוּ","but-they have become estranged"],["מִמֶּנִּי","from-me"],["׃",""]] },
   { num:"יד", words:[["חָדְלוּ","ceased"],["קְרוֹבָי","my-kindred"],["וּמְיֻדָּעַי","and-my-acquaintances"],["שְׁכֵחוּנִי","they have forgotten-me"],["׃",""]] },
   { num:"טו", words:[["גָּרֵי","the sojourners of"],["בֵיתִי","my-house"],["וְאַמְהֹתַי","and-my-female servants"],["לְזָר","to-a stranger"],["תַּחְשְׁבֻנִי","they consider-me"],["נׇכְרִי","strange"],["הָיִיתִי","I-was"],["בְעֵינֵיהֶם","own-eyes"],["׃",""]] },
@@ -879,7 +879,7 @@ var job_ch31Verses = [
   { num:"לז", words:[["מִסְפַּר","the-number-of"],["צְעָדַי","my-steps"],["אַגִּידֶנּוּ","I will tell to-him"],["כְּמוֹ־נָגִיד","like ruler"],["אֲקָרְבֶנּוּ","I will approach-him"],["׃",""]] },
   { num:"לח", words:[["אִם־עָלַי","if-I-must"],["אַדְמָתִי","my-land"],["תִזְעָק","it cried out"],["וְיַחַד","and-together"],["תְּלָמֶיהָ","its-furrows"],["יִבְכָּיוּן","they wept"],["׃",""]] },
   { num:"לט", words:[["אִם־כֹּחָהּ","if-its-produce"],["אָכַלְתִּי","I-ate"],["בְלִי־כָסֶף","not-silver"],["וְנֶפֶשׁ","and-soul"],["בְּעָלֶיהָ","its-owners"],["הִפָּחְתִּי","I have caused to breathe out"],["׃",""]] },
-  { num:"מ", words:[["תַּחַת","under"],["חִטָּה","wheat"],["יֵצֵא","he-go-forth"],["חוֹחַ","thorns"],["וְתַחַת־שְׂעֹרָה","and-under-barley"],["בׇאְשָׁה","for-a wife"],["תַּמּוּ","ended"],["דִּבְרֵי","account-of"],["אִיּוֹב","Job"],["׃",""]] },
+  { num:"מ", words:[["תַּחַת","under"],["חִטָּה","wheat"],["יֵצֵא","he-go-forth"],["חוֹחַ","thorns"],["וְתַחַת־שְׂעֹרָה","and-under-barley"],["בׇאְשָׁה","for-a wife"],["תַּמּוּ","ended"],["דִּבְרֵי","the-words-of"],["אִיּוֹב","Job"],["׃",""]] },
 ];
 renderVerseSet(job_ch31Verses, 'job-ch31-verses');
 
