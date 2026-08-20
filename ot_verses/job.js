@@ -409,7 +409,7 @@ var job_ch15Verses = [
   { num:"טז", words:[["אַף","yea"],["כִּי־נִתְעָב","because-branch"],["וְנֶאֱלָח","and-one who is corrupt"],["אִישׁ־שֹׁתֶה","man-of-he-drinks"],["כַמַּיִם","like-the-water"],["עַוְלָה","injustice"],["׃",""]] },
   { num:"יז", words:[["אֲחַוְךָ","I will tell-you"],["שְׁמַע־לִי","hearken-to-me"],["וְזֶה־חָזִיתִי","and-this-I-have-beheld"],["וַאֲסַפֵּרָה","and-I will recount"],["׃",""]] },
   { num:"יח", words:[["אֲשֶׁר־חֲכָמִים","which-wise"],["יַגִּידוּ","they-would-tell"],["וְלֹא","and-not"],["כִחֲדוּ","not"],["מֵאֲבוֹתָם","more than-fathers-their"],["׃",""]] },
-  { num:"יט", words:[["לָהֶם","to-them"],["לְבַדָּם","for-themselves-alone"],["נִתְּנָה","was-given"],["הָאָרֶץ","the-earth"],["וְלֹא־עָבַר","and-not-passed"],["זָר","strange"],["בְּתוֹכָם","among-them"],["׃",""]] },
+  { num:"יט", words:[["לָהֶם","to-them"],["לְבַדָּם","for-themselves-alone"],["נִתְּנָה","was-given"],["הָאָרֶץ","the-earth"],["וְלֹא־עָבַר","and-not-passed"],["זָר","an outsider"],["בְּתוֹכָם","among-them"],["׃",""]] },
   { num:"כ", words:[["כׇּל־יְמֵי","all-days-of"],["רָשָׁע","wicked"],["הוּא","he"],["מִתְחוֹלֵל","is writhing in pain"],["וּמִסְפַּר","and-so-many-of"],["שָׁנִים","years"],["נִצְפְּנוּ","can-we-expect-our/-us"],["לֶעָרִיץ","for-ruthless person"],["׃",""]] },
   { num:"כא", words:[["קוֹל־פְּחָדִים","voice-of-dread"],["בְּאׇזְנָיו","in-ears-his"],["בַּשָּׁלוֹם","in-the-peace"],["שׁוֹדֵד","Shodd"],["יְבוֹאֶנּוּ","he will come to-him"],["׃",""]] },
   { num:"כב", words:[["לֹא־יַאֲמִין","not-shall-believe"],["שׁוּב","again"],["מִנִּי־חֹשֶׁךְ","some of-darkness"],["(וצפו)",""],["[וְצָפוּי]","and-is watched"],["הוּא","he"],["אֱלֵי־חָרֶב","to-a-sword"],["׃",""]] },
