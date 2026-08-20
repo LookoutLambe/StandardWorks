@@ -1675,7 +1675,7 @@ var psa_ch81Verses = [
 renderVerseSet(psa_ch81Verses, 'psa-ch81-verses');
 
 var psa_ch82Verses = [
-  { num:"א", words:[["מִזְמוֹר","a-psalm"],["לְאָסָף","Asaph"],["אֱלֹהִים","God"],["נִצָּב","stands-up"],["בַּעֲדַת־אֵל","into-the-fold-of-God"],["בְּקֶרֶב","among"],["אֱלֹהִים","God"],["יִשְׁפֹּט","judge"],["׃",""]] },
+  { num:"א", words:[["מִזְמוֹר","a-psalm"],["לְאָסָף","Asaph"],["אֱלֹהִים","God"],["נִצָּב","stands-up"],["בַּעֲדַת־אֵל","in-the-congregation-of-God"],["בְּקֶרֶב","among"],["אֱלֹהִים","God"],["יִשְׁפֹּט","judge"],["׃",""]] },
   { num:"ב", words:[["עַד־מָתַי","until-when"],["תִּשְׁפְּטוּ־עָוֶל","shall-ye-judge-iniquity"],["וּפְנֵי","and-the-faces-of"],["רְשָׁעִים","the-wicked"],["תִּשְׂאוּ־סֶלָה","take-his-Selah"],["׃",""]] },
   { num:"ג", words:[["שִׁפְטוּ־דַל","judge-you-the poor"],["וְיָתוֹם","and-a fatherless one"],["עָנִי","poor"],["וָרָשׁ","and-the poor"],["הַצְדִּיקוּ","vindicate"],["׃",""]] },
   { num:"ד", words:[["פַּלְּטוּ־דַל","deliver-the poor"],["וְאֶבְיוֹן","and-needy"],["מִיַּד","from-the-hand-of"],["רְשָׁעִים","the-wicked"],["הַצִּילוּ","rescue them"],["׃",""]] },
