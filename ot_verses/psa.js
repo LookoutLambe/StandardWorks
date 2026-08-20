@@ -2184,7 +2184,7 @@ var psa_ch105Verses = [
   { num:"לה", words:[["וַיֹּאכַל","and-he-shall-eat"],["כׇּל־עֵשֶׂב","all-herb"],["בְּאַרְצָם","in-their-land"],["וַיֹּאכַל","and-he-shall-eat"],["פְּרִי","fruit"],["אַדְמָתָם","their-ground"],["׃",""]] },
   { num:"לו", words:[["וַיַּךְ","and-he-smote"],["כׇּל־בְּכוֹר","all-the firstborn of"],["בְּאַרְצָם","in-their-land"],["רֵאשִׁית","the-beginning-of"],["לְכׇל־אוֹנָם","to-all-Onam"],["׃",""]] },
   { num:"לז", words:[["וַיּוֹצִיאֵם","and-brought-them-out"],["בְּכֶסֶף","in-silver"],["וְזָהָב","and-gold"],["וְאֵין","and-there-is-no"],["בִּשְׁבָטָיו","among-his-tribes"],["כּוֹשֵׁל","one who stumbled"],["׃",""]] },
-  { num:"לח", words:[["שָׂמַח","is-glad"],["מִצְרַיִם","Egypt"],["בְּצֵאתָם","in-they-left"],["כִּי־נָפַל","that-fell"],["פַּחְדָּם","their-fears"],["עֲלֵיהֶם","upon-them"],["׃",""]] },
+  { num:"לח", words:[["שָׂמַח","is-glad"],["מִצְרַיִם","Egypt"],["בְּצֵאתָם","when-they-came-out"],["כִּי־נָפַל","that-fell"],["פַּחְדָּם","their-fears"],["עֲלֵיהֶם","upon-them"],["׃",""]] },
   { num:"לט", words:[["פָּרַשׂ","stretches-forth"],["עָנָן","a-cloud"],["לְמָסָךְ","to-a covering"],["וְאֵשׁ","and-fire"],["לְהָאִיר","to-shine"],["לָיְלָה","in-the-night"],["׃",""]] },
   { num:"מ", words:[["שָׁאַל","he asked"],["וַיָּבֵא","and-he-brought"],["שְׂלָו","quail"],["וְלֶחֶם","and-bread"],["שָׁמַיִם","the-heavens"],["יַשְׂבִּיעֵם","he satisfied-them"],["׃",""]] },
   { num:"מא", words:[["פָּתַח","opened"],["צוּר","the-rock-of"],["וַיָּזוּבוּ","and-they flowed out"],["מָיִם","water"],["הָלְכוּ","went"],["בַּצִּיּוֹת","in the-dry regions"],["נָהָר","the-river"],["׃",""]] },

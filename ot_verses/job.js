@@ -537,7 +537,7 @@ var job_ch20Verses = [
   { num:"א", words:[["וַיַּעַן","and-he-answered"],["צֹפַר","Zophar"],["הַנַּעֲמָתִי","the-Naamathite"],["וַיֹּאמַר","and-said"],["׃",""]] },
   { num:"ב", words:[["לָכֵן","therefore"],["שְׂעִפַּי","my-disquieting thoughts"],["יְשִׁיבוּנִי","they make respond-me"],["וּבַעֲבוּר","and-because"],["חוּשִׁי","to agitate-I"],["בִי","against-Me"],["׃",""]] },
   { num:"ג", words:[["מוּסַר","the-chastisement-of"],["כְּלִמָּתִי","my-insult"],["אֶשְׁמָע","I heard"],["וְרוּחַ","and-spirit-of"],["מִבִּינָתִי","from-my-understanding"],["יַעֲנֵנִי","it answers-me"],["׃",""]] },
-  { num:"ד", words:[["הֲזֹאת","is-this"],["יָדַעְתָּ","you-know"],["מִנִּי־עַד","some of-until"],["מִנִּי","some of"],["שִׂים","put"],["אָדָם","man"],["עֲלֵי־אָרֶץ","on-the-earth"],["׃",""]] },
+  { num:"ד", words:[["הֲזֹאת","this"],["יָדַעְתָּ","you-know"],["מִנִּי־עַד","some of-until"],["מִנִּי","some of"],["שִׂים","put"],["אָדָם","man"],["עֲלֵי־אָרֶץ","on-the-earth"],["׃",""]] },
   { num:"ה", words:[["כִּי","because"],["רִנְנַת","the cry of joy of"],["רְשָׁעִים","wicked-men"],["מִקָּרוֹב","is from-near"],["וְשִׂמְחַת","and-happiness"],["חָנֵף","a-hypocrite"],["עֲדֵי־רָגַע","to-it has hardened"],["׃",""]] },
   { num:"ו", words:[["אִם־יַעֲלֶה","if-let-ascend"],["לַשָּׁמַיִם","to-the-heavens"],["שִׂיאוֹ","his-loftiness"],["וְרֹאשׁוֹ","and-his-head"],["לָעָב","to the-clouds"],["יַגִּיעַ","shall-come"],["׃",""]] },
   { num:"ז", words:[["כְּגֶלְלוֹ","as-his-one who rolls"],["לָנֶצַח","forever"],["יֹאבֵד","does-perish"],["רֹאָיו","those who saw-him"],["יֹאמְרוּ","shall-say"],["אַיּוֹ","where is?-he"],["׃",""]] },
@@ -889,7 +889,7 @@ var job_ch32Verses = [
   { num:"ג", words:[["וּבִשְׁלֹשֶׁת","and-on-the three"],["רֵעָיו","his-companions"],["חָרָה","burned"],["אַפּוֹ","His-wrath"],["עַל","upon"],["אֲשֶׁר","which"],["לֹא־מָצְאוּ","not-found"],["מַעֲנֶה","from-answered"],["וַיַּרְשִׁיעוּ","and-they had condemned as guilty"],["אֶת־אִיּוֹב","Job"],["׃",""]] },
   { num:"ד", words:[["וֶאֱלִיהוּ","and-Elihu"],["חִכָּה","he-waited"],["אֶת־אִיּוֹב","Job"],["בִּדְבָרִים","with-words"],["כִּי","because"],["זְקֵנִים־הֵמָּה","elders-they-are"],["מִמֶּנּוּ","from-him"],["לְיָמִים","to-days"],["׃",""]] },
   { num:"ה", words:[["וַיַּרְא","and-saw"],["אֱלִיהוּא","Elihu"],["כִּי־אֵין","because-there-is-no"],["מַעֲנֶה","from-answered"],["בְּפִי","in-the-mouth-of"],["שְׁלֹשֶׁת","three-of"],["הָאֲנָשִׁים","the-men"],["וַיִּחַר","and-burned"],["אַפּוֹ","His-wrath"],["׃",""]] },
-  { num:"ו", words:[["וַיַּעַן","and-he-answered"],["אֱלִיהוּא","Elihu"],["בֶן־בַּרַכְאֵל","son-of-Barakel"],["הַבּוּזִי","the-Buzite"],["וַיֹּאמַר","and-said"],["צָעִיר","young-man"],["אֲנִי","I"],["לְיָמִים","to-days"],["וְאַתֶּם","and-will-you"],["יְשִׁישִׁים","are aged"],["עַל־כֵּן","therefore"],["זָחַלְתִּי","I was anxious"],["וָאִירָא","and-I-feared"],["מֵחַוֺּת","wipe out"],["דֵּעִי","my-knowledge"],["אֶתְכֶם","you"],["׃",""]] },
+  { num:"ו", words:[["וַיַּעַן","and-he-answered"],["אֱלִיהוּא","Elihu"],["בֶן־בַּרַכְאֵל","son-of-Barakel"],["הַבּוּזִי","the-Buzite"],["וַיֹּאמַר","and-said"],["צָעִיר","young-man"],["אֲנִי","I"],["לְיָמִים","to-days"],["וְאַתֶּם","and-you"],["יְשִׁישִׁים","are aged"],["עַל־כֵּן","therefore"],["זָחַלְתִּי","I was anxious"],["וָאִירָא","and-I-feared"],["מֵחַוֺּת","wipe out"],["דֵּעִי","my-knowledge"],["אֶתְכֶם","you"],["׃",""]] },
   { num:"ז", words:[["אָמַרְתִּי","I-said"],["יָמִים","days"],["יְדַבֵּרוּ","will they speak"],["וְרֹב","and-most-of"],["שָׁנִים","years"],["יֹדִיעוּ","let them make known"],["חׇכְמָה","wisdom"],["׃",""]] },
   { num:"ח", words:[["אָכֵן","surely"],["רוּחַ־הִיא","spirit-of-it-is"],["בֶאֱנוֹשׁ","in-a person"],["וְנִשְׁמַת","and-the breath of"],["שַׁדַּי","Almighty"],["תְּבִינֵם","which it gives understanding-them"],["׃",""]] },
   { num:"ט", words:[["לֹא־רַבִּים","not-many"],["יֶחְכָּמוּ","they are wise"],["וּזְקֵנִים","and-elders"],["יָבִינוּ","they-might-understand"],["מִשְׁפָּט","judgment"],["׃",""]] },
@@ -989,7 +989,7 @@ renderVerseSet(job_ch34Verses, 'job-ch34-verses');
 
 var job_ch35Verses = [
   { num:"א", words:[["וַיַּעַן","and-he-answered"],["אֱלִיהוּ","Elihu"],["וַיֹּאמַר","and-said"],["׃",""]] },
-  { num:"ב", words:[["הֲזֹאת","is-this"],["חָשַׁבְתָּ","you-thought"],["לְמִשְׁפָּט","to-judgment"],["אָמַרְתָּ","have-said"],["צִדְקִי","My-righteousness"],["מֵאֵל","from-God"],["׃",""]] },
+  { num:"ב", words:[["הֲזֹאת","this"],["חָשַׁבְתָּ","you-thought"],["לְמִשְׁפָּט","to-judgment"],["אָמַרְתָּ","have-said"],["צִדְקִי","My-righteousness"],["מֵאֵל","from-God"],["׃",""]] },
   { num:"ג", words:[["כִּי־תֹאמַר","that-you-say"],["מַה־יִּסְכׇּן־לָךְ","what-he will be endangered-for you"],["מָה־אֹעִיל","what-will I profit"],["מֵחַטָּאתִי","from-my-sin"],["׃",""]] },
   { num:"ד", words:[["אֲנִי","I"],["אֲשִׁיבְךָ","I will respond to-you"],["מִלִּין","words"],["וְאֶת־רֵעֶיךָ","and-your-companions"],["עִמָּךְ","with-you"],["׃",""]] },
   { num:"ה", words:[["הַבֵּט","look"],["שָׁמַיִם","the-heavens"],["וּרְאֵה","and-behold"],["וְשׁוּר","and-observe"],["שְׁחָקִים","clouds"],["גָּבְהוּ","they-were-lifted-up"],["מִמֶּךָּ","from-you"],["׃",""]] },
