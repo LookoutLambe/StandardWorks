@@ -195,7 +195,7 @@ var pro_ch6Verses = [
   { num:"לב", words:[["נֹאֵף","an adulterer"],["אִשָּׁה","a-woman"],["חֲסַר־לֵב","helpless-heart"],["מַשְׁחִית","destroys"],["נַפְשׁוֹ","his-soul"],["הוּא","he"],["יַעֲשֶׂנָּה","he will do-it"],["׃",""]] },
   { num:"לג", words:[["נֶגַע־וְקָלוֹן","a plague-and-shame"],["יִמְצָא","shall-find"],["וְחֶרְפָּתוֹ","and-reproach-his"],["לֹא","not"],["תִמָּחֶה","it will be wiped away"],["׃",""]] },
   { num:"לד", words:[["כִּי־קִנְאָה","because-jealousy"],["חֲמַת־גָּבֶר","the-wrath-of-Geber"],["וְלֹא־יַחְמוֹל","and-not-it relents"],["בְּיוֹם","in-the-day-of"],["נָקָם","vengeance"],["׃",""]] },
-  { num:"לה", words:[["לֹא־יִשָּׂא","shall-not-lift-up"],["פְּנֵי","face-of"],["כׇל־כֹּפֶר","all-a ransom"],["וְלֹא־יֹאבֶה","and-not-He-will-suffer"],["כִּי","because"],["תַרְבֶּה־שֹּׁחַד","you will make great-a bribe"],["׃",""]] },
+  { num:"לה", words:[["לֹא־יִשָּׂא","shall-not-lift-up"],["פְּנֵי","face-of"],["כׇל־כֹּפֶר","all-a ransom"],["וְלֹא־יֹאבֶה","and-not-he-will-consent"],["כִּי","because"],["תַרְבֶּה־שֹּׁחַד","you will make great-a bribe"],["׃",""]] },
 ];
 renderVerseSet(pro_ch6Verses, 'pro-ch6-verses');
 
@@ -315,7 +315,7 @@ var pro_ch10Verses = [
   { num:"כ", words:[["כֶּסֶף","money"],["נִבְחָר","was-chosen"],["לְשׁוֹן","the-language-of"],["צַדִּיק","righteous"],["לֵב","heart"],["רְשָׁעִים","wicked-men"],["כִּמְעָט","is like-a little"],["׃",""]] },
   { num:"כא", words:[["שִׂפְתֵי","the lips of"],["צַדִּיק","righteous"],["יִרְעוּ","they-feed"],["רַבִּים","many"],["וֶאֱוִילִים","and-fools"],["בַּחֲסַר־לֵב","by-lack of-heart"],["יָמוּתוּ","shall-die"],["׃",""]] },
   { num:"כב", words:[["בִּרְכַּת","blessing-of"],["יְהֹוָה","the-LORD"],["הִיא","it is"],["תַעֲשִׁיר","it makes rich"],["וְלֹא־יוֹסִף","and-not-may he add"],["עֶצֶב","grief"],["עִמָּהּ","with-her"],["׃",""]] },
-  { num:"כג", words:[["כִּשְׂחוֹק","is like-sport"],["לִכְסִיל","for-a fool"],["עֲשׂוֹת","do"],["זִמָּה","there-could-not"],["וְחׇכְמָה","and-wisdom"],["לְאִישׁ","for-a-man"],["תְּבוּנָה","is understanding"],["׃",""]] },
+  { num:"כג", words:[["כִּשְׂחוֹק","is like-sport"],["לִכְסִיל","for-a fool"],["עֲשׂוֹת","do"],["זִמָּה","wickedness"],["וְחׇכְמָה","and-wisdom"],["לְאִישׁ","for-a-man"],["תְּבוּנָה","is understanding"],["׃",""]] },
   { num:"כד", words:[["מְגוֹרַת","the fear of"],["רָשָׁע","wicked"],["הִיא","it is"],["תְבוֹאֶנּוּ","it will come to-him"],["וְתַאֲוַת","and-the-desires-of"],["צַדִּיקִים","just"],["יִתֵּן","shall-give"],["׃",""]] },
   { num:"כה", words:[["כַּעֲבוֹר","when-passes by"],["סוּפָה","a storm-wind"],["וְאֵין","and-has-no"],["רָשָׁע","wicked"],["וְצַדִּיק","and-righteous"],["יְסוֹד","foundation"],["עוֹלָם","eternal"],["׃",""]] },
   { num:"כו", words:[["כַּחֹמֶץ","like-vinegar"],["לַשִּׁנַּיִם","to the-teeth"],["וְכֶעָשָׁן","and-like-smoke"],["לָעֵינָיִם","to the-eyes"],["כֵּן","thus"],["הֶעָצֵל","the-sluggard"],["לְשֹׁלְחָיו","to-those who send-him"],["׃",""]] },
@@ -906,7 +906,7 @@ renderVerseSet(pro_ch27Verses, 'pro-ch27-verses');
 
 var pro_ch28Verses = [
   { num:"א", words:[["נָסוּ","had-fled"],["וְאֵין־רֹדֵף","and-has-no-pursuing"],["רָשָׁע","wicked"],["וְצַדִּיקִים","and-righteous people"],["כִּכְפִיר","like-a-young-lion"],["יִבְטָח","he is confident"],["׃",""]] },
-  { num:"ב", words:[["בְּפֶשַׁע","into-transgression"],["אֶרֶץ","the-land-of"],["רַבִּים","many"],["שָׂרֶיהָ","princes-its"],["וּבְאָדָם","and-in-Adam"],["מֵבִין","who-understand"],["יֹדֵעַ","He-knows"],["כֵּן","thus"],["יַאֲרִיךְ","does-He-suffer"],["׃",""]] },
+  { num:"ב", words:[["בְּפֶשַׁע","into-transgression"],["אֶרֶץ","the-land-of"],["רַבִּים","many"],["שָׂרֶיהָ","princes-its"],["וּבְאָדָם","and-in-Adam"],["מֵבִין","who-understand"],["יֹדֵעַ","He-knows"],["כֵּן","thus"],["יַאֲרִיךְ","he-prolongs"],["׃",""]] },
   { num:"ג", words:[["גֶּבֶר־רָשׁ","a man-take possession of it"],["וְעֹשֵׁק","and-who oppresses"],["דַּלִּים","the-poor"],["מָטָר","rain"],["סֹחֵף","which washes away"],["וְאֵין","and-has-no"],["לָחֶם","food"],["׃",""]] },
   { num:"ד", words:[["עֹזְבֵי","who forsake"],["תוֹרָה","Law"],["יְהַלְלוּ","they will praise"],["רָשָׁע","wicked"],["וְשֹׁמְרֵי","and-the-guards-of"],["תוֹרָה","Law"],["יִתְגָּרוּ","they engage in strife"],["בָם","in-them"],["׃",""]] },
   { num:"ה", words:[["אַנְשֵׁי־רָע","the-men-of-evil"],["לֹא־יָבִינוּ","not-they-might-understand"],["מִשְׁפָּט","judgment"],["וּמְבַקְשֵׁי","and-those-who-seek"],["יְהֹוָה","the-LORD"],["יָבִינוּ","they-might-understand"],["כֹל","all"],["׃",""]] },
@@ -920,7 +920,7 @@ var pro_ch28Verses = [
   { num:"יג", words:[["מְכַסֶּה","one who conceals"],["פְשָׁעָיו","transgressions-his"],["לֹא","not"],["יַצְלִיחַ","he-shall-prosper"],["וּמוֹדֶה","and-confesses"],["וְעֹזֵב","and-one who forsakes them"],["יְרֻחָם","he will be shown mercy"],["׃",""]] },
   { num:"יד", words:[["אַשְׁרֵי","blessed-are"],["אָדָם","man"],["מְפַחֵד","who fears"],["תָּמִיד","continually"],["וּמַקְשֶׁה","and-from-hard"],["לִבּוֹ","his-heart"],["יִפּוֹל","shall-fall"],["בְּרָעָה","in-evil"],["׃",""]] },
   { num:"טו", words:[["אֲרִי־נֹהֵם","a lion-roaring"],["וְדֹב","and-a bear"],["שׁוֹקֵק","rushing"],["מוֹשֵׁל","ruler"],["רָשָׁע","wicked"],["עַל","upon"],["עַם־דָּל","people-the poor"],["׃",""]] },
-  { num:"טז", words:[["נָגִיד","ruler"],["חֲסַר","helpless"],["תְּבוּנוֹת","understanding"],["וְרַב","and-great"],["מַעֲשַׁקּוֹת","extortion"],["(שנאי)",""],["[שֹׂנֵא]","he changed"],["בֶצַע","unjust gain"],["יַאֲרִיךְ","does-He-suffer"],["יָמִים","days"],["׃",""]] },
+  { num:"טז", words:[["נָגִיד","ruler"],["חֲסַר","helpless"],["תְּבוּנוֹת","understanding"],["וְרַב","and-great"],["מַעֲשַׁקּוֹת","extortion"],["(שנאי)",""],["[שֹׂנֵא]","he changed"],["בֶצַע","unjust gain"],["יַאֲרִיךְ","he-prolongs"],["יָמִים","days"],["׃",""]] },
   { num:"יז", words:[["אָדָם","man"],["עָשֻׁק","oppressed"],["בְּדַם־נָפֶשׁ","in-the-blood-of-souls"],["עַד־בּוֹר","until-the-pit"],["יָנוּס","flee"],["אַל־יִתְמְכוּ־בוֹ","do-not-they take hold of-in-Him"],["׃",""]] },
   { num:"יח", words:[["הוֹלֵךְ","going"],["תָּמִים","intent"],["יִוָּשֵׁעַ","saved"],["וְנֶעְקַשׁ","and-one who is crooked of"],["דְּרָכַיִם","two ways"],["יִפּוֹל","shall-fall"],["בְּאֶחָת","at-one"],["׃",""]] },
   { num:"יט", words:[["עֹבֵד","served"],["אַדְמָתוֹ","land-his"],["יִשְׂבַּע־לָחֶם","he will be satisfied-food"],["וּמְרַדֵּף","and-one who pursues"],["רֵיקִים","empty"],["יִשְׂבַּע־רִישׁ","he will be satisfied-poverty"],["׃",""]] },

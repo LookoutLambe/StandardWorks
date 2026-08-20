@@ -102,7 +102,7 @@ var hos_ch6Verses = [
   { num:"ו", words:[["כִּי","because"],["חֶסֶד","mercy"],["חָפַצְתִּי","I-desire"],["וְלֹא־זָבַח","and-not-a sacrifice"],["וְדַעַת","and-knowledge"],["אֱלֹהִים","God"],["מֵעֹלוֹת","more than-burnt offerings"],["׃",""]] },
   { num:"ז", words:[["וְהֵמָּה","and-they"],["כְּאָדָם","as-a-man"],["עָבְרוּ","passed"],["בְרִית","a-covenant"],["שָׁם","there"],["בָּגְדוּ","they have acted treacherously"],["בִי","against-Me"],["׃",""]] },
   { num:"ח", words:[["גִּלְעָד","Gilead"],["קִרְיַת","Kiriath"],["פֹּעֲלֵי","workers-of"],["אָוֶן","iniquity"],["עֲקֻבָּה","exceedingly-bloody"],["מִדָּם","from-blood"],["׃",""]] },
-  { num:"ט", words:[["וּכְחַכֵּי","and-as-wait for"],["אִישׁ","a-man"],["גְּדוּדִים","marauding bands"],["חֶבֶר","companion"],["כֹּהֲנִים","priests"],["דֶּרֶךְ","through"],["יְרַצְּחוּ־שֶׁכְמָה","to they murder-Shechem"],["כִּי","because"],["זִמָּה","there-could-not"],["עָשׂוּ","they-did"],["׃",""]] },
+  { num:"ט", words:[["וּכְחַכֵּי","and-as-wait for"],["אִישׁ","a-man"],["גְּדוּדִים","marauding bands"],["חֶבֶר","companion"],["כֹּהֲנִים","priests"],["דֶּרֶךְ","through"],["יְרַצְּחוּ־שֶׁכְמָה","to they murder-Shechem"],["כִּי","because"],["זִמָּה","wickedness"],["עָשׂוּ","they-did"],["׃",""]] },
   { num:"י", words:[["בְּבֵית","in-the-house-of"],["יִשְׂרָאֵל","Israel"],["רָאִיתִי","I-saw"],["(שעריריה)",""],["[שַׁעֲרוּרִיָּה]","a horrible thing"],["שָׁם","there"],["זְנוּת","whoredom"],["לְאֶפְרַיִם","of-Ephraim"],["נִטְמָא","it has made itself unclean"],["יִשְׂרָאֵל","Israel"],["׃",""]] },
   { num:"יא", words:[["גַּם־יְהוּדָה","also-Judah"],["שָׁת","he has appointed"],["קָצִיר","harvest"],["לָךְ","to-you"],["בְּשׁוּבִי","when-return-I"],["שְׁבוּת","the-captivity-of"],["עַמִּי","my-people"],["׃",""]] },
 ];

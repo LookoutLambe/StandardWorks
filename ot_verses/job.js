@@ -850,7 +850,7 @@ var job_ch31Verses = [
   { num:"ח", words:[["אֶזְרְעָה","let me sow"],["וְאַחֵר","and-another"],["יֹאכֵל","shall-he-eat"],["וְצֶאֱצָאַי","and-produce-my"],["יְשֹׁרָשׁוּ","let them be rooted up"],["׃",""]] },
   { num:"ט", words:[["אִם־נִפְתָּה","if-it has been deceived"],["לִבִּי","my-heart"],["עַל־אִשָּׁה","upon-a-woman"],["וְעַל־פֶּתַח","and-upon-the-door-of"],["רֵעִי","companions-of"],["אָרָבְתִּי","I have lain in wait"],["׃",""]] },
   { num:"י", words:[["תִּטְחַן","let her grind"],["לְאַחֵר","to-another"],["אִשְׁתִּי","my-wife"],["וְעָלֶיהָ","and-upon-it"],["יִכְרְעוּן","let them bow down"],["אֲחֵרִין","others"],["׃",""]] },
-  { num:"יא", words:[["כִּי־[הִיא]","because-it-is"],["(הוא)",""],["זִמָּה","there-could-not"],["(והיא)",""],["[וְהוּא]","and-he"],["עָוֺן","iniquity"],["פְּלִילִים","assessments"],["׃",""]] },
+  { num:"יא", words:[["כִּי־[הִיא]","because-it-is"],["(הוא)",""],["זִמָּה","wickedness"],["(והיא)",""],["[וְהוּא]","and-he"],["עָוֺן","iniquity"],["פְּלִילִים","assessments"],["׃",""]] },
   { num:"יב", words:[["כִּי","because"],["אֵשׁ","fire"],["הִיא","it is"],["עַד־אֲבַדּוֹן","until-Abaddon"],["תֹּאכֵל","it-shall-devour"],["וּבְכׇל־תְּבוּאָתִי","and-in-all-produce-my"],["תְשָׁרֵשׁ","it will root up"],["׃",""]] },
   { num:"יג", words:[["אִם־אֶמְאַס","if-I reject"],["מִשְׁפַּט","judgment"],["עַבְדִּי","my-servant"],["וַאֲמָתִי","and-female servant-my"],["בְּרִבָם","in-complaint-their"],["עִמָּדִי","against-me"],["׃",""]] },
   { num:"יד", words:[["וּמָה","and-what"],["אֶעֱשֶׂה","I-do"],["כִּי־יָקוּם","because-he-shall-rise"],["אֵל","God"],["וְכִי־יִפְקֹד","and-that-He-shall-visit"],["מָה","what"],["אֲשִׁיבֶנּוּ","I will bring back-him"],["׃",""]] },
