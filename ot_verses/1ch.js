@@ -303,7 +303,7 @@ var _1ch_ch6Verses = [
   { num:"סג", words:[["וּמֵעֵבֶר","and-from-the other side"],["לְיַרְדֵּן","of-the Jordan"],["יְרֵחוֹ","of Jericho"],["לְמִזְרַח","to-the east of"],["הַיַּרְדֵּן","the-Jordan"],["מִמַּטֵּה","from-the tribe of"],["רְאוּבֵן","Reuben"],["אֶת־בֶּצֶר","Bezer"],["בַּמִּדְבָּר","in-the-wilderness"],["וְאֶת־מִגְרָשֶׁיהָ","and-its-pasture lands"],["וְאֶת־יַהְצָה","and-Jahaz"],["וְאֶת־מִגְרָשֶׁיהָ","and-its-pasture lands"],["׃",""]] },
   { num:"סד", words:[["וְאֶת־קְדֵמוֹת","and-Kedemoth"],["וְאֶת־מִגְרָשֶׁיהָ","and-its-pasture lands"],["וְאֶת־מֵיפַעַת","and-Mephaath"],["וְאֶת־מִגְרָשֶׁיהָ","and-its-pasture lands"],["׃",""]] },
   { num:"סה", words:[["וּמִמַּטֵּה־גָד","and-from-the-tribe-of-Gad"],["אֶת־רָאמוֹת","Ramoth"],["בַּגִּלְעָד","in-the-Gilead"],["וְאֶת־מִגְרָשֶׁיהָ","and-its-pasture lands"],["וְאֶת־מַחֲנַיִם","and-Mahanaim"],["וְאֶת־מִגְרָשֶׁיהָ","and-its-pasture lands"],["׃",""]] },
-  { num:"סו", words:[["וְאֶת־חֶשְׁבּוֹן","and-account"],["וְאֶת־מִגְרָשֶׁיהָ","and-its-pasture lands"],["וְאֶת־יַעְזֵיר","and-Jazer"],["וְאֶת־מִגְרָשֶׁיהָ","and-its-pasture lands"],["׃",""]] },
+  { num:"סו", words:[["וְאֶת־חֶשְׁבּוֹן","and-Heshbon"],["וְאֶת־מִגְרָשֶׁיהָ","and-its-pasture lands"],["וְאֶת־יַעְזֵיר","and-Jazer"],["וְאֶת־מִגְרָשֶׁיהָ","and-its-pasture lands"],["׃",""]] },
 ];
 renderVerseSet(_1ch_ch6Verses, '1ch-ch6-verses');
 
