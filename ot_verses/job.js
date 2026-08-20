@@ -450,7 +450,7 @@ var job_ch16Verses = [
   { num:"יח", words:[["אֶרֶץ","the-land-of"],["אַל־תְּכַסִּי","do-not-you cover"],["דָמִי","blood-my"],["וְאַל־יְהִי","and-do-not-let-this-be"],["מָקוֹם","a-place"],["לְזַעֲקָתִי","to-outcry-my"],["׃",""]] },
   { num:"יט", words:[["גַּם־עַתָּה","also-now"],["הִנֵּה־בַשָּׁמַיִם","behold-will be in the-heavens"],["עֵדִי","witness-my"],["וְשָׂהֲדִי","and-witness-my"],["בַּמְּרֹמִים","in-the-high places"],["׃",""]] },
   { num:"כ", words:[["מְלִיצַי","are scoffing at-me"],["רֵעָי","companions-my"],["אֶל־אֱלוֹהַּ","to-Loh"],["דָּלְפָה","it has wept"],["עֵינִי","my-eye"],["׃",""]] },
-  { num:"כא", words:[["וְיוֹכַח","and-may he judge"],["לְגֶבֶר","to-a man"],["עִם־אֱלוֹהַּ","with-Loh"],["וּבֶן־אָדָם","and-you-are-worthy-of-man"],["לְרֵעֵהוּ","another"],["׃",""]] },
+  { num:"כא", words:[["וְיוֹכַח","and-may he judge"],["לְגֶבֶר","to-a man"],["עִם־אֱלוֹהַּ","with-Loh"],["וּבֶן־אָדָם","and-the-son-of-man"],["לְרֵעֵהוּ","another"],["׃",""]] },
   { num:"כב", words:[["כִּי־שְׁנוֹת","because-the years of"],["מִסְפָּר","number"],["יֶאֱתָיוּ","they will come"],["וְאֹרַח","and-a way"],["לֹא־אָשׁוּב","not-I-return"],["אֶהֱלֹךְ","I will go"],["׃",""]] },
 ];
 renderVerseSet(job_ch16Verses, 'job-ch16-verses');
@@ -694,7 +694,7 @@ var job_ch25Verses = [
   { num:"ג", words:[["הֲיֵשׁ","is-there"],["מִסְפָּר","number"],["לִגְדוּדָיו","to-troops-his"],["וְעַל־מִי","and-upon-who"],["לֹא־יָקוּם","not-he-shall-rise"],["אוֹרֵהוּ","light-his"],["׃",""]] },
   { num:"ד", words:[["וּמַה־יִּצְדַּק","yea-and-what-will he be justified"],["אֱנוֹשׁ","Enos"],["עִם־אֵל","with-God"],["וּמַה־יִּזְכֶּה","yea-and-what-will he be pure"],["יְלוּד","born of"],["אִשָּׁה","a-woman"],["׃",""]] },
   { num:"ה", words:[["הֵן","yea"],["עַד־יָרֵחַ","until-moon"],["וְלֹא","and-not"],["יַאֲהִיל","it is clear"],["וְכוֹכָבִים","and-the stars"],["לֹא־זַכּוּ","not-they are pure"],["בְעֵינָיו","with-their-eyes"],["׃",""]] },
-  { num:"ו", words:[["אַף","yea"],["כִּי־אֱנוֹשׁ","because-Enos"],["רִמָּה","the-worm"],["וּבֶן־אָדָם","and-you-are-worthy-of-man"],["תּוֹלֵעָה","a worm"],["׃",""]] },
+  { num:"ו", words:[["אַף","yea"],["כִּי־אֱנוֹשׁ","because-Enos"],["רִמָּה","the-worm"],["וּבֶן־אָדָם","and-the-son-of-man"],["תּוֹלֵעָה","a worm"],["׃",""]] },
 ];
 renderVerseSet(job_ch25Verses, 'job-ch25-verses');
 
