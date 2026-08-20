@@ -618,7 +618,7 @@ var exo_ch20Verses = [
   { num:"כ", words:[["לֹא","not"],["תַעשׂוּן","you shall make"],["אִתִּי","with Me"],["אֱלֹהֵי","gods of"],["כֶסֶף","silver"],["וֵאלֹהֵי","and gods of"],["זָהָב","gold"],["לֹא","not"],["תַעֲשׂוּ","shall you make"],["לָכֶם","to you"],["׃",""]] },
   { num:"כא", words:[["מִזְבַּח","the altar of"],["אֲדָמָה","earth"],["תַּעֲשֶׂה־לִּי","you shall make to Me"],["וְזָבַחְתָּ","and you will sacrifice"],["עָלָיו","thereon"],["אֶת־עֹלֹתֶיךָ","your burnt offerings"],["וְאֶת־שְׁלָמֶיךָ","and your peace offerings"],["אֶת־צֹאנְךָ","your sheep"],["וְאֶת־בְּקָרֶךָ","and your oxen"],["בְּכׇל־הַמָּקוֹם","in all the place"],["אֲשֶׁר","which"],["אַזְכִּיר","I record"],["אֶת־שְׁמִי","My name"],["אָבוֹא","I will come"],["אֵלֶיךָ","to you"],["וּבֵרַכְתִּיךָ","and I will bless you"],["׃",""]] },
   { num:"כב", words:[["וְאִם־מִזְבַּח","and if an altar of"],["אֲבָנִים","stones"],["תַּעֲשֶׂה־לִּי","you shall make to Me"],["לֹא־תִבְנֶה","you shall not build"],["אֶתְהֶן","it"],["גָּזִית","hewn stone"],["כִּי","because"],["חַרְבְּךָ","your tool"],["הֵנַפְתָּ","you have lifted up"],["עָלֶיהָ","upon it"],["וַתְּחַלְלֶהָ","and you have profaned it"],["׃",""]] },
-  { num:"כג", words:[["וְלֹא־תַעֲלֶה","neither shall you go up"],["בְמַעֲלֹת","by steps"],["עַל־מִזְבְּחִי","unto My altar"],["אֲשֶׁר","that"],["לֹא־תִגָּלֶה","be not discovered"],["עֶרְוָתְךָ","your nakedness"],["עָלָיו","thereon"],["׃",""]] },
+  { num:"כג", words:[["וְלֹא־תַעֲלֶה","neither shall you go up"],["בְמַעֲלֹת","by steps"],["עַל־מִזְבְּחִי","unto My altar"],["אֲשֶׁר","that"],["לֹא־תִגָּלֶה","shall not be uncovered"],["עֶרְוָתְךָ","your nakedness"],["עָלָיו","thereon"],["׃",""]] },
 ];
 renderVerseSet(exo_ch20Verses, 'exo-ch20-verses');
 
