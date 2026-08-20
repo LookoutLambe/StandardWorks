@@ -53,13 +53,13 @@ var lam_ch2Verses = [
 renderVerseSet(lam_ch2Verses, 'lam-ch2-verses');
 
 var lam_ch3Verses = [
-  { num:"א", words:[["אֲנִי","I"],["הַגֶּבֶר","the-he-prevailed"],["רָאָה","he-saw"],["עֳנִי","affliction"],["בְּשֵׁבֶט","with-the-rod-of"],["עֶבְרָתוֹ","his-fury"],["׃",""]] },
+  { num:"א", words:[["אֲנִי","I"],["הַגֶּבֶר","the-man"],["רָאָה","he-saw"],["עֳנִי","affliction"],["בְּשֵׁבֶט","with-the-rod-of"],["עֶבְרָתוֹ","his-fury"],["׃",""]] },
   { num:"ב", words:[["אוֹתִי","me"],["נָהַג","he has driven"],["וַיֹּלַךְ","and-he has made walk"],["חֹשֶׁךְ","darkness"],["וְלֹא־אוֹר","and-not-light"],["׃",""]] },
   { num:"ג", words:[["אַךְ","but"],["בִּי","against-me"],["יָשֻׁב","he will return"],["יַהֲפֹךְ","he-might-overthrow"],["יָדוֹ","his-hand"],["כׇּל־הַיּוֹם","all-the-day"],["׃",""]] },
   { num:"ד", words:[["בִּלָּה","he has made to waste away"],["בְשָׂרִי","my-flesh"],["וְעוֹרִי","and-my-skin"],["שִׁבַּר","he broke in pieces"],["עַצְמוֹתָי","my-bones"],["׃",""]] },
   { num:"ה", words:[["בָּנָה","built"],["עָלַי","upon-me"],["וַיַּקַּף","and-he has surrounded me"],["רֹאשׁ","the-head-of"],["וּתְלָאָה","and-hardship"],["׃",""]] },
   { num:"ו", words:[["בְּמַחֲשַׁכִּים","in-the dark places"],["הוֹשִׁיבַנִי","he has caused to dwell-me"],["כְּמֵתֵי","like-dead people of"],["עוֹלָם","eternal"],["׃",""]] },
-  { num:"ז", words:[["גָּדַר","he has walled up"],["בַּעֲדִי","for-me"],["וְלֹא","and-not"],["אֵצֵא","I-go-forth"],["הִכְבִּיד","did-more-grievously-afflict"],["נְחׇשְׁתִּי","the-serpent(I)"],["׃",""]] },
+  { num:"ז", words:[["גָּדַר","he has walled up"],["בַּעֲדִי","for-me"],["וְלֹא","and-not"],["אֵצֵא","I-go-forth"],["הִכְבִּיד","did-more-grievously-afflict"],["נְחׇשְׁתִּי","I-have-divined"],["׃",""]] },
   { num:"ח", words:[["גַּם","also"],["כִּי","because"],["אֶזְעַק","I-shall-cry"],["וַאֲשַׁוֵּעַ","and-I may cry for help"],["שָׂתַם","he has shut out"],["תְּפִלָּתִי","my-prayer"],["׃",""]] },
   { num:"ט", words:[["גָּדַר","he has walled up"],["דְּרָכַי","my-ways"],["בְּגָזִית","with-hewn stone"],["נְתִיבֹתַי","my-paths"],["עִוָּה","he has made crooked"],["׃",""]] },
   { num:"י", words:[["דֹּב","a bear"],["אֹרֵב","an ambush"],["הוּא","he"],["לִי","to-me"],["(אריה)",""],["[אֲרִי]","Uri"],["בְּמִסְתָּרִים","in-hiding places"],["׃",""]] },

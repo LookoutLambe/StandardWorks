@@ -264,7 +264,7 @@ var pro_ch8Verses = [
   { num:"לא", words:[["מְשַׂחֶקֶת","playing"],["בְּתֵבֵל","in-the world of"],["אַרְצוֹ","his-land"],["וְשַׁעֲשֻׁעַי","and-my-delight"],["אֶת־בְּנֵי","the-sons-of"],["אָדָם","man"],["׃",""]] },
   { num:"לב", words:[["וְעַתָּה","and-now"],["בָנִים","sons"],["שִׁמְעוּ־לִי","hear-to-me"],["וְאַשְׁרֵי","and-blessed-are"],["דְּרָכַי","my-ways"],["יִשְׁמֹרוּ","they watch for"],["׃",""]] },
   { num:"לג", words:[["שִׁמְעוּ","hear"],["מוּסָר","discipline"],["וַחֲכָמוּ","and-act wisely"],["וְאַל־תִּפְרָעוּ","and-do-not-you let loose"],["׃",""]] },
-  { num:"לד", words:[["אַשְׁרֵי־אָדָם","blessed-are-man"],["שֹׁמֵעַ","that-obeys"],["לִי","to-me"],["לִשְׁקֹד","by-keeping watch"],["עַל־דַּלְתֹתַי","upon-my-doors"],["יוֹם","day"],["יוֹם","day"],["לִשְׁמֹר","in-keeping"],["מְזוּזֹת","the doorposts of"],["פְּתָחָי","my-doorways"],["׃",""]] },
+  { num:"לד", words:[["אַשְׁרֵי־אָדָם","blessed-are-man"],["שֹׁמֵעַ","who-hears"],["לִי","to-me"],["לִשְׁקֹד","by-keeping watch"],["עַל־דַּלְתֹתַי","upon-my-doors"],["יוֹם","day"],["יוֹם","day"],["לִשְׁמֹר","in-keeping"],["מְזוּזֹת","the doorposts of"],["פְּתָחָי","my-doorways"],["׃",""]] },
   { num:"לה", words:[["כִּי","because"],["מֹצְאִי","one who finds-me"],["(מצאי)",""],["[מָצָא]","finding"],["חַיִּים","living"],["וַיָּפֶק","and-he obtained"],["רָצוֹן","his-own-sins"],["מֵיְהֹוָה","from-the-LORD"],["׃",""]] },
   { num:"לו", words:[["וְחֹטְאִי","and-one who misses-me"],["חֹמֵס","is doing wrong to"],["נַפְשׁוֹ","his-soul"],["כׇּל־מְשַׂנְאַי","all-those who hate-me"],["אָהֲבוּ","they-loved"],["מָוֶת","death"],["׃",""]] },
 ];
@@ -819,7 +819,7 @@ var pro_ch25Verses = [
   { num:"ז", words:[["כִּי","because"],["טוֹב","good"],["אֲמׇר־לְךָ","I-say-for-you"],["עֲלֵה־הֵנָּה","go-up-hither"],["מֵהַשְׁפִּילְךָ","than-to set low-you"],["לִפְנֵי","before"],["נָדִיב","willing person"],["אֲשֶׁר","which"],["רָאוּ","saw"],["עֵינֶיךָ","your-eyes"],["׃",""]] },
   { num:"ח", words:[["אַל־תֵּצֵא","do-not-shall-go-forth"],["לָרִב","to-contest a lawsuit"],["מַהֵר","quickly"],["פֶּן","lest"],["מַה־תַּעֲשֶׂה","what-you-make"],["בְּאַחֲרִיתָהּ","at-its-end"],["בְּהַכְלִים","when-puts to shame"],["אֹתְךָ","you"],["רֵעֶךָ","your-neighbor"],["׃",""]] },
   { num:"ט", words:[["רִיבְךָ","your-own case"],["רִיב","contention"],["אֶת־רֵעֶךָ","your-neighbor"],["וְסוֹד","and-the secret of"],["אַחֵר","other"],["אַל־תְּגָל","do-not-you reveal"],["׃",""]] },
-  { num:"י", words:[["פֶּן־יְחַסֶּדְךָ","lest-he should bring shame-you"],["שֹׁמֵעַ","that-obeys"],["וְדִבָּתְךָ","and-your-evil report"],["לֹא","not"],["תָשׁוּב","return"],["׃",""]] },
+  { num:"י", words:[["פֶּן־יְחַסֶּדְךָ","lest-he should bring shame-you"],["שֹׁמֵעַ","who-hears"],["וְדִבָּתְךָ","and-your-evil report"],["לֹא","not"],["תָשׁוּב","return"],["׃",""]] },
   { num:"יא", words:[["תַּפּוּחֵי","apples of"],["זָהָב","gold"],["בְּמַשְׂכִּיּוֹת","in-settings of"],["כָּסֶף","silver"],["דָּבָר","a-word"],["דָּבֻר","spoken"],["עַל־אׇפְנָיו","upon-its-proper times"],["׃",""]] },
   { num:"יב", words:[["נֶזֶם","a ring of"],["זָהָב","gold"],["וַחֲלִי־כָתֶם","and-Hali-pure gold"],["מוֹכִיחַ","is an arbiter"],["חָכָם","wise"],["עַל־אֹזֶן","upon-an-ear"],["שֹׁמָעַת","listening"],["׃",""]] },
   { num:"יג", words:[["כְּצִנַּת־שֶׁלֶג","is like-the cold of-snow"],["בְּיוֹם","in-the-day-of"],["קָצִיר","harvest"],["צִיר","an envoy"],["נֶאֱמָן","more-faithful"],["לְשֹׁלְחָיו","to-those who send-him"],["וְנֶפֶשׁ","and-soul"],["אֲדֹנָיו","his-master"],["יָשִׁיב","he-shall-return"],["׃",""]] },
@@ -968,7 +968,7 @@ var pro_ch29Verses = [
 renderVerseSet(pro_ch29Verses, 'pro-ch29-verses');
 
 var pro_ch30Verses = [
-  { num:"א", words:[["דִּבְרֵי","the-words-of"],["אָגוּר","I was afraid"],["בִּן־יָקֶה","the son of-Jakeh"],["הַמַּשָּׂא","the-burdens"],["נְאֻם","says"],["הַגֶּבֶר","the-he-prevailed"],["לְאִיתִיאֵל","to-Ithiel"],["לְאִיתִיאֵל","to-Ithiel"],["וְאֻכׇל","and-Ukal"],["׃",""]] },
+  { num:"א", words:[["דִּבְרֵי","the-words-of"],["אָגוּר","I was afraid"],["בִּן־יָקֶה","the son of-Jakeh"],["הַמַּשָּׂא","the-burdens"],["נְאֻם","says"],["הַגֶּבֶר","the-man"],["לְאִיתִיאֵל","to-Ithiel"],["לְאִיתִיאֵל","to-Ithiel"],["וְאֻכׇל","and-Ukal"],["׃",""]] },
   { num:"ב", words:[["כִּי","because"],["בַעַר","was stupid"],["אָנֹכִי","I"],["מֵאִישׁ","that-come"],["וְלֹא־בִינַת","and-not-the understanding of"],["אָדָם","man"],["לִי","to-me"],["׃",""]] },
   { num:"ג", words:[["וְלֹא־לָמַדְתִּי","and-not-I-learned"],["חׇכְמָה","wisdom"],["וְדַעַת","and-knowledge"],["קְדֹשִׁים","holy"],["אֵדָע","I know"],["׃",""]] },
   { num:"ד", words:[["מִי","who"],["עָלָה־שָׁמַיִם","ascended-the-heavens"],["וַיֵּרַד","and-he came down"],["מִי","who"],["אָסַף־רוּחַ","gathered-spirit-of"],["בְּחׇפְנָיו","in-his-hands"],["מִי","who"],["צָרַר־מַיִם","has he wrapped-water"],["בַּשִּׂמְלָה","in-the-cloak"],["מִי","who"],["הֵקִים","had-established"],["כׇּל־אַפְסֵי־אָרֶץ","all-the-ends-of-the-earth"],["מַה־שְּׁמוֹ","what-is name-his"],["וּמַה־שֶּׁם־בְּנוֹ","yea-and-what-is the name of-his-son"],["כִּי","because"],["תֵדָע","you know"],["׃",""]] },
@@ -990,7 +990,7 @@ var pro_ch30Verses = [
   { num:"כ", words:[["כֵּן","thus"],["דֶּרֶךְ","the way of"],["אִשָּׁה","a-woman"],["מְנָאָפֶת","adulterous"],["אָכְלָה","it consumed"],["וּמָחֲתָה","and-she wipes clean"],["פִיהָ","her-mouth"],["וְאָמְרָה","and-she will say"],["לֹא־פָעַלְתִּי","not-I have done"],["אָוֶן","iniquity"],["׃",""]] },
   { num:"כא", words:[["תַּחַת","under"],["שָׁלוֹשׁ","three"],["רָגְזָה","is-moved"],["אֶרֶץ","the-land-of"],["וְתַחַת","and-under"],["אַרְבַּע","four"],["לֹא־תוּכַל","not-can"],["שְׂאֵת","to-bear"],["׃",""]] },
   { num:"כב", words:[["תַּחַת־עֶבֶד","under-servant-of"],["כִּי","because"],["יִמְלוֹךְ","he will become king"],["וְנָבָל","and-a fool"],["כִּי","because"],["יִשְׂבַּע־לָחֶם","he will be satisfied-food"],["׃",""]] },
-  { num:"כג", words:[["תַּחַת","under"],["שְׂנוּאָה","was hated"],["כִּי","because"],["תִבָּעֵל","she will be married"],["וְשִׁפְחָה","and-female servants"],["כִּי־תִירַשׁ","because-you-shall-inherit"],["גְּבִרְתָּהּ","her-prevailed"],["׃",""]] },
+  { num:"כג", words:[["תַּחַת","under"],["שְׂנוּאָה","was hated"],["כִּי","because"],["תִבָּעֵל","she will be married"],["וְשִׁפְחָה","and-female servants"],["כִּי־תִירַשׁ","because-you-shall-inherit"],["גְּבִרְתָּהּ","her-mistress"],["׃",""]] },
   { num:"כד", words:[["אַרְבָּעָה","four"],["הֵם","they"],["קְטַנֵּי־אָרֶץ","sin-my-the-earth"],["וְהֵמָּה","and-they"],["חֲכָמִים","wise"],["מְחֻכָּמִים","made wise"],["׃",""]] },
   { num:"כה", words:[["הַנְּמָלִים","the-ants"],["עַם","people"],["לֹא־עָז","not-mighty"],["וַיָּכִינוּ","and-they-prepared"],["בַקַּיִץ","in the-summer"],["לַחְמָם","their-for food"],["׃",""]] },
   { num:"כו", words:[["שְׁפַנִּים","rock badgers"],["עַם","people"],["לֹא־עָצוּם","not-mighty"],["וַיָּשִׂימוּ","and-they-put"],["בַסֶּלַע","in the-rocks"],["בֵּיתָם","their-house"],["׃",""]] },

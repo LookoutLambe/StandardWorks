@@ -57,7 +57,7 @@ var zec_ch3Verses = [
 renderVerseSet(zec_ch3Verses, 'zec-ch3-verses');
 
 var zec_ch4Verses = [
-  { num:"א", words:[["וַיָּשׇׁב","and-he will turn"],["הַמַּלְאָךְ","the-angel"],["הַדֹּבֵר","the-one-who-spoke"],["בִּי","against-me"],["וַיְעִירֵנִי","and-he roused-me"],["כְּאִישׁ","as-a-man"],["אֲשֶׁר־יֵעוֹר","which-it will be roused"],["מִשְּׁנָתוֹ","from-his-sleep"],["׃",""]] },
+  { num:"א", words:[["וַיָּשׇׁב","and-he-returned"],["הַמַּלְאָךְ","the-angel"],["הַדֹּבֵר","the-one-who-spoke"],["בִּי","against-me"],["וַיְעִירֵנִי","and-he roused-me"],["כְּאִישׁ","as-a-man"],["אֲשֶׁר־יֵעוֹר","which-it will be roused"],["מִשְּׁנָתוֹ","from-his-sleep"],["׃",""]] },
   { num:"ב", words:[["וַיֹּאמֶר","and-said"],["אֵלַי","to-me"],["מָה","what"],["אַתָּה","you"],["רֹאֶה","I-perceive"],["(ויאמר)",""],["[וָאֹמַר]","and-Emer"],["רָאִיתִי","I-saw"],["וְהִנֵּה","and-behold"],["מְנוֹרַת","a lampstand of"],["זָהָב","gold"],["כֻּלָּהּ","all-of-it"],["וְגֻלָּהּ","and-a bowl"],["עַל־רֹאשָׁהּ","upon-its-top"],["וְשִׁבְעָה","and-seven"],["נֵרֹתֶיהָ","its-lamps"],["עָלֶיהָ","upon-it"],["שִׁבְעָה","seven"],["וְשִׁבְעָה","and-seven"],["מוּצָקוֹת","pipes"],["לַנֵּרוֹת","to the-lamps"],["אֲשֶׁר","which"],["עַל־רֹאשָׁהּ","upon-its-top"],["׃",""]] },
   { num:"ג", words:[["וּשְׁנַיִם","and-two"],["זֵיתִים","olive trees"],["עָלֶיהָ","upon-it"],["אֶחָד","one"],["מִימִין","from-the right of"],["הַגֻּלָּה","the-bowl"],["וְאֶחָד","and-one"],["עַל־שְׂמֹאלָהּ","upon-its-left side"],["׃",""]] },
   { num:"ד", words:[["וָאַעַן","and-I-answered"],["וָאֹמַר","and-I-said"],["אֶל־הַמַּלְאָךְ","to-the-angel"],["הַדֹּבֵר","the-one-who-spoke"],["בִּי","against-me"],["לֵאמֹר","saying"],["מָה־אֵלֶּה","what-these"],["אֲדֹנִי","my-lord"],["׃",""]] },
