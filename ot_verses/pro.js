@@ -782,7 +782,7 @@ var pro_ch24Verses = [
   { num:"ח", words:[["מְחַשֵּׁב","one who plans"],["לְהָרֵעַ","to-the-evil"],["לוֹ","him"],["בַּעַל־מְזִמּוֹת","a-master-of-devices"],["יִקְרָאוּ","they will summon"],["׃",""]] },
   { num:"ט", words:[["זִמַּת","a plan of"],["אִוֶּלֶת","foolishness"],["חַטָּאת","sin"],["וְתוֹעֲבַת","and-the-abominations-of"],["לְאָדָם","to-man"],["לֵץ","scorner"],["׃",""]] },
   { num:"י", words:[["הִתְרַפִּיתָ","you have shown yourself without courage"],["בְּיוֹם","in-the-day-of"],["צָרָה","affliction"],["צַר","adversary"],["כֹּחֶכָה","your-strength"],["׃",""]] },
-  { num:"יא", words:[["הַצֵּל","certainly"],["לְקֻחִים","those being taken"],["לַמָּוֶת","the-death"],["וּמָטִים","and-those who are staggering"],["לַהֶרֶג","to the-slaughter"],["אִם־תַּחְשׂוֹךְ","if-you will restrain"],["׃",""]] },
+  { num:"יא", words:[["הַצֵּל","surely"],["לְקֻחִים","those being taken"],["לַמָּוֶת","the-death"],["וּמָטִים","and-those who are staggering"],["לַהֶרֶג","to the-slaughter"],["אִם־תַּחְשׂוֹךְ","if-you will restrain"],["׃",""]] },
   { num:"יב", words:[["כִּי־תֹאמַר","that-you-say"],["הֵן","yea"],["לֹא־יָדַעְנוּ","not-we-know"],["זֶה","this"],["הֲלֹא־תֹכֵן","do-not-one who weighs"],["לִבּוֹת","the-hearts-of"],["הוּא־יָבִין","it-is-understand"],["וְנֹצֵר","and-one who guards"],["נַפְשְׁךָ","your-soul"],["הוּא","he"],["יֵדָע","let it know"],["וְהֵשִׁיב","and-he-restored"],["לְאָדָם","to-man"],["כְּפׇעֳלוֹ","as-one who does-his"],["׃",""]] },
   { num:"יג", words:[["אֱכׇל־בְּנִי","food-my-son"],["דְבַשׁ","honey"],["כִּי־טוֹב","that-it-is-well"],["וְנֹפֶת","and-the honey of"],["מָתוֹק","sweet"],["עַל־חִכֶּךָ","upon-your-palate"],["׃",""]] },
   { num:"יד", words:[["כֵּן","thus"],["דְּעֶה","know"],["חׇכְמָה","wisdom"],["לְנַפְשֶׁךָ","for-your-self"],["אִם־מָצָאתָ","if-found"],["וְיֵשׁ","and-there-was"],["אַחֲרִית","final-state-of"],["וְתִקְוָתְךָ","and-your-hope"],["לֹא","not"],["תִכָּרֵת","it will be cut off"],["׃",""]] },
@@ -811,7 +811,7 @@ renderVerseSet(pro_ch24Verses, 'pro-ch24-verses');
 
 var pro_ch25Verses = [
   { num:"א", words:[["גַּם־אֵלֶּה","also-these"],["מִשְׁלֵי","are proverbs of"],["שְׁלֹמֹה","Solomon"],["אֲשֶׁר","which"],["הֶעְתִּיקוּ","they have moved away"],["אַנְשֵׁי","the-men-of"],["חִזְקִיָּה","Hezekiah"],["מֶלֶךְ־יְהוּדָה","king-of-Judah"],["׃",""]] },
-  { num:"ב", words:[["כְּבֹד","is the glory of"],["אֱלֹהִים","God"],["הַסְתֵּר","certainly"],["דָּבָר","a-word"],["וּכְבֹד","and-is the glory of"],["מְלָכִים","kings"],["חֲקֹר","to search out"],["דָּבָר","a-word"],["׃",""]] },
+  { num:"ב", words:[["כְּבֹד","is the glory of"],["אֱלֹהִים","God"],["הַסְתֵּר","surely"],["דָּבָר","a-word"],["וּכְבֹד","and-is the glory of"],["מְלָכִים","kings"],["חֲקֹר","to search out"],["דָּבָר","a-word"],["׃",""]] },
   { num:"ג", words:[["שָׁמַיִם","the-heavens"],["לָרוּם","for-height"],["וָאָרֶץ","and-earth"],["לָעֹמֶק","for-depth"],["וְלֵב","and-heart"],["מְלָכִים","kings"],["אֵין","there-is-no"],["חֵקֶר","a-search"],["׃",""]] },
   { num:"ד", words:[["הָגוֹ","remove"],["סִיגִים","dross"],["מִכָּסֶף","more than-silver"],["וַיֵּצֵא","and-went-out"],["לַצֹּרֵף","for the-metalsmith"],["כֶּלִי","a vessel"],["׃",""]] },
   { num:"ה", words:[["הָגוֹ","remove"],["רָשָׁע","wicked"],["לִפְנֵי־מֶלֶךְ","before-king-of"],["וְיִכּוֹן","so-it may be established"],["בַּצֶּדֶק","the-justice"],["כִּסְאוֹ","his-throne"],["׃",""]] },
@@ -836,7 +836,7 @@ var pro_ch25Verses = [
   { num:"כד", words:[["טוֹב","good"],["שֶׁבֶת","remaining"],["עַל־פִּנַּת־גָּג","upon-a corner of-a roof"],["מֵאֵשֶׁת","from-the wife of"],["(מדונים)",""],["[מִדְיָנִים]","Midianites"],["וּבֵית","and-house-of"],["חָבֶר","a spell"],["׃",""]] },
   { num:"כה", words:[["מַיִם","water"],["קָרִים","cool"],["עַל־נֶפֶשׁ","upon-soul"],["עֲיֵפָה","exhausted"],["וּשְׁמוּעָה","and-a report"],["טוֹבָה","good"],["מֵאֶרֶץ","from-the-land-of"],["מֶרְחָק","far"],["׃",""]] },
   { num:"כו", words:[["מַעְיָן","a spring"],["נִרְפָּשׂ","fouled"],["וּמָקוֹר","and-a fountain"],["מׇשְׁחָת","disfigurement"],["צַדִּיק","righteous"],["מָט","who sways"],["לִפְנֵי־רָשָׁע","before-wicked"],["׃",""]] },
-  { num:"כז", words:[["אָכֹל","certainly"],["דְּבַשׁ","honey"],["הַרְבּוֹת","to increase"],["לֹא־טוֹב","not-good"],["וְחֵקֶר","and-the search of"],["כְּבֹדָם","their-own honor"],["כָּבוֹד","glorious"],["׃",""]] },
+  { num:"כז", words:[["אָכֹל","surely"],["דְּבַשׁ","honey"],["הַרְבּוֹת","to increase"],["לֹא־טוֹב","not-good"],["וְחֵקֶר","and-the search of"],["כְּבֹדָם","their-own honor"],["כָּבוֹד","glorious"],["׃",""]] },
   { num:"כח", words:[["עִיר","the-city-of"],["פְּרוּצָה","broken into"],["אֵין","there-is-no"],["חוֹמָה","a wall"],["אִישׁ","a-man"],["אֲשֶׁר","which"],["אֵין","there-is-no"],["מַעְצָר","control"],["לְרוּחוֹ","to-his-spirit"],["׃",""]] },
 ];
 renderVerseSet(pro_ch25Verses, 'pro-ch25-verses');
@@ -845,8 +845,8 @@ var pro_ch26Verses = [
   { num:"א", words:[["כַּשֶּׁלֶג","like-the-snow"],["בַּקַּיִץ","in the-summer"],["וְכַמָּטָר","and-like-the-rain"],["בַּקָּצִיר","in-the-harvest"],["כֵּן","thus"],["לֹא־נָאוֶה","not-is suitable"],["לִכְסִיל","for-a fool"],["כָּבוֹד","glorious"],["׃",""]] },
   { num:"ב", words:[["כַּצִּפּוֹר","like-the-bird"],["לָנוּד","to-show sympathy"],["כַּדְּרוֹר","like-the-swallow"],["לָעוּף","for-flying"],["כֵּן","thus"],["קִלְלַת","curse-of"],["חִנָּם","is-free"],["(לא)",""],["[לוֹ]","to-him"],["תָבֹא","come"],["׃",""]] },
   { num:"ג", words:[["שׁוֹט","a-scourge"],["לַסּוּס","to the-horse"],["מֶתֶג","Metheg-"],["לַחֲמוֹר","for-a donkey"],["וְשֵׁבֶט","and-a rod"],["לְגֵו","is for-the back of"],["כְּסִילִים","fools"],["׃",""]] },
-  { num:"ד", words:[["אַל־תַּעַן","do-not-may it sing"],["כְּסִיל","you-fool"],["כְּאִוַּלְתּוֹ","his-according to-foolishness"],["פֶּן־תִּשְׁוֶה־לּוֹ","lest-you should become like-upon-him"],["גַם־אָתָּה","also-you-are"],["׃",""]] },
-  { num:"ה", words:[["עֲנֵה","answer"],["כְסִיל","is a fool"],["כְּאִוַּלְתּוֹ","his-according to-foolishness"],["פֶּן־יִהְיֶה","lest-he-shall-be"],["חָכָם","wise"],["בְּעֵינָיו","in-his-eyes"],["׃",""]] },
+  { num:"ד", words:[["אַל־תַּעַן","do-not-may it sing"],["כְּסִיל","you-fool"],["כְּאִוַּלְתּוֹ","according-to-his-foolishness"],["פֶּן־תִּשְׁוֶה־לּוֹ","lest-you should become like-upon-him"],["גַם־אָתָּה","also-you-are"],["׃",""]] },
+  { num:"ה", words:[["עֲנֵה","answer"],["כְסִיל","is a fool"],["כְּאִוַּלְתּוֹ","according-to-his-foolishness"],["פֶּן־יִהְיֶה","lest-he-shall-be"],["חָכָם","wise"],["בְּעֵינָיו","in-his-eyes"],["׃",""]] },
   { num:"ו", words:[["מְקַצֶּה","one who cuts off"],["רַגְלַיִם","feet"],["חָמָס","violence"],["שֹׁתֶה","he-drinks"],["שֹׁלֵחַ","sent"],["דְּבָרִים","things"],["בְּיַד־כְּסִיל","in-the-hand-of-you-fool"],["׃",""]] },
   { num:"ז", words:[["דַּלְיוּ","they hang down"],["שֹׁקַיִם","legs"],["מִפִּסֵּחַ","from-a lame person"],["וּמָשָׁל","and-a proverb"],["בְּפִי","in-the-mouth-of"],["כְסִילִים","fools"],["׃",""]] },
   { num:"ח", words:[["כִּצְרוֹר","as-ties"],["אֶבֶן","stone"],["בְּמַרְגֵּמָה","in-a sling"],["כֵּן־נוֹתֵן","thus-grants"],["לִכְסִיל","for-a fool"],["כָּבוֹד","glorious"],["׃",""]] },
