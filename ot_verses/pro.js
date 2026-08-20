@@ -81,7 +81,7 @@ var pro_ch3Verses = [
   { num:"טו", words:[["יְקָרָה","precious"],["הִיא","it is"],["[מִפְּנִינִים]","is more than-pearls"],["וְכׇל־חֲפָצֶיךָ","and-all-your-pleasures"],["לֹא","not"],["יִשְׁווּ־בָהּ","they compare-in-her"],["׃",""]] },
   { num:"טז", words:[["אֹרֶךְ","the length of"],["יָמִים","days"],["בִּימִינָהּ","in-her-right hand"],["בִּשְׂמֹאולָהּ","in-her-left hand"],["עֹשֶׁר","riches"],["וְכָבוֹד","and-glory"],["׃",""]] },
   { num:"יז", words:[["דְּרָכֶיהָ","her-ways"],["דַרְכֵי־נֹעַם","ways-of-the kindness of"],["וְכׇל־נְתִיבוֹתֶיהָ","and-all-her-pathways"],["שָׁלוֹם","peace"],["׃",""]] },
-  { num:"יח", words:[["עֵץ־חַיִּים","a-tree-living"],["הִיא","it is"],["לַמַּחֲזִיקִים","to-the-those who take hold"],["בָּהּ","in-it"],["וְתֹמְכֶיהָ","and-those who hold fast to-her"],["מְאֻשָּׁר","the-people"],["׃",""]] },
+  { num:"יח", words:[["עֵץ־חַיִּים","a-tree-living"],["הִיא","it is"],["לַמַּחֲזִיקִים","to-the-ones-who-take hold"],["בָּהּ","in-it"],["וְתֹמְכֶיהָ","and-those who hold fast to-her"],["מְאֻשָּׁר","the-people"],["׃",""]] },
   { num:"יט", words:[["יְהֹוָה","the-LORD"],["בְּחׇכְמָה","in-wisdom"],["יָסַד־אָרֶץ","he-shall-be-founded-the-earth"],["כּוֹנֵן","he-were-ready"],["שָׁמַיִם","the-heavens"],["בִּתְבוּנָה","with-understanding"],["׃",""]] },
   { num:"כ", words:[["בְּדַעְתּוֹ","by-His-knowledge"],["תְּהוֹמוֹת","the deeps"],["נִבְקָעוּ","rent"],["וּשְׁחָקִים","and-clouds"],["יִרְעֲפוּ־טָל","they drip-dew"],["׃",""]] },
   { num:"כא", words:[["בְּנִי","my-son"],["אַל־יָלֻזוּ","do-not-they depart"],["מֵעֵינֶיךָ","from-your-eyes"],["נְצֹר","keep"],["תֻּשִׁיָּה","sound wisdom"],["וּמְזִמָּה","and-discretion"],["׃",""]] },
