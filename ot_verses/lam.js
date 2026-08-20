@@ -80,7 +80,7 @@ var lam_ch3Verses = [
   { num:"כה", words:[["טוֹב","good"],["יְהֹוָה","the-LORD"],["לְקֹוָו","to-Koo"],["לְנֶפֶשׁ","a creature"],["תִּדְרְשֶׁנּוּ","you will seek-him"],["׃",""]] },
   { num:"כו", words:[["טוֹב","good"],["וְיָחִיל","and-waiting"],["וְדוּמָם","and-silently"],["לִתְשׁוּעַת","to-salvation"],["יְהֹוָה","the-LORD"],["׃",""]] },
   { num:"כז", words:[["טוֹב","good"],["לַגֶּבֶר","for-the-man"],["כִּי־יִשָּׂא","because-takes-away"],["עֹל","yoke"],["בִּנְעוּרָיו","in-youth-his"],["׃",""]] },
-  { num:"כח", words:[["יֵשֵׁב","remained"],["בָּדָד","alone"],["וְיִדֹּם","and-let him be silent"],["כִּי","because"],["נָטַל","he-took"],["עָלָיו","upon-him"],["׃",""]] },
+  { num:"כח", words:[["יֵשֵׁב","shall dwell"],["בָּדָד","alone"],["וְיִדֹּם","and-let him be silent"],["כִּי","because"],["נָטַל","he-took"],["עָלָיו","upon-him"],["׃",""]] },
   { num:"כט", words:[["יִתֵּן","shall-give"],["בֶּעָפָר","in-the-dust"],["פִּיהוּ","his-mouth"],["אוּלַי","perhaps"],["יֵשׁ","there"],["תִּקְוָה","hope"],["׃",""]] },
   { num:"ל", words:[["יִתֵּן","shall-give"],["לְמַכֵּהוּ","to-the one who strikes-him"],["לֶחִי","Lehi"],["יִשְׂבַּע","he will be satisfied"],["בְּחֶרְפָּה","in-scorn"],["׃",""]] },
   { num:"לא", words:[["כִּי","because"],["לֹא","not"],["יִזְנַח","will he reject"],["לְעוֹלָם","forever"],["אֲדֹנָי","Lord"],["׃",""]] },
