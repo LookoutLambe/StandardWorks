@@ -63,7 +63,7 @@ var mal_ch3Verses = [
   { num:"כא", words:[["וְעַסּוֹתֶם","and-you-shall-trample"],["רְשָׁעִים","wicked-men"],["כִּי־יִהְיוּ","because-shall-be"],["אֵפֶר","ashes"],["תַּחַת","under"],["כַּפּוֹת","the-soles"],["רַגְלֵיכֶם","your-foot"],["בַּיּוֹם","in-the-day"],["אֲשֶׁר","which"],["אֲנִי","I"],["עֹשֶׂה","do"],["אָמַר","said"],["יְהֹוָה","the-LORD"],["צְבָאוֹת","of-Hosts"],["׃",""]] },
   { num:"כב", words:[["זִכְרוּ","remember"],["תּוֹרַת","the-law-of"],["מֹשֶׁה","Moses"],["עַבְדִּי","my-servant"],["אֲשֶׁר","which"],["צִוִּיתִי","have-I-commanded"],["אוֹתוֹ","him"],["בְחֹרֵב","by-the-sword"],["עַל־כׇּל־יִשְׂרָאֵל","upon-all-Israel"],["חֻקִּים","laws"],["וּמִשְׁפָּטִים","and-judgments"],["׃",""]] },
   { num:"כג", words:[["הִנֵּה","behold"],["אָנֹכִי","I"],["שֹׁלֵחַ","sent"],["לָכֶם","to-you"],["אֵת־אֵלִיָּה","Elijah"],["הַנָּבִיא","the-prophet"],["לִפְנֵי","before"],["בּוֹא","coming-of"],["יוֹם","day"],["יְהֹוָה","the-LORD"],["הַגָּדוֹל","the-great"],["וְהַנּוֹרָא","and-the-awesome"],["׃",""]] },
-  { num:"כד", words:[["וְהֵשִׁיב","and-he-restored"],["לֵב־אָבוֹת","heart-the-fathers"],["עַל־בָּנִים","upon-children"],["וְלֵב","and-heart"],["בָּנִים","children"],["עַל־אֲבוֹתָם","of-their-fathers"],["פֶּן־אָבוֹא","lest-I-will-come"],["וְהִכֵּיתִי","and-I-will-smite"],["אֶת־הָאָרֶץ","the-earth"],["חֵרֶם","destruction"],["׃",""]] },
+  { num:"כד", words:[["וְהֵשִׁיב","and-he-restored"],["לֵב־אָבוֹת","heart-the-fathers"],["עַל־בָּנִים","upon-children"],["וְלֵב","and-heart"],["בָּנִים","children"],["עַל־אֲבוֹתָם","of-their-fathers"],["פֶּן־אָבוֹא","lest-I-will-come"],["וְהִכֵּיתִי","and-I-will-smite"],["אֶת־הָאָרֶץ","the-earth"],["חֵרֶם","a devoted thing"],["׃",""]] },
 ];
 renderVerseSet(mal_ch3Verses, 'mal-ch3-verses');
 
