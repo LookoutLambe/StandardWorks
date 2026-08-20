@@ -944,7 +944,7 @@ var pro_ch29Verses = [
   { num:"ה", words:[["גֶּבֶר","a man"],["מַחֲלִיק","who flatters"],["עַל־רֵעֵהוּ","upon-another"],["רֶשֶׁת","a net of"],["פּוֹרֵשׂ","is spreading"],["עַל־פְּעָמָיו","upon-his-feet"],["׃",""]] },
   { num:"ו", words:[["בְּפֶשַׁע","into-transgression"],["אִישׁ","a-man"],["רָע","evil"],["מוֹקֵשׁ","a snare"],["וְצַדִּיק","and-righteous"],["יָרוּן","he cries aloud"],["וְשָׂמֵחַ","and-he rejoices"],["׃",""]] },
   { num:"ז", words:[["יֹדֵעַ","He-knows"],["צַדִּיק","righteous"],["דִּין","endless-damnation"],["דַּלִּים","the-poor"],["רָשָׁע","wicked"],["לֹא־יָבִין","not-understand"],["דָּעַת","knowledge"],["׃",""]] },
-  { num:"ח", words:[["אַנְשֵׁי","the-men-of"],["לָצוֹן","mockery"],["יָפִיחוּ","they inflame"],["קִרְיָה","a town"],["וַחֲכָמִים","and-wise people"],["יָשִׁיבוּ","Ishibo"],["אָף","anger"],["׃",""]] },
+  { num:"ח", words:[["אַנְשֵׁי","the-men-of"],["לָצוֹן","mockery"],["יָפִיחוּ","they inflame"],["קִרְיָה","a town"],["וַחֲכָמִים","and-wise people"],["יָשִׁיבוּ","they shall render"],["אָף","anger"],["׃",""]] },
   { num:"ט", words:[["אִישׁ־חָכָם","man-of-wise"],["נִשְׁפָּט","who enters into judgment"],["אֶת־אִישׁ","man-of"],["אֱוִיל","fool"],["וְרָגַז","and-he rages"],["וְשָׂחַק","and-he laughs"],["וְאֵין","and-there-is-no"],["נָחַת","will we descend"],["׃",""]] },
   { num:"י", words:[["אַנְשֵׁי","the-men-of"],["דָמִים","blood-of-their"],["יִשְׂנְאוּ־תָם","will they hate?-a blameless person"],["וִישָׁרִים","and-upright"],["יְבַקְשׁוּ","seek"],["נַפְשׁוֹ","his-soul"],["׃",""]] },
   { num:"יא", words:[["כׇּל־רוּחוֹ","all-His-Spirit"],["יוֹצִיא","shall-bring-out"],["כְסִיל","is a fool"],["וְחָכָם","and-a-wise"],["בְּאָחוֹר","in-backwards"],["יְשַׁבְּחֶנָּה","he calms-it"],["׃",""]] },
