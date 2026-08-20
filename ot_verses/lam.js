@@ -118,7 +118,7 @@ var lam_ch3Verses = [
   { num:"סג", words:[["שִׁבְתָּם","dwelling-they"],["וְקִימָתָם","and-their-rising"],["הַבִּיטָה","the-pay attention"],["אֲנִי","I"],["מַנְגִּינָתָם","their-mocking song"],["׃",""]] },
   { num:"סד", words:[["תָּשִׁיב","recall"],["לָהֶם","to-them"],["גְּמוּל","recompense"],["יְהֹוָה","the-LORD"],["כְּמַעֲשֵׂה","as-the-work-of"],["יְדֵיהֶם","their-hands"],["׃",""]] },
   { num:"סה", words:[["תִּתֵּן","you-shall-give"],["לָהֶם","to-them"],["מְגִנַּת־לֵב","shamelessness of-heart"],["תַּאֲלָתְךָ","your-curse"],["לָהֶם","to-them"],["׃",""]] },
-  { num:"סו", words:[["תִּרְדֹּף","persecute-thou"],["בְּאַף","in-anger"],["וְתַשְׁמִידֵם","and-you will destroy-them"],["מִתַּחַת","from-beneath"],["שְׁמֵי","the heavens of"],["יְהֹוָה","the-LORD"],["׃",""]] },
+  { num:"סו", words:[["תִּרְדֹּף","you-pursue"],["בְּאַף","in-anger"],["וְתַשְׁמִידֵם","and-you will destroy-them"],["מִתַּחַת","from-beneath"],["שְׁמֵי","the heavens of"],["יְהֹוָה","the-LORD"],["׃",""]] },
 ];
 renderVerseSet(lam_ch3Verses, 'lam-ch3-verses');
 
