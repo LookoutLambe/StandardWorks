@@ -927,7 +927,7 @@ var _1ch_ch25Verses = [
 renderVerseSet(_1ch_ch25Verses, '1ch-ch25-verses');
 
 var _1ch_ch26Verses = [
-  { num:"א", words:[["לְמַחְלְקוֹת","to-divisions"],["לְשֹׁעֲרִים","to-gatekeepers"],["לַקׇּרְחִים","the-to-Korah"],["מְשֶׁלֶמְיָהוּ","Meshelemiah"],["בֶן־קֹרֵא","son-of-I-call"],["מִן־בְּנֵי","from-the-sons-of"],["אָסָף","Asaph"],["׃",""]] },
+  { num:"א", words:[["לְמַחְלְקוֹת","to-divisions"],["לְשֹׁעֲרִים","to-gatekeepers"],["לַקׇּרְחִים","the-to-Korah"],["מְשֶׁלֶמְיָהוּ","Meshelemiah"],["בֶן־קֹרֵא","son-of-Kore"],["מִן־בְּנֵי","from-the-sons-of"],["אָסָף","Asaph"],["׃",""]] },
   { num:"ב", words:[["וְלִמְשֶׁלֶמְיָהוּ","and-to-Meshelemiah"],["בָּנִים","sons"],["זְכַרְיָהוּ","Zechariah"],["הַבְּכוֹר","the-elder"],["יְדִיעֲאֵל","Jediael"],["הַשֵּׁנִי","the-second"],["זְבַדְיָהוּ","Zebadiah"],["הַשְּׁלִישִׁי","the-third"],["יַתְנִיאֵל","Jathniel"],["הָרְבִיעִי","the-fourth"],["׃",""]] },
   { num:"ג", words:[["עֵילָם","Elam"],["הַחֲמִישִׁי","the-fifth"],["יְהוֹחָנָן","Jehohanan"],["הַשִּׁשִּׁי","the-sixth"],["אֶלְיְהוֹעֵינַי","Eliehoenai"],["הַשְּׁבִיעִי","the-seventh"],["׃",""]] },
   { num:"ד", words:[["וּלְעֹבֵד","and-to-Obed-"],["אֱדֹם","Edom"],["בָּנִים","sons"],["שְׁמַעְיָה","Shemaiah"],["הַבְּכוֹר","the-elder"],["יְהוֹזָבָד","Jehozabad"],["הַשֵּׁנִי","the-second"],["יוֹאָח","Joah"],["הַשְּׁלִשִׁי","the-third"],["וְשָׂכָר","and-Sakar"],["הָרְבִיעִי","the-fourth"],["וּנְתַנְאֵל","and-Nethanel"],["הַחֲמִישִׁי","the-fifth"],["׃",""]] },
