@@ -287,7 +287,7 @@ var psa_ch18Verses = [
   { num:"כט", words:[["כִּי־אַתָּה","that-you"],["תָּאִיר","light"],["נֵרִי","my-lamp"],["יְהֹוָה","the-LORD"],["אֱלֹהַי","my-God"],["יַגִּיהַּ","will-enlighten"],["חׇשְׁכִּי","my-darkness"],["׃",""]] },
   { num:"ל", words:[["כִּי־בְךָ","because-in-You"],["אָרֻץ","I-can-run-against"],["גְּדוּד","a-troop"],["וּבֵאלֹהַי","and-by-my-God"],["אֲדַלֶּג־שׁוּר","I-can-leap-over-a-wall"],["׃",""]] },
   { num:"לא", words:[["הָאֵל","the-God"],["תָּמִים","uprightly"],["דַּרְכּוֹ","His-way"],["אִמְרַת־יְהֹוָה","the-word-of-the-LORD"],["צְרוּפָה","is refined"],["מָגֵן","a-shield"],["הוּא","he"],["לְכֹל","for-all"],["הַחֹסִים","those-who-trust"],["בּוֹ","in-it"],["׃",""]] },
-  { num:"לב", words:[["כִּי","because"],["מִי","who"],["אֱלוֹהַּ","God"],["מִבַּלְעֲדֵי","besides"],["יְהֹוָה","the-LORD"],["וּמִי","and-who"],["צוּר","the-rock-of"],["זוּלָתִי","except"],["אֱלֹהֵינוּ","our-God"],["׃",""]] },
+  { num:"לב", words:[["כִּי","because"],["מִי","who"],["אֱלוֹהַּ","God"],["מִבַּלְעֲדֵי","other than"],["יְהֹוָה","the-LORD"],["וּמִי","and-who"],["צוּר","the-rock-of"],["זוּלָתִי","except"],["אֱלֹהֵינוּ","our-God"],["׃",""]] },
   { num:"לג", words:[["הָאֵל","the-God"],["הַמְאַזְּרֵנִי","who-arms-me"],["חָיִל","of-valor"],["וַיִּתֵּן","and-gave"],["תָּמִים","uprightly"],["דַּרְכִּי","my-way"],["׃",""]] },
   { num:"לד", words:[["מְשַׁוֶּה","He-makes"],["רַגְלַי","my-feet"],["כָּאַיָּלוֹת","like-the-deer"],["וְעַל","and-upon"],["בָּמֹתַי","my-high-places"],["יַעֲמִידֵנִי","He-sets-me"],["׃",""]] },
   { num:"לה", words:[["מְלַמֵּד","He-teaches"],["יָדַי","my-hands"],["לַמִּלְחָמָה","for-war"],["וְנִחֲתָה","so-that-is-bent"],["קֶשֶׁת־נְחוּשָׁה","a-bow-of-bronze"],["זְרוֹעֹתָי","by-my-arms"],["׃",""]] },
