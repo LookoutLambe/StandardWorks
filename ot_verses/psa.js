@@ -17,7 +17,7 @@ var psa_ch2Verses = [
   { num:"ד", words:[["יוֹשֵׁב","He-who-sits"],["בַּשָּׁמַיִם","in-the-heavens"],["יִשְׂחָק","shall-laugh"],["אֲדֹנָי","the-Lord"],["יִלְעַג־לָמוֹ","shall-mock-them"],["׃",""]] },
   { num:"ה", words:[["אָז","then"],["יְדַבֵּר","He-shall-speak"],["אֵלֵימוֹ","to-them"],["בְאַפּוֹ","in-His-anger"],["וּבַחֲרוֹנוֹ","and-in-His-fury"],["יְבַהֲלֵמוֹ","He-terrifies-them"],["׃",""]] },
   { num:"ו", words:[["וַאֲנִי","yet-I"],["נָסַכְתִּי","have-set"],["מַלְכִּי","My-King"],["עַל־צִיּוֹן","upon-Zion"],["הַר־קׇדְשִׁי","My-holy-hill"],["׃",""]] },
-  { num:"ז", words:[["אֲסַפְּרָה","I-will-declare"],["אֶל־חֹק","the-decree"],["יְהֹוָה","the-LORD"],["אָמַר־אֵלַי","said-to-me"],["בְּנִי","My-Son"],["אַתָּה","You-are"],["אֲנִי","I"],["הַיּוֹם","today"],["יְלִדְתִּיךָ","have-begotten-You"],["׃",""]] },
+  { num:"ז", words:[["אֲסַפְּרָה","I-will-declare"],["אֶל־חֹק","the-decree"],["יְהֹוָה","the-LORD"],["אָמַר־אֵלַי","said-to-me"],["בְּנִי","My-son"],["אַתָּה","You-are"],["אֲנִי","I"],["הַיּוֹם","today"],["יְלִדְתִּיךָ","have-begotten-You"],["׃",""]] },
   { num:"ח", words:[["שְׁאַל","ask"],["מִמֶּנִּי","of-Me"],["וְאֶתְּנָה","and-I-will-give"],["גוֹיִם","the-nations"],["נַחֲלָתֶךָ","for-Your-inheritance"],["וַאֲחֻזָּתְךָ","and-Your-possession"],["אַפְסֵי־אָרֶץ","the-ends-of-the-earth"],["׃",""]] },
   { num:"ט", words:[["תְּרֹעֵם","You-shall-break-them"],["בְּשֵׁבֶט","with-a-rod-of"],["בַּרְזֶל","iron"],["כִּכְלִי","like-a-vessel-of"],["יוֹצֵר","a-potter"],["תְּנַפְּצֵם","You-shall-dash-them-in-pieces"],["׃",""]] },
   { num:"י", words:[["וְעַתָּה","and-now"],["מְלָכִים","O-kings"],["הַשְׂכִּילוּ","be-wise"],["הִוָּסְרוּ","be-instructed"],["שֹׁפְטֵי","O-judges-of"],["אָרֶץ","the-earth"],["׃",""]] },
@@ -121,7 +121,7 @@ var psa_ch8Verses = [
 renderVerseSet(psa_ch8Verses, 'psa-ch8-verses');
 
 var psa_ch9Verses = [
-  { num:"א", words:[["לַמְנַצֵּחַ","to-the-chief-musician"],["עַל־מוּת","to-the-tune-of-Death"],["לַבֵּן","of-the-Son"],["מִזְמוֹר","a-psalm"],["לְדָוִד","of-David"],["׃",""]] },
+  { num:"א", words:[["לַמְנַצֵּחַ","to-the-chief-musician"],["עַל־מוּת","to-the-tune-of-Death"],["לַבֵּן","of-the-son"],["מִזְמוֹר","a-psalm"],["לְדָוִד","of-David"],["׃",""]] },
   { num:"ב", words:[["אוֹדֶה","I-will-praise"],["יְהֹוָה","the-LORD"],["בְּכׇל־לִבִּי","in-all-my-heart"],["אֲסַפְּרָה","I-will-tell-of"],["כׇּל־נִפְלְאוֹתֶיךָ","all-Your-wondrous-works"],["׃",""]] },
   { num:"ג", words:[["אֶשְׂמְחָה","I will rejoice"],["וְאֶעֶלְצָה","and-I will exult"],["בָךְ","you"],["אֲזַמְּרָה","I will sing praises to"],["שִׁמְךָ","Your-name"],["עֶלְיוֹן","Most-High"],["׃",""]] },
   { num:"ד", words:[["בְּשׁוּב־אוֹיְבַי","when-my-enemies"],["אָחוֹר","back"],["יִכָּשְׁלוּ","they-shall-fall"],["וְיֹאבְדוּ","and-perish"],["מִפָּנֶיךָ","from-Your-presence"],["׃",""]] },
@@ -973,7 +973,7 @@ var psa_ch50Verses = [
   { num:"יז", words:[["וְאַתָּה","for-you"],["שָׂנֵאתָ","you hate"],["מוּסָר","discipline"],["וַתַּשְׁלֵךְ","and-she threw"],["דְּבָרַי","my-words"],["אַחֲרֶיךָ","after-you"],["׃",""]] },
   { num:"יח", words:[["אִם־רָאִיתָ","if-you-saw"],["גַנָּב","a thief"],["וַתִּרֶץ","and-you were pleased"],["עִמּוֹ","with-him"],["וְעִם","and-with"],["מְנָאֲפִים","adulterers"],["חֶלְקֶךָ","portion-your"],["׃",""]] },
   { num:"יט", words:[["פִּיךָ","your mouth"],["שָׁלַחְתָּ","you sent"],["בְרָעָה","in-distress"],["וּלְשׁוֹנְךָ","and-tongue-your"],["תַּצְמִיד","it harnesses"],["מִרְמָה","not-deceitful"],["׃",""]] },
-  { num:"כ", words:[["תֵּשֵׁב","shall-sit"],["בְּאָחִיךָ","on-countryman-your"],["תְדַבֵּר","you will speak"],["בְּבֶן־אִמְּךָ","in-Son-of-mother-your"],["תִּתֶּן־דֹּפִי","she-will-give-a fault"],["׃",""]] },
+  { num:"כ", words:[["תֵּשֵׁב","shall-sit"],["בְּאָחִיךָ","on-countryman-your"],["תְדַבֵּר","you will speak"],["בְּבֶן־אִמְּךָ","in-son-of-mother-your"],["תִּתֶּן־דֹּפִי","she-will-give-a fault"],["׃",""]] },
   { num:"כא", words:[["אֵלֶּה","these"],["עָשִׂיתָ","you-did"],["וְהֶחֱרַשְׁתִּי","and-I kept silent"],["דִּמִּיתָ","you imagined"],["הֱיוֹת־אֶהְיֶה","have-I-may-be"],["כָמוֹךָ","as-you"],["אוֹכִיחֲךָ","I will rebuke-you"],["וְאֶעֶרְכָה","and-I will arrange"],["לְעֵינֶיךָ","to-eyes-your"],["׃",""]] },
   { num:"כב", words:[["בִּינוּ־נָא","consider-I-pray"],["זֹאת","this"],["שֹׁכְחֵי","those who forget"],["אֱלוֹהַּ","God"],["פֶּן־אֶטְרֹף","lest-I should tear to pieces"],["וְאֵין","and-has-no"],["מַצִּיל","a-deliverer"],["׃",""]] },
   { num:"כג", words:[["זֹבֵחַ","am sacrificing"],["תּוֹדָה","thanksgiving"],["יְכַבְּדָנְנִי","he honors-me"],["וְשָׂם","and-makes"],["דֶּרֶךְ","the-way-of"],["אַרְאֶנּוּ","I will let look-him"],["בְּיֵשַׁע","in-safety"],["אֱלֹהִים","God"],["׃",""]] },
@@ -3051,7 +3051,7 @@ renderVerseSet(psa_ch145Verses, 'psa-ch145-verses');
 var psa_ch146Verses = [
   { num:"א", words:[["הַלְלוּ־יָהּ","praise-JAH"],["הַלְלִי","praise"],["נַפְשִׁי","my-soul"],["אֶת־יְהֹוָה","the-LORD"],["׃",""]] },
   { num:"ב", words:[["אֲהַלְלָה","I will praise"],["יְהֹוָה","the-LORD"],["בְּחַיָּי","my-life"],["אֲזַמְּרָה","I will sing praises to"],["לֵאלֹהַי","to-my-God"],["בְּעוֹדִי","while-I-was"],["׃",""]] },
-  { num:"ג", words:[["אַל־תִּבְטְחוּ","do-not-trust"],["בִנְדִיבִים","in-noble people"],["בְּבֶן־אָדָם","in-Son-of-man"],["שֶׁאֵין","whom-not"],["לוֹ","him"],["תְשׁוּעָה","deliverance"],["׃",""]] },
+  { num:"ג", words:[["אַל־תִּבְטְחוּ","do-not-trust"],["בִנְדִיבִים","in-noble people"],["בְּבֶן־אָדָם","in-son-of-man"],["שֶׁאֵין","whom-not"],["לוֹ","him"],["תְשׁוּעָה","deliverance"],["׃",""]] },
   { num:"ד", words:[["תֵּצֵא","shall-go-forth"],["רוּחוֹ","His-Spirit"],["יָשֻׁב","he will return"],["לְאַדְמָתוֹ","to-earth-his"],["בַּיּוֹם","in-the-day"],["הַהוּא","that"],["אָבְדוּ","have-perished"],["עֶשְׁתֹּנֹתָיו","plans-his"],["׃",""]] },
   { num:"ה", words:[["אַשְׁרֵי","blessed-are"],["שֶׁאֵל","is one whom-the God of"],["יַעֲקֹב","Jacob"],["בְּעֶזְרוֹ","is-help-his"],["שִׂבְרוֹ","hope-his"],["עַל־יְהֹוָה","upon-the-LORD"],["אֱלֹהָיו","his-God"],["׃",""]] },
   { num:"ו", words:[["עֹשֶׂה","do"],["שָׁמַיִם","the-heavens"],["וָאָרֶץ","and-earth"],["אֶת־הַיָּם","the-sea"],["וְאֶת־כׇּל־אֲשֶׁר־בָּם","and-all-whose-in-them"],["הַשֹּׁמֵר","the-one-who-keeps"],["אֱמֶת","truth"],["לְעוֹלָם","forever"],["׃",""]] },
