@@ -231,7 +231,7 @@ var pro_ch7Verses = [
 renderVerseSet(pro_ch7Verses, 'pro-ch7-verses');
 
 var pro_ch8Verses = [
-  { num:"א", words:[["הֲלֹא־חׇכְמָה","do-not-wisdom"],["תִקְרָא","you will call"],["וּתְבוּנָה","and-understanding"],["תִּתֵּן","you-shall-give"],["קוֹלָהּ","her-voice"],["׃",""]] },
+  { num:"א", words:[["הֲלֹא־חׇכְמָה","is-it-not-wisdom"],["תִקְרָא","you will call"],["וּתְבוּנָה","and-understanding"],["תִּתֵּן","you-shall-give"],["קוֹלָהּ","her-voice"],["׃",""]] },
   { num:"ב", words:[["בְּרֹאשׁ־מְרֹמִים","on-the top of-high places"],["עֲלֵי־דָרֶךְ","on-a path"],["בֵּית","the-house-of"],["נְתִיבוֹת","paths"],["נִצָּבָה","it stood upright"],["׃",""]] },
   { num:"ג", words:[["לְיַד־שְׁעָרִים","beside-measures"],["לְפִי־קָרֶת","according-to-the town"],["מְבוֹא","from-the-coming-of"],["פְתָחִים","the doorways"],["תָּרֹנָּה","it cries aloud"],["׃",""]] },
   { num:"ד", words:[["אֲלֵיכֶם","unto-you"],["אִישִׁים","men"],["אֶקְרָא","I-read"],["וְקוֹלִי","and-my-voice"],["אֶל־בְּנֵי","unto-the-sons-of"],["אָדָם","man"],["׃",""]] },
@@ -446,7 +446,7 @@ var pro_ch14Verses = [
   { num:"יט", words:[["שַׁחוּ","they bow"],["רָעִים","evil"],["לִפְנֵי","before"],["טוֹבִים","good"],["וּרְשָׁעִים","and-wicked-men"],["עַל־שַׁעֲרֵי","upon-the-gates-of"],["צַדִּיק","righteous"],["׃",""]] },
   { num:"כ", words:[["גַּם־לְרֵעֵהוּ","also-another"],["יִשָּׂנֵא","he is hated"],["רָשׁ","take possession of it"],["וְאֹהֲבֵי","and-those who love"],["עָשִׁיר","rich"],["רַבִּים","many"],["׃",""]] },
   { num:"כא", words:[["בׇּז־לְרֵעֵהוּ","plunder-another"],["חוֹטֵא","a sinner"],["וּמְחוֹנֵן","and-one who shows favor to"],["(עניים)",""],["[עֲנָוִים]","humble people"],["אַשְׁרָיו","how blessed is-he"],["׃",""]] },
-  { num:"כב", words:[["הֲלוֹא־יִתְעוּ","art-not-they will wander about"],["חֹרְשֵׁי","plowers of"],["רָע","evil"],["וְחֶסֶד","and-lovingkindness-of"],["וֶאֱמֶת","and-true"],["חֹרְשֵׁי","plowers of"],["טוֹב","good"],["׃",""]] },
+  { num:"כב", words:[["הֲלוֹא־יִתְעוּ","is-it-not-they will wander about"],["חֹרְשֵׁי","plowers of"],["רָע","evil"],["וְחֶסֶד","and-lovingkindness-of"],["וֶאֱמֶת","and-true"],["חֹרְשֵׁי","plowers of"],["טוֹב","good"],["׃",""]] },
   { num:"כג", words:[["בְּכׇל־עֶצֶב","in-all-grief"],["יִהְיֶה","shall-be"],["מוֹתָר","profit"],["וּדְבַר־שְׂפָתַיִם","and-talk-of-the-lips"],["אַךְ־לְמַחְסוֹר","but-to-poverty"],["׃",""]] },
   { num:"כד", words:[["עֲטֶרֶת","crown-of"],["חֲכָמִים","wise"],["עׇשְׁרָם","their-tithe"],["אִוֶּלֶת","foolishness"],["כְּסִילִים","fools"],["אִוֶּלֶת","foolishness"],["׃",""]] },
   { num:"כה", words:[["מַצִּיל","shall-deliver-them"],["נְפָשׁוֹת","souls"],["עֵד","witness"],["אֱמֶת","truth"],["וְיָפִחַ","so-he may breathe out"],["כְּזָבִים","liars"],["מִרְמָה","deceit"],["׃",""]] },
@@ -783,7 +783,7 @@ var pro_ch24Verses = [
   { num:"ט", words:[["זִמַּת","a plan of"],["אִוֶּלֶת","foolishness"],["חַטָּאת","sin"],["וְתוֹעֲבַת","and-the-abominations-of"],["לְאָדָם","to-man"],["לֵץ","scorner"],["׃",""]] },
   { num:"י", words:[["הִתְרַפִּיתָ","you have shown yourself without courage"],["בְּיוֹם","in-the-day-of"],["צָרָה","affliction"],["צַר","adversary"],["כֹּחֶכָה","your-strength"],["׃",""]] },
   { num:"יא", words:[["הַצֵּל","surely"],["לְקֻחִים","those being taken"],["לַמָּוֶת","the-death"],["וּמָטִים","and-those who are staggering"],["לַהֶרֶג","to the-slaughter"],["אִם־תַּחְשׂוֹךְ","if-you will restrain"],["׃",""]] },
-  { num:"יב", words:[["כִּי־תֹאמַר","that-you-say"],["הֵן","yea"],["לֹא־יָדַעְנוּ","not-we-know"],["זֶה","this"],["הֲלֹא־תֹכֵן","do-not-one who weighs"],["לִבּוֹת","the-hearts-of"],["הוּא־יָבִין","it-is-understand"],["וְנֹצֵר","and-one who guards"],["נַפְשְׁךָ","your-soul"],["הוּא","he"],["יֵדָע","let it know"],["וְהֵשִׁיב","and-he-restored"],["לְאָדָם","to-man"],["כְּפׇעֳלוֹ","as-one who does-his"],["׃",""]] },
+  { num:"יב", words:[["כִּי־תֹאמַר","that-you-say"],["הֵן","yea"],["לֹא־יָדַעְנוּ","not-we-know"],["זֶה","this"],["הֲלֹא־תֹכֵן","is-it-not-one who weighs"],["לִבּוֹת","the-hearts-of"],["הוּא־יָבִין","it-is-understand"],["וְנֹצֵר","and-one who guards"],["נַפְשְׁךָ","your-soul"],["הוּא","he"],["יֵדָע","let it know"],["וְהֵשִׁיב","and-he-restored"],["לְאָדָם","to-man"],["כְּפׇעֳלוֹ","as-one who does-his"],["׃",""]] },
   { num:"יג", words:[["אֱכׇל־בְּנִי","food-my-son"],["דְבַשׁ","honey"],["כִּי־טוֹב","that-it-is-well"],["וְנֹפֶת","and-the honey of"],["מָתוֹק","sweet"],["עַל־חִכֶּךָ","upon-your-palate"],["׃",""]] },
   { num:"יד", words:[["כֵּן","thus"],["דְּעֶה","know"],["חׇכְמָה","wisdom"],["לְנַפְשֶׁךָ","for-your-self"],["אִם־מָצָאתָ","if-found"],["וְיֵשׁ","and-there-was"],["אַחֲרִית","final-state-of"],["וְתִקְוָתְךָ","and-your-hope"],["לֹא","not"],["תִכָּרֵת","it will be cut off"],["׃",""]] },
   { num:"טו", words:[["אַל־תֶּאֱרֹב","do-not-she lies in wait"],["רָשָׁע","wicked"],["לִנְוֵה","to-the habitation of"],["צַדִּיק","righteous"],["אַל־תְּשַׁדֵּד","do-not-you devastate"],["רִבְצוֹ","his-resting place"],["׃",""]] },
@@ -860,7 +860,7 @@ var pro_ch26Verses = [
   { num:"טז", words:[["חָכָם","wise"],["עָצֵל","idle"],["בְּעֵינָיו","in-his-eyes"],["מִשִּׁבְעָה","more than-seven"],["מְשִׁיבֵי","who bring back"],["טָעַם","tasted"],["׃",""]] },
   { num:"יז", words:[["מַחֲזִיק","to-take-hold-of"],["בְּאׇזְנֵי־כָלֶב","in-ears-my-a dog"],["עֹבֵר","that-passes-away"],["מִתְעַבֵּר","is arrogant"],["עַל־רִיב","upon-contention"],["לֹּא־לוֹ","In-him"],["׃",""]] },
   { num:"יח", words:[["כְּמִתְלַהְלֵהַּ","like-a madman"],["הַיֹּרֶה","the-one-who-throws"],["זִקִּים","burning arrows"],["חִצִּים","arrows"],["וָמָוֶת","and-death"],["׃",""]] },
-  { num:"יט", words:[["כֵּן־אִישׁ","thus-man-of"],["רִמָּה","the-worm"],["אֶת־רֵעֵהוּ","another"],["וְאָמַר","and-said"],["הֲלֹא־מְשַׂחֵק","do-not-jesting"],["אָנִי","I"],["׃",""]] },
+  { num:"יט", words:[["כֵּן־אִישׁ","thus-man-of"],["רִמָּה","the-worm"],["אֶת־רֵעֵהוּ","another"],["וְאָמַר","and-said"],["הֲלֹא־מְשַׂחֵק","is-it-not-jesting"],["אָנִי","I"],["׃",""]] },
   { num:"כ", words:[["בְּאֶפֶס","in-save"],["עֵצִים","small-trees"],["תִּכְבֶּה־אֵשׁ","it is extinguished-fire"],["וּבְאֵין","and-where-there-is-no"],["נִרְגָּן","a slanderer"],["יִשְׁתֹּק","it becomes quiet"],["מָדוֹן","disturbance"],["׃",""]] },
   { num:"כא", words:[["פֶּחָם","coals"],["לְגֶחָלִים","to-burning coals"],["וְעֵצִים","and-wood"],["לְאֵשׁ","for-a-fire"],["וְאִישׁ","and-a-man"],["(מדונים)",""],["[מִדְיָנִים]","Midianites"],["לְחַרְחַר־רִיב","to-kindling-contention"],["׃",""]] },
   { num:"כב", words:[["דִּבְרֵי","account-of"],["נִרְגָּן","a slanderer"],["כְּמִתְלַהֲמִים","are like-delicacies"],["וְהֵם","and-they"],["יָרְדוּ","came-down"],["חַדְרֵי־בָטֶן","the chambers of-the womb"],["׃",""]] },
