@@ -464,7 +464,7 @@ var pro_ch14Verses = [
 renderVerseSet(pro_ch14Verses, 'pro-ch14-verses');
 
 var pro_ch15Verses = [
-  { num:"א", words:[["מַעֲנֶה־רַּךְ","from-answered-soft"],["יָשִׁיב","He-shall-turn-away"],["חֵמָה","wrath"],["וּדְבַר־עֶצֶב","and-spoke-grief"],["יַעֲלֶה־אָף","let-ascend-anger"],["׃",""]] },
+  { num:"א", words:[["מַעֲנֶה־רַּךְ","from-answered-soft"],["יָשִׁיב","he-shall-return"],["חֵמָה","wrath"],["וּדְבַר־עֶצֶב","and-spoke-grief"],["יַעֲלֶה־אָף","let-ascend-anger"],["׃",""]] },
   { num:"ב", words:[["לְשׁוֹן","the-language-of"],["חֲכָמִים","wise"],["תֵּיטִיב","you will do well"],["דָּעַת","knowledge"],["וּפִי","and-the opening of"],["כְסִילִים","fools"],["יַבִּיעַ","it pours forth"],["אִוֶּלֶת","foolishness"],["׃",""]] },
   { num:"ג", words:[["בְּכׇל־מָקוֹם","in-all-place"],["עֵינֵי","the-eyes-of"],["יְהֹוָה","the-LORD"],["צֹפוֹת","watching"],["רָעִים","evil"],["וְטוֹבִים","and-good houses"],["׃",""]] },
   { num:"ד", words:[["מַרְפֵּא","was healing"],["לָשׁוֹן","tongue"],["עֵץ","a-tree"],["חַיִּים","living"],["וְסֶלֶף","and-the crookedness of"],["בָּהּ","in-it"],["שֶׁבֶר","a fracture"],["בְּרוּחַ","in-the-Spirit"],["׃",""]] },
@@ -822,7 +822,7 @@ var pro_ch25Verses = [
   { num:"י", words:[["פֶּן־יְחַסֶּדְךָ","lest-he should bring shame-you"],["שֹׁמֵעַ","that-obeys"],["וְדִבָּתְךָ","and-evil report-your"],["לֹא","not"],["תָשׁוּב","return"],["׃",""]] },
   { num:"יא", words:[["תַּפּוּחֵי","apples of"],["זָהָב","gold"],["בְּמַשְׂכִּיּוֹת","in-settings of"],["כָּסֶף","silver"],["דָּבָר","a-word"],["דָּבֻר","spoken"],["עַל־אׇפְנָיו","upon-proper times-its"],["׃",""]] },
   { num:"יב", words:[["נֶזֶם","a ring of"],["זָהָב","gold"],["וַחֲלִי־כָתֶם","and-Hali-pure gold"],["מוֹכִיחַ","is an arbiter"],["חָכָם","wise"],["עַל־אֹזֶן","upon-an-ear"],["שֹׁמָעַת","listening"],["׃",""]] },
-  { num:"יג", words:[["כְּצִנַּת־שֶׁלֶג","is like-the cold of-snow"],["בְּיוֹם","in-the-day-of"],["קָצִיר","harvest"],["צִיר","an envoy"],["נֶאֱמָן","more-faithful"],["לְשֹׁלְחָיו","to-those who send-him"],["וְנֶפֶשׁ","and-soul"],["אֲדֹנָיו","his-master"],["יָשִׁיב","He-shall-turn-away"],["׃",""]] },
+  { num:"יג", words:[["כְּצִנַּת־שֶׁלֶג","is like-the cold of-snow"],["בְּיוֹם","in-the-day-of"],["קָצִיר","harvest"],["צִיר","an envoy"],["נֶאֱמָן","more-faithful"],["לְשֹׁלְחָיו","to-those who send-him"],["וְנֶפֶשׁ","and-soul"],["אֲדֹנָיו","his-master"],["יָשִׁיב","he-shall-return"],["׃",""]] },
   { num:"יד", words:[["נְשִׂיאִים","were leaders"],["וְרוּחַ","and-spirit-of"],["וְגֶשֶׁם","and-Geshem"],["אָיִן","not"],["אִישׁ","a-man"],["מִתְהַלֵּל","who boasts"],["בְּמַתַּת־שָׁקֶר","by-the-gift-false"],["׃",""]] },
   { num:"טו", words:[["בְּאֹרֶךְ","in the length of"],["אַפַּיִם","with-face"],["יְפֻתֶּה","he will be persuaded"],["קָצִין","be-our-ruler"],["וְלָשׁוֹן","tongue"],["רַכָּה","soft"],["תִּשְׁבׇּר־גָּרֶם","it may be broken-bone"],["׃",""]] },
   { num:"טז", words:[["דְּבַשׁ","honey"],["מָצָאתָ","found"],["אֱכֹל","eat it"],["דַּיֶּךָּ","sufficiency-your"],["פֶּן־תִּשְׂבָּעֶנּוּ","lest-you should be surfeited with-it"],["וַהֲקֵאתוֹ","and-you will vomit up-it"],["׃",""]] },
@@ -997,7 +997,7 @@ var pro_ch30Verses = [
   { num:"כז", words:[["מֶלֶךְ","the-king-of"],["אֵין","there-is-no"],["לָאַרְבֶּה","to the-locust"],["וַיֵּצֵא","and-went-out"],["חֹצֵץ","dividing"],["כֻּלּוֹ","entirely"],["׃",""]] },
   { num:"כח", words:[["שְׂמָמִית","a lizard"],["בְּיָדַיִם","in-two hands"],["תְּתַפֵּשׂ","you will grasp"],["וְהִיא","and-she-was"],["בְּהֵיכְלֵי","in-their-pleasant"],["מֶלֶךְ","the-king-of"],["׃",""]] },
   { num:"כט", words:[["שְׁלֹשָׁה","three"],["הֵמָּה","they"],["מֵיטִיבֵי","are doing well of"],["צָעַד","he-did-march-forth"],["וְאַרְבָּעָה","and-four"],["מֵיטִבֵי","are doing well"],["לָכֶת","to walk"],["׃",""]] },
-  { num:"ל", words:[["לַיִשׁ","Laish"],["גִּבּוֹר","mighty"],["בַּבְּהֵמָה","among the-livestock"],["וְלֹא־יָשׁוּב","and-not-repent"],["מִפְּנֵי־כֹל","because-of-all"],["׃",""]] },
+  { num:"ל", words:[["לַיִשׁ","Laish"],["גִּבּוֹר","mighty"],["בַּבְּהֵמָה","among the-livestock"],["וְלֹא־יָשׁוּב","and-not-return"],["מִפְּנֵי־כֹל","because-of-all"],["׃",""]] },
   { num:"לא", words:[["זַרְזִיר","a rooster of"],["מׇתְנַיִם","the hips"],["אוֹ־תָיִשׁ","or-a male goat"],["וּמֶלֶךְ","and-a-king"],["אַלְקוּם","a band of soldiers"],["עִמּוֹ","with-him"],["׃",""]] },
   { num:"לב", words:[["אִם־נָבַלְתָּ","if-you have been foolish"],["בְהִתְנַשֵּׂא","by-exalting yourself"],["וְאִם־זַמּוֹתָ","and-if-you have plotted"],["יָד","hands"],["לְפֶה","a mouth"],["׃",""]] },
   { num:"לג", words:[["כִּי","because"],["מִיץ","squeezing of"],["חָלָב","milk"],["יוֹצִיא","shall-bring-out"],["חֶמְאָה","butter"],["וּמִיץ־אַף","and-squeezing of-yea"],["יוֹצִיא","shall-bring-out"],["דָם","blood"],["וּמִיץ","and-squeezing of"],["אַפַּיִם","with-face"],["יוֹצִיא","shall-bring-out"],["רִיב","contention"],["׃",""]] },
