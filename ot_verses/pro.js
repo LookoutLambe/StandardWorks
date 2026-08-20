@@ -359,7 +359,7 @@ var pro_ch11Verses = [
   { num:"כח", words:[["בּוֹטֵחַ","is secure"],["בְּעׇשְׁרוֹ","in-his-riches"],["הוּא","he"],["יִפּוֹל","shall-fall"],["וְכֶעָלֶה","and-like-leaf"],["צַדִּיקִים","just"],["יִפְרָחוּ","they will bud"],["׃",""]] },
   { num:"כט", words:[["עֹכֵר","O one who troubles"],["בֵּיתוֹ","his-house"],["יִנְחַל־רוּחַ","he will inherit-spirit-of"],["וְעֶבֶד","and-the-servant-of"],["אֱוִיל","fool"],["לַחֲכַם־לֵב","of-the wise of-heart"],["׃",""]] },
   { num:"ל", words:[["פְּרִי־צַדִּיק","fruit-righteous"],["עֵץ","a-tree"],["חַיִּים","living"],["וְלֹקֵחַ","and-one who takes"],["נְפָשׁוֹת","souls"],["חָכָם","wise"],["׃",""]] },
-  { num:"לא", words:[["הֵן","yea"],["צַדִּיק","righteous"],["בָּאָרֶץ","in-the-land"],["יְשֻׁלָּם","he is rewarded"],["אַף","moreover"],["כִּי־רָשָׁע","because-wicked"],["וְחוֹטֵא","and-sinful"],["׃",""]] },
+  { num:"לא", words:[["הֵן","behold"],["צַדִּיק","righteous"],["בָּאָרֶץ","in-the-land"],["יְשֻׁלָּם","he is rewarded"],["אַף","moreover"],["כִּי־רָשָׁע","because-wicked"],["וְחוֹטֵא","and-sinful"],["׃",""]] },
 ];
 renderVerseSet(pro_ch11Verses, 'pro-ch11-verses');
 
@@ -783,7 +783,7 @@ var pro_ch24Verses = [
   { num:"ט", words:[["זִמַּת","a plan of"],["אִוֶּלֶת","foolishness"],["חַטָּאת","sin"],["וְתוֹעֲבַת","and-the-abominations-of"],["לְאָדָם","to-man"],["לֵץ","scorner"],["׃",""]] },
   { num:"י", words:[["הִתְרַפִּיתָ","you have shown yourself without courage"],["בְּיוֹם","in-the-day-of"],["צָרָה","affliction"],["צַר","adversary"],["כֹּחֶכָה","your-strength"],["׃",""]] },
   { num:"יא", words:[["הַצֵּל","surely"],["לְקֻחִים","those being taken"],["לַמָּוֶת","the-death"],["וּמָטִים","and-those who are staggering"],["לַהֶרֶג","to the-slaughter"],["אִם־תַּחְשׂוֹךְ","if-you will restrain"],["׃",""]] },
-  { num:"יב", words:[["כִּי־תֹאמַר","that-you-say"],["הֵן","yea"],["לֹא־יָדַעְנוּ","not-we-know"],["זֶה","this"],["הֲלֹא־תֹכֵן","is-it-not-one who weighs"],["לִבּוֹת","the-hearts-of"],["הוּא־יָבִין","it-is-understand"],["וְנֹצֵר","and-one who guards"],["נַפְשְׁךָ","your-soul"],["הוּא","he"],["יֵדָע","let it know"],["וְהֵשִׁיב","and-he-restored"],["לְאָדָם","to-man"],["כְּפׇעֳלוֹ","as-one who does-his"],["׃",""]] },
+  { num:"יב", words:[["כִּי־תֹאמַר","that-you-say"],["הֵן","behold"],["לֹא־יָדַעְנוּ","not-we-know"],["זֶה","this"],["הֲלֹא־תֹכֵן","is-it-not-one who weighs"],["לִבּוֹת","the-hearts-of"],["הוּא־יָבִין","it-is-understand"],["וְנֹצֵר","and-one who guards"],["נַפְשְׁךָ","your-soul"],["הוּא","he"],["יֵדָע","let it know"],["וְהֵשִׁיב","and-he-restored"],["לְאָדָם","to-man"],["כְּפׇעֳלוֹ","as-one who does-his"],["׃",""]] },
   { num:"יג", words:[["אֱכׇל־בְּנִי","food-my-son"],["דְבַשׁ","honey"],["כִּי־טוֹב","that-it-is-well"],["וְנֹפֶת","and-the honey of"],["מָתוֹק","sweet"],["עַל־חִכֶּךָ","upon-your-palate"],["׃",""]] },
   { num:"יד", words:[["כֵּן","thus"],["דְּעֶה","know"],["חׇכְמָה","wisdom"],["לְנַפְשֶׁךָ","for-your-self"],["אִם־מָצָאתָ","if-found"],["וְיֵשׁ","and-there-was"],["אַחֲרִית","final-state-of"],["וְתִקְוָתְךָ","and-your-hope"],["לֹא","not"],["תִכָּרֵת","it will be cut off"],["׃",""]] },
   { num:"טו", words:[["אַל־תֶּאֱרֹב","do-not-she lies in wait"],["רָשָׁע","wicked"],["לִנְוֵה","to-the habitation of"],["צַדִּיק","righteous"],["אַל־תְּשַׁדֵּד","do-not-you devastate"],["רִבְצוֹ","his-resting place"],["׃",""]] },
