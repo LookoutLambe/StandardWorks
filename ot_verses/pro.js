@@ -708,7 +708,7 @@ var pro_ch22Verses = [
   { num:"ו", words:[["חֲנֹךְ","train"],["לַנַּעַר","for the-lad"],["עַל־פִּי","according-to"],["דַרְכּוֹ","his-way"],["גַּם","also"],["כִּי־יַזְקִין","because-it will grow old"],["לֹא־יָסוּר","not-shall-be-taken-away"],["מִמֶּנָּה","from it"],["׃",""]] },
   { num:"ז", words:[["עָשִׁיר","rich"],["בְּרָשִׁים","over-poor people"],["יִמְשׁוֹל","he rules"],["וְעֶבֶד","and-the-servant-of"],["לֹוֶה","is borrowing"],["לְאִישׁ","for-a-man"],["מַלְוֶה","a lender"],["׃",""]] },
   { num:"ח", words:[["זוֹרֵעַ","one who sows"],["עַוְלָה","injustice"],["(יקצור)",""],["[יִקְצׇר־]אָוֶן","he-shall-reap-Aven"],["וְשֵׁבֶט","and-a rod"],["עֶבְרָתוֹ","his-fury"],["יִכְלֶה","perishes"],["׃",""]] },
-  { num:"ט", words:[["טוֹב־עַיִן","good-eye"],["הוּא","he"],["יְבֹרָךְ","will-bless"],["כִּי־נָתַן","because-gave"],["מִלַּחְמוֹ","his-some of-food"],["לַדָּל","to-the-poor person"],["׃",""]] },
+  { num:"ט", words:[["טוֹב־עַיִן","good-eye"],["הוּא","he"],["יְבֹרָךְ","will-bless"],["כִּי־נָתַן","because-gave"],["מִלַּחְמוֹ","some-of-his-food"],["לַדָּל","to-the-poor person"],["׃",""]] },
   { num:"י", words:[["גָּרֵשׁ","drive out"],["לֵץ","scorner"],["וְיֵצֵא","and-shall-go-forth"],["מָדוֹן","disturbance"],["וְיִשְׁבֹּת","so-may cease"],["דִּין","endless-damnation"],["וְקָלוֹן","and-shame"],["׃",""]] },
   { num:"יא", words:[["אֹהֵב","loves"],["(טהור)",""],["[טְהׇר־]לֵב","the clean of-heart"],["חֵן","favor"],["שְׂפָתָיו","his-lips"],["רֵעֵהוּ","his-fellow"],["מֶלֶךְ","the-king-of"],["׃",""]] },
   { num:"יב", words:[["עֵינֵי","the-eyes-of"],["יְהֹוָה","the-LORD"],["נָצְרוּ","they preserve"],["דָעַת","knowledge"],["וַיְסַלֵּף","and-he has subverted"],["דִּבְרֵי","the-words-of"],["בֹגֵד","one who acts treacherously"],["׃",""]] },
