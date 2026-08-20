@@ -1064,7 +1064,7 @@ var job_ch37Verses = [
   { num:"יז", words:[["אֲשֶׁר־בְּגָדֶיךָ","which-garments-of-your"],["חַמִּים","are hot"],["בְּהַשְׁקִט","when-is still"],["אֶרֶץ","the-land-of"],["מִדָּרוֹם","from-the south"],["׃",""]] },
   { num:"יח", words:[["תַּרְקִיעַ","will you spread out?"],["עִמּוֹ","with-him"],["לִשְׁחָקִים","clouds"],["חֲזָקִים","are-strong"],["כִּרְאִי","like-a mirror"],["מוּצָק","in-anguish"],["׃",""]] },
   { num:"יט", words:[["הוֹדִיעֵנוּ","make known to-us"],["מַה־נֹּאמַר","what-will we say"],["לוֹ","him"],["לֹא־נַעֲרֹךְ","not-we will set in order"],["מִפְּנֵי־חֹשֶׁךְ","because-of-darkness"],["׃",""]] },
-  { num:"כ", words:[["הַיְסֻפַּר־לוֹ","will it be recounted-him"],["כִּי","because"],["אֲדַבֵּר","I-speak"],["אִם־אָמַר","if-said"],["אִישׁ","a-man"],["כִּי","because"],["יְבֻלָּע","he will be swallowed up"],["׃",""]] },
+  { num:"כ", words:[["הַיְסֻפַּר־לוֹ","will it be recounted-him"],["כִּי","because"],["אֲדַבֵּר","I-speak"],["אִם־אָמַר","if-said"],["אִישׁ","a-man"],["כִּי","if"],["יְבֻלָּע","he will be swallowed up"],["׃",""]] },
   { num:"כא", words:[["וְעַתָּה","and-now"],["לֹא־רָאוּ","not-saw"],["אוֹר","light"],["בָּהִיר","is brilliant"],["הוּא","he"],["בַּשְּׁחָקִים","in the-clouds"],["וְרוּחַ","and-spirit-of"],["עָבְרָה","had-passed-away"],["וַתְּטַהֲרֵם","and-it has cleansed-them"],["׃",""]] },
   { num:"כב", words:[["מִצָּפוֹן","from-north"],["זָהָב","gold"],["יֶאֱתֶה","it comes"],["עַל־אֱלוֹהַּ","upon-Loh"],["נוֹרָא","awful"],["הוֹד","splendor"],["׃",""]] },
   { num:"כג", words:[["שַׁדַּי","Almighty"],["לֹא־מְצָאנֻהוּ","not-we have found-him"],["שַׂגִּיא־כֹחַ","is exalted-power-of"],["וּמִשְׁפָּט","and-judgment"],["וְרֹב־צְדָקָה","and-most-of-a-state-of-righteousness"],["לֹא","not"],["יְעַנֶּה","he violates"],["׃",""]] },

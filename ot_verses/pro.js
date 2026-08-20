@@ -117,7 +117,7 @@ var pro_ch4Verses = [
   { num:"יב", words:[["בְּלֶכְתְּךָ","when-you-go"],["לֹא־יֵצַר","not-it-grieves"],["צַעֲדֶךָ","your-steps"],["וְאִם־תָּרוּץ","and-if-you will run"],["לֹא","not"],["תִכָּשֵׁל","you will stumble"],["׃",""]] },
   { num:"יג", words:[["הַחֲזֵק","the-strengthen"],["בַּמּוּסָר","on-the-discipline"],["אַל־תֶּרֶף","do-not-you let drop"],["נִצְּרֶהָ","her-keep"],["כִּי־הִיא","because-it-is"],["חַיֶּיךָ","your-life"],["׃",""]] },
   { num:"יד", words:[["בְּאֹרַח","in-the-path-of"],["רְשָׁעִים","wicked-men"],["אַל־תָּבֹא","do-not-comes"],["וְאַל־תְּאַשֵּׁר","and-do-not-you advance"],["בְּדֶרֶךְ","after-the-manner-of"],["רָעִים","evil"],["׃",""]] },
-  { num:"טו", words:[["פְּרָעֵהוּ","avoid-it"],["אַל־תַּעֲבׇר־בּוֹ","do-not-may-pass-against-him"],["שְׂטֵה","turn aside"],["מֵעָלָיו","from-with-him"],["וַעֲבֹר","and-passing-of"],["׃",""]] },
+  { num:"טו", words:[["פְּרָעֵהוּ","avoid-it"],["אַל־תַּעֲבׇר־בּוֹ","do-not-may-pass-against-him"],["שְׂטֵה","stray"],["מֵעָלָיו","from-with-him"],["וַעֲבֹר","and-passing-of"],["׃",""]] },
   { num:"טז", words:[["כִּי","because"],["לֹא","not"],["יִשְׁנוּ","they repeated"],["אִם־לֹא","if-not"],["יָרֵעוּ","they do harm"],["וְנִגְזְלָה","and-it is taken away"],["שְׁנָתָם","their-sleep"],["אִם־לֹא","if-not"],["[יַכְשִׁילוּ]","they bring injury"],["׃",""]] },
   { num:"יז", words:[["כִּי","because"],["לָחֲמוּ","they eat"],["לֶחֶם","bread"],["רֶשַׁע","wickedness"],["וְיֵין","and-wine of"],["חֲמָסִים","violence"],["יִשְׁתּוּ","they-drink"],["׃",""]] },
   { num:"יח", words:[["וְאֹרַח","and-a way"],["צַדִּיקִים","just"],["כְּאוֹר","as-light-of"],["נֹגַהּ","light"],["הוֹלֵךְ","going"],["וָאוֹר","and-the-light"],["עַד־נְכוֹן","until-the established part of"],["הַיּוֹם","the-day"],["׃",""]] },
@@ -224,7 +224,7 @@ var pro_ch7Verses = [
   { num:"כב", words:[["הוֹלֵךְ","going"],["אַחֲרֶיהָ","her-behind"],["פִּתְאֹם","suddenly"],["כְּשׁוֹר","like-an ox"],["אֶל־טֶבַח","to-slaughter"],["יָבֹא","shall-come"],["וּכְעֶכֶס","and-like-an anklet"],["אֶל־מוּסַר","to-the-chastisement-of"],["אֱוִיל","fool"],["׃",""]] },
   { num:"כג", words:[["עַד","until"],["יְפַלַּח","he splits open"],["חֵץ","the-arrow"],["כְּבֵדוֹ","his-liver"],["כְּמַהֵר","as-hurries"],["צִפּוֹר","bird"],["אֶל־פָּח","to-a trap"],["וְלֹא־יָדַע","and-not-he-knew"],["כִּי־בְנַפְשׁוֹ","because-with-his-life"],["הוּא","he"],["׃",""]] },
   { num:"כד", words:[["וְעַתָּה","and-now"],["בָנִים","sons"],["שִׁמְעוּ־לִי","hear-to-me"],["וְהַקְשִׁיבוּ","and-hearken"],["לְאִמְרֵי־פִי","to-the-words-of-my-mouth"],["׃",""]] },
-  { num:"כה", words:[["אַל־יֵשְׂטְ","do-not-it turn aside"],["אֶל־דְּרָכֶיהָ","to-her-ways"],["לִבֶּךָ","your-heart"],["אַל־תֵּתַע","do-not-it go astray"],["בִּנְתִיבוֹתֶיהָ","in-her-pathways"],["׃",""]] },
+  { num:"כה", words:[["אַל־יֵשְׂטְ","do-not-it stray"],["אֶל־דְּרָכֶיהָ","to-her-ways"],["לִבֶּךָ","your-heart"],["אַל־תֵּתַע","do-not-it go astray"],["בִּנְתִיבוֹתֶיהָ","in-her-pathways"],["׃",""]] },
   { num:"כו", words:[["כִּי־רַבִּים","that-many"],["חֲלָלִים","those slain"],["הִפִּילָה","she has made fall"],["וַעֲצֻמִים","and-mighty"],["כׇּל־הֲרֻגֶיהָ","all-her-killed men"],["׃",""]] },
   { num:"כז", words:[["דַּרְכֵי","the-ways-of"],["שְׁאוֹל","Sheol"],["בֵּיתָהּ","her-house"],["יֹרְדוֹת","are going down"],["אֶל־חַדְרֵי־מָוֶת","to-the chambers of-death"],["׃",""]] },
 ];
