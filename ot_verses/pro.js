@@ -485,7 +485,7 @@ var pro_ch15Verses = [
   { num:"יט", words:[["דֶּרֶךְ","the way of"],["עָצֵל","idle"],["כִּמְשֻׂכַת","is like-a hedge of"],["חָדֶק","thorns"],["וְאֹרַח","and-a way"],["יְשָׁרִים","just"],["סְלֻלָה","is cast up"],["׃",""]] },
   { num:"כ", words:[["בֵּן","a-son"],["חָכָם","wise"],["יְשַׂמַּח־אָב","which it makes glad-father"],["וּכְסִיל","and-Kesil"],["אָדָם","man"],["בּוֹזֶה","is despising"],["אִמּוֹ","his-mother"],["׃",""]] },
   { num:"כא", words:[["אִוֶּלֶת","foolishness"],["שִׂמְחָה","joy"],["לַחֲסַר־לֵב","to-one lacking of-heart"],["וְאִישׁ","and-a-man"],["תְּבוּנָה","is understanding"],["יְיַשֶּׁר־לָכֶת","it was pleasing-to walk"],["׃",""]] },
-  { num:"כב", words:[["הָפֵר","actually"],["מַחֲשָׁבוֹת","purposes-of"],["בְּאֵין","in-un"],["סוֹד","counsels-of"],["וּבְרֹב","and-His-great"],["יוֹעֲצִים","counselors"],["תָּקוּם","fulfilled-be"],["׃",""]] },
+  { num:"כב", words:[["הָפֵר","at all"],["מַחֲשָׁבוֹת","purposes-of"],["בְּאֵין","in-un"],["סוֹד","counsels-of"],["וּבְרֹב","and-His-great"],["יוֹעֲצִים","counselors"],["תָּקוּם","fulfilled-be"],["׃",""]] },
   { num:"כג", words:[["שִׂמְחָה","joy"],["לָאִישׁ","to-the-man"],["בְּמַעֲנֵה־פִיו","in-the answer of-his-mouth"],["וְדָבָר","and-thing"],["בְּעִתּוֹ","in-its-time"],["מַה־טּוֹב","what-is good"],["׃",""]] },
   { num:"כד", words:[["אֹרַח","path"],["חַיִּים","living"],["לְמַעְלָה","upward"],["לְמַשְׂכִּיל","for-one who acts prudently"],["לְמַעַן","in-order-that"],["סוּר","depart"],["מִשְּׁאוֹל","from-Sheol"],["מָטָּה","beneath"],["׃",""]] },
   { num:"כה", words:[["בֵּית","the-house-of"],["גֵּאִים","proud people"],["יִסַּח","he tears down"],["יְהֹוָה","the-LORD"],["וְיַצֵּב","and-he will establish"],["גְּבוּל","border-of"],["אַלְמָנָה","a widow"],["׃",""]] },
