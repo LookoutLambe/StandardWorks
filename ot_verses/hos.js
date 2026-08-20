@@ -38,7 +38,7 @@ var hos_ch2Verses = [
   { num:"כב", words:[["וְאֵרַשְׂתִּיךְ","and-I will betroth-you"],["לִי","to-me"],["בֶּאֱמוּנָה","with-much-faith"],["וְיָדַעַתְּ","and-you-shall-know"],["אֶת־יְהֹוָה","the-LORD"],["׃",""]] },
   { num:"כג", words:[["וְהָיָה","and-be"],["בַּיּוֹם","in-the-day"],["הַהוּא","that"],["אֶעֱנֶה","I-will-answered"],["נְאֻם־יְהֹוָה","says-the-LORD"],["אֶעֱנֶה","I-will-answered"],["אֶת־הַשָּׁמָיִם","the-heavens"],["וְהֵם","and-they"],["יַעֲנוּ","shall-speak"],["אֶת־הָאָרֶץ","the-earth"],["׃",""]] },
   { num:"כד", words:[["וְהָאָרֶץ","and-the-earth"],["תַּעֲנֶה","it will answer"],["אֶת־הַדָּגָן","the-grain"],["וְאֶת־הַתִּירוֹשׁ","and-the-new wine"],["וְאֶת־הַיִּצְהָר","and-the-fresh oil"],["וְהֵם","and-they"],["יַעֲנוּ","shall-speak"],["אֶת־יִזְרְעֶאל","Jezreel"],["׃",""]] },
-  { num:"כה", words:[["וּזְרַעְתִּיהָ","and-I will sow-her"],["לִּי","to-me"],["בָּאָרֶץ","in-the-land"],["וְרִחַמְתִּי","and-I will have compassion on"],["אֶת־לֹא","not"],["רֻחָמָה","Ruhamah"],["וְאָמַרְתִּי","and-I will say"],["לְלֹא־עַמִּי","to-not-my-people"],["עַמִּי־אַתָּה","my-people-you"],["וְהוּא","and-he"],["יֹאמַר","He-says"],["אֱלֹהָי","my-God"],["׃",""]] },
+  { num:"כה", words:[["וּזְרַעְתִּיהָ","and-I will sow-her"],["לִּי","to-me"],["בָּאָרֶץ","in-the-land"],["וְרִחַמְתִּי","and-I will have compassion on"],["אֶת־לֹא","not"],["רֻחָמָה","Ruhamah"],["וְאָמַרְתִּי","and-I will say"],["לְלֹא־עַמִּי","to-not-my-people"],["עַמִּי־אַתָּה","my-people-you"],["וְהוּא","and-he"],["יֹאמַר","he-says"],["אֱלֹהָי","my-God"],["׃",""]] },
 ];
 renderVerseSet(hos_ch2Verses, 'hos-ch2-verses');
 
