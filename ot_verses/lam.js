@@ -77,7 +77,7 @@ var lam_ch3Verses = [
   { num:"כב", words:[["חַסְדֵי","lovingkindnesses-of"],["יְהֹוָה","the-LORD"],["כִּי","because"],["לֹא־תָמְנוּ","not-we have met our end"],["כִּי","because"],["לֹא־כָלוּ","not-they have wasted away"],["רַחֲמָיו","His-mercy"],["׃",""]] },
   { num:"כג", words:[["חֲדָשִׁים","new-ones"],["לַבְּקָרִים","has been to the-mornings"],["רַבָּה","much"],["אֱמוּנָתֶךָ","your-faith"],["׃",""]] },
   { num:"כד", words:[["חֶלְקִי","my-part"],["יְהֹוָה","the-LORD"],["אָמְרָה","said"],["נַפְשִׁי","my-life"],["עַל־כֵּן","therefore"],["אוֹחִיל","will I wait"],["לוֹ","him"],["׃",""]] },
-  { num:"כה", words:[["טוֹב","good"],["יְהֹוָה","the-LORD"],["לְקֹוָו","to-Koo"],["לְנֶפֶשׁ","a creature"],["תִּדְרְשֶׁנּוּ","you will seek-him"],["׃",""]] },
+  { num:"כה", words:[["טוֹב","good"],["יְהֹוָה","the-LORD"],["לְקֹוָו","to-Koo"],["לְנֶפֶשׁ","to the soul"],["תִּדְרְשֶׁנּוּ","you will seek-him"],["׃",""]] },
   { num:"כו", words:[["טוֹב","good"],["וְיָחִיל","and-waiting"],["וְדוּמָם","and-silently"],["לִתְשׁוּעַת","to-salvation"],["יְהֹוָה","the-LORD"],["׃",""]] },
   { num:"כז", words:[["טוֹב","good"],["לַגֶּבֶר","for-the-man"],["כִּי־יִשָּׂא","because-takes-away"],["עֹל","yoke"],["בִּנְעוּרָיו","in-his-youth"],["׃",""]] },
   { num:"כח", words:[["יֵשֵׁב","shall dwell"],["בָּדָד","alone"],["וְיִדֹּם","and-let him be silent"],["כִּי","because"],["נָטַל","he-took"],["עָלָיו","upon-him"],["׃",""]] },
