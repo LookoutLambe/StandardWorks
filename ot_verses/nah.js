@@ -14,7 +14,7 @@ var nah_ch1Verses = [
   { num:"יא", words:[["מִמֵּךְ","from-you"],["יָצָא","he-went-forth"],["חֹשֵׁב","a skillful worker"],["עַל־יְהֹוָה","upon-the-LORD"],["רָעָה","evil"],["יֹעֵץ","a counselor of"],["בְּלִיָּעַל","worthlessness"],["׃",""]] },
   { num:"יב", words:[["כֹּה","thus"],["אָמַר","said"],["יְהֹוָה","the-LORD"],["אִם־שְׁלֵמִים","if-perfect"],["וְכֵן","and-so"],["רַבִּים","many"],["וְכֵן","and-so"],["וְעָבָר","and-it will pass over"],["וְעִנִּתִךְ","and-I have afflicted-you"],["לֹא","not"],["אֲעַנֵּךְ","I will afflict-you"],["עוֹד","any-more"],["׃",""]] },
   { num:"יג", words:[["וְעַתָּה","and-now"],["אֶשְׁבֹּר","I will break"],["מֹטֵהוּ","yoke-bar-his"],["מֵעָלָיִךְ","from-with-you"],["וּמוֹסְרֹתַיִךְ","and-fetters-your"],["אֲנַתֵּק","I-burst"],["׃",""]] },
-  { num:"יד", words:[["וְצִוָּה","and-He-has-commanded"],["עָלֶיךָ","upon-you"],["יְהֹוָה","the-LORD"],["לֹא־יִזָּרַע","not-he-will-seed"],["מִשִּׁמְךָ","from-name-your"],["עוֹד","any-more"],["מִבֵּית","from-the-house-of"],["אֱלֹהֶיךָ","your-God"],["אַכְרִית","I-shall-cut-off"],["פֶּסֶל","an image of"],["וּמַסֵּכָה","and-a molten image"],["אָשִׂים","shall-I-put"],["קִבְרֶךָ","grave-your"],["כִּי","because"],["קַלּוֹתָ","you are insignificant"],["׃",""]] },
+  { num:"יד", words:[["וְצִוָּה","and-shall-command"],["עָלֶיךָ","upon-you"],["יְהֹוָה","the-LORD"],["לֹא־יִזָּרַע","not-he-will-seed"],["מִשִּׁמְךָ","from-name-your"],["עוֹד","any-more"],["מִבֵּית","from-the-house-of"],["אֱלֹהֶיךָ","your-God"],["אַכְרִית","I-shall-cut-off"],["פֶּסֶל","an image of"],["וּמַסֵּכָה","and-a molten image"],["אָשִׂים","shall-I-put"],["קִבְרֶךָ","grave-your"],["כִּי","because"],["קַלּוֹתָ","you are insignificant"],["׃",""]] },
 ];
 renderVerseSet(nah_ch1Verses, 'nah-ch1-verses');
 

@@ -99,7 +99,7 @@ renderVerseSet(sos_ch5Verses, 'sos-ch5-verses');
 
 var sos_ch6Verses = [
   { num:"א", words:[["אָנָה","whither"],["הָלַךְ","went"],["דּוֹדֵךְ","lover-your"],["הַיָּפָה","the-beautiful"],["בַּנָּשִׁים","among the-women"],["אָנָה","whither"],["פָּנָה","turned"],["דוֹדֵךְ","lover-your"],["וּנְבַקְשֶׁנּוּ","so-we may seek-him"],["עִמָּךְ","with-you"],["׃",""]] },
-  { num:"ב", words:[["דּוֹדִי","my-beloved"],["יָרַד","came-down"],["לְגַנּוֹ","to-garden-his"],["לַעֲרֻגוֹת","to-the-the beds of"],["הַבֹּשֶׂם","the-spice"],["לִרְעוֹת","to-tend"],["בַּגַּנִּים","in the-gardens"],["וְלִלְקֹט","and-to-gather"],["שׁוֹשַׁנִּים","Shoshannim"],["׃",""]] },
+  { num:"ב", words:[["דּוֹדִי","my-beloved"],["יָרַד","came-down"],["לְגַנּוֹ","to-garden-his"],["לַעֲרֻגוֹת","to-the beds of"],["הַבֹּשֶׂם","the-spice"],["לִרְעוֹת","to-tend"],["בַּגַּנִּים","in the-gardens"],["וְלִלְקֹט","and-to-gather"],["שׁוֹשַׁנִּים","Shoshannim"],["׃",""]] },
   { num:"ג", words:[["אֲנִי","I"],["לְדוֹדִי","to-lover-my"],["וְדוֹדִי","and-lover-my"],["לִי","to-me"],["הָרֹעֶה","the-shepherd"],["בַּשּׁוֹשַׁנִּים","among the-lilies"],["׃",""]] },
   { num:"ד", words:[["יָפָה","beautiful"],["אַתְּ","you"],["רַעְיָתִי","O friend-my"],["כְּתִרְצָה","like-Tirzah"],["נָאוָה","is fitting"],["כִּירוּשָׁלָ͏ִם","like-Jerusalem"],["אֲיֻמָּה","majestic"],["כַּנִּדְגָּלוֹת","like-the-hosts with banners"],["׃",""]] },
   { num:"ה", words:[["הָסֵבִּי","turn"],["עֵינַיִךְ","your-eyes"],["מִנֶּגְדִּי","from-before-me"],["שֶׁהֵם","that-they"],["הִרְהִיבֻנִי","they have confused-me"],["שַׂעְרֵךְ","hair-your"],["כְּעֵדֶר","as-a-wild-flock"],["הָעִזִּים","the-goats"],["שֶׁגָּלְשׁוּ","that-have descended"],["מִן־הַגִּלְעָד","from-the-Gilead"],["׃",""]] },
