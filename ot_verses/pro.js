@@ -665,7 +665,7 @@ var pro_ch20Verses = [
 renderVerseSet(pro_ch20Verses, 'pro-ch20-verses');
 
 var pro_ch21Verses = [
-  { num:"א", words:[["פַּלְגֵי־מַיִם","streams of-water"],["לֶב־מֶלֶךְ","the heart of-king-of"],["בְּיַד־יְהֹוָה","by-the-hand-of-the-Lord"],["עַל־כׇּל־אֲשֶׁר","upon-all-whose"],["יַחְפֹּץ","delights"],["יַטֶּנּוּ","he turns-it"],["׃",""]] },
+  { num:"א", words:[["פַּלְגֵי־מַיִם","streams of-water"],["לֶב־מֶלֶךְ","the heart of-king-of"],["בְּיַד־יְהֹוָה","by-the-hand-of-the-Lord"],["עַל־כׇּל־אֲשֶׁר","upon-all-that"],["יַחְפֹּץ","delights"],["יַטֶּנּוּ","he turns-it"],["׃",""]] },
   { num:"ב", words:[["כׇּל־דֶּרֶךְ־אִישׁ","all-through-man-of"],["יָשָׁר","straight"],["בְּעֵינָיו","in-his-eyes"],["וְתֹכֵן","and-is weighing"],["לִבּוֹת","the-hearts-of"],["יְהֹוָה","the-LORD"],["׃",""]] },
   { num:"ג", words:[["עֲשֹׂה","to act"],["צְדָקָה","a-state-of-righteousness"],["וּמִשְׁפָּט","and-judgment"],["נִבְחָר","was-chosen"],["לַיהֹוָה","to-the-LORD"],["מִזָּבַח","more than-sacrifice"],["׃",""]] },
   { num:"ד", words:[["רוּם־עֵינַיִם","the-haughtiness-of-by-the-eyes-of"],["וּרְחַב־לֵב","and-the wide of-heart"],["נִר","the lamp of"],["רְשָׁעִים","wicked-men"],["חַטָּאת","sin"],["׃",""]] },
@@ -802,7 +802,7 @@ var pro_ch24Verses = [
   { num:"כח", words:[["אַל־תְּהִי","do-not-be"],["עֵד־חִנָּם","false-witness-is-free"],["בְּרֵעֶךָ","in-your-neighbor"],["וַהֲפִתִּיתָ","and-will you deceive"],["בִּשְׂפָתֶיךָ","upon-your-lips"],["׃",""]] },
   { num:"כט", words:[["אַל־תֹּאמַר","do-not-you-say"],["כַּאֲשֶׁר","as"],["עָשָׂה־לִי","he-did-to-me"],["כֵּן","thus"],["אֶעֱשֶׂה־לּוֹ","I-do-upon-him"],["אָשִׁיב","recall"],["לָאִישׁ","to-the-man"],["כְּפׇעֳלוֹ","as-one who does-his"],["׃",""]] },
   { num:"ל", words:[["עַל־שְׂדֵה","upon-the-field-of"],["אִישׁ־עָצֵל","man-of-idle"],["עָבַרְתִּי","I-transgressed"],["וְעַל־כֶּרֶם","and-upon-a-vineyard"],["אָדָם","man"],["חֲסַר־לֵב","helpless-heart"],["׃",""]] },
-  { num:"לא", words:[["וְהִנֵּה","and-behold"],["עָלָה","ascended"],["כֻלּוֹ","every-one-is"],["קִמְּשֹׂנִים","thorns"],["כׇּסּוּ","covered"],["פָנָיו","His-face"],["חֲרֻלִּים","nettles"],["וְגֶדֶר","and-the wall of"],["אֲבָנָיו","its-stones"],["נֶהֱרָסָה","it was broken down"],["׃",""]] },
+  { num:"לא", words:[["וְהִנֵּה","and-behold"],["עָלָה","ascended"],["כֻלּוֹ","every-one-is"],["קִמְּשֹׂנִים","thorns"],["כׇּסּוּ","covered"],["פָנָיו","its-face"],["חֲרֻלִּים","nettles"],["וְגֶדֶר","and-the wall of"],["אֲבָנָיו","its-stones"],["נֶהֱרָסָה","it was broken down"],["׃",""]] },
   { num:"לב", words:[["וָאֶחֱזֶה","and-I saw"],["אָנֹכִי","I"],["אָשִׁית","I will put"],["לִבִּי","my-heart"],["רָאִיתִי","I-saw"],["לָקַחְתִּי","I-have-taken"],["מוּסָר","discipline"],["׃",""]] },
   { num:"לג", words:[["מְעַט","somewhat"],["שֵׁנוֹת","sleep"],["מְעַט","somewhat"],["תְּנוּמוֹת","slumber"],["מְעַט","somewhat"],["חִבֻּק","folding of"],["יָדַיִם","both hands"],["לִשְׁכָּב","to-rest"],["׃",""]] },
   { num:"לד", words:[["וּבָא־מִתְהַלֵּךְ","and-come-walking"],["רֵישֶׁךָ","your-poverty"],["וּמַחְסֹרֶיךָ","and-your-poverty"],["כְּאִישׁ","as-a-man"],["מָגֵן","a-protector"],["׃",""]] },

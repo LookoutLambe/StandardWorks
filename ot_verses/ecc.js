@@ -172,7 +172,7 @@ var ecc_ch7Verses = [
 renderVerseSet(ecc_ch7Verses, 'ecc-ch7-verses');
 
 var ecc_ch8Verses = [
-  { num:"א", words:[["מִי","who"],["כְּהֶחָכָם","is like-the-wise person"],["וּמִי","and-whoso"],["יוֹדֵעַ","knows"],["פֵּשֶׁר","meaning-of"],["דָּבָר","a-word"],["חׇכְמַת","you are wise"],["אָדָם","man"],["תָּאִיר","Tir"],["פָּנָיו","His-face"],["וְעֹז","and-power"],["פָּנָיו","His-face"],["יְשֻׁנֶּא","it is changed"],["׃",""]] },
+  { num:"א", words:[["מִי","who"],["כְּהֶחָכָם","is like-the-wise person"],["וּמִי","and-whoso"],["יוֹדֵעַ","knows"],["פֵּשֶׁר","meaning-of"],["דָּבָר","a-word"],["חׇכְמַת","you are wise"],["אָדָם","man"],["תָּאִיר","Tir"],["פָּנָיו","his-face"],["וְעֹז","and-power"],["פָּנָיו","his-face"],["יְשֻׁנֶּא","it is changed"],["׃",""]] },
   { num:"ב", words:[["אֲנִי","I"],["פִּי־מֶלֶךְ","mouth-of-king-of"],["שְׁמֹר","watch"],["וְעַל","and-upon"],["דִּבְרַת","matter-of"],["שְׁבוּעַת","the oath of"],["אֱלֹהִים","God"],["׃",""]] },
   { num:"ג", words:[["אַל־תִּבָּהֵל","do-not-you be hasty"],["מִפָּנָיו","from-before-him"],["תֵּלֵךְ","should-go"],["אַל־תַּעֲמֹד","do-not-shall-stand"],["בְּדָבָר","in-word"],["רָע","evil"],["כִּי","because"],["כׇּל־אֲשֶׁר","all-that"],["יַחְפֹּץ","delights"],["יַעֲשֶׂה","he-shall-do"],["׃",""]] },
   { num:"ד", words:[["בַּאֲשֶׁר","because"],["דְּבַר־מֶלֶךְ","word-of-king-of"],["שִׁלְטוֹן","government"],["וּמִי","and-whoso"],["יֹאמַר־לוֹ","He-says-him"],["מַה־תַּעֲשֶׂה","what-you-make"],["׃",""]] },
