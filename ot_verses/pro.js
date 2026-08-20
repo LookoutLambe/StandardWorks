@@ -995,7 +995,7 @@ var pro_ch30Verses = [
   { num:"כה", words:[["הַנְּמָלִים","the-ants"],["עַם","people"],["לֹא־עָז","not-mighty"],["וַיָּכִינוּ","and-they-prepared"],["בַקַּיִץ","in the-summer"],["לַחְמָם","their-for food"],["׃",""]] },
   { num:"כו", words:[["שְׁפַנִּים","rock badgers"],["עַם","people"],["לֹא־עָצוּם","not-mighty"],["וַיָּשִׂימוּ","and-they-put"],["בַסֶּלַע","in the-rocks"],["בֵּיתָם","their-house"],["׃",""]] },
   { num:"כז", words:[["מֶלֶךְ","the-king-of"],["אֵין","there-is-no"],["לָאַרְבֶּה","to the-locust"],["וַיֵּצֵא","and-went-out"],["חֹצֵץ","dividing"],["כֻּלּוֹ","entirely"],["׃",""]] },
-  { num:"כח", words:[["שְׂמָמִית","a lizard"],["בְּיָדַיִם","in-two hands"],["תְּתַפֵּשׂ","you will grasp"],["וְהִיא","and-she-was"],["בְּהֵיכְלֵי","in-their-pleasant"],["מֶלֶךְ","the-king-of"],["׃",""]] },
+  { num:"כח", words:[["שְׂמָמִית","a lizard"],["בְּיָדַיִם","in-two hands"],["תְּתַפֵּשׂ","you will grasp"],["וְהִיא","and-she"],["בְּהֵיכְלֵי","in-their-pleasant"],["מֶלֶךְ","the-king-of"],["׃",""]] },
   { num:"כט", words:[["שְׁלֹשָׁה","three"],["הֵמָּה","they"],["מֵיטִיבֵי","are doing well of"],["צָעַד","he-did-march-forth"],["וְאַרְבָּעָה","and-four"],["מֵיטִבֵי","are doing well"],["לָכֶת","to walk"],["׃",""]] },
   { num:"ל", words:[["לַיִשׁ","Laish"],["גִּבּוֹר","mighty"],["בַּבְּהֵמָה","among the-livestock"],["וְלֹא־יָשׁוּב","and-not-return"],["מִפְּנֵי־כֹל","because-of-all"],["׃",""]] },
   { num:"לא", words:[["זַרְזִיר","a rooster of"],["מׇתְנַיִם","the hips"],["אוֹ־תָיִשׁ","or-a male goat"],["וּמֶלֶךְ","and-a-king"],["אַלְקוּם","a band of soldiers"],["עִמּוֹ","with-him"],["׃",""]] },
