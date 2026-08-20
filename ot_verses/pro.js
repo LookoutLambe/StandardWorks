@@ -899,7 +899,7 @@ var pro_ch27Verses = [
   { num:"כג", words:[["יָדֹעַ","surely"],["תֵּדַע","you-know"],["פְּנֵי","face-of"],["צֹאנֶךָ","your-flock"],["שִׁית","a garment of"],["לִבְּךָ","your-heart"],["לַעֲדָרִים","to-the herds"],["׃",""]] },
   { num:"כד", words:[["כִּי","because"],["לֹא","not"],["לְעוֹלָם","forever"],["חֹסֶן","wealth"],["וְאִם־נֵזֶר","and-if-the crown of"],["לְדוֹר","to-generation"],["(דור)",""],["[וָדוֹר]","and-a generation"],["׃",""]] },
   { num:"כה", words:[["גָּלָה","is-uncovered"],["חָצִיר","grass"],["וְנִרְאָה־דֶשֶׁא","and-he will present himself-grass"],["וְנֶאֶסְפוּ","and-gathered"],["עִשְּׂבוֹת","the vegetation of"],["הָרִים","mountains"],["׃",""]] },
-  { num:"כו", words:[["כְּבָשִׂים","the-lambs"],["לִלְבוּשֶׁךָ","for-your-clothing"],["וּמְחִיר","and-the hire of"],["שָׂדֶה","field"],["עַתּוּדִים","goats"],["׃",""]] },
+  { num:"כו", words:[["כְּבָשִׂים","the-lambs"],["לִלְבוּשֶׁךָ","for-your-clothing"],["וּמְחִיר","and-the hire of"],["שָׂדֶה","field"],["עַתּוּדִים","he-goats"],["׃",""]] },
   { num:"כז", words:[["וְדֵי","and-a sufficiency of"],["חֲלֵב","the milk of"],["עִזִּים","goats"],["לְלַחְמְךָ","for-your-food"],["לְלֶחֶם","for-the bread of"],["בֵּיתֶךָ","your-house"],["וְחַיִּים","and-life"],["לְנַעֲרוֹתֶיךָ","for-your-girls"],["׃",""]] },
 ];
 renderVerseSet(pro_ch27Verses, 'pro-ch27-verses');

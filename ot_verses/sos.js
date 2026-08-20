@@ -11,7 +11,7 @@ var sos_ch1Verses = [
   { num:"ח", words:[["אִם־לֹא","if-not"],["תֵדְעִי","you know"],["לָךְ","to-you"],["הַיָּפָה","the-beautiful"],["בַּנָּשִׁים","among the-women"],["צְאִי־לָךְ","go out-for you"],["בְּעִקְבֵי","in-the footprints of"],["הַצֹּאן","the-flock"],["וּרְעִי","and-pasture"],["אֶת־גְּדִיֹּתַיִךְ","your-young goats"],["עַל","upon"],["מִשְׁכְּנוֹת","from-dwelt"],["הָרֹעִים","the-shepherds"],["׃",""]] },
   { num:"ט", words:[["לְסֻסָתִי","to-my-mare"],["בְּרִכְבֵי","among-the chariots of"],["פַרְעֹה","Pharaoh"],["דִּמִּיתִיךְ","I liken-you"],["רַעְיָתִי","my-O friend"],["׃",""]] },
   { num:"י", words:[["נָאווּ","they are beautiful"],["לְחָיַיִךְ","your-cheeks"],["בַּתֹּרִים","with-the-strings of jewels"],["צַוָּארֵךְ","your-neck"],["בַּחֲרוּזִים","with-strings of beads"],["׃",""]] },
-  { num:"יא", words:[["תּוֹרֵי","necklaces of"],["זָהָב","gold"],["נַעֲשֶׂה־לָּךְ","let-us-make-to-you"],["עִם","with"],["נְקֻדּוֹת","beads of"],["הַכָּסֶף","the-money"],["׃",""]] },
+  { num:"יא", words:[["תּוֹרֵי","necklaces of"],["זָהָב","gold"],["נַעֲשֶׂה־לָּךְ","let-us-make-to-you"],["עִם","with"],["נְקֻדּוֹת","beads of"],["הַכָּסֶף","the-silver"],["׃",""]] },
   { num:"יב", words:[["עַד־שֶׁהַמֶּלֶךְ","until-that-the-king"],["בִּמְסִבּוֹ","at-his-table"],["נִרְדִּי","my-nard"],["נָתַן","gave"],["רֵיחוֹ","its-odor"],["׃",""]] },
   { num:"יג", words:[["צְרוֹר","the bag of"],["הַמֹּר","the-myrrh"],["דּוֹדִי","my-beloved"],["לִי","to-me"],["בֵּין","among"],["שָׁדַי","my-breasts"],["יָלִין","it will remain overnight"],["׃",""]] },
   { num:"יד", words:[["אֶשְׁכֹּל","Eshcol"],["הַכֹּפֶר","the-henna blossom"],["דּוֹדִי","my-beloved"],["לִי","to-me"],["בְּכַרְמֵי","in-my-vineyard"],["עֵין","the-eye-of"],["גֶּדִי","Gedi"],["׃",""]] },
