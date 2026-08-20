@@ -98,7 +98,7 @@ var pro_ch3Verses = [
   { num:"לב", words:[["כִּי","because"],["תוֹעֲבַת","is the abomination of"],["יְהֹוָה","the-LORD"],["נָלוֹז","a crooked person"],["וְאֶת־יְשָׁרִים","and-just"],["סוֹדוֹ","His-counsel"],["׃",""]] },
   { num:"לג", words:[["מְאֵרַת","the curse of"],["יְהֹוָה","the-LORD"],["בְּבֵית","in-the-house-of"],["רָשָׁע","wicked"],["וּנְוֵה","and-the habitation of"],["צַדִּיקִים","just"],["יְבָרֵךְ","He-does-bless"],["׃",""]] },
   { num:"לד", words:[["אִם־לַלֵּצִים","surely-to the-mockers"],["הוּא־יָלִיץ","it-is-intercedes"],["(ולעניים)",""],["[וְלַעֲנָוִים]","and-to-the-meek"],["יִתֶּן־חֵן","he will give-favor"],["׃",""]] },
-  { num:"לה", words:[["כָּבוֹד","glorious"],["חֲכָמִים","wise"],["יִנְחָלוּ","they will inherit"],["וּכְסִילִים","and-fools"],["מֵרִים","those who contributed"],["קָלוֹן","shame"],["׃",""]] },
+  { num:"לה", words:[["כָּבוֹד","glorious"],["חֲכָמִים","wise"],["יִנְחָלוּ","they will inherit"],["וּכְסִילִים","and-fools"],["מֵרִים","exalts"],["קָלוֹן","shame"],["׃",""]] },
 ];
 renderVerseSet(pro_ch3Verses, 'pro-ch3-verses');
 
@@ -453,7 +453,7 @@ var pro_ch14Verses = [
   { num:"כו", words:[["בְּיִרְאַת","in-the-fear-of"],["יְהֹוָה","the-LORD"],["מִבְטַח־עֹז","confidence of-strength-of"],["וּלְבָנָיו","and-for-his-sons"],["יִהְיֶה","shall-be"],["מַחְסֶה","shelter"],["׃",""]] },
   { num:"כז", words:[["יִרְאַת","the-fear-of"],["יְהֹוָה","the-LORD"],["מְקוֹר","fountain-of"],["חַיִּים","living"],["לָסוּר","changed-from"],["מִמֹּקְשֵׁי","from-snares of"],["מָוֶת","death"],["׃",""]] },
   { num:"כח", words:[["בְּרׇב־עָם","in-abundance of-a-people"],["הַדְרַת־מֶלֶךְ","the glory of-king-of"],["וּבְאֶפֶס","and-in-not"],["לְאֹם","a people"],["מְחִתַּת","is the ruin of"],["רָזוֹן","leanness"],["׃",""]] },
-  { num:"כט", words:[["אֶרֶךְ","long of"],["אַפַּיִם","with-face"],["רַב־תְּבוּנָה","great-is understanding"],["וּקְצַר־רוּחַ","and-a person short of-spirit-of"],["מֵרִים","those who contributed"],["אִוֶּלֶת","foolishness"],["׃",""]] },
+  { num:"כט", words:[["אֶרֶךְ","long of"],["אַפַּיִם","with-face"],["רַב־תְּבוּנָה","great-is understanding"],["וּקְצַר־רוּחַ","and-a person short of-spirit-of"],["מֵרִים","exalts"],["אִוֶּלֶת","foolishness"],["׃",""]] },
   { num:"ל", words:[["חַיֵּי","the-life-of"],["בְשָׂרִים","bodies"],["לֵב","heart"],["מַרְפֵּא","was healing"],["וּרְקַב","and-is rottenness of"],["עֲצָמוֹת","the bones"],["קִנְאָה","jealousy"],["׃",""]] },
   { num:"לא", words:[["עֹשֵׁק","one who oppresses"],["דָּל","the poor"],["חֵרֵף","he-has-reviled"],["עֹשֵׂהוּ","his-maker"],["וּמְכַבְּדוֹ","and-is honoring-him"],["חֹנֵן","one who shows favor to"],["אֶבְיוֹן","a needy person"],["׃",""]] },
   { num:"לב", words:[["בְּרָעָתוֹ","by-his-wickedness"],["יִדָּחֶה","he is pushed down"],["רָשָׁע","wicked"],["וְחֹסֶה","and-is seeking refuge"],["בְמוֹתוֹ","at-his-death"],["צַדִּיק","righteous"],["׃",""]] },
