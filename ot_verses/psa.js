@@ -2924,7 +2924,7 @@ var psa_ch139Verses = [
   { num:"ה", words:[["אָחוֹר","back"],["וָקֶדֶם","and-front"],["צַרְתָּנִי","you enclose-me"],["וַתָּשֶׁת","and-you put"],["עָלַי","upon-me"],["כַּפֶּכָה","the-your-hand"],["׃",""]] },
   { num:"ו", words:[["(פלאיה)",""],["[פְּלִיאָה]","is too wonderful"],["דַעַת","knowledge"],["מִמֶּנִּי","from-me"],["נִשְׂגְּבָה","it is set on high"],["לֹא־אוּכַל","not-I-could"],["לָהּ","to-her"],["׃",""]] },
   { num:"ז", words:[["אָנָה","whither"],["אֵלֵךְ","will-walk"],["מֵרוּחֶךָ","from-your-spirit"],["וְאָנָה","and-where"],["מִפָּנֶיךָ","from-Your-presence"],["אֶבְרָח","will I flee"],["׃",""]] },
-  { num:"ח", words:[["אִם־אֶסַּק","if-I will ascend"],["שָׁמַיִם","the-heavens"],["שָׁם","there"],["אָתָּה","you-are"],["וְאַצִּיעָה","and-I will spread as a bed"],["שְּׁאוֹל","Sheol"],["הִנֶּךָּ","there are-you"],["׃",""]] },
+  { num:"ח", words:[["אִם־אֶסַּק","if-I will ascend"],["שָׁמַיִם","the-heavens"],["שָׁם","there"],["אָתָּה","you-are"],["וְאַצִּיעָה","and-I will spread as a bed"],["שְּׁאוֹל","Sheol"],["הִנֶּךָּ","behold are-you"],["׃",""]] },
   { num:"ט", words:[["אֶשָּׂא","I-lift-up"],["כַנְפֵי־שָׁחַר","the wings of-light"],["אֶשְׁכְּנָה","I dwell"],["בְּאַחֲרִית","in-latter"],["יָם","the-sea"],["׃",""]] },
   { num:"י", words:[["גַּם־שָׁם","also-there-is"],["יָדְךָ","your-hand"],["תַנְחֵנִי","you will lead-me"],["וְתֹאחֲזֵנִי","and-it will grasp-me"],["יְמִינֶךָ","Your-right-hand"],["׃",""]] },
   { num:"יא", words:[["וָאֹמַר","and-I-said"],["אַךְ־חֹשֶׁךְ","but-darkness"],["יְשׁוּפֵנִי","he crushes-me"],["וְלַיְלָה","and-by-night"],["אוֹר","light"],["בַּעֲדֵנִי","behind-me"],["׃",""]] },
