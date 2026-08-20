@@ -533,7 +533,7 @@ var psa_ch31Verses = [
   { num:"ד", words:[["כִּי־סַלְעִי","for-You-are-my-rock"],["וּמְצוּדָתִי","and-my-fortress"],["אָתָּה","you-are"],["וּלְמַעַן","and-that"],["שִׁמְךָ","Your-name"],["תַּנְחֵנִי","lead-me"],["וּתְנַהֲלֵנִי","and-guide-me"],["׃",""]] },
   { num:"ה", words:[["תּוֹצִיאֵנִי","you will bring out-me"],["מֵרֶשֶׁת","out-of-the-net"],["זוּ","which"],["טָמְנוּ","they-hid"],["לִי","to-me"],["כִּי־אַתָּה","that-you"],["מָעוּזִּי","my-place of refuge"],["׃",""]] },
   { num:"ו", words:[["בְּיָדְךָ","in-your-hand"],["אַפְקִיד","I-entrust"],["רוּחִי","my-spirit"],["פָּדִיתָ","you redeemed"],["אוֹתִי","me"],["יְהֹוָה","the-LORD"],["אֵל","God"],["אֱמֶת","truth"],["׃",""]] },
-  { num:"ז", words:[["שָׂנֵאתִי","I-have-hated"],["הַשֹּׁמְרִים","the-ones-who-watched"],["הַבְלֵי־שָׁוְא","vanities-of-falsehood"],["וַאֲנִי","and-I"],["אֶל־יְהֹוָה","to-the-Lord"],["בָּטָחְתִּי","I trust"],["׃",""]] },
+  { num:"ז", words:[["שָׂנֵאתִי","I-have-hated"],["הַשֹּׁמְרִים","the-ones-who-keep"],["הַבְלֵי־שָׁוְא","vanities-of-falsehood"],["וַאֲנִי","and-I"],["אֶל־יְהֹוָה","to-the-Lord"],["בָּטָחְתִּי","I trust"],["׃",""]] },
   { num:"ח", words:[["אָגִילָה","I will rejoice"],["וְאֶשְׂמְחָה","and-I will be glad"],["בְּחַסְדֶּךָ","in-Your-mercy"],["אֲשֶׁר","which"],["רָאִיתָ","you-saw"],["אֶת־עׇנְיִי","my-affliction"],["יָדַעְתָּ","you-know"],["בְּצָרוֹת","in-much-tribulation"],["נַפְשִׁי","my-soul"],["׃",""]] },
   { num:"ט", words:[["וְלֹא","and-not"],["הִסְגַּרְתַּנִי","you delivered up-me"],["בְּיַד־אוֹיֵב","in-the-hand-of-is-an-enemy"],["הֶעֱמַדְתָּ","you have appointed"],["בַמֶּרְחָב","in-the-roomy place"],["רַגְלָי","my-feet"],["׃",""]] },
   { num:"י", words:[["חׇנֵּנִי","be-gracious-to-me"],["יְהֹוָה","the-LORD"],["כִּי","because"],["צַר־לִי","adversary-to-me"],["עָשְׁשָׁה","it has wasted away"],["בְכַעַס","with-grief"],["עֵינִי","my-eye"],["נַפְשִׁי","my-soul"],["וּבִטְנִי","and-my-belly"],["׃",""]] },
@@ -2787,7 +2787,7 @@ var psa_ch130Verses = [
   { num:"ג", words:[["אִם־עֲוֺנוֹת","if-the-iniquities"],["תִּשְׁמׇר־יָהּ","you will keep-JAH"],["אֲדֹנָי","Lord"],["מִי","who"],["יַעֲמֹד","do-You-stand"],["׃",""]] },
   { num:"ד", words:[["כִּי־עִמְּךָ","because-with-you"],["הַסְּלִיחָה","the-forgiveness"],["לְמַעַן","in-order-that"],["תִּוָּרֵא","you may be feared"],["׃",""]] },
   { num:"ה", words:[["קִוִּיתִי","I-wait"],["יְהֹוָה","the-LORD"],["קִוְּתָה","it waits"],["נַפְשִׁי","my-soul"],["וְלִדְבָרוֹ","and-for-his-word"],["הוֹחָלְתִּי","I have waited"],["׃",""]] },
-  { num:"ו", words:[["נַפְשִׁי","my-soul"],["לַאדֹנָי","to-the Lord"],["מִשֹּׁמְרִים","more than-watchmen"],["לַבֹּקֶר","to the-morning"],["שֹׁמְרִים","we-keep"],["לַבֹּקֶר","to the-morning"],["׃",""]] },
+  { num:"ו", words:[["נַפְשִׁי","my-soul"],["לַאדֹנָי","to-the Lord"],["מִשֹּׁמְרִים","more than-watchmen"],["לַבֹּקֶר","to the-morning"],["שֹׁמְרִים","the-ones-who-keep"],["לַבֹּקֶר","to the-morning"],["׃",""]] },
   { num:"ז", words:[["יַחֵל","he will violate"],["יִשְׂרָאֵל","Israel"],["אֶל־יְהֹוָה","to-the-Lord"],["כִּי־עִם־יְהֹוָה","because-with-the-LORD"],["הַחֶסֶד","the-mercy"],["וְהַרְבֵּה","and-much"],["עִמּוֹ","with-him"],["פְדוּת","redemption"],["׃",""]] },
   { num:"ח", words:[["וְהוּא","and-he"],["יִפְדֶּה","he will ransom"],["אֶת־יִשְׂרָאֵל","Israel"],["מִכֹּל","of-all"],["עֲוֺנֹתָיו","the-iniquities-of-his"],["׃",""]] },
 ];
