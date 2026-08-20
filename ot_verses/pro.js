@@ -173,7 +173,7 @@ var pro_ch6Verses = [
   { num:"י", words:[["מְעַט","somewhat"],["שֵׁנוֹת","sleep"],["מְעַט","somewhat"],["תְּנוּמוֹת","slumber"],["מְעַט","somewhat"],["חִבֻּק","folding of"],["יָדַיִם","both hands"],["לִשְׁכָּב","to-rest"],["׃",""]] },
   { num:"יא", words:[["וּבָא־כִמְהַלֵּךְ","and-come-like-a traveler"],["רֵאשֶׁךָ","poverty-your"],["וּמַחְסֹרְךָ","and-lack-your"],["כְּאִישׁ","as-a-man"],["מָגֵן","a-protector"],["׃",""]] },
   { num:"יב", words:[["אָדָם","man"],["בְּלִיַּעַל","worthlessness"],["אִישׁ","a-man"],["אָוֶן","iniquity"],["הוֹלֵךְ","going"],["עִקְּשׁוּת","crookedness of"],["פֶּה","mouth"],["׃",""]] },
-  { num:"יג", words:[["קֹרֵץ","he is winking"],["בְּעֵינָו","with-His-eye"],["מֹלֵל","he is scraping"],["בְּרַגְלָו","at-foot-his"],["מֹרֶה","he-rebels"],["בְּאֶצְבְּעֹתָיו","with-fingers-his"],["׃",""]] },
+  { num:"יג", words:[["קֹרֵץ","he is winking"],["בְּעֵינָו","with-his-eye"],["מֹלֵל","he is scraping"],["בְּרַגְלָו","at-foot-his"],["מֹרֶה","he-rebels"],["בְּאֶצְבְּעֹתָיו","with-fingers-his"],["׃",""]] },
   { num:"יד", words:[["תַּהְפֻּכוֹת","perverse things"],["בְּלִבּוֹ","in-his-heart"],["חֹרֵשׁ","worker of"],["רָע","evil"],["בְּכׇל־עֵת","in-all-time"],["(מדנים)",""],["[מִדְיָנִים]","Midianites"],["יְשַׁלֵּחַ","he sends out"],["׃",""]] },
   { num:"טו", words:[["עַל־כֵּן","therefore"],["פִּתְאֹם","suddenly"],["יָבוֹא","shall-come"],["אֵידוֹ","disaster-his"],["פֶּתַע","an instant"],["יִשָּׁבֵר","it will be broken"],["וְאֵין","and-has-no"],["מַרְפֵּא","was healing"],["׃",""]] },
   { num:"טז", words:[["שֶׁשׁ־הֵנָּה","six things-hither"],["שָׂנֵא","hating"],["יְהֹוָה","the-LORD"],["וְשֶׁבַע","and-seven"],["(תועבות)",""],["[תּוֹעֲבַת]","abominations"],["נַפְשׁוֹ","his-soul"],["׃",""]] },
