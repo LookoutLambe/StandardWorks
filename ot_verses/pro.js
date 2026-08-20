@@ -805,7 +805,7 @@ var pro_ch24Verses = [
   { num:"לא", words:[["וְהִנֵּה","and-behold"],["עָלָה","ascended"],["כֻלּוֹ","every-one-is"],["קִמְּשֹׂנִים","thorns"],["כׇּסּוּ","covered"],["פָנָיו","His-face"],["חֲרֻלִּים","nettles"],["וְגֶדֶר","and-the wall of"],["אֲבָנָיו","its-stones"],["נֶהֱרָסָה","it was broken down"],["׃",""]] },
   { num:"לב", words:[["וָאֶחֱזֶה","and-I saw"],["אָנֹכִי","I"],["אָשִׁית","I will put"],["לִבִּי","my-heart"],["רָאִיתִי","I-saw"],["לָקַחְתִּי","I-have-taken"],["מוּסָר","discipline"],["׃",""]] },
   { num:"לג", words:[["מְעַט","somewhat"],["שֵׁנוֹת","sleep"],["מְעַט","somewhat"],["תְּנוּמוֹת","slumber"],["מְעַט","somewhat"],["חִבֻּק","folding of"],["יָדַיִם","both hands"],["לִשְׁכָּב","to-rest"],["׃",""]] },
-  { num:"לד", words:[["וּבָא־מִתְהַלֵּךְ","and-come-walking"],["רֵישֶׁךָ","your-poverty"],["וּמַחְסֹרֶיךָ","and-your-poverti"],["כְּאִישׁ","as-a-man"],["מָגֵן","a-protector"],["׃",""]] },
+  { num:"לד", words:[["וּבָא־מִתְהַלֵּךְ","and-come-walking"],["רֵישֶׁךָ","your-poverty"],["וּמַחְסֹרֶיךָ","and-your-poverty"],["כְּאִישׁ","as-a-man"],["מָגֵן","a-protector"],["׃",""]] },
 ];
 renderVerseSet(pro_ch24Verses, 'pro-ch24-verses');
 
