@@ -995,7 +995,7 @@ var job_ch35Verses = [
   { num:"ה", words:[["הַבֵּט","look"],["שָׁמַיִם","the-heavens"],["וּרְאֵה","and-behold"],["וְשׁוּר","and-observe"],["שְׁחָקִים","clouds"],["גָּבְהוּ","they-were-lifted-up"],["מִמֶּךָּ","from-you"],["׃",""]] },
   { num:"ו", words:[["אִם־חָטָאתָ","if-sinned"],["מַה־תִּפְעׇל־בּוֹ","what-you-will-worked-against-him"],["וְרַבּוּ","and-were-many"],["פְשָׁעֶיךָ","your-transgressions"],["מַה־תַּעֲשֶׂה־לּוֹ","what-you-make-upon-him"],["׃",""]] },
   { num:"ז", words:[["אִם־צָדַקְתָּ","if-you are in the right"],["מַה־תִּתֶּן־לוֹ","what-she-will-give-him"],["אוֹ","or"],["מַה־מִּיָּדְךָ","what-is from-hand-your"],["יִקָּח","he will take"],["׃",""]] },
-  { num:"ח", words:[["לְאִישׁ־כָּמוֹךָ","for-a-man-like-you"],["רִשְׁעֶךָ","your-wickedness"],["וּלְבֶן־אָדָם","and-white of-man"],["צִדְקָתֶךָ","your-righteousness"],["׃",""]] },
+  { num:"ח", words:[["לְאִישׁ־כָּמוֹךָ","for-a-man-like-you"],["רִשְׁעֶךָ","your-wickedness"],["וּלְבֶן־אָדָם","and-to-the-son-of-man"],["צִדְקָתֶךָ","your-righteousness"],["׃",""]] },
   { num:"ט", words:[["מֵרֹב","from-the-multitude-of"],["עֲשׁוּקִים","oppression"],["יַזְעִיקוּ","people cry out"],["יְשַׁוְּעוּ","they cry for help"],["מִזְּרוֹעַ","from-the arm of"],["רַבִּים","many"],["׃",""]] },
   { num:"י", words:[["וְלֹא־אָמַר","and-not-said"],["אַיֵּה","where-is"],["אֱלוֹהַּ","God"],["עֹשָׂי","my-maker"],["נֹתֵן","giving"],["זְמִרוֹת","the songs of"],["בַּלָּיְלָה","by-the-night"],["׃",""]] },
   { num:"יא", words:[["מַלְּפֵנוּ","who teaches-us"],["מִבַּהֲמוֹת","more than-the animals of"],["אָרֶץ","the-earth"],["וּמֵעוֹף","and-from-the birds of"],["הַשָּׁמַיִם","the-heavens"],["יְחַכְּמֵנוּ","he makes wise-us"],["׃",""]] },
