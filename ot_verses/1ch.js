@@ -177,7 +177,7 @@ var _1ch_ch4Verses = [
   { num:"כט", words:[["וּבְבִלְהָה","and-in-Bilhah"],["וּבְעֶצֶם","and-in-Ezem"],["וּבְתוֹלָד","and-in-Tolad"],["׃",""]] },
   { num:"ל", words:[["וּבִבְתוּאֵל","and-in-Bethuel"],["וּבְחׇרְמָה","and-in-Hormah"],["וּבְצִיקְלָג","and-in-Ziklag"],["׃",""]] },
   { num:"לא", words:[["וּבְבֵית","and-in-the house of"],["מַרְכָּבוֹת","Marcaboth"],["וּבַחֲצַר","and-in-Hazar"],["סוּסִים","horses"],["וּבְבֵית","and-in-the house of"],["בִּרְאִי","Biri"],["וּבְשַׁעֲרָיִם","and-in-Shaaraim"],["אֵלֶּה","these"],["עָרֵיהֶם","their-cities"],["עַד־מְלֹךְ","until-the-reign-of"],["דָּוִיד","David"],["׃",""]] },
-  { num:"לב", words:[["וְחַצְרֵיהֶם","and-their-villages"],["עֵיטָם","Etam"],["וָעַיִן","and-Ain"],["רִמּוֹן","Rimmon"],["וְתֹכֶן","and-the measurement of"],["וְעָשָׁן","and-Ashan"],["עָרִים","cities"],["חָמֵשׁ","five"],["׃",""]] },
+  { num:"לב", words:[["וְחַצְרֵיהֶם","and-their-villages"],["עֵיטָם","Etam"],["וָעַיִן","and-Ain"],["רִמּוֹן","Rimmon"],["וְתֹכֶן","and-Tochen"],["וְעָשָׁן","and-Ashan"],["עָרִים","cities"],["חָמֵשׁ","five"],["׃",""]] },
   { num:"לג", words:[["וְכׇל־חַצְרֵיהֶם","and-all-their-villages"],["אֲשֶׁר","which"],["סְבִיבוֹת","around"],["הֶעָרִים","the-cities"],["הָאֵלֶּה","these"],["עַד־בָּעַל","until-a husband"],["זֹאת","this"],["מוֹשְׁבֹתָם","their-dwelling places"],["וְהִתְיַחְשָׂם","and-recording genealogies-they"],["לָהֶם","to-them"],["׃",""]] },
   { num:"לד", words:[["וּמְשׁוֹבָב","and-Meshobab"],["וְיַמְלֵךְ","and-Jamlech"],["וְיוֹשָׁה","and-Joshah"],["בֶּן־אֲמַצְיָה","son-of-Amaziah"],["׃",""]] },
   { num:"לה", words:[["וְיוֹאֵל","and-Joel"],["וְיֵהוּא","and-Jehu"],["בֶּן־יוֹשִׁבְיָה","son-of-Joshibiah"],["בֶּן־שְׂרָיָה","son-of-Seraiah"],["בֶּן־עֲשִׂיאֵל","son-of-Asiel"],["׃",""]] },
