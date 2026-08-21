@@ -85,7 +85,7 @@ var job_ch4Verses = [
   { num:"ט", words:[["מִנִּשְׁמַת","from-the breathing of"],["אֱלוֹהַּ","God"],["יֹאבֵדוּ","shall-perish"],["וּמֵרוּחַ","and-from-the breath of"],["אַפּוֹ","His-wrath"],["יִכְלוּ","consumed-be-must"],["׃",""]] },
   { num:"י", words:[["שַׁאֲגַת","the roaring of"],["אַרְיֵה","a lion"],["וְקוֹל","the-voice-of-the-people"],["שָׁחַל","a lion"],["וְשִׁנֵּי","and-the teeth of"],["כְפִירִים","young lions"],["נִתָּעוּ","they are broken out"],["׃",""]] },
   { num:"יא", words:[["לַיִשׁ","Laish"],["אֹבֵד","perished"],["מִבְּלִי־טָרֶף","without-prey"],["וּבְנֵי","and-sons-of"],["לָבִיא","to-bring"],["יִתְפָּרָדוּ","they are scattered"],["׃",""]] },
-  { num:"יב", words:[["וְאֵלַי","and-to-me"],["דָּבָר","a-word"],["יְגֻנָּב","it was brought secretly"],["וַתִּקַּח","and-she took"],["אׇזְנִי","the ears of"],["שֵׁמֶץ","a whisper"],["מֶנְהוּ","of-it"],["׃",""]] },
+  { num:"יב", words:[["וְאֵלַי","and-to-me"],["דָּבָר","a-thing"],["יְגֻנָּב","it was brought secretly"],["וַתִּקַּח","and-she took"],["אׇזְנִי","the ears of"],["שֵׁמֶץ","a whisper"],["מֶנְהוּ","of-it"],["׃",""]] },
   { num:"יג", words:[["בִּשְׂעִפִּים","in-disquieting thoughts"],["מֵחֶזְיֹנוֹת","from-visions of"],["לָיְלָה","night"],["בִּנְפֹל","in-fell"],["תַּרְדֵּמָה","deep-sleep"],["עַל־אֲנָשִׁים","upon-men"],["׃",""]] },
   { num:"יד", words:[["פַּחַד","dread"],["קְרָאַנִי","was-called-by"],["וּרְעָדָה","and-trembling"],["וְרֹב","and-most-of"],["עַצְמוֹתַי","my-bones"],["הִפְחִיד","it caused to tremble"],["׃",""]] },
   { num:"טו", words:[["וְרוּחַ","and-spirit-of"],["עַל־פָּנַי","before-me"],["יַחֲלֹף","pass-away"],["תְּסַמֵּר","it made bristle"],["שַׂעֲרַת","the hair of"],["בְּשָׂרִי","my-flesh"],["׃",""]] },
@@ -401,7 +401,7 @@ var job_ch15Verses = [
   { num:"ח", words:[["הַבְסוֹד","in-the council of"],["אֱלוֹהַּ","God"],["תִּשְׁמָע","you heard"],["וְתִגְרַע","so-you may diminish"],["אֵלֶיךָ","to-you"],["חׇכְמָה","wisdom"],["׃",""]] },
   { num:"ט", words:[["מַה־יָּדַעְתָּ","what-do you know"],["וְלֹא","and-not"],["נֵדָע","we-know"],["תָּבִין","do you understand?"],["וְלֹא־עִמָּנוּ","and-not-with-us"],["הוּא","he"],["׃",""]] },
   { num:"י", words:[["גַּם־שָׂב","also-the gray haired"],["גַּם־יָשִׁישׁ","also-the aged"],["בָּנוּ","in-us"],["כַּבִּיר","the-mighty"],["מֵאָבִיךָ","your-more than-father"],["יָמִים","days"],["׃",""]] },
-  { num:"יא", words:[["הַמְעַט","is-it-a-small-thing"],["מִמְּךָ","from-you"],["אֵל","God"],["וְדָבָר","and-word"],["לָאַט","he covered"],["עִמָּךְ","with-you"],["׃",""]] },
+  { num:"יא", words:[["הַמְעַט","is-it-a-small-thing"],["מִמְּךָ","from-you"],["אֵל","God"],["וְדָבָר","and-thing"],["לָאַט","he covered"],["עִמָּךְ","with-you"],["׃",""]] },
   { num:"יב", words:[["מַה־יִּקָּחֲךָ","what-does it carry away-you"],["לִבֶּךָ","your-heart"],["וּמַה־יִּרְזְמוּן","yea-and-what-do they flash"],["עֵינֶיךָ","your-eyes"],["׃",""]] },
   { num:"יג", words:[["כִּי־תָשִׁיב","because-recall"],["אֶל־אֵל","unto-God"],["רוּחֶךָ","your-spirit"],["וְהֹצֵאתָ","and-you will bring out"],["מִפִּיךָ","from-your-mouth"],["מִלִּין","words"],["׃",""]] },
   { num:"יד", words:[["מָה־אֱנוֹשׁ","what-Enos"],["כִּי־יִזְכֶּה","because-he-might-win"],["וְכִי־יִצְדַּק","and-that-he will be righteous"],["יְלוּד","born of"],["אִשָּׁה","a-woman"],["׃",""]] },
@@ -528,7 +528,7 @@ var job_ch19Verses = [
   { num:"כה", words:[["וַאֲנִי","and-I"],["יָדַעְתִּי","I-know"],["גֹּאֲלִי","my-vindicator"],["חָי","alive"],["וְאַחֲרוֹן","and-last"],["עַל־עָפָר","upon-the-earth"],["יָקוּם","he-shall-rise"],["׃",""]] },
   { num:"כו", words:[["וְאַחַר","and-then"],["עוֹרִי","my-skin"],["נִקְּפוּ־זֹאת","people have struck off-this"],["וּמִבְּשָׂרִי","and-from-my-flesh"],["אֶחֱזֶה","I will see"],["אֱלוֹהַּ","God"],["׃",""]] },
   { num:"כז", words:[["אֲשֶׁר","which"],["אֲנִי","I"],["אֶחֱזֶה־לִּי","I will see-to-me"],["וְעֵינַי","and-my-own eyes"],["רָאוּ","saw"],["וְלֹא־זָר","and-not-strange"],["כָּלוּ","as-the-if"],["כִלְיֹתַי","my-kidneys"],["בְּחֵקִי","in-my-bosom"],["׃",""]] },
-  { num:"כח", words:[["כִּי","because"],["תֹאמְרוּ","you-say"],["מַה־נִּרְדׇּף־לוֹ","what-was-pursued-him"],["וְשֹׁרֶשׁ","and-the root of"],["דָּבָר","a-word"],["נִמְצָא־בִי","was-found-against-Me"],["׃",""]] },
+  { num:"כח", words:[["כִּי","because"],["תֹאמְרוּ","you-say"],["מַה־נִּרְדׇּף־לוֹ","what-was-pursued-him"],["וְשֹׁרֶשׁ","and-the root of"],["דָּבָר","a-thing"],["נִמְצָא־בִי","was-found-against-Me"],["׃",""]] },
   { num:"כט", words:[["גּוּרוּ","be afraid"],["לָכֶם","to-you"],["מִפְּנֵי־חֶרֶב","because-of-the-sword-of"],["כִּי־חֵמָה","because-wrath"],["עֲוֺנוֹת","the-iniquities"],["חָרֶב","a-sword"],["לְמַעַן","in-order-that"],["תֵּדְעוּן","you may know"],["[שַׁדּוּן]","that-a judgment"],["׃",""]] },
 ];
 renderVerseSet(job_ch19Verses, 'job-ch19-verses');
