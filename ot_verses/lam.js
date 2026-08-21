@@ -150,7 +150,7 @@ renderVerseSet(lam_ch4Verses, 'lam-ch4-verses');
 
 var lam_ch5Verses = [
   { num:"א", words:[["זְכֹר","remember"],["יְהֹוָה","the-LORD"],["מֶה־הָיָה","what-was"],["לָנוּ","to-us"],["(הביט)",""],["[הַבִּיטָה]","the-pay attention"],["וּרְאֵה","and-behold"],["אֶת־חֶרְפָּתֵנוּ","our-reproach"],["׃",""]] },
-  { num:"ב", words:[["נַחֲלָתֵנוּ","our-inheritance"],["נֶהֶפְכָה","it has been turned over"],["לְזָרִים","to-strangers"],["בָּתֵּינוּ","our-houses"],["לְנׇכְרִים","to-was-recognized"],["׃",""]] },
+  { num:"ב", words:[["נַחֲלָתֵנוּ","our-inheritance"],["נֶהֶפְכָה","it has been turned over"],["לְזָרִים","to-strangers"],["בָּתֵּינוּ","our-houses"],["לְנׇכְרִים","to-foreigners"],["׃",""]] },
   { num:"ג", words:[["יְתוֹמִים","fatherless ones"],["הָיִינוּ","we-were"],["(אין)",""],["[וְאֵין]","and-nothing"],["אָב","father"],["אִמֹּתֵינוּ","our-mothers"],["כְּאַלְמָנוֹת","are like-widows"],["׃",""]] },
   { num:"ד", words:[["מֵימֵינוּ","our-water"],["בְּכֶסֶף","in-money"],["שָׁתִינוּ","we have drunk"],["עֵצֵינוּ","our-wood"],["בִּמְחִיר","for-a price"],["יָבֹאוּ","come"],["׃",""]] },
   { num:"ה", words:[["עַל","upon"],["צַוָּארֵנוּ","our-neck"],["נִרְדָּפְנוּ","we have been pursued"],["יָגַעְנוּ","we-toiled"],["(לא)",""],["[וְלֹא]","and-not"],["הוּנַח־לָנוּ","it has been given rest-us"],["׃",""]] },
