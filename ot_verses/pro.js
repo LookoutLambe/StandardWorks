@@ -442,7 +442,7 @@ var pro_ch14Verses = [
   { num:"טו", words:[["פֶּתִי","a simple person"],["יַאֲמִין","shall-believe"],["לְכׇל־דָּבָר","to-all-things"],["וְעָרוּם","and-a sensible person"],["יָבִין","understand"],["לַאֲשֻׁרוֹ","his-step"],["׃",""]] },
   { num:"טז", words:[["חָכָם","wise"],["יָרֵא","he-feared"],["וְסָר","then-shall-depart"],["מֵרָע","from-evil"],["וּכְסִיל","and-Kesil"],["מִתְעַבֵּר","is arrogant"],["וּבוֹטֵחַ","and-trusting"],["׃",""]] },
   { num:"יז", words:[["קְצַר־אַפַּיִם","is short of-with-face"],["יַעֲשֶׂה","he-shall-do"],["אִוֶּלֶת","foolishness"],["וְאִישׁ","and-a-man"],["מְזִמּוֹת","purposes"],["יִשָּׂנֵא","he is hated"],["׃",""]] },
-  { num:"יח", words:[["נָחֲלוּ","his-river"],["פְתָאיִם","O naive people"],["אִוֶּלֶת","foolishness"],["וַעֲרוּמִים","and-sensible people"],["יַכְתִּרוּ","they will surround"],["דָעַת","knowledge"],["׃",""]] },
+  { num:"יח", words:[["נָחֲלוּ","inherit"],["פְתָאיִם","O naive people"],["אִוֶּלֶת","foolishness"],["וַעֲרוּמִים","and-sensible people"],["יַכְתִּרוּ","they will surround"],["דָעַת","knowledge"],["׃",""]] },
   { num:"יט", words:[["שַׁחוּ","they bow"],["רָעִים","evil"],["לִפְנֵי","before"],["טוֹבִים","good"],["וּרְשָׁעִים","and-wicked-men"],["עַל־שַׁעֲרֵי","upon-the-gates-of"],["צַדִּיק","righteous"],["׃",""]] },
   { num:"כ", words:[["גַּם־לְרֵעֵהוּ","also-another"],["יִשָּׂנֵא","he is hated"],["רָשׁ","take possession of it"],["וְאֹהֲבֵי","and-those who love"],["עָשִׁיר","rich"],["רַבִּים","many"],["׃",""]] },
   { num:"כא", words:[["בׇּז־לְרֵעֵהוּ","plunder-another"],["חוֹטֵא","a sinner"],["וּמְחוֹנֵן","and-one who shows favor to"],["(עניים)",""],["[עֲנָוִים]","humble people"],["אַשְׁרָיו","how blessed is-he"],["׃",""]] },
