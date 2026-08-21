@@ -53872,7 +53872,7 @@ window._otCrossrefsData = {
       "category": "cross-ref"
     }
   ],
-  "Joshua|21|38": [
+  "Joshua|21|36": [
     {
       "marker": "a",
       "text": "Gilead",
@@ -53882,7 +53882,7 @@ window._otCrossrefsData = {
       "category": "cross-ref"
     }
   ],
-  "Joshua|21|41": [
+  "Joshua|21|39": [
     {
       "marker": "a",
       "text": "Levites",
@@ -53900,7 +53900,7 @@ window._otCrossrefsData = {
       "category": "cross-ref"
     }
   ],
-  "Joshua|21|43": [
+  "Joshua|21|41": [
     {
       "marker": "a",
       "text": "land",
@@ -53919,7 +53919,7 @@ window._otCrossrefsData = {
       "category": "or"
     }
   ],
-  "Joshua|21|44": [
+  "Joshua|21|42": [
     {
       "marker": "a",
       "text": "rest",
@@ -53955,7 +53955,7 @@ window._otCrossrefsData = {
       "category": "cross-ref"
     }
   ],
-  "Joshua|21|45": [
+  "Joshua|21|43": [
     {
       "marker": "a",
       "text": "failed",
