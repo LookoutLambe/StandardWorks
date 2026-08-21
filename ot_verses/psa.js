@@ -2250,7 +2250,7 @@ renderVerseSet(psa_ch106Verses, 'psa-ch106-verses');
 var psa_ch107Verses = [
   { num:"א", words:[["הֹדוּ","give thanks"],["לַיהֹוָה","to-the-LORD"],["כִּי־טוֹב","that-it-is-well"],["כִּי","because"],["לְעוֹלָם","forever"],["חַסְדּוֹ","His-lovingkindness"],["׃",""]] },
   { num:"ב", words:[["יֹאמְרוּ","shall-say"],["גְּאוּלֵי","redeemed-ones-of"],["יְהֹוָה","the-LORD"],["אֲשֶׁר","which"],["גְּאָלָם","he has redeemed-them"],["מִיַּד־צָר","from-the-hand-of-adversary"],["׃",""]] },
-  { num:"ג", words:[["וּמֵאֲרָצוֹת","and-from-the lands"],["קִבְּצָם","he has gathered-them"],["מִמִּזְרָח","from-east"],["וּמִמַּעֲרָב","and-from-west"],["מִצָּפוֹן","from-north"],["וּמִיָּם","and-from-the west"],["׃",""]] },
+  { num:"ג", words:[["וּמֵאֲרָצוֹת","and-from-the lands"],["קִבְּצָם","he has gathered-them"],["מִמִּזְרָח","from-east"],["וּמִמַּעֲרָב","and-from-west"],["מִצָּפוֹן","from the north"],["וּמִיָּם","and-from-the west"],["׃",""]] },
   { num:"ד", words:[["תָּעוּ","have-all-gone-astray"],["בַמִּדְבָּר","in-the-wilderness"],["בִּישִׁימוֹן","in-a desolate place"],["דָּרֶךְ","a way"],["עִיר","the-city-of"],["מוֹשָׁב","dwelling"],["לֹא","not"],["מָצָאוּ","they found it"],["׃",""]] },
   { num:"ה", words:[["רְעֵבִים","the-hungry"],["גַּם־צְמֵאִים","also-thirsty"],["נַפְשָׁם","their-soul"],["בָּהֶם","in-them"],["תִּתְעַטָּף","it was fainting away"],["׃",""]] },
   { num:"ו", words:[["וַיִּצְעֲקוּ","and-they-cried-out"],["אֶל־יְהֹוָה","to-the-LORD"],["בַּצַּר","when-the-it is distress"],["לָהֶם","to-them"],["מִמְּצוּקוֹתֵיהֶם","from-their-troubles"],["יַצִּילֵם","He-would-deliver-them"],["׃",""]] },

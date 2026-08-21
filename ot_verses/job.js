@@ -1066,7 +1066,7 @@ var job_ch37Verses = [
   { num:"יט", words:[["הוֹדִיעֵנוּ","make known to-us"],["מַה־נֹּאמַר","what-will we say"],["לוֹ","to-him"],["לֹא־נַעֲרֹךְ","not-we will set in order"],["מִפְּנֵי־חֹשֶׁךְ","because-of-darkness"],["׃",""]] },
   { num:"כ", words:[["הַיְסֻפַּר־לוֹ","will it be recounted-him"],["כִּי","because"],["אֲדַבֵּר","I-speak"],["אִם־אָמַר","if-said"],["אִישׁ","a-man"],["כִּי","if"],["יְבֻלָּע","he will be swallowed up"],["׃",""]] },
   { num:"כא", words:[["וְעַתָּה","and-now"],["לֹא־רָאוּ","not-saw"],["אוֹר","light"],["בָּהִיר","is brilliant"],["הוּא","he"],["בַּשְּׁחָקִים","in the-clouds"],["וְרוּחַ","and-spirit-of"],["עָבְרָה","had-passed-away"],["וַתְּטַהֲרֵם","and-it has cleansed-them"],["׃",""]] },
-  { num:"כב", words:[["מִצָּפוֹן","from-north"],["זָהָב","gold"],["יֶאֱתֶה","it comes"],["עַל־אֱלוֹהַּ","upon-God"],["נוֹרָא","awful"],["הוֹד","splendor"],["׃",""]] },
+  { num:"כב", words:[["מִצָּפוֹן","from the north"],["זָהָב","gold"],["יֶאֱתֶה","it comes"],["עַל־אֱלוֹהַּ","upon-God"],["נוֹרָא","awful"],["הוֹד","splendor"],["׃",""]] },
   { num:"כג", words:[["שַׁדַּי","Almighty"],["לֹא־מְצָאנֻהוּ","not-we have found-him"],["שַׂגִּיא־כֹחַ","is exalted-power-of"],["וּמִשְׁפָּט","and-judgment"],["וְרֹב־צְדָקָה","and-most-of-a-state-of-righteousness"],["לֹא","not"],["יְעַנֶּה","he violates"],["׃",""]] },
   { num:"כד", words:[["לָכֵן","therefore"],["יְרֵאוּהוּ","they fear-him"],["אֲנָשִׁים","men"],["לֹא־יִרְאֶה","shall not see"],["כׇּל־חַכְמֵי־לֵב","all-people skillful of-heart"],["׃",""]] },
 ];
