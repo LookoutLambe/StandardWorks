@@ -1007,7 +1007,7 @@ renderVerseSet(psa_ch51Verses, 'psa-ch51-verses');
 
 var psa_ch52Verses = [
   { num:"א", words:[["לַמְנַצֵּחַ","to-the-chief-musician"],["מַשְׂכִּיל","any-who-understand"],["לְדָוִד","of-David"],["׃",""]] },
-  { num:"ב", words:[["בְּבוֹא","when-comes"],["דּוֹאֵג","Dog"],["הָאֲדֹמִי","the-Edomite"],["וַיַּגֵּד","and-it-shall-be-told"],["לְשָׁאוּל","of-Shaul"],["וַיֹּאמֶר","and-said"],["לוֹ","to-him"],["בָּא","came"],["דָוִד","David"],["אֶל־בֵּית","to-the-house-of"],["אֲחִימֶלֶךְ","Ahimelech"],["׃",""]] },
+  { num:"ב", words:[["בְּבוֹא","when-comes"],["דּוֹאֵג","Dog"],["הָאֲדֹמִי","the-Edomite"],["וַיַּגֵּד","and-he-told"],["לְשָׁאוּל","of-Shaul"],["וַיֹּאמֶר","and-said"],["לוֹ","to-him"],["בָּא","came"],["דָוִד","David"],["אֶל־בֵּית","to-the-house-of"],["אֲחִימֶלֶךְ","Ahimelech"],["׃",""]] },
   { num:"ג", words:[["מַה־תִּתְהַלֵּל","what-it will boast"],["בְּרָעָה","in-evil"],["הַגִּבּוֹר","the-mighty"],["חֶסֶד","mercy"],["אֵל","God"],["כׇּל־הַיּוֹם","all-the-day"],["׃",""]] },
   { num:"ד", words:[["הַוּוֹת","the-destruction"],["תַּחְשֹׁב","you-will-think"],["לְשׁוֹנֶךָ","your-tongue"],["כְּתַעַר","like-a razor"],["מְלֻטָּשׁ","sharpened"],["עֹשֵׂה","that-does"],["רְמִיָּה","not-deceitful"],["׃",""]] },
   { num:"ה", words:[["אָהַבְתָּ","you-love"],["רָּע","evil"],["מִטּוֹב","from-good"],["שֶׁקֶר","falsehood"],["מִדַּבֵּר","from-speaking"],["צֶדֶק","a-just-cause"],["סֶלָה","Selah"],["׃",""]] },
