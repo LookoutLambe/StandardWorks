@@ -109,7 +109,7 @@ var hos_ch6Verses = [
 renderVerseSet(hos_ch6Verses, 'hos-ch6-verses');
 
 var hos_ch7Verses = [
-  { num:"א", words:[["כְּרׇפְאִי","my-such-as-healing"],["לְיִשְׂרָאֵל","to-Israel"],["וְנִגְלָה","and-he has revealed himself"],["עֲוֺן","the-iniquity-of"],["אֶפְרַיִם","Ephraim"],["וְרָעוֹת","and-displeasing of"],["שֹׁמְרוֹן","Samaria"],["כִּי","because"],["פָעֲלוּ","they do"],["שָׁקֶר","false"],["וְגַנָּב","and-a thief"],["יָבוֹא","shall-come"],["פָּשַׁט","it attacks"],["גְּדוּד","troop"],["בַּחוּץ","in-the-except"],["׃",""]] },
+  { num:"א", words:[["כְּרׇפְאִי","my-such-as-healing"],["לְיִשְׂרָאֵל","to-Israel"],["וְנִגְלָה","and-he has revealed himself"],["עֲוֺן","the-iniquity-of"],["אֶפְרַיִם","Ephraim"],["וְרָעוֹת","and-displeasing of"],["שֹׁמְרוֹן","Samaria"],["כִּי","because"],["פָעֲלוּ","they do"],["שָׁקֶר","false"],["וְגַנָּב","and-a thief"],["יָבוֹא","shall-come"],["פָּשַׁט","it attacks"],["גְּדוּד","troop"],["בַּחוּץ","abroad"],["׃",""]] },
   { num:"ב", words:[["וּבַל־יֹאמְרוּ","and-not-shall-say"],["לִלְבָבָם","to-their-heart"],["כׇּל־רָעָתָם","all-their-wickedness"],["זָכָרְתִּי","I remember"],["עַתָּה","now"],["סְבָבוּם","surrounded-them"],["מַעַלְלֵיהֶם","their-doings"],["נֶגֶד","against"],["פָּנַי","my-face"],["הָיוּ","were"],["׃",""]] },
   { num:"ג", words:[["בְּרָעָתָם","by-their-evil"],["יְשַׂמְּחוּ־מֶלֶךְ","they make glad-king-of"],["וּבְכַחֲשֵׁיהֶם","and-by-their-lies"],["שָׂרִים","princes"],["׃",""]] },
   { num:"ד", words:[["כֻּלָּם","all-of-them"],["מְנָאֲפִים","adulterers"],["כְּמוֹ","like"],["תַנּוּר","a fire pot of"],["בֹּעֵרָה","burning"],["מֵאֹפֶה","from-a baker"],["יִשְׁבּוֹת","who he ceases"],["מֵעִיר","from-city"],["מִלּוּשׁ","from-kneading"],["בָּצֵק","dough"],["עַד־חֻמְצָתוֹ","until-is leavened-it"],["׃",""]] },
