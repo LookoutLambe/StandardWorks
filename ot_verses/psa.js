@@ -1117,7 +1117,7 @@ var psa_ch58Verses = [
   { num:"ח", words:[["יִמָּאֲסוּ","may they flow"],["כְמוֹ־מַיִם","like-water"],["יִתְהַלְּכוּ־לָמוֹ","they will walk about-for-them"],["יִדְרֹךְ","may he bend"],["חִצָּו","they will divide"],["כְּמוֹ","like"],["יִתְמֹלָלוּ","let them be cut off"],["׃",""]] },
   { num:"ט", words:[["כְּמוֹ","like"],["שַׁבְּלוּל","a snail"],["תֶּמֶס","which melting away"],["יַהֲלֹךְ","will it go"],["נֵפֶל","a miscarriage of"],["אֵשֶׁת","the-wife-of"],["בַּל־חָזוּ","not-they-beheld"],["שָׁמֶשׁ","the sun"],["׃",""]] },
   { num:"י", words:[["בְּטֶרֶם","before"],["יָבִינוּ","they-might-understand"],["סִּירֹתֵכֶם","pots-you"],["אָטָד","a thorn bush"],["כְּמוֹ־חַי","like living"],["כְּמוֹ־חָרוֹן","like the-severity-of"],["יִשְׂעָרֶנּוּ","he will blow away-it"],["׃",""]] },
-  { num:"יא", words:[["יִשְׂמַח","rejoices"],["צַדִּיק","righteous"],["כִּי־חָזָה","because-saw"],["נָקָם","vengeance"],["פְּעָמָיו","his-feet"],["יִרְחַץ","he will wash"],["בְּדַם","in-my-blood"],["הָרָשָׁע","the-more-wicked"],["׃",""]] },
+  { num:"יא", words:[["יִשְׂמַח","rejoices"],["צַדִּיק","righteous"],["כִּי־חָזָה","because-saw"],["נָקָם","vengeance"],["פְּעָמָיו","his-feet"],["יִרְחַץ","he will wash"],["בְּדַם","in-my-blood"],["הָרָשָׁע","the-wicked"],["׃",""]] },
   { num:"יב", words:[["וְיֹאמַר","and-shall-say"],["אָדָם","man"],["אַךְ־פְּרִי","but-fruit"],["לַצַּדִּיק","unto-the-righteous"],["אַךְ","but"],["יֵשׁ־אֱלֹהִים","there-is-God"],["שֹׁפְטִים","judges"],["בָּאָרֶץ","in-the-land"],["׃",""]] },
 ];
 renderVerseSet(psa_ch58Verses, 'psa-ch58-verses');
@@ -1663,7 +1663,7 @@ var psa_ch81Verses = [
   { num:"ז", words:[["הֲסִירוֹתִי","I-had-removed"],["מִסֵּבֶל","from-a burden"],["שִׁכְמוֹ","his-shoulder"],["כַּפָּיו","his-own-hands"],["מִדּוּד","from-a basket"],["תַּעֲבֹרְנָה","shall-pass-away"],["׃",""]] },
   { num:"ח", words:[["בַּצָּרָה","the-trouble"],["קָרָאתָ","read"],["וָאֲחַלְּצֶךָּ","and-I rescued-you"],["אֶעֶנְךָ","I answered-you"],["בְּסֵתֶר","in-the cover of"],["רַעַם","thunder"],["אֶבְחׇנְךָ","I tested-you"],["עַל־מֵי","beside-the-waters-of"],["מְרִיבָה","Meribah"],["סֶלָה","Selah"],["׃",""]] },
   { num:"ט", words:[["שְׁמַע","and-hear"],["עַמִּי","my-people"],["וְאָעִידָה","and-I-took"],["בָּךְ","in-you"],["יִשְׂרָאֵל","Israel"],["אִם־תִּשְׁמַע־לִי","if-you hear-to-me"],["׃",""]] },
-  { num:"י", words:[["לֹא־יִהְיֶה","there-would-be-no"],["בְךָ","in-you"],["אֵל","God"],["זָר","an outsider"],["וְלֹא","and-not"],["תִשְׁתַּחֲוֶה","bow-down"],["לְאֵל","in-their"],["נֵכָר","foreignness"],["׃",""]] },
+  { num:"י", words:[["לֹא־יִהְיֶה","there-shall-not-be"],["בְךָ","in-you"],["אֵל","God"],["זָר","an outsider"],["וְלֹא","and-not"],["תִשְׁתַּחֲוֶה","bow-down"],["לְאֵל","in-their"],["נֵכָר","foreignness"],["׃",""]] },
   { num:"יא", words:[["אָנֹכִי","I"],["יְהֹוָה","the-LORD"],["אֱלֹהֶיךָ","your-God"],["הַמַּעַלְךָ","the-one-who-brought up-you"],["מֵאֶרֶץ","from-the-land-of"],["מִצְרָיִם","Egypt"],["הַרְחֶב־פִּיךָ","open wide your mouth"],["וַאֲמַלְאֵהוּ","and-I will fill-it"],["׃",""]] },
   { num:"יב", words:[["וְלֹא־שָׁמַע","and-not-heard"],["עַמִּי","my-people"],["לְקוֹלִי","to-my-voice"],["וְיִשְׂרָאֵל","though-Israel"],["לֹא־אָבָה","not-was-willing"],["לִי","to-me"],["׃",""]] },
   { num:"יג", words:[["וָאֲשַׁלְּחֵהוּ","and-I gave over-it"],["בִּשְׁרִירוּת","in-the stubbornness of"],["לִבָּם","their-heart"],["יֵלְכוּ","they-should-travel"],["בְּמוֹעֲצוֹתֵיהֶם","in-their-own schemes"],["׃",""]] },

@@ -155,7 +155,7 @@ var pro_ch5Verses = [
   { num:"יט", words:[["אַיֶּלֶת","the doe of"],["אֲהָבִים","loves"],["וְיַעֲלַת־חֵן","and-a goat of-favor"],["דַּדֶּיהָ","her-breasts"],["יְרַוֻּךָ","may they satisfy-you"],["בְכׇל־עֵת","in-all-time"],["בְּאַהֲבָתָהּ","by-her-love"],["תִּשְׁגֶּה","may you be intoxicated"],["תָמִיד","continually"],["׃",""]] },
   { num:"כ", words:[["וְלָמָּה","and-why"],["תִשְׁגֶּה","will you go astray"],["בְנִי","my-son"],["בְזָרָה","with-a strange woman"],["וּתְחַבֵּק","may you embrace?"],["חֵק","the bosom of"],["נׇכְרִיָּה","foreign"],["׃",""]] },
   { num:"כא", words:[["כִּי","because"],["נֹכַח","opposite to"],["עֵינֵי","the-eyes-of"],["יְהֹוָה","the-LORD"],["דַּרְכֵי־אִישׁ","the-ways-of-man-of"],["וְכׇל־מַעְגְּלֹתָיו","and-all-his-tracks"],["מְפַלֵּס","he is making level"],["׃",""]] },
-  { num:"כב", words:[["יִלְכְּדֻנוֹ","they will seize-him"],["אֶת־הָרָשָׁע","the-more-wicked"],["וּבְחַבְלֵי","and-by-the cords of"],["חַטָּאתוֹ","his-sin"],["יִתָּמֵךְ","he will be held"],["׃",""]] },
+  { num:"כב", words:[["יִלְכְּדֻנוֹ","they will seize-him"],["אֶת־הָרָשָׁע","the-wicked"],["וּבְחַבְלֵי","and-by-the cords of"],["חַטָּאתוֹ","his-sin"],["יִתָּמֵךְ","he will be held"],["׃",""]] },
   { num:"כג", words:[["הוּא","he"],["יָמוּת","he-shall-die"],["בְּאֵין","in-un"],["מוּסָר","discipline"],["וּבְרֹב","and-His-great"],["אִוַּלְתּוֹ","his-foolishness"],["יִשְׁגֶּה","man-can-err"],["׃",""]] },
 ];
 renderVerseSet(pro_ch5Verses, 'pro-ch5-verses');
