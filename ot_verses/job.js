@@ -144,7 +144,7 @@ var job_ch6Verses = [
   { num:"יב", words:[["אִם־כֹּחַ","if-power"],["אֲבָנִים","stones"],["כֹּחִי","my-strength"],["אִם־בְּשָׂרִי","if-my-flesh"],["נָחוּשׁ","bronze"],["׃",""]] },
   { num:"יג", words:[["הַאִם","is-it-that"],["אֵין","there-is-no"],["עֶזְרָתִי","my-help"],["בִי","against-Me"],["וְתֻשִׁיָּה","and-sound wisdom"],["נִדְּחָה","it has been banished"],["מִמֶּנִּי","from-me"],["׃",""]] },
   { num:"יד", words:[["לַמָּס","the-to-despairing person"],["מֵרֵעֵהוּ","among-you-of-his-neighbor"],["חָסֶד","mercy"],["וְיִרְאַת","and-of-the-fear-of"],["שַׁדַּי","Almighty"],["יַעֲזוֹב","he will forsake"],["׃",""]] },
-  { num:"טו", words:[["אַחַי","my-brothers"],["בָּגְדוּ","they have acted treacherously"],["כְמוֹ־נָחַל","like-a wadi"],["כַּאֲפִיק","like-a stream-bed of"],["נְחָלִים","streams"],["יַעֲבֹרוּ","they passed over"],["׃",""]] },
+  { num:"טו", words:[["אַחַי","my-brothers"],["בָּגְדוּ","they have acted treacherously"],["כְמוֹ־נָחַל","like-a river"],["כַּאֲפִיק","like-a stream-bed of"],["נְחָלִים","streams"],["יַעֲבֹרוּ","they passed over"],["׃",""]] },
   { num:"טז", words:[["הַקֹּדְרִים","that-the-are dark"],["מִנִּי־קָרַח","some of-ice"],["עָלֵימוֹ","on-them"],["יִתְעַלֶּם־שָׁלֶג","it hides itself-snow"],["׃",""]] },
   { num:"יז", words:[["בְּעֵת","in-time"],["יְזֹרְבוּ","when they flow"],["נִצְמָתוּ","they are silenced"],["בְּחֻמּוֹ","in-its-heat"],["נִדְעֲכוּ","they are dried up"],["מִמְּקוֹמָם","from-their-place"],["׃",""]] },
   { num:"יח", words:[["יִלָּפְתוּ","they twist"],["אׇרְחוֹת","the paths of"],["דַּרְכָּם","their-journey"],["יַעֲלוּ","they-go-up"],["בַתֹּהוּ","for-the-thing-of-naught"],["וְיֹאבֵדוּ","and-they-shall-perish"],["׃",""]] },

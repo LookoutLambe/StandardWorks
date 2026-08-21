@@ -1696,7 +1696,7 @@ var psa_ch83Verses = [
   { num:"ז", words:[["אׇהֳלֵי","would-that"],["אֱדוֹם","Edom"],["וְיִשְׁמְעֵאלִים","and-Ishmaelites"],["מוֹאָב","Moab"],["וְהַגְרִים","and-the Hagrites"],["׃",""]] },
   { num:"ח", words:[["גְּבָל","Gebal"],["וְעַמּוֹן","being-led-by-Ammon"],["וַעֲמָלֵק","and-Amalek"],["פְּלֶשֶׁת","Philistia"],["עִם־יֹשְׁבֵי","with-inhabitants-of"],["צוֹר","Tyre"],["׃",""]] },
   { num:"ט", words:[["גַּם־אַשּׁוּר","also-Assyria"],["נִלְוָה","it has joined itself"],["עִמָּם","with-them"],["הָיוּ־זְרוֹעַ","were-the-arm-of"],["לִבְנֵי־לוֹט","unto-the-sons-of-Lot"],["סֶלָה","Selah"],["׃",""]] },
-  { num:"י", words:[["עֲשֵׂה־לָהֶם","do-to-them"],["כְּמִדְיָן","like-Midian"],["כְּסִיסְרָא","like-Sisera"],["כְיָבִין","like-Jabin"],["בְּנַחַל","in-the wadi of"],["קִישׁוֹן","Kishon"],["׃",""]] },
+  { num:"י", words:[["עֲשֵׂה־לָהֶם","do-to-them"],["כְּמִדְיָן","like-Midian"],["כְּסִיסְרָא","like-Sisera"],["כְיָבִין","like-Jabin"],["בְּנַחַל","in-the river of"],["קִישׁוֹן","Kishon"],["׃",""]] },
   { num:"יא", words:[["נִשְׁמְדוּ","they-were-destroyed"],["בְעֵין־דֹּאר","at-En-Dor"],["הָיוּ","were"],["דֹמֶן","dung"],["לָאֲדָמָה","for the-ground"],["׃",""]] },
   { num:"יב", words:[["שִׁיתֵמוֹ","make-them"],["כְּעֹרֵב","like-Oreb"],["וְכִזְאֵב","and-like-Zeeb"],["וּכְזֶבַח","and-like-Zebah"],["וּכְצַלְמֻנָּע","and-like-Zalmunna"],["׃",""]] },
   { num:"יג", words:[["אֲשֶׁר","which"],["אָמְרוּ","they-said"],["נִירְשָׁה","let us take possession of"],["לָּנוּ","we"],["אֵת־נְאוֹת","the pastures of"],["אֱלֹהִים","God"],["׃",""]] },
@@ -2354,7 +2354,7 @@ var psa_ch110Verses = [
   { num:"ד", words:[["נִשְׁבַּע","nor-sworn"],["יְהֹוָה","the-LORD"],["וְלֹא","and-not"],["יִנָּחֵם","it should regret"],["אַתָּה־כֹהֵן","you-a-priest"],["לְעוֹלָם","forever"],["עַל־דִּבְרָתִי","upon-my-plea"],["מַלְכִּי־צֶדֶק","Melchizedek"],["׃",""]] },
   { num:"ה", words:[["אֲדֹנָי","Lord"],["עַל־יְמִינְךָ","upon-your-right hand"],["מָחַץ","he shattered"],["בְּיוֹם־אַפּוֹ","in-the-day-of-his-wrath"],["מְלָכִים","kings"],["׃",""]] },
   { num:"ו", words:[["יָדִין","shall-judge"],["בַּגּוֹיִם","by-the-nations"],["מָלֵא","full-of"],["גְוִיּוֹת","corpses"],["מָחַץ","he shattered"],["רֹאשׁ","the-head-of"],["עַל־אֶרֶץ","concerning-the-land-of"],["רַבָּה","much"],["׃",""]] },
-  { num:"ז", words:[["מִנַּחַל","from-the wadi of"],["בַּדֶּרֶךְ","in-the-way"],["יִשְׁתֶּה","he-drinks"],["עַל־כֵּן","therefore"],["יָרִים","he will lift up"],["רֹאשׁ","the-head-of"],["׃",""]] },
+  { num:"ז", words:[["מִנַּחַל","from-the river of"],["בַּדֶּרֶךְ","in-the-way"],["יִשְׁתֶּה","he-drinks"],["עַל־כֵּן","therefore"],["יָרִים","he will lift up"],["רֹאשׁ","the-head-of"],["׃",""]] },
 ];
 renderVerseSet(psa_ch110Verses, 'psa-ch110-verses');
 
