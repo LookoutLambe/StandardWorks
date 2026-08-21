@@ -821,7 +821,7 @@ var _1ch_ch22Verses = [
 renderVerseSet(_1ch_ch22Verses, '1ch-ch22-verses');
 
 var _1ch_ch23Verses = [
-  { num:"א", words:[["וְדָוִיד","and-David"],["זָקֵן","the-ancient"],["וְשָׂבַע","and-it will be satisfied"],["יָמִים","days"],["וַיַּמְלֵךְ","and-he made king"],["אֶת־שְׁלֹמֹה","Solomon"],["בְנוֹ","his-son"],["עַל־יִשְׂרָאֵל","upon-Israel"],["׃",""]] },
+  { num:"א", words:[["וְדָוִיד","and-David"],["זָקֵן","was old"],["וְשָׂבַע","and-it will be satisfied"],["יָמִים","days"],["וַיַּמְלֵךְ","and-he made king"],["אֶת־שְׁלֹמֹה","Solomon"],["בְנוֹ","his-son"],["עַל־יִשְׂרָאֵל","upon-Israel"],["׃",""]] },
   { num:"ב", words:[["וַיֶּאֱסֹף","and-he-gathered"],["אֶת־כׇּל־שָׂרֵי","all-captains-of"],["יִשְׂרָאֵל","Israel"],["וְהַכֹּהֲנִים","and-the-priests"],["וְהַלְוִיִּם","and-the-Levites"],["׃",""]] },
   { num:"ג", words:[["וַיִּסָּפְרוּ","and-they were counted"],["הַלְוִיִּם","the-Levites"],["מִבֶּן","from-a son of"],["שְׁלֹשִׁים","thirty"],["שָׁנָה","years"],["וָמָעְלָה","and-upwards"],["וַיְהִי","and-it-came-to-pass"],["מִסְפָּרָם","in-number"],["לְגֻלְגְּלֹתָם","to-their-heads"],["לִגְבָרִים","to-men"],["שְׁלֹשִׁים","thirty"],["וּשְׁמוֹנָה","and-eight"],["אָלֶף","thousand"],["׃",""]] },
   { num:"ד", words:[["מֵאֵלֶּה","than-these"],["לְנַצֵּחַ","forever"],["עַל־מְלֶאכֶת","upon-work-of"],["בֵּית־יְהֹוָה","the-house-of-the-LORD"],["עֶשְׂרִים","twenty"],["וְאַרְבָּעָה","and-four"],["אָלֶף","thousand"],["וְשֹׁטְרִים","and-officials"],["וְשֹׁפְטִים","and-judges"],["שֵׁשֶׁת","six"],["אֲלָפִים","thousand"],["׃",""]] },
