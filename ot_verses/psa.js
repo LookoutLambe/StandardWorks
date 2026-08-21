@@ -1769,9 +1769,9 @@ var psa_ch87Verses = [
   { num:"א", words:[["לִבְנֵי־קֹרַח","unto-the-sons-of-Korah"],["מִזְמוֹר","a-psalm"],["שִׁיר","a song"],["יְסוּדָתוֹ","his-foundation"],["בְּהַרְרֵי־קֹדֶשׁ","on-hills of-holy"],["׃",""]] },
   { num:"ב", words:[["אֹהֵב","loves"],["יְהֹוָה","the-LORD"],["שַׁעֲרֵי","the-gates-of"],["צִיּוֹן","Zion"],["מִכֹּל","of-all"],["מִשְׁכְּנוֹת","from-dwelt"],["יַעֲקֹב","Jacob"],["׃",""]] },
   { num:"ג", words:[["נִכְבָּדוֹת","are-glorious"],["מְדֻבָּר","is spoken"],["בָּךְ","in-you"],["עִיר","the-city-of"],["הָאֱלֹהִים","the-God"],["סֶלָה","Selah"],["׃",""]] },
-  { num:"ד", words:[["אַזְכִּיר","I will cause to be remembered"],["רַהַב","Rahab"],["וּבָבֶל","and-Babylon"],["לְיֹדְעָי","to-those who know-me"],["הִנֵּה","behold"],["פְלֶשֶׁת","Philistia"],["וְצֹר","and-Tyre"],["עִם־כּוּשׁ","with-Cush"],["זֶה","this"],["יֻלַּד־שָׁם","he was born-there-is"],["׃",""]] },
+  { num:"ד", words:[["אַזְכִּיר","I will cause to be remembered"],["רַהַב","Rahab"],["וּבָבֶל","and-Babylon"],["לְיֹדְעָי","to-those who know-me"],["הִנֵּה","behold"],["פְלֶשֶׁת","Philistia"],["וְצֹר","and-Tyre"],["עִם־כּוּשׁ","with-Cush"],["זֶה","this"],["יֻלַּד־שָׁם","he was born-there"],["׃",""]] },
   { num:"ה", words:[["וּלְצִיּוֹן","and-for-Zion"],["יֵאָמַר","it is said"],["אִישׁ","a-man"],["וְאִישׁ","and-a-man"],["יֻלַּד־בָּהּ","he was born-in-it"],["וְהוּא","and-he"],["יְכוֹנְנֶהָ","established-it"],["עֶלְיוֹן","Most-High"],["׃",""]] },
-  { num:"ו", words:[["יְהֹוָה","the-LORD"],["יִסְפֹּר","he will count"],["בִּכְתוֹב","when-records"],["עַמִּים","peoples"],["זֶה","this"],["יֻלַּד־שָׁם","he was born-there-is"],["סֶלָה","Selah"],["׃",""]] },
+  { num:"ו", words:[["יְהֹוָה","the-LORD"],["יִסְפֹּר","he will count"],["בִּכְתוֹב","when-records"],["עַמִּים","peoples"],["זֶה","this"],["יֻלַּד־שָׁם","he was born-there"],["סֶלָה","Selah"],["׃",""]] },
   { num:"ז", words:[["וְשָׁרִים","and-singers"],["כְּחֹלְלִים","like-pipers"],["כׇּל־מַעְיָנַי","all-my-springs"],["בָּךְ","in-you"],["׃",""]] },
 ];
 renderVerseSet(psa_ch87Verses, 'psa-ch87-verses');
@@ -2926,7 +2926,7 @@ var psa_ch139Verses = [
   { num:"ז", words:[["אָנָה","whither"],["אֵלֵךְ","will-walk"],["מֵרוּחֶךָ","from-your-spirit"],["וְאָנָה","and-where"],["מִפָּנֶיךָ","from-Your-presence"],["אֶבְרָח","will I flee"],["׃",""]] },
   { num:"ח", words:[["אִם־אֶסַּק","if-I will ascend"],["שָׁמַיִם","the-heavens"],["שָׁם","there"],["אָתָּה","you-are"],["וְאַצִּיעָה","and-I will spread as a bed"],["שְּׁאוֹל","Sheol"],["הִנֶּךָּ","behold are-you"],["׃",""]] },
   { num:"ט", words:[["אֶשָּׂא","I-lift-up"],["כַנְפֵי־שָׁחַר","the wings of-light"],["אֶשְׁכְּנָה","I dwell"],["בְּאַחֲרִית","in-latter"],["יָם","the-sea"],["׃",""]] },
-  { num:"י", words:[["גַּם־שָׁם","also-there-is"],["יָדְךָ","your-hand"],["תַנְחֵנִי","you will lead-me"],["וְתֹאחֲזֵנִי","and-it will grasp-me"],["יְמִינֶךָ","Your-right-hand"],["׃",""]] },
+  { num:"י", words:[["גַּם־שָׁם","also-there"],["יָדְךָ","your-hand"],["תַנְחֵנִי","you will lead-me"],["וְתֹאחֲזֵנִי","and-it will grasp-me"],["יְמִינֶךָ","Your-right-hand"],["׃",""]] },
   { num:"יא", words:[["וָאֹמַר","and-I-said"],["אַךְ־חֹשֶׁךְ","but-darkness"],["יְשׁוּפֵנִי","he crushes-me"],["וְלַיְלָה","and-by-night"],["אוֹר","light"],["בַּעֲדֵנִי","behind-me"],["׃",""]] },
   { num:"יב", words:[["גַּם־חֹשֶׁךְ","also-darkness"],["לֹא־יַחְשִׁיךְ","not-it is too dark"],["מִמֶּךָּ","from-you"],["וְלַיְלָה","and-by-night"],["כַּיּוֹם","as the day"],["יָאִיר","shall-shine"],["כַּחֲשֵׁיכָה","as-darkness"],["כָּאוֹרָה","as the-light"],["׃",""]] },
   { num:"יג", words:[["כִּי־אַתָּה","that-you"],["קָנִיתָ","you have bought"],["כִלְיֹתָי","my-heart"],["תְּסֻכֵּנִי","you wove together-me"],["בְּבֶטֶן","in-the womb of"],["אִמִּי","my-mother"],["׃",""]] },

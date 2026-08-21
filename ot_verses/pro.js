@@ -480,7 +480,7 @@ var pro_ch15Verses = [
   { num:"יד", words:[["לֵב","heart"],["נָבוֹן","discerning"],["יְבַקֶּשׁ־דָּעַת","it seeks-knowledge"],["(ופני)",""],["[וּפִי]","and-a mouth of"],["כְסִילִים","fools"],["יִרְעֶה","shall-feed"],["אִוֶּלֶת","foolishness"],["׃",""]] },
   { num:"טו", words:[["כׇּל־יְמֵי","all-days-of"],["עָנִי","poor"],["רָעִים","evil"],["וְטוֹב־לֵב","and-better-heart"],["מִשְׁתֶּה","feast"],["תָמִיד","continually"],["׃",""]] },
   { num:"טז", words:[["טוֹב־מְעַט","good-somewhat"],["בְּיִרְאַת","in-the-fear-of"],["יְהֹוָה","the-LORD"],["מֵאוֹצָר","more than-treasure"],["רָב","much"],["וּמְהוּמָה","and-a-movement"],["בוֹ","in-him"],["׃",""]] },
-  { num:"יז", words:[["טוֹב","good"],["אֲרֻחַת","an allowance of"],["יָרָק","vegetables"],["וְאַהֲבָה־שָׁם","and-love-there-is"],["מִשּׁוֹר","from-an ox"],["אָבוּס","fattened"],["וְשִׂנְאָה־בוֹ","and-hatred-in-Him"],["׃",""]] },
+  { num:"יז", words:[["טוֹב","good"],["אֲרֻחַת","an allowance of"],["יָרָק","vegetables"],["וְאַהֲבָה־שָׁם","and-love-there"],["מִשּׁוֹר","from-an ox"],["אָבוּס","fattened"],["וְשִׂנְאָה־בוֹ","and-hatred-in-Him"],["׃",""]] },
   { num:"יח", words:[["אִישׁ","a-man"],["חֵמָה","wrath"],["יְגָרֶה","he stirs up"],["מָדוֹן","disturbance"],["וְאֶרֶךְ","and-he-was-long"],["אַפַּיִם","with-face"],["יַשְׁקִיט","he makes quiet"],["רִיב","contention"],["׃",""]] },
   { num:"יט", words:[["דֶּרֶךְ","the way of"],["עָצֵל","idle"],["כִּמְשֻׂכַת","is like-a hedge of"],["חָדֶק","thorns"],["וְאֹרַח","and-a way"],["יְשָׁרִים","just"],["סְלֻלָה","is cast up"],["׃",""]] },
   { num:"כ", words:[["בֵּן","a-son"],["חָכָם","wise"],["יְשַׂמַּח־אָב","which it makes glad-father"],["וּכְסִיל","and-Kesil"],["אָדָם","man"],["בּוֹזֶה","is despising"],["אִמּוֹ","his-mother"],["׃",""]] },

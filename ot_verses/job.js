@@ -1171,7 +1171,7 @@ var job_ch40Verses = [
   { num:"יז", words:[["יַחְפֹּץ","delights"],["זְנָבוֹ","its-tail"],["כְמוֹ־אָרֶז","like-cedar"],["גִּידֵי","the sinews of"],["פַחֲדָו","fear"],["יְשֹׂרָגוּ","they are intertwined"],["׃",""]] },
   { num:"יח", words:[["עֲצָמָיו","his-bones"],["אֲפִיקֵי","are tubes of"],["נְחֻשָׁה","copper"],["גְּרָמָיו","its-limbs"],["כִּמְטִיל","are like-a rod of"],["בַּרְזֶל","iron"],["׃",""]] },
   { num:"יט", words:[["הוּא","he"],["רֵאשִׁית","the-beginning-of"],["דַּרְכֵי־אֵל","the-ways-of-God"],["הָעֹשׂוֹ","the-one who made-it"],["יַגֵּשׁ","let him bring near"],["חַרְבּוֹ","his-sword"],["׃",""]] },
-  { num:"כ", words:[["כִּי־בוּל","because-the beasts of"],["הָרִים","mountains"],["יִשְׂאוּ־לוֹ","shall-lift-up-him"],["וְכׇל־חַיַּת","and-all-beasts-of"],["הַשָּׂדֶה","the-field"],["יְשַׂחֲקוּ־שָׁם","they play-there-is"],["׃",""]] },
+  { num:"כ", words:[["כִּי־בוּל","because-the beasts of"],["הָרִים","mountains"],["יִשְׂאוּ־לוֹ","shall-lift-up-him"],["וְכׇל־חַיַּת","and-all-beasts-of"],["הַשָּׂדֶה","the-field"],["יְשַׂחֲקוּ־שָׁם","they play-there"],["׃",""]] },
   { num:"כא", words:[["תַּחַת־צֶאֱלִים","under-thorny lotus plants"],["יִשְׁכָּב","will he lie down"],["בְּסֵתֶר","in-the cover of"],["קָנֶה","reeds"],["וּבִצָּה","and-swamp"],["׃",""]] },
   { num:"כב", words:[["יְסֻכֻּהוּ","they cover-it"],["צֶאֱלִים","thorny lotus plants"],["צִלְלוֹ","his-shade"],["יְסֻבּוּהוּ","they surround-it"],["עַרְבֵי־נָחַל","the poplars of-a wadi"],["׃",""]] },
   { num:"כג", words:[["הֵן","behold"],["יַעֲשֹׁק","it is violent"],["נָהָר","the-river"],["לֹא","not"],["יַחְפּוֹז","it is alarmed"],["יִבְטַח","trusts"],["כִּי־יָגִיחַ","because-it bursts forth"],["יַרְדֵּן","Jordan"],["אֶל־פִּיהוּ","to-his-mouth"],["׃",""]] },
