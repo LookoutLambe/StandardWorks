@@ -1537,7 +1537,7 @@ var psa_ch77Verses = [
 renderVerseSet(psa_ch77Verses, 'psa-ch77-verses');
 
 var psa_ch78Verses = [
-  { num:"א", words:[["מַשְׂכִּיל","any-who-understand"],["לְאָסָף","Asaph"],["הַאֲזִינָה","give-ear"],["עַמִּי","my-people"],["תּוֹרָתִי","my-law"],["הַטּוּ","the-give-ear"],["אׇזְנְכֶם","your-ears"],["לְאִמְרֵי־פִי","to-the-words-of-my-mouth"],["׃",""]] },
+  { num:"א", words:[["מַשְׂכִּיל","any-who-understand"],["לְאָסָף","Asaph"],["הַאֲזִינָה","give-ear"],["עַמִּי","my-people"],["תּוֹרָתִי","my-law"],["הַטּוּ","incline"],["אׇזְנְכֶם","your-ears"],["לְאִמְרֵי־פִי","to-the-words-of-my-mouth"],["׃",""]] },
   { num:"ב", words:[["אֶפְתְּחָה","I will open"],["בְמָשָׁל","in-a parable"],["פִּי","the-mouth-of"],["אַבִּיעָה","I will pour forth"],["חִידוֹת","riddles"],["מִנִּי־קֶדֶם","some of-old"],["׃",""]] },
   { num:"ג", words:[["אֲשֶׁר","which"],["שָׁמַעְנוּ","we-heard"],["וַנֵּדָעֵם","and-we have known-them"],["וַאֲבוֹתֵינוּ","and-our-fathers"],["סִפְּרוּ־לָנוּ","they recounted-us"],["׃",""]] },
   { num:"ד", words:[["לֹא","not"],["נְכַחֵד","we will hide"],["מִבְּנֵיהֶם","from-their-sons"],["לְדוֹר","to-generation"],["אַחֲרוֹן","the-last"],["מְסַפְּרִים","are recounting"],["תְּהִלּוֹת","the-praises-of"],["יְהֹוָה","the-LORD"],["וֶעֱזוּזוֹ","and-might-his"],["וְנִפְלְאֹתָיו","and-his-wonders"],["אֲשֶׁר","which"],["עָשָׂה","he-did"],["׃",""]] },
