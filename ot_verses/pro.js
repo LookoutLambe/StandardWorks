@@ -766,7 +766,7 @@ var pro_ch23Verses = [
   { num:"לא", words:[["אַל־תֵּרֶא","do-not-you see"],["יַּיִן","wine"],["כִּי","because"],["יִתְאַדָּם","it will be red"],["כִּי־יִתֵּן","when-shall-give"],["[בַּכּוֹס]","in the-cup"],["עֵינוֹ","his eye"],["יִתְהַלֵּךְ","it will go"],["בְּמֵישָׁרִים","with-equity"],["׃",""]] },
   { num:"לב", words:[["אַחֲרִיתוֹ","his-posterity"],["כְּנָחָשׁ","like-a snake"],["יִשָּׁךְ","someone will pay interest"],["וּכְצִפְעֹנִי","and-like-a viper"],["יַפְרִשׁ","it will sting"],["׃",""]] },
   { num:"לג", words:[["עֵינֶיךָ","your-eyes"],["יִרְאוּ","shall-see"],["זָרוֹת","strange"],["וְלִבְּךָ","and-your-heart"],["יְדַבֵּר","speaks"],["תַּהְפֻּכוֹת","perverse things"],["׃",""]] },
-  { num:"לד", words:[["וְהָיִיתָ","you-were"],["כְּשֹׁכֵב","like-one who lies down"],["בְּלֶב־יָם","in-the heart of-the-sea"],["וּכְשֹׁכֵב","and-like-one who lies down"],["בְּרֹאשׁ","in the top of"],["חִבֵּל","a mast"],["׃",""]] },
+  { num:"לד", words:[["וְהָיִיתָ","and-you-shall-be"],["כְּשֹׁכֵב","like-one who lies down"],["בְּלֶב־יָם","in-the heart of-the-sea"],["וּכְשֹׁכֵב","and-like-one who lies down"],["בְּרֹאשׁ","in the top of"],["חִבֵּל","a mast"],["׃",""]] },
   { num:"לה", words:[["בַל־חָלִיתִי","not-I was sick"],["הֲלָמוּנִי","they beat-me"],["בַּל־יָדָעְתִּי","not-I-know"],["מָתַי","when"],["אָקִיץ","will I awake"],["אוֹסִיף","more"],["אֲבַקְשֶׁנּוּ","I will seek-it"],["עוֹד","any-more"],["׃",""]] },
 ];
 renderVerseSet(pro_ch23Verses, 'pro-ch23-verses');

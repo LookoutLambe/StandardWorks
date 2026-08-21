@@ -113,7 +113,7 @@ var lam_ch3Verses = [
   { num:"נח", words:[["רַבְתָּ","you have conducted"],["אֲדֹנָי","Lord"],["רִיבֵי","the cases of"],["נַפְשִׁי","my-life"],["גָּאַלְתָּ","which you redeemed"],["חַיָּי","my-days"],["׃",""]] },
   { num:"נט", words:[["רָאִיתָה","you have seen"],["יְהֹוָה","the-LORD"],["עַוָּתָתִי","my-oppression"],["שׇׁפְטָה","judged"],["מִשְׁפָּטִי","my-judgment"],["׃",""]] },
   { num:"ס", words:[["רָאִיתָה","you have seen"],["כׇּל־נִקְמָתָם","all-revenge"],["כׇּל־מַחְשְׁבֹתָם","all-their-plans"],["לִי","to-me"],["׃",""]] },
-  { num:"סא", words:[["שָׁמַעְתָּ","you-have-hitherto-listened-to"],["חֶרְפָּתָם","their-reproach"],["יְהֹוָה","the-LORD"],["כׇּל־מַחְשְׁבֹתָם","all-their-plans"],["עָלָי","against-me"],["׃",""]] },
+  { num:"סא", words:[["שָׁמַעְתָּ","you-have-heard"],["חֶרְפָּתָם","their-reproach"],["יְהֹוָה","the-LORD"],["כׇּל־מַחְשְׁבֹתָם","all-their-plans"],["עָלָי","against-me"],["׃",""]] },
   { num:"סב", words:[["שִׂפְתֵי","the lips of"],["קָמַי","those who rise against-me"],["וְהֶגְיוֹנָם","and-their-muttering"],["עָלַי","upon-me"],["כׇּל־הַיּוֹם","all-the-day"],["׃",""]] },
   { num:"סג", words:[["שִׁבְתָּם","dwelling-they"],["וְקִימָתָם","and-their-rising"],["הַבִּיטָה","the-pay attention"],["אֲנִי","I"],["מַנְגִּינָתָם","their-mocking song"],["׃",""]] },
   { num:"סד", words:[["תָּשִׁיב","recall"],["לָהֶם","to-them"],["גְּמוּל","recompense"],["יְהֹוָה","the-LORD"],["כְּמַעֲשֵׂה","as-the-work-of"],["יְדֵיהֶם","their-hands"],["׃",""]] },

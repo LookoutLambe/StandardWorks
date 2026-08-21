@@ -125,7 +125,7 @@ var job_ch5Verses = [
   { num:"כד", words:[["וְיָדַעְתָּ","and-you-know"],["כִּי־שָׁלוֹם","because-peace"],["אׇהֳלֶךָ","your-tent"],["וּפָקַדְתָּ","and-you will visit"],["נָוְךָ","your-estate"],["וְלֹא","and-not"],["תֶחֱטָא","it will sin"],["׃",""]] },
   { num:"כה", words:[["וְיָדַעְתָּ","and-you-know"],["כִּי־רַב","because-great"],["זַרְעֶךָ","your-seed"],["וְצֶאֱצָאֶיךָ","and-your-descendants"],["כְּעֵשֶׂב","like-the vegetation of"],["הָאָרֶץ","the-earth"],["׃",""]] },
   { num:"כו", words:[["תָּבוֹא","come-shall"],["בְכֶלַח","in-full strength"],["אֱלֵי־קָבֶר","to-a burial site"],["כַּעֲלוֹת","just as-came up"],["גָּדִישׁ","a heap of sheaves"],["בְּעִתּוֹ","in-its-time"],["׃",""]] },
-  { num:"כז", words:[["הִנֵּה־זֹאת","behold-this"],["חֲקַרְנוּהָ","we have examined-it"],["כֶּן־הִיא","so-it-is"],["שְׁמָעֶנָּה","hear-it"],["וְאַתָּה","for-you"],["דַע־לָךְ","know-for you"],["׃",""]] },
+  { num:"כז", words:[["הִנֵּה־זֹאת","behold-this"],["חֲקַרְנוּהָ","we have examined-it"],["כֶּן־הִיא","so-it-is"],["שְׁמָעֶנָּה","hear-it"],["וְאַתָּה","and-you"],["דַע־לָךְ","know-for you"],["׃",""]] },
 ];
 renderVerseSet(job_ch5Verses, 'job-ch5-verses');
 
@@ -294,7 +294,7 @@ var job_ch11Verses = [
   { num:"יב", words:[["וְאִישׁ","and-a-man"],["נָבוּב","hollow"],["יִלָּבֵב","he will become intelligent"],["וְעַיִר","and-a male donkey of"],["פֶּרֶא","wild"],["אָדָם","man"],["יִוָּלֵד","he-shall-be-born"],["׃",""]] },
   { num:"יג", words:[["אִם־אַתָּה","if-you"],["הֲכִינוֹתָ","you-prepared"],["לִבֶּךָ","your-heart"],["וּפָרַשְׂתָּ","and-you will spread out"],["אֵלָיו","to-him"],["כַּפֶּיךָ","the-your-hands"],["׃",""]] },
   { num:"יד", words:[["אִם־אָוֶן","if-iniquity"],["בְּיָדְךָ","in-your-hand"],["הַרְחִיקֵהוּ","put far away-it"],["וְאַל־תַּשְׁכֵּן","and-do-not-you cause to dwell"],["בְּאֹהָלֶיךָ","in-your-tents"],["עַוְלָה","injustice"],["׃",""]] },
-  { num:"טו", words:[["כִּי־אָז","because-then"],["תִּשָּׂא","you-shall-receive"],["פָנֶיךָ","your-face"],["מִמּוּם","from-blemish"],["וְהָיִיתָ","you-were"],["מֻצָק","firmly established"],["וְלֹא","and-not"],["תִירָא","you shall be afraid"],["׃",""]] },
+  { num:"טו", words:[["כִּי־אָז","because-then"],["תִּשָּׂא","you-shall-receive"],["פָנֶיךָ","your-face"],["מִמּוּם","from-blemish"],["וְהָיִיתָ","and-you-shall-be"],["מֻצָק","firmly established"],["וְלֹא","and-not"],["תִירָא","you shall be afraid"],["׃",""]] },
   { num:"טז", words:[["כִּי־אַתָּה","that-you"],["עָמָל","grievousness"],["תִּשְׁכָּח","you will forget"],["כְּמַיִם","like-waters"],["עָבְרוּ","passed"],["תִזְכֹּר","remember"],["׃",""]] },
   { num:"יז", words:[["וּמִצׇּהֳרַיִם","and-more than-noon"],["יָקוּם","he-shall-rise"],["חָלֶד","lifespan"],["תָּעֻפָה","it will be dark"],["כַּבֹּקֶר","like the-morning"],["תִּהְיֶה","shall-be"],["׃",""]] },
   { num:"יח", words:[["וּבָטַחְתָּ","and-you will be secure"],["כִּי־יֵשׁ","that-there-is"],["תִּקְוָה","hope"],["וְחָפַרְתָּ","and-you will be well protected"],["לָבֶטַח","in-safety"],["תִּשְׁכָּב","you will lie down"],["׃",""]] },
