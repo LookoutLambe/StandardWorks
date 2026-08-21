@@ -315,7 +315,7 @@ var job_ch12Verses = [
   { num:"ט", words:[["מִי","who"],["לֹא־יָדַע","not-he-knew"],["בְּכׇל־אֵלֶּה","in-all-these"],["כִּי","because"],["יַד־יְהֹוָה","hand-of-the-LORD"],["עָשְׂתָה","did"],["זֹּאת","this"],["׃",""]] },
   { num:"י", words:[["אֲשֶׁר","which"],["בְּיָדוֹ","in-his-hand"],["נֶפֶשׁ","soul"],["כׇּל־חָי","all-alive"],["וְרוּחַ","and-spirit-of"],["כׇּל־בְּשַׂר־אִישׁ","all-the-flesh-man-of"],["׃",""]] },
   { num:"יא", words:[["הֲלֹא־אֹזֶן","is-it-not-an-ear"],["מִלִּין","words"],["תִּבְחָן","does it test"],["וְחֵךְ","and-a palate"],["אֹכֶל","food"],["יִטְעַם־לוֹ","will he taste-him"],["׃",""]] },
-  { num:"יב", words:[["בִּישִׁישִׁים","is with-aged people"],["חׇכְמָה","wisdom"],["וְאֹרֶךְ","and-he-was-long"],["יָמִים","days"],["תְּבוּנָה","is understanding"],["׃",""]] },
+  { num:"יב", words:[["בִּישִׁישִׁים","is with-aged people"],["חׇכְמָה","wisdom"],["וְאֹרֶךְ","and-length-of"],["יָמִים","days"],["תְּבוּנָה","is understanding"],["׃",""]] },
   { num:"יג", words:[["עִמּוֹ","with-him"],["חׇכְמָה","wisdom"],["וּגְבוּרָה","and-might"],["לוֹ","to-him"],["עֵצָה","counsel"],["וּתְבוּנָה","and-understanding"],["׃",""]] },
   { num:"יד", words:[["הֵן","behold"],["יַהֲרוֹס","he tears down"],["וְלֹא","and-not"],["יִבָּנֶה","it will be rebuilt"],["יִסְגֹּר","he shuts"],["עַל־אִישׁ","upon a man"],["וְלֹא","and-not"],["יִפָּתֵחַ","it will be opened"],["׃",""]] },
   { num:"טו", words:[["הֵן","behold"],["יַעְצֹר","he will rule"],["בַּמַּיִם","in-the-water"],["וְיִבָשׁוּ","so-they may be dry"],["וִישַׁלְּחֵם","and-he lets loose-them"],["וְיַהַפְכוּ־אָרֶץ","and-they may devastate-the-earth"],["׃",""]] },
