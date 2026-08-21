@@ -576,6 +576,21 @@ body.dark-mode .landing-app-store-link:hover {
   letter-spacing: 0.02em;
 }
 
+/* Standing note under Continue Reading — web only, hidden inside the iOS app */
+.landing-update-note {
+  max-width: 520px;
+  width: calc(100% - 32px);
+  margin: -8px auto 26px;
+  font-family: 'David Libre', 'Georgia', serif;
+  font-size: 0.92rem;
+  font-style: italic;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: var(--ink-light);
+}
+html.sw-in-app .landing-update-note { display: none; }
+
 /* ========== GLOBAL SEARCH ========== */
 .global-search-wrap {
   display: flex;
@@ -665,6 +680,10 @@ body.dark-mode .gs-result-link:hover {
   #continue-reading .cr-heb {
     font-size: 1.45rem;
   }
+  .landing-update-note {
+    max-width: 100%;
+    width: calc(100% - 24px);
+  }
   .landing-title-hebrew { font-size: 2.1em; }
   .landing-he-en,
   .landing-title { font-size: 1.05em; }
@@ -699,7 +718,7 @@ body, button, input, select, textarea,
 .card-title, .card-subtitle, .card-desc,
 .continue-reading, .cr-ref, .cr-heb, .cr-btn,
 #global-search, #gs-filter, #gs-results,
-.landing-app-store-link, .landing-app-store-sub {
+.landing-app-store-link, .landing-app-store-sub, .landing-update-note {
   font-family: 'David Libre', 'Georgia', serif !important;
 }
 
@@ -741,6 +760,9 @@ body, button, input, select, textarea,
       <div class="cr-ref" id="cr-ref"></div>
       <div class="cr-heb" id="cr-heb"></div>
     </div>
+
+    <!-- ===== UPDATE NOTE (web only — hidden inside the iOS app via html.sw-in-app) ===== -->
+    <div class="landing-update-note">The interlinear is always being updated for corrections</div>
 
     <!-- ===== GLOBAL SEARCH ===== -->
     <div class="global-search-wrap">
