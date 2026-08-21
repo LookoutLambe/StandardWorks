@@ -853,7 +853,7 @@ var psa_ch44Verses = [
   { num:"כד", words:[["עוּרָה","awake"],["לָמָּה","why"],["תִישַׁן","do you sleep"],["אֲדֹנָי","Lord"],["הָקִיצָה","awake"],["אַל־תִּזְנַח","do-not-you reject us"],["לָנֶצַח","forever"],["׃",""]] },
   { num:"כה", words:[["לָמָּה־פָנֶיךָ","why-your-face"],["תַסְתִּיר","do you hide"],["תִּשְׁכַּח","you should forget"],["עׇנְיֵנוּ","Unni-us"],["וְלַחֲצֵנוּ","and-our-oppression"],["׃",""]] },
   { num:"כו", words:[["כִּי","because"],["שָׁחָה","it has sunk down"],["לֶעָפָר","to-the-dust"],["נַפְשֵׁנוּ","our-lives"],["דָּבְקָה","she clung"],["לָאָרֶץ","of-earth"],["בִּטְנֵנוּ","our-belly"],["׃",""]] },
-  { num:"כז", words:[["קוּמָה","arise"],["עֶזְרָתָה","a help"],["לָּנוּ","we"],["וּפְדֵנוּ","and-redeem-us"],["לְמַעַן","in-order-that"],["חַסְדֶּךָ","your-lovingkindness"],["׃",""]] },
+  { num:"כז", words:[["קוּמָה","arise"],["עֶזְרָתָה","a help"],["לָּנוּ","to us"],["וּפְדֵנוּ","and-redeem-us"],["לְמַעַן","in-order-that"],["חַסְדֶּךָ","your-lovingkindness"],["׃",""]] },
 ];
 renderVerseSet(psa_ch44Verses, 'psa-ch44-verses');
 
@@ -1306,7 +1306,7 @@ var psa_ch68Verses = [
   { num:"כו", words:[["קִדְּמוּ","they met"],["שָׁרִים","male singers"],["אַחַר","after"],["נֹגְנִים","musicians"],["בְּתוֹךְ","among"],["עֲלָמוֹת","alamoth"],["תּוֹפֵפוֹת","playing tambourines"],["׃",""]] },
   { num:"כז", words:[["בְּמַקְהֵלוֹת","in-the-congregations"],["בָּרְכוּ","they-blessed"],["אֱלֹהִים","God"],["אֲדֹנָי","Lord"],["מִמְּקוֹר","from-the fountain of"],["יִשְׂרָאֵל","Israel"],["׃",""]] },
   { num:"כח", words:[["שָׁם","there"],["בִּנְיָמִן","Benjamin"],["צָעִיר","young-man"],["רֹדֵם","is ruling-them"],["שָׂרֵי","captains-of"],["יְהוּדָה","Judah"],["רִגְמָתָם","their-heaps of stones"],["שָׂרֵי","captains-of"],["זְבֻלוּן","Zebulun"],["שָׂרֵי","captains-of"],["נַפְתָּלִי","Naphtali"],["׃",""]] },
-  { num:"כט", words:[["צִוָּה","commanded"],["אֱלֹהֶיךָ","your-God"],["עֻזֶּךָ","your-strength"],["עוּזָּה","be strong"],["אֱלֹהִים","God"],["זוּ","which"],["פָּעַלְתָּ","you have made"],["לָּנוּ","we"],["׃",""]] },
+  { num:"כט", words:[["צִוָּה","commanded"],["אֱלֹהֶיךָ","your-God"],["עֻזֶּךָ","your-strength"],["עוּזָּה","be strong"],["אֱלֹהִים","God"],["זוּ","which"],["פָּעַלְתָּ","you have made"],["לָּנוּ","to us"],["׃",""]] },
   { num:"ל", words:[["מֵהֵיכָלֶךָ","from-your-temple"],["עַל־יְרוּשָׁלָ͏ִם","upon-Jerusalem"],["לְךָ","for-you"],["יוֹבִילוּ","they will bring"],["מְלָכִים","kings"],["שָׁי","a gift"],["׃",""]] },
   { num:"לא", words:[["גְּעַר","rebuke"],["חַיַּת","beasts-of"],["קָנֶה","reeds"],["עֲדַת","congregation-of"],["אַבִּירִים","mighty ones"],["בְּעֶגְלֵי","with-calves of"],["עַמִּים","peoples"],["מִתְרַפֵּס","trampling"],["בְּרַצֵּי־כָסֶף","on-pieces of-silver"],["בִּזַּר","he has scattered"],["עַמִּים","peoples"],["קְרָבוֹת","battles"],["יֶחְפָּצוּ","they delight in"],["׃",""]] },
   { num:"לב", words:[["יֶאֱתָיוּ","they will come"],["חַשְׁמַנִּים","envoys"],["מִנִּי","some of"],["מִצְרָיִם","Egypt"],["כּוּשׁ","Cush"],["תָּרִיץ","it will cause to run"],["יָדָיו","his-hands"],["לֵאלֹהִים","God"],["׃",""]] },
@@ -1632,7 +1632,7 @@ renderVerseSet(psa_ch79Verses, 'psa-ch79-verses');
 var psa_ch80Verses = [
   { num:"א", words:[["לַמְנַצֵּחַ","to-the-chief-musician"],["אֶל־שֹׁשַׁנִּים","to-Shoshannim"],["עֵדוּת","testimony-of"],["לְאָסָף","Asaph"],["מִזְמוֹר","a-psalm"],["׃",""]] },
   { num:"ב", words:[["רֹעֵה","a herder of"],["יִשְׂרָאֵל","Israel"],["הַאֲזִינָה","give-ear"],["נֹהֵג","shall-lead"],["כַּצֹּאן","like-the-sheep"],["יוֹסֵף","Joseph"],["יֹשֵׁב","who-dwells-in"],["הַכְּרוּבִים","the-cherubim"],["הוֹפִיעָה","shine forth"],["׃",""]] },
-  { num:"ג", words:[["לִפְנֵי","before"],["אֶפְרַיִם","Ephraim"],["וּבִנְיָמִן","and-Benjamin"],["וּמְנַשֶּׁה","and-Manasseh"],["עוֹרְרָה","awaken"],["אֶת־גְּבוּרָתֶךָ","might-your"],["וּלְכָה","and-for-you"],["לִישֻׁעָתָה","for-salvation"],["לָּנוּ","we"],["׃",""]] },
+  { num:"ג", words:[["לִפְנֵי","before"],["אֶפְרַיִם","Ephraim"],["וּבִנְיָמִן","and-Benjamin"],["וּמְנַשֶּׁה","and-Manasseh"],["עוֹרְרָה","awaken"],["אֶת־גְּבוּרָתֶךָ","might-your"],["וּלְכָה","and-for-you"],["לִישֻׁעָתָה","for-salvation"],["לָּנוּ","to us"],["׃",""]] },
   { num:"ד", words:[["אֱלֹהִים","God"],["הֲשִׁיבֵנוּ","restore-us"],["וְהָאֵר","and-the-make shine"],["פָּנֶיךָ","Your-face"],["וְנִוָּשֵׁעָה","so-let us be delivered"],["׃",""]] },
   { num:"ה", words:[["יְהֹוָה","the-LORD"],["אֱלֹהִים","God"],["צְבָאוֹת","of-Hosts"],["עַד־מָתַי","until-when"],["עָשַׁנְתָּ","have you smoked"],["בִּתְפִלַּת","at-the prayer of"],["עַמֶּךָ","your-people"],["׃",""]] },
   { num:"ו", words:[["הֶאֱכַלְתָּם","you have fed-them"],["לֶחֶם","bread"],["דִּמְעָה","tears"],["וַתַּשְׁקֵמוֹ","and-you have made drink-them"],["בִּדְמָעוֹת","tears"],["שָׁלִישׁ","a third of a measure"],["׃",""]] },
@@ -1699,7 +1699,7 @@ var psa_ch83Verses = [
   { num:"י", words:[["עֲשֵׂה־לָהֶם","do-to-them"],["כְּמִדְיָן","like-Midian"],["כְּסִיסְרָא","like-Sisera"],["כְיָבִין","like-Jabin"],["בְּנַחַל","in-the river of"],["קִישׁוֹן","Kishon"],["׃",""]] },
   { num:"יא", words:[["נִשְׁמְדוּ","they-were-destroyed"],["בְעֵין־דֹּאר","at-En-Dor"],["הָיוּ","were"],["דֹמֶן","dung"],["לָאֲדָמָה","for the-ground"],["׃",""]] },
   { num:"יב", words:[["שִׁיתֵמוֹ","make-them"],["כְּעֹרֵב","like-Oreb"],["וְכִזְאֵב","and-like-Zeeb"],["וּכְזֶבַח","and-like-Zebah"],["וּכְצַלְמֻנָּע","and-like-Zalmunna"],["׃",""]] },
-  { num:"יג", words:[["אֲשֶׁר","which"],["אָמְרוּ","they-said"],["נִירְשָׁה","let us take possession of"],["לָּנוּ","we"],["אֵת־נְאוֹת","the pastures of"],["אֱלֹהִים","God"],["׃",""]] },
+  { num:"יג", words:[["אֲשֶׁר","which"],["אָמְרוּ","they-said"],["נִירְשָׁה","let us take possession of"],["לָּנוּ","to us"],["אֵת־נְאוֹת","the pastures of"],["אֱלֹהִים","God"],["׃",""]] },
   { num:"יד", words:[["אֱלֹהַי","my-God"],["שִׁיתֵמוֹ","make-them"],["כַגַּלְגַּל","like-the-whirling dust"],["כְּקַשׁ","as-stubble"],["לִפְנֵי־רוּחַ","before-spirit-of"],["׃",""]] },
   { num:"טו", words:[["כְּאֵשׁ","which-is-like-a-fire"],["תִּבְעַר־יָעַר","shall-burn-the forest"],["וּכְלֶהָבָה","and-like-a flame"],["תְּלַהֵט","it kindles"],["הָרִים","mountains"],["׃",""]] },
   { num:"טז", words:[["כֵּן","thus"],["תִּרְדְּפֵם","you will pursue-them"],["בְּסַעֲרֶךָ","with-your-storm"],["וּבְסוּפָתְךָ","and-with-your-storm-wind"],["תְבַהֲלֵם","you will terrify-them"],["׃",""]] },
@@ -1857,7 +1857,7 @@ var psa_ch89Verses = [
 renderVerseSet(psa_ch89Verses, 'psa-ch89-verses');
 
 var psa_ch90Verses = [
-  { num:"א", words:[["תְּפִלָּה","a-prayer"],["לְמֹשֶׁה","unto-Moses"],["אִישׁ־הָאֱלֹהִים","man-of-the-God"],["אֲדֹנָי","Lord"],["מָעוֹן","Maon"],["אַתָּה","you"],["הָיִיתָ","are"],["לָּנוּ","we"],["בְּדֹר","in-a generation"],["וָדֹר","to-generation"],["׃",""]] },
+  { num:"א", words:[["תְּפִלָּה","a-prayer"],["לְמֹשֶׁה","unto-Moses"],["אִישׁ־הָאֱלֹהִים","man-of-the-God"],["אֲדֹנָי","Lord"],["מָעוֹן","Maon"],["אַתָּה","you"],["הָיִיתָ","are"],["לָּנוּ","to us"],["בְּדֹר","in-a generation"],["וָדֹר","to-generation"],["׃",""]] },
   { num:"ב", words:[["בְּטֶרֶם","before"],["הָרִים","mountains"],["יֻלָּדוּ","they were born"],["וַתְּחוֹלֵל","and-you brought forth"],["אֶרֶץ","the-land-of"],["וְתֵבֵל","and-the world"],["וּמֵעוֹלָם","and-from-everlasting"],["עַד־עוֹלָם","forever"],["אַתָּה","you"],["אֵל","God"],["׃",""]] },
   { num:"ג", words:[["תָּשֵׁב","you turn away"],["אֱנוֹשׁ","man"],["עַד־דַּכָּא","until-crushing"],["וַתֹּאמֶר","and-said"],["שׁוּבוּ","return"],["בְנֵי־אָדָם","the-sons-of-man"],["׃",""]] },
   { num:"ד", words:[["כִּי","because"],["אֶלֶף","thousand"],["שָׁנִים","years"],["בְּעֵינֶיךָ","in-your-eyes"],["כְּיוֹם","as-the-day-of"],["אֶתְמוֹל","yesterday"],["כִּי","because"],["יַעֲבֹר","pass-away"],["וְאַשְׁמוּרָה","and-a watch"],["בַלָּיְלָה","in the-night"],["׃",""]] },
