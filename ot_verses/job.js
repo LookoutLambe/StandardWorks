@@ -342,7 +342,7 @@ var job_ch13Verses = [
   { num:"ז", words:[["הַלְאֵל","is-it-to-God"],["תְּדַבְּרוּ","you-will-they-spoke"],["עַוְלָה","injustice"],["וְלוֹ","and-unto-him"],["תְּדַבְּרוּ","you-will-they-spoke"],["רְמִיָּה","deceit"],["׃",""]] },
   { num:"ח", words:[["הֲפָנָיו","is-it-his-face"],["תִּשָּׂאוּן","will you lift up"],["אִם־לָאֵל","if-to-the-God"],["תְּרִיבוּן","are you quarreling"],["׃",""]] },
   { num:"ט", words:[["הֲטוֹב","is-it-better"],["כִּי־יַחְקֹר","if-he-shall-investigate"],["אֶתְכֶם","you"],["אִם־כְּהָתֵל","if-as-deceives"],["בֶּאֱנוֹשׁ","a person"],["תְּהָתֵלּוּ","will you deceive"],["בוֹ","in-him"],["׃",""]] },
-  { num:"י", words:[["הוֹכֵחַ","chastening"],["יוֹכִיחַ","shall-he-reprove"],["אֶתְכֶם","you"],["אִם־בַּסֵּתֶר","if-in secret"],["פָּנִים","face"],["תִּשָּׂאוּן","will you lift up"],["׃",""]] },
+  { num:"י", words:[["הוֹכֵחַ","chastening"],["יוֹכִיחַ","shall-he-reprove"],["אֶתְכֶם","you"],["אִם־בַּסֵּתֶר","if-in secret"],["פָּנִים","persons"],["תִּשָּׂאוּן","will you lift up"],["׃",""]] },
   { num:"יא", words:[["הֲלֹא","is-it-not"],["שְׂאֵתוֹ","to carry-it"],["תְּבַעֵת","will it terrify"],["אֶתְכֶם","you"],["וּפַחְדּוֹ","and-his-dread"],["יִפֹּל","shall-fall"],["עֲלֵיכֶם","over-you"],["׃",""]] },
   { num:"יב", words:[["זִכְרֹנֵיכֶם","your-memorials"],["מִשְׁלֵי־אֵפֶר","proverbs-of-ashes"],["לְגַבֵּי־חֹמֶר","are-defenses of-clay"],["גַּבֵּיכֶם","your-defenses"],["׃",""]] },
   { num:"יג", words:[["הַחֲרִישׁוּ","the-be silent"],["מִמֶּנִּי","from-me"],["וַאֲדַבְּרָה־אָנִי","and-I-will-endeavor-to-speak-I"],["וְיַעֲבֹר","so-he may pass on"],["עָלַי","against-me"],["מָה","what"],["׃",""]] },
