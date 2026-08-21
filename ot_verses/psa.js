@@ -362,7 +362,7 @@ var psa_ch21Verses = [
 renderVerseSet(psa_ch21Verses, 'psa-ch21-verses');
 
 var psa_ch22Verses = [
-  { num:"א", words:[["לַמְנַצֵּחַ","to-the-chief-musician"],["עַל־אַיֶּלֶת","upon-the doe of"],["הַשַּׁחַר","the-light"],["מִזְמוֹר","a-psalm"],["לְדָוִד","of-David"],["׃",""]] },
+  { num:"א", words:[["לַמְנַצֵּחַ","to-the-chief-musician"],["עַל־אַיֶּלֶת","upon-the doe of"],["הַשַּׁחַר","the dawn"],["מִזְמוֹר","a-psalm"],["לְדָוִד","of-David"],["׃",""]] },
   { num:"ב", words:[["אֵלִי","my-God"],["אֵלִי","my-God"],["לָמָה","why"],["עֲזַבְתָּנִי","you have forsaken-me"],["רָחוֹק","far"],["מִישׁוּעָתִי","from-my-deliverance"],["דִּבְרֵי","the-words-of"],["שַׁאֲגָתִי","my-cry of distress"],["׃",""]] },
   { num:"ג", words:[["אֱלֹהַי","my-God"],["אֶקְרָא","I-call"],["יוֹמָם","by-day"],["וְלֹא","and-not"],["תַעֲנֶה","bear"],["וְלַיְלָה","and-by-night"],["וְלֹא־דֻמִיָּה","and-not-silence"],["לִי","to-me"],["׃",""]] },
   { num:"ד", words:[["וְאַתָּה","and-you"],["קָדוֹשׁ","holy"],["יוֹשֵׁב","who-sits"],["תְּהִלּוֹת","the-praises-of"],["יִשְׂרָאֵל","Israel"],["׃",""]] },
@@ -2746,7 +2746,7 @@ var psa_ch126Verses = [
   { num:"ג", words:[["הִגְדִּיל","did great things"],["יְהֹוָה","the-LORD"],["לַעֲשׂוֹת","to-do"],["עִמָּנוּ","with-us"],["הָיִינוּ","we-were"],["שְׂמֵחִים","rejoicing"],["׃",""]] },
   { num:"ד", words:[["שׁוּבָה","return"],["יְהֹוָה","the-LORD"],["אֶת־[שְׁבִיתֵנוּ]","captivity-our"],["כַּאֲפִיקִים","like-stream-beds"],["בַּנֶּגֶב","in-the-south"],["׃",""]] },
   { num:"ה", words:[["הַזֹּרְעִים","the-ones-who-sow"],["בְּדִמְעָה","with-tears"],["בְּרִנָּה","with-singing"],["יִקְצֹרוּ","they will reap"],["׃",""]] },
-  { num:"ו", words:[["הָלוֹךְ","along"],["יֵלֵךְ","he-must-go"],["וּבָכֹה","and-utterly"],["נֹשֵׂא","bearing"],["מֶשֶׁךְ־הַזָּרַע","Meshech-the-offspring"],["בֹּא־יָבֹא","come-shall-come"],["בְרִנָּה","with-a shout of joy"],["נֹשֵׂא","bearing"],["אֲלֻמֹּתָיו","his-sheaves"],["׃",""]] },
+  { num:"ו", words:[["הָלוֹךְ","going on"],["יֵלֵךְ","he-must-go"],["וּבָכֹה","and-utterly"],["נֹשֵׂא","bearing"],["מֶשֶׁךְ־הַזָּרַע","Meshech-the-offspring"],["בֹּא־יָבֹא","come-shall-come"],["בְרִנָּה","with-a shout of joy"],["נֹשֵׂא","bearing"],["אֲלֻמֹּתָיו","his-sheaves"],["׃",""]] },
 ];
 renderVerseSet(psa_ch126Verses, 'psa-ch126-verses');
 
