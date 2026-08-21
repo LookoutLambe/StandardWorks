@@ -433,7 +433,7 @@ var psa_ch25Verses = [
   { num:"ט", words:[["יַדְרֵךְ","He-guides"],["עֲנָוִים","the-humble"],["בַּמִּשְׁפָּט","in-the-judgment"],["וִילַמֵּד","and-He-teaches"],["עֲנָוִים","the-humble"],["דַּרְכּוֹ","His-way"],["׃",""]] },
   { num:"י", words:[["כׇּל־אׇרְחוֹת","all-O caravans of"],["יְהֹוָה","the-LORD"],["חֶסֶד","mercy"],["וֶאֱמֶת","and-truth"],["לְנֹצְרֵי","to-such-as-keep"],["בְרִיתוֹ","His-covenant"],["וְעֵדֹתָיו","and-His-testimonies"],["׃",""]] },
   { num:"יא", words:[["לְמַעַן־שִׁמְךָ","for-Your-name-sake"],["יְהֹוָה","the-LORD"],["וְסָלַחְתָּ","pardon"],["לַעֲוֺנִי","my-iniquity"],["כִּי","because"],["רַב־הוּא","it-is-great"],["׃",""]] },
-  { num:"יב", words:[["מִי־זֶה","who-is"],["הָאִישׁ","the-man"],["יְרֵא","that-fears"],["יְהֹוָה","the-LORD"],["יוֹרֶנּוּ","Him-shall-He-teach"],["בְּדֶרֶךְ","in-the-way"],["יִבְחָר","He-chooses"],["׃",""]] },
+  { num:"יב", words:[["מִי־זֶה","who-is"],["הָאִישׁ","the-man"],["יְרֵא","that-fears"],["יְהֹוָה","the-LORD"],["יוֹרֶנּוּ","Him-shall-He-teach"],["בְּדֶרֶךְ","in-the-way"],["יִבְחָר","will-select"],["׃",""]] },
   { num:"יג", words:[["נַפְשׁוֹ","he-himself"],["בְּטוֹב","in-prosperity"],["תָּלִין","shall-dwell"],["וְזַרְעוֹ","and-his-descendants"],["יִירַשׁ","shall-inherit"],["אָרֶץ","the-earth"],["׃",""]] },
   { num:"יד", words:[["סוֹד","the-secret-of"],["יְהֹוָה","the-LORD"],["לִירֵאָיו","is-with-those-who-fear-Him"],["וּבְרִיתוֹ","and-His-covenant"],["לְהוֹדִיעָם","to-make-known-to-them"],["׃",""]] },
   { num:"טו", words:[["עֵינַי","my-eyes"],["תָּמִיד","continually"],["אֶל־יְהֹוָה","to-the-LORD"],["כִּי","because"],["הוּא־יוֹצִיא","He-shall-pluck"],["מֵרֶשֶׁת","out-of-the-net"],["רַגְלָי","my-feet"],["׃",""]] },
