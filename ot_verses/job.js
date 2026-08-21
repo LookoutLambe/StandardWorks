@@ -940,9 +940,9 @@ var job_ch33Verses = [
   { num:"כח", words:[["פָּדָה","redeemed"],["(נפשי)",""],["[נַפְשׁוֹ]","His-soul"],["מֵעֲבֹר","from-passing-of"],["בַּשָּׁחַת","in the-pit"],["[וְחַיָּתוֹ]","and-life-his"],["בָּאוֹר","on the-light"],["תִּרְאֶה","you-shall-see"],["׃",""]] },
   { num:"כט", words:[["הֶן־כׇּל־אֵלֶּה","behold-all-these"],["יִפְעַל־אֵל","work-God"],["פַּעֲמַיִם","two times"],["שָׁלוֹשׁ","three"],["עִם־גָּבֶר","with-Geber"],["׃",""]] },
   { num:"ל", words:[["לְהָשִׁיב","to-he-restored"],["נַפְשׁוֹ","his-soul"],["מִנִּי־שָׁחַת","some of-pit"],["לֵאוֹר","to-be lighted up"],["בְּאוֹר","in-the-light-of"],["הַחַיִּים","the-life"],["׃",""]] },
-  { num:"לא", words:[["הַקְשֵׁב","hearken"],["אִיּוֹב","Job"],["שְׁמַע־לִי","hearken-to-me"],["הַחֲרֵשׁ","altogether"],["וְאָנֹכִי","yet-I"],["אֲדַבֵּר","I-speak"],["׃",""]] },
+  { num:"לא", words:[["הַקְשֵׁב","hearken"],["אִיּוֹב","Job"],["שְׁמַע־לִי","hearken-to-me"],["הַחֲרֵשׁ","hold-your-peace"],["וְאָנֹכִי","yet-I"],["אֲדַבֵּר","I-speak"],["׃",""]] },
   { num:"לב", words:[["אִם־יֵשׁ־מִלִּין","if-there-is-words"],["הֲשִׁיבֵנִי","respond to-me"],["דַּבֵּר","speak"],["כִּי־חָפַצְתִּי","because-I-desire"],["צַדְּקֶךָּ","to justify-you"],["׃",""]] },
-  { num:"לג", words:[["אִם־אַיִן","if-they-are-nothing"],["אַתָּה","you"],["שְׁמַע־לִי","hearken-to-me"],["הַחֲרֵשׁ","altogether"],["וַאֲאַלֶּפְךָ","and-I will teach-you"],["חׇכְמָה","wisdom"],["׃",""]] },
+  { num:"לג", words:[["אִם־אַיִן","if-they-are-nothing"],["אַתָּה","you"],["שְׁמַע־לִי","hearken-to-me"],["הַחֲרֵשׁ","hold-your-peace"],["וַאֲאַלֶּפְךָ","and-I will teach-you"],["חׇכְמָה","wisdom"],["׃",""]] },
 ];
 renderVerseSet(job_ch33Verses, 'job-ch33-verses');
 
