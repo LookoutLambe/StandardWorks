@@ -165,7 +165,7 @@ var pro_ch6Verses = [
   { num:"ב", words:[["נוֹקַשְׁתָּ","you have been ensnared"],["בְאִמְרֵי־פִיךָ","by-the words of-is mouth-your"],["נִלְכַּדְתָּ","you have been caught"],["בְּאִמְרֵי־פִיךָ","in-said-my-is mouth-your"],["׃",""]] },
   { num:"ג", words:[["עֲשֵׂה","do"],["זֹאת","this"],["אֵפוֹא","then"],["בְּנִי","my-son"],["וְהִנָּצֵל","and-deliver yourself"],["כִּי־בָאתָ","because-you-came"],["בְכַף־רֵעֶךָ","in-the palm of-your-neighbor"],["לֵךְ","go"],["הִתְרַפֵּס","humble yourself"],["וּרְהַב","and-importune"],["רֵעֶיךָ","your-companions"],["׃",""]] },
   { num:"ד", words:[["אַל־תִּתֵּן","do-not-you-shall-give"],["שֵׁנָה","sleep"],["לְעֵינֶיךָ","to-your-eyes"],["וּתְנוּמָה","and-slumber"],["לְעַפְעַפֶּיךָ","to-your-eyelids"],["׃",""]] },
-  { num:"ה", words:[["הִנָּצֵל","deliver yourself"],["כִּצְבִי","as-the-chased"],["מִיָּד","immediately"],["וּכְצִפּוֹר","and-like-a bird"],["מִיַּד","from-the-hand-of"],["יָקוּשׁ","a fowler"],["׃",""]] },
+  { num:"ה", words:[["הִנָּצֵל","deliver yourself"],["כִּצְבִי","like-a-deer"],["מִיָּד","immediately"],["וּכְצִפּוֹר","and-like-a bird"],["מִיַּד","from-the-hand-of"],["יָקוּשׁ","a fowler"],["׃",""]] },
   { num:"ו", words:[["לֵךְ־אֶל־נְמָלָה","go-to-an ant"],["עָצֵל","idle"],["רְאֵה","behold"],["דְרָכֶיהָ","its-ways"],["וַחֲכָם","and-become wise"],["׃",""]] },
   { num:"ז", words:[["אֲשֶׁר","which"],["אֵין־לָהּ","infinite"],["קָצִין","be-our-ruler"],["שֹׁטֵר","icer"],["וּמֹשֵׁל","and-a-ruler"],["׃",""]] },
   { num:"ח", words:[["תָּכִין","you will establish"],["בַּקַּיִץ","in the-summer"],["לַחְמָהּ","its-food"],["אָגְרָה","it gathers"],["בַקָּצִיר","at the-harvest"],["מַאֲכָלָהּ","its-food"],["׃",""]] },
