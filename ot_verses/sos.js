@@ -14,7 +14,7 @@ var sos_ch1Verses = [
   { num:"יא", words:[["תּוֹרֵי","necklaces of"],["זָהָב","gold"],["נַעֲשֶׂה־לָּךְ","let-us-make-to-you"],["עִם","with"],["נְקֻדּוֹת","beads of"],["הַכָּסֶף","the-silver"],["׃",""]] },
   { num:"יב", words:[["עַד־שֶׁהַמֶּלֶךְ","until-that-the-king"],["בִּמְסִבּוֹ","at-his-table"],["נִרְדִּי","my-nard"],["נָתַן","gave"],["רֵיחוֹ","its-odor"],["׃",""]] },
   { num:"יג", words:[["צְרוֹר","the bag of"],["הַמֹּר","the-myrrh"],["דּוֹדִי","my-beloved"],["לִי","to-me"],["בֵּין","among"],["שָׁדַי","my-breasts"],["יָלִין","it will remain overnight"],["׃",""]] },
-  { num:"יד", words:[["אֶשְׁכֹּל","Eshcol"],["הַכֹּפֶר","the-henna blossom"],["דּוֹדִי","my-beloved"],["לִי","to-me"],["בְּכַרְמֵי","in-my-vineyard"],["עֵין","En"],["גֶּדִי","Gedi"],["׃",""]] },
+  { num:"יד", words:[["אֶשְׁכֹּל","Eshcol"],["הַכֹּפֶר","the-henna blossom"],["דּוֹדִי","my-beloved"],["לִי","to-me"],["בְּכַרְמֵי","in-my-vineyard"],["עֵין","En-"],["גֶּדִי","gedi"],["׃",""]] },
   { num:"טו", words:[["הִנָּךְ","here-you"],["יָפָה","beautiful"],["רַעְיָתִי","my-O friend"],["הִנָּךְ","here-you"],["יָפָה","beautiful"],["עֵינַיִךְ","your-eyes"],["יוֹנִים","are doves"],["׃",""]] },
   { num:"טז", words:[["הִנְּךָ","you"],["יָפֶה","fair"],["דוֹדִי","my-O lover"],["אַף","moreover"],["נָעִים","delightsome"],["אַף־עַרְשֵׂנוּ","yea-our-bed"],["רַעֲנָנָה","it will grow luxuriant"],["׃",""]] },
   { num:"יז", words:[["קֹרוֹת","the beams of"],["בָּתֵּינוּ","our-houses"],["אֲרָזִים","cedars"],["[רַהִיטֵנוּ]","rafters-our"],["בְּרוֹתִים","are cypress"],["׃",""]] },
