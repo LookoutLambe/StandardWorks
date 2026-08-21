@@ -615,7 +615,7 @@ var job_ch22Verses = [
   { num:"ח", words:[["וְאִישׁ","and-a-man"],["זְרוֹעַ","the-arm-of"],["לוֹ","to-him"],["הָאָרֶץ","the-earth"],["וּנְשׂוּא","and-the-honorable"],["פָנִים","man"],["יֵשֶׁב","let him remain"],["בָּהּ","in-it"],["׃",""]] },
   { num:"ט", words:[["אַלְמָנוֹת","a-great-many-widows"],["שִׁלַּחְתָּ","you have let go"],["רֵיקָם","empty-handed"],["וּזְרֹעוֹת","and-the arms of"],["יְתֹמִים","fatherless ones"],["יְדֻכָּא","it has been crushed"],["׃",""]] },
   { num:"י", words:[["עַל־כֵּן","therefore"],["סְבִיבוֹתֶיךָ","are around-you"],["פַחִים","thin plates"],["וִיבַהֶלְךָ","and-it terrifies-you"],["פַּחַד","dread"],["פִּתְאֹם","suddenly"],["׃",""]] },
-  { num:"יא", words:[["אוֹ־חֹשֶׁךְ","or-darkness"],["לֹא־תִרְאֶה","not-you-will-saw"],["וְשִׁפְעַת־מַיִם","and-abundance of-water"],["תְּכַסֶּךָּ","it covers-you"],["׃",""]] },
+  { num:"יא", words:[["אוֹ־חֹשֶׁךְ","or-darkness"],["לֹא־תִרְאֶה","not-you-will-see"],["וְשִׁפְעַת־מַיִם","and-abundance of-water"],["תְּכַסֶּךָּ","it covers-you"],["׃",""]] },
   { num:"יב", words:[["הֲלֹא־אֱלוֹהַּ","is-it-not-Loh"],["גֹּבַהּ","height"],["שָׁמָיִם","heavenly"],["וּרְאֵה","and-behold"],["רֹאשׁ","the-head-of"],["כּוֹכָבִים","stars"],["כִּי־רָמּוּ","because-they are high"],["׃",""]] },
   { num:"יג", words:[["וְאָמַרְתָּ","and-say"],["מַה־יָּדַע","what-does he know"],["אֵל","God"],["הַבְעַד","through"],["עֲרָפֶל","mist-of"],["יִשְׁפּוֹט","shall-he-judge"],["׃",""]] },
   { num:"יד", words:[["עָבִים","Vim"],["סֵתֶר־לוֹ","secret-him"],["וְלֹא","and-not"],["יִרְאֶה","shall see"],["וְחוּג","and-the circle of"],["שָׁמַיִם","the-heavens"],["יִתְהַלָּךְ","he walks about"],["׃",""]] },
