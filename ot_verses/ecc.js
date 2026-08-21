@@ -54,7 +54,7 @@ renderVerseSet(ecc_ch2Verses, 'ecc-ch2-verses');
 
 var ecc_ch3Verses = [
   { num:"א", words:[["לַכֹּל","to-all-the"],["זְמָן","a time"],["וְעֵת","and-time"],["לְכׇל־חֵפֶץ","to-all-desire"],["תַּחַת","under"],["הַשָּׁמָיִם","the-heavens"],["׃",""]] },
-  { num:"ב", words:[["עֵת","time"],["לָלֶדֶת","to-give birth to"],["וְעֵת","and-time"],["לָמוּת","to-perish"],["עֵת","time"],["לָטַעַת","to-plant"],["וְעֵת","and-time"],["לַעֲקוֹר","to-pluck up"],["נָטוּעַ","what is planted"],["׃",""]] },
+  { num:"ב", words:[["עֵת","time"],["לָלֶדֶת","to-give birth to"],["וְעֵת","and-time"],["לָמוּת","to-die"],["עֵת","time"],["לָטַעַת","to-plant"],["וְעֵת","and-time"],["לַעֲקוֹר","to-pluck up"],["נָטוּעַ","what is planted"],["׃",""]] },
   { num:"ג", words:[["עֵת","time"],["לַהֲרוֹג","to-kill"],["וְעֵת","and-time"],["לִרְפּוֹא","to-heal"],["עֵת","time"],["לִפְרוֹץ","to-break down"],["וְעֵת","and-time"],["לִבְנוֹת","to-build"],["׃",""]] },
   { num:"ד", words:[["עֵת","time"],["לִבְכּוֹת","to-mourn"],["וְעֵת","and-time"],["לִשְׂחוֹק","of-laughter"],["עֵת","time"],["סְפוֹד","to mourn"],["וְעֵת","and-time"],["רְקוֹד","to dance"],["׃",""]] },
   { num:"ה", words:[["עֵת","time"],["לְהַשְׁלִיךְ","to-cast-away"],["אֲבָנִים","stones"],["וְעֵת","and-time"],["כְּנוֹס","gather"],["אֲבָנִים","stones"],["עֵת","time"],["לַחֲבוֹק","to-embrace"],["וְעֵת","and-time"],["לִרְחֹק","to-be far"],["מֵחַבֵּק","from-embracing"],["׃",""]] },
