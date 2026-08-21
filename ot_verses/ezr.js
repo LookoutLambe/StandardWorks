@@ -40,7 +40,7 @@ var ezr_ch2Verses = [
   { num:"כב", words:[["אַנְשֵׁי","the-men-of"],["נְטֹפָה","Netophah"],["חֲמִשִּׁים","fifty"],["וְשִׁשָּׁה","and-six"],["׃",""]] },
   { num:"כג", words:[["אַנְשֵׁי","the-men-of"],["עֲנָתוֹת","Anathoth"],["מֵאָה","a-hundred"],["עֶשְׂרִים","twenty"],["וּשְׁמֹנָה","and-eight"],["׃",""]] },
   { num:"כד", words:[["בְּנֵי","the-sons-of"],["עַזְמָוֶת","Azmaveth"],["אַרְבָּעִים","forty"],["וּשְׁנָיִם","and-two"],["׃",""]] },
-  { num:"כה", words:[["בְּנֵי","the-sons-of"],["קִרְיַת","Kiriath"],["עָרִים","large-cities"],["כְּפִירָה","Kephirah"],["וּבְאֵרוֹת","and-Beeroth"],["שְׁבַע","seven"],["מֵאוֹת","hundred"],["וְאַרְבָּעִים","and-forty"],["וּשְׁלֹשָׁה","and-three"],["׃",""]] },
+  { num:"כה", words:[["בְּנֵי","the-sons-of"],["קִרְיַת","Kiriath"],["עָרִים","cities"],["כְּפִירָה","Kephirah"],["וּבְאֵרוֹת","and-Beeroth"],["שְׁבַע","seven"],["מֵאוֹת","hundred"],["וְאַרְבָּעִים","and-forty"],["וּשְׁלֹשָׁה","and-three"],["׃",""]] },
   { num:"כו", words:[["בְּנֵי","the-sons-of"],["הָרָמָה","the-Ramah"],["וָגָבַע","and-Geba"],["שֵׁשׁ","six"],["מֵאוֹת","hundred"],["עֶשְׂרִים","twenty"],["וְאֶחָד","and-one"],["׃",""]] },
   { num:"כז", words:[["אַנְשֵׁי","the-men-of"],["מִכְמָס","Micmash"],["מֵאָה","a-hundred"],["עֶשְׂרִים","twenty"],["וּשְׁנָיִם","and-two"],["׃",""]] },
   { num:"כח", words:[["אַנְשֵׁי","the-men-of"],["בֵית־אֵל","house-of-God"],["וְהָעָי","and-the-Ai"],["מָאתַיִם","two-hundred"],["עֶשְׂרִים","twenty"],["וּשְׁלֹשָׁה","and-three"],["׃",""]] },
