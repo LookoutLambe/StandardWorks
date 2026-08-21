@@ -1128,7 +1128,7 @@ var job_ch39Verses = [
   { num:"ח", words:[["יְתוּר","it explores"],["הָרִים","mountains"],["מִרְעֵהוּ","its-pasture"],["וְאַחַר","and-then"],["כׇּל־יָרוֹק","all-green plant"],["יִדְרוֹשׁ","it searches"],["׃",""]] },
   { num:"ט", words:[["הֲיֹאבֶה","is it willing"],["רֵּים","a wild ox"],["עׇבְדֶךָ","to serve-you"],["אִם־יָלִין","if-it will remain overnight"],["עַל־אֲבוּסֶךָ","upon-your-feeding trough"],["׃",""]] },
   { num:"י", words:[["הֲתִקְשׇׁר־רֵים","will you bind-the wild ox"],["בְּתֶלֶם","in-a furrow"],["עֲבֹתוֹ","its-rope"],["אִם־יְשַׂדֵּד","if-will it harrow"],["עֲמָקִים","valleys"],["אַחֲרֶיךָ","after-you"],["׃",""]] },
-  { num:"יא", words:[["הֲתִבְטַח־בּוֹ","will you trust-against-him"],["כִּי־רַב","because-great"],["כֹּחוֹ","His-power"],["וְתַעֲזֹב","and-you-forsake"],["אֵלָיו","to-him"],["יְגִיעֶךָ","your-toil"],["׃",""]] },
+  { num:"יא", words:[["הֲתִבְטַח־בּוֹ","will you trust-against-him"],["כִּי־רַב","because-great"],["כֹּחוֹ","his strength"],["וְתַעֲזֹב","and-you-forsake"],["אֵלָיו","to-him"],["יְגִיעֶךָ","your-toil"],["׃",""]] },
   { num:"יב", words:[["הֲתַאֲמִין","do-you-believe"],["בּוֹ","in it"],["כִּי־[יָשִׁיב]","because-shall-set"],["(ישוב)",""],["זַרְעֶךָ","your-seed"],["וְגׇרְנְךָ","and-your-threshing floor"],["יֶאֱסֹף","he will deliver"],["׃",""]] },
   { num:"יג", words:[["כְּנַף־רְנָנִים","the skirt of-ostriches"],["נֶעֱלָסָה","it flaps joyously"],["אִם־אֶבְרָה","if-a pinion"],["חֲסִידָה","goodly"],["וְנֹצָה","and-plumage"],["׃",""]] },
   { num:"יד", words:[["כִּי־תַעֲזֹב","because-it abandons"],["לָאָרֶץ","to-the-ground"],["בֵּצֶיהָ","its-eggs"],["וְעַל־עָפָר","and-upon-the-earth"],["תְּחַמֵּם","it keeps them warm"],["׃",""]] },

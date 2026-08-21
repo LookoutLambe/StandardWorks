@@ -2504,7 +2504,7 @@ var psa_ch119Verses = [
   { num:"ו", words:[["אָז","then"],["לֹא־אֵבוֹשׁ","not-shall-I-be-ashamed"],["בְּהַבִּיטִי","as-I-looked"],["אֶל־כׇּל־מִצְוֺתֶיךָ","to-all-your-commandments"],["׃",""]] },
   { num:"ז", words:[["אוֹדְךָ","I-will-praise-You"],["בְּיֹשֶׁר","uprightly"],["לֵבָב","heart"],["בְּלׇמְדִי","when-I-have-learned"],["מִשְׁפְּטֵי","righteous-judgments"],["צִדְקֶךָ","Your-righteousness"],["׃",""]] },
   { num:"ח", words:[["אֶת־חֻקֶּיךָ","your-decrees"],["אֶשְׁמֹר","I-shall-preserve"],["אַל־תַּעַזְבֵנִי","do-not-you forsake-me"],["עַד־מְאֹד","exceedingly"],["׃",""]] },
-  { num:"ט", words:[["בַּמֶּה","the-wherein"],["יְזַכֶּה־נַּעַר","will he keep pure-a youth"],["אֶת־אׇרְחוֹ","his-path"],["לִשְׁמֹר","to-keep"],["כִּדְבָרֶךָ","according-to-your-word"],["׃",""]] },
+  { num:"ט", words:[["בַּמֶּה","wherein"],["יְזַכֶּה־נַּעַר","will he keep pure-a youth"],["אֶת־אׇרְחוֹ","his-path"],["לִשְׁמֹר","to-keep"],["כִּדְבָרֶךָ","according-to-your-word"],["׃",""]] },
   { num:"י", words:[["בְּכׇל־לִבִּי","in-all-my-heart"],["דְרַשְׁתִּיךָ","I seek-you"],["אַל־תַּשְׁגֵּנִי","do-not-you allow to stray-me"],["מִמִּצְוֺתֶיךָ","of-your-commandments"],["׃",""]] },
   { num:"יא", words:[["בְּלִבִּי","in-my-heart"],["צָפַנְתִּי","I have treasured up"],["אִמְרָתֶךָ","your-word"],["לְמַעַן","in-order-that"],["לֹא","not"],["אֶחֱטָא־לָךְ","I will sin-for you"],["׃",""]] },
   { num:"יב", words:[["בָּרוּךְ","blessed"],["אַתָּה","you"],["יְהֹוָה","the-LORD"],["לַמְּדֵנִי","teach-me"],["חֻקֶּיךָ","your-decrees"],["׃",""]] },
