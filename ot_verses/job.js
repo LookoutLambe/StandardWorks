@@ -150,7 +150,7 @@ var job_ch6Verses = [
   { num:"יח", words:[["יִלָּפְתוּ","they twist"],["אׇרְחוֹת","the paths of"],["דַּרְכָּם","their-journey"],["יַעֲלוּ","they-go-up"],["בַתֹּהוּ","for-the-thing-of-naught"],["וְיֹאבֵדוּ","and-they-shall-perish"],["׃",""]] },
   { num:"יט", words:[["הִבִּיטוּ","they-regarded"],["אׇרְחוֹת","the caravans of"],["תֵּמָא","Tema"],["הֲלִיכֹת","the travelers of"],["שְׁבָא","Sheba"],["קִוּוּ־לָמוֹ","Koo-for-them"],["׃",""]] },
   { num:"כ", words:[["בֹּשׁוּ","they are disappointed"],["כִי־בָטָח","that-he had been confident"],["בָּאוּ","came"],["עָדֶיהָ","to-it"],["וַיֶּחְפָּרוּ","and-they were disappointed"],["׃",""]] },
-  { num:"כא", words:[["כִּי־עַתָּה","because-now"],["הֱיִיתֶם","because-you-have-been"],["לֹא","not"],["תִּרְאוּ","you-shall-witness"],["חֲתַת","Hathath"],["וַתִּירָאוּ","and-you were afraid"],["׃",""]] },
+  { num:"כא", words:[["כִּי־עַתָּה","because-now"],["הֱיִיתֶם","you-have-been"],["לֹא","not"],["תִּרְאוּ","you-shall-witness"],["חֲתַת","Hathath"],["וַתִּירָאוּ","and-you were afraid"],["׃",""]] },
   { num:"כב", words:[["הֲכִי־אָמַרְתִּי","indeed-I-said"],["הָבוּ","give"],["לִי","to-me"],["וּמִכֹּחֲכֶם","and-from-your-wealth"],["שִׁחֲדוּ","give a reward"],["בַעֲדִי","for-me"],["׃",""]] },
   { num:"כג", words:[["וּמַלְּטוּנִי","and-rescue-me"],["מִיַּד־צָר","from-the-hand-of-adversary"],["וּמִיַּד","or-out-of-the-hands-of"],["עָרִיצִים","the-terrible"],["תִּפְדּוּנִי","you will ransom-me"],["׃",""]] },
   { num:"כד", words:[["הוֹרוּנִי","teach-me"],["וַאֲנִי","and-I"],["אַחֲרִישׁ","I will keep silent"],["וּמַה־שָּׁגִיתִי","yea-and-what-have I erred"],["הָבִינוּ","explain"],["לִי","to-me"],["׃",""]] },

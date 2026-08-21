@@ -68,7 +68,7 @@ var pro_ch3Verses = [
   { num:"ב", words:[["כִּי","because"],["אֹרֶךְ","the length of"],["יָמִים","days"],["וּשְׁנוֹת","and-years of"],["חַיִּים","living"],["וְשָׁלוֹם","and-peace"],["יוֹסִיפוּ","further"],["לָךְ","to-you"],["׃",""]] },
   { num:"ג", words:[["חֶסֶד","mercy"],["וֶאֱמֶת","and-true"],["אַל־יַעַזְבֻךָ","do-not-they leave-you"],["קׇשְׁרֵם","bind-them"],["עַל־גַּרְגְּרוֹתֶיךָ","upon-your-necks"],["כׇּתְבֵם","to-write-them"],["עַל־לוּחַ","upon-the tablet of"],["לִבֶּךָ","your-heart"],["׃",""]] },
   { num:"ד", words:[["וּמְצָא־חֵן","and-find-favor"],["וְשֵׂכֶל־טוֹב","and-insight-good"],["בְּעֵינֵי","in-the-eyes-of"],["אֱלֹהִים","God"],["וְאָדָם","and-Adam"],["׃",""]] },
-  { num:"ה", words:[["בְּטַח","trust"],["אֶל־יְהֹוָה","to-the-Lord"],["בְּכׇל־לִבֶּךָ","in-all-your-heart"],["וְאֶל־בִּינָתְךָ","and-your-own understanding"],["אַל־תִּשָּׁעֵן","do-not-you depend"],["׃",""]] },
+  { num:"ה", words:[["בְּטַח","trust"],["אֶל־יְהֹוָה","to-the-LORD"],["בְּכׇל־לִבֶּךָ","in-all-your-heart"],["וְאֶל־בִּינָתְךָ","and-your-own understanding"],["אַל־תִּשָּׁעֵן","do-not-you depend"],["׃",""]] },
   { num:"ו", words:[["בְּכׇל־דְּרָכֶיךָ","in-all-Your-ways"],["דָעֵהוּ","acknowledge-him"],["וְהוּא","and-he"],["יְיַשֵּׁר","he will make straight"],["אֹרְחֹתֶיךָ","your-paths"],["׃",""]] },
   { num:"ז", words:[["אַל־תְּהִי","do-not-be"],["חָכָם","wise"],["בְּעֵינֶיךָ","in-your-eyes"],["יְרָא","fear"],["אֶת־יְהֹוָה","the-LORD"],["וְסוּר","and-to turn"],["מֵרָע","from-evil"],["׃",""]] },
   { num:"ח", words:[["רִפְאוּת","healing"],["תְּהִי","let it be"],["לְשׇׁרֶּךָ","to-your-navel"],["וְשִׁקּוּי","and-refreshment"],["לְעַצְמוֹתֶיךָ","to-your-bones"],["׃",""]] },
@@ -503,7 +503,7 @@ renderVerseSet(pro_ch15Verses, 'pro-ch15-verses');
 var pro_ch16Verses = [
   { num:"א", words:[["לְאָדָם","to-man"],["מַעַרְכֵי־לֵב","the plans of-heart"],["וּמֵיְהֹוָה","and-is from the LORD"],["מַעֲנֵה","the answer of"],["לָשׁוֹן","tongue"],["׃",""]] },
   { num:"ב", words:[["כׇּל־דַּרְכֵי־אִישׁ","all-the-ways-of-man-of"],["זַךְ","are pure"],["בְּעֵינָיו","in-his-eyes"],["וְתֹכֵן","and-is weighing"],["רוּחוֹת","spirits-of"],["יְהֹוָה","the-LORD"],["׃",""]] },
-  { num:"ג", words:[["גֹּל","roll"],["אֶל־יְהֹוָה","to-the-Lord"],["מַעֲשֶׂיךָ","your-works"],["וְיִכֹּנוּ","so-they may be established"],["מַחְשְׁבֹתֶיךָ","your-thoughts"],["׃",""]] },
+  { num:"ג", words:[["גֹּל","roll"],["אֶל־יְהֹוָה","to-the-LORD"],["מַעֲשֶׂיךָ","your-works"],["וְיִכֹּנוּ","so-they may be established"],["מַחְשְׁבֹתֶיךָ","your-thoughts"],["׃",""]] },
   { num:"ד", words:[["כֹּל","all"],["פָּעַל","it-wrought"],["יְהֹוָה","the-LORD"],["לַמַּעֲנֵהוּ","for-its-purpose"],["וְגַם־רָשָׁע","and-also-wicked"],["לְיוֹם","to-day"],["רָעָה","evil"],["׃",""]] },
   { num:"ה", words:[["תּוֹעֲבַת","an-abomination-before"],["יְהֹוָה","the-LORD"],["כׇּל־גְּבַהּ־לֵב","all-the haughty of-heart"],["יָד","hands"],["לְיָד","to-hand"],["לֹא","not"],["יִנָּקֶה","he will go unpunished"],["׃",""]] },
   { num:"ו", words:[["בְּחֶסֶד","in-the-grace-of"],["וֶאֱמֶת","and-true"],["יְכֻפַּר","shall-be-atoned"],["עָוֺן","iniquity"],["וּבְיִרְאַת","and-is by-the fear of"],["יְהֹוָה","the-LORD"],["סוּר","depart"],["מֵרָע","from-evil"],["׃",""]] },
@@ -665,7 +665,7 @@ var pro_ch20Verses = [
 renderVerseSet(pro_ch20Verses, 'pro-ch20-verses');
 
 var pro_ch21Verses = [
-  { num:"א", words:[["פַּלְגֵי־מַיִם","streams of-water"],["לֶב־מֶלֶךְ","the heart of-king-of"],["בְּיַד־יְהֹוָה","by-the-hand-of-the-Lord"],["עַל־כׇּל־אֲשֶׁר","upon-all-that"],["יַחְפֹּץ","delights"],["יַטֶּנּוּ","he turns-it"],["׃",""]] },
+  { num:"א", words:[["פַּלְגֵי־מַיִם","streams of-water"],["לֶב־מֶלֶךְ","the heart of-king-of"],["בְּיַד־יְהֹוָה","by-the-hand-of-the-LORD"],["עַל־כׇּל־אֲשֶׁר","upon-all-that"],["יַחְפֹּץ","delights"],["יַטֶּנּוּ","he turns-it"],["׃",""]] },
   { num:"ב", words:[["כׇּל־דֶּרֶךְ־אִישׁ","all-through-man-of"],["יָשָׁר","straight"],["בְּעֵינָיו","in-his-eyes"],["וְתֹכֵן","and-is weighing"],["לִבּוֹת","the-hearts-of"],["יְהֹוָה","the-LORD"],["׃",""]] },
   { num:"ג", words:[["עֲשֹׂה","to act"],["צְדָקָה","a-state-of-righteousness"],["וּמִשְׁפָּט","and-judgment"],["נִבְחָר","was-chosen"],["לַיהֹוָה","to-the-LORD"],["מִזָּבַח","more than-sacrifice"],["׃",""]] },
   { num:"ד", words:[["רוּם־עֵינַיִם","the-haughtiness-of-by-the-eyes-of"],["וּרְחַב־לֵב","and-the wide of-heart"],["נִר","the lamp of"],["רְשָׁעִים","wicked-men"],["חַטָּאת","sin"],["׃",""]] },
