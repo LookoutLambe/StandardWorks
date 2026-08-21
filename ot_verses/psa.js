@@ -1488,7 +1488,7 @@ var psa_ch75Verses = [
   { num:"ו", words:[["אַל־תָּרִימוּ","do-not-you-shall-raise"],["לַמָּרוֹם","on-high"],["קַרְנְכֶם","your-horn"],["תְּדַבְּרוּ","you-will-they-spoke"],["בְצַוָּאר","with-a neck"],["עָתָק","arrogance"],["׃",""]] },
   { num:"ז", words:[["כִּי","because"],["לֹא","not"],["מִמּוֹצָא","is from-the going out"],["וּמִמַּעֲרָב","and-from-west"],["וְלֹא","and-not"],["מִמִּדְבַּר","from-the-wilderness-of"],["הָרִים","mountains"],["׃",""]] },
   { num:"ח", words:[["כִּי־אֱלֹהִים","because-God"],["שֹׁפֵט","judge"],["זֶה","this"],["יַשְׁפִּיל","he brings low"],["וְזֶה","and-this"],["יָרִים","he will lift up"],["׃",""]] },
-  { num:"ט", words:[["כִּי","because"],["כוֹס","the cup of"],["בְּיַד־יְהֹוָה","by-the-hand-of-the-LORD"],["וְיַיִן","and-wine"],["חָמַר","it is foaming"],["מָלֵא","full-of"],["מֶסֶךְ","spiced drink"],["וַיַּגֵּר","and-he has poured out"],["מִזֶּה","from-here"],["אַךְ־שְׁמָרֶיהָ","but-its-dregs"],["יִמְצוּ","they will drain"],["יִשְׁתּוּ","they-drink"],["כֹּל","all"],["רִשְׁעֵי־אָרֶץ","the wicked people of-the-earth"],["׃",""]] },
+  { num:"ט", words:[["כִּי","because"],["כוֹס","the cup of"],["בְּיַד־יְהֹוָה","by-the-hand-of-the-LORD"],["וְיַיִן","and-wine"],["חָמַר","it is foaming"],["מָלֵא","full-of"],["מֶסֶךְ","spiced drink"],["וַיַּגֵּר","and-he-sojourned"],["מִזֶּה","from-here"],["אַךְ־שְׁמָרֶיהָ","but-its-dregs"],["יִמְצוּ","they will drain"],["יִשְׁתּוּ","they-drink"],["כֹּל","all"],["רִשְׁעֵי־אָרֶץ","the wicked people of-the-earth"],["׃",""]] },
   { num:"י", words:[["וַאֲנִי","and-I"],["אַגִּיד","I-tell"],["לְעֹלָם","for-ever"],["אֲזַמְּרָה","I will sing praises to"],["לֵאלֹהֵי","to-God-of"],["יַעֲקֹב","Jacob"],["׃",""]] },
   { num:"יא", words:[["וְכׇל־קַרְנֵי","and-all-horns of"],["רְשָׁעִים","the-wicked"],["אֲגַדֵּעַ","I will cut off"],["תְּרוֹמַמְנָה","they will be lifted up"],["קַרְנוֹת","the horns of"],["צַדִּיק","righteous"],["׃",""]] },
 ];
@@ -1827,7 +1827,7 @@ var psa_ch89Verses = [
   { num:"כה", words:[["וֶאֱמוּנָתִי","and-my-faith"],["וְחַסְדִּי","and-my-mercy"],["עִמּוֹ","with-him"],["וּבִשְׁמִי","and-in-My-name"],["תָּרוּם","it-shall-be-exalted"],["קַרְנוֹ","his-horn"],["׃",""]] },
   { num:"כו", words:[["וְשַׂמְתִּי","and-I-make"],["בַיָּם","in-the-sea"],["יָדוֹ","his-hand"],["וּבַנְּהָרוֹת","and-on the-rivers"],["יְמִינוֹ","His-right-hand"],["׃",""]] },
   { num:"כז", words:[["הוּא","he"],["יִקְרָאֵנִי","he will call out to-me"],["אָבִי","my-father"],["אָתָּה","you-are"],["אֵלִי","my-God"],["וְצוּר","and-the-rock-of"],["יְשׁוּעָתִי","is-my-salvation"],["׃",""]] },
-  { num:"כח", words:[["אַף־אָנִי","yea-I"],["בְּכוֹר","the firstborn of"],["אֶתְּנֵהוּ","I will make-him"],["עֶלְיוֹן","Most-High"],["לְמַלְכֵי־אָרֶץ","to-the kings of-the-earth"],["׃",""]] },
+  { num:"כח", words:[["אַף־אָנִי","yea-I"],["בְּכוֹר","the firstborn of"],["אֶתְּנֵהוּ","I will make-him"],["עֶלְיוֹן","higher"],["לְמַלְכֵי־אָרֶץ","to-the kings of-the-earth"],["׃",""]] },
   { num:"כט", words:[["לְעוֹלָם","forever"],["[אֶשְׁמׇר־]לוֹ","I will keep-to-him"],["חַסְדִּי","my-mercy"],["וּבְרִיתִי","and-my-covenant"],["נֶאֱמֶנֶת","reliable"],["לוֹ","to-him"],["׃",""]] },
   { num:"ל", words:[["וְשַׂמְתִּי","and-I-make"],["לָעַד","forever"],["זַרְעוֹ","his-seed"],["וְכִסְאוֹ","and-his-throne"],["כִּימֵי","as-days-of"],["שָׁמָיִם","heavenly"],["׃",""]] },
   { num:"לא", words:[["אִם־יַעַזְבוּ","if-they-shall-forsake"],["בָנָיו","his-sons"],["תּוֹרָתִי","my-law"],["וּבְמִשְׁפָּטַי","and-in-my-judgments"],["לֹא","not"],["יֵלֵכוּן","they will walk"],["׃",""]] },
