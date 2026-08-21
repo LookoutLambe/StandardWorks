@@ -181,7 +181,7 @@ renderVerseSet(psa_ch11Verses, 'psa-ch11-verses');
 var psa_ch12Verses = [
   { num:"א", words:[["לַמְנַצֵּחַ","to-the-chief-musician"],["עַל־הַשְּׁמִינִית","upon-the-eighth"],["מִזְמוֹר","a-psalm"],["לְדָוִד","of-David"],["׃",""]] },
   { num:"ב", words:[["הוֹשִׁיעָה","save"],["יְהֹוָה","the-LORD"],["כִּי־גָמַר","for-ceases"],["חָסִיד","the-godly-man"],["כִּי־פַסּוּ","for-disappear"],["אֱמוּנִים","the-faithful"],["מִבְּנֵי","the-sons-of"],["אָדָם","man"],["׃",""]] },
-  { num:"ג", words:[["שָׁוְא","falsehood"],["יְדַבְּרוּ","they-shall-speak"],["אִישׁ","a-man"],["אֶת־רֵעֵהוּ","another"],["שְׂפַת","lips"],["חֲלָקוֹת","flattering"],["בְּלֵב","with-a-double"],["וָלֵב","and-a-double-heart"],["יְדַבֵּרוּ","will they speak"],["׃",""]] },
+  { num:"ג", words:[["שָׁוְא","falsehood"],["יְדַבְּרוּ","they-shall-speak"],["אִישׁ","a-man"],["אֶת־רֵעֵהוּ","his neighbor"],["שְׂפַת","lips"],["חֲלָקוֹת","flattering"],["בְּלֵב","with-a-double"],["וָלֵב","and-a-double-heart"],["יְדַבֵּרוּ","will they speak"],["׃",""]] },
   { num:"ד", words:[["יַכְרֵת","may he cut off"],["יְהֹוָה","the-LORD"],["כׇּל־שִׂפְתֵי","all-the lips of"],["חֲלָקוֹת","flattering"],["לָשׁוֹן","tongue"],["מְדַבֶּרֶת","that-speaks"],["גְּדֹלוֹת","proud-things"],["׃",""]] },
   { num:"ה", words:[["אֲשֶׁר","which"],["אָמְרוּ","they-said"],["לִלְשֹׁנֵנוּ","with-our-tongue"],["נַגְבִּיר","we-will-prevail"],["שְׂפָתֵינוּ","our-lips"],["אִתָּנוּ","with-us"],["מִי","who"],["אָדוֹן","is-lord"],["לָנוּ","to-us"],["׃",""]] },
   { num:"ו", words:[["מִשֹּׁד","for-the-oppression-of"],["עֲנִיִּים","the-poor"],["מֵאֶנְקַת","for-the-groaning-of"],["אֶבְיוֹנִים","the-needy"],["עַתָּה","now"],["אָקוּם","I-will-arise"],["יֹאמַר","He-says"],["יְהֹוָה","the-LORD"],["אָשִׁית","I-will-set-him"],["בְּיֵשַׁע","in-safety"],["יָפִיחַ־לוֹ","for-which-he-yearns"],["׃",""]] },
@@ -936,7 +936,7 @@ var psa_ch49Verses = [
   { num:"ה", words:[["אַטֶּה","I will incline"],["לְמָשָׁל","a byword"],["אׇזְנִי","the ears of"],["אֶפְתַּח","I-shall-open"],["בְּכִנּוֹר","with-harp"],["חִידָתִי","my-riddle"],["׃",""]] },
   { num:"ו", words:[["לָמָּה","why"],["אִירָא","shall-I-fear"],["בִּימֵי","in-the-days-of"],["רָע","evil"],["עֲוֺן","the-iniquity-of"],["עֲקֵבַי","my-heels"],["יְסוּבֵּנִי","it surrounds-me"],["׃",""]] },
   { num:"ז", words:[["הַבֹּטְחִים","the-ones-who-rely"],["עַל־חֵילָם","upon-their-forces"],["וּבְרֹב","and-His-great"],["עׇשְׁרָם","their-tithe"],["יִתְהַלָּלוּ","they boast"],["׃",""]] },
-  { num:"ח", words:[["אָח","a-brother"],["לֹא־פָדֹה","not-certainly"],["יִפְדֶּה","he will ransom"],["אִישׁ","a-man"],["לֹא־יִתֵּן","shall-not-permit"],["לֵאלֹהִים","God"],["כׇּפְרוֹ","his-unbeliever"],["׃",""]] },
+  { num:"ח", words:[["אָח","a-brother"],["לֹא־פָדֹה","not-certainly"],["יִפְדֶּה","he will ransom"],["אִישׁ","a-man"],["לֹא־יִתֵּן","shall-not-permit"],["לֵאלֹהִים","God"],["כׇּפְרוֹ","his-ransom"],["׃",""]] },
   { num:"ט", words:[["וְיֵקַר","so-it may be costly"],["פִּדְיוֹן","the ransom of"],["נַפְשָׁם","their-soul"],["וְחָדַל","and-he failed"],["לְעוֹלָם","forever"],["׃",""]] },
   { num:"י", words:[["וִיחִי־עוֹד","so-he may live-any-more"],["לָנֶצַח","forever"],["לֹא","not"],["יִרְאֶה","he-shall-see"],["הַשָּׁחַת","a-pit"],["׃",""]] },
   { num:"יא", words:[["כִּי","because"],["יִרְאֶה","he-shall-see"],["חֲכָמִים","wise"],["יָמוּתוּ","shall-die"],["יַחַד","together"],["כְּסִיל","the-fool"],["וָבַעַר","and-a stupid person"],["יֹאבֵדוּ","shall-perish"],["וְעָזְבוּ","and-leave"],["לַאֲחֵרִים","to-others"],["חֵילָם","their-wealth"],["׃",""]] },

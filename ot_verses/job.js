@@ -307,7 +307,7 @@ var job_ch12Verses = [
   { num:"א", words:[["וַיַּעַן","and-he-answered"],["אִיּוֹב","Job"],["וַיֹּאמַר","and-said"],["׃",""]] },
   { num:"ב", words:[["אׇמְנָם","verily"],["כִּי","because"],["אַתֶּם־עָם","you-are-a-people"],["וְעִמָּכֶם","and-are with-you"],["תָּמוּת","to-death"],["חׇכְמָה","wisdom"],["׃",""]] },
   { num:"ג", words:[["גַּם־לִי","also-to-me"],["לֵבָב","heart"],["כְּמוֹכֶם","like-you"],["לֹא־נֹפֵל","not-flowing"],["אָנֹכִי","I"],["מִכֶּם","from-you"],["וְאֶת־מִי־אֵין","and-who-there-is-no"],["כְּמוֹ־אֵלֶּה","like these"],["׃",""]] },
-  { num:"ד", words:[["שְׂחֹק","a laughingstock"],["לְרֵעֵהוּ","another"],["אֶהְיֶה","I-may-be"],["קֹרֵא","I-call"],["לֶאֱלוֹהַּ","to-God"],["וַיַּעֲנֵהוּ","and-answered-them"],["שְׂחוֹק","laughter"],["צַדִּיק","righteous"],["תָּמִים","blameless"],["׃",""]] },
+  { num:"ד", words:[["שְׂחֹק","a laughingstock"],["לְרֵעֵהוּ","to his neighbor"],["אֶהְיֶה","I-may-be"],["קֹרֵא","I-call"],["לֶאֱלוֹהַּ","to-God"],["וַיַּעֲנֵהוּ","and-answered-them"],["שְׂחוֹק","laughter"],["צַדִּיק","righteous"],["תָּמִים","blameless"],["׃",""]] },
   { num:"ה", words:[["לַפִּיד","the torch"],["בּוּז","Buz"],["לְעַשְׁתּוּת","to-the thought of"],["שַׁאֲנָן","one at ease"],["נָכוֹן","established"],["לְמוֹעֲדֵי","to-those who are sliding of"],["רָגֶל","a foot"],["׃",""]] },
   { num:"ו", words:[["יִשְׁלָיוּ","they are at peace"],["אֹהָלִים","tents"],["לְשֹׁדְדִים","of-destroyers"],["וּבַטֻּחוֹת","and-the-security"],["לְמַרְגִּיזֵי","to-provokers of"],["אֵל","God"],["לַאֲשֶׁר","unto-him-who"],["הֵבִיא","brought"],["אֱלוֹהַּ","Loh"],["בְּיָדוֹ","in-his-hand"],["׃",""]] },
   { num:"ז", words:[["וְאוּלָם","nevertheless"],["שְׁאַל־נָא","ask-I-pray"],["בְהֵמוֹת","herds"],["וְתֹרֶךָּ","so-it may teach-you"],["וְעוֹף","and-birds"],["הַשָּׁמַיִם","the-heavens"],["וְיַגֶּד־לָךְ","so-may he tell-for you"],["׃",""]] },
@@ -450,7 +450,7 @@ var job_ch16Verses = [
   { num:"יח", words:[["אֶרֶץ","the-land-of"],["אַל־תְּכַסִּי","do-not-you cover"],["דָמִי","my-blood"],["וְאַל־יְהִי","and-do-not-let-this-be"],["מָקוֹם","a-place"],["לְזַעֲקָתִי","to-my-outcry"],["׃",""]] },
   { num:"יט", words:[["גַּם־עַתָּה","also-now"],["הִנֵּה־בַשָּׁמַיִם","behold-will be in the-heavens"],["עֵדִי","my-witness"],["וְשָׂהֲדִי","and-my-witness"],["בַּמְּרֹמִים","in-the-high places"],["׃",""]] },
   { num:"כ", words:[["מְלִיצַי","are scoffing at-me"],["רֵעָי","my-companions"],["אֶל־אֱלוֹהַּ","to-Loh"],["דָּלְפָה","it has wept"],["עֵינִי","my-eye"],["׃",""]] },
-  { num:"כא", words:[["וְיוֹכַח","and-may he judge"],["לְגֶבֶר","to-a man"],["עִם־אֱלוֹהַּ","with-Loh"],["וּבֶן־אָדָם","and-the-son-of-man"],["לְרֵעֵהוּ","another"],["׃",""]] },
+  { num:"כא", words:[["וְיוֹכַח","and-may he judge"],["לְגֶבֶר","to-a man"],["עִם־אֱלוֹהַּ","with-Loh"],["וּבֶן־אָדָם","and-the-son-of-man"],["לְרֵעֵהוּ","to his neighbor"],["׃",""]] },
   { num:"כב", words:[["כִּי־שְׁנוֹת","because-the years of"],["מִסְפָּר","number"],["יֶאֱתָיוּ","they will come"],["וְאֹרַח","and-a way"],["לֹא־אָשׁוּב","not-I-return"],["אֶהֱלֹךְ","I will go"],["׃",""]] },
 ];
 renderVerseSet(job_ch16Verses, 'job-ch16-verses');

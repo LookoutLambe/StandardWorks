@@ -860,7 +860,7 @@ var pro_ch26Verses = [
   { num:"טז", words:[["חָכָם","wise"],["עָצֵל","idle"],["בְּעֵינָיו","in-his-eyes"],["מִשִּׁבְעָה","more than-seven"],["מְשִׁיבֵי","who bring back"],["טָעַם","tasted"],["׃",""]] },
   { num:"יז", words:[["מַחֲזִיק","to-take-hold-of"],["בְּאׇזְנֵי־כָלֶב","in-ears-my-a dog"],["עֹבֵר","that-passes-away"],["מִתְעַבֵּר","is arrogant"],["עַל־רִיב","upon-contention"],["לֹּא־לוֹ","In-him"],["׃",""]] },
   { num:"יח", words:[["כְּמִתְלַהְלֵהַּ","like-a madman"],["הַיֹּרֶה","the-one-who-throws"],["זִקִּים","burning arrows"],["חִצִּים","arrows"],["וָמָוֶת","and-death"],["׃",""]] },
-  { num:"יט", words:[["כֵּן־אִישׁ","thus-man-of"],["רִמָּה","the-worm"],["אֶת־רֵעֵהוּ","another"],["וְאָמַר","and-said"],["הֲלֹא־מְשַׂחֵק","is-it-not-jesting"],["אָנִי","I"],["׃",""]] },
+  { num:"יט", words:[["כֵּן־אִישׁ","thus-man-of"],["רִמָּה","the-worm"],["אֶת־רֵעֵהוּ","his neighbor"],["וְאָמַר","and-said"],["הֲלֹא־מְשַׂחֵק","is-it-not-jesting"],["אָנִי","I"],["׃",""]] },
   { num:"כ", words:[["בְּאֶפֶס","in-save"],["עֵצִים","small-trees"],["תִּכְבֶּה־אֵשׁ","it is extinguished-fire"],["וּבְאֵין","and-where-there-is-no"],["נִרְגָּן","a slanderer"],["יִשְׁתֹּק","it becomes quiet"],["מָדוֹן","disturbance"],["׃",""]] },
   { num:"כא", words:[["פֶּחָם","coals"],["לְגֶחָלִים","to-burning coals"],["וְעֵצִים","and-wood"],["לְאֵשׁ","for-a-fire"],["וְאִישׁ","and-a-man"],["(מדונים)",""],["[מִדְיָנִים]","Midianites"],["לְחַרְחַר־רִיב","to-kindling-contention"],["׃",""]] },
   { num:"כב", words:[["דִּבְרֵי","the-words-of"],["נִרְגָּן","a slanderer"],["כְּמִתְלַהֲמִים","are like-delicacies"],["וְהֵם","and-they"],["יָרְדוּ","came-down"],["חַדְרֵי־בָטֶן","the chambers of-the womb"],["׃",""]] },
