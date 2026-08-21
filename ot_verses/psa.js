@@ -1146,7 +1146,7 @@ renderVerseSet(psa_ch59Verses, 'psa-ch59-verses');
 
 var psa_ch60Verses = [
   { num:"א", words:[["לַמְנַצֵּחַ","to-the-chief-musician"],["עַל־שׁוּשַׁן","upon-lilies"],["עֵדוּת","testimony-of"],["מִכְתָּם","a miktam"],["לְדָוִד","of-David"],["לְלַמֵּד","to-teach"],["׃",""]] },
-  { num:"ב", words:[["בְּהַצּוֹתוֹ","when-he-struggled with"],["אֶת־אֲרַם","Aram"],["נַהֲרַיִם","Naharaim"],["וְאֶת־אֲרַם","and-Aram"],["צוֹבָה","Zobah"],["וַיָּשׇׁב","and-he-returned"],["יוֹאָב","Joab"],["וַיַּךְ","and-he-smote"],["אֶת־אֱדוֹם","Edom"],["בְּגֵיא־מֶלַח","Vgi-salt"],["שְׁנֵים","two"],["עָשָׂר","ten"],["אָלֶף","thousand"],["׃",""]] },
+  { num:"ב", words:[["בְּהַצּוֹתוֹ","when-he-struggled with"],["אֶת־אֲרַם","Aram"],["נַהֲרַיִם","Naharaim"],["וְאֶת־אֲרַם","and-Aram"],["צוֹבָה","Zobah"],["וַיָּשׇׁב","and-he-returned"],["יוֹאָב","Joab"],["וַיַּךְ","and-he-smote"],["אֶת־אֱדוֹם","Edom"],["בְּגֵיא־מֶלַח","Vgi-salt"],["שְׁנֵים־עָשָׂר","twelve"],["אָלֶף","thousand"],["׃",""]] },
   { num:"ג", words:[["אֱלֹהִים","God"],["זְנַחְתָּנוּ","you have rejected-us"],["פְרַצְתָּנוּ","you have broken out against-us"],["אָנַפְתָּ","You-were-angry"],["תְּשׁוֹבֵב","you will restore"],["לָנוּ","to-us"],["׃",""]] },
   { num:"ד", words:[["הִרְעַשְׁתָּה","you have made quake"],["אֶרֶץ","the-land-of"],["פְּצַמְתָּהּ","you have split open-it"],["רְפָה","repair"],["שְׁבָרֶיהָ","its-fractures"],["כִי־מָטָה","that-it is shaking"],["׃",""]] },
   { num:"ה", words:[["הִרְאִיתָ","have-you-seen"],["עַמְּךָ","your-people"],["קָשָׁה","hard"],["הִשְׁקִיתָנוּ","you have made drink-us"],["יַיִן","wine"],["תַּרְעֵלָה","staggering"],["׃",""]] },
