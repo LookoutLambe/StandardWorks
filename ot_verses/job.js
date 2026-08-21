@@ -68,7 +68,7 @@ var job_ch3Verses = [
   { num:"כב", words:[["הַשְּׂמֵחִים","the-joy"],["אֱלֵי־גִיל","to-rejoicing"],["יָשִׂישׂוּ","shall-they-rejoice"],["כִּי","because"],["יִמְצְאוּ־קָבֶר","they-might-find-a burial site"],["׃",""]] },
   { num:"כג", words:[["לְגֶבֶר","to-a man"],["אֲשֶׁר־דַּרְכּוֹ","which-his-way"],["נִסְתָּרָה","it is hidden"],["וַיָּסֶךְ","and-he covered"],["אֱלוֹהַּ","God"],["בַּעֲדוֹ","for-himself"],["׃",""]] },
   { num:"כד", words:[["כִּי־לִפְנֵי","because-before"],["לַחְמִי","my-food"],["אַנְחָתִי","my-groaning"],["תָבֹא","come"],["וַיִּתְּכוּ","and-they poured forth"],["כַמַּיִם","like-the-water"],["שַׁאֲגֹתָי","my-cries of distress"],["׃",""]] },
-  { num:"כה", words:[["כִּי","because"],["פַחַד","the-fear-of"],["פָּחַדְתִּי","I feared"],["וַיֶּאֱתָיֵנִי","and-it came to-me"],["וַאֲשֶׁר","and-whom"],["יָגֹרְתִּי","I was afraid"],["יָבֹא","shall-come"],["לִי","to-me"],["׃",""]] },
+  { num:"כה", words:[["כִּי","because"],["פַחַד","the-fear-of"],["פָּחַדְתִּי","I feared"],["וַיֶּאֱתָיֵנִי","and-it came to-me"],["וַאֲשֶׁר","and-which"],["יָגֹרְתִּי","I was afraid"],["יָבֹא","shall-come"],["לִי","to-me"],["׃",""]] },
   { num:"כו", words:[["לֹא","not"],["שָׁלַוְתִּי","I am at ease"],["וְלֹא","and-not"],["שָׁקַטְתִּי","I am at peace"],["וְלֹא־נָחְתִּי","and-not-I am at rest"],["וַיָּבֹא","and-came"],["רֹגֶז","turmoil"],["׃",""]] },
 ];
 renderVerseSet(job_ch3Verses, 'job-ch3-verses');
