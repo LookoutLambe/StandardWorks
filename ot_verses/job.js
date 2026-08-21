@@ -750,7 +750,7 @@ var job_ch28Verses = [
   { num:"ד", words:[["פָּרַץ","he has burst through"],["נַחַל","a-river-of"],["מֵעִם־גָּר","from-he had sojourned"],["הַנִּשְׁכָּחִים","the-forgotten"],["מִנִּי־רָגֶל","some of-a foot"],["דַּלּוּ","they hang down"],["מֵאֱנוֹשׁ","from-humankind"],["נָעוּ","they swing"],["׃",""]] },
   { num:"ה", words:[["אֶרֶץ","the-land-of"],["מִמֶּנָּה","from it"],["יֵצֵא־לָחֶם","he-go-forth-food"],["וְתַחְתֶּיהָ","and-under-it"],["נֶהְפַּךְ","it was changed"],["כְּמוֹ־אֵשׁ","like fire"],["׃",""]] },
   { num:"ו", words:[["מְקוֹם־סַפִּיר","the-place-a sapphire"],["אֲבָנֶיהָ","its-stones"],["וְעַפְרֹת","and-dust of"],["זָהָב","gold"],["לוֹ","to-him"],["׃",""]] },
-  { num:"ז", words:[["נָתִיב","the path"],["לֹא־יְדָעוֹ","not-knows-it"],["עָיִט","the buzzard"],["וְלֹא","and-not"],["שְׁזָפַתּוּ","it caught sight of-him"],["עֵין","the-eye-of"],["אַיָּה","the-vulture"],["׃",""]] },
+  { num:"ז", words:[["נָתִיב","the path"],["לֹא־יְדָעוֹ","not-known-to"],["עָיִט","the buzzard"],["וְלֹא","and-not"],["שְׁזָפַתּוּ","has-seen-it"],["עֵין","the-eye-of"],["אַיָּה","the-vulture"],["׃",""]] },
   { num:"ח", words:[["בְנֵי־שָׁחַץ","sons-of-pride"],["לֹא־עָדָה","not-was Adah"],["עָלָיו","upon-him"],["שָׁחַל","a lion"],["׃",""]] },
   { num:"ט", words:[["בַּחַלָּמִישׁ","on the-flint"],["שָׁלַח","sent"],["יָדוֹ","his-hand"],["הָפַךְ","it has turned"],["מִשֹּׁרֶשׁ","from-the root"],["הָרִים","mountains"],["׃",""]] },
   { num:"י", words:[["בַּצּוּרוֹת","in the-rocks"],["יְאֹרִים","shafts"],["בִּקֵּעַ","he ripped open"],["וְכׇל־יְקָר","and-all-the honor of"],["רָאֲתָה","she-saw"],["עֵינוֹ","his eye"],["׃",""]] },
