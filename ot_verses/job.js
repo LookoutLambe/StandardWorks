@@ -550,7 +550,7 @@ var job_ch20Verses = [
   { num:"יד", words:[["לַחְמוֹ","his-bread"],["בְּמֵעָיו","in-his-bowels"],["נֶהְפָּךְ","it is changed"],["מְרוֹרַת","venom of"],["פְּתָנִים","cobras"],["בְּקִרְבּוֹ","in-the-midst-of-him"],["׃",""]] },
   { num:"טו", words:[["חַיִל","might"],["בָּלַע","Bela"],["וַיְקִאֶנּוּ","and-he has vomited up-it"],["מִבִּטְנוֹ","from-his-belly"],["יֹרִשֶׁנּוּ","we-possessed"],["אֵל","God"],["׃",""]] },
   { num:"טז", words:[["רֹאשׁ־פְּתָנִים","head-of-cobras"],["יִינָק","he sucks"],["תַּהַרְגֵהוּ","it slays-him"],["לְשׁוֹן","the-language-of"],["אֶפְעֶה","a viper"],["׃",""]] },
-  { num:"יז", words:[["אַל־יֵרֶא","do-not-let him see"],["בִפְלַגּוֹת","on-streams"],["נַהֲרֵי","rivers of"],["נַחֲלֵי","my-river"],["דְּבַשׁ","honey"],["וְחֶמְאָה","and-curd"],["׃",""]] },
+  { num:"יז", words:[["אַל־יֵרֶא","do-not-let him see"],["בִפְלַגּוֹת","on-streams"],["נַהֲרֵי","rivers of"],["נַחֲלֵי","brooks-of"],["דְּבַשׁ","honey"],["וְחֶמְאָה","and-curd"],["׃",""]] },
   { num:"יח", words:[["מֵשִׁיב","returning"],["יָגָע","the gain"],["וְלֹא","and-not"],["יִבְלָע","he swallows it"],["כְּחֵיל","according to-the wealth of"],["תְּמוּרָתוֹ","his-trading"],["וְלֹא","and-not"],["יַעֲלֹס","he will rejoice"],["׃",""]] },
   { num:"יט", words:[["כִּי־רִצַּץ","because-he has crushed"],["עָזַב","left"],["דַּלִּים","the-poor"],["בַּיִת","house"],["גָּזַל","he-robbed"],["וְלֹא","and-not"],["יִבְנֵהוּ","he built(they)"],["׃",""]] },
   { num:"כ", words:[["כִּי","because"],["לֹא־יָדַע","not-he-knew"],["שָׁלֵו","at ease"],["בְּבִטְנוֹ","in-his-belly"],["בַּחֲמוּדוֹ","among-his-desired things"],["לֹא","not"],["יְמַלֵּט","he delivers"],["׃",""]] },

@@ -135,7 +135,7 @@ renderVerseSet(pro_ch4Verses, 'pro-ch4-verses');
 
 var pro_ch5Verses = [
   { num:"א", words:[["בְּנִי","my-son"],["לְחׇכְמָתִי","to-you are wise-my"],["הַקְשִׁיבָה","pay attention"],["לִתְבוּנָתִי","to-my-understanding"],["הַט־אׇזְנֶךָ","incline-your-ear"],["׃",""]] },
-  { num:"ב", words:[["לִשְׁמֹר","in-keeping"],["מְזִמּוֹת","purposes"],["וְדַעַת","and-knowledge"],["שְׂפָתֶיךָ","your-lips"],["יִנְצֹרוּ","they observed"],["׃",""]] },
+  { num:"ב", words:[["לִשְׁמֹר","to-keep"],["מְזִמּוֹת","purposes"],["וְדַעַת","and-knowledge"],["שְׂפָתֶיךָ","your-lips"],["יִנְצֹרוּ","they observed"],["׃",""]] },
   { num:"ג", words:[["כִּי","because"],["נֹפֶת","honey"],["תִּטֹּפְנָה","they drip"],["שִׂפְתֵי","the lips of"],["זָרָה","strange"],["וְחָלָק","and-is smooth"],["מִשֶּׁמֶן","some of-the oil of"],["חִכָּהּ","her-mouth"],["׃",""]] },
   { num:"ד", words:[["וְאַחֲרִיתָהּ","and-her-end"],["מָרָה","bitter"],["כַלַּעֲנָה","like-the-wormwood"],["חַדָּה","sword"],["כְּחֶרֶב","as-sharp"],["פִּיּוֹת","mouths"],["׃",""]] },
   { num:"ה", words:[["רַגְלֶיהָ","her-feet"],["יֹרְדוֹת","are going down"],["מָוֶת","death"],["שְׁאוֹל","Sheol"],["צְעָדֶיהָ","her-steps"],["יִתְמֹכוּ","they take hold of you"],["׃",""]] },
@@ -264,7 +264,7 @@ var pro_ch8Verses = [
   { num:"לא", words:[["מְשַׂחֶקֶת","playing"],["בְּתֵבֵל","in-the world of"],["אַרְצוֹ","his-land"],["וְשַׁעֲשֻׁעַי","and-my-delight"],["אֶת־בְּנֵי","the-sons-of"],["אָדָם","man"],["׃",""]] },
   { num:"לב", words:[["וְעַתָּה","and-now"],["בָנִים","sons"],["שִׁמְעוּ־לִי","hear-to-me"],["וְאַשְׁרֵי","and-blessed-are"],["דְּרָכַי","my-ways"],["יִשְׁמֹרוּ","they watch for"],["׃",""]] },
   { num:"לג", words:[["שִׁמְעוּ","hear"],["מוּסָר","discipline"],["וַחֲכָמוּ","and-act wisely"],["וְאַל־תִּפְרָעוּ","and-do-not-you let loose"],["׃",""]] },
-  { num:"לד", words:[["אַשְׁרֵי־אָדָם","blessed-are-man"],["שֹׁמֵעַ","who-hears"],["לִי","to-me"],["לִשְׁקֹד","by-keeping watch"],["עַל־דַּלְתֹתַי","upon-my-doors"],["יוֹם","day"],["יוֹם","day"],["לִשְׁמֹר","in-keeping"],["מְזוּזֹת","the doorposts of"],["פְּתָחָי","my-doorways"],["׃",""]] },
+  { num:"לד", words:[["אַשְׁרֵי־אָדָם","blessed-are-man"],["שֹׁמֵעַ","who-hears"],["לִי","to-me"],["לִשְׁקֹד","by-keeping watch"],["עַל־דַּלְתֹתַי","upon-my-doors"],["יוֹם","day"],["יוֹם","day"],["לִשְׁמֹר","to-keep"],["מְזוּזֹת","the doorposts of"],["פְּתָחָי","my-doorways"],["׃",""]] },
   { num:"לה", words:[["כִּי","because"],["מֹצְאִי","one who finds-me"],["(מצאי)",""],["[מָצָא]","finding"],["חַיִּים","living"],["וַיָּפֶק","and-he obtained"],["רָצוֹן","his-own-sins"],["מֵיְהֹוָה","from-the-LORD"],["׃",""]] },
   { num:"לו", words:[["וְחֹטְאִי","and-one who misses-me"],["חֹמֵס","is doing wrong to"],["נַפְשׁוֹ","his-soul"],["כׇּל־מְשַׂנְאַי","all-those who hate-me"],["אָהֲבוּ","they-loved"],["מָוֶת","death"],["׃",""]] },
 ];
