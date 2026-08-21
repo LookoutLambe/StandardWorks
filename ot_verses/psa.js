@@ -1038,7 +1038,7 @@ var psa_ch54Verses = [
   { num:"ד", words:[["אֱלֹהִים","God"],["שְׁמַע","and-hear"],["תְּפִלָּתִי","my-prayer"],["הַאֲזִינָה","give-ear"],["לְאִמְרֵי־פִי","to-the-words-of-my-mouth"],["׃",""]] },
   { num:"ה", words:[["כִּי","because"],["זָרִים","strangers"],["קָמוּ","have-been-fulfilled"],["עָלַי","upon-me"],["וְעָרִיצִים","and-ruthless people"],["בִּקְשׁוּ","sought"],["נַפְשִׁי","my-soul"],["לֹא","not"],["שָׂמוּ","employed"],["אֱלֹהִים","God"],["לְנֶגְדָּם","to-before-them"],["סֶלָה","Selah"],["׃",""]] },
   { num:"ו", words:[["הִנֵּה","behold"],["אֱלֹהִים","God"],["עֹזֵר","who was helping"],["לִי","to-me"],["אֲדֹנָי","Lord"],["בְּסֹמְכֵי","is-those who sustain"],["נַפְשִׁי","my-soul"],["׃",""]] },
-  { num:"ז", words:[["(ישוב)",""],["[יָשִׁיב]","shall-set"],["הָרַע","the-bad"],["לְשֹׁרְרָי","to-my-enemies"],["בַּאֲמִתְּךָ","in-Your-truth"],["הַצְמִיתֵם","destroy-them"],["׃",""]] },
+  { num:"ז", words:[["(ישוב)",""],["[יָשִׁיב]","shall-set"],["הָרַע","the-evil"],["לְשֹׁרְרָי","to-my-enemies"],["בַּאֲמִתְּךָ","in-Your-truth"],["הַצְמִיתֵם","destroy-them"],["׃",""]] },
   { num:"ח", words:[["בִּנְדָבָה","in-voluntariness"],["אֶזְבְּחָה־לָּךְ","I will sacrifice-to-you"],["אוֹדֶה־שִּׁמְךָ","I-will-praise-Your-name"],["יְהֹוָה","the-LORD"],["כִּי־טוֹב","that-it-is-well"],["׃",""]] },
   { num:"ט", words:[["כִּי","because"],["מִכׇּל־צָרָה","from-all-affliction"],["הִצִּילָנִי","he delivered-me"],["וּבְאֹיְבַי","and-on-my-enemies"],["רָאֲתָה","she-saw"],["עֵינִי","my-eye"],["׃",""]] },
 ];
@@ -2231,7 +2231,7 @@ var psa_ch106Verses = [
   { num:"לג", words:[["כִּי־הִמְרוּ","because-they rebelled toward"],["אֶת־רוּחוֹ","His-Spirit"],["וַיְבַטֵּא","and-he spoke rashly"],["בִּשְׂפָתָיו","with-his-lips"],["׃",""]] },
   { num:"לד", words:[["לֹא־הִשְׁמִידוּ","not-they destroyed"],["אֶת־הָעַמִּים","the-people"],["אֲשֶׁר","which"],["אָמַר","said"],["יְהֹוָה","the-LORD"],["לָהֶם","to-them"],["׃",""]] },
   { num:"לה", words:[["וַיִּתְעָרְבוּ","and-they mixed themselves"],["בַגּוֹיִם","by-the-nations"],["וַיִּלְמְדוּ","and-they learned"],["מַעֲשֵׂיהֶם","of-their-proceedings"],["׃",""]] },
-  { num:"לו", words:[["וַיַּעַבְדוּ","and-worshipped"],["אֶת־עֲצַבֵּיהֶם","their-idols"],["וַיִּהְיוּ","and-they-were"],["לָהֶם","to-them"],["לְמוֹקֵשׁ","for a snare"],["׃",""]] },
+  { num:"לו", words:[["וַיַּעַבְדוּ","and-they-served"],["אֶת־עֲצַבֵּיהֶם","their-idols"],["וַיִּהְיוּ","and-they-were"],["לָהֶם","to-them"],["לְמוֹקֵשׁ","for a snare"],["׃",""]] },
   { num:"לז", words:[["וַיִּזְבְּחוּ","and-sacrificed"],["אֶת־בְּנֵיהֶם","their-sons"],["וְאֶת־בְּנוֹתֵיהֶם","and-their-daughters"],["לַשֵּׁדִים","to the-demons"],["׃",""]] },
   { num:"לח", words:[["וַיִּשְׁפְּכוּ","and-they-poured-out"],["דָם","blood"],["נָקִי","blameless"],["דַּם־בְּנֵיהֶם","blood-of-their-sons"],["וּבְנוֹתֵיהֶם","and-their-daughters"],["אֲשֶׁר","which"],["זִבְּחוּ","they sacrificed"],["לַעֲצַבֵּי","to-the idols of"],["כְנָעַן","Canaan"],["וַתֶּחֱנַף","and-it was polluted"],["הָאָרֶץ","the-earth"],["בַּדָּמִים","by the-blood"],["׃",""]] },
   { num:"לט", words:[["וַיִּטְמְאוּ","and-they became unclean"],["בְמַעֲשֵׂיהֶם","by-their-deeds"],["וַיִּזְנוּ","and-they-committed-whoredoms"],["בְּמַעַלְלֵיהֶם","by-their-deeds"],["׃",""]] },
