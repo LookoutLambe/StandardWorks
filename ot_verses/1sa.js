@@ -913,7 +913,7 @@ var _1sa_ch30Verses = [
   { num:"כז", words:[["לַאֲשֶׁר","unto-him-who"],["בְּבֵית־אֵל","in Bethel"],["וְלַאֲשֶׁר","and-to-him-that"],["בְּרָמוֹת־נֶגֶב","were in-Ramoth-south"],["וְלַאֲשֶׁר","and-to-him-that"],["בְּיַתִּר","were in-Jattir"],["׃",""]] },
   { num:"כח", words:[["וְלַאֲשֶׁר","and-to-him-that"],["בַּעֲרֹעֵר","were in-Aroer"],["וְלַאֲשֶׁר","and-to-him-that"],["בְּשִׂפְמוֹת","were in-Siphmoth"],["וְלַאֲשֶׁר","and-to-him-that"],["בְּאֶשְׁתְּמֹעַ","were in-Eshtemoa"],["׃",""]] },
   { num:"כט", words:[["וְלַאֲשֶׁר","and-to-him-that"],["בְּרָכׇל","were in-Racal"],["וְלַאֲשֶׁר","and-to-him-that"],["בְּעָרֵי","in-the cities of"],["הַיְּרַחְמְאֵלִי","the-Jerahmeelites"],["וְלַאֲשֶׁר","and-to-him-that"],["בְּעָרֵי","in-the cities of"],["הַקֵּינִי","the-Kenites"],["׃",""]] },
-  { num:"ל", words:[["וְלַאֲשֶׁר","and-to-him-that"],["בְּחׇרְמָה","were in-Hormah"],["וְלַאֲשֶׁר","and-to-him-that"],["בְּבוֹר־עָשָׁן","were in-Bor-smoke"],["וְלַאֲשֶׁר","and-to-him-that"],["בַּעֲתָךְ","were in-Athach"],["׃",""]] },
+  { num:"ל", words:[["וְלַאֲשֶׁר","and-to-him-that"],["בְּחׇרְמָה","were in-Hormah"],["וְלַאֲשֶׁר","and-to-him-that"],["בְּבוֹר־עָשָׁן","in-Bor-ashan"],["וְלַאֲשֶׁר","and-to-him-that"],["בַּעֲתָךְ","were in-Athach"],["׃",""]] },
   { num:"לא", words:[["וְלַאֲשֶׁר","and-to-him-that"],["בְּחֶבְרוֹן","in-Hebron"],["וּלְכׇל־הַמְּקֹמוֹת","and-to-all-the-places"],["אֲשֶׁר־הִתְהַלֶּךְ־שָׁם","which-walked about-there"],["דָּוִד","David"],["הוּא","he"],["וַאֲנָשָׁיו","and-his-men"],["׃",""]] },
 ];
 renderVerseSet(_1sa_ch30Verses, '1sa-ch30-verses');
