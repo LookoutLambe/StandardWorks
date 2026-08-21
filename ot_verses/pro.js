@@ -640,7 +640,7 @@ var pro_ch20Verses = [
   { num:"ז", words:[["מִתְהַלֵּךְ","walking"],["בְּתֻמּוֹ","in-his-integrity"],["צַדִּיק","righteous"],["אַשְׁרֵי","blessed-are"],["בָנָיו","his-sons"],["אַחֲרָיו","after-him"],["׃",""]] },
   { num:"ח", words:[["מֶלֶךְ","the-king-of"],["יוֹשֵׁב","sitting"],["עַל־כִּסֵּא־דִין","upon-the-throne-of-judgment-of"],["מְזָרֶה","is winnowing"],["בְעֵינָיו","with-their-eyes"],["כׇּל־רָע","all-evil"],["׃",""]] },
   { num:"ט", words:[["מִי־יֹאמַר","who-He-says"],["זִכִּיתִי","I have kept pure"],["לִבִּי","my-heart"],["טָהַרְתִּי","I am pure"],["מֵחַטָּאתִי","from-my-sin"],["׃",""]] },
-  { num:"י", words:[["אֶבֶן","stone"],["וָאֶבֶן","and-I-built"],["אֵיפָה","an-ephah"],["וְאֵיפָה","and-a measure"],["תּוֹעֲבַת","an-abomination-before"],["יְהֹוָה","the-LORD"],["גַּם־שְׁנֵיהֶם","also-the-two"],["׃",""]] },
+  { num:"י", words:[["אֶבֶן","stone"],["וָאֶבֶן","and-stone"],["אֵיפָה","an-ephah"],["וְאֵיפָה","and-a measure"],["תּוֹעֲבַת","an-abomination-before"],["יְהֹוָה","the-LORD"],["גַּם־שְׁנֵיהֶם","also-the-two"],["׃",""]] },
   { num:"יא", words:[["גַּם","also"],["בְּמַעֲלָלָיו","by-his-deeds"],["יִתְנַכֶּר־נָעַר","he makes himself known-was a young man"],["אִם־זַךְ","if-are pure"],["וְאִם־יָשָׁר","and-if-straight"],["פׇּעֳלוֹ","his-work"],["׃",""]] },
   { num:"יב", words:[["אֹזֶן","an-ear"],["שֹׁמַעַת","was listening"],["וְעַיִן","and-Ain"],["רֹאָה","which sees"],["יְהֹוָה","the-LORD"],["עָשָׂה","he-did"],["גַם־שְׁנֵיהֶם","also-the-two"],["׃",""]] },
   { num:"יג", words:[["אַל־תֶּאֱהַב","do-not-you love"],["שֵׁנָה","sleep"],["פֶּן־תִּוָּרֵשׁ","lest-you should become impoverished"],["פְּקַח","open"],["עֵינֶיךָ","your-eyes"],["שְׂבַע־לָחֶם","is satisfied of-food"],["׃",""]] },
