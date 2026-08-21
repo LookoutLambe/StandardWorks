@@ -995,7 +995,7 @@ var _1ch_ch27Verses = [
   { num:"ל", words:[["וְעַל־הַגְּמַלִּים","and-upon-the-camels"],["אוֹבִיל","Obil"],["הַיִּשְׁמְעֵלִי","the-Ishmaelite"],["וְעַל־הָאֲתֹנוֹת","and-upon-the-she-asses"],["יֶחְדְּיָהוּ","Jehdeiah"],["הַמֵּרֹנֹתִי","the-Meronothite"],["׃",""]] },
   { num:"לא", words:[["וְעַל־הַצֹּאן","and-upon-the-flock"],["יָזִיז","Jaziz"],["הַהַגְרִי","the-Hagrite"],["כׇּל־אֵלֶּה","all-these"],["שָׂרֵי","captains-of"],["הָרְכוּשׁ","the-property"],["אֲשֶׁר","which"],["לַמֶּלֶךְ","the-king"],["דָּוִיד","David"],["׃",""]] },
   { num:"לב", words:[["וִיהוֹנָתָן","and-Jonathan"],["דּוֹד־דָּוִיד","the uncle of-David"],["יוֹעֵץ","Counselor"],["אִישׁ־מֵבִין","man-of-who-understand"],["וְסוֹפֵר","and-the-scribe-of"],["הוּא","he"],["וִיחִיאֵל","and-Jehiel"],["בֶּן־חַכְמוֹנִי","son-of-a Hacmonite"],["עִם־בְּנֵי","with-the-sons-of"],["הַמֶּלֶךְ","the-king"],["׃",""]] },
-  { num:"לג", words:[["וַאֲחִיתֹפֶל","and-Ahithophel"],["יוֹעֵץ","Counselor"],["לַמֶּלֶךְ","the-king"],["וְחוּשַׁי","and-Hushai"],["הָאַרְכִּי","the-Arkites"],["רֵעַ","a friend"],["הַמֶּלֶךְ","the-king"],["׃",""]] },
+  { num:"לג", words:[["וַאֲחִיתֹפֶל","and-Ahithophel"],["יוֹעֵץ","Counselor"],["לַמֶּלֶךְ","the-king"],["וְחוּשַׁי","and-Hushai"],["הָאַרְכִּי","the-Archite"],["רֵעַ","a friend"],["הַמֶּלֶךְ","the-king"],["׃",""]] },
   { num:"לד", words:[["וְאַחֲרֵי","and-after"],["אֲחִיתֹפֶל","Ahithophel"],["יְהוֹיָדָע","Jehoiada"],["בֶּן־בְּנָיָהוּ","son-of-Benaiah"],["וְאֶבְיָתָר","and-Abiathar"],["וְשַׂר־צָבָא","and-was the commander of-an-army"],["לַמֶּלֶךְ","the-king"],["יוֹאָב","Joab"],["׃",""]] },
 ];
 renderVerseSet(_1ch_ch27Verses, '1ch-ch27-verses');
