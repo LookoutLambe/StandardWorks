@@ -418,7 +418,7 @@ var pro_ch13Verses = [
   { num:"כ", words:[["(הלוך)",""],["[הוֹלֵךְ]","going"],["אֶת־חֲכָמִים","wise"],["(וחכם)",""],["[יֶחְכָּם]","he was wise"],["וְרֹעֶה","and-a-companion-of"],["כְסִילִים","fools"],["יֵרוֹעַ","he is harmed"],["׃",""]] },
   { num:"כא", words:[["חַטָּאִים","sinful"],["תְּרַדֵּף","it pursues"],["רָעָה","evil"],["וְאֶת־צַדִּיקִים","and-just"],["יְשַׁלֶּם־טוֹב","he repays-good"],["׃",""]] },
   { num:"כב", words:[["טוֹב","good"],["יַנְחִיל","he will give as an inheritance"],["בְּנֵי־בָנִים","sons-of-sons"],["וְצָפוּן","and-is stored up"],["לַצַּדִּיק","unto-the-righteous"],["חֵיל","the army of"],["חוֹטֵא","a sinner"],["׃",""]] },
-  { num:"כג", words:[["רׇב־אֹכֶל","much-food"],["נִיר","a lamp"],["רָאשִׁים","heads"],["וְיֵשׁ","and-there-was"],["נִסְפֶּה","we-perish"],["בְּלֹא","without"],["מִשְׁפָּט","judgment"],["׃",""]] },
+  { num:"כג", words:[["רׇב־אֹכֶל","much-food"],["נִיר","a lamp"],["רָאשִׁים","the poor"],["וְיֵשׁ","and-there-was"],["נִסְפֶּה","we-perish"],["בְּלֹא","without"],["מִשְׁפָּט","judgment"],["׃",""]] },
   { num:"כד", words:[["חוֹשֵׂךְ","one who restrains"],["שִׁבְטוֹ","his-rod"],["שׂוֹנֵא","one who hates"],["בְנוֹ","his-son"],["וְאֹהֲבוֹ","and-one who loves-him"],["שִׁחֲרוֹ","he seeks early-him"],["מוּסָר","discipline"],["׃",""]] },
   { num:"כה", words:[["צַדִּיק","righteous"],["אֹכֵל","ate"],["לְשֹׂבַע","to-the satiety of"],["נַפְשׁוֹ","his-soul"],["וּבֶטֶן","and-the belly of"],["רְשָׁעִים","wicked-men"],["תֶּחְסָר","it is lacking"],["׃",""]] },
 ];
