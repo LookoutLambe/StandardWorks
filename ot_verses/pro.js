@@ -113,7 +113,7 @@ var pro_ch4Verses = [
   { num:"ח", words:[["סַלְסְלֶהָ","her-esteem"],["וּתְרוֹמְמֶךָּ","and-she will exalt-you"],["תְּכַבֵּדְךָ","she will honor-you"],["כִּי","because"],["תְחַבְּקֶנָּה","you will embrace-her"],["׃",""]] },
   { num:"ט", words:[["תִּתֵּן","you-shall-give"],["לְרֹאשְׁךָ","to-your-head"],["לִוְיַת־חֵן","a wreath of-favor"],["עֲטֶרֶת","crown-of"],["תִּפְאֶרֶת","the-beauty-of"],["תְּמַגְּנֶךָּ","she will give-you"],["׃",""]] },
   { num:"י", words:[["שְׁמַע","hearken"],["בְּנִי","my-son"],["וְקַח","and-take"],["אֲמָרָי","my-words"],["וְיִרְבּוּ","so-they may increase"],["לְךָ","for-you"],["שְׁנוֹת","the years of"],["חַיִּים","living"],["׃",""]] },
-  { num:"יא", words:[["בְּדֶרֶךְ","by-the-way-of"],["חׇכְמָה","wisdom"],["הִדְרַכְתִּיךָ","I led-you"],["בְּמַעְגְּלֵי־יֹשֶׁר","in-tracks of-uprightness"],["׃",""]] },
+  { num:"יא", words:[["בְּדֶרֶךְ","by-the-way-of"],["חׇכְמָה","wisdom"],["הֹרֵיתִיךָ","I-have-taught-you"],["הִדְרַכְתִּיךָ","I led-you"],["בְּמַעְגְּלֵי־יֹשֶׁר","in-tracks of-uprightness"],["׃",""]] },
   { num:"יב", words:[["בְּלֶכְתְּךָ","when-you-go"],["לֹא־יֵצַר","not-it-grieves"],["צַעֲדֶךָ","your-steps"],["וְאִם־תָּרוּץ","and-if-you will run"],["לֹא","not"],["תִכָּשֵׁל","you will stumble"],["׃",""]] },
   { num:"יג", words:[["הַחֲזֵק","the-strengthen"],["בַּמּוּסָר","on-the-discipline"],["אַל־תֶּרֶף","do-not-you let drop"],["נִצְּרֶהָ","her-keep"],["כִּי־הִיא","because-it-is"],["חַיֶּיךָ","your-life"],["׃",""]] },
   { num:"יד", words:[["בְּאֹרַח","in-the-path-of"],["רְשָׁעִים","wicked-men"],["אַל־תָּבֹא","do-not-comes"],["וְאַל־תְּאַשֵּׁר","and-do-not-you advance"],["בְּדֶרֶךְ","by-the-way-of"],["רָעִים","evil"],["׃",""]] },
@@ -155,7 +155,7 @@ var pro_ch5Verses = [
   { num:"יט", words:[["אַיֶּלֶת","the doe of"],["אֲהָבִים","loves"],["וְיַעֲלַת־חֵן","and-a goat of-favor"],["דַּדֶּיהָ","her-breasts"],["יְרַוֻּךָ","may they satisfy-you"],["בְכׇל־עֵת","in-all-time"],["בְּאַהֲבָתָהּ","by-her-love"],["תִּשְׁגֶּה","may you be intoxicated"],["תָמִיד","continually"],["׃",""]] },
   { num:"כ", words:[["וְלָמָּה","and-why"],["תִשְׁגֶּה","will you go astray"],["בְנִי","my-son"],["בְזָרָה","with-a strange woman"],["וּתְחַבֵּק","may you embrace?"],["חֵק","the bosom of"],["נׇכְרִיָּה","foreign"],["׃",""]] },
   { num:"כא", words:[["כִּי","because"],["נֹכַח","opposite to"],["עֵינֵי","the-eyes-of"],["יְהֹוָה","the-LORD"],["דַּרְכֵי־אִישׁ","the-ways-of-man-of"],["וְכׇל־מַעְגְּלֹתָיו","and-all-his-tracks"],["מְפַלֵּס","he is making level"],["׃",""]] },
-  { num:"כב", words:[["יִלְכְּדֻנוֹ","they will seize-him"],["אֶת־הָרָשָׁע","the-wicked"],["וּבְחַבְלֵי","and-by-the cords of"],["חַטָּאתוֹ","his-sin"],["יִתָּמֵךְ","he will be held"],["׃",""]] },
+  { num:"כב", words:[["עֲווֹנֹתָיו","his-own-iniquities"],["יִלְכְּדֻנוֹ","they will seize-him"],["אֶת־הָרָשָׁע","the-wicked"],["וּבְחַבְלֵי","and-by-the cords of"],["חַטָּאתוֹ","his-sin"],["יִתָּמֵךְ","he will be held"],["׃",""]] },
   { num:"כג", words:[["הוּא","he"],["יָמוּת","he-shall-die"],["בְּאֵין","in-un"],["מוּסָר","discipline"],["וּבְרֹב","and-His-great"],["אִוַּלְתּוֹ","his-foolishness"],["יִשְׁגֶּה","man-can-err"],["׃",""]] },
 ];
 renderVerseSet(pro_ch5Verses, 'pro-ch5-verses');
@@ -767,7 +767,7 @@ var pro_ch23Verses = [
   { num:"לב", words:[["אַחֲרִיתוֹ","his-posterity"],["כְּנָחָשׁ","like-a snake"],["יִשָּׁךְ","someone will pay interest"],["וּכְצִפְעֹנִי","and-like-a viper"],["יַפְרִשׁ","it will sting"],["׃",""]] },
   { num:"לג", words:[["עֵינֶיךָ","your-eyes"],["יִרְאוּ","shall-see"],["זָרוֹת","strange"],["וְלִבְּךָ","and-your-heart"],["יְדַבֵּר","speaks"],["תַּהְפֻּכוֹת","perverse things"],["׃",""]] },
   { num:"לד", words:[["וְהָיִיתָ","and-you-shall-be"],["כְּשֹׁכֵב","like-one who lies down"],["בְּלֶב־יָם","in-the heart of-the-sea"],["וּכְשֹׁכֵב","and-like-one who lies down"],["בְּרֹאשׁ","in the top of"],["חִבֵּל","a mast"],["׃",""]] },
-  { num:"לה", words:[["בַל־חָלִיתִי","not-I was sick"],["הֲלָמוּנִי","they beat-me"],["בַּל־יָדָעְתִּי","not-I-know"],["מָתַי","when"],["אָקִיץ","will I awake"],["אוֹסִיף","more"],["אֲבַקְשֶׁנּוּ","I will seek-it"],["עוֹד","any-more"],["׃",""]] },
+  { num:"לה", words:[["הִכּוּנִי","they-have-stricken-me"],["בַל־חָלִיתִי","not-I was sick"],["הֲלָמוּנִי","they beat-me"],["בַּל־יָדָעְתִּי","not-I-know"],["מָתַי","when"],["אָקִיץ","will I awake"],["אוֹסִיף","more"],["אֲבַקְשֶׁנּוּ","I will seek-it"],["עוֹד","any-more"],["׃",""]] },
 ];
 renderVerseSet(pro_ch23Verses, 'pro-ch23-verses');
 
@@ -1021,7 +1021,7 @@ var pro_ch31Verses = [
   { num:"יד", words:[["הָיְתָה","was"],["כׇּאֳנִיּוֹת","as-a-ship"],["סוֹחֵר","a trader"],["מִמֶּרְחָק","from-afar"],["תָּבִיא","you-bring"],["לַחְמָהּ","its-food"],["׃",""]] },
   { num:"טו", words:[["וַתָּקׇם","and-she-arose"],["בְּעוֹד","in-yet"],["לַיְלָה","night"],["וַתִּתֵּן","and-she-gave"],["טֶרֶף","the-prey"],["לְבֵיתָהּ","to-her-household"],["וְחֹק","and-a decree"],["לְנַעֲרֹתֶיהָ","to-her-female servants"],["׃",""]] },
   { num:"טז", words:[["זָמְמָה","had-laid"],["שָׂדֶה","field"],["וַתִּקָּחֵהוּ","and-she took-it"],["מִפְּרִי","of-fruit-of"],["כַפֶּיהָ","her-hands"],["(נטע)",""],["[נָטְעָה]","it planted"],["כָּרֶם","a vineyard"],["׃",""]] },
-  { num:"יז", words:[["חָגְרָה","she girds"],["בְעוֹז","with-strength"],["מׇתְנֶיהָ","her-loins"],["וַתְּאַמֵּץ","and-she strengthened"],["׃",""]] },
+  { num:"יז", words:[["חָגְרָה","she girds"],["בְעוֹז","with-strength"],["מׇתְנֶיהָ","her-loins"],["וַתְּאַמֵּץ","and-she strengthened"],["זְרוֹעֹתֶיהָ","her-arms"],["׃",""]] },
   { num:"יח", words:[["טָעֲמָה","she perceives"],["כִּי־טוֹב","that-it-is-well"],["סַחְרָהּ","her-profit"],["לֹא־יִכְבֶּה","not-it was extinguished"],["(בליל)",""],["[בַלַּיְלָה]","in-the-night"],["נֵרָהּ","her-lamp"],["׃",""]] },
   { num:"יט", words:[["יָדֶיהָ","her-hands"],["שִׁלְּחָה","she sends"],["בַכִּישׁוֹר","on the-distaff"],["וְכַפֶּיהָ","and-her-palms"],["תָּמְכוּ","they-supported"],["פָלֶךְ","the spindle"],["׃",""]] },
   { num:"כ", words:[["כַּפָּהּ","her-hand"],["פָּרְשָׂה","she spreads out"],["לֶעָנִי","for the-poor person"],["וְיָדֶיהָ","and-her-hands"],["שִׁלְּחָה","she sends"],["לָאֶבְיוֹן","for the-needy person"],["׃",""]] },

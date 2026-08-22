@@ -53,7 +53,7 @@ var sos_ch3Verses = [
   { num:"ח", words:[["כֻּלָּם","all of them"],["אֲחֻזֵי","hold"],["חֶרֶב","the sword"],["מְלֻמְּדֵי","trained of"],["מִלְחָמָה","war"],["אִישׁ","a man"],["חַרְבּוֹ","his sword"],["עַל־יְרֵכוֹ","upon his thigh"],["מִפַּחַד","from fear"],["בַּלֵּילוֹת","in the nights"],["׃",""]] },
   { num:"ט", words:[["אַפִּרְיוֹן","a litter"],["עָשָׂה","he did"],["לוֹ","to him"],["הַמֶּלֶךְ","the king"],["שְׁלֹמֹה","Solomon"],["מֵעֲצֵי","from the wood of"],["הַלְּבָנוֹן","Lebanon"],["׃",""]] },
   { num:"י", words:[["עַמּוּדָיו","its pillars"],["עָשָׂה","he did"],["כֶסֶף","silver"],["רְפִידָתוֹ","its back"],["זָהָב","gold"],["מֶרְכָּבוֹ","its seat"],["אַרְגָּמָן","purple"],["תּוֹכוֹ","the middle of it"],["רָצוּף","was fitted out"],["אַהֲבָה","love"],["מִבְּנוֹת","of the daughters of"],["יְרוּשָׁלָ͏ִם","Jerusalem"],["׃",""]] },
-  { num:"יא", words:[["וּרְאֶינָה","and look"],["בְּנוֹת","the daughters of"],["צִיּוֹן","Zion"],["בַּמֶּלֶךְ","upon king"],["שְׁלֹמֹה","Solomon"],["בָּעֲטָרָה","on the crown"],["שֶׁעִטְּרָה־לּוֹ","that crowned upon him"],["אִמּוֹ","his mother"],["בְּיוֹם","in the day of"],["חֲתֻנָּתוֹ","his wedding"],["וּבְיוֹם","and in the day of"],["שִׂמְחַת","joy of"],["לִבּוֹ","his heart"],["׃",""]] },
+  { num:"יא", words:[["צְאֶנָה","go forth"],["וּרְאֶינָה","and look"],["בְּנוֹת","the daughters of"],["צִיּוֹן","Zion"],["בַּמֶּלֶךְ","upon king"],["שְׁלֹמֹה","Solomon"],["בָּעֲטָרָה","on the crown"],["שֶׁעִטְּרָה־לּוֹ","that crowned upon him"],["אִמּוֹ","his mother"],["בְּיוֹם","in the day of"],["חֲתֻנָּתוֹ","his wedding"],["וּבְיוֹם","and in the day of"],["שִׂמְחַת","joy of"],["לִבּוֹ","his heart"],["׃",""]] },
 ];
 renderVerseSet(sos_ch3Verses, 'sos-ch3-verses');
 
