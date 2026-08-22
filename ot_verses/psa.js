@@ -3010,7 +3010,7 @@ var psa_ch144Verses = [
   { num:"ג", words:[["יְהֹוָה","the-LORD"],["מָה־אָדָם","what-man"],["וַתֵּדָעֵהוּ","and-you have considered-him"],["בֶּן־אֱנוֹשׁ","son-of-man"],["וַתְּחַשְּׁבֵהוּ","and-you have regarded-him"],["׃",""]] },
   { num:"ד", words:[["אָדָם","man"],["לַהֶבֶל","to-breath"],["דָּמָה","was-like"],["יָמָיו","his-days"],["כְּצֵל","are like-a shadow"],["עוֹבֵר","passing along"],["׃",""]] },
   { num:"ה", words:[["יְהֹוָה","the-LORD"],["הַט־שָׁמֶיךָ","incline-your-heavens"],["וְתֵרֵד","so-you may come down"],["גַּע","touch"],["בֶּהָרִים","in-the-mountains"],["וְיֶעֱשָׁנוּ","so-they may smoke"],["׃",""]] },
-  { num:"ו", words:[["בְּרוֹק","flash"],["בָּרָק","Barak"],["וּתְפִיצֵם","and-you will scatter-them"],["שְׁלַח","send"],["חִצֶּיךָ","your-arrows"],["וּתְהֻמֵּם","and-you will rout-them"],["׃",""]] },
+  { num:"ו", words:[["בְּרוֹק","flash"],["בָּרָק","lightning"],["וּתְפִיצֵם","and-you will scatter-them"],["שְׁלַח","send"],["חִצֶּיךָ","your-arrows"],["וּתְהֻמֵּם","and-you will rout-them"],["׃",""]] },
   { num:"ז", words:[["שְׁלַח","put-forth"],["יָדֶיךָ","Your-hands"],["מִמָּרוֹם","from-above"],["פְּצֵנִי","set free-me"],["וְהַצִּילֵנִי","and-deliver-me"],["מִמַּיִם","out-of-many-waters"],["רַבִּים","many"],["מִיַּד","from-the-hand-of"],["בְּנֵי","the-sons-of"],["נֵכָר","strange"],["׃",""]] },
   { num:"ח", words:[["אֲשֶׁר","which"],["פִּיהֶם","his-mouth"],["דִּבֶּר־שָׁוְא","spoke-falsehood"],["וִימִינָם","and-whose-right-hand"],["יְמִין","right-hand"],["שָׁקֶר","falsehood"],["׃",""]] },
   { num:"ט", words:[["אֱלֹהִים","God"],["שִׁיר","a song"],["חָדָשׁ","new"],["אָשִׁירָה","I-will-sing"],["לָּךְ","to-you"],["בְּנֵבֶל","with-lyre of"],["עָשׂוֹר","ten"],["אֲזַמְּרָה־לָּךְ","I will sing praises to-to-you"],["׃",""]] },
