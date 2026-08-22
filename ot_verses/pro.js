@@ -3,13 +3,13 @@
 var pro_ch1Verses = [
   { num:"א", words:[["מִשְׁלֵי","the proverbs of"],["שְׁלֹמֹה","Solomon"],["בֶן־דָּוִד","son of David"],["מֶלֶךְ","the king of"],["יִשְׂרָאֵל","Israel"],["׃",""]] },
   { num:"ב", words:[["לָדַעַת","to know"],["חׇכְמָה","wisdom"],["וּמוּסָר","and discipline"],["לְהָבִין","to understand"],["אִמְרֵי","words of"],["בִינָה","understanding"],["׃",""]] },
-  { num:"ג", words:[["לָקַחַת","to take"],["מוּסַר","the chastisement of"],["הַשְׂכֵּל","insight"],["צֶדֶק","righteousness"],["וּמִשְׁפָּט","and judgment"],["וּמֵשָׁרִים","and equity"],["׃",""]] },
-  { num:"ד", words:[["לָתֵת","to give"],["לִפְתָאיִם","to the simple"],["עׇרְמָה","prudence"],["לְנַעַר","to a youth"],["דַּעַת","true knowledge"],["וּמְזִמָּה","and discretion"],["׃",""]] },
-  { num:"ה", words:[["יִשְׁמַע","hearkens to"],["חָכָם","wise"],["וְיוֹסֶף","and let him increase"],["לֶקַח","learning"],["וְנָבוֹן","and the prudent"],["תַּחְבֻּלוֹת","wise directions"],["יִקְנֶה","he will acquire"],["׃",""]] },
-  { num:"ו", words:[["לְהָבִין","to understand"],["מָשָׁל","a proverb"],["וּמְלִיצָה","and an enigma"],["דִּבְרֵי","the words of"],["חֲכָמִים","wise"],["וְחִידֹתָם","and their parables"],["׃",""]] },
+  { num:"ג", words:[["לָקַחַת","to receive"],["מוּסַר","the discipline of"],["הַשְׂכֵּל","wisdom"],["צֶדֶק","righteousness"],["וּמִשְׁפָּט","and judgment"],["וּמֵשָׁרִים","and equity"],["׃",""]] },
+  { num:"ד", words:[["לָתֵת","to give"],["לִפְתָאיִם","to the simple"],["עׇרְמָה","prudence"],["לְנַעַר","to a youth"],["דַּעַת","knowledge"],["וּמְזִמָּה","and discretion"],["׃",""]] },
+  { num:"ה", words:[["יִשְׁמַע","may hear"],["חָכָם","wise"],["וְיוֹסֶף","and let him increase"],["לֶקַח","learning"],["וְנָבוֹן","and the man of understanding"],["תַּחְבֻּלוֹת","wise counsels"],["יִקְנֶה","may attain"],["׃",""]] },
+  { num:"ו", words:[["לְהָבִין","to understand"],["מָשָׁל","a proverb"],["וּמְלִיצָה","and a figure"],["דִּבְרֵי","the words of"],["חֲכָמִים","wise"],["וְחִידֹתָם","and their dark sayings"],["׃",""]] },
   { num:"ז", words:[["יִרְאַת","the fear of"],["יְהֹוָה","the LORD"],["רֵאשִׁית","the beginning of"],["דָּעַת","knowledge"],["חׇכְמָה","wisdom"],["וּמוּסָר","and discipline"],["אֱוִילִים","fools"],["בָּזוּ","they despise"],["׃",""]] },
-  { num:"ח", words:[["שְׁמַע","hearken"],["בְּנִי","my son"],["מוּסַר","the chastisement of"],["אָבִיךָ","your father"],["וְאַל־תִּטֹּשׁ","and forsake not"],["תּוֹרַת","the law of"],["אִמֶּךָ","your mother"],["׃",""]] },
-  { num:"ט", words:[["כִּי","because"],["לִוְיַת","a wreath of"],["חֵן","favor"],["הֵם","they"],["לְרֹאשֶׁךָ","for your head"],["וַעֲנָקִים","and necklaces"],["לְגַרְגְּרֹתֶךָ","to your necks"],["׃",""]] },
+  { num:"ח", words:[["שְׁמַע","hearken"],["בְּנִי","my son"],["מוּסַר","the discipline of"],["אָבִיךָ","your father"],["וְאַל־תִּטֹּשׁ","and forsake not"],["תּוֹרַת","the law of"],["אִמֶּךָ","your mother"],["׃",""]] },
+  { num:"ט", words:[["כִּי","because"],["לִוְיַת","a chaplet of"],["חֵן","favor"],["הֵם","they"],["לְרֹאשֶׁךָ","for your head"],["וַעֲנָקִים","and chains"],["לְגַרְגְּרֹתֶךָ","about your neck"],["׃",""]] },
   { num:"י", words:[["בְּנִי","my son"],["אִם־יְפַתּוּךָ","if they will entice you"],["חַטָּאִים","sinful"],["אַל־תֹּבֵא","consent not"],["׃",""]] },
   { num:"יא", words:[["אִם־יֹאמְרוּ","if they shall say"],["לְכָה","come"],["אִתָּנוּ","with us"],["נֶאֶרְבָה","let us lie in wait"],["לְדָם","for blood"],["נִצְפְּנָה","let us lie hidden"],["לְנָקִי","for an innocent one"],["חִנָּם","without cause"],["׃",""]] },
   { num:"יב", words:[["נִבְלָעֵם","let us engulf them"],["כִּשְׁאוֹל","like Sheol"],["חַיִּים","alive"],["וּתְמִימִים","and blameless"],["כְּיוֹרְדֵי","like those who go down of"],["בוֹר","a pit"],["׃",""]] },
@@ -74,7 +74,7 @@ var pro_ch3Verses = [
   { num:"ח", words:[["רִפְאוּת","healing"],["תְּהִי","let it be"],["לְשׇׁרֶּךָ","to your navel"],["וְשִׁקּוּי","and marrow"],["לְעַצְמוֹתֶיךָ","to your bones"],["׃",""]] },
   { num:"ט", words:[["כַּבֵּד","honor"],["אֶת־יְהֹוָה","the LORD"],["מֵהוֹנֶךָ","from your wealth"],["וּמֵרֵאשִׁית","and from the first of"],["כׇּל־תְּבוּאָתֶךָ","all your produce"],["׃",""]] },
   { num:"י", words:[["וְיִמָּלְאוּ","and be filled with"],["אֲסָמֶיךָ","your storehouses"],["שָׂבָע","plenty"],["וְתִירוֹשׁ","and new wine"],["יְקָבֶיךָ","your wine vats"],["יִפְרֹצוּ","they will burst open"],["׃",""]] },
-  { num:"יא", words:[["מוּסַר","the chastisement of"],["יְהֹוָה","the LORD"],["בְּנִי","my son"],["אַל־תִּמְאָס","do not despise"],["וְאַל־תָּקֹץ","and be not weary of"],["בְּתוֹכַחְתּוֹ","his rebuke"],["׃",""]] },
+  { num:"יא", words:[["מוּסַר","the discipline of"],["יְהֹוָה","the LORD"],["בְּנִי","my son"],["אַל־תִּמְאָס","do not despise"],["וְאַל־תָּקֹץ","and be not weary of"],["בְּתוֹכַחְתּוֹ","his rebuke"],["׃",""]] },
   { num:"יב", words:[["כִּי","because"],["אֶת־אֲשֶׁר","that which"],["יֶאֱהַב","he loves"],["יְהֹוָה","the LORD"],["יוֹכִיחַ","he reproves"],["וּכְאָב","and like a father"],["אֶת־בֵּן","a son"],["יִרְצֶה","he delights in"],["׃",""]] },
   { num:"יג", words:[["אַשְׁרֵי","blessed are"],["אָדָם","man"],["מָצָא","found"],["חׇכְמָה","wisdom"],["וְאָדָם","and the man"],["יָפִיק","obtains"],["תְּבוּנָה","understanding"],["׃",""]] },
   { num:"יד", words:[["כִּי","because"],["טוֹב","good"],["סַחְרָהּ","her profit"],["מִסְּחַר־כָּסֶף","than the gain of silver"],["וּמֵחָרוּץ","and than fine gold"],["תְּבוּאָתָהּ","her gain"],["׃",""]] },
@@ -103,7 +103,7 @@ var pro_ch3Verses = [
 renderVerseSet(pro_ch3Verses, 'pro-ch3-verses');
 
 var pro_ch4Verses = [
-  { num:"א", words:[["שִׁמְעוּ","hear"],["בָנִים","sons"],["מוּסַר","the chastisement of"],["אָב","father"],["וְהַקְשִׁיבוּ","and hearken"],["לָדַעַת","to know"],["בִּינָה","understanding"],["׃",""]] },
+  { num:"א", words:[["שִׁמְעוּ","hear"],["בָנִים","sons"],["מוּסַר","the discipline of"],["אָב","father"],["וְהַקְשִׁיבוּ","and hearken"],["לָדַעַת","to know"],["בִּינָה","understanding"],["׃",""]] },
   { num:"ב", words:[["כִּי","because"],["לֶקַח","doctrine"],["טוֹב","good"],["נָתַתִּי","I gave"],["לָכֶם","to you"],["תּוֹרָתִי","my law"],["אַל־תַּעֲזֹבוּ","do not forsake"],["׃",""]] },
   { num:"ג", words:[["כִּי־בֵן","because a son"],["הָיִיתִי","I was"],["לְאָבִי","for my father"],["רַךְ","tender"],["וְיָחִיד","and only one"],["לִפְנֵי","before"],["אִמִּי","my mother"],["׃",""]] },
   { num:"ד", words:[["וַיֹּרֵנִי","and he taught me"],["וַיֹּאמֶר","and said"],["לִי","to me"],["יִתְמׇךְ־דְּבָרַי","let it retain my words"],["לִבֶּךָ","your heart"],["שְׁמֹר","watch"],["מִצְוֺתַי","my commandments"],["וֶחְיֵה","and live"],["׃",""]] },
@@ -396,7 +396,7 @@ var pro_ch12Verses = [
 renderVerseSet(pro_ch12Verses, 'pro-ch12-verses');
 
 var pro_ch13Verses = [
-  { num:"א", words:[["בֵּן","a son"],["חָכָם","wise"],["מוּסַר","the chastisement of"],["אָב","father"],["וְלֵץ","and a mocker"],["לֹא־שָׁמַע","hears not"],["גְּעָרָה","a rebuke"],["׃",""]] },
+  { num:"א", words:[["בֵּן","a son"],["חָכָם","wise"],["מוּסַר","the discipline of"],["אָב","father"],["וְלֵץ","and a mocker"],["לֹא־שָׁמַע","hears not"],["גְּעָרָה","a rebuke"],["׃",""]] },
   { num:"ב", words:[["מִפְּרִי","of fruit of"],["פִי־אִישׁ","the mouth of a man"],["יֹאכַל","he shall eat"],["טוֹב","good"],["וְנֶפֶשׁ","and soul"],["בֹּגְדִים","treacherous people"],["חָמָס","violence"],["׃",""]] },
   { num:"ג", words:[["נֹצֵר","he who keeps"],["פִּיו","his mouth"],["שֹׁמֵר","who keeps"],["נַפְשׁוֹ","his soul"],["פֹּשֵׂק","one who opens"],["שְׂפָתָיו","his lips"],["מְחִתָּה־לוֹ","destruction to him"],["׃",""]] },
   { num:"ד", words:[["מִתְאַוָּה","desires"],["וָאַיִן","and has nothing"],["נַפְשׁוֹ","his soul"],["עָצֵל","the sluggard"],["וְנֶפֶשׁ","and soul"],["חָרֻצִים","diligent people"],["תְּדֻשָּׁן","it will be made fat"],["׃",""]] },
@@ -468,7 +468,7 @@ var pro_ch15Verses = [
   { num:"ב", words:[["לְשׁוֹן","the language of"],["חֲכָמִים","wise"],["תֵּיטִיב","uses aright"],["דָּעַת","knowledge"],["וּפִי","and the mouth of"],["כְסִילִים","fools"],["יַבִּיעַ","it pours forth"],["אִוֶּלֶת","foolishness"],["׃",""]] },
   { num:"ג", words:[["בְּכׇל־מָקוֹם","in all place"],["עֵינֵי","the eyes of"],["יְהֹוָה","the LORD"],["צֹפוֹת","watching"],["רָעִים","evil"],["וְטוֹבִים","and the good"],["׃",""]] },
   { num:"ד", words:[["מַרְפֵּא","wholesome"],["לָשׁוֹן","tongue"],["עֵץ","a tree"],["חַיִּים","life"],["וְסֶלֶף","and the crookedness of"],["בָּהּ","in it"],["שֶׁבֶר","a fracture"],["בְּרוּחַ","in the spirit"],["׃",""]] },
-  { num:"ה", words:[["אֱוִיל","fool"],["יִנְאַץ","he spurns"],["מוּסַר","the chastisement of"],["אָבִיו","his father"],["וְשֹׁמֵר","and he who regards"],["תּוֹכַחַת","rebuke"],["יַעְרִים","is prudent"],["׃",""]] },
+  { num:"ה", words:[["אֱוִיל","fool"],["יִנְאַץ","he spurns"],["מוּסַר","the discipline of"],["אָבִיו","his father"],["וְשֹׁמֵר","and he who regards"],["תּוֹכַחַת","rebuke"],["יַעְרִים","is prudent"],["׃",""]] },
   { num:"ו", words:[["בֵּית","the house of"],["צַדִּיק","righteous"],["חֹסֶן","wealth"],["רָב","much"],["וּבִתְבוּאַת","and with the income of"],["רָשָׁע","wicked"],["נֶעְכָּרֶת","is trouble"],["׃",""]] },
   { num:"ז", words:[["שִׂפְתֵי","the lips of"],["חֲכָמִים","wise"],["יְזָרוּ","disperse"],["דָעַת","knowledge"],["וְלֵב","and heart"],["כְּסִילִים","fools"],["לֹא־כֵן","does not so"],["׃",""]] },
   { num:"ח", words:[["זֶבַח","sacrifice"],["רְשָׁעִים","wicked men"],["תּוֹעֲבַת","an abomination before"],["יְהֹוָה","the LORD"],["וּתְפִלַּת","and is the prayer of"],["יְשָׁרִים","the upright"],["רְצוֹנוֹ","His delight"],["׃",""]] },
@@ -496,7 +496,7 @@ var pro_ch15Verses = [
   { num:"ל", words:[["מְאוֹר־עֵינַיִם","the light of the eyes"],["יְשַׂמַּח־לֵב","rejoices the heart"],["שְׁמוּעָה","a report"],["טוֹבָה","good"],["תְּדַשֶּׁן־עָצֶם","it fattens the bones"],["׃",""]] },
   { num:"לא", words:[["אֹזֶן","an ear"],["שֹׁמַעַת","that hears"],["תּוֹכַחַת","rebuke"],["חַיִּים","life"],["בְּקֶרֶב","among"],["חֲכָמִים","wise"],["תָּלִין","it lodges"],["׃",""]] },
   { num:"לב", words:[["פּוֹרֵעַ","one who ignores"],["מוּסָר","discipline"],["מוֹאֵס","is rejecting"],["נַפְשׁוֹ","his soul"],["וְשׁוֹמֵעַ","and one who heeds"],["תּוֹכַחַת","rebuke"],["קוֹנֶה","gets"],["לֵּב","understanding"],["׃",""]] },
-  { num:"לג", words:[["יִרְאַת","the fear of"],["יְהֹוָה","the LORD"],["מוּסַר","the chastisement of"],["חׇכְמָה","wisdom"],["וְלִפְנֵי","and before"],["כָבוֹד","glory"],["עֲנָוָה","humility"],["׃",""]] },
+  { num:"לג", words:[["יִרְאַת","the fear of"],["יְהֹוָה","the LORD"],["מוּסַר","the discipline of"],["חׇכְמָה","wisdom"],["וְלִפְנֵי","and before"],["כָבוֹד","glory"],["עֲנָוָה","humility"],["׃",""]] },
 ];
 renderVerseSet(pro_ch15Verses, 'pro-ch15-verses');
 
@@ -744,7 +744,7 @@ var pro_ch23Verses = [
   { num:"ט", words:[["בְּאׇזְנֵי","in the ears of"],["כְסִיל","of a fool"],["אַל־תְּדַבֵּר","speak not"],["כִּי־יָבוּז","for he will despise"],["לְשֵׂכֶל","the insight of"],["מִלֶּיךָ","your words"],["׃",""]] },
   { num:"י", words:[["אַל־תַּסֵּג","remove not"],["גְּבוּל","border of"],["עוֹלָם","eternal"],["וּבִשְׂדֵי","and in the fields of"],["יְתוֹמִים","fatherless ones"],["אַל־תָּבֹא","enter not"],["׃",""]] },
   { num:"יא", words:[["כִּי־גֹאֲלָם","because their redeemer"],["חָזָק","strong"],["הוּא־יָרִיב","it is who pleads the cause of"],["אֶת־רִיבָם","their disputation"],["אִתָּךְ","with you"],["׃",""]] },
-  { num:"יב", words:[["הָבִיאָה","bring"],["לַמּוּסָר","for the correction"],["לִבֶּךָ","your heart"],["וְאׇזְנֶךָ","and your ear"],["לְאִמְרֵי־דָעַת","to the words of knowledge"],["׃",""]] },
+  { num:"יב", words:[["הָבִיאָה","bring"],["לַמּוּסָר","to the discipline"],["לִבֶּךָ","your heart"],["וְאׇזְנֶךָ","and your ear"],["לְאִמְרֵי־דָעַת","to the words of knowledge"],["׃",""]] },
   { num:"יג", words:[["אַל־תִּמְנַע","withhold not"],["מִנַּעַר","from young man"],["מוּסָר","discipline"],["כִּי־תַכֶּנּוּ","if you will strike him"],["בַשֵּׁבֶט","with the rod"],["לֹא","not"],["יָמוּת","he shall die"],["׃",""]] },
   { num:"יד", words:[["אַתָּה","you"],["בַּשֵּׁבֶט","with the rod"],["תַּכֶּנּוּ","you will strike him"],["וְנַפְשׁוֹ","and his soul"],["מִשְּׁאוֹל","from Sheol"],["תַּצִּיל","you shall deliver"],["׃",""]] },
   { num:"טו", words:[["בְּנִי","my son"],["אִם־חָכַם","if it is wise"],["לִבֶּךָ","your heart"],["יִשְׂמַח","rejoices"],["לִבִּי","my heart"],["גַם־אָנִי","also I"],["׃",""]] },
