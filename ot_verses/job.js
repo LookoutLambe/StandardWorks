@@ -509,7 +509,7 @@ var job_ch19Verses = [
   { num:"ו", words:[["דְּעוּ־אֵפוֹ","know-then"],["כִּי־אֱלוֹהַּ","because-God"],["עִוְּתָנִי","he has wronged-me"],["וּמְצוּדוֹ","and-his-net"],["עָלַי","upon-me"],["הִקִּיף","he has closed"],["׃",""]] },
   { num:"ז", words:[["הֵן","behold"],["אֶצְעַק","I cry out"],["חָמָס","violence"],["וְלֹא","and-not"],["אֵעָנֶה","I am answered"],["אֲשַׁוַּע","I cry for help"],["וְאֵין","and-there-is-no"],["מִשְׁפָּט","judgment"],["׃",""]] },
   { num:"ח", words:[["אׇרְחִי","my path"],["גָדַר","he has walled up"],["וְלֹא","and-not"],["אֶעֱבוֹר","I will pass"],["וְעַל","and-upon"],["נְתִיבוֹתַי","my-paths"],["חֹשֶׁךְ","darkness"],["יָשִׂים","he-appointed"],["׃",""]] },
-  { num:"ט", words:[["כְּבוֹדִי","my-honor"],["מֵעָלַי","from-me"],["הִפְשִׁיט","he has stripped off"],["וַיָּסַר","for-he-put-down"],["עֲטֶרֶת","crown-of"],["רֹאשִׁי","my-head"],["׃",""]] },
+  { num:"ט", words:[["כְּבוֹדִי","my-honor"],["מֵעָלַי","from-me"],["הִפְשִׁיט","he has stripped off"],["וַיָּסַר","and-he-has-taken"],["עֲטֶרֶת","crown-of"],["רֹאשִׁי","my-head"],["׃",""]] },
   { num:"י", words:[["יִתְּצֵנִי","he has torn down-me"],["סָבִיב","all-around"],["וָאֵלַךְ","and-I have gone"],["וַיַּסַּע","and-he led out"],["כָּעֵץ","like-the-tree"],["תִּקְוָתִי","my-hope"],["׃",""]] },
   { num:"יא", words:[["וַיַּחַר","and-he has kindled"],["עָלַי","upon-me"],["אַפּוֹ","His-wrath"],["וַיַּחְשְׁבֵנִי","and-supposed-me"],["לוֹ","to-him"],["כְצָרָיו","like-his-foes"],["׃",""]] },
   { num:"יב", words:[["יַחַד","together"],["יָבֹאוּ","come"],["גְדוּדָיו","his-troops"],["וַיָּסֹלּוּ","and-they have piled up"],["עָלַי","upon-me"],["דַּרְכָּם","their-journey"],["וַיַּחֲנוּ","and-they-encamped"],["סָבִיב","all-around"],["לְאׇהֳלִי","the tent of-my"],["׃",""]] },
