@@ -688,7 +688,7 @@ var _2sa_ch22Verses = [
   { num:"כא", words:[["יִגְמְלֵנִי","will he reward-me"],["יְהֹוָה","the-LORD"],["כְּצִדְקָתִי","according-to-my-righteousness"],["כְּבֹר","according to-the cleanness of"],["יָדַי","my-hands"],["יָשִׁיב","he-shall-return"],["לִי","to-me"],["׃",""]] },
   { num:"כב", words:[["כִּי","because"],["שָׁמַרְתִּי","I-have-preserved"],["דַּרְכֵי","the-ways-of"],["יְהֹוָה","the-LORD"],["וְלֹא","and-not"],["רָשַׁעְתִּי","I have acted wickedly"],["מֵאֱלֹהָי","from-my-God"],["׃",""]] },
   { num:"כג", words:[["כִּי","because"],["כׇל־מִשְׁפָּטָו","all-seat"],["לְנֶגְדִּי","to-before-me"],["וְחֻקֹּתָיו","and-His-statutes"],["לֹא־אָסוּר","not-bound"],["מִמֶּנָּה","from it"],["׃",""]] },
-  { num:"כד", words:[["וָאֶהְיֶה","and-I have been"],["תָמִים","perfect"],["לוֹ","to-him"],["וָאֶשְׁתַּמְּרָה","and-I kept myself"],["מֵעֲוֺנִי","from-affliction"],["׃",""]] },
+  { num:"כד", words:[["וָאֶהְיֶה","and-I have been"],["תָמִים","perfect"],["לוֹ","to-him"],["וָאֶשְׁתַּמְּרָה","and-I kept myself"],["מֵעֲוֺנִי","from-my-iniquity"],["׃",""]] },
   { num:"כה", words:[["וַיָּשֶׁב","and-returned"],["יְהֹוָה","the-LORD"],["לִי","to-me"],["כְּצִדְקָתִי","according-to-my-righteousness"],["כְּבֹרִי","according-to-my-cleanness"],["לְנֶגֶד","before"],["עֵינָיו","their-eyes"],["׃",""]] },
   { num:"כו", words:[["עִם־חָסִיד","with-goodly"],["תִּתְחַסָּד","you show yourself faithful"],["עִם־גִּבּוֹר","with-mighty"],["תָּמִים","perfect"],["תִּתַּמָּם","you show yourself blameless"],["׃",""]] },
   { num:"כז", words:[["עִם־נָבָר","with-one who purifies himself"],["תִּתָּבָר","you show yourself pure"],["וְעִם־עִקֵּשׁ","and-with-perverse"],["תִּתַּפָּל","you show yourself twisted"],["׃",""]] },

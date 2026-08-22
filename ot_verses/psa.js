@@ -735,7 +735,7 @@ var psa_ch38Verses = [
   { num:"טז", words:[["כִּי־לְךָ","because-for-you"],["יְהֹוָה","the-LORD"],["הוֹחָלְתִּי","I have waited"],["אַתָּה","you"],["תַעֲנֶה","bear"],["אֲדֹנָי","Lord"],["אֱלֹהָי","my-God"],["׃",""]] },
   { num:"יז", words:[["כִּי־אָמַרְתִּי","because-I-said"],["פֶּן־יִשְׂמְחוּ־לִי","lest-be-brought-to-rejoice-to-me"],["בְּמוֹט","when-slips"],["רַגְלִי","my-feet"],["עָלַי","upon-me"],["הִגְדִּילוּ","they-magnified"],["׃",""]] },
   { num:"יח", words:[["כִּי־אֲנִי","for-I"],["לְצֶלַע","for-stumbling"],["נָכוֹן","established"],["וּמַכְאוֹבִי","and-my-pain"],["נֶגְדִּי","before-Me"],["תָמִיד","continually"],["׃",""]] },
-  { num:"יט", words:[["כִּי־עֲוֺנִי","because-affliction"],["אַגִּיד","I-tell"],["אֶדְאַג","I am anxious"],["מֵחַטָּאתִי","from-my-sin"],["׃",""]] },
+  { num:"יט", words:[["כִּי־עֲוֺנִי","for-my-iniquity"],["אַגִּיד","I-tell"],["אֶדְאַג","I am anxious"],["מֵחַטָּאתִי","from-my-sin"],["׃",""]] },
   { num:"כ", words:[["וְאֹיְבַי","and-my-foes"],["חַיִּים","life"],["עָצֵמוּ","they are numerous"],["וְרַבּוּ","and-were-many"],["שֹׂנְאַי","those who hate-me"],["שָׁקֶר","falsehood"],["׃",""]] },
   { num:"כא", words:[["וּמְשַׁלְּמֵי","and-those who repay"],["רָעָה","evil"],["תַּחַת","under"],["טוֹבָה","good"],["יִשְׂטְנוּנִי","they accuse-me"],["תַּחַת","under"],["[רׇדְפִי־]טוֹב","you-who-follow-after-good"],["׃",""]] },
   { num:"כב", words:[["אַל־תַּעַזְבֵנִי","do-not-you forsake-me"],["יְהֹוָה","the-LORD"],["אֱלֹהַי","my-God"],["אַל־תִּרְחַק","do-not-you be far"],["מִמֶּנִּי","from-me"],["׃",""]] },
