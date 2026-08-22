@@ -1284,7 +1284,7 @@ var psa_ch68Verses = [
   { num:"ד", words:[["וְצַדִּיקִים","and-righteous"],["יִשְׂמְחוּ","be-brought-to-rejoice"],["יַעַלְצוּ","they exult"],["לִפְנֵי","before"],["אֱלֹהִים","God"],["וְיָשִׂישׂוּ","and-rejoice"],["בְשִׂמְחָה","in-joy"],["׃",""]] },
   { num:"ה", words:[["שִׁירוּ","sing"],["לֵאלֹהִים","God"],["זַמְּרוּ","sing"],["שְׁמוֹ","his-name"],["סֹלּוּ","lift-up"],["לָרֹכֵב","to the-rider"],["בָּעֲרָבוֹת","in-the-plains-of"],["בְּיָהּ","the-LORD"],["שְׁמוֹ","his-name"],["וְעִלְזוּ","and-exult"],["לְפָנָיו","before-Him"],["׃",""]] },
   { num:"ו", words:[["אֲבִי","the-father-of"],["יְתוֹמִים","fatherless ones"],["וְדַיַּן","and-a judge of"],["אַלְמָנוֹת","a-great-many-widows"],["אֱלֹהִים","God"],["בִּמְעוֹן","in-dwelling-of"],["קׇדְשׁוֹ","His-holy-name"],["׃",""]] },
-  { num:"ז", words:[["אֱלֹהִים","God"],["מוֹשִׁיב","is causing to dwell"],["יְחִידִים","solitary people"],["בַּיְתָה","house-the"],["מוֹצִיא","he is bringing out"],["אֲסִירִים","the-captive"],["בַּכּוֹשָׁרוֹת","in-the-prosperity"],["אַךְ","but"],["סוֹרְרִים","rebellious people"],["שָׁכְנוּ","they dwell"],["צְחִיחָה","barren"],["׃",""]] },
+  { num:"ז", words:[["אֱלֹהִים","God"],["מוֹשִׁיב","is causing to dwell"],["יְחִידִים","solitary people"],["בַּיְתָה","the-house"],["מוֹצִיא","he is bringing out"],["אֲסִירִים","the-captive"],["בַּכּוֹשָׁרוֹת","in-the-prosperity"],["אַךְ","but"],["סוֹרְרִים","rebellious people"],["שָׁכְנוּ","they dwell"],["צְחִיחָה","barren"],["׃",""]] },
   { num:"ח", words:[["אֱלֹהִים","God"],["בְּצֵאתְךָ","when-you-go out"],["לִפְנֵי","before"],["עַמֶּךָ","your-people"],["בְּצַעְדְּךָ","when-you-march"],["בִישִׁימוֹן","in-a desolate place"],["סֶלָה","Selah"],["׃",""]] },
   { num:"ט", words:[["אֶרֶץ","the-land-of"],["רָעָשָׁה","it shook"],["אַף־שָׁמַיִם","yea-the-heavens"],["נָטְפוּ","they dropped"],["מִפְּנֵי","because-of"],["אֱלֹהִים","God"],["זֶה","this"],["סִינַי","Sinai"],["מִפְּנֵי","because-of"],["אֱלֹהִים","God"],["אֱלֹהֵי","the-God-of"],["יִשְׂרָאֵל","Israel"],["׃",""]] },
   { num:"י", words:[["גֶּשֶׁם","rain"],["נְדָבוֹת","voluntariness"],["תָּנִיף","you spread abroad"],["אֱלֹהִים","God"],["נַחֲלָתְךָ","your-inheritance"],["וְנִלְאָה","weary"],["אַתָּה","you"],["כוֹנַנְתָּהּ","you established-it"],["׃",""]] },
@@ -2496,7 +2496,7 @@ var psa_ch118Verses = [
 renderVerseSet(psa_ch118Verses, 'psa-ch118-verses');
 
 var psa_ch119Verses = [
-  { num:"א", words:[["אַשְׁרֵי","blessed-are"],["תְמִימֵי־דָרֶךְ","are people blameless of-a path"],["הַהֹלְכִים","the-ones-walking"],["בְּתוֹרַת","the-tradition-of"],["יְהֹוָה","the-LORD"],["׃",""]] },
+  { num:"א", words:[["אַשְׁרֵי","blessed-are"],["תְמִימֵי־דָרֶךְ","are people blameless of-a path"],["הַהֹלְכִים","the-ones-walking"],["בְּתוֹרַת","the-law-of"],["יְהֹוָה","the-LORD"],["׃",""]] },
   { num:"ב", words:[["אַשְׁרֵי","blessed-are"],["נֹצְרֵי","are those who observe"],["עֵדֹתָיו","His-testimonies"],["בְּכׇל־לֵב","in-all-heart"],["יִדְרְשׁוּהוּ","they seek-him"],["׃",""]] },
   { num:"ג", words:[["אַף","moreover"],["לֹא־פָעֲלוּ","not-they do"],["עַוְלָה","injustice"],["בִּדְרָכָיו","in-His-ways"],["הָלָכוּ","they walk"],["׃",""]] },
   { num:"ד", words:[["אַתָּה","you"],["צִוִּיתָה","you have commanded"],["פִקֻּדֶיךָ","your-precepts"],["לִשְׁמֹר","to-keep"],["מְאֹד","exceedingly"],["׃",""]] },
