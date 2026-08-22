@@ -1,7 +1,7 @@
 // ot_verses/1ch.js — 1 Chronicles verse data
 (function() {
 var _1ch_ch1Verses = [
-  { num:"א", words:[["אָדָם","man"],["שֵׁת","Seth"],["אֱנוֹשׁ","Enos"],["׃",""]] },
+  { num:"א", words:[["אָדָם","man"],["שֵׁת","Seth"],["אֱנוֹשׁ","Enosh"],["׃",""]] },
   { num:"ב", words:[["קֵינָן","Kenan"],["מַהֲלַלְאֵל","Mahalalel"],["יָרֶד","Jared"],["׃",""]] },
   { num:"ג", words:[["חֲנוֹךְ","Enoch"],["מְתוּשֶׁלַח","Methuselah"],["לָמֶךְ","Lamech"],["׃",""]] },
   { num:"ד", words:[["נֹחַ","Noah"],["שֵׁם","the-name-of"],["חָם","Ham"],["וָיָפֶת","and-Japheth"],["׃",""]] },
