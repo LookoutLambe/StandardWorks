@@ -105,7 +105,7 @@ var lam_ch3Verses = [
   { num:"נ", words:[["עַד־יַשְׁקִיף","until he will look down"],["וְיֵרֶא","and may he see"],["יְהֹוָה","the LORD"],["מִשָּׁמָיִם","from heaven"],["׃",""]] },
   { num:"נא", words:[["עֵינִי","my eye"],["עוֹלְלָה","it has dealt severely"],["לְנַפְשִׁי","my soul"],["מִכֹּל","of all"],["בְּנוֹת","the daughters of"],["עִירִי","my city"],["׃",""]] },
   { num:"נב", words:[["צוֹד","sorely"],["צָדוּנִי","they hunted me"],["כַּצִּפּוֹר","like the bird"],["אֹיְבַי","my enemies"],["חִנָּם","without cause"],["׃",""]] },
-  { num:"נג", words:[["צָמְתוּ","they destroyed"],["בַבּוֹר","in the pit"],["חַיָּי","my life"],["וַיַּדּוּ־אֶבֶן","and they threw down stone"],["בִּי","against me"],["׃",""]] },
+  { num:"נג", words:[["צָמְתוּ","they destroyed"],["בַבּוֹר","in the pit"],["חַיָּי","my life"],["וַיַּדּוּ־אֶבֶן","and they threw down stone"],["בִּי","upon me"],["׃",""]] },
   { num:"נד", words:[["צָפוּ־מַיִם","they floated water"],["עַל־רֹאשִׁי","upon my head"],["אָמַרְתִּי","I said"],["נִגְזָרְתִּי","I have been cut off"],["׃",""]] },
   { num:"נה", words:[["קָרָאתִי","called"],["שִׁמְךָ","your name"],["יְהֹוָה","the LORD"],["מִבּוֹר","out of the pit of"],["תַּחְתִּיּוֹת","the nethermost parts of"],["׃",""]] },
   { num:"נו", words:[["קוֹלִי","my voice"],["שָׁמָעְתָּ","you have heard"],["אַל־תַּעְלֵם","do not you hide"],["אׇזְנְךָ","your ear"],["לְרַוְחָתִי","to my relief"],["לְשַׁוְעָתִי","to my cry for help"],["׃",""]] },
