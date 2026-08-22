@@ -851,7 +851,7 @@ var psa_ch44Verses = [
   { num:"כב", words:[["הֲלֹא","is-it-not"],["אֱלֹהִים","God"],["יַחֲקׇר־זֹאת","it will be searched-this"],["כִּי־הוּא","for-He"],["יֹדֵעַ","He-knows"],["תַּעֲלֻמוֹת","the secrets of"],["לֵב","heart"],["׃",""]] },
   { num:"כג", words:[["כִּי־עָלֶיךָ","because-upon-you"],["הֹרַגְנוּ","we have been killed"],["כׇל־הַיּוֹם","all-the-day"],["נֶחְשַׁבְנוּ","are we accounted"],["כְּצֹאן","like-sheep of"],["טִבְחָה","slaughter"],["׃",""]] },
   { num:"כד", words:[["עוּרָה","awake"],["לָמָּה","why"],["תִישַׁן","do you sleep"],["אֲדֹנָי","Lord"],["הָקִיצָה","awake"],["אַל־תִּזְנַח","do-not-you reject us"],["לָנֶצַח","forever"],["׃",""]] },
-  { num:"כה", words:[["לָמָּה־פָנֶיךָ","why-your-face"],["תַסְתִּיר","do you hide"],["תִּשְׁכַּח","you should forget"],["עׇנְיֵנוּ","Unni-us"],["וְלַחֲצֵנוּ","and-our-oppression"],["׃",""]] },
+  { num:"כה", words:[["לָמָּה־פָנֶיךָ","why-your-face"],["תַסְתִּיר","do you hide"],["תִּשְׁכַּח","you should forget"],["עׇנְיֵנוּ","our-affliction"],["וְלַחֲצֵנוּ","and-our-oppression"],["׃",""]] },
   { num:"כו", words:[["כִּי","because"],["שָׁחָה","it has sunk down"],["לֶעָפָר","to-the-dust"],["נַפְשֵׁנוּ","our-lives"],["דָּבְקָה","she clung"],["לָאָרֶץ","of-earth"],["בִּטְנֵנוּ","our-belly"],["׃",""]] },
   { num:"כז", words:[["קוּמָה","arise"],["עֶזְרָתָה","a help"],["לָּנוּ","to us"],["וּפְדֵנוּ","and-redeem-us"],["לְמַעַן","in-order-that"],["חַסְדֶּךָ","your-lovingkindness"],["׃",""]] },
 ];
