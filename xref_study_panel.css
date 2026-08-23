@@ -136,3 +136,63 @@ body.dark-mode .study-btn-row button {
 /* Interlinear-only policy: referenced verses always render as Hebrew interlinear,
    never as plain English text (site-wide kill switch for legacy render paths). */
 .xref-ref-english { display: none !important; }
+
+/* ── Panel chrome matches the rest of the site ──────────────────────────────
+   The header and tab row are chrome, like the top bar, the footer dock and the
+   nav drawer's search bar — navy with gold. They were reading as plain beige
+   because they inherited the parchment --bg meant for the reading surface.
+   The pane below stays parchment: the cross-references render as Hebrew
+   interlinear, which is designed against that background.                    */
+
+#xref-panel .xref-panel-header {
+  background: #1e2233;
+  border-bottom: 1px solid rgba(219, 185, 88, 0.35);
+}
+#xref-panel .xref-panel-header h3 { color: #dbb958; }
+#xref-panel .xref-panel-close { color: #dbb958; opacity: 0.85; }
+#xref-panel .xref-panel-close:hover {
+  background: rgba(219, 185, 88, 0.18);
+  color: #f5ebb0;
+  opacity: 1;
+}
+
+.xref-study-tabs {
+  background: #1e2233;
+  border-bottom: 1px solid rgba(219, 185, 88, 0.28);
+  gap: 8px;                 /* adjacent touch targets need 8px between them */
+  padding: 8px 10px;
+}
+.xref-study-tab {
+  min-height: 44px;         /* iOS 44pt minimum */
+  background: transparent;
+  border: 1px solid rgba(219, 185, 88, 0.5);
+  color: #dbb958;
+}
+.xref-study-tab:hover { background: rgba(219, 185, 88, 0.14); }
+.xref-study-tab.active {
+  background: #dbb958;
+  border-color: #dbb958;
+  color: #1e2233;
+  font-weight: 650;
+}
+#xref-panel { border-left: 2px solid #dbb958; }
+
+/* Dark mode keeps the same relationship, one step deeper */
+body.dark-mode #xref-panel .xref-panel-header,
+body.dark-mode .xref-study-tabs {
+  background: #0a0a0a;
+  border-bottom-color: rgba(219, 185, 88, 0.28);
+}
+body.dark-mode .xref-study-tab {
+  background: transparent;
+  border-color: rgba(219, 185, 88, 0.45);
+  color: #dbb958;
+}
+body.dark-mode .xref-study-tab.active {
+  background: #dbb958;
+  color: #0a0a0a;
+}
+
+@media (pointer: coarse) {
+  .xref-study-tab { min-height: 48px; }   /* Android 48dp */
+}
