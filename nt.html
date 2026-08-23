@@ -123,7 +123,7 @@ body.dual-mode .verse-english {
   flex: 1 1 0;
   min-width: 0;
   font-family: 'David Libre', 'Georgia', serif;
-  font-size: 0.92em;
+  font-size: 0.82em;
   line-height: 1.65;
   color: var(--ink);
   direction: ltr;
@@ -137,7 +137,7 @@ body.dual-mode .verse-num { order: -1; }
 body.dual-mode .gl { display: none; }
 body.dual-mode .arr { display: none; }
 body.dual-mode .word-unit { padding-bottom: 3px; }
-body.dual-mode .hw { font-size: 16px; }
+body.dual-mode .hw { font-size: 1.3em; }
 body.dual-mode .heading-flow .gl,
 body.dual-mode .heading-flow .arr { display: inline; }
 body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
@@ -148,11 +148,11 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
     min-width: 0;
     border-right: 1px solid var(--rule-light);
     padding: 4px 6px 4px 0;
-    font-size: 0.68em;
+    font-size: 0.62em;
     line-height: 1.4;
   }
   body.dual-mode .word-flow { flex: 1 1 0; min-width: 0; }
-  body.dual-mode .hw { font-size: 18px; }
+  body.dual-mode .hw { font-size: 1.3em; }
   body.dual-mode .verse-num { min-width: 22px; font-size: 0.7em; }
 }
 .verse-english ::selection { background: transparent !important; color: inherit !important; }
@@ -2306,27 +2306,25 @@ try { _ntNotes = JSON.parse(localStorage.getItem('nt-notes') || '{}'); } catch(e
 function _saveAnnotations() { try { localStorage.setItem('nt-annotations', JSON.stringify(_ntAnnotations)); } catch(e) {} }
 function _saveNotes() { try { localStorage.setItem('nt-notes', JSON.stringify(_ntNotes)); } catch(e) {} }
 
-function setWordAnnotation(wid, tier, type, color) {
-  if (!_ntAnnotations[wid]) _ntAnnotations[wid] = {};
-  if (!_ntAnnotations[wid][tier]) _ntAnnotations[wid][tier] = {};
-  if (color) { _ntAnnotations[wid][tier][type] = color; }
-  else {
-    delete _ntAnnotations[wid][tier][type];
-    if (Object.keys(_ntAnnotations[wid][tier]).length === 0) delete _ntAnnotations[wid][tier];
-    if (Object.keys(_ntAnnotations[wid]).length === 0) delete _ntAnnotations[wid];
-  }
-  _saveAnnotations();
-  applyAnnotationToWord(wid);
+// Annotations are stored per word, not per tier, so a highlight made in any
+// view (interlinear, Hebrew-only, dual, transliteration) shows in all of them.
+function _annOf(wid) {
+  var a = _ntAnnotations[wid];
+  if (!a) return {};
+  if (a.hl || a.ul) return { hl: a.hl, ul: a.ul };
+  var out = {};                       // legacy per-tier record — fold it down
+  ['hw','tl','gl'].forEach(function(t) {
+    if (!a[t]) return;
+    if (a[t].hl && !out.hl) out.hl = a[t].hl;
+    if (a[t].ul && !out.ul) out.ul = a[t].ul;
+  });
+  return out;
 }
 
-function applyAnnotationToWord(wid) {
-  var el = document.querySelector('.word-unit[data-wid="' + wid + '"]');
-  if (!el) return;
-  var ann = _ntAnnotations[wid] || {};
+function _paintWordAnnotation(el, ta) {
   ['hw','tl','gl'].forEach(function(tier) {
     var tierEl = el.querySelector('.' + tier);
     if (!tierEl) return;
-    var ta = ann[tier] || {};
     if (ta.hl) { tierEl.classList.add('ann-hl'); tierEl.style.backgroundColor = ta.hl; }
     else { tierEl.classList.remove('ann-hl'); tierEl.style.backgroundColor = ''; }
     if (ta.ul) { tierEl.classList.add('ann-ul'); tierEl.style.textDecorationColor = ta.ul; }
@@ -2334,18 +2332,26 @@ function applyAnnotationToWord(wid) {
   });
 }
 
+function setWordAnnotation(wid, tier, type, color) {
+  var cur = _annOf(wid);
+  if (color) { cur[type] = color; } else { delete cur[type]; }
+  if (cur.hl || cur.ul) { _ntAnnotations[wid] = cur; } else { delete _ntAnnotations[wid]; }
+  _saveAnnotations();
+  applyAnnotationToWord(wid);
+}
+
+function applyAnnotationToWord(wid) {
+  var ta = _annOf(wid);
+  document.querySelectorAll('.word-unit[data-wid="' + wid + '"]').forEach(function(el) {
+    _paintWordAnnotation(el, ta);
+  });
+}
+
 function applyAllAnnotations() {
   document.querySelectorAll('.word-unit[data-wid]').forEach(function(el) {
     var wid = el.getAttribute('data-wid');
-    var ann = _ntAnnotations[wid];
-    if (!ann) return;
-    ['hw','tl','gl'].forEach(function(tier) {
-      var tierEl = el.querySelector('.' + tier);
-      if (!tierEl) return;
-      var ta = ann[tier] || {};
-      if (ta.hl) { tierEl.classList.add('ann-hl'); tierEl.style.backgroundColor = ta.hl; }
-      if (ta.ul) { tierEl.classList.add('ann-ul'); tierEl.style.textDecorationColor = ta.ul; }
-    });
+    if (!_ntAnnotations[wid]) return;
+    _paintWordAnnotation(el, _annOf(wid));
   });
 }
 
@@ -2521,9 +2527,7 @@ function _hideSelToolbar() {
 
 function _updateSelToolbarIndicators() {
   if (_selWordUnits.length === 0) return;
-  var wid = _selWordUnits[0].getAttribute('data-wid');
-  var ann = _ntAnnotations[wid] || {};
-  var ta = ann[_selTier] || {};
+  var ta = _annOf(_selWordUnits[0].getAttribute('data-wid'));
   document.querySelectorAll('#sel-toolbar .sel-color[data-ann="highlight"]').forEach(function(c) { c.classList.toggle('active', ta.hl === c.getAttribute('data-color')); });
   document.querySelectorAll('#sel-toolbar .sel-color[data-ann="underline"]').forEach(function(c) { c.classList.toggle('active', ta.ul === c.getAttribute('data-color')); });
 }

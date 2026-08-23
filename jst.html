@@ -3625,27 +3625,25 @@ try { _jstNotes = JSON.parse(localStorage.getItem('jst-notes') || '{}'); } catch
 function _saveAnnotations() { try { localStorage.setItem('jst-annotations', JSON.stringify(_jstAnnotations)); } catch(e) {} }
 function _saveNotes() { try { localStorage.setItem('jst-notes', JSON.stringify(_jstNotes)); } catch(e) {} }
 
-function setWordAnnotation(wid, tier, type, color) {
-  if (!_jstAnnotations[wid]) _jstAnnotations[wid] = {};
-  if (!_jstAnnotations[wid][tier]) _jstAnnotations[wid][tier] = {};
-  if (color) { _jstAnnotations[wid][tier][type] = color; }
-  else {
-    delete _jstAnnotations[wid][tier][type];
-    if (Object.keys(_jstAnnotations[wid][tier]).length === 0) delete _jstAnnotations[wid][tier];
-    if (Object.keys(_jstAnnotations[wid]).length === 0) delete _jstAnnotations[wid];
-  }
-  _saveAnnotations();
-  applyAnnotationToWord(wid);
+// Annotations are stored per word, not per tier, so a highlight made in any
+// view (interlinear, Hebrew-only, dual, transliteration) shows in all of them.
+function _annOf(wid) {
+  var a = _jstAnnotations[wid];
+  if (!a) return {};
+  if (a.hl || a.ul) return { hl: a.hl, ul: a.ul };
+  var out = {};                       // legacy per-tier record — fold it down
+  ['hw','tl','gl'].forEach(function(t) {
+    if (!a[t]) return;
+    if (a[t].hl && !out.hl) out.hl = a[t].hl;
+    if (a[t].ul && !out.ul) out.ul = a[t].ul;
+  });
+  return out;
 }
 
-function applyAnnotationToWord(wid) {
-  var el = document.querySelector('.word-unit[data-wid="' + wid + '"]');
-  if (!el) return;
-  var ann = _jstAnnotations[wid] || {};
+function _paintWordAnnotation(el, ta) {
   ['hw','tl','gl'].forEach(function(tier) {
     var tierEl = el.querySelector('.' + tier);
     if (!tierEl) return;
-    var ta = ann[tier] || {};
     if (ta.hl) { tierEl.classList.add('ann-hl'); tierEl.style.backgroundColor = ta.hl; }
     else { tierEl.classList.remove('ann-hl'); tierEl.style.backgroundColor = ''; }
     if (ta.ul) { tierEl.classList.add('ann-ul'); tierEl.style.textDecorationColor = ta.ul; }
@@ -3653,18 +3651,26 @@ function applyAnnotationToWord(wid) {
   });
 }
 
+function setWordAnnotation(wid, tier, type, color) {
+  var cur = _annOf(wid);
+  if (color) { cur[type] = color; } else { delete cur[type]; }
+  if (cur.hl || cur.ul) { _jstAnnotations[wid] = cur; } else { delete _jstAnnotations[wid]; }
+  _saveAnnotations();
+  applyAnnotationToWord(wid);
+}
+
+function applyAnnotationToWord(wid) {
+  var ta = _annOf(wid);
+  document.querySelectorAll('.word-unit[data-wid="' + wid + '"]').forEach(function(el) {
+    _paintWordAnnotation(el, ta);
+  });
+}
+
 function applyAllAnnotations() {
   document.querySelectorAll('.word-unit[data-wid]').forEach(function(el) {
     var wid = el.getAttribute('data-wid');
-    var ann = _jstAnnotations[wid];
-    if (!ann) return;
-    ['hw','tl','gl'].forEach(function(tier) {
-      var tierEl = el.querySelector('.' + tier);
-      if (!tierEl) return;
-      var ta = ann[tier] || {};
-      if (ta.hl) { tierEl.classList.add('ann-hl'); tierEl.style.backgroundColor = ta.hl; }
-      if (ta.ul) { tierEl.classList.add('ann-ul'); tierEl.style.textDecorationColor = ta.ul; }
-    });
+    if (!_jstAnnotations[wid]) return;
+    _paintWordAnnotation(el, _annOf(wid));
   });
 }
 
@@ -3841,9 +3847,7 @@ function _hideSelToolbar() {
 
 function _updateSelToolbarIndicators() {
   if (_selWordUnits.length === 0) return;
-  var wid = _selWordUnits[0].getAttribute('data-wid');
-  var ann = _jstAnnotations[wid] || {};
-  var ta = ann[_selTier] || {};
+  var ta = _annOf(_selWordUnits[0].getAttribute('data-wid'));
   document.querySelectorAll('#sel-toolbar .sel-color[data-ann="highlight"]').forEach(function(c) { c.classList.toggle('active', ta.hl === c.getAttribute('data-color')); });
   document.querySelectorAll('#sel-toolbar .sel-color[data-ann="underline"]').forEach(function(c) { c.classList.toggle('active', ta.ul === c.getAttribute('data-color')); });
 }
