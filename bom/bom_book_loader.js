@@ -107,4 +107,17 @@
   };
 
   global.bomBookScriptForChapId = bookScriptFor;
+
+  /* Search has to see the whole volume, not just the book being read, so this
+     pulls in every book script once. ~5MB, fetched only when a search runs. */
+  var _allLoaded = false;
+  global.loadAllBomBooks = function (cb) {
+    if (_allLoaded) { if (cb) cb(); return; }
+    _allLoaded = true;
+    var srcs = ['verses/book_colophons.js?v=1'];
+    for (var i = 0; i < BOOK_RULES.length; i++) {
+      if (srcs.indexOf(BOOK_RULES[i].src) < 0) srcs.push(BOOK_RULES[i].src);
+    }
+    loadChain(srcs, function () { if (cb) cb(); });
+  };
 })(window);

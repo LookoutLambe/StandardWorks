@@ -3242,7 +3242,9 @@ function doSearch(query) {
   for (var i = 0; i < searchIndex.length && matches.length < 50; i++) {
     var si = searchIndex[i];
     var hebStripped = _stripNikkud(si.hebrew);
-    if (hebStripped.indexOf(qStripped) >= 0 || si.english.toLowerCase().indexOf(q) >= 0 || si.hebrew.indexOf(q) >= 0) matches.push(si);
+    // Hebrew without nikkud, and English from the gloss or the translation
+    if (window.SWSearch ? window.SWSearch.matches(si, query.trim())
+        : (hebStripped.indexOf(qStripped) >= 0 || si.english.toLowerCase().indexOf(q) >= 0 || si.hebrew.indexOf(q) >= 0)) matches.push(si);
   }
   if (matches.length === 0) {
     results.innerHTML = '<div style="padding:12px;color:#888;font-family:David Libre,serif;">No results found</div>';
@@ -3250,10 +3252,18 @@ function doSearch(query) {
   }
   var html = '';
   matches.forEach(function(m) {
-    var displayText = m.hebrew.length > 60 ? m.hebrew.substring(0, 60) + '\u2026' : m.hebrew;
+    // show the side the query was asked in: Hebrew for Hebrew, translation for English
+    var displayText, _rtl = true;
+    if (window.SWSearch) {
+      displayText = window.SWSearch.snippet(m, query.trim(), 78);
+      _rtl = window.SWSearch.hasHebrew(displayText);
+    } else {
+      displayText = m.hebrew.length > 60 ? m.hebrew.substring(0, 60) + '\u2026' : m.hebrew;
+    }
+    displayText = String(displayText).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
     html += '<div class="search-result" onclick="closeSearch();navTo(\'' + m.chapId + '\')">';
     html += '<div class="search-result-ref">' + m.ref + '</div>';
-    html += '<div class="search-result-text">' + displayText + '</div></div>';
+    html += '<div class="search-result-text" dir="' + (_rtl ? 'rtl' : 'ltr') + '" style="text-align:' + (_rtl ? 'right' : 'left') + ';">' + displayText + '</div></div>';
   });
   html += '<div style="padding:12px 16px;border-top:2px solid var(--rule);direction:ltr;font-family:David Libre,serif;font-size:0.85em;color:var(--ink-light);">';
   html += '<div style="font-weight:600;margin-bottom:6px;">Search other volumes:</div>';
@@ -3375,7 +3385,8 @@ window.addEventListener('scroll', function() {
 </script>
 <script src="notes_engine.js"></script>
 <script src="site_chrome.js?v=23" data-sw-volume="ot"></script>
-<script src="nav_engine.js?v=26"></script>
+<script src="verse_search.js?v=3"></script>
+<script src="nav_engine.js?v=28"></script>
 <script src="xref_study_panel.js"></script>
 <script>
 NavEngine.init({

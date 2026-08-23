@@ -388,7 +388,8 @@
 
     _searchInput = document.createElement('input');
     _searchInput.type = 'text';
-    _searchInput.placeholder = 'Jump to verse… (e.g. Mosiah 5:12) — / or Ctrl+K';
+    _searchInput.id = 'nav-search-input';
+    _searchInput.placeholder = 'Search a word, or jump to a verse… — / or Ctrl+K';
     _searchInput.oninput = onSearchInput;
     _searchInput.onkeydown = onSearchKeydown;
     var closeBtn = document.createElement('button');
@@ -1140,7 +1141,9 @@
     _searchResults.innerHTML = '';
     _searchIdx = -1;
     if (results.length === 0) {
-      _searchResults.classList.remove('open');
+      appendVerseHits(q);                       // words can still match the text
+      if (!_searchResults.children.length) { _searchResults.classList.remove('open'); return; }
+      _searchResults.classList.add('open');
       return;
     }
     results.forEach(function(r, idx) {
@@ -1152,7 +1155,48 @@
       div.onclick = function() { executeSearchResult(r); };
       _searchResults.appendChild(div);
     });
+    appendVerseHits(q);
     _searchResults.classList.add('open');
+  }
+
+  /** Word search over the verse text, beneath the book/chapter matches.
+   *  Hebrew matches with or without nikkud; English matches the gloss and the
+   *  translation column. Only a reader page has verse data loaded. */
+  function appendVerseHits(q) {
+    if (!window.SWSearch || !q || q.length < 2) return;
+    var hits = [];
+    try { hits = window.SWSearch.find(q, 12) || []; } catch (e) { return; }
+    if (!hits.length) return;
+    var head = document.createElement('div');
+    head.className = 'nav-search-section';
+    head.textContent = 'In the text';
+    head.style.cssText = 'padding:6px 14px;font-size:0.72em;letter-spacing:0.08em;' +
+      'text-transform:uppercase;opacity:0.6;border-top:1px solid rgba(200,168,78,0.25);margin-top:4px;';
+    _searchResults.appendChild(head);
+    hits.forEach(function (hit) {
+      var div = document.createElement('div');
+      div.className = 'nav-search-result';
+      var snip = '';
+      try { snip = window.SWSearch.snippet(hit, q, 76); } catch (e) {}
+      // the snippet is Hebrew or English depending on the query — set the
+      // direction to match, or English reads back to front in an RTL drawer
+      var rtl = window.SWSearch.hasHebrew(snip);
+      div.innerHTML = '<span style="display:block;"><span class="sr-name" style="display:block;direction:ltr;text-align:left;">' +
+        escapeHtml(hit.ref) + '</span>' +
+        '<span class="sr-vol" style="display:block;opacity:0.72;font-size:0.85em;line-height:1.45;' +
+        'direction:' + (rtl ? 'rtl' : 'ltr') + ';text-align:' + (rtl ? 'right' : 'left') + ';">' +
+        escapeHtml(snip) + '</span></span>';
+      div.onclick = function () {
+        closeDrawer();
+        try { window.SWSearch.goTo(hit); } catch (e) {}
+      };
+      _searchResults.appendChild(div);
+    });
+  }
+
+  function escapeHtml(s) {
+    return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 
   function onSearchKeydown(e) {

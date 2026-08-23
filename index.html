@@ -893,7 +893,7 @@ body, button, input, select, textarea,
 
 <script src="site_chrome.js?v=24"></script>
 <script src="notes_engine.js"></script>
-<script src="nav_engine.js?v=26"></script>
+<script src="nav_engine.js?v=28"></script>
 <script>
 (function hubNavBoot() {
   try {
@@ -944,6 +944,31 @@ function _buildJumpUrl(entry, chNum) {
   return page + (hash ? ('#' + hash) : '');
 }
 
+// The home page has no verse data loaded, so a word search is handed to the
+// volume readers, which do have it. Hebrew works with or without nikkud there.
+var GS_VOLUMES = [
+  { key:'ot',  name:'Old Testament', page:'ot.html' },
+  { key:'nt',  name:'New Testament', page:'nt.html' },
+  { key:'bom', name:'Book of Mormon', page:'bom/bom.html' },
+  { key:'dc',  name:'D&C', page:'dc.html' },
+  { key:'pgp', name:'Pearl of Great Price', page:'pgp.html' },
+  { key:'jst', name:'JST', page:'jst.html' }
+];
+function _gsTextSearchRow(q, filterVol) {
+  if (!q || q.length < 2) return '';
+  var vols = GS_VOLUMES.filter(function(v) { return !filterVol || filterVol === 'all' || v.key === filterVol; });
+  if (!vols.length) return '';
+  var html = '<div class="gs-hint" style="border-top:1px solid var(--rule-light);padding-top:8px;">' +
+             'Find \u201c' + _escapeHtml(q) + '\u201d in the text of:</div><div style="padding:4px 0 8px;">';
+  vols.forEach(function(v) {
+    html += '<a href="' + v.page + '?q=' + encodeURIComponent(q) + '" ' +
+            'style="display:inline-block;margin:3px 4px;padding:5px 11px;border:1px solid var(--accent);' +
+            'border-radius:4px;color:var(--accent);text-decoration:none;font-size:0.88em;">' +
+            _escapeHtml(v.name) + '</a>';
+  });
+  return html + '</div>';
+}
+
 function renderGsResults(q, filterVol) {
   if (!window.NavEngine || !window.NavEngine.searchBooks) {
     gsResults.innerHTML = '<div class="gs-hint">Search is loading…</div>';
@@ -954,7 +979,10 @@ function renderGsResults(q, filterVol) {
   if (filterVol && filterVol !== 'all') hits = hits.filter(function(h) { return h && h.entry && h.entry.vol === filterVol; });
 
   if (!hits.length) {
-    gsResults.innerHTML = '<div class="gs-hint">No matches. Try “Isaiah 53”, “Mosiah 5”, “D&C 121”.</div>';
+    var row = _gsTextSearchRow(q, filterVol);
+    gsResults.innerHTML = (row
+        ? '<div class="gs-hint">No book by that name — search the text instead:</div>' + row
+        : '<div class="gs-hint">No matches. Try “Isaiah 53”, “Mosiah 5”, “D&C 121”.</div>');
     gsResults.classList.add('open');
     return;
   }
@@ -970,7 +998,8 @@ function renderGsResults(q, filterVol) {
               '<span><strong>' + left + '</strong> <span style="opacity:0.7">· ' + right + '</span></span>' +
             '</a>';
   });
-  html += '<div class="gs-hint">Tip: type “Book Chapter” (example: “Mosiah 5”).</div>';
+  html += _gsTextSearchRow(q, filterVol);
+  html += '<div class="gs-hint">Tip: type “Book Chapter” (example: “Mosiah 5”), or any word in English or Hebrew.</div>';
   gsResults.innerHTML = html;
   gsResults.classList.add('open');
 }

@@ -3882,7 +3882,7 @@ body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
   <button id="btn-nikkud" onclick="toggleNikkud()" title="Show/hide vowel points">No Nikkud<br>עִיצּוּרִים</button>
 </div>
 
-<script src="bom_book_loader.js?v=7"></script>
+<script src="bom_book_loader.js?v=8"></script>
 <script src="bom_lazy_assets.js?v=1"></script>
 <script src="crossrefs.js?v=23"></script>
 <script src="roots_glossary.js?v=23"></script>
@@ -8173,6 +8173,13 @@ function doSearch(query) {
     results.innerHTML = '';
     return;
   }
+  // the reader loads one book at a time; search needs the whole volume
+  if (window.SWSearch && window.SWSearch.needsPreload()) {
+    results.innerHTML = '<div style="color:#888;padding:12px;font-family:David Libre,serif;">Loading the rest of the Book of Mormon…</div>';
+    results.classList.add('open');
+    window.SWSearch.preload(function () { doSearch(query); });
+    return;
+  }
   if (!searchIndex) buildSearchIndex();
   var q = query.toLowerCase();
   var qStripped = _stripNikkud(query);
@@ -8180,7 +8187,9 @@ function doSearch(query) {
   var MAX_RESULTS = 100;
   for (var i = 0; i < searchIndex.length; i++) {
     var item = searchIndex[i];
-    if (item.hebrew.includes(query) || _stripNikkud(item.hebrew).includes(qStripped) || item.english.toLowerCase().includes(q)) {
+    // Hebrew without nikkud, and English from the gloss or the translation
+    if (window.SWSearch ? window.SWSearch.matches(item, query.trim())
+        : (item.hebrew.includes(query) || _stripNikkud(item.hebrew).includes(qStripped) || item.english.toLowerCase().includes(q))) {
       matches.push(item);
     }
   }
@@ -9230,10 +9239,27 @@ try {
     document.getElementById('sizeSlider').value = saved;
   }
 } catch(e) {}
+
+// Auto-search from ?q= (handoff from the home page or another volume)
+(function () {
+  var q = new URLSearchParams(window.location.search).get('q');
+  if (!q) return;
+  setTimeout(function () {
+    try {
+      openSearch();
+      document.getElementById('search-input').value = q;
+      buildSearchIndex();
+      doSearch(q);
+      history.replaceState(null, '', window.location.pathname + window.location.hash);
+    } catch (e) {}
+  }, 800);
+})();
+
 </script>
 
 <script src="../site_chrome.js?v=28" data-sw-volume="bom"></script>
-<script src="../nav_engine.js?v=26"></script>
+<script src="../verse_search.js?v=3"></script>
+<script src="../nav_engine.js?v=28"></script>
 <script src="../xref_study_panel.js?v=6"></script>
 <script>
 NavEngine.init({
