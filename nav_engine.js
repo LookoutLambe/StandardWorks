@@ -1750,8 +1750,23 @@
         }
       } catch (e) {}
     }
-    center.textContent = text || '\u05E4\u05E8\u05E7\u05D9\u05DD';
-    center.title = text ? ('\u05E4\u05EA\u05D7 \u05E8\u05E9\u05D9\u05DE\u05EA \u05E4\u05E8\u05E7\u05D9\u05DD \u00B7 ' + text) : '\u05E4\u05EA\u05D7 \u05E8\u05E9\u05D9\u05DE\u05EA \u05E4\u05E8\u05E7\u05D9\u05DD';
+    var shown = text || '\u05E1\u05E4\u05E8\u05D9\u05DD';
+    var slot = center.querySelector('.nqd-now-label');
+    if (slot) slot.textContent = shown; else center.textContent = shown;
+    center.title = '\u05E4\u05EA\u05D7 \u05E8\u05E9\u05D9\u05DE\u05EA \u05E1\u05E4\u05E8\u05D9\u05DD \u00B7 ' + shown;
+    center.setAttribute('aria-label', shown + ' \u2014 open book list');
+  }
+
+  /* The footer's chapter control opens the book list for the volume in hand —
+     D&C from a section, the Book of Mormon from 1 Nephi, the NT from John —
+     so navigation is reachable at the bottom of the screen instead of only
+     from the hamburger in the top corner. */
+  function openBooksForCurrentVolume() {
+    var vol = (_config && _config.volume) || null;
+    if (!vol) { openSidebar(); return; }
+    openSidebar();
+    try { setViewMode('books'); } catch (e) {}
+    try { switchVolTab(vol); } catch (e2) {}
   }
 
   function openCurrentBookChapters() {
@@ -1873,11 +1888,15 @@
     centerBtn.id = 'nqd-chapter-now';
     centerBtn.setAttribute('dir', 'ltr');
     centerBtn.setAttribute('lang', 'en');
-    centerBtn.setAttribute('aria-label', 'Open chapter list');
-    centerBtn.textContent = '\u05E4\u05E8\u05E7\u05D9\u05DD';
+    centerBtn.setAttribute('aria-label', 'Open book list');
+    centerBtn.innerHTML = '<span class="nqd-now-icon" aria-hidden="true">' +
+      '<svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" ' +
+      'stroke-width="1.7" stroke-linecap="round">' +
+      '<path d="M2 4h12M2 8h12M2 12h12"/></svg></span>' +
+      '<span class="nqd-now-label"></span>';
     centerBtn.onclick = function(e) {
       e.stopPropagation();
-      openCurrentBookChapters();
+      openBooksForCurrentVolume();
     };
     rowNav.appendChild(centerBtn);
     rowNav.appendChild(createChapterNavButton('next', '\u05D4\u05D1\u05D0', 'Next'));
@@ -2068,6 +2087,7 @@
       ensureContinueReadingChip();
     },
     openCurrentBookChapters: openCurrentBookChapters,
+    openBooksForCurrentVolume: openBooksForCurrentVolume,
     openToVolume: function(volKey) {
       openSidebar();
       // Ensure we're in the "Books" view (not Library)

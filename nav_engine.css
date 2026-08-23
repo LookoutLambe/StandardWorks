@@ -521,8 +521,8 @@ body.dark-mode .continue-reading .cr-heb { color: #1e2233; }
   direction: rtl;
   justify-content: center;
   align-items: stretch;
-  gap: 4px;
-  padding: 3px 8px 3px;
+  gap: 8px;                 /* adjacent touch targets need 8px of separation */
+  padding: 5px 8px;
   border-bottom: 1px solid rgba(219, 185, 88, 0.18);
   cursor: default;
   -webkit-user-select: none;
@@ -530,15 +530,19 @@ body.dark-mode .continue-reading .cr-heb { color: #1e2233; }
 }
 
 #sw-reader-footer .nqd-chapter-now {
-  flex: 1.2 1 0;
+  flex: 1.4 1 0;
   min-width: 0;
-  max-width: 42%;
-  min-height: 32px;
+  max-width: 46%;
+  min-height: 44px;         /* iOS 44pt minimum for a primary control */
   margin: 0;
-  padding: 3px 8px;
-  border: 1px dashed rgba(219, 185, 88, 0.45);
-  border-radius: 6px;
-  background: rgba(219, 185, 88, 0.06);
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1px solid rgba(219, 185, 88, 0.75);
+  border-radius: 8px;
+  background: rgba(219, 185, 88, 0.16);
   color: #f5ebb0;
   cursor: pointer;
   font-family: inherit;
@@ -554,14 +558,35 @@ body.dark-mode .continue-reading .cr-heb { color: #1e2233; }
   -webkit-tap-highlight-color: transparent;
 }
 #sw-reader-footer .nqd-chapter-now:hover {
-  background: rgba(219, 185, 88, 0.14);
-  border-style: solid;
+  background: rgba(219, 185, 88, 0.26);
+}
+#sw-reader-footer .nqd-chapter-now:active {
+  background: rgba(219, 185, 88, 0.34);
+  transform: scale(0.985);
+}
+#sw-reader-footer .nqd-chapter-now .nqd-now-icon {
+  display: inline-flex;
+  flex: 0 0 auto;
+  opacity: 0.85;
+}
+#sw-reader-footer .nqd-chapter-now .nqd-now-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* Touch devices: Android asks for 48dp, and the control is the main way in */
+@media (pointer: coarse) {
+  #sw-reader-footer .nqd-chapter-now { min-height: 48px; font-size: 0.84em; }
+  #sw-reader-footer .nqd-nav-btn { min-height: 48px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #sw-reader-footer .nqd-chapter-now:active { transform: none; }
 }
 
 #sw-reader-footer .nqd-nav-btn {
   flex: 1 1 0;
-  max-width: 34%;
-  min-height: 32px;
+  max-width: 32%;
+  min-height: 44px;
   margin: 0;
   padding: 2px 8px 3px;
   border: 1px solid rgba(219, 185, 88, 0.5);

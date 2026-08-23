@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#1e2233">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="nav_engine.css?v=25">
+<link rel="stylesheet" href="nav_engine.css?v=26">
 <link rel="stylesheet" href="site_chrome.css?v=26">
 <link rel="stylesheet" href="xref_study_panel.css">
 <style>
@@ -110,7 +110,9 @@ body.english-only .word-unit .gl {
 .word-unit.sof + .arr { display: none; }
 .word-unit.sof .hw::after { content: ' ׃'; color: #1a2744; }
 body.hide-translit .tl, body.hide-translit .arr-tl { display: none; }
-body.hide-gloss .gl, body.hide-gloss .arr-gl, body.hide-gloss .tl, body.hide-gloss .arr-tl { display: none; }
+/* Hebrew Only drops the gloss; transliteration stays under the reader's own
+   Transliterate toggle (body.hide-translit), which used to be overridden here */
+body.hide-gloss .gl, body.hide-gloss .arr-gl { display: none; }
 body.hide-gloss .hw { font-size: 2.1em; }
 body.hide-gloss .verse { gap: 6px; }
 body.hide-gloss .word-unit { padding: 2px 3px; }
@@ -3128,7 +3130,7 @@ window.addEventListener('scroll', function() {
 <script src="notes_engine.js"></script>
 <script src="site_chrome.js?v=23" data-sw-volume="nt"></script>
 <script src="verse_search.js?v=3"></script>
-<script src="nav_engine.js?v=28"></script>
+<script src="nav_engine.js?v=29"></script>
 <script src="xref_study_panel.js"></script>
 <script>
 NavEngine.init({
