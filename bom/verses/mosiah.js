@@ -1199,10 +1199,10 @@ var mo_ch16Verses = [
     ["וְעַתָּה","and now"],["לוּלֵא","were it not that"],["בָּא","comes"],["הַמָּשִׁיחַ","the Messiah"],["לָעוֹלָם","into the world"],["בְּדַבְּרוֹ","speaking"],["עַל־הָעֲתִידוֹת","of things to come"],["כְּאִלּוּ","as though"],["הָיוּ","they had"],["כְּבָר","already"],["לֹא־הָיְתָה","there could have been no"],["פְדוּת","redemption"]
   ]},
   { num: "ז", words: [
-    ["וְלוּלֵא","and were it not that"],["קָם","had risen"],["הַמָּשִׁיחַ","the Messiah"],["מִן־הַמֵּתִים","from the dead"],["אוֹ","or"],["נִתֵּק","broken"],["אֶת־מוֹסְרוֹת","the bands of"],["הַמָּוֶת","death"],["לְבִלְתִּי","that not"],["הֱיוֹת","should have"],["נֶצַח","victory"],["לַקֶּבֶר","the grave"],["וּלְבִלְתִּי","and that not"],["הֱיוֹת","should have"],["עֹקֶץ","sting"],["לַמָּוֶת","death"],["לֹא־הָיְתָה","there could have been no"],["תְקוּמָה","resurrection"]
+    ["וְלוּלֵא","and were it not that"],["קָם","had risen"],["הַמָּשִׁיחַ","the Messiah"],["מִן־הַמֵּתִים","from the dead"],["אוֹ","or"],["נִתֵּק","broken"],["אֶת־מוֹסְרוֹת","the bands of"],["הַמָּוֶת","death"],["לְבִלְתִּי","that not"],["הֱיוֹת","should have"],["נִצָּחוֹן","victory"],["לַקֶּבֶר","the grave"],["וּלְבִלְתִּי","and that not"],["הֱיוֹת","should have"],["עֹקֶץ","sting"],["לַמָּוֶת","death"],["לֹא־הָיְתָה","there could have been no"],["תְקוּמָה","resurrection"]
   ]},
   { num: "ח", words: [
-    ["אַךְ","but"],["יֵשׁ","there is"],["תְּקוּמָה","a resurrection"],["לָכֵן","therefore"],["אֵין","there is no"],["נֶצַח","victory"],["לַקֶּבֶר","the grave"],["וְעֹקֶץ","and the sting of"],["הַמָּוֶת","death"],["נִבְלָע","is swallowed up"],["בַּמָּשִׁיחַ","in the Messiah"]
+    ["אַךְ","but"],["יֵשׁ","there is"],["תְּקוּמָה","a resurrection"],["לָכֵן","therefore"],["אֵין","there is no"],["נִצָּחוֹן","victory"],["לַקֶּבֶר","the grave"],["וְעֹקֶץ","and the sting of"],["הַמָּוֶת","death"],["נִבְלָע","is swallowed up"],["בַּמָּשִׁיחַ","in the Messiah"]
   ]},
   { num: "ט", words: [
     ["הוּא","He is"],["אוֹר","the light"],["הָעוֹלָם","of the world"],["וְחַיָּיו","and the life"],["אָכֵן","yea"],["אוֹר","a light"],["עוֹלָם","eternal"],["אֲשֶׁר","that"],["לֹא־יֶחְשַׁךְ","can never be darkened"],["וְחַיֵּי","and a life"],["נֶצַח","eternal"],["אֲשֶׁר","that"],["אֵין־מָוֶת","there is no death"],["עוֹד","more"]
