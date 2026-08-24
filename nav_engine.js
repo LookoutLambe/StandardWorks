@@ -2000,7 +2000,23 @@
       });
     }
 
-    var lastTap = 0;
+    var lastTap = 0, lastTapX = 0, lastTapY = 0;
+    var tapStartX = 0, tapStartY = 0, tapMoved = false;
+
+    // The first tap of the gesture opens the word popup, so the SECOND tap lands
+    // on #word-popup — which SEL_IGNORE would otherwise reject, killing the
+    // gesture every time. Treat a popup that the pending first tap opened as
+    // transparent, and dismiss it along with the toggle.
+    function onPendingWordPopup(el) {
+      if (!lastTap || !el || !el.closest) return false;
+      return !!el.closest('#word-popup, #word-popup-overlay');
+    }
+    function dismissWordPopup() {
+      try {
+        if (typeof window.closePopup === 'function') window.closePopup();
+      } catch (ePop) {}
+    }
+
     function doubleTapWindowMs() {
       var tapWin = 650;
       try {
@@ -2010,20 +2026,64 @@
     }
 
     document.addEventListener(
+      'touchstart',
+      function(e) {
+        if (!e.touches || e.touches.length !== 1) {
+          tapMoved = true;
+          lastTap = 0;
+          return;
+        }
+        tapStartX = e.touches[0].clientX;
+        tapStartY = e.touches[0].clientY;
+        tapMoved = false;
+      },
+      { passive: true, capture: true }
+    );
+
+    document.addEventListener(
+      'touchmove',
+      function(e) {
+        if (tapMoved) return;
+        if (!e.touches || e.touches.length !== 1) {
+          tapMoved = true;
+          return;
+        }
+        var t = e.touches[0];
+        if (Math.abs(t.clientX - tapStartX) > 12 || Math.abs(t.clientY - tapStartY) > 12) tapMoved = true;
+      },
+      { passive: true, capture: true }
+    );
+
+    document.addEventListener(
       'touchend',
       function(e) {
         if (!document.querySelector('.controls-bottom')) return;
         var ct = e.changedTouches;
         if (!ct || ct.length !== 1) return;
-        if (!collapseGestureTarget(e.target)) return;
+        // A scroll ends in a touchend too — it must not seed or complete the gesture.
+        if (tapMoved) {
+          tapMoved = false;
+          lastTap = 0;
+          return;
+        }
+        var onPopup = onPendingWordPopup(e.target);
+        if (!onPopup && !collapseGestureTarget(e.target)) {
+          lastTap = 0;
+          return;
+        }
+        var t = ct[0];
         var now = Date.now();
         var tapWin = doubleTapWindowMs();
-        if (lastTap && now - lastTap < tapWin && now - lastTap > 12) {
+        var near = Math.abs(t.clientX - lastTapX) <= 48 && Math.abs(t.clientY - lastTapY) <= 48;
+        if (lastTap && near && now - lastTap < tapWin && now - lastTap > 12) {
+          if (onPopup) dismissWordPopup();
           toggleReadingFooterBar();
           lastTap = 0;
           return;
         }
         lastTap = now;
+        lastTapX = t.clientX;
+        lastTapY = t.clientY;
       },
       { passive: true, capture: true }
     );
@@ -2032,9 +2092,11 @@
       'dblclick',
       function(e) {
         if (!document.querySelector('.controls-bottom')) return;
-        if (!collapseGestureTarget(e.target)) return;
+        var dcPopup = !!(e.target && e.target.closest && e.target.closest('#word-popup, #word-popup-overlay'));
+        if (!dcPopup && !collapseGestureTarget(e.target)) return;
         if (hasReadableTextSelection()) return;
         e.preventDefault();
+        if (dcPopup) dismissWordPopup();
         toggleReadingFooterBar();
       },
       true

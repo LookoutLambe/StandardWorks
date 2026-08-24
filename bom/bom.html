@@ -393,16 +393,20 @@ body.hide-translit .tl { display: none; }
   opacity: 0.85;
 }
 /* Native selection: Hebrew tier only (wrapper none + .hw text — fixes iOS selecting stacked tl/gl) */
+/* touch-action is `manipulation`, not `auto`: `auto` hands the double-tap back to
+   iOS for double-tap-to-zoom, which swallows the app's double-tap-to-hide-footer
+   gesture in standalone PWA mode. `manipulation` still allows panning, pinch-zoom
+   and long-press selection — it only gives up double-tap-to-zoom. */
 .word-unit .hw {
   user-select: text;
   -webkit-user-select: text;
-  touch-action: auto;
+  touch-action: manipulation;
   -webkit-touch-callout: default;
 }
 @media (max-width: 900px) {
   #page .word-flow,
   #page .word-unit .hw {
-    touch-action: auto !important;
+    touch-action: manipulation !important;
   }
 }
 .word-unit .gl,
