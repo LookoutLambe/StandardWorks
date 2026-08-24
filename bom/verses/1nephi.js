@@ -932,16 +932,7 @@ var ch2Verses = [
   ]}
 ];
 var ch3Verses = [
-  { num:"א", words:[
-    ["וַיְהִי","and it came to pass"],
-    ["כְּשׁוּבִי","when I returned"],["אֲנִי","I"],["נֶפִי","Nephi"],
-    ["אֶל־אֹהֶל","unto the tent of"],
-    ["אָבִי","my father"],
-    ["מִדַּבֶּרִי","from communing"],
-    ["עִם","with"],
-    ["יְהוָה","the Lord"],
-    ["׃",""]
-  ]},
+  { num: "א", words: [["וַיְהִי","and it came to pass"], ["כְּשׁוּבִי","when I returned"], ["אֲנִי","I"], ["נֶפִי","Nephi"], ["אֶל־אֹהֶל","unto the tent of"], ["אָבִי","my father"], ["מִדַּבֶּרִי","from communing"], ["עִם","with"], ["יְהוָה","the Lord"], ["׃",""]]},
   { num:"ב", words:[
     ["וַיֹּאמֶר","and spake"],
     ["אָבִי","my father"],
@@ -1137,22 +1128,7 @@ var ch3Verses = [
     ["וַהֲמִיתִיךָ","and I will slay thee"],
     ["׃",""]
   ]},
-  { num:"יד", words:[
-    ["וַיָּנׇס","and fled"],
-    ["לָמָן","Laman"],
-    ["מִפָּנָיו","from his presence"],
-    ["וַיַּגֵּד־לָנוּ","and he told us"],
-    ["אֶת־כׇּל־אֲשֶׁר","all that"],
-    ["עָשָׂה","had done"],
-    ["לָבָן","Laban"],
-    ["וַנִּתְעַצֵּב","and we were grieved"],
-    ["וַיַּחְפְּצוּ","and desired"],
-    ["אַחַי","my brethren"],
-    ["לָשׁוּב","to return"],
-    ["אֶל־אָבִינוּ","unto our father"],
-    ["הַמִּדְבָּרָה","in the wilderness"],
-    ["׃",""]
-  ]},
+  { num: "יד", words: [["וַיָּנׇס","and fled"], ["לָמָן","Laman"], ["מִפָּנָיו","from his presence"], ["וַיַּגֵּד־לָנוּ","and he told us"], ["אֶת־כׇּל־אֲשֶׁר","all that"], ["עָשָׂה","had done"], ["לָבָן","Laban"], ["וַנִּתְעַצֵּב","and we were grieved"], ["וַיַּחְפְּצוּ","and desired"], ["אַחַי","my brethren"], ["לָשׁוּב","to return"], ["אֶל־אָבִינוּ","unto our father"], ["הַמִּדְבָּרָה","in the wilderness"], ["׃",""]]},
   { num:"טו", words:[
     ["הִנֵּה","behold"],
     ["אָמַרְתִּי","I said"],
@@ -1976,22 +1952,7 @@ var ch4Verses = [
     ["מִלְּפָנָי","from my presence"],
     ["׃",""]
   ]},
-  { num:"ל", words:[
-    ["וַיְהִי","and it came to pass"],
-    ["כִּרְאוֹת","that when beheld"],
-    ["עֶבֶד","the servant of"],
-    ["לָבָן","Laban"],
-    ["אֶת־אַחַי","my brethren"],
-    ["וַיָּחֶל","he began"],
-    ["לִרְעֹד","to tremble"],
-    ["וַיְבַקֵּשׁ","and was about"],
-    ["לָנוּס","to flee"],
-    ["מִלְּפָנַי","from before me"],
-    ["וְלָשׁוּב","and return"],
-    ["עִירָה","to the city of"],
-    ["יְרוּשָׁלָיִם","Jerusalem"],
-    ["׃",""]
-  ]},
+  { num: "ל", words: [["וַיְהִי","and it came to pass"], ["כִּרְאוֹת","that when beheld"], ["עֶבֶד","the servant of"], ["לָבָן","Laban"], ["אֶת־אַחַי","my brethren"], ["וַיָּחֶל","he began"], ["לִרְעֹד","to tremble"], ["וַיְבַקֵּשׁ","and was about"], ["לָנוּס","to flee"], ["מִלְּפָנַי","from before me"], ["וְלָשׁוּב","and return"], ["עִירָה","to the city of"], ["יְרוּשָׁלָיִם","Jerusalem"], ["׃",""]]},
   { num:"לא", words:[
     ["וְעַתָּה","and now"],
     ["וַאֲנִי","I"],
@@ -2252,18 +2213,7 @@ var ch5Verses = [
     ["הַיְּהוּדִים","the Jews"],
     ["׃",""]
   ]},
-  { num:"ז", words:[
-    ["וַיְהִי","and it came to pass"],
-    ["כְּשׁוּבֵנוּ","that after we had returned"],
-    ["אֶל־אֹהֶל","to the tent of"],
-    ["אָבִי","my father"],
-    ["וְהִנֵּה","behold"],
-    ["מָלְאָה","was full of"],
-    ["שִׂמְחָתָם","their joy"],
-    ["וַתִּנָּחֵם","and was comforted"],
-    ["אִמִּי","my mother"],
-    ["׃",""]
-  ]},
+  { num: "ז", words: [["וַיְהִי","and it came to pass"], ["כְּשׁוּבֵנוּ","that after we had returned"], ["אֶל־אֹהֶל","to the tent of"], ["אָבִי","my father"], ["וְהִנֵּה","behold"], ["מָלְאָה","was full of"], ["שִׂמְחָתָם","their joy"], ["וַתִּנָּחֵם","and was comforted"], ["אִמִּי","my mother"], ["׃",""]]},
   { num:"ח", words:[
     ["וַתֹּאמֶר","and she spake"],
     ["לֵאמֹר","saying"],
@@ -2714,15 +2664,7 @@ var ch7Verses = [
     ["הָאֲחֵרוֹת","the other"],
     ["׃",""]
   ]},
-  { num:"ז", words:[
-    ["וַיְהִי","and it came to pass"],
-    ["בַּמֶּרֶד הַהוּא","in the which rebellion"],
-    ["וַיַּחְפְּצוּ","they were desirous"],
-    ["לָשׁוּב","to return"],
-    ["אֶל־אֶרֶץ","unto the land of"],
-    ["יְרוּשָׁלָיִם","Jerusalem"],
-    ["׃",""]
-  ]},
+  { num: "ז", words: [["וַיְהִי","and it came to pass"], ["בַּמֶּרֶד הַהוּא","in the which rebellion"], ["וַיַּחְפְּצוּ","they were desirous"], ["לָשׁוּב","to return"], ["אֶל־אֶרֶץ","unto the land of"], ["יְרוּשָׁלָיִם","Jerusalem"], ["׃",""]]},
   { num:"ח", words:[
     ["וְעַתָּה","and now"],
     ["בַּעֲצֹב","being grieved"],
@@ -3825,32 +3767,7 @@ var ch10Verses = [
     ["עַל־הַיְּהוּדִים","concerning the Jews"],
     ["׃",""]
   ]},
-  { num:"ג", words:[
-    ["כִּי","how that"],
-    ["אַחֲרֵי","after"],
-    ["הִשָּׁמְדָם","they should be destroyed"],
-    ["גַּם־הָעִיר","even the city"],
-    ["הַגְּדוֹלָה","the great"],
-    ["יְרוּשָׁלַיִם","Jerusalem"],
-    ["וְרַבִּים","and many should be"],
-    ["יוּבְלוּ","carried away"],
-    ["בַּשְּׁבִי","captive"],
-    ["בָּבֶלָה","into Babylon"],
-    ["כְּמוֹעֵד","according to the due time of"],
-    ["יְהוָה","the Lord"],
-    ["יָשׁוּבוּ","they should return"],
-    ["שֵׁנִית","again"],
-    ["וְיוּשְׁבוּ","yea, even be brought back"],
-    ["מִן־הַשְּׁבִי","out of captivity"],
-    ["וְאַחֲרֵי","and after"],
-    ["שׁוּבָם","their return"],
-    ["מִן־הַשְּׁבִי","out of captivity"],
-    ["יִירְשׁוּ","they should possess"],
-    ["שֵׁנִית","again"],
-    ["אֶת־אֶרֶץ","the land of"],
-    ["נַחֲלָתָם","their inheritance"],
-    ["׃",""]
-  ]},
+  { num: "ג", words: [["כִּי","how that"], ["אַחֲרֵי","after"], ["הִשָּׁמְדָם","they should be destroyed"], ["גַּם־הָעִיר","even the city"], ["הַגְּדוֹלָה","the great"], ["יְרוּשָׁלַיִם","Jerusalem"], ["וְרַבִּים","and many should be"], ["יוּבְלוּ","carried away"], ["בַּשְּׁבִי","captive"], ["בָּבֶלָה","into Babylon"], ["כְּמוֹעֵד","according to the due time of"], ["יְהוָה","the Lord"], ["יָשׁוּבוּ","they should return"], ["שֵׁנִית","again"], ["וְיוּשְׁבוּ","yea, even be brought back"], ["מִן־הַשְּׁבִי","out of captivity"], ["וְאַחֲרֵי","and after"], ["שׁוּבָם","their return"], ["מִן־הַשְּׁבִי","out of captivity"], ["יִירְשׁוּ","they should possess"], ["שֵׁנִית","again"], ["אֶת־אֶרֶץ","the land of"], ["נַחֲלָתָם","their inheritance"], ["׃",""]]},
   { num:"ד", words:[
     ["וְאׇמְנָם","and indeed"],
     ["בְּעוֹד","in yet"],
@@ -8315,18 +8232,7 @@ var ch16Verses = [
     ["בָּרָעָב","with hunger"],
     ["׃",""]
   ]},
-  { num:"לו", words:[
-    ["וְכֵן","and thus"],
-    ["הִתְלוֹנְנוּ","they did murmur"],
-    ["עַל־אָבִי","against my father"],
-    ["וְגַם","and also"],
-    ["עָלַי","against me"],
-    ["וַתַּחְפֹּצְנָה","and they were desirous"],
-    ["לָשׁוּב","to return again"],
-    ["לִירוּשָׁלַיִם","to Jerusalem"],
-    ["הָעִירָה","to the city"],
-    ["׃",""]
-  ]},
+  { num: "לו", words: [["וְכֵן","and thus"], ["הִתְלוֹנְנוּ","they did murmur"], ["עַל־אָבִי","against my father"], ["וְגַם","and also"], ["עָלַי","against me"], ["וַתַּחְפֹּצְנָה","and they were desirous"], ["לָשׁוּב","to return again"], ["לִירוּשָׁלַיִם","to Jerusalem"], ["הָעִירָה","to the city"], ["׃",""]]},
   { num:"לז", words:[
     ["וַיֹּאמֶר","and said"],
     ["לָמָן","Laman"],

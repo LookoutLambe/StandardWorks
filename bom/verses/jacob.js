@@ -115,7 +115,7 @@ var jc_ch1Verses = [
     ["לִהְיוֹת","to be"],
     ["מֶלֶךְ","a king"],
     ["וּמוֹשֵׁל","and a ruler"],
-    ["עַל־עַמּוֹ","upon his people"],
+    ["עַל־עַמּוֹ","over his people"],
     ["כְּפִי","according to"],
     ["מַמְלְכוֹת","the reigns of"],
     ["הַמְּלָכִים","the kings"],
@@ -1419,9 +1419,7 @@ var jc_ch7Verses = [
   { num:"כב", words:[
     ["וְעַתָּה","and now"],["טוֹב","good"],["הָיָה","was"],["הַדָּבָר הַזֶּה","this thing"],["בְּעֵינַי","in my eyes"],["יַעֲקֹב","Jacob"],["כִּי","for"],["בִקַּשְׁתִּיו","I had requested it"],["מֵאָבִי","of my Father"],["אֲשֶׁר","which"],["בַּשָּׁמַיִם","in the heaven"],["כִּי","for"],["שָׁמַע","He had heard"],["אֶת־זַעֲקָתִי","my cry"],["וַיַּעַן","and answered"],["אֶת־תְּפִלָּתִי","my prayer"],
   ]},
-  { num:"כג", words:[
-    ["וַיְהִי","and it came to pass"],["כִּי","that"],["הוּשַׁב","was returned"],["הַשָּׁלוֹם","the peace"],["וְאַהֲבַת","and the love of"],["אֱלֹהִים","God"],["בְּקֶרֶב","among"],["הָעָם","the people"],["וַיִּדְרְשׁוּ","and they searched"],["בַכְּתוּבִים","the scriptures"],["וְלֹא","and not"],["שָׁמְעוּ","they hearkened"],["עוֹד","more"],["לְדִבְרֵי","to the words of"],["הָאִישׁ","the man"],["הָרָשָׁע הַזֶּה","this wicked"],
-  ]},
+  { num: "כג", words: [["וַיְהִי","and it came to pass"], ["כִּי","that"], ["הוּשַׁב","was returned"], ["הַשָּׁלוֹם","the peace"], ["וְאַהֲבַת","and the love of"], ["אֱלֹהִים","God"], ["בְּקֶרֶב","among"], ["הָעָם","the people"], ["וַיִּדְרְשׁוּ","and they searched"], ["בַכְּתוּבִים","the scriptures"], ["וְלֹא","and not"], ["שָׁמְעוּ","they hearkened"], ["עוֹד","more"], ["לְדִבְרֵי","to the words of"], ["הָאִישׁ","the man"], ["הָרָשָׁע הַזֶּה","this wicked"]]},
   { num:"כד", words:[["וַיְהִי","and it came to pass"], ["כִּי","that"], ["חֻשְּׁבוּ","were devised"], ["דְרָכִים","means"], ["רַבּוֹת","many"], ["לְהָשִׁיב","to reclaim"], ["וּלְהַחֲזִיר","and to restore"], ["אֶת־הַלָּמָנִים","the Lamanites"], ["אֶל־דַּעַת","unto the knowledge of"], ["הָאֱמֶת","the truth"], ["אַךְ","but"], ["הָיָה","it was"], ["הַכֹּל","all"], ["לַשָּׁוְא","in vain"], ["כִּי","for"], ["שָׂשׂוּ","they delighted"], ["בְּמִלְחָמוֹת","in wars"], ["וּבִשְׁפִיכוּת","and in the shedding of"], ["דָּמִים","blood"], ["וַתְּהִי","and there was"], ["לָהֶם","unto them"], ["שִׂנְאַת","a hatred"], ["עוֹלָם","eternal"], ["אֵלֵינוּ","unto us"], ["אֲחֵיהֶם","their brethren"], ["וַיְבַקְשׁוּ","and they sought"], ["בְּכֹחַ","by the power of"], ["כְּלֵי","the weapons of"], ["נִשְׁקָם","their arms"], ["לְהַשְׁמִידֵנוּ","to destroy us"], ["תָּמִיד","continually"]]},
   { num:"כה", words:[["לָכֵן","wherefore"], ["הִתְחַזְּקוּ","did fortify themselves"], ["עַם־נֶפִי","the people of Nephi"], ["נֶגְדָּם","against them"], ["בִּכְלֵי","with the weapons of"], ["נִשְׁקָם","their arms"], ["וּבְכׇל־כֹּחָם","and in all their might"], ["בֹּטְחִים","trusting"], ["בֵּאלֹהֵי","in the God of"], ["וְצוּר","and the rock of"], ["יְשׁוּעָתָם","their salvation"], ["לָכֵן","wherefore"], ["הָיוּ","were"], ["עַד־כֹּה","hitherto"], ["מְנַצְּחִים","conquerors of"], ["אֶת־אוֹיְבֵיהֶם","their enemies"]]},
   { num:"כו", words:[
