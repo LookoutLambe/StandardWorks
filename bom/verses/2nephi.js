@@ -550,7 +550,7 @@ var n2_ch1Verses = [
     ["בַּעֲבוּרְכֶם","because of you"],
     ["׃",""]
   ]},
-                { num:"כה", words:[["וַאֲנִי","and I"], ["יָרֵא","fear"], ["וְחָרֵד","and tremble"], ["מְאֹד","exceedingly"], ["בַּעֲבוּרְכֶם","because of you"], ["פֶּן־יִסְבֹּל","lest he shall suffer"], ["שֵׁנִית","again"], ["כִּי","for"], ["הֶאֱשַׁמְתֶּם","ye have accused"], ["אוֹתוֹ","him"], ["כִּי","that"], ["בִקֵּשׁ","he sought"], ["כֹּחַ","power"], ["וְסַמְכוּת","and authority"], ["עֲלֵיכֶם","over you"], ["אַךְ","but"], ["יָדַעְתִּי","I know"], ["כִּי־לֹא","that not"], ["בִקֵּשׁ","did he seek"], ["כֹּחַ","power"], ["וְסַמְכוּת","nor authority"], ["עֲלֵיכֶם","over you"], ["כִּי־אִם","but"], ["כְּבוֹד","the glory of"], ["אֱלֹהִים","God"], ["וְטוּבַתְכֶם","and your own welfare"], ["לְעוֹלָם","eternal"], ["׃",""]]},
+                { num:"כה", words:[["וַאֲנִי","and I"], ["יָרֵא","fear"], ["וְחָרֵד","and tremble"], ["מְאֹד","exceedingly"], ["בַּעֲבוּרְכֶם","because of you"], ["פֶּן־יִסְבֹּל","lest he shall suffer"], ["שֵׁנִית","again"], ["כִּי","for"], ["הֶאֱשַׁמְתֶּם","ye have accused"], ["אוֹתוֹ","him"], ["כִּי","that"], ["בִקֵּשׁ","he sought"], ["שְׂרָרָה","power"], ["וּמֶמְשָׁלָה","and authority"], ["עֲלֵיכֶם","over you"], ["אַךְ","but"], ["יָדַעְתִּי","I know"], ["כִּי־לֹא","that not"], ["בִקֵּשׁ","did he seek"], ["שְׂרָרָה","power"], ["וּמֶמְשָׁלָה","nor authority"], ["עֲלֵיכֶם","over you"], ["כִּי־אִם","but"], ["כְּבוֹד","the glory of"], ["אֱלֹהִים","God"], ["וְטוּבַתְכֶם","and your own welfare"], ["לְעוֹלָם","eternal"], ["׃",""]]},
                 { num:"כו", words:[
     ["וַתְּלוֹנְנוּ","and ye have murmured"],
     ["כִּי","because"],
