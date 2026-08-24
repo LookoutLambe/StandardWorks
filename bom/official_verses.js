@@ -51,7 +51,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 1,
   "verse": 9,
-  "english": "And it came to pass that he saw One descending out of the midst of heaven, and he beheld that his luster was above that of the sun at noon– day."
+  "english": "And it came to pass that he saw One descending out of the midst of heaven, and he beheld that his luster was above that of the sun at noon-day."
  },
  {
   "book": "1 Nephi",
@@ -249,7 +249,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 2,
   "verse": 22,
-  "english": "And inasmuch as thou shalt keep my command– ments, thou shalt be made a ruler and a teacher over thy brethren."
+  "english": "And inasmuch as thou shalt keep my commandments, thou shalt be made a ruler and a teacher over thy brethren."
  },
  {
   "book": "1 Nephi",
@@ -387,7 +387,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 3,
   "verse": 21,
-  "english": "And it came to pass that after this manner of language did I persuade my brethren, that they might be faithful in keeping the command– ments of God."
+  "english": "And it came to pass that after this manner of language did I persuade my brethren, that they might be faithful in keeping the commandments of God."
  },
  {
   "book": "1 Nephi",
@@ -471,7 +471,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 4,
   "verse": 4,
-  "english": "Now when I had spoken these words, they were yet wroth, and did still continue to murmur; never– theless they did follow me up until we came without the walls of Jerusalem."
+  "english": "Now when I had spoken these words, they were yet wroth, and did still continue to murmur; nevertheless they did follow me up until we came without the walls of Jerusalem."
  },
  {
   "book": "1 Nephi",
@@ -513,7 +513,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 4,
   "verse": 11,
-  "english": "And the Spirit said unto me again: Behold the Lord hath delivered him into thy hands. Yea, and I also knew that he had sought to take away mine own life; yea, and he would not hearken unto the command– ments of the Lord; and he also had taken away our property."
+  "english": "And the Spirit said unto me again: Behold the Lord hath delivered him into thy hands. Yea, and I also knew that he had sought to take away mine own life; yea, and he would not hearken unto the commandments of the Lord; and he also had taken away our property."
  },
  {
   "book": "1 Nephi",
@@ -747,7 +747,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 5,
   "verse": 12,
-  "english": "And also a record of the Jews from the beginning, even down to the commence– ment of the reign of Zedekiah, king of Judah;"
+  "english": "And also a record of the Jews from the beginning, even down to the commencement of the reign of Zedekiah, king of Judah;"
  },
  {
   "book": "1 Nephi",
@@ -843,7 +843,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 6,
   "verse": 6,
-  "english": "Wherefore, I shall give command– ment unto my seed, that they shall not occupy these plates with things which are not of worth unto the children of men."
+  "english": "Wherefore, I shall give commandment unto my seed, that they shall not occupy these plates with things which are not of worth unto the children of men."
  },
  {
   "book": "1 Nephi",
@@ -1281,7 +1281,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 10,
   "verse": 7,
-  "english": "And he spake also concerning a prophet who should come before the Messiah, to prepare the way of the Lord–"
+  "english": "And he spake also concerning a prophet who should come before the Messiah, to prepare the way of the Lord—"
  },
  {
   "book": "1 Nephi",
@@ -1323,7 +1323,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 10,
   "verse": 14,
-  "english": "And after the house of Israel should be scattered they should be gathered together again; or, in fine, after the Gentiles had received the fulness of the Gospel, the natural branches of the olive– tree, or the remnants of the house of Israel, should be grafted in, or come to the knowledge of the true Messiah, their Lord and their Redeemer."
+  "english": "And after the house of Israel should be scattered they should be gathered together again; or, in fine, after the Gentiles had received the fulness of the Gospel, the natural branches of the olive-tree, or the remnants of the house of Israel, should be grafted in, or come to the knowledge of the true Messiah, their Lord and their Redeemer."
  },
  {
   "book": "1 Nephi",
@@ -1365,7 +1365,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 10,
   "verse": 21,
-  "english": "Wherefore, if ye have sought to do wickedly in the days of your probation, then ye are found unclean before the judgment– seat of God; and no unclean thing can dwell with God; wherefore, ye must be cast off forever."
+  "english": "Wherefore, if ye have sought to do wickedly in the days of your probation, then ye are found unclean before the judgment-seat of God; and no unclean thing can dwell with God; wherefore, ye must be cast off forever."
  },
  {
   "book": "1 Nephi",
@@ -1653,7 +1653,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 12,
   "verse": 11,
-  "english": "And the angel said unto me: Look! And I looked, and beheld three generations pass away in righteous– ness; and their garments were white even like unto the Lamb of God. And the angel said unto me: These are made white in the blood of the Lamb, because of their faith in him."
+  "english": "And the angel said unto me: Look! And I looked, and beheld three generations pass away in righteousness; and their garments were white even like unto the Lamb of God. And the angel said unto me: These are made white in the blood of the Lamb, because of their faith in him."
  },
  {
   "book": "1 Nephi",
@@ -2229,7 +2229,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 15,
   "verse": 12,
-  "english": "Behold, I say unto you, that the house of Israel was compared unto an olive– tree, by the Spirit of the Lord which was in our father; and behold are we not broken off from the house of Israel, and are we not a branch of the house of Israel?"
+  "english": "Behold, I say unto you, that the house of Israel was compared unto an olive-tree, by the Spirit of the Lord which was in our father; and behold are we not broken off from the house of Israel, and are we not a branch of the house of Israel?"
  },
  {
   "book": "1 Nephi",
@@ -2253,7 +2253,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 15,
   "verse": 16,
-  "english": "Behold, I say unto you, Yea; they shall be remembered again among the house of Israel; they shall be grafted in, being a natural branch of the olive – tree, into the true olive–tree."
+  "english": "Behold, I say unto you, Yea; they shall be remembered again among the house of Israel; they shall be grafted in, being a natural branch of the olive-tree, into the true olive-tree."
  },
  {
   "book": "1 Nephi",
@@ -2451,7 +2451,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 16,
   "verse": 13,
-  "english": "And it came to pass that we traveled for the space of four days, nearly a south– southeast direction, and we did pitch our tents again; and we did call the name of the place Shazer."
+  "english": "And it came to pass that we traveled for the space of four days, nearly a south-southeast direction, and we did pitch our tents again; and we did call the name of the place Shazer."
  },
  {
   "book": "1 Nephi",
@@ -2499,7 +2499,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 16,
   "verse": 21,
-  "english": "Now it came to pass that I, Nephi, having been afflicted with my brethren because of the loss of my bow, and their bows having lost their springs, it began to be exceedingly difficult, yea, inso–  much that we could obtain no food."
+  "english": "Now it came to pass that I, Nephi, having been afflicted with my brethren because of the loss of my bow, and their bows having lost their springs, it began to be exceedingly difficult, yea, insomuch that we could obtain no food."
  },
  {
   "book": "1 Nephi",
@@ -2625,7 +2625,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 17,
   "verse": 3,
-  "english": "And thus we see that the command– ments of God must be fulfilled. And if it so be that the children of men keep the command– ments of God he doth nourish them, and strengthen them, and provide means whereby they can accomplish the thing which he has commanded them; wherefore, he did provide means for us while we did sojourn in the wilderness."
+  "english": "And thus we see that the commandments of God must be fulfilled. And if it so be that the children of men keep the commandments of God he doth nourish them, and strengthen them, and provide means whereby they can accomplish the thing which he has commanded them; wherefore, he did provide means for us while we did sojourn in the wilderness."
  },
  {
   "book": "1 Nephi",
@@ -2643,7 +2643,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 17,
   "verse": 6,
-  "english": "And it came to pass that we did pitch our tents by the seashore; and notwithstanding we had suffered many afflictions and much difficulty, yea, even so much that we cannot write them all, we were exceedingly rejoiced when we came to the sea– shore; and we called the place Bountiful, because of its much fruit."
+  "english": "And it came to pass that we did pitch our tents by the seashore; and notwithstanding we had suffered many afflictions and much difficulty, yea, even so much that we cannot write them all, we were exceedingly rejoiced when we came to the seashore; and we called the place Bountiful, because of its much fruit."
  },
  {
   "book": "1 Nephi",
@@ -2685,7 +2685,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 17,
   "verse": 13,
-  "english": "And I will also be your light in the wilderness; and I will prepare the way before you, if it so be that ye shall keep my commandments; wherefore, inasmuch as ye shall keep my command– ments ye shall be led towards the promised land; and ye shall know that it is by me that ye are led."
+  "english": "And I will also be your light in the wilderness; and I will prepare the way before you, if it so be that ye shall keep my commandments; wherefore, inasmuch as ye shall keep my commandments ye shall be led towards the promised land; and ye shall know that it is by me that ye are led."
  },
  {
   "book": "1 Nephi",
@@ -2721,7 +2721,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 17,
   "verse": 19,
-  "english": "And now it came to pass that I, Nephi, was exceedingly sorrowful because of the hardness of their hearts; and now when they saw that I began to be sorrowful they were glad in their hearts, inso– much that they did rejoice over me, saying: We knew that ye could not construct a  ship, for we knew that ye were lacking in judgment; wherefore, thou canst not accomplish so great a work."
+  "english": "And now it came to pass that I, Nephi, was exceedingly sorrowful because of the hardness of their hearts; and now when they saw that I began to be sorrowful they were glad in their hearts, insomuch that they did rejoice over me, saying: We knew that ye could not construct a  ship, for we knew that ye were lacking in judgment; wherefore, thou canst not accomplish so great a work."
  },
  {
   "book": "1 Nephi",
@@ -2739,7 +2739,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 17,
   "verse": 22,
-  "english": "And we know that the people who were in the land of Jerusalem were a righteous people; for they kept the statutes and judgments of the Lord, and all his commandments, accord– ing to the law of Moses; wherefore, we know that they are a righteous people; and our father hath judged them, and hath led us away because we would hearken unto his words; yea, and our brother is like unto him. And after this manner of language did my brethren murmur and complain against us."
+  "english": "And we know that the people who were in the land of Jerusalem were a righteous people; for they kept the statutes and judgments of the Lord, and all his commandments, according to the law of Moses; wherefore, we know that they are a righteous people; and our father hath judged them, and hath led us away because we would hearken unto his words; yea, and our brother is like unto him. And after this manner of language did my brethren murmur and complain against us."
  },
  {
   "book": "1 Nephi",
@@ -3039,7 +3039,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 18,
   "verse": 17,
-  "english": "Now my father, Lehi, had said many things unto them, and also unto the sons of Ishmael; but, behold, they did breathe out much threatenings against anyone that should speak for me; and my parents being stricken in years, and having suffered much grief because of their children, they were brought down, yea, even upon their sick– beds."
+  "english": "Now my father, Lehi, had said many things unto them, and also unto the sons of Ishmael; but, behold, they did breathe out much threatenings against anyone that should speak for me; and my parents being stricken in years, and having suffered much grief because of their children, they were brought down, yea, even upon their sick-beds."
  },
  {
   "book": "1 Nephi",
@@ -3141,13 +3141,13 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 19,
   "verse": 9,
-  "english": "And the world, because of their iniquity, shall judge him to be a thing of naught; wherefore they scourge him, and he suffereth it; and they smite him, and he suffereth it. Yea, they spit upon him, and he suffereth it, because of his loving kindness and his long– suffering towards the children of men."
+  "english": "And the world, because of their iniquity, shall judge him to be a thing of naught; wherefore they scourge him, and he suffereth it; and they smite him, and he suffereth it. Yea, they spit upon him, and he suffereth it, because of his loving kindness and his long-suffering towards the children of men."
  },
  {
   "book": "1 Nephi",
   "chapter": 19,
   "verse": 10,
-  "english": "And the God of our fathers, who were led out of Egypt, out of bon– dage, and also were preserved in the wilderness by him, yea, the God of Abraham, and of Isaac, and the God of Jacob, yieldeth himself, according to the words of the angel, as a man, into the hands of wicked men, to be lifted up, according to the words of Zenock, and to be crucified, according to the words of Neum, and to be buried in a sepulchre, according to the words of Zenos, which he spake concerning the three days of darkness, which should be a sign given of his death unto those who should inhabit the isles of the sea, more especially given unto those who are of the house of Israel."
+  "english": "And the God of our fathers, who were led out of Egypt, out of bondage, and also were preserved in the wilderness by him, yea, the God of Abraham, and of Isaac, and the God of Jacob, yieldeth himself, according to the words of the angel, as a man, into the hands of wicked men, to be lifted up, according to the words of Zenock, and to be crucified, according to the words of Neum, and to be buried in a sepulchre, according to the words of Zenos, which he spake concerning the three days of darkness, which should be a sign given of his death unto those who should inhabit the isles of the sea, more especially given unto those who are of the house of Israel."
  },
  {
   "book": "1 Nephi",
@@ -3243,7 +3243,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 20,
   "verse": 2,
-  "english": "Nevertheless, they call them– selves of the holy city, but they do not stay themselves upon the God of Israel, who is the Lord of Hosts; yea, the Lord of Hosts is his name."
+  "english": "Nevertheless, they call themselves of the holy city, but they do not stay themselves upon the God of Israel, who is the Lord of Hosts; yea, the Lord of Hosts is his name."
  },
  {
   "book": "1 Nephi",
@@ -3639,7 +3639,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 20,
-  "english": "And the Lord will surely prepare a way for his people, unto the fulfill– ing of the words of Moses, which he spake, saying: A prophet shall the Lord your God raise up unto you, like unto me; him shall ye hear in all things whatsoever he shall say unto you. And it shall come to pass that all those who will not hear that prophet shall be cut off from among the people."
+  "english": "And the Lord will surely prepare a way for his people, unto the fulfilling of the words of Moses, which he spake, saying: A prophet shall the Lord your God raise up unto you, like unto me; him shall ye hear in all things whatsoever he shall say unto you. And it shall come to pass that all those who will not hear that prophet shall be cut off from among the people."
  },
  {
   "book": "1 Nephi",
@@ -3675,7 +3675,7 @@ window._officialVersesData = [
   "book": "1 Nephi",
   "chapter": 22,
   "verse": 26,
-  "english": "And because of the righteousness of his people, Satan has no power; wherefore, he cannot be loosed for the space of many years; for he hath no power over the hearts of the people, for they dwell in righteous– ness, and the Holy One of Israel reigneth."
+  "english": "And because of the righteousness of his people, Satan has no power; wherefore, he cannot be loosed for the space of many years; for he hath no power over the hearts of the people, for they dwell in righteousness, and the Holy One of Israel reigneth."
  },
  {
   "book": "1 Nephi",
@@ -3903,7 +3903,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 2,
   "verse": 1,
-  "english": "And now, Jacob, I speak unto you: Thou art my first– born in the days of my tribulation in the wilderness. And behold, in thy childhood thou hast suffered afflictions and much sorrow, because of the rudeness of thy brethren."
+  "english": "And now, Jacob, I speak unto you: Thou art my firstborn in the days of my tribulation in the wilderness. And behold, in thy childhood thou hast suffered afflictions and much sorrow, because of the rudeness of thy brethren."
  },
  {
   "book": "2 Nephi",
@@ -3963,7 +3963,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 2,
   "verse": 11,
-  "english": "For it must needs be, that there is an opposition in all things. If not so, my first– born in the wilderness, righteousness could not be brought to pass, neither wickedness, neither holiness nor misery, neither good nor bad. Wherefore, all things must needs be a compound in one; wherefore, if it should be one body it must needs remain as dead, having no life neither death, nor corruption nor incorruption, happiness nor misery, neither sense nor insensibility."
+  "english": "For it must needs be, that there is an opposition in all things. If not so, my firstborn in the wilderness, righteousness could not be brought to pass, neither wickedness, neither holiness nor misery, neither good nor bad. Wherefore, all things must needs be a compound in one; wherefore, if it should be one body it must needs remain as dead, having no life neither death, nor corruption nor incorruption, happiness nor misery, neither sense nor insensibility."
  },
  {
   "book": "2 Nephi",
@@ -4551,7 +4551,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 5,
   "verse": 19,
-  "english": "And behold, the words of the Lord had been fulfilled unto my brethren, which he spake concerning them, that I should be their ruler and their teacher. Wherefore, I had been their ruler and their teacher, according to the command– ments of the Lord, until the time they sought to take away my life."
+  "english": "And behold, the words of the Lord had been fulfilled unto my brethren, which he spake concerning them, that I should be their ruler and their teacher. Wherefore, I had been their ruler and their teacher, according to the commandments of the Lord, until the time they sought to take away my life."
  },
  {
   "book": "2 Nephi",
@@ -5049,13 +5049,13 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 14,
-  "english": "Wherefore, we shall have a perfect know ledge of all our guilt, and our uncleanness, and our nakedness; and the righteous shall have a perfect knowledge of their enjoyment, and their righteous– ness, being clothed with purity, yea, even with the robe of righteousness."
+  "english": "Wherefore, we shall have a perfect know ledge of all our guilt, and our uncleanness, and our nakedness; and the righteous shall have a perfect knowledge of their enjoyment, and their righteousness, being clothed with purity, yea, even with the robe of righteousness."
  },
  {
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 15,
-  "english": "And it shall come to pass that when all men shall have passed from this first death unto life, insomuch as they have become immortal, they must appear before the judgment–seat of the Holy One of Israel; and then cometh the judgment, and then must they be judged according to the holy judgment of God."
+  "english": "And it shall come to pass that when all men shall have passed from this first death unto life, insomuch as they have become immortal, they must appear before the judgment-seat of the Holy One of Israel; and then cometh the judgment, and then must they be judged according to the holy judgment of God."
  },
  {
   "book": "2 Nephi",
@@ -5199,7 +5199,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 39,
-  "english": "O, my beloved brethren, remember the awfulness in transgressing against that Holy God, and also the awfulness of yielding to the enticings of that cunning one. Remember, to be carnally–minded is death, and to be spiritually–minded is life eternal."
+  "english": "O, my beloved brethren, remember the awfulness in transgressing against that Holy God, and also the awfulness of yielding to the enticings of that cunning one. Remember, to be carnally-minded is death, and to be spiritually-minded is life eternal."
  },
  {
   "book": "2 Nephi",
@@ -5229,7 +5229,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 9,
   "verse": 44,
-  "english": "O, my beloved brethren, remember my words. Behold, I take off my garments, and I shake them before you; I pray the God of my salvation that he view me with his all–searching eye; wherefore, ye shall know at the last day, when all men shall be judged of their works, that the God of Israel did witness that I shook your iniquities from my soul, and that I stand with brightness before him, and am rid of your blood."
+  "english": "O, my beloved brethren, remember my words. Behold, I take off my garments, and I shake them before you; I pray the God of my salvation that he view me with his all-searching eye; wherefore, ye shall know at the last day, when all men shall be judged of their works, that the God of Israel did witness that I shook your iniquities from my soul, and that I stand with brightness before him, and am rid of your blood."
  },
  {
   "book": "2 Nephi",
@@ -5409,7 +5409,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 10,
   "verse": 20,
-  "english": "And now, my beloved brethren, seeing that our merciful God has given us so great knowledge concerning these things, let us remember him, and lay aside our sins, and not  hang down our heads, for we are not cast off; never– theless, we have been driven out of the land of our inheritance; but we have been led to a better land, for the Lord has made the sea our path, and we are upon an isle of the sea."
+  "english": "And now, my beloved brethren, seeing that our merciful God has given us so great knowledge concerning these things, let us remember him, and lay aside our sins, and not  hang down our heads, for we are not cast off; nevertheless, we have been driven out of the land of our inheritance; but we have been led to a better land, for the Lord has made the sea our path, and we are upon an isle of the sea."
  },
  {
   "book": "2 Nephi",
@@ -5511,7 +5511,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 12,
   "verse": 4,
-  "english": "And he shall judge among the nations, and shall rebuke many  people: and they shall beat their swords into plow– shares, and  their spears into pruninghooks—nation shall not lift up sword  against nation, neither shall they learn war any more."
+  "english": "And he shall judge among the nations, and shall rebuke many  people: and they shall beat their swords into plow-shares, and  their spears into pruninghooks—nation shall not lift up sword  against nation, neither shall they learn war any more."
  },
  {
   "book": "2 Nephi",
@@ -5715,7 +5715,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 13,
   "verse": 16,
-  "english": "Moreover, the Lord saith: Because the daughters of Zion are haughty, and walk with stretched–forth necks and wanton eyes, walking and mincing as they go, and making a tinkling with their feet—"
+  "english": "Moreover, the Lord saith: Because the daughters of Zion are haughty, and walk with stretched-forth necks and wanton eyes, walking and mincing as they go, and making a tinkling with their feet—"
  },
  {
   "book": "2 Nephi",
@@ -5739,7 +5739,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 13,
   "verse": 20,
-  "english": "The bonnets, and the ornaments of the legs, and the headbands, and the tablets, and the ear– rings;"
+  "english": "The bonnets, and the ornaments of the legs, and the headbands, and the tablets, and the ear-rings;"
  },
  {
   "book": "2 Nephi",
@@ -5751,7 +5751,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 13,
   "verse": 22,
-  "english": "The changeable suits of apparel, and the mantles, and the wimples, and the crisping–pins;"
+  "english": "The changeable suits of apparel, and the mantles, and the wimples, and the crisping-pins;"
  },
  {
   "book": "2 Nephi",
@@ -5805,7 +5805,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 14,
   "verse": 5,
-  "english": "And the Lord will create upon every dwelling–place of mount Zion, and upon her assemblies, a cloud and smoke by day and the shining of a flaming fire by night; for upon all the glory of Zion shall be a defense."
+  "english": "And the Lord will create upon every dwelling-place of mount Zion, and upon her assemblies, a cloud and smoke by day and the shining of a flaming fire by night; for upon all the glory of Zion shall be a defense."
  },
  {
   "book": "2 Nephi",
@@ -5817,7 +5817,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 15,
   "verse": 1,
-  "english": "And then will I sing to my well–beloved a song of my beloved, touching his vineyard. My well–beloved hath a vineyard in a very fruitful hill."
+  "english": "And then will I sing to my well-beloved a song of my beloved, touching his vineyard. My well-beloved hath a vineyard in a very fruitful hill."
  },
  {
   "book": "2 Nephi",
@@ -6069,7 +6069,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 16,
   "verse": 13,
-  "english": "But yet there shall be a tenth, and they shall return, and shall be eaten, as a teil– tree, and as an oak whose substance is in them when they cast their leaves; so the holy seed shall be the substance thereof."
+  "english": "But yet there shall be a tenth, and they shall return, and shall be eaten, as a teil-tree, and as an oak whose substance is in them when they cast their leaves; so the holy seed shall be the substance thereof."
  },
  {
   "book": "2 Nephi",
@@ -6093,7 +6093,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 17,
   "verse": 4,
-  "english": "And say unto him: Take heed, and be quiet; fear not, neither be faint– hearted for the two tails of these smoking firebrands, for the fierce anger of Rezin with Syria, and of the son of Remaliah."
+  "english": "And say unto him: Take heed, and be quiet; fear not, neither be faint-hearted for the two tails of these smoking firebrands, for the fierce anger of Rezin with Syria, and of the son of Remaliah."
  },
  {
   "book": "2 Nephi",
@@ -6225,7 +6225,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 18,
   "verse": 1,
-  "english": "Moreover, the word of the Lord said unto me: Take thee a great roll, and write in it with a man's pen, concerning Maher–shalal–hash– baz."
+  "english": "Moreover, the word of the Lord said unto me: Take thee a great roll, and write in it with a man's pen, concerning Maher-shalal-hash-baz."
  },
  {
   "book": "2 Nephi",
@@ -6237,7 +6237,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 18,
   "verse": 3,
-  "english": "And I went unto the prophetess; and she conceived and bare a son. Then said the Lord to me: Call his name, Maher–shalal–hash–baz."
+  "english": "And I went unto the prophetess; and she conceived and bare a son. Then said the Lord to me: Call his name, Maher-shalal-hash-baz."
  },
  {
   "book": "2 Nephi",
@@ -6585,7 +6585,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 20,
   "verse": 18,
-  "english": "And shall consume the glory of his forest, and of his fruitful field, both soul and body; and they shall be as when a standard–bearer fainteth."
+  "english": "And shall consume the glory of his forest, and of his fruitful field, both soul and body; and they shall be as when a standard-bearer fainteth."
  },
  {
   "book": "2 Nephi",
@@ -6699,7 +6699,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 21,
   "verse": 3,
-  "english": "And shall make him of quick under– standing in the fear of the Lord; and he shall not judge after the sight of his eyes, neither reprove after the hearing of his ears."
+  "english": "And shall make him of quick understanding in the fear of the Lord; and he shall not judge after the sight of his eyes, neither reprove after the hearing of his ears."
  },
  {
   "book": "2 Nephi",
@@ -7509,7 +7509,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 26,
   "verse": 32,
-  "english": "And again, the Lord God hath commanded that men should not murder; that they should not lie; that they should not steal; that they should not take the name of the Lord their God in vain; that they should not envy; that they should not have malice; that they should not contend one with another; that they should not commit whore– doms; and that they should do none of these things; for whoso doeth them shall perish."
+  "english": "And again, the Lord God hath commanded that men should not murder; that they should not lie; that they should not steal; that they should not take the name of the Lord their God in vain; that they should not envy; that they should not have malice; that they should not contend one with another; that they should not commit whoredoms; and that they should do none of these things; for whoso doeth them shall perish."
  },
  {
   "book": "2 Nephi",
@@ -7521,7 +7521,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 27,
   "verse": 1,
-  "english": "But, behold, in the last days, or in the days of the Gentiles—yea, behold all the nations of the Gentiles and also the Jews, both those who shall come upon this land and those who shall be upon other lands, yea, even upon all the lands of the earth, behold, they will be drunken with iniquity and all manner of abominations–"
+  "english": "But, behold, in the last days, or in the days of the Gentiles—yea, behold all the nations of the Gentiles and also the Jews, both those who shall come upon this land and those who shall be upon other lands, yea, even upon all the lands of the earth, behold, they will be drunken with iniquity and all manner of abominations—"
  },
  {
   "book": "2 Nephi",
@@ -8127,7 +8127,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 31,
   "verse": 3,
-  "english": "For my soul delighteth in plainness; for after this manner doth the Lord God work among the children of men. For the Lord God giveth light unto the under– standing; for he speaketh unto men according to their language, unto their understanding."
+  "english": "For my soul delighteth in plainness; for after this manner doth the Lord God work among the children of men. For the Lord God giveth light unto the understanding; for he speaketh unto men according to their language, unto their understanding."
  },
  {
   "book": "2 Nephi",
@@ -8193,7 +8193,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 31,
   "verse": 14,
-  "english": "But, behold, my beloved brethren, thus came the voice of the Son unto me, saying: After ye have repented of your sins, and witnessed unto the Father that ye are willing to keep my command– ments, by the baptism of water, and have received the baptism of fire and of the Holy Ghost, and can speak with a new tongue, yea, even with the tongue of angels, and after this should deny me, it would have been better for you that ye had not known me."
+  "english": "But, behold, my beloved brethren, thus came the voice of the Son unto me, saying: After ye have repented of your sins, and witnessed unto the Father that ye are willing to keep my commandments, by the baptism of water, and have received the baptism of fire and of the Holy Ghost, and can speak with a new tongue, yea, even with the tongue of angels, and after this should deny me, it would have been better for you that ye had not known me."
  },
  {
   "book": "2 Nephi",
@@ -8217,7 +8217,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 31,
   "verse": 18,
-  "english": "And then are ye in this strait and narrow path which leads to eternal life; yea, ye have entered in by the gate; ye have done according to the command– ments of the Father and the Son; and ye have received the Holy Ghost, which witnesses of the Father and the Son, unto the fulfilling of the promise which he hath made, that if ye entered in by the way ye should receive."
+  "english": "And then are ye in this strait and narrow path which leads to eternal life; yea, ye have entered in by the gate; ye have done according to the commandments of the Father and the Son; and ye have received the Holy Ghost, which witnesses of the Father and the Son, unto the fulfilling of the promise which he hath made, that if ye entered in by the way ye should receive."
  },
  {
   "book": "2 Nephi",
@@ -8331,7 +8331,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 33,
   "verse": 7,
-  "english": "I have charity for my people, and great faith in Christ that I shall meet many souls spotless at his judgment– seat."
+  "english": "I have charity for my people, and great faith in Christ that I shall meet many souls spotless at his judgment-seat."
  },
  {
   "book": "2 Nephi",
@@ -8391,7 +8391,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 1,
   "verse": 2,
-  "english": "And he gave me, Jacob, a command– ment that I should write upon these plates a few of the things which I consider to be most precious; that I should not touch, save it were lightly, concerning the history of this people which are called the people of Nephi."
+  "english": "And he gave me, Jacob, a commandment that I should write upon these plates a few of the things which I consider to be most precious; that I should not touch, save it were lightly, concerning the history of this people which are called the people of Nephi."
  },
  {
   "book": "Jacob",
@@ -8457,7 +8457,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 1,
   "verse": 13,
-  "english": "Now the people which were not Lamanites were Nephites; never– theless, they were called Nephites, Jacobites, Josephites, Zoramites, Lamanites, Lemuelites, and Ishmaelites."
+  "english": "Now the people which were not Lamanites were Nephites; nevertheless, they were called Nephites, Jacobites, Josephites, Zoramites, Lamanites, Lemuelites, and Ishmaelites."
  },
  {
   "book": "Jacob",
@@ -8523,7 +8523,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 2,
   "verse": 5,
-  "english": "But behold, hearken ye unto me, and know that by the help of the all– powerful Creator of heaven and earth I can tell you concerning your thoughts, how that ye are beginning to labor in sin, which sin appeareth very abominable unto me, yea, and abominable unto God."
+  "english": "But behold, hearken ye unto me, and know that by the help of the all-powerful Creator of heaven and earth I can tell you concerning your thoughts, how that ye are beginning to labor in sin, which sin appeareth very abominable unto me, yea, and abominable unto God."
  },
  {
   "book": "Jacob",
@@ -8775,7 +8775,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 3,
   "verse": 12,
-  "english": "And now I, Jacob, spake many more things unto the people of Nephi, warning them against fornication and lascivious– ness, and every kind of sin, telling them the awful consequences of them."
+  "english": "And now I, Jacob, spake many more things unto the people of Nephi, warning them against fornication and lasciviousness, and every kind of sin, telling them the awful consequences of them."
  },
  {
   "book": "Jacob",
@@ -8853,7 +8853,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 4,
   "verse": 11,
-  "english": "Wherefore, beloved brethren, be reconciled unto him through the atonement of Christ, his Only Begotten Son, and ye may obtain a resurrection, according to the power of the resurrection which is in Christ, and be presented as the first– fruits of Christ unto God, having faith, and obtained a good hope of glory in him before he manifesteth himself in the flesh."
+  "english": "Wherefore, beloved brethren, be reconciled unto him through the atonement of Christ, his Only Begotten Son, and ye may obtain a resurrection, according to the power of the resurrection which is in Christ, and be presented as the firstfruits of Christ unto God, having faith, and obtained a good hope of glory in him before he manifesteth himself in the flesh."
  },
  {
   "book": "Jacob",
@@ -8913,13 +8913,13 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 5,
   "verse": 3,
-  "english": "For behold, thus saith the Lord, I will liken thee, O house of Israel, like unto a tame olive– tree, which a man took and nourished in his vineyard; and it grew, and waxed old, and began to decay."
+  "english": "For behold, thus saith the Lord, I will liken thee, O house of Israel, like unto a tame olive-tree, which a man took and nourished in his vineyard; and it grew, and waxed old, and began to decay."
  },
  {
   "book": "Jacob",
   "chapter": 5,
   "verse": 4,
-  "english": "And it came to pass that the master of the vineyard went forth, and he saw that his olive– tree began to decay; and he said: I will prune it, and dig about it, and nourish it, that perhaps it may shoot forth young and tender branches, and it perish not."
+  "english": "And it came to pass that the master of the vineyard went forth, and he saw that his olive-tree began to decay; and he said: I will prune it, and dig about it, and nourish it, that perhaps it may shoot forth young and tender branches, and it perish not."
  },
  {
   "book": "Jacob",
@@ -8937,7 +8937,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 5,
   "verse": 7,
-  "english": "And it came to pass that the master of the vineyard saw it, and he said unto his servant: It grieveth me that I should lose this tree; wherefore, go and pluck the branches from a wild olive– tree, and bring them hither unto me; and we will pluck off those main branches which are beginning to wither away, and we will cast them into the fire that they may be burned."
+  "english": "And it came to pass that the master of the vineyard saw it, and he said unto his servant: It grieveth me that I should lose this tree; wherefore, go and pluck the branches from a wild olive-tree, and bring them hither unto me; and we will pluck off those main branches which are beginning to wither away, and we will cast them into the fire that they may be burned."
  },
  {
   "book": "Jacob",
@@ -8949,13 +8949,13 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 5,
   "verse": 9,
-  "english": "Take thou the branches of the wild olive– tree, and graft them in, in the stead thereof; and these which I have plucked off I will cast into the fire and burn them, that they may not cumber the ground of my vineyard."
+  "english": "Take thou the branches of the wild olive-tree, and graft them in, in the stead thereof; and these which I have plucked off I will cast into the fire and burn them, that they may not cumber the ground of my vineyard."
  },
  {
   "book": "Jacob",
   "chapter": 5,
   "verse": 10,
-  "english": "And it came to pass that the servant of the Lord of the vineyard did according to the word of the Lord of the vineyard, and grafted in the branches of the wild olive– tree."
+  "english": "And it came to pass that the servant of the Lord of the vineyard did according to the word of the Lord of the vineyard, and grafted in the branches of the wild olive-tree."
  },
  {
   "book": "Jacob",
@@ -8979,7 +8979,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 5,
   "verse": 14,
-  "english": "And it came to pass that the Lord of the vineyard went his way, and hid the natural branches of the tame olive– tree in the nether most parts of the vineyard, some in one and some in another, according to his will and pleasure."
+  "english": "And it came to pass that the Lord of the vineyard went his way, and hid the natural branches of the tame olive-tree in the nether most parts of the vineyard, some in one and some in another, according to his will and pleasure."
  },
  {
   "book": "Jacob",
@@ -9099,7 +9099,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 5,
   "verse": 34,
-  "english": "And the servant said unto his master: Behold, because thou didst graft in the branches of the wild olive– tree they have nourished the roots, that they are alive and they have not perished; wherefore thou beholdest that they are yet good."
+  "english": "And the servant said unto his master: Behold, because thou didst graft in the branches of the wild olive-tree they have nourished the roots, that they are alive and they have not perished; wherefore thou beholdest that they are yet good."
  },
  {
   "book": "Jacob",
@@ -9171,7 +9171,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 5,
   "verse": 46,
-  "english": "And now, behold, notwithstanding all the care which we have taken of my vineyard, the trees thereof have become corrupted, that they bring forth no good fruit; and these I had hoped to preserve, to have laid up fruit thereof against the season, unto mine own self. But, behold, they have become like unto the wild olive– tree, and they are of no worth but to be hewn down and cast into the fire; and it grieveth me that I should lose them."
+  "english": "And now, behold, notwithstanding all the care which we have taken of my vineyard, the trees thereof have become corrupted, that they bring forth no good fruit; and these I had hoped to preserve, to have laid up fruit thereof against the season, unto mine own self. But, behold, they have become like unto the wild olive-tree, and they are of no worth but to be hewn down and cast into the fire; and it grieveth me that I should lose them."
  },
  {
   "book": "Jacob",
@@ -9339,13 +9339,13 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 5,
   "verse": 74,
-  "english": "And thus they labored, with all diligence, according to the command– ments of the Lord of the vineyard, even until the bad had been cast away out of the vineyard, and the Lord had preserved unto himself that the trees had become again the natural fruit; and they became like unto one body; and the fruits were equal; and the Lord of the vineyard had preserved unto himself the natural fruit, which was most precious unto him from the beginning."
+  "english": "And thus they labored, with all diligence, according to the commandments of the Lord of the vineyard, even until the bad had been cast away out of the vineyard, and the Lord had preserved unto himself that the trees had become again the natural fruit; and they became like unto one body; and the fruits were equal; and the Lord of the vineyard had preserved unto himself the natural fruit, which was most precious unto him from the beginning."
  },
  {
   "book": "Jacob",
   "chapter": 5,
   "verse": 75,
-  "english": "And it came to pass that when the Lord of the vineyard saw that his fruit was good, and that his vineyard was no more corrupt, he called up his servants, and said unto them: Behold, for this last time have we nourished my vineyard; and thou beholdest that I have done according to my will; and I have preserved the natural fruit, that it is good, even like as it was in the beginning. And blessed art thou; for because ye have been diligent in laboring with me in my vineyard, and have kept my command– ments, and have brought unto me again the natural fruit, that my vineyard is no more corrupted, and the bad is cast away, behold ye shall have joy with me because of the fruit of my vineyard."
+  "english": "And it came to pass that when the Lord of the vineyard saw that his fruit was good, and that his vineyard was no more corrupt, he called up his servants, and said unto them: Behold, for this last time have we nourished my vineyard; and thou beholdest that I have done according to my will; and I have preserved the natural fruit, that it is good, even like as it was in the beginning. And blessed art thou; for because ye have been diligent in laboring with me in my vineyard, and have kept my commandments, and have brought unto me again the natural fruit, that my vineyard is no more corrupted, and the bad is cast away, behold ye shall have joy with me because of the fruit of my vineyard."
  },
  {
   "book": "Jacob",
@@ -9363,7 +9363,7 @@ window._officialVersesData = [
   "book": "Jacob",
   "chapter": 6,
   "verse": 1,
-  "english": "And now, behold, my brethren, as I said unto you that I would prophesy, behold, this is my prophecy—that the things which this prophet Zenos spake, concerning the house of Israel, in the which he likened them unto a tame olive– tree, must surely come to pass."
+  "english": "And now, behold, my brethren, as I said unto you that I would prophesy, behold, this is my prophecy—that the things which this prophet Zenos spake, concerning the house of Israel, in the which he likened them unto a tame olive-tree, must surely come to pass."
  },
  {
   "book": "Jacob",
@@ -9657,7 +9657,7 @@ window._officialVersesData = [
   "book": "Enos",
   "chapter": 1,
   "verse": 10,
-  "english": "And while I was thus struggling in the spirit, behold, the voice of the Lord came into my mind again, saying: I will visit thy brethren according to their diligence in keeping my command– ments. I have given unto them this land, and it is a holy land; and I curse it not save it be for the cause of iniquity; wherefore, I will visit thy brethren according as I have said; and their transgressions will I bring down with sorrow upon their own heads."
+  "english": "And while I was thus struggling in the spirit, behold, the voice of the Lord came into my mind again, saying: I will visit thy brethren according to their diligence in keeping my commandments. I have given unto them this land, and it is a holy land; and I curse it not save it be for the cause of iniquity; wherefore, I will visit thy brethren according as I have said; and their transgressions will I bring down with sorrow upon their own heads."
  },
  {
   "book": "Enos",
@@ -9825,7 +9825,7 @@ window._officialVersesData = [
   "book": "Jarom",
   "chapter": 1,
   "verse": 11,
-  "english": "Wherefore, the prophets, and the priests, and the teachers, did labor diligently, exhorting with all long– suffering the people to diligence; teaching the law of Moses, and the intent for which it was given; persuading them to look forward unto the Messiah, and believe in him to come as though he already was. And after this manner did they teach them."
+  "english": "Wherefore, the prophets, and the priests, and the teachers, did labor diligently, exhorting with all long-suffering the people to diligence; teaching the law of Moses, and the intent for which it was given; persuading them to look forward unto the Messiah, and believe in him to come as though he already was. And after this manner did they teach them."
  },
  {
   "book": "Jarom",
@@ -9867,7 +9867,7 @@ window._officialVersesData = [
   "book": "Omni",
   "chapter": 1,
   "verse": 3,
-  "english": "And it came to pass that two hundred and seventy and six years had passed away, and we had many seasons of peace; and we had many seasons of serious war and bloodshed. Yea, and in fine, two hundred and eighty and two years had passed away, and I had kept these plates according to the command– ments of my fathers; and I conferred them upon my son Amaron. And I make an end."
+  "english": "And it came to pass that two hundred and seventy and six years had passed away, and we had many seasons of peace; and we had many seasons of serious war and bloodshed. Yea, and in fine, two hundred and eighty and two years had passed away, and I had kept these plates according to the commandments of my fathers; and I conferred them upon my son Amaron. And I make an end."
  },
  {
   "book": "Omni",
@@ -10131,7 +10131,7 @@ window._officialVersesData = [
   "book": "Words of Mormon",
   "chapter": 1,
   "verse": 17,
-  "english": "For behold, king Benjamin was a holy man, and he did reign over his people in righteousness; and there were many holy men in the land, and they did speak the word of God with power and with authority; and they did use much sharpness because of the stiffnecked– ness of the people—"
+  "english": "For behold, king Benjamin was a holy man, and he did reign over his people in righteousness; and there were many holy men in the land, and they did speak the word of God with power and with authority; and they did use much sharpness because of the stiffneckedness of the people—"
  },
  {
   "book": "Words of Mormon",
@@ -10161,7 +10161,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 1,
   "verse": 4,
-  "english": "For it were not possible that our father, Lehi, could have remembered all these things, to have taught them to his children, except it were for the help of these plates; for he having been taught in the language of the Egyptians therefore he could read these engravings, and teach them to his children, that thereby they could teach them to their children, and so fulfilling the command– ments of God, even down to this present time."
+  "english": "For it were not possible that our father, Lehi, could have remembered all these things, to have taught them to his children, except it were for the help of these plates; for he having been taught in the language of the Egyptians therefore he could read these engravings, and teach them to his children, that thereby they could teach them to their children, and so fulfilling the commandments of God, even down to this present time."
  },
  {
   "book": "Mosiah",
@@ -10209,7 +10209,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 1,
   "verse": 12,
-  "english": "And I give unto them a name that never shall be blotted out, except it be through trans– gression."
+  "english": "And I give unto them a name that never shall be blotted out, except it be through transgression."
  },
  {
   "book": "Mosiah",
@@ -10443,7 +10443,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 2,
   "verse": 33,
-  "english": "For behold, there is a wo pronounced upon him who listeth to obey that spirit; for if he listeth to obey him, and remaineth and dieth in his sins, the same drinketh dam– nation to his own soul; for he receiveth for his wages an everlasting punishment, having transgressed the law of God contrary to his own knowledge."
+  "english": "For behold, there is a wo pronounced upon him who listeth to obey that spirit; for if he listeth to obey him, and remaineth and dieth in his sins, the same drinketh damnation to his own soul; for he receiveth for his wages an everlasting punishment, having transgressed the law of God contrary to his own knowledge."
  },
  {
   "book": "Mosiah",
@@ -10479,7 +10479,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 2,
   "verse": 39,
-  "english": "And now I say unto you, that mercy hath no claim on that man; therefore his final doom is to endure a never– ending torment."
+  "english": "And now I say unto you, that mercy hath no claim on that man; therefore his final doom is to endure a never-ending torment."
  },
  {
   "book": "Mosiah",
@@ -10491,7 +10491,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 2,
   "verse": 41,
-  "english": "And moreover, I would desire that ye should consider on the blessed and happy state of those that keep the commandments of God. For behold, they are blessed in all things, both temporal and spiritual; and if they hold out faithful to the end they are received into heaven, that thereby they may dwell with God in a state of never– ending happiness. O remember, remember that these things are true; for the Lord God hath spoken it."
+  "english": "And moreover, I would desire that ye should consider on the blessed and happy state of those that keep the commandments of God. For behold, they are blessed in all things, both temporal and spiritual; and if they hold out faithful to the end they are received into heaven, that thereby they may dwell with God in a state of never-ending happiness. O remember, remember that these things are true; for the Lord God hath spoken it."
  },
  {
   "book": "Mosiah",
@@ -10689,7 +10689,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 4,
   "verse": 6,
-  "english": "I say unto you, if ye have come to a knowledge of the goodness of God, and his matchless power, and fhis wisdom, and his patience, and his long– suffering towards the children of men; and also, the atonement which has been prepared from the foundation of the world, that thereby salvation might come to him that should put his trust in the Lord, and should be diligent in keeping his commandments, and continue in the faith even unto the end of his life, I mean the life of the mortal body—"
+  "english": "I say unto you, if ye have come to a knowledge of the goodness of God, and his matchless power, and fhis wisdom, and his patience, and his long-suffering towards the children of men; and also, the atonement which has been prepared from the foundation of the world, that thereby salvation might come to him that should put his trust in the Lord, and should be diligent in keeping his commandments, and continue in the faith even unto the end of his life, I mean the life of the mortal body—"
  },
  {
   "book": "Mosiah",
@@ -10719,7 +10719,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 4,
   "verse": 11,
-  "english": "And again I say unto you as I have said before, that as ye have come to the knowledge of the glory of God, or if ye have known of his goodness and have tasted of his love, and have received a remission of your sins, which causeth such exceedingly great joy in your souls, even so I would that ye should remember, and always retain in remembrance, the greatness of God, and your own nothingness, and his goodness and long– suffering towards you, unworthy creatures, and humble yourselves even in the depths of humility, calling on the name of the Lord daily, and standing steadfastly in the faith of that which is to come, which was spoken by the mouth of the angel."
+  "english": "And again I say unto you as I have said before, that as ye have come to the knowledge of the glory of God, or if ye have known of his goodness and have tasted of his love, and have received a remission of your sins, which causeth such exceedingly great joy in your souls, even so I would that ye should remember, and always retain in remembrance, the greatness of God, and your own nothingness, and his goodness and long-suffering towards you, unworthy creatures, and humble yourselves even in the depths of humility, calling on the name of the Lord daily, and standing steadfastly in the faith of that which is to come, which was spoken by the mouth of the angel."
  },
  {
   "book": "Mosiah",
@@ -10857,13 +10857,13 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 5,
   "verse": 4,
-  "english": "And it is the faith which we have had on the things which our king has spoken unto us that has brought us to this great know– ledge, whereby we do rejoice with such exceedingly great joy."
+  "english": "And it is the faith which we have had on the things which our king has spoken unto us that has brought us to this great knowledge, whereby we do rejoice with such exceedingly great joy."
  },
  {
   "book": "Mosiah",
   "chapter": 5,
   "verse": 5,
-  "english": "And we are willing to enter into a covenant with our God to do his will, and to be obedient to his commandments in all things that he shall command us, all the remainder of our days, that we may not bring upon ourselves a never– ending torment, as has been spoken by the angel, that we may not drink out of the cup of the wrath of God."
+  "english": "And we are willing to enter into a covenant with our God to do his will, and to be obedient to his commandments in all things that he shall command us, all the remainder of our days, that we may not bring upon ourselves a never-ending torment, as has been spoken by the angel, that we may not drink out of the cup of the wrath of God."
  },
  {
   "book": "Mosiah",
@@ -10929,7 +10929,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 6,
   "verse": 1,
-  "english": "And now, king Benjamin thought it was expedient, after having finished speaking to the people, that he should take the names of all those who had entered into a covenant with God to keep his command– ments."
+  "english": "And now, king Benjamin thought it was expedient, after having finished speaking to the people, that he should take the names of all those who had entered into a covenant with God to keep his commandments."
  },
  {
   "book": "Mosiah",
@@ -10947,7 +10947,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 6,
   "verse": 4,
-  "english": "And Mosiah began to reign in his father’s stead. And he began to reign in the thirtieth year of his age, making in the whole, about four hundred and seventy– six years from the time that Lehi left Jerusalem."
+  "english": "And Mosiah began to reign in his father’s stead. And he began to reign in the thirtieth year of his age, making in the whole, about four hundred and seventy-six years from the time that Lehi left Jerusalem."
  },
  {
   "book": "Mosiah",
@@ -10971,13 +10971,13 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 7,
   "verse": 1,
-  "english": "And now, it came to pass that after king Mosiah had had continual peace for the space of three years, he was desirous to know concerning the people who went up to dwell in the land of Lehi– Nephi, or in the city of Lehi– Nephi; for his people had heard nothing from them from the time they left the land of Zarahemla; therefore, they wearied him with their teasings."
+  "english": "And now, it came to pass that after king Mosiah had had continual peace for the space of three years, he was desirous to know concerning the people who went up to dwell in the land of Lehi-Nephi, or in the city of Lehi-Nephi; for his people had heard nothing from them from the time they left the land of Zarahemla; therefore, they wearied him with their teasings."
  },
  {
   "book": "Mosiah",
   "chapter": 7,
   "verse": 2,
-  "english": "And it came to pass that king Mosiah granted that sixteen of their strong men might go up to the land of Lehi– Nephi to inquire concerning their brethren."
+  "english": "And it came to pass that king Mosiah granted that sixteen of their strong men might go up to the land of Lehi-Nephi to inquire concerning their brethren."
  },
  {
   "book": "Mosiah",
@@ -10989,7 +10989,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 7,
   "verse": 4,
-  "english": "And now, they knew not the course they should travel in the wilderness to go up to the land of Lehi– Nephi; therefore they wandered many days in the wilderness, even forty days did they wander."
+  "english": "And now, they knew not the course they should travel in the wilderness to go up to the land of Lehi-Nephi; therefore they wandered many days in the wilderness, even forty days did they wander."
  },
  {
   "book": "Mosiah",
@@ -11091,7 +11091,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 7,
   "verse": 21,
-  "english": "And ye all are witnesses this day, that Zeniff, who was made king over this people, he being over– zealous to inherit the land of his fathers, therefore being deceived by the cunning and craftiness of king Laman, who having entered into a treaty with king Zeniff, and having yielded up into his hands the possessions of a part of the land, or even the city of Lehi– Nephi, and the city of Shilom; and the land round about—"
+  "english": "And ye all are witnesses this day, that Zeniff, who was made king over this people, he being over-zealous to inherit the land of his fathers, therefore being deceived by the cunning and craftiness of king Laman, who having entered into a treaty with king Zeniff, and having yielded up into his hands the possessions of a part of the land, or even the city of Lehi-Nephi, and the city of Shilom; and the land round about—"
  },
  {
   "book": "Mosiah",
@@ -11217,7 +11217,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 8,
   "verse": 9,
-  "english": "And for a testimony that the things that they had said are true they have brought twenty– four plates which are filled with engravings, and they are of pure gold."
+  "english": "And for a testimony that the things that they had said are true they have brought twenty-four plates which are filled with engravings, and they are of pure gold."
  },
  {
   "book": "Mosiah",
@@ -11307,7 +11307,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 9,
   "verse": 3,
-  "english": "And yet, I being over– zealous to inherit the land of our fathers, collected as many as were desirous to go up to possess the land, and started again on our journey into the wilderness to go up to the land; but we were smitten with famine and sore afflictions; for we were slow to remember the Lord our God."
+  "english": "And yet, I being over-zealous to inherit the land of our fathers, collected as many as were desirous to go up to possess the land, and started again on our journey into the wilderness to go up to the land; but we were smitten with famine and sore afflictions; for we were slow to remember the Lord our God."
  },
  {
   "book": "Mosiah",
@@ -11325,7 +11325,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 9,
   "verse": 6,
-  "english": "And I went in unto the king, and he covenanted with me that I might possess the land of Lehi– Nephi, and the land of Shilom."
+  "english": "And I went in unto the king, and he covenanted with me that I might possess the land of Lehi-Nephi, and the land of Shilom."
  },
  {
   "book": "Mosiah",
@@ -11337,7 +11337,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 9,
   "verse": 8,
-  "english": "And we began to build buildings, and to repair the walls of the city, yea, even the walls of the city of Lehi– Nephi, and the city of Shilom."
+  "english": "And we began to build buildings, and to repair the walls of the city, yea, even the walls of the city of Lehi-Nephi, and the city of Shilom."
  },
  {
   "book": "Mosiah",
@@ -11397,7 +11397,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 9,
   "verse": 18,
-  "english": "And God did hear our cries and did answer our prayers; and we did go forth in his might; yea, we did go forth against the Lamanites, and in one day and a night we did slay three thousand and forty– three; we did slay them even until we had driven them out of our land."
+  "english": "And God did hear our cries and did answer our prayers; and we did go forth in his might; yea, we did go forth against the Lamanites, and in one day and a night we did slay three thousand and forty-three; we did slay them even until we had driven them out of our land."
  },
  {
   "book": "Mosiah",
@@ -11475,13 +11475,13 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 10,
   "verse": 12,
-  "english": "They were a wild, and ferocious, and a blood– thirsty people, believing in the tradition of their fathers, which is this—Believing that they were driven out of the land of Jerusalem because of the iniquities of their fathers, and that they were wronged in the wilderness by their brethren, and they were also wronged while crossing the sea;"
+  "english": "They were a wild, and ferocious, and a bloodthirsty people, believing in the tradition of their fathers, which is this—Believing that they were driven out of the land of Jerusalem because of the iniquities of their fathers, and that they were wronged in the wilderness by their brethren, and they were also wronged while crossing the sea;"
  },
  {
   "book": "Mosiah",
   "chapter": 10,
   "verse": 13,
-  "english": "And again, that they were wronged while in the land of their first inheritance, after they had crossed the sea, and all this because that Nephi was more faithful in keeping the command– ments of the Lord—therefore he was favored of the Lord, for the Lord heard his prayers and answered them, and he took the lead of their journey in the wilderness."
+  "english": "And again, that they were wronged while in the land of their first inheritance, after they had crossed the sea, and all this because that Nephi was more faithful in keeping the commandments of the Lord—therefore he was favored of the Lord, for the Lord heard his prayers and answered them, and he took the lead of their journey in the wilderness."
  },
  {
   "book": "Mosiah",
@@ -11547,7 +11547,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 11,
   "verse": 2,
-  "english": "For behold, he did not keep the command– ments of God, but he did walk after the desires of his own heart. And he had many wives and concubines. And he did cause his people to commit sin, and do that which was abominable in the sight of the Lord. Yea, and they did commit whoredoms and all manner of wicked– ness."
+  "english": "For behold, he did not keep the commandments of God, but he did walk after the desires of his own heart. And he had many wives and concubines. And he did cause his people to commit sin, and do that which was abominable in the sight of the Lord. Yea, and they did commit whoredoms and all manner of wickedness."
  },
  {
   "book": "Mosiah",
@@ -11625,7 +11625,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 11,
   "verse": 15,
-  "english": "And it came to pass that he planted vineyards round about in the land; and he built wine– presses, and made wine in abundance; and therefore he became a wine– bibber, and also his people."
+  "english": "And it came to pass that he planted vineyards round about in the land; and he built wine-presses, and made wine in abundance; and therefore he became a wine-bibber, and also his people."
  },
  {
   "book": "Mosiah",
@@ -11871,7 +11871,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 12,
   "verse": 27,
-  "english": "Ye have not applied your hearts to under– standing; therefore, ye have not been wise. Therefore, what teach ye this people?"
+  "english": "Ye have not applied your hearts to understanding; therefore, ye have not been wise. Therefore, what teach ye this people?"
  },
  {
   "book": "Mosiah",
@@ -12039,7 +12039,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 13,
   "verse": 18,
-  "english": "But the seventh day, the sabbath of the Lord thy God, thou shalt not do any work, thou, nor thy son, nor thy daughter, thy man– servant, nor thy maid– servant, nor thy cattle, nor thy stranger that is within thy gates;"
+  "english": "But the seventh day, the sabbath of the Lord thy God, thou shalt not do any work, thou, nor thy son, nor thy daughter, thy man-servant, nor thy maid-servant, nor thy cattle, nor thy stranger that is within thy gates;"
  },
  {
   "book": "Mosiah",
@@ -12075,7 +12075,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 13,
   "verse": 24,
-  "english": "Thou shalt not covet thy neighbor’s house, thou shalt not covet thy neighbor’s wife, nor his man– servant, nor his maid– servant, nor his ox, nor his ass, nor anything that is thy neighbor’s."
+  "english": "Thou shalt not covet thy neighbor’s house, thou shalt not covet thy neighbor’s wife, nor his man-servant, nor his maid-servant, nor his ox, nor his ass, nor anything that is thy neighbor’s."
  },
  {
   "book": "Mosiah",
@@ -12999,7 +12999,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 20,
   "verse": 1,
-  "english": "Now there was a place in Shemlon where the daughters of the Lamanites did gather them– selves together to sing, and to dance, and to make themselves merry."
+  "english": "Now there was a place in Shemlon where the daughters of the Lamanites did gather themselves together to sing, and to dance, and to make themselves merry."
  },
  {
   "book": "Mosiah",
@@ -13377,7 +13377,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 22,
   "verse": 2,
-  "english": "And it came to pass that they could find no way to deliver themselves out of bondage, except it were to take their women and children, and their flocks, and their herds, and their tents, and depart into the wilderness; for the Lama– nites being so numerous, it was impossible for the people of Limhi to contend with them, thinking to deliver themselves out of bondage by the sword."
+  "english": "And it came to pass that they could find no way to deliver themselves out of bondage, except it were to take their women and children, and their flocks, and their herds, and their tents, and depart into the wilderness; for the Lamanites being so numerous, it was impossible for the people of Limhi to contend with them, thinking to deliver themselves out of bondage by the sword."
  },
  {
   "book": "Mosiah",
@@ -13749,7 +13749,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 24,
   "verse": 9,
-  "english": "For Amulon knew Alma, that he had been one of the king’s priests, and that it was he that believed the words of Abinadi and was driven out before the king, and therefore he was wroth with him; for he was subject to king Laman, yet he exercised authority over them, and put tasks upon them, and put task– masters over them."
+  "english": "For Amulon knew Alma, that he had been one of the king’s priests, and that it was he that believed the words of Abinadi and was driven out before the king, and therefore he was wroth with him; for he was subject to king Laman, yet he exercised authority over them, and put tasks upon them, and put task-masters over them."
  },
  {
   "book": "Mosiah",
@@ -13803,13 +13803,13 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 24,
   "verse": 18,
-  "english": "Now it came to pass that Alma and his people in the night– time gathered their flocks together, and also of their grain; yea, even all the night– time were they gathering the flocks together."
+  "english": "Now it came to pass that Alma and his people in the nighttime gathered their flocks together, and also of their grain; yea, even all the nighttime were they gathering the flocks together."
  },
  {
   "book": "Mosiah",
   "chapter": 24,
   "verse": 19,
-  "english": "And in the morning the Lord caused a deep sleep to come upon the Lamanites, yea, and all their task– masters were in a profound sleep."
+  "english": "And in the morning the Lord caused a deep sleep to come upon the Lamanites, yea, and all their task-masters were in a profound sleep."
  },
  {
   "book": "Mosiah",
@@ -13971,7 +13971,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 25,
   "verse": 21,
-  "english": "Therefore they did assemble them– selves together in different bodies, being called churches; every church having their priests and their teachers, and every priest preaching the word according as it was delivered to him by the mouth of Alma."
+  "english": "Therefore they did assemble themselves together in different bodies, being called churches; every church having their priests and their teachers, and every priest preaching the word according as it was delivered to him by the mouth of Alma."
  },
  {
   "book": "Mosiah",
@@ -14187,7 +14187,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 26,
   "verse": 33,
-  "english": "And it came to pass when Alma had heard these words he wrote them down that he might have them, and that he might judge the people of that church according to the command– ments of God."
+  "english": "And it came to pass when Alma had heard these words he wrote them down that he might have them, and that he might judge the people of that church according to the commandments of God."
  },
  {
   "book": "Mosiah",
@@ -14373,7 +14373,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 27,
   "verse": 25,
-  "english": "And the Lord said unto me: Marvel not that all mankind, yea, men and women, all nations, kindreds, tongues and people, must be born again; yea, born of God, changed from their carnal and fallen state, to a state of righteous– ness, being redeemed of God, becoming his sons and daughters;"
+  "english": "And the Lord said unto me: Marvel not that all mankind, yea, men and women, all nations, kindreds, tongues and people, must be born again; yea, born of God, changed from their carnal and fallen state, to a state of righteousness, being redeemed of God, becoming his sons and daughters;"
  },
  {
   "book": "Mosiah",
@@ -14409,7 +14409,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 27,
   "verse": 31,
-  "english": "Yea, every knee shall bow, and every tongue confess before him. Yea, even at the last day, when all men shall stand to be judged of him, then shall they confess that he is God; then shall they confess, who live without God in the world, that the judgment of an everlasting punishment is just upon them; and they shall quake, and tremble, and shrink beneath the glance of his all– searching eye."
+  "english": "Yea, every knee shall bow, and every tongue confess before him. Yea, even at the last day, when all men shall stand to be judged of him, then shall they confess that he is God; then shall they confess, who live without God in the world, that the judgment of an everlasting punishment is just upon them; and they shall quake, and tremble, and shrink beneath the glance of his all-searching eye."
  },
  {
   "book": "Mosiah",
@@ -14421,7 +14421,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 27,
   "verse": 33,
-  "english": "But notwithstanding all this, they did impart much consolation to the church, confirming their faith, and exhorting them with long– suffering and much travail to keep the commandments of God."
+  "english": "But notwithstanding all this, they did impart much consolation to the church, confirming their faith, and exhorting them with long-suffering and much travail to keep the commandments of God."
  },
  {
   "book": "Mosiah",
@@ -14499,7 +14499,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 28,
   "verse": 9,
-  "english": "And they took their journey into the wilder– ness to go up to preach the word among the Lamanites; and I shall give an account of their proceedings hereafter."
+  "english": "And they took their journey into the wilderness to go up to preach the word among the Lamanites; and I shall give an account of their proceedings hereafter."
  },
  {
   "book": "Mosiah",
@@ -14511,7 +14511,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 28,
   "verse": 11,
-  "english": "Therefore he took the records which were engraven on the plates of brass, and also the plates of Nephi, and all the things which he had kept and preserved according to the command– ments of God, after having translated and caused to be written the records which were on the plates of gold which had been found by the people of Limhi, which were delivered to him by the hand of Limhi;"
+  "english": "Therefore he took the records which were engraven on the plates of brass, and also the plates of Nephi, and all the things which he had kept and preserved according to the commandments of God, after having translated and caused to be written the records which were on the plates of gold which had been found by the people of Limhi, which were delivered to him by the hand of Limhi;"
  },
  {
   "book": "Mosiah",
@@ -14679,7 +14679,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 29,
   "verse": 19,
-  "english": "And were it not for the interposition of their all– wise Creator, and this because of their sincere repentance, they must unavoidably remain in bondage until now."
+  "english": "And were it not for the interposition of their all-wise Creator, and this because of their sincere repentance, they must unavoidably remain in bondage until now."
  },
  {
   "book": "Mosiah",
@@ -14781,7 +14781,7 @@ window._officialVersesData = [
   "book": "Mosiah",
   "chapter": 29,
   "verse": 36,
-  "english": "Yea, all his iniquities and abominations, and all the wars, and contentions, and bloodshed, and the stealing, and the plun– dering, and the committing of whoredoms, and all manner of iniquities which cannot be enumerated—telling them that these things ought not to be, that they were expressly repugnant to the command– ments of God."
+  "english": "Yea, all his iniquities and abominations, and all the wars, and contentions, and bloodshed, and the stealing, and the plundering, and the committing of whoredoms, and all manner of iniquities which cannot be enumerated—telling them that these things ought not to be, that they were expressly repugnant to the commandments of God."
  },
  {
   "book": "Mosiah",
@@ -15021,7 +15021,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 1,
   "verse": 29,
-  "english": "And now, because of the steadiness of the church they began to be exceedingly rich, having abundance of all things whatsoever they stood in need—an abundance of flocks and herds, and fatlings of every kind, and also abundance of grain, and of gold, and of silver, and of precious things, and abundance of silk  and fine–twined linen, and all manner of good homely cloth."
+  "english": "And now, because of the steadiness of the church they began to be exceedingly rich, having abundance of all things whatsoever they stood in need—an abundance of flocks and herds, and fatlings of every kind, and also abundance of grain, and of gold, and of silver, and of precious things, and abundance of silk  and finetwined linen, and all manner of good homely cloth."
  },
  {
   "book": "Alma",
@@ -15471,7 +15471,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 4,
   "verse": 6,
-  "english": "And it came to pass in the eighth year of the reign of the judges, that the people of the church began to wax proud, because of their exceeding riches, and their fine silks, and their fine–twined linen, and because of their many flocks and herds, and their gold and their silver, and all manner of precious things, which they had obtained by their industry; and in all these things were they lifted up in the pride of their eyes, for they began to wear very costly apparel."
+  "english": "And it came to pass in the eighth year of the reign of the judges, that the people of the church began to wax proud, because of their exceeding riches, and their fine silks, and their finetwined linen, and because of their many flocks and herds, and their gold and their silver, and all manner of precious things, which they had obtained by their industry; and in all these things were they lifted up in the pride of their eyes, for they began to wear very costly apparel."
  },
  {
   "book": "Alma",
@@ -15495,7 +15495,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 4,
   "verse": 10,
-  "english": "And thus ended the eighth year of the reign of the judges; and the wickedness of the church was a great stumbling–block to those who did not belong to the church; and thus the church began to fail in its progress."
+  "english": "And thus ended the eighth year of the reign of the judges; and the wickedness of the church was a great stumbling-block to those who did not belong to the church; and thus the church began to fail in its progress."
  },
  {
   "book": "Alma",
@@ -15537,13 +15537,13 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 4,
   "verse": 17,
-  "english": "Now this man's name was Nephihah, and he was appointed chief judge; and he sat in the  judgment– seat to judge and to govern the people."
+  "english": "Now this man's name was Nephihah, and he was appointed chief judge; and he sat in the  judgment-seat to judge and to govern the people."
  },
  {
   "book": "Alma",
   "chapter": 4,
   "verse": 18,
-  "english": "Now Alma did not grant unto him the office of being high priest over the church, but he retained the office of high priest unto himself; but he delivered the judgment–seat unto Nephihah."
+  "english": "Now Alma did not grant unto him the office of being high priest over the church, but he retained the office of high priest unto himself; but he delivered the judgment-seat unto Nephihah."
  },
  {
   "book": "Alma",
@@ -15555,7 +15555,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 4,
   "verse": 20,
-  "english": "And thus in the commencement of the ninth year of the reign of the judges over the people of Nephi, Alma delivered up the judgment–seat to Nephihah, and confined himself wholly to the high priesthood of the holy order of God, to the testimony of the word, according to the spirit of revelation and prophecy."
+  "english": "And thus in the commencement of the ninth year of the reign of the judges over the people of Nephi, Alma delivered up the judgment-seat to Nephihah, and confined himself wholly to the high priesthood of the holy order of God, to the testimony of the word, according to the spirit of revelation and prophecy."
  },
  {
   "book": "Alma",
@@ -15591,7 +15591,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 5,
   "verse": 6,
-  "english": "And now behold, I say unto you, my brethren, you that belong to this church, have you sufficiently retained in remembrance the captivity of your fathers? Yea, and have you sufficiently retained in remembrance his mercy  and long–suffering towards them? And moreover, have ye sufficiently retained in remembrance that he has delivered their souls from hell?"
+  "english": "And now behold, I say unto you, my brethren, you that belong to this church, have you sufficiently retained in remembrance the captivity of your fathers? Yea, and have you sufficiently retained in remembrance his mercy  and long-suffering towards them? And moreover, have ye sufficiently retained in remembrance that he has delivered their souls from hell?"
  },
  {
   "book": "Alma",
@@ -15771,7 +15771,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 5,
   "verse": 36,
-  "english": "For behold, the time is at hand that whoso– ever bringeth forth not good fruit, or whosoever doeth not the works of righteousness, the same have cause to wail and mourn."
+  "english": "For behold, the time is at hand that whosoever bringeth forth not good fruit, or whosoever doeth not the works of righteousness, the same have cause to wail and mourn."
  },
  {
   "book": "Alma",
@@ -15981,13 +15981,13 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 7,
   "verse": 1,
-  "english": "Behold my beloved brethren, seeing that I have been permitted to come unto you, therefore I attempt to address you in my language; yea, by my own mouth, seeing that it is the first time that I have spoken unto you by the words of my mouth, I having been wholly confined to the judgment– seat, having had much business that I could not come unto you."
+  "english": "Behold my beloved brethren, seeing that I have been permitted to come unto you, therefore I attempt to address you in my language; yea, by my own mouth, seeing that it is the first time that I have spoken unto you by the words of my mouth, I having been wholly confined to the judgment-seat, having had much business that I could not come unto you."
  },
  {
   "book": "Alma",
   "chapter": 7,
   "verse": 2,
-  "english": "And even I could not have come now at this time were it not that the judgment– seat hath been given to another, to reign in my stead; and the Lord in much mercy hath granted that I should come unto you."
+  "english": "And even I could not have come now at this time were it not that the judgment-seat hath been given to another, to reign in my stead; and the Lord in much mercy hath granted that I should come unto you."
  },
  {
   "book": "Alma",
@@ -16065,7 +16065,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 7,
   "verse": 15,
-  "english": "Yea, I say unto you come and fear not, and lay aside every sin, which easily doth beset you, which doth bind you down to destruction, yea, come and go forth, and show unto your God that ye are willing to repent of your sins and enter into a covenant with him to keep his command–  ments, and witness it unto him this day by going into the waters of baptism."
+  "english": "Yea, I say unto you come and fear not, and lay aside every sin, which easily doth beset you, which doth bind you down to destruction, yea, come and go forth, and show unto your God that ye are willing to repent of your sins and enter into a covenant with him to keep his commandments, and witness it unto him this day by going into the waters of baptism."
  },
  {
   "book": "Alma",
@@ -16113,7 +16113,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 7,
   "verse": 23,
-  "english": "And now I would that ye should be humble, and be submissive and gentle; easy to be entreated; full of patience and long– suffering; being temperate in all things; being diligent in keeping the commandments of God at all times; asking for whatsoever things ye stand in need, both spiritual and temporal; always returning thanks unto God for whatsoever things ye do receive."
+  "english": "And now I would that ye should be humble, and be submissive and gentle; easy to be entreated; full of patience and long-suffering; being temperate in all things; being diligent in keeping the commandments of God at all times; asking for whatsoever things ye stand in need, both spiritual and temporal; always returning thanks unto God for whatsoever things ye do receive."
  },
  {
   "book": "Alma",
@@ -16209,7 +16209,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 8,
   "verse": 12,
-  "english": "And now we know that because we are not of thy church we know that thou hast no power over us; and thou hast delivered up the judgment– seat unto Nephihah; therefore thou art not the chief judge over us."
+  "english": "And now we know that because we are not of thy church we know that thou hast no power over us; and thou hast delivered up the judgment-seat unto Nephihah; therefore thou art not the chief judge over us."
  },
  {
   "book": "Alma",
@@ -16359,7 +16359,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 9,
   "verse": 5,
-  "english": "Now they knew not that God could do such marvelous works, for they were a hard– hearted and a stiffnecked people."
+  "english": "Now they knew not that God could do such marvelous works, for they were a hard-hearted and a stiffnecked people."
  },
  {
   "book": "Alma",
@@ -16395,7 +16395,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 9,
   "verse": 11,
-  "english": "Yea, and if it had not been for his matchless power, and his mercy, and his long– suffering towards us, we should unavoidably have been cut off from the face of the earth long before this period of time, and perhaps been consigned to a state of endless misery and woe."
+  "english": "Yea, and if it had not been for his matchless power, and his mercy, and his long-suffering towards us, we should unavoidably have been cut off from the face of the earth long before this period of time, and perhaps been consigned to a state of endless misery and woe."
  },
  {
   "book": "Alma",
@@ -16407,7 +16407,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 9,
   "verse": 13,
-  "english": "Behold, do ye not remember the words which he spake unto Lehi, saying that: Inasmuch as ye shall keep my command– ments, ye shall prosper in the land? And again it is said that: Inasmuch as ye will not keep my commandments ye shall be cut off from the presence of the Lord."
+  "english": "Behold, do ye not remember the words which he spake unto Lehi, saying that: Inasmuch as ye shall keep my commandments, ye shall prosper in the land? And again it is said that: Inasmuch as ye will not keep my commandments ye shall be cut off from the presence of the Lord."
  },
  {
   "book": "Alma",
@@ -16485,7 +16485,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 9,
   "verse": 26,
-  "english": "And not many days hence the Son of God shall come in his glory; and his glory shall be the glory of the Only Begotten of the Father, full of grace, equity, and truth, full of patience, mercy, and long– suffering, quick to hear the cries of his people and to answer their prayers."
+  "english": "And not many days hence the Son of God shall come in his glory; and his glory shall be the glory of the Only Begotten of the Father, full of grace, equity, and truth, full of patience, mercy, and long-suffering, quick to hear the cries of his people and to answer their prayers."
  },
  {
   "book": "Alma",
@@ -16515,7 +16515,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 9,
   "verse": 31,
-  "english": "Now it came to pass that when I, Alma, had spoken these words, behold, the people were wroth with me because I said unto them that they were a hard– hearted and a stiffnecked people."
+  "english": "Now it came to pass that when I, Alma, had spoken these words, behold, the people were wroth with me because I said unto them that they were a hard-hearted and a stiffnecked people."
  },
  {
   "book": "Alma",
@@ -16845,7 +16845,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 11,
   "verse": 20,
-  "english": "Now, it was for the sole purpose to get gain, because they received their wages according to their employ, therefore, they did stir up the people to riotings, and all manner of distur– bances and wickedness, that they might have more employ, that they might get money according to the suits which were brought before them; therefore they did stir up the people against Alma and Amulek."
+  "english": "Now, it was for the sole purpose to get gain, because they received their wages according to their employ, therefore, they did stir up the people to riotings, and all manner of disturbances and wickedness, that they might have more employ, that they might get money according to the suits which were brought before them; therefore they did stir up the people against Alma and Amulek."
  },
  {
   "book": "Alma",
@@ -17145,7 +17145,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 12,
   "verse": 24,
-  "english": "And we see that death comes upon mankind, yea, the death which has been spoken of by Amulek, which is the temporal death; neverthe– less there was a space granted unto man in which he might repent; therefore this life became a probationary state; a time to prepare to meet God; a time to prepare for that endless state which has been spoken of by us, which is after the resurrection of the dead."
+  "english": "And we see that death comes upon mankind, yea, the death which has been spoken of by Amulek, which is the temporal death; nevertheless there was a space granted unto man in which he might repent; therefore this life became a probationary state; a time to prepare to meet God; a time to prepare for that endless state which has been spoken of by us, which is after the resurrection of the dead."
  },
  {
   "book": "Alma",
@@ -17313,7 +17313,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 13,
   "verse": 15,
-  "english": "And it was this same Melchizedek to whom Abraham paid tithes; yea, even our father Abraham paid tithes of one– tenth part of all he possessed."
+  "english": "And it was this same Melchizedek to whom Abraham paid tithes; yea, even our father Abraham paid tithes of one-tenth part of all he possessed."
  },
  {
   "book": "Alma",
@@ -17391,7 +17391,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 13,
   "verse": 28,
-  "english": "But that ye would humble yourselves before the Lord, and call on his holy name, and watch and pray continually, that ye may not be tempted above that which ye can bear, and thus be led by the Holy Spirit, becoming humble, meek, submissive, patient, full of love and all long– suffering;"
+  "english": "But that ye would humble yourselves before the Lord, and call on his holy name, and watch and pray continually, that ye may not be tempted above that which ye can bear, and thus be led by the Holy Spirit, becoming humble, meek, submissive, patient, full of love and all long-suffering;"
  },
  {
   "book": "Alma",
@@ -17649,7 +17649,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 15,
   "verse": 11,
-  "english": "And when Alma had said these words, Zeezrom leaped upon his feet, and began to walk; and this was done to the great astonish– ment of all the people; and the knowledge of this went forth throughout all the land of Sidom."
+  "english": "And when Alma had said these words, Zeezrom leaped upon his feet, and began to walk; and this was done to the great astonishment of all the people; and the knowledge of this went forth throughout all the land of Sidom."
  },
  {
   "book": "Alma",
@@ -17673,7 +17673,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 15,
   "verse": 15,
-  "english": "But as to the people that were in the land of Ammonihah, they yet remained a hard– hearted and a stiffnecked people; and they repented not of their sins, ascribing all the power of Alma and Amulek to the devil; for they were of the profession of Nehor, and did not believe in the repentance of their sins."
+  "english": "But as to the people that were in the land of Ammonihah, they yet remained a hard-hearted and a stiffnecked people; and they repented not of their sins, ascribing all the power of Alma and Amulek to the devil; for they were of the profession of Nehor, and did not believe in the repentance of their sins."
  },
  {
   "book": "Alma",
@@ -17757,7 +17757,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 16,
   "verse": 10,
-  "english": "But behold, in one day it was left desolate; and thecarcasses were mangled by dogs and wild beasts of the wilderness."
+  "english": "But behold, in one day it was left desolate; and the carcasses were mangled by dogs and wild beasts of the wilderness."
  },
  {
   "book": "Alma",
@@ -17835,7 +17835,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 17,
   "verse": 2,
-  "english": "Now these sons of Mosiah were with Alma at the time the angel first appeared unto him; therefore Alma did rejoice exceedingly to see his brethren; and what added more to his joy, they were still his brethren in the Lord; yea, and they had waxed strong in the knowledge of the truth; for they were men of a sound under– standing and they had searched the scriptures diligently, that they might know the word of God."
+  "english": "Now these sons of Mosiah were with Alma at the time the angel first appeared unto him; therefore Alma did rejoice exceedingly to see his brethren; and what added more to his joy, they were still his brethren in the Lord; yea, and they had waxed strong in the knowledge of the truth; for they were men of a sound understanding and they had searched the scriptures diligently, that they might know the word of God."
  },
  {
   "book": "Alma",
@@ -17889,7 +17889,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 17,
   "verse": 11,
-  "english": "And the Lord said unto them also: Go forth among the Lamanites, thy brethren, and establish my word; yet ye shall be patient in long– suffering and afflictions, that ye may  show forth good examples unto them in me, and I will make an instrument of thee in my hands unto the salvation of many souls."
+  "english": "And the Lord said unto them also: Go forth among the Lamanites, thy brethren, and establish my word; yet ye shall be patient in long-suffering and afflictions, that ye may  show forth good examples unto them in me, and I will make an instrument of thee in my hands unto the salvation of many souls."
  },
  {
   "book": "Alma",
@@ -17997,7 +17997,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 17,
   "verse": 29,
-  "english": "Now they wept because of the fear of being slain. Now when Ammon saw this his heart was swollen within him with joy; for, said he, I will show forth my power unto these my fellow– servants, or the power which is in me, in restoring these flocks unto the king, that I may win the hearts of these my fellow– servants, that I may lead them to believe in my words."
+  "english": "Now they wept because of the fear of being slain. Now when Ammon saw this his heart was swollen within him with joy; for, said he, I will show forth my power unto these my fellow-servants, or the power which is in me, in restoring these flocks unto the king, that I may win the hearts of these my fellow-servants, that I may lead them to believe in my words."
  },
  {
   "book": "Alma",
@@ -18087,7 +18087,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 18,
   "verse": 5,
-  "english": "Now this was the tradition of Lamoni, which he had received from his father, that there was a Great Spirit. Notwithstanding they believed in a Great Spirit they supposed that whatso– ever they did was right; nevertheless, Lamoni began to fear exceedingly, with fear lest he had done wrong in slaying his servants;"
+  "english": "Now this was the tradition of Lamoni, which he had received from his father, that there was a Great Spirit. Notwithstanding they believed in a Great Spirit they supposed that whatsoever they did was right; nevertheless, Lamoni began to fear exceedingly, with fear lest he had done wrong in slaying his servants;"
  },
  {
   "book": "Alma",
@@ -18135,7 +18135,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 18,
   "verse": 13,
-  "english": "And one of the king's servants said unto him, Rabbanah, which is, being interpreted, power– ful or great king, considering their kings to be powerful; and thus he said unto him: Rabbanah, the king desireth thee to stay."
+  "english": "And one of the king's servants said unto him, Rabbanah, which is, being interpreted, powerful or great king, considering their kings to be powerful; and thus he said unto him: Rabbanah, the king desireth thee to stay."
  },
  {
   "book": "Alma",
@@ -18513,7 +18513,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 19,
   "verse": 33,
-  "english": "And it came to pass that when Ammon arose he alsoadministered unto them, and also did all the servants of Lamoni; and they did all declare unto the people the selfsame thing—that their hearts had been changed; that they had no more desire to do evil."
+  "english": "And it came to pass that when Ammon arose he also administered unto them, and also did all the servants of Lamoni; and they did all declare unto the people the selfsame thing—that their hearts had been changed; that they had no more desire to do evil."
  },
  {
   "book": "Alma",
@@ -18609,7 +18609,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 20,
   "verse": 13,
-  "english": "And now when Lamoni had rehearsed unto him all these things, behold, to his astonish– ment, his father was angry with him, and said: Lamoni, thou art going to deliver these Nephites, who are sons of a liar. Behold, he robbed our fathers; and now his children are also come amongst us that they may, by their cunning and their lyings, deceive us, that they again may rob us of our property."
+  "english": "And now when Lamoni had rehearsed unto him all these things, behold, to his astonishment, his father was angry with him, and said: Lamoni, thou art going to deliver these Nephites, who are sons of a liar. Behold, he robbed our fathers; and now his children are also come amongst us that they may, by their cunning and their lyings, deceive us, that they again may rob us of our property."
  },
  {
   "book": "Alma",
@@ -18633,7 +18633,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 20,
   "verse": 17,
-  "english": "But Ammon stood forth and said unto him: Behold, thou shalt not slay thy son; neverthe– less, it were better that he should fall than thee, for behold, he has repented of his sins; but if thou shouldst fall at this time, in thine anger, thy soul could not be saved."
+  "english": "But Ammon stood forth and said unto him: Behold, thou shalt not slay thy son; nevertheless, it were better that he should fall than thee, for behold, he has repented of his sins; but if thou shouldst fall at this time, in thine anger, thy soul could not be saved."
  },
  {
   "book": "Alma",
@@ -18777,7 +18777,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 21,
   "verse": 11,
-  "english": "Therefore, when he saw that they would not hear his words, he departed out of their synagogue, and came over to a village which was called Ani– Anti, and there he found Muloki preaching the word unto them; and also  Ammah and his brethren. And they contended with many about the word."
+  "english": "Therefore, when he saw that they would not hear his words, he departed out of their synagogue, and came over to a village which was called Ani-Anti, and there he found Muloki preaching the word unto them; and also  Ammah and his brethren. And they contended with many about the word."
  },
  {
   "book": "Alma",
@@ -19035,7 +19035,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 22,
   "verse": 31,
-  "english": "And they came from there up into the south wilderness. Thus the land on the northward was called Desolation, and the land on the south– ward was called Bountiful, it being the wilder– ness which is filled with all manner of wild animals of every kind, a part of which had come from the land northward for food."
+  "english": "And they came from there up into the south wilderness. Thus the land on the northward was called Desolation, and the land on the southward was called Bountiful, it being the wilderness which is filled with all manner of wild animals of every kind, a part of which had come from the land northward for food."
  },
  {
   "book": "Alma",
@@ -19161,31 +19161,31 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 23,
   "verse": 17,
-  "english": "And it came to pass that they called their names Anti– Nephi– Lehies; and they were called by this name and were no more called Lamanites."
+  "english": "And it came to pass that they called their names Anti-Nephi-Lehies; and they were called by this name and were no more called Lamanites."
  },
  {
   "book": "Alma",
   "chapter": 23,
   "verse": 18,
-  "english": "And they began to be a very industrious people; yea, and they were friendly with the Nephites; therefore, they did open a corres– pondence with them, and the curse of God did no more follow them."
+  "english": "And they began to be a very industrious people; yea, and they were friendly with the Nephites; therefore, they did open a correspondence with them, and the curse of God did no more follow them."
  },
  {
   "book": "Alma",
   "chapter": 24,
   "verse": 1,
-  "english": "And it came to pass that the Amalekites and the Amulonites and the Lamanites who were in the land of Amulon, and also in the land of Helam, and who were in the land of Jerusalem, and in fine, in all the land round about, who had not been converted and had not taken upon them the name of Anti– Nephi– Lehi, were stirred up by the Amalekites and by the Amulonites to anger against their brethren."
+  "english": "And it came to pass that the Amalekites and the Amulonites and the Lamanites who were in the land of Amulon, and also in the land of Helam, and who were in the land of Jerusalem, and in fine, in all the land round about, who had not been converted and had not taken upon them the name of Anti-Nephi-Lehi, were stirred up by the Amalekites and by the Amulonites to anger against their brethren."
  },
  {
   "book": "Alma",
   "chapter": 24,
   "verse": 2,
-  "english": "And their hatred became exceedingly sore against them, even insomuch that they began to rebel against their king, insomuch that they would not that he should be their king; therefore, they took up arms against the people of Anti– Nephi– Lehi."
+  "english": "And their hatred became exceedingly sore against them, even insomuch that they began to rebel against their king, insomuch that they would not that he should be their king; therefore, they took up arms against the people of Anti-Nephi-Lehi."
  },
  {
   "book": "Alma",
   "chapter": 24,
   "verse": 3,
-  "english": "Now the king conferred the kingdom upon his son, and he called his name Anti– Nephi– Lehi."
+  "english": "Now the king conferred the kingdom upon his son, and he called his name Anti-Nephi-Lehi."
  },
  {
   "book": "Alma",
@@ -19197,7 +19197,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 24,
   "verse": 5,
-  "english": "Now when Ammon and his brethren and all those who had come up with him saw the preparations of the Lamanites to destroy their brethren, they came forth to the land of Midian, and there Ammon met all his brethren; and from thence they came to the land of Ishmael that they might hold a council with Lamoni and also with his brother Anti– Nephi– Lehi, what they should do to defend themselves against the Lamanites."
+  "english": "Now when Ammon and his brethren and all those who had come up with him saw the preparations of the Lamanites to destroy their brethren, they came forth to the land of Midian, and there Ammon met all his brethren; and from thence they came to the land of Ishmael that they might hold a council with Lamoni and also with his brother Anti-Nephi-Lehi, what they should do to defend themselves against the Lamanites."
  },
  {
   "book": "Alma",
@@ -19215,7 +19215,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 24,
   "verse": 8,
-  "english": "And behold, I thank my great God that he has given us a portion of his Spirit to soften our hearts, that we have opened a corres– pondence with these brethren, the Nephites."
+  "english": "And behold, I thank my great God that he has given us a portion of his Spirit to soften our hearts, that we have opened a correspondence with these brethren, the Nephites."
  },
  {
   "book": "Alma",
@@ -19287,7 +19287,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 24,
   "verse": 20,
-  "english": "And it came to pass that their brethren, the Lamanites, made preparations for war, and came up to the land of Nephi for the purpose of destroying the king, and to place another in his  stead, and also of destroying the people of Anti– Nephi– Lehi out of the land."
+  "english": "And it came to pass that their brethren, the Lamanites, made preparations for war, and came up to the land of Nephi for the purpose of destroying the king, and to place another in his  stead, and also of destroying the people of Anti-Nephi-Lehi out of the land."
  },
  {
   "book": "Alma",
@@ -19353,7 +19353,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 25,
   "verse": 1,
-  "english": "And behold, now it came to pass that those Lamanites were more angry because they had slain their brethren; therefore they swore vengeance upon the Nephites; and they did no more attempt to slay the people of Anti– Nephi– Lehi at that time."
+  "english": "And behold, now it came to pass that those Lamanites were more angry because they had slain their brethren; therefore they swore vengeance upon the Nephites; and they did no more attempt to slay the people of Anti-Nephi-Lehi at that time."
  },
  {
   "book": "Alma",
@@ -19425,7 +19425,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 25,
   "verse": 13,
-  "english": "And it came to pass that when the Lamanites saw that they could not overpower the Nephites they returned again to their own land; and many of them came over to dwell in the land of Ishmael and the land of Nephi, and did join themselves to the people of God, who were the people of Anti– Nephi– Lehi."
+  "english": "And it came to pass that when the Lamanites saw that they could not overpower the Nephites they returned again to their own land; and many of them came over to dwell in the land of Ishmael and the land of Nephi, and did join themselves to the people of God, who were the people of Anti-Nephi-Lehi."
  },
  {
   "book": "Alma",
@@ -19539,13 +19539,13 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 26,
   "verse": 15,
-  "english": "Yea, they were encircled about with ever– lasting darkness and destruction; but behold, he has brought them into his everlasting light, yea, into everlasting salvation; and they are encircled about with the matchless bounty of his love; yea, and we have been instruments in his hands of doing this great and marvelous work."
+  "english": "Yea, they were encircled about with everlasting darkness and destruction; but behold, he has brought them into his everlasting light, yea, into everlasting salvation; and they are encircled about with the matchless bounty of his love; yea, and we have been instruments in his hands of doing this great and marvelous work."
  },
  {
   "book": "Alma",
   "chapter": 26,
   "verse": 16,
-  "english": "Therefore, let us glory, yea, we will glory in the Lord; yea, we will rejoice, for our joy is full; yea, we will praise our God forever. Behold, who can glory too much in the Lord? Yea, who can say too much of his great power, and of his  mercy, and of his long– suffering towards the children of men? Behold, I say unto you, I cannot say the smallest part which I feel."
+  "english": "Therefore, let us glory, yea, we will glory in the Lord; yea, we will rejoice, for our joy is full; yea, we will praise our God forever. Behold, who can glory too much in the Lord? Yea, who can say too much of his great power, and of his  mercy, and of his long-suffering towards the children of men? Behold, I say unto you, I cannot say the smallest part which I feel."
  },
  {
   "book": "Alma",
@@ -19683,7 +19683,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 27,
   "verse": 2,
-  "english": "And it came to pass that the Amalekites, because of their loss, were exceedingly angry. And when they saw that they could not seek revenge from the Nephites, they began to stir up the people in anger against their brethren, the people of Anti– Nephi– Lehi; therefore they began again to destroy them."
+  "english": "And it came to pass that the Amalekites, because of their loss, were exceedingly angry. And when they saw that they could not seek revenge from the Nephites, they began to stir up the people in anger against their brethren, the people of Anti-Nephi-Lehi; therefore they began again to destroy them."
  },
  {
   "book": "Alma",
@@ -19695,7 +19695,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 27,
   "verse": 4,
-  "english": "Now when Ammon and his brethren saw this work of destruction among those whom they so dearly beloved, and among those who had so dearly beloved them—for they were treated as though they were angels sent from God to save them from everlasting destruction – therefore, when Ammon and his brethren saw this great work of destruction, they were moved with compassion, and they said unto the king:"
+  "english": "Now when Ammon and his brethren saw this work of destruction among those whom they so dearly beloved, and among those who had so dearly beloved them—for they were treated as though they were angels sent from God to save them from everlasting destruction—therefore, when Ammon and his brethren saw this great work of destruction, they were moved with compassion, and they said unto the king:"
  },
  {
   "book": "Alma",
@@ -19797,7 +19797,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 27,
   "verse": 21,
-  "english": "And it came to pass that the chief judge sent a proclamation throughout all the land, desiring the voice of the people concerning the admitting their brethren, who were the people of Anti–Nephi–Lehi."
+  "english": "And it came to pass that the chief judge sent a proclamation throughout all the land, desiring the voice of the people concerning the admitting their brethren, who were the people of Anti-Nephi-Lehi."
  },
  {
   "book": "Alma",
@@ -19821,7 +19821,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 27,
   "verse": 25,
-  "english": "Now, it came to pass that when Ammon had heard this, he returned to the people of Anti– Nephi– Lehi, and also Alma with him, into the wilderness, where they had pitched their tents, and made known unto them all these things. And Alma also related unto them his conversion, with Ammon and Aaron, and his brethren."
+  "english": "Now, it came to pass that when Ammon had heard this, he returned to the people of Anti-Nephi-Lehi, and also Alma with him, into the wilderness, where they had pitched their tents, and made known unto them all these things. And Alma also related unto them his conversion, with Ammon and Aaron, and his brethren."
  },
  {
   "book": "Alma",
@@ -19923,7 +19923,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 28,
   "verse": 12,
-  "english": "While many thousands of others truly mourn for the loss of their kindred, yet they rejoice and exult in the hope, and even know, according to the promises of the Lord, that they are raised to dwell at the right hand of God, in a state of never– ending happiness."
+  "english": "While many thousands of others truly mourn for the loss of their kindred, yet they rejoice and exult in the hope, and even know, according to the promises of the Lord, that they are raised to dwell at the right hand of God, in a state of never-ending happiness."
  },
  {
   "book": "Alma",
@@ -20067,13 +20067,13 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 30,
   "verse": 5,
-  "english": "And it came to pass that in the commence– ment of the seventeenth year of the reign of the judges, there was continual peace."
+  "english": "And it came to pass that in the commencement of the seventeenth year of the reign of the judges, there was continual peace."
  },
  {
   "book": "Alma",
   "chapter": 30,
   "verse": 6,
-  "english": "But it came to pass in the latter end of the seventeenth year, there came a man into the land of Zarahemla, and he was Anti– Christ, for he began to preach unto the people against the prophecies which had been spoken by the prophets, concerning the coming of Christ."
+  "english": "But it came to pass in the latter end of the seventeenth year, there came a man into the land of Zarahemla, and he was Anti-Christ, for he began to preach unto the people against the prophecies which had been spoken by the prophets, concerning the coming of Christ."
  },
  {
   "book": "Alma",
@@ -20109,7 +20109,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 30,
   "verse": 12,
-  "english": "And this Anti– Christ, whose name was Korihor, (and the law could have no hold upon him) began to preach unto the people that there should be no Christ. And after this manner did he preach, saying:"
+  "english": "And this Anti-Christ, whose name was Korihor, (and the law could have no hold upon him) began to preach unto the people that there should be no Christ. And after this manner did he preach, saying:"
  },
  {
   "book": "Alma",
@@ -20235,7 +20235,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 30,
   "verse": 33,
-  "english": "And notwithstanding the many labors which I have performed in the church, I have never received so much as even one senine for my labor; neither has any of my brethren, save it were in the judgment– seat; and then we have received only according to law for our time."
+  "english": "And notwithstanding the many labors which I have performed in the church, I have never received so much as even one senine for my labor; neither has any of my brethren, save it were in the judgment-seat; and then we have received only according to law for our time."
  },
  {
   "book": "Alma",
@@ -20883,7 +20883,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 32,
   "verse": 43,
-  "english": "Then, my brethren, ye shall reap the rewards of your faith, and your diligence, and patience, and long– suffering, waiting for the tree to bring forth fruit unto you."
+  "english": "Then, my brethren, ye shall reap the rewards of your faith, and your diligence, and patience, and long-suffering, waiting for the tree to bring forth fruit unto you."
  },
  {
   "book": "Alma",
@@ -21147,7 +21147,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 34,
   "verse": 21,
-  "english": "Cry unto him in your houses, yea, over all your household, both morning, mid– day, and evening."
+  "english": "Cry unto him in your houses, yea, over all your household, both morning, mid-day, and evening."
  },
  {
   "book": "Alma",
@@ -21291,7 +21291,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 35,
   "verse": 4,
-  "english": "And they sent and gathered together through– out all the land all the people, and consulted with them concerning the words which had been spoken."
+  "english": "And they sent and gathered together throughout all the land all the people, and consulted with them concerning the words which had been spoken."
  },
  {
   "book": "Alma",
@@ -21669,7 +21669,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 37,
   "verse": 21,
-  "english": "And now, I will speak unto you concerning those twenty– four plates, that ye keep them, that the mysteries and the works of darkness, and their secret works, or the secret works of  those people who have been destroyed, may be made manifest unto this people; yea, all their murders, and robbings, and their plunderings, and all their wickedness and abominations, may be made manifest unto this people; yea, and that ye preserve these interpreters."
+  "english": "And now, I will speak unto you concerning those twenty-four plates, that ye keep them, that the mysteries and the works of darkness, and their secret works, or the secret works of  those people who have been destroyed, may be made manifest unto this people; yea, all their murders, and robbings, and their plunderings, and all their wickedness and abominations, may be made manifest unto this people; yea, and that ye preserve these interpreters."
  },
  {
   "book": "Alma",
@@ -21771,7 +21771,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 37,
   "verse": 38,
-  "english": "And now, my son, I have somewhat to say concerning the thing which our fathers call a ball, or director—or our fathers called it Liahona, which is, being interpreted, a com– pass; and the Lord prepared it."
+  "english": "And now, my son, I have somewhat to say concerning the thing which our fathers call a ball, or director—or our fathers called it Liahona, which is, being interpreted, a compass; and the Lord prepared it."
  },
  {
   "book": "Alma",
@@ -21843,7 +21843,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 38,
   "verse": 3,
-  "english": "I say unto you, my son, that I have had great joy in thee already, because of thy faithfulness and thy diligence, and thy patience and thy long– suffering among the people of the Zoramites."
+  "english": "I say unto you, my son, that I have had great joy in thee already, because of thy faithfulness and thy diligence, and thy patience and thy long-suffering among the people of the Zoramites."
  },
  {
   "book": "Alma",
@@ -21879,7 +21879,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 38,
   "verse": 9,
-  "english": "And now, my son, I have told you this that ye may learn wisdom, that ye may learn of me that there is no other way or means whereby man can be saved, only in and through Christ. Behold, he is the life and the light of the world. Behold, he is the word of truth and righteous– ness."
+  "english": "And now, my son, I have told you this that ye may learn wisdom, that ye may learn of me that there is no other way or means whereby man can be saved, only in and through Christ. Behold, he is the life and the light of the world. Behold, he is the word of truth and righteousness."
  },
  {
   "book": "Alma",
@@ -22455,7 +22455,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 42,
   "verse": 30,
-  "english": "O my son, I desire that ye should deny the justice of God no more. Do not endeavor to excuse yourself in the least point because of your sins, by denying the justice of God; but do you let the justice of God, and his mercy, and his long– suffering have full sway in your heart; and let it bring you down to the dust in humility."
+  "english": "O my son, I desire that ye should deny the justice of God no more. Do not endeavor to excuse yourself in the least point because of your sins, by denying the justice of God; but do you let the justice of God, and his mercy, and his long-suffering have full sway in your heart; and let it bring you down to the dust in humility."
  },
  {
   "book": "Alma",
@@ -22527,7 +22527,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 43,
   "verse": 11,
-  "english": "Yea, and they also knew the extreme hatred of the Lamanites towards their brethren, who were the people of Anti– Nephi– Lehi, who were called the people of Ammon—and they would not take up arms, yea, they had entered into a covenant and they would not break it—therefore, if they should fall into the hands of the Lamanites they would be destroyed."
+  "english": "Yea, and they also knew the extreme hatred of the Lamanites towards their brethren, who were the people of Anti-Nephi-Lehi, who were called the people of Ammon—and they would not take up arms, yea, they had entered into a covenant and they would not break it—therefore, if they should fall into the hands of the Lamanites they would be destroyed."
  },
  {
   "book": "Alma",
@@ -22575,7 +22575,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 43,
   "verse": 19,
-  "english": "And when the armies of the Lamanites saw that the people of Nephi, or that Moroni, had prepared his people with breastplates and with arm– shields, yea, and also shields to defend their heads, and also they were dressed with thick clothing—"
+  "english": "And when the armies of the Lamanites saw that the people of Nephi, or that Moroni, had prepared his people with breastplates and with armshields, yea, and also shields to defend their heads, and also they were dressed with thick clothing—"
  },
  {
   "book": "Alma",
@@ -22689,7 +22689,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 43,
   "verse": 38,
-  "english": "While on the other hand, there was now and then a man fell among the Nephites, by their swords and the loss of blood, they being shielded from the more vital parts of the body, or the more vital parts of the body being shielded from the strokes of the Lamanites, by their breastplates, and their armshields, and their head– plates; and thus the Nephites did carry on the work of death among the Lamanites."
+  "english": "While on the other hand, there was now and then a man fell among the Nephites, by their swords and the loss of blood, they being shielded from the more vital parts of the body, or the more vital parts of the body being shielded from the strokes of the Lamanites, by their breastplates, and their armshields, and their head-plates; and thus the Nephites did carry on the work of death among the Lamanites."
  },
  {
   "book": "Alma",
@@ -22725,7 +22725,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 43,
   "verse": 44,
-  "english": "And they were inspired by the Zoramites and the Amalekites, who were their chief captains and leaders, and by Zerahemnah, who was their chief captain, or their chief leader and commander; yea, they did fight like dragons, and many of the Nephites were slain by their hands, yea, for they did smite in two many of their head– plates, and they did pierce many of their breastplates, and they did smite off many of their arms; and thus the Lamanites did smite in their fierce anger."
+  "english": "And they were inspired by the Zoramites and the Amalekites, who were their chief captains and leaders, and by Zerahemnah, who was their chief captain, or their chief leader and commander; yea, they did fight like dragons, and many of the Nephites were slain by their hands, yea, for they did smite in two many of their head-plates, and they did pierce many of their breastplates, and they did smite off many of their arms; and thus the Lamanites did smite in their fierce anger."
  },
  {
   "book": "Alma",
@@ -22815,7 +22815,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 44,
   "verse": 5,
-  "english": "And now, Zerahemnah, I command you, in the name of that all– powerful God, who has strengthened our arms that we have gained power over you, by our faith, by our religion, and by our rites of worship, and by our church, and by the sacred support which we owe to our  wives and our children, by that liberty which binds us to our lands and our country; yea, and also by the maintenance of the sacred word of God, to which we owe all our happiness; and by all that is most dear unto us—"
+  "english": "And now, Zerahemnah, I command you, in the name of that all-powerful God, who has strengthened our arms that we have gained power over you, by our faith, by our religion, and by our rites of worship, and by our church, and by the sacred support which we owe to our  wives and our children, by that liberty which binds us to our lands and our country; yea, and also by the maintenance of the sacred word of God, to which we owe all our happiness; and by all that is most dear unto us—"
  },
  {
   "book": "Alma",
@@ -23115,7 +23115,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 46,
   "verse": 7,
-  "english": "And there were many in the church who believed in the flattering words of Amalickiah, therefore they dissented even from the church; and thus were the affairs of the people of Nephi exceedingly precarious and dangerous, not– withstanding their great victory which they had had over the Lamanites, and their great rejoicings which they had had because of their deliverance by the hand of the Lord."
+  "english": "And there were many in the church who believed in the flattering words of Amalickiah, therefore they dissented even from the church; and thus were the affairs of the people of Nephi exceedingly precarious and dangerous, notwithstanding their great victory which they had had over the Lamanites, and their great rejoicings which they had had because of their deliverance by the hand of the Lord."
  },
  {
   "book": "Alma",
@@ -23151,7 +23151,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 46,
   "verse": 13,
-  "english": "And he fastened on his head– plate, and his breastplate, and his shields, and girded on his armor about his loins; and he took the pole, which had on the end thereof his rent coat, (and he called it the title of liberty) and he bowed himself to the earth, and he prayed mightily unto his God for the blessings of liberty to rest upon his brethren, so long as there should a band of Christians remain to possess the land—"
+  "english": "And he fastened on his head-plate, and his breastplate, and his shields, and girded on his armor about his loins; and he took the pole, which had on the end thereof his rent coat, (and he called it the title of liberty) and he bowed himself to the earth, and he prayed mightily unto his God for the blessings of liberty to rest upon his brethren, so long as there should a band of Christians remain to possess the land—"
  },
  {
   "book": "Alma",
@@ -23397,7 +23397,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 47,
   "verse": 13,
-  "english": "And it came to pass that when Lehonti had come down with his guards to Amalickiah, that Amalickiah desired him to come down with his army in the night– time, and surround those men in their camps over whom the king had given him command, and that he would deliver them up into Lehonti's hands, if he would make him (Amalickiah) a second leader over the whole army."
+  "english": "And it came to pass that when Lehonti had come down with his guards to Amalickiah, that Amalickiah desired him to come down with his army in the nighttime, and surround those men in their camps over whom the king had given him command, and that he would deliver them up into Lehonti's hands, if he would make him (Amalickiah) a second leader over the whole army."
  },
  {
   "book": "Alma",
@@ -23601,7 +23601,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 48,
   "verse": 11,
-  "english": "And Moroni was a strong and a mighty man; he was a man of a perfect under– standing; yea, a man that did not delight in bloodshed; a man whose soul did joy in the liberty and the freedom of his country, and his brethren from bondage and slavery;"
+  "english": "And Moroni was a strong and a mighty man; he was a man of a perfect understanding; yea, a man that did not delight in bloodshed; a man whose soul did joy in the liberty and the freedom of his country, and his brethren from bondage and slavery;"
  },
  {
   "book": "Alma",
@@ -23829,7 +23829,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 49,
   "verse": 24,
-  "english": "There were about fifty who were wounded, who had been exposed to the arrows of the Lamanites through the pass, but they were shielded by their shields, and their breastplates, and their head– plates, insomuch that their wounds were upon their legs, many of which were very severe."
+  "english": "There were about fifty who were wounded, who had been exposed to the arrows of the Lamanites through the pass, but they were shielded by their shields, and their breastplates, and their head-plates, insomuch that their wounds were upon their legs, many of which were very severe."
  },
  {
   "book": "Alma",
@@ -23967,7 +23967,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 50,
   "verse": 17,
-  "english": "And in these prosperous circumstances were the people of Nephi in the commence– ment of the twenty and first year of the reign of the judges over the people of Nephi."
+  "english": "And in these prosperous circumstances were the people of Nephi in the commencement of the twenty and first year of the reign of the judges over the people of Nephi."
  },
  {
   "book": "Alma",
@@ -23991,7 +23991,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 50,
   "verse": 21,
-  "english": "And we see that these promises have been verified to the people of Nephi; for it has been their quarrelings and their contentions, yea, their murderings, and their plunderings, their idolatry, their whoredoms, and their  abominations, which were among them– selves, which brought upon them their wars and their destructions."
+  "english": "And we see that these promises have been verified to the people of Nephi; for it has been their quarrelings and their contentions, yea, their murderings, and their plunderings, their idolatry, their whoredoms, and their  abominations, which were among themselves, which brought upon them their wars and their destructions."
  },
  {
   "book": "Alma",
@@ -24015,7 +24015,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 50,
   "verse": 25,
-  "english": "And it came to pass that in the commence– ment of the twenty and fourth year of the reign of the judges, there would also have been peace among the people of Nephi had it not been for a contention which took place among them concerning the land of Lehi, and the land of Morianton, which joined upon the borders of Lehi; both of which were on the borders by the seashore."
+  "english": "And it came to pass that in the commencement of the twenty and fourth year of the reign of the judges, there would also have been peace among the people of Nephi had it not been for a contention which took place among them concerning the land of Lehi, and the land of Morianton, which joined upon the borders of Lehi; both of which were on the borders by the seashore."
  },
  {
   "book": "Alma",
@@ -24087,7 +24087,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 50,
   "verse": 37,
-  "english": "And it came to pass that in the same year that the people of Nephi had peace restored unto them, that Nephihah, the second chief judge, died, having filled the judgment– seat with perfect uprightness before God."
+  "english": "And it came to pass that in the same year that the people of Nephi had peace restored unto them, that Nephihah, the second chief judge, died, having filled the judgment-seat with perfect uprightness before God."
  },
  {
   "book": "Alma",
@@ -24099,7 +24099,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 50,
   "verse": 39,
-  "english": "Behold, it came to pass that the son of Nephihah was appointed to fill the judgment– seat, in the stead of his father; yea, he was appointed chief judge and governor over the people, with an oath and sacred ordinance to judge righteously, and to keep the peace and the freedom of the people, and to grant unto them their sacred privileges to worship the Lord their God, yea, to support and maintain the cause of God all his days, and to bring the wicked to justice according to their crime."
+  "english": "Behold, it came to pass that the son of Nephihah was appointed to fill the judgment-seat, in the stead of his father; yea, he was appointed chief judge and governor over the people, with an oath and sacred ordinance to judge righteously, and to keep the peace and the freedom of the people, and to grant unto them their sacred privileges to worship the Lord their God, yea, to support and maintain the cause of God all his days, and to bring the wicked to justice according to their crime."
  },
  {
   "book": "Alma",
@@ -24111,7 +24111,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 51,
   "verse": 1,
-  "english": "And now it came to pass in the commence– ment of the twenty and fifth year of the reign of the judges over the people of Nephi, they having established peace between the people of Lehi and the people of Morianton concerning their lands, and having commenced the twenty and fifth year in peace;"
+  "english": "And now it came to pass in the commencement of the twenty and fifth year of the reign of the judges over the people of Nephi, they having established peace between the people of Lehi and the people of Morianton concerning their lands, and having commenced the twenty and fifth year in peace;"
  },
  {
   "book": "Alma",
@@ -24135,7 +24135,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 51,
   "verse": 5,
-  "english": "And it came to pass that those who were desirous that Pahoran should be dethroned from the judgment– seat were called king– men, for they were desirous that the law should be altered in a manner to overthrow the free government and to establish a king over the land."
+  "english": "And it came to pass that those who were desirous that Pahoran should be dethroned from the judgment-seat were called kingmen, for they were desirous that the law should be altered in a manner to overthrow the free government and to establish a king over the land."
  },
  {
   "book": "Alma",
@@ -24147,7 +24147,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 51,
   "verse": 7,
-  "english": "And it came to pass that this matter of their contention was settled by the voice of the people. And it came to pass that the voice of the people came in favor of the freemen, and Pahoran retained the judgment– seat, which caused much rejoicing among the brethren of Pahoran and also many of the people of liberty, who also put the king– men to silence, that they durst not oppose but were obliged to maintain the cause of freedom."
+  "english": "And it came to pass that this matter of their contention was settled by the voice of the people. And it came to pass that the voice of the people came in favor of the freemen, and Pahoran retained the judgment-seat, which caused much rejoicing among the brethren of Pahoran and also many of the people of liberty, who also put the kingmen to silence, that they durst not oppose but were obliged to maintain the cause of freedom."
  },
  {
   "book": "Alma",
@@ -24183,7 +24183,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 51,
   "verse": 13,
-  "english": "And it came to pass that when the men who were called king– men had heard that the Lamanites were coming down to battle against them, they were glad in their hearts; and they refused to take up arms, for they were so wroth with the chief judge, and also with the people of liberty, that they would not take up arms to defend their country."
+  "english": "And it came to pass that when the men who were called kingmen had heard that the Lamanites were coming down to battle against them, they were glad in their hearts; and they refused to take up arms, for they were so wroth with the chief judge, and also with the people of liberty, that they would not take up arms to defend their country."
  },
  {
   "book": "Alma",
@@ -24207,7 +24207,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 51,
   "verse": 17,
-  "english": "And it came to pass that Moroni commanded that his army should go against those king– men, to pull down their pride and their nobility and level them with the earth, or they should take up arms and support the cause of liberty."
+  "english": "And it came to pass that Moroni commanded that his army should go against those kingmen, to pull down their pride and their nobility and level them with the earth, or they should take up arms and support the cause of liberty."
  },
  {
   "book": "Alma",
@@ -24231,7 +24231,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 51,
   "verse": 21,
-  "english": "And thus Moroni put an end to those king– men, that there were not any known by the appellation of king– men; and thus he put an end to the stubbornness and the pride of those people who professed the blood of nobility; but they were brought down to humble themselves like unto their brethren, and to fight valiantly for their freedom from bondage."
+  "english": "And thus Moroni put an end to those kingmen, that there were not any known by the appellation of kingmen; and thus he put an end to the stubbornness and the pride of those people who professed the blood of nobility; but they were brought down to humble themselves like unto their brethren, and to fight valiantly for their freedom from bondage."
  },
  {
   "book": "Alma",
@@ -25065,7 +25065,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 56,
   "verse": 1,
-  "english": "And now it came to pass in the commence– ment of the thirtieth year of the reign of the judges, on the second day in the first month, Moroni received an epistle from Helaman, stating the affairs of the people in that quarter of the land."
+  "english": "And now it came to pass in the commencement of the thirtieth year of the reign of the judges, on the second day in the first month, Moroni received an epistle from Helaman, stating the affairs of the people in that quarter of the land."
  },
  {
   "book": "Alma",
@@ -25671,7 +25671,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 58,
   "verse": 9,
-  "english": "And now the cause of these our embarrass– ments, or the cause why they did not send more strength unto us, we knew not; therefore we were grieved and also filled with fear, lest by any means the judgments of God should come upon our land, to our overthrow and utter destruction."
+  "english": "And now the cause of these our embarrassments, or the cause why they did not send more strength unto us, we knew not; therefore we were grieved and also filled with fear, lest by any means the judgments of God should come upon our land, to our overthrow and utter destruction."
  },
  {
   "book": "Alma",
@@ -25779,7 +25779,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 58,
   "verse": 27,
-  "english": "And because of this our march in the night– time, behold, on the morrow we were beyond the Lamanites, insomuch that we did arrive before them at the city of Manti."
+  "english": "And because of this our march in the nighttime, behold, on the morrow we were beyond the Lamanites, insomuch that we did arrive before them at the city of Manti."
  },
  {
   "book": "Alma",
@@ -26037,13 +26037,13 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 60,
   "verse": 16,
-  "english": "Yea, had it not been for the war which broke out among ourselves; yea, were it not for these king– men, who caused so much bloodshed  among ourselves; yea, at the time we were contending among ourselves, if we had united our strength as we hitherto have done; yea, had it not been for the desire of power and authority which those king– men had over us; had they been true to the cause of our freedom, and united with us, and gone forth against our enemies, instead of taking up their swords against us, which was the cause of so much bloodshed among ourselves; yea, if we had gone forth against them in the strength of the Lord, we should have dispersed our enemies, for it would have been done, according to the fulfilling of his word."
+  "english": "Yea, had it not been for the war which broke out among ourselves; yea, were it not for these kingmen, who caused so much bloodshed  among ourselves; yea, at the time we were contending among ourselves, if we had united our strength as we hitherto have done; yea, had it not been for the desire of power and authority which those kingmen had over us; had they been true to the cause of our freedom, and united with us, and gone forth against our enemies, instead of taking up their swords against us, which was the cause of so much bloodshed among ourselves; yea, if we had gone forth against them in the strength of the Lord, we should have dispersed our enemies, for it would have been done, according to the fulfilling of his word."
  },
  {
   "book": "Alma",
   "chapter": 60,
   "verse": 17,
-  "english": "But behold, now the Lamanites are coming upon us, taking possession of our lands, and they are murdering our people with the sword, yea, our women and our children, and also carrying them away captive, causing them that they should suffer all manner of afflictions, and this because of the great wickedness of those who are seeking for power and authority, yea, even those king– men."
+  "english": "But behold, now the Lamanites are coming upon us, taking possession of our lands, and they are murdering our people with the sword, yea, our women and our children, and also carrying them away captive, causing them that they should suffer all manner of afflictions, and this because of the great wickedness of those who are seeking for power and authority, yea, even those kingmen."
  },
  {
   "book": "Alma",
@@ -26181,7 +26181,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 61,
   "verse": 4,
-  "english": "And it is those who have sought to take away the judgment– seat from me that have been the cause of this great iniquity; for they have used great flattery, and they have led away the hearts of many people, which will be the cause of sore affliction among us; they have withheld our provisions, and have daunted our freemen that they have not come unto you."
+  "english": "And it is those who have sought to take away the judgment-seat from me that have been the cause of this great iniquity; for they have used great flattery, and they have led away the hearts of many people, which will be the cause of sore affliction among us; they have withheld our provisions, and have daunted our freemen that they have not come unto you."
  },
  {
   "book": "Alma",
@@ -26211,7 +26211,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 61,
   "verse": 9,
-  "english": "And now, in your epistle you have censured me, but it mattereth not; I am not angry, but do rejoice in the greatness of your heart. I, Pahoran, do not seek for power, save only to retain my judgment– seat that I may preserve the rights and the liberty of my people. My soul standeth fast in that liberty in the which God hath made us free."
+  "english": "And now, in your epistle you have censured me, but it mattereth not; I am not angry, but do rejoice in the greatness of your heart. I, Pahoran, do not seek for power, save only to retain my judgment-seat that I may preserve the rights and the liberty of my people. My soul standeth fast in that liberty in the which God hath made us free."
  },
  {
   "book": "Alma",
@@ -26295,7 +26295,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 62,
   "verse": 2,
-  "english": "But he did also mourn exceedingly because of the iniquity of those who had driven Pahoran from the judgment– seat, yea, in fine because of those who had rebelled against their country and also their God."
+  "english": "But he did also mourn exceedingly because of the iniquity of those who had driven Pahoran from the judgment-seat, yea, in fine because of those who had rebelled against their country and also their God."
  },
  {
   "book": "Alma",
@@ -26337,7 +26337,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 62,
   "verse": 9,
-  "english": "And the men of Pachus received their trial, according to the law, and also those king– men who had been taken and cast into prison; and they were executed according to the law; yea, those men of Pachus and those kingmen, whosoever would not take up arms in the defense of their country, but would fight against it, were put to death."
+  "english": "And the men of Pachus received their trial, according to the law, and also those kingmen who had been taken and cast into prison; and they were executed according to the law; yea, those men of Pachus and those kingmen, whosoever would not take up arms in the defense of their country, but would fight against it, were put to death."
  },
  {
   "book": "Alma",
@@ -26493,7 +26493,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 62,
   "verse": 35,
-  "english": "And thus they did encamp for the night. For behold, the Nephites and the Lamanites also were weary because of the greatness of the march; therefore they did not resolve upon any stratagem in the night– time, save it were Teancum; for he was exceedingly angry with Ammoron, insomuch that he considered that Ammoron, and Amalickiah his brother, had been the cause of this great and lasting war between them and the Lamanites, which had been the cause of so much war and bloodshed, yea, and so much famine."
+  "english": "And thus they did encamp for the night. For behold, the Nephites and the Lamanites also were weary because of the greatness of the march; therefore they did not resolve upon any stratagem in the nighttime, save it were Teancum; for he was exceedingly angry with Ammoron, insomuch that he considered that Ammoron, and Amalickiah his brother, had been the cause of this great and lasting war between them and the Lamanites, which had been the cause of so much war and bloodshed, yea, and so much famine."
  },
  {
   "book": "Alma",
@@ -26523,7 +26523,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 62,
   "verse": 40,
-  "english": "And there had been murders, and contentions, and dissensions, and all manner of iniquity among the people of Nephi; never– theless for the righteous' sake, yea, because of the prayers of the righteous, they were spared."
+  "english": "And there had been murders, and contentions, and dissensions, and all manner of iniquity among the people of Nephi; nevertheless for the righteous' sake, yea, because of the prayers of the righteous, they were spared."
  },
  {
   "book": "Alma",
@@ -26547,7 +26547,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 62,
   "verse": 44,
-  "english": "And Pahoran did return to his judgment– seat; and Helaman did take upon him again to preach unto the people the word of God; for because of so many wars and contentions it had become expedient that a regulation should be made again in the church."
+  "english": "And Pahoran did return to his judgment-seat; and Helaman did take upon him again to preach unto the people the word of God; for because of so many wars and contentions it had become expedient that a regulation should be made again in the church."
  },
  {
   "book": "Alma",
@@ -26709,19 +26709,19 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 1,
   "verse": 2,
-  "english": "For behold, Pahoran had died, and gone the way of all the earth; therefore there began to be a serious contention concerning who should have the judgment– seat among the brethren, who were the sons of Pahoran."
+  "english": "For behold, Pahoran had died, and gone the way of all the earth; therefore there began to be a serious contention concerning who should have the judgment-seat among the brethren, who were the sons of Pahoran."
  },
  {
   "book": "Helaman",
   "chapter": 1,
   "verse": 3,
-  "english": "Now these are their names who did contend for the judgment– seat, who did also cause the people to contend: Pahoran, Paanchi, and Pacumeni."
+  "english": "Now these are their names who did contend for the judgment-seat, who did also cause the people to contend: Pahoran, Paanchi, and Pacumeni."
  },
  {
   "book": "Helaman",
   "chapter": 1,
   "verse": 4,
-  "english": "Now these are not all the sons of Pahoran, (for he had many) but these are they who did contend for the judgment– seat; therefore, they did cause three divisions among the people."
+  "english": "Now these are not all the sons of Pahoran, (for he had many) but these are they who did contend for the judgment-seat; therefore, they did cause three divisions among the people."
  },
  {
   "book": "Helaman",
@@ -26733,7 +26733,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 1,
   "verse": 6,
-  "english": "And it came to pass that Pacumeni, when he saw that he could not obtain the judgment– seat, he did unite with the voice of the people."
+  "english": "And it came to pass that Pacumeni, when he saw that he could not obtain the judgment-seat, he did unite with the voice of the people."
  },
  {
   "book": "Helaman",
@@ -26751,7 +26751,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 1,
   "verse": 9,
-  "english": "Now when those people who were desirous that he should be their governor saw that he was condemned unto death, therefore they were angry, and behold, they sent forth one Kishkumen, even to the judgment– seat of Pahoran, and murdered Pahoran as he sat upon the judgment–seat."
+  "english": "Now when those people who were desirous that he should be their governor saw that he was condemned unto death, therefore they were angry, and behold, they sent forth one Kishkumen, even to the judgment-seat of Pahoran, and murdered Pahoran as he sat upon the judgment-seat."
  },
  {
   "book": "Helaman",
@@ -26781,7 +26781,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 1,
   "verse": 14,
-  "english": "And it came to pass in the forty and first year of the reign of the judges, that the Lamanites had gathered together an innumerable army of men, and armed them with swords, and with cimeters and with bows, and with arrows, and with head– plates, and with breastplates, and with all manner of shields of every kind."
+  "english": "And it came to pass in the forty and first year of the reign of the judges, that the Lamanites had gathered together an innumerable army of men, and armed them with swords, and with cimeters and with bows, and with arrows, and with head-plates, and with breastplates, and with all manner of shields of every kind."
  },
  {
   "book": "Helaman",
@@ -26907,13 +26907,13 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 2,
   "verse": 1,
-  "english": "And it came to pass in the forty and second year of the reign of the judges, after Moronihah had established again peace between the Nephites and the Lamanites, behold there was no one to fill the judgment– seat; therefore there began to be a contention again among the people concerning who should fill the judgment – seat."
+  "english": "And it came to pass in the forty and second year of the reign of the judges, after Moronihah had established again peace between the Nephites and the Lamanites, behold there was no one to fill the judgment-seat; therefore there began to be a contention again among the people concerning who should fill the judgment-seat."
  },
  {
   "book": "Helaman",
   "chapter": 2,
   "verse": 2,
-  "english": "And it came to pass that Helaman, who was the son of Helaman, was appointed to fill the judgment– seat, by the voice of the people."
+  "english": "And it came to pass that Helaman, who was the son of Helaman, was appointed to fill the judgment-seat, by the voice of the people."
  },
  {
   "book": "Helaman",
@@ -26931,31 +26931,31 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 2,
   "verse": 5,
-  "english": "Therefore he did flatter them, and also Kishkumen, that if they would place him in the judgment– seat he would grant unto those who belonged to his band that they should be placed in power and authority among the people; therefore Kishkumen sought to destroy Helaman."
+  "english": "Therefore he did flatter them, and also Kishkumen, that if they would place him in the judgment-seat he would grant unto those who belonged to his band that they should be placed in power and authority among the people; therefore Kishkumen sought to destroy Helaman."
  },
  {
   "book": "Helaman",
   "chapter": 2,
   "verse": 6,
-  "english": "And it came to pass as he went forth towards the judgment– seat to destroy Helaman, behold  one of the servants of Helaman, having been out by night, and having obtained, through disguise, a knowledge of those plans which had been laid by this band to destroy Helaman—"
+  "english": "And it came to pass as he went forth towards the judgment-seat to destroy Helaman, behold  one of the servants of Helaman, having been out by night, and having obtained, through disguise, a knowledge of those plans which had been laid by this band to destroy Helaman—"
  },
  {
   "book": "Helaman",
   "chapter": 2,
   "verse": 7,
-  "english": "And it came to pass that he met Kishkumen, and he gave unto him a sign; therefore Kishkumen made known unto him the object of his desire, desiring that he would conduct him to the judgment– seat that he might murder Helaman."
+  "english": "And it came to pass that he met Kishkumen, and he gave unto him a sign; therefore Kishkumen made known unto him the object of his desire, desiring that he would conduct him to the judgment-seat that he might murder Helaman."
  },
  {
   "book": "Helaman",
   "chapter": 2,
   "verse": 8,
-  "english": "And when the servant of Helaman had known all the heart of Kishkumen, and how that it was his object to murder, and also that it was the object of all those who belonged to his band to murder, and to rob, and to gain power, (and this was their secret plan, and their combination) the servant of Helaman said unto Kishkumen: Let us go forth unto the judgment– seat."
+  "english": "And when the servant of Helaman had known all the heart of Kishkumen, and how that it was his object to murder, and also that it was the object of all those who belonged to his band to murder, and to rob, and to gain power, (and this was their secret plan, and their combination) the servant of Helaman said unto Kishkumen: Let us go forth unto the judgment-seat."
  },
  {
   "book": "Helaman",
   "chapter": 2,
   "verse": 9,
-  "english": "Now this did please Kishkumen exceedingly, for he did suppose that he should accomplish his design; but behold, the servant of Helaman, as they were going forth unto the judgment– seat, did stab Kishkumen even to the heart, that he fell dead without a groan. And he ran and told Helaman all the things which he had seen, and heard, and done."
+  "english": "Now this did please Kishkumen exceedingly, for he did suppose that he should accomplish his design; but behold, the servant of Helaman, as they were going forth unto the judgment-seat, did stab Kishkumen even to the heart, that he fell dead without a groan. And he ran and told Helaman all the things which he had seen, and heard, and done."
  },
  {
   "book": "Helaman",
@@ -27003,7 +27003,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 3,
   "verse": 3,
-  "english": "And it came to pass in the forty and sixth, yea, there was much contention and many dissensions; in the which there were an exceed– ingly great many who departed out of the land of Zarahemla, and went forth unto the land northward to inherit the land."
+  "english": "And it came to pass in the forty and sixth, yea, there was much contention and many dissensions; in the which there were an exceedingly great many who departed out of the land of Zarahemla, and went forth unto the land northward to inherit the land."
  },
  {
   "book": "Helaman",
@@ -27105,7 +27105,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 3,
   "verse": 20,
-  "english": "Nevertheless Helaman did fill the judgment– seat with justice and equity; yea, he did observe to keep the statutes, and the judgments, and the commandments of God; and he did do that which was right in the sight of God continually; and he did walk after the ways of his father, insomuch that he did prosper in the land."
+  "english": "Nevertheless Helaman did fill the judgment-seat with justice and equity; yea, he did observe to keep the statutes, and the judgments, and the commandments of God; and he did do that which was right in the sight of God continually; and he did walk after the ways of his father, insomuch that he did prosper in the land."
  },
  {
   "book": "Helaman",
@@ -27207,7 +27207,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 3,
   "verse": 37,
-  "english": "And it came to pass in the fifty and third year of the reign of the judges, Helaman died, and his eldest son Nephi began to reign in his stead. And it came to pass that he did fill the judgment– seat with justice and equity; yea, he did keep the commandments of God, and did walk in the ways of his father."
+  "english": "And it came to pass in the fifty and third year of the reign of the judges, Helaman died, and his eldest son Nephi began to reign in his stead. And it came to pass that he did fill the judgment-seat with justice and equity; yea, he did keep the commandments of God, and did walk in the ways of his father."
  },
  {
   "book": "Helaman",
@@ -27243,7 +27243,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 4,
   "verse": 6,
-  "english": "And the Nephites and the armies of Moroni– hah were driven even into the land of Bountiful;"
+  "english": "And the Nephites and the armies of Moronihah were driven even into the land of Bountiful;"
  },
  {
   "book": "Helaman",
@@ -27279,7 +27279,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 4,
   "verse": 12,
-  "english": "And it was because of the pride of their hearts, because of their exceeding riches, yea, it was because of their oppression to the poor, withholding their food from the hungry, withholding their clothing from the naked, and smiting their humble brethren upon the cheek, making a mock of that which was sacred, denying the spirit of prophecy and of revelation, murdering, plundering, lying, stealing, commit– ting adultery, rising up in great contentions, and deserting away into the land of Nephi, among the Lamanites—"
+  "english": "And it was because of the pride of their hearts, because of their exceeding riches, yea, it was because of their oppression to the poor, withholding their food from the hungry, withholding their clothing from the naked, and smiting their humble brethren upon the cheek, making a mock of that which was sacred, denying the spirit of prophecy and of revelation, murdering, plundering, lying, stealing, committing adultery, rising up in great contentions, and deserting away into the land of Nephi, among the Lamanites—"
  },
  {
   "book": "Helaman",
@@ -27303,7 +27303,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 4,
   "verse": 16,
-  "english": "For when Moronihah saw that they did repent he did venture to lead them forth from place to place, and from city to city, even until they had regained the one half of their property and the one– half of all their lands."
+  "english": "For when Moronihah saw that they did repent he did venture to lead them forth from place to place, and from city to city, even until they had regained the one half of their property and the one-half of all their lands."
  },
  {
   "book": "Helaman",
@@ -27369,7 +27369,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 5,
   "verse": 1,
-  "english": "And it came to pass that in this same year, behold, Nephi delivered up the judgment– seat to a man whose name was Cezoram."
+  "english": "And it came to pass that in this same year, behold, Nephi delivered up the judgment-seat to a man whose name was Cezoram."
  },
  {
   "book": "Helaman",
@@ -27387,7 +27387,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 5,
   "verse": 4,
-  "english": "And it came to pass that Nephi had become weary because of their iniquity; and he yielded up the judgment– seat, and took it upon him to  preach the word of God all the remainder of his days, and his brother Lehi also, all the remainder of his days;"
+  "english": "And it came to pass that Nephi had become weary because of their iniquity; and he yielded up the judgment-seat, and took it upon him to  preach the word of God all the remainder of his days, and his brother Lehi also, all the remainder of his days;"
  },
  {
   "book": "Helaman",
@@ -27753,7 +27753,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 6,
   "verse": 13,
-  "english": "Behold their women did toil and spin, and did make all manner of cloth, of fine– twined linen and cloth of every kind, to clothe their nakedness. And thus the sixty and fourth year did pass away in peace."
+  "english": "Behold their women did toil and spin, and did make all manner of cloth, of finetwined linen and cloth of every kind, to clothe their nakedness. And thus the sixty and fourth year did pass away in peace."
  },
  {
   "book": "Helaman",
@@ -27765,7 +27765,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 6,
   "verse": 15,
-  "english": "And it came to pass that in the sixty and sixth year of the reign of the judges, behold, Cezoram was murdered by an unknown hand as he sat upon the judgment– seat. And it came to pass that in the same year, that his son, who had been appointed by the people in his stead, was also murdered. And thus ended the sixty and sixth year."
+  "english": "And it came to pass that in the sixty and sixth year of the reign of the judges, behold, Cezoram was murdered by an unknown hand as he sat upon the judgment-seat. And it came to pass that in the same year, that his son, who had been appointed by the people in his stead, was also murdered. And thus ended the sixty and sixth year."
  },
  {
   "book": "Helaman",
@@ -27789,7 +27789,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 6,
   "verse": 19,
-  "english": "And it was they who did murder the chief judge Cezoram, and his son, while in the judgment– seat; and behold, they were not found."
+  "english": "And it was they who did murder the chief judge Cezoram, and his son, while in the judgment-seat; and behold, they were not found."
  },
  {
   "book": "Helaman",
@@ -27945,7 +27945,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 7,
   "verse": 4,
-  "english": "And seeing the people in a state of such awful wickedness, and those Gadianton robbers filling the judgment– seats—having usurped the power and authority of the land; laying aside the commandments of God, and not in the least aright before him; doing no justice unto the children of men;"
+  "english": "And seeing the people in a state of such awful wickedness, and those Gadianton robbers filling the judgment-seats—having usurped the power and authority of the land; laying aside the commandments of God, and not in the least aright before him; doing no justice unto the children of men;"
  },
  {
   "book": "Helaman",
@@ -27981,7 +27981,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 7,
   "verse": 10,
-  "english": "And behold, now it came to pass that it was upon a tower, which was in the garden of Nephi, which was by the highway which led to the chief market, which was in the city of Zara– hemla; therefore, Nephi had bowed himself upon the tower which was in his garden, which tower was also near unto the garden gate by which led the highway."
+  "english": "And behold, now it came to pass that it was upon a tower, which was in the garden of Nephi, which was by the highway which led to the chief market, which was in the city of Zarahemla; therefore, Nephi had bowed himself upon the tower which was in his garden, which tower was also near unto the garden gate by which led the highway."
  },
  {
   "book": "Helaman",
@@ -28257,7 +28257,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 8,
   "verse": 27,
-  "english": "Yea, behold it is now even at your doors; yea, go ye in unto the judgment– seat, and search; and behold, your judge is murdered, and he lieth in his blood; and he hath been murdered by his brother, who seeketh to sit in the judgment– seat."
+  "english": "Yea, behold it is now even at your doors; yea, go ye in unto the judgment-seat, and search; and behold, your judge is murdered, and he lieth in his blood; and he hath been murdered by his brother, who seeketh to sit in the judgment-seat."
  },
  {
   "book": "Helaman",
@@ -28269,7 +28269,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 9,
   "verse": 1,
-  "english": "Behold, now it came to pass that when Nephi had spoken these words, certain men who were among them ran to the judgment– seat; yea, even there were five who went, and they said among themselves, as they went:"
+  "english": "Behold, now it came to pass that when Nephi had spoken these words, certain men who were among them ran to the judgment-seat; yea, even there were five who went, and they said among themselves, as they went:"
  },
  {
   "book": "Helaman",
@@ -28281,7 +28281,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 9,
   "verse": 3,
-  "english": "And it came to pass that they ran in their might, and came in unto the judgment– seat; and behold, the chief judge had fallen to the earth, and did lie in his blood."
+  "english": "And it came to pass that they ran in their might, and came in unto the judgment-seat; and behold, the chief judge had fallen to the earth, and did lie in his blood."
  },
  {
   "book": "Helaman",
@@ -28305,7 +28305,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 9,
   "verse": 7,
-  "english": "And behold the people did gather themselves together unto the place of the judgment– seat—and behold, to their astonishment they saw those five men who had fallen to the earth."
+  "english": "And behold the people did gather themselves together unto the place of the judgment-seat—and behold, to their astonishment they saw those five men who had fallen to the earth."
  },
  {
   "book": "Helaman",
@@ -28347,7 +28347,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 9,
   "verse": 14,
-  "english": "We ran and came to the place of the judgment– seat, and when we saw all things even as Nephi had testified, we were astonished insomuch that we fell to the earth; and when we were recovered from our astonishment, behold they cast us into prison."
+  "english": "We ran and came to the place of the judgment-seat, and when we saw all things even as Nephi had testified, we were astonished insomuch that we fell to the earth; and when we were recovered from our astonishment, behold they cast us into prison."
  },
  {
   "book": "Helaman",
@@ -28671,7 +28671,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 11,
   "verse": 8,
-  "english": "And the people began to plead with their chief judges and their leaders, that they would say unto Nephi: Behold, we know that thou art a man of God, and therefore cry unto the Lord our God that he turn away from us this famine, lest all the words which thou hast spoken concern– ing our destruction be fulfilled."
+  "english": "And the people began to plead with their chief judges and their leaders, that they would say unto Nephi: Behold, we know that thou art a man of God, and therefore cry unto the Lord our God that he turn away from us this famine, lest all the words which thou hast spoken concerning our destruction be fulfilled."
  },
  {
   "book": "Helaman",
@@ -29013,7 +29013,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 13,
   "verse": 1,
-  "english": "And now it came to pass in the eighty and sixth year, the Nephites did still remain in wicked– ness, yea in great wickedness, while the Lamanites did observe strictly to keep the commandments of God, according to the law of Moses."
+  "english": "And now it came to pass in the eighty and sixth year, the Nephites did still remain in wickedness, yea in great wickedness, while the Lamanites did observe strictly to keep the commandments of God, according to the law of Moses."
  },
  {
   "book": "Helaman",
@@ -29415,13 +29415,13 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 14,
   "verse": 29,
-  "english": "And this to the intent that whosoever will believe might be saved, and that whosoever will not believe, a righteous judgment might come upon them; and also if they are condemned they bring upon themselves their own condem– nation."
+  "english": "And this to the intent that whosoever will believe might be saved, and that whosoever will not believe, a righteous judgment might come upon them; and also if they are condemned they bring upon themselves their own condemnation."
  },
  {
   "book": "Helaman",
   "chapter": 14,
   "verse": 30,
-  "english": "And now remember, remember, my brethren, that whosoever perisheth, perisheth unto him– self; and whosoever doeth iniquity, doeth it unto himself; for behold, ye are free; ye are permitted to act for yourselves; for behold, God hath given unto you a knowledge and he hath made you free."
+  "english": "And now remember, remember, my brethren, that whosoever perisheth, perisheth unto himself; and whosoever doeth iniquity, doeth it unto himself; for behold, ye are free; ye are permitted to act for yourselves; for behold, God hath given unto you a knowledge and he hath made you free."
  },
  {
   "book": "Helaman",
@@ -29457,7 +29457,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 15,
   "verse": 5,
-  "english": "And I would that ye should behold that the more part of them are in the path of their duty, and they do walk circumspectly before God, and they do observe to keep his command– ments and his statutes and his judgments according to the law of Moses."
+  "english": "And I would that ye should behold that the more part of them are in the path of their duty, and they do walk circumspectly before God, and they do observe to keep his commandments and his statutes and his judgments according to the law of Moses."
  },
  {
   "book": "Helaman",
@@ -29505,7 +29505,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 15,
   "verse": 13,
-  "english": "And this is according to the prophecy, that they shall again be brought to the true know– ledge, which is knowledge of their Redeemer, and their great and true shepherd, and be numbered among his sheep."
+  "english": "And this is according to the prophecy, that they shall again be brought to the true knowledge, which is knowledge of their Redeemer, and their great and true shepherd, and be numbered among his sheep."
  },
  {
   "book": "Helaman",
@@ -29793,7 +29793,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 1,
   "verse": 19,
-  "english": "And it came to pass that there was no darkness in all that night, but it was as light as though it was mid– day. And it came to pass that the sun did rise in the morning again, according to its proper order; and they knew that it was the day that the Lord should be born, because of the sign which had been given."
+  "english": "And it came to pass that there was no darkness in all that night, but it was as light as though it was mid-day. And it came to pass that the sun did rise in the morning again, according to its proper order; and they knew that it was the day that the Lord should be born, because of the sign which had been given."
  },
  {
   "book": "3 Nephi",
@@ -29961,7 +29961,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 2,
   "verse": 17,
-  "english": "And it came to pass in the commencement of the fourteenth year, the war between the robbers and the people of Nephi did continue and did become exceedingly sore; never– theless, the people of Nephi did gain some advantage of the robbers, insomuch that they did drive them back out of their lands into the mountains and into their secret places."
+  "english": "And it came to pass in the commencement of the fourteenth year, the war between the robbers and the people of Nephi did continue and did become exceedingly sore; nevertheless, the people of Nephi did gain some advantage of the robbers, insomuch that they did drive them back out of their lands into the mountains and into their secret places."
  },
  {
   "book": "3 Nephi",
@@ -30027,7 +30027,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 3,
   "verse": 9,
-  "english": "And behold, I am Giddianhi; and I am the governor of this the secret society of Gadi– anton; which society and the works thereof I know to be good; and they are of ancient date and they have been handed down unto us."
+  "english": "And behold, I am Giddianhi; and I am the governor of this the secret society of Gadianton; which society and the works thereof I know to be good; and they are of ancient date and they have been handed down unto us."
  },
  {
   "book": "3 Nephi",
@@ -30171,7 +30171,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 4,
   "verse": 7,
-  "english": "And it came to pass that they did come up to battle; and it was in the sixth month; and behold, great and terrible was the day that they did come up to battle; and they were girded about after the manner of robbers; and they had a lamb– skin about their loins, and they were dyed in blood, and their heads were shorn, and they had head– plates upon them; and great and terrible was the appearance of the armies of Giddianhi, because of their armor, and because of their being dyed in blood."
+  "english": "And it came to pass that they did come up to battle; and it was in the sixth month; and behold, great and terrible was the day that they did come up to battle; and they were girded about after the manner of robbers; and they had a lamb-skin about their loins, and they were dyed in blood, and their heads were shorn, and they had head-plates upon them; and great and terrible was the appearance of the armies of Giddianhi, because of their armor, and because of their being dyed in blood."
  },
  {
   "book": "3 Nephi",
@@ -30273,13 +30273,13 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 4,
   "verse": 24,
-  "english": "And now, Gidgiddoni being aware of their design, and knowing of their weakness because of the want of food, and the great slaughter which had been made among them, therefore he did send out his armies in the night– time, and did cut off the way of their retreat, and did place his armies in the way of their retreat."
+  "english": "And now, Gidgiddoni being aware of their design, and knowing of their weakness because of the want of food, and the great slaughter which had been made among them, therefore he did send out his armies in the nighttime, and did cut off the way of their retreat, and did place his armies in the way of their retreat."
  },
  {
   "book": "3 Nephi",
   "chapter": 4,
   "verse": 25,
-  "english": "And this did they do in the night– time, and got on their march beyond the robbers, so that on the morrow, when the robbers began their march, they were met by the armies of the Nephites both in their front and in their rear."
+  "english": "And this did they do in the nighttime, and got on their march beyond the robbers, so that on the morrow, when the robbers began their march, they were met by the armies of the Nephites both in their front and in their rear."
  },
  {
   "book": "3 Nephi",
@@ -30363,7 +30363,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 5,
   "verse": 6,
-  "english": "And thus they did put an end to all those wicked, and secret, and abominable combi– nations, in the which there was so much wickedness, and so many murders committed."
+  "english": "And thus they did put an end to all those wicked, and secret, and abominable combinations, in the which there was so much wickedness, and so many murders committed."
  },
  {
   "book": "3 Nephi",
@@ -30399,7 +30399,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 5,
   "verse": 12,
-  "english": "And behold, I am called Mormon, being called after the land of Mormon, the land in which Alma did establish the church among the people, yea, the first church which was established among them after their trans– gression."
+  "english": "And behold, I am called Mormon, being called after the land of Mormon, the land in which Alma did establish the church among the people, yea, the first church which was established among them after their transgression."
  },
  {
   "book": "3 Nephi",
@@ -30753,7 +30753,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 7,
   "verse": 15,
-  "english": "And it came to pass that Nephi—having been visited by angels and also the voice of the Lord, therefore having seen angels, and being eye– witness, and having had power given unto him that he might know concerning the ministry of Christ, and also being  eye– witness to their quick return from righteousness unto their wickedness and abominations;"
+  "english": "And it came to pass that Nephi—having been visited by angels and also the voice of the Lord, therefore having seen angels, and being eye-witness, and having had power given unto him that he might know concerning the ministry of Christ, and also being  eye-witness to their quick return from righteousness unto their wickedness and abominations;"
  },
  {
   "book": "3 Nephi",
@@ -30819,7 +30819,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 7,
   "verse": 26,
-  "english": "And there were many in the commence– ment of this year that were baptized unto repentance; and thus the more part of the year did pass away."
+  "english": "And there were many in the commencement of this year that were baptized unto repentance; and thus the more part of the year did pass away."
  },
  {
   "book": "3 Nephi",
@@ -30843,7 +30843,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 8,
   "verse": 4,
-  "english": "And there began to be great doubtings and disputations among the people, notwith– standing so many signs had been given."
+  "english": "And there began to be great doubtings and disputations among the people, notwithstanding so many signs had been given."
  },
  {
   "book": "3 Nephi",
@@ -31041,7 +31041,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 9,
   "verse": 12,
-  "english": "And many great destructions have I caused to come upon this land, and upon this people, because of their wickedness and their abomi– nations."
+  "english": "And many great destructions have I caused to come upon this land, and upon this people, because of their wickedness and their abominations."
  },
  {
   "book": "3 Nephi",
@@ -31185,7 +31185,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 10,
   "verse": 14,
-  "english": "And now, whoso readeth, let him under– stand; he that hath the scriptures, let him search them, and see and behold if all these deaths and destructions by fire, and by smoke, and by tempests, and by whirlwinds, and by the opening of the earth to receive them, and all these things are not unto the fulfilling of the prophecies of many of the holy prophets."
+  "english": "And now, whoso readeth, let him understand; he that hath the scriptures, let him search them, and see and behold if all these deaths and destructions by fire, and by smoke, and by tempests, and by whirlwinds, and by the opening of the earth to receive them, and all these things are not unto the fulfilling of the prophecies of many of the holy prophets."
  },
  {
   "book": "3 Nephi",
@@ -31575,7 +31575,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 12,
   "verse": 19,
-  "english": "And behold, I have given you the law and the commandments of my Father, that ye shall believe in me, and that ye shall repent of your sins, and come unto me with a broken heart and a contrite spirit. Behold, ye have the command– ments before you, and the law is fulfilled."
+  "english": "And behold, I have given you the law and the commandments of my Father, that ye shall believe in me, and that ye shall repent of your sins, and come unto me with a broken heart and a contrite spirit. Behold, ye have the commandments before you, and the law is fulfilled."
  },
  {
   "book": "3 Nephi",
@@ -31659,7 +31659,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 12,
   "verse": 33,
-  "english": "And again it is written, thou shalt not for– swear thyself, but shalt perform unto the Lord thine oaths;"
+  "english": "And again it is written, thou shalt not forswear thyself, but shalt perform unto the Lord thine oaths;"
  },
  {
   "book": "3 Nephi",
@@ -32175,7 +32175,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 15,
   "verse": 10,
-  "english": "Behold, I have given unto you the command– ments; therefore keep my commandments. And this is the law and the prophets, for they truly testified of me."
+  "english": "Behold, I have given unto you the commandments; therefore keep my commandments. And this is the law and the prophets, for they truly testified of me."
  },
  {
   "book": "3 Nephi",
@@ -32307,7 +32307,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 16,
   "verse": 8,
-  "english": "But wo, saith the Father, unto the unbe– lieving of the Gentiles—for notwithstanding they have come forth upon the face of this land, and have scattered my people who are of the house of Israel; and my people who are of the house of Israel have been cast out from among them, and have been trodden under feet by them;"
+  "english": "But wo, saith the Father, unto the unbelieving of the Gentiles—for notwithstanding they have come forth upon the face of this land, and have scattered my people who are of the house of Israel; and my people who are of the house of Israel have been cast out from among them, and have been trodden under feet by them;"
  },
  {
   "book": "3 Nephi",
@@ -32523,7 +32523,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 17,
   "verse": 24,
-  "english": "And as they looked to behold they cast their eyes towards heaven, and they saw the heavens open, and they saw angels descend– ing out of heaven as it were in the midst of fire; and they came down and encircled those little ones about, and they were encircled about with fire; and the angels did minister unto them."
+  "english": "And as they looked to behold they cast their eyes towards heaven, and they saw the heavens open, and they saw angels descending out of heaven as it were in the midst of fire; and they came down and encircled those little ones about, and they were encircled about with fire; and the angels did minister unto them."
  },
  {
   "book": "3 Nephi",
@@ -32703,7 +32703,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 18,
   "verse": 29,
-  "english": "For whoso eateth and drinketh my flesh and blood unworthily eateth and drinketh damna– tion to his soul; therefore if ye know that a man is unworthy to eat and drink of my flesh and blood ye shall forbid him."
+  "english": "For whoso eateth and drinketh my flesh and blood unworthily eateth and drinketh damnation to his soul; therefore if ye know that a man is unworthy to eat and drink of my flesh and blood ye shall forbid him."
  },
  {
   "book": "3 Nephi",
@@ -33321,7 +33321,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 21,
   "verse": 11,
-  "english": "Therefore it shall come to pass that whoso– ever will not believe in my words, who am Jesus Christ, which the Father shall cause him to bring forth unto the Gentiles, and shall give unto him power that he shall bring them forth unto the Gentiles, (it shall be done even as Moses said) they shall be cut off from among my people who are of the covenant."
+  "english": "Therefore it shall come to pass that whosoever will not believe in my words, who am Jesus Christ, which the Father shall cause him to bring forth unto the Gentiles, and shall give unto him power that he shall bring them forth unto the Gentiles, (it shall be done even as Moses said) they shall be cut off from among my people who are of the covenant."
  },
  {
   "book": "3 Nephi",
@@ -33867,7 +33867,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 26,
   "verse": 18,
-  "english": "And many of them saw and heard unspeak– able things, which are not lawful to be written."
+  "english": "And many of them saw and heard unspeakable things, which are not lawful to be written."
  },
  {
   "book": "3 Nephi",
@@ -34179,7 +34179,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 28,
   "verse": 16,
-  "english": "But it came to pass that they did again minister upon the face of the earth; nevertheless they did not minister of the things which they had heard and seen, because of the command– ment which was given them in heaven."
+  "english": "But it came to pass that they did again minister upon the face of the earth; nevertheless they did not minister of the things which they had heard and seen, because of the commandment which was given them in heaven."
  },
  {
   "book": "3 Nephi",
@@ -34269,7 +34269,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 28,
   "verse": 31,
-  "english": "Therefore, great and marvelous works shall be wrought by them, before the great and coming day when all people must surely stand before the judgment– seat of Christ;"
+  "english": "Therefore, great and marvelous works shall be wrought by them, before the great and coming day when all people must surely stand before the judgment-seat of Christ;"
  },
  {
   "book": "3 Nephi",
@@ -34713,7 +34713,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 1,
   "verse": 5,
-  "english": "And I, Mormon, being a descendant of Nephi, (and my father’s name was Mormon) I remem– bered the things which Ammaron commanded me."
+  "english": "And I, Mormon, being a descendant of Nephi, (and my father’s name was Mormon) I remembered the things which Ammaron commanded me."
  },
  {
   "book": "Mormon",
@@ -34821,7 +34821,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 2,
   "verse": 4,
-  "english": "And it came to pass that we did come to the city of Angola, and we did take possession of the city, and make preparations to defend ourselves against the Lamanites. And it came to pass that we did fortify the city with our might; but  notwithstanding all our fortifi– cations the Lamanites did come upon us and did drive us out of the city."
+  "english": "And it came to pass that we did come to the city of Angola, and we did take possession of the city, and make preparations to defend ourselves against the Lamanites. And it came to pass that we did fortify the city with our might; but  notwithstanding all our fortifications the Lamanites did come upon us and did drive us out of the city."
  },
  {
   "book": "Mormon",
@@ -34869,7 +34869,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 2,
   "verse": 12,
-  "english": "And it came to pass that when I, Mormon, saw their lamentation and their mourning and their sorrow before the Lord, my heart did begin to rejoice within me, knowing the mercies and the long– suffering of the Lord, therefore supposing that he would be merciful unto them that they would again become a righteous people."
+  "english": "And it came to pass that when I, Mormon, saw their lamentation and their mourning and their sorrow before the Lord, my heart did begin to rejoice within me, knowing the mercies and the long-suffering of the Lord, therefore supposing that he would be merciful unto them that they would again become a righteous people."
  },
  {
   "book": "Mormon",
@@ -35091,7 +35091,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 3,
   "verse": 20,
-  "english": "And these things doth the Spirit manifest unto me; therefore I write unto you all. And for this cause I write unto you, that ye may know that ye must all stand before the judgment– seat of Christ, yea, every soul who belongs to the whole human family of Adam; and ye must stand to be judged of your works, whether they be good or evil;"
+  "english": "And these things doth the Spirit manifest unto me; therefore I write unto you all. And for this cause I write unto you, that ye may know that ye must all stand before the judgment-seat of Christ, yea, every soul who belongs to the whole human family of Adam; and ye must stand to be judged of your works, whether they be good or evil;"
  },
  {
   "book": "Mormon",
@@ -35103,7 +35103,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 3,
   "verse": 22,
-  "english": "And I would that I could persuade all ye ends of the earth to repent and prepare to stand before the judgment–seat of Christ."
+  "english": "And I would that I could persuade all ye ends of the earth to repent and prepare to stand before the judgment-seat of Christ."
  },
  {
   "book": "Mormon",
@@ -35289,7 +35289,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 5,
   "verse": 8,
-  "english": "And now behold, I, Mormon, do not desire to harrow up the souls of men in casting before them such an awful scene of blood and carnage as was laid before mine eyes; but I, knowing that these things must surely be made known, and that all things which are hid must be revealed upon the house– tops—"
+  "english": "And now behold, I, Mormon, do not desire to harrow up the souls of men in casting before them such an awful scene of blood and carnage as was laid before mine eyes; but I, knowing that these things must surely be made known, and that all things which are hid must be revealed upon the house-tops—"
  },
  {
   "book": "Mormon",
@@ -35463,7 +35463,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 6,
   "verse": 13,
-  "english": "And behold, the ten thousand of Gid– giddonah had fallen, and he also in the midst."
+  "english": "And behold, the ten thousand of Gidgiddonah had fallen, and he also in the midst."
  },
  {
   "book": "Mormon",
@@ -35511,7 +35511,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 6,
   "verse": 21,
-  "english": "And the day soon cometh that your mortal must put on immortality, and these bodies which are now moldering incorruption must soon become incorruptible bodies; and then ye must stand before the judgment– seat of Christ to be judged according to your works and if it so be that ye are righteous, then are ye blessed with your fathers who have gone before you."
+  "english": "And the day soon cometh that your mortal must put on immortality, and these bodies which are now moldering incorruption must soon become incorruptible bodies; and then ye must stand before the judgment-seat of Christ to be judged according to your works and if it so be that ye are righteous, then are ye blessed with your fathers who have gone before you."
  },
  {
   "book": "Mormon",
@@ -35553,7 +35553,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 7,
   "verse": 6,
-  "english": "And he bringeth to pass the resurrection of the dead, whereby man must be raised to stand before his judgment– seat."
+  "english": "And he bringeth to pass the resurrection of the dead, whereby man must be raised to stand before his judgment-seat."
  },
  {
   "book": "Mormon",
@@ -36333,13 +36333,13 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 2,
   "verse": 5,
-  "english": "And it came to pass that the Lord commanded them that they should go forth into the wilder– ness, yea, into that quarter where there never had man been. And it came to pass that the Lord did go before them, and did talk with them as he stood in a cloud, and gave directions whither they should travel."
+  "english": "And it came to pass that the Lord commanded them that they should go forth into the wilderness, yea, into that quarter where there never had man been. And it came to pass that the Lord did go before them, and did talk with them as he stood in a cloud, and gave directions whither they should travel."
  },
  {
   "book": "Ether",
   "chapter": 2,
   "verse": 6,
-  "english": "And it came to pass that they did travel in the wilderness, and did build barges, in which they did cross many waters, being directed conti– nually by the hand of the Lord."
+  "english": "And it came to pass that they did travel in the wilderness, and did build barges, in which they did cross many waters, being directed continually by the hand of the Lord."
  },
  {
   "book": "Ether",
@@ -36375,7 +36375,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 2,
   "verse": 12,
-  "english": "Behold, this is a choice land, and whatsoever nation shall possess it shall be free from bon– dage, and from captivity, and from all other nations under heaven, if they will but serve the God of the land, who is Jesus Christ, who hath been manifested by the things which we have written."
+  "english": "Behold, this is a choice land, and whatsoever nation shall possess it shall be free from bondage, and from captivity, and from all other nations under heaven, if they will but serve the God of the land, who is Jesus Christ, who hath been manifested by the things which we have written."
  },
  {
   "book": "Ether",
@@ -36393,13 +36393,13 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 2,
   "verse": 15,
-  "english": "And the brother of Jared repented of the evil which he had done, and did call upon the name of the Lord for his brethren who were with him. And the Lord said unto him: I will forgive thee and thy brethren of their sins; but thou shalt not sin any more, for ye shall remember that my Spirit will not always strive with man; where– fore, if ye will sin until ye are fully ripe ye shall  be cut off from the presence of the Lord. And these are my thoughts upon the land which I shall give you for your inheritance; for it shall be a land choice above all other lands."
+  "english": "And the brother of Jared repented of the evil which he had done, and did call upon the name of the Lord for his brethren who were with him. And the Lord said unto him: I will forgive thee and thy brethren of their sins; but thou shalt not sin any more, for ye shall remember that my Spirit will not always strive with man; wherefore, if ye will sin until ye are fully ripe ye shall  be cut off from the presence of the Lord. And these are my thoughts upon the land which I shall give you for your inheritance; for it shall be a land choice above all other lands."
  },
  {
   "book": "Ether",
   "chapter": 2,
   "verse": 16,
-  "english": "And the Lord said: Go to work and build, after the manner of barges which ye have hither– to built. And it came to pass that the brother of Jared did go to work, and also his brethren, and built barges after the manner which they had built, according to the instruct– tions of the Lord. And they were small, and they were light upon the water, even like unto the lightness of a fowl upon the water."
+  "english": "And the Lord said: Go to work and build, after the manner of barges which ye have hitherto built. And it came to pass that the brother of Jared did go to work, and also his brethren, and built barges after the manner which they had built, according to the instructions of the Lord. And they were small, and they were light upon the water, even like unto the lightness of a fowl upon the water."
  },
  {
   "book": "Ether",
@@ -36471,7 +36471,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 3,
   "verse": 3,
-  "english": "Behold, O Lord, thou hast smitten us because of our iniquity, and hast driven us forth, and for these many years we have been in the wilder– ness; nevertheless, thou hast been merciful unto us. O Lord, look upon me in pity, and turn away thine anger from this thy people, and suffer not that they shall go forth across this raging deep in darkness; but behold these things which I have molten out of the rock."
+  "english": "Behold, O Lord, thou hast smitten us because of our iniquity, and hast driven us forth, and for these many years we have been in the wilderness; nevertheless, thou hast been merciful unto us. O Lord, look upon me in pity, and turn away thine anger from this thy people, and suffer not that they shall go forth across this raging deep in darkness; but behold these things which I have molten out of the rock."
  },
  {
   "book": "Ether",
@@ -36687,7 +36687,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 4,
   "verse": 11,
-  "english": "But he that believeth these things which I have spoken, him will I visit with the manifes– tations of my Spirit, and he shall know and bear record. For because of my Spirit he shall know that these things are true; for it persuadeth men to do good."
+  "english": "But he that believeth these things which I have spoken, him will I visit with the manifestations of my Spirit, and he shall know and bear record. For because of my Spirit he shall know that these things are true; for it persuadeth men to do good."
  },
  {
   "book": "Ether",
@@ -36699,7 +36699,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 4,
   "verse": 13,
-  "english": "Come unto me, O ye Gentiles, and I will show unto you the greater things, the know– ledge which is hid up because of unbelief."
+  "english": "Come unto me, O ye Gentiles, and I will show unto you the greater things, the knowledge which is hid up because of unbelief."
  },
  {
   "book": "Ether",
@@ -36711,7 +36711,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 4,
   "verse": 15,
-  "english": "Behold, when ye shall rend that veil of unbelief which doth cause you to remain in your awful state of wickedness, and hardness of heart, and blindness of mind, then shall the great and marvelous things which have been hid up from the foundation of the world from you—yea, when ye shall call upon the Father in my name, with a broken heart and a contrite spirit, then shall ye know that the Father hath remem–  bered the covenant which he made unto your fathers, O house of Israel."
+  "english": "Behold, when ye shall rend that veil of unbelief which doth cause you to remain in your awful state of wickedness, and hardness of heart, and blindness of mind, then shall the great and marvelous things which have been hid up from the foundation of the world from you—yea, when ye shall call upon the Father in my name, with a broken heart and a contrite spirit, then shall ye know that the Father hath remembered the covenant which he made unto your fathers, O house of Israel."
  },
  {
   "book": "Ether",
@@ -36813,7 +36813,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 6,
   "verse": 7,
-  "english": "And it came to pass that when they were buried in the deep there was no water that could hurt them, their vessels being tight like unto a dish, and also they were tight like unto the ark of Noah; therefore when they were encom– passed about by many waters they did cry unto the Lord, and he did bring them forth again upon the top of the waters."
+  "english": "And it came to pass that when they were buried in the deep there was no water that could hurt them, their vessels being tight like unto a dish, and also they were tight like unto the ark of Noah; therefore when they were encompassed about by many waters they did cry unto the Lord, and he did bring them forth again upon the top of the waters."
  },
  {
   "book": "Ether",
@@ -37227,7 +37227,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 8,
   "verse": 19,
-  "english": "For the Lord worketh not in secret combi– nations, neither doth he will that man should shed blood, but in all things hath forbidden it, from the beginning of man."
+  "english": "For the Lord worketh not in secret combinations, neither doth he will that man should shed blood, but in all things hath forbidden it, from the beginning of man."
  },
  {
   "book": "Ether",
@@ -37251,7 +37251,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 8,
   "verse": 23,
-  "english": "Wherefore, O ye Gentiles, it is wisdom in God that these things should be shown unto you, that thereby ye may repent of your sins, and suffer not that these murderous combinations shall get above you, which are built up to get power and gain—and the work, yea, even the work of destruction come upon you, yea, even the sword of the justice of the Eternal God shall fall upon you, to your overthrow and destruct– tion if ye shall suffer these things to be."
+  "english": "Wherefore, O ye Gentiles, it is wisdom in God that these things should be shown unto you, that thereby ye may repent of your sins, and suffer not that these murderous combinations shall get above you, which are built up to get power and gain—and the work, yea, even the work of destruction come upon you, yea, even the sword of the justice of the Eternal God shall fall upon you, to your overthrow and destruction if ye shall suffer these things to be."
  },
  {
   "book": "Ether",
@@ -37293,13 +37293,13 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 9,
   "verse": 4,
-  "english": "And it came to pass that Jared was anointed king over the people, by the hand of wicked– ness; and he gave unto Akish his daughter to wife."
+  "english": "And it came to pass that Jared was anointed king over the people, by the hand of wickedness; and he gave unto Akish his daughter to wife."
  },
  {
   "book": "Ether",
   "chapter": 9,
   "verse": 5,
-  "english": "And it came to pass that Akish sought the life of his father– in– law; and he applied unto those whom he had sworn by the oath of the ancients, and they obtained the head of his father– in– law, as he sat upon his throne, giving audience to his people."
+  "english": "And it came to pass that Akish sought the life of his father-in-law; and he applied unto those whom he had sworn by the oath of the ancients, and they obtained the head of his father-in-law, as he sat upon his throne, giving audience to his people."
  },
  {
   "book": "Ether",
@@ -37533,7 +37533,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 10,
   "verse": 9,
-  "english": "And it came to pass after the space of many years, Morianton, (he being a descendant of Riplakish) gathered together an army of out– casts, and went forth and gave battle unto the people; and he gained power over many cities; and the war became exceedingly sore, and did last for the space of many years; and he did gain  power over all the land, and did establish himself king over all the land."
+  "english": "And it came to pass after the space of many years, Morianton, (he being a descendant of Riplakish) gathered together an army of outcasts, and went forth and gave battle unto the people; and he gained power over many cities; and the war became exceedingly sore, and did last for the space of many years; and he did gain  power over all the land, and did establish himself king over all the land."
  },
  {
   "book": "Ether",
@@ -37623,7 +37623,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 10,
   "verse": 24,
-  "english": "And they did have silks, and fine– twined linen; and they did work all manner of cloth, that they might clothe themselves from their nakedness."
+  "english": "And they did have silks, and finetwined linen; and they did work all manner of cloth, that they might clothe themselves from their nakedness."
  },
  {
   "book": "Ether",
@@ -37725,7 +37725,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 11,
   "verse": 7,
-  "english": "And they hearkened not unto the voice of the Lord, because of their wicked combinations; wherefore, there began to be wars and conten– tions in all the land, and also many famines and pestilences, insomuch that there was a great destruction, such an one as never had been known upon the face of the earth; and all this came to pass in the days of Shiblom."
+  "english": "And they hearkened not unto the voice of the Lord, because of their wicked combinations; wherefore, there began to be wars and contentions in all the land, and also many famines and pestilences, insomuch that there was a great destruction, such an one as never had been known upon the face of the earth; and all this came to pass in the days of Shiblom."
  },
  {
   "book": "Ether",
@@ -37779,7 +37779,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 11,
   "verse": 16,
-  "english": "And it came to pass that Moron did over– throw him, and did obtain the kingdom again."
+  "english": "And it came to pass that Moron did overthrow him, and did obtain the kingdom again."
  },
  {
   "book": "Ether",
@@ -38013,7 +38013,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 12,
   "verse": 32,
-  "english": "And I also remember that thou hast said that thou hast prepared a house for man, yea, even among the mansions of thy Father, in which man might have a more excellent hope; where– fore man must hope, or he cannot receive an inheritance in the place which thou hast prepared."
+  "english": "And I also remember that thou hast said that thou hast prepared a house for man, yea, even among the mansions of thy Father, in which man might have a more excellent hope; wherefore man must hope, or he cannot receive an inheritance in the place which thou hast prepared."
  },
  {
   "book": "Ether",
@@ -38049,7 +38049,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 12,
   "verse": 38,
-  "english": "And now I, Moroni, bid farewell unto the Gentiles, yea, and also unto my brethren whom I love, until we shall meet before the judgment– seat of Christ, where all men shall know that my garments are not spotted with your blood."
+  "english": "And now I, Moroni, bid farewell unto the Gentiles, yea, and also unto my brethren whom I love, until we shall meet before the judgment-seat of Christ, where all men shall know that my garments are not spotted with your blood."
  },
  {
   "book": "Ether",
@@ -38283,7 +38283,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 14,
   "verse": 5,
-  "english": "And it came to pass that Coriantumr did lay siege to the wilderness; and the brother of Shared did march forth out of the wilderness by night, and slew a part of the army of Corian– tumr, as they were drunken."
+  "english": "And it came to pass that Coriantumr did lay siege to the wilderness; and the brother of Shared did march forth out of the wilderness by night, and slew a part of the army of Coriantumr, as they were drunken."
  },
  {
   "book": "Ether",
@@ -38529,7 +38529,7 @@ window._officialVersesData = [
   "book": "Ether",
   "chapter": 15,
   "verse": 15,
-  "english": "And it came to pass that when they were all gathered together, every one to the army which he would, with their wives and their children—both men women and children being armed with weapons of war, having shields, and breastplates, and head– plates, and being clothed after the manner of war—they did march forth one against another to battle; and they fought all that day, and conquered not."
+  "english": "And it came to pass that when they were all gathered together, every one to the army which he would, with their wives and their children—both men women and children being armed with weapons of war, having shields, and breastplates, and head-plates, and being clothed after the manner of war—they did march forth one against another to battle; and they fought all that day, and conquered not."
  },
  {
   "book": "Ether",
@@ -39105,7 +39105,7 @@ window._officialVersesData = [
   "book": "Moroni",
   "chapter": 8,
   "verse": 4,
-  "english": "And now, my son, I speak unto you concerning that which grieveth me exceed– ingly; for it grieveth me that there should disputations rise among you."
+  "english": "And now, my son, I speak unto you concerning that which grieveth me exceedingly; for it grieveth me that there should disputations rise among you."
  },
  {
   "book": "Moroni",
@@ -39195,7 +39195,7 @@ window._officialVersesData = [
   "book": "Moroni",
   "chapter": 8,
   "verse": 19,
-  "english": "Little children cannot repent; wherefore, it is awful wicked– ness to deny the pure mercies of God unto them, for they are all alive in him because of his mercy."
+  "english": "Little children cannot repent; wherefore, it is awful wickedness to deny the pure mercies of God unto them, for they are all alive in him because of his mercy."
  },
  {
   "book": "Moroni",
@@ -39207,7 +39207,7 @@ window._officialVersesData = [
   "book": "Moroni",
   "chapter": 8,
   "verse": 21,
-  "english": "Wo unto such, for they are in danger of death, hell, and an endless torment. I speak it boldly; God hath commanded me. Listen unto them and give heed, or they stand against you at the judgment– seat of Christ."
+  "english": "Wo unto such, for they are in danger of death, hell, and an endless torment. I speak it boldly; God hath commanded me. Listen unto them and give heed, or they stand against you at the judgment-seat of Christ."
  },
  {
   "book": "Moroni",
@@ -39237,7 +39237,7 @@ window._officialVersesData = [
   "book": "Moroni",
   "chapter": 8,
   "verse": 26,
-  "english": "And the remission of sins bringeth meek– ness, and lowliness of heart; and because of meekness and lowliness of heart cometh the visitation of the Holy Ghost, which Comforter filleth with hope and perfect love, which love endureth by diligence unto prayer, until the end shall come, when all the saints shall dwell with God."
+  "english": "And the remission of sins bringeth meekness, and lowliness of heart; and because of meekness and lowliness of heart cometh the visitation of the Holy Ghost, which Comforter filleth with hope and perfect love, which love endureth by diligence unto prayer, until the end shall come, when all the saints shall dwell with God."
  },
  {
   "book": "Moroni",
@@ -39315,7 +39315,7 @@ window._officialVersesData = [
   "book": "Moroni",
   "chapter": 9,
   "verse": 9,
-  "english": "And notwithstanding this great abomi– nation of the Lamanites, it doth not exceed that of our people in Moriantum. For behold, many of the daughters of the Lamanites have they taken prisoners; and after depriving them of that which was most dear and precious above all things, which is chastity and virtue—"
+  "english": "And notwithstanding this great abomination of the Lamanites, it doth not exceed that of our people in Moriantum. For behold, many of the daughters of the Lamanites have they taken prisoners; and after depriving them of that which was most dear and precious above all things, which is chastity and virtue—"
  },
  {
   "book": "Moroni",
@@ -39411,7 +39411,7 @@ window._officialVersesData = [
   "book": "Moroni",
   "chapter": 9,
   "verse": 25,
-  "english": "My son, be faithful in Christ; and may not the things which I have written grieve thee, to weigh thee down unto death; but may Christ lift thee up, and may his sufferings and death, and the  showing his body unto our fathers, and his mercy and long– suffering, and the hope of his glory and of eternal life, rest in your mind forever."
+  "english": "My son, be faithful in Christ; and may not the things which I have written grieve thee, to weigh thee down unto death; but may Christ lift thee up, and may his sufferings and death, and the  showing his body unto our fathers, and his mercy and long-suffering, and the hope of his glory and of eternal life, rest in your mind forever."
  },
  {
   "book": "Moroni",
