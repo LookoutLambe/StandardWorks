@@ -21,7 +21,7 @@
     }
     if (!officialPromise) {
       officialPromise = new Promise(function(resolve) {
-        loadScript('official_verses.js?v=9', resolve);
+        loadScript('official_verses.js?v=10', resolve);
       });
     }
     officialPromise.then(function() { if (cb) cb(); });

@@ -76,7 +76,7 @@
 }
 .nf-bm:hover { border-color: var(--accent, #dbb958); background: rgba(219,185,88,0.08); }
 .nf-bm-title { font-size: 0.95em; color: var(--ink, #1a1a1a); }
-.nf-bm-heb { font-family: 'SBL Hebrew','David Libre',serif; font-size: 1.05em; color: var(--accent, #dbb958); margin-top: 2px; }
+.nf-bm-heb { font-family: 'David Libre',serif; font-size: 1.05em; color: var(--accent, #dbb958); margin-top: 2px; }
 
 /* ── Search Results ── */
 .nav-search-results {
@@ -94,7 +94,7 @@
 }
 .nav-search-result:hover, .nav-search-result.active { background: rgba(219,185,88,0.12); }
 .nav-search-result .sr-name { font-size: 0.95em; color: var(--ink, #1a1a1a); }
-.nav-search-result .sr-heb { font-family: 'SBL Hebrew','David Libre',serif; font-size: 1em; color: var(--accent, #dbb958); }
+.nav-search-result .sr-heb { font-family: 'David Libre',serif; font-size: 1em; color: var(--accent, #dbb958); }
 .nav-search-result .sr-vol { font-size: 0.75em; color: var(--ink-light, #888); margin-left: 8px; }
 
 /* ── Volume Tabs ── */
@@ -115,7 +115,7 @@
   background: rgba(219,185,88,0.1);
 }
 .nav-vol-tab .vt-heb {
-  display: block; font-family: 'SBL Hebrew','David Libre',serif;
+  display: block; font-family: 'David Libre',serif;
   font-size: 0.85em; color: #1e2233; line-height: 1.2; font-weight: 600;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
@@ -144,12 +144,12 @@
 .nl-card:hover { border-color: #dbb958; background: #f0ece0; }
 .nl-card-title { font-size: 0.8em; color: #1e2233; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; }
 .nl-card-text { color: #1e2233; font-size: 1.05em; margin-top: 6px; font-weight: 600; }
-.nl-card-heb { color: #1e2233; font-family: 'SBL Hebrew','David Libre',serif; font-size: 1.2em; margin-top: 4px; font-weight: 600; }
+.nl-card-heb { color: #1e2233; font-family: 'David Libre',serif; font-size: 1.2em; margin-top: 4px; font-weight: 600; }
 .nl-bm-list { display: grid; gap: 8px; }
 .nl-bm { border: 1px solid #d6ceb8; border-radius: 10px; padding: 10px; background: #faf8f2; cursor: pointer; }
 .nl-bm:hover { border-color: #dbb958; background: #f0ece0; }
 .nl-bm-title { color: #1e2233; font-size: 0.95em; font-weight: 600; }
-.nl-bm-heb { color: #1e2233; font-family: 'SBL Hebrew','David Libre',serif; font-size: 1.1em; margin-top: 2px; font-weight: 600; }
+.nl-bm-heb { color: #1e2233; font-family: 'David Libre',serif; font-size: 1.1em; margin-top: 2px; font-weight: 600; }
 .nl-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
 .nl-tile {
   border: 1px solid #d6ceb8; border-radius: 12px; padding: 12px;
@@ -167,7 +167,7 @@
 }
 .nl-heb {
   color: #1e2233;
-  font-family: 'SBL Hebrew', 'David Libre', serif;
+  font-family: 'David Libre', serif;
   font-size: 0.92em;
   font-weight: 600;
   line-height: 1.25;
@@ -281,7 +281,7 @@
 }
 .nav-book-row.nav-focus-row:hover { background: rgba(219,185,88,0.16); }
 .nav-book-row .nb-heb {
-  font-family: 'SBL Hebrew','David Libre',serif; font-size: 1em;
+  font-family: 'David Libre',serif; font-size: 1em;
   color: #1e2233; direction: rtl; font-weight: 600;
 }
 .nav-book-row .nb-en { font-size: 0.88em; color: #1e2233; font-weight: 600; }
@@ -316,7 +316,7 @@
   background: rgba(219,185,88,0.18); border-color: var(--accent, #dbb958);
 }
 .nav-ch-cell .ch-heb {
-  font-family: 'SBL Hebrew','David Libre',serif; font-size: 0.9em;
+  font-family: 'David Libre',serif; font-size: 0.9em;
   color: #1e2233; line-height: 1.1; font-weight: 600;
 }
 .nav-ch-cell .ch-num { font-size: 0.72em; color: #1e2233; font-weight: 600; }
@@ -433,7 +433,7 @@ body.dark-mode #nav-breadcrumb .bc-sep { color: rgba(232, 226, 212, 0.35); }
 .continue-reading:hover { background: #e8cc78; }
 .continue-reading .cr-label { font-size: 0.8em; color: #1e2233; text-transform: uppercase; letter-spacing: 0.1em; }
 .continue-reading .cr-ref { font-size: 1.15em; color: #1e2233; margin-top: 4px; font-weight: 700; }
-.continue-reading .cr-heb { font-family: 'SBL Hebrew','David Libre',serif; font-size: 1.1em; color: #1e2233; font-weight: 700; }
+.continue-reading .cr-heb { font-family: 'David Libre',serif; font-size: 1.1em; color: #1e2233; font-weight: 700; }
 body.dark-mode .continue-reading {
   background: #dbb958;
   border-color: #1e2233;
@@ -495,7 +495,7 @@ body.dark-mode .continue-reading .cr-heb { color: #1e2233; }
   padding-bottom: env(safe-area-inset-bottom, 0px);
   background: #1e2233;
   border-top: 2px solid rgba(219, 185, 88, 0.35);
-  font-family: 'David Libre', 'SBL Hebrew', Georgia, serif;
+  font-family: 'David Libre', serif;
   direction: rtl;
 }
 

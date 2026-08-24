@@ -93,7 +93,7 @@ body.dark-mode *:focus-visible { outline-color: #d4af37; }
 body {
   background: var(--bg);
   color: var(--ink);
-  font-family: 'David Libre', 'Frank Ruhl Libre', serif;
+  font-family: 'David Libre', serif;
   min-height: 100vh;
 }
 
@@ -186,7 +186,7 @@ body.hide-bottom-bar .controls-bottom.sw-footer-modes {
   direction: ltr;
 }
 .chapter-summary-heb {
-  font-family: 'SBL Hebrew', 'Ezra SIL', 'Frank Ruehl CLM', 'Noto Serif Hebrew', serif;
+  font-family: 'David Libre', serif;
   font-size: 1em;
   color: var(--ink);
   line-height: 1.7;
@@ -1531,7 +1531,7 @@ body.dark-mode #xref-popup { background: #272d3e; border-color: #d4af37; color: 
   display: inline-flex; flex-direction: column; align-items: center;
   text-align: center; padding: 2px 3px;
 }
-.xref-ref-word .hw { font-family: 'SBL Hebrew', 'David Libre', serif; font-size: 1.05em; color: var(--ink); }
+.xref-ref-word .hw { font-family: 'David Libre', serif; font-size: 1.05em; color: var(--ink); }
 .xref-ref-word .en { font-size: 0.65em; color: var(--gloss); direction: ltr; }
 .xref-ref-arr { display: inline-flex; align-items: center; color: var(--accent); opacity: 0.5; font-size: 1.1em; padding: 0 1px; direction: ltr; unicode-bidi: isolate; }
 .xref-ref-english {
@@ -2462,7 +2462,7 @@ body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
         <div class="tw"><span class="th">העדים</span><span class="tg">the-Witnesses</span></div>
       </div>
       <div id="front-three-verses"></div>
-      <p style="font-size:1em;line-height:2;color:#444;text-align:center;margin-top:16px;font-family:'David Libre','SBL Hebrew','Noto Serif Hebrew',serif">
+      <p style="font-size:1em;line-height:2;color:#444;text-align:center;margin-top:16px;font-family:'David Libre',serif">
 אוֹלִיבֶר קַאוּדֶרִי<br>דָּוִד וִיטְמֶר<br>מַרְטִין הַרִיס
       </p>
     </div>
@@ -2477,7 +2477,7 @@ body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
         <div class="tw"><span class="th">עדים</span><span class="tg">Witnesses</span></div>
       </div>
       <div id="front-eight-verses"></div>
-      <p style="font-size:1em;line-height:2;color:#444;text-align:center;margin-top:16px;font-family:'David Libre','SBL Hebrew','Noto Serif Hebrew',serif">
+      <p style="font-size:1em;line-height:2;color:#444;text-align:center;margin-top:16px;font-family:'David Libre',serif">
 כְּרִיסְטְיָן וִיטְמֶר<br>יַעֲקֹב וִיטְמֶר<br>פֶּטְרוּס וִיטְמֶר הַצָּעִיר<br>יוֹחָנָן וִיטְמֶר<br>חִירָם פֵּיג׳<br>יוֹסֵף סְמִית הַזָּקֵן<br>חִירָם סְמִית<br>שְׁמוּאֵל ה׳ סְמִית
       </p>
     </div>
@@ -6546,7 +6546,7 @@ function openRootXrefPanel(root) {
 
       if (u.fromGlossary && u.glossaryNote && u.rawOtRef) {
         var gn = document.createElement('div');
-        gn.style.cssText = 'font-size:0.84em;color:#9aa3bc;margin-top:5px;line-height:1.35;font-family:SBL Hebrew,serif;';
+        gn.style.cssText = 'font-size:0.84em;color:#9aa3bc;margin-top:5px;line-height:1.35;font-family:\'David Libre\',serif;';
         gn.textContent = u.glossaryNote;
         card.appendChild(gn);
       }
@@ -7896,7 +7896,7 @@ document.addEventListener('keydown', function(e) {
       var lemNum = getLemmaStrongsBom(hText);
       if (lemNum && lemNum !== root && _strongsRoots[lemNum]) {
         var lemE = _strongsRoots[lemNum];
-        lemmaLine = 'Word: <span style="font-family:SBL Hebrew,serif">' + (lemE.w || '') + '</span>' +
+        lemmaLine = 'Word: <span style="font-family:\'David Libre\',serif">' + (lemE.w || '') + '</span>' +
           (lemE.x ? ' <span style="font-size:0.85em;opacity:0.7;">(' + lemE.x + ')</span>' : '') +
           (lemE.g ? ' \u2014 ' + lemE.g : '') + '<br>';
       }
@@ -7917,7 +7917,7 @@ document.addEventListener('keydown', function(e) {
       if (isStrongsRoot) {
         var rootEntry = _strongsRoots[root];
         if (rootEntry) {
-          rootDisplay = '<span style="font-family:SBL Hebrew,serif">' + rootEntry.w + '</span> <span style="font-size:0.85em;opacity:0.7;">(' + rootEntry.x + ')</span>';
+          rootDisplay = '<span style="font-family:\'David Libre\',serif">' + rootEntry.w + '</span> <span style="font-size:0.85em;opacity:0.7;">(' + rootEntry.x + ')</span>';
           // Exactness: prefer the site's own curated/observed glosses;
           // Strong's abridged one-word gloss only as a last resort.
           var strongsGloss = rootEntry.g || '';
@@ -7928,7 +7928,7 @@ document.addEventListener('keydown', function(e) {
           }
         }
       } else {
-        rootDisplay = '(<span style="font-family:SBL Hebrew,serif">' + toSofit(root) + '</span>) <span style="font-size:0.85em;opacity:0.7;">' + transliterate(toSofit(root)) + '</span>';
+        rootDisplay = '(<span style="font-family:\'David Libre\',serif">' + toSofit(root) + '</span>) <span style="font-size:0.85em;opacity:0.7;">' + transliterate(toSofit(root)) + '</span>';
         var curatedRoot = (window._rootGlossaryData || {})[root] || {};
         rootMeaning = curatedRoot.meaning || '';
       }
@@ -7954,7 +7954,7 @@ document.addEventListener('keydown', function(e) {
         var sortedForms = Object.entries(rInfo.forms).sort(function(a,b) { return b[1]-a[1]; });
         detailHtml += '<br><span>Forms:</span> ';
         detailHtml += sortedForms.slice(0, 5).map(function(pair) {
-          return '<span style="font-family:SBL Hebrew,serif">' + pair[0] + '</span> (' + pair[1] + 'x)';
+          return '<span style="font-family:\'David Libre\',serif">' + pair[0] + '</span> (' + pair[1] + 'x)';
         }).join(', ');
       }
       detailHtml += '<br><span style="cursor:pointer;color:var(--accent);text-decoration:underline;font-size:0.9em;" onclick="event.stopPropagation();closePopup();openRootXrefPanel(\'' + root.replace(/'/g,"\\'") + '\')">View all references →</span>';

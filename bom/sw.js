@@ -7,7 +7,7 @@ const ASSETS = [
   './bom_lazy_assets.js?v=1',
   '../xref_study_panel.css',
   '../xref_study_panel.js',
-  './official_verses.js?v=9',
+  './official_verses.js?v=10',
   './scripture_verses.js',
   './chapter_headings.js',
   './chapter_headings_heb.js',

@@ -109,7 +109,7 @@
 }
 .xf-bookmark-item .xf-bm-title { font-size: 0.95em; color: var(--ink); }
 .xf-bookmark-item .xf-bm-heb {
-  font-family: 'David Libre', 'SBL Hebrew', serif;
+  font-family: 'David Libre', serif;
   font-size: 1.05em;
   color: var(--accent);
   margin-top: 4px;

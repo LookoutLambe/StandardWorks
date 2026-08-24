@@ -213,14 +213,6 @@
     return { type: 'other', text: norm };
   }
 
-  function studyHelpsUrl(kind, topic) {
-    var t = String(topic || '').trim();
-    if (!t) return null;
-    // churchofjesuschrist.org scripture study helps
-    if (kind === 'tg') return 'https://www.churchofjesuschrist.org/study/scriptures/tg/' + encodeURIComponent(t.toLowerCase().replace(/\s+/g, '-')) + '?lang=eng';
-    if (kind === 'bd') return 'https://www.churchofjesuschrist.org/study/scriptures/bd/' + encodeURIComponent(t.toLowerCase().replace(/\s+/g, '-')) + '?lang=eng';
-    return null;
-  }
 
   // ── Verse file mapping for dynamic interlinear loading ──
   var _verseFileCache = {}; // url → { targetId → [verseArray] }
@@ -419,8 +411,11 @@
     fetch(url).then(function(r) { return r.text(); }).then(function(text) {
       var captured = {};
       try {
-        var fn = new Function('renderVerseSet', text);
-        fn(function(data, targetId) { captured[targetId] = data; });
+        // 1nephi.js also calls renderWords() for its colophon, before any
+        // renderVerseSet() call. Without a stub that throws and nothing is
+        // captured, so every 1 Nephi cross-reference falls back to a bare link.
+        var fn = new Function('renderVerseSet', 'renderWords', text);
+        fn(function(data, targetId) { captured[targetId] = data; }, function() {});
       } catch(e) { console.warn('Verse file parse error:', url, e); }
       _verseFileCache[url] = captured;
       callback(captured);
@@ -929,48 +924,6 @@
         refsContainer.appendChild(card);
       });
 
-      // Study Helps section (TG / BD / Other)
-      var tgKeys = Object.keys(studyHelps.tg);
-      var bdKeys = Object.keys(studyHelps.bd);
-      var otherKeys = Object.keys(studyHelps.other);
-      if (tgKeys.length || bdKeys.length || otherKeys.length) {
-        var sh = document.createElement('div');
-        sh.className = 'xref-ref-card';
-        sh.style.borderStyle = 'dashed';
-        sh.style.opacity = '0.98';
-        var title = document.createElement('div');
-        title.className = 'xref-ref-title';
-        title.textContent = 'Study Helps';
-        sh.appendChild(title);
-
-        function addHelp(kind, label, items) {
-          if (!items || !items.length) return;
-          var sec = document.createElement('div');
-          sec.style.cssText = 'padding:8px 0 0; font-size:0.92em;';
-          var h = document.createElement('div');
-          h.style.cssText = 'font-weight:700; opacity:0.85; padding:2px 0;';
-          h.textContent = label + ' (' + items.length + ')';
-          sec.appendChild(h);
-          items.slice(0, 40).forEach(function(t) {
-            var row = document.createElement('div');
-            row.style.cssText = 'padding:2px 0;';
-            var a = document.createElement('a');
-            a.textContent = (kind === 'other') ? t : (label + ': ' + t);
-            a.href = (kind === 'other') ? ('https://www.churchofjesuschrist.org/search?lang=eng&query=' + encodeURIComponent(t)) : (studyHelpsUrl(kind, t) || '#');
-            a.target = '_blank';
-            a.rel = 'noopener';
-            a.style.cssText = 'color:var(--accent,#c8a84e); text-decoration: underline;';
-            row.appendChild(a);
-            sec.appendChild(row);
-          });
-          sh.appendChild(sec);
-        }
-        addHelp('tg', 'Topical Guide', tgKeys.sort());
-        addHelp('bd', 'Bible Dictionary', bdKeys.sort());
-        addHelp('other', 'Other', otherKeys.sort());
-
-        refsContainer.appendChild(sh);
-      }
     } else {
       var noData = document.createElement('div');
       noData.className = 'xref-ref-nodata';
@@ -1176,48 +1129,6 @@
       refsContainer.appendChild(card);
     });
 
-    // Render Study Helps
-    var tgKeys = Object.keys(studyHelps.tg);
-    var bdKeys = Object.keys(studyHelps.bd);
-    var otherKeys = Object.keys(studyHelps.other);
-    if (tgKeys.length || bdKeys.length || otherKeys.length) {
-      var sh = document.createElement('div');
-      sh.className = 'xref-ref-card';
-      sh.style.borderStyle = 'dashed';
-      sh.style.opacity = '0.98';
-      var title = document.createElement('div');
-      title.className = 'xref-ref-title';
-      title.textContent = 'Study Helps';
-      sh.appendChild(title);
-
-      function addHelp(kind, label, items) {
-        if (!items || !items.length) return;
-        var sec = document.createElement('div');
-        sec.style.cssText = 'padding:8px 0 0; font-size:0.92em;';
-        var h = document.createElement('div');
-        h.style.cssText = 'font-weight:700; opacity:0.85; padding:2px 0;';
-        h.textContent = label + ' (' + items.length + ')';
-        sec.appendChild(h);
-        items.slice(0, 60).forEach(function(t) {
-          var row = document.createElement('div');
-          row.style.cssText = 'padding:2px 0;';
-          var a = document.createElement('a');
-          a.textContent = (kind === 'other') ? t : (label + ': ' + t);
-          a.href = (kind === 'other') ? ('https://www.churchofjesuschrist.org/search?lang=eng&query=' + encodeURIComponent(t)) : (studyHelpsUrl(kind, t) || '#');
-          a.target = '_blank';
-          a.rel = 'noopener';
-          a.style.cssText = 'color:var(--accent,#c8a84e); text-decoration: underline;';
-          row.appendChild(a);
-          sec.appendChild(row);
-        });
-        sh.appendChild(sec);
-      }
-      addHelp('tg', 'Topical Guide', tgKeys.sort());
-      addHelp('bd', 'Bible Dictionary', bdKeys.sort());
-      addHelp('other', 'Other', otherKeys.sort());
-
-      refsContainer.appendChild(sh);
-    }
 
     panel.scrollTop = 0;
     panel.classList.add('open');
