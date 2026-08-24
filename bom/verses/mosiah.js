@@ -1266,9 +1266,7 @@ var mo_ch20Verses = [
   { num: "יט", words: [
     ["וְעַתָּה","and now"],["רְאֵה","see"],["וְהַגֵּד","and tell"],["לַמֶּלֶךְ","the king"],["אֶת־הַדְּבָרִים הָאֵלֶּה","of these things"],["לְמַעַן","that"],["יַגִּיד","he may declare"],["לְעַמּוֹ","unto his people"],["וְיִשָּׁקְטוּ","and they may be pacified"],["אֵלֵינוּ","unto us"],["כִּי","that"],["הִנֵּה","behold"],["הֵם","they"],["מִתְכּוֹנְנִים","preparing"],["לַעֲלוֹת","to come up"],["עָלֵינוּ","against us"],["וְהִנֵּה","and behold"],["מְעַטִּים","few"],["אֲנָחְנוּ","are we"]
   ]},
-  { num: "כ", words: [
-    ["וְהִנֵּה","and behold"],["בָּאִים","they come"],["הֵם","with"],["בַּהֲמוֹן","the multitude of"],["צִבְאוֹתֵיהֶם","their armies"],["וְאִם־לֹא","and if not"],["יַרְגִּיעֵם","shall pacify them"],["הַמֶּלֶךְ","the king"],["אֵלֵינוּ","unto us"],["אָבֹד","perish"],["נֹאבֵד","we must perish"]
-  ]},
+  { num: "כ", words: [["וְהִנֵּה","and behold"], ["בָּאִים","come"], ["הֵם","they"], ["בַּהֲמוֹן","with the multitude of"], ["צִבְאוֹתֵיהֶם","their armies"], ["וְאִם־לֹא","and if not"], ["יַרְגִּיעֵם","shall pacify them"], ["הַמֶּלֶךְ","the king"], ["אֵלֵינוּ","unto us"], ["אָבֹד","perish"], ["נֹאבֵד","we must perish"]]},
   { num: "כא", words: [["הֲלֹא","have not"], ["בָּאוּ","come"], ["דִּבְרֵי","the words of"], ["אֲבִינָדִי","Abinadi"], ["אֲשֶׁר","which"], ["נִבָּא","he prophesied"], ["עָלֵינוּ","against us"], ["וְכׇל־זֹאת","and all this"], ["כִּי־לֹא","because not"], ["שָׁמַעְנוּ","did we hearken"], ["בְּקוֹל","unto the voice of"], ["יְהוָה","the Lord"], ["וְלֹא","and not"], ["סַרְנוּ","did we turn"], ["מֵעֲוֹנוֹתֵינוּ","from our iniquities"]]},
   { num: "כב", words: [
     ["וְעַתָּה","and now"],["נַשְׁקִיטָה","let us pacify"],["אֶת־הַמֶּלֶךְ","the king"],["וּנְקַיְּמָה","and we will fulfill"],["אֶת־הַשְּׁבוּעָה","the oath"],["אֲשֶׁר","which"],["נִשְׁבַּעְנוּ","we have made"],["לוֹ","unto him"],["כִּי־טוֹב","for better"],["לָנוּ","for us"],["לִהְיוֹת","to be"],["לַעֲבָדִים","for servants"],["מֵאֲשֶׁר","than that"],["נֹאבַד","we should perish"],["וְעַתָּה","and now"],["נַשְׁבִּית","let us put a stop"],["שְׁפִיכַת","to the shedding of"],["הַדָּמִים","the blood"],["הָרַבִּים","the many"]
@@ -1633,12 +1631,8 @@ var mo_ch25Verses = [
   { num: "א", words: [
     ["וַיְצַו","and commanded"],["הַמֶּלֶךְ","king"],["מוֹשִׁיָּה","Mosiah"],["לְהַקְהִיל","to gather"],["אֶת־כׇּל־הָעָם","all the people"]
   ]},
-  { num: "ב", words: [
-    ["וַיְהִי","and the number of"],["מִסְפַּר","so many of"],["בְּנֵי","the children of"],["נֶפִי","Nephi"],["וְצֶאֱצָאֵי","and descendants of"],["נֶפִי","Nephi"],["מְעַט","was less"],["מִמִּסְפַּר","than the number of"],["עַם","the people of"],["זָרַחֶמְלָה","Zarahemla"],["אֲשֶׁר","which"],["הָיָה","was"],["מִצֶּאֱצָאֵי","a descendant of"],["מוּלֶק","Mulek"],["וְהַבָּאִים","and those who came"],["אִתּוֹ","with him"],["הַמִּדְבָּרָה","into the wilderness"]
-  ]},
-  { num: "ג", words: [
-    ["וַיְהִי","and the number of"],["מִסְפַּר","so many of"],["עַם־נֶפִי","the people of Nephi"],["וְעַם","and the people of"],["זָרַחֶמְלָה","Zarahemla"],["מְעַט","was less"],["מִמִּסְפַּר","than the number of"],["הַלָּמָנִים","the Lamanites"],["וְלֹא־הָיוּ","yea they were not"],["אַף","even"],["מַחֲצִיתָם","half so many"]
-  ]},
+  { num: "ב", words: [["וַיְהִי","and it was"], ["מִסְפַּר","the number of"], ["בְּנֵי","the children of"], ["נֶפִי","Nephi"], ["וְצֶאֱצָאֵי","and descendants of"], ["נֶפִי","Nephi"], ["מְעַט","was less"], ["מִמִּסְפַּר","than the number of"], ["עַם","the people of"], ["זָרַחֶמְלָה","Zarahemla"], ["אֲשֶׁר","which"], ["הָיָה","was"], ["מִצֶּאֱצָאֵי","a descendant of"], ["מוּלֶק","Mulek"], ["וְהַבָּאִים","and those who came"], ["אִתּוֹ","with him"], ["הַמִּדְבָּרָה","into the wilderness"]]},
+  { num: "ג", words: [["וַיְהִי","and it was"], ["מִסְפַּר","the number of"], ["עַם־נֶפִי","the people of Nephi"], ["וְעַם","and the people of"], ["זָרַחֶמְלָה","Zarahemla"], ["מְעַט","was less"], ["מִמִּסְפַּר","than the number of"], ["הַלָּמָנִים","the Lamanites"], ["וְלֹא־הָיוּ","yea they were not"], ["אַף","even"], ["מַחֲצִיתָם","half so many"]]},
   { num: "ד", words: [
     ["וְעַתָּה","and now"],["נִקְהֲלוּ","gathered"],["כׇּל־עַם","all the people of"],["נֶפִי","Nephi"],["וְגַם","and also"],["כׇּל־עַם","all the people of"],["זָרַחֶמְלָה","Zarahemla"],["וַיֵּאָסְפוּ","and they were gathered"],["לִשְׁנֵי","into two"],["מַחֲנוֹת","bodies"]
   ]},
@@ -2029,7 +2023,7 @@ var mo_ch29Verses = [
     ["וַיְהִי","and it came to pass"],["כִּי","that"],["מִנּוּ","they appointed"],["שֹׁפְטִים","judges"],["לִמְשֹׁל","to reign"],["עֲלֵיהֶם","over them"],["וְלִשְׁפֹּט","and to judge"],["אוֹתָם","them"],["כְּפִי","according to"],["הַתּוֹרָה","the law"],["וַיַּעֲשׂוּ","and they did"],["כֵן","thus"],["בְּכׇל־הָאָרֶץ","throughout all the land"]
   ]},
   { num: "מב", words: [
-    ["וַיְהִי","and it came to pass"],["כִּי","that"],["הוּקַם","was appointed"],["אַלְמָא","Alma"],["לִהְיוֹת","to be"],["הַשּׁוֹפֵט","the judge"],["הָרֹאשׁ","chief"],["וְהוּא","and he was"],["גַם־הַכֹּהֵן","also the priest"],["הַגָּדוֹל","the high"],["כִּי־נָתַן","for had given"],["אָבִיו","his father"],["אֶת־הַמַּשְׂרָה","the office"],["עָלָיו","upon him"],["וַיִּתֶּן־לוֹ","and he had given him"],["אֶת־הַפְּקֻדָּה","the charge"],["עַל־כׇּל־דִּבְרֵי","over all the affairs of"],["הָעֵדָה","the church"]
+    ["וַיְהִי","and it came to pass"],["כִּי","that"],["הוּקַם","was appointed"],["אַלְמָא","Alma"],["לִהְיוֹת","to be"],["הַשּׁוֹפֵט","the judge"],["הָרֹאשׁ","the chief"],["וְהוּא","and he was"],["גַם־הַכֹּהֵן","also the priest"],["הַגָּדוֹל","the high"],["כִּי־נָתַן","for had given"],["אָבִיו","his father"],["אֶת־הַמַּשְׂרָה","the office"],["עָלָיו","upon him"],["וַיִּתֶּן־לוֹ","and he had given him"],["אֶת־הַפְּקֻדָּה","the charge"],["עַל־כׇּל־דִּבְרֵי","over all the affairs of"],["הָעֵדָה","the church"]
   ]},
   { num: "מג", words: [
     ["וַיְהִי","and it came to pass"],["כִּי","that"],["הָלַךְ","walked"],["אַלְמָא","Alma"],["בְּדַרְכֵי","in the ways of"],["יְהוָה","the Lord"],["וַיִּשְׁמֹר","and he kept"],["אֶת־מִצְוֹתָיו","His commandments"],["וַיִּשְׁפֹּט","and he judged"],["מִשְׁפְּטֵי־צֶדֶק","righteous judgments"],["וַיְהִי","and there was"],["שָׁלוֹם","peace"],["תָּמִיד","continually"],["בָּאָרֶץ","in the land"]

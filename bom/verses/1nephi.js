@@ -7482,23 +7482,7 @@ var ch15Verses = [
     ["הַמָּיִם","the water"],
     ["׃",""]
   ]},
-  { num:"כח", words:[
-    ["וָאֹמַר","and I said"],
-    ["אֲלֵיהֶם","unto them"],
-    ["הוּא","it was"],
-    ["תְּהוֹם","an awful gulf"],
-    ["נוֹרָא","terrible"],
-    ["הַמַּבְדִּיל","which separated"],
-    ["בֵּין","between"],
-    ["הָרְשָׁעִים","the wicked"],
-    ["וּבֵין","and"],
-    ["עֵץ","the tree of"],
-    ["הַחַיִּים","life"],
-    ["וּבֵין","and also"],
-    ["קְדוֹשֵׁי","the saints of"],
-    ["אֱלֹהִים","God"],
-    ["׃",""]
-  ]},
+  { num: "כח", words: [["וָאֹמַר","and I said"], ["אֲלֵיהֶם","unto them"], ["הוּא","it was"], ["תְּהוֹם","a gulf"], ["נוֹרָא","awful"], ["הַמַּבְדִּיל","which separated"], ["בֵּין","between"], ["הָרְשָׁעִים","the wicked"], ["וּבֵין","and"], ["עֵץ","the tree of"], ["הַחַיִּים","life"], ["וּבֵין","and also"], ["קְדוֹשֵׁי","the saints of"], ["אֱלֹהִים","God"], ["׃",""]]},
   { num:"כט", words:[
     ["וָאֹמַר","and I said"],
     ["אֲלֵיהֶם","unto them"],
