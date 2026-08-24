@@ -12708,7 +12708,7 @@ var n2_ch28Verses = [
     ["וְהַנִּתְעֶבֶת","and the abominable"],
     ["הַזּוֹנָה","the whore of"],
     ["לְכׇל־הָאָרֶץ","all the earth"],
-    ["נָפוֹל","fall"],
+    ["נָפוֹל","tumble"],
     ["תִּפּוֹל","she must tumble"],
     ["אָרְצָה","to the earth"],
     ["וְגָדוֹל","and great"],
