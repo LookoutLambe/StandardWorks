@@ -267,7 +267,7 @@ var ch1Verses = [
   ]},
   { num:"ט", words:[
     ["וַיַּרְא","and he saw"],
-    ["אֶחָד","one"],
+    ["אֶחָד","One"],
     ["יוֹרֵד","descending"],
     ["מִתּוֹךְ","from the midst of"],
     ["הַשָּׁמַיִם","the heavens"],
@@ -318,7 +318,7 @@ var ch1Verses = [
     ["׃",""]
   ]},
   { num:"יג", words:[
-    ["וַיִּקְרָא","and he cried out"],
+    ["וַיִּקְרָא","and he read"],
     ["לֵאמֹר","saying"],
     ["אוֹי","woe"],
     ["אוֹי","woe"],
@@ -345,7 +345,7 @@ var ch1Verses = [
   ]},
   { num:"יד", words:[
     ["וַיְהִי","and it came to pass"],
-    ["כַּאֲשֶׁר","when/as"],
+    ["כַּאֲשֶׁר","when"],
     ["קָרָא","read"],
     ["אָבִי","my father"],
     ["וַיַּרְא","and saw"],
@@ -394,7 +394,7 @@ var ch1Verses = [
   { num:"טז", words:[
     ["וְעַתָּה","and now"],
     ["לֹא","not"],
-    ["אֶכְתֹּב","I shall write"],
+    ["אֶכְתֹּב","I shall write"],["אֲנִי","I"],["נֶפִי","Nephi"],
     ["כׇּל־דִּבְרֵי","all words of"],
     ["אָבִי","my father"],
     ["כִּי","for"],
@@ -501,7 +501,7 @@ var ch1Verses = [
     ["אֶת־הַדְּבָרִים הָאֵלֶּה","these things"],
     ["וַיִּקְצְפוּ","and were wroth"],
     ["עָלָיו","with him"],
-    ["כַּאֲשֶׁר","when/as"],
+    ["כַּאֲשֶׁר","as"],
     ["עָשׂוּ","they did"],
     ["לַנְּבִיאִים","to the prophets"],
     ["הָרִאשֹׁנִים","the former"],
@@ -524,8 +524,8 @@ var ch1Verses = [
     ["עַל־כׇּל־בְּחִירָיו","are over all His chosen"],
     ["עַל־אֱמוּנָתָם","because of their faith"],
     ["לַעֲשׂוֹתָם","to make them"],
-    ["גִּבֹּרֵי","mighty even unto"],
-    ["תְשׁוּעָה","the power of deliverance"],
+    ["גִּבֹּרֵי","mighty ones of"],
+    ["תְשׁוּעָה","deliverance"],
     ["׃",""]
   ]}
 ];
@@ -622,7 +622,7 @@ var ch2Verses = [
   ]},
   { num:"ו", words:[
     ["וַיְהִי","and it came to pass"],
-    ["כַּאֲשֶׁר","when/as"],
+    ["כַּאֲשֶׁר","when"],
     ["הָלַךְ","went"],
     ["שְׁלֹשֶׁת","three"],
     ["יָמִים","days"],
@@ -949,7 +949,7 @@ var ch2Verses = [
 var ch3Verses = [
   { num:"א", words:[
     ["וַיְהִי","and it came to pass"],
-    ["כְּשׁוּבִי","when I returned"],
+    ["כְּשׁוּבִי","when I returned"],["אֲנִי","I"],["נֶפִי","Nephi"],
     ["אֶל־אֹהֶל","unto the tent of"],
     ["אָבִי","my father"],
     ["מִדַּבֶּרִי","from communing"],
@@ -1039,7 +1039,7 @@ var ch3Verses = [
     ["׃",""]
   ]},
   { num:"ז", words:[
-    ["וָאֹמַר","and I spake"],
+    ["וָאֹמַר","and I spake"],["אֲנִי","I"],["נֶפִי","Nephi"],
     ["אֶל־אָבִי","unto my father"],
     ["אֵלְכָה","I will go"],
     ["וְאֶעֱשֶׂה","and do"],
@@ -1601,7 +1601,7 @@ var ch4Verses = [
     ["אַחֲרֵי","after"],
     ["הֵחָבְאָם","they had hidden themselves"],
     ["וָאֶתְגַּנֵּב","I crept"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["הָעִירָה","into the city"],
     ["וָאֵלֶךְ","and went"],
     ["אֶל־בֵּית","toward the house of"],
@@ -1619,7 +1619,7 @@ var ch4Verses = [
   ]},
   { num:"ז", words:[
     ["אַךְ","nevertheless"],
-    ["וָאֵלֵךְ","I went forth"],
+    ["הָלַכְתִּי","I went forth"],
     ["וַיְהִי","and it came to pass"],
     ["בְּקָרְבִי","as I came near"],
     ["אֶל־בֵּית","to the house of"],
@@ -1651,7 +1651,7 @@ var ch4Verses = [
     ["וְיָדָהּ","and the hilt thereof"],
     ["זָהָב","gold"],
     ["טָהוֹר","pure"],
-    ["וּמַעֲשֵׂהוּ","and the workmanship thereof"],
+    ["וּמַעֲשֶׂהָ","and the workmanship thereof"],
     ["טוֹב","fine"],
     ["מְאֹד","exceedingly"],
     ["וָאֵרֶא","and I saw"],
@@ -1739,7 +1739,7 @@ var ch4Verses = [
     ["וְעַתָּה","and now"],
     ["כַּאֲשֶׁר","when"],
     ["שָׁמַעְתִּי","I heard"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["אֶת־הַדְּבָרִים הָאֵלֶּה","these words"],
     ["וָאֶזְכֹּר","I remembered"],
     ["אֶת־דִּבְרֵי","the words of"],
@@ -2421,10 +2421,10 @@ var ch5Verses = [
     ["׃",""]
   ]},
   { num:"טו", words:[
-    ["וְהָאֱלֹהִים","and (it was) God"],
+    ["וְהָאֱלֹהִים","and God"],
     ["אֲשֶׁר","who"],
     ["שְׁמָרָם","had preserved them"],
-    ["הוּא","(it was) he"],
+    ["הוּא","he"],
     ["הוֹצִיאָם","brought them out"],
     ["מִבֵּית","out of the house of"],
     ["עֲבָדִים","bondage"],
@@ -2600,7 +2600,7 @@ var ch6Verses = [
   ]},
   { num:"ד", words:[
     ["כִּי","for"],
-    ["כׇל־חֶפְצִי","all my desire (is)"],
+    ["כׇל־חֶפְצִי","all my desire"],
     ["לְהָשִׁיב","to persuade"],
     ["אֶת־בְּנֵי","the children of"],
     ["הָאָדָם","men"],
@@ -2692,7 +2692,7 @@ var ch7Verses = [
     ["אֹתוֹ","him"],
     ["כִּי","that"],
     ["נָשׁוּב","should return"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["וְאַחַי","and my brethren"],
     ["אֶל־אֶרֶץ","unto the land of"],
     ["יְרוּשָׁלָיִם","Jerusalem"],
@@ -2704,7 +2704,7 @@ var ch7Verses = [
   ]},
   { num:"ג", words:[
     ["וַנֵּלֶךְ","and we went"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["וְאַחַי","and my brethren"],
     ["שֵׁנִית","a second time"],
     ["בַּמִּדְבָּר","into the wilderness"],
@@ -2780,7 +2780,7 @@ var ch7Verses = [
     ["בַּעֲצֹב","being grieved"],
     ["לִבִּי","my heart"],
     ["וָאֹמַר","and I spake"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["אֲלֵיהֶם","unto them"],
     ["לֵאמֹר","saying"],
     ["גַּם","yea"],
@@ -2941,7 +2941,7 @@ var ch7Verses = [
     ["וַיְהִי","and it came to pass"],
     ["כַּאֲשֶׁר","that when"],
     ["דִּבַּרְתִּי","I had spoken"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["אֶת־הַדְּבָרִים הָאֵלֶּה","these words"],
     ["אֶל־אַחַי","unto my brethren"],
     ["וַיִּקְצְפוּ","they were wroth"],
@@ -2971,7 +2971,7 @@ var ch7Verses = [
   ]},
   { num:"יז", words:[
     ["אַךְ","but"],
-    ["וַיְהִי","it came to pass"],
+    ["הָיָה","it came to pass"],
     ["וָאֶתְפַּלֵּל","that I prayed"],
     ["אֶל־יְהוָה","unto the Lord"],
     ["לֵאמֹר","saying"],
@@ -3558,7 +3558,7 @@ var ch8Verses = [
     ["וְעַתָּה","and now"],
     ["לֹא","not"],
     ["אֲדַבֵּר","do speak"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["אֶת־כׇּל־דִּבְרֵי","all the words of"],
     ["אָבִי","my father"],
     ["׃",""]
@@ -3871,7 +3871,7 @@ var ch10Verses = [
   { num:"א", words:[
     ["וְעַתָּה","and now"],
     ["אָחֵל","I proceed"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["לָתֵת","to give"],
     ["עַל־הַלּוּחוֹת הָאֵלֶּה","upon these plates"],
     ["אֶת־דִּבְרֵי","an account of"],
@@ -4562,7 +4562,7 @@ var ch11Verses = [
     ["אֵלַי","unto me"],
     ["רְאֵה","look"],
     ["וָאַבִּיט","and I looked"],
-    ["כְּמְבַקֵּשׁ","as one seeking"],
+    ["כִּמְבַקֵּשׁ","as one seeking"],
     ["לִרְאוֹתוֹ","to see Him"],
     ["וְלֹא","and not"],
     ["רְאִיתִיו","did I see Him"],
@@ -4942,7 +4942,7 @@ var ch11Verses = [
   ]},
   { num:"לג", words:[
     ["וָאֵרֶא","and I saw"],
-    ["נֶפִי","I Nephi"],
+    ["אֲנִי","I"],["נֶפִי","I Nephi"],
     ["כִּי","that"],
     ["הֻעֲלָה","He was lifted up"],
     ["עַל־הָעֵץ","upon the cross"],
@@ -5107,7 +5107,7 @@ var ch12Verses = [
     ["חֹשֶׁךְ","darkness"],
     ["עַל־פְּנֵי","upon the face of"],
     ["אֶרֶץ","land of"],
-    ["הַנַּחֲלָה","the inheritance (e.g. promise)"],
+    ["הַנַּחֲלָה","the inheritance"],
     ["וָאֵרֶא","and saw"],
     ["בְּרָקִים","lightnings"],
     ["וָאֶשְׁמַע","and heard"],
@@ -5293,7 +5293,7 @@ var ch12Verses = [
   ]},
   { num:"יב", words:[
     ["וָאֵרֶא","and I saw"],
-    ["נֶפִי","I Nephi"],
+    ["אֲנִי","I"],["נֶפִי","I Nephi"],
     ["גַם","also"],
     ["רַבִּים","many"],
     ["מִן־הַדּוֹר","of the generation"],
@@ -5746,7 +5746,7 @@ var ch13Verses = [
   ]},
   { num:"טז", words:[
     ["וָאֵרֶא","and I saw"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["כִּי","that"],
     ["נִכְנְעוּ","did humble themselves"],
     ["הַגּוֹיִם","the Gentiles"],
@@ -5793,7 +5793,7 @@ var ch13Verses = [
   ]},
   { num:"יט", words:[
     ["וָאֵרֶא","and I saw"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["כִּי","that"],
     ["נִצְּלוּ","were delivered"],
     ["הַגּוֹיִם","the Gentiles"],
@@ -5808,7 +5808,7 @@ var ch13Verses = [
   ]},
   { num:"כ", words:[
     ["וָאֵרֶא","and I saw"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["כִּי","that"],
     ["הִצְלִיחוּ","they did prosper"],
     ["בָּאָרֶץ","in the land"],
@@ -5841,7 +5841,7 @@ var ch13Verses = [
     ["מִפִּי","out of the mouth of"],
     ["יְהוּדִי","a Jew"],
     ["וָאֶרְאֶנּוּ","and I beheld it"],
-    ["נֶפִי","I Nephi"],
+    ["אֲנִי","I"],["נֶפִי","I Nephi"],
     ["וַיֹּאמֶר","and said"],
     ["אֵלַי","unto me"],
     ["הַסֵּפֶר","the book"],
@@ -6550,7 +6550,7 @@ var ch14Verses = [
     ["כִּי","for"],
     ["הִנֵּה","behold"],
     ["זֹאת","this is"],
-    ["כְּשְׁבִי","according to the captivity of"],
+    ["כִּשְׁבִי","according to the captivity of"],
     ["הַשָּׂטָן","the devil"],
     ["וְגַם","and also"],
     ["כְּמִשְׁפַּט","according to the justice of"],
@@ -6629,7 +6629,7 @@ var ch14Verses = [
     ["לַשַּׁחַת","into destruction"],
     ["גַּם־בַּגְּוִיָּה","both temporally"],
     ["גַּם־בָּרוּחַ","and spiritually"],
-    ["כְּשְׁבִי","according to the captivity of"],
+    ["כִּשְׁבִי","according to the captivity of"],
     ["הַשָּׂטָן","the devil"],
     ["אֲשֶׁר","of which"],
     ["דִּבַּרְתִּי","I have spoken"],
@@ -6768,7 +6768,7 @@ var ch14Verses = [
   ]},
   { num:"יד", words:[
     ["וָאֵרֶא","and I beheld"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["אֶת־גְּבוּרַת","the power of"],
     ["שֵׂה־אֱלֹהִים","the Lamb of God"],
     ["וַתֵּרֶד","and it descended"],
@@ -7030,7 +7030,7 @@ var ch14Verses = [
   { num:"כח", words:[
     ["וְהִנֵּה","and behold"],
     ["נֶאֱסַר","is forbidden"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["לִכְתֹּב","to write"],
     ["אֶת־יֶתֶר","the remainder of"],
     ["הַדְּבָרִים","the things"],
@@ -7097,7 +7097,7 @@ var ch15Verses = [
     ["אַחֲרֵי","after"],
     ["אֲשֶׁר","that"],
     ["נִשָּׂאתִי","I had been carried away"],
-    ["נֶפִי","I Nephi"],
+    ["אֲנִי","I"],["נֶפִי","I Nephi"],
     ["בְּרוּחַ","in the Spirit"],
     ["וָאֵרֶא","and seen"],
     ["אֶת־כׇּל־הַדְּבָרִים הָאֵלֶּה","all these things"],
@@ -7146,7 +7146,7 @@ var ch15Verses = [
   { num:"ד", words:[
     ["וְעַתָּה","and now"],
     ["נֶעֱצַבְתִּי","was grieved"],
-    ["נֶפִי","I Nephi"],
+    ["אֲנִי","I"],["נֶפִי","I Nephi"],
     ["עַל־קְשִׁי","because of the hardness of"],
     ["לִבָּם","their hearts"],
     ["וְגַם","and also"],
@@ -7482,7 +7482,7 @@ var ch15Verses = [
   ]},
   { num:"יט", words:[
     ["וָאֲדַבְּרָה","and I spake"],
-    ["נֶפִי","I Nephi"],
+    ["אֲנִי","I"],["נֶפִי","I Nephi"],
     ["אֲלֵיהֶם","unto them"],
     ["הַרְבֵּה","much"],
     ["עַל־הַדְּבָרִים הָאֵלֶּה","concerning these things"],
@@ -7590,7 +7590,7 @@ var ch15Verses = [
   { num:"כה", words:[
     ["לָכֵן","wherefore"],
     ["פָּקַדְתִּי","I did exhort"],
-    ["נֶפִי","I Nephi"],
+    ["אֲנִי","I"],["נֶפִי","I Nephi"],
     ["לְהַקְשִׁיב","to give heed"],
     ["לִדְבַר","unto the word of"],
     ["יְהוָה","the Lord"],
@@ -7866,7 +7866,7 @@ var ch16Verses = [
     ["וַיְהִי","and it came to pass"],
     ["אַחֲרֵי","after"],
     ["כַּלּוֹתִי","that I had made an end"],
-    ["נֶפִי","I Nephi"],
+    ["אֲנִי","I"],["נֶפִי","I Nephi"],
     ["לְדַבֵּר","of speaking"],
     ["אֶל־אַחַי","unto my brethren"],
     ["וְהִנֵּה","and behold"],
@@ -7938,7 +7938,7 @@ var ch16Verses = [
   ]},
   { num:"ד", words:[
     ["וָאֶפְקֹד","and I did exhort"],
-    ["נֶפִי","I Nephi"],
+    ["אֲנִי","I"],["נֶפִי","I Nephi"],
     ["עַל־אַחַי","my brethren"],
     ["בְּכׇל־חָזְקָה","with all diligence"],
     ["לִשְׁמֹר","to keep"],
@@ -7976,7 +7976,7 @@ var ch16Verses = [
   ]},
   { num:"ז", words:[
     ["וָאֶקַּח","and I took"],
-    ["נֶפִי","I Nephi"],
+    ["אֲנִי","I"],["נֶפִי","I Nephi"],
     ["אַחַת","one of"],
     ["מִבְּנוֹת","the daughters of"],
     ["יִשְׁמָעֵאל","Ishmael"],
@@ -8009,7 +8009,7 @@ var ch16Verses = [
     ["בֵּרַךְ","had blessed"],
     ["יְהוָה","the Lord"],
     ["אֹתִי","me"],
-    ["נֶפִי","I Nephi"],
+    ["אֲנִי","I"],["נֶפִי","I Nephi"],
     ["׃",""]
   ]},
   { num:"ט", words:[
@@ -8175,7 +8175,7 @@ var ch16Verses = [
   ]},
   { num:"יח", words:[
     ["וַיְהִי","and it came to pass"],
-    ["בְּצֵאתִי","as I went forth"],["נֶפִי","Nephi"],
+    ["בְּצֵאתִי","as I went forth"],["אֲנִי","I"],["נֶפִי","Nephi"],
     ["לָצוּד","to slay"],
     ["צַיִד","food"],
     ["וְהִנֵּה","behold"],
@@ -8241,7 +8241,7 @@ var ch16Verses = [
   ]},
   { num:"כא", words:[
     ["וָאֵעָצֵב","and I was afflicted"],
-    ["נֶפִי","I Nephi"],
+    ["אֲנִי","I"],["נֶפִי","I Nephi"],
     ["עִם־אַחַי","with my brethren"],
     ["מִפְּנֵי","because of"],
     ["אָבְדַן","the loss of"],
@@ -8262,7 +8262,7 @@ var ch16Verses = [
   ]},
   { num:"כב", words:[
     ["וָאֲדַבְּרָה","and I did speak"],
-    ["נֶפִי","I Nephi"],
+    ["אֲנִי","I"],["נֶפִי","I Nephi"],
     ["הַרְבֵּה","much"],
     ["אֶל־אַחַי","unto my brethren"],
     ["כִּי","because"],
@@ -8277,7 +8277,7 @@ var ch16Verses = [
   ]},
   { num:"כג", words:[
     ["וָאַעַשׂ","and I did make"],
-    ["נֶפִי","I Nephi"],
+    ["אֲנִי","I"],["נֶפִי","I Nephi"],
     ["קֶשֶׁת","a bow"],
     ["מֵעֵץ","out of wood"],
     ["וּמִמַּקֵּל","and out of a"],
@@ -8356,7 +8356,7 @@ var ch16Verses = [
     ["׃",""]
   ]},
   { num:"כח", words:[
-    ["וָאֵרֶא","and I beheld"],["נֶפִי","Nephi"],
+    ["וָאֵרֶא","and I beheld"],["אֲנִי","I"],["נֶפִי","Nephi"],
     ["אֶת־הַמְּחוֹגִים","the pointers"],
     ["אֲשֶׁר","which"],
     ["בַּכְּלִי","were in the ball"],
@@ -8407,7 +8407,7 @@ var ch16Verses = [
   ]},
   { num:"ל", words:[
     ["וָאַעַל","and I did go up"],
-    ["נֶפִי","I Nephi"],
+    ["אֲנִי","I"],["נֶפִי","I Nephi"],
     ["אֶל־רֹאשׁ","into the top of"],
     ["הָהָר","the mountain"],
     ["לְפִי","according to"],
@@ -8768,7 +8768,7 @@ var ch17Verses = [
     ["וַיְהִי","and it came to pass"],
     ["אַחֲרֵי","after"],
     ["הֱיוֹתִי","I had been"],
-    ["נֶפִי","I Nephi"],
+    ["אֲנִי","I"],["נֶפִי","I Nephi"],
     ["בְּאֶרֶץ","in the land of"],
     ["שְׁפַע","Bountiful"],
     ["יָמִים","days"],
@@ -8832,7 +8832,7 @@ var ch17Verses = [
   ]},
   { num:"יא", words:[
     ["וָאַעַשׂ","and I made"],
-    ["נֶפִי","I Nephi"],
+    ["אֲנִי","I"],["נֶפִי","I Nephi"],
     ["מַפּוּחַ","a bellows"],
     ["לְהַבְעִיר","to blow"],
     ["הָאֵשׁ","the fire"],
@@ -8922,7 +8922,7 @@ var ch17Verses = [
   { num:"טו", words:[
     ["לָכֵן","therefore"],
     ["חָתַרְתִּי","I strove"],
-    ["נֶפִי","I Nephi"],
+    ["אֲנִי","I"],["נֶפִי","I Nephi"],
     ["לִשְׁמֹר","to keep"],
     ["אֶת־מִצְוֹת","the commandments of"],
     ["יְהוָה","the Lord"],
@@ -8994,7 +8994,7 @@ var ch17Verses = [
     ["וַיְהִי","and it came to pass"],
     ["אָנֹחַ","grieving"],
     ["נֶאֱנַחְתִּי","I was grieved"],
-    ["נֶפִי","I Nephi"],
+    ["אֲנִי","I"],["נֶפִי","I Nephi"],
     ["מִפְּנֵי","because of"],
     ["קְשִׁי","the hardness of"],
     ["לִבָּם","their hearts"],
@@ -9123,7 +9123,7 @@ var ch17Verses = [
     ["׃",""]
   ]},
   { num:"כג", words:[
-    ["וָאֹמַר","and I said"],
+    ["וָאֹמַר","and I said"],["אֲנִי","I"],["נֶפִי","Nephi"],
     ["אֲלֵיהֶם","unto them"],
     ["לֵאמֹר","saying"],
     ["הֲתַאֲמִינוּ","Do ye believe"],
@@ -9228,7 +9228,7 @@ var ch17Verses = [
     ["לְפִי","according to"],
     ["כֹּחַ","the power of"],
     ["הָאֱלֹהִים","God"],
-    ["אֲשֶׁר־בּוֹ","which (was) in him"],
+    ["אֲשֶׁר־בּוֹ","which was in him"],
     ["הִכָּה","smote"],
     ["בִּדְבָרוֹ","by his word"],
     ["אֶת־הַסֶּלַע","the rock"],
@@ -9697,7 +9697,7 @@ var ch17Verses = [
     ["׃",""]
   ]},
   { num:"מט", words:[
-    ["וָאֹמַר","and I said"],
+    ["וָאֹמַר","and I said"],["אֲנִי","I"],["נֶפִי","Nephi"],
     ["אֲלֵיהֶם","unto them"],
     ["אַל־תּוֹסִיפוּ","add no more"],
     ["לְהִתְלוֹנֵן","to murmur"],
@@ -9753,7 +9753,7 @@ var ch17Verses = [
     ["׃",""]
   ]},
   { num:"נב", words:[
-    ["וָאֲדַבֵּר","and I spake"],
+    ["וָאֲדַבֵּר","and I spake"],["אֲנִי","I"],["נֶפִי","Nephi"],
     ["דְבָרִים","words"],
     ["רַבִּים","many"],
     ["אֶל־אַחַי","unto my brethren"],
@@ -9889,7 +9889,7 @@ var ch18Verses = [
   { num:"ב", words:[
     ["וְלֹא","and not"],
     ["חָרַשְׁתִּי","did I work"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["אֶת־הָעֵצִים","the timbers"],
     ["כְּדֶרֶךְ","after the manner of"],
     ["אָדָם","men"],
@@ -9911,7 +9911,7 @@ var ch18Verses = [
   ]},
   { num:"ג", words:[
     ["וָאַעַל","and I went up"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["הָהָרָה","into the mount"],
     ["פְעָמִים","times"],
     ["רַבּוֹת","many"],
@@ -10058,7 +10058,7 @@ var ch18Verses = [
   ]},
   { num:"י", words:[
     ["וָאָחֵל","and I began"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["לִירֹא","to fear"],
     ["מְאֹד","exceedingly"],
     ["פֶּן־יֶחֱרֶה","lest should burn"],
@@ -10208,7 +10208,7 @@ var ch18Verses = [
   ]},
   { num:"טז", words:[
     ["אַךְ","nevertheless"],
-    ["וָאֶשָּׂא","and I lifted"],
+    ["נָשָׂאתִי","I lifted"],
     ["עֵינַי","my eyes"],
     ["אֶל־אֱלֹהַי","unto my God"],
     ["וַאֲהַלְלֶנּוּ","and I praised Him"],
@@ -10361,7 +10361,7 @@ var ch18Verses = [
   ]},
   { num:"כב", words:[
     ["וָאַנְהִג","and I did guide"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["אֶת־הׇאֳנִיָּה","the ship"],
     ["וַנֵּלֶךְ","and we did sail"],
     ["שֵׁנִית","again"],
@@ -10515,7 +10515,7 @@ var ch19Verses = [
     ["כְּמִצְוַת","by commandment of"],
     ["יְהוָה","the Lord"],
     ["וָאֲקַבֵּל","and received I"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["מִצְוָה","commandment"],
     ["כִּי","for"],
     ["יִכָּתְבוּ","shall be written"],
@@ -10547,7 +10547,7 @@ var ch19Verses = [
   { num:"ד", words:[
     ["לָכֵן","wherefore"],
     ["כָּתַבְתִּי","I have written"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["עַל־הַלֻּחֹת","upon the plates"],
     ["הָאֲחֵרִים","the other"],
     ["הַמְסַפְּרִים","which give account"],
@@ -10925,7 +10925,7 @@ var ch19Verses = [
   ]},
   { num:"יח", words:[
     ["וָאֶכְתֹּב","and I wrote"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["אֶת־הַדְּבָרִים הָאֵלֶּה","these things"],
     ["לְעַמִּי","unto my people"],
     ["אוּלַי","perhaps"],
@@ -11002,7 +11002,7 @@ var ch19Verses = [
   ]},
   { num:"כב", words:[
     ["וָאֲלַמֵּד","and I taught"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["אֶת־אַחַי","my brethren"],
     ["אֶת־הַדְּבָרִים הָאֵלֶּה","these things"],
     ["וָאֶקְרָא","and I read"],
@@ -11877,7 +11877,7 @@ var ch22Verses = [
   { num:"א", words:[
     ["אַחֲרֵי","after"],
     ["קָרְאִי","I had read"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["אֶת־הַדְּבָרִים הָאֵלֶּה","these things"],
     ["הַחֲקוּקִים","which were engraven"],
     ["עַל־לוּחוֹת","upon the plates of"],
@@ -11905,7 +11905,7 @@ var ch22Verses = [
   ]},
   { num:"ב", words:[
     ["וָאֹמַר","and I said"],
-    ["נֶפִי","Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["אֲלֵיהֶם","unto them"],
     ["הִנֵּה","behold"],
     ["נִגְלוּ","they were manifest"],
@@ -12386,8 +12386,7 @@ var ch22Verses = [
   ]},
   { num:"כא", words:[
     ["וְעַתָּה","and now"],
-    ["מַגִּיד","do declare"],
-    ["נֶפִי","I Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],["מַגִּיד","do declare"],
     ["לָכֶם","unto you"],
     ["כִּי","that"],
     ["הַנָּבִיא הַזֶּה","this prophet"],
@@ -12543,7 +12542,7 @@ var ch22Verses = [
     ["וְעַתָּה","and now"],
     ["הִנֵּה","behold"],
     ["אֹמֵר","say"],
-    ["נֶפִי","I Nephi"],
+    ["אֲנִי","I"],["נֶפִי","I Nephi"],
     ["לָכֶם","unto you"],
     ["כִּי","that"],
     ["כׇל־הַדְּבָרִים הָאֵלֶּה","all these things"],
@@ -12568,8 +12567,7 @@ var ch22Verses = [
   ]},
   { num:"כט", words:[
     ["וְעַתָּה","and now"],
-    ["כָּלָה","have made an end"],
-    ["נֶפִי","I Nephi"],
+    ["אֲנִי","I"],["נֶפִי","Nephi"],["מְכַלֶּה","make an end"],
     ["לְדַבֵּר","of speaking"],
     ["כִּי־לֹא","for"],
     ["אֶעֱרֹב","I durst not"],
