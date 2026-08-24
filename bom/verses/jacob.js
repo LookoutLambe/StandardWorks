@@ -1661,7 +1661,7 @@ var jc_ch4Verses = [
     ["וּבְרֹב","and in the abundance of"],
     ["עַנְוֹתָיו","his condescensions"],
     ["לִבְנֵי־הָאָדָם","unto the children of men"],
-    ["יֵשׁ־לָנוּ","there is unto us"],
+    ["יֶשׁ־לָנוּ","there is unto us"],
     ["כֹּחַ","power"],
     ["לַעֲשׂוֹת","to do"],
     ["אֶת־הַדְּבָרִים הָאֵלֶּה","these things"],

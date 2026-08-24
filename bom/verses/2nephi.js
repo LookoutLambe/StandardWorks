@@ -13058,7 +13058,7 @@ var n2_ch29Verses = [
     ["מִן־הַגּוֹיִם","of the Gentiles"],
     ["תּוֹרָה","a Bible"],
     ["תּוֹרָה","a Bible"],
-    ["יֵשׁ־לָנוּ","we have"],
+    ["יֶשׁ־לָנוּ","we have"],
     ["תּוֹרָה","a Bible"],
     ["וְלֹא־יִהְיֶה","and there shall be no"],
     ["עוֹד","more"],
@@ -14711,8 +14711,8 @@ var n2_ch33Verses = [
     ["׃",""]
   ]},
   { num:"ז", words:[
+    ["יֶשׁ־לִי","I have"],
     ["חֶסֶד","charity"],
-    ["לִי","is to me"],
     ["לְעַמִּי","unto my people"],
     ["וֶאֱמוּנָה","and faith"],
     ["גְדוֹלָה","great"],
@@ -14728,8 +14728,8 @@ var n2_ch33Verses = [
     ["׃",""]
   ]},
   { num:"ח", words:[
+    ["יֶשׁ־לִי","I have"],
     ["חֶסֶד","charity"],
-    ["לִי","is to me"],
     ["לַיְּהוּדִי","unto the Jew"],
     ["אֹמֵר","say"],
     ["אֲנִי","I"],
@@ -14741,8 +14741,8 @@ var n2_ch33Verses = [
   ]},
   { num:"ט", words:[
     ["וְגַם","and also"],
+    ["יֶשׁ־לִי","I have"],
     ["חֶסֶד","charity"],
-    ["לִי","is to me"],
     ["לַגּוֹיִם","unto the Gentiles"],
     ["אַךְ","but"],
     ["הִנֵּה","behold"],
