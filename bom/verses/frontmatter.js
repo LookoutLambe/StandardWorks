@@ -94,7 +94,7 @@ var frontIntro = [
     ["הַקֹּדֶשׁ","the Holy"],
   ], english:"It reflects personal study, linguistic judgment, and sustained engagement with the Hebrew Scriptures."},
   { num:"ז", words:[
-    ["אַף־עַל־פִּי","although"],
+    ["אַף","although"],
     ["שֶׁנַּעֲשְׂתָה","was made"],
     ["הַשְׁתַּדְּלוּת","effort"],
     ["לְדִיּוּק","for precision"],
