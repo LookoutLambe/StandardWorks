@@ -14711,7 +14711,7 @@ var n2_ch33Verses = [
     ["׃",""]
   ]},
   { num:"ז", words:[
-    ["אַהֲבָה","charity"],
+    ["חֶסֶד","charity"],
     ["לִי","is to me"],
     ["לְעַמִּי","unto my people"],
     ["וֶאֱמוּנָה","and faith"],
@@ -14723,12 +14723,12 @@ var n2_ch33Verses = [
     ["רַבּוֹת","many"],
     ["טְהוֹרוֹת","spotless"],
     ["לִפְנֵי","before"],
-    ["כִסֵּא","the throne of"],
-    ["מִשְׁפָּטוֹ","His judgment"],
+    ["כִסֵּא","the seat of"],
+    ["מִשְׁפָּטוֹ","his judgment"],
     ["׃",""]
   ]},
   { num:"ח", words:[
-    ["אַהֲבָה","charity"],
+    ["חֶסֶד","charity"],
     ["לִי","is to me"],
     ["לַיְּהוּדִי","unto the Jew"],
     ["אֹמֵר","say"],
@@ -14741,7 +14741,7 @@ var n2_ch33Verses = [
   ]},
   { num:"ט", words:[
     ["וְגַם","and also"],
-    ["אַהֲבָה","charity"],
+    ["חֶסֶד","charity"],
     ["לִי","is to me"],
     ["לַגּוֹיִם","unto the Gentiles"],
     ["אַךְ","but"],
@@ -14897,7 +14897,7 @@ var n2_ch33Verses = [
     ["הִנֵּה","behold"],
     ["אֹמֵר","I say"],
     ["לָכֶם","unto you"],
-    ["שְׁלוֹם","the farewell of"],
+    ["שְׁלוֹם","farewell"],
     ["עוֹלָמִים","everlasting"],
     ["כִּי","for"],
     ["הַדְּבָרִים הָאֵלֶּה","these words"],
@@ -14914,7 +14914,7 @@ var n2_ch33Verses = [
     ["בָּאָרֶץ","on earth"],
     ["יוּבָא","shall be brought"],
     ["נֶגְדְּכֶם","against you"],
-    ["בְּכִסֵּא","at the bar of"],
+    ["בְּכִסֵּא","in the seat of"],
     ["הַמִּשְׁפָּט","judgment"],
     ["כִּי־כֵן","for thus"],
     ["צִוַּנִי","has commanded me"],
