@@ -1351,7 +1351,7 @@ var n2_ch2Verses = [
     ["דֶּרֶךְ","through"],
     ["הַמֵּלִיץ","the Mediator"],
     ["הַגָּדוֹל","the great"],
-    ["לְכׇל־בְּנֵי","of all"],
+    ["לְכׇל־בְּנֵי","unto all the children of"],
     ["הָאָדָם","men"],
     ["אוֹ","or"],
     ["לִבְחֹר","to choose"],

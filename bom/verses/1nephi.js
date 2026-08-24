@@ -8481,7 +8481,7 @@ var ch17Verses = [
     ["מִצְוֹת־אֱלֹהִים","the commandments of God"],
     ["וְאִם","and if"],
     ["יִשְׁמְרוּ","shall keep"],
-    ["בְנֵי","the sons of"],
+    ["בְנֵי","the children of"],
     ["הָאָדָם","the man"],
     ["אֶת־מִצְוֹתָיו","His commandments"],
     ["יְכַלְכְּלֵם","He shall nourish them"],
