@@ -20811,7 +20811,7 @@ window._officialVersesData = [
   "book": "Alma",
   "chapter": 32,
   "verse": 31,
-  "english": "And now, behold, are ye sure that this is a good seed? I say unto you, Yea; for every seed bringeth forth unto its ownlikeness."
+  "english": "And now, behold, are ye sure that this is a good seed? I say unto you, Yea; for every seed bringeth forth unto its own likeness."
  },
  {
   "book": "Alma",
