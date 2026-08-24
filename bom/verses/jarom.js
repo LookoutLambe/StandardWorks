@@ -359,7 +359,7 @@ var jr_ch1Verses = [
   ]},
   { num: "טו", words: [
     ["וַאֲנִי","and I"],
-    ["מוֹסֵר","I deliver"],
+    ["מוֹסֵר","deliver"],
     ["אֶת־הַלֻּחוֹת הָאֵלֶּה","these plates"],
     ["בְּיַד","into the hands of"],
     ["בְּנִי","my son"],
