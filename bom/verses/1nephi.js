@@ -715,7 +715,7 @@ var ch2Verses = [
     ["אִישׁ","a man of"],
     ["חָזוֹן","visions"],
     ["הוּא","he was"],
-    ["וַיּוֹצִיאֵם","and that he had brought them out"],
+    ["וַיּוֹצִיאֵם","and brought them out"],
     ["מֵאֶרֶץ","from the land of"],
     ["יְרוּשָׁלַיִם","Jerusalem"],
     ["לַעֲזֹב","to leave"],
@@ -2859,7 +2859,7 @@ var ch7Verses = [
     ["׃",""]
   ]},
   { num:"יג", words:[
-    ["וְאִם","and if it so be that"],
+    ["וְאִם","and if"],
     ["נֶאֱמָנִים","faithful"],
     ["אֲנַחְנוּ","we are"],
     ["לוֹ","unto Him"],
@@ -11669,7 +11669,7 @@ var ch21Verses = [
     ["כִּי־נִחַם","for hath comforted"],
     ["יְהוָה","the Lord"],
     ["עַמּוֹ","His people"],
-    ["וַעֲנִיָּיו","and will have mercy upon His afflicted"],
+    ["וַעֲנִיָּיו","and upon his afflicted"],
     ["יְרַחֵם","will He have mercy"],
     ["׃",""]
   ]},
