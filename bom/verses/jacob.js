@@ -1798,7 +1798,7 @@ var jc_ch4Verses = [
     ["הַמָּשִׁיחַ","the Messiah"],
     ["וְנַשִּׂיג","and we may attain"],
     ["דַּעַת","a knowledge"],
-    ["שְׁלֵמָה","perfect"],
+    ["תְּמִימָה","perfect"],
     ["עָלָיו","upon Him"],
     ["כְּהַשִּׂיג","as obtaining"],
     ["דַּעַת","a knowledge of"],
@@ -2268,7 +2268,7 @@ var jc_ch7Verses = [
     ["וַיַּעֲבֹד","and he did labor"],["בְּכׇל־כֹּחַ","with all power"],["לְמַעַן","that"],["יַתְעֶה","he might deceive"],["אֶת־לְבַב","the hearts of"],["הָעָם","the people"],["עַד־כִּי","insomuch that"],["הִתְעָה","he did lead away"],["לְבָבוֹת","the hearts of"],["רַבִּים","many"],["וְהוּא","and he"],["יָדַע","he knew"],["כִּי־הֶאֱמַנְתִּי","that I believed"],["אֲנִי","I"],["יַעֲקֹב","I Jacob"],["בַּמָּשִׁיחַ","in the Messiah"],["אֲשֶׁר","who"],["יָבוֹא","should come"],["וַיְבַקֵּשׁ","and he sought"],["תַּאֲנָה","an opportunity"],["רַבָּה","much"],["לָבוֹא","to come"],["אֵלָי","unto me"],
   ]},
   { num:"ד", words:[
-    ["וְהוּא","and he"],["הָיָה","was"],["מְלֻמָּד","learned"],["כִּי","that"],["הָיָה־לוֹ","was unto him"],["דַעַת","a knowledge"],["שְׁלֵמָה","perfect"],["בִּשְׂפַת","of the language of"],["הָעָם","the people"],["לָכֵן","wherefore"],["יָכֹל","he could"],["לְהַחֲלִיק","to flatter"],["בְּלָשׁוֹן","with the tongue"],["וּלְדַבֵּר","and speak"],["בְּכֹחַ","with power"],["רַב","much"],["כְּפִי","according to"],["כֹּחַ","the power of"],["הַשָּׂטָן","the devil"],
+    ["וְהוּא","and he"],["הָיָה","was"],["מְלֻמָּד","learned"],["כִּי","that"],["הָיָה־לוֹ","was unto him"],["דַעַת","a knowledge"],["תְּמִימָה","perfect"],["בִּשְׂפַת","of the language of"],["הָעָם","the people"],["לָכֵן","wherefore"],["יָכֹל","he could"],["לְהַחֲלִיק","to flatter"],["בְּלָשׁוֹן","with the tongue"],["וּלְדַבֵּר","and speak"],["בְּכֹחַ","with power"],["רַב","much"],["כְּפִי","according to"],["כֹּחַ","the power of"],["הַשָּׂטָן","the devil"],
   ]},
   { num:"ה", words:[
     ["וְקִוָּה","and he hoped"],["לְהָנִיעַ","to shake"],["אוֹתִי","me"],["מֵאֱמוּנָתִי","from my faith"],["אַף","despite"],["הַחֲזֹנוֹת","the revelations"],["הָרַבִּים","the many"],["וְהַדְּבָרִים","and the things"],["הָרַבִּים","the many"],["אֲשֶׁר","which"],["רָאִיתִי","I had seen"],["בַּדְּבָרִים הָאֵלֶּה","concerning these things"],["כִּי־אָכֵן","for yea"],["רָאִיתִי","I had seen"],["מַלְאָכִים","angels"],["וְהֵם","and they"],["שֵׁרְתוּנִי","had ministered unto me"],["וְגַם־שָׁמַעְתִּי","and also I had heard"],["אֶת־קוֹל","the voice of"],["יְהוָה","the Lord"],["מְדַבֵּר","speaking"],["אֵלַי","unto me"],["בְּמִלָּה","in word"],["מַמָּשׁ","actual"],["מִפַּעַם","from time"],["לְפָעַם","to time"],["לָכֵן","wherefore"],["לֹא־יָכֹלְתִּי","I could not"],["לְהִנּוֹעַ","to be shaken"],
