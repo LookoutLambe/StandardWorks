@@ -2633,7 +2633,7 @@ var ch6Verses = [
   ]}
 ];
 var ch7Verses = [
-  { num: "א", words: [["וַאֲנִי","and I"], ["מְבַקֵּשׁ","do desire"], ["לְהוֹדִיעַ","to make known"], ["לָכֶם","unto you"], ["כִּי","that"], ["אַחֲרֵי","after"], ["כַּלּוֹת","had made an end"], ["לֶחִי","Lehi"], ["אָבִי","my father"], ["לְהִתְנַבֵּא","of prophesying"], ["עַל־זַרְעוֹ","concerning his seed"], ["וַיֹּאמֶר","it came to pass that and spake"], ["יְהוָה","the Lord"], ["אֵלָיו","unto him"], ["שֵׁנִית","again"], ["לֵאמֹר","saying"], ["כִּי־לֹא","that not"], ["נָכוֹן","meet"], ["לוֹ","for him"], ["לֶחִי","Lehi"], ["לָקַחַת","to take"], ["אֶת־מִשְׁפַּחְתּוֹ","his family"], ["אֶל־הַמִּדְבָּר","into the wilderness"], ["לְבַדּוֹ","alone"], ["כִּי־אִם","but that"], ["יִקְחוּ","should take"], ["בָנָיו","his sons"], ["בָּנוֹת","daughters"], ["לְנָשִׁים","to wife"], ["לְהָקִים","that they might raise up"], ["זֶרַע","seed"], ["לַיהוָה","unto the Lord"], ["בְּאֶרֶץ","in the land of"], ["הַנַּחֲלָה","promise"], ["׃",""]]},
+  { num: "א", words: [["וַאֲנִי","and I"], ["מְבַקֵּשׁ","do desire"], ["לְהוֹדִיעַ","to make known"], ["לָכֶם","unto you"], ["כִּי","that"], ["אַחֲרֵי","after"], ["כַּלּוֹת","had made an end"], ["לֶחִי","Lehi"], ["אָבִי","my father"], ["לְהִתְנַבֵּא","of prophesying"], ["עַל־זַרְעוֹ","concerning his seed"], ["וַיֹּאמֶר","it came to pass that spake"], ["יְהוָה","the Lord"], ["אֵלָיו","unto him"], ["שֵׁנִית","again"], ["לֵאמֹר","saying"], ["כִּי־לֹא","that not"], ["נָכוֹן","meet"], ["לוֹ","for him"], ["לֶחִי","Lehi"], ["לָקַחַת","to take"], ["אֶת־מִשְׁפַּחְתּוֹ","his family"], ["אֶל־הַמִּדְבָּר","into the wilderness"], ["לְבַדּוֹ","alone"], ["כִּי־אִם","but that"], ["יִקְחוּ","should take"], ["בָנָיו","his sons"], ["בָּנוֹת","daughters"], ["לְנָשִׁים","to wife"], ["לְהָקִים","that they might raise up"], ["זֶרַע","seed"], ["לַיהוָה","unto the Lord"], ["בְּאֶרֶץ","in the land of"], ["הַנַּחֲלָה","promise"], ["׃",""]]},
   { num:"ב", words:[
     ["וַיְצַו","and commanded"],
     ["יְהוָה","the Lord"],
@@ -4717,7 +4717,7 @@ var ch11Verses = [
     ["מִקִּרְבָּם","from among them"],
     ["׃",""]
   ]},
-  { num: "כט", words: [["וָאֵרֶא","and I saw"], ["גַּם־שְׁנֵים","also two"], ["עָשָׂר","ten"], ["אֲחֵרִים","others"], ["הֹלְכִים","walking"], ["אַחֲרָיו","after Him"], ["וַיִּנָּשְׂאוּ","and it came to pass that and were carried"], ["בָּרוּחַ","in the Spirit"], ["מִלְּפָנַי","from before me"], ["וְלֹא","and not"], ["יָכֹלְתִּי","could I"], ["לִרְאוֹתָם","see them"], ["׃",""]]},
+  { num: "כט", words: [["וָאֵרֶא","and I saw"], ["גַּם־שְׁנֵים","also two"], ["עָשָׂר","ten"], ["אֲחֵרִים","others"], ["הֹלְכִים","walking"], ["אַחֲרָיו","after Him"], ["וַיִּנָּשְׂאוּ","and it came to pass that were carried"], ["בָּרוּחַ","in the Spirit"], ["מִלְּפָנַי","from before me"], ["וְלֹא","and not"], ["יָכֹלְתִּי","could I"], ["לִרְאוֹתָם","see them"], ["׃",""]]},
   { num:"ל", words:[
     ["וַיֹּאמֶר","and said"],
     ["שֵׁנִית","again"],

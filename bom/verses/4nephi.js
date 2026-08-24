@@ -28,7 +28,7 @@ var fn_ch1Verses = [
   { num: "ט", words: [
     ["אַךְ","but"],["עָרִים","cities"],["רַבּוֹת","many"],["אֲשֶׁר","which"],["שָׁקְעוּ","had sunken"],["וַיַּעֲלוּ","and came up"],["מַיִם","waters"],["תַּחְתֵּיהֶן","in their stead"],["לֹא־יָכְלוּ","could not"],["לְהִבָּנוֹת","be built"],["מֵחָדָשׁ","again"]
   ]},
-  { num: "י", words: [["וְעַתָּה","and now"], ["הִנֵּה","behold"], ["וַיֶּחֱזַק","and it came to pass that and waxed strong"], ["עַם־נֶפִי","the people of Nephi"], ["וַיִּרְבּוּ","and they did multiply"], ["מְאֹד","exceedingly"], ["מְהֵרָה","quickly"], ["וַיִּהְיוּ","and they became"], ["לְעַם","a people"], ["יָפֶה","fair"], ["וְנָעִים","and delightsome"], ["מְאֹד","exceedingly"]]},
+  { num: "י", words: [["וְעַתָּה","and now"], ["הִנֵּה","behold"], ["וַיֶּחֱזַק","and it came to pass that waxed strong"], ["עַם־נֶפִי","the people of Nephi"], ["וַיִּרְבּוּ","and they did multiply"], ["מְאֹד","exceedingly"], ["מְהֵרָה","quickly"], ["וַיִּהְיוּ","and they became"], ["לְעַם","a people"], ["יָפֶה","fair"], ["וְנָעִים","and delightsome"], ["מְאֹד","exceedingly"]]},
   { num: "יא", words: [
     ["וַיִּנָּשְׂאוּ","and they were married"],["וְנִתְּנוּ","and given"],["בִּנְשׂוּאִים","in marriage"],["וַיְבָרְכֵם","and he blessed them"],["יְהוָה","the Lord"],["כְּרֹב","according to the multitude of"],["הַהַבְטָחוֹת","the promises"],["אֲשֶׁר","which"],["הִבְטִיחַ","he had promised"],["לָהֶם","unto them"]
   ]},
