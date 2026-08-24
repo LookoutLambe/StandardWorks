@@ -1008,7 +1008,7 @@ var n2_ch2Verses = [
     ["וּמָוֶת","neither death"],
     ["בְּלִי","nor"],
     ["שַׁחַת","corruption"],
-    ["וּבְלִי־שַׁחַת","nor incorruption"],
+    ["וְלֹא־שַׁחַת","nor incorruption"],
     ["בְּלִי","nor"],
     ["אֹשֶׁר","happiness"],
     ["וְיָגוֹן","nor misery"],
@@ -5698,7 +5698,7 @@ var n2_ch10Verses = [
     ["מַעֲשֵׂי","the works of"],
     ["הַחֹשֶׁךְ","darkness"],
     ["הַסְּתָרִים","the secret"],
-    ["וְהָרְצִיחוֹת","and the murders"],
+    ["וְהַדָּמִים","and the murders"],
     ["וְהַתּוֹעֵבוֹת","and the abominations"],
     ["׃",""]
   ]},
