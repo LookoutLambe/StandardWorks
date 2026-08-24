@@ -73,7 +73,7 @@ var jc_ch1Verses = [
     ["עַל־הַלּוּחוֹת הָאֵלֶּה","upon these plates"],
     ["וְאֶגַּע","and I shall touch upon"],
     ["בָּם","them"],
-    ["כַּאֲשֶׁר","when/as"],
+    ["כַּאֲשֶׁר","as"],
     ["אוּכַל","I could"],
     ["לְמַעַן","for the sake of"],
     ["הַמָּשִׁיחַ","the Messiah"],
@@ -129,7 +129,7 @@ var jc_ch1Verses = [
     ["בְּאַפּוֹ","in His anger"],
     ["לְבִלְתִּי","that they should not"],
     ["בֹאָם","their entering"],
-    ["כַּאֲשֶׁר","when/as"],
+    ["כַּאֲשֶׁר","as"],
     ["בַּמְּרִיבָה","in the provocation"],
     ["בִּימֵי","in the days of"],
     ["הַמַּסָּה","the temptation"],
@@ -330,7 +330,7 @@ var jc_ch1Verses = [
     ["אֲנִי","I"],["יַעֲקֹב","Jacob"],
     ["לָהֶם","unto them"],
     ["אֶת־הַדְּבָרִים הָאֵלֶּה","these words"],
-    ["כַּאֲשֶׁר","when/as"],
+    ["כַּאֲשֶׁר","as"],
     ["לִמַּדְתִּים","I taught them"],
     ["בַּהֵיכׇל","in the temple"],
     ["אַחֲרֵי","after"],
@@ -603,7 +603,7 @@ var jc_ch2Verses = [
     ["דְּבַר־אֱלֹהִים","the word of God"],
     ["כִּי","for"],
     ["הִנֵּה","behold"],
-    ["כַּאֲשֶׁר","when/as"],
+    ["כַּאֲשֶׁר","as"],
     ["שָׁאַלְתִּי","I inquired of"],
     ["מֵאֵת","from"],
     ["יְהוָה","the Lord"],
@@ -822,7 +822,7 @@ var jc_ch2Verses = [
     ["וְהָאֶחָד","and the one"],
     ["יָקָר","is precious"],
     ["בְּעֵינָיו","in his eyes"],
-    ["כְּמוֹ","as/like"],
+    ["כְּמוֹ","as"],
     ["הָאַחֵר","the other"],
     ["וְכׇל־בָּשָׂר","and all flesh"],
     ["מִן־הֶעָפָר","from the dust"],
@@ -1659,7 +1659,7 @@ var jc_ch4Verses = [
     ["כִּי","that"],
     ["בְּחַסְדּוֹ","by His grace"],
     ["וּבְרֹב","and in the abundance of"],
-    ["חֲנִינוֹתָיו","his condescensions"],
+    ["עַנְוֹתָיו","his condescensions"],
     ["לִבְנֵי־הָאָדָם","unto the children of men"],
     ["יֵשׁ־לָנוּ","there is unto us"],
     ["כֹּחַ","power"],
@@ -1822,11 +1822,11 @@ var jc_ch4Verses = [
     ["לָכֵן","therefore"],
     ["יְדַבֵּר","it shall speak"],
     ["עַל־דְּבָרִים","upon things"],
-    ["כַּאֲשֶׁר","when/as"],
+    ["כַּאֲשֶׁר","as"],
     ["הֵם","they"],
     ["בֶּאֱמֶת","in truth"],
     ["וְעַל־דְּבָרִים","and upon things"],
-    ["כַּאֲשֶׁר","when/as"],
+    ["כַּאֲשֶׁר","as"],
     ["יִהְיוּ","they shall be"],
     ["בֶּאֱמֶת","in truth"],
     ["לָכֵן","therefore"],
@@ -2049,10 +2049,10 @@ var jc_ch5Verses = [
     ["וַיֹּאמֶר","and said"],["אֲדוֹן","the master of"],["הַכֶּרֶם","the vineyard"],["אֶל־עַבְדּוֹ","unto his servant"],["אַל־תּוֹרֵנִי","do not counsel me"],["יָדַעְתִּי","I knew"],["כִּי","that"],["מָקוֹם","place"],["דַּל","poor"],["הָאֲדָמָה","of the ground"],["הוּא","it was"],["לָכֵן","therefore"],["אָמַרְתִּי","I said"],["לְךָ","unto you"],["טִפַּחְתִּיו","I have nourished it"],["זֶה","this"],["זְמַן","time"],["רַב","long"],["וְהִנְּךָ","and behold thou"],["רֹאֶה","seest"],["כִּי","that"],["הוֹצִיא","it has brought forth"],["פְּרִי","fruit"],["רָב","much"],
   ]},
   { num:"כג", words:[
-    ["וַיְהִי","and it came to pass"],["כִּי","that"],["אָמַר","said"],["אֲדוֹן","the master of"],["הַכֶּרֶם","the vineyard"],["אֶל־עַבְדּוֹ","unto his servant"],["הַבֵּט־נָא","look I pray"],["הֵנָּה","here"],["הִנֵּה","behold"],["נָטַעְתִּי","I have planted"],["עָנָף","a branch"],["אַחֵר","another"],["מִן־הָעֵץ","of the tree"],["גַּם־כֵּן","also so/thus"],["וְיָדַעְתָּ","and you know"],["כִּי","that"],["הַמָּקוֹם הַזֶּה","this spot"],["דַּל","poor"],["מִן־הָרִאשׁוֹן","than the first"],["אַךְ","but"],["רְאֵה","behold"],["אֶת־הָעֵץ","the tree"],["טִפַּחְתִּיו","I have nourished it"],["זֶה","this"],["זְמַן","time"],["רַב","long"],["וְהוֹצִיא","and it has brought forth"],["פְּרִי","fruit"],["רָב","much"],["לָכֵן","therefore"],["אֱסֹף","to take away"],["אוֹתוֹ","it"],["וּצְבֹר","and lay it up"],["לְמוֹעֵד","for the season"],["לְמַעַן","that"],["אֶשְׁמְרֵהוּ","I may preserve it"],["לִי","to me"],
+    ["וַיְהִי","and it came to pass"],["כִּי","that"],["אָמַר","said"],["אֲדוֹן","the master of"],["הַכֶּרֶם","the vineyard"],["אֶל־עַבְדּוֹ","unto his servant"],["הַבֵּט־נָא","look I pray"],["הֵנָּה","here"],["הִנֵּה","behold"],["נָטַעְתִּי","I have planted"],["עָנָף","a branch"],["אַחֵר","another"],["מִן־הָעֵץ","of the tree"],["גַּם־כֵּן","also"],["וְיָדַעְתָּ","and you know"],["כִּי","that"],["הַמָּקוֹם הַזֶּה","this spot"],["דַּל","poor"],["מִן־הָרִאשׁוֹן","than the first"],["אַךְ","but"],["רְאֵה","behold"],["אֶת־הָעֵץ","the tree"],["טִפַּחְתִּיו","I have nourished it"],["זֶה","this"],["זְמַן","time"],["רַב","long"],["וְהוֹצִיא","and it has brought forth"],["פְּרִי","fruit"],["רָב","much"],["לָכֵן","therefore"],["אֱסֹף","to take away"],["אוֹתוֹ","it"],["וּצְבֹר","and lay it up"],["לְמוֹעֵד","for the season"],["לְמַעַן","that"],["אֶשְׁמְרֵהוּ","I may preserve it"],["לִי","to me"],
   ]},
   { num:"כד", words:[
-    ["וַיְהִי","and it came to pass"],["כִּי","that"],["אָמַר","said"],["אֲדוֹן","the master of"],["הַכֶּרֶם","the vineyard"],["שׁוּב","again"],["אֶל־עַבְדּוֹ","unto his servant"],["הַבֵּט־נָא","look I pray"],["הֵנָּה","here"],["וּרְאֵה","and behold"],["עָנָף","a branch"],["אַחֵר","another"],["גַּם־כֵּן","also so/thus"],["אֲשֶׁר","which"],["נָטָעְתִּי","I have planted"],["הִנֵּה","behold"],["טִפַּחְתִּיו","I have nourished"],["גַּם־אוֹתוֹ","it also"],["וַיּוֹצֵא","and it has brought forth"],["פְּרִי","fruit"],
+    ["וַיְהִי","and it came to pass"],["כִּי","that"],["אָמַר","said"],["אֲדוֹן","the master of"],["הַכֶּרֶם","the vineyard"],["שׁוּב","again"],["אֶל־עַבְדּוֹ","unto his servant"],["הַבֵּט־נָא","look I pray"],["הֵנָּה","here"],["וּרְאֵה","and behold"],["עָנָף","a branch"],["אַחֵר","another"],["גַּם־כֵּן","also"],["אֲשֶׁר","which"],["נָטָעְתִּי","I have planted"],["הִנֵּה","behold"],["טִפַּחְתִּיו","I have nourished"],["גַּם־אוֹתוֹ","it also"],["וַיּוֹצֵא","and it has brought forth"],["פְּרִי","fruit"],
   ]},
   { num:"כה", words:[
     ["וַיֹּאמֶר","and he said"],["אֶל־הָעֶבֶד","unto the servant"],["הַבֵּט־נָא","look I pray"],["הֵנָּה","here"],["וּרְאֵה","and behold"],["אֶת־הָאַחֲרוֹן","the last"],["הִנֵּה","behold"],["נָטַעְתִּי","I planted"],["זֶה","this"],["בְּמָקוֹם","in a spot"],["טוֹב","good"],["הָאֲדָמָה","of the ground"],["וְטִפַּחְתִּיו","and nourished it"],["זֶה","this"],["זְמַן","time"],["רַב","long"],["וְרַק","and only"],["חֵלֶק","a part of"],["מִן־הָעֵץ","of the tree"],["הוֹצִיא","has brought forth"],["פְּרִי","fruit"],["תַּרְבּוּת","tame"],["וְהַחֵלֶק","and the part"],["הָאַחֵר","the other"],["הוֹצִיא","has brought forth"],["פְּרִי","fruit"],["בָּר","wild"],["הִנֵּה","behold"],["טִפַּחְתִּי","I have nourished"],["אֶת־הָעֵץ הַזֶּה","this tree"],["כְּמוֹ","like unto"],["הָאֲחֵרִים","the others"],
@@ -2151,7 +2151,7 @@ var jc_ch5Verses = [
     ["וַיִּקְחוּ","and they took"],["גַם","also"],["מֵעֲצֵי","from the trees of"],["הָאֵם","the mother"],["אֲשֶׁר","which"],["הָיוּ","were"],["לְבַר","wild"],["וַיַּרְכִּיבוּ","and grafted into"],["בְּעֵץ","into the tree"],["אִמָּם","their mother"],
   ]},
   { num:"נז", words:[
-    ["וַיֹּאמֶר","and said"],["אֲדוֹן","the master of"],["הַכֶּרֶם","the vineyard"],["אֶל־הָעֶבֶד","unto the servant"],["אַל־תִּקְטֹף","do not pluck off"],["אֶת־עַנְפֵי","the branches of"],["הַבַּר","the wild"],["מִן־הָעֵצִים","from the trees"],["זוּלָת","save it be"],["אֵלֶּה","those"],["אֲשֶׁר","which are"],["מָרִים","most bitter"],["מְאֹד","very"],["וּבָהֶם","and in them"],["תַּרְכִּיבוּ","you shall graft"],["כַּאֲשֶׁר","when/as"],["אָמַרְתִּי","I have said"],
+    ["וַיֹּאמֶר","and said"],["אֲדוֹן","the master of"],["הַכֶּרֶם","the vineyard"],["אֶל־הָעֶבֶד","unto the servant"],["אַל־תִּקְטֹף","do not pluck off"],["אֶת־עַנְפֵי","the branches of"],["הַבַּר","the wild"],["מִן־הָעֵצִים","from the trees"],["זוּלָת","save it be"],["אֵלֶּה","those"],["אֲשֶׁר","which are"],["מָרִים","most bitter"],["מְאֹד","very"],["וּבָהֶם","and in them"],["תַּרְכִּיבוּ","you shall graft"],["כַּאֲשֶׁר","as"],["אָמַרְתִּי","I have said"],
   ]},
   { num:"נח", words:[
     ["וּנְטַפֵּחַ","and we will nourish"],["שׁוּב","again"],["אֶת־עֲצֵי","the trees of"],["הַכֶּרֶם","the vineyard"],["וּנְזַמֵּר","and we will trim up"],["אֶת־עַנְפֵיהֶם","their branches"],["וְנִקְטֹף","and we will pluck from"],["מִן־הָעֵצִים","from the trees"],["אֶת־הָעֲנָפִים","the branches"],["אֲשֶׁר","which"],["בָּשְׁלוּ","are ripened"],["אֲשֶׁר","which"],["אָבֹד","perishing"],["יֹאבְדוּ","they shall perish"],["וְנַשְׁלִיכֵם","and cast them"],["אֶל־הָאֵשׁ","into the fire"],
@@ -2178,7 +2178,7 @@ var jc_ch5Verses = [
     ["וּבְהַחִלָּם","and as they begin"],["לִצְמֹחַ","to grow"],["תְּפַנּוּ","you shall clear away"],["אֶת־הָעֲנָפִים","the branches"],["הַמּוֹצִיאִים","which bring forth"],["פְּרִי","fruit"],["מַר","bitter"],["לְפִי","according to"],["כֹּחַ","power"],["הַטּוֹב","the good"],["וְגָדְלוֹ","and its size"],["וְלֹא","and you shall not"],["תְפַנּוּ","clear away"],["אֶת־הָרַע","the bad"],["כֻּלּוֹ","all of it"],["בְּפַעַם","at"],["אַחַת","once"],["פֶּן־יִהְיוּ","lest they be"],["שָׁרְשֵׁיהֶם","their roots"],["חֲזָקִים","too strong"],["מִדַּי","too much"],["לַהַרְכָּבָה","for the graft"],["וְתֹאבַד","and shall perish"],["הַהַרְכָּבָה","the graft"],["וְאֹבַד","and I shall lose"],["אֶת־עֲצֵי","the trees of"],["כַּרְמִי","my vineyard"],
   ]},
   { num:"סו", words:[
-    ["כִּי","for"],["יֵצַר","it shall grieve"],["לִי","me"],["לְאַבֵּד","to lose"],["אֶת־עֲצֵי","the trees of"],["כַּרְמִי","my vineyard"],["לָכֵן","therefore"],["תְּפַנּוּ","you shall clear away"],["אֶת־הָרַע","the bad"],["כַּאֲשֶׁר","when/as"],["יִגְדַּל","it shall grow"],["הַטּוֹב","the good"],["לְמַעַן","that"],["יִהְיוּ","they may be"],["הַשֹּׁרֶשׁ","the root"],["וְהָרֹאשׁ","and the top"],["שָׁוִים","equal"],["בְּכֹחָם","in strength"],["עַד־אֲשֶׁר","until"],["יִגְבַּר","it shall overcome"],["הַטּוֹב","the good"],["עַל־הָרַע","upon the evil"],["וְיִכָּרֵת","and it shall be cut off"],["הָרַע","the bad"],["וְיֻשְׁלַךְ","and shall be cast"],["אֶל־הָאֵשׁ","into the fire"],["לְמַעַן","that"],["לֹא","they shall not"],["יַכְבִּידוּ","they shall cumber"],["עַל־אַדְמַת","upon the ground of"],["כַּרְמִי","my vineyard"],["וְכָכָה","and thus"],["אֶטַאֲטֵא","will I sweep away"],["אֶת־הָרַע","the bad"],["מִכַּרְמִי","out of my vineyard"],
+    ["כִּי","for"],["יֵצַר","it shall grieve"],["לִי","me"],["לְאַבֵּד","to lose"],["אֶת־עֲצֵי","the trees of"],["כַּרְמִי","my vineyard"],["לָכֵן","therefore"],["תְּפַנּוּ","you shall clear away"],["אֶת־הָרַע","the bad"],["כַּאֲשֶׁר","according as"],["יִגְדַּל","it shall grow"],["הַטּוֹב","the good"],["לְמַעַן","that"],["יִהְיוּ","they may be"],["הַשֹּׁרֶשׁ","the root"],["וְהָרֹאשׁ","and the top"],["שָׁוִים","equal"],["בְּכֹחָם","in strength"],["עַד־אֲשֶׁר","until"],["יִגְבַּר","it shall overcome"],["הַטּוֹב","the good"],["עַל־הָרַע","upon the evil"],["וְיִכָּרֵת","and it shall be cut off"],["הָרַע","the bad"],["וְיֻשְׁלַךְ","and shall be cast"],["אֶל־הָאֵשׁ","into the fire"],["לְמַעַן","that"],["לֹא","they shall not"],["יַכְבִּידוּ","they shall cumber"],["עַל־אַדְמַת","upon the ground of"],["כַּרְמִי","my vineyard"],["וְכָכָה","and thus"],["אֶטַאֲטֵא","will I sweep away"],["אֶת־הָרַע","the bad"],["מִכַּרְמִי","out of my vineyard"],
   ]},
   { num:"סז", words:[
     ["וְאֶת־עַנְפֵי","and the natural branches of"],["הָעֵץ","the tree"],["הָאֵם","the mother"],["אַרְכִּיב","I will graft in"],["שׁוּב","again"],["בָּעֵץ","into the natural tree"],["הָאֵם","the mother"],
@@ -2190,7 +2190,7 @@ var jc_ch5Verses = [
     ["וְהַשְׁלֵךְ","casting"],["יֻשְׁלַךְ","shall be cast"],["הָרַע","the bad"],["מִכׇּל־אַדְמַת","out of all the land of"],["כַּרְמִי","my vineyard"],["כִּי","for"],["הִנֵּה","behold"],["רַק","only"],["הַפַּעַם הַזֹּאת","this time"],["אֶזְמֹר","will I prune"],["אֶת־כַּרְמִי","my vineyard"],
   ]},
   { num:"ע", words:[
-    ["וַיְהִי","and it came to pass"],["כִּי","that"],["שָׁלַח","sent"],["אֲדוֹן","the master of"],["הַכֶּרֶם","the vineyard"],["אֶת־עַבְדּוֹ","his servant"],["וַיֵּלֶךְ","and went"],["הָעֶבֶד","the servant"],["וַיַּעַשׂ","and did"],["כַּאֲשֶׁר","when/as"],["צִוָּה","commanded"],["אוֹתוֹ","him"],["אֲדֹנָיו","his master"],["וַיָּבֵא","and brought"],["עֲבָדִים","servants"],["אֲחֵרִים","other"],["וַיִּהְיוּ","and they were"],["מְעַטִּים","few"],
+    ["וַיְהִי","and it came to pass"],["כִּי","that"],["שָׁלַח","sent"],["אֲדוֹן","the master of"],["הַכֶּרֶם","the vineyard"],["אֶת־עַבְדּוֹ","his servant"],["וַיֵּלֶךְ","and went"],["הָעֶבֶד","the servant"],["וַיַּעַשׂ","and did"],["כַּאֲשֶׁר","as"],["צִוָּה","commanded"],["אוֹתוֹ","him"],["אֲדֹנָיו","his master"],["וַיָּבֵא","and brought"],["עֲבָדִים","servants"],["אֲחֵרִים","other"],["וַיִּהְיוּ","and they were"],["מְעַטִּים","few"],
   ]},
   { num:"עא", words:[
     ["וַיֹּאמֶר","and said"],["אֲדוֹן","the master of"],["הַכֶּרֶם","the vineyard"],["אֲלֵיהֶם","unto them"],["לְכוּ","go"],["וְעִבְדוּ","and labor"],["בַכֶּרֶם","in the vineyard"],["בְּכׇל־כֹּחֲכֶם","with all your might"],["כִּי","for"],["הִנֵּה","behold"],["זֹאת","this is"],["הַפַּעַם","the time"],["הָאַחֲרוֹנָה","the last"],["אֲשֶׁר","that"],["אֲטַפֵּחַ","I shall nourish"],["אֶת־כַּרְמִי","my vineyard"],["כִּי","for"],["קָרֵב","draws near"],["הַקֵּץ","the end"],["וְהַמּוֹעֵד","and the season"],["יָבוֹא","comes"],["מְהֵרָה","soon"],["וְאִם","and if"],["תַּעַבְדוּ","you shall labor"],["בְכׇל־כֹּחֲכֶם","with all your might"],["עִמָּדִי","with me"],["תִּשְׂמְחוּ","you shall have joy"],["בַפְּרִי","in the fruit"],["אֲשֶׁר","which"],["אֶצְבֹּר","I shall lay up"],["לִי","to me"],["לָעֵת","against the time"],["אֲשֶׁר","which"],["תָּבוֹא","will come"],["מְהֵרָה","soon"],
@@ -2205,10 +2205,10 @@ var jc_ch5Verses = [
     ["וְכָכָה","and thus"],["עָבְדוּ","they did labor"],["בְּכׇל־כֹּחָם","with all diligence"],["כְּמִצְוֹת","according to the commandments of"],["אֲדוֹן","the master of"],["הַכֶּרֶם","the vineyard"],["עַד־אֲשֶׁר","until"],["הֻשְׁלַךְ","it was cast out"],["הָרַע","the bad"],["מִן־הַכֶּרֶם","out of the vineyard"],["וַיִּשְׁמֹר","and preserved"],["הָאָדוֹן","the master"],["לוֹ","to him"],["כִּי","that"],["הָיוּ","were"],["הָעֵצִים","the trees"],["שׁוּב","again"],["לִפְרִי","the natural fruit of"],["הָאֵם","the mother"],["וַיִּהְיוּ","and they were"],["כַּאֲגֻדָּה","as one band"],["אֶחָת","one"],["וְהָיוּ","and were"],["הַפֵּרוֹת","the fruits"],["שָׁוִים","equal"],["וַיִּשְׁמֹר","and preserved"],["אֲדוֹן","the master of"],["הַכֶּרֶם","the vineyard"],["לוֹ","to him"],["אֶת־פְּרִי","the natural fruit of"],["הָאֵם","the mother"],["אֲשֶׁר","which"],["הָיָה","was"],["יָקָר","most precious"],["לוֹ","unto him"],["מֵרֵאשִׁית","from the beginning"],
   ]},
   { num:"עה", words:[
-    ["וַיְהִי","and it came to pass"],["כַּאֲשֶׁר","that when"],["רָאָה","saw"],["אֲדוֹן","the master of"],["הַכֶּרֶם","the vineyard"],["כִּי־טוֹב","that good"],["פִּרְיוֹ","his fruit was"],["וְכִּי","and that"],["לֹא־נִשְׁחַת","was not corrupt"],["עוֹד","more"],["כַּרְמוֹ","his vineyard"],["וַיִּקְרָא","he called"],["לַעֲבָדָיו","unto his servants"],["וַיֹּאמֶר","and said"],["אֲלֵיהֶם","unto them"],["הִנֵּה","behold"],["בַּפַּעַם","for the time"],["הָאַחֲרוֹנָה הַזֹּאת","this last"],["טִפַּחְנוּ","we have nourished"],["אֶת־כַּרְמִי","my vineyard"],["וְהִנְּךָ","and behold thou"],["רֹאֶה","seest"],["כִּי","that"],["עָשִׂיתִי","I have done"],["כִּרְצוֹנִי","according to my will"],["וְשָׁמַרְתִּי","and I have preserved"],["אֶת־פְּרִי","the natural fruit of"],["הָאֵם","the mother"],["כִּי־טוֹב","that good"],["הוּא","it"],["כַּאֲשֶׁר","when/as"],["הָיָה","it was"],["בָּרִאשׁוֹנָה","at first"],["וּבְרוּכִים","and blessed"],["אַתֶּם","are you"],["כִּי","for"],["הֱיִיתֶם","because you have been"],["חֲרוּצִים","diligent"],["בַּעֲבֹדַתְכֶם","in your service"],["עִמִּי","with me"],["בְּכַרְמִי","in my vineyard"],["וּשְׁמַרְתֶּם","and have kept"],["אֶת־מִצְוֹתַי","my commandments"],["וַהֲבֵאתֶם","and have brought"],["אֵלַי","unto me"],["שׁוּב","again"],["אֶת־פְּרִי","the natural fruit of"],["הָאֵם","the mother"],["וְכַרְמִי","and my vineyard"],["לֹא־נִשְׁחַת","not corrupt"],["עוֹד","more"],["וְהָרַע","and the bad"],["הֻשְׁלָךְ","it was cast out"],["הִנֵּה","behold"],["תִּשְׂמְחוּ","you shall have joy"],["עִמִּי","with me"],["בַּעֲבוּר","because of"],["פְּרִי","the fruit of"],["כַּרְמִי","my vineyard"],
+    ["וַיְהִי","and it came to pass"],["כַּאֲשֶׁר","that when"],["רָאָה","saw"],["אֲדוֹן","the master of"],["הַכֶּרֶם","the vineyard"],["כִּי־טוֹב","that good"],["פִּרְיוֹ","his fruit was"],["וְכִּי","and that"],["לֹא־נִשְׁחַת","was not corrupt"],["עוֹד","more"],["כַּרְמוֹ","his vineyard"],["וַיִּקְרָא","he called"],["לַעֲבָדָיו","unto his servants"],["וַיֹּאמֶר","and said"],["אֲלֵיהֶם","unto them"],["הִנֵּה","behold"],["בַּפַּעַם","for the time"],["הָאַחֲרוֹנָה הַזֹּאת","this last"],["טִפַּחְנוּ","we have nourished"],["אֶת־כַּרְמִי","my vineyard"],["וְהִנְּךָ","and behold thou"],["רֹאֶה","seest"],["כִּי","that"],["עָשִׂיתִי","I have done"],["כִּרְצוֹנִי","according to my will"],["וְשָׁמַרְתִּי","and I have preserved"],["אֶת־פְּרִי","the natural fruit of"],["הָאֵם","the mother"],["כִּי־טוֹב","that good"],["הוּא","it"],["כַּאֲשֶׁר","as"],["הָיָה","it was"],["בָּרִאשׁוֹנָה","at first"],["וּבְרוּכִים","and blessed"],["אַתֶּם","are you"],["כִּי","for"],["הֱיִיתֶם","because you have been"],["חֲרוּצִים","diligent"],["בַּעֲבֹדַתְכֶם","in your service"],["עִמִּי","with me"],["בְּכַרְמִי","in my vineyard"],["וּשְׁמַרְתֶּם","and have kept"],["אֶת־מִצְוֹתַי","my commandments"],["וַהֲבֵאתֶם","and have brought"],["אֵלַי","unto me"],["שׁוּב","again"],["אֶת־פְּרִי","the natural fruit of"],["הָאֵם","the mother"],["וְכַרְמִי","and my vineyard"],["לֹא־נִשְׁחַת","not corrupt"],["עוֹד","more"],["וְהָרַע","and the bad"],["הֻשְׁלָךְ","it was cast out"],["הִנֵּה","behold"],["תִּשְׂמְחוּ","you shall have joy"],["עִמִּי","with me"],["בַּעֲבוּר","because of"],["פְּרִי","the fruit of"],["כַּרְמִי","my vineyard"],
   ]},
   { num:"עו", words:[
-    ["כִּי","for"],["הִנֵּה","behold"],["זְמַן","a time"],["רַב","long"],["אֶצְבֹּר","will I lay up"],["מִפְּרִי","of the fruit of"],["כַּרְמִי","my vineyard"],["לִי","to me"],["לְמוֹעֵד","against the season"],["אֲשֶׁר","which"],["יָבוֹא","comes"],["מְהֵרָה","soon"],["וּבַפַּעַם","and for the time"],["הָאַחֲרוֹנָה","the last"],["טִפַּחְתִּי","have I nourished"],["אֶת־כַּרְמִי","my vineyard"],["וְזָמַרְתִּיו","and pruned it"],["וְעָדַרְתִּי","and dug about"],["סְבִיבוֹ","around it"],["וְזִבַּלְתִּיו","and dunged it"],["לָכֵן","therefore"],["אֶצְבֹּר","I will lay up"],["לִי","to me"],["מִן־הַפְּרִי","of the fruit"],["זְמַן","a time"],["רַב","long"],["כַּאֲשֶׁר","when/as"],["דִּבַּרְתִּי","I have spoken"],
+    ["כִּי","for"],["הִנֵּה","behold"],["זְמַן","a time"],["רַב","long"],["אֶצְבֹּר","will I lay up"],["מִפְּרִי","of the fruit of"],["כַּרְמִי","my vineyard"],["לִי","to me"],["לְמוֹעֵד","against the season"],["אֲשֶׁר","which"],["יָבוֹא","comes"],["מְהֵרָה","soon"],["וּבַפַּעַם","and for the time"],["הָאַחֲרוֹנָה","the last"],["טִפַּחְתִּי","have I nourished"],["אֶת־כַּרְמִי","my vineyard"],["וְזָמַרְתִּיו","and pruned it"],["וְעָדַרְתִּי","and dug about"],["סְבִיבוֹ","around it"],["וְזִבַּלְתִּיו","and dunged it"],["לָכֵן","therefore"],["אֶצְבֹּר","I will lay up"],["לִי","to me"],["מִן־הַפְּרִי","of the fruit"],["זְמַן","a time"],["רַב","long"],["כַּאֲשֶׁר","as"],["דִּבַּרְתִּי","I have spoken"],
   ]},
   { num:"עז", words:[
     ["וְכַאֲשֶׁר","and when"],["יָבוֹא","comes"],["הָעֵת","the time"],["אֲשֶׁר","that"],["יָבוֹא","comes"],["שׁוּב","again"],["פְּרִי","fruit"],["רַע","evil"],["אֶל־כַּרְמִי","into my vineyard"],["אָז","then"],["אֶצְוֶה","will I cause"],["לֶאֱסֹף","to be gathered"],["אֶת־הַטּוֹב","the good"],["וְאֶת־הָרָע","and the bad"],["וְאֶת־הַטּוֹב","and the good"],["אֶשְׁמֹר","will I preserve"],["לִי","to me"],["וְאֶת־הָרָע","and the bad"],["אַשְׁלִיךְ","will I cast away"],["אֶל־מְקוֹמוֹ","into its own place"],["וְאָז","and then"],["יָבוֹא","comes"],["הַמּוֹעֵד","the season"],["וְהַקֵּץ","and the end"],["וְאֶצְוֶה","and I will cause"],["לִשְׂרֹף","to be burned"],["אֶת־כַּרְמִי","my vineyard"],["בָּאֵשׁ","with fire"],
@@ -2217,7 +2217,7 @@ var jc_ch5Verses = [
 renderVerseSet(jc_ch5Verses, 'jc-ch5-verses');
 var jc_ch6Verses = [
   { num:"א", words:[
-    ["וְעַתָּה","and now"],["הִנֵּה","behold"],["אַחַי","my brethren"],["כַּאֲשֶׁר","when/as"],["אָמַרְתִּי","I said"],["לָכֶם","unto you"],["כִּי","that"],["אֶתְנַבֵּא","I would prophesy"],["הִנֵּה","behold"],["זֹאת","this is"],["נְבוּאָתִי","my prophecy"],["כִּי","that"],["הַדְּבָרִים","the things"],["אֲשֶׁר","which"],["דִּבֵּר","spoke"],["זֵנוֹס","Zenos"],["הַנָּבִיא","the prophet"],["עַל־בֵּית","upon the house of"],["יִשְׂרָאֵל","Israel"],["אֲשֶׁר","in which"],["דִּמָּה","he likened"],["אוֹתָם","them"],["לְזַיִת","unto an olive tree"],["תַּרְבּוּת","a tame"],["הָיֹה","surely"],["יִהְיוּ","they shall be"],
+    ["וְעַתָּה","and now"],["הִנֵּה","behold"],["אַחַי","my brethren"],["כַּאֲשֶׁר","as"],["אָמַרְתִּי","I said"],["לָכֶם","unto you"],["כִּי","that"],["אֶתְנַבֵּא","I would prophesy"],["הִנֵּה","behold"],["זֹאת","this is"],["נְבוּאָתִי","my prophecy"],["כִּי","that"],["הַדְּבָרִים","the things"],["אֲשֶׁר","which"],["דִּבֵּר","spoke"],["זֵנוֹס","Zenos"],["הַנָּבִיא","the prophet"],["עַל־בֵּית","upon the house of"],["יִשְׂרָאֵל","Israel"],["אֲשֶׁר","in which"],["דִּמָּה","he likened"],["אוֹתָם","them"],["לְזַיִת","unto an olive tree"],["תַּרְבּוּת","a tame"],["הָיֹה","surely"],["יִהְיוּ","they shall be"],
   ]},
   { num:"ב", words:[
     ["וְהַיּוֹם","and the day"],["אֲשֶׁר","that"],["יוֹסִיף","He shall again set"],["יָדוֹ","His hand"],["שֵׁנִית","the second time"],["לִקְנוֹת","to recover"],["אֶת־עַמּוֹ","His people"],["הוּא","is"],["הַיּוֹם","the day"],["אָכֵן","yea"],["בַּפַּעַם","at the time"],["הָאַחֲרוֹנָה","the last"],["אֲשֶׁר","that"],["יֵצְאוּ","they shall go forth"],["עַבְדֵי","the servants of"],["יְהוָה","the Lord"],["בְּכֹחוֹ","in His power"],["לְטַפֵּחַ","to nourish"],["וְלִזְמֹר","and to prune"],["אֶת־כַּרְמוֹ","His vineyard"],["וְאַחֲרֵי־כֵן","and after thus"],["יָבוֹא","shall come"],["הַקֵּץ","the end"],["מְהֵרָה","soon"],
@@ -2229,7 +2229,7 @@ var jc_ch6Verses = [
     ["וּמַה־רַב־חֶסֶד","and how great mercy"],["אֱלֹהֵינוּ","our God"],["אֵלֵינוּ","unto us"],["כִּי","for"],["זוֹכֵר","He remembers"],["אֶת־בֵּית","the house of"],["יִשְׂרָאֵל","Israel"],["גַּם־שָׁרָשִׁים","both roots"],["גַּם־עֲנָפִים","and branches"],["וְהוּא","and He"],["פֹּרֵשׂ","stretches forth"],["יָדָיו","His hands"],["אֲלֵיהֶם","unto them"],["כׇּל־הַיּוֹם","all the day long"],["וְהֵם","and they are"],["עַם־קְשֵׁה־עֹרֶף","a people stiff of neck"],["וּמְמָרִים","and gainsaying"],["אַךְ","but"],["כׇּל־אֲשֶׁר","as many as"],["לֹא־יַקְשׁוּ","shall not harden"],["אֶת־לְבָבָם","their hearts"],["יִוָּשְׁעוּ","they shall be saved"],["בְּמַלְכוּתוֹ","in His kingdom"],
   ]},
   { num:"ה", words:[
-    ["לָכֵן","therefore"],["אַחַי","my brethren"],["הָאֲהוּבִים","the beloved"],["אֶתְחַנֵּן","I shall beseech"],["אֲלֵיכֶם","unto you"],["בְּדִבְרֵי","in the words of"],["כֹּבֶד","soberness"],["כִּי","that"],["תָשׁוּבוּ","you would repent"],["וְתָבֹאוּ","and you shall come"],["בְּכׇל־לֵב","with full purpose of heart"],["וְתִדְבְּקוּ","and you shall cleave"],["בֵאלֹהִים","unto God"],["כַּאֲשֶׁר","when/as"],["דָּבֵק","cleaves"],["הוּא","He"],["בָּכֶם","unto you"],["וּבְעוֹד","and while"],["זְרוֹעַ","the arm of"],["רַחֲמָיו","His mercy"],["נְטוּיָה","is stretched out"],["אֲלֵיכֶם","towards you"],["בְּאוֹר","in the light of"],["הַיּוֹם","the day"],["אַל־תַּקְשׁוּ","do not harden"],["לְבַבְכֶם","your hearts"],
+    ["לָכֵן","therefore"],["אַחַי","my brethren"],["הָאֲהוּבִים","the beloved"],["אֶתְחַנֵּן","I shall beseech"],["אֲלֵיכֶם","unto you"],["בְּדִבְרֵי","in the words of"],["כֹּבֶד","soberness"],["כִּי","that"],["תָשׁוּבוּ","you would repent"],["וְתָבֹאוּ","and you shall come"],["בְּכׇל־לֵב","with full purpose of heart"],["וְתִדְבְּקוּ","and you shall cleave"],["בֵאלֹהִים","unto God"],["כַּאֲשֶׁר","as"],["דָּבֵק","cleaves"],["הוּא","He"],["בָּכֶם","unto you"],["וּבְעוֹד","and while"],["זְרוֹעַ","the arm of"],["רַחֲמָיו","His mercy"],["נְטוּיָה","is stretched out"],["אֲלֵיכֶם","towards you"],["בְּאוֹר","in the light of"],["הַיּוֹם","the day"],["אַל־תַּקְשׁוּ","do not harden"],["לְבַבְכֶם","your hearts"],
   ]},
   { num:"ו", words:[
     ["אָכֵן","yea"],["הַיּוֹם","today"],["אִם־בְּקֹלוֹ","if His voice"],["תִשְׁמָעוּ","you will hear"],["אַל־תַּקְשׁוּ","do not harden"],["לְבַבְכֶם","your hearts"],["כִּי","for"],["לָמָּה","why"],["תָמוּתוּ","will you die"],

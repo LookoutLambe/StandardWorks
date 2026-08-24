@@ -4174,7 +4174,7 @@ var ch10Verses = [
     ["נִבָּא","prophesied"],
     ["אָבִי","my father"],
     ["וַיְדַבֵּר","and spoke"],
-    ["אֶל־אַחַי","to my brothers"],
+    ["אֶל־אַחַי","to my brethren"],
     ["וְגַם","and also"],
     ["דְּבָרִים","things"],
     ["רַבִּים","many"],
@@ -4622,7 +4622,7 @@ var ch11Verses = [
     ["וַיֹּאמֶר","and said"],
     ["אֵלַי","unto me"],
     ["הֲיָדַעְתָּ","knowest thou"],
-    ["אֶת־עֲנְוַת","the condescension of"],
+    ["אֶת־עַנְוַת","the condescension of"],
     ["אֱלֹהִים","God"],
     ["׃",""]
   ]},
@@ -4786,7 +4786,7 @@ var ch11Verses = [
     ["שׁוּב","again"],
     ["רְאֵה","look"],
     ["וְהִנֵּה","and behold"],
-    ["אֶת־עֲנְוַת","the condescension of"],
+    ["אֶת־עַנְוַת","the condescension of"],
     ["אֱלֹהִים","God"],
     ["׃",""]
   ]},

@@ -231,7 +231,7 @@ var jr_ch1Verses = [
     ["אֲשֶׁר־דִּבֶּר","which He spoke"],
     ["לַאֲבוֹתֵינוּ","unto our fathers"],
     ["לֵאמֹר","saying"],
-    ["כַּאֲשֶׁר","when/as"],
+    ["כַּאֲשֶׁר","inasmuch as"],
     ["תִּשְׁמְרוּ","you shall keep"],
     ["אֶת־מִצְוֹתַי","my commandments"],
     ["תַּצְלִיחוּ","you shall prosper"],
