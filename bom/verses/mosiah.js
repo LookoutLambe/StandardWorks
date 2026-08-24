@@ -932,7 +932,7 @@ var mo_ch12Verses = [
     ["לֹא־תַעֲשֶׂה","you shall not make"],["לְךָ","unto you"],["פֶסֶל","any graven image"],["וְכׇל־תְּמוּנָה","or any likeness"],["אֲשֶׁר","of that which"],["בַּשָּׁמַיִם","in heaven"],["מִמַּעַל","above"],["וַאֲשֶׁר","or that"],["בָּאָרֶץ","in the earth"],["מִתָּחַת","beneath"]
   ]},
   { num: "לז", words: [
-    ["וַיֹּאמֶר","and said"],["אֲבִינָדִי","Abinadi"],["אֲלֵיהֶם","unto them"],["הֲעֲשִׂיתֶם","have you done"],["כׇּל־אֵלֶּה","all these"],["אֹמֵר","say"],["אֲנִי","I"],["לָכֶם","unto you"],["לֹא","nay"],["עֲשִׂיתֶם","you have not done"],["וְהַאִם","and have you"],["לִמַּדְתֶּם","taught"],["אֶת־הָעָם הַזֶּה","this people"],["לַעֲשׂוֹת","to do"],["כׇּל־הַדְּבָרִים הָאֵלֶּה","all these things"],["אֹמֵר","say"],["אֲנִי","I"],["לָכֶם","unto you"],["לֹא","nay"],["לִמַּדְתֶּם","you have not taught"]
+    ["וַיֹּאמֶר","and said"],["אֲבִינָדִי","Abinadi"],["אֲלֵיהֶם","unto them"],["הֲעֲשִׂיתֶם","have you done"],["כׇּל־אֵלֶּה","all these"],["אֹמֵר","say"],["אֲנִי","I"],["לָכֶם","unto you"],["לֹא","nay"],["עֲשִׂיתֶם","you have done"],["וְהַאִם","and have you"],["לִמַּדְתֶּם","taught"],["אֶת־הָעָם הַזֶּה","this people"],["לַעֲשׂוֹת","to do"],["כׇּל־הַדְּבָרִים הָאֵלֶּה","all these things"],["אֹמֵר","say"],["אֲנִי","I"],["לָכֶם","unto you"],["לֹא","nay"],["לִמַּדְתֶּם","you have taught"]
   ]}
 ];
 renderVerseSet(mo_ch12Verses, 'mo-ch12-verses');

@@ -4096,7 +4096,7 @@ var ch10Verses = [
     ["וְיֵרָאֶה","and he shall be manifested"],
     ["בְּרוּחַ","in the Spirit"],
     ["הַקֹּדֶשׁ","the Holy"],
-    ["אֶל־הַגּוֹיִם","unto the nations"],
+    ["אֶל־הַגּוֹיִם","unto the Gentiles"],
     ["׃",""]
   ]},
   { num:"יב", words:[
@@ -4104,7 +4104,7 @@ var ch10Verses = [
     ["הִרְבָּה","much"],
     ["אָבִי","my father"],
     ["לְדַבֵּר","to speak"],
-    ["עַל־הַגּוֹיִם","upon the nations"],
+    ["עַל־הַגּוֹיִם","upon the Gentiles"],
     ["וְגַם","and also"],
     ["עַל־בֵּית","upon the house of"],
     ["יִשְׂרָאֵל","Israel"],
