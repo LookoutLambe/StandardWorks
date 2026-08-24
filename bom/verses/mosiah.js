@@ -517,9 +517,7 @@ var mo_ch10Verses = [
   { num: "ט", words: [
     ["וָאַסְתִּיר","and I hid"],["אֶת־נְשֵׁי","the wives of"],["עַמִּי","my people"],["וְטַפָּם","and their children"],["בַּמִּדְבָּר","in the wilderness"],["וָאֲצַו","and I commanded"],["גַּם","also"],["אֶת־כׇּל־זְקֵנַי","all my old men"],["הַיְּכוֹלִים","that could"],["לָשֵׂאת","bear"],["נֶשֶׁק","weapons"],["וְגַם","and also"],["אֶת־כׇּל־בַּחוּרַי","all my young men"],["הַיְּכוֹלִים","that were able"],["לָשֵׂאת","to bear"],["נֶשֶׁק","weapons"],["לְהִקָּהֵל","to gather themselves"],["לָצֵאת","to come forth"],["לַמִּלְחָמָה","to battle"],["בַּלָּמָנִים","against the Lamanites"],["וָאַעֲמִידֵם","and I did place them"],["בְּמַעַרְכוֹתָם","in their ranks"],["אִישׁ","every man"],["לְפִי","according to"],["גִילוֹ","his age"]
   ]},
-  { num: "י", words: [
-    ["וַנַּעַל","and we went up"],["לְהִלָּחֵם","to battle"],["בַּלָּמָנִים","against the Lamanites"],["וַאֲנִי","and I"],["גַם־אֲנִי","even I"],["בְּזִקְנָתִי","in my old age"],["עָלִיתִי","did I go up"],["לְהִלָּחֵם","to battle"],["בַּלָּמָנִים","against the Lamanites"],["וַיְהִי","and it came to pass"],["וַנַּעַל","that we went up"],["בְּכֹחַ","by the power of"],["יְהוָה","the Lord"],["לַמִּלְחָמָה","to battle"]
-  ]},
+  { num: "י", words: [["וַנַּעַל","and we went up"], ["לְהִלָּחֵם","to battle"], ["בַּלָּמָנִים","against the Lamanites"], ["וַאֲנִי","and I"], ["גַם־אֲנִי","even I"], ["בְּזִקְנָתִי","in my old age"], ["עָלִיתִי","did I go up"], ["לְהִלָּחֵם","to battle"], ["בַּלָּמָנִים","against the Lamanites"], ["וַנַּעַל","and it came to pass that we went up"], ["בְּכֹחַ","by the power of"], ["יְהוָה","the Lord"], ["לַמִּלְחָמָה","to battle"]]},
   { num: "יא", words: [
     ["וְלֹא","and not"],["יָדְעוּ","knew"],["הַלָּמָנִים","the Lamanites"],["דָבָר","anything"],["עַל־יְהוָה","concerning the Lord"],["וְעַל־כֹּחוֹ","and His power"],["לָכֵן","therefore"],["בָּטְחוּ","they trusted"],["בְּכֹחָם","in their own strength"],["אַךְ","nevertheless"],["הָיוּ","were"],["עַם","a people"],["חָזָק","strong"],["בְּכֹחַ","in the strength of"],["אָדָם","man"]
   ]},
@@ -1281,9 +1279,7 @@ var mo_ch20Verses = [
   { num: "כד", words: [
     ["וַיִּשָּׁקֵט","and was pacified"],["הַמֶּלֶךְ","the king"],["אֶל־עַמּוֹ","toward his people"],["וַיֹּאמֶר","and he said"],["אֲלֵיהֶם","unto them"],["נֵצֵא","let us go forth"],["לִקְרַאת","to meet"],["עַמִּי","my people"],["בְּלִי","without"],["כְלֵי־נָשֶׁק","weapons"],["וְהִנְנִי","and behold I"],["נִשְׁבָּע","swear"],["לָכֶם","unto you"],["בִּשְׁבוּעָה","with an oath"],["כִּי","that"],["עַמִּי","my people"],["לֹא־יָמִיתוּ","shall not slay"],["אֶת־עַמְּכֶם","your people"]
   ]},
-  { num: "כה", words: [
-    ["וַיֵּלְכוּ","and they went"],["אַחֲרֵי","after"],["הַמֶּלֶךְ","the king"],["וַיֵּצְאוּ","and went forth"],["לִקְרַאת","to meet"],["הַלָּמָנִים","the Lamanites"],["בְּלִי","without"],["כְלֵי־נָשֶׁק","weapons"],["וַיְהִי","and it came to pass"],["וַיִּפְגְשׁוּ","that they met"],["אֶת־הַלָּמָנִים","the Lamanites"],["וַיִּשְׁתַּחוּ","and bowed himself"],["מֶלֶךְ","the king of"],["הַלָּמָנִים","the Lamanites"],["לִפְנֵיהֶם","before them"],["וַיִּתְחַנֵּן","and pleaded"],["בְּעַד","in behalf of"],["עַם","the people of"],["לִמְחִי","Limhi"]
-  ]},
+  { num: "כה", words: [["וַיֵּלְכוּ","and they went"], ["אַחֲרֵי","after"], ["הַמֶּלֶךְ","the king"], ["וַיֵּצְאוּ","and went forth"], ["לִקְרַאת","to meet"], ["הַלָּמָנִים","the Lamanites"], ["בְּלִי","without"], ["כְלֵי־נָשֶׁק","weapons"], ["וַיִּפְגְשׁוּ","and it came to pass that they met"], ["אֶת־הַלָּמָנִים","the Lamanites"], ["וַיִּשְׁתַּחוּ","and bowed himself"], ["מֶלֶךְ","the king of"], ["הַלָּמָנִים","the Lamanites"], ["לִפְנֵיהֶם","before them"], ["וַיִּתְחַנֵּן","and pleaded"], ["בְּעַד","in behalf of"], ["עַם","the people of"], ["לִמְחִי","Limhi"]]},
   { num: "כו", words: [
     ["וַיְהִי","and it came to pass"],["כִּרְאוֹת","when saw"],["הַלָּמָנִים","the Lamanites"],["אֶת־עַם","the people of"],["לִמְחִי","Limhi"],["כִּי","that"],["אֵין","there were no"],["לָהֶם","unto them"],["כְּלֵי־נָשֶׁק","weapons"],["וַיְרַחֲמוּ","they had compassion"],["עֲלֵיהֶם","upon them"],["וַיִּשָּׁקְטוּ","and were pacified"],["אֲלֵיהֶם","towards them"],["וַיָּשׁוּבוּ","and returned"],["עִם־מַלְכָּם","with their king"],["בְּשָׁלוֹם","in peace"],["אֶל־אַרְצָם","to their own land"]
   ]}
@@ -1401,9 +1397,7 @@ var mo_ch21Verses = [
 ];
 renderVerseSet(mo_ch21Verses, 'mo-ch21-verses');
 var mo_ch22Verses = [
-  { num: "א", words: [
-    ["וְעַתָּה","and now"],["וַיְהִי","it came to pass"],["וַיָּחֶל","and began"],["עַמּוֹן","Ammon"],["וְהַמֶּלֶךְ","and the king"],["לִמְחִי","Limhi"],["לְהִוָּעֵץ","to take counsel"],["עִם־הָעָם","with the people"],["אֵיךְ","how"],["יִנָּצְלוּ","they should deliver themselves"],["מֵעַבְדוּת","out of bondage"],["וַיַּקְהִילוּ","and they gathered"],["אֶת־כׇּל־הָעָם","all the people"],["וְזֹאת","and this"],["עָשׂוּ","they did"],["לְמַעַן","that"],["יִשְׁמְעוּ","they might hear"],["אֶת־קוֹל","the voice of"],["הָעָם","the people"],["בַּדָּבָר הַזֶּה","concerning this matter"]
-  ]},
+  { num: "א", words: [["וְעַתָּה","and now"], ["וַיָּחֶל","it came to pass that and began"], ["עַמּוֹן","Ammon"], ["וְהַמֶּלֶךְ","and the king"], ["לִמְחִי","Limhi"], ["לְהִוָּעֵץ","to take counsel"], ["עִם־הָעָם","with the people"], ["אֵיךְ","how"], ["יִנָּצְלוּ","they should deliver themselves"], ["מֵעַבְדוּת","out of bondage"], ["וַיַּקְהִילוּ","and they gathered"], ["אֶת־כׇּל־הָעָם","all the people"], ["וְזֹאת","and this"], ["עָשׂוּ","they did"], ["לְמַעַן","that"], ["יִשְׁמְעוּ","they might hear"], ["אֶת־קוֹל","the voice of"], ["הָעָם","the people"], ["בַּדָּבָר הַזֶּה","concerning this matter"]]},
   { num: "ב", words: [
     ["וַיְהִי","and it came to pass"],["וְלֹא","and not"],["מָצְאוּ","did they find"],["דֶּרֶךְ","any way"],["לְהִנָּצֵל","to deliver themselves"],["מֵעַבְדוּת","out of bondage"],["כִּי־אִם","except"],["לָקַחַת","take"],["אֶת־נְשֵׁיהֶם","their women"],["וְטַפָּם","and their children"],["וְצֹאנָם","and their flocks"],["וּבְקָרָם","and their herds"],["וְאׇהֳלֵיהֶם","and their tents"],["וְלָצֵאת","and depart"],["הַמִּדְבָּרָה","into the wilderness"],["כִּי־רַבִּים","for many were"],["הַלָּמָנִים","the Lamanites"],["וְלֹא","and not"],["יָכְלוּ","could they"],["עַם","the people of"],["לִמְחִי","Limhi"],["לְהִלָּחֵם","fight"],["בָּם","with them"],["לְהִנָּצֵל","to deliver themselves"],["מֵעַבְדוּת","out of bondage"],["בֶּחָרֶב","by the sword"]
   ]},
