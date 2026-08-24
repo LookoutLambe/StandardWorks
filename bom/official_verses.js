@@ -4952,7 +4952,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 4,
   "verse": 3,
-  "hebrew": "וַיְהִי כַּאֲשֶׁר כִּלָּה אָבִי לְדַבֵּר עַל־נְבוּאוֹת יוֹסֵף וַיִּקְרָא לִבְנֵי לָמָן בָּנָיו וּבְנֹתָיו וַיֹּאמֶר אֲלֵיהֶם׃",
+  "hebrew": "וַיְהִי כַּאֲשֶׁר כִּלָּה אָבִי לְדַבֵּר עַל־נְבוּאוֹת יוֹסֵף וַיִּקְרָא לִבְנֵי לָמָן בָּנָיו וּבְנֹתָיו וַיֹּאמֶר אֲלֵיהֶם הִנֵּה בָּנַי וּבְנֹתַי אֲשֶׁר הֵם בְּנֵי בְכוֹרִי וּבְנֹתָיו חָפַצְתִּי כִּי תַּאֲזִינוּ לִדְבָרַי׃",
   "english": "Wherefore, after my father had made an end of speaking concerning the prophecies of Joseph, he called the children of Laman, his sons, and his daughters, and said unto them: Behold, my sons, and my daughters, who are the sons and the daughters of my firstborn, I would that ye should give ear unto my words."
  },
  {

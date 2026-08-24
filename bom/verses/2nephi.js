@@ -2063,6 +2063,18 @@ var n2_ch4Verses = [
     ["וּבְנֹתָיו","and his daughters"],
     ["וַיֹּאמֶר","and said"],
     ["אֲלֵיהֶם","unto them"],
+    ["הִנֵּה","behold"],
+    ["בָּנַי","my sons"],
+    ["וּבְנֹתַי","and my daughters"],
+    ["אֲשֶׁר","who"],
+    ["הֵם","are"],
+    ["בְּנֵי","the sons of"],
+    ["בְכוֹרִי","my firstborn"],
+    ["וּבְנֹתָיו","and his daughters"],
+    ["חָפַצְתִּי","I would"],
+    ["כִּי","that"],
+    ["תַּאֲזִינוּ","ye should give ear"],
+    ["לִדְבָרַי","unto my words"],
     ["׃",""]
   ]},
           { num:"ד", words:[
