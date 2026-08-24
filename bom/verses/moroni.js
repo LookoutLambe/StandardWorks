@@ -256,9 +256,7 @@ var mr_ch8Verses = [
   { num: "ה", words: [
     ["כִּי־אִם","that if"],["לָמַדְתִּי","I learned"],["אֶת־הָאֱמֶת","the truth"],["הָיוּ","there were"],["מְרִיבוֹת","contentions"],["בֵּינֵיכֶם","among you"],["עַל־טְבִילַת","upon baptism of"],["יַלְדֵיכֶם","your children"],["הַקְּטַנִּים","the little"]
   ]},
-  { num: "ו", words: [
-    ["וְעַתָּה","and now"],["בְּנִי","my son"],["חָפַצְתִּי","I desired"],["כִּי","that"],["תַּעֲבֹד","you labor"],["בְּחָזְקָה","with diligence"],["לְמַעַן","in order that"],["יוּסַר","be removed"],["הַשְּׁגִיאָה","the error"],["הַגַּסָּה הַזֹּאת","this gross"],["מִבֵּינֵיכֶם","from among you"],["כִּי","that"],["לְמַעַן","in order that"],["זֹאת","this"],["כָּתַבְתִּי","I wrote"],["אֶת־הָאִגֶּרֶת הַזֹּאת","this epistle"]
-  ]},
+  { num: "ו", words: [["וְעַתָּה","and now"], ["בְּנִי","my son"], ["חָפַצְתִּי","I desired"], ["כִּי","that"], ["תַּעֲבֹד","you labor"], ["בְּחָזְקָה","with diligence"], ["לְמַעַן","in order that"], ["יוּסַר","be removed"], ["הַשְּׁגִיאָה","the error"], ["הַכְּבֵדָה הַזֹּאת","this gross"], ["מִבֵּינֵיכֶם","from among you"], ["כִּי","that"], ["לְמַעַן","in order that"], ["זֹאת","this"], ["כָּתַבְתִּי","I wrote"], ["אֶת־הָאִגֶּרֶת הַזֹּאת","this epistle"]]},
   { num: "ז", words: [
     ["כִּי","that"],["מִיָּד","immediately"],["אַחֲרֵי","after"],["אֲשֶׁר","that"],["לָמַדְתִּי","I learned"],["אֶת־הַדְּבָרִים הָאֵלֶּה","these things"],["מִמְּךָ","from you"],["דָּרַשְׁתִּי","I required"],["מֵיְהוָה","from the LORD"],["עַל־הָעִנְיָן","upon the matter"],["וַיָּבֹא","and came"],["אֵלַי","to me"],["דְּבַר־יְהוָה","word of the Lord"],["בְּכֹחַ","by the power of"],["רוּחַ","the Spirit of"],["הַקֹּדֶשׁ","the Holy"],["לֵאמֹר","saying"]
   ]},
