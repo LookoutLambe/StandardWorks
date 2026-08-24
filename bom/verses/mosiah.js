@@ -836,7 +836,7 @@ var mo_ch12Verses = [
     ["וְהָיָה","and be"],["כִּי","that"],["אַכֶּה","I will smite"],["אֶת־עַמִּי","my people"],["זֶה","this"],["בְּיִסּוּרִים","with afflictions"],["קָשִׁים","hard"],["בְּרָעָב","with famine"],["וּבְדֶבֶר","and with pestilence"],["וְגָרַמְתִּי","and I will cause"],["לָהֶם","unto them"],["לְיֵלִיל","to howl"],["כׇּל־הַיּוֹם","all the day long"]
   ]},
   { num: "ה", words: [
-    ["וְגַם","and also"],["אֶתֵּן","I shall lay"],["מַשָּׂא","burdens"],["עַל־גַּבָּם","upon their backs"],["וְיִנָּהֲגוּ","and they shall be driven"],["כַּחֲמוֹר","as an ass"]
+    ["וְגַם","and also"],["אֶתֵּן","I shall lay"],["מַשָּׂא","burdens"],["עַל־גַּבָּם","upon their backs"],["וְיִנָּהֲגוּ","and they shall be driven"],["כַּחֲמוֹר","as an ass"],["אִלֵּם","dumb"]
   ]},
   { num: "ו", words: [
     ["וְהָיָה","and be"],["כִּי","that"],["אַשְׁלִיךְ","I shall cast"],["בָּרָד","hail"],["עֲלֵיהֶם","upon them"],["וְהִכָּה","and it shall smite"],["אֹתָם","them"],["וְגַם־יֻכּוּ","and they shall also be smitten"],["בְּרוּחַ","with the wind of"],["הַקָּדִים","the east"],["וְשֶׁרֶץ","and insects"],["יְשַׁחֵת","shall plague"],["אֶת־אַרְצָם","their land"],["וְיֹאכַל","and shall devour"],["אֶת־דְּגָנָם","their grain"]

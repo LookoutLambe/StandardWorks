@@ -8018,7 +8018,7 @@ var ch16Verses = [
     ["אֶל־אָבִי","unto my father"],
     ["בַּלַּיְלָה","by night"],
     ["וַיְצַוֵּהוּ","and commanded him"],
-    ["לִנְסֹעַ","that on the morrow he should take his journey"],
+    ["לִנְסֹעַ","that he should take his journey"],
     ["מִמָּחֳרָת","on the morrow"],
     ["לַמִּדְבָּר","into the wilderness"],
     ["׃",""]
