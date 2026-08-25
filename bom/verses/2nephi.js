@@ -4817,19 +4817,7 @@ var n2_ch9Verses = [
     ["בָּם","in them"],
     ["׃",""]
   ]},
-  { num:"לח", words:[
-    ["וּבִכְלָל","and in fine"],
-    ["אוֹי","woe"],
-    ["לְכׇל־הַמֵּתִים","unto all who die"],
-    ["בְּחַטֹּאתָם","in their sins"],
-    ["יָשׁוּבוּ","they shall return"],
-    ["אֶל־הָאֱלֹהִים","unto God"],
-    ["וְרָאוּ","and shall see"],
-    ["פָנָיו","His face"],
-    ["וְנִשְׁאֲרוּ","and shall remain"],
-    ["בְּחַטֹּאתָם","in their sins"],
-    ["׃",""]
-  ]},
+  { num: "לח", words: [["וּבִכְלָל","and in fine"], ["אוֹי","woe"], ["לְכׇל־הַמֵּתִים","unto all who die"], ["בְּחַטֹּאתָם","in their sins"], ["יָשׁוּבוּ","they shall return"], ["אֶל־הָאֱלֹהִים","unto God"], ["וְרָאוּ","and shall behold"], ["פָנָיו","His face"], ["וְנִשְׁאֲרוּ","and shall remain"], ["בְּחַטֹּאתָם","in their sins"], ["׃",""]]},
   { num:"לט", words:[
     ["הוֹי","O"],
     ["אַחַי","my brethren"],

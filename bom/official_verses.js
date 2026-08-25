@@ -34209,7 +34209,7 @@ window._officialVersesData = [
   "book": "3 Nephi",
   "chapter": 28,
   "verse": 21,
-  "english": "And thrice they were cast into a furnace and received no hard."
+  "english": "And thrice they were cast into a furnace and received no harm."
  },
  {
   "book": "3 Nephi",
