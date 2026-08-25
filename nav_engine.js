@@ -1432,12 +1432,19 @@
       /* interlinear verse previews inside the panel: readable on navy */
       '#xref-panel .hw{color:#f4ca48 !important;}' +
       '#xref-panel .tl{color:rgba(232,224,208,0.65) !important;}' +
-      '#xref-panel .gl{color:#e8e0d0 !important;}' +
+      '#xref-panel .gl{color:#fff0b8 !important;}' +
       '#xref-panel .arr-tl,#xref-panel .arr-gl{color:rgba(244,202,72,0.45) !important;}' +
       '#xref-panel .verse-num{color:rgba(244,202,72,0.8) !important;}' +
       '#xref-panel .verse{border-color:rgba(244,202,72,0.15) !important;}' +
       '#xref-panel .xref-refs,#xref-panel .xref-pane{color:#e8e0d0 !important;}' +
-      '#xref-panel .xref-ref-loading,#xref-panel .xref-ref-nodata{color:rgba(232,224,208,0.7) !important;}';
+      '#xref-panel .xref-ref-loading,#xref-panel .xref-ref-nodata{color:rgba(232,224,208,0.7) !important;}' +
+      /* cross-reference cards: title row, go-to link, interlinear words */
+      '#xref-panel .xref-ref-card{background:#2a3050 !important;border:1px solid rgba(244,202,72,0.2) !important;border-radius:10px;}' +
+      '#xref-panel .xref-ref-title,#xref-panel .xref-ref-title span{color:#f4ca48 !important;}' +
+      '#xref-panel .xref-ref-goto{color:#f4ca48 !important;text-decoration:underline;}' +
+      '#xref-panel .xref-ref-word{color:#e8e0d0 !important;}' +
+      '#xref-panel .xref-ref-word .en,#xref-panel .en{color:#fff0b8 !important;}' +
+      '#xref-panel .xref-ref-word .he,#xref-panel .he{color:#f4ca48 !important;}';
     document.head.appendChild(st);
   }
 
