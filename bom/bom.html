@@ -7911,7 +7911,7 @@ document.addEventListener('keydown', function(e) {
     }
     var sInfo = wordFreq[hText];
     var detailHtml = '';
-    if (morphGloss) {
+    if (false && morphGloss) {   // suppressed: _guessAffixPartsForMorphGloss over-peels lexeme letters ('his receive'); data-mgl kept for auditing
       detailHtml += '<div style="direction:ltr;margin-bottom:6px;font-size:0.9em;color:#b0a890">' +
         '<strong>Morph gloss:</strong> <span style="color:#e8e0d0">' + morphGloss + '</span>' +
         '</div>';

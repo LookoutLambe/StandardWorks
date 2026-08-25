@@ -2787,7 +2787,7 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
     }
     var sInfo = wordFreq[hText];
     var detailHtml = '';
-    if (morphGloss) {
+    if (false && morphGloss) {   // suppressed: _guessAffixPartsForMorphGloss over-peels lexeme letters ('his receive'); data-mgl kept for auditing
       detailHtml += '<div style="direction:ltr;margin-bottom:6px;font-size:0.9em;color:var(--ink-light)">' +
         '<strong>Morph gloss:</strong> <span style="color:var(--ink)">' + morphGloss + '</span>' +
         '</div>';

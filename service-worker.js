@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-08-25T11-39-54';
+const BUILD_ID = '2026-08-25T11-43-28';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -45,7 +45,6 @@ const CORE_ASSETS = [
     '/StandardWorks/root_scorecard.js',
     '/StandardWorks/root_engine.js',
     '/StandardWorks/root_concordance.js',
-    '/StandardWorks/root_concordance_refs.js',
     '/StandardWorks/strongs_lookup.js',
     '/StandardWorks/strongs_roots.js',
     '/StandardWorks/interlinear_gloss.js',

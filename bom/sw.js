@@ -8,7 +8,6 @@ const ASSETS = [
   '../root_scorecard.js?v=2',
   '../root_engine.js?v=1',
   '../root_concordance.js?v=1',
-  '../root_concordance_refs.js?v=1',
   '../xref_study_panel.css',
   '../xref_study_panel.js',
   './official_verses.js?v=10',
