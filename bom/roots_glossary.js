@@ -386,7 +386,7 @@ window._rootGlossaryData = {
     "category": "Nature"
   },
   "חי": {
-    "meaning": "Lehi",
+    "meaning": "living, alive; life",
     "category": "Life"
   },
   "יהיה": {
@@ -6067,6 +6067,7 @@ window._rootGlossaryData = {
     "meaning": "swiftly",
     "category": "Uncategorized"
   },
+  "לחי": {"meaning": "Lehi (name)", "category": "Names"},
   "חיה": {
     "meaning": "to live, be alive; life",
     "category": "Life"

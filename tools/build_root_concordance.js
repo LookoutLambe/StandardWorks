@@ -77,7 +77,9 @@ const words = new Map();  // surface -> rootKey
 let totalTokens = 0;
 
 function record(volIdx, chapId, verseNum, h, g) {
-  h = h.replace(/׃/g, '');
+  // Strip sof pasuq and the OT's ketiv/qere brackets — [לֹא] keys as לֹא.
+  // The brackets stay in the DISPLAY; they must never reach the root key.
+  h = h.replace(/[׃\[\]]/g, '');
   if (!h.trim() || !g.trim()) return;
   totalTokens++;
   let root = words.get(h);
@@ -208,7 +210,7 @@ const rootsOut = keys.map(function(k) {
     c: e.c,
     vc: e.verses.map(s => s.size),
     f: topEntries(e.f, 6),
-    g: topEntries(e.g, 5)
+    g: topEntries(e.g, 10)
   };
   if (total <= REF_CAP) {
     const refs = {};

@@ -3890,7 +3890,7 @@ body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
 
 <script src="bom_book_loader.js?v=8"></script>
 <script src="bom_lazy_assets.js?v=1"></script>
-<script src="../root_scorecard.js?v=2"></script>
+<script src="../root_scorecard.js?v=3"></script>
 <script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
 <script src="crossrefs.js?v=23"></script>
 <script src="roots_glossary.js?v=23"></script>
@@ -7156,17 +7156,21 @@ document.addEventListener('keydown', function(e) {
 (function() {
   function scrollToVerse(verseNum) {
     if (!verseNum || verseNum < 1) return;
-    setTimeout(function() {
+    // Retry until the verse is rendered — deep links into a not-yet-loaded book
+    // race the lazy book loader, and a single 400ms wait landed at the chapter
+    // top on slow connections.
+    var tries = 0;
+    (function attempt() {
       var panel = document.querySelector('.chapter-panel[style*="block"]');
-      if (!panel) return;
-      var verses = panel.querySelectorAll('.verse');
-      var v = verses[verseNum - 1];
-      if (v) {
-        v.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        v.classList.add('highlighted');
-        setTimeout(function() { v.classList.remove('highlighted'); }, 3000);
+      var v = panel && panel.querySelectorAll('.verse')[verseNum - 1];
+      if (!v) {
+        if (++tries < 25) setTimeout(attempt, 300);   // up to ~7.5s
+        return;
       }
-    }, 400);
+      v.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      v.classList.add('highlighted');
+      setTimeout(function() { v.classList.remove('highlighted'); }, 3000);
+    })();
   }
 
   function handleHash() {
@@ -8540,11 +8544,16 @@ function highlightAllForms(rootKey) {
   clearHighlightedWords();
   var panel = document.querySelector('.chapter-panel[style*="block"]');
   if (!panel) return;
-  var getR = window.getRoot || function(w) { return w; };
+  // Canonical root via the shared engine (matches the scorecard/glossary keys);
+  // fall back to the page's own getRoot while the concordance loads.
+  var canon = (window.RootScorecard && RootScorecard.ready())
+    ? function(w) { var f = RootScorecard.lookup(w); return f ? f.key : null; }
+    : null;
   panel.querySelectorAll('.word-unit').forEach(function(wu) {
     var hw = wu.querySelector('.hw');
     if (!hw) return;
-    var wRoot = getR(hw.textContent);
+    var h = (wu.getAttribute && wu.getAttribute('data-h')) || hw.textContent;
+    var wRoot = canon ? canon(h) : (window.getRoot ? window.getRoot(h) : h);
     if (wRoot === rootKey) wu.classList.add('glossary-highlighted');
   });
 }

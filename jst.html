@@ -2562,7 +2562,7 @@ try {
 <!-- Strong's lookup + Root glossary data -->
 <script src="strongs_lookup.js"></script>
 <script src="strongs_roots.js"></script>
-<script src="root_scorecard.js?v=2"></script>
+<script src="root_scorecard.js?v=3"></script>
 <script>RootScorecard.init({ vol: 'jst', base: '' });</script>
 <script src="bom/roots_glossary.js"></script>
 <script src="notes_engine.js"></script>
@@ -4193,10 +4193,16 @@ function highlightAllForms(rootKey) {
   clearHighlightedWords();
   var panel = document.querySelector('.chapter-panel[style*="block"]');
   if (!panel) return;
+  // Canonical root via the shared engine (matches the scorecard/glossary keys);
+  // fall back to the page's own getRoot while the concordance loads.
+  var canon = (window.RootScorecard && RootScorecard.ready())
+    ? function(w) { var f = RootScorecard.lookup(w); return f ? f.key : null; }
+    : null;
   panel.querySelectorAll('.word-unit').forEach(function(wu) {
     var hw = wu.querySelector('.hw');
     if (!hw) return;
-    var wRoot = getRoot(hw.textContent);
+    var h = (wu.getAttribute && wu.getAttribute('data-h')) || hw.textContent;
+    var wRoot = canon ? canon(h) : getRoot(h);
     if (wRoot === rootKey) wu.classList.add('glossary-highlighted');
   });
 }

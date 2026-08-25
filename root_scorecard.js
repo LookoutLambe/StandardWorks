@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '1';   // bump when the generated data files change
+  var RSC_V = '2';   // bump when the generated data files change
 
   var cfg = { vol: '', base: '' };
   var keyIdx = null;         // rootKey -> index, built once
@@ -94,7 +94,8 @@
     return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
   function cleanSurface(s) {
-    return String(s || '').replace(/׃/g, '').trim();
+    // sof pasuq + ketiv/qere brackets never reach the root key
+    return String(s || '').replace(/[׃\[\]]/g, '').trim();
   }
 
   function lookup(surface) {
