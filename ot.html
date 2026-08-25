@@ -2451,7 +2451,7 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
       if (lemNum && lemNum !== root && _strongsRoots[lemNum]) {
         var lemE = _strongsRoots[lemNum];
         lemmaLine = 'Word: <span style="font-family:David Libre,serif">' + (lemE.w || '') + '</span>' +
-          (lemE.x ? ' <span style="font-size:0.85em;opacity:0.7;">(' + lemE.x + ')</span>' : '') +
+          (lemE.x ? ' <span style="font-size:0.85em;opacity:0.7;">(' + ((typeof transliterate === 'function' && lemE.w ? transliterate(lemE.w) : '') || lemE.x) + ')</span>' : '') +
           (lemE.g ? ' \u2014 ' + lemE.g : '') + '<br>';
       }
     }
@@ -2465,7 +2465,7 @@ detailHtml += '<div class="rsc-slot">';   // RootScorecard upgrades this block w
       if (isStrongsRoot) {
         var rootEntry = _strongsRoots[root];
         if (rootEntry) {
-          rootDisplay = '<span style="font-family:David Libre,serif">' + rootEntry.w + '</span> <span style="font-size:0.85em;opacity:0.7;">(' + rootEntry.x + ')</span>';
+          rootDisplay = '<span style="font-family:David Libre,serif">' + rootEntry.w + '</span> <span style="font-size:0.85em;opacity:0.7;">(' + ((typeof transliterate === 'function' && rootEntry.w ? transliterate(rootEntry.w) : '') || rootEntry.x) + ')</span>';
           // Exactness: prefer the site's own curated/observed glosses;
           // Strong's abridged one-word gloss only as a last resort.
           var strongsGloss = rootEntry.g || '';

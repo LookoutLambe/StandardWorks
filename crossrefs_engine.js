@@ -780,7 +780,7 @@
       if (/^H\d+$/.test(hebrewRoot) && window._strongsRoots && window._strongsRoots[hebrewRoot]) {
         var sEntry = window._strongsRoots[hebrewRoot];
         displayText = sEntry.w || hebrewRoot;
-        xrefTranslit = sEntry.x || '';
+        xrefTranslit = (typeof transliterate === 'function' && sEntry.w ? transliterate(sEntry.w) : '') || sEntry.x || '';
         // Exactness: curated glossary first, then this site's own translation
         // glosses; Strong's abridged one-word gloss only as a last resort.
         var glossEntry = window._rootGlossaryData && window._rootGlossaryData[displayText];
@@ -1032,7 +1032,7 @@
     if (/^H\d+$/.test(root) && window._strongsRoots && window._strongsRoots[root]) {
       var sEntry = window._strongsRoots[root];
       displayRoot = sEntry.w || root;
-      rootTranslit = sEntry.x || '';
+      rootTranslit = (typeof transliterate === 'function' && sEntry.w ? transliterate(sEntry.w) : '') || sEntry.x || '';
       engMeaning = sEntry.g || '';
       if (!engMeaning) {
         var glossEntry = window._rootGlossaryData && window._rootGlossaryData[displayRoot];
