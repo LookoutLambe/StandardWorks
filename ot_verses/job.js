@@ -219,7 +219,7 @@ var job_ch9Verses = [
   { num:"ב", words:[["אׇמְנָם","verily"],["יָדַעְתִּי","I know"],["כִי־כֵן","that thus"],["וּמַה־יִּצְדַּק","and how should be just"],["אֱנוֹשׁ","man"],["עִם־אֵל","with God"],["׃",""]] },
   { num:"ג", words:[["אִם־יַחְפֹּץ","if he desires"],["לָרִיב","to contend"],["עִמּוֹ","with him"],["לֹא־יַעֲנֶנּוּ","he cannot answer him"],["אַחַת","one"],["מִנִּי־אָלֶף","of a thousand"],["׃",""]] },
   { num:"ד", words:[["חֲכַם","wise in"],["לֵבָב","heart"],["וְאַמִּיץ","and mighty in"],["כֹּחַ","power"],["מִי־הִקְשָׁה","who has hardened himself"],["אֵלָיו","to him"],["וַיִּשְׁלָם","and has prospered"],["׃",""]] },
-  { num:"ה", words:[["הַמַּעְתִּיק","the one who removes"],["הָרִים","mountains"],["וְלֹא","and not"],["יָדָעוּ","perceive"],["אֲשֶׁר","which"],["הֲפָכָם","he overturns them"],["בְּאַפּוֹ","in His anger"],["׃",""]] },
+  { num:"ה", words:[["הַמַּעְתִּיק","the one who removes"],["הָרִים","mountains"],["וְלֹא","and not"],["יָדָעוּ","they know"],["אֲשֶׁר","which"],["הֲפָכָם","he overturns them"],["בְּאַפּוֹ","in His anger"],["׃",""]] },
   { num:"ו", words:[["הַמַּרְגִּיז","the one who shakes"],["אֶרֶץ","the land of"],["מִמְּקוֹמָהּ","out of her place"],["וְעַמּוּדֶיהָ","and its pillars"],["יִתְפַּלָּצוּן","they tremble"],["׃",""]] },
   { num:"ז", words:[["הָאֹמֵר","who commands"],["לַחֶרֶס","to the sun"],["וְלֹא","and not"],["יִזְרָח","it shines"],["וּבְעַד","and for"],["כּוֹכָבִים","stars"],["יַחְתֹּם","seals up"],["׃",""]] },
   { num:"ח", words:[["נֹטֶה","who spreads out"],["שָׁמַיִם","the heavens"],["לְבַדּוֹ","alone"],["וְדוֹרֵךְ","and one who treads"],["עַל־בָּמֳתֵי","upon the waves of"],["יָם","the sea"],["׃",""]] },
