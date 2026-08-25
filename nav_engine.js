@@ -1428,7 +1428,16 @@
       '#xref-panel .xf-bookmark-item .xf-bm-heb{color:#f4ca48 !important;}' +
       '#xref-panel .study-pane-hint,#xref-panel .study-pane-sub{color:rgba(232,224,208,0.7) !important;}' +
       '#xref-panel .study-btn-row button{background:#2a3050 !important;color:#fff0b8 !important;border:1px solid rgba(244,202,72,0.4) !important;}' +
-      '#xref-panel .study-btn-row button:hover{background:#333a5e !important;border-color:#f4ca48 !important;}';
+      '#xref-panel .study-btn-row button:hover{background:#333a5e !important;border-color:#f4ca48 !important;}' +
+      /* interlinear verse previews inside the panel: readable on navy */
+      '#xref-panel .hw{color:#f4ca48 !important;}' +
+      '#xref-panel .tl{color:rgba(232,224,208,0.65) !important;}' +
+      '#xref-panel .gl{color:#e8e0d0 !important;}' +
+      '#xref-panel .arr-tl,#xref-panel .arr-gl{color:rgba(244,202,72,0.45) !important;}' +
+      '#xref-panel .verse-num{color:rgba(244,202,72,0.8) !important;}' +
+      '#xref-panel .verse{border-color:rgba(244,202,72,0.15) !important;}' +
+      '#xref-panel .xref-refs,#xref-panel .xref-pane{color:#e8e0d0 !important;}' +
+      '#xref-panel .xref-ref-loading,#xref-panel .xref-ref-nodata{color:rgba(232,224,208,0.7) !important;}';
     document.head.appendChild(st);
   }
 

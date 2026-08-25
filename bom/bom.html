@@ -3890,7 +3890,7 @@ body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
 
 <script src="bom_book_loader.js?v=8"></script>
 <script src="bom_lazy_assets.js?v=1"></script>
-<script src="../root_scorecard.js?v=1"></script>
+<script src="../root_scorecard.js?v=2"></script>
 <script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
 <script src="crossrefs.js?v=23"></script>
 <script src="roots_glossary.js?v=23"></script>
@@ -6277,7 +6277,7 @@ function openXrefPanel(ref, sourceVerseKey, hebrewRoot) {
     if (/^H\d+$/.test(hebrewRoot) && window._strongsRoots && window._strongsRoots[hebrewRoot]) {
       var sEntry = window._strongsRoots[hebrewRoot];
       displayText = sEntry.w || hebrewRoot;
-      xrefTranslit = sEntry.x || '';
+      xrefTranslit = (typeof transliterate === 'function' && sEntry.w ? transliterate(sEntry.w) : '') || sEntry.x || '';
       // Exactness: curated glossary first, then this site's own translation
       // glosses; Strong's abridged one-word gloss only as a last resort.
       var glossEntry = window._rootGlossaryData && window._rootGlossaryData[displayText];
@@ -6412,7 +6412,7 @@ function openRootXrefPanel(root) {
   if (/^H\d+$/.test(root) && window._strongsRoots && window._strongsRoots[root]) {
     var sEntry = window._strongsRoots[root];
     displayRoot = sEntry.w || root;
-    rootTranslit = sEntry.x || '';
+    rootTranslit = (typeof transliterate === 'function' && sEntry.w ? transliterate(sEntry.w) : '') || sEntry.x || '';
     engMeaning = sEntry.g || '';
     if (!engMeaning) {
       var glossEntry = window._rootGlossaryData && window._rootGlossaryData[displayRoot];
@@ -8312,7 +8312,7 @@ function buildGlossaryIndex() {
     if (/^H\d+$/.test(root) && window._strongsRoots && _strongsRoots[root]) {
       var sEntry = _strongsRoots[root];
       displayHeb = sEntry.w;
-      displayTranslit = sEntry.x || '';
+      displayTranslit = (typeof transliterate === 'function' && sEntry.w ? transliterate(sEntry.w) : '') || sEntry.x || '';
       if (!cInfo.meaning) {
         var consRoot = (sEntry.w || '').replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, '');
         cInfo = curated[consRoot] || {};
@@ -9295,7 +9295,7 @@ try {
 
 <script src="../site_chrome.js?v=28" data-sw-volume="bom"></script>
 <script src="../verse_search.js?v=3"></script>
-<script src="../nav_engine.js?v=30"></script>
+<script src="../nav_engine.js?v=31"></script>
 <script src="../xref_study_panel.js?v=6"></script>
 <script>
 NavEngine.init({

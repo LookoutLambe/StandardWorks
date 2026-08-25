@@ -2562,7 +2562,7 @@ try {
 <!-- Strong's lookup + Root glossary data -->
 <script src="strongs_lookup.js"></script>
 <script src="strongs_roots.js"></script>
-<script src="root_scorecard.js?v=1"></script>
+<script src="root_scorecard.js?v=2"></script>
 <script>RootScorecard.init({ vol: 'jst', base: '' });</script>
 <script src="bom/roots_glossary.js"></script>
 <script src="notes_engine.js"></script>
@@ -4036,7 +4036,7 @@ function buildGlossaryIndex() {
     if (/^H\d+$/.test(root) && window._strongsRoots && _strongsRoots[root]) {
       var sEntry = _strongsRoots[root];
       displayHeb = sEntry.w;
-      displayTranslit = sEntry.x || '';
+      displayTranslit = (typeof transliterate === 'function' && sEntry.w ? transliterate(sEntry.w) : '') || sEntry.x || '';
       if (!cInfo.meaning) {
         var consRoot = _stripNikkud(sEntry.w);
         cInfo = curated[consRoot] || {};
@@ -4558,7 +4558,7 @@ window.addEventListener('resize', function() {
 </div>
 <script src="site_chrome.js?v=23" data-sw-volume="jst"></script>
 <script src="verse_search.js?v=3"></script>
-<script src="nav_engine.js?v=30"></script>
+<script src="nav_engine.js?v=31"></script>
 <script>
 (function() {
   try {

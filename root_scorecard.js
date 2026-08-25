@@ -111,7 +111,11 @@
     var heb = key, translit = '', meaning = '';
     if (/^H\d+$/.test(key) && window._strongsRoots && window._strongsRoots[key]) {
       var e = window._strongsRoots[key];
-      heb = e.w || key; translit = e.x || ''; meaning = e.g || '';
+      heb = e.w || key; meaning = e.g || '';
+      // The site's own transliteration, matching the reader line — not Strong's
+      // scholarly one (ʼâçaph): laymen read "asaf", not diacritics.
+      if (typeof window.transliterate === 'function') { try { translit = window.transliterate(heb); } catch (eT) {} }
+      if (!translit) translit = e.x || '';
       var cons = heb.replace(/[֑-ֽֿ-׀׃-ׇ]/g, '');
       var cur = (window._rootGlossaryData || {})[cons];
       if (cur && cur.meaning) meaning = cur.meaning;
