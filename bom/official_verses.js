@@ -28707,7 +28707,7 @@ window._officialVersesData = [
   "book": "Helaman",
   "chapter": 11,
   "verse": 14,
-  "english": "O Lord, thou didst hearken unto my words when I said, Let there be a famine, that the pestilence of the sword might cease; and I know that thou wilt, even at this time, hearken unto my words, for thou  dist that: If this people repent I will spare them."
+  "english": "O Lord, thou didst hearken unto my words when I said, Let there be a famine, that the pestilence of the sword might cease; and I know that thou wilt, even at this time, hearken unto my words, for thou saidst that: If this people repent I will spare them."
  },
  {
   "book": "Helaman",
@@ -34845,7 +34845,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 2,
   "verse": 8,
-  "english": "But behold, the land was filled with robbers and with Lamanites; and notwithstanding the great destruction which hungover my people, they did not repent of their evil doings; therefore there was blood and carnage spread throughout all the face of the land, both on the part of the Nephites and also on the part of the Lamanites; and it was one complete revolution throughout all the face of the land."
+  "english": "But behold, the land was filled with robbers and with Lamanites; and notwithstanding the great destruction which hung over my people, they did not repent of their evil doings; therefore there was blood and carnage spread throughout all the face of the land, both on the part of the Nephites and also on the part of the Lamanites; and it was one complete revolution throughout all the face of the land."
  },
  {
   "book": "Mormon",
@@ -35121,7 +35121,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 4,
   "verse": 3,
-  "english": "And the remainder did flee and join the inhabitants of the city Teancum. Now the city Teancum lay in the borders by these ashore; and it was also near the city Desolation."
+  "english": "And the remainder did flee and join the inhabitants of the city Teancum. Now the city Teancum lay in the borders by the seashore; and it was also near the city Desolation."
  },
  {
   "book": "Mormon",
@@ -35235,7 +35235,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 4,
   "verse": 22,
-  "english": "And it came to pass that the Nephites did again flee from before them, taking all the inhabitants with them, both in town sand villages."
+  "english": "And it came to pass that the Nephites did again flee from before them, taking all the inhabitants with them, both in towns and villages."
  },
  {
   "book": "Mormon",
@@ -35385,7 +35385,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 5,
   "verse": 24,
-  "english": "Therefore, repent ye, and humble your selves before him, lest he shall come out in justice against you—lest a remnant of the seed of Jacob shall go forth among you as a lion, and tear you in pieces, and there is none to deliver."
+  "english": "Therefore, repent ye, and humble yourselves before him, lest he shall come out in justice against you—lest a remnant of the seed of Jacob shall go forth among you as a lion, and tear you in pieces, and there is none to deliver."
  },
  {
   "book": "Mormon",
@@ -35511,7 +35511,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 6,
   "verse": 21,
-  "english": "And the day soon cometh that your mortal must put on immortality, and these bodies which are now moldering incorruption must soon become incorruptible bodies; and then ye must stand before the judgment-seat of Christ to be judged according to your works and if it so be that ye are righteous, then are ye blessed with your fathers who have gone before you."
+  "english": "And the day soon cometh that your mortal must put on immortality, and these bodies which are now moldering in corruption must soon become incorruptible bodies; and then ye must stand before the judgment-seat of Christ to be judged according to your works and if it so be that ye are righteous, then are ye blessed with your fathers who have gone before you."
  },
  {
   "book": "Mormon",
@@ -35679,7 +35679,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 8,
   "verse": 17,
-  "english": "And if there be faults they be the faults of a man. But behold, we know no fault; never theless God knoweth all things; therefore, he that condemneth, let him be aware lest he shall be in danger of hell fire."
+  "english": "And if there be faults they be the faults of a man. But behold, we know no fault; nevertheless God knoweth all things; therefore, he that condemneth, let him be aware lest he shall be in danger of hell fire."
  },
  {
   "book": "Mormon",
@@ -35913,7 +35913,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 9,
   "verse": 15,
-  "english": "And now, O all ye that have imagined up unto yourselves a god who can do no miracles, I would ask of you, have all these things passed, of which I have spoken? Has the end come yet? Behold Isay unto you, Nay; and God has not ceased to be a God of miracles."
+  "english": "And now, O all ye that have imagined up unto yourselves a god who can do no miracles, I would ask of you, have all these things passed, of which I have spoken? Has the end come yet? Behold I say unto you, Nay; and God has not ceased to be a God of miracles."
  },
  {
   "book": "Mormon",
@@ -36015,7 +36015,7 @@ window._officialVersesData = [
   "book": "Mormon",
   "chapter": 9,
   "verse": 32,
-  "english": "And now, behold, we have written this record according to our knowledge, in the characters which are called among us there formed Egyptian, being handed down and altered by us, according to our manner of speech."
+  "english": "And now, behold, we have written this record according to our knowledge, in the characters which are called among us the reformed Egyptian, being handed down and altered by us, according to our manner of speech."
  },
  {
   "book": "Mormon",
