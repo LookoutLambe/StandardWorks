@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#1e2233">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="nav_engine.css?v=26">
+<link rel="stylesheet" href="nav_engine.css?v=28">
 <link rel="stylesheet" href="site_chrome.css?v=26">
 <link rel="stylesheet" href="xref_study_panel.css?v=8">
 <style>
@@ -1558,6 +1558,8 @@ try {
 <!-- Strong's lookup + Root glossary data -->
 <script src="strongs_lookup.js"></script>
 <script src="strongs_roots.js"></script>
+<script src="root_scorecard.js?v=1"></script>
+<script>RootScorecard.init({ vol: 'ot', base: '' });</script>
 <script src="bom/roots_glossary.js"></script>
 
 <!-- English text for dual mode -->
@@ -2455,6 +2457,7 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
     }
     var sInfo = wordFreq[hText];
     var detailHtml = '';
+detailHtml += '<div class="rsc-slot">';   // RootScorecard upgrades this block with cross-volume counts
     if (rInfo) {
       var verseCount = rInfo.verseRefs ? Object.keys(rInfo.verseRefs).length : 0;
       var rootDisplay = '', rootMeaning = '';
@@ -2504,6 +2507,7 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
       var sorted = Object.entries(sInfo.glosses).sort(function(a,b) { return b[1]-a[1]; });
       detailHtml += '<br><span>Also glossed:</span> ' + sorted.slice(0, 4).map(function(pair) { return '"' + pair[0] + '" (' + pair[1] + 'x)'; }).join(', ');
     }
+detailHtml += '</div>';
     // Cross-reference link
     var directXref = wu.getAttribute('data-xref-ref');
     var directXrefKey = wu.getAttribute('data-xref-key');
@@ -2520,6 +2524,7 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
     popupDetail.innerHTML = detailHtml;
 
     // Bind xref links
+    if (window.RootScorecard) RootScorecard.fill(popupDetail.querySelector('.rsc-slot'), (wu.getAttribute && wu.getAttribute('data-h')) || hText, gText);
     var directLink = popupDetail.querySelector('.popup-xref-direct');
     if (directLink && directXref) {
       directLink.addEventListener('click', function(ev) {
@@ -2537,21 +2542,21 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
       });
     }
 
-    var rect = wu.getBoundingClientRect();
+    // Scorecard opens centered on screen — word-anchored placement ran
+    // off-screen on phones and made study impossible.
     popup.style.display = 'block';
     var ovl = document.getElementById('word-popup-overlay');
     if (ovl) {
       ovl.classList.add('visible');
       ovl.setAttribute('aria-hidden', 'false');
     }
-    var popRect = popup.getBoundingClientRect();
-    var left = rect.left + rect.width / 2 - popRect.width / 2;
-    if (left < 8) left = 8;
-    if (left + popRect.width > window.innerWidth - 8) left = window.innerWidth - popRect.width - 8;
-    var top = rect.bottom + 8;
-    if (top + popRect.height > window.innerHeight - 60) top = rect.top - popRect.height - 8;
-    popup.style.left = left + 'px';
-    popup.style.top = top + 'px';
+    popup.style.left = '50%';
+    popup.style.top = '50%';
+    popup.style.transform = 'translate(-50%, -50%)';
+    popup.style.maxWidth = 'min(460px, 92vw)';
+    popup.style.maxHeight = '78vh';
+    popup.style.overflowY = 'auto';
+    popup.style.webkitOverflowScrolling = 'touch';
   });
 })();
 
@@ -2942,6 +2947,12 @@ var glossaryExclude = new Set(['', ' ']);
 
 function buildGlossaryIndex() {
   if (glossaryIndex) return;
+  // Cross-volume index from the concordance: every root in the whole corpus,
+  // with total counts — the in-page fallback below only sees this volume.
+  if (window.RootScorecard && RootScorecard.ready()) {
+    glossaryIndex = RootScorecard.glossaryEntries(typeof glossaryExclude !== 'undefined' ? glossaryExclude : null);
+    if (glossaryIndex) return;
+  }
   glossaryIndex = [];
   var curated = window._rootGlossaryData || {};
   for (var root in rootFreq) {
@@ -2972,6 +2983,14 @@ function buildGlossaryIndex() {
 }
 
 function openGlossary() {
+  if (window.RootScorecard && !RootScorecard.ready()) {
+    RootScorecard.ensure(function() {
+      if (!RootScorecard.ready()) return;
+      glossaryIndex = null;
+      buildGlossaryIndex();
+      if (document.getElementById('glossary-panel').classList.contains('open')) renderGlossaryList();
+    });
+  }
   buildGlossaryIndex();
   renderGlossaryList();
   document.getElementById('glossary-panel').classList.add('open');
@@ -3003,7 +3022,8 @@ function renderGlossaryList() {
       return rootNorm.indexOf(svNorm) === 0 || dispNorm.indexOf(svNorm) === 0 ||
         e.root.toLowerCase().indexOf(searchVal) >= 0 ||
         e.meaning.toLowerCase().indexOf(searchVal) >= 0 ||
-        Object.keys(e.glosses).some(function(g) { return g.toLowerCase().indexOf(searchVal) >= 0; });
+        Object.keys(e.glosses).some(function(g) { return g.toLowerCase().indexOf(searchVal) >= 0; }) ||
+        Object.keys(e.forms || {}).some(function(f) { var fn2 = f.replace(/[\u0591-\u05C7]/g, ''); return fn2.indexOf(svNorm) === 0; });
     }
     return true;
   });
@@ -3043,7 +3063,9 @@ function renderGlossaryEntry(entry) {
     '<span class="glossary-count">' + entry.count + 'x</span></div>' +
     '<div class="glossary-meaning">' + (entry.meaning || '') + '</div>' +
     (entry.category !== 'Uncategorized' ? '<span class="glossary-category-badge">' + entry.category + '</span>' : '') +
-    '<div class="glossary-detail"><div><strong>Glosses:</strong> ' + glossList + '</div>' +
+    '<div class="glossary-detail">' +
+      (entry._rscChips ? '<div style="margin-bottom:6px;">' + entry._rscChips + '</div>' : '') +
+      '<div><strong>Glosses:</strong> ' + glossList + '</div>' +
     '<div style="margin-top:6px;"><strong>Forms:</strong></div><div class="glossary-forms-list">' + formsList + '</div>' +
     refsHtml +
     '<button class="glossary-highlight-btn" onclick="event.stopPropagation();highlightAllForms(\'' + entry.root.replace(/'/g,"\\'") + '\')">Highlight all in text</button></div></div>';
@@ -3120,6 +3142,14 @@ function highlightForm(surfaceForm) {
 function clearHighlightedWords() { document.querySelectorAll('.glossary-highlighted').forEach(function(el) { el.classList.remove('glossary-highlighted'); }); }
 
 function openGlossaryAtRoot(rootKey) {
+  if (window.RootScorecard && !RootScorecard.ready()) {
+    RootScorecard.ensure(function() {
+      if (!RootScorecard.ready()) return;
+      glossaryIndex = null;
+      buildGlossaryIndex();
+      if (document.getElementById('glossary-panel').classList.contains('open')) renderGlossaryList();
+    });
+  }
   closePopup();
   buildGlossaryIndex();
   // For H-number roots, search by the Hebrew word instead
@@ -3388,7 +3418,7 @@ window.addEventListener('scroll', function() {
 <script src="notes_engine.js"></script>
 <script src="site_chrome.js?v=23" data-sw-volume="ot"></script>
 <script src="verse_search.js?v=3"></script>
-<script src="nav_engine.js?v=29"></script>
+<script src="nav_engine.js?v=30"></script>
 <script src="xref_study_panel.js"></script>
 <script>
 NavEngine.init({

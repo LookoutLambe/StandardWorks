@@ -732,3 +732,101 @@ body.reader-footer-hidden #sw-reader-footer .nqd-chapter-now {
     touch-action: auto !important;
   }
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   Drawer theme: navy + gold, matching the site chrome (.sw-top-bar,
+   landing cards, reader footer). Overrides the beige base above —
+   the drawer used to fall back to the cream --bg while the rest of
+   the app wears #1e2233/#f4ca48.
+   ══════════════════════════════════════════════════════════════════ */
+#nav-sidebar {
+  background: var(--sw-navy, #1e2233) !important;
+  color: #e8e0d0 !important;
+  border-right: 2px solid var(--sw-gold, #f4ca48) !important;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.35) !important;
+}
+#nav-sidebar .nav-division,
+#nav-sidebar .nl-sec-title {
+  color: var(--sw-gold, #f4ca48) !important;
+  border-top-color: rgba(244, 202, 72, 0.25) !important;
+}
+#nav-sidebar .nav-book-row:hover,
+#nav-sidebar .nav-book-row.expanded,
+#nav-sidebar .nav-book-row.nav-focus-row {
+  background: var(--sw-navy-hover, #2a3050) !important;
+}
+#nav-sidebar .nav-book-row.nav-focus-row {
+  border-bottom-color: rgba(244, 202, 72, 0.3) !important;
+}
+#nav-sidebar .nav-book-row .nb-heb { color: var(--sw-gold, #f4ca48) !important; }
+#nav-sidebar .nav-book-row .nb-en { color: var(--sw-gold-bright, #fff0b8) !important; }
+#nav-sidebar .nav-book-row .nb-ch { color: var(--sw-gold-muted, rgba(244, 202, 72, 0.92)) !important; }
+#nav-sidebar .nav-book-row .nb-arrow { color: var(--sw-gold-muted, rgba(244, 202, 72, 0.92)) !important; }
+#nav-sidebar .nav-ch-grid { background: rgba(0, 0, 0, 0.25) !important; }
+#nav-sidebar .nav-ch-cell {
+  background: var(--sw-navy-hover, #2a3050) !important;
+  border-color: rgba(244, 202, 72, 0.28) !important;
+}
+#nav-sidebar .nav-ch-cell:hover {
+  background: #333a5e !important;
+  border-color: var(--sw-gold, #f4ca48) !important;
+}
+#nav-sidebar .nav-ch-cell.current {
+  background: var(--sw-gold, #f4ca48) !important;
+  border-color: var(--sw-gold, #f4ca48) !important;
+}
+#nav-sidebar .nav-ch-cell .ch-heb { color: var(--sw-gold, #f4ca48) !important; }
+#nav-sidebar .nav-ch-cell .ch-num { color: var(--sw-gold-bright, #fff0b8) !important; }
+#nav-sidebar .nav-ch-cell.current .ch-heb,
+#nav-sidebar .nav-ch-cell.current .ch-num { color: var(--sw-navy, #1e2233) !important; }
+#nav-sidebar .nav-search-results { background: #181c2b !important; }
+#nav-sidebar .nav-search-result { border-bottom-color: rgba(244, 202, 72, 0.12) !important; }
+#nav-sidebar .nav-search-result:hover,
+#nav-sidebar .nav-search-result.active { background: var(--sw-navy-hover, #2a3050) !important; }
+#nav-sidebar .nav-search-result .sr-name { color: #e8e0d0 !important; }
+#nav-sidebar .nav-search-result .sr-heb { color: var(--sw-gold, #f4ca48) !important; }
+#nav-sidebar .nav-footer {
+  background: #181c2b !important;
+  border-top-color: rgba(244, 202, 72, 0.3) !important;
+}
+#nav-sidebar .nav-footer .nf-hint { color: rgba(232, 224, 208, 0.6) !important; }
+/* Dark mode: follow the chrome's near-black variant */
+body.dark-mode #nav-sidebar {
+  background: #0a0a0a !important;
+  border-right-color: var(--sw-gold, #ffd24a) !important;
+}
+body.dark-mode #nav-sidebar .nav-book-row:hover,
+body.dark-mode #nav-sidebar .nav-book-row.expanded,
+body.dark-mode #nav-sidebar .nav-book-row.nav-focus-row,
+body.dark-mode #nav-sidebar .nav-ch-cell { background: #1a1f2e !important; }
+body.dark-mode #nav-sidebar .nav-search-results,
+body.dark-mode #nav-sidebar .nav-footer { background: #121212 !important; }
+/* Library cards / bookmark tiles inside the drawer — navy cards, gold titles */
+#nav-sidebar .nl-card,
+#nav-sidebar .nl-bm,
+#nav-sidebar .nl-tile {
+  background: var(--sw-navy-hover, #2a3050) !important;
+  border-color: rgba(244, 202, 72, 0.3) !important;
+}
+#nav-sidebar .nl-card:hover,
+#nav-sidebar .nl-bm:hover,
+#nav-sidebar .nl-tile:hover {
+  background: #333a5e !important;
+  border-color: var(--sw-gold, #f4ca48) !important;
+}
+#nav-sidebar .nl-card-title,
+#nav-sidebar .nl-name,
+#nav-sidebar .nl-bm-title { color: var(--sw-gold-bright, #fff0b8) !important; }
+#nav-sidebar .nl-card-heb,
+#nav-sidebar .nl-heb,
+#nav-sidebar .nl-bm-heb,
+#nav-sidebar .nl-card-text { color: var(--sw-gold, #f4ca48) !important; }
+#nav-sidebar .nl-sub { color: rgba(232, 224, 208, 0.65) !important; }
+#nav-sidebar .nav-book-list {
+  scrollbar-color: rgba(244, 202, 72, 0.4) var(--sw-navy, #1e2233) !important;
+}
+#nav-sidebar .nav-book-list::-webkit-scrollbar-track { background: var(--sw-navy, #1e2233) !important; }
+#nav-sidebar .nav-book-list::-webkit-scrollbar-thumb { background: rgba(244, 202, 72, 0.4) !important; }
+body.dark-mode #nav-sidebar .nl-card,
+body.dark-mode #nav-sidebar .nl-bm,
+body.dark-mode #nav-sidebar .nl-tile { background: #1a1f2e !important; }

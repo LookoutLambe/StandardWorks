@@ -47,7 +47,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="../icons/icon-180.png">
 <link rel="apple-touch-icon" href="../icons/icon-192.png">
 <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../nav_engine.css?v=26">
+<link rel="stylesheet" href="../nav_engine.css?v=28">
 <link rel="stylesheet" href="../site_chrome.css?v=26">
 <link rel="stylesheet" href="../xref_study_panel.css?v=8">
 <style>
@@ -1284,6 +1284,8 @@ body.dark-mode .glossary-biblical-section { background: rgba(219,185,88,0.05); b
 }
 .word-unit.glossary-highlighted { background: rgba(219,185,88,0.25); border-radius: 4px; box-shadow: 0 0 0 2px rgba(219,185,88,0.3); }
 body.dark-mode #glossary-panel { background: #272d3e; border-color: #3a4054; }
+body.dark-mode .tg-ref, body.dark-mode .tg-ref-heb { color: #8ec1ea; }
+body.dark-mode .tg-def-label { color: var(--accent); }
 body.dark-mode #glossary-search { background: #222838; color: #e8e0d0; border-color: #3a4054; }
 body.dark-mode .glossary-sort select { background: #222838; color: #e8e0d0; border-color: #3a4054; }
 body.dark-mode .glossary-entry:hover { background: rgba(219,185,88,0.08); }
@@ -1344,20 +1346,20 @@ body.dark-mode .glossary-form-chip { background: #303648; }
   margin: 4px 8px 8px; padding: 16px; background: var(--bg-deep);
   border-radius: 8px; border: 1px solid var(--rule-light);
 }
-.tg-def-label { font-size: 0.85em; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+.tg-def-label { font-size: 0.85em; font-weight: 700; color: var(--header-bg, #1e2233); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
 .tg-def-heb {
   font-family: 'David Libre', serif; font-size: 1.05em; direction: rtl; text-align: right;
   line-height: 1.7; color: var(--ink); margin-bottom: 12px;
 }
 .tg-def-en { font-size: 0.95em; line-height: 1.5; color: var(--ink); margin-bottom: 12px; }
 .tg-ref {
-  display: block; padding: 4px 10px; cursor: pointer; color: var(--accent);
+  display: block; padding: 4px 10px; cursor: pointer; color: var(--tap-blue, #2e6da4);
   font-size: 0.95em; text-decoration: underline; direction: ltr; text-align: left;
 }
-.tg-ref:hover { background: rgba(219,185,88,0.1); border-radius: 4px; }
+.tg-ref:hover { background: rgba(46,109,164,0.08); border-radius: 4px; }
 .tg-ref-heb {
   font-family: 'David Libre', serif; direction: rtl; unicode-bidi: isolate;
-  color: var(--accent); text-decoration: none; font-size: 0.88em; margin-left: 8px;
+  color: var(--tap-blue, #2e6da4); opacity: 0.8; text-decoration: none; font-size: 0.88em; margin-left: 8px;
 }
 .tg-ref-snippet { font-style: italic; color: var(--ink-light); font-size: 0.88em; text-decoration: none; }
 .tg-related-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
@@ -3888,12 +3890,14 @@ body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
 
 <script src="bom_book_loader.js?v=8"></script>
 <script src="bom_lazy_assets.js?v=1"></script>
+<script src="../root_scorecard.js?v=1"></script>
+<script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
 <script src="crossrefs.js?v=23"></script>
 <script src="roots_glossary.js?v=23"></script>
 <script src="bom_inverse_crossrefs.js?v=1"></script>
 <script src="chapter_headings.js"></script>
 <script src="chapter_headings_heb.js?v=6"></script>
-<script src="topical_guide.js"></script>
+<script src="topical_guide.js?v=2"></script>
 <script src="../notes_engine.js"></script>
 <script src="../interlinear_gloss.js?v=1"></script>
 <script>
@@ -7176,8 +7180,8 @@ document.addEventListener('keydown', function(e) {
     var hash = verseMatch ? verseMatch[1] : raw;
     if (verseMatch) verseNum = parseInt(verseMatch[2], 10);
 
-    // Support direct front matter routing (e.g. #intro, #front-titlepage)
-    if (hash === 'intro' || hash.indexOf('front-') === 0) {
+    // Support direct front matter + topical guide routing (e.g. #intro, #topical-guide)
+    if (hash === 'intro' || hash === 'topical-guide' || hash.indexOf('front-') === 0) {
       window.__swNavFromHash = true;
       try { navTo(hash); } finally { window.__swNavFromHash = false; }
       scrollToVerse(verseNum);
@@ -7913,6 +7917,7 @@ document.addEventListener('keydown', function(e) {
         '</div>';
     }
 
+detailHtml += '<div class="rsc-slot">';   // RootScorecard upgrades this block with cross-volume counts
     // Root-based total (the main count)
     if (rInfo) {
       var verseCount = rInfo.verseRefs ? Object.keys(rInfo.verseRefs).length : 0;
@@ -7975,6 +7980,7 @@ document.addEventListener('keydown', function(e) {
       }).join(', ');
     }
 
+detailHtml += '</div>';
     // Show cross-reference link for any word that has xref data
     var directXref = wu.getAttribute('data-xref-ref');
     var directXrefKey = wu.getAttribute('data-xref-key');
@@ -8014,6 +8020,7 @@ document.addEventListener('keydown', function(e) {
     popupDetail.innerHTML = detailHtml;
 
     // Bind topical guide link
+    if (window.RootScorecard) RootScorecard.fill(popupDetail.querySelector('.rsc-slot'), wu.getAttribute('data-h') || hText, gText);
     var tgLink = popupDetail.querySelector('.popup-tg-link');
     if (tgLink && tgEntryId) {
       tgLink.addEventListener('click', function(ev) {
@@ -8043,21 +8050,21 @@ document.addEventListener('keydown', function(e) {
     }
 
     // Position popup near the word
-    var rect = wu.getBoundingClientRect();
+    // Scorecard opens centered on screen — word-anchored placement ran
+    // off-screen on phones and made study impossible.
     popup.style.display = 'block';
     var ovl = document.getElementById('word-popup-overlay');
     if (ovl) {
       ovl.classList.add('visible');
       ovl.setAttribute('aria-hidden', 'false');
     }
-    var popRect = popup.getBoundingClientRect();
-    var left = rect.left + rect.width / 2 - popRect.width / 2;
-    if (left < 8) left = 8;
-    if (left + popRect.width > window.innerWidth - 8) left = window.innerWidth - popRect.width - 8;
-    var top = rect.bottom + 8;
-    if (top + popRect.height > window.innerHeight - 60) top = rect.top - popRect.height - 8;
-    popup.style.left = left + 'px';
-    popup.style.top = top + 'px';
+    popup.style.left = '50%';
+    popup.style.top = '50%';
+    popup.style.transform = 'translate(-50%, -50%)';
+    popup.style.maxWidth = 'min(460px, 92vw)';
+    popup.style.maxHeight = '78vh';
+    popup.style.overflowY = 'auto';
+    popup.style.webkitOverflowScrolling = 'touch';
   });
 
   // Expose root data globally so glossary (section 8) can access it
@@ -8288,6 +8295,12 @@ var glossaryExclude = new Set([
 
 function buildGlossaryIndex() {
   if (glossaryIndex) return;
+  // Cross-volume index from the concordance: every root in the whole corpus,
+  // with total counts — the in-page fallback below only sees this volume.
+  if (window.RootScorecard && RootScorecard.ready()) {
+    glossaryIndex = RootScorecard.glossaryEntries(typeof glossaryExclude !== 'undefined' ? glossaryExclude : null);
+    if (glossaryIndex) return;
+  }
   glossaryIndex = [];
   var curated = window._rootGlossaryData || {};
   var rf = window.rootFreq || {};
@@ -8326,6 +8339,14 @@ function buildGlossaryIndex() {
 }
 
 function openGlossary() {
+  if (window.RootScorecard && !RootScorecard.ready()) {
+    RootScorecard.ensure(function() {
+      if (!RootScorecard.ready()) return;
+      glossaryIndex = null;
+      buildGlossaryIndex();
+      if (document.getElementById('glossary-panel').classList.contains('open')) renderGlossaryList();
+    });
+  }
   buildGlossaryIndex();
   renderGlossaryList();
   document.getElementById('glossary-panel').classList.add('open');
@@ -8359,7 +8380,8 @@ function renderGlossaryList() {
       return rootNorm.indexOf(svNorm) === 0 || dispNorm.indexOf(svNorm) === 0 ||
              e.root.toLowerCase().indexOf(searchVal) >= 0 ||
              e.meaning.toLowerCase().indexOf(searchVal) >= 0 ||
-             Object.keys(e.glosses).some(function(g) { return g.toLowerCase().indexOf(searchVal) >= 0; });
+             Object.keys(e.glosses).some(function(g) { return g.toLowerCase().indexOf(searchVal) >= 0; }) ||
+             Object.keys(e.forms || {}).some(function(f) { var fn2 = f.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, ''); return fn2.indexOf(svNorm) === 0; });
     }
     return true;
   });
@@ -8493,6 +8515,7 @@ function renderGlossaryEntry(entry) {
     '<div class="glossary-meaning">' + (entry.meaning || '<em style="color:var(--ink-light)">(tap to expand)</em>') + '</div>' +
     (entry.category !== 'Uncategorized' ? '<span class="glossary-category-badge">' + entry.category + '</span>' : '') +
     '<div class="glossary-detail">' +
+      (entry._rscChips ? '<div style="margin-bottom:6px;">' + entry._rscChips + '</div>' : '') +
       '<div><strong>Glosses:</strong> ' + glossList + '</div>' +
       '<div style="margin-top:6px;"><strong>Forms:</strong></div>' +
       '<div class="glossary-forms-list">' + formsList + '</div>' +
@@ -8543,6 +8566,14 @@ function clearHighlightedWords() {
 }
 
 function openGlossaryAtRoot(rootKey) {
+  if (window.RootScorecard && !RootScorecard.ready()) {
+    RootScorecard.ensure(function() {
+      if (!RootScorecard.ready()) return;
+      glossaryIndex = null;
+      buildGlossaryIndex();
+      if (document.getElementById('glossary-panel').classList.contains('open')) renderGlossaryList();
+    });
+  }
   closePopup();
   buildGlossaryIndex();
   var searchTerm = rootKey;
@@ -8552,6 +8583,7 @@ function openGlossaryAtRoot(rootKey) {
   document.getElementById('glossary-search').value = searchTerm;
   renderGlossaryList();
   document.getElementById('glossary-panel').classList.add('open');
+  var _po = document.getElementById('panel-overlay'); if (_po) _po.classList.add('open');   // click-off closes the glossary
   setTimeout(function() {
     var entries = document.querySelectorAll('#glossary-list .glossary-entry');
     for (var i = 0; i < entries.length; i++) {
@@ -9263,7 +9295,7 @@ try {
 
 <script src="../site_chrome.js?v=28" data-sw-volume="bom"></script>
 <script src="../verse_search.js?v=3"></script>
-<script src="../nav_engine.js?v=29"></script>
+<script src="../nav_engine.js?v=30"></script>
 <script src="../xref_study_panel.js?v=6"></script>
 <script>
 NavEngine.init({

@@ -355,6 +355,8 @@
     });
     document.body.appendChild(_overlayEl);
 
+    _injectAccentTheme();
+
     // Sidebar
     _sidebarEl = document.createElement('div');
     _sidebarEl.id = 'nav-sidebar';
@@ -537,6 +539,13 @@
     html += '<div class="nl-sec-title" style="margin-top:10px">Volumes</div>';
     html += '<div class="nl-grid">' + ['ot','nt','bom','dc','pgp','jst'].map(tile).join('') + '</div>';
 
+    html += '<div class="nl-sec-title" style="margin-top:10px">Study</div>';
+    html += '<div class="nl-card" id="nl-topical" tabindex="0" role="button">' +
+              '<div class="nl-card-title">Topical Guide</div>' +
+              '<div class="nl-card-text">Major themes for study</div>' +
+              '<div class="nl-card-heb" dir="rtl">מדריך נושאים</div>' +
+            '</div>';
+
     _libraryEl.innerHTML = html;
 
     var lastEl = document.getElementById('nl-last');
@@ -546,6 +555,14 @@
         lastEl.onclick = function() { window.location.href = lastUrl; };
         lastEl.onkeydown = function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); lastEl.click(); } };
       }
+    }
+
+    var tgEl = document.getElementById('nl-topical');
+    if (tgEl) {
+      tgEl.onclick = function() {
+        window.location.href = (_config && _config.basePath || '') + VOLUMES.bom.page + '#topical-guide';
+      };
+      tgEl.onkeydown = function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); tgEl.click(); } };
     }
 
     _libraryEl.querySelectorAll('.nl-bm').forEach(function(el) {
@@ -1339,6 +1356,80 @@
       }
     }
     return best;
+  }
+
+
+  // ── Site accent theme for the drawer and the right cross-reference panel ──
+  // Injected as a late <style> (external-sheet overrides were not reliably
+  // applied for these elements); navy #1e2233 + gold #f4ca48 like .sw-top-bar.
+  function _injectAccentTheme() {
+    if (document.getElementById('sw-accent-theme')) return;
+    var st = document.createElement('style');
+    st.id = 'sw-accent-theme';
+    st.textContent =
+      /* left drawer */
+      '#nav-sidebar{background:#1e2233 !important;color:#e8e0d0 !important;border-right:2px solid #f4ca48 !important;box-shadow:4px 0 24px rgba(0,0,0,0.35) !important;}' +
+      'body.dark-mode #nav-sidebar{background:#0a0a0a !important;}' +
+      '#nav-sidebar .nav-division,#nav-sidebar .nl-sec-title{color:#f4ca48 !important;border-top-color:rgba(244,202,72,0.25) !important;}' +
+      '#nav-sidebar .nav-book-row:hover,#nav-sidebar .nav-book-row.expanded,#nav-sidebar .nav-book-row.nav-focus-row{background:#2a3050 !important;}' +
+      '#nav-sidebar .nav-book-row .nb-heb{color:#f4ca48 !important;}' +
+      '#nav-sidebar .nav-book-row .nb-en{color:#fff0b8 !important;}' +
+      '#nav-sidebar .nav-book-row .nb-ch,#nav-sidebar .nav-book-row .nb-arrow{color:rgba(244,202,72,0.85) !important;}' +
+      '#nav-sidebar .nav-ch-grid{background:rgba(0,0,0,0.25) !important;}' +
+      '#nav-sidebar .nav-ch-cell{background:#2a3050 !important;border-color:rgba(244,202,72,0.28) !important;}' +
+      '#nav-sidebar .nav-ch-cell:hover{background:#333a5e !important;border-color:#f4ca48 !important;}' +
+      '#nav-sidebar .nav-ch-cell.current{background:#f4ca48 !important;border-color:#f4ca48 !important;}' +
+      '#nav-sidebar .nav-ch-cell .ch-heb{color:#f4ca48 !important;}' +
+      '#nav-sidebar .nav-ch-cell .ch-num{color:#fff0b8 !important;}' +
+      '#nav-sidebar .nav-ch-cell.current .ch-heb,#nav-sidebar .nav-ch-cell.current .ch-num{color:#1e2233 !important;}' +
+      '#nav-sidebar .nav-search-results{background:#181c2b !important;}' +
+      '#nav-sidebar .nav-search-result{border-bottom-color:rgba(244,202,72,0.12) !important;}' +
+      '#nav-sidebar .nav-search-result:hover,#nav-sidebar .nav-search-result.active{background:#2a3050 !important;}' +
+      '#nav-sidebar .nav-search-result .sr-name{color:#e8e0d0 !important;}' +
+      '#nav-sidebar .nav-search-result .sr-heb{color:#f4ca48 !important;}' +
+      '#nav-sidebar .nav-footer{background:#181c2b !important;border-top-color:rgba(244,202,72,0.3) !important;}' +
+      '#nav-sidebar .nav-footer .nf-hint{color:rgba(232,224,208,0.6) !important;}' +
+      '#nav-sidebar .nl-card,#nav-sidebar .nl-bm,#nav-sidebar .nl-tile{background:#2a3050 !important;border-color:rgba(244,202,72,0.3) !important;}' +
+      '#nav-sidebar .nl-card:hover,#nav-sidebar .nl-bm:hover,#nav-sidebar .nl-tile:hover{background:#333a5e !important;border-color:#f4ca48 !important;}' +
+      '#nav-sidebar .nl-card-title,#nav-sidebar .nl-name,#nav-sidebar .nl-bm-title{color:#fff0b8 !important;}' +
+      '#nav-sidebar .nl-card-heb,#nav-sidebar .nl-heb,#nav-sidebar .nl-bm-heb,#nav-sidebar .nl-card-text{color:#f4ca48 !important;}' +
+      '#nav-sidebar .nl-sub{color:rgba(232,224,208,0.65) !important;}' +
+      'body.dark-mode #nav-sidebar .nav-book-row:hover,body.dark-mode #nav-sidebar .nav-book-row.expanded,' +
+      'body.dark-mode #nav-sidebar .nav-ch-cell,body.dark-mode #nav-sidebar .nl-card,' +
+      'body.dark-mode #nav-sidebar .nl-bm,body.dark-mode #nav-sidebar .nl-tile{background:#1a1f2e !important;}' +
+      'body.dark-mode #nav-sidebar .nav-search-results,body.dark-mode #nav-sidebar .nav-footer{background:#121212 !important;}' +
+      '#nav-sidebar .nav-library,#nav-sidebar .nav-book-list{background:transparent !important;}' +
+      '#nav-sidebar .nav-search-wrap{background:#181c2b !important;border-bottom:1px solid rgba(244,202,72,0.35) !important;}' +
+      '#nav-sidebar .nav-search-wrap input{background:#2a3050 !important;color:#fff0b8 !important;border:1px solid rgba(244,202,72,0.4) !important;}' +
+      '#nav-sidebar .nav-search-wrap input::placeholder{color:rgba(244,202,72,0.55) !important;}' +
+      '#nav-sidebar .nav-icon-btn,#nav-sidebar .nav-close-btn{color:#f4ca48 !important;}' +
+      '#nav-sidebar .nav-vol-tabs{background:#181c2b !important;border-bottom:1px solid rgba(244,202,72,0.3) !important;}' +
+      '#nav-sidebar .nav-vol-tab{color:rgba(244,202,72,0.8) !important;}' +
+      '#nav-sidebar .nav-vol-tab:hover{background:#2a3050 !important;}' +
+      '#nav-sidebar .nav-vol-tab.active{background:#2a3050 !important;border-bottom-color:#f4ca48 !important;}' +
+      '#nav-sidebar .nav-vol-tab .vt-heb{color:#f4ca48 !important;}' +
+      '#nav-sidebar .nav-vol-tab .vt-en{color:rgba(244,202,72,0.85) !important;}' +
+      '#nav-sidebar .nav-vol-tab.active .vt-en{color:#fff0b8 !important;}' +
+      /* right cross-reference / study panel */
+      '#xref-panel{background:#1e2233 !important;color:#e8e0d0 !important;border-left:2px solid #f4ca48 !important;}' +
+      'body.dark-mode #xref-panel{background:#0a0a0a !important;}' +
+      '#xref-panel .xref-panel-header{background:#181c2b !important;border-bottom:1px solid rgba(244,202,72,0.35) !important;}' +
+      '#xref-panel .xref-panel-header h3,#xref-panel .xref-panel-word{color:#f4ca48 !important;}' +
+      '#xref-panel .xref-panel-category{color:rgba(232,224,208,0.75) !important;}' +
+      '#xref-panel .xref-panel-close{color:#f4ca48 !important;}' +
+      '#xref-panel .xref-study-tabs{background:#181c2b !important;border-bottom-color:rgba(244,202,72,0.3) !important;}' +
+      '#xref-panel .xref-study-tab{background:#2a3050 !important;color:rgba(244,202,72,0.85) !important;border-color:rgba(244,202,72,0.3) !important;}' +
+      '#xref-panel .xref-study-tab.active{background:#f4ca48 !important;color:#1e2233 !important;font-weight:700 !important;}' +
+      '#xref-panel .xref-ref-word,#xref-panel .xref-category{color:#f4ca48 !important;}' +
+      '#xref-panel .xref-ref-content{color:#e8e0d0 !important;}' +
+      '#xref-panel .xf-bookmark-item{background:#2a3050 !important;border-color:rgba(244,202,72,0.25) !important;}' +
+      '#xref-panel .xf-bookmark-item:hover{background:#333a5e !important;}' +
+      '#xref-panel .xf-bookmark-item .xf-bm-title{color:#fff0b8 !important;}' +
+      '#xref-panel .xf-bookmark-item .xf-bm-heb{color:#f4ca48 !important;}' +
+      '#xref-panel .study-pane-hint,#xref-panel .study-pane-sub{color:rgba(232,224,208,0.7) !important;}' +
+      '#xref-panel .study-btn-row button{background:#2a3050 !important;color:#fff0b8 !important;border:1px solid rgba(244,202,72,0.4) !important;}' +
+      '#xref-panel .study-btn-row button:hover{background:#333a5e !important;border-color:#f4ca48 !important;}';
+    document.head.appendChild(st);
   }
 
   // ── Reading Position Memory ──
