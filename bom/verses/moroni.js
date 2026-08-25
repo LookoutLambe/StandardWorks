@@ -189,9 +189,7 @@ var mr_ch7Verses = [
   { num: "לג", words: [
     ["וְהַמָּשִׁיחַ","and Christ"],["אָמַר","said"],["אִם־תַּאֲמִינוּ","if you believe"],["בִי","in me"],["יִהְיֶה","he shall be"],["לָכֶם","to you"],["כֹּחַ","power"],["לַעֲשׂוֹת","to do"],["כׇּל־דָּבָר","every thing"],["הַמּוֹעִיל","the profitable"],["בִּי","in me"]
   ]},
-  { num: "לד", words: [
-    ["וְהוּא","and he"],["אָמַר","said"],["שׁוּבוּ","repent"],["כׇּל־קַצְוֵי","all the ends of"],["אֶרֶץ","the land of"],["וּבֹאוּ","and come!"],["אֵלַי","to me"],["וְהִטָּבְלוּ","and be baptized"],["בִּשְׁמִי","in my name"],["וְהַאֲמִינוּ","and believe"],["בִי","in me"],["לְמַעַן","in order that"],["תִּוָּשְׁעוּ","you shall be saved"]
-  ]},
+  { num: "לד", words: [["וְהוּא","and he"], ["אָמַר","said"], ["שׁוּבוּ","repent"], ["כׇּל־קַצְוֵי","all the ends of"], ["אֶרֶץ","the earth of"], ["וּבֹאוּ","and come!"], ["אֵלַי","to me"], ["וְהִטָּבְלוּ","and be baptized"], ["בִּשְׁמִי","in my name"], ["וְהַאֲמִינוּ","and believe"], ["בִי","in me"], ["לְמַעַן","in order that"], ["תִּוָּשְׁעוּ","you shall be saved"]]},
   { num: "לה", words: [
     ["וְעַתָּה","and now"],["אַחַי","my brethren"],["הָאֲהוּבִים","the beloved"],["אִם־כֵּן","if thus"],["הוּא","he"],["כִּי","that"],["אֱמֶת","true"],["הַדְּבָרִים הָאֵלֶּה","these things"],["אֲשֶׁר","which"],["דִּבַּרְתִּי","I spoke"],["אֲלֵיכֶם","to you"],["וֵאלֹהִים","and God"],["יַרְאֶה","will manifest"],["לָכֶם","to you"],["בְּכֹחַ","by the power of"],["וּבְכָבוֹד","and in glory"],["גָּדוֹל","great"],["בַּיּוֹם","in the day"],["הָאַחֲרוֹן","the last"],["כִּי","that"],["אֱמֶת","true"],["הֵם","they"],["וְאִם","and if"],["אֱמֶת","true"],["הֵם","they"],["הֲחָדַל","has ceased?"],["יוֹם","day"],["הַנִּפְלָאוֹת","the wonders"]
   ]},

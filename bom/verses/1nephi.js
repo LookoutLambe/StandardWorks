@@ -5214,21 +5214,7 @@ var ch12Verses = [
     ["זַרְעִי","my seed"],
     ["׃",""]
   ]},
-  { num:"כ", words:[
-    ["וָאַבִּיט","and I looked"],
-    ["וָאֵרֶא","and beheld"],
-    ["אֶת־עַם","the people of"],
-    ["זֶרַע","the seed of"],
-    ["אַחַי","my brethren"],
-    ["כִּי","that"],
-    ["גָּבְרוּ","they had overcome"],
-    ["עַל־זַרְעִי","my seed"],
-    ["וַיֵּלְכוּ","and they went forth"],
-    ["בַהֲמוֹנֵיהֶם","in their multitudes"],
-    ["עַל־פְּנֵי","upon the face of"],
-    ["הָאָרֶץ","the earth"],
-    ["׃",""]
-  ]},
+  { num: "כ", words: [["וָאַבִּיט","and I looked"], ["וָאֵרֶא","and beheld"], ["אֶת־עַם","the people of"], ["זֶרַע","the seed of"], ["אַחַי","my brethren"], ["כִּי","that"], ["גָּבְרוּ","they had overcome"], ["עַל־זַרְעִי","my seed"], ["וַיֵּלְכוּ","and they went forth"], ["בַהֲמוֹנֵיהֶם","in their multitudes"], ["עַל־פְּנֵי","upon the face of"], ["הָאָרֶץ","the land"], ["׃",""]]},
   { num:"כא", words:[
     ["וָאֵרֶא","and I saw"],
     ["אוֹתָם","them"],
