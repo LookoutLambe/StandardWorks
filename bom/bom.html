@@ -1703,33 +1703,9 @@ body.dark-mode #search-results .search-result:hover { background: rgba(219,185,8
   padding: 0 2px;
 }
 
-/* === READING PROGRESS BAR === */
-#reading-progress {
-  position: fixed;
-  top: 0; left: 0;
-  width: 0%;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-light, #e8c84e));
-  z-index: 400;
-  transition: width 0.15s ease;
-}
-
-/* === BOOK PROGRESS BAR === */
-#book-progress-bar {
-  position: fixed;
-  top: 3px; left: 0; right: 0;
-  height: 3px;
-  background: #0a0a0a;
-  z-index: 400;
-}
-#book-progress-fill {
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(90deg, var(--accent), var(--accent-light, #e8c84e));
-  transition: width 0.3s ease;
-  border-radius: 0 2px 2px 0;
-}
-body.dark-mode #book-progress-bar { background: #0d111c; }
+/* The BOM used to pin two fixed progress bars to the screen top (#reading-progress,
+   #book-progress-bar). In the PWA they rendered as a stray line above the header;
+   the top now builds exactly like ot.html/nt.html — shared chrome only. */
 
 /* Nav-label progress subtitle */
 #nav-progress-text {
@@ -1803,8 +1779,6 @@ body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
 <div id="nav-hint"></div>
 
 <!-- Reading progress bar -->
-<div id="reading-progress"></div>
-<div id="book-progress-bar"><div id="book-progress-fill"></div></div>
 
 <!-- Search bar -->
 <div id="search-container" role="search">
@@ -4515,17 +4489,6 @@ function updateNavButtons() {
       label.textContent = 'Book of Mormon \u25BE';
     }
   }
-  updateBookProgressBar();
-}
-
-function updateBookProgressBar() {
-  var fill = document.getElementById('book-progress-fill');
-  if (!fill) return;
-  if (!currentChapterId) { fill.style.width = '0%'; return; }
-  var chIdx = chapterOrder.indexOf(currentChapterId);
-  if (chIdx < 0) { fill.style.width = '0%'; return; }
-  var pct = ((chIdx + 1) / chapterOrder.length) * 100;
-  fill.style.width = pct + '%';
 }
 
 // Page flow: landing → intro → front matter pages → ch1 → ch2 → ...
@@ -8256,18 +8219,6 @@ function goToSearchResult(chapId, verseIdx) {
     }
   }, 300);
 }
-
-// 7. READING PROGRESS BAR
-(function() {
-  var bar = document.getElementById('reading-progress');
-  window.addEventListener('scroll', function() {
-    var scrollTop = window.scrollY;
-    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    if (docHeight <= 0) { bar.style.width = '0%'; return; }
-    var pct = Math.min(100, (scrollTop / docHeight) * 100);
-    bar.style.width = pct + '%';
-  });
-})();
 
 // 8. ROOT GLOSSARY
 var glossaryIndex = null;
