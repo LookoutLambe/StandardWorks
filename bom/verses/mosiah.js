@@ -779,9 +779,7 @@ var mo_ch13Verses = [
   { num: "יח", words: [
     ["וְיוֹם","and day"],["הַשְּׁבִיעִי","the seventh"],["שַׁבָּת","the sabbath of"],["לַיהוָה","the Lord"],["אֱלֹהֶיךָ","your God"],["לֹא־תַעֲשֶׂה","you shall not make"],["כׇל־מְלָאכָה","all work"],["אַתָּה","you"],["וּבִנְךָ","nor your son"],["וּבִתֶּךָ","nor your daughter"],["עַבְדְּךָ","your manservant"],["וַאֲמָתְךָ","nor your maidservant"],["וּבְהֶמְתֶּךָ","nor your cattle"],["וְגֵרְךָ","nor your stranger"],["אֲשֶׁר","which"],["בִּשְׁעָרֶיךָ","within your gates"]
   ]},
-  { num: "יט", words: [
-    ["כִּי","for"],["שֵׁשֶׁת־יָמִים","in six days"],["עָשָׂה","made"],["יְהוָה","the Lord"],["אֶת־הַשָּׁמַיִם","heaven"],["וְאֶת־הָאָרֶץ","and the land"],["אֶת־הַיָּם","the sea"],["וְאֶת־כׇּל־אֲשֶׁר־בָּם","and all that in them"],["עַל־כֵּן","therefore"],["בֵּרַךְ","blessed"],["יְהוָה","the Lord"],["אֶת־יוֹם","the day"],["הַשַּׁבָּת","the sabbath"],["וַיְקַדְּשֵׁהוּ","and hallowed it"]
-  ]},
+  { num: "יט", words: [["כִּי","for"], ["שֵׁשֶׁת־יָמִים","in six days"], ["עָשָׂה","made"], ["יְהוָה","the Lord"], ["אֶת־הַשָּׁמַיִם","heaven"], ["וְאֶת־הָאָרֶץ","and the earth"], ["אֶת־הַיָּם","the sea"], ["וְאֶת־כׇּל־אֲשֶׁר־בָּם","and all that in them"], ["עַל־כֵּן","therefore"], ["בֵּרַךְ","blessed"], ["יְהוָה","the Lord"], ["אֶת־יוֹם","the day"], ["הַשַּׁבָּת","the sabbath"], ["וַיְקַדְּשֵׁהוּ","and hallowed it"]]},
   { num: "כ", words: [
     ["כַּבֵּד","honor"],["אֶת־אָבִיךָ","your father"],["וְאֶת־אִמֶּךָ","and your mother"],["לְמַעַן","that"],["יַאֲרִיכוּן","they may be long"],["יָמֶיךָ","your days"],["עַל","upon"],["הָאֲדָמָה","the land"],["אֲשֶׁר־יְהוָה","which the Lord"],["אֱלֹהֶיךָ","your God"],["נֹתֵן","gives"],["לָךְ","unto you"]
   ]},
