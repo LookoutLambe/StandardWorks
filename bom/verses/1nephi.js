@@ -9419,25 +9419,7 @@ var ch17Verses = [
     ["כֵּן","so"],
     ["׃",""]
   ]},
-  { num:"נא", words:[
-    ["וְעַתָּה","and now"],
-    ["אִם־יֶשׁ","if there is"],
-    ["לַיהוָה","to the Lord"],
-    ["כֹּחַ","power"],
-    ["גָּדוֹל","great"],
-    ["כָּזֶה","such as this"],
-    ["וְעָשָׂה","and hath wrought"],
-    ["נִפְלָאוֹת","wonders"],
-    ["רַבּוֹת","many"],
-    ["בִּבְנֵי","among the children of"],
-    ["הָאָדָם","men"],
-    ["אֵיךְ","how"],
-    ["לֹא־יוּכַל","He cannot"],
-    ["לְהוֹרוֹתֵנִי","instruct me"],
-    ["לִבְנוֹת","to build"],
-    ["אֳנִיָּה","a ship"],
-    ["׃",""]
-  ]},
+  { num: "נא", words: [["וְעַתָּה","and now"], ["אִם־יֶשׁ","if there is"], ["לַיהוָה","to the Lord"], ["כֹּחַ","power"], ["גָּדוֹל","great"], ["כָּזֶה","such as this"], ["וְעָשָׂה","and hath wrought"], ["נִפְלָאוֹת","miracles"], ["רַבּוֹת","many"], ["בִּבְנֵי","among the children of"], ["הָאָדָם","men"], ["אֵיךְ","how"], ["לֹא־יוּכַל","He cannot"], ["לְהוֹרוֹתֵנִי","instruct me"], ["לִבְנוֹת","to build"], ["אֳנִיָּה","a ship"], ["׃",""]]},
   { num:"נב", words:[
     ["וָאֲדַבֵּר","and I spake"],["אֲנִי","I"],["נֶפִי","Nephi"],
     ["דְבָרִים","words"],

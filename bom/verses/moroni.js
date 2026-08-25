@@ -182,7 +182,7 @@ var mr_ch7Verses = [
   { num: "ל", words: [
     ["כִּי","that"],["הִנֵּה","behold"],["כְּפוּפִים","subject"],["הֵם","they"],["לוֹ","to him"],["לְשָׁרֵת","to minister"],["כִּדְבַר","according to the word of"],["מִצְוָתוֹ","his commandment"],["וְנִרְאִים","and visible"],["לַאֲשֶׁר","unto him who"],["אֱמוּנָתָם","their faith"],["חֲזָקָה","strong"],["וְדַעְתָּם","and their knowledge"],["נְכוֹנָה","established"],["בְּכׇל־צוּרַת","with all manner of"],["יִרְאַת","the fear of"],["אֱלֹהִים","God"]
   ]},
-  { num: "לא", words: [["וּפְקֻדַּת","and charge of"], ["שָׁרְתָם","their ministry"], ["לִקְרֹא","to call"], ["לָאָדָם","unto man"], ["לָשׁוּב","to repent"], ["וּלְהָקִים","and to fulfil"], ["וְלַעֲשׂוֹת","and to do"], ["אֶת־מַעֲשֵׂה","work of"], ["בְרִיתוֹת","covenants of"], ["הָאָב","the Father"], ["אֲשֶׁר","which"], ["כָּרַת","made"], ["עִם־בְּנֵי","with the sons of"], ["הָאָדָם","man"], ["לְהָכִין","to prepare"], ["הַדֶּרֶךְ","the way"], ["בֵּין","among"], ["בְּנֵי־הָאָדָם","the children of men"], ["בְּהַגִּידָם","in their declaring"], ["אֶת־דְּבַר","word of"], ["הַמָּשִׁיחַ","Christ"], ["לִכְלֵי","to vessels of"], ["בְחִירַת","choosing of"], ["יְהוָה","the Lord"], ["לְמַעַן","in order that"], ["יָעִידוּ","they testify"], ["עָלָיו","upon him"]]},
+  { num: "לא", words: [["וּפְקֻדַּת","and charge of"], ["שָׁרְתָם","their ministry"], ["לִקְרֹא","to call"], ["לָאָדָם","unto man"], ["לָשׁוּב","to repent"], ["וּלְהָקִים","and to fulfil"], ["וְלַעֲשׂוֹת","and to do"], ["אֶת־מַעֲשֵׂה","work of"], ["בְרִיתוֹת","covenants of"], ["הָאָב","the Father"], ["אֲשֶׁר","which"], ["כָּרַת","made"], ["עִם־בְּנֵי","with the sons of"], ["הָאָדָם","man"], ["לְהָכִין","to prepare"], ["הַדֶּרֶךְ","the way"], ["בֵּין","among"], ["בְּנֵי־הָאָדָם","the children of men"], ["בְּהַגִּידָם","in their declaring"], ["אֶת־דְּבַר","the word of"], ["הַמָּשִׁיחַ","Christ"], ["לִכְלֵי","to vessels of"], ["בְחִירַת","choosing of"], ["יְהוָה","the Lord"], ["לְמַעַן","in order that"], ["יָעִידוּ","they testify"], ["עָלָיו","upon him"]]},
   { num: "לב", words: [
     ["וּבַעֲשׂוֹתָם","and in their doing"],["כֵּן","thus"],["יָכִין","he will prepare"],["יְהוָה","the Lord"],["אֱלֹהִים","God"],["אֶת־הַדֶּרֶךְ","the way"],["לְמַעַן","in order that"],["תִּהְיֶה","there shall be"],["לִשְׁאֵרִית","for remnant of"],["הָאָדָם","man"],["אֱמוּנָה","faith"],["בַּמָּשִׁיחַ","in Christ"],["לְמַעַן","in order that"],["יִהְיֶה","he shall be"],["לְרוּחַ","for the spirit"],["הַקֹּדֶשׁ","the Holy"],["מָקוֹם","place"],["בִּלְבָבָם","in their hearts"],["כְּפִי","according to"],["כֹחָהּ","its power"],["וּבַדֶּרֶךְ הַזֹּאת","and after this manner"],["מְבִיא","brings"],["הָאָב","the Father"],["אֶת־הַבְּרִיתוֹת","the covenants"],["אֲשֶׁר","which"],["כָּרַת","made"],["עִם־בְּנֵי","with the sons of"],["הָאָדָם","man"]
   ]},
@@ -438,9 +438,7 @@ var mr_ch10Verses = [
   { num: "יא", words: [
     ["וּלְאַחֵר","and to another"],["אֱמוּנָה","faith"],["גְדוֹלָה","great"],["מְאֹד","exceedingly"],["וּלְאַחֵר","and to another"],["מַתְּנוֹת","the gifts of"],["הָרְפוּאָה","healing"],["בָּרוּחַ הַהִיא","in that Spirit"]
   ]},
-  { num: "יב", words: [
-    ["וְעוֹד","and again"],["לְאַחֵר","to another"],["לַעֲשׂוֹת","to do"],["נִפְלָאוֹת","wonders"],["גְּדוֹלוֹת","great"]
-  ]},
+  { num: "יב", words: [["וְעוֹד","and again"], ["לְאַחֵר","to another"], ["לַעֲשׂוֹת","to do"], ["נִפְלָאוֹת","miracles"], ["גְּדוֹלוֹת","great"]]},
   { num: "יג", words: [
     ["וְעוֹד","and again"],["לְאַחֵר","to another"],["לְהִנָּבֵא","that he may prophesy"],["עַל־כׇּל־דָּבָר","upon all things"]
   ]},
