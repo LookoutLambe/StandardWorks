@@ -480,9 +480,7 @@ var mm_ch8Verses = [
   { num: "יא", words: [
     ["אַךְ","but"],["הִנֵּה","behold"],["רָאִינוּ","we saw"],["אוֹתָם","them"],["אָבִי","my father"],["וַאֲנִי","and I"],["וְשֵׁרְתוּ","and they ministered"],["אוֹתָנוּ","unto us"]
   ]},
-  { num: "יב", words: [
-    ["וּמִי","and who"],["אֲשֶׁר","which"],["יְקַבֵּל","receiveth"],["אֶת־הַסֵּפֶר הַזֶּה","this record"],["וְלֹא","nor"],["יַרְשִׁיעֶנּוּ","condemn it"],["בַּעֲבוּר","on account of"],["הַמּוּמִים","the imperfections"],["אֲשֶׁר־בּוֹ","which are in it"],["הוּא","is the same"],["יֵדַע","shall know"],["דְּבָרִים","words"],["גְּדוֹלִים","things"],["מֵאֵלֶּה","than these"],["הִנֵּה","behold"],["אֲנִי","I"],["מוֹרוֹנִי","Moroni"],["וְלוּ","and would"],["יָכֹלְתִּי","that I could"],["הָיִיתִי","I would have written"],["מוֹדִיעַ","make known"],["לָכֶם","unto you"],["אֶת־הַכֹּל","all things"]
-  ]},
+  { num: "יב", words: [["וּמִי","and who"], ["אֲשֶׁר","which"], ["יְקַבֵּל","receiveth"], ["אֶת־הַסֵּפֶר הַזֶּה","this record"], ["וְלֹא","nor"], ["יַרְשִׁיעֶנּוּ","condemn it"], ["בַּעֲבוּר","on account of"], ["הַמּוּמִים","the imperfections"], ["אֲשֶׁר־בּוֹ","which are in it"], ["הוּא","is the same"], ["יֵדַע","shall know"], ["דְּבָרִים","things"], ["גְּדוֹלִים","things"], ["מֵאֵלֶּה","than these"], ["הִנֵּה","behold"], ["אֲנִי","I"], ["מוֹרוֹנִי","Moroni"], ["וְלוּ","and would"], ["יָכֹלְתִּי","that I could"], ["הָיִיתִי","I would have written"], ["מוֹדִיעַ","make known"], ["לָכֶם","unto you"], ["אֶת־הַכֹּל","all things"]]},
   { num: "יג", words: [
     ["הִנֵּה","behold"],["אֲכַלֶּה","I make an end"],["לְדַבֵּר","to speak"],["עַל־הָעָם הַזֶּה","concerning this people"],["בֶּן־מוֹרְמוֹן","the son of Mormon"],["אָנֹכִי","I"],["וְאָבִי","and my father"],["מִזֶּרַע","from the seed of"],["נֶפִי","Nephi"]
   ]},
