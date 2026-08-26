@@ -107,14 +107,14 @@ var colophonWords = [
 ];
 var ch1Verses = [
   { num:"א", words:[
-    ["אָנֹכִי","I"],
+    ["אֲנִי","I"],
     ["נֶפִי","Nephi"],
     ["בֶּן־אָב","son of a father"],
     ["חָסִיד","goodly"],
     ["וְאֵם","and a mother"],
     ["חֲסִידָה","goodly"],
     ["אֲשֶׁר","who"],
-    ["חִנְּכוּנִי","taught me"],
+    ["הוֹרוּנִי","taught me"],
     ["מְעַט","somewhat"],
     ["בְּכׇל־מוּסַר","in all the learning of"],
     ["אָבִי","my father"],
@@ -147,12 +147,12 @@ var ch1Verses = [
     ["סֵפֶר","a record"],
     ["בִּלְשׁוֹן","in the language of"],
     ["אָבִי","my father"],
-    ["הֲלֹא","which"],
+    ["אֲשֶׁר","which"],
     ["הִיא","is"],
     ["לֶקַח","the learning of"],
     ["הַיְּהוּדִים","the Jews"],
     ["וּשְׂפַת","and the language of"],
-    ["מִצְרָיִם","Egypt"],
+    ["הַמִּצְרִים","the Egyptians"],
     ["׃",""]
   ]},
   { num:"ג", words:[
@@ -171,7 +171,7 @@ var ch1Verses = [
   ]},
   { num:"ד", words:[
     ["וַיְהִי","and it came to pass"],
-    ["בִּשְׁנַת","in the year of"],
+    ["בִּתְחִלַּת","in the commencement of"], ["שְׁנַת","the year of"],
     ["אַחַת","one"],
     ["לְמַלְכוּת","of the reign of"],
     ["צִדְקִיָּהוּ","Zedekiah"],
@@ -183,7 +183,7 @@ var ch1Verses = [
     ["יֹשֵׁב","dwelling"],
     ["בִּירוּשָׁלַיִם","in Jerusalem"],
     ["כׇּל־יָמָיו","all his days"],
-    ["וּבַשָּׁנָה הַהִיא","and in that year"],
+    ["וּבַשָּׁנָה","and in the year"], ["הַהִיא","that same"],
     ["בָּאוּ","came"],
     ["נְבִיאִים","prophets"],
     ["רַבִּים","many"],

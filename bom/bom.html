@@ -7739,9 +7739,8 @@ document.addEventListener('keydown', function(e) {
     var sNum = _strongsLookup[w] || _strongsLookup[stripPrefixes(w)] ||
                _strongsLookup[stripNikkud(w)] || _strongsLookup[stripNikkud(stripPrefixes(w))] || '';
     if (sNum && _strongsRoots[sNum]) return sNum;
-    // A word the corpus glosses as a proper name gets the exact lookups above and
-    // nothing more. Fuzzy consonantal matching filed all 422 Book of Mormon
-    // נֶפִי tokens under H5297 נֹף — Noph, i.e. Memphis in Egypt.
+    // A name gets the exact lookups above and nothing more. Fuzzy consonantal
+    // matching filed every Book of Mormon נֶפִי under H5297 נֹף — Memphis.
     if (strict) return '';
     var c = stripNikkud(w);
     if (!c) return '';

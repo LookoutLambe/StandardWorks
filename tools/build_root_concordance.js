@@ -136,15 +136,19 @@ const getRoot = engineCtx.getRoot;
           if (!norm) continue;
           (seenIn[norm] || (seenIn[norm] = new Set())).add(vol);
         } } };
-    tally('ot_verses','ot'); tally('nt_verses','nt'); tally('dc_verses','dc');
-    tally('pgp_verses','pgp'); tally('bom/verses','bom');
+    // "Outside the Book of Mormon" means the Hebrew and Greek scriptures. A name
+    // shared with those really is a Hebrew word and must resolve to its own root
+    // (Lehi is also the place in Judges 15; Jacob, Joseph, Isaiah likewise).
+    // The D&C, Pearl of Great Price and JST naming Nephi, Laman, Mormon or
+    // Moroni does not make them Hebrew words, so they stay their own roots.
+    tally('ot_verses','ot'); tally('nt_verses','nt'); tally('bom/verses','bom');
     let dropped = 0;
     for (const k of Object.keys(names)) {
       const vols = seenIn[k];
       if (!vols) continue;
       if (vols.has('bom') && vols.size > 1) { delete names[k]; dropped++; }
     }
-    console.log('names shared with a volume outside the BOM (not held back): %d', dropped);
+    console.log('names shared with the OT/NT (resolve to their Hebrew root): %d', dropped);
   }
 
   win._rootProperNames = names;
