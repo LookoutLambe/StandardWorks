@@ -1173,7 +1173,7 @@ var dc54_ch1Verses = [
     ["אָלֶף","Alpha"],
     ["וְתָו","and Omega"],
     ["הָרֵאשִׁית","the beginning"],
-    ["וְהַתַּכְלִית","and the end"],
+    ["וְהָאַחֲרִית","and the end"],
     ["הוּא","(he)"],
     ["אֲשֶׁר","who"],
     ["נִצְלַב","was crucified"],

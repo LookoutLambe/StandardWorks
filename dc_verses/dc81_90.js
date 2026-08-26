@@ -2746,7 +2746,7 @@ var dc84_ch1Verses = [
     ["אָלֶף","Alpha"],
     ["וְתָו","and Omega"],
     ["הָרֵאשִׁית","the beginning"],
-    ["וְהַתַּכְלִית","and the end."],
+    ["וְהָאַחֲרִית","and the end."],
     ["אָמֵן׃","Amen."]
   ]}
 ];

@@ -1370,7 +1370,7 @@ var dc95_ch1Verses = [
     ["הַיּוֹם","the day"],
     ["הָרִאשׁוֹן","first,"],
     ["הָרֵאשִׁית","the beginning"],
-    ["וְהַתַּכְלִית׃","and the end."]
+    ["וְהָאַחֲרִית׃","and the end."]
   ]},
   { num: "ח", words: [
     ["אָכֵן","Yea,"],

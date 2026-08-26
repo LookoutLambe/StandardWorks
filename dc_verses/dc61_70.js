@@ -16,7 +16,7 @@ var dc61_ch1Verses = [
     ["אָלֶף","Alpha"],
     ["וְתָו","and Omega"],
     ["הָרֵאשִׁית","the beginning"],
-    ["וְהַתַּכְלִית׃","and the end"]
+    ["וְהָאַחֲרִית׃","and the end"]
   ]},
   { num: "ב", words: [
     ["הִנֵּה","behold"],

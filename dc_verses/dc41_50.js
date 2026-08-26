@@ -2561,7 +2561,7 @@ var dc45_ch1Verses = [
     ["אָלֶף","Alpha"],
     ["וְתָו","and Omega"],
     ["הָרֵאשִׁית","the beginning"],
-    ["וְהַתַּכְלִית","and the end"],
+    ["וְהָאַחֲרִית","and the end"],
     ["אוֹר","the light"],
     ["הָעוֹלָם","of the world"],
     ["וְחַיָּיו","and the life thereof"],
@@ -4674,7 +4674,7 @@ var dc49_ch1Verses = [
     ["וְעָתִיד","and (is) about"],
     ["לָבוֹא","to come"],
     ["הָרֵאשִׁית","the beginning"],
-    ["וְהַתַּכְלִית׃","and the end"]
+    ["וְהָאַחֲרִית׃","and the end"]
   ]},
   { num: "יג", words: [
     ["שׁוּבוּ","repent"],
