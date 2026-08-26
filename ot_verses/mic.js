@@ -85,7 +85,7 @@ var mic_ch5Verses = [
   { num:"יא", words:[["וְהִכְרַתִּי","and cut off"],["כְשָׁפִים","sorceries"],["מִיָּדֶךָ","from your hand"],["וּמְעוֹנְנִים","and soothsayers"],["לֹא","not"],["יִהְיוּ־לָךְ","shall be for you"],["׃",""]] },
   { num:"יב", words:[["וְהִכְרַתִּי","and cut off"],["פְסִילֶיךָ","your idols"],["וּמַצֵּבוֹתֶיךָ","and your standing images"],["מִקִּרְבֶּךָ","from your midst"],["וְלֹא־תִשְׁתַּחֲוֶה","and not bow down"],["עוֹד","any more"],["לְמַעֲשֵׂה","unto the work of"],["יָדֶיךָ","your hands"],["׃",""]] },
   { num:"יג", words:[["וְנָתַשְׁתִּי","and I shall uproot"],["אֲשֵׁירֶיךָ","your Asherim"],["מִקִּרְבֶּךָ","from your midst"],["וְהִשְׁמַדְתִּי","and I will destroy"],["עָרֶיךָ","your cities"],["׃",""]] },
-  { num:"יד", words:[["וְעָשִׂיתִי","and I work"],["בְּאַף","in anger"],["וּבְחֵמָה","and in rage"],["נָקָם","vengeance"],["אֶת־הַגּוֹיִם","the nations"],["אֲשֶׁר","which"],["לֹא","not"],["שָׁמֵעוּ","they have heard"],["׃",""]] },
+  { num:"יד", words:[["וְעָשִׂיתִי","and I will execute"],["בְּאַף","in anger"],["וּבְחֵמָה","and in rage"],["נָקָם","vengeance"],["אֶת־הַגּוֹיִם","the nations"],["אֲשֶׁר","which"],["לֹא","not"],["שָׁמֵעוּ","they have heard"],["׃",""]] },
 ];
 renderVerseSet(mic_ch5Verses, 'mic-ch5-verses');
 
