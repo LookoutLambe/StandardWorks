@@ -81,6 +81,22 @@ const getRoot = engineCtx.getRoot;
   // Tokens the corpus itself glosses as a proper name. The morphology step must
   // not peel these: מוֹרוֹנִי would otherwise reduce to מור, a real root, and
   // Moroni would be filed under "to change".
+  // The gloss must BE a name, not merely end in one. Taking the last word made
+  // "the God of Israel" mark אֱלֹהִים as a name and "the land of Egypt" mark
+  // אֶרֶץ, which then blocked both from Strong's and sent אֱלֹהִים to H0193 אוּל.
+  // A leading particle is allowed ("upon Laman", "and Nephi"); nothing else.
+  const LEAD = new Set(['the','and','to','unto','of','from','in','into','upon','on',
+    'for','with','by','at','even','yea','o','a','an','before','against','over','after']);
+  const isNameGloss = g => {
+    const parts = String(g || '').replace(/[.,;:!?]+$/, '').split(/[\s\u2014-]+/).filter(Boolean);
+    let i = 0;
+    while (i < parts.length && LEAD.has(parts[i].toLowerCase())) i++;
+    const rest = parts.slice(i);
+    if (rest.length !== 1) return false;
+    const w = rest[0];
+    return /^[A-Z][A-Za-z\u2019'-]+$/.test(w) && !COMMON.has(w);
+  };
+
   const COMMON = new Set(['The','And','God','Lord','But','For','Behold','Then','Now','Yea',
     'That','This','All','When','Who','What','Amen','If','So','It','He','She','They','We',
     'In','Of','To','A','An','O','Be','Is','Was','Are','Not','No','Yes','My','His','Her',
@@ -94,10 +110,7 @@ const getRoot = engineCtx.getRoot;
         while ((m = PAIR.exec(t))) {
           const hw = m[1], gl = (m[2] || '').replace(/[\[\]()]/g, '').trim();
           if (!/[\u05D0-\u05EA]/.test(hw)) continue;
-          // Take the LAST word of the gloss: names often arrive inside a phrase
-          // ("upon Laman", "unto Nephi"), and a single-word test misses those.
-          const lastW = (gl.split(/[\s\u2014-]+/).filter(Boolean).pop() || '');
-          if (!/^[A-Z][A-Za-z\u2019'-]+$/.test(lastW) || COMMON.has(lastW)) continue;
+          if (!isNameGloss(gl)) continue;
           const parts = SKEL(hw).split(/[\u05BE\s]+/).filter(Boolean);
           const head = parts[parts.length - 1] || '';
           const norm = head.replace(/[\u05DD\u05DF\u05E5\u05E3\u05DA]/g,
@@ -127,8 +140,7 @@ const getRoot = engineCtx.getRoot;
           // word there reduces to the same skeleton, and Nephi went back to
           // H5297 (Noph). A name is shared only if it is a name in both places.
           const g2 = (m[2] || '').replace(/[\[\]()]/g, '').trim();
-          const lw = (g2.split(/[\s\u2014-]+/).filter(Boolean).pop() || '');
-          if (!/^[A-Z][A-Za-z\u2019'-]+$/.test(lw) || COMMON.has(lw)) continue;
+          if (!isNameGloss(g2)) continue;
           const parts = SKEL(hw).split(/[\u05BE\s]+/).filter(Boolean);
           const head = parts[parts.length - 1] || '';
           const norm = head.replace(/[\u05DD\u05DF\u05E5\u05E3\u05DA]/g,

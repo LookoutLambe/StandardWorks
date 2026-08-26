@@ -23208,8 +23208,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "ירה": {
-    "meaning": "Mhirh",
-    "category": "Uncategorized"
+    "meaning": "to teach, instruct; to shoot, throw",
+    "category": "Communication"
   },
   "טוחים": {
     "meaning": "flat",

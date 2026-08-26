@@ -232,8 +232,14 @@ function stripPrefixes(w) {
   function _strongsFor(w, strict) {
     if (!window._strongsLookup || !window._strongsRoots) return '';
     var CI = consIndex();
-    var sNum = _strongsLookup[w] || _strongsLookup[stripPrefixes(w)] ||
-               _strongsLookup[stripNikkud(w)] || _strongsLookup[stripNikkud(stripPrefixes(w))] || '';
+    // For a name, only the whole pointed form may match. Letting the
+    // prefix-stripped variants through decomposed לָמָן into ל + מָן and filed
+    // every Book of Mormon Laman under H4478, manna — and there is no Laman in
+    // the Bible for it to have been confused with.
+    var sNum = strict
+      ? (_strongsLookup[w] || '')
+      : (_strongsLookup[w] || _strongsLookup[stripPrefixes(w)] ||
+         _strongsLookup[stripNikkud(w)] || _strongsLookup[stripNikkud(stripPrefixes(w))] || '');
     if (sNum && _strongsRoots[sNum]) return sNum;
     // A name gets the exact lookups above and nothing more. Fuzzy consonantal
     // matching filed every Book of Mormon נֶפִי under H5297 נֹף — Memphis.
@@ -291,10 +297,28 @@ function stripPrefixes(w) {
                  _strongsRoots[cur].r !== cur && !seen[cur]) {
             seen[cur] = 1; cur = _strongsRoots[cur].r;
           }
-          var e = _strongsRoots[cur];
-          // Count Hebrew LETTERS, not characters: stripNikkud leaves the shin
-          // dot in place, so שָׁלַם measured 4 and every ש root failed the test.
-          _baseOf[n] = (e && e.w && (e.w.match(/[\u05D0-\u05EA]/g) || []).length === 3) ? cur : n;
+          var e = _strongsRoots[cur], src = _strongsRoots[n];
+          // The base must be a 3-letter root AND actually share radicals with the
+          // word. Count Hebrew LETTERS, not characters — stripNikkud leaves the
+          // shin dot, so שָׁלַם measured 4 and every ש root failed. Length alone
+          // was not enough either: it let Strong's etymology walk אֱלֹהִים →
+          // אֱלוֹהַּ → אֵל → אוּל and file God under "to twist". Compare strong
+          // consonants only, since א/ה/ו/י come and go as matres.
+          var ok = false;
+          if (e && e.w && src && src.w &&
+              (e.w.match(/[\u05D0-\u05EA]/g) || []).length === 3) {
+            var strong = function(x) {
+              return (String(x).match(/[\u05D0-\u05EA]/g) || []).join('')
+                       .replace(/[\u05D0\u05D4\u05D5\u05D9]/g, '');
+            };
+            var b = strong(normFinals(e.w)), d = strong(normFinals(src.w)), hit = 0, pos = 0;
+            for (var q = 0; q < b.length; q++) {
+              var at = d.indexOf(b.charAt(q), pos);
+              if (at >= 0) { hit++; pos = at + 1; }
+            }
+            ok = hit >= 2;
+          }
+          _baseOf[n] = ok ? cur : n;
         }
       }
     }
