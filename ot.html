@@ -3017,14 +3017,17 @@ function renderGlossaryList() {
   var sortVal = document.getElementById('glossary-sort-select').value;
   var filtered = glossaryIndex.filter(function(e) {
     if (searchVal) {
+      // normFinals must be applied to BOTH sides. Folding ם→מ on the search
+      // term only made every word ending in a final letter unfindable —
+      // "שבעים" became "שבעימ" and matched nothing. That is all ־ים plurals.
       var svNorm = normFinals(searchVal.replace(/[\u0591-\u05C7]/g, ''));
-      var rootNorm = e.root.replace(/[\u0591-\u05C7]/g, '');
-      var dispNorm = (e.displayHeb || '').replace(/[\u0591-\u05C7]/g, '');
+      var rootNorm = normFinals(e.root.replace(/[\u0591-\u05C7]/g, ''));
+      var dispNorm = normFinals((e.displayHeb || '').replace(/[\u0591-\u05C7]/g, ''));
       return rootNorm.indexOf(svNorm) === 0 || dispNorm.indexOf(svNorm) === 0 ||
         e.root.toLowerCase().indexOf(searchVal) >= 0 ||
         e.meaning.toLowerCase().indexOf(searchVal) >= 0 ||
         Object.keys(e.glosses).some(function(g) { return g.toLowerCase().indexOf(searchVal) >= 0; }) ||
-        Object.keys(e.forms || {}).some(function(f) { var fn2 = f.replace(/[\u0591-\u05C7]/g, ''); return fn2.indexOf(svNorm) === 0; });
+        Object.keys(e.forms || {}).some(function(f) { var fn2 = normFinals(f.replace(/[\u0591-\u05C7]/g, '')); return fn2.indexOf(svNorm) === 0; });
     }
     return true;
   });

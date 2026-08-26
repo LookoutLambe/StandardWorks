@@ -8403,13 +8403,15 @@ function renderGlossaryList() {
   var filtered = glossaryIndex.filter(function(e) {
     if (searchVal) {
       var svNorm = normFinals(searchVal.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, ''));
-      var rootNorm = e.root.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, '');
-      var dispNorm = (e.displayHeb || '').replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, '');
+      // normFinals must be applied to BOTH sides — folding ם→מ on the search
+      // term only made every ־ים plural unfindable ("שבעים" → "שבעימ").
+      var rootNorm = normFinals(e.root.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, ''));
+      var dispNorm = normFinals((e.displayHeb || '').replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, ''));
       return rootNorm.indexOf(svNorm) === 0 || dispNorm.indexOf(svNorm) === 0 ||
              e.root.toLowerCase().indexOf(searchVal) >= 0 ||
              e.meaning.toLowerCase().indexOf(searchVal) >= 0 ||
              Object.keys(e.glosses).some(function(g) { return g.toLowerCase().indexOf(searchVal) >= 0; }) ||
-             Object.keys(e.forms || {}).some(function(f) { var fn2 = f.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, ''); return fn2.indexOf(svNorm) === 0; });
+             Object.keys(e.forms || {}).some(function(f) { var fn2 = normFinals(f.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, '')); return fn2.indexOf(svNorm) === 0; });
     }
     return true;
   });
