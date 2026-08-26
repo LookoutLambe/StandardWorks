@@ -114,7 +114,7 @@ var sos_ch6Verses = [
 renderVerseSet(sos_ch6Verses, 'sos-ch6-verses');
 
 var sos_ch7Verses = [
-  { num:"א", words:[["שׁוּבִי","return"],["שׁוּבִי","return"],["הַשּׁוּלַמִּית","the Shulammite woman"],["שׁוּבִי","return"],["שׁוּבִי","return"],["וְנֶחֱזֶה־בָּךְ","so we may look in you"],["מַה־תֶּחֱזוּ","what will you look"],["בַּשּׁוּלַמִּית","on the Shulammite woman"],["כִּמְחֹלַת","like the dance of"],["הַמַּחֲנָיִם","the two groups"],["׃",""]] },
+  { num:"א", words:[["שׁוּבִי","return"],["שׁוּבִי","return"],["הַשּׁוּלַמִּית","the Shulamite woman"],["שׁוּבִי","return"],["שׁוּבִי","return"],["וְנֶחֱזֶה־בָּךְ","so we may look in you"],["מַה־תֶּחֱזוּ","what will you look"],["בַּשּׁוּלַמִּית","on the Shulamite woman"],["כִּמְחֹלַת","like the dance of"],["הַמַּחֲנָיִם","the two groups"],["׃",""]] },
   { num:"ב", words:[["מַה־יָּפוּ","how beautiful are"],["פְעָמַיִךְ","your feet"],["בַּנְּעָלִים","with sandals"],["בַּת־נָדִיב","daughter of a noble"],["חַמּוּקֵי","the curves of"],["יְרֵכַיִךְ","your thighs"],["כְּמוֹ","like"],["חֲלָאִים","jewels"],["מַעֲשֵׂה","work of"],["יְדֵי","hands of"],["אׇמָּן","a skilled workman"],["׃",""]] },
   { num:"ג", words:[["שׇׁרְרֵךְ","your navel"],["אַגַּן","the bowl of"],["הַסַּהַר","the roundness"],["אַל־יֶחְסַר","do not fail"],["הַמָּזֶג","the mixed wine"],["בִּטְנֵךְ","your belly"],["עֲרֵמַת","a heap of"],["חִטִּים","wheat"],["סוּגָה","fenced around"],["בַּשּׁוֹשַׁנִּים","among the lilies"],["׃",""]] },
   { num:"ד", words:[["שְׁנֵי","two"],["שָׁדַיִךְ","your breasts"],["כִּשְׁנֵי","as two"],["עֳפָרִים","fawns"],["תׇּאֳמֵי","twins of"],["צְבִיָּה","a gazelle"],["׃",""]] },
