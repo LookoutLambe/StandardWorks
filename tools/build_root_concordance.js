@@ -104,8 +104,49 @@ const getRoot = engineCtx.getRoot;
             c => ({'\u05DD':'\u05DE','\u05DF':'\u05E0','\u05E5':'\u05E6','\u05E3':'\u05E4','\u05DA':'\u05DB'}[c]));
           if (norm.length >= 2) names[norm] = 1;
         } } };
-    ['ot_verses','nt_verses','dc_verses','pgp_verses','bom'].forEach(walkN);
+    // The Book of Mormon's verses live in bom/verses/, not bom/ — that holds
+    // loaders and glossaries. Reading the wrong one meant most BOM names were
+    // never collected, which is why לָמָן stayed merged with מָן "manna".
+    ['ot_verses','nt_verses','dc_verses','pgp_verses','bom/verses'].forEach(walkN);
   }
+
+  // A form counts as a Book of Mormon name only if it appears nowhere outside
+  // the Book of Mormon. A name shared with another volume is a real Hebrew word
+  // with its own entry (לֶחִי is Lehi and also the place in Judges 15), and must
+  // resolve normally rather than being held back as a BOM-only name.
+  {
+    const seenIn = Object.create(null);
+    const PAIR2 = /\[\s*"([^"]*)"\s*,\s*"([^"]*)"\s*\]/g;
+    const tally = (dir, vol) => { let ents = []; try { ents = fs.readdirSync(path.join(ROOT, dir)); } catch (e) { return; }
+      for (const f of ents) { if (!/\.js$/.test(f)) continue;
+        const t = fs.readFileSync(path.join(ROOT, dir, f), 'utf8'); let m; PAIR2.lastIndex = 0;
+        while ((m = PAIR2.exec(t))) { const hw = m[1];
+          if (!/[\u05D0-\u05EA]/.test(hw)) continue;
+          // Only NAME occurrences count. Comparing against every token instead
+          // made נֶפִי "shared" with the Old Testament because some unrelated
+          // word there reduces to the same skeleton, and Nephi went back to
+          // H5297 (Noph). A name is shared only if it is a name in both places.
+          const g2 = (m[2] || '').replace(/[\[\]()]/g, '').trim();
+          const lw = (g2.split(/[\s\u2014-]+/).filter(Boolean).pop() || '');
+          if (!/^[A-Z][A-Za-z\u2019'-]+$/.test(lw) || COMMON.has(lw)) continue;
+          const parts = SKEL(hw).split(/[\u05BE\s]+/).filter(Boolean);
+          const head = parts[parts.length - 1] || '';
+          const norm = head.replace(/[\u05DD\u05DF\u05E5\u05E3\u05DA]/g,
+            c => ({'\u05DD':'\u05DE','\u05DF':'\u05E0','\u05E5':'\u05E6','\u05E3':'\u05E4','\u05DA':'\u05DB'}[c]));
+          if (!norm) continue;
+          (seenIn[norm] || (seenIn[norm] = new Set())).add(vol);
+        } } };
+    tally('ot_verses','ot'); tally('nt_verses','nt'); tally('dc_verses','dc');
+    tally('pgp_verses','pgp'); tally('bom/verses','bom');
+    let dropped = 0;
+    for (const k of Object.keys(names)) {
+      const vols = seenIn[k];
+      if (!vols) continue;
+      if (vols.has('bom') && vols.size > 1) { delete names[k]; dropped++; }
+    }
+    console.log('names shared with a volume outside the BOM (not held back): %d', dropped);
+  }
+
   win._rootProperNames = names;
   console.log('proper-name forms held back from peeling: %d', Object.keys(names).length);
   engineCtx.window = win;
