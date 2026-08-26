@@ -390,9 +390,7 @@ var ab_fac1Verses = [
   { num: "ג", words: [
     ["כֹּהֵן","The priest of"],["אֶלְקְנָה","Elkenah"],["הָאֱלִיל","idolatrous,"],["מְבַקֵּשׁ","attempting"],["לְהַעֲלוֹת","to offer up"],["אֶת־אַבְרָהָם","Abraham"],["לְקָרְבָּן","as a sacrifice."],["׃",""]
   ]},
-  { num: "ד", words: [
-    ["הַמִּזְבֵּחַ","The altar"],["לְקָרְבָּן","for sacrifice"],["בִּידֵי","by the hands of"],["הַכֹּהֲנִים","the priests"],["הָאֱלִילִים","idolatrous,"],["עוֹמֵד","standing"],["לִפְנֵי","before"],["אֱלֹהֵי","the gods of"],["אֶלְקְנָה","Elkenah,"],["לִבְנָה","Libnah,"],["מַחְמַכְרָה","Mahmackrah,"],["קֹרָשׁ","Korash,"],["וּפַרְעֹה","and Pharaoh."],["׃",""]
-  ]},
+  { num: "ד", words: [["הַמִּזְבֵּחַ","The altar"], ["לְקָרְבָּן","for sacrifice"], ["בִּידֵי","by"], ["הַכֹּהֲנִים","the priests"], ["הָאֱלִילִים","idolatrous,"], ["עוֹמֵד","standing"], ["לִפְנֵי","before"], ["אֱלֹהֵי","the gods of"], ["אֶלְקְנָה","Elkenah,"], ["לִבְנָה","Libnah,"], ["מַחְמַכְרָה","Mahmackrah,"], ["קֹרָשׁ","Korash,"], ["וּפַרְעֹה","and Pharaoh."], ["׃",""]]},
   { num: "ה", words: [
     ["הָאֱלִיל","The idolatrous god of"],["אֶלְקְנָה","Elkenah."],["׃",""]
   ]},
@@ -411,12 +409,8 @@ var ab_fac1Verses = [
   { num: "י", words: [
     ["אַבְרָהָם","Abraham"],["בְּמִצְרָיִם","in Egypt."],["׃",""]
   ]},
-  { num: "יא", words: [
-    ["מְכֻוָּן","Designed"],["לְמַשֵּׁל","to represent"],["אֶת־עַמּוּדֵי","the pillars of"],["הַשָּׁמַיִם","heaven,"],["כַּאֲשֶׁר","as"],["הֵבִינוּם","they were understood by"],["הַמִּצְרִים","the Egyptians."],["׃",""]
-  ]},
-  { num: "יב", words: [
-    ["רַעְקִיַעַנְג","Raukeeyang,"],["פֵּרוּשׁוֹ","signifying"],["רָקִיעַ","expanse,"],["אוֹ","or"],["הָרָקִיעַ","the firmament"],["מֵעַל","over"],["רֹאשֵׁנוּ","our heads;"],["אַךְ","but"],["בָּזֹאת","in this case"],["כִּוְּנוּ","meant"],["הַמִּצְרִים","the Egyptians"],["לְמַשֵּׁל","to signify"],["שָׁאוּמַאוּ","Shaumau,"],["לִהְיוֹת","to be"],["גָּבֹהַּ","high,"],["אוֹ","or"],["הַשָּׁמַיִם","the heavens,"],["כִּמְקַבֵּל","answering to"],["לַמִּלָּה","the word"],["הָעִבְרִית","Hebrew,"],["שָׁמַיִם","Shaumahyeem."],["׃",""]
-  ]}
+  { num: "יא", words: [["מְכֻוָּן","Designed"], ["לְמַשֵּׁל","to represent"], ["אֶת־עַמּוּדֵי","the pillars of"], ["הַשָּׁמַיִם","heaven,"], ["כַּאֲשֶׁר","as"], ["הֵבִינוּם","understood"], ["הַמִּצְרִים","by the Egyptians."], ["׃",""]]},
+  { num: "יב", words: [["רַעְקִיַעַנְג","Raukeeyang,"], ["פֵּרוּשׁוֹ","signifying"], ["רָקִיעַ","expanse,"], ["אוֹ","or"], ["הָרָקִיעַ","the firmament"], ["מֵעַל","over"], ["רֹאשֵׁנוּ","our heads;"], ["אַךְ","but"], ["בָּזֹאת","in this case"], ["עַל־אֹדוֹת","in relation to"], ["הַדָּבָר","subject"], ["הַזֶּה","this,"], ["כִּוְּנוּ","meant"], ["הַמִּצְרִים","the Egyptians"], ["לְמַשֵּׁל","to signify"], ["שָׁאוּמַאוּ","Shaumau,"], ["לִהְיוֹת","to be"], ["גָּבֹהַּ","high,"], ["אוֹ","or"], ["הַשָּׁמַיִם","the heavens,"], ["כִּמְקַבֵּל","answering to"], ["לַמִּלָּה","the word"], ["הָעִבְרִית","Hebrew,"], ["שָׁמַיִם","Shaumahyeem."], ["׃",""]]}
 ];
 renderVerseSet(ab_fac1Verses, 'ab-fac1-verses');
 
@@ -424,30 +418,20 @@ var ab_fac2Verses = [
   { num: "א", words: [
     ["קוֹלֹב","Kolob,"],["פֵּרוּשׁוֹ","signifying"],["הַבְּרִיאָה","creation"],["הָרִאשׁוֹנָה","the first,"],["הַקְּרוֹבָה","nearest"],["לַשָּׁמַיִם","to the celestial,"],["אוֹ","or"],["מְקוֹם","the residence of"],["אֱלֹהִים","God."],["הָרִאשׁוֹנָה","First"],["בִּשְׁלִיטָה","in government,"],["אַחֲרוֹנָה","the last"],["בְּמִדַּת","pertaining to the measurement of"],["הַזְּמַן","time."],["הַמִּדָּה","The measurement"],["עַל־פִּי","is according to"],["זְמַן","time"],["שָׁמַיִם","celestial,"],["וּזְמַן","and the time"],["שָׁמַיִם","celestial"],["פֵּרוּשׁוֹ","signifies"],["יוֹם","a day"],["אֶחָד","one"],["לְאַמָּה","to a cubit."],["יוֹם","A day"],["אֶחָד","one"],["בְּקוֹלֹב","in Kolob"],["שָׁוֶה","is equal to"],["לְאֶלֶף","a thousand"],["שָׁנִים","years,"],["עַל־פִּי","according to"],["הַמִּדָּה","the measurement"],["שֶׁל־הָאָרֶץ","of this earth,"],["הַנִּקְרֵאת","which is called by"],["הַמִּצְרִים","the Egyptians"],["יוּגַ־הַיּוֹ־עִי","Jah-oh-eh."],["׃",""]
   ]},
-  { num: "ב", words: [
-    ["עוֹמֵד","Stands"],["סָמוּךְ","next to"],["לְקוֹלֹב","Kolob,"],["הַנִּקְרָא","called"],["בְּפִי","by"],["הַמִּצְרִים","the Egyptians"],["אֳלִיבְלִישׁ","Oliblish,"],["הַבְּרִיאָה","the creation"],["הַשּׁוֹלֶטֶת","governing"],["הַגְּדוֹלָה","grand"],["הַשֵּׁנִית","next,"],["בִּסְמִיכוּת","in connection with"],["לְקוֹלֹב","Kolob."],["׃",""]
-  ]},
-  { num: "ג", words: [
-    ["נַעֲשָׂה","Is made"],["לְמַשֵּׁל","to represent"],["אֶת־אֱלֹהִים","God,"],["יוֹשֵׁב","sitting"],["עַל־כִּסְאוֹ","upon his throne,"],["מְלֻבָּשׁ","clothed with"],["כֹּחַ","power"],["וּסְמָכוּת","and authority;"],["עִם־כֶּתֶר","with a crown of"],["אוֹר","light"],["עוֹלָם","eternal"],["עַל־רֹאשׁוֹ","upon his head;"],["מְמַשֵּׁל","representing"],["גַּם","also"],["אֶת־מִלּוֹת","the Key-words of"],["הַמַּפְתֵּחַ","the Key,"],["הַגְּדוֹלוֹת","the grand,"],["שֶׁל־הַכְּהֻנָּה","of the Holy Priesthood,"],["כְּמוֹ","as"],["שֶׁנִּגְלוּ","were revealed"],["לְאָדָם","unto Adam"],["בְּגַן־עֵדֶן","in the Garden of Eden,"],["וְכֵן","as also to"],["לְשֵׁת","Seth,"],["נֹחַ","Noah,"],["מַלְכִּי־צֶדֶק","Melchizedek,"],["אַבְרָהָם","Abraham,"],["וְכׇל","and all"],["שֶׁאֲלֵיהֶם","to whom"],["הַכְּהֻנָּה","the Priesthood"],["נִגְלְתָה","was revealed."],["׃",""]
-  ]},
+  { num: "ב", words: [["עוֹמֵד","Stands"], ["סָמוּךְ","next to"], ["לְקוֹלֹב","Kolob,"], ["הַנִּקְרָא","called"], ["בְּפִי","by"], ["הַמִּצְרִים","the Egyptians"], ["אֳלִיבְלִישׁ","Oliblish,"], ["אֲשֶׁר","which"], ["הוּא","is"], ["הַבְּרִיאָה","the creation"], ["הַשּׁוֹלֶטֶת","governing"], ["הַגְּדוֹלָה","grand"], ["הַשֵּׁנִית","next,"], ["הַקְּרוֹבָה","near"], ["לַשָּׁמַיִם","to the celestial,"], ["אוֹ","or"], ["לַמָּקוֹם","to the place"], ["אֲשֶׁר","where"], ["יִשְׁכֹּן","resides"], ["אֱלֹהִים","God;"], ["אֹחֵז","holding"], ["גַּם","also"], ["אֶת־מַפְתֵּחַ","the key of"], ["הַכֹּחַ","power,"], ["לְכוֹכָבִים","pertaining to planets"], ["אֲחֵרִים","other;"], ["כַּאֲשֶׁר","as"], ["נִגְלָה","revealed"], ["מֵאֵת","from"], ["אֱלֹהִים","God"], ["לְאַבְרָהָם","to Abraham,"], ["בְּהַקְרִיבוֹ","as he offered"], ["זֶבַח","sacrifice"], ["עַל־מִזְבֵּחַ","upon an altar,"], ["אֲשֶׁר","which"], ["בָּנָה","he had built"], ["לַיהוָה","unto the Lord."], ["׃",""]]},
+  { num: "ג", words: [["נַעֲשָׂה","Is made"], ["לְמַשֵּׁל","to represent"], ["אֶת־אֱלֹהִים","God,"], ["יוֹשֵׁב","sitting"], ["עַל־כִּסְאוֹ","upon his throne,"], ["מְלֻבָּשׁ","clothed with"], ["כֹּחַ","power"], ["וּסְמָכוּת","and authority;"], ["עִם־כֶּתֶר","with a crown of"], ["אוֹר","light"], ["עוֹלָם","eternal"], ["עַל־רֹאשׁוֹ","upon his head;"], ["מְמַשֵּׁל","representing"], ["גַּם","also"], ["אֶת־מִלּוֹת","the Key-words of"], ["הַמַּפְתֵּחַ","of the Key"], ["הַגְּדוֹלוֹת","grand,"], ["שֶׁל־הַכְּהֻנָּה","of the Priesthood"], ["הַקְּדוֹשָׁה","Holy,"], ["כְּמוֹ","as"], ["שֶׁנִּגְלוּ","were revealed"], ["לְאָדָם","unto Adam"], ["בְּגַן־עֵדֶן","in the Garden of Eden,"], ["וְכֵן","as also to"], ["לְשֵׁת","Seth,"], ["נֹחַ","Noah,"], ["מַלְכִּי־צֶדֶק","Melchizedek,"], ["אַבְרָהָם","Abraham,"], ["וְכׇל","and all"], ["שֶׁאֲלֵיהֶם","to whom"], ["הַכְּהֻנָּה","the Priesthood"], ["נִגְלְתָה","was revealed."], ["׃",""]]},
   { num: "ד", words: [
     ["מַתְאִים","Answers to"],["לַמִּלָּה","the word"],["הָעִבְרִית","Hebrew"],["רַעְקִיַעַנְג","Raukeeyang,"],["פֵּרוּשׁוֹ","signifying"],["רָקִיעַ","expanse,"],["אוֹ","or"],["רְקִיעַ","the firmament of"],["הַשָּׁמַיִם","the heavens;"],["גַּם","also"],["מִלָּה","a numerical"],["מִסְפָּרִית","figure,"],["בְּלָשׁוֹן","in"],["מִצְרַיִם","Egyptian"],["מַשְׁמָעוּתָהּ","signifying"],["אֶלֶף","one thousand;"],["עוֹנָה","answering to"],["לְמִדַּת","the measuring of"],["זְמַן","the time of"],["אֳלִיבְלִישׁ","Oliblish,"],["הַשָּׁוָה","which is equal"],["בְּמִדָּתוֹ","with"],["לְקוֹלֹב","Kolob"],["בְּסִבּוּבוֹ","in its revolution"],["וּבְמִדָּתוֹ","and in its measuring of"],["שֶׁל־זְמַן","time."],["׃",""]
   ]},
-  { num: "ה", words: [
-    ["נִקְרָא","Is called"],["בְּלָשׁוֹן","in"],["מִצְרַיִם","Egyptian"],["אֵנִישׁ־גּוֹ־אוֹן־דּוֹשׁ","Enish-go-on-dosh;"],["וְזֶה","this"],["אֶחָד","is one of"],["מִכּוֹכְבֵי","the planets"],["הַשּׁוֹלְטִים","governing"],["גַּם","also,"],["וּפֵרוּשׁוֹ","and is said by"],["עַל־פִּי","according to"],["הַמִּצְרִים","the Egyptians to be"],["הַשֶּׁמֶשׁ","the Sun,"],["וּלְשַׁאֵב","and to borrow"],["מִקּוֹלֹב","its light from"],["אֶת־אוֹרוֹ","Kolob"],["דֶּרֶךְ","through the medium of"],["כַּעַ־ע־עַנְטְרַשׁ","Kae-e-vanrash,"],["שֶׁהוּא","which is"],["הַכּוֹכָב","the Key-star,"],["הַגָּדוֹל","the grand,"],["וּמְקַבֵּל","or, in other words,"],["אוֹר","the governing power,"],["וְעֵזֶר","which governs"],["מִקְוֵה","fifteen"],["חֲמֵשׁ־עֶשְׂרֵה","other"],["כּוֹכָבִים","planets"],["קְבוּעִים","fixed,"],["אוֹ","or stars,"],["כּוֹכָבִים","stars,"],["וְכֵן","as also"],["פְּלוֹ־עִישׁ","Floeese,"],["אוֹ","or"],["הַיָּרֵחַ","the Moon,"],["הָאָרֶץ","the Earth,"],["וְהַשֶּׁמֶשׁ","and the Sun"],["בְּסִבּוּבָם","in their annual revolutions."],["׃",""]
-  ]},
+  { num: "ה", words: [["נִקְרָא","Is called"], ["בְּלָשׁוֹן","in"], ["מִצְרַיִם","Egyptian"], ["אֵנִישׁ־גּוֹ־אוֹן־דּוֹשׁ","Enish-go-on-dosh;"], ["וְזֶה","this"], ["אֶחָד","is one of"], ["מִכּוֹכְבֵי","the planets"], ["הַשּׁוֹלְטִים","governing"], ["גַּם","also,"], ["וְעַל־פִּי","and is said by"], ["הַמִּצְרִים","the Egyptians"], ["הוּא","to be"], ["הַשֶּׁמֶשׁ","the Sun,"], ["וְשֹׁאֵב","and to borrow"], ["אֶת־אוֹרוֹ","its light"], ["מִקּוֹלֹב","from Kolob"], ["דֶּרֶךְ","through the medium of"], ["כַּעַ־ע־עַנְטְרַשׁ","Kae-e-vanrash,"], ["שֶׁהוּא","which is"], ["הַמַּפְתֵּחַ","the Key"], ["הַגָּדוֹל","grand,"], ["אוֹ","or,"], ["בְּמִלִּים","in words"], ["אֲחֵרוֹת","other,"], ["כֹּחַ","the power"], ["הַמֶּמְשָׁלָה","governing,"], ["הַמּוֹשֵׁל","which governs"], ["בַּחֲמֵשׁ־עֶשְׂרֵה","fifteen"], ["כּוֹכָבִים","planets"], ["קְבוּעִים","fixed"], ["אֲחֵרִים","other"], ["אוֹ","or"], ["כּוֹכָבִים","stars,"], ["וְכֵן","as also"], ["פְּלוֹ־עִישׁ","Floeese"], ["אוֹ","or"], ["הַיָּרֵחַ","the Moon,"], ["הָאָרֶץ","the Earth"], ["וְהַשֶּׁמֶשׁ","and the Sun"], ["בִּתְקוּפוֹתָם","in their annual revolutions."], ["׃",""], ["וְהַכּוֹכָב","And planet"], ["הַזֶּה","this"], ["מְקַבֵּל","receives"], ["אֶת־כֹּחוֹ","its power"], ["דֶּרֶךְ","through the medium of"], ["קְלִי־פְלוֹס־אִיס־אֵס","Kli-flos-is-es,"], ["אוֹ","or"], ["הַהּ־קוֹ־קַאוּ־בֵּאם","Hah-ko-kau-beam,"], ["הַכּוֹכָבִים","the stars"], ["הַמְמֻשָּׁלִים","represented"], ["בַּמִּסְפָּרִים","by the numbers"], ["כב","22"], ["וכג","and 23,"], ["הַמְקַבְּלִים","receiving"], ["אוֹר","light"], ["מִסִּבּוּבֵי","from the revolutions of"], ["קוֹלֹב","Kolob."], ["׃",""]]},
   { num: "ו", words: [
     ["מַשֵּׁל","Represents"],["אֶת־הָאָרֶץ","the earth"],["הַזֹּאת","this"],["בְּאַרְבַּע","in its four"],["רוּחוֹתֶיהָ","quarters."],["׃",""]
   ]},
-  { num: "ז", words: [
-    ["מַשֵּׁל","Represents"],["אֶת־אֱלֹהִים","God"],["יוֹשֵׁב","sitting"],["עַל־כִּסְאוֹ","upon his throne,"],["מְגַלֶּה","revealing"],["דֶּרֶךְ","through"],["הַשָּׁמַיִם","the heavens"],["אֶת־מִלּוֹת","the Key-words of"],["הַמַּפְתֵּחַ","the Key,"],["הַגְּדוֹלוֹת","the grand,"],["שֶׁל־הַכְּהֻנָּה","of the Priesthood;"],["וְגַם","as, also,"],["אֶת־סֵמֶל","the sign of"],["רוּחַ־הַקֹּדֶשׁ","the Holy Ghost"],["לְאַבְרָהָם","unto Abraham,"],["בִּדְמוּת","in the form of"],["יוֹנָה","a dove."],["׃",""]
-  ]},
+  { num: "ז", words: [["מַשֵּׁל","Represents"], ["אֶת־אֱלֹהִים","God"], ["יוֹשֵׁב","sitting"], ["עַל־כִּסְאוֹ","upon his throne,"], ["מְגַלֶּה","revealing"], ["דֶּרֶךְ","through"], ["הַשָּׁמַיִם","the heavens"], ["אֶת־מִלּוֹת","the Key-words of"], ["הַמַּפְתֵּחַ","of the Key"], ["הַגְּדוֹלוֹת","grand,"], ["שֶׁל־הַכְּהֻנָּה","of the Priesthood;"], ["וְגַם","as, also,"], ["אֶת־סֵמֶל","the sign of"], ["רוּחַ־הַקֹּדֶשׁ","the Holy Ghost"], ["לְאַבְרָהָם","unto Abraham,"], ["בִּדְמוּת","in the form of"], ["יוֹנָה","a dove."], ["׃",""]]},
   { num: "ח", words: [
     ["מַכִּיל","Contains"],["כְּתָבִים","writings"],["אֲשֶׁר","that"],["לֹא","cannot"],["יְגֻלּוּ","be revealed"],["לָעוֹלָם","unto the world;"],["אַךְ","but"],["נָתוּן","is to be had"],["בְּהֵיכַל","in the holy Temple of"],["אֱלֹהִים","God."],["׃",""]
   ]},
-  { num: "ט", words: [
-    ["יִגָּלֶה","Ought not to be revealed"],["בְּעִתּוֹ","at the present time."],["׃",""]
-  ]},
+  { num: "ט", words: [["לֹא","Ought not"], ["יִגָּלֶה","to be revealed"], ["בָּעֵת","at the time"], ["הַזֹּאת","present."], ["׃",""]]},
   { num: "י", words: [
     ["גַּם","Also."],["׃",""]
   ]},
@@ -487,16 +471,12 @@ var ab_fac2Verses = [
   { num: "כב", words: [
     ["יִנָּתֵן","Will be given"],["בְּעֵת","in the own due time of"],["יְהוָה","the Lord."],["׃",""]
   ]},
-  { num: "כג", words: [
-    ["הַכְּתָבִים","The writings"],["הַמְּתֻרְגָּמִים","translated"],["לְמַעְלָה","above"],["נִתָּנִים","are given as far as we have any right to give"],["כַּאֲשֶׁר","at"],["נִתְּנָה","is granted"],["רְשׁוּת","permission."],["׃",""]
-  ]}
+  { num: "כג", words: [["הַתַּרְגּוּם","The translation"], ["לְמַעְלָה","above"], ["נִתָּן","is given"], ["כְּכׇל־אֲשֶׁר","as far as"], ["יֵשׁ־לָנוּ","we have any"], ["רְשׁוּת","right"], ["לָתֵת","to give"], ["בָּעֵת","at the time"], ["הַזֹּאת","present."], ["׃",""]]}
 ];
 renderVerseSet(ab_fac2Verses, 'ab-fac2-verses');
 
 var ab_fac3Verses = [
-  { num: "א", words: [
-    ["אַבְרָהָם","Abraham"],["יוֹשֵׁב","sitting"],["עַל־כִּסֵּא","upon the throne of"],["פַּרְעֹה","Pharaoh,"],["בִּרְצוֹן","by the politeness of"],["הַמֶּלֶךְ","the king,"],["וְכֶתֶר","with a crown"],["עַל־רֹאשׁוֹ","upon his head,"],["מְמַשֵּׁל","representing"],["אֶת־הַכְּהֻנָּה","the Priesthood,"],["כְּסֵמֶל","as emblematical of"],["הַנְּשִׂיאוּת","the Presidency"],["הַגְּדוֹלָה","grand"],["בַּשָּׁמַיִם","in Heaven;"],["וּבְיָדוֹ","and in his hand"],["שֵׁבֶט","the scepter of"],["הַצֶּדֶק","justice"],["וְהַמִּשְׁפָּט","and judgment in his hand."],["׃",""]
-  ]},
+  { num: "א", words: [["אַבְרָהָם","Abraham"], ["יוֹשֵׁב","sitting"], ["עַל־כִּסֵּא","upon the throne of"], ["פַּרְעֹה","Pharaoh,"], ["בִּרְצוֹן","by the politeness of"], ["הַמֶּלֶךְ","the king,"], ["וְכֶתֶר","with a crown"], ["עַל־רֹאשׁוֹ","upon his head,"], ["מְמַשֵּׁל","representing"], ["אֶת־הַכְּהֻנָּה","the Priesthood,"], ["כְּסֵמֶל","as emblematical of"], ["הַנְּשִׂיאוּת","the Presidency"], ["הַגְּדוֹלָה","grand"], ["בַּשָּׁמַיִם","in Heaven;"], ["וּבְיָדוֹ","with in his hand"], ["שֵׁבֶט","the scepter of"], ["הַצֶּדֶק","justice"], ["וְהַמִּשְׁפָּט","and judgment."], ["׃",""]]},
   { num: "ב", words: [
     ["פַּרְעֹה","Pharaoh,"],["הַמֶּלֶךְ","the King,"],["אֲשֶׁר","whose"],["שְׁמוֹ","name"],["נִתָּן","is given"],["בָּאוֹתִיּוֹת","in the characters"],["מֵעַל","above"],["רֹאשׁוֹ","his head."],["׃",""]
   ]},
@@ -511,7 +491,8 @@ var ab_fac3Verses = [
   ]},
   { num: "ו", words: [
     ["אוֹלִימְלָה","Olimlah,"],["עֶבֶד","a slave"],["שַׁיָּךְ","belonging to"],["לַנָּשִׂיא","the prince."],["׃",""]
-  ]}
+  ]},
+  { num: "ז", words: [["אַבְרָהָם","Abraham"], ["מְדַבֵּר","is reasoning"], ["עַל־יְסוֹדוֹת","upon the principles of"], ["חׇכְמַת","the science of"], ["הַכּוֹכָבִים","the stars,"], ["בַּחֲצַר","in the court of"], ["הַמֶּלֶךְ","the king."], ["׃",""]]}
 ];
 renderVerseSet(ab_fac3Verses, 'ab-fac3-verses');
 
