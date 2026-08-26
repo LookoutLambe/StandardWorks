@@ -3865,7 +3865,8 @@ body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
 
 <script src="bom_book_loader.js?v=8"></script>
 <script src="bom_lazy_assets.js?v=1"></script>
-<script src="../root_scorecard.js?v=4"></script>
+<script src="../root_names.js?v=4"></script>
+<script src="../root_scorecard.js?v=5"></script>
 <script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
 <script src="crossrefs.js?v=23"></script>
 <script src="roots_glossary.js?v=23"></script>
@@ -7732,12 +7733,16 @@ document.addEventListener('keydown', function(e) {
   function _pieces(s) { return _clean(s).split(/[־\s]+/).filter(Boolean); }
 
   // Resolve ONE whitespace/maqqef-free word to a Strong's number, or '' if none.
-  function _strongsFor(w) {
+  function _strongsFor(w, strict) {
     if (!window._strongsLookup || !window._strongsRoots) return '';
     var CI = consIndex();
     var sNum = _strongsLookup[w] || _strongsLookup[stripPrefixes(w)] ||
                _strongsLookup[stripNikkud(w)] || _strongsLookup[stripNikkud(stripPrefixes(w))] || '';
     if (sNum && _strongsRoots[sNum]) return sNum;
+    // A word the corpus glosses as a proper name gets the exact lookups above and
+    // nothing more. Fuzzy consonantal matching filed all 422 Book of Mormon
+    // נֶפִי tokens under H5297 נֹף — Noph, i.e. Memphis in Egypt.
+    if (strict) return '';
     var c = stripNikkud(w);
     if (!c) return '';
     if (CI[c] && _strongsRoots[CI[c]]) return CI[c];          // defective/variant pointing
@@ -7765,10 +7770,98 @@ document.addEventListener('keydown', function(e) {
     return '';
   }
 
+  // Consonantal index of Strong's LEMMAS (not surface forms). This is the
+  // authority for "is this string a real Hebrew root?" — 6,243 distinct lemmas,
+  // exhaustive for biblical Hebrew. Ambiguous skeletons map to null: חנכ is
+  // H2596 (train), H2585 (Enoch) and H2583 (encamp) at once, so it cannot be
+  // resolved to a number — but it is still a real root, and grouping every חנכ
+  // form under the string "חנכ" is correct where guessing a number is not.
+  // A Hebrew root is triliteral. Strong's numbers a *lexeme*, so one root is
+  // spread over several entries — חנך is H2596 (חָנַךְ, "dedicate"/"train"),
+  // H2598 (חֲנֻכָּה, "dedication") and H2599 — and the scorecard showed them as
+  // three unrelated roots. Following Strong's own derivation pointer collapses
+  // them onto the root they share.
+  //
+  // Only when that base is exactly three letters. Strong's derivations are
+  // 19th-century etymology and some are junk: מָן "manna" points at מָה "what",
+  // which is two letters and a different word. Those keep their own lexeme.
+  var _baseOf = null;
+  function baseRoot(sNum) {
+    if (!_baseOf) {
+      _baseOf = {};
+      if (window._strongsRoots) {
+        for (var n in _strongsRoots) {
+          var cur = n, seen = {};
+          while (_strongsRoots[cur] && _strongsRoots[cur].r &&
+                 _strongsRoots[cur].r !== cur && !seen[cur]) {
+            seen[cur] = 1; cur = _strongsRoots[cur].r;
+          }
+          var e = _strongsRoots[cur];
+          // Count Hebrew LETTERS, not characters: stripNikkud leaves the shin
+          // dot in place, so שָׁלַם measured 4 and every ש root failed the test.
+          _baseOf[n] = (e && e.w && (e.w.match(/[\u05D0-\u05EA]/g) || []).length === 3) ? cur : n;
+        }
+      }
+    }
+    return _baseOf[sNum] || sNum;
+  }
+
+  var _lemIdx = null;
+  function lemmaIndex() {
+    if (_lemIdx) return _lemIdx;
+    _lemIdx = {};
+    if (!window._strongsRoots) return _lemIdx;
+    for (var n in _strongsRoots) {
+      var e = _strongsRoots[n];
+      if (!e || !e.w) continue;
+      var c = normFinals(stripNikkud(e.w));
+      if (c.length < 2) continue;
+      if (_lemIdx[c] === undefined) _lemIdx[c] = n;
+      else if (_lemIdx[c] !== n) _lemIdx[c] = null;   // ambiguous
+    }
+    return _lemIdx;
+  }
+
+  // Peel affixes off an inflected form and keep the first residue that is a real
+  // root. Without this, conjugated verbs Strong's has no surface form for became
+  // their own one-occurrence entries — חִנְּכוּנִי ("taught me", Piel + 1cs object
+  // suffix) was filed as the root "חנכוני", which is not a word.
+  var _mSuf = ['ותיהם','ותינו','ותיכם','וני','ניו','תיו','יהם','יכם','ינו','ני',
+               'נו','הו','תי','תם','תן','כם','הם','הן','ים','ות','ם','ן','ו','ה','י','ך'];
+  var _mPre = ['וכש','ומ','וב','ול','וכ','וה','כש','ו','ה','ב','כ','ל','מ','ש'];
+  function rootByMorphology(w) {
+    var LI = lemmaIndex(), c = normFinals(stripNikkud(w));
+    if (c.length < 3) return '';
+    var cands = [], i, j;
+    for (i = 0; i < _mSuf.length; i++) {          // suffix first: it is the
+      var sfx = _mSuf[i];                          // stronger signal
+      if (c.length > sfx.length + 2 && c.slice(-sfx.length) === sfx) cands.push(c.slice(0, -sfx.length));
+    }
+    for (i = 0; i < _mPre.length; i++) {
+      var pre = _mPre[i];
+      if (c.indexOf(pre) === 0 && c.length - pre.length >= 3) {
+        var body = c.slice(pre.length);
+        cands.push(body);
+        for (j = 0; j < _mSuf.length; j++) {
+          var s2 = _mSuf[j];
+          if (body.length > s2.length + 2 && body.slice(-s2.length) === s2) cands.push(body.slice(0, -s2.length));
+        }
+      }
+    }
+    for (i = 0; i < cands.length; i++) {
+      var cand = cands[i];
+      if (cand.length < 3) continue;
+      if (LI[cand] !== undefined) return LI[cand] ? baseRoot(LI[cand]) : cand;
+    }
+    return '';
+  }
+
   function getRoot(hw) {
     var w = _clean(hw);
-    var s = _strongsFor(w);
-    if (s) return s;
+    var _head = _pieces(w).pop() || '';
+    var isName = !!(window._rootProperNames && window._rootProperNames[normFinals(stripNikkud(_head))]);
+    var s = _strongsFor(w, isName);
+    if (s) return baseRoot(s);
     if (rootMap[hw]) return rootMap[hw];
     var stripped2 = stripPrefixes(hw);
     if (rootMap[stripped2]) return rootMap[stripped2];
@@ -7777,10 +7870,18 @@ document.addEventListener('keydown', function(e) {
       var content = ps.filter(function(p) { return !_particles[stripNikkud(p)]; });
       var order = content.length ? content : ps;
       for (var i = 0; i < order.length; i++) {
-        var sp = _strongsFor(order[i]);
-        if (sp) return sp;
+        var sp = _strongsFor(order[i], isName);
+        if (sp) return baseRoot(sp);
       }
     }
+    // Inflected form of a real root? Skip this for words the corpus glosses as
+    // proper names — מוֹרוֹנִי would otherwise peel to מור, a real root meaning
+    // "to change", and Moroni would be filed under it.
+    if (!isName) {
+      var byMorph = rootByMorphology(_head || w);
+      if (byMorph) return byMorph;
+    }
+
     // Honest fallback: a real word Strong's does not carry (Smith, Rigdon,
     // Sanhedrin, אֵינוֹ...). Key it by its own consonantal form, never a stem.
     var head = ps.filter(function(p) { return !_particles[stripNikkud(p)]; }).pop() || ps.pop() || '';
@@ -7789,10 +7890,14 @@ document.addEventListener('keydown', function(e) {
     // (לוֹ "to him", לִי "to me"), not a stem fragment. Only reject the empty
     // case and bare single letters.
     if (c.length < 2) return '';
-    var m2 = c.match(_rePre);
-    if (m2) {                                                  // strip a prefix only if what is
-      var rest = c.slice(m2[1].length);                        // left is itself an attested word
-      if (rest.length >= 3 && window._rootWordForms && window._rootWordForms[rest]) return rest;
+    // A proper name keeps every letter: מוֹרְמוֹן must not shed its מ and become
+    // "ורמון" just because וְרַמּוֹן (Rimmon) happens to occur elsewhere.
+    if (!isName) {
+      var m2 = c.match(_rePre);
+      if (m2) {                                                // strip a prefix only if what is
+        var rest = c.slice(m2[1].length);                      // left is itself an attested word
+        if (rest.length >= 3 && window._rootWordForms && window._rootWordForms[rest]) return rest;
+      }
     }
     return c;
   }
