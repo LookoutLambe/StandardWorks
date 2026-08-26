@@ -2856,7 +2856,8 @@ detailHtml += '</div>';
       var xrefObj = JSON.parse(directXref);
       var refCount = xrefObj.refs ? xrefObj.refs.length : 0;
       detailHtml += '<br><span class="popup-xref-direct" style="cursor:pointer;color:#d4af37;text-decoration:underline;font-size:0.9em;">View Cross-References (' + refCount + ') \u2192</span>';
-    } else {
+    }
+    if (true) {
       var rootXrefs = window._rootXrefs && window._rootXrefs[root];
       if (rootXrefs && rootXrefs.length > 0) {
         detailHtml += '<br><span class="popup-xref-link" style="cursor:pointer;color:#d4af37;text-decoration:underline;font-size:0.9em;">Cross-References for root (' + rootXrefs.length + ') \u2192</span>';

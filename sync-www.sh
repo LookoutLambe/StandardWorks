@@ -14,8 +14,11 @@ rsync -a --delete --delete-excluded \
   --exclude='.DS_Store' \
   --exclude='StandardWorks/' \
   --exclude='StandardWorks.xcodeproj/' \
+  --exclude='build/' \
+  --exclude='DerivedData/' \
   --exclude='README*' \
-  --exclude='sync-www.sh' \
+  --exclude='*.sh' \
+  --exclude='*.py' \
   --exclude='CNAME' \
   --exclude='*.docx' \
   "$ROOT/" "$DEST/"

@@ -406,23 +406,51 @@
     return pfx + '-ch' + chapter + '-verses';
   }
 
+  // Load via <script> injection rather than fetch(): WKWebView blocks fetch() of
+  // file:// resources, so in the bundled iOS/macOS app fetch always failed and
+  // OT/NT/PGP cross-references fell back to a bare title list. Script injection
+  // works under both file:// and https. The verse files call the global
+  // renderVerseSet(data, targetId) (and 1nephi.js calls renderWords for its
+  // colophon), so we temporarily shim both to capture without touching host state.
+  //
+  // Loads MUST be serialized: a verse with several references injects multiple
+  // files at once, and they all share the one global renderVerseSet — running them
+  // concurrently clobbered the shim so only one card captured its verse. A queue
+  // keeps exactly one override active at a time.
+  var _verseLoadQueue = [];
+  var _verseLoadActive = false;
+  function _drainVerseLoadQueue() {
+    if (_verseLoadActive) return;
+    var job = _verseLoadQueue.shift();
+    if (!job) return;
+    var url = job.url, callback = job.callback;
+    if (_verseFileCache[url]) { callback(_verseFileCache[url]); _drainVerseLoadQueue(); return; }
+    _verseLoadActive = true;
+    var captured = {};
+    var prevRVS = window.renderVerseSet;
+    var prevRW = window.renderWords;
+    window.renderVerseSet = function(data, targetId) { captured[targetId] = data; };
+    window.renderWords = function() {};
+    var el = document.createElement('script');
+    el.src = url;
+    el.async = true;
+    function finish(ok) {
+      window.renderVerseSet = prevRVS;
+      window.renderWords = prevRW;
+      if (el.parentNode) el.parentNode.removeChild(el);
+      _verseFileCache[url] = ok ? captured : null;
+      _verseLoadActive = false;
+      try { callback(_verseFileCache[url]); }
+      finally { _drainVerseLoadQueue(); }
+    }
+    el.onload = function() { finish(true); };
+    el.onerror = function() { console.warn('Verse file load error:', url); finish(false); };
+    document.head.appendChild(el);
+  }
   function loadVerseFileAsync(url, callback) {
     if (_verseFileCache[url]) { callback(_verseFileCache[url]); return; }
-    fetch(url).then(function(r) { return r.text(); }).then(function(text) {
-      var captured = {};
-      try {
-        // 1nephi.js also calls renderWords() for its colophon, before any
-        // renderVerseSet() call. Without a stub that throws and nothing is
-        // captured, so every 1 Nephi cross-reference falls back to a bare link.
-        var fn = new Function('renderVerseSet', 'renderWords', text);
-        fn(function(data, targetId) { captured[targetId] = data; }, function() {});
-      } catch(e) { console.warn('Verse file parse error:', url, e); }
-      _verseFileCache[url] = captured;
-      callback(captured);
-    }).catch(function(e) {
-      console.warn('Verse file fetch error:', url, e);
-      callback(null);
-    });
+    _verseLoadQueue.push({ url: url, callback: callback });
+    _drainVerseLoadQueue();
   }
 
   function renderInterlinearHtml(verseData) {
