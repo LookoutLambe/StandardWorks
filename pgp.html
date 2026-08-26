@@ -1568,7 +1568,7 @@ body:not(.hide-sel-toolbar) #main-content{padding-right:60px!important;}
 
 function getBookChapter(chId) {
   var bookMap = {
-    'ms-ch': 'Moses', 'ab-ch': 'Abraham',
+    'ms-ch': 'Moses', 'ab-ch': 'Abraham', 'ab-fac': 'Abraham-Facsimile',
     'jsm-ch': 'JS-Matthew', 'jsh-ch': 'JS-History',
     'aof-ch': 'Articles of Faith'
   };
@@ -1585,7 +1585,7 @@ function getChapterLabel(id) {
   if (!id) return 'Pearl of Great Price';
   if (id === 'landing') return 'Pearl of Great Price';
   var bookMap = {
-    'ms-ch': 'Moses', 'ab-ch': 'Abraham',
+    'ms-ch': 'Moses', 'ab-ch': 'Abraham', 'ab-fac': 'Facsimile No.',
     'jsm-ch': 'JS-Matthew', 'jsh-ch': 'JS-History',
     'aof-ch': 'Articles of Faith'
   };
