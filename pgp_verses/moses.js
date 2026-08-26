@@ -351,7 +351,7 @@ var ms_ch6Verses = [
   { num: "ד", words: [
     ["וְאָז","And then"],["הֵחֵלּוּ","began"],["הָאֲנָשִׁים","the men"],["הָאֵלֶּה","these"],["לִקְרֹא","to call"],["בְּשֵׁם","upon the name of"],["יְהוָה","the Lord,"],["וַיְבָרֲכֵם","and blessed them"],["יְהוָה","the Lord."],["׃",""]
   ]},
-  { num: "ה", words: [["וְסֵפֶר","And a book of"], ["זִכָּרוֹן","remembrance"], ["נִשְׁמַר","was kept,"], ["אֲשֶׁר","in the which"], ["בּוֹ","therein"], ["נִכְתַּב","was recorded,"], ["בִּלְשׁוֹן","in the language of"], ["אָדָם","Adam,"], ["כִּי","for"], ["נִתַּן","it was given"], ["לְכׇל־הַקֹּרְאִים","unto as many as called"], ["אֶל־אֱלֹהִים","upon God"], ["לִכְתֹּב","to write"], ["בְּרוּחַ","by the spirit of"], ["נְבוּאָה","inspiration;"], ["׃",""]]},
+  { num: "ה", words: [["וְסֵפֶר","And a book of"], ["זִכָּרוֹן","remembrance"], ["נִשְׁמַר","was kept,"], ["אֲשֶׁר","in the which"], ["בּוֹ","therein"], ["נִכְתַּב","was recorded,"], ["בִּלְשׁוֹן","in the language of"], ["אָדָם","Adam,"], ["כִּי","for"], ["נִתַּן","it was given"], ["לְכׇל־הַקֹּרְאִים","unto as many as called"], ["אֶל־אֱלֹהִים","upon God"], ["לִכְתֹּב","to write"], ["בְּרוּחַ","by the spirit of"], ["נְשָׁמָה","inspiration;"], ["׃",""]]},
   { num: "ו", words: [["וְהֵם","And by them"], ["לִמְּדוּ","were taught"], ["אֶת־בְּנֵיהֶם","their children"], ["לִקְרֹא","to read"], ["וְלִכְתֹּב","and write,"], ["בְּלָשׁוֹן","having a language"], ["טְהוֹרָה","which was pure"], ["וּבְלִי־מוּם","and undefiled."], ["׃",""]]},
   { num: "ז", words: [
     ["וְהַכְּהֻנָּה","Now the same Priesthood"],["הַזֹּאת","this,"],["אֲשֶׁר","which"],["הָיְתָה","was"],["בָרֵאשִׁית","in the beginning,"],["תִּהְיֶה","shall be"],["גַּם","also"],["בְּאַחֲרִית","in the end of"],["הָעוֹלָם","the world."],["׃",""]
