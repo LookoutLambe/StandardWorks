@@ -168,7 +168,7 @@ var lam_ch5Verses = [
   { num:"יז", words:[["עַל־זֶה","upon this"],["הָיָה","was"],["דָוֶה","faint"],["לִבֵּנוּ","our heart"],["עַל־אֵלֶּה","upon these"],["חָשְׁכוּ","they have grown dim"],["עֵינֵינוּ","our eyes"],["׃",""]] },
   { num:"יח", words:[["עַל","upon"],["הַר־צִיּוֹן","mount Zion"],["שֶׁשָּׁמֵם","that is desolate"],["שׁוּעָלִים","foxes"],["הִלְּכוּ־בוֹ","they walk upon it"],["׃",""]] },
   { num:"יט", words:[["אַתָּה","you"],["יְהֹוָה","the LORD"],["לְעוֹלָם","forever"],["תֵּשֵׁב","shall sit"],["כִּסְאֲךָ","Your throne"],["לְדוֹר","to generation"],["וָדוֹר","to generation"],["׃",""]] },
-  { num:"כ", words:[["לָמָּה","why"],["לָנֶצַח","forever"],["תִּשְׁכָּחֵנוּ","do you forget us"],["תַּעַזְבֵנוּ","do you abandon? us"],["לְאֹרֶךְ","to length of"],["יָמִים","days"],["׃",""]] },
+  { num:"כ", words:[["לָמָּה","why"],["לָנֶצַח","forever"],["תִּשְׁכָּחֵנוּ","do you forget us"],["תַּעַזְבֵנוּ","do you abandon us"],["לְאֹרֶךְ","to length of"],["יָמִים","days"],["׃",""]] },
   { num:"כא", words:[["הֲשִׁיבֵנוּ","restore us"],["יְהֹוָה","the LORD"],["אֵלֶיךָ","to you"],["(ונשוב)",""],["[וְנָשׁוּבָה]","so let us return"],["חַדֵּשׁ","renew"],["יָמֵינוּ","our days"],["כְּקֶדֶם","like long ago"],["׃",""]] },
   { num:"כב", words:[["כִּי","because"],["אִם־מָאֹס","if to refuse"],["מְאַסְתָּנוּ","you have rejected us"],["קָצַפְתָּ","you were angry"],["עָלֵינוּ","over us"],["עַד־מְאֹד","exceedingly"],["׃",""]] },
 ];

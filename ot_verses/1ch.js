@@ -396,7 +396,7 @@ var _1ch_ch8Verses = [
 renderVerseSet(_1ch_ch8Verses, '1ch-ch8-verses');
 
 var _1ch_ch9Verses = [
-  { num:"א", words:[["וְכׇל־יִשְׂרָאֵל","and-all-Israel"],["הִתְיַחְשׂוּ","were-reckoned-by-genealogies"],["וְהִנָּם","and-behold-they"],["כְּתוּבִים","were-written"],["עַל־סֵפֶר","upon-a-book"],["מַלְכֵי","kings-of"],["יִשְׂרָאֵל","Israel"],["וִיהוּדָה","and-Judah"],["הׇגְלוּ","was-carried-away"],["לְבָבֶל","to-Babylon"],["בְּמַעֲלָם","for-their-transgression"],["׃",""]] },
+  { num:"א", words:[["וְכׇל־יִשְׂרָאֵל","and-all-Israel"],["הִתְיַחְשׂוּ","were-reckoned-by-genealogies"],["וְהִנָּם","and-behold-they"],["כְּתוּבִים","were-written"],["עַל־סֵפֶר","in-the-book-of"],["מַלְכֵי","kings-of"],["יִשְׂרָאֵל","Israel"],["וִיהוּדָה","and-Judah"],["הׇגְלוּ","was-carried-away"],["לְבָבֶל","to-Babylon"],["בְּמַעֲלָם","for-their-transgression"],["׃",""]] },
   { num:"ב", words:[["וְהַיּוֹשְׁבִים","now-the-inhabitants"],["הָרִאשֹׁנִים","the-first"],["אֲשֶׁר","which"],["בַּאֲחֻזָּתָם","in-their-possession"],["בְּעָרֵיהֶם","in-their-cities"],["יִשְׂרָאֵל","the-Israelites"],["הַכֹּהֲנִים","the-priests"],["הַלְוִיִּם","the-Levites"],["וְהַנְּתִינִים","and-the-temple-servants"],["׃",""]] },
   { num:"ג", words:[["וּבִירוּשָׁלַ͏ִם","and-in-Jerusalem"],["יָשְׁבוּ","dwelt"],["מִן־בְּנֵי","from-the-sons-of"],["יְהוּדָה","Judah"],["וּמִן־בְּנֵי","and-from-the-sons-of"],["בִנְיָמִן","Benjamin"],["וּמִן־בְּנֵי","and-from-the-sons-of"],["אֶפְרַיִם","Ephraim"],["וּמְנַשֶּׁה","and-Manasseh"],["׃",""]] },
   { num:"ד", words:[["עוּתַי","Utai"],["בֶּן־עַמִּיהוּד","son-of-Ammihud"],["בֶּן־עׇמְרִי","son-of-Omri"],["בֶּן־אִמְרִי","son-of-Imri"],["בֶן־(בנימן)־[בָּנִי","son-of-Bani"],["מִן־]בְּנֵי־פֶרֶץ","of-the-children-of-Perez"],["בֶּן־יְהוּדָה","son-of-Judah"],["׃",""]] },
