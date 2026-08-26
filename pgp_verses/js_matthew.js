@@ -55,24 +55,16 @@ var jsm_ch1Verses = [
   { num: "יח", words: [
     ["כִּי","For"],["אָז","then,"],["בַּיָּמִים","in days"],["הָהֵם","those,"],["תִּהְיֶה","shall be"],["צָרָה","tribulation"],["גְדוֹלָה","great"],["עַל־הַיְּהוּדִים","upon the Jews,"],["וְעַל־יֹשְׁבֵי","and upon the inhabitants of"],["יְרוּשָׁלַיִם","Jerusalem,"],["אֲשֶׁר","such as"],["לֹא","was not"],["הָיְתָה","there"],["כָמוֹהָ","like it,"],["מֵאֵת","from"],["יְהוָה","the Lord,"],["עַל־יִשְׂרָאֵל","upon Israel,"],["מֵרֵאשִׁית","from the beginning of"],["מַלְכוּתָם","their kingdom"],["עַד־עַתָּה","until now;"],["וְלֹא","nor"],["תִהְיֶה","shall be"],["עוֹד","ever again"],["עַל־יִשְׂרָאֵל","upon Israel."],["׃",""]
   ]},
-  { num: "יט", words: [
-    ["כׇּל־אֲשֶׁר","All things which"],["בָּא","hath befallen"],["עֲלֵיהֶם","them"],["אַךְ","are only"],["רֵאשִׁית","the beginning of"],["הַצָּרוֹת","the sorrows"],["הַבָּאוֹת","which shall come upon them."],["׃",""]
-  ]},
+  { num: "יט", words: [["כׇּל־אֲשֶׁר","All things which"], ["בָּא","have befallen"], ["עֲלֵיהֶם","them"], ["אַךְ","are only"], ["רֵאשִׁית","the beginning of"], ["הַצָּרוֹת","the sorrows"], ["הַבָּאוֹת","which shall come"], ["עֲלֵיהֶם","upon them."], ["׃",""]]},
   { num: "כ", words: [
     ["וְלוּלֵא","And except"],["נִקְצְרוּ","were shortened"],["הַיָּמִים","the days"],["הָהֵם","those,"],["לֹא","not"],["נוֹשַׁע","should be saved"],["כׇּל־בָּשָׂר","any of their flesh;"],["אַךְ","but"],["לְמַעַן","for the sake of"],["בְּחִירַי","the elect,"],["כַּבְּרִית","according to the covenant,"],["יִקָּצְרוּ","they shall be shortened."],["׃",""]
   ]},
-  { num: "כא", words: [
-    ["הִנֵּה","Behold,"],["דִּבַּרְתִּי","I have spoken"],["עַל־הַיְּהוּדִים","concerning the Jews;"],["וְעַתָּה","and again,"],["שִׁמְעוּ","hear ye:"],["אַחֲרֵי","after"],["צָרַת","the tribulation of"],["הַיָּמִים","days"],["הָהֵם","those"],["אֲשֶׁר","which shall come"],["עַל־יְרוּשָׁלַיִם","upon Jerusalem,"],["אִם־יֹאמַר","if shall say"],["אִישׁ","any man"],["אֲלֵיכֶם","unto you,"],["הִנֵּה","Lo,"],["פֹה","here is"],["הַמָּשִׁיחַ","Christ,"],["אוֹ","or"],["שָׁם","there,"],["אַל־תַּאֲמִינוּ","believe him not;"],["׃",""]
-  ]},
-  { num: "כב", words: [
-    ["כִּי","For"],["בַיָּמִים","in days"],["הָהֵם","those"],["יָקוּמוּ","there shall arise"],["מְשִׁיחֵי","Christs of"],["שֶׁקֶר","falsehood,"],["וּנְבִיאֵי","and prophets of"],["שֶׁקֶר","falsehood,"],["וְיִתְּנוּ","and shall give"],["אֹתוֹת","signs"],["וּמֹפְתִים","and wonders"],["גְּדֹלִים","great,"],["עַד","insomuch"],["כִּי","that"],["יַשִּׁיאוּ","they shall deceive,"],["אִם־יוּכְלוּ","if possible,"],["גַּם","even"],["אֶת־בְּחִירַי","the very elect,"],["אֲשֶׁר","who are the elect"],["כַּבְּרִית","according to the covenant."],["׃",""]
-  ]},
+  { num: "כא", words: [["הִנֵּה","Behold,"], ["אֵלֶּה","these things"], ["דִּבַּרְתִּי","I have spoken"], ["לָכֶם","unto you"], ["עַל־הַיְּהוּדִים","concerning the Jews;"], ["וְעוֹד","and again,"], ["אַחֲרֵי","after"], ["צָרַת","the tribulation of"], ["הַיָּמִים","the days"], ["הָהֵם","those"], ["אֲשֶׁר","which shall come"], ["עַל־יְרוּשָׁלַיִם","upon Jerusalem,"], ["אִם־יֹאמַר","if shall say"], ["אִישׁ","any man"], ["אֲלֵיכֶם","unto you,"], ["הִנֵּה","Lo,"], ["פֹה","here is"], ["הַמָּשִׁיחַ","Christ,"], ["אוֹ","or"], ["שָׁם","there,"], ["אַל־תַּאֲמִינוּ","believe him not;"], ["׃",""]]},
+  { num: "כב", words: [["כִּי","For"], ["בַיָּמִים","in the days"], ["הָהֵם","those"], ["יָקוּמוּ","there shall also arise"], ["מְשִׁיחֵי","Christs"], ["שֶׁקֶר","false,"], ["וּנְבִיאֵי","and prophets"], ["שֶׁקֶר","false,"], ["וְיִתְּנוּ","and shall show"], ["אֹתוֹת","signs"], ["וּמֹפְתִים","and wonders"], ["גְּדֹלִים","great,"], ["עַד","insomuch"], ["כִּי","that,"], ["אִם־יוּכְלוּ","if possible,"], ["יַשִּׁיאוּ","they shall deceive"], ["גַּם","the very"], ["אֶת־בְּחִירַי","elect,"], ["אֲשֶׁר","who"], ["הֵם","are"], ["הַבְּחִירִים","the elect"], ["כַּבְּרִית","according to the covenant."], ["׃",""]]},
   { num: "כג", words: [
     ["הִנֵּה","Behold,"],["מְדַבֵּר","speak"],["אֲנִי","I"],["אֵלֶּה","these things"],["לְמַעַן","for the sake of"],["בְּחִירָי","the elect;"],["וְגַם","and ye also"],["תִּשְׁמְעוּ","shall hear of"],["מִלְחָמוֹת","wars,"],["וּשְׁמוּעוֹת","and rumors of"],["מִלְחָמוֹת","wars;"],["רְאוּ","see"],["שֶׁלֹּא","that ye be not"],["תִבָּהֲלוּ","troubled,"],["כִּי","for"],["כֹל","all"],["אֲשֶׁר","that"],["אָמַרְתִּי","I have told you"],["יִהְיֶה","must come to pass;"],["אַךְ","but"],["עוֹד","yet"],["לֹא","not"],["הַקֵּץ","is the end."],["׃",""]
   ]},
-  { num: "כד", words: [
-    ["הִנֵּה","Behold,"],["אָמַרְתִּי","I have told you"],["מִלְּפָנִים","before;"],["׃",""]
-  ]},
+  { num: "כד", words: [["הִנֵּה","Behold,"], ["אָמַרְתִּי","I have told"], ["לָכֶם","you"], ["מִלְּפָנִים","before;"], ["׃",""]]},
   { num: "כה", words: [
     ["וְעַל־כֵּן","Wherefore,"],["אִם־יֹאמְרוּ","if they shall say"],["אֲלֵיכֶם","unto you:"],["הִנֵּהוּ","Behold, he is"],["בַמִּדְבָּר","in the desert,"],["אַל־תֵּצְאוּ","go not forth:"],["הִנֵּהוּ","Behold, he is"],["בַּחֲדָרִים","in the secret chambers,"],["אַל־תַּאֲמִינוּ","believe it not;"],["׃",""]
   ]},
@@ -151,9 +143,7 @@ var jsm_ch1Verses = [
   { num: "נ", words: [
     ["אַשְׁרֵי","Blessed is"],["הָעֶבֶד","servant"],["הַהוּא","that,"],["אֲשֶׁר","whom"],["בְּבוֹא","when cometh"],["אֲדֹנָיו","his lord,"],["יִמְצָאֶנּוּ","shall find him"],["עֹשֶׂה","doing"],["כֵן","so;"],["אָמֵן","and verily"],["אֹמֵר","say"],["אֲנִי","I"],["לָכֶם","unto you,"],["עַל","over"],["כׇּל־אֲשֶׁר־לוֹ","all his goods"],["יַפְקִידֶנּוּ","he shall make him ruler."],["׃",""]
   ]},
-  { num: "נא", words: [
-    ["וְאִם־יֹאמַר","But if shall say"],["הָעֶבֶד","servant"],["הָרָע","evil that"],["בְּלִבּוֹ","in his heart:"],["מִתְמַהְמֵהַּ","delayeth his coming"],["אֲדֹנִי","my lord;"],["׃",""]
-  ]},
+  { num: "נא", words: [["וְאִם־יֹאמַר","But if shall say"], ["הָעֶבֶד","servant"], ["הָרָע","that evil"], ["בְּלִבּוֹ","in his heart:"], ["מִתְמַהְמֵהַּ","delayeth"], ["אֲדֹנִי","My lord"], ["לָבוֹא","his coming,"], ["׃",""]]},
   { num: "נב", words: [
     ["וְהֵחֵל","And shall begin"],["לְהַכּוֹת","to smite"],["אֶת־עַבְדֵי","his fellow"],["חֲבֵרָיו","servants,"],["וְלֶאֱכֹל","and to eat"],["וְלִשְׁתּוֹת","and drink"],["עִם־הַשִּׁכּוֹרִים","with the drunken,"],["׃",""]
   ]},
