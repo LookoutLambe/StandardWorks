@@ -1569,6 +1569,7 @@ body:not(.hide-sel-toolbar) #main-content{padding-right:60px!important;}
 function getBookChapter(chId) {
   var bookMap = {
     'ms-ch': 'Moses', 'ab-ch': 'Abraham', 'ab-fac': 'Abraham-Facsimile',
+    'pgp-intro': 'PGP-Introduction',
     'jsm-ch': 'JS-Matthew', 'jsh-ch': 'JS-History',
     'aof-ch': 'Articles of Faith'
   };
@@ -1586,10 +1587,11 @@ function getChapterLabel(id) {
   if (id === 'landing') return 'Pearl of Great Price';
   var bookMap = {
     'ms-ch': 'Moses', 'ab-ch': 'Abraham', 'ab-fac': 'Facsimile No.',
+    'pgp-intro': 'Introduction',
     'jsm-ch': 'JS-Matthew', 'jsh-ch': 'JS-History',
     'aof-ch': 'Articles of Faith'
   };
-  var singleChapter = {'jsm-ch':1,'jsh-ch':1,'aof-ch':1};
+  var singleChapter = {'jsm-ch':1,'jsh-ch':1,'aof-ch':1,'pgp-intro':1};
   for (var prefix in bookMap) {
     if (id.indexOf(prefix) === 0) {
       var num = id.replace(prefix, '');
@@ -1813,6 +1815,9 @@ function navTo(id, slideDir) {
 
   if (isLanding) {
     // header hidden above
+  } else if (id.indexOf('pgp-intro') === 0) {
+    titleEl.textContent = 'פנינת המחיר הגדול';
+    subEl.textContent = 'Pearl of Great Price'; subEl.style.display = '';
   } else if (id.indexOf('ms-') === 0) {
     titleEl.textContent = 'ספר משה';
     subEl.textContent = 'Book of Moses'; subEl.style.display = '';
