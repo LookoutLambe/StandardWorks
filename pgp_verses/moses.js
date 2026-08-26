@@ -201,51 +201,33 @@ var ms_ch4Verses = [
 ];
 renderVerseSet(ms_ch4Verses, 'ms-ch4-verses');
 var ms_ch5Verses = [
-  { num: "א", words: [
-    ["וַיְהִי","And it came to pass"],["אַחֲרֵי","after"],["אֹתָם","that"],["וַיָּחֶל","began"],["אָדָם","Adam"],["לַעֲבֹד","to till"],["אֶת־הָאֲדָמָה","the earth,"],["וְלִרְדּוֹת","and to have dominion"],["בְּכׇל־חַיַּת","over all the beasts of"],["הַשָּׂדֶה","the field,"],["וְלֶאֱכֹל","and to eat"],["לַחְמוֹ","his bread"],["בְּזֵעַת","by the sweat of"],["אַפּוֹ","his brow,"],["כַּאֲשֶׁר","as"],["צִוִּיתִיו","I, the Lord, had commanded him."],["וְחַוָּה","And Eve,"],["אִשְׁתּוֹ","his wife,"],["גַּם־הִיא","also"],["עָבְדָה","did labor"],["עִמּוֹ","with him."],["׃",""]
-  ]},
+  { num: "א", words: [["וַיְהִי","And it came to pass"], ["אַחֲרֵי","that after"], ["אֲשֶׁר","that"], ["גֵּרַשְׁתִּי","had driven out"], ["אֲנִי","I,"], ["יְהוָה","the Lord"], ["אֱלֹהִים","God,"], ["אֹתָם","them,"], ["וַיָּחֶל","that began"], ["אָדָם","Adam"], ["לַעֲבֹד","to till"], ["אֶת־הָאֲדָמָה","the earth,"], ["וְלִרְדּוֹת","and to have dominion"], ["בְּכׇל־חַיַּת","over all the beasts of"], ["הַשָּׂדֶה","the field,"], ["וְלֶאֱכֹל","and to eat"], ["לַחְמוֹ","his bread"], ["בְּזֵעַת","by the sweat of"], ["אַפּוֹ","his brow,"], ["כַּאֲשֶׁר","as"], ["אֲנִי","I"], ["יְהוָה","the Lord"], ["צִוִּיתִיו","had commanded him."], ["וְחַוָּה","And Eve,"], ["אִשְׁתּוֹ","his wife,"], ["גַּם־הִיא","also"], ["עָבְדָה","did labor"], ["עִמּוֹ","with him."], ["׃",""]]},
   { num: "ב", words: [
     ["וַיֵּדַע","And knew"],["אָדָם","Adam"],["אֶת־אִשְׁתּוֹ","his wife,"],["וַתֵּלֶד","and she bare"],["לוֹ","unto him"],["בָּנִים","sons"],["וּבָנוֹת","and daughters,"],["וַיָּחֵלּוּ","and they began"],["לִפְרוֹת","to multiply"],["וְלִרְבּוֹת","and to replenish"],["וּלְמַלֹּאת","and to fill"],["אֶת־הָאָרֶץ","the earth."],["׃",""]
   ]},
   { num: "ג", words: [
     ["וּמֵאָז","And from that time forth,"],["הֵחֵלּוּ","began"],["בְּנֵי","the sons of"],["אָדָם","Adam"],["וּבְנוֹתָיו","and his daughters"],["לְהִפָּרֵד","to divide"],["שְׁנַיִם","two"],["שְׁנַיִם","by two"],["בָּאָרֶץ","in the land,"],["וְלַעֲבֹד","and to till"],["אֶת־הָאֲדָמָה","the land,"],["וְלִרְעוֹת","and to tend"],["צֹאן","flocks,"],["וְהֵם","and they"],["גַּם","also"],["הוֹלִידוּ","begat"],["בָּנִים","sons"],["וּבָנוֹת","and daughters."],["׃",""]
   ]},
-  { num: "ד", words: [
-    ["וַיִּקְרְאוּ","And called"],["אָדָם","Adam"],["וְחַוָּה","and Eve,"],["אִשְׁתּוֹ","his wife,"],["בְּשֵׁם","upon the name of"],["יְהוָה","the Lord,"],["וַיִּשְׁמְעוּ","and they heard"],["אֶת־קוֹל","the voice of"],["יְהוָה","the Lord"],["מִדֶּרֶךְ","from the way toward"],["גַּן־עֵדֶן","the Garden of Eden,"],["מְדַבֵּר","speaking"],["אֲלֵיהֶם","unto them;"],["וְלֹא","and not"],["רָאוּ","they saw"],["אֶת־פָּנָיו","him,"],["כִּי","for"],["נִסְתְּרוּ","they were shut out"],["מִפָּנָיו","from his presence."],["׃",""]
-  ]},
+  { num: "ד", words: [["וַיִּקְרְאוּ","And called upon"], ["אָדָם","Adam"], ["וְחַוָּה","and Eve,"], ["אִשְׁתּוֹ","his wife,"], ["בְּשֵׁם","the name of"], ["יְהוָה","the Lord,"], ["וַיִּשְׁמְעוּ","and they heard"], ["אֶת־קוֹל","the voice of"], ["יְהוָה","the Lord"], ["מִדֶּרֶךְ","from the way toward"], ["גַּן־עֵדֶן","the Garden of Eden,"], ["מְדַבֵּר","speaking"], ["אֲלֵיהֶם","unto them,"], ["וְלֹא","and not"], ["רָאוּ","they saw"], ["אֹתוֹ","him;"], ["כִּי","for"], ["נִסְגְּרוּ","they were shut out"], ["מִפָּנָיו","from his presence."], ["׃",""]]},
   { num: "ה", words: [
     ["וַיִּתֵּן","And he gave"],["לָהֶם","unto them"],["מִצְוֹת","commandments,"],["לַעֲבֹד","that they should worship"],["אֶת־יְהוָה","the Lord"],["אֱלֹהֵיהֶם","their God,"],["וּלְהַקְרִיב","and should offer"],["אֶת־בְּכֹרוֹת","the firstlings of"],["צֹאנָם","their flocks,"],["קָרְבָּן","for an offering"],["לַיהוָה","unto the Lord."],["וַיִּשְׁמַע","And was obedient"],["אָדָם","Adam"],["לְמִצְוֹת","unto the commandments of"],["יְהוָה","the Lord."],["׃",""]
   ]},
   { num: "ו", words: [
     ["וַיְהִי","And it came to pass"],["מִקֵּץ","after"],["יָמִים","days"],["רַבִּים","many"],["וַיֵּרָא","that appeared"],["מַלְאַךְ","an angel of"],["יְהוָה","the Lord"],["אֶל־אָדָם","unto Adam,"],["וַיֹּאמֶר","saying:"],["לָמָּה","Why"],["תִזְבַּח","dost thou offer sacrifices"],["לַיהוָה","unto the Lord?"],["וַיֹּאמֶר","And said"],["אָדָם","Adam"],["לֹא","not"],["יָדַעְתִּי","unto him: I know,"],["בִּלְתִּי","save"],["כִּי","that"],["צִוַּנִי","commanded me"],["יְהוָה","the Lord."],["׃",""]
   ]},
-  { num: "ז", words: [
-    ["וַיְדַבֵּר","And spake"],["הַמַּלְאָךְ","the angel"],["לֵאמֹר","saying:"],["הַדָּבָר","The thing"],["הַזֶּה","this"],["לִדְמוּת","is a similitude of"],["קָרְבַּן","the sacrifice of"],["הַיָּחִיד","the Only Begotten"],["לָאָב","of the Father,"],["הַמָּלֵא","which is full of"],["חֶסֶד","grace"],["וֶאֱמֶת","and truth."],["׃",""]
-  ]},
+  { num: "ז", words: [["וַיְדַבֵּר","And then spake"], ["הַמַּלְאָךְ","the angel,"], ["לֵאמֹר","saying:"], ["הַדָּבָר","thing"], ["הַזֶּה","This"], ["דְּמוּת","is a similitude of"], ["קׇרְבַּן","the sacrifice of"], ["יְחִיד","the Only Begotten of"], ["הָאָב","the Father,"], ["הַמָּלֵא","which is full of"], ["חֶסֶד","grace"], ["וֶאֱמֶת","and truth."], ["׃",""]]},
   { num: "ח", words: [
     ["לָכֵן","Wherefore,"],["כׇּל־אֲשֶׁר","whatsoever"],["תַּעֲשֶׂה","thou doest,"],["תַּעֲשֶׂה","do it"],["בְּשֵׁם","in the name of"],["הַבֵּן","the Son,"],["וְתָשׁוּב","and thou shalt repent"],["וְקָרָאתָ","and call"],["אֶל־אֱלֹהִים","upon God"],["בְּשֵׁם","in the name of"],["הַבֵּן","the Son"],["לְעוֹלָם","for evermore."],["׃",""]
   ]},
-  { num: "ט", words: [
-    ["וּבַיּוֹם","And in the day"],["הַהוּא","that"],["נָפְלָה","fell"],["רוּחַ","the Holy Ghost"],["הַקֹּדֶשׁ",""],["עַל־אָדָם","upon Adam,"],["הַמֵּעִידָה","which beareth record of"],["עַל־הָאָב","the Father"],["וְעַל־הַבֵּן","and the Son,"],["לֵאמֹר","saying:"],["הַבֵּן","The Son"],["יְחִיד","is the Only Begotten of"],["הוּא","he"],["לָאָב","the Father"],["מֵרֵאשִׁית","from the beginning,"],["וְעַד־עוֹלָם","henceforth and forever,"],["וְאַתָּה","that as thou"],["אַף","even"],["כִּי","since"],["נָפַלְתָּ","hast fallen,"],["תִּגָּאֵל","thou mayest be redeemed,"],["וְכׇל־הַשֹּׁמֵעַ","and all whoso hearkeneth"],["וּמַאֲמִין","and believeth"],["יִגָּאֵל","shall be redeemed."],["׃",""]
-  ]},
-  { num: "י", words: [
-    ["וּבַיּוֹם","And in the day"],["הַהוּא","that"],["בֵּרַךְ","blessed"],["אָדָם","Adam"],["אֶת־אֱלֹהִים","God"],["וַיִּמָּלֵא","and was filled,"],["וַיָּחֶל","and began"],["לְהִנָּבֵא","to prophesy"],["עַל־כׇּל־מִשְׁפְּחוֹת","concerning all the families of"],["הָאָרֶץ","the earth,"],["לֵאמֹר","saying:"],["בָּרוּךְ","Blessed be"],["שֵׁם","the name of"],["אֱלֹהִים","God,"],["כִּי","for"],["בְּפִשְׁעִי","because of my transgression"],["נִפְקְחוּ","are opened"],["עֵינַי","mine eyes,"],["וּבָעוֹלָם","and in world"],["הַזֶּה","this"],["יִהְיֶה־לִּי","I shall have"],["שִׂמְחָה","joy,"],["וּבַבָּשָׂר","and in the flesh"],["עוֹד","again"],["אֶרְאֶה","I shall see"],["אֱלֹהִים","God."],["׃",""]
-  ]},
+  { num: "ט", words: [["וּבַיּוֹם","And in the day"], ["הַהוּא","that"], ["נָפְלָה","fell"], ["רוּחַ","the Ghost"], ["הַקֹּדֶשׁ","Holy"], ["עַל־אָדָם","upon Adam,"], ["הַמְּעִידָה","which beareth record"], ["עַל־הָאָב","of the Father"], ["וְעַל־הַבֵּן","and the Son,"], ["לֵאמֹר","saying:"], ["אֲנִי","I am"], ["יְחִיד","the Only Begotten of"], ["הָאָב","the Father"], ["מֵרֵאשִׁית","from the beginning,"], ["מֵעַתָּה","henceforth"], ["וְעַד־עוֹלָם","and forever,"], ["כִּי","that"], ["כַּאֲשֶׁר","as"], ["נָפַלְתָּ","thou hast fallen"], ["כֵּן","so"], ["תִּגָּאֵל","thou mayest be redeemed,"], ["וְכׇל־הָאָדָם","and all mankind,"], ["כֹּל","even as many"], ["אֲשֶׁר","as"], ["יַחְפֹּץ","will."], ["׃",""]]},
+  { num: "י", words: [["וּבַיּוֹם","And in the day"], ["הַהוּא","that"], ["בֵּרַךְ","blessed"], ["אָדָם","Adam"], ["אֶת־אֱלֹהִים","God"], ["וַיִּמָּלֵא","and was filled,"], ["וַיָּחֶל","and began"], ["לְהִנָּבֵא","to prophesy"], ["עַל־כׇּל־מִשְׁפְּחוֹת","concerning all the families of"], ["הָאָרֶץ","the earth,"], ["לֵאמֹר","saying:"], ["בָּרוּךְ","Blessed be"], ["שֵׁם","the name of"], ["אֱלֹהִים","God,"], ["כִּי","for"], ["בְּפִשְׁעִי","because of my transgression"], ["נִפְקְחוּ","are opened"], ["עֵינַי","my eyes,"], ["וּבַחַיִּים","and in life"], ["הָאֵלֶּה","this"], ["יִהְיֶה־לִּי","I shall have"], ["שִׂמְחָה","joy,"], ["וּבַבָּשָׂר","and in the flesh"], ["עוֹד","again"], ["אֶרְאֶה","I shall see"], ["אֱלֹהִים","God."], ["׃",""]]},
   { num: "יא", words: [
     ["וַתִּשְׁמַע","And heard"],["חַוָּה","Eve,"],["אִשְׁתּוֹ","his wife,"],["אֶת־כׇּל־הַדְּבָרִים","all the things"],["הָאֵלֶּה","these"],["וַתִּשְׂמַח","and was glad,"],["לֵאמֹר","saying:"],["לוּלֵי","Were it not for"],["פִשְׁעֵנוּ","our transgression,"],["לֹא","not"],["הָיָה","should we have had"],["לָנוּ","unto us"],["זֶרַע","seed,"],["וְלֹא","and not"],["יָדַעְנוּ","should have known"],["לְעוֹלָם","ever"],["טוֹב","good"],["וָרָע","and evil,"],["וְשִׂמְחַת","and the joy of"],["גְּאֻלָּתֵנוּ","our redemption,"],["וְחַיֵּי","and life"],["עוֹלָם","eternal,"],["אֲשֶׁר","which"],["יִתֵּן","giveth"],["אֱלֹהִים","God"],["לְכׇל־הַשֹּׁמְעִים","unto all the obedient."],["׃",""]
   ]},
-  { num: "יב", words: [
-    ["וַיְבָרֲכוּ","And blessed"],["אָדָם","Adam"],["וְחַוָּה","and Eve"],["אֶת־שֵׁם","the name of"],["אֱלֹהִים","God,"],["וַיּוֹדִיעוּ","and they made known"],["אֶת־כׇּל־הַדְּבָרִים","all things"],["לִבְנֵיהֶם","unto their sons"],["וּלְבְנוֹתֵיהֶם","and their daughters."],["׃",""]
-  ]},
-  { num: "יג", words: [
-    ["וַיָּבֹא","And came"],["הַשָּׂטָן","Satan"],["בְּתוֹכָם","among them,"],["לֵאמֹר","saying:"],["אֲנִי","I am"],["גַם־כֵּן","also"],["בֶּן־אֱלֹהִים","a son of God;"],["וַיְצַו","and he commanded"],["אֹתָם","them,"],["לֵאמֹר","saying:"],["אַל־תַּאֲמִינוּ","Believe it not;"],["וְלֹא","and not"],["הֶאֱמִינוּ","they believed,"],["וַיֶּאֱהֲבוּ","and they loved"],["אֶת־הַשָּׂטָן","Satan"],["מֵאֱלֹהִים","more than God."],["וַיֵּלְכוּ","And went"],["אַחֲרֵי","after"],["תַּאֲוֹת","the lusts of"],["לִבָּם","their own hearts"],["וַיִּתְיַצְּבוּ","and from that time forth became"],["בְּדֶרֶךְ","carnal, sensual, and devilish, as"],["הַשָּׂטָן","Satan."],["׃",""]
-  ]},
-  { num: "יד", words: [
-    ["וַיִּקְרָא","And called"],["יְהוָה","the Lord"],["אֱלֹהִים","God"],["אֶל־הָאָדָם","upon men"],["בְּכׇל־מָקוֹם","everywhere,"],["בְּרוּחַ","by the Holy Ghost,"],["הַקֹּדֶשׁ",""],["וַיְצַו","and commanded"],["אֹתָם","them"],["לָשׁוּב","that they should repent."],["׃",""]
-  ]},
-  { num: "טו", words: [
-    ["וְכֹל","And as many"],["הַמַּאֲמִינִים","as believed"],["בַּבֵּן","in the Son,"],["וְשָׁבִים","and repented"],["מִדַּרְכֵּיהֶם","of their sins,"],["יִוָּשֵׁעוּ","should be saved;"],["וְכֹל","and as many"],["אֲשֶׁר","as"],["לֹא","not"],["יַאֲמִינוּ","believed"],["וְלֹא","and not"],["יָשׁוּבוּ","repented,"],["בַּעֲוֹנָם","in their iniquity"],["יַעַמְדוּ","should be damned;"],["וְהַדָּבָר","and the word"],["הַזֶּה","this"],["יָצָא","went forth"],["מִפִּי","out of the mouth of"],["אֱלֹהִים","God"],["לִגְזֵרָה","as a firm decree."],["׃",""]
-  ]},
+  { num: "יב", words: [["וַיְבָרֲכוּ","And blessed"], ["אָדָם","Adam"], ["וְחַוָּה","and Eve"], ["אֶת־שֵׁם","the name of"], ["אֱלֹהִים","God,"], ["וַיּוֹדִיעוּ","and they made known"], ["אֶת־כׇּל־הַדְּבָרִים","all things"], ["לִבְנֵיהֶם","unto their sons"], ["וְלִבְנוֹתֵיהֶם","and their daughters."], ["׃",""]]},
+  { num: "יג", words: [["וַיָּבֹא","And came"], ["הַשָּׂטָן","Satan"], ["בְּתוֹכָם","among them,"], ["לֵאמֹר","saying:"], ["אֲנִי","I am"], ["גַם־כֵּן","also"], ["בֶּן־אֱלֹהִים","a son of God;"], ["וַיְצַו","and he commanded"], ["אֹתָם","them,"], ["לֵאמֹר","saying:"], ["אַל־תַּאֲמִינוּ","Believe it not;"], ["וְלֹא","and not"], ["הֶאֱמִינוּ","they believed it,"], ["וַיֶּאֱהֲבוּ","and they loved"], ["אֶת־הַשָּׂטָן","Satan"], ["מֵאֱלֹהִים","more than God."], ["וַיָּחֵלּוּ","And began"], ["בְנֵי־הָאָדָם","men"], ["מֵאָז","from that time forth"], ["לִהְיוֹת","to be"], ["בַּשָּׂרִיִּים","carnal,"], ["חִשּׁוּקִיִּים","sensual,"], ["וְשָׂטָנִיִּים","and devilish."], ["׃",""]]},
+  { num: "יד", words: [["וַיִּקְרָא","And called"], ["יְהוָה","the Lord"], ["אֱלֹהִים","God"], ["אֶל־הָאָדָם","upon men"], ["בְּכׇל־מָקוֹם","everywhere,"], ["בְּרוּחַ","by the Ghost"], ["הַקֹּדֶשׁ","Holy"], ["וַיְצַו","and commanded"], ["אֹתָם","them"], ["לָשׁוּב","that they should repent."], ["׃",""]]},
+  { num: "טו", words: [["וְכֹל","And as many as"], ["הַמַּאֲמִינִים","believed"], ["בַּבֵּן","in the Son,"], ["וְשָׁבִים","and repented"], ["מֵחַטֹּאתָם","of their sins,"], ["יִוָּשֵׁעוּ","should be saved;"], ["וְכֹל","and as many as"], ["אֲשֶׁר","which"], ["לֹא","not"], ["יַאֲמִינוּ","believed"], ["וְלֹא","and not"], ["יָשׁוּבוּ","repented,"], ["יֻרְשָׁעוּ","should be damned;"], ["וְהַדְּבָרִים","and the words"], ["יָצְאוּ","went forth"], ["מִפִּי","out of the mouth of"], ["אֱלֹהִים","God"], ["לִגְזֵרָה","in a decree"], ["נֶאֱמָנָה","firm;"], ["לָכֵן","wherefore"], ["יֵעָשׂוּ","they must be fulfilled."], ["׃",""]]},
   { num: "טז", words: [
     ["וְאָדָם","And Adam"],["וְחַוָּה","and Eve,"],["אִשְׁתּוֹ","his wife,"],["לֹא","not"],["חָדְלוּ","ceased"],["לִקְרֹא","to call"],["אֶל־אֱלֹהִים","upon God."],["וַיֵּדַע","And knew"],["אָדָם","Adam"],["אֶת־חַוָּה","Eve"],["אִשְׁתּוֹ","his wife,"],["וַתַּהַר","and she conceived"],["וַתֵּלֶד","and bare"],["אֶת־קַיִן","Cain,"],["וַתֹּאמֶר","and said:"],["קָנִיתִי","I have gotten"],["אִישׁ","a man"],["מֵאֵת","from"],["יְהוָה","the Lord;"],["לָכֵן","wherefore"],["לֹא","not"],["יִמְאַס","may he reject"],["אֶת־דְּבָרָיו","his words."],["וְהִנֵּה","But behold,"],["קַיִן","Cain"],["לֹא","not"],["שָׁמַע","hearkened,"],["לֵאמֹר","saying:"],["מִי","Who is"],["יְהוָה","the Lord"],["כִּי","that"],["אֵדָעֶנּוּ","I should know him?"],["׃",""]
   ]},
@@ -267,9 +249,7 @@ var ms_ch5Verses = [
   { num: "כב", words: [
     ["וַיֹּאמֶר","And said"],["יְהוָה","the Lord"],["אֶל־קָיִן","unto Cain:"],["לָמָּה","Why"],["חָרָה","art thou wroth?"],["לָךְ","unto thee"],["וְלָמָּה","Why is"],["נָפְלוּ","fallen"],["פָנֶיךָ","thy countenance?"],["׃",""]
   ]},
-  { num: "כג", words: [
-    ["אִם־תֵּיטִיב","If thou doest well,"],["הֲלֹא","shalt thou not"],["שְׂאֵת","be accepted?"],["וְאִם","And if"],["לֹא","not"],["תֵיטִיב","thou doest well,"],["לַפֶּתַח","at the door"],["חַטָּאת","sin"],["רֹבֵץ","lieth in wait,"],["וְהַשָּׂטָן","and Satan"],["חָפֵץ","desireth"],["לְקַחְתֶּךָ","to have thee;"],["וְאִם","and if"],["לֹא","not"],["תִשְׁמַע","thou shalt hearken"],["לְמִצְוֹתַי","unto my commandments,"],["אֲמַסֶּרְךָ","I will deliver thee up,"],["וִיהִי","and it shall be"],["לְךָ","unto thee"],["כִרְצוֹנוֹ","according to his desire."],["וְאַתָּה","And thou"],["תִּמְשָׁל־בּוֹ","shalt rule over him;"],["׃",""]
-  ]},
+  { num: "כג", words: [["אִם־תֵּיטִיב","If thou doest well,"], ["תֵּרָצֶה","thou shalt be accepted."], ["וְאִם","And if"], ["לֹא","not"], ["תֵיטִיב","thou doest well,"], ["לַפֶּתַח","at the door"], ["חַטָּאת","sin"], ["רֹבֵץ","lieth in wait,"], ["וְהַשָּׂטָן","and Satan"], ["חָפֵץ","desireth"], ["לְקַחְתֶּךָ","to have thee;"], ["וְאִם","and if"], ["לֹא","not"], ["תִשְׁמַע","thou shalt hearken"], ["לְמִצְוֹתַי","unto my commandments,"], ["אֲמַסֶּרְךָ","I will deliver thee up,"], ["וִיהִי","and it shall be"], ["לְךָ","unto thee"], ["כִרְצוֹנוֹ","according to his desire."], ["וְאַתָּה","And thou"], ["תִּמְשָׁל־בּוֹ","shalt rule over him;"], ["׃",""]]},
   { num: "כד", words: [
     ["כִּי","For"],["מֵעַתָּה","from this time forth"],["תִּהְיֶה","thou shalt be"],["אֲבִי","the father of"],["שִׁקְרָיו","his lies;"],["וְיִקָּרֵא","and thou shalt be called"],["לְךָ","unto thee"],["אֲבַדּוֹן","Perdition;"],["כִּי","for"],["הָיִיתָ","thou wast"],["גַּם","also"],["לִפְנֵי","before"],["הָעוֹלָם","the world."],["׃",""]
   ]},
@@ -282,24 +262,16 @@ var ms_ch5Verses = [
   { num: "כז", words: [
     ["וַיִּתְאַבְּלוּ","And mourned"],["אָדָם","Adam"],["וְאִשְׁתּוֹ","and his wife"],["לִפְנֵי","before"],["יְהוָה","the Lord,"],["עַל־קַיִן","because of Cain"],["וְעַל־אֶחָיו","and his brethren."],["׃",""]
   ]},
-  { num: "כח", words: [
-    ["וַיְהִי","And it came to pass"],["וַיִּקַּח","that took"],["קַיִן","Cain"],["אַחַת","one of"],["מִבְּנוֹת","the daughters of"],["אֶחָיו","his brethren"],["לְאִשָּׁה","to wife;"],["וַיֶּאֱהֲבוּ","and they loved"],["אֶת־הַשָּׂטָן","Satan"],["מֵאֱלֹהִים","more than God."],["׃",""]
-  ]},
-  { num: "כט", words: [
-    ["וַיֹּאמֶר","And said"],["הַשָּׂטָן","Satan"],["אֶל־קַיִן","unto Cain:"],["הִשָּׁבַע","Swear"],["לִי","unto me"],["בְּגְרוֹנֶךָ","by thy throat,"],["וְאִם־תְּגַלֶּה","and if thou tell it"],["מוֹת","surely"],["תָּמוּת","thou shalt die;"],["וְהַשְׁבַּע","and swear"],["גַּם","also"],["אֶת־אַחֶיךָ","thy brethren"],["בֵּאלֹהִים","by the God"],["חַיִּים","living,"],["לְבִלְתִּי","that they should not"],["גַלּוֹת","tell;"],["וְאִם־יְגַלּוּ","for if they tell,"],["מוֹת","surely"],["יָמוּתוּ","they shall die,"],["לְמַעַן","that"],["לֹא","not"],["יֵדַע","shall know"],["אָבִיךָ","thy father."],["וְהַיּוֹם","And this day"],["אֲמַסֵּר","I will deliver"],["אֶת־הֶבֶל","Abel,"],["אָחִיךָ","thy brother,"],["בְּיָדֶךָ","into thine hands."],["׃",""]
-  ]},
+  { num: "כח", words: [["וַיִּקַּח","And it came to pass that took"], ["קַיִן","Cain"], ["אַחַת","one"], ["מִבְּנוֹת","of the daughters of"], ["אֶחָיו","his brothers"], ["לְאִשָּׁה","to wife,"], ["וַיֶּאֱהֲבוּ","and they loved"], ["אֶת־הַשָּׂטָן","Satan"], ["מֵאֱלֹהִים","more than God."], ["׃",""]]},
+  { num: "כט", words: [["וַיֹּאמֶר","And said"], ["הַשָּׂטָן","Satan"], ["אֶל־קַיִן","unto Cain:"], ["הִשָּׁבַע","Swear"], ["לִי","unto me"], ["בִּגְרוֹנֶךָ","by thy throat,"], ["וְאִם־תְּגַלֶּה","and if thou tell it"], ["מוֹת","surely"], ["תָּמוּת","thou shalt die;"], ["וְהַשְׁבַּע","and swear"], ["גַּם","also"], ["אֶת־אַחֶיךָ","thy brethren"], ["בְּרָאשֵׁיהֶם","by their heads,"], ["וּבֵאלֹהִים","and by God"], ["חַיִּים","the living,"], ["לְבִלְתִּי","that not"], ["גַלּוֹת","they tell it;"], ["וְאִם־יְגַלּוּ","for if they tell it,"], ["מוֹת","surely"], ["יָמוּתוּ","they shall die;"], ["לְמַעַן","and this that"], ["לֹא","not"], ["יֵדַע","may know it"], ["אָבִיךָ","thy father;"], ["וְהַיּוֹם","and this day"], ["אֲמַסֵּר","I will deliver"], ["אֶת־הֶבֶל","Abel"], ["אָחִיךָ","thy brother"], ["בְּיָדֶךָ","into thine hands."], ["׃",""]]},
   { num: "ל", words: [
     ["וַיִּשָּׁבַע","And sware"],["הַשָּׂטָן","Satan"],["לְקַיִן","unto Cain"],["לַעֲשׂוֹת","that he would do"],["כְּמִצְוֹתָיו","according to his commands."],["וְכׇל־הַדְּבָרִים","And all the things"],["הָאֵלֶּה","these"],["נַעֲשׂוּ","were done"],["בַסֵּתֶר","in secret."],["׃",""]
   ]},
-  { num: "לא", words: [
-    ["וַיֹּאמֶר","And said"],["קַיִן","Cain:"],["אׇמְנָם","Truly,"],["אֲנִי","I am"],["מָהָן","Mahan,"],["אֲדוֹן","the master of"],["הַסּוֹד","mystery"],["הַגָּדוֹל","great"],["הַזֶּה","this,"],["לְמַעַן","that"],["אֶרְצַח","I may murder"],["וְאֶבְצָע","and get gain."],["לָכֵן","Wherefore"],["נִקְרָא","was called"],["קַיִן","Cain"],["מָהָן","Master Mahan,"],["וַיִּתְהַלֵּל","and he gloried"],["בְּרִשְׁעָתוֹ","in his wickedness."],["׃",""]
-  ]},
+  { num: "לא", words: [["וַיֹּאמֶר","And said"], ["קַיִן","Cain:"], ["אׇמְנָם","Truly"], ["אֲנִי","I am"], ["מָהָן","Mahan,"], ["אֲדוֹן","the master of"], ["הַסּוֹד","secret"], ["הַגָּדוֹל","great"], ["הַזֶּה","this,"], ["לְמַעַן","that"], ["אֶרְצַח","I may murder"], ["וְאֶבְצָע","and get gain."], ["לָכֵן","Wherefore"], ["נִקְרָא","was called"], ["קַיִן","Cain"], ["אֲדוֹן","Master"], ["מָהָן","Mahan,"], ["וַיִּתְהַלֵּל","and he gloried"], ["בְּרִשְׁעָתוֹ","in his wickedness."], ["׃",""]]},
   { num: "לב", words: [
     ["וַיֵּצֵא","And went out"],["קַיִן","Cain"],["הַשָּׂדֶה","into the field,"],["וַיְדַבֵּר","and talked"],["קַיִן","Cain"],["אֶל־הֶבֶל","with Abel,"],["אָחִיו","his brother."],["וַיְהִי","And it came to pass"],["בִּהְיוֹתָם","that, while they were"],["בַּשָּׂדֶה","in the field,"],["וַיָּקׇם","rose up"],["קַיִן","Cain"],["עַל־הֶבֶל","against Abel,"],["אָחִיו","his brother,"],["וַיַּהַרְגֵהוּ","and slew him."],["׃",""]
   ]},
-  { num: "לג", words: [
-    ["וַיִּתְהַלֵּל","And gloried"],["קַיִן","Cain"],["בַּאֲשֶׁר","in that which"],["עָשָׂה","he had done,"],["לֵאמֹר","saying:"],["אֲנִי","I am"],["חׇפְשִׁי","free;"],["וּמִקְנֵה","surely the flocks of"],["אָחִי","my brother"],["נָפְלוּ","falleth"],["בְּיָדָי","into my hands."],["׃",""]
-  ]},
+  { num: "לג", words: [["וַיִּתְהַלֵּל","And gloried"], ["קַיִן","Cain"], ["בַּאֲשֶׁר","in that which"], ["עָשָׂה","he had done,"], ["לֵאמֹר","saying:"], ["אֲנִי","I am"], ["חׇפְשִׁי","free;"], ["אָכֵן","surely"], ["מִקְנֵה","the flocks of"], ["אָחִי","my brother"], ["נָפַל","falleth"], ["בְּיָדָי","into my hands."], ["׃",""]]},
   { num: "לד", words: [
     ["וַיֹּאמֶר","And said"],["יְהוָה","the Lord"],["אֶל־קָיִן","unto Cain:"],["אֵי","Where is"],["הֶבֶל","Abel,"],["אָחִיךָ","thy brother?"],["וַיֹּאמֶר","And he said:"],["לֹא","not"],["יָדַעְתִּי","I know."],["הֲשֹׁמֵר","Am I"],["אָחִי","my brother's"],["אָנֹכִי","keeper?"],["׃",""]
   ]},
@@ -315,12 +287,8 @@ var ms_ch5Verses = [
   { num: "לח", words: [
     ["וַיֹּאמֶר","And said"],["קַיִן","Cain"],["אֶל־יְהוָה","unto the Lord:"],["הַשָּׂטָן","Satan"],["פִּתָּנִי","tempted me"],["בִּגְלַל","because of"],["מִקְנֵה","the flocks of"],["אָחִי","my brother."],["וְגַם","And also"],["חָרָה","was wroth"],["לִי","I,"],["כִּי","for"],["קִבַּלְתָּ","thou didst accept"],["אֶת־קָרְבָּנוֹ","his offering"],["וְלֹא","but not"],["אֶת־קָרְבָּנִי","mine offering;"],["גָּדוֹל","greater is"],["עֲוֹנִי","my punishment"],["מִנְּשֹׂא","than I can bear."],["׃",""]
   ]},
-  { num: "לט", words: [
-    ["הֵן","Behold,"],["גֵּרַשְׁתָּ","thou hast driven"],["אֹתִי","me out"],["הַיּוֹם","this day"],["מֵעַל","from"],["פְּנֵי","the face of"],["הָאֲדָמָה","the Lord,"],["וּמִפָּנֶיךָ","and from thy face"],["אֶסָּתֵר","shall I be hid;"],["וְהָיִיתִי","and I shall be"],["נָע","a fugitive"],["וָנָד","and a vagabond"],["בָּאָרֶץ","in the earth;"],["וְהָיָה","and it shall come to pass,"],["כׇל־מֹצְאִי","that every one that findeth me"],["יַהַרְגֵנִי","shall slay me,"],["בַּעֲוֹנֹתַי","because of mine iniquities,"],["כִּי","for"],["הַדְּבָרִים","things"],["הָאֵלֶּה","these"],["לֹא","are not"],["נִסְתָּרִים","hid"],["מֵיְהוָה","from the Lord."],["׃",""]
-  ]},
-  { num: "מ", words: [
-    ["וָאֹמַר","And I said"],["אֲנִי","I,"],["יְהוָה","the Lord:"],["כׇּל־הֹרֵג","Whosoever slayeth"],["אֶת־קַיִן","Cain"],["שִׁבְעָתַיִם","sevenfold"],["יֻקָּם","vengeance shall be taken on him."],["וָאָשִׂם","And I set"],["אוֹת","a mark"],["לְקַיִן","upon Cain,"],["לְבִלְתִּי","lest"],["הַכּוֹת","should slay"],["אֹתוֹ","him"],["כׇּל־מֹצְאוֹ","any finding him."],["׃",""]
-  ]},
+  { num: "לט", words: [["הֵן","Behold,"], ["גֵּרַשְׁתָּ","thou hast driven"], ["אֹתִי","me out"], ["הַיּוֹם","this day"], ["מֵעַל","from"], ["פְּנֵי","the face of"], ["יְהוָה","the Lord,"], ["וּמִפָּנֶיךָ","and from thy face"], ["אֶסָּתֵר","shall I be hid;"], ["וְהָיִיתִי","and I shall be"], ["נָע","a fugitive"], ["וָנָד","and a vagabond"], ["בָּאָרֶץ","in the earth;"], ["וְהָיָה","and it shall come to pass,"], ["כׇל־מֹצְאִי","that every one that findeth me"], ["יַהַרְגֵנִי","shall slay me,"], ["בַּעֲוֹנֹתַי","because of mine iniquities,"], ["כִּי","for"], ["הַדְּבָרִים","things"], ["הָאֵלֶּה","these"], ["לֹא","are not"], ["נִסְתָּרִים","hid"], ["מֵיְהוָה","from the Lord."], ["׃",""]]},
+  { num: "מ", words: [["וָאֹמַר","And said"], ["אֲנִי","I"], ["יְהוָה","the Lord"], ["אֵלָיו","unto him:"], ["כׇּל־הֹרֶגְךָ","Whosoever slayeth thee,"], ["שִׁבְעָתַיִם","sevenfold"], ["יֻקָּם","vengeance shall be taken on him."], ["וָאָשִׂם","And set"], ["אֲנִי","I"], ["יְהוָה","the Lord"], ["אוֹת","a mark"], ["לְקַיִן","upon Cain,"], ["לְבִלְתִּי","lest"], ["הַכּוֹת","should kill"], ["אֹתוֹ","him"], ["כׇּל־מֹצְאוֹ","any finding him."], ["׃",""]]},
   { num: "מא", words: [
     ["וַיִּסָּגֵר","And was shut out"],["קַיִן","Cain"],["מִלִּפְנֵי","from the presence of"],["יְהוָה","the Lord,"],["וַיֵּשֶׁב","and dwelt"],["עִם־אִשְׁתּוֹ","with his wife"],["וְרַבִּים","and many"],["מֵאֶחָיו","of his brethren"],["בְּאֶרֶץ","in the land of"],["נוֹד","Nod,"],["קִדְמַת־עֵדֶן","on the east of Eden."],["׃",""]
   ]},
@@ -345,12 +313,8 @@ var ms_ch5Verses = [
   { num: "מח", words: [
     ["כִּי","For"],["שִׁבְעָתַיִם","sevenfold"],["יֻקַּם־קָיִן","shall Cain be avenged,"],["וְלֶמֶךְ","truly Lamech"],["שִׁבְעִים","seventy"],["וְשִׁבְעָה","and sevenfold."],["׃",""]
   ]},
-  { num: "מט", words: [
-    ["כִּי","For"],["לֶמֶךְ","Lamech"],["כָּרַת","had entered into"],["בְּרִית","a covenant"],["עִם־הַשָּׂטָן","with Satan"],["כְּדֶרֶךְ","after the manner of"],["קַיִן","Cain,"],["וַיְהִי","wherein he became"],["מָהָן","Master Mahan,"],["אֲדוֹן","master of"],["הַסּוֹד","mystery"],["הַגָּדוֹל","great"],["הַהוּא","that,"],["אֲשֶׁר","which"],["נִמְסַר","was administered"],["לְקַיִן","unto Cain"],["מִיַּד","by"],["הַשָּׂטָן","Satan."],["וְעִירָד","And Irad,"],["בֶּן־חֲנוֹךְ","the son of Enoch,"],["יָדַע","having known"],["אֶת־סוֹדָם","their secret,"],["וַיָּחֶל","began"],["לְגַלּוֹתוֹ","to reveal it"],["לִבְנֵי","unto the sons of"],["אָדָם","men;"],["׃",""]
-  ]},
-  { num: "נ", words: [
-    ["לָכֵן","Wherefore"],["הָרַג","slew"],["לֶמֶךְ","Lamech"],["אֹתוֹ","him,"],["בְּחֲרוֹן","in his fierce"],["אַפּוֹ","anger,"],["לֹא","not"],["כַאֲשֶׁר","as"],["הָרַג","slew"],["קַיִן","Cain"],["אֶת־הֶבֶל","Abel,"],["אָחִיו","his brother,"],["לְמַעַן","for the sake of"],["בֶּצַע","getting gain,"],["כִּי","but"],["אִם־הֲרָגוֹ","he slew him"],["לְמַעַן","for the sake of"],["הַשְּׁבוּעָה","the oath."],["׃",""]
-  ]},
+  { num: "מט", words: [["כִּי","For"], ["לֶמֶךְ","Lamech"], ["כָּרַת","had entered into"], ["בְּרִית","a covenant"], ["עִם־הַשָּׂטָן","with Satan"], ["כְּדֶרֶךְ","after the manner of"], ["קַיִן","Cain,"], ["וַיְהִי","wherein he became"], ["אֲדוֹן","Master"], ["מָהָן","Mahan,"], ["אֲדוֹן","master of"], ["הַסּוֹד","secret"], ["הַגָּדוֹל","great"], ["הַהוּא","that,"], ["אֲשֶׁר","which"], ["נִמְסַר","was administered"], ["לְקַיִן","unto Cain"], ["מִיַּד","by"], ["הַשָּׂטָן","Satan."], ["וְעִירָד","And Irad,"], ["בֶּן־חֲנוֹךְ","the son of Enoch,"], ["יָדַע","having known"], ["אֶת־סוֹדָם","their secret,"], ["וַיָּחֶל","began"], ["לְגַלּוֹתוֹ","to reveal it"], ["לִבְנֵי","unto the sons of"], ["אָדָם","men;"], ["׃",""]]},
+  { num: "נ", words: [["לָכֵן","Wherefore"], ["הָרַג","slew"], ["לֶמֶךְ","Lamech"], ["אֹתוֹ","him,"], ["בַּחֲרוֹן","in his fierce"], ["אַפּוֹ","anger,"], ["לֹא","not"], ["כַאֲשֶׁר","as"], ["הָרַג","slew"], ["קַיִן","Cain"], ["אֶת־הֶבֶל","Abel,"], ["אָחִיו","his brother,"], ["לְמַעַן","for the sake of"], ["בֶּצַע","getting gain,"], ["כִּי","but"], ["אִם־הֲרָגוֹ","he slew him"], ["לְמַעַן","for the sake of"], ["הַשְּׁבוּעָה","the oath."], ["׃",""]]},
   { num: "נא", words: [
     ["כִּי","For"],["מִימֵי","from the days of"],["קַיִן","Cain,"],["הָיָה","there was"],["קֶשֶׁר","a combination"],["נִסְתָּר","hidden,"],["וּמַעֲשֵׂיהֶם","and their works"],["הָיוּ","were"],["בַחֹשֶׁךְ","in the dark,"],["וַיֵּדְעוּ","and they knew"],["אִישׁ","every man"],["אֶת־אָחִיו","his brother."],["׃",""]
   ]},
@@ -360,9 +324,7 @@ var ms_ch5Verses = [
   { num: "נג", words: [
     ["וּבְתוֹךְ","And it was among"],["בְּנוֹת","the sons of"],["הָאָדָם","men."],["לֹא","Not"],["דֻבְּרוּ","were spoken"],["הַדְּבָרִים","things"],["הָאֵלֶּה","these,"],["כִּי","but"],["לֶמֶךְ","Lamech"],["דִּבֶּר","had spoken"],["אֶת־הַסּוֹד","the secret"],["לְנָשָׁיו","unto his wives,"],["וַתִּמְרֹדְנָה","and they rebelled"],["בוֹ","against him,"],["וַתַּגֵּדְנָה","and declared"],["אֶת־הַדְּבָרִים","these things"],["בַּחוּץ","abroad,"],["וְלֹא","and had not"],["חָמְלוּ","compassion;"],["׃",""]
   ]},
-  { num: "נד", words: [
-    ["לָכֵן","Wherefore"],["נִבְזָה","despised was"],["לֶמֶךְ","Lamech,"],["וַיִּנָּזֵר","and cast out,"],["וְלֹא","and not"],["בָא","he came"],["עוֹד","any more"],["בְּתוֹךְ","among"],["בְּנֵי","the sons of"],["הָאָדָם","men,"],["פֶּן־יָמוּת","lest he should die."],["׃",""]
-  ]},
+  { num: "נד", words: [["לָכֵן","Wherefore"], ["נִבְזָה","despised was"], ["לֶמֶךְ","Lamech,"], ["וַיְגֹרַשׁ","and cast out,"], ["וְלֹא","and not"], ["בָא","he came"], ["עוֹד","any more"], ["בְּתוֹךְ","among"], ["בְּנֵי","the sons of"], ["הָאָדָם","men,"], ["פֶּן־יָמוּת","lest he should die."], ["׃",""]]},
   { num: "נה", words: [
     ["וְכֵן","And thus"],["הֵחֵלּוּ","began"],["מַעֲשֵׂי","the works of"],["הַחֹשֶׁךְ","darkness"],["לִגְבֹּר","to prevail"],["בְּכׇל־בְּנֵי","among all the sons of"],["הָאָדָם","men."],["׃",""]
   ]},
@@ -372,12 +334,8 @@ var ms_ch5Verses = [
   { num: "נז", words: [
     ["כִּי","For"],["לֹא","not"],["שָׁמְעוּ","they would hearken"],["בְקוֹלוֹ","unto his voice,"],["וְלֹא","nor"],["הֶאֱמִינוּ","believe"],["בִּבְנוֹ","on his Only Begotten"],["הַיָּחִיד","Son,"],["אֲשֶׁר","whom"],["אָמַר","he declared"],["יָבֹא","should come"],["בְּאֶמְצַע","in the meridian of"],["הָעִתִּים","time,"],["אֲשֶׁר","who"],["הוּכַן","was prepared"],["מִלִּפְנֵי","from before"],["יְסוֹד","the foundation of"],["הָעוֹלָם","the world."],["׃",""]
   ]},
-  { num: "נח", words: [
-    ["וְכֵן","And thus"],["הֵחֵלָּה","began"],["הַבְּשׂוֹרָה","the gospel"],["לְהִקָּרֵא","to be preached"],["מֵרֵאשִׁית","from the beginning,"],["בְּפִי","being declared by"],["מַלְאֲכֵי","angels"],["קֹדֶשׁ","holy"],["הַשְּׁלוּחִים","sent forth"],["מִלִּפְנֵי","from the presence of"],["אֱלֹהִים","God,"],["וּבְקוֹלוֹ","and by his own voice,"],["וּבְמַתַּת","and by the gift of"],["רוּחַ","the Holy Ghost."],["הַקֹּדֶשׁ",""],["׃",""]
-  ]},
-  { num: "נט", words: [
-    ["וְכֵן","And thus"],["נִתְאַמְּתוּ","were confirmed"],["כׇל־הַדְּבָרִים","all things"],["לְאָדָם","unto Adam"],["בְּחֻקַּת","by an holy"],["קֹדֶשׁ","ordinance,"],["וְהַבְּשׂוֹרָה","and the gospel"],["נִקְרְאָה","preached,"],["וּגְזֵרָה","and a decree"],["יָצְאָה","sent forth,"],["כִּי","that"],["תִהְיֶה","it should be"],["בָעוֹלָם","in the world,"],["עַד־קֵץ","until the end thereof;"],["וְכֵן","and thus"],["הָיָה","it was."],["אָמֵן","Amen."],["׃",""]
-  ]}
+  { num: "נח", words: [["וְכֵן","And thus"], ["הֵחֵלָּה","began"], ["הַבְּשׂוֹרָה","the gospel"], ["לְהִקָּרֵא","to be preached"], ["מֵרֵאשִׁית","from the beginning,"], ["בְּפִי","being declared by"], ["מַלְאֲכֵי","angels"], ["קֹדֶשׁ","holy"], ["הַשְּׁלוּחִים","sent forth"], ["מִלִּפְנֵי","from the presence of"], ["אֱלֹהִים","God,"], ["וּבְקוֹלוֹ","and by his own voice,"], ["וּבְמַתַּת","and by the gift of"], ["רוּחַ","the Ghost"], ["הַקֹּדֶשׁ","Holy"], ["׃",""]]},
+  { num: "נט", words: [["וְכֵן","And thus"], ["נִתְאַמְּתוּ","were confirmed"], ["כׇל־הַדְּבָרִים","all things"], ["לְאָדָם","unto Adam"], ["בְּחֻקַּת","by an holy"], ["קֹדֶשׁ","ordinance,"], ["וְהַבְּשׂוֹרָה","and the gospel"], ["נִקְרְאָה","preached,"], ["וּגְזֵרָה","and a decree"], ["יָצְאָה","sent forth,"], ["כִּי","that"], ["תִהְיֶה","it should be"], ["בָעוֹלָם","in the world,"], ["עַד־קִצּוֹ","until the end thereof;"], ["וְכֵן","and thus"], ["הָיָה","it was."], ["אָמֵן","Amen."], ["׃",""]]}
 ];
 renderVerseSet(ms_ch5Verses, 'ms-ch5-verses');
 var ms_ch6Verses = [
