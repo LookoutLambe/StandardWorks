@@ -1,18 +1,14 @@
 // pgp_verses/articles_of_faith.js — Articles of Faith verse data
 (function() {
 var aof_ch1Verses = [
-  { num: "א", words: [
-    ["מַאֲמִינִים","believe"],["אֲנַחְנוּ","we"],["בֵּאלֹהִים","in God,"],["הָאָב","the Father"],["הַנִּצְחִי","Eternal,"],["וּבִבְנוֹ","and in his Son,"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׁיחַ","Christ,"],["וּבְרוּחַ","and in the Holy Ghost."],["הַקֹּדֶשׁ",""],["׃",""]
-  ]},
+  { num: "א", words: [["מַאֲמִינִים","believe"], ["אֲנַחְנוּ","we"], ["בֵּאלֹהִים","in God,"], ["הָאָב","the Father"], ["הַנִּצְחִי","Eternal,"], ["וּבִבְנוֹ","and in his Son,"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","Christ,"], ["וּבְרוּחַ","and in the Ghost"], ["הַקֹּדֶשׁ","Holy."], ["׃",""]]},
   { num: "ב", words: [
     ["מַאֲמִינִים","believe"],["אֲנַחְנוּ","we"],["כִּי","that"],["הָאָדָם","men"],["יֵעָנֵשׁ","will be punished"],["עַל־חֲטָאָיו","for the sins"],["שֶׁלָּהֶם","of their own,"],["וְלֹא","and not"],["עַל־פֶּשַׁע","for the transgression of"],["אָדָם","Adam."],["׃",""]
   ]},
   { num: "ג", words: [
     ["מַאֲמִינִים","believe"],["אֲנַחְנוּ","we"],["כִּי","that"],["בְּכַפָּרַת","through the atonement of"],["הַמָּשִׁיחַ","Christ,"],["יִוָּשַׁע","may be saved"],["כׇּל־הָאָדָם","all mankind,"],["בְּצִיּוּת","by obedience"],["לְתוֹרוֹת","to the laws"],["הַבְּשׂוֹרָה","of the gospel"],["וּלְחֻקֹּתֶיהָ","and its ordinances."],["׃",""]
   ]},
-  { num: "ד", words: [
-    ["מַאֲמִינִים","believe"],["אֲנַחְנוּ","we"],["כִּי","that"],["עִקְּרֵי","the principles of"],["הַבְּשׂוֹרָה","the gospel"],["וְחֻקֹּתֶיהָ","and its ordinances,"],["הָרִאשׁוֹנִים","first,"],["הֵם","are these:"],["רִאשׁוֹנָה","first,"],["אֱמוּנָה","Faith"],["בָּאָדוֹן","in the Lord"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׁיחַ","Christ;"],["שְׁנִיָּה","second,"],["תְּשׁוּבָה","Repentance;"],["שְׁלִישִׁית","third,"],["טְבִילָה","Baptism"],["בִּטְבִילָה","by immersion"],["לִסְלִיחַת","for the remission"],["חֲטָאִים","of sins;"],["רְבִיעִית","fourth,"],["סְמִיכַת","Laying on of"],["יָדַיִם","hands"],["לְמַתַּן","for the gift of"],["רוּחַ","the Holy Ghost."],["הַקֹּדֶשׁ",""],["׃",""]
-  ]},
+  { num: "ד", words: [["מַאֲמִינִים","believe"], ["אֲנַחְנוּ","we"], ["כִּי","that"], ["עִקְּרֵי","the principles of"], ["הַבְּשׂוֹרָה","the gospel"], ["וְחֻקֹּתֶיהָ","and its ordinances,"], ["הָרִאשׁוֹנִים","first,"], ["הֵם","are these:"], ["רִאשׁוֹנָה","first,"], ["אֱמוּנָה","Faith"], ["בָּאָדוֹן","in the Lord"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","Christ;"], ["שְׁנִיָּה","second,"], ["תְּשׁוּבָה","Repentance;"], ["שְׁלִישִׁית","third,"], ["טְבִילָה","Baptism"], ["בִּטְבִילָה","by immersion"], ["לִסְלִיחַת","for the remission"], ["חֲטָאִים","of sins;"], ["רְבִיעִית","fourth,"], ["סְמִיכַת","Laying on of"], ["יָדַיִם","hands"], ["לְמַתַּן","for the gift of"], ["רוּחַ","the Ghost"], ["הַקֹּדֶשׁ","Holy."], ["׃",""]]},
   { num: "ה", words: [
     ["מַאֲמִינִים","believe"],["אֲנַחְנוּ","we"],["כִּי","that"],["אִישׁ","a man"],["צָרִיךְ","must"],["לְהִקָּרֵא","be called"],["מֵאֵת","of"],["הָאֱלֹהִים","God,"],["בִּנְבוּאָה","by prophecy,"],["וּבִסְמִיכַת","and by the laying on of"],["יָדַיִם","hands"],["מֵאֵלֶּה","by those"],["אֲשֶׁר","who"],["בְּיָדָם","have"],["הַסַּמְכוּת","authority,"],["לִקְרֹא","to preach"],["אֶת־הַבְּשׂוֹרָה","the gospel"],["וּלְשָׁרֵת","and to administer"],["בְּחֻקֹּתֶיהָ","in its ordinances."],["׃",""]
   ]},
