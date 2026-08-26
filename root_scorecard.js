@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '2';   // bump when the generated data files change
+  var RSC_V = '3';   // bump when the generated data files change
 
   var cfg = { vol: '', base: '' };
   var keyIdx = null;         // rootKey -> index, built once
@@ -420,7 +420,29 @@
       '#word-popup .popup-dismiss-mobile{background:var(--sw-gold,#f4ca48) !important;color:var(--sw-navy,#1e2233) !important;border:none !important;font-weight:700;}' +
       /* the tappable Root link: light blue for contrast on navy */
       '#word-popup .rsc-root{color:#9cc7f0 !important;}' +
-      '#word-popup .rsc-refs-link{color:var(--sw-gold,#f4ca48) !important;}';
+      '#word-popup .rsc-refs-link{color:var(--sw-gold,#f4ca48) !important;}' +
+      /* ── Phone sizing: the scorecard inherited a small em base from the popup ── */
+      '@media (max-width:600px){' +
+        '#word-popup{font-size:17px !important;line-height:1.5 !important;' +
+          'width:min(94vw,440px) !important;max-width:94vw !important;' +
+          'max-height:80vh !important;overflow-y:auto !important;-webkit-overflow-scrolling:touch;' +
+          'padding-bottom:calc(12px + env(safe-area-inset-bottom,0px)) !important;}' +
+        '#word-popup .popup-hebrew,#word-popup #popup-hw{font-size:1.6em !important;line-height:1.4 !important;}' +
+        '#word-popup .popup-gloss,#word-popup #popup-gl{font-size:1.1em !important;}' +
+        '#word-popup .popup-translit,#word-popup #popup-translit{font-size:0.95em !important;}' +
+        '.rsc-chips{gap:6px;margin:8px 0;}' +
+        '.rsc-chip{font-size:0.95em;padding:5px 11px;border-radius:13px;}' +
+        '.rsc-refs-link{font-size:1em !important;display:inline-block;padding:9px 2px;min-height:44px;}' +
+        '#rsc-panel .rsc-panel-card{width:96vw;max-height:88vh;}' +
+        '#rsc-panel .rsc-panel-body{font-size:17px;line-height:1.55;' +
+          'padding-bottom:calc(18px + env(safe-area-inset-bottom,0px));}' +
+        '#rsc-panel .rsc-panel-title{font-size:1.15em;}' +
+        '#rsc-panel .rsc-panel-meaning{font-size:0.95em;}' +
+        '#rsc-panel .rsc-vol-title{font-size:1.05em;}' +
+        '#rsc-panel .rsc-vol-count{font-size:0.9em;}' +
+        '#rsc-panel a.rsc-ref{display:inline-block;padding:7px 6px;min-height:44px;min-width:34px;}' +
+        '#rsc-panel .rsc-panel-close{font-size:32px;min-width:48px;min-height:48px;}' +
+      '}';
     document.head.appendChild(st);
   }
 

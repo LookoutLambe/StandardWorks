@@ -202,24 +202,96 @@ function stripPrefixes(w) {
   }
 
   // Get root key for a Hebrew word
-  function getRoot(hw) {
-    // Try Strong's-based root first
-    if (window._strongsLookup && window._strongsRoots) {
-      var stripped = stripPrefixes(hw);
-      var sNum = _strongsLookup[hw] || _strongsLookup[stripped] || _strongsLookup[stripNikkud(hw)] || _strongsLookup[stripNikkud(stripped)] || '';
-      if (sNum && _strongsRoots[sNum]) {
-        var entry = _strongsRoots[sNum];
-        // Word's own lexeme, not the Strong's derivation parent (separate words).
-        return sNum;
+  //
+  // Cascade, most reliable first. Every step returns either a real Strong's
+  // number or a real Hebrew word — never a truncated letter-fragment. The old
+  // unconditional extractRoot() fallback is gone: it invented 2-3 letter keys
+  // that merged unrelated lexemes (שׁמ swallowed שמר/שמד/שמם/שמע/שם) and split
+  // real ones (כָּאָרֶץ became its own key "כאר" instead of joining H0776).
+  var _consIdx = null;
+  function consIndex() {
+    if (_consIdx) return _consIdx;
+    _consIdx = {};
+    if (!window._strongsLookup) return _consIdx;
+    for (var k in _strongsLookup) {
+      var c = stripNikkud(k);
+      if (!c) continue;
+      if (_consIdx[c] === undefined) _consIdx[c] = _strongsLookup[k];
+      else if (_consIdx[c] !== _strongsLookup[k]) _consIdx[c] = null; // ambiguous: refuse
+    }
+    return _consIdx;
+  }
+  var _rePre = /^(וכש|ומ|וב|ול|וכ|וה|כש|לכ|מה|בה|כה|לה|ו|ה|ב|כ|ל|מ|ש)/;
+  var _sufs = ['ותיהם','ותיכם','ותינו','ותיה','ותיו','ותם','ותן','ותי','יהם','יכם',
+               'ינו','תיו','נו','כם','הם','הן','תי','יו','יה','ים','ות','ם','ן','ו','ה','י','ך'];
+  var _particles = {'את':1,'אל':1,'על':1,'מן':1,'עד':1,'כל':1,'לא':1,'ואת':1,'ואל':1};
+  function _clean(s) { return String(s || '').replace(/[׃׀"'`]/g, '').trim(); }
+  function _pieces(s) { return _clean(s).split(/[־\s]+/).filter(Boolean); }
+
+  // Resolve ONE whitespace/maqqef-free word to a Strong's number, or '' if none.
+  function _strongsFor(w) {
+    if (!window._strongsLookup || !window._strongsRoots) return '';
+    var CI = consIndex();
+    var sNum = _strongsLookup[w] || _strongsLookup[stripPrefixes(w)] ||
+               _strongsLookup[stripNikkud(w)] || _strongsLookup[stripNikkud(stripPrefixes(w))] || '';
+    if (sNum && _strongsRoots[sNum]) return sNum;
+    var c = stripNikkud(w);
+    if (!c) return '';
+    if (CI[c] && _strongsRoots[CI[c]]) return CI[c];          // defective/variant pointing
+    var b = c;                                                 // peel prefixes
+    for (var p = 0; p < 3; p++) {
+      var m = b.match(_rePre);
+      if (!m) break;
+      b = b.slice(m[1].length);
+      if (b.length < 2) break;
+      if (CI[b] && _strongsRoots[CI[b]]) return CI[b];
+    }
+    var bases = [c, b], fin = {'מ':'ם','נ':'ן','צ':'ץ','פ':'ף','כ':'ך'};
+    for (var i = 0; i < bases.length; i++) {                   // peel plural/pronominal endings
+      for (var j = 0; j < _sufs.length; j++) {
+        var s = _sufs[j], B = bases[i];
+        if (B.length > s.length + 1 && B.slice(-s.length) === s) {
+          var st = B.slice(0, -s.length);
+          if (CI[st] && _strongsRoots[CI[st]]) return CI[st];
+          var lc = st.slice(-1);                               // segholate plural: ארצ → ארץ
+          if (fin[lc] && CI[st.slice(0, -1) + fin[lc]] && _strongsRoots[CI[st.slice(0, -1) + fin[lc]]])
+            return CI[st.slice(0, -1) + fin[lc]];
+        }
       }
     }
-    // Fallback: Check root map (exact surface form)
+    return '';
+  }
+
+  function getRoot(hw) {
+    var w = _clean(hw);
+    var s = _strongsFor(w);
+    if (s) return s;
     if (rootMap[hw]) return rootMap[hw];
-    // Strip prefixes and check again
     var stripped2 = stripPrefixes(hw);
     if (rootMap[stripped2]) return rootMap[stripped2];
-    // Extract morphological root from consonantal form
-    return extractRoot(stripNikkud(stripped2));
+    var ps = _pieces(w);
+    if (ps.length > 1) {                                       // maqqef/space compound: use head
+      var content = ps.filter(function(p) { return !_particles[stripNikkud(p)]; });
+      var order = content.length ? content : ps;
+      for (var i = 0; i < order.length; i++) {
+        var sp = _strongsFor(order[i]);
+        if (sp) return sp;
+      }
+    }
+    // Honest fallback: a real word Strong's does not carry (Smith, Rigdon,
+    // Sanhedrin, אֵינוֹ...). Key it by its own consonantal form, never a stem.
+    var head = ps.filter(function(p) { return !_particles[stripNikkud(p)]; }).pop() || ps.pop() || '';
+    var c = stripNikkud(head);
+    // The fallback never truncates, so a short result is a genuine short word
+    // (לוֹ "to him", לִי "to me"), not a stem fragment. Only reject the empty
+    // case and bare single letters.
+    if (c.length < 2) return '';
+    var m2 = c.match(_rePre);
+    if (m2) {                                                  // strip a prefix only if what is
+      var rest = c.slice(m2[1].length);                        // left is itself an attested word
+      if (rest.length >= 3 && window._rootWordForms && window._rootWordForms[rest]) return rest;
+    }
+    return c;
   }
 
   
