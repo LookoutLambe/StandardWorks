@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '5';   // bump when the generated data files change
+  var RSC_V = '6';   // bump when the generated data files change
 
   var cfg = { vol: '', base: '' };
   var keyIdx = null;         // rootKey -> index, built once
@@ -106,6 +106,24 @@
     var idx = keyIdx[root];
     if (idx === undefined) return null;
     return { idx: idx, key: root, entry: window._rootConcordance.roots[idx] };
+  }
+
+  // A maqqef joins two words and each is its own lexeme, so each gets its own
+  // scorecard block: רַב־עֳנִי shows רַב "much" and עֳנִי "affliction".
+  function lookupAll(surface) {
+    if (loadState !== 2) return [];
+    var s = cleanSurface(surface);
+    if (!s) return [];
+    var parts = (window.RootEngine && window.RootEngine.getRoots)
+      ? window.RootEngine.getRoots(s) : [{ part: s, root: window.RootEngine.getRoot(s) }];
+    var out = [];
+    for (var i = 0; i < parts.length; i++) {
+      var idx = keyIdx[parts[i].root];
+      if (idx === undefined) continue;
+      out.push({ part: parts[i].part, idx: idx, key: parts[i].root,
+                 entry: window._rootConcordance.roots[idx] });
+    }
+    return out;
   }
 
   function rootDisplay(key) {
@@ -204,23 +222,37 @@
       if (token !== fillToken) return;                    // a newer popup superseded this one
       if (!document.contains(slotEl)) return;             // popup closed
       if (loadState !== 2) return;                        // load failed; keep legacy content
-      var found = lookup(surface);
-      if (!found) return;                                 // not in corpus (front matter etc.)
-      slotEl.innerHTML = detailHtml(found, surface);
-      var rootLink = slotEl.querySelector('.rsc-root');
-      if (rootLink && typeof window.openGlossaryAtRoot === 'function') {
-        rootLink.addEventListener('click', function(ev) {
-          ev.stopPropagation();
-          window.openGlossaryAtRoot(found.key);
-        });
+      var all = lookupAll(surface);
+      if (!all.length) return;                            // not in corpus (front matter etc.)
+      var html = '';
+      for (var bi = 0; bi < all.length; bi++) {
+        html += '<div class="rsc-block" data-rsc-block="' + bi + '">';
+        if (all.length > 1) {
+          html += '<div class="rsc-part"><span style="font-family:\'David Libre\',serif">' +
+                  esc(all[bi].part) + '</span></div>';
+        }
+        html += detailHtml(all[bi], surface) + '</div>';
       }
-      var refsLink = slotEl.querySelector('.rsc-refs-link');
-      if (refsLink) {
-        refsLink.addEventListener('click', function(ev) {
-          ev.stopPropagation();
-          if (typeof window.closePopup === 'function') { try { window.closePopup(); } catch (e) {} }
-          openPanel(found.idx);
-        });
+      slotEl.innerHTML = html;
+      var blocks = slotEl.querySelectorAll('.rsc-block');
+      for (var bj = 0; bj < blocks.length; bj++) {
+        (function(blk, found) {
+          var rootLink = blk.querySelector('.rsc-root');
+          if (rootLink && typeof window.openGlossaryAtRoot === 'function') {
+            rootLink.addEventListener('click', function(ev) {
+              ev.stopPropagation();
+              window.openGlossaryAtRoot(found.key);
+            });
+          }
+          var refsLink = blk.querySelector('.rsc-refs-link');
+          if (refsLink) {
+            refsLink.addEventListener('click', function(ev) {
+              ev.stopPropagation();
+              if (typeof window.closePopup === 'function') { try { window.closePopup(); } catch (e) {} }
+              openPanel(found.idx);
+            });
+          }
+        })(blocks[bj], all[bj]);
       }
     };
     if (loadState === 2) { doFill(); return; }
@@ -334,6 +366,8 @@
     var st = document.createElement('style');
     st.id = 'rsc-style';
     st.textContent =
+      '.rsc-block + .rsc-block{margin-top:12px;padding-top:10px;border-top:1px solid rgba(212,175,55,0.35);}' +
+      '.rsc-part{font-size:1.15em;color:var(--sw-gold,#f4ca48);margin-bottom:3px;direction:rtl;}' +
       '.rsc-chips{display:flex;flex-wrap:wrap;gap:4px;margin:6px 0;direction:ltr;}' +
       '.rsc-chip{display:inline-block;padding:1px 8px;border-radius:10px;font-size:0.78em;' +
         'background:rgba(212,175,55,0.12);border:1px solid rgba(212,175,55,0.4);white-space:nowrap;}' +

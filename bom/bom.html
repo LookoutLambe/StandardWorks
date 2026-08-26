@@ -3865,8 +3865,8 @@ body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
 
 <script src="bom_book_loader.js?v=8"></script>
 <script src="bom_lazy_assets.js?v=1"></script>
-<script src="../root_names.js?v=5"></script>
-<script src="../root_scorecard.js?v=6"></script>
+<script src="../root_names.js?v=6"></script>
+<script src="../root_scorecard.js?v=7"></script>
 <script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
 <script src="crossrefs.js?v=23"></script>
 <script src="roots_glossary.js?v=23"></script>
@@ -7705,6 +7705,28 @@ document.addEventListener('keydown', function(e) {
     return root;
   }
 
+  // A maqqef joins two words; each is its own lexeme and each deserves its own
+  // scorecard entry. רַב־עֳנִי is רַב "much" AND עֳנִי "affliction" — collapsing
+  // it to one root threw the second word away, and 13% of the corpus is
+  // maqqef-joined. Returns [{part, root}, ...] in the order the words are written.
+  function getRoots(hw) {
+    var w = _clean(hw);
+    var parts = _pieces(w);
+    if (parts.length <= 1) {
+      var r = getRoot(hw);
+      return r ? [{ part: w, root: r }] : [];
+    }
+    var out = [], seen = {};
+    for (var i = 0; i < parts.length; i++) {
+      var rp = getRoot(parts[i]);
+      if (!rp || seen[rp]) continue;
+      seen[rp] = 1;
+      out.push({ part: parts[i], root: rp });
+    }
+    if (!out.length) { var r2 = getRoot(hw); if (r2) out.push({ part: w, root: r2 }); }
+    return out;
+  }
+
   // Get root key for a Hebrew word
   //
   // Cascade, most reliable first. Every step returns either a real Strong's
@@ -7809,7 +7831,12 @@ document.addEventListener('keydown', function(e) {
           // אֱלוֹהַּ → אֵל → אוּל and file God under "to twist". Compare strong
           // consonants only, since א/ה/ו/י come and go as matres.
           var ok = false;
-          if (e && e.w && src && src.w &&
+          // A two-letter word is already irreducible; do not let etymology push
+          // it into a triliteral. Otherwise בֶּן "son" files under בָּנָה
+          // "build" and פֶּן "lest" under פָּנָה "face" — the very merge the
+          // original engine comment warned about.
+          var srcLen = src && src.w ? (src.w.match(/[\u05D0-\u05EA]/g) || []).length : 0;
+          if (e && e.w && src && src.w && srcLen >= 3 &&
               (e.w.match(/[\u05D0-\u05EA]/g) || []).length === 3) {
             var strong = function(x) {
               return (String(x).match(/[\u05D0-\u05EA]/g) || []).join('')
