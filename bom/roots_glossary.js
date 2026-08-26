@@ -5656,7 +5656,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "נותרים": {
-    "meaning": "rest",
+    "meaning": "those remaining",
     "category": "Life"
   },
   "יפגשו": {
@@ -6501,7 +6501,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "גופות": {
-    "meaning": "Bgopot",
+    "meaning": "bodies; bodies of",
     "category": "Life"
   },
   "אל־רעהו": {
@@ -9013,7 +9013,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "גופי": {
-    "meaning": "frame",
+    "meaning": "my body",
     "category": "Person"
   },
   "אפס": {
@@ -12834,7 +12834,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יגנבו": {
-    "meaning": "carried off",
+    "meaning": "they shall steal",
     "category": "Uncategorized"
   },
   "נקבה": {
@@ -17741,7 +17741,7 @@ window._rootGlossaryData = {
     "category": "Nature"
   },
   "גופותיהם": {
-    "meaning": "Ogopotihm",
+    "meaning": "their bodies",
     "category": "Uncategorized"
   },
   "דק": {
@@ -24360,7 +24360,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "ימיתנו׃": {
-    "meaning": "Imitno",
+    "meaning": "he shall put us to death",
     "category": "Uncategorized"
   },
   "יקבצום": {
@@ -24392,7 +24392,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יבריחם": {
-    "meaning": "Oibrichm",
+    "meaning": "he shall drive them away",
     "category": "Uncategorized"
   },
   "זרועו׃": {
@@ -24604,7 +24604,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יזהרו": {
-    "meaning": "Oizhro",
+    "meaning": "they shall take heed",
     "category": "Uncategorized"
   },
   "נכתם": {
@@ -24636,7 +24636,7 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "יצדו": {
-    "meaning": "Oitsdo",
+    "meaning": "they shall hunt",
     "category": "Action"
   },
   "גמל": {
@@ -24668,7 +24668,7 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "ידיננו": {
-    "meaning": "Oidinno",
+    "meaning": "he shall judge us",
     "category": "Uncategorized"
   },
   "נשמידם": {
@@ -24692,7 +24692,7 @@ window._rootGlossaryData = {
     "category": "Perception"
   },
   "יכמרו": {
-    "meaning": "Oikmro",
+    "meaning": "they shall be kindled, yearn",
     "category": "Uncategorized"
   },
   "רחמיהם": {
@@ -24724,7 +24724,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "תאותו": {
-    "meaning": "Toto",
+    "meaning": "his desire",
     "category": "Uncategorized"
   },
   "ימושו": {
@@ -24732,7 +24732,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "אתאוה": {
-    "meaning": "Toh",
+    "meaning": "I will desire",
     "category": "Uncategorized"
   },
   "נגרשו": {
@@ -24748,7 +24748,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "תאותיכם": {
-    "meaning": "Totikhm",
+    "meaning": "your desires",
     "category": "Uncategorized"
   },
   "יכעיסו": {
@@ -24760,7 +24760,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "אלוה": {
-    "meaning": "Loh",
+    "meaning": "God, deity",
     "category": "Uncategorized"
   },
   "יגדף": {
@@ -24792,7 +24792,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "נוכחו": {
-    "meaning": "Nokcho",
+    "meaning": "they were confronted",
     "category": "Uncategorized"
   },
   "אלמים": {
@@ -24816,7 +24816,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יכיל": {
-    "meaning": "Ikil",
+    "meaning": "he shall contain",
     "category": "Uncategorized"
   },
   "דלת": {
@@ -24828,7 +24828,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "סביבותינו": {
-    "meaning": "Sbibotino",
+    "meaning": "around us",
     "category": "Uncategorized"
   },
   "סגים": {
@@ -24892,7 +24892,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "קוותכם": {
-    "meaning": "Bkootkm",
+    "meaning": "your hope",
     "category": "Uncategorized"
   },
   "צומח": {
@@ -24904,7 +24904,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "סירות": {
-    "meaning": "Hsirot",
+    "meaning": "pots, cauldrons",
     "category": "Uncategorized"
   },
   "ביאים": {
@@ -24988,7 +24988,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "נולדו": {
-    "meaning": "Noldo",
+    "meaning": "they were born",
     "category": "Action"
   },
   "כבלים": {
@@ -25008,7 +25008,7 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "עצותיו": {
-    "meaning": "Tsotio",
+    "meaning": "his counsels",
     "category": "Uncategorized"
   },
   "נפשם׃": {
@@ -25032,7 +25032,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "אותותיהם": {
-    "meaning": "Ototihm",
+    "meaning": "their signs",
     "category": "Uncategorized"
   },
   "תסתיר": {
@@ -25044,7 +25044,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "תודיע": {
-    "meaning": "Todi",
+    "meaning": "you shall make known",
     "category": "Uncategorized"
   },
   "נוחה": {
@@ -25120,7 +25120,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יוקם": {
-    "meaning": "Iokm",
+    "meaning": "it shall be established",
     "category": "Uncategorized"
   },
   "יגמל": {
@@ -25152,7 +25152,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "ידאיגו": {
-    "meaning": "Idigo",
+    "meaning": "they shall trouble",
     "category": "Uncategorized"
   },
   "את־האמת": {
@@ -25244,7 +25244,7 @@ window._rootGlossaryData = {
     "category": "Family"
   },
   "יעורר": {
-    "meaning": "Oiorr",
+    "meaning": "he shall rouse, stir up",
     "category": "Uncategorized"
   },
   "קיפו": {
@@ -25484,7 +25484,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יטבילו": {
-    "meaning": "Oitbilo",
+    "meaning": "they shall baptize, immerse",
     "category": "Uncategorized"
   },
   "את־כל־האנשים": {
@@ -25524,7 +25524,7 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "סוללות": {
-    "meaning": "Bsollot",
+    "meaning": "siege ramps",
     "category": "Uncategorized"
   },
   "חלליהם": {
@@ -25632,7 +25632,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יתמכו": {
-    "meaning": "Oitmko",
+    "meaning": "they shall uphold",
     "category": "Uncategorized"
   },
   "כריח": {
@@ -25656,7 +25656,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "ורגים": {
-    "meaning": "Ohorgim",
+    "meaning": "slayers",
     "category": "Uncategorized"
   },
   "פגשם": {
@@ -25800,7 +25800,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "איומיכם׃": {
-    "meaning": "Iomikhm",
+    "meaning": "your terrors",
     "category": "Uncategorized"
   },
   "את־משפט": {
@@ -25864,7 +25864,7 @@ window._rootGlossaryData = {
     "category": "Life"
   },
   "אמותיהם": {
-    "meaning": "Motihm",
+    "meaning": "their mothers",
     "category": "Uncategorized"
   },
   "אל־הילמן׃": {
@@ -25976,7 +25976,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יורשים": {
-    "meaning": "Iorshim",
+    "meaning": "heirs, inheritors",
     "category": "Uncategorized"
   },
   "את־ארצותינו": {
@@ -26016,7 +26016,7 @@ window._rootGlossaryData = {
     "category": "Nature"
   },
   "אויביכם": {
-    "meaning": "Oivikhm",
+    "meaning": "your enemies",
     "category": "Uncategorized"
   },
   "סביבכם": {
@@ -26024,7 +26024,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "רגים": {
-    "meaning": "Horgim",
+    "meaning": "slayers",
     "category": "Uncategorized"
   },
   "יכלתם": {
@@ -26076,7 +26076,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "תקימו": {
-    "meaning": "Tkimo",
+    "meaning": "you shall establish",
     "category": "Uncategorized"
   },
   "ל־חלק": {
@@ -26116,7 +26116,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יקיפו": {
-    "meaning": "Oikipo",
+    "meaning": "they shall surround",
     "category": "Uncategorized"
   },
   "חפשי׃": {
@@ -26236,7 +26236,7 @@ window._rootGlossaryData = {
     "category": "Society"
   },
   "נותרים׃": {
-    "meaning": "Hnotrim",
+    "meaning": "those remaining",
     "category": "Uncategorized"
   },
   "את־שמות": {
@@ -26532,7 +26532,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יוצר": {
-    "meaning": "Iotsr",
+    "meaning": "potter, fashioner",
     "category": "Uncategorized"
   },
   "סדקים": {
@@ -26560,7 +26560,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "ירגמו": {
-    "meaning": "Oirgmo",
+    "meaning": "they shall stone",
     "category": "Uncategorized"
   },
   "ירו": {
@@ -26628,7 +26628,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "ערבו": {
-    "meaning": "Rvo",
+    "meaning": "they pledged",
     "category": "Uncategorized"
   },
   "נרדף": {
@@ -26640,7 +26640,7 @@ window._rootGlossaryData = {
     "category": "Action"
   },
   "יכריתום": {
-    "meaning": "Oikritom",
+    "meaning": "they shall cut them off",
     "category": "Action"
   },
   "זמתם": {
@@ -26712,7 +26712,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "ראיה": {
-    "meaning": "Rih",
+    "meaning": "proof, evidence",
     "category": "Uncategorized"
   },
   "היר": {
@@ -26744,7 +26744,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "כבים": {
-    "meaning": "Kokbim",
+    "meaning": "stars",
     "category": "Uncategorized"
   },
   "אהה": {
@@ -26792,7 +26792,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יבט": {
-    "meaning": "Oibt",
+    "meaning": "he shall look",
     "category": "Uncategorized"
   },
   "יבער": {
@@ -26872,7 +26872,7 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "יגנבו׃": {
-    "meaning": "Oignbo",
+    "meaning": "they shall steal",
     "category": "Uncategorized"
   },
   "אם־עינך": {
@@ -26948,7 +26948,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "עוריהם": {
-    "meaning": "Oorihm",
+    "meaning": "their skins",
     "category": "Uncategorized"
   },
   "את־טפם": {
@@ -26964,7 +26964,7 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "יבך": {
-    "meaning": "Oibk",
+    "meaning": "he shall weep",
     "category": "Uncategorized"
   },
   "ן־הלחם": {
@@ -26972,7 +26972,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "זוכרים": {
-    "meaning": "Zokrim",
+    "meaning": "remembering",
     "category": "Uncategorized"
   },
   "אם־תזכרוני": {
@@ -27112,7 +27112,7 @@ window._rootGlossaryData = {
     "category": "Family"
   },
   "נזוקו׃": {
-    "meaning": "Nzoko",
+    "meaning": "they were harmed",
     "category": "Uncategorized"
   },
   "ידעום׃": {
