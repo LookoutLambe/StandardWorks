@@ -228,12 +228,8 @@ var ab_ch3Verses = [
 ];
 renderVerseSet(ab_ch3Verses, 'ab-ch3-verses');
 var ab_ch4Verses = [
-  { num: "א", words: [
-    ["וַיֹּאמֶר","And said"],["יְהוָה","the Lord:"],["נֵרְדָה","Let us go down."],["וַיֵּרְדוּ","And they went down"],["בְּרֵאשִׁית","at the beginning,"],["וַיַּעַרְכוּ","and organized"],["וַיִּבְרְאוּ","and formed,"],["הָאֱלֹהִים","the Gods,"],["אֶת־הַשָּׁמַיִם","the heavens"],["וְאֶת־הָאָרֶץ","and the earth."],["׃",""]
-  ]},
-  { num: "ב", words: [
-    ["וְהָאָרֶץ","And the earth,"],["אַחֲרֵי","after"],["אֲשֶׁר","that"],["נִבְרְאָה","it was formed,"],["הָיְתָה","was"],["תֹהוּ","empty"],["וָבֹהוּ","and desolate,"],["כִּי","because"],["לֹא־בָרְאוּ","they had not formed"],["דָבָר","anything"],["זוּלָתִי","but"],["הָאָרֶץ","the earth;"],["וּמָלַךְ","and reigned"],["חֹשֶׁךְ","darkness"],["עַל־פְּנֵי","upon the face of"],["תְהוֹם","the deep,"],["וְרוּחַ","and the Spirit of"],["הָאֱלֹהִים","the Gods"],["מְרַחֶפֶת","was brooding"],["עַל־פְּנֵי","upon the face of"],["הַמָּיִם","the waters."],["׃",""]
-  ]},
+  { num: "א", words: [["וַיֹּאמֶר","And said"], ["יְהוָה","the Lord:"], ["נֵרְדָה","Let us go down."], ["וַיֵּרְדוּ","And they went down"], ["בְּרֵאשִׁית","at the beginning,"], ["וַיַּעַרְכוּ","and organized"], ["וַיָּצְרוּ","and formed,"], ["הָאֱלֹהִים","the Gods,"], ["אֶת־הַשָּׁמַיִם","the heavens"], ["וְאֶת־הָאָרֶץ","and the earth."], ["׃",""]]},
+  { num: "ב", words: [["וְהָאָרֶץ","And the earth,"], ["אַחֲרֵי","after"], ["אֲשֶׁר","that"], ["נוֹצְרָה","it was formed,"], ["הָיְתָה","was"], ["תֹהוּ","empty"], ["וָבֹהוּ","and desolate,"], ["כִּי","because"], ["לֹא־יָצְרוּ","they had not formed"], ["דָבָר","anything"], ["זוּלָתִי","but"], ["הָאָרֶץ","the earth;"], ["וּמָלַךְ","and reigned"], ["חֹשֶׁךְ","darkness"], ["עַל־פְּנֵי","upon the face of"], ["תְהוֹם","the deep,"], ["וְרוּחַ","and the Spirit of"], ["הָאֱלֹהִים","the Gods"], ["מְרַחֶפֶת","was brooding"], ["עַל־פְּנֵי","upon the face of"], ["הַמָּיִם","the waters."], ["׃",""]]},
   { num: "ג", words: [
     ["וַיֹּאמְרוּ","And said"],["הָאֱלֹהִים","the Gods:"],["יְהִי","Let there be"],["אוֹר","light;"],["וַיְהִי־אוֹר","and there was light."],["׃",""]
   ]},
@@ -264,9 +260,7 @@ var ab_ch4Verses = [
   { num: "יב", words: [
     ["וַיַּעַרְכוּ","And organized"],["הָאֱלֹהִים","the Gods"],["אֶת־הָאָרֶץ","the earth"],["לְהוֹצִיא","to bring forth"],["דֶּשֶׁא","the grass"],["מִזַּרְעוֹ","from its own seed,"],["וְעֵשֶׂב","and the herb"],["לְהוֹצִיא","to bring forth"],["עֵשֶׂב","herb"],["מִזַּרְעוֹ","from its own seed,"],["מַזְרִיעַ","yielding"],["זֶרַע","seed"],["לְמִינֵהוּ","after his kind;"],["וְהָאָרֶץ","and the earth"],["לְהוֹצִיא","to bring forth"],["עֵץ","the tree"],["מִזַּרְעוֹ","from its own seed,"],["עֹשֶׂה","yielding"],["פְּרִי","fruit,"],["אֲשֶׁר","whose"],["זַרְעוֹ","seed"],["לֹא","could not"],["יוֹצִיא","bring forth"],["אֶלָּא","but"],["כְמוֹתוֹ","the same in itself,"],["לְמִינֵהוּ","after his kind;"],["וַיִּרְאוּ","and saw"],["הָאֱלֹהִים","the Gods"],["כִּי","that"],["נִשְׁמְעוּ","they were obeyed."],["׃",""]
   ]},
-  { num: "יג", words: [
-    ["וַיְהִי","And it came to pass that"],["וַיִּמְנוּ","they numbered"],["אֶת־הַיָּמִים","the days;"],["מֵעֶרֶב","from the evening"],["עַד־בֹּקֶר","until the morning"],["קָרְאוּ","they called"],["לָיְלָה","night;"],["וּמִבֹּקֶר","and from the morning"],["עַד־עֶרֶב","until the evening"],["קָרְאוּ","they called"],["יוֹם","day;"],["וְזֶה","and it was"],["הַפַּעַם","the time"],["הַשְּׁלִישִׁית","third."],["׃",""]
-  ]},
+  { num: "יג", words: [["וַיִּמְנוּ","And it came to pass that they numbered"], ["אֶת־הַיָּמִים","the days;"], ["מֵעֶרֶב","from the evening"], ["עַד־בֹּקֶר","until the morning"], ["קָרְאוּ","they called"], ["לָיְלָה","night;"], ["וּמִבֹּקֶר","and from the morning"], ["עַד־עֶרֶב","until the evening"], ["קָרְאוּ","they called"], ["יוֹם","day;"], ["וְזֶה","and it was"], ["הַפַּעַם","the time"], ["הַשְּׁלִישִׁית","third."], ["׃",""]]},
   { num: "יד", words: [
     ["וַיַּעַרְכוּ","And organized"],["הָאֱלֹהִים","the Gods"],["אֶת־הַמְּאֹרֹת","the lights"],["בִּרְקִיעַ","in the expanse of"],["הַשָּׁמַיִם","the heaven,"],["לְהַבְדִּיל","to divide"],["בֵּין","between"],["הַיּוֹם","the day"],["וּבֵין","and"],["הַלָּיְלָה","from the night;"],["וַיַּעַרְכוּ","and organized"],["אֹתָם","them"],["לִהְיוֹת","to be"],["לְאֹתֹת","for signs"],["וּלְמוֹעֲדִים","and for seasons,"],["וּלְיָמִים","and for days"],["וְשָׁנִים","and for years;"],["׃",""]
   ]},
@@ -327,15 +321,11 @@ var ab_ch5Verses = [
   { num: "א", words: [
     ["וְכֹה","And thus"],["נְכַלֶּה","we will finish"],["אֶת־הַשָּׁמַיִם","the heavens"],["וְאֶת־הָאָרֶץ","and the earth,"],["וְאֶת־כׇּל־צְבָאָם","and all the hosts of them."],["׃",""]
   ]},
-  { num: "ב", words: [
-    ["וַיֹּאמְרוּ","And said"],["הָאֱלֹהִים","the Gods"],["בֵּינֵיהֶם","among themselves:"],["בַּיּוֹם","On the time"],["הַשְּׁבִיעִי","seventh"],["נְכַלֶּה","we will end"],["אֶת־מְלַאכְתֵּנוּ","our work,"],["אֲשֶׁר","which"],["וְנִשְׁבֹּת","we have counseled; and we will rest"],["בַּיּוֹם","on the time"],["הַשְּׁבִיעִי","seventh"],["מִכׇּל־מְלַאכְתֵּנוּ","from all our work"],["אֲשֶׁר","which we have counseled."],["׃",""]
-  ]},
+  { num: "ב", words: [["וַיֹּאמְרוּ","And said"], ["הָאֱלֹהִים","the Gods"], ["בֵּינֵיהֶם","among themselves:"], ["בַּיּוֹם","On the time"], ["הַשְּׁבִיעִי","seventh"], ["נְכַלֶּה","we will end"], ["אֶת־מְלַאכְתֵּנוּ","our work,"], ["אֲשֶׁר","which"], ["יָעַצְנוּ","we have counseled"], ["וְנִשְׁבֹּת","we have counseled; and we will rest"], ["בַּיּוֹם","on the time"], ["הַשְּׁבִיעִי","seventh"], ["מִכׇּל־מְלַאכְתֵּנוּ","from all our work"], ["אֲשֶׁר","which we have counseled."], ["יָעַצְנוּ","we have counseled"], ["׃",""]]},
   { num: "ג", words: [
     ["וַיִּגְמְרוּ","And finished"],["הָאֱלֹהִים","the Gods"],["בַּיּוֹם","on the time"],["הַשְּׁבִיעִי","seventh,"],["כִּי","because"],["בַיּוֹם","on the time"],["הַשְּׁבִיעִי","seventh"],["שָׁבְתוּ","they would rest"],["מִכׇּל־מַעֲשֵׂיהֶם","from all their works"],["אֲשֶׁר","which"],["יָעֲצוּ","they had counseled"],["בֵּינֵיהֶם","among themselves"],["לַעֲשׂוֹת","to form;"],["וַיְקַדְּשׁוּ","and sanctified"],["אֹתוֹ","it."],["וְכֵן","And thus"],["הָיוּ","were"],["מַחְשְׁבוֹתֵיהֶם","their decisions"],["בָּעֵת","at the time"],["אֲשֶׁר","that"],["יָעֲצוּ","they counseled"],["בֵּינֵיהֶם","among themselves"],["לַעֲשׂוֹת","in the forming of"],["אֶת־הַשָּׁמַיִם","the heavens"],["וְאֶת־הָאָרֶץ","and the earth."],["׃",""]
   ]},
-  { num: "ד", words: [
-    ["וַיֵּרְדוּ","And came down"],["הָאֱלֹהִים","the Gods"],["וַיָּצְרוּ","and formed"],["אֵלֶּה","these"],["תּוֹלְדוֹת","the generations of"],["הַשָּׁמַיִם","the heavens"],["וְהָאָרֶץ","and of the earth,"],["בְּהִבָּרְאָם","when they were formed,"],["בְּיוֹם","in the day that"],["עֲשׂוֹת","formed"],["הָאֱלֹהִים","the Gods"],["אֶרֶץ","the earth"],["וְשָׁמָיִם","and the heavens,"],["׃",""]
-  ]},
+  { num: "ד", words: [["וַיֵּרְדוּ","And came down"], ["הָאֱלֹהִים","the Gods"], ["וַיָּצְרוּ","and formed"], ["אֵלֶּה","these"], ["תּוֹלְדוֹת","the generations of"], ["הַשָּׁמַיִם","the heavens"], ["וְהָאָרֶץ","and of the earth,"], ["בְּהִוָּצְרָם","when they were formed,"], ["בְּיוֹם","in the day that"], ["עֲשׂוֹת","formed"], ["הָאֱלֹהִים","the Gods"], ["אֶרֶץ","the earth"], ["וְשָׁמָיִם","and the heavens,"], ["׃",""]]},
   { num: "ה", words: [
     ["כְּפִי","according to"],["כׇּל־אֲשֶׁר","all that which"],["דִּבְּרוּ","they had said"],["עַל־כׇּל־שִׂיחַ","concerning every plant of"],["הַשָּׂדֶה","the field"],["בְּטֶרֶם","before"],["יִהְיֶה","it was"],["בָאָרֶץ","in the earth,"],["וְעַל־כׇּל־עֵשֶׂב","and every herb of"],["הַשָּׂדֶה","the field"],["בְּטֶרֶם","before"],["יִצְמָח","it grew;"],["כִּי","for"],["לֹא","not"],["הִמְטִירוּ","had caused it to rain"],["הָאֱלֹהִים","the Gods"],["עַל־הָאָרֶץ","upon the earth"],["בְּהִוָּעֲצָם","when they counseled"],["לַעֲשׂוֹתָם","to do them,"],["וְלֹא","and not"],["יָצְרוּ","had formed"],["אָדָם","a man"],["לַעֲבֹד","to till"],["אֶת־הָאֲדָמָה","the ground."],["׃",""]
   ]},
