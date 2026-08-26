@@ -1392,6 +1392,7 @@ try {
 <!-- Strong's lookup + Root glossary data -->
 <script src="strongs_lookup.js"></script>
 <script src="strongs_roots.js"></script>
+<script src="root_engine.js?v=3"></script>
 <script src="root_scorecard.js?v=4"></script>
 <script>RootScorecard.init({ vol: 'nt', base: '' });</script>
 <script src="bom/roots_glossary.js"></script>
@@ -2079,6 +2080,14 @@ var rootMap = {
 };
 
 function getRoot(hw) {
+  // Canonical resolution lives in root_engine.js (generated from bom/bom.html).
+  // Delegating keeps the cross-reference keys, the scorecard and the glossary on
+  // ONE set of root keys. This page's own cascade below ends in a truncating
+  // extractRoot() that invented keys — כָּאָרֶץ became "כאר", אַרְצוֹתֵינוּ became
+  // "ארצ" — so _rootXrefs was keyed differently from the popup and the
+  // "Cross-References for root" link never matched. Kept only as a fallback for
+  // the case where root_engine.js fails to load.
+  if (window.RootEngine && window.RootEngine.getRoot) return window.RootEngine.getRoot(hw);
   // Try Strong's-based root first
   if (window._strongsLookup && window._strongsRoots) {
     var stripped = stripPrefixes(hw);
