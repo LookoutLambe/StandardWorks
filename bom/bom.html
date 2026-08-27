@@ -3868,7 +3868,7 @@ body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
 <script src="../root_names.js?v=10"></script>
 <script src="../xref_common.js?v=2"></script>
 <script src="../verse_loader.js?v=4"></script>
-<script src="../root_scorecard.js?v=23"></script>
+<script src="../root_scorecard.js?v=24"></script>
 <script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
 <script src="crossrefs.js?v=23"></script>
 <script src="roots_glossary.js?v=23"></script>
@@ -7884,8 +7884,12 @@ document.addEventListener('keydown', function(e) {
                 if (a0 === base.replace(/[וי]/g, '')) return true;
               }
             }
-            var a = s2.replace(/[וי]/g, ''), b = base.replace(/[וי]/g, '');
-            if (a === b && s2.length - base.length <= 1) return true;
+            // Matres may be dropped from the DERIVED form only. Stripping them
+            // from the root as well made סוֹד "council, secret" match יָסַד
+            // "to found" — both reduce to סד — and pooled יְסוֹד "foundation"
+            // with הַסּוֹד "the secret". The י of יסד is a radical, not a mater.
+            var a = s2.replace(/[וי]/g, '');
+            if (a === base && s2.length - base.length <= 1) return true;
           }
           return false;
         };

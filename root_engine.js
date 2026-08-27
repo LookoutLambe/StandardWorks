@@ -348,8 +348,12 @@ function stripPrefixes(w) {
                 if (a0 === base.replace(/[וי]/g, '')) return true;
               }
             }
-            var a = s2.replace(/[וי]/g, ''), b = base.replace(/[וי]/g, '');
-            if (a === b && s2.length - base.length <= 1) return true;
+            // Matres may be dropped from the DERIVED form only. Stripping them
+            // from the root as well made סוֹד "council, secret" match יָסַד
+            // "to found" — both reduce to סד — and pooled יְסוֹד "foundation"
+            // with הַסּוֹד "the secret". The י of יסד is a radical, not a mater.
+            var a = s2.replace(/[וי]/g, '');
+            if (a === base && s2.length - base.length <= 1) return true;
           }
           return false;
         };
