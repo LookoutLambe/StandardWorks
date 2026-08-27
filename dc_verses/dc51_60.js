@@ -1517,14 +1517,14 @@ var dc57_ch1Verses = [
     ["לֹא","not"],
     ["רְחוֹקָה","far"],
     ["מִבֵּית","from the house of"],
-    ["הַמִּשְׁפָּט׃","judgment courthouse"]
+    ["הַמִּשְׁפָּט׃","judgment"]
   ]},
   { num: "ד", words: [
     ["לָכֵן","wherefore"],
     ["חׇכְמָה","it is wisdom"],
-    ["הִיא","it"],
+    ["הִיא","it is"],
     ["אֲשֶׁר","that"],
-    ["תִּקָּנֶה","that should be purchased"],
+    ["תִּקָּנֶה","should be purchased"],
     ["הָאָרֶץ","the land"],
     ["בְּיַד","by the hand of"],
     ["הַקְּדוֹשִׁים","the saints"],
