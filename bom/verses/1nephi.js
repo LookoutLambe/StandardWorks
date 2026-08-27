@@ -98,7 +98,7 @@ var colophonWords = [
   ["אוֹ","or"],
   ["בְּמִלִּים","in words"],
   ["אֲחֵרוֹת","other"],
-  ["אָנֹכִי","I"],
+  ["אֲנִי","I"],
   ["נֶפִי","Nephi"],
   ["כָּתַבְתִּי","I have written"],
   ["אֶת־הַדְּבָרִים","the words"], ["הָאֵלֶּה","these"],
@@ -1739,7 +1739,7 @@ var ch4Verses = [
   { num:"טז", words:[
     ["וָאֵדַע","and I knew"],
     ["גַּם","also"],
-    ["אָנֹכִי","I"],
+    ["אֲנִי","I"],
     ["כִּי","that"],
     ["הַתּוֹרָה","the law"],
     ["חֲרוּתָה","was engraven"],
@@ -2157,7 +2157,7 @@ var ch5Verses = [
     ["כִּי","that"],
     ["אִישׁ","a man"],
     ["חָזוֹן","of vision"],
-    ["אָנֹכִי","I am"],
+    ["אֲנִי","I am"],
     ["כִּי","for"],
     ["לוּלֵא","if not"],
     ["רָאִיתִי","I had beheld"],
@@ -3877,7 +3877,7 @@ var ch10Verses = [
     ["לְמוּאֵל","Lemuel"],
     ["׃",""]
   ]},
-  { num:"יז", words:[["וַיְהִי","and it came to pass"], ["אַחֲרֵי","after"], ["שָׁמְעִי","had heard"], ["אֲנִי","I"], ["נֶפִי","Nephi"], ["אֶת־כׇּל־דִּבְרֵי","all the words of"], ["אָבִי","my father"], ["עַל־הַדְּבָרִים","upon the things"], ["אֲשֶׁר","which"], ["רָאָה","he saw"], ["בֶחָזוֹן","in vision"], ["וְהַדְּבָרִים","and the things"], ["אֲשֶׁר־דִּבֶּר","which he spoke"], ["בְּכֹחַ","by the power of"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["אֲשֶׁר","which"], ["קִבֵּל","he received"], ["בֶּאֱמוּנָתוֹ","through faith"], ["בְּבֶּן־אֱלֹהִים","in the Son of God"], ["וְהוּא","and He is"], ["הַמָּשִׁיחַ","the Messiah"], ["אֲשֶׁר","who"], ["יָבוֹא","shall come"], ["וָאֶתְאָו","and I desired"], ["גַם־אָנֹכִי","also I"], ["לִרְאוֹת","to see"], ["וְלִשְׁמֹעַ","and to hear"], ["וְלָדַעַת","and to know"], ["אֶת־הַדְּבָרִים","the things"], ["הָאֵלֶּה","these"], ["בְּכֹחַ","by the power of"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["אֲשֶׁר","which"], ["הוּא","is"], ["מַתַּת","the gift of"], ["אֱלֹהִים","God"], ["לְכׇל־דֹרְשָׁיו","unto all who seek Him"], ["כִּימֵי","as in the days of"], ["עוֹלָם","old"], ["כֵּן","so"], ["בְּיוֹם","in the day"], ["הִגָּלוֹתוֹ","that He revealeth Himself"], ["לִבְנֵי־הָאָדָם","unto the children of men"], ["׃",""]]},
+  { num:"יז", words:[["וַיְהִי","and it came to pass"], ["אַחֲרֵי","after"], ["שָׁמְעִי","had heard"], ["אֲנִי","I"], ["נֶפִי","Nephi"], ["אֶת־כׇּל־דִּבְרֵי","all the words of"], ["אָבִי","my father"], ["עַל־הַדְּבָרִים","upon the things"], ["אֲשֶׁר","which"], ["רָאָה","he saw"], ["בֶחָזוֹן","in vision"], ["וְהַדְּבָרִים","and the things"], ["אֲשֶׁר־דִּבֶּר","which he spoke"], ["בְּכֹחַ","by the power of"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["אֲשֶׁר","which"], ["קִבֵּל","he received"], ["בֶּאֱמוּנָתוֹ","through faith"], ["בְּבֶּן־אֱלֹהִים","in the Son of God"], ["וְהוּא","and He is"], ["הַמָּשִׁיחַ","the Messiah"], ["אֲשֶׁר","who"], ["יָבוֹא","shall come"], ["וָאֶתְאָו","and I desired"], ["גַם־אֲנִי","also I"], ["לִרְאוֹת","to see"], ["וְלִשְׁמֹעַ","and to hear"], ["וְלָדַעַת","and to know"], ["אֶת־הַדְּבָרִים","the things"], ["הָאֵלֶּה","these"], ["בְּכֹחַ","by the power of"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["אֲשֶׁר","which"], ["הוּא","is"], ["מַתַּת","the gift of"], ["אֱלֹהִים","God"], ["לְכׇל־דֹרְשָׁיו","unto all who seek Him"], ["כִּימֵי","as in the days of"], ["עוֹלָם","old"], ["כֵּן","so"], ["בְּיוֹם","in the day"], ["הִגָּלוֹתוֹ","that He revealeth Himself"], ["לִבְנֵי־הָאָדָם","unto the children of men"], ["׃",""]]},
   { num:"יח", words:[
     ["כִּי","for"],
     ["כַּאֲשֶׁר","as"],
