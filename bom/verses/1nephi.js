@@ -191,7 +191,7 @@ var ch1Verses = [
     ["אֶל־הָעָם","to the people"],
     ["לֵאמֹר","saying"],
     ["שׁוּבוּ","Repent ye"],
-    ["פֶּן־תִּשָּׁחֵת","lest it be destroyed,"],
+    ["פֶּן־תִּשָּׁחֵת","lest it be destroyed"],
     ["הָעִיר","the city"],
     ["יְרוּשָׁלַיִם","Jerusalem"],
     ["הַגְּדוֹלָה","the great"],
