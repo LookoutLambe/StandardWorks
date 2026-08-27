@@ -85,7 +85,7 @@ var dc81_ch1Verses = [
     ["יִהְיֶה","you shall have"],
     ["לְךָ","to you"],
     ["כֶּתֶר","a crown of"],
-    ["אַלְמָוֶת","immortality"],
+    ["אַל־מָוֶת","immortality"],
     ["וְחַיֵּי","and life"],
     ["עוֹלָם","eternal"],
     ["בַּמְּעוֹנוֹת","in the mansions"],

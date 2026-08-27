@@ -5338,10 +5338,12 @@ var dc138_ch1Verses = [
     ["אֶל","into"],
     ["מַלְכוּת","kingdom,"],
     ["אָבִיו","his Father's"],
-    ["וְשָׁם","there to be"],
-    ["אַלְמָוֶת","crowned with immortality"],
-    ["וְחַיֵּי","and life"],
+    ["וְשָׁם","and there"],
+    ["לְהִכָּתֵר","to be crowned"],
+    ["בְּאַל־מָוֶת","with immortality"],
+    ["וּבְחַיֵּי","and with life"],
     ["עוֹלָם׃","eternal"]
+  
   ]},
   { num: "נב", words: [
     ["וּמֵאָז","And thenceforth"],

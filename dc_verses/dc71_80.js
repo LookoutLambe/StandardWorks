@@ -604,7 +604,7 @@ var dc75_ch1Verses = [
     ["וּמְעֻטָּרִים","and crowned"],
     ["בְּכָבוֹד","with honor"],
     ["וּתְהִלָּה","and glory"],
-    ["וְאַלְמָוֶת","and immortality"],
+    ["וְאַל־מָוֶת","and immortality"],
     ["וְחַיֵּי","and life"],
     ["עוֹלָם׃","eternal"]
   ]},
@@ -2539,7 +2539,7 @@ var dc77_ch1Verses = [
     ["בִּהְיוֹתָהּ","in its state"],
     ["מְקֻדֶּשֶׁת","sanctified"],
     ["בַּת","possessing"],
-    ["אַלְמָוֶת","immortality"],
+    ["אַל־מָוֶת","immortality"],
     ["וְנִצְחִית׃","and eternal."]
   ]},
   { num: "ב", words: [

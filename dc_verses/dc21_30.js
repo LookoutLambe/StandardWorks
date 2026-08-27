@@ -946,7 +946,7 @@ var dc29_ch1Verses = [
     ["בְּמוֹתוֹ","by his death"],
     ["הַנַּפְשִׁי","natural"],
     ["יָקוּם","he might be raised"],
-    ["בְּאַלְמָוֶת","in immortality"],
+    ["בְּאַל־מָוֶת","in immortality"],
     ["לְחַיֵּי","unto life"],
     ["עוֹלָם","eternal"],
     ["כׇּל","all"],
