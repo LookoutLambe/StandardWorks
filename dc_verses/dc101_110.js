@@ -1291,8 +1291,8 @@ var dc101_ch1Verses = [
     ["חֶלְקָם","their portion"],
     ["עִם","among"],
     ["הַחֲנֵפִים","hypocrites,"],
-    ["וְחַסְרֵי","and unbelievers"],
-    ["הָאֱמוּנָה׃","lacking faith;"]
+    ["וְחַסְרֵי","and those lacking"],
+    ["הָאֱמוּנָה׃","faith"]
   ]},
   { num: "צא", words: [
     ["אָכֵן","Even"],
@@ -1538,7 +1538,7 @@ var dc102_ch1Verses = [
     ["בִּמְקוֹם","in the place of"],
     ["יוֹעֲצִים׃","absent councilors."]
   ]},
-  { num: "ח", words: [["נִגְזַר","Voted decreed: that"], ["אֲשֶׁר","that"], ["בְּכׇל־עֵת","whenever"], ["מָקוֹם","any vacancy"], ["בְּמוֹת","shall occur by the death,"], ["הֲדָחָה","removal"], ["מִמִּשְׂרָה","from office"], ["עַל","for"], ["פֶּשַׁע","transgression,"], ["אוֹ","or"], ["יְצִיאָה","removal going out"], ["מִגְּבוּלוֹת","from the bounds of"], ["מֶמְשֶׁלֶת","the government of"], ["הַכְּנֵסִיָּה","church"], ["הַזֹּאת","this,"], ["לְאֶחָד","of any one"], ["מִן","of"], ["הַיּוֹעֲצִים","the councilors,"], ["הַנִּזְכָּרִים","above-named"], ["יִמָּלֵא","it shall be filled"], ["בְּיַד","by"], ["מִנּוּי","the nomination of"], ["הַנָּשִׂיא","the president"], ["אוֹ","or"], ["הַנְּשִׂיאִים","presidents,"], ["וְקֻיַּם","and sanctioned by"], ["קוֹל","the voice of"], ["סַנְהֶדְרִין","a council"], ["כֹּלֵל","general"], ["כֹּהֲנִים","of priests,"], ["גְּדוֹלִים","high"], ["לַתַּכְלִית","for the purpose"], ["הַזֹּאת","that"], ["לִפְעֹל","to act"], ["בְּשֵׁם","in the name of"], ["הַכְּנֵסִיָּה׃","the church."]]},
+  { num: "ח", words: [["נִגְזַר","decreed"], ["אֲשֶׁר","that"], ["בְּכׇל־עֵת","whenever"], ["מָקוֹם","a vacancy"], ["בְּמוֹת","by the death of"], ["הֲדָחָה","removal"], ["מִמִּשְׂרָה","from office"], ["עַל","for"], ["פֶּשַׁע","transgression,"], ["אוֹ","or"], ["יְצִיאָה","going out"], ["מִגְּבוּלוֹת","from the bounds of"], ["מֶמְשֶׁלֶת","the government of"], ["הַכְּנֵסִיָּה","church"], ["הַזֹּאת","this,"], ["לְאֶחָד","of any one"], ["מִן","of"], ["הַיּוֹעֲצִים","the councilors,"], ["הַנִּזְכָּרִים","above-named"], ["יִמָּלֵא","it shall be filled"], ["בְּיַד","by"], ["מִנּוּי","the nomination of"], ["הַנָּשִׂיא","the president"], ["אוֹ","or"], ["הַנְּשִׂיאִים","presidents,"], ["וְקֻיַּם","and sanctioned by"], ["קוֹל","the voice of"], ["סַנְהֶדְרִין","a council"], ["כֹּלֵל","general"], ["כֹּהֲנִים","of priests,"], ["גְּדוֹלִים","high"], ["לַתַּכְלִית","for the purpose"], ["הַזֹּאת","that"], ["לִפְעֹל","to act"], ["בְּשֵׁם","in the name of"], ["הַכְּנֵסִיָּה׃","the church."]]},
   { num: "ט", words: [["נְשִׂיא","The president of"], ["הַכְּנֵסִיָּה","the church,"], ["אֲשֶׁר","who"], ["הוּא","is"], ["גַּם","also"], ["נְשִׂיא","the president of"], ["הַסַּנְהֶדְרִין","the council,"], ["מְמֻנֶּה","is appointed"], ["עַל־פִּי","by"], ["חָזוֹן","revelation"], ["וּמֻכָּר","and acknowledged"], ["בְּהַנְהָגָתוֹ","in his administration"], ["בְּקוֹל","by the voice of"], ["הַכְּנֵסִיָּה׃","the church."]]},
   { num: "י", words: [["וּכְפִי","And it is according to"], ["כְּבוֹד","the dignity of"], ["מִשְׂרָתוֹ","his office"], ["רָאוּי","that he should"], ["אֲשֶׁר","that"], ["יֵשֵׁב","he preside"], ["בְּרֹאשׁ","over"], ["סַנְהֶדְרִין","the council of"], ["הַכְּנֵסִיָּה","the church;"], ["וּזְכוּתוֹ","and it is his privilege"], ["לְהֵעָזֵר","to be assisted"], ["בִּשְׁנֵי","by two"], ["נְשִׂיאִים","presidents,"], ["אֲחֵרִים","other"], ["הַמְּמֻנִּים","appointed"], ["כַּאֲשֶׁר","after the same manner that"], ["מֻנָּה","was appointed"], ["הוּא׃","he himself."]]},
   { num: "יא", words: [
@@ -1572,7 +1572,7 @@ var dc102_ch1Verses = [
     ["אֶחָד","one"],
     ["מֵהֶם׃","either of them."]
   ]},
-  { num: "יב", words: [["בְּכׇל־עֵת","Whenever"], ["אֲשֶׁר","that"], ["תִּקָּהֵל","is assembled"], ["סַנְהֶדְרִין","a council of"], ["כֹּהֲנִים","priests"], ["גְּדוֹלִים","high"], ["בִּכְנֵסִיַּת","of the church of"], ["הַמָּשִׁיחַ","Christ,"], ["כַּמִּשְׁפָּט","regularly lawfully"], ["כְּפִי","according to"], ["הַתַּבְנִית","the pattern"], ["הַכְּתוּבָה","the written"], ["לְמַעְלָה","above,"], ["עַל","upon"], ["שְׁנֵים","the twelve"], ["עָשָׂר","twelve"], ["הַיּוֹעֲצִים","it shall be the duty of the councilors"], ["לְהַפִּיל","to cast"], ["גּוֹרָלוֹת","lots"], ["בְּמִסְפָּרִים","by numbers,"], ["וְכֵן","and thereby"], ["יֵדְעוּ","they shall know"], ["מִי","who"], ["מִשְּׁנֵים","of the twelve"], ["הֶעָשָׂר","twelve"], ["יְדַבֵּר","shall speak"], ["רִאשׁוֹן","first,"], ["מַתְחִיל","commencing"], ["בְּמִסְפָּר","with number"], ["אֶחָד","one"], ["וְכֵן","and so"], ["הָלְאָה","in succession"], ["עַד","to"], ["שְׁנֵים","number twelve."], ["עָשָׂר׃","twelve"]]},
+  { num: "יב", words: [["בְּכׇל־עֵת","Whenever"], ["אֲשֶׁר","that"], ["תִּקָּהֵל","is assembled"], ["סַנְהֶדְרִין","a council of"], ["כֹּהֲנִים","priests"], ["גְּדוֹלִים","high"], ["בִּכְנֵסִיַּת","of the church of"], ["הַמָּשִׁיחַ","Christ,"], ["כַּמִּשְׁפָּט","lawfully"], ["כְּפִי","according to"], ["הַתַּבְנִית","the pattern"], ["הַכְּתוּבָה","the written"], ["לְמַעְלָה","above,"], ["עַל","upon"], ["שְׁנֵים־עָשָׂר","the twelve"], ["הַיּוֹעֲצִים","it shall be the duty of the councilors"], ["לְהַפִּיל","to cast"], ["גּוֹרָלוֹת","lots"], ["בְּמִסְפָּרִים","by numbers,"], ["וְכֵן","and thereby"], ["יֵדְעוּ","they shall know"], ["מִי","who"], ["מִשְּׁנֵים","of the twelve"], ["הֶעָשָׂר","twelve"], ["יְדַבֵּר","shall speak"], ["רִאשׁוֹן","first,"], ["מַתְחִיל","commencing"], ["בְּמִסְפָּר","with number"], ["אֶחָד","one"], ["וְכֵן","and so"], ["הָלְאָה","in succession"], ["עַד","to"], ["שְׁנֵים","number twelve."], ["עָשָׂר׃","twelve"]]},
   { num: "יג", words: [
     ["בְּכׇל־עֵת","Whenever"],
     ["אֲשֶׁר","that"],
@@ -1654,8 +1654,8 @@ var dc102_ch1Verses = [
   { num: "יז", words: [
     ["הַיּוֹעֲצִים","Those councilors"],
     ["אֲשֶׁר","which"],
-    ["יַעֲלֶה","draw"],
-    ["בְּגוֹרָלָם","even numbers,"],
+    ["יַעֲלֶה","comes up"],
+    ["בְּגוֹרָלָם","in their lot"],
     ["מִסְפָּרִים","numbers"],
     ["זוּגִיִּים","even"],
     ["לֵאמֹר","that is,"],
@@ -1669,9 +1669,9 @@ var dc102_ch1Verses = [
     ["אֲשֶׁר","which"],
     ["יַעַמְדוּ","are to stand up"],
     ["בְּעַד","in behalf of"],
-    ["הַנִּדּוֹן","the accused judged,"],
+    ["הַנִּדּוֹן","the judged"],
     ["וְיִמְנְעוּ","and prevent"],
-    ["כְּלִמָּה","insult shame"],
+    ["כְּלִמָּה","shame"],
     ["וָעָוֶל׃","and injustice."]
   ]},
   { num: "יח", words: [
@@ -1732,7 +1732,7 @@ var dc102_ch1Verses = [
     ["מֵהֶם","of them,"],
     ["אַחֲרֵי","after"],
     ["שְׁמִיעַת","hearing"],
-    ["הָעֵדוּת","the evidences and pleadings"],
+    ["הָעֵדוּת","the testimony"],
     ["בְּלֹא","without"],
     ["מַשֹּׂא","respect of"],
     ["פָנִים","persons,"],
@@ -1751,12 +1751,12 @@ var dc102_ch1Verses = [
     ["שְׁמֹעַ","a hearing"],
     ["שֵׁנִית","a second time,"],
     ["אוֹר","light"],
-    ["נוֹסָף","any additional"],
+    ["נוֹסָף","additional"],
     ["עַל","upon"],
     ["הָעִנְיָן","the case"],
     ["יְשֻׁנֶּה","shall be altered"],
     ["הַמִּשְׁפָּט","the decision"],
-    ["כָּכָה׃","accordingly thus."]
+    ["כָּכָה׃","thus"]
   ]},
   { num: "כב", words: [
     ["אַךְ","But"],
@@ -1833,8 +1833,8 @@ var dc102_ch1Verses = [
     ["בָּעֵת","for the time"],
     ["הַהִיא׃","being."]
   ]},
-  { num: "כו", words: [["עַל","It shall be the duty of"], ["הַסַּנְהֶדְרִין","council"], ["הַנִּזְכָּר","said"], ["לִשְׁלֹחַ","to transmit,"], ["מַהֵר","immediately speedily,"], ["מִשְׁנֵה","a copy of"], ["דִּבְרֵיהֶם","their proceedings words,"], ["עִם","with"], ["כׇּל","all"], ["הָעֵדוּת","the testimony"], ["לְמִשְׁפָּטָהּ","accompanying their decision,"], ["אֶל־סַנְהֶדְרִין","to the council of"], ["הַכֹּהֲנִים","the priests"], ["הַגְּדוֹלִים","high"], ["בִּמְקוֹם","of the seat of"], ["מוֹשַׁב","the seat"], ["הַנְּשִׂיאוּת","the Presidency"], ["הָרִאשׁוֹנָה","First"], ["בַּכְּנֵסִיָּה׃","of the Church."]]},
-  { num: "כז", words: [["אִם","Should"], ["בַּעֲלֵי","the parties masters of"], ["הָרִיב","the dispute"], ["אוֹ","or"], ["אֶחָד","either one"], ["מֵהֶם","of them"], ["לֹא","not"], ["יִישַׁר","is right"], ["בְּעֵינֵיהֶם","in their eyes"], ["מִמִּשְׁפַּט","with the decision of"], ["הַסַּנְהֶדְרִין","council,"], ["הַנִּזְכָּר","said"], ["יָכוֹלִים","they may"], ["לַעֲלוֹת","to appeal go up"], ["לְסַנְהֶדְרִין","to the council of"], ["הַכֹּהֲנִים","the priests"], ["הַגְּדוֹלִים","high"], ["בִּמְקוֹם","of the seat of"], ["מוֹשַׁב","the seat"], ["הַנְּשִׂיאוּת","the Presidency"], ["הָרִאשׁוֹנָה","First"], ["שֶׁל־הַכְּנֵסִיָּה","of the Church"], ["וְהָעִנְיָן","and the case"], ["יִשָּׁמַע","shall be heard"], ["מֵחָדָשׁ","anew,"], ["וְשָׁם","and there"], ["כַּתַּבְנִית","according to the pattern"], ["הַקֹּדֶמֶת","former"], ["הַכְּתוּבָה","written,"], ["כְּאִלּוּ","as though"], ["לֹא","no"], ["נִתַּן","had been made"], ["מִשְׁפָּט","decision"], ["כָּזֶה׃","such."]]},
+  { num: "כו", words: [["עַל","upon"], ["הַסַּנְהֶדְרִין","council"], ["הַנִּזְכָּר","said"], ["לִשְׁלֹחַ","to transmit,"], ["מַהֵר","speedily"], ["מִשְׁנֵה","a copy of"], ["דִּבְרֵיהֶם","their words"], ["עִם","with"], ["כׇּל","all"], ["הָעֵדוּת","the testimony"], ["לְמִשְׁפָּטָהּ","for its judgment"], ["אֶל־סַנְהֶדְרִין","to the council of"], ["הַכֹּהֲנִים","the priests"], ["הַגְּדוֹלִים","high"], ["בִּמְקוֹם","of the seat of"], ["מוֹשַׁב","the seat"], ["הַנְּשִׂיאוּת","the Presidency"], ["הָרִאשׁוֹנָה","First"], ["בַּכְּנֵסִיָּה׃","of the Church."]]},
+  { num: "כז", words: [["אִם","Should"], ["בַּעֲלֵי","the masters of"], ["הָרִיב","the dispute"], ["אוֹ","or"], ["אֶחָד","one"], ["מֵהֶם","of them"], ["לֹא","not"], ["יִישַׁר","is right"], ["בְּעֵינֵיהֶם","in their eyes"], ["מִמִּשְׁפַּט","with the decision of"], ["הַסַּנְהֶדְרִין","council,"], ["הַנִּזְכָּר","said"], ["יָכוֹלִים","they may"], ["לַעֲלוֹת","to go up"], ["לְסַנְהֶדְרִין","to the council of"], ["הַכֹּהֲנִים","the priests"], ["הַגְּדוֹלִים","high"], ["בִּמְקוֹם","of the seat of"], ["מוֹשַׁב","the seat"], ["הַנְּשִׂיאוּת","the Presidency"], ["הָרִאשׁוֹנָה","First"], ["שֶׁל־הַכְּנֵסִיָּה","of the Church"], ["וְהָעִנְיָן","and the case"], ["יִשָּׁמַע","shall be heard"], ["מֵחָדָשׁ","anew,"], ["וְשָׁם","and there"], ["כַּתַּבְנִית","according to the pattern"], ["הַקֹּדֶמֶת","former"], ["הַכְּתוּבָה","written,"], ["כְּאִלּוּ","as though"], ["לֹא","no"], ["נִתַּן","had been made"], ["מִשְׁפָּט","decision"], ["כָּזֶה׃","such."]]},
   { num: "כח", words: [["סַנְהֶדְרִין","council of"], ["הַכֹּהֲנִים","priests"], ["הַגְּדוֹלִים","high"], ["בְּחוּץ","abroad"], ["לָאָרֶץ","in the land"], ["יִקָּרֵא","This is only to be called on"], ["רַק","only"], ["עַל","on"], ["עִנְיְנֵי","the cases of"], ["הַכְּנֵסִיָּה","church matters;"], ["הַקָּשִׁים","most difficult"], ["מִכֹּל","of all"], ["וְאֵין","and no"], ["עִנְיָן","case"], ["קַל","common light"], ["אוֹ","or"], ["פָּשׁוּט","ordinary"], ["דַּי","is to be sufficient"], ["לִקְרֹא","to call"], ["סַנְהֶדְרִין","such council"], ["כָּזֶה׃","such."]]},
   { num: "כט", words: [
     ["לַכֹּהֲנִים","The priests"],
@@ -1891,13 +1891,13 @@ var dc102_ch1Verses = [
   ]},
   { num: "לב", words: [["הָאַחֲרוֹן","The latter"], ["יָכוֹל","can"], ["לְהִשָּׁפֵט","be called in question judged"], ["רַק","only"], ["בְּיַד","by"], ["רָשֻׁיּוֹת","the authorities of"], ["הַכְּנֵסִיָּה","the church,"], ["הָעֶלְיוֹנוֹת","the general"], ["בְּמִקְרֶה","in case of"], ["פֶּשַׁע׃","transgression."]]},
   { num: "לג", words: [
-    ["נִגְזַר","Resolved decreed: that"],
+    ["נִגְזַר","decreed"],
     ["אֲשֶׁר","that"],
     ["לַנָּשִׂיא","the president"],
     ["אוֹ","or"],
     ["לַנְּשִׂיאִים","presidents"],
-    ["בִּמְקוֹם","of the seat of"],
-    ["מוֹשַׁב","the seat"],
+    ["בִּמְקוֹם","in the place of"],
+    ["מוֹשַׁב","the seat of"],
     ["הַנְּשִׂיאוּת","the Presidency"],
     ["הָרִאשׁוֹנָה","First"],
     ["יֵשׁ","there is"],
@@ -1905,8 +1905,8 @@ var dc102_ch1Verses = [
     ["לִקְבֹּעַ","to determine"],
     ["אִם","if"],
     ["עִנְיָן","any such case,"],
-    ["הָעוֹלֶה","appealed going up"],
-    ["רָאוּי","justly entitled worthy"],
+    ["הָעוֹלֶה","that goes up"],
+    ["רָאוּי","worthy"],
     ["בְּצֶדֶק","justly"],
     ["לְהִשָּׁמַע","to be heard"],
     ["שֵׁנִית","a second time"],
@@ -1977,7 +1977,7 @@ var dc103_ch1Verses = [
     ["אֹמֵר","say"],
     ["לָכֶם","unto you,"],
     ["רֵעַי","my friends,"],
-    ["הִנְנִי","behold, I will"],
+    ["הִנְנִי","behold I"],
     ["נוֹתֵן","give"],
     ["לָכֶם","unto you"],
     ["חָזוֹן","a revelation"],
@@ -1986,7 +1986,7 @@ var dc103_ch1Verses = [
     ["אֵיךְ","how"],
     ["לִפְעֹל","to act"],
     ["בִּשְׁמֹר","in keeping"],
-    ["מִשְׁמַרְתְּכֶם","your charge duties"],
+    ["מִשְׁמַרְתְּכֶם","your charge"],
     ["עַל","concerning"],
     ["יְשׁוּעַת","the salvation"],
     ["וּגְאֻלַּת","and redemption of"],
@@ -3455,16 +3455,16 @@ var dc104_ch1Verses = [
   { num: "נא", words: [
     ["וְזֹאת","And this"],
     ["צִוִּיתִי","I have commanded"],
-    ["לֵעָשׂוֹת","to make up"],
+    ["לֵעָשׂוֹת","to be done"],
     ["לִישׁוּעַתְכֶם","for your salvation,"],
     ["וְגַם","and also"],
     ["לִישׁוּעָתָם","for their salvation,"],
-    ["עֵקֶב","the heel"],
+    ["עֵקֶב","in consequence of"],
     ["גֵּרוּשָׁם","their being driven out"],
-    ["וַאֲשֶׁר","and what"],
-    ["אֲשֶׁר","that"],
-    ["עָתִיד","which is"],
+    ["וַאֲשֶׁר","and that which"],
+    ["עָתִיד","is"],
     ["לָבוֹא׃","to come."]
+  
   ]},
   { num: "נב", words: [
     ["הֻפְּרוּ","being broken"],
@@ -3616,11 +3616,11 @@ var dc104_ch1Verses = [
     ["לָכֶם","unto you"],
     ["מֵהַשָּׁעָה","from the hour;"],
     ["הַזֹּאת","this"],
-    ["עַצְמָהּ","very itself"],
+    ["עַצְמָהּ","itself"],
     ["וְעַתָּה","and now"],
     ["רְאוּ","see to it,"],
     ["לְכוּ","that you go to"],
-    ["וַעֲשׂוּ","and make use of do"],
+    ["וַעֲשׂוּ","and do"],
     ["בַּפְּקֻדָּה","the stewardship"],
     ["אֲשֶׁר","which"],
     ["מִנִּיתִי","I have appointed"],
@@ -3745,7 +3745,7 @@ var dc104_ch1Verses = [
     ["הָאוֹצָר","the treasury,"],
     ["רַק","only"],
     ["בְּקוֹל","by the voice"],
-    ["וּרְצוֹן","and the consent will of"],
+    ["וּרְצוֹן","and the will of"],
     ["כׇּל","all"],
     ["הַסֵּדֶר׃","of the order."]
   ]},
@@ -3803,7 +3803,7 @@ var dc104_ch1Verses = [
     ["הַסֵּדֶר","the order"],
     ["הֵיטֵב","plainly"],
     ["אֲשֶׁר","that"],
-    ["הוּא","that he is"],
+    ["הוּא","he is"],
     ["סֹכֵן","a steward"],
     ["לֹא","not"],
     ["נֶאֱמָן","faithful"],
@@ -3824,10 +3824,10 @@ var dc104_ch1Verses = [
     ["יִהְיֶה","shall be"],
     ["לוֹ","unto him"],
     ["לְאוֹת","for a token"],
-    ["לַגִּזְבָּר","his token unto the treasurer"],
+    ["לַגִּזְבָּר","unto the treasurer"],
     ["אֲשֶׁר","that"],
-    ["לֹא","that shall not"],
-    ["יִמְנַע","hinder"],
+    ["לֹא","not"],
+    ["יִמְנַע","shall withhold"],
     ["הַגִּזְבָּר׃","the treasurer."]
   ]},
   { num: "עו", words: [
@@ -3893,7 +3893,7 @@ var dc104_ch1Verses = [
   { num: "פ", words: [
     ["וּכְפִי","And inasmuch as"],
     ["אֲשֶׁר","that"],
-    ["תִּהְיוּ","you are diligent"],
+    ["תִּהְיוּ","you are"],
     ["שֹׁקְדִים","diligent"],
     ["וַעֲנָוִים","and humble,"],
     ["וְתַעֲשׂוּ","and exercise"],
@@ -3968,7 +3968,7 @@ var dc104_ch1Verses = [
     ["כְּפִי","Inasmuch as"],
     ["אֲשֶׁר","that"],
     ["תַּשִּׂיגוּ","you obtain"],
-    ["יָד","a chance means"],
+    ["יָד","means"],
     ["לִלְווֹת","to loan"],
     ["כֶּסֶף","money"],
     ["בְּמֵאוֹת","by hundreds,"],
@@ -3981,7 +3981,9 @@ var dc104_ch1Verses = [
     ["לִפְדּוֹת","to redeem"],
     ["נַפְשְׁכֶם","yourselves"],
     ["מֵעַבְדוּת","from bondage,"],
-    ["זֹאת׃","it is your privilege."]
+    ["זֹאת","this is"],
+    ["זְכוּתְכֶם׃","your privilege"]
+  
   ]},
   { num: "פה", words: [
     ["וּמַשְׁכְּנוּ","And pledge"],
@@ -4409,7 +4411,7 @@ var dc105_ch1Verses = [
     ["תּוּכְלוּ","you can,"],
     ["בְּמָקוֹם","in place"],
     ["אֶחָד","one"],
-    ["כְּפִי","consistently with according to"],
+    ["כְּפִי","according to"],
     ["לֵב","the heart of"],
     ["הָעָם׃","the people;"]
   ]},
@@ -4525,7 +4527,7 @@ var dc105_ch1Verses = [
     ["תִּקָּנֶינָה","are purchased,"],
     ["הָאֲרָצוֹת","lands"],
     ["הָאֵלֶּה","these"],
-    ["אַחְשֹׁב","I will hold guiltless"],
+    ["אַחְשֹׁב","I will hold"],
     ["אֶת־צִבְאוֹת","the armies"],
     ["יִשְׂרָאֵל","Israel"],
     ["נְקִיִּים","guiltless"],
