@@ -161,7 +161,7 @@ var ch1Verses = [
     ["הוּא","it is"],
     ["הַסֵּפֶר","the book"],
     ["אֲשֶׁר","which"],
-    ["אֶכְתֹּב","I shall write"],
+    ["כָּתַבְתִּי","I write"],
     ["בְּיָדִי","by my hand"],
     ["וְכָתוּב","and written"],
     ["הוּא","it is"],
