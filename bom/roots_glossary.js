@@ -1,4 +1,16 @@
 window._rootGlossaryData = {
+  "הילמן": {
+    "meaning": "Helaman",
+    "category": "Uncategorized"
+  },
+  "הלם": {
+    "meaning": "Helam",
+    "category": "Uncategorized"
+  },
+  "חלמא": {
+    "meaning": "the dream (Aramaic)",
+    "category": "Uncategorized"
+  },
   "פלש": {
     "meaning": "Philistia, Philistine",
     "category": "Society"
@@ -4336,7 +4348,7 @@ window._rootGlossaryData = {
     "category": "Society"
   },
   "חלם": {
-    "meaning": "Helam",
+    "meaning": "to dream; a dream",
     "category": "Uncategorized"
   },
   "תנה": {
