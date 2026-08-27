@@ -197,8 +197,20 @@
           registry[book + '|' + chapter + '|' + (i + 1)] = verses[i].words;
         }
       }
+      // ALWAYS hand it on. Loading is asynchronous, so the page may be
+      // rendering its own chapter while one of ours is in flight — swallowing
+      // it here left the reader blank, intermittently in a browser and every
+      // time in the bundled app. If the container is not on the page the
+      // host's renderer simply finds nothing, so delegating is safe.
+      if (typeof hostRVS === 'function') {
+        try { hostRVS(verses, containerId); } catch (e) {}
+      }
     };
-    window.renderWords = function() {};
+    window.renderWords = function() {
+      if (typeof hostRW === 'function') {
+        try { return hostRW.apply(null, arguments); } catch (e) {}
+      }
+    };
   }
   function endCapture() {
     if (--capturing > 0) return;
