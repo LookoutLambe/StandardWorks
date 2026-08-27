@@ -1519,25 +1519,7 @@ renderVerseSet(dc5_ch1Verses, 'dc5-ch1-verses');
 
 var dc6_ch1Verses = [
   { num: "א", words: [["מַעֲשֶׂה","a work"], ["גָּדוֹל","great"], ["וְנִפְלָא","and marvelous"], ["קָרוֹב","is soon"], ["לָצֵאת","to come forth"], ["בִּבְנֵי","among children of"], ["אָדָם׃","man"]]},
-  { num: "ב", words: [
-    ["הִנֵּה","behold"],
-    ["אָנֹכִי","I"],
-    ["יְהוָה","am God"],
-    ["הַקְשִׁיבוּ","give heed"],
-    ["לִדְבָרִי","unto my word"],
-    ["הַחַי","the living"],
-    ["וְהַתַּקִּיף","and powerful"],
-    ["הַחַד","sharp"],
-    ["מֵחֶרֶב","than a sword"],
-    ["פִּיפִיּוֹת","two-edged"],
-    ["לְהַבְדִּיל","to divide"],
-    ["בֵּין","between"],
-    ["פֶּרֶק","joint"],
-    ["וָמֹחַ","and marrow"],
-    ["עַל־כֵּן","therefore"],
-    ["הַקְשִׁיבוּ","give heed"],
-    ["לִדְבָרָי׃","unto my words"]
-  ]},
+  { num: "ב", words: [["הִנֵּה","behold"], ["אָנֹכִי","I"], ["יְהוָה","am God"], ["הַקְשִׁיבוּ","give heed"], ["לִדְבָרִי","unto my word"], ["אֲשֶׁר","which"], ["חַי","quick"], ["הוּא","is"], ["וְתַקִּיף","and powerful"], ["חַד","sharper"], ["מֵחֶרֶב","than a sword"], ["פִּיפִיּוֹת","two-edged"], ["לְהַבְדִּיל","to divide"], ["בֵּין","between"], ["פֶּרֶק","joint"], ["וָמֹחַ","and marrow"], ["עַל־כֵּן","therefore"], ["הַקְשִׁיבוּ","give heed"], ["לִדְבָרָי׃","unto my words"]]},
   { num: "ג", words: [
     ["הִנֵּה","behold"],
     ["הַשָּׂדֶה","the field"],

@@ -1,35 +1,8 @@
 // dc_verses/dc11_20.js — D&C verse data
 (function() {
 var dc11_ch1Verses = [
-  { num: "א", words: [
-    ["הִנֵּה","behold"],
-    ["מַעֲשֶׂה","a work"],
-    ["גָּדוֹל","great"],
-    ["וְנִפְלָא","and marvelous"],
-    ["קָרוֹב","is soon"],
-    ["לָצֵאת","to come forth"],
-    ["בִּבְנֵי","among children of"],
-    ["אָדָם׃","man"]
-  ]},
-  { num: "ב", words: [
-    ["הִנֵּה","behold"],
-    ["אָנֹכִי","I"],
-    ["יְהוָה","am God"],
-    ["הַקְשִׁיבוּ","give heed"],
-    ["לִדְבָרִי","unto my word"],
-    ["הַחַי","the living"],
-    ["וְהַתַּקִּיף","and powerful"],
-    ["הַחַד","sharp"],
-    ["מֵחֶרֶב","than a sword"],
-    ["פִּיפִיּוֹת","two-edged"],
-    ["לְהַבְדִּיל","to divide"],
-    ["בֵּין","between"],
-    ["פֶּרֶק","joint"],
-    ["וָמֹחַ","and marrow"],
-    ["עַל־כֵּן","therefore"],
-    ["הַקְשִׁיבוּ","give heed"],
-    ["לִדְבָרָי׃","unto my word"]
-  ]},
+  { num: "א", words: [["מַעֲשֶׂה","a work"], ["גָּדוֹל","great"], ["וְנִפְלָא","and marvelous"], ["קָרוֹב","is soon"], ["לָצֵאת","to come forth"], ["בִּבְנֵי","among children of"], ["אָדָם׃","man"]]},
+  { num: "ב", words: [["הִנֵּה","behold"], ["אָנֹכִי","I"], ["יְהוָה","am God"], ["הַקְשִׁיבוּ","give heed"], ["לִדְבָרִי","unto my word"], ["אֲשֶׁר","which"], ["חַי","quick"], ["הוּא","is"], ["וְתַקִּיף","and powerful"], ["חַד","sharper"], ["מֵחֶרֶב","than a sword"], ["פִּיפִיּוֹת","two-edged"], ["לְהַבְדִּיל","to divide"], ["בֵּין","between"], ["פֶּרֶק","joint"], ["וָמֹחַ","and marrow"], ["עַל־כֵּן","therefore"], ["הַקְשִׁיבוּ","give heed"], ["לִדְבָרָי׃","unto my word"]]},
   { num: "ג", words: [
     ["הִנֵּה","behold"],
     ["הַשָּׂדֶה","the field"],
@@ -210,23 +183,7 @@ var dc11_ch1Verses = [
     ["וְזֹאת","and this is"],
     ["רוּחִי׃","my Spirit"]
   ]},
-  { num: "יג", words: [
-    ["אָמֵן","verily"],
-    ["אָמֵן","verily"],
-    ["אֲנִי","I"],
-    ["אֹמֵר","say"],
-    ["לָכֶם","to you"],
-    ["אֶתֵּן","I will give"],
-    ["לָכֶם","to you"],
-    ["מֵרוּחִי","of my Spirit"],
-    ["אֲשֶׁר","which"],
-    ["תָּאִיר","shall enlighten"],
-    ["לְבַבְכֶם","your soul"],
-    ["אֲשֶׁר","which"],
-    ["תְּמַלֵּא","shall fill"],
-    ["נַפְשְׁכֶם","your soul"],
-    ["שִׂמְחָה׃","with joy"]
-  ]},
+  { num: "יג", words: [["אָמֵן","verily"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","to you"], ["אֶתֵּן","I will give"], ["לָכֶם","to you"], ["מֵרוּחִי","of my Spirit"], ["אֲשֶׁר","which"], ["תָּאִיר","shall enlighten"], ["לְבַבְכֶם","your mind"], ["אֲשֶׁר","which"], ["תְּמַלֵּא","shall fill"], ["נַפְשְׁכֶם","your soul"], ["שִׂמְחָה׃","with joy"]]},
   { num: "יד", words: [
     ["וְאָז","and then"],
     ["תֵּדְעוּ","you shall know"],
@@ -311,17 +268,7 @@ var dc11_ch1Verses = [
     ["עַד","until"],
     ["כַּלּוֹתְךָ׃","your finishing"]
   ]},
-  { num: "כ", words: [
-    ["הִנֵּה","behold"],
-    ["זֹאת","this is"],
-    ["מְלַאכְתְּךָ","your work"],
-    ["לִשְׁמֹר","to keep"],
-    ["מִצְוֹתַי","my commandments"],
-    ["אָכֵן","yea"],
-    ["בְּכׇל־מְאֹדְךָ","with all your might"],
-    ["וּמַדָּעֲךָ","and your soul"],
-    ["וְכֹחֶךָ׃","and your strength"]
-  ]},
+  { num: "כ", words: [["הִנֵּה","behold"], ["זֹאת","this is"], ["מְלַאכְתְּךָ","your work"], ["לִשְׁמֹר","to keep"], ["מִצְוֹתַי","my commandments"], ["אָכֵן","yea"], ["בְּכׇל־מְאֹדְךָ","with all your might"], ["וּמַדָּעֲךָ","and your mind"], ["וְכֹחֶךָ׃","and your strength"]]},
   { num: "כא", words: [
     ["אַל","do not"],
     ["תְּבַקֵּשׁ","seek"],
