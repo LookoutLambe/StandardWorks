@@ -25,17 +25,7 @@ var dc21_ch1Verses = [
     ["יֵשׁוּעַ","Jesus"],
     ["הַמָּשִׁיחַ׃","Christ"]
   ]},
-  { num: "ב", words: [
-    ["בִּנְחֹת","being inspired of"],
-    ["רוּחַ","the Holy Ghost"],
-    ["הַקֹּדֶשׁ",""],
-    ["לִיסֹד","to lay"],
-    ["יְסוֹדָהּ","the foundation thereof"],
-    ["וְלִבְנוֹתָהּ","and to build it up"],
-    ["לֶאֱמוּנַת","unto the faith of"],
-    ["קֹדֶשׁ","most"],
-    ["הַקֳּדָשִׁים׃","holy"]
-  ]},
+  { num: "ב", words: [["בִּנְחֹת","being inspired of"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["לִיסֹד","to lay"], ["יְסוֹדָהּ","the foundation thereof"], ["וְלִבְנוֹתָהּ","and to build it up"], ["לֶאֱמוּנַת","unto the faith of"], ["קֹדֶשׁ","most"], ["הַקֳּדָשִׁים׃","holy"]]},
   { num: "ג", words: [
     ["אֲשֶׁר","which"],
     ["הָעֵדָה","church"],
@@ -915,20 +905,7 @@ var dc25_ch1Verses = [
     ["לָךְ","thee"],
     ["בְּרוּחִי׃","by my Spirit"]
   ]},
-  { num: "ח", words: [
-    ["כִּי","for"],
-    ["יִסְמֹךְ","he shall lay"],
-    ["יָדָיו","his hands"],
-    ["עָלַיִךְ","upon thee"],
-    ["וּתְקַבְּלִי","and thou shalt receive"],
-    ["אֶת־רוּחַ","the Holy Ghost"],
-    ["הַקֹּדֶשׁ",""],
-    ["וְעִתֵּךְ","and thy time"],
-    ["תִּנָּתֵן","shall be given"],
-    ["לִכְתֹּב","to writing"],
-    ["וְלִלְמֹד","and to learning"],
-    ["הַרְבֵּה׃","much"]
-  ]},
+  { num: "ח", words: [["כִּי","for"], ["יִסְמֹךְ","he shall lay"], ["יָדָיו","his hands"], ["עָלַיִךְ","upon thee"], ["וּתְקַבְּלִי","and thou shalt receive"], ["אֶת־רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["וְעִתֵּךְ","and thy time"], ["תִּנָּתֵן","shall be given"], ["לִכְתֹּב","to writing"], ["וְלִלְמֹד","and to learning"], ["הַרְבֵּה׃","much"]]},
   { num: "ט", words: [
     ["וְאֵין","and"],
     ["לָךְ","thou needest"],
@@ -1222,26 +1199,7 @@ var dc27_ch1Verses = [
     ["עֵץ","the stick of"],
     ["אֶפְרָיִם׃","Ephraim"]
   ]},
-  { num: "ו", words: [
-    ["וְגַם","and also"],
-    ["עִם","with"],
-    ["אֵלִיָּס","Elias"],
-    ["אֲשֶׁר","to whom"],
-    ["מָסַרְתִּי","I have committed"],
-    ["לוֹ",""],
-    ["מַפְתְּחוֹת","the keys of"],
-    ["הֲשָׁבַת","bringing to pass the restoration of"],
-    ["כׇּל־הַדְּבָרִים","all things"],
-    ["הַנֶּאֱמָרִים","spoken"],
-    ["מִפִּי","by the mouth of"],
-    ["כׇל־נְבִיאֵי","all the prophets"],
-    ["הַקֹּדֶשׁ","holy"],
-    ["מֵרֵאשִׁית","since the beginning of"],
-    ["הָעוֹלָם","the world"],
-    ["עַל","concerning"],
-    ["אַחֲרִית","the last"],
-    ["הַיָּמִים׃","days"]
-  ]},
+  { num: "ו", words: [["וְגַם","and also"], ["עִם","with"], ["אֵלִיָּס","Elias"], ["אֲשֶׁר","to whom"], ["מָסַרְתִּי","I have committed"], ["לוֹ",""], ["מַפְתְּחוֹת","the keys of"], ["הֲשָׁבַת","bringing to pass the restoration of"], ["כׇּל־הַדְּבָרִים","all things"], ["הַנֶּאֱמָרִים","spoken"], ["מִפִּי","by the mouth of"], ["כׇל־נְבִיאֵי","all the prophets of"], ["הַקֹּדֶשׁ","the holy"], ["מֵרֵאשִׁית","since the beginning of"], ["הָעוֹלָם","the world"], ["עַל","concerning"], ["אַחֲרִית","the last"], ["הַיָּמִים׃","days"]]},
   { num: "ז", words: [
     ["וְגַם","and also"],
     ["יוֹחָנָן","John"],
@@ -1588,19 +1546,7 @@ var dc28_ch1Verses = [
     ["וּבְרֹאשׁ","and at the head of"],
     ["הָעֵדָה׃","the church"]
   ]},
-  { num: "ז", words: [
-    ["כִּי","for"],
-    ["נָתַתִּי","I have given"],
-    ["לוֹ","him"],
-    ["מַפְתְּחוֹת","the keys of"],
-    ["הַתַּעֲלוּמוֹת","the mysteries"],
-    ["וְהַחֶזְיֹנוֹת","and the revelations"],
-    ["הַחֲתוּמִים","which are sealed"],
-    ["עַד","until"],
-    ["אֲמַנֶּה","I shall appoint unto them"],
-    ["אַחֵר","another"],
-    ["תַּחְתָּיו׃","in his stead"]
-  ]},
+  { num: "ז", words: [["כִּי","for"], ["נָתַתִּי","I have given"], ["לוֹ","him"], ["מַפְתְּחוֹת","the keys of"], ["הַסּוֹדוֹת","the mysteries"], ["וְהַחֶזְיֹנוֹת","and the revelations"], ["הַחֲתוּמִים","which are sealed"], ["עַד","until"], ["אֲמַנֶּה","I shall appoint unto them"], ["אַחֵר","another"], ["תַּחְתָּיו׃","in his stead"]]},
   { num: "ח", words: [
     ["וְעַתָּה","and now"],
     ["הִנֵּה","behold"],

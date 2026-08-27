@@ -346,29 +346,7 @@ var dc93_ch1Verses = [
     ["מִמְּלֹאוֹ","of the fulness"],
     ["בָּרִאשׁוֹנָה׃","at the first."]
   ]},
-  { num: "טו", words: [
-    ["וַאֲנִי","And I,"],
-    ["יוֹחָנָן","John,"],
-    ["מֵעִיד","bear record,"],
-    ["וְהִנֵּה","and lo,"],
-    ["הַשָּׁמַיִם","the heavens"],
-    ["נִפְתָּחוּ","were opened,"],
-    ["וְרוּחַ","and the Holy Ghost"],
-    ["הַקֹּדֶשׁ","(Ghost)"],
-    ["יָרְדָה","descended"],
-    ["עָלָיו","upon him"],
-    ["בִּדְמוּת","in the form of"],
-    ["יוֹנָה","a dove,"],
-    ["וַתָּנַח","and sat"],
-    ["עָלָיו","upon him,"],
-    ["וַיָּבֹא","and there came"],
-    ["קוֹל","a voice"],
-    ["מִן־הַשָּׁמַיִם","out of heaven"],
-    ["לֵאמֹר","saying:"],
-    ["זֶה","This is"],
-    ["בְּנִי","my ... Son"],
-    ["אֲהוּבִי׃","beloved."]
-  ]},
+  { num: "טו", words: [["וַאֲנִי","And I,"], ["יוֹחָנָן","John,"], ["מֵעִיד","bear record,"], ["וְהִנֵּה","and lo,"], ["הַשָּׁמַיִם","the heavens"], ["נִפְתָּחוּ","were opened,"], ["וְרוּחַ","and the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["יָרְדָה","descended"], ["עָלָיו","upon him"], ["בִּדְמוּת","in the form of"], ["יוֹנָה","a dove,"], ["וַתָּנַח","and sat"], ["עָלָיו","upon him,"], ["וַיָּבֹא","and there came"], ["קוֹל","a voice"], ["מִן־הַשָּׁמַיִם","out of heaven"], ["לֵאמֹר","saying:"], ["זֶה","This is"], ["בְּנִי","my ... Son"], ["אֲהוּבִי׃","beloved."]]},
   { num: "טז", words: [
     ["וַאֲנִי","And I,"],
     ["יוֹחָנָן","John,"],
@@ -952,29 +930,7 @@ var dc93_ch1Verses = [
     ["בָעוֹלָם","in the world"],
     ["הַבָּא׃","to come."]
   ]},
-  { num: "נג", words: [
-    ["וְאָמֵן","And, verily"],
-    ["אֲנִי","I"],
-    ["אֹמֵר","say"],
-    ["לָכֶם","unto you,"],
-    ["רְצוֹנִי","that it is my will"],
-    ["אֲשֶׁר־תְּמַהֲרוּ","that you should hasten"],
-    ["לְתַרְגֵּם","to translate"],
-    ["אֶת־כִּתְבֵי","my scriptures,"],
-    ["הַקֹּדֶשׁ","[holy]"],
-    ["וְלִקְנוֹת","and to obtain"],
-    ["דַּעַת","a knowledge of"],
-    ["תּוֹלְדוֹת","history (generations),"],
-    ["וּמְדִינוֹת","and of countries,"],
-    ["וּמַמְלָכוֹת","and of kingdoms,"],
-    ["וְחֻקֵּי","of laws of"],
-    ["אֱלֹהִים","God"],
-    ["וְאָדָם","and man,"],
-    ["וְכׇל־זֹאת","and all this"],
-    ["לִישׁוּעַת","for the salvation of"],
-    ["צִיּוֹן","Zion."],
-    ["אָמֵן׃","Amen."]
-  ]}
+  { num: "נג", words: [["וְאָמֵן","And, verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you,"], ["רְצוֹנִי","that it is my will"], ["אֲשֶׁר־תְּמַהֲרוּ","that you should hasten"], ["לְתַרְגֵּם","to translate"], ["אֶת־כִּתְבֵי","the scriptures of"], ["הַקֹּדֶשׁ","the holy"], ["וְלִקְנוֹת","and to obtain"], ["דַּעַת","a knowledge of"], ["תּוֹלְדוֹת","history (generations),"], ["וּמְדִינוֹת","and of countries,"], ["וּמַמְלָכוֹת","and of kingdoms,"], ["וְחֻקֵּי","of laws of"], ["אֱלֹהִים","God"], ["וְאָדָם","and man,"], ["וְכׇל־זֹאת","and all this"], ["לִישׁוּעַת","for the salvation of"], ["צִיּוֹן","Zion."], ["אָמֵן׃","Amen."]]}
 ];
 renderVerseSet(dc93_ch1Verses, 'dc93-ch1-verses');
 
@@ -1113,29 +1069,7 @@ var dc94_ch1Verses = [
     ["יָבוֹא","shall ... come"],
     ["בוֹ׃","into it."]
   ]},
-  { num: "י", words: [
-    ["וְעוֹד","And again,"],
-    ["אָמֵן","verily"],
-    ["אֲנִי","I"],
-    ["אֹמֵר","say"],
-    ["לָכֶם","unto you,"],
-    ["הַמִּגְרָשׁ","the ... lot"],
-    ["הַשֵּׁנִי","second"],
-    ["בַּדָּרוֹם","on the south"],
-    ["יֻקְדַּשׁ","shall be dedicated"],
-    ["לִי","unto me"],
-    ["לִבְנוֹת","for the building of"],
-    ["לִי","[unto me]"],
-    ["בַּיִת","a house unto me,"],
-    ["לַעֲבוֹדַת","for the work of"],
-    ["הַכְּתָב","the printing (writing)"],
-    ["לְתִרְגּוּם","of the translation of"],
-    ["כִּתְבֵי","my"],
-    ["הַקֹּדֶשׁ","scriptures,"],
-    ["וּלְכׇל־אֲשֶׁר","and all things whatsoever"],
-    ["אֲצַוֶּה","I shall command"],
-    ["אֶתְכֶם׃","you."]
-  ]},
+  { num: "י", words: [["וְעוֹד","And again,"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you,"], ["הַמִּגְרָשׁ","the ... lot"], ["הַשֵּׁנִי","second"], ["בַּדָּרוֹם","on the south"], ["יֻקְדַּשׁ","shall be dedicated"], ["לִי","unto me"], ["לִבְנוֹת","for the building of"], ["לִי","[unto me]"], ["בַּיִת","a house unto me,"], ["לַעֲבוֹדַת","for the work of"], ["הַכְּתָב","the printing (writing)"], ["לְתִרְגּוּם","of the translation of"], ["כִּתְבֵי","the scriptures of"], ["הַקֹּדֶשׁ","the holy"], ["וּלְכׇל־אֲשֶׁר","and all things whatsoever"], ["אֲצַוֶּה","I shall command"], ["אֶתְכֶם׃","you."]]},
   { num: "יא", words: [
     ["וְיִהְיֶה","And it shall be"],
     ["חֲמִשִּׁים","fifty"],
@@ -1829,20 +1763,7 @@ var dc97_ch1Verses = [
     ["מִצְוֹת","commandments"],
     ["אֲחֵרוֹת׃","other"]
   ]},
-  { num: "ה", words: [
-    ["וַאֲבָרְכֶנּוּ","And I will bless him"],
-    ["בְּרֹב","with a multiplicity of"],
-    ["בְּרָכוֹת","blessings,"],
-    ["לְפָרֵשׁ","in expounding"],
-    ["כׇּל־כִּתְבֵי","all ... scriptures"],
-    ["הַקֹּדֶשׁ","[holy]"],
-    ["וְהָרָזִים","and mysteries"],
-    ["לְבִנְיַן","to the edification of"],
-    ["בֵּית","the ... school,"],
-    ["הַמִּדְרָשׁ","[of study]"],
-    ["וְהָעֵדָה","and of the church"],
-    ["בְּצִיּוֹן׃","in Zion."]
-  ]},
+  { num: "ה", words: [["וַאֲבָרְכֶנּוּ","And I will bless him"], ["בְּרֹב","with a multiplicity of"], ["בְּרָכוֹת","blessings,"], ["לְפָרֵשׁ","in expounding"], ["כׇּל־כִּתְבֵי","all the scriptures of"], ["הַקֹּדֶשׁ","the holy"], ["וְהָרָזִים","and mysteries"], ["לְבִנְיַן","to the edification of"], ["בֵּית","the ... school,"], ["הַמִּדְרָשׁ","[of study]"], ["וְהָעֵדָה","and of the church"], ["בְּצִיּוֹן׃","in Zion."]]},
   { num: "ו", words: [
     ["וְלִשְׁאָר","And to the residue of"],
     ["בֵּית","the ... school,"],
@@ -3308,23 +3229,7 @@ var dc100_ch1Verses = [
     ["עֲנָוָה","meekness,"],
     ["בְּכׇל־דָּבָר׃","in all things."]
   ]},
-  { num: "ח", words: [
-    ["וְנוֹתֵן","And I give"],
-    ["לָכֶם","unto you"],
-    ["הַבְטָחָה","promise,"],
-    ["זֹאת","this"],
-    ["אֲשֶׁר־כְּפִי","that inasmuch as"],
-    ["אֲשֶׁר־תַּעֲשׂוּ","ye do"],
-    ["כֵן","this,"],
-    ["רוּחַ","the Holy Ghost"],
-    ["הַקֹּדֶשׁ","(Ghost)"],
-    ["תִּשָּׁפֵךְ","shall be shed forth"],
-    ["לְהָעִיד","in bearing record"],
-    ["עַל","unto"],
-    ["כֹּל","all things"],
-    ["אֲשֶׁר","whatsoever"],
-    ["תֹּאמְרוּ׃","ye shall say."]
-  ]},
+  { num: "ח", words: [["וְנוֹתֵן","And I give"], ["לָכֶם","unto you"], ["הַבְטָחָה","promise,"], ["זֹאת","this"], ["אֲשֶׁר־כְּפִי","that inasmuch as"], ["אֲשֶׁר־תַּעֲשׂוּ","ye do"], ["כֵן","this,"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["תִּשָּׁפֵךְ","shall be shed forth"], ["לְהָעִיד","in bearing record"], ["עַל","unto"], ["כֹּל","all things"], ["אֲשֶׁר","whatsoever"], ["תֹּאמְרוּ׃","ye shall say."]]},
   { num: "ט", words: [
     ["וְטוֹב","And it is expedient"],
     ["בְּעֵינַי","in me"],
@@ -3353,30 +3258,7 @@ var dc100_ch1Verses = [
     ["גִּבּוֹר","mighty"],
     ["בְּעֵדוּת׃","in testimony."]
   ]},
-  { num: "יא", words: [
-    ["וְאֶתֵּן","And I will give"],
-    ["לְךָ","unto thee"],
-    ["כֹחַ","power"],
-    ["לִהְיוֹת","to be"],
-    ["גִּבּוֹר","mighty"],
-    ["בְּפָרֵשׁ","in expounding"],
-    ["כׇּל־כִּתְבֵי","all ... scriptures,"],
-    ["הַקֹּדֶשׁ","[holy]"],
-    ["לְמַעַן","that"],
-    ["תִּהְיֶה","thou mayest be"],
-    ["לוֹ","unto him"],
-    ["לְפֶה","a spokesman,"],
-    ["וְהוּא","and he"],
-    ["יִהְיֶה","shall be"],
-    ["לְךָ","unto thee"],
-    ["לְמַגִּיד","a revelator,"],
-    ["לָדַעַת","that thou mayest know"],
-    ["בְּבִטָּחוֹן","the certainty of"],
-    ["כׇּל־הַדְּבָרִים","all things"],
-    ["הַנּוֹגְעִים","pertaining to"],
-    ["לְמַלְכוּתִי","my kingdom"],
-    ["בָּאָרֶץ׃","on the earth."]
-  ]},
+  { num: "יא", words: [["וְאֶתֵּן","And I will give"], ["לְךָ","unto thee"], ["כֹחַ","power"], ["לִהְיוֹת","to be"], ["גִּבּוֹר","mighty"], ["בְּפָרֵשׁ","in expounding"], ["כׇּל־כִּתְבֵי","all the scriptures of"], ["הַקֹּדֶשׁ","the holy"], ["לְמַעַן","that"], ["תִּהְיֶה","thou mayest be"], ["לוֹ","unto him"], ["לְפֶה","a spokesman,"], ["וְהוּא","and he"], ["יִהְיֶה","shall be"], ["לְךָ","unto thee"], ["לְמַגִּיד","a revelator,"], ["לָדַעַת","that thou mayest know"], ["בְּבִטָּחוֹן","the certainty of"], ["כׇּל־הַדְּבָרִים","all things"], ["הַנּוֹגְעִים","pertaining to"], ["לְמַלְכוּתִי","my kingdom"], ["בָּאָרֶץ׃","on the earth."]]},
   { num: "יב", words: [
     ["לָכֵן","Therefore,"],
     ["הוֹסִיפוּ","continue"],

@@ -290,23 +290,7 @@ var dc109_ch1Verses = [
     ["כַּאֲשֶׁר","as"],
     ["אָמָרְתָּ׃","thou hast said;"]
   ]},
-  { num: "טו", words: [
-    ["וּלְמַעַן","And that"],
-    ["יִגְדְּלוּ","they may grow up"],
-    ["בְּךָ","in thee,"],
-    ["וִיקַבְּלוּ","and receive"],
-    ["מְלוֹא","a fulness of"],
-    ["רוּחַ","the ... Ghost,"],
-    ["הַקֹּדֶשׁ","Holy"],
-    ["וְיֵעָרְכוּ","and be organized"],
-    ["כְּחֻקֶּיךָ","according to thy laws,"],
-    ["וְיִהְיוּ","and be"],
-    ["מוּכָנִים","prepared"],
-    ["לְהַשִּׂיג","to obtain"],
-    ["כׇּל","every"],
-    ["דָּבָר","thing;"],
-    ["נָחוּץ׃","needful"]
-  ]},
+  { num: "טו", words: [["וּלְמַעַן","And that"], ["יִגְדְּלוּ","they may grow up"], ["בְּךָ","in thee,"], ["וִיקַבְּלוּ","and receive"], ["מְלוֹא","a fulness of"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["וְיֵעָרְכוּ","and be organized"], ["כְּחֻקֶּיךָ","according to thy laws,"], ["וְיִהְיוּ","and be"], ["מוּכָנִים","prepared"], ["לְהַשִּׂיג","to obtain"], ["כׇּל","every"], ["דָּבָר","thing;"], ["נָחוּץ׃","needful"]]},
   { num: "טז", words: [
     ["וַאֲשֶׁר","(that)"],
     ["יִהְיֶה","And that ... may be"],
