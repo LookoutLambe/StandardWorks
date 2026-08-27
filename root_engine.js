@@ -529,7 +529,17 @@ function stripPrefixes(w) {
     // consonant-peeling can decide: H4503 מִנְחָה belongs to מנח, not to נוּחַ.
     // Prefer it wherever it has an answer; 2,042 Strong's numbers it does not
     // cover (proper names, Aramaic) fall through to the heuristics unchanged.
-    if (window._bdbRoots && window._bdbRoots[sNum]) return window._bdbRoots[sNum];
+    // BDB is consulted only where its root is morphologically transparent —
+    // every root consonant present in the lemma. BDB groups by ETYMOLOGY, and
+    // that reaches further than a study tool wants: it files כֵּן "thus"
+    // under כון "be established", so לָכֵן "therefore" came up as kun
+    // "prepare", and it files אַבְרָם under a verb root. Geminates and hollow
+    // roots legitimately drop a letter (תְּפִלָּה<פלל, קָם<קום), so those are
+    // allowed through by matching root letters as a set rather than in order.
+    if (window._bdbRoots && window._bdbRoots[sNum] && window._bdbOk) {
+      var _b = window._bdbOk(sNum);
+      if (_b) return _b;
+    }
     if (!_baseOf) {
       _baseOf = {};
       if (window._strongsRoots) {

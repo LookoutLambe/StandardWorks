@@ -3934,11 +3934,11 @@ body.dual-mode .chapter-summary { display: block; }
 
 <script src="bom_book_loader.js?v=8"></script>
 <script src="bom_lazy_assets.js?v=1"></script>
-<script src="../bdb_roots.js?v=1"></script>
+<script src="../bdb_roots.js?v=2"></script>
 <script src="../root_names.js?v=12"></script>
 <script src="../xref_common.js?v=2"></script>
 <script src="../verse_loader.js?v=4"></script>
-<script src="../root_scorecard.js?v=30"></script>
+<script src="../root_scorecard.js?v=31"></script>
 <script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
 <script src="crossrefs.js?v=23"></script>
 <script src="roots_glossary.js?v=23"></script>
@@ -8142,7 +8142,17 @@ document.addEventListener('keydown', function(e) {
     // consonant-peeling can decide: H4503 מִנְחָה belongs to מנח, not to נוּחַ.
     // Prefer it wherever it has an answer; 2,042 Strong's numbers it does not
     // cover (proper names, Aramaic) fall through to the heuristics unchanged.
-    if (window._bdbRoots && window._bdbRoots[sNum]) return window._bdbRoots[sNum];
+    // BDB is consulted only where its root is morphologically transparent —
+    // every root consonant present in the lemma. BDB groups by ETYMOLOGY, and
+    // that reaches further than a study tool wants: it files כֵּן "thus"
+    // under כון "be established", so לָכֵן "therefore" came up as kun
+    // "prepare", and it files אַבְרָם under a verb root. Geminates and hollow
+    // roots legitimately drop a letter (תְּפִלָּה<פלל, קָם<קום), so those are
+    // allowed through by matching root letters as a set rather than in order.
+    if (window._bdbRoots && window._bdbRoots[sNum] && window._bdbOk) {
+      var _b = window._bdbOk(sNum);
+      if (_b) return _b;
+    }
     if (!_baseOf) {
       _baseOf = {};
       if (window._strongsRoots) {

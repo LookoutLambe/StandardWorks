@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '29';   // bump when the generated data files change
+  var RSC_V = '30';   // bump when the generated data files change
 
   var cfg = { vol: '', base: '' };
   var keyIdx = null;         // rootKey -> index, built once
@@ -144,7 +144,12 @@
       var cur = (window._rootGlossaryData || {})[cons];
       if (cur && cur.meaning) meaning = cur.meaning;
     } else {
-      if (window.RootEngine && window.RootEngine.toSofit) heb = window.RootEngine.toSofit(key);
+      // A bare consonantal root transliterates to nothing readable, so use
+      // BDB's vocalised spelling of it where we have one: אבה -> אָבָה, which
+      // the site's own transliterate() renders the same way it does the text.
+      var _pf = (window._bdbRootForms || {})[key];
+      if (_pf) heb = _pf;
+      else if (window.RootEngine && window.RootEngine.toSofit) heb = window.RootEngine.toSofit(key);
       var cur2 = (window._rootGlossaryData || {})[key];
       if (cur2 && cur2.meaning) meaning = cur2.meaning;
       if (typeof window.transliterate === 'function') { try { translit = window.transliterate(heb); } catch (e2) {} }

@@ -364,7 +364,7 @@ const payload = {
   v: 1,
   built: new Date().toISOString().slice(0, 10),
   vols: VOLS.map(v => v.key),
-  volNames: { ot: 'Tanakh', nt: 'New Testament', bom: 'Book of Mormon', dc: 'D&C', pgp: 'Pearl of Great Price', jst: 'JST' },
+  volNames: { ot: 'Old Testament', nt: 'New Testament', bom: 'Book of Mormon', dc: 'D&C', pgp: 'Pearl of Great Price', jst: 'JST' },
   keys: keys,
   roots: rootsOut,
   books: books
