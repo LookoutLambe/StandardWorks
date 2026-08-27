@@ -1044,7 +1044,7 @@ var dc36_ch1Verses = [
     ["בְּקוֹל","with a voice"],
     ["גָּדוֹל","loud"],
     ["לֵאמֹר","saying"],
-    ["הוֹשַׁע־נָא","hosanna"],
+    ["הוֹשַׁע־נָא","Hosanna"],
     ["בָּרוּךְ","blessed be"],
     ["שֵׁם","the name of"],
     ["אֵל","God"],
@@ -1073,7 +1073,7 @@ var dc36_ch1Verses = [
     ["וְיוֹסֵף","and Joseph"],
     ["סְמִית","Smith"],
     ["הַבֵּן","Jun."],
-    ["וּמְקַבְּלִים","embracing"],
+    ["וּמְקַבְּלִים","and embracing"],
     ["אֶת־הַקְּרִיאָה","the calling"],
     ["הַזֹּאת","this"],
     ["וְהַמִּצְוָה","and the commandment"],
@@ -1103,7 +1103,7 @@ var dc36_ch1Verses = [
     ["הַנִּכְתָּם","spotted"],
     ["בַּבָּשָׂר׃","with the flesh"]
   ]},
-  { num: "ז", words: [["וְהַמִּצְוָה","and the commandment"], ["הַזֹּאת","this"], ["תִּנָּתֵן","shall be given"], ["לְזִקְנֵי","unto the elders of"], ["כְּנֵסִיָּתִי","my church"], ["כׇּל","that every"], ["אִישׁ","man"], ["אֲשֶׁר","which"], ["יְקַבְּלֶנָּה","will embrace it"], ["בְּתֹם","with singleness of"], ["לֵבָב","heart"], ["יִסָּמֵךְ","may be ordained"], ["וְיִשָּׁלַח","and sent forth"], ["כַּאֲשֶׁר","even as"], ["דִּבַּרְתִּי׃","I have spoken"]]},
+  { num: "ז", words: [["וְהַמִּצְוָה","and the commandment"], ["הַזֹּאת","this"], ["תִּנָּתֵן","shall be given"], ["לְזִקְנֵי","unto the elders of"], ["כְּנֵסִיָּתִי","my church"], ["כׇּל","every"], ["אִישׁ","man"], ["אֲשֶׁר","which"], ["יְקַבְּלֶנָּה","will embrace it"], ["בְּתֹם","with singleness of"], ["לֵבָב","heart"], ["יִסָּמֵךְ","may be ordained"], ["וְיִשָּׁלַח","and sent forth"], ["כַּאֲשֶׁר","even as"], ["דִּבַּרְתִּי׃","I have spoken"]]},
   { num: "ח", words: [
     ["אֲנִי","I am"],
     ["יֵשׁוּעַ","Jesus"],
