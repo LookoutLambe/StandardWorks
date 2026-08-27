@@ -760,24 +760,7 @@ var dc3_ch1Verses = [
     ["אִישׁ","a man"],
     ["רָשָׁע׃","wicked"]
   ]},
-  { num: "יג", words: [
-    ["אֲשֶׁר","who"],
-    ["בָּזָה","despised"],
-    ["לַעֲצַת","the counsel of"],
-    ["אֵל","God"],
-    ["וְהֵפֵר","and broke"],
-    ["הַבְטָחוֹת","promises"],
-    ["קְדוֹשׁוֹת","sacred"],
-    ["אֲשֶׁר","which"],
-    ["נִתְּנוּ","were made"],
-    ["לִפְנֵי","before"],
-    ["אֱלֹהִים","God"],
-    ["וְנִשְׁעַן","and leaned"],
-    ["עַל","upon"],
-    ["בִּינָתוֹ","his own understanding"],
-    ["וְהִתְפָּאֵר","and boasted"],
-    ["בְּחׇכְמָתוֹ׃","in his wisdom"]
-  ]},
+  { num: "יג", words: [["אֲשֶׁר","who"], ["בָּזָה","despised"], ["לַעֲצַת","the counsel of"], ["אֵל","God"], ["וְהֵפֵר","and broke"], ["הַהַבְטָחוֹת","the promises"], ["הַקְּדוֹשׁוֹת","the most sacred"], ["אֲשֶׁר","which"], ["נִתְּנוּ","were made"], ["לִפְנֵי","before"], ["אֱלֹהִים","God"], ["וְנִשְׁעַן","and leaned"], ["עַל","upon"], ["בִּינָתוֹ","his own understanding"], ["וְהִתְפָּאֵר","and boasted"], ["בְּחׇכְמָתוֹ׃","in his wisdom"]]},
   { num: "יד", words: [
     ["וְעַל־כֵּן","and therefore"],
     ["אָבְדוּ","were lost"],
