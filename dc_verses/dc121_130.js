@@ -5068,7 +5068,7 @@ var dc128_ch1Verses = [
     ["יוּכַל","can"],
     ["לְשָׁמְעוֹ׃","hear it"]
   ]},
-  { num: "י", words: [["וְלִמְשָׁל","And for a precedent,"], ["הִנֵּה","behold"], ["הַכָּתוּב","that which is written Matt. 16:18-19:"], ["אַתָּה","you"], ["פֶּטְרוֹס","are Peter,"], ["וְעַל","and upon"], ["הַצּוּר","rock"], ["הַזֶּה","this"], ["אֶבְנֶה","I will build"], ["אֶת־כְּנֵסִיָּתִי","my church;"], ["וְשַׁעֲרֵי","and the gates"], ["שְׁאוֹל","of hell"], ["לֹא","not"], ["יִגְבְּרוּ","shall prevail"], ["עָלֶיהָ","against it."], ["וְנָתַתִּי","And I will give"], ["לְךָ","unto you"], ["אֶת־מַפְתְּחוֹת","the keys of"], ["מַלְכוּת","the kingdom"], ["הַשָּׁמַיִם","of heaven:"], ["וַאֲשֶׁר","and whatsoever"], ["תֶּאֱסֹר","you shall bind"], ["בָּאָרֶץ","on earth"], ["יִהְיֶה","shall be"], ["אָסוּר","bound"], ["בַּשָּׁמַיִם","in heaven;"], ["וַאֲשֶׁר","and whatsoever"], ["תַּתִּיר","you shall loose"], ["בָּאָרֶץ","on earth"], ["יִהְיֶה","shall be"], ["מֻתָּר","loosed"], ["בַּשָּׁמָיִם׃","in heaven."]]},
+  { num: "י", words: [["וְלִמְשָׁל","And for a precedent,"], ["הִנֵּה","behold"], ["הַכָּתוּב","that which is written Matt. 16:18-19:"], ["וְגַם־אֲנִי","And I also"], ["אֹמֵר","say"], ["לְךָ","unto you"], ["אַתָּה","you"], ["פֶּטְרוֹס","are Peter,"], ["וְעַל","and upon"], ["הַצּוּר","rock"], ["הַזֶּה","this"], ["אֶבְנֶה","I will build"], ["אֶת־כְּנֵסִיָּתִי","my church;"], ["וְשַׁעֲרֵי","and the gates"], ["שְׁאוֹל","of hell"], ["לֹא","not"], ["יִגְבְּרוּ","shall prevail"], ["עָלֶיהָ","against it."], ["וְנָתַתִּי","And I will give"], ["לְךָ","unto you"], ["אֶת־מַפְתְּחוֹת","the keys of"], ["מַלְכוּת","the kingdom"], ["הַשָּׁמַיִם","of heaven:"], ["וַאֲשֶׁר","and whatsoever"], ["תֶּאֱסֹר","you shall bind"], ["בָּאָרֶץ","on earth"], ["יִהְיֶה","shall be"], ["אָסוּר","bound"], ["בַּשָּׁמַיִם","in heaven;"], ["וַאֲשֶׁר","and whatsoever"], ["תַּתִּיר","you shall loose"], ["בָּאָרֶץ","on earth"], ["יִהְיֶה","shall be"], ["מֻתָּר","loosed"], ["בַּשָּׁמָיִם׃","in heaven."]]},
   { num: "יא", words: [
     ["וְעַתָּה","now"],
     ["הַסּוֹד","the secret"],
@@ -5164,8 +5164,8 @@ var dc128_ch1Verses = [
     ["וְצֻוָּה","and was commanded"],
     ["לִהְיוֹת","to be"],
     ["בְּמָקוֹם","in a place"],
-    ["תַּחְתִּי","underneath"],
-    ["מִתַּחַת","beneath"],
+    ["תַּחְתִּי","lower"],
+    ["מִתַּחַת","underneath"],
     ["לַאֲשֶׁר","where"],
     ["הַחַיִּים","the living"],
     ["נִקְהָלִים","are wont to assemble,"],
@@ -5958,10 +5958,15 @@ var dc130_ch1Verses = [
     ["כׇּל־דְּבַר","all things pertaining to"],
     ["מַמְלָכָה","a kingdom"],
     ["תַּחְתּוֹנָה","inferior"],
+    ["אוֹ","or"],
+    ["כׇּל־מַמְלְכוֹת","all kingdoms of"],
+    ["סֵדֶר","an order"],
+    ["תַּחְתּוֹן","lower"],
     ["וְהָאָרֶץ","and the earth"],
     ["הַזֹּאת","this"],
-    ["לַמָּשִׁיחַ","Christ\'s"],
+    ["לַמָּשִׁיחַ","Christ's"],
     ["תִּהְיֶה׃","shall be."]
+  
   ]},
   { num: "י", words: [
     ["וְהָאֶבֶן","Then the stone"],
