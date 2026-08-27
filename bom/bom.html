@@ -446,7 +446,7 @@ body.english-only .word-unit .gl {
   -webkit-user-select: none;
 }
 .arr-hw { visibility: hidden; max-width: 0; font-size: 1.85em; line-height: 1.5; }
-.arr-tl { font-size: 0.95em; line-height: 1; margin-top: 2px; visibility: visible; }
+.arr-tl { font-size: 0.95em; line-height: 1; margin-top: 4px; visibility: visible; }
 .arr-gl { font-size: 0.9em; font-style: normal; line-height: 1; margin-top: 2px; visibility: visible; }
 body.hide-translit .arr-tl { display: none; }
 body.hide-gloss .arr-gl { display: none; }
@@ -741,6 +741,12 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
 .colophon .word-unit .gl {
   font-size: 0.65em;
 }
+/* The colophon shrinks .hw and .gl; the invisible .arr-hw spacer sets the
+   height of the chevron column, so it has to shrink with them — otherwise
+   every chevron sits low by the difference. */
+.colophon .arr-hw { font-size: 1.15em; }
+.colophon .arr-gl { font-size: 0.65em; }
+
 
 /* iOS Safari: browser chrome cannot be hidden by CSS/JS — only Home Screen launch is standalone */
 .safari-browser-tip {
@@ -1778,6 +1784,7 @@ body.dual-mode .verse-english { font-size: 0.85em; flex: 45 1 0; }
 body.dual-mode .word-flow     { flex: 55 1 0; }
 body.dual-mode .hw            { font-size: 1em; }
 body.dual-mode .colophon .word-unit .hw { font-size: 1em; }
+body.dual-mode .colophon .arr-hw        { font-size: 1em; }
 
 body.dual-mode .chapter-heading { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0 14px; }
 body.dual-mode .chapter-heading > h2,
