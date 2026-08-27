@@ -1503,7 +1503,7 @@ renderVerseSet(dc5_ch1Verses, 'dc5-ch1-verses');
 
 
 var dc6_ch1Verses = [
-  { num: "א", words: [["מַעֲשֶׂה","a work"], ["גָּדוֹל","great"], ["וְנִפְלָא","and marvelous"], ["קָרוֹב","is soon"], ["לָצֵאת","to come forth"], ["בִּבְנֵי","among children of"], ["אָדָם׃","man"]]},
+  { num: "א", words: [["מַעֲשֶׂה","a work"], ["גָּדוֹל","great"], ["וְנִפְלָא","and marvelous"], ["קָרוֹב","is soon"], ["לָצֵאת","to come forth"], ["אֶל־בְּנֵי","unto the children of"], ["אָדָם׃","man"]]},
   { num: "ב", words: [["הִנֵּה","behold"], ["אָנֹכִי","I"], ["אֱלֹהִים","am God"], ["הַקְשִׁיבוּ","give heed"], ["לִדְבָרִי","unto my word"], ["אֲשֶׁר","which"], ["חַי","quick"], ["הוּא","is"], ["וְתַקִּיף","and powerful"], ["חַד","sharper"], ["מֵחֶרֶב","than a sword"], ["פִּיפִיּוֹת","two-edged"], ["לְהַבְדִּיל","to divide"], ["בֵּין","between"], ["פֶּרֶק","joint"], ["וָמֹחַ","and marrow"], ["עַל־כֵּן","therefore"], ["הַקְשִׁיבוּ","give heed"], ["לִדְבָרָי׃","unto my words"]]},
   { num: "ג", words: [
     ["הִנֵּה","behold"],
@@ -1548,21 +1548,7 @@ var dc6_ch1Verses = [
     ["יִפָּתַח","it shall be opened"],
     ["לָךְ׃","to you"]
   ]},
-  { num: "ו", words: [
-    ["וְעַתָּה","and now"],
-    ["כַּאֲשֶׁר","as"],
-    ["שָׁאַלְתָּ","you have asked"],
-    ["הִנֵּה","behold"],
-    ["אֲנִי","I"],
-    ["אֹמֵר","say"],
-    ["לְךָ","to you"],
-    ["שְׁמֹר","keep"],
-    ["מִצְוֹתַי","my commandments"],
-    ["וּבַקֵּשׁ","and seek"],
-    ["לְהָקִים","to establish"],
-    ["אֶת־דְּבַר","matter of"],
-    ["צִיּוֹן׃","Zion"]
-  ]},
+  { num: "ו", words: [["וְעַתָּה","and now"], ["כַּאֲשֶׁר","as"], ["שָׁאַלְתָּ","you have asked"], ["הִנֵּה","behold"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לְךָ","to you"], ["שְׁמֹר","keep"], ["מִצְוֹתַי","my commandments"], ["וּבַקֵּשׁ","and seek"], ["לְהוֹצִיא","to bring forth"], ["וּלְהָקִים","and to establish"], ["אֶת־דְּבַר","matter of"], ["צִיּוֹן׃","Zion"]]},
   { num: "ז", words: [
     ["אַל","do not"],
     ["תְּבַקֵּשׁ","seek"],

@@ -1,7 +1,7 @@
 // dc_verses/dc11_20.js — D&C verse data
 (function() {
 var dc11_ch1Verses = [
-  { num: "א", words: [["מַעֲשֶׂה","a work"], ["גָּדוֹל","great"], ["וְנִפְלָא","and marvelous"], ["קָרוֹב","is soon"], ["לָצֵאת","to come forth"], ["בִּבְנֵי","among children of"], ["אָדָם׃","man"]]},
+  { num: "א", words: [["מַעֲשֶׂה","a work"], ["גָּדוֹל","great"], ["וְנִפְלָא","and marvelous"], ["קָרוֹב","is soon"], ["לָצֵאת","to come forth"], ["בִּבְנֵי","among the children of"], ["אָדָם׃","man"]]},
   { num: "ב", words: [["הִנֵּה","behold"], ["אָנֹכִי","I"], ["אֱלֹהִים","am God"], ["הַקְשִׁיבוּ","give heed"], ["לִדְבָרִי","unto my word"], ["אֲשֶׁר","which"], ["חַי","quick"], ["הוּא","is"], ["וְתַקִּיף","and powerful"], ["חַד","sharper"], ["מֵחֶרֶב","than a sword"], ["פִּיפִיּוֹת","two-edged"], ["לְהַבְדִּיל","to divide"], ["בֵּין","between"], ["פֶּרֶק","joint"], ["וָמֹחַ","and marrow"], ["עַל־כֵּן","therefore"], ["הַקְשִׁיבוּ","give heed"], ["לִדְבָרָי׃","unto my word"]]},
   { num: "ג", words: [
     ["הִנֵּה","behold"],
@@ -34,18 +34,7 @@ var dc11_ch1Verses = [
     ["מֵאֵת","from"],
     ["אֱלֹהִים׃","God"]
   ]},
-  { num: "ה", words: [
-    ["עַל־כֵּן","therefore"],
-    ["אִם","if"],
-    ["תִּשְׁאַל","you ask"],
-    ["מִמֶּנִּי","of me"],
-    ["יִנָּתֶן","it shall be given"],
-    ["לְךָ","to you"],
-    ["וְאִם","and if"],
-    ["תִּדְפֹּק","you knock"],
-    ["יִפָּתַח","it shall be opened"],
-    ["לָךְ׃","to you"]
-  ]},
+  { num: "ה", words: [["עַל־כֵּן","therefore"], ["אִם","if"], ["תִּשְׁאַל","you ask"], ["מִמֶּנִּי","of me"], ["יִנָּתֶן","it shall be given"], ["לָךְ","to you"], ["וְאִם","and if"], ["תִּדְפֹּק","you knock"], ["יִפָּתַח","it shall be opened"], ["לָךְ׃","to you"]]},
   { num: "ו", words: [
     ["וְעַתָּה","and now"],
     ["כַּאֲשֶׁר","as"],
@@ -434,16 +423,7 @@ renderVerseSet(dc11_ch1Verses, 'dc11-ch1-verses');
 
 
 var dc12_ch1Verses = [
-  { num: "א", words: [
-    ["הִנֵּה","behold"],
-    ["מַעֲשֶׂה","a work"],
-    ["גָּדוֹל","great"],
-    ["וְנִפְלָא","and marvelous"],
-    ["קָרוֹב","is soon"],
-    ["לָצֵאת","to come forth"],
-    ["בִּבְנֵי","among children of"],
-    ["אָדָם׃","man"]
-  ]},
+  { num: "א", words: [["מַעֲשֶׂה","a work"], ["גָּדוֹל","great"], ["וְנִפְלָא","and marvelous"], ["קָרוֹב","is soon"], ["לָצֵאת","to come forth"], ["בִּבְנֵי","among the children of"], ["אָדָם׃","man"]]},
   { num: "ב", words: [["הִנֵּה","behold"], ["אָנֹכִי","I"], ["אֱלֹהִים","am God"], ["הַקְשִׁיבוּ","give heed"], ["לִדְבָרִי","unto my word"], ["אֲשֶׁר","which"], ["חַי","quick"], ["הוּא","is"], ["וְתַקִּיף","and powerful"], ["חַד","sharper"], ["מֵחֶרֶב","than a sword"], ["פִּיפִיּוֹת","two-edged"], ["לְהַבְדִּיל","to divide"], ["בֵּין","between"], ["פֶּרֶק","joint"], ["וָמֹחַ","and marrow"], ["עַל־כֵּן","therefore"], ["הַקְשִׁיבוּ","give heed"], ["לִדְבָרָי׃","unto my word"]]},
   { num: "ג", words: [
     ["הִנֵּה","behold"],
@@ -518,46 +498,8 @@ var dc12_ch1Verses = [
     ["אֶת־הַמְּלָאכָה","the work"],
     ["הַזֹּאת׃","this"]
   ]},
-  { num: "ח", words: [
-    ["וְאֵין","and there is no"],
-    ["אִישׁ","a man"],
-    ["יוּכַל","able"],
-    ["לַעֲזֹר","to assist"],
-    ["בַּמְּלָאכָה","in the work"],
-    ["הַזֹּאת","this"],
-    ["בִּלְתִּי","except"],
-    ["אִם־יִהְיֶה","if he be"],
-    ["עָנָו","humble"],
-    ["וּמָלֵא","and full of"],
-    ["אַהֲבָה","love"],
-    ["בַּעַל","possessor of"],
-    ["אֱמוּנָה","faith"],
-    ["וְתִקְוָה","and hope"],
-    ["וְחֶסֶד","and charity"],
-    ["מֹשֵׁל","temperate"],
-    ["בְּרוּחוֹ","in his spirit"],
-    ["בְּכׇל־דָּבָר","in every thing"],
-    ["כׇּל","all"],
-    ["אֲשֶׁר","which"],
-    ["יֻפְקַד","shall be entrusted"],
-    ["בְּיָדוֹ׃","in his hand"]
-  ]},
-  { num: "ט", words: [
-    ["הִנֵּה","behold"],
-    ["אֲנִי","I"],
-    ["הָאוֹר","am the light"],
-    ["וְחַיֵּי","and the life of"],
-    ["הָעוֹלָם","the world"],
-    ["הַמְדַבֵּר","the one speaking"],
-    ["אֶת־הַדְּבָרִים","the words"],
-    ["הָאֵלֶּה","these"],
-    ["עַל־כֵּן","therefore"],
-    ["הַקְשִׁיבוּ","give heed"],
-    ["בְּכׇל־מְאֹדְכֶם","with all your might"],
-    ["וְאָז","and then"],
-    ["נִקְרֵאתֶם","you are called"],
-    ["אָמֵן׃","amen"]
-  ]}
+  { num: "ח", words: [["וְלֹא","and not"], ["יוּכַל","is able"], ["אִישׁ","a man"], ["לַעֲזֹר","to assist"], ["בַּמְּלָאכָה","in the work"], ["הַזֹּאת","this"], ["בִּלְתִּי","except"], ["אִם־יִהְיֶה","if he be"], ["עָנָו","humble"], ["וּמָלֵא","and full of"], ["אַהֲבָה","love"], ["בַּעַל","possessor of"], ["אֱמוּנָה","faith"], ["וְתִקְוָה","and hope"], ["וְחֶסֶד","and charity"], ["מֹשֵׁל","temperate"], ["בְּרוּחוֹ","in his spirit"], ["בְּכׇל־דָּבָר","in every thing"], ["כׇּל","all"], ["אֲשֶׁר","which"], ["יֻפְקַד","shall be entrusted"], ["בְּיָדוֹ׃","in his hand"]]},
+  { num: "ט", words: [["הִנֵּה","behold"], ["אֲנִי","I"], ["הָאוֹר","am the light"], ["וְחַיֵּי","and the life of"], ["הָעוֹלָם","the world"], ["הַמְדַבֵּר","the one speaking"], ["אֶת־הַדְּבָרִים","the words"], ["הָאֵלֶּה","these"], ["עַל־כֵּן","therefore"], ["הַקְשִׁיבוּ","give heed"], ["בְּכֹחֲכֶם","with your might"], ["וְאָז","and then"], ["נִקְרֵאתֶם","you are called"], ["אָמֵן׃","amen"]]}
 ];
 renderVerseSet(dc12_ch1Verses, 'dc12-ch1-verses');
 
@@ -606,16 +548,7 @@ renderVerseSet(dc13_ch1Verses, 'dc13-ch1-verses');
 
 
 var dc14_ch1Verses = [
-  { num: "א", words: [
-    ["הִנֵּה","behold"],
-    ["מַעֲשֶׂה","a work"],
-    ["גָּדוֹל","great"],
-    ["וְנִפְלָא","and marvelous"],
-    ["קָרוֹב","is soon"],
-    ["לָצֵאת","to come forth"],
-    ["בִּבְנֵי","among children of"],
-    ["אָדָם׃","man"]
-  ]},
+  { num: "א", words: [["מַעֲשֶׂה","a work"], ["גָּדוֹל","great"], ["וְנִפְלָא","and marvelous"], ["קָרוֹב","is soon"], ["לָצֵאת","to come forth"], ["אֶל־בְּנֵי","unto the children of"], ["אָדָם׃","man"]]},
   { num: "ב", words: [["הִנֵּה","behold"], ["אָנֹכִי","I"], ["אֱלֹהִים","am God"], ["הַקְשִׁיבוּ","give heed"], ["לִדְבָרִי","unto my word"], ["אֲשֶׁר","which"], ["חַי","quick"], ["הוּא","is"], ["וְתַקִּיף","and powerful"], ["חַד","sharper"], ["מֵחֶרֶב","than a sword"], ["פִּיפִיּוֹת","two-edged"], ["לְהַבְדִּיל","to divide"], ["בֵּין","between"], ["פֶּרֶק","joint"], ["וָמֹחַ","and marrow"], ["עַל־כֵּן","therefore"], ["הַקְשִׁיבוּ","give heed"], ["לִדְבָרָי׃","unto my word"]]},
   { num: "ג", words: [
     ["הִנֵּה","behold"],
