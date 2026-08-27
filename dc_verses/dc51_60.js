@@ -1041,27 +1041,7 @@ var dc54_ch1Verses = [
     ["לָכֶם","for you"],
     ["מָקוֹם׃","a place"]
   ]},
-  { num: "י", words: [
-    ["וְעוֹד","and again"],
-    ["הִתְאַזְּרוּ","gird yourselves up"],
-    ["בְּאֹרֶךְ אַפַּיִם","in patience"],
-    ["בַּצָּרָה","in tribulation"],
-    ["עַד","until"],
-    ["בוֹאִי","my coming"],
-    ["וְהִנֵּה","and behold"],
-    ["בָּא","(I) come"],
-    ["אֲנִי","I"],
-    ["מַהֵר","quickly"],
-    ["וּשְׂכָרִי","and my reward"],
-    ["אִתִּי","with me"],
-    ["וּמְשַׁחֲרַי","and they who seek me early"],
-    ["יִמְצְאוּ","shall find"],
-    ["מַרְגּוֹעַ","rest"],
-    ["לְנַפְשָׁם","to their souls"],
-    ["כֵּן","even so"],
-    ["יְהִי","(may it) be"],
-    ["אָמֵן׃","amen"]
-  ]}
+  { num: "י", words: [["וְעוֹד","and again"], ["הִתְאַזְּרוּ","gird yourselves up"], ["בְּאֹרֶךְ־אַפַּיִם","in patience"], ["בַּצָּרָה","in tribulation"], ["עַד","until"], ["בוֹאִי","my coming"], ["וְהִנֵּה","and behold"], ["בָּא","(I) come"], ["אֲנִי","I"], ["מַהֵר","quickly"], ["וּשְׂכָרִי","and my reward"], ["אִתִּי","with me"], ["וּמְשַׁחֲרַי","and they who seek me early"], ["יִמְצְאוּ","shall find"], ["מַרְגּוֹעַ","rest"], ["לְנַפְשָׁם","to their souls"], ["כֵּן","even so"], ["יְהִי","(may it) be"], ["אָמֵן׃","amen"]]}
 ];
 renderVerseSet(dc54_ch1Verses, 'dc54-ch1-verses');
 
@@ -1736,24 +1716,7 @@ var dc57_ch1Verses = [
     ["כַּאֲשֶׁר","even as"],
     ["דִּבַּרְתִּי׃","I have spoken"]
   ]},
-  { num: "טו", words: [
-    ["וְעַתָּה","and now"],
-    ["עַל","concerning"],
-    ["הַקִּבּוּץ","the gathering"],
-    ["יָכִין","(let make) preparations"],
-    ["הַפָּקִיד","the bishop"],
-    ["וְהַסֹּכֵן","and the agent"],
-    ["לַמִּשְׁפָּחוֹת","for the families"],
-    ["אֲשֶׁר","which"],
-    ["צֻוּוּ","have been commanded"],
-    ["לָבוֹא","to come"],
-    ["לָאָרֶץ","to (the) land"],
-    ["הַזֹּאת","this"],
-    ["מַהֵר","as soon as"],
-    ["כַּאֲשֶׁר יוּכְלוּ","possible"],
-    ["וְיִטָּעֵם","and (let him) plant them"],
-    ["בְּנַחֲלָתָם׃","in their inheritance"]
-  ]},
+  { num: "טו", words: [["וְעַתָּה","and now"], ["עַל","concerning"], ["הַקִּבּוּץ","the gathering"], ["יָכִין","(let make) preparations"], ["הַפָּקִיד","the bishop"], ["וְהַסֹּכֵן","and the agent"], ["לַמִּשְׁפָּחוֹת","for the families"], ["אֲשֶׁר","which"], ["צֻוּוּ","have been commanded"], ["לָבוֹא","to come"], ["לָאָרֶץ","to (the) land"], ["הַזֹּאת","this"], ["מַהֵר","as soon as"], ["כַּאֲשֶׁר","as"], ["יוּכְלוּ","they are able"], ["וְיִטָּעֵם","and (let him) plant them"], ["בְּנַחֲלָתָם׃","in their inheritance"]]},
   { num: "טז", words: [
     ["וְלִשְׁאָר","and unto (the) residue of"],
     ["הַזְּקֵנִים","the elders"],

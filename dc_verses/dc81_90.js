@@ -5617,20 +5617,7 @@ var dc89_ch1Verses = [
     ["יֵאָכְלוּ","they are to be eaten (used)"],
     ["בִּמְעָט׃","sparingly-;"]
   ]},
-  { num: "יג", words: [
-    ["וְרָצוּי","And it is pleasing"],
-    ["לִי","unto me"],
-    ["אֲשֶׁר","that"],
-    ["לֹא","not"],
-    ["יֵאָכְלוּ","they should be eaten (used)"],
-    ["כִּי אִם","only"],
-    ["בִּימֵי","in times of"],
-    ["הַחֹרֶף","winter"],
-    ["אוֹ","or"],
-    ["בְּקֹר","of cold"],
-    ["אוֹ","or"],
-    ["בְּרָעָב׃","famine."]
-  ]},
+  { num: "יג", words: [["וְרָצוּי","And it is pleasing"], ["לִי","unto me"], ["אֲשֶׁר","that"], ["לֹא","not"], ["יֵאָכְלוּ","they should be eaten (used)"], ["כִּי־אִם","only"], ["בִּימֵי","in times of"], ["הַחֹרֶף","winter"], ["אוֹ","or"], ["בְּקֹר","of cold"], ["אוֹ","or"], ["בְּרָעָב׃","famine."]]},
   { num: "יד", words: [
     ["כׇּל","All"],
     ["דָּגָן","grain"],

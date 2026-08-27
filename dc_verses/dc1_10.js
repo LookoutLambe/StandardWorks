@@ -857,20 +857,7 @@ var dc4_ch1Verses = [
     ["אֹתוֹ","him"],
     ["לַמְּלָאכָה׃","for the work"]
   ]},
-  { num: "ו", words: [
-    ["זְכֹר","remember"],
-    ["אֱמוּנָה","faith"],
-    ["גְּבוּרָה","virtue"],
-    ["דַעַת","knowledge"],
-    ["מַעְצַר־רוּחַ","temperance"],
-    ["אֹרֶךְ אַפַּיִם","patience"],
-    ["אַהֲבַת","love of"],
-    ["אַחִים","brethren"],
-    ["יִרְאַת אֱלֹהִים","godliness"],
-    ["חֶסֶד","charity"],
-    ["עֲנָוָה","humility"],
-    ["חָרִיצוּת׃","diligence"]
-  ]},
+  { num: "ו", words: [["זְכֹר","remember"], ["אֱמוּנָה","faith"], ["גְּבוּרָה","virtue"], ["דַעַת","knowledge"], ["מַעְצַר־רוּחַ","temperance"], ["אֹרֶךְ־אַפַּיִם","longsuffering"], ["אַהֲבַת","love of"], ["אַחִים","brethren"], ["יִרְאַת","the fear of"], ["אֱלֹהִים","God"], ["חֶסֶד","charity"], ["עֲנָוָה","humility"], ["חָרִיצוּת׃","diligence"]]},
   { num: "ז", words: [
     ["שַׁאֲלוּ","ask"],
     ["וְיִנָּתֵן","and it shall be given"],
@@ -1665,24 +1652,7 @@ var dc6_ch1Verses = [
     ["לְמַעַן","for sake of"],
     ["הַדָּבָר׃","the word"]
   ]},
-  { num: "יט", words: [
-    ["הוֹכִיחֵהוּ","admonish him"],
-    ["בְּחֶטְאוֹ","in his fault"],
-    ["וְגַם","and also"],
-    ["קַבֵּל","receive"],
-    ["תּוֹכַחַת","reproof"],
-    ["מִמֶּנּוּ","from him"],
-    ["הֱיֵה","be"],
-    ["אֶרֶךְ אַפַּיִם","patient"],
-    ["הֱיֵה","be"],
-    ["צָנוּעַ","sober"],
-    ["הֱיֵה","be"],
-    ["מָתוּן","temperate"],
-    ["סְבֹל","endure"],
-    ["הַאֲמֵן","have faith"],
-    ["קַוֵּה","hope"],
-    ["וֶאֱהַב׃","and love"]
-  ]},
+  { num: "יט", words: [["הוֹכִיחֵהוּ","admonish him"], ["בְּחֶטְאוֹ","in his fault"], ["וְגַם","and also"], ["קַבֵּל","receive"], ["תּוֹכַחַת","reproof"], ["מִמֶּנּוּ","from him"], ["הֱיֵה","be"], ["אֶרֶךְ־אַפַּיִם","longsuffering"], ["הֱיֵה","be"], ["צָנוּעַ","sober"], ["הֱיֵה","be"], ["מָתוּן","temperate"], ["סְבֹל","endure"], ["הַאֲמֵן","have faith"], ["קַוֵּה","hope"], ["וֶאֱהַב׃","and love"]]},
   { num: "כ", words: [
     ["הִנֵּה","behold"],
     ["אַתָּה","you"],
@@ -1707,28 +1677,7 @@ var dc6_ch1Verses = [
     ["בִּזְרוֹעוֹת","in arms of"],
     ["אַהֲבָתִי׃","my love"]
   ]},
-  { num: "כא", words: [
-    ["הִנֵּה","behold"],
-    ["אֲנִי","I"],
-    ["יֵשׁוּעַ","Jesus"],
-    ["הַמָּשִׁיחַ","the Messiah"],
-    ["בֶּן־אֱלֹהִים","Son of God"],
-    ["אֲנִי","I"],
-    ["הוּא","am he"],
-    ["אֲשֶׁר","who"],
-    ["בָּאתִי","came"],
-    ["אֶל־אֲשֶׁר לִי","to my own"],
-    ["וַאֲשֶׁר לִי","and my own"],
-    ["לֹא","not"],
-    ["קִבְּלוּנִי","received me"],
-    ["אֲנִי","I"],
-    ["הָאוֹר","am the light"],
-    ["הַזֹּרֵחַ","that shines"],
-    ["בַּחֹשֶׁךְ","in the darkness"],
-    ["וְהַחֹשֶׁךְ","and the darkness"],
-    ["לֹא","not"],
-    ["הֵבִינוֹ׃","comprehended it"]
-  ]},
+  { num: "כא", words: [["הִנֵּה","behold"], ["אֲנִי","I"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","the Messiah"], ["בֶּן־אֱלֹהִים","Son of God"], ["אֲנִי","I"], ["הוּא","am he"], ["אֲשֶׁר","who"], ["בָּאתִי","came"], ["אֶל־אֲשֶׁר","unto that which"], ["לִי","is mine"], ["וַאֲשֶׁר","and that which"], ["לִי","is mine"], ["לֹא","not"], ["קִבְּלוּנִי","received me"], ["אֲנִי","I"], ["הָאוֹר","am the light"], ["הַזֹּרֵחַ","that shines"], ["בַּחֹשֶׁךְ","in the darkness"], ["וְהַחֹשֶׁךְ","and the darkness"], ["לֹא","not"], ["הֵבִינוֹ׃","comprehended it"]]},
   { num: "כב", words: [
     ["אָמֵן","verily"],
     ["אָמֵן","verily"],
@@ -2259,27 +2208,7 @@ var dc8_ch1Verses = [
     ["לִהְיוֹת","to be"],
     ["עִמָּךְ׃","with you"]
   ]},
-  { num: "ח", words: [
-    ["עַל־כֵּן","therefore"],
-    ["אַל־יֵרַךְ","let not faint"],
-    ["לְבָבְךָ","your heart"],
-    ["כִּי","for"],
-    ["מַתַּן","gift of"],
-    ["אֱלֹהִים","God"],
-    ["הִיא","it is"],
-    ["בְיָדֶיךָ","in your hands"],
-    ["וְתַעֲשֶׂה","and you shall do"],
-    ["נִפְלָאוֹת","marvelous things"],
-    ["וְאֵין","and there is no"],
-    ["כֹּחַ","power"],
-    ["אֲשֶׁר יוּכַל","that is able"],
-    ["לְהוֹצִיאָהּ","to take it away"],
-    ["מִיָּדֶיךָ","from your hands"],
-    ["כִּי","for"],
-    ["מַעֲשֵׂה","work of"],
-    ["אֱלֹהִים","God"],
-    ["הִיא׃","it is"]
-  ]},
+  { num: "ח", words: [["עַל־כֵּן","therefore"], ["אַל־יֵרַךְ","let not faint"], ["לְבָבְךָ","your heart"], ["כִּי","for"], ["מַתַּן","gift of"], ["אֱלֹהִים","God"], ["הִיא","it is"], ["בְיָדֶיךָ","in your hands"], ["וְתַעֲשֶׂה","and you shall do"], ["נִפְלָאוֹת","marvelous things"], ["וְאֵין","and there is no"], ["כֹּחַ","power"], ["אֲשֶׁר","which"], ["יוּכַל","is able"], ["לְהוֹצִיאָהּ","to take it away"], ["מִיָּדֶיךָ","from your hands"], ["כִּי","for"], ["מַעֲשֵׂה","work of"], ["אֱלֹהִים","God"], ["הִיא׃","it is"]]},
   { num: "ט", words: [
     ["וְעַל־כֵּן","and therefore"],
     ["כׇּל־אֲשֶׁר","whatever"],
@@ -2406,21 +2335,7 @@ var dc9_ch1Verses = [
     ["כַּדָּבָר","in the manner"],
     ["הַזֶּה׃","this"]
   ]},
-  { num: "ז", words: [
-    ["הִנֵּה","behold"],
-    ["לֹא","not"],
-    ["הֵבַנְתָּ","you have understood"],
-    ["כִּי","for"],
-    ["חָשַׁבְתָּ","you supposed"],
-    ["כִּי אֶתְּנֶנּוּ","that I would give it"],
-    ["לְךָ","unto you"],
-    ["וְאַתָּה","and you"],
-    ["לֹא","not"],
-    ["חָשַׁבְתָּ","you supposed"],
-    ["כִּי","for"],
-    ["אִם־לִשְׁאֹל","except to ask"],
-    ["מִמֶּנִּי׃","of me"]
-  ]},
+  { num: "ז", words: [["הִנֵּה","behold"], ["לֹא","not"], ["הֵבַנְתָּ","you have understood"], ["כִּי","for"], ["חָשַׁבְתָּ","you supposed"], ["כִּי","that"], ["אֶתְּנֶנּוּ","I would give it"], ["לְךָ","unto you"], ["וְאַתָּה","and you"], ["לֹא","not"], ["חָשַׁבְתָּ","you supposed"], ["כִּי","for"], ["אִם־לִשְׁאֹל","except to ask"], ["מִמֶּנִּי׃","of me"]]},
   { num: "ח", words: [
     ["אַךְ","but"],
     ["הִנֵּה","behold"],
@@ -3270,26 +3185,7 @@ var dc10_ch1Verses = [
     ["בַּמְּלָאכָה","in the work"],
     ["הַזֹּאת׃","this"]
   ]},
-  { num: "מו", words: [
-    ["וְהִנֵּה","and behold"],
-    ["כׇּל־יֶתֶר","all the rest of"],
-    ["הַמְּלָאכָה","the work"],
-    ["הַזֹּאת","this"],
-    ["יֵשׁ בָּהּ","contains"],
-    ["כׇּל־הַחֲלָקִים","all the parts"],
-    ["מִבְּשׂוֹרָתִי","of my gospel"],
-    ["אֲשֶׁר","which"],
-    ["בִּקְשׁוּ","they sought"],
-    ["נְבִיאַי","my prophets"],
-    ["הַקְּדוֹשִׁים","the holy"],
-    ["אָכֵן","yea"],
-    ["וְגַם","and also"],
-    ["תַּלְמִידַי","my disciples"],
-    ["בִּתְפִלּוֹתֵיהֶם","in their prayers"],
-    ["לָצֵאת","to come forth"],
-    ["אֶל־הָעָם","unto the people"],
-    ["הַזֶּה׃","this"]
-  ]},
+  { num: "מו", words: [["וְהִנֵּה","and behold"], ["כׇּל־יֶתֶר","all the rest of"], ["הַמְּלָאכָה","the work"], ["הַזֹּאת","this"], ["יֵשׁ","there is"], ["בָּהּ","in it"], ["כׇּל־הַחֲלָקִים","all the parts"], ["מִבְּשׂוֹרָתִי","of my gospel"], ["אֲשֶׁר","which"], ["בִּקְשׁוּ","they sought"], ["נְבִיאַי","my prophets"], ["הַקְּדוֹשִׁים","the holy"], ["אָכֵן","yea"], ["וְגַם","and also"], ["תַּלְמִידַי","my disciples"], ["בִּתְפִלּוֹתֵיהֶם","in their prayers"], ["לָצֵאת","to come forth"], ["אֶל־הָעָם","unto the people"], ["הַזֶּה׃","this"]]},
   { num: "מז", words: [
     ["וָאֹמַר","and I said"],
     ["לָהֶם","to them"],
@@ -3400,18 +3296,7 @@ var dc10_ch1Verses = [
   { num: "נד", words: [["וְעַתָּה","and now"], ["אֵינֶנִּי","I am not"], ["אֹמֵר","saying"], ["זֹאת","this"], ["לְהַשְׁמִיד","to destroy"], ["כְּנֵסִיָּתִי","my church"], ["כִּי","but"], ["אֲנִי","I"], ["אֹמֵר","say"], ["זֹאת","this"], ["לִבְנוֹת","to build up"], ["כְּנֵסִיָּתִי׃","my church"]]},
   { num: "נה", words: [["עַל־כֵּן","therefore"], ["כׇּל־אֲשֶׁר","everyone who"], ["לִכְנֵסִיָּתִי","belongs to my church"], ["אַל־יִירָאוּ","need not fear"], ["כִּי","for"], ["כָאֵלֶּה","such"], ["יִירְשׁוּ","shall inherit"], ["מַלְכוּת","kingdom of"], ["הַשָּׁמָיִם׃","the heavens"]]},
   { num: "נו", words: [["אַךְ","but"], ["הֵם","they"], ["אֲשֶׁר","who"], ["אֵינָם","are not"], ["יְרֵאִים","fearing"], ["אוֹתִי","me"], ["וְאֵינָם","and are not"], ["שֹׁמְרִים","keeping"], ["מִצְוֹתַי","my commandments"], ["אַךְ","but"], ["בּוֹנִים","building"], ["כְּנֵסִיּוֹת","churches"], ["לָהֶם","to them"], ["לְמַעַן","for sake of"], ["בֶּצַע","gain"], ["אָכֵן","yea"], ["וְכֹל","and all"], ["עֹשֵׂי","doers of"], ["רֶשַׁע","wickedness"], ["וּבוֹנֵי","and builders of"], ["מַלְכוּת","kingdom of"], ["הַשָּׂטָן","Satan"], ["אָכֵן","yea"], ["אָמֵן","verily"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","to you"], ["כִּי","that"], ["אוֹתָם","them"], ["אָפִיר","I will disturb"], ["וְאָבִיא","and bring"], ["לִרְעֹד","to tremble"], ["עַד־הַיְסוֹד׃","even to the center"]]},
-  { num: "נז", words: [
-    ["הִנֵּה","behold"],
-    ["אֲנִי","I"],
-    ["יֵשׁוּעַ","Jesus"],
-    ["הַמָּשִׁיחַ","the Messiah"],
-    ["בֶּן־אֱלֹהִים","Son of God"],
-    ["בָּאתִי","I came"],
-    ["אֶל־אֲשֶׁר לִי","to my own"],
-    ["וַאֲשֶׁר לִי","and my own"],
-    ["לֹא","not"],
-    ["קִבְּלוּנִי׃","received me"]
-  ]},
+  { num: "נז", words: [["הִנֵּה","behold"], ["אֲנִי","I"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","the Messiah"], ["בֶּן־אֱלֹהִים","Son of God"], ["בָּאתִי","I came"], ["אֶל־אֲשֶׁר","unto that which"], ["לִי","is mine"], ["וַאֲשֶׁר","and that which"], ["לִי","is mine"], ["לֹא","not"], ["קִבְּלוּנִי׃","received me"]]},
   { num: "נח", words: [
     ["אֲנִי","I"],
     ["הָאוֹר","am the light"],
@@ -3552,19 +3437,7 @@ var dc10_ch1Verses = [
   { num: "סז", words: [["הִנֵּה","behold"], ["זֹאת","this is"], ["לֶקְחִי","my doctrine"], ["כׇּל־הַשָּׁב","everyone who repents"], ["וְהַבָּא","and who comes"], ["אֵלַי","unto me"], ["הוּא","he"], ["כְּנֵסִיָּתִי׃","is my church"]]},
   { num: "סח", words: [["כׇּל־הַמֹּסִיף","whoever declares more"], ["עַל־זֶה","than this"], ["אוֹ","or"], ["גֹרֵעַ","less"], ["מִמֶּנּוּ","from it"], ["אֵינֶנּוּ","he is not"], ["מִמֶּנִּי","of me"], ["כִּי","but"], ["הוּא","he"], ["נֶגְדִּי","is against me"], ["עַל־כֵּן","therefore"], ["אֵינֶנּוּ","he is not"], ["מִכְּנֵסִיָּתִי׃","of my church"]]},
   { num: "סט", words: [["וְעַתָּה","and now"], ["הִנֵּה","behold"], ["כׇּל־אֲשֶׁר","whoever"], ["מִכְּנֵסִיָּתִי","is of my church"], ["וּמַחֲזִיק","and endures"], ["בִּכְנֵסִיָּתִי","in my church"], ["עַד","until"], ["הַקֵּץ","the end"], ["אֹתוֹ","him"], ["אָקִים","I will establish"], ["עַל","upon"], ["סַלְעִי","my rock"], ["וְשַׁעֲרֵי","and gates of"], ["שְׁאוֹל","Sheol"], ["לֹא","not"], ["יָגְבְּרוּ","shall prevail"], ["עָלָיו׃","against him"]]},
-  { num: "ע", words: [
-    ["וְעַתָּה","and now"],
-    ["זְכֹר","remember"],
-    ["דִּבְרֵי","words of"],
-    ["אֲשֶׁר הוּא","him who"],
-    ["הַחַיִּים","is the life"],
-    ["וְאוֹר","and the light of"],
-    ["הָעוֹלָם","the world"],
-    ["גֹּאֲלְךָ","your Redeemer"],
-    ["אֲדוֹנֶיךָ","your Lord"],
-    ["וֵאלֹהֶיךָ","and your God"],
-    ["אָמֵן׃","amen"]
-  ]}
+  { num: "ע", words: [["וְעַתָּה","and now"], ["זְכֹר","remember"], ["דִּבְרֵי","words of"], ["אֲשֶׁר","who"], ["הוּא","he is"], ["הַחַיִּים","is the life"], ["וְאוֹר","and the light of"], ["הָעוֹלָם","the world"], ["גֹּאֲלְךָ","your Redeemer"], ["אֲדוֹנֶיךָ","your Lord"], ["וֵאלֹהֶיךָ","and your God"], ["אָמֵן׃","amen"]]}
 ];
 renderVerseSet(dc10_ch1Verses, 'dc10-ch1-verses');
 
