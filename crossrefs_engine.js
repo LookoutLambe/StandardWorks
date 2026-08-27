@@ -1047,8 +1047,9 @@
 
   // ── Open aggregated root xref panel ──
   function openRootXrefPanel(root) {
-    var entries = window._rootXrefs[root];
-    if (!entries || entries.length === 0) return;
+    var entries = window._rootXrefs[root] || [];
+    // No early return on an empty footnote set: a root can have hundreds of
+    // occurrences and no curated footnote, and those occurrences are the point.
 
     var panel = document.getElementById('xref-panel');
     if (!panel) return;
@@ -1084,21 +1085,22 @@
     var refsContainer = document.getElementById('xref-panel-refs');
     refsContainer.innerHTML = '';
 
-    // The concordance's own occurrences come FIRST. This is the study surface:
-    // חלם has 59 chapters here — Jacob at Gen 28, Joseph across Gen 37-42,
-    // Daniel 1-7 — while the curated footnote set below has one. Leading with
-    // the footnotes made the root look like it barely occurs in scripture.
-    (function() {
+    // Occurrences first. Loaded through RootScorecard.ensure because the
+  // concordance is lazy — without it this silently rendered nothing.
+  (function() {
+    if (!window.RootScorecard || !window.RootScorecard.ensure) return;
+    window.RootScorecard.ensure(function() {
       var conc = window._rootConcordance;
-      if (!conc || !window.RootScorecard || !window.RootScorecard.openPanel) return;
+      if (!conc || !window.RootScorecard.openPanel) return;
       var ci = conc.keys.indexOf(root);
       if (ci < 0) return;
       var e = conc.roots[ci], total = 0, verses = 0;
       (e.c || []).forEach(function(n) { total += n; });
       (e.vc || []).forEach(function(n) { verses += n; });
       if (!total) return;
+      if (refsContainer.querySelector('.rsc-occ-card')) return;
       var card = document.createElement('div');
-      card.className = 'xref-ref-card';
+      card.className = 'xref-ref-card rsc-occ-card';
       card.style.cssText = 'cursor:pointer;border:1px solid rgba(212,175,55,0.55);' +
         'background:rgba(212,175,55,0.10);border-radius:10px;padding:11px 13px;margin-bottom:12px;';
       card.innerHTML = '<div style="font-weight:700;color:var(--sw-gold,#d4af37);">' +
@@ -1109,8 +1111,9 @@
         ev.stopPropagation();
         window.RootScorecard.openPanel(ci);
       });
-      refsContainer.appendChild(card);
-    })();
+      refsContainer.insertBefore(card, refsContainer.firstChild);
+    });
+  })();
 
     // Aggregate all refs across markers (don’t drop TG/BD/etc)
     var seenScripture = {};
