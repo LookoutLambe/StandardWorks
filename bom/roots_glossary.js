@@ -244,7 +244,7 @@ window._rootGlossaryData = {
     "category": "Particle"
   },
   "אשר": {
-    "meaning": "which, that, who (relative)",
+    "meaning": "to go straight, be blessed; Asher",
     "category": "Particle"
   },
   "לא": {
@@ -268,7 +268,7 @@ window._rootGlossaryData = {
     "category": "Particle"
   },
   "עם": {
-    "meaning": "people, nation, kinfolk",
+    "meaning": "with, together with; (עַם) people, nation",
     "category": "Society"
   },
   "יהוה": {
@@ -324,7 +324,7 @@ window._rootGlossaryData = {
     "category": "Particle"
   },
   "אל": {
-    "meaning": "to",
+    "meaning": "(אֵל) God, mighty one; (אֶל) to, unto; (אַל) not, do not",
     "category": "Theology"
   },
   "בוא": {
@@ -642,7 +642,7 @@ window._rootGlossaryData = {
     "category": "Society"
   },
   "ספר": {
-    "meaning": "book",
+    "meaning": "to count, number, recount; book, scribe",
     "category": "Society"
   },
   "בו": {
@@ -1148,7 +1148,7 @@ window._rootGlossaryData = {
     "category": "Motion"
   },
   "עדה": {
-    "meaning": "church",
+    "meaning": "congregation, assembly; to pass on",
     "category": "Uncategorized"
   },
   "ירא": {
@@ -1240,7 +1240,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יכל": {
-    "meaning": "was able",
+    "meaning": "to be able, prevail, endure",
     "category": "Time"
   },
   "לחם": {
@@ -1580,7 +1580,7 @@ window._rootGlossaryData = {
     "category": "Society"
   },
   "עשר": {
-    "meaning": "[compound]",
+    "meaning": "ten (in compounds: eleven, twelve, twenty)",
     "category": "Quality"
   },
   "ארצה": {
@@ -1908,7 +1908,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "הר": {
-    "meaning": "Maher ",
+    "meaning": "mountain, hill",
     "category": "Nature"
   },
   "וני": {
@@ -3164,7 +3164,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "פרה": {
-    "meaning": "atonement",
+    "meaning": "to bear fruit, be fruitful; fruit",
     "category": "Theology"
   },
   "שמים": {
@@ -4844,7 +4844,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "לון": {
-    "meaning": "Shiblon",
+    "meaning": "to lodge, spend the night; to murmur",
     "category": "Uncategorized"
   },
   "יקרה": {
@@ -4936,7 +4936,7 @@ window._rootGlossaryData = {
     "category": "Theology"
   },
   "יחד": {
-    "meaning": "oft",
+    "meaning": "together, in union; to be united",
     "category": "Uncategorized"
   },
   "יטבלו": {
@@ -6096,7 +6096,7 @@ window._rootGlossaryData = {
     "category": "Time"
   },
   "גבר": {
-    "meaning": "overpower",
+    "meaning": "to be strong, prevail; mighty man",
     "category": "Uncategorized"
   },
   "קרובים": {
@@ -6525,7 +6525,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "פה": {
-    "meaning": "here",
+    "meaning": "mouth; edge, opening",
     "category": "Speech"
   },
   "תאבדו": {
@@ -10647,7 +10647,7 @@ window._rootGlossaryData = {
     "category": "Motion"
   },
   "איב": {
-    "meaning": "grieves",
+    "meaning": "enemy, foe",
     "category": "Uncategorized"
   },
   "ל־אדם": {
@@ -10855,7 +10855,7 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "שרה": {
-    "meaning": "government",
+    "meaning": "to rule, contend; prince, ruler",
     "category": "Society"
   },
   "עזרה": {
@@ -11339,7 +11339,7 @@ window._rootGlossaryData = {
     "category": "Action"
   },
   "עלם": {
-    "meaning": "their burdens",
+    "meaning": "eternity, forever, everlasting; the age",
     "category": "Theology"
   },
   "תחבר": {
@@ -16734,7 +16734,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "רגל": {
-    "meaning": "I might spy out",
+    "meaning": "foot; to go about, spy out",
     "category": "Uncategorized"
   },
   "עשקום": {
@@ -17733,7 +17733,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "נוח": {
-    "meaning": "Lnoch",
+    "meaning": "to rest, settle down; rest",
     "category": "Uncategorized"
   },
   "תשובה׃": {
@@ -26376,7 +26376,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "עצם": {
-    "meaning": "bone",
+    "meaning": "to be mighty, be numerous; bone",
     "category": "Person"
   },
   "בתי": {
