@@ -625,18 +625,9 @@
   }
 
   // ── Simple English stemmer for matching ──
-  function simpleStem(w) {
-    w = w.toLowerCase().replace(/[^a-z]/g, '');
-    if (w.endsWith('ing')) w = w.slice(0, -3);
-    else if (w.endsWith('ness')) w = w.slice(0, -4);
-    else if (w.endsWith('tion')) w = w.slice(0, -4);
-    else if (w.endsWith('ed') && w.length > 4) w = w.slice(0, -2);
-    else if (w.endsWith('ly') && w.length > 4) w = w.slice(0, -2);
-    else if (w.endsWith('er') && w.length > 4) w = w.slice(0, -2);
-    else if (w.endsWith('es') && w.length > 4) w = w.slice(0, -2);
-    else if (w.endsWith('s') && !w.endsWith('ss') && w.length > 3) w = w.slice(0, -1);
-    return w;
-  }
+  // simpleStem lives in xref_common.js, shared with bom.html.
+  var simpleStem = window.simpleStem;
+
 
   // ── Add cross-reference markers to all rendered verses ──
   /** Top glosses actually used for this lexeme in this site's own translation. */

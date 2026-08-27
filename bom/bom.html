@@ -3866,6 +3866,7 @@ body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
 <script src="bom_book_loader.js?v=8"></script>
 <script src="bom_lazy_assets.js?v=1"></script>
 <script src="../root_names.js?v=10"></script>
+<script src="../xref_common.js?v=1"></script>
 <script src="../verse_loader.js?v=2"></script>
 <script src="../root_scorecard.js?v=21"></script>
 <script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
@@ -5542,9 +5543,8 @@ function addCrossRefMarkers() {
     }
 
     // Simple English stemmer: strip common suffixes
-    function simpleStem(w) {
-      return w.replace(/(ness|ment|tion|sion|ings|ing|ous|ful|less|ity|ies|ers|ed|ly|er|es|s)$/, '');
-    }
+    // simpleStem now comes from xref_common.js — this copy reduced
+    // "bless" to "b" and "waters" to "wat".
 
     // Get official English text for position-based fallback matching
     var engText = (window._englishMap && window._englishMap[key]) ? window._englishMap[key].toLowerCase() : '';
