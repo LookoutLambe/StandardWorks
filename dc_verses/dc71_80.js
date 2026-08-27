@@ -1885,7 +1885,7 @@ var dc76_ch1Verses = [
     ["קֹדֶשׁ","(the) holiest of"],
     ["קָדָשִׁים׃","all (holies)"]
   ]},
-  { num: "סז", words: [["אֵלֶּה","these are"], ["אֲשֶׁר","they who"], ["בָּאוּ","have come"], ["לְחֵיל","to (a) company of"], ["מַלְאָכִים","angels"], ["אֵין","(there is) no"], ["מִסְפָּר","number (=innumerable)"], ["לִקְהַל","to (the) assembly of"], ["הָעֵדָה","the congregation"], ["וּכְנֵסִיַּת","and (the) church of"], ["חֲנוֹךְ","Enoch"], ["וְהַבְּכוֹר׃","and (the) Firstborn"]]},
+  { num: "סז", words: [["אֵלֶּה","these are"], ["אֲשֶׁר","they who"], ["בָּאוּ","have come"], ["לְחֵיל","to (a) company of"], ["מַלְאָכִים","angels"], ["אֵין","(there is) no"], ["מִסְפָּר","number (=innumerable)"], ["לַעֲצֶרֶת","to the general assembly"], ["וְלִכְנֵסִיַּת","and to the church of"], ["חֲנוֹךְ","Enoch"], ["וְהַבְּכוֹר׃","and (the) Firstborn"]]},
   { num: "סח", words: [
     ["אֵלֶּה","these are they"],
     ["אֲשֶׁר","whose"],
