@@ -2898,21 +2898,7 @@ var dc30_ch1Verses = [
     ["בֵּין","among"],
     ["הַלָּמָנִים׃","the Lamanites"]
   ]},
-  { num: "ז", words: [
-    ["וְלֹא","and none"],
-    ["מִנֵּיתִי","have I appointed"],
-    ["אִישׁ",""],
-    ["לִהְיוֹת","to be"],
-    ["יוֹעֲצוֹ","his counselor"],
-    ["עָלָיו","over him"],
-    ["בָּעֵדָה","in the church"],
-    ["בְּדִבְרֵי","concerning matters of"],
-    ["הָעֵדָה","the church"],
-    ["זוּלָתִי","except"],
-    ["אָחִיו","it is his brother"],
-    ["יוֹסֵף","Joseph"],
-    ["סְמִית׃","Smith Jun."]
-  ]},
+  { num: "ז", words: [["וְלֹא","and none"], ["מִנֵּיתִי","have I appointed"], ["אִישׁ","any man"], ["לִהְיוֹת","to be"], ["יוֹעֲצוֹ","his counselor"], ["עָלָיו","over him"], ["בָּעֵדָה","in the church"], ["בְּדִבְרֵי","concerning matters of"], ["הָעֵדָה","the church"], ["זוּלָתִי","except"], ["אָחִיו","his brother"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן׃","Jun."]]},
   { num: "ח", words: [
     ["לָכֵן","wherefore"],
     ["הַקְשֵׁב","give heed"],

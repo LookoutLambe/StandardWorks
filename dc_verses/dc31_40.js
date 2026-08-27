@@ -50,23 +50,7 @@ var dc31_ch1Verses = [
     ["לַדּוֹר","unto generation"],
     ["הַזֶּה׃","this"]
   ]},
-  { num: "ד", words: [
-    ["תַּשְׁמִיעַ","you shall declare"],
-    ["אֶת־הַדְּבָרִים","the things"],
-    ["אֲשֶׁר","which"],
-    ["נִגְלוּ","have been revealed"],
-    ["לְעַבְדִּי","to my servant"],
-    ["יוֹסֵף","Joseph"],
-    ["סְמִית","Smith Jun."],
-    ["תָּחֵל","you shall begin"],
-    ["לְהַטִּיף","to preach"],
-    ["מֵעַתָּה","from this time forth"],
-    ["אָכֵן","yea"],
-    ["לִקְצֹר","to reap"],
-    ["בַּשָּׂדֶה","in the field"],
-    ["הַמַּלְבִּין","which is white already"],
-    ["לִשְׂרֵפָה׃","to be burned"]
-  ]},
+  { num: "ד", words: [["תַּשְׁמִיעַ","you shall declare"], ["אֶת־הַדְּבָרִים","the things"], ["אֲשֶׁר","which"], ["נִגְלוּ","have been revealed"], ["לְעַבְדִּי","to my servant"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["תָּחֵל","you shall begin"], ["לְהַטִּיף","to preach"], ["מֵעַתָּה","from this time forth"], ["אָכֵן","yea"], ["לִקְצֹר","to reap"], ["בַּשָּׂדֶה","in the field"], ["הַמַּלְבִּין","which is white already"], ["לִשְׂרֵפָה׃","to be burned"]]},
   { num: "ה", words: [
     ["לָכֵן","therefore"],
     ["שְׁלַח","thrust in"],
