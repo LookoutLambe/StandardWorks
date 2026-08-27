@@ -55,10 +55,12 @@ var dc51_ch1Verses = [
     ["לְפִי","according to"],
     ["מִשְׁפַּחְתּוֹ","his family"],
     ["לְפִי","according to"],
-    ["דַרְכּוֹ׃","his circumstances"]
+    ["דַרְכּוֹ","his circumstances"],
+    ["וּצְרָכָיו","and his wants"],
+    ["וּמַחְסוֹרוֹ׃","and his needs"]
   ]},
   { num: "ד", words: [["וְעַבְדִּי","and my servant"], ["אֶדְוָרְד","Edward"], ["פַּרְטְרִיג׳","Partridge"], ["כַּאֲשֶׁר","when"], ["יְמַנֶּה","he shall appoint"], ["לְאִישׁ","to a man"], ["חֶלְקוֹ","his portion"], ["יִתֵּן","let him give"], ["לוֹ","unto him"], ["כְּתָב","a writing"], ["אֲשֶׁר","that"], ["יַבְטִיחַ","shall secure"], ["לוֹ","unto him"], ["חֶלְקוֹ","his portion"], ["לְאׇחֳזוֹ","that he shall hold it"], ["הַזְּכוּת","the right"], ["הַזֹּאת","this"], ["וְהַנַּחֲלָה","and the inheritance"], ["הַזֹּאת","this"], ["בַּכְּנֵסִיָּה","in the church"], ["עַד","until"], ["פָּשְׁעוֹ","his transgression"], ["וְלֹא","and not"], ["יֵחָשֵׁב","is accounted"], ["רָאוּי","worthy"], ["לְפִי","according to"], ["קוֹל","the voice of"], ["הַכְּנֵסִיָּה","the church"], ["כְּפִי","according to"], ["תּוֹרוֹת","the laws of"], ["הַכְּנֵסִיָּה","the church"], ["וּבְרִיתוֹתֶיהָ","and her covenants"], ["לִהְיוֹת","to belong"], ["לַכְּנֵסִיָּה׃","to the church"]]},
-  { num: "ה", words: [["וְאִם","and if"], ["יִפְשַׁע","he shall transgress"], ["וְלֹא","and not"], ["יֵחָשֵׁב","is accounted"], ["רָאוּי","worthy"], ["לִהְיוֹת","to belong"], ["לַכְּנֵסִיָּה","to the church"], ["לֹא","not"], ["יִהְיֶה","shall have"], ["לוֹ","unto him"], ["כֹּחַ","power"], ["לִדְרֹשׁ","to claim"], ["הַחֵלֶק","the portion"], ["אֲשֶׁר","which"], ["הִקְדִּישׁ","he has consecrated"], ["לַפָּקִיד","unto the bishop"], ["לַעֲנִיֵּי","for the poor of"], ["כְּנֵסִיָּתִי","my church"], ["לָכֵן","therefore"], ["לֹא","not"], ["יַחֲזִיק","he shall retain"], ["הַמַּתָּנָה","the gift"], ["כִּי","but"], ["אִם","rather"], ["יִדְרֹשׁ","shall claim"], ["רַק","only"], ["הַחֵלֶק","the portion"], ["הַנָּתוּן","that is given"], ["לוֹ","unto him"], ["בִּכְתָב׃","by deed"]]},
+  { num: "ה", words: [["וְאִם","and if"], ["יִפְשַׁע","he shall transgress"], ["וְלֹא","and not"], ["יֵחָשֵׁב","is accounted"], ["רָאוּי","worthy"], ["לִהְיוֹת","to belong"], ["לַכְּנֵסִיָּה","to the church"], ["לֹא","not"], ["יִהְיֶה","shall have"], ["לוֹ","unto him"], ["כֹּחַ","power"], ["לִדְרֹשׁ","to claim"], ["הַחֵלֶק","the portion"], ["אֲשֶׁר","which"], ["הִקְדִּישׁ","he has consecrated"], ["לַפָּקִיד","unto the bishop"], ["לַעֲנִיֵּי","for the poor"], ["וְאֶבְיוֹנֵי","and the needy of"], ["כְּנֵסִיָּתִי","my church"], ["לָכֵן","therefore"], ["לֹא","not"], ["יַחֲזִיק","he shall retain"], ["הַמַּתָּנָה","the gift"], ["כִּי","but"], ["אִם","rather"], ["יִדְרֹשׁ","shall claim"], ["רַק","only"], ["הַחֵלֶק","the portion"], ["הַנָּתוּן","that is given"], ["לוֹ","unto him"], ["בִּכְתָב׃","by deed"]]},
   { num: "ו", words: [
     ["וְכֵן","and thus"],
     ["יִהְיוּ","shall be"],
@@ -116,7 +118,7 @@ var dc51_ch1Verses = [
     ["אֶתְכֶם׃","you"]
   ]},
   { num: "י", words: [["וַאֲשֶׁר","and that which belongs"], ["לָעָם","to the people"], ["הַזֶּה","this"], ["אַל","let not"], ["יִלָּקַח","be taken"], ["וְיִנָּתֵן","and given"], ["לִכְנֵסִיָּה","unto a church"], ["אַחֶרֶת׃","another"]]},
-  { num: "יא", words: [["לָכֵן","wherefore"], ["אִם","if"], ["כְּנֵסִיָּה","a church"], ["אַחֶרֶת","another"], ["תְּקַבֵּל","would receive"], ["כֶּסֶף","money"], ["מֵהַכְּנֵסִיָּה","from the church"], ["הַזֹּאת","this"], ["יְשַׁלְּמוּ","let them pay"], ["לַכְּנֵסִיָּה","unto the church"], ["הַזֹּאת","this"], ["לְפִי","according"], ["אֲשֶׁר","as"], ["יִוָּעֲדוּ׃","they shall agree"]]},
+  { num: "יא", words: [["לָכֵן","wherefore"], ["אִם","if"], ["כְּנֵסִיָּה","a church"], ["אַחֶרֶת","another"], ["תְּקַבֵּל","would receive"], ["כֶּסֶף","money"], ["מֵהַכְּנֵסִיָּה","from the church"], ["הַזֹּאת","this"], ["יְשַׁלְּמוּ","let them pay"], ["שֵׁנִית","again"], ["לַכְּנֵסִיָּה","unto the church"], ["הַזֹּאת","this"], ["לְפִי","according"], ["אֲשֶׁר","as"], ["יִוָּעֲדוּ׃","they shall agree"]]},
   { num: "יב", words: [["וְזֹאת","and this"], ["תֵּעָשֶׂה","shall be done"], ["בִּידֵי","through the hands of"], ["הַפָּקִיד","the bishop"], ["אוֹ","or"], ["הַסֹּכֵן","the agent"], ["אֲשֶׁר","which"], ["יְמֻנֶּה","shall be appointed"], ["עַל","by"], ["פִּי","the mouth of"], ["קוֹל","the voice of"], ["הַכְּנֵסִיָּה׃","the church"]]},
   { num: "יג", words: [["וְעוֹד","and again"], ["הַפָּקִיד","let the bishop"], ["יְמַנֶּה","appoint"], ["אוֹצָר","a storehouse"], ["לַכְּנֵסִיָּה","unto the church"], ["הַזֹּאת","this"], ["וְכׇל","and all"], ["דָּבָר","things"], ["אִם","both"], ["בְּכֶסֶף","in money"], ["וְאִם","and"], ["בְּמָזוֹן","in food"], ["הָעוֹדֵף","which is more"], ["עַל","above"], ["צָרְכֵי","the wants of"], ["הָעָם","the people"], ["הַזֶּה","this"], ["יִשָּׁמֵר","be kept"], ["בִּידֵי","in the hands of"], ["הַפָּקִיד׃","the bishop"]]},
   { num: "יד", words: [
@@ -2052,7 +2054,7 @@ var dc58_ch1Verses = [
     ["יִמְלֹךְ","he reigns"],
     ["אֲשֶׁר","whose"],
     ["לוֹ","to him is"],
-    ["הַמְּלוּכָה","the kingdom"],
+    ["הַמִּשְׁפָּט","the right"],
     ["לִמְלֹךְ","to reign"],
     ["וְיַכְנִיעַ","and he subdues"],
     ["כׇּל","all"],
@@ -2405,7 +2407,7 @@ var dc58_ch1Verses = [
     ["לָשׁוּב׃","to repent"]
   ]},
   { num: "מח", words: [["וְיָקִימוּ","and let them build up"], ["כְּנֵסִיּוֹת","churches"], ["כַּאֲשֶׁר","inasmuch as"], ["יָשׁוּבוּ","shall repent"], ["יוֹשְׁבֵי","the inhabitants of"], ["הָאָרֶץ׃","the earth"]]},
-  { num: "מט", words: [["וִימֻנֶּה","and let be appointed"], ["סֹכֵן","an agent"], ["עַל","by"], ["פִּי","the mouth of"], ["הַכְּנֵסִיָּה","the church"], ["לַכְּנֵסִיָּה","unto the church"], ["אֲשֶׁר","which is"], ["בְּאוֹהָיוֹ","in Ohio"], ["לְקַבֵּל","to receive"], ["כְּסָפִים","moneys"], ["לִקְנוֹת","to purchase"], ["אֲרָצוֹת","lands"], ["בְּצִיּוֹן׃","in Zion"]]},
+  { num: "מט", words: [["וִימֻנֶּה","and let be appointed"], ["סֹכֵן","an agent"], ["בְּקוֹל","by the voice of"], ["הַכְּנֵסִיָּה","the church"], ["לַכְּנֵסִיָּה","unto the church"], ["אֲשֶׁר","which is"], ["בְּאוֹהָיוֹ","in Ohio"], ["לְקַבֵּל","to receive"], ["כְּסָפִים","moneys"], ["לִקְנוֹת","to purchase"], ["אֲרָצוֹת","lands"], ["בְּצִיּוֹן׃","in Zion"]]},
   { num: "נ", words: [
     ["וַאֲנִי","and I"],
     ["נוֹתֵן","give"],
