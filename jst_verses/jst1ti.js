@@ -19,8 +19,8 @@ renderVerseSet(jst1ti_ch2Verses, 'jst1ti-ch2-verses');
 // === CH3: JST 1 Timothy 6:15–16 ===
 // Those with the light of immortality can see Jesus.
 var jst1ti_ch3Verses = [
-  { num:"טו", words:[["אֲשֶׁר","which-in"],["בְּעִתּוֹתָיו","his-times"],["יַרְאֶה","he-shall-show"],["מִי","who-is"],["הוּא","the-blessed"],["הַמְבֹרָךְ","and-only"],["וְהַיָּחִיד","the-Potentate"],["שַׁלִּיט","the-King-of"],["מֶלֶךְ","kings"],["הַמְּלָכִים","and-the-Lord-of"],["וַאֲדוֹן","lords"],["הָאֲדוֹנִים","to-the-whom"],["אֲשֶׁר","be"],["לוֹ","honor"],["כָּבוֹד","and"],["וְכֹחַ","power"],["עוֹלָם","everlasting"],["׃",""]] },
-  { num:"טז", words:[["אֲשֶׁר","whom"],["לֹא","no"],["רָאָהוּ","man-hath-seen"],["אִישׁ","nor"],["וְלֹא","can"],["יָכוֹל","see"],["לִרְאוֹתוֹ","unto-whom"],["אֲשֶׁר","no"],["לֹא","man"],["יוּכַל","can"],["אִישׁ","approach"],["לְהִתְקָרֵב","only"],["אֵלָיו","he-who"],["רַק","hath"],["מִי","the-light"],["שֶׁיֵּשׁ","and"],["בּוֹ","the-hope-of"],["אוֹר","immortality"],["וְתִקְוַת","dwelling"],["אַלְמָוֶת","in"],["שׁוֹכֶנֶת","him"],["׃",""]] }
+  { num:"טו", words:[["אֲשֶׁר","which"],["בְּעִתּוֹתָיו","in-his-times"],["יַרְאֶה","he-shall-show"],["מִי","who"],["הוּא","is"],["הַמְבֹרָךְ","the-blessed"],["וְהַיָּחִיד","and-only"],["שַׁלִּיט","Potentate"],["מֶלֶךְ","the-King-of"],["הַמְּלָכִים","the-kings"],["וַאֲדוֹן","and-the-Lord-of"],["הָאֲדוֹנִים","the-lords"],["אֲשֶׁר","to-whom"],["לוֹ","be-to-him"],["כָּבוֹד","honor"],["וְכֹחַ","and-power"],["עוֹלָם","everlasting"],["׃",""]] },
+  { num:"טז", words:[["אֲשֶׁר","whom"],["לֹא","not"],["רָאָהוּ","hath-seen-him"],["אִישׁ","any-man"],["וְלֹא","nor"],["יָכוֹל","is-able"],["לִרְאוֹתוֹ","to-see-him"],["אֲשֶׁר","unto-whom"],["לֹא","not"],["יוּכַל","can"],["אִישׁ","any-man"],["לְהִתְקָרֵב","approach"],["אֵלָיו","unto-him"],["רַק","only"],["מִי","he-who"],["שֶׁיֵּשׁ","there-is"],["בּוֹ","in-him"],["אוֹר","light"],["וְתִקְוַת","and-the-hope-of"],["אַל־מָוֶת","immortality"],["שׁוֹכֶנֶת","dwelling"],["׃",""]] }
 ];
 renderVerseSet(jst1ti_ch3Verses, 'jst1ti-ch3-verses');
 
