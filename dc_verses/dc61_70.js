@@ -823,7 +823,8 @@ var dc63_ch1Verses = [
     ["אֲשֶׁר","him whose"],
     ["בָּעֵר","burns"],
     ["אַפּוֹ","anger"],
-    ["בָּרְשָׁעִים׃","against the wicked"]
+    ["בָּרְשָׁעִים","against the wicked"],
+    ["וּבַמּוֹרְדִים׃","and the rebellious"]
   ]},
   { num: "ג", words: [
     ["הֶחָפֵץ","who is willing"],
@@ -934,7 +935,8 @@ var dc63_ch1Verses = [
     ["מַרְאֶה","show"],
     ["אוֹתוֹת","signs"],
     ["רַק","only"],
-    ["בְּחֵמָה׃","in wrath"]
+    ["בְּחֵמָה","in wrath"],
+    ["לְדִינָם׃","unto their condemnation"]
   ]},
   { num: "יב", words: [
     ["לָכֵן","wherefore"],
@@ -1000,7 +1002,7 @@ var dc63_ch1Verses = [
     ["הָעָם׃","the people"]
   ]},
   { num: "טז", words: [["וְאָמֵן","and verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["כַּאֲשֶׁר","as"], ["אָמַרְתִּי","I have said"], ["לִפְנֵי","before"], ["הַמַּבִּיט","he that looks"], ["עַל","upon"], ["אִשָּׁה","a woman"], ["לְחָמְדָהּ","to lust after her"], ["אוֹ","or"], ["אִם","if any"], ["יְנָאֲפוּ","shall commit adultery"], ["בְּלִבָּם","in their hearts"], ["לֹא","not"], ["יִהְיֶה","shall have"], ["לָהֶם","unto them"], ["הָרוּחַ","the Spirit"], ["כִּי־אִם","but"], ["יְכַחֲשׁוּ","they shall deny"], ["בָאֱמוּנָה","the faith"], ["וְיִפְחָדוּ׃","and shall fear"]]},
-  { num: "יז", words: [["לָכֵן","therefore"], ["אֲנִי","I"], ["יְהוָה","the Lord"], ["אָמַרְתִּי","have said"], ["כִּי","for"], ["רַכֵּי־הַלֵּב","the faint of heart"], ["וְחַסְרֵי","that those lacking"], ["הָאֱמוּנָה","the faith"], ["וְכׇל","and all"], ["הַמְכַזְּבִים","the liars"], ["וְכׇל","and every"], ["אוֹהֵב","one who loves"], ["וְעוֹשֶׂה","and makes"], ["שֶׁקֶר","a lie"], ["וְהַזּוֹנֶה","and the whoremonger"], ["וְהַמְכַשֵּׁף","and the sorcerer"], ["חֶלְקָם","shall have their part"], ["בַּאֲגָם","in the lake"], ["הַבּוֹעֵר","that burns"], ["בְּאֵשׁ","with fire"], ["וְגָפְרִית","and brimstone"], ["אֲשֶׁר","which"], ["הוּא","is"], ["הַמָּוֶת","the death"], ["הַשֵּׁנִי׃","the second"]]},
+  { num: "יז", words: [["לָכֵן","therefore"], ["אֲנִי","I"], ["יְהוָה","the Lord"], ["אָמַרְתִּי","have said"], ["כִּי","that"], ["רַכֵּי־הַלֵּב","the faint of heart"], ["וְחַסְרֵי","that those lacking"], ["הָאֱמוּנָה","the faith"], ["וְכׇל","and all"], ["הַמְכַזְּבִים","the liars"], ["וְכׇל","and every"], ["אוֹהֵב","one who loves"], ["וְעוֹשֶׂה","and makes"], ["שֶׁקֶר","a lie"], ["וְהַזּוֹנֶה","and the whoremonger"], ["וְהַמְכַשֵּׁף","and the sorcerer"], ["חֶלְקָם","shall have their part"], ["בַּאֲגָם","in the lake"], ["הַבּוֹעֵר","that burns"], ["בְּאֵשׁ","with fire"], ["וְגָפְרִית","and brimstone"], ["אֲשֶׁר","which"], ["הוּא","is"], ["הַמָּוֶת","the death"], ["הַשֵּׁנִי׃","the second"]]},
   { num: "יח", words: [
     ["אָמֵן","verily"],
     ["אֲנִי","I"],
@@ -1174,7 +1176,7 @@ var dc63_ch1Verses = [
     ["וְלִשְׁפֹּךְ","and to the shedding of"],
     ["דָּם׃","blood"]
   ]},
-  { num: "כט", words: [["לָכֵן","wherefore"], ["לֹא","not"], ["אֶרֶץ","the land of"], ["צִיּוֹן","Zion"], ["כִּי־אִם","but"], ["בְּמִקְנָה","by purchase"], ["אוֹ","or"], ["בְּדָם","by blood"], ["וְאִם","and if"], ["לֹא","not"], ["אֵין","there is no"], ["נַחֲלָה","inheritance"], ["לָכֶם׃","for you"]]},
+  { num: "כט", words: [["לָכֵן","wherefore"], ["אֶרֶץ","the land of"], ["צִיּוֹן","Zion"], ["לֹא","not"], ["תֻּשַּׂג","shall be obtained"], ["כִּי־אִם","but"], ["בְּמִקְנָה","by purchase"], ["אוֹ","or"], ["בְּדָם","by blood"], ["וְאִם","and if"], ["לֹא","not"], ["אֵין","there is no"], ["נַחֲלָה","inheritance"], ["לָכֶם׃","for you"]]},
   { num: "ל", words: [
     ["וְאִם","and if"],
     ["בְּמִקְנָה","by purchase"],
