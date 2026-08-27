@@ -332,6 +332,14 @@ function stripPrefixes(w) {
           // "build" and פֶּן "lest" under פָּנָה "face" — the very merge the
           // original engine comment warned about.
           var srcLen = src && src.w ? (src.w.match(/[\u05D0-\u05EA]/g) || []).length : 0;
+          // Never chain a common word into a proper name. Strong's links תַּחַת
+          // "under" to H8430 תּוֹחַ, the man Toach, and the radical test passes
+          // it (ת,ח shared) — filing 920 prepositions under a personal name.
+          var propName = function(x) {
+            return !!(x && x.g && /^[A-Z][A-Za-z-]*$/.test(x.g) &&
+                      !/^(God|Lord|Law|Holy|Amen)$/.test(x.g));
+          };
+          if (propName(e) && !propName(src)) { _baseOf[n] = n; continue; }
           if (e && e.w && src && src.w && srcLen >= 3 &&
               (e.w.match(/[\u05D0-\u05EA]/g) || []).length === 3) {
             var strong = function(x) {

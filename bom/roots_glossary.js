@@ -1,4 +1,232 @@
 window._rootGlossaryData = {
+  "פלש": {
+    "meaning": "Philistia, Philistine",
+    "category": "Society"
+  },
+  "בלה": {
+    "meaning": "to wear out, grow old; (בִּלְתִּי) without, except",
+    "category": "Quality"
+  },
+  "עמם": {
+    "meaning": "people, kinsfolk",
+    "category": "Society"
+  },
+  "שוש": {
+    "meaning": "to rejoice; (שֵׁשׁ) six",
+    "category": "Emotion"
+  },
+  "שעה": {
+    "meaning": "to gaze, regard; (תֵּשַׁע) nine",
+    "category": "Perception"
+  },
+  "שמן": {
+    "meaning": "oil, fat, richness; (שְׁמֹנֶה) eight",
+    "category": "Object"
+  },
+  "שפה": {
+    "meaning": "(מִשְׁפָּחָה) clan, family; lip, edge",
+    "category": "Society"
+  },
+  "כסה": {
+    "meaning": "to cover, conceal; (כִּסֵּא) throne",
+    "category": "Action"
+  },
+  "לול": {
+    "meaning": "night",
+    "category": "Time"
+  },
+  "מטה": {
+    "meaning": "tribe; staff, rod",
+    "category": "Society"
+  },
+  "יכח": {
+    "meaning": "to reprove, argue, set right",
+    "category": "Speech"
+  },
+  "שבט": {
+    "meaning": "tribe; rod, sceptre",
+    "category": "Society"
+  },
+  "הלל": {
+    "meaning": "to praise, laud, boast",
+    "category": "Theology"
+  },
+  "לשן": {
+    "meaning": "tongue, language",
+    "category": "Speech"
+  },
+  "שמש": {
+    "meaning": "sun",
+    "category": "Nature"
+  },
+  "לויי": {
+    "meaning": "Levite",
+    "category": "Society"
+  },
+  "לבן": {
+    "meaning": "white; to be white",
+    "category": "Quality"
+  },
+  "שחה": {
+    "meaning": "to bow down, prostrate, worship",
+    "category": "Theology"
+  },
+  "לבש": {
+    "meaning": "to clothe, put on, be clothed",
+    "category": "Action"
+  },
+  "מלאכה": {
+    "meaning": "work, labour, craftsmanship",
+    "category": "Action"
+  },
+  "רכב": {
+    "meaning": "to ride; chariot",
+    "category": "Motion"
+  },
+  "כרם": {
+    "meaning": "vineyard",
+    "category": "Place"
+  },
+  "ימן": {
+    "meaning": "right hand; the south",
+    "category": "Direction"
+  },
+  "שבר": {
+    "meaning": "to break, shatter; destruction",
+    "category": "Conflict"
+  },
+  "חצר": {
+    "meaning": "courtyard, enclosure; village",
+    "category": "Place"
+  },
+  "הן": {
+    "meaning": "behold; they (f.)",
+    "category": "Grammar"
+  },
+  "שמם": {
+    "meaning": "to be desolate, be appalled",
+    "category": "Quality"
+  },
+  "רבב": {
+    "meaning": "to be many, be great; abundance",
+    "category": "Quantity"
+  },
+  "בעל": {
+    "meaning": "lord, master, husband; Baal",
+    "category": "Society"
+  },
+  "בלל": {
+    "meaning": "to mix, confuse",
+    "category": "Action"
+  },
+  "גבל": {
+    "meaning": "border, boundary, territory",
+    "category": "Place"
+  },
+  "מעט": {
+    "meaning": "few, little, a small amount",
+    "category": "Quantity"
+  },
+  "בטח": {
+    "meaning": "to trust, be confident; safety",
+    "category": "Theology"
+  },
+  "בגד": {
+    "meaning": "garment, clothing; to act treacherously",
+    "category": "Object"
+  },
+  "בחר": {
+    "meaning": "to choose, elect",
+    "category": "Action"
+  },
+  "שדה": {
+    "meaning": "field, open country",
+    "category": "Place"
+  },
+  "שער": {
+    "meaning": "gate, gateway",
+    "category": "Place"
+  },
+  "פלל": {
+    "meaning": "to pray, intercede",
+    "category": "Theology"
+  },
+  "אנכי": {
+    "meaning": "I",
+    "category": "Grammar"
+  },
+  "שלוש": {
+    "meaning": "three",
+    "category": "Number"
+  },
+  "ברה": {
+    "meaning": "covenant",
+    "category": "Theology"
+  },
+  "עקב": {
+    "meaning": "heel; to follow at the heel, supplant",
+    "category": "Action"
+  },
+  "מלאך": {
+    "meaning": "messenger, angel",
+    "category": "Theology"
+  },
+  "לבב": {
+    "meaning": "heart, inner person; to encourage",
+    "category": "Humanity"
+  },
+  "מצוה": {
+    "meaning": "commandment, precept",
+    "category": "Theology"
+  },
+  "מאה": {
+    "meaning": "hundred",
+    "category": "Number"
+  },
+  "סבב": {
+    "meaning": "to turn, go around, surround",
+    "category": "Motion"
+  },
+  "נכה": {
+    "meaning": "to strike, smite, defeat",
+    "category": "Conflict"
+  },
+  "רבע": {
+    "meaning": "four; to be four-square",
+    "category": "Number"
+  },
+  "מצא": {
+    "meaning": "to find, discover, attain",
+    "category": "Action"
+  },
+  "משה": {
+    "meaning": "to draw out (of water)",
+    "category": "Action"
+  },
+  "שום": {
+    "meaning": "to set, place, appoint",
+    "category": "Action"
+  },
+  "כלה": {
+    "meaning": "to complete, finish, bring to an end",
+    "category": "Action"
+  },
+  "שאל": {
+    "meaning": "to ask, inquire, request",
+    "category": "Speech"
+  },
+  "אנש": {
+    "meaning": "to be weak, mortal; man, mankind",
+    "category": "Humanity"
+  },
+  "משח": {
+    "meaning": "to anoint; the anointed one, Messiah",
+    "category": "Theology"
+  },
+  "זאת": {
+    "meaning": "this, this one (f.)",
+    "category": "Grammar"
+  },
   "כי": {
     "meaning": "that, because, for, when",
     "category": "Particle"
