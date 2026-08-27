@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '32';   // bump when the generated data files change
+  var RSC_V = '33';   // bump when the generated data files change
 
   var cfg = { vol: '', base: '' };
   var keyIdx = null;         // rootKey -> index, built once
@@ -126,11 +126,63 @@
     return out;
   }
 
+  function _strongsConsIdx() {
+    // consonantal lemma -> best Strong's entry (primitive roots first).
+    // Built once; used as the meaning fallback for bare-consonant root keys,
+    // so a family like נעמ shows a definition even with no curated entry.
+    if (window._strongsConsIdxCache) return window._strongsConsIdxCache;
+    var idx = {}, S = window._strongsRoots || {};
+    var fin = { 'ך':'כ','ם':'מ','ן':'נ','ף':'פ','ץ':'צ' };
+    var strip = function (w) { return String(w || '').replace(/[\u0591-\u05C7]/g, '')
+                             .replace(/[ךםןףץ]/g, function (c) { return fin[c]; }); };
+    for (var n in S) {
+      var c = strip(S[n].w);
+      if (!c) continue;
+      var cur = idx[c];
+      if (!cur) { idx[c] = n; continue; }
+      var better = (S[n].p && !S[cur].p) ||
+                   (!!S[n].p === !!S[cur].p && S[n].g && !S[cur].g);
+      if (better) idx[c] = n;
+    }
+    // Second pass: matres lectionis hide exact matches (אדן vs אָדוֹן), so
+    // index the lemmas again with non-initial vav/yod removed. Only consulted
+    // when the exact index misses, and only for residues of 3+ letters.
+    var idx2 = {};
+    for (var n2 in S) {
+      var c2 = strip(S[n2].w);
+      if (!c2) continue;
+      var d = c2.charAt(0) + c2.slice(1).replace(/[וי]/g, '');
+      if (d.length < 3 || idx2[d]) continue;
+      idx2[d] = idx[c2] || n2;
+    }
+    window._strongsConsIdxCache = { exact: idx, demater: idx2 };
+    return window._strongsConsIdxCache;
+  }
+  function _strongsForCons(key) {
+    var c = _strongsConsIdx();
+    var fin = { 'ך':'כ','ם':'מ','ן':'נ','ף':'פ','ץ':'צ' };
+    var k = String(key || '').replace(/[ךםןףץ]/g, function (ch) { return fin[ch]; });
+    if (c.exact[k]) return c.exact[k];
+    var d = k.charAt(0) + k.slice(1).replace(/[וי]/g, '');
+    return d.length >= 3 ? c.demater[d] : null;
+  }
+  function _strongsGloss(num) {
+    // Follow the root/usage pointers when an entry has no gloss of its own
+    // (Aramaic forms point at their Hebrew twin: H8065 heavens -> H8064).
+    var S = window._strongsRoots || {};
+    var seen = {};
+    while (num && S[num] && !seen[num]) {
+      seen[num] = 1;
+      if (S[num].g) return S[num].g;
+      num = S[num].r || S[num].u;
+    }
+    return '';
+  }
   function rootDisplay(key) {
     var heb = key, translit = '', meaning = '';
     if (/^H\d+$/.test(key) && window._strongsRoots && window._strongsRoots[key]) {
       var e = window._strongsRoots[key];
-      heb = e.w || key; meaning = e.g || '';
+      heb = e.w || key; meaning = e.g || _strongsGloss(e.r || e.u) || '';
       // The site's own transliteration, matching the reader line — not Strong's
       // scholarly one (ʼâçaph): laymen read "asaf", not diacritics.
       if (typeof window.transliterate === 'function') { try { translit = window.transliterate(heb); } catch (eT) {} }
@@ -164,6 +216,15 @@
       else if (window.RootEngine && window.RootEngine.toSofit) heb = window.RootEngine.toSofit(key);
       var cur2 = (window._rootGlossaryData || {})[key];
       if (cur2 && cur2.meaning) meaning = cur2.meaning;
+      if (!meaning) {
+        // No curated meaning for this bare-consonant family: fall back to the
+        // Strong's lemma with exactly these consonants, primitive roots first.
+        var sNum = _strongsForCons(key);
+        if (sNum) {
+          meaning = window._strongsRoots[sNum].g || _strongsGloss(sNum);
+          if (heb === key && window._strongsRoots[sNum].w) heb = window._strongsRoots[sNum].w;
+        }
+      }
       if (typeof window.transliterate === 'function') { try { translit = window.transliterate(heb); } catch (e2) {} }
     }
     return { heb: heb, translit: translit, meaning: meaning };

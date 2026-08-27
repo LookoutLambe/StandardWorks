@@ -28331,5 +28331,9 @@ window._rootGlossaryData = {
   "H7311": {
     "meaning": "to be high, exalted; to lift up",
     "category": "Lexical"
+  },
+  "נעמ": {
+    "meaning": "to be pleasant, delightful",
+    "category": "Lexical"
   }
 };
