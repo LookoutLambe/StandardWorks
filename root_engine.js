@@ -44,6 +44,9 @@ function stripPrefixes(w) {
     // The sign-words: peeling the ־וֹת plural collapsed them into the object
     // marker's mega-family (H0853, whose Strong's pointer chains through
     // H0226). Pinned to their own bare family instead.
+    // the hundreds are מֵאָה, not signs — the מ is a radical, not a prefix
+    'מֵאוֹת': 'H3967', 'מֵאֹת': 'H3967', 'הַמֵּאוֹת': 'H3967',
+    'וּמֵאוֹת': 'H3967', 'לְמֵאוֹת': 'H3967',
     'אוֹת': 'אות', 'הָאוֹת': 'אות', 'וְאוֹת': 'אות', 'לְאוֹת': 'אות',
     'כְּאוֹת': 'אות', 'הָאֹת': 'אות', 'אִם־אוֹת': 'אות', 'מָה־הָאוֹת': 'אות',
     'אוֹת־הַבְּרִית': 'אות',
