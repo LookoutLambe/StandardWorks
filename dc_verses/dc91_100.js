@@ -3009,8 +3009,8 @@ var dc100_ch1Verses = [
     ["הֵם","they are,"],
     ["וְאֶעֱשֶׂה","and I will do"],
     ["לָהֶם","with them"],
-    ["כַּטּוֹב","as seems good;"],
-    ["בְּעֵינָי","me"],
+    ["כַּטּוֹב","as is good"],
+    ["בְּעֵינָי","in my eyes"],
     ["כִּי","for"],
     ["בִי","in me"],
     ["כׇּל־הַכֹּחַ׃","there is all power."]

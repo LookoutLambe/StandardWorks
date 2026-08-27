@@ -2829,7 +2829,7 @@ var dc134_ch1Verses = [
     ["חֻקִּים","such laws"],
     ["כַּאֲשֶׁר","as"],
     ["יֵרָאֶה","will seem"],
-    ["בְעֵינֶיהָ","in their own judgments"],
+    ["בְעֵינֶיהָ","in its eyes"],
     ["לְהַבְטִיחַ","calculated to secure"],
     ["אֶת־טוֹבַת","interest"],
     ["הָעָם","the public"],

@@ -947,7 +947,7 @@ var dc42_ch1Verses = [
     ["אוֹ","or"],
     ["אַחֶרֶת","otherwise"],
     ["כַּטּוֹב","as is good"],
-    ["בְּעֵינֵי","or decided"],
+    ["בְּעֵינֵי","in the eyes of"],
     ["הַיּוֹעֲצִים","by the counselors"],
     ["וְהַפָּקִיד׃","and bishop"]
   ]},
