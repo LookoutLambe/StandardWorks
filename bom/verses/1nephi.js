@@ -277,7 +277,7 @@ var ch1Verses = [
     ["רַב","great"],
     ["מֵאוֹר","than light of"],
     ["הַשֶּׁמֶשׁ","the sun"],
-    ["בַּצָּהֳרָיִם","at noonday"],
+    ["בַּצׇּהֳרָיִם","at noonday"],
     ["׃",""]
   ]},
   { num:"י", words:[
@@ -7302,7 +7302,7 @@ var ch16Verses = [
     ["בַּלַּיְלָה","by night"],
     ["וַיְצַוֵּהוּ","and commanded him"],
     ["לִנְסֹעַ","that he should take his journey"],
-    ["מִמָּחֳרָת","on the morrow"],
+    ["מִמׇּחֳרָת","on the morrow"],
     ["לַמִּדְבָּר","into the wilderness"],
     ["׃",""]
   ]},
@@ -7474,7 +7474,7 @@ var ch16Verses = [
     ["אַחַי","my brethren"],
     ["עָלַי","with me"],
     ["מִפְּנֵי","because of"],
-    ["אָבְדַן","the loss of"],
+    ["אׇבְדַן","the loss of"],
     ["קַשְׁתִּי","my bow"],
     ["כִּי־לֹא","for"],
     ["הִשַּׂגְנוּ","we did obtain no"],
@@ -7502,7 +7502,7 @@ var ch16Verses = [
     ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["עִם־אַחַי","with my brethren"],
     ["מִפְּנֵי","because of"],
-    ["אָבְדַן","the loss of"],
+    ["אׇבְדַן","the loss of"],
     ["קַשְׁתִּי","my bow"],
     ["וְאָבַד","and had lost"],
     ["כֹּחַ","the springs of"],
@@ -7714,7 +7714,7 @@ var ch16Verses = [
     ["נָחוֹם","Nahom"],
     ["׃",""]
   ]},
-  { num: "לה", words: [["וַיְהִי","and"], ["הִתְאַבֵּל","mourn"], ["הִתְאַבַּלְנָה","did mourn"], ["בְנוֹת","the daughters of"], ["יִשְׁמָעֵאל","Ishmael"], ["עַל־אָבְדַן","because of the loss of"], ["אֲבִיהֶן","their father"], ["וּמִפְּנֵי","and because of"], ["עׇנְיָן","their afflictions"], ["בַּמִּדְבָּר","in the wilderness"], ["וַתִּתְלוֹנֵנָּה","and they did murmur"], ["עַל־אָבִי","against my father"], ["כִּי","because"], ["הוֹצִיאָן","he had brought them"], ["מֵאֶרֶץ","out of the land of"], ["יְרוּשָׁלַיִם","Jerusalem"], ["לֵאמֹר","saying"], ["אָבִינוּ","our father"], ["מֵת","is dead"], ["וְגַם","yea"], ["נַדְנוּ","and we have wandered"], ["הַרְבֵּה","much"], ["בַּמִּדְבָּר","in the wilderness"], ["וְסָבַלְנוּ","and we have suffered"], ["הַרְבֵּה","much"], ["עֳנִי־רָעָב","affliction, hunger"], ["וְצָמָא","thirst"], ["וַעֲיֵפוּת","and fatigue"], ["וְאַחֲרֵי","and after"], ["כׇל־הַסֵּבֶל","all the sufferings"], ["הַזֶּה","this"], ["נֹאבַד","we must perish"], ["בַּמִּדְבָּר","in the wilderness"], ["בָּרָעָב","with hunger"], ["׃",""]]},
+  { num: "לה", words: [["וַיְהִי","and"], ["הִתְאַבֵּל","mourn"], ["הִתְאַבַּלְנָה","did mourn"], ["בְנוֹת","the daughters of"], ["יִשְׁמָעֵאל","Ishmael"], ["עַל־אׇבְדַן","because of the loss of"], ["אֲבִיהֶן","their father"], ["וּמִפְּנֵי","and because of"], ["עׇנְיָן","their afflictions"], ["בַּמִּדְבָּר","in the wilderness"], ["וַתִּתְלוֹנֵנָּה","and they did murmur"], ["עַל־אָבִי","against my father"], ["כִּי","because"], ["הוֹצִיאָן","he had brought them"], ["מֵאֶרֶץ","out of the land of"], ["יְרוּשָׁלַיִם","Jerusalem"], ["לֵאמֹר","saying"], ["אָבִינוּ","our father"], ["מֵת","is dead"], ["וְגַם","yea"], ["נַדְנוּ","and we have wandered"], ["הַרְבֵּה","much"], ["בַּמִּדְבָּר","in the wilderness"], ["וְסָבַלְנוּ","and we have suffered"], ["הַרְבֵּה","much"], ["עֳנִי־רָעָב","affliction, hunger"], ["וְצָמָא","thirst"], ["וַעֲיֵפוּת","and fatigue"], ["וְאַחֲרֵי","and after"], ["כׇל־הַסֵּבֶל","all the sufferings"], ["הַזֶּה","this"], ["נֹאבַד","we must perish"], ["בַּמִּדְבָּר","in the wilderness"], ["בָּרָעָב","with hunger"], ["׃",""]]},
   { num: "לו", words: [["וְכֵן","and thus"], ["הִתְלוֹנְנוּ","they did murmur"], ["עַל־אָבִי","against my father"], ["וְגַם","and also"], ["עָלַי","against me"], ["וַתַּחְפֹּצְנָה","and they were desirous"], ["לָשׁוּב","to return again"], ["לִירוּשָׁלַיִם","to Jerusalem"], ["הָעִירָה","to the city"], ["׃",""]]},
   { num:"לז", words:[
     ["וַיֹּאמֶר","and said"],
@@ -8951,7 +8951,7 @@ var ch18Verses = [
   ]},
   { num:"ו", words:[
     ["וַיְהִי","and it came to pass"],
-    ["מִמָּחֳרָת","that on the morrow"],
+    ["מִמׇּחֳרָת","that on the morrow"],
     ["אַחֲרֵי","after"],
     ["הֲכִינוֹתֵנוּ","we had prepared"],
     ["אֶת־כׇּל־הַדְּבָרִים","all the things"],
@@ -10505,7 +10505,7 @@ var ch21Verses = [
   ]},
   { num:"יט", words:[
     ["כִּי","for"],
-    ["חָרְבֹתַיִךְ","thy waste places"],
+    ["חׇרְבֹתַיִךְ","thy waste places"],
     ["וְשֹׁמְמֹתַיִךְ","and thy desolate places"],
     ["וְאֶרֶץ","and the land of"],
     ["הֲרִיסֻתֵךְ","thy destruction"],

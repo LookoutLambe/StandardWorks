@@ -2742,7 +2742,7 @@ var dc59_ch1Verses = [
     ["וְתַקְרִיב","and offer up"],
     ["קָרְבְּנוֹתֶיךָ","your sacraments"],
     ["בְּיוֹם","upon the day"],
-    ["קָדְשִׁי׃","of my holiness"]
+    ["קׇדְשִׁי׃","of my holiness"]
   ]},
   { num: "י", words: [
     ["כִּי","for"],

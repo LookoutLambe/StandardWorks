@@ -964,7 +964,7 @@ var frontJST = [
     ["עַד־כִּי","until that"],
     ["הֵאִיר","was illuminated"],
     ["הַחֶדֶר","the room"],
-    ["מִצָּהֳרַיִם","than noonday"],
+    ["מִצׇּהֳרַיִם","than noonday"],
     ["וְהִנֵּה","and behold"],
     ["אִישׁ","man/each"],
     ["עֹמֵד","standing"],

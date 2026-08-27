@@ -1226,7 +1226,7 @@ var dc95_ch1Verses = [
     ["הֹלְכִים","are walking"],
     ["הֵם","they"],
     ["בַּחֹשֶׁךְ","in darkness"],
-    ["בַּצָּהֳרָיִם׃","at noon-day."]
+    ["בַּצׇּהֳרָיִם׃","at noon-day."]
   ]},
   { num: "ז", words: [
     ["וּמִפְּנֵי","And for cause"],
@@ -2898,7 +2898,7 @@ var dc99_ch1Verses = [
     ["דְּבָרִי","my word"],
     ["בְּהוֹכָחַת","in the demonstration of"],
     ["רוּחַ","the Spirit"],
-    ["קָדְשִׁי׃","of my Holy."]
+    ["קׇדְשִׁי׃","of my Holy."]
   ]},
   { num: "ג", words: [
     ["וְהַמְקַבֵּל","And who receives"],

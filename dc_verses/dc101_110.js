@@ -227,7 +227,7 @@ var dc101_ch1Verses = [
     ["שִׂמְחַת","joy of"],
     ["עוֹלָם","everlasting,"],
     ["לִבְנוֹת","to build up"],
-    ["חָרְבוֹת","the waste places of"],
+    ["חׇרְבוֹת","the waste places of"],
     ["צִיּוֹן׃","Zion—"]
   ]},
   { num: "יט", words: [
@@ -1063,7 +1063,7 @@ var dc101_ch1Verses = [
     ["הָאֵלֶּה׃","these."]
   ]},
   { num: "עד", words: [["וְהַכְּנֵסִיּוֹת","And the churches"], ["בְּאַרְצוֹת","in the countries of"], ["הַמִּזְרָח","the east"], ["כַּאֲשֶׁר","when"], ["יִבָּנוּ","they are built up,"], ["אִם","if"], ["יִשְׁמְעוּ","they will hearken"], ["לָעֵצָה","unto counsel"], ["הַזֹּאת","this"], ["יוּכְלוּ","they may"], ["לִקְנוֹת","buy"], ["אֲרָצוֹת","lands"], ["וּלְהֵאָסֵף","and gather together"], ["עֲלֵיהֶן","upon them;"], ["וּבַדֶּרֶךְ","and in way"], ["הַזֹּאת","this"], ["יְכוֹנְנוּ","they may establish"], ["צִיּוֹן׃","Zion."]]},
-  { num: "עה", words: [["יֵשׁ","There is"], ["כְּבָר","even now"], ["עַתָּה","already"], ["בְּאוֹצָר","in store"], ["דֵּי","sufficient,"], ["אָכֵן","yea,"], ["שֶׁפַע","even an abundance,"], ["לִגְאֹל","to redeem"], ["צִיּוֹן","Zion,"], ["וּלְהָקִים","and establish"], ["חָרְבוֹתֶיהָ","her waste places,"], ["לְבַל","no more"], ["יֻפְּלוּ","to be thrown down,"], ["עוֹד","again"], ["לוּ","were"], ["רָצוּ","willing"], ["הַכְּנֵסִיּוֹת","the churches"], ["הַנִּקְרָאוֹת","who call themselves"], ["עַל","after"], ["שְׁמִי","my name,"], ["לִשְׁמֹעַ","to hearken"], ["בְּקוֹלִי׃","to my voice."]]},
+  { num: "עה", words: [["יֵשׁ","There is"], ["כְּבָר","even now"], ["עַתָּה","already"], ["בְּאוֹצָר","in store"], ["דֵּי","sufficient,"], ["אָכֵן","yea,"], ["שֶׁפַע","even an abundance,"], ["לִגְאֹל","to redeem"], ["צִיּוֹן","Zion,"], ["וּלְהָקִים","and establish"], ["חׇרְבוֹתֶיהָ","her waste places,"], ["לְבַל","no more"], ["יֻפְּלוּ","to be thrown down,"], ["עוֹד","again"], ["לוּ","were"], ["רָצוּ","willing"], ["הַכְּנֵסִיּוֹת","the churches"], ["הַנִּקְרָאוֹת","who call themselves"], ["עַל","after"], ["שְׁמִי","my name,"], ["לִשְׁמֹעַ","to hearken"], ["בְּקוֹלִי׃","to my voice."]]},
   { num: "עו", words: [
     ["וְעוֹד","And again"],
     ["אֲנִי","I"],
@@ -1352,7 +1352,7 @@ var dc101_ch1Verses = [
     ["מַעֲשֵׂה","act"],
     ["זָר","my strange,"],
     ["וּלְבַצֵּעַ","and perform"],
-    ["פָּעֳלִי","my work,"],
+    ["פׇּעֳלִי","my work,"],
     ["פֹּעַל","work"],
     ["זָר","my strange,"],
     ["לְמַעַן","that"],
@@ -2165,7 +2165,7 @@ var dc103_ch1Verses = [
     ["אֶל־אַרְצוֹת","to the lands of"],
     ["נַחֲלוֹתֵיהֶם","their inheritances,"],
     ["וְיִבְנוּ","and shall build up"],
-    ["חָרְבוֹת","the waste places of"],
+    ["חׇרְבוֹת","the waste places of"],
     ["צִיּוֹן׃","Zion."]
   ]},
   { num: "יב", words: [

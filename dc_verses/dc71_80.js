@@ -599,7 +599,7 @@ var dc75_ch1Verses = [
     ["נֶאֱמָנִים","faithful"],
     ["תִּהְיוּ","you shall be"],
     ["עֲמוּסִים","laden"],
-    ["בָּעֳמָרִים","with sheaves"],
+    ["בׇּעֳמָרִים","with sheaves"],
     ["רַבִּים","many"],
     ["וּמְעֻטָּרִים","and crowned"],
     ["בְּכָבוֹד","with honor"],
@@ -3372,7 +3372,7 @@ var dc79_ch1Verses = [
     ["נֶאֱמָן","faithful"],
     ["אָשׁוּב","I will again"],
     ["אֲעַטְּרֵהוּ","crown him"],
-    ["בָּעֳמָרִים׃","with sheaves."]
+    ["בׇּעֳמָרִים׃","with sheaves."]
   ]},
   { num: "ד", words: [
     ["לָכֵן","Wherefore"],

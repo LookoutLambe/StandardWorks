@@ -263,7 +263,7 @@ var dc109_ch1Verses = [
     ["הוּא","it"],
     ["בֵּיתֶךָ","is your house,"],
     ["מְקוֹם","a place"],
-    ["קָדְשֶׁךָ׃","of your holiness."]
+    ["קׇדְשֶׁךָ׃","of your holiness."]
   ]},
   { num: "יד", words: [
     ["וְתֵן","And do you grant,"],
@@ -1358,7 +1358,7 @@ var dc109_ch1Verses = [
     ["מִן","from"],
     ["הַשָּׁמַיִם","heaven,"],
     ["מִשְׁכַּן","habitation"],
-    ["קָדְשֶׁךָ","your holy"],
+    ["קׇדְשֶׁךָ","your holy"],
     ["מֵאֲשֶׁר","where"],
     ["אַתָּה","you"],
     ["יוֹשֵׁב","sit enthroned,"],

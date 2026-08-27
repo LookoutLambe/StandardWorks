@@ -910,7 +910,7 @@ var dc29_ch1Verses = [
     ["הֵסִיר","turned he away"],
     ["מֵעָלַי","from me"],
     ["בִּגְלַל","because of"],
-    ["בָּחֳרָם׃","their agency"]
+    ["בׇּחֳרָם׃","their agency"]
   ]},
   { num: "לז", words: [
     ["וַיֻּשְׁלְכוּ","and they were thrust down"],

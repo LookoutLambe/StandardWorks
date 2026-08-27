@@ -222,7 +222,7 @@ var job_ch9Verses = [
   { num:"ה", words:[["הַמַּעְתִּיק","the one who removes"],["הָרִים","mountains"],["וְלֹא","and not"],["יָדָעוּ","they know"],["אֲשֶׁר","which"],["הֲפָכָם","he overturns them"],["בְּאַפּוֹ","in His anger"],["׃",""]] },
   { num:"ו", words:[["הַמַּרְגִּיז","the one who shakes"],["אֶרֶץ","the land of"],["מִמְּקוֹמָהּ","out of her place"],["וְעַמּוּדֶיהָ","and its pillars"],["יִתְפַּלָּצוּן","they tremble"],["׃",""]] },
   { num:"ז", words:[["הָאֹמֵר","who commands"],["לַחֶרֶס","to the sun"],["וְלֹא","and not"],["יִזְרָח","it shines"],["וּבְעַד","and for"],["כּוֹכָבִים","stars"],["יַחְתֹּם","seals up"],["׃",""]] },
-  { num:"ח", words:[["נֹטֶה","who spreads out"],["שָׁמַיִם","the heavens"],["לְבַדּוֹ","alone"],["וְדוֹרֵךְ","and one who treads"],["עַל־בָּמֳתֵי","upon the waves of"],["יָם","the sea"],["׃",""]] },
+  { num:"ח", words:[["נֹטֶה","who spreads out"],["שָׁמַיִם","the heavens"],["לְבַדּוֹ","alone"],["וְדוֹרֵךְ","and one who treads"],["עַל־בׇּמֳתֵי","upon the waves of"],["יָם","the sea"],["׃",""]] },
   { num:"ט", words:[["עֹשֶׂה־עָשׁ","who makes Arcturus"],["כְּסִיל","Orion"],["וְכִימָה","and Pleiades"],["וְחַדְרֵי","and the chambers of"],["תֵמָן","the south"],["׃",""]] },
   { num:"י", words:[["עֹשֶׂה","do"],["גְדֹלוֹת","great things"],["עַד־אֵין","until there is no"],["חֵקֶר","finding out"],["וְנִפְלָאוֹת","and wonders"],["עַד־אֵין","until there is no"],["מִסְפָּר","number"],["׃",""]] },
   { num:"יא", words:[["הֵן","behold"],["יַעֲבֹר","he goes by"],["עָלַי","upon me"],["וְלֹא","and not"],["אֶרְאֶה","I shall see"],["וְיַחֲלֹף","he passes on also"],["וְלֹא־אָבִין","and not I will perceive"],["לוֹ","to him"],["׃",""]] },
