@@ -1079,10 +1079,38 @@
     panel.querySelector('.xref-panel-word').innerHTML = displayRoot +
       (rootTranslit ? ' <span style="font-weight:400;font-size:0.75em;opacity:0.7;">' + rootTranslit + '</span>' : '') +
       (engMeaning ? ' <span style="font-weight:400;font-size:0.8em;color:var(--ink-light,#888);">\u2014 ' + engMeaning + '</span>' : '');
-    panel.querySelector('.xref-panel-category').textContent = 'Cross-References (' + entries.length + ' markers)';
+    panel.querySelector('.xref-panel-category').textContent = 'Study footnotes (' + entries.length + ' markers)';
 
     var refsContainer = document.getElementById('xref-panel-refs');
     refsContainer.innerHTML = '';
+
+    // The concordance's own occurrences come FIRST. This is the study surface:
+    // חלם has 59 chapters here — Jacob at Gen 28, Joseph across Gen 37-42,
+    // Daniel 1-7 — while the curated footnote set below has one. Leading with
+    // the footnotes made the root look like it barely occurs in scripture.
+    (function() {
+      var conc = window._rootConcordance;
+      if (!conc || !window.RootScorecard || !window.RootScorecard.openPanel) return;
+      var ci = conc.keys.indexOf(root);
+      if (ci < 0) return;
+      var e = conc.roots[ci], total = 0, verses = 0;
+      (e.c || []).forEach(function(n) { total += n; });
+      (e.vc || []).forEach(function(n) { verses += n; });
+      if (!total) return;
+      var card = document.createElement('div');
+      card.className = 'xref-ref-card';
+      card.style.cssText = 'cursor:pointer;border:1px solid rgba(212,175,55,0.55);' +
+        'background:rgba(212,175,55,0.10);border-radius:10px;padding:11px 13px;margin-bottom:12px;';
+      card.innerHTML = '<div style="font-weight:700;color:var(--sw-gold,#d4af37);">' +
+        'All ' + total + ' occurrences in ' + verses + ' verses \u2192</div>' +
+        '<div style="opacity:0.75;font-size:0.85em;margin-top:2px;">' +
+        'every place this root appears across the scriptures</div>';
+      card.addEventListener('click', function(ev) {
+        ev.stopPropagation();
+        window.RootScorecard.openPanel(ci);
+      });
+      refsContainer.appendChild(card);
+    })();
 
     // Aggregate all refs across markers (don’t drop TG/BD/etc)
     var seenScripture = {};
