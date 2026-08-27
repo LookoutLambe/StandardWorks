@@ -856,7 +856,7 @@ var dc93_ch1Verses = [
     ["וְגַם","and also"],
     ["יַשְׁמִיעַ","proclaim"],
     ["שְׁנַת","the year of"],
-    ["רָצוֹן","the LORD\'s favor"],
+    ["רָצוֹן","favor"],
     ["לַיהוָה","of the Lord,"],
     ["וּבְשׂוֹרַת","and the gospel of"],
     ["הַיְשׁוּעָה","salvation,"],
