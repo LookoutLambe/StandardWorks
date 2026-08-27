@@ -483,15 +483,7 @@ var dc112_ch1Verses = [
     ["חִירָם","Hyrum,"],
     ["לָבוֹא׃","[come]"]
   ]},
-  { num: "יח", words: [
-    ["כִּי","For"],
-    ["עֲלֵיהֶם","on them"],
-    ["הֵטַלְתִּי","have I laid"],
-    ["מַשָּׂא","the burden of"],
-    ["כׇּל־הַקְּהִלּוֹת","all the churches"],
-    ["לַמִּצְעָר׃","for a little season."],
-    
-  ]},
+  { num: "יח", words: [["כִּי","For"], ["עֲלֵיהֶם","on them"], ["הֵטַלְתִּי","have I laid"], ["מַשָּׂא","the burden of"], ["כׇּל־הַכְּנֵסִיּוֹת","all the churches"], ["לַמִּצְעָר׃","for a little season."]]},
   { num: "יט", words: [
     ["לָכֵן","Wherefore,"],
     ["בְּכׇל־אֲשֶׁר","whithersoever"],
@@ -640,19 +632,7 @@ var dc112_ch1Verses = [
     ["נְאֻם","saith"],
     ["יְהוָה׃","the Lord."]
   ]},
-  { num: "כז", words: [
-    ["לָכֵן","therefore"],
-    ["רְאוּ","see to it"],
-    ["פֶּן","lest"],
-    ["תַּלְאוּ","ye weary"],
-    ["אֶת־נַפְשְׁכֶם","yourselves"],
-    ["בְּעִנְיְנֵי","trouble concerning the affairs of"],
-    ["קְהָלִי","my church"],
-    ["בַּמָּקוֹם","in ... place,"],
-    ["הַזֶּה","this"],
-    ["נְאֻם","saith"],
-    ["יְהוָה׃","the Lord."]
-  ]},
+  { num: "כז", words: [["לָכֵן","therefore"], ["רְאוּ","see to it"], ["פֶּן","lest"], ["תַּלְאוּ","ye weary"], ["אֶת־נַפְשְׁכֶם","yourselves"], ["בְּעִנְיְנֵי","trouble concerning the affairs of"], ["כְּנֵסִיָּתִי","my church"], ["בַּמָּקוֹם","in ... place,"], ["הַזֶּה","this"], ["נְאֻם","saith"], ["יְהוָה׃","the Lord."]]},
   { num: "כח", words: [
     ["כִּי","But"],
     ["אִם","(rather)"],
@@ -1095,8 +1075,8 @@ var dc115_ch1Verses = [
     ["פַּרְטְרִיג׳","Partridge,"],
     ["וְיֹעֲצָיו׃","and his counselors;"]
   ]},
-  { num: "ג", words: [["וְגַם","And also"], ["אֶל־עֲבָדַי","unto my servants"], ["הַנֶּאֱמָנִים","faithful"], ["אֲשֶׁר","who"], ["בְּסַנְהֶדְרִין","are of the high council of"], ["עֵדָתִי","my church"], ["בְּצִיּוֹן","in Zion,"], ["כִּי","for"], ["כֹּה","thus"], ["יִקָּרֵא","it shall be called,"], ["וְאֶל־כׇּל־הַזְּקֵנִים","and unto all the elders"], ["וְעַם","and people of"], ["כְּנֵסִיַּת","the Church of"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","the Messiah"], ["שֶׁל","of"], ["קְדוֹשֵׁי","the Saints of"], ["אַחֲרִית","the latter part of"], ["הַיָּמִים","the days"], ["הַנְּפוֹצִים","scattered"], ["בְּכׇל־הָאָרֶץ׃","abroad in all the world;"]]},
-  { num: "ד", words: [["כִּי","For"], ["כֹּה","thus"], ["תִּקָּרֵא","shall ... be called"], ["עֵדָתִי","my church"], ["בְּאַחֲרִית","in the last"], ["הַיָּמִים","days,"], ["אַף","even"], ["כְּנֵסִיַּת","the Church of"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","the Messiah"], ["שֶׁל","of"], ["קְדוֹשֵׁי","the Saints of"], ["אַחֲרִית","the latter part of"], ["הַיָּמִים׃","the days"]]},
+  { num: "ג", words: [["וְגַם","And also"], ["אֶל־עֲבָדַי","unto my servants"], ["הַנֶּאֱמָנִים","faithful"], ["אֲשֶׁר","who"], ["בְּסַנְהֶדְרִין","are of the high council of"], ["כְּנֵסִיָּתִי","my church"], ["בְּצִיּוֹן","in Zion,"], ["כִּי","for"], ["כֹּה","thus"], ["יִקָּרֵא","it shall be called,"], ["וְאֶל־כׇּל־הַזְּקֵנִים","and unto all the elders"], ["וְעַם","and people of"], ["כְּנֵסִיַּת","the Church of"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","the Messiah"], ["שֶׁל","of"], ["קְדוֹשֵׁי","the Saints of"], ["אַחֲרִית","the latter part of"], ["הַיָּמִים","the days"], ["הַנְּפוֹצִים","scattered"], ["בְּכׇל־הָאָרֶץ׃","abroad in all the world;"]]},
+  { num: "ד", words: [["כִּי","For"], ["כֹּה","thus"], ["תִּקָּרֵא","shall ... be called"], ["כְּנֵסִיָּתִי","my church"], ["בְּאַחֲרִית","in the last"], ["הַיָּמִים","days,"], ["אַף","even"], ["כְּנֵסִיַּת","the Church of"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","the Messiah"], ["שֶׁל","of"], ["קְדוֹשֵׁי","the Saints of"], ["אַחֲרִית","the latter part of"], ["הַיָּמִים׃","the days"]]},
   { num: "ה", words: [
     ["אָמֵן","Verily"],
     ["אֲנִי","I"],
@@ -1590,28 +1570,7 @@ var dc117_ch1Verses = [
     ["נְאֻם","saith"],
     ["יְהוָה׃","the Lord."]
   ]},
-  { num: "יג", words: [
-    ["לָכֵן","Therefore,"],
-    ["יִלָּחֵם","let him contend"],
-    ["בְּחָזְקָה","earnestly"],
-    ["לִפְדוּת","for the redemption of"],
-    ["נְשִׂיאוּת","the ... Presidency of"],
-    ["עֵדָתִי","my Church,"],
-    ["הָרִאשׁוֹנָה","First"],
-    
-    ["נְאֻם","saith"],
-    ["יְהוָה","the Lord;"],
-    ["וּבְנָפְלוֹ","and when he falls"],
-    ["יָקוּם","he shall rise"],
-    ["שֵׁנִית","again,"],
-    ["כִּי","for"],
-    ["קָרְבָּנוֹ","his sacrifice"],
-    ["קָדוֹשׁ","shall be more sacred"],
-    ["לִי","unto me"],
-    ["מִתְּבוּאָתוֹ","than his increase,"],
-    ["נְאֻם","saith"],
-    ["יְהוָה׃","the Lord."]
-  ]},
+  { num: "יג", words: [["לָכֵן","Therefore,"], ["יִלָּחֵם","let him contend"], ["בְּחָזְקָה","earnestly"], ["לִפְדוּת","for the redemption of"], ["נְשִׂיאוּת","the ... Presidency of"], ["כְּנֵסִיָּתִי","my Church,"], ["הָרִאשׁוֹנָה","First"], ["נְאֻם","saith"], ["יְהוָה","the Lord;"], ["וּבְנָפְלוֹ","and when he falls"], ["יָקוּם","he shall rise"], ["שֵׁנִית","again,"], ["כִּי","for"], ["קָרְבָּנוֹ","his sacrifice"], ["קָדוֹשׁ","shall be more sacred"], ["לִי","unto me"], ["מִתְּבוּאָתוֹ","than his increase,"], ["נְאֻם","saith"], ["יְהוָה׃","the Lord."]]},
   { num: "יד", words: [
     ["לָכֵן","Therefore,"],
     ["יַעַל","let him come up"],
@@ -1797,32 +1756,8 @@ renderVerseSet(dc118_ch1Verses, 'dc118-ch1-verses');
 
 
 var dc119_ch1Verses = [
-  { num: "א", words: [
-    ["אָמֵן","Verily,"],
-    ["כֹּה","thus"],
-    ["אָמַר","saith"],
-    ["יְהוָה","the Lord,"],
-    ["אֲנִי","I"],
-    ["דוֹרֵשׁ","require"],
-    ["אֶת־כׇּל־עֹדֶף","all ... surplus"],
-    ["נִכְסֵיהֶם","their ... property"],
-    ["לָתֵת","to be put"],
-    ["בְּיַד","into the hands of"],
-    ["פָּקִיד","the bishop of"],
-    ["עֵדָתִי","my church"],
-    ["בְּצִיּוֹן׃","in Zion,"]
-  ]},
-  { num: "ב", words: [
-    ["לִבְנוֹת","For the building of"],
-    ["אֶת־בֵּיתִי","mine house,"],
-    ["וּלְיַסֵּד","and for the laying of"],
-    ["יְסוֹד","the foundation of"],
-    ["צִיּוֹן","Zion"],
-    ["וְלַכְּהֻנָּה","and for the priesthood,"],
-    ["וּלְחוֹבוֹת","and for the debts of"],
-    ["נְשִׂיאוּת","the Presidency of"],
-    ["עֵדָתִי׃","my Church."]
-  ]},
+  { num: "א", words: [["אָמֵן","Verily,"], ["כֹּה","thus"], ["אָמַר","saith"], ["יְהוָה","the Lord,"], ["אֲנִי","I"], ["דוֹרֵשׁ","require"], ["אֶת־כׇּל־עֹדֶף","all ... surplus"], ["נִכְסֵיהֶם","their ... property"], ["לָתֵת","to be put"], ["בְּיַד","into the hands of"], ["פָּקִיד","the bishop of"], ["כְּנֵסִיָּתִי","my church"], ["בְּצִיּוֹן׃","in Zion,"]]},
+  { num: "ב", words: [["לִבְנוֹת","For the building of"], ["אֶת־בֵּיתִי","mine house,"], ["וּלְיַסֵּד","and for the laying of"], ["יְסוֹד","the foundation of"], ["צִיּוֹן","Zion"], ["וְלַכְּהֻנָּה","and for the priesthood,"], ["וּלְחוֹבוֹת","and for the debts of"], ["נְשִׂיאוּת","the Presidency of"], ["כְּנֵסִיָּתִי׃","my Church."]]},
   { num: "ג", words: [
     ["וְזֹאת","And this"],
     ["תִּהְיֶה","shall be"],
@@ -1924,33 +1859,7 @@ renderVerseSet(dc119_ch1Verses, 'dc119-ch1-verses');
 
 
 var dc120_ch1Verses = [
-  { num: "א", words: [
-    ["אָמֵן","Verily,"],
-    ["כֹּה","thus"],
-    ["אָמַר","saith"],
-    ["יְהוָה","the Lord,"],
-    ["עַתָּה","now"],
-    ["בָּאָה","is ... come,"],
-    ["הָעֵת","the time"],
-    ["לְחַלְּקוֹ","that it shall be disposed of"],
-    ["עַל־יְדֵי","by"],
-    ["מוֹעֵצָה","a council,"],
-    ["אֲשֶׁר־בָּהּ","composed of"],
-    ["מִנְּשִׂיאוּת","the ... Presidency of"],
-    ["עֵדָתִי","my Church,"],
-    ["הָרִאשׁוֹנָה","First"],
-    ["וּמֵהַפָּקִיד","and of the bishop"],
-    ["וּמוֹעַצְתּוֹ","and his council,"],
-    ["וּמֵהַסַּנְהֶדְרִין","and by my high council;"],
-    
-    ["וּבְקוֹלִי","and by mine own voice"],
-    ["אֲלֵיהֶם","unto them,"],
-    ["נְאֻם","saith"],
-    ["יְהוָה","the Lord."],
-    ["כֵּן","Even"],
-    ["הוּא","so."],
-    ["אָמֵן׃","Amen."]
-  ]}
+  { num: "א", words: [["אָמֵן","Verily,"], ["כֹּה","thus"], ["אָמַר","saith"], ["יְהוָה","the Lord,"], ["עַתָּה","now"], ["בָּאָה","is ... come,"], ["הָעֵת","the time"], ["לְחַלְּקוֹ","that it shall be disposed of"], ["עַל־יְדֵי","by"], ["מוֹעֵצָה","a council,"], ["אֲשֶׁר־בָּהּ","composed of"], ["מִנְּשִׂיאוּת","the ... Presidency of"], ["כְּנֵסִיָּתִי","my Church,"], ["הָרִאשׁוֹנָה","First"], ["וּמֵהַפָּקִיד","and of the bishop"], ["וּמוֹעַצְתּוֹ","and his council,"], ["וּמֵהַסַּנְהֶדְרִין","and by my high council;"], ["וּבְקוֹלִי","and by mine own voice"], ["אֲלֵיהֶם","unto them,"], ["נְאֻם","saith"], ["יְהוָה","the Lord."], ["כֵּן","Even"], ["הוּא","so."], ["אָמֵן׃","Amen."]]}
 ];
 renderVerseSet(dc120_ch1Verses, 'dc120-ch1-verses');
 

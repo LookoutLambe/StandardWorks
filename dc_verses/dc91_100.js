@@ -438,16 +438,7 @@ var dc93_ch1Verses = [
     ["וַאֲנִי","and ... am"],
     ["הַבְּכוֹר׃","the Firstborn;"]
   ]},
-  { num: "כב", words: [
-    ["וְכׇל־הַנּוֹלָדִים","And all those who are begotten"],
-    ["בְּיָדִי","through me"],
-    ["שֻׁתָּפִים","are partakers of"],
-    ["בְּאוֹתוֹ","the same"],
-    ["כָּבוֹד","glory,"],
-    ["וְהֵם","and are"],
-    ["עֲדַת","the church of"],
-    ["הַבְּכוֹר׃","the Firstborn."]
-  ]},
+  { num: "כב", words: [["וְכׇל־הַנּוֹלָדִים","And all those who are begotten"], ["בְּיָדִי","through me"], ["שֻׁתָּפִים","are partakers of"], ["בְּאוֹתוֹ","the same"], ["כָּבוֹד","glory,"], ["וְהֵם","and are"], ["כְּנֵסִיַּת","the church of"], ["הַבְּכוֹר׃","the Firstborn."]]},
   { num: "כג", words: [
     ["גַּם","also"],
     ["אַתֶּם","Ye"],
@@ -849,34 +840,7 @@ var dc93_ch1Verses = [
     ["אֶתְכֶם","you"],
     ["מִמְּקוֹמְכֶם׃","out of your place."]
   ]},
-  { num: "נ", words: [
-    ["גַּם","also,"],
-    ["עַבְדִּי","My servant"],
-    ["נְיוּאֶל","Newel"],
-    ["ק.","K."],
-    ["וִיטְנִי","Whitney"],
-    ["פָּקִיד","a bishop"],
-    ["עֲדָתִי","of my church,"],
-    ["הִוָּסֵר","hath need"],
-    ["יִוָּסֵר","to be chastened,"],
-    ["וִיתַקֵּן","and let him set in order"],
-    ["אֶת־בֵּיתוֹ","his family,"],
-    ["וְלִרְאוֹת","and see"],
-    ["כִּי","that"],
-    ["בְנֵי","[the members of]"],
-    ["בֵיתוֹ","his house"],
-    ["יִהְיוּ","are"],
-    ["שֹׁקְדִים","diligent"],
-    ["יוֹתֵר","more"],
-    ["וְשָׂמִים","and concerned (setting)"],
-    ["לֵב","(heart)"],
-    ["בַּבַּיִת","at home,"],
-    ["וְיִתְפַּלְּלוּ","and pray"],
-    ["תָמִיד","always,"],
-    ["אוֹ","or"],
-    ["יוּסְרוּ","they shall be removed"],
-    ["מִמְּקוֹמָם׃","out of their place."]
-  ]},
+  { num: "נ", words: [["גַּם","also,"], ["עַבְדִּי","My servant"], ["נְיוּאֶל","Newel"], ["ק.","K."], ["וִיטְנִי","Whitney"], ["פָּקִיד","a bishop"], ["כְּנֵסִיָּתִי","of my church,"], ["הִוָּסֵר","hath need"], ["יִוָּסֵר","to be chastened,"], ["וִיתַקֵּן","and let him set in order"], ["אֶת־בֵּיתוֹ","his family,"], ["וְלִרְאוֹת","and see"], ["כִּי","that"], ["בְנֵי","[the members of]"], ["בֵיתוֹ","his house"], ["יִהְיוּ","are"], ["שֹׁקְדִים","diligent"], ["יוֹתֵר","more"], ["וְשָׂמִים","and concerned (setting)"], ["לֵב","(heart)"], ["בַּבַּיִת","at home,"], ["וְיִתְפַּלְּלוּ","and pray"], ["תָמִיד","always,"], ["אוֹ","or"], ["יוּסְרוּ","they shall be removed"], ["מִמְּקוֹמָם׃","out of their place."]]},
   { num: "נא", words: [
     ["וְעַתָּה","Now,"],
     ["אֲנִי","I"],
@@ -971,26 +935,7 @@ var dc94_ch1Verses = [
     ["נָתַתִּי","I have given"],
     ["לָכֶם׃","unto you."]
   ]},
-  { num: "ג", words: [
-    ["וְהַמִּגְרָשׁ","And let the ... lot"],
-    ["הָרִאשׁוֹן","first"],
-    ["בַּדָּרוֹם","on the south"],
-    ["יֻקְדַּשׁ","be consecrated"],
-    ["לִי","unto me"],
-    ["לִבְנוֹת","for the building of"],
-    ["בַּיִת","a house"],
-    ["לַנְּשִׂיאוּת","for the presidency,"],
-    ["לַעֲבוֹדַת","for the work of"],
-    ["הַנְּשִׂיאוּת","the presidency,"],
-    ["לְקַבֵּל","in obtaining"],
-    ["חֲזוֹנוֹת","revelations;"],
-    ["וְלַעֲבוֹדַת","and for the work of"],
-    ["עֲבוֹדַת","the ministry of"],
-    ["הַנְּשִׂיאוּת","the presidency,"],
-    ["בְּכׇל־עִנְיְנֵי","in all things pertaining to"],
-    ["הָעֵדָה","the church"],
-    ["וְהַמַּלְכוּת׃","and kingdom."]
-  ]},
+  { num: "ג", words: [["וְהַמִּגְרָשׁ","And let the ... lot"], ["הָרִאשׁוֹן","first"], ["בַּדָּרוֹם","on the south"], ["יֻקְדַּשׁ","be consecrated"], ["לִי","unto me"], ["לִבְנוֹת","for the building of"], ["בַּיִת","a house"], ["לַנְּשִׂיאוּת","for the presidency,"], ["לַעֲבוֹדַת","for the work of"], ["הַנְּשִׂיאוּת","the presidency,"], ["לְקַבֵּל","in obtaining"], ["חֲזוֹנוֹת","revelations;"], ["וְלַעֲבוֹדַת","and for the work of"], ["עֲבוֹדַת","the ministry of"], ["הַנְּשִׂיאוּת","the presidency,"], ["בְּכׇל־עִנְיְנֵי","in all things pertaining to"], ["הַכְּנֵסִיָּה","the church"], ["וְהַמַּלְכוּת׃","and kingdom."]]},
   { num: "ד", words: [
     ["אָמֵן","Verily"],
     ["אֲנִי","I"],
@@ -1736,7 +1681,7 @@ var dc97_ch1Verses = [
     ["מִצְוֹת","commandments"],
     ["אֲחֵרוֹת׃","other"]
   ]},
-  { num: "ה", words: [["וַאֲבָרְכֶנּוּ","And I will bless him"], ["בְּרֹב","with a multiplicity of"], ["בְּרָכוֹת","blessings,"], ["לְפָרֵשׁ","in expounding"], ["כׇּל־כִּתְבֵי","all the scriptures of"], ["הַקֹּדֶשׁ","the holy"], ["וְהָרָזִים","and mysteries"], ["לְבִנְיַן","to the edification of"], ["בֵּית","the ... school,"], ["הַמִּדְרָשׁ","[of study]"], ["וְהָעֵדָה","and of the church"], ["בְּצִיּוֹן׃","in Zion."]]},
+  { num: "ה", words: [["וַאֲבָרְכֶנּוּ","And I will bless him"], ["בְּרֹב","with a multiplicity of"], ["בְּרָכוֹת","blessings,"], ["לְפָרֵשׁ","in expounding"], ["כׇּל־כִּתְבֵי","all the scriptures of"], ["הַקֹּדֶשׁ","the holy"], ["וְהָרָזִים","and mysteries"], ["לְבִנְיַן","to the edification of"], ["בֵּית","the ... school,"], ["הַמִּדְרָשׁ","[of study]"], ["וְהַכְּנֵסִיָּה","and of the church"], ["בְּצִיּוֹן׃","in Zion."]]},
   { num: "ו", words: [
     ["וְלִשְׁאָר","And to the residue of"],
     ["בֵּית","the ... school,"],
@@ -2204,20 +2149,7 @@ var dc98_ch1Verses = [
     ["וְצָדֵק","and is justifiable"],
     ["לְפָנָי׃","before me."]
   ]},
-  { num: "ו", words: [
-    ["לָכֵן","Therefore,"],
-    ["אֲנִי","I,"],
-    ["יְהוָה","the Lord,"],
-    ["מַצְדִּיק","justify"],
-    ["אֶתְכֶם","you,"],
-    ["וְאֶת־אֲחֵיכֶם","and your brethren"],
-    ["בְּעֵדָתִי","of my church,"],
-    ["לִהְיוֹת","in being"],
-    ["רֵעִים","friends"],
-    ["לַחֹק","to that ... law"],
-    ["הַיְסוֹדִי","constitutional"],
-    ["בָּאָרֶץ׃","of the land;"]
-  ]},
+  { num: "ו", words: [["לָכֵן","Therefore,"], ["אֲנִי","I,"], ["יְהוָה","the Lord,"], ["מַצְדִּיק","justify"], ["אֶתְכֶם","you,"], ["וְאֶת־אֲחֵיכֶם","and your brethren"], ["בִּכְנֵסִיָּתִי","of my church,"], ["לִהְיוֹת","in being"], ["רֵעִים","friends"], ["לַחֹק","to that ... law"], ["הַיְסוֹדִי","constitutional"], ["בָּאָרֶץ׃","of the land;"]]},
   { num: "ז", words: [
     ["וּבְנוֹגֵעַ","And as pertaining"],
     ["לְחֹק","to law of"],
@@ -2393,17 +2325,7 @@ var dc98_ch1Verses = [
     ["גַם","also"],
     ["אַתֶּם׃","[ye yourselves]."]
   ]},
-  { num: "יט", words: [
-    ["הִנֵּה","Behold,"],
-    ["אֲנִי","I,"],
-    ["יְהוָה","the Lord,"],
-    ["אֵינִי","am not"],
-    ["חָפֵץ","well pleased"],
-    
-    ["מֵרַבִּים","with many"],
-    ["בָּעֵדָה","who are in the church"],
-    ["בְּקִרְטְלַנְד׃","at Kirtland;"]
-  ]},
+  { num: "יט", words: [["הִנֵּה","Behold,"], ["אֲנִי","I,"], ["יְהוָה","the Lord,"], ["אֵינִי","am not"], ["חָפֵץ","well pleased"], ["מֵרַבִּים","with many"], ["בַּכְּנֵסִיָּה","who are in the church"], ["בְּקִרְטְלַנְד׃","at Kirtland;"]]},
   { num: "כ", words: [
     ["כִּי","For"],
     ["אֵינָם","they do not"],
@@ -3261,20 +3183,7 @@ var dc100_ch1Verses = [
     
   ]},
   { num: "יד", words: [["אֲחֵיכֶם","Thy brethren,"], ["עֲבָדַי","my servants"], ["אוֹרְסוֹן","Orson"], ["הַיְד","Hyde"], ["וְג׳וֹן","and John"], ["גּוּלְד","and John Gould,"], ["בְּיָדִי","are in my hands;"], ["וּכְפִי","and inasmuch as"], ["אֲשֶׁר־יִשְׁמְרוּ","they keep"], ["מִצְוֹתַי","my commandments"], ["יִוָּשֵׁעוּ׃","they shall be saved."]]},
-  { num: "טו", words: [
-    ["לָכֵן","Therefore,"],
-    ["יִנָּחֵם","let be comforted;"],
-    ["לְבַבְכֶם","your hearts"],
-    ["כִּי","for"],
-    ["הַכֹּל","all things"],
-    ["יַעֲשֶׂה","shall work"],
-    ["יַחְדָּו","together"],
-    ["לְטוֹבַת","for good to"],
-    ["הַהוֹלְכִים","them that walk"],
-    ["בְּיֹשֶׁר","uprightly,"],
-    ["וּלְקִדּוּשׁ","and to the sanctification of"],
-    ["הָעֵדָה׃","the church."]
-  ]},
+  { num: "טו", words: [["לָכֵן","Therefore,"], ["יִנָּחֵם","let be comforted;"], ["לְבַבְכֶם","your hearts"], ["כִּי","for"], ["הַכֹּל","all things"], ["יַעֲשֶׂה","shall work"], ["יַחְדָּו","together"], ["לְטוֹבַת","for good to"], ["הַהוֹלְכִים","them that walk"], ["בְּיֹשֶׁר","uprightly,"], ["וּלְקִדּוּשׁ","and to the sanctification of"], ["הַכְּנֵסִיָּה׃","the church."]]},
   { num: "טז", words: [
     ["כִּי","For"],
     ["אָקִים","I will raise up"],
