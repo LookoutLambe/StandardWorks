@@ -2929,8 +2929,8 @@ var dc46_ch1Verses = [
   { num: "ב", words: [["אַךְ","but"], ["מִלְּבַד","notwithstanding"], ["הַדְּבָרִים","the things"], ["הַכְּתוּבִים","which are written"], ["נִתַּן","is given"], ["תָּמִיד","always"], ["לְזִקְנֵי","to the elders of"], ["כְּנֵסִיָּתִי","my church"], ["מֵרֵאשִׁית","from the beginning"], ["וְיִנָּתֵן","and shall be given"], ["לָעַד","ever"], ["לְנַהֵל","to conduct"], ["כׇּל","all"], ["אֲסֵפוֹת","meetings"], ["כַּאֲשֶׁר","as"], ["יְנֻהֲלוּ","they are directed"], ["וְיִנָּהֲגוּ","and guided"], ["בְּיַד","by"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ׃","the Holy"]]},
   { num: "ג", words: [
     ["אוּלָם","nevertheless"],
-    ["מְצֻוִּים","you are commanded"],
-    ["אַתֶּם","you"],
+    ["מְצֻוִּים","commanded"],
+    ["אַתֶּם","are you"],
     ["לְעוֹלָם","never"],
     ["לֹא","not"],
     ["לְהוֹצִיא","to cast out"],
@@ -2940,13 +2940,13 @@ var dc46_ch1Verses = [
     ["לִפְנֵי","before"],
     ["הָעוֹלָם׃","the world"]
   ]},
-  { num: "ד", words: [["גַּם","also"], ["מְצֻוִּים","you are commanded"], ["אַתֶּם","you"], ["לֹא","not"], ["לְהוֹצִיא","to cast out"], ["מֵאֲסֵפוֹת","from the meetings of"], ["הַסְּעוּדָה","the sacrament"], ["הַקְּדוֹשָׁה","the holy"], ["אִישׁ","any one"], ["אֲשֶׁר","who belongs"], ["לַכְּנֵסִיָּה","to the church"], ["אַךְ","nevertheless"], ["אִם","if"], ["חָטָא","any have trespassed"], ["אַל","let not"], ["יֹאכַל","him partake"], ["עַד","until"], ["יִתְרַצֶּה׃","he makes reconciliation"]]},
+  { num: "ד", words: [["גַּם","also"], ["מְצֻוִּים","commanded"], ["אַתֶּם","are you"], ["לֹא","not"], ["לְהוֹצִיא","to cast out"], ["מֵאֲסֵפוֹת","from the meetings of"], ["הַסְּעוּדָה","the sacrament"], ["הַקְּדוֹשָׁה","the holy"], ["אִישׁ","any one"], ["אֲשֶׁר","who belongs"], ["לַכְּנֵסִיָּה","to the church"], ["אַךְ","nevertheless"], ["אִם","if"], ["חָטָא","any have trespassed"], ["אַל","let not"], ["יֹאכַל","him partake"], ["עַד","until"], ["יִתְרַצֶּה׃","he makes reconciliation"]]},
   { num: "ה", words: [["וְעוֹד","and again"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["לֹא","not"], ["תוֹצִיאוּ","you shall cast"], ["מֵאֲסֵפוֹת","out from the meetings of"], ["הַסְּעוּדָה","the sacrament"], ["הַקְּדוֹשָׁה","the holy"], ["אֶת־הַמְבַקְּשִׁים","those who seek"], ["בְּכׇל־לֵב","with all the heart"], ["אֶת־הַמַּלְכוּת","the kingdom"], ["וְעַל","and concerning"], ["אֲשֶׁר","those who"], ["אֵינָם","are not"], ["מִן","of"], ["הַכְּנֵסִיָּה","the church"], ["אֲנִי","I"], ["מְדַבֵּר׃","speak this"]]},
   { num: "ו", words: [["וְעוֹד","and again"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["עַל","concerning"], ["אֲסֵפוֹת","the meetings of"], ["הַסְּמִיכָה","confirmation"], ["אִם","if"], ["יֵשׁ","there be"], ["אֲשֶׁר","any that"], ["אֵינָם","are not"], ["מִן","of"], ["הַכְּנֵסִיָּה","the church"], ["הַמְבַקְּשִׁים","who seek"], ["בְּכׇל־לֵב","with all the heart"], ["אֶת־הַמַּלְכוּת","the kingdom"], ["לֹא","you shall not"], ["תוֹצִיאוּם׃","cast them out"]]},
   { num: "ז", words: [
     ["אַךְ","but"],
-    ["מְצֻוִּים","you are commanded"],
-    ["אַתֶּם","you"],
+    ["מְצֻוִּים","commanded"],
+    ["אַתֶּם","are you"],
     ["בְּכׇל","in all"],
     ["דָּבָר","things"],
     ["לִשְׁאֹל","to ask"],
@@ -3008,7 +3008,7 @@ var dc46_ch1Verses = [
     ["כׇּל","all"],
     ["מִצְוֹתַי","my commandments"],
     ["וְלַמְבַקֵּשׁ","and him that seeks"],
-    ["לַעֲשׂוֹת","to make up"],
+    ["לַעֲשׂוֹת","to do"],
     ["כֵּן","so"],
     ["לְמַעַן","that"],
     ["יוֹעֲלוּ","may be benefited"],
@@ -3019,9 +3019,9 @@ var dc46_ch1Verses = [
     ["מִמֶּנִּי","of me"],
     ["הַשֹּׁאֲלִים","those who ask"],
     ["וְלֹא","and not"],
-    ["לְאוֹת","for a token"],
+    ["לְאוֹת","for a sign"],
     ["לְכַלּוֹתוֹ","to consume it"],
-    ["עַל","concerning"],
+    ["עַל","upon"],
     ["תַּאֲווֹתֵיהֶם׃","their lusts"]
   ]},
   { num: "י", words: [["וְעוֹד","and again"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["חָפַצְתִּי","I would"], ["כִּי","that"], ["תִזְכְּרוּ","you should remember"], ["תָּמִיד","always"], ["וְתִשְׁמְרוּ","and retain"], ["תָמִיד","always"], ["בְּדַעְתְּכֶם","in your minds"], ["מַה","what"], ["הֵן","are"], ["הַמַּתָּנוֹת","the gifts"], ["הַנְּתוּנוֹת","that are given"], ["לַכְּנֵסִיָּה׃","unto the church"]]},
@@ -3175,8 +3175,8 @@ var dc46_ch1Verses = [
     ["לְמַעַן","that"],
     ["יוֹעַל","may be benefited"],
     ["בָּזֶה","thereby"],
-    ["כׇּל","all"],
-    ["אֵבֶר׃","member may be profited"]
+    ["כׇּל","every"],
+    ["אֵבֶר׃","member"]
   ]},
   { num: "ל", words: [
     ["הַשֹּׁאֵל","he that asks"],
@@ -3199,16 +3199,16 @@ var dc46_ch1Verses = [
     ["יֵעָשֶׂה","must be done"],
     ["בְּשֵׁם","in the name of"],
     ["הַמָּשִׁיחַ","Christ"],
-    ["כׇּל","in all that"],
-    ["אֲשֶׁר","which"],
+    ["כׇּל","all"],
+    ["אֲשֶׁר","that"],
     ["תַּעֲשׂוּ","you do"],
     ["בָּרוּחַ׃","in the Spirit"]
   ]},
   { num: "לב", words: [
     ["וְהוֹדוּ","and you must give thanks"],
-    ["לֵאלֹהִים","give thanks unto God"],
-    ["בָּרוּחַ","by the Holy Spirit"],
-    ["עַל","concerning"],
+    ["לֵאלֹהִים","unto God"],
+    ["בָּרוּחַ","in the Spirit"],
+    ["עַל","for"],
     ["כׇּל","all"],
     ["בְּרָכָה","blessing"],
     ["אֲשֶׁר","which"],
@@ -3221,8 +3221,8 @@ var dc46_ch1Verses = [
     ["לְפָנַי","before me"],
     ["תָּמִיד","continually"],
     ["כֵּן","even so"],
-    ["יְהִי","may it be"],
-    ["אָמֵן׃","amen"]
+    ["יְהִי","be it"],
+    ["אָמֵן׃","Amen"]
   ]}
 ];
 renderVerseSet(dc46_ch1Verses, 'dc46-ch1-verses');
