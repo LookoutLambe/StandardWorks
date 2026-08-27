@@ -1458,7 +1458,8 @@ var dc38_ch1Verses = [
   ]},
   { num: "יח", words: [
     ["וַאֲנִי","and I"],
-    ["חָפֵץ","deign"],
+    ["מוֹשִׁיט","hold forth"],
+    ["וְחָפֵץ","and deign"],
     ["לָתֵת","to give"],
     ["לָכֶם","unto you"],
     ["עֹשֶׁר","riches"],
@@ -1504,6 +1505,7 @@ var dc38_ch1Verses = [
     ["עוֹד","still"],
     ["הָאָרֶץ","the earth"],
     ["עֹמֶדֶת","shall stand"],
+    ["וְתֹאחֲזוּהָ","and you shall possess it"],
     ["עוֹד","again"],
     ["בַּנֶּצַח","in eternity"],
     ["לֹא","no more"],
