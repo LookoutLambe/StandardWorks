@@ -531,6 +531,7 @@ var dc84_ch1Verses = [
     ["הָחֵל","beginning"],
     ["מֵחֶלְקַת","at the lot of"],
     ["הַמִּקְדָּשׁ","the temple"],
+    ["הַמְמֻנָּה","which is appointed"],
     ["בְּאֶצְבַּע","by the finger of"],
     ["יְהוָה","the LORD"],
     ["בִּגְבוּלוֹת","in the boundaries"],
@@ -548,6 +549,7 @@ var dc84_ch1Verses = [
     ["יְהוָה","the LORD"],
     ["רָצָה","was well pleased"],
     ["בָהֶם׃","with them"]
+  
   ]},
   { num: "ד", words: [
     ["אָמֵן","Verily"],
@@ -1229,8 +1231,8 @@ var dc84_ch1Verses = [
     
     ["חָשְׁכָה","have been darkened"],
     ["בִּגְלַל","because of"],
-    ["חֹסֶר","un-"],
-    ["אֱמוּנָה","belief"],
+    ["חֹסֶר","the lack of"],
+    ["אֱמוּנָה","faith"],
     ["וּבִגְלַל","and because"],
     ["אֲשֶׁר","that"],
     ["הֵקַלְתֶּם","you have treated lightly"],
@@ -1238,7 +1240,7 @@ var dc84_ch1Verses = [
     ["אֲשֶׁר","that"],
     ["קִבַּלְתֶּם׃","you have received-"]
   ]},
-  { num: "נה", words: [["אֲשֶׁר","Which"], ["הַהֶבֶל","vanity"], ["וְחֹסֶר","and un-"], ["הָאֱמוּנָה","belief"], ["הֵבִיאוּ","have brought"], ["אֶת־כׇּל","the whole"], ["הַכְּנֵסִיָּה","church"], ["תַּחַת","under"], ["אַשְׁמָה׃","condemnation."]]},
+  { num: "נה", words: [["אֲשֶׁר","Which"], ["הַהֶבֶל","vanity"], ["וְחֹסֶר","and the lack of"], ["הָאֱמוּנָה","faith"], ["הֵבִיאוּ","have brought"], ["אֶת־כׇּל","the whole"], ["הַכְּנֵסִיָּה","church"], ["תַּחַת","under"], ["אַשְׁמָה׃","condemnation."]]},
   { num: "נו", words: [
     ["וְהָאַשְׁמָה","And condemnation"],
     ["הַזֹּאת","this"],
@@ -1300,7 +1302,7 @@ var dc84_ch1Verses = [
     ["בְנֵי","the children of"],
     ["הַמַּלְכוּת","the kingdom"],
     ["אֶת־אֶרֶץ","the land of"],
-    ["קָדְשִׁי","my holiness?"],
+    ["קָדְשִׁי","my holiness"],
     ["אָמֵן","Verily"],
     ["אֲנִי","I"],
     ["אֹמֵר","say"],
@@ -1516,8 +1518,8 @@ var dc84_ch1Verses = [
     ["עַל","for"],
     ["לִבָּם","their hearts"],
     ["הָרָע","evil"],
-    ["חֲסַר","of un-"],
-    ["הָאֱמוּנָה","belief"],
+    ["חֲסַר","of the lack of"],
+    ["הָאֱמוּנָה","faith"],
     ["וַאֲחֵיכֶם","and your brethren"],
     ["בְּצִיּוֹן","in Zion"],
     ["עַל","for"],
@@ -1612,7 +1614,7 @@ var dc84_ch1Verses = [
     ["תִפֹּל","shall fall"],
     ["אַרְצָה","to the ground"],
     ["מִבְּלִי","un-"],
-    ["מֵשִׂים","noticed"],
+    ["מֵשִׂים","being noticed"],
     ["וְהֵם","And they"],
     ["לֹא","not"],
     ["יִרְעֲבוּ","shall go hungry"],
@@ -1762,7 +1764,7 @@ var dc84_ch1Verses = [
     ["הַנּוֹתֵן","gives"],
     ["לָכֶם","you"],
     ["כֶּסֶף","money"],
-    ["אָבֹד","in nowise"],
+    ["אָבֹד","surely"],
     ["לֹא","not"],
     ["יֹאבַד","shall be lost"],
     ["שְׂכָרוֹ׃","his reward."]
