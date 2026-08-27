@@ -7,3 +7,8 @@ StandardWorks/www/
 
 # Local Claude Code config (not shared)
 .claude/
+
+# Xcode project state — never goes to GitHub (translator's standing rule).
+StandardWorks.xcodeproj/project.pbxproj
+StandardWorks.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
