@@ -206,8 +206,8 @@ var dc51_ch1Verses = [
     ["לֹא","not"],
     ["תַחְשְׁבוּ","you think"],
     ["כֵּן","even so"],
-    ["יְהִי","may it be"],
-    ["אָמֵן׃","amen"]
+    ["יְהִי","be it"],
+    ["אָמֵן׃","Amen"]
   ]}
 ];
 renderVerseSet(dc51_ch1Verses, 'dc51-ch1-verses');
@@ -818,8 +818,8 @@ var dc52_ch1Verses = [
     ["בַּיּוֹם","at the day"],
     ["הָאַחֲרוֹן","the last"],
     ["כֵּן","even so"],
-    ["יְהִי","may it be"],
-    ["אָמֵן׃","amen"]
+    ["יְהִי","be it"],
+    ["אָמֵן׃","Amen"]
   ]}
 ];
 renderVerseSet(dc52_ch1Verses, 'dc52-ch1-verses');
@@ -890,8 +890,8 @@ var dc53_ch1Verses = [
     ["הוּא","he"],
     ["הַנּוֹשָׁע","is the saved one"],
     ["כֵּן","even so"],
-    ["יְהִי","may it be"],
-    ["אָמֵן׃","amen"]
+    ["יְהִי","be it"],
+    ["אָמֵן׃","Amen"]
   ]}
 ];
 renderVerseSet(dc53_ch1Verses, 'dc53-ch1-verses');
@@ -1041,7 +1041,7 @@ var dc54_ch1Verses = [
     ["לָכֶם","for you"],
     ["מָקוֹם׃","a place"]
   ]},
-  { num: "י", words: [["וְעוֹד","and again"], ["הִתְאַזְּרוּ","gird yourselves up"], ["בְּאֹרֶךְ־אַפַּיִם","in patience"], ["בַּצָּרָה","in tribulation"], ["עַד","until"], ["בוֹאִי","my coming"], ["וְהִנֵּה","and behold"], ["בָּא","I come"], ["אֲנִי","I"], ["מַהֵר","quickly"], ["וּשְׂכָרִי","and my reward"], ["אִתִּי","with me"], ["וּמְשַׁחֲרַי","and they who seek me early"], ["יִמְצְאוּ","shall find"], ["מַרְגּוֹעַ","rest"], ["לְנַפְשָׁם","to their souls"], ["כֵּן","even so"], ["יְהִי","may it be"], ["אָמֵן׃","amen"]]}
+  { num: "י", words: [["וְעוֹד","and again"], ["הִתְאַזְּרוּ","gird yourselves up"], ["בְּאֹרֶךְ־אַפַּיִם","in patience"], ["בַּצָּרָה","in tribulation"], ["עַד","until"], ["בוֹאִי","my coming"], ["וְהִנֵּה","and behold"], ["בָּא","I come"], ["אֲנִי","I"], ["מַהֵר","quickly"], ["וּשְׂכָרִי","and my reward"], ["אִתִּי","with me"], ["וּמְשַׁחֲרַי","and they who seek me early"], ["יִמְצְאוּ","shall find"], ["מַרְגּוֹעַ","rest"], ["לְנַפְשָׁם","to their souls"], ["כֵּן","even so"], ["יְהִי","be it"], ["אָמֵן׃","Amen"]]}
 ];
 renderVerseSet(dc54_ch1Verses, 'dc54-ch1-verses');
 
@@ -1472,8 +1472,8 @@ var dc56_ch1Verses = [
     ["לְדַבֵּר","speaking"],
     ["אֲלֵיכֶם","unto you"],
     ["כֵּן","even so"],
-    ["יְהִי","may it be"],
-    ["אָמֵן׃","amen"]
+    ["יְהִי","be it"],
+    ["אָמֵן׃","Amen"]
   ]}
 ];
 renderVerseSet(dc56_ch1Verses, 'dc56-ch1-verses');
@@ -1727,8 +1727,8 @@ var dc57_ch1Verses = [
     ["אַחֲרֵי","after"],
     ["כֵן","this"],
     ["כֵּן","even so"],
-    ["יְהִי","may it be"],
-    ["אָמֵן׃","amen"]
+    ["יְהִי","be it"],
+    ["אָמֵן׃","Amen"]
   ]}
 ];
 renderVerseSet(dc57_ch1Verses, 'dc57-ch1-verses');
@@ -3265,8 +3265,8 @@ var dc60_ch1Verses = [
     ["אַחֲרֵי","after"],
     ["כֵן","this hereafter"],
     ["כֵּן","even so"],
-    ["יְהִי","may it be"],
-    ["אָמֵן׃","amen"]
+    ["יְהִי","be it"],
+    ["אָמֵן׃","Amen"]
   ]}
 ];
 renderVerseSet(dc60_ch1Verses, 'dc60-ch1-verses');

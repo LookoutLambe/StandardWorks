@@ -102,8 +102,8 @@ var dc71_ch1Verses = [
     ["אֱמֶת","truth"],
     ["וְנֶאֱמָנוֹת","and faithful"],
     ["כֵּן","even so"],
-    ["יְהִי","let it be"],
-    ["אָמֵן׃","amen"]
+    ["יְהִי","be it"],
+    ["אָמֵן׃","Amen"]
   ]}
 ];
 renderVerseSet(dc71_ch1Verses, 'dc71-ch1-verses');
@@ -193,8 +193,8 @@ var dc72_ch1Verses = [
     ["אֱלֹהֵיכֶם","your God"],
     ["גֹּאַלְכֶם","your Redeemer"],
     ["כֵּן","even so"],
-    ["יְהִי","let it be"],
-    ["אָמֵן׃","amen"]
+    ["יְהִי","be it"],
+    ["אָמֵן׃","Amen"]
   ]},
   { num: "ט", words: [["דְּבַר","the word of"], ["יְהוָה","the Lord"], ["נוֹסָף","in addition"], ["לַתּוֹרָה","to the law"], ["אֲשֶׁר","which"], ["נִתְּנָה","has been given"], ["מוֹדִיעַ","making known"], ["אֶת־מִשְׁמֶרֶת","the duty of"], ["הַפָּקִיד","the bishop"], ["אֲשֶׁר","who"], ["נִסְמַךְ","has been ordained"], ["לַכְּנֵסִיָּה","unto the church"], ["בַּחֵלֶק","in part"], ["הַזֶּה","this"], ["מִן","of"], ["הַכֶּרֶם","the vineyard"], ["וְזֹאת","and this"], ["הִיא","is"], ["אׇמְנָם׃","verily this"]]},
   { num: "י", words: [["לִשְׁמֹר","to keep"], ["עַל","over"], ["אוֹצַר","the storehouse of"], ["יְהוָה","the Lord"], ["לְקַבֵּל","to receive"], ["אֶת־כַּסְפֵּי","the funds of"], ["הַכְּנֵסִיָּה","the church"], ["בַּחֵלֶק","in part"], ["הַזֶּה","this"], ["מִן","of"], ["הַכֶּרֶם׃","the vineyard"]]},
@@ -388,8 +388,8 @@ var dc73_ch1Verses = [
     ["וֶהְיוּ","and be"],
     ["צְנוּעִים","sober"],
     ["כֵּן","even so"],
-    ["יְהִי","let it be"],
-    ["אָמֵן׃","amen"]
+    ["יְהִי","be it"],
+    ["אָמֵן׃","Amen"]
   ]}
 ];
 renderVerseSet(dc73_ch1Verses, 'dc73-ch1-verses');
@@ -701,8 +701,8 @@ var dc75_ch1Verses = [
     ["אֱלֹהֵיכֶם","your God"],
     ["עֲלֵיכֶם","concerning you"],
     ["כֵּן","even so"],
-    ["יְהִי","let it be"],
-    ["אָמֵן׃","amen"]
+    ["יְהִי","be it"],
+    ["אָמֵן׃","Amen"]
   ]},
   { num: "יג", words: [
     ["וְעוֹד","and again"],
@@ -892,8 +892,8 @@ var dc75_ch1Verses = [
     ["בַּיּוֹם","at the day"],
     ["הָאַחֲרוֹן","last"],
     ["כֵּן","even so"],
-    ["יְהִי","let it be"],
-    ["אָמֵן׃","amen"]
+    ["יְהִי","be it"],
+    ["אָמֵן׃","Amen"]
   ]},
   { num: "כג", words: [["וְעוֹד","and again"], ["כֹּה","thus"], ["אָמַר","says"], ["יְהוָה","the Lord"], ["אֲלֵיכֶם","unto you"], ["זִקְנֵי","O elders of"], ["כְּנֵסִיָּתִי","my church"], ["אֲשֶׁר","who"], ["נְתַתֶּם","have given"], ["שְׁמוֹתֵיכֶם","your names"], ["לְמַעַן","that"], ["תֵּדְעוּ","you might know"], ["אֶת־רְצוֹנוֹ","his will"], ["עֲלֵיכֶם׃","concerning you"]]},
   { num: "כד", words: [["הִנֵּה","behold"], ["אֲנִי","I"], ["אוֹמֵר","say"], ["לָכֶם","unto you"], ["כִּי","that"], ["מִשְׁמֶרֶת","it is the duty of"], ["הַכְּנֵסִיָּה","the church"], ["לַעְזֹר","to assist"], ["בְּתָמְכָהּ","in supporting"], ["מִשְׁפְּחוֹת","the families of"], ["אֵלֶּה","these"], ["וְגַם","and also"], ["לִתְמֹךְ","to support"], ["מִשְׁפְּחוֹת","the families of"], ["הַנִּקְרָאִים","those who are called"], ["וְנָכוֹן","and must"], ["כִּי","that"], ["יִשָּׁלְחוּ","be sent"], ["לָעוֹלָם","unto the world"], ["לְהַכְרִיז","to proclaim"], ["אֶת־הַבְּשׂוֹרָה","the gospel"], ["לָעוֹלָם׃","unto the world"]]},
@@ -1001,8 +1001,8 @@ var dc75_ch1Verses = [
     ["עֵדֶן","Eden"],
     ["סְמִית","Smith"],
     ["כֵּן","even so"],
-    ["יְהִי","let it be"],
-    ["אָמֵן׃","amen"]
+    ["יְהִי","be it"],
+    ["אָמֵן׃","Amen"]
   ]}
 ];
 renderVerseSet(dc75_ch1Verses, 'dc75-ch1-verses');

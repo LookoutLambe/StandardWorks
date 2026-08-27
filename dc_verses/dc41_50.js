@@ -3230,7 +3230,7 @@ renderVerseSet(dc46_ch1Verses, 'dc46-ch1-verses');
 
 
 var dc47_ch1Verses = [
-  { num: "א", words: [["הִנֵּה","behold"], ["נָכוֹן","it is expedient"], ["בְּעֵינַי","in my eyes"], ["כִּי","that"], ["עַבְדִּי","my servant"], ["ג׳וֹן","John"], ["יִכְתֹּב","should write"], ["וְיִשְׁמֹר","and keep"], ["דִּבְרֵי","the words of"], ["יָמִים","days"], ["סְדוּרִים","regular"], ["וְיַעֲזֹר","and assist"], ["לְךָ","to you"], ["עַבְדִּי","my servant"], ["יוֹסֵף","Joseph"], ["לְהַעְתִּיק","in transcribing"], ["כׇּל","all"], ["הַנִּתָּן","things which are given"], ["לְךָ","to you"], ["עַד","until"], ["הִקָּרְאוֹ","he be called"], ["לַעֲבוֹדוֹת","to duties"], ["נוֹסָפוֹת׃","further"]]},
+  { num: "א", words: [["הִנֵּה","behold"], ["נָכוֹן","it is expedient"], ["בְּעֵינַי","in me"], ["כִּי","that"], ["עַבְדִּי","my servant"], ["ג׳וֹן","John"], ["יִכְתֹּב","should write"], ["וְיִשְׁמֹר","and keep"], ["דִּבְרֵי","the words of"], ["יָמִים","days"], ["סְדוּרִים","regular"], ["וְיַעֲזֹר","and assist"], ["לְךָ","to you"], ["עַבְדִּי","my servant"], ["יוֹסֵף","Joseph"], ["לְהַעְתִּיק","in transcribing"], ["כׇּל","all"], ["הַנִּתָּן","things which are given"], ["לְךָ","to you"], ["עַד","until"], ["הִקָּרְאוֹ","he be called"], ["לַעֲבוֹדוֹת","to duties"], ["נוֹסָפוֹת׃","further"]]},
   { num: "ב", words: [
     ["עוֹד","again"],
     ["אָמֵן","verily"],
@@ -3262,8 +3262,8 @@ var dc47_ch1Verses = [
     ["הַדְּבָרִים","the things"],
     ["הָאֵלֶּה","these"],
     ["כֵּן","even so"],
-    ["יְהִי","may it be"],
-    ["אָמֵן׃","amen"]
+    ["יְהִי","be it"],
+    ["אָמֵן׃","Amen"]
   ]}
 ];
 renderVerseSet(dc47_ch1Verses, 'dc47-ch1-verses');
@@ -3357,7 +3357,7 @@ var dc48_ch1Verses = [
     ["לָהֶם","unto them"],
     ["יִגָּלֶה׃","it shall be revealed"]
   ]},
-  { num: "ו", words: [["וְהֵם","and they"], ["יְמֻנּוּ","shall be appointed"], ["לִקְנוֹת","to purchase"], ["הָאֲדָמוֹת","the lands"], ["וְלָשׂוּם","and to make"], ["רֵאשִׁית","a commencement"], ["לִיסֹד","to lay the foundation of"], ["הָעִיר","the city"], ["וְאָז","and then"], ["תָּחֵלּוּ","shall you begin"], ["לְהֵאָסֵף","to be gathered"], ["עִם","with"], ["מִשְׁפְּחוֹתֵיכֶם","your families"], ["כׇּל","every"], ["אִישׁ","man"], ["לְפִי","according to"], ["מִשְׁפַּחְתּוֹ","his family"], ["לְפִי","according to"], ["דַרְכּוֹ","his circumstances"], ["וְכַאֲשֶׁר","and as"], ["מֻנָּה","it is appointed"], ["לוֹ","unto him"], ["בִּידֵי","by the hands of"], ["הַנְּשִׂיאוּת","the presidency"], ["וּפְקִיד","and the bishop of"], ["הַכְּנֵסִיָּה","the church"], ["כְּפִי","according to"], ["הַחֻקִּים","the laws"], ["וְהַמִּצְוֹת","and the commandments"], ["אֲשֶׁר","which"], ["קִבַּלְתֶּם","you have received"], ["וַאֲשֶׁר","and which"], ["תְּקַבְּלוּ","you shall receive"], ["לְאַחַר","hereafter"], ["מִכֵּן","after this"], ["כֵּן","even so"], ["יְהִי","may it be"], ["אָמֵן׃","amen"]]}
+  { num: "ו", words: [["וְהֵם","and they"], ["יְמֻנּוּ","shall be appointed"], ["לִקְנוֹת","to purchase"], ["הָאֲדָמוֹת","the lands"], ["וְלָשׂוּם","and to make"], ["רֵאשִׁית","a commencement"], ["לִיסֹד","to lay the foundation of"], ["הָעִיר","the city"], ["וְאָז","and then"], ["תָּחֵלּוּ","shall you begin"], ["לְהֵאָסֵף","to be gathered"], ["עִם","with"], ["מִשְׁפְּחוֹתֵיכֶם","your families"], ["כׇּל","every"], ["אִישׁ","man"], ["לְפִי","according to"], ["מִשְׁפַּחְתּוֹ","his family"], ["לְפִי","according to"], ["דַרְכּוֹ","his circumstances"], ["וְכַאֲשֶׁר","and as"], ["מֻנָּה","it is appointed"], ["לוֹ","unto him"], ["בִּידֵי","by the hands of"], ["הַנְּשִׂיאוּת","the presidency"], ["וּפְקִיד","and the bishop of"], ["הַכְּנֵסִיָּה","the church"], ["כְּפִי","according to"], ["הַחֻקִּים","the laws"], ["וְהַמִּצְוֹת","and the commandments"], ["אֲשֶׁר","which"], ["קִבַּלְתֶּם","you have received"], ["וַאֲשֶׁר","and which"], ["תְּקַבְּלוּ","you shall receive"], ["לְאַחַר","hereafter"], ["מִכֵּן","after this"], ["כֵּן","even so"], ["יְהִי","be it"], ["אָמֵן׃","Amen"]]}
 ];
 renderVerseSet(dc48_ch1Verses, 'dc48-ch1-verses');
 
@@ -3817,8 +3817,8 @@ var dc49_ch1Verses = [
     ["אֲנִי","I"],
     ["מַהֵר","quickly"],
     ["כֵּן","even so"],
-    ["יְהִי","may it be"],
-    ["אָמֵן׃","amen"]
+    ["יְהִי","be it"],
+    ["אָמֵן׃","Amen"]
   ]}
 ];
 renderVerseSet(dc49_ch1Verses, 'dc49-ch1-verses');
@@ -4422,8 +4422,8 @@ var dc50_ch1Verses = [
     ["תִּהְיוּ","you may be"],
     ["נְכוֹנִים","ready"],
     ["כֵּן","even so"],
-    ["יְהִי","may it be"],
-    ["אָמֵן׃","amen"]
+    ["יְהִי","be it"],
+    ["אָמֵן׃","Amen"]
   ]}
 ];
 renderVerseSet(dc50_ch1Verses, 'dc50-ch1-verses');
