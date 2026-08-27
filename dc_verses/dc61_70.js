@@ -1528,7 +1528,7 @@ var dc63_ch1Verses = [
     ["מִנִּיתִי","I have appointed"],
     ["לְקַבֵּל׃","to receive"]
   ]},
-  { num: "מא", words: [["הִנֵּה","behold"], ["אֲנִי","I"], ["יְהוָה","the Lord"], ["אֶתֵּן","will give"], ["לְעַבְדִּי","unto my servant"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","the son (Jun.)"], ["כֹּחַ","power"], ["לְהַבְחִין","to discern"], ["בָּרוּחַ","by the Spirit"], ["אֵת־הָעֹלִים","those going up"], ["לְאֶרֶץ","unto (the) land of"], ["צִיּוֹן","Zion"], ["וְאֵת","and"], ["תַּלְמִידַי","my disciples"], ["הַנִּשְׁאָרִים׃","who shall tarry"]]},
+  { num: "מא", words: [["הִנֵּה","behold"], ["אֲנִי","I"], ["יְהוָה","the Lord"], ["אֶתֵּן","will give"], ["לְעַבְדִּי","unto my servant"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["כֹּחַ","power"], ["לְהַבְחִין","to discern"], ["בָּרוּחַ","by the Spirit"], ["אֵת־הָעֹלִים","those going up"], ["לְאֶרֶץ","unto (the) land of"], ["צִיּוֹן","Zion"], ["וְאֵת","and"], ["תַּלְמִידַי","my disciples"], ["הַנִּשְׁאָרִים׃","who shall tarry"]]},
   { num: "מב", words: [
     ["עַבְדִּי","my servant"],
     ["נְיוּאֶל","Newel"],
@@ -1917,22 +1917,7 @@ var dc63_ch1Verses = [
     ["נִשְׁאֶרֶת","remaineth"],
     ["אַשְׁמָה׃","condemnation"]
   ]},
-  { num: "סה", words: [
-    ["עֲבָדַי","my servants"],
-    ["יוֹסֵף","Joseph"],
-    ["סְמִית","Smith"],
-    ["הַבֵּן","the son (Jun.)"],
-    ["וְסִידְנִי","and Sidney"],
-    ["רִיגְדּוֹן","Rigdon"],
-    ["יְבַקְּשׁוּ","let them seek"],
-    ["לָהֶם","for themselves"],
-    ["בַּיִת","a home"],
-    ["כַּאֲשֶׁר","as"],
-    ["יִלָּמְדוּ","they are taught"],
-    ["בִּתְפִלָּה","through prayer"],
-    ["בְּיַד","by (the means of)"],
-    ["הָרוּחַ׃","the Spirit"]
-  ]},
+  { num: "סה", words: [["עֲבָדַי","my servants"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["וְסִידְנִי","and Sidney"], ["רִיגְדּוֹן","Rigdon"], ["יְבַקְּשׁוּ","let them seek"], ["לָהֶם","for themselves"], ["בַּיִת","a home"], ["כַּאֲשֶׁר","as"], ["יִלָּמְדוּ","they are taught"], ["בִּתְפִלָּה","through prayer"], ["בְּיַד","by (the means of)"], ["הָרוּחַ׃","the Spirit"]]},
   { num: "סו", words: [
     ["הַדְּבָרִים","the things"],
     ["הָאֵלֶּה","these"],
@@ -2018,26 +2003,7 @@ var dc64_ch1Verses = [
     ["לָכֶם","unto you"],
     ["הַמַּלְכוּת׃","the kingdom"]
   ]},
-  { num: "ה", words: [
-    ["וּמַפְתְּחוֹת","and (the) keys of"],
-    ["סוֹדוֹת","(the) mysteries of"],
-    ["הַמַּלְכוּת","the kingdom"],
-    ["לֹא","not"],
-    ["יִלָּקְחוּ","shall be taken"],
-    ["מֵעַבְדִּי","from my servant"],
-    ["יוֹסֵף","Joseph"],
-    ["סְמִית","Smith"],
-    ["הַבֵּן","the son (Jun.)"],
-    ["בַּדְּרָכִים","through the means"],
-    ["אֲשֶׁר","which"],
-    ["מִנִּיתִי","I have appointed"],
-    ["כׇּל","all"],
-    ["יְמֵי","(the) days of"],
-    ["חַיָּיו","his life"],
-    ["אִם","inasmuch as"],
-    ["יִשְׁמֹר","he obeyeth"],
-    ["חֻקּוֹתָי׃","mine ordinances"]
-  ]},
+  { num: "ה", words: [["וּמַפְתְּחוֹת","and (the) keys of"], ["סוֹדוֹת","(the) mysteries of"], ["הַמַּלְכוּת","the kingdom"], ["לֹא","not"], ["יִלָּקְחוּ","shall be taken"], ["מֵעַבְדִּי","from my servant"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["בַּדְּרָכִים","through the means"], ["אֲשֶׁר","which"], ["מִנִּיתִי","I have appointed"], ["כׇּל","all"], ["יְמֵי","(the) days of"], ["חַיָּיו","his life"], ["אִם","inasmuch as"], ["יִשְׁמֹר","he obeyeth"], ["חֻקּוֹתָי׃","mine ordinances"]]},
   { num: "ו", words: [
     ["יֵשׁ","there are (those)"],
     ["אֲשֶׁר","who"],
@@ -3150,28 +3116,7 @@ var dc67_ch1Verses = [
     ["הַמֻּנָּחוֹת","which are lying"],
     ["לִפְנֵיכֶם׃","before you"]
   ]},
-  { num: "ה", words: [
-    ["עֵינֵיכֶם","your eyes"],
-    ["הָיוּ","have been"],
-    ["עַל","upon"],
-    ["עַבְדִּי","my servant"],
-    ["יוֹסֵף","Joseph"],
-    ["סְמִית","Smith"],
-    ["הַבֵּן","the son (Jun.)"],
-    ["וּשְׂפָתוֹ","and his language"],
-    ["יְדַעְתֶּם","ye have known"],
-    ["וּמוּמָיו","and his imperfections"],
-    ["יְדַעְתֶּם","ye have known"],
-    ["וּבִקַּשְׁתֶּם","and ye have sought"],
-    ["בִּלְבַבְכֶם","in your hearts"],
-    ["דַּעַת","knowledge"],
-    ["לְבַטֵּא","to express"],
-    ["יוֹתֵר","beyond"],
-    ["מִשְּׂפָתוֹ","his language"],
-    ["וְזֹאת","and this"],
-    ["גַּם","also"],
-    ["יְדַעְתֶּם׃","ye know"]
-  ]},
+  { num: "ה", words: [["עֵינֵיכֶם","your eyes"], ["הָיוּ","have been"], ["עַל","upon"], ["עַבְדִּי","my servant"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["וּשְׂפָתוֹ","and his language"], ["יְדַעְתֶּם","ye have known"], ["וּמוּמָיו","and his imperfections"], ["יְדַעְתֶּם","ye have known"], ["וּבִקַּשְׁתֶּם","and ye have sought"], ["בִּלְבַבְכֶם","in your hearts"], ["דַּעַת","knowledge"], ["לְבַטֵּא","to express"], ["יוֹתֵר","beyond"], ["מִשְּׂפָתוֹ","his language"], ["וְזֹאת","and this"], ["גַּם","also"], ["יְדַעְתֶּם׃","ye know"]]},
   { num: "ו", words: [
     ["עַתָּה","now"],
     ["חַפְּשׂוּ","seek ye out"],
@@ -3327,28 +3272,7 @@ var dc67_ch1Verses = [
     ["אֲשֶׁר","(that)"],
     ["תֻּשְׁלָמוּ׃","ye are perfected"]
   ]},
-  { num: "יד", words: [
-    ["אַל","let not"],
-    ["יִפֶן","turn"],
-    ["לְבַבְכֶם","your minds"],
-    ["אָחוֹר","back"],
-    ["וְכַאֲשֶׁר","and when"],
-    ["תִּהְיוּ","ye shall be"],
-    ["רְאוּיִים","worthy"],
-    ["בְּעִתִּי","in mine time"],
-    ["הָרְאוּיָה","due"],
-    ["תִּרְאוּ","ye shall see"],
-    ["וְתֵדְעוּ","and ye shall know"],
-    ["אֵת־אֲשֶׁר","that which"],
-    ["נִמְסַר","was conferred"],
-    ["לָכֶם","unto you"],
-    ["בְּיַד","by (the hands of)"],
-    ["עַבְדִּי","my servant"],
-    ["יוֹסֵף","Joseph"],
-    ["סְמִית","Smith"],
-    ["הַבֵּן","the son (Jun.)"],
-    ["אָמֵן׃","amen"]
-  ]}
+  { num: "יד", words: [["אַל","let not"], ["יִפֶן","turn"], ["לְבַבְכֶם","your minds"], ["אָחוֹר","back"], ["וְכַאֲשֶׁר","and when"], ["תִּהְיוּ","ye shall be"], ["רְאוּיִים","worthy"], ["בְּעִתִּי","in mine time"], ["הָרְאוּיָה","due"], ["תִּרְאוּ","ye shall see"], ["וְתֵדְעוּ","and ye shall know"], ["אֵת־אֲשֶׁר","that which"], ["נִמְסַר","was conferred"], ["לָכֶם","unto you"], ["בְּיַד","by (the hands of)"], ["עַבְדִּי","my servant"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["אָמֵן׃","amen"]]}
 ];
 renderVerseSet(dc67_ch1Verses, 'dc67-ch1-verses');
 
@@ -4036,50 +3960,7 @@ renderVerseSet(dc69_ch1Verses, 'dc69-ch1-verses');
 
 
 var dc70_ch1Verses = [
-  { num: "א", words: [
-    ["הִנֵּה","behold"],
-    ["וְהַאֲזִינוּ","and hearken"],
-    ["יוֹשְׁבֵי","O inhabitants of"],
-    ["צִיּוֹן","Zion"],
-    ["וְכׇל","and all"],
-    ["עַם","(the) people of"],
-    ["עֲדָתִי","my church"],
-    ["הָרְחוֹקִים","who are afar off"],
-    ["וְשִׁמְעוּ","and hear"],
-    ["אֶת־דְּבַר","(the) word of"],
-    ["יְהוָה","the Lord"],
-    ["אֲשֶׁר","which"],
-    ["אֲנִי","I"],
-    ["נוֹתֵן","give"],
-    ["לְעַבְדִּי","unto my servant"],
-    ["יוֹסֵף","Joseph"],
-    ["סְמִית","Smith"],
-    ["הַבֵּן","the son (Jun.)"],
-    ["וְגַם","and also"],
-    ["לְעַבְדִּי","unto my servant"],
-    ["מַרְטִין","Martin"],
-    ["הֶרִיס","Harris"],
-    ["וְגַם","and also"],
-    ["לְעַבְדִּי","unto my servant"],
-    ["אוֹלִיבֶר","Oliver"],
-    ["קַאוּדְרִי","Cowdery"],
-    ["וְגַם","and also"],
-    ["לְעַבְדִּי","unto my servant"],
-    ["ג'ון","John"],
-    ["וִיטְמֵר","Whitmer"],
-    ["וְגַם","and also"],
-    ["לְעַבְדִּי","unto my servant"],
-    ["סִידְנִי","Sidney"],
-    ["רִיגְדּוֹן","Rigdon"],
-    ["וְגַם","and also"],
-    ["לְעַבְדִּי","unto my servant"],
-    ["וִילְיָם","William"],
-    ["ו.","W."],
-    ["פֶלְפְּס","Phelps"],
-    ["בְּדֶרֶךְ","by way of"],
-    ["מִצְוָה","commandment"],
-    ["אֲלֵיהֶם׃","unto them"]
-  ]},
+  { num: "א", words: [["הִנֵּה","behold"], ["וְהַאֲזִינוּ","and hearken"], ["יוֹשְׁבֵי","O inhabitants of"], ["צִיּוֹן","Zion"], ["וְכׇל","and all"], ["עַם","(the) people of"], ["עֲדָתִי","my church"], ["הָרְחוֹקִים","who are afar off"], ["וְשִׁמְעוּ","and hear"], ["אֶת־דְּבַר","(the) word of"], ["יְהוָה","the Lord"], ["אֲשֶׁר","which"], ["אֲנִי","I"], ["נוֹתֵן","give"], ["לְעַבְדִּי","unto my servant"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["וְגַם","and also"], ["לְעַבְדִּי","unto my servant"], ["מַרְטִין","Martin"], ["הֶרִיס","Harris"], ["וְגַם","and also"], ["לְעַבְדִּי","unto my servant"], ["אוֹלִיבֶר","Oliver"], ["קַאוּדְרִי","Cowdery"], ["וְגַם","and also"], ["לְעַבְדִּי","unto my servant"], ["ג'ון","John"], ["וִיטְמֵר","Whitmer"], ["וְגַם","and also"], ["לְעַבְדִּי","unto my servant"], ["סִידְנִי","Sidney"], ["רִיגְדּוֹן","Rigdon"], ["וְגַם","and also"], ["לְעַבְדִּי","unto my servant"], ["וִילְיָם","William"], ["ו.","W."], ["פֶלְפְּס","Phelps"], ["בְּדֶרֶךְ","by way of"], ["מִצְוָה","commandment"], ["אֲלֵיהֶם׃","unto them"]]},
   { num: "ב", words: [
     ["כִּי","for"],
     ["אֲנִי","I"],

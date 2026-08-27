@@ -858,21 +858,7 @@ var dc25_ch1Verses = [
     ["לְעֵת","in a time"],
     ["תָּבוֹא׃","to come"]
   ]},
-  { num: "ה", words: [
-    ["וּמִשְׂרַת","and the office of"],
-    ["קְרִיאָתֵךְ","thy calling"],
-    ["תִּהְיֶה","thy calling shall be"],
-    ["לְנַחֵם","for a comfort unto"],
-    ["אֶת־עַבְדִּי","my servant"],
-    ["יוֹסֵף","Joseph"],
-    ["סְמִית","Smith"],
-    ["בַּעְלֵךְ","thy husband"],
-    ["בְּצָרוֹתָיו","in his afflictions"],
-    ["בְּדִבְרֵי","with words of"],
-    ["תַנְחוּמִים","consolation"],
-    ["בְּרוּחַ","in the spirit of"],
-    ["עֲנָוָה׃","meekness"]
-  ]},
+  { num: "ה", words: [["וּמִשְׂרַת","and the office of"], ["קְרִיאָתֵךְ","thy calling"], ["תִּהְיֶה","thy calling shall be"], ["לְנַחֵם","for a comfort unto"], ["אֶת־עַבְדִּי","my servant"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["בַּעְלֵךְ","thy husband"], ["בְּצָרוֹתָיו","in his afflictions"], ["בְּדִבְרֵי","with words of"], ["תַנְחוּמִים","consolation"], ["בְּרוּחַ","in the spirit of"], ["עֲנָוָה׃","meekness"]]},
   { num: "ו", words: [
     ["וְתֵלְכִי","and thou shalt go"],
     ["עִמּוֹ","with him"],
@@ -1222,28 +1208,7 @@ var dc27_ch1Verses = [
     ["רוּחַ","with the spirit of"],
     ["אֵלִיָּס׃","Elias"]
   ]},
-  { num: "ח", words: [
-    ["אֲשֶׁר","which"],
-    ["יוֹחָנָן","John"],
-    ["זֶה",""],
-    ["שְׁלַחְתִּיו","I have sent"],
-    ["אֲלֵיכֶם","unto you"],
-    ["עֲבָדַי","my servants"],
-    ["יוֹסֵף","Joseph"],
-    ["סְמִית","Smith"],
-    ["וְאוֹלִיבֶר","and Oliver"],
-    ["קַאוּדְרִי","Cowdery"],
-    ["לִסְמֹךְ","to ordain"],
-    ["אֶתְכֶם","you"],
-    ["לַכְּהֻנָּה","unto the priesthood"],
-    ["הָרִאשׁוֹנָה","first"],
-    ["אֲשֶׁר","which"],
-    ["קִבַּלְתֶּם","you have received"],
-    ["לְמַעַן","that"],
-    ["תִּקָּרְאוּ","you might be called"],
-    ["וְתִסָּמְכוּ","and ordained"],
-    ["כְּאַהֲרֹן׃","even as Aaron"]
-  ]},
+  { num: "ח", words: [["אֲשֶׁר","which"], ["יוֹחָנָן","John"], ["זֶה",""], ["שְׁלַחְתִּיו","I have sent"], ["אֲלֵיכֶם","unto you"], ["עֲבָדַי","my servants"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["וְאוֹלִיבֶר","and Oliver"], ["קַאוּדְרִי","Cowdery"], ["לִסְמֹךְ","to ordain"], ["אֶתְכֶם","you"], ["לַכְּהֻנָּה","unto the priesthood"], ["הָרִאשׁוֹנָה","first"], ["אֲשֶׁר","which"], ["קִבַּלְתֶּם","you have received"], ["לְמַעַן","that"], ["תִּקָּרְאוּ","you might be called"], ["וְתִסָּמְכוּ","and ordained"], ["כְּאַהֲרֹן׃","even as Aaron"]]},
   { num: "ט", words: [
     ["וְגַם","and also"],
     ["אֵלִיָּהוּ","Elijah"],
