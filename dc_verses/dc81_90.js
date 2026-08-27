@@ -1966,7 +1966,7 @@ var dc84_ch1Verses = [
     ["לָהֶן","unto them"],
     ["אוֹ","or"],
     ["יַעֲשׂוּ","make use"],
-    ["בּוֹ","of it"],
+    ["בוֹ","of it"],
     ["לְטוֹבָתָן","for their benefit"],
     ["כַּאֲשֶׁר","as"],
     ["יְהוָה","the LORD"],

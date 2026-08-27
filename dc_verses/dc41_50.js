@@ -1308,7 +1308,7 @@ var dc43_ch1Verses = [
     ["סְמִית","Smith"],
     ["הַבֵּן","Jun."],
     ["וְתִמְכוּ","and uphold"],
-    ["בּוֹ","him"],
+    ["בוֹ","him"],
     ["לְפָנַי","before me"],
     ["בִּתְפִלַּת","by the prayer of"],
     ["אֱמוּנָה׃","faith"]
@@ -2941,7 +2941,7 @@ var dc46_ch1Verses = [
     ["הָעוֹלָם׃","the world"]
   ]},
   { num: "ד", words: [["גַּם","also"], ["מְצֻוִּים","(you are) commanded"], ["אַתֶּם","you"], ["לֹא","not"], ["לְהוֹצִיא","to cast out"], ["מֵאֲסֵפוֹת","from the meetings of"], ["הַסְּעוּדָה","the sacrament"], ["הַקְּדוֹשָׁה","(the) holy"], ["אִישׁ","any one"], ["אֲשֶׁר","who belongs"], ["לַכְּנֵסִיָּה","to the church"], ["אַךְ","nevertheless"], ["אִם","if"], ["חָטָא","(any) have trespassed"], ["אַל","(let) not"], ["יֹאכַל","him partake"], ["עַד","until"], ["יִתְרַצֶּה׃","(he makes reconciliation)"]]},
-  { num: "ה", words: [["וְעוֹד","and again"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["לֹא","not"], ["תּוֹצִיאוּ","you shall cast"], ["מֵאֲסֵפוֹת","(out) from the meetings of"], ["הַסְּעוּדָה","the sacrament"], ["הַקְּדוֹשָׁה","(the) holy"], ["אֶת־הַמְבַקְּשִׁים","those who seek"], ["בְּכׇל־לֵב","with all the heart"], ["אֶת־הַמַּלְכוּת","the kingdom"], ["וְעַל","and concerning"], ["אֲשֶׁר","those who"], ["אֵינָם","are not"], ["מִן","of"], ["הַכְּנֵסִיָּה","the church"], ["אֲנִי","I"], ["מְדַבֵּר׃","speak (this)"]]},
+  { num: "ה", words: [["וְעוֹד","and again"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["לֹא","not"], ["תוֹצִיאוּ","you shall cast"], ["מֵאֲסֵפוֹת","(out) from the meetings of"], ["הַסְּעוּדָה","the sacrament"], ["הַקְּדוֹשָׁה","(the) holy"], ["אֶת־הַמְבַקְּשִׁים","those who seek"], ["בְּכׇל־לֵב","with all the heart"], ["אֶת־הַמַּלְכוּת","the kingdom"], ["וְעַל","and concerning"], ["אֲשֶׁר","those who"], ["אֵינָם","are not"], ["מִן","of"], ["הַכְּנֵסִיָּה","the church"], ["אֲנִי","I"], ["מְדַבֵּר׃","speak (this)"]]},
   { num: "ו", words: [["וְעוֹד","and again"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["עַל","concerning"], ["אֲסֵפוֹת","the meetings of"], ["הַסְּמִיכָה","confirmation"], ["אִם","if"], ["יֵשׁ","there be"], ["אֲשֶׁר","(any) that"], ["אֵינָם","are not"], ["מִן","of"], ["הַכְּנֵסִיָּה","the church"], ["הַמְבַקְּשִׁים","(who) seek"], ["בְּכׇל־לֵב","with all the heart"], ["אֶת־הַמַּלְכוּת","the kingdom"], ["לֹא","(you shall) not"], ["תוֹצִיאוּם׃","(cast them out)"]]},
   { num: "ז", words: [
     ["אַךְ","but"],
@@ -3343,7 +3343,7 @@ var dc48_ch1Verses = [
     ["יִגָּלֶה","(to be) revealed"],
     ["אַךְ","but"],
     ["אַחֲרֵי","after"],
-    ["בּוֹא","(the) coming of"],
+    ["בוֹא","(the) coming of"],
     ["אֲחֵיכֶם","your brethren"],
     ["מִן","from"],
     ["הַמִּזְרָח","the east"],
@@ -3753,7 +3753,7 @@ var dc49_ch1Verses = [
   { num: "כד", words: [
     ["אַךְ","but"],
     ["לִפְנֵי","before"],
-    ["בּוֹא","(the) coming of"],
+    ["בוֹא","(the) coming of"],
     ["יוֹם","(the) day of"],
     ["יְהוָה","the Lord"],
     ["הַגָּדוֹל","the great"],
@@ -4048,7 +4048,7 @@ var dc50_ch1Verses = [
     ["לָכֵן","therefore"],
     ["לָמָה","why"],
     ["לֹא","not"],
-    ["תּוּכְלוּ","(can) you"],
+    ["תוּכְלוּ","(can) you"],
     ["לְהָבִין","understand"],
     ["וְלָדַעַת","and know"],
     ["כִּי","that"],
@@ -4206,7 +4206,7 @@ var dc50_ch1Verses = [
     ["מִתְגַּלָּה","manifested"],
     ["אֲשֶׁר","which"],
     ["לֹא","not"],
-    ["תּוּכְלוּ","(can) you"],
+    ["תוּכְלוּ","(can) you"],
     ["לְהָבִין","understand"],
     ["וְלֹא","and not"],
     ["תְקַבְּלוּ","you receive"],
@@ -4312,7 +4312,7 @@ var dc50_ch1Verses = [
     ["נִסְלְחוּ","are forgiven"],
     ["לָכֶם׃","unto you"]
   ]},
-  { num: "לז", words: [["עַבְדִּי","my servant"], ["יוֹסֵף","Joseph"], ["וֵיקְפִילְד","Wakefield"], ["אֲשֶׁר","in whom"], ["רָצִיתִי","I am pleased"], ["בּוֹ","with him"], ["וְעַבְדִּי","and my servant"], ["פַּרְלִי","Parley"], ["פִּ.","P."], ["פְּרֶט","Pratt"], ["יֵלְכוּ","(let them) go forth"], ["בֵּין","among"], ["הַכְּנֵסִיּוֹת","the churches"], ["וִיחַזְּקוּן","and strengthen them"], ["בִּדְבַר","by (the) word of"], ["הַתּוֹכֵחָה׃","exhortation"]]},
+  { num: "לז", words: [["עַבְדִּי","my servant"], ["יוֹסֵף","Joseph"], ["וֵיקְפִילְד","Wakefield"], ["אֲשֶׁר","in whom"], ["רָצִיתִי","I am pleased"], ["בוֹ","with him"], ["וְעַבְדִּי","and my servant"], ["פַּרְלִי","Parley"], ["פִּ.","P."], ["פְּרֶט","Pratt"], ["יֵלְכוּ","(let them) go forth"], ["בֵּין","among"], ["הַכְּנֵסִיּוֹת","the churches"], ["וִיחַזְּקוּן","and strengthen them"], ["בִּדְבַר","by (the) word of"], ["הַתּוֹכֵחָה׃","exhortation"]]},
   { num: "לח", words: [["וְגַם","and also"], ["עַבְדִּי","my servant"], ["ג׳וֹן","John"], ["קוֹרִיל","Corrill"], ["אוֹ","or"], ["כׇּל","all"], ["עֲבָדַי","my servants"], ["אֲשֶׁר","which"], ["נִסְמְכוּ","are ordained"], ["לָעֲבוֹדָה","unto the office"], ["הַזֹּאת","this"], ["יַעַבְדוּ","let them labor"], ["בַּכֶּרֶם","in the vineyard"], ["וְאַל","and (let) not"], ["יִמְנַע","hinder"], ["אִישׁ","(any) man"], ["אוֹתָם","them"], ["מֵעֲשׂוֹת","(hinder them) from doing"], ["אֲשֶׁר","which"], ["מִנִּיתִי","I have appointed"], ["לָהֶם׃","unto them"]]},
   { num: "לט", words: [
     ["לָכֵן","wherefore"],
@@ -4334,7 +4334,7 @@ var dc50_ch1Verses = [
     ["קְטַנִּים","little"],
     ["אַתֶּם","you (are)"],
     ["וְלֹא","and not"],
-    ["תּוּכְלוּ","(can) you"],
+    ["תוּכְלוּ","(can) you"],
     ["לָשֵׂאת","bear"],
     ["הַכֹּל","all things"],
     ["עַתָּה","now"],

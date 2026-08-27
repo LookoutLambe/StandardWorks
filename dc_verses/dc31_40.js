@@ -104,7 +104,7 @@ var dc31_ch1Verses = [
     ["תָּמִיד","always"],
     ["פֶּן","lest"],
     ["תָּבוֹא","you enter"],
-    ["בְּמַסָּה","into temptation"],
+    ["בְמַסָּה","into temptation"],
     ["וּתְאַבֵּד","and lose"],
     ["שְׂכָרֶךָ׃","your reward"]
   ]},
@@ -495,8 +495,8 @@ var dc34_ch1Verses = [
     ["אֶת־נַפְשׁוֹ","his own life"],
     ["לְמַעַן","that"],
     ["יִהְיוּ","might become"],
-    ["כׇּל","as many as"],
-    ["הַמַּאֲמִינִים","would believe"],
+    ["כׇּל","all"],
+    ["הַמַּאֲמִינִים","who believe"],
     ["בְּנֵי","the sons of"],
     ["הָאֱלֹהִים","God"],
     ["לָכֵן","wherefore"],
@@ -524,7 +524,7 @@ var dc34_ch1Verses = [
     ["קוֹלְךָ","your voice"],
     ["כְּקוֹל","as with the sound of"],
     ["שׁוֹפָר","a trump"],
-    ["אָרֹךְ","both long"],
+    ["אָרֹךְ","long"],
     ["וְחָזָק","and loud"],
     ["וְלִקְרֹא","and cry"],
     ["תְשׁוּבָה","repentance"],
@@ -545,7 +545,7 @@ var dc34_ch1Verses = [
     ["אֲנִי","I"],
     ["אֹמֵר","say"],
     ["לָכֶם","unto you"],
-    ["קָרְבָה","is soon at hand"],
+    ["קָרְבָה","is at hand"],
     ["הָעֵת","the time"],
     ["אֲשֶׁר","that"],
     ["אָבוֹא","I shall come"],
@@ -562,14 +562,14 @@ var dc34_ch1Verses = [
     ["בּוֹאִי","my coming"],
     ["כִּי","for"],
     ["כׇל","all"],
-    ["הַגּוֹיִם","nations"],
+    ["הַגּוֹיִם","the nations"],
     ["יֶחֱרָדוּ׃","shall tremble"]
   ]},
   { num: "ט", words: [
     ["אַךְ","but"],
     ["לִפְנֵי","before"],
-    ["בּוֹא","shall come"],
-    ["הַיּוֹם","day"],
+    ["בוֹא","shall come"],
+    ["הַיּוֹם","the day"],
     ["הַגָּדוֹל","great"],
     ["הַהוּא","that"],
     ["יֶחְשַׁךְ","shall be darkened"],
@@ -1297,7 +1297,7 @@ var dc38_ch1Verses = [
     ["אֲנִי","I am"],
     ["בְּקִרְבְּכֶם","in your midst"],
     ["וְלֹא","and not"],
-    ["תּוּכְלוּ","you cannot"],
+    ["תוּכְלוּ","you cannot"],
     ["לִרְאוֹתִי׃","see me"]
   ]},
   { num: "ח", words: [
@@ -1350,7 +1350,7 @@ var dc38_ch1Verses = [
     ["אַחֵר","else"],
     ["אֲשֶׁר","with whom"],
     ["חָפַצְתִּי","I am well pleased"],
-    ["בּוֹ׃",""]
+    ["בוֹ׃",""]
   ]},
   { num: "יא", words: [
     ["כִּי","for"],

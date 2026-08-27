@@ -2229,7 +2229,7 @@ var dc8_ch1Verses = [
     ["בְּאֵין","without"],
     ["אֱמוּנָה","faith"],
     ["לֹא","not"],
-    ["תּוּכַל","you can"],
+    ["תוּכַל","you can"],
     ["לַעֲשׂוֹת","to do"],
     ["מְאוּמָה","anything"],
     ["עַל־כֵּן","therefore"],
@@ -2268,7 +2268,7 @@ renderVerseSet(dc8_ch1Verses, 'dc8-ch1-verses');
 
 
 var dc9_ch1Verses = [
-  { num: "א", words: [["הִנֵּה","behold"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לְךָ","to you"], ["בְּנִי","my son"], ["יַעַן","because"], ["לֹא","not"], ["תִרְגַּמְתָּ","you translated"], ["כַּאֲשֶׁר","as"], ["חָפַצְתָּ","you desired"], ["מִמֶּנִּי","of me"], ["וְשַׁבְתָּ","and you returned"], ["לִכְתֹּב","to write"], ["לְעַבְדִּי","for my servant"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["כֵּן","so"], ["אֶחְפֹּץ","I desire"], ["כִּי","that"], ["תּוֹסִיף","you continue"], ["עַד","until"], ["כַּלּוֹתְךָ","your finishing"], ["אֶת־הַכְּתָב","the record"], ["הַזֶּה","this"], ["אֲשֶׁר","which"], ["הָפְקַדְתִּי","I have entrusted"], ["בְיָדוֹ׃","in his hand"]]},
+  { num: "א", words: [["הִנֵּה","behold"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לְךָ","to you"], ["בְּנִי","my son"], ["יַעַן","because"], ["לֹא","not"], ["תִרְגַּמְתָּ","you translated"], ["כַּאֲשֶׁר","as"], ["חָפַצְתָּ","you desired"], ["מִמֶּנִּי","of me"], ["וְשַׁבְתָּ","and you returned"], ["לִכְתֹּב","to write"], ["לְעַבְדִּי","for my servant"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["כֵּן","so"], ["אֶחְפֹּץ","I desire"], ["כִּי","that"], ["תוֹסִיף","you continue"], ["עַד","until"], ["כַּלּוֹתְךָ","your finishing"], ["אֶת־הַכְּתָב","the record"], ["הַזֶּה","this"], ["אֲשֶׁר","which"], ["הָפְקַדְתִּי","I have entrusted"], ["בְיָדוֹ׃","in his hand"]]},
   { num: "ב", words: [
     ["וְאַחַר","and afterward"],
     ["הִנֵּה","behold"],
@@ -2381,7 +2381,7 @@ var dc9_ch1Verses = [
     ["נָכוֹן","right"],
     ["עַל־כֵּן","wherefore"],
     ["לֹא","not"],
-    ["תּוּכַל","you can"],
+    ["תוּכַל","you can"],
     ["לִכְתֹּב","to write"],
     ["קֹדֶשׁ","a sacred thing"],
     ["בִּלְתִּי","except"],
@@ -3016,13 +3016,13 @@ var dc10_ch1Verses = [
     ["אַךְ","but"],
     ["יַעַן","because"],
     ["לֹא","not"],
-    ["תּוּכַל","you can"],
+    ["תוּכַל","you can"],
     ["תָּמִיד","always"],
     ["לִשְׁפֹּט","to judge"],
     ["אֶת־הַצַּדִּיקִים","the righteous"],
     ["אוֹ","or"],
     ["לֹא","not"],
-    ["תּוּכַל","you can"],
+    ["תוּכַל","you can"],
     ["תָּמִיד","always"],
     ["לְהַבְחִין","to distinguish"],
     ["בֵּין","between"],

@@ -662,7 +662,7 @@ var dc29_ch1Verses = [
     ["אֹמֵר","say"],
     ["לָכֶם","unto you"],
     ["לִפְנֵי","that before"],
-    ["בּוֹא","shall come"],
+    ["בוֹא","shall come"],
     ["הַיּוֹם","day"],
     ["הַגָּדוֹל","great"],
     ["הַזֶּה","this"],

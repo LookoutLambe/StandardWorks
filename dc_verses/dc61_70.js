@@ -1093,7 +1093,7 @@ var dc63_ch1Verses = [
     ["מַלְכוּתִי","my kingdom"],
     ["וְהֵם","and they"],
     ["יִהְיוּ","shall be"],
-    ["בּוֹ","in him"],
+    ["בוֹ","in him"],
     ["מַעְיַן","a well of"],
     ["מַיִם","water"],
     ["חַיִּים","living"],

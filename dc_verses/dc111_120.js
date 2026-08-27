@@ -1756,7 +1756,7 @@ renderVerseSet(dc118_ch1Verses, 'dc118-ch1-verses');
 
 
 var dc119_ch1Verses = [
-  { num: "א", words: [["אָמֵן","Verily,"], ["כֹּה","thus"], ["אָמַר","says"], ["יְהוָה","the Lord,"], ["אֲנִי","I"], ["דּוֹרֵשׁ","require"], ["אֶת־כׇּל־עֹדֶף","all ... surplus"], ["נִכְסֵיהֶם","their ... property"], ["לָתֵת","to be put"], ["בְּיַד","into the hands of"], ["פָּקִיד","the bishop of"], ["כְּנֵסִיָּתִי","my church"], ["בְּצִיּוֹן׃","in Zion,"]]},
+  { num: "א", words: [["אָמֵן","Verily,"], ["כֹּה","thus"], ["אָמַר","says"], ["יְהוָה","the Lord,"], ["אֲנִי","I"], ["דוֹרֵשׁ","require"], ["אֶת־כׇּל־עֹדֶף","all ... surplus"], ["נִכְסֵיהֶם","their ... property"], ["לָתֵת","to be put"], ["בְּיַד","into the hands of"], ["פָּקִיד","the bishop of"], ["כְּנֵסִיָּתִי","my church"], ["בְּצִיּוֹן׃","in Zion,"]]},
   { num: "ב", words: [["לִבְנוֹת","For the building of"], ["אֶת־בֵּיתִי","my house,"], ["וּלְיַסֵּד","and for the laying of"], ["יְסוֹד","the foundation of"], ["צִיּוֹן","Zion"], ["וְלַכְּהֻנָּה","and for the priesthood,"], ["וּלְחוֹבוֹת","and for the debts of"], ["נְשִׂיאוּת","the Presidency of"], ["כְּנֵסִיָּתִי׃","my Church."]]},
   { num: "ג", words: [
     ["וְזֹאת","And this"],

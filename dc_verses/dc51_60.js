@@ -1041,7 +1041,7 @@ var dc54_ch1Verses = [
     ["לָכֶם","for you"],
     ["מָקוֹם׃","a place"]
   ]},
-  { num: "י", words: [["וְעוֹד","and again"], ["הִתְאַזְּרוּ","gird yourselves up"], ["בְּאֹרֶךְ־אַפַּיִם","in patience"], ["בַּצָּרָה","in tribulation"], ["עַד","until"], ["בּוֹאִי","my coming"], ["וְהִנֵּה","and behold"], ["בָּא","(I) come"], ["אֲנִי","I"], ["מַהֵר","quickly"], ["וּשְׂכָרִי","and my reward"], ["אִתִּי","with me"], ["וּמְשַׁחֲרַי","and they who seek me early"], ["יִמְצְאוּ","shall find"], ["מַרְגּוֹעַ","rest"], ["לְנַפְשָׁם","to their souls"], ["כֵּן","even so"], ["יְהִי","(may it) be"], ["אָמֵן׃","amen"]]}
+  { num: "י", words: [["וְעוֹד","and again"], ["הִתְאַזְּרוּ","gird yourselves up"], ["בְּאֹרֶךְ־אַפַּיִם","in patience"], ["בַּצָּרָה","in tribulation"], ["עַד","until"], ["בוֹאִי","my coming"], ["וְהִנֵּה","and behold"], ["בָּא","(I) come"], ["אֲנִי","I"], ["מַהֵר","quickly"], ["וּשְׂכָרִי","and my reward"], ["אִתִּי","with me"], ["וּמְשַׁחֲרַי","and they who seek me early"], ["יִמְצְאוּ","shall find"], ["מַרְגּוֹעַ","rest"], ["לְנַפְשָׁם","to their souls"], ["כֵּן","even so"], ["יְהִי","(may it) be"], ["אָמֵן׃","amen"]]}
 ];
 renderVerseSet(dc54_ch1Verses, 'dc54-ch1-verses');
 
@@ -1760,7 +1760,7 @@ var dc58_ch1Verses = [
   ]},
   { num: "ג", words: [
     ["לֹא","not"],
-    ["תּוּכְלוּ","you can"],
+    ["תוּכְלוּ","you can"],
     ["לִרְאוֹת","behold"],
     ["בְּעֵינֵיכֶם","with your eyes"],
     ["הַנַּפְשִׁיּוֹת","natural"],
@@ -2327,7 +2327,7 @@ var dc58_ch1Verses = [
     ["יְהוָה","the Lord"],
     ["אֵינֶנִּי","am not"],
     ["רָצוּי","pleased"],
-    ["בּוֹ","with him"],
+    ["בוֹ","with him"],
     ["כִּי","for"],
     ["מְבַקֵּשׁ","(he) seeks"],
     ["לְהִתְגַּדֵּל","to excel"],
