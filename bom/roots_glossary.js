@@ -1,4 +1,12 @@
 window._rootGlossaryData = {
+  "שנים": {
+    "meaning": "two",
+    "category": "Number"
+  },
+  "שמנה": {
+    "meaning": "eight",
+    "category": "Number"
+  },
   "הילמן": {
     "meaning": "Helaman",
     "category": "Uncategorized"
@@ -717,7 +725,7 @@ window._rootGlossaryData = {
     "category": "Person"
   },
   "אחד": {
-    "meaning": "one",
+    "meaning": "one, a single",
     "category": "Uncategorized"
   },
   "ישוע": {
@@ -1760,7 +1768,7 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "שש": {
-    "meaning": "six",
+    "meaning": "six; (שֵׁשׁ) fine linen",
     "category": "Uncategorized"
   },
   "כו": {
@@ -3652,7 +3660,7 @@ window._rootGlossaryData = {
     "category": "Time"
   },
   "אלף": {
-    "meaning": "one thousand",
+    "meaning": "thousand",
     "category": "Uncategorized"
   },
   "עד־עולם": {
@@ -6292,7 +6300,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "שבע": {
-    "meaning": "to swear; seven",
+    "meaning": "seven; to swear, take an oath",
     "category": "Action"
   },
   "צמח": {
@@ -19153,7 +19161,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "שלש": {
-    "meaning": "against three",
+    "meaning": "three",
     "category": "Uncategorized"
   },
   "נתיו": {

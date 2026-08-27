@@ -312,8 +312,16 @@ function stripPrefixes(w) {
   function baseRoot(sNum) {
     if (!_baseOf) {
       _baseOf = {};
+      // Cardinal numerals are primitive lexemes and must not be dissolved into
+      // verbs. Strong's chains תֵּשַׁע nine into שָׁעָה "gaze", שְׁמֹנֶה eight
+      // into שָׁמַן "oil", אַרְבַּע four into רָבַע — so a reader tapping a
+      // number in a genealogy was shown an unrelated verb.
+      var NUMERAL = {H0259:1,H8147:1,H7969:1,H0702:1,H2568:1,H8337:1,H7651:1,
+                     H8083:1,H8672:1,H6235:1,H3967:1,H0505:1,H7239:1,H6242:1,
+                     H7970:1,H0705:1,H2572:1,H8346:1,H7657:1,H8084:1,H8673:1};
       if (window._strongsRoots) {
         for (var n in _strongsRoots) {
+          if (NUMERAL[n]) { _baseOf[n] = n; continue; }
           var cur = n, seen = {};
           while (_strongsRoots[cur] && _strongsRoots[cur].r &&
                  _strongsRoots[cur].r !== cur && !seen[cur]) {

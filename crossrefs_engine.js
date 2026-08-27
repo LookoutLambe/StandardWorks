@@ -1061,15 +1061,16 @@
       var sEntry = window._strongsRoots[root];
       displayRoot = sEntry.w || root;
       rootTranslit = (typeof transliterate === 'function' && sEntry.w ? transliterate(sEntry.w) : '') || sEntry.x || '';
-      engMeaning = sEntry.g || '';
-      if (!engMeaning) {
-        var glossEntry = window._rootGlossaryData && window._rootGlossaryData[displayRoot];
-        if (!glossEntry) {
-          var stripped = displayRoot.replace(/[\u0591-\u05C7]/g, '');
-          glossEntry = window._rootGlossaryData && window._rootGlossaryData[stripped];
-        }
-        engMeaning = glossEntry ? glossEntry.meaning : '';
+      // Curated glossary first, Strong's abridged gloss only as a last resort —
+      // the same order the popup uses. Taking Strong's first meant the Study
+      // panel showed חָלַם as "be" and שׁוּב as "again" no matter what the
+      // glossary said.
+      var glossEntry = window._rootGlossaryData && window._rootGlossaryData[displayRoot];
+      if (!glossEntry) {
+        var stripped = displayRoot.replace(/[\u0591-\u05C7]/g, '');
+        glossEntry = window._rootGlossaryData && window._rootGlossaryData[stripped];
       }
+      engMeaning = (glossEntry && glossEntry.meaning) || sEntry.g || '';
     } else {
       var glossEntry = window._rootGlossaryData && window._rootGlossaryData[root];
       engMeaning = glossEntry ? glossEntry.meaning : '';
