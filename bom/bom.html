@@ -3868,7 +3868,7 @@ body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
 <script src="../root_names.js?v=10"></script>
 <script src="../xref_common.js?v=2"></script>
 <script src="../verse_loader.js?v=4"></script>
-<script src="../root_scorecard.js?v=22"></script>
+<script src="../root_scorecard.js?v=23"></script>
 <script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
 <script src="crossrefs.js?v=23"></script>
 <script src="roots_glossary.js?v=23"></script>
@@ -7781,7 +7781,7 @@ document.addEventListener('keydown', function(e) {
   }
   var _rePre = /^(וכש|ומ|וב|ול|וכ|וה|כש|לכ|מה|בה|כה|לה|ו|ה|ב|כ|ל|מ|ש)/;
   var _sufs = ['ותיהם','ותיכם','ותינו','ותיה','ותיו','ותם','ותן','ותי','יהם','יכם',
-               'ינו','תיו','נו','כם','הם','הן','תי','יו','יה','ים','ות','ם','ן','ו','ה','י','ך'];
+               'ינו','תיו','נו','כם','הם','הן','תי','יו','יה','ים','ות','ת','ם','ן','ו','ה','י','ך'];
   var _particles = {'את':1,'אל':1,'על':1,'מן':1,'עד':1,'כל':1,'לא':1,'ואת':1,'ואל':1};
   function _clean(s) { return String(s || '').replace(/[׃׀"'`]/g, '').trim(); }
   function _pieces(s) { return _clean(s).split(/[־\s]+/).filter(Boolean); }
@@ -7938,7 +7938,7 @@ document.addEventListener('keydown', function(e) {
   // their own one-occurrence entries — חִנְּכוּנִי ("taught me", Piel + 1cs object
   // suffix) was filed as the root "חנכוני", which is not a word.
   var _mSuf = ['ותיהם','ותינו','ותיכם','וני','ניו','תיו','יהם','יכם','ינו','ני',
-               'נו','הו','תי','תם','תן','כם','הם','הן','ים','ות','ם','ן','ו','ה','י','ך'];
+               'נו','הו','תי','תם','תן','כם','הם','הן','ים','ות','ת','ם','ן','ו','ה','י','ך'];
   var _mPre = ['וכש','ומ','וב','ול','וכ','וה','כש','ו','ה','ב','כ','ל','מ','ש'];
   function rootByMorphology(w) {
     var LI = lemmaIndex(), c = normFinals(stripNikkud(w));
