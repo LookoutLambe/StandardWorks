@@ -8569,6 +8569,17 @@ function renderGlossaryList() {
   });
 
   // Sort
+  // A search naming a root exactly should return that root, not every root it
+  // is a prefix of: "חלם" listed חַלָּמִישׁ (flint) beside חָלַם.
+  if (searchVal) {
+    var svExactNarrow = normFinals(searchVal.replace(/[֑-ֽֿ-׀׃-ׇ]/g, ''));
+    var exactHits = filtered.filter(function(e) {
+      var r0 = normFinals(String(e.root || '').replace(/[֑-ֽֿ-׀׃-ׇ]/g, ''));
+      var d0 = normFinals(String(e.displayHeb || '').replace(/[֑-ֽֿ-׀׃-ׇ]/g, ''));
+      return r0 === svExactNarrow || d0 === svExactNarrow;
+    });
+    if (exactHits.length) filtered = exactHits;
+  }
   if (sortVal === 'freq-desc') filtered.sort(function(a,b) { return b.count - a.count; });
   else if (sortVal === 'freq-asc') filtered.sort(function(a,b) { return a.count - b.count; });
   else if (sortVal === 'alpha-heb') filtered.sort(function(a,b) { return a.root.localeCompare(b.root,'he'); });
