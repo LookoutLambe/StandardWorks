@@ -153,7 +153,7 @@ var dc11_ch1Verses = [
     ["וְזֹאת","and this is"],
     ["רוּחִי׃","my Spirit"]
   ]},
-  { num: "יג", words: [["אָמֵן","verily"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","to you"], ["אֶתֵּן","I will give"], ["לָכֶם","to you"], ["מֵרוּחִי","of my Spirit"], ["אֲשֶׁר","which"], ["תָּאִיר","shall enlighten"], ["לְבַבְכֶם","your mind"], ["אֲשֶׁר","which"], ["תְּמַלֵּא","shall fill"], ["נַפְשְׁכֶם","your soul"], ["שִׂמְחָה׃","with joy"]]},
+  { num: "יג", words: [["אָמֵן","verily"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לְךָ","to you"], ["אֶתֵּן","I will give"], ["לְךָ","to you"], ["מֵרוּחִי","of my Spirit"], ["אֲשֶׁר","which"], ["תָּאִיר","shall enlighten"], ["לְבָבְךָ","your mind"], ["אֲשֶׁר","which"], ["תְּמַלֵּא","shall fill"], ["נַפְשְׁךָ","your soul"], ["שִׂמְחָה׃","with joy"]]},
   { num: "יד", words: [
     ["וְאָז","and then"],
     ["תֵּדְעוּ","you shall know"],
@@ -358,7 +358,7 @@ var dc11_ch1Verses = [
     ["אָמֵן","verily"],
     ["אֲנִי","I"],
     ["אֹמֵר","say"],
-    ["לָכֶם","to you"],
+    ["לְךָ","to you"],
     ["כֹּל","all"],
     ["הַמְקַבְּלִים","those receiving"],
     ["אֹתִי","me"],
@@ -455,7 +455,7 @@ var dc12_ch1Verses = [
     ["הַזֹּאת׃","this"]
   ]},
   { num: "ח", words: [["וְלֹא","and not"], ["יוּכַל","is able"], ["אִישׁ","a man"], ["לַעֲזֹר","to assist"], ["בַּמְּלָאכָה","in the work"], ["הַזֹּאת","this"], ["בִּלְתִּי","except"], ["אִם־יִהְיֶה","if he be"], ["עָנָו","humble"], ["וּמָלֵא","and full of"], ["אַהֲבָה","love"], ["בַּעַל","possessor of"], ["אֱמוּנָה","faith"], ["וְתִקְוָה","and hope"], ["וְחֶסֶד","and charity"], ["מֹשֵׁל","temperate"], ["בְּרוּחוֹ","in his spirit"], ["בְּכׇל־דָּבָר","in every thing"], ["כׇּל","all"], ["אֲשֶׁר","which"], ["יֻפְקַד","shall be entrusted"], ["בְּיָדוֹ׃","in his hand"]]},
-  { num: "ט", words: [["הִנֵּה","behold"], ["אֲנִי","I"], ["הָאוֹר","am the light"], ["וְחַיֵּי","and the life of"], ["הָעוֹלָם","the world"], ["הַמְדַבֵּר","the one speaking"], ["אֶת־הַדְּבָרִים","the words"], ["הָאֵלֶּה","these"], ["עַל־כֵּן","therefore"], ["הַקְשִׁיבוּ","give heed"], ["בְּכֹחֲכֶם","with your might"], ["וְאָז","and then"], ["נִקְרֵאתֶם","you are called"], ["אָמֵן׃","amen"]]}
+  { num: "ט", words: [["הִנֵּה","behold"], ["אֲנִי","I"], ["הָאוֹר","am the light"], ["וְחַיֵּי","and the life of"], ["הָעוֹלָם","the world"], ["הַמְדַבֵּר","the one speaking"], ["אֶת־הַדְּבָרִים","the words"], ["הָאֵלֶּה","these"], ["עַל־כֵּן","therefore"], ["הַקְשִׁיבוּ","give heed"], ["בְּכֹחֲךָ","with your might"], ["וְאָז","and then"], ["נִקְרֵאתֶם","you are called"], ["אָמֵן׃","amen"]]}
 ];
 renderVerseSet(dc12_ch1Verses, 'dc12-ch1-verses');
 
@@ -1137,7 +1137,7 @@ var dc19_ch1Verses = [
     ["שְׁלִיחַי׃","my apostles"]
   ]},
   { num: "ט", words: [
-    ["אֲלֵיכֶם","unto you"],
+    ["אֵלֶיךָ","unto you"],
     ["אֲנִי","I"],
     ["מְדַבֵּר","speak"],
     ["הַנִּבְחָרִים","that are chosen"],

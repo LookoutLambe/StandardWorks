@@ -2586,7 +2586,7 @@ var dc66_ch1Verses = [
     ["וַאֲנִי","and I"],
     ["יְהוָה","the Lord"],
     ["אֵלֵךְ","will go"],
-    ["עִמְּכֶם׃","with you"]
+    ["עִמְּךָ׃","with you"]
   ]},
   { num: "ט", words: [["שִׂים","lay"], ["יָדֶיךָ","your hands"], ["עַל","upon"], ["הַחוֹלִים","the sick"], ["וְיֵרָפְאוּ","and they shall recover"], ["אַל","do not"], ["תָּשֹׁב","return"], ["עַד","until"], ["אֲשֶׁר","that"], ["אֲנִי","I"], ["יְהוָה","the Lord"], ["אֶשְׁלָחֲךָ","shall send you"], ["הֱיֵה","be"], ["אֶרֶךְ־אַפַּיִם","longsuffering"], ["בְּצָרָה","in affliction"], ["שְׁאַל","ask"], ["וְיִנָּתֶן","and it shall be given"], ["לְךָ","unto you"], ["דְּפֹק","knock"], ["וְיִפָּתַח","and it shall be opened"], ["לְךָ׃","unto you"]]},
   { num: "י", words: [
@@ -2643,8 +2643,8 @@ var dc66_ch1Verses = [
     ["כֹּה","thus"],
     ["אָמַר","says"],
     ["יְהוָה","the Lord"],
-    ["אֱלֹהֵיכֶם","your God"],
-    ["גֹּאַלְכֶם","your Redeemer"],
+    ["אֱלֹהֶיךָ","your God"],
+    ["גֹּאַלְךָ","your Redeemer"],
     ["יֵשׁוּעַ","(even) Jesus"],
     ["הַמָּשִׁיחַ","Christ"],
     ["אָמֵן׃","amen"]
