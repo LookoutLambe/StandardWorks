@@ -3457,7 +3457,7 @@ var dc49_ch1Verses = [
     ["כֵן","doing"],
     ["אֲבָרְכֶנּוּ","I will bless him"],
     ["וְאִם","and if"],
-    ["לֹא","he does not"],
+    ["לֹא","not"],
     ["לֹא","not"],
     ["יַצְלִיחַ׃","shall he prosper"]
   ]},
@@ -3634,8 +3634,10 @@ var dc49_ch1Verses = [
     ["וְכׇל","and all"],
     ["זֹאת","this"],
     ["לְמַעַן","that"],
-    ["תִּמְלָא","might be fulfilled"],
-    ["הָאָרֶץ׃","the earth"]
+    ["תַּעֲנֶה","might answer"],
+    ["הָאָרֶץ","the earth"],
+    ["לְתַכְלִית","the end of"],
+    ["בְּרִיאָתָהּ׃","its creation"]
   ]},
   { num: "יז", words: [
     ["וּלְמַעַן","and that"],
@@ -3799,8 +3801,7 @@ var dc49_ch1Verses = [
     ["מִכׇּל","of all"],
     ["חַטֹּאתֵיכֶם","your sins"],
     ["בַּקְּשׁוּ","ask"],
-    ["וְתִנָּתֵן","and it shall be given"],
-    ["לָכֶם","unto you"],
+    ["וּתְקַבְּלוּ","and you shall receive"],
     ["דִּפְקוּ","knock"],
     ["וְיִפָּתַח","and shall be opened"],
     ["לָכֶם׃","unto you"]
@@ -4181,6 +4182,7 @@ var dc50_ch1Verses = [
   { num: "כט", words: [
     ["וְאִם","and if"],
     ["טֹהַרְתֶּם","you are purified"],
+    ["וְנִקֵּיתֶם","and cleansed"],
     ["מִכׇּל","from all"],
     ["חֵטְא","sin"],
     ["תִּשְׁאֲלוּ","you shall ask"],
