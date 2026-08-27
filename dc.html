@@ -668,6 +668,30 @@ body:not(.hide-sel-toolbar) #sel-toolbar{display:flex!important;}
 body.hide-sel-toolbar #sel-toolbar-reopen{display:block;}
 body:not(.hide-sel-toolbar) #main-content{padding-right:60px!important;}
 @media (max-width:600px){body:not(.hide-sel-toolbar) #main-content{padding-right:52px!important;}}
+
+/* -- Dual: Hebrew and English at the same size, split 55/45, and the
+      chapter summary laid out side by side the way the verses are. -- */
+body.dual-mode .verse-english { font-size: 0.85em; flex: 45 1 0; }
+body.dual-mode .word-flow     { flex: 55 1 0; }
+body.dual-mode .hw            { font-size: 1em; }
+body.dual-mode .colophon .word-unit .hw { font-size: 1em; }
+
+body.dual-mode .chapter-heading { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0 14px; }
+body.dual-mode .chapter-heading > h2,
+body.dual-mode .chapter-heading > .chapter-label-en { flex: 0 0 100%; }
+body.dual-mode .chapter-heading > .chapter-summary-en,
+body.dual-mode .chapter-heading > .chapter-summary-he {
+  min-width: 0; max-width: none; text-align: justify; margin-top: 10px;
+}
+body.dual-mode .chapter-heading > .chapter-summary-en {
+  order: 2; flex: 45 1 0; direction: ltr; padding-right: 14px;
+  border-right: 1px solid var(--rule-light);
+}
+body.dual-mode .chapter-heading > .chapter-summary-he { order: 1; flex: 55 1 0; direction: rtl; }
+@media (max-width: 700px) {
+  body.dual-mode .chapter-heading > .chapter-summary-en { font-size: 0.78em; padding-right: 8px; }
+  body.dual-mode .chapter-heading > .chapter-summary-he { font-size: 0.9em; }
+}
 </style>
 <style>.hw .qq{color:#c0392b}body.dark-mode .hw .qq{color:#ff8a80}</style>
 </head>
