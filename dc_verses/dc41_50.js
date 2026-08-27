@@ -1709,11 +1709,11 @@ renderVerseSet(dc43_ch1Verses, 'dc43-ch1-verses');
 
 
 var dc44_ch1Verses = [
-  { num: "א", words: [["הִנֵּה","behold"], ["כֹּה","thus"], ["אָמַר","says"], ["יְהוָה","the Lord"], ["לָכֶם","unto you"], ["עֲבָדַי","my servants"], ["נָכוֹן","it is expedient"], ["בְּעֵינַי","in my eyes"], ["כִּי","that"], ["זִקְנֵי","the elders of"], ["כְּנֵסִיָּתִי","my church"], ["יִקָּרְאוּ","should be called"], ["יַחְדָּו","together"], ["מִמִּזְרָח","from the east"], ["וּמִמַּעֲרָב","and from the west"], ["וּמִצָּפוֹן","and from the north"], ["וּמִדָּרוֹם","and from the south"], ["בְּאִגֶּרֶת","by letter"], ["אוֹ","or"], ["בְּדֶרֶךְ","by way"], ["אַחֶרֶת׃","some other"]]},
+  { num: "א", words: [["הִנֵּה","behold"], ["כֹּה","thus"], ["אָמַר","says"], ["יְהוָה","the Lord"], ["לָכֶם","unto you"], ["עֲבָדַי","my servants"], ["נָכוֹן","it is expedient"], ["בְּעֵינַי","in me"], ["כִּי","that"], ["זִקְנֵי","the elders of"], ["כְּנֵסִיָּתִי","my church"], ["יִקָּרְאוּ","should be called"], ["יַחְדָּו","together"], ["מִמִּזְרָח","from the east"], ["וּמִמַּעֲרָב","and from the west"], ["וּמִצָּפוֹן","and from the north"], ["וּמִדָּרוֹם","and from the south"], ["בְּאִגֶּרֶת","by letter"], ["אוֹ","or"], ["בְּדֶרֶךְ","by way"], ["אַחֶרֶת׃","some other"]]},
   { num: "ב", words: [
-    ["וְהָיָה","it shall be"],
-    ["כְּפִי","according to"],
-    ["אֲשֶׁר","which"],
+    ["וְהָיָה","and it shall come to pass"],
+    ["כְּפִי","inasmuch"],
+    ["אֲשֶׁר","as"],
     ["יִהְיוּ","they shall be"],
     ["נֶאֱמָנִים","faithful"],
     ["וְיַאֲמִינוּ","and exercise faith"],
@@ -1794,7 +1794,7 @@ var dc44_ch1Verses = [
     ["כְּתוֹרָתִי","according to my law"],
     ["אֲשֶׁר","which"],
     ["קִבַּלְתֶּם","you have received"],
-    ["אָמֵן׃","amen"]
+    ["אָמֵן׃","Amen"]
   ]}
 ];
 renderVerseSet(dc44_ch1Verses, 'dc44-ch1-verses');
