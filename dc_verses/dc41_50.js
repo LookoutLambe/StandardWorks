@@ -1923,28 +1923,7 @@ var dc45_ch1Verses = [
     ["חַיֵּי","(the) life of"],
     ["עוֹלָם׃","eternity"]
   ]},
-  { num: "ט", words: [
-    ["וְכֵן","and even so"],
-    ["שָׁלַחְתִּי","I have sent"],
-    ["בְּרִיתִי","my covenant"],
-    ["בְּרִית עוֹלָם","the everlasting"],
-    ["אֶל","into"],
-    ["הָעוֹלָם","the world"],
-    ["לִהְיוֹת","to be"],
-    ["אוֹר","a light"],
-    ["לָעוֹלָם","to the world"],
-    ["וְנֵס","and a standard"],
-    ["לְעַמִּי","for my people"],
-    ["וְלַגּוֹיִם","and for the Gentiles"],
-    ["לִדְרֹשׁ","to seek"],
-    ["אֵלֶיהָ","to it"],
-    ["וְלִהְיוֹת","and to be"],
-    ["מַלְאָךְ","a messenger"],
-    ["לְפָנַי","before my face"],
-    ["לְפַנּוֹת","to prepare"],
-    ["הַדֶּרֶךְ","the way"],
-    ["לְפָנָי׃","before me"]
-  ]},
+  { num: "ט", words: [["וְכֵן","and even so"], ["שָׁלַחְתִּי","I have sent"], ["בְּרִיתִי","my covenant"], ["בְּרִית־עוֹלָם","the everlasting covenant"], ["אֶל","into"], ["הָעוֹלָם","the world"], ["לִהְיוֹת","to be"], ["אוֹר","a light"], ["לָעוֹלָם","to the world"], ["וְנֵס","and a standard"], ["לְעַמִּי","for my people"], ["וְלַגּוֹיִם","and for the Gentiles"], ["לִדְרֹשׁ","to seek"], ["אֵלֶיהָ","to it"], ["וְלִהְיוֹת","and to be"], ["מַלְאָךְ","a messenger"], ["לְפָנַי","before my face"], ["לְפַנּוֹת","to prepare"], ["הַדֶּרֶךְ","the way"], ["לְפָנָי׃","before me"]]},
   { num: "י", words: [
     ["לָכֵן","wherefore"],
     ["בֹּאוּ","come ye"],
@@ -3607,20 +3586,7 @@ var dc49_ch1Verses = [
     ["לֹא","not"],
     ["יְדַעְתֶּם׃","ye know of"]
   ]},
-  { num: "ט", words: [
-    ["לָכֵן","wherefore"],
-    ["אֲנִי","I"],
-    ["אֹמֵר","say"],
-    ["לָכֶם","unto you"],
-    ["שָׁלַחְתִּי","I have sent"],
-    ["אֲלֵיכֶם","unto you"],
-    ["בְּרִיתִי","my covenant"],
-    ["בְּרִית עוֹלָם","the everlasting"],
-    ["הִיא","(that) is"],
-    ["אֲשֶׁר","which"],
-    ["הָיְתָה","was"],
-    ["מֵרֵאשִׁית׃","from the beginning"]
-  ]},
+  { num: "ט", words: [["לָכֵן","wherefore"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["שָׁלַחְתִּי","I have sent"], ["אֲלֵיכֶם","unto you"], ["בְּרִיתִי","my covenant"], ["בְּרִית־עוֹלָם","the everlasting covenant"], ["הִיא","(that) is"], ["אֲשֶׁר","which"], ["הָיְתָה","was"], ["מֵרֵאשִׁית׃","from the beginning"]]},
   { num: "י", words: [
     ["וַאֲשֶׁר","and he that"],
     ["הִבְטַחְתִּי","I have promised"],
