@@ -1790,18 +1790,25 @@ body.dual-mode .chapter-heading { display: flex; flex-wrap: wrap; align-items: f
 body.dual-mode .chapter-heading > h2,
 body.dual-mode .chapter-heading > .chapter-label-en { flex: 0 0 100%; }
 body.dual-mode .chapter-heading > .chapter-summary,
-body.dual-mode .chapter-heading > .chapter-summary-heb {
+body.dual-mode .chapter-heading > .heading-flow {
   min-width: 0; max-width: none; text-align: justify; margin-top: 10px;
 }
 body.dual-mode .chapter-heading > .chapter-summary {
   order: 2; flex: 45 1 0; direction: ltr; padding-right: 14px;
   border-right: 1px solid var(--rule-light);
 }
-body.dual-mode .chapter-heading > .chapter-summary-heb { order: 1; flex: 55 1 0; direction: rtl; }
+body.dual-mode .chapter-heading > .heading-flow { order: 1; flex: 55 1 0; direction: rtl; }
 @media (max-width: 700px) {
   body.dual-mode .chapter-heading > .chapter-summary { font-size: 0.78em; padding-right: 8px; }
-  body.dual-mode .chapter-heading > .chapter-summary-heb { font-size: 0.9em; }
+  body.dual-mode .chapter-heading > .heading-flow { font-size: 0.9em; }
 }
+
+/* -- Chapter summary. The interlinear heading is the Hebrew in every mode;
+      the plain Hebrew paragraph is superseded by it. The English shows only
+      in Dual, and sits beside the interlinear the way a verse does. -- */
+.chapter-summary      { display: none; }
+.chapter-summary-heb  { display: none; }
+body.dual-mode .chapter-summary { display: block; }
 </style>
 <style>.hw .qq{color:#c0392b}body.dark-mode .hw .qq{color:#ff8a80}</style>
 </head>
@@ -9334,7 +9341,9 @@ updateNavButtons();
       sumHe.textContent = hebTextPlain;
       heading.appendChild(sumHe);
     }
-    continue;
+    // Both are built. CSS decides which is shown: the interlinear flow in
+    // Interlinear/Transliterate/Hebrew-only, the English + plain Hebrew pair
+    // in Dual.
     // Add Hebrew chapter heading as interlinear word-units if available
     var hebHeadings = (typeof _chapterHeadingsHeb !== 'undefined') ? _chapterHeadingsHeb : {};
     // Heading-specific gloss overrides for words whose verse-data lookup gives wrong/missing results
