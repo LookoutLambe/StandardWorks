@@ -1276,23 +1276,10 @@ renderVerseSet(dc19_ch1Verses, 'dc19-ch1-verses');
 
 
 var dc20_ch1Verses = [
-  { num: "א", words: [["קוּם","the rise of"], ["כְּנֵסִיַּת","the Church of"], ["הַמָּשִׁיחַ","Christ"], ["בָּאַחֲרִית","in the latter end of"], ["הַיָּמִים","days"], ["הָאֵלֶּה","these"], ["שְׁנַת","the year being"], ["אֶלֶף","one thousand"], ["וּשְׁמֹנֶה","and eight"], ["מֵאוֹת","hundred"], ["וּשְׁלֹשִׁים","and thirty"], ["לְבוֹא","since the coming of"], ["אֲדֹנֵינוּ","our Lord"], ["וּמוֹשִׁיעֵנוּ","and Savior"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","Christ"], ["בַּבָּשָׂר","in the flesh"], ["וַתִּוָּסֵד","it being regularly organized"], ["כַּמִּשְׁפָּט",""], ["וַתִּכּוֹן","and established"], ["כְּחֻקֵּי","agreeable to the laws of"], ["אַרְצֵנוּ","our country"], ["בִּרְצוֹן","by the will"], ["אֱלֹהִים","of God"], ["וּבְמִצְוֹתָיו","and his commandments"], ["בַּחֹדֶשׁ","in the month"], ["הָרְבִיעִי","fourth"], ["בַּיּוֹם","and on the day"], ["הַשִּׁשִּׁי","sixth"], ["לַחֹדֶשׁ׃","of the month"]]},
-  { num: "ב", words: [["אֲשֶׁר","which"], ["הַמִּצְוֹת","commandments"], ["נִתְּנוּ","were given"], ["לְיוֹסֵף","to Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["אֲשֶׁר","who"], ["קְרָאוֹ","was called"], ["אֱלֹהִים","of God"], ["וְנִסְמַךְ","and ordained"], ["שָׁלִיחַ","an apostle"], ["לְיֵשׁוּעַ","of Jesus"], ["הַמָּשִׁיחַ","Christ"], ["לִהְיוֹת","to be"], ["הַזָּקֵן","the elder"], ["הָרִאשׁוֹן","first"], ["לַכְּנֵסִיָּה","of church"], ["הַזֹּאת׃","this"]]},
-  { num: "ג", words: [["וּלְאוֹלִיבֶר","and to Oliver"], ["קַאוּדְרִי","Cowdery"], ["אֲשֶׁר","who"], ["גַּם","also"], ["קְרָאוֹ","was called"], ["אֱלֹהִים","of God"], ["שָׁלִיחַ","an apostle"], ["לְיֵשׁוּעַ","of Jesus"], ["הַמָּשִׁיחַ","Christ"], ["לִהְיוֹת","to be"], ["הַזָּקֵן","the elder"], ["הַשֵּׁנִי","second"], ["לַכְּנֵסִיָּה","of church"], ["הַזֹּאת","this"], ["וְנִסְמַךְ","and ordained"], ["תַּחַת","under"], ["יָדוֹ׃","his hand"]]},
-  { num: "ד", words: [
-    ["וְזֹאת","and this"],
-    ["כְּחֶסֶד","according to the grace of"],
-    ["אֲדֹנֵינוּ","our Lord"],
-    ["וּמוֹשִׁיעֵנוּ","and Savior"],
-    ["יֵשׁוּעַ","Jesus"],
-    ["הַמָּשִׁיחַ","Christ"],
-    ["אֲשֶׁר","to whom"],
-    ["לוֹ",""],
-    ["הַכָּבוֹד","be all glory"],
-    ["עַתָּה","both now"],
-    ["וּלְעוֹלָם","and forever"],
-    ["אָמֵן׃","Amen"]
-  ]},
+  { num: "א", words: [["קוּם","the rise of"], ["כְּנֵסִיַּת","the Church of"], ["הַמָּשִׁיחַ","Christ"], ["בָּאַחֲרִית","in the latter end of"], ["הַיָּמִים","days"], ["הָאֵלֶּה","these"], ["שְׁנַת","the year being"], ["אֶלֶף","one thousand"], ["וּשְׁמֹנֶה","and eight"], ["מֵאוֹת","hundred"], ["וּשְׁלֹשִׁים","and thirty"], ["לְבוֹא","since the coming of"], ["אֲדֹנֵינוּ","our Lord"], ["וּמוֹשִׁיעֵנוּ","and Savior"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","Christ"], ["בַּבָּשָׂר","in the flesh"], ["וַתִּוָּסֵד","it being organized"], ["כַּמִּשְׁפָּט","regularly"], ["וַתִּכּוֹן","and established"], ["כְּחֻקֵּי","agreeable to the laws of"], ["אַרְצֵנוּ","our country"], ["בִּרְצוֹן","by the will"], ["אֱלֹהִים","of God"], ["וּבְמִצְוֹתָיו","and his commandments"], ["בַּחֹדֶשׁ","in the month"], ["הָרְבִיעִי","fourth"], ["בַּיּוֹם","and on the day"], ["הַשִּׁשִּׁי","sixth"], ["לַחֹדֶשׁ׃","of the month"]]},
+  { num: "ב", words: [["אֲשֶׁר","which"], ["הַמִּצְוֹת","commandments"], ["נִתְּנוּ","were given"], ["לְיוֹסֵף","to Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["אֲשֶׁר","who"], ["קְרָאוֹ","was called"], ["אֱלֹהִים","of God"], ["וְנִסְמַךְ","and ordained"], ["שָׁלִיחַ","an apostle"], ["לְיֵשׁוּעַ","of Jesus"], ["הַמָּשִׁיחַ","Christ"], ["לִהְיוֹת","to be"], ["הַזָּקֵן","the elder"], ["הָרִאשׁוֹן","first"], ["לַכְּנֵסִיָּה","of the church"], ["הַזֹּאת׃","this"]]},
+  { num: "ג", words: [["וּלְאוֹלִיבֶר","and to Oliver"], ["קַאוּדְרִי","Cowdery"], ["אֲשֶׁר","who"], ["גַּם","also"], ["קְרָאוֹ","was called"], ["אֱלֹהִים","of God"], ["שָׁלִיחַ","an apostle"], ["לְיֵשׁוּעַ","of Jesus"], ["הַמָּשִׁיחַ","Christ"], ["לִהְיוֹת","to be"], ["הַזָּקֵן","the elder"], ["הַשֵּׁנִי","second"], ["לַכְּנֵסִיָּה","of the church"], ["הַזֹּאת","this"], ["וְנִסְמַךְ","and ordained"], ["תַּחַת","under"], ["יָדוֹ׃","his hand"]]},
+  { num: "ד", words: [["וְזֹאת","and this"], ["כְּחֶסֶד","according to the grace of"], ["אֲדֹנֵינוּ","our Lord"], ["וּמוֹשִׁיעֵנוּ","and Savior"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","Christ"], ["אֲשֶׁר","to whom"], ["לוֹ","to him"], ["הַכָּבוֹד","the glory"], ["עַתָּה","both now"], ["וּלְעוֹלָם","and forever"], ["אָמֵן׃","Amen"]]},
   { num: "ה", words: [
     ["אַחֲרֵי","after"],
     ["אֲשֶׁר","that"],
@@ -1376,7 +1363,7 @@ var dc20_ch1Verses = [
     ["עַל","by"],
     ["יָדָם׃","them"]
   ]},
-  { num: "יא", words: [["לְהוֹכִיחַ","proving"], ["לְתֵבֵל","to the world"], ["כִּי","that"], ["כִּתְבֵי","the scriptures of"], ["הַקֹּדֶשׁ","the holy"], ["אֱמֶת","are true"], ["הֵם",""], ["וְכִי","and that"], ["אֱלֹהִים","God"], ["מֵעִיר","does inspire"], ["אֲנָשִׁים","men"], ["וְקֹרֵא","and call"], ["אוֹתָם","them"], ["לִמְלַאכְתּוֹ","to his work"], ["הַקְּדוֹשָׁה","holy"], ["בַּדּוֹר","in age"], ["הַזֶּה","this"], ["כְּמוֹ","as well as"], ["בְּדוֹרוֹת","in generations"], ["קֶדֶם׃","of old"]]},
+  { num: "יא", words: [["לְהוֹכִיחַ","proving"], ["לְתֵבֵל","to the world"], ["כִּי","that"], ["כִּתְבֵי","the scriptures of"], ["הַקֹּדֶשׁ","the holy"], ["אֱמֶת","are true"], ["הֵם","they are"], ["וְכִי","and that"], ["אֱלֹהִים","God"], ["מֵעִיר","does inspire"], ["אֲנָשִׁים","men"], ["וְקֹרֵא","and call"], ["אוֹתָם","them"], ["לִמְלַאכְתּוֹ","to his work"], ["הַקְּדוֹשָׁה","holy"], ["בַּדּוֹר","in age"], ["הַזֶּה","this"], ["כְּמוֹ","as well as"], ["בְּדוֹרוֹת","in generations"], ["קֶדֶם׃","of old"]]},
   { num: "יב", words: [
     ["וּבָזֶה","thereby"],
     ["מוֹרֶה","showing"],
@@ -1389,23 +1376,7 @@ var dc20_ch1Verses = [
     ["וּלְעוֹלָם","and forever"],
     ["אָמֵן׃","Amen"]
   ]},
-  { num: "יג", words: [
-    ["וְלָכֵן","therefore"],
-    ["בִּהְיוֹת","having"],
-    ["לָנוּ",""],
-    ["עֵדִים","witnesses"],
-    ["גְּדוֹלִים","so great"],
-    ["כָּאֵלֶּה",""],
-    ["בָּהֶם","by them"],
-    ["יִשָּׁפֵט","shall be judged"],
-    ["הָעוֹלָם","the world"],
-    ["כֹּל","even as many"],
-    ["אֲשֶׁר","as"],
-    ["יָבֹאוּ","shall come"],
-    ["לְדַעַת","to a knowledge of"],
-    ["אֶת־הַמְּלָאכָה","work"],
-    ["הַזֹּאת׃","this"]
-  ]},
+  { num: "יג", words: [["וְלָכֵן","therefore"], ["בִּהְיוֹת","having"], ["לָנוּ","to us"], ["עֵדִים","witnesses"], ["גְּדוֹלִים","great"], ["כָּאֵלֶּה","such as these"], ["בָּהֶם","by them"], ["יִשָּׁפֵט","shall be judged"], ["הָעוֹלָם","the world"], ["כֹּל","even as many"], ["אֲשֶׁר","as"], ["יָבֹאוּ","shall come"], ["לְדַעַת","to a knowledge of"], ["אֶת־הַמְּלָאכָה","work"], ["הַזֹּאת׃","this"]]},
   { num: "יד", words: [
     ["וְהַמְקַבְּלִים","and those who receive"],
     ["אֹתָהּ","it"],
@@ -1417,41 +1388,9 @@ var dc20_ch1Verses = [
     ["חַיֵּי","life"],
     ["עוֹלָם׃","eternal"]
   ]},
-  { num: "טו", words: [
-    ["אַךְ","but"],
-    ["הַמַּקְשִׁים","those who harden"],
-    ["לִבָּם","their hearts"],
-    ["בְּחֹסֶר","in want of"],
-    ["אֱמוּנָה","unbelief"],
-    ["וּמֹאֲסִים","and reject"],
-    ["בָּהּ","it"],
-    ["תָּשׁוּב","it shall turn"],
-    ["לָהֶם","to their own"],
-    ["לְמִשְׁפָּט׃","condemnation"]
-  ]},
-  { num: "טז", words: [["כִּי","for"], ["יְהוָה","the Lord"], ["אֱלֹהִים","God"], ["דִּבֵּר","hath spoken it"], ["וַאֲנַחְנוּ","and we"], ["זִקְנֵי","the elders of"], ["הַכְּנֵסִיָּה","the church"], ["שָׁמַעְנוּ","have heard"], ["וּמְעִידִים","and bear witness"], ["עַל","to"], ["דִּבְרֵי","the words of"], ["הַגְּדֻלָּה","the Majesty"], ["הַנֶּהְדָּרָה","glorious"], ["בַּמָּרוֹם","on high"], ["אֲשֶׁר","to whom"], ["לוֹ",""], ["הַכָּבוֹד","be glory"], ["לְעוֹלָם","forever"], ["וָעֶד","and ever"], ["אָמֵן׃","Amen"]]},
-  { num: "יז", words: [
-    ["בָּאֵלֶּה","by these things"],
-    ["יָדַעְנוּ","we know"],
-    ["כִּי","that"],
-    ["יֵשׁ","there is"],
-    ["אֱלֹהִים","a God"],
-    ["בַּשָּׁמַיִם","in heaven"],
-    ["אֵין־חֵקֶר","who is infinite"],
-    ["וְאֵל־עוֹלָם","and eternal"],
-    ["מֵעוֹלָם","from everlasting"],
-    ["וְעַד","to"],
-    ["עוֹלָם","everlasting"],
-    ["הוּא","the same"],
-    ["אֱלֹהִים","God"],
-    ["בְּלִי","unchangeable"],
-    ["תְמוּרָה",""],
-    ["יֹצֵר","the framer of"],
-    ["שָׁמַיִם","heaven"],
-    ["וָאָרֶץ","and earth"],
-    ["וְכׇל־אֲשֶׁר","and all things which"],
-    ["בָּם׃","are in them"]
-  ]},
+  { num: "טו", words: [["אַךְ","but"], ["הַמַּקְשִׁים","those who harden"], ["לִבָּם","their hearts"], ["בְּמַעַל","in unbelief"], ["וּמֹאֲסִים","and reject"], ["בָּהּ","it"], ["תָּשׁוּב","it shall turn"], ["לָהֶם","to their own"], ["לְמִשְׁפָּט׃","condemnation"]]},
+  { num: "טז", words: [["כִּי","for"], ["יְהוָה","the Lord"], ["אֱלֹהִים","God"], ["דִּבֵּר","hath spoken it"], ["וַאֲנַחְנוּ","and we"], ["זִקְנֵי","the elders of"], ["הַכְּנֵסִיָּה","the church"], ["שָׁמַעְנוּ","have heard"], ["וּמְעִידִים","and bear witness"], ["עַל","to"], ["דִּבְרֵי","the words of"], ["הַגְּדֻלָּה","the Majesty"], ["הַנֶּהְדָּרָה","glorious"], ["בַּמָּרוֹם","on high"], ["אֲשֶׁר","to whom"], ["לוֹ","to him"], ["הַכָּבוֹד","the glory"], ["לְעוֹלָם","forever"], ["וָעֶד","and ever"], ["אָמֵן׃","Amen"]]},
+  { num: "יז", words: [["בָּאֵלֶּה","by these things"], ["יָדַעְנוּ","we know"], ["כִּי","that"], ["יֵשׁ","there is"], ["אֱלֹהִים","a God"], ["בַּשָּׁמַיִם","in heaven"], ["אֵין־חֵקֶר","who is infinite"], ["וְאֵל־עוֹלָם","and eternal"], ["מֵעוֹלָם","from everlasting"], ["וְעַד","to"], ["עוֹלָם","everlasting"], ["הוּא","the same"], ["אֱלֹהִים","God"], ["בְּלִי","without"], ["תְמוּרָה","change"], ["יֹצֵר","the framer of"], ["שָׁמַיִם","heaven"], ["וָאָרֶץ","and earth"], ["וְכׇל־אֲשֶׁר","and all things which"], ["בָּם׃","are in them"]]},
   { num: "יח", words: [
     ["וְכִי","and that"],
     ["בָרָא","he created"],
@@ -1462,40 +1401,8 @@ var dc20_ch1Verses = [
     ["כִּדְמוּתוֹ","and in his own likeness"],
     ["בְּרָאָם׃","created he them"]
   ]},
-  { num: "יט", words: [
-    ["וַיִּתֵּן","and gave"],
-    ["לָהֶם","unto them"],
-    ["מִצְוֹת","commandments"],
-    ["לְאַהֲבָה","that they should love"],
-    ["אוֹתוֹ","him"],
-    ["וּלְעָבְדוֹ","and serve him"],
-    ["הוּא","he"],
-    ["הָאֱלֹהִים","the God"],
-    ["הַחַי","living"],
-    ["וְהָאֱמֶת","and true"],
-    ["לְבַדּוֹ","only"],
-    ["וְהוּא","and that he"],
-    ["לְבַדּוֹ","should be the only being"],
-    ["יִהְיֶה",""],
-    ["אֲשֶׁר","whom"],
-    ["יִשְׁתַּחֲווּ","they should worship"],
-    ["לוֹ׃",""]
-  ]},
-  { num: "כ", words: [
-    ["אַךְ","but"],
-    ["בְּפֶשַׁע","by the transgression of"],
-    ["הַחֻקִּים","the laws"],
-    ["הַקְּדוֹשִׁים","holy"],
-    ["הָאֵלֶּה","these"],
-    ["נִהְיָה","became"],
-    ["הָאָדָם","man"],
-    ["בַּעַל","sensual"],
-    ["תַּאֲוָה",""],
-    ["וּכְשָׂטָן","and devilish"],
-    ["וַיְהִי","and became"],
-    ["אָדָם","man"],
-    ["נֹפֵל׃","fallen"]
-  ]},
+  { num: "יט", words: [["וַיִּתֵּן","and gave"], ["לָהֶם","unto them"], ["מִצְוֹת","commandments"], ["לְאַהֲבָה","that they should love"], ["אוֹתוֹ","him"], ["וּלְעָבְדוֹ","and serve him"], ["הוּא","he"], ["הָאֱלֹהִים","the God"], ["הַחַי","living"], ["וְהָאֱמֶת","and true"], ["לְבַדּוֹ","only"], ["וְהוּא","and that he"], ["לְבַדּוֹ","alone"], ["יִהְיֶה","shall be"], ["אֲשֶׁר","whom"], ["יִשְׁתַּחֲווּ","they should worship"], ["לוֹ׃","to him"]]},
+  { num: "כ", words: [["אַךְ","but"], ["בְּפֶשַׁע","by the transgression of"], ["הַחֻקִּים","the laws"], ["הַקְּדוֹשִׁים","holy"], ["הָאֵלֶּה","these"], ["נִהְיָה","became"], ["הָאָדָם","man"], ["בַּעַל","possessor of"], ["תַּאֲוָה","lust"], ["וּכְשָׂטָן","and devilish"], ["וַיְהִי","and became"], ["אָדָם","man"], ["נֹפֵל׃","fallen"]]},
   { num: "כא", words: [
     ["וְעַל־כֵּן","wherefore"],
     ["נָתַן","gave"],
@@ -1509,14 +1416,7 @@ var dc20_ch1Verses = [
     ["נִתְּנוּ","have been given"],
     ["עָלָיו׃","of him"]
   ]},
-  { num: "כב", words: [
-    ["הוּא","he"],
-    ["סָבַל","suffered"],
-    ["מַסּוֹת","temptations"],
-    ["וְלֹא","but"],
-    ["נָטָה","gave no heed"],
-    ["אֲלֵיהֶם׃","unto them"]
-  ]},
+  { num: "כב", words: [["הוּא","he"], ["סָבַל","suffered"], ["מַסּוֹת","temptations"], ["וְלֹא","and not"], ["נָטָה","he heeded"], ["אֲלֵיהֶם׃","unto them"]]},
   { num: "כג", words: [
     ["הוּא","he"],
     ["נִצְלַב","was crucified"],
@@ -1550,7 +1450,7 @@ var dc20_ch1Verses = [
     ["הַקֵּץ","the end"],
     ["יִוָּשֵׁעוּ׃","should be saved"]
   ]},
-  { num: "כו", words: [["לֹא","not"], ["רַק","only"], ["הַמַּאֲמִינִים","those who believed"], ["אַחֲרֵי","after"], ["בוֹאוֹ","he came"], ["בְּאֶמְצַע","in the meridian of"], ["הַיָּמִים","time"], ["בַּבָּשָׂר","in the flesh"], ["כִּי","but"], ["אִם",""], ["כֹּל","all"], ["אֲשֶׁר","those"], ["מֵרֵאשִׁית","from the beginning"], ["כֹּל","even as many"], ["אֲשֶׁר","as"], ["לִפְנֵי","were before"], ["בוֹאוֹ","he came"], ["הֶאֱמִינוּ","who believed"], ["בְּדִבְרֵי","in the words of"], ["הַנְּבִיאִים","the prophets"], ["הַקְּדוֹשִׁים","holy"], ["אֲשֶׁר","who"], ["דִּבְּרוּ","spake"], ["כַּאֲשֶׁר","as"], ["הֵעִירָם","they were inspired"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["אֲשֶׁר","who"], ["הֵעִידוּ","truly testified"], ["עָלָיו","of him"], ["בֶּאֱמֶת","truly"], ["בַּכֹּל","in all things"], ["יִהְיוּ","should have"], ["לָהֶם",""], ["חַיֵּי","life"], ["עוֹלָם׃","eternal"]]},
+  { num: "כו", words: [["לֹא","not"], ["רַק","only"], ["הַמַּאֲמִינִים","those who believed"], ["אַחֲרֵי","after"], ["בוֹאוֹ","he came"], ["בְּאֶמְצַע","in the meridian of"], ["הַיָּמִים","time"], ["בַּבָּשָׂר","in the flesh"], ["כִּי","but"], ["אִם","rather"], ["כֹּל","all"], ["אֲשֶׁר","those"], ["מֵרֵאשִׁית","from the beginning"], ["כֹּל","even as many"], ["אֲשֶׁר","as"], ["לִפְנֵי","were before"], ["בוֹאוֹ","he came"], ["הֶאֱמִינוּ","who believed"], ["בְּדִבְרֵי","in the words of"], ["הַנְּבִיאִים","the prophets"], ["הַקְּדוֹשִׁים","holy"], ["אֲשֶׁר","who"], ["דִּבְּרוּ","spake"], ["כַּאֲשֶׁר","as"], ["הֵעִירָם","they were inspired"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["אֲשֶׁר","who"], ["הֵעִידוּ","testified"], ["עָלָיו","of him"], ["בֶּאֱמֶת","truly"], ["בַּכֹּל","in all things"], ["יִהְיוּ","there shall be"], ["לָהֶם","to them"], ["חַיֵּי","life"], ["עוֹלָם׃","eternal"]]},
   { num: "כז", words: [["וְגַם","as well as"], ["הַבָּאִים","those who should come"], ["אַחֲרָיו","after"], ["הַמַּאֲמִינִים","who should believe"], ["בְּמַתְּנוֹת","in the gifts"], ["אֱלֹהִים","of God"], ["בְּרוּחַ","by the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["הַמֵּעִיד","which beareth record"], ["עַל","of"], ["הָאָב","the Father"], ["וְעַל","and of"], ["הַבֵּן׃","the Son"]]},
   { num: "כח", words: [["וְהָאָב","which Father"], ["וְהַבֵּן","Son"], ["וְרוּחַ","and the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["אֱלֹהִים","God"], ["אֶחָד","one"], ["הֵם","they are"], ["אֵין־חֵקֶר","infinite"], ["וְאֵל־עוֹלָם","and eternal"], ["בְּלִי","without"], ["קֵץ","end"], ["אָמֵן׃","Amen"]]},
   { num: "כט", words: [
@@ -1576,40 +1476,8 @@ var dc20_ch1Verses = [
     ["בְּמַלְכוּת","in the kingdom of"],
     ["אֱלֹהִים׃","God"]
   ]},
-  { num: "ל", words: [
-    ["וְיָדַעְנוּ","and we know"],
-    ["כִּי","that"],
-    ["הִצָּדֵק","justification"],
-    ["בְּחֶסֶד","through the grace of"],
-    ["אֲדֹנֵינוּ","our Lord"],
-    ["וּמוֹשִׁיעֵנוּ","and Savior"],
-    ["יֵשׁוּעַ","Jesus"],
-    ["הַמָּשִׁיחַ","Christ"],
-    ["צֶדֶק","is just"],
-    ["וֶאֱמֶת","and true"],
-    ["הוּא׃",""]
-  ]},
-  { num: "לא", words: [
-    ["וְיָדַעְנוּ","and we know"],
-    ["גַם","also"],
-    ["כִּי","that"],
-    ["הִתְקַדֵּשׁ","sanctification"],
-    ["בְּחֶסֶד","through the grace of"],
-    ["אֲדֹנֵינוּ","our Lord"],
-    ["וּמוֹשִׁיעֵנוּ","and Savior"],
-    ["יֵשׁוּעַ","Jesus"],
-    ["הַמָּשִׁיחַ","Christ"],
-    ["צֶדֶק","is just"],
-    ["וֶאֱמֶת","and true"],
-    ["הוּא",""],
-    ["לְכֹל","to all"],
-    ["הָאֹהֲבִים","those who love"],
-    ["וְהָעֹבְדִים","and serve"],
-    ["אֶת־אֱלֹהִים","God"],
-    ["בְּכׇל־מְאֹדָם","with all their mights"],
-    ["וּמַדָּעָם","and minds"],
-    ["וְכֹחָם׃","and strength"]
-  ]},
+  { num: "ל", words: [["וְיָדַעְנוּ","and we know"], ["כִּי","that"], ["הִצָּדֵק","justification"], ["בְּחֶסֶד","through the grace of"], ["אֲדֹנֵינוּ","our Lord"], ["וּמוֹשִׁיעֵנוּ","and Savior"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","Christ"], ["צֶדֶק","is just"], ["וֶאֱמֶת","and true"], ["הוּא׃","it is"]]},
+  { num: "לא", words: [["וְיָדַעְנוּ","and we know"], ["גַם","also"], ["כִּי","that"], ["הִתְקַדֵּשׁ","sanctification"], ["בְּחֶסֶד","through the grace of"], ["אֲדֹנֵינוּ","our Lord"], ["וּמוֹשִׁיעֵנוּ","and Savior"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","Christ"], ["צֶדֶק","is just"], ["וֶאֱמֶת","and true"], ["הוּא","it is"], ["לְכֹל","to all"], ["הָאֹהֲבִים","those who love"], ["וְהָעֹבְדִים","and serve"], ["אֶת־אֱלֹהִים","God"], ["בְּכׇל־מְאֹדָם","with all their mights"], ["וּמַדָּעָם","and minds"], ["וְכֹחָם׃","and strength"]]},
   { num: "לב", words: [
     ["אַךְ","but"],
     ["יֵשׁ","there is a possibility"],
@@ -1627,7 +1495,7 @@ var dc20_ch1Verses = [
     ["הַמִּתְקַדְּשִׁים","let those who are sanctified"],
     ["יִשָּׁמְרוּ׃","take heed also"]
   ]},
-  { num: "לה", words: [["וְיָדַעְנוּ","and we know"], ["כִּי","that"], ["הַדְּבָרִים","things"], ["הָאֵלֶּה","these"], ["אֱמֶת","are true"], ["הֵם",""], ["וּכְפִי","and according to"], ["חֶזְיֹנוֹת","the revelations of"], ["יוֹחָנָן","John"], ["בְּלִי","neither"], ["הוֹסִיף","adding to"], ["וּבְלִי","nor"], ["גְרֹעַ","diminishing"], ["מִנְּבוּאַת","from the prophecy of"], ["סִפְרוֹ","his book"], ["וּמִכִּתְבֵי","and from the scriptures of"], ["הַקֹּדֶשׁ","the holy"], ["וּמֵחֶזְיֹנוֹת","or the revelations of"], ["אֱלֹהִים","God"], ["אֲשֶׁר","which"], ["יָבֹאוּ","shall come"], ["אַחֲרֵי־כֵן","hereafter"], ["בְּמַתַּת","by the gift"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["וּבִגְבוּרָתוֹ","and its power"], ["בְּקוֹל","the voice of"], ["אֱלֹהִים","God"], ["אוֹ","or"], ["בְּשָׁרֵת","the ministering of"], ["מַלְאָכִים׃","angels"]]},
+  { num: "לה", words: [["וְיָדַעְנוּ","and we know"], ["כִּי","that"], ["הַדְּבָרִים","things"], ["הָאֵלֶּה","these"], ["אֱמֶת","are true"], ["הֵם","they are"], ["וּכְפִי","and according to"], ["חֶזְיֹנוֹת","the revelations of"], ["יוֹחָנָן","John"], ["בְּלִי","neither"], ["הוֹסִיף","adding to"], ["וּבְלִי","nor"], ["גְרֹעַ","diminishing"], ["מִנְּבוּאַת","from the prophecy of"], ["סִפְרוֹ","his book"], ["וּמִכִּתְבֵי","and from the scriptures of"], ["הַקֹּדֶשׁ","the holy"], ["וּמֵחֶזְיֹנוֹת","or the revelations of"], ["אֱלֹהִים","God"], ["אֲשֶׁר","which"], ["יָבֹאוּ","shall come"], ["אַחֲרֵי־כֵן","hereafter"], ["בְּמַתַּת","by the gift"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["וּבִגְבוּרָתוֹ","and its power"], ["בְּקוֹל","the voice of"], ["אֱלֹהִים","God"], ["אוֹ","or"], ["בְּשָׁרֵת","the ministering of"], ["מַלְאָכִים׃","angels"]]},
   { num: "לו", words: [
     ["וַיהוָה","and the Lord"],
     ["אֱלֹהִים","God"],
@@ -1642,15 +1510,9 @@ var dc20_ch1Verses = [
     ["וּלְעוֹלָם","and ever"],
     ["אָמֵן׃","Amen"]
   ]},
-  { num: "לז", words: [["וְעוֹד","and again"], ["בְּדֶרֶךְ","by the way of"], ["מִצְוָה","commandment"], ["לַכְּנֵסִיָּה","to the church"], ["עַל","concerning"], ["דְּבַר","the matter of"], ["הַטְּבִילָה","the baptism"], ["כֹּל","all"], ["הַמַּכְנִיעִים","those who humble"], ["נַפְשָׁם","those who humble themselves"], ["לִפְנֵי","before"], ["אֱלֹהִים","God"], ["וַחֲפֵצִים","and desire"], ["לְהִטָּבֵל","to be baptized"], ["וּבָאִים","and come forth"], ["בְּלֵב","with hearts"], ["נִשְׁבָּר","broken"], ["וְרוּחַ","and spirits"], ["נִדְכָּאָה","contrite"], ["וּמְעִידִים","and witness"], ["לִפְנֵי","before"], ["הַכְּנֵסִיָּה","the church"], ["כִּי","for"], ["שָׁבוּ","they have repented"], ["בֶּאֱמֶת","truly"], ["מִכׇּל־חַטֹּאתֵיהֶם","of all their sins"], ["וּנְכֹנִים","and are willing"], ["לָשֵׂאת","to take"], ["עֲלֵיהֶם","upon them"], ["אֶת־שֵׁם","the name of"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","Christ"], ["וְנֶחְרָצִים","having a determination"], ["לְעָבְדוֹ","to serve him"], ["עַד","until"], ["הַקֵּץ","the end"], ["וּמַרְאִים","and truly manifest"], ["בֶּאֱמֶת","truly"], ["בְּמַעֲשֵׂיהֶם","by their works"], ["כִּי","for"], ["קִבְּלוּ","they have received"], ["מֵרוּחַ","of the Spirit of"], ["הַמָּשִׁיחַ","Christ"], ["לִסְלִיחַת","unto the remission of"], ["חַטֹּאתֵיהֶם","their sins"], ["יְקֻבְּלוּ","shall be received"], ["בַטְּבִילָה","by baptism"], ["אֶל־כְּנֵסִיָּתוֹ׃","into his church"]]},
-  { num: "לח", words: [["מִשְׁמֶרֶת","the duty of"], ["הַזְּקֵנִים","the elders"], ["וְהַכֹּהֲנִים","priests"], ["וְהַמּוֹרִים","teachers"], ["וְהַמְשָׁרְתִים","deacons"], ["וּבְנֵי","and members of"], ["כְּנֵסִיַּת","the church of"], ["הַמָּשִׁיחַ","Christ"], ["שָׁלִיחַ","an apostle"], ["זָקֵן","is an elder"], ["הוּא",""], ["וּקְרִיאָתוֹ","and it is his calling"], ["לְהַטְבִּיל׃","to baptize"]]},
-  { num: "לט", words: [
-    ["זְקֵנִים","and to ordain"],
-    ["וְכֹהֲנִים","priests"],
-    ["וּמוֹרִים","teachers"],
-    ["וּמְשָׁרְתִים","and deacons"],
-    ["אֲחֵרִים׃","other"]
-  ]},
+  { num: "לז", words: [["וְעוֹד","and again"], ["בְּדֶרֶךְ","by the way of"], ["מִצְוָה","commandment"], ["לַכְּנֵסִיָּה","to the church"], ["עַל","concerning"], ["דְּבַר","the matter of"], ["הַטְּבִילָה","the baptism"], ["כֹּל","all"], ["הַמַּכְנִיעִים","those who humble"], ["נַפְשָׁם","their souls"], ["לִפְנֵי","before"], ["אֱלֹהִים","God"], ["וַחֲפֵצִים","and desire"], ["לְהִטָּבֵל","to be baptized"], ["וּבָאִים","and come forth"], ["בְּלֵב","with hearts"], ["נִשְׁבָּר","broken"], ["וְרוּחַ","and spirits"], ["נִדְכָּאָה","contrite"], ["וּמְעִידִים","and witness"], ["לִפְנֵי","before"], ["הַכְּנֵסִיָּה","the church"], ["כִּי","that"], ["שָׁבוּ","they have repented"], ["בֶּאֱמֶת","truly"], ["מִכׇּל־חַטֹּאתֵיהֶם","of all their sins"], ["וּנְכֹנִים","and are willing"], ["לָשֵׂאת","to take"], ["עֲלֵיהֶם","upon them"], ["אֶת־שֵׁם","the name of"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","Christ"], ["וְנֶחְרָצִים","having a determination"], ["לְעָבְדוֹ","to serve him"], ["עַד","until"], ["הַקֵּץ","the end"], ["וּמַרְאִים","and manifest"], ["בֶּאֱמֶת","truly"], ["בְּמַעֲשֵׂיהֶם","by their works"], ["כִּי","that"], ["קִבְּלוּ","they have received"], ["מֵרוּחַ","of the Spirit of"], ["הַמָּשִׁיחַ","Christ"], ["לִסְלִיחַת","unto the remission of"], ["חַטֹּאתֵיהֶם","their sins"], ["יְקֻבְּלוּ","shall be received"], ["בַטְּבִילָה","by baptism"], ["אֶל־כְּנֵסִיָּתוֹ׃","into his church"]]},
+  { num: "לח", words: [["מִשְׁמֶרֶת","the duty of"], ["הַזְּקֵנִים","the elders"], ["וְהַכֹּהֲנִים","priests"], ["וְהַמּוֹרִים","teachers"], ["וְהַמְשָׁרְתִים","deacons"], ["וּבְנֵי","and members of"], ["כְּנֵסִיַּת","the church of"], ["הַמָּשִׁיחַ","Christ"], ["שָׁלִיחַ","an apostle"], ["זָקֵן","is an elder"], ["הוּא","he is"], ["וּקְרִיאָתוֹ","and it is his calling"], ["לְהַטְבִּיל׃","to baptize"]]},
+  { num: "לט", words: [["וְלִסְמֹךְ","and to ordain"], ["זְקֵנִים","elders"], ["וְכֹהֲנִים","priests"], ["וּמוֹרִים","teachers"], ["וּמְשָׁרְתִים","and deacons"], ["אֲחֵרִים׃","other"]]},
   { num: "מ", words: [
     ["וּלְחַלֵּק","and to administer"],
     ["לֶחֶם","bread"],
@@ -1702,26 +1564,8 @@ var dc20_ch1Verses = [
     ["וּמְשָׁרְתִים","and deacons"],
     ["אֲחֵרִים׃","other"]
   ]},
-  { num: "מט", words: [
-    ["וְהוּא","and he"],
-    ["יַעֲמֹד","is to take the lead"],
-    ["בְּרֹאשׁ","of"],
-    ["הַמּוֹעֲדִים","meetings"],
-    ["בְּאֵין","when there is no"],
-    ["זָקֵן","elder present"],
-    ["נֹכֵחַ׃","present"]
-  ]},
-  { num: "נ", words: [
-    ["אַךְ","but"],
-    ["בִּהְיוֹת","when there is"],
-    ["זָקֵן","an elder"],
-    ["רַק","present, he is only"],
-    ["יַשְׁמִיעַ","to preach"],
-    ["וִילַמֵּד","teach"],
-    ["וִיבָאֵר","expound"],
-    ["וְיוֹכִיחַ","exhort and baptize"],
-    ["וְיַטְבִּיל׃","and baptize"]
-  ]},
+  { num: "מט", words: [["וְהוּא","and he"], ["יַעֲמֹד","shall stand"], ["בְּרֹאשׁ","at the head of"], ["הַמּוֹעֲדִים","meetings"], ["בְּאֵין","when there is no"], ["זָקֵן","elder"], ["נֹכֵחַ׃","present"]]},
+  { num: "נ", words: [["אַךְ","but"], ["בִּהְיוֹת","when there is"], ["זָקֵן","an elder"], ["רַק","only"], ["יַשְׁמִיעַ","to preach"], ["וִילַמֵּד","teach"], ["וִיבָאֵר","expound"], ["וְיוֹכִיחַ","exhort"], ["וְיַטְבִּיל׃","and baptize"]]},
   { num: "נא", words: [
     ["וְיִפְקֹד","and visit"],
     ["אֶת־בֵּית","the house of"],
@@ -1745,17 +1589,8 @@ var dc20_ch1Verses = [
   ]},
   { num: "נג", words: [["מִשְׁמֶרֶת","the duty of"], ["הַמּוֹרֶה","the teacher"], ["לִשְׁמֹר","is to watch"], ["עַל","over"], ["הַכְּנֵסִיָּה","the church"], ["תָּמִיד","always"], ["וְלִהְיוֹת","and to be"], ["אִתָּם","with them"], ["וּלְחַזְּקָם׃","and strengthen them"]]},
   { num: "נד", words: [["וְלִרְאוֹת","and see"], ["כִּי אֵין","that there is no"], ["עָוֹן","iniquity"], ["בַּכְּנֵסִיָּה","in the church"], ["וְלֹא","neither"], ["קְשִׁי","hardness"], ["אִישׁ","of one"], ["עִם","with"], ["רֵעֵהוּ","another"], ["וְלֹא","neither"], ["שֶׁקֶר","lying"], ["וְלֹא","neither"], ["רָכִיל","backbiting"], ["וְלֹא","nor"], ["דִּבַּת","speaking"], ["רָע׃","evil"]]},
-  { num: "נה", words: [["וְלִרְאוֹת","and see"], ["הַכְּנֵסִיָּה","that the church"], ["לְעִתִּים","often"], ["קְרוֹבוֹת","meet together"], ["וְגַם","and also"], ["לִרְאוֹת","see"], ["כִּי כׇל־הַחֲבֵרִים","that all the members"], ["עֹשִׂים","do"], ["אֶת־חוֹבָתָם׃","their duty"]]},
-  { num: "נו", words: [
-    ["וְהוּא","and he"],
-    ["יַעֲמֹד","is to take the lead"],
-    ["בְּרֹאשׁ","of"],
-    ["הַמּוֹעֲדִים","meetings"],
-    ["בְּאֵין","in the absence of"],
-    ["זָקֵן","the elder"],
-    ["אוֹ","or"],
-    ["כֹהֵן׃","priest"]
-  ]},
+  { num: "נה", words: [["וְלִרְאוֹת","and see"], ["כִּי","that"], ["הַכְּנֵסִיָּה","the church"], ["תִּתְאַסֵּף","meet together"], ["לְעִתִּים","at times"], ["קְרוֹבוֹת","frequent"], ["וְגַם","and also"], ["לִרְאוֹת","see"], ["כִּי כׇל־הַחֲבֵרִים","that all the members"], ["עֹשִׂים","do"], ["אֶת־חוֹבָתָם׃","their duty"]]},
+  { num: "נו", words: [["וְהוּא","and he"], ["יַעֲמֹד","shall stand"], ["בְּרֹאשׁ","at the head of"], ["הַמּוֹעֲדִים","meetings"], ["בְּאֵין","in the absence of"], ["זָקֵן","elder"], ["אוֹ","or"], ["כֹהֵן׃","priest"]]},
   { num: "נז", words: [["וְיֵעָזֵר","and is to be assisted"], ["תָּמִיד","always"], ["בְּכׇל־מִשְׁמְרוֹתָיו","in all his duties"], ["בַּכְּנֵסִיָּה","in the church"], ["עַל־יְדֵי","by"], ["הַמְשָׁרְתִים","the deacons"], ["אִם","if"], ["יֵשׁ־צֹרֶךְ׃","occasion requires"]]},
   { num: "נח", words: [
     ["אַךְ","but"],
@@ -1785,45 +1620,15 @@ var dc20_ch1Verses = [
   { num: "ס", words: [["כׇּל־זָקֵן","every elder"], ["וְכֹהֵן","priest"], ["וּמוֹרֶה","teacher"], ["וּמְשָׁרֵת","or deacon"], ["יִסָּמֵךְ","is to be ordained"], ["כְּמַתְּנוֹת","according to the gifts"], ["וּקְרִיאוֹת","and callings of"], ["אֱלֹהִים","God"], ["אֵלָיו","unto him"], ["וְיִסָּמֵךְ","and he is to be ordained"], ["בְּכֹחַ","by the power of"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["אֲשֶׁר","which"], ["בַּסּוֹמֵךְ","is in the one who ordains"], ["אוֹתוֹ׃","him"]]},
   { num: "סא", words: [["הַזְּקֵנִים","the elders"], ["הַשּׁוֹנִים","several"], ["אֲשֶׁר הֵם","composing"], ["אֶת־כְּנֵסִיַּת","the church of"], ["הַמָּשִׁיחַ","Christ"], ["יִתְאַסְּפוּ","are to meet"], ["בְּמוֹעֵד","in conference"], ["אַחַת","once"], ["לִשְׁלֹשָׁה","in three"], ["חֳדָשִׁים","months"], ["אוֹ","or"], ["מֵעֵת","from time"], ["לְעֵת","to time"], ["כַּאֲשֶׁר","as"], ["יְקַבְּעוּ","shall direct or appoint"], ["הַמּוֹעֲדִים׃","said conferences"]]},
   { num: "סב", words: [["וְהַמּוֹעֲדִים","and conferences"], ["הָאֵלֶּה","said"], ["יַעֲשׂוּ","are to do"], ["כׇּל־עֲבוֹדַת","whatever business of"], ["הַכְּנֵסִיָּה","the church"], ["הַצְּרִיכָה","is necessary"], ["לְהֵעָשׂוֹת","to be done"], ["בָּעֵת׃","at the time"]]},
-  { num: "סג", words: [["הַזְּקֵנִים","the elders"], ["יְקַבְּלוּ","are to receive"], ["מִזְּקֵנִים","their licenses from elders"], ["אֲחֵרִים","other"], ["עַל־פִּי","by vote of"], ["הַכְּנֵסִיָּה","the church"], ["אֲשֶׁר","to which"], ["הֵם","they"], ["לָהּ","belong"], ["אוֹ","or"], ["מִן","from"], ["הַמּוֹעֲדִים׃","the conferences"]]},
-  { num: "סד", words: [
-    ["כׇּל־כֹּהֵן","each priest"],
-    ["וּמוֹרֶה","teacher"],
-    ["וּמְשָׁרֵת","or deacon"],
-    ["הַנִּסְמָךְ","who is ordained"],
-    ["עַל","by"],
-    ["יְדֵי",""],
-    ["כֹהֵן","a priest"],
-    ["יָכֹל","may"],
-    ["לְקַבֵּל","take"],
-    ["תְּעוּדָה","a certificate"],
-    ["מִמֶּנּוּ","from him"],
-    ["בָּעֵת","at the time"],
-    ["אֲשֶׁר","which"],
-    ["הַתְּעוּדָה","certificate"],
-    ["הַזֹּאת","this"],
-    ["בְּהִנָּתְנָהּ","when presented"],
-    ["לְזָקֵן","to an elder"],
-    ["תִּתֶּן","shall entitle"],
-    ["לוֹ","him to"],
-    ["רִשָּׁיוֹן","a license"],
-    ["אֲשֶׁר","which"],
-    ["יִתֵּן","shall authorize"],
-    ["לוֹ","him"],
-    ["לַעֲשׂוֹת","to perform"],
-    ["אֶת־חוֹבוֹת","the duties of"],
-    ["קְרִיאָתוֹ","his calling"],
-    ["אוֹ","or"],
-    ["יְקַבְּלֶנָּה","he may receive it"],
-    ["מִמּוֹעֵד׃","from a conference"]
-  ]},
-  { num: "סה", words: [["אֵין","no"], ["אִישׁ","person"], ["יִסָּמֵךְ","is to be ordained"], ["לְכׇל־מִשְׂרָה","to any office"], ["בַּכְּנֵסִיָּה","in church"], ["הַזֹּאת","this"], ["בִּמְקוֹם","where"], ["אֲשֶׁר יֵשׁ","there is"], ["עֲנַף","a branch"], ["עָרוּךְ","regularly organized"], ["לָהּ","of the same"], ["בְּלִי","without"], ["רְצוֹן","the vote of"], ["הַכְּנֵסִיָּה","that church"], ["הַהִיא׃",""]]},
-  { num: "סו", words: [["אַךְ","but"], ["הַזְּקֵנִים","the elders"], ["הָעֶלְיוֹנִים","presiding"], ["וְהַפְּקִידִים","and bishops"], ["הַנּוֹסְעִים","traveling"], ["הַכְּנֵסִיָּה","of the church"], ["הָעֶלְיוֹנִים","high councilors"], ["וְהַכֹּהֲנִים","and priests"], ["הַגְּדוֹלִים","high"], ["וְהַזְּקֵנִים","and elders"], ["יָכְלוּ","may have the privilege"], ["לִסְמֹךְ","of ordaining"], ["בְּמָקוֹם","where"], ["כִּי אֵין","there is no"], ["עֲנַף","branch of"], ["כְּנֵסִיָּה","the church"], ["לְקַבֵּל","that"], ["רִשָּׁיוֹן׃","a vote may be called"]]},
-  { num: "סז", words: [["כׇּל־נְשִׂיא","every president of"], ["הַכְּהֻנָּה","the priesthood"], ["הַגְּדוֹלָה","high"], ["אוֹ","(or"], ["זָקֵן","elder"], ["עֶלְיוֹן","presiding)"], ["וּפָקִיד","bishop"], ["וְיוֹעֵץ","high councilor"], ["עֶלְיוֹן",""], ["וְכֹהֵן","and priest"], ["גָּדוֹל","high"], ["יִסָּמֵךְ","is to be ordained"], ["עַל","by"], ["פִּי","the direction of"], ["מוֹעֶצֶת","the council of"], ["הַכְּנֵסִיָּה","the church"], ["הָעֶלְיוֹנָה","the high"], ["אוֹ","or"], ["מוֹעֵד","conference"], ["גָּדוֹל׃","general"]]},
-  { num: "סח", words: [["מִשְׁמֶרֶת","the duty of"], ["הַחֲבֵרִים","the members"], ["אַחֲרֵי","after"], ["הִתְקַבְּלָם","they are received"], ["בַּטְּבִילָה","by baptism"], ["לַזְּקֵנִים","the elders"], ["וְלַכֹּהֲנִים","or priests"], ["יִהְיֶה","are to have"], ["דֵי","a sufficient"], ["זְמַן","time"], ["לְבָאֵר","to expound"], ["כׇּל־דָּבָר","all things"], ["עַל","concerning"], ["כְּנֵסִיַּת","the church of"], ["הַמָּשִׁיחַ","Christ"], ["לִפְנֵי","to their understanding previous to"], ["אָכְלָם","their partaking of"], ["אֶת־הַמִּנְחָה","the sacrament"], ["וְקִיּוּמָם","and being confirmed"], ["בִּסְמִיכַת","by the laying on of"], ["יְדֵי","the hands of"], ["הַזְּקֵנִים","the elders"], ["לְמַעַן","so that"], ["יֵעָשֶׂה","may be done"], ["הַכֹּל","all things"], ["כַּסֵּדֶר׃","in order"]]},
+  { num: "סג", words: [["הַזְּקֵנִים","the elders"], ["יְקַבְּלוּ","are to receive"], ["אֶת־רִשְׁיוֹנוֹתֵיהֶם","their licenses"], ["מִזְּקֵנִים","from elders"], ["אֲחֵרִים","other"], ["עַל־פִּי","by vote of"], ["הַכְּנֵסִיָּה","the church"], ["אֲשֶׁר","to which"], ["הֵם","they"], ["לָהּ","to it"], ["אוֹ","or"], ["מִן","from"], ["הַמּוֹעֲדִים׃","the conferences"]]},
+  { num: "סד", words: [["כׇּל־כֹּהֵן","each priest"], ["וּמוֹרֶה","teacher"], ["וּמְשָׁרֵת","or deacon"], ["הַנִּסְמָךְ","who is ordained"], ["עַל","by"], ["יְדֵי","the hands of"], ["כֹהֵן","a priest"], ["יָכֹל","may"], ["לְקַבֵּל","take"], ["תְּעוּדָה","a certificate"], ["מִמֶּנּוּ","from him"], ["בָּעֵת","at the time"], ["אֲשֶׁר","which"], ["הַתְּעוּדָה","certificate"], ["הַזֹּאת","this"], ["בְּהִנָּתְנָהּ","when presented"], ["לְזָקֵן","to an elder"], ["תִּתֶּן","shall entitle"], ["לוֹ","him to"], ["רִשָּׁיוֹן","a license"], ["אֲשֶׁר","which"], ["יִתֵּן","shall authorize"], ["לוֹ","him"], ["לַעֲשׂוֹת","to perform"], ["אֶת־חוֹבוֹת","the duties of"], ["קְרִיאָתוֹ","his calling"], ["אוֹ","or"], ["יְקַבְּלֶנָּה","he may receive it"], ["מִמּוֹעֵד׃","from a conference"]]},
+  { num: "סה", words: [["אֵין","no"], ["אִישׁ","person"], ["יִסָּמֵךְ","is to be ordained"], ["לְכׇל־מִשְׂרָה","to any office"], ["בַּכְּנֵסִיָּה","in the church"], ["הַזֹּאת","this"], ["בִּמְקוֹם","where"], ["אֲשֶׁר יֵשׁ","there is"], ["עֲנַף","a branch"], ["עָרוּךְ","regularly organized"], ["לָהּ","of the same"], ["בְּלִי","without"], ["רְצוֹן","the vote of"], ["הַכְּנֵסִיָּה","that church"], ["הַהִיא׃","that"]]},
+  { num: "סו", words: [["אַךְ","but"], ["הַזְּקֵנִים","the elders"], ["הָעֶלְיוֹנִים","presiding"], ["וְהַפְּקִידִים","and bishops"], ["הַנּוֹסְעִים","traveling"], ["וְהַיּוֹעֲצִים","and councilors"], ["הָעֶלְיוֹנִים","high"], ["וְהַכֹּהֲנִים","and priests"], ["הַגְּדוֹלִים","high"], ["וְהַזְּקֵנִים","and elders"], ["יָכְלוּ","may have the privilege"], ["לִסְמֹךְ","of ordaining"], ["בְּמָקוֹם","where"], ["כִּי אֵין","there is no"], ["עֲנַף","branch of"], ["כְּנֵסִיָּה","the church"], ["לְקַבֵּל","to obtain"], ["רָצוֹן׃","a vote"]]},
+  { num: "סז", words: [["כׇּל־נְשִׂיא","every president of"], ["הַכְּהֻנָּה","the priesthood"], ["הַגְּדוֹלָה","high"], ["אוֹ","or"], ["זָקֵן","elder"], ["עֶלְיוֹן","presiding"], ["וּפָקִיד","bishop"], ["וְיוֹעֵץ","high councilor"], ["עֶלְיוֹן","high"], ["וְכֹהֵן","and priest"], ["גָּדוֹל","high"], ["יִסָּמֵךְ","is to be ordained"], ["עַל","by"], ["פִּי","the direction of"], ["מוֹעֶצֶת","the council of"], ["הַכְּנֵסִיָּה","the church"], ["הָעֶלְיוֹנָה","the high"], ["אוֹ","or"], ["מוֹעֵד","conference"], ["גָּדוֹל׃","general"]]},
+  { num: "סח", words: [["מִשְׁמֶרֶת","the duty of"], ["הַחֲבֵרִים","the members"], ["אַחֲרֵי","after"], ["הִתְקַבְּלָם","they are received"], ["בַּטְּבִילָה","by baptism"], ["לַזְּקֵנִים","the elders"], ["וְלַכֹּהֲנִים","or priests"], ["יִהְיֶה","are to have"], ["דֵי","a sufficient"], ["זְמַן","time"], ["לְבָאֵר","to expound"], ["כׇּל־דָּבָר","all things"], ["עַל","concerning"], ["כְּנֵסִיַּת","the church of"], ["הַמָּשִׁיחַ","Christ"], ["לְבִינָתָם","to their understanding"], ["לִפְנֵי","previous to"], ["אָכְלָם","their partaking of"], ["אֶת־הַמִּנְחָה","the sacrament"], ["וְקִיּוּמָם","and being confirmed"], ["בִּסְמִיכַת","by the laying on of"], ["יְדֵי","the hands of"], ["הַזְּקֵנִים","the elders"], ["לְמַעַן","so that"], ["יֵעָשֶׂה","may be done"], ["הַכֹּל","all things"], ["כַּסֵּדֶר׃","in order"]]},
   { num: "סט", words: [["וְהַחֲבֵרִים","and the members"], ["יַרְאוּ","shall manifest"], ["לִפְנֵי","before"], ["הַכְּנֵסִיָּה","the church"], ["וְגַם","and also"], ["לִפְנֵי","before"], ["הַזְּקֵנִים","the elders"], ["בַּהֲלִיכוֹת","by a walk"], ["קֹדֶשׁ","godly"], ["וּבְשִׂיחָה","and conversation"], ["כִּי","that"], ["כְּשֵׁרִים","worthy of it"], ["הֵם","they are"], ["לְמַעַן","that"], ["יִהְיוּ","there may be"], ["מַעֲשִׂים","works"], ["וֶאֱמוּנָה","and faith"], ["כְּפִי","agreeable to"], ["כִּתְבֵי","the scriptures of"], ["הַקֹּדֶשׁ","the holy"], ["מִתְהַלְּכִים","walking"], ["בִּקְדֻשָּׁה","in holiness"], ["לִפְנֵי","before"], ["יְהוָה׃","the Lord"]]},
-  { num: "ע", words: [["כׇּל־חָבֵר","every member"], ["בִּכְנֵסִיַּת","of the church of"], ["הַמָּשִׁיחַ","Christ"], ["אֲשֶׁר","which"], ["לוֹ","unto him"], ["יְלָדִים","children"], ["יְבִיאֵם","is to bring them"], ["אֶל־הַזְּקֵנִים","unto the elders"], ["לִפְנֵי","before"], ["הַכְּנֵסִיָּה","the church"], ["אֲשֶׁר","which"], ["יִסְמְכוּ","are to lay"], ["יְדֵיהֶם","their hands"], ["עֲלֵיהֶם","upon them"], ["בְּשֵׁם","in the name of"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","Christ"], ["וִיבָרְכוּם","and bless them"], ["בִּשְׁמוֹ׃","in his name"]]},
-  { num: "עא", words: [["אֵין","no"], ["אִישׁ","one"], ["יְקֻבַּל","can be received"], ["אֶל","into"], ["כְּנֵסִיַּת","the church of"], ["הַמָּשִׁיחַ","Christ"], ["אִם","unless"], ["לֹא",""], ["הִגִּיעַ","he has arrived"], ["לִשְׁנוֹת","unto the years of"], ["דַּעַת","accountability"], ["טוֹב",""], ["וָרָע",""], ["לִפְנֵי","before"], ["אֱלֹהִים","God"], ["וְיָכֹל","and is capable"], ["לָשׁוּב׃","of repentance"]]},
+  { num: "ע", words: [["כׇּל־חָבֵר","every member"], ["בִּכְנֵסִיַּת","of the church of"], ["הַמָּשִׁיחַ","Christ"], ["אֲשֶׁר","who"], ["לוֹ","to him"], ["יְלָדִים","children"], ["יְבִיאֵם","is to bring them"], ["אֶל־הַזְּקֵנִים","unto the elders"], ["לִפְנֵי","before"], ["הַכְּנֵסִיָּה","the church"], ["אֲשֶׁר","who"], ["יִסְמְכוּ","are to lay"], ["יְדֵיהֶם","their hands"], ["עֲלֵיהֶם","upon them"], ["בְּשֵׁם","in the name of"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","Christ"], ["וִיבָרְכוּם","and bless them"], ["בִּשְׁמוֹ׃","in his name"]]},
+  { num: "עא", words: [["אֵין","no"], ["אִישׁ","one"], ["יְקֻבַּל","can be received"], ["אֶל","into"], ["כְּנֵסִיַּת","the church of"], ["הַמָּשִׁיחַ","Christ"], ["אִם","unless"], ["לֹא","not"], ["הִגִּיעַ","he has arrived"], ["לִשְׁנוֹת","unto the years of"], ["דַּעַת","the knowledge of"], ["טוֹב","good"], ["וָרָע","and evil"], ["לִפְנֵי","before"], ["אֱלֹהִים","God"], ["וְיָכֹל","and is capable"], ["לָשׁוּב׃","of repentance"]]},
   { num: "עב", words: [
     ["הַטְּבִילָה","baptism"],
     ["תֵּעָשֶׂה","is to be administered"],
@@ -1832,17 +1637,9 @@ var dc20_ch1Verses = [
     ["הַשָּׁבִים׃","those who repent"]
   ]},
   { num: "עג", words: [["הָאִישׁ","the person"], ["הַנִּקְרָא","who is called"], ["מֵאֱלֹהִים","of God"], ["וְלוֹ","and has"], ["שִׁלְטוֹן","authority"], ["מִיֵּשׁוּעַ","from Jesus"], ["הַמָּשִׁיחַ","Christ"], ["לְהַטְבִּיל","to baptize"], ["יֵרֵד","shall go down"], ["אֶל־הַמַּיִם","into the water"], ["עִם","with"], ["הָאִישׁ","the person"], ["אֲשֶׁר","who"], ["נִגַּשׁ","has presented himself or herself"], ["לְהִטָּבֵל","for baptism"], ["וְיֹאמַר","and shall say"], ["וְיִקְרָא","calling"], ["אֶת־שְׁמוֹ","him or her by name"], ["בְּהִפָּקְדִי","having been commissioned"], ["מִיֵּשׁוּעַ","of Jesus"], ["הַמָּשִׁיחַ","Christ"], ["אֲנִי","I"], ["מַטְבִּילְךָ","baptize you"], ["בְּשֵׁם","in the name of"], ["הָאָב","the Father"], ["וְהַבֵּן","and of the Son"], ["וְרוּחַ","and the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["אָמֵן׃","Amen"]]},
-  { num: "עד", words: [
-    ["אָז","then"],
-    ["יַטְבִּיל","shall immerse"],
-    ["אוֹתָם","them"],
-    ["בַּמַּיִם","in the water"],
-    ["וְשָׁבוּ","and come"],
-    ["וְיָצְאוּ","and come forth again"],
-    ["מִן־הַמָּיִם׃","out of-the water"]
-  ]},
-  { num: "עה", words: [["נָכוֹן","it is expedient"], ["לַכְּנֵסִיָּה","that the church"], ["לְהִתְאַסֵּף","meet together"], ["לְעִתִּים","often"], ["קְרוֹבוֹת",""], ["לֶאֱכֹל","to partake of"], ["לֶחֶם","bread"], ["וְלִשְׁתּוֹת","and wine"], ["יַיִן",""], ["לְזֵכֶר","in the remembrance of"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","Christ"], ["אֲדֹנֵינוּ׃","the Lord"]]},
-  { num: "עו", words: [["וְהַזָּקֵן","and the elder"], ["אוֹ","or"], ["הַכֹּהֵן","priest"], ["יַגִּישֶׁנָּה","shall administer it"], ["וְכָזֹאת","shall administer it"], ["יַעֲשֶׂה",""], ["יִכְרַע","he shall kneel"], ["עִם","with"], ["הַכְּנֵסִיָּה","the church"], ["וְיִקְרָא","and call"], ["אֶל־הָאָב","upon the Father"], ["בִּתְפִלָּה","in prayer"], ["נִשָּׂאָה","solemn"], ["לֵאמֹר׃","saying"]]},
+  { num: "עד", words: [["אָז","then"], ["יַטְבִּיל","shall immerse"], ["אוֹתָם","them"], ["בַּמַּיִם","in the water"], ["וְשָׁבוּ","and again"], ["וְיָצְאוּ","come forth"], ["מִן־הַמָּיִם׃","out of-the water"]]},
+  { num: "עה", words: [["נָכוֹן","it is expedient"], ["לַכְּנֵסִיָּה","that the church"], ["לְהִתְאַסֵּף","meet together"], ["לְעִתִּים","at times"], ["קְרוֹבוֹת","frequent"], ["לֶאֱכֹל","to partake of"], ["לֶחֶם","bread"], ["וְלִשְׁתּוֹת","and to drink"], ["יַיִן","wine"], ["לְזֵכֶר","in the remembrance of"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","Christ"], ["אֲדֹנֵינוּ׃","the Lord"]]},
+  { num: "עו", words: [["וְהַזָּקֵן","and the elder"], ["אוֹ","or"], ["הַכֹּהֵן","priest"], ["יַגִּישֶׁנָּה","shall administer it"], ["וְכָזֹאת","and after this manner"], ["יַעֲשֶׂה","shall he administer it"], ["יִכְרַע","he shall kneel"], ["עִם","with"], ["הַכְּנֵסִיָּה","the church"], ["וְיִקְרָא","and call"], ["אֶל־הָאָב","upon the Father"], ["בִּתְפִלָּה","in prayer"], ["נִשָּׂאָה","solemn"], ["לֵאמֹר׃","saying"]]},
   { num: "עז", words: [
     ["אֱלֹהִים","O God"],
     ["אָבִינוּ","our Father"],
@@ -1940,10 +1737,10 @@ var dc20_ch1Verses = [
     ["אָמֵן׃","amen"]
   ]},
   { num: "פ", words: [["כׇּל־חָבֵר","any member"], ["בִּכְנֵסִיַּת","of the church of"], ["הַמָּשִׁיחַ","Christ"], ["הַפּוֹשֵׁעַ","transgressing"], ["אוֹ","or"], ["הַנִּתְפָּס","being overtaken"], ["בְּעָוֹן","in a fault"], ["יֵעָשֶׂה","shall be dealt with"], ["לוֹ","with him"], ["כַּאֲשֶׁר","as"], ["מוֹרִים","direct"], ["הַכְּתוּבִים׃","the scriptures"]]},
-  { num: "פא", words: [["מִשְׁמֶרֶת","it shall be the duty of"], ["הַכְּנֵסִיּוֹת","the churches"], ["הַשּׁוֹנוֹת","several"], ["אֲשֶׁר הֵן","composing"], ["אֶת־כְּנֵסִיַּת","the church of"], ["הַמָּשִׁיחַ","Christ"], ["לִשְׁלֹחַ","to send"], ["אֶחָד","one"], ["אוֹ","or"], ["יוֹתֵר","more"], ["מִמּוֹרֵיהֶם","of their teachers"], ["לַמּוֹעֲדִים","to attend the conferences"], ["הַשּׁוֹנִים","several"], ["עַל","held by"], ["יְדֵי",""], ["זִקְנֵי","the elders of"], ["הַכְּנֵסִיָּה׃","the church"]]},
-  { num: "פב", words: [["עִם","with"], ["שְׁמוֹת","a list of the names of"], ["הַחֲבֵרִים","the members"], ["הַשּׁוֹנִים","several"], ["אֲשֶׁר","who"], ["לַכְּנֵסִיָּה","are uniting themselves with the church"], ["מֵאָז","since"], ["הַמּוֹעֵד","the conference"], ["הָאַחֲרוֹן","last"], ["אוֹ","or"], ["לִשְׁלֹחַ","send"], ["בְּיַד","by the hand of"], ["כֹּהֵן","some priest"], ["לְמַעַן","so that"], ["יִשָּׁמֵר","may be kept"], ["מִפְקָד","a list"], ["עָרוּךְ","regular"], ["לְ־","of"], ["כׇּל־שְׁמוֹת","all the names of"], ["הַכְּנֵסִיָּה","the church"], ["כֻּלָּהּ","whole"], ["בְּסֵפֶר","in a book"], ["עַל","by"], ["יְדֵי",""], ["אֶחָד","one"], ["מִן","of"], ["הַזְּקֵנִים","the elders"], ["אֲשֶׁר","whomsoever"], ["יְמַנּוּ","shall appoint"], ["אוֹתוֹ","him"], ["הַזְּקֵנִים","the elders"], ["הָאֲחֵרִים","other"], ["מֵעֵת","from time"], ["לְעֵת׃","to time"]]},
+  { num: "פא", words: [["מִשְׁמֶרֶת","it shall be the duty of"], ["הַכְּנֵסִיּוֹת","the churches"], ["הַשּׁוֹנוֹת","several"], ["אֲשֶׁר הֵן","composing"], ["אֶת־כְּנֵסִיַּת","the church of"], ["הַמָּשִׁיחַ","Christ"], ["לִשְׁלֹחַ","to send"], ["אֶחָד","one"], ["אוֹ","or"], ["יוֹתֵר","more"], ["מִמּוֹרֵיהֶם","of their teachers"], ["לַמּוֹעֲדִים","to attend the conferences"], ["הַשּׁוֹנִים","several"], ["עַל","held by"], ["יְדֵי","the hands of"], ["זִקְנֵי","the elders of"], ["הַכְּנֵסִיָּה׃","the church"]]},
+  { num: "פב", words: [["עִם","with"], ["שְׁמוֹת","a list of the names of"], ["הַחֲבֵרִים","the members"], ["הַשּׁוֹנִים","several"], ["אֲשֶׁר","who"], ["לַכְּנֵסִיָּה","to the church"], ["מֵאָז","since"], ["הַמּוֹעֵד","the conference"], ["הָאַחֲרוֹן","last"], ["אוֹ","or"], ["לִשְׁלֹחַ","send"], ["בְּיַד","by the hand of"], ["כֹּהֵן","some priest"], ["לְמַעַן","so that"], ["יִשָּׁמֵר","may be kept"], ["מִפְקָד","a list"], ["עָרוּךְ","regular"], ["לְ־","of"], ["כׇּל־שְׁמוֹת","all the names of"], ["הַכְּנֵסִיָּה","the church"], ["כֻּלָּהּ","whole"], ["בְּסֵפֶר","in a book"], ["עַל","by"], ["יְדֵי","the hands of"], ["אֶחָד","one"], ["מִן","of"], ["הַזְּקֵנִים","the elders"], ["אֲשֶׁר","who"], ["יְמַנּוּ","shall appoint"], ["אוֹתוֹ","him"], ["הַזְּקֵנִים","the elders"], ["הָאֲחֵרִים","other"], ["מֵעֵת","from time"], ["לְעֵת׃","to time"]]},
   { num: "פג", words: [["וְגַם","and also"], ["אִם","if"], ["גֹּרְשׁוּ","have been expelled"], ["אֲנָשִׁים","any"], ["מִן","from"], ["הַכְּנֵסִיָּה","the church"], ["לְמַעַן","so that"], ["יִמָּחוּ","may be blotted out"], ["שְׁמוֹתֵיהֶם","their names"], ["מִסֵּפֶר","from the record"], ["הַשֵּׁמוֹת","of names"], ["הַגָּדוֹל","general"], ["אֲשֶׁר","which is"], ["לַכְּנֵסִיָּה׃","to the church"]]},
-  { num: "פד", words: [["כׇּל־הַחֲבֵרִים","all members"], ["הָעוֹבְרִים","removing"], ["מֵהַכְּנֵסִיָּה","from the church"], ["אֲשֶׁר","where"], ["יָגוּרוּ","they reside"], ["בָּהּ",""], ["אִם","if"], ["יֵלְכוּ","going"], ["לִכְנֵסִיָּה","to a church"], ["אֲשֶׁר","where"], ["לֹא","not"], ["יֵדָעוּם","they are known"], ["יָכְלוּ","may"], ["לָקַחַת","take"], ["אִגֶּרֶת","a letter"], ["הַמְעִידָה","certifying"], ["כִּי","that"], ["חֲבֵרִים","members"], ["נְכוֹנִים","they are regular"], ["הֵם",""], ["וְשֵׁם","and in good"], ["טוֹב","standing"], ["אֲשֶׁר","which"], ["הָאִגֶּרֶת","certificate"], ["תִּחָתֵם","may be signed"], ["עַל","by"], ["יְדֵי",""], ["כׇּל־זָקֵן","any elder"], ["אוֹ","or"], ["כֹהֵן","priest"], ["אִם","if"], ["הַחָבֵר","the member"], ["הַמְקַבֵּל","receiving"], ["אֶת־הָאִגֶּרֶת","the letter"], ["מַכִּיר","is personally acquainted with"], ["אֶת־הַזָּקֵן","the elder"], ["אוֹ","or"], ["הַכֹּהֵן","priest"], ["אוֹ","or"], ["תִּחָתֵם","it may be signed"], ["עַל","by"], ["יְדֵי",""], ["מוֹרֵי","the teachers"], ["אוֹ","or"], ["מְשָׁרְתֵי","deacons"], ["הַכְּנֵסִיָּה׃","of the church"]]}
+  { num: "פד", words: [["כׇּל־הַחֲבֵרִים","all members"], ["הָעוֹבְרִים","removing"], ["מֵהַכְּנֵסִיָּה","from the church"], ["אֲשֶׁר","where"], ["יָגוּרוּ","they reside"], ["בָּהּ","in it"], ["אִם","if"], ["יֵלְכוּ","going"], ["לִכְנֵסִיָּה","to a church"], ["אֲשֶׁר","where"], ["לֹא","not"], ["יֵדָעוּם","they are known"], ["יָכְלוּ","may"], ["לָקַחַת","take"], ["אִגֶּרֶת","a letter"], ["הַמְעִידָה","certifying"], ["כִּי","that"], ["חֲבֵרִים","members"], ["נְכוֹנִים","regular"], ["הֵם","they are"], ["וְשֵׁם","and a name"], ["טוֹב","good"], ["אֲשֶׁר","which"], ["הָאִגֶּרֶת","certificate"], ["תִּחָתֵם","may be signed"], ["עַל","by"], ["יְדֵי","the hands of"], ["כׇּל־זָקֵן","any elder"], ["אוֹ","or"], ["כֹהֵן","priest"], ["אִם","if"], ["הַחָבֵר","the member"], ["הַמְקַבֵּל","receiving"], ["אֶת־הָאִגֶּרֶת","the letter"], ["מַכִּיר","is personally acquainted with"], ["אֶת־הַזָּקֵן","the elder"], ["אוֹ","or"], ["הַכֹּהֵן","priest"], ["אוֹ","or"], ["תִּחָתֵם","it may be signed"], ["עַל","by"], ["יְדֵי","the hands of"], ["מוֹרֵי","the teachers"], ["אוֹ","or"], ["מְשָׁרְתֵי","deacons"], ["הַכְּנֵסִיָּה׃","of the church"]]}
 ];
 renderVerseSet(dc20_ch1Verses, 'dc20-ch1-verses');
 

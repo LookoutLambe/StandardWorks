@@ -1,8 +1,7 @@
 // verses/1nephi.js — 1 Nephi verse data
 (function() {
 var colophonWords = [
-  ["וְאֵלֶּה","and these"],
-  ["דִּבְרֵי","account of"],
+  ["דִּבְרֵי","An account of"],
   ["לֶחִי","Lehi"],
   ["וְאִשְׁתּוֹ","and his wife"],
   ["שְׂרָיָה","Sariah"],

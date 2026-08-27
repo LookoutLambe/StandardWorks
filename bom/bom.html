@@ -2517,6 +2517,7 @@ body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
     <div class="colophon">
       <div class="colophon-label"></div>
       <div class="word-flow" id="colophon-flow"></div>
+      <div class="verse-english colophon-english">An account of Lehi and his wife Sariah, and his four sons, being called, (beginning at the eldest) Laman, Lemuel, Sam, and Nephi. The Lord warns Lehi to depart out of the land of Jerusalem, because he prophesieth unto the people concerning their iniquity and they seek to destroy his life. He taketh three days’ journey into the wilderness with his family. Nephi taketh his brethren and returneth to the land of Jerusalem after the record of the Jews. The account of their sufferings. They take the daughters of Ishmael to wife. They take their families and depart into the wilderness. Their sufferings and afflictions in the wilderness. The course of their travels. They come to the large waters. Nephi’s brethren rebel against him. He confoundeth them, and buildeth a ship. They call the name of the place Bountiful. They cross the large waters into the promised land, and so forth. This is according to the account of Nephi; or in other words, I, Nephi, wrote this record.</div>
     </div>
     <div class="chapter-heading" id="ch1">
       <h2>פרק א</h2>
@@ -2676,6 +2677,10 @@ body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
   <!-- ═══════════════════════════════════════ -->
 
   <div class="chapter-panel" id="panel-2n-ch1" style="display:none">
+    <div class="colophon">
+      <div class="colophon-label"></div>
+      <div id="2n-colophon-verses"></div>
+    </div>
     <div class="chapter-heading"><h2>פרק א</h2></div>
     <div id="2n-ch1-verses"></div>
   </div>
@@ -2845,6 +2850,10 @@ body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
   <!-- ═══════════════════════════════════════ -->
 
   <div class="chapter-panel" id="panel-jc-ch1" style="display:none">
+    <div class="colophon">
+      <div class="colophon-label"></div>
+      <div id="jc-colophon-verses"></div>
+    </div>
     <div class="chapter-heading"><h2>פרק א</h2></div>
     <div id="jc-ch1-verses"></div>
   </div>
@@ -3073,6 +3082,10 @@ body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
   <!-- ======================================== -->
 
   <div class="chapter-panel" id="panel-al-ch1" style="display:none">
+    <div class="colophon">
+      <div class="colophon-label"></div>
+      <div id="al-colophon-verses"></div>
+    </div>
     <div class="chapter-heading"><h2>פרק א</h2></div>
     <div id="al-ch1-verses"></div>
   </div>
@@ -3392,6 +3405,10 @@ body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
   <!-- ======================================== -->
 
   <div class="chapter-panel" id="panel-he-ch1" style="display:none">
+    <div class="colophon">
+      <div class="colophon-label"></div>
+      <div id="he-colophon-verses"></div>
+    </div>
     <div class="chapter-heading"><h2>פרק א</h2></div>
     <div id="he-ch1-verses"></div>
   </div>
@@ -3476,6 +3493,10 @@ body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
   <!-- ======================================== -->
 
   <div class="chapter-panel" id="panel-3n-ch1" style="display:none">
+    <div class="colophon">
+      <div class="colophon-label"></div>
+      <div id="3n-colophon-verses"></div>
+    </div>
     <div class="chapter-heading"><h2>פרק א</h2></div>
     <div id="3n-ch1-verses"></div>
   </div>
@@ -3630,6 +3651,10 @@ body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
   <!-- ======================================== -->
 
   <div class="chapter-panel" id="panel-4n-ch1" style="display:none">
+    <div class="colophon">
+      <div class="colophon-label"></div>
+      <div id="4n-colophon-verses"></div>
+    </div>
     <div class="chapter-heading"><h2>פרק א</h2></div>
     <div id="4n-ch1-verses"></div>
   </div>
@@ -3688,6 +3713,10 @@ body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
   <!-- ======================================== -->
 
   <div class="chapter-panel" id="panel-et-ch1" style="display:none">
+    <div class="colophon">
+      <div class="colophon-label"></div>
+      <div id="et-colophon-verses"></div>
+    </div>
     <div class="chapter-heading"><h2>פרק א</h2></div>
     <div id="et-ch1-verses"></div>
   </div>
@@ -4256,8 +4285,12 @@ var _renderedChapters = {}; // chapId -> true once DOM is built
 function renderVerseSet(verseData, containerId) {
   var chId = containerId.replace('-verses', '').replace('-colophon', '');
   _verseRegistry.push({ chapId: chId, verses: verseData });
+  // A book colophon is displayed inside that book's chapter-1 panel (the way
+  // 1 Nephi does it), so its DOM has to be built when chapter 1 is built —
+  // nobody ever navigates to a bare book id like '2n'.
+  var renderAt = /-colophon-verses$/.test(containerId) ? chId + '-ch1' : chId;
   // Defer DOM creation — built on first navTo (saves mobile memory)
-  _pendingRenders.push({ verseData: verseData, containerId: containerId, chapId: chId });
+  _pendingRenders.push({ verseData: verseData, containerId: containerId, chapId: renderAt });
 }
 
 function _doRenderVerses(verseData, containerId) {
@@ -4267,6 +4300,9 @@ function _doRenderVerses(verseData, containerId) {
   const bkInfo = getBookChapter(chId);
   // Count superscriptions so numbered verses start at 1
   const superCount = verseData.filter(v => v.num === '∗').length;
+  // A book colophon is a headnote, not a numbered verse — 1 Nephi's renders
+  // through renderWords and carries no number, so these must not either.
+  const isColophon = /-colophon-verses$/.test(containerId);
   verseData.forEach((v, idx) => {
     const verseKey = bkInfo ? (bkInfo.book + '|' + bkInfo.chapter + '|' + (idx + 1)) : '';
     const verseDiv = document.createElement('div');
@@ -4279,7 +4315,7 @@ function _doRenderVerses(verseData, containerId) {
     const arabicNum = document.createElement('span');
     arabicNum.className = 'verse-num-arabic';
     // Superscription (∗) is not a numbered verse — skip the Arabic counter
-    if (v.num !== '∗') arabicNum.textContent = idx + 1 - superCount;
+    if (v.num !== '∗' && !isColophon) arabicNum.textContent = idx + 1 - superCount;
     numDiv.appendChild(arabicNum);
     verseDiv.appendChild(numDiv);
 

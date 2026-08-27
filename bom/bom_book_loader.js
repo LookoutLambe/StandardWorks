@@ -89,7 +89,7 @@
 
   global.ensureBomBookForChapId = function(chapId, cb) {
     if (isColophonOnly(chapId)) {
-      loadChain(['verses/book_colophons.js?v=1'], cb);
+      loadChain(['verses/book_colophons.js?v=2'], cb);
       return;
     }
     var bookSrc = bookScriptFor(chapId);
@@ -100,7 +100,7 @@
     var chain = [];
     if (needsColophonBundle(chapId) && !_colophonsLoaded) {
       _colophonsLoaded = true;
-      chain.push('verses/book_colophons.js?v=1');
+      chain.push('verses/book_colophons.js?v=2');
     }
     chain.push(bookSrc);
     loadChain(chain, cb);
@@ -114,7 +114,7 @@
   global.loadAllBomBooks = function (cb) {
     if (_allLoaded) { if (cb) cb(); return; }
     _allLoaded = true;
-    var srcs = ['verses/book_colophons.js?v=1'];
+    var srcs = ['verses/book_colophons.js?v=2'];
     for (var i = 0; i < BOOK_RULES.length; i++) {
       if (srcs.indexOf(BOOK_RULES[i].src) < 0) srcs.push(BOOK_RULES[i].src);
     }

@@ -1981,22 +1981,7 @@ var dc58_ch1Verses = [
     ["בָּאָרֶץ","in (the) land"],
     ["הַזֹּאת׃","this"]
   ]},
-  { num: "טו", words: [
-    ["אַךְ","but"],
-    ["אִם","if"],
-    ["לֹא","not"],
-    ["יָשׁוּב","(he) repent"],
-    ["מֵחֲטָאָיו","of his sins"],
-    ["אֲשֶׁר","which"],
-    ["הֵם","are"],
-    ["חֹסֶר","lack of"],
-    ["אֱמוּנָה","faith (unbelief)"],
-    ["וְעִוְרוֹן","and blindness of"],
-    ["לֵב","heart"],
-    ["יִשָּׁמֵר","let him take heed"],
-    ["פֶּן","lest"],
-    ["יִפֹּל׃","he fall"]
-  ]},
+  { num: "טו", words: [["אַךְ","but"], ["אִם","if"], ["לֹא","not"], ["יָשׁוּב","(he) repent"], ["מֵחֲטָאָיו","of his sins"], ["אֲשֶׁר","which"], ["הֵם","are"], ["מַעַל","unbelief"], ["וְעִוְרוֹן","and blindness of"], ["לֵב","heart"], ["יִשָּׁמֵר","let him take heed"], ["פֶּן","lest"], ["יִפֹּל׃","he fall"]]},
   { num: "טז", words: [
     ["הִנֵּה","behold"],
     ["מִשְׁלַחְתּוֹ","his mission"],
