@@ -309,22 +309,7 @@ var dc1_ch1Verses = [
     ["מְלָכִים","kings"],
     ["וְרוֹזְנִים׃","rulers"]
   ]},
-  { num: "כד", words: [
-    ["הִנֵּה","behold"],
-    ["אֲנִי","I"],
-    ["יְהוָה","am God"],
-    ["וְדִבַּרְתִּי","and I have spoken"],
-    ["הַמִּצְוֹת","the commandments"],
-    ["הָאֵלֶּה","these"],
-    ["מֵאִתִּי","from myself"],
-    ["וְנִתְּנוּ","and they were given"],
-    ["לַעֲבָדַי","to my servants"],
-    ["בִּהְיוֹתָם","in their being"],
-    ["חַלָּשִׁים","weak"],
-    ["כִּלְשׁוֹנָם","according to their language"],
-    ["לְמַעַן","so that"],
-    ["יָבִינוּ׃","they may understand"]
-  ]},
+  { num: "כד", words: [["הִנֵּה","behold"], ["אָנֹכִי","I"], ["אֱלֹהִים","am God"], ["וְדִבַּרְתִּי","and I have spoken"], ["הַמִּצְוֹת","the commandments"], ["הָאֵלֶּה","these"], ["מֵאִתִּי","from myself"], ["וְנִתְּנוּ","and they were given"], ["לַעֲבָדַי","to my servants"], ["בִּהְיוֹתָם","in their being"], ["חַלָּשִׁים","weak"], ["כִּלְשׁוֹנָם","according to their language"], ["לְמַעַן","so that"], ["יָבִינוּ׃","they may understand"]]},
   { num: "כה", words: [
     ["וּבַאֲשֶׁר","and when"],
     ["שָׁגוּ","they erred"],
@@ -1519,7 +1504,7 @@ renderVerseSet(dc5_ch1Verses, 'dc5-ch1-verses');
 
 var dc6_ch1Verses = [
   { num: "א", words: [["מַעֲשֶׂה","a work"], ["גָּדוֹל","great"], ["וְנִפְלָא","and marvelous"], ["קָרוֹב","is soon"], ["לָצֵאת","to come forth"], ["בִּבְנֵי","among children of"], ["אָדָם׃","man"]]},
-  { num: "ב", words: [["הִנֵּה","behold"], ["אָנֹכִי","I"], ["יְהוָה","am God"], ["הַקְשִׁיבוּ","give heed"], ["לִדְבָרִי","unto my word"], ["אֲשֶׁר","which"], ["חַי","quick"], ["הוּא","is"], ["וְתַקִּיף","and powerful"], ["חַד","sharper"], ["מֵחֶרֶב","than a sword"], ["פִּיפִיּוֹת","two-edged"], ["לְהַבְדִּיל","to divide"], ["בֵּין","between"], ["פֶּרֶק","joint"], ["וָמֹחַ","and marrow"], ["עַל־כֵּן","therefore"], ["הַקְשִׁיבוּ","give heed"], ["לִדְבָרָי׃","unto my words"]]},
+  { num: "ב", words: [["הִנֵּה","behold"], ["אָנֹכִי","I"], ["אֱלֹהִים","am God"], ["הַקְשִׁיבוּ","give heed"], ["לִדְבָרִי","unto my word"], ["אֲשֶׁר","which"], ["חַי","quick"], ["הוּא","is"], ["וְתַקִּיף","and powerful"], ["חַד","sharper"], ["מֵחֶרֶב","than a sword"], ["פִּיפִיּוֹת","two-edged"], ["לְהַבְדִּיל","to divide"], ["בֵּין","between"], ["פֶּרֶק","joint"], ["וָמֹחַ","and marrow"], ["עַל־כֵּן","therefore"], ["הַקְשִׁיבוּ","give heed"], ["לִדְבָרָי׃","unto my words"]]},
   { num: "ג", words: [
     ["הִנֵּה","behold"],
     ["הַשָּׂדֶה","the field"],

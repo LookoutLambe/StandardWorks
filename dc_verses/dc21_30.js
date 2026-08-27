@@ -540,21 +540,7 @@ var dc24_ch1Verses = [
     ["תַּחַת","instead of"],
     ["בְּרָכָה׃","a blessing"]
   ]},
-  { num: "ה", words: [
-    ["וְתוֹסִיף","and thou shalt continue"],
-    ["לִקְרֹא","in calling"],
-    ["בְּשֵׁם","upon"],
-    ["יְהוָה","God"],
-    ["וְלִכְתֹּב","in my name, and writing"],
-    ["אֶת־אֲשֶׁר","the things which"],
-    ["יִנָּתֵן","shall be given"],
-    ["לְךָ","thee"],
-    ["בְּיַד","by"],
-    ["הַמְנַחֵם","the Comforter"],
-    ["וּלְבָאֵר","and expounding"],
-    ["כׇּל־הַכְּתוּבִים","all scriptures"],
-    ["לָעֵדָה׃","unto the church"]
-  ]},
+  { num: "ה", words: [["וְתוֹסִיף","and thou shalt continue"], ["לִקְרֹא","in calling"], ["אֶל־","upon"], ["אֱלֹהִים","God"], ["בִּשְׁמִי","in my name"], ["וְלִכְתֹּב","and writing"], ["אֶת־אֲשֶׁר","the things which"], ["יִנָּתֵן","shall be given"], ["לְךָ","thee"], ["בְּיַד","by"], ["הַמְנַחֵם","the Comforter"], ["וּלְבָאֵר","and expounding"], ["כׇּל־הַכְּתוּבִים","all scriptures"], ["לָעֵדָה׃","unto the church"]]},
   { num: "ו", words: [
     ["וְנִתָּן","and it shall be given"],
     ["לְךָ","thee"],

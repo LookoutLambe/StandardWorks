@@ -248,21 +248,7 @@ var dc82_ch1Verses = [
     ["וְחֹשֶׁךְ","and darkness"],
     ["מוֹלֵךְ׃","reigneth-;"]
   ]},
-  { num: "ו", words: [
-    ["וְאַף","And the anger of"],
-    ["יְהוָה","God"],
-    ["בּוֹעֵר","kindleth"],
-    ["בְּיוֹשְׁבֵי","against the inhabitants of"],
-    ["הָאָרֶץ","the earth-;"],
-    ["וְאֵין","-and none"],
-    ["עֹשֶׂה","doeth"],
-    ["טוֹב","good"],
-    ["כִּי","for"],
-    ["כֻלָּם","all"],
-    ["סָרוּ","have gone"],
-    ["מִן","out of"],
-    ["הַדֶּרֶךְ׃","the way."]
-  ]},
+  { num: "ו", words: [["וְאַף","And the anger of"], ["אֱלֹהִים","God"], ["בּוֹעֵר","kindleth"], ["בְּיוֹשְׁבֵי","against the inhabitants of"], ["הָאָרֶץ","the earth-;"], ["וְאֵין","-and none"], ["עֹשֶׂה","doeth"], ["טוֹב","good"], ["כִּי","for"], ["כֻלָּם","all"], ["סָרוּ","have gone"], ["מִן","out of"], ["הַדֶּרֶךְ׃","the way."]]},
   { num: "ז", words: [
     ["וְעַתָּה","And now"],
     ["אָמֵן","verily"],
