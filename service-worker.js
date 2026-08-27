@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-08-27T22-11-25';
+const BUILD_ID = '2026-08-27T22-57-23';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -60,6 +60,7 @@ const CORE_ASSETS = [
     '/StandardWorks/pgp_crossrefs.js',
     '/StandardWorks/dc_english.js',
     '/StandardWorks/pgp_english.js',
+    '/StandardWorks/jst_english.js',
     // BOM page — verse data handled by bom/sw.js
     '/StandardWorks/bom/bom.html',
     '/StandardWorks/bom/bom_book_loader.js?v=2',
