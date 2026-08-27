@@ -1081,4 +1081,3 @@ renderVerseSet(dc30_ch1Verses, 'dc30-ch1-verses');
 
 
 })();
-
