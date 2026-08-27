@@ -3,13 +3,13 @@
 
 // === CH1: JST 1 John 2:1 ===
 var jst1jn_ch1Verses = [
-  { num:"א", words:[["יְלָדַי","my-little-children"],["הַקְּטַנִּים","the-[little]"],["אֵלֶּה","these"],["הַדְּבָרִים","the-things"],["כּוֹתֵב","write-I"],["אֲנִי","unto-you"],["לָכֶם","that"],["לְמַעַן","ye-sin-not"],["לֹא","but"],["תֶּחֶטְאוּ","if"],["אַךְ","any"],["אִם","man"],["יֶחֱטָא","sin"],["אִישׁ","and"],["וְיָשׁוּב","repent"],["יֵשׁ","we-have"],["לָנוּ","an-advocate"],["סָנֵגוֹר","with"],["עִם","the-Father"],["הָאָב","the-Jesus"],["יֵשׁוּעַ","Christ"],["הַמָּשִׁיחַ","the-righteous"],["הַצַּדִּיק","the-[righteous]"],["׃",""]] }
+  { num:"א", words:[["יְלָדַי","my-little-children"],["הַקְּטַנִּים","the-little"],["אֵלֶּה","these"],["הַדְּבָרִים","the-things"],["כּוֹתֵב","write-I"],["אֲנִי","I"],["לָכֶם","unto-you"],["לְמַעַן","that"],["לֹא","not"],["תֶּחֶטְאוּ","ye-sin"],["אַךְ","but"],["אִם","if"],["יֶחֱטָא","sin"],["אִישׁ","a-man"],["וְיָשׁוּב","and-repent"],["יֵשׁ","we-have"],["לָנוּ","an-advocate"],["סָנֵגוֹר","with"],["עִם","the-Father"],["הָאָב","the-Father"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׁיחַ","the-Christ"],["הַצַּדִּיק","the-righteous"],["׃",""]] }
 ];
 renderVerseSet(jst1jn_ch1Verses, 'jst1jn-ch1-verses');
 
 // === CH2: JST 1 John 3:9 ===
 var jst1jn_ch2Verses = [
-  { num:"ט", words:[["כׇּל","whosoever"],["הַנּוֹלָד","the-is-born-of"],["מֵאֱלֹהִים","God"],["אֵינוֹ","doth-not"],["מַמְשִׁיךְ","continue"],["לַחֲטֹא","in-sin"],["כִּי","for"],["רוּחַ","the-Spirit-of"],["אֱלֹהִים","God"],["שׁוֹכֶנֶת","remaineth"],["בּוֹ","in-him"],["וְאֵינוֹ","and-he-cannot"],["יָכוֹל","continue"],["לְהַמְשִׁיךְ","in-sin"],["לַחֲטֹא","because"],["כִּי","he-is-born"],["נוֹלַד","of-God"],["מֵאֱלֹהִים","having-received"],["מְקַבֵּל","that"],["אֶת־רוּחַ","Spirit-of"],["הַקֹּדֶשׁ","the-promise"],["הַבְטָחָה","[promise]"],["׃",""]] }
+  { num:"ט", words:[["כׇּל","whosoever"],["הַנּוֹלָד","the-is-born-of"],["מֵאֱלֹהִים","God"],["אֵינוֹ","doth-not"],["מַמְשִׁיךְ","continue"],["לַחֲטֹא","in-sin"],["כִּי","for"],["רוּחַ","the-Spirit-of"],["אֱלֹהִים","God"],["שׁוֹכֶנֶת","remaineth"],["בּוֹ","in-him"],["וְאֵינוֹ","and-he-cannot"],["יָכוֹל","continue"],["לְהַמְשִׁיךְ","in-sin"],["לַחֲטֹא","in-sin"],["כִּי","because"],["נוֹלַד","he-is-born"],["מֵאֱלֹהִים","of-God"],["מְקַבֵּל","having-received"],["אֶת־רוּחַ","the-Spirit-of"],["הַקֹּדֶשׁ","the-Holy"],["הַבְטָחָה","of-promise"],["׃",""]] }
 ];
 renderVerseSet(jst1jn_ch2Verses, 'jst1jn-ch2-verses');
 
