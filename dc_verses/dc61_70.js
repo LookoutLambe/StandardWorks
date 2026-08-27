@@ -2406,6 +2406,8 @@ var dc65_ch1Verses = [
     ["לִקְרַאת","to meet"],
     ["מַלְכוּת","the kingdom of"],
     ["אֱלֹהִים","God"],
+    ["אֲשֶׁר","which"],
+    ["הוּקְמָה","is set up"],
     ["עַל","upon"],
     ["הָאָרֶץ׃","the earth"]
   ]},
@@ -2591,7 +2593,7 @@ var dc66_ch1Verses = [
     ["אֵלֵךְ","will go"],
     ["עִמְּךָ׃","with you"]
   ]},
-  { num: "ט", words: [["שִׂים","lay"], ["יָדֶיךָ","your hands"], ["עַל","upon"], ["הַחוֹלִים","the sick"], ["וְיֵרָפְאוּ","and they shall recover"], ["אַל","do not"], ["תָּשֹׁב","return"], ["עַד","until"], ["אֲשֶׁר","that"], ["אֲנִי","I"], ["יְהוָה","the Lord"], ["אֶשְׁלָחֲךָ","shall send you"], ["הֱיֵה","be"], ["אֶרֶךְ־אַפַּיִם","longsuffering"], ["בְּצָרָה","in affliction"], ["שְׁאַל","ask"], ["וְיִנָּתֶן","and it shall be given"], ["לְךָ","unto you"], ["דְּפֹק","knock"], ["וְיִפָּתַח","and it shall be opened"], ["לְךָ׃","unto you"]]},
+  { num: "ט", words: [["שִׂים","lay"], ["יָדֶיךָ","your hands"], ["עַל","upon"], ["הַחוֹלִים","the sick"], ["וְיֵרָפְאוּ","and they shall recover"], ["אַל","do not"], ["תָּשֹׁב","return"], ["עַד","until"], ["אֲשֶׁר","that"], ["אֲנִי","I"], ["יְהוָה","the Lord"], ["אֶשְׁלָחֲךָ","shall send you"], ["הֱיֵה","be"], ["אֶרֶךְ־אַפַּיִם","longsuffering"], ["בְּצָרָה","in affliction"], ["שְׁאַל","ask"], ["וּתְקַבֵּל","and you shall receive"], ["דְּפֹק","knock"], ["וְיִפָּתַח","and it shall be opened"], ["לְךָ׃","unto you"]]},
   { num: "י", words: [
     ["אַל","do not"],
     ["תְּבַקֵּשׁ","seek"],
@@ -2613,6 +2615,7 @@ var dc66_ch1Verses = [
     ["אֱמֶת","truth"],
     ["וֶאֱמוּנָה","and faithfulness"],
     ["הֵם","they are"],
+    ["וְתַאְדִּיר","and you shall magnify"],
     ["מִשְׂרָתְךָ","your office"],
     ["וְתִנְגַּח","and you shall push"],
     ["עַמִּים","peoples"],
