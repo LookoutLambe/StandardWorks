@@ -344,7 +344,7 @@ var dc61_ch1Verses = [
     ["עַל","upon"],
     ["הַמַּיִם","the waters"],
     ["כִּי","save"],
-    ["אִם",""],
+    ["אִם","it be"],
     ["עַל","upon"],
     ["הַתְּעָלָה","the canal"],
     ["בִּנְסֹעָם","while journeying"],
@@ -358,7 +358,7 @@ var dc61_ch1Verses = [
     ["הַמַּיִם","the waters"],
     ["לִנְסֹעַ","to journey"],
     ["כִּי","save"],
-    ["אִם",""],
+    ["אִם","it be"],
     ["עַל","upon"],
     ["הַתְּעָלָה׃","the canal"]
   ]},
