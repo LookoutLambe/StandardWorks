@@ -293,7 +293,7 @@ var od1_ch1Verses = [
     ["כָּמוֹנִי׃","is like me"]
   ]},
   { num: "ז", words: [
-    ["אֵין","there is no"],["לָעֵדָה","to the church"],["אוֹ","or"],["בְּהוֹרָאוֹת","in instruction"],["חֲבֵרַי","my companions"],["בַּתְּקוּפָה","in the course"],["הַנִּזְכֶּרֶת","the aforementioned"],["דָּבָר","a word"],["שֶׁאֶפְשָׁר","that that you could have"],["לְפָרְשׁוֹ","his to stretches forth"],["בַּהֲגָיוֹן","in meditation of"],["אוֹ","or"],["מְעוֹדֵד","is relieving"],["רִבּוּי","plurality"],["נָשִׁים","women"],["כָּלְשֶׁהוּ","as the against Lamb of(they)"],["מִן","from"],["הָעֵדָה","the congregation"],["הִשְׁתַּמֵּשׁ","to use"],["בְּלָשׁוֹן","in language of"],["כְּמַעֲבֶרֶת","as the fords"],["הוֹרָאָה","instruction"],["כָּזוֹ","as the this"],["הוּכַח","he is chastened"],["מִיָּד׃","from hand of"],["וְעַתָּה","and now"],["אֲנִי","I"],["מַכְרִיז","proclaiming"],["בָּרַבִּים","over the many people"],["כִּי","that"],["עֲצָתִי","my counsel"],["לְקְדוֹשֵׁי","of the Saints of"],["אַחֲרִית","final state of"],["הַיָּמִים","the days"],["הִיא","she"],["לְהִמָּנַע","to has withheld?"],["בְּכׇל","with all"],["נִשּׂוּאִין","marriage"],["הָאֲסוּרִים","the those imprisoned"],["בְּחֹק","in law"],["הַמְּדִינָה׃","the province"]
+    ["אֵין","there is no"],["לָעֵדָה","to the church"],["אוֹ","or"],["בְּהוֹרָאוֹת","in instruction"],["חֲבֵרַי","my companions"],["בַּתְּקוּפָה","in the course"],["הַנִּזְכֶּרֶת","the aforementioned"],["דָּבָר","a word"],["שֶׁאֶפְשָׁר","that that you could have"],["לְפָרְשׁוֹ","his to stretches forth"],["בַּהֲגָיוֹן","in meditation of"],["אוֹ","or"],["מְעוֹדֵד","is relieving"],["רִבּוּי","plurality"],["נָשִׁים","women"],["כָּלְשֶׁהוּ","as the against Lamb of(they)"],["מִן","from"],["הָעֵדָה","the congregation"],["הִשְׁתַּמֵּשׁ","to use"],["בְּלָשׁוֹן","in language of"],["כְּמַעֲבֶרֶת","as the fords"],["הוֹרָאָה","instruction"],["כָּזוֹ","as the this"],["הוּכַח","he is chastened"],["מִיָּד׃","from hand of"],["וְעַתָּה","and now"],["אֲנִי","I"],["מַכְרִיז","proclaiming"],["בָּרַבִּים","over the many people"],["כִּי","that"],["עֲצָתִי","my counsel"],["לִקְדוֹשֵׁי","of the Saints of"],["אַחֲרִית","final state of"],["הַיָּמִים","the days"],["הִיא","she"],["לְהִמָּנַע","to has withheld?"],["בְּכׇל","with all"],["נִשּׂוּאִין","marriage"],["הָאֲסוּרִים","the those imprisoned"],["בְּחֹק","in law"],["הַמְּדִינָה׃","the province"]
   ]},
   { num: "ח", words: [
     ["וִילְפוֹרְד","Wilford"],["וּוּדְרוּף","Woodruff"],["׃",""]
@@ -967,7 +967,7 @@ var od2_ch1Verses = [
     ["אִשְּׁרוּהָ","they approved it"],
     ["פֶּה","mouth"],
     ["אֶחָד","one"],
-    ["וְלְאַחַר","and after"],
+    ["וּלְאַחַר","and after"],
     ["מִכֵּן","from so/thus"],
     ["הֻגְּשָׁה","for remnant of"],
     ["לִשְׁאָר","for remnant of"],
@@ -1042,7 +1042,7 @@ var od2_ch1Verses = [
     ["אֶת־הַהַבְטָחוֹת","the promises"],
     ["שֶׁנָּתְנוּ","that they made"],
     ["הַנְּבִיאִים","the prophets"],
-    ["וְנְשִׂיאֵי","and princes of"],
+    ["וּנְשִׂיאֵי","and princes of"],
     ["הָעֵדָה","the congregation"],
     ["אֲשֶׁר","which"],
     ["קָדְמוּ","they met"],

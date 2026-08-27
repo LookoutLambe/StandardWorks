@@ -41,7 +41,7 @@ renderVerseSet(jstluke_ch4Verses, 'jstluke-ch4-verses');
 // Gaining worldly wealth is not worth losing one's soul.
 var jstluke_ch5Verses = [
   { num:"כד", words:[["כִּי","for"],["כׇּל","whosoever"],["הָרוֹצֶה","the-will"],["לְהוֹשִׁיעַ","save"],["אֶת־חַיָּיו","his-life"],["צָרִיךְ","must"],["לִהְיוֹת","be"],["מוּכָן","willing"],["לְאַבְּדָהּ","to-lose-it"],["לְמַעֲנִי","for-my-sake"],["וְכׇל","and-whosoever"],["הַמּוּכָן","the-will-be-willing"],["לְאַבֵּד","to-lose"],["אֶת־חַיָּיו","his-life"],["לְמַעֲנִי","for-my-sake"],["הוּא","the-same"],["יוֹשִׁיעֶנָּה","shall-save-it"],["׃",""]] },
-  { num:"כה", words:[["כִּי","for"],["מַה","what"],["יּוֹעִיל","doth-it-profit"],["לָאָדָם","a-man"],["אִם","if"],["יִקְנֶה","he-gain"],["אֶת־כׇּל","the-whole"],["הָעוֹלָם","the-world"],["וְלֹא","and-yet"],["יְקַבֵּל","he-receive-not"],["אוֹתוֹ","him"],["אֲשֶׁר","whom"],["מִנָּה","hath-ordained"],["אֱלֹהִים","God"],["וְיְאַבֵּד","and-he-lose"],["אֶת־נַפְשׁוֹ","his-own-soul"],["וְהוּא","and-he-himself"],["עַצְמוֹ","be"],["יִהְיֶה","a-castaway"],["נִדָּח","[castaway]"],["׃",""]] }
+  { num:"כה", words:[["כִּי","for"],["מַה","what"],["יּוֹעִיל","doth-it-profit"],["לָאָדָם","a-man"],["אִם","if"],["יִקְנֶה","he-gain"],["אֶת־כׇּל","the-whole"],["הָעוֹלָם","the-world"],["וְלֹא","and-yet"],["יְקַבֵּל","he-receive-not"],["אוֹתוֹ","him"],["אֲשֶׁר","whom"],["מִנָּה","hath-ordained"],["אֱלֹהִים","God"],["וִיאַבֵּד","and-he-lose"],["אֶת־נַפְשׁוֹ","his-own-soul"],["וְהוּא","and-he-himself"],["עַצְמוֹ","be"],["יִהְיֶה","a-castaway"],["נִדָּח","[castaway]"],["׃",""]] }
 ];
 renderVerseSet(jstluke_ch5Verses, 'jstluke-ch5-verses');
 

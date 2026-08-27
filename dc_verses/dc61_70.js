@@ -3146,7 +3146,7 @@ var dc68_ch1Verses = [
   { num: "כז", words: [
     ["וְיִטָּבְלוּ","and shall be baptized"],
     ["יַלְדֵיהֶם","their children"],
-    ["לְסְלִיחַת","for the remission of"],
+    ["לִסְלִיחַת","for the remission of"],
     ["חֲטָאֵיהֶם","their sins"],
     ["בִּהְיוֹתָם","when they are"],
     ["בְּנֵי","sons of"],
@@ -3321,7 +3321,7 @@ var dc69_ch1Verses = [
     ["צִיּוֹן","Zion"],
     ["תִּהְיֶה","shall be"],
     ["לְמוֹשָׁב","a seat"],
-    ["וְלְמָקוֹם","and a place"],
+    ["וּלְמָקוֹם","and a place"],
     ["לְקַבֵּל","to receive"],
     ["וְלַעֲשׂוֹת","and to do"],
     ["כׇּל","all"],

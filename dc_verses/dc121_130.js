@@ -3267,7 +3267,7 @@ var dc124_ch1Verses = [
     ["עִם","with"],
     ["עַבְדִּי","my servant"],
     ["יוֹסֵף","Joseph;"],
-    ["וְיְקַבֵּל","and that he shall receive"],
+    ["וִיקַבֵּל","and that he shall receive"],
     ["עֵצָה","counsel"],
     ["מֵעַבְדִּי","from my servant"],
     ["יוֹסֵף","Joseph,"],
@@ -4036,7 +4036,7 @@ var dc124_ch1Verses = [
     ["אֱלֹהֵיכֶם׃","your God."]
   ]},
   { num: "קלו", words: [["אֲנִי","I"], ["נֹתֵן","give"], ["לוֹ","unto him"], ["אֲמַסָה","Amasa"], ["לַיְמָן","Lyman"], ["וְאֶת־נֹחַ","and Noah"], ["פַּקַרְד","Packard"], ["לְיוֹעֲצִים","for counselors,"], ["לְמַעַן","that"], ["יְמַשְּׁלוּ","they may preside"], ["עַל","over"], ["חֲבוּרַת","the quorum of"], ["הַכֹּהֲנִים","the priests"], ["הַגְּדוֹלִים","high"], ["בִּכְנֵסִיָּתִי","in my church,"], ["נְאֻם","says"], ["יְהוָה׃","the Lord."]]},
-  { num: "קלז", words: [["וְעוֹד","And again,"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you,"], ["אֲנִי","I"], ["נֹתֵן","give"], ["לָכֶם","unto you"], ["אֶת־ג׳וֹן","John"], ["א.","A."], ["הִיקְס","Hicks,"], ["שְׁמוּאֵל","Samuel"], ["וִילְיָמְס","Williams,"], ["וְאֶת־יֵשַׁע","and Jesse"], ["בֵּיקֶר","Baker,"], ["אֲשֶׁר","which"], ["כְּהֻנָּתָם","priesthood"], ["הִיא","is"], ["לִמְשֹׁל","to preside"], ["עַל","over"], ["חֲבוּרַת","the quorum"], ["הַזְּקֵנִים","of elders,"], ["אֲשֶׁר","which"], ["הַחֲבוּרָה","quorum"], ["נוֹסְדָה","is instituted"], ["לְמְשָׁרְתִים","for ministers;"], ["עוֹמְדִים","standing"], ["אַף","nevertheless"], ["כִּי","that"], ["יוּכְלוּ","they may"], ["לִנְסֹעַ","travel,"], ["אֲבָל","yet"], ["הֻסְמְכוּ","they are ordained"], ["לִהְיוֹת","to be"], ["מְשָׁרְתִים","ministers"], ["עוֹמְדִים","standing"], ["לִכְנֵסִיָּתִי","to my church,"], ["נְאֻם","says"], ["יְהוָה׃","the Lord."]]},
+  { num: "קלז", words: [["וְעוֹד","And again,"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you,"], ["אֲנִי","I"], ["נֹתֵן","give"], ["לָכֶם","unto you"], ["אֶת־ג׳וֹן","John"], ["א.","A."], ["הִיקְס","Hicks,"], ["שְׁמוּאֵל","Samuel"], ["וִילְיָמְס","Williams,"], ["וְאֶת־יֵשַׁע","and Jesse"], ["בֵּיקֶר","Baker,"], ["אֲשֶׁר","which"], ["כְּהֻנָּתָם","priesthood"], ["הִיא","is"], ["לִמְשֹׁל","to preside"], ["עַל","over"], ["חֲבוּרַת","the quorum"], ["הַזְּקֵנִים","of elders,"], ["אֲשֶׁר","which"], ["הַחֲבוּרָה","quorum"], ["נוֹסְדָה","is instituted"], ["לִמְשָׁרְתִים","for ministers;"], ["עוֹמְדִים","standing"], ["אַף","nevertheless"], ["כִּי","that"], ["יוּכְלוּ","they may"], ["לִנְסֹעַ","travel,"], ["אֲבָל","yet"], ["הֻסְמְכוּ","they are ordained"], ["לִהְיוֹת","to be"], ["מְשָׁרְתִים","ministers"], ["עוֹמְדִים","standing"], ["לִכְנֵסִיָּתִי","to my church,"], ["נְאֻם","says"], ["יְהוָה׃","the Lord."]]},
   { num: "קלח", words: [
     ["וְעוֹד","And again,"],
     ["אֲנִי","I"],

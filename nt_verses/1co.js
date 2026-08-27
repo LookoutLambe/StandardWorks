@@ -125,7 +125,7 @@ var _1co_ch5Verses = [
 renderVerseSet(_1co_ch5Verses, '1co-ch5-verses');
 
 var _1co_ch6Verses = [
-  { num:"א", words:[["הֲיָרִיב","dare-go-to-law"],["אִישׁ","any"],["מִכֶּם","of-you"],["עִם־רֵעֵהוּ","against-another"],["וְיָזִיד","and-presume"],["לְהָבִיא","to-bring"],["דִינוֹ","his-cause"],["לְפְנֵי","before"],["הָרְשָׁעִים","the-unjust"],["וְלֹא","and-not"],["לִפְנֵי","before"],["הַקְּדשִׁים","the-saints"],["׃",""]] },
+  { num:"א", words:[["הֲיָרִיב","dare-go-to-law"],["אִישׁ","any"],["מִכֶּם","of-you"],["עִם־רֵעֵהוּ","against-another"],["וְיָזִיד","and-presume"],["לְהָבִיא","to-bring"],["דִינוֹ","his-cause"],["לִפְנֵי","before"],["הָרְשָׁעִים","the-unjust"],["וְלֹא","and-not"],["לִפְנֵי","before"],["הַקְּדשִׁים","the-saints"],["׃",""]] },
   { num:"ב", words:[["הֲלֹא","do-ye-not"],["יְדַעְתֶּם","know"],["כִּי","that"],["הַקְּדֹשִׂים","the-saints"],["יָדִינוּ","shall-judge"],["אֶת־הָעוֹלָם","the-world"],["וְאִם־הָעוֹלָם","and-if-the-world"],["יִדּוֹן","shall-be-judged"],["עַל־יֶדְכֶם","by-you"],["הֲלֹא","are-ye-not"],["רְאוּיִם","worthy"],["אַתֶּם","ye"],["לָדִין","to-judge"],["דִּינִים","matters"],["קַלִּים","the-smallest"],["׃",""]] },
   { num:"ג", words:[["הֲלֹא","know-ye"],["יְדַעְתֶּם","not"],["כִּי","that"],["נָדִין","we-shall-judge"],["דִּין־הַמַּלְאָכִים","angels"],["אַף","how-much-more"],["כִּי־דִינֵי","things-that-pertain-to"],["מָמוֹנוֹת","this-life"],["׃",""]] },
   { num:"ד", words:[["וְאַתֶּם","if-then-ye"],["כְּשֶׁיֵּשׁ־לָכֶם","have"],["דִּינֵי","judgments-of"],["מָמוֹנוֹת","things-pertaining-to-this-life"],["מוֹשִׁיבִים","set"],["אַתֶּם","ye"],["אֶת־הַנִּמְאָס","those-least-esteemed"],["בַּקָּהָל","in-the-church"],["לְשֹׁפְטִים","to-be-judges"],["עֲלֵיכֶם","over-you"],["׃",""]] },
