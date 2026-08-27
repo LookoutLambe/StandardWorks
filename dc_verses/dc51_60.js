@@ -2763,7 +2763,7 @@ var dc59_ch1Verses = [
     ["בְּכׇל","on all"],
     ["הַיָּמִים","the days"],
     ["וּבְכׇל","and at all"],
-    ["עֵת׃","time"]
+    ["עֵת׃","times"]
   ]},
   { num: "יב", words: [
     ["אַךְ","but"],
@@ -2835,7 +2835,7 @@ var dc59_ch1Verses = [
     ["זֶה","this is"],
     ["חֵטְא","sin"],
     ["כִּי","but"],
-    ["אִם",""],
+    ["אִם","rather"],
     ["בְּלֵב","with heart"],
     ["טוֹב","glad"],
     ["וּבְפָנִים","and with countenance"],
@@ -2939,8 +2939,8 @@ var dc59_ch1Verses = [
     ["יַעֲצִיב","does offend"],
     ["אָדָם","man"],
     ["אֶת־אֱלֹהִים","God"],
-    ["וְאֵין","and is no"],
-    ["אֲשֶׁר","against him whom"],
+    ["וְאֵין","and there is none"],
+    ["אֲשֶׁר","against whom"],
     ["יִבְעַר","is kindled"],
     ["בּוֹ","against him"],
     ["אַפּוֹ","his wrath"],
@@ -2964,7 +2964,7 @@ var dc59_ch1Verses = [
     ["וְהַנְּבִיאִים","and the prophets"],
     ["לָכֵן","wherefore"],
     ["אַל","do not"],
-    ["תַּלְאוּנִי","trouble you me"],
+    ["תַּלְאוּנִי","trouble me"],
     ["עוֹד","any more"],
     ["עַל","concerning"],
     ["הַדָּבָר","the matter"],
@@ -2993,7 +2993,7 @@ var dc59_ch1Verses = [
     ["דִּבַּרְתִּי","have spoken it"],
     ["וְהָרוּחַ","and the Spirit"],
     ["מֵעִידָה","bears record"],
-    ["אָמֵן׃","amen"]
+    ["אָמֵן׃","Amen"]
   ]}
 ];
 renderVerseSet(dc59_ch1Verses, 'dc59-ch1-verses');
