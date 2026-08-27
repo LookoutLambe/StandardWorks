@@ -4965,31 +4965,7 @@ var dc127_ch1Verses = [
     ["כֹל׃","any thing."],
     
   ]},
-  { num: "יב", words: [
-    ["וְזֹאת","Behold,"],
-    ["תְּפִלָּתִי","my prayer"],
-    ["אֶל","to"],
-    ["הָאֱלֹהִים","God"],
-    ["כִּי","that"],
-    ["תִּוָּשְׁעוּ","ye may be saved"],
-    ["כֻלְּכֶם","all of you."],
-    ["וַאֲנִי","And I"],
-    ["חוֹתֵם","subscribe"],
-    ["אֶת־עַצְמִי","myself"],
-    ["עַבְדְּכֶם","your servant"],
-    ["בַּיהוָה","in the Lord,"],
-    ["נָבִיא","prophet"],
-    ["וְרוֹאֶה","and seer"],
-    ["קְהַל","of The Church of"],
-    
-    ["יֵשׁוּעַ","Jesus"],
-    ["הַמָּשִׁיחַ","Christ of"],
-    ["קְדוֹשֵׁי","the Saints of"],
-    ["אַחֲרִית","the latter"],
-    ["הַיָּמִים","days"],
-    ["יוֹסֵף","Joseph"],
-    ["סְמִית׃","Smith."]
-  ]}
+  { num: "יב", words: [["וְזֹאת","Behold,"], ["תְּפִלָּתִי","my prayer"], ["אֶל","to"], ["הָאֱלֹהִים","God"], ["כִּי","that"], ["תִּוָּשְׁעוּ","ye may be saved"], ["כֻלְּכֶם","all of you."], ["וַאֲנִי","And I"], ["חוֹתֵם","subscribe"], ["אֶת־עַצְמִי","myself"], ["עַבְדְּכֶם","your servant"], ["בַּיהוָה","in the Lord,"], ["נָבִיא","prophet"], ["וְרוֹאֶה","and seer"], ["כְּנֵסִיַּת","the Church of"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","the Messiah"], ["שֶׁל","of"], ["קְדוֹשֵׁי","the Saints of"], ["אַחֲרִית","the latter part of"], ["הַיָּמִים","the days"], ["יוֹסֵף","Joseph"], ["סְמִית׃","Smith."]]}
 ];
 renderVerseSet(dc127_ch1Verses, 'dc127-ch1-verses');
 

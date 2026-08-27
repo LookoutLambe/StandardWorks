@@ -2810,20 +2810,7 @@ var dc30_ch1Verses = [
     ["עוֹלָם","eternal"],
     ["אָמֵן׃","Amen"]
   ]},
-  { num: "ט", words: [
-    ["הִנֵּה","behold"],
-    ["אֲנִי","I"],
-    ["אֹמֵר","say"],
-    ["לְךָ","unto you"],
-    ["עַבְדִּי","my servant"],
-    ["ג'ון","John"],
-    ["תָּחֵל","that thou shalt commence"],
-    ["מֵעַתָּה","from this time forth"],
-    ["לְהַשְׁמִיעַ","to proclaim"],
-    ["בְּשׂוֹרָתִי","my gospel"],
-    ["כְּקוֹל","as with the voice of"],
-    ["שׁוֹפָר׃","a trump"]
-  ]},
+  { num: "ט", words: [["הִנֵּה","behold"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לְךָ","unto you"], ["עַבְדִּי","my servant"], ["ג׳וֹן","John"], ["תָּחֵל","that thou shalt commence"], ["מֵעַתָּה","from this time forth"], ["לְהַשְׁמִיעַ","to proclaim"], ["בְּשׂוֹרָתִי","my gospel"], ["כְּקוֹל","as with the voice of"], ["שׁוֹפָר׃","a trump"]]},
   { num: "י", words: [
     ["וַעֲבֹדָתְךָ","and your labor"],
     ["תִּהְיֶה","shall be"],

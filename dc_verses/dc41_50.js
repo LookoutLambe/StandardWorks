@@ -4118,31 +4118,7 @@ renderVerseSet(dc46_ch1Verses, 'dc46-ch1-verses');
 
 
 var dc47_ch1Verses = [
-  { num: "א", words: [
-    ["הִנֵּה","behold"],
-    ["נָכוֹן","(it is) expedient"],
-    ["בְּעֵינַי","in mine eyes"],
-    ["כִּי","that"],
-    ["עַבְדִּי","my servant"],
-    ["ג'ון","John"],
-    ["יִכְתֹּב","should write"],
-    ["וְיִשְׁמֹר","and keep"],
-    ["דִּבְרֵי","(the) words of"],
-    ["יָמִים","days"],
-    ["סְדוּרִים","regular"],
-    ["וְיַעֲזֹר","and assist"],
-    ["לְךָ","thee"],
-    ["עַבְדִּי","my servant"],
-    ["יוֹסֵף","Joseph"],
-    ["לְהַעְתִּיק","in transcribing"],
-    ["כׇּל","all"],
-    ["הַנִּתָּן","(things which are) given"],
-    ["לְךָ","to thee"],
-    ["עַד","until"],
-    ["הִקָּרְאוֹ","he be called"],
-    ["לַעֲבוֹדוֹת","to duties"],
-    ["נוֹסָפוֹת׃","further"]
-  ]},
+  { num: "א", words: [["הִנֵּה","behold"], ["נָכוֹן","(it is) expedient"], ["בְּעֵינַי","in mine eyes"], ["כִּי","that"], ["עַבְדִּי","my servant"], ["ג׳וֹן","John"], ["יִכְתֹּב","should write"], ["וְיִשְׁמֹר","and keep"], ["דִּבְרֵי","(the) words of"], ["יָמִים","days"], ["סְדוּרִים","regular"], ["וְיַעֲזֹר","and assist"], ["לְךָ","thee"], ["עַבְדִּי","my servant"], ["יוֹסֵף","Joseph"], ["לְהַעְתִּיק","in transcribing"], ["כׇּל","all"], ["הַנִּתָּן","(things which are) given"], ["לְךָ","to thee"], ["עַד","until"], ["הִקָּרְאוֹ","he be called"], ["לַעֲבוֹדוֹת","to duties"], ["נוֹסָפוֹת׃","further"]]},
   { num: "ב", words: [
     ["עוֹד","again"],
     ["אָמֵן","verily"],
@@ -5378,29 +5354,7 @@ var dc50_ch1Verses = [
     ["בִּדְבַר","by (the) word of"],
     ["הַתּוֹכֵחָה׃","exhortation"]
   ]},
-  { num: "לח", words: [
-    ["וְגַם","and also"],
-    ["עַבְדִּי","my servant"],
-    ["ג'ון","John"],
-    ["קוֹרִיל","Corrill"],
-    ["אוֹ","or"],
-    ["כׇּל","all"],
-    ["עֲבָדַי","my servants"],
-    ["אֲשֶׁר","which"],
-    ["נִסְמְכוּ","are ordained"],
-    ["לָעֲבוֹדָה","unto the office"],
-    ["הַזֹּאת","this"],
-    ["יַעַבְדוּ","let them labor"],
-    ["בַּכֶּרֶם","in the vineyard"],
-    ["וְאַל","and (let) not"],
-    ["יִמְנַע","hinder"],
-    ["אִישׁ","(any) man"],
-    ["אוֹתָם","them"],
-    ["מֵעֲשׂוֹת","(hinder them) from doing"],
-    ["אֲשֶׁר","which"],
-    ["מִנִּיתִי","I have appointed"],
-    ["לָהֶם׃","unto them"]
-  ]},
+  { num: "לח", words: [["וְגַם","and also"], ["עַבְדִּי","my servant"], ["ג׳וֹן","John"], ["קוֹרִיל","Corrill"], ["אוֹ","or"], ["כׇּל","all"], ["עֲבָדַי","my servants"], ["אֲשֶׁר","which"], ["נִסְמְכוּ","are ordained"], ["לָעֲבוֹדָה","unto the office"], ["הַזֹּאת","this"], ["יַעַבְדוּ","let them labor"], ["בַּכֶּרֶם","in the vineyard"], ["וְאַל","and (let) not"], ["יִמְנַע","hinder"], ["אִישׁ","(any) man"], ["אוֹתָם","them"], ["מֵעֲשׂוֹת","(hinder them) from doing"], ["אֲשֶׁר","which"], ["מִנִּיתִי","I have appointed"], ["לָהֶם׃","unto them"]]},
   { num: "לט", words: [
     ["לָכֵן","wherefore"],
     ["בַּדָּבָר","in the thing"],
