@@ -1,18 +1,11 @@
 // dc_verses/dc21_30.js — D&C verse data
 (function() {
 var dc21_ch1Verses = [
-  { num: "א", words: [["הִנֵּה","behold"], ["יִשָּׁמֵר","there shall be kept"], ["בְּתוֹכְכֶם","among you"], ["סֵפֶר זִכָּרוֹן","a record"], ["וּבוֹ","and in it"], ["תִּקָּרֵא","thou shalt be called"], ["רֹאֶה","a seer"], ["וּמְתַרְגֵּם","a translator"], ["וְנָבִיא","a prophet"], ["וּשְׁלִיחַ","an apostle"], ["לְיֵשׁוּעַ","of Jesus"], ["הַמָּשִׁיחַ","Christ"], ["וְזָקֵן","an elder"], ["לִכְנֵסִיַּת","of the church of"], ["הַמָּשִׁיחַ","Christ"], ["בִּרְצוֹן","through the will of"], ["אֱלֹהִים","God"], ["הָאָב","the Father"], ["וּבְחֶסֶד","and the grace of"], ["אֲדֹנֵיכֶם","your Lord"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ׃","Christ"]]},
-  { num: "ב", words: [["בִּנְחֹת","being inspired of"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["לִיסֹד","to lay"], ["יְסוֹדָהּ","the foundation thereof"], ["וְלִבְנוֹתָהּ","and to build it up"], ["לֶאֱמוּנַת","unto the faith of"], ["קֹדֶשׁ","most"], ["הַקֳּדָשִׁים׃","holy"]]},
+  { num: "א", words: [["הִנֵּה","behold"], ["יִשָּׁמֵר","there shall be kept"], ["בְּתוֹכְכֶם","among you"], ["סֵפֶר","a book of"], ["זִכָּרוֹן","remembrance"], ["וּבוֹ","and in it"], ["תִּקָּרֵא","thou shalt be called"], ["רֹאֶה","a seer"], ["וּמְתַרְגֵּם","a translator"], ["וְנָבִיא","a prophet"], ["וּשְׁלִיחַ","an apostle"], ["לְיֵשׁוּעַ","of Jesus"], ["הַמָּשִׁיחַ","Christ"], ["וְזָקֵן","an elder"], ["לַכְּנֵסִיָּה","of the church"], ["בִּרְצוֹן","through the will of"], ["אֱלֹהִים","God"], ["הָאָב","the Father"], ["וּבְחֶסֶד","and the grace of"], ["אֲדֹנֵיכֶם","your Lord"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ׃","Christ"]]},
+  { num: "ב", words: [["בִּנְחֹת","being inspired of"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["לִיסֹד","to lay"], ["יְסוֹדָהּ","the foundation thereof"], ["וְלִבְנוֹתָהּ","and to build it up"], ["לֶאֱמוּנַת","unto the faith of"], ["קֹדֶשׁ","the holy of"], ["הַקֳּדָשִׁים׃","the holies"]]},
   { num: "ג", words: [["אֲשֶׁר","which"], ["הַכְּנֵסִיָּה","church"], ["נוֹסְדָה","was organized"], ["וְנִכּוֹנָה","and established"], ["בִּשְׁנַת","in the year of"], ["אֲדֹנֵיכֶם","your Lord"], ["אֶלֶף","one thousand"], ["וּשְׁמֹנֶה","eight"], ["מֵאוֹת","hundred"], ["וּשְׁלֹשִׁים","and thirty"], ["בַּחֹדֶשׁ","in the month"], ["הָרְבִיעִי","fourth"], ["וּבַיּוֹם","and on the day"], ["הַשִּׁשִּׁי","sixth"], ["לַחֹדֶשׁ","of the month"], ["הַנִּקְרָא","which is called"], ["אַפְּרִיל׃","April"]]},
-  { num: "ד", words: [["וְלָכֵן","wherefore"], ["תִּקְשִׁיב","shall give heed"], ["הַכְּנֵסִיָּה","the church"], ["לְכׇל־דְּבָרָיו","unto all his words"], ["וּמִצְוֹתָיו","and commandments"], ["אֲשֶׁר","which"], ["יִתֵּן","he shall give"], ["לָכֶם","unto you"], ["כַּאֲשֶׁר","as"], ["יְקַבְּלֵם","he receiveth them"], ["מִמֶּנִּי",""], ["מִתְהַלֵּךְ","walking"], ["בְּכׇל־קְדֻשָּׁה","in all holiness"], ["לְפָנָי׃","before me"]]},
-  { num: "ה", words: [
-    ["כִּי","for"],
-    ["אֶת־דְּבָרוֹ","his word"],
-    ["תְּקַבְּלוּ","ye shall receive"],
-    ["כְּמִפִּי","as if from mine own mouth"],
-    ["בְּכׇל־אֹרֶךְ אַפַּיִם","in all patience"],
-    ["וֶאֱמוּנָה׃","and faith"]
-  ]},
+  { num: "ד", words: [["וְלָכֵן","wherefore"], ["תִּקְשִׁיב","shall give heed"], ["הַכְּנֵסִיָּה","the church"], ["לְכׇל־דְּבָרָיו","unto all his words"], ["וּמִצְוֹתָיו","and commandments"], ["אֲשֶׁר","which"], ["יִתֵּן","he shall give"], ["לָכֶם","unto you"], ["כַּאֲשֶׁר","as"], ["יְקַבְּלֵם","he receiveth them"], ["מִמֶּנִּי","from me"], ["מִתְהַלֵּךְ","walking"], ["בְּכׇל־קְדֻשָּׁה","in all holiness"], ["לְפָנָי׃","before me"]]},
+  { num: "ה", words: [["כִּי","for"], ["אֶת־דְּבָרוֹ","his word"], ["תְּקַבְּלוּ","ye shall receive"], ["כְּמִפִּי","as if from mine own mouth"], ["בְּכׇל־אֹרֶךְ־אַפַּיִם","in all patience"], ["וֶאֱמוּנָה׃","and faith"]]},
   { num: "ו", words: [
     ["כִּי","for"],
     ["בַּעֲשׂוֹתְכֶם","by doing"],
@@ -114,7 +107,7 @@ var dc21_ch1Verses = [
     ["שְׁלִיחִי׃","mine apostle"]
   ]},
   { num: "יא", words: [["וְזֹאת","this"], ["לְךָ","unto you"], ["חֻקָּה","being an ordinance"], ["כִּי","that"], ["זָקֵן","an elder"], ["אַתָּה","you are"], ["תַּחַת","under"], ["יָדוֹ","his hand"], ["וְהוּא","and he"], ["הָרִאשׁוֹן","being the first"], ["לְךָ","unto you"], ["לְמַעַן","that"], ["תִּהְיֶה","you might be"], ["זָקֵן","an elder"], ["לִכְנֵסִיַּת","unto church of"], ["הַמָּשִׁיחַ","Christ"], ["הַזֹּאת","this"], ["הַנֹּשֵׂאת","bearing"], ["אֶת־שְׁמִי׃","my name"]]},
-  { num: "יב", words: [["וְהַמַּטִּיף","and the preacher"], ["הָרִאשׁוֹן","first"], ["לְ־","of"], ["הַכְּנֵסִיָּה","church"], ["הַזֹּאת","this"], ["לַכְּנֵסִיָּה","unto the church"], ["וְלִפְנֵי","and before"], ["הָעוֹלָם","the world"], ["וְלִפְנֵי","yea, before"], ["הַגּוֹיִם","the Gentiles"], ["וְכֹה","yea, and thus"], ["אָמַר","saith"], ["יְהוָה","the Lord"], ["אֱלֹהִים","God"], ["הִנֵּה","lo"], ["הִנֵּה","lo"], ["גַּם","also"], ["לַיְּהוּדִים","to the Jews"], ["אָמֵן׃","Amen"]]}
+  { num: "יב", words: [["וְהַמַּטִּיף","and the preacher"], ["הָרִאשׁוֹן","first"], ["לִכְנֵסִיָּה","of the church"], ["הַזֹּאת","this"], ["לַכְּנֵסִיָּה","unto the church"], ["וְלִפְנֵי","and before"], ["הָעוֹלָם","the world"], ["וְלִפְנֵי","yea, before"], ["הַגּוֹיִם","the Gentiles"], ["וְכֹה","yea, and thus"], ["אָמַר","saith"], ["יְהוָה","the Lord"], ["אֱלֹהִים","God"], ["הִנֵּה","lo"], ["הִנֵּה","lo"], ["גַּם","also"], ["לַיְּהוּדִים","to the Jews"], ["אָמֵן׃","Amen"]]}
 ];
 renderVerseSet(dc21_ch1Verses, 'dc21-ch1-verses');
 
