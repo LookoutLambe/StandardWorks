@@ -2003,6 +2003,7 @@ var dc39_ch1Verses = [
     ["בָּעֵת","at the time"],
     ["הַזֹּאת","this"],
     ["וְהִנֵּה","and behold"],
+    ["נָתַתִּי","I have bestowed"],
     ["בְּרָכוֹת","blessings"],
     ["גְּדוֹלוֹת","great"],
     ["עַל","upon"],
