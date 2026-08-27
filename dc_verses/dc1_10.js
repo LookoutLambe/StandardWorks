@@ -294,7 +294,7 @@ var dc1_ch1Verses = [
     ["מֵעֵת","from time"],
     ["לָעֵת׃","to time"]
   ]},
-  { num: "כט", words: [["וְאַחֲרֵי","and after"], ["קַחְתּוֹ","his receiving of"], ["אֶת־כְּתָב","the record of"], ["הַנְּפִיִּים","the Nephites"], ["עַבְדִּי","my servant"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["יִהְיֶה","shall be"], ["לוֹ","to him"], ["כֹחַ","power"], ["לְתַרְגֵּם","to translate"], ["בְּחֶסֶד","by lovingkindness of"], ["אֱלֹהִים","God"], ["בִּגְבוּרַת","by might of"], ["אֱלֹהִים","God"], ["אֶת־סֵפֶר","book of"], ["מוֹרְמוֹן׃","Mormon"]]},
+  { num: "כט", words: [["וְאַחֲרֵי","and after"], ["קַחְתּוֹ","his receiving of"], ["אֶת־כְּתָב","the record of"], ["הַנֶּפִיִּים","the Nephites"], ["עַבְדִּי","my servant"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["יִהְיֶה","shall be"], ["לוֹ","to him"], ["כֹחַ","power"], ["לְתַרְגֵּם","to translate"], ["בְּחֶסֶד","by lovingkindness of"], ["אֱלֹהִים","God"], ["בִּגְבוּרַת","by might of"], ["אֱלֹהִים","God"], ["אֶת־סֵפֶר","book of"], ["מוֹרְמוֹן׃","Mormon"]]},
   { num: "ל", words: [["וְגַם","and also"], ["אֲשֶׁר","those to whom"], ["נִתְּנוּ","were given"], ["לָהֶם","to them"], ["הַמִּצְוֹת","the commandments"], ["הָאֵלֶּה","these"], ["יִהְיֶה","shall be"], ["לָהֶם","to them"], ["כֹּחַ","power"], ["לְיַסֵּד","to found"], ["אֶת־הַקָּהָל","the congregation"], ["הַזֶּה","this"], ["וּלְהוֹצִיאוֹ","and to bring it forth"], ["מֵאֹפֶל","out of gloom"], ["וּמֵחֹשֶׁךְ","and out of darkness"], ["קְהַל","the congregation of"], ["הָאֱמֶת","the truth"], ["וְהַחַיִּים","and the life"], ["לְבַדּוֹ","alone"], ["עַל־פְּנֵי","upon the face of"], ["כׇל־הָאָרֶץ","all the earth"], ["אֲשֶׁר","in which"], ["בּוֹ","in it"], ["חָפַצְתִּי","I have delighted"], ["אֲנִי","I"], ["יְהוָה","the LORD"], ["מְדַבֵּר","speak"], ["אֶל־הַקָּהָל","unto the congregation"], ["כֻּלּוֹ","the whole of it"], ["וְלֹא","and not"], ["אֶל־אִישׁ","unto a man"], ["לְבַדּוֹ׃","by himself"]]},
   { num: "לא", words: [
     ["כִּי","for"],
@@ -727,14 +727,14 @@ var dc3_ch1Verses = [
     ["אֶל־עַמִּי׃","unto my people"]
   ]},
   { num: "יז", words: [
-    ["וְאֶל־הַנְּפִיִּים","and to the Nephites"],
+    ["וְאֶל־הַנֶּפִיִּים","and to the Nephites"],
     ["וְהַיַּעֲקֹבִים","and the Jacobites"],
     ["וְהַיּוֹסְפִים","and the Josephites"],
     ["וְהַזּוֹרָמִים","and the Zoramites"],
     ["בְּעֵדוּת","through the testimony of"],
     ["אֲבוֹתֵיהֶם׃","their fathers"]
   ]},
-  { num: "יח", words: [["וְהָעֵדוּת","and the testimony"], ["הַזֹּאת","this"], ["תָּבֹא","shall come"], ["לְדַעַת","to knowledge of"], ["הַלָּמָנִים","the Lamanites"], ["וְהַלְּמוּאֵלִים","and the Lemuelites"], ["וְהַיִּשְׁמְעֵאלִים","and the Ishmaelites"], ["אֲשֶׁר","who"], ["כָּשְׁלוּ","dwindled"], ["בְּמַעַל","in unbelief"], ["בַּעֲוֹן","by iniquity of"], ["אֲבוֹתֵיהֶם","their fathers"], ["אֲשֶׁר","whom"], ["יְהוָה","the LORD"], ["הִנִּיחָם","suffered them"], ["לְהַשְׁמִיד","to destroy"], ["אֶת־אֲחֵיהֶם","their brethren"], ["הַנְּפִיִּים","the Nephites"], ["בַּעֲוֹנֹתֵיהֶם","because of their iniquities"], ["וּבְתוֹעֲבוֹתֵיהֶם׃","and their abominations"]]},
+  { num: "יח", words: [["וְהָעֵדוּת","and the testimony"], ["הַזֹּאת","this"], ["תָּבֹא","shall come"], ["לְדַעַת","to knowledge of"], ["הַלָּמָנִים","the Lamanites"], ["וְהַלְּמוּאֵלִים","and the Lemuelites"], ["וְהַיִּשְׁמְעֵאלִים","and the Ishmaelites"], ["אֲשֶׁר","who"], ["כָּשְׁלוּ","dwindled"], ["בְּמַעַל","in unbelief"], ["בַּעֲוֹן","by iniquity of"], ["אֲבוֹתֵיהֶם","their fathers"], ["אֲשֶׁר","whom"], ["יְהוָה","the LORD"], ["הִנִּיחָם","suffered them"], ["לְהַשְׁמִיד","to destroy"], ["אֶת־אֲחֵיהֶם","their brethren"], ["הַנֶּפִיִּים","the Nephites"], ["בַּעֲוֹנֹתֵיהֶם","because of their iniquities"], ["וּבְתוֹעֲבוֹתֵיהֶם׃","and their abominations"]]},
   { num: "יט", words: [
     ["וּלְמַעַן","and for sake of"],
     ["הַדָּבָר","the matter"],

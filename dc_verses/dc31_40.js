@@ -1843,7 +1843,7 @@ var dc38_ch1Verses = [
     ["מִגַּאֲוָה","of pride"],
     ["פֶּן","lest"],
     ["תִּהְיוּ","ye become"],
-    ["כַּנְּפִיִּים","as the Nephites"],
+    ["כַּנֶּפִיִּים","as the Nephites"],
     ["הַקַּדְמוֹנִים׃","of old"]
   ]},
   { num: "מ", words: [

@@ -267,12 +267,30 @@ window._rootGlossaryData = {
     "meaning": "to speak; word, matter, thing",
     "category": "Speech",
     "biblicalRefs": [
-      {"ref": "Isa 55:11", "note": "My word (\u05d3\u05b0\u05d1\u05b8\u05e8\u05b4\u05d9) shall not return to me empty"},
-      {"ref": "Ps 33:6", "note": "By the word (\u05d3\u05b0\u05d1\u05b7\u05e8) of the LORD the heavens were made"},
-      {"ref": "Deut 8:3", "note": "Man lives by every word (\u05de\u05d5\u05b9\u05e6\u05b8\u05d0) from the mouth of the LORD"},
-      {"ref": "Ex 33:11", "note": "The LORD spoke to Moses face to face, as a man speaks with his friend (\u05de\u05d9\u05e9\u05c1\u05e8\u05d1\u05e2\u05d5)"},
-      {"ref": "Isa 45:23", "note": "By myself I have sworn; every tongue shall confess (\u05d9\u05d9\u05e9\u05c1\u05d1\u05e2)"},
-      {"ref": "—", "note": "\u05de\u05e4\u05d9 \u05d9\u05d4\u05d5\u05d4 — Tanakh idiom for divine utterance (\u201cfrom the mouth of the LORD\u201d); contrast \u05e2\u05dd \u05d9\u05d4\u05d5\u05d4 (\u201cwith the LORD\u201d) in the English of 1 Ne. 3:1"}
+      {
+        "ref": "Isa 55:11",
+        "note": "My word (דְבָרִי) shall not return to me empty"
+      },
+      {
+        "ref": "Ps 33:6",
+        "note": "By the word (דְבַר) of the LORD the heavens were made"
+      },
+      {
+        "ref": "Deut 8:3",
+        "note": "Man lives by every word (מוֹצָא) from the mouth of the LORD"
+      },
+      {
+        "ref": "Ex 33:11",
+        "note": "The LORD spoke to Moses face to face, as a man speaks with his friend (מישׁרבעו)"
+      },
+      {
+        "ref": "Isa 45:23",
+        "note": "By myself I have sworn; every tongue shall confess (יישׁבע)"
+      },
+      {
+        "ref": "—",
+        "note": "מפי יהוה — Tanakh idiom for divine utterance (“from the mouth of the LORD”); contrast עם יהוה (“with the LORD”) in the English of 1 Ne. 3:1"
+      }
     ]
   },
   "את": {
@@ -423,11 +441,26 @@ window._rootGlossaryData = {
     "meaning": "to believe, trust; faith, faithfulness, amen",
     "category": "Theology",
     "biblicalRefs": [
-      {"ref": "Gen 15:6", "note": "Abram believed (\u05d4\u05b6\u05d0\u05b1\u05de\u05b4\u05df) in the LORD"},
-      {"ref": "Ex 14:31", "note": "They believed (\u05d5\u05b7\u05d9\u05b7\u05bc\u05d0\u05b2\u05de\u05b4\u05d9\u05e0\u05d5\u05bc) in the LORD and in Moses his servant"},
-      {"ref": "Isa 7:9", "note": "If you do not stand firm in faith, you will not stand at all"},
-      {"ref": "Hab 2:4", "note": "The righteous shall live by his faith (\u05d0\u05b1\u05de\u05d5\u05bc\u05e0\u05b8\u05d4)"},
-      {"ref": "Deut 7:9", "note": "The faithful (\u05d4\u05b7\u05e0\u05b6\u05bc\u05d0\u05b1\u05de\u05b8\u05df) God who keeps covenant"}
+      {
+        "ref": "Gen 15:6",
+        "note": "Abram believed (הֶאֱמִן) in the LORD"
+      },
+      {
+        "ref": "Ex 14:31",
+        "note": "They believed (וַיַּאֲמִינוּ) in the LORD and in Moses his servant"
+      },
+      {
+        "ref": "Isa 7:9",
+        "note": "If you do not stand firm in faith, you will not stand at all"
+      },
+      {
+        "ref": "Hab 2:4",
+        "note": "The righteous shall live by his faith (אֱמוּנָה)"
+      },
+      {
+        "ref": "Deut 7:9",
+        "note": "The faithful (הַנֶּאֱמָן) God who keeps covenant"
+      }
     ]
   },
   "נתן": {
@@ -479,7 +512,7 @@ window._rootGlossaryData = {
     "category": "Particle"
   },
   "שיח": {
-    "meaning": "Messiah",
+    "meaning": "to muse, meditate, complain; complaint",
     "category": "Nature"
   },
   "אכן": {
@@ -490,11 +523,26 @@ window._rootGlossaryData = {
     "meaning": "to return, repent, turn back; repentance",
     "category": "Theology",
     "biblicalRefs": [
-      {"ref": "Isa 55:7", "note": "Let the wicked return (\u05d9\u05b8\u05e9\u05c1\u05b9\u05d1) to the LORD"},
-      {"ref": "Jer 3:12", "note": "Return (\u05e9\u05c1\u05d5\u05bc\u05d1\u05b8\u05d4) faithless Israel"},
-      {"ref": "Mal 3:7", "note": "Return (\u05e9\u05c1\u05d5\u05bc\u05d1\u05d5\u05bc) to me and I will return to you"},
-      {"ref": "Hos 14:2", "note": "Return (\u05e9\u05c1\u05d5\u05bc\u05d1\u05b8\u05d4) O Israel to the LORD your God"},
-      {"ref": "Joel 2:12-13", "note": "Return (\u05e9\u05c1\u05d5\u05bc\u05d1\u05d5\u05bc) to me with all your heart"}
+      {
+        "ref": "Isa 55:7",
+        "note": "Let the wicked return (יָשֹׁב) to the LORD"
+      },
+      {
+        "ref": "Jer 3:12",
+        "note": "Return (שׁוּבָה) faithless Israel"
+      },
+      {
+        "ref": "Mal 3:7",
+        "note": "Return (שׁוּבוּ) to me and I will return to you"
+      },
+      {
+        "ref": "Hos 14:2",
+        "note": "Return (שׁוּבָה) O Israel to the LORD your God"
+      },
+      {
+        "ref": "Joel 2:12-13",
+        "note": "Return (שׁוּבוּ) to me with all your heart"
+      }
     ]
   },
   "וא": {
@@ -521,11 +569,26 @@ window._rootGlossaryData = {
     "meaning": "holy, sacred; to sanctify, set apart",
     "category": "Theology",
     "biblicalRefs": [
-      {"ref": "Ex 3:5", "note": "The ground on which you stand is holy (\u05e7\u05b9\u05d3\u05b6\u05e9\u05c1)"},
-      {"ref": "Lev 11:44", "note": "Be holy (\u05e7\u05b0\u05d3\u05b9\u05e9\u05c1\u05b4\u05d9\u05dd) for I am holy (\u05e7\u05b8\u05d3\u05d5\u05b9\u05e9\u05c1)"},
-      {"ref": "Isa 6:3", "note": "Holy, holy, holy (\u05e7\u05b8\u05d3\u05d5\u05b9\u05e9\u05c1) is the LORD of hosts"},
-      {"ref": "Ex 19:6", "note": "A kingdom of priests and a holy (\u05e7\u05b8\u05d3\u05d5\u05b9\u05e9\u05c1) nation"},
-      {"ref": "Lev 19:2", "note": "You shall be holy (\u05e7\u05b0\u05d3\u05b9\u05e9\u05c1\u05b4\u05d9\u05dd) for I the LORD your God am holy"}
+      {
+        "ref": "Ex 3:5",
+        "note": "The ground on which you stand is holy (קֹדֶשׁ)"
+      },
+      {
+        "ref": "Lev 11:44",
+        "note": "Be holy (קְדֹשִׁים) for I am holy (קָדוֹשׁ)"
+      },
+      {
+        "ref": "Isa 6:3",
+        "note": "Holy, holy, holy (קָדוֹשׁ) is the LORD of hosts"
+      },
+      {
+        "ref": "Ex 19:6",
+        "note": "A kingdom of priests and a holy (קָדוֹשׁ) nation"
+      },
+      {
+        "ref": "Lev 19:2",
+        "note": "You shall be holy (קְדֹשִׁים) for I the LORD your God am holy"
+      }
     ]
   },
   "לב": {
@@ -533,7 +596,6 @@ window._rootGlossaryData = {
     "category": "Person"
   },
   "אחי": {
-    "meaning": "my brothers",
     "category": "Family"
   },
   "הלך": {
@@ -552,11 +614,26 @@ window._rootGlossaryData = {
     "meaning": "righteous, just; righteousness, justice",
     "category": "Theology",
     "biblicalRefs": [
-      {"ref": "Gen 15:6", "note": "He believed the LORD and He reckoned it as righteousness (\u05e6\u05b0\u05d3\u05b8\u05e7\u05b8\u05d4)"},
-      {"ref": "Isa 32:17", "note": "The work of righteousness (\u05e6\u05b0\u05d3\u05b8\u05e7\u05b8\u05d4) shall be peace"},
-      {"ref": "Ps 85:11-12", "note": "Righteousness (\u05e6\u05b6\u05d3\u05b6\u05e7) and peace have kissed"},
-      {"ref": "Amos 5:24", "note": "Let justice roll down and righteousness (\u05e6\u05b0\u05d3\u05b8\u05e7\u05b8\u05d4) like a stream"},
-      {"ref": "Ps 11:7", "note": "The LORD is righteous (\u05e6\u05b7\u05d3\u05b4\u05bc\u05d9\u05e7), he loves righteousness"}
+      {
+        "ref": "Gen 15:6",
+        "note": "He believed the LORD and He reckoned it as righteousness (צְדָקָה)"
+      },
+      {
+        "ref": "Isa 32:17",
+        "note": "The work of righteousness (צְדָקָה) shall be peace"
+      },
+      {
+        "ref": "Ps 85:11-12",
+        "note": "Righteousness (צֶדֶק) and peace have kissed"
+      },
+      {
+        "ref": "Amos 5:24",
+        "note": "Let justice roll down and righteousness (צְדָקָה) like a stream"
+      },
+      {
+        "ref": "Ps 11:7",
+        "note": "The LORD is righteous (צַדִּיק), he loves righteousness"
+      }
     ]
   },
   "רב": {
@@ -615,10 +692,22 @@ window._rootGlossaryData = {
     "meaning": "to judge; judgment, justice",
     "category": "Society",
     "biblicalRefs": [
-      {"ref": "Gen 18:25", "note": "Shall not the Judge (\u05d4\u05b2\u05e9\u05c1\u05b9\u05e4\u05b5\u05d8) of all the earth do justice?"},
-      {"ref": "Ps 96:13", "note": "He will judge (\u05d9\u05b4\u05e9\u05c1\u05b0\u05e4\u05b9\u05bc\u05d8) the world in righteousness"},
-      {"ref": "Isa 2:4", "note": "He shall judge (\u05d5\u05b0\u05e9\u05c1\u05b8\u05e4\u05b7\u05d8) between the nations"},
-      {"ref": "Mic 6:8", "note": "To do justice (\u05de\u05b4\u05e9\u05c1\u05b0\u05e4\u05b8\u05bc\u05d8) and love mercy"}
+      {
+        "ref": "Gen 18:25",
+        "note": "Shall not the Judge (הֲשֹׁפֵט) of all the earth do justice?"
+      },
+      {
+        "ref": "Ps 96:13",
+        "note": "He will judge (יִשְׁפֹּט) the world in righteousness"
+      },
+      {
+        "ref": "Isa 2:4",
+        "note": "He shall judge (וְשָׁפַט) between the nations"
+      },
+      {
+        "ref": "Mic 6:8",
+        "note": "To do justice (מִשְׁפָּט) and love mercy"
+      }
     ]
   },
   "אף": {
@@ -689,11 +778,26 @@ window._rootGlossaryData = {
     "meaning": "king, to reign; kingdom, kingship",
     "category": "Society",
     "biblicalRefs": [
-      {"ref": "Ps 93:1", "note": "The LORD reigns (\u05de\u05b8\u05dc\u05b8\u05da\u05b0)"},
-      {"ref": "Isa 33:22", "note": "The LORD is our King (\u05de\u05b7\u05dc\u05b0\u05db\u05b5\u05bc\u05e0\u05d5\u05bc)"},
-      {"ref": "1 Sam 8:7", "note": "They have rejected me from being King over them"},
-      {"ref": "Ps 47:8", "note": "God is King (\u05de\u05b6\u05dc\u05b6\u05da\u05b0) of all the earth"},
-      {"ref": "Dan 7:14", "note": "His kingdom (\u05de\u05b7\u05dc\u05b0\u05db\u05d5\u05bc\u05ea\u05b5\u05d4\u05bc) shall not be destroyed"}
+      {
+        "ref": "Ps 93:1",
+        "note": "The LORD reigns (מָלָךְ)"
+      },
+      {
+        "ref": "Isa 33:22",
+        "note": "The LORD is our King (מַלְכֵּנוּ)"
+      },
+      {
+        "ref": "1 Sam 8:7",
+        "note": "They have rejected me from being King over them"
+      },
+      {
+        "ref": "Ps 47:8",
+        "note": "God is King (מֶלֶךְ) of all the earth"
+      },
+      {
+        "ref": "Dan 7:14",
+        "note": "His kingdom (מַלְכוּתֵהּ) shall not be destroyed"
+      }
     ]
   },
   "נו": {
@@ -780,12 +884,30 @@ window._rootGlossaryData = {
     "meaning": "kindness, loving-kindness, steadfast love, mercy, loyalty, faithfulness, grace, compassion, goodly",
     "category": "Theology",
     "biblicalRefs": [
-      {"ref": "Ex 34:6-7", "note": "Abounding in lovingkindness (\u05d7\u05b6\u05e1\u05b6\u05d3) and truth"},
-      {"ref": "Ps 136:1", "note": "His lovingkindness (\u05d7\u05b6\u05e1\u05b6\u05d3) endures forever"},
-      {"ref": "Mic 6:8", "note": "Love kindness (\u05d7\u05b6\u05e1\u05b6\u05d3)"},
-      {"ref": "Isa 54:10", "note": "My lovingkindness (\u05d7\u05b7\u05e1\u05b0\u05d3\u05b4\u05bc\u05d9) shall not depart from you"},
-      {"ref": "Ps 103:4", "note": "Who crowns you with lovingkindness (\u05d7\u05b6\u05e1\u05b6\u05d3) and compassion"},
-      {"ref": "Jer 31:3", "note": "With everlasting lovingkindness (\u05d7\u05b6\u05e1\u05b6\u05d3) I have drawn you"}
+      {
+        "ref": "Ex 34:6-7",
+        "note": "Abounding in lovingkindness (חֶסֶד) and truth"
+      },
+      {
+        "ref": "Ps 136:1",
+        "note": "His lovingkindness (חֶסֶד) endures forever"
+      },
+      {
+        "ref": "Mic 6:8",
+        "note": "Love kindness (חֶסֶד)"
+      },
+      {
+        "ref": "Isa 54:10",
+        "note": "My lovingkindness (חַסְדִּי) shall not depart from you"
+      },
+      {
+        "ref": "Ps 103:4",
+        "note": "Who crowns you with lovingkindness (חֶסֶד) and compassion"
+      },
+      {
+        "ref": "Jer 31:3",
+        "note": "With everlasting lovingkindness (חֶסֶד) I have drawn you"
+      }
     ]
   },
   "תורה": {
@@ -877,13 +999,8 @@ window._rootGlossaryData = {
     "category": "Person"
   },
   "צוה": {
-    "meaning": "to command; commandment, precept",
-    "category": "Theology",
-    "biblicalRefs": [
-      {"ref": "Deut 6:1", "note": "The commandments (\u05d4\u05b7\u05de\u05b4\u05bc\u05e6\u05b0\u05d5\u05b8\u05d4) the LORD your God commanded"},
-      {"ref": "Ps 119:96", "note": "Your commandment (\u05de\u05b4\u05e6\u05b0\u05d5\u05b8\u05ea\u05b0\u05da\u05b8) is exceedingly broad"},
-      {"ref": "Ex 20:1-17", "note": "The Ten Commandments"}
-    ]
+    "meaning": "to command",
+    "category": "Speech"
   },
   "מר": {
     "meaning": "keep",
@@ -978,7 +1095,7 @@ window._rootGlossaryData = {
     "category": "Life"
   },
   "של": {
-    "meaning": "reign",
+    "meaning": "of (possessive particle)",
     "category": "Society"
   },
   "רבה": {
@@ -1038,7 +1155,7 @@ window._rootGlossaryData = {
     "category": "Society"
   },
   "אתה": {
-    "meaning": "you (masc. sg.)",
+    "meaning": "to come, arrive",
     "category": "Particle"
   },
   "נות": {
@@ -1054,7 +1171,6 @@ window._rootGlossaryData = {
     "category": "Cognition"
   },
   "ית": {
-    "meaning": "of house of",
     "category": "Uncategorized"
   },
   "אנחנו": {
@@ -1081,12 +1197,30 @@ window._rootGlossaryData = {
     "meaning": "to save, deliver; salvation, Jesus",
     "category": "Theology",
     "biblicalRefs": [
-      {"ref": "Isa 12:2", "note": "God is my salvation (\u05d9\u05b0\u05e9\u05c1\u05d5\u05bc\u05e2\u05b8\u05d4)"},
-      {"ref": "Ex 14:13", "note": "Stand still and see the salvation (\u05d9\u05b0\u05e9\u05c1\u05d5\u05bc\u05e2\u05b7\u05ea) of the LORD"},
-      {"ref": "Isa 45:17", "note": "Israel shall be saved (\u05e0\u05d5\u05b9\u05e9\u05b7\u05c1\u05e2) by the LORD with an everlasting salvation"},
-      {"ref": "Ps 3:9", "note": "Salvation (\u05d4\u05b7\u05d9\u05b0\u05e9\u05c1\u05d5\u05bc\u05e2\u05b8\u05d4) belongs to the LORD"},
-      {"ref": "Hab 3:18", "note": "I will rejoice in the God of my salvation (\u05d9\u05b4\u05e9\u05c1\u05b0\u05e2\u05b4\u05d9)"},
-      {"ref": "Isa 49:6", "note": "I will make you a light to the nations, that my salvation (\u05d9\u05b0\u05e9\u05c1\u05d5\u05bc\u05e2\u05b8\u05ea\u05b4\u05d9) may reach to the end of the earth"}
+      {
+        "ref": "Isa 12:2",
+        "note": "God is my salvation (יְשׁוּעָה)"
+      },
+      {
+        "ref": "Ex 14:13",
+        "note": "Stand still and see the salvation (יְשׁוּעַת) of the LORD"
+      },
+      {
+        "ref": "Isa 45:17",
+        "note": "Israel shall be saved (נוֹשַׁע) by the LORD with an everlasting salvation"
+      },
+      {
+        "ref": "Ps 3:9",
+        "note": "Salvation (הַיְשׁוּעָה) belongs to the LORD"
+      },
+      {
+        "ref": "Hab 3:18",
+        "note": "I will rejoice in the God of my salvation (יִשְׁעִי)"
+      },
+      {
+        "ref": "Isa 49:6",
+        "note": "I will make you a light to the nations, that my salvation (יְשׁוּעָתִי) may reach to the end of the earth"
+      }
     ]
   },
   "דברתי": {
@@ -1101,10 +1235,22 @@ window._rootGlossaryData = {
     "meaning": "to sin, miss the mark; sin, sin-offering",
     "category": "Theology",
     "biblicalRefs": [
-      {"ref": "Gen 4:7", "note": "Sin (\u05d7\u05b7\u05d8\u05b8\u05bc\u05d0\u05ea) is crouching at the door"},
-      {"ref": "Ps 51:4", "note": "Wash me from my iniquity and cleanse me from my sin (\u05d7\u05b7\u05d8\u05b8\u05bc\u05d0\u05ea\u05b4\u05d9)"},
-      {"ref": "Isa 1:18", "note": "Though your sins (\u05d7\u05b2\u05d8\u05b8\u05d0\u05b5\u05d9\u05db\u05b6\u05dd) be as scarlet, they shall be white as snow"},
-      {"ref": "Lev 4:3", "note": "The sin-offering (\u05d7\u05b7\u05d8\u05b8\u05bc\u05d0\u05ea) for atonement"}
+      {
+        "ref": "Gen 4:7",
+        "note": "Sin (חַטָּאת) is crouching at the door"
+      },
+      {
+        "ref": "Ps 51:4",
+        "note": "Wash me from my iniquity and cleanse me from my sin (חַטָּאתִי)"
+      },
+      {
+        "ref": "Isa 1:18",
+        "note": "Though your sins (חֲטָאֵיכֶם) be as scarlet, they shall be white as snow"
+      },
+      {
+        "ref": "Lev 4:3",
+        "note": "The sin-offering (חַטָּאת) for atonement"
+      }
     ]
   },
   "חלו": {
@@ -1204,7 +1350,6 @@ window._rootGlossaryData = {
     "category": "Theology"
   },
   "חות": {
-    "meaning": "plates of",
     "category": "Uncategorized"
   },
   "עלינו": {
@@ -1263,10 +1408,22 @@ window._rootGlossaryData = {
     "meaning": "prophet; to prophesy, prophecy",
     "category": "Theology",
     "biblicalRefs": [
-      {"ref": "Deut 18:15", "note": "The LORD will raise up for you a prophet (\u05e0\u05b8\u05d1\u05b4\u05d9\u05d0) like me"},
-      {"ref": "Deut 18:18", "note": "I will raise up a prophet (\u05e0\u05b8\u05d1\u05b4\u05d9\u05d0) from among their brothers"},
-      {"ref": "Amos 3:7", "note": "He reveals his counsel to his servants the prophets (\u05d4\u05b7\u05e0\u05b0\u05bc\u05d1\u05b4\u05d9\u05d0\u05b4\u05d9\u05dd)"},
-      {"ref": "Num 11:29", "note": "Would that all the LORD's people were prophets (\u05e0\u05b0\u05d1\u05b4\u05d9\u05d0\u05b4\u05d9\u05dd)"}
+      {
+        "ref": "Deut 18:15",
+        "note": "The LORD will raise up for you a prophet (נָבִיא) like me"
+      },
+      {
+        "ref": "Deut 18:18",
+        "note": "I will raise up a prophet (נָבִיא) from among their brothers"
+      },
+      {
+        "ref": "Amos 3:7",
+        "note": "He reveals his counsel to his servants the prophets (הַנְּבִיאִים)"
+      },
+      {
+        "ref": "Num 11:29",
+        "note": "Would that all the LORD's people were prophets (נְבִיאִים)"
+      }
     ]
   },
   "יניהם": {
@@ -1342,7 +1499,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "עלי": {
-    "meaning": "I must",
     "category": "Uncategorized"
   },
   "דור": {
@@ -1386,7 +1542,6 @@ window._rootGlossaryData = {
     "category": "Person"
   },
   "אתן": {
-    "meaning": "shall I give",
     "category": "Action"
   },
   "רעה": {
@@ -1397,10 +1552,22 @@ window._rootGlossaryData = {
     "meaning": "iniquity, guilt, punishment for sin",
     "category": "Theology",
     "biblicalRefs": [
-      {"ref": "Isa 53:5", "note": "He was crushed for our iniquities (\u05e2\u05b2\u05d5\u05b9\u05e0\u05b9\u05ea\u05b5\u05d9\u05e0\u05d5\u05bc)"},
-      {"ref": "Ps 32:5", "note": "You forgave the iniquity (\u05e2\u05b2\u05d5\u05b9\u05df) of my sin"},
-      {"ref": "Ex 34:7", "note": "Forgiving iniquity (\u05e2\u05b8\u05d5\u05b9\u05df) and transgression and sin"},
-      {"ref": "Num 14:18", "note": "The LORD is slow to anger, forgiving iniquity (\u05e2\u05b8\u05d5\u05b9\u05df)"}
+      {
+        "ref": "Isa 53:5",
+        "note": "He was crushed for our iniquities (עֲוֹנֹתֵינוּ)"
+      },
+      {
+        "ref": "Ps 32:5",
+        "note": "You forgave the iniquity (עֲוֹן) of my sin"
+      },
+      {
+        "ref": "Ex 34:7",
+        "note": "Forgiving iniquity (עָוֹן) and transgression and sin"
+      },
+      {
+        "ref": "Num 14:18",
+        "note": "The LORD is slow to anger, forgiving iniquity (עָוֹן)"
+      }
     ]
   },
   "ראשונה": {
@@ -1460,19 +1627,37 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "אים": {
-    "meaning": "come",
+    "meaning": "to be terrible; terror, dread",
     "category": "Motion"
   },
   "ברית": {
     "meaning": "covenant, treaty, agreement",
     "category": "Theology",
     "biblicalRefs": [
-      {"ref": "Gen 9:9", "note": "I establish my covenant (\u05d1\u05b0\u05bc\u05e8\u05b4\u05d9\u05ea\u05b4\u05d9) with you"},
-      {"ref": "Gen 15:18", "note": "The LORD made a covenant (\u05d1\u05b0\u05bc\u05e8\u05b4\u05d9\u05ea) with Abram"},
-      {"ref": "Gen 17:7", "note": "An everlasting covenant (\u05d1\u05b0\u05bc\u05e8\u05b4\u05d9\u05ea \u05e2\u05d5\u05b9\u05dc\u05b8\u05dd)"},
-      {"ref": "Ex 19:5", "note": "If you keep my covenant (\u05d1\u05b0\u05bc\u05e8\u05b4\u05d9\u05ea\u05b4\u05d9)"},
-      {"ref": "Jer 31:31", "note": "I will make a new covenant (\u05d1\u05b0\u05bc\u05e8\u05b4\u05d9\u05ea \u05d7\u05b2\u05d3\u05b8\u05e9\u05c1\u05b8\u05d4)"},
-      {"ref": "Deut 7:9", "note": "The faithful God who keeps covenant (\u05d4\u05b7\u05d1\u05b0\u05bc\u05e8\u05b4\u05d9\u05ea) and lovingkindness"}
+      {
+        "ref": "Gen 9:9",
+        "note": "I establish my covenant (בְּרִיתִי) with you"
+      },
+      {
+        "ref": "Gen 15:18",
+        "note": "The LORD made a covenant (בְּרִית) with Abram"
+      },
+      {
+        "ref": "Gen 17:7",
+        "note": "An everlasting covenant (בְּרִית עוֹלָם)"
+      },
+      {
+        "ref": "Ex 19:5",
+        "note": "If you keep my covenant (בְּרִיתִי)"
+      },
+      {
+        "ref": "Jer 31:31",
+        "note": "I will make a new covenant (בְּרִית חֲדָשָׁה)"
+      },
+      {
+        "ref": "Deut 7:9",
+        "note": "The faithful God who keeps covenant (הַבְּרִית) and lovingkindness"
+      }
     ]
   },
   "על־כן": {
@@ -2168,8 +2353,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "אול": {
-    "meaning": "Sheol",
-    "category": "Uncategorized"
+    "meaning": "to be foolish; folly",
+    "category": "Lexical"
   },
   "יכו": {
     "meaning": "smitten",
@@ -2328,7 +2513,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "אפו": {
-    "meaning": "His anger",
+    "meaning": "then, now (enclitic particle)",
     "category": "Perception"
   },
   "נהרגו": {
@@ -2346,10 +2531,6 @@ window._rootGlossaryData = {
   "חזקים": {
     "meaning": "strong enough",
     "category": "Quality"
-  },
-  "זרחמלה": {
-    "meaning": "Zarahemla",
-    "category": "Uncategorized"
   },
   "את־העם": {
     "meaning": "ACC the people",
@@ -2656,7 +2837,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "ינתן": {
-    "meaning": "shall be delivered",
     "category": "Action"
   },
   "נשאו": {
@@ -2732,8 +2912,8 @@ window._rootGlossaryData = {
     "category": "Society"
   },
   "סתר": {
-    "meaning": "about privately",
-    "category": "Uncategorized"
+    "meaning": "to hide, conceal; secret",
+    "category": "Lexical"
   },
   "צפונה": {
     "meaning": "northward",
@@ -2872,8 +3052,8 @@ window._rootGlossaryData = {
     "category": "Time"
   },
   "אנה": {
-    "meaning": "whither",
-    "category": "Uncategorized"
+    "meaning": "ship; whither?",
+    "category": "Lexical"
   },
   "ישא": {
     "meaning": "takes away",
@@ -3068,7 +3248,6 @@ window._rootGlossaryData = {
     "category": "Society"
   },
   "ניו": {
-    "meaning": "his sons",
     "category": "Theology"
   },
   "ענפים": {
@@ -3144,7 +3323,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "חתם": {
-    "meaning": "have you forgotten",
+    "meaning": "to seal, seal up",
     "category": "Nature"
   },
   "תראו": {
@@ -3187,12 +3366,30 @@ window._rootGlossaryData = {
     "meaning": "to redeem, deliver; kinsman-redeemer",
     "category": "Theology",
     "biblicalRefs": [
-      {"ref": "Isa 44:6", "note": "Thus says the LORD, the King and Redeemer (\u05d2\u05b9\u05bc\u05d0\u05b2\u05dc\u05d5\u05b9) of Israel"},
-      {"ref": "Isa 43:1", "note": "I have redeemed (\u05d2\u05b0\u05d0\u05b7\u05dc\u05b0\u05ea\u05b4\u05bc\u05d9\u05da\u05b8) you, I have called you by name"},
-      {"ref": "Job 19:25", "note": "I know that my Redeemer (\u05d2\u05b9\u05bc\u05d0\u05b2\u05dc\u05b4\u05d9) lives"},
-      {"ref": "Isa 59:20", "note": "A Redeemer (\u05d2\u05d5\u05b9\u05d0\u05b5\u05dc) shall come to Zion"},
-      {"ref": "Ex 6:6", "note": "I will redeem (\u05d2\u05b8\u05bc\u05d0\u05b7\u05dc\u05b0\u05ea\u05b4\u05bc\u05d9) you with an outstretched arm"},
-      {"ref": "Ruth 4:4", "note": "The kinsman-redeemer (\u05d2\u05b9\u05bc\u05d0\u05b5\u05dc) tradition"}
+      {
+        "ref": "Isa 44:6",
+        "note": "Thus says the LORD, the King and Redeemer (גֹּאֲלוֹ) of Israel"
+      },
+      {
+        "ref": "Isa 43:1",
+        "note": "I have redeemed (גְאַלְתִּיךָ) you, I have called you by name"
+      },
+      {
+        "ref": "Job 19:25",
+        "note": "I know that my Redeemer (גֹּאֲלִי) lives"
+      },
+      {
+        "ref": "Isa 59:20",
+        "note": "A Redeemer (גוֹאֵל) shall come to Zion"
+      },
+      {
+        "ref": "Ex 6:6",
+        "note": "I will redeem (גָּאַלְתִּי) you with an outstretched arm"
+      },
+      {
+        "ref": "Ruth 4:4",
+        "note": "The kinsman-redeemer (גֹּאֵל) tradition"
+      }
     ]
   },
   "קראת": {
@@ -3296,7 +3493,6 @@ window._rootGlossaryData = {
     "category": "Society"
   },
   "תם": {
-    "meaning": "at the end of",
     "category": "Theology"
   },
   "וכיח": {
@@ -3476,7 +3672,7 @@ window._rootGlossaryData = {
     "category": "Time"
   },
   "תמה": {
-    "meaning": "ended(f)",
+    "meaning": "to be astonished, amazed",
     "category": "Time"
   },
   "ציד": {
@@ -3944,7 +4140,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "צום": {
-    "meaning": "He commanded them",
+    "meaning": "to fast; a fast",
     "category": "Theology"
   },
   "יחר": {
@@ -3964,7 +4160,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "עתי": {
-    "meaning": "I had heard",
     "category": "Cognition"
   },
   "ימצא": {
@@ -3996,7 +4191,6 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "ענים": {
-    "meaning": "their poverty",
     "category": "Uncategorized"
   },
   "ילחמו": {
@@ -4108,7 +4302,7 @@ window._rootGlossaryData = {
     "category": "Action"
   },
   "חלה": {
-    "meaning": "began(f)",
+    "meaning": "to be sick, weak; to entreat",
     "category": "Nature"
   },
   "קדים": {
@@ -4216,7 +4410,6 @@ window._rootGlossaryData = {
     "category": "Nature"
   },
   "כנה": {
-    "meaning": "has been laid",
     "category": "Uncategorized"
   },
   "עולמים": {
@@ -4504,8 +4697,8 @@ window._rootGlossaryData = {
     "category": "Society"
   },
   "סות": {
-    "meaning": "we might clothe",
-    "category": "Uncategorized"
+    "meaning": "to entice, incite, stir up",
+    "category": "Lexical"
   },
   "קשות": {
     "meaning": "harden",
@@ -4880,7 +5073,6 @@ window._rootGlossaryData = {
     "category": "Motion"
   },
   "רבו": {
-    "meaning": "they multiplied",
     "category": "Time"
   },
   "ביט": {
@@ -4896,7 +5088,6 @@ window._rootGlossaryData = {
     "category": "Action"
   },
   "תפל": {
-    "meaning": "she fell",
     "category": "Quality"
   },
   "אנוש": {
@@ -4912,8 +5103,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "מנה": {
-    "meaning": "eight",
-    "category": "Uncategorized"
+    "meaning": "to count, number, appoint, allot",
+    "category": "Lexical"
   },
   "יג": {
     "meaning": "has obtained",
@@ -5148,7 +5339,6 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "יקים": {
-    "meaning": "shall raise up",
     "category": "Quality"
   },
   "טבלו": {
@@ -5276,8 +5466,8 @@ window._rootGlossaryData = {
     "category": "Family"
   },
   "אי": {
-    "meaning": "my message",
-    "category": "Uncategorized"
+    "meaning": "where?, how?",
+    "category": "Lexical"
   },
   "אחים": {
     "meaning": "brethren",
@@ -5372,8 +5562,8 @@ window._rootGlossaryData = {
     "category": "Theology"
   },
   "יצר": {
-    "meaning": "it grieves",
-    "category": "Uncategorized"
+    "meaning": "to form, fashion; potter",
+    "category": "Lexical"
   },
   "נשחתו": {
     "meaning": "have become corrupted",
@@ -5556,7 +5746,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "אחז": {
-    "meaning": "Ahaz",
+    "meaning": "to grasp, seize, take possession",
     "category": "Time"
   },
   "רדת": {
@@ -5880,7 +6070,7 @@ window._rootGlossaryData = {
     "category": "Cognition"
   },
   "חמה": {
-    "meaning": "fury",
+    "meaning": "wall; heat, fury",
     "category": "Society"
   },
   "תשפטו": {
@@ -6024,7 +6214,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "כת": {
-    "meaning": "departing of",
     "category": "Motion"
   },
   "נעלה": {
@@ -6044,7 +6233,6 @@ window._rootGlossaryData = {
     "category": "Speech"
   },
   "עתם": {
-    "meaning": "have you hearkened",
     "category": "Cognition"
   },
   "תן": {
@@ -6319,7 +6507,10 @@ window._rootGlossaryData = {
     "meaning": "swiftly",
     "category": "Uncategorized"
   },
-  "לחי": {"meaning": "Lehi (name)", "category": "Names"},
+  "לחי": {
+    "meaning": "Lehi (name)",
+    "category": "Names"
+  },
   "חיה": {
     "meaning": "to live, be alive; life",
     "category": "Life"
@@ -6421,7 +6612,6 @@ window._rootGlossaryData = {
     "category": "Society"
   },
   "קרם": {
-    "meaning": "their herds",
     "category": "Uncategorized"
   },
   "ופטים": {
@@ -6561,15 +6751,14 @@ window._rootGlossaryData = {
     "category": "Time"
   },
   "קצר": {
-    "meaning": "abridging",
-    "category": "Uncategorized"
+    "meaning": "to reap, harvest; to be short",
+    "category": "Lexical"
   },
   "זר": {
     "meaning": "twined",
     "category": "Perception"
   },
   "פנו": {
-    "meaning": "turn!(pl)",
     "category": "Uncategorized"
   },
   "גאלם": {
@@ -6609,7 +6798,7 @@ window._rootGlossaryData = {
     "category": "Action"
   },
   "אפל": {
-    "meaning": "overcome was I",
+    "meaning": "darkness, gloom",
     "category": "Motion"
   },
   "יזכרו": {
@@ -6685,7 +6874,7 @@ window._rootGlossaryData = {
     "category": "Motion"
   },
   "גלה": {
-    "meaning": "had discovered",
+    "meaning": "to uncover, reveal; to go into exile",
     "category": "Nature"
   },
   "מורה": {
@@ -6769,8 +6958,8 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "חרש": {
-    "meaning": "thicket of",
-    "category": "Uncategorized"
+    "meaning": "to engrave, plough, devise; to be silent, deaf",
+    "category": "Lexical"
   },
   "רחמיו": {
     "meaning": "His mercy",
@@ -6801,7 +6990,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "נחה": {
-    "meaning": "is confederate with",
+    "meaning": "to lead, guide",
     "category": "Quality"
   },
   "בב": {
@@ -6885,7 +7074,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "רתם": {
-    "meaning": "you have kept",
     "category": "Uncategorized"
   },
   "מרו": {
@@ -7133,7 +7321,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "ענות": {
-    "meaning": "condescension of",
     "category": "Speech"
   },
   "וח": {
@@ -7205,7 +7392,7 @@ window._rootGlossaryData = {
     "category": "Action"
   },
   "לכם": {
-    "meaning": "unto all of you",
+    "meaning": "to you (masc. pl.)",
     "category": "Society"
   },
   "חבלים": {
@@ -7273,7 +7460,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "רגם": {
-    "meaning": "slay them",
+    "meaning": "to stone",
     "category": "Nature"
   },
   "נכנעו": {
@@ -7677,7 +7864,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "כתם": {
-    "meaning": "they were going about",
     "category": "Uncategorized"
   },
   "שז": {
@@ -7789,8 +7975,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "ערך": {
-    "meaning": "battle",
-    "category": "Uncategorized"
+    "meaning": "to arrange, set in order; valuation",
+    "category": "Lexical"
   },
   "את־לבב": {
     "meaning": "[ACC] hearts of",
@@ -7817,7 +8003,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "שבה": {
-    "meaning": "restoration",
+    "meaning": "to take captive; captivity",
     "category": "Life"
   },
   "נאלצו": {
@@ -7933,8 +8119,8 @@ window._rootGlossaryData = {
     "category": "Motion"
   },
   "עצב": {
-    "meaning": "grief",
-    "category": "Uncategorized"
+    "meaning": "to shape, carve; to grieve, pain; idol",
+    "category": "Lexical"
   },
   "ליכו": {
     "meaning": "they cast",
@@ -7985,8 +8171,8 @@ window._rootGlossaryData = {
     "category": "Time"
   },
   "עגל": {
-    "meaning": "circuit of",
-    "category": "Uncategorized"
+    "meaning": "calf; round, circuit",
+    "category": "Lexical"
   },
   "תחפץ": {
     "meaning": "do you desire",
@@ -8069,7 +8255,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "קלות": {
-    "meaning": "simplicity of",
     "category": "Society"
   },
   "שמד": {
@@ -8081,8 +8266,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "נאה": {
-    "meaning": "malice",
-    "category": "Uncategorized"
+    "meaning": "to be comely, beautiful, fitting",
+    "category": "Lexical"
   },
   "כב": {
     "meaning": "Shokb",
@@ -8101,7 +8286,6 @@ window._rootGlossaryData = {
     "category": "Perception"
   },
   "רעי": {
-    "meaning": "companions of",
     "category": "Time"
   },
   "צל": {
@@ -8129,7 +8313,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "מתי": {
-    "meaning": "I make",
+    "meaning": "when?",
     "category": "Action"
   },
   "נגדי": {
@@ -8145,7 +8329,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "דמם": {
-    "meaning": "their blood",
+    "meaning": "to be silent, still",
     "category": "Person"
   },
   "נפוצו": {
@@ -8161,7 +8345,7 @@ window._rootGlossaryData = {
     "category": "Society"
   },
   "עדר": {
-    "meaning": "fold",
+    "meaning": "flock, herd; to arrange",
     "category": "Time"
   },
   "תרגום": {
@@ -8189,7 +8373,6 @@ window._rootGlossaryData = {
     "category": "Action"
   },
   "יגיע": {
-    "meaning": "shall come",
     "category": "Motion"
   },
   "אורים": {
@@ -8197,8 +8380,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "רגע": {
-    "meaning": "instant of",
-    "category": "Uncategorized"
+    "meaning": "moment; to be at rest",
+    "category": "Lexical"
   },
   "לישית": {
     "meaning": "third",
@@ -8501,8 +8684,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "גרש": {
-    "meaning": "drove out",
-    "category": "Uncategorized"
+    "meaning": "to drive out, expel; pasture land",
+    "category": "Lexical"
   },
   "פרוש": {
     "meaning": "interpretation of",
@@ -8533,11 +8716,9 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "דתם": {
-    "meaning": "have been taught",
     "category": "Life"
   },
   "יבחר": {
-    "meaning": "he chooses",
     "category": "Uncategorized"
   },
   "עניו": {
@@ -8857,7 +9038,7 @@ window._rootGlossaryData = {
     "category": "Time"
   },
   "ראם": {
-    "meaning": "created them",
+    "meaning": "wild ox",
     "category": "Life"
   },
   "יצוה": {
@@ -8909,7 +9090,6 @@ window._rootGlossaryData = {
     "category": "Action"
   },
   "אחל": {
-    "meaning": "I began",
     "category": "Time"
   },
   "אראם": {
@@ -9085,7 +9265,7 @@ window._rootGlossaryData = {
     "category": "Motion"
   },
   "כור": {
-    "meaning": "firstborn",
+    "meaning": "furnace, crucible; laver",
     "category": "Family"
   },
   "זמר": {
@@ -9125,7 +9305,6 @@ window._rootGlossaryData = {
     "category": "Perception"
   },
   "חני": {
-    "meaning": "has sent me",
     "category": "Motion"
   },
   "גאלך": {
@@ -9261,8 +9440,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "רום": {
-    "meaning": "haughtiness of",
-    "category": "Uncategorized"
+    "meaning": "to be high, exalted; to lift up",
+    "category": "Lexical"
   },
   "גופי": {
     "meaning": "my body",
@@ -9281,7 +9460,7 @@ window._rootGlossaryData = {
     "category": "Nature"
   },
   "עדן": {
-    "meaning": "God",
+    "meaning": "delight, Eden; to be soft",
     "category": "Theology"
   },
   "שפטי": {
@@ -9312,10 +9491,22 @@ window._rootGlossaryData = {
     "meaning": "to be pure, clean; purity, purification",
     "category": "Theology",
     "biblicalRefs": [
-      {"ref": "Ps 51:12", "note": "Create in me a clean (\u05d8\u05b8\u05d4\u05d5\u05b9\u05e8) heart, O God"},
-      {"ref": "Lev 16:30", "note": "You shall be clean (\u05ea\u05b4\u05bc\u05d8\u05b0\u05d4\u05b8\u05e8\u05d5\u05bc) from all your sins"},
-      {"ref": "Ezek 36:25", "note": "I will sprinkle clean water upon you and you shall be clean (\u05d5\u05bc\u05d8\u05b0\u05d4\u05b7\u05e8\u05b0\u05ea\u05b6\u05bc\u05dd)"},
-      {"ref": "Ps 12:7", "note": "The words of the LORD are pure (\u05d8\u05b0\u05d4\u05b9\u05e8\u05d5\u05b9\u05ea)"}
+      {
+        "ref": "Ps 51:12",
+        "note": "Create in me a clean (טָהוֹר) heart, O God"
+      },
+      {
+        "ref": "Lev 16:30",
+        "note": "You shall be clean (תִּטְהָרוּ) from all your sins"
+      },
+      {
+        "ref": "Ezek 36:25",
+        "note": "I will sprinkle clean water upon you and you shall be clean (וּטְהַרְתֶּם)"
+      },
+      {
+        "ref": "Ps 12:7",
+        "note": "The words of the LORD are pure (טְהֹרוֹת)"
+      }
     ]
   },
   "עשיר": {
@@ -9355,8 +9546,8 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "נבל": {
-    "meaning": "decay",
-    "category": "Uncategorized"
+    "meaning": "to wither, fall; to be foolish; corpse",
+    "category": "Lexical"
   },
   "דברם": {
     "meaning": "while they should speak",
@@ -10435,8 +10626,8 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "צוד": {
-    "meaning": "slay",
-    "category": "Uncategorized"
+    "meaning": "to hunt; stronghold, fortress",
+    "category": "Lexical"
   },
   "סוף": {
     "meaning": "Reeds",
@@ -10459,7 +10650,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יוסר": {
-    "meaning": "be removed",
     "category": "Uncategorized"
   },
   "קשב": {
@@ -10831,8 +11021,8 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "יגע": {
-    "meaning": "he touched",
-    "category": "Uncategorized"
+    "meaning": "to labour, toil, grow weary",
+    "category": "Lexical"
   },
   "בבו": {
     "meaning": "his heart",
@@ -10875,7 +11065,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "ערה": {
-    "meaning": "hair",
+    "meaning": "to be naked, uncover; nakedness",
     "category": "Quality"
   },
   "אם־יהיה": {
@@ -10883,7 +11073,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יסור": {
-    "meaning": "shall be taken away",
     "category": "Nature"
   },
   "חבל": {
@@ -11191,7 +11380,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "מדת": {
-    "meaning": "destruction of",
     "category": "Uncategorized"
   },
   "פיהם": {
@@ -11263,7 +11451,6 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "עלותו": {
-    "meaning": "he himself",
     "category": "Motion"
   },
   "ונות": {
@@ -11363,7 +11550,6 @@ window._rootGlossaryData = {
     "category": "Speech"
   },
   "עדתם": {
-    "meaning": "their church",
     "category": "Uncategorized"
   },
   "אחריכם": {
@@ -11871,7 +12057,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "נחזיק": {
-    "meaning": "we shall hold fast",
     "category": "Time"
   },
   "תצאו": {
@@ -11935,8 +12120,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "בוש": {
-    "meaning": "gain power over",
-    "category": "Uncategorized"
+    "meaning": "to be ashamed, put to shame",
+    "category": "Lexical"
   },
   "פכוס": {
     "meaning": "Pahkoos",
@@ -12017,10 +12202,6 @@ window._rootGlossaryData = {
   "צהרים": {
     "meaning": "at noonday",
     "category": "Time"
-  },
-  "צוה": {
-    "meaning": "to command",
-    "category": "Speech"
   },
   "ראהו": {
     "meaning": "showed him",
@@ -12367,7 +12548,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "נדח": {
-    "meaning": "wild flock",
+    "meaning": "to be driven away, banished; outcast",
     "category": "Nature"
   },
   "עדי": {
@@ -12450,11 +12631,26 @@ window._rootGlossaryData = {
     "meaning": "to have compassion, show mercy; womb, compassion",
     "category": "Theology",
     "biblicalRefs": [
-      {"ref": "Isa 49:15", "note": "Can a mother forget her child? Even these may forget, but I will not forget you"},
-      {"ref": "Ps 103:13", "note": "As a father has compassion (\u05db\u05b0\u05bc\u05e8\u05b7\u05d7\u05b5\u05dd) on his children"},
-      {"ref": "Ex 33:19", "note": "I will show mercy (\u05e8\u05b4\u05d7\u05b7\u05de\u05b0\u05ea\u05b4\u05bc\u05d9) on whom I show mercy"},
-      {"ref": "Isa 54:7-8", "note": "With great compassion (\u05e8\u05b7\u05d7\u05b2\u05de\u05b4\u05d9\u05dd) I will gather you"},
-      {"ref": "Zech 7:9", "note": "Show mercy (\u05e8\u05b7\u05d7\u05b2\u05de\u05b4\u05d9\u05dd) and compassion to one another"}
+      {
+        "ref": "Isa 49:15",
+        "note": "Can a mother forget her child? Even these may forget, but I will not forget you"
+      },
+      {
+        "ref": "Ps 103:13",
+        "note": "As a father has compassion (כְּרַחֵם) on his children"
+      },
+      {
+        "ref": "Ex 33:19",
+        "note": "I will show mercy (רִחַמְתִּי) on whom I show mercy"
+      },
+      {
+        "ref": "Isa 54:7-8",
+        "note": "With great compassion (רַחֲמִים) I will gather you"
+      },
+      {
+        "ref": "Zech 7:9",
+        "note": "Show mercy (רַחֲמִים) and compassion to one another"
+      }
     ]
   },
   "פים": {
@@ -12662,7 +12858,6 @@ window._rootGlossaryData = {
     "category": "Cognition"
   },
   "פחת": {
-    "meaning": "family of",
     "category": "Family"
   },
   "תביטו": {
@@ -13214,7 +13409,6 @@ window._rootGlossaryData = {
     "category": "Action"
   },
   "פקוד": {
-    "meaning": "command of",
     "category": "Speech"
   },
   "פצעים": {
@@ -13462,7 +13656,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "דאג": {
-    "meaning": "grow uneasy",
+    "meaning": "to be anxious, fear; anxiety, care",
     "category": "Quality"
   },
   "הביאם": {
@@ -13550,7 +13744,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "צפו": {
-    "meaning": "they floated",
     "category": "Society"
   },
   "פחדו": {
@@ -14210,7 +14403,6 @@ window._rootGlossaryData = {
     "category": "Time"
   },
   "ירחב": {
-    "meaning": "he expanded",
     "category": "Uncategorized"
   },
   "חברי": {
@@ -14286,7 +14478,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "תכה": {
-    "meaning": "she shall be struck",
     "category": "Quality"
   },
   "גגות": {
@@ -14438,7 +14629,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "עקר": {
-    "meaning": "chiefly",
+    "meaning": "to pluck up, uproot; barren; stump",
     "category": "Society"
   },
   "חלקלקות": {
@@ -14682,7 +14873,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "נעל": {
-    "meaning": "we ascended",
+    "meaning": "to bolt, lock; sandal",
     "category": "Motion"
   },
   "ננס": {
@@ -14830,7 +15021,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "חלי": {
-    "meaning": "I begin",
     "category": "Time"
   },
   "קידה": {
@@ -14890,7 +15080,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "פשר": {
-    "meaning": "meaning of",
     "category": "Uncategorized"
   },
   "דוי": {
@@ -14978,8 +15167,8 @@ window._rootGlossaryData = {
     "category": "Cognition"
   },
   "חתת": {
-    "meaning": "destruction of",
-    "category": "Uncategorized"
+    "meaning": "to be shattered, dismayed, terrified",
+    "category": "Lexical"
   },
   "משלתם": {
     "meaning": "their dominion",
@@ -15222,8 +15411,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "תעב": {
-    "meaning": "him abhorred of",
-    "category": "Uncategorized"
+    "meaning": "to abhor, loathe; abomination",
+    "category": "Lexical"
   },
   "ירעבו": {
     "meaning": "shall they hunger",
@@ -15806,8 +15995,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "חפר": {
-    "meaning": "moles",
-    "category": "Uncategorized"
+    "meaning": "to dig, search out; to be ashamed, confounded",
+    "category": "Lexical"
   },
   "נטויות": {
     "meaning": "were extended",
@@ -15838,8 +16027,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "נור": {
-    "meaning": "Comnor",
-    "category": "Uncategorized"
+    "meaning": "lamp, lampstand; fire",
+    "category": "Lexical"
   },
   "חטאה": {
     "meaning": "sin",
@@ -15898,8 +16087,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "שית": {
-    "meaning": "sixth(f)",
-    "category": "Uncategorized"
+    "meaning": "to set, place, put",
+    "category": "Lexical"
   },
   "אט": {
     "meaning": "slowly, gently",
@@ -16066,7 +16255,6 @@ window._rootGlossaryData = {
     "category": "Action"
   },
   "חנות": {
-    "meaning": "has encamped",
     "category": "Life"
   },
   "ישפילו": {
@@ -16230,7 +16418,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "בכם": {
-    "meaning": "you have repented of",
+    "meaning": "in you, among you",
     "category": "Theology"
   },
   "אהובי": {
@@ -16274,8 +16462,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "שרת": {
-    "meaning": "office of",
-    "category": "Uncategorized"
+    "meaning": "to minister, serve",
+    "category": "Lexical"
   },
   "רחיב": {
     "meaning": "enlarge",
@@ -16754,7 +16942,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "גזלם": {
-    "meaning": "he robbed them",
     "category": "Uncategorized"
   },
   "ישמידום": {
@@ -16946,8 +17133,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יתם": {
-    "meaning": "slay them",
-    "category": "Uncategorized"
+    "meaning": "orphan, fatherless",
+    "category": "Lexical"
   },
   "ינקמו": {
     "meaning": "seek",
@@ -17030,8 +17217,8 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "ירע": {
-    "meaning": "were displeased with",
-    "category": "Uncategorized"
+    "meaning": "curtain",
+    "category": "Lexical"
   },
   "תיחסו": {
     "meaning": "were numbered",
@@ -17065,11 +17252,26 @@ window._rootGlossaryData = {
     "meaning": "to atone, cover, forgive; atonement",
     "category": "Theology",
     "biblicalRefs": [
-      {"ref": "Lev 16:30", "note": "On this day atonement (\u05d9\u05b0\u05db\u05b7\u05e4\u05b5\u05bc\u05e8) shall be made for you"},
-      {"ref": "Lev 17:11", "note": "The blood makes atonement (\u05dc\u05b0\u05db\u05b7\u05e4\u05b5\u05bc\u05e8) for the soul"},
-      {"ref": "Isa 6:7", "note": "Your iniquity is removed and your sin is atoned for (\u05db\u05bb\u05e4\u05b8\u05bc\u05e8)"},
-      {"ref": "Ex 30:10", "note": "Once a year he shall make atonement upon it"},
-      {"ref": "Dan 9:24", "note": "To atone for (\u05dc\u05b0\u05db\u05b7\u05e4\u05b5\u05bc\u05e8) iniquity and bring everlasting righteousness"}
+      {
+        "ref": "Lev 16:30",
+        "note": "On this day atonement (יְכַפֵּר) shall be made for you"
+      },
+      {
+        "ref": "Lev 17:11",
+        "note": "The blood makes atonement (לְכַפֵּר) for the soul"
+      },
+      {
+        "ref": "Isa 6:7",
+        "note": "Your iniquity is removed and your sin is atoned for (כֻפָּר)"
+      },
+      {
+        "ref": "Ex 30:10",
+        "note": "Once a year he shall make atonement upon it"
+      },
+      {
+        "ref": "Dan 9:24",
+        "note": "To atone for (לְכַפֵּר) iniquity and bring everlasting righteousness"
+      }
     ]
   },
   "תענינה": {
@@ -17553,7 +17755,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "אסם": {
-    "meaning": "their rejecting",
     "category": "Uncategorized"
   },
   "פי־חרב": {
@@ -17777,8 +17978,8 @@ window._rootGlossaryData = {
     "category": "Life"
   },
   "חרם": {
-    "meaning": "chose(pl)",
-    "category": "Uncategorized"
+    "meaning": "to devote to destruction, ban; devoted thing",
+    "category": "Lexical"
   },
   "דע": {
     "meaning": "Hod",
@@ -17937,7 +18138,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "דינם": {
-    "meaning": "their judgment",
     "category": "Uncategorized"
   },
   "את־בנו": {
@@ -18165,7 +18365,6 @@ window._rootGlossaryData = {
     "category": "Theology"
   },
   "כרתם": {
-    "meaning": "you have made",
     "category": "Uncategorized"
   },
   "יכו׃": {
@@ -18285,7 +18484,6 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "תטפחו": {
-    "meaning": "you shall nurture",
     "category": "Quality"
   },
   "רוחכם": {
@@ -18517,8 +18715,8 @@ window._rootGlossaryData = {
     "category": "Society"
   },
   "עוז": {
-    "meaning": "Moz",
-    "category": "Uncategorized"
+    "meaning": "to be strong, take refuge; strength",
+    "category": "Lexical"
   },
   "־הארץ׃": {
     "meaning": "all the earth",
@@ -19101,7 +19299,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "אבא": {
-    "meaning": "I came",
     "category": "Uncategorized"
   },
   "פלדות": {
@@ -19441,7 +19638,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "גדת": {
-    "meaning": "you declared",
     "category": "Speech"
   },
   "כירה": {
@@ -19592,12 +19788,30 @@ window._rootGlossaryData = {
     "meaning": "to be complete, whole, blameless; integrity, perfection",
     "category": "Theology",
     "biblicalRefs": [
-      {"ref": "Gen 6:9", "note": "Noah was blameless (\u05ea\u05b8\u05bc\u05de\u05b4\u05d9\u05dd) in his generation"},
-      {"ref": "Gen 17:1", "note": "Walk before me and be blameless (\u05ea\u05b8\u05bc\u05de\u05b4\u05d9\u05dd)"},
-      {"ref": "Deut 18:13", "note": "Be blameless (\u05ea\u05b8\u05bc\u05de\u05b4\u05d9\u05dd) before the LORD your God"},
-      {"ref": "Ps 19:8", "note": "The law of the LORD is perfect (\u05ea\u05b0\u05bc\u05de\u05b4\u05d9\u05de\u05b8\u05d4)"},
-      {"ref": "Ps 101:2", "note": "I will walk in integrity of heart (\u05d1\u05b0\u05bc\u05ea\u05b9\u05dd \u05dc\u05b0\u05d1\u05b8\u05d1\u05b4\u05d9)"},
-      {"ref": "2 Sam 22:26", "note": "With the blameless you show yourself blameless"}
+      {
+        "ref": "Gen 6:9",
+        "note": "Noah was blameless (תָּמִים) in his generation"
+      },
+      {
+        "ref": "Gen 17:1",
+        "note": "Walk before me and be blameless (תָּמִים)"
+      },
+      {
+        "ref": "Deut 18:13",
+        "note": "Be blameless (תָּמִים) before the LORD your God"
+      },
+      {
+        "ref": "Ps 19:8",
+        "note": "The law of the LORD is perfect (תְּמִימָה)"
+      },
+      {
+        "ref": "Ps 101:2",
+        "note": "I will walk in integrity of heart (בְּתֹם לְבָבִי)"
+      },
+      {
+        "ref": "2 Sam 22:26",
+        "note": "With the blameless you show yourself blameless"
+      }
     ]
   },
   "דקה": {
@@ -19753,8 +19967,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "חלל": {
-    "meaning": "be profaned",
-    "category": "Uncategorized"
+    "meaning": "to pierce, profane; (hiphil) to begin",
+    "category": "Lexical"
   },
   "קראתיו": {
     "meaning": "I called him",
@@ -20153,8 +20367,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "חוש": {
-    "meaning": "sense",
-    "category": "Uncategorized"
+    "meaning": "to hasten; to feel, perceive",
+    "category": "Lexical"
   },
   "קדמוני": {
     "meaning": "ancient",
@@ -20457,7 +20671,6 @@ window._rootGlossaryData = {
     "category": "Family"
   },
   "ילדה": {
-    "meaning": "she bore",
     "category": "Uncategorized"
   },
   "תותה": {
@@ -20585,8 +20798,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "כלל": {
-    "meaning": "fine",
-    "category": "Uncategorized"
+    "meaning": "all, the whole; to complete, perfect",
+    "category": "Lexical"
   },
   "מחשבה": {
     "meaning": "be spiritually minded",
@@ -20941,8 +21154,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "רפה": {
-    "meaning": "burning",
-    "category": "Uncategorized"
+    "meaning": "to sink, relax, grow slack; to fail",
+    "category": "Lexical"
   },
   "אכלת": {
     "meaning": "fuel of",
@@ -21049,8 +21262,8 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "יון": {
-    "meaning": "consumption",
-    "category": "Uncategorized"
+    "meaning": "dove",
+    "category": "Lexical"
   },
   "טהו": {
     "meaning": "his staff",
@@ -21345,7 +21558,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יחם": {
-    "meaning": "their speech",
     "category": "Uncategorized"
   },
   "נחתמו": {
@@ -21717,8 +21929,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "ערם": {
-    "meaning": "burn them",
-    "category": "Uncategorized"
+    "meaning": "to be crafty, prudent; to heap up; heap",
+    "category": "Lexical"
   },
   "קטפתי": {
     "meaning": "I have plucked off",
@@ -21969,8 +22181,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "למן": {
-    "meaning": "Helaman",
-    "category": "Uncategorized"
+    "meaning": "Laman",
+    "category": "Lexical"
   },
   "את־הכתבים": {
     "meaning": "[ACC] the records",
@@ -22297,8 +22509,8 @@ window._rootGlossaryData = {
     "category": "Nature"
   },
   "יבל": {
-    "meaning": "he spent",
-    "category": "Uncategorized"
+    "meaning": "to bring, lead; produce; jubilee",
+    "category": "Lexical"
   },
   "אפר": {
     "meaning": "ashes",
@@ -22549,7 +22761,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "קהלם": {
-    "meaning": "they were assembling themselves together",
     "category": "Uncategorized"
   },
   "נתמעט": {
@@ -22737,8 +22948,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "תקע": {
-    "meaning": "when",
-    "category": "Uncategorized"
+    "meaning": "to blow (a trumpet), thrust, drive",
+    "category": "Lexical"
   },
   "כחו": {
     "meaning": "admonished",
@@ -22801,7 +23012,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "ולד": {
-    "meaning": "be born",
     "category": "Family"
   },
   "איל": {
@@ -23400,11 +23610,26 @@ window._rootGlossaryData = {
     "meaning": "to be complete, whole, at peace; peace, wholeness",
     "category": "Theology",
     "biblicalRefs": [
-      {"ref": "Isa 9:5", "note": "Prince of Peace (\u05e9\u05b7\u05c2\u05e8 \u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd)"},
-      {"ref": "1 Kings 8:61", "note": "Let your heart be wholly (\u05e9\u05b8\u05c1\u05dc\u05b5\u05dd) devoted to the LORD"},
-      {"ref": "Ps 29:11", "note": "The LORD blesses his people with peace (\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd)"},
-      {"ref": "Ps 37:37", "note": "Mark the blameless, observe the upright — there is a future for the man of peace (\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd)"},
-      {"ref": "Num 6:26", "note": "The LORD lift up His face and give you peace (\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd)"}
+      {
+        "ref": "Isa 9:5",
+        "note": "Prince of Peace (שַׂר שָׁלוֹם)"
+      },
+      {
+        "ref": "1 Kings 8:61",
+        "note": "Let your heart be wholly (שָׁלֵם) devoted to the LORD"
+      },
+      {
+        "ref": "Ps 29:11",
+        "note": "The LORD blesses his people with peace (שָׁלוֹם)"
+      },
+      {
+        "ref": "Ps 37:37",
+        "note": "Mark the blameless, observe the upright — there is a future for the man of peace (שָׁלוֹם)"
+      },
+      {
+        "ref": "Num 6:26",
+        "note": "The LORD lift up His face and give you peace (שָׁלוֹם)"
+      }
     ]
   },
   "אברהם׃": {
@@ -23528,7 +23753,6 @@ window._rootGlossaryData = {
     "category": "Time"
   },
   "חצו": {
-    "meaning": "they oppressed",
     "category": "Uncategorized"
   },
   "קדושות": {
@@ -23892,7 +24116,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "נרמסו": {
-    "meaning": "we will trampled",
     "category": "Uncategorized"
   },
   "ריונם": {
@@ -24916,7 +25139,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "נתהלל": {
-    "meaning": "we shall boast",
     "category": "Quality"
   },
   "ידיננו": {
@@ -25016,7 +25238,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יגדף": {
-    "meaning": "he will blasphemed",
     "category": "Uncategorized"
   },
   "סנין": {
@@ -25032,7 +25253,6 @@ window._rootGlossaryData = {
     "category": "Cognition"
   },
   "אוכח": {
-    "meaning": "I will debated",
     "category": "Uncategorized"
   },
   "רצית": {
@@ -25060,7 +25280,6 @@ window._rootGlossaryData = {
     "category": "Person"
   },
   "מרת": {
-    "meaning": "you kept",
     "category": "Uncategorized"
   },
   "בוע": {
@@ -25132,7 +25351,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "תטפחוהו": {
-    "meaning": "you shall nurture it",
     "category": "Quality"
   },
   "פרי׃": {
@@ -25200,7 +25418,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יחן": {
-    "meaning": "he shall encamp",
     "category": "Uncategorized"
   },
   "נסיונות": {
@@ -25360,7 +25577,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "נאמרה": {
-    "meaning": "it was said",
     "category": "Uncategorized"
   },
   "עותו": {
@@ -25636,7 +25852,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "נרקב": {
-    "meaning": "it rotted",
     "category": "Uncategorized"
   },
   "יעקב׃": {
@@ -25972,7 +26187,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "ובם": {
-    "meaning": "they returned again",
     "category": "Motion"
   },
   "יראו׃": {
@@ -26236,7 +26450,6 @@ window._rootGlossaryData = {
     "category": "Nature"
   },
   "חררם": {
-    "meaning": "their burning",
     "category": "Uncategorized"
   },
   "את־חקיו": {
@@ -26260,7 +26473,6 @@ window._rootGlossaryData = {
     "category": "Life"
   },
   "עזיבתכם": {
-    "meaning": "your abandonment",
     "category": "Uncategorized"
   },
   "על־כסאותיכם": {
@@ -26344,7 +26556,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "נתקומם": {
-    "meaning": "we shall rise up",
     "category": "Quality"
   },
   "גואלנו": {
@@ -26760,7 +26971,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "תכעסו": {
-    "meaning": "you will anger",
     "category": "Perception"
   },
   "כספכם": {
@@ -26832,7 +27042,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יתקימו": {
-    "meaning": "they shall be established",
     "category": "Uncategorized"
   },
   "מרמות": {
@@ -26981,10 +27190,6 @@ window._rootGlossaryData = {
   },
   "חטאים׃": {
     "meaning": "sins",
-    "category": "Uncategorized"
-  },
-  "זרחמלה׃": {
-    "meaning": "Zarahemla",
     "category": "Uncategorized"
   },
   "יושביהן": {

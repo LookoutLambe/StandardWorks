@@ -5286,7 +5286,7 @@ var dc138_ch1Verses = [
     ["אֲשֶׁר","who"],
     ["יָשְׁבוּ","dwelt"],
     ["בֵּין","among"],
-    ["הַנְּפָיִים","the Nephites"],
+    ["הַנֶּפִיִּים","the Nephites"],
     ["וְהֵעִידוּ","and testified"],
     ["עַל","of"],
     ["בּוֹא","the coming of"],
