@@ -2995,7 +2995,8 @@ var dc77_ch1Verses = [
     ["יְרוּשָׁלַיִם","Jerusalem"],
     ["בְּאֶרֶץ","in the land of"],
     ["אֲבוֹתָם׃","their fathers."]
-  ];
+  ]}
+];
 renderVerseSet(dc77_ch1Verses, 'dc77-ch1-verses');
 
 
