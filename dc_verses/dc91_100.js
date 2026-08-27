@@ -3054,7 +3054,7 @@ var dc100_ch1Verses = [
     ["כֵן","thus"],
     ["טוֹב","expedient"],
     ["הָיָה","it was"],
-    ["בְעֵינַי","in me"],
+    ["בְעֵינַי","in my eyes"],
     ["לִישׁוּעַת","for the salvation of"],
     ["נְפָשׁוֹת׃","souls."]
   ]},
@@ -3109,7 +3109,7 @@ var dc100_ch1Verses = [
   { num: "ח", words: [["וְנוֹתֵן","And I give"], ["לָכֶם","unto you"], ["הַבְטָחָה","promise,"], ["זֹאת","this"], ["אֲשֶׁר־כְּפִי","that inasmuch as"], ["אֲשֶׁר־תַּעֲשׂוּ","you do"], ["כֵן","this,"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["תִּשָּׁפֵךְ","shall be shed forth"], ["לְהָעִיד","in bearing record"], ["עַל","unto"], ["כֹּל","all things"], ["אֲשֶׁר","whatsoever"], ["תֹּאמְרוּ׃","you shall say."]]},
   { num: "ט", words: [
     ["וְטוֹב","And it is expedient"],
-    ["בְּעֵינַי","in me"],
+    ["בְּעֵינַי","in my eyes"],
     ["אֲשֶׁר־אַתָּה","that you,"],
     ["עַבְדִּי","my servant"],
     ["סִידְנִי","Sidney,"],

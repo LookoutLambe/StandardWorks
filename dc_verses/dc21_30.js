@@ -1052,7 +1052,7 @@ var dc30_ch1Verses = [
     ["הָעֵת","the time"],
     ["אֲשֶׁר","that"],
     ["טוֹב","it is expedient"],
-    ["בְּעֵינַי","in me"],
+    ["בְּעֵינַי","in my eyes"],
     ["לִפְתֹּחַ","that you shall open"],
     ["פִּיךָ","your mouth"],
     ["לְהַשְׁמִיעַ","to declare"],

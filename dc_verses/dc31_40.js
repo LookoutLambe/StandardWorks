@@ -1134,7 +1134,7 @@ var dc37_ch1Verses = [
     ["לָכֶם","unto you"],
     ["לֹא","not"],
     ["טוֹב","it is expedient"],
-    ["בְּעֵינַי","in me"],
+    ["בְּעֵינַי","in my eyes"],
     ["כִּי","that"],
     ["תְתַרְגְּמוּ","you should translate"],
     ["עוֹד","any more"],
@@ -1148,7 +1148,7 @@ var dc37_ch1Verses = [
     ["וּלְמַעַנְכֶם׃","and for your sakes"]
   ]},
   { num: "ב", words: [["וְעוֹד","and again"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["לֹא","not"], ["תֵלְכוּ","you shall go"], ["עַד","until"], ["אֲשֶׁר","that"], ["הִטַּפְתֶּם","you have preached"], ["בְּשׂוֹרָתִי","my gospel"], ["בַּמְּקוֹמוֹת","in the parts"], ["הָהֵם","those"], ["וְחִזַּקְתֶּם","and have strengthened up"], ["אֶת־הַכְּנֵסִיָּה","the church"], ["בְּכׇל","in every"], ["מָקוֹם","place"], ["אֲשֶׁר","where"], ["נִמְצֵאת","it is found"], ["וּבְיֹתֶר","and more especially"], ["בְּקוֹלֶסְוִיל","in Colesville"], ["כִּי","for"], ["הִנֵּה","behold"], ["מִתְפַּלְּלִים","praying"], ["הֵם","are they"], ["אֵלַי","unto me"], ["בֶּאֱמוּנָה","in faith"], ["רַבָּה׃","much"]]},
-  { num: "ג", words: [["וְעוֹד","and again"], ["מִצְוָה","a commandment"], ["אֲנִי","I"], ["נֹתֵן","give"], ["לַכְּנֵסִיָּה","unto the church"], ["טוֹב","it is expedient"], ["בְּעֵינַי","in me"], ["כִּי","that"], ["יֵאָסְפוּ","they should assemble"], ["יַחְדָּו","together"], ["בְּאוֹהָיוֹ","at the Ohio"], ["לִקְרַאת","against"], ["הָעֵת","the time"], ["אֲשֶׁר","that"], ["יָשׁוּב","shall return"], ["עַבְדִּי","my servant"], ["אוֹלִיבֶר","Oliver"], ["קַאוּדְרִי","Cowdery"], ["אֲלֵיהֶם׃","unto them"]]},
+  { num: "ג", words: [["וְעוֹד","and again"], ["מִצְוָה","a commandment"], ["אֲנִי","I"], ["נֹתֵן","give"], ["לַכְּנֵסִיָּה","unto the church"], ["טוֹב","it is expedient"], ["בְּעֵינַי","in my eyes"], ["כִּי","that"], ["יֵאָסְפוּ","they should assemble"], ["יַחְדָּו","together"], ["בְּאוֹהָיוֹ","at the Ohio"], ["לִקְרַאת","against"], ["הָעֵת","the time"], ["אֲשֶׁר","that"], ["יָשׁוּב","shall return"], ["עַבְדִּי","my servant"], ["אוֹלִיבֶר","Oliver"], ["קַאוּדְרִי","Cowdery"], ["אֲלֵיהֶם׃","unto them"]]},
   { num: "ד", words: [
     ["הִנֵּה","behold"],
     ["זֹאת","this is"],
@@ -1807,8 +1807,8 @@ var dc38_ch1Verses = [
     ["יֵעָזְבוּ","let them be left"],
     ["אוֹ","or"],
     ["יִשָּׂכְרוּ","rented"],
-    ["כַּטּוֹב","as seems"],
-    ["בְּעֵינֵיהֶם׃","them good"]
+    ["כַּטּוֹב","as is good"],
+    ["בְּעֵינֵיהֶם׃","in their eyes"]
   ]},
   { num: "לח", words: [["רְאוּ","see"], ["כִּי","that"], ["כׇל","all"], ["דָּבָר","things"], ["יִשָּׁמֵר","are preserved"], ["וּבְעֵת","and when"], ["יְלֻבְּשׁוּ","are endowed"], ["אֲנָשִׁים","men"], ["בְּכֹחַ","with power"], ["מִמָּרוֹם","from on high"], ["וְיִשָּׁלְחוּ","and sent forth"], ["כׇּל","all"], ["הַדְּבָרִים","things"], ["הָאֵלֶּה","these"], ["יֵאָסְפוּ","shall be gathered"], ["אֶל","unto"], ["חֵיק","the bosom of"], ["הַכְּנֵסִיָּה׃","the church"]]},
   { num: "לט", words: [

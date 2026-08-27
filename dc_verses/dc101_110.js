@@ -4132,7 +4132,7 @@ var dc105_ch1Verses = [
     ["פִּשְׁעֵי","the transgressions of"],
     ["עַמִּי","my people,"],
     ["רָאוּי","it is expedient"],
-    ["בְּעֵינַי","in me"],
+    ["בְּעֵינַי","in my eyes"],
     ["אֲשֶׁר","that"],
     ["יַמְתִּינוּ","that should wait"],
     ["זִקְנַי","my elders"],
@@ -4197,7 +4197,7 @@ var dc105_ch1Verses = [
   { num: "יג", words: [
     ["לָכֵן","Therefore"],
     ["רָאוּי","it is expedient"],
-    ["בְּעֵינַי","in me"],
+    ["בְּעֵינַי","in my eyes"],
     ["אֲשֶׁר","that"],
     ["יַמְתִּינוּ","that should wait"],
     ["זִקְנַי","my elders"],
@@ -4304,7 +4304,7 @@ var dc105_ch1Verses = [
     ["וַאֲקַבֵּל","and will accept"],
     ["קָרְבָּנָם","their offering;"],
     ["וְרָאוּי","and it is expedient"],
-    ["בְּעֵינַי","in me"],
+    ["בְּעֵינַי","in my eyes"],
     ["אֲשֶׁר","that"],
     ["יוּבְאוּ","that they should be brought"],
     ["עַד","until"],
@@ -4385,7 +4385,7 @@ var dc105_ch1Verses = [
     ["אֲשֶׁר","that"],
     ["תִּהְיֶה","it is"],
     ["חׇכְמָה","wisdom"],
-    ["בְעֵינַי","in me"],
+    ["בְעֵינַי","in my eyes"],
     ["אֲשֶׁר","that"],
     ["יְגֻלּוּ׃","that they should be revealed."]
   ]},
@@ -4589,7 +4589,7 @@ var dc105_ch1Verses = [
     ["יִכָּנְעוּ","let them become subject"],
     ["לְחֻקֶּיהָ׃","unto her laws"]
   ]},
-  { num: "לג", words: [["אָמֵן","Verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you,"], ["רָאוּי","it is expedient"], ["בְּעֵינַי","in me"], ["אֲשֶׁר","that"], ["יְקַבְּלוּ","that should receive"], ["זִקְנֵי","the elders of"], ["כְּנֵסִיָּתִי","my church"], ["הָרִאשׁוֹנִים","first"], ["הַלְבָּשָׁתָם","their endowment"], ["מִמָּרוֹם","from on high"], ["בְּבֵיתִי","in my house,"], ["אֲשֶׁר","which"], ["צִוִּיתִי","I have commanded"], ["לְהִבָּנוֹת","to be built"], ["לִשְׁמִי","unto my name"], ["בְּאֶרֶץ","in the land of"], ["קִרְטְלַנְד׃","Kirtland."]]},
+  { num: "לג", words: [["אָמֵן","Verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you,"], ["רָאוּי","it is expedient"], ["בְּעֵינַי","in my eyes"], ["אֲשֶׁר","that"], ["יְקַבְּלוּ","that should receive"], ["זִקְנֵי","the elders of"], ["כְּנֵסִיָּתִי","my church"], ["הָרִאשׁוֹנִים","first"], ["הַלְבָּשָׁתָם","their endowment"], ["מִמָּרוֹם","from on high"], ["בְּבֵיתִי","in my house,"], ["אֲשֶׁר","which"], ["צִוִּיתִי","I have commanded"], ["לְהִבָּנוֹת","to be built"], ["לִשְׁמִי","unto my name"], ["בְּאֶרֶץ","in the land of"], ["קִרְטְלַנְד׃","Kirtland."]]},
   { num: "לד", words: [
     ["וִיקֻיְּמוּ","And let be executed"],
     ["וְיִמָּלְאוּ","and fulfilled,"],

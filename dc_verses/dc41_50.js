@@ -107,8 +107,8 @@ var dc41_ch1Verses = [
     ["סִידְנִי","Sidney"],
     ["רִיגְדּוֹן","Rigdon"],
     ["יֵשֵׁב","should live"],
-    ["כַּטּוֹב","as seems"],
-    ["בְּעֵינָיו","him good"],
+    ["כַּטּוֹב","as is good"],
+    ["בְּעֵינָיו","in his eyes"],
     ["כְּפִי","inasmuch"],
     ["אֲשֶׁר","as"],
     ["יִשְׁמֹר","he keeps"],
@@ -361,8 +361,8 @@ var dc42_ch1Verses = [
     ["הַמְּנַחֵם","the Comforter"],
     ["תְּדַבְּרוּ","you shall speak"],
     ["וְתִנָּבְאוּ","and prophesy"],
-    ["כַּטּוֹב","as seems"],
-    ["בְּעֵינָי׃","me good"]
+    ["כַּטּוֹב","as is good"],
+    ["בְּעֵינָי׃","in my eyes"]
   ]},
   { num: "יז", words: [
     ["כִּי","for"],
@@ -946,7 +946,7 @@ var dc42_ch1Verses = [
     ["פְקֻדָּה","either a stewardship"],
     ["אוֹ","or"],
     ["אַחֶרֶת","otherwise"],
-    ["כַּטּוֹב","as may be thought best"],
+    ["כַּטּוֹב","as is good"],
     ["בְּעֵינֵי","or decided"],
     ["הַיּוֹעֲצִים","by the counselors"],
     ["וְהַפָּקִיד׃","and bishop"]
@@ -1709,7 +1709,7 @@ renderVerseSet(dc43_ch1Verses, 'dc43-ch1-verses');
 
 
 var dc44_ch1Verses = [
-  { num: "א", words: [["הִנֵּה","behold"], ["כֹּה","thus"], ["אָמַר","says"], ["יְהוָה","the Lord"], ["לָכֶם","unto you"], ["עֲבָדַי","my servants"], ["נָכוֹן","it is expedient"], ["בְּעֵינַי","in me"], ["כִּי","that"], ["זִקְנֵי","the elders of"], ["כְּנֵסִיָּתִי","my church"], ["יִקָּרְאוּ","should be called"], ["יַחְדָּו","together"], ["מִמִּזְרָח","from the east"], ["וּמִמַּעֲרָב","and from the west"], ["וּמִצָּפוֹן","and from the north"], ["וּמִדָּרוֹם","and from the south"], ["בְּאִגֶּרֶת","by letter"], ["אוֹ","or"], ["בְּדֶרֶךְ","by way"], ["אַחֶרֶת׃","some other"]]},
+  { num: "א", words: [["הִנֵּה","behold"], ["כֹּה","thus"], ["אָמַר","says"], ["יְהוָה","the Lord"], ["לָכֶם","unto you"], ["עֲבָדַי","my servants"], ["נָכוֹן","it is expedient"], ["בְּעֵינַי","in my eyes"], ["כִּי","that"], ["זִקְנֵי","the elders of"], ["כְּנֵסִיָּתִי","my church"], ["יִקָּרְאוּ","should be called"], ["יַחְדָּו","together"], ["מִמִּזְרָח","from the east"], ["וּמִמַּעֲרָב","and from the west"], ["וּמִצָּפוֹן","and from the north"], ["וּמִדָּרוֹם","and from the south"], ["בְּאִגֶּרֶת","by letter"], ["אוֹ","or"], ["בְּדֶרֶךְ","by way"], ["אַחֶרֶת׃","some other"]]},
   { num: "ב", words: [
     ["וְהָיָה","and it shall come to pass"],
     ["כְּפִי","inasmuch"],
@@ -2868,7 +2868,7 @@ var dc45_ch1Verses = [
     ["הָעוֹלָם","the world"],
     ["עַד","until"],
     ["הַטּוֹב","it is expedient"],
-    ["בְּעֵינַי","in me"],
+    ["בְּעֵינַי","in my eyes"],
     ["לְמַעַן","that"],
     ["תַּשְׁלִימוּ","you may accomplish"],
     ["אֶת־הַמְּלָאכָה","the work"],
@@ -3232,7 +3232,7 @@ renderVerseSet(dc46_ch1Verses, 'dc46-ch1-verses');
 
 
 var dc47_ch1Verses = [
-  { num: "א", words: [["הִנֵּה","behold"], ["נָכוֹן","it is expedient"], ["בְּעֵינַי","in me"], ["כִּי","that"], ["עַבְדִּי","my servant"], ["ג׳וֹן","John"], ["יִכְתֹּב","should write"], ["וְיִשְׁמֹר","and keep"], ["דִּבְרֵי","the words of"], ["יָמִים","days"], ["סְדוּרִים","regular"], ["וְיַעֲזֹר","and assist"], ["לְךָ","to you"], ["עַבְדִּי","my servant"], ["יוֹסֵף","Joseph"], ["לְהַעְתִּיק","in transcribing"], ["כׇּל","all"], ["הַנִּתָּן","things which are given"], ["לְךָ","to you"], ["עַד","until"], ["הִקָּרְאוֹ","he be called"], ["לַעֲבוֹדוֹת","to duties"], ["נוֹסָפוֹת׃","further"]]},
+  { num: "א", words: [["הִנֵּה","behold"], ["נָכוֹן","it is expedient"], ["בְּעֵינַי","in my eyes"], ["כִּי","that"], ["עַבְדִּי","my servant"], ["ג׳וֹן","John"], ["יִכְתֹּב","should write"], ["וְיִשְׁמֹר","and keep"], ["דִּבְרֵי","the words of"], ["יָמִים","days"], ["סְדוּרִים","regular"], ["וְיַעֲזֹר","and assist"], ["לְךָ","to you"], ["עַבְדִּי","my servant"], ["יוֹסֵף","Joseph"], ["לְהַעְתִּיק","in transcribing"], ["כׇּל","all"], ["הַנִּתָּן","things which are given"], ["לְךָ","to you"], ["עַד","until"], ["הִקָּרְאוֹ","he be called"], ["לַעֲבוֹדוֹת","to duties"], ["נוֹסָפוֹת׃","further"]]},
   { num: "ב", words: [
     ["עוֹד","again"],
     ["אָמֵן","verily"],
