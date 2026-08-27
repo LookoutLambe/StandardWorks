@@ -1156,8 +1156,7 @@ var dc115_ch1Verses = [
     ["וְתֵחֵל","And let the beginning be made"],
     ["בַּיּוֹם","on the day"],
     ["הָרְבִיעִי","fourth"],
-    ["לַחֹדֶשׁ","of the month"],
-    ["הַשְּׁבִיעִי","seventh July"],
+    ["לְיוּלִי","of July"],
     ["וּמֵהָעֵת","next;"],
     ["הַהִיא","and from time"],
     ["וָהָלְאָה","that forth"],
@@ -1167,6 +1166,7 @@ var dc115_ch1Verses = [
     ["לִבְנוֹת","to build"],
     ["בַּיִת","a house"],
     ["לִשְׁמִי׃","unto my name;"]
+  
   ]},
   { num: "יא", words: [
     ["וּבְשָׁנָה","And in year"],

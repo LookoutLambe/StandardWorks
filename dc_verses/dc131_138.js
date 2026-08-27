@@ -44,7 +44,15 @@ var dc131_ch1Verses = [
     ["יִרְבֶּה׃","have an increase."]
   ]},
   { num: "ה", words: [
-    ["דְּבַר","May 17th, 1843. The word of"],
+    ["הַשִּׁבְעָה־עָשָׂר","The seventeenth"],
+    ["לְמַאי","of May,"],
+    ["שְׁנַת","in the year"],
+    ["אֶלֶף","one thousand"],
+    ["וּשְׁמֹנֶה","eight"],
+    ["מֵאוֹת","hundred"],
+    ["וְאַרְבָּעִים","and forty"],
+    ["וְשָׁלֹשׁ׃","-three."],
+    ["דְּבַר","The word of"],
     ["הַנְּבוּאָה","prophecy"],
     ["הַיּוֹתֵר","the more"],
     ["קַיָּם","sure"],
@@ -61,6 +69,7 @@ var dc131_ch1Verses = [
     ["בְּכֹחַ","through the power of"],
     ["הַכְּהֻנָּה","the Priesthood"],
     ["הַקְּדוֹשָׁה׃","Holy."]
+  
   ]},
   { num: "ו", words: [
     ["אֵין","There is no"],
@@ -3257,8 +3266,7 @@ var dc135_ch1Verses = [
     ["בַּיּוֹם","on the"],
     ["הָעֶשְׂרִים","twenty"],
     ["וְשִׁבְעָה","-seventh"],
-    ["לְחֹדֶשׁ","of"],
-    ["הַשִּׁשִּׁי","June,"],
+    ["לְיוּנִי","of June,"],
     ["שְׁנַת","in the year"],
     ["אֶלֶף","one thousand"],
     ["וּשְׁמֹנֶה","eight"],
@@ -3306,6 +3314,7 @@ var dc135_ch1Verses = [
     ["שְׁנֵיהֶם","both"],
     ["אַרְבָּעָה","four"],
     ["כַּדּוּרִים׃","balls."]
+  
   ]},
   { num: "ב", words: [
     ["ג׳וֹן","John"],
@@ -3479,7 +3488,7 @@ var dc135_ch1Verses = [
     ["וְצַוָּאָתָם","and their testament"],
     ["בְּתֹקֶף׃","is in force."]
   ]},
-  { num: "ו", words: [["חִירָם","Hyrum"], ["סְמִית","Smith"], ["בֶּן","aged"], ["אַרְבָּעִים","forty"], ["וְאַרְבַּע","and four"], ["שָׁנָה","years"], ["הָיָה","old"], ["בַּחֹדֶשׁ","in"], ["הַשֵּׁנִי","February,"], ["שְׁנַת","in the year"], ["אֶלֶף","one thousand"], ["וּשְׁמֹנֶה","eight"], ["מֵאוֹת","hundred"], ["וְאַרְבָּעִים","and forty"], ["וְאַרְבַּע","and four,"], ["וְיוֹסֵף","and Joseph"], ["סְמִית","Smith"], ["בֶּן","aged"], ["שְׁלֹשִׁים","thirty"], ["וּשְׁמֹנֶה","and eight"], ["שָׁנָה","years"], ["הָיָה","old"], ["בַּחֹדֶשׁ","in"], ["הַשְּׁנֵים־עָשָׂר","December,"], ["שְׁנַת","in the year"], ["אֶלֶף","one thousand"], ["וּשְׁמֹנֶה","eight"], ["מֵאוֹת","hundred"], ["וְאַרְבָּעִים","and forty"], ["וְשָׁלֹשׁ","and three;"], ["וּמֵעַתָּה","and henceforward"], ["יִמָּנוּ","will be classed"], ["שְׁמוֹתָם","their names"], ["עִם","among"], ["קְדוֹשֵׁי","the martyrs of"], ["הַדָּת","religion;"], ["וְהַקּוֹרֵא","and the reader"], ["בְּכׇל","in every"], ["גּוֹי","nation"], ["יִזָּכֵר","will be reminded"], ["כִּי","that"], ["סֵפֶר","the Book of"], ["מוֹרְמוֹן","Mormon,"], ["וְסֵפֶר","and book of"], ["תּוֹרַת","Doctrine and"], ["הַבְּרִית","Covenants"], ["הַזֶּה","this"], ["אֲשֶׁר","of"], ["לַכְּנֵסִיָּה","the church,"], ["נִקְנוּ","cost"], ["בְּמִבְחַר","the best"], ["דַּם","blood"], ["אַנְשֵׁי","of all"], ["הַמֵּאָה","century"], ["הַתְּשַׁע","the nine"], ["עֶשְׂרֵה","-teenth,"], ["לְהוֹצִיאָם","to bring them forth"], ["לִישׁוּעַת","for the salvation of"], ["עוֹלָם","a world"], ["חָרֵב","ruined;"], ["וְאִם","and that if"], ["תֹּאכַל","can scathe"], ["הָאֵשׁ","the fire"], ["אֶת־הָעֵץ","a tree"], ["הָרָטֹב","green"], ["לִכְבוֹד","for the glory of"], ["אֱלֹהִים","God,"], ["אַף","how easy"], ["כִּי","much more,"], ["תִשְׂרֹף","it will burn up"], ["אֶת־הָעֵצִים","the trees"], ["הַיְּבֵשִׁים","dry"], ["לְטַהֵר","to purify"], ["אֶת־הַכֶּרֶם","the vineyard"], ["מֵהַשְׁחָתָה","of corruption."], ["לַכָּבוֹד","For glory"], ["חָיוּ","they lived;"], ["לַכָּבוֹד","for glory"], ["מֵתוּ","they died;"], ["וְכָבוֹד","and glory"], ["שְׂכָרָם","is their reward"], ["לְעוֹלָם","eternal."], ["מִדּוֹר","From age"], ["לְדוֹר","to age"], ["יֵרֵד","shall go down"], ["שְׁמָם","their names"], ["לְדוֹרוֹת","to posterity"], ["כְּאַבְנֵי","as stones of"], ["חֵן","beauty,"], ["לַמְקֻדָּשִׁים׃","for the sanctified."]]},
+  { num: "ו", words: [["חִירָם","Hyrum"], ["סְמִית","Smith"], ["בֶּן","aged"], ["אַרְבָּעִים","forty"], ["וְאַרְבַּע","and four"], ["שָׁנָה","years"], ["הָיָה","old"], ["בְּפֶבְּרוּאָר","in February,"], ["שְׁנַת","in the year"], ["אֶלֶף","one thousand"], ["וּשְׁמֹנֶה","eight"], ["מֵאוֹת","hundred"], ["וְאַרְבָּעִים","and forty"], ["וְאַרְבַּע","and four,"], ["וְיוֹסֵף","and Joseph"], ["סְמִית","Smith"], ["בֶּן","aged"], ["שְׁלֹשִׁים","thirty"], ["וּשְׁמֹנֶה","and eight"], ["שָׁנָה","years"], ["הָיָה","old"], ["בְּדֵצֶמְבֶּר","in December,"], ["שְׁנַת","in the year"], ["אֶלֶף","one thousand"], ["וּשְׁמֹנֶה","eight"], ["מֵאוֹת","hundred"], ["וְאַרְבָּעִים","and forty"], ["וְשָׁלֹשׁ","and three;"], ["וּמֵעַתָּה","and henceforward"], ["יִמָּנוּ","will be classed"], ["שְׁמוֹתָם","their names"], ["עִם","among"], ["קְדוֹשֵׁי","the martyrs of"], ["הַדָּת","religion;"], ["וְהַקּוֹרֵא","and the reader"], ["בְּכׇל","in every"], ["גּוֹי","nation"], ["יִזָּכֵר","will be reminded"], ["כִּי","that"], ["סֵפֶר","the Book of"], ["מוֹרְמוֹן","Mormon,"], ["וְסֵפֶר","and book of"], ["תּוֹרַת","Doctrine and"], ["הַבְּרִית","Covenants"], ["הַזֶּה","this"], ["אֲשֶׁר","of"], ["לַכְּנֵסִיָּה","the church,"], ["נִקְנוּ","cost"], ["בְּמִבְחַר","the best"], ["דַּם","blood"], ["אַנְשֵׁי","of all"], ["הַמֵּאָה","century"], ["הַתְּשַׁע","the nine"], ["עֶשְׂרֵה","-teenth,"], ["לְהוֹצִיאָם","to bring them forth"], ["לִישׁוּעַת","for the salvation of"], ["עוֹלָם","a world"], ["חָרֵב","ruined;"], ["וְאִם","and that if"], ["תֹּאכַל","can scathe"], ["הָאֵשׁ","the fire"], ["אֶת־הָעֵץ","a tree"], ["הָרָטֹב","green"], ["לִכְבוֹד","for the glory of"], ["אֱלֹהִים","God,"], ["אַף","how easy"], ["כִּי","much more,"], ["תִשְׂרֹף","it will burn up"], ["אֶת־הָעֵצִים","the trees"], ["הַיְּבֵשִׁים","dry"], ["לְטַהֵר","to purify"], ["אֶת־הַכֶּרֶם","the vineyard"], ["מֵהַשְׁחָתָה","of corruption."], ["לַכָּבוֹד","For glory"], ["חָיוּ","they lived;"], ["לַכָּבוֹד","for glory"], ["מֵתוּ","they died;"], ["וְכָבוֹד","and glory"], ["שְׂכָרָם","is their reward"], ["לְעוֹלָם","eternal."], ["מִדּוֹר","From age"], ["לְדוֹר","to age"], ["יֵרֵד","shall go down"], ["שְׁמָם","their names"], ["לְדוֹרוֹת","to posterity"], ["כְּאַבְנֵי","as stones of"], ["חֵן","beauty,"], ["לַמְקֻדָּשִׁים׃","for the sanctified."]]},
   { num: "ז", words: [
     ["נְקִיִּם","innocent"],
     ["הָיוּ","they were"],
@@ -4418,8 +4427,7 @@ var dc138_ch1Verses = [
   { num: "א", words: [
     ["בַּיּוֹם","On the day"],
     ["הַשְּׁלִישִׁי","the third,"],
-    ["לְחֹדֶשׁ","of month"],
-    ["הָעֲשִׂירִי","the tenth,"],
+    ["לְאוֹקְטוֹבֶּר","of October,"],
     ["בִּשְׁנַת","in year of"],
     ["אֶלֶף","thousand"],
     ["וּתְשַׁע","and nine"],
@@ -4429,6 +4437,7 @@ var dc138_ch1Verses = [
     ["בְחַדְרִי","in my room"],
     ["הוֹגֶה","pondering"],
     ["בַכְּתוּבִים׃","on the scriptures;"]
+  
   ]},
   { num: "ב", words: [
     ["וּמִתְבּוֹנֵן","And reflecting upon"],
