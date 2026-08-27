@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '18';   // bump when the generated data files change
+  var RSC_V = '19';   // bump when the generated data files change
 
   var cfg = { vol: '', base: '' };
   var keyIdx = null;         // rootKey -> index, built once
@@ -299,35 +299,15 @@
   // The panel used to list "1 Nephi 2:1, 2 · 3:2 …" as links, so reading a
   // root's verses meant opening each one and losing your place. These render
   // inline, in batches, reusing the loader and renderer from crossrefs_engine.
-  // Only list a reference if this page can actually render it. bom.html's
-  // _extBookToFile covers the other volumes but not the Book of Mormon itself,
-  // so unfiltered, a whole batch of BOM verses resolved to nothing and the
-  // panel came up empty even though the section had been built.
-  // Same markup crossrefs_engine's renderInterlinearHtml produces, kept local so
-  // the panel does not depend on that file being loaded (bom.html does not load it).
-  function ilHtml(words) {
-    if (!words || !words.length) return '';
-    var html = '<div class="xref-ref-content">', first = true;
-    for (var i = 0; i < words.length; i++) {
-      var hw = words[i][0], gl = words[i][1];
-      if (!hw || hw === '\u05C3' || hw === '\u05BE') continue;
-      hw = String(hw).replace(/\u05C3/g, '');
-      if (!hw) continue;
-      if (!first) html += '<span class="xref-ref-arr">\u2039</span>';
-      first = false;
-      html += '<span class="xref-ref-word"><span class="hw">' + esc(hw) + '</span>';
-      if (gl) html += '<span class="en">' + esc(String(gl).replace(/-/g, ' ')) + '</span>';
-      html += '</span>';
-    }
-    return html + '</div>';
-  }
+  // Only list a reference the shared loader can actually fetch. Every volume is
+  // in its map, so this now filters out nothing real — it stays as a guard.
+
 
   function canRenderRef(book, ch) {
     if (!book || !ch) return false;
-    if (window.getVerseFileUrl) return !!window.getVerseFileUrl(book, ch);
-    if (window._extBookToFile) return !!window._extBookToFile[book];
-    return false;
+    return !!(window.SWVerses && window.SWVerses.has(book, ch));
   }
+
 
   function collectVerseRefs(refs, order) {
     var out = [];
@@ -350,55 +330,21 @@
   }
 
   function renderOneVerse(host, r) {
+    if (!window.SWVerses) return;
     var card = document.createElement('div');
     card.className = 'rsc-il-card';
     card.innerHTML = '<div class="rsc-il-ref">' + esc(r.book + ' ' + r.ch + ':' + r.v) + '</div>' +
                      '<div class="rsc-il-body"><span class="rsc-il-load">Loading Hebrew…</span></div>';
     host.appendChild(card);
-    var slot = card.querySelector('.rsc-il-body');
-    function drop() { if (card.parentNode) card.parentNode.removeChild(card); }
-    // bom.html carries its own verse machinery under different names and does not
-    // load crossrefs_engine.js, so support both rather than render nothing there.
-    if (!window.getVerseFileUrl && window._loadExtVerseFile && window._extBookToFile &&
-        window.getExternalVerseHtml) {
-      var fp = window._extBookToFile[r.book];
-      if (!fp) { drop(); return; }
-      window._loadExtVerseFile(fp, function() {
-        // Read the registry directly. getExternalVerseHtml routes through
-        // parseScriptureRef, which only accepts the abbreviated "Gen. 28:12" —
-        // it returns null for "Genesis 28:12" and every card silently vanished,
-        // while the registry itself is keyed by the full name.
-        var reg = window._extVerseRegistry || {};
-        var words = reg[r.book + '|' + r.ch + '|' + r.v];
-        var html = ilHtml(words);
-        if (!html) { drop(); return; }
-        slot.innerHTML = html;
-      });
-      return;
-    }
-    var url = window.getVerseFileUrl && window.getVerseFileUrl(r.book, r.ch);
-    var tid = window.getChapterTargetId && window.getChapterTargetId(r.book, r.ch);
-    if (!url || !tid) { drop(); return; }
-    window.loadVerseFileAsync(url, function(data) {
-      if (!data || !data[tid]) { drop(); return; }
-      var verses = data[tid], vd = null, k;
-      var h2a = window.hebNumToArabic;
-      if (h2a) {
-        for (k = 0; k < verses.length; k++) {
-          if (h2a(verses[k].num) === r.v) { vd = verses[k]; break; }
-        }
-      }
-      if (!vd && r.v >= 1 && r.v <= verses.length) vd = verses[r.v - 1];
-      var html = vd && window.renderInterlinearHtml ? window.renderInterlinearHtml(vd) : '';
-      if (!html) { drop(); return; }
-      slot.innerHTML = html;
+    window.SWVerses.get(r.book, r.ch, r.v, function(words) {
+      var html = window.SWVerses.interlinearHtml(words);
+      if (!html) { if (card.parentNode) card.parentNode.removeChild(card); return; }
+      card.querySelector('.rsc-il-body').innerHTML = html;
     });
   }
 
   function appendInterlinearSection(body, refs, order) {
-    var haveEngine = window.loadVerseFileAsync && window.renderInterlinearHtml && window.getVerseFileUrl;
-    var haveBom = window._loadExtVerseFile && window._extBookToFile && window.getExternalVerseHtml;
-    if (!haveEngine && !haveBom) return;
+    if (!window.SWVerses) return;
     var list = collectVerseRefs(refs, order);
     if (!list.length) return;
     var wrap = document.createElement('div');
