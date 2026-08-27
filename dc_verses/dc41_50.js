@@ -1975,7 +1975,7 @@ var dc45_ch1Verses = [
     ["כׇּל","all"],
     ["אַנְשֵׁי","men of"],
     ["קֹדֶשׁ","holiness"],
-    ["וְלֹא","and not found it"],
+    ["וְלֹא","and not"],
     ["בִּגְלַל","because of"],
     ["רֶשַׁע","wickedness"],
     ["וְתוֹעֵבוֹת׃","and abominations"]
@@ -2082,7 +2082,7 @@ var dc45_ch1Verses = [
     ["רוֹאִים","see"],
     ["עַתָּה","now"],
     ["יֻשְׁלַךְ","shall be thrown down"],
-    ["עַד","that so much"],
+    ["עַד","that"],
     ["לֹא","not"],
     ["תִשָּׁאֵר","shall be left"],
     ["אֶבֶן","stone"],
@@ -2344,7 +2344,7 @@ var dc45_ch1Verses = [
     ["עֲצֵי","the trees of"],
     ["הַתְּאֵנָה","the fig"],
     ["וּרְאוּ","and you see"],
-    ["אֹתָם",""],
+    ["אֹתָם","them"],
     ["בְּעֵינֵיכֶם","with your eyes"],
     ["וְתֹאמְרוּ","and you say"],
     ["כַּאֲשֶׁר","when"],
@@ -2663,7 +2663,7 @@ var dc45_ch1Verses = [
     ["עֲלֵיהֶם","upon them"],
     ["וְהוּא","and he"],
     ["יִהְיֶה","shall be"],
-    ["מַלְכָּם","their king and lawgiver"],
+    ["מַלְכָּם","their king"],
     ["וּמְחֹקְקָם׃","and their lawgiver"]
   ]},
   { num: "ס", words: [
@@ -2725,8 +2725,8 @@ var dc45_ch1Verses = [
     ["אֲנִי","I"],
     ["אֹמֵר","say"],
     ["לָכֶם","unto you"],
-    ["קְרוֹבוֹת","they are nigh"],
-    ["הֵנָּה","behold"],
+    ["קְרוֹבוֹת","nigh"],
+    ["הֵנָּה","they are"],
     ["אַף","even"],
     ["עַל","at"],
     ["פִּתְחֵיכֶם","your doors"],
@@ -2751,8 +2751,8 @@ var dc45_ch1Verses = [
     ["אֲשֶׁר","which"],
     ["תְּמֻנֶּה","shall be appointed"],
     ["לָכֶם","unto you"],
-    ["לְאַחַר","hereafter"],
-    ["מִכֵּן׃","after this"]
+    ["לְאַחַר","after"],
+    ["מִכֵּן׃","this"]
   ]},
   { num: "סו", words: [
     ["וְתִקָּרֵא","and it shall be called"],
@@ -2880,7 +2880,7 @@ var dc45_ch1Verses = [
     ["יֵדְעוּ","they may know"],
     ["מַעֲשֵׂיכֶם","your works"],
     ["עַד","until"],
-    ["אֲשֶׁר","which"],
+    ["אֲשֶׁר","that"],
     ["הִשְׁלַמְתֶּם","you have accomplished"],
     ["אֵת־אֲשֶׁר","which"],
     ["צִוִּיתִי","I have commanded"],
@@ -2901,8 +2901,8 @@ var dc45_ch1Verses = [
     ["נוֹרָא","terrible"],
     ["לָהֶם","unto them"],
     ["לְמַעַן","that"],
-    ["תֹּאחֲזֵם","may seize upon them"],
-    ["יִרְאָה","fear may seize them"],
+    ["תֹּאחֲזֵם","may seize them"],
+    ["יִרְאָה","fear"],
     ["וְיַעַמְדוּ","and they shall stand"],
     ["מֵרָחוֹק","afar off"],
     ["וְיֶחֱרָדוּ׃","and tremble"]
@@ -2916,8 +2916,8 @@ var dc45_ch1Verses = [
     ["וּמִכֹּחַ","and because of the power of"],
     ["גְּבוּרָתוֹ","his might"],
     ["כֵּן","even so"],
-    ["יְהִי","may it be"],
-    ["אָמֵן׃","amen"]
+    ["יְהִי","be it"],
+    ["אָמֵן׃","Amen"]
   ]}
 ];
 renderVerseSet(dc45_ch1Verses, 'dc45-ch1-verses');
