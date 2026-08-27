@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '14';   // bump when the generated data files change
+  var RSC_V = '18';   // bump when the generated data files change
 
   var cfg = { vol: '', base: '' };
   var keyIdx = null;         // rootKey -> index, built once
@@ -295,6 +295,136 @@
   function closePanel() {
     if (panelEl) panelEl.classList.remove('open');
   }
+  // ---------- interlinear rendering of a root's own verses ----------
+  // The panel used to list "1 Nephi 2:1, 2 · 3:2 …" as links, so reading a
+  // root's verses meant opening each one and losing your place. These render
+  // inline, in batches, reusing the loader and renderer from crossrefs_engine.
+  // Only list a reference if this page can actually render it. bom.html's
+  // _extBookToFile covers the other volumes but not the Book of Mormon itself,
+  // so unfiltered, a whole batch of BOM verses resolved to nothing and the
+  // panel came up empty even though the section had been built.
+  // Same markup crossrefs_engine's renderInterlinearHtml produces, kept local so
+  // the panel does not depend on that file being loaded (bom.html does not load it).
+  function ilHtml(words) {
+    if (!words || !words.length) return '';
+    var html = '<div class="xref-ref-content">', first = true;
+    for (var i = 0; i < words.length; i++) {
+      var hw = words[i][0], gl = words[i][1];
+      if (!hw || hw === '\u05C3' || hw === '\u05BE') continue;
+      hw = String(hw).replace(/\u05C3/g, '');
+      if (!hw) continue;
+      if (!first) html += '<span class="xref-ref-arr">\u2039</span>';
+      first = false;
+      html += '<span class="xref-ref-word"><span class="hw">' + esc(hw) + '</span>';
+      if (gl) html += '<span class="en">' + esc(String(gl).replace(/-/g, ' ')) + '</span>';
+      html += '</span>';
+    }
+    return html + '</div>';
+  }
+
+  function canRenderRef(book, ch) {
+    if (!book || !ch) return false;
+    if (window.getVerseFileUrl) return !!window.getVerseFileUrl(book, ch);
+    if (window._extBookToFile) return !!window._extBookToFile[book];
+    return false;
+  }
+
+  function collectVerseRefs(refs, order) {
+    var out = [];
+    if (!refs || refs._b) return out;              // book-level only: no verse refs stored
+    order.forEach(function(vk) {
+      var chObj = refs[vk];
+      if (!chObj) return;
+      Object.keys(chObj).forEach(function(chapId) {
+        var m = chapId.match(/ch(\d+)/) || chapId.match(/(\d+)/);
+        var ch = m ? parseInt(m[1], 10) : null;
+        if (!ch) return;
+        var book = bookNameFor(vk, chapId);
+        if (!canRenderRef(book, ch)) return;   // keep only verses we can actually draw
+        (chObj[chapId] || []).forEach(function(v) {
+          out.push({ vol: vk, book: book, ch: ch, v: v });
+        });
+      });
+    });
+    return out;
+  }
+
+  function renderOneVerse(host, r) {
+    var card = document.createElement('div');
+    card.className = 'rsc-il-card';
+    card.innerHTML = '<div class="rsc-il-ref">' + esc(r.book + ' ' + r.ch + ':' + r.v) + '</div>' +
+                     '<div class="rsc-il-body"><span class="rsc-il-load">Loading Hebrew…</span></div>';
+    host.appendChild(card);
+    var slot = card.querySelector('.rsc-il-body');
+    function drop() { if (card.parentNode) card.parentNode.removeChild(card); }
+    // bom.html carries its own verse machinery under different names and does not
+    // load crossrefs_engine.js, so support both rather than render nothing there.
+    if (!window.getVerseFileUrl && window._loadExtVerseFile && window._extBookToFile &&
+        window.getExternalVerseHtml) {
+      var fp = window._extBookToFile[r.book];
+      if (!fp) { drop(); return; }
+      window._loadExtVerseFile(fp, function() {
+        // Read the registry directly. getExternalVerseHtml routes through
+        // parseScriptureRef, which only accepts the abbreviated "Gen. 28:12" —
+        // it returns null for "Genesis 28:12" and every card silently vanished,
+        // while the registry itself is keyed by the full name.
+        var reg = window._extVerseRegistry || {};
+        var words = reg[r.book + '|' + r.ch + '|' + r.v];
+        var html = ilHtml(words);
+        if (!html) { drop(); return; }
+        slot.innerHTML = html;
+      });
+      return;
+    }
+    var url = window.getVerseFileUrl && window.getVerseFileUrl(r.book, r.ch);
+    var tid = window.getChapterTargetId && window.getChapterTargetId(r.book, r.ch);
+    if (!url || !tid) { drop(); return; }
+    window.loadVerseFileAsync(url, function(data) {
+      if (!data || !data[tid]) { drop(); return; }
+      var verses = data[tid], vd = null, k;
+      var h2a = window.hebNumToArabic;
+      if (h2a) {
+        for (k = 0; k < verses.length; k++) {
+          if (h2a(verses[k].num) === r.v) { vd = verses[k]; break; }
+        }
+      }
+      if (!vd && r.v >= 1 && r.v <= verses.length) vd = verses[r.v - 1];
+      var html = vd && window.renderInterlinearHtml ? window.renderInterlinearHtml(vd) : '';
+      if (!html) { drop(); return; }
+      slot.innerHTML = html;
+    });
+  }
+
+  function appendInterlinearSection(body, refs, order) {
+    var haveEngine = window.loadVerseFileAsync && window.renderInterlinearHtml && window.getVerseFileUrl;
+    var haveBom = window._loadExtVerseFile && window._extBookToFile && window.getExternalVerseHtml;
+    if (!haveEngine && !haveBom) return;
+    var list = collectVerseRefs(refs, order);
+    if (!list.length) return;
+    var wrap = document.createElement('div');
+    wrap.className = 'rsc-il-wrap';
+    var head = document.createElement('div');
+    head.className = 'rsc-vol-title';
+    head.textContent = 'The verses (' + list.length + ')';
+    wrap.appendChild(head);
+    var host = document.createElement('div');
+    host.className = 'rsc-il-host';
+    wrap.appendChild(host);
+    var more = document.createElement('button');
+    more.className = 'rsc-il-more';
+    wrap.appendChild(more);
+    body.insertBefore(wrap, body.firstChild);
+    var i = 0, FIRST = 25, BATCH = 25;
+    function renderNext() {
+      var end = Math.min(i + (i === 0 ? FIRST : BATCH), list.length);
+      for (; i < end; i++) renderOneVerse(host, list[i]);
+      if (i >= list.length) { more.style.display = 'none'; return; }
+      more.textContent = 'Show ' + Math.min(BATCH, list.length - i) + ' more of ' + (list.length - i) + ' remaining';
+    }
+    more.addEventListener('click', function(ev) { ev.stopPropagation(); renderNext(); });
+    renderNext();
+  }
+
   function openPanel(idx) {
     var conc = window._rootConcordance;
     var entry = conc.roots[idx];
@@ -362,6 +492,7 @@
         });
       }
       body.innerHTML = h;
+      appendInterlinearSection(body, refs, order);
     });
   }
 
@@ -371,6 +502,22 @@
     var st = document.createElement('style');
     st.id = 'rsc-style';
     st.textContent =
+      '.rsc-il-wrap{margin-bottom:14px;}' +
+      '.rsc-il-card{border:1px solid rgba(212,175,55,0.28);border-radius:9px;padding:10px 12px;' +
+        'margin:9px 0;background:rgba(255,255,255,0.03);}' +
+      '.rsc-il-ref{color:#fff0b8;font-weight:700;font-size:1em;margin-bottom:6px;' +
+        'border-bottom:1px solid rgba(212,175,55,0.25);padding-bottom:4px;}' +
+      '.rsc-il-load{opacity:0.6;font-style:italic;font-size:0.85em;}' +
+      '#rsc-panel .xref-ref-content{display:flex;flex-wrap:wrap;gap:10px 12px;direction:rtl;align-items:flex-start;}' +
+      '#rsc-panel .xref-ref-word{display:flex;flex-direction:column;align-items:center;}' +
+      '#rsc-panel .xref-ref-word .hw{font-family:\'David Libre\',serif;font-size:1.35em;' +
+        'color:#fff0b8;line-height:1.5;}' +
+      '#rsc-panel .xref-ref-word .en{font-size:0.92em;color:#e8e0d0;opacity:1;direction:ltr;' +
+        'line-height:1.35;}' +
+      '#rsc-panel .xref-ref-arr{opacity:0.35;align-self:center;}' +
+      '.rsc-il-more{display:block;width:100%;margin:8px 0 2px;padding:9px;border-radius:8px;cursor:pointer;' +
+        'background:rgba(212,175,55,0.14);border:1px solid rgba(212,175,55,0.45);color:var(--sw-gold,#f4ca48);' +
+        'font-size:0.9em;min-height:44px;}' +
       '.rsc-block + .rsc-block{margin-top:12px;padding-top:10px;border-top:1px solid rgba(212,175,55,0.35);}' +
       '.rsc-part{font-size:1.15em;color:var(--sw-gold,#f4ca48);margin-bottom:3px;direction:rtl;}' +
       '.rsc-chips{display:flex;flex-wrap:wrap;gap:4px;margin:6px 0;direction:ltr;}' +

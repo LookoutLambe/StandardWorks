@@ -1303,6 +1303,14 @@
   window.addCrossRefMarkers = addCrossRefMarkers;
   window.openXrefPanel = openXrefPanel;
   window.openRootXrefPanel = openRootXrefPanel;
+  // Exposed so the scorecard's references panel can render the same interlinear
+  // cards. Without these it could only list "1 Nephi 2:1, 2 · 3:2 …" as links,
+  // which means opening every one and losing your place to read a root's verses.
+  window.getVerseFileUrl = getVerseFileUrl;
+  window.getChapterTargetId = getChapterTargetId;
+  window.loadVerseFileAsync = loadVerseFileAsync;
+  window.renderInterlinearHtml = renderInterlinearHtml;
+  window.hebNumToArabic = hebNumToArabic;
   window.closeXrefPanel = closeXrefPanel;
   window.navigateToVerseKey = navigateToVerseKey;
   window.selToolbarXref = selToolbarXref;
