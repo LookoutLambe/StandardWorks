@@ -135,14 +135,14 @@ var ch1Verses = [
     ["סוֹדוֹ","His mysteries"],
     ["וְחַסְדּוֹ","and His mercy,"],
     ["עַל־כֵּן","therefore"],
-    ["אָשִׂימָה","I shall make"],
+    ["שַׂמְתִּי","I make"],
     ["אֶת־דִּבְרֵי","the words of"],
     ["יָמַי","my days"],
     ["בַּסֵּפֶר","in the book"],
     ["׃",""]
   ]},
   { num:"ב", words:[
-    ["וָאֶכְתֹּב","and I wrote"],
+    ["וְכָתַבְתִּי","and I write"],
     ["סֵפֶר","a record"],
     ["בִּלְשׁוֹן","in the language of"],
     ["אָבִי","my father"],
