@@ -87,24 +87,7 @@ var dc1_ch1Verses = [
     ["יְהוָה","the LORD"],
     ["צִוִּיתִים׃","I commanded them"]
   ]},
-  { num: "ו", words: [
-    ["הִנֵּה","behold"],
-    ["זֹאת","this"],
-    ["מַשָּׂא","an oracle of"],
-    ["יָדִי","my hand"],
-    ["וְיַד","and hand of"],
-    ["עֲבָדַי","my servants"],
-    ["וְזֹאת","and this"],
-    ["תְּחִלַּת","beginning of"],
-    ["סֵפֶר","book of"],
-    ["מִצְוֹתַי","my commandments"],
-    ["אֲשֶׁר","which"],
-    ["נָתַתִּי","I have given"],
-    ["לְהוֹצִיא","to bring forth"],
-    ["לָכֶם","to you"],
-    ["יֹשְׁבֵי","O dwellers of"],
-    ["הָאָרֶץ׃","the earth"]
-  ]},
+  { num: "ו", words: [["הִנֵּה","behold"], ["זֹאת","this"], ["סַמְכוּתִי","my authority"], ["וְסַמְכוּת","and authority of"], ["עֲבָדַי","my servants"], ["וְזֹאת","and this"], ["תְּחִלַּת","beginning of"], ["סֵפֶר","book of"], ["מִצְוֹתַי","my commandments"], ["אֲשֶׁר","which"], ["נָתַתִּי","I have given"], ["לָהֶם","to them"], ["לְהוֹצִיא","to bring forth"], ["לָכֶם","to you"], ["יֹשְׁבֵי","O dwellers of"], ["הָאָרֶץ׃","the earth"]]},
   { num: "ז", words: [
     ["עַל־כֵּן","therefore"],
     ["חִרְדוּ","tremble"],
@@ -229,13 +212,7 @@ var dc1_ch1Verses = [
     ["מִקֶּרֶב","from midst of"],
     ["הָעָם׃","the people"]
   ]},
-  { num: "טו", words: [
-    ["כִּי","for"],
-    ["תָעוּ","they strayed"],
-    ["מֵחֻקֹּתַי","from my statutes"],
-    ["וַיָּפֵרוּ","and they broke"],
-    ["אֶת־בְּרִית־עוֹלָם׃","the everlasting covenant"]
-  ]},
+  { num: "טו", words: [["כִּי","for"], ["תָעוּ","they strayed"], ["מֵחֻקֹּתַי","from my statutes"], ["וַיָּפֵרוּ","and they broke"], ["אֶת־בְּרִיתִי","my covenant"], ["בְּרִית־עוֹלָם׃","an everlasting covenant"]]},
   { num: "טז", words: [
     ["לֹא","not"],
     ["דָרְשׁוּ","they sought"],
@@ -337,12 +314,7 @@ var dc1_ch1Verses = [
     ["הָאֱמוּנָה","the faith"],
     ["בָּאָרֶץ׃","in the earth"]
   ]},
-  { num: "כב", words: [
-    ["וּלְמַעַן","and so that"],
-    ["תִּכּוֹן","may be established"],
-    ["בְּרִית־עוֹלָם","an everlasting covenant"],
-    ["אִתָּם׃","with them"]
-  ]},
+  { num: "כב", words: [["וּלְמַעַן","and so that"], ["תִּכּוֹן","may be established"], ["בְּרִיתִי","my covenant"], ["בְּרִית־עוֹלָם׃","an everlasting covenant"]]},
   { num: "כג", words: [
     ["וּלְמַעַן","and so that"],
     ["יֻגַּד","might be declared"],
@@ -423,38 +395,7 @@ var dc1_ch1Verses = [
     ["אֶת־סֵפֶר","book of"],
     ["מוֹרְמוֹן׃","Mormon"]
   ]},
-  { num: "ל", words: [
-    ["וְגַם","and also"],
-    ["אֲשֶׁר","those to whom"],
-    ["נִתְּנוּ","were given"],
-    ["לָהֶם","to them"],
-    ["הַמִּצְוֹת","the commandments"],
-    ["הָאֵלֶּה","these"],
-    ["יִהְיֶה","shall be"],
-    ["לָהֶם","to them"],
-    ["כֹּחַ","power"],
-    ["לְיַסֵּד","to found"],
-    ["אֶת־קְהַל","the congregation of"],
-    ["הָאֱמֶת","the truth"],
-    ["וְהַחַיִּים","and the life"],
-    ["וּלְהוֹצִיאוֹ","and to bring it forth"],
-    ["מֵאֹפֶל","out of gloom"],
-    ["וּמֵחֹשֶׁךְ","and out of darkness"],
-    ["לְבַדּוֹ","it alone"],
-    ["עַל־פְּנֵי","upon the face of"],
-    ["כׇל־הָאָרֶץ","all the earth"],
-    ["אֲשֶׁר","in which"],
-    ["בּוֹ","in it"],
-    ["חָפַצְתִּי","I have delighted"],
-    ["אֲנִי","I"],
-    ["יְהוָה","the LORD"],
-    ["מְדַבֵּר","speak"],
-    ["אֶל־הַקָּהָל","unto the congregation"],
-    ["כֻּלּוֹ","the whole of it"],
-    ["וְלֹא","and not"],
-    ["אֶל־אִישׁ","unto a man"],
-    ["לְבַדּוֹ׃","by himself"]
-  ]},
+  { num: "ל", words: [["וְגַם","and also"], ["אֲשֶׁר","those to whom"], ["נִתְּנוּ","were given"], ["לָהֶם","to them"], ["הַמִּצְוֹת","the commandments"], ["הָאֵלֶּה","these"], ["יִהְיֶה","shall be"], ["לָהֶם","to them"], ["כֹּחַ","power"], ["לְיַסֵּד","to found"], ["אֶת־הַקָּהָל","the congregation"], ["הַזֶּה","this"], ["וּלְהוֹצִיאוֹ","and to bring it forth"], ["מֵאֹפֶל","out of gloom"], ["וּמֵחֹשֶׁךְ","and out of darkness"], ["קְהַל","the congregation of"], ["הָאֱמֶת","the truth"], ["וְהַחַיִּים","and the life"], ["לְבַדּוֹ","alone"], ["עַל־פְּנֵי","upon the face of"], ["כׇל־הָאָרֶץ","all the earth"], ["אֲשֶׁר","in which"], ["בּוֹ","in it"], ["חָפַצְתִּי","I have delighted"], ["אֲנִי","I"], ["יְהוָה","the LORD"], ["מְדַבֵּר","speak"], ["אֶל־הַקָּהָל","unto the congregation"], ["כֻּלּוֹ","the whole of it"], ["וְלֹא","and not"], ["אֶל־אִישׁ","unto a man"], ["לְבַדּוֹ׃","by himself"]]},
   { num: "לא", words: [
     ["כִּי","for"],
     ["אֲנִי","I"],
