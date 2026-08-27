@@ -1681,7 +1681,7 @@ var dc97_ch1Verses = [
     ["מִצְוֹת","commandments"],
     ["אֲחֵרוֹת׃","other"]
   ]},
-  { num: "ה", words: [["וַאֲבָרְכֶנּוּ","And I will bless him"], ["בְּרֹב","with a multiplicity of"], ["בְּרָכוֹת","blessings,"], ["לְפָרֵשׁ","in expounding"], ["כׇּל־כִּתְבֵי","all the scriptures of"], ["הַקֹּדֶשׁ","the holy"], ["וְהָרָזִים","and mysteries"], ["לְבִנְיַן","to the edification of"], ["בֵּית","the ... school,"], ["הַמִּדְרָשׁ","[of study]"], ["וְהַכְּנֵסִיָּה","and of the church"], ["בְּצִיּוֹן׃","in Zion."]]},
+  { num: "ה", words: [["וַאֲבָרְכֶנּוּ","And I will bless him"], ["בְּרֹב","with a multiplicity of"], ["בְּרָכוֹת","blessings,"], ["לְפָרֵשׁ","in expounding"], ["כׇּל־כִּתְבֵי","all the scriptures of"], ["הַקֹּדֶשׁ","the holy"], ["וְהַסּוֹדוֹת","and mysteries"], ["לְבִנְיַן","to the edification of"], ["בֵּית","the ... school,"], ["הַמִּדְרָשׁ","[of study]"], ["וְהַכְּנֵסִיָּה","and of the church"], ["בְּצִיּוֹן׃","in Zion."]]},
   { num: "ו", words: [
     ["וְלִשְׁאָר","And to the residue of"],
     ["בֵּית","the ... school,"],

@@ -728,20 +728,7 @@ var dc84_ch1Verses = [
     ["הַקָּדוֹשׁ","the holiest"],
     ["מִכֹּל׃","(of all)."]
   ]},
-  { num: "יט", words: [
-    ["וְהַכְּהֻנָּה","And priesthood"],
-    ["הַגְּדוֹלָה","greater"],
-    ["הַזֹּאת","this"],
-    ["מְשָׁרֶתֶת","administereth"],
-    ["אֶת־הַבְּשׂוֹרָה","the gospel"],
-    ["וּמַחֲזִיקָה","and holdeth"],
-    ["בְּמַפְתֵּחַ","the key of"],
-    ["רָזֵי","the mysteries of"],
-    ["הַמַּלְכוּת","the kingdom"],
-    ["מַפְתֵּחַ","even the key of"],
-    ["דַּעַת","the knowledge of"],
-    ["אֱלֹהִים׃","God."]
-  ]},
+  { num: "יט", words: [["וְהַכְּהֻנָּה","And priesthood"], ["הַגְּדוֹלָה","greater"], ["הַזֹּאת","this"], ["מְשָׁרֶתֶת","administereth"], ["אֶת־הַבְּשׂוֹרָה","the gospel"], ["וּמַחֲזִיקָה","and holdeth"], ["בְּמַפְתֵּחַ","the key of"], ["סוֹדוֹת","the mysteries of"], ["הַמַּלְכוּת","the kingdom"], ["מַפְתֵּחַ","even the key of"], ["דַּעַת","the knowledge of"], ["אֱלֹהִים׃","God."]]},
   { num: "כ", words: [
     ["לָכֵן","Therefore"],
     ["בְּחֻקּוֹתֶיהָ","in the ordinances thereof"],
@@ -5989,18 +5976,7 @@ var dc90_ch1Verses = [
     ["וּבַנְּשִׂיאוּת׃","and presidency."]
   ]},
   { num: "יג", words: [["וּכְכַלּוֹתְכֶם","And when you have finished"], ["אֶת־תִּרְגּוּם","the translation of"], ["הַנְּבִיאִים","the prophets"], ["מֵאָז","from thenceforth"], ["תִּנְהֲגוּ","you shall preside over"], ["אֶת־עִנְיְנֵי","the affairs of"], ["הַכְּנֵסִיָּה","the church"], ["וּבֵית","and the house of"], ["הַנְּבִיאִים׃","the prophets-;"]]},
-  { num: "יד", words: [
-    ["וּמֵעֵת","And from time"],
-    ["לְעֵת","to time"],
-    ["כַּאֲשֶׁר","as"],
-    ["יְגַלֶּה","shall be manifested"],
-    ["הַמְנַחֵם","by the Comforter"],
-    ["תְּקַבְּלוּ","receive"],
-    ["חֲזוֹנוֹת","revelations"],
-    ["לְגַלּוֹת","to unfold"],
-    ["אֶת־רָזֵי","the mysteries of"],
-    ["הַמַּלְכוּת׃","the kingdom-;"]
-  ]},
+  { num: "יד", words: [["וּמֵעֵת","And from time"], ["לְעֵת","to time"], ["כַּאֲשֶׁר","as"], ["יְגַלֶּה","shall be manifested"], ["הַמְנַחֵם","by the Comforter"], ["תְּקַבְּלוּ","receive"], ["חֲזוֹנוֹת","revelations"], ["לְגַלּוֹת","to unfold"], ["אֶת־סוֹדוֹת","the mysteries of"], ["הַמַּלְכוּת׃","the kingdom-;"]]},
   { num: "טו", words: [["וְתָכִינוּ","And set in order"], ["אֶת־הַכְּנֵסִיּוֹת","the churches"], ["וְתִלְמְדוּ","and study"], ["וְתֵדְעוּ","and learn"], ["כׇּל־סֵפֶר","with all books"], ["טוֹב","good"], ["וּלְשׁוֹנוֹת","and with languages"], ["וְשָׂפוֹת","tongues"], ["וְעַמִּים׃","and people."]]},
   { num: "טז", words: [["וְזֹאת","And this"], ["תִּהְיֶה","shall be"], ["עֲבוֹדַתְכֶם","your business"], ["וּמִשְׁלַחְתְּכֶם","and mission"], ["כׇּל־יְמֵי","in all the days of"], ["חַיֵּיכֶם","your lives"], ["לְהַנְהִיג","to preside"], ["בַּסּוֹד","in council"], ["וּלְתַקֵּן","and set in order"], ["אֶת־כׇּל־עִנְיְנֵי","all the affairs of"], ["הַכְּנֵסִיָּה","church"], ["וְהַמַּלְכוּת","and kingdom"], ["הַזֹּאת׃","this."]]},
   { num: "יז", words: [
