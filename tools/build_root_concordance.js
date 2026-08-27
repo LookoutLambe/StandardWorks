@@ -43,6 +43,7 @@ function evalIntoWindow(file) {
 }
 evalIntoWindow('strongs_lookup.js');
 evalIntoWindow('strongs_roots.js');
+evalIntoWindow('bdb_roots.js');   // BDB root per Strong's number; baseRoot prefers it
 if (!win._strongsLookup || !win._strongsRoots) throw new Error('Strong\'s data failed to load');
 console.log('Strong\'s: %d forms, %d entries', Object.keys(win._strongsLookup).length, Object.keys(win._strongsRoots).length);
 
