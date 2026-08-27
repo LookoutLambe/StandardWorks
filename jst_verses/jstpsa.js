@@ -38,7 +38,7 @@ renderVerseSet(jstpsa_ch3Verses, 'jstpsa-ch3-verses');
 // === CH4: JST Psalm 109:4 ===
 // We are to pray for our adversaries.
 var jstpsa_ch4Verses = [
-  { num:"ד", words:[["וְלַמְרוֹת","and-notwithstanding"],["אַהֲבָתִי","my-love"],["הֵם","they"],["שׂוֹטְנַי","my-adversaries"],["וְאָנֹכִי","yet-I"],["אוֹסִיף","will-continue"],["בִּתְפִלָּה","in-prayer"],["בַּעֲדָם","for-them"],["׃",""]] }
+  { num:"ד", words:[["וְלַמְרוֹת","and-notwithstanding"],["אַהֲבָתִי","my-love"],["הֵם","they"],["שׂוֹטְנַי","my-adversaries"],["וַאֲנִי","yet-I"],["אוֹסִיף","will-continue"],["בִּתְפִלָּה","in-prayer"],["בַּעֲדָם","for-them"],["׃",""]] }
 ];
 renderVerseSet(jstpsa_ch4Verses, 'jstpsa-ch4-verses');
 
