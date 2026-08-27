@@ -381,7 +381,7 @@ var dc27_ch1Verses = [
     ["חַי","is quick"],
     ["וְעַצוּם׃","and powerful"]
   ]},
-  { num: "ב", words: [["כִּי","for"], ["הִנֵּה","behold"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["כִּי","that"], ["לֹא","not"], ["חָשׁוּב","it mattereth"], ["מָה","what"], ["תֹאכְלוּ","ye shall eat"], ["אוֹ","or"], ["מָה","what"], ["תִשְׁתּוּ","ye shall drink"], ["בְּעֵת","when"], ["תֹאכְלוּ","ye partake of"], ["אֶת־הַסְּעוּדָה","the sacrament"], ["אִם","if"], ["תַּעֲשׂוּ","ye do it"], ["בְּעַיִן","with an eye"], ["תְּמִימָה","single"], ["לִכְבוֹדִי","to my glory"], ["לְהַזְכִּיר","remembering"], ["לָאָב","unto the Father"], ["אֶת־בְּשָׂרִי","my body"], ["אֲשֶׁר","which"], ["הוּנַח","was laid down"], ["בַּעֲדֵכֶם","for you"], ["וְאֶת־דָּמִי","and my blood"], ["אֲשֶׁר","which"], ["נִשְׁפַּךְ","was shed"], ["לִסְלִיחַת","for the remission of"], ["חַטֹּאתֵיכֶם׃","your sins"]]},
+  { num: "ב", words: [["כִּי","for"], ["הִנֵּה","behold"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["כִּי","that"], ["לֹא","it mattereth not"], ["מָה","what"], ["תֹאכְלוּ","ye shall eat"], ["אוֹ","or"], ["מָה","what"], ["תִשְׁתּוּ","ye shall drink"], ["בְּעֵת","when"], ["תֹאכְלוּ","ye partake of"], ["אֶת־הַסְּעוּדָה","the sacrament"], ["אִם","if"], ["תַּעֲשׂוּ","ye do it"], ["בְּעַיִן","with an eye"], ["תְּמִימָה","single"], ["לִכְבוֹדִי","to my glory"], ["לְהַזְכִּיר","remembering"], ["לָאָב","unto the Father"], ["אֶת־בְּשָׂרִי","my body"], ["אֲשֶׁר","which"], ["הוּנַח","was laid down"], ["בַּעֲדֵכֶם","for you"], ["וְאֶת־דָּמִי","and my blood"], ["אֲשֶׁר","which"], ["נִשְׁפַּךְ","was shed"], ["לִסְלִיחַת","for the remission of"], ["חַטֹּאתֵיכֶם׃","your sins"]]},
   { num: "ג", words: [["לָכֵן","wherefore"], ["מִצְוָה","a commandment"], ["נֹתֵן","giving"], ["אֲנִי","I am"], ["לָכֶם","unto you"], ["לֹא","not"], ["תִקְנוּ","you shall purchase"], ["יַיִן","wine"], ["וְלֹא","neither"], ["שֵׁכָר","strong drink"], ["מֵאֹיְבֵיכֶם׃","of your enemies"]]},
   { num: "ד", words: [
     ["לָכֵן","wherefore"],
@@ -433,7 +433,7 @@ var dc27_ch1Verses = [
     ["הָעוֹלָם׃","the world"]
   ]},
   { num: "טו", words: [["לָכֵן","therefore"], ["הָרִימוּ","lift up"], ["לְבַבְכֶם","your hearts"], ["וְגִילוּ","and rejoice"], ["וְחִגְרוּ","and gird up"], ["מׇתְנֵיכֶם","your loins"], ["וּקְחוּ","and take"], ["עֲלֵיכֶם","upon you"], ["אֶת־כׇּל־נִשְׁקִי","all my armor"], ["לְמַעַן","that"], ["תּוּכְלוּ","ye may be able"], ["לַעֲמֹד","to withstand"], ["בְּיוֹם","the day"], ["הָרָעָה","evil"], ["וּבַעֲשׂוֹתְכֶם","having done"], ["הַכֹּל","all"], ["תּוּכְלוּ","that ye may be able"], ["לַעֲמֹד׃","to stand"]]},
-  { num: "טז", words: [["עִמְדוּ","stand"], ["אֵפוֹא","therefore"], ["מׇתְנֵיכֶם","having your loins"], ["חֲגוּרִים","girt about"], ["בֶּאֱמֶת","with truth"], ["וְשִׁרְיוֹן","having on the breastplate of"], ["הַצְּדָקָה","righteousness"], ["עַל","upon"], ["לִבְּכֶם","your heart"], ["וְרַגְלֵיכֶם","and your feet"], ["מְנֻעָלוֹת","shod"], ["בַּהֲכָנַת","with the preparation of"], ["בְּשׂוֹרַת","the gospel of"], ["הַשָּׁלוֹם","peace"], ["אֲשֶׁר","which"], ["שָׁלַחְתִּי","I have sent"], ["מַלְאָכַי","mine angels"], ["לְמָסְרָהּ","to commit unto"], ["לָכֶם׃","you"]]},
+  { num: "טז", words: [["עִמְדוּ","stand"], ["אֵפוֹא","therefore"], ["מׇתְנֵיכֶם","having your loins"], ["חֲגוּרִים","girt about"], ["בֶּאֱמֶת","with truth"], ["וְשִׁרְיוֹן","having on the breastplate of"], ["הַצְּדָקָה","righteousness"], ["עַל","upon"], ["לִבְּכֶם","your heart"], ["וְרַגְלֵיכֶם","and your feet"], ["מְנֻעָלוֹת","shod"], ["מוּכָנוֹת","prepared"], ["בְּשׂוֹרַת","the gospel of"], ["הַשָּׁלוֹם","peace"], ["אֲשֶׁר","which"], ["שָׁלַחְתִּי","I have sent"], ["מַלְאָכַי","mine angels"], ["לְמָסְרָהּ","to commit unto"], ["לָכֶם׃","you"]]},
   { num: "יז", words: [
     ["שְׂאוּ","taking"],
     ["מָגֵן","the shield of"],
@@ -527,7 +527,7 @@ var dc29_ch1Verses = [
     ["בִּתְפִלָּה","in prayer"],
     ["עַצוּמָה׃","mighty"]
   ]},
-  { num: "ג", words: [["הִנֵּה","behold"], ["אָמֵן","verily"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["כִּי","that"], ["בָּעֵת","at time"], ["הַזֹּאת","this"], ["נִסְלְחוּ","are forgiven"], ["לָכֶם","you"], ["חַטֹּאתֵיכֶם","your sins"], ["לָכֵן","therefore"], ["תְּקַבְּלוּ","ye receive"], ["אֶת־הַדְּבָרִים","things"], ["הָאֵלֶּה","these"], ["אַךְ","but"], ["זִכְרוּ","remember"], ["לְבִלְתִּי","not"], ["חֲטֹא","to sin"], ["עוֹד","any more"], ["פֶּן","lest"], ["יָבֹאוּ","shall come"], ["סַכָּנוֹת","perils"], ["עֲלֵיכֶם׃","upon you"]]},
+  { num: "ג", words: [["הִנֵּה","behold"], ["אָמֵן","verily"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["כִּי","that"], ["בָּעֵת","at time"], ["הַזֹּאת","this"], ["נִסְלְחוּ","are forgiven"], ["לָכֶם","you"], ["חַטֹּאתֵיכֶם","your sins"], ["לָכֵן","therefore"], ["תְּקַבְּלוּ","ye receive"], ["אֶת־הַדְּבָרִים","things"], ["הָאֵלֶּה","these"], ["אַךְ","but"], ["זִכְרוּ","remember"], ["לְבִלְתִּי","not"], ["חֲטֹא","to sin"], ["עוֹד","any more"], ["פֶּן","lest"], ["יָבֹאוּ","shall come"], ["רָעוֹת","perils"], ["עֲלֵיכֶם׃","upon you"]]},
   { num: "ד", words: [
     ["אָמֵן","verily"],
     ["אֲנִי","I"],
