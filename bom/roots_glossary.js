@@ -1056,7 +1056,7 @@ window._rootGlossaryData = {
   },
   "אות": {
     "meaning": "sign, token, portent",
-    "category": "Motion"
+    "category": "Lexical"
   },
   "אחיו": {
     "meaning": "his brethren",

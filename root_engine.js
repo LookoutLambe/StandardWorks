@@ -38,9 +38,22 @@ function stripPrefixes(w) {
   // This groups morphologically related words under one root
   // 583 entries across 67 root families (theological, verbal, nominal)
   // Roots with no Strong's entry at all — these must never be peeled.
-  var _lexNoPeel = { 'כנס': 1, 'סעד': 1, 'H4503': 1, 'H7133': 1 };
+  var _lexNoPeel = { 'כנס': 1, 'סעד': 1, 'H4503': 1, 'H7133': 1, 'אות': 1 };
   var rootMap = {
     'סְעוּדָה': 'סעד', 'סְעוּדוֹת': 'סעד', 'כְּנֵסִיָּה': 'כנס',
+    // The sign-words: peeling the ־וֹת plural collapsed them into the object
+    // marker's mega-family (H0853, whose Strong's pointer chains through
+    // H0226). Pinned to their own bare family instead.
+    'אוֹת': 'אות', 'הָאוֹת': 'אות', 'וְאוֹת': 'אות', 'לְאוֹת': 'אות',
+    'כְּאוֹת': 'אות', 'הָאֹת': 'אות', 'אִם־אוֹת': 'אות', 'מָה־הָאוֹת': 'אות',
+    'אוֹת־הַבְּרִית': 'אות',
+    'אֹתוֹת': 'אות', 'אוֹתוֹת': 'אות', 'הָאֹתוֹת': 'אות', 'הָאֹתֹת': 'אות',
+    'וְאֹתוֹת': 'אות', 'וְאוֹתוֹת': 'אות', 'אֶת־הָאֹתוֹת': 'אות',
+    'בְּאֹתוֹת': 'אות', 'בָּאֹתוֹת': 'אות', 'בְּאוֹתוֹת': 'אות',
+    'לְאֹתוֹת': 'אות', 'לְאֹתֹת': 'אות', 'לְאוֹתוֹת': 'אות',
+    'וּבְאֹתוֹת': 'אות', 'מֵאוֹתוֹת': 'אות', 'וְהָאוֹתוֹת': 'אות',
+    'וְהָאֹתוֹת': 'אות', 'אוֹתֹת': 'אות', 'אֹתוֹתָיו': 'אות',
+    'אוֹתוֹתֵיהֶם': 'אות', 'וְאֶת־אֹתֹתַי': 'אות',
     // Construct forms, variant pointings and maqqef heads that Strong's does
     // not list under their own pointing. Without these they fall past every
     // lookup and land on a bare consonantal key of their own, so עַל־דְּבַר
