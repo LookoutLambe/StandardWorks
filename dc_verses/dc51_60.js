@@ -27,8 +27,8 @@ var dc51_ch1Verses = [
   ]},
   { num: "ב", words: [
     ["כִּי","for"],
-    ["עָרֹךְ","organized"],
-    ["יֵעָרְכוּ","they be organized"],
+    ["עָרֹךְ","surely"],
+    ["יֵעָרְכוּ","they shall be organized"],
     ["לְפִי","according to"],
     ["חֻקֹּתַי","my laws"],
     ["וְאִם־לֹא","if otherwise"],
@@ -42,8 +42,8 @@ var dc51_ch1Verses = [
     ["וַאֲשֶׁר","and those whom"],
     ["בָּחַר","he has chosen"],
     ["בָּהֶם","in them"],
-    ["אֲשֶׁר","in whom"],
-    ["רָצִיתִי","I am pleased"],
+    ["אֲשֶׁר","whom"],
+    ["רָצִיתִי","I am well pleased"],
     ["בָהֶם","in them"],
     ["יְמַנּוּ","let them appoint"],
     ["לָעָם","unto the people"],
@@ -58,7 +58,7 @@ var dc51_ch1Verses = [
     ["דַרְכּוֹ׃","his circumstances"]
   ]},
   { num: "ד", words: [["וְעַבְדִּי","and my servant"], ["אֶדְוָרְד","Edward"], ["פַּרְטְרִיג׳","Partridge"], ["כַּאֲשֶׁר","when"], ["יְמַנֶּה","he shall appoint"], ["לְאִישׁ","to a man"], ["חֶלְקוֹ","his portion"], ["יִתֵּן","let him give"], ["לוֹ","unto him"], ["כְּתָב","a writing"], ["אֲשֶׁר","that"], ["יַבְטִיחַ","shall secure"], ["לוֹ","unto him"], ["חֶלְקוֹ","his portion"], ["לְאׇחֳזוֹ","that he shall hold it"], ["הַזְּכוּת","the right"], ["הַזֹּאת","this"], ["וְהַנַּחֲלָה","and the inheritance"], ["הַזֹּאת","this"], ["בַּכְּנֵסִיָּה","in the church"], ["עַד","until"], ["פָּשְׁעוֹ","his transgression"], ["וְלֹא","and not"], ["יֵחָשֵׁב","is accounted"], ["רָאוּי","worthy"], ["לְפִי","according to"], ["קוֹל","the voice of"], ["הַכְּנֵסִיָּה","the church"], ["כְּפִי","according to"], ["תּוֹרוֹת","the laws of"], ["הַכְּנֵסִיָּה","the church"], ["וּבְרִיתוֹתֶיהָ","and her covenants"], ["לִהְיוֹת","to belong"], ["לַכְּנֵסִיָּה׃","to the church"]]},
-  { num: "ה", words: [["וְאִם","and if"], ["יִפְשַׁע","he shall transgress"], ["וְלֹא","and not"], ["יֵחָשֵׁב","is accounted"], ["רָאוּי","worthy"], ["לִהְיוֹת","to belong"], ["לַכְּנֵסִיָּה","to the church"], ["לֹא","not"], ["יִהְיֶה","shall have"], ["לוֹ","unto him"], ["כֹּחַ","power"], ["לִדְרֹשׁ","to claim"], ["הַחֵלֶק","the portion"], ["אֲשֶׁר","which"], ["הִקְדִּישׁ","he has consecrated"], ["לַפָּקִיד","unto the bishop"], ["לַעֲנִיֵּי","for the poor of"], ["כְּנֵסִיָּתִי","my church"], ["לָכֵן","therefore"], ["לֹא","not"], ["יַחֲזִיק","he shall retain"], ["הַמַּתָּנָה","the gift"], ["כִּי","but"], ["אִם",""], ["יִדְרֹשׁ","shall claim"], ["רַק","only"], ["הַחֵלֶק","the portion"], ["הַנָּתוּן","that is given"], ["לוֹ","unto him"], ["בִּכְתָב׃","by deed"]]},
+  { num: "ה", words: [["וְאִם","and if"], ["יִפְשַׁע","he shall transgress"], ["וְלֹא","and not"], ["יֵחָשֵׁב","is accounted"], ["רָאוּי","worthy"], ["לִהְיוֹת","to belong"], ["לַכְּנֵסִיָּה","to the church"], ["לֹא","not"], ["יִהְיֶה","shall have"], ["לוֹ","unto him"], ["כֹּחַ","power"], ["לִדְרֹשׁ","to claim"], ["הַחֵלֶק","the portion"], ["אֲשֶׁר","which"], ["הִקְדִּישׁ","he has consecrated"], ["לַפָּקִיד","unto the bishop"], ["לַעֲנִיֵּי","for the poor of"], ["כְּנֵסִיָּתִי","my church"], ["לָכֵן","therefore"], ["לֹא","not"], ["יַחֲזִיק","he shall retain"], ["הַמַּתָּנָה","the gift"], ["כִּי","but"], ["אִם","rather"], ["יִדְרֹשׁ","shall claim"], ["רַק","only"], ["הַחֵלֶק","the portion"], ["הַנָּתוּן","that is given"], ["לוֹ","unto him"], ["בִּכְתָב׃","by deed"]]},
   { num: "ו", words: [
     ["וְכֵן","and thus"],
     ["יִהְיוּ","shall be"],
