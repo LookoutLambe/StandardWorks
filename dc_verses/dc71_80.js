@@ -1105,6 +1105,7 @@ var dc76_ch1Verses = [
   { num: "י", words: [
     ["כִּי","for"],
     ["בְרוּחִי","by my Spirit"],
+    ["אֲאִירֵם","will I enlighten them"],
     ["וּבְכֹחִי","and by my power"],
     ["אוֹדִיעַ","will I make known"],
     ["לָהֶם","to them"],
@@ -1194,12 +1195,13 @@ var dc76_ch1Verses = [
     ["מְלֹא","the fulness of"],
     ["בְּשׂוֹרַת","the gospel of"],
     ["יֵשׁוּעַ","Jesus"],
-    ["הַמָּשִׁיחַ","the Messiah"],
+    ["הַמָּשִׁיחַ","Christ"],
     ["הוּא","he is"],
     ["הַבֵּן","the Son"],
     ["אֲשֶׁר","whom"],
     ["רָאִינוּ","we saw"],
     ["וְעִמּוֹ","and with him"],
+    ["דִּבַּרְנוּ","we conversed"],
     ["בֶּחָזוֹן","in the vision"],
     ["הַשְּׁמֵימִי׃","heavenly"]
   ]},
@@ -1326,6 +1328,7 @@ var dc76_ch1Verses = [
     ["נִבְרָאִים","are and were created"],
     ["וְיוֹשְׁבֵיהֶם","and their inhabitants"],
     ["הֵם","are"],
+    ["נוֹלָדִים","begotten"],
     ["בָּנִים","sons"],
     ["וּבָנוֹת","and daughters"],
     ["לֵאלֹהִים׃","unto God"]
@@ -1711,7 +1714,7 @@ var dc76_ch1Verses = [
     ["וְזֹאת","and this is"],
     ["עֵדוּת","the testimony of"],
     ["בְּשׂוֹרַת","the gospel of"],
-    ["הַמָּשִׁיחַ","the Messiah"],
+    ["הַמָּשִׁיחַ","Christ"],
     ["עַל","concerning"],
     ["אֵלֶּה","those"],
     ["אֲשֶׁר","who"],
@@ -1741,7 +1744,7 @@ var dc76_ch1Verses = [
     ["נָתָן׃","he has given"]
   ]},
   { num: "נב", words: [["לְמַעַן","that"], ["בְּשָׁמְרָם","by their keeping"], ["אֶת־הַמִּצְווֹת","the commandments"], ["יֵרָחֲצוּ","they might be washed"], ["וְיִטְהֲרוּ","and cleansed"], ["מִכׇּל","from all"], ["חַטֹּאתָם","their sins"], ["וִיקַבְּלוּ","and receive"], ["אֶת־רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["בִּסְמִיכַת","by the laying on of"], ["יְדֵי","the hands of"], ["הַנִּסְמָךְ","him who is ordained"], ["וְהַנֶּחְתָּם","and sealed"], ["לַכֹּחַ","unto power"], ["הַזֶּה׃","this"]]},
-  { num: "נג", words: [["וַאֲשֶׁר","and who"], ["מְנַצְּחִים","overcome"], ["בֶּאֱמוּנָה","by faith"], ["בְּרוּחַ","by the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["רוּחַ","the Spirit of"], ["הַהַבְטָחָה","promise"], ["אֲשֶׁר","which"], ["הָאָב","the Father"], ["שׁוֹפֵךְ","sheds forth"], ["עַל","upon"], ["כׇּל","all"], ["הַצַּדִּיקִים","those who are just"], ["וְהַנֶּאֱמָנִים׃","and true"]]},
+  { num: "נג", words: [["וַאֲשֶׁר","and who"], ["מְנַצְּחִים","overcome"], ["בֶּאֱמוּנָה","by faith"], ["וְנֶחְתָּמִים","and are sealed"], ["בְּרוּחַ","by the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["רוּחַ","the Spirit of"], ["הַהַבְטָחָה","promise"], ["אֲשֶׁר","which"], ["הָאָב","the Father"], ["שׁוֹפֵךְ","sheds forth"], ["עַל","upon"], ["כׇּל","all"], ["הַצַּדִּיקִים","those who are just"], ["וְהַנֶּאֱמָנִים׃","and true"]]},
   { num: "נד", words: [["הֵם","they are they"], ["כְּנֵסִיַּת","the church of"], ["הַבְּכוֹר׃","the Firstborn"]]},
   { num: "נה", words: [
     ["הֵם","they are"],
@@ -2079,7 +2082,7 @@ var dc76_ch1Verses = [
     ["לֹא","not"],
     ["קִבְּלוּ","received"],
     ["אֶת־בְּשׂוֹרַת","the gospel of"],
-    ["הַמָּשִׁיחַ","the Messiah"],
+    ["הַמָּשִׁיחַ","Christ"],
     ["וְלֹא","neither"],
     ["אֶת־עֵדוּת","the testimony of"],
     ["יֵשׁוּעַ׃","Jesus"]
@@ -2105,7 +2108,7 @@ var dc76_ch1Verses = [
     ["אֲשֶׁר","when"],
     ["יְהוָה","the LORD"],
     ["הוּא","even"],
-    ["הַמָּשִׁיחַ","the Messiah"],
+    ["הַמָּשִׁיחַ","Christ"],
     ["הַשֶּׂה","the Lamb"],
     ["יְכַלֶּה","shall have finished"],
     ["אֶת־מְלַאכְתּוֹ׃","his work"]
@@ -2345,7 +2348,7 @@ var dc76_ch1Verses = [
     ["מְלֹא","the fulness of"],
     ["הָעִתִּים","times"],
     ["כַּאֲשֶׁר","when"],
-    ["הַמָּשִׁיחַ","the Messiah"],
+    ["הַמָּשִׁיחַ","Christ"],
     ["יַכְנִיעַ","shall have subdued"],
     ["כׇּל","all"],
     ["אוֹיֵב","enemies"],
