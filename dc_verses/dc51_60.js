@@ -3003,7 +3003,7 @@ renderVerseSet(dc59_ch1Verses, 'dc59-ch1-verses');
 
 
 var dc60_ch1Verses = [
-  { num: "א", words: [["הִנֵּה","behold"], ["כֹּה","thus"], ["אָמַר","says"], ["יְהוָה","the Lord"], ["לְזִקְנֵי","unto the elders of"], ["כְּנֵסִיָּתוֹ","his church"], ["הַשָּׁבִים","who are to return"], ["בִּמְהֵרָה","speedily"], ["לָאָרֶץ","to the land"], ["אֲשֶׁר","from which"], ["בָּאוּ","they came"], ["מִשָּׁם","thence"], ["הִנֵּה","behold"], ["נִיחֹחַ","it is pleasing"], ["לִי","unto me"], ["כִּי","that"], ["עֲלִיתֶם","you have come up"], ["הֵנָּה׃","hither"]]},
+  { num: "א", words: [["הִנֵּה","behold"], ["כֹּה","thus"], ["אָמַר","says"], ["יְהוָה","the Lord"], ["לְזִקְנֵי","unto the elders of"], ["כְּנֵסִיָּתוֹ","his church"], ["הַשָּׁבִים","who are to return"], ["בִּמְהֵרָה","speedily"], ["לָאָרֶץ","to the land"], ["אֲשֶׁר","which"], ["בָּאוּ","they came"], ["מִשָּׁם","from thence"], ["הִנֵּה","behold"], ["נִיחֹחַ","it is pleasing"], ["לִי","unto me"], ["כִּי","that"], ["עֲלִיתֶם","you have come up"], ["הֵנָּה׃","hither"]]},
   { num: "ב", words: [
     ["אַךְ","but"],
     ["בִּקְצָתָם","with some"],
@@ -3014,7 +3014,7 @@ var dc60_ch1Verses = [
     ["יִפְתְּחוּ","they will open"],
     ["פִּיהֶם","their mouths"],
     ["כִּי","but"],
-    ["אִם",""],
+    ["אִם","rather"],
     ["מַסְתִּירִים","they hide"],
     ["הַכִּשָּׁרוֹן","the talent"],
     ["אֲשֶׁר","which"],
@@ -3076,9 +3076,9 @@ var dc60_ch1Verses = [
     ["עַל","concerning"],
     ["מַסַּעֲכֶם","your journey"],
     ["לָאָרֶץ","to the land"],
-    ["אֲשֶׁר","whence"],
+    ["אֲשֶׁר","which"],
     ["בָּאתֶם","you came"],
-    ["מִשָּׁם","from there"],
+    ["מִשָּׁם","from thence"],
     ["תֵּעָשֶׂה","let be made"],
     ["סְפִינָה","a craft"],
     ["אוֹ","or"],
@@ -3233,7 +3233,7 @@ var dc60_ch1Verses = [
     ["פֶּן","lest"],
     ["תַּכְעִיסֵם","you provoke them"],
     ["כִּי","but"],
-    ["אִם",""],
+    ["אִם","rather"],
     ["בַסֵּתֶר","in secret"],
     ["וְרָחַצְתָּ","and wash"],
     ["רַגְלֶיךָ","your feet"],
@@ -3265,7 +3265,7 @@ var dc60_ch1Verses = [
     ["קַאוּדְרִי","Cowdery"],
     ["וְהַשְּׁאָר","and the residue"],
     ["אַחֲרֵי","after"],
-    ["כֵן","this hereafter"],
+    ["כֵן","this"],
     ["כֵּן","even so"],
     ["יְהִי","be it"],
     ["אָמֵן׃","Amen"]
