@@ -1,4 +1,8 @@
 window._rootGlossaryData = {
+  "מוסר": {
+    "meaning": "discipline, instruction, correction",
+    "category": "Uncategorized"
+  },
   "שנים": {
     "meaning": "two",
     "category": "Number"
@@ -252,7 +256,7 @@ window._rootGlossaryData = {
     "category": "Particle"
   },
   "אשר": {
-    "meaning": "to go straight, be blessed; Asher",
+    "meaning": "(אֲשֶׁר) which, that, who; (אָשַׁר) to go straight, be blessed",
     "category": "Particle"
   },
   "לא": {
@@ -400,7 +404,7 @@ window._rootGlossaryData = {
     "category": "Society"
   },
   "לך": {
-    "meaning": "king",
+    "meaning": "to you, for you",
     "category": "Society"
   },
   "יו": {
@@ -934,7 +938,7 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "אות": {
-    "meaning": "hundred",
+    "meaning": "sign, token, portent",
     "category": "Motion"
   },
   "אחיו": {
@@ -1014,7 +1018,7 @@ window._rootGlossaryData = {
     "category": "Society"
   },
   "רע": {
-    "meaning": "evil, bad, wicked",
+    "meaning": "(רֵעַ) neighbour, friend, companion; (רַע) evil, bad",
     "category": "Quality"
   },
   "אליכם": {
@@ -1736,7 +1740,7 @@ window._rootGlossaryData = {
     "category": "Perception"
   },
   "די": {
-    "meaning": "sufficient",
+    "meaning": "(Aramaic) which, that, of; enough, sufficient",
     "category": "Quality"
   },
   "כרת": {
@@ -4024,7 +4028,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "משל": {
-    "meaning": "govern",
+    "meaning": "to rule, govern; dominion; a proverb",
     "category": "Society"
   },
   "טבילה": {
@@ -5068,7 +5072,7 @@ window._rootGlossaryData = {
     "category": "Perception"
   },
   "נסע": {
-    "meaning": "traveled we",
+    "meaning": "to pull up, set out, journey",
     "category": "Motion"
   },
   "אהלינו": {
@@ -5584,7 +5588,7 @@ window._rootGlossaryData = {
     "category": "Motion"
   },
   "רחב": {
-    "meaning": "spacious",
+    "meaning": "to be wide, broad; breadth, width",
     "category": "Uncategorized"
   },
   "יכתבו": {
@@ -5600,7 +5604,7 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "יסוד": {
-    "meaning": "foundation of",
+    "meaning": "foundation",
     "category": "Uncategorized"
   },
   "ישרתו": {
@@ -6593,7 +6597,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יסד": {
-    "meaning": "founded",
+    "meaning": "to found, establish, lay a foundation",
     "category": "Uncategorized"
   },
   "פקיד": {
@@ -9691,7 +9695,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יסר": {
-    "meaning": "he put down",
+    "meaning": "to discipline, chasten, instruct; discipline",
     "category": "Action"
   },
   "ידחו": {
@@ -12027,7 +12031,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "ידה": {
-    "meaning": "her hand",
+    "meaning": "to give thanks, praise, confess",
     "category": "Person"
   },
   "קשי־ערף": {
@@ -12059,7 +12063,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "אמה": {
-    "meaning": "nation",
+    "meaning": "(אַמָּה) cubit; (אֻמָּה) tribe, people",
     "category": "Society"
   },
   "תרד": {
@@ -13782,7 +13786,7 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "צפן": {
-    "meaning": "he hid",
+    "meaning": "to hide, treasure up; (צָפוֹן) the north",
     "category": "Uncategorized"
   },
   "גורם": {
@@ -17281,7 +17285,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "שקר": {
-    "meaning": "liar",
+    "meaning": "to deal falsely, lie; falsehood, deception",
     "category": "Uncategorized"
   },
   "ועותיהם": {
@@ -21529,7 +21533,7 @@ window._rootGlossaryData = {
     "category": "Speech"
   },
   "יעד": {
-    "meaning": "witnesses",
+    "meaning": "to appoint, meet by appointment; congregation, appointed time",
     "category": "Uncategorized"
   },
   "אדניכם": {
@@ -23840,7 +23844,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "מהר": {
-    "meaning": "faster",
+    "meaning": "to hasten, hurry; quickly",
     "category": "Uncategorized"
   },
   "תמהוננו": {
