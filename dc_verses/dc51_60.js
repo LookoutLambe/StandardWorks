@@ -1800,8 +1800,8 @@ var dc58_ch1Verses = [
     ["לֹא","not"],
     ["בָאָה","is come"],
     ["אַךְ","but"],
-    ["קְרוֹבָה","is near"],
-    ["הִיא׃","it"]
+    ["קְרוֹבָה","near"],
+    ["הִיא׃","it is"]
   ]},
   { num: "ה", words: [
     ["זִכְרוּ","remember"],
@@ -2009,7 +2009,7 @@ var dc58_ch1Verses = [
     ["הוּא","he"],
     ["מוֹשֵׁל","is ruler"],
     ["כִּי","but"],
-    ["אִם",""],
+    ["אִם","rather"],
     ["יִמְשֹׁל","let rule"],
     ["אֱלֹהִים","God"],
     ["בַּשּׁוֹפֵט","over him that judges"],
@@ -2298,7 +2298,7 @@ var dc58_ch1Verses = [
     ["וְיָשׁוּב","and let him repent"],
     ["מֵחֲטָאָיו","of his sins"],
     ["כִּי","for"],
-    ["מְבַקֵּשׁ","he seeks"],
+    ["מְבַקֵּשׁ","seeks"],
     ["הוּא","he"],
     ["תְּהִלַּת","the praise of"],
     ["הָעוֹלָם׃","the world"]
@@ -2392,8 +2392,8 @@ var dc58_ch1Verses = [
   { num: "מז", words: [
     ["יִקְרְאוּ","let them preach"],
     ["בַדֶּרֶךְ","by the way"],
-    ["וְיָעִידוּ","and bear testimony"],
-    ["עֵדוּת","testimony"],
+    ["וְיָעִידוּ","and bear"],
+    ["עֵדוּת","the testimony of"],
     ["הָאֱמֶת","of the truth"],
     ["בְּכׇל","in every"],
     ["מָקוֹם","place"],
@@ -2481,7 +2481,7 @@ var dc58_ch1Verses = [
     ["אֱלֹהִים׃","God"]
   ]},
   { num: "נה", words: [["יֵעָשׂוּ","let be done"], ["כׇל","all"], ["הַדְּבָרִים","the things"], ["הָאֵלֶּה","these"], ["בְּסֵדֶר","in order"], ["וְיִוָּדְעוּ","and let be made known"], ["זְכֻיּוֹת","the privileges of"], ["הָאֲרָצוֹת","the lands"], ["מֵעֵת","from time"], ["לְעֵת","to time"], ["בִּידֵי","by the hands of"], ["הַפָּקִיד","the bishop"], ["אוֹ","or"], ["סֹכֵן","the agent of"], ["הַכְּנֵסִיָּה׃","the church"]]},
-  { num: "נו", words: [["וְאַל","and let not"], ["תֵּעָשֶׂה","be done"], ["מְלֶאכֶת","the work of"], ["הַקִּבּוּץ","the gathering"], ["בְּחִפָּזוֹן","in haste"], ["וְלֹא","nor"], ["בִמְנוּסָה","by flight"], ["כִּי","but"], ["אִם",""], ["תֵעָשֶׂה","let it be done"], ["כַּאֲשֶׁר","as"], ["יִוָּעֲצוּ","shall counsel"], ["זִקְנֵי","the elders of"], ["הַכְּנֵסִיָּה","the church"], ["בָּאֲסֵפוֹת","at the conferences"], ["לְפִי","according to"], ["הַדַּעַת","the knowledge"], ["אֲשֶׁר","which"], ["יְקַבְּלוּ","they receive"], ["מֵעֵת","from time"], ["לְעֵת׃","to time"]]},
+  { num: "נו", words: [["וְאַל","and let not"], ["תֵּעָשֶׂה","be done"], ["מְלֶאכֶת","the work of"], ["הַקִּבּוּץ","the gathering"], ["בְּחִפָּזוֹן","in haste"], ["וְלֹא","nor"], ["בִמְנוּסָה","by flight"], ["כִּי","but"], ["אִם","rather"], ["תֵעָשֶׂה","let it be done"], ["כַּאֲשֶׁר","as"], ["יִוָּעֲצוּ","shall counsel"], ["זִקְנֵי","the elders of"], ["הַכְּנֵסִיָּה","the church"], ["בָּאֲסֵפוֹת","at the conferences"], ["לְפִי","according to"], ["הַדַּעַת","the knowledge"], ["אֲשֶׁר","which"], ["יְקַבְּלוּ","they receive"], ["מֵעֵת","from time"], ["לְעֵת׃","to time"]]},
   { num: "נז", words: [
     ["וְעַבְדִּי","and let my servant"],
     ["סִידְנִי","Sidney"],
@@ -2530,7 +2530,7 @@ var dc58_ch1Verses = [
     ["הָאָרֶץ","the land"],
     ["הַזֹּאת","this"],
     ["כִּי","except"],
-    ["אִם",""],
+    ["אִם","if"],
     ["יָעִיד","he bear record"],
     ["בַּדֶּרֶךְ","by the way"],
     ["עַל","of"],
@@ -2569,7 +2569,7 @@ var dc58_ch1Verses = [
     ["יֵצֵא","must go forth"],
     ["הַקּוֹל","the sound"],
     ["מִן","from"],
-    ["הַמָּקוֹם","place"],
+    ["הַמָּקוֹם","the place"],
     ["הַזֶּה","this"],
     ["לְכׇל","into all"],
     ["הָעוֹלָם","the world"],
@@ -2589,7 +2589,7 @@ var dc58_ch1Verses = [
     ["בֶן","the Son of"],
     ["הָאָדָם","Man"],
     ["בָּא","comes"],
-    ["אָמֵן׃","amen"]
+    ["אָמֵן׃","Amen"]
   ]}
 ];
 renderVerseSet(dc58_ch1Verses, 'dc58-ch1-verses');
