@@ -5287,13 +5287,13 @@ var dc107_ch1Verses = [
     ["אֲשֶׁר","who"],
     ["הֻסְמַךְ","was ordained"],
     ["בְּיַד","by the hand of"],
-    
     ["אָדָם","Adam"],
     ["בִּהְיוֹתוֹ","at the age of"],
     ["בֶּן","aged"],
     ["שִׁשִּׁים","sixty-"],
     ["וָתֵשַׁע","nine"],
     ["שָׁנָה","years"],
+    ["וּבֹרַךְ","and was blessed"],
     ["עַל","by"],
     ["יָדוֹ","his hand"],
     ["שָׁלֹשׁ","three"],
@@ -5311,9 +5311,11 @@ var dc107_ch1Verses = [
     ["יִהְיֶה","should be"],
     ["בְּחִירֵי","the chosen of"],
     ["יְהוָה","the Lord"],
+    ["וְכִי־יִשָּׁמְרוּ","and that they should be preserved"],
     ["עַד","unto"],
     ["קֵץ","the end of"],
     ["הָאָרֶץ׃","the earth"]
+  
   ]},
   { num: "מג", words: [
     ["כִּי","Because"],
@@ -5366,11 +5368,15 @@ var dc107_ch1Verses = [
     ["אֶת־אָדָם","Adam"],
     ["בְּנָסְעוֹ","in journeying"],
     ["לַמָּקוֹם","to the place"],
+    ["שֵׁדוֹלָמָק","Shedolamak"],
     ["וְהָיָה","and he was"],
     ["בֶּן","being"],
     ["שְׁמוֹנִים","eighty-"],
     ["וָשֶׁבַע","seven"],
-    ["שָׁנָה׃","years old"]
+    ["שָׁנָה","years old"],
+    ["בְּקַבְּלוֹ","when he received"],
+    ["אֶת־סְמִיכָתוֹ׃","his ordination"]
+  
   ]},
   { num: "מו", words: [
     ["מַהֲלַלְאֵל","Mahalaleel"],
@@ -5702,7 +5708,7 @@ var dc107_ch1Verses = [
     ["עַל־דִּבְרָתִי","after the order of"],
     ["מַלְכִּי־צֶדֶק׃","Melchizedek"]
   ]},
-  { num: "עד", words: [["כָּךְ","Thus"], ["יִהְיֶה","shall he be"], ["שׁוֹפֵט","a judge"], ["אָכֵן","even"], ["שׁוֹפֵט","a judge"], ["לַכֹּל","common"], ["בֵּין","among"], ["יוֹשְׁבֵי","the inhabitants of"], ["צִיּוֹן","Zion"], ["אוֹ","or"], ["בְּיָתֵד","in a stake of"], ["צִיּוֹן","Zion"], ["אוֹ","or"], ["בְּכׇל־סְנִיף","in any branch of"], ["הַכְּנֵסִיָּה","the church"], ["אֲשֶׁר","where"], ["יֻפְרַשׁ","he shall be set apart"], ["לַשֵּׁרוּת","unto ministry"], ["הַזֶּה","this"], ["עַד","until"], ["גְּבוּלוֹת","the borders of"], ["צִיּוֹן","Zion are enlarged"], ["וְיִהְיֶה","and there becomes"], ["צֹרֶךְ","need"], ["אוֹ","to have"], ["שׁוֹפְטִים","judges"], ["אֲחֵרִים","other"], ["בְּצִיּוֹן","in Zion"], ["אוֹ","or"], ["בְּמָקוֹם","in a place"], ["אַחֵר׃","else"]]},
+  { num: "עד", words: [["כָּךְ","Thus"], ["יִהְיֶה","shall he be"], ["שׁוֹפֵט","a judge"], ["אָכֵן","even"], ["שׁוֹפֵט","a judge"], ["לַכֹּל","for all"], ["בֵּין","among"], ["יוֹשְׁבֵי","the inhabitants of"], ["צִיּוֹן","Zion"], ["אוֹ","or"], ["בְּיָתֵד","in a stake of"], ["צִיּוֹן","Zion"], ["אוֹ","or"], ["בְּכׇל־סְנִיף","in any branch of"], ["הַכְּנֵסִיָּה","the church"], ["אֲשֶׁר","where"], ["יֻפְרַשׁ","he shall be set apart"], ["לַשֵּׁרוּת","unto ministry"], ["הַזֶּה","this"], ["עַד","until"], ["גְּבוּלוֹת","the borders of"], ["צִיּוֹן","Zion are enlarged"], ["וְיִהְיֶה","and there becomes"], ["צֹרֶךְ","need"], ["אוֹ","to have"], ["שׁוֹפְטִים","judges"], ["אֲחֵרִים","other"], ["בְּצִיּוֹן","in Zion"], ["אוֹ","or"], ["בְּמָקוֹם","in a place"], ["אַחֵר׃","else"]]},
   { num: "עה", words: [
     ["וּכְפִי","And inasmuch as"],
     ["אֲשֶׁר","that"],
@@ -6284,7 +6290,7 @@ var dc110_ch1Verses = [
   { num: "י", words: [
     ["וְיָצָא","And shall go forth"],
     ["שֵׁם","the fame of"],
-    ["הַבַּיִת","of house"],
+    ["הַבַּיִת","the house"],
     ["הַזֶּה","this"],
     ["בְּאַרְצוֹת","into lands;"],
     ["נֵכָר","foreign"],
@@ -6303,7 +6309,7 @@ var dc110_ch1Verses = [
   { num: "יא", words: [
     ["אַחֲרֵי","After"],
     ["כְלוֹת","ended,"],
-    ["הַמַּרְאֶה","vision"],
+    ["הַמַּרְאֶה","the vision"],
     ["הַזֶּה","this"],
     ["נִפְתְּחוּ","were opened"],
     ["הַשָּׁמַיִם","the heavens"],
@@ -6347,7 +6353,7 @@ var dc110_ch1Verses = [
   { num: "יג", words: [
     ["אַחֲרֵי","After"],
     ["כְלוֹת","had ended,"],
-    ["הַמַּרְאֶה","vision"],
+    ["הַמַּרְאֶה","the vision"],
     ["הַזֶּה","this"],
     ["פָּרַץ","burst"],
     ["עָלֵינוּ","upon us;"],
