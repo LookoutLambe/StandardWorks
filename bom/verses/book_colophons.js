@@ -2,8 +2,8 @@
 (function() {
 var n2_colophonVerses = [
   { num:"", english:"An account of the death of Lehi. Nephi's brethren rebel against him. The Lord warns Nephi to depart into the wilderness. His journeyings in the wilderness, and so forth.", words:[
-    ["זִכָּרוֹן","An account of"],
-    ["לְמוֹת","the death of"],
+    ["דִּבְרֵי","An account of"],
+    ["מוֹת","the death of"],
     ["לֶחִי","Lehi"],
     ["וַיִּפְשְׁעוּ","rebel"],
     ["אֲחֵי","the brethren of"],
@@ -56,8 +56,8 @@ var jc_colophonVerses = [
 ];
 var al_colophonVerses = [
   { num:"", english:"The account of Alma, who was the son of Alma, the first and chief judge over the people of Nephi, and also the high priest over the Church. An account of the reign of the judges, and the wars and contentions among the people. And also an account of a war between the Nephites and the Lamanites, according to the record of Alma, the first and chief judge.", words:[
-    ["זִכָּרוֹן","The account of"],
-    ["לְאַלְמָא","of Alma"],
+    ["דִּבְרֵי","The account of"],
+    ["אַלְמָא","Alma"],
     ["אֲשֶׁר","who"],
     ["הָיָה","was"],
     ["לְבֶן־אַלְמָא","son of Alma"],
@@ -66,15 +66,15 @@ var al_colophonVerses = [
     ["הָרִאשׁוֹן","the first"],
     ["עַל־עֲדַת","over the church of"],
     ["הָאֵל","God"],
-    ["וְזִכָּרוֹן","and an account of"],
-    ["לְמַלְכוּת","of the reign of"],
+    ["וְדִבְרֵי","and an account of"],
+    ["מַלְכוּת","the reign of"],
     ["הַשֹּׁפְטִים","the judges"],
     ["וְלַמִּלְחָמוֹת","and their wars"],
     ["וְלַמַּחֲלֹקֶת","and their dissensions"],
     ["בִּימֵי","in the days of"],
     ["הָעָם","the people"],
     ["עַל־פִּי","according to"],
-    ["זִכָּרוֹן","The account of"],
+    ["דִּבְרֵי","The account of"],
     ["אַלְמָא","Alma"],
     ["הַכֹּהֵן","the priest"],
     ["הַגָּדוֹל","the great"],
@@ -86,23 +86,23 @@ var al_colophonVerses = [
 ];
 var he_colophonVerses = [
   { num:"", english:"An account of the Nephites. Their wars and contentions, and their dissensions. And also the prophecies of many holy prophets, before the coming of Christ, according to the records of Helaman, who was the son of Helaman, and also according to the records of his sons, even down to the coming of Christ. And also many of the Lamanites are converted. An account of their conversion. An account of the righteousness of the Lamanites, and the wickedness and abominations of the Nephites, according to the record of Helaman and his sons, even down to the coming of Christ, which is called the book of Helaman, and so forth.", words:[
-    ["זִכָּרוֹן","An account of"],
-    ["לִבְנֵי","of the sons of"],
+    ["דִּבְרֵי","An account of"],
+    ["בְּנֵי","the sons of"],
     ["הֵילָמָן","Helaman"],
     ["עַל־פִּי","according to"],
-    ["זִכָּרוֹנָם","their record"],
+    ["דִּבְרֵיהֶם","their record"],
     ["וְעַל־פִּי","and according to"],
-    ["זִכָּרוֹן","An account of"],
+    ["דִּבְרֵי","An account of"],
     ["עַמָּם","their people"],
     ["וּבוֹ","and in it"],
     ["נִכְלָל","is contained"],
-    ["זִכָּרוֹן","An account of"],
-    ["לְמִלְחֲמוֹתָם","of their wars"],
+    ["דִּבְרֵי","An account of"],
+    ["מִלְחֲמוֹתָם","their wars"],
     ["וּלְמַחֲלֹקֹתָם","and their contentions"],
     ["וּלְמַחֲלֹקֶת","and dissension of"],
     ["עַמָּם","their people"],
-    ["וְזִכָּרוֹן","and a remembrance"],
-    ["לִנְבוּאוֹתֵיהֶם","of their prophecies"],
+    ["וְדִבְרֵי","and a remembrance"],
+    ["נְבוּאוֹתֵיהֶם","their prophecies"],
     ["רַבִּים","many"],
     ["מִנְּבִיאִים","of prophets"],
     ["קְדוֹשִׁים","holy"],
@@ -113,8 +113,8 @@ var he_colophonVerses = [
     ["הָאִגְּרוֹת","the epistles"],
     ["אֲשֶׁר","which"],
     ["נִכְתְּבוּ","were written"],
-    ["בִידֵי","by the hand of"],
-    ["בְנֵי","the sons of"],
+    ["בִּידֵי","by the hand of"],
+    ["בְּנֵי","the sons of"],
     ["הֵילָמָן","Helaman"],
     ["עַד־בּוֹא","until the coming of"],
     ["הַמָּשִׁיחַ","the Messiah"],
@@ -124,7 +124,7 @@ var he_colophonVerses = [
     ["סֵפֶר","the book of"],
     ["הֵילָמָן","Helaman"],
     ["עַל־פִּי","according to"],
-    ["זִכָּרוֹן","An account of"],
+    ["דִּבְרֵי","An account of"],
     ["בְּנֵי","the sons of"],
     ["הֵילָמָן","Helaman"],
     ["׃",""]
@@ -158,18 +158,18 @@ var tn_colophonVerses = [
 ];
 var fn_colophonVerses = [
   { num:"", english:"An account of the people of Nephi, according to his record.", words:[
-    ["זִכָּרוֹן","An account of"],
-    ["לְעַם","of the people of"],
+    ["דִּבְרֵי","An account of"],
+    ["עַם","the people of"],
     ["נֶפִי","Nephi"],
     ["עַל־פִּי","according to"],
-    ["זִכָּרוֹנוֹ","his record"],
+    ["דְּבָרָיו","his record"],
     ["׃",""]
   ]}
 ];
 var et_colophonVerses = [
   { num:"", english:"The record of the Jaredites, taken from the twenty-four plates found by the people of Limhi in the days of King Mosiah.", words:[
-    ["זִכָּרוֹן","The record of"],
-    ["לִבְנֵי","of the sons of"],
+    ["דִּבְרֵי","The record of"],
+    ["בְּנֵי","the sons of"],
     ["יָרֶד","Jared"],
     ["אֲשֶׁר","who"],
     ["נָסְעוּ","journeyed"],
@@ -183,11 +183,11 @@ var et_colophonVerses = [
     ["בְּכָל־פְּנֵי","upon all the face of"],
     ["הָאֲדָמָה","the earth"],
     ["עַל־פִּי","according to"],
-    ["זִכָּרוֹן","The record of"],
+    ["דִּבְרֵי","The record of"],
     ["מוֹרוֹנִי","Moroni"],
     ["אֲשֶׁר","who"],
     ["לָקַח","took"],
-    ["אֶת־זִכָּרוֹנוֹ","his record"],
+    ["אֶת־דְּבָרָיו","his record"],
     ["מֵעֶשְׂרִים","from twenty"],
     ["וְאַרְבָּעָה","and four"],
     ["הַלּוּחוֹת","plates"],
