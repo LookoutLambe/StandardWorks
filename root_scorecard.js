@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '10';   // bump when the generated data files change
+  var RSC_V = '11';   // bump when the generated data files change
 
   var cfg = { vol: '', base: '' };
   var keyIdx = null;         // rootKey -> index, built once
@@ -135,7 +135,12 @@
       // scholarly one (ʼâçaph): laymen read "asaf", not diacritics.
       if (typeof window.transliterate === 'function') { try { translit = window.transliterate(heb); } catch (eT) {} }
       if (!translit) translit = e.x || '';
-      var cons = heb.replace(/[֑-ֽֿ-׀׃-ׇ]/g, '');
+      // Strip the shin/sin dots too (U+05C1-2). The maqqef-preserving range
+      // used elsewhere leaves them on, so שׁוּב keyed as 4 characters and never
+      // matched the glossary's 3-character שוב — the override silently missed
+      // and Strong's crude gloss won. That hid the real meaning of all 418
+      // roots containing ש: שׁוּב showed "again" instead of "to return, repent".
+      var cons = heb.replace(/[\u0591-\u05BD\u05BF-\u05C7]/g, '');
       var cur = (window._rootGlossaryData || {})[cons];
       if (cur && cur.meaning) meaning = cur.meaning;
     } else {
