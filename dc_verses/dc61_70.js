@@ -690,7 +690,7 @@ var dc62_ch1Verses = [
     ["לָשׁוּב","return"],
     ["לְהָעִיד","to bear record"],
     ["אָכֵן","yea"],
-    ["כֻּלְּכֶם","altogether"],
+    ["כֻּלְּכֶם","all of you"],
     ["יַחְדָּו","together"],
     ["אוֹ","or"],
     ["שְׁנַיִם","two"],
