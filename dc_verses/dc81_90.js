@@ -3902,11 +3902,11 @@ var dc88_ch1Verses = [
     ["לְבַבְכֶם","your heart"],
     ["וְתִמְצְאוּנִי","and you shall find me-;"],
     ["שַׁאֲלוּ","-ask"],
-    ["וְתִנָּתֵן","and it shall be given"],
-    ["לָכֶם","unto you-;"],
+    ["וּתְקַבְּלוּ","and you shall receive"],
     ["דִּפְקוּ","-knock"],
     ["וְיִפָּתַח","and it shall be opened"],
     ["לָכֶם׃","unto you."]
+  
   ]},
   { num: "סד", words: [
     ["כׇּל","Whatsoever"],
@@ -4363,8 +4363,9 @@ var dc88_ch1Verses = [
     ["לֹא","not"],
     ["יָמִים","days"],
     ["רַבִּים","many"],
-    ["וְהָאָרֶץ","hence and the earth"],
+    ["וְהָאָרֶץ","and the earth"],
     ["תִּרְעַשׁ","shall tremble"],
+    ["וְתָנוּעַ","and reel"],
     ["הֵנָּה","to"],
     ["וָהֵנָּה","and fro"],
     ["כְּשִׁכּוֹר","as a drunken man"],
@@ -4383,8 +4384,9 @@ var dc88_ch1Verses = [
     ["וְיִפְּלוּ","and shall fall"],
     ["אַרְצָה","down"],
     ["כִּתְאֵנָה","as a fig"],
-    ["מֵעֵץ","that falls from off"],
-    ["תְּאֵנָה׃","a fig tree."]
+    ["מֵעֵץ","from a tree of"],
+    ["תְּאֵנָה׃","fig"]
+  
   ]},
   { num: "פח", words: [
     ["וְאַחֲרֵי","And after"],
@@ -5100,7 +5102,7 @@ var dc88_ch1Verses = [
     ["לִהְיוֹת","to be"],
     ["טְמֵאִים","unclean-;"],
     ["חִדְלוּ","-cease"],
-    ["לָתֵת","to find give"],
+    ["לָתֵת","to give"],
     ["דֹּפִי","fault"],
     ["זֶה","one"],
     ["בָּזֶה","with another-;"],
@@ -5246,8 +5248,8 @@ var dc88_ch1Verses = [
     ["הָאֵלֶּה׃","these:"]
   ]},
   { num: "קלג", words: [
-    ["הֲאָח","Are a brother"],
-    ["אַתָּה","you"],
+    ["הֲאָח","a brother"],
+    ["אַתָּה","are you"],
     ["אוֹ","or"],
     ["אַחִים","brethren?"],
     ["אֲנִי","I"],
@@ -5281,13 +5283,13 @@ var dc88_ch1Verses = [
     ["וְאָחִיךָ","and brother"],
     ["בְּחֶסֶד","through the grace of"],
     ["אֱלֹהִים","God"],
-    ["בַּעֲבֹתוֹת","in the bonds cords of"],
+    ["בַּעֲבֹתוֹת","in the cords of"],
     ["אַהֲבָה","love"],
     ["לָלֶכֶת","to walk"],
     ["בְּכׇל","in all"],
     ["מִצְווֹת","the commandments of"],
     ["אֱלֹהִים","God"],
-    ["בְּלִי","blameless"],
+    ["בְּלִי","without"],
     ["דֹפִי","blemish"],
     ["בְּתוֹדָה","in thanksgiving"],
     ["לְעוֹלָם","forever"],
