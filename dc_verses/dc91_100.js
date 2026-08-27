@@ -2282,7 +2282,7 @@ var dc98_ch1Verses = [
     ["פֶּן","lest"],
     ["אָבוֹא","I come"],
     ["וְהִכֵּיתִי","and smite"],
-    ["אֶת־הָאָרֶץ","the earth"],
+    ["אֶת־כׇל־הָאָרֶץ","the whole earth"],
     ["חֵרֶם","with a curse,"],
     ["וְכׇל־בָּשָׂר","and all flesh"],
     ["יִכְלֶה","be consumed"],
@@ -2400,8 +2400,8 @@ var dc98_ch1Verses = [
     ["אִם","if"],
     ["לֹא","not"],
     ["תִשְׂאוּ","you bear it"],
-    ["בְּאֹרֶךְ","in length patience"],
-    ["רוּחַ","of spirit,"],
+    ["בְּאֹרֶךְ","in length of"],
+    ["רוּחַ","spirit"],
     ["יֵחָשֵׁב","it shall be accounted"],
     ["לָכֶם","unto you"],
     ["כְּמִדָּה","as a measure"],
@@ -2624,6 +2624,7 @@ var dc98_ch1Verses = [
     ["אֶתֵּן","would give"],
     ["לָהֶם","unto them"],
     ["מִצְוָה","a commandment,"],
+    ["וְהִצְדַּקְתִּים","and justify them"],
     ["לָצֵאת","in going out"],
     ["לְמִלְחָמָה","to battle"],
     ["עַל","against"],
@@ -2632,6 +2633,7 @@ var dc98_ch1Verses = [
     ["הַלָּשׁוֹן","tongue,"],
     ["אוֹ","or"],
     ["הָעָם׃","people."]
+  
   ]},
   { num: "לז", words: [
     ["וַאֲנִי","and I"],
