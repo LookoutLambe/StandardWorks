@@ -2781,7 +2781,7 @@ var dc67_ch1Verses = [
     ["מֵאֲבִי","from the Father of"],
     ["הָאוֹרוֹת׃","lights"]
   ]},
-  { num: "י", words: [["וְעוֹד","and again"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["זְכוּתְכֶם","it is your privilege"], ["הִיא","it"], ["וְהַבְטָחָה","and a promise"], ["אֲנִי","I"], ["נוֹתֵן","give"], ["לָכֶם","unto you"], ["אֲשֶׁר","who"], ["לָעֲבוֹדָה","unto ministry"], ["הַזֹּאת","this"], ["כִּי","that"], ["אִם","inasmuch as"], ["תִּפְשְׁטוּ","you strip"], ["מֵעֲלֵיכֶם","from you"], ["קִנְאוֹת","jealousies"], ["וּפְחָדִים","and fears"], ["וְתִכָּנְעוּ","and humble yourselves"], ["לְפָנַי","before me"], ["כִּי","for"], ["אֵינְכֶם","you are not"], ["עֲנָוִים","humble"], ["דַּי","sufficiently"], ["הַפָּרֹכֶת","the veil"], ["תִּקָּרַע","shall be rent"], ["וְתִרְאוּנִי","and you shall see me"], ["וְתֵדְעוּ","and you shall know"], ["כִּי","that"], ["אֲנִי","I"], ["הוּא","am"], ["לֹא","not"], ["בַּדַּעַת","with the mind"], ["הַבְּשָׂרִית","carnal"], ["וְלֹא","neither"], ["הַנַּפְשִׁית","natural"], ["כִּי־אִם","but"], ["בָּרוּחָנִית׃","with the spiritual"]]},
+  { num: "י", words: [["וְעוֹד","and again"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["זְכוּתְכֶם","it is your privilege"], ["הִיא","it"], ["וְהַבְטָחָה","and a promise"], ["אֲנִי","I"], ["נוֹתֵן","give"], ["לָכֶם","unto you"], ["אֲשֶׁר","who"], ["נִסְמַכְתֶּם","have been ordained"], ["לָעֲבוֹדָה","unto ministry"], ["הַזֹּאת","this"], ["כִּי","that"], ["אִם","inasmuch as"], ["תִּפְשְׁטוּ","you strip"], ["מֵעֲלֵיכֶם","from you"], ["קִנְאוֹת","jealousies"], ["וּפְחָדִים","and fears"], ["וְתִכָּנְעוּ","and humble yourselves"], ["לְפָנַי","before me"], ["כִּי","for"], ["אֵינְכֶם","you are not"], ["עֲנָוִים","humble"], ["דַּי","sufficiently"], ["הַפָּרֹכֶת","the veil"], ["תִּקָּרַע","shall be rent"], ["וְתִרְאוּנִי","and you shall see me"], ["וְתֵדְעוּ","and you shall know"], ["כִּי","that"], ["אֲנִי","I"], ["הוּא","am"], ["לֹא","not"], ["בַּדַּעַת","with the mind"], ["הַבְּשָׂרִית","carnal"], ["וְלֹא","neither"], ["הַנַּפְשִׁית","natural"], ["כִּי־אִם","but"], ["בָּרוּחָנִית׃","with the spiritual"]]},
   { num: "יא", words: [
     ["כִּי","for"],
     ["לֹא","not"],
@@ -2972,13 +2972,13 @@ var dc68_ch1Verses = [
     ["כִּי","except"],
     ["אִם","if"],
     ["יִהְיוּ","they be"],
-    ["זֶרַע","the literal seed of"],
+    ["זֶרַע","the seed of"],
     ["אַהֲרֹן׃","Aaron"]
   ]},
   { num: "טז", words: [
     ["וְאִם","and if"],
     ["יִהְיוּ","they be"],
-    ["זֶרַע","the literal seed of"],
+    ["זֶרַע","the seed of"],
     ["אַהֲרֹן","Aaron"],
     ["יֵשׁ","there is"],
     ["לָהֶם","unto them"],
@@ -3007,7 +3007,7 @@ var dc68_ch1Verses = [
     ["עָלֶיהָ׃","of the same"]
   ]},
   { num: "יח", words: [
-    ["אֵין","there is no right"],
+    ["אֵין","there is no"],
     ["לְאִישׁ","unto any man"],
     ["זְכוּת","right"],
     ["כַּמִּשְׁפָּט","legal"],
@@ -3021,7 +3021,7 @@ var dc68_ch1Verses = [
     ["כִּי","except"],
     ["אִם","if"],
     ["יִהְיֶה","he be"],
-    ["זֶרַע","the literal seed"],
+    ["זֶרַע","the seed of"],
     ["וּבְכוֹר","and the firstborn"],
     ["לְאַהֲרֹן׃","of Aaron"]
   ]},
@@ -3044,7 +3044,7 @@ var dc68_ch1Verses = [
     ["כַּאֲשֶׁר","when"],
     ["לֹא","not"],
     ["נִמְצָא","can be found"],
-    ["זֶרַע","the literal seed of"],
+    ["זֶרַע","the seed of"],
     ["אַהֲרֹן","Aaron"],
     ["אַךְ","provided"],
     ["אִם","that"],
@@ -3060,7 +3060,7 @@ var dc68_ch1Verses = [
     ["מַלְכִּיצֶדֶק׃","Melchizedek"]
   ]},
   { num: "כ", words: [
-    ["וְזֶרַע","and the literal seed of"],
+    ["וְזֶרַע","and the seed of"],
     ["אַהֲרֹן","Aaron"],
     ["גַּם","also"],
     ["כֵּן","so"],
@@ -3222,6 +3222,7 @@ var dc68_ch1Verses = [
     ["תְּפִלּוֹתָיו","his prayers"],
     ["לִפְנֵי","before"],
     ["יְהוָה","the Lord"],
+    ["בְּעִתָּן","in the season thereof"],
     ["יִזָּכֵר","let him be had in remembrance"],
     ["לִפְנֵי","before"],
     ["שׁוֹפֵט","the judge of"],
@@ -3355,6 +3356,7 @@ var dc70_ch1Verses = [
     ["אֲנִי","I"],
     ["יְהוָה","the Lord"],
     ["מִנִּיתִים","have appointed them"],
+    ["וּסְמַכְתִּים","and ordained them"],
     ["לִהְיוֹת","to be"],
     ["סֹכְנִים","stewards"],
     ["עַל","over"],
@@ -3378,7 +3380,7 @@ var dc70_ch1Verses = [
     ["בְּיוֹם","in the day of"],
     ["הַמִּשְׁפָּט׃","judgment"]
   ]},
-  { num: "ה", words: [["לָכֵן","therefore"], ["מִנִּיתִים","I have appointed them"], ["וְזֹאת","and this is"], ["עֲבוֹדָתָם","their ministry"], ["בִּכְנֵסִיַּת","in the church of"], ["אֱלֹהִים","God"], ["לְנַהֵל","to manage"], ["אוֹתָם","them"], ["וְאֶת","and"], ["עִנְיְנֵיהֶם","their concerns"], ["אָכֵן","yea"], ["אֶת־טוֹבוֹתֵיהֶם׃","the benefits thereof"]]},
+  { num: "ה", words: [["לָכֵן","therefore"], ["מִנִּיתִים","I have appointed them"], ["וְזֹאת","and this is"], ["עֲבוֹדָתָם","their business"], ["בִּכְנֵסִיַּת","in the church of"], ["אֱלֹהִים","God"], ["לְנַהֵל","to manage"], ["אוֹתָם","them"], ["וְאֶת","and"], ["עִנְיְנֵיהֶם","their concerns"], ["אָכֵן","yea"], ["אֶת־טוֹבוֹתֵיהֶם׃","the benefits thereof"]]},
   { num: "ו", words: [["לָכֵן","wherefore"], ["מִצְוָה","a commandment"], ["אֲנִי","I"], ["נוֹתֵן","give"], ["לָהֶם","unto them"], ["אֲשֶׁר","that"], ["לֹא","not"], ["יִתְּנוּ","they shall give"], ["אֶת־הַדְּבָרִים","the things"], ["הָאֵלֶּה","these"], ["לַכְּנֵסִיָּה","unto the church"], ["וְלֹא","neither"], ["לָעוֹלָם׃","unto the world"]]},
   { num: "ז", words: [
     ["אֲבָל","nevertheless"],
