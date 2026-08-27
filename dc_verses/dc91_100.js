@@ -1384,25 +1384,7 @@ var dc95_ch1Verses = [
     ["בֶּחָצֵר","in the ... court"],
     ["הַפְּנִימִית׃","inner ... thereof."]
   ]},
-  { num: "טז", words: [
-    ["וְהַחֵלֶק","And let the ... part"],
-    ["הַתַּחְתּוֹן","lower"],
-    ["בֶּחָצֵר","of the ... court"],
-    ["הַפְּנִימִי","inner"],
-    ["יֻקְדַּשׁ","be dedicated"],
-    ["לִי","unto me"],
-    ["לְקָרְבַּן","for ... offering,"],
-    ["שַׁבְּתְכֶם","your sacrament"],
-    ["וְלִדְרָשַׁתְכֶם","and for your preaching,"],
-    ["וּלְצוֹמְכֶם","and your fasting,"],
-    ["וְלִתְפִלַּתְכֶם","and your praying,"],
-    ["וּלְהַעֲלוֹת","and the offering up of"],
-    ["מִשְׁאֲלוֹתֵיכֶם","your ... desires"],
-    ["הַקְּדוֹשׁוֹת","most holy"],
-    ["לְפָנַי","unto me,"],
-    ["אָמַר","saith"],
-    ["אֲדוֹנְכֶם׃","your Lord."]
-  ]},
+  { num: "טז", words: [["וְהַחֵלֶק","And let the ... part"], ["הַתַּחְתּוֹן","lower"], ["בֶּחָצֵר","of the ... court"], ["הַפְּנִימִי","inner"], ["יֻקְדַּשׁ","be dedicated"], ["לִי","unto me"], ["לְקָרְבַּן","for ... offering,"], ["סְעוּדַתְכֶם","your sacrament"], ["וְלִדְרָשַׁתְכֶם","and for your preaching,"], ["וּלְצוֹמְכֶם","and your fasting,"], ["וְלִתְפִלַּתְכֶם","and your praying,"], ["וּלְהַעֲלוֹת","and the offering up of"], ["מִשְׁאֲלוֹתֵיכֶם","your ... desires"], ["הַקְּדוֹשׁוֹת","most holy"], ["לְפָנַי","unto me,"], ["אָמַר","saith"], ["אֲדוֹנְכֶם׃","your Lord."]]},
   { num: "יז", words: [
     ["וְהַחֵלֶק","And let the ... part"],
     ["הָעֶלְיוֹן","higher"],
