@@ -96,7 +96,7 @@ var dc131_ch1Verses = [
     ["רוֹאִים","can see"],
     ["אוֹתוֹ","it;"],
     ["אַךְ","but"],
-    ["בְּהִטַּהֵר","when ... are purified"],
+    ["בְּהִטַּהֵר","when are purified"],
     ["גְּוִיּוֹתֵינוּ","our bodies"],
     ["נִרְאֶה","we shall see"],
     ["כִּי","that"],
