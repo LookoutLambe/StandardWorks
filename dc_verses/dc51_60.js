@@ -2685,7 +2685,7 @@ var dc59_ch1Verses = [
     ["בְּכׇל","with all"],
     ["עֻזְּךָ","your might"],
     ["בְּכׇל","with all"],
-    ["נַפְשְׁךָ","your soul"],
+    ["נַפְשְׁךָ","your mind"],
     ["וּבְכׇל","and with all"],
     ["מְאֹדֶךָ","your strength"],
     ["וּבְשֵׁם","and in the name of"],
