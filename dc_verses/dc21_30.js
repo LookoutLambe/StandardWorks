@@ -264,7 +264,7 @@ renderVerseSet(dc24_ch1Verses, 'dc24-ch1-verses');
 
 
 var dc25_ch1Verses = [
-  { num: "א", words: [["הַאֲזִינִי","hearken"], ["לְקוֹל","unto the voice of"], ["יְהוָה","the Lord"], ["אֱלֹהַיִךְ","your God"], ["בְּדַבְּרִי","while I speak"], ["אֵלַיִךְ","unto you"], ["אֶמָּה","Emma"], ["סְמִית","Smith"], ["בִּתִּי","my daughter"], ["כִּי","for"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָךְ","unto you"], ["כׇּל","all"], ["הַמְקַבְּלִים","those who receive"], ["אֶת־בְּשׂוֹרָתִי","my gospel"], ["בָּנִים","are sons"], ["וּבָנוֹת","and daughters"], ["הֵם","they are"], ["בְּמַלְכוּתִי׃","in my kingdom"]]},
+  { num: "א", words: [["שִׁמְעִי","hearken"], ["לְקוֹל","unto the voice of"], ["יְהוָה","the Lord"], ["אֱלֹהַיִךְ","your God"], ["בְּדַבְּרִי","while I speak"], ["אֵלַיִךְ","unto you"], ["אֶמָּה","Emma"], ["סְמִית","Smith"], ["בִּתִּי","my daughter"], ["כִּי","for"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָךְ","unto you"], ["כׇּל","all"], ["הַמְקַבְּלִים","those who receive"], ["אֶת־בְּשׂוֹרָתִי","my gospel"], ["בָּנִים","are sons"], ["וּבָנוֹת","and daughters"], ["הֵם","they are"], ["בְּמַלְכוּתִי׃","in my kingdom"]]},
   { num: "ב", words: [["חָזוֹן","a revelation"], ["נֹתֵן","giving"], ["אֲנִי","I am"], ["לָךְ","unto you"], ["עַל","concerning"], ["רְצוֹנִי","my will"], ["וְאִם","and if"], ["תִּהְיִי","you are"], ["נֶאֱמָנָה","faithful"], ["וְתֵלְכִי","and walk"], ["בִּנְתִיבוֹת","in the paths of"], ["הַיֹּשֶׁר","virtue"], ["לְפָנַי","before me"], ["אֶשְׁמֹר","I will preserve"], ["אֶת־חַיַּיִךְ","your life"], ["וּתְקַבְּלִי","and you shall receive"], ["נַחֲלָה","an inheritance"], ["בְּצִיּוֹן׃","in Zion"]]},
   { num: "ג", words: [["הִנֵּה","behold"], ["נִסְלְחוּ","are forgiven"], ["חַטֹּאתַיִךְ","your sins"], ["וְאַתְּ","and you are"], ["גְּבִירָה","a lady"], ["בְּחִירָה","elect"], ["אֲשֶׁר","whom"], ["קָרָאתִי׃","I have called"]]},
   { num: "ד", words: [
@@ -369,7 +369,7 @@ renderVerseSet(dc26_ch1Verses, 'dc26-ch1-verses');
 
 var dc27_ch1Verses = [
   { num: "א", words: [
-    ["הַאֲזִינוּ","listen"],
+    ["הַקְשִׁיבוּ","listen"],
     ["לְקוֹל","to the voice of"],
     ["יֵשׁוּעַ","Jesus"],
     ["הַמָּשִׁיחַ","Christ"],
@@ -494,7 +494,7 @@ renderVerseSet(dc28_ch1Verses, 'dc28-ch1-verses');
 
 var dc29_ch1Verses = [
   { num: "א", words: [
-    ["הַאֲזִינוּ","listen"],
+    ["הַקְשִׁיבוּ","listen"],
     ["לְקוֹל","to the voice of"],
     ["יֵשׁוּעַ","Jesus"],
     ["הַמָּשִׁיחַ","Christ"],

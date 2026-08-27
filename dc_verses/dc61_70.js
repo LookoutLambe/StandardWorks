@@ -3,7 +3,7 @@
 var dc61_ch1Verses = [
   { num: "א", words: [
     ["הִנֵּה","behold"],
-    ["וְהַאֲזִינוּ","and hearken"],
+    ["וְשִׁמְעוּ","and hearken"],
     ["לְקוֹל","unto the voice of"],
     ["אֲשֶׁר","him who"],
     ["לוֹ","unto him"],
@@ -632,7 +632,7 @@ renderVerseSet(dc61_ch1Verses, 'dc61-ch1-verses');
 
 
 var dc62_ch1Verses = [
-  { num: "א", words: [["הִנֵּה","behold"], ["וְהַאֲזִינוּ","and hearken"], ["זִקְנֵי","O elders of"], ["כְּנֵסִיָּתִי","my church"], ["אָמַר","says"], ["יְהוָה","the Lord"], ["אֱלֹהֵיכֶם","your God"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","Christ"], ["מְלִיצְכֶם","your advocate"], ["הַיּוֹדֵעַ","who knows"], ["חֻלְשַׁת","the weakness of"], ["הָאָדָם","man"], ["וְאֵיךְ","and how"], ["לְסַעֵד","to succor"], ["הַמְּנֻסִּים׃","them who are tempted"]]},
+  { num: "א", words: [["הִנֵּה","behold"], ["וְשִׁמְעוּ","and hearken"], ["זִקְנֵי","O elders of"], ["כְּנֵסִיָּתִי","my church"], ["אָמַר","says"], ["יְהוָה","the Lord"], ["אֱלֹהֵיכֶם","your God"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","Christ"], ["מְלִיצְכֶם","your advocate"], ["הַיּוֹדֵעַ","who knows"], ["חֻלְשַׁת","the weakness of"], ["הָאָדָם","man"], ["וְאֵיךְ","and how"], ["לְסַעֵד","to succor"], ["הַמְּנֻסִּים׃","them who are tempted"]]},
   { num: "ב", words: [
     ["וְאָמֵן","and verily"],
     ["עֵינַי","my eyes"],
@@ -797,12 +797,11 @@ renderVerseSet(dc62_ch1Verses, 'dc62-ch1-verses');
 
 var dc63_ch1Verses = [
   { num: "א", words: [
-    ["הַאֲזִינוּ","hearken"],
+    ["שִׁמְעוּ","hearken"],
     ["הָעָם","O people"],
     ["וּפִתְחוּ","and open"],
     ["לְבַבְכֶם","your hearts"],
-    ["וְהַטּוּ","and give"],
-    ["אֹזֶן","ear"],
+    ["וְהַאֲזִינוּ","and give ear"],
     ["מֵרָחוֹק","from afar"],
     ["וְהַקְשִׁיבוּ","and listen"],
     ["אַתֶּם","you"],
@@ -2302,7 +2301,7 @@ renderVerseSet(dc64_ch1Verses, 'dc64-ch1-verses');
 
 var dc65_ch1Verses = [
   { num: "א", words: [
-    ["הַאֲזִינוּ","hearken"],
+    ["שִׁמְעוּ","hearken"],
     ["וְהִנֵּה","and lo"],
     ["קוֹל","a voice"],
     ["כְּשָׁלוּחַ","as of one sent down"],
@@ -2655,7 +2654,7 @@ renderVerseSet(dc66_ch1Verses, 'dc66-ch1-verses');
 
 
 var dc67_ch1Verses = [
-  { num: "א", words: [["הִנֵּה","behold"], ["וְהַאֲזִינוּ","and hearken"], ["זִקְנֵי","O elders of"], ["כְּנֵסִיָּתִי","my church"], ["אֲשֶׁר","who"], ["נֶאֱסַפְתֶּם","have assembled yourselves"], ["יַחְדָּו","together"], ["אֲשֶׁר","whose"], ["שָׁמַעְתִּי","I have heard"], ["תְּפִלּוֹתֵיכֶם","your prayers"], ["וְיוֹדֵעַ","and know"], ["אֲנִי","I"], ["לִבְּכֶם","your hearts"], ["וּמִשְׁאֲלוֹתֵיכֶם","and your desires"], ["עָלוּ","have come up"], ["לְפָנָי׃","before me"]]},
+  { num: "א", words: [["הִנֵּה","behold"], ["וְשִׁמְעוּ","and hearken"], ["זִקְנֵי","O elders of"], ["כְּנֵסִיָּתִי","my church"], ["אֲשֶׁר","who"], ["נֶאֱסַפְתֶּם","have assembled yourselves"], ["יַחְדָּו","together"], ["אֲשֶׁר","whose"], ["שָׁמַעְתִּי","I have heard"], ["תְּפִלּוֹתֵיכֶם","your prayers"], ["וְיוֹדֵעַ","and know"], ["אֲנִי","I"], ["לִבְּכֶם","your hearts"], ["וּמִשְׁאֲלוֹתֵיכֶם","and your desires"], ["עָלוּ","have come up"], ["לְפָנָי׃","before me"]]},
   { num: "ב", words: [
     ["הִנֵּה","behold"],
     ["עֵינַי","my eyes are"],
@@ -3252,7 +3251,7 @@ renderVerseSet(dc68_ch1Verses, 'dc68-ch1-verses');
 
 var dc69_ch1Verses = [
   { num: "א", words: [
-    ["הַאֲזִינוּ","hearken"],
+    ["שִׁמְעוּ","hearken"],
     ["לִי","unto me"],
     ["אָמַר","says"],
     ["יְהוָה","the Lord"],
@@ -3329,7 +3328,7 @@ renderVerseSet(dc69_ch1Verses, 'dc69-ch1-verses');
 
 
 var dc70_ch1Verses = [
-  { num: "א", words: [["הִנֵּה","behold"], ["וְהַאֲזִינוּ","and hearken"], ["יוֹשְׁבֵי","O inhabitants of"], ["צִיּוֹן","Zion"], ["וְכׇל","and all"], ["עַם","the people of"], ["כְּנֵסִיָּתִי","my church"], ["הָרְחוֹקִים","who are afar off"], ["וְשִׁמְעוּ","and hear"], ["אֶת־דְּבַר","the word of"], ["יְהוָה","the Lord"], ["אֲשֶׁר","which"], ["אֲנִי","I"], ["נוֹתֵן","give"], ["לְעַבְדִּי","unto my servant"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["וְגַם","and also"], ["לְעַבְדִּי","unto my servant"], ["מַרְטִין","Martin"], ["הֶרִיס","Harris"], ["וְגַם","and also"], ["לְעַבְדִּי","unto my servant"], ["אוֹלִיבֶר","Oliver"], ["קַאוּדְרִי","Cowdery"], ["וְגַם","and also"], ["לְעַבְדִּי","unto my servant"], ["ג׳וֹן","John"], ["וִיטְמֵר","Whitmer"], ["וְגַם","and also"], ["לְעַבְדִּי","unto my servant"], ["סִידְנִי","Sidney"], ["רִיגְדּוֹן","Rigdon"], ["וְגַם","and also"], ["לְעַבְדִּי","unto my servant"], ["וִילְיָם","William"], ["ו.","W."], ["פֶלְפְּס","Phelps"], ["בְּדֶרֶךְ","by way of"], ["מִצְוָה","commandment"], ["אֲלֵיהֶם׃","unto them"]]},
+  { num: "א", words: [["הִנֵּה","behold"], ["וְהַקְשִׁיבוּ","and hearken"], ["יוֹשְׁבֵי","O inhabitants of"], ["צִיּוֹן","Zion"], ["וְכׇל","and all"], ["עַם","the people of"], ["כְּנֵסִיָּתִי","my church"], ["הָרְחוֹקִים","who are afar off"], ["וְשִׁמְעוּ","and hear"], ["אֶת־דְּבַר","the word of"], ["יְהוָה","the Lord"], ["אֲשֶׁר","which"], ["אֲנִי","I"], ["נוֹתֵן","give"], ["לְעַבְדִּי","unto my servant"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["וְגַם","and also"], ["לְעַבְדִּי","unto my servant"], ["מַרְטִין","Martin"], ["הֶרִיס","Harris"], ["וְגַם","and also"], ["לְעַבְדִּי","unto my servant"], ["אוֹלִיבֶר","Oliver"], ["קַאוּדְרִי","Cowdery"], ["וְגַם","and also"], ["לְעַבְדִּי","unto my servant"], ["ג׳וֹן","John"], ["וִיטְמֵר","Whitmer"], ["וְגַם","and also"], ["לְעַבְדִּי","unto my servant"], ["סִידְנִי","Sidney"], ["רִיגְדּוֹן","Rigdon"], ["וְגַם","and also"], ["לְעַבְדִּי","unto my servant"], ["וִילְיָם","William"], ["ו.","W."], ["פֶלְפְּס","Phelps"], ["בְּדֶרֶךְ","by way of"], ["מִצְוָה","commandment"], ["אֲלֵיהֶם׃","unto them"]]},
   { num: "ב", words: [
     ["כִּי","for"],
     ["אֲנִי","I"],
@@ -3337,7 +3336,7 @@ var dc70_ch1Verses = [
     ["לָהֶם","unto them"],
     ["מִצְוָה","a commandment"],
     ["לָכֵן","wherefore"],
-    ["הַאֲזִינוּ","hearken"],
+    ["הַקְשִׁיבוּ","hearken"],
     ["וְשִׁמְעוּ","and hear"],
     ["כִּי","for"],
     ["כֹה","thus"],

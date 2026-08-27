@@ -1,7 +1,7 @@
 // dc_verses/dc1_10.js — D&C verse data
 (function() {
 var dc1_ch1Verses = [
-  { num: "א", words: [["הַאֲזִינוּ","Listen!"], ["עַם","O people"], ["כְּנֵסִיָּתִי","my church"], ["נְאֻם","says"], ["קוֹל","voice of"], ["הַשֹּׁכֵן","who dwells"], ["בַּמָּרוֹם","on high"], ["אֲשֶׁר","whose"], ["עֵינָיו","his eyes"], ["עַל","upon"], ["כׇּל־אָדָם","all men"], ["אָכֵן","surely"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["הַאֲזִינוּ","Listen!"], ["עַם","O people"], ["מֵרָחוֹק","from afar"], ["וְיֹשְׁבֵי","and the dwellers of"], ["אִיֵּי","the isles of"], ["הַיָּם","the sea"], ["הַקְשִׁיבוּ","give heed!"], ["יַחְדָּו׃","together"]]},
+  { num: "א", words: [["שִׁמְעוּ","hearken"], ["עַם","O people"], ["כְּנֵסִיָּתִי","my church"], ["נְאֻם","says"], ["קוֹל","voice of"], ["הַשֹּׁכֵן","who dwells"], ["בַּמָּרוֹם","on high"], ["אֲשֶׁר","whose"], ["עֵינָיו","his eyes"], ["עַל","upon"], ["כׇּל־אָדָם","all men"], ["אָכֵן","surely"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["שִׁמְעוּ","hearken"], ["עַם","O people"], ["מֵרָחוֹק","from afar"], ["וְיֹשְׁבֵי","and the dwellers of"], ["אִיֵּי","the isles of"], ["הַיָּם","the sea"], ["הַקְשִׁיבוּ","give heed!"], ["יַחְדָּו׃","together"]]},
   { num: "ב", words: [
     ["כִּי","for"],
     ["אׇמְנָם","truly"],

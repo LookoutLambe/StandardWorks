@@ -2,7 +2,7 @@
 (function() {
 var dc41_ch1Verses = [
   { num: "א", words: [
-    ["הַאֲזִינוּ","hearken"],
+    ["הַקְשִׁיבוּ","hearken"],
     ["וְשִׁמְעוּ","and hear"],
     ["עַמִּי","O my people"],
     ["נְאֻם","says"],
@@ -32,7 +32,7 @@ var dc41_ch1Verses = [
     ["בִּכְבַד","with the heaviest of"],
     ["הַקְּלָלוֹת׃","all cursings"]
   ]},
-  { num: "ב", words: [["הַאֲזִינוּ","hearken"], ["זִקְנֵי","O elders of"], ["כְּנֵסִיָּתִי","my church"], ["אֲשֶׁר","whom"], ["קָרָאתִי","I have called"], ["הִנֵּה","behold"], ["אֲנִי","I"], ["נֹתֵן","give"], ["לָכֶם","unto you"], ["מִצְוָה","a commandment"], ["לְהֵאָסֵף","that you shall assemble yourselves"], ["יַחְדָּו","together"], ["לְהִוָּעֵד","to agree"], ["עַל","upon"], ["דְּבָרִי׃","my word"]]},
+  { num: "ב", words: [["שִׁמְעוּ","hearken"], ["זִקְנֵי","O elders of"], ["כְּנֵסִיָּתִי","my church"], ["אֲשֶׁר","whom"], ["קָרָאתִי","I have called"], ["הִנֵּה","behold"], ["אֲנִי","I"], ["נֹתֵן","give"], ["לָכֶם","unto you"], ["מִצְוָה","a commandment"], ["לְהֵאָסֵף","that you shall assemble yourselves"], ["יַחְדָּו","together"], ["לְהִוָּעֵד","to agree"], ["עַל","upon"], ["דְּבָרִי׃","my word"]]},
   { num: "ג", words: [["וּבִתְפִלַּת","and by the prayer of"], ["אֱמוּנַתְכֶם","your faith"], ["תְּקַבְּלוּ","you shall receive"], ["תּוֹרָתִי","my law"], ["לְמַעַן","that"], ["תֵּדְעוּ","you may know"], ["לְנַהֵל","how to govern"], ["אֶת־כְּנֵסִיָּתִי","my church"], ["וְלַעֲשׂוֹת","and have"], ["כׇּל","all"], ["דָּבָר","things"], ["יָשָׁר","right"], ["לְפָנָי׃","before me"]]},
   { num: "ד", words: [
     ["וַאֲנִי","and I"],
@@ -174,13 +174,13 @@ renderVerseSet(dc41_ch1Verses, 'dc41-ch1-verses');
 
 
 var dc42_ch1Verses = [
-  { num: "א", words: [["הַאֲזִינוּ","hearken"], ["זִקְנֵי","O elders of"], ["כְּנֵסִיָּתִי","my church"], ["הַנֶּאֱסָפִים","who have assembled yourselves together"], ["בִּשְׁמִי","in my name"], ["יֵשׁוּעַ","even Jesus"], ["הַמָּשִׁיחַ","Christ"], ["בֶּן","the Son of"], ["הָאֱלֹהִים","God"], ["הַחַיִּים","the living"], ["מוֹשִׁיעַ","the Savior of"], ["הָעוֹלָם","the world"], ["כְּפִי","inasmuch"], ["אֲשֶׁר","as"], ["תַּאֲמִינוּ","you believe"], ["בִשְׁמִי","on my name"], ["וְתִשְׁמְרוּ","and keep"], ["מִצְוֹתָי׃","my commandments"]]},
+  { num: "א", words: [["שִׁמְעוּ","hearken"], ["זִקְנֵי","O elders of"], ["כְּנֵסִיָּתִי","my church"], ["הַנֶּאֱסָפִים","who have assembled yourselves together"], ["בִּשְׁמִי","in my name"], ["יֵשׁוּעַ","even Jesus"], ["הַמָּשִׁיחַ","Christ"], ["בֶּן","the Son of"], ["הָאֱלֹהִים","God"], ["הַחַיִּים","the living"], ["מוֹשִׁיעַ","the Savior of"], ["הָעוֹלָם","the world"], ["כְּפִי","inasmuch"], ["אֲשֶׁר","as"], ["תַּאֲמִינוּ","you believe"], ["בִשְׁמִי","on my name"], ["וְתִשְׁמְרוּ","and keep"], ["מִצְוֹתָי׃","my commandments"]]},
   { num: "ב", words: [
     ["עוֹד","again"],
     ["אֲנִי","I"],
     ["אֹמֵר","say"],
     ["לָכֶם","unto you"],
-    ["הַאֲזִינוּ","hearken"],
+    ["הַקְשִׁיבוּ","hearken"],
     ["וְשִׁמְעוּ","and hear"],
     ["וְשִׁמְרוּ","and obey"],
     ["הַתּוֹרָה","the law"],
@@ -1165,7 +1165,7 @@ renderVerseSet(dc42_ch1Verses, 'dc42-ch1-verses');
 
 
 var dc43_ch1Verses = [
-  { num: "א", words: [["הוֹי","O"], ["הַאֲזִינוּ","hearken"], ["זִקְנֵי","elders of"], ["כְּנֵסִיָּתִי","my church"], ["וְהַטּוּ","and give"], ["אׇזְנְכֶם","ear"], ["לַדְּבָרִים","to the words"], ["אֲשֶׁר","which"], ["אֲדַבֵּר","I shall speak"], ["אֲלֵיכֶם׃","unto you"]]},
+  { num: "א", words: [["הוֹי","O"], ["שִׁמְעוּ","hearken"], ["זִקְנֵי","elders of"], ["כְּנֵסִיָּתִי","my church"], ["וְהַאֲזִינוּ","and give ear"], ["לַדְּבָרִים","to the words"], ["אֲשֶׁר","which"], ["אֲדַבֵּר","I shall speak"], ["אֲלֵיכֶם׃","unto you"]]},
   { num: "ב", words: [["כִּי","for"], ["הִנֵּה","behold"], ["אָמֵן","verily"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["קִבַּלְתֶּם","you have received"], ["מִצְוָה","a commandment"], ["לְתוֹרָה","for a law"], ["לִכְנֵסִיָּתִי","unto my church"], ["בְּיַד","by the hand of"], ["אֲשֶׁר","whom"], ["מִנִּיתִי","I have appointed"], ["לָכֶם","unto you"], ["לְקַבֵּל","to receive"], ["מִצְוֹת","commandments"], ["וַחֲזוֹנוֹת","and revelations"], ["מִיָּדִי׃","from my hand"]]},
   { num: "ג", words: [
     ["וְזֹאת","and this"],
@@ -1350,7 +1350,7 @@ var dc43_ch1Verses = [
     ["טָהוֹר","pure"],
     ["לְפָנָי׃","before me"]
   ]},
-  { num: "טו", words: [["עוֹד","again"], ["אֲנִי","I"], ["אֹמֵר","say"], ["הַאֲזִינוּ","hearken"], ["זִקְנֵי","elders of"], ["כְּנֵסִיָּתִי","my church"], ["אֲשֶׁר","whom"], ["מִנִּיתִי","I have appointed"], ["לֹא","not"], ["נִשְׁלַחְתֶּם","you are sent forth"], ["לְהִלָּמֵד","to be taught"], ["כִּי","but"], ["אִם","rather"], ["לְלַמֵּד","to teach"], ["בְּנֵי","the children of"], ["אָדָם","men"], ["הַדְּבָרִים","the things"], ["אֲשֶׁר","which"], ["נָתַתִּי","I have put"], ["בִּידֵיכֶם","into your hands"], ["בְּכֹחַ","by the power of"], ["רוּחִי׃","my Spirit"]]},
+  { num: "טו", words: [["עוֹד","again"], ["אֲנִי","I"], ["אֹמֵר","say"], ["שִׁמְעוּ","hearken"], ["זִקְנֵי","elders of"], ["כְּנֵסִיָּתִי","my church"], ["אֲשֶׁר","whom"], ["מִנִּיתִי","I have appointed"], ["לֹא","not"], ["נִשְׁלַחְתֶּם","you are sent forth"], ["לְהִלָּמֵד","to be taught"], ["כִּי","but"], ["אִם","rather"], ["לְלַמֵּד","to teach"], ["בְּנֵי","the children of"], ["אָדָם","men"], ["הַדְּבָרִים","the things"], ["אֲשֶׁר","which"], ["נָתַתִּי","I have put"], ["בִּידֵיכֶם","into your hands"], ["בְּכֹחַ","by the power of"], ["רוּחִי׃","my Spirit"]]},
   { num: "טז", words: [
     ["וְאַתֶּם","and you"],
     ["תְּלֻמְּדוּ","are to be taught"],
@@ -1363,7 +1363,7 @@ var dc43_ch1Verses = [
     ["דִּבַּרְתִּי׃","I have spoken"]
   ]},
   { num: "יז", words: [
-    ["הַאֲזִינוּ","hearken"],
+    ["שִׁמְעוּ","hearken"],
     ["כִּי","for"],
     ["הִנֵּה","behold"],
     ["יוֹם","the day of"],
@@ -1497,7 +1497,7 @@ var dc43_ch1Verses = [
     ["מִן","out of"],
     ["הַשָּׁמַיִם","heaven"],
     ["לֵאמֹר","saying"],
-    ["הַאֲזִינוּ","hearken"],
+    ["הַקְשִׁיבוּ","hearken"],
     ["גּוֹיֵי","O nations of"],
     ["הָאָרֶץ","the earth"],
     ["וְשִׁמְעוּ","and hear"],
@@ -1675,7 +1675,7 @@ var dc43_ch1Verses = [
     ["בַּמִּשְׁפָּט׃","in judgment"]
   ]},
   { num: "לד", words: [
-    ["הַאֲזִינוּ","hearken"],
+    ["שִׁמְעוּ","hearken"],
     ["לַדְּבָרִים","to the words"],
     ["הָאֵלֶּה","these"],
     ["הִנֵּה","behold"],
@@ -1802,12 +1802,12 @@ renderVerseSet(dc44_ch1Verses, 'dc44-ch1-verses');
 
 
 var dc45_ch1Verses = [
-  { num: "א", words: [["הַאֲזִינוּ","hearken"], ["עַם","O people of"], ["כְּנֵסִיָּתִי","my church"], ["אֲשֶׁר","to whom"], ["נִתְּנָה","has been given"], ["לָכֶם","unto you"], ["הַמַּלְכוּת","the kingdom"], ["הַאֲזִינוּ","hearken"], ["וְהַטּוּ","and give"], ["אֹזֶן","ear"], ["לְיוֹסֵד","to him who laid the foundation of"], ["הָאָרֶץ","the earth"], ["לְעֹשֵׂה","who made"], ["הַשָּׁמַיִם","the heavens"], ["וְכׇל","and all"], ["צְבָאָם","the hosts thereof"], ["וּבְיָדוֹ","and by whose hand"], ["נַעֲשׂוּ","were made"], ["כׇּל","all"], ["הַדְּבָרִים","things"], ["הַחַיִּים","which live"], ["וְהַנָּעִים׃","and move"]]},
+  { num: "א", words: [["שִׁמְעוּ","hearken"], ["עַם","O people of"], ["כְּנֵסִיָּתִי","my church"], ["אֲשֶׁר","to whom"], ["נִתְּנָה","has been given"], ["לָכֶם","unto you"], ["הַמַּלְכוּת","the kingdom"], ["שִׁמְעוּ","hearken ye"], ["וְהַאֲזִינוּ","and give ear"], ["לַאֲשֶׁר","to him who"], ["יָסַד","laid the foundation of"], ["אֶת־הָאָרֶץ","the earth"], ["אֲשֶׁר","who"], ["עָשָׂה","made"], ["אֶת־הַשָּׁמַיִם","the heavens"], ["וְאֵת","and"], ["כׇּל־צְבָאָם","all the hosts thereof"], ["וּבְיָדוֹ","and by whom"], ["נַעֲשׂוּ","were made"], ["כׇּל","all"], ["הַדְּבָרִים","things"], ["הַחַיִּים","which live"], ["וְהַנָּעִים","and move"], ["וְהַקַּיָּמִים׃","and have a being"]]},
   { num: "ב", words: [
     ["וְעוֹד","and again"],
     ["אֲנִי","I"],
     ["אֹמֵר","say"],
-    ["הַאֲזִינוּ","hearken"],
+    ["שִׁמְעוּ","hearken"],
     ["לְקוֹלִי","unto my voice"],
     ["פֶּן","lest"],
     ["יַשִּׂיגְכֶם","shall overtake you"],
@@ -1825,7 +1825,7 @@ var dc45_ch1Verses = [
     ["נוֹשְׁעָה׃","saved"]
   ]},
   { num: "ג", words: [
-    ["הַאֲזִינוּ","listen"],
+    ["הַקְשִׁיבוּ","listen"],
     ["לְמֵלִיץ","to the advocate"],
     ["הַיֹּשֵׁר","the upright"],
     ["לִפְנֵי","with"],
@@ -1844,7 +1844,7 @@ var dc45_ch1Verses = [
     ["לֹא","no"],
     ["חָטָא","did sin"],
     ["אֲשֶׁר","in whom"],
-    ["רָצִיתָ","you were pleased"],
+    ["רָצִיתָ","you were well pleased"],
     ["בּוֹ","in him"],
     ["רְאֵה","behold"],
     ["דַּם","the blood of"],
@@ -1873,7 +1873,7 @@ var dc45_ch1Verses = [
     ["חַיֵּי","the life of"],
     ["עוֹלָם׃","eternity"]
   ]},
-  { num: "ו", words: [["הַאֲזִינוּ","hearken"], ["עַם","O people of"], ["כְּנֵסִיָּתִי","my church"], ["וְאַתֶּם","and you"], ["הַזְּקֵנִים","elders"], ["הַאֲזִינוּ","listen"], ["יַחְדָּו","together"], ["וְשִׁמְעוּ","and hear"], ["קוֹלִי","my voice"], ["בְּעוֹד","while"], ["הַיּוֹם","today"], ["נִקְרָא","it is called"], ["וְאַל","and do not"], ["תַּקְשׁוּ","harden"], ["לְבַבְכֶם׃","your hearts"]]},
+  { num: "ו", words: [["שִׁמְעוּ","hearken"], ["עַם","O people of"], ["כְּנֵסִיָּתִי","my church"], ["וְאַתֶּם","and you"], ["הַזְּקֵנִים","elders"], ["הַקְשִׁיבוּ","listen"], ["יַחְדָּו","together"], ["וְשִׁמְעוּ","and hear"], ["קוֹלִי","my voice"], ["בְּעוֹד","while"], ["הַיּוֹם","today"], ["נִקְרָא","it is called"], ["וְאַל","and do not"], ["תַּקְשׁוּ","harden"], ["לְבַבְכֶם׃","your hearts"]]},
   { num: "ז", words: [
     ["כִּי","for"],
     ["אָמֵן","verily"],
@@ -1942,7 +1942,7 @@ var dc45_ch1Verses = [
   ]},
   { num: "יא", words: [
     ["לָכֵן","therefore"],
-    ["הַאֲזִינוּ","hearken"],
+    ["שִׁמְעוּ","hearken"],
     ["יַחְדָּו","together"],
     ["וַאֲרֶאֲכֶם","and I will show"],
     ["אֶת־חׇכְמָתִי","my wisdom"],
@@ -1976,6 +1976,7 @@ var dc45_ch1Verses = [
     ["אַנְשֵׁי","men of"],
     ["קֹדֶשׁ","holiness"],
     ["וְלֹא","and not"],
+    ["מְצָאוּהוּ","found it"],
     ["בִּגְלַל","because of"],
     ["רֶשַׁע","wickedness"],
     ["וְתוֹעֵבוֹת׃","and abominations"]
@@ -2000,7 +2001,7 @@ var dc45_ch1Verses = [
   ]},
   { num: "טו", words: [
     ["לָכֵן","wherefore"],
-    ["הַאֲזִינוּ","hearken"],
+    ["שִׁמְעוּ","hearken"],
     ["וְאִוָּכַח","and I will reason"],
     ["מֵישָׁרִים","uprightly"],
     ["אִתְּכֶם","with you"],
@@ -2278,6 +2279,7 @@ var dc45_ch1Verses = [
   { num: "לג", words: [
     ["וְיִהְיוּ","and there shall be"],
     ["רְעָשִׁים","earthquakes"],
+    ["גַּם","also"],
     ["בִּמְקוֹמוֹת","in places"],
     ["שׁוֹנִים","divers"],
     ["וְשַׁמּוֹת","and desolations"],
@@ -2865,8 +2867,8 @@ var dc45_ch1Verses = [
     ["אֶל","unto"],
     ["הָעוֹלָם","the world"],
     ["עַד","until"],
-    ["הַטּוֹב","it is good"],
-    ["בְּעֵינַי","in my eyes"],
+    ["הַטּוֹב","it is expedient"],
+    ["בְּעֵינַי","in me"],
     ["לְמַעַן","that"],
     ["תַּשְׁלִימוּ","you may accomplish"],
     ["אֶת־הַמְּלָאכָה","the work"],
@@ -2925,7 +2927,7 @@ renderVerseSet(dc45_ch1Verses, 'dc45-ch1-verses');
 
 
 var dc46_ch1Verses = [
-  { num: "א", words: [["הַאֲזִינוּ","hearken"], ["עַם","O people of"], ["כְּנֵסִיָּתִי","my church"], ["כִּי","for"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["כִּי","that"], ["הַדְּבָרִים","things"], ["הָאֵלֶּה","these"], ["נֶאֶמְרוּ","were spoken"], ["לָכֶם","unto you"], ["לְהוֹעִילְכֶם","for your profit"], ["וּלְלִמּוּדְכֶם׃","and learning"]]},
+  { num: "א", words: [["שִׁמְעוּ","hearken"], ["עַם","O people of"], ["כְּנֵסִיָּתִי","my church"], ["כִּי","for"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["כִּי","that"], ["הַדְּבָרִים","things"], ["הָאֵלֶּה","these"], ["נֶאֶמְרוּ","were spoken"], ["לָכֶם","unto you"], ["לְהוֹעִילְכֶם","for your profit"], ["וּלְלִמּוּדְכֶם׃","and learning"]]},
   { num: "ב", words: [["אַךְ","but"], ["מִלְּבַד","notwithstanding"], ["הַדְּבָרִים","the things"], ["הַכְּתוּבִים","which are written"], ["נִתַּן","is given"], ["תָּמִיד","always"], ["לְזִקְנֵי","to the elders of"], ["כְּנֵסִיָּתִי","my church"], ["מֵרֵאשִׁית","from the beginning"], ["וְיִנָּתֵן","and shall be given"], ["לָעַד","ever"], ["לְנַהֵל","to conduct"], ["כׇּל","all"], ["אֲסֵפוֹת","meetings"], ["כַּאֲשֶׁר","as"], ["יְנֻהֲלוּ","they are directed"], ["וְיִנָּהֲגוּ","and guided"], ["בְּיַד","by"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ׃","the Holy"]]},
   { num: "ג", words: [
     ["אוּלָם","nevertheless"],
@@ -3365,7 +3367,7 @@ renderVerseSet(dc48_ch1Verses, 'dc48-ch1-verses');
 
 var dc49_ch1Verses = [
   { num: "א", words: [
-    ["הַאֲזִינוּ","hearken"],
+    ["שִׁמְעוּ","hearken"],
     ["לִדְבָרִי","unto my word"],
     ["עֲבָדַי","my servants"],
     ["סִידְנִי","Sidney"],
@@ -3826,7 +3828,7 @@ renderVerseSet(dc49_ch1Verses, 'dc49-ch1-verses');
 
 
 var dc50_ch1Verses = [
-  { num: "א", words: [["הַאֲזִינוּ","hearken"], ["זִקְנֵי","O elders of"], ["כְּנֵסִיָּתִי","my church"], ["וְהַטּוּ","and give"], ["אׇזְנְכֶם","ear"], ["לְקוֹל","to the voice of"], ["אֱלֹהִים","God"], ["חַיִּים","the living"], ["וְהַקְשִׁיבוּ","and attend"], ["לְדִבְרֵי","to the words of"], ["חׇכְמָה","wisdom"], ["אֲשֶׁר","which"], ["יִנָּתְנוּ","shall be given"], ["לָכֶם","unto you"], ["כַּאֲשֶׁר","according as"], ["שְׁאַלְתֶּם","you have asked"], ["וְנוֹעַדְתֶּם","and are agreed"], ["עַל","as touching"], ["הַכְּנֵסִיָּה","the church"], ["וְהָרוּחוֹת","and the spirits"], ["אֲשֶׁר","which"], ["יָצְאוּ","have gone abroad"], ["בָּאָרֶץ׃","in the earth"]]},
+  { num: "א", words: [["שִׁמְעוּ","hearken"], ["זִקְנֵי","O elders of"], ["כְּנֵסִיָּתִי","my church"], ["וְהַאֲזִינוּ","and give ear"], ["לְקוֹל","to the voice of"], ["אֱלֹהִים","God"], ["חַיִּים","the living"], ["וְהַקְשִׁיבוּ","and attend"], ["לְדִבְרֵי","to the words of"], ["חׇכְמָה","wisdom"], ["אֲשֶׁר","which"], ["יִנָּתְנוּ","shall be given"], ["לָכֶם","unto you"], ["כַּאֲשֶׁר","according as"], ["שְׁאַלְתֶּם","you have asked"], ["וְנוֹעַדְתֶּם","and are agreed"], ["עַל","as touching"], ["הַכְּנֵסִיָּה","the church"], ["וְהָרוּחוֹת","and the spirits"], ["אֲשֶׁר","which"], ["יָצְאוּ","have gone abroad"], ["בָּאָרֶץ׃","in the earth"]]},
   { num: "ב", words: [
     ["הִנֵּה","behold"],
     ["אָמֵן","verily"],

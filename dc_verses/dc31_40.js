@@ -242,7 +242,7 @@ var dc33_ch1Verses = [
     ["וְנוֹרְתְרוֹפּ","and Northrop"],
     ["פִּתְחוּ","open"],
     ["אׇזְנֵיכֶם","your ears"],
-    ["וְהַאֲזִינוּ","and hearken"],
+    ["וְשִׁמְעוּ","and hearken"],
     ["לְקוֹל","to the voice of"],
     ["יְהוָה","the Lord"],
     ["אֱלֹהֵיכֶם","your God"],
@@ -1902,8 +1902,8 @@ renderVerseSet(dc38_ch1Verses, 'dc38-ch1-verses');
 
 var dc39_ch1Verses = [
   { num: "א", words: [
-    ["הַאֲזִינוּ","hearken"],
-    ["וְשִׁמְעוּ","and listen"],
+    ["שִׁמְעוּ","hearken"],
+    ["וְהַקְשִׁיבוּ","and listen"],
     ["לְקוֹל","to the voice of"],
     ["הַהֹוֶה","him who is"],
     ["מֵעוֹלָם","from all eternity"],

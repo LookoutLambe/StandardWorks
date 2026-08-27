@@ -2,7 +2,7 @@
 (function() {
 var dc51_ch1Verses = [
   { num: "א", words: [
-    ["הַאֲזִינוּ","hearken"],
+    ["שִׁמְעוּ","hearken"],
     ["אֵלַי","unto me"],
     ["אָמַר","says"],
     ["יְהוָה","the Lord"],
@@ -1100,7 +1100,7 @@ renderVerseSet(dc55_ch1Verses, 'dc55-ch1-verses');
 
 var dc56_ch1Verses = [
   { num: "א", words: [
-    ["הַאֲזִינוּ","hearken"],
+    ["שִׁמְעוּ","hearken"],
     ["הָעָם","O people"],
     ["לִשְׁמִי","who profess my name"],
     ["אָמַר","says"],
@@ -1481,7 +1481,7 @@ renderVerseSet(dc56_ch1Verses, 'dc56-ch1-verses');
 
 
 var dc57_ch1Verses = [
-  { num: "א", words: [["הַאֲזִינוּ","hearken"], ["זִקְנֵי","O elders of"], ["כְּנֵסִיָּתִי","my church"], ["אָמַר","says"], ["יְהוָה","the Lord"], ["אֱלֹהֵיכֶם","your God"], ["אֲשֶׁר","who"], ["נֶאֱסַפְתֶּם","have assembled yourselves"], ["יַחְדָּו","together"], ["לְפִי","according to"], ["מִצְוֹתַי","my commandments"], ["בָּאָרֶץ","in the land"], ["הַזֹּאת","this"], ["הִיא","which is"], ["אֶרֶץ","the land of"], ["מִיזוּרִי","Missouri"], ["הִיא","which is"], ["הָאָרֶץ","the land"], ["אֲשֶׁר","which"], ["מִנִּיתִי","I have appointed"], ["וְהִקְדַּשְׁתִּי","and consecrated"], ["לְקִבּוּץ","for the gathering of"], ["הַקְּדוֹשִׁים׃","the saints"]]},
+  { num: "א", words: [["שִׁמְעוּ","hearken"], ["זִקְנֵי","O elders of"], ["כְּנֵסִיָּתִי","my church"], ["אָמַר","says"], ["יְהוָה","the Lord"], ["אֱלֹהֵיכֶם","your God"], ["אֲשֶׁר","who"], ["נֶאֱסַפְתֶּם","have assembled yourselves"], ["יַחְדָּו","together"], ["לְפִי","according to"], ["מִצְוֹתַי","my commandments"], ["בָּאָרֶץ","in the land"], ["הַזֹּאת","this"], ["הִיא","which is"], ["אֶרֶץ","the land of"], ["מִיזוּרִי","Missouri"], ["הִיא","which is"], ["הָאָרֶץ","the land"], ["אֲשֶׁר","which"], ["מִנִּיתִי","I have appointed"], ["וְהִקְדַּשְׁתִּי","and consecrated"], ["לְקִבּוּץ","for the gathering of"], ["הַקְּדוֹשִׁים׃","the saints"]]},
   { num: "ב", words: [
     ["לָכֵן","wherefore"],
     ["זֹאת","this is"],
@@ -1736,7 +1736,7 @@ renderVerseSet(dc57_ch1Verses, 'dc57-ch1-verses');
 
 
 var dc58_ch1Verses = [
-  { num: "א", words: [["הַאֲזִינוּ","hearken"], ["זִקְנֵי","O elders of"], ["כְּנֵסִיָּתִי","my church"], ["וְהַטּוּ","and give"], ["אׇזְנְכֶם","ear"], ["לִדְבָרִי","to my word"], ["וְלִמְדוּ","and learn"], ["מִמֶּנִּי","of me"], ["מַה־אֲנִי","what I"], ["חָפֵץ","will"], ["בָּכֶם","concerning you"], ["וְגַם","and also"], ["בָּאָרֶץ","concerning the land"], ["הַזֹּאת","this"], ["אֲשֶׁר","unto which"], ["שְׁלַחְתִּיכֶם","I have sent you"], ["אֵלֶיהָ׃","unto it"]]},
+  { num: "א", words: [["שִׁמְעוּ","hearken"], ["זִקְנֵי","O elders of"], ["כְּנֵסִיָּתִי","my church"], ["וְהַאֲזִינוּ","and give ear"], ["לִדְבָרִי","to my word"], ["וְלִמְדוּ","and learn"], ["מִמֶּנִּי","of me"], ["מַה־אֲנִי","what I"], ["חָפֵץ","will"], ["בָּכֶם","concerning you"], ["וְגַם","and also"], ["בָּאָרֶץ","concerning the land"], ["הַזֹּאת","this"], ["אֲשֶׁר","unto which"], ["שְׁלַחְתִּיכֶם","I have sent you"], ["אֵלֶיהָ׃","unto it"]]},
   { num: "ב", words: [
     ["כִּי","for"],
     ["אָמֵן","verily"],

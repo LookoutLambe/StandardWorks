@@ -111,7 +111,7 @@ renderVerseSet(dc71_ch1Verses, 'dc71-ch1-verses');
 
 
 var dc72_ch1Verses = [
-  { num: "א", words: [["הַאֲזִינוּ","hearken"], ["וְשִׁמְעוּ","and listen"], ["לְקוֹל","to the voice of"], ["יְהוָה","the Lord"], ["אַתֶּם","O you"], ["הַנֶּאֱסָפִים","who have assembled yourselves"], ["אֲשֶׁר","who"], ["אַתֶּם","you are"], ["כֹּהֲנִים","priests"], ["גְּדוֹלִים","high"], ["לִכְנֵסִיָּתִי","of my church"], ["אֲשֶׁר","to whom"], ["לָכֶם","unto you"], ["נִתְּנוּ","have been given"], ["הַמַּלְכוּת","the kingdom"], ["וְהַכֹּחַ׃","and the power"]]},
+  { num: "א", words: [["שִׁמְעוּ","hearken"], ["וְהַקְשִׁיבוּ","and listen"], ["לְקוֹל","to the voice of"], ["יְהוָה","the Lord"], ["אַתֶּם","O you"], ["הַנֶּאֱסָפִים","who have assembled yourselves"], ["אֲשֶׁר","who"], ["אַתֶּם","you are"], ["כֹּהֲנִים","priests"], ["גְּדוֹלִים","high"], ["לִכְנֵסִיָּתִי","of my church"], ["אֲשֶׁר","to whom"], ["לָכֶם","unto you"], ["נִתְּנוּ","have been given"], ["הַמַּלְכוּת","the kingdom"], ["וְהַכֹּחַ׃","and the power"]]},
   { num: "ב", words: [["כִּי","for"], ["אָמֵן","verily"], ["כֹּה","thus"], ["אָמַר","says"], ["יְהוָה","the Lord"], ["רָאוּי","it is expedient"], ["בִּי","in me"], ["כִּי","that"], ["יְמֻנֶּה","should be appointed"], ["פָּקִיד","a bishop"], ["לָכֶם","unto you"], ["אוֹ","or"], ["מִכֶּם","of you"], ["לַכְּנֵסִיָּה","unto the church"], ["בַּחֵלֶק","in part"], ["הַזֶּה","this"], ["מִן","of"], ["כֶּרֶם","the vineyard of"], ["יְהוָה׃","the Lord"]]},
   { num: "ג", words: [
     ["וְאָמֵן","and verily"],
@@ -546,7 +546,7 @@ var dc75_ch1Verses = [
     ["וֵאלֹהֵיכֶם׃","and your God"]
   ]},
   { num: "ב", words: [
-    ["הַאֲזִינוּ","hearken"],
+    ["שִׁמְעוּ","hearken"],
     ["אַתֶּם","O you"],
     ["אֲשֶׁר","who"],
     ["נְתַתֶּם","have given"],
@@ -1011,9 +1011,9 @@ renderVerseSet(dc75_ch1Verses, 'dc75-ch1-verses');
 
 var dc76_ch1Verses = [
   { num: "א", words: [
-    ["הַאֲזִינוּ","hear"],
+    ["שִׁמְעוּ","hear"],
     ["שָׁמַיִם","O heavens"],
-    ["וְהַקְשִׁיבִי","and give ear O"],
+    ["וְהַאֲזִינִי","and give ear O"],
     ["אָרֶץ","earth"],
     ["וְגִילוּ","and rejoice you"],
     ["יוֹשְׁבֶיהָ","its inhabitants"],
@@ -3002,7 +3002,7 @@ renderVerseSet(dc77_ch1Verses, 'dc77-ch1-verses');
 
 
 var dc78_ch1Verses = [
-  { num: "א", words: [["יְהוָה","The LORD"], ["דִּבֶּר","spoke"], ["אֶל","unto"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["לֵאמֹר","saying:"], ["הַאֲזִינוּ","-Hearken"], ["אֵלַי","unto me"], ["נְאֻם","says"], ["יְהוָה","the LORD"], ["אֱלֹהֵיכֶם","your God"], ["הַנִּסְמָכִים","who are ordained"], ["לִכְהֻנָּה","unto the priesthood"], ["גְדוֹלָה","high"], ["בִּכְנֵסִיָּתִי","of my church"], ["הַנֶּאֱסָפִים","who have assembled yourselves"], ["יַחְדָּו׃","together-;"]]},
+  { num: "א", words: [["יְהוָה","The LORD"], ["דִּבֶּר","spoke"], ["אֶל","unto"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["לֵאמֹר","saying:"], ["שִׁמְעוּ","Hearken"], ["אֵלַי","unto me"], ["נְאֻם","says"], ["יְהוָה","the LORD"], ["אֱלֹהֵיכֶם","your God"], ["הַנִּסְמָכִים","who are ordained"], ["לִכְהֻנָּה","unto the priesthood"], ["גְדוֹלָה","high"], ["בִּכְנֵסִיָּתִי","of my church"], ["הַנֶּאֱסָפִים","who have assembled yourselves"], ["יַחְדָּו׃","together-;"]]},
   { num: "ב", words: [
     ["וְשִׁמְעוּ","And listen to"],
     ["עֲצַת","the counsel of"],

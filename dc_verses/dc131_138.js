@@ -1836,7 +1836,7 @@ var dc133_ch1Verses = [
     ["שֶׁבֶר","destruction"],
     ["פִּתְאֹם׃","sudden"]
   ]},
-  { num: "טז", words: [["הַקְשִׁיבוּ","Hearken"], ["וְשִׁמְעוּ","and hear,"], ["יֹשְׁבֵי","O inhabitants of"], ["הָאָרֶץ","the earth."], ["הַאֲזִינוּ","Listen,"], ["זִקְנֵי","elders of"], ["כְּנֵסִיָּתִי","my church"], ["יַחְדָּו","together,"], ["וְשִׁמְעוּ","and hear"], ["קוֹל","the voice of"], ["יְהוָה","the Lord;"], ["כִּי","for"], ["הוּא","he"], ["קֹרֵא","calls"], ["אֶל","upon"], ["כׇּל","all"], ["אָדָם","men,"], ["וּמְצַוֶּה","and he commands"], ["כׇּל","all"], ["אָדָם","men"], ["בְּכׇל","in every"], ["מָקוֹם","place"], ["לָשׁוּב׃","to repent."]]},
+  { num: "טז", words: [["הַקְשִׁיבוּ","Hearken"], ["וְשִׁמְעוּ","and hear,"], ["יֹשְׁבֵי","O inhabitants of"], ["הָאָרֶץ","the earth."], ["הַקְשִׁיבוּ","Listen,"], ["זִקְנֵי","elders of"], ["כְּנֵסִיָּתִי","my church"], ["יַחְדָּו","together,"], ["וְשִׁמְעוּ","and hear"], ["קוֹל","the voice of"], ["יְהוָה","the Lord;"], ["כִּי","for"], ["הוּא","he"], ["קֹרֵא","calls"], ["אֶל","upon"], ["כׇּל","all"], ["אָדָם","men,"], ["וּמְצַוֶּה","and he commands"], ["כׇּל","all"], ["אָדָם","men"], ["בְּכׇל","in every"], ["מָקוֹם","place"], ["לָשׁוּב׃","to repent."]]},
   { num: "יז", words: [
     ["כִּי","For"],
     ["הִנֵּה","behold,"],
@@ -4207,7 +4207,7 @@ var dc136_ch1Verses = [
     ["עֵד","a witness"],
     ["לִשְׁמִי׃","of my name?"]
   ]},
-  { num: "מא", words: [["וְעַתָּה","Now, therefore,"], ["הַקְשִׁיבוּ","hearken,"], ["עַם","O people of"], ["כְּנֵסִיָּתִי","my church;"], ["וְאַתֶּם","and you"], ["זְקֵנִים","elders"], ["הַאֲזִינוּ","listen"], ["יַחְדָּו","together;"], ["קִבַּלְתֶּם","you have received"], ["אֶת־מַלְכוּתִי׃","my kingdom."]]},
+  { num: "מא", words: [["וְעַתָּה","Now, therefore,"], ["שִׁמְעוּ","hearken,"], ["עַם","O people of"], ["כְּנֵסִיָּתִי","my church;"], ["וְאַתֶּם","and you"], ["זְקֵנִים","elders"], ["הַקְשִׁיבוּ","listen"], ["יַחְדָּו","together;"], ["קִבַּלְתֶּם","you have received"], ["אֶת־מַלְכוּתִי׃","my kingdom."]]},
   { num: "מב", words: [
     ["חֲרוּצִים","diligent"],
     ["הֱיוּ","Be"],
