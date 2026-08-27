@@ -51,6 +51,7 @@ var dc71_ch1Verses = [
   ]},
   { num: "ז", words: [
     ["לָכֵן","wherefore"],
+    ["הָבִישׁוּ","confound"],
     ["אֶת־אוֹיְבֵיכֶם","your enemies"],
     ["קִרְאוּ","call"],
     ["לָהֶם","upon them"],
@@ -297,7 +298,7 @@ var dc72_ch1Verses = [
     ["פָּקִיד","the bishop of"],
     ["צִיּוֹן׃","Zion"]
   ]},
-  { num: "יט", words: [["וְעַתָּה","and now"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אוֹמֵר","say"], ["לָכֶם","unto you"], ["כׇּל","let every"], ["זָקֵן","elder"], ["אֲשֶׁר","who"], ["יִתֵּן","shall give"], ["חֶשְׁבּוֹן","an account"], ["לִפְקִיד","unto the bishop of"], ["הַכְּנֵסִיָּה","the church"], ["בַּחֵלֶק","in part"], ["הַזֶּה","this"], ["מִן","of"], ["הַכֶּרֶם","the vineyard"], ["בְּיַד","be recommended by the means of"], ["הַכְּנֵסִיָּה","the church"], ["אוֹ","or"], ["הַכְּנֵסִיּוֹת","the churches"], ["אֲשֶׁר","in which"], ["בָּהֶן","therein"], ["הוּא","he"], ["עוֹבֵד","labors"], ["לְמַעַן","that"], ["יִמָּצֵא","he may be found"], ["נֶאֱמָן","approved"], ["בְּכׇל","in all"], ["דָּבָר׃","things"]]},
+  { num: "יט", words: [["וְעַתָּה","and now"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אוֹמֵר","say"], ["לָכֶם","unto you"], ["כׇּל","let every"], ["זָקֵן","elder"], ["אֲשֶׁר","who"], ["יִתֵּן","shall give"], ["חֶשְׁבּוֹן","an account"], ["לִפְקִיד","unto the bishop of"], ["הַכְּנֵסִיָּה","the church"], ["בַּחֵלֶק","in part"], ["הַזֶּה","this"], ["מִן","of"], ["הַכֶּרֶם","the vineyard"], ["יֻמְלַץ","let him be recommended"], ["בְּיַד","by"], ["הַכְּנֵסִיָּה","the church"], ["אוֹ","or"], ["הַכְּנֵסִיּוֹת","the churches"], ["אֲשֶׁר","in which"], ["בָּהֶן","therein"], ["הוּא","he"], ["עוֹבֵד","labors"], ["לְמַעַן","that"], ["יִמָּצֵא","he may be found"], ["נֶאֱמָן","approved"], ["בְּכׇל","in all"], ["דָּבָר׃","things"]]},
   { num: "כ", words: [["וְעוֹד","and again"], ["עֲבָדַי","my servants"], ["הַמְמֻנִּים","who are appointed"], ["כְּסֹכְנִים","as stewards"], ["עַל","over"], ["עִנְיְנֵי","the concerns of"], ["כִּתְבֵי","the writings of"], ["כְּנֵסִיָּתִי","my church"], ["יִהְיֶה","let there be"], ["לָהֶם","unto them"], ["זְכוּת","a claim"], ["לְעֶזְרָה","for assistance"], ["מֵהַפָּקִיד","upon the bishop"], ["אוֹ","or"], ["הַפְּקִידִים","the bishops"], ["בְּכׇל","in all"], ["דָּבָר׃","things"]]},
   { num: "כא", words: [["לְמַעַן","that"], ["הַחֲזוֹנוֹת","the revelations"], ["יֵצְאוּ","may be published"], ["עַד","unto"], ["קְצוֹת","the ends of"], ["הָאָרֶץ","the earth"], ["לְמַעַן","that"], ["יַשִּׂיגוּ","they may obtain"], ["גַם","also"], ["כְּסָפִים","funds"], ["אֲשֶׁר","which"], ["יוֹעִילוּ","shall benefit"], ["לַכְּנֵסִיָּה","the church"], ["בְּכׇל","in all"], ["דָּבָר׃","things"]]},
   { num: "כב", words: [
@@ -486,7 +487,7 @@ var dc74_ch1Verses = [
     ["לֹא","not"],
     ["קְדוֹשִׁים׃","holy"]
   ]},
-  { num: "ה", words: [["לָכֵן","wherefore"], ["בִּגְלַל","for"], ["הַדָּבָר","cause"], ["הַזֶּה","this"], ["כָּתַב","wrote"], ["הַשָּׁלִיחַ","the apostle"], ["לַכְּנֵסִיָּה","unto the church"], ["וְנָתַן","and gave"], ["לָהֶם","unto them"], ["מִצְוָה","a commandment"], ["לֹא","not"], ["מִן","of"], ["הָאָדוֹן","the Lord"], ["כִּי","but"], ["אִם","rather"], ["מִלִּבּוֹ","of himself"], ["כִּי","that"], ["מַאֲמִין","a believer"], ["לֹא","not"], ["יִתְחַבֵּר","should be united"], ["לַאֲשֶׁר","to one"], ["אֵינֶנּוּ","not"], ["מַאֲמִין","believing"], ["כִּי","except"], ["אִם",""], ["אִם","if"], ["תּוֹרַת","the law of"], ["מֹשֶׁה","Moses"], ["תְּבֻטַּל","should be done away"], ["מִבֵּינֵיהֶם׃","from among them"]]},
+  { num: "ה", words: [["לָכֵן","wherefore"], ["בִּגְלַל","for"], ["הַדָּבָר","cause"], ["הַזֶּה","this"], ["כָּתַב","wrote"], ["הַשָּׁלִיחַ","the apostle"], ["לַכְּנֵסִיָּה","unto the church"], ["וְנָתַן","and gave"], ["לָהֶם","unto them"], ["מִצְוָה","a commandment"], ["לֹא","not"], ["מִן","of"], ["הָאָדוֹן","the Lord"], ["כִּי","but"], ["אִם","rather"], ["מִלִּבּוֹ","of himself"], ["כִּי","that"], ["מַאֲמִין","a believer"], ["לֹא","not"], ["יִתְחַבֵּר","should be united"], ["לַאֲשֶׁר","to one"], ["אֵינֶנּוּ","not"], ["מַאֲמִין","believing"], ["כִּי","except"], ["אִם","if"], ["תּוֹרַת","the law of"], ["מֹשֶׁה","Moses"], ["תְּבֻטַּל","should be done away"], ["מִבֵּינֵיהֶם׃","from among them"]]},
   { num: "ו", words: [
     ["לְמַעַן","that"],
     ["יִשָּׁאֲרוּ","might remain"],
@@ -635,7 +636,7 @@ var dc75_ch1Verses = [
     ["וּמִצְוָה","and a commandment"],
     ["חֲדָשָׁה","new"],
     ["אֲשֶׁר","in which"],
-    ["בָּהּ",""],
+    ["בָּהּ","in it"],
     ["אֲנִי","I"],
     ["יְהוָה","the Lord"],
     ["מְיַסְּרוֹ","chasten him"],
@@ -918,8 +919,7 @@ var dc75_ch1Verses = [
   { num: "כו", words: [["וְכׇל","and let all"], ["אֵלֶּה","these"], ["אֲשֶׁר","that"], ["יְכוֹלִים","can"], ["לְהַשִּׂיג","obtain"], ["מְקוֹמוֹת","places"], ["לְמִשְׁפְּחוֹתֵיהֶם","for their families"], ["וְעֶזְרַת","and the support of"], ["הַכְּנֵסִיָּה","the church"], ["לָהֶם","for them"], ["אַל","not"], ["יִמָּנְעוּ","let them fail"], ["מִלָּלֶכֶת","from going"], ["לָעוֹלָם","into the world"], ["אִם","whether"], ["לַמִּזְרָח","to the east"], ["וְאִם","whether"], ["לַמַּעֲרָב","to the west"], ["אוֹ","or"], ["לַצָּפוֹן","to the north"], ["אוֹ","or"], ["לַדָּרוֹם׃","to the south"]]},
   { num: "כז", words: [
     ["יִשְׁאֲלוּ","let them ask"],
-    ["וְיִנָּתֵן","and it shall be given"],
-    ["לָהֶם","unto them"],
+    ["וִיקַבְּלוּ","and they shall receive"],
     ["יִדְפְּקוּ","let them knock"],
     ["וְיִפָּתַח","and it shall be opened"],
     ["לָהֶם","unto them"],
