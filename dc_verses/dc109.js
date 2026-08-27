@@ -98,7 +98,7 @@ var dc109_ch1Verses = [
     ["וְכַאֲשֶׁר","And as"],
     ["אָמַרְתָּ","you have said"],
     ["בְּחָזוֹן","in a revelation,"],
-    ["אֲשֶׁר","(that)"],
+    ["אֲשֶׁר","that"],
     ["נִתַּן","given"],
     ["לָנוּ","to us,"],
     ["וְקָרָאתָ","calling"],
@@ -212,7 +212,7 @@ var dc109_ch1Verses = [
     ["לָנוּ","unto us,"],
     ["עַמְּךָ","your people,"],
     ["בַּחֶזְיוֹנוֹת","in the revelations"],
-    ["אֲשֶׁר","(that)"],
+    ["אֲשֶׁר","that"],
     ["נִתְּנוּ","given"],
     ["לָנוּ׃","unto us;"]
   ]},
@@ -235,7 +235,7 @@ var dc109_ch1Verses = [
     ["וְיֻקְדַּשׁ","and consecrated"],
     ["לִהְיוֹת","to be"],
     ["קֹדֶשׁ","holy,"],
-    ["וַאֲשֶׁר","(that)"],
+    ["וַאֲשֶׁר","that"],
     ["תִּהְיֶה","and that ... may be"],
     ["פָּנֶיךָ","your ... presence"],
     ["הַקְּדוֹשָׁה","holy"],
@@ -244,7 +244,7 @@ var dc109_ch1Verses = [
     ["הַזֶּה׃","this"]
   ]},
   { num: "יג", words: [
-    ["וַאֲשֶׁר","(that)"],
+    ["וַאֲשֶׁר","that"],
     ["כׇּל","And that all"],
     ["אָדָם","people"],
     ["הַבָּא","who shall"],
@@ -269,7 +269,7 @@ var dc109_ch1Verses = [
     ["וְתֵן","And do you grant,"],
     ["אָבִינוּ","Father,"],
     ["הַקָּדוֹשׁ","Holy"],
-    ["אֲשֶׁר","(that)"],
+    ["אֲשֶׁר","that"],
     ["כׇּל","that all those"],
     ["הָעוֹבְדִים","who shall worship"],
     ["בַּבַּיִת","in ... house"],
@@ -292,7 +292,7 @@ var dc109_ch1Verses = [
   ]},
   { num: "טו", words: [["וּלְמַעַן","And that"], ["יִגְדְּלוּ","they may grow up"], ["בְּךָ","in you,"], ["וִיקַבְּלוּ","and receive"], ["מְלוֹא","a fulness of"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["וְיֵעָרְכוּ","and be organized"], ["כְּחֻקֶּיךָ","according to your laws,"], ["וְיִהְיוּ","and be"], ["מוּכָנִים","prepared"], ["לְהַשִּׂיג","to obtain"], ["כׇּל","every"], ["דָּבָר","thing;"], ["נָחוּץ׃","needful"]]},
   { num: "טז", words: [
-    ["וַאֲשֶׁר","(that)"],
+    ["וַאֲשֶׁר","that"],
     ["יִהְיֶה","And that ... may be"],
     ["הַבַּיִת","... house"],
     ["הַזֶּה","this"],
@@ -345,7 +345,7 @@ var dc109_ch1Verses = [
     ["אֶל־עֶלְיוֹן׃","to the Most High;"]
   ]},
   { num: "כ", words: [
-    ["וַאֲשֶׁר","(that)"],
+    ["וַאֲשֶׁר","that"],
     ["לֹא","And that no"],
     ["יֻרְשֶׁה","shall be permitted"],
     ["לְכׇל־דָּבָר","any thing"],
@@ -386,7 +386,7 @@ var dc109_ch1Verses = [
     ["מִמְּךָ","you,"],
     ["אָבִינוּ","Father,"],
     ["הַקָּדוֹשׁ","Holy"],
-    ["אֲשֶׁר","(that)"],
+    ["אֲשֶׁר","that"],
     ["עֲבָדֶיךָ","that your servants"],
     ["יֵצְאוּ","may go forth"],
     ["מִן","from"],
@@ -394,7 +394,7 @@ var dc109_ch1Verses = [
     ["הַזֶּה","this"],
     ["מְזֻיָּנִים","armed"],
     ["בִּגְבוּרָתֶךָ","with your power,"],
-    ["וַאֲשֶׁר","(that)"],
+    ["וַאֲשֶׁר","that"],
     ["יִהְיֶה","and that ... may be"],
     ["שִׁמְךָ","your name"],
     ["עֲלֵיהֶם","upon them,"],
@@ -548,7 +548,7 @@ var dc109_ch1Verses = [
     ["בְּאׇזְנֵיהֶם׃","in their ears;"]
   ]},
   { num: "ל", words: [
-    ["וַאֲשֶׁר","(that)"],
+    ["וַאֲשֶׁר","that"],
     ["כׇּל","And that all"],
     ["מַעֲשֵׂיהֶם","their works"],
     ["יוּבְאוּ","may be brought"],
@@ -738,7 +738,7 @@ var dc109_ch1Verses = [
   ]},
   { num: "מ", words: [
     ["וְעַד","And until"],
-    ["אֲשֶׁר","(that)"],
+    ["אֲשֶׁר","that"],
     ["יֵעָשֶׂה","be accomplished,"],
     ["הַדָּבָר","... thing"],
     ["הַזֶּה","this"],
@@ -1176,7 +1176,7 @@ var dc109_ch1Verses = [
   ]},
   { num: "סה", words: [
     ["וַעֲשֵׂה","And cause"],
-    ["אֲשֶׁר","(that)"],
+    ["אֲשֶׁר","that"],
     ["שְׁאֵרִית","that the remnants of"],
     ["יַעֲקֹב","Jacob,"],
     ["אֲשֶׁר","who"],

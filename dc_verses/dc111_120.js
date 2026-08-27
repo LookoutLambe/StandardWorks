@@ -149,7 +149,7 @@ var dc111_ch1Verses = [
     ["כׇּל־דָּבָר","all things"],
     ["לְטוֹבַתְכֶם","for your good,"],
     ["כְּפִי","according as"],
-    ["אֲשֶׁר","(that)"],
+    ["אֲשֶׁר","that"],
     ["תּוּכְלוּ","you are able"],
     ["לְקַבֵּל","to receive them."],
     ["אָמֵן׃","Amen."]
@@ -229,7 +229,7 @@ var dc112_ch1Verses = [
     ["לַגּוֹיִם","unto the Gentiles"],
     ["לְבַדָּם","only,"],
     ["כִּי","but"],
-    ["אִם","(rather)"],
+    ["אִם","rather"],
     ["גַּם","also"],
     ["לַיְּהוּדִים","unto the Jews;"],
     ["וְתִשְׁלַח","and you shall send forth"],
@@ -342,7 +342,7 @@ var dc112_ch1Verses = [
     ["רַבִּים","many"],
     ["אֲחֵרִים","others,"],
     ["כִּי","but"],
-    ["אִם","(rather)"],
+    ["אִם","rather"],
     ["תְּהִי","let ... be"],
     ["אַהֲבָתְךָ","your love"],
     ["לָהֶם","for them"],
@@ -499,7 +499,7 @@ var dc112_ch1Verses = [
     ["יִפָּתַח","shall be opened"],
     ["לָכֶם","unto you"],
     ["פֶּתַח","a ... door"],
-    ["גָּדוֹל","effectual (great)"],
+    ["גָּדוֹל","effectual great"],
     ["לְמַעַן","that"],
     ["יְקַבְּלוּ","they may receive"],
     ["דְּבָרִי׃","my word."]
@@ -615,7 +615,7 @@ var dc112_ch1Verses = [
   { num: "כו", words: [
     ["רִאשׁוֹנָה","First"],
     ["בָּאֵלֶּה","among those"],
-    ["אֲשֶׁר","(who are)"],
+    ["אֲשֶׁר","who are"],
     ["בֵּינֵיכֶם","among you,"],
     ["נְאֻם","says"],
     ["יְהוָה","the Lord,"],
@@ -635,7 +635,7 @@ var dc112_ch1Verses = [
   { num: "כז", words: [["לָכֵן","therefore"], ["רְאוּ","see to it"], ["פֶּן","lest"], ["תַּלְאוּ","you weary"], ["אֶת־נַפְשְׁכֶם","yourselves"], ["בְּעִנְיְנֵי","trouble concerning the affairs of"], ["כְּנֵסִיָּתִי","my church"], ["בַּמָּקוֹם","in ... place,"], ["הַזֶּה","this"], ["נְאֻם","says"], ["יְהוָה׃","the Lord."]]},
   { num: "כח", words: [
     ["כִּי","But"],
-    ["אִם","(rather)"],
+    ["אִם","rather"],
     ["טַהֲרוּ","purify"],
     ["לְבַבְכֶם","your hearts"],
     ["לְפָנָי","before me;"],
@@ -1157,7 +1157,7 @@ var dc115_ch1Verses = [
     ["בַּיּוֹם","on the ... day"],
     ["הָרְבִיעִי","fourth"],
     ["לַחֹדֶשׁ","of the month"],
-    ["הַשְּׁבִיעִי","seventh (July)"],
+    ["הַשְּׁבִיעִי","seventh July"],
     ["וּמֵהָעֵת","next;"],
     ["הַהִיא","and from ... time"],
     ["וָהָלְאָה","that ... forth"],
@@ -1320,7 +1320,7 @@ renderVerseSet(dc115_ch1Verses, 'dc115-ch1-verses');
 var dc116_ch1Verses = [
   { num: "א", words: [
     ["גִּבְעַת","the hill of"],
-    ["הַמַּעְיָן","the spring (Spring Hill)"],
+    ["הַמַּעְיָן","the spring Spring Hill"],
     ["קָרָא","has named"],
     ["לָהּ","it"],
     ["יְהוָה","the Lord"],
@@ -1539,7 +1539,7 @@ var dc117_ch1Verses = [
     ["בְּשֵׁם","in name"],
     ["לְבַד","only"],
     ["כִּי","but"],
-    ["אִם","(rather)"],
+    ["אִם","rather"],
     ["בְּמַעֲשֶׂה","in deed,"],
     ["נְאֻם","says"],
     ["יְהוָה׃","the Lord."]
@@ -1685,7 +1685,7 @@ var dc118_ch1Verses = [
     ["אֲכַלְכֵּל","I will provide"],
     ["אֶת־מִשְׁפְּחוֹתֵיהֶם","for their families;"],
     ["וּפֶתַח","and an effectual door"],
-    ["גָּדוֹל","(great)"],
+    ["גָּדוֹל","great"],
     ["יִפָּתַח","shall be opened"],
     ["לָהֶם","for them,"],
     ["מֵעַתָּה","from"],
@@ -1746,7 +1746,7 @@ var dc118_ch1Verses = [
     ["הַנֹּפְלִים","those who have fallen,"],
     ["וְיִוָּדַע","and let it be made known"],
     ["לָהֶם","unto them"],
-    ["כַּמִּשְׁפָּט","duly (officially)"],
+    ["כַּמִּשְׁפָּט","duly officially"],
     ["כִּי","that"],
     ["נִמְנוּ׃","they are appointed."]
   ]}
@@ -1774,7 +1774,7 @@ var dc119_ch1Verses = [
     ["מֵעֲשָׂרָה","tenth"],
     ["מִכׇּל־תְּבוּאָתָם","of all their interest"],
     ["שָׁנָה","year"],
-    ["בְשָׁנָה","by year (annually);"],
+    ["בְשָׁנָה","by year annually;"],
     ["וְזֹאת","and this"],
     ["תִּהְיֶה","shall be"],
     ["לָהֶם","unto them"],
