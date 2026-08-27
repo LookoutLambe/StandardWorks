@@ -835,7 +835,7 @@ var dc101_ch1Verses = [
     ["לְהִשָּׁאֵר׃","to tarry;"]
   ]},
   { num: "נו", words: [
-    ["וּלְכוּ","And go you"],
+    ["וּלְכוּ","And go"],
     ["יָשָׁר","straightway"],
     ["אֶל־אֶרֶץ","unto the land of"],
     ["כַּרְמִי","my vineyard,"],

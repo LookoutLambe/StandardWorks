@@ -370,7 +370,7 @@ var dc112_ch1Verses = [
     ["וְיִוָּכְחוּ","and let them be admonished"],
     ["עַל","for"],
     ["כׇּל־חַטֹּאתֵיהֶם","all their sins,"],
-    ["וִהְיוּ","and be you"],
+    ["וִהְיוּ","and be"],
     ["נֶאֱמָנִים","faithful"],
     ["לְפָנַי","before me"],
     ["לִשְׁמִי׃","unto my name."]

@@ -165,7 +165,7 @@ var dc41_ch1Verses = [
     ["בְּיוֹם","in the day of"],
     ["הַדִּין","judgment"],
     ["כֵּן","even so"],
-    ["יְהִי",""],
+    ["יְהִי","be it"],
     ["אָמֵן׃","Amen"]
   ]}
 ];
@@ -318,7 +318,7 @@ var dc42_ch1Verses = [
     ["יְמֻנֶּה","shall be appointed"],
     ["תַּחְתָּיו","in his stead"],
     ["כֵּן","even so"],
-    ["יְהִי",""],
+    ["יְהִי","be it"],
     ["אָמֵן׃","Amen"]
   ]},
   { num: "יא", words: [["עוֹד","again"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["לֹא","not"], ["יִנָּתֵן","that it shall be given"], ["לְאִישׁ","to any one"], ["לָצֵאת","to go forth"], ["לְהַטִּיף","to preach"], ["בְּשׂוֹרָתִי","my gospel"], ["אוֹ","or"], ["לִבְנוֹת","to build up"], ["כְּנֵסִיָּתִי","my church"], ["זוּלָתִי","except"], ["אִם",""], ["נִסְמַךְ","he be ordained"], ["בְּיַד","by"], ["מִי","some one"], ["אֲשֶׁר","who"], ["יֶשׁ","has"], ["לוֹ",""], ["שִׁלְטוֹן","authority"], ["וְנוֹדָע","and it is known"], ["לַכְּנֵסִיָּה","to the church"], ["כִּי","that"], ["יֶשׁ","he has"], ["לוֹ",""], ["שִׁלְטוֹן","authority"], ["וְנִסְמַךְ","and has been ordained"], ["כַּמִּשְׁפָּט","regularly"], ["בִּידֵי","by"], ["רָאשֵׁי","the heads of"], ["הַכְּנֵסִיָּה׃","the church"]]},
@@ -903,7 +903,7 @@ var dc42_ch1Verses = [
     ["אֶגְעַר","upbraid"],
     ["בּוֹ׃","him"]
   ]},
-  { num: "סט", words: [["הָרִימוּ","lift up"], ["לְבַבְכֶם","your hearts"], ["וְשִׂמְחוּ","and rejoice"], ["כִּי","for"], ["לָכֶם","unto you"], ["הַמַּלְכוּת","the kingdom"], ["אוֹ","or"], ["בְמִלִּים","in words"], ["אֲחֵרוֹת","other"], ["מַפְתְּחוֹת","the keys of"], ["הַכְּנֵסִיָּה","the church"], ["נִתְּנוּ","have been given"], ["כֵּן","even so"], ["יְהִי",""], ["אָמֵן׃","Amen"]]},
+  { num: "סט", words: [["הָרִימוּ","lift up"], ["לְבַבְכֶם","your hearts"], ["וְשִׂמְחוּ","and rejoice"], ["כִּי","for"], ["לָכֶם","unto you"], ["הַמַּלְכוּת","the kingdom"], ["אוֹ","or"], ["בְמִלִּים","in words"], ["אֲחֵרוֹת","other"], ["מַפְתְּחוֹת","the keys of"], ["הַכְּנֵסִיָּה","the church"], ["נִתְּנוּ","have been given"], ["כֵּן","even so"], ["יְהִי","be it"], ["אָמֵן׃","Amen"]]},
   { num: "ע", words: [
     ["לַכֹּהֲנִים","the priests"],
     ["וְלַמּוֹרִים","and teachers"],
