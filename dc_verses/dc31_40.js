@@ -1135,7 +1135,7 @@ var dc37_ch1Verses = [
     ["לֹא","not"],
     ["טוֹב","it is expedient"],
     ["בְּעֵינַי","in me"],
-    ["כִּי","for"],
+    ["כִּי","that"],
     ["תְתַרְגְּמוּ","you should translate"],
     ["עוֹד","any more"],
     ["עַד","until"],
@@ -1147,11 +1147,11 @@ var dc37_ch1Verses = [
     ["הָאוֹיֵב","the enemy"],
     ["וּלְמַעַנְכֶם׃","and for your sakes"]
   ]},
-  { num: "ב", words: [["וְעוֹד","and again"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["לֹא","not"], ["תֵלְכוּ","you shall go"], ["עַד","until"], ["אֲשֶׁר",""], ["הִטַּפְתֶּם","you have preached"], ["בְּשׂוֹרָתִי","my gospel"], ["בַּמְּקוֹמוֹת","in parts"], ["הָהֵם","those"], ["וְחִזַּקְתֶּם","and have strengthened up"], ["אֶת־הַכְּנֵסִיָּה","the church"], ["בְּכׇל","whithersoever"], ["מָקוֹם",""], ["אֲשֶׁר","it"], ["נִמְצֵאת","is found"], ["וּבְיֹתֶר","and more especially"], ["בְּקוֹלֶסְוִיל","in Colesville"], ["כִּי","for"], ["הִנֵּה","behold"], ["מִתְפַּלְּלִים","they pray"], ["הֵם",""], ["אֵלַי","unto me"], ["בֶּאֱמוּנָה","in faith"], ["רַבָּה׃","much"]]},
+  { num: "ב", words: [["וְעוֹד","and again"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["לֹא","not"], ["תֵלְכוּ","you shall go"], ["עַד","until"], ["אֲשֶׁר","that"], ["הִטַּפְתֶּם","you have preached"], ["בְּשׂוֹרָתִי","my gospel"], ["בַּמְּקוֹמוֹת","in the parts"], ["הָהֵם","those"], ["וְחִזַּקְתֶּם","and have strengthened up"], ["אֶת־הַכְּנֵסִיָּה","the church"], ["בְּכׇל","in every"], ["מָקוֹם","place"], ["אֲשֶׁר","where"], ["נִמְצֵאת","it is found"], ["וּבְיֹתֶר","and more especially"], ["בְּקוֹלֶסְוִיל","in Colesville"], ["כִּי","for"], ["הִנֵּה","behold"], ["מִתְפַּלְּלִים","praying"], ["הֵם","are they"], ["אֵלַי","unto me"], ["בֶּאֱמוּנָה","in faith"], ["רַבָּה׃","much"]]},
   { num: "ג", words: [["וְעוֹד","and again"], ["מִצְוָה","a commandment"], ["אֲנִי","I"], ["נֹתֵן","give"], ["לַכְּנֵסִיָּה","unto the church"], ["טוֹב","it is expedient"], ["בְּעֵינַי","in me"], ["כִּי","that"], ["יֵאָסְפוּ","they should assemble"], ["יַחְדָּו","together"], ["בְּאוֹהָיוֹ","at the Ohio"], ["לִקְרַאת","against"], ["הָעֵת","the time"], ["אֲשֶׁר","that"], ["יָשׁוּב","shall return"], ["עַבְדִּי","my servant"], ["אוֹלִיבֶר","Oliver"], ["קַאוּדְרִי","Cowdery"], ["אֲלֵיהֶם׃","unto them"]]},
   { num: "ד", words: [
     ["הִנֵּה","behold"],
-    ["זֹאת","here is"],
+    ["זֹאת","this is"],
     ["חׇכְמָה","wisdom"],
     ["וְיִבְחַר","and let choose"],
     ["כׇּל","every"],
