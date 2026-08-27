@@ -1050,8 +1050,8 @@ renderVerseSet(dc54_ch1Verses, 'dc54-ch1-verses');
 var dc55_ch1Verses = [
   { num: "א", words: [["הִנֵּה","behold"], ["כֹּה","thus"], ["אָמַר","says"], ["יְהוָה","the Lord"], ["לְךָ","unto you"], ["עַבְדִּי","my servant"], ["וִילְיָם","William"], ["כֵּן","yea"], ["אֲדוֹן","the Lord of"], ["כׇּל","the whole"], ["הָאָרֶץ","earth"], ["אַתָּה","you are"], ["קָרוּא","called"], ["וּבָחוּר","and chosen"], ["וְאַחֲרֵי","and after"], ["הִטָּבֶלְךָ","you have been baptized"], ["בַּמַּיִם","by water"], ["וְאִם","and if"], ["תַּעֲשֶׂה","you do"], ["זֹאת","this"], ["בְּעַיִן","with eye"], ["תְּמִימָה","single"], ["לִכְבוֹדִי","to my glory"], ["תַּשִּׂיג","you shall obtain"], ["סְלִיחַת","a remission of"], ["חֲטָאֶיךָ","your sins"], ["וְקַבָּלַת","and a reception of"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["בִּסְמִיכַת","by the laying on of"], ["יָדָיִם׃","hands"]]},
   { num: "ב", words: [["וְאָז","and then"], ["תִּסָּמֵךְ","you shall be ordained"], ["בְּיַד","by the hand of"], ["עַבְדִּי","my servant"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["לִהְיוֹת","to be"], ["זָקֵן","an elder"], ["בַּכְּנֵסִיָּה","unto the church"], ["הַזֹּאת","this"], ["לְהַטִּיף","to preach"], ["תְּשׁוּבָה","repentance"], ["וּסְלִיחַת","and remission of"], ["חֲטָאִים","sins"], ["דֶּרֶךְ","by way of"], ["טְבִילָה","baptism"], ["בְּשֵׁם","in the name of"], ["יֵשׁוּעַ","Jesus"], ["הַמָּשִׁיחַ","Christ"], ["בֶּן","the Son of"], ["אֱלֹהִים","God"], ["חַיִּים׃","the living"]]},
-  { num: "ג", words: [["וְעַל","and on"], ["כׇּל","every one"], ["אֲשֶׁר","whom"], ["תָּשִׂים","you shall lay"], ["יָדֶיךָ","your hands"], ["אִם","if"], ["הֵם","they are"], ["נִשְׁבְּרֵי","contrite broken of"], ["לֵב","heart"], ["לְפָנַי","before me"], ["יִהְיֶה","you shall have"], ["לְךָ","unto you"], ["כֹּחַ","power"], ["לָתֵת","to give"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ׃","the Holy"]]},
-  { num: "ד", words: [["וְעוֹד","and again"], ["תִּסָּמֵךְ","you shall be ordained"], ["לַעֲזֹר","to assist"], ["לְעַבְדִּי","my servant"], ["אוֹלִיבֶר","Oliver"], ["קַאוּדְרִי","Cowdery"], ["בִּמְלֶאכֶת","in the work of"], ["הַדְּפוּס","printing"], ["וּבִבְחִירַת","and in the selecting"], ["וּכְתִיבַת","and the writing of"], ["סְפָרִים","books"], ["לְבָתֵּי","for the houses of"], ["סֵפֶר","book i.e. schools"], ["בַּכְּנֵסִיָּה","in the church"], ["הַזֹּאת","this"], ["לְמַעַן","that"], ["גַּם","also"], ["יְלָדִים","children"], ["קְטַנִּים","little"], ["יְקַבְּלוּ","may receive"], ["לֶקַח","instruction"], ["לְפָנַי","before me"], ["כַּטּוֹב","as is good"], ["בְּעֵינָי׃","in my eyes"]]},
+  { num: "ג", words: [["וְעַל","and on"], ["כׇּל","every one"], ["אֲשֶׁר","whom"], ["תָּשִׂים","you shall lay"], ["יָדֶיךָ","your hands"], ["אִם","if"], ["הֵם","they are"], ["נִשְׁבְּרֵי","contrite of"], ["לֵב","heart"], ["לְפָנַי","before me"], ["יִהְיֶה","shall be"], ["לְךָ","unto you"], ["כֹּחַ","power"], ["לָתֵת","to give"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ׃","the Holy"]]},
+  { num: "ד", words: [["וְעוֹד","and again"], ["תִּסָּמֵךְ","you shall be ordained"], ["לַעֲזֹר","to assist"], ["לְעַבְדִּי","my servant"], ["אוֹלִיבֶר","Oliver"], ["קַאוּדְרִי","Cowdery"], ["בִּמְלֶאכֶת","in the work of"], ["הַדְּפוּס","printing"], ["וּבִבְחִירַת","and in the selecting"], ["וּכְתִיבַת","and the writing of"], ["סְפָרִים","books"], ["לְבָתֵּי","for the houses of"], ["סֵפֶר","book"], ["בַּכְּנֵסִיָּה","in the church"], ["הַזֹּאת","this"], ["לְמַעַן","that"], ["גַּם","also"], ["יְלָדִים","children"], ["קְטַנִּים","little"], ["יְקַבְּלוּ","may receive"], ["לֶקַח","instruction"], ["לְפָנַי","before me"], ["כַּטּוֹב","as is good"], ["בְּעֵינָי׃","in my eyes"]]},
   { num: "ה", words: [
     ["וְעוֹד","and again"],
     ["אָמֵן","verily"],
@@ -1088,8 +1088,8 @@ var dc55_ch1Verses = [
     ["עִמָּהֶם","with them"],
     ["הַשְּׁאָר","the residue"],
     ["יוּדַע","shall be made known"],
-    ["לְאַחַר","hereafter"],
-    ["מִכֵּן","after this"],
+    ["לְאַחַר","after"],
+    ["מִכֵּן","this"],
     ["כִּרְצוֹנִי","as I will"],
     ["אָמֵן׃","amen"]
   ]}
@@ -1276,7 +1276,7 @@ var dc56_ch1Verses = [
     ["לְאֶרֶץ","to the land of"],
     ["מִיזוּרִי׃","Missouri"]
   ]},
-  { num: "י", words: [["וְאִם","and if"], ["לֹא","not otherwise"], ["יְקַבֵּל","he shall receive"], ["הַכֶּסֶף","the money"], ["אֲשֶׁר","which"], ["שִׁלֵּם","he has paid"], ["וְיַעֲזֹב","and shall leave"], ["הַמָּקוֹם","the place"], ["וְיִכָּרֵת","and shall be cut off"], ["מִכְּנֵסִיָּתִי","out of my church"], ["אָמַר","says"], ["יְהוָה","the Lord"], ["אֱלֹהֵי","God of"], ["צְבָאוֹת׃","hosts"]]},
+  { num: "י", words: [["וְאִם","and if"], ["לֹא","not"], ["יְקַבֵּל","he shall receive"], ["הַכֶּסֶף","the money"], ["אֲשֶׁר","which"], ["שִׁלֵּם","he has paid"], ["וְיַעֲזֹב","and shall leave"], ["הַמָּקוֹם","the place"], ["וְיִכָּרֵת","and shall be cut off"], ["מִכְּנֵסִיָּתִי","out of my church"], ["אָמַר","says"], ["יְהוָה","the Lord"], ["אֱלֹהֵי","God of"], ["צְבָאוֹת׃","hosts"]]},
   { num: "יא", words: [
     ["וְאַף","even though"],
     ["כִּי","that"],
@@ -1310,7 +1310,7 @@ var dc56_ch1Verses = [
     ["לְמַעַן","that"],
     ["אֲשֶׁר","those whom"],
     ["יְקַבֵּל","he shall receive"],
-    ["מֵהֶם","from"],
+    ["מֵהֶם","from them"],
     ["יְשֻׁלַּם","may be rewarded"],
     ["לָהֶם","unto them"],
     ["שֵׁנִית","again"],
@@ -1346,8 +1346,8 @@ var dc56_ch1Verses = [
     ["וְלֹא","and not"],
     ["נִסְלְחוּ","are pardoned"],
     ["כִּי","because"],
-    ["מְבַקְּשִׁים","you seek"],
-    ["אַתֶּם","you"],
+    ["מְבַקְּשִׁים","seeking"],
+    ["אַתֶּם","are you"],
     ["לְהִוָּעֵץ","to take counsel"],
     ["בְּדַרְכֵיכֶם׃","in your own ways"]
   ]},
@@ -1359,7 +1359,7 @@ var dc56_ch1Verses = [
     ["שֹׁמְעִים","obey not"],
     ["לָאֱמֶת","the truth"],
     ["כִּי","but"],
-    ["אִם",""],
+    ["אִם","rather"],
     ["חֲפֵצִים","have pleasure"],
     ["בָּעָוֶל׃","in unrighteousness"]
   ]},
