@@ -2194,7 +2194,13 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
       strongsNum = _strongsLookup[hText] || _strongsLookup[stripped] || _strongsLookup[_stripNikkud(hText)] || _strongsLookup[_stripNikkud(stripped)] || '';
     }
     if (strongsNum) {
-      popupStrong.innerHTML = "Strong\u2019s: <a href='https://www.blueletterbible.org/lexicon/" + strongsNum.toLowerCase() + "/wlc/0/1/' target='_blank' rel='noopener'>" + strongsNum + "</a>";
+      // The lexeme's own definition, so a derived noun explains itself:
+      // לֶקַח H3948 "learning, doctrine" beside its root לקח "take".
+      var sEntry = window._strongsRoots && window._strongsRoots[strongsNum];
+      var gEntry = window._rootGlossaryData && window._rootGlossaryData[strongsNum];
+      var sDef = (gEntry && gEntry.meaning) || (sEntry && sEntry.g) || '';
+      popupStrong.innerHTML = "Strong\u2019s: <a href='https://www.blueletterbible.org/lexicon/" + strongsNum.toLowerCase() + "/wlc/0/1/' target='_blank' rel='noopener'>" + strongsNum + "</a>" +
+        (sDef ? " <span style=\"font-style:italic;opacity:0.8;\">\u2014 " + sDef + "</span>" : "");
       popupStrong.style.display = '';
     } else {
       popupStrong.style.display = 'none';

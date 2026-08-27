@@ -28335,5 +28335,9 @@ window._rootGlossaryData = {
   "נעמ": {
     "meaning": "to be pleasant, delightful",
     "category": "Lexical"
+  },
+  "H3948": {
+    "meaning": "learning, doctrine — what is taken in",
+    "category": "Lexical"
   }
 };

@@ -3941,7 +3941,7 @@ body.dual-mode .chapter-summary { display: block; }
 <script src="../root_scorecard.js?v=31"></script>
 <script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
 <script src="crossrefs.js?v=23"></script>
-<script src="roots_glossary.js?v=26"></script>
+<script src="roots_glossary.js?v=27"></script>
 <script src="bom_inverse_crossrefs.js?v=1"></script>
 <script src="chapter_headings.js"></script>
 <script src="chapter_headings_heb.js?v=6"></script>
@@ -8459,7 +8459,13 @@ document.addEventListener('keydown', function(e) {
       strongsNum = _strongsLookup[hText] || _strongsLookup[_stripped] || _strongsLookup[_stripNikkud(hText)] || _strongsLookup[_stripNikkud(_stripped)] || '';
     }
     if (strongsNum) {
-      popupStrong.innerHTML = "Strong\u2019s: <a href='https://www.blueletterbible.org/lexicon/" + strongsNum.toLowerCase() + "/wlc/0/1/' target='_blank' rel='noopener'>" + strongsNum + "</a>";
+      // The lexeme's own definition, so a derived noun explains itself:
+      // לֶקַח H3948 "learning, doctrine" beside its root לקח "take".
+      var sEntry = window._strongsRoots && window._strongsRoots[strongsNum];
+      var gEntry = window._rootGlossaryData && window._rootGlossaryData[strongsNum];
+      var sDef = (gEntry && gEntry.meaning) || (sEntry && sEntry.g) || '';
+      popupStrong.innerHTML = "Strong\u2019s: <a href='https://www.blueletterbible.org/lexicon/" + strongsNum.toLowerCase() + "/wlc/0/1/' target='_blank' rel='noopener'>" + strongsNum + "</a>" +
+        (sDef ? " <span style=\"font-style:italic;opacity:0.8;\">\u2014 " + sDef + "</span>" : "");
       popupStrong.style.display = '';
     } else {
       popupStrong.style.display = 'none';
