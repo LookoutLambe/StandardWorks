@@ -142,7 +142,8 @@ var ch1Verses = [
     ["׃",""]
   ]},
   { num:"ב", words:[
-    ["וְכָתַבְתִּי","and I write"],
+    ["אָכֵן","Yea"],
+    ["עָשִׂיתִי","I make"],
     ["סֵפֶר","a record"],
     ["בִּלְשׁוֹן","in the language of"],
     ["אָבִי","my father"],
