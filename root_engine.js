@@ -309,59 +309,72 @@ function stripPrefixes(w) {
   // 19th-century etymology and some are junk: מָן "manna" points at מָה "what",
   // which is two letters and a different word. Those keep their own lexeme.
   var _baseOf = null;
+  var NUMERAL = {H0259:1,H8147:1,H7969:1,H0702:1,H2568:1,H8337:1,H7651:1,
+                 H8083:1,H8672:1,H6235:1,H3967:1,H0505:1,H7239:1,H6242:1,
+                 H7970:1,H0705:1,H2572:1,H8346:1,H7657:1,H8084:1,H8673:1};
+  function propName(x) {
+    return !!(x && x.g && /^[A-Z][A-Za-z-]*$/.test(x.g) && !/^(God|Lord|Law|Holy|Amen)$/.test(x.g));
+  }
   function baseRoot(sNum) {
     if (!_baseOf) {
       _baseOf = {};
-      // Cardinal numerals are primitive lexemes and must not be dissolved into
-      // verbs. Strong's chains תֵּשַׁע nine into שָׁעָה "gaze", שְׁמֹנֶה eight
-      // into שָׁמַן "oil", אַרְבַּע four into רָבַע — so a reader tapping a
-      // number in a genealogy was shown an unrelated verb.
-      var NUMERAL = {H0259:1,H8147:1,H7969:1,H0702:1,H2568:1,H8337:1,H7651:1,
-                     H8083:1,H8672:1,H6235:1,H3967:1,H0505:1,H7239:1,H6242:1,
-                     H7970:1,H0705:1,H2572:1,H8346:1,H7657:1,H8084:1,H8673:1};
       if (window._strongsRoots) {
-        for (var n in _strongsRoots) {
-          if (NUMERAL[n]) { _baseOf[n] = n; continue; }
-          var cur = n, seen = {};
-          while (_strongsRoots[cur] && _strongsRoots[cur].r &&
-                 _strongsRoots[cur].r !== cur && !seen[cur]) {
-            seen[cur] = 1; cur = _strongsRoots[cur].r;
+        // A derived word is its root plus a real affix. Comparing loose letter
+        // overlap folded חַלָּמִישׁ "flint" into חָלַם "dream"; stripping every
+        // א/ה/ו/י first folded אֱלֹהִים into אוּל, because the א and ה of
+        // אלה are root letters, not matres.
+        var skel = function(w) { return normFinals(stripNikkud(String(w || ''))).replace(/[^\u05D0-\u05EA]/g, ''); };
+        var SUF = ['ות', 'ים', 'ון', 'ית', 'ה', 'ת', 'י', 'ם', 'ן'];
+        var derives = function(src, base) {
+          if (!src || !base) return false;
+          if (src === base) return true;
+          // A derivation ADDS to its root. Without this, אֵל (2 letters) counted
+          // as derived from אוּל (3) and God's own word chained into "to twist".
+          if (src.length < base.length) return false;
+          // The מ-prefix is optional, not automatic: stripping it unconditionally
+          // turned מַלְכוּת into לכות and it stopped joining מָלַךְ.
+          var stems = [src];
+          if (src.length > base.length && (src.charAt(0) === 'מ' || src.charAt(0) === 'ת')) {
+            stems.push(src.slice(1));
           }
-          var e = _strongsRoots[cur], src = _strongsRoots[n];
-          // The base must be a 3-letter root AND actually share radicals with the
-          // word. Count Hebrew LETTERS, not characters — stripNikkud leaves the
-          // shin dot, so שָׁלַם measured 4 and every ש root failed. Length alone
-          // was not enough either: it let Strong's etymology walk אֱלֹהִים →
-          // אֱלוֹהַּ → אֵל → אוּל and file God under "to twist". Compare strong
-          // consonants only, since א/ה/ו/י come and go as matres.
-          var ok = false;
-          // A two-letter word is already irreducible; do not let etymology push
-          // it into a triliteral. Otherwise בֶּן "son" files under בָּנָה
-          // "build" and פֶּן "lest" under פָּנָה "face" — the very merge the
-          // original engine comment warned about.
-          var srcLen = src && src.w ? (src.w.match(/[\u05D0-\u05EA]/g) || []).length : 0;
-          // Never chain a common word into a proper name. Strong's links תַּחַת
-          // "under" to H8430 תּוֹחַ, the man Toach, and the radical test passes
-          // it (ת,ח shared) — filing 920 prepositions under a personal name.
-          var propName = function(x) {
-            return !!(x && x.g && /^[A-Z][A-Za-z-]*$/.test(x.g) &&
-                      !/^(God|Lord|Law|Holy|Amen)$/.test(x.g));
-          };
-          if (propName(e) && !propName(src)) { _baseOf[n] = n; continue; }
-          if (e && e.w && src && src.w && srcLen >= 3 &&
-              (e.w.match(/[\u05D0-\u05EA]/g) || []).length === 3) {
-            var strong = function(x) {
-              return (String(x).match(/[\u05D0-\u05EA]/g) || []).join('')
-                       .replace(/[\u05D0\u05D4\u05D5\u05D9]/g, '');
-            };
-            var b = strong(normFinals(e.w)), d = strong(normFinals(src.w)), hit = 0, pos = 0;
-            for (var q = 0; q < b.length; q++) {
-              var at = d.indexOf(b.charAt(q), pos);
-              if (at >= 0) { hit++; pos = at + 1; }
+          for (var k = 0; k < stems.length; k++) {
+            var s2 = stems[k];
+            if (s2 === base) return true;
+            for (var i = 0; i < SUF.length; i++) {
+              var sf = SUF[i];
+              if (s2.length > base.length && s2.slice(-sf.length) === sf) {
+                if (s2.slice(0, -sf.length) === base) return true;
+                var a0 = s2.slice(0, -sf.length).replace(/[וי]/g, '');
+                if (a0 === base.replace(/[וי]/g, '')) return true;
+              }
             }
-            ok = hit >= 2;
+            var a = s2.replace(/[וי]/g, ''), b = base.replace(/[וי]/g, '');
+            if (a === b && s2.length - base.length <= 1) return true;
           }
-          _baseOf[n] = ok ? cur : n;
+          return false;
+        };
+        for (var n in _strongsRoots) {
+          var srcW = _strongsRoots[n] && _strongsRoots[n].w;
+          if (!srcW) { _baseOf[n] = n; continue; }
+          if (NUMERAL[n]) { _baseOf[n] = n; continue; }
+          // Walk the chain one link at a time and keep the furthest link that is
+          // still a genuine derivation. Testing only the endpoint threw away
+          // valid intermediate roots such as מַלְכוּת → מָלַךְ.
+          var cur = n, best = n, seen = {}, guard = 0;
+          while (_strongsRoots[cur] && _strongsRoots[cur].r && _strongsRoots[cur].r !== cur &&
+                 !seen[cur] && guard++ < 8) {
+            seen[cur] = 1;
+            var nxt = _strongsRoots[cur].r;
+            var ne = _strongsRoots[nxt];
+            if (!ne || !ne.w) break;
+            var nb = skel(ne.w);
+            if ((ne.w.match(/[\u05D0-\u05EA]/g) || []).length !== 3) break;
+            if (propName(ne) && !propName(_strongsRoots[n])) break;
+            if (!derives(skel(srcW), nb)) break;
+            best = nxt;
+            cur = nxt;
+          }
+          _baseOf[n] = best;
         }
       }
     }
