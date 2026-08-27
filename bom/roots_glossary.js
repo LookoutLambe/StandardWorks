@@ -483,6 +483,10 @@ window._rootGlossaryData = {
     "meaning": "to be, become, happen",
     "category": "Action"
   },
+  "הוה": {
+    "meaning": "to be, to exist \u2014 the Self-Existent One; the root of the Divine Name",
+    "category": "Theology"
+  },
   "לי": {
     "meaning": "me",
     "category": "Quality"
