@@ -3937,7 +3937,7 @@ body.dual-mode .chapter-summary { display: block; }
 <script src="../root_names.js?v=12"></script>
 <script src="../xref_common.js?v=2"></script>
 <script src="../verse_loader.js?v=4"></script>
-<script src="../root_scorecard.js?v=26"></script>
+<script src="../root_scorecard.js?v=27"></script>
 <script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
 <script src="crossrefs.js?v=23"></script>
 <script src="roots_glossary.js?v=23"></script>
@@ -7650,8 +7650,15 @@ document.addEventListener('keydown', function(e) {
   // This groups morphologically related words under one root
   // 583 entries across 67 root families (theological, verbal, nominal)
   // Roots with no Strong's entry at all — these must never be peeled.
-  var _lexNoPeel = { 'כנסיה': 1, 'סעודה': 1 };
+  var _lexNoPeel = { 'כנסיה': 1, 'סעודה': 1, 'H4503': 1, 'H7133': 1 };
   var rootMap = {
+    'מִנְחֹתֵיהֶם': 'H4503', 'מִנְחֹתָיו': 'H4503', 'מִנְחוֹתֵיהֶם': 'H4503', 'מִנְחוֹתֶיךָ': 'H4503', 'מִנְחוֹתָיו': 'H4503', 'עַל־מִנְחֹתָיו': 'H4503',
+    // Pointed paradigms. The vowels are the whole point: with the nikkud
+    // stripped, מִנְחָה's stem מנח is indistinguishable from a form of
+    // נוּחַ, and the peeler filed "his offerings" under "to rest". A
+    // prefix letter is only a prefix in some vowel patterns — מָשִׁיחַ keeps
+    // its מ, מִכְתָב does not — so these are defined pointed and never peeled.
+    'אֵת־מִנְחַת': 'H4503', 'אֵת־קׇרְבַּן': 'H7133', 'אֶל־הַמִּנְחָה': 'H4503', 'אֶל־מִנְחָתָם': 'H4503', 'אֶת־הַמִּנְחָה': 'H4503', 'אֶת־מִנְחָתִי': 'H4503', 'אֶת־מִנְחָתוֹ': 'H4503', 'אֶת־קָרְבְּנוֹת': 'H7133', 'אֶת־קָרְבְּנוֹתֵיהֶם': 'H7133', 'אֶת־קָרְבְּנוֹתֵיכֶם': 'H7133', 'אֶת־קָרְבְּנוֹתָיו': 'H7133', 'אֶת־קָרְבַּן': 'H7133', 'אֶת־קָרְבָּנִי': 'H7133', 'אֶת־קָרְבָּנוֹ': 'H7133', 'אֶת־קׇרְבְּנֵיהֶם': 'H7133', 'אֶת־קׇרְבַּן': 'H7133', 'אֶת־קׇרְבַּנְכֶם': 'H7133', 'אֶת־קׇרְבָּנִי': 'H7133', 'אֶת־קׇרְבָּנָהּ': 'H7133', 'אֶת־קׇרְבָּנָם': 'H7133', 'אֶת־קׇרְבָּנוֹ': 'H7133', 'בְּמִנְחָה': 'H4503', 'בְּקָרְבָּן': 'H7133', 'בְּקָרְבָּנְךָ': 'H7133', 'בְקָרְבָּן': 'H7133', 'בַּמִּנְחָה': 'H4503', 'הַמִּנְחָה': 'H4503', 'הַקׇּרְבָן': 'H7133', 'וְאִם־מִנְחַת': 'H4503', 'וְאִם־מִנְחָה': 'H4503', 'וְאֶל־מִנְחָתוֹ': 'H4503', 'וְאֶת־הַמִּנְחָה': 'H4503', 'וְאֶת־מִנְחַת': 'H4503', 'וְאֶת־מִנְחָתוֹ': 'H4503', 'וְהַמִּנְחָה': 'H4503', 'וְכַמִּנְחָה': 'H4503', 'וְכׇל־מִנְחַת': 'H4503', 'וְכׇל־מִנְחָה': 'H4503', 'וְכׇל־קׇרְבַּן': 'H7133', 'וְקָרְבְּנוֹתֶיךָ': 'H7133', 'וְקׇרְבָּנוֹ': 'H7133', 'וּבְמִנְחַת': 'H4503', 'וּבְמִנְחָה': 'H4503', 'וּבְמִנְחָתִי': 'H4503', 'וּלְקֻרְבַּן': 'H7133', 'וּמִנְחַת': 'H4503', 'וּמִנְחָה': 'H4503', 'וּמִנְחָתָהּ': 'H4503', 'וּמִנְחָתָם': 'H4503', 'וּמִנְחָתוֹ': 'H4503', 'כְּמִנְחַת': 'H4503', 'כְּמִנְחָה': 'H4503', 'כְּקָרְבַּן': 'H7133', 'כִּי־מִנְחַת': 'H4503', 'כַּמִּנְחָה': 'H4503', 'כׇּל־הַמִּנְחָה': 'H4503', 'כׇּל־מִנְחַת': 'H4503', 'כׇּל־מִנְחֹתֶךָ': 'H4503', 'כׇּל־קׇרְבָּנְךָ': 'H7133', 'כׇּל־קׇרְבָּנָם': 'H7133', 'לְכׇל־מִנְחָתָם': 'H4503', 'לְמִנְחַת': 'H4503', 'לְמִנְחָה': 'H4503', 'לְקָרְבַּן': 'H7133', 'לְקָרְבָּן': 'H7133', 'לְקׇרְבַּן': 'H7133', 'לַמִּנְחָה': 'H4503', 'מְנָחוֹת': 'H4503', 'מִכׇּל־קׇרְבָּן': 'H7133', 'מִן־הַמִּנְחָה': 'H4503', 'מִנְחַת': 'H4503', 'מִנְחָה': 'H4503', 'מִנְחָתְךָ': 'H4503', 'מִנְחָתִי': 'H4503', 'מִנְחָתֶךָ': 'H4503', 'מִנְחָתָהּ': 'H4503', 'מִנְחָתָם': 'H4503', 'מִנְחָתוֹ': 'H4503', 'עַל־הַמִּנְחָה': 'H4503', 'עַל־קֻרְבַּן': 'H7133', 'קָרְבְּנוֹתֶיךָ': 'H7133', 'קָרְבַּן': 'H7133', 'קָרְבָּן': 'H7133', 'קָרְבָּנְךָ': 'H7133', 'קָרְבָּנָהּ': 'H7133', 'קָרְבָּנָם': 'H7133', 'קָרְבָּנוֹ': 'H7133', 'קׇרְבַּן': 'H7133', 'קׇרְבָּן': 'H7133', 'קׇרְבָּנֶךָ': 'H7133', 'קׇרְבָּנָם': 'H7133', 'קׇרְבָּנוֹ': 'H7133', 'שְׂאוּ־מִנְחָה': 'H4503',
     // Post-biblical lexemes the D&C uses that Strong's has no entry for.
     // Without these the peeler reads their first letter as a prefix and
     // files them under unrelated roots.
@@ -7862,7 +7869,7 @@ document.addEventListener('keydown', function(e) {
     return _consIdx;
   }
   var _rePre = /^(וכש|ומ|וב|ול|וכ|וה|כש|לכ|מה|בה|כה|לה|ו|ה|ב|כ|ל|מ|ש)/;
-  var _sufs = ['ותיהם','ותיכם','ותינו','ותיה','ותיו','ותם','ותן','ותי','יהם','יכם',
+  var _sufs = ['ותיהם','ותיכם','ותיהן','ותיכן','ותינו','ותיך','ותיה','ותיו','ותם','ותן','ותי','יהם','יכם',
                'ינו','תיו','נו','כם','הם','הן','תי','יו','יה','ים','ות','ת','ם','ן','ו','ה','י','ך'];
   var _particles = {'את':1,'אל':1,'על':1,'מן':1,'עד':1,'כל':1,'לא':1,'ואת':1,'ואל':1};
   function _clean(s) { return String(s || '').replace(/[׃׀"'`]/g, '').trim(); }
@@ -7901,6 +7908,13 @@ document.addEventListener('keydown', function(e) {
         var s = _sufs[j], B = bases[i];
         if (B.length > s.length + 1 && B.slice(-s.length) === s) {
           var st = B.slice(0, -s.length);
+          // A Hebrew root is three letters. Genuine two-letter roots exist
+          // (אָב, יָד, דָּם) and keep working, because for those nothing was
+          // peeled off the front. But once a prefix HAS been removed, a
+          // two-letter residue is the peeler eating the word: מִנְחוֹתָיו lost
+          // its מ, then its ותיו, and the נח left over matched H5117 נוּחַ
+          // "to rest" — so "his offerings" was filed under resting.
+          if (B !== c && st.length < 3) continue;
           if (CI[st] && _strongsRoots[CI[st]]) return CI[st];
           var lc = st.slice(-1);                               // segholate plural: ארצ → ארץ
           if (fin[lc] && CI[st.slice(0, -1) + fin[lc]] && _strongsRoots[CI[st.slice(0, -1) + fin[lc]]])
