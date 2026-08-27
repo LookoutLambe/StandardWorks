@@ -2265,8 +2265,8 @@ var dc40_ch1Verses = [
     ["יָשָׁר","right"],
     ["לְפָנַי","before me"],
     ["כִּי","for"],
-    ["כָרַת","he covenanted"],
-    ["בְּרִית",""],
+    ["כָרַת","he made"],
+    ["בְּרִית","a covenant"],
     ["עִמִּי","with me"],
     ["לִשְׁמֹעַ","that he would obey"],
     ["לִדְבָרִי׃","my word"]
@@ -2295,8 +2295,8 @@ var dc40_ch1Verses = [
     ["לִי","with me"],
     ["לַעֲשׂוֹת","to do"],
     ["בּוֹ","with him"],
-    ["כַּטּוֹב","as seems me good"],
-    ["בְּעֵינַי",""],
+    ["כַּטּוֹב","as is good"],
+    ["בְּעֵינַי","in my eyes"],
     ["אָמֵן׃","Amen"]
   ]}
 ];
