@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '31';   // bump when the generated data files change
+  var RSC_V = '32';   // bump when the generated data files change
 
   var cfg = { vol: '', base: '' };
   var keyIdx = null;         // rootKey -> index, built once
@@ -140,8 +140,20 @@
       // matched the glossary's 3-character שוב — the override silently missed
       // and Strong's crude gloss won. That hid the real meaning of all 418
       // roots containing ש: שׁוּב showed "again" instead of "to return, repent".
-      var cons = heb.replace(/[\u0591-\u05BD\u05BF-\u05C7]/g, '');
-      var cur = (window._rootGlossaryData || {})[cons];
+      var gd = window._rootGlossaryData || {};
+      // Exact key first: an entry stored under the Strong's number belongs to
+      // this family unambiguously.
+      var cur = gd[key];
+      if (!cur) {
+        var cons = heb.replace(/[\u0591-\u05BD\u05BF-\u05C7]/g, '');
+        // A bare-consonant glossary entry describes the bare-consonant FAMILY.
+        // When that family exists separately in the concordance, its meaning
+        // must not leak onto a Strong's-keyed homograph: H1319 "gospel" was
+        // showing "flesh" because בשר (the flesh family) shares its consonants.
+        var rc = window._rootConcordance;
+        var claimed = rc && rc.keys && rc.keys.indexOf(cons) >= 0;
+        if (!claimed) cur = gd[cons];
+      }
       if (cur && cur.meaning) meaning = cur.meaning;
     } else {
       // A bare consonantal root transliterates to nothing readable, so use

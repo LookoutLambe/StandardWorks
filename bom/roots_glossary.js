@@ -27647,5 +27647,689 @@ window._rootGlossaryData = {
   "אמיני": {
     "meaning": "among them",
     "category": "Quality"
+  },
+  "H1319": {
+    "meaning": "to bear tidings, publish good news; gospel",
+    "category": "Lexical"
+  },
+  "H0853": {
+    "meaning": "(direct object marker)",
+    "category": "Lexical"
+  },
+  "H3587": {
+    "meaning": "that, because, for, when",
+    "category": "Lexical"
+  },
+  "H2088": {
+    "meaning": "this, that",
+    "category": "Lexical"
+  },
+  "H5920": {
+    "meaning": "upon, over, against",
+    "category": "Lexical"
+  },
+  "H5921": {
+    "meaning": "upon, over, against",
+    "category": "Lexical"
+  },
+  "H5703": {
+    "meaning": "until, as far as; forever",
+    "category": "Lexical"
+  },
+  "H5704": {
+    "meaning": "until, as far as",
+    "category": "Lexical"
+  },
+  "H5707": {
+    "meaning": "witness",
+    "category": "Lexical"
+  },
+  "H0859": {
+    "meaning": "you",
+    "category": "Lexical"
+  },
+  "H0571": {
+    "meaning": "truth, faithfulness",
+    "category": "Lexical"
+  },
+  "H1004": {
+    "meaning": "house, household, temple",
+    "category": "Lexical"
+  },
+  "H5892": {
+    "meaning": "city, town",
+    "category": "Lexical"
+  },
+  "H0802": {
+    "meaning": "woman, wife",
+    "category": "Lexical"
+  },
+  "H0800": {
+    "meaning": "woman, wife",
+    "category": "Lexical"
+  },
+  "H1471": {
+    "meaning": "nation, people",
+    "category": "Lexical"
+  },
+  "H0410": {
+    "meaning": "God, mighty one",
+    "category": "Lexical"
+  },
+  "H0426": {
+    "meaning": "God (Aramaic)",
+    "category": "Lexical"
+  },
+  "H1285": {
+    "meaning": "covenant, treaty, agreement",
+    "category": "Lexical"
+  },
+  "H2534": {
+    "meaning": "heat, fury, wrath",
+    "category": "Lexical"
+  },
+  "H0225": {
+    "meaning": "sign, token",
+    "category": "Lexical"
+  },
+  "H6041": {
+    "meaning": "poor, afflicted, humble",
+    "category": "Lexical"
+  },
+  "H6035": {
+    "meaning": "humble, meek",
+    "category": "Lexical"
+  },
+  "H6040": {
+    "meaning": "affliction, misery",
+    "category": "Lexical"
+  },
+  "H2428": {
+    "meaning": "strength, might, valour; army",
+    "category": "Lexical"
+  },
+  "H4294": {
+    "meaning": "tribe; staff, rod",
+    "category": "Lexical"
+  },
+  "H4295": {
+    "meaning": "beneath, below, downward",
+    "category": "Lexical"
+  },
+  "H4296": {
+    "meaning": "bed, couch",
+    "category": "Lexical"
+  },
+  "H8398": {
+    "meaning": "world",
+    "category": "Lexical"
+  },
+  "H7237": {
+    "meaning": "much, many, great",
+    "category": "Lexical"
+  },
+  "H2007": {
+    "meaning": "they (f.); behold",
+    "category": "Lexical"
+  },
+  "H2318": {
+    "meaning": "new; to renew",
+    "category": "Lexical"
+  },
+  "H6098": {
+    "meaning": "counsel, plan, purpose",
+    "category": "Lexical"
+  },
+  "H3116": {
+    "meaning": "to be able, prevail",
+    "category": "Lexical"
+  },
+  "H1752": {
+    "meaning": "generation; circle",
+    "category": "Lexical"
+  },
+  "H8478": {
+    "meaning": "under, beneath, instead of",
+    "category": "Lexical"
+  },
+  "H5712": {
+    "meaning": "congregation, assembly",
+    "category": "Lexical"
+  },
+  "H5713": {
+    "meaning": "testimony, witness",
+    "category": "Lexical"
+  },
+  "H8175": {
+    "meaning": "hair",
+    "category": "Lexical"
+  },
+  "H2298": {
+    "meaning": "one (Aramaic)",
+    "category": "Lexical"
+  },
+  "H2297": {
+    "meaning": "sharp; one (Aramaic)",
+    "category": "Lexical"
+  },
+  "H5135": {
+    "meaning": "fire (Aramaic)",
+    "category": "Lexical"
+  },
+  "H6547": {
+    "meaning": "Pharaoh",
+    "category": "Lexical"
+  },
+  "H4871": {
+    "meaning": "Moses",
+    "category": "Lexical"
+  },
+  "H2331": {
+    "meaning": "Eve",
+    "category": "Lexical"
+  },
+  "H3811": {
+    "meaning": "Leah",
+    "category": "Lexical"
+  },
+  "H8282": {
+    "meaning": "Sarah; princess",
+    "category": "Lexical"
+  },
+  "H7592": {
+    "meaning": "Saul",
+    "category": "Lexical"
+  },
+  "H3467": {
+    "meaning": "Isaiah",
+    "category": "Lexical"
+  },
+  "H2388": {
+    "meaning": "Hezekiah",
+    "category": "Lexical"
+  },
+  "H6663": {
+    "meaning": "Zedekiah",
+    "category": "Lexical"
+  },
+  "H5382": {
+    "meaning": "Manasseh",
+    "category": "Lexical"
+  },
+  "H0559": {
+    "meaning": "Amorite",
+    "category": "Lexical"
+  },
+  "H0833": {
+    "meaning": "Assyria",
+    "category": "Lexical"
+  },
+  "H2975": {
+    "meaning": "the Nile; the River",
+    "category": "Lexical"
+  },
+  "H0339": {
+    "meaning": "island, coastland",
+    "category": "Lexical"
+  },
+  "H7218": {
+    "meaning": "head, top, chief",
+    "category": "Lexical"
+  },
+  "H0001": {
+    "meaning": "father, ancestor",
+    "category": "Lexical"
+  },
+  "H0002": {
+    "meaning": "father (Aramaic)",
+    "category": "Lexical"
+  },
+  "H3895": {
+    "meaning": "Lehi",
+    "category": "Lexical"
+  },
+  "H2909": {
+    "meaning": "promise",
+    "category": "Lexical"
+  },
+  "H3245": {
+    "meaning": "to found, establish; foundation",
+    "category": "Lexical"
+  },
+  "H1540": {
+    "meaning": "to uncover, reveal",
+    "category": "Lexical"
+  },
+  "H6679": {
+    "meaning": "provision, food",
+    "category": "Lexical"
+  },
+  "H0577": {
+    "meaning": "O!, I beseech",
+    "category": "Lexical"
+  },
+  "H0432": {
+    "meaning": "if, as if",
+    "category": "Lexical"
+  },
+  "H7845": {
+    "meaning": "pit, destruction",
+    "category": "Lexical"
+  },
+  "H6718": {
+    "meaning": "game, food, provision",
+    "category": "Lexical"
+  },
+  "H5307": {
+    "meaning": "to fall, fall down",
+    "category": "Lexical"
+  },
+  "H3106": {
+    "meaning": "Jubal",
+    "category": "Lexical"
+  },
+  "H6963": {
+    "meaning": "voice, sound (Aramaic)",
+    "category": "Lexical"
+  },
+  "H3634": {
+    "meaning": "entirely, at all",
+    "category": "Lexical"
+  },
+  "H0520": {
+    "meaning": "cubit",
+    "category": "Lexical"
+  },
+  "H0523": {
+    "meaning": "tribe, people",
+    "category": "Lexical"
+  },
+  "H8159": {
+    "meaning": "hour, moment (Aramaic)",
+    "category": "Lexical"
+  },
+  "H3028": {
+    "meaning": "hand, power (Aramaic)",
+    "category": "Lexical"
+  },
+  "H3606": {
+    "meaning": "all, every (Aramaic)",
+    "category": "Lexical"
+  },
+  "H4101": {
+    "meaning": "what, how (Aramaic)",
+    "category": "Lexical"
+  },
+  "H5174": {
+    "meaning": "bronze (Aramaic)",
+    "category": "Lexical"
+  },
+  "H8142": {
+    "meaning": "sleep",
+    "category": "Lexical"
+  },
+  "H8138": {
+    "meaning": "year (Aramaic); to repeat",
+    "category": "Lexical"
+  },
+  "H6901": {
+    "meaning": "to receive, accept",
+    "category": "Lexical"
+  },
+  "H1248": {
+    "meaning": "son (Aramaic)",
+    "category": "Lexical"
+  },
+  "H1247": {
+    "meaning": "son (Aramaic)",
+    "category": "Lexical"
+  },
+  "H1459": {
+    "meaning": "midst (Aramaic)",
+    "category": "Lexical"
+  },
+  "H1458": {
+    "meaning": "back",
+    "category": "Lexical"
+  },
+  "H1115": {
+    "meaning": "not, except, without",
+    "category": "Lexical"
+  },
+  "H5647": {
+    "meaning": "to serve, work",
+    "category": "Lexical"
+  },
+  "H3205": {
+    "meaning": "to bear, beget; generations",
+    "category": "Lexical"
+  },
+  "H6030": {
+    "meaning": "to answer, respond",
+    "category": "Lexical"
+  },
+  "H8104": {
+    "meaning": "to keep, guard, observe",
+    "category": "Lexical"
+  },
+  "H7121": {
+    "meaning": "to call, proclaim, read",
+    "category": "Lexical"
+  },
+  "H3384": {
+    "meaning": "to teach, instruct; to throw",
+    "category": "Lexical"
+  },
+  "H3318": {
+    "meaning": "to go out, come forth",
+    "category": "Lexical"
+  },
+  "H1129": {
+    "meaning": "to build",
+    "category": "Lexical"
+  },
+  "H6213": {
+    "meaning": "to do, make",
+    "category": "Lexical"
+  },
+  "H3045": {
+    "meaning": "to know",
+    "category": "Lexical"
+  },
+  "H0977": {
+    "meaning": "to choose, elect",
+    "category": "Lexical"
+  },
+  "H3198": {
+    "meaning": "to reprove, correct, convince",
+    "category": "Lexical"
+  },
+  "H6605": {
+    "meaning": "to open",
+    "category": "Lexical"
+  },
+  "H1431": {
+    "meaning": "to be great, magnify",
+    "category": "Lexical"
+  },
+  "H4191": {
+    "meaning": "to die; death",
+    "category": "Lexical"
+  },
+  "H1696": {
+    "meaning": "to speak",
+    "category": "Lexical"
+  },
+  "H3427": {
+    "meaning": "to dwell, sit",
+    "category": "Lexical"
+  },
+  "H7725": {
+    "meaning": "to return, turn back",
+    "category": "Lexical"
+  },
+  "H2895": {
+    "meaning": "good, pleasing",
+    "category": "Lexical"
+  },
+  "H3201": {
+    "meaning": "to be able",
+    "category": "Lexical"
+  },
+  "H6437": {
+    "meaning": "to turn; face",
+    "category": "Lexical"
+  },
+  "H1984": {
+    "meaning": "to praise, boast",
+    "category": "Lexical"
+  },
+  "H2076": {
+    "meaning": "to sacrifice",
+    "category": "Lexical"
+  },
+  "H4390": {
+    "meaning": "to fill, be full",
+    "category": "Lexical"
+  },
+  "H4886": {
+    "meaning": "to anoint",
+    "category": "Lexical"
+  },
+  "H5608": {
+    "meaning": "to count, recount; scribe",
+    "category": "Lexical"
+  },
+  "H2266": {
+    "meaning": "to join, bind; companion",
+    "category": "Lexical"
+  },
+  "H7392": {
+    "meaning": "to ride",
+    "category": "Lexical"
+  },
+  "H8199": {
+    "meaning": "to judge",
+    "category": "Lexical"
+  },
+  "H1350": {
+    "meaning": "to redeem",
+    "category": "Lexical"
+  },
+  "H1580": {
+    "meaning": "to deal fully, wean, recompense",
+    "category": "Lexical"
+  },
+  "H1546": {
+    "meaning": "exile, captivity",
+    "category": "Lexical"
+  },
+  "H1547": {
+    "meaning": "exile (Aramaic)",
+    "category": "Lexical"
+  },
+  "H6428": {
+    "meaning": "Philistia",
+    "category": "Lexical"
+  },
+  "H5034": {
+    "meaning": "Nabal; to wither, be foolish",
+    "category": "Lexical"
+  },
+  "H6887": {
+    "meaning": "to bind, oppress; adversary",
+    "category": "Lexical"
+  },
+  "H7788": {
+    "meaning": "Shur; to travel",
+    "category": "Lexical"
+  },
+  "H2363": {
+    "meaning": "to hasten",
+    "category": "Lexical"
+  },
+  "H2658": {
+    "meaning": "to dig, search",
+    "category": "Lexical"
+  },
+  "H4998": {
+    "meaning": "pasture, habitation",
+    "category": "Lexical"
+  },
+  "H7495": {
+    "meaning": "to heal; Rephaim",
+    "category": "Lexical"
+  },
+  "H2470": {
+    "meaning": "to be sick, weak",
+    "category": "Lexical"
+  },
+  "H3334": {
+    "meaning": "to form, fashion",
+    "category": "Lexical"
+  },
+  "H3947": {
+    "meaning": "to take, receive",
+    "category": "Lexical"
+  },
+  "H4116": {
+    "meaning": "to hasten",
+    "category": "Lexical"
+  },
+  "H1166": {
+    "meaning": "lord, husband; spokesman",
+    "category": "Lexical"
+  },
+  "H1504": {
+    "meaning": "to cut, decree",
+    "category": "Lexical"
+  },
+  "H3772": {
+    "meaning": "to cut, cut off",
+    "category": "Lexical"
+  },
+  "H3259": {
+    "meaning": "to appoint, meet",
+    "category": "Lexical"
+  },
+  "H2142": {
+    "meaning": "to remember",
+    "category": "Lexical"
+  },
+  "H1089": {
+    "meaning": "Bilhah",
+    "category": "Lexical"
+  },
+  "H2584": {
+    "meaning": "Hannah",
+    "category": "Lexical"
+  },
+  "H1672": {
+    "meaning": "Doeg; to fear",
+    "category": "Lexical"
+  },
+  "H4435": {
+    "meaning": "Milcah",
+    "category": "Lexical"
+  },
+  "H2061": {
+    "meaning": "wolf; Zeeb",
+    "category": "Lexical"
+  },
+  "H1584": {
+    "meaning": "Gemariah; to complete",
+    "category": "Lexical"
+  },
+  "H3372": {
+    "meaning": "to fear, revere",
+    "category": "Lexical"
+  },
+  "H3176": {
+    "meaning": "to wait, hope",
+    "category": "Lexical"
+  },
+  "H1410": {
+    "meaning": "Gad",
+    "category": "Lexical"
+  },
+  "H4487": {
+    "meaning": "to count, number, appoint",
+    "category": "Lexical"
+  },
+  "H5626": {
+    "meaning": "Sirah",
+    "category": "Lexical"
+  },
+  "H5627": {
+    "meaning": "turning aside, defection",
+    "category": "Lexical"
+  },
+  "H7944": {
+    "meaning": "error, fault",
+    "category": "Lexical"
+  },
+  "H0982": {
+    "meaning": "to trust, be secure",
+    "category": "Lexical"
+  },
+  "H2637": {
+    "meaning": "to lack, want",
+    "category": "Lexical"
+  },
+  "H0195": {
+    "meaning": "Ulai",
+    "category": "Lexical"
+  },
+  "H6280": {
+    "meaning": "Ether; abundance",
+    "category": "Lexical"
+  },
+  "H3037": {
+    "meaning": "Jaddua; known",
+    "category": "Lexical"
+  },
+  "H2372": {
+    "meaning": "to see (vision), behold",
+    "category": "Lexical"
+  },
+  "H2254": {
+    "meaning": "to bind; cord; to destroy",
+    "category": "Lexical"
+  },
+  "H6125": {
+    "meaning": "pressure, distress",
+    "category": "Lexical"
+  },
+  "H6150": {
+    "meaning": "to grow dark; evening",
+    "category": "Lexical"
+  },
+  "H7627": {
+    "meaning": "Shebat",
+    "category": "Lexical"
+  },
+  "H2314": {
+    "meaning": "chamber, room",
+    "category": "Lexical"
+  },
+  "H2734": {
+    "meaning": "to burn (with anger)",
+    "category": "Lexical"
+  },
+  "H6419": {
+    "meaning": "to pray, intercede",
+    "category": "Lexical"
+  },
+  "H6726": {
+    "meaning": "Zion",
+    "category": "Lexical"
+  },
+  "H3878": {
+    "meaning": "Levi",
+    "category": "Lexical"
+  },
+  "H3282": {
+    "meaning": "because, on account of",
+    "category": "Lexical"
+  },
+  "H1288": {
+    "meaning": "to bless; to kneel",
+    "category": "Lexical"
+  },
+  "H8085": {
+    "meaning": "to hear, listen, obey",
+    "category": "Lexical"
+  },
+  "H3381": {
+    "meaning": "to go down, descend",
+    "category": "Lexical"
+  },
+  "H0277": {
+    "meaning": "brother",
+    "category": "Lexical"
+  },
+  "H7311": {
+    "meaning": "to be high, exalted; to lift up",
+    "category": "Lexical"
   }
 };
