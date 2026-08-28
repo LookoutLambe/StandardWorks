@@ -1,7 +1,7 @@
 // nt_verses/jas.js — James verse data
 (function() {
 var jas_ch1Verses = [
-  { num:"א", words:[["יַעֲקֹב","James/Jacob"],["עֶבֶד","the-servant-of"],["אֱלֹהִים","God"],["וַאֲדֹנֵינוּ","and-lord-our"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׂיחַ","the-Messiah"],["שֹׁאֵל","greeting"],["לִשְׁלוֹם","to"],["שְׁנֵים־עָשָׂר","the-twelve"],["הַשְּׁבָטִים","tribes"],["שֶּׁבַּגּוֹלָה","which-are-scattered-abroad"],["׃",""]] },
+  { num:"א", words:[["יַעֲקֹב","James/James"],["עֶבֶד","the-servant-of"],["אֱלֹהִים","God"],["וַאֲדֹנֵינוּ","and-lord-our"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׂיחַ","the-Messiah"],["שֹׁאֵל","greeting"],["לִשְׁלוֹם","to"],["שְׁנֵים־עָשָׂר","the-twelve"],["הַשְּׁבָטִים","tribes"],["שֶּׁבַּגּוֹלָה","which-are-scattered-abroad"],["׃",""]] },
   { num:"ב", words:[["אַךְ","all"],["לְשִׂמְחָה","joy"],["חִשְׁבוּ","count-it"],["לָכֶם","it"],["אֶחָי","my-brethren"],["כַּאֲשֶׁר","when"],["תָּבֹאוּ","you-fall"],["בְּנִסְיֹנוֹת","into-temptations"],["שׁוֹנִים","divers"],["׃",""]] },
   { num:"ג", words:[["מִפְּנֵי","because-of"],["שֶׁיֹּדְעִים","knowing"],["אַתֶּם","this"],["כִּי־בֹחַן","that-the-trying-of"],["אֱמוּנַתְכֶם","your-faith"],["מֵבִיא","worketh"],["לִידֵי","unto"],["סַבְלָנוּת","patience"],["׃",""]] },
   { num:"ד", words:[["וְהַסַּבְלָנוּת","but-let-patience"],["שְׁלֵמָה","perfect"],["תִּהְיֶה","have"],["בְּפׇעֳלָהּ","her-work"],["לְמַעַן","that"],["תִּהְיוּ","you-may-be"],["שְׁלֵמִים","perfect"],["וּתְמִימִים","and-entire"],["וְלֹא","wanting"],["תַחְסְרוּ","ye-lack"],["כׇּל־דָּבָר","nothing"],["׃",""]] },

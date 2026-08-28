@@ -61,7 +61,7 @@ var col_ch2Verses = [
 renderVerseSet(col_ch2Verses, 'col-ch2-verses');
 
 var col_ch3Verses = [
-  { num:"א", words:[["לָכֵן","therefore"],["אִם־קַמְתֶּם","if-you-be-risen"],["עִם־הַמָּשִׁיחַ","with-the-Messiah"],["בַּקְּשׁוּ","seek"],["אֵת־אֲשֶׁר","which"],["לְמָעְלָה","above"],["אֲשֶׁר","which"],["הַמָּשִׁיחַ","the-Messiah"],["ישֵׁב","sitteth"],["שָׁם","there"],["לִימִין","at-right-of"],["הָאֱלֹהִים","the-God"],["׃",""]] },
+  { num:"א", words:[["לָכֵן","therefore"],["אִם־קַמְתֶּם","if-you-be-risen"],["עִם־הַמָּשִׁיחַ","with-the-Messiah"],["בַּקְּשׁוּ","seek"],["אֵת־אֲשֶׁר","which"],["לְמָעְלָה","above"],["אֲשֶׁר","which"],["הַמָּשִׁיחַ","the-Messiah"],["יֹשֵׁב","sitteth"],["שָׁם","there"],["לִימִין","at-right-of"],["הָאֱלֹהִים","the-God"],["׃",""]] },
   { num:"ב", words:[["אֵת־אֲשֶׁר","which"],["לְמַעְלָה","above"],["יֶהְגֶּה","set-your-mind"],["לְבַבְכֶם","your-hearts"],["לֹא","not"],["אֶת־אֲשֶׁר","that-which"],["בָּאָרֶץ","in-the-land"],["׃",""]] },
   { num:"ג", words:[["כִּי־מַתֶּם","for-you-are-dead"],["וְחַיֵּיכֶם","and-your-lives"],["צְפוּנִים","hid"],["עִם־הַמָּשִׁיחַ","with-the-Messiah"],["בֵּאלֹהִים","in-God"],["׃",""]] },
   { num:"ד", words:[["בְּעֵת","in-time"],["הִגָּלוֹת","when-appears"],["הַמָּשִׁיחַ","the-Messiah"],["אֲשֶׁר","which"],["הוּא","who-is"],["חַיֵּיכֶם","your-life"],["גַּם־אַתֶּם","also-you"],["תִּגָּלוּ","shall-appear"],["עִמּוֹ","with-him"],["בְּכָבוֹד","in-glory"],["׃",""]] },
