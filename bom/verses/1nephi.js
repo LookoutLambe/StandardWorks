@@ -1234,10 +1234,10 @@ var ch4Verses = [
     ["אִישׁ","a man"],
     ["אֶחָד","one"],
     ["מֵאֲשֶׁר","than that"],
-    ["תִּכְחַד","should dwindle"],
+    ["תִדְעַךְ","should dwindle"],
     ["וְתֹאבַד","and perish"],
     ["אֻמָּה","a nation"],
-    ["בְּלֹא","without"],
+    ["בְּאֵין","without"],
     ["אֱמוּנָה","faith"],
     ["׃",""]
   ]},
@@ -2696,7 +2696,7 @@ var ch8Verses = [
   ]},
   { num:"ל", words:[
     ["וּלְקַצֵּר","but to be short"],
-    ["בִּכְתִיבָתִי","in my writing"],
+    ["בְּכׇתְבִי","in my writing"],
     ["הִנֵּה","behold"],
     ["רָאָה","he saw"],
     ["קְהַל","a concourse of"],
@@ -4486,7 +4486,7 @@ var ch13Verses = [
     ["יָדָעְתִּי","I know"],
     ["׃",""]
   ]},
-  { num: "כג", words: [["וַיֹּאמֶר","and said"], ["הִנֵּה","behold"], ["יָצָא","it proceedeth"], ["מִפִּי","out of the mouth of"], ["יְהוּדִי","a Jew"], ["וָאֶרְאֶנּוּ","and I beheld it"], ["אֲנִי","I"], ["נֶפִי","Nephi"], ["וַיֹּאמֶר","and said"], ["אֵלַי","unto me"], ["הַסֵּפֶר","the book"], ["אֲשֶׁר","which"], ["רָאִיתָ","thou beheldest"], ["הוּא","is"], ["סֵפֶר","a record of"], ["הַיְּהוּדִים","the Jews"], ["אֲשֶׁר־בּוֹ","wherein are"], ["בְּרִיתוֹת","the covenants of"], ["יְהוָה","the Lord"], ["אֲשֶׁר","which"], ["כָּרַת","He hath made"], ["עִם־בֵּית","unto the house of"], ["יִשְׂרָאֵל","Israel"], ["וְגַם","and also"], ["נְבוּאוֹת","prophecies"], ["רַבּוֹת","many"], ["מִנְּבִיאֵי","of the prophets of"], ["הַקֹּדֶשׁ","holiness"], ["וְהוּא","and it is"], ["סֵפֶר","a record"], ["כַּחֲרוּטִים","like the engravings"], ["אֲשֶׁר","which are"], ["עַל־לוּחוֹת","upon the plates of"], ["הַנְּחֹשֶׁת","brass"], ["אַךְ","save"], ["לֹא","not"], ["רַבִּים","so many"], ["כָּמוֹהֶם","as them"], ["אוּלָם","nevertheless"], ["יֵשׁ","there are"], ["בָּם","in them"], ["בְּרִיתוֹת","the covenants of"], ["יְהוָה","the Lord"], ["אֲשֶׁר","which"], ["כָּרַת","He hath made"], ["עִם־בֵּית","unto the house of"], ["יִשְׂרָאֵל","Israel"], ["לָכֵן","wherefore"], ["יְקָרִים","of great worth"], ["הֵם","are they"], ["לַגּוֹיִם","unto the Gentiles"], ["׃",""]]},
+  { num: "כג", words: [["וַיֹּאמֶר","and said"], ["הִנֵּה","behold"], ["יָצָא","it proceedeth"], ["מִפִּי","out of the mouth of"], ["יְהוּדִי","a Jew"], ["וָאֶרְאֶנּוּ","and I beheld it"], ["אֲנִי","I"], ["נֶפִי","Nephi"], ["וַיֹּאמֶר","and said"], ["אֵלַי","unto me"], ["הַסֵּפֶר","the book"], ["אֲשֶׁר","which"], ["רָאִיתָ","thou beheldest"], ["הוּא","is"], ["סֵפֶר","a record of"], ["הַיְּהוּדִים","the Jews"], ["אֲשֶׁר־בּוֹ","wherein are"], ["בְּרִיתוֹת","the covenants of"], ["יְהוָה","the Lord"], ["אֲשֶׁר","which"], ["כָּרַת","He hath made"], ["עִם־בֵּית","unto the house of"], ["יִשְׂרָאֵל","Israel"], ["וְגַם","and also"], ["נְבוּאוֹת","prophecies"], ["רַבּוֹת","many"], ["מִנְּבִיאֵי","of the prophets of"], ["הַקֹּדֶשׁ","holiness"], ["וְהוּא","and it is"], ["סֵפֶר","a record"], ["כַּחֲקוּקִים","like the engravings"], ["אֲשֶׁר","which are"], ["עַל־לוּחוֹת","upon the plates of"], ["הַנְּחֹשֶׁת","brass"], ["אַךְ","save"], ["לֹא","not"], ["רַבִּים","so many"], ["כָּמוֹהֶם","as them"], ["אוּלָם","nevertheless"], ["יֵשׁ","there are"], ["בָּם","in them"], ["בְּרִיתוֹת","the covenants of"], ["יְהוָה","the Lord"], ["אֲשֶׁר","which"], ["כָּרַת","He hath made"], ["עִם־בֵּית","unto the house of"], ["יִשְׂרָאֵל","Israel"], ["לָכֵן","wherefore"], ["יְקָרִים","of great worth"], ["הֵם","are they"], ["לַגּוֹיִם","unto the Gentiles"], ["׃",""]]},
   { num:"כד", words:[
     ["וַיֹּאמֶר","and said"],
     ["אֵלַי","unto me"],
@@ -5667,7 +5667,7 @@ var ch15Verses = [
     ["בָּאַחֲרִית","in the latter"],
     ["הַיָּמִים","days"],
     ["כַּאֲשֶׁר","when"],
-    ["יִכְשַׁל","shall have dwindled"],
+    ["יִדְעַךְ","shall have dwindled"],
     ["זַרְעֵנוּ","our seed"],
     ["בְּאֵין","without"],
     ["אֱמוּנָה","faith"],
