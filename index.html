@@ -660,6 +660,15 @@ html.sw-in-app .landing-update-note { display: none; }
   margin-top: 12px;
   display: none;
 }
+.gs-snip {
+  display: block;
+  font-size: 0.82em;
+  opacity: 0.85;
+  line-height: 1.5;
+  margin-top: 2px;
+  font-weight: 400;
+}
+.gs-result-link.gs-vhit { display: block; }
 .global-search-results.open {
   display: block;
 }
@@ -968,29 +977,83 @@ function _buildJumpUrl(entry, chNum) {
   return page + (hash ? ('#' + hash) : '');
 }
 
-// The home page has no verse data loaded, so a word search is handed to the
-// volume readers, which do have it. Hebrew works with or without nikkud there.
-var GS_VOLUMES = [
-  { key:'ot',  name:'Old Testament', page:'ot.html' },
-  { key:'nt',  name:'New Testament', page:'nt.html' },
-  { key:'bom', name:'Book of Mormon', page:'bom/bom.html' },
-  { key:'dc',  name:'D&C', page:'dc.html' },
-  { key:'pgp', name:'Pearl of Great Price', page:'pgp.html' },
-  { key:'jst', name:'JST', page:'jst.html' }
-];
+// The home page searches the text of all six volumes inline. The index is a
+// precomputed file (tools/build_search_index.js) lazy-loaded on the first
+// word search; Hebrew matches with or without nikkud, English matches the
+// translation column.
+var _gsIdxState = 0; // 0 idle, 1 loading, 3 failed
+function _gsLoadIndex() {
+  if (_gsIdxState === 1 || window.SW_SEARCH_INDEX) return;
+  _gsIdxState = 1;
+  var s = document.createElement('script');
+  s.src = 'search_index.js?v=si1';
+  s.onload = function() {
+    _gsIdxState = 0;
+    var q = gsInput.value.trim();
+    if (q.length >= 2) renderGsResults(q, _gsFilter);
+  };
+  s.onerror = function() {
+    _gsIdxState = 3;
+    var q = gsInput.value.trim();
+    if (q.length >= 2) renderGsResults(q, _gsFilter);
+  };
+  document.head.appendChild(s);
+}
+var GS_POINTS = /[\u0591-\u05C7]/g;
+var GS_FINALS = { '\u05DA':'\u05DB','\u05DD':'\u05DE','\u05DF':'\u05E0','\u05E5':'\u05E6','\u05E3':'\u05E4' };
+function _gsNormHeb(s) {
+  s = String(s || '').replace(/[\u05C3\[\]]/g, '').replace(GS_POINTS, '').replace(/\u05BE/g, ' ');
+  var out = '';
+  for (var i = 0; i < s.length; i++) out += (GS_FINALS[s.charAt(i)] || s.charAt(i));
+  return out.replace(/\s+/g, ' ').trim();
+}
+function _gsHasHeb(s) { return /[\u0590-\u05FF]/.test(String(s || '')); }
+var _gsLCCache = {};
+function _gsLC(vk, rows, i) {
+  var lc = _gsLCCache[vk] || (_gsLCCache[vk] = []);
+  var v = lc[i];
+  if (v === undefined) { v = (rows[i][3] || '').toLowerCase(); lc[i] = v; }
+  return v;
+}
+function _gsSnip(text, pos, len, isHeb) {
+  var start = Math.max(0, pos - 34), end = Math.min(text.length, pos + len + 44);
+  return '<span class="gs-snip"' + (isHeb ? ' dir="rtl"' : '') + '>' +
+    (start > 0 ? '\u2026' : '') + _escapeHtml(text.slice(start, pos)) +
+    '<strong>' + _escapeHtml(text.slice(pos, pos + len)) + '</strong>' +
+    _escapeHtml(text.slice(pos + len, end)) + (end < text.length ? '\u2026' : '') + '</span>';
+}
 function _gsTextSearchRow(q, filterVol) {
   if (!q || q.length < 2) return '';
-  var vols = GS_VOLUMES.filter(function(v) { return !filterVol || filterVol === 'all' || v.key === filterVol; });
-  if (!vols.length) return '';
-  var html = '<div class="gs-hint" style="border-top:1px solid var(--rule-light);padding-top:8px;">' +
-             'Find \u201c' + _escapeHtml(q) + '\u201d in the text of:</div><div style="padding:4px 0 8px;">';
-  vols.forEach(function(v) {
-    html += '<a href="' + v.page + '?q=' + encodeURIComponent(q) + '" ' +
-            'style="display:inline-block;margin:3px 4px;padding:5px 11px;border:1px solid var(--accent);' +
-            'border-radius:4px;color:var(--accent);text-decoration:none;font-size:0.88em;">' +
-            _escapeHtml(v.name) + '</a>';
+  var idx = window.SW_SEARCH_INDEX;
+  if (!idx) {
+    if (_gsIdxState === 3) return '<div class="gs-hint">Text search could not load \u2014 reload the page and try again.</div>';
+    _gsLoadIndex();
+    return '<div class="gs-hint">Searching the text of all volumes\u2026</div>';
+  }
+  var isHeb = _gsHasHeb(q);
+  var nq = isHeb ? _gsNormHeb(q) : q.toLowerCase();
+  if (!nq) return '';
+  var html = '', shown = 0, more = 0, MAXV = 8, MAX = 48;
+  idx.vols.forEach(function(vk) {
+    if (filterVol && filterVol !== 'all' && vk !== filterVol) return;
+    var rows = idx.rows[vk] || [], vshown = 0;
+    for (var i = 0; i < rows.length; i++) {
+      var r = rows[i];
+      var hay = isHeb ? r[2] : _gsLC(vk, rows, i);
+      var pos = hay.indexOf(nq);
+      if (pos < 0) continue;
+      if (vshown >= MAXV || shown >= MAX) { more++; continue; }
+      var display = isHeb ? r[2] : (r[3] || '');
+      html += '<a class="gs-result-link gs-vhit" href="' + idx.pages[vk] + '#' + encodeURI(r[0]) + '">' +
+        '<span><strong>' + _escapeHtml(r[1]) + '</strong> <span style="opacity:0.7">\u00b7 ' + _escapeHtml(idx.names[vk]) + '</span>' +
+        _gsSnip(display, pos, nq.length, isHeb) + '</span></a>';
+      vshown++; shown++;
+    }
   });
-  return html + '</div>';
+  if (!html) return '<div class="gs-hint">No verses found for \u201c' + _escapeHtml(q) + '\u201d.</div>';
+  return '<div class="gs-hint" style="border-top:1px solid var(--rule-light);padding-top:8px;">Verses with \u201c' + _escapeHtml(q) + '\u201d:</div>' +
+    html +
+    (more ? '<div class="gs-hint">' + more + ' more matches \u2014 refine the search, or use the volume\u2019s own search for the full list.</div>' : '');
 }
 
 function renderGsResults(q, filterVol) {
@@ -1005,7 +1068,7 @@ function renderGsResults(q, filterVol) {
   if (!hits.length) {
     var row = _gsTextSearchRow(q, filterVol);
     gsResults.innerHTML = (row
-        ? '<div class="gs-hint">No book by that name — search the text instead:</div>' + row
+        ? row
         : '<div class="gs-hint">No matches. Try “Isaiah 53”, “Mosiah 5”, “D&C 121”.</div>');
     gsResults.classList.add('open');
     return;
@@ -1050,6 +1113,7 @@ try {
   }
 } catch(e) {}
 
+var _gsDebounce = null;
 gsInput.addEventListener('input', function() {
   var q = gsInput.value.trim();
   if (q.length < 2) {
@@ -1057,7 +1121,8 @@ gsInput.addEventListener('input', function() {
     gsResults.innerHTML = '';
     return;
   }
-  renderGsResults(q, _gsFilter);
+  if (_gsDebounce) clearTimeout(_gsDebounce);
+  _gsDebounce = setTimeout(function() { renderGsResults(gsInput.value.trim(), _gsFilter); }, 140);
 });
 
 gsInput.addEventListener('keydown', function(e) {
