@@ -59,6 +59,7 @@
   --ink-light: #444;
   --accent: #dbb958;
   --accent-light: #e8cc78;
+  --accent-deep: #8a6a1c; /* gold with 4.5:1 on the reading surface — for text/outline buttons on beige */
   --rule: #d6ceb8;
   --rule-light: #e8e2d4;
   --gloss: #333;
@@ -1278,7 +1279,7 @@ body.dark-mode .glossary-biblical-section { background: rgba(219,185,88,0.05); b
 .glossary-refs-overflow { margin-top: 2px; }
 .glossary-highlight-btn {
   display: inline-block; margin-top: 6px; padding: 4px 10px; background: transparent;
-  border: 1px solid var(--accent); border-radius: 3px; color: var(--accent);
+  border: 1px solid var(--accent); border-radius: 3px; color: var(--accent-deep);
   cursor: pointer; font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em;
 }
 .glossary-highlight-btn:hover { background: var(--accent); color: #1e2233; }
@@ -1564,6 +1565,7 @@ body.dark-mode {
   --ink-light: #b0a890;
   --accent: #d4af37;
   --accent-light: #e8c84e;
+  --accent-deep: #e8c84e; /* on navy the LIGHT gold is the readable one */
   --rule: #3a4054;
   --rule-light: #303648;
   --gloss: #c0b898;
@@ -2033,10 +2035,10 @@ body.dual-mode .chapter-summary { display: block; }
         cross-references or a fuller root glossary), please reach out!
       </div>
       <div style="margin-top:12px;font-size:0.9em">
-        <a href="mailto:chris@sefermormon.com" style="color:var(--accent);text-decoration:none">chris@sefermormon.com</a>
+        <a href="mailto:chris@sefermormon.com" style="color:var(--accent-deep);text-decoration:underline;text-underline-offset:3px">chris@sefermormon.com</a>
       </div>
             <div style="text-align:center;margin-top:28px">
-        <a href="../index.html" style="font-family:'David Libre', 'Georgia', serif;color:var(--accent);text-decoration:none;border:1px solid var(--accent);padding:8px 24px;border-radius:4px;font-size:0.95em;direction:ltr;display:inline-block">← Standard Works Home</a>
+        <a href="../index.html" style="font-family:'David Libre', 'Georgia', serif;color:var(--accent-deep);text-decoration:none;border:1px solid var(--accent);padding:8px 24px;border-radius:4px;font-size:0.95em;direction:ltr;display:inline-block">← Standard Works Home</a>
       </div>
     </div>
   </div>
@@ -2259,7 +2261,7 @@ body.dual-mode .chapter-summary { display: block; }
           If you spot a gloss that could be clearer, a root connection worth highlighting, or have thoughts and suggestions (or even want to help expand features like cross-references or a fuller root glossary), please reach out!
         </p>
         <p style="font-size:0.9em;margin:8px 0">
-          <a href="#print-editions" onclick="navTo('print-editions');return false" style="color:var(--accent);text-decoration:none;font-weight:500">Also available in print →</a>
+          <a href="#print-editions" onclick="navTo('print-editions');return false" style="color:var(--accent-deep);text-decoration:underline;text-underline-offset:3px;font-weight:500">Also available in print →</a>
         </p>
       </div>
 
