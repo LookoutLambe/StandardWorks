@@ -20,7 +20,8 @@ for (const dir of dirs) {
       if (/[�]/.test(h + m[2])) { console.log('REPLACEMENT-CHAR', p, h); problems++; }
     }
     const opens = (src.match(/\{ *num:/g) || []).length;
-    if (!opens) { console.log('NO-VERSES', p); problems++; }
+    // dc_chron.js is a chronological index, not verse data
+    if (!opens && !/chron|intro/.test(f)) { console.log('NO-VERSES', p); problems++; }
   }
 }
 console.log(`files: ${files}  tokens: ${tokens}`);
