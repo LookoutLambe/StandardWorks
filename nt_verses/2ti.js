@@ -18,7 +18,7 @@ var _2ti_ch1Verses = [
   { num:"טו", words:[["זֹאת","this"],["אַתָּה","you"],["יוֹדֵעַ","knows"],["כִּי־פָנוּ","that-turned-away-from"],["מִמֶּנִּי","from-me"],["כֹּל","all"],["אֲשֶׁר","which"],["בְּאַסְיָא","in-Asia"],["וּבְתוֹכָם","and-among-them"],["פּוּגְלוֹס","Phygellus"],["וְהַרְמוֹגְנִיס","and-Hermogenes"],["׃",""]] },
   { num:"טז", words:[["יִתֵּן","give"],["הָאָדוֹן","the-Lord"],["רַחֲמִים","mercy"],["לְבֵית","to-the-house-of"],["אֳנִיסִיפוֹרוֹס","Onesiphorus"],["כִּי־פְעָמִים","because-times"],["רַבּוֹת","many"],["הֵשִׁיב","refreshed"],["אֶת־נַפְשִׁי","me"],["וְלֹא־בוֹשׁ","and-was-not-ashamed"],["מִמּוֹסֵרָי","of-my-chain"],["׃",""]] },
   { num:"יז", words:[["כִּי","because"],["אִם־בִּהְיוֹתוֹ","but-when-he-was"],["בְרוֹמִי","in-Rome"],["יָגַע","he-sought-out"],["לְבַקְּשֵׁנִי","me"],["עַד","until"],["כִּי־מְצָאָנִי","and-found-me"],["׃",""]] },
-  { num:"יח", words:[["יִתְּנֶנּוּ","grant"],["הָאָדוֹן","the-Lord"],["לְרַחֲמִים","that-he-may-find-mercy"],["לִפְנֵי","before"],["יְהוָָֹה","the-Lord"],["בַּיּוֹם","in-the-day"],["הַהוּא","that"],["וְרֹב","and-how-many-things"],["שֵׁרוּתוֹ","his-service"],["אֲשֶׁר","which"],["שֵׁרֵת","he-ministered"],["בְּאֶפְסוֹס","in-Ephesus"],["אַתָּה","you"],["יָדַעְתָּ","you-know"],["הֵיטֵב","very-well"],["׃",""]] },
+  { num:"יח", words:[["יִתְּנֶנּוּ","grant"],["הָאָדוֹן","the-Lord"],["לְרַחֲמִים","that-he-may-find-mercy"],["לִפְנֵי","before"],["יְהוָֹה","the-Lord"],["בַּיּוֹם","in-the-day"],["הַהוּא","that"],["וְרֹב","and-how-many-things"],["שֵׁרוּתוֹ","his-service"],["אֲשֶׁר","which"],["שֵׁרֵת","he-ministered"],["בְּאֶפְסוֹס","in-Ephesus"],["אַתָּה","you"],["יָדַעְתָּ","you-know"],["הֵיטֵב","very-well"],["׃",""]] },
 ];
 renderVerseSet(_2ti_ch1Verses, '2ti-ch1-verses');
 
