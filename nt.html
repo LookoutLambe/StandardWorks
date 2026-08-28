@@ -136,6 +136,7 @@ body.hide-gloss .arr-hw { font-size: 2.1em; }
 .verse-english { display: none; }
 body.dual-mode .verse-english {
   display: block;
+  order: -2;
   flex: 1 1 0;
   min-width: 0;
   font-family: 'David Libre', 'Georgia', serif;
@@ -144,8 +145,8 @@ body.dual-mode .verse-english {
   color: var(--ink);
   direction: ltr;
   text-align: left;
-  padding: 6px 14px 6px 0;
-  border-right: 1px solid var(--rule-light);
+  padding: 6px 0 6px 14px;
+  border-left: 1px solid var(--rule-light);
   opacity: 0.85;
 }
 body.dual-mode .word-flow { flex: 1 1 0; min-width: 0; direction: rtl; text-align: right; }
@@ -162,8 +163,8 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
   body.dual-mode .verse-english {
     flex: 0 0 35%;
     min-width: 0;
-    border-right: 1px solid var(--rule-light);
-    padding: 4px 6px 4px 0;
+    border-left: 1px solid var(--rule-light);
+    padding: 4px 0 4px 6px;
     font-size: 0.62em;
     line-height: 1.4;
   }
@@ -720,10 +721,10 @@ body.dual-mode .chapter-heading > .chapter-summary-he {
   min-width: 0; max-width: none; margin-top: 10px;
 }
 body.dual-mode .chapter-heading > .chapter-summary-en {
-  order: 2; flex: 45 1 0; direction: ltr; text-align: left; padding-right: 14px;
-  border-right: 1px solid var(--rule-light);
+  order: 1; flex: 45 1 0; direction: ltr; text-align: left; padding-left: 14px;
+  border-left: 1px solid var(--rule-light);
 }
-body.dual-mode .chapter-heading > .chapter-summary-he { order: 1; flex: 55 1 0; direction: rtl; text-align: right; }
+body.dual-mode .chapter-heading > .chapter-summary-he { order: 2; flex: 55 1 0; direction: rtl; text-align: right; }
 @media (max-width: 700px) {
   body.dual-mode .chapter-heading > .chapter-summary-en { font-size: 0.78em; padding-right: 8px; }
   body.dual-mode .chapter-heading > .chapter-summary-he { font-size: 0.9em; }
