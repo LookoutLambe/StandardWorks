@@ -21,6 +21,7 @@
   --ink: #1a1a1a;
   --ink-light: #444;
   --accent: #c8a84e;
+  --accent-deep: #8a6a1c; /* gold at 4.5:1 on the reading surface */
   --accent-light: #d4b96a;
   --rule: #d6ceb8;
   --rule-light: #e8e2d4;
@@ -182,7 +183,7 @@ body.dark-mode .verse.user-highlight { background: rgba(200, 168, 78, 0.18); }
   content: '•';
   display: inline-block;
   margin-left: 6px;
-  color: var(--accent);
+  color: var(--accent-deep);
   font-size: 1.2em;
   line-height: 1;
   transform: translateY(-1px);
@@ -343,7 +344,7 @@ body.audio-bar-open .page { padding-top: 95px; }
 #search-results.open { display: block; }
 .search-result { padding: 10px 16px; cursor: pointer; border-bottom: 1px solid var(--rule-light); direction: rtl; }
 .search-result:hover { background: var(--highlight); }
-.search-result-ref { font-family: 'David Libre', 'Georgia', serif; font-size: 0.8em; color: var(--accent); direction: ltr; margin-bottom: 2px; }
+.search-result-ref { font-family: 'David Libre', 'Georgia', serif; font-size: 0.8em; color: var(--accent-deep); direction: ltr; margin-bottom: 2px; }
 .search-result-text { font-size: 1em; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 /* nav dropdown styles moved to nav_engine.css */
@@ -379,7 +380,7 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
 
 /* === LANDING PAGE === */
 .landing-hero { text-align: center; padding: 40px 20px 30px; }
-.landing-hero h1 { font-size: 2.2em; color: var(--accent); margin-bottom: 6px; font-weight: 700; }
+.landing-hero h1 { font-size: 2.2em; color: var(--accent-deep); margin-bottom: 6px; font-weight: 700; }
 .landing-hero .subtitle-en { font-family: 'David Libre', 'Georgia', serif; font-size: 1.1em; color: var(--ink-light); letter-spacing: 0.08em; direction: ltr; }
 .landing-hero .subtitle-heb { font-size: 1.3em; color: var(--ink); margin-top: 4px; }
 .landing-divider { border: none; border-top: 2px solid var(--rule); margin: 20px auto; max-width: 200px; }
@@ -399,11 +400,11 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
   transition: all 0.2s; display: flex; flex-direction: column; align-items: center;
 }
 .landing-sec-btn:hover { transform: scale(1.05); box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-color: var(--accent); }
-.landing-sec-btn .sec-heb { font-family: 'David Libre', serif; font-size: 0.85em; font-weight: 700; color: #c8a84e; }
+.landing-sec-btn .sec-heb { font-family: 'David Libre', serif; font-size: 0.85em; font-weight: 700; color: var(--accent-deep); }
 .landing-sec-btn .sec-num { font-family: 'David Libre', 'Georgia', serif; font-size: 0.65em; color: #5a6a80; }
 .landing-back { text-align: center; margin-top: 20px; }
 .landing-back a {
-  font-family: 'David Libre', 'Georgia', serif; color: var(--accent);
+  font-family: 'David Libre', 'Georgia', serif; color: var(--accent-deep);
   text-decoration: none; font-size: 0.95em;
   border: 1px solid var(--rule); padding: 8px 20px; border-radius: 4px;
   transition: all 0.2s; direction: ltr; display: inline-block;
@@ -454,7 +455,7 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
 body.dark-mode {
   --bg: #212736; --bg-deep: #222838;
   --ink: #e8e0d0; --ink-light: #b0a890;
-  --accent: #d4af37; --accent-light: #e8c84e;
+  --accent: #d4af37; --accent-deep: #d4af37; --accent-light: #e8c84e;
   --rule: #3a4054; --rule-light: #303648;
   --gloss: #c0b898; --verse-num: #7fb3d3;
   --highlight: rgba(200, 168, 78, 0.15);
@@ -504,7 +505,7 @@ body.dark-mode .landing-book-btn:hover { background: #1c2233; }
 }
 #glossary-panel.open { display: block; transform: translateX(0); }
 .glossary-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
-.glossary-header h3 { font-size: 1.3em; color: var(--accent); margin: 0; }
+.glossary-header h3 { font-size: 1.3em; color: var(--accent-deep); margin: 0; }
 .glossary-close { cursor: pointer; font-size: 1.4em; color: var(--ink-light); padding: 4px 8px; }
 #glossary-search { width: 100%; padding: 8px 12px; border: 1px solid var(--rule); border-radius: 4px; font-size: 1em; font-family: 'David Libre', 'Georgia', serif; margin-bottom: 8px; background: var(--bg); color: var(--ink); }
 .glossary-controls { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
@@ -514,11 +515,11 @@ body.dark-mode .landing-book-btn:hover { background: #1c2233; }
 .glossary-entry { border: 1px solid var(--rule-light); border-radius: 6px; padding: 10px 12px; margin-bottom: 6px; cursor: pointer; transition: all 0.15s; }
 .glossary-entry:hover { border-color: var(--accent); }
 .glossary-entry-header { display: flex; align-items: baseline; gap: 4px; }
-.glossary-root { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--accent); direction: rtl; }
+.glossary-root { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--accent-deep); direction: rtl; }
 .glossary-count { margin-left: auto; font-size: 0.8em; color: var(--ink-light); white-space: nowrap; }
 .glossary-meaning { font-size: 0.9em; color: var(--ink); margin-top: 2px; }
 .glossary-category-badge { display: inline-block; font-size: 0.7em; background: var(--accent); color: #fff; padding: 1px 6px; border-radius: 10px; margin-top: 4px; }
-.glossary-category-header { font-size: 0.85em; font-weight: 700; color: var(--accent); padding: 8px 0 4px; border-bottom: 1px solid var(--rule-light); margin-bottom: 6px; }
+.glossary-category-header { font-size: 0.85em; font-weight: 700; color: var(--accent-deep); padding: 8px 0 4px; border-bottom: 1px solid var(--rule-light); margin-bottom: 6px; }
 .glossary-detail { display: none; margin-top: 8px; font-size: 0.85em; color: var(--ink-light); line-height: 1.5; direction: ltr; }
 .glossary-entry.expanded .glossary-detail { display: block; }
 .glossary-forms-list { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; direction: rtl; }
@@ -529,12 +530,12 @@ body.dark-mode .landing-book-btn:hover { background: #1c2233; }
 .glossary-refs-section { margin-top: 8px; font-size: 0.85em; }
 .glossary-refs-book { margin: 2px 0; }
 .glossary-refs-book-name { font-weight: 600; }
-.glossary-ref-link { cursor: pointer; color: var(--accent); text-decoration: underline; }
+.glossary-ref-link { cursor: pointer; color: var(--accent-deep); text-decoration: underline; }
 .glossary-ref-link:hover { color: var(--accent-light); }
-.glossary-refs-toggle { cursor: pointer; color: var(--accent); text-decoration: underline; font-size: 0.85em; display: inline-block; margin-top: 4px; }
+.glossary-refs-toggle { cursor: pointer; color: var(--accent-deep); text-decoration: underline; font-size: 0.85em; display: inline-block; margin-top: 4px; }
 .glossary-biblical-section { margin-top: 8px; }
 .glossary-biblical-ref { margin: 2px 0; }
-.glossary-biblical-ref-key { font-weight: 600; color: var(--accent); }
+.glossary-biblical-ref-key { font-weight: 600; color: var(--accent-deep); }
 body.dark-mode #glossary-panel { background: #212736; border-color: #d4af37; }
 body.dark-mode #glossary-search { background: #222838; color: #e8e0d0; border-color: #3a4054; }
 body.dark-mode .glossary-entry { border-color: #3a4054; }
@@ -549,19 +550,19 @@ body.dark-mode .glossary-form-chip { background: #222838; }
 }
 #annotations-panel.open { display: block; transform: translateX(0); }
 .ann-panel-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
-.ann-panel-header h3 { font-size: 1.3em; color: var(--accent); margin: 0; }
+.ann-panel-header h3 { font-size: 1.3em; color: var(--accent-deep); margin: 0; }
 .ann-panel-close { cursor: pointer; font-size: 1.4em; color: var(--ink-light); padding: 4px 8px; }
 .ann-tabs { display: flex; gap: 4px; margin-bottom: 12px; }
 .ann-tab { background: transparent; border: 1px solid var(--rule); color: var(--ink-light); padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; }
 .ann-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
 .ann-export-btn { background: var(--accent); color: #fff; border: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; margin-top: 12px; }
 .ann-item { padding: 8px; border: 1px solid var(--rule-light); border-radius: 4px; margin-bottom: 6px; font-size: 0.85em; }
-.ann-item-ref { font-weight: 600; color: var(--accent); margin-bottom: 4px; }
+.ann-item-ref { font-weight: 600; color: var(--accent-deep); margin-bottom: 4px; }
 .ann-item-text { color: var(--ink); direction: rtl; }
 .ann-item-note { font-style: italic; color: var(--ink-light); margin-top: 4px; }
 .ann-hl { border-radius: 2px; }
 .ann-ul { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; }
-.note-marker { color: var(--accent); cursor: pointer; font-size: 0.7em; margin-right: 2px; }
+.note-marker { color: var(--accent-deep); cursor: pointer; font-size: 0.7em; margin-right: 2px; }
 body.dark-mode #annotations-panel { background: #212736; border-color: #d4af37; }
 
 /* === SELECTION TOOLBAR === */
@@ -610,7 +611,7 @@ body.hide-sel-toolbar #sel-toolbar { display: none !important; pointer-events: n
   font-family: 'David Libre', 'Georgia', serif;
 }
 #share-popup.open { display: block; }
-#share-popup h3 { color: var(--accent); margin-bottom: 16px; }
+#share-popup h3 { color: var(--accent-deep); margin-bottom: 16px; }
 .share-btns { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
 .share-btn {
   background: var(--header-bg); color: var(--header-text); border: none;
