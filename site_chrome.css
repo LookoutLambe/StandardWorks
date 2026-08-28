@@ -162,13 +162,16 @@ body.dark-mode .sw-top-bar {
 
 /* Hub has no font slider — four items: menu · home · (spacer) · dark */
 body:not(.sw-chrome-reader) .sw-top-bar-inner {
-  grid-template-columns: auto auto 1fr auto;
+  grid-template-columns: auto auto 1fr auto auto;
 }
 body:not(.sw-chrome-reader) .sw-top-bar-tools {
   display: none;
 }
-body:not(.sw-chrome-reader) #sw-chrome-dark {
+body:not(.sw-chrome-reader) .sw-chrome-print {
   grid-column: 4;
+}
+body:not(.sw-chrome-reader) #sw-chrome-dark {
+  grid-column: 5;
 }
 
 .sw-chrome-home {
@@ -330,3 +333,10 @@ body.has-sw-chrome .dict-wrap {
     padding: 4px 6px;
   }
 }
+
+
+/* The print-editions bag — an <a> dressed as a chrome button */
+a.sw-chrome-print {
+  text-decoration: none;
+}
+a.sw-chrome-print svg { display: block; }

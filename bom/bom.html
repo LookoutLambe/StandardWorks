@@ -48,7 +48,7 @@
 <link rel="apple-touch-icon" href="../icons/icon-192.png">
 <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../nav_engine.css?v=28">
-<link rel="stylesheet" href="../site_chrome.css?v=27">
+<link rel="stylesheet" href="../site_chrome.css?v=28">
 <link rel="stylesheet" href="../xref_study_panel.css?v=8">
 <style>
 
@@ -1993,27 +1993,24 @@ body.dual-mode .chapter-summary { display: block; }
   <div class="chapter-panel" id="panel-landing" style="display:block">
     <div style="max-width:700px;margin:0 auto;padding:60px 30px 40px;text-align:center">
 
-      <!-- English titles -->
-      <div style="margin-bottom:30px;direction:ltr">
-        <h1 style="font-family:'Cormorant Garamond','David Libre', 'Georgia', serif;font-size:1.6em;font-weight:600;color:var(--ink);letter-spacing:0.04em;margin:0 0 10px">Sefer Mormon: The Book of Mormon in Classical Biblical Hebrew</h1>
-        <p style="font-family:'Cormorant Garamond','David Libre', 'Georgia', serif;font-size:1.15em;font-weight:400;color:var(--ink);letter-spacing:0.04em;margin:0">Another Testament of Jesus Christ · Hebrew Interlinear</p>
+      <!-- The book itself is the hero: tap the cover to open it -->
+      <div style="margin:0 0 22px">
+        <a href="#1-nephi-1" onclick="startReading();return false" aria-label="Open Sefer Mormon — start reading" style="display:inline-block;text-decoration:none">
+          <img src="images/cover-interlinear.jpg?v=4" alt="Sefer Mormon — ספר מורמון, Hebrew Interlinear Edition"
+               style="height:300px;width:auto;border-radius:6px;border:1px solid var(--rule);box-shadow:0 14px 34px rgba(26,39,68,0.28), 0 3px 10px rgba(26,39,68,0.18);transition:transform .18s ease, box-shadow .18s ease"
+               onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 20px 42px rgba(26,39,68,0.32), 0 4px 12px rgba(26,39,68,0.2)'"
+               onmouseout="this.style.transform='';this.style.boxShadow='0 14px 34px rgba(26,39,68,0.28), 0 3px 10px rgba(26,39,68,0.18)'">
+        </a>
       </div>
 
-      <div class="ornament" style="margin:20px 0">· · ◆ · ·</div>
-
-      <!-- Hebrew titles -->
-      <div style="margin-bottom:8px;direction:rtl">
-        <div style="font-family:'David Libre',serif;font-size:1.8em;font-weight:700;color:var(--ink);margin-bottom:10px">ספר מורמון</div>
-        <div style="font-family:'David Libre',serif;font-size:1.2em;font-weight:500;color:var(--ink)">עדות אחרת ישוע המשיח</div>
+      <div style="margin-bottom:6px;direction:rtl">
+        <div style="font-family:'David Libre',serif;font-size:1.55em;font-weight:700;color:var(--ink)">ספר מורמון</div>
+        <div style="font-family:'David Libre',serif;font-size:1.05em;font-weight:500;color:var(--ink-light)">עדות אחרת ישוע המשיח</div>
       </div>
-
-      <div class="ornament" style="margin:24px 0">· · ◆ · ·</div>
-
-      <div style="font-family:'David Libre', 'Georgia', serif;font-size:0.9em;color:var(--ink-light);margin-bottom:20px;line-height:1.6">
-        Hebrew Interlinear Edition<br>
-        Classical Biblical Hebrew · Word-by-Word
-      </div>
-      <div class="ornament" style="margin:20px 0">· · ◆ · ·</div>
+      <p style="font-family:'Cormorant Garamond','David Libre','Georgia',serif;font-size:1.02em;color:var(--ink-light);letter-spacing:0.03em;margin:0 0 18px;direction:ltr">
+        The Book of Mormon in Classical Biblical Hebrew · Word-by-Word Interlinear
+      </p>
+      <div class="ornament" style="margin:14px 0 18px">· · ◆ · ·</div>
 
       <div style="margin-top:30px">
         <button id="start-reading-btn" onclick="startReading()" style="margin-bottom:12px">Start Reading: 1 Nephi 1 →</button>
@@ -2037,33 +2034,62 @@ body.dual-mode .chapter-summary { display: block; }
       <div style="margin-top:12px;font-size:0.9em">
         <a href="mailto:chris@sefermormon.com" style="color:var(--accent);text-decoration:none">chris@sefermormon.com</a>
       </div>
-      <div style="margin-top:24px">
-        <div style="font-family:'David Libre', 'Georgia', serif;font-size:0.85em;color:var(--ink-light);font-style:italic;margin-bottom:10px">Available in print</div>
-        <div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin:0 0 8px">
-          <a href="https://www.amazon.com/dp/B0GVZFM6YR" target="_blank" rel="noopener" style="text-decoration:none;text-align:center">
-            <img src="images/cover-interlinear.jpg?v=3" alt="Hebrew Book of Mormon Interlinear Edition" style="height:210px;width:auto;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.25);border:1px solid var(--rule)">
-            <div style="font-family:'David Libre', 'Georgia', serif;font-size:0.82em;color:var(--accent);margin-top:6px;font-weight:500">Interlinear Edition (Soft Cover)</div>
+            <div style="text-align:center;margin-top:28px">
+        <a href="../index.html" style="font-family:'David Libre', 'Georgia', serif;color:var(--accent);text-decoration:none;border:1px solid var(--accent);padding:8px 24px;border-radius:4px;font-size:0.95em;direction:ltr;display:inline-block">← Standard Works Home</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== IN PRINT ==================== -->
+  <div class="chapter-panel" id="panel-print-editions" style="display:none">
+    <div style="max-width:900px;margin:0 auto;padding:28px 20px 60px;text-align:center;direction:ltr">
+      <h2 style="font-family:'David Libre','Georgia',serif;font-size:1.7em;color:var(--ink);margin-bottom:2px">In Print</h2>
+      <div style="font-size:1.25em;color:var(--accent);margin-bottom:14px" dir="rtl">בִּדְפוּס</div>
+      <div class="ornament" style="margin:10px 0 22px">· · ◆ · ·</div>
+      <p style="max-width:560px;margin:0 auto 26px;color:var(--ink-light);line-height:1.7;font-size:0.95em">
+        Sefer Mormon on paper — for the shelf, the study table, and gifts.
+        Every edition is the same translation you read here; the web edition
+        is free and always carries the latest corrections.
+      </p>
+<div style="display:flex;justify-content:center;align-items:flex-start;gap:30px 22px;flex-wrap:wrap;max-width:720px;margin:0 auto 8px">
+          <a href="https://www.amazon.com/dp/B0GVZFM6YR" target="_blank" rel="noopener" style="text-decoration:none;width:196px;display:flex;flex-direction:column;align-items:center">
+            <span style="height:250px;display:flex;align-items:flex-end;justify-content:center">
+              <img src="images/cover-interlinear.jpg?v=4" alt="Hebrew Book of Mormon Interlinear Edition" loading="lazy" style="max-height:250px;max-width:176px;width:auto;border-radius:4px;border:1px solid var(--rule);box-shadow:0 6px 18px rgba(26,39,68,0.22)">
+            </span>
+            <span style="font-family:'David Libre','Georgia',serif;font-size:0.9em;color:var(--ink);margin-top:12px;font-weight:600;line-height:1.35">Interlinear Edition</span>
+            <span style="font-size:0.78em;color:var(--ink-light);margin-top:2px;letter-spacing:0.04em">Soft Cover</span>
           </a>
-          <a href="https://www.amazon.com/dp/B0DVTJC9HJ" target="_blank" rel="noopener" style="text-decoration:none;text-align:center">
-            <img src="images/cover-hebrew.jpg?v=3" alt="Hebrew Book of Mormon" style="height:210px;width:auto;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.25);border:1px solid var(--rule)">
-            <div style="font-family:'David Libre', 'Georgia', serif;font-size:0.82em;color:var(--accent);margin-top:6px;font-weight:500">Full Hebrew Edition (Soft Cover)</div>
+          <a href="https://www.amazon.com/dp/B0DVTJC9HJ" target="_blank" rel="noopener" style="text-decoration:none;width:196px;display:flex;flex-direction:column;align-items:center">
+            <span style="height:250px;display:flex;align-items:flex-end;justify-content:center">
+              <img src="images/cover-hebrew.jpg?v=3" alt="Hebrew Book of Mormon" loading="lazy" style="max-height:250px;max-width:176px;width:auto;border-radius:4px;border:1px solid var(--rule);box-shadow:0 6px 18px rgba(26,39,68,0.22)">
+            </span>
+            <span style="font-family:'David Libre','Georgia',serif;font-size:0.9em;color:var(--ink);margin-top:12px;font-weight:600;line-height:1.35">Full Hebrew Edition</span>
+            <span style="font-size:0.78em;color:var(--ink-light);margin-top:2px;letter-spacing:0.04em">Soft Cover</span>
           </a>
-          <a href="https://www.lulu.com/shop/christopher-lambe/%D7%A1%D7%A4%D7%A8-%D7%9E%D7%95%D7%A8%D7%9E%D7%95%D7%9F/hardcover/product-2m87weq.html" target="_blank" rel="noopener" style="text-decoration:none;text-align:center">
-            <img src="images/cover-hardcover.jpg?v=2" alt="Hebrew Book of Mormon — Hardcover" style="height:210px;width:auto;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.25);border:1px solid var(--rule)">
-            <div style="font-family:'David Libre', 'Georgia', serif;font-size:0.82em;color:var(--accent);margin-top:6px;font-weight:500">Hardcover Edition</div>
+          <a href="https://www.lulu.com/shop/christopher-lambe/%D7%A1%D7%A4%D7%A8-%D7%9E%D7%95%D7%A8%D7%9E%D7%95%D7%9F/hardcover/product-2m87weq.html" target="_blank" rel="noopener" style="text-decoration:none;width:196px;display:flex;flex-direction:column;align-items:center">
+            <span style="height:250px;display:flex;align-items:flex-end;justify-content:center">
+              <img src="images/cover-hardcover.jpg?v=2" alt="Hebrew Book of Mormon — Hardcover" loading="lazy" style="max-height:250px;max-width:176px;width:auto;border-radius:4px;border:1px solid var(--rule);box-shadow:0 6px 18px rgba(26,39,68,0.22)">
+            </span>
+            <span style="font-family:'David Libre','Georgia',serif;font-size:0.9em;color:var(--ink);margin-top:12px;font-weight:600;line-height:1.35">Hardcover Edition</span>
+            <span style="font-size:0.78em;color:var(--ink-light);margin-top:2px;letter-spacing:0.04em">Cloth-Bound</span>
           </a>
-          <a href="https://www.amazon.com/dp/B0GGQZG9K9" target="_blank" rel="noopener" style="text-decoration:none;text-align:center">
-            <img src="images/cover-dual.jpg" alt="Dual Language Book of Mormon" style="height:210px;width:auto;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.25);border:1px solid var(--rule)">
-            <div style="font-family:'David Libre', 'Georgia', serif;font-size:0.82em;color:var(--accent);margin-top:6px;font-weight:500">Dual Language Edition (Soft Cover)</div>
+          <a href="https://www.amazon.com/dp/B0GGQZG9K9" target="_blank" rel="noopener" style="text-decoration:none;width:196px;display:flex;flex-direction:column;align-items:center">
+            <span style="height:250px;display:flex;align-items:flex-end;justify-content:center">
+              <img src="images/cover-dual.jpg" alt="Dual Language Book of Mormon" loading="lazy" style="max-height:250px;max-width:176px;width:auto;border-radius:4px;border:1px solid var(--rule);box-shadow:0 6px 18px rgba(26,39,68,0.22)">
+            </span>
+            <span style="font-family:'David Libre','Georgia',serif;font-size:0.9em;color:var(--ink);margin-top:12px;font-weight:600;line-height:1.35">Dual Language Edition</span>
+            <span style="font-size:0.78em;color:var(--ink-light);margin-top:2px;letter-spacing:0.04em">Soft Cover</span>
           </a>
-          <a href="https://www.amazon.com/dp/B0H11CV516" target="_blank" rel="noopener" style="text-decoration:none;text-align:center">
-            <img src="images/cover-triple.jpg?v=4" alt="Triple Combination" style="height:210px;width:auto;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.25);border:1px solid var(--rule)">
-            <div style="font-family:'David Libre', 'Georgia', serif;font-size:0.82em;color:var(--accent);margin-top:6px;font-weight:500">Triple Combination (Soft Cover)</div>
+          <a href="https://www.amazon.com/dp/B0H11CV516" target="_blank" rel="noopener" style="text-decoration:none;width:196px;display:flex;flex-direction:column;align-items:center">
+            <span style="height:250px;display:flex;align-items:flex-end;justify-content:center">
+              <img src="images/cover-triple.jpg?v=4" alt="Triple Combination" loading="lazy" style="max-height:250px;max-width:176px;width:auto;border-radius:4px;border:1px solid var(--rule);box-shadow:0 6px 18px rgba(26,39,68,0.22)">
+            </span>
+            <span style="font-family:'David Libre','Georgia',serif;font-size:0.9em;color:var(--ink);margin-top:12px;font-weight:600;line-height:1.35">Triple Combination</span>
+            <span style="font-size:0.78em;color:var(--ink-light);margin-top:2px;letter-spacing:0.04em">Soft Cover</span>
           </a>
         </div>
-      </div>
-      <div style="text-align:center;margin-top:28px">
-        <a href="../index.html" style="font-family:'David Libre', 'Georgia', serif;color:var(--accent);text-decoration:none;border:1px solid var(--accent);padding:8px 24px;border-radius:4px;font-size:0.95em;direction:ltr;display:inline-block">← Standard Works Home</a>
+      <div style="margin-top:34px">
+        <button class="glossary-highlight-btn" onclick="navTo('landing')" style="font-size:1em;padding:8px 24px">← Back to Sefer Mormon</button>
       </div>
     </div>
   </div>
@@ -2232,7 +2258,7 @@ body.dual-mode .chapter-summary { display: block; }
           If you spot a gloss that could be clearer, a root connection worth highlighting, or have thoughts and suggestions (or even want to help expand features like cross-references or a fuller root glossary), please reach out!
         </p>
         <p style="font-size:0.9em;margin:8px 0">
-          <a href="https://www.amazon.com/dp/B0DVTJC9HJ" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500">Also available in print on Amazon</a>
+          <a href="#print-editions" onclick="navTo('print-editions');return false" style="color:var(--accent);text-decoration:none;font-weight:500">Also available in print →</a>
         </p>
       </div>
 
@@ -3996,6 +4022,7 @@ body.dual-mode .chapter-summary { display: block; }
 function navTo(id, slideDir, _bookReady) {
   const isLanding = id === 'landing';
   const isTopicalGuide = id === 'topical-guide';
+  const isPrintPage = id === 'print-editions';
   const isFront = id.startsWith('front-');
   const isIntro = id === 'intro';
   const is2N = id.startsWith('2n-');
@@ -4019,9 +4046,9 @@ function navTo(id, slideDir, _bookReady) {
   const titleEl = document.getElementById('main-book-title');
   const subEl = document.getElementById('main-book-subtitle');
   // Show header for all pages except landing and topical guide (they have their own titles)
-  headerEl.style.display = (isLanding || isTopicalGuide) ? 'none' : '';
-  ornamentEl.style.display = (isLanding || isTopicalGuide) ? 'none' : '';
-  if (isLanding || isTopicalGuide) {
+  headerEl.style.display = (isLanding || isTopicalGuide || isPrintPage) ? 'none' : '';
+  ornamentEl.style.display = (isLanding || isTopicalGuide || isPrintPage) ? 'none' : '';
+  if (isLanding || isTopicalGuide || isPrintPage) {
     // header hidden above
   } else if (isFront || isIntro) {
     titleEl.textContent = 'ספר מורמון';
@@ -4075,13 +4102,13 @@ function navTo(id, slideDir, _bookReady) {
   }
 
   // Load per-book verse JS on demand (~5MB saved on initial landing)
-  if (!_bookReady && !isLanding && !isTopicalGuide && typeof ensureBomBookForChapId === 'function') {
+  if (!_bookReady && !isLanding && !isTopicalGuide && !isPrintPage && typeof ensureBomBookForChapId === 'function') {
     ensureBomBookForChapId(id, function() { navTo(id, slideDir, true); });
     return;
   }
 
   // Lazy-render chapter DOM on first visit (saves mobile memory)
-  if (!isLanding && !isTopicalGuide) {
+  if (!isLanding && !isTopicalGuide && !isPrintPage) {
     _ensureChapterRendered(id);
   }
   // Render topical guide content when navigating to it
@@ -4103,7 +4130,7 @@ function navTo(id, slideDir, _bookReady) {
 
   // Track current chapter for nav buttons
   currentPageId = id;
-  if (!isFront && !isIntro && !isLanding && !isTopicalGuide) {
+  if (!isFront && !isIntro && !isLanding && !isTopicalGuide && !isPrintPage) {
     currentChapterId = id;
     document.body.classList.add('in-chapter');
   } else {
@@ -4128,7 +4155,7 @@ function scheduleAdjacentPrefetch() {
   var prevId = (idx > 0) ? fullPageOrder[idx - 1] : null;
 
   function isChapter(id) {
-    return id && id !== 'landing' && id !== 'intro' && !id.startsWith('front-') && id !== 'topical-guide';
+    return id && id !== 'landing' && id !== 'intro' && !id.startsWith('front-') && id !== 'topical-guide' && id !== 'print-editions';
   }
   function prefetch(id) {
     if (!isChapter(id)) return;
@@ -6812,6 +6839,7 @@ function getChapterLabel(id) {
   var frontMap = {
     'landing': 'Book of Mormon',
     'topical-guide': 'Topical Guide',
+    'print-editions': 'In Print',
     'front-hebrew-guide': 'Hebrew Guide',
     'front-translator': 'Translator\'s Preface',
     'front-titlepage': 'Title Page',
@@ -6882,7 +6910,7 @@ function updateContinueButton() {
   window.navTo = function() {
     _nav.apply(null, arguments);
     var id = arguments[0];
-    if (id && !id.startsWith('front-') && id !== 'intro' && id !== 'landing' && id !== 'topical-guide') {
+    if (id && !id.startsWith('front-') && id !== 'intro' && id !== 'landing' && id !== 'topical-guide' && id !== 'print-editions') {
       try { localStorage.setItem('bom-last-chapter', id); } catch(e) {}
       try {
         var nIdx = chapterOrder.indexOf(id);
@@ -7257,7 +7285,7 @@ document.addEventListener('keydown', function(e) {
     if (verseMatch) verseNum = parseInt(verseMatch[2], 10);
 
     // Support direct front matter + topical guide routing (e.g. #intro, #topical-guide)
-    if (hash === 'intro' || hash === 'topical-guide' || hash.indexOf('front-') === 0) {
+    if (hash === 'intro' || hash === 'topical-guide' || hash === 'print-editions' || hash.indexOf('front-') === 0) {
       window.__swNavFromHash = true;
       try { navTo(hash); } finally { window.__swNavFromHash = false; }
       scrollToVerse(verseNum);
@@ -9925,9 +9953,9 @@ try {
 
 </script>
 
-<script src="../site_chrome.js?v=28" data-sw-volume="bom"></script>
+<script src="../site_chrome.js?v=25" data-sw-volume="bom"></script>
 <script src="../verse_search.js?v=3"></script>
-<script src="../nav_engine.js?v=33"></script>
+<script src="../nav_engine.js?v=34"></script>
 <script src="../xref_study_panel.js?v=6"></script>
 <script>
 NavEngine.init({

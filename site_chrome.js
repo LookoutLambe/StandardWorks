@@ -109,6 +109,26 @@
     menu.insertAdjacentElement('afterend', createHomeLink());
   }
 
+  function createPrintLink() {
+    var a = document.createElement('a');
+    a.href = assetBase() + 'bom/bom.html#print-editions';
+    a.className = 'sw-chrome-btn sw-chrome-print';
+    a.setAttribute('aria-label', 'Print editions');
+    a.title = 'Print editions';
+    a.innerHTML = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      '<path d="M5.6 7.5h12.8l1.1 12a1.6 1.6 0 0 1-1.6 1.7H6.1a1.6 1.6 0 0 1-1.6-1.7z"/>' +
+      '<path d="M8.8 10.2V6.4a3.2 3.2 0 0 1 6.4 0v3.8"/></svg>';
+    return a;
+  }
+
+  function ensurePrintLink() {
+    // The bag belongs to the landing hub only — never over the reading.
+    if (document.body.classList.contains('sw-chrome-reader')) return;
+    var dark = document.getElementById('sw-chrome-dark');
+    if (!dark || document.querySelector('.sw-chrome-print')) return;
+    dark.insertAdjacentElement('beforebegin', createPrintLink());
+  }
+
   function mergeReaderControls() {
     var controls = document.querySelector('.controls-top');
     if (!controls) return;
@@ -175,6 +195,7 @@
 
     mergeReaderControls();
     ensureHomeLink();
+    ensurePrintLink();
 
     if (!document.querySelector('.controls-bottom')) {
       markShellReady();

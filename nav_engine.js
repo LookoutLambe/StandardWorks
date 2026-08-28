@@ -550,6 +550,11 @@
               '<div class="nl-card-text">Major themes for study</div>' +
               '<div class="nl-card-heb" dir="rtl">מדריך נושאים</div>' +
             '</div>';
+    html += '<div class="nl-card" id="nl-print" tabindex="0" role="button">' +
+              '<div class="nl-card-title">In Print</div>' +
+              '<div class="nl-card-text">Paper editions of Sefer Mormon</div>' +
+              '<div class="nl-card-heb" dir="rtl">בדפוס</div>' +
+            '</div>';
 
     _libraryEl.innerHTML = html;
 
@@ -568,6 +573,14 @@
         window.location.href = (_config && _config.basePath || '') + VOLUMES.bom.page + '#topical-guide';
       };
       tgEl.onkeydown = function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); tgEl.click(); } };
+    }
+
+    var prEl = document.getElementById('nl-print');
+    if (prEl) {
+      prEl.onclick = function() {
+        window.location.href = (_config && _config.basePath || '') + VOLUMES.bom.page + '#print-editions';
+      };
+      prEl.onkeydown = function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); prEl.click(); } };
     }
 
     _libraryEl.querySelectorAll('.nl-bm').forEach(function(el) {
