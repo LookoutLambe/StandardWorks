@@ -454,6 +454,19 @@ body.dark-mode .landing-app-store-link:hover {
   color: var(--ink-light);
   margin-top: 2px;
 }
+/* Per-volume Continue-reading bookmark under each card */
+.card-continue {
+  display: block;
+  margin-top: 6px;
+  font-family: 'David Libre', serif;
+  font-size: 0.78em;
+  line-height: 1.35;
+  color: var(--accent-deep);
+  text-decoration: none;
+  cursor: pointer;
+}
+.card-continue:hover { text-decoration: underline; }
+.card-continue .cc-ref { font-weight: 700; white-space: nowrap; }
 
 /* Coming soon badge */
 .card-badge {
@@ -775,7 +788,7 @@ body, button, input, select, textarea,
     <div class="card-grid">
 
       <!-- Old Testament -->
-      <div class="scripture-card" onclick="window.location.href='ot.html'">
+      <div class="scripture-card" data-vol="ot" onclick="window.location.href='ot.html'">
         <div class="card-cover ot">
           <div class="rule-top"></div>
           <div class="card-cover-hebrew">תנ״ך</div>
@@ -790,7 +803,7 @@ body, button, input, select, textarea,
       </div>
 
       <!-- New Testament -->
-      <div class="scripture-card" onclick="window.location.href='nt.html'">
+      <div class="scripture-card" data-vol="nt" onclick="window.location.href='nt.html'">
         <div class="card-cover nt">
           <div class="rule-top"></div>
           <div class="card-cover-hebrew">הברית<br>החדשה</div>
@@ -805,7 +818,7 @@ body, button, input, select, textarea,
       </div>
 
       <!-- Book of Mormon -->
-      <div class="scripture-card" onclick="window.location.href='bom/bom.html#home'">
+      <div class="scripture-card" data-vol="bom" onclick="window.location.href='bom/bom.html#home'">
         <div class="card-cover bom">
           <div class="rule-top"></div>
           <div class="card-cover-hebrew">ספר<br>מורמון</div>
@@ -820,7 +833,7 @@ body, button, input, select, textarea,
       </div>
 
       <!-- Doctrine and Covenants -->
-      <div class="scripture-card" onclick="window.location.href='dc.html'">
+      <div class="scripture-card" data-vol="dc" onclick="window.location.href='dc.html'">
         <div class="card-cover dc">
           <div class="rule-top"></div>
           <div class="card-cover-hebrew">הלקח<br>והבריתות</div>
@@ -835,7 +848,7 @@ body, button, input, select, textarea,
       </div>
 
       <!-- Pearl of Great Price -->
-      <div class="scripture-card" onclick="window.location.href='pgp.html'">
+      <div class="scripture-card" data-vol="pgp" onclick="window.location.href='pgp.html'">
         <div class="card-cover pgp">
           <div class="rule-top"></div>
           <div class="card-cover-hebrew">פנינת<br>המחיר הגדול</div>
@@ -851,7 +864,7 @@ body, button, input, select, textarea,
 
 
       <!-- Joseph Smith Translation -->
-      <div class="scripture-card" onclick="window.location.href='jst.html'">
+      <div class="scripture-card" data-vol="jst" onclick="window.location.href='jst.html'">
         <div class="card-cover jst">
           <div class="rule-top"></div>
           <div class="card-cover-hebrew">תרגום<br>ג׳וזף סמית</div>
@@ -894,7 +907,7 @@ body, button, input, select, textarea,
 
 <script src="site_chrome.js?v=25"></script>
 <script src="notes_engine.js"></script>
-<script src="nav_engine.js?v=34"></script>
+<script src="nav_engine.js?v=35"></script>
 <script>
 (function hubNavBoot() {
   try {
@@ -1092,6 +1105,32 @@ function goToLastRead() {
     document.getElementById('cr-heb').textContent = data.heb || '';
     document.getElementById('continue-reading').style.display = 'flex';
   } catch(e) {}
+})();
+// ===== PER-VOLUME BOOKMARKS (one Continue-reading link under each card) =====
+(function showVolumeBookmarks() {
+  // Seed from the old single last-read key so pre-feature readers keep their spot
+  try {
+    var g = JSON.parse(localStorage.getItem('sw-last-read'));
+    if (g && g.volume && !localStorage.getItem('sw-last-read-' + g.volume)) {
+      localStorage.setItem('sw-last-read-' + g.volume, JSON.stringify(g));
+    }
+  } catch(e) {}
+  ['ot','nt','bom','dc','pgp','jst'].forEach(function(k) {
+    var data = null;
+    try { data = JSON.parse(localStorage.getItem('sw-last-read-' + k)); } catch(e) {}
+    if (!data || !data.path || !data.label) return;
+    var card = document.querySelector('.scripture-card[data-vol="' + k + '"]');
+    if (!card) return;
+    var lab = card.querySelector('.card-label');
+    if (!lab) return;
+    var a = document.createElement('a');
+    a.className = 'card-continue';
+    a.href = data.path;
+    a.innerHTML = 'Continue reading \u2192 <span class="cc-ref"></span>';
+    a.querySelector('.cc-ref').textContent = data.vlabel || data.label;
+    a.addEventListener('click', function(e) { e.stopPropagation(); });
+    lab.appendChild(a);
+  });
 })();
 </script>
 <script>

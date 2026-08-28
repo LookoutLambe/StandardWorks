@@ -1510,6 +1510,67 @@
         heb: bookInfo ? bookInfo.heb : '', path: url, timestamp: Date.now()
       }));
     } catch(e) {}
+    // Per-volume bookmark (feeds the hub's six Continue-reading links).
+    // Keep the finer verse position when re-saving the same chapter.
+    try {
+      var pvKey = 'sw-last-read-' + volKey;
+      var prev = null;
+      try { prev = JSON.parse(localStorage.getItem(pvKey)); } catch(e2) { prev = null; }
+      var rec = {
+        volume: volKey, chapter: chapterId, label: label,
+        heb: bookInfo ? bookInfo.heb : '', path: url, timestamp: Date.now()
+      };
+      if (prev && prev.chapter === chapterId && prev.verse) {
+        rec.verse = prev.verse;
+        rec.vlabel = prev.vlabel;
+        if (prev.path) rec.path = prev.path;
+      }
+      localStorage.setItem(pvKey, JSON.stringify(rec));
+    } catch(e) {}
+  }
+
+  // ── Verse-level position tracking (refines the per-volume bookmark) ──
+  var _vtTimer = null;
+  function captureVersePosition() {
+    if (!_config || _config.hub || !_config.volume) return;
+    var chap = _config.currentChapter;
+    if (!chap || chap === 'landing') return;
+    var book = findBook(_config.volume, chap);
+    if (!book) return;
+    var probe = null;
+    var px = Math.max(20, Math.floor(window.innerWidth / 2));
+    var pys = [130, Math.floor(window.innerHeight * 0.35)];
+    for (var i = 0; i < pys.length && !probe; i++) {
+      var el = document.elementFromPoint(px, pys[i]);
+      probe = el && el.closest ? el.closest('.verse[data-verse-key]') : null;
+    }
+    if (!probe) return;
+    var kp = (probe.getAttribute('data-verse-key') || '').split('|');
+    var vNum = kp.length === 3 ? parseInt(kp[2], 10) : 0;
+    if (!vNum) return;
+    var chNum = chap.replace(book.prefix, '');
+    if (kp[1] && String(kp[1]) !== String(chNum)) return;
+    var label = book.en;
+    if (book.ch > 1) label += ' ' + chNum;
+    var vol = VOLUMES[_config.volume];
+    var hash = buildHash(_config.volume, chap);
+    var vSuffix = _config.volume === 'bom' ? ':' + vNum : '&v=' + vNum;
+    try {
+      localStorage.setItem('sw-last-read-' + _config.volume, JSON.stringify({
+        volume: _config.volume, chapter: chap, label: label,
+        heb: book.heb, verse: vNum,
+        vlabel: book.en + ' ' + (book.ch > 1 ? chNum : '1') + ':' + vNum,
+        path: vol.page + (hash ? '#' + hash + vSuffix : ''),
+        timestamp: Date.now()
+      }));
+    } catch(e) {}
+  }
+  function installVersePositionTracker() {
+    if (!_config || _config.hub || !_config.volume) return;
+    window.addEventListener('scroll', function() {
+      if (_vtTimer) clearTimeout(_vtTimer);
+      _vtTimer = setTimeout(captureVersePosition, 600);
+    }, { passive: true, capture: true });
   }
 
   function resolveLastReadUrl(data) {
@@ -2275,6 +2336,7 @@
       }
       installReaderFooterChrome();
       createQuickDock();
+      installVersePositionTracker();
     },
     open: openSidebar,
     openJumpSearch: openSidebarAndFocusSearch,
