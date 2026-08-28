@@ -1993,13 +1993,17 @@ body.dual-mode .chapter-summary { display: block; }
   <div class="chapter-panel" id="panel-landing" style="display:block">
     <div style="max-width:700px;margin:0 auto;padding:60px 30px 40px;text-align:center">
 
-      <!-- The book itself is the hero: tap the cover to open it -->
-      <div style="margin:0 0 22px">
-        <a href="#1-nephi-1" onclick="startReading();return false" aria-label="Open Sefer Mormon — start reading" style="display:inline-block;text-decoration:none">
-          <img src="images/cover-interlinear.jpg?v=4" alt="Sefer Mormon — ספר מורמון, Hebrew Interlinear Edition"
-               style="height:300px;width:auto;border-radius:6px;border:1px solid var(--rule);box-shadow:0 14px 34px rgba(26,39,68,0.28), 0 3px 10px rgba(26,39,68,0.18);transition:transform .18s ease, box-shadow .18s ease"
-               onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 20px 42px rgba(26,39,68,0.32), 0 4px 12px rgba(26,39,68,0.2)'"
-               onmouseout="this.style.transform='';this.style.boxShadow='0 14px 34px rgba(26,39,68,0.28), 0 3px 10px rgba(26,39,68,0.18)'">
+      <!-- The book itself is the hero — the same card as the hub, tap to open -->
+      <div style="margin:0 0 24px">
+        <a href="#1-nephi-1" onclick="startReading();return false" aria-label="Open Sefer Mormon — start reading"
+           style="display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:252px;height:336px;background:linear-gradient(170deg,#1e2233 0%,#1e2233 52%,#2a3050 100%);border:1px solid rgba(255,255,255,0.22);border-radius:8px;box-shadow:0 14px 34px rgba(26,39,68,0.28), 0 3px 10px rgba(26,39,68,0.18);text-decoration:none;transition:transform .18s ease, box-shadow .18s ease"
+           onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 20px 42px rgba(26,39,68,0.32), 0 4px 12px rgba(26,39,68,0.2)'"
+           onmouseout="this.style.transform='';this.style.boxShadow='0 14px 34px rgba(26,39,68,0.28), 0 3px 10px rgba(26,39,68,0.18)'">
+          <span style="width:55%;height:1px;background:var(--accent);opacity:0.75;margin:10px auto"></span>
+          <span style="font-family:'David Libre',serif;font-size:1.5em;font-weight:600;color:var(--accent);direction:rtl;line-height:1.4;text-align:center">ספר<br>מורמון</span>
+          <span style="width:55%;height:1px;background:var(--accent);opacity:0.75;margin:12px auto"></span>
+          <span style="font-family:'David Libre',serif;font-size:1.18em;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.12em;line-height:1.45;text-align:center">The<br>Book of<br>Mormon</span>
+          <span style="width:55%;height:1px;background:var(--accent);opacity:0.75;margin:12px auto"></span>
         </a>
       </div>
 
