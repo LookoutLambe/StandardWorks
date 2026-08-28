@@ -926,7 +926,7 @@ body, button, input, select, textarea,
 
 <script src="site_chrome.js?v=25"></script>
 <script src="notes_engine.js"></script>
-<script src="nav_engine.js?v=35"></script>
+<script src="nav_engine.js?v=36"></script>
 <script>
 (function hubNavBoot() {
   try {
@@ -1171,10 +1171,21 @@ document.addEventListener('keydown', function(e) {
       localStorage.setItem('sw-last-read-' + g.volume, JSON.stringify(g));
     }
   } catch(e) {}
+  // Every card always carries the button; a volume with no saved position
+  // yet starts at its opening chapter.
+  var GS_START = {
+    ot:  { label: 'Genesis 1',   path: 'ot.html#gen-ch1' },
+    nt:  { label: 'Matthew 1',   path: 'nt.html#matt-ch1' },
+    bom: { label: '1 Nephi 1',   path: 'bom/bom.html#1-nephi-1' },
+    dc:  { label: 'D&C 1',       path: 'dc.html#dc1-ch1' },
+    pgp: { label: 'Moses 1',     path: 'pgp.html#ms-ch1' },
+    jst: { label: 'Genesis 1',   path: 'jst.html#jstgen-ch1' }
+  };
   ['ot','nt','bom','dc','pgp','jst'].forEach(function(k) {
     var data = null;
     try { data = JSON.parse(localStorage.getItem('sw-last-read-' + k)); } catch(e) {}
-    if (!data || !data.path || !data.label) return;
+    if (!data || !data.path || !data.label) data = GS_START[k];
+    if (!data) return;
     var card = document.querySelector('.scripture-card[data-vol="' + k + '"]');
     if (!card) return;
     var lab = card.querySelector('.card-label');

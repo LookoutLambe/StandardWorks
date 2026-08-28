@@ -1512,6 +1512,9 @@
     } catch(e) {}
     // Per-volume bookmark (feeds the hub's six Continue-reading links).
     // Keep the finer verse position when re-saving the same chapter.
+    // A landing / front-matter update carries no book — never let it
+    // overwrite a real saved position with an empty record.
+    if (!bookInfo) return;
     try {
       var pvKey = 'sw-last-read-' + volKey;
       var prev = null;
