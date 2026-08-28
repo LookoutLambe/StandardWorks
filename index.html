@@ -60,8 +60,8 @@
 <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="nav_engine.css?v=28">
-<link rel="stylesheet" href="site_chrome.css?v=28">
+<link rel="stylesheet" href="nav_engine.css?v=29">
+<link rel="stylesheet" href="site_chrome.css?v=29">
 <style>
 
 /* ========== THEME ========== */
@@ -454,6 +454,28 @@ body.dark-mode .landing-app-store-link:hover {
   color: var(--ink-light);
   margin-top: 2px;
 }
+/* iPhone touch polish: no gray tap flash on the hub's tappable chrome,
+   pressed states instead (hover does not exist on touch) */
+.scripture-card, .card-continue, .gs-result-link, #gs-filter,
+.global-search-input, .landing-app-store a {
+  -webkit-tap-highlight-color: transparent;
+}
+.scripture-card, .card-continue { user-select: none; -webkit-user-select: none; }
+.scripture-card:active .card-cover { transform: scale(0.97); transition: transform 0.1s; }
+.card-continue:active { transform: scale(0.96); background: var(--accent-light, #e8cc78); }
+.gs-result-link:active { background: var(--highlight); }
+.global-search-input { min-height: 44px; }
+#gs-filter {
+  min-height: 44px;
+  padding: 8px 10px;
+  font-family: 'David Libre', serif;
+  font-size: 1em;
+  color: var(--ink);
+  background: var(--bg-deep);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+}
+
 /* Per-volume Continue-reading button under each card — same yellow as the
    old landing bar */
 .card-continue {
@@ -659,6 +681,12 @@ html.sw-in-app .landing-update-note { display: none; }
 .global-search-results {
   margin-top: 12px;
   display: none;
+}
+.global-search-results.open {
+  max-height: min(65vh, 520px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 .gs-snip {
   display: block;
@@ -924,7 +952,7 @@ body, button, input, select, textarea,
 
 </div><!-- /page -->
 
-<script src="site_chrome.js?v=25"></script>
+<script src="site_chrome.js?v=26"></script>
 <script src="notes_engine.js"></script>
 <script src="nav_engine.js?v=36"></script>
 <script>

@@ -53,6 +53,19 @@
     syncDarkButtons();
   }
 
+  // iPhone: keep the browser/status-bar surround color in step with dark mode
+  function syncThemeColor() {
+    try {
+      var m = document.querySelector('meta[name="theme-color"]');
+      if (!m) return;
+      m.setAttribute('content', document.body.classList.contains('dark-mode') ? '#0a0a0a' : '#1e2233');
+    } catch (e) {}
+  }
+  try {
+    new MutationObserver(syncThemeColor).observe(document.body, { attributes: true, attributeFilter: ['class'] });
+    syncThemeColor();
+  } catch (e) {}
+
   window.toggleDark = function () {
     var volBtn = document.getElementById('dark-mode-toggle');
     if (volBtn && typeof volBtn.onclick === 'function') {

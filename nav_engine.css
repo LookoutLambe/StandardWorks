@@ -830,3 +830,7 @@ body.dark-mode #nav-sidebar .nav-footer { background: #121212 !important; }
 body.dark-mode #nav-sidebar .nl-card,
 body.dark-mode #nav-sidebar .nl-bm,
 body.dark-mode #nav-sidebar .nl-tile { background: #1a1f2e !important; }
+
+/* iPhone: drawer/panel scrolling must not chain to the page behind it */
+#nav-sidebar, #glossary-panel, #xref-panel, #annotations-panel,
+.nav-library, .rsc-panel-card { overscroll-behavior: contain; }

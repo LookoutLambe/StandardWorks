@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <script>document.documentElement.classList.add('sw-shell-pending');</script>
 <script>(function(){var h=(location.hostname||'').toLowerCase(),p=location.pathname.split('/').filter(Boolean),gh=h.slice(-10)==='github.io'&&p.length>0,m=gh?'manifest.github.json':'manifest.json';document.write('<link rel="manifest" href="'+m+'" id="sw-manifest-link">');})();</script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="כתבי הקודש">
 <title>כתבי הקודש — Joseph Smith Translation</title>
 <meta name="description" content="Hebrew Interlinear Joseph Smith Translation — Classical Biblical Hebrew, Word-by-Word">
 <meta name="theme-color" content="#1e2233">
@@ -1196,7 +1199,7 @@ body.dark-mode .word-unit.xref-linked .gl { color: #5dade2 !important; }
 body.dark-mode .word-unit.xref-linked:hover .hw { color: #85c1e9 !important; }
 body.dark-mode .word-unit.xref-linked:hover .gl { color: #85c1e9 !important; }
 #xref-panel {
-  position: fixed; top: 0; right: -400px; width: 380px; height: 100vh;
+  position: fixed; top: 0; right: -400px; width: 380px; height: 100vh; height: 100dvh;
   background: var(--bg); border-left: 2px solid var(--accent); z-index: 1200;
   transition: right 0.3s ease; overflow-y: auto; padding: 0; direction: ltr;
   font-family: 'David Libre', 'Georgia', serif; box-shadow: -4px 0 20px rgba(0,0,0,0.3);
@@ -1272,8 +1275,8 @@ body.hide-sel-toolbar #sel-toolbar-reopen{display:block;}
 body:not(.hide-sel-toolbar) #main-content{padding-right:60px!important;}
 @media (max-width:600px){body:not(.hide-sel-toolbar) #main-content{padding-right:52px!important;}}
 </style>
-<link rel="stylesheet" href="nav_engine.css?v=28">
-<link rel="stylesheet" href="site_chrome.css?v=28">
+<link rel="stylesheet" href="nav_engine.css?v=29">
+<link rel="stylesheet" href="site_chrome.css?v=29">
 <link rel="stylesheet" href="xref_study_panel.css?v=8">
 </head>
 <body>
@@ -4680,7 +4683,7 @@ window.addEventListener('resize', function() {
     </table>
   </div>
 </div>
-<script src="site_chrome.js?v=25" data-sw-volume="jst"></script>
+<script src="site_chrome.js?v=26" data-sw-volume="jst"></script>
 <script src="verse_search.js?v=3"></script>
 <script src="nav_engine.js?v=36"></script>
 <script>

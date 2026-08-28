@@ -4,14 +4,17 @@
 <meta charset="UTF-8">
 <script>document.documentElement.classList.add('sw-shell-pending');</script>
 <script>(function(){var h=(location.hostname||'').toLowerCase(),p=location.pathname.split('/').filter(Boolean),gh=h.slice(-10)==='github.io'&&p.length>0,m=gh?'manifest.github.json':'manifest.json';document.write('<link rel="manifest" href="'+m+'" id="sw-manifest-link">');})();</script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="כתבי הקודש">
 <title>כתבי הקודש — פנינת המחיר הגדול · Pearl of Great Price</title>
 <meta name="description" content="פנינת המחיר הגדול — Hebrew Interlinear Pearl of Great Price, Classical Biblical Hebrew word-by-word">
 <meta name="theme-color" content="#1e2233">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="nav_engine.css?v=28">
-<link rel="stylesheet" href="site_chrome.css?v=28">
+<link rel="stylesheet" href="nav_engine.css?v=29">
+<link rel="stylesheet" href="site_chrome.css?v=29">
 <link rel="stylesheet" href="xref_study_panel.css?v=8">
 <style>
 
@@ -1102,7 +1105,7 @@ body.dark-mode .word-unit.xref-linked:hover .hw { color: #85c1e9 !important; }
 body.dark-mode .word-unit.xref-linked:hover .gl { color: #85c1e9 !important; }
 
 #xref-panel {
-  position: fixed; top: 0; right: -400px; width: 380px; height: 100vh;
+  position: fixed; top: 0; right: -400px; width: 380px; height: 100vh; height: 100dvh;
   background: var(--bg); border-left: 2px solid var(--accent); z-index: 1200;
   transition: right 0.3s ease; overflow-y: auto; padding: 0; direction: ltr;
   font-family: 'David Libre', 'Georgia', serif; box-shadow: -4px 0 20px rgba(0,0,0,0.3);
@@ -3899,7 +3902,7 @@ window.addEventListener('scroll', function() {
 
 </script>
 <script src="notes_engine.js"></script>
-<script src="site_chrome.js?v=25" data-sw-volume="pgp"></script>
+<script src="site_chrome.js?v=26" data-sw-volume="pgp"></script>
 <script src="verse_search.js?v=3"></script>
 <script src="nav_engine.js?v=36"></script>
 <script src="xref_study_panel.js"></script>

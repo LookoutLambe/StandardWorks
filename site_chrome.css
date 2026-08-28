@@ -340,3 +340,6 @@ a.sw-chrome-print {
   text-decoration: none;
 }
 a.sw-chrome-print svg { display: block; }
+
+/* iPhone: keep text at its set size after rotation */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
