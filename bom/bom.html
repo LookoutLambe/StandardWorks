@@ -3936,7 +3936,7 @@ body.dual-mode .chapter-summary { display: block; }
 <script src="../root_names.js?v=12"></script>
 <script src="../xref_common.js?v=2"></script>
 <script src="../verse_loader.js?v=4"></script>
-<script src="../root_scorecard.js?v=32"></script>
+<script src="../root_scorecard.js?v=33"></script>
 <script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
 <script src="crossrefs.js?v=23"></script>
 <script src="roots_glossary.js?v=29"></script>
@@ -8076,7 +8076,7 @@ document.addEventListener('keydown', function(e) {
   var _sufs = ['ותיהם','ותיכם','ותיהן','ותיכן','ותינו','ותיך','ותיה','ותיו','ותם','ותן','ותי','יהם','יכם',
                'ינו','תיו','נו','כם','הם','הן','תי','יו','יה','ים','ות','ת','ם','ן','ו','ה','י','ך'];
   var _particles = {'את':1,'אל':1,'על':1,'מן':1,'עד':1,'כל':1,'לא':1,'ואת':1,'ואל':1};
-  function _clean(s) { return String(s || '').replace(/[׃׀"'`]/g, '').trim(); }
+  function _clean(s) { return String(s || '').replace(/[׃׀"'`.,;:?!()]/g, '').trim(); }
   function _pieces(s) { return _clean(s).split(/[־\s]+/).filter(Boolean); }
 
   // Resolve ONE whitespace/maqqef-free word to a Strong's number, or '' if none.
@@ -8489,6 +8489,7 @@ document.addEventListener('keydown', function(e) {
     window._popupWordUnit = wu; // Store reference for annotations
 
     var hText = hw.textContent;
+    hText = hText.replace(/^[\s.,;:?!()]+|[\s.,;:?!()]+$/g, '');
     var gText = gl.textContent;
 
     popupHw.textContent = hText;

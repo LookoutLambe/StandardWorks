@@ -183,9 +183,14 @@ for vol,(f,outvar,outfile) in FILES.items():
             if not tok: continue
             if tok in ('—','–'): words.append(['—','']); continue
             core=re.sub(r'^[(\"״]+|[)\"״]+$','',tok)
+            # The Hebrew line carries no English punctuation: commas, periods
+            # and the rest are dropped from Hebrew tokens (the user's rule —
+            # "it's Hebrew, strip the English punctuation"). A trailing sof
+            # pasuq becomes its own token, exactly as in the verses.
+            sof = core.endswith('׃')
+            if sof: core=core[:-1]
+            core=re.sub(r'[.,;:?!]+$','',core)
             trail=''
-            m=re.match(r'^(.*?)([.,;:?!]+)$',core)
-            if m: core,trail=m.group(1),m.group(2)
             if not re.search(r'[א-ת]',core):
                 words.append([tok,'']); continue
             if re.fullmatch(r"[ובלכשמ]?ה['׳]",core):
@@ -201,10 +206,11 @@ for vol,(f,outvar,outfile) in FILES.items():
                 _t2=re.sub(r'^[(\"״]+|[)\"״.,;:?!]+$','',_t)
                 if re.search(r'[א-ת]',_t2): _nb=strip_pts(_t2).replace('־',''); break
             r=context_rule(vol,_pb,_b,_nb) or (VOLHAND.get(vol,{}).get(_b)) or lookup(core)
-            if r: hit+=1; words.append([r[0]+trail,r[1]])
+            if r: hit+=1; words.append([r[0],r[1]])
             else:
                 missAll[strip_pts(core)]+=1
-                words.append([core+trail,''])
+                words.append([core,''])
+            if sof: words.append(['׃',''])
         out[label]=words
     src='// generated: pointed and glossed heading words from the corpus\'s own vocabulary\n'
     src+='window.%s = '%outvar+json.dumps(out,ensure_ascii=False,separators=(',',':'))+';\n'

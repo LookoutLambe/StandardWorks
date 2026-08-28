@@ -1602,7 +1602,7 @@ try {
 <script src="root_engine.js?v=16"></script>
 <script src="xref_common.js?v=2"></script>
 <script src="verse_loader.js?v=4"></script>
-<script src="root_scorecard.js?v=32"></script>
+<script src="root_scorecard.js?v=33"></script>
 <script>RootScorecard.init({ vol: 'ot', base: '' });</script>
 <script src="bom/roots_glossary.js"></script>
 
@@ -2477,6 +2477,7 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
     if (!hw || !gl) return;
     window._popupWordUnit = wu;
     var hText = hw.textContent, gText = gl.textContent;
+    hText = hText.replace(/^[\s.,;:?!()]+|[\s.,;:?!()]+$/g, '');
     popupHw.textContent = hText;
     document.getElementById('popup-translit').textContent = transliterate(hText);
     popupGl.textContent = gText;
@@ -3288,7 +3289,7 @@ _ensureChapterRendered = function(chapId) {
             ph.setAttribute('dir', 'rtl');
             var phText = ht;
             if (typeof _otHeadingWords !== 'undefined' && _otHeadingWords[key]) {
-              phText = _otHeadingWords[key].map(function(pr){ return pr[0]; }).join(' ');
+              phText = _otHeadingWords[key].map(function(pr){ return pr[0]; }).join(' ').replace(/ \u05C3/g, '\u05C3');
             }
             ph.setAttribute('data-heb', phText);
             ph.textContent = window._noNikkud ? _stripNikkudDisplay(phText) : phText;
@@ -3304,6 +3305,13 @@ _ensureChapterRendered = function(chapId) {
                   var dash = document.createElement('span');
                   dash.className = 'heading-dash'; dash.textContent = '\u2014';
                   hf.appendChild(dash); continue;
+                }
+                if (hh === '\u05C3') {
+                  // Sof pasuq closes the summary the way it closes a verse:
+                  // rendered by the .sof class on the preceding word.
+                  var lastWu = hf.lastElementChild;
+                  if (lastWu && lastWu.classList && lastWu.classList.contains('word-unit')) lastWu.classList.add('sof');
+                  continue;
                 }
                 var wu = makeWordUnit(hh, hg, false);
                 if (wu) {

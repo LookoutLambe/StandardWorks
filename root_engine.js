@@ -465,7 +465,7 @@ function stripPrefixes(w) {
   var _sufs = ['ותיהם','ותיכם','ותיהן','ותיכן','ותינו','ותיך','ותיה','ותיו','ותם','ותן','ותי','יהם','יכם',
                'ינו','תיו','נו','כם','הם','הן','תי','יו','יה','ים','ות','ת','ם','ן','ו','ה','י','ך'];
   var _particles = {'את':1,'אל':1,'על':1,'מן':1,'עד':1,'כל':1,'לא':1,'ואת':1,'ואל':1};
-  function _clean(s) { return String(s || '').replace(/[׃׀"'`]/g, '').trim(); }
+  function _clean(s) { return String(s || '').replace(/[׃׀"'`.,;:?!()]/g, '').trim(); }
   function _pieces(s) { return _clean(s).split(/[־\s]+/).filter(Boolean); }
 
   // Resolve ONE whitespace/maqqef-free word to a Strong's number, or '' if none.

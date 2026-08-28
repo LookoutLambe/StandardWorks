@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '35';   // bump when the generated data files change
+  var RSC_V = '36';   // bump when the generated data files change
 
   var cfg = { vol: '', base: '' };
   var keyIdx = null;         // rootKey -> index, built once
@@ -313,6 +313,10 @@
 
   var fillToken = 0;
   function fill(slotEl, surface, glossText) {
+    // Heading-flow tokens keep their sentence punctuation for display; it must
+    // never reach the resolver (עֲלֵיהֶם. resolved to nothing and showed a bare
+    // "Occurrences: 1").
+    surface = String(surface || '').replace(/^[\s.,;:?!()]+|[\s.,;:?!()]+$/g, '');
     if (!slotEl) return;
     var token = ++fillToken;
     var doFill = function() {

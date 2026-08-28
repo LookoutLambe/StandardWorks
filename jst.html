@@ -2647,7 +2647,7 @@ try {
 <script src="root_engine.js?v=16"></script>
 <script src="xref_common.js?v=2"></script>
 <script src="verse_loader.js?v=4"></script>
-<script src="root_scorecard.js?v=32"></script>
+<script src="root_scorecard.js?v=33"></script>
 <script>RootScorecard.init({ vol: 'jst', base: '' });</script>
 <script src="bom/roots_glossary.js"></script>
 <script src="notes_engine.js"></script>
@@ -3557,6 +3557,7 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
     if (!hw || !gl) return;
     window._popupWordUnit = wu;
     var hText = hw.textContent, gText = gl.textContent;
+    hText = hText.replace(/^[\s.,;:?!()]+|[\s.,;:?!()]+$/g, '');
     popupHw.textContent = hText;
     document.getElementById('popup-translit').textContent = transliterate(hText);
     popupGl.textContent = gText;
