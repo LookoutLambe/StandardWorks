@@ -23,7 +23,7 @@ renderVerseSet(jstmark_ch2Verses, 'jstmark-ch2-verses');
 // === CH3: JST Mark 7:10–12 ===
 // Jesus condemns those who reject the prophets.
 var jstmark_ch3Verses = [
-  { num:"י", words:[["הֵיטֵב","full-well"],["כָּתוּב","is-it-written"],["עֲלֵיכֶם","of-you"],["עַל","by"],["יְדֵי","the"],["הַנְּבִיאִים","the-prophets"],["אֲשֶׁר","whom"],["דְּחִיתֶם","ye-have-rejected"],["׃",""]] },
+  { num:"י", words:[["הֵיטֵב","full-well"],["כָּתוּב","is-it-written"],["עֲלֵיכֶם","of-you"],["עַל","by"],["יְדֵי","the-hands-of"],["הַנְּבִיאִים","the-prophets"],["אֲשֶׁר","whom"],["דְּחִיתֶם","ye-have-rejected"],["׃",""]] },
   { num:"יא", words:[["הֵם","they"],["הֵעִידוּ","testified"],["אֵלֶּה","these-things"],["בֶּאֱמֶת","of-a-truth"],["וְדָמָם","and-their-blood"],["יִהְיֶה","shall-be"],["עֲלֵיכֶם","upon-you"],["׃",""]] },
   { num:"יב", words:[["לֹא","not"],["שְׁמַרְתֶּם","ye-have-kept"],["אֶת־חֻקּוֹת","the-ordinances-of"],["אֱלֹהִים","God"],["כִּי","for"],["מֹשֶׁה","Moses"],["אָמַר","said"],["כַּבֵּד","honor"],["אֶת־אָבִיךָ","thy-father"],["וְאֶת","and"],["אִמֶּךָ","thy-mother"],["וּמְקַלֵּל","and-whoso-curseth"],["אָב","father"],["וָאֵם","or-mother"],["יָמוּת","let-him-die"],["מוֹת","the-death-of"],["הַפּוֹשֵׁעַ","the-transgressor"],["כַּכָּתוּב","as-it-is-written"],["בְּתוֹרַתְכֶם","in-your-law"],["אַךְ","but"],["אֵינְכֶם","ye-are-not"],["שׁוֹמְרִים","keeping"],["אֶת־הַתּוֹרָה","the-law"],["׃",""]] }
 ];
