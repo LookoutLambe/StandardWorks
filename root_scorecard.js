@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '34';   // bump when the generated data files change
+  var RSC_V = '35';   // bump when the generated data files change
 
   var cfg = { vol: '', base: '' };
   var keyIdx = null;         // rootKey -> index, built once
@@ -224,6 +224,20 @@
           meaning = window._strongsRoots[sNum].g || _strongsGloss(sNum);
           if (heb === key && window._strongsRoots[sNum].w) heb = window._strongsRoots[sNum].w;
         }
+      }
+      if (heb === key) {
+        // Still the unpointed key (a surface word the resolver could not file
+        // under a lemma): show the family's own most frequent POINTED form, so
+        // the transliteration is a real word and not consonant soup.
+        try {
+          var rc2 = window._rootConcordance;
+          var ix2 = rc2 && rc2.keys ? rc2.keys.indexOf(key) : -1;
+          if (ix2 >= 0 && rc2.roots[ix2] && rc2.roots[ix2].f) {
+            var bf = '', bn = -1, fmap = rc2.roots[ix2].f;
+            for (var fk in fmap) if (fmap[fk] > bn) { bn = fmap[fk]; bf = fk; }
+            if (bf) heb = bf;
+          }
+        } catch (e3) {}
       }
       if (typeof window.transliterate === 'function') { try { translit = window.transliterate(heb); } catch (e2) {} }
     }

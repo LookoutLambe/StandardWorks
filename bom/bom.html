@@ -3936,7 +3936,7 @@ body.dual-mode .chapter-summary { display: block; }
 <script src="../root_names.js?v=12"></script>
 <script src="../xref_common.js?v=2"></script>
 <script src="../verse_loader.js?v=4"></script>
-<script src="../root_scorecard.js?v=31"></script>
+<script src="../root_scorecard.js?v=32"></script>
 <script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
 <script src="crossrefs.js?v=23"></script>
 <script src="roots_glossary.js?v=29"></script>
@@ -7649,8 +7649,11 @@ document.addEventListener('keydown', function(e) {
   // This groups morphologically related words under one root
   // 583 entries across 67 root families (theological, verbal, nominal)
   // Roots with no Strong's entry at all — these must never be peeled.
-  var _lexNoPeel = { 'כנס': 1, 'סעד': 1, 'H4503': 1, 'H7133': 1, 'אות': 1 };
+  var _lexNoPeel = { 'כנס': 1, 'סעד': 1, 'H4503': 1, 'H7133': 1, 'אות': 1, 'אחראי': 1 };
   var rootMap = {
+    // Modern lexeme, not a conjugation: the verbal peel would strip the א and
+    // file "accountable/responsible" under H2716 חרא (dung).
+    'אַחֲרַאי': 'אחראי', 'אַחֲרָאִים': 'אחראי',
     'סְעוּדָה': 'סעד', 'סְעוּדוֹת': 'סעד', 'כְּנֵסִיָּה': 'כנס',
     // The sign-words: peeling the ־וֹת plural collapsed them into the object
     // marker's mega-family (H0853, whose Strong's pointer chains through
@@ -8240,6 +8243,7 @@ document.addEventListener('keydown', function(e) {
   function lemmaIndex() {
     if (_lemIdx) return _lemIdx;
     _lemIdx = {};
+    _lemIdxVerb = {};
     if (!window._strongsRoots) return _lemIdx;
     for (var n in _strongsRoots) {
       var e = _strongsRoots[n];
@@ -8248,6 +8252,14 @@ document.addEventListener('keydown', function(e) {
       if (c.length < 2) continue;
       if (_lemIdx[c] === undefined) _lemIdx[c] = n;
       else if (_lemIdx[c] !== n) _lemIdx[c] = null;   // ambiguous
+      // A second index of verb lemmas only (this Strong's data carries a .p
+      // field on verb entries and on nothing else). A conjugation peel
+      // (hitpael, imperfect) can only produce a verb, so an ambiguity like
+      // אספ (H0622 the verb / H0623 Asaph) resolves to the verb.
+      if (e.p !== undefined) {
+        if (_lemIdxVerb[c] === undefined) _lemIdxVerb[c] = n;
+        else if (_lemIdxVerb[c] !== n) _lemIdxVerb[c] = null;
+      }
     }
     return _lemIdx;
   }
@@ -8258,6 +8270,7 @@ document.addEventListener('keydown', function(e) {
   // suffix) was filed as the root "חנכוני", which is not a word.
   var _mSuf = ['ותיהם','ותינו','ותיכם','וני','ניו','תיו','יהם','יכם','ינו','ני',
                'נו','הו','תי','תם','תן','כם','הם','הן','ים','ות','ת','ם','ן','ו','ה','י','ך'];
+  var _mVPre = ['והת','וית','ומת','ותת','הת','ית','מת','נת','את','תת','וי','ונ','וא','ות','י','ת','נ','א'];
   var _mPre = ['וכש','ומ','וב','ול','וכ','וה','כש','ו','ה','ב','כ','ל','מ','ש'];
   function rootByMorphology(w) {
     var LI = lemmaIndex(), c = normFinals(stripNikkud(w));
@@ -8282,6 +8295,26 @@ document.addEventListener('keydown', function(e) {
       var cand = cands[i];
       if (cand.length < 3) continue;
       if (LI[cand] !== undefined) return LI[cand] ? baseRoot(LI[cand]) : cand;
+    }
+    // Conjugated verb Strong's has no surface form for: peel the verbal
+    // preformative (hitpael יִתְאַסְּפוּ, imperfect, waw-consecutive) and accept
+    // only a real lemma. On an ambiguous skeleton a verb lemma wins — the
+    // peel itself proves the word is a verb.
+    for (i = 0; i < _mVPre.length; i++) {
+      var vp = _mVPre[i];
+      if (c.indexOf(vp) !== 0 || c.length - vp.length < 3) continue;
+      var vbody = c.slice(vp.length);
+      var vcands = [vbody];
+      for (j = 0; j < _mSuf.length; j++) {
+        var vs = _mSuf[j];
+        if (vbody.length > vs.length + 2 && vbody.slice(-vs.length) === vs) vcands.push(vbody.slice(0, -vs.length));
+      }
+      for (j = 0; j < vcands.length; j++) {
+        var vc = vcands[j];
+        if (vc.length < 3) continue;
+        if (LI[vc]) return baseRoot(LI[vc]);
+        if (LI[vc] === null && _lemIdxVerb[vc]) return baseRoot(_lemIdxVerb[vc]);
+      }
     }
     return '';
   }

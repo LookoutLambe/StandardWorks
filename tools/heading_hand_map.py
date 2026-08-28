@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 # unpointed modern-Hebrew heading vocabulary -> (pointed, gloss)
 {
+'ינופה':('יְנֻפֶּה','will be sifted'),
+'יתאספו':('יִתְאַסְּפוּ','will be gathered'),'ייאספו':('יֵאָסְפוּ','will be gathered'),'ייאסף':('יֵאָסֵף','will be gathered'),'יתאסף':('יִתְאַסֵּף','will be gathered'),'תתאסף':('תִּתְאַסֵּף','will be gathered'),'תיאסף':('תֵּאָסֵף','will be gathered'),'יאספו':('יֵאָסְפוּ','will be gathered'),
 'יושמדו':('יֻשְׁמְדוּ','will be destroyed'),
 'בורח':('בּוֹרֵחַ','flees'),
 'הארמים':('הָאֲרַמִּים','the Syrians'),
