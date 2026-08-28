@@ -278,7 +278,7 @@ var jc_ch2Verses = [
     ["בּוֹרֵא","Creator"],
     ["שָׁמַיִם","heaven"],
     ["וָאָרֶץ","and earth"],
-    ["שַׁדַּי","the all-powerful"],
+    ["הַכֹּל־יָכוֹל","the all powerful"],
     ["אוּכַל","I am able"],
     ["לְהַגִּיד","to declare"],
     ["לָכֶם","unto you"],
