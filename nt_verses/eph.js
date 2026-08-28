@@ -48,7 +48,7 @@ var eph_ch2Verses = [
   { num:"יח", words:[["כִּי","because"],["עַל־יָדוֹ","by-him"],["יֵשׁ","there"],["לִשְׁנֵינוּ","to-the two of-us"],["מָבוֹא","an-entrance"],["בְּרוּחַ","in-the-Spirit"],["אֶחָד","one"],["אֶל־אָבִינוּ","to-our-father"],["׃",""]] },
   { num:"יט", words:[["לָכֵן","therefore"],["אֵינְכֶם","you-are-not"],["עוֹד","any-more"],["גֵּרִים","strangers"],["וְתוֹשָׁבִים","and-foreigners"],["כִּי־בְנֵי־עִירָם","but-fellow-citizens"],["שֶׁל־הַקְּדוֹשִׁים","of-the-saints"],["וּבְנֵי","and-sons-of"],["בֵּית","the-house-of"],["אֱלֹהִים","God"],["אַתֶּם","you-are"],["׃",""]] },
   { num:"כ", words:[["בְּנוּיִם","built"],["עַל־יְסוֹד","upon-the-foundation-of"],["הַשְּׁלִיחִים","the-apostles"],["וְהַנְּבִיאִים","and-the-prophets"],["וְיֵשׁוּעַ","and-Jesus"],["הַמָּשִׁיחַ","the-Messiah"],["הוּא","he"],["אֶבֶן","stone"],["הַפִּנָּה","the-corner"],["׃",""]] },
-  { num:"כא", words:[["אֲשֶׁר","which"],["חֻבַּר־בּוֹ","joined-in-Him"],["יַחַד","together"],["הַבִּנְיָן","the-building"],["כֻּלּוֹ","all"],["עַד","until"],["אֲשֶׁר־יִגְבַּהּ","riseth"],["לְהֵיכַל","to-the-temple-of"],["קֹדֶשׁ","holy"],["לַיהוָֹה","unto-the-Lord"],["׃",""]] },
+  { num:"כא", words:[["אֲשֶׁר","which"],["חֻבַּר־בּוֹ","joined-in-Him"],["יַחַד","together"],["הַבִּנְיָן","the-building"],["כֻּלּוֹ","all"],["עַד","until"],["אֲשֶׁר־יִגְבַּהּ","riseth"],["לְהֵיכַל","to-the-temple-of"],["קֹדֶשׁ","holy"],["לָאָדוֹן","unto-the-Lord"],["׃",""]] },
   { num:"כב", words:[["וּבוֹ","and-in-Him"],["נִבְנִים","being-built"],["גַּם־אַתֶּם","also-you"],["לִהְיוֹת","to-be"],["מִשְׁכַּן","the tabernacle of"],["אֱלֹהִים","God"],["בָּרוּחַ","in-the-Spirit"],["׃",""]] },
 ];
 renderVerseSet(eph_ch2Verses, 'eph-ch2-verses');

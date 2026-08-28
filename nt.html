@@ -1620,7 +1620,7 @@ function _tlPointed(text) {
     if (tk.c === '\u05E9') c = tk.shin ? 'sh' : 's';
     else if (tk.dag && dmap[tk.c]) c = dmap[tk.c];
     else c = cmap[tk.c] || '';
-    if (tk.c === '\u05D5' && tk.vowel === '\u05B9') {
+    if (tk.c === '\u05D5' && tk.vowel === '\u05B9' && !tk.dag) {
       if (t > 0 && tokens[t-1].c === '\u05D0' && !tokens[t-1].vowel) { segments.push({c:'\u02BE', v:'\u00F4'}); continue; }
       if (segments.length > 0) segments[segments.length-1].v = '\u00F4';
       else segments.push({c:'', v:'\u00F4'});

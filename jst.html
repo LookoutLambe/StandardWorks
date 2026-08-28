@@ -2903,7 +2903,7 @@ function _tlPointed(text) {
       else segments.push({c:'', v:'\u00FB'});
       continue;
     }
-    if (tk.c === '\u05D5' && tk.vowel === '\u05B9') {
+    if (tk.c === '\u05D5' && tk.vowel === '\u05B9' && !tk.dag) {
       if (segments.length > 0) segments[segments.length-1].v = '\u00F4';
       else segments.push({c:'', v:'\u00F4'});
       continue;

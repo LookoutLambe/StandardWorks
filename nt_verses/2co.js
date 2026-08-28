@@ -224,8 +224,8 @@ var _2co_ch10Verses = [
   { num:"יד", words:[["כִּי","because"],["אֵינֶנּוּ","we-are-not"],["כְּמַסִּיגֵי","as-those-who-overreach"],["גְבוּל","the-border"],["כְּאִלּוּ","as-though"],["לֹא","not"],["בָאנוּ","we-reached"],["אֲלֵיכֶם","unto-you"],["הֲלֹא","for"],["כְבָר","already"],["קִדַּמְנוּ","we-are-come-as-far-as"],["גַּם־אֶתְכֶם","also-you"],["בִּבְשׂוֹרַת","in-the-gospel-of"],["הַמָּשִׁיחַ","the-Messiah"],["׃",""]] },
   { num:"טו", words:[["לֹא","not"],["נִתְגַּדֵּל","boasting"],["לִבְלִי־מִדָּה","beyond-measure"],["בִּיגִיעַת","of-the-labours-of"],["אֲחֵרִים","other-men"],["אֲבָל","but"],["יֶשׁ־לָנוּ","having"],["תִקְוָה","hope"],["שֶׁבִּרְבוֹת","when-is-increased"],["אֱמוּנַתְכֶם","your-faith"],["אֲנַחְנוּ","we"],["נְכֻבַּד","shall-be-enlarged"],["בָּכֶם","by-you"],["כְּפִי","according-to"],["גְבוּלֵנוּ","our-rule"],["עַד־לְמָעְלָה","abundantly"],["׃",""]] },
   { num:"טז", words:[["כְּדֵי־לְבַשֵּׂר","to-preach"],["הַבְּשׂוֹרָה","the-gospel"],["גַּם־לְהָלְאָה","in-the-regions-beyond"],["מִכֶּם","you"],["וְלֹא","and-not"],["לְהִתְהַלֵּל","to-boast"],["בְּמַה־שֶּׁמּוּכָן","in-things-made-ready"],["כְּבָר","already"],["בִּגְבוּל","in-the-line-of"],["אֲחֵרִים","another-man"],["׃",""]] },
-  { num:"יז", words:[["וְהַמִּתְהַלֵּל","but-he-that-glorieth"],["יִתְהַלֵּל","let-him-glory"],["בַּיהוָֹה","in-the-Lord"],["׃",""]] },
-  { num:"יח", words:[["כִּי","because"],["לֹא","not"],["הַמְשַׁבֵּחַ","he-that-commendeth"],["נַפְשׁוֹ","himself"],["נֶאֱמָן","approved"],["הוּא","is"],["כִּי","but"],["אִם","rather"],["אֲשֶׁר","whom"],["יְשַׁבְּחֶנּוּ","commendeth"],["יְהוָֹה","the-Lord"],["׃",""]] },
+  { num:"יז", words:[["וְהַמִּתְהַלֵּל","but-he-that-glorieth"],["יִתְהַלֵּל","let-him-glory"],["בָּאָדוֹן","in-the-Lord"],["׃",""]] },
+  { num:"יח", words:[["כִּי","because"],["לֹא","not"],["הַמְשַׁבֵּחַ","he-that-commendeth"],["נַפְשׁוֹ","himself"],["נֶאֱמָן","approved"],["הוּא","is"],["כִּי","but"],["אִם","rather"],["אֲשֶׁר","whom"],["יְשַׁבְּחֶנּוּ","commendeth"],["הָאָדוֹן","the-Lord"],["׃",""]] },
 ];
 renderVerseSet(_2co_ch10Verses, '2co-ch10-verses');
 

@@ -7064,7 +7064,7 @@ function _tlPointed(text) {
     // Cholam male: vav with cholam = ô (unchangeable long, circumflex)
     // Only treat as mater lectionis if previous consonant has no vowel yet;
     // otherwise the vav is a root consonant bearing cholam (e.g. עֲוֹנוֹת)
-    if (tk.c === '\u05D5' && tk.vowel === '\u05B9') {
+    if (tk.c === '\u05D5' && tk.vowel === '\u05B9' && !tk.dag) {
       if (t > 0 && tokens[t-1].c === '\u05D0' && !tokens[t-1].vowel) { segments.push({c:'\u02BE', v:'\u00F4'}); continue; }
       var prevSeg = segments.length > 0 ? segments[segments.length-1] : null;
       if (!prevSeg) { segments.push({c:'', v:'\u00F4'}); continue; }
