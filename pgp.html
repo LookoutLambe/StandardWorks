@@ -214,7 +214,7 @@ body {
 
 .word-flow {
   flex: 1;
-  text-align: justify;
+  text-align: right;
   direction: rtl;
 }
 
@@ -470,12 +470,12 @@ body.dual-mode .verse-english {
   line-height: 1.65;
   color: var(--ink);
   direction: ltr;
-  text-align: justify;
+  text-align: left;
   padding: 6px 14px 6px 0;
   border-right: 1px solid var(--rule-light);
   opacity: 0.85;
 }
-body.dual-mode .word-flow { flex: 1 1 0; min-width: 0; direction: rtl; text-align: justify; }
+body.dual-mode .word-flow { flex: 1 1 0; min-width: 0; direction: rtl; text-align: right; }
 body.dual-mode .verse-num { order: -1; }
 body.dual-mode .gl { display: none; }
 body.dual-mode .arr { display: none; }
@@ -1148,7 +1148,7 @@ body.dark-mode .word-unit.xref-linked:hover .gl { color: #85c1e9 !important; }
   direction: ltr; font-size: 0.88em; color: var(--ink-light);
   line-height: 1.5; margin-top: 6px; padding: 8px 10px;
   background: rgba(200,168,78,0.05); border-radius: 4px; border-left: 3px solid var(--accent);
-  text-align: justify;
+  text-align: left;
 }
 .xref-ref-nodata { font-size: 0.85em; color: var(--ink-light); font-style: italic; padding: 16px; }
 body.dark-mode #xref-panel { background: #272d3e; border-color: #d4af37; }
@@ -1192,13 +1192,13 @@ body.dual-mode .chapter-heading > h2,
 body.dual-mode .chapter-heading > .chapter-label-en { flex: 0 0 100%; }
 body.dual-mode .chapter-heading > .chapter-summary-en,
 body.dual-mode .chapter-heading > .chapter-summary-he {
-  min-width: 0; max-width: none; text-align: justify; margin-top: 10px;
+  min-width: 0; max-width: none; margin-top: 10px;
 }
 body.dual-mode .chapter-heading > .chapter-summary-en {
-  order: 2; flex: 45 1 0; direction: ltr; padding-right: 14px;
+  order: 2; flex: 45 1 0; direction: ltr; text-align: left; padding-right: 14px;
   border-right: 1px solid var(--rule-light);
 }
-body.dual-mode .chapter-heading > .chapter-summary-he { order: 1; flex: 55 1 0; direction: rtl; }
+body.dual-mode .chapter-heading > .chapter-summary-he { order: 1; flex: 55 1 0; direction: rtl; text-align: right; }
 @media (max-width: 700px) {
   body.dual-mode .chapter-heading > .chapter-summary-en { font-size: 0.78em; padding-right: 8px; }
   body.dual-mode .chapter-heading > .chapter-summary-he { font-size: 0.9em; }

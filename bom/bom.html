@@ -182,7 +182,7 @@ body.hide-bottom-bar .controls-bottom.sw-footer-modes {
   max-width: 700px;
   margin: 10px auto 0;
   padding: 0 16px;
-  text-align: justify;
+  text-align: right;
   direction: ltr;
 }
 .chapter-summary-heb {
@@ -193,12 +193,12 @@ body.hide-bottom-bar .controls-bottom.sw-footer-modes {
   max-width: 700px;
   margin: 8px auto 0;
   padding: 0 16px;
-  text-align: justify;
+  text-align: right;
   direction: rtl;
 }
 .heading-flow {
   direction: rtl;
-  text-align: justify;
+  text-align: right;
   max-width: 700px;
   margin: 10px auto 6px;
   padding: 0 8px;
@@ -220,7 +220,7 @@ body.hide-bottom-bar .controls-bottom.sw-footer-modes {
   max-width: 700px;
   margin: 4px auto 0;
   padding: 0 16px;
-  text-align: justify;
+  text-align: right;
   direction: ltr;
   opacity: 0.7;
 }
@@ -330,7 +330,7 @@ body.hide-translit .chapter-summary-tl { display: none; }
 .word-flow {
   flex: 1;
   min-width: 0;
-  text-align: justify;
+  text-align: right;
   direction: rtl;
 }
 
@@ -642,12 +642,12 @@ body.dual-mode .verse-english {
   line-height: 1.65;
   color: var(--ink);
   direction: ltr;
-  text-align: justify;
+  text-align: left;
   padding: 6px 14px 6px 0;
   border-right: 1px solid var(--rule-light);
   opacity: 0.85;
 }
-body.dual-mode .word-flow { flex: 1 1 0; min-width: 0; direction: rtl; text-align: justify; }
+body.dual-mode .word-flow { flex: 1 1 0; min-width: 0; direction: rtl; text-align: right; }
 body.dual-mode .verse-num { order: -1; }
 body.dual-mode .gl { display: none; }
 body.dual-mode .arr { display: none; }
@@ -1547,7 +1547,7 @@ body.dark-mode #xref-popup { background: #272d3e; border-color: #d4af37; color: 
   direction: ltr; font-size: 0.88em; color: var(--ink-light);
   line-height: 1.5; margin-top: 6px; padding: 8px 10px;
   background: rgba(219,185,88,0.05); border-radius: 4px; border-left: 3px solid var(--accent);
-  text-align: justify;
+  text-align: left;
 }
 .xref-ref-nodata {
   font-size: 0.85em; color: var(--ink-light); font-style: italic;
@@ -1787,10 +1787,11 @@ body.dual-mode .chapter-heading > h2,
 body.dual-mode .chapter-heading > .chapter-label-en { flex: 0 0 100%; }
 body.dual-mode .chapter-heading > .chapter-summary,
 body.dual-mode .chapter-heading > .heading-flow {
-  min-width: 0; max-width: none; text-align: justify; margin-top: 10px;
+  min-width: 0; max-width: none; margin-top: 10px;
 }
+body.dual-mode .chapter-heading > .heading-flow { text-align: right; }
 body.dual-mode .chapter-heading > .chapter-summary {
-  order: 2; flex: 45 1 0; direction: ltr; padding-right: 14px;
+  text-align: left; order: 2; flex: 45 1 0; direction: ltr; padding-right: 14px;
   border-right: 1px solid var(--rule-light);
 }
 body.dual-mode .chapter-heading > .heading-flow { order: 1; flex: 55 1 0; direction: rtl; }
