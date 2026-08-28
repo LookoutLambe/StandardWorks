@@ -121,9 +121,7 @@ body.hide-translit .tl, body.hide-translit .arr-tl { display: none; }
 .heading-dash { align-self: center; opacity: 0.55; margin: 0 5px; }
 .chapter-heading .chapter-summary-he { display: none; }
 .chapter-heading .chapter-summary-en { display: none; }
-body.dual-mode .chapter-heading .chapter-summary-he { display: block; }
 body.dual-mode .chapter-heading .chapter-summary-en { display: block; }
-body.dual-mode .chapter-heading .heading-flow { display: none; }
 
 /* Hebrew Only drops the gloss; transliteration stays under the reader's own
    Transliterate toggle (body.hide-translit), which used to be overridden here */
@@ -156,9 +154,7 @@ body.dual-mode .gl { display: none; }
 body.dual-mode .arr { display: none; }
 body.dual-mode .word-unit { padding-bottom: 3px; }
 body.dual-mode .hw { font-size: 1.3em; }
-body.dual-mode .heading-flow .gl,
-body.dual-mode .heading-flow .arr { display: inline; }
-body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
+
 @media (max-width: 700px) {
   body.dual-mode .verse { flex-wrap: nowrap; }
   body.dual-mode .verse-english {
@@ -694,14 +690,14 @@ body.dual-mode .chapter-heading { display: flex; flex-wrap: wrap; align-items: f
 body.dual-mode .chapter-heading > h2,
 body.dual-mode .chapter-heading > .chapter-label-en { flex: 0 0 100%; }
 body.dual-mode .chapter-heading > .chapter-summary-en,
-body.dual-mode .chapter-heading > .chapter-summary-he {
+body.dual-mode .chapter-heading > .heading-flow {
   min-width: 0; max-width: none; margin-top: 10px;
 }
 body.dual-mode .chapter-heading > .chapter-summary-en {
   order: 1; flex: 45 1 0; direction: ltr; text-align: left; padding-left: 14px;
   border-left: 1px solid var(--rule-light);
 }
-body.dual-mode .chapter-heading > .chapter-summary-he { order: 2; flex: 55 1 0; direction: rtl; text-align: right; }
+body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direction: rtl; text-align: right; }
 @media (max-width: 700px) {
   body.dual-mode .chapter-heading > .chapter-summary-en { font-size: 0.78em; padding-right: 8px; }
   body.dual-mode .chapter-heading > .chapter-summary-he { font-size: 0.9em; }
