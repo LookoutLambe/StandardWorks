@@ -653,13 +653,9 @@ body.dual-mode .gl { display: none; }
 body.dual-mode .arr { display: none; }
 body.dual-mode .word-unit { padding-bottom: 3px; }
 body.dual-mode .hw { font-size: 1.3em; }
-/* Heading glosses always visible regardless of display mode */
-body.hide-gloss .heading-flow .gl,
-body.hide-gloss .heading-flow .arr { display: inline; }
-body.dual-mode .heading-flow .gl,
-body.dual-mode .heading-flow .arr { display: inline; }
-body.hide-gloss .heading-flow .word-unit,
-body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
+/* Heading glosses follow the display mode, exactly as verse glosses do:
+      hidden in Hebrew Only and in Dual (where the English summary carries
+      the English side). */
 @media (max-width: 700px) {
   body.dual-mode .verse { flex-wrap: nowrap; }
   body.dual-mode .verse-english {

@@ -111,6 +111,18 @@ body.english-only .word-unit .gl {
 .word-unit.sof + .arr { display: none; }
 .word-unit.sof .hw::after { content: ' ׃'; color: #1a2744; }
 body.hide-translit .tl, body.hide-translit .arr-tl { display: none; }
+/* Interlinear chapter headings: the summary as word-units, mode-aware */
+.heading-flow { direction: rtl; text-align: center; display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 6px; margin-top: 10px; }
+.heading-flow .word-unit { margin: 1px 3px; }
+.heading-flow .hw { font-size: 1.35em; }
+.heading-flow .tl { font-size: 0.7em; }
+.heading-flow .gl { font-size: 0.68em; }
+.heading-dash { align-self: center; opacity: 0.55; margin: 0 5px; }
+.chapter-heading .chapter-summary-he { display: none; }
+body.dual-mode .chapter-heading .chapter-summary-he { display: block; }
+body.dual-mode .chapter-heading .heading-flow { display: none; }
+body.hide-gloss .chapter-heading .chapter-summary-en { display: none; }
+
 /* Hebrew Only drops the gloss; transliteration stays under the reader's own
    Transliterate toggle (body.hide-translit), which used to be overridden here */
 body.hide-gloss .gl, body.hide-gloss .arr-gl { display: none; }
@@ -1432,6 +1444,7 @@ try {
 <!-- Chapter headings (official study summaries) -->
 <script src="nt_chapter_headings.js"></script>
 <script src="nt_chapter_headings_heb.js"></script>
+<script src="nt_heading_words.js"></script>
 <script src="nt_verses/matt.js?v=20260527tl"></script>
 <script src="nt_verses/mark.js?v=20260525"></script>
 <script src="nt_verses/luke.js?v=20260525"></script>
@@ -2991,6 +3004,28 @@ _ensureChapterRendered = function(chapId) {
             ph.setAttribute('dir', 'rtl');
             ph.textContent = ht;
             headingEl2.appendChild(ph);
+            if (typeof _ntHeadingWords !== 'undefined' && _ntHeadingWords[key] && !headingEl2.querySelector('.heading-flow')) {
+              var hf = document.createElement('div');
+              hf.className = 'heading-flow';
+              hf.setAttribute('dir', 'rtl');
+              var hws = _ntHeadingWords[key];
+              for (var hi = 0; hi < hws.length; hi++) {
+                var hh = hws[hi][0], hg = hws[hi][1] || '';
+                if (hh === '\u2014' || hh === '\u2013' || hh === '-') {
+                  var dash = document.createElement('span');
+                  dash.className = 'heading-dash'; dash.textContent = '\u2014';
+                  hf.appendChild(dash); continue;
+                }
+                var wu = makeWordUnit(hh, hg, false);
+                if (wu) {
+                  if (!/[\u05D0-\u05EA]/.test(hh)) { wu.style.direction = 'ltr'; wu.style.unicodeBidi = 'isolate'; var hwSpan = wu.querySelector('.hw'); if (hwSpan) { hwSpan.style.direction = 'ltr'; hwSpan.style.unicodeBidi = 'isolate'; } }
+                  var tls = wu.querySelector('.tl');
+                  if (tls && typeof transliterate === 'function' && /[\u05D0-\u05EA]/.test(hh)) { try { tls.textContent = transliterate(hh); } catch(eT) {} }
+                  hf.appendChild(wu);
+                }
+              }
+              headingEl2.appendChild(hf);
+            }
           }
         }
       }
