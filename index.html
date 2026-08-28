@@ -646,6 +646,7 @@ html.sw-in-app .landing-update-note { display: none; }
 /* ========== GLOBAL SEARCH ========== */
 .global-search-wrap {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   max-width: 520px;
@@ -653,6 +654,22 @@ html.sw-in-app .landing-update-note { display: none; }
   padding: 0 8px;
   box-sizing: border-box;
 }
+.global-search-results { flex-basis: 100%; width: 100%; min-width: 0; }
+.gs-go {
+  flex-shrink: 0;
+  min-height: 44px;
+  padding: 8px 16px;
+  font-family: 'David Libre', serif;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--header-bg, #1e2233);
+  background: var(--accent, #dbb958);
+  border: 2px solid var(--header-bg, #1e2233);
+  border-radius: 6px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.gs-go:active { background: var(--accent-light, #e8cc78); transform: scale(0.96); }
 .global-search-wrap #gs-filter {
   flex-shrink: 0;
   margin: 0;
@@ -828,6 +845,7 @@ body, button, input, select, textarea,
     <!-- ===== GLOBAL SEARCH ===== -->
     <div class="global-search-wrap">
       <input type="text" id="global-search" class="global-search-input" placeholder="Search all volumes…   (press / or Ctrl+K)" autocomplete="off" aria-label="Search all volumes">
+      <button type="button" id="gs-go" class="gs-go" aria-label="Search">Search</button>
       <div class="global-search-results" id="gs-results"></div>
     </div>
 
@@ -1141,28 +1159,24 @@ try {
   }
 } catch(e) {}
 
-var _gsDebounce = null;
-gsInput.addEventListener('input', function() {
+// Results render ONLY on an explicit search (the Search button or Enter),
+// never while typing — typing just clears a stale dropdown.
+function runGsSearch() {
   var q = gsInput.value.trim();
   if (q.length < 2) {
     gsResults.classList.remove('open');
     gsResults.innerHTML = '';
     return;
   }
-  if (_gsDebounce) clearTimeout(_gsDebounce);
-  _gsDebounce = setTimeout(function() { renderGsResults(gsInput.value.trim(), _gsFilter); }, 140);
+  renderGsResults(q, _gsFilter);
+}
+gsInput.addEventListener('input', function() {
+  gsResults.classList.remove('open');
+  gsResults.innerHTML = '';
 });
-
+document.getElementById('gs-go').addEventListener('click', runGsSearch);
 gsInput.addEventListener('keydown', function(e) {
-  if (e.key === 'Enter') {
-    var q = gsInput.value.trim();
-    if (q.length >= 2) {
-      renderGsResults(q, _gsFilter);
-      // If there's a top result, go there.
-      var a = gsResults.querySelector('a.gs-result-link');
-      if (a && a.href) window.location.href = a.href;
-    }
-  }
+  if (e.key === 'Enter') { e.preventDefault(); runGsSearch(); }
   if (e.key === 'Escape') {
     gsInput.blur();
     gsResults.classList.remove('open');
