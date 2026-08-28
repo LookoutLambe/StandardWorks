@@ -2294,7 +2294,7 @@ function getChapterLabel(id) {
 // === RENDERING ENGINE ===
 
 window._noNikkud = false;
-function _stripNikkudDisplay(s) { return s.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, ''); }
+function _stripNikkudDisplay(s) { return s.replace(/ו(ּ[ְ-ׇֻ]|[ְ-ׇֻ]ּ)/g,'וו$1').replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, ''); } // geminated vav doubles in plene display: metavvekh -> מתווך, never מתוך
 
 function makeWordUnit(h, e, isSof) {
   if (h === '\u05C3') return '';

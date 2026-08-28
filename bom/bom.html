@@ -4279,7 +4279,7 @@ function makeWordUnit(h, e, isSof) {
   var gloss = augmentGlossWithPrefixes(h, e.replace(/-/g, ' '));
   // Preserve curated gloss; add morph gloss for popup auditing.
   div.setAttribute('data-mgl', computeMorphGloss(h));
-  var displayH = document.body.classList.contains('no-nikkud') ? h.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g,'') : h.replace(/([\u05D0-\u05EA][\u0591-\u05C6]*\u05C7[\u0591-\u05C6]*)/g, '<span class="qq">$1</span>');
+  var displayH = document.body.classList.contains('no-nikkud') ? h.replace(/ו(ּ[ְ-ׇֻ]|[ְ-ׇֻ]ּ)/g,'וו$1').replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g,'') : h.replace(/([\u05D0-\u05EA][\u0591-\u05C6]*\u05C7[\u0591-\u05C6]*)/g, '<span class="qq">$1</span>');
   div.innerHTML = `<span class="hw">${displayH}</span><span class="tl"></span><span class="gl">${gloss}</span>`;
   return div;
 }
@@ -4408,7 +4408,7 @@ function _ensureChapterRendered(chapId) {
     if (chapEl) {
       chapEl.querySelectorAll('.word-unit[data-h]').forEach(function(wu) {
         var hwEl = wu.querySelector('.hw');
-        if (hwEl) hwEl.textContent = wu.getAttribute('data-h').replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, '');
+        if (hwEl) hwEl.textContent = wu.getAttribute('data-h').replace(/ו(ּ[ְ-ׇֻ]|[ְ-ׇֻ]ּ)/g,'וו$1').replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, '');
       });
     }
   }
@@ -4446,7 +4446,7 @@ function toggleNikkud() {
     var hwEl = wu.querySelector('.hw');
     if (!hwEl) return;
     var orig = wu.getAttribute('data-h');
-    if (isNow) hwEl.textContent = orig.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, '');
+    if (isNow) hwEl.textContent = orig.replace(/ו(ּ[ְ-ׇֻ]|[ְ-ׇֻ]ּ)/g,'וו$1').replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, '');
     else hwEl.innerHTML = orig.replace(/([\u05D0-\u05EA][\u0591-\u05C6]*\u05C7[\u0591-\u05C6]*)/g, '<span class="qq">$1</span>');
   });
   try { localStorage.setItem('bom-no-nikkud', isNow ? '1' : '0'); } catch(e) {}
