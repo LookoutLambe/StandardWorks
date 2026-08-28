@@ -1743,7 +1743,7 @@ var frontJST = [
     ["צַוִּים","commands"],
     ["כֹּה","so"],
     ["חֲמוּרִים","strict"],
-    ["לְשָׁמְרָם","to keep them safe"],
+    ["לְשׇׁמְרָם","to keep them safe"],
     ["וְלָמָּה","and why"],
     ["אָמַר","said"],
     ["הַמַּלְאָךְ","the angel"],
