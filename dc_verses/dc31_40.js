@@ -93,7 +93,7 @@ var dc31_ch1Verses = [
     ["וְיִנָּתֵן","and it shall be given"],
     ["לְךָ","you"],
     ["בְּיַד","by"],
-    ["הַמְנַחֵם","the Comforter"],
+    ["הַמְּנַחֵם","the Comforter"],
     ["מָה","what"],
     ["תַּעֲשֶׂה","you shall do"],
     ["וְאָנָה","and whither"],

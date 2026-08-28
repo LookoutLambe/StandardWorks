@@ -690,7 +690,7 @@ var pro_ch21Verses = [
   { num:"כג", words:[["שֹׁמֵר","who keeps"],["פִּיו","his mouth"],["וּלְשׁוֹנוֹ","and his tongue"],["שֹׁמֵר","who keeps"],["מִצָּרוֹת","from afflictions"],["נַפְשׁוֹ","his soul"],["׃",""]] },
   { num:"כד", words:[["זֵד","proud"],["יָהִיר","arrogant"],["לֵץ","scorner"],["שְׁמוֹ","his name"],["עוֹשֶׂה","who deals"],["בְּעֶבְרַת","in the wrath of"],["זָדוֹן","pride"],["׃",""]] },
   { num:"כה", words:[["תַּאֲוַת","desire of"],["עָצֵל","the sluggard"],["תְּמִיתֶנּוּ","it kills him"],["כִּי־מֵאֲנוּ","for refuse"],["יָדָיו","his hands"],["לַעֲשׂוֹת","to do"],["׃",""]] },
-  { num:"כו", words:[["כׇּל־הַיוֹם","all the day"],["הִתְאַוָּה","he craves"],["תַאֲוָה","greedily"],["וְצַדִּיק","and righteous"],["יִתֵּן","shall give"],["וְלֹא","and not"],["יַחְשֹׂךְ","spares"],["׃",""]] },
+  { num:"כו", words:[["כׇּל־הַיּוֹם","all the day"],["הִתְאַוָּה","he craves"],["תַאֲוָה","greedily"],["וְצַדִּיק","and righteous"],["יִתֵּן","shall give"],["וְלֹא","and not"],["יַחְשֹׂךְ","spares"],["׃",""]] },
   { num:"כז", words:[["זֶבַח","sacrifice"],["רְשָׁעִים","wicked men"],["תּוֹעֵבָה","abomination"],["אַף","moreover"],["כִּי־בְזִמָּה","when with a wicked mind"],["יְבִיאֶנּוּ","he will bring it"],["׃",""]] },
   { num:"כח", words:[["עֵד־כְּזָבִים","a false witness"],["יֹאבֵד","does perish"],["וְאִישׁ","and a man"],["שׁוֹמֵעַ","who listens"],["לָנֶצַח","constantly"],["יְדַבֵּר","speaks"],["׃",""]] },
   { num:"כט", words:[["הֵעֵז","he hardens"],["אִישׁ","a man"],["רָשָׁע","wicked"],["בְּפָנָיו","his face"],["וְיָשָׁר","and upright"],["הוּא","he"],["(יכין",""],["דרכיו)",""],["[יָבִין","he directs"],["דַּרְכּוֹ]","his way"],["׃",""]] },

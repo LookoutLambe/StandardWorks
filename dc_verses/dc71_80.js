@@ -927,7 +927,7 @@ var dc75_ch1Verses = [
     ["לָהֶם","unto them"],
     ["מִמָּרוֹם","from on high"],
     ["בְּיַד","by the means of"],
-    ["הַמְנַחֵם","the Comforter"],
+    ["הַמְּנַחֵם","the Comforter"],
     ["אָנָה","whither"],
     ["יֵלֵכוּ׃","they shall go"]
   ]},
@@ -3357,7 +3357,7 @@ var dc79_ch1Verses = [
   { num: "ב", words: [
     ["וְאֶשְׁלַח","And I will send"],
     ["עָלָיו","upon him"],
-    ["אֶת־הַמְנַחֵם","the Comforter"],
+    ["אֶת־הַמְּנַחֵם","the Comforter"],
     ["אֲשֶׁר","which"],
     ["יְלַמְּדֶנּוּ","shall teach him"],
     ["אֶת־הָאֱמֶת","the truth"],

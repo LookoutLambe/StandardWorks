@@ -128,7 +128,7 @@ var frontIntro = [
     ["סֵפֶר","the book of"],
     ["מוֹרְמוֹן","Mormon"],
     ["לְתוֹךְ","into"],
-    ["מִבְנֵי","the structures of"],
+    ["מִבְּנֵי","the structures of"],
     ["הַלָּשׁוֹן","the tongue"],
     ["וְהַנִּיב","and the idiom"],
     ["הָעִבְרִי","the Hebrew"],

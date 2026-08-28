@@ -298,7 +298,7 @@ var dc82_ch1Verses = [
     ["לָכֶם","you"],
     ["הַבְטָחָה׃","promise."]
   ]},
-  { num: "יא", words: [["לָכֵן","Therefore"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["רָאוּי","that it is expedient"], ["לַעֲבָדַי","for my servants"], ["אֶדְוָרד","Edward"], ["פַּרְטְרִיג׳","Partridge"], ["וּנְיוּאֶל","and Newel"], ["ק.","K."], ["וִיטְנִי","Whitney"], ["וְאֵי.","A."], ["סִידְנִי","Sidney"], ["גִילְבֶּרְט","Gilbert"], ["וְסִידְנִי","and Sidney"], ["רִיגְדּוֹן","Rigdon"], ["וְעַבְדִּי","and my servant"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["וְג׳וֹן","and John"], ["וִיטְמֵר","Whitmer"], ["וְאוֹלִיבֶר","and Oliver"], ["קָאוּדְרִי","Cowdery"], ["וְו.","and W."], ["ו.","W."], ["פֶלְפְּס","Phelps"], ["וּמַרְטִין","and Martin"], ["הֶרִיס","Harris"], ["לְהֵאָסֵר","to be bound"], ["יַחְדָּו","together"], ["בְּאִסָּר","by a bond"], ["וּבִבְרִית","and covenant"], ["אֲשֶׁר","that"], ["לֹא","not"], ["תֻפַר","cannot be broken"], ["בְּפֶשַׁע","by transgression"], ["כִּי","except"], ["אִם","if"], ["מִשְׁפָּט","judgment"], ["יָבוֹא","shall follow"], ["מַהֵר","immediately"], ["בַּפְּקֻדּוֹתֵיכֶם","in your stewardships"], ["הַשּׁוֹנוֹת׃","several-"]]},
+  { num: "יא", words: [["לָכֵן","Therefore"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["רָאוּי","that it is expedient"], ["לַעֲבָדַי","for my servants"], ["אֶדְוָרְד","Edward"], ["פַּרְטְרִיג׳","Partridge"], ["וּנְיוּאֶל","and Newel"], ["ק.","K."], ["וִיטְנִי","Whitney"], ["וְאֵי.","A."], ["סִידְנִי","Sidney"], ["גִילְבֶּרְט","Gilbert"], ["וְסִידְנִי","and Sidney"], ["רִיגְדּוֹן","Rigdon"], ["וְעַבְדִּי","and my servant"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["וְג׳וֹן","and John"], ["וִיטְמֵר","Whitmer"], ["וְאוֹלִיבֶר","and Oliver"], ["קָאוּדְרִי","Cowdery"], ["וְו.","and W."], ["ו.","W."], ["פֶלְפְּס","Phelps"], ["וּמַרְטִין","and Martin"], ["הֶרִיס","Harris"], ["לְהֵאָסֵר","to be bound"], ["יַחְדָּו","together"], ["בְּאִסָּר","by a bond"], ["וּבִבְרִית","and covenant"], ["אֲשֶׁר","that"], ["לֹא","not"], ["תֻפַר","cannot be broken"], ["בְּפֶשַׁע","by transgression"], ["כִּי","except"], ["אִם","if"], ["מִשְׁפָּט","judgment"], ["יָבוֹא","shall follow"], ["מַהֵר","immediately"], ["בַּפְּקֻדּוֹתֵיכֶם","in your stewardships"], ["הַשּׁוֹנוֹת׃","several-"]]},
   { num: "יב", words: [
     ["לְכַלְכֵּל","To manage"],
     ["אֶת־עִנְיְנֵי","the affairs of"],
@@ -5923,7 +5923,7 @@ var dc90_ch1Verses = [
     ["לַכֹּחַ","unto power"],
     ["הַזֶּה","this"],
     ["בְּהַנְהָגַת","by the administration of"],
-    ["הַמְנַחֵם","the Comforter"],
+    ["הַמְּנַחֵם","the Comforter"],
     ["הַנִּשְׁפָּךְ","shed forth"],
     ["עֲלֵיהֶם","upon them"],
     ["לְעֵדוּת","for the revelation of"],
@@ -5945,7 +5945,7 @@ var dc90_ch1Verses = [
     ["וּבַנְּשִׂיאוּת׃","and presidency."]
   ]},
   { num: "יג", words: [["וּכְכַלּוֹתְכֶם","And when you have finished"], ["אֶת־תִּרְגּוּם","the translation of"], ["הַנְּבִיאִים","the prophets"], ["מֵאָז","from thenceforth"], ["תִּנְהֲגוּ","you shall preside over"], ["אֶת־עִנְיְנֵי","the affairs of"], ["הַכְּנֵסִיָּה","the church"], ["וּבֵית","and the house of"], ["הַנְּבִיאִים׃","the prophets-;"]]},
-  { num: "יד", words: [["וּמֵעֵת","And from time"], ["לְעֵת","to time"], ["כַּאֲשֶׁר","as"], ["יְגַלֶּה","shall be manifested"], ["הַמְנַחֵם","by the Comforter"], ["תְּקַבְּלוּ","receive"], ["חֲזוֹנוֹת","revelations"], ["לְגַלּוֹת","to unfold"], ["אֶת־סוֹדוֹת","the mysteries of"], ["הַמַּלְכוּת׃","the kingdom-;"]]},
+  { num: "יד", words: [["וּמֵעֵת","And from time"], ["לְעֵת","to time"], ["כַּאֲשֶׁר","as"], ["יְגַלֶּה","shall be manifested"], ["הַמְּנַחֵם","by the Comforter"], ["תְּקַבְּלוּ","receive"], ["חֲזוֹנוֹת","revelations"], ["לְגַלּוֹת","to unfold"], ["אֶת־סוֹדוֹת","the mysteries of"], ["הַמַּלְכוּת׃","the kingdom-;"]]},
   { num: "טו", words: [["וְתָכִינוּ","And set in order"], ["אֶת־הַכְּנֵסִיּוֹת","the churches"], ["וְתִלְמְדוּ","and study"], ["וְתֵדְעוּ","and learn"], ["כׇּל־סֵפֶר","with all books"], ["טוֹב","good"], ["וּלְשׁוֹנוֹת","and with languages"], ["וְשָׂפוֹת","tongues"], ["וְעַמִּים׃","and people."]]},
   { num: "טז", words: [["וְזֹאת","And this"], ["תִּהְיֶה","shall be"], ["עֲבוֹדַתְכֶם","your business"], ["וּמִשְׁלַחְתְּכֶם","and mission"], ["כׇּל־יְמֵי","in all the days of"], ["חַיֵּיכֶם","your lives"], ["לְהַנְהִיג","to preside"], ["בַּסּוֹד","in council"], ["וּלְתַקֵּן","and set in order"], ["אֶת־כׇּל־עִנְיְנֵי","all the affairs of"], ["הַכְּנֵסִיָּה","church"], ["וְהַמַּלְכוּת","and kingdom"], ["הַזֹּאת׃","this."]]},
   { num: "יז", words: [

@@ -5324,7 +5324,7 @@ var ch13Verses = [
     ["הֵסִירוּ","take away"],
     ["בְּרִיתוֹת","covenants"],
     ["רַבּוֹת","many"],
-    ["מֵיהוָה","from the Lord"],
+    ["מֵיְהוָה","from the Lord"],
     ["׃",""]
   ]},
   { num:"כז", words:[
