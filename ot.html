@@ -1545,6 +1545,10 @@ function toggleNoNikkud() {
       else hw.innerHTML = orig.replace(/([\u05D0-\u05EA][\u0591-\u05C6]*\u05C7[\u0591-\u05C6]*)/g, '<span class="qq">$1</span>');
     }
   });
+    document.querySelectorAll('.chapter-summary-he[data-heb]').forEach(function(el) {
+    var orig = el.getAttribute('data-heb');
+    el.textContent = window._noNikkud ? _stripNikkudDisplay(orig) : orig;
+  });
   try { localStorage.setItem('ot-no-nikkud', window._noNikkud ? '1' : '0'); } catch(e) {}
 }
 
@@ -3285,7 +3289,12 @@ _ensureChapterRendered = function(chapId) {
             var ph = document.createElement('div');
             ph.className = 'chapter-summary-he';
             ph.setAttribute('dir', 'rtl');
-            ph.textContent = ht;
+            var phText = ht;
+            if (typeof _otHeadingWords !== 'undefined' && _otHeadingWords[key]) {
+              phText = _otHeadingWords[key].map(function(pr){ return pr[0]; }).join(' ');
+            }
+            ph.setAttribute('data-heb', phText);
+            ph.textContent = window._noNikkud ? _stripNikkudDisplay(phText) : phText;
             headingEl2.appendChild(ph);
             if (typeof _otHeadingWords !== 'undefined' && _otHeadingWords[key] && !headingEl2.querySelector('.heading-flow')) {
               var hf = document.createElement('div');
