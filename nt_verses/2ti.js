@@ -48,7 +48,7 @@ var _2ti_ch2Verses = [
   { num:"כג", words:[["וְהַרְחֵק","but-avoid"],["מִן־הַשְּׁאֵלוֹת","questions"],["הַתְּפֵלוֹת","foolish-and-unlearned"],["בְּאֵין","in-un"],["מוּסָר","discipline"],["מִדַּעְתְּךָ","from-knowledge-your"],["כִּי־אַךְ","because-but"],["מְרִיבוֹת","strifes"],["מוֹלִידוֹת","they-do-gender"],["הֵנָּה","them"],["׃",""]] },
   { num:"כד", words:[["וְעֶבֶד","and-the-servant-of"],["הָאָדוֹן","the-Lord"],["לֹא","not"],["יָרִיב","must-not-strive"],["אַךְ","but"],["יְהִי־נוֹחַ","be-gentle"],["לַכֹּל","unto-all"],["וּמֵבִין","apt"],["לְלַמֵּד","to-teach"],["וְסַבְלָן","patient"],["׃",""]] },
   { num:"כה", words:[["וּמְיַסֵּר","in-meekness-instructing"],["בַּעֲנָוָה","in-meekness"],["אֶת־הַמַּכְחִישִׁים","those-that-oppose"],["אוּלַי","if-peradventure"],["יִתֵּן","will-give"],["הָאֱלֹהִים","God"],["בִּלְבָבָם","them"],["לָשׁוּב","repentance"],["וְלָדַעַת","to-the-acknowledging-of"],["הָאֱמֶת","the-truth"],["׃",""]] },
-  { num:"כו", words:[["וְיָעִירוּ","and-recover-themselves"],["מֵרֶשֶׁת","out-of-the-snare-of"],["הַשָׂטָן","the-devil"],["אֲשֶׁר","who"],["צָדָם","are-taken-captive"],["בָּהּ","by-him"],["לִרְצוֹנוֹ","at-his-will"],["׃",""]] },
+  { num:"כו", words:[["וְיָעִירוּ","and-recover-themselves"],["מֵרֶשֶׁת","out-of-the-snare-of"],["הַשָּׂטָן","the-devil"],["אֲשֶׁר","who"],["צָדָם","are-taken-captive"],["בָּהּ","by-him"],["לִרְצוֹנוֹ","at-his-will"],["׃",""]] },
 ];
 renderVerseSet(_2ti_ch2Verses, '2ti-ch2-verses');
 
