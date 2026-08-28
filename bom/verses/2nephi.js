@@ -1691,7 +1691,7 @@ var n2_ch5Verses = [
     ["׃",""]
   ]},
           { num: "יד", words: [["וָאֶקַּח","and I took"], ["אֲנִי","I"], ["נֶפִי","Nephi"], ["אֶת־חֶרֶב","the sword of"], ["לָבָן","Laban"], ["וָאַעַשׂ","and I made"], ["כְּמַתְכֻּנְתָּהּ","after the pattern of it"], ["חֲרָבוֹת","swords"], ["רַבּוֹת","many"], ["פֶּן־יָבֹאוּ","lest come"], ["עָלֵינוּ","upon us"], ["הָעָם","the people"], ["הַנִּקְרָאִים","who were called"], ["עַתָּה","now"], ["לָמָנִים","Lamanites"], ["וְיַשְׁמִידוּנוּ","and destroy us"], ["כִּי","for"], ["יָדַעְתִּי","I knew"], ["שִׂנְאָתָם","their hatred"], ["אֵלַי","toward me"], ["וְאֶל־בָּנַי","and toward my children"], ["וְאֶל־הַנִּקְרָאִים","and those who were called"], ["עַמִּי","my people"], ["׃",""]]},
-            { num: "טו", words: [["וָאֲלַמֵּד","and I taught"], ["עַמִּי","my people"], ["לִבְנוֹת","to build"], ["בִּנְיָנִים","buildings"], ["וְלַעֲבֹד","and to work"], ["בְּכׇל־מְלֶאכֶת","in all manner of"], ["עֵץ","wood"], ["וּבַרְזֶל","and iron"], ["וּנְחֹשֶׁת","and copper"], ["וּנְחוּשָׁה","and of brass"], ["וּפְלָדָה","and steel"], ["וְזָהָב","and gold"], ["וָכֶסֶף","and silver"], ["וְכׇל־מַחְצָב","and of every ore"], ["יָקָר","precious"], ["אֲשֶׁר","which"], ["נִמְצָא","was found"], ["לָרֹב","in abundance"], ["׃",""]]},
+            { num: "טו", words: [["וָאֲלַמֵּד","and I taught"], ["עַמִּי","my people"], ["לִבְנוֹת","to build"], ["בִּנְיָנִים","buildings"], ["וְלַעֲבֹד","and to work"], ["בְּכׇל־מְלֶאכֶת","in all manner of"], ["עֵץ","wood"], ["וּבַרְזֶל","and iron"], ["וּנְחֹשֶׁת","and copper"], ["וּנְחֹשֶׁת","and brass"], ["קָלָל","burnished"], ["וּפְלָדָה","and steel"], ["וְזָהָב","and gold"], ["וָכֶסֶף","and silver"], ["וְכׇל־מַחְצָב","and of every ore"], ["יָקָר","precious"], ["אֲשֶׁר","which"], ["נִמְצָא","was found"], ["לָרֹב","in abundance"], ["׃",""]]},
           { num:"טז", words:[
     ["וָאֶבֶן","and I built"],
     ["אֲנִי","I"],["נֶפִי","Nephi"],
@@ -8651,16 +8651,7 @@ var n2_ch26Verses = [
     ["הָעֲנִיִּים","the poor"],
     ["׃",""]
   ]},
-  { num:"כא", words:[
-    ["וְיֵשׁ","and there are"],
-    ["קְהִלּוֹת","churches"],
-    ["רַבּוֹת","many"],
-    ["הַגּוֹרְמוֹת","which cause"],
-    ["קִנְאוֹת","envyings"],
-    ["וּמְרִיבוֹת","and strifes"],
-    ["וְשִׂנְאָה","and malice"],
-    ["׃",""]
-  ]},
+  { num: "כא", words: [["וְיֵשׁ","and there are"], ["קְהִלּוֹת","churches"], ["רַבּוֹת","many"], ["הַמְּבִיאוֹת","which cause"], ["קִנְאוֹת","envyings"], ["וּמְרִיבוֹת","and strifes"], ["וְשִׂנְאָה","and malice"], ["׃",""]]},
   { num:"כב", words:[
     ["וְגַם","and also"],
     ["קִשְׁרֵי","combinations"],
