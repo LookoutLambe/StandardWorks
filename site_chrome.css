@@ -264,6 +264,15 @@ body.has-sw-chrome.sw-chrome-reader #main-content {
   padding-top: calc(var(--sw-chrome-h) + 12px + env(safe-area-inset-top, 0px));
 }
 
+/* #main-content nested inside .page must not repeat the chrome offset — the
+   page already reserves it. Doubling it opened a 68px void between the
+   ornament and every chapter heading, corpus-wide. */
+html:has(link[href*="site_chrome.css"]) .page #main-content,
+body.has-sw-chrome .page #main-content,
+body.has-sw-chrome.sw-chrome-reader .page #main-content {
+  padding-top: 0;
+}
+
 body.has-sw-chrome #reading-progress {
   top: calc(var(--sw-chrome-h) + env(safe-area-inset-top, 0px));
 }
