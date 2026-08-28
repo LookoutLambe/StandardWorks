@@ -3831,7 +3831,7 @@ var n2_ch11Verses = [
     ["וּבְמִשְׁפָּטוֹ","and in His justice"],
     ["וּבִגְבוּרָתוֹ","and in His power"],
     ["וּבְרַחֲמָיו","and in His mercies"],
-    ["בְּתָכְנִית","in the plan of"],
+    ["בְּתׇכְנִית","in the plan of"],
     ["הַגְּאֻלָּה","the deliverance"],
     ["הַגְּדוֹלָה","the great"],
     ["וְהַנִּצְחִית","and the eternal"],

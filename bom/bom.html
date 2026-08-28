@@ -7145,27 +7145,10 @@ function _tlPointed(text) {
       else if (prevVowel === '\u05B0') v = '\u0115';
       else v = '\u0115';
     }
-    // Qamets qatan: in closed syllable, qamets = 'o' (not 'a')
-    if (tk.vowel === '\u05B8' && !isLast) {
-      var nxt = tokens[t+1];
-      var nxtIsLast = (t+1 === len-1);
-      var suffixLetters = '\u05DD\u05DF\u05DA'; // ם ן ך
-      // Rule 1: monosyllabic closed syllable (e.g. כָּל kol, חָק choq)
-      // Only apply when this is the ONLY real vowel in the word
-      // Exclude known qamets-gadol monosyllables: אָב (av), דָּם (dam), שָׁם (sham), etc.
-      var qGadolMono = '\u05D0\u05D1 \u05D3\u05DE \u05E9\u05DE \u05E2\u05D3 \u05E2\u05DC \u05E2\u05DD \u05E8\u05D1 \u05E8\u05E2 \u05D9\u05D3 \u05D7\u05DF \u05D9\u05DE'; // אב דם שם עד על עם רב רע יד חן ים
-      var twoC = tk.c + nxt.c;
-      if (nxtIsLast && !nxt.vowel && nxt.c !== '\u05D4' && nxt.c !== '\u05D0' && nxt.c !== '\u05E2' && suffixLetters.indexOf(nxt.c) < 0) {
-        var realVowels = 0;
-        for (var rv = 0; rv < len; rv++) { if (tokens[rv].vowel && tokens[rv].vowel !== '\u05B0') realVowels++; }
-        if (realVowels <= 1 && qGadolMono.indexOf(twoC) < 0) v = 'o';
-      }
-      // Rule 2: before consonant+shva+bgdkpt-dagesh (e.g. חָכְמָה chokhmah)
-      if (!nxtIsLast && nxt.vowel === '\u05B0') {
-        var nxt2 = t+2 < len ? tokens[t+2] : null;
-        if (nxt2 && bgdkpt.indexOf(nxt2.c) >= 0 && nxt2.dag) v = 'o';
-      }
-    }
+    // Qamets qatan is written explicitly in this corpus (U+05C7, the
+    // red-rendered sign), so the vowel itself decides /o/ vs /a/. A closed
+    // FINAL syllable carries the stress and keeps qamets gadol — \u05D0\u05B8\u05D6 is
+    // "az", \u05E8\u05B8\u05DD is "ram"; only a written \u05C7 (\u05DB\u05C7\u05DC\u05BE, \u05E7\u05C7\u05E8\u05B0\u05D1\u05B8\u05BC\u05DF) reads "o".
     // Dagesh forte: double the consonant (non-bgdkpt with dagesh after a vowel)
     var isDagForte = tk.dag && bgdkpt.indexOf(tk.c) < 0 && t > 0 && prevVowel;
     // bgdkpt with dagesh after a vowel = also forte (doubled + hard)

@@ -3423,7 +3423,7 @@ var ch11Verses = [
     ["רָאָה","saw"],
     ["אָבִי","my father"],
     ["וַיִּפָּלֵא","and surpassed"],
-    ["יָפְיוֹ","its beauty"],
+    ["יׇפְיוֹ","its beauty"],
     ["מִכׇּל־יֹפִי","all beauty"],
     ["עַד־מְאֹד","exceedingly"],
     ["וַיַּעַל","and exceeded"],

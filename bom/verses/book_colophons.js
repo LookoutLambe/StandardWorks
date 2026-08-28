@@ -180,7 +180,7 @@ var et_colophonVerses = [
     ["אֶת־שְׂפַת","the language of"],
     ["הָעָם","the people"],
     ["וְהֵפִיצָם","and scattered them"],
-    ["בְּכָל־פְּנֵי","upon all the face of"],
+    ["בְּכׇל־פְּנֵי","upon all the face of"],
     ["הָאֲדָמָה","the earth"],
     ["עַל־פִּי","according to"],
     ["דִּבְרֵי","The record of"],
