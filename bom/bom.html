@@ -845,6 +845,7 @@ body.dual-mode .hw { font-size: 1.3em; }
 .chapter-panel.fade-in { opacity: 1; }
 #panel-intro { opacity: 1; }
 #panel-landing { opacity: 1; }
+.landing-divider { border: none; border-top: 2px solid var(--rule); margin: 20px auto; max-width: 200px; }
 /* Landing contents — the D&C-style chapter grid */
 .landing-sections { max-width: 600px; margin: 0 auto 30px; padding: 0 12px; }
 .landing-section-group { margin-bottom: 16px; }
@@ -2101,33 +2102,12 @@ body.dual-mode .chapter-summary { display: block; }
   <div class="chapter-panel" id="panel-landing" style="display:block">
     <div style="max-width:700px;margin:0 auto;padding:60px 30px 40px;text-align:center">
 
-      <!-- The book itself is the hero — the same card as the hub, tap to open -->
-      <div style="margin:0 0 24px">
-        <a href="#1-nephi-1" onclick="startReading();return false" aria-label="Open Sefer Mormon — start reading"
-           style="display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:252px;height:336px;background:linear-gradient(170deg,#1e2233 0%,#1e2233 52%,#2a3050 100%);border:1px solid rgba(255,255,255,0.22);border-radius:8px;box-shadow:0 14px 34px rgba(26,39,68,0.28), 0 3px 10px rgba(26,39,68,0.18);text-decoration:none;transition:transform .18s ease, box-shadow .18s ease"
-           onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 20px 42px rgba(26,39,68,0.32), 0 4px 12px rgba(26,39,68,0.2)'"
-           onmouseout="this.style.transform='';this.style.boxShadow='0 14px 34px rgba(26,39,68,0.28), 0 3px 10px rgba(26,39,68,0.18)'">
-          <span style="width:55%;height:1px;background:var(--accent);opacity:0.75;margin:10px auto"></span>
-          <span style="font-family:'David Libre',serif;font-size:1.5em;font-weight:600;color:var(--accent);direction:rtl;line-height:1.4;text-align:center">ספר<br>מורמון</span>
-          <span style="width:55%;height:1px;background:var(--accent);opacity:0.75;margin:12px auto"></span>
-          <span style="font-family:'David Libre',serif;font-size:1.18em;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.12em;line-height:1.45;text-align:center">The<br>Book of<br>Mormon</span>
-          <span style="width:55%;height:1px;background:var(--accent);opacity:0.75;margin:12px auto"></span>
-        </a>
-      </div>
-
       <div style="margin-bottom:6px;direction:rtl">
-        <div style="font-family:'David Libre',serif;font-size:1.55em;font-weight:700;color:var(--ink)">ספר מורמון</div>
-        <div style="font-family:'David Libre',serif;font-size:1.05em;font-weight:500;color:var(--ink-light)">עדות אחרת ישוע המשיח</div>
+        <div style="font-family:'David Libre',serif;font-size:2.2em;font-weight:700;color:var(--accent-deep)">ספר מורמון</div>
+        <div style="font-family:'David Libre',serif;font-size:1.2em;font-weight:500;color:var(--ink);margin-top:4px">עדות אחרת ישוע המשיח</div>
+        <div style="font-family:'David Libre',serif;font-size:1em;color:var(--ink-light);letter-spacing:0.08em;direction:ltr;margin-top:4px">The Book of Mormon · Hebrew Interlinear</div>
       </div>
-      <div class="ornament" style="margin:14px 0 18px">· · ◆ · ·</div>
-
-      <div style="margin-top:30px">
-        <button id="start-reading-btn" onclick="startReading()" style="margin-bottom:12px">Start Reading: 1 Nephi 1 →</button>
-      </div>
-      <div id="continue-reading-wrap" style="margin-top:0;display:none">
-        <button id="continue-reading-btn" onclick="continueReading()">Continue Reading →</button>
-      </div>
-      <div class="ornament" style="margin:26px 0 14px">· · ◆ · ·</div>
+      <hr class="landing-divider">
       <div id="landing-contents" class="landing-sections" style="text-align:initial"></div>
       <div class="ornament" style="margin:30px 0 0">· · ◆ · ·</div>
       <div style="margin-top:18px;font-size:0.92em;color:var(--ink-light);line-height:1.6;direction:ltr;text-align:center">
