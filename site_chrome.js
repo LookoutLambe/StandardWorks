@@ -112,7 +112,7 @@
     a.className = 'sw-chrome-home';
     a.setAttribute('aria-label', 'Standard Works Home');
     a.title = 'Standard Works Home';
-    a.textContent = '\u{1F3E0}';
+    a.innerHTML = '<img src="' + assetBase() + 'icons/sw-mark.svg" alt="" style="width:26px;height:26px;display:block;border-radius:6px">';
     return a;
   }
 
@@ -236,6 +236,16 @@
   }
 
   // Rights line — every page carries it at the end of the content flow.
+  function mountFavicon() {
+    if (document.querySelector('link[rel="icon"][href*="sw-mark"]')) return;
+    var l = document.createElement('link');
+    l.rel = 'icon';
+    l.type = 'image/svg+xml';
+    l.href = assetBase() + 'icons/sw-mark.svg';
+    document.head.appendChild(l);
+  }
+  mountFavicon();
+
   function mountRights() {
     if (document.getElementById('sw-rights')) return;
     var d = document.createElement('div');
