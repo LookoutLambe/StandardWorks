@@ -248,6 +248,8 @@
 
   function mountRights() {
     if (document.getElementById('sw-rights')) return;
+    // pages with their own rights block (the hub footer) keep just that one
+    if (document.querySelector('[data-sw-rights]')) return;
     var d = document.createElement('div');
     d.id = 'sw-rights';
     d.innerHTML = '\u00a9 Christopher Lambe. All rights reserved. Licensing inquiries: <a href="mailto:chris@sefermormon.com">chris@sefermormon.com</a>';
