@@ -31,10 +31,12 @@ best_p={k:c.most_common(1)[0][0] for k,c in pointed.items()}
 def pick_gloss(p):
     c=gloss.get(p)
     if not c: return ''
+    # headings carry no English punctuation: strip what the verse gloss dragged in
+    def _cl(g): return re.sub(r'^[\s.,;:!?]+|[\s.,;:!?]+$','',g)
     for g,n in c.most_common(6):
         if re.fullmatch(r'[A-Z][a-z]{0,4}\.',g): continue
-        return g
-    return c.most_common(1)[0][0]
+        return _cl(g)
+    return _cl(c.most_common(1)[0][0])
 def variants(b):
     out=[]
     for i in range(1,len(b)-1):
@@ -44,10 +46,33 @@ import os
 
 
 VOLHAND={
+ 'dc': {
+  'להפוך':('לַהֲפֹךְ','to become'),
+  'ביושר':('בְּיֹשֶׁר','honestly'),
+  'לכינוס':('לְכִנּוּס','for the conference'),
+  'מונחים':('מֻנְחִים','are instructed'),
+  'נדחית':('נִדְחֵית','is deferred'),
+  'ניסיון':('נִסָּיוֹן','experience'),
+  'לערוך':('לַעֲרֹךְ','to make'),
+  'ייתן':('יִתֵּן','grant'),
+  'מלאכי':('מַלְאָכִי','Malachi'),
+  'הכינוס':('הַכִּנּוּס','the conference'),
+  'חותך':('חוֹתֵךְ','renders'),
+  'שעליהם':('שֶׁעֲלֵיהֶם','what they should'),
+  'תיעוד':('תִּעוּד','an account of'),
+ },
  'ot': {
   'המשיח':('הַמָּשִׁיחַ','the Messiah'),'ימלוך':('יִמְלוֹךְ','will reign'),
  },
  'nt': {
+  'בעניין':('בְּעִנְיַן','concerning'),
+  'ציות':('צִיּוּת','obedience'),
+  'שניתן':('שֶׁנִּתָּן','that is given'),
+  'מושחת':('מוֹשַׁחַת','anoints'),
+  'תהילתו':('תְּהִלָּתוֹ','his glory'),
+  'ומוקצה':('וּמֻקְצֶה','and is allotted'),
+  'ביטחון':('בִּטָּחוֹן','assurance'),
+  'נקבעו':('נִקְבְּעוּ','are foreordained'),
   'מסיים':('מְסַיֵּם','concludes'),'בכוחה':('בְּכֹחָהּ','by the power'),'היא':('הִיא','she'),
   'יעקב':('יַעֲקֹב','James'),'מטרף':('מְטֹרָף','a lunatic'),'מטורף':('מְטֹרָף','a lunatic'),'הקרוב':('הַקָּרוֹב','coming'),
   'ומשלם':('וּמְשַׁלֵּם','and pays'),'למרים':('לְמִרְיָם','to Mary'),'מציין':('מְצַיֵּן','acclaims'),
@@ -101,6 +126,23 @@ VOLHAND={
 def context_rule(vol,prev,b,nxt):
     """Homographs the flat map cannot decide: the neighbouring words do."""
     if b=='ממרים': return ('מִמִּרְיָם','of Mary')
+    if b=='אלי' and vol=='ot':
+        if nxt in ('שקר','השקר'): return ('אֱלֵי','the gods of')
+        if nxt=='אלי' or prev=='אלי': return ('אֵלִי','My God')
+        return ('עֵלִי','Eli')
+    if b=='אמורים' and (prev=='חיתים' or nxt=='כנענים'): return ('אֱמוֹרִים','Amorites')
+    if b=='שם' and nxt in ('חם','וחם'): return ('שֵׁם','Shem')
+    if b=='ושם' and nxt=='שממנו': return ('וְשֵׁם','and Shem')
+    if b=='אדם' and (nxt in ('וחוה','מוליד','עומד','נותן','הם','אוכלים','מקריב') or prev in ('ואחריה','הם','היומין','את')): return ('אָדָם','Adam')
+    if b=='אלוהיות' and prev=='תכונות': return ('אֱלֹהִיּוֹת','godly')
+    if b=='בעניין' and nxt=='העניים': return ('בְּעִנְיַן','the cause of')
+    if b=='ציות' and nxt=='המלכים': return ('צִיּוּת','the obedience of')
+    if b=='היירם' and nxt and nxt.startswith('פייג'): return ('הַיְירָם','Hiram')
+    if b=='שיבת' and nxt=='ציון': return ('שִׁיבַת','the return of')
+    if b=='מוכה' and nxt=='ירח': return ('מֻכֵּה','struck by')
+    if b=='מודה':
+        if prev=='איוב': return ('מוֹדֶה','admits')
+        return ('מוֹדֶה','gives thanks')
     if b=='מרים' and vol=='nt': return ('מִרְיָם','Mary')
     if b=='פול': return ('פּוֹל','Paul')
     if b in ('מסים','מסיים','מיסים'):
@@ -110,7 +152,7 @@ def context_rule(vol,prev,b,nxt):
     if b=='תשלם': return ('תַּשְׁלוּם','the paying of')
     if b=='גוביי': return ('גּוֹבֵי','gatherers of')
     if b=='אוכל' and vol=='nt': return ('אוֹכֵל','eats')
-    if b=='עם' and (prev in ('אוכל','מופיע','לאכול','סועד') or nxt in ('חוטאים','גוביי','גוף','מכשול')):
+    if b=='עם' and (prev in ('אוכל','מופיע','לאכול','סועד','שהלך') or nxt in ('חוטאים','גוביי','גוף','מכשול')):
         return ('עִם','with')
     if b=='דן' and vol=='nt': return ('דָּן','discusses')
     if b=='רכב' and vol=='nt': return ('רוֹכֵב','rides')
@@ -118,7 +160,7 @@ def context_rule(vol,prev,b,nxt):
     if b=='עולה' and (nxt or '').startswith('ל'): return ('עוֹלֶה','ascends')
     if b=='שנים' and nxt=='עשר': return ('שְׁנֵים־','the Twelve')
     if b=='עשר':
-        if prev=='שנים': return ('עָשָׂר','')
+        if prev in ('שנים','והשנים','השנים','לשנים','משנים'): return ('עָשָׂר','')
         return ('עֶשֶׂר','ten')
     if b=='שטן' and vol=='nt': return ('שָׂטָן','a devil')
     if b=='רוח' and nxt in ('הקדש','הקודש'): return ('רוּחַ','the Ghost')
@@ -178,18 +220,24 @@ for vol,(f,outvar,outfile) in FILES.items():
     for label,text in entries:
         text=text.replace('\\"','"')
         words=[]
+        _all=[t for t in re.split(r'(?:\s+|—|–(?!\d))',text) if t and t.strip()]
+        _ti=-1
         for tok in re.split(r'(\s+|—|–(?!\d))',text):
             tok=(tok or '').strip()
             if not tok: continue
             if tok in ('—','–'): words.append(['—','']); continue
-            core=re.sub(r'^[(\"״]+|[)\"״]+$','',tok)
             # The Hebrew line carries no English punctuation: commas, periods
             # and the rest are dropped from Hebrew tokens (the user's rule —
             # "it's Hebrew, strip the English punctuation"). A trailing sof
             # pasuq becomes its own token, exactly as in the verses.
-            sof = core.endswith('׃')
-            if sof: core=core[:-1]
-            core=re.sub(r'[.,;:?!]+$','',core)
+            # Strip edge wrappers repeatedly: ')' hides behind ',' in 'word),'.
+            core=tok; sof=False
+            while True:
+                nxt=re.sub(r'^[(\"״“”‘’„]+|[)\"״“”‘’„]+$','',core)
+                if nxt.endswith('׃'): sof=True; nxt=nxt[:-1]
+                nxt=re.sub(r'[.,;:?!]+$','',nxt)
+                if nxt==core: break
+                core=nxt
             trail=''
             if not re.search(r'[א-ת]',core):
                 words.append([tok,'']); continue
@@ -200,9 +248,10 @@ for vol,(f,outvar,outfile) in FILES.items():
             tot+=1
             _b=strip_pts(core).replace('־','')
             _pb=strip_pts(words[-1][0]).replace('־','').rstrip('.,;:') if words and re.search(r'[א-ת]',words[-1][0]) else ''
-            _toks_ahead=[t for t in re.split(r'(?:\s+|—|–(?!\d))',text[text.find(tok)+len(tok):]) if t and t.strip()]
+            _ti+=1
+            while _ti < len(_all) and _all[_ti] != tok.strip(): _ti+=1
             _nb=None
-            for _t in _toks_ahead:
+            for _t in _all[_ti+1:]:
                 _t2=re.sub(r'^[(\"״]+|[)\"״.,;:?!]+$','',_t)
                 if re.search(r'[א-ת]',_t2): _nb=strip_pts(_t2).replace('־',''); break
             r=context_rule(vol,_pb,_b,_nb) or (VOLHAND.get(vol,{}).get(_b)) or lookup(core)

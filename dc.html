@@ -126,6 +126,9 @@ body.hide-translit .tl, body.hide-translit .arr-tl { display: none; }
 .heading-flow .hw { font-size: 1.35em; }
 .heading-flow .tl { font-size: 0.7em; }
 .heading-flow .gl { font-size: 0.68em; }
+.heading-flow .arr-hw { font-size: 1.35em; }
+.heading-flow .arr-tl { font-size: 0.7em; }
+.heading-flow .arr-gl { font-size: 0.68em; }
 .heading-dash { align-self: center; opacity: 0.55; margin: 0 5px; }
 .chapter-heading .chapter-summary-he { display: none; }
 .chapter-heading .chapter-summary-en { display: none; }
@@ -3119,8 +3122,9 @@ _ensureChapterRendered = function(chapId) {
               if (hh === '\u05C3') {
                 // Sof pasuq closes the summary the way it closes a verse:
                 // rendered by the .sof class on the preceding word.
-                var lastWu = hf.lastElementChild;
-                if (lastWu && lastWu.classList && lastWu.classList.contains('word-unit')) lastWu.classList.add('sof');
+                var lastGrp = hf.lastElementChild;
+                var lastWu = lastGrp && lastGrp.querySelector ? lastGrp.querySelector('.word-unit') : null;
+                if (lastWu) lastWu.classList.add('sof');
                 continue;
               }
               var wu = makeWordUnit(hh, hg, false);
@@ -3128,9 +3132,18 @@ _ensureChapterRendered = function(chapId) {
                 if (!/[\u05D0-\u05EA]/.test(hh)) { wu.style.direction = 'ltr'; wu.style.unicodeBidi = 'isolate'; var hwSpan = wu.querySelector('.hw'); if (hwSpan) { hwSpan.style.direction = 'ltr'; hwSpan.style.unicodeBidi = 'isolate'; } }
                 var tls = wu.querySelector('.tl');
                 if (tls && typeof transliterate === 'function' && /[\u05D0-\u05EA]/.test(hh)) { try { tls.textContent = transliterate(hh); } catch(eT) {} }
-                hf.appendChild(wu);
+                var hgrp = document.createElement('span');
+                hgrp.className = 'word-group';
+                hgrp.appendChild(wu);
+                var harr = document.createElement('span');
+                harr.className = 'arr';
+                harr.innerHTML = '<span class="arr-hw">\u200B</span><span class="arr-tl">\u2039</span><span class="arr-gl">\u2039</span>';
+                hgrp.appendChild(harr);
+                hf.appendChild(hgrp);
               }
             }
+            var lastA = hf.lastElementChild ? hf.lastElementChild.querySelector('.arr') : null;
+            if (lastA) { var lt=lastA.querySelector('.arr-tl'), lg=lastA.querySelector('.arr-gl'); if(lt)lt.textContent='\u00ab'; if(lg)lg.textContent='\u00ab'; }
             headingEl2.appendChild(hf);
           }
         }
