@@ -4072,7 +4072,7 @@ body.dual-mode .chapter-summary { display: block; }
 <script src="../root_scorecard.js?v=33"></script>
 <script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
 <script src="crossrefs.js?v=23"></script>
-<script src="roots_glossary.js?v=29"></script>
+<script src="roots_glossary.js?v=30"></script>
 <script src="bom_inverse_crossrefs.js?v=1"></script>
 <script src="chapter_headings.js"></script>
 <script src="chapter_headings_heb.js?v=7"></script>
@@ -7801,8 +7801,25 @@ document.addEventListener('keydown', function(e) {
   // This groups morphologically related words under one root
   // 583 entries across 67 root families (theological, verbal, nominal)
   // Roots with no Strong's entry at all — these must never be peeled.
-  var _lexNoPeel = { 'כנס': 1, 'סעד': 1, 'H4503': 1, 'H7133': 1, 'אות': 1, 'אחראי': 1 };
+  var _lexNoPeel = { 'כנס': 1, 'סעד': 1, 'H4503': 1, 'H7133': 1, 'אות': 1, 'אחראי': 1,
+    // the pronoun families — rootMap must win before Strong's folds them via BDB
+    'אני': 1, 'אנכי': 1, 'אנחנו': 1, 'אתה': 1, 'הוא': 1, 'היא': 1, 'הם': 1, 'הן': 1 };
   var rootMap = {
+    // The independent personal pronouns — the whole paradigm (1cs 1cp 2ms 2fs
+    // 2mp 2fp 3ms 3fs 3mp), pinned to their own bare families. BARE keys, not
+    // Strong's numbers: an H-value goes through baseRoot and BDB folds the
+    // pronouns into look-alike roots (H1992 lands in המה "tumult", H0859 in
+    // אנת). 3fp gets only the demonstratives — bare הֵן/הֵנָּה stay put,
+    // most tokens mean "behold".
+    'אֲנִי':'אני','וַאֲנִי':'אני',
+    'אָנֹכִי':'אנכי','וְאָנֹכִי':'אנכי',
+    'אֲנַחְנוּ':'אנחנו','וַאֲנַחְנוּ':'אנחנו','נַחְנוּ':'אנחנו','אָנוּ':'אנחנו','וְאָנוּ':'אנחנו',
+    'אַתָּה':'אתה','וְאַתָּה':'אתה','אַתְּ':'אתה','וְאַתְּ':'אתה',
+    'אַתֶּם':'אתה','וְאַתֶּם':'אתה','אַתֶּן':'אתה','וְאַתֶּן':'אתה','אַתֵּנָה':'אתה',
+    'הוּא':'הוא','וְהוּא':'הוא','הַהוּא':'הוא','שֶׁהוּא':'הוא',
+    'הִיא':'היא','הִוא':'היא','וְהִיא':'היא','וְהִוא':'היא','הַהִיא':'היא','שֶׁהִיא':'היא',
+    'הֵם':'הם','הֵמָּה':'הם','וְהֵם':'הם','וְהֵמָּה':'הם','הָהֵם':'הם','הָהֵמָּה':'הם','שֶׁהֵם':'הם',
+    'הָהֵן':'הן','הָהֵנָּה':'הן',
     // Modern lexeme, not a conjugation: the verbal peel would strip the א and
     // file "accountable/responsible" under H2716 חרא (dung).
     'אַחֲרַאי': 'אחראי', 'אַחֲרָאִים': 'אחראי',

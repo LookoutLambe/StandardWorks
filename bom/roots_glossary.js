@@ -1,4 +1,11 @@
 window._rootGlossaryData = {
+  "H0589": { "meaning": "I", "category": "Pronoun" },
+  "H0595": { "meaning": "I", "category": "Pronoun" },
+  "H0587": { "meaning": "we", "category": "Pronoun" },
+  "H0859": { "meaning": "you", "category": "Pronoun" },
+  "H1931": { "meaning": "he, she, it", "category": "Pronoun" },
+  "H1992": { "meaning": "they, them", "category": "Pronoun" },
+  "H2007": { "meaning": "they (f.), those", "category": "Pronoun" },
   "מוסר": {
     "meaning": "discipline, instruction, correction",
     "category": "Uncategorized"
@@ -1159,7 +1166,7 @@ window._rootGlossaryData = {
     "category": "Society"
   },
   "אתה": {
-    "meaning": "to come, arrive",
+    "meaning": "you",
     "category": "Particle"
   },
   "נות": {
