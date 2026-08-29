@@ -845,6 +845,13 @@ body.dual-mode .hw { font-size: 1.3em; }
 .chapter-panel.fade-in { opacity: 1; }
 #panel-intro { opacity: 1; }
 #panel-landing { opacity: 1; }
+/* Landing hero — the title itself rendered interlinear */
+.hero-lis-row { display: flex; direction: rtl; justify-content: center; align-items: flex-start; gap: 26px; flex-wrap: wrap; }
+.hlw { display: inline-flex; flex-direction: column; align-items: center; }
+.hlw-hw { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--ink); direction: rtl; white-space: nowrap; line-height: 1.3; }
+.hlw-tl { font-size: 0.72em; color: var(--ink-light); font-style: italic; margin-top: 2px; direction: ltr; }
+.hlw-gl { font-size: 0.85em; color: var(--ink); margin-top: 2px; direction: ltr; }
+
 .landing-divider { border: none; border-top: 2px solid var(--rule); margin: 20px auto; max-width: 200px; }
 /* Landing contents — the D&C-style chapter grid */
 .landing-sections { max-width: 600px; margin: 0 auto 30px; padding: 0 12px; }
@@ -2102,10 +2109,18 @@ body.dual-mode .chapter-summary { display: block; }
   <div class="chapter-panel" id="panel-landing" style="display:block">
     <div style="max-width:700px;margin:0 auto;padding:60px 30px 40px;text-align:center">
 
-      <div style="margin-bottom:6px;direction:rtl">
-        <div style="font-family:'David Libre',serif;font-size:2.2em;font-weight:700;color:var(--accent-deep)">ספר מורמון</div>
-        <div style="font-family:'David Libre',serif;font-size:1.2em;font-weight:500;color:var(--ink);margin-top:4px">עדות אחרת ישוע המשיח</div>
-        <div style="font-family:'David Libre',serif;font-size:1em;color:var(--ink-light);letter-spacing:0.08em;direction:ltr;margin-top:4px">The Book of Mormon · Hebrew Interlinear</div>
+      <div class="hero-lis" style="margin-bottom:6px">
+        <div class="hero-lis-row hero-lis-title">
+          <span class="hlw"><span class="hlw-hw" style="font-size:2.3em;color:var(--accent-deep)">סֵפֶר</span><span class="hlw-tl">sefer</span><span class="hlw-gl">The Book of</span></span>
+          <span class="hlw"><span class="hlw-hw" style="font-size:2.3em;color:var(--accent-deep)">מוֹרְמוֹן</span><span class="hlw-tl">mormon</span><span class="hlw-gl">Mormon</span></span>
+        </div>
+        <div class="hero-lis-row" style="margin-top:16px">
+          <span class="hlw"><span class="hlw-hw">עֵדוּת</span><span class="hlw-tl">edut</span><span class="hlw-gl">Testament</span></span>
+          <span class="hlw"><span class="hlw-hw">אַחֶרֶת</span><span class="hlw-tl">acheret</span><span class="hlw-gl">Another</span></span>
+          <span class="hlw"><span class="hlw-hw">יֵשׁוּעַ</span><span class="hlw-tl">yeshua</span><span class="hlw-gl">of Jesus</span></span>
+          <span class="hlw"><span class="hlw-hw">הַמָּשִׁיחַ</span><span class="hlw-tl">hammashiach</span><span class="hlw-gl">Christ</span></span>
+        </div>
+        <div style="font-family:'David Libre',serif;font-size:0.95em;color:var(--ink-light);letter-spacing:0.1em;direction:ltr;margin-top:16px">HEBREW INTERLINEAR</div>
       </div>
       <div style="margin:24px 0 4px">
         <button id="start-reading-btn" onclick="navTo('intro')">To the Reader →</button>
