@@ -2038,6 +2038,254 @@
     if (n && !n.disabled) n.click();
   }
 
+  // Swipe left/right turns the chapter like a page: the sheet follows the
+  // finger, springs back on a short drag, and on commit slides off while the
+  // next chapter slides in from the opposite side (the Gospel-Library /
+  // Kindle pattern). Guards keep it from ever fighting text selection (the
+  // old reason swipe was removed) or the OS edge gestures: an active
+  // selection wins, the 24px edge strips are left to the system, and the
+  // gesture only locks once horizontal intent clearly beats vertical scroll.
+  // Hebrew page order: dragging rightward reveals the next (left-hand)
+  // chapter, leftward the previous.
+  function installSwipeChapterNav() {
+    if (window._swSwipeNavHooked) return;
+    window._swSwipeNavHooked = true;
+    var sx = 0, sy = 0, st = 0, live = false, locked = false, sheet = null;
+
+    function currentSheet() {
+      var panels = document.querySelectorAll('.chapter-panel');
+      for (var i = 0; i < panels.length; i++) {
+        if (panels[i].offsetParent !== null && panels[i].getBoundingClientRect().height > 0) return panels[i];
+      }
+      return document.querySelector('.page');
+    }
+    function clipX(on) {
+      try { document.documentElement.style.overflowX = on ? 'hidden' : ''; } catch (e) {}
+    }
+    function navDisabled(dir) {
+      var b = document.getElementById(dir === 'next' ? 'nqd-nav-next' : 'nqd-nav-prev');
+      return !!(b && b.disabled);
+    }
+    function releaseSheet(el) {
+      if (!el) return;
+      el.style.transition = '';
+      el.style.transform = '';
+      el.style.willChange = '';
+    }
+    function springBack() {
+      var el = sheet; sheet = null; locked = false;
+      if (!el) { clipX(false); return; }
+      el.style.transition = 'transform 0.18s ease-out';
+      el.style.transform = 'translateX(0px)';
+      setTimeout(function() { releaseSheet(el); clipX(false); }, 200);
+    }
+    function completeTurn(dir, dx) {
+      var el = sheet; sheet = null; locked = false;
+      if (!el) { clipX(false); return; }
+      var off = (dx > 0 ? 1 : -1) * (window.innerWidth + 60);
+      el.style.transition = 'transform 0.2s ease-in';
+      el.style.transform = 'translateX(' + off + 'px)';
+      setTimeout(function() {
+        releaseSheet(el);
+        triggerChapterNav(dir);
+        var incoming = currentSheet() || el;
+        incoming.style.transition = 'none';
+        incoming.style.transform = 'translateX(' + (-off) + 'px)';
+        void incoming.offsetWidth;
+        incoming.style.transition = 'transform 0.22s ease-out';
+        incoming.style.transform = 'translateX(0px)';
+        setTimeout(function() { releaseSheet(incoming); clipX(false); }, 260);
+      }, 210);
+    }
+
+    document.addEventListener('touchstart', function(e) {
+      live = false;
+      if (locked || sheet) return;
+      if (!e.touches || e.touches.length !== 1) return;
+      var t = e.touches[0];
+      if (t.clientX < 24 || t.clientX > window.innerWidth - 24) return;
+      if (e.target.closest && e.target.closest(
+        '#nav-sidebar, #sw-reader-footer, .controls-bottom, .controls-top, #glossary-panel, ' +
+        '#xref-panel, #annotations-panel, #search-container, #search-results, #sel-toolbar, ' +
+        '#hl-pop, #word-popup, #share-popup, #note-modal, input, textarea, select, button, a')) return;
+      sx = t.clientX; sy = t.clientY; st = Date.now(); live = true; locked = false;
+    }, { passive: true });
+
+    document.addEventListener('touchmove', function(e) {
+      if (!live) return;
+      if (!e.touches || e.touches.length !== 1 || window._swWordSelActive) {
+        live = false;
+        if (locked) springBack();
+        return;
+      }
+      var t = e.touches[0];
+      var dx = t.clientX - sx, dy = t.clientY - sy;
+      if (!locked) {
+        if (Math.abs(dy) > 14 && Math.abs(dy) > Math.abs(dx)) { live = false; return; }
+        if (Math.abs(dx) > 14 && Math.abs(dx) > 1.4 * Math.abs(dy)) {
+          try {
+            var sel = window.getSelection();
+            if (sel && !sel.isCollapsed && sel.toString().trim()) { live = false; return; }
+          } catch (err) {}
+          var pop = document.getElementById('hl-pop');
+          if (pop && pop.classList.contains('visible')) { live = false; return; }
+          sheet = currentSheet();
+          if (!sheet) { live = false; return; }
+          locked = true;
+          sheet.style.willChange = 'transform';
+          clipX(true);
+        } else {
+          return;
+        }
+      }
+      e.preventDefault();
+      if (sheet) {
+        // a turn that cannot happen (first/last chapter) drags with resistance
+        var blocked = navDisabled(dx > 0 ? 'next' : 'prev');
+        sheet.style.transform = 'translateX(' + (blocked ? dx / 3 : dx) + 'px)';
+      }
+    }, { passive: false });
+
+    document.addEventListener('touchend', function(e) {
+      if (!live) return;
+      live = false;
+      if (!locked || !sheet) return;
+      var t = e.changedTouches && e.changedTouches[0];
+      if (!t) { springBack(); return; }
+      var dx = t.clientX - sx, dt = Math.max(Date.now() - st, 1);
+      var dir = dx > 0 ? 'next' : 'prev';
+      var flick = Math.abs(dx) / dt > 0.5 && Math.abs(dx) > 40;
+      if ((Math.abs(dx) > window.innerWidth * 0.28 || flick) && !navDisabled(dir)) {
+        completeTurn(dir, dx);
+      } else {
+        springBack();
+      }
+    }, { passive: true });
+
+    document.addEventListener('touchcancel', function() {
+      live = false;
+      if (locked) springBack();
+    }, { passive: true });
+  }
+
+  // Touch word-range selection: iOS cannot drag a native selection across the
+  // interlinear's per-word islands, so on touch the Hebrew line is selected
+  // here instead — hold a word, sweep across its neighbours (each gets a
+  // preview tint), release, and the highlight popover opens on the range.
+  function installTouchWordSelection() {
+    if (window._swWselHooked) return;
+    window._swWselHooked = true;
+    if (!document.getElementById('hl-pop')) return;
+    var timer = null, active = false, anchorWu = null, panelWords = null, lastRange = [];
+    var startX = 0, startY = 0;
+
+    function clearTint() {
+      for (var i = 0; i < lastRange.length; i++) lastRange[i].classList.remove('wsel');
+      lastRange = [];
+    }
+    // Wrap the page's hide/show so the preview tint always clears with the
+    // popover, and so the native-selection path can't tear down a custom
+    // range (it sees a collapsed native selection and would dismiss).
+    if (typeof window._hideSelToolbar === 'function' && !window._hideSelToolbar._wselWrapped) {
+      var origHide = window._hideSelToolbar;
+      var wrappedHide = function() { clearTint(); return origHide.apply(this, arguments); };
+      wrappedHide._wselWrapped = true;
+      window._hideSelToolbar = wrappedHide;
+    }
+    if (typeof window._showSelToolbar === 'function' && !window._showSelToolbar._wselWrapped) {
+      var origShow = window._showSelToolbar;
+      var wrappedShow = function() {
+        if (lastRange.length) return;
+        return origShow.apply(this, arguments);
+      };
+      wrappedShow._wselWrapped = true;
+      window._showSelToolbar = wrappedShow;
+    }
+    function wordFromPoint(x, y) {
+      var el = document.elementFromPoint(x, y);
+      return el && el.closest ? el.closest('.word-unit[data-wid]') : null;
+    }
+    function rangeBetween(a, b) {
+      if (!panelWords) return [a];
+      var ia = panelWords.indexOf(a), ib = panelWords.indexOf(b);
+      if (ia < 0 || ib < 0) return [a];
+      var lo = Math.min(ia, ib), hi = Math.max(ia, ib);
+      return panelWords.slice(lo, hi + 1);
+    }
+    function setRange(words) {
+      clearTint();
+      lastRange = words;
+      for (var i = 0; i < words.length; i++) words[i].classList.add('wsel');
+    }
+    function cancel() {
+      if (timer) { clearTimeout(timer); timer = null; }
+      if (active) { clearTint(); active = false; window._swWordSelActive = false; }
+      anchorWu = null;
+    }
+    document.addEventListener('touchstart', function(e) {
+      if (!e.touches || e.touches.length !== 1) { cancel(); return; }
+      var t = e.touches[0];
+      // A tap outside a stale popover dismisses it — the custom range has no
+      // native selection whose collapse would do it.
+      var pop = document.getElementById('hl-pop');
+      if (pop && pop.classList.contains('visible') && !(e.target.closest && e.target.closest('#hl-pop'))) {
+        try {
+          var sel = window.getSelection();
+          if (!sel || sel.isCollapsed) window._hideSelToolbar();
+        } catch (eSel) {}
+      }
+      if (!e.target.closest) return;
+      var wu = e.target.closest('.word-unit[data-wid]');
+      if (!wu || !e.target.closest('.hw')) return;
+      anchorWu = wu; startX = t.clientX; startY = t.clientY;
+      timer = setTimeout(function() {
+        timer = null;
+        active = true;
+        window._swWordSelActive = true;
+        var panel = anchorWu.closest('.chapter-panel') || anchorWu.closest('.page') || document;
+        panelWords = Array.prototype.slice.call(panel.querySelectorAll('.word-unit[data-wid]'));
+        setRange([anchorWu]);
+      }, 400);
+    }, { passive: true });
+    document.addEventListener('touchmove', function(e) {
+      var t = e.touches && e.touches[0];
+      if (!t) return;
+      if (timer && (Math.abs(t.clientX - startX) > 12 || Math.abs(t.clientY - startY) > 12)) {
+        clearTimeout(timer); timer = null; anchorWu = null;
+        return;
+      }
+      if (!active) return;
+      e.preventDefault();
+      var wu = wordFromPoint(t.clientX, t.clientY);
+      if (wu && anchorWu) setRange(rangeBetween(anchorWu, wu));
+    }, { passive: false });
+    document.addEventListener('touchend', function(e) {
+      if (timer) { clearTimeout(timer); timer = null; anchorWu = null; }
+      if (!active) return;
+      e.preventDefault();
+      active = false;
+      window._swWordSelActive = false;
+      anchorWu = null;
+      if (!lastRange.length) return;
+      window._selWordUnits = lastRange.slice();
+      window._selMode = 'word';
+      window._selTier = 'hw';
+      var pop = document.getElementById('hl-pop');
+      var rowHl = document.getElementById('hl-row-hl');
+      var rowUl = document.getElementById('hl-row-ul');
+      var noteRow = document.getElementById('hl-note-row');
+      if (rowHl) rowHl.style.display = 'flex';
+      if (rowUl) rowUl.style.display = 'flex';
+      if (noteRow) noteRow.style.display = 'none';
+      pop.classList.add('visible');
+      if (typeof window._updateSelToolbarIndicators === 'function') window._updateSelToolbarIndicators();
+    }, { passive: false });
+    document.addEventListener('touchcancel', cancel, { passive: true });
+    document.addEventListener('contextmenu', function(e) {
+      if (active) e.preventDefault();
+    });
+  }
+
   function syncQuickDockLayout() {
     var footer = getReaderFooter();
     if (!footer || !_quickDockInstalled) return;
@@ -2115,6 +2363,8 @@
     document.body.classList.add('sw-footer-ready');
     syncQuickDockActive();
     hookDockChapterNavSync();
+    installSwipeChapterNav();
+    installTouchWordSelection();
 
     window.addEventListener(
       'resize',

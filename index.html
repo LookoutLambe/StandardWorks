@@ -753,6 +753,20 @@ body.dark-mode .gs-result-link:hover {
   margin-top: 6px;
   font-style: italic;
 }
+.gs-spin {
+  display: inline-block;
+  width: 13px; height: 13px;
+  margin-right: 7px;
+  vertical-align: -2px;
+  border: 2px solid var(--rule);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: gs-spin 0.8s linear infinite;
+}
+@keyframes gs-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .gs-spin { animation: none; border-top-color: var(--rule); }
+}
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 600px) {
@@ -972,7 +986,7 @@ body, button, input, select, textarea,
 
 <script src="site_chrome.js?v=26"></script>
 <script src="notes_engine.js"></script>
-<script src="nav_engine.js?v=36"></script>
+<script src="nav_engine.js?v=37"></script>
 <script>
 (function hubNavBoot() {
   try {
@@ -993,6 +1007,11 @@ body, button, input, select, textarea,
 
 // ===== GLOBAL SEARCH (Jump across volumes) =====
 var gsInput = document.getElementById('global-search');
+// The "/ or Ctrl+K" shortcut hint is keyboard-only — drop it on touch devices,
+// where it is noise and truncates the placeholder on narrow screens.
+if (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) {
+  gsInput.placeholder = 'Search all volumes…';
+}
 var gsResults = document.getElementById('gs-results');
 
 function _escapeHtml(s) {
@@ -1074,7 +1093,7 @@ function _gsTextSearchRow(q, filterVol) {
   if (!idx) {
     if (_gsIdxState === 3) return '<div class="gs-hint">Text search could not load \u2014 reload the page and try again.</div>';
     _gsLoadIndex();
-    return '<div class="gs-hint">Searching the text of all volumes\u2026</div>';
+    return '<div class="gs-hint"><span class="gs-spin" aria-hidden="true"></span>Searching the text of all volumes\u2026</div>';
   }
   var isHeb = _gsHasHeb(q);
   var nq = isHeb ? _gsNormHeb(q) : q.toLowerCase();
@@ -1104,7 +1123,7 @@ function _gsTextSearchRow(q, filterVol) {
 
 function renderGsResults(q, filterVol) {
   if (!window.NavEngine || !window.NavEngine.searchBooks) {
-    gsResults.innerHTML = '<div class="gs-hint">Search is loading…</div>';
+    gsResults.innerHTML = '<div class="gs-hint"><span class="gs-spin" aria-hidden="true"></span>Search is loading…</div>';
     gsResults.classList.add('open');
     return;
   }

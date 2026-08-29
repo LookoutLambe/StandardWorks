@@ -67,7 +67,7 @@
   --highlight: rgba(219, 185, 88, 0.12);
   --header-bg: #1e2233;
   --header-text: #dbb958;
-  --row-alt: #fdf8eb;
+  --row-alt: #faf8f2;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -105,9 +105,11 @@ body.hide-bottom-bar .controls-bottom.sw-footer-modes {
 }
 
 .page {
-  max-width: 800px;
+  max-width: none;
   margin: 0 auto;
   padding: 55px 24px 50px;
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
   background: #faf8f2;
   min-height: 100vh;
   box-shadow: none;
@@ -1148,6 +1150,45 @@ body.in-chapter #sel-toolbar { flex-direction: column; flex-wrap: nowrap; max-wi
   cursor: pointer; font-weight: 600; white-space: nowrap;
 }
 .sel-note-save:hover { opacity: 0.85; }
+
+/* Selection popover — appears at the selected text (Gospel-Library pattern):
+   colors first, then note/copy/share; closes when the selection collapses. */
+#hl-pop {
+  display: none;
+  position: fixed;
+  z-index: 1300;
+  background: #1e2233;
+  border: 1.5px solid #c8a84e;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.45);
+  padding: 10px 12px;
+  direction: ltr;
+  -webkit-user-select: none;
+  user-select: none;
+  max-width: calc(100vw - 16px);
+}
+#hl-pop.visible { display: block; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+#hl-pop .sel-row { gap: 9px; }
+#hl-pop .sel-color, #hl-pop .sel-eraser { width: 27px; height: 27px; }
+#hl-pop .hl-actions {
+  display: flex; align-items: center; gap: 4px;
+  margin-top: 8px; border-top: 1px solid rgba(154,154,176,0.25); padding-top: 4px;
+}
+#hl-pop .hl-actions button {
+  background: transparent; border: none; color: #c8a84e; cursor: pointer;
+  font-size: 1.05em; padding: 6px 0; flex: 1; min-height: 38px; border-radius: 8px;
+  font-family: 'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',emoji;
+}
+#hl-pop .hl-actions button:hover, #hl-pop .hl-actions button:active { background: #2a2f44; }
+
+/* Long-press word-range selection (touch): the finger sweeps the Hebrew line
+   and each word in range gets a preview tint. Native per-word selection is
+   off on coarse pointers — iOS cannot drag it across the interlinear's
+   per-word islands, which limited selection to a single word. */
+.word-unit.wsel { background: rgba(219,185,88,0.28); border-radius: 6px; }
+@media (pointer: coarse) {
+  .word-unit .hw { -webkit-user-select: none !important; user-select: none !important; -webkit-touch-callout: none; }
+}
 /* Mobile: vertical two-column grid */
 @media (max-width: 600px) {
   #sel-toolbar { flex-direction: row; flex-wrap: wrap; max-width: 200px; }
@@ -1289,7 +1330,7 @@ body.dark-mode .glossary-biblical-section { background: rgba(219,185,88,0.05); b
   padding: 12px 0 4px; border-bottom: 1px solid var(--rule); font-weight: 600;
 }
 .word-unit.glossary-highlighted { background: rgba(219,185,88,0.25); border-radius: 4px; box-shadow: 0 0 0 2px rgba(219,185,88,0.3); }
-body.dark-mode #glossary-panel { background: #272d3e; border-color: #3a4054; }
+body.dark-mode #glossary-panel { background: #1e2233; border-color: #3a4054; }
 body.dark-mode .tg-ref, body.dark-mode .tg-ref-heb { color: #8ec1ea; }
 body.dark-mode .tg-def-label { color: var(--accent); }
 body.dark-mode #glossary-search { background: #222838; color: #e8e0d0; border-color: #3a4054; }
@@ -1485,7 +1526,7 @@ body.dark-mode .word-unit.xref-linked:hover .gl { color: #85c1e9 !important; }
   text-decoration: none;
 }
 #xref-popup .xref-refs li a:hover { text-decoration: underline; }
-body.dark-mode #xref-popup { background: #272d3e; border-color: #d4af37; color: #e8e0d0; }
+body.dark-mode #xref-popup { background: #1e2233; border-color: #d4af37; color: #e8e0d0; }
 
 /* === CROSS-REFERENCE SLIDE PANEL === */
 #xref-panel {
@@ -1555,12 +1596,12 @@ body.dark-mode #xref-popup { background: #272d3e; border-color: #d4af37; color: 
 .xref-ref-nodata {
   font-size: 0.85em; color: var(--ink-light); font-style: italic;
 }
-body.dark-mode #xref-panel { background: #272d3e; border-color: #d4af37; }
+body.dark-mode #xref-panel { background: #1e2233; border-color: #d4af37; }
 @media (max-width: 600px) { #xref-panel { width: 55%; right: -55%; } }
 
 /* === DARK MODE === */
 body.dark-mode {
-  --bg: #212736;
+  --bg: #1e2233;
   --bg-deep: #222838;
   --ink: #e8e0d0;
   --ink-light: #b0a890;
@@ -1574,19 +1615,28 @@ body.dark-mode {
   --highlight: rgba(219, 185, 88, 0.15);
   --header-bg: #d4af37;
   --header-text: #d4af37;
-  --row-alt: #262c3c;
+  --row-alt: #1e2233;
 }
 body.dark-mode .hw { color: var(--ink); }
 body.dark-mode .word-unit.sof .hw::after { color: var(--ink); }
 body.dark-mode .gl { color: var(--gloss); }
 body.dark-mode .tl { color: var(--gloss); }
-body.dark-mode .page { background: #212736; }
+body.dark-mode .page { background: #1e2233; }
 body.dark-mode .controls-top, body.dark-mode .controls-bottom { background: #0d111c; }
 body.dark-mode .verse { border-color: #303648; }
 body.dark-mode .verse:hover { background: rgba(219, 185, 88, 0.08); }
+/* Dark mode renders highlights as translucent washes over the navy — the
+   solid light-mode pastels would bury the light ink. !important outranks the
+   painter's inline background. */
+.ann-hl { border-radius: 4px; }
+body.dark-mode .ann-hl[data-hlc="#fff9c4"] { background-color: rgba(255,235,59,0.25) !important; }
+body.dark-mode .ann-hl[data-hlc="#bbdefb"] { background-color: rgba(100,181,246,0.28) !important; }
+body.dark-mode .ann-hl[data-hlc="#ef9a9a"] { background-color: rgba(239,83,80,0.28) !important; }
+body.dark-mode .ann-hl[data-hlc="#c8e6c9"] { background-color: rgba(102,187,106,0.28) !important; }
+body.dark-mode .ann-hl[data-hlc="#e1bee7"] { background-color: rgba(186,104,200,0.28) !important; }
 body.dark-mode .word-unit:hover { background: rgba(219, 185, 88, 0.10); }
 body.dark-mode .book-label { color: #e8e0d0; }
-body.dark-mode #word-popup { background: #272d3e; border-color: #d4af37; color: #e8e0d0; }
+body.dark-mode #word-popup { background: #1e2233; border-color: #d4af37; color: #e8e0d0; }
 body.dark-mode #word-popup-overlay { background: rgba(0, 0, 0, 0.5); }
 body.dark-mode #word-popup .popup-dismiss-mobile {
   border-color: #d4af37;
@@ -1597,11 +1647,11 @@ body.dark-mode .book-title { color: #d4af37; }
 body.dark-mode .book-subtitle { color: #b0a890; }
 body.dark-mode .chapter-heading h2 { color: #e8e0d0; }
 body.dark-mode .chapter-summary { color: #b8b0a0; }
-body.dark-mode #search-container { background: #272d3e; border-color: #3a4054; }
+body.dark-mode #search-container { background: #1e2233; border-color: #3a4054; }
 body.dark-mode #search-input { background: #222838; color: #e8e0d0; border-color: #3a4054; }
-body.dark-mode #search-results { background: #272d3e; }
+body.dark-mode #search-results { background: #1e2233; }
 body.dark-mode .verse.highlighted { background: rgba(219, 185, 88, 0.12); }
-body.dark-mode #annotations-panel { background: #272d3e; border-color: #3a4054; }
+body.dark-mode #annotations-panel { background: #1e2233; border-color: #3a4054; }
 body.dark-mode .ann-note-textarea { background: #222838; border-color: #3a4054; color: #e8e0d0; }
 body.dark-mode .ann-tab { border-color: #3a4054; color: #b0a890; }
 body.dark-mode .ann-tab.active { background: #d4af37; color: #1e2233; border-color: #d4af37; }
@@ -1652,7 +1702,7 @@ body.dark-mode #search-results .search-result:hover { background: rgba(219,185,8
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   direction: ltr;
 }
-#search-container.open { display: flex; gap: 10px; align-items: center; }
+#search-container.open { display: flex; gap: 10px; align-items: center; padding-top: calc(12px + env(safe-area-inset-top, 0px)); }
 #search-input {
   flex: 1;
   padding: 8px 12px;
@@ -1666,14 +1716,16 @@ body.dark-mode #search-results .search-result:hover { background: rgba(219,185,8
 }
 #search-input:focus { border-color: var(--accent); }
 #search-input::placeholder { color: #555; }
-#search-close { cursor: pointer; color: #888; font-size: 1.2em; padding: 4px 8px; }
-#search-close:hover { color: #fff; }
+#search-close { cursor: pointer; color: #888; font-size: 1.2em; padding: 4px 8px; min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center; margin: -8px 0; }
+#search-close:hover, #search-close:active { color: #fff; }
 #search-results {
   display: none;
   position: fixed;
-  top: 52px; left: 0; right: 0;
+  top: calc(52px + env(safe-area-inset-top, 0px)); left: 0; right: 0;
   max-height: 60vh;
   overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   background: #1e2233;
   z-index: 299;
   padding: 0 16px 12px;
@@ -1686,7 +1738,7 @@ body.dark-mode #search-results .search-result:hover { background: rgba(219,185,8
   cursor: pointer;
   transition: background 0.15s;
 }
-.search-result:hover { background: #2a2f44; }
+.search-result:hover, .search-result:active { background: #2a2f44; }
 .search-result-ref {
   font-family: 'David Libre', 'Georgia', serif;
   font-weight: 600;
@@ -1873,6 +1925,36 @@ body.dual-mode .chapter-summary { display: block; }
       <textarea id="sel-note-input" class="sel-note-input" placeholder="Add a note..." rows="2"></textarea>
       <button class="sel-note-save" onclick="selToolbarSaveNote()">Save</button>
     </div>
+  </div>
+</div>
+
+<!-- Selection popover: shows at the selected text, colors first -->
+<div id="hl-pop" role="toolbar" aria-label="Highlight selection">
+  <div class="sel-row" id="hl-row-hl">
+    <span class="sel-label">HL</span>
+    <span class="sel-color" data-ann="highlight" data-color="#fff9c4" style="background:#fff9c4" onclick="selToolbarApply(this)"></span>
+    <span class="sel-color" data-ann="highlight" data-color="#bbdefb" style="background:#bbdefb" onclick="selToolbarApply(this)"></span>
+    <span class="sel-color" data-ann="highlight" data-color="#ef9a9a" style="background:#ef9a9a" onclick="selToolbarApply(this)"></span>
+    <span class="sel-color" data-ann="highlight" data-color="#c8e6c9" style="background:#c8e6c9" onclick="selToolbarApply(this)"></span>
+    <span class="sel-color" data-ann="highlight" data-color="#e1bee7" style="background:#e1bee7" onclick="selToolbarApply(this)"></span>
+    <span class="sel-eraser" data-ann="highlight" data-color="" onclick="selToolbarApply(this)">&#10005;</span>
+  </div>
+  <div class="sel-row" id="hl-row-ul" style="margin-top:6px">
+    <span class="sel-label">UL</span>
+    <span class="sel-color" data-ann="underline" data-color="#c8a84e" style="background:#c8a84e" onclick="selToolbarApply(this)"></span>
+    <span class="sel-color" data-ann="underline" data-color="#ef5350" style="background:#ef5350" onclick="selToolbarApply(this)"></span>
+    <span class="sel-color" data-ann="underline" data-color="#42a5f5" style="background:#42a5f5" onclick="selToolbarApply(this)"></span>
+    <span class="sel-eraser" data-ann="underline" data-color="" onclick="selToolbarApply(this)">&#10005;</span>
+  </div>
+  <div class="hl-actions">
+    <button type="button" onclick="hlPopNote()" title="Note" aria-label="Add note">&#9998;</button>
+    <button type="button" id="hl-btn-copy" onclick="selToolbarCopy()" title="Copy" aria-label="Copy">&#128203;</button>
+    <button type="button" onclick="selToolbarShare()" title="Share" aria-label="Share">&#8599;</button>
+    <button type="button" onclick="hlPopClose()" title="Close" aria-label="Close">&#10005;</button>
+  </div>
+  <div class="sel-note-row" id="hl-note-row" style="display:none">
+    <textarea id="hl-note-input" class="sel-note-input" placeholder="Add a note..." rows="2"></textarea>
+    <button class="sel-note-save" onclick="hlPopSaveNote()">Save</button>
   </div>
 </div>
 
@@ -4695,9 +4777,12 @@ function _paintWordAnnotation(el, ta) {
   ['hw','tl','gl'].forEach(function(tier) {
     var tierEl = el.querySelector('.' + tier);
     if (!tierEl) return;
-    if (ta.hl) { tierEl.classList.add('ann-hl'); tierEl.style.backgroundColor = ta.hl; }
-    else { tierEl.classList.remove('ann-hl'); tierEl.style.backgroundColor = ''; }
-    if (ta.ul) { tierEl.classList.add('ann-ul'); tierEl.style.textDecorationColor = ta.ul; }
+    // Highlights and underlines paint the Hebrew line only (corpus-wide rule);
+    // the loop still visits tl/gl so stale paint from older data is cleaned.
+    var on = tier === 'hw';
+    if (on && ta.hl) { tierEl.classList.add('ann-hl'); tierEl.style.backgroundColor = ta.hl; tierEl.setAttribute('data-hlc', ta.hl); }
+    else { tierEl.classList.remove('ann-hl'); tierEl.style.backgroundColor = ''; tierEl.removeAttribute('data-hlc'); }
+    if (on && ta.ul) { tierEl.classList.add('ann-ul'); tierEl.style.textDecorationColor = ta.ul; }
     else { tierEl.classList.remove('ann-ul'); tierEl.style.textDecorationColor = ''; }
   });
 }
@@ -4762,20 +4847,9 @@ function _isSelReadingSurface(el) {
 }
 
 function initFloatingSelToolbarPref() {
-  // Restore the user's show/hide choice for the study-tools rail (shared across volumes)
-  try {
-    if (localStorage.getItem(SW_SEL_TB_LS) === '1') document.body.classList.add('hide-sel-toolbar');
-  } catch (e) {}
-  if (!document.getElementById('sel-toolbar-reopen')) {
-    var _selReopen = document.createElement('button');
-    _selReopen.id = 'sel-toolbar-reopen';
-    _selReopen.type = 'button';
-    _selReopen.title = 'Show study tools';
-    _selReopen.setAttribute('aria-label', 'Show study tools');
-    _selReopen.textContent = '\u{1F58D}';
-    _selReopen.onclick = function(ev) { toggleFloatingSelToolbar(ev); };
-    document.body.appendChild(_selReopen);
-  }
+  // The tools rail starts hidden — selecting text pops the highlighter at the
+  // selection (Gospel-Library pattern); the crayon tab opens the full rail.
+  document.body.classList.add('hide-sel-toolbar');
   _syncSelToolbarModeButton();
 }
 
@@ -4844,7 +4918,6 @@ function _getSelectedWordUnits(sel) {
 }
 
 function _showSelToolbar() {
-  if (document.body.classList.contains('hide-sel-toolbar')) return;
   var sel = window.getSelection();
   if (!sel || sel.isCollapsed || sel.toString().trim().length === 0) {
     _hideSelToolbar();
@@ -4852,7 +4925,7 @@ function _showSelToolbar() {
   }
   // Don't trigger on inputs/textareas or inside the toolbar itself
   var anchor = sel.anchorNode && (sel.anchorNode.nodeType === 3 ? sel.anchorNode.parentElement : sel.anchorNode);
-  if (anchor && (anchor.closest('#sel-toolbar') || anchor.closest('input') || anchor.closest('textarea') || anchor.closest('#search-results'))) return;
+  if (anchor && (anchor.closest('#sel-toolbar') || anchor.closest('#hl-pop') || anchor.closest('input') || anchor.closest('textarea') || anchor.closest('#search-results'))) return;
 
   var wus = _getSelectedWordUnits(sel);
   if (wus.length > 0) {
@@ -4863,24 +4936,32 @@ function _showSelToolbar() {
     _selWordUnits = [];
   }
 
-  var toolbar = document.getElementById('sel-toolbar');
   var range = sel.getRangeAt(0);
   var rect = range.getBoundingClientRect();
 
-  // Reset sub-panels
+  // Reset the rail's sub-panels
   document.getElementById('sel-subpanel').style.display = 'none';
   document.getElementById('sel-note-row').style.display = 'none';
   var hlBtn = document.getElementById('sel-btn-highlight');
   if (hlBtn) hlBtn.classList.remove('active');
 
-  // Toolbar is docked to the left edge via CSS (stationary, follows scroll);
-  // no per-selection positioning needed.
-  toolbar.classList.add('visible');
+  // The popover appears at the selection: color rows for word selections,
+  // note/copy/share always; it closes when the selection collapses.
+  var pop = document.getElementById('hl-pop');
+  if (!pop) return;
+  document.getElementById('hl-row-hl').style.display = _selMode === 'word' ? 'flex' : 'none';
+  document.getElementById('hl-row-ul').style.display = _selMode === 'word' ? 'flex' : 'none';
+  document.getElementById('hl-note-row').style.display = 'none';
+  pop.classList.add('visible');
   if (_selMode === 'word') _updateSelToolbarIndicators();
 }
 
 function _hideSelToolbar() {
   document.getElementById('sel-toolbar').classList.remove('visible');
+  var pop = document.getElementById('hl-pop');
+  if (pop) pop.classList.remove('visible');
+  var pnr = document.getElementById('hl-note-row');
+  if (pnr) pnr.style.display = 'none';
   var sp = document.getElementById('sel-subpanel');
   if (sp) sp.style.display = 'none';
   var hlBtn = document.getElementById('sel-btn-highlight');
@@ -4890,11 +4971,39 @@ function _hideSelToolbar() {
   _selMode = '';
 }
 
+function hlPopClose() {
+  try { window.getSelection().removeAllRanges(); } catch (e) {}
+  _hideSelToolbar();
+}
+
+// Note editing inside the popover delegates to the rail's note plumbing so the
+// storage/marker logic stays in one place.
+function hlPopNote() {
+  var row = document.getElementById('hl-note-row');
+  if (!row) return;
+  if (row.style.display !== 'none') { row.style.display = 'none'; return; }
+  _loadSelNote();
+  var src = document.getElementById('sel-note-input');
+  var ta = document.getElementById('hl-note-input');
+  ta.value = src ? src.value : '';
+  ta.placeholder = src ? src.placeholder : 'Add a note...';
+  row.style.display = 'flex';
+  ta.focus();
+}
+
+function hlPopSaveNote() {
+  var ta = document.getElementById('hl-note-input');
+  var dst = document.getElementById('sel-note-input');
+  if (dst) dst.value = ta.value;
+  ta.value = '';
+  selToolbarSaveNote();
+}
+
 function _updateSelToolbarIndicators() {
   if (_selWordUnits.length === 0) return;
   var ta = _annOf(_selWordUnits[0].getAttribute('data-wid'));
-  document.querySelectorAll('#sel-toolbar .sel-color[data-ann="highlight"]').forEach(function(c) { c.classList.toggle('active', ta.hl === c.getAttribute('data-color')); });
-  document.querySelectorAll('#sel-toolbar .sel-color[data-ann="underline"]').forEach(function(c) { c.classList.toggle('active', ta.ul === c.getAttribute('data-color')); });
+  document.querySelectorAll('#sel-toolbar .sel-color[data-ann="highlight"], #hl-pop .sel-color[data-ann="highlight"]').forEach(function(c) { c.classList.toggle('active', ta.hl === c.getAttribute('data-color')); });
+  document.querySelectorAll('#sel-toolbar .sel-color[data-ann="underline"], #hl-pop .sel-color[data-ann="underline"]').forEach(function(c) { c.classList.toggle('active', ta.ul === c.getAttribute('data-color')); });
 }
 
 // Apply a color from the floating toolbar to all selected word-units
@@ -5043,11 +5152,11 @@ function openNoteInXrefPanel(verseKey) {
 // Listen for text selection events — match OT: never dismiss toolbar / close nav while touching verse text
 var _bomSelGuardUntil = 0;
 document.addEventListener('mouseup', function(e) {
-  if (e.target.closest('#sel-toolbar')) return;
+  if (e.target.closest('#sel-toolbar') || e.target.closest('#hl-pop')) return;
   setTimeout(_showSelToolbar, 10);
 });
 document.addEventListener('touchend', function(e) {
-  if (e.target.closest('#sel-toolbar')) return;
+  if (e.target.closest('#sel-toolbar') || e.target.closest('#hl-pop')) return;
   setTimeout(function() {
     if (_hasReadableSelection()) _bomSelGuardUntil = Date.now() + 900;
     _showSelToolbar();
@@ -5055,7 +5164,7 @@ document.addEventListener('touchend', function(e) {
 });
 var _selToolbarLastInteract = 0;
 document.addEventListener('mousedown', function(e) {
-  if (e.target.closest('#sel-toolbar')) { _selToolbarLastInteract = Date.now(); return; }
+  if (e.target.closest('#sel-toolbar') || e.target.closest('#hl-pop')) { _selToolbarLastInteract = Date.now(); return; }
   if (e.target.closest('#nav-sidebar') || e.target.closest('#nav-overlay')) return;
   if (_isSelReadingSurface(e.target)) return;
   _hideSelToolbar();
@@ -5064,17 +5173,22 @@ document.addEventListener('mousedown', function(e) {
   if (sh && sh.classList.contains('open')) closeShortcuts();
 });
 document.addEventListener('touchstart', function(e) {
-  if (e.target.closest('#sel-toolbar')) { _selToolbarLastInteract = Date.now(); return; }
+  if (e.target.closest('#sel-toolbar') || e.target.closest('#hl-pop')) { _selToolbarLastInteract = Date.now(); return; }
   if (e.touches && e.touches.length > 1) return;
   if (_isSelReadingSurface(e.target)) return;
   _hideSelToolbar();
 });
 document.addEventListener('selectionchange', function() {
   if (Date.now() - _selToolbarLastInteract < 500) return;
+  // While the popover's note editor is open the textarea owns focus and the
+  // text selection is gone — that must not dismiss the popover mid-typing.
+  var nr = document.getElementById('hl-note-row');
+  if (nr && nr.style.display !== 'none') return;
   var sel = window.getSelection();
   if (sel && !sel.isCollapsed && sel.toString().trim()) return;
+  var pop = document.getElementById('hl-pop');
   var tb = document.getElementById('sel-toolbar');
-  if (tb && tb.classList.contains('visible')) _hideSelToolbar();
+  if ((pop && pop.classList.contains('visible')) || (tb && tb.classList.contains('visible'))) _hideSelToolbar();
 });
 
 initFloatingSelToolbarPref();
@@ -5266,8 +5380,10 @@ function selToolbarCopy() {
     text = sel ? sel.toString() : '';
   }
   navigator.clipboard.writeText(text).then(function() {
-    var btn = document.getElementById('sel-btn-copy');
-    if (btn) { btn.style.color = '#dbb958'; setTimeout(function() { btn.style.color = ''; }, 1200); }
+    ['sel-btn-copy', 'hl-btn-copy'].forEach(function(id) {
+      var btn = document.getElementById(id);
+      if (btn) { btn.style.color = '#dbb958'; setTimeout(function() { btn.style.color = ''; }, 1200); }
+    });
   });
 }
 
@@ -12282,7 +12398,7 @@ try {
 
 <script src="../site_chrome.js?v=26" data-sw-volume="bom"></script>
 <script src="../verse_search.js?v=3"></script>
-<script src="../nav_engine.js?v=36"></script>
+<script src="../nav_engine.js?v=37"></script>
 <script src="../xref_study_panel.js?v=6"></script>
 <script>
 NavEngine.init({
