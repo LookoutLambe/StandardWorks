@@ -872,6 +872,7 @@ body.dual-mode .hw { font-size: 1.3em; }
 }
 .landing-sec-btn:hover { transform: scale(1.05); box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-color: var(--accent); }
 .landing-sec-btn .sec-heb { font-family: 'David Libre', serif; font-size: 0.85em; font-weight: 700; color: var(--accent); }
+.landing-sec-btn .sec-tl { font-size: 0.6em; color: #8fa3c0; font-style: italic; direction: ltr; }
 .landing-sec-btn .sec-num { font-family: 'David Libre', 'Georgia', serif; font-size: 0.65em; color: #8fa3c0; }
 
 @keyframes page-flip-in-left {
@@ -12536,17 +12537,19 @@ window.addEventListener('resize', function() {
   }
   var html = '<div class="landing-section-group"><h3><span dir="ltr">Front Matter</span> · <span class="lsg-heb" dir="rtl" style="unicode-bidi:isolate">הקדמות</span></h3>' +
     '<div class="landing-section-grid" style="grid-template-columns:1fr 1fr;">';
-  [['front-titlepage','שַׁעַר הַסֵּפֶר','Title Page'],
-   ['intro','לַקּוֹרֵא','To the Reader'],
-   ['front-introduction','מָבוֹא','Introduction'],
-   ['front-three','עֵדוּת שְׁלֹשָׁה','Three Witnesses'],
-   ['front-eight','עֵדוּת שְׁמֹנָה','Eight Witnesses'],
-   ['front-js','עֵדוּת יוֹסֵף סְמִית','Joseph Smith'],
-   ['front-brief','בֵּאוּר קָצָר','Brief Explanation'],
-   ['topical-guide','מַדְרִיךְ נוֹשְׂאִים','Topical Guide']
+  [['front-titlepage','שַׁעַר הַסֵּפֶר','shaar hassefer','Title Page'],
+   ['intro','לַקּוֹרֵא','lakkore','To the Reader'],
+   ['front-introduction','מָבוֹא','mavo','Introduction'],
+   ['front-three','עֵדוּת שְׁלֹשָׁה','edut shelosha','Three Witnesses'],
+   ['front-eight','עֵדוּת שְׁמֹנָה','edut shemona','Eight Witnesses'],
+   ['front-js','עֵדוּת יוֹסֵף סְמִית','edut yosef semit','Joseph Smith'],
+   ['front-brief','בֵּאוּר קָצָר','beur katsar','Brief Explanation'],
+   ['topical-guide','מַדְרִיךְ נוֹשְׂאִים','madrikh nosim','Topical Guide']
   ].forEach(function(fm){
     html += '<div class="landing-sec-btn" onclick="navTo(\'' + fm[0] + '\')">' +
-      '<span class="sec-heb">' + fm[1] + '</span><span class="sec-num">' + fm[2] + '</span></div>';
+      '<span class="sec-heb">' + fm[1] + '</span>' +
+      '<span class="sec-tl">' + fm[2] + '</span>' +
+      '<span class="sec-num">' + fm[3] + '</span></div>';
   });
   html += '</div></div>';
   BOOKS.forEach(function(b){
