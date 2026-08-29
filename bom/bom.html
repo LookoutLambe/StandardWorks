@@ -872,6 +872,10 @@ body.dual-mode .hw { font-size: 1.3em; }
 }
 .landing-sec-btn:hover { transform: scale(1.05); box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-color: var(--accent); }
 .landing-sec-btn .sec-heb { font-family: 'David Libre', serif; font-size: 0.85em; font-weight: 700; color: var(--accent); }
+.lsg-stack { display: flex; flex-direction: column; align-items: center; gap: 1px; margin: 18px 0 8px; }
+.lsg-stack .lsg-s-heb { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--accent-deep); }
+.lsg-stack .lsg-s-tl { font-size: 0.78em; color: var(--ink-light); font-style: italic; direction: ltr; }
+.lsg-stack .lsg-s-en { font-family: 'David Libre', 'Georgia', serif; font-size: 0.92em; color: var(--ink); letter-spacing: 0.06em; direction: ltr; }
 .landing-sec-btn .sec-tl { font-size: 0.6em; color: #8fa3c0; font-style: italic; direction: ltr; }
 .landing-sec-btn .sec-num { font-family: 'David Libre', 'Georgia', serif; font-size: 0.65em; color: #8fa3c0; }
 
@@ -9397,7 +9401,7 @@ var TG_ALEPH_BET = ['א','ב','ג','ד','ה','ו','ז','ח','ט','י','כ','ל',
 
 var _TG_HEB_BOOK_MAP = {
   'ch': 'נֶפִי א׳', '2n-ch': 'נֶפִי ב׳', 'jc-ch': 'יַעֲקֹב',
-  'en-ch': 'אֱנוֹשׁ', 'jr-ch': 'יָרוֹם', 'om-ch': 'עָמְנִי',
+  'en-ch': 'אֱנוֹשׁ', 'jr-ch': 'יָרוֹם', 'om-ch': 'עׇמְנִי',
   'wm-ch': 'דִּבְרֵי מוֹרְמוֹן', 'mo-ch': 'מוֹשִׁיָּה', 'al-ch': 'אַלְמָא',
   'he-ch': 'הֵילָמָן', '3n-ch': 'נֶפִי ג׳', '4n-ch': 'נֶפִי ד׳',
   'mm-ch': 'מוֹרְמוֹן', 'et-ch': 'עֵתֶר', 'mr-ch': 'מוֹרוֹנִי'
@@ -12519,8 +12523,13 @@ window.addEventListener('resize', function() {
   if (!host) return;
   var HEB = {
     'ch':'נֶפִי א׳','2n-ch':'נֶפִי ב׳','jc-ch':'יַעֲקֹב','en-ch':'אֱנוֹשׁ','jr-ch':'יָרוֹם',
-    'om-ch':'עָמְנִי','wm-ch':'דִּבְרֵי מוֹרְמוֹן','mo-ch':'מוֹשִׁיָּה','al-ch':'אַלְמָא','he-ch':'הֵילָמָן',
+    'om-ch':'עׇמְנִי','wm-ch':'דִּבְרֵי מוֹרְמוֹן','mo-ch':'מוֹשִׁיָּה','al-ch':'אַלְמָא','he-ch':'הֵילָמָן',
     '3n-ch':'נֶפִי ג׳','4n-ch':'נֶפִי ד׳','mm-ch':'מוֹרְמוֹן','et-ch':'עֵתֶר','mr-ch':'מוֹרוֹנִי'
+  };
+  var TL = {
+    'ch':'nefi 1','2n-ch':'nefi 2','jc-ch':'yaakov','en-ch':'enosh','jr-ch':'yarom',
+    'om-ch':'omni','wm-ch':'divre mormon','mo-ch':'moshiyya','al-ch':'alma','he-ch':'helaman',
+    '3n-ch':'nefi 3','4n-ch':'nefi 4','mm-ch':'mormon','et-ch':'eter','mr-ch':'moroni'
   };
   var BOOKS = [
     ['ch','1 Nephi',22],['2n-ch','2 Nephi',33],['jc-ch','Jacob',7],['en-ch','Enos',1],['jr-ch','Jarom',1],
@@ -12554,7 +12563,10 @@ window.addEventListener('resize', function() {
   html += '</div></div>';
   BOOKS.forEach(function(b){
     var prefix = b[0], name = b[1], count = b[2];
-    html += '<div class="landing-section-group"><h3><span dir="ltr">' + name + '</span> · <span class="lsg-heb" dir="rtl" style="unicode-bidi:isolate">' + HEB[prefix] + '</span></h3>' +
+    html += '<div class="landing-section-group"><h3 class="lsg-stack">' +
+      '<span class="lsg-s-heb" dir="rtl">' + HEB[prefix] + '</span>' +
+      '<span class="lsg-s-tl">' + TL[prefix] + '</span>' +
+      '<span class="lsg-s-en" dir="ltr">' + name + '</span></h3>' +
       '<div class="landing-section-grid">';
     for (var n = 1; n <= count; n++) {
       var id = (prefix === 'ch') ? ('ch' + n) : (prefix + n);
