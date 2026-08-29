@@ -228,6 +228,13 @@ body {
   color: var(--ink);
   margin-bottom: 8px;
 }
+.landing-lis { margin: 22px 0 6px; }
+.lis-flow { display: flex; direction: rtl; justify-content: center; align-items: flex-start; gap: 26px; flex-wrap: wrap; }
+.lis-wu { display: inline-flex; flex-direction: column; align-items: center; }
+.lis-hw { font-family: 'David Libre', serif; font-size: 1.75em; font-weight: 500; color: var(--ink); direction: rtl; white-space: nowrap; }
+.lis-tl { font-size: 0.72em; color: var(--ink-light); font-style: italic; margin-top: 2px; direction: ltr; }
+.lis-gl { font-size: 0.8em; color: var(--ink); margin-top: 2px; direction: ltr; }
+.lis-ref { text-align: center; font-size: 0.78em; color: var(--accent-deep); margin-top: 10px; font-family: 'David Libre', serif; }
 .landing-subline {
   font-family: 'David Libre', serif;
   font-size: 1.05em;
@@ -832,6 +839,14 @@ body, button, input, select, textarea,
   <!-- ===== LANDING PANEL ===== -->
   <div class="panel active" id="panel-landing">
 
+
+    <div class="landing-header">
+      <div class="landing-title-hebrew">כתבי הקודש</div>
+      <div class="landing-he-en">Standard Works</div>
+      <div class="landing-interlinear-kicker">
+        <span class="lie-he">מהדורה בין־שורתית</span>
+        <span class="lie-en">Interlinear Edition</span>
+      </div>
     <!-- ===== APP STORE (web only — hidden inside the iOS app via html.sw-in-app) ===== -->
     <div class="landing-app-store" id="landing-app-store">
       <a class="landing-app-store-link" href="https://apps.apple.com/us/app/standardworks/id6767954376" rel="noopener">
@@ -839,14 +854,15 @@ body, button, input, select, textarea,
         Download the Apple App for Free
       </a>
     </div>
-
-    <div class="landing-header">
-      <div class="landing-interlinear-kicker">
-        <span class="lie-he">מהדורה בין־שורתית</span>
-        <span class="lie-en">Interlinear Edition</span>
+      <div class="landing-lis" aria-label="Joshua 1:8, interlinear">
+        <div class="lis-flow">
+          <span class="lis-wu"><span class="lis-hw">וְהָגִיתָ</span><span class="lis-tl">vehagita</span><span class="lis-gl">and you will meditate</span></span>
+          <span class="lis-wu"><span class="lis-hw">בּוֹ</span><span class="lis-tl">bo</span><span class="lis-gl">in it</span></span>
+          <span class="lis-wu"><span class="lis-hw">יוֹמָם</span><span class="lis-tl">yomam</span><span class="lis-gl">by day</span></span>
+          <span class="lis-wu"><span class="lis-hw">וָלַיְלָה</span><span class="lis-tl">valayla</span><span class="lis-gl">and by night</span></span>
+        </div>
+        <div class="lis-ref">יְהוֹשֻׁעַ א׳:ח׳ · Joshua 1:8</div>
       </div>
-      <div class="landing-title-hebrew">כתבי הקודש</div>
-      <div class="landing-he-en">Standard Works</div>
       <p class="landing-subline">Scriptures &amp; Study Resources · Word-by-word Hebrew &amp; English glosses</p>
       <div class="landing-description">
         Study the Old and New Testaments, the Book of Mormon, Doctrine and Covenants, Pearl of Great Price, and Joseph Smith Translation in Hebrew—with interlinear translation, transliteration, and English glosses for each word. The Book of Mormon is rendered in pre-exilic Classical Biblical Hebrew, the Mikraic register of Isaiah and Jeremiah.
