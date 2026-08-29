@@ -112,7 +112,7 @@
     a.className = 'sw-chrome-home';
     a.setAttribute('aria-label', 'Standard Works Home');
     a.title = 'Standard Works Home';
-    a.innerHTML = '<img src="' + assetBase() + 'icons/sw-mark.svg" alt="" style="width:26px;height:26px;display:block;border-radius:6px">';
+    a.innerHTML = '<img src="' + assetBase() + 'icons/sw-mark.svg" alt="" style="width:38px;height:38px;display:block;border-radius:9px">';
     return a;
   }
 
