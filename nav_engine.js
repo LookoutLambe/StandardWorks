@@ -2083,10 +2083,9 @@
     try { reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (eRM) {}
 
     function currentSheet() {
-      var panels = document.querySelectorAll('.chapter-panel');
-      for (var i = 0; i < panels.length; i++) {
-        if (panels[i].offsetParent !== null && panels[i].getBoundingClientRect().height > 0) return panels[i];
-      }
+      // The whole sheet turns — .page carries the book header and the chapter
+      // body together. Sliding only the chapter-panel left the title standing
+      // while the text underneath moved.
       return document.querySelector('.page');
     }
     function clipX(on) {
