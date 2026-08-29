@@ -2050,7 +2050,7 @@
   function installSwipeChapterNav() {
     if (window._swSwipeNavHooked) return;
     window._swSwipeNavHooked = true;
-    var sx = 0, sy = 0, st = 0, live = false, locked = false, sheet = null;
+    var sx = 0, sy = 0, st = 0, live = false, locked = false, sheet = null, fromWord = false;
 
     function currentSheet() {
       var panels = document.querySelectorAll('.chapter-panel');
@@ -2109,6 +2109,7 @@
         '#xref-panel, #annotations-panel, #search-container, #search-results, #sel-toolbar, ' +
         '#hl-pop, #word-popup, #share-popup, #note-modal, input, textarea, select, button, a')) return;
       sx = t.clientX; sy = t.clientY; st = Date.now(); live = true; locked = false;
+      fromWord = !!(e.target.closest && e.target.closest('.word-unit'));
     }, { passive: true });
 
     document.addEventListener('touchmove', function(e) {
@@ -2121,8 +2122,13 @@
       var t = e.touches[0];
       var dx = t.clientX - sx, dy = t.clientY - sy;
       if (!locked) {
+        // A press that starts on a word may be a long-press-to-highlight in
+        // progress: give it drift room (34px) before the page-drag may lock;
+        // elsewhere 14px is enough. The selection timer itself survives 22px.
+        var lockAt = fromWord ? 34 : 14;
+        if (fromWord && window._swWselPending) return;
         if (Math.abs(dy) > 14 && Math.abs(dy) > Math.abs(dx)) { live = false; return; }
-        if (Math.abs(dx) > 14 && Math.abs(dx) > 1.4 * Math.abs(dy)) {
+        if (Math.abs(dx) > lockAt && Math.abs(dx) > 1.4 * Math.abs(dy)) {
           try {
             var sel = window.getSelection();
             if (sel && !sel.isCollapsed && sel.toString().trim()) { live = false; return; }
@@ -2218,7 +2224,7 @@
       for (var i = 0; i < words.length; i++) words[i].classList.add('wsel');
     }
     function cancel() {
-      if (timer) { clearTimeout(timer); timer = null; }
+      if (timer) { clearTimeout(timer); timer = null; window._swWselPending = false; }
       if (active) { clearTint(); active = false; window._swWordSelActive = false; }
       anchorWu = null;
     }
@@ -2238,20 +2244,23 @@
       var wu = e.target.closest('.word-unit[data-wid]');
       if (!wu || !e.target.closest('.hw')) return;
       anchorWu = wu; startX = t.clientX; startY = t.clientY;
+      window._swWselPending = true;
       timer = setTimeout(function() {
         timer = null;
+        window._swWselPending = false;
         active = true;
         window._swWordSelActive = true;
         var panel = anchorWu.closest('.chapter-panel') || anchorWu.closest('.page') || document;
         panelWords = Array.prototype.slice.call(panel.querySelectorAll('.word-unit[data-wid]'));
         setRange([anchorWu]);
-      }, 400);
+      }, 250);
     }, { passive: true });
     document.addEventListener('touchmove', function(e) {
       var t = e.touches && e.touches[0];
       if (!t) return;
-      if (timer && (Math.abs(t.clientX - startX) > 12 || Math.abs(t.clientY - startY) > 12)) {
+      if (timer && (Math.abs(t.clientX - startX) > 28 || Math.abs(t.clientY - startY) > 28)) {
         clearTimeout(timer); timer = null; anchorWu = null;
+        window._swWselPending = false;
         return;
       }
       if (!active) return;
@@ -2260,7 +2269,7 @@
       if (wu && anchorWu) setRange(rangeBetween(anchorWu, wu));
     }, { passive: false });
     document.addEventListener('touchend', function(e) {
-      if (timer) { clearTimeout(timer); timer = null; anchorWu = null; }
+      if (timer) { clearTimeout(timer); timer = null; anchorWu = null; window._swWselPending = false; }
       if (!active) return;
       e.preventDefault();
       active = false;
