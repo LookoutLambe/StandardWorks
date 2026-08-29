@@ -1187,7 +1187,7 @@ body.in-chapter #sel-toolbar { flex-direction: column; flex-wrap: nowrap; max-wi
    and each word in range gets a preview tint. Native per-word selection is
    off on coarse pointers — iOS cannot drag it across the interlinear's
    per-word islands, which limited selection to a single word. */
-.word-unit.wsel { background: rgba(219,185,88,0.28); border-radius: 6px; }
+.word-unit.wsel .hw { background: rgba(219,185,88,0.28); border-radius: 6px; }
 @media (pointer: coarse) {
   .word-unit .hw { -webkit-user-select: none !important; user-select: none !important; -webkit-touch-callout: none; }
 }

@@ -611,7 +611,7 @@ body.dark-mode #annotations-panel { background: #1e2233; border-color: #d4af37; 
    and each word in range gets a preview tint. Native per-word selection is
    off on coarse pointers — iOS cannot drag it across the interlinear's
    per-word islands, which limited selection to a single word. */
-.word-unit.wsel { background: rgba(219,185,88,0.28); border-radius: 6px; }
+.word-unit.wsel .hw { background: rgba(219,185,88,0.28); border-radius: 6px; }
 @media (pointer: coarse) {
   .word-unit .hw { -webkit-user-select: none !important; user-select: none !important; -webkit-touch-callout: none; }
 }
