@@ -234,4 +234,19 @@
   } else {
     mount();
   }
+
+  // Rights line — every page carries it at the end of the content flow.
+  function mountRights() {
+    if (document.getElementById('sw-rights')) return;
+    var d = document.createElement('div');
+    d.id = 'sw-rights';
+    d.innerHTML = '\u00a9 Christopher Lambe. All rights reserved. Licensing inquiries: <a href="mailto:chris@sefermormon.com">chris@sefermormon.com</a>';
+    var page = document.querySelector('.page');
+    (page || document.body).appendChild(d);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', mountRights);
+  } else {
+    mountRights();
+  }
 })();

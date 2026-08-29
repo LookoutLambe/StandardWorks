@@ -343,3 +343,17 @@ a.sw-chrome-print svg { display: block; }
 
 /* iPhone: keep text at its set size after rotation */
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+/* Rights line — subtle, at the end of every page's content */
+#sw-rights {
+  text-align: center;
+  font-size: 11px;
+  color: #8a8776;
+  direction: ltr;
+  padding: 26px 14px calc(14px + env(safe-area-inset-bottom, 0px));
+  font-family: 'David Libre', Georgia, serif;
+}
+#sw-rights a { color: #8a6a1c; text-decoration: none; }
+#sw-rights a:hover { text-decoration: underline; }
+body.dark-mode #sw-rights { color: #6b7288; }
+body.dark-mode #sw-rights a { color: #d4af37; }
