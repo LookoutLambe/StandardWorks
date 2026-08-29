@@ -12,6 +12,8 @@
 <meta name="description" content="Hebrew Interlinear New Testament — Word-by-Word">
 <meta name="theme-color" content="#1e2233">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="nav_engine.css?v=29">
 <link rel="stylesheet" href="site_chrome.css?v=29">
@@ -600,7 +602,7 @@ body.dark-mode #annotations-panel { background: #1e2233; border-color: #d4af37; 
 }
 #hl-pop .hl-actions button {
   background: transparent; border: none; color: #c8a84e; cursor: pointer;
-  font-size: 1.05em; padding: 6px 0; flex: 1; min-height: 38px; border-radius: 8px;
+  font-size: 1.05em; padding: 6px 0; flex: 1; min-height: 44px; border-radius: 8px;
   font-family: 'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',emoji;
 }
 #hl-pop .hl-actions button:hover, #hl-pop .hl-actions button:active { background: #2a2f44; }
@@ -995,7 +997,8 @@ body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direct
     <button id="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode" aria-label="Toggle dark mode">&#x263D;</button>
     <button id="search-toggle" style="background:transparent;border:1px solid #3a3f55;color:#c8a84e;padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openSearch()" title="Search" aria-label="Search">&#x2315;</button>
     <button type="button" id="study-drawer-toggle" style="background:transparent;border:1px solid #3a3f55;color:#c8a84e;padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openXrefStudyAt('bookmarks')" title="Bookmarks, notes, refs" aria-label="Study drawer">📌</button>
-    <button type="button" id="sel-toolbar-mode-toggle" style="background:transparent;border:1px solid #3a3f55;color:#c8a84e;padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="toggleFloatingSelToolbar(event)" title="Floating selection tools" aria-pressed="false" aria-label="Toggle floating selection toolbar">🖍</button>
+    <button type="button" id="annotations-toggle" style="background:transparent;border:1px solid #3a3f55;color:#c8a84e;padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openAnnotationsPanel()" title="Annotations" aria-label="Annotations">📝</button>
+    <button type="button" id="glossary-toggle" style="background:transparent;border:1px solid #3a3f55;color:#c8a84e;padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openGlossary()" title="Glossary" aria-label="Glossary">📖</button>
   </div>
 </div>
 <div id="nav-breadcrumb"></div>
@@ -3391,7 +3394,7 @@ window.addEventListener('scroll', function() {
 <script src="notes_engine.js"></script>
 <script src="site_chrome.js?v=26" data-sw-volume="nt"></script>
 <script src="verse_search.js?v=3"></script>
-<script src="nav_engine.js?v=38"></script>
+<script src="nav_engine.js?v=39"></script>
 <script src="xref_study_panel.js"></script>
 <script>
 NavEngine.init({

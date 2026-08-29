@@ -556,6 +556,23 @@
               '<div class="nl-card-heb" dir="rtl">בדפוס</div>' +
             '</div>';
 
+    // Reader-page panels — with the study rail gone, the drawer is the touch
+    // entry for annotations and the glossary (keyboard still has N / G).
+    if (typeof window.openAnnotationsPanel === 'function') {
+      html += '<div class="nl-card" id="nl-annotations" tabindex="0" role="button">' +
+                '<div class="nl-card-title">My Annotations</div>' +
+                '<div class="nl-card-text">Highlights, underlines, notes</div>' +
+                '<div class="nl-card-heb" dir="rtl">הערות</div>' +
+              '</div>';
+    }
+    if (typeof window.openGlossary === 'function') {
+      html += '<div class="nl-card" id="nl-glossary" tabindex="0" role="button">' +
+                '<div class="nl-card-title">Glossary</div>' +
+                '<div class="nl-card-text">Roots and vocabulary</div>' +
+                '<div class="nl-card-heb" dir="rtl">מילון</div>' +
+              '</div>';
+    }
+
     _libraryEl.innerHTML = html;
 
     var lastEl = document.getElementById('nl-last');
@@ -581,6 +598,17 @@
         window.location.href = (_config && _config.basePath || '') + VOLUMES.bom.page + '#print-editions';
       };
       prEl.onkeydown = function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); prEl.click(); } };
+    }
+
+    var annEl = document.getElementById('nl-annotations');
+    if (annEl) {
+      annEl.onclick = function() { closeSidebar(); try { window.openAnnotationsPanel(); } catch (eA) {} };
+      annEl.onkeydown = function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); annEl.click(); } };
+    }
+    var glsEl = document.getElementById('nl-glossary');
+    if (glsEl) {
+      glsEl.onclick = function() { closeSidebar(); try { window.openGlossary(); } catch (eG) {} };
+      glsEl.onkeydown = function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); glsEl.click(); } };
     }
 
     _libraryEl.querySelectorAll('.nl-bm').forEach(function(el) {
@@ -2051,6 +2079,8 @@
     if (window._swSwipeNavHooked) return;
     window._swSwipeNavHooked = true;
     var sx = 0, sy = 0, st = 0, live = false, locked = false, sheet = null, fromWord = false;
+    var reduceMotion = false;
+    try { reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (eRM) {}
 
     function currentSheet() {
       var panels = document.querySelectorAll('.chapter-panel');
@@ -2075,6 +2105,7 @@
     function springBack() {
       var el = sheet; sheet = null; locked = false;
       if (!el) { clipX(false); return; }
+      if (reduceMotion) { releaseSheet(el); clipX(false); return; }
       el.style.transition = 'transform 0.18s ease-out';
       el.style.transform = 'translateX(0px)';
       setTimeout(function() { releaseSheet(el); clipX(false); }, 200);
@@ -2082,6 +2113,7 @@
     function completeTurn(dir, dx) {
       var el = sheet; sheet = null; locked = false;
       if (!el) { clipX(false); return; }
+      if (reduceMotion) { releaseSheet(el); triggerChapterNav(dir); clipX(false); return; }
       var off = (dx > 0 ? 1 : -1) * (window.innerWidth + 60);
       el.style.transition = 'transform 0.2s ease-in';
       el.style.transform = 'translateX(' + off + 'px)';
