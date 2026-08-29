@@ -845,6 +845,27 @@ body.dual-mode .hw { font-size: 1.3em; }
 .chapter-panel.fade-in { opacity: 1; }
 #panel-intro { opacity: 1; }
 #panel-landing { opacity: 1; }
+/* Landing contents — the D&C-style chapter grid */
+.landing-sections { max-width: 600px; margin: 0 auto 30px; padding: 0 12px; }
+.landing-section-group { margin-bottom: 16px; }
+.landing-section-group h3 {
+  font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; color: var(--ink-light);
+  letter-spacing: 0.08em; direction: ltr; margin-bottom: 8px; text-align: center;
+}
+.landing-section-group h3 .lsg-heb { font-size: 1.25em; color: var(--accent-deep); margin-right: 6px; }
+.landing-section-grid {
+  display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; direction: rtl;
+}
+.landing-sec-btn {
+  background: linear-gradient(170deg, #0d1a2e 0%, #162744 100%);
+  border: 1px solid #2a4060; border-radius: 4px;
+  padding: 6px 0; cursor: pointer; text-align: center;
+  transition: all 0.2s; display: flex; flex-direction: column; align-items: center;
+}
+.landing-sec-btn:hover { transform: scale(1.05); box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-color: var(--accent); }
+.landing-sec-btn .sec-heb { font-family: 'David Libre', serif; font-size: 0.85em; font-weight: 700; color: var(--accent); }
+.landing-sec-btn .sec-num { font-family: 'David Libre', 'Georgia', serif; font-size: 0.65em; color: #8fa3c0; }
+
 @keyframes page-flip-in-left {
   0%   { transform: perspective(1200px) rotateY(-90deg); opacity: 0; }
   40%  { opacity: 1; }
@@ -2106,12 +2127,8 @@ body.dual-mode .chapter-summary { display: block; }
       <div id="continue-reading-wrap" style="margin-top:0;display:none">
         <button id="continue-reading-btn" onclick="continueReading()">Continue Reading →</button>
       </div>
-      <div style="margin-top:8px">
-        <button class="glossary-highlight-btn" onclick="navTo('intro')" style="font-size:1em;padding:8px 20px">To the Reader →</button>
-      </div>
-      <div style="margin-top:8px">
-        <button class="glossary-highlight-btn" onclick="navTo('topical-guide')" style="font-size:1em;padding:8px 20px">Topical Guide →</button>
-      </div>
+      <div class="ornament" style="margin:26px 0 14px">· · ◆ · ·</div>
+      <div id="landing-contents" class="landing-sections" style="text-align:initial"></div>
       <div class="ornament" style="margin:30px 0 0">· · ◆ · ·</div>
       <div style="margin-top:18px;font-size:0.92em;color:var(--ink-light);line-height:1.6;direction:ltr;text-align:center">
         <strong style="color:var(--ink)">Feedback Welcome</strong><br>
@@ -12495,5 +12512,58 @@ window.addEventListener('resize', function() {
     </table>
   </div>
 </div>
+
+<script>
+// Landing contents — the D&C-style grid: front matter, then every chapter of every book.
+(function() {
+  var host = document.getElementById('landing-contents');
+  if (!host) return;
+  var HEB = {
+    'ch':'נֶפִי א׳','2n-ch':'נֶפִי ב׳','jc-ch':'יַעֲקֹב','en-ch':'אֱנוֹשׁ','jr-ch':'יָרוֹם',
+    'om-ch':'עָמְנִי','wm-ch':'דִּבְרֵי מוֹרְמוֹן','mo-ch':'מוֹשִׁיָּה','al-ch':'אַלְמָא','he-ch':'הֵילָמָן',
+    '3n-ch':'נֶפִי ג׳','4n-ch':'נֶפִי ד׳','mm-ch':'מוֹרְמוֹן','et-ch':'עֵתֶר','mr-ch':'מוֹרוֹנִי'
+  };
+  var BOOKS = [
+    ['ch','1 Nephi',22],['2n-ch','2 Nephi',33],['jc-ch','Jacob',7],['en-ch','Enos',1],['jr-ch','Jarom',1],
+    ['om-ch','Omni',1],['wm-ch','Words of Mormon',1],['mo-ch','Mosiah',29],['al-ch','Alma',63],
+    ['he-ch','Helaman',16],['3n-ch','3 Nephi',30],['4n-ch','4 Nephi',1],['mm-ch','Mormon',9],
+    ['et-ch','Ether',15],['mr-ch','Moroni',10]
+  ];
+  var ONES=['','א','ב','ג','ד','ה','ו','ז','ח','ט'], TENS=['','י','כ','ל','מ','נ','ס','ע','פ','צ'];
+  function hebNum(n){
+    var t=Math.floor(n/10), o=n%10;
+    if (t===1 && o===5) return 'טו';
+    if (t===1 && o===6) return 'טז';
+    return TENS[t]+ONES[o];
+  }
+  var html = '<div class="landing-section-group"><h3><span dir="ltr">Front Matter</span> · <span class="lsg-heb" dir="rtl" style="unicode-bidi:isolate">הקדמות</span></h3>' +
+    '<div class="landing-section-grid" style="grid-template-columns:1fr 1fr;">';
+  [['front-titlepage','שַׁעַר הַסֵּפֶר','Title Page'],
+   ['intro','לַקּוֹרֵא','To the Reader'],
+   ['front-introduction','מָבוֹא','Introduction'],
+   ['front-three','עֵדוּת שְׁלֹשָׁה','Three Witnesses'],
+   ['front-eight','עֵדוּת שְׁמֹנָה','Eight Witnesses'],
+   ['front-js','עֵדוּת יוֹסֵף סְמִית','Joseph Smith'],
+   ['front-brief','בֵּאוּר קָצָר','Brief Explanation'],
+   ['topical-guide','מַדְרִיךְ נוֹשְׂאִים','Topical Guide']
+  ].forEach(function(fm){
+    html += '<div class="landing-sec-btn" onclick="navTo(\'' + fm[0] + '\')">' +
+      '<span class="sec-heb">' + fm[1] + '</span><span class="sec-num">' + fm[2] + '</span></div>';
+  });
+  html += '</div></div>';
+  BOOKS.forEach(function(b){
+    var prefix = b[0], name = b[1], count = b[2];
+    html += '<div class="landing-section-group"><h3><span dir="ltr">' + name + '</span> · <span class="lsg-heb" dir="rtl" style="unicode-bidi:isolate">' + HEB[prefix] + '</span></h3>' +
+      '<div class="landing-section-grid">';
+    for (var n = 1; n <= count; n++) {
+      var id = (prefix === 'ch') ? ('ch' + n) : (prefix + n);
+      html += '<div class="landing-sec-btn" onclick="navTo(\'' + id + '\')">' +
+        '<span class="sec-heb">' + hebNum(n) + '</span><span class="sec-num">' + n + '</span></div>';
+    }
+    html += '</div></div>';
+  });
+  host.innerHTML = html;
+})();
+</script>
 </body>
 </html>
