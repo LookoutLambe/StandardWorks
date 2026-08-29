@@ -849,6 +849,30 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
   margin: 20px auto;
   max-width: 200px;
 }
+.landing-sections { max-width: 600px; margin: 0 auto 30px; padding: 0 12px; }
+.landing-section-group { margin-bottom: 16px; }
+.landing-section-group h3 { font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; color: var(--ink-light); letter-spacing: 0.08em; direction: ltr; margin-bottom: 8px; text-align: center; }
+.landing-section-grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; direction: rtl; }
+.landing-sec-btn { background: linear-gradient(170deg, #0d1a2e 0%, #162744 100%); border: 1px solid #2a4060; border-radius: 4px; padding: 6px 0; cursor: pointer; text-align: center; transition: all 0.2s; display: flex; flex-direction: column; align-items: center; }
+.landing-sec-btn:hover { transform: scale(1.05); box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-color: var(--accent); }
+.landing-sec-btn .sec-heb { font-family: 'David Libre', serif; font-size: 0.85em; font-weight: 700; color: var(--accent); }
+.landing-sec-btn .sec-num { font-family: 'David Libre', 'Georgia', serif; font-size: 0.65em; color: #8fa3c0; }
+
+/* Interlinear landing — hero word-stacks + stacked book titles (matches BOM landing) */
+.hero-lis-row { display: flex; direction: rtl; justify-content: center; align-items: flex-start; gap: 26px; flex-wrap: wrap; }
+.hlw { display: inline-flex; flex-direction: column; align-items: center; }
+.hlw-hw { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--ink); direction: rtl; white-space: nowrap; line-height: 1.3; }
+.hlw-tl { font-size: 0.72em; color: var(--ink-light); font-style: italic; margin-top: 2px; direction: ltr; }
+.hlw-gl { font-size: 0.85em; color: var(--ink); margin-top: 2px; direction: ltr; }
+#start-reading-btn { direction: ltr; background: var(--accent); color: #1a1a2e; border: none; padding: 12px 32px; font-family: 'David Libre', 'Georgia', serif; font-size: 1.1em; font-weight: 600; border-radius: 6px; cursor: pointer; transition: all 0.2s; letter-spacing: 0.5px; }
+#start-reading-btn:hover { filter: brightness(1.1); transform: scale(1.02); }
+.landing-section-group h3 .lsg-heb { font-size: 1.25em; color: var(--accent-deep); margin-right: 6px; }
+.landing-sec-btn .sec-tl { font-size: 0.6em; color: #8fa3c0; font-style: italic; direction: ltr; }
+.lsg-stack { display: flex; flex-direction: column; align-items: center; gap: 1px; margin: 18px 0 8px; }
+.lsg-stack .lsg-s-heb { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--accent-deep); }
+.lsg-stack .lsg-s-tl { font-size: 0.78em; color: var(--ink-light); font-style: italic; direction: ltr; }
+.lsg-stack .lsg-s-en { font-family: 'David Libre', 'Georgia', serif; font-size: 0.92em; color: var(--ink); letter-spacing: 0.06em; direction: ltr; }
+
 .landing-books {
   display: grid;
   grid-template-columns: 1fr;
@@ -1501,56 +1525,64 @@ body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direct
 
     <!-- Landing Panel -->
     <div class="chapter-panel" id="panel-landing" style="display:block;">
-      <div class="landing-hero">
-        <h1>פנינת המחיר הגדול</h1>
-        <div class="subtitle-en">Pearl of Great Price</div>
-        <div class="subtitle-heb">Hebrew Interlinear</div>
+      <div style="max-width:700px;margin:0 auto;padding:40px 20px 0;text-align:center">
+        <div class="hero-lis" style="margin-bottom:6px">
+          <div class="hero-lis-row">
+            <span class="hlw"><span class="hlw-hw" style="font-size:2.1em;color:var(--accent-deep)">פְּנִינַת</span><span class="hlw-tl">peninat</span><span class="hlw-gl">The Pearl of</span></span>
+            <span class="hlw"><span class="hlw-hw" style="font-size:2.1em;color:var(--accent-deep)">הַמְּחִיר</span><span class="hlw-tl">hammechir</span><span class="hlw-gl">Price</span></span>
+            <span class="hlw"><span class="hlw-hw" style="font-size:2.1em;color:var(--accent-deep)">הַגָּדוֹל</span><span class="hlw-tl">haggadol</span><span class="hlw-gl">Great</span></span>
+          </div>
+          <div style="font-family:'David Libre',serif;font-size:0.95em;color:var(--ink-light);letter-spacing:0.1em;direction:ltr;margin-top:16px">HEBREW INTERLINEAR</div>
+        </div>
+        <div style="margin:24px 0 4px"><button id="start-reading-btn" onclick="navTo('pgp-intro')">Introduction →</button></div>
       </div>
       <hr class="landing-divider">
-      <div class="landing-books">
-        <div class="landing-book-card" onclick="navTo('pgp-intro')" style="background:linear-gradient(170deg,#1a0d2e 0%,#2a1644 100%);border-color:#3a2a60;">
-          <div class="card-title">מבוא</div>
-          <div class="card-subtitle">Introduction</div>
+      <div class="landing-sections">
+        <div class="landing-section-group">
+          <h3 class="lsg-stack"><span class="lsg-s-heb" dir="rtl">סֵפֶר מֹשֶׁה</span><span class="lsg-s-tl">sefer moshe</span><span class="lsg-s-en" dir="ltr">Book of Moses</span></h3>
+          <div class="landing-section-grid">
+          <div class="landing-sec-btn" onclick="navTo('ms-ch1')"><span class="sec-heb">א</span><span class="sec-num">1</span></div>
+          <div class="landing-sec-btn" onclick="navTo('ms-ch2')"><span class="sec-heb">ב</span><span class="sec-num">2</span></div>
+          <div class="landing-sec-btn" onclick="navTo('ms-ch3')"><span class="sec-heb">ג</span><span class="sec-num">3</span></div>
+          <div class="landing-sec-btn" onclick="navTo('ms-ch4')"><span class="sec-heb">ד</span><span class="sec-num">4</span></div>
+          <div class="landing-sec-btn" onclick="navTo('ms-ch5')"><span class="sec-heb">ה</span><span class="sec-num">5</span></div>
+          <div class="landing-sec-btn" onclick="navTo('ms-ch6')"><span class="sec-heb">ו</span><span class="sec-num">6</span></div>
+          <div class="landing-sec-btn" onclick="navTo('ms-ch7')"><span class="sec-heb">ז</span><span class="sec-num">7</span></div>
+          <div class="landing-sec-btn" onclick="navTo('ms-ch8')"><span class="sec-heb">ח</span><span class="sec-num">8</span></div>
+          </div>
         </div>
-        <div class="landing-book-card" onclick="navTo('ms-ch1')">
-          <div class="card-title">ספר משה</div>
-          <div class="card-subtitle">Book of Moses</div>
-          <div class="card-chapters">8 Chapters · 356 Verses</div>
+        <div class="landing-section-group">
+          <h3 class="lsg-stack"><span class="lsg-s-heb" dir="rtl">סֵפֶר אַבְרָהָם</span><span class="lsg-s-tl">sefer avraham</span><span class="lsg-s-en" dir="ltr">Book of Abraham</span></h3>
+          <div class="landing-section-grid">
+          <div class="landing-sec-btn" onclick="navTo('ab-ch1')"><span class="sec-heb">א</span><span class="sec-num">1</span></div>
+          <div class="landing-sec-btn" onclick="navTo('ab-ch2')"><span class="sec-heb">ב</span><span class="sec-num">2</span></div>
+          <div class="landing-sec-btn" onclick="navTo('ab-ch3')"><span class="sec-heb">ג</span><span class="sec-num">3</span></div>
+          <div class="landing-sec-btn" onclick="navTo('ab-ch4')"><span class="sec-heb">ד</span><span class="sec-num">4</span></div>
+          <div class="landing-sec-btn" onclick="navTo('ab-ch5')"><span class="sec-heb">ה</span><span class="sec-num">5</span></div>
+          </div>
+          <div class="landing-section-grid" style="grid-template-columns:1fr 1fr 1fr;margin-top:4px">
+            <div class="landing-sec-btn" onclick="navTo('ab-fac1')"><span class="sec-heb">פַקְסִימִילְיָה א׳</span><span class="sec-tl">faksimileya 1</span><span class="sec-num">Facsimile 1</span></div>
+            <div class="landing-sec-btn" onclick="navTo('ab-fac2')"><span class="sec-heb">פַקְסִימִילְיָה ב׳</span><span class="sec-tl">faksimileya 2</span><span class="sec-num">Facsimile 2</span></div>
+            <div class="landing-sec-btn" onclick="navTo('ab-fac3')"><span class="sec-heb">פַקְסִימִילְיָה ג׳</span><span class="sec-tl">faksimileya 3</span><span class="sec-num">Facsimile 3</span></div>
+          </div>
         </div>
-        <div class="landing-book-card" onclick="navTo('ab-ch1')">
-          <div class="card-title">ספר אברהם</div>
-          <div class="card-subtitle">Book of Abraham</div>
-          <div class="card-chapters">5 Chapters · 136 Verses</div>
+        <div class="landing-section-group">
+          <h3 class="lsg-stack"><span class="lsg-s-heb" dir="rtl">יוֹסֵף סְמִית — מַתָּי</span><span class="lsg-s-tl">yosef semit — mattay</span><span class="lsg-s-en" dir="ltr">Joseph Smith—Matthew</span></h3>
+          <div class="landing-section-grid">
+          <div class="landing-sec-btn" onclick="navTo('jsm-ch1')"><span class="sec-heb">א</span><span class="sec-num">1</span></div>
+          </div>
         </div>
-        <div class="landing-book-card" onclick="navTo('ab-fac1')">
-          <div class="card-title">פקסימיליה א</div>
-          <div class="card-subtitle">Facsimile No. 1</div>
-          <div class="card-chapters">From the Book of Abraham</div>
+        <div class="landing-section-group">
+          <h3 class="lsg-stack"><span class="lsg-s-heb" dir="rtl">יוֹסֵף סְמִית — תּוֹלְדוֹת</span><span class="lsg-s-tl">yosef semit — toldot</span><span class="lsg-s-en" dir="ltr">Joseph Smith—History</span></h3>
+          <div class="landing-section-grid">
+          <div class="landing-sec-btn" onclick="navTo('jsh-ch1')"><span class="sec-heb">א</span><span class="sec-num">1</span></div>
+          </div>
         </div>
-        <div class="landing-book-card" onclick="navTo('ab-fac2')">
-          <div class="card-title">פקסימיליה ב</div>
-          <div class="card-subtitle">Facsimile No. 2</div>
-          <div class="card-chapters">From the Book of Abraham</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('ab-fac3')">
-          <div class="card-title">פקסימיליה ג</div>
-          <div class="card-subtitle">Facsimile No. 3</div>
-          <div class="card-chapters">From the Book of Abraham</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jsm-ch1')">
-          <div class="card-title">יוסף סמית מתי</div>
-          <div class="card-subtitle">Joseph Smith—Matthew</div>
-          <div class="card-chapters">1 Chapter · 55 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jsh-ch1')">
-          <div class="card-title">יוסף סמית — תולדות</div>
-          <div class="card-subtitle">Joseph Smith—History</div>
-          <div class="card-chapters">1 Chapter · 75 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('aof-ch1')">
-          <div class="card-title">אמרי האמונה</div>
-          <div class="card-subtitle">Articles of Faith</div>
-          <div class="card-chapters">13 Articles</div>
+        <div class="landing-section-group">
+          <h3 class="lsg-stack"><span class="lsg-s-heb" dir="rtl">אִמְרֵי הָאֱמוּנָה</span><span class="lsg-s-tl">imre haemuna</span><span class="lsg-s-en" dir="ltr">Articles of Faith</span></h3>
+          <div class="landing-section-grid">
+          <div class="landing-sec-btn" onclick="navTo('aof-ch1')"><span class="sec-heb">א</span><span class="sec-num">1</span></div>
+          </div>
         </div>
       </div>
       <div class="landing-back">

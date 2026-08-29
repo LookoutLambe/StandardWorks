@@ -410,6 +410,21 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
 .landing-sec-btn:hover { transform: scale(1.05); box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-color: var(--accent); }
 .landing-sec-btn .sec-heb { font-family: 'David Libre', serif; font-size: 0.85em; font-weight: 700; color: var(--accent-deep); }
 .landing-sec-btn .sec-num { font-family: 'David Libre', 'Georgia', serif; font-size: 0.65em; color: #5a6a80; }
+/* Interlinear landing — hero word-stacks + stacked book titles (matches BOM landing) */
+.hero-lis-row { display: flex; direction: rtl; justify-content: center; align-items: flex-start; gap: 26px; flex-wrap: wrap; }
+.hlw { display: inline-flex; flex-direction: column; align-items: center; }
+.hlw-hw { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--ink); direction: rtl; white-space: nowrap; line-height: 1.3; }
+.hlw-tl { font-size: 0.72em; color: var(--ink-light); font-style: italic; margin-top: 2px; direction: ltr; }
+.hlw-gl { font-size: 0.85em; color: var(--ink); margin-top: 2px; direction: ltr; }
+#start-reading-btn { direction: ltr; background: var(--accent); color: #1a1a2e; border: none; padding: 12px 32px; font-family: 'David Libre', 'Georgia', serif; font-size: 1.1em; font-weight: 600; border-radius: 6px; cursor: pointer; transition: all 0.2s; letter-spacing: 0.5px; }
+#start-reading-btn:hover { filter: brightness(1.1); transform: scale(1.02); }
+.landing-section-group h3 .lsg-heb { font-size: 1.25em; color: var(--accent-deep); margin-right: 6px; }
+.landing-sec-btn .sec-tl { font-size: 0.6em; color: #8fa3c0; font-style: italic; direction: ltr; }
+.lsg-stack { display: flex; flex-direction: column; align-items: center; gap: 1px; margin: 18px 0 8px; }
+.lsg-stack .lsg-s-heb { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--accent-deep); }
+.lsg-stack .lsg-s-tl { font-size: 0.78em; color: var(--ink-light); font-style: italic; direction: ltr; }
+.lsg-stack .lsg-s-en { font-family: 'David Libre', 'Georgia', serif; font-size: 0.92em; color: var(--ink); letter-spacing: 0.06em; direction: ltr; }
+
 .landing-back { text-align: center; margin-top: 20px; }
 .landing-back a {
   font-family: 'David Libre', 'Georgia', serif; color: var(--accent-deep);
@@ -1183,34 +1198,51 @@ function getChapterLabel(id) {
   var mainContent = document.getElementById('main-content');
   var landingPanel = document.getElementById('panel-landing');
 
-  // Build landing page with book list by division
-  var landingHtml = '<div class="landing-hero">' +
-    '<h1>\u05EA\u05E0\u05F4\u05DA</h1>' +
-    '<div class="subtitle-en">Tanakh / Old Testament</div>' +
-    '<div class="subtitle-heb">Hebrew Interlinear</div>' +
+  // Build landing page — interlinear hero + stacked book titles + chapter grids (matches the BOM landing)
+  var landingHtml = '<div style="max-width:700px;margin:0 auto;padding:40px 20px 0;text-align:center">' +
+    '<div class="hero-lis" style="margin-bottom:6px">' +
+    '<div class="hero-lis-row">' +
+    '<span class="hlw"><span class="hlw-hw" style="font-size:2.3em;color:var(--accent-deep)">תַּנַ״ךְ</span><span class="hlw-tl">tanakh</span><span class="hlw-gl">The Old Testament</span></span>' +
+    '</div>' +
+    '<div class="hero-lis-row" style="margin-top:16px">' +
+    '<span class="hlw"><span class="hlw-hw">תּוֹרָה</span><span class="hlw-tl">tora</span><span class="hlw-gl">The Law</span></span>' +
+    '<span class="hlw"><span class="hlw-hw">נְבִיאִים</span><span class="hlw-tl">neviim</span><span class="hlw-gl">The Prophets</span></span>' +
+    '<span class="hlw"><span class="hlw-hw">כְּתוּבִים</span><span class="hlw-tl">ketuvim</span><span class="hlw-gl">The Writings</span></span>' +
+    '</div>' +
+    '<div style="font-family:\'David Libre\',serif;font-size:0.95em;color:var(--ink-light);letter-spacing:0.1em;direction:ltr;margin-top:16px">HEBREW INTERLINEAR</div>' +
+    '</div>' +
+    '<div style="margin:24px 0 4px"><button id="start-reading-btn" onclick="navTo(\'gen-ch1\')">Begin Reading \u2192</button></div>' +
     '</div><hr class="landing-divider"><div class="landing-sections">';
 
-  var cats = ['Torah', 'Neviim', 'Ketuvim'];
-  var catLabels = {
-    'Torah': '\u05EA\u05D5\u05E8\u05D4 / Torah',
-    'Neviim': '\u05E0\u05D1\u05D9\u05D0\u05D9\u05DD / Nevi\u2019im',
-    'Ketuvim': '\u05DB\u05EA\u05D5\u05D1\u05D9\u05DD / Ketuvim'
+  var BOOK_TL = {
+    gen:'bereshit', exo:'shemot', lev:'vayyikra', num:'bemidbar', deu:'devarim',
+    jos:'yehoshua', jdg:'shoftim', '1sa':'shemuel 1', '2sa':'shemuel 2', '1ki':'melakhim 1', '2ki':'melakhim 2',
+    isa:'yeshayahu', jer:'yirmeyahu', eze:'yechezkel', hos:'hoshea', joe:'yoel', amo:'amos', oba:'ovadya',
+    jon:'yona', mic:'mikha', nah:'nachum', hab:'chavakkuk', zep:'tsefanya', hag:'chaggay', zec:'zekharya', mal:'malakhi',
+    psa:'tehillim', pro:'mishle', job:'iyyov', sos:'shir hashshirim', rth:'rut', lam:'ekha', ecc:'kohelet',
+    est:'ester', dan:'daniyyel', ezr:'ezra', neh:'nechemya', '1ch':'divre hayyamim 1', '2ch':'divre hayyamim 2'
   };
+  var cats = ['Torah', 'Neviim', 'Ketuvim'];
+  var catEn = { 'Torah': 'Torah', 'Neviim': 'Nevi\u2019im', 'Ketuvim': 'Ketuvim' };
+  var catHe = { 'Torah': 'תּוֹרָה', 'Neviim': 'נְבִיאִים', 'Ketuvim': 'כְּתוּבִים' };
 
   cats.forEach(function(cat) {
-    landingHtml += '<div class="landing-section-group"><h3>' + catLabels[cat] + '</h3><div class="landing-book-list">';
+    landingHtml += '<div class="landing-section-group"><h3><span dir="ltr">' + catEn[cat] + '</span> · <span class="lsg-heb" dir="rtl" style="unicode-bidi:isolate">' + catHe[cat] + '</span></h3>';
     OT_BOOKS.forEach(function(book) {
       if (book.cat !== cat) return;
-      var chLabel = book.ch === 1 ? '1 chapter' : book.ch + ' chapters';
-      landingHtml += '<div class="landing-book-btn" onclick="navTo(\'' + book.prefix + '-ch1\')">' +
-        '<span class="book-he">' + book.he.replace(/[\u0591-\u05C7]/g,'') + '</span>' +
-        '<span class="book-en">' + book.en + '</span>' +
-        '<span class="book-ch-count">' + chLabel + '</span>' +
-        '</div>';
+      landingHtml += '<div class="landing-section-group"><h3 class="lsg-stack">' +
+        '<span class="lsg-s-heb" dir="rtl">' + book.he.replace(/ (\u05D0|\u05D1|\u05D2)$/, ' $1\u05F3') + '</span>' +
+        '<span class="lsg-s-tl">' + (BOOK_TL[book.prefix] || '') + '</span>' +
+        '<span class="lsg-s-en" dir="ltr">' + book.en + '</span></h3>' +
+        '<div class="landing-section-grid">';
+      for (var n = 1; n <= book.ch; n++) {
+        landingHtml += '<div class="landing-sec-btn" onclick="navTo(\'' + book.prefix + '-ch' + n + '\')">' +
+          '<span class="sec-heb">' + toHebNum(n) + '</span><span class="sec-num">' + n + '</span></div>';
+      }
+      landingHtml += '</div></div>';
     });
-    landingHtml += '</div></div>';
+    landingHtml += '</div>';
   });
-
   landingHtml += '</div><div class="landing-back"><a href="index.html">\u2190 Standard Works Home</a></div>';
   landingPanel.innerHTML = landingHtml;
 
