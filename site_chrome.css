@@ -372,7 +372,6 @@ body.reader-footer-hidden.has-sw-chrome.sw-chrome-reader #main-content {
 }
 body.has-sw-chrome .page, body.has-sw-chrome.sw-chrome-reader .page,
 body.has-sw-chrome.sw-chrome-reader #main-content { transition: padding-top 0.28s ease; }
-/* "all of the footer": the chapter-nav row hides too — restore is the same
-   double-tap on the reading surface */
-body.reader-footer-hidden #sw-reader-footer .nqd-chapter-nav { display: none !important; }
-body.reader-footer-hidden #sw-reader-footer { border-top: none; }
+/* Double-tap collapse keeps the chapter dock (הבא · chapter · הקודם) —
+   user ruling 2026-08-30: "keep this footer bar but everything else can
+   collapse". Header, mode bar and volume row hide; the dock stays. */
