@@ -3337,7 +3337,7 @@ var dc104_ch1Verses = [
     ["לְבִנְיַן","for the building of"],
     ["בֵּיתִי","my house,"],
     ["אֲשֶׁר","that"],
-    ["אׇרְכּוֹ","which is"],
+    ["אׇרְכּוֹ","its length"],
     ["אַרְבָּעִים","forty"],
     ["אַמָּה","rods long"],
     ["וְרׇחְבּוֹ","and wide,"],
