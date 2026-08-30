@@ -675,7 +675,15 @@ function stripPrefixes(w) {
                     // buildings with quorums and offspring (the 2 Ne 5:15 card)
                     'H1146': 'בנה',    // בִּנְיָן building → build
                     'H4510': 'מנה',    // מִנְיָן quorum, reckoning → count
-                    'H5209': 'נין' };  // נִין offspring keeps its own family
+                    'H5209': 'נין',    // נִין offspring keeps its own family
+                    // the גלל grab-bag (the biglal card): BDB files the place
+                    // Gilgal, the scroll, and Galilee under "roll" — names and
+                    // pointing-distinct nouns get their own families; the
+                    // preposition בִּגְלַל and the wheel גַּלְגַּל stay under
+                    // the geminate root
+                    'H1537': 'גלגל',   // Gilgal the place, not גלל "roll"
+                    'H4039': 'מגלה',   // מְגִלָּה scroll, not גלל "roll"
+                    'H1551': 'גליל', 'H1552': 'גליל', 'H1553': 'גליל' }; // Galilee/regions
 
   function baseRoot(sNum) {
     // Brown-Driver-Briggs keys the ROOT where Strong's keys the lexeme, so BDB
