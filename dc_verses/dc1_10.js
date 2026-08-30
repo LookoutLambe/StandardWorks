@@ -3250,8 +3250,7 @@ var dc10_ch1Verses = [
     ["הַזֹּאת","this"],
     ["בָּאָרֶץ","in the land"],
     ["הַזֹּאת","this"],
-    ["יִהְיוּ","shall have"],
-    ["לוֹ","to him"],
+    ["יִהְיוּ־לּוֹ","shall have to him"],
     ["חַיֵּי","life of"],
     ["עוֹלָם׃","eternity"]
   ]},

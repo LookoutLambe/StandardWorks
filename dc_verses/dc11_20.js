@@ -561,8 +561,7 @@ var dc14_ch1Verses = [
     ["וְתַחֲזִיק","and endure"],
     ["עַד","until"],
     ["הַקֵּץ","the end"],
-    ["יִהְיוּ","there shall be"],
-    ["לְךָ","to you"],
+    ["יִהְיוּ־לְּךָ","there shall be to you"],
     ["חַיֵּי","life of"],
     ["עוֹלָם","eternity"],
     ["הַמַּתָּנָה","the gift"],
@@ -1187,7 +1186,7 @@ var dc19_ch1Verses = [
   { num: "כ", words: [["לָכֵן","wherefore"], ["מְצַוְּךָ","commanding you"], ["אָנֹכִי","I am"], ["עוֹד","again"], ["לָשׁוּב","to repent"], ["פֶּן","lest"], ["אַכְנִיעֲךָ","I humble you"], ["בְּכֹחִי","with my power"], ["הַכַּבִּיר","the almighty"], ["וּלְהִתְוַדּוֹת","and that you confess"], ["עַל־חַטֹּאתֶיךָ","your sins"], ["פֶּן","lest"], ["תִּסְבֹּל","you suffer"], ["אֶת־הׇעֳנָשִׁים","these punishments"], ["אֲשֶׁר","that"], ["דִּבַּרְתִּי","I have spoken"], ["אֲשֶׁר","that"], ["בַּקָּטֹן","in the smallest"], ["בָּהֶם","of them"], ["אַף","yea"], ["בַּמְּעַט","even in the least degree"], ["טָעַמְתָּ","you have tasted"], ["בְּעֵת","at the time"], ["אֲשֶׁר","that"], ["הֵסַרְתִּי","I withdrew"], ["אֶת־רוּחִי","my Spirit"], ["מִמְּךָ׃","from you"]]},
   { num: "כא", words: [["וַאֲנִי","and I"], ["מְצַוְּךָ","command you"], ["לְהַטִּיף","that you preach"], ["רַק","naught but"], ["תְּשׁוּבָה","repentance"], ["וְאַל־תַּרְאֶה","and show not"], ["אֶת־הַדְּבָרִים","the things"], ["הָאֵלֶּה","these"], ["לְתֵבֵל","unto the world"], ["עַד","until"], ["אֲשֶׁר","that"], ["יִהְיֶה","it is"], ["חׇכְמָה","wisdom"], ["בִּי׃","in me"]]},
   { num: "כב", words: [["כִּי","for"], ["לֹא","not"], ["יוּכְלוּ","they cannot"], ["לָשֵׂאת","bear"], ["בָּשָׂר","meat"], ["עַתָּה","now"], ["כִּי","but"], ["חָלָב","milk"], ["עֲלֵיהֶם","they must"], ["לְקַבֵּל","receive"], ["לָכֵן","wherefore"], ["לֹא","not"], ["יֵדְעוּ","they must know"], ["אֶת־הַדְּבָרִים","the things"], ["הָאֵלֶּה","these"], ["פֶּן","lest"], ["יֹאבֵדוּ׃","they perish"]]},
-  { num: "כג", words: [["לְמַד","learn"], ["מִמֶּנִּי","of me"], ["וְהַאֲזֵן","and listen"], ["לִדְבָרַי","to my words"], ["הִתְהַלֵּךְ","walk"], ["בְּעַנְוַת","in the meekness of"], ["רוּחִי","my Spirit"], ["וְיִהְיֶה","and there shall be"], ["לְךָ","to you"], ["שָׁלוֹם","peace"], ["בִּי׃","in me"]]},
+  { num: "כג", words: [["לְמַד","learn"], ["מִמֶּנִּי","of me"], ["וְהַאֲזֵן","and listen"], ["לִדְבָרַי","to my words"], ["הִתְהַלֵּךְ","walk"], ["בְּעַנְוַת","in the meekness of"], ["רוּחִי","my Spirit"], ["וְיִהְיֶה־לְּךָ","and there shall be to you"], ["שָׁלוֹם","peace"], ["בִּי׃","in me"]]},
   { num: "כד", words: [
     ["אֲנִי","I"],
     ["יֵשׁוּעַ","am Jesus"],
