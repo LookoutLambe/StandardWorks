@@ -445,6 +445,11 @@ body.dark-mode .ann-hl[data-hlc="#bbdefb"] { background-color: rgba(100,181,246,
 body.dark-mode .ann-hl[data-hlc="#ef9a9a"] { background-color: rgba(239,83,80,0.28) !important; }
 body.dark-mode .ann-hl[data-hlc="#c8e6c9"] { background-color: rgba(102,187,106,0.28) !important; }
 body.dark-mode .ann-hl[data-hlc="#e1bee7"] { background-color: rgba(186,104,200,0.28) !important; }
+body.dark-mode .ann-hl[data-hlc="#ffe0b2"] { background-color: rgba(255,167,38,0.28) !important; }
+body.dark-mode .ann-hl[data-hlc="#b2dfdb"] { background-color: rgba(38,166,154,0.28) !important; }
+body.dark-mode .ann-hl[data-hlc="#f8bbd0"] { background-color: rgba(236,64,122,0.25) !important; }
+body.dark-mode .ann-hl[data-hlc="#ffecb3"] { background-color: rgba(255,202,40,0.25) !important; }
+body.dark-mode .ann-hl[data-hlc="#cfd8dc"] { background-color: rgba(120,144,156,0.30) !important; }
 body.dark-mode .word-unit:hover { background: rgba(200, 168, 78, 0.10); }
 body.dark-mode #word-popup { background: #1e2233; border-color: #d4af37; color: #e8e0d0; }
 body.dark-mode #word-popup-overlay { background: rgba(0, 0, 0, 0.5); }
@@ -555,7 +560,7 @@ body.dark-mode #annotations-panel { background: #1e2233; border-color: #d4af37; 
 #sel-toolbar button:hover { background: #2a2f44; }
 #sel-toolbar button.active { background: #c8a84e; color: #1e2233; }
 #sel-subpanel { display: none; padding: 6px; border-top: 1px solid #3a3f55; }
-.sel-color-row { display: flex; gap: 3px; margin-bottom: 3px; align-items: center; }
+.sel-color-row { flex-wrap: wrap; max-width: 320px; display: flex; gap: 3px; margin-bottom: 3px; align-items: center; }
 .sel-color-row-label { font-size: 0.6em; color: #8a7a4a; min-width: 12px; font-family: 'David Libre', 'Georgia', serif; }
 .sel-color { width: 22px; height: 22px; border-radius: 50%; cursor: pointer; border: 2px solid transparent; transition: all 0.15s; }
 .sel-color:hover { transform: scale(1.2); }
@@ -818,12 +823,11 @@ body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direct
       <span class="sel-color" style="background:#ef9a9a" data-ann="highlight" data-color="#ef9a9a" onclick="selToolbarApply(this)"></span>
       <span class="sel-color" style="background:#c8e6c9" data-ann="highlight" data-color="#c8e6c9" onclick="selToolbarApply(this)"></span>
       <span class="sel-color" style="background:#e1bee7" data-ann="highlight" data-color="#e1bee7" onclick="selToolbarApply(this)"></span>
-    </div>
-    <div class="sel-color-row">
-      <span class="sel-color-row-label">UL</span>
-      <span class="sel-color" style="background:#c8a84e" data-ann="underline" data-color="#c8a84e" onclick="selToolbarApply(this)"></span>
-      <span class="sel-color" style="background:#ef5350" data-ann="underline" data-color="#ef5350" onclick="selToolbarApply(this)"></span>
-      <span class="sel-color" style="background:#42a5f5" data-ann="underline" data-color="#42a5f5" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" style="background:#ffe0b2" data-ann="highlight" data-color="#ffe0b2" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" style="background:#b2dfdb" data-ann="highlight" data-color="#b2dfdb" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" style="background:#f8bbd0" data-ann="highlight" data-color="#f8bbd0" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" style="background:#ffecb3" data-ann="highlight" data-color="#ffecb3" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" style="background:#cfd8dc" data-ann="highlight" data-color="#cfd8dc" onclick="selToolbarApply(this)"></span>
     </div>
   </div>
   <div id="sel-note-row">
@@ -841,14 +845,12 @@ body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direct
     <span class="sel-color" style="background:#ef9a9a" data-ann="highlight" data-color="#ef9a9a" onclick="selToolbarApply(this)"></span>
     <span class="sel-color" style="background:#c8e6c9" data-ann="highlight" data-color="#c8e6c9" onclick="selToolbarApply(this)"></span>
     <span class="sel-color" style="background:#e1bee7" data-ann="highlight" data-color="#e1bee7" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" style="background:#ffe0b2" data-ann="highlight" data-color="#ffe0b2" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" style="background:#b2dfdb" data-ann="highlight" data-color="#b2dfdb" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" style="background:#f8bbd0" data-ann="highlight" data-color="#f8bbd0" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" style="background:#ffecb3" data-ann="highlight" data-color="#ffecb3" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" style="background:#cfd8dc" data-ann="highlight" data-color="#cfd8dc" onclick="selToolbarApply(this)"></span>
     <span class="sel-eraser" data-ann="highlight" data-color="" onclick="selToolbarApply(this)">&#10005;</span>
-  </div>
-  <div class="sel-color-row" id="hl-row-ul">
-    <span class="sel-color-row-label">UL</span>
-    <span class="sel-color" style="background:#c8a84e" data-ann="underline" data-color="#c8a84e" onclick="selToolbarApply(this)"></span>
-    <span class="sel-color" style="background:#ef5350" data-ann="underline" data-color="#ef5350" onclick="selToolbarApply(this)"></span>
-    <span class="sel-color" style="background:#42a5f5" data-ann="underline" data-color="#42a5f5" onclick="selToolbarApply(this)"></span>
-    <span class="sel-eraser" data-ann="underline" data-color="" onclick="selToolbarApply(this)">&#10005;</span>
   </div>
   <div class="hl-actions">
     <button type="button" onclick="hlPopNote()" title="Note" aria-label="Add note">&#9998;</button>
@@ -1274,7 +1276,7 @@ window.READER = {
 <script src="bom/scripture_verses.js"></script>
 <script src="crossrefs_engine.js?v=6"></script>
 
-<script src="reader_ui.js?v=4"></script>
+<script src="reader_ui.js?v=5"></script>
 <script>
 // === D&C canon overrides (phase 2) — later function declarations win, so
 // these must load AFTER reader_ui.js: section-keyed chapter labels, the

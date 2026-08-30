@@ -1163,7 +1163,7 @@ body.in-chapter #sel-toolbar { flex-direction: column; flex-wrap: nowrap; max-wi
 .sel-subpanel {
   display: none; padding: 6px; border-top: 1px solid #3a3f55;
 }
-.sel-row { display: flex; align-items: center; gap: 6px; }
+.sel-row { flex-wrap: wrap; max-width: 330px; display: flex; align-items: center; gap: 6px; }
 .sel-label { font-size: 0.7em; color: #9a9ab0; min-width: 18px; font-family: 'David Libre', 'Georgia', serif; }
 .sel-color {
   width: 26px; height: 26px; border-radius: 50%; border: 2px solid transparent;
@@ -1674,6 +1674,11 @@ body.dark-mode .ann-hl[data-hlc="#bbdefb"] { background-color: rgba(100,181,246,
 body.dark-mode .ann-hl[data-hlc="#ef9a9a"] { background-color: rgba(239,83,80,0.28) !important; }
 body.dark-mode .ann-hl[data-hlc="#c8e6c9"] { background-color: rgba(102,187,106,0.28) !important; }
 body.dark-mode .ann-hl[data-hlc="#e1bee7"] { background-color: rgba(186,104,200,0.28) !important; }
+body.dark-mode .ann-hl[data-hlc="#ffe0b2"] { background-color: rgba(255,167,38,0.28) !important; }
+body.dark-mode .ann-hl[data-hlc="#b2dfdb"] { background-color: rgba(38,166,154,0.28) !important; }
+body.dark-mode .ann-hl[data-hlc="#f8bbd0"] { background-color: rgba(236,64,122,0.25) !important; }
+body.dark-mode .ann-hl[data-hlc="#ffecb3"] { background-color: rgba(255,202,40,0.25) !important; }
+body.dark-mode .ann-hl[data-hlc="#cfd8dc"] { background-color: rgba(120,144,156,0.30) !important; }
 body.dark-mode .word-unit:hover { background: rgba(219, 185, 88, 0.10); }
 body.dark-mode .book-label { color: #e8e0d0; }
 body.dark-mode #word-popup { background: #1e2233; border-color: #d4af37; color: #e8e0d0; }
@@ -1950,16 +1955,12 @@ body.dual-mode .chapter-summary { display: block; }
       <span class="sel-color" data-ann="highlight" data-color="#ef9a9a" style="background:#ef9a9a" onclick="selToolbarApply(this)"></span>
       <span class="sel-color" data-ann="highlight" data-color="#c8e6c9" style="background:#c8e6c9" onclick="selToolbarApply(this)"></span>
       <span class="sel-color" data-ann="highlight" data-color="#e1bee7" style="background:#e1bee7" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" data-ann="highlight" data-color="#ffe0b2" style="background:#ffe0b2" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" data-ann="highlight" data-color="#b2dfdb" style="background:#b2dfdb" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" data-ann="highlight" data-color="#f8bbd0" style="background:#f8bbd0" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" data-ann="highlight" data-color="#ffecb3" style="background:#ffecb3" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" data-ann="highlight" data-color="#cfd8dc" style="background:#cfd8dc" onclick="selToolbarApply(this)"></span>
       <span class="sel-eraser" data-ann="highlight" data-color="" onclick="selToolbarApply(this)">&#10005;</span>
-    </div>
-    <div class="sel-row" style="margin-top:4px">
-      <span class="sel-label">UL</span>
-      <span class="sel-color" data-ann="underline" data-color="#fff9c4" style="background:#fff9c4" onclick="selToolbarApply(this)"></span>
-      <span class="sel-color" data-ann="underline" data-color="#bbdefb" style="background:#bbdefb" onclick="selToolbarApply(this)"></span>
-      <span class="sel-color" data-ann="underline" data-color="#ef9a9a" style="background:#ef9a9a" onclick="selToolbarApply(this)"></span>
-      <span class="sel-color" data-ann="underline" data-color="#c8e6c9" style="background:#c8e6c9" onclick="selToolbarApply(this)"></span>
-      <span class="sel-color" data-ann="underline" data-color="#e1bee7" style="background:#e1bee7" onclick="selToolbarApply(this)"></span>
-      <span class="sel-eraser" data-ann="underline" data-color="" onclick="selToolbarApply(this)">&#10005;</span>
     </div>
     <div class="sel-note-row" id="sel-note-row" style="display:none">
       <textarea id="sel-note-input" class="sel-note-input" placeholder="Add a note..." rows="2"></textarea>
@@ -1977,14 +1978,12 @@ body.dual-mode .chapter-summary { display: block; }
     <span class="sel-color" data-ann="highlight" data-color="#ef9a9a" style="background:#ef9a9a" onclick="selToolbarApply(this)"></span>
     <span class="sel-color" data-ann="highlight" data-color="#c8e6c9" style="background:#c8e6c9" onclick="selToolbarApply(this)"></span>
     <span class="sel-color" data-ann="highlight" data-color="#e1bee7" style="background:#e1bee7" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" data-ann="highlight" data-color="#ffe0b2" style="background:#ffe0b2" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" data-ann="highlight" data-color="#b2dfdb" style="background:#b2dfdb" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" data-ann="highlight" data-color="#f8bbd0" style="background:#f8bbd0" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" data-ann="highlight" data-color="#ffecb3" style="background:#ffecb3" onclick="selToolbarApply(this)"></span>
+      <span class="sel-color" data-ann="highlight" data-color="#cfd8dc" style="background:#cfd8dc" onclick="selToolbarApply(this)"></span>
     <span class="sel-eraser" data-ann="highlight" data-color="" onclick="selToolbarApply(this)">&#10005;</span>
-  </div>
-  <div class="sel-row" id="hl-row-ul" style="margin-top:6px">
-    <span class="sel-label">UL</span>
-    <span class="sel-color" data-ann="underline" data-color="#c8a84e" style="background:#c8a84e" onclick="selToolbarApply(this)"></span>
-    <span class="sel-color" data-ann="underline" data-color="#ef5350" style="background:#ef5350" onclick="selToolbarApply(this)"></span>
-    <span class="sel-color" data-ann="underline" data-color="#42a5f5" style="background:#42a5f5" onclick="selToolbarApply(this)"></span>
-    <span class="sel-eraser" data-ann="underline" data-color="" onclick="selToolbarApply(this)">&#10005;</span>
   </div>
   <div class="hl-actions">
     <button type="button" onclick="hlPopNote()" title="Note" aria-label="Add note">&#9998;</button>
@@ -4808,8 +4807,9 @@ function _paintWordAnnotation(el, ta) {
     var on = tier === 'hw';
     if (on && ta.hl) { tierEl.classList.add('ann-hl'); tierEl.style.backgroundColor = ta.hl; tierEl.setAttribute('data-hlc', ta.hl); }
     else { tierEl.classList.remove('ann-hl'); tierEl.style.backgroundColor = ''; tierEl.removeAttribute('data-hlc'); }
-    if (on && ta.ul) { tierEl.classList.add('ann-ul'); tierEl.style.textDecorationColor = ta.ul; }
-    else { tierEl.classList.remove('ann-ul'); tierEl.style.textDecorationColor = ''; }
+    // Underlines were removed 2026-08-30 — they collided with the nikkud and
+    // made pointed text hard to read. Stale ann-ul paint is still cleaned.
+    tierEl.classList.remove('ann-ul'); tierEl.style.textDecorationColor = '';
   });
 }
 

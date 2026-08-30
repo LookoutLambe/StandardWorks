@@ -938,8 +938,9 @@ function _paintWordAnnotation(el, ta) {
     var on = tier === 'hw';
     if (on && ta.hl) { tierEl.classList.add('ann-hl'); tierEl.style.backgroundColor = ta.hl; tierEl.setAttribute('data-hlc', ta.hl); }
     else { tierEl.classList.remove('ann-hl'); tierEl.style.backgroundColor = ''; tierEl.removeAttribute('data-hlc'); }
-    if (on && ta.ul) { tierEl.classList.add('ann-ul'); tierEl.style.textDecorationColor = ta.ul; }
-    else { tierEl.classList.remove('ann-ul'); tierEl.style.textDecorationColor = ''; }
+    // Underlines were removed 2026-08-30 — they collided with the nikkud and
+    // made pointed text hard to read. Stale ann-ul paint is still cleaned.
+    tierEl.classList.remove('ann-ul'); tierEl.style.textDecorationColor = '';
   });
 }
 
