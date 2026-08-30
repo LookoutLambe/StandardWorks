@@ -4415,7 +4415,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "גלל": {
-    "meaning": "(גָּלַל) to roll; (בִּגְלַל) because of; (גַּלְגַּל) wheel",
+    "meaning": "(גָּלַל) to roll; (בִּגְלַל) because of; (גַּל) wave, heap; (גִּלּוּלִים) idols; (גַּלְגַּל) wheel",
     "category": "Uncategorized"
   },
   "קדמונים": {
