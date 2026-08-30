@@ -544,8 +544,10 @@ function stripPrefixes(w) {
   var _consIdx = null;
   function consIndex() {
     if (_consIdx) return _consIdx;
+    // The data files load lazily: caching the empty index before
+    // strongs_lookup.js arrives would disable this layer for the page's life.
+    if (!window._strongsLookup) return {};
     _consIdx = {};
-    if (!window._strongsLookup) return _consIdx;
     for (var k in _strongsLookup) {
       var c = stripNikkud(k);
       if (!c) continue;
@@ -773,9 +775,12 @@ function stripPrefixes(w) {
   var _lemIdx = null;
   function lemmaIndex() {
     if (_lemIdx) return _lemIdx;
+    // Same rule as consIndex: never cache before strongs_roots.js arrives —
+    // an early getRoot call (data loads lazily) would freeze the empty index
+    // and kill the morphology layer (וַיִּרְעַד stayed "וירעד" instead of רעד).
+    if (!window._strongsRoots) return {};
     _lemIdx = {};
     _lemIdxVerb = {};
-    if (!window._strongsRoots) return _lemIdx;
     for (var n in _strongsRoots) {
       var e = _strongsRoots[n];
       if (!e || !e.w) continue;
