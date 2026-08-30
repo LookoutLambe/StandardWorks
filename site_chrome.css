@@ -351,10 +351,6 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body.dark-mode #sw-rights { color: #6b7288; }
 body.dark-mode #sw-rights a { color: #d4af37; }
 
-/* User ruling 2026-08-29: on reader pages the footer chapter control opens
-   the same drawer (thumb reach), so the top-left hamburger is redundant —
-   hidden there, kept on the hub which has no footer dock. */
-body.sw-chrome-reader #sw-chrome-menu { display: none; }
 
 /* ── Immersive reading (2026-08-29, user ruling): the site's existing
    double-tap gesture (nav_engine.js — "closes the second layer") now sweeps

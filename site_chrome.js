@@ -107,19 +107,24 @@
   }
 
   function createHomeLink() {
-    var a = document.createElement('a');
-    a.href = hubUrl();
+    // User ruling 2026-08-30: the כה"ק mark opens the navigation drawer (the
+    // hamburger is gone — the center title is the home link, so the mark and
+    // the title no longer duplicate each other).
+    var a = document.createElement('button');
+    a.type = 'button';
     a.className = 'sw-chrome-home';
-    a.setAttribute('aria-label', 'Standard Works Home');
-    a.title = 'Standard Works Home';
+    a.setAttribute('aria-label', 'Open books and navigation');
+    a.title = 'Books and navigation';
+    a.style.cssText = 'background:none;border:none;padding:0;cursor:pointer';
     a.innerHTML = '<img src="' + assetBase() + 'icons/sw-mark.svg" alt="" style="width:38px;height:38px;display:block;border-radius:9px">';
+    a.addEventListener('click', openMenu);
     return a;
   }
 
   function ensureHomeLink() {
-    var menu = document.getElementById('sw-chrome-menu');
-    if (!menu || document.querySelector('.sw-chrome-home')) return;
-    menu.insertAdjacentElement('afterend', createHomeLink());
+    var bar = document.querySelector('.sw-top-bar-inner');
+    if (!bar || document.querySelector('.sw-chrome-home')) return;
+    bar.insertAdjacentElement('afterbegin', createHomeLink());
   }
 
   function createPrintLink() {
@@ -187,9 +192,7 @@
     header.setAttribute('role', 'banner');
     header.innerHTML =
       '<div class="sw-top-bar-inner">' +
-        '<button type="button" class="sw-chrome-btn" id="sw-chrome-menu" aria-label="Open books and navigation">' +
-          '<span class="sw-chrome-menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>' +
-        '</button>' +
+        ''+   /* hamburger removed 2026-08-30 — the כה"ק mark opens the drawer */
         '<a class="sw-top-bar-brand" href="' + hubUrl() + '" aria-label="Home — Hebrew Interlinear Standard Works">' +
           '<span class="sw-top-bar-brand-he" lang="he" dir="rtl">\u05DB\u05EA\u05D1\u05D9 \u05D4\u05E7\u05D5\u05D3\u05E9</span>' +
           '<span class="sw-top-bar-brand-en">Standard Works</span>' +
@@ -201,7 +204,6 @@
 
     document.body.insertBefore(header, document.body.firstChild);
 
-    document.getElementById('sw-chrome-menu').addEventListener('click', openMenu);
     document.getElementById('sw-chrome-dark').addEventListener('click', function () {
       window.toggleDark();
     });
