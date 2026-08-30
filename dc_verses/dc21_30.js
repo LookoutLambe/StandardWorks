@@ -1067,7 +1067,7 @@ var dc30_ch1Verses = [
     ["וַעֲצָתוֹ","and his advice"],
     ["אֲשֶׁר","which"],
     ["יִתֵּן","he shall give"],
-    ["לָךְ׃","you"]
+    ["לְךָ׃","you"]
   ]},
   { num: "ו", words: [["וֶהְיֵה","and be"], ["צַר","you afflicted"], ["בְּכׇל","in all"], ["צָרוֹתָיו","his afflictions"], ["הָרֵם","lifting up"], ["לִבְּךָ","your heart"], ["תָמִיד","ever"], ["אֵלַי","unto me"], ["בִּתְפִלָּה","in prayer"], ["וּבֶאֱמוּנָה","and faith"], ["לְהַצָּלָתוֹ","for his"], ["וּלְהַצָּלָתְךָ","and your deliverance"], ["כִּי","for"], ["נָתַתִּי","I have given"], ["לוֹ","unto him"], ["כֹּחַ","power"], ["לִבְנוֹת","to build up"], ["כְּנֵסִיָּתִי","my church"], ["בֵּין","among"], ["הַלָּמָנִים׃","the Lamanites"]]},
   { num: "ז", words: [["וְלֹא","and not"], ["מִנֵּיתִי","have I appointed"], ["אִישׁ","any man"], ["לִהְיוֹת","to be"], ["יוֹעֲצוֹ","his counselor"], ["עָלָיו","over him"], ["בַּכְּנֵסִיָּה","in the church"], ["בְּדִבְרֵי","concerning matters of"], ["הַכְּנֵסִיָּה","the church"], ["זוּלָתִי","except"], ["אָחִיו","his brother"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן׃","Jun."]]},

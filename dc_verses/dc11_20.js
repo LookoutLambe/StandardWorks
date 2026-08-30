@@ -418,11 +418,11 @@ var dc12_ch1Verses = [
     ["תִּשְׁאַל","you ask"],
     ["מִמֶּנִּי","of me"],
     ["יִנָּתֶן","it shall be given"],
-    ["לָךְ","to you"],
+    ["לְךָ","to you"],
     ["וְאִם","and if"],
     ["תִּדְפֹּק","you knock"],
     ["יִפָּתַח","it shall be opened"],
-    ["לָךְ׃","to you"]
+    ["לְךָ׃","to you"]
   ]},
   { num: "ו", words: [
     ["וְעַתָּה","and now"],
@@ -543,11 +543,11 @@ var dc14_ch1Verses = [
     ["תִּשְׁאַל","you ask"],
     ["מִמֶּנִּי","of me"],
     ["יִנָּתֶן","it shall be given"],
-    ["לָךְ","to you"],
+    ["לְךָ","to you"],
     ["וְאִם","and if"],
     ["תִּדְפֹּק","you knock"],
     ["יִפָּתַח","it shall be opened"],
-    ["לָךְ׃","to you"]
+    ["לְךָ׃","to you"]
   ]},
   { num: "ו", words: [
     ["בַּקֵּשׁ","seek"],
@@ -671,7 +671,7 @@ var dc15_ch1Verses = [
     ["הִנֵּה","behold"],
     ["אֲנִי","I"],
     ["אֹמֵר","say"],
-    ["לָךְ","unto you"],
+    ["לְךָ","unto you"],
     ["הַדָּבָר","the thing"],
     ["אֲשֶׁר","which"],
     ["יִהְיֶה","will be"],
@@ -768,7 +768,7 @@ var dc16_ch1Verses = [
     ["הִנֵּה","behold"],
     ["אֲנִי","I"],
     ["אֹמֵר","say"],
-    ["לָךְ","unto you"],
+    ["לְךָ","unto you"],
     ["הַדָּבָר","the thing"],
     ["אֲשֶׁר","which"],
     ["יִהְיֶה","will be"],

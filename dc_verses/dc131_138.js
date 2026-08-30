@@ -2234,7 +2234,7 @@ var dc133_ch1Verses = [
     ["מָה","how great things"],
     ["הֲכִינוֹתָ","you have prepared"],
     ["לַמְחַכֶּה","for him that waits"],
-    ["לָךְ׃","for you."]
+    ["לְךָ׃","for you."]
   ]},
   { num: "מו", words: [
     ["וְיֵאָמֵר","And it shall be said:"],
