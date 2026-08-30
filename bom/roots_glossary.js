@@ -29096,4 +29096,5 @@ window._rootGlossaryData = {
   ,"ציה": { "meaning": "(צִיָּה) dry land, drought", "category": "Lexical" }
   ,"רעי": { "meaning": "(רֵעַ) friend; (רְעִי) pasture", "category": "Lexical" }
   ,"חרץ": { "meaning": "(חָרַץ) to decide, determine; (חָרוּץ) diligent, sharp; gold", "category": "Action" }
+  ,"הלל": { "meaning": "(הָלַל) to praise, boast; (תְּהִלָּה) praise, psalm; (הִלֵּל) Hillel", "category": "Action" }
 };
