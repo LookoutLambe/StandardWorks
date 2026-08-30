@@ -30,6 +30,13 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 
 const read = f => fs.readFileSync(path.join(ROOT, f), 'utf8');
+// Phase 2: a converted sibling's reader lives in reader_core.js/reader_ui.js,
+// not inline — resolve each page to page + shared sources so the equality
+// checks keep working through the page-by-page conversion.
+const CONVERTED = { 'ot.html': 1, 'nt.html': 1, 'dc.html': 1, 'pgp.html': 1, 'jst.html': 1 };
+const readPage = f => CONVERTED[f]
+  ? read(f) + '\n' + read('reader_core.js') + '\n' + read('reader_ui.js')
+  : read(f);
 const norm = s => s.replace(/\s+/g, ' ').trim();
 
 let failures = 0;
@@ -86,7 +93,7 @@ const SIX = ['bom/bom.html', 'ot.html', 'nt.html', 'dc.html', 'pgp.html', 'jst.h
 for (const name of ['_paintWordAnnotation', 'applyAnnotationToWord']) {
   let ref = null, refFile = null, bad = false;
   for (const f of SIX) {
-    const body = fnBody(read(f), name, f);
+    const body = fnBody(readPage(f), name, f);
     if (body === null) { bad = true; continue; }
     const nb = norm(body);
     if (ref === null) { ref = nb; refFile = f; continue; }
@@ -107,7 +114,7 @@ for (const name of ['_paintWordAnnotation', 'applyAnnotationToWord']) {
   const END = 'headingEl2.appendChild(hf);';
   let ref = null, refFile = null, bad = false;
   for (const f of FOUR) {
-    const src = read(f);
+    const src = readPage(f);
     const i = src.indexOf(START);
     const j = i >= 0 ? src.indexOf(END, i) : -1;
     if (i < 0 || j < 0) { fail('heading-flow anchors missing in ' + f); bad = true; continue; }

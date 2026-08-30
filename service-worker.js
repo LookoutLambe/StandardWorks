@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-08-30T00-42-46';
+const BUILD_ID = '2026-08-30T01-44-08';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -45,6 +45,15 @@ const CORE_ASSETS = [
     '/StandardWorks/root_scorecard.js',
     '/StandardWorks/root_engine.js',
     '/StandardWorks/shoroshim_roots.js',
+  '/StandardWorks/reader_core.js',
+  '/StandardWorks/reader_ui.js',
+  '/StandardWorks/fonts/david_libre.css',
+  '/StandardWorks/fonts/davidlibre-400-hebrew.woff2',
+  '/StandardWorks/fonts/davidlibre-400-latin.woff2',
+  '/StandardWorks/fonts/davidlibre-500-hebrew.woff2',
+  '/StandardWorks/fonts/davidlibre-500-latin.woff2',
+  '/StandardWorks/fonts/davidlibre-700-hebrew.woff2',
+  '/StandardWorks/fonts/davidlibre-700-latin.woff2',
     '/StandardWorks/root_concordance.js',
     '/StandardWorks/strongs_lookup.js',
     '/StandardWorks/strongs_roots.js',

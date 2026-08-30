@@ -1,5 +1,7 @@
 @import url('sw_theme.css?v=3');
 
+
+
 /* Hide body until chrome + footer are wired (prevents legacy bar flash) */
 html.sw-shell-pending body {
   visibility: hidden;
@@ -279,14 +281,6 @@ body.has-sw-chrome #reading-progress {
   top: calc(var(--sw-chrome-h) + env(safe-area-inset-top, 0px));
 }
 
-body.has-sw-chrome.audio-bar-open .page {
-  padding-top: calc(var(--sw-chrome-h) + 48px + env(safe-area-inset-top, 0px));
-}
-
-body.has-sw-chrome #audio-bar.visible {
-  top: calc(var(--sw-chrome-h) + env(safe-area-inset-top, 0px));
-}
-
 body.has-sw-chrome .dict-legacy-topbar {
   display: none !important;
 }
@@ -356,3 +350,33 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 #sw-rights a:hover { text-decoration: underline; }
 body.dark-mode #sw-rights { color: #6b7288; }
 body.dark-mode #sw-rights a { color: #d4af37; }
+
+/* User ruling 2026-08-29: on reader pages the footer chapter control opens
+   the same drawer (thumb reach), so the top-left hamburger is redundant —
+   hidden there, kept on the hub which has no footer dock. */
+body.sw-chrome-reader #sw-chrome-menu { display: none; }
+
+/* ── Immersive reading (2026-08-29, user ruling): the site's existing
+   double-tap gesture (nav_engine.js — "closes the second layer") now sweeps
+   EVERYTHING: header, breadcrumb, and the whole footer. Same class the
+   gesture already toggles; double-tap again restores. touch-action:
+   manipulation keeps iOS from stealing the double-tap for zoom. */
+.sw-chrome-reader .page { touch-action: manipulation; }
+#sw-top-bar { transition: transform 0.28s ease; }
+body.reader-footer-hidden #sw-top-bar { transform: translateY(calc(-100% - env(safe-area-inset-top, 0px))); }
+body.reader-footer-hidden #reading-progress { opacity: 0; transition: opacity 0.2s; }
+body.reader-footer-hidden.has-sw-chrome .page,
+body.reader-footer-hidden.has-sw-chrome.sw-chrome-reader .page,
+body.reader-footer-hidden.has-sw-chrome.sw-chrome-reader #main-content {
+  padding-top: calc(10px + env(safe-area-inset-top, 0px));
+}
+body.has-sw-chrome .page, body.has-sw-chrome.sw-chrome-reader .page,
+body.has-sw-chrome.sw-chrome-reader #main-content { transition: padding-top 0.28s ease; }
+/* "all of the footer": the chapter-nav row hides too — restore is the same
+   double-tap on the reading surface */
+body.reader-footer-hidden #sw-reader-footer .nqd-chapter-nav { display: none !important; }
+body.reader-footer-hidden #sw-reader-footer { border-top: none; }
+
+/* User ruling 2026-08-29: the breadcrumb strip duplicates the footer chapter
+   control — not needed at the top of reader pages. */
+body.sw-chrome-reader #sw-chrome-location { display: none; }

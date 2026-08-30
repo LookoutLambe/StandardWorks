@@ -210,6 +210,9 @@
     ensureHomeLink();
     ensurePrintLink();
 
+
+
+
     if (!document.querySelector('.controls-bottom')) {
       markShellReady();
     }
