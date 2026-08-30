@@ -3137,7 +3137,7 @@ var dc100_ch1Verses = [
     ["גִּבּוֹר","mighty"],
     ["בְּעֵדוּת׃","in testimony."]
   ]},
-  { num: "יא", words: [["וְאֶתֵּן","And I will give"], ["לְךָ","unto you"], ["כֹחַ","power"], ["לִהְיוֹת","to be"], ["גִּבּוֹר","mighty"], ["בְּפָרֵשׁ","in expounding"], ["כׇּל־כִּתְבֵי","all the scriptures of"], ["הַקֹּדֶשׁ","the holy"], ["לְמַעַן","that"], ["תִּהְיֶה","you may be"], ["לוֹ","unto him"], ["לְפֶה","a spokesman,"], ["וְהוּא","and he"], ["יִהְיֶה־לְּךָ","shall be unto you"], ["לְמַגִּיד","a revelator,"], ["לָדַעַת","that you may know"], ["בְּבִטָּחוֹן","the certainty of"], ["כׇּל־הַדְּבָרִים","all things"], ["הַנּוֹגְעִים","pertaining to"], ["לְמַלְכוּתִי","my kingdom"], ["בָּאָרֶץ׃","on the earth."]]},
+  { num: "יא", words: [["וְאֶתֵּן","And I will give"], ["לְךָ","unto you"], ["כֹחַ","power"], ["לִהְיוֹת","to be"], ["גִּבּוֹר","mighty"], ["בְּפָרֵשׁ","in expounding"], ["כׇּל־כִּתְבֵי","all the scriptures of"], ["הַקֹּדֶשׁ","the holy"], ["לְמַעַן","that"], ["תִּהְיֶה־לּוֹ","you may be unto him"], ["לְפֶה","a spokesman,"], ["וְהוּא","and he"], ["יִהְיֶה־לְּךָ","shall be unto you"], ["לְמַגִּיד","a revelator,"], ["לָדַעַת","that you may know"], ["בְּבִטָּחוֹן","the certainty of"], ["כׇּל־הַדְּבָרִים","all things"], ["הַנּוֹגְעִים","pertaining to"], ["לְמַלְכוּתִי","my kingdom"], ["בָּאָרֶץ׃","on the earth."]]},
   { num: "יב", words: [
     ["לָכֵן","Therefore,"],
     ["הוֹסִיפוּ","continue"],
