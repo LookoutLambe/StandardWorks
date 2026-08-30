@@ -27,7 +27,7 @@ window._rootGlossaryData = {
   "שמרון": { "meaning": "(שֹׁמְרוֹן) Samaria", "category": "Uncategorized" },
   "בשורה": { "meaning": "(בְּשׂוֹרָה) gospel, good tidings", "category": "Uncategorized" },
   "קצץ": { "meaning": "(קָצַץ) to cut off; (קֵץ) end", "category": "Uncategorized" },
-  "H6440": { "meaning": "(פָּנִים) face, presence; (לִפְנֵי) before", "category": "Uncategorized" },
+  "H6440": { "meaning": "(פָּנִים) face, presence; (לִפְנֵי) before; (מִפְּנֵי) because of", "category": "Uncategorized" },
   "שיר": { "meaning": "(שִׁיר) song; to sing", "category": "Uncategorized" },
   "מחר": { "meaning": "(מָחָר) tomorrow; (מׇחֳרָת) the morrow, next day", "category": "Uncategorized" },
   "H2416": { "meaning": "(חַי) living, alive; (חַיָּה) beast; life", "category": "Uncategorized" },
@@ -690,7 +690,7 @@ window._rootGlossaryData = {
     "category": "Place"
   },
   "הן": {
-    "meaning": "(הֵן) behold; (הֵנָּה) they (f.); hither, thither",
+    "meaning": "(הֵן, הִנֵּה) behold; (הִנְנִי) here am I",
     "category": "Grammar"
   },
   "שמם": {
@@ -1517,7 +1517,7 @@ window._rootGlossaryData = {
     "category": "Action"
   },
   "קרב": {
-    "meaning": "(קָרַב) to draw near; (קָרוֹב) near; (קֶרֶב) midst, inwards; (קׇרְבָּן) offering",
+    "meaning": "(קָרַב) to draw near; (קָרוֹב) near; (קֶרֶב) midst, inwards; (בְּקֶרֶב) among; (קׇרְבָּן) offering",
     "category": "Quality"
   },
   "יחלו": {
@@ -6181,7 +6181,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "אבל": {
-    "meaning": "great mourning",
+    "meaning": "(אָבַל) to mourn; (אֵבֶל) mourning",
     "category": "Quality"
   },
   "נהרגים": {
@@ -28236,7 +28236,7 @@ window._rootGlossaryData = {
     "category": "Lexical"
   },
   "H5703": {
-    "meaning": "until, as far as; forever",
+    "meaning": "(עַד) until, as far as; (וָעֶד) and ever, forever",
     "category": "Lexical"
   },
   "H5704": {
@@ -28536,7 +28536,7 @@ window._rootGlossaryData = {
     "category": "Lexical"
   },
   "H6901": {
-    "meaning": "to receive, accept",
+    "meaning": "(קִבֵּל) to receive, accept; (כׇּל־קֳבֵל) because",
     "category": "Lexical"
   },
   "H1248": {
@@ -29043,4 +29043,13 @@ window._rootGlossaryData = {
   ,"מגלה": { "meaning": "(מְגִלָּה) scroll, roll", "category": "Uncategorized" }
   ,"גליל": { "meaning": "(הַגָּלִיל) Galilee; (גְּלִילוֹת) regions, territories", "category": "Name" }
   ,"בגלל": { "meaning": "(בִּגְלַל) because of", "category": "Particle" }
+  ,"כאשר": { "meaning": "(כַּאֲשֶׁר) as, when, even as", "category": "Particle" }
+  ,"לכן": { "meaning": "(לָכֵן) therefore, wherefore", "category": "Particle" }
+  ,"כפי": { "meaning": "(כְּפִי) according to, inasmuch as", "category": "Particle" }
+  ,"לפי": { "meaning": "(לְפִי) according to", "category": "Particle" }
+  ,"אֲבָל": { "meaning": "(אֲבָל) but, nevertheless", "category": "Particle" }
+  ,"בָּהֶן": { "meaning": "(בָּהֶן) in them", "category": "Particle" }
+  ,"ברנבא": { "meaning": "(בַּר־נַבָּא) Barnabas", "category": "Name" }
+  ,"H3426": { "meaning": "(יֵשׁ) there is, there are; (יֶשׁ־לְךָ) you have", "category": "Particle" }
+  ,"הֵנָּה": { "meaning": "(הֵנָּה) they (f.); hither, thither", "category": "Particle" }
 };
