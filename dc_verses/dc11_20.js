@@ -34,7 +34,7 @@ var dc11_ch1Verses = [
     ["מֵאֵת","from"],
     ["אֱלֹהִים׃","God"]
   ]},
-  { num: "ה", words: [["עַל־כֵּן","therefore"], ["אִם","if"], ["תִּשְׁאַל","you ask"], ["מִמֶּנִּי","of me"], ["יִנָּתֶן","it shall be given"], ["לָךְ","to you"], ["וְאִם","and if"], ["תִּדְפֹּק","you knock"], ["יִפָּתַח","it shall be opened"], ["לָךְ׃","to you"]]},
+  { num: "ה", words: [["עַל־כֵּן","therefore"], ["אִם","if"], ["תִּשְׁאַל","you ask"], ["מִמֶּנִּי","of me"], ["יִנָּתֶן","it shall be given"], ["לְךָ","to you"], ["וְאִם","and if"], ["תִּדְפֹּק","you knock"], ["יִפָּתַח","it shall be opened"], ["לְךָ׃","to you"]]},
   { num: "ו", words: [
     ["וְעַתָּה","and now"],
     ["כַּאֲשֶׁר","as"],
