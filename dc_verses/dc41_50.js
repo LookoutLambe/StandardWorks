@@ -377,7 +377,7 @@ var dc42_ch1Verses = [
     ["וְעַל","and of"],
     ["הַבֵּן׃","the Son"]
   ]},
-  { num: "יח", words: [["וְעַתָּה","and now"], ["הִנֵּה","behold"], ["אֲנִי","I"], ["מְדַבֵּר","speak"], ["אֶל","unto"], ["הַכְּנֵסִיָּה","the church"], ["לֹא","not"], ["תִרְצָח","you shall kill"], ["וְהָרוֹצֵחַ","and he that kills"], ["לֹא","not"], ["יִהְיֶה","shall there be"], ["לוֹ","to him"], ["סְלִיחָה","forgiveness"], ["בָּעוֹלָם","in the world"], ["הַזֶּה","this"], ["וְלֹא","nor"], ["בָּעוֹלָם","in the world"], ["הַבָּא׃","to come"]]},
+  { num: "יח", words: [["וְעַתָּה","and now"], ["הִנֵּה","behold"], ["אֲנִי","I"], ["מְדַבֵּר","speak"], ["אֶל","unto"], ["הַכְּנֵסִיָּה","the church"], ["לֹא","not"], ["תִרְצָח","you shall kill"], ["וְהָרוֹצֵחַ","and he that kills"], ["לֹא","not"], ["יִהְיֶה־לּוֹ","shall there be to him"], ["סְלִיחָה","forgiveness"], ["בָּעוֹלָם","in the world"], ["הַזֶּה","this"], ["וְלֹא","nor"], ["בָּעוֹלָם","in the world"], ["הַבָּא׃","to come"]]},
   { num: "יט", words: [
     ["וְעוֹד","and again"],
     ["אֲנִי","I"],
@@ -1154,7 +1154,7 @@ var dc42_ch1Verses = [
     ["לְתוֹרַת","unto the law of"],
     ["אֱלֹהִים׃","God"]
   ]},
-  { num: "צב", words: [["אִם","if"], ["יֶחֱטָא","any shall offend"], ["בַסֵּתֶר","in secret"], ["יוּכַח","he or she shall be rebuked"], ["בַסֵּתֶר","in secret"], ["לְמַעַן","that"], ["יִהְיֶה","there may be"], ["לוֹ","to him"], ["אוֹ","or"], ["לָהּ","to her"], ["מָקוֹם","opportunity"], ["לְהוֹדוֹת","to confess"], ["בַסֵּתֶר","in secret"], ["לוֹ","to him"], ["אוֹ","or"], ["לָהּ","or her"], ["אֲשֶׁר","whom"], ["חָטָא","he or she has offended"], ["לוֹ","against him"], ["אוֹ","or"], ["לָהּ","her"], ["וְלֵאלֹהִים","and to God"], ["לְמַעַן","that"], ["הַכְּנֵסִיָּה","the church"], ["לֹא","not"], ["תְדַבֵּר","may speak"], ["חֶרְפָּה","reproachfully"], ["עָלָיו","of him"], ["אוֹ","or"], ["עָלֶיהָ׃","her"]]},
+  { num: "צב", words: [["אִם","if"], ["יֶחֱטָא","any shall offend"], ["בַסֵּתֶר","in secret"], ["יוּכַח","he or she shall be rebuked"], ["בַסֵּתֶר","in secret"], ["לְמַעַן","that"], ["יִהְיֶה־לּוֹ","there may be to him"], ["אוֹ","or"], ["לָהּ","to her"], ["מָקוֹם","opportunity"], ["לְהוֹדוֹת","to confess"], ["בַסֵּתֶר","in secret"], ["לוֹ","to him"], ["אוֹ","or"], ["לָהּ","or her"], ["אֲשֶׁר","whom"], ["חָטָא","he or she has offended"], ["לוֹ","against him"], ["אוֹ","or"], ["לָהּ","her"], ["וְלֵאלֹהִים","and to God"], ["לְמַעַן","that"], ["הַכְּנֵסִיָּה","the church"], ["לֹא","not"], ["תְדַבֵּר","may speak"], ["חֶרְפָּה","reproachfully"], ["עָלָיו","of him"], ["אוֹ","or"], ["עָלֶיהָ׃","her"]]},
   { num: "צג", words: [
     ["וְכֵן","and thus"],
     ["תִּנְהֲגוּ","shall you conduct"],
@@ -1207,8 +1207,7 @@ var dc43_ch1Verses = [
     ["תִּלָּקַח","it be taken"],
     ["מִמֶּנּוּ","from him"],
     ["לֹא","not"],
-    ["יִהְיֶה","shall be"],
-    ["לוֹ","to him"],
+    ["יִהְיֶה־לּוֹ","shall be to him"],
     ["כֹּחַ","power"],
     ["כִּי","except"],
     ["אִם","rather"],
@@ -2627,8 +2626,7 @@ var dc45_ch1Verses = [
     ["וְהַשָּׂטָן","and Satan"],
     ["יֵאָסֵר","shall be bound"],
     ["וְלֹא","and not"],
-    ["יִהְיֶה","shall have"],
-    ["לוֹ","to him"],
+    ["יִהְיֶה־לּוֹ","shall have to him"],
     ["מָקוֹם","place"],
     ["בְּלִבּוֹת","in the hearts of"],
     ["בְּנֵי","the children of"],
@@ -3679,8 +3677,7 @@ var dc49_ch1Verses = [
     ["לְמַאֲכׇל","for food"],
     ["וְלִלְבוּשׁ","and for raiment"],
     ["וּלְמַעַן","and that"],
-    ["יִהְיֶה","shall be"],
-    ["לוֹ","unto him"],
+    ["יִהְיֶה־לּוֹ","shall be unto him"],
     ["לָרֹב׃","in abundance"]
   ]},
   { num: "כ", words: [

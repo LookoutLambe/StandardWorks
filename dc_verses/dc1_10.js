@@ -294,7 +294,7 @@ var dc1_ch1Verses = [
     ["מֵעֵת","from time"],
     ["לָעֵת׃","to time"]
   ]},
-  { num: "כט", words: [["וְאַחֲרֵי","and after"], ["קַחְתּוֹ","his receiving of"], ["אֶת־כְּתָב","the record of"], ["הַנֶּפִיִּים","the Nephites"], ["עַבְדִּי","my servant"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["יִהְיֶה","shall be"], ["לוֹ","to him"], ["כֹחַ","power"], ["לְתַרְגֵּם","to translate"], ["בְּחֶסֶד","by lovingkindness of"], ["אֱלֹהִים","God"], ["בִּגְבוּרַת","by might of"], ["אֱלֹהִים","God"], ["אֶת־סֵפֶר","book of"], ["מוֹרְמוֹן׃","Mormon"]]},
+  { num: "כט", words: [["וְאַחֲרֵי","and after"], ["קַחְתּוֹ","his receiving of"], ["אֶת־כְּתָב","the record of"], ["הַנֶּפִיִּים","the Nephites"], ["עַבְדִּי","my servant"], ["יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["יִהְיֶה־לּוֹ","shall be to him"], ["כֹחַ","power"], ["לְתַרְגֵּם","to translate"], ["בְּחֶסֶד","by lovingkindness of"], ["אֱלֹהִים","God"], ["בִּגְבוּרַת","by might of"], ["אֱלֹהִים","God"], ["אֶת־סֵפֶר","book of"], ["מוֹרְמוֹן׃","Mormon"]]},
   { num: "ל", words: [["וְגַם","and also"], ["אֲשֶׁר","those to whom"], ["נִתְּנוּ","were given"], ["לָהֶם","to them"], ["הַמִּצְוֹת","the commandments"], ["הָאֵלֶּה","these"], ["יִהְיֶה","shall be"], ["לָהֶם","to them"], ["כֹּחַ","power"], ["לְיַסֵּד","to found"], ["אֶת־הַקָּהָל","the congregation"], ["הַזֶּה","this"], ["וּלְהוֹצִיאוֹ","and to bring it forth"], ["מֵאֹפֶל","out of gloom"], ["וּמֵחֹשֶׁךְ","and out of darkness"], ["קְהַל","the congregation of"], ["הָאֱמֶת","the truth"], ["וְהַחַיִּים","and the life"], ["לְבַדּוֹ","alone"], ["עַל־פְּנֵי","upon the face of"], ["כׇל־הָאָרֶץ","all the earth"], ["אֲשֶׁר","in which"], ["בּוֹ","in it"], ["חָפַצְתִּי","I have delighted"], ["אֲנִי","I"], ["יְהוָה","the LORD"], ["מְדַבֵּר","speak"], ["אֶל־הַקָּהָל","unto the congregation"], ["כֻּלּוֹ","the whole of it"], ["וְלֹא","and not"], ["אֶל־אִישׁ","unto a man"], ["לְבַדּוֹ׃","by himself"]]},
   { num: "לא", words: [
     ["כִּי","for"],
@@ -1010,8 +1010,7 @@ var dc5_ch1Verses = [
     ["אַךְ","but"],
     ["הַדּוֹר","the generation"],
     ["הַזֶּה","this"],
-    ["יִהְיֶה","shall have"],
-    ["לוֹ","to it"],
+    ["יִהְיֶה־לּוֹ","shall have to it"],
     ["דְבָרִי","my word"],
     ["בְּיָדֶךָ׃","through your hand"]
   ]},
@@ -1343,8 +1342,7 @@ var dc5_ch1Verses = [
     ["כֵן","so"],
     ["הִנֵּה","behold"],
     ["לֹא","not"],
-    ["יִהְיֶה","shall be"],
-    ["לְךָ","to you"],
+    ["יִהְיֶה־לְךָ","shall be to you"],
     ["עוֹד","anymore"],
     ["מַתָּנָה","a gift"],
     ["וְאֶקַּח","and I will take away"],
@@ -1479,8 +1477,7 @@ var dc6_ch1Verses = [
     ["תַּחְפֹּץ","you desire"],
     ["מִמֶּנִּי","of me"],
     ["כֵּן","so"],
-    ["יִהְיֶה","it shall be"],
-    ["לְךָ","to you"],
+    ["יִהְיֶה־לְךָ","it shall be to you"],
     ["וְאִם","and if"],
     ["תַּחְפֹּץ","you desire"],
     ["תִּהְיֶה","you shall be"],
@@ -2246,7 +2243,7 @@ var dc8_ch1Verses = [
     ["נָכוֹן","proper"],
     ["לִשְׁאֹל׃","to ask"]
   ]},
-  { num: "יא", words: [["שְׁאַל","ask"], ["לָדַעַת","to know"], ["סוֹדוֹת","the mysteries of"], ["אֱלֹהִים","God"], ["וּלְתַרְגֵּם","and to translate"], ["וּלְקַבֵּל","and to receive"], ["דַּעַת","knowledge"], ["מִכׇּל־הַכְּתָבִים","from all the records"], ["הַקְּדוּמִים","the ancient"], ["הַצְּפוּנִים","the hidden"], ["אֲשֶׁר","which"], ["קֹדֶשׁ","sacred"], ["הֵם","they are"], ["וּכֶאֱמוּנָתְךָ","and according to your faith"], ["יֵעָשֶׂה","it shall be done"], ["לְךָ׃","to you"]]},
+  { num: "יא", words: [["שְׁאַל","ask"], ["לָדַעַת","to know"], ["סוֹדוֹת","the mysteries of"], ["אֱלֹהִים","God"], ["וּלְתַרְגֵּם","and to translate"], ["וּלְקַבֵּל","and to receive"], ["דַּעַת","knowledge"], ["מִכׇּל־הַכְּתָבִים","from all the records"], ["הַקְּדוּמִים","the ancient"], ["הַצְּפוּנִים","the hidden"], ["אֲשֶׁר","which"], ["קֹדֶשׁ","sacred"], ["הֵם","they are"], ["וּכֶאֱמוּנָתְךָ","and according to your faith"], ["יֵעָשֶׂה־לְךָ׃","it shall be done to you"]]},
   { num: "יב", words: [
     ["הִנֵּה","behold"],
     ["אֲנִי","I"],

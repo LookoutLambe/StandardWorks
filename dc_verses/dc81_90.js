@@ -82,8 +82,7 @@ var dc81_ch1Verses = [
     ["אַתָּה","you are"],
     ["עַד","unto"],
     ["הַקֵּץ","the end"],
-    ["יִהְיֶה","you shall have"],
-    ["לְךָ","to you"],
+    ["יִהְיֶה־לְךָ","you shall have to you"],
     ["כֶּתֶר","a crown of"],
     ["אַל־מָוֶת","immortality"],
     ["וְחַיֵּי","and life"],
@@ -429,7 +428,7 @@ var dc82_ch1Verses = [
     ["לֹא","not"],
     ["תֶחֶטְאוּ׃","you sin."]
   ]},
-  { num: "כא", words: [["וְהַנֶּפֶשׁ","And the soul"], ["הַחֹטֵאת","that sins"], ["נֶגֶד","against"], ["הַבְּרִית","covenant"], ["הַזֹּאת","this"], ["וּמַקְשָׁה","and hardens"], ["אֶת־לִבּוֹ","his heart"], ["נֶגְדָּהּ","against it"], ["יֵעָשֶׂה","shall be dealt with"], ["לּוֹ","to him"], ["לְפִי","according to"], ["תּוֹרוֹת","the laws of"], ["כְּנֵסִיָּתִי","my church"], ["וְיִמָּסֵר","and shall be delivered"], ["לְמַהֲלֻמוֹת","over to the buffetings of"], ["הַשָּׂטָן","Satan"], ["עַד","until"], ["יוֹם","the day of"], ["הַגְּאֻלָּה׃","redemption."]]},
+  { num: "כא", words: [["וְהַנֶּפֶשׁ","And the soul"], ["הַחֹטֵאת","that sins"], ["נֶגֶד","against"], ["הַבְּרִית","covenant"], ["הַזֹּאת","this"], ["וּמַקְשָׁה","and hardens"], ["אֶת־לִבּוֹ","his heart"], ["נֶגְדָּהּ","against it"], ["יֵעָשֶׂה־לּוֹ","shall be dealt with"], ["לְפִי","according to"], ["תּוֹרוֹת","the laws of"], ["כְּנֵסִיָּתִי","my church"], ["וְיִמָּסֵר","and shall be delivered"], ["לְמַהֲלֻמוֹת","over to the buffetings of"], ["הַשָּׂטָן","Satan"], ["עַד","until"], ["יוֹם","the day of"], ["הַגְּאֻלָּה׃","redemption."]]},
   { num: "כב", words: [
     ["וְעַתָּה","And now"],
     ["אָמֵן","verily"],
@@ -1446,8 +1445,7 @@ var dc84_ch1Verses = [
     ["וַחֲמַת","And the poison of"],
     ["נָחָשׁ","a serpent"],
     ["לֹא","not"],
-    ["יִהְיֶה","shall have"],
-    ["לוֹ","to him"],
+    ["יִהְיֶה־לּוֹ","shall have to him"],
     ["כֹּחַ","power"],
     ["לְהַזִּיקָם׃","to harm them."]
   ]},
@@ -5305,8 +5303,7 @@ var dc88_ch1Verses = [
     ["לַבְּרָכָה","of salutation"],
     ["הַזֹּאת","this"],
     ["לֹא","not"],
-    ["יִהְיֶה","shall have"],
-    ["לוֹ","to him"],
+    ["יִהְיֶה־לּוֹ","shall have to him"],
     ["מָקוֹם","place"],
     ["בֵּינֵיכֶם","among you-;"],
     ["כִּי","-for"],

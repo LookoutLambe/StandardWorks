@@ -3872,8 +3872,7 @@ var dc136_ch1Verses = [
     ["מְבַקֵּשׁ","not"],
     ["עֲצָתִי","my counsel,"],
     ["לֹא","no"],
-    ["יִהְיֶה","there shall be"],
-    ["לוֹ","to him"],
+    ["יִהְיֶה־לּוֹ","there shall be to him"],
     ["כֹּחַ","power,"],
     ["וְסִכְלוּתוֹ","and his folly"],
     ["תִּגָּלֶה׃","shall be made manifest."]

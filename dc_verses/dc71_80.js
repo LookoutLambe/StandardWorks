@@ -932,7 +932,7 @@ var dc75_ch1Verses = [
     ["יֵלֵכוּ׃","they shall go"]
   ]},
   { num: "כח", words: [["וְעוֹד","and again"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אוֹמֵר","say"], ["לָכֶם","unto you"], ["כׇּל","every"], ["אִישׁ","man"], ["אֲשֶׁר","who"], ["עָלָיו","is obliged"], ["לְכַלְכֵּל","to provide"], ["אֶת־מִשְׁפַּחְתּוֹ","his family"], ["יְכַלְכֵּל","let him provide"], ["וְלֹא","and not"], ["יְאַבֵּד","shall he lose"], ["אֶת־עֲטָרָתוֹ","his crown"], ["וְיַעֲבֹד","and let him labor"], ["בַּכְּנֵסִיָּה׃","in the church"]]},
-  { num: "כט", words: [["יִהְיֶה","let be"], ["כׇּל","every"], ["אִישׁ","man"], ["חָרוּץ","diligent"], ["בְּכׇל","in all"], ["דָּבָר","things"], ["וְהֶעָצֵל","and the idler"], ["לֹא","not"], ["יִהְיֶה","shall have"], ["לוֹ","unto him"], ["מָקוֹם","place"], ["בַּכְּנֵסִיָּה","in the church"], ["כִּי","except"], ["אִם","if"], ["יָשׁוּב","he repent"], ["וִיתַקֵּן","and mend"], ["דְּרָכָיו׃","his ways"]]},
+  { num: "כט", words: [["יִהְיֶה","let be"], ["כׇּל","every"], ["אִישׁ","man"], ["חָרוּץ","diligent"], ["בְּכׇל","in all"], ["דָּבָר","things"], ["וְהֶעָצֵל","and the idler"], ["לֹא","not"], ["יִהְיֶה־לּוֹ","shall have unto him"], ["מָקוֹם","place"], ["בַּכְּנֵסִיָּה","in the church"], ["כִּי","except"], ["אִם","if"], ["יָשׁוּב","he repent"], ["וִיתַקֵּן","and mend"], ["דְּרָכָיו׃","his ways"]]},
   { num: "ל", words: [
     ["לָכֵן","wherefore"],
     ["עַבְדִּי","my servant"],
