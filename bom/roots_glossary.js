@@ -29097,4 +29097,11 @@ window._rootGlossaryData = {
   ,"רעי": { "meaning": "(רֵעַ) friend; (רְעִי) pasture", "category": "Lexical" }
   ,"חרץ": { "meaning": "(חָרַץ) to decide, determine; (חָרוּץ) diligent, sharp; gold", "category": "Action" }
   ,"הלל": { "meaning": "(הָלַל) to praise, boast; (תְּהִלָּה) praise, psalm; (הִלֵּל) Hillel", "category": "Action" }
+  ,"אֶל": { "meaning": "(אֶל) to, unto, toward", "category": "Particle" }
+  ,"אַל": { "meaning": "(אַל) not, do not", "category": "Particle" }
+  ,"אל": { "meaning": "(אֵל) God, mighty one", "category": "Name" }
+  ,"H0410": { "meaning": "(אֵל) God, mighty one", "category": "Name" }
+  ,"H0484": { "meaning": "(אַלְמֻגִּים) almug wood", "category": "Lexical" }
+  ,"אלגביש": { "meaning": "(אֶלְגָּבִישׁ) hailstones", "category": "Lexical" }
+  ,"אלמגים": { "meaning": "(אַלְמֻגִּים) almug wood", "category": "Lexical" }
 };
