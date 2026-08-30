@@ -32,6 +32,15 @@
   var refsWaiters = [];
 
   var PAGES = { ot: 'ot.html', nt: 'nt.html', bom: 'bom/bom.html', dc: 'dc.html', pgp: 'pgp.html', jst: 'jst.html' };
+
+  // Idle warmup: pull the tap-time data in the background a few seconds after
+  // load, so the lazy split never costs the reader a slow first popup.
+  setTimeout(function () {
+    var kick = function () { try { ensure(function () {}); } catch (e) {} };
+    if ('requestIdleCallback' in window) requestIdleCallback(kick, { timeout: 8000 });
+    else setTimeout(kick, 2000);
+  }, 3500);
+
   var VOL_ORDER = ['ot', 'nt', 'bom', 'dc', 'pgp', 'jst'];
 
   function loadScript(src, cb) {
@@ -43,11 +52,26 @@
   }
 
   function ensureStrongs(cb) {
-    if (window._strongsLookup && window._strongsRoots) { cb(); return; }
-    if (typeof window.ensureStrongsData === 'function') { window.ensureStrongsData(cb); return; }
-    var n = 0; function done() { if (++n >= 2) cb(); }
-    loadScript(cfg.base + 'strongs_lookup.js', done);
-    loadScript(cfg.base + 'strongs_roots.js', done);
+    // Since 2026-08-30 the five sibling pages no longer load ANY root data
+    // eagerly — ~4MB of Strong's/BDB/shoroshim/glossary parses only when a
+    // word is first tapped (or in the idle warmup below). Load whatever is
+    // missing; each file is guarded by its own global so bom.html (still
+    // eager) and warm caches skip straight through.
+    if (typeof window.ensureStrongsData === 'function' && !(window._strongsLookup && window._strongsRoots)) {
+      window.ensureStrongsData(function () { ensureStrongs(cb); });
+      return;
+    }
+    var need = [];
+    if (!window._strongsLookup)   need.push('strongs_lookup.js');
+    if (!window._strongsRoots)    need.push('strongs_roots.js');
+    if (!window._bdbRoots)        need.push('bdb_roots.js?v=2');
+    if (!window._rootProperNames) need.push('root_names.js?v=12');
+    if (!window._shoroshimRoots)  need.push('shoroshim_roots.js?v=2');
+    if (!window._rootGlossaryData) need.push('bom/roots_glossary.js?v=' + RSC_V);
+    if (!need.length) { cb(); return; }
+    var n = 0;
+    function done() { if (++n >= need.length) cb(); }
+    need.forEach(function (f) { loadScript(cfg.base + f, done); });
   }
 
   function ensure(cb) {
