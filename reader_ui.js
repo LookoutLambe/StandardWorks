@@ -1806,7 +1806,15 @@ window.addEventListener('scroll', function() {
       return;
     }
   }
-  handleHash();
+  // The initial route must wait for DOMContentLoaded: dc/pgp/jst override
+  // getBookChapter/parseHash in a script AFTER this file, and rendering the
+  // landing chapter before those run keys its verses with the canon
+  // getBookChapter (null for their ids — no Dual English, no annotation keys).
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', handleHash);
+  } else {
+    handleHash();
+  }
   window.addEventListener('hashchange', handleHash);
 })();
 
