@@ -425,7 +425,36 @@ function scheduleAdjacentPrefetch() {
 
 // === MODE CONTROLS ===
 
+// Switching view mode (or translit/nikkud) reflows every verse above the
+// reading point, so a raw pixel scroll position lands somewhere else — the
+// verse being read must stay put. Pin the topmost visible verse across the
+// relayout and scroll by however far it moved.
+function _keepVersePosition(apply) {
+  var yRef = 4;
+  var bar = document.querySelector('.sw-top-bar');
+  if (bar) { var br = bar.getBoundingClientRect(); if (br.bottom > 0) yRef = br.bottom + 4; }
+  var anchor = null, verses = document.querySelectorAll('.verse');
+  for (var i = 0; i < verses.length; i++) {
+    var r = verses[i].getBoundingClientRect();
+    if (r.height > 0 && r.bottom > yRef) {
+      // A verse straddling the header line anchors by its BOTTOM edge — the
+      // boundary being read — so its own height change (interlinear verses
+      // are far taller than dual ones) cannot drag the next verse away.
+      var straddle = r.top < yRef;
+      anchor = { el: verses[i], pos: straddle ? r.bottom : r.top, straddle: straddle };
+      break;
+    }
+  }
+  apply();
+  if (anchor) {
+    var nr = anchor.el.getBoundingClientRect();
+    var np = anchor.straddle ? nr.bottom : nr.top;
+    if (np !== anchor.pos) window.scrollBy(0, np - anchor.pos);
+  }
+}
+
 function setMode(mode) {
+  _keepVersePosition(function() {
   document.body.classList.remove('hide-gloss', 'dual-mode');
   document.querySelectorAll('.controls-bottom button:not(#btn-translit):not(#btn-nikkud)').forEach(function(b) { b.classList.remove('active'); });
   if (mode === 'heb') {
@@ -438,16 +467,21 @@ function setMode(mode) {
   } else {
     document.getElementById('btn-inter').classList.add('active');
   }
+  });
+  try { localStorage.setItem(window.READER.vol + '-view-mode', mode || 'inter'); } catch(e) {}
 }
 
 function toggleTranslit() {
+  _keepVersePosition(function() {
   document.body.classList.toggle('hide-translit');
   var btn = document.getElementById('btn-translit');
   btn.classList.toggle('active');
   try { localStorage.setItem(window.READER.vol + '-show-translit', btn.classList.contains('active') ? '1' : '0'); } catch(e) {}
+  });
 }
 
 function toggleNoNikkud() {
+  _keepVersePosition(function() {
   window._noNikkud = !window._noNikkud;
   document.getElementById('btn-nikkud').classList.toggle('active', window._noNikkud);
   document.querySelectorAll('.word-unit').forEach(function(unit) {
@@ -464,10 +498,13 @@ function toggleNoNikkud() {
     el.textContent = window._noNikkud ? _stripNikkudDisplay(orig) : orig;
   });
   try { localStorage.setItem(window.READER.vol + '-no-nikkud', window._noNikkud ? '1' : '0'); } catch(e) {}
+  });
 }
 
 function setSize(val) {
+  _keepVersePosition(function() {
   document.getElementById('page').style.fontSize = val + '%';
+  });
   try { localStorage.setItem(window.READER.vol + '-font-size', val); } catch(e) {}
 }
 
@@ -509,4 +546,10 @@ try {
     window._noNikkud = true;
     document.getElementById('btn-nikkud').classList.add('active');
   }
+} catch(e) {}
+try {
+  // The view mode is a reading preference like the toggles above — a Dual
+  // reader must not be dropped back to interlinear on every load.
+  var _savedMode = localStorage.getItem(window.READER.vol + '-view-mode');
+  if (_savedMode === 'heb' || _savedMode === 'dual') setMode(_savedMode);
 } catch(e) {}

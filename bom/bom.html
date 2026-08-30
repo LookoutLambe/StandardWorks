@@ -4550,7 +4550,36 @@ function _ensureChapterRendered(chapId) {
   }
 }
 
+// Switching view mode (or translit/nikkud) reflows every verse above the
+// reading point, so a raw pixel scroll position lands somewhere else — the
+// verse being read must stay put. Pin the topmost visible verse across the
+// relayout and scroll by however far it moved.
+function _keepVersePosition(apply) {
+  var yRef = 4;
+  var bar = document.querySelector('.sw-top-bar');
+  if (bar) { var br = bar.getBoundingClientRect(); if (br.bottom > 0) yRef = br.bottom + 4; }
+  var anchor = null, verses = document.querySelectorAll('.verse');
+  for (var i = 0; i < verses.length; i++) {
+    var r = verses[i].getBoundingClientRect();
+    if (r.height > 0 && r.bottom > yRef) {
+      // A verse straddling the header line anchors by its BOTTOM edge — the
+      // boundary being read — so its own height change (interlinear verses
+      // are far taller than dual ones) cannot drag the next verse away.
+      var straddle = r.top < yRef;
+      anchor = { el: verses[i], pos: straddle ? r.bottom : r.top, straddle: straddle };
+      break;
+    }
+  }
+  apply();
+  if (anchor) {
+    var nr = anchor.el.getBoundingClientRect();
+    var np = anchor.straddle ? nr.bottom : nr.top;
+    if (np !== anchor.pos) window.scrollBy(0, np - anchor.pos);
+  }
+}
+
 function setMode(mode) {
+  _keepVersePosition(function() {
   document.body.classList.remove('hide-gloss', 'english-only', 'dual-mode');
   document.querySelectorAll('.controls-bottom button:not(#btn-translit)').forEach(b => b.classList.remove('active'));
 
@@ -4564,18 +4593,25 @@ function setMode(mode) {
   } else {
     document.getElementById('btn-inter').classList.add('active');
   }
+  });
+  try { localStorage.setItem('bom-view-mode', mode || 'inter'); } catch(e) {}
 }
 
 function toggleTranslit() {
+  _keepVersePosition(function() {
   document.body.classList.toggle('hide-translit');
   var btn = document.getElementById('btn-translit');
   btn.classList.toggle('active');
   try {
     localStorage.setItem('bom-show-translit', btn.classList.contains('active') ? '1' : '0');
   } catch(e) {}
+  });
 }
 
 function toggleNikkud() {
+  _keepVersePosition(_toggleNikkudBody);
+}
+function _toggleNikkudBody() {
   var isNow = document.body.classList.toggle('no-nikkud');
   document.getElementById('btn-nikkud').classList.toggle('active', isNow);
   document.querySelectorAll('.word-unit[data-h]').forEach(function(wu) {
@@ -4589,7 +4625,9 @@ function toggleNikkud() {
 }
 
 function setSize(val) {
+  _keepVersePosition(function() {
   document.getElementById('page').style.fontSize = val + '%';
+  });
   try { localStorage.setItem('bom-font-size', val); } catch(e) {}
 }
 
@@ -4608,6 +4646,12 @@ try {
     document.getElementById('btn-nikkud').classList.add('active');
     document.body.classList.add('no-nikkud');
   }
+} catch(e) {}
+// The view mode is a reading preference like the toggles above — a Dual
+// reader must not be dropped back to interlinear on every load.
+try {
+  var _savedMode = localStorage.getItem('bom-view-mode');
+  if (_savedMode === 'heb' || _savedMode === 'dual') setMode(_savedMode);
 } catch(e) {}
 </script>
 <script src="../shoroshim_roots.js?v=2"></script>
