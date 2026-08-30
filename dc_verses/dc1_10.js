@@ -526,7 +526,7 @@ var dc3_ch1Verses = [
     ["וְלֹא","and not"],
     ["יָסוּר","turns aside"],
     ["יָמִין","right"],
-    ["וּשְׂמֹאול","and left"],
+    ["וּשְׂמֹאל","and left"],
     ["וְלֹא","and not"],
     ["יִשְׁתַּנֶּה","changes"],
     ["מֵאֲשֶׁר","from what"],
