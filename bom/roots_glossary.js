@@ -29154,4 +29154,22 @@ window._rootGlossaryData = {
   ,"אז": { "meaning": "(אָז) then; (מֵאָז) since", "category": "Particle" }
   ,"גרש": { "meaning": "(גֵּרֵשׁ) to drive out; (מִגְרָשׁ) pasture lands", "category": "Action" }
   ,"לבן": { "meaning": "(לָבָן) white; Laban; (לְבָנָה) moon", "category": "Lexical" }
+  ,"אולם": { "meaning": "(אוּלָם) porch; nevertheless, but", "category": "Lexical" }
+  ,"אול": { "meaning": "(אֱוִיל) fool; (אִוֶּלֶת) folly", "category": "Quality" }
+  ,"מגדל": { "meaning": "(מִגְדָּל) tower", "category": "Lexical" }
+  ,"עֹל": { "meaning": "(עֹל) yoke", "category": "Lexical" }
+  ,"עלל": { "meaning": "(מַעֲלָל) doings, deeds", "category": "Action" }
+  ,"דרום": { "meaning": "(דָּרוֹם) south", "category": "Lexical" }
+  ,"דרר": { "meaning": "(דְּרוֹר) liberty, freedom", "category": "Lexical" }
+  ,"עובד": { "meaning": "Obed", "category": "Name" }
+  ,"חָלָב": { "meaning": "(חָלָב) milk", "category": "Lexical" }
+  ,"חלב": { "meaning": "(חֵלֶב) fat, fatness", "category": "Lexical" }
+  ,"צואר": { "meaning": "(צַוָּאר) neck", "category": "Lexical" }
+  ,"פָּרָשׁ": { "meaning": "(פָּרָשׁ) horseman", "category": "Lexical" }
+  ,"צור": { "meaning": "(צוּר) rock; (צָר) to besiege; (צוּרָה) form", "category": "Lexical" }
+  ,"שקל": { "meaning": "(שֶׁקֶל) shekel; (מִשְׁקָל) weight; (שָׁקַל) to weigh", "category": "Lexical" }
+  ,"נוח": { "meaning": "(נוּחַ) to rest; (מָנוֹחַ) resting place; Manoah; (נִיחוֹחַ) soothing aroma", "category": "Action" }
+  ,"אמם": { "meaning": "(אֵם) mother; (אַמָּה) cubit", "category": "Lexical" }
+  ,"בשר": { "meaning": "(בָּשָׂר) flesh", "category": "Lexical" }
+  ,"בעד": { "meaning": "(בְּעַד) for, on behalf of, through", "category": "Particle" }
 };

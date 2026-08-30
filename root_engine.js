@@ -708,6 +708,16 @@ function stripPrefixes(w) {
                     'H4082': 'מדינה', 'H7979': 'שולחן', 'H2275': 'חברון', 'H3844': 'לבנון',
                     'H0085': 'אברהם', 'H0087': 'אברהם', 'H4735': 'מקנה',
                     'H7927': 'שְׁכֶם', 'H8163': 'שָׂעִיר', 'H5749': 'העיד',
+                    'H0197': 'אולם',    // porch — not אֱוִיל 'fool'
+                    'H4026': 'מגדל',    // tower — not גדל 'great'
+                    'H5923': 'עֹל',      // yoke — not מעלל 'doings'
+                    'H1864': 'דרום',    // south — not דרור 'liberty'
+                    'H5744': 'עובד',    // Obed — not עבד 'serve'
+                    'H2461': 'חָלָב',    // milk — not חֵלֶב 'fat'
+                    'H6677': 'צואר',    // neck — not צור 'rock'
+                    'H6571': 'פָּרָשׁ',   // horseman — not פרש 'spread'
+                    'H5978': 'עִם',      // immadi 'with me' joins the preposition
+                    'H1319': 'בשורה',   // the preach-tidings verb joins gospel
                     'H4039': 'מגלה',   // מְגִלָּה scroll, not גלל "roll"
                     'H1551': 'גליל', 'H1552': 'גליל', 'H1553': 'גליל' }; // Galilee/regions
 

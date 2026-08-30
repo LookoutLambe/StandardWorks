@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '50';   // bump when the generated data files change
+  var RSC_V = '51';   // bump when the generated data files change
 
   var cfg = { vol: '', base: '' };
   var keyIdx = null;         // rootKey -> index, built once
@@ -64,9 +64,9 @@
     var need = [];
     if (!window._strongsLookup)   need.push('strongs_lookup.js');
     if (!window._strongsRoots)    need.push('strongs_roots.js');
-    if (!window._bdbRoots)        need.push('bdb_roots.js?v=2');
-    if (!window._rootProperNames) need.push('root_names.js?v=12');
-    if (!window._shoroshimRoots)  need.push('shoroshim_roots.js?v=2');
+    if (!window._bdbRoots)        need.push('bdb_roots.js?v=3');
+    if (!window._rootProperNames) need.push('root_names.js?v=13');
+    if (!window._shoroshimRoots)  need.push('shoroshim_roots.js?v=3');
     if (!window._rootGlossaryData) need.push('bom/roots_glossary.js?v=' + RSC_V);
     if (!need.length) { cb(); return; }
     var n = 0;
