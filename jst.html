@@ -1343,7 +1343,7 @@ body:not(.hide-sel-toolbar) #main-content{padding-right:60px!important;}
 @media (max-width:600px){body:not(.hide-sel-toolbar) #main-content{padding-right:52px!important;}}
 </style>
 <link rel="stylesheet" href="nav_engine.css?v=29">
-<link rel="stylesheet" href="site_chrome.css?v=39">
+<link rel="stylesheet" href="site_chrome.css?v=40">
 <link rel="stylesheet" href="xref_study_panel.css?v=8">
 </head>
 <body>
@@ -1465,14 +1465,14 @@ body:not(.hide-sel-toolbar) #main-content{padding-right:60px!important;}
 <!-- Selection Toolbar -->
 <div id="sel-toolbar">
   <button id="sel-btn-close" onclick="toggleFloatingSelToolbar(event)" title="Hide tools — reopen from the tab at the screen edge" aria-label="Hide study tools">✕</button>
-  <button id="sel-btn-highlight" onclick="selToolbarToggleColors()" title="Highlight">🖍</button>
-  <button id="sel-btn-note" onclick="selToolbarOpenNote()" title="Note">✎</button>
-  <button id="sel-btn-copy" onclick="selToolbarCopy()" title="Copy">📋</button>
-  <button id="sel-btn-share" onclick="selToolbarShare()" title="Share">↗</button>
-  <button id="sel-btn-delete" onclick="selToolbarClearAll()" title="Clear">🗑</button>
-  <button id="sel-btn-xref" onclick="selToolbarXref()" title="Cross-References">🔗</button>
-  <button id="sel-btn-glossary" onclick="closePopup();openGlossary()" title="Glossary">📖</button>
-  <button id="sel-btn-annotations" onclick="openAnnotationsPanel()" title="Annotations">📝</button>
+  <button id="sel-btn-highlight" onclick="selToolbarToggleColors()" title="Highlight" aria-label="Highlight">🖍</button>
+  <button id="sel-btn-note" onclick="selToolbarOpenNote()" title="Note" aria-label="Note">✎</button>
+  <button id="sel-btn-copy" onclick="selToolbarCopy()" title="Copy" aria-label="Copy">📋</button>
+  <button id="sel-btn-share" onclick="selToolbarShare()" title="Share" aria-label="Share">↗</button>
+  <button id="sel-btn-delete" onclick="selToolbarClearAll()" title="Clear" aria-label="Clear annotations">🗑</button>
+  <button id="sel-btn-xref" onclick="selToolbarXref()" title="Cross-References" aria-label="Cross-references">🔗</button>
+  <button id="sel-btn-glossary" onclick="closePopup();openGlossary()" title="Glossary" aria-label="Glossary">📖</button>
+  <button id="sel-btn-annotations" onclick="openAnnotationsPanel()" title="Annotations" aria-label="Annotations">📝</button>
   <div id="sel-subpanel">
     <div class="sel-color-row">
       <span class="sel-color-row-label">HL</span>
@@ -2761,7 +2761,7 @@ window.addEventListener('resize', function() {
     </table>
   </div>
 </div>
-<script src="site_chrome.js?v=33" data-sw-volume="jst"></script>
+<script src="site_chrome.js?v=34" data-sw-volume="jst"></script>
 <script src="verse_search.js?v=3"></script>
 <script src="nav_engine.js?v=41"></script>
 <script>

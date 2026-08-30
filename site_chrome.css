@@ -375,3 +375,19 @@ body.has-sw-chrome.sw-chrome-reader #main-content { transition: padding-top 0.28
 /* Double-tap collapse keeps the chapter dock (הבא · chapter · הקודם) —
    user ruling 2026-08-30: "keep this footer bar but everything else can
    collapse". Header, mode bar and volume row hide; the dock stays. */
+
+/* ── UX audit 2026-08-30 ─────────────────────────────────────────────── */
+/* Respect the OS reduced-motion setting: page turns become instant. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* 44px touch minimums on coarse pointers only — desktop keeps its density. */
+@media (pointer: coarse) {
+  .controls-bottom button { min-height: 44px; }
+  .sel-color, .sel-eraser { width: 32px !important; height: 32px !important; margin: 5px !important; }
+}

@@ -210,6 +210,30 @@
     ensureHomeLink();
     ensurePrintLink();
 
+  // ── Keyboard access (ui-ux audit 2026-08-30): the landing grids are
+  // onclick divs/spans — invisible to Tab. Make every clickable non-control
+  // focusable and Enter/Space-activatable. Runs late so generated landings
+  // (the canon buildPages, D&C sections) are enhanced too.
+  function enhanceClickables() {
+    document.querySelectorAll('[onclick]:not(a):not(button):not(input):not(select):not(textarea):not([tabindex])').forEach(function (el) {
+      el.setAttribute('tabindex', '0');
+      if (!el.getAttribute('role')) el.setAttribute('role', 'button');
+    });
+  }
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var el = e.target;
+    if (!el || !el.getAttribute || !el.getAttribute('onclick')) return;
+    if (['A', 'BUTTON', 'INPUT', 'SELECT', 'TEXTAREA'].indexOf(el.tagName) >= 0) return;
+    e.preventDefault();
+    el.click();
+  });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { setTimeout(enhanceClickables, 400); });
+  else setTimeout(enhanceClickables, 400);
+  setTimeout(enhanceClickables, 2500);
+  window.addEventListener('hashchange', function () { setTimeout(enhanceClickables, 300); });
+
+
 
 
 
