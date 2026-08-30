@@ -1460,7 +1460,7 @@ var dc6_ch1Verses = [
     ["אִם","if"],
     ["תִּשְׁאַל","you ask"],
     ["מִמֶּנִּי","of me"],
-    ["יִנָּתֶן","it shall be given"],
+    ["יִנָּתֵן","it shall be given"],
     ["לְךָ","to you"],
     ["וְאִם","and if"],
     ["תִּדְפֹּק","you knock"],
@@ -1959,7 +1959,7 @@ var dc7_ch1Verses = [
     ["תִּשְׁאַל","you ask"],
     ["כׇּל־אֲשֶׁר","whatever"],
     ["תַּחְפֹּץ","you will"],
-    ["יִנָּתֶן","it shall be given"],
+    ["יִנָּתֵן","it shall be given"],
     ["לְךָ׃","to you"]
   ]},
   { num: "ב", words: [
