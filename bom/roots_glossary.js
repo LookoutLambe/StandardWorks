@@ -20530,11 +20530,11 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "חלל": {
-    "meaning": "(הֵחֵל) to begin; (חִלֵּל) to profane; (חָלַל) to pierce",
+    "meaning": "to begin",
     "category": "Lexical"
   },
   "H2490": {
-    "meaning": "(הֵחֵל) to begin; (חִלֵּל) to profane; (חָלַל) to pierce",
+    "meaning": "to begin",
     "category": "Lexical"
   },
   "H2506": {
