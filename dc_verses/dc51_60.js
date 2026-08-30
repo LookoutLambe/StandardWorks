@@ -721,8 +721,8 @@ var dc52_ch1Verses = [
     ["וַאֲשֶׁר","and that which"],
     ["רָאוּ","they have seen"],
     ["וְשָׁמְעוּ","and heard"],
-    ["וּבָטְחוּ","and trust"],
-    ["בֶּאֱמֶת","in truth"],
+    ["וְהַאֲמֵן","and most assuredly"],
+    ["יַאֲמִינוּ","believe"],
     ["לְמַעַן","that"],
     ["יִמָּלְאוּ","may be fulfilled"],
     ["הַנְּבוּאוֹת׃","the prophecies"]
@@ -2538,8 +2538,8 @@ var dc58_ch1Verses = [
     ["עַל","of"],
     ["אֲשֶׁר","that which"],
     ["יוֹדֵעַ","he knows"],
-    ["וּמַאֲמִין","and believes"],
-    ["בְּבִטְחָה׃","most assuredly"]
+    ["וְהַאֲמֵן","and most assuredly"],
+    ["יַאֲמִין׃","believes"]
   ]},
   { num: "ס", words: [["אֲשֶׁר","that which"], ["נִתַּן","has been bestowed"], ["לְצִיבָא","upon Ziba"], ["פֶּטֶרְסוֹן","Peterson"], ["יֻקַּח","let it be taken"], ["מִמֶּנּוּ","from him"], ["וְיַעֲמֹד","and let him stand"], ["כְּחָבֵר","as a member"], ["בַּכְּנֵסִיָּה","in the church"], ["וְיַעֲבֹד","and labor"], ["בְּיָדָיו","with his own hands"], ["עִם","with"], ["הָאַחִים","the brethren"], ["עַד","until"], ["אֲשֶׁר","that"], ["יִוָּסֶר","he is chastened"], ["דַּיּוֹ","sufficiently"], ["בְּעַד","for"], ["כׇּל","all"], ["חֲטָאָיו","his sins"], ["כִּי","for"], ["אֵינֶנּוּ","he does not"], ["מִתְוַדֶּה","confess"], ["עֲלֵיהֶם","them"], ["וְחוֹשֵׁב","and thinks"], ["לְהַסְתִּירָם׃","to hide them"]]},
   { num: "סא", words: [["שְׁאָר","let the residue of"], ["זִקְנֵי","the elders of"], ["הַכְּנֵסִיָּה","the church"], ["הַזֹּאת","this"], ["הַבָּאִים","who are coming"], ["לָאָרֶץ","to the land"], ["הַזֹּאת","this"], ["אֲשֶׁר","of whom"], ["מֵהֶם","some"], ["מְבֹרָכִים","are blessed"], ["עַד","even"], ["מְאֹד","exceedingly"], ["יַעֲשׂוּ","let them hold"], ["גַם","also"], ["אֲסֵפָה","a conference"], ["בָּאָרֶץ","in the land"], ["הַזֹּאת׃","this"]]},

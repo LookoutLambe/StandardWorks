@@ -1034,8 +1034,8 @@ var dc5_ch1Verses = [
     ["בְּיָדֶךָ׃","through your hand"]
   ]},
   { num: "יב", words: [
-    ["אָכֵן","surely"],
-    ["יָדֹעַ","assuredly"],
+    ["אָכֵן","yea"],
+    ["יָדֹעַ","of a surety"],
     ["יֵדְעוּ","they shall know"],
     ["כִּי","that"],
     ["אֱמֶת","truth"],
@@ -1222,7 +1222,7 @@ var dc5_ch1Verses = [
     ["חָפֵץ","desires"],
     ["לִרְאוֹת׃","to see"]
   ]},
-  { num: "כה", words: [["וְאָז","and then"], ["יֹאמַר","he shall say"], ["לְעַם","to people of"], ["הַדּוֹר","the generation"], ["הַזֶּה","this"], ["הִנֵּה","behold"], ["רָאִיתִי","I have seen"], ["אֶת־הַדְּבָרִים","the things"], ["אֲשֶׁר","which"], ["הֶרְאָה","has shown"], ["יְהוָה","the LORD"], ["אֶת־יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["וְיָדֹעַ","and assuredly"], ["יָדַעְתִּי","I know"], ["כִּי","that"], ["אֱמֶת","truth"], ["הֵם","they are"], ["כִּי","for"], ["רְאִיתִים","I have seen them"], ["כִּי","for"], ["הָרְאוּ","they have been shown"], ["לִי","to me"], ["בִּגְבוּרַת","by might of"], ["אֵל","God"], ["וְלֹא","and not"], ["בְכֹחַ","by power of"], ["אָדָם׃","man"]]},
+  { num: "כה", words: [["וְאָז","and then"], ["יֹאמַר","he shall say"], ["לְעַם","to people of"], ["הַדּוֹר","the generation"], ["הַזֶּה","this"], ["הִנֵּה","behold"], ["רָאִיתִי","I have seen"], ["אֶת־הַדְּבָרִים","the things"], ["אֲשֶׁר","which"], ["הֶרְאָה","has shown"], ["יְהוָה","the LORD"], ["אֶת־יוֹסֵף","Joseph"], ["סְמִית","Smith"], ["הַבֵּן","Jun."], ["וְיָדֹעַ","and of a surety"], ["יָדַעְתִּי","I know"], ["כִּי","that"], ["אֱמֶת","truth"], ["הֵם","they are"], ["כִּי","for"], ["רְאִיתִים","I have seen them"], ["כִּי","for"], ["הָרְאוּ","they have been shown"], ["לִי","to me"], ["בִּגְבוּרַת","by might of"], ["אֵל","God"], ["וְלֹא","and not"], ["בְכֹחַ","by power of"], ["אָדָם׃","man"]]},
   { num: "כו", words: [
     ["וַאֲנִי","and I"],
     ["יְהוָה","the LORD"],
@@ -2095,7 +2095,8 @@ var dc8_ch1Verses = [
     ["יְהוָה","the LORD"],
     ["אֱלֹהֶיךָ","your God"],
     ["וְגֹאֲלֶךָ","and your Redeemer"],
-    ["כִּי","so surely"],
+    ["כִּי","even so"],
+    ["קָבֹל","surely"],
     ["תְּקַבֵּל","you shall receive"],
     ["דַּעַת","knowledge of"],
     ["כׇּל־אֲשֶׁר","whatever"],

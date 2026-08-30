@@ -945,9 +945,9 @@ var dc35_ch1Verses = [
     ["עִמְּךָ","with you"],
     ["אַל","not"],
     ["תַּעַזְבֵהוּ","forsake him"],
-    ["וְאָכֵן","and surely"],
-    ["הַדְּבָרִים","the things"],
+    ["וְהַדְּבָרִים","and the things"],
     ["הָאֵלֶּה","these"],
+    ["קוֹם","surely"],
     ["יָקוּמוּ׃","shall be fulfilled"]
   ]},
   { num: "כג", words: [["וּבְעֵת","and in the time"], ["אֲשֶׁר","that"], ["לֹא","not"], ["תִכְתֹּב","you do write"], ["הִנֵּה","behold"], ["יִנָּתֵן","it shall be given"], ["לוֹ","unto him"], ["לְהִנָּבֵא","to prophesy"], ["וְאַתָּה","and you"], ["תַּטִּיף","shall preach"], ["בְּשׂוֹרָתִי","my gospel"], ["וְתִקְרָא","and call"], ["אֶל","on"], ["נְבִיאֵי","the prophets of"], ["הַקֹּדֶשׁ","the holy"], ["לְהוֹכִיחַ","to prove"], ["דְּבָרָיו","his words"], ["כַּאֲשֶׁר","as"], ["יִנָּתְנוּ","they shall be given"], ["לוֹ׃","him"]]},
