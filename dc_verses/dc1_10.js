@@ -1506,8 +1506,7 @@ var dc6_ch1Verses = [
   ]},
   { num: "י", words: [
     ["הִנֵּה","behold"],
-    ["יֶשׁ","there is"],
-    ["לְךָ","to you"],
+    ["יֶשׁ־לְךָ","there is to you"],
     ["מַתָּנָה","a gift"],
     ["וּבָרוּךְ","and blessed"],
     ["אַתָּה","you"],
@@ -1759,7 +1758,7 @@ var dc6_ch1Verses = [
     ["רִשְׁעַת","wickedness of"],
     ["הָעָם׃","the people"]
   ]},
-  { num: "כז", words: [["וְעַתָּה","and now"], ["אֲנִי","I"], ["מְצַוֶּה","command"], ["אוֹתְךָ","you"], ["אִם","if"], ["יֵשׁ","there are"], ["לְךָ","to you"], ["חֲפָצִים","desires"], ["טוֹבִים","good"], ["חֵפֶץ","a desire"], ["לֶאֱצֹר","to lay up"], ["אוֹצָר","a treasure"], ["בַּשָּׁמַיִם","in heavens"], ["אָז","then"], ["תַּעֲזֹר","you shall assist"], ["לְהוֹצִיא","to bring forth"], ["לָאוֹר","to light"], ["בְּמַתָּנָתְךָ","with your gift"], ["חֶלְקֵי","parts of"], ["כִתְבֵי","the scriptures of"], ["הַקֹּדֶשׁ","the holy"], ["הַנִּסְתָּרִים","the hidden"], ["בִּגְלַל","because of"], ["עָוֹן׃","iniquity"]]},
+  { num: "כז", words: [["וְעַתָּה","and now"], ["אֲנִי","I"], ["מְצַוֶּה","command"], ["אוֹתְךָ","you"], ["אִם","if"], ["יֶשׁ־לְךָ","there are to you"], ["חֲפָצִים","desires"], ["טוֹבִים","good"], ["חֵפֶץ","a desire"], ["לֶאֱצֹר","to lay up"], ["אוֹצָר","a treasure"], ["בַּשָּׁמַיִם","in heavens"], ["אָז","then"], ["תַּעֲזֹר","you shall assist"], ["לְהוֹצִיא","to bring forth"], ["לָאוֹר","to light"], ["בְּמַתָּנָתְךָ","with your gift"], ["חֶלְקֵי","parts of"], ["כִתְבֵי","the scriptures of"], ["הַקֹּדֶשׁ","the holy"], ["הַנִּסְתָּרִים","the hidden"], ["בִּגְלַל","because of"], ["עָוֹן׃","iniquity"]]},
   { num: "כח", words: [
     ["וְעַתָּה","and now"],
     ["הִנֵּה","behold"],
@@ -2176,8 +2175,7 @@ var dc8_ch1Verses = [
     ["לֹא","not"],
     ["כׇל־מַתָּנָתְךָ","all of your gift"],
     ["כִּי","for"],
-    ["יֶשׁ","there is"],
-    ["לְךָ","to you"],
+    ["יֶשׁ־לְךָ","there is to you"],
     ["מַתָּנָה","a gift"],
     ["אַחֶרֶת","other"],
     ["הִיא","it is"],
@@ -2269,8 +2267,7 @@ var dc9_ch1Verses = [
   { num: "ב", words: [
     ["וְאַחַר","and afterward"],
     ["הִנֵּה","behold"],
-    ["יֵשׁ","there are"],
-    ["לִי","to me"],
+    ["יֶשׁ־לִי","there are to me"],
     ["כְתָבִים","records"],
     ["אֲחֵרִים","other"],
     ["אֲשֶׁר","that"],
@@ -3309,8 +3306,7 @@ var dc10_ch1Verses = [
     ["אָמַרְתִּי","said"],
     ["צֹאן","sheep"],
     ["אֲחֵרוֹת","other"],
-    ["יֶשׁ","there are"],
-    ["לִי","to me"],
+    ["יֶשׁ־לִי","there are to me"],
     ["אֲשֶׁר","which"],
     ["אֵינָן","are not"],
     ["מִן","of"],

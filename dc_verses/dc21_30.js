@@ -1014,8 +1014,8 @@ var dc29_ch1Verses = [
     ["מִיַּד","at the hand of"],
     ["אֲבוֹתֵיהֶם׃","their fathers"]
   ]},
-  { num: "מט", words: [["וְעוֹד","and again"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["מִי","whoso"], ["אֲשֶׁר","who"], ["יֵשׁ","there is"], ["לוֹ","to him"], ["דַּעַת","knowledge"], ["הֲלֹא","have I not"], ["צִוִּיתִיו","commanded him"], ["לָשׁוּב׃","to repent"]]},
-  { num: "נ", words: [["וּמִי","and he that"], ["אֲשֶׁר","who"], ["אֵין","there is no"], ["לוֹ","to him"], ["בִינָה","understanding"], ["נִשְׁאָר","it remains"], ["בִּי","in me"], ["לַעֲשׂוֹת","to do"], ["כַּכָּתוּב","according as it is written"], ["וְעַתָּה","and now"], ["לֹא","not"], ["אַשְׁמִיעַ","I declare"], ["לָכֶם","unto you"], ["עוֹד","more"], ["בָּעֵת","at time"], ["הַזֹּאת","this"], ["אָמֵן׃","Amen"]]}
+  { num: "מט", words: [["וְעוֹד","and again"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["מִי","whoso"], ["אֲשֶׁר","who"], ["יֶשׁ־לוֹ","there is to him"], ["דַּעַת","knowledge"], ["הֲלֹא","have I not"], ["צִוִּיתִיו","commanded him"], ["לָשׁוּב׃","to repent"]]},
+  { num: "נ", words: [["וּמִי","and he that"], ["אֲשֶׁר","who"], ["אֵין־לוֹ","there is no to him"], ["בִינָה","understanding"], ["נִשְׁאָר","it remains"], ["בִּי","in me"], ["לַעֲשׂוֹת","to do"], ["כַּכָּתוּב","according as it is written"], ["וְעַתָּה","and now"], ["לֹא","not"], ["אַשְׁמִיעַ","I declare"], ["לָכֶם","unto you"], ["עוֹד","more"], ["בָּעֵת","at time"], ["הַזֹּאת","this"], ["אָמֵן׃","Amen"]]}
 ];
 renderVerseSet(dc29_ch1Verses, 'dc29-ch1-verses');
 

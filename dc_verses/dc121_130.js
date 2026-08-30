@@ -1574,8 +1574,7 @@ var dc124_ch1Verses = [
     ["וּבְאַהֲבָתוֹ","And for his love"],
     ["יִגְדַּל","he shall be great,"],
     ["כִּי","for"],
-    ["יִהְיֶה","shall be"],
-    ["לִי","mine"],
+    ["יִהְיֶה־לִּי","shall be mine"],
     ["אִם","if"],
     ["יַעֲשֶׂה","he do"],
     ["כֵן","so"],
@@ -3408,8 +3407,7 @@ var dc124_ch1Verses = [
     ["אֲנִי","I"],
     ["אֹמֵר","say"],
     ["לָכֶם","unto you,"],
-    ["יֵשׁ","I have"],
-    ["לִי","for me"],
+    ["יֶשׁ־לִי","I have for me"],
     ["מִשְׁלַחַת","a mission"],
     ["צְפוּנָה","in store"],
     ["לְעַבְדִּי","for my servant"],
@@ -5628,8 +5626,7 @@ var dc129_ch1Verses = [
     ["וּרְאוּ","and see,"],
     ["כִּי","for"],
     ["רוּחַ","a spirit"],
-    ["אֵין","has not"],
-    ["לוֹ","to it"],
+    ["אֵין־לוֹ","has not to it"],
     ["בָּשָׂר","flesh"],
     ["וַעֲצָמוֹת","and bones,"],
     ["כַּאֲשֶׁר","as"],
@@ -5772,8 +5769,7 @@ var dc130_ch1Verses = [
     ["בְּכָבוֹד","coupled with glory"],
     ["עוֹלָם","eternal,"],
     ["אֲשֶׁר","which"],
-    ["אֵין","we have not"],
-    ["לָנוּ","unto us"],
+    ["אֵין־לָנוּ","we have not unto us"],
     ["עַתָּה׃","now enjoy."]
   ]},
   { num: "ג", words: [
@@ -6108,7 +6104,7 @@ var dc130_ch1Verses = [
     ["הַבְּרָכָה","the blessing"],
     ["תְלוּיָה׃","it is predicated."]
   ]},
-  { num: "כב", words: [["לָאָב","The Father has"], ["גּוּף","a body"], ["בָּשָׂר","of flesh"], ["וַעֲצָמוֹת","and bones"], ["כְּגוּף","as the body of"], ["הָאָדָם","man;"], ["וְכֵן","also;"], ["לַבֵּן","the Son"], ["אַךְ","but"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["אֵין","has not"], ["לוֹ","to him"], ["גּוּף","a body"], ["בָּשָׂר","of flesh"], ["וַעֲצָמוֹת","and bones,"], ["כִּי","but is"], ["רוּחַ","a personage of Spirit"], ["הוּא","he is."], ["וְאִלּוּלֵי","Were it not"], ["כֵן","so,"], ["לֹא","not"], ["יָכֹל","could he"], ["לִשְׁכֹּן","dwell"], ["בָּנוּ׃","in us."]]},
+  { num: "כב", words: [["לָאָב","The Father has"], ["גּוּף","a body"], ["בָּשָׂר","of flesh"], ["וַעֲצָמוֹת","and bones"], ["כְּגוּף","as the body of"], ["הָאָדָם","man;"], ["וְכֵן","also;"], ["לַבֵּן","the Son"], ["אַךְ","but"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["אֵין־לוֹ","has not to him"], ["גּוּף","a body"], ["בָּשָׂר","of flesh"], ["וַעֲצָמוֹת","and bones,"], ["כִּי","but is"], ["רוּחַ","a personage of Spirit"], ["הוּא","he is."], ["וְאִלּוּלֵי","Were it not"], ["כֵן","so,"], ["לֹא","not"], ["יָכֹל","could he"], ["לִשְׁכֹּן","dwell"], ["בָּנוּ׃","in us."]]},
   { num: "כג", words: [["אָדָם","A man"], ["יָכוֹל","may"], ["לְקַבֵּל","receive"], ["אֶת־רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["וְיֵרֵד","and it may descend"], ["עָלָיו","upon him"], ["וְלֹא","and not"], ["יִשְׁכֹּן","tarry"], ["עִמּוֹ׃","with him."]]}
 ];
 renderVerseSet(dc130_ch1Verses, 'dc130-ch1-verses');

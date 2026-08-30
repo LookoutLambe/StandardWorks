@@ -91,8 +91,7 @@ var dc11_ch1Verses = [
   ]},
   { num: "י", words: [
     ["הִנֵּה","behold"],
-    ["יֶשׁ","there is"],
-    ["לְךָ","to you"],
+    ["יֶשׁ־לְךָ","there is to you"],
     ["מַתָּנָה","a gift"],
     ["אוֹ","or"],
     ["תִהְיֶה־לְּךָ","there shall be to you"],

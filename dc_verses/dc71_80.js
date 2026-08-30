@@ -222,8 +222,7 @@ var dc72_ch1Verses = [
   { num: "יב", words: [["לְמַעַן","that"], ["יֻקְדַּשׁ","may be consecrated"], ["גַּם","also"], ["זֶה","this"], ["לְטוֹבַת","unto the good of"], ["הַכְּנֵסִיָּה","the church"], ["לָעֲנִיִּים","unto the poor"], ["וְלָאֶבְיוֹנִים׃","and needy"]]},
   { num: "יג", words: [
     ["וַאֲשֶׁר","and he who"],
-    ["אֵין","has not"],
-    ["לוֹ","unto him"],
+    ["אֵין־לוֹ","has not unto him"],
     ["בַּמֶּה","wherewith"],
     ["לְשַׁלֵּם","to pay"],
     ["יִלָּקַח","shall be taken"],

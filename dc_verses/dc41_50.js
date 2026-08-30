@@ -321,7 +321,7 @@ var dc42_ch1Verses = [
     ["יְהִי","be it"],
     ["אָמֵן׃","Amen"]
   ]},
-  { num: "יא", words: [["עוֹד","again"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["לֹא","not"], ["יִנָּתֵן","that it shall be given"], ["לְאִישׁ","to any one"], ["לָצֵאת","to go forth"], ["לְהַטִּיף","to preach"], ["בְּשׂוֹרָתִי","my gospel"], ["אוֹ","or"], ["לִבְנוֹת","to build up"], ["כְּנֵסִיָּתִי","my church"], ["זוּלָתִי","except"], ["אִם","if"], ["נִסְמַךְ","he be ordained"], ["בְּיַד","by"], ["מִי","some one"], ["אֲשֶׁר","who"], ["יֶשׁ","there is"], ["לוֹ","to him"], ["שִׁלְטוֹן","authority"], ["וְנוֹדָע","and it is known"], ["לַכְּנֵסִיָּה","to the church"], ["כִּי","that"], ["יֶשׁ","there is"], ["לוֹ","to him"], ["שִׁלְטוֹן","authority"], ["וְנִסְמַךְ","and has been ordained"], ["כַּמִּשְׁפָּט","regularly"], ["בִּידֵי","by"], ["רָאשֵׁי","the heads of"], ["הַכְּנֵסִיָּה׃","the church"]]},
+  { num: "יא", words: [["עוֹד","again"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["לֹא","not"], ["יִנָּתֵן","that it shall be given"], ["לְאִישׁ","to any one"], ["לָצֵאת","to go forth"], ["לְהַטִּיף","to preach"], ["בְּשׂוֹרָתִי","my gospel"], ["אוֹ","or"], ["לִבְנוֹת","to build up"], ["כְּנֵסִיָּתִי","my church"], ["זוּלָתִי","except"], ["אִם","if"], ["נִסְמַךְ","he be ordained"], ["בְּיַד","by"], ["מִי","some one"], ["אֲשֶׁר","who"], ["יֶשׁ־לוֹ","there is to him"], ["שִׁלְטוֹן","authority"], ["וְנוֹדָע","and it is known"], ["לַכְּנֵסִיָּה","to the church"], ["כִּי","that"], ["יֶשׁ־לוֹ","there is to him"], ["שִׁלְטוֹן","authority"], ["וְנִסְמַךְ","and has been ordained"], ["כַּמִּשְׁפָּט","regularly"], ["בִּידֵי","by"], ["רָאשֵׁי","the heads of"], ["הַכְּנֵסִיָּה׃","the church"]]},
   { num: "יב", words: [["וְעוֹד","and again"], ["זִקְנֵי","the elders"], ["הַכְּנֵסִיָּה","of the church"], ["הַזֹּאת","this"], ["וְהַכֹּהֲנִים","and the priests"], ["וְהַמּוֹרִים","and teachers"], ["יְלַמְּדוּ","shall teach"], ["עִקְּרֵי","the principles of"], ["בְּשׂוֹרָתִי","my gospel"], ["הַכְּתוּבִים","which are written"], ["בַּמִּקְרָא","in the Bible"], ["וּבְסֵפֶר","and the Book of"], ["מוֹרְמוֹן","Mormon"], ["אֲשֶׁר","which"], ["בָּהֶם","in them"], ["מְלֹא","is the fulness of"], ["הַבְּשׂוֹרָה׃","the gospel"]]},
   { num: "יג", words: [["וְיִשְׁמְרוּ","and they shall observe"], ["אֶת־הַבְּרִיתוֹת","the covenants"], ["וְחֻקֵּי","and articles of"], ["הַכְּנֵסִיָּה","the church"], ["לַעֲשׂוֹתָם","to do them"], ["וְאֵלֶּה","and these"], ["יִהְיוּ","shall be"], ["תּוֹרוֹתֵיהֶם","their teachings"], ["כַּאֲשֶׁר","as"], ["יִנָּהֲגוּ","they shall be directed"], ["בְּיַד","by"], ["הָרוּחַ׃","the Spirit"]]},
   { num: "יד", words: [
@@ -1043,8 +1043,7 @@ var dc42_ch1Verses = [
     ["הָאָרֶץ","the land"],
     ["כִּי","for"],
     ["זָכוֹר","remember"],
-    ["אֵין","there is no"],
-    ["לוֹ","to him"],
+    ["אֵין־לוֹ","there is no to him"],
     ["סְלִיחָה","forgiveness"],
     ["וְיוֹכַח","and it shall be proved"],
     ["כְּחֻקֵּי","according to the laws of"],
