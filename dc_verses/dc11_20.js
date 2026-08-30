@@ -146,7 +146,7 @@ var dc11_ch1Verses = [
     ["לְהַצְנֵעַ","to walk"],
     ["לֶכֶת","humbly"],
     ["לִשְׁפֹּט","to judge"],
-    ["בְּיֹשֶׁר","uprightly"],
+    ["צֶדֶק","righteously"],
     ["וְזֹאת","and this is"],
     ["רוּחִי׃","my Spirit"]
   ]},
