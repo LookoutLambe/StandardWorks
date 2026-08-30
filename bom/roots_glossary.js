@@ -27768,7 +27768,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "אהה": {
-    "meaning": "Ahah",
+    "meaning": "(אֲהָהּ) alas!",
     "category": "Uncategorized"
   },
   "יללת": {
@@ -29052,4 +29052,48 @@ window._rootGlossaryData = {
   ,"ברנבא": { "meaning": "(בַּר־נַבָּא) Barnabas", "category": "Name" }
   ,"H3426": { "meaning": "(יֵשׁ) there is, there are; (יֶשׁ־לְךָ) you have", "category": "Particle" }
   ,"הֵנָּה": { "meaning": "(הֵנָּה) they (f.); hither, thither", "category": "Particle" }
+  ,"יהוה": { "meaning": "the LORD, GOD — the Tetragrammaton, the divine name", "category": "Name" }
+  ,"זכריה": { "meaning": "Zechariah", "category": "Name" }
+  ,"נתניה": { "meaning": "Nethaniah", "category": "Name" }
+  ,"שמיר": { "meaning": "(שָׁמִיר) brier, thorn; adamant", "category": "Lexical" }
+  ,"חצוצרה": { "meaning": "(חֲצֹצְרָה) trumpet", "category": "Lexical" }
+  ,"מצור": { "meaning": "(מָצוֹר) siege, entrenchment", "category": "Lexical" }
+  ,"מילה": { "meaning": "(מִילָה) circumcision", "category": "Lexical" }
+  ,"שעורה": { "meaning": "(שְׂעֹרָה) barley", "category": "Lexical" }
+  ,"נָדָב": { "meaning": "Nadab", "category": "Name" }
+  ,"יְפֻנֶּה": { "meaning": "Jephunneh", "category": "Name" }
+  ,"מָכִיר": { "meaning": "Machir", "category": "Name" }
+  ,"שְׂרָיָה": { "meaning": "Seraiah; (שְׂרָיָה) Sariah", "category": "Name" }
+  ,"יָבֵשׁ": { "meaning": "Jabesh", "category": "Name" }
+  ,"עוֹג": { "meaning": "Og", "category": "Name" }
+  ,"קָרֵחַ": { "meaning": "Kareah", "category": "Name" }
+  ,"H8659": { "meaning": "Tarshish; (תַּרְשִׁישׁ) also a gem, beryl", "category": "Name" }
+  ,"H2742": { "meaning": "(חָרוּץ) diligent; sharp; decreed; gold", "category": "Lexical" }
+  ,"H2513": { "meaning": "(חֶלְקָה) parcel, plot of ground; Helkath", "category": "Lexical" }
+  ,"H2493": { "meaning": "(חֵלֶם) dream (Aramaic)", "category": "Lexical" }
+  ,"H6147": { "meaning": "Er; (עֵר) awake, watchful", "category": "Name" }
+  ,"H4176": { "meaning": "(מוֹרֶה) teacher; Moreh; Cumorah", "category": "Name" }
+  ,"H7453": { "meaning": "(רֵעַ) friend, neighbor", "category": "Lexical" }
+  ,"H0296": { "meaning": "Ahikam", "category": "Name" }
+  ,"H4317": { "meaning": "Michael", "category": "Name" }
+  ,"H4321": { "meaning": "Micaiah", "category": "Name" }
+  ,"H2371": { "meaning": "Hazael", "category": "Name" }
+  ,"H7526": { "meaning": "Rezin", "category": "Name" }
+  ,"H0302": { "meaning": "Ahithophel", "category": "Name" }
+  ,"H4324": { "meaning": "Michal", "category": "Name" }
+  ,"H0281": { "meaning": "Ahijah", "category": "Name" }
+  ,"H0475": { "meaning": "Eliashib", "category": "Name" }
+  ,"H2696": { "meaning": "Hezron", "category": "Name" }
+  ,"H5617": { "meaning": "Sepharvaim", "category": "Name" }
+  ,"נטה": { "meaning": "(נָטָה) to stretch out, incline, turn aside", "category": "Action" }
+  ,"יסף": { "meaning": "(יָסַף) to add, continue, do again", "category": "Action" }
+  ,"יפה": { "meaning": "(יָפֶה) beautiful, fair", "category": "Quality" }
+  ,"מולק": { "meaning": "(מוּלֵק) Mulek — son of Zedekiah", "category": "Name" }
+  ,"מדוני": { "meaning": "(מִדּוֹנִי) Middoni", "category": "Name" }
+  ,"סהר": { "meaning": "(סֹהַר) prison, round-house", "category": "Lexical" }
+  ,"רען": { "meaning": "(רַעֲנָן) green, luxuriant, flourishing", "category": "Quality" }
+  ,"נחץ": { "meaning": "(נָחוּץ) necessary, urgent", "category": "Quality" }
+  ,"ציה": { "meaning": "(צִיָּה) dry land, drought", "category": "Lexical" }
+  ,"רעי": { "meaning": "(רֵעַ) friend; (רְעִי) pasture", "category": "Lexical" }
+  ,"חרץ": { "meaning": "(חָרַץ) to decide, determine; (חָרוּץ) diligent, sharp; gold", "category": "Action" }
 };
