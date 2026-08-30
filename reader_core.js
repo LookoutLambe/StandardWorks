@@ -508,6 +508,63 @@ function setSize(val) {
   try { localStorage.setItem(window.READER.vol + '-font-size', val); } catch(e) {}
 }
 
+// === READING POSITION MEMORY ===
+// The verse at the top of the view is saved as the reader scrolls; the next
+// visit to the same chapter resumes there instead of at the chapter top.
+(function() {
+  // Verse-based restore is reflow-proof where the browser's pixel restore is
+  // not (a mode/font change reflows the chapter) — take over restoration.
+  try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
+  var t = null;
+  window.addEventListener('scroll', function() {
+    if (t) return;
+    t = setTimeout(function() {
+      t = null;
+      try {
+        // our own restore scrolls must not re-save: the shifted layout would
+        // save a different verse and the settle passes would ratchet away
+        if (window._rpQuiet && Date.now() < window._rpQuiet) return;
+        var chap = window.currentChapterId;
+        if (!chap) return;
+        var panel = document.getElementById(chap + '-verses');
+        if (!panel || panel.offsetHeight === 0) return;
+        var yRef = 4, bar = document.querySelector('.sw-top-bar');
+        if (bar) { var br = bar.getBoundingClientRect(); if (br.bottom > 0) yRef = br.bottom + 4; }
+        var vs = panel.querySelectorAll('.verse');
+        for (var i = 0; i < vs.length; i++) {
+          var r = vs[i].getBoundingClientRect();
+          if (r.height > 0 && r.bottom > yRef) {
+            localStorage.setItem(window.READER.vol + '-read-pos', chap + '|' + i);
+            break;
+          }
+        }
+      } catch (e) {}
+    }, 400);
+  }, { passive: true });
+
+  window._restoreReadPos = function() {
+    try {
+      // an explicit verse deep-link (…&v=5 / …:5) wins over the saved position
+      if (/(&v=|:)\d+/.test(decodeURIComponent(location.hash))) return;
+      // read the target once — the saver may legitimately overwrite the key
+      // between the first restore and the settle passes
+      if (window._rpTarget === undefined) window._rpTarget = localStorage.getItem(window.READER.vol + '-read-pos') || null;
+      var saved = window._rpTarget;
+      if (!saved) return;
+      var parts = saved.split('|'), chap = parts[0], vi = parseInt(parts[1], 10) || 0;
+      if (!chap || vi <= 0 || chap !== window.currentChapterId) return;
+      var panel = document.getElementById(chap + '-verses');
+      if (!panel) return;
+      var vs = panel.querySelectorAll('.verse');
+      if (!vs[vi]) return;
+      var bar = document.querySelector('.sw-top-bar');
+      var off = (bar && bar.getBoundingClientRect().bottom > 0 ? bar.getBoundingClientRect().bottom : 0) + 8;
+      window._rpQuiet = Date.now() + 900;
+      window.scrollTo(0, vs[vi].getBoundingClientRect().top + window.scrollY - off);
+    } catch (e) {}
+  };
+})();
+
 // === DUAL MODE ENGLISH TEXT ===
 window._englishLoaded = false;
 window._englishMap = {};

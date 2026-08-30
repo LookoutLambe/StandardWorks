@@ -1810,10 +1810,25 @@ window.addEventListener('scroll', function() {
   // getBookChapter/parseHash in a script AFTER this file, and rendering the
   // landing chapter before those run keys its verses with the canon
   // getBookChapter (null for their ids — no Dual English, no annotation keys).
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', handleHash);
-  } else {
+  function _initialRoute() {
     handleHash();
+    // Resume at the saved reading position (same chapter, no verse deep-link)
+    // AFTER the nav's own delayed scroll and font loading are done. Only
+    // wheel/touch/key mark real user intent — the nav's programmatic scrolls
+    // must not cancel the restore, but a reader who moved is never yanked.
+    var userMoved = false, mark = function() { userMoved = true; };
+    ['wheel', 'touchstart', 'keydown'].forEach(function(ev) {
+      window.addEventListener(ev, mark, { passive: true, once: true });
+    });
+    var settle = function() { if (!userMoved && typeof window._restoreReadPos === 'function') window._restoreReadPos(); };
+    setTimeout(settle, 700);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function() { setTimeout(settle, 120); });
+    window.addEventListener('load', function() { setTimeout(settle, 400); });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', _initialRoute);
+  } else {
+    _initialRoute();
   }
   window.addEventListener('hashchange', handleHash);
 })();
