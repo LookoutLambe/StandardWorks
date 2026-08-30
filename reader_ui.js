@@ -82,7 +82,11 @@ function _tlPopular(s) {
     .replace(/q/g,'k');
 }
 var _tlReceived = { 'קולב':'kolob', 'בקולב':'bekolob', 'לקולב':'lekolob', 'מקולב':'mikkolob',
-                    'קוקב':'kokob', 'קוקאובאם':'kokaubeam', 'שינהה':'shinehah', 'אליבליש':'oliblish' };
+                    'קוקב':'kokob', 'קוקאובאם':'kokaubeam', 'שינהה':'shinehah', 'אליבליש':'oliblish',
+                    // שמאול: the Masoretic mater vav sits AFTER the aleph (Gen 13:9) —
+                    // the mechanical rules read it as consonantal 'v' (usmovl)
+                    'שמאול':'semol', 'ושמאול':'usmol', 'משמאול':'missemol',
+                    'מהשמאול':'mehassemol', 'השמאול':'hassemol', 'שמאולך':'semolekh' };
 function _translitRaw(heb) {
   if (heb.indexOf(' ') >= 0) return heb.split(' ').map(function(p) { return transliterate(p); }).join(' ');
   if (heb.indexOf('\u05BE') >= 0) return heb.split('\u05BE').map(function(p) { return transliterate(p); }).join('-');
