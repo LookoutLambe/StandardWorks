@@ -153,21 +153,21 @@ var dc11_ch1Verses = [
   { num: "יג", words: [["אָמֵן","verily"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לְךָ","to you"], ["אֶתֵּן","I will give"], ["לְךָ","to you"], ["מֵרוּחִי","of my Spirit"], ["אֲשֶׁר","which"], ["תָּאִיר","shall enlighten"], ["לְבָבְךָ","your mind"], ["אֲשֶׁר","which"], ["תְּמַלֵּא","shall fill"], ["נַפְשְׁךָ","your soul"], ["שִׂמְחָה׃","with joy"]]},
   { num: "יד", words: [
     ["וְאָז","and then"],
-    ["תֵּדְעוּ","you shall know"],
+    ["תֵּדַע","you shall know"],
     ["אוֹ","or"],
     ["בָזֹאת","by this"],
-    ["תֵּדְעוּ","you shall know"],
+    ["תֵּדַע","you shall know"],
     ["כׇּל־דָּבָר","every thing"],
     ["אֲשֶׁר","which"],
-    ["תְּבַקְשׁוּ","you ask"],
+    ["תְּבַקֵּשׁ","you ask"],
     ["מִמֶּנִּי","of me"],
     ["עַל־דִּבְרֵי","concerning to matters of"],
     ["צְדָקָה","righteousness"],
     ["בֶּאֱמוּנָה","in faith"],
-    ["מַאֲמִינִים","believing"],
+    ["מַאֲמִין","believing"],
     ["בִּי","in me"],
     ["כִּי","that"],
-    ["תְקַבְּלוּ׃","you shall receive"]
+    ["תְקַבֵּל׃","you shall receive"]
   ]},
   { num: "טו", words: [
     ["הִנֵּה","behold"],
