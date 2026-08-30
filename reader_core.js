@@ -572,13 +572,18 @@ window._englishMap = {};
 function loadEnglishText() {
   if (window._englishLoaded) return;
   var _engData = window[window.READER.englishData];
-  if (_engData) {
-    _engData.forEach(function(v) {
-      window._englishMap[v.book + '|' + v.chapter + '|' + v.verse] = v.english;
-    });
-    window._englishLoaded = true;
-    populateEnglishDivs();
+  if (!_engData) {
+    // The INIT view-mode restore calls this BEFORE the english data script
+    // tag has run — without a retry, saved-dual pages rendered a permanently
+    // empty English column. Retry once every page script has executed.
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', loadEnglishText);
+    return;
   }
+  _engData.forEach(function(v) {
+    window._englishMap[v.book + '|' + v.chapter + '|' + v.verse] = v.english;
+  });
+  window._englishLoaded = true;
+  populateEnglishDivs();
 }
 
 function populateEnglishDivs() {
