@@ -12,3 +12,6 @@ StandardWorks/www/
 StandardWorks.xcodeproj/project.pbxproj
 StandardWorks.xcodeproj/xcuserdata/
 *.xcworkspace/xcuserdata/
+
+# Never commit the KDP print interior (standing rule)
+*KDP 6x9.docx
