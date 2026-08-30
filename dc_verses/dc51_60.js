@@ -2794,7 +2794,7 @@ var dc59_ch1Verses = [
     ["אַחֵר","another"],
     ["רַק","only"],
     ["יוּכַן","let be prepared"],
-    ["אָכְלְךָ","your food"],
+    ["אׇכְלְךָ","your food"],
     ["בְּתֹם","with singleness of"],
     ["לֵבָב","heart"],
     ["לְמַעַן","that"],
