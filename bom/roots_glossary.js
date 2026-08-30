@@ -3503,7 +3503,7 @@ window._rootGlossaryData = {
     "category": "Person"
   },
   "נשא": {
-    "meaning": "(נָשָׂא) to lift, carry, bear; (נָשִׂיא) prince, leader; (נְשִׂיאוּת) presidency",
+    "meaning": "(נָשָׂא) to lift, carry, bear; (נָשִׂיא) prince, leader; (נְשִׂיאוּת) presidency; (הִשִּׁיא) to deceive",
     "category": "Action"
   },
   "רת": {
