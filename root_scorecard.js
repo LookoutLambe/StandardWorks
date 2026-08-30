@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '36';   // bump when the generated data files change
+  var RSC_V = '40';   // bump when the generated data files change
 
   var cfg = { vol: '', base: '' };
   var keyIdx = null;         // rootKey -> index, built once
@@ -324,7 +324,40 @@
       if (!document.contains(slotEl)) return;             // popup closed
       if (loadState !== 2) return;                        // load failed; keep legacy content
       var all = lookupAll(surface);
-      if (!all.length) return;                            // not in corpus (front matter etc.)
+      if (!all.length) {
+        // No concordance bucket — chapter-heading vocabulary (מילניום,
+        // באמצעות...) lives only in the summaries, which the concordance
+        // does not walk. The card used to stay bare ("Occurrences: 1", no
+        // root — the בְּאוֹרְחָיו report). If the glossary knows the family,
+        // render root + meaning without counts; otherwise keep legacy content.
+        var s2 = cleanSurface(surface);
+        var parts2 = (s2 && window.RootEngine && window.RootEngine.getRoots)
+          ? window.RootEngine.getRoots(s2) : [];
+        var mini = '';
+        for (var pi2 = 0; pi2 < parts2.length; pi2++) {
+          var k2 = parts2[pi2].root;
+          if (!k2) continue;
+          var d2 = rootDisplay(k2);
+          if (!d2.meaning) continue;
+          // A bare, unpointed family key transliterates to gibberish
+          // (מילניום → "mayalanayavam"): show the tapped pointed surface
+          // instead whenever the display form carries no nikkud of its own.
+          var heb2 = d2.heb, tr2 = d2.translit;
+          if (!/[ְ-ׇּׁׂ]/.test(heb2)) {
+            heb2 = parts2[pi2].part;
+            tr2 = '';
+            if (typeof window.transliterate === 'function') { try { tr2 = window.transliterate(heb2); } catch (eT2) {} }
+          }
+          mini += '<div class="rsc-block">' +
+            '<span class="rsc-root"><span style="font-family:\'David Libre\',serif">' + esc(heb2) + '</span>' +
+            (tr2 ? ' <span style="font-size:0.85em;opacity:0.7;">(' + esc(tr2) + ')</span>' : '') + '</span>' +
+            '<br><span style="font-style:italic;opacity:0.85;font-size:0.9em;">' + esc(d2.meaning) + '</span>' +
+            '<div style="font-size:0.8em;opacity:0.6;margin-top:0.3em;">Chapter-heading vocabulary — no verse occurrences</div>' +
+            '</div>';
+        }
+        if (mini) slotEl.innerHTML = mini;
+        return;
+      }
       var html = '';
       for (var bi = 0; bi < all.length; bi++) {
         html += '<div class="rsc-block" data-rsc-block="' + bi + '">';
