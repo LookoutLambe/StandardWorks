@@ -784,6 +784,29 @@
     });
   }
 
+  // A consonantal root key ("רעד") has no pointed surface of its own, and the
+  // bare consonants transliterate to junk ("rd") — show the Strong's lemma.
+  // Cache only once the data file exists (it loads lazily).
+  var _lemmaByConsCache = null;
+  function _deFinal(s) {
+    return String(s).replace(/ך/g, 'כ').replace(/ם/g, 'מ').replace(/ן/g, 'נ').replace(/ף/g, 'פ').replace(/ץ/g, 'צ');
+  }
+  function _pointedLemmaFor(consRoot) {
+    if (!window._strongsRoots || !/^[א-ת]+$/.test(consRoot)) return null;
+    if (!_lemmaByConsCache) {
+      _lemmaByConsCache = {};
+      for (var n in window._strongsRoots) {
+        var e = window._strongsRoots[n];
+        if (!e || !e.w) continue;
+        var c = _deFinal(String(e.w).replace(/[֑-ׇ]/g, ''));
+        var prev = _lemmaByConsCache[c];
+        // prefer the verb entry (.p) — the same disambiguation the root engine uses
+        if (!prev || (e.p !== undefined && prev.p === undefined)) _lemmaByConsCache[c] = e;
+      }
+    }
+    return _lemmaByConsCache[_deFinal(consRoot)] || null;
+  }
+
   // ── Open cross-reference panel ──
   function openXrefPanel(ref, sourceVerseKey, hebrewRoot) {
     var panel = document.getElementById('xref-panel');
@@ -811,7 +834,14 @@
       } else {
         var glossEntry = window._rootGlossaryData && window._rootGlossaryData[hebrewRoot];
         engMeaning = glossEntry ? glossEntry.meaning : '';
-        xrefTranslit = (typeof transliterate === 'function') ? transliterate(hebrewRoot) : '';
+        var pl = _pointedLemmaFor(hebrewRoot);
+        if (pl) {
+          displayText = pl.w;
+          xrefTranslit = (typeof transliterate === 'function' ? transliterate(pl.w) : '') || pl.x || '';
+          if (!engMeaning) engMeaning = pl.g || '';
+        } else {
+          xrefTranslit = (typeof transliterate === 'function') ? transliterate(hebrewRoot) : '';
+        }
       }
     }
     var translitHtml = xrefTranslit
@@ -1066,7 +1096,14 @@
     } else {
       var glossEntry = window._rootGlossaryData && window._rootGlossaryData[root];
       engMeaning = glossEntry ? glossEntry.meaning : '';
-      rootTranslit = (typeof transliterate === 'function') ? transliterate(root) : '';
+      var pl = _pointedLemmaFor(root);
+      if (pl) {
+        displayRoot = pl.w;
+        rootTranslit = (typeof transliterate === 'function' ? transliterate(pl.w) : '') || pl.x || '';
+        if (!engMeaning) engMeaning = pl.g || '';
+      } else {
+        rootTranslit = (typeof transliterate === 'function') ? transliterate(root) : '';
+      }
     }
     panel.querySelector('.xref-panel-word').innerHTML = displayRoot +
       (rootTranslit ? ' <span style="font-weight:400;font-size:0.75em;opacity:0.7;">' + rootTranslit + '</span>' : '') +
