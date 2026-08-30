@@ -197,7 +197,7 @@
         '<div class="sw-top-bar-tools" id="sw-chrome-tools" aria-label="Font size"></div>' +
         '<button type="button" class="sw-chrome-btn" id="sw-chrome-dark" aria-label="Toggle dark mode">\u263D</button>' +
       '</div>' +
-      '<div id="sw-chrome-location" class="sw-chrome-location" aria-hidden="true"></div>';
+      ''   /* breadcrumb slot deleted 2026-08-29 */;
 
     document.body.insertBefore(header, document.body.firstChild);
 

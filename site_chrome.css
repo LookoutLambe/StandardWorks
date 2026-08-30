@@ -376,7 +376,3 @@ body.has-sw-chrome.sw-chrome-reader #main-content { transition: padding-top 0.28
    double-tap on the reading surface */
 body.reader-footer-hidden #sw-reader-footer .nqd-chapter-nav { display: none !important; }
 body.reader-footer-hidden #sw-reader-footer { border-top: none; }
-
-/* User ruling 2026-08-29: the breadcrumb strip duplicates the footer chapter
-   control — not needed at the top of reader pages. */
-body.sw-chrome-reader #sw-chrome-location { display: none; }

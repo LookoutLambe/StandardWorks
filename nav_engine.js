@@ -472,13 +472,9 @@
     // Some volume landing pages want the hamburger to open directly to Books.
     setViewMode(_config && _config.preferBooksOnOpen ? 'books' : 'library');
 
-    // Breadcrumb (header slot when site chrome is active)
-    _breadcrumbEl = document.getElementById('nav-breadcrumb');
-    if (!_breadcrumbEl) {
-      _breadcrumbEl = document.createElement('div');
-      _breadcrumbEl.id = 'nav-breadcrumb';
-    }
-    mountBreadcrumbInHeader();
+    // (breadcrumb bar deleted 2026-08-29 — footer chapter control is the location)
+    var _legacyBc = document.getElementById('nav-breadcrumb');
+    if (_legacyBc && _legacyBc.parentNode) _legacyBc.parentNode.removeChild(_legacyBc);
     updateBreadcrumb();
     ensureContinueReadingChip();
 
@@ -1313,23 +1309,6 @@
     focusBook(r.entry.vol, r.entry.id);
   }
 
-  function mountBreadcrumbInHeader() {
-    if (!_breadcrumbEl) return;
-    var slot = document.getElementById('sw-chrome-location');
-    if (slot) {
-      if (_breadcrumbEl.parentNode !== slot) slot.appendChild(_breadcrumbEl);
-      return;
-    }
-    var controlsTop = getTopBar();
-    if (controlsTop && _breadcrumbEl.parentNode !== controlsTop.parentNode) {
-      if (controlsTop.nextElementSibling) {
-        controlsTop.parentNode.insertBefore(_breadcrumbEl, controlsTop.nextElementSibling);
-      } else {
-        controlsTop.parentNode.appendChild(_breadcrumbEl);
-      }
-    }
-  }
-
   function syncHeaderChromeLayout() {
     try {
       if (typeof window.swSyncChromeLayout === 'function') window.swSyncChromeLayout();
@@ -1353,37 +1332,21 @@
   }
 
   // ── Breadcrumb ──
+  // The breadcrumb bar was DELETED (user ruling 2026-08-29): the footer
+  // chapter control carries the location. This function now only keeps the
+  // footer label in sync — every old call site still works.
   function updateBreadcrumb() {
-    if (!_breadcrumbEl) return;
-    mountBreadcrumbInHeader();
     if (!_config.currentChapter || _config.currentChapter === 'landing') {
-      _breadcrumbEl.classList.remove('visible');
-      _breadcrumbEl.innerHTML = '';
       syncChapterCenterBtn('');
       syncHeaderChromeLayout();
       return;
     }
-    var vol = VOLUMES[_config.volume];
-    if (!vol) return;
-
     var bookInfo = findBook(_config.volume, _config.currentChapter);
     if (!bookInfo) {
-      _breadcrumbEl.classList.remove('visible');
       syncChapterCenterBtn('');
       syncHeaderChromeLayout();
       return;
     }
-
-    var chNum = _config.currentChapter.replace(bookInfo.prefix, '');
-    var bcHtml = '<span onclick="NavEngine.openToVolume(\'' + _config.volume + '\')">' + vol.heb + ' \u00B7 ' + vol.name + '</span>';
-    bcHtml += '<span class="bc-sep">\u203A</span>';
-    bcHtml += '<span onclick="NavEngine.openToBook(\'' + bookInfo.id + '\')">' + bookInfo.heb + ' \u00B7 ' + bookInfo.en + '</span>';
-    if (bookInfo.ch > 1) {
-      bcHtml += '<span class="bc-sep">\u203A</span>';
-      bcHtml += '<span onclick="NavEngine.openCurrentBookChapters()">\u05E4\u05E8\u05E7 ' + toHebNum(parseInt(chNum, 10)) + ' \u00B7 Chapter ' + chNum + '</span>';
-    }
-    _breadcrumbEl.innerHTML = bcHtml;
-    _breadcrumbEl.classList.add('visible');
     syncChapterCenterBtn(dockChapterDisplayLabel(_config.currentChapter));
     syncHeaderChromeLayout();
   }
