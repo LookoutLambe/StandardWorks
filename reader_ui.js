@@ -201,13 +201,11 @@ function _tlPointed(text) {
       var nxt = tokens[t+1];
       var nxtIsLast = (t+1 === len-1);
       var suffixLetters = '\u05DD\u05DF\u05DA';
-      if (nxtIsLast && !nxt.vowel && nxt.c !== '\u05D4' && nxt.c !== '\u05D0' && nxt.c !== '\u05E2' && suffixLetters.indexOf(nxt.c) < 0) {
-        var realVowels = 0;
-        for (var rv = 0; rv < len; rv++) { if (tokens[rv].vowel && tokens[rv].vowel !== '\u05B0') realVowels++; }
-        var qGadolMono = '\u05D0\u05D1 \u05D3\u05DE \u05E9\u05DE \u05E2\u05D3 \u05E2\u05DC \u05E2\u05DD \u05E8\u05D1 \u05E8\u05E2 \u05D9\u05D3 \u05D7\u05DF \u05D9\u05DE';
-        var twoC = tk.c + nxt.c;
-        if (realVowels <= 1 && qGadolMono.indexOf(twoC) < 0) v = 'o';
-      }
+      // A stressed CVC monosyllable with PLAIN qamats is qamats GADOL \u2014 az,
+      // rav, yad, shav (Sephardi, like the rest of this system). The old
+      // whitelist-else-'o' default rendered every unlisted word qatan (\u05D0\u05B8\u05D6
+      // came out 'oz'). Real qatan is marked explicitly with U+05C7 in this
+      // corpus and handled by its own rule; no monosyllable branch needed.
       if (!nxtIsLast && nxt.vowel === '\u05B0') {
         var nxt2 = t+2 < len ? tokens[t+2] : null;
         if (nxt2 && bgdkpt.indexOf(nxt2.c) >= 0 && nxt2.dag) v = 'o';
