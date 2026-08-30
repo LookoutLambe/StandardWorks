@@ -651,9 +651,16 @@
   function getLemmaStrongs(hw) {
     if (!window._strongsLookup || !hw) return '';
     var bare = function(s) { return String(s).replace(/[\u0591-\u05C7]/g, ''); };
-    var stripped = (typeof window.stripPrefixes === 'function') ? window.stripPrefixes(hw) : hw;
     var L = window._strongsLookup;
-    return L[hw] || L[stripped] || L[bare(hw)] || L[bare(stripped)] || '';
+    // Shallowest peel first (longest remainder wins): the one-prefix form must
+    // be tried before the two-prefix strip can reach a shorter look-alike
+    // (\u05D1\u05B7\u05BC\u05D1\u05B0\u05BC\u05DB\u05D5\u05B9\u05E8 stops at \u05D1\u05B0\u05BC\u05DB\u05D5\u05B9\u05E8, never falls through to \u05DB\u05D5\u05B9\u05E8).
+    var layers = (window.RootEngine && window.RootEngine.stripLayers) ? window.RootEngine.stripLayers(hw)
+      : [hw, (typeof window.stripPrefixes === 'function') ? window.stripPrefixes(hw) : hw];
+    var s = '', i;
+    for (i = 0; i < layers.length && !s; i++) s = L[layers[i]] || '';
+    for (i = 0; i < layers.length && !s; i++) s = L[bare(layers[i])] || '';
+    return s;
   }
   window.getLemmaStrongs = getLemmaStrongs;
 

@@ -606,6 +606,22 @@ function stripPrefixes(w) {
   return stripped;
 }
 
+// Progressive peels, shallowest first — mirrors RootEngine.stripLayers. A
+// lookup chain must try the one-layer form before the two-layer one: the
+// longest remainder wins (בַּבְּכוֹר stops at בְּכוֹר, never reaches כוֹר).
+function _stripLayersUI(w) {
+  if (window.RootEngine && window.RootEngine.stripLayers) return window.RootEngine.stripLayers(w);
+  var s1 = stripPrefixes(w);   // NB: this local copy is two-layer; fall back to [w, deep]
+  return s1 === w ? [w] : [w, s1];
+}
+function _strongsLayered(w) {
+  if (!window._strongsLookup) return '';
+  var L = _stripLayersUI(w), s = '', i;
+  for (i = 0; i < L.length && !s; i++) s = _strongsLookup[L[i]] || '';
+  for (i = 0; i < L.length && !s; i++) s = _strongsLookup[_stripNikkud(L[i])] || '';
+  return s;
+}
+
 function normFinals(s) {
   return s.replace(/\u05DA/g,'\u05DB').replace(/\u05DD/g,'\u05DE').replace(/\u05DF/g,'\u05E0').replace(/\u05E3/g,'\u05E4').replace(/\u05E5/g,'\u05E6');
 }
@@ -674,8 +690,7 @@ function getRoot(hw) {
   if (window.RootEngine && window.RootEngine.getRoot) return window.RootEngine.getRoot(hw);
   // Try Strong's-based root first
   if (window._strongsLookup && window._strongsRoots) {
-    var stripped = stripPrefixes(hw);
-    var sNum = _strongsLookup[hw] || _strongsLookup[stripped] || _strongsLookup[_stripNikkud(hw)] || _strongsLookup[_stripNikkud(stripped)] || '';
+    var sNum = _strongsLayered(hw);
     if (sNum && _strongsRoots[sNum]) {
       var entry = _strongsRoots[sNum];
       // Return the word's OWN lexeme. Strong's derivation parents (entry.r) are
@@ -745,11 +760,7 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
     popupGl.textContent = gText;
 
     // Strong's H-number
-    var strongsNum = '';
-    if (window._strongsLookup) {
-      var stripped = stripPrefixes(hText);
-      strongsNum = _strongsLookup[hText] || _strongsLookup[stripped] || _strongsLookup[_stripNikkud(hText)] || _strongsLookup[_stripNikkud(stripped)] || '';
-    }
+    var strongsNum = _strongsLayered(hText);
     if (strongsNum) {
       // The lexeme's own definition, so a derived noun explains itself:
       // לֶקַח H3948 "learning, doctrine" beside its root לקח "take".

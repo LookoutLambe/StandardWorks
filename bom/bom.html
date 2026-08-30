@@ -4071,10 +4071,10 @@ body.dual-mode .chapter-summary { display: block; }
 <script src="../root_names.js?v=13"></script>
 <script src="../xref_common.js?v=2"></script>
 <script src="../verse_loader.js?v=4"></script>
-<script src="../root_scorecard.js?v=50"></script>
+<script src="../root_scorecard.js?v=51"></script>
 <script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
 <script src="crossrefs.js?v=23"></script>
-<script src="roots_glossary.js?v=51"></script>
+<script src="roots_glossary.js?v=52"></script>
 <script src="bom_inverse_crossrefs.js?v=1"></script>
 <script src="chapter_headings.js"></script>
 <script src="chapter_headings_heb.js?v=7"></script>
@@ -4712,7 +4712,7 @@ try {
 } catch(e) {}
 </script>
 <script src="../shoroshim_roots.js?v=3"></script>
-<script src="../root_engine.js?v=29"></script>
+<script src="../root_engine.js?v=30"></script>
 <script>
 
 // PREV / NEXT CHAPTER NAVIGATION (bottom bar)
@@ -7928,7 +7928,7 @@ document.addEventListener('keydown', function(e) {
   // These aliases keep this file's call sites and the window exports below
   // working unchanged.
   var _RE = window.RootEngine;
-  var stripPrefixes = _RE.stripPrefixes, stripNikkud = _RE.stripNikkud,
+  var stripPrefixes = _RE.stripPrefixes, stripLayers = _RE.stripLayers, stripNikkud = _RE.stripNikkud,
       normFinals = _RE.normFinals, toSofit = _RE.toSofit,
       getRoot = _RE.getRoot, getRoots = _RE.getRoots, rootMap = _RE.rootMap;
 
@@ -8061,8 +8061,11 @@ document.addEventListener('keydown', function(e) {
     var popupStrong = document.getElementById('popup-strong');
     var strongsNum = '';
     if (window._strongsLookup) {
-      var _stripped = stripPrefixes(hText);
-      strongsNum = _strongsLookup[hText] || _strongsLookup[_stripped] || _strongsLookup[_stripNikkud(hText)] || _strongsLookup[_stripNikkud(_stripped)] || '';
+      // Shallowest peel first (longest remainder wins) — the engine's rule:
+      // בַּבְּכוֹר must stop at בְּכוֹר, not fall through to כוֹר.
+      var _lyr = window.RootEngine.stripLayers(hText), _lj;
+      for (_lj = 0; _lj < _lyr.length && !strongsNum; _lj++) strongsNum = _strongsLookup[_lyr[_lj]] || '';
+      for (_lj = 0; _lj < _lyr.length && !strongsNum; _lj++) strongsNum = _strongsLookup[_stripNikkud(_lyr[_lj])] || '';
     }
     if (strongsNum) {
       // The lexeme's own definition, so a derived noun explains itself:

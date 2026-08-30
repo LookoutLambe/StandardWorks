@@ -8806,7 +8806,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "תחלה": {
-    "meaning": "you will sick",
+    "meaning": "(תְּחִלָּה) beginning, first",
     "category": "Time"
   },
   "תבנה": {
@@ -20530,7 +20530,23 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "חלל": {
-    "meaning": "(חָלָל) slain, pierced; (חִלֵּל) to profane; (הֵחֵל) to begin; (חָלִילָה) far be it",
+    "meaning": "(הֵחֵל) to begin; (חִלֵּל) to profane; (חָלַל) to pierce",
+    "category": "Lexical"
+  },
+  "H2490": {
+    "meaning": "(הֵחֵל) to begin; (חִלֵּל) to profane; (חָלַל) to pierce",
+    "category": "Lexical"
+  },
+  "H2506": {
+    "meaning": "(חֵלֶק) part, portion",
+    "category": "Lexical"
+  },
+  "חָלָל": {
+    "meaning": "slain, pierced — the fallen of battle",
+    "category": "Lexical"
+  },
+  "חלילה": {
+    "meaning": "(חָלִילָה) far be it — the exclamation of refusal",
     "category": "Lexical"
   },
   "קראתיו": {
