@@ -699,6 +699,15 @@ function stripPrefixes(w) {
                     'H0413': 'אֶל', 'H0408': 'אַל',
                     'H0417': 'אלגביש',  // hailstones — pointer would collapse into H0410 God
                     'H0484': 'אלמגים', 'H0418': 'אלמגים',  // almug/algum timber — BDB files it under אל
+                    // the nikkud-conflation sweep (2026-08-30, corpus-wide):
+                    'H5973': 'עִם', 'H4421': 'מלחמה',
+                    'H8066': 'שמונה', 'H8083': 'שמונה', 'H8084': 'שמונה',
+                    'H0929': 'בהמה', 'H0591': 'אניה', 'H7462': 'רֹעֶה',
+                    'H0835': 'אשרי', 'H0836': 'אָשֵׁר', 'H0842': 'אָשֵׁר',
+                    'H1768': 'דִּי', 'H3863': 'לוּ', 'H5787': 'עִוֵּר', 'H6311': 'פֹּה',
+                    'H4082': 'מדינה', 'H7979': 'שולחן', 'H2275': 'חברון', 'H3844': 'לבנון',
+                    'H0085': 'אברהם', 'H0087': 'אברהם', 'H4735': 'מקנה',
+                    'H7927': 'שְׁכֶם', 'H8163': 'שָׂעִיר', 'H5749': 'העיד',
                     'H4039': 'מגלה',   // מְגִלָּה scroll, not גלל "roll"
                     'H1551': 'גליל', 'H1552': 'גליל', 'H1553': 'גליל' }; // Galilee/regions
 
@@ -906,6 +915,11 @@ function stripPrefixes(w) {
   // these families woke dormant legacy pins (תְּפִלָּה→תפל "plaster") and
   // had to be reverted.
   var _headPins = {
+    // nikkud-conflation sweep pins:
+    'גַּם': 'גם', 'גַם': 'גם', 'וְגַם': 'גם', 'הֲגַם': 'גם', 'שֶׁגַּם': 'גם',
+    'בַּעֲבוּר': 'בעבור', 'וּבַעֲבוּר': 'בעבור', 'בַעֲבוּר': 'בעבור',
+    'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
+    'בָּהֶם': 'הם', 'בָהֶם': 'הם',
     // The grammaticalized-word ruling (2026-08-30): a fused particle whose
     // card would otherwise sit in unrelated context gets its own family —
     // the biglal/bein pattern, applied corpus-wide from the FUNC scout.

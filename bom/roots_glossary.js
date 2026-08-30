@@ -29104,4 +29104,54 @@ window._rootGlossaryData = {
   ,"H0484": { "meaning": "(אַלְמֻגִּים) almug wood", "category": "Lexical" }
   ,"אלגביש": { "meaning": "(אֶלְגָּבִישׁ) hailstones", "category": "Lexical" }
   ,"אלמגים": { "meaning": "(אַלְמֻגִּים) almug wood", "category": "Lexical" }
+  ,"עִם": { "meaning": "(עִם) with", "category": "Particle" }
+  ,"עם": { "meaning": "(עַם) people, nation", "category": "Lexical" }
+  ,"מלחמה": { "meaning": "(מִלְחָמָה) war, battle", "category": "Lexical" }
+  ,"לחם": { "meaning": "(לֶחֶם) bread; (לָחַם) to fight", "category": "Lexical" }
+  ,"שמונה": { "meaning": "(שְׁמֹנֶה) eight; (שְׁמִינִי) eighth; (שְׁמֹנִים) eighty", "category": "Lexical" }
+  ,"שמן": { "meaning": "(שֶׁמֶן) oil", "category": "Lexical" }
+  ,"בהמה": { "meaning": "(בְּהֵמָה) beast, cattle", "category": "Lexical" }
+  ,"אניה": { "meaning": "(אֳנִיָּה) ship", "category": "Lexical" }
+  ,"רֹעֶה": { "meaning": "(רֹעֶה) shepherd; (רָעָה) to tend, feed", "category": "Lexical" }
+  ,"רעה": { "meaning": "(רַעְיָה) my love; (מִרְעֶה) pasture", "category": "Lexical" }
+  ,"אשרי": { "meaning": "(אַשְׁרֵי) blessed, happy is", "category": "Quality" }
+  ,"אָשֵׁר": { "meaning": "Asher; (אֲשֵׁרָה) Asherah pole", "category": "Name" }
+  ,"דִּי": { "meaning": "(דִּי) which, that — Aramaic", "category": "Particle" }
+  ,"די": { "meaning": "(דַּי) sufficient, enough", "category": "Quality" }
+  ,"לוּ": { "meaning": "(לוּ) if, oh that", "category": "Particle" }
+  ,"לו": { "meaning": "(לוֹ) to him", "category": "Particle" }
+  ,"עִוֵּר": { "meaning": "(עִוֵּר) blind", "category": "Quality" }
+  ,"עור": { "meaning": "(עוֹר) skin; (עוּר) to awake", "category": "Lexical" }
+  ,"פֹּה": { "meaning": "(פֹּה) here", "category": "Particle" }
+  ,"מדינה": { "meaning": "(מְדִינָה) province", "category": "Lexical" }
+  ,"שולחן": { "meaning": "(שֻׁלְחָן) table", "category": "Lexical" }
+  ,"חברון": { "meaning": "Hebron", "category": "Name" }
+  ,"לבנון": { "meaning": "Lebanon", "category": "Name" }
+  ,"אברהם": { "meaning": "Abraham; (אַבְרָם) Abram", "category": "Name" }
+  ,"אבה": { "meaning": "(אָבָה) to be willing", "category": "Action" }
+  ,"מקנה": { "meaning": "(מִקְנֶה) livestock, cattle", "category": "Lexical" }
+  ,"שְׁכֶם": { "meaning": "Shechem", "category": "Name" }
+  ,"שכם": { "meaning": "(הִשְׁכִּים) to rise early; (שְׁכֶם) shoulder", "category": "Action" }
+  ,"שָׂעִיר": { "meaning": "(שָׂעִיר) male goat; hairy", "category": "Lexical" }
+  ,"שער": { "meaning": "(שַׁעַר) gate", "category": "Lexical" }
+  ,"העיד": { "meaning": "(הֵעִיד) to testify, bear record", "category": "Action" }
+  ,"עוד": { "meaning": "(עוֹד) again, still, yet", "category": "Particle" }
+  ,"גם": { "meaning": "(גַּם) also, even", "category": "Particle" }
+  ,"בעבור": { "meaning": "(בַּעֲבוּר) because of, for the sake of", "category": "Particle" }
+  ,"לָנוּ": { "meaning": "(לָנוּ) to us", "category": "Particle" }
+  ,"לון": { "meaning": "(לוּן) to lodge, pass the night; (הִלִּין) to murmur", "category": "Action" }
+  ,"עמד": { "meaning": "(עָמַד) to stand; (עַמּוּד) pillar", "category": "Action" }
+  ,"יחד": { "meaning": "(יַחַד) together; (יָחִיד) only — the Only Begotten", "category": "Lexical" }
+  ,"קלל": { "meaning": "(קִלֵּל) to curse; (קְלָלָה) curse; (קַל) light, swift", "category": "Action" }
+  ,"חרב": { "meaning": "(חֶרֶב) sword; (חֹרֶב) waste, drought", "category": "Lexical" }
+  ,"מלך": { "meaning": "(מֶלֶךְ) king; (מַלְכָּה) queen; (מָלַךְ) to reign; (מַלְכוּת) kingdom", "category": "Lexical" }
+  ,"נצח": { "meaning": "(נֶצַח) forever, everlasting; (לַמְנַצֵּחַ) to the chief musician", "category": "Lexical" }
+  ,"גנן": { "meaning": "(גַּן) garden; (מָגֵן) shield; (הֵגֵן) to defend", "category": "Lexical" }
+  ,"נכר": { "meaning": "(נֵכָר) foreign, strange; (הִכִּיר) to recognize", "category": "Lexical" }
+  ,"שפח": { "meaning": "(מִשְׁפָּחָה) family; (שִׁפְחָה) handmaid", "category": "Lexical" }
+  ,"חיה": { "meaning": "(חַי) living; (חָיָה) to live; (תְּחִיָּה) resurrection", "category": "Lexical" }
+  ,"חנן": { "meaning": "(חָנַן) to be gracious; (חֵן) grace, favor; (חִנָּם) freely", "category": "Action" }
+  ,"אז": { "meaning": "(אָז) then; (מֵאָז) since", "category": "Particle" }
+  ,"גרש": { "meaning": "(גֵּרֵשׁ) to drive out; (מִגְרָשׁ) pasture lands", "category": "Action" }
+  ,"לבן": { "meaning": "(לָבָן) white; Laban; (לְבָנָה) moon", "category": "Lexical" }
 };
