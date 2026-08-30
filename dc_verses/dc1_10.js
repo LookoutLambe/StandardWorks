@@ -1480,7 +1480,7 @@ var dc6_ch1Verses = [
     ["מִמֶּנִּי","of me"],
     ["כֵּן","so"],
     ["יִהְיֶה","it shall be"],
-    ["לָּךְ","to you"],
+    ["לְךָ","to you"],
     ["וְאִם","and if"],
     ["תַּחְפֹּץ","you desire"],
     ["תִּהְיֶה","you shall be"],
@@ -2246,7 +2246,7 @@ var dc8_ch1Verses = [
     ["נָכוֹן","proper"],
     ["לִשְׁאֹל׃","to ask"]
   ]},
-  { num: "יא", words: [["שְׁאַל","ask"], ["לָדַעַת","to know"], ["סוֹדוֹת","the mysteries of"], ["אֱלֹהִים","God"], ["וּלְתַרְגֵּם","and to translate"], ["וּלְקַבֵּל","and to receive"], ["דַּעַת","knowledge"], ["מִכׇּל־הַכְּתָבִים","from all the records"], ["הַקְּדוּמִים","the ancient"], ["הַצְּפוּנִים","the hidden"], ["אֲשֶׁר","which"], ["קֹדֶשׁ","sacred"], ["הֵם","they are"], ["וּכֶאֱמוּנָתְךָ","and according to your faith"], ["יֵעָשֶׂה","it shall be done"], ["לָּךְ׃","to you"]]},
+  { num: "יא", words: [["שְׁאַל","ask"], ["לָדַעַת","to know"], ["סוֹדוֹת","the mysteries of"], ["אֱלֹהִים","God"], ["וּלְתַרְגֵּם","and to translate"], ["וּלְקַבֵּל","and to receive"], ["דַּעַת","knowledge"], ["מִכׇּל־הַכְּתָבִים","from all the records"], ["הַקְּדוּמִים","the ancient"], ["הַצְּפוּנִים","the hidden"], ["אֲשֶׁר","which"], ["קֹדֶשׁ","sacred"], ["הֵם","they are"], ["וּכֶאֱמוּנָתְךָ","and according to your faith"], ["יֵעָשֶׂה","it shall be done"], ["לְךָ׃","to you"]]},
   { num: "יב", words: [
     ["הִנֵּה","behold"],
     ["אֲנִי","I"],

@@ -63,7 +63,7 @@ var dc11_ch1Verses = [
     ["מִמֶּנִּי","of me"],
     ["כֵּן","so"],
     ["יֵעָשֶׂה","it shall be done"],
-    ["לָּךְ","to you"],
+    ["לְךָ","to you"],
     ["וְאִם","and if"],
     ["תַּחְפֹּץ","you desire"],
     ["תִּהְיֶה","you shall be"],
@@ -194,7 +194,7 @@ var dc11_ch1Verses = [
     ["אָכֵן","yea"],
     ["כֶּאֱמוּנָתְךָ","according to your faith"],
     ["יֵעָשֶׂה","it shall be done"],
-    ["לָּךְ׃","to you"]
+    ["לְךָ׃","to you"]
   ]},
   { num: "יח", words: [
     ["שְׁמֹר","keep"],
