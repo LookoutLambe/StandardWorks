@@ -240,12 +240,14 @@
       else if (window.RootEngine && window.RootEngine.toSofit) heb = window.RootEngine.toSofit(key);
       var cur2 = (window._rootGlossaryData || {})[key];
       if (cur2 && cur2.meaning) meaning = cur2.meaning;
-      if (!meaning) {
-        // No curated meaning for this bare-consonant family: fall back to the
-        // Strong's lemma with exactly these consonants, primitive roots first.
+      if (!meaning || heb === key) {
+        // The lemma lookup must run for the DISPLAY even when the glossary
+        // already supplied a meaning — gated on meaning alone, a family with
+        // a curated meaning skipped straight to the most-frequent form and
+        // an inflected surface served as the "root" (וְתוֹעֲבוֹתֵיהֶם for תעב).
         var sNum = _strongsForCons(key);
         if (sNum) {
-          meaning = window._strongsRoots[sNum].g || _strongsGloss(sNum);
+          if (!meaning) meaning = window._strongsRoots[sNum].g || _strongsGloss(sNum);
           if (heb === key && window._strongsRoots[sNum].w) heb = window._strongsRoots[sNum].w;
         }
       }
@@ -257,8 +259,14 @@
           var rc2 = window._rootConcordance;
           var ix2 = rc2 && rc2.keys ? rc2.keys.indexOf(key) : -1;
           if (ix2 >= 0 && rc2.roots[ix2] && rc2.roots[ix2].f) {
-            var bf = '', bn = -1, fmap = rc2.roots[ix2].f;
-            for (var fk in fmap) if (fmap[fk] > bn) { bn = fmap[fk]; bf = fk; }
+            // Root-closest form, not most-frequent: the most frequent form is
+            // often an inflected one wearing a conjunction and suffixes.
+            // Fewest consonants wins; frequency only breaks ties.
+            var bf = '', bn = -1, bl = 1e9, fmap = rc2.roots[ix2].f;
+            for (var fk in fmap) {
+              var fl = fk.replace(/[֑-ׇ]/g, '').length;
+              if (fl < bl || (fl === bl && fmap[fk] > bn)) { bl = fl; bn = fmap[fk]; bf = fk; }
+            }
             if (bf) heb = bf;
           }
         } catch (e3) {}
