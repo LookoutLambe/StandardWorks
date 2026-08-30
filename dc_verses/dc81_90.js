@@ -82,7 +82,7 @@ var dc81_ch1Verses = [
     ["אַתָּה","you are"],
     ["עַד","unto"],
     ["הַקֵּץ","the end"],
-    ["יִהְיֶה־לְךָ","you shall have to you"],
+    ["יִהְיֶה־לְּךָ","you shall have to you"],
     ["כֶּתֶר","a crown of"],
     ["אַל־מָוֶת","immortality"],
     ["וְחַיֵּי","and life"],

@@ -62,7 +62,7 @@ var dc11_ch1Verses = [
     ["תַּחְפֹּץ","you desire"],
     ["מִמֶּנִּי","of me"],
     ["כֵּן","so"],
-    ["יֵעָשֶׂה־לְךָ","it shall be done to you"],
+    ["יֵעָשֶׂה־לְּךָ","it shall be done to you"],
     ["וְאִם","and if"],
     ["תַּחְפֹּץ","you desire"],
     ["תִּהְיֶה","you shall be"],
@@ -185,14 +185,14 @@ var dc11_ch1Verses = [
     ["אֲשֶׁר","when"],
     ["תִּקָּרֵא׃","you are called"]
   ]},
-  { num: "טז", words: [["חַכֵּה","wait"], ["עוֹד","yet"], ["מְעַט","a little"], ["עַד","until"], ["אֲשֶׁר","when"], ["יִהְיֶה־לְךָ","shall be to you"], ["דְבָרִי","my word"], ["סַלְעִי","my rock"], ["כְּנֵסִיָּתִי","my church"], ["וּבְשׂוֹרָתִי","and my gospel"], ["לְמַעַן","so that"], ["יָדֹעַ","of a surety"], ["תֵּדַע","you may know"], ["לֶקְחִי׃","my doctrine"]]},
+  { num: "טז", words: [["חַכֵּה","wait"], ["עוֹד","yet"], ["מְעַט","a little"], ["עַד","until"], ["אֲשֶׁר","when"], ["יִהְיֶה־לְּךָ","shall be to you"], ["דְבָרִי","my word"], ["סַלְעִי","my rock"], ["כְּנֵסִיָּתִי","my church"], ["וּבְשׂוֹרָתִי","and my gospel"], ["לְמַעַן","so that"], ["יָדֹעַ","of a surety"], ["תֵּדַע","you may know"], ["לֶקְחִי׃","my doctrine"]]},
   { num: "יז", words: [
     ["וְאָז","and then"],
     ["הִנֵּה","behold"],
     ["כַּחֲפָצֶיךָ","according to your desires"],
     ["אָכֵן","yea"],
     ["כֶּאֱמוּנָתְךָ","according to your faith"],
-    ["יֵעָשֶׂה־לְךָ׃","it shall be done to you"]
+    ["יֵעָשֶׂה־לְּךָ׃","it shall be done to you"]
   ]},
   { num: "יח", words: [
     ["שְׁמֹר","keep"],
@@ -237,7 +237,7 @@ var dc11_ch1Verses = [
     ["וְאָז","and then"],
     ["אִם","if"],
     ["תַּחְפֹּץ","you desire"],
-    ["יִהְיֶה־לְךָ","shall be to you"],
+    ["יִהְיֶה־לְּךָ","shall be to you"],
     ["רוּחִי","my Spirit"],
     ["וּדְבָרִי","and my word"],
     ["אָכֵן","yea"],
@@ -643,7 +643,7 @@ var dc15_ch1Verses = [
     ["מִמֶּנִּי","of me"],
     ["לָדַעַת","to know"],
     ["מַה","that which"],
-    ["יִהְיֶה־לְךָ","would be unto you"],
+    ["יִהְיֶה־לְּךָ","would be unto you"],
     ["לְטוֹבָה","of worth"],
     ["גְּדוֹלָה׃","most"]
   ]},
@@ -670,7 +670,7 @@ var dc15_ch1Verses = [
     ["לְךָ","unto you"],
     ["הַדָּבָר","the thing"],
     ["אֲשֶׁר","which"],
-    ["יִהְיֶה־לְךָ","will be unto you"],
+    ["יִהְיֶה־לְּךָ","will be unto you"],
     ["לְטוֹבָה","of worth"],
     ["גְּדוֹלָה","most"],
     ["הוּא","it is"],
@@ -738,7 +738,7 @@ var dc16_ch1Verses = [
     ["מִמֶּנִּי","of me"],
     ["לָדַעַת","to know"],
     ["מַה","that which"],
-    ["יִהְיֶה־לְךָ","would be unto you"],
+    ["יִהְיֶה־לְּךָ","would be unto you"],
     ["לְטוֹבָה","of worth"],
     ["גְּדוֹלָה׃","most"]
   ]},
@@ -765,7 +765,7 @@ var dc16_ch1Verses = [
     ["לְךָ","unto you"],
     ["הַדָּבָר","the thing"],
     ["אֲשֶׁר","which"],
-    ["יִהְיֶה־לְךָ","will be unto you"],
+    ["יִהְיֶה־לְּךָ","will be unto you"],
     ["לְטוֹבָה","of worth"],
     ["גְּדוֹלָה","most"],
     ["הוּא","it is"],
