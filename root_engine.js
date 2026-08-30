@@ -682,6 +682,7 @@ function stripPrefixes(w) {
                     // preposition בִּגְלַל and the wheel גַּלְגַּל stay under
                     // the geminate root
                     'H1537': 'גלגל',   // Gilgal the place, not גלל "roll"
+                    'H1558': 'בגלל',   // the preposition gets its own card, the בֵּין pattern
                     'H4039': 'מגלה',   // מְגִלָּה scroll, not גלל "roll"
                     'H1551': 'גליל', 'H1552': 'גליל', 'H1553': 'גליל' }; // Galilee/regions
 

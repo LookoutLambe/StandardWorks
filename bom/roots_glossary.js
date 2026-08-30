@@ -4415,7 +4415,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "גלל": {
-    "meaning": "(גָּלַל) to roll; (בִּגְלַל) because of; (גַּל) wave, heap; (גִּלּוּלִים) idols; (גַּלְגַּל) wheel",
+    "meaning": "(גָּלַל) to roll; (גַּל) wave, heap; (גִּלּוּלִים) idols; (גַּלְגַּל) wheel",
     "category": "Uncategorized"
   },
   "קדמונים": {
@@ -29042,4 +29042,5 @@ window._rootGlossaryData = {
   ,"גלגל": { "meaning": "(גִּלְגָּל) Gilgal — where Israel first camped in the land", "category": "Name" }
   ,"מגלה": { "meaning": "(מְגִלָּה) scroll, roll", "category": "Uncategorized" }
   ,"גליל": { "meaning": "(הַגָּלִיל) Galilee; (גְּלִילוֹת) regions, territories", "category": "Name" }
+  ,"בגלל": { "meaning": "(בִּגְלַל) because of", "category": "Particle" }
 };
