@@ -13,8 +13,12 @@ StandardWorks.xcodeproj/project.pbxproj
 StandardWorks.xcodeproj/xcuserdata/
 *.xcworkspace/xcuserdata/
 
-# Never commit the KDP print interior (standing rule)
-*KDP 6x9.docx
+# Never commit the KDP print interior (standing rule).
+# Broadened 2026-08-31: the narrow "*KDP 6x9.docx" rule did not cover the
+# Hebrew BOM/ manuscripts, and five of them reached GitHub before anyone
+# noticed. They were purged from all history with git-filter-repo. No .docx
+# in this project belongs on the remote, so the rule is now the whole type.
+*.docx
 
 # Institute of Ancient Studies material — copyrighted, comparison only.
 # User ruling 2026-08-31: this NEVER ships. Kept at ~/Desktop/IAS-reference-NEVER-SHIP/
