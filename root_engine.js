@@ -776,6 +776,7 @@
                     'H5978': 'עִם',      // immadi 'with me' joins the preposition
                     'H1319': 'בשורה',   // the preach-tidings verb joins gospel
                     'H4039': 'מגלה',   // מְגִלָּה scroll, not גלל "roll"
+                    'H4624': 'מעקה',  // the parapet/rail (Deut 22:8) — the rod of iron; not עקה 'distress'
                     // the חלל chain (the hachel card): Strong's derivation
                     // pointers funneled four pointing-distinct lexemes into one
                     // "wound" family. The verb (H2490: הֵחֵל begin, חִלֵּל

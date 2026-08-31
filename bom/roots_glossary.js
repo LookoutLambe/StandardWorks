@@ -20541,6 +20541,10 @@ window._rootGlossaryData = {
     "meaning": "(לְמוֹ) to, unto — the poetic byform of לְ",
     "category": "Lexical"
   },
+  "מעקה": {
+    "meaning": "(מַעֲקֶה) railing, parapet (Deut 22:8) — the rod of iron",
+    "category": "Lexical"
+  },
   "H2490": {
     "meaning": "to begin",
     "category": "Lexical"
