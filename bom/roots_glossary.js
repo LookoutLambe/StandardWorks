@@ -20545,6 +20545,10 @@ window._rootGlossaryData = {
     "meaning": "(מַעֲקֶה) railing, parapet (Deut 22:8) — the rod of iron",
     "category": "Lexical"
   },
+  "נתר": {
+    "meaning": "(הִתִּיר) to loose, unloose — Ps 146:7 מַתִּיר אֲסוּרִים",
+    "category": "Lexical"
+  },
   "H2490": {
     "meaning": "to begin",
     "category": "Lexical"
