@@ -707,7 +707,12 @@ body.hide-gloss .xref-marker, body.dual-mode .xref-marker { font-size: 0.5em; }
 .word-unit.xref-linked { cursor: pointer; }
 .word-unit.xref-linked .hw { color: #2e6da4 !important; }
 .word-unit.xref-linked .gl { color: #2e6da4 !important; }
-.word-unit.xref-linked:hover .hw { color: #1f5c8f !important; text-decoration: underline; }
+.word-unit.xref-linked:hover .hw { color: #1f5c8f !important; text-decoration: none; }
+/* Underline removed 2026-08-31 (translator): the rule underlined the HEBREW
+   headword, and the line runs straight through the nikkud sitting under the
+   letters, making a pointed word unreadable on tap. The blue is the affordance;
+   the underline was never needed. NOTE: .ann-ul is the reader's own underline
+   ANNOTATION and is deliberate -- never fold this change into it. */
 .word-unit.xref-linked:hover .gl { color: #1f5c8f !important; }
 body.dark-mode .word-unit.xref-linked .hw { color: #5dade2 !important; }
 body.dark-mode .word-unit.xref-linked .gl { color: #5dade2 !important; }

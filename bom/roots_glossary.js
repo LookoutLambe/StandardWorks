@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "שאה": { "meaning": "(שָׁאָה) to crash into ruin, lie waste; (שְׁאִיָּה) desolation; (מִשְׁתָּאֵה) gazing in wonder", "category": "Lexical" },
   "אנס": { "meaning": "(אָנַס) to compel, constrain; (אֹנֶס) constraint, necessity", "category": "Lexical" },
   "נהה": { "meaning": "(נְהִי) wailing", "category": "Uncategorized" },
   "H7327": { "meaning": "(רוּת) Ruth", "category": "Uncategorized" },
@@ -862,7 +863,7 @@ window._rootGlossaryData = {
     ]
   },
   "את": {
-    "meaning": "direct object marker; with",
+    "meaning": "(אֵת) direct object marker; (אֵת, אִתּוֹ) with; (מֵאֵת) from, from with",
     "category": "Particle"
   },
   "עם": {
@@ -8907,7 +8908,7 @@ window._rootGlossaryData = {
     "category": "Society"
   },
   "עדר": {
-    "meaning": "flock, herd; to arrange",
+    "meaning": "(עֵדֶר) flock, herd; (עָדַר) to hoe, dig; (מַעְדֵּר) hoe, mattock",
     "category": "Time"
   },
   "תרגום": {

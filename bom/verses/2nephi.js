@@ -518,25 +518,7 @@ var n2_ch2Verses = [
     ["וְלֹא־דַּעַת","nor insensibility"],
     ["׃",""]
   ]},
-      { num:"יב", words:[
-    ["לָכֵן","wherefore"],
-    ["נִבְרָא","it must have been created"],
-    ["לְדָבָר","for a thing of"],
-    ["רֵיק","naught"],
-    ["וְאֵין","and there is no"],
-    ["תַּכְלִית","purpose"],
-    ["בְּהִבָּרְאוֹ","in the end of its creation"],
-    ["וְזֶה","wherefore this"],
-    ["מַשְׁחִית","must needs destroy"],
-    ["חׇכְמַת","the wisdom of"],
-    ["אֵל","God"],
-    ["וַעֲצָתוֹ","and His purposes"],
-    ["לְעוֹלָם","eternal"],
-    ["וְכֹחוֹ","and also His power"],
-    ["וְחַסְדּוֹ","and His mercy"],
-    ["וְצִדְקָתוֹ","and His justice"],
-    ["׃",""]
-  ]},
+      { num: "יב", words: [["לָכֵן","wherefore"], ["הִבָּרֵא","be created"], ["נִבְרָא","it must needs have been created"], ["לְדָבָר","for a thing of"], ["רֵיק","naught"], ["וְאֵין","and there is no"], ["תַּכְלִית","purpose"], ["בְּהִבָּרְאוֹ","in the end of its creation"], ["וְזֶה","wherefore this"], ["מַשְׁחִית","must needs destroy"], ["חׇכְמַת","the wisdom of"], ["אֵל","God"], ["וַעֲצָתוֹ","and His purposes"], ["לְעוֹלָם","eternal"], ["וְכֹחוֹ","and also His power"], ["וְחַסְדּוֹ","and His mercy"], ["וְצִדְקָתוֹ","and His justice"], ["׃",""]]},
       { num:"יג", words:[
     ["וְאִם","and if"],
     ["תֹּאמְרוּ","you shall say"],
@@ -3157,7 +3139,7 @@ var n2_ch9Verses = [
     ["מֵחֵטְא","from sin"],
     ["׃",""]
   ]},
-  { num: "מח", words: [["הִנֵּה","behold"], ["אִם־הֱיִיתֶם","if you were"], ["קְדוֹשִׁים","holy"], ["דִּבַּרְתִּי","I would speak"], ["אֲלֵיכֶם","unto you"], ["עַל־קְדֻשָּׁה","of holiness"], ["אַךְ","but"], ["כַּאֲשֶׁר","whereas"], ["לֹא","not"], ["קְדוֹשִׁים","holy"], ["אַתֶּם","are you"], ["וְתִרְאוּנִי","and you look upon me"], ["כְּמוֹרֶה","as a teacher"], ["לַמֵּד","it must needs be expedient that"], ["אֲלַמֶּדְכֶם","that I teach you"], ["אַחֲרִית","the consequences of"], ["הַחֵטְא","sin"], ["׃",""]]},
+  { num: "מח", words: [["הִנֵּה","behold"], ["אִם־הֱיִיתֶם","if you were"], ["קְדוֹשִׁים","holy"], ["דִּבַּרְתִּי","I would speak"], ["אֲלֵיכֶם","unto you"], ["עַל־קְדֻשָּׁה","of holiness"], ["אַךְ","but"], ["כַּאֲשֶׁר","whereas"], ["לֹא","not"], ["קְדוֹשִׁים","holy"], ["אַתֶּם","are you"], ["וְתִרְאוּנִי","and you look upon me"], ["כְּמוֹרֶה","as a teacher"], ["לַמֵּד","teach"], ["אֲלַמֶּדְכֶם","I must needs teach you"], ["אַחֲרִית","the consequences of"], ["הַחֵטְא","sin"], ["׃",""]]},
   { num: "מט", words: [["הִנֵּה","behold"], ["תְּתָעֵב","shall abhor"], ["נַפְשִׁי","my soul"], ["חֵטְא","sin"], ["וְיִשְׂמַח","and shall rejoice"], ["לִבִּי","my heart"], ["בַּצֶּדֶק","in righteousness"], ["וַאֲהַלֵּל","and I shall praise"], ["שֵׁם","the name of"], ["קֹדֶשׁ","the holy"], ["אֱלֹהָי","my God"], ["׃",""]]},
   { num:"נ", words:[
     ["בֹּאוּ","come"],
@@ -4206,23 +4188,7 @@ var n2_ch12Verses = [
   ]},
 ];
 var n2_ch13Verses = [
-  { num:"א", words:[
-    ["כִּי","for"],
-    ["הִנֵּה","behold"],
-    ["הָאָדוֹן","the Lord"],
-    ["יְהוָה","the Lord"],
-    ["צְבָאוֹת","of Hosts"],
-    ["מֵסִיר","takes away"],
-    ["מִירוּשָׁלַיִם","from Jerusalem"],
-    ["וּמִיהוּדָה","and from Judah"],
-    ["מַשְׁעֵן","the stay"],
-    ["וּמַשְׁעֵנָה","and the staff"],
-    ["כֹּל","the whole"],
-    ["מִשְׁעַן־לֶחֶם","stay of bread"],
-    ["וְכֹל","and the whole"],
-    ["מִשְׁעַן־מָיִם","stay of water"],
-    ["׃",""]
-  ]},
+  { num: "א", words: [["כִּי","for"], ["הִנֵּה","behold"], ["הָאָדוֹן","the Lord"], ["יְהוָה","the LORD"], ["צְבָאוֹת","of Hosts"], ["מֵסִיר","takes away"], ["מִירוּשָׁלַיִם","from Jerusalem"], ["וּמִיהוּדָה","and from Judah"], ["מַשְׁעֵן","the stay"], ["וּמַשְׁעֵנָה","and the staff"], ["כֹּל","the whole"], ["מִשְׁעַן־לֶחֶם","stay of bread"], ["וְכֹל","and the whole"], ["מִשְׁעַן־מָיִם","stay of water"], ["׃",""]]},
   { num:"ב", words:[
     ["גִּבּוֹר","the mighty man"],
     ["וְאִישׁ","and the man of"],
@@ -4850,16 +4816,7 @@ var n2_ch15Verses = [
     ["בִּצְדָקָה","in righteousness"],
     ["׃",""]
   ]},
-  { num:"יז", words:[
-    ["וְרָעוּ","then shall feed"],
-    ["כְבָשִׂים","the lambs"],
-    ["כְּדָבְרָם","after their manner"],
-    ["וְחׇרְבוֹת","and the waste places of"],
-    ["מֵחִים","the fat ones"],
-    ["גָּרִים","strangers"],
-    ["יֹאכֵלוּ","shall eat"],
-    ["׃",""]
-  ]},
+  { num: "יז", words: [["וְרָעוּ","then shall feed"], ["כְבָשִׂים","the lambs"], ["כְּדׇבְרָם","after their manner"], ["וְחׇרְבוֹת","and the waste places of"], ["מֵחִים","the fat ones"], ["גָּרִים","strangers"], ["יֹאכֵלוּ","shall eat"], ["׃",""]]},
   { num:"יח", words:[
     ["הוֹי","woe"],
     ["מֹשְׁכֵי","unto those who draw"],
@@ -4934,117 +4891,13 @@ var n2_ch15Verses = [
     ["מִמֶּנּוּ","from him"],
     ["׃",""]
   ]},
-  { num:"כד", words:[
-    ["לָכֵן","therefore"],
-    ["כֶּאֱכֹל","as devours"],
-    ["קַשׁ","the stubble"],
-    ["לְשׁוֹן","the tongue of"],
-    ["אֵשׁ","fire"],
-    ["וַחֲשַׁשׁ","and as the chaff"],
-    ["לֶהָבָה","the flame"],
-    ["יִרְפֶּה","consumeth"],
-    ["שׇׁרְשָׁם","their root"],
-    ["כַּמָּק","as the rottenness"],
-    ["יִהְיֶה","shall be"],
-    ["וּפִרְחָם","and their blossom"],
-    ["כָּאָבָק","as dust"],
-    ["יַעֲלֶה","shall go up"],
-    ["כִּי","because"],
-    ["מָאֲסוּ","they have cast away"],
-    ["אֵת־תּוֹרַת","the law of"],
-    ["יְהוָה","the Lord"],
-    ["צְבָאוֹת","of Hosts"],
-    ["וְאֵת","and"],
-    ["אִמְרַת","the word of"],
-    ["קְדוֹשׁ־יִשְׂרָאֵל","the Holy One of Israel"],
-    ["נִאֵצוּ","they despised"],
-    ["׃",""]
-  ]},
-  { num:"כה", words:[
-    ["עַל־כֵּן","therefore"],
-    ["חָרָה","is kindled"],
-    ["אַף־יְהוָה","the anger of the Lord"],
-    ["בְּעַמּוֹ","against His people"],
-    ["וַיֵּט","and He has stretched out"],
-    ["יָדוֹ","His hand"],
-    ["עָלָיו","against them"],
-    ["וַיַּכֵּהוּ","and has smitten them"],
-    ["וַיִּרְגְּזוּ","and trembled"],
-    ["הֶהָרִים","the hills"],
-    ["וַתְּהִי","and were"],
-    ["נִבְלָתָם","their carcasses"],
-    ["כַּסּוּחָה","as the refuse"],
-    ["בְּקֶרֶב","in the midst of"],
-    ["הַחוּצוֹת","the streets"],
-    ["בְּכׇל־זֹאת","for all this"],
-    ["לֹא־שָׁב","is not turned away"],
-    ["אַפּוֹ","His anger"],
-    ["וְעוֹד","but still"],
-    ["יָדוֹ","His hand"],
-    ["נְטוּיָה","is stretched out"],
-    ["׃",""]
-  ]},
-  { num:"כו", words:[
-    ["וְנָשָׂא־נֵס","and He will lift up a standard"],
-    ["לַגּוֹיִם","to the nations"],
-    ["מֵרָחוֹק","from afar"],
-    ["וְשָׁרַק","and will hiss"],
-    ["לוֹ","unto them"],
-    ["מִקְצֵה","from the end of"],
-    ["הָאָרֶץ","the earth"],
-    ["וְהִנֵּה","and behold"],
-    ["מְהֵרָה","with speed"],
-    ["קַל","swiftly"],
-    ["יָבוֹא","he shall come"],
-    ["לֹא־עָיֵף","none shall be weary"],
-    ["וְלֹא־כוֹשֵׁל","nor stumble"],
-    ["בּוֹ","among them"],
-    ["׃",""]
-  ]},
-  { num:"כז", words:[
-    ["לֹא","not"],
-    ["יָנוּם","shall slumber"],
-    ["וְלֹא","nor"],
-    ["יִישָׁן","he shall sleep"],
-    ["לֹא","not"],
-    ["נִפְתַּח","be loosed"],
-    ["אֵזוֹר","the belt of"],
-    ["חֲלָצָיו","his loins"],
-    ["וְלֹא","nor"],
-    ["נִתַּק","be broken"],
-    ["שְׂרוֹךְ","the latchet of"],
-    ["נְעָלָיו","his shoes"],
-    ["׃",""]
-  ]},
-  { num: "כח", words: [["אֲשֶׁר","whose"], ["חִצָּיו","arrows"], ["שְׁנוּנִים","are sharp"], ["וְכׇל־קַשְּׁתֹתָיו","and all his bows"], ["דְּרֻכוֹת","are bent"], ["פַּרְסוֹת","the hooves of"], ["סוּסָיו","his horses"], ["כַּצַּר","as flint"], ["נֶחְשָׁבוּ","are counted"], ["וְגַלְגִּלָּיו","and his wheels"], ["כַּסּוּפָה","as a whirlwind"], ["רַעֲמָתָם","their roaring"], ["כַּלָּבִיא","as a lion"], ["׃",""]]},
-  { num:"כט", words:[
-    ["שְׁאָגָה","his roaring"],
-    ["לוֹ","is his"],
-    ["כַּלָּבִיא","as a lion"],
-    ["וְשָׁאַג","he shall roar"],
-    ["כַּכְּפִירִים","as young lions"],
-    ["וְיִנְהֹם","and shall growl"],
-    ["וְיֹאחֵז","and lay hold of"],
-    ["טֶרֶף","the prey"],
-    ["וְיַפְלִיט","and shall carry it away"],
-    ["וְאֵין","and none"],
-    ["מַצִּיל","shall deliver"],
-    ["׃",""]
-  ]},
-  { num:"ל", words:[
-    ["וְיִנְהֹם","and shall roar"],
-    ["עָלָיו","against them"],
-    ["בַּיּוֹם","in the day"], ["הַהוּא","that"],
-    ["כְּנַהֲמַת־יָם","like the roaring of the sea"],
-    ["וְנִבַּט","and one shall look"],
-    ["לָאָרֶץ","unto the land"],
-    ["וְהִנֵּה־חֹשֶׁךְ","behold darkness"],
-    ["צַר","and sorrow"],
-    ["וָאוֹר","and the light"],
-    ["חָשַׁךְ","is darkened"],
-    ["בַּעֲרִיפֶיהָ","in the heavens thereof"],
-    ["׃",""]
-  ]},
+  { num: "כד", words: [["לָכֵן","therefore"], ["כֶּאֱכֹל","as devours"], ["קַשׁ","the stubble"], ["לְשׁוֹן","the tongue of"], ["אֵשׁ","fire"], ["וַחֲשַׁשׁ","and as the chaff"], ["לֶהָבָה","the flame"], ["יִרְפֶּה","consumeth"], ["שׇׁרְשָׁם","their root"], ["כַּמָּק","as the rottenness"], ["יִהְיֶה","shall be"], ["וּפִרְחֵיהֶם","and their blossoms"], ["כָּאָבָק","as dust"], ["יַעֲלֶה","shall go up"], ["כִּי","because"], ["מָאֲסוּ","they have cast away"], ["אֵת־תּוֹרַת","the law of"], ["יְהוָה","the Lord"], ["צְבָאוֹת","of Hosts"], ["וְאֵת","and"], ["אִמְרַת","the word of"], ["קְדוֹשׁ־יִשְׂרָאֵל","the Holy One of Israel"], ["נִאֵצוּ","they despised"], ["׃",""]]},
+  { num: "כה", words: [["עַל־כֵּן","therefore"], ["חָרָה","is kindled"], ["אַף־יְהוָה","the anger of the Lord"], ["בְּעַמּוֹ","against His people"], ["וַיֵּט","and He has stretched out"], ["יָדוֹ","His hand"], ["עָלָיו","against them"], ["וַיַּכֵּהוּ","and has smitten them"], ["וַיִּרְגְּזוּ","and trembled"], ["הֶהָרִים","the hills"], ["וַתְּהִי","and were"], ["נִבְלָתָם","their carcasses"], ["כַּסּוּחָה","as the refuse"], ["בְּקֶרֶב","in the midst of"], ["חוּצוֹת","the streets"], ["בְּכׇל־זֹאת","for all this"], ["לֹא־שָׁב","is not turned away"], ["אַפּוֹ","His anger"], ["וְעוֹד","but still"], ["יָדוֹ","His hand"], ["נְטוּיָה","is stretched out"], ["׃",""]]},
+  { num: "כו", words: [["וְנָשָׂא־נֵס","and He will lift up a standard"], ["לַגּוֹיִם","to the nations"], ["מֵרָחוֹק","from afar"], ["וְשָׁרַק","and will hiss"], ["לוֹ","unto them"], ["מִקְצֵה","from the end of"], ["הָאָרֶץ","the earth"], ["וְהִנֵּה","and behold"], ["מְהֵרָה","with speed"], ["קַל","swiftly"], ["יָבוֹא","he shall come"], ["אֵין־עָיֵף","none shall be weary"], ["וְאֵין־כּוֹשֵׁל","nor stumble"], ["בּוֹ","among them"], ["׃",""]]},
+  { num: "כז", words: [["לֹא","not"], ["יָנוּם","shall slumber"], ["וְלֹא","nor"], ["יִישָׁן","he shall sleep"], ["וְלֹא","neither"], ["נִפְתַּח","be loosed"], ["אֵזוֹר","the belt of"], ["חֲלָצָיו","his loins"], ["וְלֹא","nor"], ["נִתַּק","be broken"], ["שְׂרוֹךְ","the latchet of"], ["נְעָלָיו","his shoes"], ["׃",""]]},
+  { num: "כח", words: [["אֲשֶׁר","whose"], ["חִצֵּיהֶם","their arrows"], ["שְׁנוּנִים","are sharp"], ["וְכׇל־קַשְׁתוֹתֵיהֶם","and all their bows"], ["דְּרֻכוֹת","are bent"], ["פַּרְסוֹת","the hooves of"], ["סוּסֵיהֶם","their horses"], ["כַּצַּר","as flint"], ["נֶחְשָׁבוּ","are counted"], ["וְגַלְגִּלֵּיהֶם","and their wheels"], ["כַּסּוּפָה","as a whirlwind"], ["שַׁאֲגָתָם","their roaring"], ["כַּלָּבִיא","as a lion"], ["׃",""]]},
+  { num: "כט", words: [["יִשְׁאַג","they shall roar"], ["כַּכְּפִירִים","as young lions"], ["וְיִנְהֹם","and shall growl"], ["וְיֹאחֵז","and lay hold of"], ["טֶרֶף","the prey"], ["וְיַפְלִיט","and shall carry it away"], ["וְאֵין","and none"], ["מַצִּיל","shall deliver"], ["׃",""]]},
+  { num: "ל", words: [["וְיִנְהֹם","and shall roar"], ["עָלָיו","against them"], ["בַּיּוֹם","in the day"], ["הַהוּא","that"], ["כְּנַהֲמַת־יָם","like the roaring of the sea"], ["וְהִבִּיטוּ","and if they look"], ["לָאָרֶץ","unto the land"], ["וְהִנֵּה־חֹשֶׁךְ","behold darkness"], ["צַר","and sorrow"], ["וָאוֹר","and the light"], ["חָשַׁךְ","is darkened"], ["בַּעֲרִיפֶיהָ","in the heavens thereof"], ["׃",""]]},
 ];
 var n2_ch16Verses = [
   { num:"א", words:[
@@ -5106,43 +4959,8 @@ var n2_ch16Verses = [
     ["עָשָׁן","with smoke"],
     ["׃",""]
   ]},
-  { num:"ה", words:[
-    ["וָאֹמַר","then I said"],
-    ["אוֹי־לִי","woe is me"],
-    ["כִּי","for"],
-    ["נִדְמֵיתִי","I am undone"],
-    ["כִּי","because"],
-    ["אִישׁ","a man of"],
-    ["טְמֵא־שְׂפָתַיִם","unclean lips"],
-    ["אָנֹכִי","I"],
-    ["וּבְתוֹךְ","and in the midst of"],
-    ["עַם־טְמֵא","a people of unclean"],
-    ["שְׂפָתַיִם","lips"],
-    ["אָנֹכִי","I"],
-    ["יוֹשֵׁב","dwell"],
-    ["כִּי","for"],
-    ["אֶת־הַמֶּלֶךְ","the King"],
-    ["יְהוָה","the Lord"],
-    ["צְבָאוֹת","of Hosts"],
-    ["רָאוּ","they saw"],
-    ["עֵינַי","my eyes"],
-    ["׃",""]
-  ]},
-  { num:"ו", words:[
-    ["וַיָּעָף","then flew"],
-    ["אֵלַי","unto me"],
-    ["אֶחָד","one"],
-    ["מִן־הַשְּׂרָפִים","of the seraphim"],
-    ["וּבְיָדוֹ","and in his hand"],
-    ["גַּחֶלֶת","a coal"],
-    ["חַיָּה","living"],
-    ["אֲשֶׁר","which"],
-    ["לָקַח","took"],
-    ["בְּמֶלְקָחַיִם","with the tongs"],
-    ["מֵעַל","from upon"],
-    ["הַמִּזְבֵּחַ","the altar"],
-    ["׃",""]
-  ]},
+  { num: "ה", words: [["וָאֹמַר","then I said"], ["אוֹי־לִי","woe is me"], ["כִּי","for"], ["נִדְמֵיתִי","I am undone"], ["כִּי","because"], ["אִישׁ","a man of"], ["טְמֵא־שְׂפָתַיִם","unclean lips"], ["אָנֹכִי","I"], ["וּבְתוֹךְ","and in the midst of"], ["עַם־טְמֵא","a people of unclean"], ["שְׂפָתַיִם","lips"], ["אָנֹכִי","I"], ["יוֹשֵׁב","dwell"], ["כִּי","for"], ["אֶת־הַמֶּלֶךְ","the King"], ["יְהוָה","the Lord"], ["צְבָאוֹת","of Hosts"], ["רָאוּ","they saw"], ["עֵינָי","my eyes"], ["׃",""]]},
+  { num: "ו", words: [["וַיָּעָף","then flew"], ["אֵלַי","unto me"], ["אֶחָד","one"], ["מִן־הַשְּׂרָפִים","of the seraphim"], ["וּבְיָדוֹ","and in his hand"], ["גַּחֶלֶת","a coal"], ["חַיָּה","living"], ["אֲשֶׁר","which"], ["לָקַח","took"], ["בְּמֶלְקַחַיִם","with the tongs"], ["מֵעַל","from upon"], ["הַמִּזְבֵּחַ","the altar"], ["׃",""]]},
   { num:"ז", words:[
     ["וַיַּגַּע","and he laid it"],
     ["עַל־פִּי","upon my mouth"],
@@ -5171,21 +4989,7 @@ var n2_ch16Verses = [
     ["שְׁלָחֵנִי","send me"],
     ["׃",""]
   ]},
-  { num:"ט", words:[
-    ["וַיֹּאמֶר","and He said"],
-    ["לֵךְ","go"],
-    ["וְאָמַרְתָּ","and tell"],
-    ["לָעָם","unto the people"], ["הַזֶּה","this"],
-    ["שָׁמְעוּ","hear you indeed"],
-    ["שָׁמוֹעַ","hearing"],
-    ["וְלֹא","but not"],
-    ["הֵבִינוּ","they understood"],
-    ["רָאוּ","see you indeed"],
-    ["רָאוֹ","seeing"],
-    ["וְלֹא","but not"],
-    ["יָדָעוּ","they perceived"],
-    ["׃",""]
-  ]},
+  { num: "ט", words: [["וַיֹּאמֶר","and He said"], ["לֵךְ","go"], ["וְאָמַרְתָּ","and tell"], ["לָעָם","unto the people"], ["הַזֶּה","this"], ["שִׁמְעוּ","hear you"], ["שָׁמוֹעַ","indeed"], ["וְלֹא","but not"], ["הֵבִינוּ","they understood"], ["וּרְאוּ","and see you"], ["רָאוֹ","indeed"], ["וְלֹא","but not"], ["יָדָעוּ","they perceived"], ["׃",""]]},
   { num:"י", words:[
     ["הַשְׁמֵן","make fat"],
     ["לֵב־הָעָם","the heart of people"], ["הַזֶּה","this"],
@@ -5203,24 +5007,7 @@ var n2_ch16Verses = [
     ["וְנִרְפָּא","and be healed"],
     ["׃",""]
   ]},
-  { num:"יא", words:[
-    ["וָאֹמַר","then I said"],
-    ["עַד־מָתַי","until when"],
-    ["אֲדֹנָי","O Lord"],
-    ["וַיֹּאמֶר","and He said"],
-    ["עַד־אֲשֶׁר","until"],
-    ["יָשֹׁמּוּ","shall be wasted"],
-    ["עָרִים","the cities"],
-    ["מֵאֵין","without"],
-    ["יוֹשֵׁב","inhabitant"],
-    ["וּבָתִּים","and the houses"],
-    ["מֵאֵין","without"],
-    ["אָדָם","man"],
-    ["וְהָאֲדָמָה","and the land"],
-    ["תֵּשָׁאֶה","be wasted"],
-    ["שְׁמָמָה","utterly desolate"],
-    ["׃",""]
-  ]},
+  { num: "יא", words: [["וָאֹמַר","then I said"], ["עַד־מָתַי","until when"], ["אֲדֹנָי","O Lord"], ["וַיֹּאמֶר","and He said"], ["עַד־אֲשֶׁר","until"], ["יָשֹׁמּוּ","shall be wasted"], ["עָרִים","the cities"], ["מֵאֵין","without"], ["יוֹשֵׁב","inhabitant"], ["וּבָתִּים","and the houses"], ["מֵאֵין","without"], ["אָדָם","man"], ["וְהָאֲדָמָה","and the land"], ["תִּשָּׁאֶה","be wasted"], ["שְׁמָמָה","utterly desolate"], ["׃",""]]},
   { num:"יב", words:[
     ["וְרִחַק","and hath removed far away"],
     ["יְהוָה","the Lord"],
@@ -5324,18 +5111,7 @@ var n2_ch17Verses = [
     ["לֵאמֹר","saying"],
     ["׃",""]
   ]},
-  { num:"ו", words:[
-    ["נַעֲלֶה","let us go up"],
-    ["בִיהוּדָה","against Judah"],
-    ["וּנְקִיצֶנָּה","and vex it"],
-    ["וְנַבְקִיעֶנָּה","and make a breach in it"],
-    ["אֵלֵינוּ","unto us"],
-    ["וְנַמְלִיךְ","and set up"],
-    ["מֶלֶךְ","a king"],
-    ["בְּתוֹכָהּ","in its midst"],
-    ["אֵת־בֶּן־טָבְאַל","the son of Tabeal"],
-    ["׃",""]
-  ]},
+  { num: "ו", words: [["נַעֲלֶה","let us go up"], ["בִיהוּדָה","against Judah"], ["וּנְקִיצֶנָּה","and vex it"], ["וְנַבְקִעֶנָּה","and make a breach in it"], ["אֵלֵינוּ","unto us"], ["וְנַמְלִיךְ","and set up"], ["מֶלֶךְ","a king"], ["בְּתוֹכָהּ","in its midst"], ["אֵת־בֶּן־טָבְאַל","the son of Tabeal"], ["׃",""]]},
   { num:"ז", words:[
     ["כֹּה־אָמַר","thus says"],
     ["אֲדֹנָי","the Lord"],
@@ -5485,22 +5261,7 @@ var n2_ch17Verses = [
     ["אֵת־מֶלֶךְ־אַשּׁוּר","the king of Assyria"],
     ["׃",""]
   ]},
-  { num:"יח", words:[
-    ["וְהָיָה","and it shall come to pass"],
-    ["בַּיּוֹם","in the day"], ["הַהוּא","that"],
-    ["יִשְׁרֹק","He shall hiss"],
-    ["יְהוָה","the Lord"],
-    ["לַזְּבוּב","for the fly"],
-    ["אֲשֶׁר","which"],
-    ["בִּקְצֵה","in the uttermost part of"],
-    ["יְאֹרֵי","the rivers of"],
-    ["מִצְרָיִם","Egypt"],
-    ["וְלַדְּבוֹרָה","and for the bee"],
-    ["אֲשֶׁר","which"],
-    ["בְּאֶרֶץ","in the land of"],
-    ["אַשּׁוּר","Assyria"],
-    ["׃",""]
-  ]},
+  { num: "יח", words: [["וְהָיָה","and it shall come to pass"], ["בַּיּוֹם","in the day"], ["הַהוּא","that"], ["יִשְׁרֹק","He shall hiss"], ["יְהוָה","the Lord"], ["לַזְּבוּב","for the fly"], ["אֲשֶׁר","which"], ["בִּקְצֵה","in the uttermost part of"], ["מִצְרָיִם","Egypt"], ["וְלַדְּבוֹרָה","and for the bee"], ["אֲשֶׁר","which"], ["בְּאֶרֶץ","in the land of"], ["אַשּׁוּר","Assyria"], ["׃",""]]},
   { num:"יט", words:[
     ["וּבָאוּ","and they shall come"],
     ["וְנָחוּ","and shall rest"],
@@ -5573,35 +5334,8 @@ var n2_ch17Verses = [
     ["יִהְיֶה","shall be"],
     ["׃",""]
   ]},
-  { num:"כד", words:[
-    ["בַּחִצִּים","with arrows"],
-    ["וּבַקֶּשֶׁת","and with the bows"],
-    ["יָבֹא","shall come"],
-    ["שָׁמָּה","there"],
-    ["כִּי־שָׁמִיר","because briars"],
-    ["וָשַׁיִת","and thorns"],
-    ["תִּהְיֶה","shall be"],
-    ["כׇל־הָאָרֶץ","all the land"],
-    ["׃",""]
-  ]},
-  { num:"כה", words:[
-    ["וְכֹל","and all"],
-    ["הֶהָרִים","the hills"],
-    ["אֲשֶׁר","that"],
-    ["בַּמַּעְדֵר","with the hoe"],
-    ["יֵעָדֵרוּן","shall be digged"],
-    ["לֹא־תָבוֹא","shall not come"],
-    ["שָׁמָּה","there"],
-    ["יִרְאַת","the fear of"],
-    ["שָׁמִיר","briars"],
-    ["וָשָׁיִת","and thorns"],
-    ["וְהָיָה","and it shall be"],
-    ["לְמִשְׁלַח","for the sending forth of"],
-    ["שׁוֹר","oxen"],
-    ["וּלְמִרְמַס","and for the treading of"],
-    ["שֶׂה","lesser cattle"],
-    ["׃",""]
-  ]},
+  { num: "כד", words: [["בַּחִצִּים","with arrows"], ["וּבַקֶּשֶׁת","and with the bows"], ["יָבוֹא","shall come"], ["שָׁמָּה","there"], ["כִּי־שָׁמִיר","because briars"], ["וָשַׁיִת","and thorns"], ["תִּהְיֶה","shall be"], ["כׇל־הָאָרֶץ","all the land"], ["׃",""]]},
+  { num: "כה", words: [["וְכֹל","and all"], ["הֶהָרִים","the hills"], ["אֲשֶׁר","that"], ["בַּמַּעְדֵּר","with the hoe"], ["יֵעָדֵרוּן","shall be digged"], ["לֹא־תָבוֹא","shall not come"], ["שָׁמָּה","there"], ["יִרְאַת","the fear of"], ["שָׁמִיר","briars"], ["וָשָׁיִת","and thorns"], ["וְהָיָה","and it shall be"], ["לְמִשְׁלַח","for the sending forth of"], ["שׁוֹר","oxen"], ["וּלְמִרְמַס","and for the treading of"], ["שֶׂה","lesser cattle"], ["׃",""]]},
 ];
 var n2_ch18Verses = [
   { num:"א", words:[
@@ -5651,24 +5385,7 @@ var n2_ch18Verses = [
     ["בַּז","baz"],
     ["׃",""]
   ]},
-  { num:"ד", words:[
-    ["כִּי","for"],
-    ["בְּטֶרֶם","before"],
-    ["יֵדַע","he shall know"],
-    ["הַנַּעַר","the child"],
-    ["קְרֹא","to cry"],
-    ["אָבִי","my father"],
-    ["וְאִמִּי","and my mother"],
-    ["יִשָּׂא","shall be taken away"],
-    ["אֶת־חֵיל","the riches of"],
-    ["דַּמֶּשֶׂק","Damascus"],
-    ["וְאֵת","and"],
-    ["שְׁלַל","the spoil of"],
-    ["שֹׁמְרוֹן","Samaria"],
-    ["לִפְנֵי","before"],
-    ["מֶלֶךְ־אַשּׁוּר","the king of Assyria"],
-    ["׃",""]
-  ]},
+  { num: "ד", words: [["כִּי","for"], ["הִנֵּה","behold"], ["לֹא","not"], ["יֵדַע","shall have knowledge"], ["הַנַּעַר","the child"], ["קְרֹא","to cry"], ["אָבִי","my father"], ["וְאִמִּי","and my mother"], ["בְּטֶרֶם","before"], ["יִשָּׂא","shall be taken away"], ["אֶת־חֵיל","the riches of"], ["דַּמֶּשֶׂק","Damascus"], ["וְאֵת","and"], ["שְׁלַל","the spoil of"], ["שֹׁמְרוֹן","Samaria"], ["לִפְנֵי","before"], ["מֶלֶךְ־אַשּׁוּר","the king of Assyria"], ["׃",""]]},
   { num:"ה", words:[
     ["וַיֹּסֶף","and continued"],
     ["יְהוָה","the Lord"],
@@ -5711,22 +5428,7 @@ var n2_ch18Verses = [
     ["עַל־כׇּל־גְּדוֹתָיו","over all his banks"],
     ["׃",""]
   ]},
-  { num:"ח", words:[
-    ["וְחָלַף","and shall pass"],
-    ["בִּיהוּדָה","through Judah"],
-    ["שָׁטַף","shall overflow"],
-    ["וְעָבַר","and go over"],
-    ["עַד־צַוָּאר","reaching even to the neck"],
-    ["יַגִּיעַ","shall reach"],
-    ["וְהָיָה","and shall be"],
-    ["מֻטּוֹת","the stretching out of"],
-    ["כְּנָפָיו","his wings"],
-    ["מְלֹא","the fullness of"],
-    ["רֹחַב־אַרְצְךָ","the breadth of your land"],
-    ["עִמָּנוּ","O Immanu-"],
-    ["אֵל","el"],
-    ["׃",""]
-  ]},
+  { num: "ח", words: [["וְחָלַף","and shall pass"], ["בִּיהוּדָה","through Judah"], ["שָׁטַף","shall overflow"], ["וְעָבַר","and go over"], ["עַד־צַוָּאר","even to the neck"], ["יַגִּיעַ","shall reach"], ["וְהָיָה","and shall be"], ["מֻטּוֹת","the stretching out of"], ["כְּנָפָיו","his wings"], ["מְלֹא","the fullness of"], ["רֹחַב־אַרְצְךָ","the breadth of your land"], ["עִמָּנוּ","O Immanu-"], ["אֵל","el"], ["׃",""]]},
   { num:"ט", words:[
     ["רֹעוּ","associate yourselves"],
     ["עַמִּים","O you peoples"],
@@ -5853,22 +5555,7 @@ var n2_ch18Verses = [
     ["צִיּוֹן","Zion"],
     ["׃",""]
   ]},
-  { num:"יט", words:[
-    ["וְכִי־יֹאמְרוּ","and when they shall say"],
-    ["אֲלֵיכֶם","unto you"],
-    ["דִּרְשׁוּ","seek"],
-    ["אֶל־הָאֹבוֹת","unto those that have familiar spirits"],
-    ["וְאֶל־הַיִּדְּעֹנִים","and unto the wizards"],
-    ["הַמְצַפְצְפִים","that peep"],
-    ["וְהַמַּהְגִּים","and that mutter"],
-    ["הֲלוֹא־עַם","should not a people"],
-    ["אֶל־אֱלֹהָיו","unto their God"],
-    ["יִדְרֹשׁ","should seek"],
-    ["בְּעַד","for"],
-    ["הַחַיִּים","the living"],
-    ["אֶל־הַמֵּתִים","unto the dead"],
-    ["׃",""]
-  ]},
+  { num: "יט", words: [["וְכִי־יֹאמְרוּ","and when they shall say"], ["אֲלֵיכֶם","unto you"], ["דִּרְשׁוּ","seek"], ["אֶל־הָאֹבוֹת","unto those that have familiar spirits"], ["וְאֶל־הַיִּדְּעֹנִים","and unto the wizards"], ["הַמְצַפְצְפִים","that peep"], ["וְהַמַּהְגִּים","and that mutter"], ["הֲלוֹא־עַם","should not a people"], ["אֶל־אֱלֹהָיו","unto their God"], ["יִדְרֹשׁ","should seek"], ["בְּעַד","for"], ["הַחַיִּים","the living"], ["לִשְׁמֹעַ","to hear"], ["מֵאֵת","from"], ["הַמֵּתִים","the dead"], ["׃",""]]},
   { num:"כ", words:[
     ["לְתוֹרָה","to the law"],
     ["וְלִתְעוּדָה","and to the testimony"],
@@ -5895,7 +5582,7 @@ var n2_ch18Verses = [
     ["לְמָעְלָה","upward"],
     ["׃",""]
   ]},
-  { num: "כב", words: [["וְאֶל־אֶרֶץ","and unto the earth"], ["יַבִּיט","shall look"], ["וְהִנֵּה","and behold"], ["צָרָה","trouble"], ["וַחֲשֵׁכָה","and darkness"], ["מְעוּף","dimness of"], ["צוּקָה","anguish"], ["וַאֲפֵלָה","and into darkness"], ["מְנֻדָּח","driven"], ["׃",""]]},
+  { num: "כב", words: [["וְאֶל־אֶרֶץ","and unto the earth"], ["יַבִּיטוּ","shall look"], ["וְהִנֵּה","and behold"], ["צָרָה","trouble"], ["וַחֲשֵׁכָה","and darkness"], ["מְעוּף","dimness of"], ["צוּקָה","anguish"], ["וַאֲפֵלָה","and into darkness"], ["מְנֻדָּח","driven"], ["׃",""]]},
 ];
 var n2_ch19Verses = [
   { num:"א", words:[
@@ -6018,15 +5705,7 @@ var n2_ch19Verses = [
     ["תַּעֲשֶׂה־זֹּאת","shall perform this"],
     ["׃",""]
   ]},
-  { num:"ח", words:[
-    ["דָּבָר","a word"],
-    ["שָׁלַח","sent"],
-    ["אֲדֹנָי","the Lord"],
-    ["בְּיַעֲקֹב","unto Jacob"],
-    ["וְנָפַל","and it has lighted"],
-    ["בְּיִשְׂרָאֵל","upon Israel"],
-    ["׃",""]
-  ]},
+  { num: "ח", words: [["דְּבָרוֹ","his word"], ["שָׁלַח","sent"], ["אֲדֹנָי","the Lord"], ["בְּיַעֲקֹב","unto Jacob"], ["וְנָפַל","and it has lighted"], ["בְּיִשְׂרָאֵל","upon Israel"], ["׃",""]]},
   { num:"ט", words:[
     ["וְיָדְעוּ","and shall know"],
     ["כׇל־הָעָם","all the people"],
@@ -6117,45 +5796,8 @@ var n2_ch19Verses = [
     ["מְבֻלָּעִים","are destroyed"],
     ["׃",""]
   ]},
-  { num:"יז", words:[
-    ["עַל־כֵּן","therefore"],
-    ["עַל־בַּחוּרָיו","over his young men"],
-    ["לֹא־יִשְׂמַח","shall have no joy"],
-    ["אֲדֹנָי","the Lord"],
-    ["וְאֶת־יְתֹמָיו","and his fatherless"],
-    ["וְאֶת־אַלְמְנוֹתָיו","and his widows"],
-    ["לֹא","not"],
-    ["יְרַחֵם","shall He have mercy on"],
-    ["כִּי","for"],
-    ["כֻלּוֹ","every one is"],
-    ["חָנֵף","a hypocrite"],
-    ["וּמֵרַע","and an evildoer"],
-    ["וְכׇל־פֶּה","and every mouth"],
-    ["דֹּבֵר","speaks"],
-    ["נְבָלָה","folly"],
-    ["בְּכׇל־זֹאת","for all this"],
-    ["לֹא־שָׁב","is not turned away"],
-    ["אַפּוֹ","His anger"],
-    ["וְעוֹד","but still"],
-    ["יָדוֹ","His hand"],
-    ["נְטוּיָה","is stretched out"],
-    ["׃",""]
-  ]},
-  { num:"יח", words:[
-    ["כִּי־בָעֲרָה","for shall burn"],
-    ["כָאֵשׁ","as the fire"],
-    ["רִשְׁעָה","wickedness"],
-    ["שָׁמִיר","briars"],
-    ["וָשַׁיִת","and thorns"],
-    ["תֹּאכֵל","it shall devour"],
-    ["וַתִּצַּת","and shall kindle"],
-    ["בְּסִבְכֵי","in the thickets of"],
-    ["הַיַּעַר","the forest"],
-    ["וַיִּתְאַבְּכוּ","and they shall mount up"],
-    ["גֵּאוּת","in the rising of"],
-    ["עָשָׁן","smoke"],
-    ["׃",""]
-  ]},
+  { num: "יז", words: [["עַל־כֵּן","therefore"], ["עַל־בַּחוּרֵיהֶם","over their young men"], ["לֹא־יִשְׂמַח","shall have no joy"], ["אֲדֹנָי","the Lord"], ["וְאֶת־יְתֹמֵיהֶם","and their fatherless"], ["וְאֶת־אַלְמְנוֹתֵיהֶם","and their widows"], ["לֹא","not"], ["יְרַחֵם","shall He have mercy on"], ["כִּי","for"], ["כֻּלָּם","every one of them is"], ["חָנֵף","a hypocrite"], ["וּמֵרַע","and an evildoer"], ["וְכׇל־פֶּה","and every mouth"], ["דֹּבֵר","speaks"], ["נְבָלָה","folly"], ["בְּכׇל־זֹאת","for all this"], ["לֹא־שָׁב","is not turned away"], ["אַפּוֹ","His anger"], ["וְעוֹד","but still"], ["יָדוֹ","His hand"], ["נְטוּיָה","is stretched out"], ["׃",""]]},
+  { num: "יח", words: [["כִּי־בָעֲרָה","for shall burn"], ["כָאֵשׁ","as the fire"], ["רִשְׁעָה","wickedness"], ["שָׁמִיר","briars"], ["וָשַׁיִת","and thorns"], ["תֹּאכֵל","it shall devour"], ["וַתִּצַּת","and shall kindle"], ["בְּסִבְכֵי","in the thickets of"], ["הַיְּעָרוֹת","the forests"], ["וַיִּתְאַבְּכוּ","and they shall mount up"], ["גֵּאוּת","in the rising of"], ["עָשָׁן","smoke"], ["׃",""]]},
   { num:"יט", words:[
     ["בְּעֶבְרַת","through the wrath of"],
     ["יְהוָה","the Lord"],
@@ -6362,25 +6004,7 @@ var n2_ch20Verses = [
     ["עֵינָיו","his eyes"],
     ["׃",""]
   ]},
-  { num:"יג", words:[
-    ["כִּי","for"],
-    ["אָמַר","said"],
-    ["בְּכֹחַ","by the power of"],
-    ["יָדִי","my hand"],
-    ["עָשִׂיתִי","I have done"],
-    ["וּבְחׇכְמָתִי","and by my wisdom"],
-    ["כִּי","for"],
-    ["נְבֻנוֹתִי","I am prudent"],
-    ["וְאָסִיר","and I have removed"],
-    ["גְּבוּלֹת","the borders of"],
-    ["עַמִּים","the peoples"],
-    ["וַעֲתוּדֹתֵיהֶם","and their treasures"],
-    ["שׁוֹשֵׂתִי","I have robbed"],
-    ["וְאוֹרִיד","and I have put down"],
-    ["כַּאבִּיר","as a valiant man"],
-    ["יוֹשְׁבִים","the inhabitants"],
-    ["׃",""]
-  ]},
+  { num: "יג", words: [["כִּי","for"], ["אָמַר","said"], ["בְּכֹחַ","by the power of"], ["יָדִי","my hand"], ["עָשִׂיתִי","I have done"], ["אֶת־אֵלֶּה","these things"], ["וּבְחׇכְמָתִי","and by my wisdom"], ["כִּי","for"], ["נְבֻנוֹתִי","I am prudent"], ["וְאָסִיר","and I have removed"], ["גְּבוּלֹת","the borders of"], ["עַמִּים","the peoples"], ["וַעֲתוּדֹתֵיהֶם","and their treasures"], ["שׁוֹשֵׂתִי","I have robbed"], ["וְאוֹרִיד","and I have put down"], ["כַּאבִּיר","as a valiant man"], ["יוֹשְׁבִים","the inhabitants"], ["׃",""]]},
   { num:"יד", words:[
     ["וַתִּמְצָא","and has found"],
     ["כַקֵּן","as a nest"],
@@ -6418,22 +6042,7 @@ var n2_ch20Verses = [
     ["לֹא־עֵץ","no wood"],
     ["׃",""]
   ]},
-  { num:"טז", words:[
-    ["לָכֵן","therefore"],
-    ["יְשַׁלַּח","he shall send"],
-    ["הָאָדוֹן","the Lord"],
-    ["יְהוָה","the Lord"],
-    ["צְבָאוֹת","of Hosts"],
-    ["בְּמִשְׁמַנָּיו","among his fat ones"],
-    ["רָזוֹן","leanness"],
-    ["וְתַחַת","and under"],
-    ["כְּבֹדוֹ","his glory"],
-    ["יֵקַד","he shall be kindled"],
-    ["יְקֹד","a burning"],
-    ["כִּיקוֹד","like the burning of"],
-    ["אֵשׁ","a fire"],
-    ["׃",""]
-  ]},
+  { num: "טז", words: [["לָכֵן","therefore"], ["יְשַׁלַּח","he shall send"], ["הָאָדוֹן","the Lord"], ["יְהוָה","the LORD"], ["צְבָאוֹת","of Hosts"], ["בְּמִשְׁמַנָּיו","among his fat ones"], ["רָזוֹן","leanness"], ["וְתַחַת","and under"], ["כְּבֹדוֹ","his glory"], ["יֵקַד","he shall be kindled"], ["יְקֹד","a burning"], ["כִּיקוֹד","like the burning of"], ["אֵשׁ","a fire"], ["׃",""]]},
   { num:"יז", words:[
     ["וְהָיָה","and shall be"],
     ["אוֹר־יִשְׂרָאֵל","the light of Israel"],
@@ -6596,19 +6205,7 @@ var n2_ch20Verses = [
     ["כֵּלָיו","his baggage"],
     ["׃",""]
   ]},
-  { num:"כט", words:[
-    ["עָבְרוּ","passed"],
-    ["מַעְבָּרָה","the passage"],
-    ["גֶּבַע","Geba"],
-    ["מָלוֹן","is their lodging"],
-    ["לָנוּ","unto us"],
-    ["חָרְדָה","is afraid"],
-    ["הָרָמָה","Ramah"],
-    ["גִּבְעַת","Gibeah of"],
-    ["שָׁאוּל","Saul"],
-    ["נָסָה","is fled"],
-    ["׃",""]
-  ]},
+  { num: "כט", words: [["עָבְרוּ","passed"], ["מַעְבָּרָה","the passage"], ["גֶּבַע","Geba"], ["מָלוֹן","is their lodging"], ["לָנוּ","unto us"], ["חָרְדָה","is afraid"], ["הָרָמָה","Ramath"], ["גִּבְעַת","Gibeah of"], ["שָׁאוּל","Saul"], ["נָסָה","is fled"], ["׃",""]]},
   { num:"ל", words:[
     ["צַהֲלִי","lift up"],
     ["קוֹלֵךְ","your voice"],
@@ -6640,21 +6237,7 @@ var n2_ch20Verses = [
     ["יְרוּשָׁלָיִם","Jerusalem"],
     ["׃",""]
   ]},
-  { num:"לג", words:[
-    ["הִנֵּה","behold"],
-    ["הָאָדוֹן","the Lord"],
-    ["יְהוָה","the Lord"],
-    ["צְבָאוֹת","of Hosts"],
-    ["מְסָעֵף","shall lop"],
-    ["פֻּארָה","the bough"],
-    ["בְּמַעֲרָצָה","with terror"],
-    ["וְרָמֵי","and the high ones of"],
-    ["הַקּוֹמָה","the stature"],
-    ["גְּדוּעִים","shall be hewn down"],
-    ["וְהַגְּבֹהִים","and the haughty"],
-    ["יִשְׁפָּלוּ","they shall be humbled"],
-    ["׃",""]
-  ]},
+  { num: "לג", words: [["הִנֵּה","behold"], ["הָאָדוֹן","the Lord"], ["יְהוָה","the LORD"], ["צְבָאוֹת","of Hosts"], ["מְסָעֵף","shall lop"], ["פֻּארָה","the bough"], ["בְּמַעֲרָצָה","with terror"], ["וְרָמֵי","and the high ones of"], ["הַקּוֹמָה","the stature"], ["גְּדוּעִים","shall be hewn down"], ["וְהַגְּבֹהִים","and the haughty"], ["יִשְׁפָּלוּ","they shall be humbled"], ["׃",""]]},
   { num:"לד", words:[
     ["וְנִקַּף","and he shall cut down"],
     ["סִבְכֵי","the thickets of"],
@@ -6873,23 +6456,7 @@ var n2_ch21Verses = [
     ["מִשְׁמַעְתָּם","shall obey them"],
     ["׃",""]
   ]},
-  { num:"טו", words:[
-    ["וְהֶחֱרִים","and shall utterly destroy"],
-    ["יְהוָה","the Lord"],
-    ["אֵת־לְשׁוֹן","the tongue of"],
-    ["יָם־מִצְרַיִם","the Egyptian sea"],
-    ["וְהֵנִיף","and shall shake"],
-    ["יָדוֹ","His hand"],
-    ["עַל־הַנָּהָר","over the river"],
-    ["בַּעֲיָם","with His mighty"],
-    ["רוּחוֹ","his wind"],
-    ["וְהִכָּהוּ","and shall smite it"],
-    ["לְשִׁבְעָה","into seven"],
-    ["נְחָלִים","streams"],
-    ["וְהִדְרִיךְ","and make them go over"],
-    ["בַּנְּעָלִים","dryshod"],
-    ["׃",""]
-  ]},
+  { num: "טו", words: [["וְהֶחֱרִים","and shall utterly destroy"], ["יְהוָה","the Lord"], ["אֵת־לְשׁוֹן","the tongue of"], ["יָם־מִצְרַיִם","the Egyptian sea"], ["וְהֵנִיף","and shall shake"], ["יָדוֹ","His hand"], ["עַל־הַנָּהָר","over the river"], ["בַּעֲיָם","with His mighty"], ["רוּחוֹ","wind"], ["וְהִכָּהוּ","and shall smite it"], ["לְשִׁבְעָה","into seven"], ["נְחָלִים","streams"], ["וְהִדְרִיךְ","and make men go over"], ["בַּנְּעָלִים","dryshod"], ["׃",""]]},
   { num:"טז", words:[
     ["וְהָיְתָה","and there shall be"],
     ["מְסִלָּה","a highway"],
