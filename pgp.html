@@ -1266,6 +1266,17 @@ body, button, input, select, textarea,
   font-family: 'David Libre', serif !important;
 }
 
+  /* David Libre is the ONLY Hebrew face, everywhere, on every surface.
+     Inheritance, not enumeration: the allow-list above misses anything added
+     later (injected panels, new controls), and iOS does not let form controls
+     inherit font-family at all -- that is how mixed Hebrew appears in the app
+     while the web renders clean.  `*` has zero specificity, so every explicit
+     rule (kbd monospace, the emoji toolbar) still wins. */
+  :root { font-family: 'David Libre', serif; }
+  * { font-family: inherit; }
+  button, input, select, textarea, option, optgroup, ::placeholder { font-family: inherit; }
+
+
 /* === Docked selection toolbar: RIGHT side (Hebrew is RTL), always visible while reading, no overlap === */
 #sel-toolbar{left:auto!important;right:6px!important;top:50%!important;bottom:auto!important;transform:translateY(-50%)!important;max-height:90vh;overflow-y:auto;flex-direction:column!important;flex-wrap:nowrap!important;max-width:none!important;}
 body:not(.hide-sel-toolbar) #sel-toolbar{display:flex!important;}

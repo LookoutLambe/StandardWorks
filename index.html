@@ -119,6 +119,16 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
+/* David Libre is the ONLY Hebrew face, everywhere, on every surface.
+   Inheritance, not enumeration: an allow-list of selectors misses anything
+   added later, and iOS does not let form controls inherit font-family at all
+   -- that is how mixed Hebrew appears in the app while the web renders clean.
+   `*` has zero specificity, so every explicit rule still wins. */
+:root { font-family: 'David Libre', 'Georgia', serif; }
+* { font-family: inherit; }
+button, input, select, textarea, option, optgroup, ::placeholder { font-family: inherit; }
+
+
 /* ========== PAGE CONTAINER ========== */
 .page {
   max-width: 960px;
