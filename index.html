@@ -1061,7 +1061,7 @@ function _gsLoadIndex() {
   if (_gsIdxState === 1 || window.SW_SEARCH_INDEX) return;
   _gsIdxState = 1;
   var s = document.createElement('script');
-  s.src = 'search_index.js?v=si1';
+  s.src = 'search_index.js?v=si2';
   s.onload = function() {
     _gsIdxState = 0;
     var q = gsInput.value.trim();
