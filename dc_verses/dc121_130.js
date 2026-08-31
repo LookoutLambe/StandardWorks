@@ -48,7 +48,7 @@ var dc121_ch1Verses = [
   { num: "ד", words: [
     ["אֲדֹנָי","O Lord"],
     ["יֱהוִה","GOD"],
-    ["צְבָאוֹת","God Almighty,"],
+    ["שַׁדַּי","God Almighty,"],
     ["עֹשֵׂה","maker of"],
     ["שָׁמַיִם","heaven,"],
     ["וָאָרֶץ","earth,"],

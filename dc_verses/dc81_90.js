@@ -2208,7 +2208,7 @@ var dc84_ch1Verses = [
     ["עִמָּכֶם","with you"],
     ["נְאֻם","says"],
     ["יְהוָה","the LORD"],
-    ["צְבָאוֹת","Almighty"],
+    ["שַׁדַּי","Almighty"],
     ["אֶקְרַע","I will rend"],
     ["אֶת־מַמְלְכוֹתֵיהֶם","their kingdoms-;"],
     ["לֹא","-not"],
