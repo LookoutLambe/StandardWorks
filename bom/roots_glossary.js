@@ -289,6 +289,7 @@ window._rootGlossaryData = {
   "נזר": { "meaning": "(נָזִיר) Nazarite; (נֵזֶר) crown", "category": "Uncategorized" },
   "שוק": { "meaning": "(שׁוֹק) thigh; (שׁוּק) street, market", "category": "Uncategorized" },
   "נקף": { "meaning": "(הִקִּיף) to surround, encircle", "category": "Uncategorized" },
+  "חבק": { "meaning": "(חָבַק) to embrace; (חִבֻּק) folding of the hands", "category": "Uncategorized" },
   "נוה": { "meaning": "(נָוֶה) habitation, pasture", "category": "Uncategorized" },
   "יצב": { "meaning": "(הִתְיַצֵּב) to stand, present oneself", "category": "Uncategorized" },
   "אדר": { "meaning": "(אַדִּיר) mighty, majestic; (אַדֶּרֶת) cloak", "category": "Uncategorized" },
@@ -9357,10 +9358,7 @@ window._rootGlossaryData = {
     "meaning": "their astonishment",
     "category": "Uncategorized"
   },
-  "חלש": {
-    "meaning": "weak",
-    "category": "Uncategorized"
-  },
+  "חלש": { "meaning": "(חָלַשׁ) to be weak; (חֻלְשָׁה) weakness, infirmity", "category": "Uncategorized" },
   "ילות": {
     "meaning": "nights",
     "category": "Time"

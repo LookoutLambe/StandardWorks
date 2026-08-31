@@ -166,7 +166,7 @@ var ms_ch4Verses = [
     ["אַךְ","But"],["מִפְּרִי","of the fruit of"],["הָעֵץ","the tree"],["אֲשֶׁר","which"],["אַתָּה","thou"],["רֹאֶה","seest"],["בְּתוֹךְ","in the midst of"],["הַגָּן","the garden,"],["אָמַר","said"],["אֱלֹהִים","God:"],["לֹא","Not"],["תֹאכְלוּ","ye shall eat"],["מִמֶּנּוּ","of it,"],["וְלֹא","neither"],["תִגְּעוּ","shall ye touch"],["בּוֹ","it,"],["פֶּן־תְּמֻתוּן","lest ye die."],["׃",""]
   ]},
   { num: "י", words: [
-    ["וַיֹּאמֶר","And said"],["הַנָּחָשׁ","the serpent"],["אֶל־הָאִשָּׁה","unto the woman:"],["לֹא־מוֹת","Surely not"],["תְּמֻתוּן","shall ye die,"],["׃",""]
+    ["וַיֹּאמֶר","And said"],["הַנָּחָשׁ","the serpent"],["אֶל־הָאִשָּׁה","unto the woman:"],["לֹא־מוֹת","not surely"],["תְּמֻתוּן","shall ye die,"],["׃",""]
   ]},
   { num: "יא", words: [
     ["כִּי","For"],["יֹדֵעַ","doth know"],["אֱלֹהִים","God"],["כִּי","that"],["בְּיוֹם","in the day"],["אֲכָלְכֶם","ye eat"],["מִמֶּנּוּ","thereof,"],["וְנִפְקְחוּ","then shall be opened"],["עֵינֵיכֶם","your eyes,"],["וִהְיִיתֶם","and ye shall be"],["כֵּאלֹהִים","as gods,"],["יֹדְעֵי","knowing"],["טוֹב","good"],["וָרָע","and evil."],["׃",""]
