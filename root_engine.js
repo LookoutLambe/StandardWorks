@@ -992,6 +992,32 @@
   // these families woke dormant legacy pins (תְּפִלָּה→תפל "plaster") and
   // had to be reverted.
   var _headPins = {
+    // BOOK OF MORMON NAMES THAT COLLIDE WITH A COMMON WORD (2026-08-31).
+    // These are pinned to their OWN family as PLAIN STRINGS, which returns
+    // directly and never reaches baseRoot -- an H-number pin would still be
+    // walked to its etymological parent, which is exactly the bug: Strong's
+    // knows H3896 is Lechi, then BDB files it under H3895 לְחִי "jaw".
+    // The pointing is what separates them (לֶחִי segol vs לְחִי sheva), so the
+    // pin key is the exact pointed form. Same precedent as נֶפִי and לָמָן,
+    // which already resolve to their own families and were never wrong.
+    // Lehi (14 forms, 128 tokens)
+    'לֶחִי': 'לחי', 'וְלֶחִי': 'לחי', 'אַנְטִי־נֶפִי־לֶחִי': 'לחי', 'אֶת־לֶחִי': 'לחי',
+    'לְלֶחִי': 'לחי', 'אֶל־לֶחִי': 'לחי', 'מִלֶּחִי': 'לחי', 'בַּלֶּחִי': 'לחי',
+    'בֶּן־לֶחִי': 'לחי', 'עִם־לֶחִי': 'לחי', 'לְבֶן־לֶחִי': 'לחי', 'וְאֶת־לֶחִי': 'לחי',
+    'עַד־לֶחִי': 'לחי', 'אֲשֶׁר־בַּלֶּחִי': 'לחי',
+    // Mosiah (6 forms, 81 tokens)
+    'מוֹשִׁיָּה': 'מושיה', 'לְמוֹשִׁיָּה': 'מושיה', 'אֶת־מוֹשִׁיָּה': 'מושיה',
+    'בֶּן־מוֹשִׁיָּה': 'מושיה', 'גַּם־מוֹשִׁיָּה': 'מושיה', 'אֶל־מוֹשִׁיָּה': 'מושיה',
+    // Seth (12 forms, 25 tokens)
+    'שֵׁת': 'שֵׁת', 'לְשֵׁת': 'שֵׁת', 'אֶת־שֵׁת': 'שֵׁת', 'וַיְחִי־שֵׁת': 'שֵׁת', 'בֶן־שֵׁת': 'שֵׁת',
+    'וְשֵׁת': 'שֵׁת', 'וּלְשֵׁת': 'שֵׁת', 'כׇּל־יְמֵי־שֵׁת': 'שֵׁת', 'בֶּן־שֵׁת': 'שֵׁת',
+    '(שֵׁת)': 'שֵׁת', 'שֵׁת׃': 'שֵׁת', 'אֶל־שֵׁת': 'שֵׁת',
+    // Shim (1 forms, 3 tokens)
+    'שִׁים': 'שִׁים',
+    // Shum (1 forms, 3 tokens)
+    'שׁוּם': 'שומ',
+    // Kim (4 forms, 5 tokens)
+    'קִים': 'קימ', 'בֶן־קִים': 'קימ', 'וְקִים': 'קימ', 'אֶת־קִים': 'קימ',
     // Prince of Peace: the maqqef compound must file under שר the prince —
     // the layered lookup would otherwise drop the head and reach שָׁלוֹם
     'שַׂר־שָׁלוֹם': 'שרר',

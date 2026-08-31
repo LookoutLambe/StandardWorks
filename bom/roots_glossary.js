@@ -7069,7 +7069,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "לחי": {
-    "meaning": "Lehi (name)",
+    "meaning": "Lehi — proper name (Book of Mormon; also the place, Judg. 15)",
     "category": "Names"
   },
   "חיה": {
@@ -28473,7 +28473,7 @@ window._rootGlossaryData = {
     "category": "Lexical"
   },
   "H3895": {
-    "meaning": "Lehi",
+    "meaning": "(לְחִי) jaw, cheek — NOT the name Lehi (H3896), which is לֶחִי",
     "category": "Lexical"
   },
   "H2909": {
@@ -29339,4 +29339,20 @@ window._rootGlossaryData = {
   ,"חגר": { "meaning": "(חָגַר) to gird, gird on", "category": "Action" }
 
   ,"H1823": { "meaning": "(דְּמוּת) likeness, similitude", "category": "Lexical" }
+,
+
+  // ---- COLLIDED PROPER NAMES: exception list (2026-08-31) ----
+  // Each of these is a proper name whose consonants coincide with an ordinary
+  // Hebrew word, so the resolver filed it under that word: Lehi read as "jaw",
+  // Mosiah as "keep in memory", Seth as "tumult", Shim as "to put". They are
+  // pinned in root_engine.js _headPins to their own family, and glossed here so
+  // the card names the person or place instead of showing bare consonants.
+  // Where the bare key was already taken by a real word, the NAME takes the
+  // pointed key -- the nikkud is what distinguishes them.
+  "לחי": { "meaning": "Lehi — proper name (Book of Mormon; also the place, Judg. 15)", "category": "Names" },
+  "מושיה": { "meaning": "Mosiah — proper name (Book of Mormon)", "category": "Names" },
+  "שֵׁת": { "meaning": "Seth — proper name (Genesis; Moses)", "category": "Names" },
+  "שִׁים": { "meaning": "Shim — proper name (Book of Mormon)", "category": "Names" },
+  "שומ": { "meaning": "Shum — proper name (Book of Mormon)", "category": "Names" },
+  "קימ": { "meaning": "Kim — proper name (Book of Mormon)", "category": "Names" }
 };
