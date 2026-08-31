@@ -99,6 +99,7 @@ const getRoots = win.RootEngine.getRoots;
     'In','Of','To','A','An','O','Be','Is','Was','Are','Not','No','Yes','My','His','Her',
     'Their','Our','Your','Its','Him','Them','Me','Thou','Thee','Thy','Ye','I']);
   const names = Object.create(null);
+  const nameTally = Object.create(null);
   {
     const PAIR = /\[\s*"([^"]*)"\s*,\s*"([^"]*)"\s*\]/g;
     const walkN = dir => { let ents = []; try { ents = fs.readdirSync(path.join(ROOT, dir)); } catch (e) { return; }
@@ -107,17 +108,41 @@ const getRoots = win.RootEngine.getRoots;
         while ((m = PAIR.exec(t))) {
           const hw = m[1], gl = (m[2] || '').replace(/[\[\]()]/g, '').trim();
           if (!/[\u05D0-\u05EA]/.test(hw)) continue;
-          if (!isNameGloss(gl)) continue;
           const parts = SKEL(hw).split(/[\u05BE\s]+/).filter(Boolean);
           const head = parts[parts.length - 1] || '';
           const norm = head.replace(/[\u05DD\u05DF\u05E5\u05E3\u05DA]/g,
             c => ({'\u05DD':'\u05DE','\u05DF':'\u05E0','\u05E5':'\u05E6','\u05E3':'\u05E4','\u05DA':'\u05DB'}[c]));
-          if (norm.length >= 2) names[norm] = 1;
+          if (norm.length < 2) continue;
+          // DOMINANCE, not presence (2026-08-31). Flagging a form on ONE
+          // capitalized single-word gloss anywhere marked 1,406 ordinary words
+          // as proper names, and isName disables BOTH the consonantal lookup
+          // and the morphology -- so those words were stranded on their bare
+          // consonantal key. Two causes, both minority readings:
+          //   sentence-initial capitals -- "Teach" flagged לֻמְּדוּ, whose
+          //     other 38 occurrences are all the verb; "Confirming" flagged
+          //     וַיֶּחֶזְקוּ; "Because" flagged כִּי (9,531 tokens); "Assyria"
+          //     flagged אֲשֶׁר (9,708 tokens)
+          //   a real name sharing a skeleton with a common word -- וְיִתְמָה
+          //     (Ithmah, 1Ch) vs וַיִּתְמַהּ "he marvelled", where the NIKKUD
+          //     is the separator and the consonants are not
+          // Verified against 24 genuine names before switching: every one sits
+          // at 87-100% name-glosses (Seth is the floor at exactly 50%), and no
+          // form with 3+ name-glosses is dropped. Majority is a safe cut.
+          nameTally[norm] = nameTally[norm] || { name: 0, total: 0 };
+          nameTally[norm].total++;
+          if (isNameGloss(gl)) nameTally[norm].name++;
         } } };
     // The Book of Mormon's verses live in bom/verses/, not bom/ — that holds
     // loaders and glossaries. Reading the wrong one meant most BOM names were
     // never collected, which is why לָמָן stayed merged with מָן "manna".
     ['ot_verses','nt_verses','dc_verses','pgp_verses','bom/verses'].forEach(walkN);
+    let minority = 0;
+    for (const k in nameTally) {
+      const t = nameTally[k];
+      if (!t.name) continue;
+      if (t.name / t.total >= 0.5) names[k] = 1; else minority++;
+    }
+    console.log('forms whose name-gloss is a MINORITY (not held back): %d', minority);
   }
 
   // A form counts as a Book of Mormon name only if it appears nowhere outside

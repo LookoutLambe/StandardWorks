@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "אנס": { "meaning": "(אָנַס) to compel, constrain; (אֹנֶס) constraint, necessity", "category": "Lexical" },
   "נהה": { "meaning": "(נְהִי) wailing", "category": "Uncategorized" },
   "H7327": { "meaning": "(רוּת) Ruth", "category": "Uncategorized" },
   "H3999": { "meaning": "(מַבּוּל) flood", "category": "Uncategorized" },

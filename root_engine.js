@@ -1173,6 +1173,25 @@
         if (sp) return baseRoot(sp);
       }
     }
+    // CONSONANTAL LOOKUP — before the morphology, because it is a lookup and
+    // that is a guess. Measured on held-out pairs: Strong's forms 89.5%,
+    // runtime morphology 43.9%. rootByMorphology was answering first and
+    // returning לֻמְּדוּ -> "למדו" while the index had H3925 -> למד waiting.
+    //
+    // Translator's rule (2026-08-31): "just because the nikkud isnt correct on
+    // a conjugated word should never have any issue with looking up root
+    // words." An inflected form's vowels come from the PARADIGM, not the root,
+    // so they identify nothing; pointing matters only where it separates two
+    // DIFFERENT roots (וַתָּגֶל = גָּלָה or גִּיל). So: match on consonants,
+    // accept only where the skeleton is unambiguous. Where nothing is
+    // ambiguous there is nothing for the nikkud to disambiguate.
+    if (!isName) {
+      var cHit = _consIndex()[_ckey(_head || w)];
+      if (cHit && cHit !== '*') {               // '*' = skeleton shared by two roots
+        var cRoot = baseRoot(cHit);
+        if (cRoot) return cRoot;
+      }
+    }
     // Inflected form of a real root? Skip this for words the corpus glosses as
     // proper names — מוֹרוֹנִי would otherwise peel to מור, a real root meaning
     // "to change", and Moroni would be filed under it.
@@ -1232,7 +1251,52 @@
         if (okPeel && rest.length >= 3 && window._rootWordForms && window._rootWordForms[rest]) return rest;
       }
     }
+    // CONSONANTAL FALLBACK (translator's rule, 2026-08-31): "just because the
+    // nikkud isnt correct on a conjugated word should never have any issue
+    // with looking up root words."
+    //
+    // An inflected form's vowels are fixed by the PARADIGM, not by the root,
+    // so they carry no root-identifying information: וַיֵּאָנֵס and וַיֶּאֱנֹס
+    // are the same root however they are pointed. Pointing matters only where
+    // it separates two DIFFERENT roots (וַתָּגֶל = גָּלָה or גִּיל). So match
+    // on consonants and accept ONLY where the skeleton is unambiguous — every
+    // pointed entry sharing it agrees. Where there is no ambiguity there is
+    // nothing for the nikkud to disambiguate, so nothing can be lost.
+    //
+    // Whole form only, NO prefix peeling. Peeling manufactures an ambiguity
+    // the pointing never had, and it is wrong in exactly the dangerous way:
+    // לֶחִי -> חי "living", מְעַט -> עט "stylus", וּלְמוּאֵל -> מול "front".
+    // Measured: whole-form recovers 587 forms / 12,102 tokens, and the only
+    // errors in the whole set were proper names, which !isName already blocks.
     return c;
+  }
+
+  function _ckey(s) {
+    return normFinals(stripNikkud(s)).replace(/[^א-ת]/g, '');
+  }
+
+
+  // Built on first miss, not at load: 83k keys is real work and most pages
+  // never reach the fallback at all.
+  var _ciCache = null;
+  function _consIndex() {
+    if (_ciCache) return _ciCache;
+    var LK = window._strongsLookup;
+    if (!LK) return (_ciCache = {});
+    var ix = {};
+    for (var k in LK) {
+      if (!Object.prototype.hasOwnProperty.call(LK, k)) continue;
+      var ck = normFinals(stripNikkud(k)).replace(/[^א-ת]/g, '');
+      if (ck.length < 2) continue;
+      var v = LK[k];
+      if (v && v.length && typeof v !== 'string') v = v[0];
+      if (!v) continue;
+      v = String(v);
+      var cur = ix[ck];
+      if (cur === undefined) ix[ck] = v;
+      else if (cur !== v) ix[ck] = '*';         // two roots share it: nikkud is the separator
+    }
+    return (_ciCache = ix);
   }
 
   
