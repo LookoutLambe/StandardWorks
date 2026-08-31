@@ -322,7 +322,7 @@ window._rootGlossaryData = {
   "נוף": { "meaning": "(תְּנוּפָה) wave offering; (הֵנִיף) to wave", "category": "Uncategorized" },
   "כרע": { "meaning": "(כָּרַע) to bow, kneel", "category": "Uncategorized" },
   "בתל": { "meaning": "(בְּתוּלָה) virgin", "category": "Uncategorized" },
-  "חרר": { "meaning": "(חוּר) Hur; (חֹר) hole; (חֵרוּת) liberty", "category": "Uncategorized" },
+  "חרר": { "meaning": "(חֵרוּת) liberty, freedom; (חֹר) hole; (חֹרִים) nobles", "category": "Uncategorized" },
   "רגז": { "meaning": "(רָגַז) to tremble, be troubled; rage", "category": "Uncategorized" },
   "מוט": { "meaning": "(מוֹט) to be moved; yoke, bar", "category": "Uncategorized" },
   "דלל": { "meaning": "(דַּל) poor, needy", "category": "Uncategorized" },
@@ -3709,7 +3709,7 @@ window._rootGlossaryData = {
     "category": "Speech"
   },
   "חרת": {
-    "meaning": "on the morrow",
+    "meaning": "(חָרַת) to engrave, grave",
     "category": "Uncategorized"
   },
   "קם": {

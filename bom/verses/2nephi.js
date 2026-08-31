@@ -2700,10 +2700,10 @@ var n2_ch9Verses = [
     ["הָיוֹ","be"],
     ["תִהְיֶה","it must needs be"],
     ["כַּפָּרָה","an atonement"],
-    ["עַד־עוֹלָם","infinite"],
+    ["אֵין־קֵץ","infinite"],
     ["לוּלֵא","were it not for"],
     ["כַפָּרָה","an atonement"],
-    ["עַד־עוֹלָם","infinite"],
+    ["אֵין־קֵץ","infinite"],
     ["לֹא","not"],
     ["יִלְבַּשׁ","could put on"],
     ["הַשַּׁחַת","corruption"],
@@ -2730,7 +2730,7 @@ var n2_ch9Verses = [
     ["׃",""]
   ]},
   { num:"ח", words:[
-    ["הוֹ","O"],
+    ["הוֹי","O"],
     ["חׇכְמַת","the wisdom of"],
     ["אֱלֹהִים","God"],
     ["חַסְדּוֹ","His mercy"],
@@ -2756,7 +2756,7 @@ var n2_ch9Verses = [
     ["׃",""]
   ]},
   { num: "ט", words: [["וְהָיוּ","and would become"], ["רוּחוֹתֵינוּ","our spirits"], ["כְמוֹהוּ","like him"], ["הָיִינוּ","we become"], ["שְׂטָנִים","devils"], ["מַלְאָכִים","angels"], ["לְשָׂטָן","to a devil"], ["נִכְרָתִים","cut off"], ["מִלִּפְנֵי","from the presence of"], ["אֱלֹהֵינוּ","our God"], ["יֹשְׁבִים","dwelling"], ["עִם־אֲבִי","with the father of"], ["הַכְּזָבִים","lies"], ["בְּעָמָל","in misery"], ["כָּמוֹהוּ","like him"], ["הוּא","he"], ["הַמַּתְעֶה","who deceived"], ["אֶת־אֲבוֹתֵינוּ","our parents"], ["הָרִאשֹׁנִים","first"], ["הַמִּתְחַפֵּשׂ","who transforms himself"], ["כִּמְעַט","nearly"], ["לְמַלְאַךְ","into an angel of"], ["אוֹר","light"], ["וַיָּסֵת","and stirs up"], ["בְּנֵי־הָאָדָם","the children of men"], ["לְקֶשֶׁר","unto conspiracies of"], ["רֶצַח","murder"], ["וּלְכׇל־מַעֲשֵׂה","and unto all manner of works of"], ["חֹשֶׁךְ","darkness"], ["׃",""]]},
-  { num: "י", words: [["הוֹ","O"], ["מַה־רַבָּה","how great"], ["טוּבַת","the goodness of"], ["אֱלֹהֵינוּ","our God"], ["הַמֵּכִין","who prepares"], ["דֶּרֶךְ","a way"], ["לְמִפְלָט","for escape"], ["מִיַּד","from the grasp of"], ["הַמִּפְלֶצֶת","the monster"], ["הַנּוֹרָאָה","the terrible"], ["מָוֶת","death"], ["וּשְׁאוֹל","and hell"], ["אֲשֶׁר","which"], ["אֶקְרָא","I call"], ["מוֹת","the death of"], ["הַגּוּף","the body"], ["וּמוֹת","and the death of"], ["הָרוּחַ","the spirit"], ["׃",""]]},
+  { num: "י", words: [["הוֹי","O"], ["מַה־רַבָּה","how great"], ["טוּבַת","the goodness of"], ["אֱלֹהֵינוּ","our God"], ["הַמֵּכִין","who prepares"], ["דֶּרֶךְ","a way"], ["לְמִפְלָט","for escape"], ["מִיַּד","from the grasp of"], ["הַמִּפְלֶצֶת","the monster"], ["הַנּוֹרָאָה","the terrible"], ["מָוֶת","death"], ["וּשְׁאוֹל","and hell"], ["אֲשֶׁר","which"], ["אֶקְרָא","I call"], ["מוֹת","the death of"], ["הַגּוּף","the body"], ["וּמוֹת","and the death of"], ["הָרוּחַ","the spirit"], ["׃",""]]},
   { num:"יא", words:[
     ["וּבַעֲבוּר","and because of"],["דֶּרֶךְ","the way of"],
     ["הַהַצָּלָה","deliverance"],
@@ -2800,7 +2800,7 @@ var n2_ch9Verses = [
     ["׃",""]
   ]},
   { num:"יג", words:[
-    ["הוֹ","O"],
+    ["הוֹי","O"],
     ["נִפְלְאָה","how great"],
     ["עֲצַת","the plan of"],
     ["אֱלֹהֵינוּ","our God"],
@@ -2832,15 +2832,16 @@ var n2_ch9Verses = [
     ["תְּמִימָה","perfect"],
     ["כְּמוֹנוּ","even as we"],
     ["בַבָּשָׂר","in the flesh"],
-    ["רַק","only"],
-    ["דַעַת","a knowledge"],
+    ["זוּלַת","save it be"],
+    ["דַעְתֵּנוּ","our knowledge"],
+    ["תִּהְיֶה","shall be"],
     ["תְּמִימָה","perfect"],
     ["׃",""]
   ]},
   { num: "יד", words: [["לָכֵן","therefore"], ["נֵדַע","we shall know"], ["דַּעַת","a knowledge"], ["תְּמִימָה","perfectly"], ["אַשְׁמָתֵנוּ","our guilt"], ["וְטֻמְאָתֵנוּ","and our uncleanness"], ["וְעֵירֹמֵנוּ","and our nakedness"], ["וְהַצַּדִּיקִים","and the righteous"], ["יֵדְעוּ","they shall know"], ["דַּעַת","a knowledge"], ["תְּמִימָה","perfectly"], ["שִׂמְחָתָם","their joy"], ["וְצִדְקָתָם","and their righteousness"], ["לְבוּשֵׁי","clothed in"], ["טֹהַר","purity"], ["אַף","yea even"], ["בִּמְעִיל","with the robe of"], ["צְדָקָה","righteousness"], ["׃",""]]},
   { num: "טו", words: [["וְהָיָה","and it shall come to pass"], ["כַּאֲשֶׁר","that when"], ["יַעַבְרוּ","they shall pass"], ["כׇל־אָדָם","all men"], ["מִן־הַמָּוֶת","from the death"], ["הָרִאשׁוֹן","the first"], ["לַחַיִּים","unto life"], ["בְּלִי־מָוֶת","immortal"], ["וְיַעַמְדוּ","and they shall stand"], ["לִפְנֵי","before"], ["כִסֵּא־מִשְׁפַּט","the judgment-seat of"], ["קְדוֹשׁ־יִשְׂרָאֵל","the Holy One of Israel"], ["וְאָז","and then"], ["יָבֹא","shall come"], ["הַמִּשְׁפָּט","the judgment"], ["וְיִשָּׁפְטוּ","and they shall be judged"], ["כְּמִשְׁפַּט","according to the judgment of"], ["אֱלֹהִים","God"], ["׃",""]]},
   { num: "טז", words: [["וְאׇמְנָם","and assuredly"], ["חַי־יְהוָה","as the Lord lives"], ["כִּי","for"], ["דִבֶּר","has spoken"], ["יְהוָה","the Lord"], ["אֱלֹהִים","God"], ["וְהוּא","and it is"], ["דְּבַר","the word of"], ["עוֹלָמוֹ","His eternity"], ["אֲשֶׁר","which"], ["לֹא־יַעֲבֹר","it shall not pass away"], ["יִשָּׁאֲרוּ","they shall remain"], ["הַצַּדִּיקִים","the righteous"], ["צַדִּיקִים","righteous"], ["וְיִשָּׁאֲרוּ","and they shall remain"], ["הַטְּמֵאִים","the filthy"], ["טְמֵאִים","filthy"], ["לָכֵן","therefore"], ["הַטְּמֵאִים","the filthy"], ["הֵם","are"], ["הַשָּׂטָן","the devil"], ["וּמַלְאָכָיו","and his angels"], ["וְיֵלְכוּ","and they shall go"], ["אֶל־אֵשׁ","unto fire"], ["עוֹלָם","everlasting"], ["הַמּוּכָנָה","the prepared"], ["לָהֶם","for them"], ["וְעָנְשָׁם","and their torment is"], ["אֲגַם־אֵשׁ","a lake of fire"], ["וְגָפְרִית","and brimstone"], ["לַהֲבָתוֹ","whose flame"], ["עוֹלָה","ascends"], ["לְעוֹלְמֵי","for ever and"], ["עוֹלָמִים","ever"], ["אֵין־קֵץ","there is no end"], ["׃",""]]},
-  { num: "יז", words: [["הוֹ","O"], ["גֹדֶל","the greatness"], ["וּמִשְׁפַּט","and the justice of"], ["אֱלֹהֵינוּ","our God"], ["מְבַצֵּעַ","He executes"], ["כׇּל־דְּבָרָיו","all His words"], ["יָצְאוּ","they have gone forth"], ["מִפִּיו","from His mouth"], ["וְהִשָּׁלֵם","and must"], ["יִשָּׁלֵם","it must be fulfilled"], ["חֻקּוֹ","His law"], ["׃",""]]},
+  { num: "יז", words: [["הוֹי","O"], ["גֹדֶל","the greatness"], ["וּמִשְׁפַּט","and the justice of"], ["אֱלֹהֵינוּ","our God"], ["מְבַצֵּעַ","He executes"], ["כׇּל־דְּבָרָיו","all His words"], ["יָצְאוּ","they have gone forth"], ["מִפִּיו","from His mouth"], ["וְהִשָּׁלֵם","and must"], ["יִשָּׁלֵם","it must be fulfilled"], ["חֻקּוֹ","His law"], ["׃",""]]},
   { num:"יח", words:[
     ["אַךְ","but"],
     ["הִנֵּה","behold"],
@@ -2868,9 +2869,9 @@ var n2_ch9Verses = [
     ["לָעַד","forever"],
     ["׃",""]
   ]},
-  { num: "יט", words: [["הוֹ","O"], ["מַה־רַב","how great"], ["חֶסֶד","mercy"], ["אֱלֹהֵינוּ","our God"], ["קְדוֹשׁ־יִשְׂרָאֵל","the Holy One of Israel"], ["יַצִּיל","he shall deliver"], ["קְדוֹשָׁיו","His saints"], ["מִן־הַמִּפְלֶצֶת","from the monster"], ["הַנּוֹרָאָה","the terrible"], ["הַשָּׂטָן","the devil"], ["וְהַמָּוֶת","and the death"], ["וּשְׁאוֹל","and hell"], ["וַאֲגַם","and the lake of"], ["הָאֵשׁ","the fire"], ["וְהַגָּפְרִית","and the brimstone"], ["עֹנֶשׁ","torment"], ["אֵין־קֵץ","endless"], ["׃",""]]},
+  { num: "יט", words: [["הוֹי","O"], ["מַה־רַב","how great"], ["חֶסֶד","mercy"], ["אֱלֹהֵינוּ","our God"], ["קְדוֹשׁ־יִשְׂרָאֵל","the Holy One of Israel"], ["יַצִּיל","he shall deliver"], ["קְדוֹשָׁיו","His saints"], ["מִן־הַמִּפְלֶצֶת","from the monster"], ["הַנּוֹרָאָה","the terrible"], ["הַשָּׂטָן","the devil"], ["וְהַמָּוֶת","and the death"], ["וּשְׁאוֹל","and hell"], ["וַאֲגַם","and the lake of"], ["הָאֵשׁ","the fire"], ["וְהַגָּפְרִית","and the brimstone"], ["עֹנֶשׁ","torment"], ["אֵין־קֵץ","endless"], ["׃",""]]},
   { num:"כ", words:[
-    ["הוֹ","O"],
+    ["הוֹי","O"],
     ["נוֹרָא","terrible"],
     ["בִּקְדֻשָּׁה","in holiness"],
     ["אֱלֹהֵינוּ","is our God"],
@@ -2959,7 +2960,7 @@ var n2_ch9Verses = [
   { num: "כז", words: [["אַךְ","but"], ["אוֹי","woe"], ["לָאִישׁ","unto the man"], ["נִתַּן־לוֹ","was given unto him"], ["הַחֹק","the law"], ["כׇּל־מִצְוֹת","all the commandments of"], ["אֱלֹהִים","God"], ["כָּמוֹנוּ","even as us"], ["וַיַּעֲבֹר","and transgressed"], ["עֲלֵיהֶן","against them"], ["וַיְבַזְבֵּז","and wasted"], ["יְמֵי","the days of"], ["נִסְיוֹנוֹ","his probation"], ["נוֹרָא","awful"], ["מְצָבוֹ","is his state"], ["׃",""]]},
   { num:"כח", words:[
     ["הוֹי","O"],
-    ["עֲצַת","the cunning plan of"],
+    ["מְזִמַּת","the cunning plan of"],
     ["הָרָע","the evil one"],
     ["הַמַּעֲרִים","who schemes"],
     ["הוֹי","O"],
@@ -3445,7 +3446,7 @@ var n2_ch10Verses = [
     ["וְהָיְתָה","and shall be"],
     ["הָאָרֶץ","the land"], ["הַזֹּאת","this"],
     ["אֶרֶץ","a land of"],
-    ["חֵרוּת","liberty"],
+    ["דְּרוֹר","liberty"],
     ["לַגּוֹיִם","unto the Gentiles"],
     ["וְלֹא","and not"],
     ["יָקוּמוּ","shall arise"],
@@ -3832,10 +3833,10 @@ var n2_ch11Verses = [
     ["וּבְמִשְׁפָּטוֹ","and in His justice"],
     ["וּבִגְבוּרָתוֹ","and in His power"],
     ["וּבְרַחֲמָיו","and in His mercies"],
-    ["בְּתׇכְנִית","in the plan of"],
+    ["בַּעֲצַת","in the plan of"],
     ["הַגְּאֻלָּה","the deliverance"],
     ["הַגְּדוֹלָה","the great"],
-    ["וְהַנִּצְחִית","and the eternal"],
+    ["אֲשֶׁר־לְעוֹלָם","and eternal"],
     ["מִמָּוֶת","from death"],
     ["׃",""]
   ]},

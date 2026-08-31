@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '61';   // bump when the generated data files change
+  var RSC_V = '62';   // bump when the generated data files change
 
   var cfg = { vol: '', base: '' };
   var keyIdx = null;         // rootKey -> index, built once
