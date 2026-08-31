@@ -12,20 +12,40 @@
 //   suffixes    pronominal and inflectional
 const FIN={"ך":"כ","ם":"מ","ן":"נ","ף":"פ","ץ":"צ"};
 const DAGESH=0x05BC, LETTER=/[א-ת]/;
+const BGDKPT=new Set(["ב","ג","ד","כ","פ","ת"]);
+const FULLVOWEL=new Set([0x05B1,0x05B2,0x05B3,0x05B4,0x05B5,0x05B6,0x05B7,0x05B8,
+                         0x05B9,0x05BA,0x05BB,0x05C7]);
+const SHVA=0x05B0;
 function decomp(w){
   const o=[];
   for(const ch of String(w)){
     const n=ch.codePointAt(0);
-    if(LETTER.test(ch)) o.push({c:FIN[ch]||ch,dag:false});
+    if(LETTER.test(ch)) o.push({c:FIN[ch]||ch,dag:false,vow:null});
     else if(n===DAGESH&&o.length) o[o.length-1].dag=true;
+    else if(o.length&&(FULLVOWEL.has(n)||n===SHVA)){
+      const t=o[o.length-1]; if(t.vow===null) t.vow=(n===SHVA?"shva":"full");
+    }
   }
+  // Van Pelt: a בג"ד כפ"ת letter takes dagesh LENE only when NOT preceded by a
+  // vowel sound; after a full vowel the dagesh must be FORTE. In any other
+  // letter a dagesh can only be forte. Gutturals cannot double at all, so
+  // nothing hides in them.
+  const GUTT=new Set(["א","ה","ח","ע","ר"]);
+  o.forEach((x,i)=>{
+    const prev=i>0?o[i-1]:null, afterVowel=prev&&prev.vow==="full";
+    x.forte = x.dag && !GUTT.has(x.c) && (!BGDKPT.has(x.c) ? i>0 : !!afterVowel);
+  });
   return o;
 }
 const S=u=>u.map(o=>o.c).join("");
 const AITAN=new Set(["א","י","ת","נ"]);
 const PARTICLE=new Set(["מ","ש","ה","ו","כ","ל","ב"]);   // משה וכלב
-const SUF=["הו","ני","נו","הם","הן","כם","כן","יו","יה","יך","ים","ות","תי","תם","תן","נה",
-           "ה","ו","י","ך","ם","ן","ת"];
+const _SUF=["הו","ני","נו","הם","הן","כם","כן","יו","יה","יך","ים","ות","תי","תם","תן","נה",
+            "ון","ן","ה","ו","י","ך","ם","ת"];
+// S() folds final letters, so this table must be folded too. Written with a
+// final nun, ־ון could never strip and הַחִיצֹנִים never reached חוץ. FIFTH
+// table in this codebase to need this; check folding before anything else.
+const SUF=[...new Set(_SUF.map(x=>[...x].map(c=>({"ך":"כ","ם":"מ","ן":"נ","ף":"פ","ץ":"צ"}[c]||c)).join("")))];
 
 // every plausible (stem, flags) after peeling, cheapest first
 function* peels(u){
@@ -56,6 +76,11 @@ function* peels(u){
       for(const sf of SUF) if(s.length>sf.length+1 && s.endsWith(sf)){
         const cut=b1.slice(0,b1.length-sf.length);
         yield [cut,tag,vdepth+sf.length];
+        // a SECOND suffix layer: an object pronoun outside an afformative --
+        // תַרְשִׁיעוּהוּ = ת + רשיע + ־וּ + ־הוּ
+        const s2=S(cut);
+        for(const sf2 of SUF) if(sf2 && s2.length>sf2.length+1 && s2.endsWith(sf2))
+          yield [cut.slice(0,cut.length-sf2.length),tag,vdepth+sf.length+sf2.length];
         // FEMININE ה -> ת: a feminine noun in ־ָה writes ־ַת before a suffix or
         // in construct, so a ת left at the end after stripping a suffix is that
         // ending, not a radical. הֲכָנָתָם = הֲכָנָה + ־ָם  (IIBS C, unit 29).
@@ -72,7 +97,7 @@ function* peels(u){
 // From a peeled stem, recover the three radicals. Rules COMPOSE: a 4-letter
 // stem that loses a mater becomes a 3-letter stem, which is then run through
 // the 3-letter rules -- הוֹשִׁיב -> ושיב -> ושב -> ישב.
-function three(c,tag,out,depth){
+function three(c,tag,out,depth,v){
   if(c.length!==3) return;
   out.push([c,"strong"]);
   // ל"י: the third radical was historically YOD; the lexicon lists it with ה,
@@ -84,6 +109,10 @@ function three(c,tag,out,depth){
   if(c[0]==="ו") out.push(["י"+c.slice(1),"I-yod (vav for yod)"]);
   // a medial ו/י may be the vowel letter of a hollow root
   if(c[1]==="ו"||c[1]==="י") out.push([c[0]+"ו"+c[2],"hollow (mater)"]);
+  // מַדִּיחַ = מ + ד(dagesh) + יח : collapse the mater to the pair דח, and the
+  // forte dagesh on C1 restores the assimilated nun -> נדח (Hifil ptc of נדח)
+  if((c[1]==="ו"||c[1]==="י") && v && v[0] && v[0].forte)
+    out.push(["נ"+c[0]+c[2],"I-nun (dagesh, mater collapsed)"]);
   // an initial ו/י that is only a vowel letter: נוּבָא -> בוא
   if(depth<1&&(c[0]==="ו"||c[0]==="י")) two(c.slice(1),tag,out,depth+1);
 }
@@ -112,19 +141,23 @@ function* radicals(v,tag){
     }
     if(mid.length===3) out.push([mid,"haqtalah"]);
   }
-  if(n===3) three(c,tag,out,0);
+  if(n===3) three(c,tag,out,0,v);
   if(n===2){
     if(v[0].dag){ out.push(["נ"+c,"I-nun (dagesh)"]);
                   if(c[0]==="ק") out.push(["ל"+c,"lqh"]); }
     two(c,tag,out,0);
   }
   if(n===4){
-    for(let i=1;i<3;i++) if(c[i]==="ו"||c[i]==="י"){
+    // A waw-consecutive followed by an imperfect preformative is NOT a mater:
+    // וַיִּתֵּן is ו + י + תֵּן, so dropping the י and then reading the ו as an
+    // original yod produced יתן instead of נתן.
+    const wawConsec = c[0]==="ו" && "יתאנ".includes(c[1]);
+    for(let i=1;i<3;i++) if((c[i]==="ו"||c[i]==="י") && !(wawConsec&&i===1)){
       const t=c.slice(0,i)+c.slice(i+1);
       out.push([t,"mater dropped"]);
-      three(t,tag,out,0);                       // <-- compose
+      three(t,tag,out,0,v);                     // <-- compose
     }
-    if(c[3]==="י"||c[3]==="ה"){ const t=c.slice(0,3); out.push([t,"final mater"]); three(t,tag,out,0); }
+    if(c[3]==="י"||c[3]==="ה"){ const t=c.slice(0,3); out.push([t,"final mater"]); three(t,tag,out,0,v); }
   }
   for(const o of out) yield o;
 }
@@ -136,7 +169,7 @@ function* radicals(v,tag){
 const PRIORITY={
   "haqtalah":0, "haqtalah (hollow)":0, "haqtalah (I-nun)":0,
   "haqtalah (geminate)":0, "haqtalah (I-yod)":1,
-  "I-nun (dagesh)":0, "lqh":0,
+  "I-nun (dagesh)":0, "I-nun (dagesh, mater collapsed)":0, "lqh":0,
   "I-yod (vav for yod)":1, "hollow (mater)":1, "lamed-yod (yod hides the he)":1,
   "strong":2,
   "mater dropped":3, "final mater":3, "lamed-yod / III-he":3, "hollow":3,
@@ -151,12 +184,15 @@ function analyze(form,KNOWN,FREQ){
     for(const [r,how] of radicals(v,tag)){
       if(r.length!==3||!KNOWN.has(r)) continue;
       const f=FREQ.get(r)||0;
-      if(f===0) continue;
+      // A root with no concordance entry is a LAST resort, not a refusal: the
+      // frequency table is generated by the engine being fixed, so real roots
+      // it mishandles (עקם, בחן) read as zero. Refusing them lost real answers.
+      const zpen = f===0 ? 1.2 : 0;
       let p=PRIORITY[how];
       if(p===undefined) p=3;
       // a Hifil/participle peel makes the vav-for-yod reading much more likely
       if(how==="I-yod (vav for yod)"&&(tag==="hifil"||tag==="participle"||tag==="aitan")) p=0;
-      hits.push({r,how,tag,f,p,d:depth||0});
+      hits.push({r,how,tag,f,p,d:(depth||0)+zpen});
     }
   }
   if(!hits.length) return null;

@@ -66,6 +66,43 @@ Two more:
 - **A hand-picked test set flatters.** 83% on 30 chosen verbs was 45% on a random
   sample. `harness/fair2.js` runs the honest one.
 
+
+## TAHOT — the answer to "why not just look it up"
+
+`build_tahot_index.js` builds a `form -> (Strong's, part of speech, stem,
+conjugation, person/gender/number)` index from **TAHOT** (Translators Amalgamated
+Hebrew OT, STEPBible.org, CC BY 4.0, github.com/STEPBible/STEPBible-Data). That
+is the same source `strongs_lookup.js` was built from — but only the
+form→Strong's column was kept, and the morphology was thrown away.
+
+TAHOT marks the affix boundary explicitly and codes every morpheme:
+
+    בְּ/רֵאשִׁ֖ית   H9003/{H7225G}   HR/Ncfsa    preposition + noun com fem sg abs
+    בָּרָ֣א        {H1254A}         HVqp3ms     verb qal perfect 3ms
+
+So it answers by lookup the question this folder tries to answer by rule —
+*what is part of the root, and what is not* — and supplies the part of speech
+that routes a form to the mishkalim or the binyanim.
+
+**Coverage (token-weighted):**
+
+| OT | NT | BOM | D&C | PGP | total |
+|---|---|---|---|---|---|
+| 97.5% | 86.1% | 85.5% | 82.2% | 85.1% | **90.9%** |
+
+It resolves **2,522 of the 6,945 forms the live engine cannot root** (3,273
+tokens) with a full parse — `וַתָּגֶל` "and rejoiced" is H1523 גיל *qal 3fs*,
+where the analyser in this folder said גלה and was wrong.
+
+**Caveat that matters.** For the OT it is authoritative — it *is* that text's
+own tagging. For the BOM/D&C/PGP it is form-matching, so a Nephite name that
+collides with a biblical word gets a confident wrong answer: `וְלָמָן` "and
+Laman" comes back H4479, the Aramaic מָן "who". `root_names.js` must be
+consulted first. Maqqef compounds must also prefer the content word, or
+`גַּם־זֶרַע` resolves to "also" instead of "seed".
+
+The raw files are gitignored: download them and point the script at the folder.
+
 ## Harness
 
     node harness/truth.js truth.json          # 72,343 (form -> root) ground-truth pairs

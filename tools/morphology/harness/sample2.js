@@ -1,5 +1,3 @@
-// Find the highest-frequency gaps where the proposed root's meaning has NOTHING
-// to do with the gloss -- the likeliest wrong answers, worth tracing.
 const fs=require("fs"),vm=require("vm");
 const M=require("../mishkal.js"), R=require("../radical.js");
 const HEU=require("../morph.js"), PAR=require("../morph2.js");
@@ -24,9 +22,10 @@ try{ const LF=require("../lexfreq.js").build();
 let GL={};
 try{ const g={}; vm.runInNewContext(fs.readFileSync("bom/roots_glossary.js","utf8"),{window:g},{filename:"g"});
      GL=g._rootGlossaryData||g._rootsGlossary||{}; }catch(e){}
-const mean=r=>{ if(GL[r]) return String(GL[r].m||GL[r].meaning||GL[r]||"").replace(/\s+/g," ").slice(0,40);
-  for(const k in SR){ const x=SR[k]; if(x&&norm(x.w)===norm(r)) return String(x.g||"").slice(0,40); } return ""; };
+const mean=r=>{ if(GL[r]) return String(GL[r].m||GL[r].meaning||GL[r]||"").replace(/\s+/g," ").slice(0,38);
+  for(const k in SR){ const x=SR[k]; if(x&&norm(x.w)===norm(r)) return String(x.g||"").slice(0,38); } return ""; };
 const heu=HEU.makeAnalyzer(KNOWN,FREQ), par=PAR.makeAnalyzer(KNOWN,FREQ);
+const IGNORE=new Set(["את","מנ","לא","כל","ואת"]);
 function one(f){
   const m=M.analyze(f,KNOWN,FREQ);
   if(m&&m.how!=="mishkal:katal") return m;
@@ -34,20 +33,19 @@ function one(f){
   if(m) return m;
   const h=heu(f)||par(f); return h?{r:h,how:"heuristic"}:null;
 }
-const STOP=new Set("the a an of to and or in on for with by from at as is are was were be been it its his her their my our your you he she they we not shall will unto upon that this which who".split(" "));
-const words=g=>String(g||"").toLowerCase().replace(/[^a-z ]/g," ").split(/\s+/).filter(w=>w.length>3&&!STOP.has(w));
-const rows=fs.readFileSync("engine_gaps.tsv","utf8").trim().split("\n").slice(1).map(l=>l.split("\t"));
-const susp=[];
-for(const [n,vol,ref,form,gloss] of rows){
-  const a=one(form); if(!a) continue;
-  const m=mean(a.r); if(!m) continue;
-  const gw=words(gloss).map(w=>w.slice(0,4)), mw=words(m).map(w=>w.slice(0,4));
-  if(!gw.length||!mw.length) continue;
-  if(gw.some(w=>mw.includes(w))) continue;             // meanings overlap -> probably fine
-  susp.push({n:+n,vol,form,gloss,root:a.r,how:a.how,mean:m});
+function resolve(form){
+  if(!form.includes("־")) return one(form);
+  const ps=form.split("־").filter(Boolean);
+  const kept=ps.filter(p=>!IGNORE.has(norm(p)));
+  for(const p of (kept.length?kept:ps)){ const a=one(p); if(a) return a; }
+  return null;
 }
-susp.sort((a,b)=>b.n-a.n);
-console.log("  highest-frequency SUSPECT answers (root meaning unrelated to the gloss):\n");
-for(const s of susp.slice(0,14))
-  console.log("   x"+String(s.n).padEnd(3)+s.form.padEnd(22)+'"'+s.gloss.slice(0,26)+'"'.padEnd(28-Math.min(26,s.gloss.length))+
-              "  -> "+s.root.padEnd(7)+("["+s.how+"]").padEnd(22)+'means "'+s.mean+'"');
+const rows=fs.readFileSync(process.argv[3],"utf8").trim().split("\n").slice(1).map(l=>l.split("\t"));
+const step=Math.floor(rows.length/60);
+const samp=rows.filter((_,i)=>i%step===0).slice(0,60);
+samp.forEach((r,i)=>{
+  const [n,vol,ref,form,gloss]=r;
+  const a=resolve(form);
+  console.log(String(i+1).padStart(3)+". "+form.padEnd(22)+(gloss||"").slice(0,26).padEnd(28)+
+    "-> "+(a?a.r:"(none)").padEnd(8)+(a?("["+a.how+"]").padEnd(24):"".padEnd(24))+(a?mean(a.r):""));
+});

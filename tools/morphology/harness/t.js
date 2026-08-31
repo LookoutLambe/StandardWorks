@@ -1,5 +1,5 @@
 const fs=require("fs"),vm=require("vm");
-const R=require("../radical.js");
+const R=require("../radical.js"), M=require("../mishkal.js");
 const strip=s=>[...s].filter(c=>!(c.codePointAt(0)>=0x0591&&c.codePointAt(0)<=0x05C7)).join("");
 const FIN={"ך":"כ","ם":"מ","ן":"נ","ף":"פ","ץ":"צ"};
 const norm=s=>[...strip(s)].map(c=>FIN[c]||c).join("");
@@ -16,15 +16,14 @@ RC.keys.forEach((k,i)=>FREQ.set(norm(k),RC.roots[i].c.reduce((a,b)=>a+b,0)));
 // ~1,900 roots BDB does not map.
 try{ const LF=require("../lexfreq.js").build();
      for(const [k,v] of LF) FREQ.set(k, Math.max(v*8, FREQ.get(k)||0)); }catch(e){}
-const T=[["וַיּוֹרִידֻהוּ","ירד"],["יְקֻיַּם","קומ"],["שֶׁתְּקֻיַּם","קומ"],["נוּבָא","בוא"],
-         ["לְהָטִיל","טול"],["הֲכָנָתָם","כונ"],["וַיִּתֵּן","נתנ"],["יִפֹּל","נפל"],
-         ["הֵקִים","קומ"],["וַיָּקׇם","קומ"],["וַיֵּלֶךְ","הלכ"],["וַיָּבֹא","בוא"],
-         ["יָסֹב","סבב"],["הוֹשִׁיב","ישב"],["וַיּוֹצֵא","יצא"]];
-let ok=0;
-for(const [f,want] of T){
-  const a=R.analyze(f,KNOWN,FREQ);
-  const got=a?a.r:null, good=got&&norm(got)===norm(want);
-  if(good)ok++;
-  console.log("   "+(good?"ok  ":"MISS")+" "+f.padEnd(20)+"-> "+String(got).padEnd(8)+(a?("["+a.how+"]").padEnd(28):"".padEnd(16))+"want "+want);
+const T=process.argv.slice(3);
+for(let i=0;i<T.length;i+=2){
+  const form=T[i], want=T[i+1];
+  const u=R.decomp(form);
+  const dag=u.map((o,k)=>o.dag?k+"="+o.c:null).filter(Boolean).join(",")||"none";
+  const rr=R.analyze(form,KNOWN,FREQ), mm=M.analyze(form,KNOWN,FREQ);
+  console.log("\n  "+form+"  ("+R.S(u)+")   dagesh: "+dag);
+  console.log("     radical -> "+(rr?rr.r+" ["+rr.how+"] d="+rr.d:"null")+
+              "     mishkal -> "+(mm?mm.r+" ["+mm.how+"]":"null")+"     WANT "+want);
+  console.log("     is "+want+" known? "+KNOWN.has(norm(want))+"  freq="+(FREQ.get(norm(want))||0));
 }
-console.log("\n   "+ok+"/"+T.length);

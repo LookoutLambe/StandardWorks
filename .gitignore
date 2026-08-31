@@ -26,3 +26,10 @@ ias_full.txt
 ias_*.txt
 *Hebrew-Book-of-Mormon-Translation*
 IAS-reference*/
+
+# TAHOT source data (STEPBible.org, CC BY 4.0). The licence permits reformatting
+# for our own use but asks that the raw files not be redistributed — download
+# them from github.com/STEPBible/STEPBible-Data and point
+# tools/morphology/build_tahot_index.js at the folder.
+tahot_*.txt
+tahot_index.json
