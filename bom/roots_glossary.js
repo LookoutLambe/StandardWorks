@@ -39,7 +39,7 @@ window._rootGlossaryData = {
   "נבט": { "meaning": "(הִבִּיט) to look, behold", "category": "Uncategorized" },
   "H4347": { "meaning": "(מַכָּה) blow, wound, slaughter, plague", "category": "Uncategorized" },
   "חפף": { "meaning": "(חוֹף) shore, haven; (חָפַף) to cover", "category": "Uncategorized" },
-  "שלט": { "meaning": "(שָׁלַט) to rule, have power; (שִׁלְטוֹן) power, authority; (נִשְׁלָט) controlled", "category": "Uncategorized" },
+  "שלט": { "meaning": "(שָׁלַט) to rule, have power; (שִׁלְטוֹן) power, authority", "category": "Uncategorized" },
   "H2850": { "meaning": "(חִתִּי) Hittite", "category": "Uncategorized" },
   "זמם": { "meaning": "(זָמַם) to plan, devise; (זִמָּה) wickedness, lewdness", "category": "Uncategorized" },
   "H4445": { "meaning": "(מַלְכָּם) their king; Milcom", "category": "Uncategorized" },
@@ -72,9 +72,9 @@ window._rootGlossaryData = {
   "סקר": { "meaning": "(סָקַר) to survey, review", "category": "Uncategorized" },
   "שגשג": { "meaning": "(שִׂגְשֵׂג) to prosper, flourish; (שִׂגְשׂוּג) prosperity", "category": "Uncategorized" },
   "שכנע": { "meaning": "(שִׁכְנֵעַ) to persuade", "category": "Uncategorized" },
-  "רשם": { "meaning": "(רָשַׁם) to record, inscribe; (רְשִׁימָה) list", "category": "Uncategorized" },
+  "רשם": { "meaning": "(רָשַׁם) to record, inscribe", "category": "Uncategorized" },
   "תכשיט": { "meaning": "(תַּכְשִׁיט) jewel, ornament", "category": "Uncategorized" },
-  "דרג": { "meaning": "(דַּרְגָּה) degree; (בְּהַדְרָגָה) gradually", "category": "Uncategorized" },
+  "דרג": { "meaning": "(דַּרְגָּה) degree", "category": "Uncategorized" },
   "פמוט": { "meaning": "(פָּמוֹט) candlestick", "category": "Uncategorized" },
   "דוגמה": { "meaning": "(דֻּגְמָה) example, pattern", "category": "Uncategorized" },
   "השראה": { "meaning": "(הַשְׁרָאָה) inspiration", "category": "Uncategorized" },
@@ -168,16 +168,16 @@ window._rootGlossaryData = {
   "H3187": { "meaning": "(יַחַשׂ) genealogy; (יִחֵס) to impute, relate", "category": "Uncategorized" },
   "יחש": { "meaning": "(יַחַשׂ) genealogy; (יִחֵס) to impute, relate", "category": "Uncategorized" },
   "שתף": { "meaning": "(הִשְׁתַּתֵּף) to partake, share; (מְשֻׁתָּף) common, joint", "category": "Uncategorized" },
-  "חסן": { "meaning": "(מַחְסָן) storehouse; (חָסַן) to store", "category": "Uncategorized" },
+  "חסן": { "meaning": "(חָסַן) to store", "category": "Uncategorized" },
   "צלב": { "meaning": "(צְלָב) cross; (צָלַב) to crucify", "category": "Uncategorized" },
   "יצג": { "meaning": "(הִצִּיג) to present, show", "category": "Uncategorized" },
   "סלק": { "meaning": "(הִסְתַּלֵּק) to depart; (סְלִק) to ascend", "category": "Uncategorized" },
-  "שגח": { "meaning": "(הִשְׁגִּיחַ) to watch over; (הַשְׁגָּחָה) providence", "category": "Uncategorized" },
+  "שגח": { "meaning": "(הִשְׁגִּיחַ) to watch over", "category": "Uncategorized" },
   "רגש": { "meaning": "(רֶגֶשׁ) feeling; (הִרְגִּישׁ) to feel", "category": "Uncategorized" },
   "שמץ": { "meaning": "(שֵׁמֶץ) whisper; (שִׁמֵּץ) to malign", "category": "Uncategorized" },
-  "פרע": { "meaning": "(פָּרַע) to let loose; (פֻּרְעָנוּת) calamity", "category": "Uncategorized" },
+  "פרע": { "meaning": "(פָּרַע) to let loose", "category": "Uncategorized" },
   "עדף": { "meaning": "(הֶעֱדִיף) to prefer; (עֹדֶף) surplus", "category": "Uncategorized" },
-  "חבב": { "meaning": "(חָבַב) to cherish; (חֲבִיבוּת) kindness", "category": "Uncategorized" },
+  "חבב": { "meaning": "(חָבַב) to cherish", "category": "Uncategorized" },
   "בעבע": { "meaning": "(אֲבַעְבֻּעוֹת) blains, boils", "category": "Uncategorized" },
   "גב": { "meaning": "(גַּב) back", "category": "Uncategorized" },
   "בץ": { "meaning": "(בֹּץ) mire, mud", "category": "Uncategorized" },
@@ -191,7 +191,7 @@ window._rootGlossaryData = {
   "מצרים": { "meaning": "(מִצְרַיִם) Egypt", "category": "Uncategorized" },
   "כיצד": { "meaning": "(כֵּיצַד) how", "category": "Uncategorized" },
   "אמצע": { "meaning": "(אֶמְצַע) middle; (בְּאֶמְצָעוּת) through, by means of", "category": "Uncategorized" },
-  "סבר": { "meaning": "(הִסְבִּיר) to explain; (סֵבֶר) hope", "category": "Uncategorized" },
+  "סבר": { "meaning": "(סֵבֶר) hope", "category": "Uncategorized" },
   "היירם": { "meaning": "(הַיְירָם) Hiram, Hyrum", "category": "Uncategorized" },
   "H7613": { "meaning": "(שְׂאֵת) to bear, take up; swelling, dignity", "category": "Uncategorized" },
   "H2752": { "meaning": "(חֹרִי) Horite; (חֹרִים) nobles", "category": "Uncategorized" },
@@ -313,7 +313,7 @@ window._rootGlossaryData = {
   "קשש": { "meaning": "(קַשׁ) stubble; (קָשַׁשׁ) to gather", "category": "Uncategorized" },
   "H3015": { "meaning": "sorrow, misery", "category": "Uncategorized" },
   "H7381": { "meaning": "aroma, savour", "category": "Uncategorized" },
-  "צבע": { "meaning": "(הִצְבִּיעַ) to point; (צֶבַע) color", "category": "Uncategorized" },
+  "צבע": { "meaning": "(צֶבַע) color", "category": "Uncategorized" },
   "הרס": { "meaning": "to destroy, tear down", "category": "Uncategorized" },
   "H7768": { "meaning": "salvation, deliverance", "category": "Uncategorized" },
   "H3972": { "meaning": "anything; nothing", "category": "Uncategorized" },
@@ -428,7 +428,7 @@ window._rootGlossaryData = {
   "הפרושׁים": { "meaning": "(פְּרוּשִׁים) the Pharisees", "category": "Name" },
   "H0215": { "meaning": "(אוּרִיָּה) Uriah; (אוֹר) light, to shine", "category": "Name" },
   "H0553": { "meaning": "(אֲמַצְיָהוּ) Amaziah; (אָמֵץ) to be strong", "category": "Name" },
-  "בוס": { "meaning": "(בּוּס) to trample; (הֵבִיס) to defeat", "category": "Name" },
+  "בוס": { "meaning": "(בּוּס) to trample", "category": "Name" },
   "בשן": { "meaning": "Bashan", "category": "Name" },
   "H5826": { "meaning": "(עֲזַרְיָהוּ) Azariah; (עֵזֶר) help", "category": "Name" },
   "קין": { "meaning": "(קַיִן) Cain; (קִינָה) lamentation", "category": "Name" },
@@ -483,19 +483,19 @@ window._rootGlossaryData = {
   "שקה": { "meaning": "(הִשְׁקָה) to give drink, water; (מַשְׁקֶה) cupbearer", "category": "Uncategorized" },
   "פסח": { "meaning": "(פֶּסַח) passover; (פִּסֵּחַ) lame", "category": "Worship" },
   "כבר": { "meaning": "(כַּבִּיר) mighty, great — Job 36:5 אֵל כַּבִּיר; (כְּבָר) already; the river Chebar", "category": "Lexical" },
-  "שלל": { "meaning": "(שָׁלָל) spoil, prey; (נִשְׁלַל) denied", "category": "War" },
+  "שלל": { "meaning": "(שָׁלָל) spoil, prey", "category": "War" },
   "מול": { "meaning": "(מוּל) facing, over against; to circumcise", "category": "Uncategorized" },
   "גבע": { "meaning": "(גִּבְעָה) hill; Gibeah", "category": "Nature" },
   "בקע": { "meaning": "(בִּקְעָה) valley; (בָּקַע) to split, rend", "category": "Nature" },
   "נצב": { "meaning": "to stand, be stationed; garrison", "category": "Uncategorized" },
   "H0452": { "meaning": "Elijah, Elias", "category": "Name" },
   "צלל": { "meaning": "(צֵל) shadow; (צַלְמָוֶת) shadow of death; (צֶלְצְלִים) cymbals", "category": "Uncategorized" },
-  "חגג": { "meaning": "(חָגַג) to celebrate; (חַג) feast; (חֲגִיגִי) solemn", "category": "Worship" },
+  "חגג": { "meaning": "(חָגַג) to celebrate; (חַג) feast", "category": "Worship" },
   "ברר": { "meaning": "(בָּרַר) to purify, select; (בָּרוּר) plain, clear", "category": "Uncategorized" },
   "עתד": { "meaning": "(עַתּוּד) he-goat; (עָתִיד) ready, to come", "category": "Animals" },
   "גוה": { "meaning": "(גְּוִיָּה) body", "category": "Body" },
   "גדד": { "meaning": "(גָּד) Gad; (גְּדוּד) band, troop", "category": "Name" },
-  "בצע": { "meaning": "(בֶּצַע) gain; (בִּצּוּעַ) performance", "category": "Morality" },
+  "בצע": { "meaning": "(בֶּצַע) gain", "category": "Morality" },
   "צפה": { "meaning": "(צִפָּה) to overlay; (צֹפֶה) watchman", "category": "Uncategorized" },
   "מסר": { "meaning": "(מָסַר) to deliver, commit", "category": "Uncategorized" },
   "H8095": { "meaning": "Simeon, Simon", "category": "Name" },
@@ -520,7 +520,7 @@ window._rootGlossaryData = {
   "צחק": { "meaning": "(יִצְחָק) Isaac; (צָחַק) to laugh", "category": "Name" },
   "סלל": { "meaning": "(סֶלָה) Selah; (מְסִלָּה) highway; (סֹלְלָה) mound", "category": "Uncategorized" },
   "כנען": { "meaning": "Canaan", "category": "Name" },
-  "מדד": { "meaning": "(מָדַד) to measure; (הִתְמוֹדֵד) to contend, cope", "category": "Uncategorized" },
+  "מדד": { "meaning": "(מָדַד) to measure", "category": "Uncategorized" },
   "חרף": { "meaning": "(חֶרְפָּה) reproach, shame; (חֹרֶף) winter", "category": "Morality" },
   "שכל": { "meaning": "(שֵׂכֶל) insight, understanding; (שָׂכַל) to prosper, act wisely", "category": "Mind" },
   "זול": { "meaning": "(זוּלַת) except, save, besides", "category": "Particle" },
@@ -547,7 +547,7 @@ window._rootGlossaryData = {
   "בדד": { "meaning": "(לְבַד) alone, apart; (בַּד) pole, part", "category": "Uncategorized" },
   "H3627": { "meaning": "(כְּלִי) vessel, instrument, weapon; armor", "category": "Objects" },
   "חקק": { "meaning": "(חֹק) statute, law; (חָקַק) to inscribe, decree", "category": "Law" },
-  "כנס": { "meaning": "(כְּנֵסִיָּה) church; (בֵּית כְּנֶסֶת) synagogue; (כִּנֵּס) to gather", "category": "Society" },
+  "כנס": { "meaning": "(כְּנֵסִיָּה) synagogue — the place (Alma, Helaman, 3 Ne); (כִּנֵּס) to gather", "category": "Society" },
   "ימם": { "meaning": "(יָם) sea; (יָמָּה) westward, seaward", "category": "Nature" },
   "מצר": { "meaning": "(מִצְרַיִם) Egypt; (מָצוֹר) siege; (מֵצַר) distress", "category": "Name" },
   "שרר": { "meaning": "(שַׂר) prince, captain; (שָׂרַר) to rule", "category": "Society" },
@@ -1411,7 +1411,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "שמע": {
-    "meaning": "(שָׁמַע) to hear, obey; (מַשְׁמָעוּת) meaning",
+    "meaning": "(שָׁמַע) to hear, obey",
     "category": "Perception"
   },
   "רבות": {
@@ -1876,7 +1876,7 @@ window._rootGlossaryData = {
     "category": "Motion"
   },
   "עדה": {
-    "meaning": "congregation, assembly; to pass on",
+    "meaning": "congregation, assembly; church — the EARLY word (1 Ne, Mosiah); (עֵדוּת) testimony",
     "category": "Uncategorized"
   },
   "ירא": {
@@ -2420,7 +2420,7 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "קהל": {
-    "meaning": "(קָהָל) assembly, congregation, church; (נִקְהַל) to gather together",
+    "meaning": "(קָהָל) assembly, congregation; (קְהִלָּה) church — the LATER word, from Alma onward; (נִקְהַל) to gather together",
     "category": "Theology"
   },
   "יחדו": {
@@ -2681,7 +2681,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "קדם": {
-    "meaning": "(קֶדֶם) east; ancient, of old; (קָדִים) east wind; (הִתְקַדֵּם) to press forward; (קָדַם) to precede",
+    "meaning": "(קֶדֶם) east; ancient, of old; (קָדִים) east wind; (קָדַם) to precede",
     "category": "Time"
   },
   "טאנקום": {
@@ -3500,7 +3500,7 @@ window._rootGlossaryData = {
     "category": "Person"
   },
   "נשא": {
-    "meaning": "(נָשָׂא) to lift, carry, bear; (נָשִׂיא) prince, leader; (נְשִׂיאוּת) presidency; (הִשִּׁיא) to deceive",
+    "meaning": "(נָשָׂא) to lift, carry, bear; (נָשִׂיא) prince, leader; (הִשִּׁיא) to deceive",
     "category": "Action"
   },
   "רת": {
@@ -11094,7 +11094,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "תאר": {
-    "meaning": "(תֹּאַר) form; (תֵּאוּר) description",
+    "meaning": "(תֹּאַר) form",
     "category": "Uncategorized"
   },
   "אולם": {
@@ -11652,7 +11652,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "נהג": {
-    "meaning": "(נָהַג) to lead, drive; (הִתְנַהֲגוּת) conduct",
+    "meaning": "(נָהַג) to lead, drive",
     "category": "Quality"
   },
   "אריה": {
@@ -12173,7 +12173,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "רשות": {
-    "meaning": "(רְשׁוּת) authority, permission, power; (רַשַּׁאי) permitted, may",
+    "meaning": "(רְשׁוּת) authority, permission, power",
     "category": "Uncategorized"
   },
   "יחיו": {
@@ -14315,7 +14315,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "עקץ": {
-    "meaning": "(עָקַץ) to sting; (עֲקִיצָה) bite, sting",
+    "meaning": "(עָקַץ) to sting",
     "category": "Uncategorized"
   },
   "יחשך": {
@@ -17491,7 +17491,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "רגל": {
-    "meaning": "(רֶגֶל) foot; (רָגִיל) common; to go about, spy out",
+    "meaning": "(רֶגֶל) foot; to go about, spy out",
     "category": "Uncategorized"
   },
   "עשקום": {
@@ -17570,7 +17570,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "עקש": {
-    "meaning": "(עִקֵּשׁ) perverse; (עַקְשָׁן) stubborn",
+    "meaning": "(עִקֵּשׁ) perverse",
     "category": "Uncategorized"
   },
   "תורו": {
@@ -21387,7 +21387,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "כלל": {
-    "meaning": "(כֹּל) all, every, whole; (כָּלִיל) wholly; (כְּלָלִי) general",
+    "meaning": "(כֹּל) all, every, whole; (כָּלִיל) wholly",
     "category": "Lexical"
   },
   "מחשבה": {
@@ -22502,7 +22502,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "אפשר": {
-    "meaning": "(אֶפְשָׁר) possible; (אֶפְשָׁרוּת) possibility",
+    "meaning": "(אֶפְשָׁר) possible",
     "category": "Uncategorized"
   },
   "יטפחהו": {
@@ -24032,7 +24032,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "משך": {
-    "meaning": "(מָשַׁךְ) to draw; (הִמְשִׁיךְ) to continue",
+    "meaning": "(מָשַׁךְ) to draw",
     "category": "Uncategorized"
   },
   "חזירים": {
@@ -28976,7 +28976,7 @@ window._rootGlossaryData = {
   "H2184": { "meaning": "(זְנוּת) whoredom, fornication", "category": "Uncategorized" },
   "H2971": { "meaning": "(יָאִיר) Jair; shall shine", "category": "Uncategorized" },
   "שאב": { "meaning": "(שָׁאַב) to draw water", "category": "Uncategorized" },
-  "זקק": { "meaning": "(זָקַק) to refine, purge; (זִקִּים) chains; (נִזְקָק) needy", "category": "Uncategorized" },
+  "זקק": { "meaning": "(זָקַק) to refine, purge; (זִקִּים) chains", "category": "Uncategorized" },
   "מרא": { "meaning": "(מְרִיא) fatling", "category": "Uncategorized" },
   "H7054": { "meaning": "(קָמָה) standing corn; arose", "category": "Uncategorized" },
   "H6612": { "meaning": "(פֶּתִי) simple one", "category": "Uncategorized" },
