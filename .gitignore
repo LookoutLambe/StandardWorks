@@ -15,3 +15,10 @@ StandardWorks.xcodeproj/xcuserdata/
 
 # Never commit the KDP print interior (standing rule)
 *KDP 6x9.docx
+
+# Institute of Ancient Studies material — copyrighted, comparison only.
+# User ruling 2026-08-31: this NEVER ships. Kept at ~/Desktop/IAS-reference-NEVER-SHIP/
+ias_full.txt
+ias_*.txt
+*Hebrew-Book-of-Mormon-Translation*
+IAS-reference*/

@@ -2495,10 +2495,7 @@ window._rootGlossaryData = {
     "meaning": "to cut, cut off; make a covenant",
     "category": "Action"
   },
-  "עפר": {
-    "meaning": "earth",
-    "category": "Nature"
-  },
+  "עפר": { "meaning": "(עָפָר) dust, earth; ore — Job 28:2 בַּרְזֶל מֵעָפָר, 28:6 עַפְרֹת זָהָב", "category": "Nature" },
   "למה": {
     "meaning": "why",
     "category": "Action"
@@ -29209,4 +29206,6 @@ window._rootGlossaryData = {
   ,"שׁחת": { "meaning": "(שָׁחַת) to destroy, corrupt, mar; (שַׁחַת) pit, corruption", "category": "Action" }
 
   ,"כדור": { "meaning": "(כַּדּוּר) ball — the Liahona; Isa 22:18 כַּדּוּר", "category": "Lexical" }
+
+  ,"H6080": { "meaning": "(עָפְרָה) ore, dust of metal — the ore Nephi molten from the rock (1 Ne 17:16)", "category": "Nature" }
 };
