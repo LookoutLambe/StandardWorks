@@ -3754,7 +3754,7 @@ var ch11Verses = [
     ["אֲנִי","I"],["נֶפִי","Nephi"],
     ["כִּי","that"],
     ["הֻעֲלָה","He was lifted up"],
-    ["עַל־הָעֵץ","upon the cross"],
+    ["עַל־הָעֵץ","upon the tree"],
     ["וַיּוּמַת","and was slain"],
     ["בְּעַד","for"],
     ["חַטֹּאת","the sins of"],

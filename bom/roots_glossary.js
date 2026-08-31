@@ -9359,6 +9359,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "חלש": { "meaning": "(חָלַשׁ) to be weak; (חֻלְשָׁה) weakness, infirmity", "category": "Uncategorized" },
+  "כאב": { "meaning": "(מַכְאוֹב) pain, sorrow; (כָּאַב) to be in pain", "category": "Uncategorized" },
   "ילות": {
     "meaning": "nights",
     "category": "Time"

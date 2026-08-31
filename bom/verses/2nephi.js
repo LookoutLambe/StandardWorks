@@ -1929,7 +1929,7 @@ var n2_ch6Verses = [
     ["נֶפִי","Nephi"],
     ["׃",""]
   ]},
-          { num: "ב", words: [["הִנֵּה","behold"], ["אַחַי","my brethren"], ["הָאֲהוּבִים","the beloved"], ["אֲנִי","I"], ["יַעֲקֹב","Jacob"], ["קְרָאַנִי","called me"], ["אֱלֹהִים","God"], ["וַיִּסְמְכֵנִי","and ordained me"], ["עַל־דִּבְרַת","after the manner of the order of"], ["קׇדְשׁוֹ","His holiness"], ["קׇדְשׁוֹ","His holiness"], ["וַיְקַדְּשֵׁנִי","and consecrated me"], ["נֶפִי","Nephi"], ["אָחִי","my brother"], ["אֲשֶׁר","unto whom"], ["תַּבִּיטוּ","ye look"], ["אֵלָיו","unto him"], ["כְּמֶלֶךְ","as a king"], ["אוֹ","or"], ["כְשֹׁמֵר","as a protector"], ["וַעֲלָיו","and upon whom"], ["תִּשָּׁעֲנוּ","ye depend"], ["לְבִטְחָה","for safety"], ["הִנֵּה","behold"], ["יְדַעְתֶּם","ye know"], ["כִּי־דִבַּרְתִּי","that I have spoken"], ["אֲלֵיכֶם","to you"], ["דְּבָרִים","things"], ["רַבִּים","many"], ["מְאֹד","exceedingly"], ["׃",""]]},
+          { num: "ב", words: [["הִנֵּה","behold"], ["אַחַי","my brethren"], ["הָאֲהוּבִים","the beloved"], ["אֲנִי","I"], ["יַעֲקֹב","Jacob"], ["קְרָאַנִי","called me"], ["אֱלֹהִים","God"], ["וַיִּסְמְכֵנִי","and ordained me"], ["עַל־דִּבְרַת","after the manner of the order of"], ["קׇדְשׁוֹ","His holiness"], ["וַיְקַדְּשֵׁנִי","and consecrated me"], ["נֶפִי","Nephi"], ["אָחִי","my brother"], ["אֲשֶׁר","unto whom"], ["תַּבִּיטוּ","ye look"], ["אֵלָיו","unto him"], ["כְּמֶלֶךְ","as a king"], ["אוֹ","or"], ["כְשֹׁמֵר","as a protector"], ["וַעֲלָיו","and upon whom"], ["תִּשָּׁעֲנוּ","ye depend"], ["לְבִטְחָה","for safety"], ["הִנֵּה","behold"], ["יְדַעְתֶּם","ye know"], ["כִּי־דִבַּרְתִּי","that I have spoken"], ["אֲלֵיכֶם","to you"], ["דְּבָרִים","things"], ["רַבִּים","many"], ["מְאֹד","exceedingly"], ["׃",""]]},
           { num: "ג", words: [["אַךְ","nevertheless"], ["אֲדַבֵּר","I speak"], ["אֲלֵיכֶם","to you"], ["עוֹד","more"], ["כִּי","for"], ["חָפַצְתִּי","I have desired"], ["בְּטוֹב","for the welfare of"], ["נַפְשֹׁתֵיכֶם","your souls"], ["אַף","yea"], ["גָּדְלָה","great is"], ["דְאָגָתִי","my anxiety"], ["בַּעֲדֶכֶם","on your behalf"], ["וִידַעְתֶּם","and ye know"], ["כִּי","that"], ["כֵּן","so"], ["הָיְתָה","it has been"], ["מֵעוֹלָם","from of old"], ["כִּי","for"], ["הִזְהַרְתִּי","I have exhorted"], ["אֶתְכֶם","you"], ["בְּכׇל־שְׁקִידָה","with all diligence"], ["וְלִמַּדְתִּי","and I have taught"], ["אֶתְכֶם","you"], ["דִּבְרֵי","the words of"], ["אָבִי","my father"], ["וְדִבַּרְתִּי","and I have spoken"], ["אֲלֵיכֶם","to you"], ["עַל־כׇּל־הַכָּתוּב","concerning all that is written"], ["מִבְּרִיאַת","from the creation of"], ["הָעוֹלָם","the world"], ["׃",""]]},
           { num:"ד", words:[
     ["וְעַתָּה","and now"],
@@ -2135,6 +2135,7 @@ var n2_ch6Verses = [
     ["׃",""]
   ]},
           { num:"טז", words:[
+    ["כִּי","for"],
     ["הֲיֻקַּח","shall be taken"],
     ["מִגִּבּוֹר","from the mighty"],
     ["מַלְקוֹחַ","the prey"],
@@ -2186,8 +2187,8 @@ var n2_ch6Verses = [
   ]},
 ];
 var n2_ch7Verses = [
-          { num: "א", words: [["הֵן","yea"], ["כִּי־כֹה","for thus"], ["אָמַר","said"], ["יְהוָה","the Lord"], ["הַשִׁלַּחְתִּיךְ","have I put thee away"], ["אִם","or"], ["הִזְנַחְתִּיךְ","have I cast thee off"], ["לָעַד","forever"], ["כִּי־כֹה","for thus"], ["אָמַר","said"], ["יְהוָה","the Lord"], ["אַיֵּה","where is"], ["סֵפֶר","the bill of"], ["כְּרִיתוּת","divorcement of"], ["אִמְּכֶם","your mother"], ["לְמִי","to whom"], ["שִׁלַּחְתִּיךְ","have I put thee away"], ["וּלְמִי","or to which of"], ["מִנּוֹשַׁי","My creditors"], ["מְכַרְתִּי","have I sold"], ["אֶתְכֶם","you"], ["אַף","yea"], ["לְמִי","to whom"], ["מְכַרְתִּי","have I sold"], ["אֶתְכֶם","you"], ["הִנֵּה","behold"], ["בַּעֲוֹנֹתֵיכֶם","for your iniquities"], ["נִמְכַּרְתֶּם","are ye sold"], ["וּבְפִשְׁעֵיכֶם","and for your transgressions"], ["שֻׁלְּחָה","was put away"], ["אִמְּכֶם","your mother"], ["׃",""]]},
-          { num: "ב", words: [["לָכֵן","wherefore"], ["בָּאתִי","when I came"], ["וְאֵין","there was no"], ["אִישׁ","man"], ["קָרָאתִי","when I called"], ["ְגַם","yea"], ["וְאֵין","there was none"], ["עוֹנֶה","to answer"], ["בֵּית־יִשְׂרָאֵל","O house of Israel"], ["הֲקָצוֹר","shorten"], ["קָצְרָה","is at all shortened"], ["יָדִי","My hand"], ["מִפְּדוּת","from redeeming"], ["אִם־אֵין־בִּי","or have I no"], ["כֹחַ","power"], ["לְהַצִּיל","to deliver"], ["הִנֵּה","behold"], ["בְּגַעֲרָתִי","at My rebuke"], ["אַחֲרִיב","I dry up"], ["יָם","the sea"], ["אָשִׂים","I make"], ["נְהָרוֹת","the rivers"], ["מִדְבָּר","a wilderness"], ["וְתִבְאַשׁ","and stinks"], ["דְּגָתָם","their fish"], ["מֵאֵין","from no"], ["מַיִם","water"], ["וְיָמוּתוּ","and die"], ["בַצָּמָא","of thirst"], ["׃",""]]},
+          { num: "א", words: [["הֵן","yea"], ["כִּי־כֹה","for thus"], ["אָמַר","said"], ["יְהוָה","the Lord"], ["הֲשִׁלַּחְתִּיךְ","have I put thee away"], ["אִם","or"], ["הִזְנַחְתִּיךְ","have I cast thee off"], ["לָעַד","forever"], ["כִּי־כֹה","for thus"], ["אָמַר","said"], ["יְהוָה","the Lord"], ["אַיֵּה","where is"], ["סֵפֶר","the bill of"], ["כְּרִיתוּת","divorcement of"], ["אִמְּכֶם","your mother"], ["לְמִי","to whom"], ["שִׁלַּחְתִּיךְ","have I put thee away"], ["וּלְמִי","or to which of"], ["מִנּוֹשַׁי","My creditors"], ["מְכַרְתִּי","have I sold"], ["אֶתְכֶם","you"], ["אַף","yea"], ["לְמִי","to whom"], ["מְכַרְתִּי","have I sold"], ["אֶתְכֶם","you"], ["הִנֵּה","behold"], ["בַּעֲוֹנֹתֵיכֶם","for your iniquities"], ["נִמְכַּרְתֶּם","are ye sold"], ["וּבְפִשְׁעֵיכֶם","and for your transgressions"], ["שֻׁלְּחָה","was put away"], ["אִמְּכֶם","your mother"], ["׃",""]]},
+          { num: "ב", words: [["לָכֵן","wherefore"], ["בָּאתִי","when I came"], ["וְאֵין","there was no"], ["אִישׁ","man"], ["קָרָאתִי","when I called"], ["וְגַם","yea"], ["וְאֵין","there was none"], ["עוֹנֶה","to answer"], ["בֵּית־יִשְׂרָאֵל","O house of Israel"], ["הֲקָצוֹר","shorten"], ["קָצְרָה","is at all shortened"], ["יָדִי","My hand"], ["מִפְּדוּת","from redeeming"], ["אִם־אֵין־בִּי","or have I no"], ["כֹחַ","power"], ["לְהַצִּיל","to deliver"], ["הִנֵּה","behold"], ["בְּגַעֲרָתִי","at My rebuke"], ["אַחֲרִיב","I dry up"], ["יָם","the sea"], ["אָשִׂים","I make"], ["נְהָרוֹת","the rivers"], ["מִדְבָּר","a wilderness"], ["וְתִבְאַשׁ","and stinks"], ["דְּגָתָם","their fish"], ["מֵאֵין","from no"], ["מַיִם","water"], ["וְיָמוּתוּ","and die"], ["בַצָּמָא","of thirst"], ["׃",""]]},
           { num:"ג", words:[
     ["אַלְבִּישׁ","I clothe"],
     ["שָׁמַיִם","the heavens"],
@@ -3332,7 +3333,7 @@ var n2_ch10Verses = [
     ["בְּתוֹךְ","among"],
     ["הָרְשָׁעִים","the wicked"],
     ["בָּעוֹלָם","of the world"],
-    ["וְיִצְלְבוּהוּ","and they shall crucify Him"],
+    ["וְיִתְלוּהוּ","and they shall hang Him"], ["עַל־עֵץ","upon a tree"],
     ["כִּי־כֵן","for thus"],
     ["נָכוֹן","expedient"],
     ["לֵאלֹהֵינוּ","unto our God"],
@@ -3341,8 +3342,8 @@ var n2_ch10Verses = [
     ["אַחֵר","other"],
     ["בָּאָרֶץ","upon the earth"],
     ["אֲשֶׁר","that"],
-    ["יִצְלֹב","would crucify"],
-    ["אֱלֹהָיו","their God"],
+    ["יִתְלוּ","would hang"],
+    ["אֱלֹהָיו","their God"], ["עַל־עֵץ","upon a tree"],
     ["׃",""]
   ]},
   { num:"ד", words:[
@@ -3360,7 +3361,7 @@ var n2_ch10Verses = [
     ["אֱלֹהֵיהֶם","their God"],
     ["׃",""]
   ]},
-  { num: "ה", words: [["אַךְ","but"], ["בַּעֲבוּר","because of"], ["כְּהֻנַּת־שָׁוְא","priestcrafts"], ["וַעֲוֹנוֹתֵיהֶם","and their iniquities"], ["יַקְשׁוּ","they shall harden"], ["אֲשֶׁר","which"], ["בִּירוּשָׁלַיִם","at Jerusalem"], ["עׇרְפָּם","their necks"], ["נֶגְדּוֹ","against Him"], ["לְמַעַן","that"], ["יִצְלְבוּהוּ","they shall crucify Him"], ["׃",""]]},
+  { num: "ה", words: [["אַךְ","but"], ["בַּעֲבוּר","because of"], ["כְּהֻנַּת־שָׁוְא","priestcrafts"], ["וַעֲוֹנוֹתֵיהֶם","and their iniquities"], ["יַקְשׁוּ","they shall harden"], ["אֲשֶׁר","which"], ["בִּירוּשָׁלַיִם","at Jerusalem"], ["עׇרְפָּם","their necks"], ["נֶגְדּוֹ","against Him"], ["לְמַעַן","that"], ["יִתְלוּהוּ","they shall hang Him"], ["עַל־עֵץ","upon a tree"], ["׃",""]]},
   { num:"ו", words:[
     ["לָכֵן","therefore"],
     ["בַּעֲבוּר","because of"],
@@ -4075,7 +4076,7 @@ var n2_ch12Verses = [
     ["וְשָׁפֵל","and he shall be brought low"],
     ["׃",""]
   ]},
-  { num:"יג", words:[
+  { num:"יג", words:[["אַף","yea"], ["יוֹם","the day of"], ["יְהוָה","the Lord"], ["בָּא","shall come"], 
     ["וְעַל","and upon"],
     ["כׇּל־אַרְזֵי","all the cedars of"],
     ["הַלְּבָנוֹן","Lebanon"],
@@ -7935,7 +7936,7 @@ var n2_ch25Verses = [
   { num: "יב", words: [["אַךְ","but"], ["הִנֵּה","behold"], ["יִהְיוּ","they shall have"], ["לָהֶם","unto them"], ["מִלְחָמוֹת","wars"], ["וּשְׁמוּעוֹת","and rumors of"], ["מִלְחָמָה","war"], ["וּבְיוֹם","and in the day of"], ["בּוֹא","the coming of"], ["יְחִיד","the Only Begotten of"], ["הָאָב","the Father"], ["אַף","yea even"], ["אֲבִי","the Father of"], ["הַשָּׁמַיִם","the heavens"], ["וְהָאָרֶץ","and the earth"], ["לְהִגָּלוֹת","to manifest Himself"], ["לָהֶם","unto them"], ["בַּבָּשָׂר","in the flesh"], ["הִנֵּה","behold"], ["יִמְאֲסוּ","they shall reject"], ["בוֹ","Him"], ["בַּעֲוֹנוֹתֵיהֶם","because of their iniquities"], ["וּבְקֹשִׁי","and the hardness of"], ["לִבָּם","their hearts"], ["וְעׇרְפָּם","and their stiff necks"], ["׃",""]]},
   { num:"יג", words:[
     ["הִנֵּה","behold"],
-    ["יִצְלְבוּהוּ","they shall crucify Him"],
+    ["יִתְלוּהוּ","they shall hang Him"], ["עַל־עֵץ","upon a tree"],
     ["וְאַחֲרֵי","and after"],
     ["הִנָּתְנוֹ","He is laid"],
     ["בַּקֶּבֶר","in the grave"],
