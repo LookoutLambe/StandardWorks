@@ -721,6 +721,7 @@
                     'H0347': 'איוב',    // Job, not איב "enemy"
                     'H1144': 'בנימין',  // Benjamin, not בן "son"
                     'H2220': 'זרוע',   // arm, not זרע "seed"
+                    'H1754': 'כדור',   // ball (the Liahona), not דור "generation"
                     'H2983': 'יבוסי',  // Jebusite, not בוס "trample"
                     // ל"ה-derived nouns: the root's ה never surfaces in the
                     // noun, so the transparency gate rejects BDB's (correct)

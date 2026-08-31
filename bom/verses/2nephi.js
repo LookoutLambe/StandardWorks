@@ -1419,7 +1419,7 @@ var n2_ch4Verses = [
     ["דְּבָרִים","things"],
     ["כָּאֵלֶּה","such as these"],
     ["וְאִם־יְהוָה","and if the Lord"],
-    ["בְּעַנְוָתוֹ","in His condescension"],
+    ["בְּעַנְוָתוֹ","in His condescension"],
     ["פָּקַד","has visited"],
     ["בְּנֵי־אָדָם","the sons of man"],
     ["בְּרַחֲמִים","with mercies"],
@@ -4489,7 +4489,7 @@ var n2_ch13Verses = [
     ["פְּתִיגִיל","a stomacher"],
     ["מַחֲגֹרֶת","a girding of"],
     ["שָׂק","sackcloth"],
-    ["כְּוִי","burning"],
+    ["כְּוִי","burning"],
     ["תַחַת","instead of"],
     ["יֹפִי","beauty"],
     ["׃",""]
@@ -10502,8 +10502,7 @@ var n2_ch31Verses = [
   ]},
   { num:"ה", words:[
     ["וְעַתָּה","and now"],
-    ["אִם־שֵׂה","if the Lamb of"],
-    ["הָאֱלֹהִים","God"],
+    ["אִם־שֵׂה־אֱלֹהִים","if the Lamb of God"],
     ["וְהוּא","and He"],
     ["קָדוֹשׁ","holy"],
     ["הָיָה־לוֹ","had He"],

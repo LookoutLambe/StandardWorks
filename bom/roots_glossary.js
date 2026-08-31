@@ -16465,10 +16465,7 @@ window._rootGlossaryData = {
     "meaning": "upon their works",
     "category": "Action"
   },
-  "זהר": {
-    "meaning": "brightness",
-    "category": "Society"
-  },
+  "זהר": { "meaning": "(הִזְהִיר) to warn, admonish, exhort; (זֹהַר) brightness", "category": "Action" },
   "פטיך": {
     "meaning": "are Your judgments",
     "category": "Uncategorized"
@@ -29204,4 +29201,12 @@ window._rootGlossaryData = {
   ,"אמם": { "meaning": "(אֵם) mother; (אַמָּה) cubit", "category": "Lexical" }
   ,"בשר": { "meaning": "(בָּשָׂר) flesh", "category": "Lexical" }
   ,"בעד": { "meaning": "(בְּעַד) for, on behalf of, through", "category": "Particle" }
+
+  ,"H1847": { "meaning": "(דַּעַת) knowledge, understanding; mind", "category": "Lexical" }
+
+  ,"H3738": { "meaning": "(כָּרָה) to dig; (כֹּרֶה) digger — Ps 7:16 בּוֹר כָּרָה", "category": "Action" }
+
+  ,"שׁחת": { "meaning": "(שָׁחַת) to destroy, corrupt, mar; (שַׁחַת) pit, corruption", "category": "Action" }
+
+  ,"כדור": { "meaning": "(כַּדּוּר) ball — the Liahona; Isa 22:18 כַּדּוּר", "category": "Lexical" }
 };
