@@ -823,7 +823,7 @@ detailHtml += '<div class="rsc-slot">';   // RootScorecard upgrades this block w
         rootMeaning = meanings.slice(0, 4).join(', ');
       }
       if (!rootMeaning && typeof strongsGloss === 'string') rootMeaning = strongsGloss;
-      detailHtml += lemmaLine + '<span style="cursor:pointer;text-decoration:underline;" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">Root ' + rootDisplay + '</span> \u2014 ' + rInfo.count + ' uses in ' + verseCount + ' verses';
+      detailHtml += lemmaLine + '<span style="cursor:pointer;text-decoration:none;color:var(--tap-blue,#2e6da4);" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">Root ' + rootDisplay + '</span> \u2014 ' + rInfo.count + ' uses in ' + verseCount + ' verses';
       if (rootMeaning) detailHtml += '<br><span style="font-style:italic;color:var(--ink-light);font-size:0.9em;">' + rootMeaning + '</span>';
       var formKeys = Object.keys(rInfo.forms);
       if (formKeys.length > 1) {

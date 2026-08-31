@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '70';   // bump when the generated data files change
+  var RSC_V = '75';   // bump when the generated data files change
 
   var cfg = { vol: '', base: '' };
   var keyIdx = null;         // rootKey -> index, built once
@@ -313,7 +313,7 @@
     entry.c.forEach(function(n) { total += n; });
     entry.vc.forEach(function(n) { totalVerses += n; });
     var h = '';
-    h += '<span class="rsc-root" style="cursor:pointer;text-decoration:underline;color:var(--tap-blue,#2e6da4);">Root ' +
+    h += '<span class="rsc-root" style="cursor:pointer;text-decoration:none;color:var(--tap-blue,#2e6da4);">Root ' +
       '<span style="font-family:\'David Libre\',serif">' + esc(d.heb) + '</span>' +
       (d.translit ? ' <span style="font-size:0.85em;opacity:0.7;">(' + esc(d.translit) + ')</span>' : '') +
       '</span> — ' + total + ' uses in ' + totalVerses + ' verses across the scriptures';

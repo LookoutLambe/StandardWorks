@@ -8007,7 +8007,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 30,
   "verse": 1,
-  "english": "And now behold, my beloved brethren, I would speak unto you; for I, Nephi, would not suffer that ye should suppose that ye are more righteous than the Gentiles shall be. For behold, except ye shall keep the commandments of God ye shall all likewise perish; and because of the words Ih have been spoken ye need not suppose that the Gentiles are utterly destroyed."
+  "english": "And now behold, my beloved brethren, I would speak unto you; for I, Nephi, would not suffer that ye should suppose that ye are more righteous than the Gentiles shall be. For behold, except ye shall keep the commandments of God ye shall all likewise perish; and because of the words which have been spoken ye need not suppose that the Gentiles are utterly destroyed."
  },
  {
   "book": "2 Nephi",
@@ -8163,7 +8163,7 @@ window._officialVersesData = [
   "book": "2 Nephi",
   "chapter": 31,
   "verse": 9,
-  "english": "And again, it showeth unto the children of men the straightness of the path, and the narrowness of the gate, by which they should enter, he having set the example before them."
+  "english": "And again, it showeth unto the children of men the straitness of the path, and the narrowness of the gate, by which they should enter, he having set the example before them."
  },
  {
   "book": "2 Nephi",

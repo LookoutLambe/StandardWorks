@@ -553,9 +553,7 @@ var mo_ch11Verses = [
   { num: "כב", words: [
     ["וְהָיָה","and it shall come to pass"],["כִּי","that"],["יֵדְעוּ","they shall know"],["כִּי־אֲנִי","that I am"],["יְהוָה","the Lord"],["אֱלֹהֵיהֶם","their God"],["אֵל","a God"],["קַנָּא","jealous"],["פֹּקֵד","visiting"],["עֲוֹן","the iniquities of"],["עַמִּי","my people"]
   , ["׃",""]]},
-  { num: "כג", words: [
-    ["וְהָיָה","and it shall come to pass"],["כִּי־אִם","that if"],["לֹא־יָשׁוּב","shall not repent"],["הָעָם־הַזֶּה","this people"],["וְיִפְנֶה","and turn"],["אֶל־יְהוָה","unto the Lord"],["אֱלֹהָיו","his God"],["וְהָיוּ","they shall be"],["לַעֲבָדִים","for servants"],["וְאֵין","and there is no"],["מַצִּיל","deliverer"],["זוּלַת","except it be"],["יְהוָה","the Lord"],["אֱלֹהִים","God"],["צְבָאוֹת","of Hosts"]
-  , ["׃",""]]},
+  { num: "כג", words: [["וְהָיָה","and it shall come to pass"], ["כִּי־אִם","that if"], ["לֹא־יָשׁוּב","shall not repent"], ["הָעָם־הַזֶּה","this people"], ["וְיִפְנֶה","and turn"], ["אֶל־יְהוָה","unto the Lord"], ["אֱלֹהָיו","his God"], ["וְהָיוּ","they shall be"], ["לַעֲבָדִים","for servants"], ["וְאֵין","and there is no"], ["מַצִּיל","deliverer"], ["זוּלַת","except it be"], ["יְהוָה","the Lord"], ["אֱלֹהִים","God"], ["שַׁדַּי","Almighty"], ["׃",""]]},
   { num: "כד", words: [
     ["וְהָיָה","and it shall come to pass"],["כִּי","that"],["יִזְעֲקוּ","they shall cry"],["אֵלַי","unto Me"],["אֶתְאַפַּק","I will be slow"],["מִשְּׁמֹעַ","to hear"],["זַעֲקָתָם","their cries"],["וְאֶתְּנֵם","and I will suffer them"],["לְהִנָּגֵף","that they be smitten"],["לִפְנֵי","before"],["אֹיְבֵיהֶם","their enemies"]
   , ["׃",""]]},

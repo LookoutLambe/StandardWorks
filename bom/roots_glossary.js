@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "H7706": { "meaning": "(שַׁדַּי) the Almighty; (אֵל שַׁדַּי) God Almighty — Gen 17:1", "category": "Lexical" },
   "שבלומ": { "meaning": "shiblum — Nephite name (Book of Mormon): half a shiblon, Alma 11", "category": "Lexical" },
   "שבלונ": { "meaning": "Shiblon — Nephite name (Book of Mormon): Alma's son; and a measure, half a senum, Alma 11", "category": "Lexical" },
   "אנטיונ": { "meaning": "antion — Nephite name (Book of Mormon): a measure of gold, Alma 11", "category": "Lexical" },
@@ -24857,7 +24858,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "צרר": {
-    "meaning": "(צַר) adversary, enemy; (צֹר) Tyre; (צָרַר) to bind, distress",
+    "meaning": "(צַר) narrow, strait; (מֵצַר) narrow place, strait — Ps 118:5; (צָרַר) to be narrow, bind, distress; (צַר) adversary, enemy",
     "category": "Uncategorized"
   },
   "עדתך": {
@@ -28719,7 +28720,7 @@ window._rootGlossaryData = {
     "category": "Lexical"
   },
   "H6887": {
-    "meaning": "to bind, oppress; adversary",
+    "meaning": "to be narrow, straiten; to bind, oppress; adversary",
     "category": "Lexical"
   },
   "H7788": {
