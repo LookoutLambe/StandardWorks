@@ -3,7 +3,7 @@
 
 // === CH1: JST 1 John 2:1 ===
 var jst1jn_ch1Verses = [
-  { num:"א", words:[["יְלָדַי","my-little-children"],["הַקְּטַנִּים","the-little"],["אֵלֶּה","these"],["הַדְּבָרִים","the-things"],["כּוֹתֵב","write-I"],["אֲנִי","I"],["לָכֶם","unto-you"],["לְמַעַן","that"],["לֹא","not"],["תֶּחֶטְאוּ","ye-sin"],["אַךְ","but"],["אִם","if"],["יֶחֱטָא","sin"],["אִישׁ","a-man"],["וְיָשׁוּב","and-repent"],["יֵשׁ","we-have"],["לָנוּ","an-advocate"],["סָנֵגוֹר","with"],["עִם","the-Father"],["הָאָב","the-Father"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׁיחַ","the-Christ"],["הַצַּדִּיק","the-righteous"],["׃",""]] }
+  { num:"א", words:[["יְלָדַי","my-little-children"],["הַקְּטַנִּים","the-little"],["אֵלֶּה","these"],["הַדְּבָרִים","the-things"],["כּוֹתֵב","write-I"],["אֲנִי","I"],["לָכֶם","unto-you"],["לְמַעַן","that"],["לֹא","not"],["תֶּחֶטְאוּ","you-sin"],["אַךְ","but"],["אִם","if"],["יֶחֱטָא","sin"],["אִישׁ","a-man"],["וְיָשׁוּב","and-repent"],["יֵשׁ","we-have"],["לָנוּ","an-advocate"],["סָנֵגוֹר","with"],["עִם","the-Father"],["הָאָב","the-Father"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׁיחַ","the-Christ"],["הַצַּדִּיק","the-righteous"],["׃",""]] }
 ];
 renderVerseSet(jst1jn_ch1Verses, 'jst1jn-ch1-verses');
 

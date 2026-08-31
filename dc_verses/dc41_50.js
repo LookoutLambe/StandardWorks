@@ -1805,7 +1805,7 @@ renderVerseSet(dc44_ch1Verses, 'dc44-ch1-verses');
 
 
 var dc45_ch1Verses = [
-  { num: "א", words: [["שִׁמְעוּ","hearken"], ["עַם","O people of"], ["כְּנֵסִיָּתִי","my church"], ["אֲשֶׁר","to whom"], ["נִתְּנָה","has been given"], ["לָכֶם","unto you"], ["הַמַּלְכוּת","the kingdom"], ["שִׁמְעוּ","hearken ye"], ["וְהַאֲזִינוּ","and give ear"], ["לַאֲשֶׁר","to him who"], ["יָסַד","founded"], ["אֶת־הָאָרֶץ","the earth"], ["אֲשֶׁר","who"], ["עָשָׂה","made"], ["אֶת־הַשָּׁמַיִם","the heavens"], ["וְאֵת","and"], ["כׇּל־צְבָאָם","all the hosts thereof"], ["וּבְיָדוֹ","and by whom"], ["נַעֲשׂוּ","were made"], ["כׇּל","all"], ["הַדְּבָרִים","things"], ["הַחַיִּים","which live"], ["וְהַנָּעִים","and move"], ["וְהַקַּיָּמִים׃","and exist"]]},
+  { num: "א", words: [["שִׁמְעוּ","hearken"], ["עַם","O people of"], ["כְּנֵסִיָּתִי","my church"], ["אֲשֶׁר","to whom"], ["נִתְּנָה","has been given"], ["לָכֶם","unto you"], ["הַמַּלְכוּת","the kingdom"], ["שִׁמְעוּ","hearken you"], ["וְהַאֲזִינוּ","and give ear"], ["לַאֲשֶׁר","to him who"], ["יָסַד","founded"], ["אֶת־הָאָרֶץ","the earth"], ["אֲשֶׁר","who"], ["עָשָׂה","made"], ["אֶת־הַשָּׁמַיִם","the heavens"], ["וְאֵת","and"], ["כׇּל־צְבָאָם","all the hosts thereof"], ["וּבְיָדוֹ","and by whom"], ["נַעֲשׂוּ","were made"], ["כׇּל","all"], ["הַדְּבָרִים","things"], ["הַחַיִּים","which live"], ["וְהַנָּעִים","and move"], ["וְהַקַּיָּמִים׃","and exist"]]},
   { num: "ב", words: [
     ["וְעוֹד","and again"],
     ["אֲנִי","I"],

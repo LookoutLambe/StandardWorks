@@ -11,7 +11,7 @@ renderVerseSet(jst1ti_ch1Verses, 'jst1ti-ch1-verses');
 // === CH2: JST 1 Timothy 3:15–16 ===
 // The Church is founded on the principle that Jesus became mortal.
 var jst1ti_ch2Verses = [
-  { num:"טו", words:[["אַךְ","but"],["אִם","if"],["אֶתְמַהְמֵהַּ","I-tarry-long"],["לְמַעַן","that"],["תֵּדַע","thou-mayest-know"],["אֵיךְ","how"],["רָאוּי","oughtest"],["לְךָ","thou"],["לְהִתְנַהֵג","to-behave-thyself"],["בְּבֵית","in-the-house-of"],["אֱלֹהִים","God"],["אֲשֶׁר","which-is"],["הִיא","the-church-of"],["כְּנֶסִיַּת","the-church-of"],["הָאֱלֹהִים","God"],["הַחַיִּים","the-living"],["׃",""]] },
+  { num:"טו", words:[["אַךְ","but"],["אִם","if"],["אֶתְמַהְמֵהַּ","I-tarry-long"],["לְמַעַן","that"],["תֵּדַע","you-mayest-know"],["אֵיךְ","how"],["רָאוּי","oughtest"],["לְךָ","you"],["לְהִתְנַהֵג","to-behave-thyself"],["בְּבֵית","in-the-house-of"],["אֱלֹהִים","God"],["אֲשֶׁר","which-is"],["הִיא","the-church-of"],["כְּנֶסִיַּת","the-church-of"],["הָאֱלֹהִים","God"],["הַחַיִּים","the-living"],["׃",""]] },
   { num:"טז", words:[["עַמּוּד","the-pillar"],["וּיְסוֹד","and-ground-of"],["הָאֱמֶת","the-truth-is"],["וּבְלִי","and-without"],["מַחֲלֹקֶת","controversy"],["גָּדוֹל","great-is"],["סוֹד","the-mystery-of"],["הֱיוֹת","the-being-of"],["אֱלֹהוּת","godliness"],["אֱלֹהִים","God"],["נִגְלָה","was-manifest"],["בַּבָּשָׂר","in-the-flesh"],["הֻצְדַּק","justified"],["בָּרוּחַ","in-the-Spirit"],["נִרְאָה","seen-of"],["לְמַלְאָכִים","angels"],["הֻטְפַּץ","preached-unto"],["בַּגּוֹיִם","the-Gentiles"],["נֶאֱמַן","believed-on"],["בָּעוֹלָם","in-the-world"],["נִלְקַח","received-up"],["לַכָּבוֹד","into-the-glory"],["׃",""]] }
 ];
 renderVerseSet(jst1ti_ch2Verses, 'jst1ti-ch2-verses');
