@@ -20533,6 +20533,14 @@ window._rootGlossaryData = {
     "meaning": "to begin",
     "category": "Lexical"
   },
+  "H1119": {
+    "meaning": "(בְּמוֹ) with, by — the poetic byform of בְּ (Job, Psalms)",
+    "category": "Lexical"
+  },
+  "H3926": {
+    "meaning": "(לְמוֹ) to, unto — the poetic byform of לְ",
+    "category": "Lexical"
+  },
   "H2490": {
     "meaning": "to begin",
     "category": "Lexical"
