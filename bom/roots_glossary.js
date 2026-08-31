@@ -2,13 +2,13 @@ window._rootGlossaryData = {
   "שאה": { "meaning": "(שָׁאָה) to crash into ruin, lie waste; (שְׁאִיָּה) desolation; (מִשְׁתָּאֵה) gazing in wonder", "category": "Lexical" },
   "אנס": { "meaning": "(אָנַס) to compel, constrain; (אֹנֶס) constraint, necessity", "category": "Lexical" },
   "נהה": { "meaning": "(נְהִי) wailing", "category": "Uncategorized" },
-  "H7327": { "meaning": "(רוּת) Ruth", "category": "Uncategorized" },
+  "H7327": { "meaning": "(הוֹרָה) to teach, instruct; (רוּת) Ruth", "category": "Uncategorized" },
   "H3999": { "meaning": "(מַבּוּל) flood", "category": "Uncategorized" },
   "H1774": { "meaning": "of gold; Dizahab", "category": "Uncategorized" },
   "דבב": { "meaning": "(דֹּב) bear; (דִּבָּה) evil report", "category": "Uncategorized" },
   "צמד": { "meaning": "(צֶמֶד) pair; (צְמִידִים) bracelets", "category": "Uncategorized" },
   "H6957": { "meaning": "(קַו) line — line upon line", "category": "Uncategorized" },
-  "H6969": { "meaning": "(קֵינִי) Kenite; (קוֹנֵן) to lament", "category": "Uncategorized" },
+  "H6969": { "meaning": "(קוֹנֵן) to chant a dirge, lament; (קֵינִי) Kenite", "category": "Uncategorized" },
   "מתק": { "meaning": "(מָתוֹק) sweet", "category": "Uncategorized" },
   "שגה": { "meaning": "(שָׁגָה) to err, go astray", "category": "Uncategorized" },
   "אפק": { "meaning": "(אֲפִיקִים) channels, ravines; (הִתְאַפֵּק) to refrain", "category": "Uncategorized" },
@@ -196,7 +196,7 @@ window._rootGlossaryData = {
   "סבר": { "meaning": "(סֵבֶר) hope", "category": "Uncategorized" },
   "היירם": { "meaning": "(הַיְירָם) Hiram, Hyrum", "category": "Uncategorized" },
   "H7613": { "meaning": "(שְׂאֵת) to bear, take up; swelling, dignity", "category": "Uncategorized" },
-  "H2752": { "meaning": "(חֹרִי) Horite; (חֹרִים) nobles", "category": "Uncategorized" },
+  "H2752": { "meaning": "(חֹרִים) nobles, freemen; (חֹרִי) Horite", "category": "Uncategorized" },
   "ידד": { "meaning": "(יָדִיד) beloved; (יָדַד) to cast lots", "category": "Uncategorized" },
   "עטף": { "meaning": "(עָטַף) to be clothed, covered; to be feeble, faint", "category": "Uncategorized" },
   "H2983": { "meaning": "(יְבוּסִי) Jebusite", "category": "Uncategorized" },
@@ -299,10 +299,10 @@ window._rootGlossaryData = {
   "צפר": { "meaning": "(צִפּוֹר) bird; Zippor", "category": "Uncategorized" },
   "H4682": { "meaning": "unleavened bread", "category": "Uncategorized" },
   "שקק": { "meaning": "(שַׂק) sackcloth, sack", "category": "Uncategorized" },
-  "פרס": { "meaning": "(פָּרַס) Persia; (פַּרְסָה) hoof", "category": "Uncategorized" },
+  "פרס": { "meaning": "(פַּרְסָה) hoof; (פָּרַס) to divide, break in two; (פָּרַס) Persia", "category": "Uncategorized" },
   "נקב": { "meaning": "(נְקֵבָה) female; (נָקַב) to designate, pierce", "category": "Uncategorized" },
   "חסה": { "meaning": "(חָסָה) to take refuge, trust; (מַחֲסֶה) refuge", "category": "Uncategorized" },
-  "קרח": { "meaning": "(קֹרַח) Korah; (קֶרַח) ice; baldness", "category": "Uncategorized" },
+  "קרח": { "meaning": "(קֶרַח) ice, frost; baldness; (קֹרַח) Korah", "category": "Uncategorized" },
   "הלא": { "meaning": "(וָהָלְאָה) onward, forward", "category": "Uncategorized" },
   "H0952": { "meaning": "pit", "category": "Uncategorized" },
   "שחר": { "meaning": "(שַׁחַר) dawn; (שָׁחֹר) black; to seek early", "category": "Uncategorized" },
@@ -396,9 +396,9 @@ window._rootGlossaryData = {
   "קאודרי": { "meaning": "Cowdery", "category": "Name" },
   "H5511": { "meaning": "Sihon", "category": "Name" },
   "H1391": { "meaning": "Gibeon", "category": "Name" },
-  "H5804": { "meaning": "Gaza", "category": "Name" },
+  "H5804": { "meaning": "(עַז) strong, mighty, fierce; (עַזָּה) Gaza", "category": "Name" },
   "H4843": { "meaning": "Merari", "category": "Name" },
-  "H2803": { "meaning": "Hashabiah", "category": "Name" },
+  "H2803": { "meaning": "(חָשַׁב) to think, reckon, esteem, devise; (חָשׁוּב) important; (חֲשַׁבְיָה) Hashabiah", "category": "Name" },
   "H3079": { "meaning": "Jehoiakim", "category": "Name" },
   "H5956": { "meaning": "Elam", "category": "Name" },
   "H8123": { "meaning": "Samson", "category": "Name" },
@@ -443,7 +443,7 @@ window._rootGlossaryData = {
   "H1551": { "meaning": "Galilee", "category": "Name" },
   "H0499": { "meaning": "Eleazar", "category": "Name" },
   "H4813": { "meaning": "Mary, Miriam", "category": "Name" },
-  "H7876": { "meaning": "(מוֹשִׁיָּה) Mosiah", "category": "Name" },
+  "H7876": { "meaning": "(שָׁיָה) to forget, be unmindful of", "category": "Name" },
   "H3083": { "meaning": "Jonathan", "category": "Name" },
   "H5019": { "meaning": "Nebuchadnezzar", "category": "Name" },
   "H3379": { "meaning": "Jeroboam", "category": "Name" },
@@ -497,7 +497,7 @@ window._rootGlossaryData = {
   "ברר": { "meaning": "(בָּרַר) to purify, select; (בָּרוּר) plain, clear", "category": "Uncategorized" },
   "עתד": { "meaning": "(עַתּוּד) he-goat; (עָתִיד) ready, to come", "category": "Animals" },
   "גוה": { "meaning": "(גְּוִיָּה) body", "category": "Body" },
-  "גדד": { "meaning": "(גָּד) Gad; (גְּדוּד) band, troop", "category": "Name" },
+  "גדד": { "meaning": "(גְּדוּד) band, troop, raiding party; (גָּד) Gad", "category": "Name" },
   "בצע": { "meaning": "(בֶּצַע) gain", "category": "Morality" },
   "צפה": { "meaning": "(צִפָּה) to overlay; (צֹפֶה) watchman", "category": "Uncategorized" },
   "מסר": { "meaning": "(מָסַר) to deliver, commit", "category": "Uncategorized" },
@@ -521,7 +521,7 @@ window._rootGlossaryData = {
   "מאס": { "meaning": "to reject, refuse, despise", "category": "Emotion" },
   "H8050": { "meaning": "Samuel", "category": "Name" },
   "צחק": { "meaning": "(יִצְחָק) Isaac; (צָחַק) to laugh", "category": "Name" },
-  "סלל": { "meaning": "(סֶלָה) Selah; (מְסִלָּה) highway; (סֹלְלָה) mound", "category": "Uncategorized" },
+  "סלל": { "meaning": "(מְסִלָּה) highway, raised way; (סֹלְלָה) siege-mound; (סֶלָה) Selah", "category": "Uncategorized" },
   "כנען": { "meaning": "Canaan", "category": "Name" },
   "מדד": { "meaning": "(מָדַד) to measure", "category": "Uncategorized" },
   "חרף": { "meaning": "(חֶרְפָּה) reproach, shame; (חֹרֶף) winter", "category": "Morality" },
@@ -2153,7 +2153,7 @@ window._rootGlossaryData = {
     "category": "Nature"
   },
   "יוסף": {
-    "meaning": "Joseph",
+    "meaning": "(יָסַף) to add, increase; (יוֹסֵף) Joseph",
     "category": "Uncategorized"
   },
   "חל": {
@@ -3487,7 +3487,7 @@ window._rootGlossaryData = {
     "category": "Theology"
   },
   "בך": {
-    "meaning": "You",
+    "meaning": "(בְּךָ) in you, among you — preposition with suffix, not a root",
     "category": "Cognition"
   },
   "נא": {
@@ -4008,7 +4008,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יעל": {
-    "meaning": "(יָעֵל) Jael; (הוֹעִיל) to profit",
+    "meaning": "(הוֹעִיל) to profit, avail, be of use; (יָעֵל) Jael",
     "category": "Motion"
   },
   "צותי": {
@@ -5758,7 +5758,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "אנא": {
-    "meaning": "O God",
+    "meaning": "(אֲנָה) I — Aramaic; (אָנָה) whither, where",
     "category": "Theology"
   },
   "זעקו": {
@@ -5790,7 +5790,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "אנטי": {
-    "meaning": "Anti",
+    "meaning": "onti — the greatest Nephite measure of silver (Alma 11)",
     "category": "Uncategorized"
   },
   "ירושלים׃": {
@@ -6201,7 +6201,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "עמר": {
-    "meaning": "Omer",
+    "meaning": "(עֹמֶר) a sheaf; an omer, a dry measure; (עָמַר) to bind sheaves",
     "category": "Uncategorized"
   },
   "א־היה": {
@@ -6449,7 +6449,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "רני": {
-    "meaning": "Moroni",
+    "meaning": "(רִנָּה) ringing cry, song; (רָנַן) to sing aloud",
     "category": "Uncategorized"
   },
   "ישיגו": {
@@ -8833,7 +8833,7 @@ window._rootGlossaryData = {
     "category": "Lexical"
   },
   "כב": {
-    "meaning": "Shokb",
+    "meaning": "(כ״ב) twenty-two — the Hebrew numeral",
     "category": "Uncategorized"
   },
   "חקוקים": {
@@ -8888,7 +8888,7 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "ולה": {
-    "meaning": "Shule",
+    "meaning": "(וְלָהּ) and to her, and she had — waw + preposition with suffix",
     "category": "Uncategorized"
   },
   "דמם": {
@@ -11618,7 +11618,7 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "שרה": {
-    "meaning": "(שָׂרָה) Sarah",
+    "meaning": "(שָׂרַר) to rule, hold office; (שְׂרָרָה) government, office; (שָׂרָה) Sarah",
     "category": "Society"
   },
   "עזרה": {
@@ -13021,7 +13021,7 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "זרם": {
-    "meaning": "Zoram",
+    "meaning": "(זָרַם) to pour, flood away; (זֶרֶם) downpour, storm of rain; (זוֹרָם) Zoram",
     "category": "Uncategorized"
   },
   "דרומה": {
@@ -14600,7 +14600,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "פילים": {
-    "meaning": "Pilim",
+    "meaning": "(פִּיל) elephant",
     "category": "Quality"
   },
   "את־כורינטום": {
@@ -14848,11 +14848,11 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "סנינה": {
-    "meaning": "Sninh",
+    "meaning": "senine — a Nephite measure of gold (Alma 11)",
     "category": "Uncategorized"
   },
   "סנום": {
-    "meaning": "Snum",
+    "meaning": "senum — a Nephite measure of silver (Alma 11)",
     "category": "Uncategorized"
   },
   "עליון׃": {
@@ -15154,7 +15154,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "אמתיים": {
-    "meaning": "Christ",
+    "meaning": "(אֲמִתִּי) real, true, genuine",
     "category": "Uncategorized"
   },
   "את־אמליקיה": {
@@ -15502,7 +15502,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "חוה": {
-    "meaning": "Eve",
+    "meaning": "(חִוָּה) to declare, show, make known; (חַוָּה) Eve",
     "category": "Uncategorized"
   },
   "נמכר": {
@@ -16749,7 +16749,7 @@ window._rootGlossaryData = {
     "category": "Time"
   },
   "נון": {
-    "meaning": "Nun",
+    "meaning": "(נוּן) to continue, propagate; (בֵּינוֹנִי) middle-aged",
     "category": "Uncategorized"
   },
   "גם־אתה": {
@@ -18456,7 +18456,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "ארו": {
-    "meaning": "Horo",
+    "meaning": "(אֲרוּ) behold, lo — Aramaic",
     "category": "Uncategorized"
   },
   "נושעו׃": {
@@ -19038,7 +19038,7 @@ window._rootGlossaryData = {
     "category": "Cognition"
   },
   "תניחו": {
-    "meaning": "Tnicho",
+    "meaning": "(הִנִּיחַ) to leave, let alone, allow — hiphil of נוח",
     "category": "Quality"
   },
   "תטפחו": {
@@ -19061,7 +19061,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יוד": {
-    "meaning": "Iod",
+    "meaning": "(יוֹד) jot — the letter yod, the smallest letter",
     "category": "Uncategorized"
   },
   "גופכם": {
@@ -20985,7 +20985,7 @@ window._rootGlossaryData = {
     "category": "Theology"
   },
   "ליץ": {
-    "meaning": "Mediator",
+    "meaning": "(מְלִיצָה) figure, taunting proverb; (מֵלִיץ) interpreter, spokesman; (לוּץ) to scorn",
     "category": "Uncategorized"
   },
   "מלכתו": {
@@ -23901,7 +23901,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "פגג": {
-    "meaning": "Fgg",
+    "meaning": "(פַּג) unripe fig, early fig",
     "category": "Uncategorized"
   },
   "פות": {
@@ -24157,7 +24157,7 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "זוז": {
-    "meaning": "Zoz",
+    "meaning": "(מְזוּזָה) doorpost",
     "category": "Uncategorized"
   },
   "חיב": {
@@ -24602,7 +24602,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "פתויי": {
-    "meaning": "Ptoii",
+    "meaning": "(פִּתָּה) to persuade, entice; (פִּתּוּי) persuasion",
     "category": "Uncategorized"
   },
   "אם־יוכל": {
@@ -24945,7 +24945,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "אבוד": {
-    "meaning": "Vod",
+    "meaning": "(אָבַד) to perish, be lost; (אָבוּד) lost, wasted",
     "category": "Uncategorized"
   },
   "נופל": {
@@ -25017,7 +25017,7 @@ window._rootGlossaryData = {
     "category": "Family"
   },
   "עזרום": {
-    "meaning": "Zrom",
+    "meaning": "ezrom — a Nephite measure of silver (Alma 11)",
     "category": "Uncategorized"
   },
   "יחד׃": {
@@ -25831,7 +25831,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "סנין": {
-    "meaning": "Snin",
+    "meaning": "senine — a Nephite measure of gold (Alma 11)",
     "category": "Uncategorized"
   },
   "קבלים": {
@@ -26721,7 +26721,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "עיפותם": {
-    "meaning": "Ifotm",
+    "meaning": "(עֲיֵפוּת) weariness, faintness",
     "category": "Uncategorized"
   },
   "עם־כל־צבאם": {
@@ -28371,7 +28371,7 @@ window._rootGlossaryData = {
     "category": "Lexical"
   },
   "H3116": {
-    "meaning": "(יוּכַל) Jucal",
+    "meaning": "(יָכֹל) to be able, prevail; (יוּכַל) Jucal",
     "category": "Lexical"
   },
   "H1752": {
@@ -28515,7 +28515,7 @@ window._rootGlossaryData = {
     "category": "Lexical"
   },
   "H3106": {
-    "meaning": "Jubal",
+    "meaning": "(יָבַל) to bear along, carry; (יוּבָל) Jubal",
     "category": "Lexical"
   },
   "H6963": {
@@ -28731,7 +28731,7 @@ window._rootGlossaryData = {
     "category": "Lexical"
   },
   "H7788": {
-    "meaning": "Shur; to travel",
+    "meaning": "(שׁוּר) to travel, journey; wall; (שׁוּר) Shur",
     "category": "Lexical"
   },
   "H2363": {
@@ -28855,7 +28855,7 @@ window._rootGlossaryData = {
     "category": "Lexical"
   },
   "H3037": {
-    "meaning": "Jaddua; known",
+    "meaning": "known, made known; (יַדּוּעַ) Jaddua",
     "category": "Lexical"
   },
   "H2372": {
@@ -28971,11 +28971,11 @@ window._rootGlossaryData = {
   "שחד": { "meaning": "(שֹׁחַד) bribe", "category": "Uncategorized" },
   "H8302": { "meaning": "(שִׁרְיוֹן) breastplate, armor", "category": "Uncategorized" },
   "פתל": { "meaning": "(פְּתַלְתֹּל) crooked, perverse; (פָּתִיל) cord, lace", "category": "Uncategorized" },
-  "H5875": { "meaning": "(עֵין הַקּוֹרֵא) En-hakkore; the calling", "category": "Uncategorized" },
+  "H5875": { "meaning": "the calling, the one who cries; (עֵין הַקּוֹרֵא) En-hakkore", "category": "Uncategorized" },
   "H1613": { "meaning": "(גֹּפֶר) gopher wood; (גָּפְרִית) brimstone", "category": "Uncategorized" },
   "כסס": { "meaning": "(מֶכֶס) tax, custom; covered", "category": "Uncategorized" },
   "H2184": { "meaning": "(זְנוּת) whoredom, fornication", "category": "Uncategorized" },
-  "H2971": { "meaning": "(יָאִיר) Jair; shall shine", "category": "Uncategorized" },
+  "H2971": { "meaning": "to shine, give light; (יָאִיר) Jair", "category": "Uncategorized" },
   "שאב": { "meaning": "(שָׁאַב) to draw water", "category": "Uncategorized" },
   "זקק": { "meaning": "(זָקַק) to refine, purge; (זִקִּים) chains", "category": "Uncategorized" },
   "מרא": { "meaning": "(מְרִיא) fatling", "category": "Uncategorized" },
@@ -28984,7 +28984,7 @@ window._rootGlossaryData = {
   "עכר": { "meaning": "(עָכַר) to trouble; Achor", "category": "Uncategorized" },
   "H2064": { "meaning": "(זְבַדְיָה) Zebadiah, Zabad", "category": "Uncategorized" },
   "H7027": { "meaning": "(קִישׁ) Kish", "category": "Uncategorized" },
-  "H3199": { "meaning": "(יָכִין) Jachin; prepares", "category": "Uncategorized" },
+  "H3199": { "meaning": "(הֵכִין) to prepare, establish; (יָכִין) Jachin", "category": "Uncategorized" },
   "כדד": { "meaning": "(כַּד) jar, pitcher", "category": "Uncategorized" },
   "דשא": { "meaning": "(דֶּשֶׁא) grass, herb", "category": "Uncategorized" },
   "H0343": { "meaning": "(אֵיד) calamity, disaster", "category": "Uncategorized" },
@@ -28995,7 +28995,7 @@ window._rootGlossaryData = {
   "תא": { "meaning": "(תָּא) chamber, guardroom; (תַּאֲוֹת) lusts", "category": "Uncategorized" },
   "חשה": { "meaning": "(חָשָׁה) to be silent, hold peace", "category": "Uncategorized" },
   "מהה": { "meaning": "(הִתְמַהְמַהּ) to tarry, delay", "category": "Uncategorized" },
-  "H6701": { "meaning": "(צוּרִישַׁדַּי) Zurishaddai; my rock", "category": "Uncategorized" },
+  "H6701": { "meaning": "my rock; (צוּרִישַׁדַּי) Zurishaddai", "category": "Uncategorized" },
   "H6631": { "meaning": "(צֶאֱצָא) offspring, descendant", "category": "Uncategorized" },
   "זמנ": { "meaning": "(זְמָן) time, appointed season; (הִזְמִין) to invite; (הִזְדַּמְּנוּת) occasion", "category": "Uncategorized" }
 
@@ -29142,7 +29142,7 @@ window._rootGlossaryData = {
   ,"רֹעֶה": { "meaning": "(רֹעֶה) shepherd; (רָעָה) to tend, feed", "category": "Lexical" }
   ,"רעה": { "meaning": "(רַעְיָה) my love; (מִרְעֶה) pasture", "category": "Lexical" }
   ,"אשרי": { "meaning": "(אַשְׁרֵי) blessed, happy is", "category": "Quality" }
-  ,"אָשֵׁר": { "meaning": "Asher; (אֲשֵׁרָה) Asherah pole", "category": "Name" }
+  ,"אָשֵׁר": { "meaning": "(אֲשֵׁרָה) Asherah pole; (אָשֵׁר) Asher", "category": "Name" }
   ,"דִּי": { "meaning": "(דִּי) which, that — Aramaic", "category": "Particle" }
   ,"די": { "meaning": "(דַּי) sufficient, enough", "category": "Quality" }
   ,"לוּ": { "meaning": "(לוּ) if, oh that", "category": "Particle" }

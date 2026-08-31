@@ -6489,21 +6489,7 @@ var n2_ch22Verses = [
     ["וּתְנַחֲמֵנִי","and you did comfort me"],
     ["׃",""]
   ]},
-  { num:"ב", words:[
-    ["הִנֵּה","behold"],
-    ["אֵל","God"],
-    ["יְשׁוּעָתִי","is my salvation"],
-    ["אֶבְטַח","I will trust"],
-    ["וְלֹא","and not"],
-    ["אֶפְחָד","I shall be afraid"],
-    ["כִּי־עָזִּי","for my strength"],
-    ["וְזִמְרָת","and my song"],
-    ["יָהּ","the Lord"],
-    ["יְהוָה","JEHOVAH"],
-    ["וַיְהִי־לִי","and is become unto me"],
-    ["לִישׁוּעָה","for salvation"],
-    ["׃",""]
-  ]},
+  { num: "ב", words: [["הִנֵּה","behold"], ["אֵל","God"], ["יְשׁוּעָתִי","is my salvation"], ["אֶבְטַח","I will trust"], ["וְלֹא","and not"], ["אֶפְחָד","I shall be afraid"], ["כִּי־עׇזִּי","for my strength"], ["וְזִמְרָת","and my song"], ["יָהּ","the Lord"], ["יְהוָה","JEHOVAH"], ["וַיְהִי־לִי","and is become unto me"], ["לִישׁוּעָה","for salvation"], ["׃",""]]},
   { num:"ג", words:[
     ["וּשְׁאַבְתֶּם־מַיִם","and you shall draw water"],
     ["בְּשָׂשׂוֹן","with joy"],
@@ -6586,24 +6572,7 @@ var n2_ch23Verses = [
     ["גַאֲוָתִי","My highness"],
     ["׃",""]
   ]},
-  { num:"ד", words:[
-    ["קוֹל","the noise of"],
-    ["הָמוֹן","a multitude"],
-    ["בֶּהָרִים","in the mountains"],
-    ["דְּמוּת","likeness of"],
-    ["עַם־רָב","a great people"],
-    ["קוֹל","the voice of"],
-    ["שְׁאוֹן","the tumult of"],
-    ["מַמְלְכוֹת","of the kingdoms of"],
-    ["גּוֹיִם","the nations"],
-    ["נֶאֱסָפִים","gathered together"],
-    ["יְהוָה","the Lord"],
-    ["צְבָאוֹת","of Hosts"],
-    ["מְפַקֵּד","musters"],
-    ["צְבָא","the army of"],
-    ["מִלְחָמָה","war"],
-    ["׃",""]
-  ]},
+  { num: "ד", words: [["קוֹל","the noise of"], ["הֶהָמוֹן","the multitude"], ["בֶּהָרִים","in the mountains"], ["דְּמוּת","likeness of"], ["עַם־רָב","a great people"], ["קוֹל","the voice of"], ["שְׁאוֹן","the tumult of"], ["מַמְלְכוֹת","of the kingdoms of"], ["גּוֹיִם","the nations"], ["נֶאֱסָפִים","gathered together"], ["יְהוָה","the Lord"], ["צְבָאוֹת","of Hosts"], ["מְפַקֵּד","musters"], ["צְבָאוֹת","the hosts of"], ["מִלְחָמָה","war"], ["׃",""]]},
   { num:"ה", words:[
     ["בָּאִים","they come"],
     ["מֵאֶרֶץ","from a land"],
@@ -6733,14 +6702,7 @@ var n2_ch23Verses = [
     ["יָנוּסוּ","they shall flee"],
     ["׃",""]
   ]},
-  { num:"טו", words:[
-    ["כׇּל־הַגֵּאֶה","every one that is proud"],
-    ["יִדָּקֵר","he shall be thrust through"],
-    ["וְכׇל־הַנִּסְפֶּה","and every one that is joined to them"],
-    ["יִפּוֹל","he shall fall"],
-    ["בֶּחָרֶב","by the sword"],
-    ["׃",""]
-  ]},
+  { num: "טו", words: [["כׇּל־הַגֵּאֶה","every one that is proud"], ["יִדָּקֵר","he shall be thrust through"], ["וְכׇל־הַנִּסְפֶּה","and every one that is joined to them"], ["לָרְשָׁעִים","to the wicked"], ["יִפּוֹל","he shall fall"], ["בֶּחָרֶב","by the sword"], ["׃",""]]},
   { num:"טז", words:[
     ["וְעֹלְלֵיהֶם","their children also"],
     ["יְרֻטְּשׁוּ","they shall be dashed to pieces"],
@@ -6751,19 +6713,7 @@ var n2_ch23Verses = [
     ["תִּשָּׁכַבְנָה","they shall be ravished"],
     ["׃",""]
   ]},
-  { num:"יז", words:[
-    ["הִנְנִי","behold I"],
-    ["מֵעִיר","will stir up"],
-    ["עֲלֵיהֶם","against them"],
-    ["אֶת־מָדָי","the Medes"],
-    ["אֲשֶׁר־כֶּסֶף","who silver"],
-    ["לֹא","not"],
-    ["יַחְשֹׁבוּ","shall they regard"],
-    ["וְזָהָב","and gold"],
-    ["לֹא","not"],
-    ["יַחְפְּצוּ־בוֹ","shall they delight in it"],
-    ["׃",""]
-  ]},
+  { num: "יז", words: [["הִנְנִי","behold I"], ["מֵעִיר","will stir up"], ["עֲלֵיהֶם","against them"], ["אֶת־מָדָי","the Medes"], ["אֲשֶׁר־כֶּסֶף","who silver"], ["וְזָהָב","and gold"], ["לֹא","not"], ["יַחְשֹׁבוּ","shall they regard"], ["וְלֹא","nor shall"], ["יַחְפְּצוּ־בוֹ","shall they delight in it"], ["׃",""]]},
   { num:"יח", words:[
     ["וּקְשָׁתוֹת","and their bows"],
     ["נְעָרִים","the young men"],
@@ -6819,7 +6769,7 @@ var n2_ch23Verses = [
     ["יְרַקְּדוּ־שָׁם","they shall dance there"],
     ["׃",""]
   ]},
-  { num: "כב", words: [["וְעָנָה","and shall cry"], ["אִיִּים","the wild beasts of the islands"], ["בְּאַלְמְנוֹתָיו","in his desolate houses"], ["וְתַנִּים","and dragons"], ["בְּהֵיכְלֵי","in the palaces of"], ["עֹנֶג","pleasure"], ["וְקָרוֹב","and near"], ["לָבוֹא","to come"], ["עִתָּהּ","is her time"], ["וְיָמֶיהָ","and her days"], ["לֹא","shall not"], ["יִמָּשֵׁכוּ","they shall be prolonged"], ["כִּי","for"], ["אַשְׁמִידֶנָּה","I will destroy her"], ["מְהֵרָה","speedily"], ["אַף","yea"], ["אֶחֱמֹל","I will have mercy"], ["עַל־עַמִּי","upon My people"], ["וְהָרְשָׁעִים","but the wicked"], ["יֹאבֵדוּ","they shall perish"], ["׃",""]]},
+  { num: "כב", words: [["וְעָנָה","and shall cry"], ["אִיִּים","the wild beasts of the islands"], ["בְּאַלְמְנוֹתָיו","in his desolate houses"], ["וְתַנִּים","and dragons"], ["בְּהֵיכְלֵי","in the palaces of"], ["עֹנֶג","pleasure"], ["וְקָרוֹב","and near"], ["לָבוֹא","to come"], ["עִתָּהּ","is her time"], ["וְיוֹמָהּ","and her day"], ["לֹא","shall not"], ["יִמָּשֵׁכוּ","they shall be prolonged"], ["כִּי","for"], ["אַשְׁמִידֶנָּה","I will destroy her"], ["מְהֵרָה","speedily"], ["אַף","yea"], ["אֶחֱמֹל","I will have mercy"], ["עַל־עַמִּי","upon My people"], ["וְהָרְשָׁעִים","but the wicked"], ["יֹאבֵדוּ","they shall perish"], ["׃",""]]},
 ];
 var n2_ch24Verses = [
   { num:"א", words:[
