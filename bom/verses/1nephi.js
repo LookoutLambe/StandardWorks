@@ -3632,7 +3632,7 @@ var ch11Verses = [
     ["רַבִּים","many"],
     ["נֹפְלִים","fell down"],
     ["לְרַגְלָיו","at His feet"],
-    ["וּמִשְׁתַּחֲוִים","and worshipped"],
+    ["וּמִשְׁתַּחֲוִים","and worshiped"],
     ["לוֹ","Him"],
     ["׃",""]
   ]},
@@ -8597,7 +8597,7 @@ var ch20Verses = [
     ["עָשָׂה","hath done it"],
     ["׃",""]
   ]},
-  { num: "יח", words: [["לוּ","O that"], ["הִקְשַׁבְתָּ","you had hearkened"], ["לְמִצְוֹתָי","to My commandments"], ["וַיְהִי","then had been"], ["כַנָּהָר","as a river"], ["שְׁלוֹמֶךָ","your peace"], ["וְצִדְקָתְךָ","and your righteousness"], ["כְּגַלֵּי","as the waves of"], ["הַיָּם","the sea"], ["׃",""]]},
+  { num: "יח", words: [["לוּא","O that"], ["הִקְשַׁבְתָּ","you had hearkened"], ["לְמִצְוֹתָי","to My commandments"], ["וַיְהִי","then had been"], ["כַנָּהָר","as a river"], ["שְׁלוֹמֶךָ","your peace"], ["וְצִדְקָתְךָ","and your righteousness"], ["כְּגַלֵּי","as the waves of"], ["הַיָּם","the sea"], ["׃",""]]},
   { num: "יט", words: [["וַיְהִי","and had been"], ["כַחוֹל","as the sand"], ["זַרְעֶךָ","your seed"], ["וְצֶאֱצָאֵי","and the offspring of"], ["מֵעֶיךָ","your bowels"], ["כִּמְעוֹתָיו","like the gravel thereof"], ["לֹא־יִכָּרֵת","should not have been cut off"], ["וְלֹא־יִשָּׁמֵד","nor destroyed"], ["שְׁמוֹ","his name"], ["מִלְּפָנָי","from before Me"], ["׃",""]]},
   { num:"כ", words:[
     ["צְאוּ","go you forth"],
@@ -8665,7 +8665,7 @@ var ch21Verses = [
     ["וַאֲנִי","then I"],
     ["אָמַרְתִּי","said"],
     ["לְרִיק","in vain"],
-    ["יָגַעְתִּי","I have laboured"],
+    ["יָגַעְתִּי","I have labored"],
     ["לְתֹהוּ","for naught"],
     ["וְהֶבֶל","and in vain"],
     ["כֹּחִי","my strength"],
@@ -9094,7 +9094,7 @@ var ch22Verses = [
     ["יְהוָה","the Lord"],
     ["אֱלֹהִים","God"],
     ["לַעֲשׂוֹת","to do"],
-    ["פֶּלֶא","a marvellous work"],
+    ["פֶּלֶא","a marvelous work"],
     ["בַּגּוֹיִם","among the Gentiles"],
     ["אֲשֶׁר","which"],
     ["יִהְיֶה","shall be"],

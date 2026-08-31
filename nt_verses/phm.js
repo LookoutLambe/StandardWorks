@@ -1,7 +1,7 @@
 // nt_verses/phm.js — Philemon verse data
 (function() {
 var phm_ch1Verses = [
-  { num:"א", words:[["פּוֹלוֹס","Paul"],["אֲסִיר","prisoner-of"],["הַמָּשִׁיחַ","the-Messiah"],["יֵשׁוּעַ","Jesus"],["וְטִימוֹתִיּוֹס","and-Timothy"],["הָאָח","the-brother"],["אֶל־פִילֵימוֹן","to-Philemon"],["הֶחָבִיב","the-beloved"],["וְהָעֹזֵר","and-fellow-labourer"],["אֹתָנוּ","with-us"],["׃",""]] },
+  { num:"א", words:[["פּוֹלוֹס","Paul"],["אֲסִיר","prisoner-of"],["הַמָּשִׁיחַ","the-Messiah"],["יֵשׁוּעַ","Jesus"],["וְטִימוֹתִיּוֹס","and-Timothy"],["הָאָח","the-brother"],["אֶל־פִילֵימוֹן","to-Philemon"],["הֶחָבִיב","the-beloved"],["וְהָעֹזֵר","and-fellow-laborer"],["אֹתָנוּ","with-us"],["׃",""]] },
   { num:"ב", words:[["וְאֶל־אַפִּיָּה","and-to-Apphia"],["הָאֲהוּבָה","the-loved one"],["וְאֶל־אַרְכִפּוֹס","and-to-Archippus"],["הֶחָבֵר","the-fellow-soldier"],["לָנוּ","with-us"],["בְּמִלְחֲמֹתֵינוּ","in-our-wars"],["וְאֶל־הַקְּהִלָּה","and-the-church"],["אֲשֶׁר","which"],["בְּבֵיתֶךָ","in-your-house"],["׃",""]] },
   { num:"ג", words:[["חֶסֶד","grace"],["לָכֶם","to-you"],["וְשָׁלוֹם","and-peace"],["מֵאֵת","from"],["אֱלֹהִים","God"],["אָבִינוּ","our-father"],["וַאֲדֹנֵינוּ","and-the-Lord"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׁיחַ","the-Messiah"],["׃",""]] },
   { num:"ד", words:[["מוֹדֶה","I-thank"],["אֲנִי","I"],["לֵאלֹהַי","my-God"],["בְּכׇל־עֵת","always"],["בְּהַזְכִּירִי","making-mention-of"],["אֹתְךָ","you"],["בִּתְפִלּוֹתָי","in-my-prayers"],["׃",""]] },
@@ -24,7 +24,7 @@ var phm_ch1Verses = [
   { num:"כא", words:[["כָּתַבְתִּי","I-have-written"],["אֵלֶיךָ","to-you"],["וַאֲנִי","and-I"],["בָטוּחַ","having-confidence"],["בְּךָ","in-you"],["שֶׁתִּשְׁמַע","in-your-obedience"],["לִי","to-me"],["וְיֹדֵעַ","and-knowing"],["אֲנִי","I"],["שֶׁתּוֹסִיף","you-wilt-also-do"],["לַעֲשׂוֹת","more-than"],["עַל־אֲשֶׁר","that"],["אָמָרְתִּי","I-say"],["׃",""]] },
   { num:"כב", words:[["וְגַם־לִי","and-also-to-me"],["תָכִין","prepare-me"],["בֵּית","a"],["מָלוֹן","lodging"],["כִּי","for"],["אֲקַוֶּה","I-trust"],["אֲשֶׁר","that"],["אֶנָּתֵן","I-shall-be-given"],["לָכֶם","to-you"],["עַל־יְדֵי","by-means-of"],["תְּפִלּוֹתֵיכֶם","the-prayers-of-your(pl)"],["׃",""]] },
   { num:"כג", words:[["אֶפַּפְרָס","Epaphras"],["הָאָסוּר","the-prisoner"],["אִתִּי","with-me"],["בַּמָּשִׁיחַ","in-the-Messiah"],["יֵשׁוּעַ","Jesus"],["שֹׁאֵל","saluteth"],["לִשְׁלוֹמֶךָ","you"],["׃",""]] },
-  { num:"כד", words:[["וּמַרְקוֹס","and-Mark"],["וַאֲרִסְטַרְכוֹס","and-Aristarchus"],["וְדִימָס","and-Demas"],["וְלוּקָס","and-Luke"],["עֹזְרַי","my-fellowlabourers"],["׃",""]] },
+  { num:"כד", words:[["וּמַרְקוֹס","and-Mark"],["וַאֲרִסְטַרְכוֹס","and-Aristarchus"],["וְדִימָס","and-Demas"],["וְלוּקָס","and-Luke"],["עֹזְרַי","my-fellowlaborers"],["׃",""]] },
   { num:"כה", words:[["חֶסֶד","grace"],["יֵשׁוּעַ","Jesus"],["הַמָּשִׁיחַ","the-Messiah"],["אֲדֹנֵינוּ","our-Lord"],["עִם־רוּחֲכֶם","with-your-spirit"],["אָמֵן","amen"],["׃",""]] },
 ];
 renderVerseSet(phm_ch1Verses, 'phm-ch1-verses');
