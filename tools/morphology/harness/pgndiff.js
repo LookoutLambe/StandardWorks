@@ -1,0 +1,51 @@
+// Where the PGN paradigm finds a clean parse but the analyser still fails --
+// i.e. what integrating the PGN table would actually buy.
+const fs=require("fs"),vm=require("vm");
+const P=require("../pgn.js"), R=require("../radical.js"), M=require("../mishkal.js");
+const HEU=require("../morph.js"), PAR=require("../morph2.js");
+const strip=s=>[...s].filter(c=>!(c.codePointAt(0)>=0x0591&&c.codePointAt(0)<=0x05C7)).join("");
+const FIN={"ך":"כ","ם":"מ","ן":"נ","ף":"פ","ץ":"צ"};
+const norm=s=>[...strip(s)].map(c=>FIN[c]||c).join("");
+const {roots}=JSON.parse(fs.readFileSync(process.argv[2],"utf8"));
+const KNOWN=new Set(roots.map(norm));
+const sb={console}; sb.window=sb; vm.createContext(sb);
+vm.runInContext(fs.readFileSync("root_concordance.js","utf8"),sb);
+const RC=sb._rootConcordance,FREQ=new Map();
+RC.keys.forEach((k,i)=>FREQ.set(norm(k),RC.roots[i].c.reduce((a,b)=>a+b,0)));
+const heu=HEU.makeAnalyzer(KNOWN,FREQ), par=PAR.makeAnalyzer(KNOWN,FREQ);
+function current(f){
+  const m=M.analyze(f,KNOWN,FREQ);
+  if(m&&m.how!=="mishkal:katal") return m;
+  const r=R.analyze(f,KNOWN,FREQ); if(r) return r;
+  if(m) return m;
+  const h=heu(f)||par(f); return h?{r:h,how:"heuristic"}:null;
+}
+// PGN: keep parses whose stem is itself a known root, or reduces to one
+function pgnBest(f){
+  const out=[];
+  for(const p of P.parses(f)){
+    const s=p.stem;
+    if(s.length===3&&KNOWN.has(s)&&(FREQ.get(s)||0)>0) out.push({...p,root:s,via:"stem"});
+    if(s.length===2){
+      for(const [r,how] of [[s+s[1],"geminate"],[s[0]+"ו"+s[1],"hollow"],[s+"ה","III-he"],["נ"+s,"I-nun"],["י"+s,"I-yod"]])
+        if(KNOWN.has(r)&&(FREQ.get(r)||0)>0) out.push({...p,root:r,via:how});
+    }
+  }
+  if(!out.length) return null;
+  out.sort((a,b)=> a.depth!==b.depth ? a.depth-b.depth : (FREQ.get(b.root)||0)-(FREQ.get(a.root)||0));
+  return out[0];
+}
+const rows=fs.readFileSync("engine_gaps.tsv","utf8").trim().split("\n").slice(1).map(l=>l.split("\t"));
+const diff=[];
+for(const [n,vol,ref,form,gloss] of rows){
+  if(form.includes("־")) continue;
+  const c=current(form), p=pgnBest(form);
+  if(!p) continue;
+  if(c&&norm(c.r)===norm(p.root)) continue;
+  diff.push({n:+n,vol,ref,form,gloss,cur:c?c.r:"(none)",curHow:c?c.how:"-",pgn:p.root,cell:p.conj+" "+p.lab,via:p.via});
+}
+diff.sort((a,b)=>b.n-a.n);
+console.log("  forms where the PGN paradigm disagrees with the current analyser: "+diff.length+"\n");
+for(const d of diff.slice(0,16))
+  console.log("   x"+String(d.n).padEnd(3)+d.form.padEnd(20)+'"'+d.gloss.slice(0,24)+'"'.padEnd(26-Math.min(24,d.gloss.length))+
+              " now="+d.cur.padEnd(7)+" pgn="+d.pgn.padEnd(7)+"["+d.cell+" / "+d.via+"]");

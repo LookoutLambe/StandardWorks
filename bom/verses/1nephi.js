@@ -8716,7 +8716,7 @@ var ch21Verses = [
     ["גּוֹיִם","to the Gentiles"],
     ["לִהְיוֹת","to be"],
     ["יְשׁוּעָתִי","My salvation"],
-    ["עַד־קְצֵה","unto the end of"],
+    ["עַד־קְצוֹת","unto the ends of"],
     ["הָאָרֶץ","the earth"],
     ["׃",""]
   ]},
@@ -8927,7 +8927,7 @@ var ch21Verses = [
     ["הֲיֻקַּח","shall be taken"],
     ["מִגִּבּוֹר","from the mighty"],
     ["מַלְקוֹחַ","the prey"],
-    ["וְאִם־שְׁבִי","or shall the captive"],
+    ["וְאִם־שְׁבִי","or shall the captives"],
     ["צַדִּיק","of the just"],
     ["יִמָּלֵט","be delivered"],
     ["׃",""]
