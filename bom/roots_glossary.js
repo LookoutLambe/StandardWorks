@@ -29208,4 +29208,136 @@ window._rootGlossaryData = {
   ,"כדור": { "meaning": "(כַּדּוּר) ball — the Liahona; Isa 22:18 כַּדּוּר", "category": "Lexical" }
 
   ,"H6080": { "meaning": "(עָפְרָה) ore, dust of metal — the ore Nephi molten from the rock (1 Ne 17:16)", "category": "Nature" }
+
+  ,"H3651": { "meaning": "(כֵּן) so, thus; therefore", "category": "Particle" }
+
+  ,"H0251": { "meaning": "(אָח) brother, kinsman", "category": "Lexical" }
+
+  ,"H6258": { "meaning": "(עַתָּה) now, at this time", "category": "Particle" }
+
+  ,"H8147": { "meaning": "(שְׁנַיִם) two; (שְׁנֵים עָשָׂר) twelve", "category": "Lexical" }
+
+  ,"H0176": { "meaning": "(אוֹ) or", "category": "Particle" }
+
+  ,"H8064": { "meaning": "(שָׁמַיִם) heaven, the heavens", "category": "Nature" }
+
+  ,"H6256": { "meaning": "(עֵת) time, season; (בָּעֵת) at that time", "category": "Lexical" }
+
+  ,"כחח": { "meaning": "(כֹּחַ) strength, power, might", "category": "Lexical" }
+
+  ,"H8451": { "meaning": "(תּוֹרָה) law, instruction — the Law of Moses", "category": "Lexical" }
+
+  ,"H1323": { "meaning": "(בַּת) daughter; (בְּנוֹת) daughters", "category": "Lexical" }
+
+  ,"הרר": { "meaning": "(הַר) mountain, hill; (הָהָר) the mount", "category": "Nature" }
+
+  ,"H0784": { "meaning": "(אֵשׁ) fire", "category": "Nature" }
+
+  ,"H8145": { "meaning": "(שֵׁנִי) second; (שֵׁנִית) a second time, again", "category": "Lexical" }
+
+  ,"H3130": { "meaning": "(יוֹסֵף) Joseph", "category": "Name" }
+
+  ,"H3915": { "meaning": "(לַיְלָה) night", "category": "Nature" }
+
+  ,"H6529": { "meaning": "(פְּרִי) fruit", "category": "Nature" }
+
+  ,"H6435": { "meaning": "(פֶּן) lest", "category": "Particle" }
+
+  ,"H3678": { "meaning": "(כִּסֵּא) throne, seat", "category": "Lexical" }
+
+  ,"H4150": { "meaning": "(מוֹעֵד) appointed time, season; (אֹהֶל מוֹעֵד) tent of meeting", "category": "Lexical" }
+
+  ,"H3644": { "meaning": "(כְּמוֹ) like, as", "category": "Particle" }
+
+  ,"H8548": { "meaning": "(תָּמִיד) continually, always; the daily offering", "category": "Lexical" }
+
+  ,"שנא": { "meaning": "(שָׂנֵא) to hate; (שִׂנְאָה) hatred", "category": "Action" }
+
+  ,"H6869": { "meaning": "(צָרָה) distress, trouble, affliction", "category": "Lexical" }
+
+  ,"ברא": { "meaning": "(בָּרָא) to create", "category": "Action" }
+
+  ,"בכר": { "meaning": "(בְּכוֹר) firstborn; (בִּכּוּרִים) firstfruits", "category": "Lexical" }
+
+  ,"H8337": { "meaning": "(שֵׁשׁ) six", "category": "Lexical" }
+
+  ,"H8336": { "meaning": "(שֵׁשׁ) fine linen", "category": "Lexical" }
+
+  ,"רוץ": { "meaning": "(רוּץ) to run; (רָצִים) runners", "category": "Action" }
+
+  ,"היכל": { "meaning": "(הֵיכָל) temple, palace", "category": "Lexical" }
+
+  ,"אצר": { "meaning": "(אוֹצָר) treasure, storehouse; (אָצַר) to lay up", "category": "Lexical" }
+
+  ,"הפך": { "meaning": "(הָפַךְ) to turn, overturn; (מַהְפֵּכָה) overthrow", "category": "Action" }
+
+  ,"בכה": { "meaning": "(בָּכָה) to weep; (בְּכִי) weeping", "category": "Action" }
+
+  ,"סוס": { "meaning": "(סוּס) horse", "category": "Nature" }
+
+  ,"H2677": { "meaning": "(חֲצִי) half", "category": "Lexical" }
+
+  ,"בער": { "meaning": "(בָּעַר) to burn, kindle", "category": "Action" }
+
+  ,"גור": { "meaning": "(גּוּר) to sojourn; (גֵּר) sojourner, stranger", "category": "Action" }
+
+  ,"H3602": { "meaning": "(כָּכָה) thus, in this manner", "category": "Particle" }
+
+  ,"מלט": { "meaning": "(מָלַט) to escape, deliver", "category": "Action" }
+
+  ,"H0352": { "meaning": "(אַיִל) ram", "category": "Nature" }
+
+  ,"הבל": { "meaning": "(הֶבֶל) breath, vanity; Abel", "category": "Lexical" }
+
+  ,"H8672": { "meaning": "(תֵּשַׁע) nine", "category": "Lexical" }
+
+  ,"מכר": { "meaning": "(מָכַר) to sell", "category": "Action" }
+
+  ,"H3097": { "meaning": "(יוֹאָב) Joab", "category": "Name" }
+
+  ,"H0269": { "meaning": "(אָחוֹת) sister", "category": "Lexical" }
+
+  ,"ברח": { "meaning": "(בָּרַח) to flee", "category": "Action" }
+
+  ,"כבב": { "meaning": "(כּוֹכָב) star", "category": "Nature" }
+
+  ,"H7198": { "meaning": "(קֶשֶׁת) bow", "category": "Lexical" }
+
+  ,"H8346": { "meaning": "(שִׁשִּׁים) sixty", "category": "Lexical" }
+
+  ,"קרן": { "meaning": "(קֶרֶן) horn", "category": "Nature" }
+
+  ,"נדב": { "meaning": "(נָדַב) to offer freely; (נְדָבָה) freewill offering; (נָדִיב) noble", "category": "Action" }
+
+  ,"H5355": { "meaning": "(נָקִי) innocent, clean", "category": "Lexical" }
+
+  ,"בדל": { "meaning": "(בָּדַל) to divide, separate; (הִבְדִּיל) to set apart", "category": "Action" }
+
+  ,"ברז": { "meaning": "(בַּרְזֶל) iron", "category": "Nature" }
+
+  ,"זור": { "meaning": "(זָר) strange, a stranger", "category": "Lexical" }
+
+  ,"ישן": { "meaning": "(יָשֵׁן) to sleep; (יָשָׁן) old, stored up", "category": "Action" }
+
+  ,"H0738": { "meaning": "(אֲרִי) lion", "category": "Nature" }
+
+  ,"בזז": { "meaning": "(בָּזַז) to plunder; (בַּז) spoil, prey", "category": "Action" }
+
+  ,"שמאל": { "meaning": "(שְׂמֹאל) the left hand", "category": "Lexical" }
+
+  ,"H3742": { "meaning": "(כְּרוּב) cherub; (כְּרוּבִים) cherubim", "category": "Lexical" }
+
+  ,"רוע": { "meaning": "(תְּרוּעָה) a shout, blast; (הֵרִיעַ) to shout", "category": "Action" }
+
+  ,"שרש": { "meaning": "(שֹׁרֶשׁ) root", "category": "Nature" }
+
+  ,"H0490": { "meaning": "(אַלְמָנָה) widow", "category": "Lexical" }
+
+  ,"פרד": { "meaning": "(פָּרַד) to separate, be parted", "category": "Action" }
+
+  ,"גיל": { "meaning": "(גִּיל) to rejoice; (גִּילָה) rejoicing", "category": "Action" }
+
+  ,"חגר": { "meaning": "(חָגַר) to gird, gird on", "category": "Action" }
+
+  ,"H1823": { "meaning": "(דְּמוּת) likeness, similitude", "category": "Lexical" }
 };

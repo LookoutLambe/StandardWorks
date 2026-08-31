@@ -1,20 +1,20 @@
 /** Replaced on deploy by scripts/write_build_version.js */
-const CACHE = 'bom-2026-08-30T17-10-00';
+const CACHE = 'bom-2026-08-31T09-00-00';
 /** Shell only — verse *.js files are always fetched fresh (see fetch handler). */
 const ASSETS = [
   './bom.html',
   './bom_book_loader.js?v=8',
   './bom_lazy_assets.js?v=1',
-  '../root_scorecard.js?v=52',
-  '../root_engine.js?v=30',
-  '../root_concordance.js?v=53',
+  '../root_scorecard.js?v=57',
+  '../root_engine.js?v=33',
+  '../root_concordance.js?v=58',
   '../xref_study_panel.css',
   '../xref_study_panel.js?v=6',
   './official_verses.js?v=10',
   './scripture_verses.js',
   './chapter_headings.js',
   './chapter_headings_heb.js?v=7',
-  './roots_glossary.js?v=53',
+  './roots_glossary.js?v=58',
   './crossrefs.js',
   './bom_inverse_crossrefs.js?v=1',
   './topical_guide.js?v=2',
