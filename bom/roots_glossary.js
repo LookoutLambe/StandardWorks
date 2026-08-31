@@ -1,4 +1,12 @@
 window._rootGlossaryData = {
+  "שבלומ": { "meaning": "shiblum — Nephite name (Book of Mormon): half a shiblon, Alma 11", "category": "Lexical" },
+  "שבלונ": { "meaning": "Shiblon — Nephite name (Book of Mormon): Alma's son; and a measure, half a senum, Alma 11", "category": "Lexical" },
+  "אנטיונ": { "meaning": "antion — Nephite name (Book of Mormon): a measure of gold, Alma 11", "category": "Lexical" },
+  "עזרומ": { "meaning": "ezrom — Nephite name (Book of Mormon): four senums of silver, Alma 11", "category": "Lexical" },
+  "סנומ": { "meaning": "senum — Nephite name (Book of Mormon): the base measure of silver, Alma 11", "category": "Lexical" },
+  "למנה": { "meaning": "limnah — Nephite name (Book of Mormon): the whole measure of gold, Alma 11", "category": "Lexical" },
+  "סעונ": { "meaning": "seon — Nephite name (Book of Mormon): two senines of gold, Alma 11", "category": "Lexical" },
+  "סנינ": { "meaning": "senine — Nephite name (Book of Mormon): the base measure of gold, Alma 11", "category": "Lexical" },
   "שאה": { "meaning": "(שָׁאָה) to crash into ruin, lie waste; (שְׁאִיָּה) desolation; (מִשְׁתָּאֵה) gazing in wonder", "category": "Lexical" },
   "אנס": { "meaning": "(אָנַס) to compel, constrain; (אֹנֶס) constraint, necessity", "category": "Lexical" },
   "נהה": { "meaning": "(נְהִי) wailing", "category": "Uncategorized" },
@@ -5790,7 +5798,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "אנטי": {
-    "meaning": "onti — the greatest Nephite measure of silver (Alma 11)",
+    "meaning": "onti — Nephite name (Book of Mormon): the whole measure of silver, Alma 11",
     "category": "Uncategorized"
   },
   "ירושלים׃": {
@@ -14847,14 +14855,6 @@ window._rootGlossaryData = {
     "meaning": "crooked",
     "category": "Uncategorized"
   },
-  "סנינה": {
-    "meaning": "senine — a Nephite measure of gold (Alma 11)",
-    "category": "Uncategorized"
-  },
-  "סנום": {
-    "meaning": "senum — a Nephite measure of silver (Alma 11)",
-    "category": "Uncategorized"
-  },
   "עליון׃": {
     "meaning": "Most High",
     "category": "Uncategorized"
@@ -18384,7 +18384,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "אמנור": {
-    "meaning": "Mnor",
+    "meaning": "amnor — Nephite name (Book of Mormon): two senums of silver, Alma 11",
     "category": "Uncategorized"
   },
   "טפם׃": {
@@ -25016,10 +25016,6 @@ window._rootGlossaryData = {
     "meaning": "Son",
     "category": "Family"
   },
-  "עזרום": {
-    "meaning": "ezrom — a Nephite measure of silver (Alma 11)",
-    "category": "Uncategorized"
-  },
   "יחד׃": {
     "meaning": "oft",
     "category": "Uncategorized"
@@ -25828,10 +25824,6 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "יגדף": {
-    "category": "Uncategorized"
-  },
-  "סנין": {
-    "meaning": "senine — a Nephite measure of gold (Alma 11)",
     "category": "Uncategorized"
   },
   "קבלים": {
@@ -29355,6 +29347,6 @@ window._rootGlossaryData = {
   "מושיה": { "meaning": "Mosiah — proper name (Book of Mormon)", "category": "Names" },
   "שֵׁת": { "meaning": "Seth — proper name (Genesis; Moses)", "category": "Names" },
   "שִׁים": { "meaning": "Shim — proper name (Book of Mormon)", "category": "Names" },
-  "שומ": { "meaning": "Shum — proper name (Book of Mormon)", "category": "Names" },
+  "שומ": { "meaning": "Shum — Nephite name (Book of Mormon): two seons of gold, Alma 11", "category": "Names" },
   "קימ": { "meaning": "Kim — proper name (Book of Mormon)", "category": "Names" }
 };

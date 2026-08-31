@@ -992,6 +992,41 @@
   // these families woke dormant legacy pins (תְּפִלָּה→תפל "plaster") and
   // had to be reverted.
   var _headPins = {
+
+    // THE NEPHITE MEASURES OF ALMA 11 (2026-08-31). Senine, senum, seon, shum,
+    // limnah, amnor, ezrom, onti, antion, shiblon, shiblum -- Nephite names,
+    // not Hebrew roots. Every prefixed form had splintered into its OWN family
+    // (ha-senum, ve-shiblon, ki-sninah each a separate bare key with no card),
+    // and se'on was resolving to נסע "to journey". Pinned as PLAIN STRINGS so
+    // each measure is one family with one card. Note ben-Shiblon is Alma's SON
+    // -- same name, same family, correctly.
+    "אֶת־הַסֶּנִין": "סנינ",
+    "אַמְנוֹר": "אמנור",
+    "אָנְטִי": "אנטי",
+    "בֶן־שִׁבְלוֹן": "שבלונ",
+    "הַסְּנוּם": "סנומ",
+    "הַשִּׁבְּלוּם": "שבלומ",
+    "הַשִּׁבְלוֹן": "שבלונ",
+    "וְאַמְנוֹר": "אמנור",
+    "וְאַנְטְיוֹן": "אנטיונ",
+    "וְאָנְטִי": "אנטי",
+    "וְלִמְנָה": "למנה",
+    "וְשִׁבְּלוּם": "שבלומ",
+    "וְשִׁבְלוֹן": "שבלונ",
+    "כִּסְנִינֵה": "סנינ",
+    "לְשִׁבְלוֹן": "שבלונ",
+    "לִמְנָה": "למנה",
+    "מִסְּנִינֵה": "סנינ",
+    "מִסְּעוֹן": "סעונ",
+    "סְנִינֵה": "סנינ",
+    "סְנוּם": "סנומ",
+    "סְנוּמִים": "סנומ",
+    "סְעוֹן": "סעונ",
+    "סֶנִין": "סנינ",
+    "עֶזְרוֹם": "עזרומ",
+    "שִׁבְלוֹן": "שבלונ",
+    "שִׁבְלוֹנִים": "שבלונ",
+    "שׁוּם": "שומ",
     // BOOK OF MORMON NAMES THAT COLLIDE WITH A COMMON WORD (2026-08-31).
     // These are pinned to their OWN family as PLAIN STRINGS, which returns
     // directly and never reaches baseRoot -- an H-number pin would still be
