@@ -52,7 +52,7 @@
 <link rel="apple-touch-icon" href="../icons/icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../nav_engine.css?v=29">
 <link rel="stylesheet" href="../site_chrome.css?v=41">
 <link rel="stylesheet" href="../xref_study_panel.css?v=8">
@@ -441,22 +441,22 @@ body.english-only .word-unit .gl {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  color: var(--accent);
-  font-family: 'Times New Roman', Times, serif;
+  color: var(--accent-deep);
+  font-family: 'David Libre', serif;
   font-style: normal;
   font-weight: normal;
   vertical-align: top;
   padding: 3px 0 3px;
   margin: 0 0;
-  opacity: 0.75;
+  opacity: 1;
   direction: ltr;
   unicode-bidi: isolate;
   user-select: none;
   -webkit-user-select: none;
 }
 .arr-hw { visibility: hidden; max-width: 0; font-size: 1.85em; line-height: 1.5; }
-.arr-tl { font-size: 0.95em; line-height: 1; margin-top: 4px; visibility: visible; }
-.arr-gl { font-size: 0.9em; font-style: normal; line-height: 1; margin-top: 2px; visibility: visible; }
+.arr-tl { font-size: 0.95em; font-weight: 700; transform: scale(2); line-height: 1; margin-top: 4px; visibility: visible; }
+.arr-gl { font-size: 0.9em; font-weight: 700; transform: scale(2); font-style: normal; line-height: 1; margin-top: 2px; visibility: visible; }
 body.hide-translit .arr-tl { display: none; }
 body.hide-gloss .arr-gl { display: none; }
 body.hide-gloss.hide-translit .arr { display: none; }
@@ -508,7 +508,7 @@ body.hide-gloss.hide-translit .arr { display: none; }
   padding: 5px 10px;
   border-radius: 3px;
   cursor: pointer;
-  font-family: 'David Libre', 'FreeSerif', serif;
+  font-family: 'David Libre', serif;
   font-size: 0.85em;
   white-space: nowrap;
   direction: rtl;
@@ -827,7 +827,7 @@ body.dual-mode .hw { font-size: 1.3em; }
   z-index: 2000; background: rgba(0,0,0,0.7); justify-content: center; align-items: center;
 }
 #shortcuts-overlay.open { display: flex; }
-#shortcuts-overlay kbd { background: var(--bg-deep); padding: 2px 8px; border-radius: 3px; border: 1px solid var(--rule); font-family: monospace; font-size: 0.85em; }
+#shortcuts-overlay kbd { background: var(--bg-deep); padding: 2px 8px; border-radius: 3px; border: 1px solid var(--rule); font-family: 'David Libre', serif; font-size: 0.85em; }
 
 .nav-row {
   display: flex;
@@ -1382,7 +1382,7 @@ body.dark-mode .glossary-form-chip { background: #303648; }
 /* === TOPICAL GUIDE === */
 .tg-page-header { text-align: center; margin-bottom: 20px; }
 .tg-page-title {
-  font-family: 'Cormorant Garamond','David Libre', 'Georgia', serif; font-size: 1.6em;
+  font-family: 'David Libre', serif; font-size: 1.6em;
   font-weight: 600; color: var(--accent); margin: 0 0 4px; letter-spacing: 0.03em;
 }
 .tg-page-title-heb {
@@ -11923,7 +11923,7 @@ window.addEventListener('resize', function() {
 <div id="shortcuts-overlay">
   <div style="background:var(--bg);border:2px solid var(--accent);border-radius:8px;padding:24px;max-width:420px;width:90%;max-height:80vh;overflow-y:auto;direction:ltr;font-family:'David Libre', 'Georgia', serif;">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-      <h3 style="font-family:'Cormorant Garamond',serif;color:var(--accent);font-size:1.3em;margin:0;">Keyboard Shortcuts</h3>
+      <h3 style="font-family:'David Libre', serif;color:var(--accent);font-size:1.3em;margin:0;">Keyboard Shortcuts</h3>
       <span onclick="closeShortcuts()" style="cursor:pointer;color:var(--ink-light);font-size:1.3em;">&times;</span>
     </div>
     <table style="width:100%;font-size:0.9em;line-height:2.2;color:var(--ink);">

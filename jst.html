@@ -18,7 +18,7 @@
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 
 :root {
@@ -293,22 +293,22 @@ body.english-only .word-unit .gl {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  color: var(--accent);
-  font-family: 'Times New Roman', Times, serif;
+  color: var(--accent-deep);
+  font-family: 'David Libre', serif;
   font-style: normal;
   font-weight: normal;
   vertical-align: top;
   padding: 3px 0 3px;
   margin: 0;
-  opacity: 0.75;
+  opacity: 1;
   direction: ltr;
   unicode-bidi: isolate;
   user-select: none;
   -webkit-user-select: none;
 }
 .arr-hw { visibility: hidden; max-width: 0; font-size: 1.85em; line-height: 1.5; }
-.arr-tl { font-size: 0.95em; line-height: 1; margin-top: 2px; visibility: visible; }
-.arr-gl { font-size: 0.9em; font-style: normal; line-height: 1; margin-top: 2px; visibility: visible; }
+.arr-tl { font-size: 0.95em; font-weight: 700; transform: scale(2); line-height: 1; margin-top: 2px; visibility: visible; }
+.arr-gl { font-size: 0.9em; font-weight: 700; transform: scale(2); font-style: normal; line-height: 1; margin-top: 2px; visibility: visible; }
 /* Qamats qatan (U+05C7) coloured distinctly from ordinary qamats so the /o/ reading is visible */
 .hw .qq { color: #c0392b; }
 body.dark-mode .hw .qq { color: #ff8a80; }
@@ -363,7 +363,7 @@ body.hide-gloss.hide-translit .arr { display: none; }
   padding: 5px 10px;
   border-radius: 3px;
   cursor: pointer;
-  font-family: 'David Libre', 'FreeSerif', serif;
+  font-family: 'David Libre', serif;
   font-size: 0.85em;
   white-space: nowrap;
   direction: rtl;
@@ -712,7 +712,7 @@ body.hide-gloss .word-unit { padding-bottom: 3px; }
   padding: 14px 16px; border-bottom: 1px solid #3a3f55;
   position: sticky; top: 0; background: #1e2233; z-index: 1;
 }
-.nav-panel-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1em; color: #c8a84e; font-weight: 600; }
+.nav-panel-title { font-family: 'David Libre', serif; font-size: 1.1em; color: #c8a84e; font-weight: 600; }
 .nav-panel-close { cursor: pointer; color: #c8a84e; font-size: 1.4em; background: none; border: none; padding: 4px 8px; }
 .nav-panel-close:hover { color: #fff; }
 #nav-dropdown .dd-section {
@@ -824,7 +824,7 @@ body.dark-mode #nav-dropdown .dd-ch:hover { background: #303648; }
   z-index: 2000; background: rgba(0,0,0,0.7); justify-content: center; align-items: center;
 }
 #shortcuts-overlay.open { display: flex; }
-#shortcuts-overlay kbd { background: var(--bg-deep); padding: 2px 8px; border-radius: 3px; border: 1px solid var(--rule); font-family: monospace; font-size: 0.85em; }
+#shortcuts-overlay kbd { background: var(--bg-deep); padding: 2px 8px; border-radius: 3px; border: 1px solid var(--rule); font-family: 'David Libre', serif; font-size: 0.85em; }
 
 .nav-row {
   display: flex;
@@ -1859,8 +1859,8 @@ body:not(.hide-sel-toolbar) #main-content{padding-right:60px!important;}
     <div class="chapter-panel" id="panel-jstgen-ch1" style="display:none;">
       <div class="chapter-heading"><h2>פרקים א–ח</h2><div class="chapter-label-en">JST, Genesis 1–8</div></div>
       <div style="text-align:center;padding:30px 20px;direction:ltr;max-width:600px;margin:0 auto;">
-        <p style="font-family:'Cormorant Garamond',serif;font-size:1.15em;color:var(--ink-light);line-height:1.8;margin-bottom:18px;">This text of the Bible was restored by Joseph Smith and is published in the Pearl of Great Price as <em>Selections from the Book of Moses</em>.</p>
-        <a href="pgp.html" style="display:inline-block;padding:12px 28px;background:rgba(127,179,211,0.15);color:var(--ink);border:1px solid rgba(127,179,211,0.3);border-radius:6px;text-decoration:none;font-family:'Cormorant Garamond',serif;font-size:1.1em;font-weight:600;letter-spacing:0.03em;">פנינת המחיר הגדול<br><span style="font-size:0.8em;font-weight:400;">Pearl of Great Price — Book of Moses</span></a>
+        <p style="font-family:'David Libre', serif;font-size:1.15em;color:var(--ink-light);line-height:1.8;margin-bottom:18px;">This text of the Bible was restored by Joseph Smith and is published in the Pearl of Great Price as <em>Selections from the Book of Moses</em>.</p>
+        <a href="pgp.html" style="display:inline-block;padding:12px 28px;background:rgba(127,179,211,0.15);color:var(--ink);border:1px solid rgba(127,179,211,0.3);border-radius:6px;text-decoration:none;font-family:'David Libre', serif;font-size:1.1em;font-weight:600;letter-spacing:0.03em;">פנינת המחיר הגדול<br><span style="font-size:0.8em;font-weight:400;">Pearl of Great Price — Book of Moses</span></a>
       </div>
       <div id="jstgen-ch1-verses"></div>
     </div>
@@ -2753,7 +2753,7 @@ window.addEventListener('resize', function() {
 <div id="shortcuts-overlay">
   <div style="background:var(--bg);border:2px solid var(--accent);border-radius:8px;padding:24px;max-width:420px;width:90%;max-height:80vh;overflow-y:auto;direction:ltr;font-family:'David Libre', 'Georgia', serif;">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-      <h3 style="font-family:'Cormorant Garamond',serif;color:var(--accent);font-size:1.3em;margin:0;">Keyboard Shortcuts</h3>
+      <h3 style="font-family:'David Libre', serif;color:var(--accent);font-size:1.3em;margin:0;">Keyboard Shortcuts</h3>
       <span onclick="closeShortcuts()" style="cursor:pointer;color:var(--ink-light);font-size:1.3em;">&times;</span>
     </div>
     <table style="width:100%;font-size:0.9em;line-height:2.2;color:var(--ink);">
