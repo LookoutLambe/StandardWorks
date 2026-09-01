@@ -589,10 +589,10 @@ body.dark-mode .continue-reading .cr-heb { color: #1e2233; }
   min-height: 44px;
   margin: 0;
   padding: 2px 8px 3px;
-  border: 1px solid rgba(219, 185, 88, 0.5);
+  border: 1px solid rgba(244, 202, 72, 0.5);
   border-radius: 6px;
   background: transparent;
-  color: #dbb958;
+  color: var(--sw-gold, #f4ca48);
   cursor: pointer;
   font-family: inherit;
   display: flex;
@@ -616,7 +616,9 @@ body.dark-mode .continue-reading .cr-heb { color: #1e2233; }
   background: rgba(219, 185, 88, 0.12);
 }
 #sw-reader-footer .nqd-nav-btn:disabled {
-  opacity: 0.35;
+  /* 0.35 blended to rgb(105,93,58) on navy — 2.42:1, unreadable.
+     0.65 keeps them clearly de-emphasised but legible (5.02:1). */
+  opacity: 0.65;
   cursor: default;
 }
 

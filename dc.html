@@ -47,7 +47,7 @@ html { overflow-x: hidden; }
 
 .skip-link {
   position: absolute; top: -100px; left: 0;
-  background: #1e2233; color: #c8a84e;
+  background: #1e2233; color: var(--sw-gold, #f4ca48);
   padding: 10px 20px; z-index: 9999;
   font-size: 1em; text-decoration: none;
 }
@@ -103,8 +103,8 @@ body {
 .tl { font-family: 'David Libre', 'Georgia', serif; font-size: 0.78em; color: var(--ink-light); direction: ltr; text-align: center; white-space: nowrap; opacity: 0.7; }
 .arr { display: inline-flex; flex-direction: column; align-items: center; justify-content: flex-start; color: var(--accent-deep); font-family: 'David Libre', serif; font-style: normal; font-weight: normal; vertical-align: top; padding: 3px 0 3px; margin: 0; opacity: 1; direction: ltr; unicode-bidi: isolate; line-height: 1.2; user-select: none; -webkit-user-select: none; }
 .arr-hw { visibility: hidden; max-width: 0; font-size: 1.85em; line-height: 1.5; }
-.arr-tl { font-size: 0.95em; font-weight: 700; transform: scale(2); line-height: 1; margin-top: 4px; visibility: visible; }
-.arr-gl { font-size: 0.9em; font-weight: 700; transform: scale(2); font-style: normal; line-height: 1; margin-top: 2px; visibility: visible; }
+.arr-tl { font-size: 0.95em; font-weight: normal; transform: scale(2); line-height: 1; margin-top: 4px; visibility: visible; }
+.arr-gl { font-size: 0.9em; font-weight: normal; transform: scale(2); font-style: normal; line-height: 1; margin-top: 2px; visibility: visible; }
 /* Native selection: Hebrew tier only (wrapper none + .hw text — fixes iOS selecting stacked tl/gl) */
 .word-unit .hw {
   user-select: text;
