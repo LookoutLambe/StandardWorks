@@ -196,6 +196,27 @@ button, input, select, textarea, option, optgroup, ::placeholder { font-family: 
   font-family: 'David Libre', serif;
   margin: 0 0 8px;
 }
+.hub-footer-sources { margin: 26px auto 18px; max-width: 900px; }
+.hub-sources-label {
+  font-family: 'David Libre', serif; font-size: 0.95rem;
+  color: var(--accent-deep, #8a6a1c); margin: 0 0 12px; letter-spacing: 0.02em;
+}
+.hub-sources-row {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 18px;
+}
+.hub-source-fig { margin: 0; width: 215px; max-width: 100%; }
+.hub-source-fig img {
+  width: 100%; height: auto; display: block; border-radius: 6px;
+  border: 1px solid var(--rule, #d8d2c2);
+  box-shadow: 0 3px 10px rgba(30, 34, 51, 0.14);
+}
+.hub-source-fig figcaption {
+  margin-top: 7px; line-height: 1.4;
+  display: flex; flex-direction: column; align-items: center;
+}
+.hsf-year { font-weight: 700; font-size: 0.95rem; color: var(--ink, #2a2a2a); }
+.hsf-note { font-size: 0.8rem; color: var(--ink-light, #6a6a6a); }
+@media (max-width: 520px) { .hub-source-fig { width: 45%; } }
 .hub-footer-copy {
   margin: 0;
   font-size: 0.82rem;
@@ -1026,11 +1047,12 @@ body, button, input, select, textarea,
           <span class="lis-wu"><span class="lis-hw">סֵפֶר</span><span class="lis-tl">sefer</span><span class="lis-gl">the book of</span></span>
           <span class="lis-wu"><span class="lis-hw">מוֹרְמוֹן</span><span class="lis-tl">mormon</span><span class="lis-gl">Mormon</span></span>
           <span class="lis-wu"><span class="lis-hw">שִׁמְּשׁוּ</span><span class="lis-tl">shimmeshu</span><span class="lis-gl">served</span></span>
-          <span class="lis-wu"><span class="lis-hw">שָׁלוֹשׁ</span><span class="lis-tl">shalosh</span><span class="lis-gl">three</span></span>
+          <span class="lis-wu"><span class="lis-hw">אַרְבַּע</span><span class="lis-tl">arba</span><span class="lis-gl">four</span></span>
           <span class="lis-wu"><span class="lis-hw">הַמַּהֲדוּרוֹת</span><span class="lis-tl">hammahadurot</span><span class="lis-gl">the editions</span></span>
           <span class="lis-wu"><span class="lis-hw">הָאַנְגְּלִיּוֹת</span><span class="lis-tl">haangliyot</span><span class="lis-gl">the English</span></span>
           <span class="lis-wu"><span class="lis-hw">1830</span><span class="lis-tl"></span><span class="lis-gl">1830</span></span>
           <span class="lis-wu"><span class="lis-hw">1906</span><span class="lis-tl"></span><span class="lis-gl">1906</span></span>
+          <span class="lis-wu"><span class="lis-hw">1908</span><span class="lis-tl"></span><span class="lis-gl">1908</span></span>
           <span class="lis-wu"><span class="lis-hw">וְ־1920</span><span class="lis-tl">ve-</span><span class="lis-gl">and 1920</span></span>
           <span class="lis-wu"><span class="lis-hw">׃</span><span class="lis-tl"></span><span class="lis-gl"></span></span>
           <span class="lis-wu"><span class="lis-hw">הָאֲתָר</span><span class="lis-tl">haatar</span><span class="lis-gl">the site</span></span>
@@ -1048,6 +1070,14 @@ body, button, input, select, textarea,
           <span class="lis-wu"><span class="lis-hw">אֱמוּנָתוֹ</span><span class="lis-tl">emunato</span><span class="lis-gl">his belief</span></span>
           <span class="lis-wu"><span class="lis-hw">׃</span><span class="lis-tl"></span><span class="lis-gl"></span></span>
           </div>
+        </div>
+      </div>
+      <div class="hub-footer-sources">
+        <p class="hub-sources-label">מְקוֹרוֹת הַמַּהֲדוּרָה &middot; Source editions</p>
+        <div class="hub-sources-row">
+          <figure class="hub-source-fig"><img src="images/source-1906-deseret-news.jpg" alt="Title-page verso of the 1906 Deseret News edition of the Book of Mormon" loading="lazy" width="1400" height="1050"><figcaption><span class="hsf-year">1906</span><span class="hsf-note">The Deseret News, Salt Lake City</span></figcaption></figure>
+          <figure class="hub-source-fig"><img src="images/source-1908-northern-states-mission.jpg" alt="Title-page verso of the 1908 Northern States Mission edition of the Book of Mormon" loading="lazy" width="1400" height="1050"><figcaption><span class="hsf-year">1908</span><span class="hsf-note">Northern States Mission, Chicago</span></figcaption></figure>
+          <figure class="hub-source-fig"><img src="images/source-1920-copyright-page.jpg" alt="Copyright page of the 1920 edition, recording that chapter headings were first issued in 1920" loading="lazy" width="1400" height="1050"><figcaption><span class="hsf-year">1920</span><span class="hsf-note">Chapter headings first issued</span></figcaption></figure>
         </div>
       </div>
       <p class="hub-footer-copy">&copy; 2026 Christopher Lambe. All rights reserved. Licensing inquiries: <a href="mailto:chris@sefermormon.com">chris@sefermormon.com</a></p>
