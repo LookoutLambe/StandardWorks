@@ -403,12 +403,18 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
 
 .landing-back { text-align: center; margin-top: 20px; }
 .landing-back a {
-  font-family: 'David Libre', 'Georgia', serif; color: var(--accent-deep);
-  text-decoration: none; font-size: 0.95em;
-  border: 1px solid var(--rule); padding: 8px 20px; border-radius: 4px;
-  transition: all 0.2s; direction: ltr; display: inline-block;
+  font-family: 'David Libre', 'Georgia', serif;
+  background: var(--sw-gold, #f4ca48);
+  color: var(--header-bg, #1e2233);
+  text-decoration: none;
+  font-size: 1.05em; font-weight: 600; letter-spacing: 0.03em;
+  border: 2px solid var(--header-bg, #1e2233);
+  padding: 14px 32px; border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(30, 34, 51, 0.18);
+  transition: background 0.2s, transform 0.2s;
+  direction: ltr; display: inline-block;
 }
-.landing-back a:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.landing-back a:hover { background: #fff0b8; color: var(--header-bg, #1e2233); border-color: var(--header-bg, #1e2233); transform: scale(1.02); }
 
 /* === LANDING BOOK BUTTONS === */
 .landing-book-list { display: flex; flex-direction: column; gap: 4px; margin-bottom: 20px; }
