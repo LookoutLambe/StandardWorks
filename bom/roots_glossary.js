@@ -1,13 +1,26 @@
 window._rootGlossaryData = {
+  "שולה": {
+    "meaning": "Shule — proper name (Book of Mormon): Jaredite king, son of Kib; father of Omer (Ether 7-8). Kept apart from שׁוּל \"the hem, the skirt of a garment\" (Ex. 28:33, Isa. 6:1), which shares its consonants but not its pointing.",
+    "category": "Uncategorized"
+  },
+  "מלך־מלק": {
+    "meaning": "Melek — place name (Book of Mormon): a land west of Sidon, on the Nephite border (Alma 8:3, 31:6, 35:13). Kept apart from מָלַק \"to nip off, to wring the neck of\" (Lev. 1:15, 5:8).",
+    "category": "Uncategorized"
+  },
+  "אתר־ספר": {
+    "meaning": "Ether — proper name (Book of Mormon): the last Jaredite prophet, and the book that bears his name. Kept apart from the Aramaic אֲתַר \"place, after\" (Ezra 5:15, Dan. 2:39).",
+    "category": "Uncategorized"
+  },
+
   "H7706": { "meaning": "(שַׁדַּי) the Almighty; (אֵל שַׁדַּי) God Almighty — Gen 17:1", "category": "Lexical" },
-  "שבלומ": { "meaning": "shiblum — Nephite name (Book of Mormon): half a shiblon, Alma 11", "category": "Lexical" },
-  "שבלונ": { "meaning": "Shiblon — Nephite name (Book of Mormon): Alma's son; and a measure, half a senum, Alma 11", "category": "Lexical" },
-  "אנטיונ": { "meaning": "antion — Nephite name (Book of Mormon): a measure of gold, Alma 11", "category": "Lexical" },
-  "עזרומ": { "meaning": "ezrom — Nephite name (Book of Mormon): four senums of silver, Alma 11", "category": "Lexical" },
-  "סנומ": { "meaning": "senum — Nephite name (Book of Mormon): the base measure of silver, Alma 11", "category": "Lexical" },
+  "שבלום": { "meaning": "shiblum — Nephite name (Book of Mormon): half a shiblon, Alma 11", "category": "Lexical" },
+  "שבלון": { "meaning": "Shiblon — Nephite name (Book of Mormon): Alma's son; and a measure, half a senum, Alma 11", "category": "Lexical" },
+  "אנטיון": { "meaning": "antion — Nephite name (Book of Mormon): a measure of gold, Alma 11", "category": "Lexical" },
+  "עזרום": { "meaning": "ezrom — Nephite name (Book of Mormon): four senums of silver, Alma 11", "category": "Lexical" },
+  "סנום": { "meaning": "senum — Nephite name (Book of Mormon): the base measure of silver, Alma 11", "category": "Lexical" },
   "למנה": { "meaning": "limnah — Nephite name (Book of Mormon): the whole measure of gold, Alma 11", "category": "Lexical" },
   "סעונ": { "meaning": "seon — Nephite name (Book of Mormon): two senines of gold, Alma 11", "category": "Lexical" },
-  "סנינ": { "meaning": "senine — Nephite name (Book of Mormon): the base measure of gold, Alma 11", "category": "Lexical" },
+  "סנין": { "meaning": "senine — Nephite name (Book of Mormon): the base measure of gold, Alma 11", "category": "Lexical" },
   "שאה": { "meaning": "(שָׁאָה) to crash into ruin, lie waste; (שְׁאִיָּה) desolation; (מִשְׁתָּאֵה) gazing in wonder", "category": "Lexical" },
   "אנס": { "meaning": "(אָנַס) to compel, constrain; (אֹנֶס) constraint, necessity", "category": "Lexical" },
   "נהה": { "meaning": "(נְהִי) wailing", "category": "Uncategorized" },
@@ -565,6 +578,28 @@ window._rootGlossaryData = {
   "שרר": { "meaning": "(שַׂר) prince, captain; (שָׂרַר) to rule", "category": "Society" },
   "רעע": { "meaning": "(רַע) evil, bad; (רָעָה) wickedness; (רָעַע) to be evil", "category": "Morality" },
   "אדן": { "meaning": "(אָדוֹן) lord, master; (אֲדֹנָי) the Lord; (אֶדֶן) socket, base", "category": "Society" },
+  "מרד": { "meaning": "(מָרַד) to rebel, revolt; (מֶרֶד) rebellion", "category": "Conflict" },
+  "פצע": { "meaning": "(פָּצַע) to wound, bruise; (פֶּצַע) a wound", "category": "Body" },
+  "דעך": { "meaning": "(דָּעַךְ) to be extinguished, go out, dwindle — Job 18:5", "category": "Nature" },
+  "פזר": { "meaning": "(פִּזֵּר) to scatter, disperse; (הִתְפַּזֵּר) to be scattered", "category": "Motion" },
+  "מאן": { "meaning": "(מֵאֵן) to refuse, be unwilling", "category": "Volition" },
+  "פתר": { "meaning": "(פָּתַר) to interpret; (פִּתְרוֹן) interpretation, meaning", "category": "Cognition" },
+  "סער": { "meaning": "(סְעָרָה, סַעַר) storm, tempest; (סָעַר) to storm", "category": "Nature" },
+  "נעם": { "meaning": "(נָעִים) pleasant, delightsome; (נֹעַם) pleasantness", "category": "Quality" },
+  "תהם": { "meaning": "(תְּהוֹם) deep, abyss, gulf", "category": "Nature" },
+  "בשל": { "meaning": "(בָּשַׁל) to boil, cook; to ripen; (בָּשֵׁל) ripe", "category": "Food" },
+  "פשט": { "meaning": "(פָּשַׁט) to strip off; to make a raid; (הִתְפַּשֵּׁט) to spread", "category": "Motion" },
+  "מרה": { "meaning": "(מָרָה) to be rebellious, disobey — Deut 21:18", "category": "Conflict" },
+  "למואל": { "meaning": "Lemuel — proper name (Book of Mormon): second son of Lehi; also the valley", "category": "Names" },
+  "שיז": { "meaning": "Shiz — proper name (Book of Mormon): Jaredite commander, Ether 14-15", "category": "Names" },
+  "מולק": { "meaning": "Mulek — proper name (Book of Mormon): son of Zedekiah; also the city", "category": "Names" },
+  "מלק": { "meaning": "to nip off, to wring the neck of — of the priest wringing a bird's head at the altar (Lev. 1:15, 5:8). The Book of Mormon land Melek is a separate family: see מלך־מלק.", "category": "Names" },
+  "מנטי": { "meaning": "Manti — proper name (Book of Mormon): the land, city and hill", "category": "Names" },
+  "מוריאנטון": { "meaning": "Morianton — proper name (Book of Mormon): the leader and the city", "category": "Names" },
+  "לכונאוס": { "meaning": "Lachoneus — proper name (Book of Mormon): chief judge, 3 Nephi", "category": "Names" },
+  "מורוניחה": { "meaning": "Moronihah — proper name (Book of Mormon): son of Moroni; also the city", "category": "Names" },
+  "מדוני": { "meaning": "Middoni — place name (Book of Mormon): Lamanite land, Alma 20-21", "category": "Names" },
+  "מורון": { "meaning": "Moron — place name (Book of Mormon): Jaredite land, Ether 7", "category": "Names" },
   "להם": { "meaning": "(לָהֶם) to them, for them", "category": "Particle" },
   "H4616": { "meaning": "(לְמַעַן) in order that; for the sake of", "category": "Particle" },
   "H8034": { "meaning": "name", "category": "Noun" },
@@ -1066,8 +1101,8 @@ window._rootGlossaryData = {
     "category": "Theology"
   },
   "לי": {
-    "meaning": "me",
-    "category": "Quality"
+    "meaning": "(לִי) to me, for me",
+    "category": "Particle"
   },
   "אחרי": {
     "meaning": "after",
@@ -1329,8 +1364,8 @@ window._rootGlossaryData = {
     "category": "Society"
   },
   "בו": {
-    "meaning": "him/it",
-    "category": "Cognition"
+    "meaning": "(בּוֹ) in him, in it, against him",
+    "category": "Particle"
   },
   "אתם": {
     "meaning": "you",
@@ -1451,8 +1486,8 @@ window._rootGlossaryData = {
     "category": "Time"
   },
   "בי": {
-    "meaning": "me",
-    "category": "Cognition"
+    "meaning": "(בִּי) in me, with me, against me",
+    "category": "Particle"
   },
   "נים": {
     "meaning": "years",
@@ -1501,8 +1536,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "בם": {
-    "meaning": "them",
-    "category": "Theology"
+    "meaning": "(בָּם, בָּהֶם) in them, among them, against them",
+    "category": "Particle"
   },
   "יתה": {
     "meaning": "was(f)",
@@ -7964,8 +7999,8 @@ window._rootGlossaryData = {
     "category": "Action"
   },
   "לכם": {
-    "meaning": "to you (masc. pl.)",
-    "category": "Society"
+    "meaning": "(לָכֶם) to you, for you (masc. pl.)",
+    "category": "Particle"
   },
   "חבלים": {
     "meaning": "cords",
@@ -11982,8 +12017,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "ככם": {
-    "meaning": "your king",
-    "category": "Society"
+    "meaning": "(כָּכֶם) like you, as you",
+    "category": "Particle"
   },
   "ודות": {
     "meaning": "thank",
@@ -16034,7 +16069,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "שול": {
-    "meaning": "Shule",
+    "meaning": "the hem, the skirt of a garment — the skirts of the robe (Ex. 28:33-34), the train that filled the temple (Isa. 6:1), the skirts of a city figured as a woman (Jer. 13:22, Lam. 1:9). Shule the Jaredite king is a separate family: see שולה.",
     "category": "Uncategorized"
   },
   "תחזיקו": {
@@ -16978,8 +17013,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "בכם": {
-    "meaning": "in you, among you",
-    "category": "Theology"
+    "meaning": "(בָּכֶם) in you, among you",
+    "category": "Particle"
   },
   "אהובי": {
     "meaning": "My Beloved",

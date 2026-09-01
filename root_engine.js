@@ -620,7 +620,11 @@
   }
   var _sufs = ['ותיהם','ותיכם','ותיהן','ותיכן','ותינו','ותיך','ותיה','ותיו','ותם','ותן','ותי','יהם','יכם',
                'ינו','תיו','נו','כם','הם','הן','תי','יו','יה','ים','ות','ת','ם','ן','ו','ה','י','ך'];
-  var _particles = {'את':1,'אל':1,'על':1,'מן':1,'עד':1,'כל':1,'לא':1,'ואת':1,'ואל':1};
+  var _particles = {'אך':1,'אל':1,'אם':1,'אף':1,'אשר':1,'את':1,'גם':1,'ואך':1,'ואל':1,'ואם':1,'ואף':1,'ואשר':1,'ואת':1,'וגם':1,'וכי':1,'וכל':1,'ולא':1,'ומן':1,'ועד':1,'ועל':1,'ועם':1,'ופן':1,'ורק':1,'כי':1,'כל':1,'לא':1,'מן':1,'עד':1,'על':1,'עם':1,'פן':1,'רק':1};  // full particle-head list per the 2026-08-30 ruling (bare + waw-prefixed):
+  // a PARTICLE head is dropped and the card shows the word it is attached to;
+  // a CONTENT head keeps the card. גם/עם/כי/אם/פן/אך/רק/אף/אשר were missing,
+  // which is why וְגַם־הַלָּמָנִים resolved to a non-word 'גמם' and עַם־נֶפִי
+  // showed "people" instead of Nephi.
   function _clean(s) { return String(s || '').replace(/[׃׀"'`.,;:?!()]/g, '').trim(); }
   function _pieces(s) { return _clean(s).split(/[־\s]+/).filter(Boolean); }
 
@@ -998,6 +1002,83 @@
   // had to be reverted.
   var _headPins = {
 
+    // Names are their own family now, which makes one class of collision
+    // visible for the first time: a BOM name whose skeleton accidentally
+    // matches an ordinary Hebrew word THROUGH A PROCLITIC. These are not
+    // shared derivation — Solomon really is built on shalom and Lehi really is
+    // "jawbone", so those stay merged — these are two unrelated words wearing
+    // one skeleton, and the POINTING separates them.
+    'לְמִן': 'מן', 'לְמַן': 'מן', 'וּלְמִן': 'מן', 'וּלְמַן': 'מן',   // "from the day/of old" — not Laman (לָמָן)
+    'לַחַי': 'H2416',                                                  // "him that liveth" — not Lehi (לֶחִי)
+    'שׁוּלֶה': 'שולה', 'בְּשׁוּלֶה': 'שולה', 'וְשׁוּלֶה': 'שולה',      // Shule the Jaredite — not שׁוּלֵי "the hem of"
+    'מֶלֶק': 'מלך־מלק', 'בְּמֶלֶק': 'מלך־מלק', 'וּמֶלֶק': 'מלך־מלק',   // Melek the land — not מָלַק "nip off" (Lev 1:15)
+    'אֶתֶר': 'אתר־ספר', 'וְאֶתֶר': 'אתר־ספר', 'בְּאֶתֶר': 'אתר־ספר',   // Ether — not the Aramaic אֲתַר "place"
+    'לְאֶתֶר': 'אתר־ספר', 'אֶת־אֶתֶר': 'אתר־ספר',
+
+    // maqqef-headed forms of the same names: the head is a PARTICLE, so the
+    // card belongs to the name it is attached to.
+    'עִם־אָכִישׁ': 'אכיש',
+    'אֶל־הֵילָמָן': 'הילמן', 'אֶת־הֵילָמָן': 'הילמן', 'בֶּן־הֵילָמָן': 'הילמן', 'בֶן־הֵילָמָן': 'הילמן',
+    'בֶּן־לָכוֹנֵאוּס': 'לכונאוס',
+    'אֶל־לְמוּאֵל': 'למואל', 'וְאֶל־לְמוּאֵל': 'למואל',
+    'אֶל־לָמוֹנִי': 'למוני',
+    'אֶל־לָמָן': 'למן', 'אֶת־לָמָן': 'למן', 'עַל־לָמָן': 'למן',
+    'אֶת־מוּלֵק': 'מולק',
+    'אֶת־מוֹרוֹן': 'מורון', 'בֶן־מוֹרוֹן': 'מורון',
+    'אֶת־מוֹרִיאַנְטוֹן': 'מוריאנטון',
+    'אֶל־נֶפִי': 'נפי', 'אֶת־נֶפִי': 'נפי', 'וְאֶת־נֶפִי': 'נפי', 'כׇּל־נֶפִי': 'נפי', 'עַם־נֶפִי': 'נפי',
+    'אֶל־עֲמוּלֶק': 'עמולק', 'אֶת־עֲמוּלֶק': 'עמולק', 'עִם־עֲמוּלֶק': 'עמולק', 'עַל־עֲמוּלֶק': 'עמולק',
+    'אֶל־עַמּוֹרוֹן': 'עמורון', 'בֶּן־עַמּוֹרוֹן': 'עמורון', 'עִם־עַמּוֹרוֹן': 'עמורון',
+    'אֶל־שִׁיז': 'שיז',
+    'לֶחִי־נֶפִי': 'לחי', 'אֶת־לֶחִי־נֶפִי': 'לחי', 'בְּלֶחִי־נֶפִי': 'לחי',
+
+    // BOOK OF MORMON PROPER NAMES that had no family of their own (2026-09-01).
+    // Each was landing on a Strong's number for a look-alike Hebrew word and
+    // showing no card at all: Nephi on H5297, Laman on H4478 (manna), Limhi on
+    // H4239 (sustenance), Amulek on H6002 (the Amalekites), Lamoni peeled to a
+    // non-word 'למו'. Pinned as PLAIN STRINGS so each name is one family with
+    // one card, and the ordinary Hebrew word keeps its own.
+    'וְנֶפִי': 'נפי', 'וּנֶפִי': 'נפי', 'כְּנֶפִי': 'נפי', 'כׇּל־נֶפִי': 'נפי', 'לְנֶפִי': 'נפי', 'לִנֶפִי': 'נפי', 'נֶפִי': 'נפי', 
+    'וְלַעֲמוּלֶק': 'עמולק', 'וַעֲמוּלֶק': 'עמולק', 'עֲמוּלֶק': 'עמולק', 
+    'וְלִמְחִי': 'למחי', 'לְלִמְחִי': 'למחי', 'לִמְחִי': 'למחי', 'מִלִּמְחִי': 'למחי',
+    'בְּלָמָן': 'למן', 'וְלָמָן': 'למן', 'לְלָמָן': 'למן', 'לָמָּן': 'למן', 'לָמָן': 'למן', 
+    'וְלָמוֹנִי': 'למוני', 'לָמוֹנִי': 'למוני',
+    'וּלְמוּאֵל': 'למואל', 'לְמוּאֵל': 'למואל',
+    'בְּשִׁיז': 'שיז', 'וְשִׁיז': 'שיז', 'לְשִׁיז': 'שיז', 'שִׁיז': 'שיז',
+    'מוּלֵק': 'מולק', 'מוּלֶק': 'מולק',
+    'וּמַנְטִי': 'מנטי', 'מַנְטִי': 'מנטי',
+    'אָכִישׁ': 'אכיש', 'לְאָכִישׁ': 'אכיש', 
+    'מוֹרִיאַנְטוֹן': 'מוריאנטון',
+    'לָכוֹנֵאוּס': 'לכונאוס',
+    'לְמוֹרוֹנִיחָה': 'מורוניחה', 'מוֹרוֹנִיחָה': 'מורוניחה',
+    'בְּמִדּוֹנִי': 'מדוני', 'מִדּוֹנִי': 'מדוני', 'מִמִּדּוֹנִי': 'מדוני',
+    'בְּמוֹרוֹן': 'מורון', 'וּמוֹרוֹן': 'מורון', 'לְמוֹרוֹן': 'מורון', 'מוֹרוֹן': 'מורון', 
+
+    // GENTILICS splintered by prefix (2026-09-01). הַלָּמָנִים and הַנֶּפִיִּים
+    // each had a card, but בַּלָּמָנִים / לַלָּמָנִים / וְהַלָּמָנִים / לַנֶּפִיִּים each
+    // formed its OWN cardless family -- the same bug the Alma 11 measures pins
+    // fixed. One family, one card, per people.
+    'הַזּוֹרָמִים': 'הזורמים', 'וְהַזּוֹרָמִים': 'הזורמים', 'וְזוֹרָמִים': 'הזורמים', 'זוֹרָמִים': 'הזורמים', 'מִן־הַזּוֹרָמִים': 'הזורמים',
+    'אֶל־הַלָּמָנִים': 'הלמנים', 'אֶת־הַלָּמָנִים': 'הלמנים', 'בַּלָּמָנִים': 'הלמנים', 'בַלָּמָנִים': 'הלמנים', 'גַּם־הַלָּמָנִים': 'הלמנים', 'גַם־הַלָּמָנִים': 'הלמנים', 'הַלָּמָנִים': 'הלמנים', 'וְהַלָּמָנִים': 'הלמנים', 'וְלָמָנִים': 'הלמנים', 'כַּלָּמָנִים': 'הלמנים', 'כׇּל־הַלָּמָנִים': 'הלמנים', 'לְלָמָנִים': 'הלמנים', 'לַלָּמָנִים': 'הלמנים', 'לָמָנִים': 'הלמנים', 'מִן־הַלָּמָנִים': 'הלמנים', 'מֵהַלָּמָנִים': 'הלמנים', 'עִם־הַלָּמָנִים': 'הלמנים', 'עַל־הַלָּמָנִים': 'הלמנים',
+    'אֶל־הַנֶּפִיִּים': 'הנפיים', 'אֶת־הַנֶּפִיִּים': 'הנפיים', 'בַּנֶּפִיִּים': 'הנפיים', 'גַּם־הַנֶּפִיִּים': 'הנפיים', 'הַנֶּפִיִּים': 'הנפיים', 'וְהַנֶּפִיִּים': 'הנפיים', 'וּנְפִיִּים': 'הנפיים', 'כַּנֶּפִיִּים': 'הנפיים', 'כׇּל־הַנֶּפִיִּים': 'הנפיים', 'לַנֶּפִיִּים': 'הנפיים', 'מִן־הַנֶּפִיִּים': 'הנפיים', 'מֵהַנֶּפִיִּים': 'הנפיים', 'נֶפִיִּים': 'הנפיים', 'עִם־הַנֶּפִיִּים': 'הנפיים', 'עַל־הַנֶּפִיִּים': 'הנפיים',
+    'אֶל־הָעַמְלִיסִים': 'העמליסים', 'אֶת־הָעַמְלִיסִים': 'העמליסים', 'בָּעַמְלִיסִים': 'העמליסים', 'בָעַמְלִיסִים': 'העמליסים', 'הָעַמְלִיסִים': 'העמליסים', 'וְהָעַמְלִיסִים': 'העמליסים', 'וּבָעַמְלִיסִים': 'העמליסים', 'מִן־הָעַמְלִיסִים': 'העמליסים', 'עַמְלִיסִים': 'העמליסים',
+
+    // PREPOSITION + PRONOMINAL SUFFIX -- real words, not junk (user, 2026-09-01:
+    // "bi is not a junk word it literally means against me / with me... the
+    // lamed, mem, and bet followed by a yod are actual words"). Strong's files
+    // these under the SUFFIX code (H9030/H9033/H9036/H9038), which has no card,
+    // so לִי and בִּי showed no meaning at all and בִּי peeled to a non-word 'ביי'.
+    // Pinned per PREPOSITION, the way לָהֶם already was, each with its own card.
+    // Maqqef compounds are left alone: a CONTENT head keeps its own card.
+    'בּוֹ': 'בו', 'בּוֹ׃': 'בו', 'בוֹ': 'בו', 'בוֹ׃': 'בו', 'וּבוֹ': 'בו',
+    'בִּי': 'בי', 'בִּי׃': 'בי', 'בִי': 'בי', 'וּבִי': 'בי',
+    'בָּכֶם': 'בכם', 'בָּכֶם׃': 'בכם', 'בָכֶם': 'בכם', 'בָכֶם׃': 'בכם', 'וּבָכֶם': 'בכם',
+    'בְּהָם': 'בם', 'בָּהֶם': 'בם', 'בָּהֶם׃': 'בם', 'בָּם': 'בם', 'בָּם׃': 'בם', 'בָֿם': 'בם', 'בָהֶם': 'בם', 'בָהֶם׃': 'בם', 'בָם': 'בם', 'וּבָהֶם': 'בם', 'וּבָם': 'בם',
+    'כָּכֶם': 'ככם', 'כָכֶם': 'ככם',
+    'וְלָהֶם': 'להם', 'לְּהֹם': 'להם', 'לְהֹם': 'להם', 'לָהֶם': 'להם', 'לָהֶם׃': 'להם',
+    'וְלִי': 'לי', 'לִּי': 'לי', 'לִי': 'לי', 'לִי׃': 'לי',
+    'וְלָכֶם': 'לכם', 'וּלְכֹם': 'לכם', 'לְכֶם': 'לכם', 'לְכֹם': 'לכם', 'לָכֶם': 'לכם', 'לָכֶם׃': 'לכם',
+
     // WRONG-FAMILY resolutions, corrected 2026-09-01 (user ruling: you change
     // the tool to fit the text). These must sit in _headPins, NOT rootMap:
     // rootMap is consulted AFTER _strongsFor, and Strong's already carries
@@ -1146,7 +1227,7 @@
     'מִתְנַגְּדִים': 'נגד', 'שֶׁמִּתְנַגְּדִים': 'נגד', 'לְהִתְנַגֵּד': 'נגד', 'שֶׁנּוֹגַעַת': 'נגע', 'שֶׁנּוֹגְעִים': 'נגע', 'וּמוּדַחַת': 'נדח',
     'שֶׁהִתְנַהֲגוּתוֹ': 'נהג', 'נוֹזֵף': 'נזף', 'נִנְזָף': 'נזף', 'נִנְזֶפֶת': 'נזף', 'נִנְזָפִים': 'נזף', 'נִנְזָפוֹת': 'נזף', 'שֶׁנִּנְזָפִים': 'נזף',
     'וְנִנְזָף': 'נזף', 'שֶׁהִנְחָה': 'נחה', 'הַמֻּטָּלוֹת': 'נטל', 'יַטִּיפוּ': 'נטף', 'יַטִּיף': 'נטף', 'וּלְהַטִּיף': 'נטף', 'הַמַּטִּיפִים': 'נטף',
-    'וְהִטִּיף': 'נטף', 'שֶׁתֻּטַּף': 'נטף', 'נִנְטָשִׁים': 'נטש', 'שֶׁמְּנַסִּים': 'נסה', 'שֶׁהִתְנַסָּה': 'נסה', 'נִעוּר': 'נער', 'הַנֵּפִים': 'נפי',
+    'וְהִטִּיף': 'נטף', 'שֶׁתֻּטַּף': 'נטף', 'נִנְטָשִׁים': 'נטש', 'שֶׁמְּנַסִּים': 'נסה', 'שֶׁהִתְנַסָּה': 'נסה', 'נִעוּר': 'נער', 
     'שֶׁנָּפְלוּ': 'נפל', 'וְנִצָּחוֹן': 'נצח', 'לְנִצְחוֹן': 'נצח', 'וְנִצְחוֹנָם': 'נצח', 'מֻקֶּפֶת': 'נקף', 'שֶׁנִּשְּׂאוּ': 'נשא',
     'בְּהַשָּׂגַת': 'נשג', 'שֶׁמַּשִּׂיג': 'נשג', 'נְשִׁימָה': 'נשם', 'מְנֻתָּקִים': 'נתק', 'סַבְלָנִיִּים': 'סבל', 'סוֹגְדִים': 'סגד', 'וְסוֹגֵד': 'סגד',
     'סְגִידָה': 'סגד', 'שֶׁסּוֹגְדִים': 'סגד', 'הַמַּסְדִּירִים': 'סדר', 'בַּסֻּגְיָה': 'סוגיה', 'סוֹפִית': 'סוף', 'הַסִּימָנִים': 'סימן',
@@ -1200,7 +1281,32 @@
     for (var i = 0; i < L.length; i++) if (rootMap[L[i]]) return rootMap[L[i]];
     return '';
   }
-  function getRoot(hw) {
+  var _PROCLITIC = /^[\u05d5\u05d1\u05db\u05dc\u05de\u05e9\u05d4]/;   // ו ב כ ל מ ש ה
+  function _nameFamily(w) {
+    var tbl = (typeof window !== 'undefined') && window._rootProperNames;
+    if (!tbl) return '';
+    var ps = _pieces(w);
+    // a PARTICLE head is dropped (עַם־נֶפִי, אֶת־נֶפִי); a CONTENT head keeps
+    // the card, so לֶחִי־נֶפִי is Lehi, not Nephi.
+    var content = ps.filter(function(p) { return !_particles[stripNikkud(p)]; });
+    var order = content.length ? content : ps;
+    for (var i = 0; i < order.length; i++) {
+      var raw = stripNikkud(order[i]);           // final letters INTACT
+      if (!tbl[normFinals(raw)]) continue;
+      // root_names.js is keyed folded, but the glossary cards are keyed on the
+      // FINAL letter (2029 of them) — so look up folded and return unfolded, or
+      // הֵילָמָן resolves to a family "הילמנ" no card can ever match.
+      var best = raw;
+      while (best.length > 3 && _PROCLITIC.test(best)) {
+        var shorter = best.slice(1);
+        if (shorter.length < 3 || !tbl[normFinals(shorter)]) break;
+        best = shorter;
+      }
+      return best;
+    }
+    return '';
+  }
+  function _getRootFolded(hw) {
     var w = _clean(hw);
     var _head = _pieces(w).pop() || '';
     var isName = !!(window._rootProperNames && window._rootProperNames[normFinals(stripNikkud(_head))]);
@@ -1215,6 +1321,26 @@
     if (isLex) return /^H\d/.test(_lexKey) ? baseRoot(_lexKey) : _lexKey;
     var _hp = _headPins[hw];
     if (_hp) return /^H\d/.test(_hp) ? baseRoot(_hp) : _hp;
+
+    // ---- BOM NAMES ARE THEIR OWN ROOT FAMILY --------------------------------
+    // Ruling 2026-09-01: "the root for the family should be the name in the
+    // BOM ... root nephi for example thats the root, Laman root, Helaman root".
+    // Before this, a BOM name was routed through Strong's, so נֶפִי landed on
+    // H5297 (נֹף, the Egyptian city Memphis) and לָמָן on H4478 (מָן, manna) —
+    // Hebrew words that have nothing to do with the person named. root_names.js
+    // already knows 6301 surfaces the corpus glosses as proper names, but it
+    // was only ever used as a don't-peel FLAG. Here it becomes the family: the
+    // name is the root. This is a RULE, not a list of pinned forms, so a name
+    // form that appears nowhere in the pins still resolves.
+    //
+    // Proclitics are peeled to the SHORTEST remainder that is itself a known
+    // name surface, which is what collapses נֵפִי / וְנֵפִי / לְנֵפִי / כִּנְפִי
+    // into one family instead of four. Never peel to a stub: a name root keeps
+    // at least 3 letters, and the remainder must ALREADY be in the name table,
+    // so nothing is invented.
+    var _nm = _nameFamily(w);
+    if (_nm) return _nm;
+
     var s = _strongsFor(w, isName);
     if (s) return baseRoot(s);
     var _rmk = _rootMapLayered(hw);
@@ -1355,5 +1481,19 @@
   }
 
   
+  // No Hebrew word ends in a medial letter, so a family key that does is always
+  // a folding artefact: normFinals() is applied on the way IN (root_names.js and
+  // the consonantal index are both keyed folded) and was never undone on the way
+  // OUT. The glossary keys 2029 cards on the final letter and 0 of the 134
+  // tokens landing on a folded family could ever reach one. Unfold once, here —
+  // NOT in a wrapper around the export, or getRoots() (which is what
+  // tools/build_root_concordance.js counts through) keeps emitting folded keys
+  // and the generated concordance disagrees with the live page.
+  function getRoot(hw) {
+    var r = _getRootFolded(hw);
+    return (typeof r === 'string' && /[\u05db\u05de\u05e0\u05e4\u05e6]$/.test(r) && /^[\u0590-\u05ff]+$/.test(r))
+      ? toSofit(r) : r;
+  }
+
   window.RootEngine = { getRoot: getRoot, getRoots: getRoots, stripPrefixes: stripPrefixes, stripLayers: stripLayers, stripNikkud: stripNikkud, toSofit: toSofit, normFinals: normFinals, rootMap: rootMap };
 })();
