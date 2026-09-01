@@ -998,6 +998,21 @@
   // had to be reverted.
   var _headPins = {
 
+    // WRONG-FAMILY resolutions, corrected 2026-09-01 (user ruling: you change
+    // the tool to fit the text). These must sit in _headPins, NOT rootMap:
+    // rootMap is consulted AFTER _strongsFor, and Strong's already carries
+    // רוֹשׁ correctly as H7219 -- it is baseRoot() that then walks it up to
+    // H7218 רֹאשׁ "head", the very homograph the holam-vav spelling exists to
+    // kill. Same BDB-parent bug as Lehi/H3895. Pinned as PLAIN STRINGS, which
+    // return directly and never reach baseRoot.
+    //   rosh  = H7219, the bitter poison-herb (gall, venom, hemlock)
+    //   innuy = the noun of ענה H6031 "to afflict" -- the peeler filed it
+    //           under H6035 עָנָו "humble, meek", a different word entirely
+    // NOT pinned: בְּרוֹשׁ, which is ALSO cypress (H1265) at three OT sites and
+    // cannot be separated by string.
+    'רוֹשׁ': 'רוש',
+    'אֵת־עִנּוּיֵי': 'ענה', 'בְּעִנּוּיִים': 'ענה', 'בְּעִנּוּיִם': 'ענה', 'בְּעִנּוּיֵי': 'ענה', 'בְּעִנּוּיַי': 'ענה', 'בְעִנּוּיִם': 'ענה', 'הָעִנּוּיִים': 'ענה', 'וְעִנּוּי': 'ענה', 'וְעִנּוּיָיו': 'ענה', 'וְעִנּוּיָם': 'ענה', 'וּבְעִנּוּי': 'ענה', 'וּבָעִנּוּיִם': 'ענה', 'כִּי־עִנּוּיִם': 'ענה', 'לְעִנּוּי': 'ענה', 'לָעִנּוּי': 'ענה', 'עִנּוּי': 'ענה', 'עִנּוּיִים': 'ענה', 'עִנּוּיִם': 'ענה', 'עִנּוּיֵי': 'ענה', 'עִנּוּיֵיהֶם': 'ענה', 'עִנּוּיֵיכֶם': 'ענה', 'עִנּוּיֵינוּ': 'ענה', 'עִנּוּיָהּ': 'ענה', 'עִנּוּיָיו': 'ענה', 'עִנּוּיָם': 'ענה', 'עַל־עִנּוּיֵי': 'ענה', 'שֶׁעִנּוּיֵי': 'ענה',
+
     // THE NEPHITE MEASURES OF ALMA 11 (2026-08-31). Senine, senum, seon, shum,
     // limnah, amnor, ezrom, onti, antion, shiblon, shiblum -- Nephite names,
     // not Hebrew roots. Every prefixed form had splintered into its OWN family

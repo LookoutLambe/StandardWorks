@@ -8023,6 +8023,7 @@ window._rootGlossaryData = {
     "meaning": "saints of",
     "category": "Uncategorized"
   },
+  "רוש": { "meaning": "(רוֹשׁ) the bitter poison-herb — gall, venom, hemlock; Deut 32:32-33, Hos 10:4, Amos 6:12. Spelled with holam-vav to keep it apart from רֹאשׁ 'head'.", "category": "Lexical" },
   "ענה": {
     "meaning": "(עָנָה) to answer; to afflict; (עֲנָוָה) humility, meekness",
     "category": "Speech"
