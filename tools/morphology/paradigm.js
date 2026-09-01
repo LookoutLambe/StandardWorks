@@ -78,7 +78,7 @@ const R3=r=>r[1]&&r[2]&&r[3]?r[1]+r[2]+r[3]:null;
 const NUN=r=>r[2]&&r[3]?"נ"+r[2]+r[3]:null;          // assimilated I-nun
 const LQH=r=>r[2]&&r[3]?"ל"+r[2]+r[3]:null;          // לקח only
 const YOD=r=>r[2]&&r[3]?"י"+r[2]+r[3]:null;          // I-yod dropped
-const GEM=r=>r[1]&&r[2]?r[1]+r[2]+r[2]:null;         // geminate
+const GEM=r=>r[1]&&r[3]?r[1]+r[3]+r[3]:null;         // geminate — templates bind slots 1 and 3 ("P 1 3", "נ 1 3"); reading slot 2 meant this never fired (fixed 2026-09-01)
 const HOLW=r=>r[1]&&r[3]?r[1]+"ו"+r[3]:null;         // hollow II-waw
 const HOLY=r=>r[1]&&r[3]?r[1]+"י"+r[3]:null;         // hollow II-yod
 const IIIH=r=>r[1]&&r[2]?r[1]+r[2]+"ה":null;         // III-he
@@ -149,5 +149,14 @@ add("1 2 ו נ","noun -on III-he",IIIH,0.45);
 add("1 2 נ","noun -an",IIIH,0.50);
 add("ת 1 2 3","noun ta- prefix",R3,0.40);
 add("ת ו 2 3","noun ta- I-yod",YOD,0.45);
+
+// ---- added 2026-09-01: classes the PGP second pass exposed ---------------
+add("2 3 ת","qal inf-cstr / segholate noun, I-yod dropped (דַּעַת שֶׁבֶת רֶדֶת לֶדֶת)",YOD,0.40);
+add("1 =2 ו י","noun kittul, III-he (עִנּוּי קִנּוּי)",IIIH,0.45);
+add("ת 1 ו 3","noun ta- prefix, hollow (תְּקוּפָה תְּשׁוּבָה תְּבוּאָה תְּרוּמָה)",HOLW,0.45);
+add("ת 1 ו 3 ת","noun ta- prefix, hollow, feminine construct/suffixed",HOLW,0.45);
+add("נ 1 3","niphal perfect, geminate (נָמֵס נָסַב נָקֵל)",GEM,0.50);
+add("1 2 3 נ","noun -on written defective (פִּתְרֹן)",R3,0.50);
+add("ת 1 3 ו ת","noun ta- prefix, hollow written defective, fem plural (תְּקֻפוֹת)",HOLW,0.50);
 
 module.exports={decompose,match,T};
