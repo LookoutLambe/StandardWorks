@@ -7935,28 +7935,7 @@ var n2_ch26Verses = [
     ["נַפְשִׁי","my soul"],
     ["׃",""]
   ]},
-  { num:"יב", words:[
-    ["וְכַאֲשֶׁר","and as"],
-    ["דִּבַּרְתִּי","I spoke"],
-    ["עַל־הוֹכָחַת","concerning the convincing of"],
-    ["הַיְּהוּדִים","the Jews"],
-    ["כִּי","that"],
-    ["יֵשׁוּעַ","Jesus"],
-    ["הוּא","is"],
-    ["הַמָּשִׁיחַ","the Messiah"],
-    ["כֵּן","even so"],
-    ["נָכוֹן","expedient"],
-    ["כִּי","that"],
-    ["יוּכְחוּ","they shall be convinced"],
-    ["הַגּוֹיִם","the Gentiles"],
-    ["כִּי","that"],
-    ["יֵשׁוּעַ","Jesus"],
-    ["הוּא","is"],
-    ["הַמָּשִׁיחַ","the Messiah"],
-    ["אֱלֹהֵי","the God of"],
-    ["עוֹלָם","eternity"],
-    ["׃",""]
-  ]},
+  { num: "יב", words: [["וְכַאֲשֶׁר","and as"], ["דִּבַּרְתִּי","I spoke"], ["עַל־הוֹכָחַת","concerning the convincing of"], ["הַיְּהוּדִים","the Jews"], ["כִּי","that"], ["יֵשׁוּעַ","Jesus"], ["הוּא","is"], ["הַמָּשִׁיחַ","the Messiah"], ["כֵּן","even so"], ["נָכוֹן","expedient"], ["כִּי","that"], ["יוּכְחוּ","they shall be convinced"], ["הַגּוֹיִם","the Gentiles"], ["כִּי","that"], ["יֵשׁוּעַ","Jesus"], ["הוּא","is"], ["הַמָּשִׁיחַ","the Messiah"], ["אֱלֹהֵי","the God of"], ["עוֹלָם","Eternal"], ["׃",""]]},
   { num: "יג", words: [["וְיִתְגַּלֶּה","and He shall manifest Himself"], ["לְכׇל־הַמַּאֲמִינִים","unto all who believe"], ["בּוֹ","in Him"], ["בְּכֹחַ","by the power of"], ["רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["לְכׇל־גּוֹי","unto every nation"], ["וּמִשְׁפָּחָה","and kindred"], ["וְלָשׁוֹן","and tongue"], ["וָעָם","and people"], ["עֹשֶׂה","doing"], ["נִפְלָאוֹת","miracles"], ["גְּדוֹלוֹת","mighty"], ["וְאוֹתוֹת","and signs"], ["וּמוֹפְתִים","and wonders"], ["בִּבְנֵי","among the children of"], ["הָאָדָם","men"], ["כְּפִי","according to"], ["אֱמוּנָתָם","their faith"], ["׃",""]]},
   { num:"יד", words:[
     ["אַךְ","but"],
@@ -10170,7 +10149,7 @@ var n2_ch31Verses = [
     ["הַקֹּדֶשׁ","the Holy"],
     ["׃",""]
   ]},
-  { num: "יח", words: [["וְאָז","and then"], ["תִּהְיוּ","are you in"], ["בַּנָּתִיב","the path"], ["הַצַּר","the strait"], ["צַר","and narrow"], ["הַזֶּה","this"], ["הַמּוֹלִיךְ","which leads"], ["לְחַיֵּי","unto the life of"], ["עוֹלָם","eternity"], ["הִנֵּה","behold"], ["בָּאתֶם","you have entered in"], ["בַּשַּׁעַר","by the gate"], ["עֲשִׂיתֶם","you have done"], ["כְּמִצְוֹת","according to the commandments of"], ["הָאָב","the Father"], ["וְהַבֵּן","and the Son"], ["וּקְבַלְתֶּם","and you have received"], ["אֶת־רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["הַמֵּעִיד","which bears record"], ["עַל־הָאָב","of the Father"], ["וְהַבֵּן","and the Son"], ["לְהַשְׁלִים","to fulfill"], ["אֶת־הַבְטָחָתוֹ","the promise"], ["אֲשֶׁר־הִבְטִיחַ","which he hath made"], ["כִּי","that"], ["אִם־תָּבֹאוּ","if you enter in"], ["בַּדֶּרֶךְ","by the way"], ["קָבֹל","receive"], ["תְּקַבְּלוּ","you shall receive"], ["׃",""]]},
+  { num: "יח", words: [["וְאָז","and then"], ["תִּהְיוּ","are you in"], ["בַּנָּתִיב","the path"], ["הַצַּר","the strait"], ["צַר","and narrow"], ["הַזֶּה","this"], ["הַמּוֹלִיךְ","which leads"], ["לְחַיֵּי","unto the life of"], ["עוֹלָם","eternal"], ["הִנֵּה","behold"], ["בָּאתֶם","you have entered in"], ["בַּשַּׁעַר","by the gate"], ["עֲשִׂיתֶם","you have done"], ["כְּמִצְוֹת","according to the commandments of"], ["הָאָב","the Father"], ["וְהַבֵּן","and the Son"], ["וּקְבַלְתֶּם","and you have received"], ["אֶת־רוּחַ","the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["הַמֵּעִיד","which bears record"], ["עַל־הָאָב","of the Father"], ["וְהַבֵּן","and the Son"], ["לְהַשְׁלִים","to fulfill"], ["אֶת־הַבְטָחָתוֹ","the promise"], ["אֲשֶׁר־הִבְטִיחַ","which he hath made"], ["כִּי","that"], ["אִם־תָּבֹאוּ","if you enter in"], ["בַּדֶּרֶךְ","by the way"], ["קָבֹל","receive"], ["תְּקַבְּלוּ","you shall receive"], ["׃",""]]},
   { num: "יט", words: [["וְעַתָּה","and now"], ["אַחַי","my brethren"], ["הָאֲהוּבִים","the beloved"], ["אַחֲרֵי","after"], ["בֹּאֲכֶם","you have entered"], ["בַּנָּתִיב","the path"], ["הַצַּר","the strait"], ["צַר","and narrow"], ["הַזֶּה","this"], ["אֶשְׁאַל","I would ask"], ["הֲנִגְמַר","is it finished"], ["הַכֹּל","all"], ["הִנֵּה","behold"], ["אֹמֵר","I say"], ["לָכֶם","unto you"], ["לֹא","no"], ["כִּי־לֹא","for not"], ["בָּאתֶם","you have come"], ["עַד־הֲלֹם","thus far"], ["כִּי","that"], ["אִם־בִּדְבַר","save it be by the word of"], ["הַמָּשִׁיחַ","the Messiah"], ["בֶּאֱמוּנָה","with faith"], ["בּוֹ","in Him"], ["לֹא־תִמּוֹט","unshaken"], ["נִשְׁעָנִים","relying"], ["כָּלִיל","wholly"], ["עַל־צִדְקַת","upon the merits of"], ["הַגִּבּוֹר","the mighty One"], ["לְהוֹשִׁיעַ","to save"], ["׃",""]]},
   { num: "כ", words: [["לָכֵן","therefore"], ["עֲלֵיכֶם","it is upon you"], ["לָצֵאת","to come forth"], ["הָלְאָה","forward"], ["בְּאֵיתָן","with a steadfastness"], ["בַּמָּשִׁיחַ","in the Messiah"], ["בְּזֹהַר","with a brightness of"], ["תִּקְוָה","hope"], ["שָׁלֵם","perfect"], ["וּבְאַהֲבַת","and a love of"], ["אֱלֹהִים","God"], ["וְכׇל־אָדָם","and of all men"], ["לָכֵן","therefore"], ["אִם־תֵּצְאוּ","if you go forth"], ["הָלְאָה","forward"], ["מִתְעַנְּגִים","feasting"], ["עַל־דְּבַר","upon the word of"], ["הַמָּשִׁיחַ","the Messiah"], ["וְתַחֲזִיקוּ","and you shall endure"], ["עַד־הַקֵּץ","to the end"], ["הִנֵּה","behold"], ["כֹּה־אָמַר","thus says"], ["הָאָב","the Father"], ["הָיוֹת","be"], ["יִהְיוּ","they shall be"], ["לָכֶם","unto you"], ["חַיֵּי־עוֹלָם","life eternal"], ["׃",""]]},
   { num: "כא", words: [["וְעַתָּה","and now"], ["הִנֵּה","behold"], ["אַחַי","my brethren"], ["הָאֲהוּבִים","the beloved"], ["זֹאת","this is"], ["הַדֶּרֶךְ","the way"], ["וְאֵין","and there is no"], ["דֶּרֶךְ","way"], ["אַחֶרֶת","other"], ["וְאֵין","and there is no"], ["שֵׁם","name"], ["אַחֵר","other"], ["נִתַּן","given"], ["תַּחַת","under"], ["הַשָּׁמַיִם","heaven"], ["אֲשֶׁר־יוּכַל","whereby can"], ["בּוֹ","in Him"], ["אָדָם","a man"], ["לְהִוָּשַׁע","be saved"], ["בְּמַלְכוּתוֹ","in His kingdom"], ["וְהִנֵּה","and now behold"], ["זֹאת","this is"], ["תּוֹרַת","the doctrine of"], ["הַמָּשִׁיחַ","the Messiah"], ["הַתּוֹרָה","the doctrine"], ["הָאַחַת","the one"], ["וְהָאֱמֶת","and the true"], ["לָאָב","of the Father"], ["וְלַבֵּן","and of the Son"], ["וּלְרוּחַ","and of the Spirit of"], ["הַקֹּדֶשׁ","the Holy"], ["אֲשֶׁר","which"], ["הֵם","are"], ["אֵל","God"], ["אֶחָד","one"], ["אֵין־קֵץ","without end"], ["אָמֵן","amen"], ["׃",""]]},
