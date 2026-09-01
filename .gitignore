@@ -33,3 +33,4 @@ IAS-reference*/
 # tools/morphology/build_tahot_index.js at the folder.
 tahot_*.txt
 tahot_index.json
+tools/morphology/harness/truth.json
