@@ -572,7 +572,7 @@ window._rootGlossaryData = {
   "בדד": { "meaning": "(לְבַד) alone, apart; (בַּד) pole, part", "category": "Uncategorized" },
   "H3627": { "meaning": "(כְּלִי) vessel, instrument, weapon; armor", "category": "Objects" },
   "חקק": { "meaning": "(חֹק) statute, law; (חָקַק) to inscribe, decree", "category": "Law" },
-  "כנס": { "meaning": "(כְּנֵסִיָּה) synagogue — the place (Alma, Helaman, 3 Ne); (כִּנֵּס) to gather", "category": "Society" },
+  "כנס": { "meaning": "(בֵּית כְּנֶסֶת) synagogue — the place (Alma, Helaman, 3 Ne); (כִּנֵּס) to gather. \"Church\" is a different word: עֵדָה / קְהִלָּה.", "category": "Society" },
   "ימם": { "meaning": "(יָם) sea; (יָמָּה) westward, seaward", "category": "Nature" },
   "מצר": { "meaning": "(מִצְרַיִם) Egypt; (מָצוֹר) siege; (מֵצַר) distress", "category": "Name" },
   "שרר": { "meaning": "(שַׂר) prince, captain; (שָׂרַר) to rule", "category": "Society" },
