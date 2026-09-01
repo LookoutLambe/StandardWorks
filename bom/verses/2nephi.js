@@ -1473,20 +1473,7 @@ var n2_ch4Verses = [
     ["׃",""]
   ]},
           { num: "ל", words: [["שְׂמַח","rejoice"], ["לִבִּי","O my heart"], ["וּזְעַק","and cry"], ["אֶל־יְהוָה","unto the Lord"], ["וֶאֱמֹר","and say"], ["יְהוָה","O Lord"], ["אֲהַלֶלְךָ","I will praise you"], ["לְעוֹלָם","forever"], ["אַף","yea"], ["תָּגֵל","will rejoice"], ["נַפְשִׁי","my soul"], ["בָּךְ","in you"], ["אֱלֹהַי","my God"], ["צוּר","and the rock of"], ["יְשׁוּעָתִי","my salvation"], ["׃",""]]},
-          { num:"לא", words:[
-    ["יְהוָה","O Lord"],
-    ["הֲתִפְדֶּה","will you redeem"],
-    ["נַפְשִׁי","my soul"],
-    ["הֲתַצִּילֵנִי","will you deliver me"],
-    ["מִיַּד","from the hand of"],
-    ["אוֹיְבָי","my enemies"],
-    ["הֲתַעֲשֵׂנִי","will you make me"],
-    ["לְמַעַן","that"],
-    ["אֶרְעַד","I may shake"],
-    ["לְמַרְאֵה","at the appearance of"],
-    ["חֵטְא","sin"],
-    ["׃",""]
-  ]},
+          { num: "לא", words: [["יְהוָה","O Lord"], ["הֲתִגְאַל","will you redeem"], ["נַפְשִׁי","my soul"], ["הֲתַצִּילֵנִי","will you deliver me"], ["מִיַּד","from the hand of"], ["אוֹיְבָי","my enemies"], ["הֲתַעֲשֵׂנִי","will you make me"], ["לְמַעַן","that"], ["אֶרְעַד","I may shake"], ["לְמַרְאֵה","at the appearance of"], ["חֵטְא","sin"], ["׃",""]]},
           { num:"לב", words:[
     ["תִּסָּגֵרְנָה","may be shut"],
     ["שַׁעֲרֵי","the gates of"],
