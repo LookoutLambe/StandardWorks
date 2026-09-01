@@ -3437,22 +3437,7 @@ var ch11Verses = [
     ["נִדָּף","driven"],
     ["׃",""]
   ]},
-  { num:"ט", words:[
-    ["וַיְהִי","and it came to pass"],
-    ["אַחֲרֵי","after"],
-    ["רְאוֹתִי","my seeing"],
-    ["אֶת־הָעֵץ","the tree"],
-    ["וָאֹמַר","and I said"],
-    ["אֶל־הָרוּחַ","unto the Spirit"],
-    ["הִנֵּה","behold"],
-    ["הֶרְאֵיתָנִי","you have shown me"],
-    ["אֶת־הָעֵץ","the tree"],
-    ["אֲשֶׁר","which is"],
-    ["יָקָר","precious"],
-    ["עַל־כֹּל","above all"],
-    ["עַד־מְאֹד","exceedingly"],
-    ["׃",""]
-  ]},
+  { num: "ט", words: [["וַיְהִי","and it came to pass"], ["אַחֲרֵי","after"], ["רְאוֹתִי","my seeing"], ["אֶת־הָעֵץ","the tree"], ["וָאֹמַר","and I said"], ["אֶל־הָרוּחַ","unto the Spirit"], ["הִנֵּה","behold"], ["הֶרְאֵיתָנִי","you have shown me"], ["אֶת־הָעֵץ","the tree"], ["אֲשֶׁר","which is"], ["יָקָר","precious"], ["מִכֹּל","above all"], ["׃",""]]},
   { num:"י", words:[
     ["וַיֹּאמֶר","and said"],
     ["אֵלַי","unto me"],
@@ -3537,16 +3522,7 @@ var ch11Verses = [
     ["תִּרְאֶה","see you"],
     ["׃",""]
   ]},
-  { num:"טו", words:[
-    ["וָאֹמַר","and I said"],
-    ["אֵלָיו","unto him"],
-    ["עַלְמָה","a virgin"],
-    ["יְפַת־תֹּאַר","fair of form"],
-    ["וִיפַת־מַרְאֶה","and fair of countenance"],
-    ["עַל־כׇּל־הָעֲלָמוֹת","above all virgins"],
-    ["עַד־מְאֹד","exceedingly"],
-    ["׃",""]
-  ]},
+  { num: "טו", words: [["וָאֹמַר","and I said"], ["אֵלָיו","unto him"], ["עַלְמָה","a virgin"], ["יְפַת־תֹּאַר","fair of form"], ["וִיפַת־מַרְאֶה","and fair of countenance"], ["מִכׇּל־הָעֲלָמוֹת","above all other virgins"], ["׃",""]]},
   { num:"טז", words:[
     ["וַיֹּאמֶר","and said"],
     ["אֵלַי","unto me"],
@@ -3612,8 +3588,8 @@ var ch11Verses = [
     ["אָבִיךָ","your father"],
     ["׃",""]
   ]},
-  { num: "כב", words: [["וָאַעַן","and I answered"], ["וָאֹמַר","and said"], ["כֵּן","yea"], ["הוּא","it is"], ["אַהֲבַת","the love of"], ["אֱלֹהִים","God"], ["הַנִּשְׁפֶּכֶת","which is shed forth"], ["בְּלֵב","in the hearts of"], ["בְּנֵי־הָאָדָם","the children of men"], ["עַל־כֵּן","wherefore"], ["הוּא","it is"], ["נֶחְמָד","desirable"], ["עַל־כׇּל־הַדְּבָרִים","above all things"], ["עַד־מְאֹד","exceedingly"], ["׃",""]]},
-  { num: "כג", words: [["וַיֹּאמֶר","and said"], ["אֵלַי","unto me"], ["לֵאמֹר","saying"], ["וְגַם","yea and"], ["מְשַׂמֵּחַ","joyous"], ["אֶת־הַנֶּפֶשׁ","to the soul"], ["עַל־כֹּל","above all"], ["עַד־מְאֹד","exceedingly"], ["׃",""]]},
+  { num: "כב", words: [["וָאַעַן","and I answered"], ["וָאֹמַר","and said"], ["כֵּן","yea"], ["הוּא","it is"], ["אַהֲבַת","the love of"], ["אֱלֹהִים","God"], ["הַנִּשְׁפֶּכֶת","which is shed forth"], ["בְּלֵב","in the hearts of"], ["בְּנֵי־הָאָדָם","the children of men"], ["עַל־כֵּן","wherefore"], ["הוּא","it is"], ["נֶחְמָד","desirable"], ["מִכׇּל־הַדְּבָרִים","above all things"], ["׃",""]]},
+  { num: "כג", words: [["וַיֹּאמֶר","and said"], ["אֵלַי","unto me"], ["לֵאמֹר","saying"], ["וְגַם","yea and"], ["מְשַׂמֵּחַ","joyous"], ["אֶת־הַנֶּפֶשׁ","to the soul"], ["מִכֹּל","most"], ["׃",""]]},
   { num:"כד", words:[
     ["וַיְהִי","and it came to pass"],
     ["אַחֲרֵי","after"],
