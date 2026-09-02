@@ -1,13 +1,58 @@
-// root_engine.js — THE canonical root-resolution engine (single source since
-// 2026-08-30). All six volume pages load it — bom/bom.html included — and
-// tools/build_root_concordance.js reads THIS file; nothing generates it any
-// more: edit it directly, then rerun the builder so the concordance re-keys.
-// Exposes window.RootEngine.getRoot(hw): the SAME root key the concordance was
-// built with, provided Strong's data (window._strongsLookup/_strongsRoots) is loaded.
-(function() {
-// Common prefixes: vav-conjunctive, article, prepositions
-  // וְ וַ וּ (and), הַ הָ (the), בְּ בַּ בִּ (in), לְ לַ לִ (to), מִ מֵ (from), כְּ כַּ (as), שֶׁ (that)
-  var _prefixList = [
+// root_engine.js — THE canonical root-resolution engine.
+//
+// One pipeline. A word goes through the numbered stages below in order and
+// the first stage with an answer wins; RootEngine.explain(word) names the
+// stage that answered. Every hand-maintained table is in section 2, each
+// with exactly one role. All six volume pages load this file and
+// tools/build_root_concordance.js reads it, so the concordance is keyed by
+// the same code the reader runs. Rebuilt as one design 2026-09-02; proven
+// answer-for-answer against the previous engine on every distinct token of
+// the six volumes by tools/morphology/harness/golden.js — run it after ANY
+// edit here, and read every difference it prints before shipping.
+//
+// Data this engine reads (all optional; a missing layer is simply skipped):
+//   window._strongsLookup   pointed surface → Strong's number      (strongs_lookup.js)
+//   window._strongsRoots    Strong's number → {w,g,r,u,p}          (strongs_roots.js)
+//   window._bdbRoots/_bdbOk Strong's number → BDB root              (bdb_roots.js)
+//   window._shoroshimRoots  Brauner's root inventory                (shoroshim_roots.js)
+//   window._rootProperNames surfaces the corpus glosses as names     (root_names.js, generated)
+//   window._rootWordForms   surfaces attested standalone in corpus  (root_concordance.js, generated)
+(function () {
+
+  // ======================================================================
+  // 0. TEXT — points, final letters, cleaning, pieces
+  // ======================================================================
+
+  // Strip vowel points and cantillation. The shin/sin dots (U+05C1/U+05C2)
+  // are deliberately KEPT: they separate roots (שׁמן / שׂמן) and Brauner's
+  // inventory is dotted. Callers that need a dotless key strip them again.
+  function stripNikkud(s) {
+    return s.replace(/[֑-ֽֿ-׀׃-ׇ]/g, '');
+  }
+  function normFinals(s) {
+    return s.replace(/ך/g, 'כ').replace(/ם/g, 'מ').replace(/ן/g, 'נ').replace(/ף/g, 'פ').replace(/ץ/g, 'צ');
+  }
+  var sofitMap = { 'כ': 'ך', 'מ': 'ם', 'נ': 'ן', 'פ': 'ף', 'צ': 'ץ' };
+  function toSofit(s) {
+    if (!s || s.length === 0) return s;
+    var last = s[s.length - 1];
+    return sofitMap[last] ? s.slice(0, -1) + sofitMap[last] : s;
+  }
+  // Punctuation the verse data glues to a word: sof pasuq, paseq, quotes,
+  // brackets, and '*' (the transliterated-term mark, display-only).
+  function _clean(s) { return String(s || '').replace(/[׃׀"'`.,;:?!()*]/g, '').trim(); }
+  function _pieces(s) { return _clean(s).split(/[־\s]+/).filter(Boolean); }
+  // The folded, dotless, letters-only skeleton — the key shape of every
+  // generated table (root_names.js, the concordance buckets).
+  function _ckey(s) { return normFinals(stripNikkud(s)).replace(/[^א-ת]/g, ''); }
+
+  // ======================================================================
+  // 1. PREFIX MODEL — pointed prefix layers, particle heads
+  // ======================================================================
+
+  // Pointed prefixes, peeled one layer at a time: וְ וַ וּ (and), הַ הָ (the),
+  // בְּ בַּ בִּ (in), לְ לַ לִ (to), מִ מֵ (from), כְּ כַּ (as), שֶׁ (that).
+    var _prefixList = [
       /^וְ/, /^וַ/, /^וּ/, /^וָ/, /^וֶ/,  // vav conjunctive
       /^הַ/, /^הָ/, /^הֶ/,                 // article
       /^בְּ/, /^בַּ/, /^בִּ/, /^בָּ/, /^בֶּ/, /^בְ/, /^בַ/, /^בִ/, // bet
@@ -22,11 +67,10 @@
     }
     return w;
   }
+  // Deepest peel in one step: maqqef heads dropped, then two prefix layers.
+  // Exported for the pages; lookups inside the engine use stripLayers so the
+  // SHALLOWEST form is always tried first.
   function stripPrefixes(w) {
-    // Remove maqaf-joined particles first, then up to two prefix layers
-    // (e.g., וְהַ = and + the). NOTE: this jumps straight to the DEEPEST peel —
-    // callers that look words up must use stripLayers and try the shallow
-    // form first (see below), or a one-prefix word gets over-peeled.
     w = w.replace(/^.*־/, '');
     return _stripOneLayer(_stripOneLayer(w));
   }
@@ -34,25 +78,21 @@
   // (the user's rule: "if the word is al or et dont gloss that, just the word
   // its attached to"). A compound whose head is NOT here keeps head priority —
   // אֶרֶץ־מִצְרַיִם is the land card, כִּכְּרוֹת־לֶחֶם the loaves card.
-  var _maqqefParticles = {'את':1,'אל':1,'על':1,'מן':1,'עד':1,'כל':1,'לא':1,'אם':1,
+    var _maqqefParticles = {'את':1,'אל':1,'על':1,'מן':1,'עד':1,'כל':1,'לא':1,'אם':1,
                           'גם':1,'כי':1,'פן':1,'אך':1,'רק':1,'אף':1,'אשר':1,'עם':1,'מה':1};
   function _isMaqqefParticle(piece) {
     var c = stripNikkud(piece).replace(/[ׁׂ]/g, '');
     if (_maqqefParticles[c]) return true;
-    // one prefix letter rides along: וְעַל־, בְּכׇל־, וְלֹא־
-    return c.length > 2 && _maqqefParticles[c.slice(1)];
+    return c.length > 2 && _maqqefParticles[c.slice(1)];   // one prefix letter rides along: וְעַל־, בְּכׇל־
   }
+  // Progressive peels, shallowest first: [the word exactly as given, the tail
+  // after a PARTICLE maqqef head, one prefix off, two off]. The exact form is
+  // layer 0 because the tables carry maqqef-bound keys (אֶת־לֵב → לבב); the
+  // maqqef tail is a layer only when every dropped head is a particle — a
+  // content head (אֶרֶץ־מִצְרַיִם) keeps priority and falls to the compound
+  // stage instead. The longest remainder always wins: בַּבְּכוֹר must reach
+  // בְּכוֹר before it can reach כוֹר and file the firstborn under the furnace.
   function stripLayers(w) {
-    // Progressive peels, shallowest first: [word exactly as given, tail after a
-    // PARTICLE maqqef head, one prefix off, two off]. Lookup chains built on
-    // stripPrefixes alone never tried the one-layer form: בַּבְּכוֹר ("with the
-    // firstborn") skipped בְּכוֹר — a real lookup key — and reached כוֹר,
-    // filing the firstborn under the furnace. The longest remainder must always
-    // be tried first — and that includes the EXACT form: rootMap and the lookup
-    // carry maqqef-bound keys (אֶת־לֵב is pinned to לבב), so the untouched word
-    // is layer 0. The maqqef tail becomes a layer only when every dropped head
-    // piece is a particle — a content head (אֶרֶץ־מִצְרַיִם) must keep priority
-    // and fall through to the pieces branch instead.
     var out = [w], m = '', mi = w.lastIndexOf('־');
     if (mi >= 0) {
       var heads = w.slice(0, mi).split('־');
@@ -70,15 +110,40 @@
     }
     return out;
   }
+  // The full particle-head list (bare + waw-prefixed) per the 2026-08-30
+  // ruling: a PARTICLE head is dropped and the card shows the word it is
+  // attached to; a CONTENT head keeps the card (לֶחִי־נֶפִי is Lehi).
+    var _particles = {'אך':1,'אל':1,'אם':1,'אף':1,'אשר':1,'את':1,'גם':1,'ואך':1,'ואל':1,'ואם':1,'ואף':1,'ואשר':1,'ואת':1,'וגם':1,'וכי':1,'וכל':1,'ולא':1,'ומן':1,'ועד':1,'ועל':1,'ועם':1,'ופן':1,'ורק':1,'כי':1,'כל':1,'לא':1,'מן':1,'עד':1,'על':1,'עם':1,'פן':1,'רק':1};
+  function _contentPieces(ps) {
+    var content = ps.filter(function (p) { return !_particles[stripNikkud(p)]; });
+    return content.length ? content : ps;
+  }
 
-  // Root family dictionary: maps surface forms to a canonical root key
-  // This groups morphologically related words under one root
-  // 583 entries across 67 root families (theological, verbal, nominal)
-  // Roots with no Strong's entry at all — these must never be peeled.
-  var _lexNoPeel = { 'כנס': 1, 'סעד': 1, 'H4503': 1, 'H7133': 1, 'H1309': 1, 'רשות': 1, 'תרגם': 1, 'פרוש': 1, 'אות': 1, 'אחראי': 1,
+  // ======================================================================
+  // 2. DATA — the hand tables. One role each.
+  // ======================================================================
+
+  // 2a. PINNED_LEXEMES — family keys the lexicon must never peel past. A
+  // SURFACE_MAP entry whose VALUE is in this set outranks the lexicon
+  // (stage 1). These are lexemes Strong's does not carry, whose surfaces the
+  // lexicon peel would otherwise mangle: כְּנֵסִיָּתִי "my church" reached
+  // H5254 נָסָה "to test" with the כ read as a prefix. Do NOT widen this to
+  // whole families on a whim — doing so woke dormant SURFACE_MAP entries
+  // (תְּפִלָּה→תפל "plaster") and had to be reverted; pin surfaces in
+  // SURFACE_PINS instead.
+    var PINNED_LEXEMES = { 'כנס': 1, 'סעד': 1, 'H4503': 1, 'H7133': 1, 'H1309': 1, 'רשות': 1, 'תרגם': 1, 'פרוש': 1, 'אות': 1, 'אחראי': 1,
                      'אני': 1, 'אנכי': 1, 'אנחנו': 1, 'אתה': 1, 'הוא': 1, 'היא': 1, 'הם': 1, 'הן': 1,
                      'חם': 1, 'קום': 1, 'אלהים': 1, 'בֵּין': 1 };
-  var rootMap = {
+
+  // 2b. SURFACE_MAP — pointed surface (any layer) → family key, consulted
+  // AFTER the lexicon (stage 4) except where its value is a PINNED_LEXEME.
+  // Holds the pronoun paradigm, the pointed בֵּין and אלהים families, the
+  // sign-words, ~2,900 construct forms and maqqef heads harvested from the
+  // corpus (admitted only where the form's own gloss agrees with the key's),
+  // the gospel/רשות/תרגם/פרוש/כנס/סעד/מנחה/קרבן blocks and the theological
+  // families. Values are Strong's numbers (resolved through FAMILY, section
+  // 4) or bare family keys. Exported as RootEngine.rootMap.
+    var SURFACE_MAP = {
     // The independent personal pronouns — the whole paradigm (1cs 1cp 2ms 2fs
     // 2mp 2fp 3ms 3fs 3mp), pinned to their own bare families. BARE keys, not
     // Strong's numbers: an H-value goes through baseRoot and BDB folds the
@@ -455,563 +520,16 @@
     'תַּחְתָּיו': 'תחת', 'תַּחְתָּיו׃': 'תחת', 'תַּחְתֶּיךָ': 'תחת', 'תַּחְתָּם': 'תחת', 'תַּחְתֵּיהֶם': 'תחת', 'תַּחְתֵּיהֶן': 'תחת', 'תַּחְתִּיּוֹת': 'תחת', 'בְּתַחְתִּיּוֹת': 'תחת', 'וְתַחְתִּיתָן': 'תחת', 'בַּתַּחְתִּית': 'תחת', 'תַּחְתָּי': 'תחת', 'תַּחַת': 'תחת', 'וְתַחַת': 'תחת', 'מִתַּחַת': 'תחת', 'מִתָּחַת': 'תחת', 'לְתַחַת': 'תחת', 'וּמִתַּחַת': 'תחת', 'מִתַּחַת׃': 'תחת', 'כִּי־תַחַת': 'תחת', 'תַחְתֹּךְ': 'תחת'
   };
 
-  // Strip Hebrew diacritics (nikkud/cantillation) to get consonantal form
-  function stripNikkud(s) {
-    return s.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, '');
-  }
-
-  // Single-mater collapses of a plene spelling, one occurrence per variant:
-  //   \u05D5\u05B9 (holam male)  \u2192 \u05B9    \u05D1\u05BC\u05D5\u05B9\u05D7\u05B5\u05E8 \u2192 \u05D1\u05B9\u05BC\u05D7\u05B5\u05E8
-  //   \u05D5\u05BC (shuruk)      \u2192 \u05BB    \u05D9\u05B8\u05E7\u05D5\u05BC\u05DD  \u2192 \u05D9\u05B8\u05E7\u05BB\u05DD
-  //   \u05B4\u05D9 (hiriq male)  \u2192 \u05B4    \u05DE\u05B5\u05D1\u05B4\u05D9\u05E1  \u2192 \u05DE\u05B5\u05D1\u05B4\u05E1
-  //   \u05B5\u05D9 (tsere male)  \u2192 \u05B5
-  // Deliberately NOT a full demater \u2014 only one substitution per variant, and
-  // the caller only accepts a variant that a DATA layer recognizes.
-  var _materPats = [[/\u05D5\u05B9/g, '\u05B9'], [/\u05D5\u05BC/g, '\u05BB'],
-                    [/\u05B4\u05D9/g, '\u05B4'], [/\u05B5\u05D9/g, '\u05B5']];
-  function _materVariants(s) {
-    var out = [];
-    for (var pi = 0; pi < _materPats.length; pi++) {
-      var re = _materPats[pi][0], rep = _materPats[pi][1], m;
-      re.lastIndex = 0;
-      while ((m = re.exec(s)) !== null) {
-        out.push(s.slice(0, m.index) + rep + s.slice(m.index + m[0].length));
-        if (out.length >= 8) return out;
-      }
-    }
-    return out;
-  }
-
-  // Normalize final Hebrew letters to regular form for root matching
-  function normFinals(s) {
-    return s.replace(/ך/g,'כ').replace(/ם/g,'מ').replace(/ן/g,'נ').replace(/ף/g,'פ').replace(/ץ/g,'צ');
-  }
-
-  // Restore final (sofit) form on the last letter of a root for display
-  var sofitMap = {'כ':'ך','מ':'ם','נ':'ן','פ':'ף','צ':'ץ'};
-  function toSofit(s) {
-    if (!s || s.length === 0) return s;
-    var last = s[s.length - 1];
-    return sofitMap[last] ? s.slice(0, -1) + sofitMap[last] : s;
-  }
-
-  // Extract morphological root (3-letter shoresh) from consonantal form
-  function extractRoot(cons) {
-    var s = normFinals(cons);
-    if (s.length <= 3) return s;
-    if (s.length === 0) return cons;
-
-    // --- Pass 1: strip suffixes (longest first) ---
-    var sufs = [
-      'תיהם','ותיהם','ותינו',
-      'יהם','יהן','ותם','ותן','תיו','תיה','תנו',
-      'כם','כן','נו','תי','תם','תן','ים','ות','ון','ין','הם','הן',
-      'ה','ו','ם','ן','י','ת','כ'
-    ];
-    var stem = s;
-    for (var i = 0; i < sufs.length; i++) {
-      if (stem.length > sufs[i].length + 2 && stem.endsWith(sufs[i])) {
-        stem = stem.slice(0, -sufs[i].length);
-        break;
-      }
-    }
-    if (stem.length === 3) return stem;
-
-    // --- Pass 2: strip verbal prefixes ---
-    if (stem.length >= 5 && (stem.slice(0,2) === 'הת' || stem.slice(0,2) === 'מת')) {
-      stem = stem.slice(2);
-    } else if (stem.length >= 4 && /^[היתאנמ]/.test(stem)) {
-      stem = stem.slice(1);
-    }
-    if (stem.length === 3) return stem;
-
-    // --- Pass 3: doubled middle consonant (Piel/Pual pattern) ---
-    if (stem.length === 4 && stem[1] === stem[2]) {
-      return stem[0] + stem[1] + stem[3];
-    }
-
-    // --- Pass 4: try suffix strip again on shorter stem ---
-    for (var j = 0; j < sufs.length; j++) {
-      if (stem.length > sufs[j].length + 2 && stem.endsWith(sufs[j])) {
-        stem = stem.slice(0, -sufs[j].length);
-        break;
-      }
-    }
-    if (stem.length === 3) return stem;
-
-    // --- Pass 5: try prefix strip again ---
-    if (stem.length >= 4 && /^[היתאנמ]/.test(stem)) {
-      stem = stem.slice(1);
-    }
-    if (stem.length === 3) return stem;
-
-    if (stem.length === 4 && stem[1] === stem[2]) {
-      return stem[0] + stem[1] + stem[3];
-    }
-
-    return stem.length > 3 ? stem.slice(0, 3) : stem;
-  }
-
-  // Feminine construct fix: ה→ת pattern (אשה→אשת, שנה→שנת, etc.)
-  // If a 3-letter root ends in ת, the original root may end in ה
-  function fixFemConstruct(root) {
-    if (root.length === 3 && root[2] === 'ת') {
-      return root.slice(0, 2) + 'ה';
-    }
-    return root;
-  }
-
-  // A maqqef joins two words; each is its own lexeme and each deserves its own
-  // scorecard entry. רַב־עֳנִי is רַב "much" AND עֳנִי "affliction" — collapsing
-  // it to one root threw the second word away, and 13% of the corpus is
-  // maqqef-joined. Returns [{part, root}, ...] in the order the words are written.
-  // Transliterated terms (root_scorecard.js's exception table) are not Hebrew
-  // words and get no root: a whole-word term returns nothing, a term part of a
-  // maqqef pair (בֶּן־אַהְמָן) is dropped and the Hebrew part keeps its card.
-  function _isTT(s) {
-    try { return !!(typeof window !== 'undefined' && window.RootScorecard && window.RootScorecard.isTranslitTerm && window.RootScorecard.isTranslitTerm(s)); } catch (e) { return false; }
-  }
-  function getRoots(hw) {
-    var w = _clean(hw);
-    var parts = _pieces(w);
-    if (parts.length <= 1) {
-      if (_isTT(w)) return [];
-      var r = getRoot(hw);
-      return r ? [{ part: w, root: r }] : [];
-    }
-    if (window.RootScorecard && window.RootScorecard.translitTermParts && window.RootScorecard.translitTermParts(w).all) return [];
-    var out = [], seen = {};
-    for (var i = 0; i < parts.length; i++) {
-      if (_isTT(parts[i])) continue;              // בֶּן־אַהְמָן: Ahman gets the note, not a root
-      var rp = getRoot(parts[i]);
-      if (!rp || seen[rp]) continue;
-      seen[rp] = 1;
-      out.push({ part: parts[i], root: rp });
-    }
-    if (!out.length) { var r2 = getRoot(hw); if (r2) out.push({ part: w, root: r2 }); }
-    return out;
-  }
-
-  // Get root key for a Hebrew word
-  //
-  // Cascade, most reliable first. Every step returns either a real Strong's
-  // number or a real Hebrew word — never a truncated letter-fragment. The old
-  // unconditional extractRoot() fallback is gone: it invented 2-3 letter keys
-  // that merged unrelated lexemes (שׁמ swallowed שמר/שמד/שמם/שמע/שם) and split
-  // real ones (כָּאָרֶץ became its own key "כאר" instead of joining H0776).
-  var _consIdx = null;
-  function consIndex() {
-    if (_consIdx) return _consIdx;
-    // The data files load lazily: caching the empty index before
-    // strongs_lookup.js arrives would disable this layer for the page's life.
-    if (!window._strongsLookup) return {};
-    _consIdx = {};
-    for (var k in _strongsLookup) {
-      var c = stripNikkud(k);
-      if (!c) continue;
-      if (_consIdx[c] === undefined) _consIdx[c] = _strongsLookup[k];
-      else if (_consIdx[c] !== _strongsLookup[k]) _consIdx[c] = null; // ambiguous: refuse
-    }
-    return _consIdx;
-  }
-  var _rePre = /^(וכש|ומ|וב|ול|וכ|וה|כש|לכ|מה|בה|כה|לה|ו|ה|ב|כ|ל|מ|ש)/;
-  // Mishqal test (Israel Institute, Course A unit 8): "A prefix is part of the
-  // pattern, not the root — check whether it is one of the three root letters
-  // or a separate prefix." The vowels are what decide. A noun-pattern מ or ת
-  // carries hiriq/patach/shva and the next letter carries shva (מִקְטָל,
-  // מַקְטֵל, תַקְטוּל). A מ under qamats or tsere is a radical — מָשִׁיחַ keeps
-  // its מ, מִכְתָּב does not. Used only to REFUSE a strip, never to add one.
-  function _mayStripPointed(pointed, letter) {
-    if (letter !== 'מ' && letter !== 'ת') return true;      // other prefixes unaffected
-    var m = pointed.match(/^[\u05D0-\u05EA]([\u0591-\u05BD\u05BF-\u05C7]*)/);
-    if (!m) return true;
-    var v = m[1] || '';
-    if (/[\u05B8\u05B5\u05B9]/.test(v)) return false;     // qamats, tsere, holam -> radical
-    return true;
-  }
-  var _sufs = ['ותיהם','ותיכם','ותיהן','ותיכן','ותינו','ותיך','ותיה','ותיו','ותם','ותן','ותי','יהם','יכם',
-               'ינו','תיו','נו','כם','הם','הן','תי','יו','יה','ים','ות','ת','ם','ן','ו','ה','י','ך'];
-  var _particles = {'אך':1,'אל':1,'אם':1,'אף':1,'אשר':1,'את':1,'גם':1,'ואך':1,'ואל':1,'ואם':1,'ואף':1,'ואשר':1,'ואת':1,'וגם':1,'וכי':1,'וכל':1,'ולא':1,'ומן':1,'ועד':1,'ועל':1,'ועם':1,'ופן':1,'ורק':1,'כי':1,'כל':1,'לא':1,'מן':1,'עד':1,'על':1,'עם':1,'פן':1,'רק':1};  // full particle-head list per the 2026-08-30 ruling (bare + waw-prefixed):
-  // a PARTICLE head is dropped and the card shows the word it is attached to;
-  // a CONTENT head keeps the card. גם/עם/כי/אם/פן/אך/רק/אף/אשר were missing,
-  // which is why וְגַם־הַלָּמָנִים resolved to a non-word 'גמם' and עַם־נֶפִי
-  // showed "people" instead of Nephi.
-  function _clean(s) { return String(s || '').replace(/[׃׀"'`.,;:?!()*]/g, '').trim(); }   // '*' = transliterated-term mark, display-only
-  function _pieces(s) { return _clean(s).split(/[־\s]+/).filter(Boolean); }
-
-  // Resolve ONE whitespace/maqqef-free word to a Strong's number, or '' if none.
-  function _strongsFor(w, strict) {
-    if (!window._strongsLookup || !window._strongsRoots) return '';
-    var CI = consIndex();
-    // For a name, only the whole pointed form may match. Letting the
-    // prefix-stripped variants through decomposed לָמָן into ל + מָן and filed
-    // every Book of Mormon Laman under H4478, manna — and there is no Laman in
-    // the Bible for it to have been confused with.
-    var sNum = '';
-    if (strict) sNum = _strongsLookup[w] || '';
-    else {
-      // Shallowest peel first: the one-layer form is the longest remainder and
-      // must win before a second strip can reach a shorter look-alike.
-      var _L = stripLayers(w), _li;
-      for (_li = 0; _li < _L.length && !sNum; _li++) sNum = _strongsLookup[_L[_li]] || '';
-      for (_li = 0; _li < _L.length && !sNum; _li++) sNum = _strongsLookup[stripNikkud(_L[_li])] || '';
-    }
-    if (sNum && _strongsRoots[sNum]) return sNum;
-    // A name gets the exact lookups above and nothing more. Fuzzy consonantal
-    // matching filed every Book of Mormon נֶפִי under H5297 נֹף — Memphis.
-    if (strict) return '';
-    var c = stripNikkud(w);
-    if (!c) return '';
-    if (CI[c] && _strongsRoots[CI[c]]) return CI[c];          // defective/variant pointing
-    var b = c;                                                 // peel prefixes
-    for (var p = 0; p < 3; p++) {
-      var m = b.match(_rePre);
-      if (!m) break;
-      b = b.slice(m[1].length);
-      if (b.length < 2) break;
-      if (CI[b] && _strongsRoots[CI[b]]) return CI[b];
-      // A residue that IS a known skeleton but ambiguous (CI holds null) is a
-      // real word this layer cannot resolve — peeling FURTHER can only reach a
-      // shorter look-alike (בכור is H1060/H1061-ambiguous; one more strip
-      // landed on כור and filed the firstborn under the furnace). Stop here
-      // and let the later layers refuse or resolve it honestly.
-      if (b in CI && CI[b] === null) break;
-    }
-    var bases = [c, b], fin = {'מ':'ם','נ':'ן','צ':'ץ','פ':'ף','כ':'ך'};
-    for (var i = 0; i < bases.length; i++) {                   // peel plural/pronominal endings
-      for (var j = 0; j < _sufs.length; j++) {
-        var s = _sufs[j], B = bases[i];
-        if (B.length > s.length + 1 && B.slice(-s.length) === s) {
-          var st = B.slice(0, -s.length);
-          // A Hebrew root is three letters. Genuine two-letter roots exist
-          // (אָב, יָד, דָּם) and keep working, because for those nothing was
-          // peeled off the front. But once a prefix HAS been removed, a
-          // two-letter residue is the peeler eating the word: מִנְחוֹתָיו lost
-          // its מ, then its ותיו, and the נח left over matched H5117 נוּחַ
-          // "to rest" — so "his offerings" was filed under resting.
-          if (B !== c && st.length < 3) continue;
-          if (CI[st] && _strongsRoots[CI[st]]) return CI[st];
-          var lc = st.slice(-1);                               // segholate plural: ארצ → ארץ
-          if (fin[lc] && CI[st.slice(0, -1) + fin[lc]] && _strongsRoots[CI[st.slice(0, -1) + fin[lc]]])
-            return CI[st.slice(0, -1) + fin[lc]];
-        }
-      }
-    }
-    return '';
-  }
-
-  // Consonantal index of Strong's LEMMAS (not surface forms). This is the
-  // authority for "is this string a real Hebrew root?" — 6,243 distinct lemmas,
-  // exhaustive for biblical Hebrew. Ambiguous skeletons map to null: חנכ is
-  // H2596 (train), H2585 (Enoch) and H2583 (encamp) at once, so it cannot be
-  // resolved to a number — but it is still a real root, and grouping every חנכ
-  // form under the string "חנכ" is correct where guessing a number is not.
-  // A Hebrew root is triliteral. Strong's numbers a *lexeme*, so one root is
-  // spread over several entries — חנך is H2596 (חָנַךְ, "dedicate"/"train"),
-  // H2598 (חֲנֻכָּה, "dedication") and H2599 — and the scorecard showed them as
-  // three unrelated roots. Following Strong's own derivation pointer collapses
-  // them onto the root they share.
-  //
-  // Only when that base is exactly three letters. Strong's derivations are
-  // 19th-century etymology and some are junk: מָן "manna" points at מָה "what",
-  // which is two letters and a different word. Those keep their own lexeme.
-  var _baseOf = null;
-  var NUMERAL = {H0259:1,H8147:1,H7969:1,H0702:1,H2568:1,H8337:1,H7651:1,
-                 H8083:1,H8672:1,H6235:1,H3967:1,H0505:1,H7239:1,H6242:1,
-                 H7970:1,H0705:1,H2572:1,H8346:1,H7657:1,H8084:1,H8673:1};
-  function propName(x) {
-    return !!(x && x.g && /^[A-Z][A-Za-z-]*$/.test(x.g) && !/^(God|Lord|Law|Holy|Amen)$/.test(x.g));
-  }
-  // BDB filings that merge lexemes only the pointing keeps apart. Each entry
-  // sends the Strong's number to its own family key instead of BDB's shared
-  // consonantal heading. Keep this to pointing-boundary collisions.
-  // The rogue-מ derivatives are the recurring case: BDB and Strong's both
-  // refer the noun to its verb (מִדְבָּר→דבר "speak", מָקוֹם→קום "arise",
-  // מִזְבֵּחַ→זבח, אֲדָמָה→אדם "man"), but each is its own lexeme with its
-  // own English, so each gets its own family.
-  var _bdbSplit = { 'H4325': 'מים', 'H0127': 'אדמה', 'H4057': 'מדבר',
-                    'H4725': 'מקום', 'H4196': 'מזבח',
-                    'H1309': 'בשורה',   // gospel, not בשר/שור
-                    'H0123': 'אדום',    // Edom, not אדם "man"
-                    'H5178': 'נחשת',    // brass, not נחש "serpent"
-                    'H4399': 'מלאכה',   // work, not מלאך "angel"
-                    'H8111': 'שמרון',   // Samaria, not שמר "keep"
-                    'H5715': 'עדות',    // testimony, not עוד "still, yet"
-                    'H4079': 'מדין', 'H4080': 'מדין',   // Midian, not דין "judgment"
-                    'H0347': 'איוב',    // Job, not איב "enemy"
-                    'H1144': 'בנימין',  // Benjamin, not בן "son"
-                    'H2220': 'זרוע',   // arm, not זרע "seed"
-                    'H1754': 'כדור',   // ball (the Liahona), not דור "generation"
-                    'H2983': 'יבוסי',  // Jebusite, not בוס "trample"
-                    // ל"ה-derived nouns: the root's ה never surfaces in the
-                    // noun, so the transparency gate rejects BDB's (correct)
-                    // filing and the peeler invented a נין family that mixed
-                    // buildings with quorums and offspring (the 2 Ne 5:15 card)
-                    'H1146': 'בנה',    // בִּנְיָן building → build
-                    'H4510': 'מנה',    // מִנְיָן quorum, reckoning → count
-                    'H5209': 'נין',    // נִין offspring keeps its own family
-                    // the גלל grab-bag (the biglal card): BDB files the place
-                    // Gilgal, the scroll, and Galilee under "roll" — names and
-                    // pointing-distinct nouns get their own families; the
-                    // preposition בִּגְלַל and the wheel גַּלְגַּל stay under
-                    // the geminate root
-                    'H1537': 'גלגל',   // Gilgal the place, not גלל "roll"
-                    'H1558': 'בגלל',   // the preposition gets its own card, the בֵּין pattern
-                    'H3068': 'יהוה', 'H3069': 'יהוה', 'H3050': 'יהוה',  // the divine name (Yah included), not הוה 'to be'
-                    'H8668': 'ישע',    // תְּשׁוּעָה salvation — Strong's derives it from שוע 'cry', BDB files it under ישע
-                    'H8478': 'תחת', 'H8480': 'תחת',  // under/instead-of (Hebrew + Aramaic) — one form carried a number while its sisters keyed the string
-                    'H2148': 'זכריה', 'H5418': 'נתניה',  // Zechariah, Nethaniah — names, not verbs
-                    'H8068': 'שמיר',   // brier/adamant, not שמר 'keep'
-                    'H2689': 'חצוצרה', // trumpet, not חצר 'courtyard'
-                    'H4692': 'מצור',   // siege, not צור 'rock'
-                    // names whose Strong's derivation pointer collapses them onto
-                    // the verb they were coined from (the Abram class):
-                    'H5070': 'נָדָב', 'H3312': 'יְפֻנֶּה', 'H4353': 'מָכִיר', 'H8304': 'שְׂרָיָה',
-                    'H3003': 'יָבֵשׁ', 'H5747': 'עוֹג', 'H7143': 'קָרֵחַ',
-                    'H8184': 'שעורה',  // barley, not שער 'hair/gate'
-                    // the אל grab-bag (1 Ne 1:14 elekha): God, the preposition,
-                    // and the negation are three pointing-distinct lexemes —
-                    // El keeps the bare key; the particles get pointed keys
-                    'H0413': 'אֶל', 'H0408': 'אַל',
-                    'H0417': 'אלגביש',  // hailstones — pointer would collapse into H0410 God
-                    'H0484': 'אלמגים', 'H0418': 'אלמגים',  // almug/algum timber — BDB files it under אל
-                    // the nikkud-conflation sweep (2026-08-30, corpus-wide):
-                    'H5973': 'עִם', 'H4421': 'מלחמה',
-                    'H8066': 'שמונה', 'H8083': 'שמונה', 'H8084': 'שמונה',
-                    'H0929': 'בהמה', 'H0591': 'אניה', 'H7462': 'רֹעֶה',
-                    'H0835': 'אשרי', 'H0836': 'אָשֵׁר', 'H0842': 'אָשֵׁר',
-                    'H1768': 'דִּי', 'H3863': 'לוּ', 'H5787': 'עִוֵּר', 'H6311': 'פֹּה',
-                    'H1119': 'בְּמוֹ', 'H3926': 'לְמוֹ',  // the poetic byform particles keep their own cards, not the bare-letter buckets
-                    'H6105': 'עצם',    // the verb joins the bone/substance family — one etsem card
-                    'H4082': 'מדינה', 'H7979': 'שולחן', 'H2275': 'חברון', 'H3844': 'לבנון',
-                    'H0085': 'אברהם', 'H0087': 'אברהם', 'H4735': 'מקנה',
-                    'H7927': 'שְׁכֶם', 'H8163': 'שָׂעִיר', 'H5749': 'העיד',
-                    'H0197': 'אולם',    // porch — not אֱוִיל 'fool'
-                    'H4026': 'מגדל',    // tower — not גדל 'great'
-                    'H5923': 'עֹל',      // yoke — not מעלל 'doings'
-                    'H1864': 'דרום',    // south — not דרור 'liberty'
-                    'H5744': 'עובד',    // Obed — not עבד 'serve'
-                    'H2461': 'חָלָב',    // milk — not חֵלֶב 'fat'
-                    'H6677': 'צואר',    // neck — not צור 'rock'
-                    'H6571': 'פָּרָשׁ',   // horseman — not פרש 'spread'
-                    'H5978': 'עִם',      // immadi 'with me' joins the preposition
-                    'H1319': 'בשורה',   // the preach-tidings verb joins gospel
-                    'H4039': 'מגלה',   // מְגִלָּה scroll, not גלל "roll"
-                    'H4624': 'מעקה',  // the parapet/rail (Deut 22:8) — the rod of iron; not עקה 'distress'
-                    // the חלל chain (the hachel card): Strong's derivation
-                    // pointers funneled four pointing-distinct lexemes into one
-                    // "wound" family. The verb (H2490: הֵחֵל begin, חִלֵּל
-                    // profane, חָלַל pierce) keeps the BDB key; the noun, the
-                    // exclamation and the ת-derivative get their own cards
-                    'H2491': 'חָלָל',   // slain (the noun), pointed key vs the verb's חלל
-                    'H2486': 'חלילה',  // far be it — the exclamation
-                    'H8462': 'תחלה',   // beginning — the ת-derivative, the מנין/בנין class
-                    'H1551': 'גליל', 'H1552': 'גליל', 'H1553': 'גליל' }; // Galilee/regions
-
-  function baseRoot(sNum) {
-    // Brown-Driver-Briggs keys the ROOT where Strong's keys the lexeme, so BDB
-    // files דָּבָר the noun (H1697) and דִּבֶּר the verb (H1696) together under
-    // דבר. It is also data rather than inference, which settles by lookup what
-    // the derivation heuristics below can only guess at — and what no amount of
-    // consonant-peeling can decide: H4503 מִנְחָה belongs to מנח, not to נוּחַ.
-    // Prefer it wherever it has an answer; 2,042 Strong's numbers it does not
-    // cover (proper names, Aramaic) fall through to the heuristics unchanged.
-    // BDB is consulted only where its root is morphologically transparent —
-    // every root consonant present in the lemma. BDB groups by ETYMOLOGY, and
-    // that reaches further than a study tool wants: it files כֵּן "thus"
-    // under כון "be established", so לָכֵן "therefore" came up as kun
-    // "prepare", and it files אַבְרָם under a verb root. Geminates and hollow
-    // roots legitimately drop a letter (תְּפִלָּה<פלל, קָם<קום), so those are
-    // allowed through by matching root letters as a set rather than in order.
-    // Where BDB's etymological merge crosses a POINTING boundary, the nikkud
-    // is the arbiter (the בֵּין/בִּין rule): BDB files מַיִם "water" (H4325)
-    // and מִי "who?" (H4310) together under מי, and the transparency gate
-    // cannot catch it because מ and י are both letters of מים. A noun with no
-    // singular files under its own entry form (IIBS C, unit 7) — the ־ים here
-    // is not a suffix to peel.
-    if (_bdbSplit[sNum]) return _bdbSplit[sNum];
-    if (window._bdbRoots && window._bdbRoots[sNum] && window._bdbOk) {
-      var _b = window._bdbOk(sNum);
-      if (_b) return _b;
-    }
-    if (!_baseOf) {
-      _baseOf = {};
-      if (window._strongsRoots) {
-        // A derived word is its root plus a real affix. Comparing loose letter
-        // overlap folded חַלָּמִישׁ "flint" into חָלַם "dream"; stripping every
-        // א/ה/ו/י first folded אֱלֹהִים into אוּל, because the א and ה of
-        // אלה are root letters, not matres.
-        var skel = function(w) { return normFinals(stripNikkud(String(w || ''))).replace(/[^\u05D0-\u05EA]/g, ''); };
-        var SUF = ['ות', 'ים', 'ון', 'ית', 'ה', 'ת', 'י', 'ם', 'ן'];
-        var derives = function(src, base) {
-          if (!src || !base) return false;
-          if (src === base) return true;
-          // A derivation ADDS to its root. Without this, אֵל (2 letters) counted
-          // as derived from אוּל (3) and God's own word chained into "to twist".
-          if (src.length < base.length) return false;
-          // The מ-prefix is optional, not automatic: stripping it unconditionally
-          // turned מַלְכוּת into לכות and it stopped joining מָלַךְ.
-          var stems = [src];
-          if (src.length > base.length && (src.charAt(0) === 'מ' || src.charAt(0) === 'ת')) {
-            stems.push(src.slice(1));
-          }
-          for (var k = 0; k < stems.length; k++) {
-            var s2 = stems[k];
-            if (s2 === base) return true;
-            for (var i = 0; i < SUF.length; i++) {
-              var sf = SUF[i];
-              if (s2.length > base.length && s2.slice(-sf.length) === sf) {
-                if (s2.slice(0, -sf.length) === base) return true;
-                var a0 = s2.slice(0, -sf.length).replace(/[וי]/g, '');
-                if (a0 === base.replace(/[וי]/g, '')) return true;
-              }
-            }
-            // Matres may be dropped from the DERIVED form only. Stripping them
-            // from the root as well made סוֹד "council, secret" match יָסַד
-            // "to found" — both reduce to סד — and pooled יְסוֹד "foundation"
-            // with הַסּוֹד "the secret". The י of יסד is a radical, not a mater.
-            var a = s2.replace(/[וי]/g, '');
-            if (a === base && s2.length - base.length <= 1) return true;
-          }
-          return false;
-        };
-        for (var n in _strongsRoots) {
-          var srcW = _strongsRoots[n] && _strongsRoots[n].w;
-          if (!srcW) { _baseOf[n] = n; continue; }
-          if (NUMERAL[n]) { _baseOf[n] = n; continue; }
-          // Walk the chain one link at a time and keep the furthest link that is
-          // still a genuine derivation. Testing only the endpoint threw away
-          // valid intermediate roots such as מַלְכוּת → מָלַךְ.
-          var cur = n, best = n, seen = {}, guard = 0;
-          while (_strongsRoots[cur] && _strongsRoots[cur].r && _strongsRoots[cur].r !== cur &&
-                 !seen[cur] && guard++ < 8) {
-            seen[cur] = 1;
-            var nxt = _strongsRoots[cur].r;
-            var ne = _strongsRoots[nxt];
-            if (!ne || !ne.w) break;
-            var nb = skel(ne.w);
-            if ((ne.w.match(/[\u05D0-\u05EA]/g) || []).length !== 3) break;
-            if (propName(ne) && !propName(_strongsRoots[n])) break;
-            if (!derives(skel(srcW), nb)) break;
-            best = nxt;
-            cur = nxt;
-          }
-          _baseOf[n] = best;
-        }
-      }
-    }
-    return _baseOf[sNum] || sNum;
-  }
-
-  var _lemIdx = null;
-  function lemmaIndex() {
-    if (_lemIdx) return _lemIdx;
-    // Same rule as consIndex: never cache before strongs_roots.js arrives —
-    // an early getRoot call (data loads lazily) would freeze the empty index
-    // and kill the morphology layer (וַיִּרְעַד stayed "וירעד" instead of רעד).
-    if (!window._strongsRoots) return {};
-    _lemIdx = {};
-    _lemIdxVerb = {};
-    for (var n in _strongsRoots) {
-      var e = _strongsRoots[n];
-      if (!e || !e.w) continue;
-      var c = normFinals(stripNikkud(e.w));
-      if (c.length < 2) continue;
-      if (_lemIdx[c] === undefined) _lemIdx[c] = n;
-      else if (_lemIdx[c] !== n) _lemIdx[c] = null;   // ambiguous
-      // A second index of verb lemmas only (this Strong's data carries a .p
-      // field on verb entries and on nothing else). A conjugation peel
-      // (hitpael, imperfect) can only produce a verb, so an ambiguity like
-      // אספ (H0622 the verb / H0623 Asaph) resolves to the verb.
-      if (e.p !== undefined) {
-        if (_lemIdxVerb[c] === undefined) _lemIdxVerb[c] = n;
-        else if (_lemIdxVerb[c] !== n) _lemIdxVerb[c] = null;
-      }
-    }
-    return _lemIdx;
-  }
-
-  // Peel affixes off an inflected form and keep the first residue that is a real
-  // root. Without this, conjugated verbs Strong's has no surface form for became
-  // their own one-occurrence entries — חִנְּכוּנִי ("taught me", Piel + 1cs object
-  // suffix) was filed as the root "חנכוני", which is not a word.
-  var _mSuf = ['ותיהם','ותינו','ותיכם','וני','ניו','תיו','יהם','יכם','ינו','ני',
-               'נו','הו','תי','תם','תן','כם','הם','הן','ים','ות','ת','ם','ן','ו','ה','י','ך'];
-  var _mVPre = ['והת','וית','ומת','ותת','הת','ית','מת','נת','את','תת','וי','ונ','וא','ות','י','ת','נ','א'];
-  var _mPre = ['וכש','ומ','וב','ול','וכ','וה','כש','ו','ה','ב','כ','ל','מ','ש'];
-  // Brauner SHOROSHIM validation (the IIBS rules): a root minted by
-  // morphology must be a real shoresh. Guideline 13 — an unpointed ש
-  // checks both שׁ and שׂ, so membership is tested dot-blind against the
-  // dotted inventory. Loaded from shoroshim_roots.js; absent data = no gate.
-  function isShoresh(k) {
-    var L = window._shoroshimRoots;
-    if (!L) return true;
-    if (!window._shoroshimSet) {
-      var set = {};
-      for (var i = 0; i < L.length; i++) {
-        set[L[i]] = 1;
-        set[L[i].replace(/[\u05B0-\u05BD\u05BF\u05C1\u05C2\u05C7]/g, '')] = 1;
-      }
-      window._shoroshimSet = set;
-    }
-    return !!window._shoroshimSet[normFinals(k)];
-  }
-  function rootByMorphology(w) {
-    var LI = lemmaIndex(), c = normFinals(stripNikkud(w));
-    if (c.length < 3) return '';
-    var cands = [], i, j;
-    for (i = 0; i < _mSuf.length; i++) {          // suffix first: it is the
-      var sfx = _mSuf[i];                          // stronger signal
-      if (c.length > sfx.length + 2 && c.slice(-sfx.length) === sfx) cands.push(c.slice(0, -sfx.length));
-    }
-    for (i = 0; i < _mPre.length; i++) {
-      var pre = _mPre[i];
-      if (c.indexOf(pre) === 0 && c.length - pre.length >= 3) {
-        var body = c.slice(pre.length);
-        cands.push(body);
-        for (j = 0; j < _mSuf.length; j++) {
-          var s2 = _mSuf[j];
-          if (body.length > s2.length + 2 && body.slice(-s2.length) === s2) cands.push(body.slice(0, -s2.length));
-        }
-      }
-    }
-    for (i = 0; i < cands.length; i++) {
-      var cand = cands[i];
-      if (cand.length < 3) continue;
-      if (LI[cand] !== undefined) { if (LI[cand]) return baseRoot(LI[cand]); if (isShoresh(cand)) return cand; }
-    }
-    // Conjugated verb Strong's has no surface form for: peel the verbal
-    // preformative (hitpael יִתְאַסְּפוּ, imperfect, waw-consecutive) and accept
-    // only a real lemma. On an ambiguous skeleton a verb lemma wins — the
-    // peel itself proves the word is a verb.
-    for (i = 0; i < _mVPre.length; i++) {
-      var vp = _mVPre[i];
-      if (c.indexOf(vp) !== 0 || c.length - vp.length < 3) continue;
-      var vbody = c.slice(vp.length);
-      var vcands = [vbody];
-      for (j = 0; j < _mSuf.length; j++) {
-        var vs = _mSuf[j];
-        if (vbody.length > vs.length + 2 && vbody.slice(-vs.length) === vs) vcands.push(vbody.slice(0, -vs.length));
-      }
-      for (j = 0; j < vcands.length; j++) {
-        var vc = vcands[j];
-        if (vc.length < 3) continue;
-        if (LI[vc]) return baseRoot(LI[vc]);
-        if (LI[vc] === null && _lemIdxVerb[vc]) return baseRoot(_lemIdxVerb[vc]);
-      }
-    }
-    return '';
-  }
-
-  // The hand-classified heading pins (2026-08-29). These are exact tapped
-  // surfaces from the chapter summaries, each classified by its English
-  // gloss, so they pre-empt every guessing layer — Strong's peel included
-  // (מַבְטִיחַ was reaching טִיחַ "mortar"). Checked by EXACT surface only:
-  // no prefix-stripping, so nothing else in the corpus can collide. They
-  // deliberately do NOT share rootMap/_lexNoPeel — widening that gate to
-  // these families woke dormant legacy pins (תְּפִלָּה→תפל "plaster") and
-  // had to be reverted.
-  var _headPins = {
+  // 2c. SURFACE_PINS — EXACT pointed surface → family key, consulted FIRST
+  // (stage 1), no layering, so nothing else in the corpus can collide. The
+  // hand-classified heading vocabulary, the Book of Mormon names and
+  // gentilics as their own families, the Nephite measures, the
+  // preposition+suffix words (בִּי, לִי…), the grammaticalized particles
+  // (כַּאֲשֶׁר, לָכֵן…), and the name/word collisions the POINTING separates
+  // (לְמִן "from the day" vs לָמָן). A value that is a Strong's number goes
+  // through FAMILY; a bare string returns as is and never reaches baseRoot —
+  // which is the point for a name (Lehi must not become "jaw").
+    var SURFACE_PINS = {
 
     // Names are their own family now, which makes one class of collision
     // visible for the first time: a BOM name whose skeleton accidentally
@@ -1285,28 +803,341 @@
     'הַמְתַעֵד': 'תעד', 'תּוֹעִים': 'תעה', 'תּוֹקְפִים': 'תקף', 'שֶׁתּוֹקְפִים': 'תקף', 'תּוֹקְפֵי': 'תקף'
   };
 
-  // rootMap lookup at every peel depth, shallowest first — the same
-  // longest-remainder rule the Strong's chain follows.
-  function _rootMapLayered(w) {
+  // 2d. FAMILY_SPLIT — Strong's number → family key, applied BEFORE BDB in
+  // FAMILY (section 4). BDB and Strong's derivation pointers merge by
+  // etymology; where that merge crosses a POINTING boundary the nikkud is
+  // the arbiter and the lexeme gets its own family: מַיִם is not מִי, אֲדָמָה
+  // is not אָדָם, בְּשׂוֹרָה is not שׁוֹר, the Name is not הוה "to be", and a
+  // name coined from a verb (Nadab, Og, Machir) is not that verb.
+    var FAMILY_SPLIT = { 'H4325': 'מים', 'H0127': 'אדמה', 'H4057': 'מדבר',
+                    'H4725': 'מקום', 'H4196': 'מזבח',
+                    'H1309': 'בשורה',   // gospel, not בשר/שור
+                    'H0123': 'אדום',    // Edom, not אדם "man"
+                    'H5178': 'נחשת',    // brass, not נחש "serpent"
+                    'H4399': 'מלאכה',   // work, not מלאך "angel"
+                    'H8111': 'שמרון',   // Samaria, not שמר "keep"
+                    'H5715': 'עדות',    // testimony, not עוד "still, yet"
+                    'H4079': 'מדין', 'H4080': 'מדין',   // Midian, not דין "judgment"
+                    'H0347': 'איוב',    // Job, not איב "enemy"
+                    'H1144': 'בנימין',  // Benjamin, not בן "son"
+                    'H2220': 'זרוע',   // arm, not זרע "seed"
+                    'H1754': 'כדור',   // ball (the Liahona), not דור "generation"
+                    'H2983': 'יבוסי',  // Jebusite, not בוס "trample"
+                    // ל"ה-derived nouns: the root's ה never surfaces in the
+                    // noun, so the transparency gate rejects BDB's (correct)
+                    // filing and the peeler invented a נין family that mixed
+                    // buildings with quorums and offspring (the 2 Ne 5:15 card)
+                    'H1146': 'בנה',    // בִּנְיָן building → build
+                    'H4510': 'מנה',    // מִנְיָן quorum, reckoning → count
+                    'H5209': 'נין',    // נִין offspring keeps its own family
+                    // the גלל grab-bag (the biglal card): BDB files the place
+                    // Gilgal, the scroll, and Galilee under "roll" — names and
+                    // pointing-distinct nouns get their own families; the
+                    // preposition בִּגְלַל and the wheel גַּלְגַּל stay under
+                    // the geminate root
+                    'H1537': 'גלגל',   // Gilgal the place, not גלל "roll"
+                    'H1558': 'בגלל',   // the preposition gets its own card, the בֵּין pattern
+                    'H3068': 'יהוה', 'H3069': 'יהוה', 'H3050': 'יהוה',  // the divine name (Yah included), not הוה 'to be'
+                    'H8668': 'ישע',    // תְּשׁוּעָה salvation — Strong's derives it from שוע 'cry', BDB files it under ישע
+                    'H8478': 'תחת', 'H8480': 'תחת',  // under/instead-of (Hebrew + Aramaic) — one form carried a number while its sisters keyed the string
+                    'H2148': 'זכריה', 'H5418': 'נתניה',  // Zechariah, Nethaniah — names, not verbs
+                    'H8068': 'שמיר',   // brier/adamant, not שמר 'keep'
+                    'H2689': 'חצוצרה', // trumpet, not חצר 'courtyard'
+                    'H4692': 'מצור',   // siege, not צור 'rock'
+                    // names whose Strong's derivation pointer collapses them onto
+                    // the verb they were coined from (the Abram class):
+                    'H5070': 'נָדָב', 'H3312': 'יְפֻנֶּה', 'H4353': 'מָכִיר', 'H8304': 'שְׂרָיָה',
+                    'H3003': 'יָבֵשׁ', 'H5747': 'עוֹג', 'H7143': 'קָרֵחַ',
+                    'H8184': 'שעורה',  // barley, not שער 'hair/gate'
+                    // the אל grab-bag (1 Ne 1:14 elekha): God, the preposition,
+                    // and the negation are three pointing-distinct lexemes —
+                    // El keeps the bare key; the particles get pointed keys
+                    'H0413': 'אֶל', 'H0408': 'אַל',
+                    'H0417': 'אלגביש',  // hailstones — pointer would collapse into H0410 God
+                    'H0484': 'אלמגים', 'H0418': 'אלמגים',  // almug/algum timber — BDB files it under אל
+                    // the nikkud-conflation sweep (2026-08-30, corpus-wide):
+                    'H5973': 'עִם', 'H4421': 'מלחמה',
+                    'H8066': 'שמונה', 'H8083': 'שמונה', 'H8084': 'שמונה',
+                    'H0929': 'בהמה', 'H0591': 'אניה', 'H7462': 'רֹעֶה',
+                    'H0835': 'אשרי', 'H0836': 'אָשֵׁר', 'H0842': 'אָשֵׁר',
+                    'H1768': 'דִּי', 'H3863': 'לוּ', 'H5787': 'עִוֵּר', 'H6311': 'פֹּה',
+                    'H1119': 'בְּמוֹ', 'H3926': 'לְמוֹ',  // the poetic byform particles keep their own cards, not the bare-letter buckets
+                    'H6105': 'עצם',    // the verb joins the bone/substance family — one etsem card
+                    'H4082': 'מדינה', 'H7979': 'שולחן', 'H2275': 'חברון', 'H3844': 'לבנון',
+                    'H0085': 'אברהם', 'H0087': 'אברהם', 'H4735': 'מקנה',
+                    'H7927': 'שְׁכֶם', 'H8163': 'שָׂעִיר', 'H5749': 'העיד',
+                    'H0197': 'אולם',    // porch — not אֱוִיל 'fool'
+                    'H4026': 'מגדל',    // tower — not גדל 'great'
+                    'H5923': 'עֹל',      // yoke — not מעלל 'doings'
+                    'H1864': 'דרום',    // south — not דרור 'liberty'
+                    'H5744': 'עובד',    // Obed — not עבד 'serve'
+                    'H2461': 'חָלָב',    // milk — not חֵלֶב 'fat'
+                    'H6677': 'צואר',    // neck — not צור 'rock'
+                    'H6571': 'פָּרָשׁ',   // horseman — not פרש 'spread'
+                    'H5978': 'עִם',      // immadi 'with me' joins the preposition
+                    'H1319': 'בשורה',   // the preach-tidings verb joins gospel
+                    'H4039': 'מגלה',   // מְגִלָּה scroll, not גלל "roll"
+                    'H4624': 'מעקה',  // the parapet/rail (Deut 22:8) — the rod of iron; not עקה 'distress'
+                    // the חלל chain (the hachel card): Strong's derivation
+                    // pointers funneled four pointing-distinct lexemes into one
+                    // "wound" family. The verb (H2490: הֵחֵל begin, חִלֵּל
+                    // profane, חָלַל pierce) keeps the BDB key; the noun, the
+                    // exclamation and the ת-derivative get their own cards
+                    'H2491': 'חָלָל',   // slain (the noun), pointed key vs the verb's חלל
+                    'H2486': 'חלילה',  // far be it — the exclamation
+                    'H8462': 'תחלה',   // beginning — the ת-derivative, the מנין/בנין class
+                    'H1551': 'גליל', 'H1552': 'גליל', 'H1553': 'גליל' };
+
+  // 2e. Numerals keep their own entries — Strong's pointers chain them.
+    var NUMERAL = {H0259:1,H8147:1,H7969:1,H0702:1,H2568:1,H8337:1,H7651:1,
+                 H8083:1,H8672:1,H6235:1,H3967:1,H0505:1,H7239:1,H6242:1,
+                 H7970:1,H0705:1,H2572:1,H8346:1,H7657:1,H8084:1,H8673:1};
+
+  // 2f. Single-mater collapses of a plene spelling, one substitution per
+  // variant (חוֹלָם→חֹלָם, שׁוּרֻק→קֻבּוּץ, חִירִיק/צֵירֶה מָלֵא→חָסֵר).
+  // Deliberately NOT a full demater; a variant counts only when a DATA
+  // layer recognizes it (stage 7).
+    var _materPats = [[/\u05D5\u05B9/g, '\u05B9'], [/\u05D5\u05BC/g, '\u05BB'],
+                    [/\u05B4\u05D9/g, '\u05B4'], [/\u05B5\u05D9/g, '\u05B5']];
+  function _materVariants(s) {
+    var out = [];
+    for (var pi = 0; pi < _materPats.length; pi++) {
+      var re = _materPats[pi][0], rep = _materPats[pi][1], m;
+      re.lastIndex = 0;
+      while ((m = re.exec(s)) !== null) {
+        out.push(s.slice(0, m.index) + rep + s.slice(m.index + m[0].length));
+        if (out.length >= 8) return out;
+      }
+    }
+    return out;
+  }
+
+  // 2g. Consonantal affix lists for the lexicon peel (stage 3) and the
+  // morphology (stage 6).
+    var _rePre = /^(וכש|ומ|וב|ול|וכ|וה|כש|לכ|מה|בה|כה|לה|ו|ה|ב|כ|ל|מ|ש)/;
+    var _sufs = ['ותיהם','ותיכם','ותיהן','ותיכן','ותינו','ותיך','ותיה','ותיו','ותם','ותן','ותי','יהם','יכם',
+               'ינו','תיו','נו','כם','הם','הן','תי','יו','יה','ים','ות','ת','ם','ן','ו','ה','י','ך'];
+    var _mSuf = ['ותיהם','ותינו','ותיכם','וני','ניו','תיו','יהם','יכם','ינו','ני',
+               'נו','הו','תי','תם','תן','כם','הם','הן','ים','ות','ת','ם','ן','ו','ה','י','ך'];
+    var _mVPre = ['והת','וית','ומת','ותת','הת','ית','מת','נת','את','תת','וי','ונ','וא','ות','י','ת','נ','א'];
+    var _mPre = ['וכש','ומ','וב','ול','וכ','וה','כש','ו','ה','ב','כ','ל','מ','ש'];
+
+  // ======================================================================
+  // 3. LEXICON — lazy indexes over the loaded data
+  // ======================================================================
+  // Every index is built on first use and NEVER cached empty: the data files
+  // load lazily on the pages, and caching before strongs_lookup.js arrives
+  // would disable the layer for the page's life.
+
+  function _lookup() { return (typeof window !== 'undefined' && window._strongsLookup) || null; }
+  function _roots() { return (typeof window !== 'undefined' && window._strongsRoots) || null; }
+  function _names() { return (typeof window !== 'undefined' && window._rootProperNames) || null; }
+  function _attested() { return (typeof window !== 'undefined' && window._rootWordForms) || null; }
+
+  // 3a. Surface-consonant index: dotted consonants (finals kept) of every
+  // lexicon surface → its Strong's number; null where two numbers share the
+  // skeleton (the nikkud is then the only separator, so the skeleton refuses).
+  // Used by the lexicon peel (stage 3).
+  var _sci = null;
+  function surfaceConsonantIndex() {
+    if (_sci) return _sci;
+    var LK = _lookup(); if (!LK) return {};
+    _sci = {};
+    for (var k in LK) {
+      var c = stripNikkud(k);
+      if (!c) continue;
+      if (_sci[c] === undefined) _sci[c] = LK[k];
+      else if (_sci[c] !== LK[k]) _sci[c] = null;
+    }
+    return _sci;
+  }
+  // 3b. Skeleton index: folded, dotless, letters-only key of every lexicon
+  // surface → Strong's number, '*' where ambiguous. Used by the consonantal
+  // stage (5): an inflected form's vowels come from the PARADIGM, not the
+  // root, so a whole-form skeleton match is accepted where it is unambiguous.
+  // (Distinct from 3a in what it folds; the two may merge once the golden
+  // test proves the answers identical — until then both stay.)
+  var _ski = null;
+  function skeletonIndex() {
+    if (_ski) return _ski;
+    var LK = _lookup(); if (!LK) return (_ski = {});
+    var ix = {};
+    for (var k in LK) {
+      if (!Object.prototype.hasOwnProperty.call(LK, k)) continue;
+      var ck = _ckey(k);
+      if (ck.length < 2) continue;
+      var v = LK[k];
+      if (v && v.length && typeof v !== 'string') v = v[0];
+      if (!v) continue;
+      v = String(v);
+      var cur = ix[ck];
+      if (cur === undefined) ix[ck] = v;
+      else if (cur !== v) ix[ck] = '*';
+    }
+    return (_ski = ix);
+  }
+  // 3c. Lemma index: folded skeleton of every Strong's LEMMA → number (null
+  // where ambiguous), plus a verbs-only index (this data carries .p on verb
+  // entries only) so a conjugation peel can break a verb/name tie.
+  var _lemIdx = null, _lemIdxVerb = null;
+  function lemmaIndex() {
+    if (_lemIdx) return _lemIdx;
+    var SR = _roots(); if (!SR) return {};
+    _lemIdx = {}; _lemIdxVerb = {};
+    for (var n in SR) {
+      var e = SR[n];
+      if (!e || !e.w) continue;
+      var c = normFinals(stripNikkud(e.w));
+      if (c.length < 2) continue;
+      if (_lemIdx[c] === undefined) _lemIdx[c] = n;
+      else if (_lemIdx[c] !== n) _lemIdx[c] = null;
+      if (e.p !== undefined) {
+        if (_lemIdxVerb[c] === undefined) _lemIdxVerb[c] = n;
+        else if (_lemIdxVerb[c] !== n) _lemIdxVerb[c] = null;
+      }
+    }
+    return _lemIdx;
+  }
+  // 3d. Brauner SHOROSHIM: a root minted by morphology must be a real
+  // shoresh. Guideline 13 — an unpointed ש checks both שׁ and שׂ, so
+  // membership is tested dot-blind against the dotted inventory.
+  function isShoresh(k) {
+    var L = typeof window !== 'undefined' && window._shoroshimRoots;
+    if (!L) return true;
+    if (!window._shoroshimSet) {
+      var set = {};
+      for (var i = 0; i < L.length; i++) {
+        set[L[i]] = 1;
+        set[L[i].replace(/[ְ-ׇֽֿׁׂ]/g, '')] = 1;
+      }
+      window._shoroshimSet = set;
+    }
+    return !!window._shoroshimSet[normFinals(k)];
+  }
+
+  // ======================================================================
+  // 4. FAMILY — Strong's number → family key
+  // ======================================================================
+  // Brown-Driver-Briggs keys the ROOT where Strong's keys the lexeme (דָּבָר
+  // the noun and דִּבֶּר the verb both under דבר), and it is data rather than
+  // inference. Order: FAMILY_SPLIT (the pointing-boundary exceptions) → BDB
+  // where its root is morphologically transparent (window._bdbOk) → Strong's
+  // own derivation pointer, walked one link at a time and kept only while the
+  // link is a genuine derivation (a triliteral base; a name never derives a
+  // common word; a derived form ADDS to its root). Numerals and lexemes with
+  // no entry are their own family.
+  function propName(x) {
+    return !!(x && x.g && /^[A-Z][A-Za-z-]*$/.test(x.g) && !/^(God|Lord|Law|Holy|Amen)$/.test(x.g));
+  }
+  var _baseOf = null;
+  function familyOf(sNum) {
+    if (FAMILY_SPLIT[sNum]) return FAMILY_SPLIT[sNum];
+    if (typeof window !== 'undefined' && window._bdbRoots && window._bdbRoots[sNum] && window._bdbOk) {
+      var _b = window._bdbOk(sNum);
+      if (_b) return _b;
+    }
+    if (!_baseOf) {
+      _baseOf = {};
+      var SR = _roots();
+      if (SR) {
+        var skel = function (w) { return normFinals(stripNikkud(String(w || ''))).replace(/[^א-ת]/g, ''); };
+        var SUF = ['ות', 'ים', 'ון', 'ית', 'ה', 'ת', 'י', 'ם', 'ן'];
+        var derives = function (src, base) {
+          if (!src || !base) return false;
+          if (src === base) return true;
+          if (src.length < base.length) return false;         // a derivation ADDS to its root
+          var stems = [src];
+          if (src.length > base.length && (src.charAt(0) === 'מ' || src.charAt(0) === 'ת')) stems.push(src.slice(1));
+          for (var k = 0; k < stems.length; k++) {
+            var s2 = stems[k];
+            if (s2 === base) return true;
+            for (var i = 0; i < SUF.length; i++) {
+              var sf = SUF[i];
+              if (s2.length > base.length && s2.slice(-sf.length) === sf) {
+                if (s2.slice(0, -sf.length) === base) return true;
+                var a0 = s2.slice(0, -sf.length).replace(/[וי]/g, '');
+                if (a0 === base.replace(/[וי]/g, '')) return true;
+              }
+            }
+            var a = s2.replace(/[וי]/g, '');                    // matres drop from the DERIVED form only
+            if (a === base && s2.length - base.length <= 1) return true;
+          }
+          return false;
+        };
+        for (var n in SR) {
+          var srcW = SR[n] && SR[n].w;
+          if (!srcW) { _baseOf[n] = n; continue; }
+          if (NUMERAL[n]) { _baseOf[n] = n; continue; }
+          var cur = n, best = n, seen = {}, guard = 0;
+          while (SR[cur] && SR[cur].r && SR[cur].r !== cur && !seen[cur] && guard++ < 8) {
+            seen[cur] = 1;
+            var nxt = SR[cur].r;
+            var ne = SR[nxt];
+            if (!ne || !ne.w) break;
+            var nb = skel(ne.w);
+            if ((ne.w.match(/[א-ת]/g) || []).length !== 3) break;
+            if (propName(ne) && !propName(SR[n])) break;
+            if (!derives(skel(srcW), nb)) break;
+            best = nxt;
+            cur = nxt;
+          }
+          _baseOf[n] = best;
+        }
+      }
+    }
+    return _baseOf[sNum] || sNum;
+  }
+  // A table value is either a Strong's number (→ family) or a bare key.
+  function _keyOf(v) { return /^H\d/.test(v) ? familyOf(v) : v; }
+
+  // ======================================================================
+  // 5. STAGES — each takes the word and its context, answers a key or ''
+  // ======================================================================
+  // ctx: { raw, w, pieces, head, isName }
+  //   raw    the form as given (punctuation intact — SURFACE_MAP/SURFACE_PINS
+  //          carry a few keys with a sof pasuq glued on)
+  //   w      cleaned form;  pieces = maqqef/space split;  head = last piece
+  //   isName the head is a surface the corpus glosses as a proper name
+
+  function _context(hw) {
+    var w = _clean(hw), ps = _pieces(w), head = ps[ps.length - 1] || '';
+    var N = _names();
+    return { raw: hw, w: w, pieces: ps, head: head, isName: !!(N && N[normFinals(stripNikkud(head))]) };
+  }
+  function _mapLayered(map, w) {
     var L = stripLayers(w);
-    for (var i = 0; i < L.length; i++) if (rootMap[L[i]]) return rootMap[L[i]];
+    for (var i = 0; i < L.length; i++) if (map[L[i]]) return map[L[i]];
     return '';
   }
-  var _PROCLITIC = /^[\u05d5\u05d1\u05db\u05dc\u05de\u05e9\u05d4]/;   // ו ב כ ל מ ש ה
-  function _nameFamily(w) {
-    var tbl = (typeof window !== 'undefined') && window._rootProperNames;
+
+  // Stage 1 — PINS. A SURFACE_MAP hit whose value is a pinned lexeme, then
+  // an exact SURFACE_PIN. These outrank the lexicon because each was placed
+  // by hand against a specific wrong answer the lexicon gives.
+  function stagePins(ctx) {
+    var lex = _mapLayered(SURFACE_MAP, ctx.raw);
+    if (lex && PINNED_LEXEMES[lex]) return _keyOf(lex);
+    var pin = SURFACE_PINS[ctx.raw];
+    return pin ? _keyOf(pin) : '';
+  }
+
+  // Stage 2 — NAMES. Ruling 2026-09-01: a Book of Mormon name is its own
+  // family ("root nephi for example thats the root, Laman root, Helaman
+  // root"). root_names.js is generated from the corpus; here it is the
+  // family, not a flag, so a name form no pin lists still resolves.
+  // Proclitics peel to the SHORTEST remainder that is itself a known name
+  // surface (נֵפִי / וְנֵפִי / לְנֵפִי are one family), never to a stub: a
+  // name root keeps at least 3 letters and the remainder must already be in
+  // the table, so nothing is invented. Particle heads are dropped, content
+  // heads keep the card. Keys are returned UNFOLDED (final letters intact)
+  // because the glossary cards are keyed on the final letter.
+  var _PROCLITIC = /^[ובכלמשה]/;   // ו ב כ ל מ ש ה
+  function stageNames(ctx) {
+    var tbl = _names();
     if (!tbl) return '';
-    var ps = _pieces(w);
-    // a PARTICLE head is dropped (עַם־נֶפִי, אֶת־נֶפִי); a CONTENT head keeps
-    // the card, so לֶחִי־נֶפִי is Lehi, not Nephi.
-    var content = ps.filter(function(p) { return !_particles[stripNikkud(p)]; });
-    var order = content.length ? content : ps;
+    var order = _contentPieces(ctx.pieces);
     for (var i = 0; i < order.length; i++) {
-      var raw = stripNikkud(order[i]);           // final letters INTACT
+      var raw = stripNikkud(order[i]);
       if (!tbl[normFinals(raw)]) continue;
-      // root_names.js is keyed folded, but the glossary cards are keyed on the
-      // FINAL letter (2029 of them) — so look up folded and return unfolded, or
-      // הֵילָמָן resolves to a family "הילמנ" no card can ever match.
       var best = raw;
       while (best.length > 3 && _PROCLITIC.test(best)) {
         var shorter = best.slice(1);
@@ -1317,197 +1148,265 @@
     }
     return '';
   }
-  function _getRootFolded(hw) {
-    var w = _clean(hw);
-    var _head = _pieces(w).pop() || '';
-    var isName = !!(window._rootProperNames && window._rootProperNames[normFinals(stripNikkud(_head))]);
-    // A lexeme Strong's does not carry must not be peeled. _strongsFor strips a
-    // prefix and then accepts whatever Strong's has for the remainder, without
-    // asking whether the result makes sense — which is how כְּנֵסִיָּתִי ("my
-    // church") landed on H5254 נָסָה "to test" and לַכְּנֵסִיָּה ("to the
-    // church") on H5251 נֵס "a banner", the כ read as a prefix. Same guard the
-    // proper names already use, and like them it leaves Strong's words alone.
-    var _lexKey = _rootMapLayered(hw);
-    var isLex = !!(_lexKey && _lexNoPeel[_lexKey]);
-    if (isLex) return /^H\d/.test(_lexKey) ? baseRoot(_lexKey) : _lexKey;
-    var _hp = _headPins[hw];
-    if (_hp) return /^H\d/.test(_hp) ? baseRoot(_hp) : _hp;
 
-    // ---- BOM NAMES ARE THEIR OWN ROOT FAMILY --------------------------------
-    // Ruling 2026-09-01: "the root for the family should be the name in the
-    // BOM ... root nephi for example thats the root, Laman root, Helaman root".
-    // Before this, a BOM name was routed through Strong's, so נֶפִי landed on
-    // H5297 (נֹף, the Egyptian city Memphis) and לָמָן on H4478 (מָן, manna) —
-    // Hebrew words that have nothing to do with the person named. root_names.js
-    // already knows 6301 surfaces the corpus glosses as proper names, but it
-    // was only ever used as a don't-peel FLAG. Here it becomes the family: the
-    // name is the root. This is a RULE, not a list of pinned forms, so a name
-    // form that appears nowhere in the pins still resolves.
-    //
-    // Proclitics are peeled to the SHORTEST remainder that is itself a known
-    // name surface, which is what collapses נֵפִי / וְנֵפִי / לְנֵפִי / כִּנְפִי
-    // into one family instead of four. Never peel to a stub: a name root keeps
-    // at least 3 letters, and the remainder must ALREADY be in the name table,
-    // so nothing is invented.
-    var _nm = _nameFamily(w);
-    if (_nm) return _nm;
-
-    var s = _strongsFor(w, isName);
-    if (s) return baseRoot(s);
-    var _rmk = _rootMapLayered(hw);
-    if (_rmk) return /^H\d/.test(_rmk) ? baseRoot(_rmk) : _rmk;
-    var ps = _pieces(w);
-    if (ps.length > 1) {                                       // maqqef/space compound: use head
-      var content = ps.filter(function(p) { return !_particles[stripNikkud(p)]; });
-      var order = content.length ? content : ps;
-      for (var i = 0; i < order.length; i++) {
-        var sp = _strongsFor(order[i], isName);
-        if (sp) return baseRoot(sp);
-      }
+  // Stage 3 — LEXICON. Resolve ONE maqqef-free word to a Strong's number:
+  // the pointed layers shallowest first (exact form before any peel), then
+  // the dotted consonant index (defective/variant pointing), then a
+  // consonantal prefix peel that stops at a real-but-ambiguous skeleton
+  // (בכור is H1060/H1061; one more strip reached כור and filed the firstborn
+  // under the furnace), then plural/pronominal endings with segholate
+  // restoration (ארצ → ארץ) — a two-letter residue after a prefix has been
+  // removed is the peeler eating the word (מִנְחוֹתָיו → נח "rest") and is
+  // refused. A NAME gets the exact pointed lookups and nothing more: fuzzy
+  // matching filed every נֶפִי under H5297 נֹף, Memphis.
+  function _strongsFor(w, strict) {
+    var LK = _lookup(), SR = _roots();
+    if (!LK || !SR) return '';
+    var CI = surfaceConsonantIndex();
+    var sNum = '';
+    if (strict) sNum = LK[w] || '';
+    else {
+      var _L = stripLayers(w), _li;
+      for (_li = 0; _li < _L.length && !sNum; _li++) sNum = LK[_L[_li]] || '';
+      for (_li = 0; _li < _L.length && !sNum; _li++) sNum = LK[stripNikkud(_L[_li])] || '';
     }
-    // CONSONANTAL LOOKUP — before the morphology, because it is a lookup and
-    // that is a guess. Measured on held-out pairs: Strong's forms 89.5%,
-    // runtime morphology 43.9%. rootByMorphology was answering first and
-    // returning לֻמְּדוּ -> "למדו" while the index had H3925 -> למד waiting.
-    //
-    // Translator's rule (2026-08-31): "just because the nikkud isnt correct on
-    // a conjugated word should never have any issue with looking up root
-    // words." An inflected form's vowels come from the PARADIGM, not the root,
-    // so they identify nothing; pointing matters only where it separates two
-    // DIFFERENT roots (וַתָּגֶל = גָּלָה or גִּיל). So: match on consonants,
-    // accept only where the skeleton is unambiguous. Where nothing is
-    // ambiguous there is nothing for the nikkud to disambiguate.
-    if (!isName) {
-      var cHit = _consIndex()[_ckey(_head || w)];
-      if (cHit && cHit !== '*') {               // '*' = skeleton shared by two roots
-        var cRoot = baseRoot(cHit);
-        if (cRoot) return cRoot;
-      }
+    if (sNum && SR[sNum]) return sNum;
+    if (strict) return '';
+    var c = stripNikkud(w);
+    if (!c) return '';
+    if (CI[c] && SR[CI[c]]) return CI[c];
+    var b = c;
+    for (var p = 0; p < 3; p++) {
+      var m = b.match(_rePre);
+      if (!m) break;
+      b = b.slice(m[1].length);
+      if (b.length < 2) break;
+      if (CI[b] && SR[CI[b]]) return CI[b];
+      if (b in CI && CI[b] === null) break;
     }
-    // Inflected form of a real root? Skip this for words the corpus glosses as
-    // proper names — מוֹרוֹנִי would otherwise peel to מור, a real root meaning
-    // "to change", and Moroni would be filed under it.
-    if (!isName) {
-      var byMorph = rootByMorphology(_head || w);
-      if (byMorph) return byMorph;
-    }
-
-    // Modern plene spellings: the chapter headings write חוֹלָם/שׁוּרֻק/חיריק
-    // maters where the MT is defective (בּוֹחֵר for בֹּחֵר, אוֹרְחָיו for
-    // אֹרְחָיו), so every layer above misses and the word used to fall through
-    // to a bucket-less consonantal key — the bare "Occurrences: 1" card.
-    // Retry the cascade on single-mater collapses, ONE substitution at a time
-    // (full demater made confidently wrong matches — הַשְּׁנִיָּה→"the year";
-    // single-step is the same safe variant build_heading_words.py uses), and
-    // only against data layers: Strong's, rootMap, then gated morphology.
-    if (!isName) {
-      var mvars = _materVariants(_head || w);
-      for (var mi = 0; mi < mvars.length; mi++) {
-        var mv = mvars[mi];
-        var msv = _strongsFor(mv, isName);
-        // Guard: _strongsFor peels prefixes and dematerializes on its own, so
-        // an eager variant can land on a tiny lemma (מוֹבִיל reached בַּל
-        // "not"). A collapse-retry match must name a real root-sized lemma.
-        if (msv && window._strongsRoots && window._strongsRoots[msv]) {
-          var mlem = stripNikkud(String(window._strongsRoots[msv].w || '')).replace(/[ׁׂ]/g, '');
-          if (mlem.length >= 3) return baseRoot(msv);
+    var bases = [c, b], fin = { 'מ': 'ם', 'נ': 'ן', 'צ': 'ץ', 'פ': 'ף', 'כ': 'ך' };
+    for (var i = 0; i < bases.length; i++) {
+      for (var j = 0; j < _sufs.length; j++) {
+        var s = _sufs[j], B = bases[i];
+        if (B.length > s.length + 1 && B.slice(-s.length) === s) {
+          var st = B.slice(0, -s.length);
+          if (B !== c && st.length < 3) continue;
+          if (CI[st] && SR[CI[st]]) return CI[st];
+          var lc = st.slice(-1);
+          if (fin[lc] && CI[st.slice(0, -1) + fin[lc]] && SR[CI[st.slice(0, -1) + fin[lc]]])
+            return CI[st.slice(0, -1) + fin[lc]];
         }
-        var mlex = _rootMapLayered(mv);
-        if (mlex) return /^H\d/.test(mlex) ? baseRoot(mlex) : mlex;
       }
     }
+    return '';
+  }
+  function stageLexicon(ctx) {
+    var s = _strongsFor(ctx.w, ctx.isName);
+    return s ? familyOf(s) : '';
+  }
 
-    // Honest fallback: a real word Strong's does not carry (Smith, Rigdon,
-    // Sanhedrin, אֵינוֹ...). Key it by its own consonantal form, never a stem.
-    // The shin/sin dots stay in stripNikkud for Brauner's sake, but a KEY must
-    // be dotless — the concordance buckets are dotless, and a dotted fallback
-    // key (שׁמן) could never match its own family (שמן).
-    var head = ps.filter(function(p) { return !_particles[stripNikkud(p)]; }).pop() || ps.pop() || '';
+  // Stage 4 — SURFACE MAP, any layer, values not pinned as lexemes.
+  function stageSurfaceMap(ctx) {
+    var v = _mapLayered(SURFACE_MAP, ctx.raw);
+    return v ? _keyOf(v) : '';
+  }
+
+  // Stage 5 — COMPOUND. A maqqef/space compound the layers did not settle:
+  // try each content piece (or each piece) through the lexicon in order.
+  function stageCompound(ctx) {
+    if (ctx.pieces.length <= 1) return '';
+    var order = _contentPieces(ctx.pieces);
+    for (var i = 0; i < order.length; i++) {
+      var sp = _strongsFor(order[i], ctx.isName);
+      if (sp) return familyOf(sp);
+    }
+    return '';
+  }
+
+  // Stage 6 — CONSONANTS. Whole-form skeleton match, accepted only where the
+  // skeleton is unambiguous (translator's rule 2026-08-31: "just because the
+  // nikkud isnt correct on a conjugated word should never have any issue
+  // with looking up root words"). Before the morphology, because a lookup
+  // beats a guess (measured 89.5% vs 43.9%). Never for a name.
+  function stageConsonants(ctx) {
+    if (ctx.isName) return '';
+    var hit = skeletonIndex()[_ckey(ctx.head || ctx.w)];
+    if (hit && hit !== '*') { var r = familyOf(hit); if (r) return r; }
+    return '';
+  }
+
+  // Stage 7 — MORPHOLOGY. Peel affixes off an inflected form and keep the
+  // first residue that is a real lemma (or, unindexed, a real shoresh per
+  // Brauner). Then the verbal preformatives (hitpael, imperfect, waw-
+  // consecutive), accepting only a real lemma; on an ambiguous skeleton a
+  // VERB lemma wins, the peel itself having proved the word a verb. Never
+  // for a name: מוֹרוֹנִי would peel to מור "to change".
+  function rootByMorphology(w) {
+    var LI = lemmaIndex(), c = normFinals(stripNikkud(w));
+    if (c.length < 3) return '';
+    var cands = [], i, j;
+    for (i = 0; i < _mSuf.length; i++) {
+      var sfx = _mSuf[i];
+      if (c.length > sfx.length + 2 && c.slice(-sfx.length) === sfx) cands.push(c.slice(0, -sfx.length));
+    }
+    for (i = 0; i < _mPre.length; i++) {
+      var pre = _mPre[i];
+      if (c.indexOf(pre) === 0 && c.length - pre.length >= 3) {
+        var body = c.slice(pre.length);
+        cands.push(body);
+        for (j = 0; j < _mSuf.length; j++) {
+          var s2 = _mSuf[j];
+          if (body.length > s2.length + 2 && body.slice(-s2.length) === s2) cands.push(body.slice(0, -s2.length));
+        }
+      }
+    }
+    for (i = 0; i < cands.length; i++) {
+      var cand = cands[i];
+      if (cand.length < 3) continue;
+      if (LI[cand] !== undefined) { if (LI[cand]) return familyOf(LI[cand]); if (isShoresh(cand)) return cand; }
+    }
+    for (i = 0; i < _mVPre.length; i++) {
+      var vp = _mVPre[i];
+      if (c.indexOf(vp) !== 0 || c.length - vp.length < 3) continue;
+      var vbody = c.slice(vp.length);
+      var vcands = [vbody];
+      for (j = 0; j < _mSuf.length; j++) {
+        var vs = _mSuf[j];
+        if (vbody.length > vs.length + 2 && vbody.slice(-vs.length) === vs) vcands.push(vbody.slice(0, -vs.length));
+      }
+      for (j = 0; j < vcands.length; j++) {
+        var vc = vcands[j];
+        if (vc.length < 3) continue;
+        if (LI[vc]) return familyOf(LI[vc]);
+        if (LI[vc] === null && _lemIdxVerb[vc]) return familyOf(_lemIdxVerb[vc]);
+      }
+    }
+    return '';
+  }
+  function stageMorphology(ctx) {
+    return ctx.isName ? '' : rootByMorphology(ctx.head || ctx.w);
+  }
+
+  // Stage 8 — MATER COLLAPSE. Modern plene spellings (the chapter headings
+  // write בּוֹחֵר for בֹּחֵר) miss every layer above. Retry the lexicon and
+  // the surface map on single-mater collapses, one substitution at a time,
+  // and accept a lexicon hit only when it names a root-sized lemma (an eager
+  // variant of מוֹבִיל reached בַּל "not"). Never for a name.
+  function stageMaterCollapse(ctx) {
+    if (ctx.isName) return '';
+    var SR = _roots();
+    var mvars = _materVariants(ctx.head || ctx.w);
+    for (var mi = 0; mi < mvars.length; mi++) {
+      var mv = mvars[mi];
+      var msv = _strongsFor(mv, ctx.isName);
+      if (msv && SR && SR[msv]) {
+        var mlem = stripNikkud(String(SR[msv].w || '')).replace(/[ׁׂ]/g, '');
+        if (mlem.length >= 3) return familyOf(msv);
+      }
+      var mlex = _mapLayered(SURFACE_MAP, mv);
+      if (mlex) return _keyOf(mlex);
+    }
+    return '';
+  }
+
+  // Stage 9 — FALLBACK. A real word the lexicon does not carry (Smith,
+  // Sanhedrin, אֵינוֹ…) keyed by its OWN dotless consonants, never a stem —
+  // a short result is a genuine short word (לוֹ, לִי), not a fragment. A
+  // prefix is stripped only when what is left is itself attested standalone
+  // in the corpus (else הוֹרְדוֹס files under ורדוס), and a leading ש peels
+  // only when pointed שֶׁ (bare-consonant peeling sent שׁוֹמְרִים to ומרים).
+  // A name keeps every letter. No prefix peeling in the consonantal match
+  // itself: peeling manufactures an ambiguity the pointing never had
+  // (לֶחִי → חי, מְעַט → עט).
+  function stageFallback(ctx) {
+    var ps = ctx.pieces;
+    var head = ps.filter(function (p) { return !_particles[stripNikkud(p)]; }).pop() || ps[ps.length - 1] || '';
     var c = stripNikkud(head).replace(/[ׁׂ]/g, '');
-    // The fallback never truncates, so a short result is a genuine short word
-    // (לוֹ "to him", לִי "to me"), not a stem fragment. Only reject the empty
-    // case and bare single letters.
     if (c.length < 2) return '';
-    // A proper name keeps every letter: מוֹרְמוֹן must not shed its מ and become
-    // "ורמון" just because וְרַמּוֹן (Rimmon) happens to occur elsewhere.
-    if (!isName) {
+    if (!ctx.isName) {
       var m2 = c.match(_rePre);
-      if (m2) {                                                // strip a prefix only if what is
-        var rest = c.slice(m2[1].length);                      // left is itself an attested word
-        // The nikkud arbitrates the peel: a leading ש is the relative prefix
-        // ONLY when the word is pointed שֶׁ (shin + segol). Peeling by bare
-        // consonant sent שׁוֹמְרִים "guards" to ומרים and שֵׁדִים "devils" to
-        // דים — the holam/tsere say the shin is a ROOT letter.
+      if (m2) {
+        var rest = c.slice(m2[1].length);
         var okPeel = true;
         if (m2[1].indexOf('ש') >= 0 && !/^ש[ּׁׂ]*ֶ/.test(head)) okPeel = false;
-        if (okPeel && rest.length >= 3 && window._rootWordForms && window._rootWordForms[rest]) return rest;
+        var AF = _attested();
+        if (okPeel && rest.length >= 3 && AF && AF[rest]) return rest;
       }
     }
-    // CONSONANTAL FALLBACK (translator's rule, 2026-08-31): "just because the
-    // nikkud isnt correct on a conjugated word should never have any issue
-    // with looking up root words."
-    //
-    // An inflected form's vowels are fixed by the PARADIGM, not by the root,
-    // so they carry no root-identifying information: וַיֵּאָנֵס and וַיֶּאֱנֹס
-    // are the same root however they are pointed. Pointing matters only where
-    // it separates two DIFFERENT roots (וַתָּגֶל = גָּלָה or גִּיל). So match
-    // on consonants and accept ONLY where the skeleton is unambiguous — every
-    // pointed entry sharing it agrees. Where there is no ambiguity there is
-    // nothing for the nikkud to disambiguate, so nothing can be lost.
-    //
-    // Whole form only, NO prefix peeling. Peeling manufactures an ambiguity
-    // the pointing never had, and it is wrong in exactly the dangerous way:
-    // לֶחִי -> חי "living", מְעַט -> עט "stylus", וּלְמוּאֵל -> מול "front".
-    // Measured: whole-form recovers 587 forms / 12,102 tokens, and the only
-    // errors in the whole set were proper names, which !isName already blocks.
     return c;
   }
 
-  function _ckey(s) {
-    return normFinals(stripNikkud(s)).replace(/[^א-ת]/g, '');
+  // ======================================================================
+  // 6. PIPELINE
+  // ======================================================================
+  var PIPELINE = [
+    ['pins', stagePins],
+    ['name', stageNames],
+    ['lexicon', stageLexicon],
+    ['surface-map', stageSurfaceMap],
+    ['compound', stageCompound],
+    ['consonants', stageConsonants],
+    ['morphology', stageMorphology],
+    ['mater-collapse', stageMaterCollapse],
+    ['fallback', stageFallback]
+  ];
+  // No Hebrew word ends in a medial letter: a key that does is a folding
+  // artefact of the generated tables (keyed folded). Unfold once, here, so
+  // the concordance builder (which counts through getRoots) and the page
+  // agree.
+  function _unfold(r) {
+    return (typeof r === 'string' && /[כמנפצ]$/.test(r) && /^[֐-׿]+$/.test(r)) ? toSofit(r) : r;
   }
-
-
-  // Built on first miss, not at load: 83k keys is real work and most pages
-  // never reach the fallback at all.
-  var _ciCache = null;
-  function _consIndex() {
-    if (_ciCache) return _ciCache;
-    var LK = window._strongsLookup;
-    if (!LK) return (_ciCache = {});
-    var ix = {};
-    for (var k in LK) {
-      if (!Object.prototype.hasOwnProperty.call(LK, k)) continue;
-      var ck = normFinals(stripNikkud(k)).replace(/[^א-ת]/g, '');
-      if (ck.length < 2) continue;
-      var v = LK[k];
-      if (v && v.length && typeof v !== 'string') v = v[0];
-      if (!v) continue;
-      v = String(v);
-      var cur = ix[ck];
-      if (cur === undefined) ix[ck] = v;
-      else if (cur !== v) ix[ck] = '*';         // two roots share it: nikkud is the separator
-    }
-    return (_ciCache = ix);
-  }
-
-  
-  // No Hebrew word ends in a medial letter, so a family key that does is always
-  // a folding artefact: normFinals() is applied on the way IN (root_names.js and
-  // the consonantal index are both keyed folded) and was never undone on the way
-  // OUT. The glossary keys 2029 cards on the final letter and 0 of the 134
-  // tokens landing on a folded family could ever reach one. Unfold once, here —
-  // NOT in a wrapper around the export, or getRoots() (which is what
-  // tools/build_root_concordance.js counts through) keeps emitting folded keys
-  // and the generated concordance disagrees with the live page.
-  function getRoot(hw) {
-    // A trailing '*' marks a transliterated term (Adam-ondi-Ahman*): display-
-    // only, never part of the key. Stripped here so no caller can leak it in.
+  function resolve(hw) {
     hw = String(hw || '').replace(/\*/g, '');
-    var r = _getRootFolded(hw);
-    return (typeof r === 'string' && /[\u05db\u05de\u05e0\u05e4\u05e6]$/.test(r) && /^[\u0590-\u05ff]+$/.test(r))
-      ? toSofit(r) : r;
+    var ctx = _context(hw);
+    for (var i = 0; i < PIPELINE.length; i++) {
+      var key = PIPELINE[i][1](ctx);
+      if (key) return { key: _unfold(key), stage: PIPELINE[i][0] };
+    }
+    return { key: '', stage: '' };
+  }
+  function getRoot(hw) { return resolve(hw).key; }
+  function explain(hw) { return resolve(hw); }
+
+  // A maqqef joins two words; each is its own lexeme and each deserves its own
+  // scorecard entry (רַב־עֳנִי is רַב AND עֳנִי; 13% of the corpus is
+  // maqqef-joined). Transliterated terms (root_scorecard.js's exception
+  // table) are not Hebrew words and get no root: a whole-word term returns
+  // nothing, a term part of a maqqef pair (בֶּן־אַהְמָן) is dropped and the
+  // Hebrew part keeps its card.
+  function _isTT(s) {
+    try { return !!(typeof window !== 'undefined' && window.RootScorecard && window.RootScorecard.isTranslitTerm && window.RootScorecard.isTranslitTerm(s)); } catch (e) { return false; }
+  }
+  function getRoots(hw) {
+    var w = _clean(hw);
+    var parts = _pieces(w);
+    if (parts.length <= 1) {
+      if (_isTT(w)) return [];
+      var r = getRoot(hw);
+      return r ? [{ part: w, root: r }] : [];
+    }
+    if (typeof window !== 'undefined' && window.RootScorecard && window.RootScorecard.translitTermParts && window.RootScorecard.translitTermParts(w).all) return [];
+    var out = [], seen = {};
+    for (var i = 0; i < parts.length; i++) {
+      if (_isTT(parts[i])) continue;
+      var rp = getRoot(parts[i]);
+      if (!rp || seen[rp]) continue;
+      seen[rp] = 1;
+      out.push({ part: parts[i], root: rp });
+    }
+    if (!out.length) { var r2 = getRoot(hw); if (r2) out.push({ part: w, root: r2 }); }
+    return out;
   }
 
-  window.RootEngine = { getRoot: getRoot, getRoots: getRoots, stripPrefixes: stripPrefixes, stripLayers: stripLayers, stripNikkud: stripNikkud, toSofit: toSofit, normFinals: normFinals, rootMap: rootMap };
+  // ======================================================================
+  // 7. EXPORT — the surface bom.html and the tools alias; keep every member
+  // ======================================================================
+  var rootMap = SURFACE_MAP;   // the pages alias RootEngine.rootMap by this name
+  window.RootEngine = {
+    getRoot: getRoot, getRoots: getRoots, explain: explain, resolve: resolve,
+    stripPrefixes: stripPrefixes, stripLayers: stripLayers, stripNikkud: stripNikkud,
+    toSofit: toSofit, normFinals: normFinals, rootMap: rootMap,
+    stages: PIPELINE.map(function (s) { return s[0]; })
+  };
 })();
