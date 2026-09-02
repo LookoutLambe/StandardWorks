@@ -1297,25 +1297,7 @@ var ch8Verses = [
     ["לְבַב־אֱנוֹשׁ","one"],
     ["׃",""]
   ]},
-  { num:"יא", words:[
-    ["וָאֵלֵךְ","and I went forth"],
-    ["וָאֹכַל","and partook"],
-    ["מִפִּרְיוֹ","of the fruit thereof"],
-    ["וָאֵרֶא","and I beheld"],
-    ["כִּי־מָתוֹק","that sweet was"],
-    ["הוּא","it"],
-    ["מִכׇּל־אֲשֶׁר","above all that"],
-    ["טָעַמְתִּי","I had tasted"],
-    ["עַד־הֵנָּה","hitherto"],
-    ["וָאֵרֶא","yea, and I beheld"],
-    ["כִּי־לָבָן","that white was"],
-    ["הוּא","it"],
-    ["לְהַפְלִיא","wondrously"],
-    ["מִכׇּל־לֹבֶן","to exceed all the whiteness"],
-    ["אֲשֶׁר","that"],
-    ["רָאִיתִי","I had ever seen"],
-    ["׃",""]
-  ]},
+  { num: "יא", words: [["וָאֵלֵךְ","and I went forth"], ["וָאֹכַל","and partook"], ["מִפִּרְיוֹ","of the fruit thereof"], ["וָאֵרֶא","and I beheld"], ["כִּי־מָתוֹק","that sweet was"], ["הוּא","it"], ["מִכׇּל־אֲשֶׁר","above all that"], ["טָעַמְתִּי","I had tasted"], ["עַד־הֵנָּה","hitherto"], ["וָאֵרֶא","yea, and I beheld"], ["כִּי־לָבָן","that white was"], ["הוּא","it"], ["לְהַפְלִיא","to exceed"], ["מִכׇּל־לֹבֶן","all the whiteness"], ["אֲשֶׁר","that"], ["רָאִיתִי","I had ever seen"], ["׃",""]]},
   { num: "יב", words: [["וַיְהִי","and it came to pass"], ["בְּאׇכְלִי","as I partook"], ["מִפִּרְיוֹ","of the fruit thereof"], ["וַיְמַלֵּא","it filled"], ["אֶת־נַפְשִׁי","my soul"], ["שִׂמְחָה","joy"], ["גְדוֹלָה","great"], ["מְאֹד","exceedingly"], ["עַל־כֵּן","wherefore"], ["הֵחַלְתִּי","I began"], ["לְהִתְאַוּוֹת","to desire"], ["כִּי־יֹאכְלוּ","that should partake"], ["מִשְׁפַּחְתִּי","my family"], ["גַּם־הֵם","also"], ["מִמֶּנּוּ","of it"], ["כִּי","for"], ["יָדַעְתִּי","I knew"], ["כִּי־נֶחְמָד","that desirable"], ["הוּא","it was"], ["מִכׇּל־פְּרִי","above all fruit"], ["׃",""]]},
   { num: "יג", words: [["וַיְהִי","and as"], ["בְּהַבִּיטִי","I cast my eyes"], ["סָבִיב","round about"], ["אוּלַי","that perhaps"], ["אֶמְצָא","I might discover"], ["גַּם","also"], ["אֶת־מִשְׁפַּחְתִּי","my family"], ["וָאֵרֶא","I beheld"], ["נְהַר־מַיִם","a river of water"], ["וַיִּזְרֹם","and it ran"], ["הָלוֹךְ","along"], ["וְהוּא","and it was"], ["אֵצֶל","near"], ["הָעֵץ","the tree"], ["אֲשֶׁר","of which"], ["אָכַלְתִּי","I was partaking"], ["מִפִּרְיוֹ","of the fruit"], ["׃",""]]},
   { num:"יד", words:[
