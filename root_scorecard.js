@@ -96,7 +96,7 @@
     var need = [];
     if (!window._strongsLookup)   need.push('strongs_lookup.js');
     if (!window._strongsRoots)    need.push('strongs_roots.js');
-    if (!window._bdbRoots)        need.push('bdb_roots.js?v=3');
+    if (!window._bdbRoots)        need.push('bdb_roots.js?v=4');
     if (!window._rootProperNames) need.push('root_names.js?v=16');
     if (!window._shoroshimRoots)  need.push('shoroshim_roots.js?v=3');
     if (!window._rootGlossaryData) need.push('bom/roots_glossary.js?v=' + RSC_V);
@@ -337,7 +337,7 @@
   }
 
   // ---------- popup slot ----------
-  function detailHtml(found, surface) {
+  function detailHtml(found, surface, glossText) {
     var entry = found.entry;
     var d = rootDisplay(found.key);
     var conc = window._rootConcordance;
@@ -359,18 +359,35 @@
       h += '<span class="rsc-chip' + (vk === cfg.vol ? ' rsc-chip-here' : '') + '">' + esc(label) + ' ' + n + '</span>';
     });
     h += '</div>';
+    // The tapped word itself always appears in both lists. The concordance
+    // keeps only the six commonest forms and ten commonest glosses per root,
+    // so an idiomatic rendering (לְעֵינַיִם "plainly" under עַיִן "eye") used
+    // to vanish from the card: the reader saw "plainly" as the definition and
+    // a root that admitted only "in the eyes of". Now the form and the gloss
+    // of this very token are appended — with their corpus count when the
+    // concordance kept them, otherwise marked "here".
     var forms = Object.keys(entry.f || {});
-    if (forms.length > 1) {
-      h += '<span>Forms:</span> ' + forms.map(function(f) {
-        return '<span style="font-family:\'David Libre\',serif">' + esc(f) + '</span> (' + entry.f[f] + 'x)';
-      }).join(', ') + '<br>';
+    var hereForm = String(found.part || cleanSurface(surface) || '').replace(/\u05C3$/, '');
+    var formItems = forms.map(function(f) {
+      return '<span style="font-family:\'David Libre\',serif">' + esc(f) + '</span> (' + entry.f[f] + 'x)';
+    });
+    if (hereForm && forms.indexOf(hereForm) < 0) {
+      formItems.push('<span style="font-family:\'David Libre\',serif">' + esc(hereForm) + '</span> (here)');
     }
+    if (formItems.length > 1) h += '<span>Forms:</span> ' + formItems.join(', ') + '<br>';
     var glosses = Object.keys(entry.g || {});
-    if (glosses.length > 1) {
-      h += '<span>Glossed:</span> ' + glosses.slice(0, 4).map(function(g) {
-        return '"' + esc(g) + '" (' + entry.g[g] + 'x)';
-      }).join(', ') + '<br>';
+    var shown = glosses.slice(0, 4);
+    var hereGloss = String(glossText || '').replace(/^[\s"'.,;:?!()\u2014\u2013-]+|[\s"'.,;:?!()\u2014\u2013-]+$/g, '');
+    var glossItems = shown.map(function(g) { return '"' + esc(g) + '" (' + entry.g[g] + 'x)'; });
+    if (hereGloss) {
+      var lc = hereGloss.toLowerCase(), hit = null;
+      for (var gi = 0; gi < glosses.length; gi++) {
+        if (glosses[gi].toLowerCase() === lc) { hit = glosses[gi]; break; }
+      }
+      if (hit && shown.indexOf(hit) < 0) glossItems.push('"' + esc(hit) + '" (' + entry.g[hit] + 'x)');
+      else if (!hit) glossItems.push('"' + esc(hereGloss) + '" (here)');
     }
+    if (glossItems.length > 1) h += '<span>Glossed:</span> ' + glossItems.join(', ') + '<br>';
     h += '<span class="rsc-refs-link" style="cursor:pointer;color:var(--accent,#d4af37);text-decoration:underline;font-size:0.9em;">View all references →</span>';
     return h;
   }
@@ -434,7 +451,7 @@
           html += '<div class="rsc-part"><span style="font-family:\'David Libre\',serif">' +
                   esc(all[bi].part) + '</span></div>';
         }
-        html += detailHtml(all[bi], surface) + '</div>';
+        html += detailHtml(all[bi], surface, glossText) + '</div>';
       }
       slotEl.innerHTML = html + ttHtml;
       var blocks = slotEl.querySelectorAll('.rsc-block');
