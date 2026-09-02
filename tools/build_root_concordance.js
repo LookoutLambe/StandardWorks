@@ -57,6 +57,27 @@ if (!win.RootEngine || !win.RootEngine.getRoot) throw new Error('root_engine.js 
 const getRoot = win.RootEngine.getRoot;
 const getRoots = win.RootEngine.getRoots;
 
+// The transliterated-term exception table lives in root_scorecard.js on one
+// JSON line (TRANSLIT_TERMS); read it from the source so the two never drift.
+const TRANSLIT_TERMS = (() => {
+  const m = fs.readFileSync(path.join(ROOT, 'root_scorecard.js'), 'utf8').match(/var TRANSLIT_TERMS = (\{[^\n]*\});/);
+  if (!m) throw new Error('root_scorecard.js: TRANSLIT_TERMS line not found');
+  return JSON.parse(m[1]);
+})();
+const ttSkel = s => String(s || '').replace(/[\u0591-\u05C7]/g, '').replace(/[\u05C3\[\]"'`.,;:?!()*]/g, '');
+const ttKey = p => TRANSLIT_TERMS[p] ? p : (/^[\u05D1\u05DB\u05DC\u05DE\u05D5\u05D4\u05E9]/.test(p) && TRANSLIT_TERMS[p.slice(1)] ? p.slice(1) : '');
+// Mirrors RootScorecard.translitTermParts: a maqqef chain whose JOINED
+// consonants are a term (אָדָם־אוֹנְדִי־אַהְמָן) is the term whole — testing its
+// parts one by one would pass אָדָם as ordinary Hebrew and file the whole form
+// under אדם.
+const translitTermParts = surface => {
+  const raw = String(surface || '').replace(/[\u05C3\[\]*]/g, '').split(/[\u05BE\s]+/).filter(Boolean);
+  if (raw.length > 1 && ttKey(ttSkel(raw.join('')))) return { all: true, parts: raw };
+  const parts = raw.filter(p => !!ttKey(ttSkel(p)));
+  return { all: raw.length > 0 && parts.length === raw.length, parts };
+};
+const isTranslitTerm = surface => translitTermParts(surface).parts.length > 0;
+
 // ---------- 2b. Pass 1: attested standalone word-forms ----------
 // The engine strips a prefix from a non-Strong's word ONLY when what remains is
 // itself a word this corpus actually uses standalone. Without this, הוֹרְדוֹס
@@ -70,6 +91,7 @@ const getRoots = win.RootEngine.getRoots;
       const t = fs.readFileSync(path.join(ROOT, dir, f), 'utf8'); let m; TOKRE.lastIndex = 0;
       while ((m = TOKRE.exec(t))) { const w = m[1];
         if (!/[\u05D0-\u05EA]/.test(w)) continue;
+        if (isTranslitTerm(w)) continue;   // not Hebrew: never an attested standalone form
         const parts = SKEL(w).split(/[\u05BE\s]+/).filter(Boolean);
         if (parts.length === 1) forms[parts[0]] = 1; } } };
   ['ot_verses','nt_verses','dc_verses','pgp_verses','bom'].forEach(walk);
@@ -108,6 +130,7 @@ const getRoots = win.RootEngine.getRoots;
         while ((m = PAIR.exec(t))) {
           const hw = m[1], gl = (m[2] || '').replace(/[\[\]()]/g, '').trim();
           if (!/[\u05D0-\u05EA]/.test(hw)) continue;
+          if (isTranslitTerm(hw)) continue;   // a term is not a name-form either
           const parts = SKEL(hw).split(/[\u05BE\s]+/).filter(Boolean);
           const head = parts[parts.length - 1] || '';
           const norm = head.replace(/[\u05DD\u05DF\u05E5\u05E3\u05DA]/g,
@@ -203,6 +226,7 @@ const VOLS = [
 ];
 const NVOL = VOLS.length;
 
+
 const roots = new Map();  // rootKey -> { c:[], verses:[Set], f:Map, g:Map, refs:[Map(chapId->Set(v))] }
 const words = new Map();  // surface -> rootKey
 let totalTokens = 0;
@@ -218,7 +242,14 @@ function record(volIdx, chapId, verseNum, h, g) {
   // "affliction". Resolving the token to a single root discarded the other word,
   // and 13% of the corpus is maqqef-joined.
   let pairs = words.get(h);
-  if (pairs === undefined) { pairs = getRoots(h) || []; words.set(h, pairs); }
+  // Transliterated terms (root_scorecard.js's exception table, parsed above)
+  // are not Hebrew words and get no root bucket — filing אַהְמָן under המן
+  // would put Ahman beside Haman. A term part of a maqqef pair is dropped and
+  // the Hebrew part keeps its count, matching RootEngine.getRoots on the page.
+  if (pairs === undefined) {
+    pairs = translitTermParts(h).all ? [] : (getRoots(h) || []).filter(pr => !isTranslitTerm(pr.part));
+    words.set(h, pairs);
+  }
   const gNorm = g.replace(/-/g, ' ').trim();
   for (const pr of pairs) {
     const root = pr.root;

@@ -22,7 +22,39 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '76';   // bump when the generated data files change
+  var RSC_V = '77';   // bump when the generated data files change
+  // Transliterated terms — an exception table in the tool, like the received
+  // spellings in transliterate(): keyed by bare consonants, so every pointing
+  // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.
+  // A listed word is not Hebrew: the reader draws a mark beside it, this card
+  // says so, the root engine skips it, and tools/build_root_concordance.js
+  // parses this same line so the concordance never files Ahman under Haman.
+  // ONE LINE, VALID JSON — the builder reads it with JSON.parse.
+  var TRANSLIT_TERMS = {"אדםאונדיאהמן":"Adam-ondi-Ahman","אהמן":"Ahman","שדולמק":"Shedolamak"};
+  function ttSkel(s) { return String(s || '').replace(/[\u0591-\u05C7]/g, '').replace(/[׃\[\]"'`.,;:?!()*]/g, ''); }
+  function ttKey(part) {
+    if (TRANSLIT_TERMS[part]) return part;
+    if (/^[בכלמוהש]/.test(part) && TRANSLIT_TERMS[part.slice(1)]) return part.slice(1);
+    return '';
+  }
+  // {all: every maqqef-part is a term, parts: [surface parts that are terms]}
+  function translitTermParts(surface) {
+    var raw = String(surface || '').replace(/[׃\[\]*]/g, '').split(/[־\s]+/).filter(Boolean);
+    var whole = ttSkel(raw.join(''));
+    if (raw.length > 1 && ttKey(whole)) return { all: true, parts: [raw.join('־')] };
+    var parts = [];
+    for (var i = 0; i < raw.length; i++) if (ttKey(ttSkel(raw[i]))) parts.push(raw[i]);
+    return { all: raw.length > 0 && parts.length === raw.length, parts: parts };
+  }
+  function isTranslitTerm(surface) { return translitTermParts(surface).parts.length > 0; }
+  function ttNoteHtml(surface) {
+    var tt = translitTermParts(surface);
+    return tt.parts.map(function(p) {
+      var name = TRANSLIT_TERMS[ttKey(ttSkel(p.split(/[־\s]+/).join('')))] || '';
+      return '<span class="tt-note">' + (name ? '<b>' + esc(name) + '</b> \u2014 ' : '') +
+        'transliterated term: carried over from the English as it sounds, not a Hebrew word. It has no Hebrew root and no Strong\u2019s number.</span>';
+    }).join('<br>');
+  }
 
   var cfg = { vol: '', base: '' };
   var keyIdx = null;         // rootKey -> index, built once
@@ -119,7 +151,7 @@
   }
   function cleanSurface(s) {
     // sof pasuq + ketiv/qere brackets never reach the root key
-    return String(s || '').replace(/[׃\[\]]/g, '').trim();
+    return String(s || '').replace(/[׃\[\]*]/g, '').trim();
   }
 
   function lookup(surface) {
@@ -350,6 +382,11 @@
     // "Occurrences: 1").
     surface = String(surface || '').replace(/^[\s.,;:?!()]+|[\s.,;:?!()]+$/g, '');
     if (!slotEl) return;
+    var tt = translitTermParts(surface);
+    if (tt.all) { slotEl.innerHTML = ttNoteHtml(surface); return; }
+    var ttHtml = tt.parts.length ? tt.parts.map(function(p) {
+      return '<div class="rsc-block"><div class="rsc-part"><span style="font-family:\'David Libre\',serif">' + esc(p) + '</span></div>' + ttNoteHtml(p) + '</div>';
+    }).join('') : '';
     var token = ++fillToken;
     var doFill = function() {
       if (token !== fillToken) return;                    // a newer popup superseded this one
@@ -387,7 +424,7 @@
             '<div style="font-size:0.8em;opacity:0.6;margin-top:0.3em;">Chapter-heading vocabulary — no verse occurrences</div>' +
             '</div>';
         }
-        if (mini) slotEl.innerHTML = mini;
+        if (mini || ttHtml) slotEl.innerHTML = mini + ttHtml;
         return;
       }
       var html = '';
@@ -399,7 +436,7 @@
         }
         html += detailHtml(all[bi], surface) + '</div>';
       }
-      slotEl.innerHTML = html;
+      slotEl.innerHTML = html + ttHtml;
       var blocks = slotEl.querySelectorAll('.rsc-block');
       for (var bj = 0; bj < blocks.length; bj++) {
         (function(blk, found) {
@@ -609,6 +646,8 @@
     var st = document.createElement('style');
     st.id = 'rsc-style';
     st.textContent =
+      '.tt-mark{color:var(--tap-blue,#2e6da4);font-weight:700;}' +
+      '.tt-note{font-style:italic;font-size:0.9em;opacity:0.85;}' +
       '.rsc-il-wrap{margin-bottom:14px;}' +
       '.rsc-il-card{border:1px solid rgba(212,175,55,0.28);border-radius:9px;padding:10px 12px;' +
         'margin:9px 0;background:rgba(255,255,255,0.03);}' +
@@ -813,6 +852,9 @@
     lookup: lookup,
     fill: fill,
     glossaryEntries: glossaryEntries,
+    isTranslitTerm: isTranslitTerm,
+    translitTermParts: translitTermParts,
+    ttNoteHtml: ttNoteHtml,
     openPanel: openPanel,
     closePanel: closePanel
   };

@@ -565,15 +565,24 @@
   // scorecard entry. רַב־עֳנִי is רַב "much" AND עֳנִי "affliction" — collapsing
   // it to one root threw the second word away, and 13% of the corpus is
   // maqqef-joined. Returns [{part, root}, ...] in the order the words are written.
+  // Transliterated terms (root_scorecard.js's exception table) are not Hebrew
+  // words and get no root: a whole-word term returns nothing, a term part of a
+  // maqqef pair (בֶּן־אַהְמָן) is dropped and the Hebrew part keeps its card.
+  function _isTT(s) {
+    try { return !!(typeof window !== 'undefined' && window.RootScorecard && window.RootScorecard.isTranslitTerm && window.RootScorecard.isTranslitTerm(s)); } catch (e) { return false; }
+  }
   function getRoots(hw) {
     var w = _clean(hw);
     var parts = _pieces(w);
     if (parts.length <= 1) {
+      if (_isTT(w)) return [];
       var r = getRoot(hw);
       return r ? [{ part: w, root: r }] : [];
     }
+    if (window.RootScorecard && window.RootScorecard.translitTermParts && window.RootScorecard.translitTermParts(w).all) return [];
     var out = [], seen = {};
     for (var i = 0; i < parts.length; i++) {
+      if (_isTT(parts[i])) continue;              // בֶּן־אַהְמָן: Ahman gets the note, not a root
       var rp = getRoot(parts[i]);
       if (!rp || seen[rp]) continue;
       seen[rp] = 1;
@@ -627,7 +636,7 @@
   // a CONTENT head keeps the card. גם/עם/כי/אם/פן/אך/רק/אף/אשר were missing,
   // which is why וְגַם־הַלָּמָנִים resolved to a non-word 'גמם' and עַם־נֶפִי
   // showed "people" instead of Nephi.
-  function _clean(s) { return String(s || '').replace(/[׃׀"'`.,;:?!()]/g, '').trim(); }
+  function _clean(s) { return String(s || '').replace(/[׃׀"'`.,;:?!()*]/g, '').trim(); }   // '*' = transliterated-term mark, display-only
   function _pieces(s) { return _clean(s).split(/[־\s]+/).filter(Boolean); }
 
   // Resolve ONE whitespace/maqqef-free word to a Strong's number, or '' if none.
@@ -1492,6 +1501,9 @@
   // tools/build_root_concordance.js counts through) keeps emitting folded keys
   // and the generated concordance disagrees with the live page.
   function getRoot(hw) {
+    // A trailing '*' marks a transliterated term (Adam-ondi-Ahman*): display-
+    // only, never part of the key. Stripped here so no caller can leak it in.
+    hw = String(hw || '').replace(/\*/g, '');
     var r = _getRootFolded(hw);
     return (typeof r === 'string' && /[\u05db\u05de\u05e0\u05e4\u05e6]$/.test(r) && /^[\u0590-\u05ff]+$/.test(r))
       ? toSofit(r) : r;

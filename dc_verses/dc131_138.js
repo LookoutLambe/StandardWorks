@@ -5212,15 +5212,7 @@ var dc138_ch1Verses = [
     ["לְעַם","to people"],
     ["אַחֵר׃","other"]
   ]},
-  { num: "מה", words: [
-    ["אֵלִיָּה","Elias,"],
-    ["אֲשֶׁר","who"],
-    ["הָיָה","was"],
-    ["עִם","with"],
-    ["מֹשֶׁה","Moses"],
-    ["בְּהַר","on the Mount of"],
-    ["הַהִשְׁתַּנּוּת׃","Transfiguration;"]
-  ]},
+  { num: "מה", words: [["אֵלִיָּס","Elias,"], ["אֲשֶׁר","who"], ["הָיָה","was"], ["עִם","with"], ["מֹשֶׁה","Moses"], ["בְּהַר","on the Mount of"], ["הַהִשְׁתַּנּוּת׃","Transfiguration;"]]},
   { num: "מו", words: [
     ["וּמַלְאָכִי","And Malachi,"],
     ["הַנָּבִיא","the prophet"],

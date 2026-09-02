@@ -237,6 +237,10 @@ function computeGlossFromHebrew(heb, fallbackGloss) {
   }
 }
 
+function _isTranslitTerm(h) {
+  try { return !!(window.RootScorecard && window.RootScorecard.isTranslitTerm && window.RootScorecard.isTranslitTerm(h)); } catch (e) { return false; }
+}
+
 function makeWordUnit(h, e, isSof) {
   if (h === '\u05C3') return '';
   h = h.replace(/\u05C3/g, '');
@@ -247,6 +251,10 @@ function makeWordUnit(h, e, isSof) {
   var gloss = computeGlossFromHebrew(h, baseGloss);
   var displayH = window._noNikkud ? _stripNikkudDisplay(h) : h;
   if (!window._noNikkud) displayH = displayH.replace(/([\u05D0-\u05EA][\u0591-\u05C6]*\u05C7[\u0591-\u05C6]*)/g, '<span class="qq">$1</span>');
+  // A transliterated term (the exception table in root_scorecard.js:
+  // Adam-ondi-Ahman, Ahman, Shedolamak) gets a mark drawn beside it; the data
+  // stays plain Hebrew and the word is never transliterated or given a root.
+  if (_isTranslitTerm(h)) displayH += '<span class="tt-mark" title="transliterated term">*</span>';
   var glCls = 'gl' + ((gloss && gloss.length <= 18 && gloss.split(' ').length <= 3) ? ' gl-nw' : '');
   div.innerHTML = '<span class="hw" lang="he">' + displayH + '</span><span class="tl"></span><span class="' + glCls + '">' + gloss + '</span>';
   div.setAttribute('tabindex', '0');
@@ -493,8 +501,9 @@ function toggleNoNikkud() {
     if (!hw) return;
     var orig = unit.getAttribute('data-h');
     if (orig) {
-      if (window._noNikkud) hw.textContent = _stripNikkudDisplay(orig);
-      else hw.innerHTML = orig.replace(/([\u05D0-\u05EA][\u0591-\u05C6]*\u05C7[\u0591-\u05C6]*)/g, '<span class="qq">$1</span>');
+      var ttMark = _isTranslitTerm(orig) ? '<span class="tt-mark" title="transliterated term">*</span>' : '';
+      if (window._noNikkud) hw.innerHTML = _stripNikkudDisplay(orig) + ttMark;
+      else hw.innerHTML = orig.replace(/([\u05D0-\u05EA][\u0591-\u05C6]*\u05C7[\u0591-\u05C6]*)/g, '<span class="qq">$1</span>') + ttMark;
     }
   });
     document.querySelectorAll('.chapter-summary-he[data-heb]').forEach(function(el) {

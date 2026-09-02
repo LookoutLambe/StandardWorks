@@ -862,27 +862,7 @@ var dc113_ch1Verses = [
     ["בְּאַחֲרִית","in the last"],
     ["הַיָּמִים׃","days."]
   ]},
-  { num: "ז", words: [
-    ["שְׁאֵלוֹת","Questions"],
-    ["אֵלִיָּאס","by Elias"],
-    ["הִיגְבִּי","Higbee:"],
-    ["מַה־פֵּשֶׁר","What is meant by"],
-    
-    ["הַצַּו","the command"],
-    ["בִּישַׁעְיָהוּ","in Isaiah,"],
-    ["פֶּרֶק","chapter,"],
-    ["נב","52d"],
-    ["פָּסוּק","verse,"],
-    ["א","1st"],
-    ["הָאֹמֵר","which says:"],
-    ["לִבְשִׁי","Put on"],
-    ["עֻזֵּךְ","your strength,"],
-    ["צִיּוֹן","O Zion—"],
-    ["וְעַל־אֵי־זֶה","and of what"],
-    ["עַם","people"],
-    ["דִּבֶּר","spoke"],
-    ["יְשַׁעְיָהוּ׃","Isaiah?"]
-  ]},
+  { num: "ז", words: [["שְׁאֵלוֹת","Questions"], ["אֵלִיָּס","by Elias"], ["הִיגְבִּי","Higbee:"], ["מַה־פֵּשֶׁר","What is meant by"], ["הַצַּו","the command"], ["בִּישַׁעְיָהוּ","in Isaiah,"], ["פֶּרֶק","chapter,"], ["נב","52d"], ["פָּסוּק","verse,"], ["א","1st"], ["הָאֹמֵר","which says:"], ["לִבְשִׁי","Put on"], ["עֻזֵּךְ","your strength,"], ["צִיּוֹן","O Zion—"], ["וְעַל־אֵי־זֶה","and of what"], ["עַם","people"], ["דִּבֶּר","spoke"], ["יְשַׁעְיָהוּ׃","Isaiah?"]]},
   { num: "ח", words: [
     ["דִּבֶּר","He spoke"],
     ["עַל־אֵלֶּה","of those"],
@@ -1318,32 +1298,7 @@ renderVerseSet(dc115_ch1Verses, 'dc115-ch1-verses');
 
 
 var dc116_ch1Verses = [
-  { num: "א", words: [
-    ["גִּבְעַת","the hill of"],
-    ["הַמַּעְיָן","the spring Spring Hill"],
-    ["קָרָא","has named"],
-    ["לָהּ","it"],
-    ["יְהוָה","the Lord"],
-    ["אָדָם־אֹנְדִּי־אַהְמָן","Adam-ondi-Ahman,"],
-    ["כִּי","because,"],
-    ["אָמַר","said he,"],
-    ["הוּא","it is"],
-    ["הַמָּקוֹם","the place"],
-    ["אֲשֶׁר","where"],
-    ["יָבוֹא","shall come"],
-    ["שָׁמָּה","thither"],
-    ["אָדָם","Adam"],
-    ["לִפְקֹד","to visit"],
-    ["אֶת־עַמּוֹ","his people,"],
-    ["אוֹ","or"],
-    ["עַתִּיק","the Ancient of"],
-    ["יוֹמִין","Days"],
-    ["יֵשֵׁב","shall sit,"],
-    ["כַּאֲשֶׁר","as"],
-    ["דִּבֶּר","spoken of by"],
-    ["דָּנִיֵּאל","Daniel"],
-    ["הַנָּבִיא׃","the prophet."]
-  ]}
+  { num: "א", words: [["גִּבְעַת","the hill of"], ["הַמַּעְיָן","the spring Spring Hill"], ["קָרָא","has named"], ["לָהּ","it"], ["יְהוָה","the Lord"], ["אָדָם־אוֹנְדִי־אַהְמָן","Adam-ondi-Ahman,"], ["כִּי","because,"], ["אָמַר","said he,"], ["הוּא","it is"], ["הַמָּקוֹם","the place"], ["אֲשֶׁר","where"], ["יָבוֹא","shall come"], ["שָׁמָּה","thither"], ["אָדָם","Adam"], ["לִפְקֹד","to visit"], ["אֶת־עַמּוֹ","his people,"], ["אוֹ","or"], ["עַתִּיק","the Ancient of"], ["יוֹמִין","Days"], ["יֵשֵׁב","shall sit,"], ["כַּאֲשֶׁר","as"], ["דִּבֶּר","spoken of by"], ["דָּנִיֵּאל","Daniel"], ["הַנָּבִיא׃","the prophet."]]}
 ];
 renderVerseSet(dc116_ch1Verses, 'dc116-ch1-verses');
 
@@ -1460,28 +1415,7 @@ var dc117_ch1Verses = [
     ["נְאֻם","says"],
     ["יְהוָה׃","the Lord."]
   ]},
-  { num: "ח", words: [
-    ["הַאֵין","Is there not"],
-    ["מָקוֹם","room"],
-    ["דַּי","enough"],
-    ["בְּהָרֵי","on the mountains of"],
-    ["אָדָם־אֹנְדִּי־אַהְמָן","Adam-ondi-Ahman,"],
-    ["וּבְעַרְבוֹת","and on the plains of"],
-    ["אוֹלָהָה־שִׁינֵיהָה","Olaha Shinehah,"],
-    ["אוֹ","or"],
-    ["הָאָרֶץ","the land"],
-    ["אֲשֶׁר","where"],
-    ["יָשַׁב","dwelt,"],
-    ["בָּהּ","wherein"],
-    ["אָדָם","Adam"],
-    ["כִּי","that"],
-    ["תַחְמְדוּ","you should covet"],
-    ["אֶת־מַר","that which is but the drop"],
-    ["הַדְּלִי","of the bucket,"],
-    ["וְתִזְנְחוּ","and neglect"],
-    ["אֶת־הַדְּבָרִים","the matters?"],
-    ["הַכְּבֵדִים׃","more weighty"]
-  ]},
+  { num: "ח", words: [["הַאֵין","Is there not"], ["מָקוֹם","room"], ["דַּי","enough"], ["בְּהָרֵי","on the mountains of"], ["אָדָם־אוֹנְדִי־אַהְמָן","Adam-ondi-Ahman,"], ["וּבְעַרְבוֹת","and on the plains of"], ["אוֹלָהָה־שִׁינֵיהָה","Olaha Shinehah,"], ["אוֹ","or"], ["הָאָרֶץ","the land"], ["אֲשֶׁר","where"], ["יָשַׁב","dwelt,"], ["בָּהּ","wherein"], ["אָדָם","Adam"], ["כִּי","that"], ["תַחְמְדוּ","you should covet"], ["אֶת־מַר","that which is but the drop"], ["הַדְּלִי","of the bucket,"], ["וְתִזְנְחוּ","and neglect"], ["אֶת־הַדְּבָרִים","the matters?"], ["הַכְּבֵדִים׃","more weighty"]]},
   { num: "ט", words: [
     ["לָכֵן","Therefore,"],
     ["עֲלוּ","come up"],
@@ -1511,39 +1445,7 @@ var dc117_ch1Verses = [
     ["בְּבִרְכוֹת","with the blessings of"],
     ["עַמִּי׃","my people."]
   ]},
-  { num: "יא", words: [
-    ["יֵבוֹשׁ","Let be ashamed"],
-    ["עַבְדִּי","my servant"],
-    ["נִיוּאֵל","Newel"],
-    ["ק.","K."],
-    ["וִיטְנִי","Whitney"],
-    ["מֵחֶבֶר","of the band"],
-    ["הַנִּיקוֹלָאִי","Nicolaitane"],
-    ["וּמִכׇּל־תּוֹעֲבוֹתֵיהֶם","and of all their abominations,"],
-    ["הַנִּסְתָּרוֹת","secret"],
-    ["וּמִכׇּל־קָטְנוּת","and of all littleness of"],
-    
-    ["נַפְשׁוֹ","his soul"],
-    ["לְפָנַי","before me,"],
-    ["נְאֻם","says"],
-    ["יְהוָה","the Lord,"],
-    ["וְיַעַל","and come up"],
-    ["אֶל־אֶרֶץ","to the land of"],
-    ["אָדָם־אֹנְדִּי־אַהְמָן","Adam-ondi-Ahman,"],
-    ["וִיהִי","and be"],
-    ["לְפָקִיד","a bishop"],
-    ["לְעַמִּי","unto my people,"],
-    ["נְאֻם","says"],
-    ["יְהוָה","the Lord,"],
-    ["לֹא","not"],
-    ["בְּשֵׁם","in name"],
-    ["לְבַד","only"],
-    ["כִּי","but"],
-    ["אִם","rather"],
-    ["בְּמַעֲשֶׂה","in deed,"],
-    ["נְאֻם","says"],
-    ["יְהוָה׃","the Lord."]
-  ]},
+  { num: "יא", words: [["יֵבוֹשׁ","Let be ashamed"], ["עַבְדִּי","my servant"], ["נִיוּאֵל","Newel"], ["ק.","K."], ["וִיטְנִי","Whitney"], ["מֵחֶבֶר","of the band"], ["הַנִּיקוֹלָאִי","Nicolaitane"], ["וּמִכׇּל־תּוֹעֲבוֹתֵיהֶם","and of all their abominations,"], ["הַנִּסְתָּרוֹת","secret"], ["וּמִכׇּל־קָטְנוּת","and of all littleness of"], ["נַפְשׁוֹ","his soul"], ["לְפָנַי","before me,"], ["נְאֻם","says"], ["יְהוָה","the Lord,"], ["וְיַעַל","and come up"], ["אֶל־אֶרֶץ","to the land of"], ["אָדָם־אוֹנְדִי־אַהְמָן","Adam-ondi-Ahman,"], ["וִיהִי","and be"], ["לְפָקִיד","a bishop"], ["לְעַמִּי","unto my people,"], ["נְאֻם","says"], ["יְהוָה","the Lord,"], ["לֹא","not"], ["בְּשֵׁם","in name"], ["לְבַד","only"], ["כִּי","but"], ["אִם","rather"], ["בְּמַעֲשֶׂה","in deed,"], ["נְאֻם","says"], ["יְהוָה׃","the Lord."]]},
   { num: "יב", words: [
     ["וְעוֹד","And again,"],
     ["אֲנִי","I"],

@@ -69,7 +69,9 @@ var _tlKnown = {
 
 };
 
-function transliterate(heb) { return _tlPopular(_translitRaw(heb)); }
+// The transliterated-term mark (Adam-ondi-Ahman*) is display-only and never
+// reaches the rules: the star is not a letter.
+function transliterate(heb) { return _tlPopular(_translitRaw(String(heb == null ? '' : heb).replace(/\*/g, ''))); }
 function _tlPopular(s) {
   if (!s) return s;
   return s
@@ -755,12 +757,15 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
     window._popupWordUnit = wu;
     var hText = hw.textContent, gText = gl.textContent;
     hText = hText.replace(/^[\s.,;:?!()]+|[\s.,;:?!()]+$/g, '');
+    // A transliterated term (RootScorecard's exception table: Adam-ondi-Ahman,
+    // Ahman, Shedolamak) gets its note, never a root or a Strong's number.
+    var _ttTerm = !!(window.RootScorecard && RootScorecard.translitTermParts && RootScorecard.translitTermParts(hText).all);
     popupHw.textContent = hText;
     document.getElementById('popup-translit').textContent = transliterate(hText);
     popupGl.textContent = gText;
 
     // Strong's H-number
-    var strongsNum = _strongsLayered(hText);
+    var strongsNum = _ttTerm ? '' : _strongsLayered(hText);
     if (strongsNum) {
       // The lexeme's own definition, so a derived noun explains itself:
       // לֶקַח H3948 "learning, doctrine" beside its root לקח "take".
@@ -775,8 +780,8 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
     }
 
     // Root-based frequency
-    var root = wordToRoot[hText] || getRoot(hText);
-    var rInfo = rootFreq[root];
+    var root = _ttTerm ? '' : (wordToRoot[hText] || getRoot(hText));
+    var rInfo = _ttTerm ? null : rootFreq[root];
     // Lexeme line: this word's own dictionary entry (clearer for learners than the parent root)
     var lemmaLine = '';
     if (window.getLemmaStrongs && window._strongsRoots) {
@@ -833,6 +838,8 @@ detailHtml += '<div class="rsc-slot">';   // RootScorecard upgrades this block w
         }).join(', ');
       }
       detailHtml += '<br><span style="cursor:pointer;color:var(--accent);text-decoration:underline;font-size:0.9em;" onclick="event.stopPropagation();closePopup();openRootXrefPanel(\'' + root.replace(/'/g,"\\'") + '\')">View all references \u2192</span>';
+    } else if (_ttTerm) {
+      detailHtml += RootScorecard.ttNoteHtml(hText);
     } else {
       detailHtml += '<span>Occurrences:</span> ' + (sInfo ? sInfo.count : 1);
     }
