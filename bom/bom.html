@@ -5149,8 +5149,10 @@ function _showSelToolbar() {
   var rect = range.getBoundingClientRect();
 
   // Reset the rail's sub-panels
-  document.getElementById('sel-subpanel').style.display = 'none';
-  document.getElementById('sel-note-row').style.display = 'none';
+  var sp = document.getElementById('sel-subpanel');
+  if (sp) sp.style.display = 'none';
+  var snr = document.getElementById('sel-note-row');
+  if (snr) snr.style.display = 'none';
   var hlBtn = document.getElementById('sel-btn-highlight');
   if (hlBtn) hlBtn.classList.remove('active');
 
@@ -5158,15 +5160,19 @@ function _showSelToolbar() {
   // note/copy/share always; it closes when the selection collapses.
   var pop = document.getElementById('hl-pop');
   if (!pop) return;
-  document.getElementById('hl-row-hl').style.display = _selMode === 'word' ? 'flex' : 'none';
-  document.getElementById('hl-row-ul').style.display = _selMode === 'word' ? 'flex' : 'none';
-  document.getElementById('hl-note-row').style.display = 'none';
+  var rowHl = document.getElementById('hl-row-hl');
+  if (rowHl) rowHl.style.display = _selMode === 'word' ? 'flex' : 'none';
+  var rowUl = document.getElementById('hl-row-ul');
+  if (rowUl) rowUl.style.display = _selMode === 'word' ? 'flex' : 'none';
+  var noteRow = document.getElementById('hl-note-row');
+  if (noteRow) noteRow.style.display = 'none';
   pop.classList.add('visible');
   if (_selMode === 'word') _updateSelToolbarIndicators();
 }
 
 function _hideSelToolbar() {
-  document.getElementById('sel-toolbar').classList.remove('visible');
+  var tb = document.getElementById('sel-toolbar');
+  if (tb) tb.classList.remove('visible');
   var pop = document.getElementById('hl-pop');
   if (pop) pop.classList.remove('visible');
   var pnr = document.getElementById('hl-note-row');

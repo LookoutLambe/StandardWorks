@@ -1122,21 +1122,31 @@ function _showSelToolbar() {
   else { _selMode = 'text'; _selWordUnits = []; }
   var range = sel.getRangeAt(0);
   var rect = range.getBoundingClientRect();
-  document.getElementById('sel-subpanel').style.display = 'none';
-  document.getElementById('sel-note-row').style.display = 'none';
+  // Every popover part is optional: the underline row (hl-row-ul) no longer
+  // exists on any page, and an unguarded .style on a missing id threw here on
+  // every real selection, so the popover never opened (the nav_engine wrapper
+  // only forwarded the call and took the blame in the console).
+  var sp = document.getElementById('sel-subpanel');
+  if (sp) sp.style.display = 'none';
+  var snr = document.getElementById('sel-note-row');
+  if (snr) snr.style.display = 'none';
   // The popover appears at the selection: color rows for word selections,
   // note/copy/share always; it closes when the selection collapses.
   var pop = document.getElementById('hl-pop');
   if (!pop) return;
-  document.getElementById('hl-row-hl').style.display = _selMode === 'word' ? 'flex' : 'none';
-  document.getElementById('hl-row-ul').style.display = _selMode === 'word' ? 'flex' : 'none';
-  document.getElementById('hl-note-row').style.display = 'none';
+  var rowHl = document.getElementById('hl-row-hl');
+  if (rowHl) rowHl.style.display = _selMode === 'word' ? 'flex' : 'none';
+  var rowUl = document.getElementById('hl-row-ul');
+  if (rowUl) rowUl.style.display = _selMode === 'word' ? 'flex' : 'none';
+  var noteRow = document.getElementById('hl-note-row');
+  if (noteRow) noteRow.style.display = 'none';
   pop.classList.add('visible');
   if (_selMode === 'word') _updateSelToolbarIndicators();
 }
 
 function _hideSelToolbar() {
-  document.getElementById('sel-toolbar').classList.remove('visible');
+  var tb = document.getElementById('sel-toolbar');
+  if (tb) tb.classList.remove('visible');
   var pop = document.getElementById('hl-pop');
   if (pop) pop.classList.remove('visible');
   var pnr = document.getElementById('hl-note-row');
