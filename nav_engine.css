@@ -26,6 +26,32 @@
 }
 #nav-sidebar.open { transform: translateX(0); }
 
+/* ── Drawer contract (2026-09-02) ─────────────────────────────────────────
+   Every side drawer — this sidebar (left), the glossary (left), the Study
+   panel (right), the annotations panel (right) — CLOSES BY TRANSFORM and
+   opens to translateX(0). Where a drawer sits is decided here and nowhere
+   else; the pages say only what a drawer looks like. A drawer's width may
+   change at any time (the phone rule in nav_engine.js makes them
+   full-screen) without moving it, because the closed position never
+   depends on the width. And no drawer animates before the shell has
+   painted (html.sw-shell-pending), so a rule that lands after first paint
+   cannot slide a closed drawer across the screen — which is exactly what
+   a numeric right:-55% → right:-102vw change did on every phone load: the
+   Study panel stood 170px inside the screen and slid out. */
+#xref-panel, #annotations-panel {
+  right: 0 !important; left: auto !important;
+  transform: translateX(100%) !important;
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+#glossary-panel {
+  left: 0 !important; right: auto !important;
+  transform: translateX(-100%) !important;
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+#xref-panel.open, #annotations-panel.open, #glossary-panel.open { transform: translateX(0) !important; }
+html.sw-shell-pending #nav-sidebar, html.sw-shell-pending #xref-panel,
+html.sw-shell-pending #annotations-panel, html.sw-shell-pending #glossary-panel { transition: none !important; }
+
 /* ── Search Bar ── */
 .nav-search-wrap {
   display: flex; align-items: center; gap: 8px;

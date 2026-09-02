@@ -1457,15 +1457,14 @@
       '#xref-panel .xref-ref-word .en,#xref-panel .en{color:#fff0b8 !important;}' +
       '#xref-panel .xref-ref-word .he,#xref-panel .he{color:#f4ca48 !important;}' +
       /* Phones: slide panels take the FULL screen — half-panels are useless on
-         a small display (user request). Covers both sides on every page. */
+         a small display (user request). Widths only, as 100% of the viewport's usable width (100vw counts the
+         scrollbar and hangs a drawer 15px off the edge on a narrow desktop window);
+         where a drawer sits is the drawer contract in nav_engine.css. */
       '@media (max-width: 700px) {' +
-        '#nav-sidebar{width:100vw !important;max-width:100vw !important;}' +
-        '#glossary-panel{width:100vw !important;max-width:100vw !important;left:-102vw !important;}' +
-        '#glossary-panel.open{left:0 !important;}' +
-        '#xref-panel{width:100vw !important;max-width:100vw !important;right:-102vw !important;}' +
-        '#xref-panel.open{right:0 !important;}' +
-        '#annotations-panel{width:100vw !important;max-width:100vw !important;right:-102vw !important;}' +
-        '#annotations-panel.open{right:0 !important;}' +
+        '#nav-sidebar{width:100% !important;max-width:100% !important;}' +
+        '#glossary-panel{width:100% !important;max-width:100% !important;}' +
+        '#xref-panel{width:100% !important;max-width:100% !important;}' +
+        '#annotations-panel{width:100% !important;max-width:100% !important;}' +
         '#rsc-panel .rsc-panel-card{width:100vw !important;max-width:100vw !important;height:100dvh;max-height:100dvh !important;' +
           'border-radius:0 !important;border-left:none !important;border-right:none !important;' +
           'left:0 !important;top:0 !important;transform:none !important;}' +
