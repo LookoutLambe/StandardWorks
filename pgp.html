@@ -1255,12 +1255,6 @@ body.dark-mode .word-unit.xref-linked:hover .gl { color: #85c1e9 !important; }
 .xref-ref-nodata { font-size: 0.85em; color: var(--ink-light); font-style: italic; padding: 16px; }
 body.dark-mode #xref-panel { background: #1e2233; border-color: #d4af37; }
 
-#return-banner { display:none; position:fixed; top:46px; left:0; right:0; z-index:99; background:#fff; padding:8px 20px; text-align:center; font-family:'David Libre', 'Georgia', serif; font-size:0.95em; border-bottom:1px solid #e8e2d4; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
-#return-banner a { display:inline-block; background:#c8a84e; color:#fff; text-decoration:none; padding:6px 18px; border-radius:4px; font-weight:600; font-size:0.9em; }
-#return-banner a:hover { background:#b8942e; }
-body.dark-mode #return-banner { background:#222838; border-color:#3a4054; }
-body.dark-mode #return-banner a { background:#d4af37; color:#171b28; }
-body.dark-mode #return-banner a:hover { background:#c8a84e; }
 
 /* === FORCE UI FONT (David Libre) === */
 body, button, input, select, textarea,
@@ -1269,7 +1263,7 @@ body, button, input, select, textarea,
 #search-input, .search-result-ref,
 .landing-hero .subtitle-en, .landing-sec-btn .sec-num,
 .sel-color-row-label, #sel-note-input, #sel-note-save,
-#return-banner, #note-modal-card {
+#note-modal-card {
   font-family: 'David Libre', serif !important;
 }
 
@@ -1321,7 +1315,6 @@ body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direct
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
-<div id="return-banner"><a id="return-link" href="#" onclick="sessionStorage.setItem('xref-returning','1');sessionStorage.removeItem('xref-return-from');sessionStorage.removeItem('xref-return-verse');sessionStorage.removeItem('xref-return-label');">&#x276E; Return to <span id="return-verse"></span></a><span onclick="sessionStorage.removeItem('xref-return-from');sessionStorage.removeItem('xref-return-verse');sessionStorage.removeItem('xref-return-label');document.getElementById('return-banner').style.display='none'" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);cursor:pointer;color:#999;font-size:1.2em;">&times;</span></div>
 <div id="nav-hint"></div>
 
 <!-- Reading progress bar -->
@@ -1894,7 +1887,7 @@ window.READER = {
 <!-- Cross-reference data + engine -->
 <script src="pgp_crossrefs.js"></script>
 <script>window._volumeCrossrefsData = window._pgpCrossrefsData;</script>
-<script src="crossrefs_engine.js?v=8"></script>
+<script src="crossrefs_engine.js?v=9"></script>
 
 <script src="reader_ui.js?v=15"></script>
 <script>
@@ -2088,36 +2081,6 @@ NavEngine.init({
   basePath: '',
   skipSwipeNav: true,
   onNavigate: function(id) { navTo(id); }
-});
-</script>
-<script>
-function _showReturnBanner() {
-  if (sessionStorage.getItem('xref-returning')) { sessionStorage.removeItem('xref-returning'); return; }
-  var f = sessionStorage.getItem('xref-return-from');
-  if (!f) return;
-  if (f.split('#')[0] === window.location.pathname) return;
-  var rp = f.split('#')[0];
-  if (rp === '/' || rp === '/index.html' || rp.match(/\/index\.html$/)) return;
-  var v = sessionStorage.getItem('xref-return-verse');
-  var lbl = sessionStorage.getItem('xref-return-label');
-  var t = '';
-  if (v) { var d = v.split('|'); t = d.length >= 3 ? d[0] + ' ' + d[1] + ':' + d[2] : v; }
-  else if (lbl) { t = lbl; } else { t = 'previous page'; }
-  document.getElementById('return-verse').textContent = t;
-  document.getElementById('return-link').href = f;
-  var b = document.getElementById('return-banner');
-  var ct = (window.swHeaderBar && window.swHeaderBar());
-  if (ct) b.style.top = ct.offsetHeight + 'px';
-  b.style.display = 'block';
-}
-_showReturnBanner();
-window.addEventListener('pageshow', function(e) { if (e.persisted) _showReturnBanner(); });
-window.addEventListener('resize', function() {
-  var b = document.getElementById('return-banner');
-  if (b.style.display === 'block') {
-    var ct = (window.swHeaderBar && window.swHeaderBar());
-    if (ct) b.style.top = ct.offsetHeight + 'px';
-  }
 });
 </script>
 

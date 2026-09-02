@@ -963,13 +963,6 @@
             crossDiv.style.cssText = 'padding:4px 0;font-size:0.85em;';
             var crossLink = document.createElement('a');
             crossLink.href = crossUrl;
-            crossLink.onclick = (function(sv) {
-              return function() {
-                sessionStorage.setItem('xref-return-from', window.location.pathname + window.location.hash);
-                sessionStorage.setItem('xref-return-verse', sv);
-                sessionStorage.setItem('xref-return-set', '1');
-              };
-            })(sourceVerseKey);
             crossLink.style.cssText = 'color:var(--accent,#c8a84e);text-decoration:none;font-weight:600;';
             crossLink.textContent = 'Open Full Chapter \u2192';
             crossDiv.appendChild(crossLink);
@@ -1207,13 +1200,6 @@
           cDiv.style.cssText = 'padding:4px 0;font-size:0.85em;';
           var cLink = document.createElement('a');
           cLink.href = cUrl;
-          cLink.onclick = (function(sv) {
-            return function() {
-              sessionStorage.setItem('xref-return-from', window.location.pathname + window.location.hash);
-              sessionStorage.setItem('xref-return-verse', sv);
-              sessionStorage.setItem('xref-return-set', '1');
-            };
-          })(info.sourceVerseKey || '');
           cLink.style.cssText = 'color:var(--accent,#c8a84e);text-decoration:none;font-weight:600;';
           cLink.textContent = 'Open Full Chapter \u2192';
           cDiv.appendChild(cLink);
@@ -1353,38 +1339,5 @@
   // ── Auto-load after delay ──
   setTimeout(loadCrossRefs, 500);
 
-  // ══════════════════════════════════════════════════════════════
-  // ── RETURN NAVIGATION — store current page on departure ──
-  // ══════════════════════════════════════════════════════════════
-  function _storeReturnData() {
-    // If user clicked the return link, don't overwrite
-    if (sessionStorage.getItem('xref-returning')) return;
-    // If a cross-ref onclick already set specific verse info, don't overwrite
-    if (sessionStorage.getItem('xref-return-set')) {
-      sessionStorage.removeItem('xref-return-set');
-      return;
-    }
-    // If we already have valid return data pointing to a DIFFERENT page, preserve it.
-    // This prevents page refresh from destroying cross-page return data.
-    var existing = sessionStorage.getItem('xref-return-from');
-    if (existing && existing.split('#')[0] !== window.location.pathname) {
-      return;
-    }
-    sessionStorage.setItem('xref-return-from', window.location.pathname + window.location.hash);
-    sessionStorage.removeItem('xref-return-verse');
-    // Store a readable label — prefer nav-label (shows current chapter) over page title
-    var navLabel = document.getElementById('nav-label');
-    var label;
-    if (navLabel && navLabel.textContent) {
-      label = navLabel.textContent.replace(/\s*▾\s*$/, '').trim();
-    } else {
-      var titleParts = document.title.split('\u2014');
-      label = titleParts.length > 1 ? titleParts[titleParts.length - 1].trim() : document.title;
-    }
-    sessionStorage.setItem('xref-return-label', label);
-  }
-  window.addEventListener('beforeunload', _storeReturnData);
-  // pagehide fires reliably on mobile Safari/Chrome (beforeunload does not)
-  window.addEventListener('pagehide', _storeReturnData);
 
 })();
