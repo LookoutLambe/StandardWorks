@@ -12144,7 +12144,7 @@ window._rootGlossaryData = {
     "category": "Action"
   },
   "עלם": {
-    "meaning": "eternity, forever, everlasting; the age",
+    "meaning": "eternity, forever, everlasting; the age; the world",
     "category": "Theology"
   },
   "תחבר": {
