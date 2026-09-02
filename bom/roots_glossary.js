@@ -1,4 +1,8 @@
 window._rootGlossaryData = {
+  "H5425": {
+    "meaning": "(הִתִּיר) to loose, set free, unbind — Ps 105:20, Job 6:9; (נָתַר) to spring, leap",
+    "category": "Lexical"
+  },
   "H2570": {
     "meaning": "(חָמֻשׁ) armed, in battle array — Ex 13:18; (חֹמֶשׁ) fifth part; abdomen",
     "category": "Lexical"
