@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '77';   // bump when the generated data files change
+  var RSC_V = '78';   // bump when the generated data files change
   // Transliterated terms — an exception table in the tool, like the received
   // spellings in transliterate(): keyed by bare consonants, so every pointing
   // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.
@@ -94,10 +94,10 @@
       return;
     }
     var need = [];
-    if (!window._strongsLookup)   need.push('strongs_lookup.js');
-    if (!window._strongsRoots)    need.push('strongs_roots.js');
+    if (!window._strongsLookup)   need.push('strongs_lookup.js?v=2');
+    if (!window._strongsRoots)    need.push('strongs_roots.js?v=2');
     if (!window._bdbRoots)        need.push('bdb_roots.js?v=4');
-    if (!window._rootProperNames) need.push('root_names.js?v=16');
+    if (!window._rootProperNames) need.push('root_names.js?v=17');
     if (!window._shoroshimRoots)  need.push('shoroshim_roots.js?v=3');
     if (!window._rootGlossaryData) need.push('bom/roots_glossary.js?v=' + RSC_V);
     if (!need.length) { cb(); return; }

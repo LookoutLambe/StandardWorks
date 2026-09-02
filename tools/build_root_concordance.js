@@ -106,15 +106,16 @@ const isTranslitTerm = surface => translitTermParts(surface).parts.length > 0;
   // A leading particle is allowed ("upon Laman", "and Nephi"); nothing else.
   const LEAD = new Set(['the','and','to','unto','of','from','in','into','upon','on',
     'for','with','by','at','even','yea','o','a','an','before','against','over','after']);
-  const isNameGloss = g => {
+  const nameWordOf = g => {
     const parts = String(g || '').replace(/[.,;:!?]+$/, '').split(/[\s\u2014-]+/).filter(Boolean);
     let i = 0;
     while (i < parts.length && LEAD.has(parts[i].toLowerCase())) i++;
     const rest = parts.slice(i);
-    if (rest.length !== 1) return false;
+    if (rest.length !== 1) return '';
     const w = rest[0];
-    return /^[A-Z][A-Za-z\u2019'-]+$/.test(w) && !COMMON.has(w);
+    return /^[A-Z][A-Za-z\u2019'-]+$/.test(w) && !COMMON.has(w) ? w : '';
   };
+  const isNameGloss = g => !!nameWordOf(g);
 
   const COMMON = new Set(['The','And','God','Lord','But','For','Behold','Then','Now','Yea',
     'That','This','All','When','Who','What','Amen','If','So','It','He','She','They','We',
@@ -122,13 +123,22 @@ const isTranslitTerm = surface => translitTermParts(surface).parts.length > 0;
     'Their','Our','Your','Its','Him','Them','Me','Thou','Thee','Thy','Ye','I']);
   const names = Object.create(null);
   const nameTally = Object.create(null);
+  // English word counts across every gloss: capW counts a gloss that IS a
+  // capitalized single word ("Covenants", "Lot"), lowW counts every lowercase
+  // word anywhere ("covenants", "lot"). The two together tell a title-case
+  // ordinary word from a proper name \u2014 see the release step below.
+  const capW = Object.create(null), lowW = Object.create(null);
   {
     const PAIR = /\[\s*"([^"]*)"\s*,\s*"([^"]*)"\s*\]/g;
-    const walkN = dir => { let ents = []; try { ents = fs.readdirSync(path.join(ROOT, dir)); } catch (e) { return; }
+    const WORD = /[A-Za-z][A-Za-z\u2019'-]*/g;
+    const walkN = (dir, vol) => { let ents = []; try { ents = fs.readdirSync(path.join(ROOT, dir)); } catch (e) { return; }
       for (const f of ents) { if (!/\.js$/.test(f)) continue;
         const t = fs.readFileSync(path.join(ROOT, dir, f), 'utf8'); let m; PAIR.lastIndex = 0;
         while ((m = PAIR.exec(t))) {
           const hw = m[1], gl = (m[2] || '').replace(/[\[\]()]/g, '').trim();
+          let wm; WORD.lastIndex = 0;
+          while ((wm = WORD.exec(gl))) { const w = wm[0]; if (/^[a-z]/.test(w)) lowW[w] = (lowW[w] || 0) + 1; }
+          const nw0 = nameWordOf(gl); if (nw0) capW[nw0] = (capW[nw0] || 0) + 1;
           if (!/[\u05D0-\u05EA]/.test(hw)) continue;
           if (isTranslitTerm(hw)) continue;   // a term is not a name-form either
           const parts = SKEL(hw).split(/[\u05BE\s]+/).filter(Boolean);
@@ -151,14 +161,20 @@ const isTranslitTerm = surface => translitTermParts(surface).parts.length > 0;
           // Verified against 24 genuine names before switching: every one sits
           // at 87-100% name-glosses (Seth is the floor at exactly 50%), and no
           // form with 3+ name-glosses is dropped. Majority is a safe cut.
-          nameTally[norm] = nameTally[norm] || { name: 0, total: 0 };
-          nameTally[norm].total++;
-          if (isNameGloss(gl)) nameTally[norm].name++;
+          const nt = nameTally[norm] = nameTally[norm] || { name: 0, total: 0, words: Object.create(null), surf: new Set(), vols: new Set() };
+          nt.total++;
+          nt.vols.add(vol);
+          // the pointed head (last maqqef piece of the raw token) — what the
+          // engine actually looks up, and what the release step tests
+          const rawParts = hw.split(/[־\s]+/).filter(Boolean);
+          nt.surf.add(rawParts[rawParts.length - 1] || hw);
+          const nw = nameWordOf(gl);
+          if (nw) { nt.name++; nt.words[nw] = (nt.words[nw] || 0) + 1; }
         } } };
     // The Book of Mormon's verses live in bom/verses/, not bom/ — that holds
     // loaders and glossaries. Reading the wrong one meant most BOM names were
     // never collected, which is why לָמָן stayed merged with מָן "manna".
-    ['ot_verses','nt_verses','dc_verses','pgp_verses','bom/verses'].forEach(walkN);
+    [['ot_verses','ot'],['nt_verses','nt'],['dc_verses','dc'],['pgp_verses','pgp'],['bom/verses','bom']].forEach(d => walkN(d[0], d[1]));
     let minority = 0;
     for (const k in nameTally) {
       const t = nameTally[k];
@@ -206,6 +222,61 @@ const isTranslitTerm = surface => translitTermParts(surface).parts.length > 0;
       if (vols.has('bom') && vols.size > 1) { delete names[k]; dropped++; }
     }
     console.log('names shared with the OT/NT (resolve to their Hebrew root): %d', dropped);
+  }
+
+  // TITLE CASE IS NOT A NAME (2026-09-02). "and Covenants" made וְהַבְּרִיתוֹת a
+  // proper name and its own root; "the Father", "the Spirit", "the Church",
+  // "Put", "Lot", "Sheba" did the same to 400+ ordinary words. The corpus
+  // itself tells the two apart: a real name is never written lowercase
+  // (Enoch, Nephi, Zion), a title-case word is written lowercase at least as
+  // often ("covenants" 54 : "Covenants" 10). Such a form is released to resolve
+  // like any other word when the lexicon knows it (exact, or with up to two
+  // proclitics peeled, dagesh-blind), or when it occurs in a biblical-register
+  // volume (OT/NT/BOM), where every Hebrew word is a real one and the
+  // morphology can find it. A title-case word that survives only in the D&C,
+  // Pearl of Great Price or JST with no lexicon hit is a modern name in
+  // transliteration (Salt, New, May, March) and stays a name.
+  {
+    const DAG = /[ּֽֿ]/g;                       // dagesh, meteg, rafe
+    const lexIdx = new Set(Object.keys(win._strongsLookup).map(k => k.replace(DAG, '')));
+    const PRO = /^[והבלכמש][֑-ֽֿ-ׇ]*/;
+    const lexHit = s => {
+      let f = String(s || '').replace(/[׃:.,;!?]+$/, '').replace(DAG, '');   // a sof pasuq or colon glued to the word
+      for (let i = 0; i < 3; i++) {
+        if (lexIdx.has(f)) return true;
+        const m = PRO.exec(f);
+        if (!m || f.replace(/[֑-ׇ]/g, '').length - 1 < 2) break;
+        f = f.slice(m[0].length);
+      }
+      return false;
+    };
+    let released = 0, kept = 0;
+    const out = [];
+    for (const k of Object.keys(names)) {
+      const t = nameTally[k];
+      if (!t || !t.words) continue;
+      let W = '', best = 0;
+      for (const w in t.words) if (t.words[w] > best) { best = t.words[w]; W = w; }
+      if (!W) continue;
+      const lo = lowW[W.toLowerCase()] || 0, hi = capW[W] || 0;
+      if (lo < hi) continue;                                    // a real name
+      // The no-lexicon path is for the Hebrew and Greek scriptures only, and
+      // only where the lowercase reading clearly dominates: a Book of Mormon
+      // coinage (Amnor the man / an amnor of silver) and a Delitzsch
+      // transliteration (מַרְקוֹס Mark / "a mark") have no Hebrew root to
+      // resolve to, and the morphology would invent one.
+      // The lexicon is the only judge. Letting the morphology decide instead
+      // filed New under לון, May under מא, City under the he-goat and Aha the
+      // Nephite captain under "brother" — a transliteration always looks like
+      // SOME Hebrew root. With no lexicon hit the form keeps its own card.
+      let hit = '';
+      for (const s of t.surf) if (lexHit(s)) { hit = s; break; }
+      const row = k + '\t' + W + '\t' + lo + ':' + hi + '\t' + (hit || [...t.surf][0]) + '\t' + [...t.vols].join('');
+      if (hit) { delete names[k]; released++; out.push('RELEASED\t' + row); }
+      else { kept++; out.push('KEPT\t' + row); }
+    }
+    console.log('title-case ordinary words released from the name table: %d (modern transliterations kept: %d)', released, kept);
+    if (process.env.RELEASE_LOG) fs.writeFileSync(process.env.RELEASE_LOG, out.join('\n') + '\n');
   }
 
   win._rootProperNames = names;

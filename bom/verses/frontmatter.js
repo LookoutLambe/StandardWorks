@@ -72,7 +72,7 @@ var frontIntro = [
     ["הֻכַּן","was prepared"],
     ["בִּידֵי","by the hands of"],
     ["כְּרִיס","Chris"],
-    ["לַאמְבּ","Lamb"],
+    ["לַאמְבּ","Lambe"],
     ["בַּעַל","in the yoke"],
     ["תְּעוּדָה","a certificate"],
     ["לִמּוּדִית","academic"],
