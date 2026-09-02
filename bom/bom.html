@@ -1525,8 +1525,10 @@ body.hide-gloss .xref-marker, body.dual-mode .xref-marker { font-size: 0.5em; }
 .xref-note-card .xref-note-edit:hover { text-decoration: underline; }
 
 .word-unit.xref-linked { cursor: pointer; }
-.word-unit.xref-linked .hw { color: #2e6da4 !important; }
-.word-unit.xref-linked .gl { color: #2e6da4 !important; }
+/* Only the Topical Guide's starred (major) themes are blue in the text; a
+   cross-reference marker no longer colors its word (the sup letter still opens it). */
+.word-unit.tg-major .hw { color: var(--tap-blue, #2e6da4) !important; }
+.word-unit.tg-major .gl { color: var(--tap-blue, #2e6da4) !important; }
 .word-unit.xref-linked:hover .hw { color: #1f5c8f !important; text-decoration: none; }
 /* Underline removed 2026-08-31 (translator): the rule underlined the HEBREW
    headword, and the line runs straight through the nikkud sitting under the
@@ -4138,7 +4140,7 @@ body.dual-mode .chapter-summary { display: block; }
 <script defer src="bom_inverse_crossrefs.js?v=1"></script>
 <script src="chapter_headings.js"></script>
 <script src="chapter_headings_heb.js?v=7"></script>
-<script defer src="topical_guide.js?v=2"></script>
+<script defer src="topical_guide.js?v=3"></script>
 <script src="../notes_engine.js"></script>
 <script src="../interlinear_gloss.js?v=1"></script>
 <script>
@@ -4606,6 +4608,7 @@ function _ensureChapterRendered(chapId) {
   if (typeof applyAllAnnotations === 'function') applyAllAnnotations(newPanel);
   if (typeof addNoteMarkers === 'function') addNoteMarkers();
   if (window._crossrefsLoaded && typeof addCrossRefMarkers === 'function') addCrossRefMarkers(newPanel);
+  if (typeof addMajorThemeMarkers === 'function') addMajorThemeMarkers(newPanel);
   // Populate English divs if dual mode already loaded
   if (window._englishLoaded && typeof populateEnglishDivs === 'function') populateEnglishDivs(newPanel);
   // Populate transliteration spans for this newly rendered chapter
@@ -9012,6 +9015,64 @@ function _tgFirstLetter(s) {
   var stripped = _tgNormFinals(_tgStripNikkud(s));
   return stripped.length > 0 ? stripped[0] : '';
 }
+
+// ---- Starred Topical Guide themes: the only blue words in the text ----
+// Forms come from the guide's hebrewForms (rebuilt from the corpus, one entry
+// per theme, bigrams like רוּחַ הַקֹּדֶשׁ stored with a space). A word is blue
+// when any maqqef part of its Hebrew matches a starred form, or when it and its
+// neighbour form a starred bigram.
+var _tgMajorForms = null, _tgMajorBigrams = null;
+function _tgMajorSets() {
+  if (_tgMajorForms) return;
+  _tgMajorForms = {}; _tgMajorBigrams = [];
+  (window._topicalGuideData || []).forEach(function(e) {
+    if (!e.majorTheme) return;
+    // glossKeys: the English the theme renders; a form is blue only where its
+    // gloss carries that English (שָׁב is "repent" in one verse, "return" in another)
+    var rx = null;
+    if (e.glossKeys) { try { rx = new RegExp(e.glossKeys, 'i'); } catch (err) { rx = null; } }
+    (e.hebrewForms || []).forEach(function(f) {
+      var ps = String(f).trim().split(/\s+/).map(function(x) { return _tgNormFinals(_tgStripNikkud(x)); });
+      if (ps.length > 1) _tgMajorBigrams.push(ps);
+      else if (ps[0]) { if (!_tgMajorForms[ps[0]]) _tgMajorForms[ps[0]] = []; _tgMajorForms[ps[0]].push(rx); }
+    });
+  });
+}
+function _tgGlossOf(wu) {
+  var g = wu.querySelector('.gl');
+  return g ? (g.textContent || '') : '';
+}
+function _tgWordKeyParts(wu) {
+  var h = wu.getAttribute('data-h') || '';
+  return _tgNormFinals(_tgStripNikkud(h)).split('\u05BE').filter(Boolean);
+}
+function addMajorThemeMarkers(root) {
+  if (!window._topicalGuideData) return;
+  _tgMajorSets();
+  var wus = (root || document).querySelectorAll('.word-unit[data-h]');
+  var prev = null, prevParts = [];
+  wus.forEach(function(wu) {
+    var parts = _tgWordKeyParts(wu);
+    var gloss = _tgGlossOf(wu);
+    var hit = parts.some(function(p) {
+      var rxs = _tgMajorForms[p];
+      if (!rxs) return false;
+      for (var k = 0; k < rxs.length; k++) { if (!rxs[k] || !gloss || rxs[k].test(gloss)) return true; }
+      return false;
+    });
+    if (!hit && prev) {
+      for (var i = 0; i < _tgMajorBigrams.length; i++) {
+        var bg = _tgMajorBigrams[i];
+        if (prevParts.length && prevParts[prevParts.length - 1].slice(-bg[0].length) === bg[0] && parts[0] === bg[1]) {
+          prev.classList.add('tg-major'); hit = true; break;
+        }
+      }
+    }
+    if (hit) wu.classList.add('tg-major'); else wu.classList.remove('tg-major');
+    prev = wu; prevParts = parts;
+  });
+}
+window.addEventListener('load', function() { addMajorThemeMarkers(document); });
 
 function getTgData() {
   if (!_tgData) {

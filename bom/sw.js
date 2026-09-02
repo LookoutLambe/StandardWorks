@@ -17,7 +17,7 @@ const ASSETS = [
   './roots_glossary.js?v=64',
   './crossrefs.js',
   './bom_inverse_crossrefs.js?v=1',
-  './topical_guide.js?v=2',
+  './topical_guide.js?v=3',
   './images/cover-dual.jpg',
   './images/cover-hebrew.jpg',
   './images/cover-interlinear.jpg',
