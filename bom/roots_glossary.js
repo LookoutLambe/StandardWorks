@@ -1,4 +1,48 @@
 window._rootGlossaryData = {
+  "H2570": {
+    "meaning": "(חָמֻשׁ) armed, in battle array — Ex 13:18; (חֹמֶשׁ) fifth part; abdomen",
+    "category": "Lexical"
+  },
+  "H1624": {
+    "meaning": "(הִתְגָּרָה) to stir up strife, contend, meddle — Deut 2:5, 2:9; (גָּרָה) to stir up",
+    "category": "Lexical"
+  },
+  "H1481": {
+    "meaning": "(גּוּר) to sojourn, dwell as a stranger — Gen 12:10; (גֵּר) sojourner",
+    "category": "Lexical"
+  },
+  "H596": {
+    "meaning": "(הִתְאוֹנֵן) to complain, murmur — Num 11:1",
+    "category": "Lexical"
+  },
+  "H1897": {
+    "meaning": "(הָגָה) to meditate, ponder, muse — Ps 1:2; to moan, utter",
+    "category": "Lexical"
+  },
+  "H6031": {
+    "meaning": "(עִנָּה) to afflict, oppress, humble — Ex 1:11; (עָנָה) to be bowed down",
+    "category": "Lexical"
+  },
+  "H7401": {
+    "meaning": "(רָכַךְ) to be soft, tender; (רִכֵּךְ) to soften — Job 23:16",
+    "category": "Lexical"
+  },
+  "H6087": {
+    "meaning": "(נֶעֱצַב) to be grieved, pained — Gen 6:6; (הִתְעַצֵּב) to grieve oneself",
+    "category": "Lexical"
+  },
+  "H6693": {
+    "meaning": "(הֵצִיק) to constrain, press, distress — Job 32:18; Judg 14:17",
+    "category": "Lexical"
+  },
+  "H56": {
+    "meaning": "(אָבַל) to mourn, lament — Gen 37:34; (הִתְאַבֵּל) to mourn oneself",
+    "category": "Lexical"
+  },
+  "H7378": {
+    "meaning": "(רִיב) to contend, strive, plead — Gen 26:20; (רִיב) a dispute, cause",
+    "category": "Lexical"
+  },
   "שולה": {
     "meaning": "Shule — proper name (Book of Mormon): Jaredite king, son of Kib; father of Omer (Ether 7-8). Kept apart from שׁוּל \"the hem, the skirt of a garment\" (Ex. 28:33, Isa. 6:1), which shares its consonants but not its pointing.",
     "category": "Uncategorized"
