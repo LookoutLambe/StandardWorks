@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-09-02T22-17-13';
+const BUILD_ID = '2026-09-02T22-24-49';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -31,7 +31,6 @@ const CORE_ASSETS = [
     '/StandardWorks/icons/icon-192.png',
     '/StandardWorks/icons/icon-512.png',
     '/StandardWorks/icons/icon-maskable.png',
-    '/StandardWorks/images/cover-bom.jpg',
     '/StandardWorks/site_chrome.css',
     '/StandardWorks/sw_theme.css',
     '/StandardWorks/site_chrome.js',
@@ -60,8 +59,6 @@ const CORE_ASSETS = [
     '/StandardWorks/interlinear_gloss.js',
     '/StandardWorks/version.json',
     '/StandardWorks/sw_register.js',
-    '/StandardWorks/_strongs_lookup.json',
-    '/StandardWorks/_supplement.json',
     '/StandardWorks/ot_english.js',
     '/StandardWorks/nt_english.js',
     '/StandardWorks/ot_crossrefs.js',
@@ -77,7 +74,7 @@ const CORE_ASSETS = [
     '/StandardWorks/pgp_heading_words.js',
     // BOM page — verse data handled by bom/sw.js
     '/StandardWorks/bom/bom.html',
-    '/StandardWorks/bom/bom_book_loader.js?v=2',
+    '/StandardWorks/bom/bom_book_loader.js?v=8',
     '/StandardWorks/bom/bom_lazy_assets.js',
     '/StandardWorks/bom/roots_glossary.js',
     '/StandardWorks/bom/scripture_verses.js',

@@ -7,7 +7,7 @@
 // tools/build_root_concordance.js reads it, so the concordance is keyed by
 // the same code the reader runs. Rebuilt as one design 2026-09-02; proven
 // answer-for-answer against the previous engine on every distinct token of
-// the six volumes by tools/morphology/harness/golden.js — run it after ANY
+// the six volumes by tools/golden_engine.js — run it after ANY
 // edit here, and read every difference it prints before shipping.
 //
 // Data this engine reads (all optional; a missing layer is simply skipped):
