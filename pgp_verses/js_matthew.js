@@ -82,7 +82,7 @@ var jsm_ch1Verses = [
     ["לִמְדוּ","Now learn"],["מָשָׁל","a parable"],["מִן־הַתְּאֵנָה","of the fig tree:"],["בְּעוֹד","while"],["עֲנָפֶיהָ","its branches are"],["רַכִּים","yet tender,"],["וְהֵחֵלָּה","and it begins"],["לְהוֹצִיא","to put forth"],["עָלִים","leaves,"],["יְדַעְתֶּם","you know"],["כִּי","that"],["קָרוֹב","nigh at hand"],["הַקַּיִץ","is the summer;"],["׃",""]
   ]},
   { num: "לט", words: [["כֵּן","So likewise,"], ["בְּחִירַי","mine elect,"], ["בִּרְאוֹתָם","when they shall see"], ["אֶת־כׇּל־אֵלֶּה","all these things,"], ["יֵדְעוּ","they shall know"], ["כִּי","that"], ["קָרוֹב","near is"], ["הוּא","he,"], ["עַל־הַפֶּתַח","even at the doors."], ["׃",""]]},
-  { num: "מ", words: [["אַךְ","But"], ["עַל־הַיּוֹם","of the day"], ["הַהוּא","that,"], ["וְהַשָּׁעָה","and hour"], ["אֵין","no"], ["אִישׁ","one"], ["יוֹדֵעַ","knoweth;"], ["לֹא","no, not"], ["מַלְאֲכֵי","the angels of"], ["אֱלֹהִים","God"], ["בַּשָּׁמַיִם","in heaven,"], ["כִּי","but"], ["אִם־אָבִי","my Father"], ["לְבַדּוֹ","only."], ["׃",""]]},
+  { num: "מ", words: [["אַךְ","But"], ["עַל־הַיּוֹם","of the day"], ["הַהוּא","that,"], ["וְהַשָּׁעָה","and hour"], ["אֵין","no"], ["אִישׁ","one"], ["יוֹדֵעַ","knoweth;"], ["לֹא","no, not"], ["מַלְאֲכֵי","the angels of"], ["אֱלֹהִים","God"], ["בַּשָּׁמַיִם","in heaven,"], ["כִּי־אִם","but"], ["־אָבִי","my Father"], ["לְבַדּוֹ","only."], ["׃",""]]},
   { num: "מא", words: [["אַךְ","But"], ["כִּימֵי","as it was in the days of"], ["נֹחַ","Noah,"], ["כֵּן","so"], ["יִהְיֶה","shall it be"], ["גַּם","also"], ["בְּבִיאַת","at the coming of"], ["בֶּן־הָאָדָם","the Son of Man;"], ["׃",""]]},
   { num: "מב", words: [["כִּי","For"], ["יִהְיֶה","it shall be"], ["לָהֶם","with them"], ["כַּיָּמִים","as in the days"], ["לִפְנֵי","which were before"], ["הַמַּבּוּל","the flood;"], ["עַד","for until"], ["יוֹם","the day"], ["בֹּא","entered"], ["נֹחַ","Noah"], ["אֶל־הַתֵּבָה","into the ark"], ["הָיוּ","they were"], ["אֹכְלִים","eating"], ["וְשֹׁתִים","and drinking,"], ["נֹשְׂאִים","marrying"], ["וְנֹתְנִים","and giving in marriage;"], ["׃",""]]},
   { num: "מג", words: [["וְלֹא","And not"], ["יָדְעוּ","they knew"], ["עַד","until"], ["בֹּא","came"], ["הַמַּבּוּל","the flood,"], ["וַיִּשָּׂאֵם","and took them away"], ["כֻּלָּם","all;"], ["כֵּן","so"], ["תִּהְיֶה","shall be"], ["גַּם","also"], ["בִּיאַת","the coming of"], ["בֶּן־הָאָדָם","the Son of Man."], ["׃",""]]},
@@ -99,9 +99,7 @@ var jsm_ch1Verses = [
   { num: "נד", words: [
     ["וְשִׁסְּעוֹ","And shall cut him asunder,"],["וְשָׂם","and appoint"],["חֶלְקוֹ","him his portion"],["עִם־הַחֲנֵפִים","with the hypocrites;"],["שָׁם","there"],["יִהְיֶה","shall be"],["בְּכִי","weeping"],["וַחֲרֹק","and gnashing of"],["שִׁנָּיִם","teeth."],["׃",""]
   ]},
-  { num: "נה", words: [
-    ["וְכֵן","And thus"],["בָּא","cometh"],["קֵץ","the end of"],["הָרְשָׁעִים","the wicked,"],["כִּנְבוּאַת","according to the prophecy of"],["מֹשֶׁה","Moses,"],["לֵאמֹר","saying:"],["יִכָּרְתוּ","They shall be cut off"],["מִקֶּרֶב","from among"],["הָעָם","the people;"],["אַךְ","but"],["קֵץ","the end of"],["הָאָרֶץ","the earth"],["עוֹד","yet"],["לֹא","is not,"],["כִּי","but"],["אִם־בִּמְהֵרָה","by and by."],["׃",""]
-  ]}
+  { num: "נה", words: [["וְכֵן","And thus"], ["בָּא","cometh"], ["קֵץ","the end of"], ["הָרְשָׁעִים","the wicked,"], ["כִּנְבוּאַת","according to the prophecy of"], ["מֹשֶׁה","Moses,"], ["לֵאמֹר","saying:"], ["יִכָּרְתוּ","They shall be cut off"], ["מִקֶּרֶב","from among"], ["הָעָם","the people;"], ["אַךְ","but"], ["קֵץ","the end of"], ["הָאָרֶץ","the earth"], ["עוֹד","yet"], ["לֹא","is not,"], ["כִּי־אִם","but"], ["־בִּמְהֵרָה","by and by."], ["׃",""]]}
 ];
 renderVerseSet(jsm_ch1Verses, 'jsm-ch1-verses');
 })();
