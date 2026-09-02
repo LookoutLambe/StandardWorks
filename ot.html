@@ -1146,6 +1146,8 @@ window.READER = {
   shareTitle: 'Hebrew Tanakh',
   firstChapter: 'gen-ch1',
   englishData: '_otEnglishData',
+  verseDir: 'ot_verses',      // lazy books: <verseDir>/manifest.js says which file holds which chapter
+  englishDir: 'ot_english',   // the Dual column, one chunk per verse file, fetched with the book while Dual is on
   headingsEn: '_otChapterHeadings',
   headingsHe: '_otChapterHeadingsHeb',
   headingWords: '_otHeadingWords',
@@ -1169,7 +1171,7 @@ window.READER = {
   bookAliases: { '1sam':'1sa', '2sam':'2sa', '1samuel':'1sa', '2samuel':'2sa', '1kings':'1ki', '2kings':'2ki', '1chronicles':'1ch', '2chronicles':'2ch', 'genesis':'gen', 'exodus':'exo', 'leviticus':'lev', 'numbers':'num', 'deuteronomy':'deu', 'joshua':'jos', 'judges':'jdg', 'isaiah':'isa', 'jeremiah':'jer', 'ezekiel':'eze', 'hosea':'hos', 'joel':'joe', 'amos':'amo', 'obadiah':'oba', 'jonah':'jon', 'micah':'mic', 'nahum':'nah', 'habakkuk':'hab', 'zephaniah':'zep', 'haggai':'hag', 'zechariah':'zec', 'malachi':'mal', 'psalms':'psa', 'psalm':'psa', 'proverbs':'pro', 'job':'job', 'song of songs':'sos', 'songofsolomon':'sos', 'ruth':'rth', 'lamentations':'lam', 'ecclesiastes':'ecc', 'esther':'est', 'daniel':'dan', 'ezra':'ezr', 'nehemiah':'neh' }
 };
 </script>
-<script src="reader_core.js?v=12"></script>
+<script src="reader_core.js?v=13"></script>
 
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=2"></script>
@@ -1178,7 +1180,6 @@ window.READER = {
 <script>RootScorecard.init({ vol: 'ot', base: '' });</script>
 
 <!-- English text for dual mode -->
-<script src="ot_english.js"></script>
 
 <!-- Chapter headings (official study summaries) -->
 <script src="ot_chapter_headings.js"></script>
@@ -1186,56 +1187,18 @@ window.READER = {
 <script src="ot_heading_words.js"></script>
 
 <!-- Verse data files -->
-<script src="ot_verses/gen.js"></script>
-<script src="ot_verses/exo.js"></script>
-<script src="ot_verses/lev.js"></script>
-<script src="ot_verses/num.js"></script>
-<script src="ot_verses/deu.js"></script>
-<script src="ot_verses/jos.js"></script>
-<script src="ot_verses/jdg.js"></script>
-<script src="ot_verses/1sa.js"></script>
-<script src="ot_verses/2sa.js"></script>
-<script src="ot_verses/1ki.js"></script>
-<script src="ot_verses/2ki.js"></script>
-<script src="ot_verses/isa.js"></script>
-<script src="ot_verses/jer.js"></script>
-<script src="ot_verses/eze.js"></script>
-<script src="ot_verses/hos.js"></script>
-<script src="ot_verses/joe.js"></script>
-<script src="ot_verses/amo.js"></script>
-<script src="ot_verses/oba.js"></script>
-<script src="ot_verses/jon.js?v=20260523b"></script>
-<script src="ot_verses/mic.js"></script>
-<script src="ot_verses/nah.js"></script>
-<script src="ot_verses/hab.js"></script>
-<script src="ot_verses/zep.js"></script>
-<script src="ot_verses/hag.js"></script>
-<script src="ot_verses/zec.js"></script>
-<script src="ot_verses/mal.js"></script>
-<script src="ot_verses/psa.js"></script>
-<script src="ot_verses/pro.js"></script>
-<script src="ot_verses/job.js"></script>
-<script src="ot_verses/sos.js"></script>
-<script src="ot_verses/rth.js"></script>
-<script src="ot_verses/lam.js"></script>
-<script src="ot_verses/ecc.js"></script>
-<script src="ot_verses/est.js"></script>
-<script src="ot_verses/dan.js"></script>
-<script src="ot_verses/ezr.js"></script>
-<script src="ot_verses/neh.js"></script>
-<script src="ot_verses/1ch.js"></script>
-<script src="ot_verses/2ch.js"></script>
+<script src="ot_verses/manifest.js?v=1"></script>  <!-- lazy books: the verse files load on demand (reader_core.js VolumeLoader) -->
 
 <!-- Cross-reference data + engine -->
 <script src="ot_crossrefs.js"></script>
 <script>window._volumeCrossrefsData = window._otCrossrefsData;</script>
 <script src="crossrefs_engine.js?v=9"></script>
 
-<script src="reader_ui.js?v=18"></script>
+<script src="reader_ui.js?v=19"></script>
 <script src="notes_engine.js"></script>
 <script src="site_chrome.js?v=36" data-sw-volume="ot"></script>
 <script src="verse_search.js?v=3"></script>
-<script src="nav_engine.js?v=42"></script>
+<script src="nav_engine.js?v=43"></script>
 <script src="xref_study_panel.js"></script>
 <script>
 NavEngine.init({

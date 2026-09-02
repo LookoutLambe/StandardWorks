@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-09-02T22-24-49';
+const BUILD_ID = '2026-09-02T22-54-24';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -59,15 +59,10 @@ const CORE_ASSETS = [
     '/StandardWorks/interlinear_gloss.js',
     '/StandardWorks/version.json',
     '/StandardWorks/sw_register.js',
-    '/StandardWorks/ot_english.js',
-    '/StandardWorks/nt_english.js',
     '/StandardWorks/ot_crossrefs.js',
     '/StandardWorks/nt_crossrefs.js',
     '/StandardWorks/dc_crossrefs.js',
     '/StandardWorks/pgp_crossrefs.js',
-    '/StandardWorks/dc_english.js',
-    '/StandardWorks/pgp_english.js',
-    '/StandardWorks/jst_english.js',
     '/StandardWorks/ot_heading_words.js',
     '/StandardWorks/nt_heading_words.js',
     '/StandardWorks/dc_heading_words.js',
@@ -82,117 +77,17 @@ const CORE_ASSETS = [
 
 // Verse data files for all volumes — cached individually so one failure
 // does not abort the install
-const VERSE_ASSETS = [
-    // Old Testament (39 books)
-    '/StandardWorks/ot_verses/gen.js',
-    '/StandardWorks/ot_verses/exo.js',
-    '/StandardWorks/ot_verses/lev.js',
-    '/StandardWorks/ot_verses/num.js',
-    '/StandardWorks/ot_verses/deu.js',
-    '/StandardWorks/ot_verses/jos.js',
-    '/StandardWorks/ot_verses/jdg.js',
-    '/StandardWorks/ot_verses/1sa.js',
-    '/StandardWorks/ot_verses/2sa.js',
-    '/StandardWorks/ot_verses/1ki.js',
-    '/StandardWorks/ot_verses/2ki.js',
-    '/StandardWorks/ot_verses/isa.js',
-    '/StandardWorks/ot_verses/jer.js',
-    '/StandardWorks/ot_verses/eze.js',
-    '/StandardWorks/ot_verses/hos.js',
-    '/StandardWorks/ot_verses/joe.js',
-    '/StandardWorks/ot_verses/amo.js',
-    '/StandardWorks/ot_verses/oba.js',
-    '/StandardWorks/ot_verses/jon.js',
-    '/StandardWorks/ot_verses/mic.js',
-    '/StandardWorks/ot_verses/nah.js',
-    '/StandardWorks/ot_verses/hab.js',
-    '/StandardWorks/ot_verses/zep.js',
-    '/StandardWorks/ot_verses/hag.js',
-    '/StandardWorks/ot_verses/zec.js',
-    '/StandardWorks/ot_verses/mal.js',
-    '/StandardWorks/ot_verses/psa.js',
-    '/StandardWorks/ot_verses/pro.js',
-    '/StandardWorks/ot_verses/job.js',
-    '/StandardWorks/ot_verses/sos.js',
-    '/StandardWorks/ot_verses/rth.js',
-    '/StandardWorks/ot_verses/lam.js',
-    '/StandardWorks/ot_verses/ecc.js',
-    '/StandardWorks/ot_verses/est.js',
-    '/StandardWorks/ot_verses/dan.js',
-    '/StandardWorks/ot_verses/ezr.js',
-    '/StandardWorks/ot_verses/neh.js',
-    '/StandardWorks/ot_verses/1ch.js',
-    '/StandardWorks/ot_verses/2ch.js',
-    // New Testament (27 books)
-    '/StandardWorks/nt_verses/matt.js',
-    '/StandardWorks/nt_verses/mark.js',
-    '/StandardWorks/nt_verses/luke.js',
-    '/StandardWorks/nt_verses/john.js',
-    '/StandardWorks/nt_verses/acts.js',
-    '/StandardWorks/nt_verses/rom.js',
-    '/StandardWorks/nt_verses/1co.js',
-    '/StandardWorks/nt_verses/2co.js',
-    '/StandardWorks/nt_verses/gal.js',
-    '/StandardWorks/nt_verses/eph.js',
-    '/StandardWorks/nt_verses/php.js',
-    '/StandardWorks/nt_verses/col.js',
-    '/StandardWorks/nt_verses/1th.js',
-    '/StandardWorks/nt_verses/2th.js',
-    '/StandardWorks/nt_verses/1ti.js',
-    '/StandardWorks/nt_verses/2ti.js',
-    '/StandardWorks/nt_verses/tit.js',
-    '/StandardWorks/nt_verses/phm.js',
-    '/StandardWorks/nt_verses/heb.js',
-    '/StandardWorks/nt_verses/jas.js',
-    '/StandardWorks/nt_verses/1pe.js',
-    '/StandardWorks/nt_verses/2pe.js',
-    '/StandardWorks/nt_verses/1jn.js',
-    '/StandardWorks/nt_verses/2jn.js',
-    '/StandardWorks/nt_verses/3jn.js',
-    '/StandardWorks/nt_verses/jude.js',
-    '/StandardWorks/nt_verses/rev.js',
-    // Doctrine & Covenants (18 files)
-    '/StandardWorks/dc_verses/dc1_10.js',
-    '/StandardWorks/dc_verses/dc11_20.js',
-    '/StandardWorks/dc_verses/dc21_30.js',
-    '/StandardWorks/dc_verses/dc31_40.js',
-    '/StandardWorks/dc_verses/dc41_50.js',
-    '/StandardWorks/dc_verses/dc51_60.js',
-    '/StandardWorks/dc_verses/dc61_70.js',
-    '/StandardWorks/dc_verses/dc71_80.js',
-    '/StandardWorks/dc_verses/dc81_90.js',
-    '/StandardWorks/dc_verses/dc91_100.js',
-    '/StandardWorks/dc_verses/dc101_110.js',
-    '/StandardWorks/dc_verses/dc109.js',
-    '/StandardWorks/dc_verses/dc111_120.js',
-    '/StandardWorks/dc_verses/dc121_130.js',
-    '/StandardWorks/dc_verses/dc131_138.js',
-    '/StandardWorks/dc_verses/dc_chron.js',
-    '/StandardWorks/dc_verses/dc_intro.js',
-    '/StandardWorks/dc_verses/od.js',
-    // Pearl of Great Price (6 files)
-    '/StandardWorks/pgp_verses/moses.js',
-    '/StandardWorks/pgp_verses/abraham.js',
-    '/StandardWorks/pgp_verses/js_matthew.js',
-    '/StandardWorks/pgp_verses/js_history.js',
-    '/StandardWorks/pgp_verses/articles_of_faith.js',
-    '/StandardWorks/pgp_verses/pgp_intro.js',
-  ];
+// Verse files and the Dual-view English chunks are NOT precached. They are
+// served cache-first with a background refresh (isVerseAssetPath): a book is
+// fetched the first time it is read, comes from CACHE_NAME instantly after
+// that while a conditional request updates the copy for the next visit, and
+// the whole cache is replaced on deploy. The offline download (nav_engine.js
+// → 'offline:download') still stores a whole volume on request.
 
 // Install — cache shell assets atomically, verse data individually (failures allowed)
 self.addEventListener('install', event => {
     self.skipWaiting();
-    event.waitUntil(
-          caches.open(CACHE_NAME).then(cache =>
-                  cache.addAll(CORE_ASSETS.map(scopedUrl)).then(() =>
-                            Promise.all(
-                                        VERSE_ASSETS.map(url =>
-                                                      cache.add(scopedUrl(url)).catch(err => console.warn('[SW] Verse cache miss:', url))
-                                                                   )
-                                      )
-                                                       )
-                                           )
-        );
+    event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(CORE_ASSETS.map(scopedUrl))));
 });
 
 // Messages from pages — offline download / removal
@@ -277,9 +172,9 @@ function networkFirst(request, timeoutMs) {
     });
 }
 
-/** Verse payloads — large; still refreshed online on each visit (network-first). */
+/** Verse payloads and English chunks — large; cache-first with background refresh, keyed by the deploy (CACHE_NAME). */
 function isVerseAssetPath(pathname) {
-  return /\/(ot|nt|pgp|jst|dc|bom)_verses\//.test(pathname) ||
+  return /\/(ot|nt|pgp|jst|dc|bom)_(verses|english)\//.test(pathname) ||
     /\/bom\/scripture_verses\.js$/.test(pathname) ||
     /\/bom\/verses\//.test(pathname) ||
     /\/bom\/(official_verses|crossrefs|chapter_headings|chapter_headings_heb|topical_guide|roots_glossary|bom_book_loader|bom_lazy_assets)\.js$/.test(pathname);
@@ -293,11 +188,27 @@ function isShellUIPath(pathname) {
     /\/sw_register\.js$/i.test(pathname) ||
     /\/interlinear_gloss\.js$/i.test(pathname) ||
     /\/(site_chrome|sw_theme|nav_engine|verse_search|xref_study_panel|notes_engine|crossrefs_engine)\.(js|css)$/i.test(pathname) ||
-    /\/(ot|nt|dc|pgp)_(english|crossrefs)\.js$/i.test(pathname) ||
+    /\/(ot|nt|dc|pgp)_crossrefs\.js$/i.test(pathname) ||
     /\/strongs_(lookup|roots)\.js$/i.test(pathname);
 }
 
-// Cache-first — for immutable static assets and verse data
+// Cache-first with background refresh — verse files and English chunks. Served
+// from CACHE_NAME instantly when present while a conditional fetch updates the
+// copy for the next visit (a 304 when nothing changed, so an edited book shows
+// on the second load even between deploys); a miss fetches and stores.
+function staleWhileRevalidate(request) {
+    return caches.open(CACHE_NAME).then(cache =>
+        cache.match(request).then(cached => {
+            const refresh = fetch(request, { cache: 'no-cache' }).then(response => {
+                if (response && response.ok) cache.put(request, response.clone());
+                return response;
+            }).catch(() => cached);
+            return cached || refresh;
+        })
+    );
+}
+
+// Cache-first — for immutable static assets
 function cacheFirst(request) {
     return caches.match(request).then(cached => {
           if (cached) return cached;
@@ -355,9 +266,9 @@ self.addEventListener('fetch', event => {
                             c.match(event.request).then(hit => {
                               if (hit) return networkFirstWithOfflineFallback(event.request, 2500);
 
-                              // Verse + gloss data — network-first when online so deploys apply immediately
+                              // Verse + gloss data — from the cache instantly, refreshed in the background
                               if (isVerseAssetPath(url.pathname)) {
-                                return networkFirst(event.request, 5000);
+                                return staleWhileRevalidate(event.request);
                               }
 
                               // Shell HTML/CSS/JS — network-first (never paint stale chrome)

@@ -2329,6 +2329,8 @@ window.READER = {
   shareTitle: 'Hebrew Joseph Smith Translation',
   firstChapter: 'jstgen-ch1',
   englishData: '_jstEnglishData',
+  verseDir: 'jst_verses',      // lazy books: <verseDir>/manifest.js says which file holds which chapter
+  englishDir: 'jst_english',   // the Dual column, one chunk per verse file, fetched with the book while Dual is on
   headingsEn: '_jstChapterHeadings',
   headingsHe: '_jstChapterHeadingsHeb',
   headingWords: '_jstHeadingWords',
@@ -2481,7 +2483,7 @@ window.READER = {
   }
 };
 </script>
-<script src="reader_core.js?v=12"></script>
+<script src="reader_core.js?v=13"></script>
 
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=2"></script>
@@ -2491,45 +2493,13 @@ window.READER = {
 <script src="notes_engine.js"></script>
 
 <!-- Verse data files -->
-<script src="jst_verses/jst_intro.js"></script>
-<script src="jst_verses/jstgen.js"></script>
-<script src="jst_verses/jstexo.js"></script>
-<script src="jst_verses/jstdeu.js"></script>
-<script src="jst_verses/jst1sa.js"></script>
-<script src="jst_verses/jst2sa.js"></script>
-<script src="jst_verses/jst1ch.js"></script>
-<script src="jst_verses/jst2ch.js"></script>
-<script src="jst_verses/jstpsa.js"></script>
-<script src="jst_verses/jstisa.js"></script>
-<script src="jst_verses/jstjer.js"></script>
-<script src="jst_verses/jstamo.js"></script>
-<script src="jst_verses/jstmatt.js"></script>
-<script src="jst_verses/jstmark.js"></script>
-<script src="jst_verses/jstluke.js"></script>
-<script src="jst_verses/jstjohn.js"></script>
-<script src="jst_verses/jstacts.js"></script>
-<script src="jst_verses/jstrom.js"></script>
-<script src="jst_verses/jst1co.js"></script>
-<script src="jst_verses/jst2co.js"></script>
-<script src="jst_verses/jstgal.js"></script>
-<script src="jst_verses/jsteph.js"></script>
-<script src="jst_verses/jstcol.js"></script>
-<script src="jst_verses/jst1th.js"></script>
-<script src="jst_verses/jst2th.js"></script>
-<script src="jst_verses/jst1ti.js"></script>
-<script src="jst_verses/jstheb.js"></script>
-<script src="jst_verses/jstjas.js"></script>
-<script src="jst_verses/jst1pe.js"></script>
-<script src="jst_verses/jst2pe.js"></script>
-<script src="jst_verses/jst1jn.js"></script>
-<script src="jst_verses/jstrev.js"></script>
+<script src="jst_verses/manifest.js?v=1"></script>  <!-- lazy books: the verse files load on demand (reader_core.js VolumeLoader) -->
 
 <!-- Cross-reference data + engine (JST will get data later) -->
 <script>window._volumeCrossrefsData = {};</script>
-<script src="jst_english.js?v=1"></script>
 <script src="crossrefs_engine.js?v=9"></script>
 
-<script src="reader_ui.js?v=18"></script>
+<script src="reader_ui.js?v=19"></script>
 <script>
 // === JST canon overrides (phase 2) — later function declarations win, so
 // these load AFTER reader_ui.js: JST_REF chapter labels, book progress in
@@ -2748,7 +2718,7 @@ document.querySelectorAll('#nav-dropdown .dd-book').forEach(function(book) {
 </div>
 <script src="site_chrome.js?v=36" data-sw-volume="jst"></script>
 <script src="verse_search.js?v=3"></script>
-<script src="nav_engine.js?v=42"></script>
+<script src="nav_engine.js?v=43"></script>
 <script>
 NavEngine.init({
   volume: 'jst',

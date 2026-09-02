@@ -694,29 +694,18 @@
   function _offlineAssetsForCurrentVolume() {
     if (!_config || !_config.volume) return [];
     var vk = _config.volume;
-    if (vk === 'ot') return ['ot.html'].concat([
-      'ot_verses/gen.js','ot_verses/exo.js','ot_verses/lev.js','ot_verses/num.js','ot_verses/deu.js','ot_verses/jos.js','ot_verses/jdg.js',
-      'ot_verses/1sa.js','ot_verses/2sa.js','ot_verses/1ki.js','ot_verses/2ki.js','ot_verses/isa.js','ot_verses/jer.js','ot_verses/eze.js',
-      'ot_verses/hos.js','ot_verses/joe.js','ot_verses/amo.js','ot_verses/oba.js','ot_verses/jon.js','ot_verses/mic.js','ot_verses/nah.js',
-      'ot_verses/hab.js','ot_verses/zep.js','ot_verses/hag.js','ot_verses/zec.js','ot_verses/mal.js','ot_verses/psa.js','ot_verses/pro.js',
-      'ot_verses/job.js','ot_verses/sos.js','ot_verses/rth.js','ot_verses/lam.js','ot_verses/ecc.js','ot_verses/est.js','ot_verses/dan.js',
-      'ot_verses/ezr.js','ot_verses/neh.js','ot_verses/1ch.js','ot_verses/2ch.js'
-    ]);
-    if (vk === 'nt') return ['nt.html'].concat([
-      'nt_verses/matt.js','nt_verses/mark.js','nt_verses/luke.js','nt_verses/john.js','nt_verses/acts.js','nt_verses/rom.js','nt_verses/1co.js',
-      'nt_verses/2co.js','nt_verses/gal.js','nt_verses/eph.js','nt_verses/php.js','nt_verses/col.js','nt_verses/1th.js','nt_verses/2th.js',
-      'nt_verses/1ti.js','nt_verses/2ti.js','nt_verses/tit.js','nt_verses/phm.js','nt_verses/heb.js','nt_verses/jas.js','nt_verses/1pe.js',
-      'nt_verses/2pe.js','nt_verses/1jn.js','nt_verses/2jn.js','nt_verses/3jn.js','nt_verses/jude.js','nt_verses/rev.js'
-    ]);
-    if (vk === 'dc') return ['dc.html'].concat([
-      'dc_verses/dc1_10.js','dc_verses/dc11_20.js','dc_verses/dc21_30.js','dc_verses/dc31_40.js','dc_verses/dc41_50.js','dc_verses/dc51_60.js',
-      'dc_verses/dc61_70.js','dc_verses/dc71_80.js','dc_verses/dc81_90.js','dc_verses/dc91_100.js','dc_verses/dc101_110.js','dc_verses/dc109.js',
-      'dc_verses/dc111_120.js','dc_verses/dc121_130.js','dc_verses/dc131_138.js','dc_verses/dc_chron.js','dc_verses/dc_intro.js','dc_verses/od.js'
-    ]);
-    if (vk === 'pgp') return ['pgp.html'].concat([
-      'pgp_verses/moses.js','pgp_verses/abraham.js','pgp_verses/js_matthew.js','pgp_verses/js_history.js','pgp_verses/articles_of_faith.js','pgp_verses/pgp_intro.js'
-    ]);
-    if (vk === 'jst') return ['jst.html'];
+    // The five shared readers fetch books through reader_core.js's
+    // VolumeLoader, so the page's manifest says which files exist: the
+    // offline set is derived from it — every verse file and the Dual-view
+    // English chunk beside it — never typed out here.
+    var man = window.READER_VERSE_MANIFEST;
+    if (man && man.files && /^(ot|nt|dc|pgp|jst)$/.test(vk)) {
+      var list = [vk + '.html', vk + '_verses/manifest.js'];
+      if (vk === 'dc') list.push('dc_verses/dc_chron.js');   // a table the page loads statically
+      man.files.forEach(function(f) { list.push(vk + '_verses/' + f); });
+      (man.english || []).forEach(function(f) { list.push(vk + '_english/' + f); });
+      return list;
+    }
     if (vk === 'bom') return ['bom/bom.html'].concat([
       'bom/official_verses.js','bom/crossrefs.js','bom/roots_glossary.js','bom/chapter_headings.js','bom/chapter_headings_heb.js',
       'bom/scripture_verses.js','bom/topical_guide.js',

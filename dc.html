@@ -1160,6 +1160,8 @@ window.READER = {
   shareTitle: '\u05D4\u05B7\u05DC\u05BC\u05B6\u05E7\u05B7\u05D7 \u05D5\u05B0\u05D4\u05B7\u05D1\u05BC\u05B0\u05E8\u05B4\u05D9\u05EA\u05D5\u05B9\u05EA \u00b7 Doctrine and Covenants',
   firstChapter: 'dc1-ch1',
   englishData: '_dcEnglishData',
+  verseDir: 'dc_verses',      // lazy books: <verseDir>/manifest.js says which file holds which chapter
+  englishDir: 'dc_english',   // the Dual column, one chunk per verse file, fetched with the book while Dual is on
   headingsEn: '_dcChapterHeadings',
   headingsHe: '_dcChapterHeadingsHeb',
   headingWords: '_dcHeadingWords',
@@ -1266,7 +1268,7 @@ window.READER = {
   }
 };
 </script>
-<script src="reader_core.js?v=12"></script>
+<script src="reader_core.js?v=13"></script>
 
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=2"></script>
@@ -1275,7 +1277,6 @@ window.READER = {
 <script>RootScorecard.init({ vol: 'dc', base: '' });</script>
 
 <!-- English text for dual mode -->
-<script src="dc_english.js"></script>
 
 <!-- Section headings (official study summaries) -->
 <script src="dc_chapter_headings.js"></script>
@@ -1283,31 +1284,15 @@ window.READER = {
 <script src="dc_heading_words.js"></script>
 
 <!-- Verse data files -->
-<script src="dc_verses/dc_intro.js?v=103"></script>
+<script src="dc_verses/manifest.js?v=1"></script>  <!-- lazy books: the verse files load on demand (reader_core.js VolumeLoader) -->
 <script src="dc_verses/dc_chron.js?v=103"></script>
-<script src="dc_verses/dc1_10.js?v=103"></script>
-<script src="dc_verses/dc11_20.js?v=103"></script>
-<script src="dc_verses/dc21_30.js?v=108"></script>
-<script src="dc_verses/dc31_40.js?v=109"></script>
-<script src="dc_verses/dc41_50.js?v=103"></script>
-<script src="dc_verses/dc51_60.js?v=103"></script>
-<script src="dc_verses/dc61_70.js?v=103"></script>
-<script src="dc_verses/dc71_80.js?v=103"></script>
-<script src="dc_verses/dc81_90.js?v=103"></script>
-<script src="dc_verses/dc91_100.js?v=103"></script>
-<script src="dc_verses/dc101_110.js?v=103"></script>
-<script src="dc_verses/dc109.js?v=103"></script>
-<script src="dc_verses/dc111_120.js?v=103"></script>
-<script src="dc_verses/dc121_130.js?v=103"></script>
-<script src="dc_verses/dc131_138.js?v=103"></script>
-<script src="dc_verses/od.js?v=103"></script>
 
 <!-- Cross-reference data + engine -->
 <script src="dc_crossrefs.js"></script>
 <script>window._volumeCrossrefsData = window._dcCrossrefsData;</script>
 <script src="crossrefs_engine.js?v=9"></script>
 
-<script src="reader_ui.js?v=18"></script>
+<script src="reader_ui.js?v=19"></script>
 <script>
 // === D&C canon overrides (phase 2) — later function declarations win, so
 // these must load AFTER reader_ui.js: section-keyed chapter labels, the
@@ -1425,7 +1410,7 @@ function _injectChapterHeading(chapId) {
 <script src="notes_engine.js"></script>
 <script src="site_chrome.js?v=36" data-sw-volume="dc"></script>
 <script src="verse_search.js?v=3"></script>
-<script src="nav_engine.js?v=42"></script>
+<script src="nav_engine.js?v=43"></script>
 <script src="xref_study_panel.js"></script>
 <script>
 NavEngine.init({

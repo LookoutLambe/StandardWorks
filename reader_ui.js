@@ -279,6 +279,7 @@ function closeAllPanels() {
   var _navHist = window.navTo;
   window.navTo = function(id, slideDir) {
     _navHist(id, slideDir);
+    if (window.__swNavDeferred) return;   // the loader's hand-off pass — the completed pass pushes
     try {
       if (window.__swNavFromHash) return;
       var v = 0;
@@ -297,8 +298,9 @@ function closeAllPanels() {
 (function() {
   var _navFade = window.navTo;
   window.navTo = function(id, slideDir) {
-    document.querySelectorAll('.chapter-panel').forEach(function(p) { p.classList.remove('fade-in', 'slide-left', 'slide-right'); });
     _navFade(id, slideDir);
+    if (window.__swNavDeferred) return;   // book still loading — the old page stays exactly as it is
+    document.querySelectorAll('.chapter-panel').forEach(function(p) { p.classList.remove('fade-in', 'slide-left', 'slide-right'); });
     setTimeout(function() {
       document.querySelectorAll('.chapter-panel').forEach(function(p) {
         if (p.style.display !== 'none') {
