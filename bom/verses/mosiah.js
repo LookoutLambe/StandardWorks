@@ -1485,9 +1485,7 @@ var mo_ch29Verses = [
     ["וַיְהִי","and it came to pass"],["כִּי־מֵת","that died"],["אָבִיו","his father"],["וְהוּא","and he was"],["בֶּן־שְׁמוֹנִים","son of eighty"],["וּשְׁתַּיִם","and two"],["שָׁנָה","years"],["וַיְחִי","and he lived"],["לְהַשְׁלִים","to fulfill"],["אֶת־מִצְוֹת","the commandments of"],["אֱלֹהִים","God"]
   , ["׃",""]]},
   { num: "מו", words: [["וַיְהִי","and it came to pass"], ["כִּי־מֵת","that died"], ["גַּם־מוֹשִׁיָּה","also Mosiah"], ["בִּשְׁנַת","in the year"], ["שְׁלֹשִׁים","thirtieth"], ["וְשָׁלֹשׁ","and third"], ["לְמׇלְכוֹ","of his reign"], ["וְהוּא","and he was"], ["בֶּן־שִׁשִּׁים","son of sixty"], ["וְשָׁלֹשׁ","and three"], ["שָׁנָה","years"], ["וַיְהִי","and was"], ["הַכֹּל","the whole"], ["חֲמֵשׁ","five"], ["מֵאוֹת","hundred"], ["וָתֵשַׁע","and nine"], ["שָׁנִים","years"], ["מֵעֵת","from the time"], ["צֵאת","of the going out of"], ["לֶחִי","Lehi"], ["מִירוּשָׁלָיִם","from Jerusalem"], ["׃",""]]},
-  { num: "מז", words: [
-    ["וְכָכָה","and thus"],["תַּם","ended"],["מִמְשַׁל","the reign of"],["הַמְּלָכִים","the kings"],["עַל־עַם","over the people of"],["נֶפִי","Nephi"],["וְכָכָה","and thus"],["תַּמּוּ","ended"],["יְמֵי","the days of"],["אַלְמָא","Alma"],["אֲשֶׁר","which"],["הָיָה","was"],["מְיַסֵּד","the founder of"],["עֲדָתָם","their church"]
-  , ["׃",""]]}
+  { num: "מז", words: [["וַיִּתֹּם","and thus ended"], ["מִמְשַׁל","the reign of"], ["הַמְּלָכִים","the kings"], ["עַל־עַם","over the people of"], ["נֶפִי","Nephi"], ["וַיִּתְּמוּ","and thus ended"], ["יְמֵי","the days of"], ["אַלְמָא","Alma"], ["אֲשֶׁר","which"], ["הָיָה","was"], ["מְיַסֵּד","the founder of"], ["עֲדָתָם","their church"], ["׃",""]]}
 ];
 renderVerseSet(mo_ch29Verses, 'mo-ch29-verses');
 var mo_ch28Verses = [
