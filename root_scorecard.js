@@ -94,7 +94,7 @@
       return;
     }
     var need = [];
-    if (!window._strongsLookup)   need.push('strongs_lookup.js?v=2');
+    if (!window._strongsLookup)   need.push('strongs_lookup.js?v=3');
     if (!window._strongsRoots)    need.push('strongs_roots.js?v=2');
     if (!window._bdbRoots)        need.push('bdb_roots.js?v=4');
     if (!window._rootProperNames) need.push('root_names.js?v=17');
