@@ -836,3 +836,22 @@ body.dark-mode #nav-sidebar .nl-tile { background: #1a1f2e !important; }
 /* iPhone: drawer/panel scrolling must not chain to the page behind it */
 #nav-sidebar, #glossary-panel, #xref-panel, #annotations-panel,
 .nav-library, .rsc-panel-card { overscroll-behavior: contain; }
+
+/* Mode bar (Interlinear / Hebrew Only / Dual / Transliterate / No Nikkud):
+   44 px targets and 12 px labels — they were 32 px tall with 10.4 px text,
+   under both the touch and the legibility floors. Wraps to two rows only on
+   screens narrower than ~360 px. */
+#sw-reader-footer .controls-bottom {
+  gap: 4px;
+  padding: 4px max(6px, env(safe-area-inset-left, 0px)) max(6px, env(safe-area-inset-bottom, 0px)) max(6px, env(safe-area-inset-right, 0px));
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#sw-reader-footer .controls-bottom button {
+  min-height: 44px;
+  padding: 4px 5px;
+  font-size: 12px;
+  line-height: 1.25;
+  flex: 1 1 auto;
+  min-width: 0;
+}

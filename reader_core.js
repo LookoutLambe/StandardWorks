@@ -247,7 +247,10 @@ function makeWordUnit(h, e, isSof) {
   var gloss = computeGlossFromHebrew(h, baseGloss);
   var displayH = window._noNikkud ? _stripNikkudDisplay(h) : h;
   if (!window._noNikkud) displayH = displayH.replace(/([\u05D0-\u05EA][\u0591-\u05C6]*\u05C7[\u0591-\u05C6]*)/g, '<span class="qq">$1</span>');
-  div.innerHTML = '<span class="hw">' + displayH + '</span><span class="tl"></span><span class="gl">' + gloss + '</span>';
+  var glCls = 'gl' + ((gloss && gloss.length <= 18 && gloss.split(' ').length <= 3) ? ' gl-nw' : '');
+  div.innerHTML = '<span class="hw" lang="he">' + displayH + '</span><span class="tl"></span><span class="' + glCls + '">' + gloss + '</span>';
+  div.setAttribute('tabindex', '0');
+  div.setAttribute('role', 'button');
   if (window.READER.wordUnitExtra) window.READER.wordUnitExtra(div, h);
   return div;
 }

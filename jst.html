@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en" dir="rtl">
 <head>
 <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/davidlibre-400-hebrew.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/davidlibre-700-hebrew.woff2">
@@ -9,6 +9,7 @@
 <script>document.documentElement.classList.add('sw-shell-pending');</script>
 <script>(function(){var h=location.hash.slice(1);if(h&&h!=='home')document.documentElement.classList.add('sw-boot');})();</script>
 <style>html.sw-boot .chapter-panel{visibility:hidden!important}html.sw-boot #main-content,html.sw-boot .page{transition:none!important}</style>
+<style>@media (prefers-reduced-motion: reduce) {  .chapter-panel.slide-left, .chapter-panel.slide-right, .chapter-panel.fade-in { animation: none !important; opacity: 1 !important; transform: none !important; }  .chapter-panel, .verse, .word-unit, .page, #main-content, .nqd-nav-btn, .nqd-chapter-now { transition: none !important; }}h1.book-title{margin-top:0}.gl.gl-nw{white-space:nowrap;max-width:none}.gl{text-wrap:pretty}</style>
 <script>(function(){var h=(location.hostname||'').toLowerCase(),p=location.pathname.split('/').filter(Boolean),gh=h.slice(-10)==='github.io'&&p.length>0,m=gh?'manifest.github.json':'manifest.json';document.write('<link rel="manifest" href="'+m+'" id="sw-manifest-link">');})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -18,9 +19,6 @@
 <meta name="description" content="Hebrew Interlinear Joseph Smith Translation — Classical Biblical Hebrew, Word-by-Word">
 <meta name="theme-color" content="#1e2233">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 
 :root {
@@ -255,8 +253,8 @@ body.hide-translit .tl { display: none; }
 .gl {
   font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.72em;
-  font-style: italic;
-  color: #1a2744;
+  font-style: normal;   /* David Libre has no italic; the slant was synthesized. Upright, in the gloss ink, as ot/nt/dc already are. */
+  color: var(--gloss);
   line-height: 1.35;
   text-align: center;
   direction: ltr;
@@ -1255,6 +1253,31 @@ body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
 .verse-english ::-moz-selection { background: transparent !important; color: inherit !important; }
 body.dual-mode .verse-english { font-size: 0.85em; flex: 45 1 0; }
 body.dual-mode .word-flow     { flex: 55 1 0; }
+/* Phones: side by side, each column was about 140 px (14 characters of
+   English per line). Stack instead: the Hebrew block first, its English
+   under it, full width. */
+@media (max-width: 600px) {
+  body.dual-mode .verse { flex-wrap: wrap; }
+  body.dual-mode .word-flow { flex: 1 1 0; order: 0; }
+  body.dual-mode .verse-english {
+    order: 1;
+    flex: 1 1 100%;
+    border-left: none;
+    border-top: 1px dotted var(--rule-light);
+    margin-top: 2px;
+    padding: 8px 0 2px;
+    font-size: 0.82em;
+    line-height: 1.55;
+  }
+  body.dual-mode .chapter-heading { flex-wrap: wrap; }
+  body.dual-mode .chapter-heading > .chapter-summary-en {
+    order: 3;
+    flex: 1 1 100%;
+    border-left: none;
+    padding-left: 0;
+    padding-top: 8px;
+  }
+}
 body.dual-mode .hw            { font-size: 1em; }
 
 body.hide-gloss .xref-marker, body.dual-mode .xref-marker { font-size: 0.5em; }
@@ -1354,8 +1377,8 @@ body.hide-sel-toolbar #sel-toolbar-reopen{display:block;}
 body:not(.hide-sel-toolbar) #main-content{padding-right:60px!important;}
 @media (max-width:600px){body:not(.hide-sel-toolbar) #main-content{padding-right:52px!important;}}
 </style>
-<link rel="stylesheet" href="nav_engine.css?v=29">
-<link rel="stylesheet" href="site_chrome.css?v=41">
+<link rel="stylesheet" href="nav_engine.css?v=30">
+<link rel="stylesheet" href="site_chrome.css?v=43">
 <link rel="stylesheet" href="xref_study_panel.css?v=8">
 </head>
 <body>
@@ -1646,7 +1669,7 @@ body:not(.hide-sel-toolbar) #main-content{padding-right:60px!important;}
     <button class="nav-next" id="nav-next" onclick="goNext()" disabled aria-label="Next chapter">→</button>
   </div>
   <div class="tools-group">
-    <label><span class="label-text">Size </span><input type="range" id="sizeSlider" min="70" max="150" value="100" oninput="setSize(this.value)" aria-label="Font size"></label>
+    <span class="sw-size-stepper" role="group" aria-label="Font size"><span class="label-text">Size </span><button type="button" class="sw-size-btn" onclick="stepSize(-10)" aria-label="Smaller text" title="Smaller text">A<span aria-hidden="true">−</span></button><button type="button" class="sw-size-btn sw-size-btn-up" onclick="stepSize(10)" aria-label="Larger text" title="Larger text">A<span aria-hidden="true">+</span></button><input type="range" id="sizeSlider" min="70" max="150" value="100" oninput="setSize(this.value)" aria-label="Font size" hidden></span>
     <span style="color:#3a3f55">│</span>
     <button id="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
     <button id="search-toggle" style="background:transparent;border:1px solid #3a3f55;color:#c8a84e;padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openSearch()" title="Search" aria-label="Search">🔍</button>
@@ -1666,7 +1689,7 @@ body:not(.hide-sel-toolbar) #main-content{padding-right:60px!important;}
 
 <div class="page" id="page">
   <div class="book-header" id="book-header" style="display:none">
-    <div class="book-title" id="main-book-title">תרגום יוסף סמית</div>
+    <h1 class="book-title" id="main-book-title" lang="he">תרגום יוסף סמית</h1>
     <div class="book-subtitle" id="main-book-subtitle">Joseph Smith Translation</div>
   </div>
   <div class="ornament" id="main-ornament" style="display:none">✦ ✦ ✦</div>
@@ -2459,7 +2482,7 @@ window.READER = {
   }
 };
 </script>
-<script src="reader_core.js?v=10"></script>
+<script src="reader_core.js?v=11"></script>
 
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=2"></script>
@@ -2507,7 +2530,7 @@ window.READER = {
 <script src="jst_english.js?v=1"></script>
 <script src="crossrefs_engine.js?v=9"></script>
 
-<script src="reader_ui.js?v=15"></script>
+<script src="reader_ui.js?v=16"></script>
 <script>
 // === JST canon overrides (phase 2) — later function declarations win, so
 // these load AFTER reader_ui.js: JST_REF chapter labels, book progress in
@@ -2724,7 +2747,7 @@ document.querySelectorAll('#nav-dropdown .dd-book').forEach(function(book) {
     </table>
   </div>
 </div>
-<script src="site_chrome.js?v=35" data-sw-volume="jst"></script>
+<script src="site_chrome.js?v=36" data-sw-volume="jst"></script>
 <script src="verse_search.js?v=3"></script>
 <script src="nav_engine.js?v=41"></script>
 <script>

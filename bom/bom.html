@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en" dir="rtl">
 <head>
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../fonts/davidlibre-400-hebrew.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../fonts/davidlibre-700-hebrew.woff2">
@@ -51,11 +51,8 @@
 <link rel="icon" type="image/png" sizes="192x192" href="../icons/icon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="../icons/icon-180.png">
 <link rel="apple-touch-icon" href="../icons/icon-192.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../nav_engine.css?v=29">
-<link rel="stylesheet" href="../site_chrome.css?v=41">
+<link rel="stylesheet" href="../nav_engine.css?v=30">
+<link rel="stylesheet" href="../site_chrome.css?v=43">
 <link rel="stylesheet" href="../xref_study_panel.css?v=8">
 <style>
 
@@ -142,7 +139,7 @@ body.hide-bottom-bar .controls-bottom.sw-footer-modes {
   font-weight: 700;
   color: var(--header-bg);
   letter-spacing: 0.04em;
-  margin-bottom: 2px;
+  margin: 0 0 2px;
 }
 
 .book-subtitle {
@@ -390,8 +387,8 @@ body.hide-translit .tl { display: none; }
 .gl {
   font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.72em;
-  font-style: italic;
-  color: #1a2744;
+  font-style: normal;   /* David Libre has no italic; the slant was synthesized. Upright, in the gloss ink, as ot/nt/dc already are. */
+  color: var(--gloss);
   line-height: 1.35;
   text-align: center;
   direction: ltr;
@@ -820,6 +817,11 @@ body.dual-mode .hw { font-size: 1.3em; }
 }
 #start-reading-btn:hover,
 #continue-reading-btn:hover { filter: brightness(1.1); transform: scale(1.02); }
+#start-reading-btn { direction: ltr; max-width: 100%; }
+@media (max-width: 600px) { #start-reading-btn { padding: 12px 18px; font-size: 1.02em; } }
+.landing-preface-link { color: var(--accent-deep, #8a6a1c); text-decoration: none; border-bottom: 1px dotted currentColor; font-family: 'David Libre', 'Georgia', serif; }
+.landing-preface-link:hover { border-bottom-style: solid; }
+body.dark-mode .landing-preface-link { color: #d4af37; }
 /* nav dropdown styles moved to nav_engine.css */
 
 /* Keyboard shortcuts overlay */
@@ -860,6 +862,14 @@ html.sw-boot .chapter-panel { visibility: hidden !important; }
    during boot it must land instantly, or the resting place is computed
    mid-animation and the settle pass moves the page afterwards */
 html.sw-boot #main-content, html.sw-boot .page { transition: none !important; }
+/* Glosses of up to three short words never break ("the houses / of"); longer ones avoid a one-word last line */
+.gl.gl-nw { white-space: nowrap; max-width: none; }
+.gl { text-wrap: pretty; }
+/* System 'reduce motion': no page flip, no fades, no transitions */
+@media (prefers-reduced-motion: reduce) {
+  .chapter-panel.slide-left, .chapter-panel.slide-right, .chapter-panel.fade-in { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .chapter-panel, .verse, .word-unit, .page, #main-content, .nqd-nav-btn, .nqd-chapter-now { transition: none !important; }
+}
 /* Landing hero — the title itself rendered interlinear */
 .hero-lis-row { display: flex; direction: rtl; justify-content: center; align-items: flex-start; gap: 26px; flex-wrap: wrap; }
 .hlw { display: inline-flex; flex-direction: column; align-items: center; }
@@ -1900,6 +1910,31 @@ body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
       chapter summary laid out side by side the way the verses are. -- */
 body.dual-mode .verse-english { font-size: 0.85em; flex: 45 1 0; }
 body.dual-mode .word-flow     { flex: 55 1 0; }
+/* Phones: side by side, each column was about 140 px (14 characters of
+   English per line). Stack instead: the Hebrew block first, its English
+   under it, full width. */
+@media (max-width: 600px) {
+  body.dual-mode .verse { flex-wrap: wrap; }
+  body.dual-mode .word-flow { flex: 1 1 0; order: 0; }
+  body.dual-mode .verse-english {
+    order: 1;
+    flex: 1 1 100%;
+    border-left: none;
+    border-top: 1px dotted var(--rule-light);
+    margin-top: 2px;
+    padding: 8px 0 2px;
+    font-size: 0.82em;
+    line-height: 1.55;
+  }
+  body.dual-mode .chapter-heading { flex-wrap: wrap; }
+  body.dual-mode .chapter-heading > .chapter-summary-en {
+    order: 3;
+    flex: 1 1 100%;
+    border-left: none;
+    padding-left: 0;
+    padding-top: 8px;
+  }
+}
 body.dual-mode .hw            { font-size: 1em; }
 body.dual-mode .colophon .word-unit .hw { font-size: 1em; }
 body.dual-mode .colophon .arr-hw        { font-size: 1em; }
@@ -2127,7 +2162,7 @@ body.dual-mode .chapter-summary { display: block; }
   </div>
 
   <div class="book-header" id="book-header" style="display:none">
-    <div class="book-title" id="main-book-title">ספר מורמון</div>
+    <h1 class="book-title" id="main-book-title" lang="he">ספר מורמון</h1>
     <div class="book-subtitle" id="main-book-subtitle">עדות אחרת ישוע המשיח</div>
   </div>
 
@@ -2139,19 +2174,20 @@ body.dual-mode .chapter-summary { display: block; }
 
       <div class="hero-lis" style="margin-bottom:6px">
         <div class="hero-lis-row hero-lis-title">
-          <span class="hlw"><span class="hlw-hw" style="font-size:2.3em;color:var(--accent-deep)">סֵפֶר</span><span class="hlw-tl">sefer</span><span class="hlw-gl">The Book of</span></span>
-          <span class="hlw"><span class="hlw-hw" style="font-size:2.3em;color:var(--accent-deep)">מוֹרְמוֹן</span><span class="hlw-tl">mormon</span><span class="hlw-gl">Mormon</span></span>
+          <span class="hlw"><span class="hlw-hw" lang="he" style="font-size:2.3em;color:var(--accent-deep)">סֵפֶר</span><span class="hlw-tl">sefer</span><span class="hlw-gl">The Book of</span></span>
+          <span class="hlw"><span class="hlw-hw" lang="he" style="font-size:2.3em;color:var(--accent-deep)">מוֹרְמוֹן</span><span class="hlw-tl">mormon</span><span class="hlw-gl">Mormon</span></span>
         </div>
         <div class="hero-lis-row" style="margin-top:16px">
-          <span class="hlw"><span class="hlw-hw">עֵדוּת</span><span class="hlw-tl">edut</span><span class="hlw-gl">Testament</span></span>
-          <span class="hlw"><span class="hlw-hw">אַחֶרֶת</span><span class="hlw-tl">acheret</span><span class="hlw-gl">Another</span></span>
-          <span class="hlw"><span class="hlw-hw">יֵשׁוּעַ</span><span class="hlw-tl">yeshua</span><span class="hlw-gl">of Jesus</span></span>
-          <span class="hlw"><span class="hlw-hw">הַמָּשִׁיחַ</span><span class="hlw-tl">hammashiach</span><span class="hlw-gl">Christ</span></span>
+          <span class="hlw"><span class="hlw-hw" lang="he">עֵדוּת</span><span class="hlw-tl">edut</span><span class="hlw-gl">Testament</span></span>
+          <span class="hlw"><span class="hlw-hw" lang="he">אַחֶרֶת</span><span class="hlw-tl">acheret</span><span class="hlw-gl">Another</span></span>
+          <span class="hlw"><span class="hlw-hw" lang="he">יֵשׁוּעַ</span><span class="hlw-tl">yeshua</span><span class="hlw-gl">of Jesus</span></span>
+          <span class="hlw"><span class="hlw-hw" lang="he">הַמָּשִׁיחַ</span><span class="hlw-tl">hammashiach</span><span class="hlw-gl">Christ</span></span>
         </div>
         <div style="font-family:'David Libre',serif;font-size:0.95em;color:var(--ink-light);letter-spacing:0.1em;direction:ltr;margin-top:16px">HEBREW INTERLINEAR</div>
       </div>
       <div style="margin:24px 0 4px">
-        <button id="start-reading-btn" onclick="navTo('intro')">To the Reader →</button>
+        <button id="start-reading-btn" onclick="startReading()">Start Reading — 1 Nephi 1 →</button>
+        <div style="margin-top:14px;font-size:0.95em;direction:ltr"><a href="#intro" class="landing-preface-link" onclick="navTo('intro');return false;">To the Reader — the translator's preface →</a></div>
       </div>
       <hr class="landing-divider">
       <div id="landing-contents" class="landing-sections" style="text-align:initial"></div>
@@ -4052,7 +4088,7 @@ body.dual-mode .chapter-summary { display: block; }
     <button class="nav-next" id="nav-next" onclick="goNext()" disabled aria-label="Next chapter">➡️</button>
   </div>
   <div class="tools-group">
-    <label><span class="label-text">Size </span><input type="range" id="sizeSlider" min="70" max="150" value="100" oninput="setSize(this.value)" aria-label="Font size"></label>
+    <span class="sw-size-stepper" role="group" aria-label="Font size"><span class="label-text">Size </span><button type="button" class="sw-size-btn" onclick="stepSize(-10)" aria-label="Smaller text" title="Smaller text">A<span aria-hidden="true">−</span></button><button type="button" class="sw-size-btn sw-size-btn-up" onclick="stepSize(10)" aria-label="Larger text" title="Larger text">A<span aria-hidden="true">+</span></button><input type="range" id="sizeSlider" min="70" max="150" value="100" oninput="setSize(this.value)" aria-label="Font size" hidden></span>
     <span style="color:#3a3f55">│</span>
     <button type="button" id="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
     <button type="button" id="search-toggle" onclick="openSearch()" title="Search" aria-label="Search">🔍</button>
@@ -4087,18 +4123,22 @@ body.dual-mode .chapter-summary { display: block; }
 
 <script src="bom_book_loader.js?v=8"></script>
 <script src="bom_lazy_assets.js?v=1"></script>
-<script src="../bdb_roots.js?v=3"></script>
-<script src="../root_names.js?v=16"></script>
+<script defer src="../bdb_roots.js?v=3"></script>
+<script defer src="../root_names.js?v=16"></script>
 <script src="../xref_common.js?v=2"></script>
 <script src="../verse_loader.js?v=4"></script>
 <script src="../root_scorecard.js?v=65"></script>
 <script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
-<script src="crossrefs.js?v=23"></script>
-<script src="roots_glossary.js?v=64"></script>
-<script src="bom_inverse_crossrefs.js?v=1"></script>
+<!-- Reference data (cross-references, glossary, roots, topical guide: ~2.4 MB)
+     is deferred: it is consumed only after load (cross-ref markers at +500 ms,
+     the word popup, the glossary, the topical guide), so it no longer blocks
+     the first paint of the chapter. -->
+<script defer src="crossrefs.js?v=23"></script>
+<script defer src="roots_glossary.js?v=64"></script>
+<script defer src="bom_inverse_crossrefs.js?v=1"></script>
 <script src="chapter_headings.js"></script>
 <script src="chapter_headings_heb.js?v=7"></script>
-<script src="topical_guide.js?v=2"></script>
+<script defer src="topical_guide.js?v=2"></script>
 <script src="../notes_engine.js"></script>
 <script src="../interlinear_gloss.js?v=1"></script>
 <script>
@@ -4450,7 +4490,10 @@ function makeWordUnit(h, e, isSof) {
   // Preserve curated gloss; add morph gloss for popup auditing.
   div.setAttribute('data-mgl', computeMorphGloss(h));
   var displayH = document.body.classList.contains('no-nikkud') ? h.replace(/ו(ּ[ְ-ׇֻ]|[ְ-ׇֻ]ּ)/g,'וו$1').replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g,'') : h.replace(/([\u05D0-\u05EA][\u0591-\u05C6]*\u05C7[\u0591-\u05C6]*)/g, '<span class="qq">$1</span>');
-  div.innerHTML = `<span class="hw">${displayH}</span><span class="tl"></span><span class="gl">${gloss}</span>`;
+  var glCls = 'gl' + ((gloss && gloss.length <= 18 && gloss.split(' ').length <= 3) ? ' gl-nw' : '');
+  div.innerHTML = `<span class="hw" lang="he">${displayH}</span><span class="tl"></span><span class="${glCls}">${gloss}</span>`;
+  div.setAttribute('tabindex', '0');
+  div.setAttribute('role', 'button');
   return div;
 }
 
@@ -4750,7 +4793,7 @@ try {
   if (_savedMode === 'heb' || _savedMode === 'dual') setMode(_savedMode);
 } catch(e) {}
 </script>
-<script src="../shoroshim_roots.js?v=3"></script>
+<script defer src="../shoroshim_roots.js?v=3"></script>
 <script src="../root_engine.js?v=36"></script>
 <script>
 
@@ -5795,7 +5838,7 @@ function navigateToVerse(verseKey) {
   navTo(chapId);
   setTimeout(function() {
     var el = document.querySelector('.verse[data-verse-key="' + verseKey + '"]');
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (el) el.scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'center' });
   }, 200);
 }
 
@@ -7032,7 +7075,7 @@ function navigateToXrefVerse(parsed) {
     setTimeout(function() {
       var verseEl = document.querySelector('.verse[data-verse-key="' + parsed.key + '"]');
       if (verseEl) {
-        verseEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        verseEl.scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'center' });
         verseEl.style.transition = 'background 0.3s';
         verseEl.style.background = 'rgba(219,185,88,0.25)';
         // Stamp verse number into URL: #mosiah-16:3
@@ -7217,16 +7260,20 @@ function continueReading() {
 
 // Show/refresh the Continue Reading button based on saved farthest progress
 function updateContinueButton() {
-  var wrap = document.getElementById('continue-reading-wrap');
-  var btn = document.getElementById('continue-reading-btn');
-  if (!wrap || !btn) return;
+  // The landing's one primary button: Continue for a reader with progress,
+  // Start otherwise. (It used to look for a #continue-reading-wrap that the
+  // markup never had, so Continue never showed; the primary button opened
+  // the preface instead.)
+  var btn = document.getElementById('start-reading-btn');
+  if (!btn) return;
   var far = localStorage.getItem('bom-farthest-chapter');
   if (far && chapterOrder.indexOf(far) > 0) {
     var label = typeof getChapterLabel === 'function' ? getChapterLabel(far) : far;
     btn.textContent = 'Continue Reading \u2014 ' + label + ' \u2192';
-    wrap.style.display = '';
+    btn.onclick = continueReading;
   } else {
-    wrap.style.display = 'none';
+    btn.textContent = 'Start Reading \u2014 1 Nephi 1 \u2192';
+    btn.onclick = startReading;
   }
 }
 
@@ -7576,7 +7623,7 @@ document.addEventListener('keydown', function(e) {
         if (++tries < 25) setTimeout(attempt, 300);   // up to ~7.5s
         return;
       }
-      v.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      v.scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'center' });
       v.classList.add('highlighted');
       setTimeout(function() { v.classList.remove('highlighted'); }, 3000);
     })();
@@ -8521,7 +8568,7 @@ function goToSearchResult(chapId, verseIdx) {
     if (!panel) return;
     var verses = panel.querySelectorAll('.verse');
     if (verses[verseIdx]) {
-      verses[verseIdx].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      verses[verseIdx].scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'center' });
       verses[verseIdx].classList.add('highlighted');
       // Stamp verse number into URL: #mosiah-16:3
       history.replaceState(null, '', window.location.hash + ':' + (verseIdx + 1));
@@ -8873,7 +8920,7 @@ function openGlossaryAtRoot(rootKey) {
       var rootEl = entries[i].querySelector('.glossary-root');
       if (rootEl && (rootEl.getAttribute('data-root-key') === rootKey || rootEl.textContent === rootKey)) {
         entries[i].classList.add('expanded');
-        entries[i].scrollIntoView({ behavior: 'smooth', block: 'start' });
+        entries[i].scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'start' });
         break;
       }
     }
@@ -9000,7 +9047,7 @@ function openTopicalGuide(entryId) {
   if (entryId) {
     setTimeout(function() {
       var el = document.getElementById('tg-entry-' + entryId);
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (el) el.scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'start' });
     }, 200);
   }
 }
@@ -9024,7 +9071,7 @@ function renderTgAlphaBar() {
 
 function scrollTgToLetter(letter) {
   var header = document.getElementById('tg-section-' + letter);
-  if (header) header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  if (header) header.scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'start' });
 }
 
 function renderTgList() {
@@ -9145,7 +9192,7 @@ function toggleTgEntry(id) {
   if (_tgExpandedId) {
     setTimeout(function() {
       var el = document.getElementById('tg-entry-' + id);
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (el) el.scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'start' });
     }, 50);
   }
 }
@@ -9159,7 +9206,7 @@ function navigateTgRelated(relId) {
   renderTgList();
   setTimeout(function() {
     var el = document.getElementById('tg-entry-' + relId);
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (el) el.scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'start' });
   }, 50);
 }
 
@@ -11842,7 +11889,10 @@ updateNavButtons();
           }
         }
         wu.setAttribute('data-wid', key + '|h|' + realIdx);
-        wu.innerHTML = '<span class="hw">' + hw.replace(/([א-ת][֑-׆]*ׇ[֑-׆]*)/g, '<span class="qq">$1</span>') + '</span><span class="tl">' + transliterate(hw) + '</span><span class="gl">' + gloss + '</span>';
+        var hGlCls = 'gl' + ((gloss && gloss.length <= 18 && gloss.split(' ').length <= 3) ? ' gl-nw' : '');
+        wu.innerHTML = '<span class="hw" lang="he">' + hw.replace(/([א-ת][֑-׆]*ׇ[֑-׆]*)/g, '<span class="qq">$1</span>') + '</span><span class="tl">' + transliterate(hw) + '</span><span class="' + hGlCls + '">' + gloss + '</span>';
+        wu.setAttribute('tabindex', '0');
+        wu.setAttribute('role', 'button');
         var chevron = document.createElement('span');
         chevron.className = 'arr';
         var sym = isLast ? '\u00ab' : '\u2039';
@@ -11918,7 +11968,7 @@ try {
 
 </script>
 
-<script src="../site_chrome.js?v=35" data-sw-volume="bom"></script>
+<script src="../site_chrome.js?v=36" data-sw-volume="bom"></script>
 <script src="../verse_search.js?v=3"></script>
 <script src="../nav_engine.js?v=41"></script>
 <script src="../xref_study_panel.js?v=6"></script>

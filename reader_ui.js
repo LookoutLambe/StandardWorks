@@ -1484,7 +1484,7 @@ function goToGlossaryVerse(verseKey) {
   navTo(chId);
   setTimeout(function() {
     var verse = document.querySelector('[data-verse-key="' + verseKey + '"]');
-    if (verse) { verse.classList.add('highlighted'); verse.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+    if (verse) { verse.classList.add('highlighted'); verse.scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'center' }); }
   }, 200);
 }
 
@@ -1548,7 +1548,7 @@ function openGlossaryAtRoot(rootKey) {
     for (var i = 0; i < entries.length; i++) {
       var rootEl = entries[i].querySelector('.glossary-root');
       if (rootEl && (rootEl.getAttribute('data-root-key') === rootKey || rootEl.textContent === rootKey)) {
-        entries[i].classList.add('expanded'); entries[i].scrollIntoView({ behavior: 'smooth', block: 'start' }); break;
+        entries[i].classList.add('expanded'); entries[i].scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'start' }); break;
       }
     }
   }, 100);
@@ -1782,7 +1782,7 @@ window.addEventListener('scroll', function() {
         var verses = panel.querySelectorAll('.verse');
         var v = verses[n - 1];
         if (v) {
-          v.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          v.scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'center' });
           v.classList.add('highlighted');
           setTimeout(function() { v.classList.remove('highlighted'); }, 3000);
         }

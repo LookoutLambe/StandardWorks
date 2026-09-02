@@ -27,7 +27,32 @@
     return document.getElementById('sw-top-bar');
   }
 
+  // Honour the system motion preference in every programmatic scroll
+  var _rm = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+  window.swScrollBehavior = (_rm && _rm.matches) ? 'auto' : 'smooth';
+  if (_rm && _rm.addEventListener) _rm.addEventListener('change', function (e) { window.swScrollBehavior = e.matches ? 'auto' : 'smooth'; });
+
+  // Keyboard: Enter / Space on a focused word does what a tap does
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var wu = e.target && e.target.classList && e.target.classList.contains('word-unit') ? e.target : null;
+    if (!wu) return;
+    e.preventDefault();
+    wu.click();
+  });
+
   window.swHeaderBar = headerBar;
+
+  // Font size: two 44 px steps instead of a 56x16 px slider thumb. The hidden
+  // range input stays as the value store the readers already save/restore.
+  window.stepSize = function (delta) {
+    var s = document.getElementById('sizeSlider');
+    var cur = s ? parseInt(s.value, 10) : NaN;
+    if (isNaN(cur)) { var pg = document.getElementById('page'); cur = (pg && parseInt(pg.style.fontSize, 10)) || 100; }
+    var next = Math.max(70, Math.min(150, cur + delta));
+    if (s) s.value = next;
+    if (typeof window.setSize === 'function') window.setSize(next);
+  };
   window.swSyncChromeLayout = syncChromeHeight;
 
   function syncChromeHeight() {
@@ -166,7 +191,7 @@
 
     var toolsGroup = controls.querySelector('.tools-group');
     if (toolsGroup) {
-      var sliderLabel = toolsGroup.querySelector('label');
+      var sliderLabel = toolsGroup.querySelector('.sw-size-stepper, label');
       if (sliderLabel) {
         tools.innerHTML = '';
         tools.appendChild(sliderLabel);

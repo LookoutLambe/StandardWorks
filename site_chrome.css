@@ -129,7 +129,8 @@ body.dark-mode .sw-top-bar {
   z-index: 2;
 }
 
-.sw-top-bar-tools label {
+.sw-top-bar-tools label,
+.sw-top-bar-tools .sw-size-stepper {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -183,8 +184,8 @@ body:not(.sw-chrome-reader) #sw-chrome-dark {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 42px;
-  min-height: 42px;
+  min-width: 44px;
+  min-height: 44px;
   padding: 2px;
   border: none;
   border-radius: 9px;
@@ -324,8 +325,8 @@ body.has-sw-chrome .dict-wrap {
     padding: 6px 8px;
   }
   .sw-chrome-home {
-    min-width: 40px;
-    min-height: 40px;
+    min-width: 44px;
+    min-height: 44px;
     padding: 1px;
   }
 }
@@ -390,3 +391,28 @@ body.has-sw-chrome.sw-chrome-reader #main-content { transition: padding-top 0.28
   .controls-bottom button { min-height: 44px; }
   .sel-color, .sel-eraser { width: 32px !important; height: 32px !important; margin: 5px !important; }
 }
+
+/* Font-size stepper (replaces the range slider; 44 px targets) */
+.sw-size-stepper { display: inline-flex; align-items: center; gap: 2px; }
+.sw-size-stepper .label-text { display: none; }
+.sw-size-btn {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 8px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: var(--sw-gold, #f4ca48);
+  font-family: 'David Libre', 'Georgia', serif;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.sw-size-btn-up { font-size: 20px; }
+.sw-size-btn:hover { background: #2a2f44; }
+.sw-size-btn:active { background: rgba(244, 202, 72, 0.18); }
+.sw-size-stepper input[hidden] { display: none; }
+
+/* Word units are keyboard-focusable (Enter / Space opens the word) */
+.word-unit:focus-visible { outline: 2px solid var(--sw-gold, #dbb958); outline-offset: 2px; border-radius: 4px; }
