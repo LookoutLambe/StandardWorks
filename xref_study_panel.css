@@ -27,7 +27,7 @@
   border-radius: 6px;
   background: var(--bg);
   color: var(--ink);
-  font-family: 'David Libre', 'David Libre', Georgia, serif;
+  font-family: 'David Libre', Georgia, serif;
   font-size: 0.82em;
   cursor: pointer;
 }

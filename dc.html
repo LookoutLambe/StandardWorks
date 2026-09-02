@@ -7,6 +7,8 @@
 
 <meta charset="UTF-8">
 <script>document.documentElement.classList.add('sw-shell-pending');</script>
+<script>(function(){var h=location.hash.slice(1);if(h&&h!=='home')document.documentElement.classList.add('sw-boot');})();</script>
+<style>html.sw-boot .chapter-panel{visibility:hidden!important}html.sw-boot #main-content,html.sw-boot .page{transition:none!important}</style>
 <script>(function(){var h=(location.hostname||'').toLowerCase(),p=location.pathname.split('/').filter(Boolean),gh=h.slice(-10)==='github.io'&&p.length>0,m=gh?'manifest.github.json':'manifest.json';document.write('<link rel="manifest" href="'+m+'" id="sw-manifest-link">');})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -90,14 +92,14 @@ body {
 
 /* === INTERLINEAR CORE === */
 .verse { display: flex; align-items: flex-start; gap: 10px; border-bottom: 1px solid var(--rule-light); padding: 12px 0; direction: rtl; transition: background 0.2s; }
-.verse:hover { background: var(--highlight); }
+@media (hover: hover) and (pointer: fine) { .verse:hover { background: var(--highlight); } }
 .verse-num { font-family: 'David Libre', serif; font-size: 1.2em; font-weight: 700; color: var(--verse-num); min-width: 30px; text-align: center; padding-top: 3px; cursor: pointer; user-select: none; flex-shrink: 0; line-height: 1.2; }
 .verse-num .verse-num-arabic { display: block; font-size: 0.55em; color: var(--ink-light); font-weight: 400; font-family: 'David Libre', 'Georgia', serif; opacity: 0.7; }
 .word-flow { display: flex; flex-wrap: wrap; gap: 1px; align-items: flex-start; flex: 1; direction: rtl; }
 .word-group { display: inline-flex; align-items: flex-start; vertical-align: top; direction: rtl; }
 
 .word-unit { display: inline-flex; flex-direction: column; align-items: center; padding: 3px 5px; border-radius: 3px; cursor: pointer; transition: background 0.15s; line-height: 1.2; user-select: none; -webkit-user-select: none; }
-.word-unit:hover { background: var(--highlight); }
+@media (hover: hover) and (pointer: fine) { .word-unit:hover { background: var(--highlight); } }
 .hw { font-size: 1.85em; font-weight: 500; line-height: 1.5; color: #1a2744; direction: rtl; unicode-bidi: bidi-override; white-space: nowrap; }
 .gl { font-family: 'David Libre', 'Georgia', serif; font-size: 0.69em; color: var(--gloss); direction: ltr; text-align: center; white-space: normal; overflow-wrap: break-word; hyphens: none; line-height: 1.35; max-width: 96px; padding: 0 6px; font-style: normal; }
 .tl { font-family: 'David Libre', 'Georgia', serif; font-size: 0.78em; color: var(--ink-light); direction: ltr; text-align: center; white-space: nowrap; opacity: 0.7; }
@@ -441,7 +443,7 @@ body.dark-mode .tl { color: var(--gloss); }
 body.dark-mode .page { background: #1e2233; }
 body.dark-mode .controls-top, body.dark-mode .controls-bottom { background: #0d111c; }
 body.dark-mode .verse { border-color: #303648; }
-body.dark-mode .verse:hover { background: rgba(200, 168, 78, 0.08); }
+@media (hover: hover) and (pointer: fine) { body.dark-mode .verse:hover { background: rgba(200, 168, 78, 0.08); } }
 /* Dark mode renders highlights as translucent washes over the navy — the
    solid light-mode pastels would bury the light ink. !important outranks the
    painter's inline background. */
@@ -456,7 +458,7 @@ body.dark-mode .ann-hl[data-hlc="#b2dfdb"] { background-color: rgba(38,166,154,0
 body.dark-mode .ann-hl[data-hlc="#f8bbd0"] { background-color: rgba(236,64,122,0.25) !important; }
 body.dark-mode .ann-hl[data-hlc="#ffecb3"] { background-color: rgba(255,202,40,0.25) !important; }
 body.dark-mode .ann-hl[data-hlc="#cfd8dc"] { background-color: rgba(120,144,156,0.30) !important; }
-body.dark-mode .word-unit:hover { background: rgba(200, 168, 78, 0.10); }
+@media (hover: hover) and (pointer: fine) { body.dark-mode .word-unit:hover { background: rgba(200, 168, 78, 0.10); } }
 body.dark-mode #word-popup { background: #1e2233; border-color: #d4af37; color: #e8e0d0; }
 body.dark-mode #word-popup-overlay { background: rgba(0, 0, 0, 0.5); }
 body.dark-mode #word-popup .popup-dismiss-mobile {
@@ -1249,7 +1251,7 @@ window.READER = {
   }
 };
 </script>
-<script src="reader_core.js?v=9"></script>
+<script src="reader_core.js?v=10"></script>
 
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=2"></script>
@@ -1290,7 +1292,7 @@ window.READER = {
 <script>window._volumeCrossrefsData = window._dcCrossrefsData;</script>
 <script src="crossrefs_engine.js?v=8"></script>
 
-<script src="reader_ui.js?v=14"></script>
+<script src="reader_ui.js?v=15"></script>
 <script>
 // === D&C canon overrides (phase 2) — later function declarations win, so
 // these must load AFTER reader_ui.js: section-keyed chapter labels, the

@@ -7,6 +7,7 @@
 
 <meta charset="UTF-8">
 <script>document.documentElement.classList.add('sw-shell-pending');</script>
+<script>(function(){var h=location.hash.slice(1);if(h&&h!=='home')document.documentElement.classList.add('sw-boot');})();</script>
 <script>(function(){var h=(location.hostname||'').toLowerCase(),p=location.pathname.split('/').filter(Boolean),gh=h.slice(-10)==='github.io'&&p.length>0,m='../'+(gh?'manifest.github.json':'manifest.json');document.write('<link rel="manifest" href="'+m+'" id="sw-manifest-link">');})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="canonical" id="canonical-link" href="https://sefermormon.com/bom/bom.html">
@@ -307,9 +308,9 @@ body.hide-translit .chapter-summary-tl { display: none; }
   background: var(--row-alt);
 }
 
-.verse:hover {
+@media (hover: hover) and (pointer: fine) { .verse:hover {
   background: rgba(219, 185, 88, 0.14);
-}
+} }
 
 .verse:last-child {
   border-bottom: none;
@@ -359,9 +360,9 @@ body.hide-translit .chapter-summary-tl { display: none; }
   -webkit-user-select: none;
 }
 
-.word-unit:hover {
+@media (hover: hover) and (pointer: fine) { .word-unit:hover {
   background: rgba(139, 105, 20, 0.08);
-}
+} }
 
 .hw {
   font-size: 1.85em;
@@ -849,6 +850,16 @@ body.dual-mode .hw { font-size: 1.3em; }
 .chapter-panel.fade-in { opacity: 1; }
 #panel-intro { opacity: 1; }
 #panel-landing { opacity: 1; }
+/* Boot gate (html.sw-boot, set in <head> when the URL names a page): the
+   reading area stays hidden until that page has rendered, the Hebrew face is
+   in, and the saved position is restored, then appears in one paint. Without
+   it a reload showed the landing page, then the chapter fading in at its top,
+   then a jump down to the saved verse. Cleared by the load routine. */
+html.sw-boot .chapter-panel { visibility: hidden !important; }
+/* the chrome animates the reading area's top padding into place (0.28 s);
+   during boot it must land instantly, or the resting place is computed
+   mid-animation and the settle pass moves the page afterwards */
+html.sw-boot #main-content, html.sw-boot .page { transition: none !important; }
 /* Landing hero — the title itself rendered interlinear */
 .hero-lis-row { display: flex; direction: rtl; justify-content: center; align-items: flex-start; gap: 26px; flex-wrap: wrap; }
 .hlw { display: inline-flex; flex-direction: column; align-items: center; }
@@ -1037,7 +1048,7 @@ body.dual-mode .hw { font-size: 1.3em; }
   touch-action: manipulation;
 }
 .word-unit { cursor: pointer; }
-.word-unit:hover { background: rgba(219,185,88,0.06); border-radius: 4px; }
+@media (hover: hover) and (pointer: fine) { .word-unit:hover { background: rgba(219,185,88,0.06); border-radius: 4px; } }
 
 /* === MOBILE POPUP ENLARGEMENT === */
 @media (max-width: 600px) {
@@ -1669,7 +1680,7 @@ body.dark-mode .tl { color: var(--gloss); }
 body.dark-mode .page { background: #1e2233; }
 body.dark-mode .controls-top, body.dark-mode .controls-bottom { background: #0d111c; }
 body.dark-mode .verse { border-color: #303648; }
-body.dark-mode .verse:hover { background: rgba(219, 185, 88, 0.08); }
+@media (hover: hover) and (pointer: fine) { body.dark-mode .verse:hover { background: rgba(219, 185, 88, 0.08); } }
 /* Dark mode renders highlights as translucent washes over the navy — the
    solid light-mode pastels would bury the light ink. !important outranks the
    painter's inline background. */
@@ -1684,7 +1695,7 @@ body.dark-mode .ann-hl[data-hlc="#b2dfdb"] { background-color: rgba(38,166,154,0
 body.dark-mode .ann-hl[data-hlc="#f8bbd0"] { background-color: rgba(236,64,122,0.25) !important; }
 body.dark-mode .ann-hl[data-hlc="#ffecb3"] { background-color: rgba(255,202,40,0.25) !important; }
 body.dark-mode .ann-hl[data-hlc="#cfd8dc"] { background-color: rgba(120,144,156,0.30) !important; }
-body.dark-mode .word-unit:hover { background: rgba(219, 185, 88, 0.10); }
+@media (hover: hover) and (pointer: fine) { body.dark-mode .word-unit:hover { background: rgba(219, 185, 88, 0.10); } }
 body.dark-mode .book-label { color: #e8e0d0; }
 body.dark-mode #word-popup { background: #1e2233; border-color: #d4af37; color: #e8e0d0; }
 body.dark-mode #word-popup-overlay { background: rgba(0, 0, 0, 0.5); }
@@ -4145,6 +4156,13 @@ body.dual-mode .chapter-summary { display: block; }
 // CHAPTER 12 VERSES
 
 function navTo(id, slideDir, _bookReady) {
+  // The wrappers around navTo (hash, animation, last-chapter, ...) must act
+  // once per navigation. When the book script is not in yet, this first pass
+  // only hands off to the loader and returns; the loader calls navTo again
+  // (synchronously when the book is already loaded) and THAT pass completes.
+  // The flag tells the wrappers a pass was only the hand-off. Before it, every
+  // in-book click pushed the hash twice and every book boundary flipped twice.
+  window.__swNavDeferred = false;
   const isLanding = id === 'landing';
   const isTopicalGuide = id === 'topical-guide';
   const isPrintPage = id === 'print-editions';
@@ -4228,7 +4246,13 @@ function navTo(id, slideDir, _bookReady) {
 
   // Load per-book verse JS on demand (~5MB saved on initial landing)
   if (!_bookReady && !isLanding && !isTopicalGuide && !isPrintPage && typeof ensureBomBookForChapId === 'function') {
-    ensureBomBookForChapId(id, function() { navTo(id, slideDir, true); });
+    var fromHash = !!window.__swNavFromHash;
+    ensureBomBookForChapId(id, function() {
+      var prev = window.__swNavFromHash;
+      window.__swNavFromHash = fromHash;   // a boot / back-button nav stays a replaceState
+      try { navTo(id, slideDir, true); } finally { window.__swNavFromHash = prev; }
+    });
+    window.__swNavDeferred = true;   // after the call: a synchronous re-entry has reset it
     return;
   }
 
@@ -4267,6 +4291,7 @@ function navTo(id, slideDir, _bookReady) {
 
   // Scroll to top for all panels
   window.scrollTo({top: 0, behavior: 'instant'});
+  window.__swNavCount = (window.__swNavCount || 0) + 1;   // completed navigations (the boot reveal waits on it)
 
   // Prefetch/render adjacent chapters during idle time so next/prev feels instant.
   scheduleAdjacentPrefetch();
@@ -4536,12 +4561,17 @@ function _ensureChapterRendered(chapId) {
     }
   }
   _renderedChapters[chapId] = true;
-  // Apply saved annotations, cross-ref markers, and note markers to newly rendered chapter
-  if (typeof applyAllAnnotations === 'function') applyAllAnnotations();
+  // Apply saved annotations, cross-ref markers, and note markers to the newly
+  // rendered chapter ONLY. These passes used to walk the whole document on
+  // every render and prefetch, so each chapter turned re-marked every chapter
+  // already on the page: markers multiplied (126 -> 714 on one chapter after a
+  // dozen turns) and each turn got slower than the last.
+  var newPanel = document.getElementById('panel-' + chapId) || null;
+  if (typeof applyAllAnnotations === 'function') applyAllAnnotations(newPanel);
   if (typeof addNoteMarkers === 'function') addNoteMarkers();
-  if (window._crossrefsLoaded && typeof addCrossRefMarkers === 'function') addCrossRefMarkers();
+  if (window._crossrefsLoaded && typeof addCrossRefMarkers === 'function') addCrossRefMarkers(newPanel);
   // Populate English divs if dual mode already loaded
-  if (window._englishLoaded && typeof populateEnglishDivs === 'function') populateEnglishDivs();
+  if (window._englishLoaded && typeof populateEnglishDivs === 'function') populateEnglishDivs(newPanel);
   // Populate transliteration spans for this newly rendered chapter
   if (typeof transliterate === 'function') {
     var chapContainer = document.getElementById('panel-' + chapId);
@@ -4947,8 +4977,8 @@ function applyAnnotationToWord(wid) {
 }
 
 // Apply all saved annotations to visible word-units
-function applyAllAnnotations() {
-  document.querySelectorAll('.word-unit[data-wid]').forEach(function(el) {
+function applyAllAnnotations(root) {
+  (root || document).querySelectorAll('.word-unit[data-wid]').forEach(function(el) {
     var wid = el.getAttribute('data-wid');
     if (!_bomAnnotations[wid]) return;
     _paintWordAnnotation(el, _annOf(wid));
@@ -5850,11 +5880,11 @@ function loadCrossRefs() {
 // Root-to-xrefs index: maps Hebrew root → [{ref, verseKey}, ...]
 window._rootXrefs = {};
 
-function addCrossRefMarkers() {
+function addCrossRefMarkers(root) {
   // Ensure English text is loaded for position-based matching (Strategy 3)
   if (!window._englishLoaded) loadEnglishText();
 
-  var allVerses = document.querySelectorAll('[data-verse-key]');
+  var allVerses = (root || document).querySelectorAll('[data-verse-key]');
   allVerses.forEach(function(verseDiv) {
     var key = verseDiv.getAttribute('data-verse-key');
     var refs = window._crossrefMap[key];
@@ -5862,6 +5892,9 @@ function addCrossRefMarkers() {
 
     var wordFlow = verseDiv.querySelector('.word-flow');
     if (!wordFlow) return;
+    // A verse is marked once (the shared crossrefs_engine.js has the same guard)
+    if (wordFlow.getAttribute('data-xrefs-applied')) return;
+    wordFlow.setAttribute('data-xrefs-applied', '1');
     var wordUnits = wordFlow.querySelectorAll('.word-unit');
 
     // Helper: attach marker + color to a word-unit
@@ -7123,8 +7156,8 @@ function loadViaXHR(url, callback) {
   xhr.send();
 }
 
-function populateEnglishDivs() {
-  document.querySelectorAll('.verse-english[data-key]').forEach(function(div) {
+function populateEnglishDivs(root) {
+  (root || document).querySelectorAll('.verse-english[data-key]').forEach(function(div) {
     var key = div.getAttribute('data-key');
     if (window._englishMap[key]) {
       div.textContent = window._englishMap[key];
@@ -7604,6 +7637,7 @@ document.addEventListener('keydown', function(e) {
   var _navHash = window.navTo;
   window.navTo = function() {
     _navHash.apply(null, arguments);
+    if (window.__swNavDeferred) return;   // hand-off pass: the completing pass writes the hash
     var id = arguments[0];
     if (id && !id.startsWith('front-') && id !== 'intro') {
       var label = getChapterLabel(id).toLowerCase().replace(/\s+/g, '-');
@@ -7616,6 +7650,11 @@ document.addEventListener('keydown', function(e) {
   // On load: defer so all navTo wrappers (fade animation etc.) are set up first
   setTimeout(function() {
     if (window.location.hash) {
+      // The hash as booted: the hash wrapper strips a verse deep-link
+      // (#helaman-3:5 -> #helaman-3) the moment navTo completes.
+      var bootHash = '';
+      try { bootHash = decodeURIComponent(window.location.hash); } catch (e) { bootHash = window.location.hash; }
+      var deepVerse = (bootHash.match(/(?:&v=|:)(\d+)/) || [])[1] || 0;
       handleHash();
       // Resume at the saved reading position (same chapter, no verse
       // deep-link) AFTER the nav's own delayed scroll and font loading are
@@ -7626,10 +7665,51 @@ document.addEventListener('keydown', function(e) {
       ['wheel', 'touchstart', 'keydown'].forEach(function(ev) {
         window.addEventListener(ev, mark, { passive: true, once: true });
       });
-      var settle = function() { if (!userMoved && typeof window._restoreReadPos === 'function') window._restoreReadPos(); };
+      var settle = function() { if (!userMoved && !deepVerse && typeof window._restoreReadPos === 'function') window._restoreReadPos(); };
       setTimeout(settle, 700);
       if (document.fonts && document.fonts.ready) document.fonts.ready.then(function() { setTimeout(settle, 120); });
       window.addEventListener('load', function() { setTimeout(settle, 400); });
+      // One-paint reveal (html.sw-boot, see the CSS): wait until a navigation
+      // has completed and the Hebrew face is in, put the page at its resting
+      // place (deep-linked verse, else the saved position), then unhide. The
+      // settle passes above remain as no-motion corrections. Capped so a slow
+      // book download still shows something.
+      var t0 = Date.now(), revealed = false;
+      var reveal = function() {
+        if (revealed) return;
+        revealed = true;
+        try {
+          var panel = document.querySelector('.chapter-panel[style*="block"]');
+          var v = deepVerse && panel && panel.querySelectorAll('.verse')[parseInt(deepVerse, 10) - 1];
+          if (v) v.scrollIntoView({ block: 'center', behavior: 'instant' });
+          else settle();
+          if (panel) panel.classList.add('fade-in');
+        } catch (e) {}
+        document.documentElement.classList.remove('sw-boot');
+      };
+      (function tick() {
+        var navDone = (window.__swNavCount || 0) > 0;
+        // the chrome (top bar, footer dock) reflows the page when it wires up;
+        // the body is hidden until then anyway, so the resting place must be
+        // computed after it (site_chrome.js marks sw-shell-ready)
+        var shellIn = !document.documentElement.classList.contains('sw-shell-pending');
+        var fontsIn = true;
+        // check() with no text only proves the face for a space (the Latin
+        // subset): ask for Hebrew and Latin in all three weights, and start
+        // their loads so the answer can become yes.
+        try {
+          if (document.fonts) {
+            fontsIn = ['400', '500', '700'].every(function(w) {
+              var f = w + ' 16px "David Libre"';
+              document.fonts.load(f, '\u05d0a');
+              return document.fonts.check(f, '\u05d0') && document.fonts.check(f, 'a');
+            }) && document.fonts.status === 'loaded';
+          }
+        } catch (e) {}
+        if ((navDone && shellIn && fontsIn) || Date.now() - t0 > 2500) reveal(); else setTimeout(tick, 40);
+      })();
+    } else {
+      document.documentElement.classList.remove('sw-boot');
     }
     // No hash: stay on the landing page so the reader can choose
     // "Start Reading" (1 Nephi 1) or "Continue Reading" (farthest point).
@@ -7641,11 +7721,14 @@ document.addEventListener('keydown', function(e) {
   var _navFade = window.navTo;
   window.navTo = function() {
     var slideDir = arguments[1];
-    // Remove fade and slide classes from all panels first
+    _navFade.apply(null, arguments);
+    // Hand-off pass (book script still loading): leave the current page as it
+    // is; the pass that completes the navigation animates the new one.
+    if (window.__swNavDeferred) return;
+    // Strip, then re-add a tick later, so the same turn animates every time
     document.querySelectorAll('.chapter-panel').forEach(function(p) {
       p.classList.remove('fade-in', 'slide-left', 'slide-right');
     });
-    _navFade.apply(null, arguments);
     // Add animation to the newly visible panel
     setTimeout(function() {
       document.querySelectorAll('.chapter-panel').forEach(function(p) {

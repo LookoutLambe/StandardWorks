@@ -7,6 +7,8 @@
 
 <meta charset="UTF-8">
 <script>document.documentElement.classList.add('sw-shell-pending');</script>
+<script>(function(){var h=location.hash.slice(1);if(h&&h!=='home')document.documentElement.classList.add('sw-boot');})();</script>
+<style>html.sw-boot .chapter-panel{visibility:hidden!important}html.sw-boot #main-content,html.sw-boot .page{transition:none!important}</style>
 <script>(function(){var h=(location.hostname||'').toLowerCase(),p=location.pathname.split('/').filter(Boolean),gh=h.slice(-10)==='github.io'&&p.length>0,m=gh?'manifest.github.json':'manifest.json';document.write('<link rel="manifest" href="'+m+'" id="sw-manifest-link">');})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -193,9 +195,9 @@ body {
   background: var(--row-alt);
 }
 
-.verse:hover {
+@media (hover: hover) and (pointer: fine) { .verse:hover {
   background: rgba(200, 168, 78, 0.14);
-}
+} }
 
 .verse:last-child {
   border-bottom: none;
@@ -246,9 +248,9 @@ body {
   -webkit-user-select: none;
 }
 
-.word-unit:hover {
+@media (hover: hover) and (pointer: fine) { .word-unit:hover {
   background: rgba(139, 105, 20, 0.08);
-}
+} }
 
 .hw {
   font-size: 1.85em;
@@ -683,7 +685,7 @@ body.dual-mode .hw { font-size: 1.3em; }
   touch-action: manipulation;
 }
 .word-unit { cursor: pointer; }
-.word-unit:hover { background: rgba(200,168,78,0.06); border-radius: 4px; }
+@media (hover: hover) and (pointer: fine) { .word-unit:hover { background: rgba(200,168,78,0.06); border-radius: 4px; } }
 
 /* === SEARCH === */
 #search-container {
@@ -960,7 +962,7 @@ body.dark-mode .tl { color: var(--gloss); }
 body.dark-mode .page { background: #1e2233; }
 body.dark-mode .controls-top, body.dark-mode .controls-bottom { background: #0d111c; }
 body.dark-mode .verse { border-color: #303648; }
-body.dark-mode .verse:hover { background: rgba(200, 168, 78, 0.08); }
+@media (hover: hover) and (pointer: fine) { body.dark-mode .verse:hover { background: rgba(200, 168, 78, 0.08); } }
 /* Dark mode renders highlights as translucent washes over the navy — the
    solid light-mode pastels would bury the light ink. !important outranks the
    painter's inline background. */
@@ -975,7 +977,7 @@ body.dark-mode .ann-hl[data-hlc="#b2dfdb"] { background-color: rgba(38,166,154,0
 body.dark-mode .ann-hl[data-hlc="#f8bbd0"] { background-color: rgba(236,64,122,0.25) !important; }
 body.dark-mode .ann-hl[data-hlc="#ffecb3"] { background-color: rgba(255,202,40,0.25) !important; }
 body.dark-mode .ann-hl[data-hlc="#cfd8dc"] { background-color: rgba(120,144,156,0.30) !important; }
-body.dark-mode .word-unit:hover { background: rgba(200, 168, 78, 0.10); }
+@media (hover: hover) and (pointer: fine) { body.dark-mode .word-unit:hover { background: rgba(200, 168, 78, 0.10); } }
 body.dark-mode #word-popup { background: #1e2233; border-color: #d4af37; color: #e8e0d0; }
 body.dark-mode #word-popup-overlay { background: rgba(0, 0, 0, 0.5); }
 body.dark-mode #word-popup .popup-dismiss-mobile {
@@ -1865,7 +1867,7 @@ window.READER = {
   }
 };
 </script>
-<script src="reader_core.js?v=9"></script>
+<script src="reader_core.js?v=10"></script>
 
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=2"></script>
@@ -1894,7 +1896,7 @@ window.READER = {
 <script>window._volumeCrossrefsData = window._pgpCrossrefsData;</script>
 <script src="crossrefs_engine.js?v=8"></script>
 
-<script src="reader_ui.js?v=14"></script>
+<script src="reader_ui.js?v=15"></script>
 <script>
 // === PGP canon overrides (phase 2) — later function declarations win, so
 // these load AFTER reader_ui.js: book-map chapter labels, the progress nav

@@ -115,7 +115,7 @@ body.dark-mode .sw-top-bar {
   text-transform: none;
   margin-top: 2px;
   opacity: 0.95;
-  font-family: 'David Libre', 'Cormorant Garamond', Georgia, serif;
+  font-family: 'David Libre', Georgia, serif;
 }
 
 .sw-top-bar-tools {

@@ -396,6 +396,7 @@ function navTo(id, slideDir) {
   if (window.NavEngine) NavEngine.update(currentChapterId || 'landing');
   try { updateNavButtons(); } catch(e) {}
   window.scrollTo({top: 0, behavior: 'instant'});
+  window.__swNavCount = (window.__swNavCount || 0) + 1;   // completed navigations (the boot reveal waits on it)
 
   // Prefetch/render adjacent chapters during idle time so next/prev feels instant.
   scheduleAdjacentPrefetch();

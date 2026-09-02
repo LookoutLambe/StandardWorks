@@ -1820,6 +1820,11 @@ window.addEventListener('scroll', function() {
   // landing chapter before those run keys its verses with the canon
   // getBookChapter (null for their ids — no Dual English, no annotation keys).
   function _initialRoute() {
+    // The hash as booted: the hash wrapper strips a verse deep-link the
+    // moment navTo completes, so read it first.
+    var bootHash = '';
+    try { bootHash = decodeURIComponent(window.location.hash); } catch (e) { bootHash = window.location.hash; }
+    var deepVerse = (bootHash.match(/(?:&v=|:)(\d+)/) || [])[1] || 0;
     handleHash();
     // Resume at the saved reading position (same chapter, no verse deep-link)
     // AFTER the nav's own delayed scroll and font loading are done. Only
@@ -1829,10 +1834,54 @@ window.addEventListener('scroll', function() {
     ['wheel', 'touchstart', 'keydown'].forEach(function(ev) {
       window.addEventListener(ev, mark, { passive: true, once: true });
     });
-    var settle = function() { if (!userMoved && typeof window._restoreReadPos === 'function') window._restoreReadPos(); };
+    var settle = function() { if (!userMoved && !deepVerse && typeof window._restoreReadPos === 'function') window._restoreReadPos(); };
     setTimeout(settle, 700);
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(function() { setTimeout(settle, 120); });
     window.addEventListener('load', function() { setTimeout(settle, 400); });
+    // One-paint reveal (html.sw-boot, set in each volume's <head> when the URL
+    // names a page): the reading area stays hidden until a navigation has
+    // completed and the Hebrew face is in; then the page is put at its resting
+    // place (deep-linked verse, else the saved position) and unhidden. Without
+    // it a reload showed the landing, then the chapter at its top, then a jump
+    // down to the saved verse. The settle passes above remain as no-motion
+    // corrections. Capped so a slow load still shows something.
+    var html = document.documentElement;
+    if (html.classList.contains('sw-boot')) {
+      var t0 = Date.now(), revealed = false;
+      var reveal = function() {
+        if (revealed) return;
+        revealed = true;
+        try {
+          var panel = document.querySelector('.chapter-panel[style*="block"]');
+          var v = deepVerse && panel && panel.querySelectorAll('.verse')[parseInt(deepVerse, 10) - 1];
+          if (v) v.scrollIntoView({ block: 'center', behavior: 'instant' });
+          else settle();
+          if (panel) panel.classList.add('fade-in');
+        } catch (e) {}
+        html.classList.remove('sw-boot');
+      };
+      (function tick() {
+        var navDone = (window.__swNavCount || 0) > 0;
+        // the chrome (top bar, footer dock) reflows the page when it wires up;
+        // the body is hidden until then anyway, so the resting place must be
+        // computed after it (site_chrome.js marks sw-shell-ready)
+        var shellIn = !document.documentElement.classList.contains('sw-shell-pending');
+        var fontsIn = true;
+        // check() with no text only proves the face for a space (the Latin
+        // subset): ask for Hebrew and Latin in all three weights, and start
+        // their loads so the answer can become yes.
+        try {
+          if (document.fonts) {
+            fontsIn = ['400', '500', '700'].every(function(w) {
+              var f = w + ' 16px "David Libre"';
+              document.fonts.load(f, '\u05d0a');
+              return document.fonts.check(f, '\u05d0') && document.fonts.check(f, 'a');
+            }) && document.fonts.status === 'loaded';
+          }
+        } catch (e) {}
+        if ((navDone && shellIn && fontsIn) || Date.now() - t0 > 2500) reveal(); else setTimeout(tick, 40);
+      })();
+    }
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', _initialRoute);
