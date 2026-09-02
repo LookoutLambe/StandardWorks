@@ -131,7 +131,7 @@ button, input, select, textarea, option, optgroup, ::placeholder { font-family: 
 
 /* ========== PAGE CONTAINER ========== */
 .page {
-  max-width: 960px;
+  max-width: none;   /* like the reader: no ceiling, the columns span the screen */
   margin: 0 auto;
   padding: 24px 24px 40px;
 }
@@ -180,14 +180,14 @@ button, input, select, textarea, option, optgroup, ::placeholder { font-family: 
 }
 .hub-footer-contact a:hover { text-decoration: underline; }
 .hub-footer-colophon {
-  max-width: 520px;
+  max-width: none;
   margin: 0 auto 14px;
   font-size: 0.88rem;
   line-height: 1.65;
   opacity: 0.9;
 }
-.hub-footer-colophon-lis { margin: 0 auto 12px; max-width: 900px; }
-.hub-footer-colophon-lis .lis-flow { gap: 6px 14px; }
+.hub-footer-colophon-lis { margin: 0 auto 12px; max-width: none; }
+.hub-footer-colophon-lis .lis-flow { gap: 6px 14px; justify-content: flex-start; }
 .hub-footer-colophon-lis .lis-hw { font-size: 1.45rem; font-weight: 500; }
 .hub-footer-colophon-lis .lis-tl { font-size: 0.78rem; margin-top: 1px; }
 .hub-footer-colophon-lis .lis-gl { font-size: 0.84rem; margin-top: 1px; }
@@ -378,7 +378,7 @@ body.dark-mode .landing-app-store-link:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
   gap: 28px 24px;
-  max-width: 880px;
+  max-width: none;
   margin: 0 auto;
   padding: 0 8px;
 }
@@ -386,6 +386,12 @@ body.dark-mode .landing-app-store-link:hover {
 @media (min-width: 601px) {
   .card-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* Wide screens: all six volumes in one row, spanning like a verse */
+@media (min-width: 1200px) {
+  .card-grid {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
