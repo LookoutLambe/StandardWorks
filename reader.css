@@ -126,33 +126,50 @@ body.dual-mode .hw { font-size: 1em; }
   .word-unit .hw { -webkit-user-select: none !important; user-select: none !important; -webkit-touch-callout: none; }
 }
 
+/* ── INTERLINEAR ONLY: the verse numeral sits ABOVE the verse ──────────
+   Not hanging in the right margin beside the text — user ruling
+   2026-09-03, and scoped to the interlinear alone, not applied globally.
+
+   This is the mode where the gutter actually costs something: every word
+   is a stacked column (Hebrew over transliteration over gloss), so the
+   margin takes a whole column's width. Measured at 375px: line 314 ->
+   355px, 2.78 -> 3.03 words per row, 36 -> 33 rows for the same 100 words.
+
+   The other modes keep the hanging numeral, and should: Hebrew Only
+   (.hide-gloss) is a single line of text where a margin numeral is the
+   older, better print habit, and Dual is already a two-column flex with
+   the numeral belonging in that row.
+
+   Measure this after a reload, never straight after a viewport resize:
+   stale widths once made a pass read 3.57 words per row, which was wrong. */
+body:not(.dual-mode):not(.hide-gloss) .verse { display: block; }
+body:not(.dual-mode):not(.hide-gloss) .verse > .verse-num {
+  display: block;
+  min-width: 0 !important;
+  padding-top: 0 !important;
+  margin-bottom: 1px;
+  text-align: right;
+  line-height: 1.15;
+}
+/* The Hebrew letter and the Arabic numeral sit SIDE BY SIDE on that line,
+   not stacked — user ruling 2026-09-03. Inline, deliberately not flex:
+   the block is text-align:right, and a flex row threw the pair to the
+   left edge of the RTL page when this was first tried. Making only the
+   Arabic inline pairs them and leaves the alignment untouched. */
+body:not(.dual-mode):not(.hide-gloss) .verse > .verse-num .verse-num-arabic {
+  display: inline !important;
+  margin-right: 0.4em;
+}
+body:not(.dual-mode):not(.hide-gloss) .verse > .word-flow { width: 100%; }
+
 @media (max-width: 600px) {
-  /* On a phone the hanging numeral costs the interlinear more than it is
-     worth. Every word here is a stacked column (Hebrew over transliteration
-     over gloss), so the margin gutter is the difference between three and
-     four columns on a line. The numeral moves above the verse and keeps to
-     its side, so it still reads as that verse's mark.
-
-     Measured at 375px, both states in one load with the reflow forced:
-     line 314 -> 355px (+13%), 2.78 -> 3.03 words per row (+9%), 36 -> 33
-     rows for the same 100 words. Ten verses get ~2% TALLER, because the
-     numeral now takes its own line — the gain is horizontal (wider lines,
-     fewer orphaned words, longer runs of Hebrew), not vertical. Measure
-     this after a reload, never straight after a viewport resize: stale
-     widths made an earlier pass read 3.57 words per row, which was wrong.
-
-     Desktop keeps the hanging numeral — there the gutter is only ~5% and
-     hanging it in the margin is the older, better print habit.
-     Dual mode is excluded: its verse is already a two-column flex. */
-  body:not(.dual-mode) .verse { display: block; }
-  body:not(.dual-mode) .verse > .verse-num {
-    display: block;
-    min-width: 0 !important;
-    padding-top: 0 !important;
-    margin-bottom: 1px;
-    text-align: right;
-  }
-  body:not(.dual-mode) .verse > .word-flow { width: 100%; }
+  /* Reclaiming the empty band above each verse on a phone. The verse's own
+     1em top-and-bottom padding was ~32px of the ~49px of nothing between
+     the rule and the first Hebrew word — on the screen with the least room
+     to spare. (The other half was the numeral stacking its two numerals;
+     that is handled above, in the interlinear rule, where they now sit
+     side by side.) */
+  body:not(.dual-mode) .verse { padding: 0.55em 0 !important; }
 
   #sel-toolbar { flex-direction: row; flex-wrap: wrap; max-width: 200px; }
   #sel-toolbar button { width: 32px; height: 32px; font-size: 1em; }
@@ -188,7 +205,13 @@ body.dual-mode .hw { font-size: 1em; }
   --t1: 0.94em;    /* verse numerals, small labels           15/16 */
   --t2: 1.19em;    /* English body, subtitles            19/16 */
   --t3: 1.50em;    /* section heads                      24/16 */
-  --t4: 1.875em;   /* the Hebrew — the voice             30/16 */
+  /* The Hebrew was 1.875em (30/16) and only ~3 words fitted on a phone
+     line. Density has to come from HERE: --t0 is already exactly 12px at
+     100%, the legibility floor, so the gloss cannot give anything back —
+     the Hebrew is also what sets the line height and the column width, so
+     it is the right lever anyway. 1.45em = 23/16, a quarter smaller, and
+     A+ still scales the whole page for anyone who wants the old size. */
+  --t4: 1.45em;    /* the Hebrew — the voice             23/16 */
   --t5: 2.375em;   /* chapter title                      38/16 */
 }
 
@@ -238,7 +261,26 @@ body.dual-mode .hw { font-size: 1em; }
    because it has to outrank the three tiers above.
 
    Ranked at ~0.62 of the reading text: subordinate at a glance, with the
-   gloss and transliteration still clear of the 12px floor. */
+   gloss and transliteration still clear of the 12px floor.
+
+   THE APPARATUS SCALE — chapter summaries AND colophons together.
+   A colophon ("An account of Lehi and his wife Sariah…") is the same kind
+   of thing as a summary: the compiler introducing the record, not the
+   record. It was rendering at full scripture size too — 1 Nephi 1's ran
+   88 word-units and 3600px, four and a half phone screens before the
+   chapter proper. bom.html had `.colophon .word-unit .hw { font-size:
+   1.15em }` with a comment reading "The colophon shrinks .hw and .gl",
+   and it had never once shrunk anything: same !important above, same
+   silent loss, third instance of that defect in this file's history.
+   One scale for the apparatus, set once, here. */
+/* 0.8, not the 0.62 this started at: the reading Hebrew came down to
+   1.45em in the same pass, so 0.62 of it would have put the apparatus at
+   ~14px — barely above its own 12px gloss, which reads as broken rather
+   than subordinate. Ranked against the new scale, not the old one. */
+.heading-flow,
+.colophon {
+  font-size: 0.8em;
+}
 .heading-flow {
   direction: rtl;
   text-align: right;
@@ -249,7 +291,6 @@ body.dual-mode .hw { font-size: 1em; }
   margin: 10px auto 6px;
   padding: 0 8px;
   max-width: none;   /* summaries expand like the verses — user ruling 2026-08-30 */
-  font-size: 0.62em;
 }
 .heading-flow .word-unit { margin: 1px 3px; }
 /* tl/gl would shrink TWICE — --t0 (0.75em) of an already-reduced 0.62em
@@ -257,7 +298,9 @@ body.dual-mode .hw { font-size: 1em; }
    The max() puts a hard 12px floor under them while they still grow with
    A+. An em alone cannot do this: the second reduction is the problem. */
 .heading-flow .tl,
-.heading-flow .gl { font-size: max(12px, 1.05em) !important; }
+.heading-flow .gl,
+.colophon .tl,
+.colophon .gl { font-size: max(12px, 1.05em) !important; }
 .heading-flow .gl { max-width: 8em; }
 
 /* the arrows go: 714 marks per chapter saying what the script already says */
