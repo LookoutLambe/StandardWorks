@@ -126,24 +126,26 @@ body.dual-mode .hw { font-size: 1em; }
   .word-unit .hw { -webkit-user-select: none !important; user-select: none !important; -webkit-touch-callout: none; }
 }
 
-/* ── INTERLINEAR ONLY: the verse numeral sits ABOVE the verse ──────────
-   Not hanging in the right margin beside the text — user ruling
-   2026-09-03, and scoped to the interlinear alone, not applied globally.
+/* ── The verse numeral sits ABOVE the verse — every mode but Dual ──────
+   Not hanging in the right margin beside the text; the Hebrew letter and
+   the Arabic numeral side by side on that line. User ruling 2026-09-03,
+   extended to Hebrew Only at the user's call after the interlinear.
 
-   This is the mode where the gutter actually costs something: every word
-   is a stacked column (Hebrew over transliteration over gloss), so the
-   margin takes a whole column's width. Measured at 375px: line 314 ->
-   355px, 2.78 -> 3.03 words per row, 36 -> 33 rows for the same 100 words.
+   The interlinear is where the gutter costs most — every word there is a
+   stacked column (Hebrew over transliteration over gloss), so the margin
+   takes a whole column's width. Measured at 375px: line 314 -> 355px,
+   2.78 -> 3.03 words per row, 36 -> 33 rows for the same 100 words. Hebrew
+   Only gets the same treatment for consistency: one reading surface, one
+   place the numeral lives.
 
-   The other modes keep the hanging numeral, and should: Hebrew Only
-   (.hide-gloss) is a single line of text where a margin numeral is the
-   older, better print habit, and Dual is already a two-column flex with
-   the numeral belonging in that row.
+   DUAL is the exception and stays as it is: its verse is a two-column
+   flex, Hebrew beside English, and the numeral belongs in the gutter
+   between them rather than above either column.
 
    Measure this after a reload, never straight after a viewport resize:
    stale widths once made a pass read 3.57 words per row, which was wrong. */
-body:not(.dual-mode):not(.hide-gloss) .verse { display: block; }
-body:not(.dual-mode):not(.hide-gloss) .verse > .verse-num {
+body:not(.dual-mode) .verse { display: block; }
+body:not(.dual-mode) .verse > .verse-num {
   display: block;
   min-width: 0 !important;
   padding-top: 0 !important;
@@ -156,11 +158,11 @@ body:not(.dual-mode):not(.hide-gloss) .verse > .verse-num {
    the block is text-align:right, and a flex row threw the pair to the
    left edge of the RTL page when this was first tried. Making only the
    Arabic inline pairs them and leaves the alignment untouched. */
-body:not(.dual-mode):not(.hide-gloss) .verse > .verse-num .verse-num-arabic {
+body:not(.dual-mode) .verse > .verse-num .verse-num-arabic {
   display: inline !important;
   margin-right: 0.4em;
 }
-body:not(.dual-mode):not(.hide-gloss) .verse > .word-flow { width: 100%; }
+body:not(.dual-mode) .verse > .word-flow { width: 100%; }
 
 @media (max-width: 600px) {
   /* Reclaiming the empty band above each verse on a phone. The verse's own
