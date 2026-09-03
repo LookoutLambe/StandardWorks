@@ -1,7 +1,7 @@
 // verses/2nephi.js — 2 Nephi verse data
 (function() {
 var n2_ch1Verses = [
-                { num: "א", words: [["וַיְהִי","and it came to pass"], ["אַחֲרֵי","after"], ["כַלּוֹתִי","I had made an end"], ["אֲנִי","I"], ["נֶפִי","Nephi"], ["לְלַמֵּד","of teaching"], ["אֶת־אַחַי","my brethren"], ["וַיְדַבֵּר","and spake"], ["אֲלֵיהֶם","unto them"], ["גַּם־אָבִינוּ","also our father"], ["לֶחִי","Lehi"], ["דְּבָרִים","things"], ["רַבִּים","many"], ["וַיְסַפֵּר","and rehearsed"], ["לָהֶם","unto them"], ["אֶת־אֲשֶׁר","which"], ["עָשָׂה","had done"], ["יְהוָה","the Lord"], ["גְּדֹלוֹת","great things"], ["בְּהוֹצִיאָם","in bringing them out"], ["מֵאֶרֶץ","from the land of"], ["יְרוּשָׁלָיִם","Jerusalem"], ["׃",""]]},
+                { num: "א", words: [["וַיְהִי","and it happened"], ["אַחֲרֵי","after"], ["כַלּוֹתִי","I had made an end"], ["אֲנִי","I"], ["נֶפִי","Nephi"], ["לְלַמֵּד","of teaching"], ["אֶת־אַחַי","my brethren"], ["וַיְדַבֵּר","and spake"], ["אֲלֵיהֶם","unto them"], ["גַּם־אָבִינוּ","also our father"], ["לֶחִי","Lehi"], ["דְּבָרִים","things"], ["רַבִּים","many"], ["וַיְסַפֵּר","and rehearsed"], ["לָהֶם","unto them"], ["אֶת־אֲשֶׁר","which"], ["עָשָׂה","had done"], ["יְהוָה","the Lord"], ["גְּדֹלוֹת","great things"], ["בְּהוֹצִיאָם","in bringing them out"], ["מֵאֶרֶץ","from the land of"], ["יְרוּשָׁלָיִם","Jerusalem"], ["׃",""]]},
                 { num:"ב", words:[
     ["וַיְדַבֵּר","and spake"],
     ["אֲלֵיהֶם","unto them"],
@@ -1114,7 +1114,7 @@ var n2_ch4Verses = [
     ["׃",""]
   ]},
           { num:"ח", words:[
-    ["וַיְהִי","and it came to pass"],
+    ["וַיְהִי","and it happened"],
     ["כַּאֲשֶׁר","when"],
     ["כִּלָּה","finished"],
     ["אָבִי","my father"],
@@ -1131,9 +1131,9 @@ var n2_ch4Verses = [
     ["׃",""]
   ]},
           { num: "ט", words: [["וַיְדַבֵּר","and spoke"], ["אֲלֵיהֶם","unto them"], ["לֵאמֹר","saying"], ["הִנֵּה","behold"], ["בָּנַי","my sons"], ["וּבְנֹתַי","and my daughters"], ["בְּנֵי","the sons of"], ["בְנִי","my son"], ["הַשֵּׁנִי","the second"], ["הִנֵּה","behold"], ["נֹתֵן","give"], ["אֲנִי","I"], ["לָכֶם","unto you"], ["הַבְּרָכָה","the blessing"], ["אֲשֶׁר","which"], ["נָתַתִּי","I left"], ["לִבְנֵי","unto the sons of"], ["לָמָן","Laman"], ["לָכֵן","wherefore"], ["לֹא","not"], ["תִכָּרְתוּ","shall you be cut off"], ["כָלִיל","utterly"], ["וּבְאַחֲרִית","but in the end"], ["יְבֹרַךְ","shall be blessed"], ["זַרְעֲכֶם","your seed"], ["׃",""]]},
-          { num: "י", words: [["וַיְהִי","and it came to pass"], ["כַּאֲשֶׁר","when"], ["כִּלָּה","finished"], ["לְדַבֵּר","speaking"], ["אֲלֵיהֶם","unto them"], ["וְהִנֵּה","behold"], ["דִּבֶּר","he spake"], ["אֶל־בְּנֵי","unto the sons of"], ["יִשְׁמָעֵאל","Ishmael"], ["וְאַף","yea and"], ["אֶל־כׇּל־בֵּיתוֹ","even all his household"], ["׃",""]]},
+          { num: "י", words: [["וַיְהִי","and it happened"], ["כַּאֲשֶׁר","when"], ["כִּלָּה","finished"], ["לְדַבֵּר","speaking"], ["אֲלֵיהֶם","unto them"], ["וְהִנֵּה","behold"], ["דִּבֶּר","he spake"], ["אֶל־בְּנֵי","unto the sons of"], ["יִשְׁמָעֵאל","Ishmael"], ["וְאַף","yea and"], ["אֶל־כׇּל־בֵּיתוֹ","even all his household"], ["׃",""]]},
           { num:"יא", words:[
-    ["וַיְהִי","and it came to pass"],
+    ["וַיְהִי","and it happened"],
     ["כַּאֲשֶׁר","when"],
     ["כִּלָּה","finished"],
     ["לְדַבֵּר","speaking"],
@@ -1163,7 +1163,7 @@ var n2_ch4Verses = [
     ["׃",""]
   ]},
           { num:"יב", words:[
-    ["וַיְהִי","and it came to pass"],
+    ["וַיְהִי","and it happened"],
     ["אַחֲרֵי","after"],
     ["דַבֵּר","had spoken"],
     ["לֶחִי","Lehi"],
@@ -1180,7 +1180,7 @@ var n2_ch4Verses = [
     ["׃",""]
   ]},
           { num:"יג", words:[
-    ["וַיְהִי","and it came to pass"],
+    ["וַיְהִי","and it happened"],
     ["אַחֲרֵי","after"],
     ["מוֹתוֹ","his death"],
     ["יָמִים","days"],
@@ -1478,7 +1478,7 @@ var n2_ch5Verses = [
     ["וַנִּסַּע","and we journeyed"],
     ["בַּמִּדְבָּר","in the wilderness"],
     ["יָמִים","days"],
-    ["רַבִּים","many"],["וַיְהִי","and it came to pass"],["אַחֲרֵי","after"],["נָסְעֵנוּ","we had journeyed"],["יָמִים","days"],["רַבִּים","many"],
+    ["רַבִּים","many"],["וַיְהִי","and it happened"],["אַחֲרֵי","after"],["נָסְעֵנוּ","we had journeyed"],["יָמִים","days"],["רַבִּים","many"],
     ["וַנִּטַּע","and we pitched"],
     ["אׇהֳלֵינוּ","our tents"],
     ["׃",""]
@@ -4864,7 +4864,7 @@ var n2_ch16Verses = [
 ];
 var n2_ch17Verses = [
   { num:"א", words:[
-    ["וַיְהִי","and it came to pass"],
+    ["וַיְהִי","and it was"],
     ["בִּימֵי","in the days of"],
     ["אָחָז","Ahaz"],
     ["בֶּן־יוֹתָם","son of Jotham"],

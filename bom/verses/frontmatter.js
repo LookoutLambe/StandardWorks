@@ -414,7 +414,7 @@ var frontIntroduction = [
     ["הַיָּרֶדִים","the Jaredites"],
   ], english:"The other came much earlier when the Lord confounded the tongues at the Tower of Babel. This group is known as the Jaredites."},
   { num:"ו", words:[
-    ["וַיְהִי","and it came to pass"],
+    ["וַיְהִי","and it happened"],
     ["אַחֲרֵי","after"],
     ["אַלְפֵי","thousands of"],
     ["שָׁנִים","years"],
@@ -469,7 +469,7 @@ var frontIntroduction = [
     ["הַבָּאִים","to come"],
   ], english:"It puts forth the doctrines of the gospel, outlines the plan of salvation, and tells men what they must do to gain peace in this life and eternal salvation in the life to come."},
   { num:"ט", words:[
-    ["וַיְהִי","and it came to pass"],
+    ["וַיְהִי","and it happened"],
     ["כַּאֲשֶׁר","when"],
     ["כִּלָּה","completed"],
     ["מוֹרְמוֹן","Mormon"],
@@ -489,7 +489,7 @@ var frontIntroduction = [
     ["כּוּמוֹרָה","Cumorah"],
   ], english:"After Mormon completed his writings, he delivered the account to his son Moroni, who added a few words of his own and hid up the plates in the Hill Cumorah."},
   { num:"י", words:[
-    ["וַיְהִי","and it came to pass"],
+    ["וַיְהִי","and it was"],
     ["בְּעֶשְׂרִים","on the twenty"],
     ["וְאֶחָד","and first"],
     ["לַחֹדֶשׁ","of the month"],
@@ -518,7 +518,7 @@ var frontIntroduction = [
     ["הָאַנְגְּלִית","the English"],
   ], english:"On September 21, 1823, the same Moroni, then a glorified, resurrected being, appeared to the Prophet Joseph Smith and instructed him relative to the ancient record and its destined translation into the English language."},
   { num:"יא", words:[
-    ["וַיְהִי","and it came to pass"],
+    ["וַיְהִי","and it happened"],
     ["בְּמוֹעֵד","in due time"],
     ["נִתְּנוּ","were given"],
     ["הַלּוּחוֹת","the plates"],
@@ -981,7 +981,7 @@ var frontJST = [
     ["מוֹרְמוֹן","Mormon"],
   ], english:"The Prophet Joseph Smith’s own words about the coming forth of the Book of Mormon are:"},
   { num:"ב", words:[
-    ["וַיְהִי","and it came to pass"],
+    ["וַיְהִי","and it was"],
     ["בָּעֶרֶב","in the evening"],
     ["בְּעֶשְׂרִים","on the twenty"],
     ["וְאֶחָד","and first"],
@@ -994,7 +994,7 @@ var frontJST = [
     ["שַׁדַּי","Almighty"],
   ], english:"“On the evening of the … twenty-first of September [1823] … I betook myself to prayer and supplication to Almighty God. …"},
   { num:"ג", words:[
-    ["וַיְהִי","and it came to pass"],
+    ["וַיְהִי","and it happened"],
     ["בְּהִתְפַּלְלִי","as I prayed"],
     ["אֶל־אֱלֹהִים","unto God"],
     ["וָאֵרֶא","and I saw"],
@@ -1089,7 +1089,7 @@ var frontJST = [
     ["סְבִיבוֹתָיו","around him"],
   ], english:"“Not only was his robe exceedingly white, but his whole person was glorious beyond description, and his countenance truly like lightning. The room was exceedingly light, but not so very bright as immediately around his person."},
   { num:"ח", words:[
-    ["וַיְהִי","and it came to pass"],
+    ["וַיְהִי","and it happened"],
     ["כַּאֲשֶׁר","when"],
     ["רְאִיתִיו","I saw him"],
     ["בָּרִאשׁוֹנָה","at first"],
@@ -1239,7 +1239,7 @@ var frontJST = [
     ["אָשָׁמֵד","I shall be destroyed"],
   ], english:"neither the breastplate with the Urim and Thummim; only to those to whom I should be commanded to show them; if I did I should be destroyed."},
   { num:"יז", words:[
-    ["וַיְהִי","and it came to pass"],
+    ["וַיְהִי","and it happened"],
     ["בְּדַבְּרוֹ","as he spoke"],
     ["עִמִּי","with me"],
     ["עַל־הַלּוּחוֹת","upon the plates"],
@@ -1260,7 +1260,7 @@ var frontJST = [
     ["שָׁמָּה","there"],
   ], english:"While he was conversing with me about the plates, the vision was opened to my mind that I could see the place where the plates were deposited, and that so clearly and distinctly that I knew the place again when I visited it."},
   { num:"יח", words:[
-    ["וַיְהִי","and it came to pass"],
+    ["וַיְהִי","and it happened"],
     ["אַחֲרֵי","after"],
     ["הַדְּבָרִים","the things"],
     ["הָאֵלֶּה","these"],
@@ -1316,7 +1316,7 @@ var frontJST = [
     ["הַזֶּה","this"],
   ], english:"“I lay musing on the singularity of the scene, and marveling greatly at what had been told to me by this extraordinary messenger;"},
   { num:"כא", words:[
-    ["וַיְהִי","and it came to pass"],
+    ["וַיְהִי","and it happened"],
     ["בְּתוֹךְ","in the midst of"],
     ["הֲגִיגִי","my musing"],
     ["וּפִתְאֹם","and suddenly"],
@@ -1365,7 +1365,7 @@ var frontJST = [
     ["הַזֶּה","this"],
   ], english:"which having done, he informed me of great judgments which were coming upon the earth, with great desolations by famine, sword, and pestilence; and that these grievous judgments would come on the earth in this generation."},
   { num:"כד", words:[
-    ["וַיְהִי","and it came to pass"],
+    ["וַיְהִי","and it happened"],
     ["כַּאֲשֶׁר","when"],
     ["כִּלָּה","he finished"],
     ["לְדַבֵּר","speaking"],
@@ -1445,7 +1445,7 @@ var frontJST = [
     ["לְקַבְּלָם","obtain them"],
   ], english:"This he forbade me, saying that I must have no other object in view in getting the plates but to glorify God, and must not be influenced by any other motive than that of building his kingdom; otherwise I could not get them."},
   { num:"כט", words:[
-    ["וַיְהִי","and it came to pass"],
+    ["וַיְהִי","and it happened"],
     ["אַחֲרֵי","after"],
     ["הַבִּקּוּר","the visit"],
     ["הַשְּׁלִישִׁי","the third"],
@@ -1463,7 +1463,7 @@ var frontJST = [
     ["חָוִיתִי","I had experienced"],
   ], english:"“After this third visit, he again ascended into heaven as before, and I was again left to ponder on the strangeness of what I had just experienced;"},
   { num:"ל", words:[
-    ["וַיְהִי","and it came to pass"],
+    ["וַיְהִי","and it happened"],
     ["כִּמְעַט","nearly"],
     ["אַחֲרֵי","after"],
     ["עֲלוֹת","the ascending of"],
@@ -1676,7 +1676,7 @@ var frontJST = [
     ["עָפָר","with earth"],
   ], english:"On the west side of this hill, not far from the top, under a stone of considerable size, lay the plates, deposited in a stone box. This stone was thick and rounding in the middle on the upper side, and thinner towards the edges, so that the middle part of it was visible above the ground, but the edge all around was covered with earth."},
   { num:"מ", words:[
-    ["וַיְהִי","and it came to pass"],
+    ["וַיְהִי","and it happened"],
     ["כַּאֲשֶׁר","when"],
     ["הֲסִירוֹתִי","I had removed"],
     ["אֶת־הֶעָפָר","the earth"],
@@ -1765,7 +1765,7 @@ var frontJST = [
     ["אֶת־הַלּוּחוֹת","the plates"],
   ], english:"but he told me that I should come to that place precisely in one year from that time, and that he would there meet with me, and that I should continue to do so until the time should come for obtaining the plates."},
   { num:"מג", words:[
-    ["וַיְהִי","and it came to pass"],
+    ["וַיְהִי","and it happened"],
     ["כַּאֲשֶׁר","as"],
     ["צֻוֵּיתִי","I had been commanded"],
     ["הָלַכְתִּי","I went"],
@@ -1794,7 +1794,7 @@ var frontJST = [
     ["הָאַחֲרוֹנִים","the latter"],
   ], english:"“Accordingly, as I had been commanded, I went at the end of each year, and at each time I found the same messenger there, and received instruction and intelligence from him at each of our interviews, respecting what the Lord was going to do, and how and in what manner his kingdom was to be conducted in the last days. …"},
   { num:"מד", words:[
-    ["וַיְהִי","and it came to pass"],
+    ["וַיְהִי","and it happened"],
     ["כַּאֲשֶׁר","when"],
     ["הִגִּיעָה","had come"],
     ["הָעֵת","the time"],
@@ -1918,7 +1918,7 @@ var frontJST = [
     ["מִיָּדִי","at my hand"],
   ], english:"The persecution became more bitter and severe than before, and multitudes were on the alert continually to get them from me if possible. But by the wisdom of God, they remained safe in my hands, until I had accomplished by them what was required at my hand."},
   { num:"מח", words:[
-    ["וַיְהִי","and it came to pass"],
+    ["וַיְהִי","and it happened"],
     ["כַּאֲשֶׁר","when"],
     ["בָּא","came"],
     ["הַמַּלְאָךְ","the angel"],
