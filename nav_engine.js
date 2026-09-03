@@ -1218,7 +1218,9 @@
     if (!window.SWSearch || !q || q.length < 2) return;
     var hits = [];
     try { hits = window.SWSearch.find(q, 12) || []; } catch (e) { return; }
-    if (!hits.length) return;
+    // No hits is the case that most needs widening, not the case to bail on:
+    // "creation" finds nothing in Genesis and plenty in the rest of the OT.
+    if (!hits.length) { widenSearchToWholeVolume(q); return; }
     var head = document.createElement('div');
     head.className = 'nav-search-section';
     head.textContent = 'In the text';
@@ -1244,6 +1246,39 @@
       };
       _searchResults.appendChild(div);
     });
+    widenSearchToWholeVolume(q);
+  }
+
+  /* The volumes load a book at a time, so the search index only ever held the
+     books already opened — a fresh Old Testament page searches Genesis and
+     nothing else, 1,533 verses out of 23,204. Reporting "nothing" for a word
+     that is sitting in Isaiah is worse than being slow, because the reader
+     believes the answer.
+
+     verse_search.js has carried preload() for exactly this since it was
+     written, and no reader page ever called it: bom.html's own search page
+     did, the shared drawer every volume actually uses did not. So the whole
+     volume comes in on the first word search, and the query re-runs over it.
+     Hits already on screen stay put while that happens. */
+  function widenSearchToWholeVolume(q) {
+    if (!window.SWSearch || typeof SWSearch.needsPreload !== 'function') return;
+    if (!SWSearch.needsPreload()) return;
+    var note = document.createElement('div');
+    note.className = 'nav-search-section nav-search-widening';
+    note.textContent = 'מחפש בשאר הספרים… · searching the rest of the volume…';
+    note.style.cssText = 'padding:6px 14px;font-size:0.72em;letter-spacing:0.06em;opacity:0.6;' +
+      'border-top:1px solid color-mix(in srgb, var(--here) 25%, transparent);margin-top:4px;';
+    _searchResults.appendChild(note);
+    _searchResults.classList.add('open');
+    try {
+      SWSearch.preload(function () {
+        // Re-run against whatever is in the box now, not the query that
+        // started the load — preload() drops the callback of any call made
+        // while it was already running, so the first one has to be the one
+        // that repaints, and by then the reader may have typed on.
+        if (_searchInput && _searchInput.value.trim().length >= 2) onSearchInput();
+      });
+    } catch (e) {}
   }
 
   function escapeHtml(s) {
