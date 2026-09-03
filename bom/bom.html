@@ -54,7 +54,7 @@
 <link rel="stylesheet" href="../nav_engine.css?v=46">
 <link rel="stylesheet" href="../site_chrome.css?v=64">
 <link rel="stylesheet" href="../xref_study_panel.css?v=14">
-<link rel="stylesheet" href="../reader.css?v=60">
+<link rel="stylesheet" href="../reader.css?v=63">
 <style>
 
 /* Skip-to-content link (screen reader / keyboard) */
@@ -8073,13 +8073,13 @@ detailHtml += '</div>';
       // Word has a direct LDS cross-reference — show link to open its xref panel
       var xrefObj = JSON.parse(directXref);
       var refCount = xrefObj.refs ? xrefObj.refs.length : 0;
-      detailHtml += '<br><span class="popup-xref-direct" style="cursor:pointer;color:var(--here-chrome);text-decoration:underline;font-size:0.9em;">View Cross-References (' + refCount + ') →</span>';
+      detailHtml += '<br><span class="popup-xref-direct">View Cross-References (' + refCount + ') →</span>';
     }
     // Hide root xrefs for proper names (e.g. "Enos" shares root אנוש with "man" — irrelevant)
     var isProperName = /^[A-Z][a-z]+$/.test(gText.trim());
     if (xrefCount > 0 && !isProperName) {
       // Root has aggregated cross-references across the BOM
-      detailHtml += '<br><span class="popup-xref-link" style="cursor:pointer;color:var(--here-chrome);text-decoration:underline;font-size:0.9em;">View Root Cross-References (' + xrefCount + ') →</span>';
+      detailHtml += '<br><span class="popup-xref-link">View Root Cross-References (' + xrefCount + ') →</span>';
     }
     // Topical Guide link
     var tgIdx = getTgIndex();
@@ -8095,7 +8095,10 @@ detailHtml += '</div>';
       var tgEntries = getTgData();
       var tgEntry = tgEntries.find(function(e) { return e.id === tgEntryId; });
       if (tgEntry) {
-        detailHtml += '<br><span class="popup-tg-link" style="cursor:pointer;color:var(--here-chrome);text-decoration:underline;font-size:0.9em;">Topical Guide: ' + tgEntry.hebrew + ' — ' + tgEntry.english + ' →</span>';
+        /* No inline colour: it hard-coded --here-chrome, which is mint in
+           BOTH themes, and the word card is paper — mint on white measured
+           ~1.9:1. Styling lives in reader.css with the rest of the card. */
+        detailHtml += '<br><span class="popup-tg-link">Topical Guide: ' + tgEntry.hebrew + ' — ' + tgEntry.english + ' →</span>';
       }
     }
 

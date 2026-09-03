@@ -817,7 +817,12 @@ body {
 body #word-popup {
   background: var(--card) !important;
   color: var(--ink) !important;
-  border: 1px solid var(--rule-light) !important;
+  /* Emerald, not the hairline: --rule-light is #e5e7e4 on a #ffffff card, so
+     the card had no visible edge against paper. --here is the scheme's accent
+     and is already mode-aware (#046b4a on light, #34d399 in dark), which also
+     revives body.dark-mode's border-color below — that rule carries no
+     !important and was being beaten by this shorthand. */
+  border: 2px solid var(--here) !important;
   border-radius: var(--r-sheet) !important;
   box-shadow: var(--e3) !important;
   padding: 18px 20px 16px !important;
@@ -828,6 +833,51 @@ body #word-popup {
      the chapter underneath. */
   overscroll-behavior: contain;
 }
+
+/* ── CARD EDGES — the whole family, not one card at a time ────────────
+   Audited every card and panel surface by measuring its fill against the
+   ground behind it AND its border against both. The result was a class,
+   not an incident: .nl-card and .nl-tile had NO border at all, and
+   .rsc-panel-card (1.2), .rsc-il-card (1.24) and .colophon (1.25) all sat
+   at contrasts where the edge is not perceptible — white cards on a white
+   page, held up only by a shadow.
+
+   The accent draws the edge. Which accent depends on the GROUND, and this
+   is the trap: --here is theme-scoped (deep green on paper, mint in dark),
+   so on the drawer — which is chrome-coloured in BOTH themes — a light
+   theme would paint a deep-green edge on dark green and vanish again.
+   Cards on paper take --here; cards on chrome take --here-chrome, which
+   is mint always. Weights are ranked: the word card is the sheet and gets
+   2px, everything nested inside it is 1px at ~38%. */
+.rsc-panel-card,
+.colophon {
+  border: 1px solid color-mix(in srgb, var(--here) 38%, transparent) !important;
+}
+#nav-sidebar .nl-card,
+#nav-sidebar .nl-tile,
+#nav-sidebar .nl-bm {
+  border: 1px solid color-mix(in srgb, var(--here-chrome) 38%, transparent) !important;
+}
+
+/* The three links inside the word card — Topical Guide, Cross-References,
+   Root Cross-References. --here, not --here-chrome: the card is PAPER, and
+   the chrome accent is mint in both themes, which measured ~1.9:1 on white
+   and is what read as "nasty mint" on the scorecard.
+
+   All three were inline styles written by bom.html's popup builder, so no
+   stylesheet could correct them — that is why the card kept its mint after
+   the border was fixed. The inline colours are gone; the styling lives
+   here with the rest of the card. */
+body #word-popup .popup-tg-link,
+body #word-popup .popup-xref-link,
+body #word-popup .popup-xref-direct {
+  cursor: pointer;
+  color: var(--here) !important;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--here) 45%, transparent);
+  font-size: 0.9em;
+}
+
 /* the headword block */
 body #word-popup .popup-hebrew {
   color: var(--ink) !important; font-size: var(--t-display) !important;
@@ -1284,10 +1334,10 @@ body.dark-mode #xref-panel {
   margin-bottom:14px;
 }
 .rsc-il-card {
-  /* a paper card. The 3%-white fill and mint hairline this had were drawn
-     for a dark chrome panel; on the popup's white ground the card had no
-     visible edge at all. */
-  border:1px solid var(--rule-light);
+  /* a paper card, edged in the accent like the sheet around it — see the
+     card-edge block near #word-popup. --rule-light here measured 1.24
+     against the ground, which is no edge at all. */
+  border:1px solid color-mix(in srgb, var(--here) 38%, transparent);
   border-radius:9px;
   padding:10px 12px;
   margin:9px 0;
