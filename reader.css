@@ -738,6 +738,11 @@ body #word-popup {
   box-shadow: var(--e3) !important;
   padding: 18px 20px 16px !important;
   max-width: min(440px, 92vw) !important;
+  /* Scroll containment belongs on the base rule, not in the narrow-phone
+     block where it first went: the card scrolls in landscape and on a
+     desktop window too, and there it was still handing its overscroll to
+     the chapter underneath. */
+  overscroll-behavior: contain;
 }
 /* the headword block */
 body #word-popup .popup-hebrew {
