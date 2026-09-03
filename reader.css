@@ -584,7 +584,14 @@ body #nav-sidebar .nl-sec-title {
    numeral on a rule, not a box. Same treatment as the drawer. */
 body .landing-section-grid {
   display: flex !important; flex-wrap: wrap !important;
-  gap: 0 !important; direction: rtl; justify-content: flex-start;
+  gap: 0 !important; direction: rtl;
+  /* Centred, not flex-start. The book heading above (.lsg-stack) is a centred
+     column, so a left-packed row of numerals hung its last, partial line off to
+     one side of a centred title. It is barely visible in the OT, where books
+     run 20-50 chapters and every row is full; it is glaring in the JST, where
+     20 of the 31 books have one or two entries and the whole "row" was a single
+     numeral pinned to the right margin under a centred name. */
+  justify-content: center;
 }
 body .landing-sec-btn {
   background: transparent !important;
@@ -2021,3 +2028,151 @@ body.dark-mode #glossary-panel {
   body.sw-panel-open #nav-overlay,
   body.sw-panel-open #panel-overlay { opacity: 0 !important; pointer-events: none !important; }
 }
+
+
+/* ══════════════════════════════════════════════════════════════════════
+   CONSOLIDATED FROM THE FIVE VOLUME PAGES (2026-09-03)
+   104 rules that were byte-identical in ot/nt/dc/pgp/jst inline <style> —
+   five copies, edited five at a time. Moved here once; the page copies
+   are deleted. Verified by computed-style diff on all five pages:
+   ZERO properties changed.
+
+   TWO GUARDS, both learned the hard way in this pass:
+   1. A selector moves only if declared EXACTLY ONCE on every page.
+      Without this the gloss broke: '.gl' is declared three times inline
+      per page, so the first (tiny) declaration was copied and all three
+      deleted — 1,237 computed properties changed and the gloss inherited
+      the RTL word-flow.
+   2. '.gl.gl-nw' is deliberately NOT moved. It lives in an early <style>
+      block that loads BEFORE reader.css; moving it here changed which
+      max-width won (161.28px -> none) on 27 elements. Its own intent is
+      max-width:none, so that is a latent bug worth fixing on purpose —
+      not as a side effect of moving a file.
+
+   Appended at the END: page <style> blocks load AFTER reader.css, so last
+   position preserves the precedence these rules effectively had.
+   ══════════════════════════════════════════════════════════════════════ */
+#annotations-panel.open { display: block; transform: translateX(0); }
+#dark-mode-toggle { background: transparent; border: 1px solid var(--chrome-line); color: var(--here); padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 0.9em; transition: all 0.2s; }
+#glossary-panel.open { display: block; transform: translateX(0); }
+#glossary-search { width: 100%; padding: 8px 12px; border: 1px solid var(--rule); border-radius: 4px; font-size: 1em; font-family: 'David Libre', 'Georgia', serif; margin-bottom: 8px; background: var(--bg); color: var(--ink); }
+#glossary-sort-select { border: 1px solid var(--rule); padding: 4px 6px; border-radius: 3px; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; background: var(--bg); color: var(--ink); }
+#hl-pop #hl-note-input { width: 200px; height: 60px; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; padding: 6px; border-radius: 4px; border: 1px solid var(--chrome-line); background: var(--chrome); color: var(--on-chrome); resize: none; }
+#hl-pop .hl-note-row { gap: 6px; align-items: flex-end; border-top: 1px solid var(--chrome-line); padding-top: 6px; margin-top: 6px; }
+#hl-pop .hl-note-save { background: var(--here); color: var(--chrome); border: none; padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; }
+#hl-pop .sel-color { width: 27px; height: 27px; }
+#hl-pop .sel-color-row { gap: 9px; margin-bottom: 0; }
+#hl-pop .sel-color-row + .sel-color-row { margin-top: 6px; }
+#hl-pop .sel-eraser { width: 27px; height: 27px; border-radius: 50%; cursor: pointer; border: 1px solid #5a5f75; color: #9a9ab0; font-size: 0.8em; display: inline-flex; align-items: center; justify-content: center; }
+#hl-pop .sel-eraser:hover { border-color: var(--here-chrome); color: var(--here-chrome); }
+#sel-note-input { width: 180px; height: 60px; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; padding: 6px; border-radius: 4px; border: 1px solid var(--chrome-line); background: var(--chrome); color: var(--on-chrome); resize: none; }
+#sel-note-row { display: none; padding: 6px; border-top: 1px solid var(--chrome-line); }
+#sel-note-save { background: var(--here); color: var(--chrome); border: none; padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; margin-top: 4px; font-family: 'David Libre', 'Georgia', serif; }
+#sel-subpanel { display: none; padding: 6px; border-top: 1px solid var(--chrome-line); }
+#sel-toolbar button { background: transparent; border: none; color: var(--here); cursor: pointer; font-size: 1.1em; padding: 6px 8px; border-radius: 4px; transition: background 0.15s; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', emoji; }
+#sel-toolbar button.active { background: var(--here); color: var(--chrome); }
+#sel-toolbar-mode-toggle.active { background: color-mix(in srgb, var(--here) 18%, transparent) !important; border-color: var(--here) !important; color: var(--on-chrome) !important; }
+#sel-toolbar-reopen { display:none;position:fixed;right:0;top:50%;transform:translateY(-50%);z-index: var(--z-pop);background:var(--chrome);color:var(--here);border:1px solid var(--chrome-line);border-right:none;border-radius:10px 0 0 10px;padding:12px 7px;cursor:pointer;font-size:1.05em;line-height:1;box-shadow:-2px 2px 8px rgba(0,0,0,0.3);font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',emoji; }
+#sel-toolbar-reopen:hover { background:var(--surface-2); }
+#share-popup h3 { color: var(--accent-deep); margin-bottom: 16px; }
+#share-popup.open { display: block; }
+#word-popup .popup-dismiss-mobile { display: none; width: 100%; margin-top: 12px; padding: 14px 16px; border-radius: 8px; border: 1px solid var(--here); background: color-mix(in srgb, var(--here) 12%, transparent); color: #8a7028; font-family: 'David Libre', 'Georgia', serif; font-size: 1.05em; font-weight: 600; cursor: pointer; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+.glossary-category-header { font-size: 0.85em; font-weight: 700; color: var(--accent-deep); padding: 8px 0 4px; border-bottom: 1px solid var(--rule-light); margin-bottom: 6px; }
+.glossary-close { cursor: pointer; font-size: 1.4em; color: var(--ink-light); padding: 4px 8px; }
+.glossary-controls { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+.glossary-count { margin-left: auto; font-size: 0.8em; color: var(--ink-light); white-space: nowrap; }
+.glossary-detail { display: none; margin-top: 8px; font-size: 0.85em; color: var(--ink-light); line-height: 1.5; direction: ltr; }
+.glossary-entry { border: 1px solid var(--rule-light); border-radius: 6px; padding: 10px 12px; margin-bottom: 6px; cursor: pointer; transition: all 0.15s; }
+.glossary-entry-header { display: flex; align-items: baseline; gap: 4px; }
+.glossary-entry:hover { border-color: var(--accent); }
+.glossary-form-chip { display: inline-block; font-family: 'David Libre', serif; font-size: 1.1em; background: var(--bg-deep); padding: 2px 8px; border-radius: 4px; cursor: pointer; direction: rtl; }
+.glossary-forms-list { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; direction: rtl; }
+.glossary-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.glossary-header h3 { font-size: 1.3em; color: var(--accent-deep); margin: 0; }
+.glossary-highlighted { background: color-mix(in srgb, var(--here) 25%, transparent) !important; border-radius: 3px; }
+.glossary-meaning { font-size: 0.9em; color: var(--ink); margin-top: 2px; }
+.glossary-ref-link { cursor: pointer; color: var(--accent-deep); text-decoration: underline; }
+.glossary-ref-link:hover { color: var(--accent-light); }
+.glossary-refs-book { margin: 2px 0; }
+.glossary-refs-book-name { font-weight: 600; }
+.glossary-refs-section { margin-top: 8px; font-size: 0.85em; }
+.glossary-root { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--accent-deep); direction: rtl; }
+.landing-back { text-align: center; margin-top: 20px; }
+.landing-back a { font-family: 'David Libre', 'Georgia', serif; background: var(--sw-gold, var(--on-chrome)); color: var(--header-bg, var(--chrome)); text-decoration: none; font-size: 1.05em; font-weight: 600; letter-spacing: 0.03em; border: 2px solid var(--header-bg, var(--chrome)); padding: 14px 32px; border-radius: 10px; box-shadow: 0 4px 14px color-mix(in srgb, var(--chrome) 18%, transparent); transition: background 0.2s, transform 0.2s; direction: ltr; display: inline-block; }
+.landing-back a:hover { background: var(--on-chrome); color: var(--header-bg, var(--chrome)); border-color: var(--header-bg, var(--chrome)); transform: scale(1.02); }
+.landing-hero .subtitle-en { font-family: 'David Libre', 'Georgia', serif; font-size: 1.1em; color: var(--ink-light); letter-spacing: 0.08em; direction: ltr; }
+.landing-hero .subtitle-heb { font-size: 1.3em; color: var(--ink); margin-top: 4px; }
+.landing-hero h1 { font-size: 2.2em; color: var(--accent-deep); margin-bottom: 6px; font-weight: 700; }
+.note-marker { color: var(--accent-deep); cursor: pointer; font-size: 0.7em; margin-right: 2px; }
+.page { max-width: none; margin: 0 auto; padding: 55px 24px 50px; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); background: var(--paper); min-height: 100vh; box-shadow: none; position: relative; touch-action: manipulation; }
+.popup-strong a { color: var(--accent); text-decoration: none; }
+.popup-strong a:hover { text-decoration: underline; }
+.sel-color { width: 22px; height: 22px; border-radius: 50%; cursor: pointer; border: 2px solid transparent; transition: all 0.15s; }
+.sel-color-row { flex-wrap: wrap; max-width: 320px; display: flex; gap: 3px; margin-bottom: 3px; align-items: center; }
+.sel-color-row-label { font-size: 0.6em; color: var(--here); min-width: 12px; font-family: 'David Libre', 'Georgia', serif; }
+.sel-color.active { border-color: #fff; box-shadow: 0 0 4px rgba(255,255,255,0.5); }
+.sel-color:hover { transform: scale(1.2); }
+.share-btn { background: var(--header-bg); color: var(--header-text); border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-family: 'David Libre', 'Georgia', serif; font-size: 0.9em; transition: all 0.15s; }
+.share-btn:hover { opacity: 0.85; transform: scale(1.03); }
+.share-btns { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.share-close { position: absolute; top: 8px; right: 12px; cursor: pointer; color: var(--ink-light); font-size: 1.2em; }
+.verse-english ::-moz-selection { background: transparent !important; color: inherit !important; }
+.verse-num.has-note::after { content: '•'; display: inline-block; margin-left: 6px; color: var(--accent-deep); font-size: 1.2em; line-height: 1; transform: translateY(-1px); opacity: 0.9; }
+.xref-panel-close:hover { background: color-mix(in srgb, var(--here) 15%, transparent); color: var(--accent); }
+.xref-ref-english { direction: ltr; font-size: 0.88em; color: var(--ink-light); line-height: 1.5; margin-top: 6px; padding: 8px 10px; background: color-mix(in srgb, var(--here) 5%, transparent); border-radius: 4px; border-left: 3px solid var(--accent); text-align: left; }
+.xref-ref-goto:hover { background: color-mix(in srgb, var(--here) 15%, transparent); color: var(--accent); border-color: var(--accent); }
+.xref-ref-nodata { font-size: 0.85em; color: var(--ink-light); font-style: italic; padding: 16px; }
+.xref-ref-title { font-weight: 600; color: var(--ink); font-size: 0.95em; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; }
+.xref-ref-title span { color: var(--ink); }
+/* === ANNOTATIONS PANEL === */ #annotations-panel { display: none; position: fixed; top: 0; right: 0; bottom: 0; width: 360px; max-width: 90vw; background: var(--bg); border-left: 2px solid var(--accent); z-index: var(--z-panel); overflow-y: auto; padding: 16px; font-family: 'David Libre', 'Georgia', serif; transform: translateX(100%); transition: transform 0.25s ease; }
+/* === CROSS-REFERENCES === */ .xref-marker { display: none; }
+/* === DARK MODE === */ body.dark-mode .tl { color: var(--gloss); }
+/* === Docked selection toolbar: RIGHT side (Hebrew is RTL), always visible while reading, no overlap === */ #sel-toolbar { left:auto!important;right:6px!important;top:50%!important;bottom:auto!important;transform:translateY(-50%)!important;max-height:90vh;overflow-y:auto;flex-direction:column!important;flex-wrap:nowrap!important;max-width:none!important; }
+/* === ENHANCED POPUP (Strong's + Root) === */ .popup-strong { font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; color: var(--ink-light); text-align: center; margin-bottom: 4px; direction: ltr; }
+/* === GLOSSARY PANEL === */ #glossary-panel { display: none; position: fixed; top: 0; left: 0; bottom: 0; width: 380px; max-width: 90vw; background: var(--bg); border-right: 2px solid var(--accent); z-index: var(--z-panel); overflow-y: auto; padding: 16px; font-family: 'David Libre', 'Georgia', serif; transform: translateX(-100%); transition: transform 0.25s ease; }
+/* === LANDING PAGE === */ .landing-hero { text-align: center; padding: 40px 20px 30px; }
+/* === MOBILE POPUP ENLARGEMENT === */ @media (max-width: 600px) { #word-popup { max-width: 90vw; padding: 16px 20px; padding-top: max(16px, calc(env(safe-area-inset-top, 0px) + 12px)); max-height: min(78vh, calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 16px)); overflow-y: auto; -webkit-overflow-scrolling: touch; } #word-popup .popup-dismiss-mobile { display: block; } .popup-hebrew { font-size: 2.4em !important; } .popup-translit { font-size: 1.2em !important; } .popup-gloss { font-size: 1.3em !important; } .popup-detail { font-size: 1.0em !important; } .popup-strong { font-size: 1.0em !important; } #glossary-panel { width: 100vw; max-width: 100vw; } #annotations-panel { width: 100vw; max-width: 100vw; } #xref-panel { width: 55%; } }
+/* === PANEL OVERLAY === */ #panel-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.4); z-index: var(--z-scrim); }
+/* === SELECTION TOOLBAR === */ #sel-toolbar { display: none; position: fixed; z-index: var(--z-pop); background: var(--chrome); border: 1px solid var(--chrome-line); border-radius: 8px; padding: 6px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); flex-direction: column; gap: 4px; align-items: center; }
+/* === SHARE POPUP === */ #share-popup { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--bg); border: 2px solid var(--accent); border-radius: 12px; padding: 24px; z-index: var(--z-pop); min-width: 280px; max-width: 90vw; box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center; font-family: 'David Libre', 'Georgia', serif; }
+/* Dark mode renders highlights as translucent washes over the navy — the solid light-mode pastels would bury the light ink. !important outranks the painter's inline background. */ body.dark-mode .verse.highlighted { background: color-mix(in srgb, var(--here) 12%, transparent); }
+/* David Libre is the ONLY Hebrew face, everywhere, on every surface. Inheritance, not enumeration: the allow-list above misses anything added later (injected panels, new controls), and iOS does not let form controls inherit font-family at all -- that is how mixed Hebrew appears in the app while the web renders clean. `*` has zero specificity, so every explicit rule (kbd monospace, the emoji toolbar) still wins. */ :root { font-family: 'David Libre', serif; }
+/* Dual mode: English + Hebrew interlinear side by side */ .verse-english { display: none; }
+/* Long-press word-range selection (touch): the finger sweeps the Hebrew line and each word in range gets a preview tint. Native per-word selection is off on coarse pointers — iOS cannot drag it across the interlinear's per-word islands, which limited selection to a single word. */ .word-unit.wsel .hw { background: color-mix(in srgb, var(--here-chrome) 28%, transparent); border-radius: 6px; }
+/* Native selection: Hebrew tier only (wrapper none + .hw text — fixes iOS selecting stacked tl/gl) */ .word-unit .hw { user-select: text; -webkit-user-select: text; }
+/* Phones: side by side, each column was about 140 px (14 characters of English per line). Stack instead: the Hebrew block first, its English under it, full width. */ @media (max-width: 600px) { body.dual-mode .verse { flex-wrap: wrap; } body.dual-mode .word-flow { flex: 1 1 0; order: 0; } body.dual-mode .verse-english { order: 1; flex: 1 1 100%; border-left: none; border-top: 1px dotted var(--rule-light); margin-top: 2px; padding: 8px 0 2px; font-size: 0.82em; line-height: 1.55; } body.dual-mode .chapter-heading { flex-wrap: wrap; } body.dual-mode .chapter-heading > .chapter-summary-en { order: 3; flex: 1 1 100%; border-left: none; padding-left: 0; padding-top: 8px; } }
+/* Selection popover — appears at the selected text (Gospel-Library pattern): colors first, then note/copy/share; closes when the selection collapses. */ #hl-pop { display: none; position: fixed; z-index: var(--z-pop); background: var(--chrome); border: 1.5px solid var(--here); border-radius: 12px; box-shadow: 0 8px 28px rgba(0,0,0,0.45); padding: 10px 12px; direction: ltr; -webkit-user-select: none; user-select: none; max-width: calc(100vw - 16px); }
+/* Underline removed 2026-08-31 (translator): the rule underlined the HEBREW headword, and the line runs straight through the nikkud sitting under the letters, making a pointed word unreadable on tap. The blue is the affordance; the underline was never needed. NOTE: .ann-ul is the reader's own underline ANNOTATION and is deliberate -- never fold this change into it. */ #xref-panel { position: fixed; top: 0; width: 380px; height: 100vh; height: 100dvh; background: var(--bg); border-left: 2px solid var(--accent); z-index: var(--z-panel); overflow-y: auto; padding: 0; direction: ltr; font-family: 'David Libre', 'Georgia', serif; box-shadow: -4px 0 20px rgba(0,0,0,0.3); }
+body.dark-mode #annotations-panel { background: var(--chrome); border-color: var(--here-chrome); }
+body.dark-mode #glossary-panel { background: var(--chrome); border-color: var(--here-chrome); }
+body.dark-mode #search-input::placeholder { color: #6b7288; }
+body.dark-mode #search-results .search-result:hover { background: color-mix(in srgb, var(--here) 8%, transparent); }
+body.dark-mode #share-popup { background: var(--chrome); border-color: var(--here-chrome); }
+body.dark-mode .glossary-entry { border-color: var(--chrome-line); }
+body.dark-mode .glossary-form-chip { background: var(--surface-1); }
+body.hide-sel-toolbar #sel-toolbar-reopen { display:block; }
+body:not(.hide-sel-toolbar) #main-content { padding-right:60px!important; }
+body:not(.hide-sel-toolbar) #sel-toolbar { display:flex!important; }
+h1.book-title { margin-top:0 }
+html.sw-boot #main-content,html.sw-boot .page { transition:none!important }
+html.sw-boot .chapter-panel { visibility:hidden!important }
+
+
+/* ══════════════════════════════════════════════════════════════════════
+   LANDING CONTENTS TYPOGRAPHY — the volume table of contents
+   These eight rules styled the contents list and lived in ot.html, nt.html
+   and pgp.html only. dc.html and jst.html never had them, so those two
+   volumes rendered their contents unstyled — the JST book heading collapsed
+   its Hebrew name, transliteration and English onto one run
+   ("בראשיתbereshitGenesis") because .lsg-stack, the flex column that
+   separates them, simply did not exist on that page.
+   One home, six volumes.
+   ══════════════════════════════════════════════════════════════════════ */
+.landing-sections { max-width: 600px; margin: 0 auto 30px; padding: 0 12px; }
+.landing-section-group { margin-bottom: 16px; }
+.landing-section-group h3 { font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; color: var(--ink-light); letter-spacing: 0.08em; direction: ltr; margin-bottom: 8px; text-align: center; }
+.landing-section-group h3 .lsg-heb { font-size: 1.25em; color: var(--accent-deep); margin-right: 6px; }
+.lsg-stack { display: flex; flex-direction: column; align-items: center; gap: 1px; margin: 18px 0 8px; }
+.lsg-stack .lsg-s-heb { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--ink); }
+.lsg-stack .lsg-s-tl { font-size: 0.78em; color: var(--ink-light); font-style: italic; direction: ltr; }
+.lsg-stack .lsg-s-en { font-family: 'David Libre', 'Georgia', serif; font-size: 0.92em; color: var(--ink); letter-spacing: 0.06em; direction: ltr; }

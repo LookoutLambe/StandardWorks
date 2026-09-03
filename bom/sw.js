@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js */
-const CACHE = 'bom-2026-09-03T19-00-00';
+const CACHE = 'bom-2026-09-03T21-15-00';
 /** Shell only — verse *.js files are cached at runtime, refreshed in the background (see fetch handler). */
 const ASSETS = [
   './bom.html',
@@ -9,7 +9,7 @@ const ASSETS = [
   '../root_engine.js?v=38',
   '../root_concordance.js?v=83',
   '../xref_study_panel.css?v=14',
-  '../reader.css?v=52',
+  '../reader.css?v=70',
   '../xref_study_panel.js?v=6',
   './official_verses.js?v=10',
   './scripture_verses.js',

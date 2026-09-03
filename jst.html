@@ -8,8 +8,8 @@
 <meta charset="UTF-8">
 <script>document.documentElement.classList.add('sw-shell-pending');</script>
 <script>(function(){var h=location.hash.slice(1);if(h&&h!=='home')document.documentElement.classList.add('sw-boot');})();</script>
-<style>html.sw-boot .chapter-panel{visibility:hidden!important}html.sw-boot #main-content,html.sw-boot .page{transition:none!important}</style>
-<style>h1.book-title{margin-top:0}.gl.gl-nw{white-space:nowrap;max-width:none}.gl{text-wrap:pretty}</style>
+<style></style>
+<style>.gl.gl-nw{white-space:nowrap;max-width:none}.gl{text-wrap:pretty}</style>
 <script>(function(){var h=(location.hostname||'').toLowerCase(),p=location.pathname.split('/').filter(Boolean),gh=h.slice(-10)==='github.io'&&p.length>0,m=gh?'manifest.github.json':'manifest.json';document.write('<link rel="manifest" href="'+m+'" id="sw-manifest-link">');})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -36,19 +36,6 @@
 
 /* Focus visible ring for keyboard navigation */
 *:focus-visible { outline: 2px solid var(--here); outline-offset: 2px; }
-
-.page {
-  max-width: none;
-  margin: 0 auto;
-  padding: 55px 24px 50px;
-  padding-left: max(24px, env(safe-area-inset-left, 0px));
-  padding-right: max(24px, env(safe-area-inset-right, 0px));
-  background: var(--paper);
-  min-height: 100vh;
-  box-shadow: none;
-  position: relative;
-  touch-action: manipulation;
-}
 
 .book-title {
   font-size: 2.4em;
@@ -199,11 +186,6 @@ body.hide-translit .tl { display: none; }
   padding: 0 6px;
   margin-top: 2px;
   opacity: 0.85;
-}
-/* Native selection: Hebrew tier only (wrapper none + .hw text — fixes iOS selecting stacked tl/gl) */
-.word-unit .hw {
-  user-select: text;
-  -webkit-user-select: text;
 }
 .arr {
   display: inline-flex;
@@ -404,16 +386,6 @@ body.hide-gloss .word-unit { padding-bottom: 3px; }
   padding-left: 8px;
   margin-left: -8px;
 }
-.verse-num.has-note::after {
-  content: '•';
-  display: inline-block;
-  margin-left: 6px;
-  color: var(--accent-deep);
-  font-size: 1.2em;
-  line-height: 1;
-  transform: translateY(-1px);
-  opacity: 0.9;
-}
 
 
 
@@ -471,22 +443,6 @@ body.hide-gloss .word-unit { padding-bottom: 3px; }
   direction: ltr;
 }
 #word-popup .popup-detail span { font-weight: 600; }
-#word-popup .popup-dismiss-mobile {
-  display: none;
-  width: 100%;
-  margin-top: 12px;
-  padding: 14px 16px;
-  border-radius: 8px;
-  border: 1px solid var(--here);
-  background: color-mix(in srgb, var(--here) 12%, transparent);
-  color: #8a7028;
-  font-family: 'David Libre', 'Georgia', serif;
-  font-size: 1.05em;
-  font-weight: 600;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-}
 .word-unit { cursor: pointer; }
 
 /* === SEARCH === */
@@ -701,17 +657,6 @@ body.dark-mode #nav-dropdown .dd-ch:hover { background: var(--surface-1); }@medi
   z-index: var(--z-sheet); background: rgba(0,0,0,0.7); justify-content: center; align-items: center;
 }
 
-#dark-mode-toggle {
-  background: transparent;
-  border: 1px solid var(--chrome-line);
-  color: var(--here);
-  padding: 5px 10px;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 0.9em;
-  transition: all 0.2s;
-}
-
 /* Navigation hint toast */
 #nav-hint {
   position: fixed;
@@ -732,304 +677,14 @@ body.dark-mode #nav-dropdown .dd-ch:hover { background: var(--surface-1); }@medi
   direction: ltr;
   letter-spacing: 0.3px;
 }
-
-/* === LANDING PAGE === */
-.landing-hero {
-  text-align: center;
-  padding: 40px 20px 30px;
-}
-.landing-hero h1 {
-  font-size: 2.2em;
-  color: var(--accent-deep);
-  margin-bottom: 6px;
-  font-weight: 700;
-}
-.landing-hero .subtitle-en {
-  font-family: 'David Libre', 'Georgia', serif;
-  font-size: 1.1em;
-  color: var(--ink-light);
-  letter-spacing: 0.08em;
-  direction: ltr;
-}
-.landing-hero .subtitle-heb {
-  font-size: 1.3em;
-  color: var(--ink);
-  margin-top: 4px;
-}
-.landing-books {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-  max-width: 500px;
-  margin: 0 auto 30px;
-  padding: 0 12px;
-}
-.landing-book-card {
-  background: linear-gradient(170deg, var(--chrome) 0%, var(--surface-2) 100%);
-  border: 1px solid var(--chrome-line);
-  border-radius: 8px;
-  padding: 18px 20px;
-  cursor: pointer;
-  transition: all 0.2s;
-  text-align: center;
-}
-.landing-book-card:hover { transform: scale(1.02); box-shadow: 0 4px 16px rgba(0,0,0,0.3); }
-.landing-book-card .card-title {
-  font-family: 'David Libre', serif;
-  font-size: 1.3em;
-  color: var(--here);
-  font-weight: 700;
-}
-.landing-book-card .card-subtitle {
-  font-family: 'David Libre', 'Georgia', serif;
-  font-size: 0.85em;
-  color: #8a9ab0;
-  direction: ltr;
-  margin-top: 2px;
-}
-.landing-book-card .card-chapters {
-  font-family: 'David Libre', 'Georgia', serif;
-  font-size: 0.75em;
-  color: var(--ink-3);
-  direction: ltr;
-  margin-top: 4px;
-}
-.landing-back {
-  text-align: center;
-  margin-top: 20px;
-}
-.landing-back a {
-  font-family: 'David Libre', 'Georgia', serif;
-  background: var(--sw-gold, var(--on-chrome));
-  color: var(--header-bg, var(--chrome));
-  text-decoration: none;
-  font-size: 1.05em; font-weight: 600; letter-spacing: 0.03em;
-  border: 2px solid var(--header-bg, var(--chrome));
-  padding: 14px 32px; border-radius: 10px;
-  box-shadow: 0 4px 14px color-mix(in srgb, var(--chrome) 18%, transparent);
-  transition: background 0.2s, transform 0.2s;
-  direction: ltr; display: inline-block;
-}
-.landing-back a:hover { background: var(--on-chrome); color: var(--header-bg, var(--chrome)); border-color: var(--header-bg, var(--chrome)); transform: scale(1.02); }
-
-/* === DARK MODE === */
-
-body.dark-mode .tl { color: var(--gloss); }
-/* Dark mode renders highlights as translucent washes over the navy — the
-   solid light-mode pastels would bury the light ink. !important outranks the
-   painter's inline background. */
-body.dark-mode .verse.highlighted { background: color-mix(in srgb, var(--here) 12%, transparent); }
-body.dark-mode #search-input::placeholder { color: #6b7288; }
-body.dark-mode #search-results .search-result:hover { background: color-mix(in srgb, var(--here) 8%, transparent); }
-body.dark-mode .landing-book-card { background: linear-gradient(170deg, var(--chrome) 0%, var(--chrome) 100%); border-color: var(--surface-1); }
-body.dark-mode .landing-book-card .card-subtitle { color: #8b91a5; }
-
-/* === PANEL OVERLAY === */
-#panel-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.4); z-index: var(--z-scrim); }
-
-/* === GLOSSARY PANEL === */
-#glossary-panel {
-  display: none; position: fixed; top: 0; left: 0; bottom: 0; width: 380px; max-width: 90vw;
-  background: var(--bg); border-right: 2px solid var(--accent); z-index: var(--z-panel);
-  overflow-y: auto; padding: 16px; font-family: 'David Libre', 'Georgia', serif;
-  transform: translateX(-100%); transition: transform 0.25s ease;
-}
-#glossary-panel.open { display: block; transform: translateX(0); }
-.glossary-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
-.glossary-header h3 { font-size: 1.3em; color: var(--accent-deep); margin: 0; }
-.glossary-close { cursor: pointer; font-size: 1.4em; color: var(--ink-light); padding: 4px 8px; }
-#glossary-search { width: 100%; padding: 8px 12px; border: 1px solid var(--rule); border-radius: 4px; font-size: 1em; font-family: 'David Libre', 'Georgia', serif; margin-bottom: 8px; background: var(--bg); color: var(--ink); }
-.glossary-controls { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
-#glossary-sort-select { border: 1px solid var(--rule); padding: 4px 6px; border-radius: 3px; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; background: var(--bg); color: var(--ink); }
-.glossary-entry { border: 1px solid var(--rule-light); border-radius: 6px; padding: 10px 12px; margin-bottom: 6px; cursor: pointer; transition: all 0.15s; }
-.glossary-entry:hover { border-color: var(--accent); }
-.glossary-entry-header { display: flex; align-items: baseline; gap: 4px; }
-.glossary-root { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--accent-deep); direction: rtl; }
-.glossary-count { margin-left: auto; font-size: 0.8em; color: var(--ink-light); white-space: nowrap; }
-.glossary-meaning { font-size: 0.9em; color: var(--ink); margin-top: 2px; }
-.glossary-category-header { font-size: 0.85em; font-weight: 700; color: var(--accent-deep); padding: 8px 0 4px; border-bottom: 1px solid var(--rule-light); margin-bottom: 6px; }
-.glossary-detail { display: none; margin-top: 8px; font-size: 0.85em; color: var(--ink-light); line-height: 1.5; direction: ltr; }
-.glossary-forms-list { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; direction: rtl; }
-.glossary-form-chip { display: inline-block; font-family: 'David Libre', serif; font-size: 1.1em; background: var(--bg-deep); padding: 2px 8px; border-radius: 4px; cursor: pointer; direction: rtl; }
-.glossary-highlighted { background: color-mix(in srgb, var(--here) 25%, transparent) !important; border-radius: 3px; }
-.glossary-refs-section { margin-top: 8px; font-size: 0.85em; }
-.glossary-refs-book { margin: 2px 0; }
-.glossary-refs-book-name { font-weight: 600; }
-.glossary-ref-link { cursor: pointer; color: var(--accent-deep); text-decoration: underline; }
-.glossary-ref-link:hover { color: var(--accent-light); }
-body.dark-mode #glossary-panel { background: var(--chrome); border-color: var(--here-chrome); }
-body.dark-mode .glossary-entry { border-color: var(--chrome-line); }
-body.dark-mode .glossary-form-chip { background: var(--surface-1); }
-
-/* === ANNOTATIONS PANEL === */
-#annotations-panel {
-  display: none; position: fixed; top: 0; right: 0; bottom: 0; width: 360px; max-width: 90vw;
-  background: var(--bg); border-left: 2px solid var(--accent); z-index: var(--z-panel);
-  overflow-y: auto; padding: 16px; font-family: 'David Libre', 'Georgia', serif;
-  transform: translateX(100%); transition: transform 0.25s ease;
-}
-#annotations-panel.open { display: block; transform: translateX(0); }
-.note-marker { color: var(--accent-deep); cursor: pointer; font-size: 0.7em; margin-right: 2px; }
-body.dark-mode #annotations-panel { background: var(--chrome); border-color: var(--here-chrome); }
-
-/* === SELECTION TOOLBAR === */
-#sel-toolbar {
-  display: none; position: fixed; z-index: var(--z-pop);
-  background: var(--chrome); border: 1px solid var(--chrome-line); border-radius: 8px;
-  padding: 6px; box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-  flex-direction: column; gap: 4px; align-items: center;
-}
-#sel-toolbar button {
-  background: transparent; border: none; color: var(--here); cursor: pointer;
-  font-size: 1.1em; padding: 6px 8px; border-radius: 4px; transition: background 0.15s;
-  width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
-  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', emoji;
-}
-#sel-toolbar button.active { background: var(--here); color: var(--chrome); }
-#sel-subpanel { display: none; padding: 6px; border-top: 1px solid var(--chrome-line); }
-.sel-color-row { flex-wrap: wrap; max-width: 320px; display: flex; gap: 3px; margin-bottom: 3px; align-items: center; }
-.sel-color-row-label { font-size: 0.6em; color: var(--here); min-width: 12px; font-family: 'David Libre', 'Georgia', serif; }
-.sel-color { width: 22px; height: 22px; border-radius: 50%; cursor: pointer; border: 2px solid transparent; transition: all 0.15s; }
-.sel-color:hover { transform: scale(1.2); }
-.sel-color.active { border-color: #fff; box-shadow: 0 0 4px rgba(255,255,255,0.5); }
-#sel-note-row { display: none; padding: 6px; border-top: 1px solid var(--chrome-line); }
-#sel-note-input { width: 180px; height: 60px; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; padding: 6px; border-radius: 4px; border: 1px solid var(--chrome-line); background: var(--chrome); color: var(--on-chrome); resize: none; }
-#sel-note-save { background: var(--here); color: var(--chrome); border: none; padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; margin-top: 4px; font-family: 'David Libre', 'Georgia', serif; }
-
-/* Selection popover — appears at the selected text (Gospel-Library pattern):
-   colors first, then note/copy/share; closes when the selection collapses. */
-#hl-pop {
-  display: none; position: fixed; z-index: var(--z-pop);
-  background: var(--chrome); border: 1.5px solid var(--here); border-radius: 12px;
-  box-shadow: 0 8px 28px rgba(0,0,0,0.45);
-  padding: 10px 12px; direction: ltr;
-  -webkit-user-select: none; user-select: none;
-  max-width: calc(100vw - 16px);
-}
-#hl-pop .sel-color-row { gap: 9px; margin-bottom: 0; }
-#hl-pop .sel-color-row + .sel-color-row { margin-top: 6px; }
-#hl-pop .sel-color { width: 27px; height: 27px; }
-#hl-pop .sel-eraser {
-  width: 27px; height: 27px; border-radius: 50%; cursor: pointer;
-  border: 1px solid #5a5f75; color: #9a9ab0; font-size: 0.8em;
-  display: inline-flex; align-items: center; justify-content: center;
-}
-#hl-pop .sel-eraser:hover { border-color: var(--here-chrome); color: var(--here-chrome); }
-
-/* Long-press word-range selection (touch): the finger sweeps the Hebrew line
-   and each word in range gets a preview tint. Native per-word selection is
-   off on coarse pointers — iOS cannot drag it across the interlinear's
-   per-word islands, which limited selection to a single word. */
-.word-unit.wsel .hw { background: color-mix(in srgb, var(--here-chrome) 28%, transparent); border-radius: 6px; }
-#hl-pop .hl-note-row { gap: 6px; align-items: flex-end; border-top: 1px solid var(--chrome-line); padding-top: 6px; margin-top: 6px; }
-#hl-pop #hl-note-input { width: 200px; height: 60px; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; padding: 6px; border-radius: 4px; border: 1px solid var(--chrome-line); background: var(--chrome); color: var(--on-chrome); resize: none; }
-#hl-pop .hl-note-save { background: var(--here); color: var(--chrome); border: none; padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; }
-#sel-toolbar-mode-toggle.active { background: color-mix(in srgb, var(--here) 18%, transparent) !important; border-color: var(--here) !important; color: var(--on-chrome) !important; }
-
-/* === SHARE POPUP === */
-#share-popup {
-  display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
-  background: var(--bg); border: 2px solid var(--accent); border-radius: 12px;
-  padding: 24px; z-index: var(--z-pop); min-width: 280px; max-width: 90vw;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center; font-family: 'David Libre', 'Georgia', serif;
-}
-#share-popup.open { display: block; }
-#share-popup h3 { color: var(--accent-deep); margin-bottom: 16px; }
-.share-btns { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
-.share-btn { background: var(--header-bg); color: var(--header-text); border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-family: 'David Libre', 'Georgia', serif; font-size: 0.9em; transition: all 0.15s; }
-.share-btn:hover { opacity: 0.85; transform: scale(1.03); }
-.share-close { position: absolute; top: 8px; right: 12px; cursor: pointer; color: var(--ink-light); font-size: 1.2em; }
-body.dark-mode #share-popup { background: var(--chrome); border-color: var(--here-chrome); }
-
-/* === ENHANCED POPUP (Strong's + Root) === */
-.popup-strong { font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; color: var(--ink-light); text-align: center; margin-bottom: 4px; direction: ltr; }
-.popup-strong a { color: var(--accent); text-decoration: none; }
-.popup-strong a:hover { text-decoration: underline; }
-
-/* === MOBILE POPUP ENLARGEMENT === */
-@media (max-width: 600px) {
-  #word-popup {
-    max-width: 90vw;
-    padding: 16px 20px;
-    padding-top: max(16px, calc(env(safe-area-inset-top, 0px) + 12px));
-    max-height: min(78vh, calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 16px));
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  #word-popup .popup-dismiss-mobile { display: block; }
-  .popup-hebrew { font-size: 2.4em !important; }
-  .popup-translit { font-size: 1.2em !important; }
-  .popup-gloss { font-size: 1.3em !important; }
-  .popup-detail { font-size: 1.0em !important; }
-  .popup-strong { font-size: 1.0em !important; }
-  #glossary-panel { width: 100vw; max-width: 100vw; }
-  #annotations-panel { width: 100vw; max-width: 100vw; }
-  #xref-panel { width: 55%; }
-}
-
-/* === CROSS-REFERENCES === */
-.xref-marker {
-  display: none;
-}
-/* Dual mode: English + Hebrew interlinear side by side */
-.verse-english { display: none; }
-/* The three .heading-flow lines that were here are gone: JST never builds a
-   heading flow (it declares headingWords: '_jstHeadingWords' but no such
-   data file is loaded, so the builder's guard never fires), and the .arr
-   rule fought a site-wide display:none !important anyway. Heading styling,
-   if JST ever gets the data, comes from reader.css like everywhere else. */
+/* JST's landing was the one volume that drew its contents as boxed cards —
+   a bespoke .landing-book-card with its own gradient, radius, shadow-on-hover
+   and two hardcoded off-palette greys (#8a9ab0 / #8b91a5). Every other volume
+   draws its contents as typography on a rule. The cards are gone; buildPages
+   below emits the SAME .landing-section-group / lsg-stack / .landing-sec-btn
+   structure OT, NT, D&C and PGP use, so the contents styling lives in
+   reader.css for all six volumes and nowhere else. */
 .verse-english ::selection { background: transparent !important; color: inherit !important; }
-.verse-english ::-moz-selection { background: transparent !important; color: inherit !important; }
-/* Phones: side by side, each column was about 140 px (14 characters of
-   English per line). Stack instead: the Hebrew block first, its English
-   under it, full width. */
-@media (max-width: 600px) {
-  body.dual-mode .verse { flex-wrap: wrap; }
-  body.dual-mode .word-flow { flex: 1 1 0; order: 0; }
-  body.dual-mode .verse-english {
-    order: 1;
-    flex: 1 1 100%;
-    border-left: none;
-    border-top: 1px dotted var(--rule-light);
-    margin-top: 2px;
-    padding: 8px 0 2px;
-    font-size: 0.82em;
-    line-height: 1.55;
-  }
-  body.dual-mode .chapter-heading { flex-wrap: wrap; }
-  body.dual-mode .chapter-heading > .chapter-summary-en {
-    order: 3;
-    flex: 1 1 100%;
-    border-left: none;
-    padding-left: 0;
-    padding-top: 8px;
-  }
-}
-/* Underline removed 2026-08-31 (translator): the rule underlined the HEBREW
-   headword, and the line runs straight through the nikkud sitting under the
-   letters, making a pointed word unreadable on tap. The blue is the affordance;
-   the underline was never needed. NOTE: .ann-ul is the reader's own underline
-   ANNOTATION and is deliberate -- never fold this change into it. */
-#xref-panel {
-  position: fixed; top: 0; width: 380px; height: 100vh; height: 100dvh;
-  background: var(--bg); border-left: 2px solid var(--accent); z-index: var(--z-panel);
-  overflow-y: auto; padding: 0; direction: ltr;
-  font-family: 'David Libre', 'Georgia', serif; box-shadow: -4px 0 20px rgba(0,0,0,0.3);
-}
-.xref-panel-close:hover { background: color-mix(in srgb, var(--here) 15%, transparent); color: var(--accent); }
-.xref-ref-title {
-  font-weight: 600; color: var(--ink); font-size: 0.95em;
-  margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;
-}
-.xref-ref-title span { color: var(--ink); }
-.xref-ref-goto:hover { background: color-mix(in srgb, var(--here) 15%, transparent); color: var(--accent); border-color: var(--accent); }
-.xref-ref-english {
-  direction: ltr; font-size: 0.88em; color: var(--ink-light);
-  line-height: 1.5; margin-top: 6px; padding: 8px 10px;
-  background: color-mix(in srgb, var(--here) 5%, transparent); border-radius: 4px; border-left: 3px solid var(--accent);
-  text-align: left;
-}
-.xref-ref-nodata { font-size: 0.85em; color: var(--ink-light); font-style: italic; padding: 16px; }
 
 
 /* === FORCE UI FONT (David Libre) === */
@@ -1041,29 +696,12 @@ body, button, input, select, textarea,
 .sel-color-row-label, #sel-note-input, #sel-note-save,
 #note-modal-card {
   font-family: 'David Libre', serif !important;
-}
-
-  /* David Libre is the ONLY Hebrew face, everywhere, on every surface.
-     Inheritance, not enumeration: the allow-list above misses anything added
-     later (injected panels, new controls), and iOS does not let form controls
-     inherit font-family at all -- that is how mixed Hebrew appears in the app
-     while the web renders clean.  `*` has zero specificity, so every explicit
-     rule (kbd monospace, the emoji toolbar) still wins. */
-  :root { font-family: 'David Libre', serif; }
-
-
-/* === Docked selection toolbar: RIGHT side (Hebrew is RTL), always visible while reading, no overlap === */
-#sel-toolbar{left:auto!important;right:6px!important;top:50%!important;bottom:auto!important;transform:translateY(-50%)!important;max-height:90vh;overflow-y:auto;flex-direction:column!important;flex-wrap:nowrap!important;max-width:none!important;}
-body:not(.hide-sel-toolbar) #sel-toolbar{display:flex!important;}
-#sel-toolbar-reopen{display:none;position:fixed;right:0;top:50%;transform:translateY(-50%);z-index: var(--z-pop);background:var(--chrome);color:var(--here);border:1px solid var(--chrome-line);border-right:none;border-radius:10px 0 0 10px;padding:12px 7px;cursor:pointer;font-size:1.05em;line-height:1;box-shadow:-2px 2px 8px rgba(0,0,0,0.3);font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',emoji;}
-#sel-toolbar-reopen:hover{background:var(--surface-2);}
-body.hide-sel-toolbar #sel-toolbar-reopen{display:block;}
-body:not(.hide-sel-toolbar) #main-content{padding-right:60px!important;}@media (max-width:600px) {body:not(.hide-sel-toolbar) #main-content{padding-right:52px!important;}}
+}@media (max-width:600px) {body:not(.hide-sel-toolbar) #main-content{padding-right:52px!important;}}
 </style>
 <link rel="stylesheet" href="nav_engine.css?v=46">
 <link rel="stylesheet" href="site_chrome.css?v=64">
 <link rel="stylesheet" href="xref_study_panel.css?v=14">
-<link rel="stylesheet" href="reader.css?v=65">
+<link rel="stylesheet" href="reader.css?v=70">
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -1386,163 +1024,6 @@ body:not(.hide-sel-toolbar) #main-content{padding-right:60px!important;}@media (
         <div class="subtitle-heb">Hebrew Interlinear</div>
       </div>
       <hr class="landing-divider">
-      <div class="landing-books">
-        <div class="landing-book-card" onclick="navTo('jstgen-ch1')">
-          <div class="card-title">בראשית</div>
-          <div class="card-subtitle">Genesis</div>
-          <div class="card-chapters">9 Entries &middot; 403 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jstexo-ch1')">
-          <div class="card-title">שמות</div>
-          <div class="card-subtitle">Exodus</div>
-          <div class="card-chapters">6 Entries &middot; 181 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jstdeu-ch1')">
-          <div class="card-title">דברים</div>
-          <div class="card-subtitle">Deuteronomy</div>
-          <div class="card-chapters">1 Entry &middot; 22 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jst1sa-ch1')">
-          <div class="card-title">שמואל א</div>
-          <div class="card-subtitle">1 Samuel</div>
-          <div class="card-chapters">1 Entry &middot; 23 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jst2sa-ch1')">
-          <div class="card-title">שמואל ב</div>
-          <div class="card-subtitle">2 Samuel</div>
-          <div class="card-chapters">1 Entry &middot; 31 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jst1ch-ch1')">
-          <div class="card-title">דברי הימים א</div>
-          <div class="card-subtitle">1 Chronicles</div>
-          <div class="card-chapters">1 Entry &middot; 30 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jst2ch-ch1')">
-          <div class="card-title">דברי הימים ב</div>
-          <div class="card-subtitle">2 Chronicles</div>
-          <div class="card-chapters">1 Entry &middot; 34 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jstpsa-ch1')">
-          <div class="card-title">תהלים</div>
-          <div class="card-subtitle">Psalms</div>
-          <div class="card-chapters">4 Entries &middot; 55 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jstisa-ch1')">
-          <div class="card-title">ישעיהו</div>
-          <div class="card-subtitle">Isaiah</div>
-          <div class="card-chapters">2 Entries &middot; 49 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jstjer-ch1')">
-          <div class="card-title">ירמיהו</div>
-          <div class="card-subtitle">Jeremiah</div>
-          <div class="card-chapters">1 Entry &middot; 24 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jstamo-ch1')">
-          <div class="card-title">עמוס</div>
-          <div class="card-subtitle">Amos</div>
-          <div class="card-chapters">1 Entry &middot; 17 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jstmatt-ch1')">
-          <div class="card-title">מתי</div>
-          <div class="card-subtitle">Matthew</div>
-          <div class="card-chapters">17 Entries &middot; 675 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jstmark-ch1')">
-          <div class="card-title">מרקוס</div>
-          <div class="card-subtitle">Mark</div>
-          <div class="card-chapters">8 Entries &middot; 324 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jstluke-ch1')">
-          <div class="card-title">לוקס</div>
-          <div class="card-subtitle">Luke</div>
-          <div class="card-chapters">14 Entries &middot; 687 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jstjohn-ch1')">
-          <div class="card-title">יוחנן</div>
-          <div class="card-subtitle">John</div>
-          <div class="card-chapters">5 Entries &middot; 245 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jstacts-ch1')">
-          <div class="card-title">מעשי השליחים</div>
-          <div class="card-subtitle">Acts</div>
-          <div class="card-chapters">2 Entries &middot; 73 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jstrom-ch1')">
-          <div class="card-title">אל הרומים</div>
-          <div class="card-subtitle">Romans</div>
-          <div class="card-chapters">5 Entries &middot; 135 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jst1co-ch1')">
-          <div class="card-title">אל הקורנתים א</div>
-          <div class="card-subtitle">1 Corinthians</div>
-          <div class="card-chapters">2 Entries &middot; 98 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jst2co-ch1')">
-          <div class="card-title">אל הקורנתים ב</div>
-          <div class="card-subtitle">2 Corinthians</div>
-          <div class="card-chapters">1 Entry &middot; 21 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jstgal-ch1')">
-          <div class="card-title">אל הגלטים</div>
-          <div class="card-subtitle">Galatians</div>
-          <div class="card-chapters">1 Entry &middot; 29 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jsteph-ch1')">
-          <div class="card-title">אל האפסיים</div>
-          <div class="card-subtitle">Ephesians</div>
-          <div class="card-chapters">1 Entry &middot; 32 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jstcol-ch1')">
-          <div class="card-title">אל הקולוסים</div>
-          <div class="card-subtitle">Colossians</div>
-          <div class="card-chapters">1 Entry &middot; 23 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jst1th-ch1')">
-          <div class="card-title">אל התסלוניקים א</div>
-          <div class="card-subtitle">1 Thessalonians</div>
-          <div class="card-chapters">1 Entry &middot; 18 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jst2th-ch1')">
-          <div class="card-title">אל התסלוניקים ב</div>
-          <div class="card-subtitle">2 Thessalonians</div>
-          <div class="card-chapters">1 Entry &middot; 17 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jst1ti-ch1')">
-          <div class="card-title">אל טימותיאוס א</div>
-          <div class="card-subtitle">1 Timothy</div>
-          <div class="card-chapters">3 Entries &middot; 52 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jstheb-ch1')">
-          <div class="card-title">אל העברים</div>
-          <div class="card-subtitle">Hebrews</div>
-          <div class="card-chapters">5 Entries &middot; 118 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jstjas-ch1')">
-          <div class="card-title">יעקב</div>
-          <div class="card-subtitle">James</div>
-          <div class="card-chapters">2 Entries &middot; 53 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jst1pe-ch1')">
-          <div class="card-title">פטרוס א</div>
-          <div class="card-subtitle">1 Peter</div>
-          <div class="card-chapters">2 Entries &middot; 41 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jst2pe-ch1')">
-          <div class="card-title">פטרוס ב</div>
-          <div class="card-subtitle">2 Peter</div>
-          <div class="card-chapters">1 Entry &middot; 18 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jst1jn-ch1')">
-          <div class="card-title">יוחנן א</div>
-          <div class="card-subtitle">1 John</div>
-          <div class="card-chapters">3 Entries &middot; 74 Verses</div>
-        </div>
-        <div class="landing-book-card" onclick="navTo('jstrev-ch1')">
-          <div class="card-title">התגלות</div>
-          <div class="card-subtitle">Revelation</div>
-          <div class="card-chapters">5 Entries &middot; 101 Verses</div>
-        </div>
-      </div>
       <div class="landing-back">
         <a href="index.html">← Standard Works Home</a>
       </div>
@@ -2026,7 +1507,45 @@ window.READER = {
 ];
     ids.forEach(function(id) { order.push(id); });
   },
-  buildPages: function() { /* landing + panels are static HTML on this page */ },
+  // A JST entry is identified by its CHAPTER, exactly like a chapter in every
+  // other volume — jstgen-ch3 is "JST Genesis 14". So the contents is the same
+  // numeral grid OT, NT and D&C draw, and the cell shows the real chapter
+  // reference (14, or 1–8 for a span), not its position in the file.
+  // Deliberately NOT the named-row shape PGP's facsimiles use: adding a
+  // .sec-tl to the cell flips reader.css's :has(.sec-tl) branch to a column of
+  // 44px rows, which for 108 entries is a 10,800px landing — thirteen screens.
+  // The verse range each entry revises belongs to the chapter it opens; here it
+  // rides on aria-label so it is announced without being drawn.
+  jstToc: [{"cat":"Old Testament","catHe":"הַתַּנַ״ךְ","books":[{"p":"jstgen","he":"בראשית","tl":"bereshit","en":"Genesis","e":[[1,"1–8",""],[2,"9",""],[3,"14","25–40"],[4,"15","9–12"],[5,"17","3–12"],[6,"19","9–15"],[7,"21","31–32"],[8,"48","5–11"],[9,"50","24–38"]]},{"p":"jstexo","he":"שמות","tl":"shemot","en":"Exodus","e":[[1,"4","21, 24–27"],[2,"18","1"],[3,"22","18"],[4,"32","14"],[5,"33","20, 23"],[6,"34","1–2, 14"]]},{"p":"jstdeu","he":"דברים","tl":"devarim","en":"Deuteronomy","e":[[1,"10","2"]]},{"p":"jst1sa","he":"שמואל א","tl":"shemuel 1","en":"1 Samuel","e":[[1,"16","14–16, 23"]]},{"p":"jst2sa","he":"שמואל ב","tl":"shemuel 2","en":"2 Samuel","e":[[1,"12","13"]]},{"p":"jst1ch","he":"דברי הימים א","tl":"divre hayyamim 1","en":"1 Chronicles","e":[[1,"21","15"]]},{"p":"jst2ch","he":"דברי הימים ב","tl":"divre hayyamim 2","en":"2 Chronicles","e":[[1,"18","22"]]},{"p":"jstpsa","he":"תהלים","tl":"tehillim","en":"Psalms","e":[[1,"11","1–5"],[2,"14","1–7"],[3,"24","7–10"],[4,"109","4"]]},{"p":"jstisa","he":"ישעיהו","tl":"yeshayahu","en":"Isaiah","e":[[1,"29","1–8"],[2,"42","19–23"]]},{"p":"jstjer","he":"ירמיהו","tl":"yirmeyahu","en":"Jeremiah","e":[[1,"26","13"]]},{"p":"jstamo","he":"עמוס","tl":"amos","en":"Amos","e":[[1,"7","3"]]}]},{"cat":"New Testament","catHe":"הַבְּרִית הַחֲדָשָׁה","books":[{"p":"jstmatt","he":"מתי","tl":"mattay","en":"Matthew","e":[[1,"3","4–6, 24–26"],[2,"4","1, 5–6, 8–9, 11"],[3,"5","21"],[4,"6","14, 22, 25–27"],[5,"7","1–2, 4–8"],[6,"9","18–21"],[7,"11","13–15"],[8,"12","37–38"],[9,"13","39–44"],[10,"16","25–29"],[11,"17","10–14"],[12,"18","11"],[13,"19","13"],[14,"21","33, 47–56"],[15,"23","6"],[16,"26","22, 24–25"],[17,"27","3–6"]]},{"p":"jstmark","he":"מרקוס","tl":"markos","en":"Mark","e":[[1,"2","26–27"],[2,"3","21–25"],[3,"7","10–12"],[4,"8","37–38, 42–43"],[5,"9","3, 40–48"],[6,"12","32"],[7,"14","20–26"],[8,"16","3–6"]]},{"p":"jstluke","he":"לוקס","tl":"lukas","en":"Luke","e":[[1,"1","8"],[2,"2","46"],[3,"3","4–11"],[4,"6","29–30"],[5,"9","24–25"],[6,"11","53"],[7,"12","9–12, 41–57"],[8,"14","35–37"],[9,"16","16–23"],[10,"17","21, 36–40"],[11,"18","27"],[12,"21","24–26, 32"],[13,"23","35"],[14,"24","2–4"]]},{"p":"jstjohn","he":"יוחנן","tl":"yochanan","en":"John","e":[[1,"1","1–34"],[2,"4","1–4, 26"],[3,"6","44"],[4,"13","8–10"],[5,"14","30"]]},{"p":"jstacts","he":"מעשי השליחים","tl":"maase hashshelichim","en":"Acts","e":[[1,"9","7"],[2,"22","29–30"]]},{"p":"jstrom","he":"אל הרומים","tl":"romim","en":"Romans","e":[[1,"3","5–8"],[2,"4","2–5"],[3,"7","5–27"],[4,"8","8"],[5,"13","6–7"]]},{"p":"jst1co","he":"אל הקורנתים א","tl":"korintim 1","en":"1 Corinthians","e":[[1,"7","1–2, 5, 26, 29–33, 38"],[2,"15","40"]]},{"p":"jst2co","he":"אל הקורנתים ב","tl":"korintim 2","en":"2 Corinthians","e":[[1,"5","16"]]},{"p":"jstgal","he":"אל הגלטים","tl":"galatim","en":"Galatians","e":[[1,"3","19–20"]]},{"p":"jsteph","he":"אל האפסיים","tl":"efesim","en":"Ephesians","e":[[1,"4","26"]]},{"p":"jstcol","he":"אל הקולוסים","tl":"kolosim","en":"Colossians","e":[[1,"2","21–22"]]},{"p":"jst1th","he":"אל התסלוניקים א","tl":"tessalonikim 1","en":"1 Thessalonians","e":[[1,"4","15"]]},{"p":"jst2th","he":"אל התסלוניקים ב","tl":"tessalonikim 2","en":"2 Thessalonians","e":[[1,"2","2–3, 7–9"]]},{"p":"jst1ti","he":"אל טימותיאוס א","tl":"timoteos 1","en":"1 Timothy","e":[[1,"2","4"],[2,"3","15–16"],[3,"6","15–16"]]},{"p":"jstheb","he":"אל העברים","tl":"ivrim","en":"Hebrews","e":[[1,"1","6–7"],[2,"4","3"],[3,"6","1–3"],[4,"7","3, 19–21"],[5,"11","1, 35"]]},{"p":"jstjas","he":"יעקב","tl":"yaakov","en":"James","e":[[1,"1","2"],[2,"2","1, 14–21"]]},{"p":"jst1pe","he":"פטרוס א","tl":"petros 1","en":"1 Peter","e":[[1,"3","20"],[2,"4","6, 8"]]},{"p":"jst2pe","he":"פטרוס ב","tl":"petros 2","en":"2 Peter","e":[[1,"3","3–13"]]},{"p":"jst1jn","he":"יוחנן א","tl":"yochanan 1","en":"1 John","e":[[1,"2","1"],[2,"3","9"],[3,"4","12"]]},{"p":"jstrev","he":"התגלות","tl":"chazon yochanan","en":"Revelation","e":[[1,"1","1–8"],[2,"2","22, 26–27"],[3,"5","6"],[4,"12","1–7"],[5,"19","15, 21"]]}]}],
+  buildPages: function() {
+    var landingPanel = document.getElementById('panel-landing');
+    var toc = window.READER.jstToc;
+    var h = '';
+    toc.forEach(function(cat) {
+      h += '<div class="landing-section-group"><h3><span dir="ltr">' + cat.cat +
+           '</span> \u00b7 <span class="lsg-heb" dir="rtl" style="unicode-bidi:isolate">' + cat.catHe + '</span></h3>';
+      cat.books.forEach(function(bk) {
+        h += '<div class="landing-section-group"><h3 class="lsg-stack">' +
+             '<span class="lsg-s-heb" dir="rtl">' + bk.he.replace(/ (\u05D0|\u05D1|\u05D2)$/, ' $1\u05F3') + '</span>' +
+             '<span class="lsg-s-tl">' + bk.tl + '</span>' +
+             '<span class="lsg-s-en" dir="ltr">' + bk.en + '</span></h3>' +
+             '<div class="landing-section-grid">';
+        bk.e.forEach(function(en) {
+          var idx = en[0], ch = en[1], vs = en[2];
+          var heb = ch.split('\u2013').map(function(n) { return toHebNum(parseInt(n, 10)); }).join('\u2013');
+          var full = bk.en + ' ' + ch + (vs ? ':' + vs : '');
+          h += '<div class="landing-sec-btn" role="link" tabindex="0" aria-label="JST ' + full + '"' +
+               ' title="JST ' + full + '" onclick="navTo(\'' + bk.p + '-ch' + idx + '\')">' +
+               '<span class="sec-heb">' + heb + '</span>' +
+               '<span class="sec-num" dir="ltr">' + ch + '</span></div>';
+        });
+        h += '</div></div>';
+      });
+      h += '</div>';
+    });
+    landingPanel.querySelector('.landing-divider').insertAdjacentHTML('afterend',
+      '<div class="landing-sections">' + h + '</div>');
+  },
   panelTitle: function(titleEl, subEl, id) {
     if (id.indexOf('jstgen-') === 0) {
         titleEl.textContent = 'בראשית';
