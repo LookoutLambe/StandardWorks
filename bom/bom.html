@@ -52,27 +52,11 @@
 <link rel="apple-touch-icon" sizes="180x180" href="../icons/icon-180.png">
 <link rel="apple-touch-icon" href="../icons/icon-192.png">
 <link rel="stylesheet" href="../nav_engine.css?v=31">
-<link rel="stylesheet" href="../site_chrome.css?v=43">
+<link rel="stylesheet" href="../site_chrome.css?v=44">
 <link rel="stylesheet" href="../xref_study_panel.css?v=8">
 <style>
 
-:root {
-  --bg: #faf8f2;
-  --bg-deep: #f0ece0;
-  --ink: #1a1a1a;
-  --ink-light: #444;
-  --accent: #dbb958;
-  --accent-light: #e8cc78;
-  --accent-deep: #8a6a1c; /* gold with 4.5:1 on the reading surface — for text/outline buttons on beige */
-  --rule: #d6ceb8;
-  --rule-light: #e8e2d4;
-  --gloss: #333;
-  --verse-num: #4a7ba6;
-  --highlight: rgba(219, 185, 88, 0.12);
-  --header-bg: #1e2233;
-  --header-text: #dbb958;
-  --row-alt: #faf8f2;
-}
+
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { overflow-x: hidden; }
@@ -365,7 +349,6 @@ body.hide-translit .chapter-summary-tl { display: none; }
   font-size: 1.85em;
   font-weight: 500;
   line-height: 1.5;
-  color: #1a2744;
   white-space: nowrap;
   direction: rtl;
   text-align: center;
@@ -375,7 +358,6 @@ body.hide-translit .chapter-summary-tl { display: none; }
   font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.78em;
   font-style: normal;
-  color: #1a2744;
   line-height: 1.2;
   text-align: center;
   direction: ltr;
@@ -461,7 +443,6 @@ body.hide-gloss.hide-translit .arr { display: none; }
 
 .word-unit.sof .hw::after {
   content: ' ׃';
-  color: #1a2744;
 }
 
 /* Controls top bar (nav + utilities) */
@@ -714,7 +695,7 @@ body.dual-mode .hw { font-size: 1.3em; }
   .verse:hover { background: none !important; }
   .word-unit { break-inside: avoid; }
   body { background: white !important; color: black !important; }
-  .hw { color: #1a2744 !important; }
+  .hw { color: var(--navy) !important; }
   .gl { color: #333 !important; opacity: 1 !important; }
   .tl { display: none; }
 }
@@ -1433,9 +1414,9 @@ body.dark-mode .glossary-form-chip { background: #303648; }
 .tg-alpha-btn:hover { transform: scale(1.3); }
 #tg-list { flex: 1; padding-bottom: 30px; }
 .tg-section-header {
-  background: #1a2744; padding: 8px 16px;
+  background: var(--navy); padding: 8px 16px;
   font-size: 1.3em; font-weight: 700; color: #dbb958;
-  font-family: 'David Libre', serif; border-bottom: 1px solid #1a2744;
+  font-family: 'David Libre', serif; border-bottom: 1px solid var(--navy);
 }
 .tg-entry { padding: 12px 16px; border-bottom: 1px solid var(--rule-light); cursor: pointer; }
 .tg-entry:hover { background: var(--highlight); }
@@ -1486,7 +1467,7 @@ body.dark-mode .glossary-form-chip { background: #303648; }
 .tg-cat-chip.active:hover { background: var(--accent); }
 .tg-empty { padding: 40px; text-align: center; color: var(--ink-light); font-style: italic; font-size: 1.05em; }
 body.dark-mode #tg-search { background: #222838; color: #e8e0d0; border-color: #3a4054; }
-body.dark-mode .tg-section-header { background: #1a2744; color: #dbb958; }
+body.dark-mode .tg-section-header { background: var(--navy); color: var(--gold-bright); }
 body.dark-mode .tg-expanded { background: #222838; border-color: #3a4054; }
 
 /* === CROSS-REFERENCES === */
@@ -1526,17 +1507,11 @@ body.hide-gloss .xref-marker, body.dual-mode .xref-marker { font-size: 0.5em; }
    cross-reference marker no longer colors its word (the sup letter still opens it). */
 .word-unit.tg-major .hw { color: var(--tap-blue, #2e6da4) !important; }
 .word-unit.tg-major .gl { color: var(--tap-blue, #2e6da4) !important; }
-.word-unit.xref-linked:hover .hw { color: #1f5c8f !important; text-decoration: none; }
 /* Underline removed 2026-08-31 (translator): the rule underlined the HEBREW
    headword, and the line runs straight through the nikkud sitting under the
    letters, making a pointed word unreadable on tap. The blue is the affordance;
    the underline was never needed. NOTE: .ann-ul is the reader's own underline
    ANNOTATION and is deliberate -- never fold this change into it. */
-.word-unit.xref-linked:hover .gl { color: #1f5c8f !important; }
-body.dark-mode .word-unit.xref-linked .hw { color: #5dade2 !important; }
-body.dark-mode .word-unit.xref-linked .gl { color: #5dade2 !important; }
-body.dark-mode .word-unit.xref-linked:hover .hw { color: #85c1e9 !important; }
-body.dark-mode .word-unit.xref-linked:hover .gl { color: #85c1e9 !important; }
 
 #xref-popup {
   display: none;
@@ -1664,26 +1639,7 @@ body.dark-mode #xref-panel { background: #1e2233; border-color: #d4af37; }
 @media (max-width: 600px) { #xref-panel { width: 55%; } }
 
 /* === DARK MODE === */
-body.dark-mode {
-  --bg: #1e2233;
-  --bg-deep: #222838;
-  --ink: #e8e0d0;
-  --ink-light: #b0a890;
-  --accent: #d4af37;
-  --accent-light: #e8c84e;
-  --accent-deep: #e8c84e; /* on navy the LIGHT gold is the readable one */
-  --rule: #3a4054;
-  --rule-light: #303648;
-  --gloss: #c0b898;
-  --verse-num: #7fb3d3;
-  --highlight: rgba(219, 185, 88, 0.15);
-  --header-bg: #d4af37;
-  --header-text: #d4af37;
-  --row-alt: #1e2233;
-}
-body.dark-mode .hw { color: var(--ink); }
-body.dark-mode .word-unit.sof .hw::after { color: var(--ink); }
-body.dark-mode .gl { color: var(--gloss); }
+
 body.dark-mode .tl { color: var(--gloss); }
 body.dark-mode .page { background: #1e2233; }
 body.dark-mode .controls-top, body.dark-mode .controls-bottom { background: #0d111c; }
@@ -1693,16 +1649,6 @@ body.dark-mode .verse { border-color: #303648; }
    solid light-mode pastels would bury the light ink. !important outranks the
    painter's inline background. */
 .ann-hl { border-radius: 4px; }
-body.dark-mode .ann-hl[data-hlc="#fff9c4"] { background-color: rgba(255,235,59,0.25) !important; }
-body.dark-mode .ann-hl[data-hlc="#bbdefb"] { background-color: rgba(100,181,246,0.28) !important; }
-body.dark-mode .ann-hl[data-hlc="#ef9a9a"] { background-color: rgba(239,83,80,0.28) !important; }
-body.dark-mode .ann-hl[data-hlc="#c8e6c9"] { background-color: rgba(102,187,106,0.28) !important; }
-body.dark-mode .ann-hl[data-hlc="#e1bee7"] { background-color: rgba(186,104,200,0.28) !important; }
-body.dark-mode .ann-hl[data-hlc="#ffe0b2"] { background-color: rgba(255,167,38,0.28) !important; }
-body.dark-mode .ann-hl[data-hlc="#b2dfdb"] { background-color: rgba(38,166,154,0.28) !important; }
-body.dark-mode .ann-hl[data-hlc="#f8bbd0"] { background-color: rgba(236,64,122,0.25) !important; }
-body.dark-mode .ann-hl[data-hlc="#ffecb3"] { background-color: rgba(255,202,40,0.25) !important; }
-body.dark-mode .ann-hl[data-hlc="#cfd8dc"] { background-color: rgba(120,144,156,0.30) !important; }
 @media (hover: hover) and (pointer: fine) { body.dark-mode .word-unit:hover { background: rgba(219, 185, 88, 0.10); } }
 body.dark-mode .book-label { color: #e8e0d0; }
 body.dark-mode #word-popup { background: #1e2233; border-color: #d4af37; color: #e8e0d0; }
@@ -1962,7 +1908,6 @@ body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direct
 .chapter-summary-heb  { display: none; }
 body.dual-mode .chapter-summary { display: block; }
 </style>
-<style>.hw .qq{color:#c0392b}body.dark-mode .hw .qq{color:#ff8a80}</style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -2298,7 +2243,7 @@ body.dual-mode .chapter-summary { display: block; }
 
       <hr style="width:200px;margin:0 auto 20px;border:none;border-top:1px solid #ccc">
 
-      <p style="font-size:0.95em;line-height:1.7;color:#333;margin-bottom:14px">
+      <p style="font-size:0.95em;line-height:1.7;color:var(--ink);margin-bottom:14px">
         For ten years I looked for this book and it did not exist.
       </p>
       <p style="font-size:0.95em;line-height:1.7;color:#333;margin-bottom:14px">

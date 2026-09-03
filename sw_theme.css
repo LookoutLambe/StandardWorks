@@ -1,21 +1,140 @@
 /* Site-wide navy + gold surfaces — matches .landing-book-btn / volume book rows */
 :root {
-  --sw-navy: #1e2233;
-  --sw-navy-hover: #2a3050;
-  --sw-gold: #f4ca48;
-  --sw-gold-bright: #fff0b8;
-  --sw-gold-muted: rgba(244, 202, 72, 0.92);
-  --sw-gold-border: rgba(244, 202, 72, 0.55);
+  /* ── THE RAMP ─────────────────────────────────────────────────────────
+     One gold family, one navy family, one blue. These are FIXED — they do
+     not flip between light and dark. What flips is which stop a surface
+     reaches for (see each volume page's :root / body.dark-mode block).
+     Before 2026-09-02 there were ten unrelated golds and six navies
+     scattered across the pages; every one of them now resolves here. */
+  --gold-deep:   #8a6a1c;   /* gold TEXT on paper — 4.5:1 on --sw-hub-bg */
+  --gold:        #c8a84e;   /* fills, borders, rules, gold on navy       */
+  --gold-bright: #e3c46e;   /* gold TEXT on navy                         */
+  --gold-pale:   #ecd9a0;   /* subdued gold text on navy                 */
+  --navy:        #1e2233;   /* the chrome ground                         */
+  --navy-2:      #2a3050;   /* raised / hover navy                       */
+  --navy-line:   #3a4054;   /* borders on navy                           */
+  --navy-line-dim: #2f3550; /* hairline rules on navy                    */
+  --tap:         #2b6491;   /* link / crossref on paper                  */
+  --tap-bright:  #8ec2e2;   /* link / crossref on navy                   */
+
+  /* The ONE hue outside the gold/navy/blue family, and it is deliberate:
+     the qamats qatan. It marks a vowel that looks identical to an ordinary
+     qamats but is read /o/, not /a/ — the reader has to catch it, so it
+     gets a colour nothing else in the book uses. Was defined six times
+     over, in two different shapes; it lives here now. */
+  --qq:          #c0392b;   /* qamats qatan on paper                     */
+  --qq-bright:   #ff8a80;   /* qamats qatan on navy                      */
+
+  /* ── Legacy names, kept so nothing downstream breaks ── */
+  --sw-navy: var(--navy);
+  --sw-navy-hover: var(--navy-2);
+  --sw-gold: var(--gold);
+  --sw-gold-bright: var(--gold-pale);
+  --sw-gold-muted: rgba(200, 168, 78, 0.92);
+  --sw-gold-border: rgba(200, 168, 78, 0.55);
   --sw-hub-bg: #faf8f2;
   --sw-hub-bg-deep: #f0ece0;
 }
 
 body.dark-mode {
-  --sw-navy: #0a0a0a;
-  --sw-navy-hover: #1a1f2e;
-  --sw-gold: #ffd24a;
-  --sw-gold-bright: #fff3c0;
+  --sw-navy: #171b28;
+  --sw-navy-hover: #232842;
+  --sw-gold: var(--gold-bright);
+  --sw-gold-bright: var(--gold-pale);
 }
+
+/* ══════════════════════════════════════════════════════════════════════
+   THE READING PALETTE — the one home for every colour in the reader.
+   Consolidated 2026-09-02. Before this, all six volume pages carried
+   their own copy of these blocks; they had already drifted (the Book of
+   Mormon rendered --accent as #dbb958 while the other five used #c8a84e,
+   and .hw / .sof::after had split into three variants). The pages now
+   hold no colour at all — change it here and it changes everywhere.
+   ══════════════════════════════════════════════════════════════════════ */
+:root {
+  --bg: #faf8f2;
+  --bg-deep: #f0ece0;
+  --ink: #1a1a1a;
+  --ink-light: #5a5647;
+  --accent: var(--gold);
+  --accent-deep: var(--gold-deep);      /* gold TEXT on beige — 4.5:1 */
+  --accent-light: var(--gold-bright);
+  --rule: #d6ceb8;
+  --rule-light: #e6dfcd;
+  --gloss: #333;
+  --verse-num: var(--gold-deep);        /* was a fourth blue, #4a7ba6 */
+  --highlight: rgba(200, 168, 78, 0.10);
+  --header-bg: var(--navy);
+  --header-text: var(--gold);
+  --row-alt: #faf8f2;
+  --hw: var(--navy);                    /* was hardcoded #1a2744 */
+  --xref: var(--tap);
+  --tap-blue: var(--tap);               /* reader_ui.js + root_scorecard.js
+                                           used this name but nothing ever
+                                           defined it — it fell back to a
+                                           literal and never flipped in dark */
+}
+
+body.dark-mode {
+  --bg: var(--navy);
+  --bg-deep: #232842;
+  --ink: #ece5d5;
+  --ink-light: #a89f89;
+  --accent: var(--gold-bright);
+  --accent-deep: var(--gold-bright);
+  --accent-light: var(--gold-pale);
+  --rule: var(--navy-line);
+  --rule-light: var(--navy-line-dim);
+  --gloss: #c2baa2;
+  --verse-num: var(--gold-bright);
+  --highlight: rgba(200, 168, 78, 0.15);
+  --header-bg: var(--navy);             /* was #d4af37 — a gold BACKGROUND */
+  --header-text: var(--gold-bright);
+  --row-alt: var(--navy);
+  --hw: #ece5d5;
+  --xref: var(--tap-bright);
+  --tap-blue: var(--tap-bright);
+}
+
+/* ── The interlinear word, in both themes ── */
+.hw { color: var(--hw); }
+.word-unit.sof .hw::after { color: var(--hw); }
+.gl { color: var(--gloss); }
+.tl { color: var(--ink-light); }   /* was #1a2744 in pgp/jst/bom */
+.hw .qq { color: var(--qq); }
+body.dark-mode .hw .qq { color: var(--qq-bright); }
+.verse-num { color: var(--verse-num); }
+.word-unit.xref-linked .hw,
+.word-unit.xref-linked .gl { color: var(--xref) !important; }
+.word-unit.xref-linked:hover .hw,
+.word-unit.xref-linked:hover .gl { filter: brightness(0.85); }
+
+/* ── Annotation highlights ───────────────────────────────────────────────
+   The hex in data-hlc / data-color is a STORED KEY, not a colour: saved
+   highlights carry it. Never change those values — repaint them here.
+   Light mode was the raw Material Design 100/200 swatches; these are the
+   same hues warmed and desaturated to sit on beige. */
+.ann-hl[data-hlc="#fff9c4"], .sel-color[data-color="#fff9c4"] { background-color: #f2e6ae; }
+.ann-hl[data-hlc="#ffecb3"], .sel-color[data-color="#ffecb3"] { background-color: #f0dfa6; }
+.ann-hl[data-hlc="#ffe0b2"], .sel-color[data-color="#ffe0b2"] { background-color: #eed5ab; }
+.ann-hl[data-hlc="#ef9a9a"], .sel-color[data-color="#ef9a9a"] { background-color: #e3b3a4; }
+.ann-hl[data-hlc="#f8bbd0"], .sel-color[data-color="#f8bbd0"] { background-color: #e0bcc0; }
+.ann-hl[data-hlc="#e1bee7"], .sel-color[data-color="#e1bee7"] { background-color: #d3bfd2; }
+.ann-hl[data-hlc="#bbdefb"], .sel-color[data-color="#bbdefb"] { background-color: #bccbdc; }
+.ann-hl[data-hlc="#b2dfdb"], .sel-color[data-color="#b2dfdb"] { background-color: #b7ccc6; }
+.ann-hl[data-hlc="#c8e6c9"], .sel-color[data-color="#c8e6c9"] { background-color: #c6d3b4; }
+.ann-hl[data-hlc="#cfd8dc"], .sel-color[data-color="#cfd8dc"] { background-color: #ccd0cf; }
+
+body.dark-mode .ann-hl[data-hlc="#fff9c4"] { background-color: rgba(255,235,59,0.25) !important; }
+body.dark-mode .ann-hl[data-hlc="#ffecb3"] { background-color: rgba(255,202,40,0.25) !important; }
+body.dark-mode .ann-hl[data-hlc="#ffe0b2"] { background-color: rgba(255,167,38,0.28) !important; }
+body.dark-mode .ann-hl[data-hlc="#ef9a9a"] { background-color: rgba(239,83,80,0.28) !important; }
+body.dark-mode .ann-hl[data-hlc="#f8bbd0"] { background-color: rgba(236,64,122,0.25) !important; }
+body.dark-mode .ann-hl[data-hlc="#e1bee7"] { background-color: rgba(186,104,200,0.28) !important; }
+body.dark-mode .ann-hl[data-hlc="#bbdefb"] { background-color: rgba(100,181,246,0.28) !important; }
+body.dark-mode .ann-hl[data-hlc="#b2dfdb"] { background-color: rgba(38,166,154,0.28) !important; }
+body.dark-mode .ann-hl[data-hlc="#c8e6c9"] { background-color: rgba(102,187,106,0.28) !important; }
+body.dark-mode .ann-hl[data-hlc="#cfd8dc"] { background-color: rgba(120,144,156,0.30) !important; }
 
 /* ── Hub volume cards ── */
 .card-cover.ot,

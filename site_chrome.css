@@ -1,4 +1,4 @@
-@import url('sw_theme.css?v=3');
+@import url('sw_theme.css?v=4');
 
 
 
@@ -30,11 +30,10 @@ html:has(link[href*="site_chrome.css"]) #main-content {
 /* Shared site header — menu · home · כתבי הקודש / The Holy Scriptures · size · dark */
 :root {
   --sw-chrome-h: 56px;
-  --header-bg: #1e2233;
-  /* the site-standard gold for text on the navy chrome — the deeper #dbb958
-     was hard to read on the blue background */
-  --sw-gold: #f4ca48;
-  --accent: var(--sw-gold, #dbb958);
+  /* --header-bg / --sw-gold / --accent used to be redefined here, which
+     silently overrode sw_theme.css for the whole site — --accent was not
+     even read by this file. The gold for text on the navy chrome is
+     --gold (5.9:1 on --navy); see the ramp in sw_theme.css. */
 }
 
 .sw-top-bar {
