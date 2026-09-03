@@ -1,4 +1,6 @@
 window._rootGlossaryData = {
+  "H7510": { "meaning": "(רִפְיוֹן) weakness, feebleness — Jer 47:3", "category": "Lexical" },
+  "H2086": { "meaning": "(זֵד) proud, presumptuous — Mal 3:19, Ps 19:14", "category": "Lexical" },
   "שקע": {
     "meaning": "(שָׁקַע) to sink, subside, be swallowed up — Num 11:2, Amos 9:5",
     "category": "Lexical"

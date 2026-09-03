@@ -14,7 +14,7 @@ const ASSETS = [
   './scripture_verses.js',
   './chapter_headings.js',
   './chapter_headings_heb.js?v=7',
-  './roots_glossary.js?v=67',
+  './roots_glossary.js?v=68',
   './crossrefs.js',
   './bom_inverse_crossrefs.js?v=1',
   './topical_guide.js?v=3',
