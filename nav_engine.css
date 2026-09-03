@@ -804,15 +804,41 @@ body.dark-mode #nav-sidebar .nl-tile { background: var(--surface-1) !important; 
   line-height: 0;
   -webkit-tap-highlight-color: transparent;
 }
+/* A bare 4px bar was NOT enough. On an iPhone it sits a few pixels from
+   the system home indicator — same shape, same place, same colour family —
+   so it read as part of iOS, not as a control, and with the modes
+   collapsed by default the reader was left with no visible way back to
+   them. It says what it does now: a chevron that points up when the modes
+   are away and flips when they are out, on a bar bright enough to be
+   read as ours. */
 .nqd-modes-toggle .nqd-grip {
-  display: inline-block;
-  width: 34px; height: 4px;
-  border-radius: 2px;
-  background: color-mix(in srgb, var(--on-chrome) 34%, transparent);
-  transition: background 0.15s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: color-mix(in srgb, var(--on-chrome) 72%, transparent);
+  font-size: 11px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  line-height: 1;
+  transition: color 0.15s;
 }
+.nqd-modes-toggle .nqd-grip::before,
+.nqd-modes-toggle .nqd-grip::after {
+  content: '';
+  width: 22px; height: 2px;
+  border-radius: 1px;
+  background: color-mix(in srgb, var(--on-chrome) 42%, transparent);
+}
+.nqd-modes-toggle .nqd-chev {
+  display: inline-block;
+  transition: transform 0.26s ease;
+  font-size: 10px;
+}
+/* modes are OUT — the chevron points down, "put them away" */
+.nqd-modes-toggle[aria-expanded="true"] .nqd-chev { transform: rotate(180deg); }
 .nqd-modes-toggle:hover .nqd-grip,
-.nqd-modes-toggle:focus-visible .nqd-grip { background: var(--here-chrome); }
+.nqd-modes-toggle:focus-visible .nqd-grip { color: var(--here-chrome); }
 .nqd-modes-toggle:focus-visible { outline: 2px solid var(--here-chrome); outline-offset: -2px; }
 
 /* The slide itself. max-height rather than display:none so it animates;

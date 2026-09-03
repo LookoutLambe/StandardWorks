@@ -2330,7 +2330,11 @@
     t.id = 'nqd-modes-toggle';
     t.className = 'nqd-modes-toggle';
     t.setAttribute('aria-controls', modeBar.id);
-    t.innerHTML = '<span class="nqd-grip" aria-hidden="true"></span>';
+    /* Named, not just a bar. Collapsed by default, the modes are gone from
+       the screen entirely, so the way back has to say what it is. */
+    t.innerHTML = '<span class="nqd-grip" aria-hidden="true">' +
+      '<span class="nqd-chev">▲</span><span class="nqd-grip-label">Modes</span>' +
+      '</span>';
     t.onclick = function(e) {
       e.stopPropagation();          // never let it reach the double-tap collapse
       setModesCollapsed(!modesCollapsed(), true);
