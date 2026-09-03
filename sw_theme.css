@@ -291,9 +291,11 @@ body:not(.dark-mode) #annotations-panel {
   border-right-color: rgba(26,26,26,.10) !important;
   border-left-color:  rgba(26,26,26,.10) !important;
 }
-/* the cards inside them get the card treatment */
+/* the cards inside them get the card treatment.
+   .nav-ch-cell is NOT one of them: a chapter numeral is not a card, and
+   giving it card styling here is what forced reader.css to strip it again. */
 #nav-sidebar .nl-card, #nav-sidebar .nl-tile, #nav-sidebar .nl-bm,
-#nav-sidebar .nav-ch-cell, #nav-sidebar .nav-book-row,
+#nav-sidebar .nav-book-row,
 #xref-panel .xref-ref-card, #xref-panel .xf-bookmark-item,
 #glossary-panel .glossary-entry {
   background: var(--card-bg) !important;
@@ -365,7 +367,7 @@ body.dark-mode #annotations-panel .ann-tab.active {
   background: color-mix(in srgb, var(--here-chrome) 14%, transparent) !important;
 }
 #nav-sidebar .nl-card:hover, #nav-sidebar .nl-tile:hover, #nav-sidebar .nl-bm:hover,
-#nav-sidebar .nav-ch-cell:hover, #nav-sidebar .nav-book-row:hover,
+#nav-sidebar .nav-book-row:hover,
 #xref-panel .xref-ref-card:hover, #xref-panel .xf-bookmark-item:hover {
   transform: translateY(-2px) !important;
   box-shadow: var(--card-shadow-hover) !important;
@@ -719,9 +721,7 @@ body.dark-mode .nav-division {
 }
 
 
-#nav-sidebar .nav-ch-cell.current .ch-heb, #nav-sidebar .nav-ch-cell.current .ch-num {
-  color: #fff !important;
-}
+/* the .current white-on-gold-fill rule died with the gold fill */
 
 /* ── Footer mode bar (inactive = outline, active = gold fill) ── */
 #sw-reader-footer .controls-bottom button {

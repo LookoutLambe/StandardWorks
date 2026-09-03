@@ -256,33 +256,41 @@ html.sw-shell-pending #annotations-panel, html.sw-shell-pending #glossary-panel 
 .nav-book-row.expanded .nb-arrow { transform: rotate(90deg); }
 .nav-book-row.single-ch { cursor: pointer; }
 
-/* ── Chapter Grid ── */
+/* ── Chapter Grid — a contents page, not a dashboard ──
+   Bare numerals. A chapter number is already a distinct, scannable object;
+   it does not need a container to be tappable. The container cost roughly
+   three times the space and carried all the visual weight on a surface
+   whose entire job is to be scanned, so 50 chapters now fit where 9 did.
+   Position is marked the way print marks it — the numeral takes the accent
+   with a rule under it — never by filling a box.
+
+   THIS IS THE ONE HOME. It used to declare bubbles here, which reader.css
+   then stripped and rebuilt with ~20 !important overrides; reading this
+   file told you the opposite of what rendered, and that cost real time
+   twice. If the grid needs to change, it changes here. */
 .nav-ch-grid {
-  display: none; grid-template-columns: repeat(7, 1fr); gap: 4px;
-  padding: 6px 16px 10px;
-  background: rgba(0,0,0,0.04);
+  display: none; grid-template-columns: repeat(7, 1fr); gap: 0;
+  padding: 4px 12px 14px;
   direction: rtl;
 }
 .nav-ch-grid.open { display: grid; }
 .nav-ch-cell {
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  padding: 6px 2px; border-radius: 6px; cursor: pointer;
-  background: var(--bg, var(--paper));
-  border: 1px solid var(--rule, var(--rule));
-  transition: background 0.15s, border-color 0.15s;
-  min-height: 38px;
+  display: flex; align-items: center; justify-content: center;
+  min-width: 31px; height: 30px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.2s, background 0.15s;
 }
-.nav-ch-cell:hover { background: color-mix(in srgb, var(--here-chrome) 12%, transparent); border-color: var(--accent, var(--here-chrome)); }
-.nav-ch-cell.current {
-  background: color-mix(in srgb, var(--here-chrome) 18%, transparent); border-color: var(--accent, var(--here-chrome));
+/* the Hebrew chapter name is redundant beside its own numeral at this density */
+.nav-ch-cell .ch-heb { display: none; }
+.nav-ch-cell .ch-num {
+  font-size: var(--t-body);
+  color: var(--ink-2);
+  font-family: ui-monospace, Menlo, monospace;
 }
-.nav-ch-cell .ch-heb {
-  font-family: 'David Libre',serif; font-size: 0.9em;
-  color: var(--chrome); line-height: 1.1; font-weight: 600;
-}
-.nav-ch-cell .ch-num { font-size: 0.72em; color: var(--chrome); font-weight: 600; }
-.nav-ch-cell.current .ch-heb { color: var(--chrome); }
-.nav-ch-cell.current .ch-num { color: var(--chrome); }
+.nav-ch-cell:hover { background: color-mix(in srgb, var(--ink) 4%, transparent); }
+.nav-ch-cell.current { border-bottom-color: var(--here); }
+.nav-ch-cell.current .ch-num { color: var(--here); }
 
 /* ── Dark mode: left panel matches right #xref-panel / Study drawer ──
    These were neutral greys (#252525 #2a2a2a #333333 #383838 #444444) left
@@ -343,11 +351,8 @@ body.dark-mode .nf-bm {
   border-color: color-mix(in srgb, var(--here-chrome) 35%, transparent);
   background: var(--chrome);
 }
-body.dark-mode .nav-ch-grid { background: rgba(0,0,0,0.2); }
-body.dark-mode .nav-ch-cell {
-  background: var(--chrome-2);
-  border-color: var(--chrome-line);
-}
+/* the grid keeps the panel's own ground in both themes; the cells' dark
+   fill is set once, below, with the book rows it sits among */
 body.dark-mode .nav-division { border-top-color: var(--chrome-line); }
 
 /* ── Breadcrumb ── */
@@ -403,8 +408,12 @@ body.dark-mode .continue-reading .cr-heb { color: var(--chrome); }
 @media (max-width: 600px) {
   #nav-sidebar { width: 90vw; }
   .nav-footer { max-height: 38vh; }
-  .nav-ch-grid { grid-template-columns: repeat(5, 1fr); gap: 5px; }
-  .nav-ch-cell { min-height: 44px; padding: 8px 2px; }
+  /* 44px is the touch minimum. This rule existed before and never took
+     effect — the override pile in reader.css forced min-height:0 and a
+     fixed 30px height on every width, so phones got 30px targets. Gap
+     stays 0: the numerals are still the design, just bigger. */
+  .nav-ch-grid { grid-template-columns: repeat(5, 1fr); }
+  .nav-ch-cell { height: 44px; }
   .nav-book-row { padding: 10px 16px; }
   .nav-vol-tab { padding: 8px 2px 6px; }
   .nav-vol-tab .vt-heb { font-size: 0.8em; }
