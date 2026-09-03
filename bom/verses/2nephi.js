@@ -2683,7 +2683,7 @@ var n2_ch9Verses = [
     ["׃",""]
   ]},
   { num: "יד", words: [["לָכֵן","therefore"], ["נֵדַע","we shall know"], ["דַּעַת","a knowledge"], ["תְּמִימָה","perfectly"], ["אַשְׁמָתֵנוּ","our guilt"], ["וְטֻמְאָתֵנוּ","and our uncleanness"], ["וְעֵירֹמֵנוּ","and our nakedness"], ["וְהַצַּדִּיקִים","and the righteous"], ["יֵדְעוּ","they shall know"], ["דַּעַת","a knowledge"], ["תְּמִימָה","perfectly"], ["שִׂמְחָתָם","their joy"], ["וְצִדְקָתָם","and their righteousness"], ["לְבוּשֵׁי","clothed in"], ["טֹהַר","purity"], ["אַף","yea even"], ["בִּמְעִיל","with the robe of"], ["צְדָקָה","righteousness"], ["׃",""]]},
-  { num: "טו", words: [["וְהָיָה","and it shall come to pass"], ["כַּאֲשֶׁר","that when"], ["יַעַבְרוּ","they shall pass"], ["כׇל־אָדָם","all men"], ["מִן־הַמָּוֶת","from the death"], ["הָרִאשׁוֹן","the first"], ["לַחַיִּים","unto life"], ["בְּלִי־מָוֶת","immortal"], ["וְיַעַמְדוּ","and they shall stand"], ["לִפְנֵי","before"], ["כִסֵּא־מִשְׁפַּט","the judgment-seat of"], ["קְדוֹשׁ־יִשְׂרָאֵל","the Holy One of Israel"], ["וְאָז","and then"], ["יָבֹא","shall come"], ["הַמִּשְׁפָּט","the judgment"], ["וְיִשָּׁפְטוּ","and they shall be judged"], ["כְּמִשְׁפַּט","according to the judgment of"], ["אֱלֹהִים","God"], ["׃",""]]},
+  { num: "טו", words: [["וְהָיָה","and it shall be"], ["כַּאֲשֶׁר","that when"], ["יַעַבְרוּ","they shall pass"], ["כׇל־אָדָם","all men"], ["מִן־הַמָּוֶת","from the death"], ["הָרִאשׁוֹן","the first"], ["לַחַיִּים","unto life"], ["בְּלִי־מָוֶת","immortal"], ["וְיַעַמְדוּ","and they shall stand"], ["לִפְנֵי","before"], ["כִסֵּא־מִשְׁפַּט","the judgment-seat of"], ["קְדוֹשׁ־יִשְׂרָאֵל","the Holy One of Israel"], ["וְאָז","and then"], ["יָבֹא","shall come"], ["הַמִּשְׁפָּט","the judgment"], ["וְיִשָּׁפְטוּ","and they shall be judged"], ["כְּמִשְׁפַּט","according to the judgment of"], ["אֱלֹהִים","God"], ["׃",""]]},
   { num: "טז", words: [["וְאׇמְנָם","and assuredly"], ["חַי־יְהוָה","as the Lord lives"], ["כִּי","for"], ["דִבֶּר","has spoken"], ["יְהוָה","the Lord"], ["אֱלֹהִים","God"], ["וְהוּא","and it is"], ["דְּבַר","the word of"], ["עוֹלָמוֹ","His eternity"], ["אֲשֶׁר","which"], ["לֹא־יַעֲבֹר","it shall not pass away"], ["יִשָּׁאֲרוּ","they shall remain"], ["הַצַּדִּיקִים","the righteous"], ["צַדִּיקִים","righteous"], ["וְיִשָּׁאֲרוּ","and they shall remain"], ["הַטְּמֵאִים","the filthy"], ["טְמֵאִים","filthy"], ["לָכֵן","therefore"], ["הַטְּמֵאִים","the filthy"], ["הֵם","are"], ["הַשָּׂטָן","the devil"], ["וּמַלְאָכָיו","and his angels"], ["וְיֵלְכוּ","and they shall go"], ["אֶל־אֵשׁ","unto fire"], ["עוֹלָם","everlasting"], ["הַמּוּכָנָה","the prepared"], ["לָהֶם","for them"], ["וְעָנְשָׁם","and their torment is"], ["אֲגַם־אֵשׁ","a lake of fire"], ["וְגָפְרִית","and brimstone"], ["לַהֲבָתוֹ","whose flame"], ["עוֹלָה","ascends"], ["לְעוֹלְמֵי","for ever and"], ["עוֹלָמִים","ever"], ["אֵין־קֵץ","there is no end"], ["׃",""]]},
   { num: "יז", words: [["הוֹי","O"], ["גֹדֶל","the greatness"], ["וּמִשְׁפַּט","and the justice of"], ["אֱלֹהֵינוּ","our God"], ["מְבַצֵּעַ","He executes"], ["כׇּל־דְּבָרָיו","all His words"], ["יָצְאוּ","they have gone forth"], ["מִפִּיו","from His mouth"], ["וְהִשָּׁלֵם","and must"], ["יִשָּׁלֵם","it must be fulfilled"], ["חֻקּוֹ","His law"], ["׃",""]]},
   { num:"יח", words:[
@@ -3250,7 +3250,7 @@ var n2_ch10Verses = [
     ["׃",""]
   ]},
   { num:"ח", words:[
-    ["וְהָיָה","and it shall come to pass"],
+    ["וְהָיָה","and it shall be"],
     ["כִּי","that"],
     ["יִקָּבְצוּ","they shall be gathered"],
     ["מִפִּזּוּרָם","from their dispersion"],
@@ -3759,7 +3759,7 @@ var n2_ch12Verses = [
     ["׃",""]
   ]},
   { num:"ב", words:[
-    ["וְהָיָה","and it shall come to pass"],
+    ["וְהָיָה","and it shall be"],
     ["בְּאַחֲרִית","in the latter end of"],
     ["הַיָּמִים","the days"],
     ["נָכוֹן","established"], ["יִהְיֶה","shall be"],
@@ -3868,7 +3868,7 @@ var n2_ch12Verses = [
     ["׃",""]
   ]},
   { num:"יא", words:[
-    ["וְהָיָה","and it shall come to pass"],
+    ["וְהָיָה","and it shall be"],
     ["עֵינֵי","the eyes of"],
     ["גַבְהוּת","the loftiness of"],
     ["אָדָם","man"],
@@ -4283,7 +4283,7 @@ var n2_ch13Verses = [
     ["׃",""]
   ]},
   { num:"כד", words:[
-    ["וְהָיָה","and it shall come to pass"],
+    ["וְהָיָה","and it shall be"],
     ["תַחַת","instead of"],
     ["בֹּשֶׂם","sweet smell"],
     ["מַק","stink"],
@@ -4359,7 +4359,7 @@ var n2_ch14Verses = [
     ["׃",""]
   ]},
   { num:"ג", words:[
-    ["וְהָיָה","and it shall come to pass"],
+    ["וְהָיָה","and it shall be"],
     ["הַנִּשְׁאָרִים","they who are left"],
     ["בְּצִיּוֹן","in Zion"],
     ["וְהַנּוֹתָרִים","and they who remain"],
@@ -5102,7 +5102,7 @@ var n2_ch17Verses = [
     ["אֵת־מֶלֶךְ־אַשּׁוּר","the king of Assyria"],
     ["׃",""]
   ]},
-  { num: "יח", words: [["וְהָיָה","and it shall come to pass"], ["בַּיּוֹם","in the day"], ["הַהוּא","that"], ["יִשְׁרֹק","He shall hiss"], ["יְהוָה","the Lord"], ["לַזְּבוּב","for the fly"], ["אֲשֶׁר","which"], ["בִּקְצֵה","in the uttermost part of"], ["מִצְרָיִם","Egypt"], ["וְלַדְּבוֹרָה","and for the bee"], ["אֲשֶׁר","which"], ["בְּאֶרֶץ","in the land of"], ["אַשּׁוּר","Assyria"], ["׃",""]]},
+  { num: "יח", words: [["וְהָיָה","and it shall be"], ["בַּיּוֹם","in the day"], ["הַהוּא","that"], ["יִשְׁרֹק","He shall hiss"], ["יְהוָה","the Lord"], ["לַזְּבוּב","for the fly"], ["אֲשֶׁר","which"], ["בִּקְצֵה","in the uttermost part of"], ["מִצְרָיִם","Egypt"], ["וְלַדְּבוֹרָה","and for the bee"], ["אֲשֶׁר","which"], ["בְּאֶרֶץ","in the land of"], ["אַשּׁוּר","Assyria"], ["׃",""]]},
   { num:"יט", words:[
     ["וּבָאוּ","and they shall come"],
     ["וְנָחוּ","and shall rest"],
@@ -5136,7 +5136,7 @@ var n2_ch17Verses = [
     ["׃",""]
   ]},
   { num:"כא", words:[
-    ["וְהָיָה","and it shall come to pass"],
+    ["וְהָיָה","and it shall be"],
     ["בַּיּוֹם","in the day"], ["הַהוּא","that"],
     ["יְחַיֶּה־אִישׁ","a man shall nourish"],
     ["עֶגְלַת","a young cow"],
@@ -5145,7 +5145,7 @@ var n2_ch17Verses = [
     ["׃",""]
   ]},
   { num:"כב", words:[
-    ["וְהָיָה","and it shall come to pass"],
+    ["וְהָיָה","and it shall be"],
     ["מֵרֹב","from the abundance of"],
     ["עֲשׂוֹת","the yielding of"],
     ["חָלָב","milk"],
@@ -5160,7 +5160,7 @@ var n2_ch17Verses = [
     ["׃",""]
   ]},
   { num:"כג", words:[
-    ["וְהָיָה","and it shall come to pass"],
+    ["וְהָיָה","and it shall be"],
     ["בַּיּוֹם","in the day"], ["הַהוּא","that"],
     ["יִהְיֶה","shall be"],
     ["כׇל־מָקוֹם","every place"],
@@ -5413,7 +5413,7 @@ var n2_ch18Verses = [
     ["בָהּ","through it"],
     ["נִקְשֶׁה","hardly bestead"],
     ["וּרְעֵבִים","and hungry"],
-    ["וְהָיָה","and it shall come to pass"],
+    ["וְהָיָה","and it shall be"],
     ["כִי־יִרְעַב","that when they shall be hungry"],
     ["וְהִתְקַצַּף","they shall fret"],
     ["וְקִלֵּל","and curse"],
@@ -5829,7 +5829,7 @@ var n2_ch20Verses = [
     ["׃",""]
   ]},
   { num:"יב", words:[
-    ["וְהָיָה","and it shall come to pass"],
+    ["וְהָיָה","and it shall be"],
     ["כִּי־יְבַצַּע","when has performed"],
     ["אֲדֹנָי","the Lord"],
     ["אֶת־כׇּל־מַעֲשֵׂהוּ","His whole work"],
@@ -5921,7 +5921,7 @@ var n2_ch20Verses = [
     ["׃",""]
   ]},
   { num:"כ", words:[
-    ["וְהָיָה","and it shall come to pass"],
+    ["וְהָיָה","and it shall be"],
     ["בַּיּוֹם","in the day"], ["הַהוּא","that"],
     ["לֹא־יוֹסִיף","shall no more"],
     ["עוֹד","again"],
@@ -6021,7 +6021,7 @@ var n2_ch20Verses = [
     ["׃",""]
   ]},
   { num:"כז", words:[
-    ["וְהָיָה","and it shall come to pass"],
+    ["וְהָיָה","and it shall be"],
     ["בַּיּוֹם","in the day"], ["הַהוּא","that"],
     ["יָסוּר","shall be taken away"],
     ["סֻבֳּלוֹ","his burden"],
@@ -6229,7 +6229,7 @@ var n2_ch21Verses = [
     ["׃",""]
   ]},
   { num:"יא", words:[
-    ["וְהָיָה","and it shall come to pass"],
+    ["וְהָיָה","and it shall be"],
     ["בַּיּוֹם","in the day"], ["הַהוּא","that"],
     ["יוֹסִיף","shall again set"],
     ["אֲדֹנָי","the Lord"],
@@ -6633,7 +6633,7 @@ var n2_ch24Verses = [
   ]},
   { num: "ב", words: [["וּלְקָחוּם","and shall take them"], ["עַמִּים","the peoples"], ["וֶהֱבִיאוּם","and bring them"], ["אֶל־מְקוֹמָם","to their place"], ["אַף","yea"], ["מֵרָחוֹק","from far"], ["עַד־קְצוֹת","unto the ends of"], ["הָאָרֶץ","the earth"], ["וְשָׁבוּ","and they shall return"], ["אֶל־אַרְצוֹת","to the lands of"], ["הַיְעוּדָה","of promise"], ["וְהִתְנַחֲלוּם","and shall possess them"], ["בֵּית־יִשְׂרָאֵל","the house of Israel"], ["עַל־אַדְמַת","upon the land of"], ["יְהוָה","the Lord"], ["לַעֲבָדִים","for servants"], ["וְלִשְׁפָחוֹת","and for handmaids"], ["וְהָיוּ","and they shall be"], ["שֹׁבִים","captors"], ["לְשֹׁבֵיהֶם","of their captors"], ["וְרָדוּ","and they shall reign"], ["בְּנֹגְשֵׂיהֶם","over their oppressors"], ["׃",""]]},
   { num:"ג", words:[
-    ["וְהָיָה","and it shall come to pass"],
+    ["וְהָיָה","and it shall be"],
     ["בְּיוֹם","in the day"],
     ["הָנִיחַ","shall give you rest"],
     ["יְהוָה","the Lord"],
@@ -6648,7 +6648,7 @@ var n2_ch24Verses = [
     ["׃",""]
   ]},
   { num:"ד", words:[
-    ["וְהָיָה","and it shall come to pass"],
+    ["וְהָיָה","and it shall be"],
     ["בַּיּוֹם","in the day"], ["הַהוּא","that"],
     ["וְנָשָׂאתָ","that you shall take up"],
     ["הַמָּשָׁל","the proverb"], ["הַזֶּה","this"],
@@ -6860,7 +6860,7 @@ var n2_ch24Verses = [
     ["כַּאֲשֶׁר","as"],
     ["דִּמִּיתִי","I have thought"],
     ["כֵּן","so"],
-    ["הָיָתָה","it shall come to pass"],
+    ["הָיָתָה","it shall be"],
     ["וְכַאֲשֶׁר","and as"],
     ["יָעַצְתִּי","I have purposed"],
     ["הִיא","it"],
@@ -8694,7 +8694,7 @@ var n2_ch28Verses = [
     ["כִּי","that"],
     ["הַדְּבָרִים","the things"], ["הָאֵלֶּה","these"],
     ["הָיֹה","be"],
-    ["יִהְיוּ","they must surely come to pass"],
+    ["יִהְיוּ","they must surely be"],
     ["׃",""]
   ]},
   { num:"ב", words:[
