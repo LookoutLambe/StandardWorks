@@ -58,6 +58,15 @@
      qamats but is read /o/, not /a/ — the reader has to catch it, so it
      gets a colour nothing else in the book uses. Was defined six times
      over, in two different shapes; it lives here now. */
+  /* CHROME — the bars. These are deliberately NOT part of the surface
+     scale, because the scale gets re-pointed inside the drawers. A header
+     is a header whether it sits on the page or on a slide-out. */
+  --chrome-bg:    #1e2233;
+  --chrome-line:  #3f445a;
+  --chrome-gold:  #f4ca48;
+  --chrome-ink:   #ece5d5;
+  --chrome-muted: #b4ab9c;
+
   --qq:          #c0392b;   /* qamats qatan on paper                     */
   --qq-bright:   #ff8a80;   /* qamats qatan on navy                      */
 
@@ -139,6 +148,10 @@ body.dark-mode {
 .word-unit.sof .hw::after { color: var(--hw); }
 .gl { color: var(--gloss); }
 .tl { color: var(--ink-light); }   /* was #1a2744 in pgp/jst/bom */
+/* No bold in the verses. The verse numeral was 700 and the Hebrew 500;
+   both sit at 400 now, like the gloss and the transliteration. */
+.verse-num { font-weight: 400 !important; }
+.hw { font-weight: 400 !important; }
 
 /* ── Surfaces that are ALWAYS navy ───────────────────────────────────────
    The chrome, the footer, the slide-outs and the popovers are navy in
@@ -147,9 +160,6 @@ body.dark-mode {
    2.15:1, effectively invisible (the study panel's "(בָּרָא) to create"
    gloss). Re-declaring the on-navy set here fixes the whole class at
    once instead of one element at a time. */
-#nav-sidebar,
-#xref-panel,
-#glossary-panel,
 #word-popup,
 #sel-toolbar,
 #hl-pop,
@@ -290,26 +300,227 @@ body.dark-mode .ann-hl[data-hlc="#cfd8dc"] { background-color: rgba(120,144,156,
   color: var(--sw-gold) !important;
 }
 
-/* ── Volume landing: section grids + book cards (PGP/JST etc.) ── */
-.landing-sec-btn,
-.landing-book-card {
-  background: var(--sw-navy) !important;
-  border: 1px solid var(--sw-gold-border) !important;
+/* ══ CARDS & TILES — e-ink paper ground + bento depth ═══════════════════
+   The two styles the UI guidance returns for this product: e-ink/paper
+   ("best for: reading apps") and bento-box-grid (16-24px radius, soft
+   shadow, 16px gap, 200-250ms hover).
+
+   The governing move: NAVY LEAVES THE CONTENT AREA — it stays on the
+   chrome bars. Hundreds of filled navy boxes on cream paper read as a
+   database, not a book, which is why adjusting the navy never helped.
+   Hierarchy comes from air, weight and soft depth, not from borders.
+   Nothing is bold: weight 400 throughout.
+
+   Two grids share .landing-section-grid. A front-matter card carries a
+   transliteration line and a chapter tile does not, so :has(.sec-tl)
+   tells them apart without touching any markup.                      */
+:root {
+  --card-bg: #ffffff;
+  --card-radius: 18px;  --tile-radius: 14px;
+  --card-gap: 16px;     --tile-gap: 10px;
+  --card-shadow:       0 1px 2px rgba(26,26,26,.04), 0 4px 14px rgba(26,26,26,.05);
+  --card-shadow-hover: 0 2px 4px rgba(26,26,26,.05), 0 10px 26px rgba(26,26,26,.09);
+  --card-motion: .22s ease;
+  --card-title: var(--on-paper);
+  --card-tl:    #8a8578;
+  --card-body:  #4a4a4a;
 }
+body.dark-mode {
+  --card-bg: var(--surface-2);
+  --card-shadow:       0 1px 2px rgba(0,0,0,.28), 0 4px 14px rgba(0,0,0,.30);
+  --card-shadow-hover: 0 2px 4px rgba(0,0,0,.32), 0 10px 26px rgba(0,0,0,.40);
+  --card-title: var(--on-surface);
+  --card-tl:    var(--on-surface-muted);
+  --card-body:  var(--on-surface-muted);
+}
+
+.page { background: var(--bg) !important; }
+
+/* ══ DRAWERS & PANELS — the same paper language ═════════════════════════
+   nav_engine.js and root_scorecard.js paint these from injected sheets
+   with !important, so CSS cannot reach them directly. Both now read the
+   surface tokens, which means re-pointing those tokens inside these
+   scopes converts the whole drawer at once. Navy stays on the chrome
+   bars and on the word popup, which has to lift off the page.        */
+#nav-sidebar,
+#xref-panel,
+#glossary-panel,
+#annotations-panel {
+  /* --surface-sunken is NOT re-pointed: the injected sheet paints the
+     drawer's search bar, results and footer from it, and those are
+     chrome — they must stay navy like every other bar in the app. */
+  --surface-0:      var(--bg);
+  --surface-1:      var(--card-bg);
+  --surface-2:      var(--card-bg);
+  --surface-3:      var(--card-bg);
+  --surface-line:   rgba(26,26,26,.10);
+  --on-surface:       var(--on-paper);
+  --on-surface-muted: var(--on-paper-muted);
+  --gold-bright:    var(--gold-deep);   /* gold on paper must be the deep stop */
+  --gold-pale:      var(--on-paper-muted);
+  --tap-bright:     var(--tap);
+  --navy:           var(--bg);
+  --navy-2:         var(--card-bg);
+  background: var(--bg) !important;
+  color: var(--on-paper) !important;
+  border-right-color: rgba(26,26,26,.10) !important;
+  border-left-color:  rgba(26,26,26,.10) !important;
+}
+/* the cards inside them get the card treatment */
+#nav-sidebar .nl-card, #nav-sidebar .nl-tile, #nav-sidebar .nl-bm,
+#nav-sidebar .nav-ch-cell, #nav-sidebar .nav-book-row,
+#xref-panel .xref-ref-card, #xref-panel .xf-bookmark-item,
+#glossary-panel .glossary-entry {
+  background: var(--card-bg) !important;
+  color: var(--card-title) !important;
+  border: 0 !important;
+  border-radius: var(--tile-radius) !important;
+  box-shadow: var(--card-shadow) !important;
+  transition: transform var(--card-motion), box-shadow var(--card-motion) !important;
+}
+/* the text inside a drawer card is ink, not gold on navy */
+#nav-sidebar .nav-book-row .nb-en,
+#nav-sidebar .nl-card-title, #nav-sidebar .nl-name, #nav-sidebar .nl-bm-title {
+  color: var(--card-title) !important;
+}
+#nav-sidebar .nav-book-row .nb-heb,
+#nav-sidebar .nl-card-heb, #nav-sidebar .nl-heb, #nav-sidebar .nl-bm-heb {
+  color: var(--gold-deep) !important;
+}
+#nav-sidebar .nav-book-row .nb-ch,
+#nav-sidebar .nav-book-row .nb-arrow { color: var(--card-tl) !important; }
+#nav-sidebar .nav-ch-cell .ch-heb { color: var(--card-tl) !important; }
+#nav-sidebar .nav-ch-cell .ch-num { color: var(--card-title) !important; }
+#nav-sidebar .nav-division, #nav-sidebar .nl-sec-title { color: var(--card-tl) !important; }
+#nav-sidebar .nav-ch-grid { background: transparent !important; }
+#nav-sidebar .nl-card:hover, #nav-sidebar .nl-tile:hover, #nav-sidebar .nl-bm:hover,
+#nav-sidebar .nav-ch-cell:hover, #nav-sidebar .nav-book-row:hover,
+#xref-panel .xref-ref-card:hover, #xref-panel .xf-bookmark-item:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--card-shadow-hover) !important;
+}
+#nav-sidebar .nav-ch-cell.current {
+  background: var(--gold-deep) !important;
+  box-shadow: 0 2px 6px rgba(138,106,28,.30) !important;
+}
+#nav-sidebar .nav-ch-cell.current .ch-heb,
+#nav-sidebar .nav-ch-cell.current .ch-num { color: #fff !important; }
+
+/* ── A slide-out's header and footer are chrome, same as the page's ──
+   Getting this wrong is what made the drawer stop matching the site:
+   its top bar went paper while every other bar in the app stayed navy. */
+#nav-sidebar .nav-search-wrap,
+#nav-sidebar .nav-vol-tabs,
+#nav-sidebar .nav-footer,
+#nav-sidebar .nav-search-results,
+#xref-panel .xref-panel-header,
+#xref-panel .xref-study-tabs,
+#glossary-panel .glossary-header,
+#annotations-panel .ann-header {
+  background: var(--chrome-bg) !important;
+  color: var(--chrome-ink) !important;
+  border-color: var(--chrome-line) !important;
+}
+#nav-sidebar .nav-search-wrap *,
+#nav-sidebar .nav-vol-tabs *,
+#nav-sidebar .nav-footer *,
+#xref-panel .xref-panel-header *,
+#xref-panel .xref-study-tabs *,
+#glossary-panel .glossary-header *,
+#annotations-panel .ann-header * {
+  color: var(--chrome-gold) !important;
+  border-color: var(--chrome-line) !important;
+}
+#nav-sidebar .nav-search-wrap input {
+  background: rgba(255,255,255,.06) !important;
+  color: var(--chrome-ink) !important;
+  border: 1px solid var(--chrome-line) !important;
+}
+#nav-sidebar .nav-search-wrap input::placeholder { color: var(--chrome-muted) !important; }
+#nav-sidebar .nav-footer .nf-hint { color: var(--chrome-muted) !important; }
+#nav-sidebar .nav-vol-tab.active {
+  background: rgba(244,202,72,.14) !important;
+  border-bottom: 2px solid var(--chrome-gold) !important;
+}
+
+/* One grid for both. Detecting "is this a named card or a numeral tile"
+   was guesswork — I keyed it on the transliteration line and the D&C
+   front matter has none, so "Chronological Order" got crushed into a
+   56px numeral column. Flex lets the CONTENT size each item instead:
+   a numeral stays at its min-width, a name takes the room it needs. */
+.landing-section-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: var(--tile-gap) !important;
+  direction: rtl;
+  justify-content: center;
+  align-items: stretch;
+}
+.landing-section-grid .landing-sec-btn {
+  flex: 0 0 auto !important;
+  min-width: 58px;
+}
+/* a card carrying a transliteration is a full card, and gets card spacing */
+.landing-section-grid:has(.sec-tl) { gap: var(--card-gap) !important; }
+.landing-section-grid:has(.sec-tl) .landing-sec-btn { min-width: 232px; flex: 1 1 232px !important; }
+
+.landing-sec-btn,
+.landing-book-card,
+.landing-book-btn {
+  background: var(--card-bg) !important;
+  border: 0 !important;
+  border-radius: var(--tile-radius) !important;
+  box-shadow: var(--card-shadow) !important;
+  transition: transform var(--card-motion), box-shadow var(--card-motion) !important;
+  cursor: pointer;
+}
+.landing-sec-btn { padding: 11px 15px 9px !important; text-align: center;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .landing-sec-btn:hover,
-.landing-book-card:hover {
-  background: var(--sw-navy-hover) !important;
-  border-color: var(--sw-gold) !important;
+.landing-book-card:hover,
+.landing-book-btn:hover {
+  background: var(--card-bg) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: var(--card-shadow-hover) !important;
 }
 .landing-sec-btn .sec-heb,
 .landing-book-card .card-title {
-  color: var(--sw-gold) !important;
+  color: var(--card-tl) !important; font-size: .8em !important;
+  font-weight: 400 !important; line-height: 1.25;
 }
+.landing-sec-btn .sec-tl { color: var(--card-tl) !important; font-size: .62em !important;
+  font-style: italic; direction: ltr; }
 .landing-sec-btn .sec-num,
 .landing-book-card .card-subtitle,
 .landing-book-card .card-chapters {
-  color: var(--sw-gold-muted) !important;
+  color: var(--card-title) !important; font-size: 1.05em !important;
+  font-weight: 400 !important; line-height: 1.3; direction: ltr;
 }
+/* the named cards read as cards, not as numerals */
+.landing-section-grid:has(.sec-tl) .landing-sec-btn {
+  border-radius: var(--card-radius) !important; padding: 18px 20px !important;
+}
+.landing-section-grid:has(.sec-tl) .sec-heb {
+  font-size: 1.34em !important; color: var(--card-title) !important;
+}
+.landing-section-grid:has(.sec-tl) .sec-num {
+  font-size: .95em !important; color: var(--card-body) !important; margin-top: 5px;
+}
+
+/* gold appears once, and it means: you are here */
+.landing-sec-btn.current, .landing-sec-btn[aria-current="true"] {
+  background: var(--gold-deep) !important;
+  box-shadow: 0 2px 6px rgba(138,106,28,.30) !important;
+}
+.landing-sec-btn.current .sec-num, .landing-sec-btn[aria-current="true"] .sec-num { color: #fff !important; }
+.landing-sec-btn.current .sec-heb, .landing-sec-btn[aria-current="true"] .sec-heb { color: rgba(255,255,255,.75) !important; }
+
+.landing-book-list { display: flex; flex-direction: column; gap: 10px !important; }
+.landing-book-btn { display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 18px !important; border-radius: var(--card-radius) !important;
+  color: var(--card-title) !important; direction: ltr; }
+.landing-book-btn .book-ch-count { color: var(--card-tl) !important; opacity: 1 !important; }
+
 
 /* ── Hamburger panel shell (cream like hub + navy/gold cards) ── */
 #nav-sidebar {
