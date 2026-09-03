@@ -1,4 +1,8 @@
 window._rootGlossaryData = {
+  "שקע": {
+    "meaning": "(שָׁקַע) to sink, subside, be swallowed up — Num 11:2, Amos 9:5",
+    "category": "Lexical"
+  },
   "H5425": {
     "meaning": "(הִתִּיר) to loose, set free, unbind — Ps 105:20, Job 6:9; (נָתַר) to spring, leap",
     "category": "Lexical"
