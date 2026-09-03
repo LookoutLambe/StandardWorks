@@ -67,8 +67,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link rel="stylesheet" href="nav_engine.css?v=46">
-<link rel="stylesheet" href="site_chrome.css?v=64">
-<link rel="stylesheet" href="reader.css?v=70">
+<link rel="stylesheet" href="site_chrome.css?v=65">
+<link rel="stylesheet" href="reader.css?v=72">
 <style>
 
 /* ========== THEME ========== */
@@ -290,12 +290,16 @@ body.dark-mode .landing-interlinear-kicker .lie-en {
   max-width: 640px;
 }
 html.sw-in-app .landing-app-store { display: none; }
-/* An outlined button ON dark chrome. It used --accent (the deep, paper-
-   scaled green) for its own text and border — dark-on-dark, 2.35:1. On a
-   chrome background the readable variant is --accent-light (the bright
-   mint stop), never --accent directly; the hover state already had this
-   half-right (fills bright, but left the text dark-on-dark too — swapped
-   to --on-accent, the token built for exactly this inversion). */
+/* The site's primary button, same language as the Search button (.gs-go)
+   directly below it: --accent fill, --on-accent text, a dark --header-bg
+   edge. It used to be an outlined dark-chrome button whose border and label
+   were --accent-light — and --accent-light is --here-chrome, ALWAYS bright
+   mint whatever the theme, because it exists to sit on the dark chrome.
+   The fill was chrome so the mint LABEL was legitimate, but the border
+   faced the paper, and a mint edge on paper is the same rule the gold
+   tokens break when --sw-gold falls back to a chrome colour. A paper-facing
+   surface takes the paper-scaled accent; only a chrome-backed one takes
+   --accent-light. */
 .landing-app-store-link {
   display: inline-flex;
   align-items: center;
@@ -303,9 +307,9 @@ html.sw-in-app .landing-app-store { display: none; }
   flex-wrap: wrap;
   gap: 8px 12px;
   padding: 12px 22px;
-  background: var(--header-bg);
-  color: var(--accent-light);
-  border: 2px solid var(--accent-light);
+  background: var(--accent-fill);
+  color: var(--on-fill);
+  border: 2px solid var(--header-bg);
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
@@ -314,15 +318,14 @@ html.sw-in-app .landing-app-store { display: none; }
   transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 .landing-app-store-link:hover {
-  /* --accent-light (--here-chrome) is ALWAYS bright mint, not theme-scaled
-     like --accent — so the paired text must ALWAYS be dark, not --on-accent
-     (which whitens in light mode and would repeat the same bug). */
-  background: var(--accent-light);
-  color: var(--chrome-2);
-  border-color: var(--accent-light);
+  /* --accent-hover, not --accent-light: this button sits on paper, so its
+     hover fill stays in the paper-scaled family instead of flashing mint. */
+  background: var(--accent-hover);
+  color: var(--on-fill);
+  border-color: var(--header-bg);
 }
 .landing-app-store-link:focus-visible {
-  outline: 2px solid var(--accent-light);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 .landing-app-store-sub {
@@ -471,7 +474,7 @@ html.sw-in-app .landing-app-store { display: none; }
 }
 .scripture-card, .card-continue { user-select: none; -webkit-user-select: none; }
 .scripture-card:active .card-cover { transform: scale(0.97); transition: transform 0.1s; }
-.card-continue:active { transform: scale(0.96); background: var(--accent-light, var(--here-chrome)); color: var(--chrome-2); }
+.card-continue:active { transform: scale(0.96); background: var(--accent-hover); color: var(--on-fill); }
 .gs-result-link:active { background: var(--highlight); }
 .global-search-input { min-height: 44px; }
 #gs-filter {
@@ -491,16 +494,17 @@ html.sw-in-app .landing-app-store { display: none; }
    mode) and paired with --header-bg (always dark chrome) as text — correct
    in dark mode by luck (mint bg wants dark text), wrong in light mode
    (dark-on-deep-green, 2.35:1). --on-accent flips with the same rule the
-   background does, so it is right in both. The hover/active fill,
-   --accent-light, is ALWAYS bright mint regardless of theme, so ITS text
-   must always be dark — a fixed chrome tone, not --on-accent. */
+   background does, so it is right in both. The hover/active fill used to be
+   --accent-light — always bright mint, and this card sits on PAPER, so it
+   flashed the chrome tone onto a paper surface. It is --accent-hover now,
+   derived from --accent, so the text stays --on-accent in both states. */
 .card-continue {
   display: block;
   margin: 10px auto 0;
   max-width: 240px;
   padding: 9px 14px 11px;
-  background: var(--accent, var(--here-chrome));
-  color: var(--on-accent);
+  background: var(--accent-fill);
+  color: var(--on-fill);
   font-family: 'David Libre', serif;
   font-size: 0.8em;
   font-weight: 600;
@@ -516,8 +520,8 @@ html.sw-in-app .landing-app-store { display: none; }
   box-sizing: border-box;
 }
 .card-continue:hover {
-  background: var(--accent-light, var(--here-chrome));
-  color: var(--chrome-2);
+  background: var(--accent-hover);
+  color: var(--on-fill);
   transform: scale(1.03);
   text-decoration: none;
 }
@@ -605,8 +609,8 @@ html.sw-in-app .landing-app-store { display: none; }
   align-items: center;
   justify-content: center;
   gap: 12px;
-  background: var(--accent, var(--here-chrome));
-  color: var(--on-accent);
+  background: var(--accent-fill);
+  color: var(--on-fill);
   max-width: 520px;
   width: calc(100% - 32px);
   margin: 0 auto 24px;
@@ -624,14 +628,14 @@ html.sw-in-app .landing-app-store { display: none; }
   box-shadow: 0 4px 14px color-mix(in srgb, var(--chrome) 18%, transparent);
 }
 #continue-reading:hover {
-  background: var(--accent-light, var(--here-chrome));
-  color: var(--chrome-2);
+  background: var(--accent-hover);
+  color: var(--on-fill);
   transform: scale(1.02);
 }
 #continue-reading .cr-ref {
   font-size: 1.08rem;
   font-weight: 700;
-  color: var(--on-accent);
+  color: var(--on-fill);
   line-height: 1.35;
 }
 /* Hebrew book name — readable size (was 0.82em of parent, far too small) */
@@ -640,7 +644,7 @@ html.sw-in-app .landing-app-store { display: none; }
   font-weight: 700;
   font-family: 'David Libre', serif;
   direction: rtl;
-  color: var(--on-accent);
+  color: var(--on-fill);
   margin-top: 0;
   line-height: 1.35;
   letter-spacing: 0.02em;
@@ -680,14 +684,14 @@ html.sw-in-app .landing-update-note { display: none; }
   font-family: 'David Libre', serif;
   font-size: 1em;
   font-weight: 600;
-  color: var(--on-accent);
-  background: var(--accent, var(--here-chrome));
+  color: var(--on-fill);
+  background: var(--accent-fill);
   border: 2px solid var(--header-bg, var(--chrome));
   border-radius: 6px;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
-.gs-go:active { background: var(--accent-light, var(--here-chrome)); color: var(--chrome-2); transform: scale(0.96); }
+.gs-go:active { background: var(--accent-hover); color: var(--on-fill); transform: scale(0.96); }
 .global-search-wrap #gs-filter {
   flex-shrink: 0;
   margin: 0;

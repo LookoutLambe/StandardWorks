@@ -762,6 +762,20 @@ body {
   --accent: var(--here);
   --accent-deep: var(--here);
   --accent-light: var(--here-chrome);
+  /* The hover/press fill for anything sitting ON PAPER.
+     --accent-light is --here-chrome, which is ALWAYS bright mint regardless
+     of theme, because it is built to sit on the dark chrome. Paper-backed
+     buttons had been reaching for it anyway (the app-store link's border and
+     the hover fill of .gs-go, .card-continue and #continue-reading), which is
+     the same rule the gold tokens break when --sw-gold falls back to a chrome
+     colour: a chrome-only tone painted onto a paper-facing surface.
+     Derived from --accent so it follows the theme instead of pinning a hue. */
+  /* the accent as a SURFACE (see the fill/mark note in sw_theme.css).
+     Light mode's accent is already deep, so the fill IS --here here; dark
+     mode overrides both of these on body.dark-mode. */
+  --accent-fill: var(--here);
+  --on-fill: #fff;
+  --accent-hover: color-mix(in srgb, var(--accent-fill) 85%, #fff);
   --verse-num: var(--here);
   /* text color for something FILLED with --accent (a solid button, a
      count badge). --here brightens to mint in dark mode by design (dark
