@@ -221,6 +221,45 @@ body.dual-mode .hw { font-size: 1em; }
   opacity: .62 !important;
 }
 
+/* ── The chapter summary's interlinear — THE one home ─────────────────
+   A chapter summary is an editorial abstract introducing the text. It was
+   rendering at the SAME size as the scripture it introduces — Hebrew at
+   the full 42px — so 1 Nephi 1's summary alone stood 1297px tall on a
+   phone: one and a half screens of heading before verse 1, and nothing in
+   the type saying "this is not the text".
+
+   It looked deliberate and was not. All five volume pages carried their
+   own inline `.heading-flow .hw { font-size: 1.35em }` (bom: 1.5em) and
+   NONE of them ever applied: `.hw` above is `!important`, so every one of
+   those rules lost. Four pages held byte-identical dead copies, bom held a
+   sixth divergent one, jst held three orphaned lines and no base rule at
+   all, and no shared stylesheet had any of it. Those copies are deleted;
+   this is where the heading's type lives now, and it carries !important
+   because it has to outrank the three tiers above.
+
+   Ranked at ~0.62 of the reading text: subordinate at a glance, with the
+   gloss and transliteration still clear of the 12px floor. */
+.heading-flow {
+  direction: rtl;
+  text-align: right;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 2px 6px;
+  margin: 10px auto 6px;
+  padding: 0 8px;
+  max-width: none;   /* summaries expand like the verses — user ruling 2026-08-30 */
+  font-size: 0.62em;
+}
+.heading-flow .word-unit { margin: 1px 3px; }
+/* tl/gl would shrink TWICE — --t0 (0.75em) of an already-reduced 0.62em
+   base lands at ~10px, under the legibility floor, and lower still at A-.
+   The max() puts a hard 12px floor under them while they still grow with
+   A+. An em alone cannot do this: the second reduction is the problem. */
+.heading-flow .tl,
+.heading-flow .gl { font-size: max(12px, 1.05em) !important; }
+.heading-flow .gl { max-width: 8em; }
+
 /* the arrows go: 714 marks per chapter saying what the script already says */
 .arr, .arr-hw, .arr-tl, .arr-gl { display: none !important; }
 /* the stack now carries the pairing, so words need real air between them */

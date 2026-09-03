@@ -973,9 +973,11 @@ body.dark-mode #share-popup { background: var(--chrome); border-color: var(--her
 }
 /* Dual mode: English + Hebrew interlinear side by side */
 .verse-english { display: none; }
-body.dual-mode .heading-flow .gl,
-body.dual-mode .heading-flow .arr { display: inline; }
-body.dual-mode .heading-flow .word-unit { padding-bottom: 0; }
+/* The three .heading-flow lines that were here are gone: JST never builds a
+   heading flow (it declares headingWords: '_jstHeadingWords' but no such
+   data file is loaded, so the builder's guard never fires), and the .arr
+   rule fought a site-wide display:none !important anyway. Heading styling,
+   if JST ever gets the data, comes from reader.css like everywhere else. */
 .verse-english ::selection { background: transparent !important; color: inherit !important; }
 .verse-english ::-moz-selection { background: transparent !important; color: inherit !important; }
 /* Phones: side by side, each column was about 140 px (14 characters of
@@ -1061,7 +1063,7 @@ body:not(.hide-sel-toolbar) #main-content{padding-right:60px!important;}@media (
 <link rel="stylesheet" href="nav_engine.css?v=46">
 <link rel="stylesheet" href="site_chrome.css?v=64">
 <link rel="stylesheet" href="xref_study_panel.css?v=14">
-<link rel="stylesheet" href="reader.css?v=52">
+<link rel="stylesheet" href="reader.css?v=54">
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>

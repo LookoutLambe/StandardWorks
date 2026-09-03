@@ -54,7 +54,7 @@
 <link rel="stylesheet" href="../nav_engine.css?v=46">
 <link rel="stylesheet" href="../site_chrome.css?v=64">
 <link rel="stylesheet" href="../xref_study_panel.css?v=14">
-<link rel="stylesheet" href="../reader.css?v=52">
+<link rel="stylesheet" href="../reader.css?v=54">
 <style>
 
 /* Skip-to-content link (screen reader / keyboard) */
@@ -146,21 +146,12 @@ body.hide-bottom-bar .controls-bottom.sw-footer-modes {
   text-align: right;
   direction: rtl;
 }
-.heading-flow {
-  direction: rtl;
-  text-align: right;
-  max-width: none;   /* summaries expand like the verses — user ruling 2026-08-30 */
-  margin: 10px auto 6px;
-  padding: 0 8px;
-}
-.heading-flow .word-unit { margin: 1px 3px; }
-.heading-flow .hw { font-size: 1.5em; }
-.heading-flow .arr-hw { font-size: 1.5em; }
-.heading-flow .tl { font-size: 0.72em; }
-.heading-flow .gl { font-size: 0.65em; }
-.heading-flow .arr-tl { font-size: 0.72em; transform: scale(1.4); }
-.heading-flow .arr-gl { font-size: 0.65em; transform: scale(1.4); }
-.heading-flow .arr { padding: 2px 0 4px; margin: 1px 0; }
+/* Interlinear chapter headings live in reader.css (.heading-flow) — this
+   was the sixth and most divergent copy, and its sizes were dead too
+   (.hw/.tl/.gl in reader.css are !important). The one ruling this block
+   carried, "summaries expand like the verses" (max-width: none, 2026-08-30),
+   is preserved in the shared rule. The .arr-* rules went with it: those
+   arrows are display:none !important site-wide. */
 .chapter-summary-tl {
   font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.8em;
@@ -1657,7 +1648,9 @@ body.dual-mode .chapter-heading > .chapter-summary {
 }
 body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direction: rtl; }@media (max-width: 700px) {
   body.dual-mode .chapter-heading > .chapter-summary { font-size: 0.78em; padding-right: 8px; }
-  body.dual-mode .chapter-heading > .heading-flow { font-size: 0.9em; }
+  /* the 0.9em that was here is gone: reader.css now sets .heading-flow to
+     0.62em, and the two multiplied to 0.56em — which would have dropped
+     the summary's gloss to ~11px, under the legibility floor. */
 }
 
 /* -- Chapter summary. The interlinear heading is the Hebrew in every mode;

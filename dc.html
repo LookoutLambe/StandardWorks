@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="nav_engine.css?v=46">
 <link rel="stylesheet" href="site_chrome.css?v=64">
 <link rel="stylesheet" href="xref_study_panel.css?v=14">
-<link rel="stylesheet" href="reader.css?v=52">
+<link rel="stylesheet" href="reader.css?v=54">
 <style>
 *:focus-visible { outline: 2px solid var(--here); outline-offset: 2px; }
 
@@ -67,14 +67,9 @@
 .word-unit.sof .hw::after { content: ' \05C3'; }
 body.hide-translit .tl, body.hide-translit .arr-tl { display: none; }
 /* Interlinear chapter headings: the summary as word-units, mode-aware */
-.heading-flow { direction: rtl; text-align: right; display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 2px 6px; margin-top: 10px; }
-.heading-flow .word-unit { margin: 1px 3px; }
-.heading-flow .hw { font-size: 1.35em; }
-.heading-flow .tl { font-size: 0.7em; }
-.heading-flow .gl { font-size: 0.68em; }
-.heading-flow .arr-hw { font-size: 1.35em; }
-.heading-flow .arr-tl { font-size: 0.7em; }
-.heading-flow .arr-gl { font-size: 0.68em; }
+/* Interlinear chapter headings live in reader.css (.heading-flow). The copy
+   that used to sit here was dead — .hw/.tl/.gl there are !important, so
+   these sizes never applied — and it was duplicated in four other pages. */
 .heading-dash { align-self: center; opacity: 0.55; margin: 0 5px; }
 .chapter-heading .chapter-summary-he { display: none; }
 .chapter-heading .chapter-summary-en { display: none; }
