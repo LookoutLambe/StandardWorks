@@ -288,21 +288,41 @@ function closeAllPanels() {
   if (sh && sh.classList.contains('open')) closeShortcuts();
 }
 
-// HISTORY: Make chapter navigation create real Back/Forward entries
+// HISTORY: Make chapter navigation create real Back/Forward entries.
+//
+// RETURN — "put me back". Back has to restore the VERSE you were on, not the
+// top of the chapter. Follow a cross-reference out of Genesis 1:20 and your
+// place has to still be there when you come back, or the corpus stops being
+// explorable and people stop following references at all.
+//
+// So: before pushing the destination, stamp the verse being LEFT onto the
+// entry we are leaving (replaceState). On the way back the browser restores
+// that URL and fires hashchange -> handleHash(), which already knows how to
+// read &v= and scroll to it. The probe must run BEFORE the inner navTo,
+// while the old panel is still on screen and NavEngine still holds the old
+// chapter — afterwards there is nothing left to measure.
+//
+// The destination is pushed CLEAN. The old code copied the current hash's
+// &v= onto the NEW chapter's entry, so paging Genesis 1 (at verse 20) into
+// Genesis 2 wrote "#gen-ch2&v=20" — a Back/Forward pair then dropped you at
+// verse 20 of a chapter you had never scrolled.
 (function() {
   var _navHist = window.navTo;
   window.navTo = function(id, slideDir) {
+    var leavingId = window.currentPageId;
+    var leavingVerse = 0;
+    try {
+      if (leavingId && leavingId !== 'landing' && leavingId !== id &&
+          window.NavEngine && typeof NavEngine.currentVerseNum === 'function') {
+        leavingVerse = NavEngine.currentVerseNum() || 0;
+      }
+    } catch (e) {}
     _navHist(id, slideDir);
     if (window.__swNavDeferred) return;   // the loader's hand-off pass — the completed pass pushes
     try {
       if (window.__swNavFromHash) return;
-      var v = 0;
-      try {
-        var h = window.location.hash.replace('#','');
-        var hp = h.split('&');
-        for (var i = 1; i < hp.length; i++) { var kv = hp[i].split('='); if (kv[0] === 'v') v = parseInt(kv[1]||'0',10)||0; }
-      } catch(e) {}
-      if (id && id !== 'landing') history.pushState(null, '', '#' + id + (v ? '&v=' + v : ''));
+      if (leavingVerse) history.replaceState(null, '', '#' + leavingId + '&v=' + leavingVerse);
+      if (id && id !== 'landing') history.pushState(null, '', '#' + id);
       else history.pushState(null, '', window.location.pathname);
     } catch (e) {}
   };

@@ -1424,12 +1424,24 @@
 
   // ── Verse-level position tracking (refines the per-volume bookmark) ──
   var _vtTimer = null;
-  function captureVersePosition() {
-    if (!_config || _config.hub || !_config.volume) return;
+
+  /* Which verse is the reader actually looking at right now?
+     Probes the top of the viewport for a .verse[data-verse-key] and checks
+     that it belongs to the chapter in hand. Returns 0 when there is no
+     honest answer — hub, landing, nothing rendered, or a stale panel whose
+     verse belongs to another chapter.
+
+     ONE implementation on purpose. Two callers ask "where am I": the
+     per-volume bookmark below, and the Back/Return history stamp in
+     reader_ui.js / bom.html. If they ever probed differently, Back and the
+     bookmark would disagree about where you were, which is worse than
+     either being wrong on its own. */
+  function currentVerseNum() {
+    if (!_config || _config.hub || !_config.volume) return 0;
     var chap = _config.currentChapter;
-    if (!chap || chap === 'landing') return;
+    if (!chap || chap === 'landing') return 0;
     var book = findBook(_config.volume, chap);
-    if (!book) return;
+    if (!book) return 0;
     var probe = null;
     var px = Math.max(20, Math.floor(window.innerWidth / 2));
     var pys = [130, Math.floor(window.innerHeight * 0.35)];
@@ -1437,12 +1449,24 @@
       var el = document.elementFromPoint(px, pys[i]);
       probe = el && el.closest ? el.closest('.verse[data-verse-key]') : null;
     }
-    if (!probe) return;
+    if (!probe) return 0;
     var kp = (probe.getAttribute('data-verse-key') || '').split('|');
     var vNum = kp.length === 3 ? parseInt(kp[2], 10) : 0;
+    if (!vNum) return 0;
+    var chNum = chap.replace(book.prefix, '');
+    if (kp[1] && String(kp[1]) !== String(chNum)) return 0;
+    return vNum;
+  }
+
+  function captureVersePosition() {
+    if (!_config || _config.hub || !_config.volume) return;
+    var chap = _config.currentChapter;
+    if (!chap || chap === 'landing') return;
+    var book = findBook(_config.volume, chap);
+    if (!book) return;
+    var vNum = currentVerseNum();
     if (!vNum) return;
     var chNum = chap.replace(book.prefix, '');
-    if (kp[1] && String(kp[1]) !== String(chNum)) return;
     var label = book.en;
     if (book.ch > 1) label += ' ' + chNum;
     var vol = VOLUMES[_config.volume];
@@ -1458,12 +1482,33 @@
       }));
     } catch(e) {}
   }
+  /* Leaving the page ENTIRELY — a cross-reference into another volume, the
+     hub, a volume switch from the drawer — must not cost the reader their
+     place either. The readers' navTo history stamp only covers movement
+     within one page, so on the way out we write the same verse into the
+     entry being left; Back then reopens this page at the verse instead of
+     the top of the chapter. Same probe, same rule, one more exit.
+     The existing hash grammar is preserved rather than rebuilt — BOM
+     deep-links a verse as ":5", the siblings as "&v=5". */
+  function stampVerseOnCurrentEntry() {
+    try {
+      var vNum = currentVerseNum();
+      if (!vNum) return;
+      var hash = String(window.location.hash || '').replace(/^#/, '');
+      if (!hash) return;
+      hash = hash.replace(/(?:&v=|:)\d+$/, '');
+      var suffix = (_config && _config.volume === 'bom') ? ':' + vNum : '&v=' + vNum;
+      history.replaceState(null, '', '#' + hash + suffix);
+    } catch (e) {}
+  }
+
   function installVersePositionTracker() {
     if (!_config || _config.hub || !_config.volume) return;
     window.addEventListener('scroll', function() {
       if (_vtTimer) clearTimeout(_vtTimer);
       _vtTimer = setTimeout(captureVersePosition, 600);
     }, { passive: true, capture: true });
+    window.addEventListener('pagehide', stampVerseOnCurrentEntry);
   }
 
   function resolveLastReadUrl(data) {
@@ -2508,6 +2553,10 @@
     },
     openCurrentBookChapters: openCurrentBookChapters,
     openBooksForCurrentVolume: openBooksForCurrentVolume,
+    /* "Where am I" — see currentVerseNum() above. The readers' history
+       wrappers stamp this onto the entry being left so Back restores the
+       verse rather than the top of the chapter. */
+    currentVerseNum: currentVerseNum,
     openToVolume: function(volKey) {
       openSidebar();
       // Ensure we're in the "Books" view (not Library)

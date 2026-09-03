@@ -7417,11 +7417,33 @@ document.addEventListener('keydown', function(e) {
     }
   }
   // Update hash when navigating chapters (clears verse on chapter change)
+  //
+  // RETURN — "put me back". Back restores the VERSE you were on, not the top
+  // of the chapter, so following a cross-reference out of Alma 32:28 doesn't
+  // lose your place. Same rule and same probe as the shared reader
+  // (reader_ui.js), written in this volume's own hash grammar: BOM deep-links
+  // a verse as "#alma-32:5", the siblings as "&v=5". The probe has to run
+  // BEFORE the inner navTo, while the old panel is still on screen.
   var _navHash = window.navTo;
   window.navTo = function() {
+    var id = arguments[0];
+    var leavingId = window.currentPageId;
+    var leavingVerse = 0;
+    try {
+      if (leavingId && leavingId !== id && leavingId !== 'landing' &&
+          !leavingId.startsWith('front-') && leavingId !== 'intro' &&
+          window.NavEngine && typeof NavEngine.currentVerseNum === 'function') {
+        leavingVerse = NavEngine.currentVerseNum() || 0;
+      }
+    } catch (e) {}
     _navHash.apply(null, arguments);
     if (window.__swNavDeferred) return;   // hand-off pass: the completing pass writes the hash
-    var id = arguments[0];
+    if (leavingVerse && !window.__swNavFromHash) {
+      try {
+        var leavingLabel = getChapterLabel(leavingId).toLowerCase().replace(/\s+/g, '-');
+        history.replaceState(null, '', '#' + leavingLabel + ':' + leavingVerse);
+      } catch (e) {}
+    }
     if (id && !id.startsWith('front-') && id !== 'intro') {
       var label = getChapterLabel(id).toLowerCase().replace(/\s+/g, '-');
       history[window.__swNavFromHash ? 'replaceState' : 'pushState'](null, '', '#' + label);
@@ -11761,7 +11783,7 @@ try {
 
 <script src="../site_chrome.js?v=36" data-sw-volume="bom"></script>
 <script src="../verse_search.js?v=3"></script>
-<script src="../nav_engine.js?v=59"></script>
+<script src="../nav_engine.js?v=60"></script>
 <script src="../xref_study_panel.js?v=6"></script>
 <script>
 NavEngine.init({
