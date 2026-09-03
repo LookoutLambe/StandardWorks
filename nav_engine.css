@@ -663,9 +663,15 @@ body.dark-mode #sw-reader-footer .nqd-item.active {
 body.reader-footer-hidden #sw-reader-footer {
   padding-bottom: 0;
 }
-body.reader-footer-hidden #sw-reader-footer .sw-footer-modes,
+/* .sw-footer-modes is deliberately NOT in this list any more. Two classes
+   were hiding the mode bar — this one and sw-modes-collapsed — and this one
+   used display:none !important, so tapping the MODES grip toggled
+   sw-modes-collapsed, the grip changed, and nothing appeared: the mode
+   buttons stayed hidden and every control in them was dead.
+   sw-modes-collapsed is the single owner of the mode bar now; the double-tap
+   drives it (nav_engine.js) instead of hiding the bar behind its back. */
 body.reader-footer-hidden #sw-reader-footer .nqd-volumes,
-body.reader-footer-hidden #sw-reader-footer > .controls-bottom {
+body.reader-footer-hidden #sw-reader-footer > .controls-bottom:not(.sw-footer-modes) {
   display: none !important;
   height: 0 !important;
   min-height: 0 !important;

@@ -2452,6 +2452,7 @@
       var bomLegacyBar = localStorage.getItem('bom-hide-bottom-bar');
       if (sw === '1' || leg === '1' || bomLegacyBar === '1') {
         document.body.classList.add('reader-footer-hidden');
+        setModesCollapsed(true, false);   // keep the grip honest on boot
         document.body.classList.add('hide-bottom-bar');
         if (leg === '1' && sw !== '1') {
           localStorage.setItem(READ_FTR_LS, '1');
@@ -2494,6 +2495,10 @@
       if (!document.querySelector('.controls-bottom')) return;
       var hidden = document.body.classList.toggle('reader-footer-hidden');
       document.body.classList.toggle('hide-bottom-bar', hidden);
+      /* the double-tap and the MODES grip are two ways to do one thing, so
+         they must move one piece of state. Without this the grip could say
+         "open" while the bar was force-hidden by reader-footer-hidden. */
+      setModesCollapsed(hidden, true);
       try {
         localStorage.setItem(READ_FTR_LS, hidden ? '1' : '0');
         localStorage.removeItem(READ_FTR_LS_LEGACY);

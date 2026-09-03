@@ -51,7 +51,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="../icons/icon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="../icons/icon-180.png">
 <link rel="apple-touch-icon" href="../icons/icon-192.png">
-<link rel="stylesheet" href="../nav_engine.css?v=46">
+<link rel="stylesheet" href="../nav_engine.css?v=47">
 <link rel="stylesheet" href="../site_chrome.css?v=69">
 <link rel="stylesheet" href="../xref_study_panel.css?v=14">
 <link rel="stylesheet" href="../reader.css?v=75">
@@ -73,9 +73,14 @@
 /* Focus visible ring for keyboard navigation */
 *:focus-visible { outline: 2px solid var(--here-chrome); outline-offset: 2px; }
 
-/* Collapsed footer: mode bar hidden by nav_engine (.reader-footer-hidden); do not add extra page buffer here */
-body.hide-bottom-bar #sw-reader-footer .controls-bottom,
-body.hide-bottom-bar .controls-bottom.sw-footer-modes {
+/* This page kept its own copy of the rule that hides the footer mode bar, and
+   it had the same defect as the shared one in nav_engine.css: it force-hid
+   .sw-footer-modes with display:none !important, so tapping the MODES grip
+   toggled sw-modes-collapsed, the grip changed, and the mode buttons stayed
+   hidden — every control in them dead. sw-modes-collapsed is the single owner
+   of the mode bar; nav_engine.css handles the rest of the collapsed footer for
+   all six volumes, so this copy is gone. */
+body.hide-bottom-bar #sw-reader-footer > .controls-bottom:not(.sw-footer-modes) {
   display: none !important;
 }
 
@@ -11783,7 +11788,7 @@ try {
 
 <script src="../site_chrome.js?v=42" data-sw-volume="bom"></script>
 <script src="../verse_search.js?v=3"></script>
-<script src="../nav_engine.js?v=64"></script>
+<script src="../nav_engine.js?v=65"></script>
 <script src="../xref_study_panel.js?v=6"></script>
 <script>
 NavEngine.init({
