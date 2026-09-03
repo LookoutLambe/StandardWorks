@@ -333,6 +333,16 @@ var VolumeLoader = (function() {
     var m = manifest();
     return (window.READER.englishDir && m && m.english && m.english.indexOf(f) >= 0) ? window.READER.englishDir + '/' + f : null;
   }
+  /* The chapter summary — English, Hebrew and its glossed words — used to be
+     three whole-corpus files loaded eagerly: 856 KB on the OT's critical path
+     to render ONE chapter's heading, larger than the chapter itself. Split per
+     book by tools/build_heading_manifests.js and fetched with the book, the
+     same way the Dual English chunk is. Largest single book is now 104 KB, and
+     only the book being read is fetched. */
+  function headingSrc(f) {
+    var m = manifest();
+    return (m && m.headings && m.headings.indexOf(f) >= 0) ? window.READER.vol + '_headings/' + f : null;
+  }
   function loadAll(srcs, cb) {
     var n = srcs.length; if (!n) { cb(); return; }
     srcs.forEach(function(src) { loadScript(src, function() { if (--n === 0) cb(); }); });
@@ -340,13 +350,14 @@ var VolumeLoader = (function() {
   /** Everything a chapter needs right now is on the page (its verse file, and its English while Dual is on). */
   function has(chapId) {
     var f = fileFor(chapId); if (!f) return true;
-    var e = englishSrc(f);
-    return !!loaded[verseSrc(f)] && (!dualOn() || !e || !!loaded[e]);
+    var e = englishSrc(f), h = headingSrc(f);
+    return !!loaded[verseSrc(f)] && (!h || !!loaded[h]) && (!dualOn() || !e || !!loaded[e]);
   }
   /** Fetch what has(chapId) is missing, then cb — synchronously when nothing is missing. */
   function ensure(chapId, cb) {
     var f = fileFor(chapId); if (!f) { cb(); return; }
-    var want = [verseSrc(f)], e = englishSrc(f);
+    var want = [verseSrc(f)], e = englishSrc(f), h = headingSrc(f);
+    if (h) want.push(h);                              // the summary renders with the chapter
     if (e && dualOn()) want.push(e);
     loadAll(want, cb);
   }
@@ -362,6 +373,7 @@ var VolumeLoader = (function() {
     var m = manifest(); if (!m) { cb(); return; }
     var srcs = m.files.map(verseSrc);
     srcs = srcs.concat(m.files.map(englishSrc).filter(Boolean));
+    srcs = srcs.concat(m.files.map(headingSrc).filter(Boolean));
     loadAll(srcs, cb);
   }
   return { fileFor: fileFor, has: has, ensure: ensure, ensureEnglish: ensureEnglish, ensureAll: ensureAll };

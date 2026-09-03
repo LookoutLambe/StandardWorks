@@ -1,0 +1,130 @@
+// build_heading_manifests.js — per-book chapter-summary data for the lazy loader.
+//
+// The three heading files are whole-corpus objects keyed "Book Chapter":
+//   <vol>_chapter_headings.js      _<vol>ChapterHeadings      the English summary
+//   <vol>_chapter_headings_heb.js  _<vol>ChapterHeadingsHeb   the Hebrew summary
+//   <vol>_heading_words.js         _<vol>HeadingWords         its glossed words
+//
+// Loaded eagerly that was 856 KB on the Old Testament's critical path to render
+// ONE chapter's summary — bigger than the chapter itself. This splits them the
+// way tools/build_verse_manifests.js already splits verses: one file per verse
+// file, fetched with the book, merged into the same globals.
+//
+// Source of truth stays where it is. This tool only derives; it never edits the
+// heading files. Run it after any heading change (the pre-commit hook does).
+'use strict';
+const fs = require('fs'), path = require('path');
+const ROOT = path.join(__dirname, '..');
+
+const VOLS = [
+  { vol: 'ot',  page: 'ot.html'  },
+  { vol: 'nt',  page: 'nt.html'  },
+  { vol: 'dc',  page: 'dc.html'  },
+  { vol: 'pgp', page: 'pgp.html' },
+];
+const TABLE = /\{\s*prefix\s*:\s*'([^']+)'[^}]*?\ben\s*:\s*'([^']+)'/g;
+
+function readGlobal(file, name) {
+  const p = path.join(ROOT, file);
+  if (!fs.existsSync(p)) return null;
+  const sandbox = { window: {} };
+  try {
+    new Function('window', fs.readFileSync(p, 'utf8') + '\n;return typeof ' + name + " !== 'undefined' ? " + name + ' : window.' + name + ';')(sandbox.window);
+  } catch (e) { /* fall through */ }
+  try {
+    return new Function('window', fs.readFileSync(p, 'utf8') + '\n;return typeof ' + name + " !== 'undefined' ? " + name + ' : window.' + name + ';')(sandbox.window);
+  } catch (e) { console.error('  ! could not evaluate ' + file + ': ' + e.message); return null; }
+}
+
+let total = 0;
+for (const { vol, page } of VOLS) {
+  const pageSrc = fs.readFileSync(path.join(ROOT, page), 'utf8');
+  const Vol = vol.toUpperCase() === 'DC' ? 'dc' : vol;
+  const cap = vol.charAt(0).toUpperCase() + vol.slice(1);
+
+  // book English name -> chapter-id prefix, straight from the page's BOOKS table
+  const bookPrefix = {};
+  let m; TABLE.lastIndex = 0;
+  while ((m = TABLE.exec(pageSrc))) bookPrefix[m[2]] = m[1];
+
+  const manPath = path.join(ROOT, vol + '_verses', 'manifest.js');
+  if (!fs.existsSync(manPath)) { console.log(`${vol}: no verse manifest, skipped`); continue; }
+  const man = new Function('window', fs.readFileSync(manPath, 'utf8') + ';return window.READER_VERSE_MANIFEST;')({});
+
+  const sets = [
+    { name: `_${vol}ChapterHeadings`,    file: `${vol}_chapter_headings.js` },
+    { name: `_${vol}ChapterHeadingsHeb`, file: `${vol}_chapter_headings_heb.js` },
+    { name: `_${vol}HeadingWords`,       file: `${vol}_heading_words.js` },
+  ];
+  const data = {};
+  for (const s of sets) data[s.name] = readGlobal(s.file, s.name) || {};
+
+  /* "Genesis 1" -> gen-ch1 -> gen.js.
+     Each volume names its books its own way, the same divergence that made
+     dc.html and pgp.html fork _injectChapterHeading:
+       - the Pearl writes prefix:'ms-ch', already carrying the -ch
+       - the OT's BOOKS says 'Song of Songs' while the headings say
+         'Song of Solomon'
+       - the D&C has no book table at all; "D&C 76" is section 76, id dc76-ch1
+     All three are handled here rather than by dropping what does not match. */
+  const ALIAS = { 'Song of Solomon': 'Song of Songs' };
+  function fileForKey(key) {
+    const mm = key.match(/^(.*?)\s+(\d+)$/);
+    if (!mm) return null;
+    const book = mm[1], num = mm[2];
+    if (vol === 'dc') {                       // sections, not books
+      return man.ids['dc' + num + '-ch1'] || man.prefixes['dc' + num + '-ch'] || null;
+    }
+    let pfx = bookPrefix[book] || bookPrefix[ALIAS[book]];
+    if (!pfx) return null;
+    pfx = pfx.replace(/-ch$/, '');            // the Pearl already includes it
+    return man.ids[pfx + '-ch' + num] || man.prefixes[pfx + '-ch'] || null;
+  }
+
+  const byFile = {};
+  let mapped = 0, unmapped = [];
+  for (const s of sets) {
+    for (const key of Object.keys(data[s.name])) {
+      const f = fileForKey(key);
+      if (!f) { unmapped.push(key); continue; }
+      (byFile[f] = byFile[f] || {});
+      (byFile[f][s.name] = byFile[f][s.name] || {})[key] = data[s.name][key];
+      mapped++;
+    }
+  }
+
+  const outDir = path.join(ROOT, vol + '_headings');
+  fs.rmSync(outDir, { recursive: true, force: true });
+  fs.mkdirSync(outDir, { recursive: true });
+  const files = Object.keys(byFile).sort();
+  for (const f of files) {
+    const parts = [];
+    for (const s of sets) {
+      const slice = byFile[f][s.name];
+      if (!slice || !Object.keys(slice).length) continue;
+      parts.push(`  Object.assign(W.${s.name} = W.${s.name} || {}, ${JSON.stringify(slice)});`);
+    }
+    fs.writeFileSync(path.join(outDir, f),
+      `// generated by tools/build_heading_manifests.js — chapter summaries for ${f}\n` +
+      `(function(){ var W = window;\n${parts.join('\n')}\n})();\n`);
+  }
+  man.headings = files;
+  fs.writeFileSync(manPath,
+    '// generated by tools/build_verse_manifests.js — which verse file holds which chapter, and which files carry Dual English\n' +
+    '// headings[] added by tools/build_heading_manifests.js — which files have a chapter-summary chunk\n' +
+    'window.READER_VERSE_MANIFEST = ' + JSON.stringify(man) + ';\n');
+
+  const before = sets.reduce((a, s) => a + (fs.existsSync(path.join(ROOT, s.file)) ? fs.statSync(path.join(ROOT, s.file)).size : 0), 0);
+  const after = files.reduce((a, f) => a + fs.statSync(path.join(outDir, f)).size, 0);
+  const biggest = files.map(f => fs.statSync(path.join(outDir, f)).size).sort((a, b) => b - a)[0] || 0;
+  console.log(`${vol}: ${mapped} entries -> ${files.length} files | eager ${Math.round(before/1024)} KB -> largest book ${Math.round(biggest/1024)} KB (all ${Math.round(after/1024)} KB)`);
+  if (unmapped.length) {
+    // A dropped key is a chapter summary that silently disappears from the
+    // site. That is data loss, not a warning.
+    console.error(`  ERROR ${vol}: ${unmapped.length} heading keys map to no verse file: ` +
+      unmapped.slice(0, 8).join(', ') + (unmapped.length > 8 ? ' …' : ''));
+    process.exitCode = 1;
+  }
+  total += files.length;
+}
+console.log(`\n${total} heading chunks written.`);

@@ -697,7 +697,9 @@ window.READER = {
   }
 };
 </script>
-<script src="reader_core.js?v=15"></script>
+<!-- chapter summaries (250 KB eager) are now per-book in dc_headings/,
+     fetched with the book by VolumeLoader. tools/build_heading_manifests.js -->
+<script src="reader_core.js?v=16"></script>
 
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=2"></script>
@@ -708,12 +710,9 @@ window.READER = {
 <!-- English text for dual mode -->
 
 <!-- Section headings (official study summaries) -->
-<script src="dc_chapter_headings.js"></script>
-<script src="dc_chapter_headings_heb.js"></script>
-<script src="dc_heading_words.js"></script>
 
 <!-- Verse data files -->
-<script src="dc_verses/manifest.js?v=1"></script>  <!-- lazy books: the verse files load on demand (reader_core.js VolumeLoader) -->
+<script src="dc_verses/manifest.js?v=2"></script>  <!-- lazy books: the verse files load on demand (reader_core.js VolumeLoader) -->
 <script src="dc_verses/dc_chron.js?v=103"></script>
 
 <!-- Cross-reference data + engine -->

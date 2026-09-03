@@ -556,7 +556,9 @@ window.READER = {
   bookAliases: { 'matthew':'matt', 'mat':'matt', 'mk':'mark', 'lk':'luke', 'luk':'luke', 'jn':'john', 'joh':'john', 'ac':'acts', 'act':'acts', 'romans':'rom', 'ro':'rom', '1cor':'1co', '1corinthians':'1co', '2cor':'2co', '2corinthians':'2co', 'galatians':'gal', 'ephesians':'eph', 'philippians':'php', 'phil':'php', 'colossians':'col', '1thess':'1th', '1thessalonians':'1th', '2thess':'2th', '2thessalonians':'2th', '1tim':'1ti', '1timothy':'1ti', '2tim':'2ti', '2timothy':'2ti', 'titus':'tit', 'philemon':'phm', 'phlm':'phm', 'hebrews':'heb', 'james':'jas', 'jam':'jas', '1pet':'1pe', '1peter':'1pe', '2pet':'2pe', '2peter':'2pe', '1john':'1jn', '2john':'2jn', '3john':'3jn', 'jude':'jude', 'jud':'jude', 'revelation':'rev', 'revelations':'rev', 'apocalypse':'rev' }
 };
 </script>
-<script src="reader_core.js?v=15"></script>
+<!-- chapter summaries (251 KB eager) are now per-book in nt_headings/,
+     fetched with the book by VolumeLoader. tools/build_heading_manifests.js -->
+<script src="reader_core.js?v=16"></script>
 
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=2"></script>
@@ -568,10 +570,7 @@ window.READER = {
 <!-- English text for dual mode -->
 
 <!-- Chapter headings (official study summaries) -->
-<script src="nt_chapter_headings.js"></script>
-<script src="nt_chapter_headings_heb.js"></script>
-<script src="nt_heading_words.js"></script>
-<script src="nt_verses/manifest.js?v=1"></script>  <!-- lazy books: the verse files load on demand (reader_core.js VolumeLoader) -->
+<script src="nt_verses/manifest.js?v=2"></script>  <!-- lazy books: the verse files load on demand (reader_core.js VolumeLoader) -->
 
 <!-- Cross-reference data + engine -->
 <!-- nt_crossrefs.js is fetched on idle by crossrefs_engine.js (it was 475 KB of blocking critical path) -->

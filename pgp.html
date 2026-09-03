@@ -1234,7 +1234,9 @@ window.READER = {
   }
 };
 </script>
-<script src="reader_core.js?v=15"></script>
+<!-- chapter summaries (19 KB eager) are now per-book in pgp_headings/,
+     fetched with the book by VolumeLoader. tools/build_heading_manifests.js -->
+<script src="reader_core.js?v=16"></script>
 
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=2"></script>
@@ -1245,12 +1247,9 @@ window.READER = {
 <!-- English text for dual mode -->
 
 <!-- Chapter headings (official study summaries) -->
-<script src="pgp_chapter_headings.js"></script>
-<script src="pgp_chapter_headings_heb.js"></script>
-<script src="pgp_heading_words.js"></script>
 
 <!-- Verse data files -->
-<script src="pgp_verses/manifest.js?v=1"></script>  <!-- lazy books: the verse files load on demand (reader_core.js VolumeLoader) -->
+<script src="pgp_verses/manifest.js?v=2"></script>  <!-- lazy books: the verse files load on demand (reader_core.js VolumeLoader) -->
 
 <!-- Cross-reference data + engine -->
 <!-- pgp_crossrefs.js is fetched on idle by crossrefs_engine.js (it was 73 KB of blocking critical path) -->

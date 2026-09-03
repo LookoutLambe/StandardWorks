@@ -578,7 +578,9 @@ window.READER = {
   bookAliases: { '1sam':'1sa', '2sam':'2sa', '1samuel':'1sa', '2samuel':'2sa', '1kings':'1ki', '2kings':'2ki', '1chronicles':'1ch', '2chronicles':'2ch', 'genesis':'gen', 'exodus':'exo', 'leviticus':'lev', 'numbers':'num', 'deuteronomy':'deu', 'joshua':'jos', 'judges':'jdg', 'isaiah':'isa', 'jeremiah':'jer', 'ezekiel':'eze', 'hosea':'hos', 'joel':'joe', 'amos':'amo', 'obadiah':'oba', 'jonah':'jon', 'micah':'mic', 'nahum':'nah', 'habakkuk':'hab', 'zephaniah':'zep', 'haggai':'hag', 'zechariah':'zec', 'malachi':'mal', 'psalms':'psa', 'psalm':'psa', 'proverbs':'pro', 'job':'job', 'song of songs':'sos', 'songofsolomon':'sos', 'ruth':'rth', 'lamentations':'lam', 'ecclesiastes':'ecc', 'esther':'est', 'daniel':'dan', 'ezra':'ezr', 'nehemiah':'neh' }
 };
 </script>
-<script src="reader_core.js?v=15"></script>
+<!-- chapter summaries (856 KB eager) are now per-book in ot_headings/,
+     fetched with the book by VolumeLoader. tools/build_heading_manifests.js -->
+<script src="reader_core.js?v=16"></script>
 
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=2"></script>
@@ -589,12 +591,9 @@ window.READER = {
 <!-- English text for dual mode -->
 
 <!-- Chapter headings (official study summaries) -->
-<script src="ot_chapter_headings.js"></script>
-<script src="ot_chapter_headings_heb.js"></script>
-<script src="ot_heading_words.js"></script>
 
 <!-- Verse data files -->
-<script src="ot_verses/manifest.js?v=1"></script>  <!-- lazy books: the verse files load on demand (reader_core.js VolumeLoader) -->
+<script src="ot_verses/manifest.js?v=2"></script>  <!-- lazy books: the verse files load on demand (reader_core.js VolumeLoader) -->
 
 <!-- Cross-reference data + engine -->
 <!-- ot_crossrefs.js is fetched on idle by crossrefs_engine.js (it was 1.24 MB of blocking critical path) -->
