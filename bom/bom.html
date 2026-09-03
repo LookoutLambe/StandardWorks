@@ -54,7 +54,7 @@
 <link rel="stylesheet" href="../nav_engine.css?v=46">
 <link rel="stylesheet" href="../site_chrome.css?v=64">
 <link rel="stylesheet" href="../xref_study_panel.css?v=14">
-<link rel="stylesheet" href="../reader.css?v=63">
+<link rel="stylesheet" href="../reader.css?v=64">
 <style>
 
 /* Skip-to-content link (screen reader / keyboard) */
@@ -6353,7 +6353,7 @@ function appendStandardWorksInverseCards(refsContainer, bomVerseKeys) {
   if (collected.length === 0) return;
 
   var heading = document.createElement('div');
-  heading.style.cssText = 'font-weight:bold;color:var(--here-chrome);margin:12px 0 6px;font-size:0.9em;border-bottom:1px solid #444;padding-bottom:4px;';
+  heading.className = 'xref-cat-heading';
   heading.textContent = 'Cited in Standard Works footnotes (' + collected.length + ')';
   refsContainer.appendChild(heading);
 
@@ -6625,7 +6625,7 @@ function openRootXrefPanel(root) {
       card.className = 'xref-ref-card rsc-occ-card';
       card.style.cssText = 'cursor:pointer;border:1px solid color-mix(in srgb, var(--here-chrome) 55%, transparent);' +
         'background:color-mix(in srgb, var(--here-chrome) 10%, transparent);border-radius:10px;padding:11px 13px;margin-bottom:12px;';
-      card.innerHTML = '<div style="font-weight:700;color:var(--sw-gold,var(--here-chrome));">' +
+      card.innerHTML = '<div class="rsc-occ-title">' +
         'All ' + total + ' occurrences in ' + verses + ' verses \u2192</div>' +
         '<div style="opacity:0.75;font-size:0.85em;margin-top:2px;">' +
         'every place this root appears across the scriptures</div>';
@@ -6717,7 +6717,7 @@ function openRootXrefPanel(root) {
     if (items.length === 0) return;
 
     var heading = document.createElement('div');
-    heading.style.cssText = 'font-weight:bold;color:var(--here-chrome);margin:12px 0 6px;font-size:0.9em;border-bottom:1px solid #444;padding-bottom:4px;';
+    heading.className = 'xref-cat-heading';
     heading.textContent = catLabels[cat] + ' (' + items.length + ')';
     refsContainer.appendChild(heading);
 
@@ -7994,8 +7994,8 @@ document.addEventListener('keydown', function(e) {
     var sInfo = wordFreq[hText];
     var detailHtml = '';
     if (false && morphGloss) {   // suppressed: _guessAffixPartsForMorphGloss over-peels lexeme letters ('his receive'); data-mgl kept for auditing
-      detailHtml += '<div style="direction:ltr;margin-bottom:6px;font-size:0.9em;color:var(--on-chrome-2)">' +
-        '<strong>Morph gloss:</strong> <span style="color:var(--on-chrome)">' + morphGloss + '</span>' +
+      detailHtml += '<div style="direction:ltr;margin-bottom:6px;font-size:0.9em;color:var(--ink-2)">' +
+        '<strong>Morph gloss:</strong> <span style="color:var(--ink)">' + morphGloss + '</span>' +
         '</div>';
     }
 
@@ -8037,7 +8037,7 @@ detailHtml += '<div class="rsc-slot">';   // RootScorecard upgrades this block w
       if (!rootMeaning && typeof strongsGloss === 'string') rootMeaning = strongsGloss;
       detailHtml += lemmaLine + '<span style="cursor:pointer;text-decoration:underline;" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">Root ' + rootDisplay + '</span> — ' + rInfo.count + ' uses in ' + verseCount + ' verses';
       if (rootMeaning) {
-        detailHtml += '<br><span style="font-style:italic;color:var(--on-chrome-2);font-size:0.9em;">' + rootMeaning + '</span>';
+        detailHtml += '<br><span style="font-style:italic;color:var(--ink-2);font-size:0.9em;">' + rootMeaning + '</span>';
       }
       // Show other forms under this root
       var formKeys = Object.keys(rInfo.forms);

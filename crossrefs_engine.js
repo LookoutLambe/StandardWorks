@@ -1131,7 +1131,7 @@
       card.className = 'xref-ref-card rsc-occ-card';
       card.style.cssText = 'cursor:pointer;border:1px solid color-mix(in srgb, var(--here-chrome) 55%, transparent);' +
         'background:color-mix(in srgb, var(--here-chrome) 10%, transparent);border-radius:10px;padding:11px 13px;margin-bottom:12px;';
-      card.innerHTML = '<div style="font-weight:700;color:var(--sw-gold,var(--here-chrome));">' +
+      card.innerHTML = '<div class="rsc-occ-title">' +
         'All ' + total + ' occurrences in ' + verses + ' verses \u2192</div>' +
         '<div style="opacity:0.75;font-size:0.85em;margin-top:2px;">' +
         'every place this root appears across the scriptures</div>';

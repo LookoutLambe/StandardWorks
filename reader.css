@@ -878,6 +878,36 @@ body #word-popup .popup-xref-direct {
   font-size: 0.9em;
 }
 
+/* ── The Study panel's two headings ───────────────────────────────────
+   Both were inline styles written by the crossrefs engine, so no
+   stylesheet could reach them, and both were chrome colours on a paper
+   panel:
+
+     "All N occurrences in N verses"  var(--sw-gold, var(--here-chrome))
+        -> --on-chrome, #ecfdf5 on white = 1.05:1. Invisible. This is the
+        gold-fallback trap: where --sw-gold is out of scope the fallback
+        fires, and the fallback is a CHROME colour.
+     "Scripture Cross-References (N)"  var(--here-chrome)
+        -> mint on near-white = 1.75:1, and it carried a hardcoded #444
+        rule underneath it from the navy era.
+
+   Paper takes --here. The rule under the heading takes the same accent
+   instead of a fixed grey. */
+#xref-panel .rsc-occ-title,
+.rsc-occ-title {
+  font-weight: 700;
+  color: var(--here) !important;
+}
+#xref-panel .xref-cat-heading,
+.xref-cat-heading {
+  font-weight: 700;
+  color: var(--here) !important;
+  margin: 12px 0 6px;
+  font-size: 0.9em;
+  border-bottom: 1px solid color-mix(in srgb, var(--here) 30%, transparent);
+  padding-bottom: 4px;
+}
+
 /* the headword block */
 body #word-popup .popup-hebrew {
   color: var(--ink) !important; font-size: var(--t-display) !important;
