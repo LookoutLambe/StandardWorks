@@ -9,7 +9,7 @@
 <script>document.documentElement.classList.add('sw-shell-pending');</script>
 <script>(function(){var h=location.hash.slice(1);if(h&&h!=='home')document.documentElement.classList.add('sw-boot');})();</script>
 <style>html.sw-boot .chapter-panel{visibility:hidden!important}html.sw-boot #main-content,html.sw-boot .page{transition:none!important}</style>
-<style>@media (prefers-reduced-motion: reduce) {  .chapter-panel.slide-left, .chapter-panel.slide-right, .chapter-panel.fade-in { animation: none !important; opacity: 1 !important; transform: none !important; }  .chapter-panel, .verse, .word-unit, .page, #main-content, .nqd-nav-btn, .nqd-chapter-now { transition: none !important; }}h1.book-title{margin-top:0}.gl.gl-nw{white-space:nowrap;max-width:none}.gl{text-wrap:pretty}</style>
+<style>h1.book-title{margin-top:0}.gl.gl-nw{white-space:nowrap;max-width:none}.gl{text-wrap:pretty}</style>
 <script>(function(){var h=(location.hostname||'').toLowerCase(),p=location.pathname.split('/').filter(Boolean),gh=h.slice(-10)==='github.io'&&p.length>0,m=gh?'manifest.github.json':'manifest.json';document.write('<link rel="manifest" href="'+m+'" id="sw-manifest-link">');})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -17,34 +17,14 @@
 <meta name="apple-mobile-web-app-title" content="כתבי הקודש">
 <title>Tanakh / Old Testament · Hebrew Interlinear Standard Works</title>
 <meta name="description" content="Hebrew Interlinear Tanakh (Old Testament) — Masoretic Text, Word-by-Word">
-<meta name="theme-color" content="#1e2233">
+<meta name="theme-color" content="var(--chrome)">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
-<link rel="stylesheet" href="nav_engine.css?v=31">
-<link rel="stylesheet" href="site_chrome.css?v=44">
-<link rel="stylesheet" href="xref_study_panel.css?v=8">
+<link rel="stylesheet" href="nav_engine.css?v=33">
+<link rel="stylesheet" href="site_chrome.css?v=46">
+<link rel="stylesheet" href="xref_study_panel.css?v=9">
+<link rel="stylesheet" href="reader.css?v=24">
 <style>
-
-
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { overflow-x: hidden; }
-
-.skip-link {
-  position: absolute; top: -100px; left: 0;
-  background: #1e2233; color: var(--sw-gold, #f4ca48);
-  padding: 10px 20px; z-index: 9999;
-  font-size: 1em; text-decoration: none;
-}
-.skip-link:focus { top: 0; }
-*:focus-visible { outline: 2px solid #c8a84e; outline-offset: 2px; }
-body.dark-mode *:focus-visible { outline-color: #d4af37; }
-
-body {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: 'David Libre', serif;
-  min-height: 100vh;
-}
+*:focus-visible { outline: 2px solid var(--here); outline-offset: 2px; }
 
 .page {
   max-width: none;
@@ -52,20 +32,14 @@ body {
   padding: 55px 24px 50px;
   padding-left: max(24px, env(safe-area-inset-left, 0px));
   padding-right: max(24px, env(safe-area-inset-right, 0px));
-  background: #faf8f2;
+  background: var(--paper);
   min-height: 100vh;
   box-shadow: none;
   position: relative;
   touch-action: manipulation;
 }
-
-.book-header { text-align: center; padding: 20px 0 10px; margin-bottom: 8px; }
 .book-title { font-size: 2.4em; font-weight: 700; color: var(--header-bg); letter-spacing: 0.04em; margin-bottom: 2px; line-height: 1.2; }
 .book-title-en { font-size: 0.6em; font-weight: 400; letter-spacing: 0.02em; }
-.book-subtitle { font-size: 1.1em; font-weight: 400; color: var(--ink-light); letter-spacing: 0.06em; }
-.ornament { text-align: center; padding: 6px 0 12px; color: var(--accent-deep, #8a6a1c); font-size: 1.2em; letter-spacing: 0.5em; }
-
-.chapter-heading { text-align: center; padding: 16px 0 20px; border-bottom: 2px solid var(--rule); margin-bottom: 24px; }
 .chapter-heading h2 { font-size: 1.6em; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
 .chapter-label-en { font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; color: var(--accent-deep); direction: ltr; letter-spacing: 0.04em; }
 .chapter-summary-en { font-family: 'David Libre', 'Georgia', serif; font-size: 0.92em; color: var(--ink); direction: ltr; line-height: 1.55; opacity: 0.9; margin-top: 10px; text-align: left; }
@@ -76,7 +50,6 @@ body {
 .verse-num { font-family: 'David Libre', serif; font-size: 1.2em; font-weight: 700; color: var(--verse-num); min-width: 30px; text-align: center; padding-top: 3px; cursor: pointer; user-select: none; flex-shrink: 0; line-height: 1.2; }
 .verse-num .verse-num-arabic { display: block; font-size: 0.55em; color: var(--ink-light); font-weight: 400; font-family: 'David Libre', 'Georgia', serif; opacity: 0.7; }
 .word-flow { display: flex; flex-wrap: wrap; gap: 1px; align-items: flex-start; flex: 1; direction: rtl; }
-.word-group { display: inline-flex; align-items: flex-start; vertical-align: top; direction: rtl; }
 
 .word-unit { display: inline-flex; flex-direction: column; align-items: center; padding: 3px 5px; border-radius: 3px; cursor: pointer; transition: background 0.15s; line-height: 1.2; user-select: none; -webkit-user-select: none; }
 .hw { font-size: 1.85em; font-weight: 500; line-height: 1.5; direction: rtl; unicode-bidi: bidi-override; white-space: nowrap; }
@@ -84,24 +57,11 @@ body {
 .gl { font-family: 'David Libre', 'Georgia', serif; font-size: 0.69em; color: var(--gloss); direction: ltr; text-align: center; white-space: normal; overflow-wrap: break-word; hyphens: none; line-height: 1.35; max-width: 96px; padding: 0 6px; font-style: normal; }
 .tl { font-family: 'David Libre', 'Georgia', serif; font-size: 0.78em; color: var(--ink-light); direction: ltr; text-align: center; white-space: nowrap; opacity: 0.7; }
 .arr { display: inline-flex; flex-direction: column; align-items: center; justify-content: flex-start; color: var(--accent-deep); font-family: 'David Libre', serif; font-style: normal; font-weight: normal; vertical-align: top; padding: 3px 0 3px; margin: 0; opacity: 1; direction: ltr; unicode-bidi: isolate; line-height: 1.2; user-select: none; -webkit-user-select: none; }
-.arr-hw { visibility: hidden; max-width: 0; font-size: 1.85em; line-height: 1.5; }
 .arr-tl { font-size: 0.95em; font-weight: normal; transform: scale(2); line-height: 1; margin-top: 4px; visibility: visible; }
-.arr-gl { font-size: 0.9em; font-weight: normal; transform: scale(2); font-style: normal; line-height: 1; margin-top: 2px; visibility: visible; }
 /* Native selection: Hebrew tier only (wrapper none + .hw text — fixes iOS selecting stacked tl/gl) */
 .word-unit .hw {
   user-select: text;
   -webkit-user-select: text;
-}
-.word-unit .gl,
-.word-unit .tl,
-.arr .arr-tl,
-.arr .arr-gl {
-  user-select: none !important;
-  -webkit-user-select: none !important;
-}
-body.english-only .word-unit .gl {
-  user-select: text !important;
-  -webkit-user-select: text !important;
 }
 .word-unit.sof + .arr { display: none; }
 .word-unit.sof .hw::after { content: ' ׃'; }
@@ -130,41 +90,8 @@ body.hide-gloss .arr-hw { font-size: 2.1em; }
 
 /* Dual mode: English + Hebrew interlinear side by side */
 .verse-english { display: none; }
-body.dual-mode .verse-english {
-  display: block;
-  order: -2;
-  flex: 1 1 0;
-  min-width: 0;
-  font-family: 'David Libre', 'Georgia', serif;
-  font-size: 0.82em;
-  line-height: 1.65;
-  color: var(--ink);
-  direction: ltr;
-  text-align: left;
-  padding: 6px 0 6px 14px;
-  border-left: 1px solid var(--rule-light);
-  opacity: 0.85;
-}
-body.dual-mode .word-flow { flex: 1 1 0; min-width: 0; direction: rtl; text-align: right; }
-body.dual-mode .verse-num { order: -1; }
-body.dual-mode .gl { display: none; }
-body.dual-mode .arr { display: none; }
-body.dual-mode .word-unit { padding-bottom: 3px; }
-body.dual-mode .hw { font-size: 1.3em; }
-
-@media (max-width: 700px) {
-  body.dual-mode .verse { flex-wrap: nowrap; }
-  body.dual-mode .verse-english {
-    flex: 0 0 35%;
-    min-width: 0;
-    border-left: 1px solid var(--rule-light);
-    padding: 4px 0 4px 6px;
-    font-size: 0.62em;
-    line-height: 1.4;
-  }
-  body.dual-mode .word-flow { flex: 1 1 0; min-width: 0; }
+body.dual-mode .hw { font-size: 1.3em; }@media (max-width: 700px) {
   body.dual-mode .hw { font-size: 1.3em; }
-  body.dual-mode .verse-num { min-width: 22px; font-size: 0.7em; }
 }
 .verse-english ::selection { background: transparent !important; color: inherit !important; }
 .verse-english ::-moz-selection { background: transparent !important; color: inherit !important; }
@@ -172,7 +99,7 @@ body.dual-mode .hw { font-size: 1.3em; }
 .verse.highlighted { background: var(--highlight); border-radius: 4px; }
 /* Persistent user highlight (does not clear on selection/copy) */
 .verse.user-highlight { background: rgba(255, 230, 140, 0.35); border-radius: 4px; }
-body.dark-mode .verse.user-highlight { background: rgba(200, 168, 78, 0.18); }
+body.dark-mode .verse.user-highlight { background: color-mix(in srgb, var(--here) 18%, transparent); }
 .verse-num.has-note::after {
   content: '•';
   display: inline-block;
@@ -187,7 +114,7 @@ body.dark-mode .verse.user-highlight { background: rgba(200, 168, 78, 0.18); }
 /* === CONTROLS === */
 .controls-top {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: #1e2233; color: #c8a84e;
+  background: var(--chrome); color: var(--here);
   display: flex; justify-content: center; align-items: center;
   padding: 6px 12px; gap: 12px; flex-wrap: wrap;
   font-family: 'David Libre', serif; font-size: 0.9em;
@@ -195,33 +122,33 @@ body.dark-mode .verse.user-highlight { background: rgba(200, 168, 78, 0.18); }
 }
 .controls-bottom {
   position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
-  background: #1e2233;
+  background: var(--chrome);
   display: flex; justify-content: center;
   padding: 3px 0; gap: 3px;
   font-family: 'David Libre', serif;
   direction: ltr;
 }
 .controls-bottom button {
-  background: transparent; border: 1px solid #3a3f55;
-  color: #8a7a4a; padding: 2px 10px; border-radius: 3px;
+  background: transparent; border: 1px solid var(--chrome-line);
+  color: var(--here); padding: 2px 10px; border-radius: 3px;
   cursor: pointer; font-family: 'David Libre', serif;
   font-size: 0.72em; line-height: 1.3; text-align: center;
   transition: all 0.15s;
 }
-.controls-bottom button:hover { background: #2a2f44; color: #c8a84e; }
-.controls-bottom button.active { background: #c8a84e; color: #1e2233; border-color: #c8a84e; font-weight: 600; }
+.controls-bottom button:hover { background: var(--surface-2); color: var(--here); }
+.controls-bottom button.active { background: var(--here); color: var(--chrome); border-color: var(--here); font-weight: 600; }
 .tools-group { display: flex; align-items: center; gap: 8px; direction: ltr; }
-.tools-group label { display: flex; align-items: center; gap: 5px; color: #8a7a4a; font-size: 0.85em; }
-.tools-group input[type="range"] { width: 60px; accent-color: #c8a84e; }
+.tools-group label { display: flex; align-items: center; gap: 5px; color: var(--here); font-size: 0.85em; }
+.tools-group input[type="range"] { width: 60px; accent-color: var(--here); }
 .label-text { font-size: 0.85em; }
 
 .nav-prev, .nav-next {
-  background: transparent; border: 1px solid #3a3f55; color: #c8a84e;
+  background: transparent; border: 1px solid var(--chrome-line); color: var(--here);
   width: 32px; height: 32px; border-radius: 4px; cursor: pointer;
   font-size: 1.1em; display: flex; align-items: center; justify-content: center;
   transition: all 0.15s;
 }
-.nav-prev:hover:not(:disabled), .nav-next:hover:not(:disabled) { background: #2a2f44; }
+.nav-prev:hover:not(:disabled), .nav-next:hover:not(:disabled) { background: var(--surface-2); }
 .nav-prev:disabled, .nav-next:disabled { opacity: 0.3; cursor: default; }
 
 /* === READING PROGRESS === */
@@ -234,27 +161,11 @@ body.dark-mode .verse.user-highlight { background: rgba(200, 168, 78, 0.18); }
 /* === WORD POPUP === */
 #word-popup {
   display: none; position: fixed; z-index: 300;
-  background: #fff; border: 2px solid #c8a84e;
+  background: #fff; border: 2px solid var(--here);
   border-radius: 8px; padding: 14px 18px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
   min-width: 180px; max-width: 320px;
   direction: rtl;
-}
-#word-popup .popup-close {
-  position: absolute;
-  top: max(4px, env(safe-area-inset-top, 0px));
-  right: max(8px, env(safe-area-inset-right, 0px));
-  cursor: pointer;
-  color: #888;
-  font-size: 16px;
-  padding: 10px;
-  min-width: 44px;
-  min-height: 44px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
 }
 #word-popup .popup-dismiss-mobile {
   display: none;
@@ -262,8 +173,8 @@ body.dark-mode .verse.user-highlight { background: rgba(200, 168, 78, 0.18); }
   margin-top: 12px;
   padding: 14px 16px;
   border-radius: 8px;
-  border: 1px solid #c8a84e;
-  background: rgba(200, 168, 78, 0.12);
+  border: 1px solid var(--here);
+  background: color-mix(in srgb, var(--here) 12%, transparent);
   color: #8a7028;
   font-family: 'David Libre', 'Georgia', serif;
   font-size: 1.05em;
@@ -294,7 +205,6 @@ body.dark-mode .verse.user-highlight { background: rgba(200, 168, 78, 0.18); }
   overscroll-behavior: contain; -webkit-overflow-scrolling: touch;
   border-bottom: 1px solid var(--rule); box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-#search-results.open { display: block; }
 .search-result { padding: 10px 16px; cursor: pointer; border-bottom: 1px solid var(--rule-light); direction: rtl; }
 .search-result:hover, .search-result:active { background: var(--highlight); }
 .search-result-ref { font-family: 'David Libre', 'Georgia', serif; font-size: 0.8em; color: var(--accent-deep); direction: ltr; margin-bottom: 2px; }
@@ -307,18 +217,11 @@ body.dark-mode .verse.user-highlight { background: rgba(200, 168, 78, 0.18); }
   display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
   z-index: 2000; background: rgba(0,0,0,0.7); justify-content: center; align-items: center;
 }
-#shortcuts-overlay.open { display: flex; }
-#shortcuts-overlay kbd { background: var(--bg-deep); padding: 2px 8px; border-radius: 3px; border: 1px solid var(--rule); font-family: 'David Libre', serif; font-size: 0.85em; }
-
-.nav-row { display: flex; align-items: center; gap: 12px; direction: ltr; }
-#nav-label { font-size: 1em; font-weight: 600; cursor: pointer; min-width: 100px; text-align: center; }
-#nav-label:hover { text-decoration: underline; }
 
 #dark-mode-toggle {
-  background: transparent; border: 1px solid #3a3f55; color: #c8a84e;
+  background: transparent; border: 1px solid var(--chrome-line); color: var(--here);
   padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 0.9em; transition: all 0.2s;
 }
-#dark-mode-toggle:hover { background: #2a2f44; }
 
 #nav-hint {
   position: fixed; bottom: 64px; left: 50%; transform: translateX(-50%);
@@ -328,15 +231,12 @@ body.dark-mode .verse.user-highlight { background: rgba(200, 168, 78, 0.18); }
   pointer-events: none; opacity: 0; transition: opacity 0.5s ease;
   white-space: nowrap; direction: ltr;
 }
-#nav-hint.show { opacity: 1; }
-body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
 
 /* === LANDING PAGE === */
 .landing-hero { text-align: center; padding: 40px 20px 30px; }
 .landing-hero h1 { font-size: 2.2em; color: var(--accent-deep); margin-bottom: 6px; font-weight: 700; }
 .landing-hero .subtitle-en { font-family: 'David Libre', 'Georgia', serif; font-size: 1.1em; color: var(--ink-light); letter-spacing: 0.08em; direction: ltr; }
 .landing-hero .subtitle-heb { font-size: 1.3em; color: var(--ink); margin-top: 4px; }
-.landing-divider { border: none; border-top: 2px solid var(--rule); margin: 20px auto; max-width: 200px; }
 .landing-sections { max-width: 600px; margin: 0 auto 30px; padding: 0 12px; }
 .landing-section-group { margin-bottom: 16px; }
 .landing-section-group h3 {
@@ -347,14 +247,14 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
   display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; direction: rtl;
 }
 .landing-sec-btn {
-  background: linear-gradient(170deg, #0d1a2e 0%, #162744 100%);
-  border: 1px solid #2a4060; border-radius: 4px;
+  background: linear-gradient(170deg, var(--chrome) 0%, var(--surface-2) 100%);
+  border: 1px solid var(--chrome-line); border-radius: 4px;
   padding: 6px 0; cursor: pointer; text-align: center;
   transition: all 0.2s; display: flex; flex-direction: column; align-items: center;
 }
 .landing-sec-btn:hover { transform: scale(1.05); box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-color: var(--accent); }
 .landing-sec-btn .sec-heb { font-family: 'David Libre', serif; font-size: 0.85em; font-weight: 700; color: var(--accent-deep); }
-.landing-sec-btn .sec-num { font-family: 'David Libre', 'Georgia', serif; font-size: 0.65em; color: #5a6a80; }
+.landing-sec-btn .sec-num { font-family: 'David Libre', 'Georgia', serif; font-size: 0.65em; color: var(--ink-3); }
 /* Interlinear landing — hero word-stacks + stacked book titles (matches BOM landing) */
 .hero-lis-row { display: flex; direction: rtl; justify-content: center; align-items: flex-start; gap: 26px; flex-wrap: wrap; }
 .hlw { display: inline-flex; flex-direction: column; align-items: center; }
@@ -364,7 +264,7 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
 #start-reading-btn { direction: ltr; background: var(--accent); color: #1a1a2e; border: none; padding: 12px 32px; font-family: 'David Libre', 'Georgia', serif; font-size: 1.1em; font-weight: 600; border-radius: 6px; cursor: pointer; transition: all 0.2s; letter-spacing: 0.5px; }
 #start-reading-btn:hover { filter: brightness(1.1); transform: scale(1.02); }
 .landing-section-group h3 .lsg-heb { font-size: 1.25em; color: var(--accent-deep); margin-right: 6px; }
-.landing-sec-btn .sec-tl { font-size: 0.6em; color: #8fa3c0; font-style: italic; direction: ltr; }
+.landing-sec-btn .sec-tl { font-size: 0.6em; color: var(--ink-3); font-style: italic; direction: ltr; }
 .lsg-stack { display: flex; flex-direction: column; align-items: center; gap: 1px; margin: 18px 0 8px; }
 .lsg-stack .lsg-s-heb { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--accent-deep); }
 .lsg-stack .lsg-s-tl { font-size: 0.78em; color: var(--ink-light); font-style: italic; direction: ltr; }
@@ -373,17 +273,17 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
 .landing-back { text-align: center; margin-top: 20px; }
 .landing-back a {
   font-family: 'David Libre', 'Georgia', serif;
-  background: var(--sw-gold, #f4ca48);
-  color: var(--header-bg, #1e2233);
+  background: var(--sw-gold, var(--on-chrome));
+  color: var(--header-bg, var(--chrome));
   text-decoration: none;
   font-size: 1.05em; font-weight: 600; letter-spacing: 0.03em;
-  border: 2px solid var(--header-bg, #1e2233);
+  border: 2px solid var(--header-bg, var(--chrome));
   padding: 14px 32px; border-radius: 10px;
-  box-shadow: 0 4px 14px rgba(30, 34, 51, 0.18);
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--chrome) 18%, transparent);
   transition: background 0.2s, transform 0.2s;
   direction: ltr; display: inline-block;
 }
-.landing-back a:hover { background: #fff0b8; color: var(--header-bg, #1e2233); border-color: var(--header-bg, #1e2233); transform: scale(1.02); }
+.landing-back a:hover { background: var(--on-chrome); color: var(--header-bg, var(--chrome)); border-color: var(--header-bg, var(--chrome)); transform: scale(1.02); }
 
 /* === LANDING BOOK BUTTONS === */
 .landing-book-list { display: flex; flex-direction: column; gap: 4px; margin-bottom: 20px; }
@@ -393,7 +293,7 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
   border-radius: 6px; cursor: pointer; transition: all 0.15s;
   font-family: 'David Libre', 'Georgia', serif; direction: ltr;
 }
-.landing-book-btn:hover { background: #2a3050; transform: translateX(2px); }
+.landing-book-btn:hover { background: var(--surface-2); transform: translateX(2px); }
 .landing-book-btn .book-he { font-family: 'David Libre', serif; font-size: 1.2em; direction: rtl; min-width: 120px; text-align: right; }
 .landing-book-btn .book-en { font-size: 0.95em; flex: 1; margin: 0 12px; }
 .landing-book-btn .book-ch-count { font-size: 0.75em; opacity: 0.6; white-space: nowrap; }
@@ -402,12 +302,7 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
 .chapter-panel { opacity: 1; transition: opacity 0.3s ease; }
 .chapter-panel.fade-in { animation: fadeIn 0.35s ease-out; }
 .chapter-panel.slide-right { animation: slideRight 0.3s ease-out; }
-.chapter-panel.slide-left { animation: slideLeft 0.3s ease-out; }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-@keyframes slideRight { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: none; } }
-@keyframes slideLeft { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: none; } }
-
-@media (max-width: 600px) {
+.chapter-panel.slide-left { animation: slideLeft 0.3s ease-out; }@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }@keyframes slideRight { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: none; } }@keyframes slideLeft { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: none; } }@media (max-width: 600px) {
   .page { padding: 50px 10px 45px; padding-left: max(10px, env(safe-area-inset-left, 0px)); padding-right: max(10px, env(safe-area-inset-right, 0px)); }
   .book-title { font-size: 1.8em; }
   .hw { font-size: 1.5em; } .arr-hw { font-size: 1.5em; }
@@ -417,8 +312,7 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
   .controls-bottom { flex-wrap: wrap; justify-content: center; gap: 2px; padding: 2px 5px; }
   .controls-bottom button { min-height: 28px; padding: 2px 6px; font-size: 0.7em; }
   .landing-section-grid { grid-template-columns: repeat(7, 1fr); }
-}
-@media print {
+}@media print {
   .controls-top, .controls-bottom, #reading-progress, #word-popup, #search-container, #search-results { display: none !important; }
   .page { padding: 0; }
 }
@@ -426,37 +320,19 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
 /* === DARK MODE === */
 
 body.dark-mode .tl { color: var(--gloss); }
-body.dark-mode .page { background: #1e2233; }
-body.dark-mode .controls-top, body.dark-mode .controls-bottom { background: #0d111c; }
-body.dark-mode .verse { border-color: #303648; }
 /* Dark mode renders highlights as translucent washes over the navy — the
    solid light-mode pastels would bury the light ink. !important outranks the
    painter's inline background. */
 .ann-hl { border-radius: 4px; }
-body.dark-mode #word-popup { background: #1e2233; border-color: #d4af37; color: #e8e0d0; }
-
-body.dark-mode #word-popup .popup-dismiss-mobile {
-  border-color: #d4af37;
-  color: #e8d9a8;
-  background: rgba(212, 175, 55, 0.12);
-}
-body.dark-mode .book-title { color: #d4af37; }
-body.dark-mode .book-subtitle { color: #b0a890; }
-body.dark-mode .chapter-heading h2 { color: #e8e0d0; }
-body.dark-mode #search-container { background: #1e2233; border-color: #3a4054; }
-body.dark-mode #search-input { background: #222838; color: #e8e0d0; border-color: #3a4054; }
-body.dark-mode #search-results { background: #1e2233; }
-body.dark-mode .verse.highlighted { background: rgba(200, 168, 78, 0.12); }
+body.dark-mode .verse.highlighted { background: color-mix(in srgb, var(--here) 12%, transparent); }
 body.dark-mode #search-input::placeholder { color: #6b7288; }
-body.dark-mode #search-results .search-result { color: #e8e0d0; }
-body.dark-mode #search-results .search-result:hover { background: rgba(200,168,78,0.08); }
-body.dark-mode .landing-sec-btn { background: linear-gradient(170deg, #0a0f1a 0%, #111828 100%); border-color: #303648; }
-body.dark-mode .landing-book-btn { background: #0d111c; }
-body.dark-mode .landing-book-btn:hover { background: #1c2233; }
+body.dark-mode #search-results .search-result:hover { background: color-mix(in srgb, var(--here) 8%, transparent); }
+body.dark-mode .landing-sec-btn { background: linear-gradient(170deg, var(--chrome) 0%, var(--chrome) 100%); border-color: var(--surface-1); }
+body.dark-mode .landing-book-btn { background: var(--chrome); }
+body.dark-mode .landing-book-btn:hover { background: var(--surface-2); }
 
 /* === PANEL OVERLAY === */
 #panel-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.4); z-index: 3000; }
-#panel-overlay.open { display: block; }
 
 /* === GLOSSARY PANEL === */
 #glossary-panel {
@@ -483,12 +359,10 @@ body.dark-mode .landing-book-btn:hover { background: #1c2233; }
 .glossary-category-badge { display: inline-block; font-size: 0.7em; background: var(--accent); color: #fff; padding: 1px 6px; border-radius: 10px; margin-top: 4px; }
 .glossary-category-header { font-size: 0.85em; font-weight: 700; color: var(--accent-deep); padding: 8px 0 4px; border-bottom: 1px solid var(--rule-light); margin-bottom: 6px; }
 .glossary-detail { display: none; margin-top: 8px; font-size: 0.85em; color: var(--ink-light); line-height: 1.5; direction: ltr; }
-.glossary-entry.expanded .glossary-detail { display: block; }
 .glossary-forms-list { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; direction: rtl; }
 .glossary-form-chip { display: inline-block; font-family: 'David Libre', serif; font-size: 1.1em; background: var(--bg-deep); padding: 2px 8px; border-radius: 4px; cursor: pointer; direction: rtl; }
-.glossary-form-chip:hover { background: var(--accent); color: #fff; }
 .glossary-highlight-btn { display: block; margin-top: 8px; background: var(--accent); color: #fff; border: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; }
-.glossary-highlighted { background: rgba(200,168,78,0.25) !important; border-radius: 3px; }
+.glossary-highlighted { background: color-mix(in srgb, var(--here) 25%, transparent) !important; border-radius: 3px; }
 .glossary-refs-section { margin-top: 8px; font-size: 0.85em; }
 .glossary-refs-book { margin: 2px 0; }
 .glossary-refs-book-name { font-weight: 600; }
@@ -498,10 +372,9 @@ body.dark-mode .landing-book-btn:hover { background: #1c2233; }
 .glossary-biblical-section { margin-top: 8px; }
 .glossary-biblical-ref { margin: 2px 0; }
 .glossary-biblical-ref-key { font-weight: 600; color: var(--accent-deep); }
-body.dark-mode #glossary-panel { background: #1e2233; border-color: #d4af37; }
-body.dark-mode #glossary-search { background: #222838; color: #e8e0d0; border-color: #3a4054; }
-body.dark-mode .glossary-entry { border-color: #3a4054; }
-body.dark-mode .glossary-form-chip { background: #222838; }
+body.dark-mode #glossary-panel { background: var(--chrome); border-color: var(--here-chrome); }
+body.dark-mode .glossary-entry { border-color: var(--chrome-line); }
+body.dark-mode .glossary-form-chip { background: var(--surface-1); }
 
 /* === ANNOTATIONS PANEL === */
 #annotations-panel {
@@ -514,7 +387,6 @@ body.dark-mode .glossary-form-chip { background: #222838; }
 .ann-panel-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
 .ann-panel-header h3 { font-size: 1.3em; color: var(--accent-deep); margin: 0; }
 .ann-panel-close { cursor: pointer; font-size: 1.4em; color: var(--ink-light); padding: 4px 8px; }
-.ann-tabs { display: flex; gap: 4px; margin-bottom: 12px; }
 .ann-tab { background: transparent; border: 1px solid var(--rule); color: var(--ink-light); padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; }
 .ann-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
 .ann-export-btn { background: var(--accent); color: #fff; border: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; margin-top: 12px; }
@@ -525,50 +397,47 @@ body.dark-mode .glossary-form-chip { background: #222838; }
 .ann-hl { border-radius: 2px; }
 .ann-ul { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; }
 .note-marker { color: var(--accent-deep); cursor: pointer; font-size: 0.7em; margin-right: 2px; }
-body.dark-mode #annotations-panel { background: #1e2233; border-color: #d4af37; }
+body.dark-mode #annotations-panel { background: var(--chrome); border-color: var(--here-chrome); }
 
 /* === SELECTION TOOLBAR === */
 #sel-toolbar {
   display: none; position: fixed; z-index: 1300;
-  background: #1e2233; border: 1px solid #3a3f55; border-radius: 8px;
+  background: var(--chrome); border: 1px solid var(--chrome-line); border-radius: 8px;
   padding: 6px; box-shadow: 0 4px 20px rgba(0,0,0,0.4);
   flex-direction: column; gap: 4px; align-items: center;
 }
-#sel-toolbar.visible { display: flex; }
 #sel-toolbar button {
-  background: transparent; border: none; color: #c8a84e; cursor: pointer;
+  background: transparent; border: none; color: var(--here); cursor: pointer;
   font-size: 1.1em; padding: 6px 8px; border-radius: 4px; transition: background 0.15s;
   width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
   font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', emoji;
 }
-#sel-toolbar button:hover { background: #2a2f44; }
-#sel-toolbar button.active { background: #c8a84e; color: #1e2233; }
+#sel-toolbar button.active { background: var(--here); color: var(--chrome); }
 #sel-subpanel {
-  display: none; padding: 6px; border-top: 1px solid #3a3f55;
+  display: none; padding: 6px; border-top: 1px solid var(--chrome-line);
 }
 .sel-color-row { flex-wrap: wrap; max-width: 320px; display: flex; gap: 3px; margin-bottom: 3px; align-items: center; }
-.sel-color-row-label { font-size: 0.6em; color: #8a7a4a; min-width: 12px; font-family: 'David Libre', 'Georgia', serif; }
+.sel-color-row-label { font-size: 0.6em; color: var(--here); min-width: 12px; font-family: 'David Libre', 'Georgia', serif; }
 .sel-color {
   width: 22px; height: 22px; border-radius: 50%; cursor: pointer;
   border: 2px solid transparent; transition: all 0.15s;
 }
 .sel-color:hover { transform: scale(1.2); }
 .sel-color.active { border-color: #fff; box-shadow: 0 0 4px rgba(255,255,255,0.5); }
-#sel-note-row { display: none; padding: 6px; border-top: 1px solid #3a3f55; }
-#sel-note-input { width: 180px; height: 60px; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; padding: 6px; border-radius: 4px; border: 1px solid #3a3f55; background: #0a0f1a; color: #e8e0d0; resize: none; }
-#sel-note-save { background: #c8a84e; color: #1e2233; border: none; padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; margin-top: 4px; font-family: 'David Libre', 'Georgia', serif; }
+#sel-note-row { display: none; padding: 6px; border-top: 1px solid var(--chrome-line); }
+#sel-note-input { width: 180px; height: 60px; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; padding: 6px; border-radius: 4px; border: 1px solid var(--chrome-line); background: var(--chrome); color: var(--on-chrome); resize: none; }
+#sel-note-save { background: var(--here); color: var(--chrome); border: none; padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; margin-top: 4px; font-family: 'David Libre', 'Georgia', serif; }
 
 /* Selection popover — appears at the selected text (Gospel-Library pattern):
    colors first, then note/copy/share; closes when the selection collapses. */
 #hl-pop {
   display: none; position: fixed; z-index: 1300;
-  background: #1e2233; border: 1.5px solid #c8a84e; border-radius: 12px;
+  background: var(--chrome); border: 1.5px solid var(--here); border-radius: 12px;
   box-shadow: 0 8px 28px rgba(0,0,0,0.45);
   padding: 10px 12px; direction: ltr;
   -webkit-user-select: none; user-select: none;
   max-width: calc(100vw - 16px);
 }
-#hl-pop.visible { display: block; left: 50%; top: 50%; transform: translate(-50%, -50%); }
 #hl-pop .sel-color-row { gap: 9px; margin-bottom: 0; }
 #hl-pop .sel-color-row + .sel-color-row { margin-top: 6px; }
 #hl-pop .sel-color { width: 27px; height: 27px; }
@@ -577,35 +446,17 @@ body.dark-mode #annotations-panel { background: #1e2233; border-color: #d4af37; 
   border: 1px solid #5a5f75; color: #9a9ab0; font-size: 0.8em;
   display: inline-flex; align-items: center; justify-content: center;
 }
-#hl-pop .sel-eraser:hover { border-color: #dbb958; color: #dbb958; }
-#hl-pop .hl-actions {
-  display: flex; align-items: center; gap: 4px;
-  margin-top: 8px; border-top: 1px solid rgba(154,154,176,0.25); padding-top: 4px;
-}
-#hl-pop .hl-actions button {
-  background: transparent; border: none; color: #c8a84e; cursor: pointer;
-  font-size: 1.05em; padding: 6px 0; flex: 1; min-height: 44px; border-radius: 8px;
-  font-family: 'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',emoji;
-}
-#hl-pop .hl-actions button:hover, #hl-pop .hl-actions button:active { background: #2a2f44; }
+#hl-pop .sel-eraser:hover { border-color: var(--here-chrome); color: var(--here-chrome); }
 
 /* Long-press word-range selection (touch): the finger sweeps the Hebrew line
    and each word in range gets a preview tint. Native per-word selection is
    off on coarse pointers — iOS cannot drag it across the interlinear's
    per-word islands, which limited selection to a single word. */
-.word-unit.wsel .hw { background: rgba(219,185,88,0.28); border-radius: 6px; }
-@media (pointer: coarse) {
-  .word-unit .hw { -webkit-user-select: none !important; user-select: none !important; -webkit-touch-callout: none; }
-}
-#hl-pop .hl-note-row { gap: 6px; align-items: flex-end; border-top: 1px solid #3a3f55; padding-top: 6px; margin-top: 6px; }
-#hl-pop #hl-note-input { width: 200px; height: 60px; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; padding: 6px; border-radius: 4px; border: 1px solid #3a3f55; background: #0a0f1a; color: #e8e0d0; resize: none; }
-#hl-pop .hl-note-save { background: #c8a84e; color: #1e2233; border: none; padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; }
-@media (max-width: 600px) {
-  #sel-toolbar { flex-direction: row; flex-wrap: wrap; max-width: 200px; }
-  #sel-toolbar button { width: 32px; height: 32px; font-size: 1em; }
-}
-body.hide-sel-toolbar #sel-toolbar { display: none !important; pointer-events: none !important; }
-#sel-toolbar-mode-toggle.active { background: rgba(200,168,78,0.18) !important; border-color: #c8a84e !important; color: #e8d9a8 !important; }
+.word-unit.wsel .hw { background: color-mix(in srgb, var(--here-chrome) 28%, transparent); border-radius: 6px; }
+#hl-pop .hl-note-row { gap: 6px; align-items: flex-end; border-top: 1px solid var(--chrome-line); padding-top: 6px; margin-top: 6px; }
+#hl-pop #hl-note-input { width: 200px; height: 60px; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; padding: 6px; border-radius: 4px; border: 1px solid var(--chrome-line); background: var(--chrome); color: var(--on-chrome); resize: none; }
+#hl-pop .hl-note-save { background: var(--here); color: var(--chrome); border: none; padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; }
+#sel-toolbar-mode-toggle.active { background: color-mix(in srgb, var(--here) 18%, transparent) !important; border-color: var(--here) !important; color: var(--on-chrome) !important; }
 
 /* === SHARE POPUP === */
 #share-popup {
@@ -625,7 +476,7 @@ body.hide-sel-toolbar #sel-toolbar { display: none !important; pointer-events: n
 }
 .share-btn:hover { opacity: 0.85; transform: scale(1.03); }
 .share-close { position: absolute; top: 8px; right: 12px; cursor: pointer; color: var(--ink-light); font-size: 1.2em; }
-body.dark-mode #share-popup { background: #1e2233; border-color: #d4af37; }
+body.dark-mode #share-popup { background: var(--chrome); border-color: var(--here-chrome); }
 
 /* === ENHANCED POPUP (Strong's + Root) === */
 .popup-strong { font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; color: var(--ink-light); text-align: center; margin-bottom: 4px; direction: ltr; }
@@ -657,9 +508,6 @@ body.dark-mode #share-popup { background: #1e2233; border-color: #d4af37; }
 .xref-marker {
   display: none;
 }
-.xref-marker:hover { opacity: 1; text-decoration: underline; }
-body.hide-gloss .xref-marker, body.dual-mode .xref-marker { font-size: 0.5em; }
-.word-unit.xref-linked { cursor: pointer; }
 /* Underline removed 2026-08-31 (translator): the rule underlined the HEBREW
    headword, and the line runs straight through the nikkud sitting under the
    letters, making a pointed word unreadable on tap. The blue is the affordance;
@@ -671,48 +519,20 @@ body.hide-gloss .xref-marker, body.dual-mode .xref-marker { font-size: 0.5em; }
   overflow-y: auto; padding: 0; direction: ltr;
   font-family: 'David Libre', 'Georgia', serif; box-shadow: -4px 0 20px rgba(0,0,0,0.3);
 }
-.xref-panel-header {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 14px 16px; border-bottom: 1px solid var(--rule);
-  position: sticky; top: 0; background: var(--bg); z-index: 2;
-}
-.xref-panel-header h3 { margin: 0; font-size: 1.1em; color: var(--accent); font-weight: 600; }
-.xref-panel-close { cursor: pointer; font-size: 1.3em; color: var(--ink-light); padding: 2px 6px; border-radius: 4px; }
-.xref-panel-close:hover { background: rgba(200,168,78,0.15); color: var(--accent); }
-.xref-panel-word { font-weight: 600; color: var(--accent); font-size: 1.1em; padding: 12px 16px 0; }
-.xref-panel-category { font-size: 0.75em; color: var(--ink-light); text-transform: uppercase; letter-spacing: 0.5px; padding: 2px 16px 10px; border-bottom: 1px solid var(--rule-light); }
-.xref-ref-card { padding: 12px 16px; border-bottom: 1px solid var(--rule-light); }
-.xref-ref-card:last-child { border-bottom: none; }
+.xref-panel-close:hover { background: color-mix(in srgb, var(--here) 15%, transparent); color: var(--accent); }
 .xref-ref-title {
   font-weight: 600; color: var(--ink); font-size: 0.95em;
   margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;
 }
 .xref-ref-title span { color: var(--ink); }
-.xref-ref-goto {
-  font-size: 0.75em; color: var(--ink-light); cursor: pointer;
-  padding: 2px 8px; border: 1px solid var(--rule); border-radius: 3px;
-  text-decoration: none; white-space: nowrap;
-}
-.xref-ref-goto:hover { background: rgba(200,168,78,0.15); color: var(--accent); border-color: var(--accent); }
-.xref-ref-content {
-  direction: rtl; display: flex; flex-wrap: wrap; gap: 4px 8px;
-  margin: 6px 0; line-height: 1.7;
-}
-.xref-ref-word {
-  display: inline-flex; flex-direction: column; align-items: center;
-  text-align: center; padding: 2px 3px;
-}
-.xref-ref-word .hw { font-family: 'David Libre', serif; font-size: 1.05em; color: var(--ink); }
-.xref-ref-word .en { font-size: 0.65em; color: var(--gloss); direction: ltr; }
-.xref-ref-arr { display: inline-flex; align-items: center; color: var(--accent); opacity: 0.5; font-size: 1.1em; padding: 0 1px; direction: ltr; unicode-bidi: isolate; }
+.xref-ref-goto:hover { background: color-mix(in srgb, var(--here) 15%, transparent); color: var(--accent); border-color: var(--accent); }
 .xref-ref-english {
   direction: ltr; font-size: 0.88em; color: var(--ink-light);
   line-height: 1.5; margin-top: 6px; padding: 8px 10px;
-  background: rgba(200,168,78,0.05); border-radius: 4px; border-left: 3px solid var(--accent);
+  background: color-mix(in srgb, var(--here) 5%, transparent); border-radius: 4px; border-left: 3px solid var(--accent);
   text-align: left;
 }
 .xref-ref-nodata { font-size: 0.85em; color: var(--ink-light); font-style: italic; padding: 16px; }
-body.dark-mode #xref-panel { background: #1e2233; border-color: #d4af37; }
 
 
 /* === FORCE UI FONT (David Libre) === */
@@ -733,23 +553,19 @@ body, button, input, select, textarea,
      while the web renders clean.  `*` has zero specificity, so every explicit
      rule (kbd monospace, the emoji toolbar) still wins. */
   :root { font-family: 'David Libre', serif; }
-  * { font-family: inherit; }
-  button, input, select, textarea, option, optgroup, ::placeholder { font-family: inherit; }
 
 
 /* === Docked selection toolbar: RIGHT side (Hebrew is RTL), always visible while reading, no overlap === */
 #sel-toolbar{left:auto!important;right:6px!important;top:50%!important;bottom:auto!important;transform:translateY(-50%)!important;max-height:90vh;overflow-y:auto;flex-direction:column!important;flex-wrap:nowrap!important;max-width:none!important;}
 body:not(.hide-sel-toolbar) #sel-toolbar{display:flex!important;}
-#sel-toolbar-reopen{display:none;position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:1290;background:#1e2233;color:#c8a84e;border:1px solid #3a3f55;border-right:none;border-radius:10px 0 0 10px;padding:12px 7px;cursor:pointer;font-size:1.05em;line-height:1;box-shadow:-2px 2px 8px rgba(0,0,0,0.3);font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',emoji;}
-#sel-toolbar-reopen:hover{background:#2a2f44;}
+#sel-toolbar-reopen{display:none;position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:1290;background:var(--chrome);color:var(--here);border:1px solid var(--chrome-line);border-right:none;border-radius:10px 0 0 10px;padding:12px 7px;cursor:pointer;font-size:1.05em;line-height:1;box-shadow:-2px 2px 8px rgba(0,0,0,0.3);font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',emoji;}
+#sel-toolbar-reopen:hover{background:var(--surface-2);}
 body.hide-sel-toolbar #sel-toolbar-reopen{display:block;}
-body:not(.hide-sel-toolbar) #main-content{padding-right:60px!important;}
-@media (max-width:600px){body:not(.hide-sel-toolbar) #main-content{padding-right:52px!important;}}
+body:not(.hide-sel-toolbar) #main-content{padding-right:60px!important;}@media (max-width:600px) {body:not(.hide-sel-toolbar) #main-content{padding-right:52px!important;}}
 
 /* -- Dual: Hebrew and English at the same size, split 55/45, and the
       chapter summary laid out side by side the way the verses are. -- */
 body.dual-mode .verse-english { font-size: 0.85em; flex: 45 1 0; }
-body.dual-mode .word-flow     { flex: 55 1 0; }
 /* Phones: side by side, each column was about 140 px (14 characters of
    English per line). Stack instead: the Hebrew block first, its English
    under it, full width. */
@@ -775,7 +591,6 @@ body.dual-mode .word-flow     { flex: 55 1 0; }
     padding-top: 8px;
   }
 }
-body.dual-mode .hw            { font-size: 1em; }
 body.dual-mode .colophon .word-unit .hw { font-size: 1em; }
 
 body.dual-mode .chapter-heading { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0 14px; }
@@ -789,8 +604,7 @@ body.dual-mode .chapter-heading > .chapter-summary-en {
   order: 1; flex: 45 1 0; direction: ltr; text-align: left; padding-left: 14px;
   border-left: 1px solid var(--rule-light);
 }
-body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direction: rtl; text-align: right; }
-@media (max-width: 700px) {
+body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direction: rtl; text-align: right; }@media (max-width: 700px) {
   body.dual-mode .chapter-heading > .chapter-summary-en { font-size: 0.78em; padding-right: 8px; }
   body.dual-mode .chapter-heading > .chapter-summary-he { font-size: 0.9em; }
 }
@@ -823,14 +637,14 @@ body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direct
 <!-- Selection Toolbar -->
 <div id="sel-toolbar">
   <button id="sel-btn-close" onclick="toggleFloatingSelToolbar(event)" title="Hide tools — reopen from the tab at the screen edge" aria-label="Hide study tools">✕</button>
-  <button id="sel-btn-highlight" onclick="selToolbarToggleColors()" title="Highlight" aria-label="Highlight">🖍</button>
+  <button id="sel-btn-highlight" onclick="selToolbarToggleColors()" title="Highlight" aria-label="Highlight"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4l5 5L9 20H4v-5z"/></svg></button>
   <button id="sel-btn-note" onclick="selToolbarOpenNote()" title="Note" aria-label="Note">✎</button>
-  <button id="sel-btn-copy" onclick="selToolbarCopy()" title="Copy" aria-label="Copy">📋</button>
+  <button id="sel-btn-copy" onclick="selToolbarCopy()" title="Copy" aria-label="Copy"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="4" width="12" height="16" rx="2"/><path d="M16 4V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v1"/><path d="M4 8v12a2 2 0 0 0 2 2h8"/></svg></button>
   <button id="sel-btn-share" onclick="selToolbarShare()" title="Share" aria-label="Share">↗</button>
-  <button id="sel-btn-delete" onclick="selToolbarClearAll()" title="Clear" aria-label="Clear annotations">🗑</button>
-  <button id="sel-btn-xref" onclick="selToolbarXref()" title="Cross-References" aria-label="Cross-references">🔗</button>
-  <button id="sel-btn-glossary" onclick="closePopup();openGlossary()" title="Glossary" aria-label="Glossary">📖</button>
-  <button id="sel-btn-annotations" onclick="openAnnotationsPanel()" title="Annotations" aria-label="Annotations">📝</button>
+  <button id="sel-btn-delete" onclick="selToolbarClearAll()" title="Clear" aria-label="Clear annotations"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/></svg></button>
+  <button id="sel-btn-xref" onclick="selToolbarXref()" title="Cross-References" aria-label="Cross-references"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l2-2a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 0 0 7 7l1-1"/></svg></button>
+  <button id="sel-btn-glossary" onclick="closePopup();openGlossary()" title="Glossary" aria-label="Glossary"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6v14"/><path d="M3 5h6a3 3 0 0 1 3 3M21 5h-6a3 3 0 0 0-3 3"/><path d="M3 5v13h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6V5"/></svg></button>
+  <button id="sel-btn-annotations" onclick="openAnnotationsPanel()" title="Annotations" aria-label="Annotations"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M14 4l6 6L9 21H3v-6z"/></svg></button>
   <div id="sel-subpanel">
     <div class="sel-color-row">
       <span class="sel-color-row-label">HL</span>
@@ -896,7 +710,7 @@ body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direct
 <!-- Glossary Panel -->
 <div id="glossary-panel" role="dialog" aria-label="Glossary">
   <div class="glossary-header">
-    <h3>📖 Root Glossary</h3>
+    <h3><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6v14"/><path d="M3 5h6a3 3 0 0 1 3 3M21 5h-6a3 3 0 0 0-3 3"/><path d="M3 5v13h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6V5"/></svg> Root Glossary</h3>
     <span class="glossary-close" onclick="closeGlossary()">✕</span>
   </div>
   <input id="glossary-search" type="text" placeholder="Search by root or meaning..." autocomplete="off">
@@ -917,7 +731,7 @@ body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direct
 <!-- Annotations Panel -->
 <div id="annotations-panel" role="dialog" aria-label="Annotations">
   <div class="ann-panel-header">
-    <h3>📝 Annotations</h3>
+    <h3><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M14 4l6 6L9 21H3v-6z"/></svg> Annotations</h3>
     <span class="ann-panel-close" onclick="closeAnnotationsPanel()">✕</span>
   </div>
   <div class="ann-tabs">
@@ -985,7 +799,7 @@ body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direct
 
 <div class="controls-top">
   <div class="nav-row">
-    <a href="index.html" style="background:transparent;border:1px solid #3a3f55;color:#c8a84e;padding:5px 10px;border-radius:3px;text-decoration:none;font-size:0.95em;line-height:1;display:flex;align-items:center;" title="Standard Works Home" aria-label="Standard Works Home">🏠</a>
+    <a href="index.html" style="background:transparent;border:1px solid var(--chrome-line);color:var(--here);padding:5px 10px;border-radius:3px;text-decoration:none;font-size:0.95em;line-height:1;display:flex;align-items:center;" title="Standard Works Home" aria-label="Standard Works Home">🏠</a>
     <button class="nav-prev" id="nav-prev" onclick="goPrev()" disabled aria-label="Previous chapter">←</button>
     <span class="nav-label-wrap">
       <span id="nav-label" tabindex="0" role="button" aria-label="Open navigation">תנ״ך ▾</span>
@@ -994,12 +808,12 @@ body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direct
   </div>
   <div class="tools-group">
     <span class="sw-size-stepper" role="group" aria-label="Font size"><span class="label-text">Size </span><button type="button" class="sw-size-btn" onclick="stepSize(-10)" aria-label="Smaller text" title="Smaller text">A<span aria-hidden="true">−</span></button><button type="button" class="sw-size-btn sw-size-btn-up" onclick="stepSize(10)" aria-label="Larger text" title="Larger text">A<span aria-hidden="true">+</span></button><input type="range" id="sizeSlider" min="70" max="150" value="100" oninput="setSize(this.value)" aria-label="Font size" hidden></span>
-    <span style="color:#3a3f55">│</span>
+    <span style="color:var(--chrome-line)">│</span>
     <button id="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
-    <button id="search-toggle" style="background:transparent;border:1px solid #3a3f55;color:#c8a84e;padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openSearch()" title="Search" aria-label="Search">🔍</button>
-    <button type="button" id="study-drawer-toggle" style="background:transparent;border:1px solid #3a3f55;color:#c8a84e;padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openXrefStudyAt('bookmarks')" title="Bookmarks, notes, refs" aria-label="Study drawer">📌</button>
-    <button type="button" id="annotations-toggle" style="background:transparent;border:1px solid #3a3f55;color:#c8a84e;padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openAnnotationsPanel()" title="Annotations" aria-label="Annotations">📝</button>
-    <button type="button" id="glossary-toggle" style="background:transparent;border:1px solid #3a3f55;color:#c8a84e;padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openGlossary()" title="Glossary" aria-label="Glossary">📖</button>
+    <button id="search-toggle" style="background:transparent;border:1px solid var(--chrome-line);color:var(--here);padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openSearch()" title="Search" aria-label="Search">🔍</button>
+    <button type="button" id="study-drawer-toggle" style="background:transparent;border:1px solid var(--chrome-line);color:var(--here);padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openXrefStudyAt('bookmarks')" title="Bookmarks, notes, refs" aria-label="Study drawer">📌</button>
+    <button type="button" id="annotations-toggle" style="background:transparent;border:1px solid var(--chrome-line);color:var(--here);padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openAnnotationsPanel()" title="Annotations" aria-label="Annotations"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M14 4l6 6L9 21H3v-6z"/></svg></button>
+    <button type="button" id="glossary-toggle" style="background:transparent;border:1px solid var(--chrome-line);color:var(--here);padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openGlossary()" title="Glossary" aria-label="Glossary"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6v14"/><path d="M3 5h6a3 3 0 0 1 3 3M21 5h-6a3 3 0 0 0-3 3"/><path d="M3 5v13h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6V5"/></svg></button>
     
   </div>
 </div>
@@ -1112,7 +926,7 @@ window.READER = {
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=2"></script>
 <script src="verse_loader.js?v=4"></script>
-<script src="root_scorecard.js?v=68"></script>
+<script src="root_scorecard.js?v=70"></script>
 <script>RootScorecard.init({ vol: 'ot', base: '' });</script>
 
 <!-- English text for dual mode -->
@@ -1128,13 +942,13 @@ window.READER = {
 <!-- Cross-reference data + engine -->
 <script src="ot_crossrefs.js"></script>
 <script>window._volumeCrossrefsData = window._otCrossrefsData;</script>
-<script src="crossrefs_engine.js?v=9"></script>
+<script src="crossrefs_engine.js?v=10"></script>
 
-<script src="reader_ui.js?v=19"></script>
+<script src="reader_ui.js?v=20"></script>
 <script src="notes_engine.js"></script>
 <script src="site_chrome.js?v=36" data-sw-volume="ot"></script>
 <script src="verse_search.js?v=3"></script>
-<script src="nav_engine.js?v=44"></script>
+<script src="nav_engine.js?v=52"></script>
 <script src="xref_study_panel.js"></script>
 <script>
 NavEngine.init({

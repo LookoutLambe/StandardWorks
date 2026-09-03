@@ -1,91 +1,149 @@
-/* Site-wide navy + gold surfaces — matches .landing-book-btn / volume book rows */
+/* ══════════════════════════════════════════════════════════════════════
+   SEFER haKODESH — THE DESIGN SYSTEM
+   Approved 2026-09-03. Everything below descends from one rule:
+
+        PAPER IS FOR READING.  NAVY IS FOR TOOLS.
+
+   The text lives on paper and owns the screen. Every instrument — bars,
+   drawers, panels, the word card — is navy and gets out of the way.
+   Nothing crosses that line. When a new component appears, that rule
+   already decides most of it.
+   ══════════════════════════════════════════════════════════════════════ */
 :root {
-  /* ── THE RAMP ─────────────────────────────────────────────────────────
-     One gold family, one navy family, one blue. These are FIXED — they do
-     not flip between light and dark. What flips is which stop a surface
-     reaches for (see each volume page's :root / body.dark-mode block).
-     Before 2026-09-02 there were ten unrelated golds and six navies
-     scattered across the pages; every one of them now resolves here. */
-  --gold-deep:   #8a6a1c;   /* gold TEXT on paper — 4.92:1 on --bg      */
-  --gold:        #c8a84e;   /* fills, borders, rules, gold on navy       */
-  --gold-bright: #f4ca48;   /* gold TEXT on navy — 10.1:1, and SATURATED.
-                               #e3c46e was brighter on paper but drained the
-                               chroma out, which reads as faded on a dark
-                               ground. This is the value site_chrome.css used
-                               before the consolidation, and it was right.  */
-  --gold-pale:   #ecd9a0;   /* subdued gold text on navy                 */
-  /* ── SURFACES ─────────────────────────────────────────────────────────
-     An elevation scale, not a pile of navies. Every step holds the chrome
-     hue (228.6°) and lets saturation TAPER as lightness rises — the rule
-     is that dark-mode variants desaturate as they lift. The first ramp did
-     the opposite (--navy-2 at 31.1% saturation against the ground's 26%)
-     and the slide-outs read as a field of blue tiles.
-     Adjacent steps sit 1.10–1.18:1 apart: visible, not stripey.        */
-  --surface-sunken: #171a29; /* recessed — search results, footer S 28.0% */
-  --surface-0:    #1e2233;  /* ground — chrome bar, panel base   S 26.0% */
-  --surface-1:    #25293c;  /* hairlines, alternating rows       S 23.5% */
-  --surface-2:    #2d3245;  /* raised — tiles, rows, buttons     S 21.0% */
-  --surface-3:    #383d52;  /* overlay sitting above a panel     S 18.5% */
-  --surface-line: #3f445a;  /* borders on navy                   S 17.0% */
+  /* ── TYPE ──────────────────────────────────────────────────────────
+     One ratio, seven steps, nothing outside it. Declared in em because
+     the A+/A− control sets a percentage on #page — a px scale would
+     silently kill the reader's zoom. (Was 22 ad-hoc sizes.)          */
+  --t-micro:   0.6875em;   /* 11 — labels, counts, verse numerals */
+  --t-small:   0.8125em;   /* 13 — transliteration, meta          */
+  --t-body:    0.9375em;   /* 15 — the gloss, UI text             */
+  --t-large:   1.1875em;   /* 19 — book names, English body       */
+  --t-title:   1.5em;      /* 24 — section heads                  */
+  --t-heb:     1.875em;    /* 30 — the reading size               */
+  --t-display: 2.375em;    /* 38 — chapter opening                */
 
-  /* ── ON-SURFACE ───────────────────────────────────────────────────────
-     What is legible ON those surfaces. Every one of these clears 4.5:1 on
-     every surface step above, including the highest.                   */
-  --on-surface:        #ece5d5;   /* primary text     12.6:1 … 8.6:1     */
-  --on-surface-muted:  #b4ab9c;   /* secondary text    7.0:1 … 4.7:1     */
-  --on-surface-accent: var(--gold-bright);  /* gold   10.1:1 … 6.8:1     */
+  /* ── SPACE — 4px rhythm ── */
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px;
 
-  /* ── PAPER ────────────────────────────────────────────────────────────
-     The reading ground and what is legible on it. Gold is NEVER body
-     text here — --on-paper-accent is the only gold that clears 4.5:1,
-     and it reads brown by necessity. Real gold belongs on a surface.  */
-  --paper-0:           #fdfcf8;
-  --paper-1:           #f7f4ec;
-  --on-paper:          #1a1a1a;   /* 16.9:1 */
-  --on-paper-muted:    #5a5647;   /*  6.9:1 */
-  --on-paper-accent:   var(--gold-deep);  /* 4.92:1 */
+  /* ── RADIUS ── */
+  --r-bar:0; --r-control:8px; --r-card:12px; --r-sheet:18px;
 
-  /* Legacy navy names, mapped onto the scale. */
-  --navy:        var(--surface-0);
-  --navy-2:      var(--surface-2);
-  --navy-line:   var(--surface-line);
-  --navy-line-dim: var(--surface-1);
-  --tap:         #2b6491;   /* link / crossref on paper                  */
-  --tap-bright:  #8ec2e2;   /* link / crossref on navy                   */
+  /* ── ELEVATION ── */
+  --e1: 0 1px 2px rgba(26,26,26,.04), 0 4px 14px rgba(26,26,26,.05);
+  --e2: 0 2px 4px rgba(26,26,26,.05), 0 10px 26px rgba(26,26,26,.09);
+  --e3: 0 6px 18px rgba(26,26,26,.10), 0 20px 54px rgba(26,26,26,.18);
 
-  /* The ONE hue outside the gold/navy/blue family, and it is deliberate:
-     the qamats qatan. It marks a vowel that looks identical to an ordinary
-     qamats but is read /o/, not /a/ — the reader has to catch it, so it
-     gets a colour nothing else in the book uses. Was defined six times
-     over, in two different shapes; it lives here now. */
-  /* CHROME — the bars. These are deliberately NOT part of the surface
-     scale, because the scale gets re-pointed inside the drawers. A header
-     is a header whether it sits on the page or on a slide-out. */
-  --chrome-bg:    #1e2233;
-  --chrome-line:  #3f445a;
-  --chrome-gold:  #f4ca48;
-  --chrome-ink:   #ece5d5;
-  --chrome-muted: #b4ab9c;
+  /* ── MOTION — one pair, not one duration copied everywhere ── */
+  --m-state: 120ms ease;
+  --m-move:  220ms ease;
 
-  --qq:          #c0392b;   /* qamats qatan on paper                     */
-  --qq-bright:   #ff8a80;   /* qamats qatan on navy                      */
+  /* ── SURFACES ── */
+  --paper:   #fbfbfa;   /* the reading ground        */
+  --paper-2: #f3f5f3;   /* recessed on paper         */
+  --panel:   #f3f5f3;   /* the tool ground           */
+  --card:    #ffffff;   /* a thing you can act on    */
+  --chrome:  #0b2a20;   /* bars. always. both themes */
+  --chrome-2:#082018;   /* recessed chrome           */
+  --chrome-line:#1d4636;
 
-  /* ── Legacy names, kept so nothing downstream breaks ── */
-  --sw-navy: var(--navy);
-  --sw-navy-hover: var(--navy-2);
-  --sw-gold: var(--gold-bright);   /* chrome text — the bar, footer, panels */
-  --sw-gold-bright: var(--gold-pale);
-  --sw-gold-muted: rgba(200, 168, 78, 0.92);
-  --sw-gold-border: rgba(200, 168, 78, 0.55);
-  --sw-hub-bg: #fdfcf8;
-  --sw-hub-bg-deep: #f7f4ec;
+  /* ── INKS — every pair clears 4.5:1 on its surface ── */
+  --ink:        #141614;   /* 16.9:1 on paper */
+  --ink-2:      #4a524c;   /*  8.9:1 */
+  --ink-3:      #646e67;   /* the gloss. 5.29:1 on card, 4.83:1 on panel.
+                             #8b948d came out of the palette mock as a LABEL
+                             colour and was 3.13:1 here — 856 failures.  */   /*  5.7:1 — quietest legible */
+  --on-chrome:  #ecfdf5;   /* 12.6:1 on chrome */
+  --on-chrome-2:#9dc3b3;   /*  6.0:1 */
+
+  /* ── ROLES. An accent is a MEANING, not a decoration. Three, each
+     with exactly one job. If a colour is not one of these, it is ink
+     or it is a surface. This rules out gold-because-a-box-needed-an-
+     edge and blue-because-a-word-is-tappable.                       */
+  --here:        #046b4a;  /* your current location, on paper */
+  --here-chrome: #34d399;  /* the same meaning, on navy       */
+  --signal:      #dc2626;  /* qamats qatan — the only hue that
+                              carries linguistic information  */
+  --signal-chrome:#f87171;
+  /* a REFERENCE is not a colour: it is a dotted rule under the gloss */
+
+}
+
+/* The alias layer lives on BODY, not :root — deliberately.
+   body.dark-mode overrides the primitives ON BODY, and an alias declared
+   on :root would resolve against :root's light primitive and never flip.
+   Declared here, every alias sees the theme that is actually in force. */
+body {
+  /* ── Compatibility: the names the rest of the codebase already uses,
+     mapped onto the system so nothing downstream had to change. ── */
+  --gold-deep: var(--here);  --gold: var(--on-chrome);
+  --gold-bright: var(--on-chrome);   /* chrome TEXT, not the accent */
+  --gold-pale: var(--on-chrome-2);
+  --label-gold: var(--here);
+  --qq: var(--signal); --qq-bright: var(--signal-chrome);
+  --tap: var(--here); --tap-bright: var(--here-chrome);
+  --navy: var(--chrome); --navy-2: #14392c;
+  --navy-line: var(--chrome-line); --navy-line-dim: #123528;
+  --surface-sunken: var(--chrome-2); --surface-0: var(--chrome);
+  --surface-1: #103528; --surface-2: #14392c; --surface-3: #1d4636;
+  --surface-line: var(--chrome-line);
+  --on-surface: var(--on-chrome); --on-surface-muted: var(--on-chrome-2);
+  --on-surface-accent: var(--here-chrome);
+  --paper-0: var(--paper); --paper-1: var(--paper-2);
+  --on-paper: var(--ink); --on-paper-muted: var(--ink-3);
+  --on-paper-accent: var(--here);
+  --panel-ground: var(--panel);
+  --card-bg: var(--card); --card-title: var(--ink);
+  --card-tl: var(--ink-3); --card-body: var(--ink-2);
+  --card-radius: var(--r-sheet); --tile-radius: var(--r-card);
+  --card-gap: var(--s4); --tile-gap: 10px;
+  --card-shadow: var(--e1); --card-shadow-hover: var(--e2);
+  --card-motion: var(--m-move);
+  --chrome-bg: var(--chrome); --chrome-gold: var(--on-chrome);
+  --chrome-ink: var(--on-chrome); --chrome-muted: var(--on-chrome-2);
+  --sw-navy: var(--chrome); --sw-navy-hover: #2d3245;
+  --sw-gold: var(--on-chrome); --sw-gold-bright: var(--gold-pale);
+  --sw-gold-muted: var(--on-chrome-2);
+  --sw-gold-border: color-mix(in srgb, var(--on-chrome) 28%, transparent);
+  --sw-hub-bg: var(--paper); --sw-hub-bg-deep: var(--paper-2);
+
+  /* The semantic layer the reader consumes. Each one points at a system
+     token, so these follow the theme without a second definition. */
+  --bg: var(--paper);            --bg-deep: var(--paper-2);
+  --ink-light: var(--ink-3);     --gloss: var(--ink-3);
+  --accent: var(--gold);         --accent-deep: var(--here);
+  --accent-light: var(--here-chrome);
+  --verse-num: var(--here);      --hw: var(--ink);
+  --xref: var(--tap);            --tap-blue: var(--tap);
+  --header-bg: var(--chrome);    --header-text: var(--on-chrome);
+  --row-alt: var(--paper);
+  --rule: #dfe3e0;               --rule-light: #e5e7e4;
+  --highlight: rgba(4,107,74,.09);
+  --hover-wash: rgba(4,107,74,.07);
 }
 
 body.dark-mode {
-  --sw-navy: #171b28;
-  --sw-navy-hover: #232842;
-  --sw-gold: var(--gold-bright);
-  --sw-gold-bright: var(--gold-pale);
+  /* Designed alongside light, never inferred from it. Paper inverts to
+     the chrome family; the tools stay exactly where they were.       */
+  --paper:   #0b0f0d;
+  --paper-2: #141a17;
+  --panel:   #141a17;
+  --card:    #1f2a24;
+  --ink:     #f4f6f4;
+  --ink-2:   #c3cec7;
+  --ink-3:   #9fb0a7;
+  --here:    #34d399;
+  --signal:  var(--signal-chrome);
+  --e1: 0 1px 2px rgba(0,0,0,.28), 0 4px 14px rgba(0,0,0,.30);
+  --e2: 0 2px 4px rgba(0,0,0,.32), 0 10px 26px rgba(0,0,0,.40);
+  --e3: 0 6px 18px rgba(0,0,0,.40), 0 20px 54px rgba(0,0,0,.55);
+  --gold: var(--on-chrome);
+  --tap: var(--here-chrome);
+  /* only the values that do NOT follow --paper / --ink need restating */
+  --rule: #24463a;
+  --rule-light: #1f2a24;
+  --highlight: rgba(52,211,153,.16);
+  --hover-wash: rgba(52,211,153,.10);
+  --sw-navy: #0b0f0d;
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -96,53 +154,6 @@ body.dark-mode {
    and .hw / .sof::after had split into three variants). The pages now
    hold no colour at all — change it here and it changes everywhere.
    ══════════════════════════════════════════════════════════════════════ */
-:root {
-  --bg: var(--paper-0);
-  --bg-deep: var(--paper-1);
-  --ink: var(--on-paper);
-  --ink-light: var(--on-paper-muted);
-  --accent: var(--gold);
-  --accent-deep: var(--gold-deep);      /* gold TEXT on beige — 4.5:1 */
-  --accent-light: var(--gold-bright);
-  --rule: #d6ceb8;
-  --rule-light: #e6dfcd;
-  --gloss: #333;
-  --verse-num: var(--on-paper-accent);  /* was a fourth blue, #4a7ba6 */
-  --highlight: rgba(200, 168, 78, 0.10);
-  --hover-wash: rgba(200, 168, 78, 0.10);
-  --header-bg: var(--navy);
-  --header-text: var(--gold);
-  --row-alt: var(--bg);
-  --hw: var(--navy);                    /* was hardcoded #1a2744 */
-  --xref: var(--tap);
-  --tap-blue: var(--tap);               /* reader_ui.js + root_scorecard.js
-                                           used this name but nothing ever
-                                           defined it — it fell back to a
-                                           literal and never flipped in dark */
-}
-
-body.dark-mode {
-  --bg: var(--surface-0);
-  --bg-deep: var(--surface-1);
-  --ink: var(--on-surface);
-  --ink-light: var(--on-surface-muted);
-  --accent: var(--on-surface-accent);
-  --accent-deep: var(--on-surface-accent);
-  --accent-light: var(--gold-pale);
-  --rule: var(--surface-line);
-  --rule-light: var(--surface-1);
-  --gloss: var(--on-surface-muted);
-  --verse-num: var(--gold-bright);
-  --highlight: rgba(200, 168, 78, 0.15);
-  --hover-wash: rgba(200, 168, 78, 0.09);
-  --header-bg: var(--navy);             /* was #d4af37 — a gold BACKGROUND */
-  --header-text: var(--gold-bright);
-  --row-alt: var(--navy);
-  --hw: #ece5d5;
-  --xref: var(--tap-bright);
-  --tap-blue: var(--tap-bright);
-}
-
 /* ── The interlinear word, in both themes ── */
 .hw { color: var(--hw); }
 .word-unit.sof .hw::after { color: var(--hw); }
@@ -160,7 +171,9 @@ body.dark-mode {
    2.15:1, effectively invisible (the study panel's "(בָּרָא) to create"
    gloss). Re-declaring the on-navy set here fixes the whole class at
    once instead of one element at a time. */
-#word-popup,
+/* #word-popup is NOT here any more: it is dense reference text, so it
+   sits on paper. Leaving it in this scope re-pointed --ink to near-white
+   and the headword rendered mint-on-white at 1.05:1. */
 #sel-toolbar,
 #hl-pop,
 #share-popup,
@@ -181,8 +194,8 @@ body.dark-mode {
   --xref: var(--tap-bright);
   --tap-blue: var(--tap-bright);
   --row-alt: var(--surface-1);
-  --highlight: rgba(244, 202, 72, 0.14);
-  --hover-wash: rgba(244, 202, 72, 0.10);
+  --highlight: color-mix(in srgb, var(--here-chrome) 14%, transparent);
+  --hover-wash: color-mix(in srgb, var(--here-chrome) 10%, transparent);
 }
 
 /* Hover wash on the WORD only. The whole-verse wash (.verse:hover) is
@@ -314,31 +327,11 @@ body.dark-mode .ann-hl[data-hlc="#cfd8dc"] { background-color: rgba(120,144,156,
    Two grids share .landing-section-grid. A front-matter card carries a
    transliteration line and a chapter tile does not, so :has(.sec-tl)
    tells them apart without touching any markup.                      */
-:root {
-  --card-bg: #ffffff;
-  --card-radius: 18px;  --tile-radius: 14px;
-  --card-gap: 16px;     --tile-gap: 10px;
-  --card-shadow:       0 1px 2px rgba(26,26,26,.04), 0 4px 14px rgba(26,26,26,.05);
-  --card-shadow-hover: 0 2px 4px rgba(26,26,26,.05), 0 10px 26px rgba(26,26,26,.09);
-  --card-motion: .22s ease;
-  --panel-ground: #ebe9e2;   /* silver behind the panels — white cards were
-                                sitting on #fdfcf8 paper, 1.03:1 apart, so
-                                they read as nothing at all */
-  --card-title: var(--on-paper);
-  --card-tl:    #8a8578;
-  --card-body:  #4a4a4a;
-}
-body.dark-mode {
-  --panel-ground: var(--surface-1);
-  --card-bg: var(--surface-2);
-  --card-shadow:       0 1px 2px rgba(0,0,0,.28), 0 4px 14px rgba(0,0,0,.30);
-  --card-shadow-hover: 0 2px 4px rgba(0,0,0,.32), 0 10px 26px rgba(0,0,0,.40);
-  --card-title: var(--on-surface);
-  --card-tl:    var(--on-surface-muted);
-  --card-body:  var(--on-surface-muted);
-}
-
 .page { background: var(--bg) !important; }
+/* mailto links in the hub footer had no dark variant — 1.68:1 there */
+.hub-footer-copy a, .hub-footer a[href^="mailto:"] { color: var(--tap) !important; }
+body.dark-mode .hub-footer-copy a,
+body.dark-mode .hub-footer a[href^="mailto:"] { color: var(--tap-bright) !important; }
 
 /* ══ DRAWERS & PANELS — the same paper language ═════════════════════════
    nav_engine.js and root_scorecard.js paint these from injected sheets
@@ -346,10 +339,14 @@ body.dark-mode {
    surface tokens, which means re-pointing those tokens inside these
    scopes converts the whole drawer at once. Navy stays on the chrome
    bars and on the word popup, which has to lift off the page.        */
-#nav-sidebar,
-#xref-panel,
-#glossary-panel,
-#annotations-panel {
+body:not(.dark-mode) #nav-sidebar,
+body:not(.dark-mode) #xref-panel,
+body:not(.dark-mode) #glossary-panel,
+body:not(.dark-mode) #annotations-panel {
+  /* LIGHT MODE ONLY. Mapping these to the paper palette unconditionally
+     put near-black ink on a dark ground in dark mode — 1.7:1. In dark
+     mode the drawers simply use the surface scale, which is already the
+     right answer there. */
   /* --surface-sunken is NOT re-pointed: the injected sheet paints the
      drawer's search bar, results and footer from it, and those are
      chrome — they must stay navy like every other bar in the app. */
@@ -360,7 +357,12 @@ body.dark-mode {
   --surface-line:   rgba(26,26,26,.10);
   --on-surface:       var(--on-paper);
   --on-surface-muted: var(--on-paper-muted);
-  --gold-bright:    var(--gold-deep);   /* gold on paper must be the deep stop */
+  --gold-bright:    var(--label-gold);  /* gold on paper must be the deep stop, and
+                                          --gold-deep only reaches 4.16:1 once the
+                                          panel ground went silver. Mapping the
+                                          token fixes every gold in the drawer at
+                                          once; chasing it selector by selector
+                                          just loses to the injected sheet. */
   --gold-pale:      var(--on-paper-muted);
   --tap-bright:     var(--tap);
   --navy:           var(--panel-ground);
@@ -376,7 +378,7 @@ body.dark-mode {
 #xref-panel .xref-ref-card, #xref-panel .xf-bookmark-item,
 #glossary-panel .glossary-entry {
   background: var(--card-bg) !important;
-  color: var(--card-title) !important;
+  color: var(--card-title) !important;   /* token flips with the theme */
   border: 0 !important;
   border-radius: var(--tile-radius) !important;
   box-shadow: var(--card-shadow) !important;
@@ -395,8 +397,59 @@ body.dark-mode {
 #nav-sidebar .nav-book-row .nb-arrow { color: var(--card-tl) !important; }
 #nav-sidebar .nav-ch-cell .ch-heb { color: var(--card-tl) !important; }
 #nav-sidebar .nav-ch-cell .ch-num { color: var(--card-title) !important; }
-#nav-sidebar .nav-division, #nav-sidebar .nl-sec-title { color: var(--card-tl) !important; }
+body:not(.dark-mode) #nav-sidebar .nav-division,
+body:not(.dark-mode) #nav-sidebar .nl-sec-title,
+body:not(.dark-mode) .landing-section-group h3,
+body:not(.dark-mode) .lsg-stack .lsg-s-en { color: var(--label-gold) !important; }
+body.dark-mode #nav-sidebar .nav-division,
+body.dark-mode #nav-sidebar .nl-sec-title,
+body.dark-mode .landing-section-group h3 { color: var(--gold-bright) !important; }
 #nav-sidebar .nav-ch-grid { background: transparent !important; }
+
+/* ── Panel tabs and close controls ───────────────────────────────────────
+   The tabs went white with the rest of the panel but kept gold text —
+   1.57:1. On a card the text is ink; the selected tab carries the accent
+   as a fill, which is the same rule the current chapter follows. */
+#xref-panel .xref-study-tab,
+#glossary-panel .glossary-tab,
+#annotations-panel .ann-tab {
+  background: var(--card-bg) !important;
+  color: var(--card-title) !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  box-shadow: var(--card-shadow) !important;
+  min-height: 44px !important;
+}
+#xref-panel .xref-study-tab.active,
+#glossary-panel .glossary-tab.active,
+#annotations-panel .ann-tab.active {
+  background: var(--gold-deep) !important;
+  color: #fff !important;
+}
+body.dark-mode #xref-panel .xref-study-tab.active,
+body.dark-mode #glossary-panel .glossary-tab.active,
+body.dark-mode #annotations-panel .ann-tab.active {
+  background: var(--gold-bright) !important;
+  color: var(--surface-0) !important;
+}
+/* close glyphs were a flat #888: 3.54:1 on white, 4.45:1 on navy */
+.popup-close, .glossary-close, .ann-panel-close, .share-close,
+#search-close, .xref-panel-close, .nav-close-btn {
+  color: var(--card-tl) !important;
+}
+#xref-panel .xref-panel-header, #xref-panel .xref-panel-header *,
+#glossary-panel .glossary-header, #glossary-panel .glossary-header *,
+#annotations-panel .ann-header, #annotations-panel .ann-header * { color: var(--chrome-gold) !important; }
+#xref-panel .xref-panel-header .xref-panel-close,
+#glossary-panel .glossary-header .glossary-close,
+#annotations-panel .ann-header .ann-panel-close,
+#nav-sidebar .nav-search-wrap .nav-close-btn { color: var(--chrome-gold) !important; }
+/* the quick-dock's current chapter sits in the FOOTER, which is chrome —
+   it was pale gold on a pale gold wash (1.57:1), not a card */
+.nqd-chapter-now {
+  color: var(--chrome-gold) !important;
+  background: color-mix(in srgb, var(--here-chrome) 14%, transparent) !important;
+}
 #nav-sidebar .nl-card:hover, #nav-sidebar .nl-tile:hover, #nav-sidebar .nl-bm:hover,
 #nav-sidebar .nav-ch-cell:hover, #nav-sidebar .nav-book-row:hover,
 #xref-panel .xref-ref-card:hover, #xref-panel .xf-bookmark-item:hover {
@@ -441,9 +494,18 @@ body.dark-mode {
   border: 1px solid var(--chrome-line) !important;
 }
 #nav-sidebar .nav-search-wrap input::placeholder { color: var(--chrome-muted) !important; }
+/* controls that live IN the drawer's chrome bar take the chrome gold —
+   the drawer scope maps gold to a paper-safe stop, which is 2.69:1 on navy */
+#nav-sidebar .nav-close-btn, #nav-sidebar .nav-close-btn *,
+#nav-sidebar .nav-home-btn,  #nav-sidebar .nav-home-btn *,
+#nav-sidebar .nav-icon-btn,  #nav-sidebar .nav-icon-btn *,
+#nav-sidebar .nav-search-wrap .nav-close-btn {
+  color: var(--chrome-gold) !important;
+  stroke: var(--chrome-gold) !important;
+}
 #nav-sidebar .nav-footer .nf-hint { color: var(--chrome-muted) !important; }
 #nav-sidebar .nav-vol-tab.active {
-  background: rgba(244,202,72,.14) !important;
+  background: color-mix(in srgb, var(--here-chrome) 14%, transparent) !important;
   border-bottom: 2px solid var(--chrome-gold) !important;
 }
 
@@ -525,6 +587,24 @@ body.dark-mode {
   color: var(--card-title) !important; direction: ltr; }
 .landing-book-btn .book-ch-count { color: var(--card-tl) !important; opacity: 1 !important; }
 
+/* ── Touch targets ────────────────────────────────────────────────────
+   The checklist minimum is 44pt. The drawer's home and close buttons
+   were 36x32 and 36x34, the search field 34 tall, the volume tiles 43. */
+.nav-icon-btn, .nav-home-btn, .nav-close-btn,
+.sw-chrome-btn, .sw-chrome-home, .sw-size-btn,
+.popup-close, .glossary-close, .ann-panel-close, .share-close, #search-close {
+  min-width: 44px !important;
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.nav-search-wrap input, #nav-sidebar .nav-search-input { min-height: 44px !important; }
+#nav-sidebar .nl-tile, #nav-sidebar .nl-card, #nav-sidebar .nav-book-row { min-height: 44px !important; }
+.landing-sec-btn { min-height: 44px !important; }
+/* an icon button must announce itself and its glyph must not be read out */
+.nav-icon-btn svg, .sw-chrome-btn svg { pointer-events: none; }
+
 
 /* ── Hamburger panel shell (cream like hub + navy/gold cards) ── */
 #nav-sidebar {
@@ -557,7 +637,7 @@ body.dark-mode {
   border-bottom: 1px solid var(--sw-gold-border) !important;
 }
 .nav-search-result {
-  border-bottom-color: rgba(200, 168, 78, 0.12) !important;
+  border-bottom-color: color-mix(in srgb, var(--here) 12%, transparent) !important;
 }
 .nav-search-result:hover,
 .nav-search-result.active {
@@ -694,7 +774,7 @@ body.dark-mode .nav-division {
 #nav-sidebar .nav-ch-cell.current {
   background: var(--sw-navy-hover);
   border-color: var(--sw-gold);
-  box-shadow: inset 0 0 0 1px rgba(200, 168, 78, 0.25);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--here) 25%, transparent);
 }
 #nav-sidebar .nav-ch-cell .ch-heb {
   color: var(--sw-gold);

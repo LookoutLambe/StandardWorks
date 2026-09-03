@@ -33,7 +33,7 @@
 }
 .xref-study-tab.active {
   border-color: var(--accent);
-  background: rgba(200, 168, 78, 0.12);
+  background: color-mix(in srgb, var(--here) 12%, transparent);
   color: var(--accent);
   font-weight: 600;
 }
@@ -92,7 +92,7 @@
 }
 .study-btn-row button:hover {
   border-color: var(--accent);
-  background: rgba(200, 168, 78, 0.1);
+  background: color-mix(in srgb, var(--here) 10%, transparent);
 }
 .xf-bookmark-item {
   border: 1px solid var(--rule-light);
@@ -105,7 +105,7 @@
 .xf-bookmark-item:first-of-type { margin-top: 4px; }
 .xf-bookmark-item:hover {
   border-color: var(--accent);
-  background: rgba(200, 168, 78, 0.08);
+  background: color-mix(in srgb, var(--here) 8%, transparent);
 }
 .xf-bookmark-item .xf-bm-title { font-size: 0.95em; color: var(--ink); }
 .xf-bookmark-item .xf-bm-heb {
@@ -145,51 +145,51 @@ body.dark-mode .study-btn-row button {
    interlinear, which is designed against that background.                    */
 
 #xref-panel .xref-panel-header {
-  background: #1e2233;
-  border-bottom: 1px solid rgba(219, 185, 88, 0.35);
+  background: var(--chrome);
+  border-bottom: 1px solid color-mix(in srgb, var(--here-chrome) 35%, transparent);
 }
-#xref-panel .xref-panel-header h3 { color: #dbb958; }
-#xref-panel .xref-panel-close { color: #dbb958; opacity: 0.85; }
+#xref-panel .xref-panel-header h3 { color: var(--here-chrome); }
+#xref-panel .xref-panel-close { color: var(--here-chrome); opacity: 0.85; }
 #xref-panel .xref-panel-close:hover {
-  background: rgba(219, 185, 88, 0.18);
-  color: #f5ebb0;
+  background: color-mix(in srgb, var(--here-chrome) 18%, transparent);
+  color: var(--on-chrome);
   opacity: 1;
 }
 
 .xref-study-tabs {
-  background: #1e2233;
-  border-bottom: 1px solid rgba(219, 185, 88, 0.28);
+  background: var(--chrome);
+  border-bottom: 1px solid color-mix(in srgb, var(--here-chrome) 28%, transparent);
   gap: 8px;                 /* adjacent touch targets need 8px between them */
   padding: 8px 10px;
 }
 .xref-study-tab {
   min-height: 44px;         /* iOS 44pt minimum */
   background: transparent;
-  border: 1px solid rgba(219, 185, 88, 0.5);
-  color: #dbb958;
+  border: 1px solid color-mix(in srgb, var(--here-chrome) 50%, transparent);
+  color: var(--here-chrome);
 }
-.xref-study-tab:hover { background: rgba(219, 185, 88, 0.14); }
+.xref-study-tab:hover { background: color-mix(in srgb, var(--here-chrome) 14%, transparent); }
 .xref-study-tab.active {
-  background: #dbb958;
-  border-color: #dbb958;
-  color: #1e2233;
+  background: var(--here-chrome);
+  border-color: var(--here-chrome);
+  color: var(--chrome);
   font-weight: 650;
 }
-#xref-panel { border-left: 2px solid #dbb958; }
+#xref-panel { border-left: 2px solid var(--here-chrome); }
 
 /* Dark mode keeps the same relationship, one step deeper */
 body.dark-mode #xref-panel .xref-panel-header,
 body.dark-mode .xref-study-tabs {
   background: #0a0a0a;
-  border-bottom-color: rgba(219, 185, 88, 0.28);
+  border-bottom-color: color-mix(in srgb, var(--here-chrome) 28%, transparent);
 }
 body.dark-mode .xref-study-tab {
   background: transparent;
-  border-color: rgba(219, 185, 88, 0.45);
-  color: #dbb958;
+  border-color: color-mix(in srgb, var(--here-chrome) 45%, transparent);
+  color: var(--here-chrome);
 }
 body.dark-mode .xref-study-tab.active {
-  background: #dbb958;
+  background: var(--here-chrome);
   color: #0a0a0a;
 }
 

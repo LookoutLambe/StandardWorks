@@ -963,7 +963,7 @@
             crossDiv.style.cssText = 'padding:4px 0;font-size:0.85em;';
             var crossLink = document.createElement('a');
             crossLink.href = crossUrl;
-            crossLink.style.cssText = 'color:var(--accent,#c8a84e);text-decoration:none;font-weight:600;';
+            crossLink.style.cssText = 'color:var(--accent,var(--here));text-decoration:none;font-weight:600;';
             crossLink.textContent = 'Open Full Chapter \u2192';
             crossDiv.appendChild(crossLink);
             card.appendChild(crossDiv);
@@ -1005,7 +1005,7 @@
             if (v) {
               v.scrollIntoView({ behavior: 'smooth', block: 'center' });
               v.style.transition = 'background 0.3s';
-              v.style.background = 'rgba(200,168,78,0.2)';
+              v.style.background = 'color-mix(in srgb, var(--here) 20%, transparent)';
               setTimeout(function() { v.style.background = ''; }, 2000);
             }
           }, 600);
@@ -1014,7 +1014,7 @@
       }
       existing.scrollIntoView({ behavior: 'smooth', block: 'center' });
       existing.style.transition = 'background 0.3s';
-      existing.style.background = 'rgba(200,168,78,0.2)';
+      existing.style.background = 'color-mix(in srgb, var(--here) 20%, transparent)';
       setTimeout(function() { existing.style.background = ''; }, 2000);
       return;
     }
@@ -1039,7 +1039,7 @@
             if (v) {
               v.scrollIntoView({ behavior: 'smooth', block: 'center' });
               v.style.transition = 'background 0.3s';
-              v.style.background = 'rgba(200,168,78,0.2)';
+              v.style.background = 'color-mix(in srgb, var(--here) 20%, transparent)';
               setTimeout(function() { v.style.background = ''; }, 2000);
             }
           }, 300);
@@ -1059,7 +1059,7 @@
         if (v) {
           v.scrollIntoView({ behavior: 'smooth', block: 'center' });
           v.style.transition = 'background 0.3s';
-          v.style.background = 'rgba(200,168,78,0.2)';
+          v.style.background = 'color-mix(in srgb, var(--here) 20%, transparent)';
           setTimeout(function() { v.style.background = ''; }, 2000);
         }
       }, 800);
@@ -1129,9 +1129,9 @@
       if (refsContainer.querySelector('.rsc-occ-card')) return;
       var card = document.createElement('div');
       card.className = 'xref-ref-card rsc-occ-card';
-      card.style.cssText = 'cursor:pointer;border:1px solid rgba(212,175,55,0.55);' +
-        'background:rgba(212,175,55,0.10);border-radius:10px;padding:11px 13px;margin-bottom:12px;';
-      card.innerHTML = '<div style="font-weight:700;color:var(--sw-gold,#d4af37);">' +
+      card.style.cssText = 'cursor:pointer;border:1px solid color-mix(in srgb, var(--here-chrome) 55%, transparent);' +
+        'background:color-mix(in srgb, var(--here-chrome) 10%, transparent);border-radius:10px;padding:11px 13px;margin-bottom:12px;';
+      card.innerHTML = '<div style="font-weight:700;color:var(--sw-gold,var(--here-chrome));">' +
         'All ' + total + ' occurrences in ' + verses + ' verses \u2192</div>' +
         '<div style="opacity:0.75;font-size:0.85em;margin-top:2px;">' +
         'every place this root appears across the scriptures</div>';
@@ -1200,7 +1200,7 @@
           cDiv.style.cssText = 'padding:4px 0;font-size:0.85em;';
           var cLink = document.createElement('a');
           cLink.href = cUrl;
-          cLink.style.cssText = 'color:var(--accent,#c8a84e);text-decoration:none;font-weight:600;';
+          cLink.style.cssText = 'color:var(--accent,var(--here));text-decoration:none;font-weight:600;';
           cLink.textContent = 'Open Full Chapter \u2192';
           cDiv.appendChild(cLink);
           card.appendChild(cDiv);

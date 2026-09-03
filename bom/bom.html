@@ -43,7 +43,7 @@
 }
 </script>
 <script>(function(){var h=(location.hostname||'').toLowerCase(),p=location.pathname.split('/').filter(Boolean),gh=h.slice(-10)==='github.io',base=gh&&p.length?location.origin+'/'+p[0]:location.origin,root=(h==='sefermormon.com'?'https://sefermormon.com':base).replace(/\/$/,''),page=root+'/bom/bom.html',c=document.getElementById('canonical-link');if(c)c.href=page;var o=document.querySelector('meta[property="og:url"]');if(o)o.content=page;})();</script>
-<meta name="theme-color" content="#1e2233">
+<meta name="theme-color" content="var(--chrome)">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="כתבי הקודש">
@@ -51,40 +51,27 @@
 <link rel="icon" type="image/png" sizes="192x192" href="../icons/icon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="../icons/icon-180.png">
 <link rel="apple-touch-icon" href="../icons/icon-192.png">
-<link rel="stylesheet" href="../nav_engine.css?v=31">
-<link rel="stylesheet" href="../site_chrome.css?v=44">
-<link rel="stylesheet" href="../xref_study_panel.css?v=8">
+<link rel="stylesheet" href="../nav_engine.css?v=33">
+<link rel="stylesheet" href="../site_chrome.css?v=46">
+<link rel="stylesheet" href="../xref_study_panel.css?v=9">
+<link rel="stylesheet" href="../reader.css?v=24">
 <style>
-
-
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { overflow-x: hidden; }
 
 /* Skip-to-content link (screen reader / keyboard) */
 .skip-link {
   position: absolute;
   top: -100px;
   left: 0;
-  background: #1e2233;
-  color: var(--sw-gold, #f4ca48);
+  background: var(--chrome);
+  color: var(--sw-gold, var(--on-chrome));
   padding: 10px 20px;
   z-index: 9999;
   font-size: 1em;
   text-decoration: none;
 }
-.skip-link:focus { top: 0; }
 
 /* Focus visible ring for keyboard navigation */
-*:focus-visible { outline: 2px solid #dbb958; outline-offset: 2px; }
-body.dark-mode *:focus-visible { outline-color: #d4af37; }
-
-body {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: 'David Libre', serif;
-  min-height: 100vh;
-}
+*:focus-visible { outline: 2px solid var(--here-chrome); outline-offset: 2px; }
 
 /* Collapsed footer: mode bar hidden by nav_engine (.reader-footer-hidden); do not add extra page buffer here */
 body.hide-bottom-bar #sw-reader-footer .controls-bottom,
@@ -98,7 +85,7 @@ body.hide-bottom-bar .controls-bottom.sw-footer-modes {
   padding: 55px 24px 50px;
   padding-left: max(24px, env(safe-area-inset-left, 0px));
   padding-right: max(24px, env(safe-area-inset-right, 0px));
-  background: #faf8f2;
+  background: var(--paper);
   min-height: 100vh;
   box-shadow: none;
   position: relative;
@@ -112,40 +99,12 @@ body.hide-bottom-bar .controls-bottom.sw-footer-modes {
   pointer-events: none;
 }
 
-.book-header {
-  text-align: center;
-  padding: 20px 0 10px;
-  margin-bottom: 8px;
-}
-
 .book-title {
   font-size: 2.4em;
   font-weight: 700;
   color: var(--header-bg);
   letter-spacing: 0.04em;
   margin: 0 0 2px;
-}
-
-.book-subtitle {
-  font-size: 1.1em;
-  font-weight: 400;
-  color: var(--ink-light);
-  letter-spacing: 0.06em;
-}
-
-.ornament {
-  text-align: center;
-  padding: 6px 0 12px;
-  color: var(--accent-deep, #8a6a1c);
-  font-size: 1.2em;
-  letter-spacing: 0.5em;
-}
-
-.chapter-heading {
-  text-align: center;
-  padding: 16px 0 20px;
-  border-bottom: 2px solid var(--rule);
-  margin-bottom: 24px;
 }
 
 .chapter-heading h2 {
@@ -386,29 +345,11 @@ body.hide-translit .tl { display: none; }
   -webkit-user-select: text;
   touch-action: manipulation;
   -webkit-touch-callout: default;
-}
-@media (max-width: 900px) {
+}@media (max-width: 900px) {
   #page .word-flow,
   #page .word-unit .hw {
     touch-action: manipulation !important;
   }
-}
-.word-unit .gl,
-.word-unit .tl,
-.arr .arr-tl,
-.arr .arr-gl {
-  user-select: none !important;
-  -webkit-user-select: none !important;
-}
-body.english-only .word-unit .gl {
-  user-select: text !important;
-  -webkit-user-select: text !important;
-}
-.word-group {
-  display: inline-flex;
-  align-items: flex-start;
-  vertical-align: top;
-  direction: rtl;
 }
 .arr {
   display: inline-flex;
@@ -428,9 +369,7 @@ body.english-only .word-unit .gl {
   user-select: none;
   -webkit-user-select: none;
 }
-.arr-hw { visibility: hidden; max-width: 0; font-size: 1.85em; line-height: 1.5; }
 .arr-tl { font-size: 0.95em; font-weight: normal; transform: scale(2); line-height: 1; margin-top: 4px; visibility: visible; }
-.arr-gl { font-size: 0.9em; font-weight: normal; transform: scale(2); font-style: normal; line-height: 1; margin-top: 2px; visibility: visible; }
 body.hide-translit .arr-tl { display: none; }
 body.hide-gloss .arr-gl { display: none; }
 body.hide-gloss.hide-translit .arr { display: none; }
@@ -445,8 +384,8 @@ body.hide-gloss.hide-translit .arr { display: none; }
   top: 0;
   left: 0;
   right: 0;
-  background: #1e2233;
-  color: #dbb958;
+  background: var(--chrome);
+  color: var(--here-chrome);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -462,8 +401,8 @@ body.hide-gloss.hide-translit .arr { display: none; }
   bottom: 0;
   left: 0;
   right: 0;
-  background: #1e2233;
-  color: #dbb958;
+  background: var(--chrome);
+  color: var(--here-chrome);
   display: flex;
   direction: ltr;
   justify-content: center;
@@ -476,8 +415,8 @@ body.hide-gloss.hide-translit .arr { display: none; }
 }
 .controls-top .nav-prev, .controls-top .nav-next {
   background: transparent;
-  border: 1px solid #dbb958;
-  color: #dbb958;
+  border: 1px solid var(--here-chrome);
+  color: var(--here-chrome);
   padding: 5px 10px;
   border-radius: 3px;
   cursor: pointer;
@@ -487,7 +426,7 @@ body.hide-gloss.hide-translit .arr { display: none; }
   direction: rtl;
 }
 .controls-top .nav-prev:hover, .controls-top .nav-next:hover {
-  background: #2a2f44;
+  background: var(--surface-2);
   color: #fff;
 }
 .controls-top .nav-prev:disabled, .controls-top .nav-next:disabled {
@@ -503,8 +442,7 @@ body.hide-gloss.hide-translit .arr { display: none; }
   overflow-y: visible;
   -webkit-overflow-scrolling: touch;
   direction: ltr;
-}
-@media (max-width: 600px) {
+}@media (max-width: 600px) {
   .controls-top {
     gap: 3px;
     padding: max(3px, env(safe-area-inset-top, 0px)) max(5px, env(safe-area-inset-left, 0px)) 3px max(5px, env(safe-area-inset-right, 0px));
@@ -559,8 +497,8 @@ body.hide-gloss.hide-translit .arr { display: none; }
 
 .controls-top button, .controls-bottom button {
   background: transparent;
-  border: 1px solid #3a3f55;
-  color: #dbb958;
+  border: 1px solid var(--chrome-line);
+  color: var(--here-chrome);
   padding: 3px 10px;
   border-radius: 3px;
   cursor: pointer;
@@ -572,7 +510,7 @@ body.hide-gloss.hide-translit .arr { display: none; }
 }
 
 .controls-top button:hover, .controls-bottom button:hover {
-  background: #2a2f44;
+  background: var(--surface-2);
   border-color: var(--accent);
   color: #fff;
 }
@@ -580,7 +518,7 @@ body.hide-gloss.hide-translit .arr { display: none; }
 .controls-bottom button.active {
   background: var(--accent);
   border-color: var(--accent);
-  color: #1e2233;
+  color: var(--chrome);
   font-weight: 600;
 }
 
@@ -615,26 +553,6 @@ body.english-only .word-unit { padding: 2px 1px 4px; }
 
 /* Dual mode: official English + Hebrew interlinear side by side */
 .verse-english { display: none; }
-body.dual-mode .verse-english {
-  display: block;
-  order: -2;
-  flex: 1 1 0;
-  min-width: 0;
-  font-family: 'David Libre', 'Georgia', serif;
-  font-size: 0.82em;
-  line-height: 1.65;
-  color: var(--ink);
-  direction: ltr;
-  text-align: left;
-  padding: 6px 0 6px 14px;
-  border-left: 1px solid var(--rule-light);
-  opacity: 0.85;
-}
-body.dual-mode .word-flow { flex: 1 1 0; min-width: 0; direction: rtl; text-align: right; }
-body.dual-mode .verse-num { order: -1; }
-body.dual-mode .gl { display: none; }
-body.dual-mode .arr { display: none; }
-body.dual-mode .word-unit { padding-bottom: 3px; }
 body.dual-mode .hw { font-size: 1.3em; }
 /* Heading glosses follow the display mode, exactly as verse glosses do:
       hidden in Hebrew Only and in Dual (where the English summary carries
@@ -674,9 +592,7 @@ body.dual-mode .hw { font-size: 1.3em; }
     padding: 4px max(6px, env(safe-area-inset-left, 0px)) max(8px, env(safe-area-inset-bottom, 0px)) max(6px, env(safe-area-inset-right, 0px));
     font-size: 0.74em;
   }
-}
-
-@media print {
+}@media print {
   .controls-top, .controls-bottom, .chapter-nav, #reading-progress,
   #glossary-panel, #xref-panel, #annotations-panel, #search-container,
   #word-popup, #xref-popup, #share-popup, #share-overlay,
@@ -735,7 +651,7 @@ body.dual-mode .hw { font-size: 1.3em; }
   padding: 12px 14px;
   border-radius: 8px;
   border: 1px solid var(--accent);
-  background: rgba(30, 34, 51, 0.06);
+  background: color-mix(in srgb, var(--chrome) 6%, transparent);
   color: var(--ink);
   font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.82em;
@@ -751,7 +667,7 @@ body.dual-mode .hw { font-size: 1.3em; }
   border-radius: 6px;
   border: 1px solid var(--accent);
   background: var(--accent);
-  color: #1e2233;
+  color: var(--chrome);
   font-weight: 600;
   cursor: pointer;
   font-family: inherit;
@@ -792,11 +708,10 @@ body.dual-mode .hw { font-size: 1.3em; }
 }
 #start-reading-btn:hover,
 #continue-reading-btn:hover { filter: brightness(1.1); transform: scale(1.02); }
-#start-reading-btn { direction: ltr; max-width: 100%; }
-@media (max-width: 600px) { #start-reading-btn { padding: 12px 18px; font-size: 1.02em; } }
-.landing-preface-link { color: var(--accent-deep, #8a6a1c); text-decoration: none; border-bottom: 1px dotted currentColor; font-family: 'David Libre', 'Georgia', serif; }
+#start-reading-btn { direction: ltr; max-width: 100%; }@media (max-width: 600px) { #start-reading-btn { padding: 12px 18px; font-size: 1.02em; } }
+.landing-preface-link { color: var(--accent-deep, var(--here)); text-decoration: none; border-bottom: 1px dotted currentColor; font-family: 'David Libre', 'Georgia', serif; }
 .landing-preface-link:hover { border-bottom-style: solid; }
-body.dark-mode .landing-preface-link { color: #d4af37; }
+body.dark-mode .landing-preface-link { color: var(--here-chrome); }
 /* nav dropdown styles moved to nav_engine.css */
 
 /* Keyboard shortcuts overlay */
@@ -804,23 +719,6 @@ body.dark-mode .landing-preface-link { color: #d4af37; }
   display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
   z-index: 2000; background: rgba(0,0,0,0.7); justify-content: center; align-items: center;
 }
-#shortcuts-overlay.open { display: flex; }
-#shortcuts-overlay kbd { background: var(--bg-deep); padding: 2px 8px; border-radius: 3px; border: 1px solid var(--rule); font-family: 'David Libre', serif; font-size: 0.85em; }
-
-.nav-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  direction: ltr;
-}
-#nav-label {
-  font-size: 1em;
-  font-weight: 600;
-  cursor: pointer;
-  min-width: 100px;
-  text-align: center;
-}
-#nav-label:hover { text-decoration: underline; }
 
 /* === CHAPTER PAGE TRANSITION (3D page flip) === */
 .chapter-panel { opacity: 0; }
@@ -851,8 +749,6 @@ html.sw-boot #main-content, html.sw-boot .page { transition: none !important; }
 .hlw-hw { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--ink); direction: rtl; white-space: nowrap; line-height: 1.3; }
 .hlw-tl { font-size: 0.72em; color: var(--ink-light); font-style: italic; margin-top: 2px; direction: ltr; }
 .hlw-gl { font-size: 0.85em; color: var(--ink); margin-top: 2px; direction: ltr; }
-
-.landing-divider { border: none; border-top: 2px solid var(--rule); margin: 20px auto; max-width: 200px; }
 /* Landing contents — the D&C-style chapter grid */
 .landing-sections { max-width: 600px; margin: 0 auto 30px; padding: 0 12px; }
 .landing-section-group { margin-bottom: 16px; }
@@ -865,8 +761,8 @@ html.sw-boot #main-content, html.sw-boot .page { transition: none !important; }
   display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; direction: rtl;
 }
 .landing-sec-btn {
-  background: linear-gradient(170deg, #0d1a2e 0%, #162744 100%);
-  border: 1px solid #2a4060; border-radius: 4px;
+  background: linear-gradient(170deg, var(--chrome) 0%, var(--surface-2) 100%);
+  border: 1px solid var(--chrome-line); border-radius: 4px;
   padding: 6px 0; cursor: pointer; text-align: center;
   transition: all 0.2s; display: flex; flex-direction: column; align-items: center;
 }
@@ -876,15 +772,12 @@ html.sw-boot #main-content, html.sw-boot .page { transition: none !important; }
 .lsg-stack .lsg-s-heb { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--accent-deep); }
 .lsg-stack .lsg-s-tl { font-size: 0.78em; color: var(--ink-light); font-style: italic; direction: ltr; }
 .lsg-stack .lsg-s-en { font-family: 'David Libre', 'Georgia', serif; font-size: 0.92em; color: var(--ink); letter-spacing: 0.06em; direction: ltr; }
-.landing-sec-btn .sec-tl { font-size: 0.6em; color: #8fa3c0; font-style: italic; direction: ltr; }
-.landing-sec-btn .sec-num { font-family: 'David Libre', 'Georgia', serif; font-size: 0.65em; color: #8fa3c0; }
-
-@keyframes page-flip-in-left {
+.landing-sec-btn .sec-tl { font-size: 0.6em; color: var(--ink-3); font-style: italic; direction: ltr; }
+.landing-sec-btn .sec-num { font-family: 'David Libre', 'Georgia', serif; font-size: 0.65em; color: var(--ink-3); }@keyframes page-flip-in-left {
   0%   { transform: perspective(1200px) rotateY(-90deg); opacity: 0; }
   40%  { opacity: 1; }
   100% { transform: none; opacity: 1; }
-}
-@keyframes page-flip-in-right {
+}@keyframes page-flip-in-right {
   0%   { transform: perspective(1200px) rotateY(90deg); opacity: 0; }
   40%  { opacity: 1; }
   100% { transform: none; opacity: 1; }
@@ -900,7 +793,7 @@ html.sw-boot #main-content, html.sw-boot .page { transition: none !important; }
 
 /* === VERSE HIGHLIGHTING === */
 .verse.highlighted {
-  background: rgba(219, 185, 88, 0.08);
+  background: color-mix(in srgb, var(--here-chrome) 8%, transparent);
   border-radius: 6px;
   box-shadow: inset 3px 0 0 var(--accent);
   padding-left: 8px;
@@ -911,7 +804,7 @@ html.sw-boot #main-content, html.sw-boot .page { transition: none !important; }
 .verse.user-highlight {
   background: rgba(255, 230, 140, 0.30);
   border-radius: 6px;
-  box-shadow: inset 3px 0 0 rgba(219, 185, 88, 0.9);
+  box-shadow: inset 3px 0 0 color-mix(in srgb, var(--here-chrome) 90%, transparent);
   padding-left: 8px;
   margin-left: -8px;
 }
@@ -939,7 +832,7 @@ html.sw-boot #main-content, html.sw-boot .page { transition: none !important; }
   z-index: 200;
   background: #fff;
   color: var(--ink);
-  border: 2px solid #dbb958;
+  border: 2px solid var(--here-chrome);
   border-radius: 8px;
   padding: 14px 18px;
   font-family: 'David Libre', 'Georgia', serif;
@@ -988,30 +881,14 @@ html.sw-boot #main-content, html.sw-boot .page { transition: none !important; }
 #word-popup .popup-strong { font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; color: var(--ink-light); text-align: center; margin-bottom: 4px; direction: ltr; }
 #word-popup .popup-strong a { color: var(--accent); text-decoration: none; }
 #word-popup .popup-strong a:hover { text-decoration: underline; }
-#word-popup .popup-close {
-  position: absolute;
-  top: max(4px, env(safe-area-inset-top, 0px));
-  right: max(8px, env(safe-area-inset-right, 0px));
-  cursor: pointer;
-  color: #888;
-  font-size: 16px;
-  padding: 10px;
-  min-width: 44px;
-  min-height: 44px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-}
 #word-popup .popup-dismiss-mobile {
   display: none;
   width: 100%;
   margin-top: 12px;
   padding: 14px 16px;
   border-radius: 8px;
-  border: 1px solid #dbb958;
-  background: rgba(219, 185, 88, 0.12);
+  border: 1px solid var(--here-chrome);
+  background: color-mix(in srgb, var(--here-chrome) 12%, transparent);
   color: #8a7028;
   font-family: 'David Libre', 'Georgia', serif;
   font-size: 1.05em;
@@ -1064,7 +941,6 @@ html.sw-boot #main-content, html.sw-boot .page { transition: none !important; }
   align-items: center;
 }
 .ann-close { cursor: pointer; font-size: 1.3em; color: var(--ink-light); }
-.ann-tabs { display: flex; gap: 4px; margin-bottom: 12px; }
 .ann-tab {
   flex: 1;
   padding: 6px 8px;
@@ -1078,7 +954,7 @@ html.sw-boot #main-content, html.sw-boot .page { transition: none !important; }
   text-align: center;
 }
 .ann-tab:hover { background: var(--highlight); }
-.ann-tab.active { background: var(--accent); color: #1e2233; border-color: var(--accent); font-weight: 600; }
+.ann-tab.active { background: var(--accent); color: var(--chrome); border-color: var(--accent); font-weight: 600; }
 .ann-entry { padding: 10px 0; border-bottom: 1px solid var(--rule-light); }
 .ann-entry-ref {
   font-weight: 600;
@@ -1112,7 +988,7 @@ html.sw-boot #main-content, html.sw-boot .page { transition: none !important; }
   margin-top: 12px;
   padding: 5px 12px;
   background: var(--accent);
-  color: #1e2233;
+  color: var(--chrome);
   border: none;
   border-radius: 3px;
   cursor: pointer;
@@ -1125,24 +1001,22 @@ html.sw-boot #main-content, html.sw-boot .page { transition: none !important; }
   display: none; position: fixed; z-index: 1300;
   left: 8px; top: 50%; transform: translateY(-50%);
   max-height: 92vh; overflow-y: auto;
-  background: #1e2233; border: 1px solid #3a3f55; border-radius: 8px;
+  background: var(--chrome); border: 1px solid var(--chrome-line); border-radius: 8px;
   padding: 6px; box-shadow: 0 4px 20px rgba(0,0,0,0.4);
   flex-direction: column; gap: 4px; align-items: center;
 }
-#sel-toolbar.visible { display: flex; }
 /* Docked left rail: stays on the left and follows scrolling while reading a chapter */
 body.in-chapter:not(.hide-sel-toolbar) #sel-toolbar { display: flex; }
 body.in-chapter #sel-toolbar { flex-direction: column; flex-wrap: nowrap; max-width: none; }
 #sel-toolbar button {
-  background: transparent; border: none; color: #dbb958; cursor: pointer;
+  background: transparent; border: none; color: var(--here-chrome); cursor: pointer;
   font-size: 1.1em; padding: 6px 8px; border-radius: 4px; transition: background 0.15s;
   width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
   font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', emoji;
 }
-#sel-toolbar button:hover { background: #2a2f44; }
-#sel-toolbar button.active { background: #dbb958; color: #1e2233; }
+#sel-toolbar button.active { background: var(--here-chrome); color: var(--chrome); }
 .sel-subpanel {
-  display: none; padding: 6px; border-top: 1px solid #3a3f55;
+  display: none; padding: 6px; border-top: 1px solid var(--chrome-line);
 }
 .sel-row { flex-wrap: wrap; max-width: 330px; display: flex; align-items: center; gap: 6px; }
 .sel-label { font-size: 0.7em; color: #9a9ab0; min-width: 18px; font-family: 'David Libre', 'Georgia', serif; }
@@ -1157,7 +1031,7 @@ body.in-chapter #sel-toolbar { flex-direction: column; flex-wrap: nowrap; max-wi
   cursor: pointer; display: flex; align-items: center; justify-content: center;
   font-size: 0.75em; color: #999; background: transparent;
 }
-.sel-eraser:hover { border-color: #dbb958; color: #dbb958; }
+.sel-eraser:hover { border-color: var(--here-chrome); color: var(--here-chrome); }
 .sel-note-row { display: flex; gap: 6px; align-items: flex-end; border-top: 1px solid #333; padding-top: 6px; margin-top: 6px; }
 .sel-note-input {
   flex: 1; background: #161824; border: 1px solid #444; border-radius: 6px;
@@ -1178,8 +1052,8 @@ body.in-chapter #sel-toolbar { flex-direction: column; flex-wrap: nowrap; max-wi
   display: none;
   position: fixed;
   z-index: 1300;
-  background: #1e2233;
-  border: 1.5px solid #c8a84e;
+  background: var(--chrome);
+  border: 1.5px solid var(--here);
   border-radius: 12px;
   box-shadow: 0 8px 28px rgba(0,0,0,0.45);
   padding: 10px 12px;
@@ -1188,35 +1062,20 @@ body.in-chapter #sel-toolbar { flex-direction: column; flex-wrap: nowrap; max-wi
   user-select: none;
   max-width: calc(100vw - 16px);
 }
-#hl-pop.visible { display: block; left: 50%; top: 50%; transform: translate(-50%, -50%); }
 #hl-pop .sel-row { gap: 9px; }
 #hl-pop .sel-color, #hl-pop .sel-eraser { width: 27px; height: 27px; }
-#hl-pop .hl-actions {
-  display: flex; align-items: center; gap: 4px;
-  margin-top: 8px; border-top: 1px solid rgba(154,154,176,0.25); padding-top: 4px;
-}
-#hl-pop .hl-actions button {
-  background: transparent; border: none; color: #c8a84e; cursor: pointer;
-  font-size: 1.05em; padding: 6px 0; flex: 1; min-height: 44px; border-radius: 8px;
-  font-family: 'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',emoji;
-}
-#hl-pop .hl-actions button:hover, #hl-pop .hl-actions button:active { background: #2a2f44; }
 
 /* Long-press word-range selection (touch): the finger sweeps the Hebrew line
    and each word in range gets a preview tint. Native per-word selection is
    off on coarse pointers — iOS cannot drag it across the interlinear's
    per-word islands, which limited selection to a single word. */
-.word-unit.wsel .hw { background: rgba(219,185,88,0.28); border-radius: 6px; }
-@media (pointer: coarse) {
-  .word-unit .hw { -webkit-user-select: none !important; user-select: none !important; -webkit-touch-callout: none; }
-}
+.word-unit.wsel .hw { background: color-mix(in srgb, var(--here-chrome) 28%, transparent); border-radius: 6px; }
 /* Mobile: vertical two-column grid */
 @media (max-width: 600px) {
   #sel-toolbar { flex-direction: row; flex-wrap: wrap; max-width: 200px; }
   #sel-toolbar button { width: 32px; height: 32px; font-size: 1em; }
 }
-body.hide-sel-toolbar #sel-toolbar { display: none !important; pointer-events: none !important; }
-#sel-toolbar-mode-toggle.active { background: rgba(219,185,88,0.18) !important; border-color: #dbb958 !important; color: #e8d9a8 !important; }
+#sel-toolbar-mode-toggle.active { background: color-mix(in srgb, var(--here-chrome) 18%, transparent) !important; border-color: var(--here-chrome) !important; color: var(--on-chrome) !important; }
 /* Suppress iOS callout on gloss/translit only — not on .hw (blocks highlight UI) */
 .word-unit .tl,
 .word-unit .gl,
@@ -1227,7 +1086,7 @@ body.hide-sel-toolbar #sel-toolbar { display: none !important; pointer-events: n
 /* Share popup */
 #share-popup {
   display: none; position: fixed; z-index: 400; direction: ltr; text-align: left;
-  background: #1e2233; color: #e8e0d0; border: 1px solid var(--accent);
+  background: var(--chrome); color: var(--on-chrome); border: 1px solid var(--accent);
   border-radius: 10px; padding: 14px 18px; font-family: 'David Libre', 'Georgia', serif;
   box-shadow: 0 4px 24px rgba(0,0,0,0.5); max-width: 320px; min-width: 260px;
   top: 50%; left: 50%; transform: translate(-50%,-50%);
@@ -1240,18 +1099,18 @@ body.hide-sel-toolbar #sel-toolbar { display: none !important; pointer-events: n
 #share-popup .share-close:hover { color: #fff; }
 #share-popup .share-title { font-size: 0.85em; color: #9a9ab0; margin-bottom: 8px; }
 #share-popup .share-preview {
-  font-size: 0.78em; color: #c0b898; background: #161824; border-radius: 6px;
+  font-size: 0.78em; color: var(--on-chrome-2); background: #161824; border-radius: 6px;
   padding: 8px 10px; margin-bottom: 10px; max-height: 80px; overflow: hidden;
   direction: rtl; line-height: 1.4;
 }
 .share-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
 .share-btn {
   display: flex; align-items: center; gap: 6px; background: #252840;
-  border: 1px solid #3a3f55; border-radius: 8px; padding: 8px 14px;
-  color: #e8e0d0; font-family: 'David Libre', 'Georgia', serif; font-size: 0.82em;
+  border: 1px solid var(--chrome-line); border-radius: 8px; padding: 8px 14px;
+  color: var(--on-chrome); font-family: 'David Libre', 'Georgia', serif; font-size: 0.82em;
   cursor: pointer; transition: all 0.15s; min-width: 100px; justify-content: center;
 }
-.share-btn:hover { background: #2a2f44; border-color: var(--accent); color: #fff; }
+.share-btn:hover { background: var(--surface-2); border-color: var(--accent); color: #fff; }
 .share-btn .share-icon { font-size: 1.1em; }
 #share-overlay {
   display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
@@ -1278,7 +1137,6 @@ body.hide-sel-toolbar #sel-toolbar { display: none !important; pointer-events: n
   position: fixed; inset: 0; background: rgba(0,0,0,0.4);
   z-index: 3000; display: none; cursor: pointer;
 }
-#panel-overlay.open { display: block; }
 .glossary-header {
   display: flex; justify-content: space-between; align-items: center;
   padding: 16px 20px; border-bottom: 1px solid var(--rule); flex-shrink: 0;
@@ -1299,7 +1157,7 @@ body.hide-sel-toolbar #sel-toolbar { display: none !important; pointer-events: n
   font-family: 'David Libre', 'Georgia', serif; font-size: 0.8em; transition: all 0.15s;
 }
 .glossary-tab:hover { background: var(--highlight); }
-.glossary-tab.active { background: var(--accent); color: #1e2233; border-color: var(--accent); font-weight: 600; }
+.glossary-tab.active { background: var(--accent); color: var(--chrome); border-color: var(--accent); font-weight: 600; }
 .glossary-sort { font-size: 0.8em; color: var(--ink-light); }
 .glossary-sort select {
   font-family: 'David Libre', 'Georgia', serif; font-size: 1em; padding: 2px 4px;
@@ -1314,28 +1172,26 @@ body.hide-sel-toolbar #sel-toolbar { display: none !important; pointer-events: n
 .glossary-meaning { font-size: 0.95em; color: var(--ink); margin-top: 2px; font-weight: 500; }
 .glossary-category-badge { font-size: 0.7em; color: var(--accent); text-transform: uppercase; letter-spacing: 0.5px; }
 .glossary-detail { display: none; padding-top: 8px; font-size: 0.85em; color: var(--ink-light); line-height: 1.5; }
-.glossary-entry.expanded .glossary-detail { display: block; }
 .glossary-forms-list { display: flex; flex-wrap: wrap; gap: 4px; margin: 6px 0; }
 .glossary-form-chip {
   font-family: 'David Libre',serif; background: var(--highlight); padding: 2px 8px;
   border-radius: 3px; font-size: 0.95em; direction: rtl; cursor: pointer;
 }
-.glossary-form-chip:hover { background: var(--accent); color: #fff; }
 .glossary-example-link { color: var(--accent); cursor: pointer; text-decoration: none; font-weight: 500; }
 .glossary-example-link:hover { text-decoration: underline; }
-.glossary-biblical-section { margin-top: 10px; padding: 10px 12px; background: rgba(219,185,88,0.06); border-radius: 6px; border: 1px solid rgba(219,185,88,0.15); }
+.glossary-biblical-section { margin-top: 10px; padding: 10px 12px; background: color-mix(in srgb, var(--here-chrome) 6%, transparent); border-radius: 6px; border: 1px solid color-mix(in srgb, var(--here-chrome) 15%, transparent); }
 .glossary-biblical-section > strong { display: block; margin-bottom: 6px; color: var(--accent); font-size: 0.9em; }
 .glossary-biblical-list { font-size: 0.92em; line-height: 1.6; }
 .glossary-biblical-ref { margin: 3px 0; }
 .glossary-biblical-ref-key { font-weight: 600; color: var(--ink); white-space: nowrap; }
 .glossary-biblical-ref-note { color: var(--ink-light); }
-body.dark-mode .glossary-biblical-section { background: rgba(219,185,88,0.05); border-color: rgba(219,185,88,0.12); }
+body.dark-mode .glossary-biblical-section { background: color-mix(in srgb, var(--here-chrome) 5%, transparent); border-color: color-mix(in srgb, var(--here-chrome) 12%, transparent); }
 .glossary-refs-section { margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--rule-light); }
 .glossary-refs-section > strong { display: block; margin-bottom: 6px; color: var(--ink); }
 .glossary-refs-book { margin: 3px 0; line-height: 1.6; }
 .glossary-refs-book-name { font-weight: 600; color: var(--ink); margin-right: 4px; }
 .glossary-ref-link { color: var(--accent); cursor: pointer; text-decoration: none; padding: 1px 2px; border-radius: 2px; }
-.glossary-ref-link:hover { text-decoration: underline; background: rgba(219,185,88,0.12); }
+.glossary-ref-link:hover { text-decoration: underline; background: color-mix(in srgb, var(--here-chrome) 12%, transparent); }
 .glossary-refs-toggle { display: inline-block; margin-top: 6px; color: var(--accent); cursor: pointer; font-size: 0.9em; font-weight: 500; }
 .glossary-refs-toggle:hover { text-decoration: underline; }
 .glossary-refs-overflow { margin-top: 2px; }
@@ -1344,20 +1200,18 @@ body.dark-mode .glossary-biblical-section { background: rgba(219,185,88,0.05); b
   border: 1px solid var(--accent); border-radius: 3px; color: var(--accent-deep);
   cursor: pointer; font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em;
 }
-.glossary-highlight-btn:hover { background: var(--accent); color: #1e2233; }
+.glossary-highlight-btn:hover { background: var(--accent); color: var(--chrome); }
 .glossary-category-header {
   font-size: 0.75em; color: var(--accent); text-transform: uppercase; letter-spacing: 1px;
   padding: 12px 0 4px; border-bottom: 1px solid var(--rule); font-weight: 600;
 }
-.word-unit.glossary-highlighted { background: rgba(219,185,88,0.25); border-radius: 4px; box-shadow: 0 0 0 2px rgba(219,185,88,0.3); }
-body.dark-mode #glossary-panel { background: #1e2233; border-color: #3a4054; }
+.word-unit.glossary-highlighted { background: color-mix(in srgb, var(--here-chrome) 25%, transparent); border-radius: 4px; box-shadow: 0 0 0 2px color-mix(in srgb, var(--here-chrome) 30%, transparent); }
+body.dark-mode #glossary-panel { background: var(--chrome); border-color: var(--chrome-line); }
 body.dark-mode .tg-ref, body.dark-mode .tg-ref-heb { color: #8ec1ea; }
 body.dark-mode .tg-def-label { color: var(--accent); }
-body.dark-mode #glossary-search { background: #222838; color: #e8e0d0; border-color: #3a4054; }
-body.dark-mode .glossary-sort select { background: #222838; color: #e8e0d0; border-color: #3a4054; }
-body.dark-mode .glossary-entry:hover { background: rgba(219,185,88,0.08); }
-body.dark-mode .glossary-form-chip { background: #303648; }
-@media (max-width: 600px) { #glossary-panel { width: 100vw; max-width: 100vw; } }
+body.dark-mode .glossary-sort select { background: var(--surface-1); color: var(--on-chrome); border-color: var(--chrome-line); }
+body.dark-mode .glossary-entry:hover { background: color-mix(in srgb, var(--here-chrome) 8%, transparent); }
+body.dark-mode .glossary-form-chip { background: var(--surface-1); }
 
 /* === TOPICAL GUIDE === */
 .tg-page-header { text-align: center; margin-bottom: 20px; }
@@ -1396,7 +1250,7 @@ body.dark-mode .glossary-form-chip { background: #303648; }
 #tg-list { flex: 1; padding-bottom: 30px; }
 .tg-section-header {
   background: var(--navy); padding: 8px 16px;
-  font-size: 1.3em; font-weight: 700; color: #dbb958;
+  font-size: 1.3em; font-weight: 700; color: var(--here-chrome);
   font-family: 'David Libre', serif; border-bottom: 1px solid var(--navy);
 }
 .tg-entry { padding: 12px 16px; border-bottom: 1px solid var(--rule-light); cursor: pointer; }
@@ -1413,20 +1267,20 @@ body.dark-mode .glossary-form-chip { background: #303648; }
   margin: 4px 8px 8px; padding: 16px; background: var(--bg-deep);
   border-radius: 8px; border: 1px solid var(--rule-light);
 }
-.tg-def-label { font-size: 0.85em; font-weight: 700; color: var(--header-bg, #1e2233); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+.tg-def-label { font-size: 0.85em; font-weight: 700; color: var(--header-bg, var(--chrome)); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
 .tg-def-heb {
   font-family: 'David Libre', serif; font-size: 1.05em; direction: rtl; text-align: right;
   line-height: 1.7; color: var(--ink); margin-bottom: 12px;
 }
 .tg-def-en { font-size: 0.95em; line-height: 1.5; color: var(--ink); margin-bottom: 12px; }
 .tg-ref {
-  display: block; padding: 4px 10px; cursor: pointer; color: var(--tap-blue, #2e6da4);
+  display: block; padding: 4px 10px; cursor: pointer; color: var(--tap-blue, var(--here));
   font-size: 0.95em; text-decoration: underline; direction: ltr; text-align: left;
 }
 .tg-ref:hover { background: rgba(46,109,164,0.08); border-radius: 4px; }
 .tg-ref-heb {
   font-family: 'David Libre', serif; direction: rtl; unicode-bidi: isolate;
-  color: var(--tap-blue, #2e6da4); opacity: 0.8; text-decoration: none; font-size: 0.88em; margin-left: 8px;
+  color: var(--tap-blue, var(--here)); opacity: 0.8; text-decoration: none; font-size: 0.88em; margin-left: 8px;
 }
 .tg-ref-snippet { font-style: italic; color: var(--ink-light); font-size: 0.88em; text-decoration: none; }
 .tg-related-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
@@ -1434,7 +1288,7 @@ body.dark-mode .glossary-form-chip { background: #303648; }
   padding: 4px 12px; border: 1px solid var(--accent); border-radius: 14px;
   font-size: 0.85em; color: var(--accent); cursor: pointer; background: none;
 }
-.tg-related-chip:hover { background: rgba(219,185,88,0.15); }
+.tg-related-chip:hover { background: color-mix(in srgb, var(--here-chrome) 15%, transparent); }
 .tg-cat-row {
   display: flex; flex-wrap: wrap; gap: 8px; padding: 10px 0; justify-content: center;
 }
@@ -1444,12 +1298,12 @@ body.dark-mode .glossary-form-chip { background: #303648; }
   font-weight: 500;
 }
 .tg-cat-chip.active { background: var(--accent); color: #fff; }
-.tg-cat-chip:hover { background: rgba(219,185,88,0.15); }
+.tg-cat-chip:hover { background: color-mix(in srgb, var(--here-chrome) 15%, transparent); }
 .tg-cat-chip.active:hover { background: var(--accent); }
 .tg-empty { padding: 40px; text-align: center; color: var(--ink-light); font-style: italic; font-size: 1.05em; }
-body.dark-mode #tg-search { background: #222838; color: #e8e0d0; border-color: #3a4054; }
+body.dark-mode #tg-search { background: var(--surface-1); color: var(--on-chrome); border-color: var(--chrome-line); }
 body.dark-mode .tg-section-header { background: var(--navy); color: var(--gold-bright); }
-body.dark-mode .tg-expanded { background: #222838; border-color: #3a4054; }
+body.dark-mode .tg-expanded { background: var(--surface-1); border-color: var(--chrome-line); }
 
 /* === CROSS-REFERENCES === */
 .xref-marker {
@@ -1465,29 +1319,25 @@ body.dark-mode .tg-expanded { background: #222838; border-color: #3a4054; }
   opacity: 0.7;
   transition: opacity 0.2s;
 }
-.xref-marker:hover { opacity: 1; text-decoration: underline; }
-body.hide-gloss .xref-marker, body.dual-mode .xref-marker { font-size: 0.5em; }
 /* Note markers on verses */
 .note-marker {
-  display: inline-block; font-size: 0.55em; color: #dbb958; cursor: pointer;
+  display: inline-block; font-size: 0.55em; color: var(--here-chrome); cursor: pointer;
   vertical-align: super; line-height: 0; margin: 0 2px; font-family: 'David Libre', 'Georgia', serif;
   font-weight: 700; opacity: 0.8; transition: opacity 0.2s;
 }
 .note-marker:hover { opacity: 1; }
 .xref-note-card {
   padding: 14px 16px; border-bottom: 1px solid var(--rule-light);
-  border-left: 3px solid #dbb958; margin: 8px 0; background: rgba(219,185,88,0.06);
+  border-left: 3px solid var(--here-chrome); margin: 8px 0; background: color-mix(in srgb, var(--here-chrome) 6%, transparent);
 }
-.xref-note-card .xref-note-label { font-size: 0.75em; color: #dbb958; text-transform: uppercase; font-weight: 600; margin-bottom: 4px; }
+.xref-note-card .xref-note-label { font-size: 0.75em; color: var(--here-chrome); text-transform: uppercase; font-weight: 600; margin-bottom: 4px; }
 .xref-note-card .xref-note-text { font-size: 0.92em; color: var(--ink); line-height: 1.5; white-space: pre-wrap; }
 .xref-note-card .xref-note-edit { font-size: 0.8em; color: var(--accent); cursor: pointer; margin-top: 6px; display: inline-block; }
 .xref-note-card .xref-note-edit:hover { text-decoration: underline; }
-
-.word-unit.xref-linked { cursor: pointer; }
 /* Only the Topical Guide's starred (major) themes are blue in the text; a
    cross-reference marker no longer colors its word (the sup letter still opens it). */
-.word-unit.tg-major .hw { color: var(--tap-blue, #2e6da4) !important; }
-.word-unit.tg-major .gl { color: var(--tap-blue, #2e6da4) !important; }
+.word-unit.tg-major .hw { color: var(--tap-blue, var(--here)) !important; }
+.word-unit.tg-major .gl { color: var(--tap-blue, var(--here)) !important; }
 /* Underline removed 2026-08-31 (translator): the rule underlined the HEBREW
    headword, and the line runs straight through the nikkud sitting under the
    letters, making a pointed word unreadable on tap. The blue is the affordance;
@@ -1498,8 +1348,8 @@ body.hide-gloss .xref-marker, body.dual-mode .xref-marker { font-size: 0.5em; }
   display: none;
   position: fixed;
   z-index: 250;
-  background: #1e2233;
-  color: #e8e0d0;
+  background: var(--chrome);
+  color: var(--on-chrome);
   border: 1px solid var(--accent);
   border-radius: 8px;
   padding: 12px 16px;
@@ -1539,15 +1389,15 @@ body.hide-gloss .xref-marker, body.dual-mode .xref-marker { font-size: 0.5em; }
 }
 #xref-popup .xref-refs li {
   padding: 2px 0;
-  color: #c0b898;
+  color: var(--on-chrome-2);
   font-size: 0.9em;
 }
 #xref-popup .xref-refs li a {
-  color: #e8c84e;
+  color: var(--here-chrome);
   text-decoration: none;
 }
 #xref-popup .xref-refs li a:hover { text-decoration: underline; }
-body.dark-mode #xref-popup { background: #1e2233; border-color: #d4af37; color: #e8e0d0; }
+body.dark-mode #xref-popup { background: var(--chrome); border-color: var(--here-chrome); color: var(--on-chrome); }
 
 /* === CROSS-REFERENCE SLIDE PANEL === */
 #xref-panel {
@@ -1556,32 +1406,7 @@ body.dark-mode #xref-popup { background: #1e2233; border-color: #d4af37; color: 
   overflow-y: auto; padding: 0; direction: ltr;
   font-family: 'David Libre', 'Georgia', serif; box-shadow: -4px 0 20px rgba(0,0,0,0.3);
 }
-.xref-panel-header {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 14px 16px; border-bottom: 1px solid var(--rule);
-  position: sticky; top: 0; background: var(--bg); z-index: 2;
-}
-.xref-panel-header h3 {
-  margin: 0; font-size: 1.1em; color: var(--accent); font-weight: 600;
-}
-.xref-panel-close {
-  cursor: pointer; font-size: 1.3em; color: var(--ink-light);
-  padding: 2px 6px; border-radius: 4px;
-}
-.xref-panel-close:hover { background: rgba(219,185,88,0.15); color: var(--accent); }
-.xref-panel-word {
-  font-weight: 600; color: var(--accent); font-size: 1.1em;
-  padding: 12px 16px 0;
-}
-.xref-panel-category {
-  font-size: 0.75em; color: var(--ink-light); text-transform: uppercase;
-  letter-spacing: 0.5px; padding: 2px 16px 10px;
-  border-bottom: 1px solid var(--rule-light);
-}
-.xref-ref-card {
-  padding: 12px 16px; border-bottom: 1px solid var(--rule-light);
-}
-.xref-ref-card:last-child { border-bottom: none; }
+.xref-panel-close:hover { background: color-mix(in srgb, var(--here-chrome) 15%, transparent); color: var(--accent); }
 .xref-ref-title {
   font-weight: 600; color: var(--accent); font-size: 0.95em;
   margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;
@@ -1590,100 +1415,64 @@ body.dark-mode #xref-popup { background: #1e2233; border-color: #d4af37; color: 
   color: var(--accent); text-decoration: none;
 }
 .xref-ref-title a:hover { text-decoration: underline; }
-.xref-ref-goto {
-  font-size: 0.75em; color: var(--ink-light); cursor: pointer;
-  padding: 2px 8px; border: 1px solid var(--rule); border-radius: 3px;
-  text-decoration: none; white-space: nowrap;
-}
-.xref-ref-goto:hover { background: rgba(219,185,88,0.15); color: var(--accent); border-color: var(--accent); }
-.xref-ref-content {
-  direction: rtl; display: flex; flex-wrap: wrap; gap: 4px 8px;
-  margin: 6px 0; line-height: 1.7;
-}
-.xref-ref-word {
-  display: inline-flex; flex-direction: column; align-items: center;
-  text-align: center; padding: 2px 3px;
-}
-.xref-ref-word .hw { font-family: 'David Libre', serif; font-size: 1.05em; color: var(--ink); }
-.xref-ref-word .en { font-size: 0.65em; color: var(--gloss); direction: ltr; }
-.xref-ref-arr { display: inline-flex; align-items: center; color: var(--accent); opacity: 0.5; font-size: 1.1em; padding: 0 1px; direction: ltr; unicode-bidi: isolate; }
+.xref-ref-goto:hover { background: color-mix(in srgb, var(--here-chrome) 15%, transparent); color: var(--accent); border-color: var(--accent); }
 .xref-ref-english {
   direction: ltr; font-size: 0.88em; color: var(--ink-light);
   line-height: 1.5; margin-top: 6px; padding: 8px 10px;
-  background: rgba(219,185,88,0.05); border-radius: 4px; border-left: 3px solid var(--accent);
+  background: color-mix(in srgb, var(--here-chrome) 5%, transparent); border-radius: 4px; border-left: 3px solid var(--accent);
   text-align: left;
 }
 .xref-ref-nodata {
   font-size: 0.85em; color: var(--ink-light); font-style: italic;
 }
-body.dark-mode #xref-panel { background: #1e2233; border-color: #d4af37; }
-@media (max-width: 600px) { #xref-panel { width: 55%; } }
 
 /* === DARK MODE === */
 
 body.dark-mode .tl { color: var(--gloss); }
-body.dark-mode .page { background: #1e2233; }
-body.dark-mode .controls-top, body.dark-mode .controls-bottom { background: #0d111c; }
-body.dark-mode .verse { border-color: #303648; }
 /* Dark mode renders highlights as translucent washes over the navy — the
    solid light-mode pastels would bury the light ink. !important outranks the
    painter's inline background. */
 .ann-hl { border-radius: 4px; }
-body.dark-mode .book-label { color: #e8e0d0; }
-body.dark-mode #word-popup { background: #1e2233; border-color: #d4af37; color: #e8e0d0; }
-
-body.dark-mode #word-popup .popup-dismiss-mobile {
-  border-color: #d4af37;
-  color: #e8d9a8;
-  background: rgba(212, 175, 55, 0.12);
-}
-body.dark-mode .book-title { color: #d4af37; }
-body.dark-mode .book-subtitle { color: #b0a890; }
-body.dark-mode .chapter-heading h2 { color: #e8e0d0; }
+body.dark-mode .book-label { color: var(--on-chrome); }
 body.dark-mode .chapter-summary { color: #b8b0a0; }
-body.dark-mode #search-container { background: #1e2233; border-color: #3a4054; }
-body.dark-mode #search-input { background: #222838; color: #e8e0d0; border-color: #3a4054; }
-body.dark-mode #search-results { background: #1e2233; }
-body.dark-mode .verse.highlighted { background: rgba(219, 185, 88, 0.12); }
-body.dark-mode #annotations-panel { background: #1e2233; border-color: #3a4054; }
-body.dark-mode .ann-note-textarea { background: #222838; border-color: #3a4054; color: #e8e0d0; }
-body.dark-mode .ann-tab { border-color: #3a4054; color: #b0a890; }
-body.dark-mode .ann-tab.active { background: #d4af37; color: #1e2233; border-color: #d4af37; }
+body.dark-mode .verse.highlighted { background: color-mix(in srgb, var(--here-chrome) 12%, transparent); }
+body.dark-mode #annotations-panel { background: var(--chrome); border-color: var(--chrome-line); }
+body.dark-mode .ann-note-textarea { background: var(--surface-1); border-color: var(--chrome-line); color: var(--on-chrome); }
+body.dark-mode .ann-tab { border-color: var(--chrome-line); color: var(--on-chrome-2); }
+body.dark-mode .ann-tab.active { background: var(--here-chrome); color: var(--chrome); border-color: var(--here-chrome); }
 /* Front matter: inline styles need !important */
-body.dark-mode .chapter-panel h2 { color: #d4af37 !important; }
-body.dark-mode .chapter-panel h3 { color: #e8e0d0 !important; }
-body.dark-mode .chapter-panel p { color: #e8e0d0 !important; }
-body.dark-mode .chapter-panel li { color: #e8e0d0 !important; }
-body.dark-mode .chapter-panel ul { color: #e8e0d0 !important; }
-body.dark-mode .chapter-panel span { color: #e8e0d0 !important; }
-body.dark-mode .chapter-panel strong { color: #e8e0d0 !important; }
-body.dark-mode .chapter-panel hr { border-color: #3a4054 !important; }
-body.dark-mode .chapter-panel div[style*="background:var(--highlight)"] { background: #222838 !important; }
+body.dark-mode .chapter-panel h2 { color: var(--here-chrome) !important; }
+body.dark-mode .chapter-panel h3 { color: var(--on-chrome) !important; }
+body.dark-mode .chapter-panel p { color: var(--on-chrome) !important; }
+body.dark-mode .chapter-panel li { color: var(--on-chrome) !important; }
+body.dark-mode .chapter-panel ul { color: var(--on-chrome) !important; }
+body.dark-mode .chapter-panel span { color: var(--on-chrome) !important; }
+body.dark-mode .chapter-panel strong { color: var(--on-chrome) !important; }
+body.dark-mode .chapter-panel hr { border-color: var(--chrome-line) !important; }
+body.dark-mode .chapter-panel div[style*="background:var(--highlight)"] { background: var(--surface-1) !important; }
 body.dark-mode .chapter-panel span[style*="font-style:italic"][style*="color:#6b7288"] { color: #aaa !important; }
-body.dark-mode .chapter-panel span[dir="rtl"] { color: #d4af37 !important; }
+body.dark-mode .chapter-panel span[dir="rtl"] { color: var(--here-chrome) !important; }
 /* Title interlinear (section headers like מבוא המתרגם) */
-body.dark-mode .title-interlinear .tw .th { color: #d4af37; }
-body.dark-mode .title-interlinear .tw .tg { color: #b0a890; }
+body.dark-mode .title-interlinear .tw .th { color: var(--here-chrome); }
+body.dark-mode .title-interlinear .tw .tg { color: var(--on-chrome-2); }
 /* Colophon (synopsis box) */
-body.dark-mode .colophon { background: rgba(40, 40, 40, 0.5); border-color: #3a4054; }
+body.dark-mode .colophon { background: rgba(40, 40, 40, 0.5); border-color: var(--chrome-line); }
 /* Dark mode: close buttons, placeholders, search results */
 body.dark-mode .popup-close, body.dark-mode #search-close,
-body.dark-mode .glossary-close, body.dark-mode .notes-close { color: #b0a890; }
+body.dark-mode .glossary-close, body.dark-mode .notes-close { color: var(--on-chrome-2); }
 body.dark-mode #search-input::placeholder,
 body.dark-mode #glossary-search::placeholder { color: #6b7288; }
-body.dark-mode #search-results .search-result { color: #e8e0d0; }
-body.dark-mode #search-results .search-result:hover { background: rgba(219,185,88,0.08); }
+body.dark-mode #search-results .search-result:hover { background: color-mix(in srgb, var(--here-chrome) 8%, transparent); }
 #dark-mode-toggle {
   background: transparent;
-  border: 1px solid #3a3f55;
-  color: #dbb958;
+  border: 1px solid var(--chrome-line);
+  color: var(--here-chrome);
   padding: 5px 10px;
   border-radius: 3px;
   cursor: pointer;
   font-size: 0.9em;
   transition: all 0.2s;
 }
-#dark-mode-toggle:hover { background: #2a2f44; }
 
 /* === SEARCH === */
 #search-container {
@@ -1691,7 +1480,7 @@ body.dark-mode #search-results .search-result:hover { background: rgba(219,185,8
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 300;
-  background: #1e2233;
+  background: var(--chrome);
   padding: 12px 16px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   direction: ltr;
@@ -1700,10 +1489,10 @@ body.dark-mode #search-results .search-result:hover { background: rgba(219,185,8
 #search-input {
   flex: 1;
   padding: 8px 12px;
-  border: 1px solid #3a3f55;
+  border: 1px solid var(--chrome-line);
   border-radius: 4px;
   background: #12142a;
-  color: #e8e0d0;
+  color: var(--on-chrome);
   font-family: 'David Libre', 'Georgia', serif;
   font-size: 1em;
   outline: none;
@@ -1720,19 +1509,18 @@ body.dark-mode #search-results .search-result:hover { background: rgba(219,185,8
   overflow-y: auto;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
-  background: #1e2233;
+  background: var(--chrome);
   z-index: 299;
   padding: 0 16px 12px;
   direction: ltr;
 }
-#search-results.open { display: block; }
 .search-result {
   padding: 10px 12px;
-  border-bottom: 1px solid #2a2f44;
+  border-bottom: 1px solid var(--surface-2);
   cursor: pointer;
   transition: background 0.15s;
 }
-.search-result:hover, .search-result:active { background: #2a2f44; }
+.search-result:hover, .search-result:active { background: var(--surface-2); }
 .search-result-ref {
   font-family: 'David Libre', 'Georgia', serif;
   font-weight: 600;
@@ -1741,7 +1529,7 @@ body.dark-mode #search-results .search-result:hover { background: rgba(219,185,8
 }
 .search-result-text {
   font-family: 'David Libre', serif;
-  color: #b0a890;
+  color: var(--on-chrome-2);
   font-size: 0.85em;
   direction: rtl;
   margin-top: 3px;
@@ -1750,7 +1538,7 @@ body.dark-mode #search-results .search-result:hover { background: rgba(219,185,8
   text-overflow: ellipsis;
 }
 .search-result-text mark {
-  background: rgba(219,185,88,0.25);
+  background: color-mix(in srgb, var(--here-chrome) 25%, transparent);
   color: var(--accent);
   border-radius: 2px;
   padding: 0 2px;
@@ -1792,8 +1580,6 @@ body.dark-mode #nav-progress-text { color: #6a6550; }
   direction: ltr;
   letter-spacing: 0.3px;
 }
-#nav-hint.show { opacity: 1; }
-body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
 
 
 
@@ -1815,24 +1601,20 @@ body, button, input, select, textarea,
      while the web renders clean.  `*` has zero specificity, so every explicit
      rule (kbd monospace, the emoji toolbar) still wins. */
   :root { font-family: 'David Libre', serif; }
-  * { font-family: inherit; }
-  button, input, select, textarea, option, optgroup, ::placeholder { font-family: inherit; }
 
 
 
 /* === Docked selection toolbar: RIGHT side (Hebrew is RTL), always visible while reading, no overlap === */
 #sel-toolbar{left:auto!important;right:6px!important;top:50%!important;bottom:auto!important;transform:translateY(-50%)!important;max-height:90vh;overflow-y:auto;flex-direction:column!important;flex-wrap:nowrap!important;max-width:none!important;}
 body:not(.hide-sel-toolbar) #sel-toolbar{display:flex!important;}
-#sel-toolbar-reopen{display:none;position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:1290;background:#1e2233;color:#c8a84e;border:1px solid #3a3f55;border-right:none;border-radius:10px 0 0 10px;padding:12px 7px;cursor:pointer;font-size:1.05em;line-height:1;box-shadow:-2px 2px 8px rgba(0,0,0,0.3);font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',emoji;}
-#sel-toolbar-reopen:hover{background:#2a2f44;}
+#sel-toolbar-reopen{display:none;position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:1290;background:var(--chrome);color:var(--here);border:1px solid var(--chrome-line);border-right:none;border-radius:10px 0 0 10px;padding:12px 7px;cursor:pointer;font-size:1.05em;line-height:1;box-shadow:-2px 2px 8px rgba(0,0,0,0.3);font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',emoji;}
+#sel-toolbar-reopen:hover{background:var(--surface-2);}
 body.hide-sel-toolbar #sel-toolbar-reopen{display:block;}
-body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}
-@media (max-width:600px){body:not(.hide-sel-toolbar) .chapter-panel{padding-right:52px!important;}}
+body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}@media (max-width:600px) {body:not(.hide-sel-toolbar) .chapter-panel{padding-right:52px!important;}}
 
 /* -- Dual: Hebrew and English at the same size, split 55/45, and the
       chapter summary laid out side by side the way the verses are. -- */
 body.dual-mode .verse-english { font-size: 0.85em; flex: 45 1 0; }
-body.dual-mode .word-flow     { flex: 55 1 0; }
 /* Phones: side by side, each column was about 140 px (14 characters of
    English per line). Stack instead: the Hebrew block first, its English
    under it, full width. */
@@ -1858,7 +1640,6 @@ body.dual-mode .word-flow     { flex: 55 1 0; }
     padding-top: 8px;
   }
 }
-body.dual-mode .hw            { font-size: 1em; }
 body.dual-mode .colophon .word-unit .hw { font-size: 1em; }
 body.dual-mode .colophon .arr-hw        { font-size: 1em; }
 
@@ -1874,8 +1655,7 @@ body.dual-mode .chapter-heading > .chapter-summary {
   text-align: left; order: 1; flex: 45 1 0; direction: ltr; padding-left: 14px;
   border-left: 1px solid var(--rule-light);
 }
-body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direction: rtl; }
-@media (max-width: 700px) {
+body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direction: rtl; }@media (max-width: 700px) {
   body.dual-mode .chapter-heading > .chapter-summary { font-size: 0.78em; padding-right: 8px; }
   body.dual-mode .chapter-heading > .heading-flow { font-size: 0.9em; }
 }
@@ -1915,14 +1695,14 @@ body.dual-mode .chapter-summary { display: block; }
 <!-- Selection toolbar (vertical icon strip on desktop, horizontal on mobile) -->
 <div id="sel-toolbar">
   <button id="sel-btn-close" onclick="toggleFloatingSelToolbar(event)" title="Hide tools — reopen from the tab at the screen edge" aria-label="Hide study tools">✕</button>
-  <button id="sel-btn-highlight" onclick="selToolbarToggleColors()" title="Highlight" aria-label="Highlight">🖍</button>
+  <button id="sel-btn-highlight" onclick="selToolbarToggleColors()" title="Highlight" aria-label="Highlight"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4l5 5L9 20H4v-5z"/></svg></button>
   <button id="sel-btn-note" onclick="selToolbarOpenNote()" title="Note" aria-label="Note">✎</button>
-  <button id="sel-btn-copy" onclick="selToolbarCopy()" title="Copy" aria-label="Copy">📋</button>
+  <button id="sel-btn-copy" onclick="selToolbarCopy()" title="Copy" aria-label="Copy"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="4" width="12" height="16" rx="2"/><path d="M16 4V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v1"/><path d="M4 8v12a2 2 0 0 0 2 2h8"/></svg></button>
   <button id="sel-btn-share" onclick="selToolbarShare()" title="Share" aria-label="Share">↗</button>
-  <button id="sel-btn-delete" onclick="selToolbarClearAll()" title="Clear" aria-label="Clear annotations">🗑</button>
-  <button id="sel-btn-xref" onclick="selToolbarXref()" title="Cross-References" aria-label="Cross-references">🔗</button>
-  <button id="sel-btn-glossary" onclick="_hideSelToolbar();openGlossary()" title="Glossary" aria-label="Glossary">📖</button>
-  <button id="sel-btn-annotations" onclick="_hideSelToolbar();openAnnotationsPanel()" title="Annotations" aria-label="Annotations">📝</button>
+  <button id="sel-btn-delete" onclick="selToolbarClearAll()" title="Clear" aria-label="Clear annotations"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/></svg></button>
+  <button id="sel-btn-xref" onclick="selToolbarXref()" title="Cross-References" aria-label="Cross-references"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l2-2a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 0 0 7 7l1-1"/></svg></button>
+  <button id="sel-btn-glossary" onclick="_hideSelToolbar();openGlossary()" title="Glossary" aria-label="Glossary"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6v14"/><path d="M3 5h6a3 3 0 0 1 3 3M21 5h-6a3 3 0 0 0-3 3"/><path d="M3 5v13h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6V5"/></svg></button>
+  <button id="sel-btn-annotations" onclick="_hideSelToolbar();openAnnotationsPanel()" title="Annotations" aria-label="Annotations"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M14 4l6 6L9 21H3v-6z"/></svg></button>
   <div id="sel-subpanel" style="display:none">
     <div class="sel-row">
       <span class="sel-label">HL</span>
@@ -2123,7 +1903,7 @@ body.dual-mode .chapter-summary { display: block; }
         <a href="mailto:chris@sefermormon.com" style="color:var(--accent-deep);text-decoration:underline;text-underline-offset:3px">chris@sefermormon.com</a>
       </div>
             <div style="text-align:center;margin-top:28px">
-        <a href="../index.html" style="font-family:'David Libre', 'Georgia', serif;background:var(--sw-gold, #f4ca48);color:var(--header-bg, #1e2233);text-decoration:none;border:2px solid var(--header-bg, #1e2233);padding:14px 32px;border-radius:10px;box-shadow:0 4px 14px rgba(30,34,51,0.18);font-size:1.05em;font-weight:600;letter-spacing:0.03em;direction:ltr;display:inline-block">← Standard Works Home</a>
+        <a href="../index.html" style="font-family:'David Libre', 'Georgia', serif;background:var(--sw-gold, var(--on-chrome));color:var(--header-bg, var(--chrome));text-decoration:none;border:2px solid var(--header-bg, var(--chrome));padding:14px 32px;border-radius:10px;box-shadow:0 4px 14px color-mix(in srgb, var(--chrome) 18%, transparent);font-size:1.05em;font-weight:600;letter-spacing:0.03em;direction:ltr;display:inline-block">← Standard Works Home</a>
       </div>
     </div>
   </div>
@@ -2359,7 +2139,7 @@ body.dual-mode .chapter-summary { display: block; }
   </div>
 
   <!-- ==================== READING HEBREW GUIDE ==================== -->
-  <style>#panel-front-hebrew-guide .hg-alt{background:#f8f6f0} body.dark-mode #panel-front-hebrew-guide .hg-alt{background:rgba(255,255,255,0.06)} body.dark-mode #panel-front-hebrew-guide td{color:#e8e0d0 !important}</style>
+  <style>#panel-front-hebrew-guide .hg-alt{background:#f8f6f0} body.dark-mode #panel-front-hebrew-guide .hg-alt{background:rgba(255,255,255,0.06)} body.dark-mode #panel-front-hebrew-guide td{color:var(--on-chrome) !important}</style>
 <div class="chapter-panel" id="panel-front-hebrew-guide" style="display:none">
     <div style="max-width:900px;margin:0 auto;padding:20px 30px;direction:ltr;text-align:left">
 
@@ -2520,7 +2300,7 @@ body.dual-mode .chapter-summary { display: block; }
 <p style="font-size:0.92em;line-height:1.7;color:#333;margin-bottom:14px">The bar at the foot of the screen sets the view: <strong>Interlinear</strong> (Hebrew with a gloss under each word), <strong>Hebrew Only</strong>, <strong>Dual</strong> (Hebrew and English side by side), <strong>Transliterate</strong>, and <strong>No Nikkud</strong> (the consonants alone, as in a Torah scroll). Beside it the buttons turn the chapter, and the chapter name between them opens the list of books. The two letters at the head of the page change the size of the text; the moon turns on night reading.</p>
 <p style="font-size:0.92em;line-height:1.7;color:#333;margin-bottom:14px"><strong>Tap any Hebrew word</strong> and its root scorecard opens: the root and its meaning, how many times that root occurs in each of the six volumes, its forms and glosses, and every reference. The scorecards are there so that you can test the translation for yourself: a word chosen for the Book of Mormon can be weighed against the same root in the Hebrew Bible, and where a root is rare or unattested the card says so.</p>
 <p style="font-size:0.92em;line-height:1.7;color:#333;margin-bottom:14px"><strong>Words in blue</strong> belong to the major themes of the Topical Guide; tap one to open the theme. <strong>Press and hold</strong> to select a run of words, then highlight it, add a note, copy or share it, or open its cross-references and glossary. <strong>Search</strong> finds Hebrew with or without vowel points, or English. The other five volumes open from the Standard Works page, and every scorecard reaches across all six.</p>
-<p style="font-size:0.92em;line-height:1.7;color:#333;margin-bottom:14px">The Hebrew text is an original translation into Biblical Hebrew by Chris Lambe; the English shown in Dual view is the 1920 edition. The reader itself was built with artificial intelligence under the translator's direction. The Brief Explanation in the front matter says more: <a href="#" onclick="navTo('front-brief');return false;" style="color:var(--tap-blue,#2e6da4)">About this edition &rarr;</a></p>
+<p style="font-size:0.92em;line-height:1.7;color:#333;margin-bottom:14px">The Hebrew text is an original translation into Biblical Hebrew by Chris Lambe; the English shown in Dual view is the 1920 edition. The reader itself was built with artificial intelligence under the translator's direction. The Brief Explanation in the front matter says more: <a href="#" onclick="navTo('front-brief');return false;" style="color:var(--tap-blue,var(--here))">About this edition &rarr;</a></p>
 
 <!-- PRACTICE EXAMPLES -->
       <h3 style="font-size:1.2em;color:#222;margin:28px 0 10px;text-align:center">Practice: Words from the Book of Mormon</h3>
@@ -4036,7 +3816,7 @@ body.dual-mode .chapter-summary { display: block; }
 
 <div class="controls-top">
   <div class="nav-row">
-    <a href="../index.html" style="background:transparent;border:1px solid #3a3f55;color:#dbb958;padding:5px 10px;border-radius:3px;text-decoration:none;font-size:0.95em;line-height:1;display:flex;align-items:center;" title="Standard Works Home" aria-label="Standard Works Home">🏠</a>
+    <a href="../index.html" style="background:transparent;border:1px solid var(--chrome-line);color:var(--here-chrome);padding:5px 10px;border-radius:3px;text-decoration:none;font-size:0.95em;line-height:1;display:flex;align-items:center;" title="Standard Works Home" aria-label="Standard Works Home">🏠</a>
     <button class="nav-prev" id="nav-prev" onclick="goPrev()" disabled aria-label="Previous chapter">⬅️</button>
     <span class="nav-label-wrap">
       <span id="nav-label" tabindex="0" role="button" aria-label="Open navigation">Book of Mormon ▾</span>
@@ -4045,12 +3825,12 @@ body.dual-mode .chapter-summary { display: block; }
   </div>
   <div class="tools-group">
     <span class="sw-size-stepper" role="group" aria-label="Font size"><span class="label-text">Size </span><button type="button" class="sw-size-btn" onclick="stepSize(-10)" aria-label="Smaller text" title="Smaller text">A<span aria-hidden="true">−</span></button><button type="button" class="sw-size-btn sw-size-btn-up" onclick="stepSize(10)" aria-label="Larger text" title="Larger text">A<span aria-hidden="true">+</span></button><input type="range" id="sizeSlider" min="70" max="150" value="100" oninput="setSize(this.value)" aria-label="Font size" hidden></span>
-    <span style="color:#3a3f55">│</span>
+    <span style="color:var(--chrome-line)">│</span>
     <button type="button" id="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
     <button type="button" id="search-toggle" onclick="openSearch()" title="Search" aria-label="Search">🔍</button>
-    <button type="button" id="annotations-toggle" onclick="openAnnotationsPanel()" title="Annotations" aria-label="Annotations">📝</button>
+    <button type="button" id="annotations-toggle" onclick="openAnnotationsPanel()" title="Annotations" aria-label="Annotations"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M14 4l6 6L9 21H3v-6z"/></svg></button>
     <button type="button" id="study-drawer-toggle" onclick="openXrefStudyAt('bookmarks')" title="Bookmarks, notes, refs" aria-label="Study drawer">📌</button>
-    <button type="button" id="glossary-toggle" onclick="openGlossary()" title="Root Glossary" aria-label="Root glossary">📖</button>
+    <button type="button" id="glossary-toggle" onclick="openGlossary()" title="Root Glossary" aria-label="Root glossary"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6v14"/><path d="M3 5h6a3 3 0 0 1 3 3M21 5h-6a3 3 0 0 0-3 3"/><path d="M3 5v13h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6V5"/></svg></button>
     <button type="button" id="share-toggle" onclick="openSharePopup()" title="Share" aria-label="Share">📤</button>
   </div>
 </div>
@@ -4064,7 +3844,7 @@ body.dual-mode .chapter-summary { display: block; }
     <button class="share-btn" onclick="shareToTruth()"><span class="share-icon">TS</span> Truth Social</button>
     <button class="share-btn" onclick="shareToFacebook()"><span class="share-icon">f</span> Facebook</button>
     <button class="share-btn" onclick="shareToX()"><span class="share-icon">𝕏</span> X</button>
-    <button class="share-btn" onclick="shareCopyLink()"><span class="share-icon">🔗</span> <span id="copy-label">Copy</span></button>
+    <button class="share-btn" onclick="shareCopyLink()"><span class="share-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l2-2a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 0 0 7 7l1-1"/></svg></span> <span id="copy-label">Copy</span></button>
     <button class="share-btn" id="share-native-btn" onclick="shareNative()" style="display:none"><span class="share-icon">↗</span> Share...</button>
   </div>
 </div>
@@ -4083,7 +3863,7 @@ body.dual-mode .chapter-summary { display: block; }
 <script defer src="../root_names.js?v=17"></script>
 <script src="../xref_common.js?v=2"></script>
 <script src="../verse_loader.js?v=4"></script>
-<script src="../root_scorecard.js?v=68"></script>
+<script src="../root_scorecard.js?v=70"></script>
 <script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
 <!-- Reference data (cross-references, glossary, roots, topical guide: ~2.4 MB)
      is deferred: it is consumed only after load (cross-ref markers at +500 ms,
@@ -5554,7 +5334,7 @@ function selToolbarCopy() {
   navigator.clipboard.writeText(text).then(function() {
     ['sel-btn-copy', 'hl-btn-copy'].forEach(function(id) {
       var btn = document.getElementById(id);
-      if (btn) { btn.style.color = '#dbb958'; setTimeout(function() { btn.style.color = ''; }, 1200); }
+      if (btn) { btn.style.color = 'var(--here-chrome)'; setTimeout(function() { btn.style.color = ''; }, 1200); }
     });
   });
 }
@@ -6580,7 +6360,7 @@ function appendStandardWorksInverseCards(refsContainer, bomVerseKeys) {
   if (collected.length === 0) return;
 
   var heading = document.createElement('div');
-  heading.style.cssText = 'font-weight:bold;color:#dbb958;margin:12px 0 6px;font-size:0.9em;border-bottom:1px solid #444;padding-bottom:4px;';
+  heading.style.cssText = 'font-weight:bold;color:var(--here-chrome);margin:12px 0 6px;font-size:0.9em;border-bottom:1px solid #444;padding-bottom:4px;';
   heading.textContent = 'Cited in Standard Works footnotes (' + collected.length + ')';
   refsContainer.appendChild(heading);
 
@@ -6850,9 +6630,9 @@ function openRootXrefPanel(root) {
       if (refsContainer.querySelector('.rsc-occ-card')) return;
       var card = document.createElement('div');
       card.className = 'xref-ref-card rsc-occ-card';
-      card.style.cssText = 'cursor:pointer;border:1px solid rgba(212,175,55,0.55);' +
-        'background:rgba(212,175,55,0.10);border-radius:10px;padding:11px 13px;margin-bottom:12px;';
-      card.innerHTML = '<div style="font-weight:700;color:var(--sw-gold,#d4af37);">' +
+      card.style.cssText = 'cursor:pointer;border:1px solid color-mix(in srgb, var(--here-chrome) 55%, transparent);' +
+        'background:color-mix(in srgb, var(--here-chrome) 10%, transparent);border-radius:10px;padding:11px 13px;margin-bottom:12px;';
+      card.innerHTML = '<div style="font-weight:700;color:var(--sw-gold,var(--here-chrome));">' +
         'All ' + total + ' occurrences in ' + verses + ' verses \u2192</div>' +
         '<div style="opacity:0.75;font-size:0.85em;margin-top:2px;">' +
         'every place this root appears across the scriptures</div>';
@@ -6944,7 +6724,7 @@ function openRootXrefPanel(root) {
     if (items.length === 0) return;
 
     var heading = document.createElement('div');
-    heading.style.cssText = 'font-weight:bold;color:#dbb958;margin:12px 0 6px;font-size:0.9em;border-bottom:1px solid #444;padding-bottom:4px;';
+    heading.style.cssText = 'font-weight:bold;color:var(--here-chrome);margin:12px 0 6px;font-size:0.9em;border-bottom:1px solid #444;padding-bottom:4px;';
     heading.textContent = catLabels[cat] + ' (' + items.length + ')';
     refsContainer.appendChild(heading);
 
@@ -7040,7 +6820,7 @@ function navigateToXrefVerse(parsed) {
       if (verseEl) {
         verseEl.scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'center' });
         verseEl.style.transition = 'background 0.3s';
-        verseEl.style.background = 'rgba(219,185,88,0.25)';
+        verseEl.style.background = 'color-mix(in srgb, var(--here-chrome) 25%, transparent)';
         // Stamp verse number into URL: #mosiah-16:3
         var parts = parsed.key.split('|');
         if (parts.length >= 3) {
@@ -7771,8 +7551,8 @@ document.addEventListener('keydown', function(e) {
     menu.style.zIndex = '9999';
     menu.style.display = 'none';
     menu.style.minWidth = '180px';
-    menu.style.background = 'rgba(30,34,51,0.98)';
-    menu.style.border = '1px solid rgba(219,185,88,0.35)';
+    menu.style.background = 'color-mix(in srgb, var(--chrome) 98%, transparent)';
+    menu.style.border = '1px solid color-mix(in srgb, var(--here-chrome) 35%, transparent)';
     menu.style.borderRadius = '8px';
     menu.style.boxShadow = '0 10px 30px rgba(0,0,0,0.35)';
     menu.style.padding = '8px';
@@ -7780,10 +7560,10 @@ document.addEventListener('keydown', function(e) {
     menu.style.backdropFilter = 'blur(6px)';
 
     menu.innerHTML = '' +
-      '<button data-act=\"highlight\" style=\"width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid rgba(219,185,88,0.35);background:#1e2233;color:#dbb958;cursor:pointer;font-family:inherit;font-size:0.95em;\">Highlight / Unhighlight</button>' +
-      '<button data-act=\"note\" style=\"width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid rgba(219,185,88,0.25);background:#151929;color:#e8e0d0;cursor:pointer;font-family:inherit;font-size:0.95em;\">Note</button>' +
-      '<button data-act=\"copy\" style=\"width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid rgba(219,185,88,0.25);background:#151929;color:#e8e0d0;cursor:pointer;font-family:inherit;font-size:0.95em;\">Copy verse</button>' +
-      '<button data-act=\"share\" style=\"width:100%;margin:0;padding:10px 12px;border-radius:6px;border:1px solid rgba(219,185,88,0.25);background:#151929;color:#e8e0d0;cursor:pointer;font-family:inherit;font-size:0.95em;\">Share verse</button>';
+      '<button data-act=\"highlight\" style=\"width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid color-mix(in srgb, var(--here-chrome) 35%, transparent);background:var(--chrome);color:var(--here-chrome);cursor:pointer;font-family:inherit;font-size:0.95em;\">Highlight / Unhighlight</button>' +
+      '<button data-act=\"note\" style=\"width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid color-mix(in srgb, var(--here-chrome) 25%, transparent);background:#151929;color:var(--on-chrome);cursor:pointer;font-family:inherit;font-size:0.95em;\">Note</button>' +
+      '<button data-act=\"copy\" style=\"width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid color-mix(in srgb, var(--here-chrome) 25%, transparent);background:#151929;color:var(--on-chrome);cursor:pointer;font-family:inherit;font-size:0.95em;\">Copy verse</button>' +
+      '<button data-act=\"share\" style=\"width:100%;margin:0;padding:10px 12px;border-radius:6px;border:1px solid color-mix(in srgb, var(--here-chrome) 25%, transparent);background:#151929;color:var(--on-chrome);cursor:pointer;font-family:inherit;font-size:0.95em;\">Share verse</button>';
 
     menu.addEventListener('click', function(e) {
       var btn = e.target.closest('button[data-act]');
@@ -7862,7 +7642,7 @@ document.addEventListener('keydown', function(e) {
         '<textarea id=\"note-modal-text\" style=\"width:100%;min-height:180px;resize:vertical;border:1px solid var(--rule);border-radius:8px;padding:10px 12px;font-family:David Libre,serif;font-size:1em;line-height:1.4;background:var(--bg-deep);color:var(--ink);\"></textarea>' +
         '<div style=\"display:flex;justify-content:flex-end;gap:10px;margin-top:12px;\">' +
           '<button id=\"note-modal-delete\" style=\"border:1px solid rgba(180,60,60,0.4);background:transparent;color:#b43c3c;border-radius:8px;padding:8px 12px;cursor:pointer;\">Delete</button>' +
-          '<button id=\"note-modal-save\" style=\"border:1px solid var(--accent);background:var(--accent);color:#1e2233;border-radius:8px;padding:8px 12px;cursor:pointer;font-weight:700;\">Save</button>' +
+          '<button id=\"note-modal-save\" style=\"border:1px solid var(--accent);background:var(--accent);color:var(--chrome);border-radius:8px;padding:8px 12px;cursor:pointer;font-weight:700;\">Save</button>' +
         '</div>' +
       '</div>';
     document.body.appendChild(overlay);
@@ -8199,8 +7979,8 @@ document.addEventListener('keydown', function(e) {
     var sInfo = wordFreq[hText];
     var detailHtml = '';
     if (false && morphGloss) {   // suppressed: _guessAffixPartsForMorphGloss over-peels lexeme letters ('his receive'); data-mgl kept for auditing
-      detailHtml += '<div style="direction:ltr;margin-bottom:6px;font-size:0.9em;color:#b0a890">' +
-        '<strong>Morph gloss:</strong> <span style="color:#e8e0d0">' + morphGloss + '</span>' +
+      detailHtml += '<div style="direction:ltr;margin-bottom:6px;font-size:0.9em;color:var(--on-chrome-2)">' +
+        '<strong>Morph gloss:</strong> <span style="color:var(--on-chrome)">' + morphGloss + '</span>' +
         '</div>';
     }
 
@@ -8242,7 +8022,7 @@ detailHtml += '<div class="rsc-slot">';   // RootScorecard upgrades this block w
       if (!rootMeaning && typeof strongsGloss === 'string') rootMeaning = strongsGloss;
       detailHtml += lemmaLine + '<span style="cursor:pointer;text-decoration:underline;" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">Root ' + rootDisplay + '</span> — ' + rInfo.count + ' uses in ' + verseCount + ' verses';
       if (rootMeaning) {
-        detailHtml += '<br><span style="font-style:italic;color:#b0a890;font-size:0.9em;">' + rootMeaning + '</span>';
+        detailHtml += '<br><span style="font-style:italic;color:var(--on-chrome-2);font-size:0.9em;">' + rootMeaning + '</span>';
       }
       // Show other forms under this root
       var formKeys = Object.keys(rInfo.forms);
@@ -8278,13 +8058,13 @@ detailHtml += '</div>';
       // Word has a direct LDS cross-reference — show link to open its xref panel
       var xrefObj = JSON.parse(directXref);
       var refCount = xrefObj.refs ? xrefObj.refs.length : 0;
-      detailHtml += '<br><span class="popup-xref-direct" style="cursor:pointer;color:#d4af37;text-decoration:underline;font-size:0.9em;">View Cross-References (' + refCount + ') →</span>';
+      detailHtml += '<br><span class="popup-xref-direct" style="cursor:pointer;color:var(--here-chrome);text-decoration:underline;font-size:0.9em;">View Cross-References (' + refCount + ') →</span>';
     }
     // Hide root xrefs for proper names (e.g. "Enos" shares root אנוש with "man" — irrelevant)
     var isProperName = /^[A-Z][a-z]+$/.test(gText.trim());
     if (xrefCount > 0 && !isProperName) {
       // Root has aggregated cross-references across the BOM
-      detailHtml += '<br><span class="popup-xref-link" style="cursor:pointer;color:#d4af37;text-decoration:underline;font-size:0.9em;">View Root Cross-References (' + xrefCount + ') →</span>';
+      detailHtml += '<br><span class="popup-xref-link" style="cursor:pointer;color:var(--here-chrome);text-decoration:underline;font-size:0.9em;">View Root Cross-References (' + xrefCount + ') →</span>';
     }
     // Topical Guide link
     var tgIdx = getTgIndex();
@@ -8300,7 +8080,7 @@ detailHtml += '</div>';
       var tgEntries = getTgData();
       var tgEntry = tgEntries.find(function(e) { return e.id === tgEntryId; });
       if (tgEntry) {
-        detailHtml += '<br><span class="popup-tg-link" style="cursor:pointer;color:#d4af37;text-decoration:underline;font-size:0.9em;">Topical Guide: ' + tgEntry.hebrew + ' — ' + tgEntry.english + ' →</span>';
+        detailHtml += '<br><span class="popup-tg-link" style="cursor:pointer;color:var(--here-chrome);text-decoration:underline;font-size:0.9em;">Topical Guide: ' + tgEntry.hebrew + ' — ' + tgEntry.english + ' →</span>';
       }
     }
 
@@ -8489,7 +8269,7 @@ function doSearch(query) {
   var shown = matches.length > MAX_RESULTS ? matches.slice(0, MAX_RESULTS) : matches;
   var countMsg = matches.length + ' result' + (matches.length !== 1 ? 's' : '') + ' found';
   if (matches.length > MAX_RESULTS) countMsg = 'Showing ' + MAX_RESULTS + ' of ' + matches.length + ' results';
-  var html = '<div style="color:#dbb958;padding:8px 12px;font-size:0.85em;font-family:David Libre,serif;border-bottom:1px solid #2a2f44;">' + countMsg + '</div>';
+  var html = '<div style="color:var(--here-chrome);padding:8px 12px;font-size:0.85em;font-family:David Libre,serif;border-bottom:1px solid var(--surface-2);">' + countMsg + '</div>';
   shown.forEach(function(m) {
     var preview = m.english.length > 80 ? m.english.substring(0, 80) + '...' : m.english;
     // Highlight match in preview
@@ -9251,7 +9031,7 @@ function showTgReturnBtn() {
     btn = document.createElement('div');
     btn.id = 'tg-return-btn';
     btn.style.cssText = 'position:fixed;left:14px;bottom:84px;z-index:2147483600';
-    btn.innerHTML = '<button type="button" style="background:var(--accent,#d4af37);color:#15182b;border:none;border-radius:22px;padding:10px 18px;font:600 0.9em/1 \'David Libre\',Georgia,serif;box-shadow:0 3px 10px rgba(0,0,0,0.35);cursor:pointer">&#8592; Topical Guide</button>';
+    btn.innerHTML = '<button type="button" style="background:var(--accent,var(--here-chrome));color:#15182b;border:none;border-radius:22px;padding:10px 18px;font:600 0.9em/1 \'David Libre\',Georgia,serif;box-shadow:0 3px 10px rgba(0,0,0,0.35);cursor:pointer">&#8592; Topical Guide</button>';
     btn.querySelector('button').addEventListener('click', returnToTg);
     document.body.appendChild(btn);
   }
@@ -11981,7 +11761,7 @@ try {
 
 <script src="../site_chrome.js?v=36" data-sw-volume="bom"></script>
 <script src="../verse_search.js?v=3"></script>
-<script src="../nav_engine.js?v=44"></script>
+<script src="../nav_engine.js?v=52"></script>
 <script src="../xref_study_panel.js?v=6"></script>
 <script>
 NavEngine.init({

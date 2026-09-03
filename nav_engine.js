@@ -1,3 +1,70 @@
+
+/* ── One bar: location, not branding ─────────────────────────────────────
+   The approved layout puts prev / chapter / next IN the bar and removes
+   the footer. Live, the bar carried the site name and a size stepper
+   while navigation sat in a separate 57px footer.
+
+   Everything here MOVES existing nodes — the chapter button, prev and
+   next keep their handlers, and the size stepper and theme toggle go to
+   the settings sheet where they belong.
+   ─────────────────────────────────────────────────────────────────────── */
+(function () {
+  if (typeof document === 'undefined') return;
+  function build() {
+    var bar = document.querySelector('.sw-top-bar-inner');
+    var foot = document.querySelector('.sw-reader-footer');
+    if (!bar || document.getElementById('sw-locbar')) return;
+
+    var loc = document.createElement('div');
+    loc.id = 'sw-locbar';
+
+    // move the footer's three controls into the bar, in reading order
+    if (foot) {
+      var prev = foot.querySelector('[onclick*="rev"], .nqd-prev, [class*="prev"]');
+      var next = foot.querySelector('[onclick*="ext"], .nqd-next, [class*="next"]');
+      var chap = foot.querySelector('.nqd-chapter-now, [class*="chapter"]');
+      [prev, chap, next].forEach(function (el) { if (el) loc.appendChild(el); });
+      foot.classList.add('sw-footer-emptied');
+    }
+    var brand = bar.querySelector('.sw-top-bar-brand');
+    if (brand) brand.parentNode.insertBefore(loc, brand.nextSibling);
+    else bar.appendChild(loc);
+    if (brand) brand.classList.add('sw-brand-quiet');
+
+    // the size stepper and theme toggle are settings
+    var sheet = document.getElementById('sw-settings-sheet');
+    if (sheet) {
+      var stepper = document.querySelector('.sw-size-stepper');
+      var theme = document.querySelector('.sw-chrome-btn[aria-label*="ark"], .sw-chrome-btn[aria-label*="heme"]');
+      if (stepper || theme) {
+        var lab = document.createElement('div');
+        lab.className = 'sw-sheet-label'; lab.textContent = 'Display';
+        sheet.appendChild(lab);
+        var wrap = document.createElement('div'); wrap.className = 'sw-sheet-row';
+        if (stepper) wrap.appendChild(stepper);
+        if (theme) wrap.appendChild(theme);
+        sheet.appendChild(wrap);
+      }
+    }
+
+    // position hairline
+    var prog = document.createElement('div');
+    prog.id = 'sw-progress';
+    (document.querySelector('.sw-top-bar') || bar).appendChild(prog);
+    function tick() {
+      var d = document.documentElement;
+      var max = d.scrollHeight - window.innerHeight;
+      prog.style.width = (max > 0 ? Math.min(100, (window.scrollY / max) * 100) : 0) + '%';
+    }
+    window.addEventListener('scroll', tick, { passive: true });
+    window.addEventListener('resize', tick);
+    tick();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', build);
+  else build();
+  window.addEventListener('load', build);
+})();
+
 /* ══════════════════════════════════════════════════════
    NAV ENGINE — Unified Navigation for Standard Works
    ══════════════════════════════════════════════════════ */
@@ -388,7 +455,7 @@
 
     var homeBtn = document.createElement('button');
     homeBtn.className = 'nav-icon-btn nav-home-btn';
-    homeBtn.innerHTML = '🏠';
+    homeBtn.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V20a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V9.5"/><path d="M9.5 21v-6h5v6"/></svg>';
     homeBtn.title = 'Home';
     homeBtn.setAttribute('aria-label', 'Home');
     homeBtn.onclick = goHome;
@@ -449,7 +516,7 @@
     offBanner.id = 'nav-offline-banner';
     offBanner.setAttribute('role', 'status');
     offBanner.setAttribute('aria-live', 'polite');
-    offBanner.style.cssText = 'display:none;position:fixed;bottom:0;left:0;right:0;z-index:6000;padding:10px 16px;text-align:center;font-size:0.88em;line-height:1.35;background:#3d2914;color:#f5e6c8;border-top:1px solid var(--accent,#dbb958);font-family:\'David Libre\',Georgia,serif;';
+    offBanner.style.cssText = 'display:none;position:fixed;bottom:0;left:0;right:0;z-index:6000;padding:10px 16px;text-align:center;font-size:0.88em;line-height:1.35;background:#3d2914;color:#f5e6c8;border-top:1px solid var(--accent,var(--here-chrome));font-family:\'David Libre\',Georgia,serif;';
     offBanner.textContent = 'You appear to be offline. Reconnect to load new pages, or open a volume you already saved for offline reading.';
     function syncOfflineBanner() {
       try {
@@ -945,14 +1012,14 @@
     var introRow = document.createElement('div');
     introRow.className = 'nav-book-row single-ch';
     introRow.innerHTML = '<span><span class="nb-en">Introduction</span></span><span class="nb-heb">\u05DE\u05D1\u05D5\u05D0</span>';
-    if ('dc' === _config.volume && 'dc-intro' === _config.currentChapter) introRow.style.background = 'rgba(200,168,78,0.15)';
+    if ('dc' === _config.volume && 'dc-intro' === _config.currentChapter) introRow.style.background = 'color-mix(in srgb, var(--here) 15%, transparent)';
     introRow.onclick = function() { navigateToChapter('dc', 'dc-intro'); };
     list.appendChild(introRow);
 
     var chronRow = document.createElement('div');
     chronRow.className = 'nav-book-row single-ch';
     chronRow.innerHTML = '<span><span class="nb-en">Chronological Order</span></span><span class="nb-heb">\u05E1\u05D3\u05E8 \u05DB\u05E8\u05D5\u05E0\u05D5\u05DC\u05D5\u05D2\u05D9</span>';
-    if ('dc' === _config.volume && 'dc-chron' === _config.currentChapter) chronRow.style.background = 'rgba(200,168,78,0.15)';
+    if ('dc' === _config.volume && 'dc-chron' === _config.currentChapter) chronRow.style.background = 'color-mix(in srgb, var(--here) 15%, transparent)';
     chronRow.onclick = function() { navigateToChapter('dc', 'dc-chron'); };
     list.appendChild(chronRow);
 
@@ -987,7 +1054,7 @@
       row.className = 'nav-book-row single-ch';
       var chId = od + '-ch1';
       row.innerHTML = '<span><span class="nb-en">Official Declaration ' + (idx+1) + '</span></span><span class="nb-heb">\u05D4\u05DB\u05E8\u05D6\u05D4 ' + toHebNum(idx+1) + '</span>';
-      if ('dc' === _config.volume && chId === _config.currentChapter) row.style.background = 'rgba(200,168,78,0.15)';
+      if ('dc' === _config.volume && chId === _config.currentChapter) row.style.background = 'color-mix(in srgb, var(--here) 15%, transparent)';
       row.onclick = (function(cid) { return function() { navigateToChapter('dc', cid); }; })(chId);
       list.appendChild(row);
     });
@@ -1221,7 +1288,7 @@
     head.className = 'nav-search-section';
     head.textContent = 'In the text';
     head.style.cssText = 'padding:6px 14px;font-size:0.72em;letter-spacing:0.08em;' +
-      'text-transform:uppercase;opacity:0.6;border-top:1px solid rgba(200,168,78,0.25);margin-top:4px;';
+      'text-transform:uppercase;opacity:0.6;border-top:1px solid color-mix(in srgb, var(--here) 25%, transparent);margin-top:4px;';
     _searchResults.appendChild(head);
     hits.forEach(function (hit) {
       var div = document.createElement('div');
@@ -1361,7 +1428,7 @@
 
   // ── Site accent theme for the drawer and the right cross-reference panel ──
   // Injected as a late <style> (external-sheet overrides were not reliably
-  // applied for these elements); navy #1e2233 + gold #f4ca48 like .sw-top-bar.
+  // applied for these elements); navy var(--chrome) + gold var(--here-chrome) like .sw-top-bar.
   function _injectAccentTheme() {
     if (document.getElementById('sw-accent-theme')) return;
     var st = document.createElement('style');
@@ -1370,26 +1437,26 @@
       /* left drawer */
       '#nav-sidebar{background:var(--surface-0) !important;color:var(--on-surface) !important;border-right:2px solid var(--gold-bright) !important;box-shadow:4px 0 24px rgba(0,0,0,0.35) !important;}' +
       'body.dark-mode #nav-sidebar{background:var(--surface-0) !important;}' +
-      '#nav-sidebar .nav-division,#nav-sidebar .nl-sec-title{color:var(--gold-bright) !important;border-top-color:rgba(244,202,72,0.25) !important;}' +
+      '#nav-sidebar .nav-division,#nav-sidebar .nl-sec-title{color:var(--gold-bright) !important;border-top-color:color-mix(in srgb, var(--gold-bright) 25%, transparent) !important;}' +
       '#nav-sidebar .nav-book-row:hover,#nav-sidebar .nav-book-row.expanded,#nav-sidebar .nav-book-row.nav-focus-row{background:var(--surface-2) !important;}' +
       '#nav-sidebar .nav-book-row .nb-heb{color:var(--gold-bright) !important;}' +
       '#nav-sidebar .nav-book-row .nb-en{color:var(--gold-pale) !important;}' +
-      '#nav-sidebar .nav-book-row .nb-ch,#nav-sidebar .nav-book-row .nb-arrow{color:rgba(244,202,72,0.85) !important;}' +
+      '#nav-sidebar .nav-book-row .nb-ch,#nav-sidebar .nav-book-row .nb-arrow{color:color-mix(in srgb, var(--gold-bright) 85%, transparent) !important;}' +
       '#nav-sidebar .nav-ch-grid{background:rgba(0,0,0,0.25) !important;}' +
-      '#nav-sidebar .nav-ch-cell{background:var(--surface-2) !important;border-color:rgba(244,202,72,0.28) !important;}' +
+      '#nav-sidebar .nav-ch-cell{background:var(--surface-2) !important;border-color:color-mix(in srgb, var(--gold-bright) 28%, transparent) !important;}' +
       '#nav-sidebar .nav-ch-cell:hover{background:var(--surface-3) !important;border-color:var(--gold-bright) !important;}' +
       '#nav-sidebar .nav-ch-cell.current{background:var(--gold-bright) !important;border-color:var(--gold-bright) !important;}' +
       '#nav-sidebar .nav-ch-cell .ch-heb{color:var(--gold-bright) !important;}' +
       '#nav-sidebar .nav-ch-cell .ch-num{color:var(--gold-pale) !important;}' +
       '#nav-sidebar .nav-ch-cell.current .ch-heb,#nav-sidebar .nav-ch-cell.current .ch-num{color:var(--surface-0) !important;}' +
       '#nav-sidebar .nav-search-results{background:var(--surface-sunken) !important;}' +
-      '#nav-sidebar .nav-search-result{border-bottom-color:rgba(244,202,72,0.12) !important;}' +
+      '#nav-sidebar .nav-search-result{border-bottom-color:color-mix(in srgb, var(--gold-bright) 12%, transparent) !important;}' +
       '#nav-sidebar .nav-search-result:hover,#nav-sidebar .nav-search-result.active{background:var(--surface-2) !important;}' +
       '#nav-sidebar .nav-search-result .sr-name{color:var(--on-surface) !important;}' +
       '#nav-sidebar .nav-search-result .sr-heb{color:var(--gold-bright) !important;}' +
-      '#nav-sidebar .nav-footer{background:var(--surface-sunken) !important;border-top-color:rgba(244,202,72,0.3) !important;}' +
+      '#nav-sidebar .nav-footer{background:var(--surface-sunken) !important;border-top-color:color-mix(in srgb, var(--gold-bright) 30%, transparent) !important;}' +
       '#nav-sidebar .nav-footer .nf-hint{color:rgba(232,224,208,0.6) !important;}' +
-      '#nav-sidebar .nl-card,#nav-sidebar .nl-bm,#nav-sidebar .nl-tile{background:var(--surface-2) !important;border-color:rgba(244,202,72,0.3) !important;}' +
+      '#nav-sidebar .nl-card,#nav-sidebar .nl-bm,#nav-sidebar .nl-tile{background:var(--surface-2) !important;border-color:color-mix(in srgb, var(--gold-bright) 30%, transparent) !important;}' +
       '#nav-sidebar .nl-card:hover,#nav-sidebar .nl-bm:hover,#nav-sidebar .nl-tile:hover{background:var(--surface-3) !important;border-color:var(--gold-bright) !important;}' +
       '#nav-sidebar .nl-card-title,#nav-sidebar .nl-name,#nav-sidebar .nl-bm-title{color:var(--gold-pale) !important;}' +
       '#nav-sidebar .nl-card-heb,#nav-sidebar .nl-heb,#nav-sidebar .nl-bm-heb,#nav-sidebar .nl-card-text{color:var(--gold-bright) !important;}' +
@@ -1399,47 +1466,47 @@
       'body.dark-mode #nav-sidebar .nl-bm,body.dark-mode #nav-sidebar .nl-tile{background:var(--surface-1) !important;}' +
       'body.dark-mode #nav-sidebar .nav-search-results,body.dark-mode #nav-sidebar .nav-footer{background:var(--surface-sunken) !important;}' +
       '#nav-sidebar .nav-library,#nav-sidebar .nav-book-list{background:transparent !important;}' +
-      '#nav-sidebar .nav-search-wrap{background:var(--surface-sunken) !important;border-bottom:1px solid rgba(244,202,72,0.35) !important;}' +
-      '#nav-sidebar .nav-search-wrap input{background:var(--surface-2) !important;color:var(--gold-pale) !important;border:1px solid rgba(244,202,72,0.4) !important;}' +
-      '#nav-sidebar .nav-search-wrap input::placeholder{color:rgba(244,202,72,0.55) !important;}' +
+      '#nav-sidebar .nav-search-wrap{background:var(--surface-sunken) !important;border-bottom:1px solid color-mix(in srgb, var(--here-chrome) 35%, transparent) !important;}' +
+      '#nav-sidebar .nav-search-wrap input{background:var(--surface-2) !important;color:var(--gold-pale) !important;border:1px solid color-mix(in srgb, var(--here-chrome) 40%, transparent) !important;}' +
+      '#nav-sidebar .nav-search-wrap input::placeholder{color:color-mix(in srgb, var(--gold-bright) 55%, transparent) !important;}' +
       '#nav-sidebar .nav-icon-btn,#nav-sidebar .nav-close-btn{color:var(--gold-bright) !important;}' +
-      '#nav-sidebar .nav-vol-tabs{background:var(--surface-sunken) !important;border-bottom:1px solid rgba(244,202,72,0.3) !important;}' +
-      '#nav-sidebar .nav-vol-tab{color:rgba(244,202,72,0.8) !important;}' +
+      '#nav-sidebar .nav-vol-tabs{background:var(--surface-sunken) !important;border-bottom:1px solid color-mix(in srgb, var(--here-chrome) 30%, transparent) !important;}' +
+      '#nav-sidebar .nav-vol-tab{color:color-mix(in srgb, var(--gold-bright) 80%, transparent) !important;}' +
       '#nav-sidebar .nav-vol-tab:hover{background:var(--surface-2) !important;}' +
       '#nav-sidebar .nav-vol-tab.active{background:var(--surface-2) !important;border-bottom-color:var(--gold-bright) !important;}' +
       '#nav-sidebar .nav-vol-tab .vt-heb{color:var(--gold-bright) !important;}' +
-      '#nav-sidebar .nav-vol-tab .vt-en{color:rgba(244,202,72,0.85) !important;}' +
+      '#nav-sidebar .nav-vol-tab .vt-en{color:color-mix(in srgb, var(--gold-bright) 85%, transparent) !important;}' +
       '#nav-sidebar .nav-vol-tab.active .vt-en{color:var(--gold-pale) !important;}' +
       /* right cross-reference / study panel */
       '#xref-panel{background:var(--surface-0) !important;color:var(--on-surface) !important;border-left:2px solid var(--gold-bright) !important;}' +
       'body.dark-mode #xref-panel{background:var(--surface-0) !important;}' +
-      '#xref-panel .xref-panel-header{background:var(--surface-sunken) !important;border-bottom:1px solid rgba(244,202,72,0.35) !important;}' +
+      '#xref-panel .xref-panel-header{background:var(--surface-sunken) !important;border-bottom:1px solid color-mix(in srgb, var(--here-chrome) 35%, transparent) !important;}' +
       '#xref-panel .xref-panel-header h3,#xref-panel .xref-panel-word{color:var(--gold-bright) !important;}' +
       '#xref-panel .xref-panel-category{color:rgba(232,224,208,0.75) !important;}' +
       '#xref-panel .xref-panel-close{color:var(--gold-bright) !important;}' +
-      '#xref-panel .xref-study-tabs{background:var(--surface-sunken) !important;border-bottom-color:rgba(244,202,72,0.3) !important;}' +
-      '#xref-panel .xref-study-tab{background:var(--surface-2) !important;color:rgba(244,202,72,0.85) !important;border-color:rgba(244,202,72,0.3) !important;}' +
+      '#xref-panel .xref-study-tabs{background:var(--surface-sunken) !important;border-bottom-color:color-mix(in srgb, var(--gold-bright) 30%, transparent) !important;}' +
+      '#xref-panel .xref-study-tab{background:var(--surface-2) !important;color:color-mix(in srgb, var(--gold-bright) 85%, transparent) !important;border-color:color-mix(in srgb, var(--gold-bright) 30%, transparent) !important;}' +
       '#xref-panel .xref-study-tab.active{background:var(--gold-bright) !important;color:var(--surface-0) !important;font-weight:700 !important;}' +
       '#xref-panel .xref-ref-word,#xref-panel .xref-category{color:var(--gold-bright) !important;}' +
       '#xref-panel .xref-ref-content{color:var(--on-surface) !important;}' +
-      '#xref-panel .xf-bookmark-item{background:var(--surface-2) !important;border-color:rgba(244,202,72,0.25) !important;}' +
+      '#xref-panel .xf-bookmark-item{background:var(--surface-2) !important;border-color:color-mix(in srgb, var(--gold-bright) 25%, transparent) !important;}' +
       '#xref-panel .xf-bookmark-item:hover{background:var(--surface-3) !important;}' +
       '#xref-panel .xf-bookmark-item .xf-bm-title{color:var(--gold-pale) !important;}' +
       '#xref-panel .xf-bookmark-item .xf-bm-heb{color:var(--gold-bright) !important;}' +
       '#xref-panel .study-pane-hint,#xref-panel .study-pane-sub{color:rgba(232,224,208,0.7) !important;}' +
-      '#xref-panel .study-btn-row button{background:var(--surface-2) !important;color:var(--gold-pale) !important;border:1px solid rgba(244,202,72,0.4) !important;}' +
+      '#xref-panel .study-btn-row button{background:var(--surface-2) !important;color:var(--gold-pale) !important;border:1px solid color-mix(in srgb, var(--here-chrome) 40%, transparent) !important;}' +
       '#xref-panel .study-btn-row button:hover{background:var(--surface-3) !important;border-color:var(--gold-bright) !important;}' +
       /* interlinear verse previews inside the panel: readable on navy */
       '#xref-panel .hw{color:var(--gold-bright) !important;}' +
       '#xref-panel .tl{color:rgba(232,224,208,0.65) !important;}' +
       '#xref-panel .gl{color:var(--gold-pale) !important;}' +
-      '#xref-panel .arr-tl,#xref-panel .arr-gl{color:rgba(244,202,72,0.45) !important;}' +
-      '#xref-panel .verse-num{color:rgba(244,202,72,0.8) !important;}' +
-      '#xref-panel .verse{border-color:rgba(244,202,72,0.15) !important;}' +
+      '#xref-panel .arr-tl,#xref-panel .arr-gl{color:color-mix(in srgb, var(--gold-bright) 45%, transparent) !important;}' +
+      '#xref-panel .verse-num{color:color-mix(in srgb, var(--gold-bright) 80%, transparent) !important;}' +
+      '#xref-panel .verse{border-color:color-mix(in srgb, var(--gold-bright) 15%, transparent) !important;}' +
       '#xref-panel .xref-refs,#xref-panel .xref-pane{color:var(--on-surface) !important;}' +
       '#xref-panel .xref-ref-loading,#xref-panel .xref-ref-nodata{color:rgba(232,224,208,0.7) !important;}' +
       /* cross-reference cards: title row, go-to link, interlinear words */
-      '#xref-panel .xref-ref-card{background:var(--surface-2) !important;border:1px solid rgba(244,202,72,0.2) !important;border-radius:10px;}' +
+      '#xref-panel .xref-ref-card{background:var(--surface-2) !important;border:1px solid color-mix(in srgb, var(--here-chrome) 20%, transparent) !important;border-radius:10px;}' +
       '#xref-panel .xref-ref-title,#xref-panel .xref-ref-title span{color:var(--gold-bright) !important;}' +
       '#xref-panel .xref-ref-goto{color:var(--gold-bright) !important;text-decoration:underline;}' +
       '#xref-panel .xref-ref-word{color:var(--on-surface) !important;}' +

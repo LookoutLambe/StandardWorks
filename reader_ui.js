@@ -336,8 +336,8 @@ function closeAllPanels() {
     menu.style.zIndex = '9999';
     menu.style.display = 'none';
     menu.style.minWidth = '180px';
-    menu.style.background = 'rgba(30,34,51,0.98)';
-    menu.style.border = '1px solid rgba(200,168,78,0.35)';
+    menu.style.background = 'color-mix(in srgb, var(--chrome) 98%, transparent)';
+    menu.style.border = '1px solid color-mix(in srgb, var(--here) 35%, transparent)';
     menu.style.borderRadius = '8px';
     menu.style.boxShadow = '0 10px 30px rgba(0,0,0,0.35)';
     menu.style.padding = '8px';
@@ -345,10 +345,10 @@ function closeAllPanels() {
     menu.style.backdropFilter = 'blur(6px)';
 
     menu.innerHTML = '' +
-      '<button data-act="highlight" style="width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid rgba(200,168,78,0.35);background:#1e2233;color:#c8a84e;cursor:pointer;font-family:inherit;font-size:0.95em;">Highlight / Unhighlight</button>' +
-      '<button data-act="note" style="width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid rgba(200,168,78,0.25);background:#151929;color:#e8e0d0;cursor:pointer;font-family:inherit;font-size:0.95em;">Note</button>' +
-      '<button data-act="copy" style="width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid rgba(200,168,78,0.25);background:#151929;color:#e8e0d0;cursor:pointer;font-family:inherit;font-size:0.95em;">Copy verse</button>' +
-      '<button data-act="share" style="width:100%;margin:0;padding:10px 12px;border-radius:6px;border:1px solid rgba(200,168,78,0.25);background:#151929;color:#e8e0d0;cursor:pointer;font-family:inherit;font-size:0.95em;">Share verse</button>';
+      '<button data-act="highlight" style="width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid color-mix(in srgb, var(--here) 35%, transparent);background:var(--chrome);color:var(--here);cursor:pointer;font-family:inherit;font-size:0.95em;">Highlight / Unhighlight</button>' +
+      '<button data-act="note" style="width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid color-mix(in srgb, var(--here) 25%, transparent);background:#151929;color:var(--on-chrome);cursor:pointer;font-family:inherit;font-size:0.95em;">Note</button>' +
+      '<button data-act="copy" style="width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid color-mix(in srgb, var(--here) 25%, transparent);background:#151929;color:var(--on-chrome);cursor:pointer;font-family:inherit;font-size:0.95em;">Copy verse</button>' +
+      '<button data-act="share" style="width:100%;margin:0;padding:10px 12px;border-radius:6px;border:1px solid color-mix(in srgb, var(--here) 25%, transparent);background:#151929;color:var(--on-chrome);cursor:pointer;font-family:inherit;font-size:0.95em;">Share verse</button>';
 
     menu.addEventListener('click', function(e) {
       var btn = e.target.closest('button[data-act]');
@@ -427,7 +427,7 @@ function closeAllPanels() {
         '<textarea id="note-modal-text" style="width:100%;min-height:180px;resize:vertical;border:1px solid var(--rule);border-radius:8px;padding:10px 12px;font-family:David Libre,serif;font-size:1em;line-height:1.4;background:var(--bg-deep);color:var(--ink);"></textarea>' +
         '<div style="display:flex;justify-content:flex-end;gap:10px;margin-top:12px;">' +
           '<button id="note-modal-delete" style="border:1px solid rgba(180,60,60,0.4);background:transparent;color:#b43c3c;border-radius:8px;padding:8px 12px;cursor:pointer;">Delete</button>' +
-          '<button id="note-modal-save" style="border:1px solid var(--accent);background:var(--accent);color:#1e2233;border-radius:8px;padding:8px 12px;cursor:pointer;font-weight:700;">Save</button>' +
+          '<button id="note-modal-save" style="border:1px solid var(--accent);background:var(--accent);color:var(--chrome);border-radius:8px;padding:8px 12px;cursor:pointer;font-weight:700;">Save</button>' +
         '</div>' +
       '</div>';
     document.body.appendChild(overlay);
@@ -830,7 +830,7 @@ detailHtml += '<div class="rsc-slot">';   // RootScorecard upgrades this block w
         rootMeaning = meanings.slice(0, 4).join(', ');
       }
       if (!rootMeaning && typeof strongsGloss === 'string') rootMeaning = strongsGloss;
-      detailHtml += lemmaLine + '<span style="cursor:pointer;text-decoration:none;color:var(--tap-blue,#2e6da4);" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">Root ' + rootDisplay + '</span> \u2014 ' + rInfo.count + ' uses in ' + verseCount + ' verses';
+      detailHtml += lemmaLine + '<span style="cursor:pointer;text-decoration:none;color:var(--tap-blue,var(--here));" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">Root ' + rootDisplay + '</span> \u2014 ' + rInfo.count + ' uses in ' + verseCount + ' verses';
       if (rootMeaning) detailHtml += '<br><span style="font-style:italic;color:var(--ink-light);font-size:0.9em;">' + rootMeaning + '</span>';
       var formKeys = Object.keys(rInfo.forms);
       if (formKeys.length > 1) {
@@ -856,12 +856,12 @@ detailHtml += '</div>';
     if (directXref) {
       var xrefObj = JSON.parse(directXref);
       var refCount = xrefObj.refs ? xrefObj.refs.length : 0;
-      detailHtml += '<br><span class="popup-xref-direct" style="cursor:pointer;color:#d4af37;text-decoration:underline;font-size:0.9em;">View Cross-References (' + refCount + ') \u2192</span>';
+      detailHtml += '<br><span class="popup-xref-direct" style="cursor:pointer;color:var(--here-chrome);text-decoration:underline;font-size:0.9em;">View Cross-References (' + refCount + ') \u2192</span>';
     }
     if (true) {
       var rootXrefs = window._rootXrefs && window._rootXrefs[root];
       if (rootXrefs && rootXrefs.length > 0) {
-        detailHtml += '<br><span class="popup-xref-link" style="cursor:pointer;color:#d4af37;text-decoration:underline;font-size:0.9em;">Cross-References for root (' + rootXrefs.length + ') \u2192</span>';
+        detailHtml += '<br><span class="popup-xref-link" style="cursor:pointer;color:var(--here-chrome);text-decoration:underline;font-size:0.9em;">Cross-References for root (' + rootXrefs.length + ') \u2192</span>';
       }
     }
     popupDetail.innerHTML = detailHtml;

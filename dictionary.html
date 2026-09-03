@@ -5,7 +5,7 @@
   <script>(function(){var h=(location.hostname||'').toLowerCase(),p=location.pathname.split('/').filter(Boolean),gh=h.slice(-10)==='github.io'&&p.length>0,m=gh?'manifest.github.json':'manifest.json';document.write('<link rel="manifest" href="'+m+'" id="sw-manifest-link">');})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dictionary · Hebrew</title>
-  <meta name="theme-color" content="#1e2233" />
+  <meta name="theme-color" content="var(--chrome)" />
   <link rel="stylesheet" href="nav_engine.css">
   <link rel="stylesheet" href="site_chrome.css">
   <style>
@@ -21,11 +21,11 @@
     .title .en{font-family:'David Libre', serif; font-weight:600; letter-spacing:0.04em; color:var(--header-text); font-size:1.05em;}
     .title .he{color:var(--header-text); opacity:0.92; font-weight:600; direction:rtl; font-size:0.95em;}
     .actions{display:flex; align-items:center; gap:10px;}
-    .iconbtn{appearance:none; border:1px solid rgba(200,168,78,0.35); background:rgba(255,255,255,0.05); color:var(--header-text); padding:7px 10px; border-radius:8px; cursor:pointer; font-size:0.95em; line-height:1;}
-    .iconbtn:hover{background:rgba(200,168,78,0.12);}
+    .iconbtn{appearance:none; border:1px solid color-mix(in srgb, var(--here) 35%, transparent); background:rgba(255,255,255,0.05); color:var(--header-text); padding:7px 10px; border-radius:8px; cursor:pointer; font-size:0.95em; line-height:1;}
+    .iconbtn:hover{background:color-mix(in srgb, var(--here) 12%, transparent);}
     .wrap{max-width:980px; margin:0 auto; padding:18px 16px 60px;}
     .panel{background:var(--card-bg); border:1px solid var(--rule); border-radius:14px; box-shadow:0 8px 26px rgba(0,0,0,0.10); overflow:hidden;}
-    .panel-head{padding:14px 16px; background:linear-gradient(180deg, rgba(200,168,78,0.12), rgba(200,168,78,0.03)); border-bottom:1px solid var(--rule);}
+    .panel-head{padding:14px 16px; background:linear-gradient(180deg, color-mix(in srgb, var(--here) 12%, transparent), color-mix(in srgb, var(--here) 3%, transparent)); border-bottom:1px solid var(--rule);}
     .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center;}
     .q{flex:1; min-width:220px;}
     input[type="search"]{
@@ -37,14 +37,14 @@
     @media (min-width: 900px){ .content{grid-template-columns: 1.2fr 0.8fr;} }
     .list{border:1px solid var(--rule); border-radius:12px; overflow:hidden; background:rgba(0,0,0,0.02);}
     .item{padding:12px 12px; border-bottom:1px solid var(--rule); cursor:pointer;}
-    .item:hover{background:rgba(200,168,78,0.10);}
+    .item:hover{background:color-mix(in srgb, var(--here) 10%, transparent);}
     .item:last-child{border-bottom:none;}
     .heb{font-size:1.55em; direction:rtl;}
     .meta{color:var(--ink-light); font-size:0.92em; margin-top:4px;}
     .entry{border:1px solid var(--rule); border-radius:12px; padding:14px; background:rgba(0,0,0,0.02);}
     .entry h2{margin:0 0 6px 0; font-size:1.6em;}
     .btn{appearance:none; border:1px solid var(--rule); background:var(--bg-deep); color:var(--ink); padding:10px 12px; border-radius:10px; cursor:pointer; font-weight:650;}
-    .btn.primary{border-color:rgba(200,168,78,0.55); background:rgba(200,168,78,0.22);}
+    .btn.primary{border-color:color-mix(in srgb, var(--here) 55%, transparent); background:color-mix(in srgb, var(--here) 22%, transparent);}
     .btn.danger{border-color:rgba(185,74,58,0.55); background:rgba(185,74,58,0.14);}
     .small{font-size:0.92em; color:var(--ink-light); margin-top:10px; line-height:1.45;}
     code{font-family: 'David Libre', serif;}
