@@ -82,7 +82,16 @@ body.hide-gloss .xref-marker, body.dual-mode .xref-marker { font-size: 0.5em; }
 .word-unit.xref-linked { cursor: pointer; }
 .xref-panel-header { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--rule); position: sticky; top: 0; background: var(--bg); z-index: var(--z-raised); }
 .xref-panel-header h3 { margin: 0; font-size: 1.1em; color: var(--accent); font-weight: 600; }
-.xref-panel-close { cursor: pointer; font-size: 1.3em; color: var(--ink-light); padding: 2px 6px; border-radius: 4px; }
+/* 44px like every other panel close — this one was the only one the touch
+   pass missed, sitting at 28x26 while .glossary-close, .ann-panel-close,
+   .popup-close, .share-close, #search-close and .nav-close-btn all had it. */
+.xref-panel-close {
+  cursor: pointer; font-size: 1.3em; color: var(--ink-light);
+  border-radius: 4px;
+  min-width: 44px; min-height: 44px; padding: 4px 8px;
+  display: inline-flex; align-items: center; justify-content: center;
+  box-sizing: border-box;
+}
 .xref-panel-word { font-weight: 600; color: var(--accent); font-size: 1.1em; padding: 12px 16px 0; }
 .xref-panel-category { font-size: 0.75em; color: var(--ink-light); text-transform: uppercase; letter-spacing: 0.5px; padding: 2px 16px 10px; border-bottom: 1px solid var(--rule-light); }
 .xref-ref-card { padding: 12px 16px; border-bottom: 1px solid var(--rule-light); }

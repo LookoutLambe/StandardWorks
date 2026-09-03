@@ -528,7 +528,11 @@ body.dark-mode #annotations-panel .ann-tab.active {
   border-radius: 6px;
   padding: 8px 12px;
   color: var(--sw-gold-bright) !important;
-  font-size: 0.95em;
+  /* 16px, not 0.95em (15.2px). Safari on iPhone zooms the whole page in
+     when a focused input is under 16px, so tapping the search box threw
+     the reader into a zoomed viewport they then had to pinch back out of.
+     16px is the threshold, not a preference. */
+  font-size: 16px;
   font-family: 'David Libre', serif;
   outline: none;
   transition: border-color 0.2s;

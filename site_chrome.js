@@ -83,7 +83,13 @@
     try {
       var m = document.querySelector('meta[name="theme-color"]');
       if (!m) return;
-      m.setAttribute('content', document.body.classList.contains('dark-mode') ? '#0a0a0a' : '#1e2233');
+      /* These are the header's ACTUAL painted colours — #0b2a20 is --chrome
+         in light, #0a0a0a is what body.dark-mode repaints the bar. Light was
+         still #1e2233, the navy from before the emerald scheme, so on an
+         iPhone the status bar sat navy above an emerald header. It also
+         overwrote the value in the markup at runtime, which is why fixing
+         the meta tag alone would not have held. */
+      m.setAttribute('content', document.body.classList.contains('dark-mode') ? '#0a0a0a' : '#0b2a20');
     } catch (e) {}
   }
   try {

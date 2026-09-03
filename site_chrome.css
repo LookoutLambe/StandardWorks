@@ -1,4 +1,4 @@
-@import url('sw_theme.css?v=42');
+@import url('sw_theme.css?v=43');
 
 
 /* Hide body until chrome + footer are wired (prevents legacy bar flash) */
@@ -146,6 +146,25 @@ body.dark-mode .sw-top-bar {
   grid-row: 1;
   justify-self: end;
   z-index: var(--z-raised);
+}
+
+/* Reader header: dark toggle sits WITH the logo on the left, and the size
+   stepper takes the right edge on its own. The two controls used to share
+   the right side (A- A+ then the moon), which read as one undifferentiated
+   cluster and pushed the stepper in toward the centred title. Split across
+   the two ends, each side carries one idea: identity + appearance on the
+   left, the reading control on the right. The hub keeps the moon on the
+   right — it has no size stepper, and the shopping bag holds that corner. */
+body.sw-chrome-reader .sw-top-bar-inner {
+  grid-template-columns: auto auto auto 1fr auto;
+}
+body.sw-chrome-reader #sw-chrome-dark {
+  grid-column: 3;
+  justify-self: start;
+}
+body.sw-chrome-reader .sw-top-bar-tools {
+  grid-column: 5;
+  justify-self: end;
 }
 
 #sw-chrome-menu {
