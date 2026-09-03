@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="nav_engine.css?v=46">
 <link rel="stylesheet" href="site_chrome.css?v=69">
 <link rel="stylesheet" href="xref_study_panel.css?v=14">
-<link rel="stylesheet" href="reader.css?v=74">
+<link rel="stylesheet" href="reader.css?v=75">
 <style>
 
 /* Skip-to-content link (screen reader / keyboard) */
@@ -1091,7 +1091,7 @@ body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direct
   </main>
 </div>
 
-<script src="interlinear_gloss.js?v=1"></script>
+<script src="interlinear_gloss.js?v=2"></script>
 <script>
 // === READER CONFIG (phase 2) — the Pearl of Great Price reader runs on the
 // shared reader_core.js / reader_ui.js. Its landing and chapter panels are
@@ -1178,6 +1178,11 @@ window.READER = {
   englishData: '_pgpEnglishData',
   verseDir: 'pgp_verses',      // lazy books: <verseDir>/manifest.js says which file holds which chapter
   englishDir: 'pgp_english',   // the Dual column, one chunk per verse file, fetched with the book while Dual is on
+  /* the Pearl has books with no chapter number (Facsimiles, JS-M), so a
+     missing chapter means 1 rather than 'no heading'. This one expression
+     is why this page used to keep a whole inline copy of
+     _injectChapterHeading; the copy is gone. */
+  headingKey: function (chapId, bc) { return (bc && bc.book) ? bc.book + ' ' + (bc.chapter || 1) : null; },
   headingsEn: '_pgpChapterHeadings',
   headingsHe: '_pgpChapterHeadingsHeb',
   headingWords: '_pgpHeadingWords',
@@ -1229,7 +1234,7 @@ window.READER = {
   }
 };
 </script>
-<script src="reader_core.js?v=13"></script>
+<script src="reader_core.js?v=15"></script>
 
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=2"></script>
@@ -1252,7 +1257,7 @@ window.READER = {
 <script>window._volumeCrossrefsData = window._pgpCrossrefsData;</script>
 <script src="crossrefs_engine.js?v=12"></script>
 
-<script src="reader_ui.js?v=25"></script>
+<script src="reader_ui.js?v=28"></script>
 <script>
 // === PGP canon overrides (phase 2) — later function declarations win, so
 // these load AFTER reader_ui.js: book-map chapter labels, the progress nav
@@ -1343,81 +1348,7 @@ function goToGlossaryVerse(verseKey) {
   }, 200);
 }
 
-function _injectChapterHeading(chapId) {
-  try {
-    if (typeof _pgpChapterHeadings !== 'undefined' && typeof getBookChapter === 'function') {
-      var bc = getBookChapter(chapId);
-      if (bc && bc.book) {
-        var key = bc.book + ' ' + (bc.chapter || 1);
-        var text = _pgpChapterHeadings[key];
-        if (text) {
-          var headingEl = document.querySelector('#panel-' + chapId + ' .chapter-heading');
-          if (headingEl && !headingEl.querySelector('.chapter-summary-en')) {
-            var p = document.createElement('div');
-            p.className = 'chapter-summary-en';
-            p.textContent = text;
-            headingEl.appendChild(p);
-          }
-        }
-        var ht = (typeof _pgpChapterHeadingsHeb !== 'undefined') ? _pgpChapterHeadingsHeb[key] : '';
-        if (ht) {
-          var headingEl2 = document.querySelector('#panel-' + chapId + ' .chapter-heading');
-          if (headingEl2 && !headingEl2.querySelector('.chapter-summary-he')) {
-            var ph = document.createElement('div');
-            ph.className = 'chapter-summary-he';
-            ph.setAttribute('dir', 'rtl');
-            var phText = ht;
-            if (typeof _pgpHeadingWords !== 'undefined' && _pgpHeadingWords[key]) {
-              phText = _pgpHeadingWords[key].map(function(pr){ return pr[0]; }).join(' ').replace(/ \u05C3/g, '\u05C3');
-            }
-            ph.setAttribute('data-heb', phText);
-            ph.textContent = window._noNikkud ? _stripNikkudDisplay(phText) : phText;
-            headingEl2.appendChild(ph);
-            if (typeof _pgpHeadingWords !== 'undefined' && _pgpHeadingWords[key] && !headingEl2.querySelector('.heading-flow')) {
-              var hf = document.createElement('div');
-              hf.className = 'heading-flow';
-              hf.setAttribute('dir', 'rtl');
-              var hws = _pgpHeadingWords[key];
-              for (var hi = 0; hi < hws.length; hi++) {
-                var hh = hws[hi][0], hg = hws[hi][1] || '';
-                if (hh === '\u2014' || hh === '\u2013' || hh === '-') {
-                  var dash = document.createElement('span');
-                  dash.className = 'heading-dash'; dash.textContent = '\u2014';
-                  hf.appendChild(dash); continue;
-                }
-                if (hh === '\u05C3') {
-                  // Sof pasuq closes the summary the way it closes a verse:
-                  // rendered by the .sof class on the preceding word.
-                  var lastGrp = hf.lastElementChild;
-                  var lastWu = lastGrp && lastGrp.querySelector ? lastGrp.querySelector('.word-unit') : null;
-                  if (lastWu) lastWu.classList.add('sof');
-                  continue;
-                }
-                var wu = makeWordUnit(hh, hg, false);
-                if (wu) {
-                  if (!/[\u05D0-\u05EA]/.test(hh)) { wu.style.direction = 'ltr'; wu.style.unicodeBidi = 'isolate'; var hwSpan = wu.querySelector('.hw'); if (hwSpan) { hwSpan.style.direction = 'ltr'; hwSpan.style.unicodeBidi = 'isolate'; } }
-                  var tls = wu.querySelector('.tl');
-                  if (tls && typeof transliterate === 'function' && /[\u05D0-\u05EA]/.test(hh)) { try { tls.textContent = transliterate(hh); } catch(eT) {} }
-                  var hgrp = document.createElement('span');
-                  hgrp.className = 'word-group';
-                  hgrp.appendChild(wu);
-                  var harr = document.createElement('span');
-                  harr.className = 'arr';
-                  harr.innerHTML = '<span class="arr-hw">\u200B</span><span class="arr-tl">\u2039</span><span class="arr-gl">\u2039</span>';
-                  hgrp.appendChild(harr);
-                  hf.appendChild(hgrp);
-                }
-              }
-              var lastA = hf.lastElementChild ? hf.lastElementChild.querySelector('.arr') : null;
-              if (lastA) { var lt=lastA.querySelector('.arr-tl'), lg=lastA.querySelector('.arr-gl'); if(lt)lt.textContent='\u00ab'; if(lg)lg.textContent='\u00ab'; }
-              headingEl2.appendChild(hf);
-            }
-          }
-        }
-      }
-    }
-    } catch(e) {}
-}
+
 </script>
 
 <script src="notes_engine.js"></script>

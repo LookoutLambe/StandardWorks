@@ -65,5 +65,29 @@
     return g;
   }
 
+  /**
+   * Append a .word-group to a word-flow / heading-flow, with a real space
+   * between it and the previous group.
+   *
+   * ONE home, because there are FOUR builders that make these rows: verses
+   * and chapter summaries in the shared engine (reader_core.js renderWords,
+   * reader_ui.js heading loop) and again in bom.html, which carries its own
+   * inline copy of the reader engine and does not load reader_core.js at all.
+   * Writing the same three lines into all four is exactly the duplication
+   * that keeps forcing every shared fix to be made twice.
+   *
+   * The space is what makes justification possible: text-align:justify
+   * distributes slack into soft-wrap opportunities, and the groups used to be
+   * emitted flush against each other, so there were none and the rows stayed
+   * ragged. It also replaces the flex column-gap, which block layout cannot
+   * use. See the JUSTIFIED ROWS block in reader.css.
+   */
+  function appendWordGroup(container, group) {
+    if (!container || !group) return;
+    if (container.lastChild) container.appendChild(document.createTextNode(' '));
+    container.appendChild(group);
+  }
+
   global.augmentGlossWithPrefixes = augmentGlossWithPrefixes;
+  global.appendWordGroup = appendWordGroup;
 })(typeof window !== 'undefined' ? window : global);

@@ -282,7 +282,7 @@ function renderWords(words, container, verseKey) {
     group.className = 'word-group';
     if (el) group.appendChild(el);
     group.appendChild(chevron);
-    container.appendChild(group);
+    appendWordGroup(container, group);   // interlinear_gloss.js — one home for all four builders
     realCount++;
   });
 }

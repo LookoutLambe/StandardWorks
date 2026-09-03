@@ -2200,3 +2200,44 @@ html.sw-boot .chapter-panel { visibility:hidden!important }
 .lsg-stack .lsg-s-heb { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--ink); }
 .lsg-stack .lsg-s-tl { font-size: 0.78em; color: var(--ink-light); font-style: italic; direction: ltr; }
 .lsg-stack .lsg-s-en { font-family: 'David Libre', 'Georgia', serif; font-size: 0.92em; color: var(--ink); letter-spacing: 0.06em; direction: ltr; }
+
+
+/* ══════════════════════════════════════════════════════════════════════
+   JUSTIFIED ROWS — interlinear only (2026-09-03)
+
+   The word rows were ragged: every row ended wherever the last word fell,
+   so nothing lined up down the page. They are justified now, flush on both
+   edges, with the LAST line of each verse left ragged the way a set page
+   works — `text-align-last: start`, which is direction-aware and so lands on
+   the right in this RTL text.
+
+   Why it could not be done in CSS alone. .word-flow was a wrapping flexbox
+   and its children carried no whitespace between them, so:
+     - text-align had no effect at all (flex items are not inline text), and
+     - even as a block there were no soft-wrap opportunities for justify to
+       expand, because the groups were emitted flush against each other.
+   So renderWords() in reader_core.js — and the summary builder in
+   reader_ui.js — now emit a real space between groups, and the layout
+   switches to block here. The 0.9em flex column-gap has no meaning in block
+   layout; word-spacing replaces it, and the 2px row-gap becomes a margin on
+   the group, which counts because an inline-flex box's margins do affect the
+   line box.
+
+   Scoped to the interlinear. Dual has its own two-column measure, and
+   Hebrew Only is a different reading shape.
+   ══════════════════════════════════════════════════════════════════════ */
+body:not(.hide-gloss):not(.dual-mode) .word-flow,
+body:not(.hide-gloss):not(.dual-mode) .heading-flow {
+  display: block !important;
+  text-align: justify;
+  text-align-last: start;
+  word-spacing: 0.55em;
+  line-height: 1;
+}
+body:not(.hide-gloss):not(.dual-mode) .word-flow > .word-group,
+body:not(.hide-gloss):not(.dual-mode) .heading-flow > .word-group {
+  display: inline-flex;
+  word-spacing: normal;   /* the groups' own text must not inherit the row spacing */
+  vertical-align: top;
+  margin-bottom: 2px;     /* was the flex row-gap */
+}

@@ -1612,8 +1612,15 @@ function _injectChapterHeading(chapId) {
   try {
     if (window[window.READER.headingsEn] !== undefined && typeof getBookChapter === 'function') {
       var bc = getBookChapter(chapId);
-      if (bc && bc.book && bc.chapter) {
-        var key = bc.book + ' ' + bc.chapter;
+      /* How a volume keys its headings is the ONE thing that differed between
+         this function and the copies dc.html and pgp.html each kept inline.
+         The D&C keys by section label, and the Pearl has books with no chapter
+         number, so both forked the whole function to change one expression.
+         READER.headingKey is that expression; everything else is shared. */
+      var key = window.READER.headingKey
+        ? window.READER.headingKey(chapId, bc)
+        : (bc && bc.book && bc.chapter ? bc.book + ' ' + bc.chapter : null);
+      if (key) {
         var text = window[window.READER.headingsEn][key];
         if (text) {
           var headingEl = document.querySelector('#panel-' + chapId + ' .chapter-heading');
@@ -1670,7 +1677,7 @@ function _injectChapterHeading(chapId) {
                   harr.className = 'arr';
                   harr.innerHTML = '<span class="arr-hw">\u200B</span><span class="arr-tl">\u2039</span><span class="arr-gl">\u2039</span>';
                   hgrp.appendChild(harr);
-                  hf.appendChild(hgrp);
+                  appendWordGroup(hf, hgrp);
                 }
               }
               var lastA = hf.lastElementChild ? hf.lastElementChild.querySelector('.arr') : null;
@@ -1691,19 +1698,26 @@ _ensureChapterRendered = function(chapId) {
   _injectChapterHeading(chapId);
 };
 
-// DARK MODE
+// THEME — site_chrome.js is the single owner (light / sepia / dark).
+// This used to keep its own <vol>-dark-mode key AND add the class itself, so
+// there were two owners of one piece of state. The moment a third theme
+// existed that became visible: the shared system set sepia-mode while this
+// restored dark-mode from a stale per-volume key, and the body carried BOTH
+// at once — a cream page painted with dark-mode's rules.
+// Delegates now. The legacy key is migrated once so nobody loses their setting.
 function toggleDarkMode() {
-  document.body.classList.toggle('dark-mode');
-  var isDark = document.body.classList.contains('dark-mode');
-  document.getElementById('dark-mode-toggle').textContent = isDark ? '\u2600' : '\u263D';
-  try { localStorage.setItem(window.READER.vol + '-dark-mode', isDark ? '1' : '0'); } catch(e) {}
+  if (typeof window.toggleDark === 'function') { window.toggleDark(); return; }
+  document.body.classList.toggle('dark-mode');   // only if the shared chrome never loaded
 }
-(function() {
-  if (localStorage.getItem(window.READER.vol + '-dark-mode') === '1') {
-    document.body.classList.add('dark-mode');
-    var btn = document.getElementById('dark-mode-toggle');
-    if (btn) btn.textContent = '\u2600';
-  }
+(function migrateLegacyThemeKey() {
+  try {
+    var k = window.READER.vol + '-dark-mode';
+    if (localStorage.getItem(k) === '1' && !localStorage.getItem('sw-theme-mode')) {
+      localStorage.setItem('sw-theme-mode', 'dark');
+      localStorage.setItem('sw-dark', '1');
+    }
+    localStorage.removeItem(k);           // one owner, one key
+  } catch (e) {}
 })();
 
 // SEARCH

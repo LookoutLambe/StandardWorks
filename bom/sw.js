@@ -9,7 +9,7 @@ const ASSETS = [
   '../root_engine.js?v=38',
   '../root_concordance.js?v=83',
   '../xref_study_panel.css?v=14',
-  '../reader.css?v=74',
+  '../reader.css?v=75',
   '../xref_study_panel.js?v=6',
   './official_verses.js?v=10',
   './scripture_verses.js',

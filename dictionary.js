@@ -23,15 +23,20 @@
       .replace(/'/g, '&#39;');
   }
 
+  /* THEME — site_chrome.js is the single owner (light / sepia / dark), and
+     dictionary.html loads it. This was the fourth place adding the dark-mode
+     class off its own key; with three themes that meant the page could end up
+     carrying two theme classes at once. Delegates now, and the no-chrome
+     branch is only a fallback for the file opened on its own. */
   function restoreDark() {
+    if (typeof window.swApplyTheme === 'function') return;   // site_chrome restores it
     try {
-      if (localStorage.getItem(LS_DARK) === '1') {
-        document.body.classList.add('dark-mode');
-        if (btnDark) btnDark.textContent = '☀️';
-      }
+      if (localStorage.getItem('sw-theme-mode') === 'sepia') document.body.classList.add('sepia-mode');
+      else if (localStorage.getItem(LS_DARK) === '1') document.body.classList.add('dark-mode');
     } catch (e) {}
   }
   function toggleDark() {
+    if (typeof window.toggleDark === 'function' && window.toggleDark !== toggleDark) { window.toggleDark(); return; }
     document.body.classList.toggle('dark-mode');
     var isDark = document.body.classList.contains('dark-mode');
     if (btnDark) btnDark.textContent = isDark ? '☀️' : '🌙';

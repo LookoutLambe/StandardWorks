@@ -54,7 +54,7 @@
 <link rel="stylesheet" href="../nav_engine.css?v=46">
 <link rel="stylesheet" href="../site_chrome.css?v=69">
 <link rel="stylesheet" href="../xref_study_panel.css?v=14">
-<link rel="stylesheet" href="../reader.css?v=74">
+<link rel="stylesheet" href="../reader.css?v=75">
 <style>
 
 /* Skip-to-content link (screen reader / keyboard) */
@@ -3869,7 +3869,7 @@ body.dual-mode .chapter-summary { display: block; }
 <script src="chapter_headings_heb.js?v=7"></script>
 <script defer src="topical_guide.js?v=3"></script>
 <script src="../notes_engine.js"></script>
-<script src="../interlinear_gloss.js?v=1"></script>
+<script src="../interlinear_gloss.js?v=2"></script>
 <script>
 (function readerTouchBurstTracker() {
   var recentEnds = [];
@@ -4249,7 +4249,7 @@ function renderWords(words, container, verseKey) {
     group.className = 'word-group';
     if (el) group.appendChild(el);
     group.appendChild(chevron);
-    container.appendChild(group);
+    appendWordGroup(container, group);   // interlinear_gloss.js — one home for all four builders
     realCount++;
   });
 }
@@ -8177,21 +8177,26 @@ document.addEventListener(
   true
 );
 
-// 5. DARK MODE
+// 5. THEME — site_chrome.js is the single owner (light / sepia / dark).
+// This was a verbatim fork of the same block in reader_ui.js: its own
+// bom-dark-mode key, its own class toggle, its own icon markup. Two owners of
+// one piece of state, which only became visible once a third theme existed —
+// the shared system set sepia-mode while this restored dark-mode from a stale
+// bom-dark-mode key, and the body carried BOTH at once, painting a cream page
+// with dark-mode's rules. The fork is gone; the icon is site_chrome's job too
+// (syncDarkButtons), so it is not restated here.
 function toggleDarkMode() {
-  document.body.classList.toggle('dark-mode');
-  var isDark = document.body.classList.contains('dark-mode');
-  var btn = document.getElementById('dark-mode-toggle');
-  btn.textContent = isDark ? '<svg class="sw-i" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.1"/><path d="M12 2.4v2.2M12 19.4v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.4 12h2.2M19.4 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>️' : '<svg class="sw-i" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1Z"/></svg>';
-  try { localStorage.setItem('bom-dark-mode', isDark ? '1' : '0'); } catch(e) {}
+  if (typeof window.toggleDark === 'function') { window.toggleDark(); return; }
+  document.body.classList.toggle('dark-mode');   // only if the shared chrome never loaded
 }
-(function() {
-  var saved = localStorage.getItem('bom-dark-mode');
-  if (saved === '1') {
-    document.body.classList.add('dark-mode');
-    var btn = document.getElementById('dark-mode-toggle');
-    if (btn) btn.textContent = '<svg class="sw-i" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.1"/><path d="M12 2.4v2.2M12 19.4v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.4 12h2.2M19.4 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>️';
-  }
+(function migrateLegacyThemeKey() {
+  try {
+    if (localStorage.getItem('bom-dark-mode') === '1' && !localStorage.getItem('sw-theme-mode')) {
+      localStorage.setItem('sw-theme-mode', 'dark');
+      localStorage.setItem('sw-dark', '1');
+    }
+    localStorage.removeItem('bom-dark-mode');    // one owner, one key
+  } catch (e) {}
 })();
 
 // 6. SEARCH
@@ -11709,7 +11714,7 @@ updateNavButtons();
         group.className = 'word-group';
         group.appendChild(wu);
         group.appendChild(chevron);
-        flowDiv.appendChild(group);
+        appendWordGroup(flowDiv, group);
         realIdx++;
       }
       heading.appendChild(flowDiv);
