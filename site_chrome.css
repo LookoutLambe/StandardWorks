@@ -303,6 +303,23 @@ body.has-sw-chrome .dict-wrap {
   padding-top: calc(var(--sw-chrome-h) + 12px + env(safe-area-inset-top, 0px));
 }
 
+/* ── Phone in landscape ───────────────────────────────────────────────
+   A phone on its side has ~375px of height, and the chrome was taking 150
+   of it — header 56 plus footer 94 — leaving 60% for the text. Every
+   pixel here is one the reader does not get.
+
+   The chapter Next/Prev buttons keep their full 44px: they are the most
+   used controls on the page and the first thing a cramped layout must not
+   compromise. The savings come from the header's own height and from
+   padding, which cost nothing to give up. */
+@media (orientation: landscape) and (max-height: 460px) {
+  body.has-sw-chrome { --sw-chrome-h: 46px; }
+  .sw-top-bar { padding-bottom: 3px; }
+  .sw-top-bar-inner { min-height: 40px; }
+  #sw-reader-footer .nqd-chapter-nav { padding-top: 3px; padding-bottom: 3px; }
+  #sw-reader-footer .nqd-modes-toggle { min-height: 28px; padding: 4px 0 3px; }
+}
+
 @media print {
   #sw-top-bar {
     display: none !important;
