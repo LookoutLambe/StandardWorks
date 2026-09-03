@@ -177,9 +177,6 @@ body {
   background: var(--row-alt);
 }
 
-@media (hover: hover) and (pointer: fine) { .verse:hover {
-  background: rgba(200, 168, 78, 0.14);
-} }
 
 .verse:last-child {
   border-bottom: none;
@@ -230,9 +227,6 @@ body {
   -webkit-user-select: none;
 }
 
-@media (hover: hover) and (pointer: fine) { .word-unit:hover {
-  background: rgba(139, 105, 20, 0.08);
-} }
 
 .hw {
   font-size: 1.85em;
@@ -511,7 +505,7 @@ body.dual-mode .hw { font-size: 1.3em; }
   .page { box-shadow: none; padding: 20px 40px; }
   .verse:hover { background: none; }
   .chapter-nav { display: none; }
-  #word-popup, #word-popup-overlay { display: none !important; }
+  #word-popup { display: none !important; }
 }
 
 .chapter-panel { opacity: 0; }
@@ -564,19 +558,8 @@ body.dual-mode .hw { font-size: 1.3em; }
   opacity: 0.9;
 }
 
-/* Dimmed backdrop behind word scorecard (pointer-events: none — taps pass through to scripture) */
-#word-popup-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 199;
-  background: rgba(30, 34, 51, 0.35);
-  -webkit-tap-highlight-color: transparent;
-  pointer-events: none;
-}
-#word-popup-overlay.visible {
-  display: block;
-}
+
+
 
 /* === WORD POPUP === */
 #word-popup {
@@ -664,7 +647,6 @@ body.dual-mode .hw { font-size: 1.3em; }
   touch-action: manipulation;
 }
 .word-unit { cursor: pointer; }
-@media (hover: hover) and (pointer: fine) { .word-unit:hover { background: rgba(200,168,78,0.06); border-radius: 4px; } }
 
 /* === SEARCH === */
 #search-container {
@@ -923,14 +905,12 @@ body.dark-mode .tl { color: var(--gloss); }
 body.dark-mode .page { background: #1e2233; }
 body.dark-mode .controls-top, body.dark-mode .controls-bottom { background: #0d111c; }
 body.dark-mode .verse { border-color: #303648; }
-@media (hover: hover) and (pointer: fine) { body.dark-mode .verse:hover { background: rgba(200, 168, 78, 0.08); } }
 /* Dark mode renders highlights as translucent washes over the navy — the
    solid light-mode pastels would bury the light ink. !important outranks the
    painter's inline background. */
 .ann-hl { border-radius: 4px; }
-@media (hover: hover) and (pointer: fine) { body.dark-mode .word-unit:hover { background: rgba(200, 168, 78, 0.10); } }
 body.dark-mode #word-popup { background: #1e2233; border-color: #d4af37; color: #e8e0d0; }
-body.dark-mode #word-popup-overlay { background: rgba(0, 0, 0, 0.5); }
+
 body.dark-mode #word-popup .popup-dismiss-mobile {
   border-color: #d4af37;
   color: #e8d9a8;
@@ -1294,7 +1274,6 @@ body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direct
 <div id="search-results"></div>
 
 <!-- Word popup -->
-<div id="word-popup-overlay" aria-hidden="true"></div>
 <div id="word-popup">
   <span class="popup-close" onclick="closePopup()" role="button" aria-label="Close popup">✕</span>
   <div class="popup-hebrew" id="popup-hw"></div>

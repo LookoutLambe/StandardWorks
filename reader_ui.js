@@ -888,11 +888,6 @@ detailHtml += '</div>';
     // Scorecard opens centered on screen — word-anchored placement ran
     // off-screen on phones and made study impossible.
     popup.style.display = 'block';
-    var ovl = document.getElementById('word-popup-overlay');
-    if (ovl) {
-      ovl.classList.add('visible');
-      ovl.setAttribute('aria-hidden', 'false');
-    }
     popup.style.left = '50%';
     popup.style.top = '50%';
     popup.style.transform = 'translate(-50%, -50%)';
@@ -906,11 +901,6 @@ detailHtml += '</div>';
 function closePopup() {
   var wp = document.getElementById('word-popup');
   if (wp) wp.style.display = 'none';
-  var ovl = document.getElementById('word-popup-overlay');
-  if (ovl) {
-    ovl.classList.remove('visible');
-    ovl.setAttribute('aria-hidden', 'true');
-  }
 }
 
 document.addEventListener(

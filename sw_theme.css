@@ -64,6 +64,7 @@ body.dark-mode {
   --gloss: #333;
   --verse-num: var(--gold-deep);        /* was a fourth blue, #4a7ba6 */
   --highlight: rgba(200, 168, 78, 0.10);
+  --hover-wash: rgba(200, 168, 78, 0.10);
   --header-bg: var(--navy);
   --header-text: var(--gold);
   --row-alt: var(--bg);
@@ -88,6 +89,7 @@ body.dark-mode {
   --gloss: #c2baa2;
   --verse-num: var(--gold-bright);
   --highlight: rgba(200, 168, 78, 0.15);
+  --hover-wash: rgba(200, 168, 78, 0.09);
   --header-bg: var(--navy);             /* was #d4af37 — a gold BACKGROUND */
   --header-text: var(--gold-bright);
   --row-alt: var(--navy);
@@ -101,6 +103,14 @@ body.dark-mode {
 .word-unit.sof .hw::after { color: var(--hw); }
 .gl { color: var(--gloss); }
 .tl { color: var(--ink-light); }   /* was #1a2744 in pgp/jst/bom */
+
+/* Hover wash on the WORD only. The whole-verse wash (.verse:hover) is
+   deliberately gone — landing on a verse darkened the entire row, which
+   is what the lighter reading ground was fighting. bom.html had also
+   drifted to a different wash (219,185,88) than the other five. */
+@media (hover: hover) and (pointer: fine) {
+  .word-unit:hover { background: var(--hover-wash); }
+}
 .hw .qq { color: var(--qq); }
 body.dark-mode .hw .qq { color: var(--qq-bright); }
 .verse-num { color: var(--verse-num); }

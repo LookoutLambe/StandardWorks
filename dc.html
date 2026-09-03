@@ -74,14 +74,12 @@ body {
 
 /* === INTERLINEAR CORE === */
 .verse { display: flex; align-items: flex-start; gap: 10px; border-bottom: 1px solid var(--rule-light); padding: 12px 0; direction: rtl; transition: background 0.2s; }
-@media (hover: hover) and (pointer: fine) { .verse:hover { background: var(--highlight); } }
 .verse-num { font-family: 'David Libre', serif; font-size: 1.2em; font-weight: 700; color: var(--verse-num); min-width: 30px; text-align: center; padding-top: 3px; cursor: pointer; user-select: none; flex-shrink: 0; line-height: 1.2; }
 .verse-num .verse-num-arabic { display: block; font-size: 0.55em; color: var(--ink-light); font-weight: 400; font-family: 'David Libre', 'Georgia', serif; opacity: 0.7; }
 .word-flow { display: flex; flex-wrap: wrap; gap: 1px; align-items: flex-start; flex: 1; direction: rtl; }
 .word-group { display: inline-flex; align-items: flex-start; vertical-align: top; direction: rtl; }
 
 .word-unit { display: inline-flex; flex-direction: column; align-items: center; padding: 3px 5px; border-radius: 3px; cursor: pointer; transition: background 0.15s; line-height: 1.2; user-select: none; -webkit-user-select: none; }
-@media (hover: hover) and (pointer: fine) { .word-unit:hover { background: var(--highlight); } }
 .hw { font-size: 1.85em; font-weight: 500; line-height: 1.5; direction: rtl; unicode-bidi: bidi-override; white-space: nowrap; }
 .gl { font-family: 'David Libre', 'Georgia', serif; font-size: 0.69em; color: var(--gloss); direction: ltr; text-align: center; white-space: normal; overflow-wrap: break-word; hyphens: none; line-height: 1.35; max-width: 96px; padding: 0 6px; font-style: normal; }
 .tl { font-family: 'David Libre', 'Georgia', serif; font-size: 0.78em; color: var(--ink-light); direction: ltr; text-align: center; white-space: nowrap; opacity: 0.7; }
@@ -229,19 +227,8 @@ body.dark-mode .verse.user-highlight { background: rgba(200, 168, 78, 0.18); }
 /* === READING PROGRESS === */
 #reading-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--accent); z-index: 200; width: 0%; transition: width 0.1s; }
 
-/* Dimmed backdrop behind word scorecard (pointer-events: none — taps pass through to scripture) */
-#word-popup-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 299;
-  background: rgba(30, 34, 51, 0.35);
-  -webkit-tap-highlight-color: transparent;
-  pointer-events: none;
-}
-#word-popup-overlay.visible {
-  display: block;
-}
+
+
 
 /* === WORD POPUP === */
 #word-popup {
@@ -403,7 +390,7 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
   .landing-section-grid { grid-template-columns: repeat(7, 1fr); }
 }
 @media print {
-  .controls-top, .controls-bottom, #reading-progress, #word-popup, #word-popup-overlay, #search-container, #search-results { display: none !important; }
+  .controls-top, .controls-bottom, #reading-progress, #word-popup, #search-container, #search-results { display: none !important; }
   .page { padding: 0; }
 }
 
@@ -413,14 +400,12 @@ body.dark-mode .tl { color: var(--gloss); }
 body.dark-mode .page { background: #1e2233; }
 body.dark-mode .controls-top, body.dark-mode .controls-bottom { background: #0d111c; }
 body.dark-mode .verse { border-color: #303648; }
-@media (hover: hover) and (pointer: fine) { body.dark-mode .verse:hover { background: rgba(200, 168, 78, 0.08); } }
 /* Dark mode renders highlights as translucent washes over the navy — the
    solid light-mode pastels would bury the light ink. !important outranks the
    painter's inline background. */
 .ann-hl { border-radius: 4px; }
-@media (hover: hover) and (pointer: fine) { body.dark-mode .word-unit:hover { background: rgba(200, 168, 78, 0.10); } }
 body.dark-mode #word-popup { background: #1e2233; border-color: #d4af37; color: #e8e0d0; }
-body.dark-mode #word-popup-overlay { background: rgba(0, 0, 0, 0.5); }
+
 body.dark-mode #word-popup .popup-dismiss-mobile {
   border-color: #d4af37;
   color: #e8d9a8;
@@ -782,7 +767,6 @@ body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direct
 </div>
 <div id="search-results"></div>
 
-<div id="word-popup-overlay" aria-hidden="true"></div>
 <div id="word-popup">
   <span class="popup-close" onclick="closePopup()" role="button" aria-label="Close popup">✕</span>
   <div class="popup-hebrew" id="popup-hw"></div>
