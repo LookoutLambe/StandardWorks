@@ -772,12 +772,14 @@ body.dark-mode #nav-sidebar .nl-tile { background: var(--surface-1) !important; 
 
 /* Mode bar (Interlinear / Hebrew Only / Dual / Transliterate / No Nikkud):
    44 px targets and 12 px labels — they were 32 px tall with 10.4 px text,
-   under both the touch and the legibility floors. Wraps to two rows only on
-   screens narrower than ~360 px. */
+   under both the touch and the legibility floors. */
 #sw-reader-footer .controls-bottom {
   gap: 4px;
   padding: 4px max(6px, env(safe-area-inset-left, 0px)) max(6px, env(safe-area-inset-bottom, 0px)) max(6px, env(safe-area-inset-right, 0px));
   flex-wrap: wrap;
   justify-content: center;
 }
+/* The mode buttons' flex basis (and its narrow-screen 3-up rule) lives in
+   sw_theme.css beside their sizing — that file loads after this one via
+   site_chrome.css's @import, so a copy here would silently lose. */
 
