@@ -176,8 +176,12 @@ body.dark-mode .ann-hl[data-hlc="#cfd8dc"] { background-color: rgba(120,144,156,
 #continue-reading .cr-heb {
   color: var(--sw-navy) !important;
 }
+/* The resting fill is --sw-gold and the hover fill was --sw-gold-bright;
+   both resolve to --on-chrome, so the primary "continue reading" button
+   had no hover at all. The accent fill keeps the dark --sw-navy label
+   readable on it (dark-on-mint), unlike a white label would. */
 #continue-reading:hover {
-  background: var(--sw-gold-bright) !important;
+  background: var(--here-chrome) !important;
   filter: none;
 }
 
@@ -190,8 +194,10 @@ body.dark-mode .ann-hl[data-hlc="#cfd8dc"] { background-color: rgba(120,144,156,
 .study-tools-strip .sts-dot {
   color: var(--sw-gold) !important;
 }
+/* accent, not --sw-gold-bright — that token equals --sw-gold (both are
+   --on-chrome), so this hover repainted the link its own resting colour */
 .study-tools-strip a:hover {
-  color: var(--sw-gold-bright) !important;
+  color: var(--here-chrome) !important;
 }
 
 .gs-result-link {

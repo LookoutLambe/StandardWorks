@@ -46,7 +46,14 @@ html.sw-shell-pending #annotations-panel, html.sw-shell-pending #glossary-panel 
   font-weight: 600;
   cursor: pointer; padding: 4px 6px; line-height: 1;
 }
-.nav-icon-btn:hover { color: var(--sw-gold-bright, var(--on-chrome)); }
+/* Hover is the accent, not --sw-gold-bright. That token is pinned to
+   --on-chrome (it also carries the search input's text and the library
+   cards' Hebrew, which must stay neutral), and --sw-gold resolves to
+   --on-chrome too — so hovering these buttons used to repaint #ecfdf5
+   with #ecfdf5 and nothing moved. One token was doing two jobs: text on
+   chrome, and interactive highlight. The highlight job belongs to the
+   accent that is always bright on chrome. */
+.nav-icon-btn:hover { color: var(--here-chrome); }
 .nav-home-btn { font-size: 1.5em; }
 .nav-close-btn {
   background: none; border: none;
@@ -55,7 +62,7 @@ html.sw-shell-pending #annotations-panel, html.sw-shell-pending #glossary-panel 
   font-weight: 600;
   cursor: pointer; padding: 4px 8px; line-height: 1;
 }
-.nav-close-btn:hover { color: var(--sw-gold-bright, var(--on-chrome)); }
+.nav-close-btn:hover { color: var(--here-chrome); }
 
 /* ── Footer: bookmarks ── */
 .nf-bm {

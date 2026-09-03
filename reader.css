@@ -957,6 +957,14 @@ body.dark-mode #nav-sidebar .nav-search-results,body.dark-mode #nav-sidebar .nav
 #nav-sidebar .nav-icon-btn,#nav-sidebar .nav-close-btn {
   color:var(--gold-bright) !important;
 }
+/* The pin above (and its twin in sw_theme.css) is `#id .class !important`,
+   which outranks any `.class:hover` no matter where that lives — so these
+   buttons had no hover state at all, and neither did the token: repointing
+   --sw-gold-bright could never have shown up here. A state rule has to sit
+   at the pin's own weight to be seen, so it lives beside it. */
+#nav-sidebar .nav-icon-btn:hover,#nav-sidebar .nav-close-btn:hover {
+  color:var(--here-chrome) !important;
+}
 #nav-sidebar .nav-vol-tabs {
   background:var(--surface-sunken) !important;
   border-bottom:1px solid color-mix(in srgb, var(--here-chrome) 30%, transparent) !important;
