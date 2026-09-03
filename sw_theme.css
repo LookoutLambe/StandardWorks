@@ -321,11 +321,15 @@ body.dark-mode .ann-hl[data-hlc="#cfd8dc"] { background-color: rgba(120,144,156,
   --card-shadow:       0 1px 2px rgba(26,26,26,.04), 0 4px 14px rgba(26,26,26,.05);
   --card-shadow-hover: 0 2px 4px rgba(26,26,26,.05), 0 10px 26px rgba(26,26,26,.09);
   --card-motion: .22s ease;
+  --panel-ground: #ebe9e2;   /* silver behind the panels — white cards were
+                                sitting on #fdfcf8 paper, 1.03:1 apart, so
+                                they read as nothing at all */
   --card-title: var(--on-paper);
   --card-tl:    #8a8578;
   --card-body:  #4a4a4a;
 }
 body.dark-mode {
+  --panel-ground: var(--surface-1);
   --card-bg: var(--surface-2);
   --card-shadow:       0 1px 2px rgba(0,0,0,.28), 0 4px 14px rgba(0,0,0,.30);
   --card-shadow-hover: 0 2px 4px rgba(0,0,0,.32), 0 10px 26px rgba(0,0,0,.40);
@@ -349,7 +353,7 @@ body.dark-mode {
   /* --surface-sunken is NOT re-pointed: the injected sheet paints the
      drawer's search bar, results and footer from it, and those are
      chrome — they must stay navy like every other bar in the app. */
-  --surface-0:      var(--bg);
+  --surface-0:      var(--panel-ground);
   --surface-1:      var(--card-bg);
   --surface-2:      var(--card-bg);
   --surface-3:      var(--card-bg);
@@ -359,9 +363,9 @@ body.dark-mode {
   --gold-bright:    var(--gold-deep);   /* gold on paper must be the deep stop */
   --gold-pale:      var(--on-paper-muted);
   --tap-bright:     var(--tap);
-  --navy:           var(--bg);
+  --navy:           var(--panel-ground);
   --navy-2:         var(--card-bg);
-  background: var(--bg) !important;
+  background: var(--panel-ground) !important;
   color: var(--on-paper) !important;
   border-right-color: rgba(26,26,26,.10) !important;
   border-left-color:  rgba(26,26,26,.10) !important;
