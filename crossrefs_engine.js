@@ -1335,8 +1335,72 @@
   window.navigateToVerseKey = navigateToVerseKey;
   window.selToolbarXref = selToolbarXref;
 
-  // ── Auto-load after delay ──
-  setTimeout(loadCrossRefs, 500);
+  /* ── Load the volume's crossref DATA after first paint, not before it ──
+
+     Each page used to pull its data with a plain blocking <script>:
+       ot_crossrefs.js 1,243 KB · dc 511 · nt 475 · pgp 73
+     ot_crossrefs.js alone was the single largest thing on the critical path —
+     larger than the chapter being read — and none of it is needed to put text
+     on screen. It draws the little cross-reference markers, which nobody can
+     tap until the verses exist.
+
+     Fetched here instead, on idle after the reader has something to read. The
+     engine already tolerated the data being absent (loadCrossRefs warns and
+     returns, and reader_ui.js guards on window._crossrefsLoaded), so nothing
+     downstream had to change.
+
+     The decision is made at DOMContentLoaded because deferred scripts have
+     run by then: bom.html loads its own crossrefs.js with `defer`, so its
+     data is already present and this skips straight past. */
+  function crossrefDataFile() {
+    /* an EXPLICIT empty string means "this volume has none" — the JST says so,
+       and without that this would chase jst_crossrefs.js and 404 every load. */
+    if (window.READER && typeof window.READER.crossrefsFile === 'string') return window.READER.crossrefsFile;
+    var vol = (window.READER && window.READER.vol) || '';
+    return vol ? vol + '_crossrefs.js' : '';
+  }
+
+  /* The data files each declare their own global — _otCrossrefsData,
+     _ntCrossrefsData, _dcCrossrefsData, _pgpCrossrefsData, and _crossrefsData
+     in the Book of Mormon — and every page carried its own one-line
+     `window._volumeCrossrefsData = window._xxCrossrefsData;` to bridge them.
+     Five copies of one alias, which only worked because the data was loaded
+     by a blocking tag immediately above. The bridge lives with the loading
+     now, so it still holds once the data arrives late. */
+  function adoptVolumeData() {
+    if (window._volumeCrossrefsData) return true;
+    var vol = (window.READER && window.READER.vol) || '';
+    var g = (vol && window['_' + vol + 'CrossrefsData']) || window._crossrefsData;
+    if (g) { window._volumeCrossrefsData = g; return true; }
+    return false;
+  }
+
+  function ensureCrossrefData(cb) {
+    if (adoptVolumeData()) { cb(); return; }
+    var file = crossrefDataFile();
+    if (!file) { cb(); return; }          // e.g. the JST ships no crossref data
+    var el = document.createElement('script');
+    el.src = file;
+    el.async = true;
+    el.onload = function () { adoptVolumeData(); cb(); };
+    el.onerror = function () { cb(); };   // absent file must not break the reader
+    document.head.appendChild(el);
+  }
+
+  function kickCrossRefs() {
+    ensureCrossrefData(function () { loadCrossRefs(); });
+  }
+
+  function scheduleCrossRefs() {
+    if ('requestIdleCallback' in window) requestIdleCallback(kickCrossRefs, { timeout: 3000 });
+    else setTimeout(kickCrossRefs, 500);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', scheduleCrossRefs);
+  } else {
+    scheduleCrossRefs();
+  }
 
 
 })();

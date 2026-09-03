@@ -702,7 +702,7 @@ window.READER = {
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=2"></script>
 <script src="verse_loader.js?v=4"></script>
-<script src="root_scorecard.js?v=74"></script>
+<script src="root_scorecard.js?v=75"></script>
 <script>RootScorecard.init({ vol: 'dc', base: '' });</script>
 
 <!-- English text for dual mode -->
@@ -717,9 +717,8 @@ window.READER = {
 <script src="dc_verses/dc_chron.js?v=103"></script>
 
 <!-- Cross-reference data + engine -->
-<script src="dc_crossrefs.js"></script>
-<script>window._volumeCrossrefsData = window._dcCrossrefsData;</script>
-<script src="crossrefs_engine.js?v=12"></script>
+<!-- dc_crossrefs.js is fetched on idle by crossrefs_engine.js (it was 511 KB of blocking critical path) -->
+<script src="crossrefs_engine.js?v=15"></script>
 
 <script src="reader_ui.js?v=28"></script>
 <script>

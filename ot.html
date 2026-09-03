@@ -583,7 +583,7 @@ window.READER = {
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=2"></script>
 <script src="verse_loader.js?v=4"></script>
-<script src="root_scorecard.js?v=74"></script>
+<script src="root_scorecard.js?v=75"></script>
 <script>RootScorecard.init({ vol: 'ot', base: '' });</script>
 
 <!-- English text for dual mode -->
@@ -597,9 +597,8 @@ window.READER = {
 <script src="ot_verses/manifest.js?v=1"></script>  <!-- lazy books: the verse files load on demand (reader_core.js VolumeLoader) -->
 
 <!-- Cross-reference data + engine -->
-<script src="ot_crossrefs.js"></script>
-<script>window._volumeCrossrefsData = window._otCrossrefsData;</script>
-<script src="crossrefs_engine.js?v=12"></script>
+<!-- ot_crossrefs.js is fetched on idle by crossrefs_engine.js (it was 1.24 MB of blocking critical path) -->
+<script src="crossrefs_engine.js?v=15"></script>
 
 <script src="reader_ui.js?v=28"></script>
 <script src="notes_engine.js"></script>

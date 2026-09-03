@@ -65,13 +65,46 @@
 
   var PAGES = { ot: 'ot.html', nt: 'nt.html', bom: 'bom/bom.html', dc: 'dc.html', pgp: 'pgp.html', jst: 'jst.html' };
 
-  // Idle warmup: pull the tap-time data in the background a few seconds after
-  // load, so the lazy split never costs the reader a slow first popup.
-  setTimeout(function () {
-    var kick = function () { try { ensure(function () {}); } catch (e) {} };
-    if ('requestIdleCallback' in window) requestIdleCallback(kick, { timeout: 8000 });
-    else setTimeout(kick, 2000);
-  }, 3500);
+  /* Warmup: pull the tap-time data in the background so the lazy split never
+     costs the reader a slow first word card.
+
+     It used to be an unconditional timer, which quietly undid the lazy split
+     it was there to support: ~7 MB of Strong's, roots, glossary and
+     concordance downloaded on EVERY page view, whether or not the reader ever
+     tapped a word. On a phone on cellular that is the whole point of the split
+     spent on nothing.
+
+     Now it waits for a sign the reader is actually reading — a scroll or a
+     touch — and stands down entirely on a metered or slow connection, where
+     the cost is highest and the benefit (a faster first popup) is worth least.
+     Tapping a word still calls ensure() directly, so the data always arrives
+     when it is genuinely needed; the warmup only decides whether to be early. */
+  (function scheduleWarmup() {
+    var done = false;
+    function metered() {
+      var c = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+      if (!c) return false;
+      if (c.saveData) return true;
+      return /(^|-)(2g|slow-2g)$/.test(c.effectiveType || '');
+    }
+    function kick() {
+      if (done) return;
+      done = true;
+      ['scroll', 'touchstart', 'pointerdown', 'keydown'].forEach(function (ev) {
+        window.removeEventListener(ev, kick, true);
+      });
+      if (metered()) return;
+      var run = function () { try { ensure(function () {}); } catch (e) {} };
+      if ('requestIdleCallback' in window) requestIdleCallback(run, { timeout: 8000 });
+      else setTimeout(run, 2000);
+    }
+    ['scroll', 'touchstart', 'pointerdown', 'keydown'].forEach(function (ev) {
+      window.addEventListener(ev, kick, { capture: true, passive: true });
+    });
+    // A reader who opens a chapter and simply reads without scrolling still
+    // gets it, just later than an unconditional 3.5s timer would have.
+    setTimeout(kick, 15000);
+  })();
 
   var VOL_ORDER = ['ot', 'nt', 'bom', 'dc', 'pgp', 'jst'];
 

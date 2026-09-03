@@ -1488,6 +1488,9 @@ window.READER = {
   vol: 'jst',
   selfPage: 'jst.html',
   books: [],
+  /* the JST ships no cross-reference data. Declared, so crossrefs_engine.js
+     does not go looking for jst_crossrefs.js and 404 on every load. */
+  crossrefsFile: '',
   landingTitle: 'Joseph Smith Translation',
   navLabelHe: '\u05EA\u05B7\u05BC\u05E8\u05B0\u05D2\u05BC\u05D5\u05BC\u05DD \u05D9\u05D5\u05B9\u05E1\u05B5\u05E3 \u05E1\u05B0\u05DE\u05B4\u05D9\u05EA',
   readerName: 'Joseph Smith Translation',
@@ -1691,7 +1694,7 @@ window.READER = {
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=2"></script>
 <script src="verse_loader.js?v=4"></script>
-<script src="root_scorecard.js?v=74"></script>
+<script src="root_scorecard.js?v=75"></script>
 <script>RootScorecard.init({ vol: 'jst', base: '' });</script>
 <script src="notes_engine.js"></script>
 
@@ -1699,8 +1702,7 @@ window.READER = {
 <script src="jst_verses/manifest.js?v=1"></script>  <!-- lazy books: the verse files load on demand (reader_core.js VolumeLoader) -->
 
 <!-- Cross-reference data + engine (JST will get data later) -->
-<script>window._volumeCrossrefsData = {};</script>
-<script src="crossrefs_engine.js?v=12"></script>
+<script src="crossrefs_engine.js?v=15"></script>
 
 <script src="reader_ui.js?v=28"></script>
 <script>
