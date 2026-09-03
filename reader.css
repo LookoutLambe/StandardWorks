@@ -898,6 +898,19 @@ body #word-popup .popup-xref-direct {
   font-weight: 700;
   color: var(--here) !important;
 }
+/* The "All N occurrences" card. Its border and tinted fill were an inline
+   cssText in the engine — mint at 55% and a 10% mint wash — so no rule
+   could soften them on paper. The inline styling is gone; it is a paper
+   card like the others, with the accent one step stronger to mark it as
+   the panel's primary action. */
+#xref-panel .rsc-occ-card,
+.rsc-occ-card {
+  border: 1px solid color-mix(in srgb, var(--here) 50%, transparent) !important;
+  background: color-mix(in srgb, var(--here) 7%, var(--paper-2)) !important;
+  border-radius: 10px;
+  padding: 11px 13px;
+  margin-bottom: 12px;
+}
 #xref-panel .xref-cat-heading,
 .xref-cat-heading {
   font-weight: 700;
@@ -1294,14 +1307,20 @@ body.dark-mode #xref-panel {
 #xref-panel .study-pane-hint,#xref-panel .study-pane-sub {
   color:var(--ink-3) !important;
 }
+/* The Study panel's action buttons — Add current, Clear all, Annotation
+   list, Export, Import, Dictionary. They sit in the panel BODY, which is
+   paper, and they were drawn for the panel's chrome era: a --here-chrome
+   border (mint on white) with --gold-pale text and a --gold-bright hover.
+   The mint edge is what read as "puke" around every button. Paper tokens
+   throughout, and the same accent the other paper cards now use. */
 #xref-panel .study-btn-row button {
-  background:var(--surface-2) !important;
-  color:var(--gold-pale) !important;
-  border:1px solid color-mix(in srgb, var(--here-chrome) 40%, transparent) !important;
+  background:var(--paper-2) !important;
+  color:var(--ink) !important;
+  border:1px solid color-mix(in srgb, var(--here) 38%, transparent) !important;
 }
 #xref-panel .study-btn-row button:hover {
-  background:var(--surface-3) !important;
-  border-color:var(--gold-bright) !important;
+  background:color-mix(in srgb, var(--here) 8%, var(--paper-2)) !important;
+  border-color:var(--here) !important;
 }
 #xref-panel .hw {
   color:var(--gold-bright) !important;
@@ -1327,9 +1346,11 @@ body.dark-mode #xref-panel {
 #xref-panel .xref-ref-loading,#xref-panel .xref-ref-nodata {
   color:var(--ink-3) !important;
 }
+/* Same chrome-era mint on the panel's paper body — the verse cards. Paper
+   accent, and the same 38% weight the other paper cards carry. */
 #xref-panel .xref-ref-card {
-  background:var(--surface-2) !important;
-  border:1px solid color-mix(in srgb, var(--here-chrome) 20%, transparent) !important;
+  background:var(--paper-2) !important;
+  border:1px solid color-mix(in srgb, var(--here) 38%, transparent) !important;
   border-radius:10px;
 }
 #xref-panel .xref-ref-title,#xref-panel .xref-ref-title span {
