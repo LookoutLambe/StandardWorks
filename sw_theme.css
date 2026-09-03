@@ -20,14 +20,33 @@
 body.dark-mode {
   /* Designed alongside light, never inferred from it. Paper inverts to
      the chrome family; the tools stay exactly where they were.       */
-  --paper:   #0b0f0d;
-  --paper-2: #141a17;
-  --panel:   #141a17;
-  --card:    #1f2a24;
-  --ink:     #f4f6f4;
-  --ink-2:   #c3cec7;
-  --ink-3:   #9fb0a7;
-  --here:    #34d399;
+  /* Two reading-comfort corrections, 2026-09-03.
+
+     1. The page was #0b0f0d — lightness 5.1%, near-black. Material's dark
+        spec and every dark-mode guide land on ~#121212 instead, because a
+        near-black ground maximises halation: bright glyphs smear into the
+        background on OLED, and the eye has to work harder, not less. Lifted
+        to 7.8% lightness, keeping the faint green cast.
+
+     2. --ink was #f4f6f4, which put the Hebrew at 17.77:1 on that ground. A
+        very high ratio is not a virtue in a book you read for an hour at a
+        time — it is glare. Softened to an off-white at 14.71:1, still far
+        above the 4.5:1 floor. The two muted tiers move with it so the
+        gloss/transliteration tier stays at 6.65:1.
+
+     The bars keep their saturated brand green. That is identity, not
+     accessibility, and it is not a thing to restyle on generic advice. */
+  --paper:   #121614;
+  --paper-2: #171c19;
+  --panel:   #171c19;
+  --card:    #1d2320;
+  --ink:     #e3e8e4;
+  --ink-2:   #b6c1ba;
+  --ink-3:   #90a096;
+  /* the accent as a MARK on the dark page — verse numerals, titles,
+     ornaments. Stone, matching the chrome accent, not the old mint. 11.90:1
+     on the ground above. Filled surfaces use --accent-fill, never this. */
+  --here:    #d6d0c6;
   /* --here brightens to mint here — dark surfaces need a punchier accent
      than the deep stop. Anything FILLED with --accent/--here must pair it
      with a text colour that ALSO flips, or a button that was white text on
@@ -58,9 +77,50 @@ body.dark-mode {
   /* only the values that do NOT follow --paper / --ink need restating */
   --rule: #24463a;
   --rule-light: #1f2a24;
-  --highlight: rgba(52,211,153,.16);
-  --hover-wash: rgba(52,211,153,.10);
+  /* these two were still the old mint as a raw literal, so selection and
+     hover washes stayed minty after the token changed. Derived now, so they
+     follow the accent instead of pinning a hue. */
+  --highlight: color-mix(in srgb, var(--here) 16%, transparent);
+  --hover-wash: color-mix(in srgb, var(--here) 10%, transparent);
   --sw-navy: #0b0f0d;
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   SEPIA — the third theme, and the one built for actually reading.
+
+   Not a warm dark mode. The research is one-sided on this: positive polarity
+   (dark text on a light ground) beats negative for both visual acuity and
+   proofreading, at every age, and the advantage GROWS as type gets smaller —
+   which decides it here, because the gloss tier is 12px. Meanwhile dark mode
+   causes halation for readers with astigmatism, roughly half the population:
+   the pupil dilates, light enters through more of an irregular cornea, and
+   bright glyphs bleed and halo. Tinting a dark ground brown keeps the light
+   text and therefore keeps the halation; it just makes it brown.
+
+   Sepia works by flipping the polarity back, not by being warm. Dark text on
+   an aged-paper ground: the legibility of light mode without white's glare.
+   It is what Kindle, Apple Books and Instapaper all ship, and it is the
+   standing recommendation for astigmatic readers.
+
+   The bars keep the brand green, so the book is bound the same in all three
+   themes and only the paper changes.
+   ══════════════════════════════════════════════════════════════════════ */
+body.sepia-mode {
+  --paper:   #f4e8d0;
+  --paper-2: #ebdcc0;
+  --panel:   #ebdcc0;
+  --card:    #e5d4b5;
+  /* warm near-black, never pure: 10.49:1 on the ground above */
+  --ink:     #3a3128;
+  --ink-2:   #5c5044;
+  /* the gloss + transliteration tier. #7a6c5c read 4.19:1 and failed the
+     4.5:1 floor for 12px text; this clears it at 4.88:1. */
+  --ink-3:   #6f6252;
+  --rule:       #d9c6a5;
+  --rule-light: #e2d3b8;
+  --row-alt:    #efe2c8;
+  --highlight:  rgba(4,107,74,.14);
+  --hover-wash: rgba(4,107,74,.09);
 }
 
 /* ══════════════════════════════════════════════════════════════════════

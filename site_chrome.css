@@ -1,4 +1,4 @@
-@import url('sw_theme.css?v=44');
+@import url('sw_theme.css?v=47');
 
 
 /* Hide body until chrome + footer are wired (prevents legacy bar flash) */
@@ -45,9 +45,12 @@ html:has(link[href*="site_chrome.css"]) #main-content {
   padding-right: max(6px, env(safe-area-inset-right, 0px));
   padding-bottom: 6px;
 }
-body.dark-mode .sw-top-bar {
-  background: #0a0a0a;
-}
+/* The bar was repainted to a hardcoded #0a0a0a in dark mode, which is why the
+   header went black there while light and sepia kept the green. The design
+   rule is that the book is bound the same in every theme and only the paper
+   changes, so the bar keeps --header-bg (the brand green) in all three. The
+   status-bar meta colour in site_chrome.js followed this black and has been
+   corrected with it. */
 
 /* Single row: menu · home · title · size · dark */
 .sw-top-bar-inner {

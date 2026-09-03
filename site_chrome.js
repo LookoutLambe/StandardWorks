@@ -11,7 +11,8 @@
 
   setTimeout(markShellReady, 2800);
 
-  var STORAGE_KEY = 'sw-dark';
+  var STORAGE_KEY = 'sw-dark';       // legacy boolean, still honoured
+  var THEME_KEY   = 'sw-theme-mode';  // 'light' | 'sepia' | 'dark'
 
   function assetBase() {
     var p = (location.pathname || '').toLowerCase();
@@ -61,22 +62,59 @@
     document.documentElement.style.setProperty('--sw-chrome-h', bar.offsetHeight + 'px');
   }
 
-  function syncDarkButtons() {
-    var isDark = document.body.classList.contains('dark-mode');
-    var icon = isDark ? '\u2600' : '\u263D';
-    var btn = document.getElementById('sw-chrome-dark');
-    if (btn) btn.textContent = icon;
-    var legacy = document.getElementById('dark-mode-toggle');
-    if (legacy) legacy.textContent = icon;
-    var dict = document.getElementById('darkBtn');
-    if (dict) dict.textContent = icon;
+  /* THREE reading themes, not two: light, sepia, dark — the set Kindle,
+     Apple Books and Instapaper all ship. Sepia is a LIGHT theme (dark text on
+     an aged-paper ground), because positive polarity out-reads negative at
+     every age and the gap widens as type shrinks, and because dark mode
+     haloes for readers with astigmatism. See the sepia block in sw_theme.css.
+
+     The old key held '1'/'0'. It is still read and still written, so a reader
+     who set dark on an older build keeps dark, and one who never opens the
+     new control never sees a change. */
+  var THEMES = ['light', 'sepia', 'dark'];
+  var THEME_ICON = { light: '\u263D', sepia: '\u25D1', dark: '\u2600' };
+  var THEME_LABEL = { light: 'Light', sepia: 'Sepia', dark: 'Dark' };
+
+  function currentTheme() {
+    if (document.body.classList.contains('dark-mode')) return 'dark';
+    if (document.body.classList.contains('sepia-mode')) return 'sepia';
+    return 'light';
   }
 
-  function applyDark(isDark) {
-    document.body.classList.toggle('dark-mode', isDark);
-    try { localStorage.setItem(STORAGE_KEY, isDark ? '1' : '0'); } catch (e) {}
+  function readStoredTheme() {
+    try {
+      var t = localStorage.getItem(THEME_KEY);
+      if (THEMES.indexOf(t) >= 0) return t;
+      return localStorage.getItem(STORAGE_KEY) === '1' ? 'dark' : 'light';
+    } catch (e) { return 'light'; }
+  }
+
+  function syncDarkButtons() {
+    var t = currentTheme();
+    var icon = THEME_ICON[t];
+    ['sw-chrome-dark', 'dark-mode-toggle', 'darkBtn'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.textContent = icon;
+      el.setAttribute('aria-label', 'Reading theme: ' + THEME_LABEL[t] + '. Tap to change.');
+      el.setAttribute('title', THEME_LABEL[t]);
+    });
+  }
+
+  function applyTheme(name) {
+    if (THEMES.indexOf(name) < 0) name = 'light';
+    document.body.classList.toggle('dark-mode', name === 'dark');
+    document.body.classList.toggle('sepia-mode', name === 'sepia');
+    try {
+      localStorage.setItem(THEME_KEY, name);
+      localStorage.setItem(STORAGE_KEY, name === 'dark' ? '1' : '0');
+    } catch (e) {}
     syncDarkButtons();
   }
+  window.swApplyTheme = applyTheme;
+  window.swCurrentTheme = currentTheme;
+
+  function applyDark(isDark) { applyTheme(isDark ? 'dark' : 'light'); }
 
   // iPhone: keep the browser/status-bar surround color in step with dark mode
   function syncThemeColor() {
@@ -89,7 +127,11 @@
          iPhone the status bar sat navy above an emerald header. It also
          overwrote the value in the markup at runtime, which is why fixing
          the meta tag alone would not have held. */
-      m.setAttribute('content', document.body.classList.contains('dark-mode') ? '#0a0a0a' : '#0b2a20');
+      /* the header's ACTUAL painted colour. The bar is the brand green in
+         ALL three themes now — only the paper changes — so this is constant.
+         It used to send #0a0a0a for dark, matching a hardcoded override in
+         site_chrome.css that has been removed. */
+      m.setAttribute('content', '#0b2a20');
     } catch (e) {}
   }
   try {
@@ -97,20 +139,14 @@
     syncThemeColor();
   } catch (e) {}
 
+  /* one control, cycling light -> sepia -> dark -> light. The per-volume
+     handlers are bypassed deliberately: they only ever knew two states and
+     would drop sepia on the floor. */
   window.toggleDark = function () {
-    var volBtn = document.getElementById('dark-mode-toggle');
-    if (volBtn && typeof volBtn.onclick === 'function') {
-      volBtn.click();
-      syncDarkButtons();
-      return;
-    }
-    if (typeof window.toggleDarkMode === 'function') {
-      window.toggleDarkMode();
-      syncDarkButtons();
-      return;
-    }
-    applyDark(!document.body.classList.contains('dark-mode'));
+    var i = THEMES.indexOf(currentTheme());
+    applyTheme(THEMES[(i + 1) % THEMES.length]);
   };
+  window.cycleTheme = window.toggleDark;
 
   function openMenu() {
     try {
@@ -275,9 +311,9 @@
     }
 
     try {
-      if (localStorage.getItem(STORAGE_KEY) === '1') {
-        document.body.classList.add('dark-mode');
-      }
+      var boot = readStoredTheme();
+      if (boot === 'dark') document.body.classList.add('dark-mode');
+      else if (boot === 'sepia') document.body.classList.add('sepia-mode');
     } catch (e) {}
     syncDarkButtons();
     syncChromeHeight();
