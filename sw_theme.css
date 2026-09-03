@@ -6,7 +6,7 @@
      reaches for (see each volume page's :root / body.dark-mode block).
      Before 2026-09-02 there were ten unrelated golds and six navies
      scattered across the pages; every one of them now resolves here. */
-  --gold-deep:   #8a6a1c;   /* gold TEXT on paper — 4.5:1 on --sw-hub-bg */
+  --gold-deep:   #8a6a1c;   /* gold TEXT on paper — 4.92:1 on --bg      */
   --gold:        #c8a84e;   /* fills, borders, rules, gold on navy       */
   --gold-bright: #e3c46e;   /* gold TEXT on navy                         */
   --gold-pale:   #ecd9a0;   /* subdued gold text on navy                 */
@@ -32,8 +32,8 @@
   --sw-gold-bright: var(--gold-pale);
   --sw-gold-muted: rgba(200, 168, 78, 0.92);
   --sw-gold-border: rgba(200, 168, 78, 0.55);
-  --sw-hub-bg: #faf8f2;
-  --sw-hub-bg-deep: #f0ece0;
+  --sw-hub-bg: #fdfcf8;
+  --sw-hub-bg-deep: #f7f4ec;
 }
 
 body.dark-mode {
@@ -52,8 +52,8 @@ body.dark-mode {
    hold no colour at all — change it here and it changes everywhere.
    ══════════════════════════════════════════════════════════════════════ */
 :root {
-  --bg: #faf8f2;
-  --bg-deep: #f0ece0;
+  --bg: #fdfcf8;
+  --bg-deep: #f7f4ec;
   --ink: #1a1a1a;
   --ink-light: #5a5647;
   --accent: var(--gold);
@@ -66,7 +66,7 @@ body.dark-mode {
   --highlight: rgba(200, 168, 78, 0.10);
   --header-bg: var(--navy);
   --header-text: var(--gold);
-  --row-alt: #faf8f2;
+  --row-alt: var(--bg);
   --hw: var(--navy);                    /* was hardcoded #1a2744 */
   --xref: var(--tap);
   --tap-blue: var(--tap);               /* reader_ui.js + root_scorecard.js
