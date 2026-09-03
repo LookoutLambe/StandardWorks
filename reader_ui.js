@@ -36,6 +36,20 @@ function goPrev() {
   if (idx > 0) navTo(fullPageOrder[idx - 1], 'prev');
 }
 
+// Initialize nav buttons for the landing page on load — mirrors bom.html's
+// own boot-time call (its one reader NOT on this shared file). Without it,
+// #nav-prev/#nav-next keep the `disabled` attribute they're born with in
+// the HTML until the first navTo() call, and a plain visit with no URL
+// hash never makes one (handleHash() below returns immediately when there
+// is no hash) — so the visible dock Next/Prev buttons, which mirror THESE
+// hidden legacy elements' .disabled state (nav_engine.js syncDockChapterNav),
+// stay wrongly stuck disabled/enabled on every landing page until the
+// reader navigates once by some other means. Safe to call this early:
+// currentChapterId is still null here, so it only touches the landing
+// branch (window.READER.navLabelHe), never the per-page getChapterLabel
+// override that a page-specific script may still define after this file.
+updateNavButtons();
+
 // === HEBREW TRANSLITERATION ===
 var _tlKnown = {
   '\u05D0\u05D1':'av','\u05D0\u05D7':'ach','\u05D0\u05DC':'el','\u05D0\u05DD':'em','\u05D0\u05E9':'esh','\u05D0\u05EA':'et',
