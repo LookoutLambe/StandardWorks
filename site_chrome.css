@@ -348,20 +348,21 @@ body.dark-mode #sw-rights { color: var(--ink-3); }
 body.dark-mode #sw-rights a { color: var(--here-chrome); }
 
 
-/* ── Immersive reading (2026-08-29, user ruling): the site's existing
-   double-tap gesture (nav_engine.js — "closes the second layer") now sweeps
-   EVERYTHING: header, breadcrumb, and the whole footer. Same class the
-   gesture already toggles; double-tap again restores. touch-action:
-   manipulation keeps iOS from stealing the double-tap for zoom. */
+/* ── Immersive reading. The double-tap gesture (nav_engine.js — "closes the
+   second layer") sweeps the footer chrome away.
+
+   THE HEADER STAYS (user ruling 2026-09-03, reversing the 2026-08-29 one
+   that had this gesture sweep the header and breadcrumb too). It is the
+   only thing on screen naming the volume and holding A+/A-/dark, and
+   losing it to a stray double-tap while reading was worse than the space
+   it costs. The reading modes now have their own grip in the footer, so
+   collapsing chrome no longer has to mean collapsing everything.
+
+   touch-action: manipulation keeps iOS from stealing the double-tap for
+   zoom. The transition stays: the header is still animated by other
+   states. */
 .sw-chrome-reader .page { touch-action: manipulation; }
 #sw-top-bar { transition: transform 0.28s ease; }
-body.reader-footer-hidden #sw-top-bar { transform: translateY(calc(-100% - env(safe-area-inset-top, 0px))); }
-body.reader-footer-hidden #reading-progress { opacity: 0; transition: opacity 0.2s; }
-body.reader-footer-hidden.has-sw-chrome .page,
-body.reader-footer-hidden.has-sw-chrome.sw-chrome-reader .page,
-body.reader-footer-hidden.has-sw-chrome.sw-chrome-reader #main-content {
-  padding-top: calc(10px + env(safe-area-inset-top, 0px));
-}
 body.has-sw-chrome .page, body.has-sw-chrome.sw-chrome-reader .page,
 body.has-sw-chrome.sw-chrome-reader #main-content { transition: padding-top 0.28s ease; }
 /* Double-tap collapse keeps the chapter dock (הבא · chapter · הקודם) —

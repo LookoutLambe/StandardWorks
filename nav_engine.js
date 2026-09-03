@@ -2296,6 +2296,62 @@
     return fb ? (fb.isFront ? fb.prefix : fb.prefix + '1') : null;
   }
 
+  /* ── Reading-modes drawer ────────────────────────────────────────────
+     Collapses ONLY the mode bar; the header and the chapter nav row stay.
+     Phones start collapsed (two bands: reading + nav row) because five
+     modes cannot sit on one line above ~384px of width without dropping
+     under the 12px label floor. A reader who opens it is remembered, so
+     the default applies to the first visit only, never to a choice. */
+  var MODES_LS = 'sw-modes-collapsed';
+
+  function modesCollapsed() {
+    return document.body.classList.contains('sw-modes-collapsed');
+  }
+
+  function syncModesToggle() {
+    var t = document.getElementById('nqd-modes-toggle');
+    if (!t) return;
+    var open = !modesCollapsed();
+    t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    t.setAttribute('aria-label', open ? 'Hide reading modes' : 'Show reading modes');
+    t.title = open ? 'Hide reading modes' : 'Show reading modes';
+  }
+
+  function setModesCollapsed(collapsed, remember) {
+    document.body.classList.toggle('sw-modes-collapsed', !!collapsed);
+    if (remember) { try { localStorage.setItem(MODES_LS, collapsed ? '1' : '0'); } catch (e) {} }
+    syncModesToggle();
+    requestAnimationFrame(function() { try { syncQuickDockLayout(); } catch (e2) {} });
+  }
+
+  function createModesToggle(modeBar) {
+    var t = document.createElement('button');
+    t.type = 'button';
+    t.id = 'nqd-modes-toggle';
+    t.className = 'nqd-modes-toggle';
+    t.setAttribute('aria-controls', modeBar.id);
+    t.innerHTML = '<span class="nqd-grip" aria-hidden="true"></span>';
+    t.onclick = function(e) {
+      e.stopPropagation();          // never let it reach the double-tap collapse
+      setModesCollapsed(!modesCollapsed(), true);
+    };
+    /* The opening state must not animate — without this the bar paints
+       open and then visibly slides shut on every load. Transitions are
+       suppressed for one frame while the initial class is applied. */
+    document.body.classList.add('sw-modes-no-anim');
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        document.body.classList.remove('sw-modes-no-anim');
+      });
+    });
+    // A stored choice wins; otherwise phones start collapsed.
+    var stored = null;
+    try { stored = localStorage.getItem(MODES_LS); } catch (e) {}
+    if (stored === '1' || stored === '0') setModesCollapsed(stored === '1', false);
+    else setModesCollapsed(window.innerWidth <= 480, false);
+    return t;
+  }
+
   function createQuickDock() {
     if (_quickDockInstalled) return;
     if (_config && _config.hub) return;
@@ -2338,11 +2394,22 @@
     rowNav.setAttribute('title', 'Double-tap or double-click anywhere to show or hide reading modes');
     footer.appendChild(rowNav);
 
+    /* The five reading modes need two rows on a phone, which put three
+       bands of chrome under the reading area. They slide away instead,
+       behind a grip, leaving the chapter nav row — one band.
+
+       This is deliberately NOT the double-tap's `reader-footer-hidden`:
+       that one also slides the HEADER off screen (site_chrome.css), which
+       is an immersive-reading gesture. Collapsing the modes must leave the
+       header and the nav row exactly where they are. */
     modeBar.classList.add('sw-footer-modes');
+    modeBar.id = modeBar.id || 'sw-footer-modes';
+    footer.appendChild(createModesToggle(modeBar));
     footer.appendChild(modeBar);
 
     document.body.appendChild(footer);
     document.body.classList.add('sw-footer-ready');
+    syncModesToggle();   // the grip is only in the DOM now, so label it here
     syncQuickDockActive();
     hookDockChapterNavSync();
     installSwipeChapterNav();

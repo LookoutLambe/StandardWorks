@@ -783,3 +783,66 @@ body.dark-mode #nav-sidebar .nl-tile { background: var(--surface-1) !important; 
    sw_theme.css beside their sizing — that file loads after this one via
    site_chrome.css's @import, so a copy here would silently lose. */
 
+/* ── The reading-modes drawer ──────────────────────────────────────────
+   The grip that slides the mode bar away. Full-width so it is easy to hit
+   but visually just a handle, not another band of chrome. */
+/* 36px, not the 16px the grip needs to be seen: once the modes collapse
+   this is the ONLY way back to them, and a 16px strip at the bottom edge
+   of a phone — right where the home indicator sits — is under every touch
+   floor this project holds itself to. The bar stays 4px; the button around
+   it is what the thumb gets. */
+.nqd-modes-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 36px;
+  border: 0;
+  background: none;
+  padding: 6px 0 4px;
+  cursor: pointer;
+  line-height: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+.nqd-modes-toggle .nqd-grip {
+  display: inline-block;
+  width: 34px; height: 4px;
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--on-chrome) 34%, transparent);
+  transition: background 0.15s;
+}
+.nqd-modes-toggle:hover .nqd-grip,
+.nqd-modes-toggle:focus-visible .nqd-grip { background: var(--here-chrome); }
+.nqd-modes-toggle:focus-visible { outline: 2px solid var(--here-chrome); outline-offset: -2px; }
+
+/* The slide itself. max-height rather than display:none so it animates;
+   the mode bar is short and fixed-height, so a generous ceiling is safe. */
+#sw-reader-footer > .controls-bottom.sw-footer-modes {
+  overflow: hidden;
+  max-height: 220px;
+  transition: max-height 0.26s ease, opacity 0.18s ease,
+              padding-top 0.26s ease, padding-bottom 0.26s ease;
+}
+/* !important on the padding is not decoration: reader.css sets
+   `.controls-bottom { padding: … !important }`, which beats this selector
+   however specific it is, and left a 15px strip of empty chrome behind
+   after the bar had slid shut. */
+body.sw-modes-collapsed #sw-reader-footer > .controls-bottom.sw-footer-modes {
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border-top: 0;
+  border-bottom: 0;
+  pointer-events: none;
+}
+/* collapsed, the grip is the footer's last row — give it the safe area */
+body.sw-modes-collapsed #sw-reader-footer .nqd-modes-toggle {
+  padding-bottom: max(5px, env(safe-area-inset-bottom, 0px));
+}
+/* first paint applies the opening state — it must not animate */
+body.sw-modes-no-anim #sw-reader-footer > .controls-bottom.sw-footer-modes { transition: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  #sw-reader-footer > .controls-bottom.sw-footer-modes { transition: none; }
+}
+
