@@ -68,6 +68,7 @@
 
 <link rel="stylesheet" href="nav_engine.css?v=38">
 <link rel="stylesheet" href="site_chrome.css?v=57">
+<link rel="stylesheet" href="reader.css?v=42">
 <style>
 
 /* ========== THEME ========== */
@@ -289,6 +290,12 @@ body.dark-mode .landing-interlinear-kicker .lie-en {
   max-width: 640px;
 }
 html.sw-in-app .landing-app-store { display: none; }
+/* An outlined button ON dark chrome. It used --accent (the deep, paper-
+   scaled green) for its own text and border — dark-on-dark, 2.35:1. On a
+   chrome background the readable variant is --accent-light (the bright
+   mint stop), never --accent directly; the hover state already had this
+   half-right (fills bright, but left the text dark-on-dark too — swapped
+   to --on-accent, the token built for exactly this inversion). */
 .landing-app-store-link {
   display: inline-flex;
   align-items: center;
@@ -297,8 +304,8 @@ html.sw-in-app .landing-app-store { display: none; }
   gap: 8px 12px;
   padding: 12px 22px;
   background: var(--header-bg);
-  color: var(--accent);
-  border: 2px solid var(--accent);
+  color: var(--accent-light);
+  border: 2px solid var(--accent-light);
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
@@ -307,17 +314,16 @@ html.sw-in-app .landing-app-store { display: none; }
   transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 .landing-app-store-link:hover {
-  background: var(--accent);
-  color: var(--header-bg);
+  /* --accent-light (--here-chrome) is ALWAYS bright mint, not theme-scaled
+     like --accent — so the paired text must ALWAYS be dark, not --on-accent
+     (which whitens in light mode and would repeat the same bug). */
+  background: var(--accent-light);
+  color: var(--chrome-2);
   border-color: var(--accent-light);
 }
 .landing-app-store-link:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--accent-light);
   outline-offset: 3px;
-}
-body.dark-mode .landing-app-store-link { background: var(--chrome); }
-body.dark-mode .landing-app-store-link:hover {
-  color: var(--chrome);
 }
 .landing-app-store-sub {
   margin-top: 8px;
@@ -398,11 +404,16 @@ body.dark-mode .landing-app-store-link:hover {
 .card-cover.dc,
 .card-cover.pgp,
 .card-cover.jst {
+  /* Was a blue three-stop gradient (--volume-card-blue-top/mid/deep) whose
+     definitions were deleted when blue was ruled out — the whole background
+     shorthand silently failed on the undefined vars, so every volume tile
+     rendered as an invisible box with white text on white. Chrome tones,
+     same three-stop structure. */
   background: linear-gradient(
     170deg,
-    var(--volume-card-blue-top) 0%,
-    var(--volume-card-blue-mid) 52%,
-    var(--volume-card-blue-deep) 100%
+    var(--chrome-2) 0%,
+    var(--chrome) 52%,
+    var(--here) 100%
   );
   border: 1px solid rgba(255, 255, 255, 0.22);
 }
@@ -460,7 +471,7 @@ body.dark-mode .landing-app-store-link:hover {
 }
 .scripture-card, .card-continue { user-select: none; -webkit-user-select: none; }
 .scripture-card:active .card-cover { transform: scale(0.97); transition: transform 0.1s; }
-.card-continue:active { transform: scale(0.96); background: var(--accent-light, var(--here-chrome)); }
+.card-continue:active { transform: scale(0.96); background: var(--accent-light, var(--here-chrome)); color: var(--chrome-2); }
 .gs-result-link:active { background: var(--highlight); }
 .global-search-input { min-height: 44px; }
 #gs-filter {
@@ -476,13 +487,20 @@ body.dark-mode .landing-app-store-link:hover {
 
 /* Per-volume Continue-reading button under each card — same yellow as the
    old landing bar */
+/* Filled with --accent (deep green on paper, brightens to mint in dark
+   mode) and paired with --header-bg (always dark chrome) as text — correct
+   in dark mode by luck (mint bg wants dark text), wrong in light mode
+   (dark-on-deep-green, 2.35:1). --on-accent flips with the same rule the
+   background does, so it is right in both. The hover/active fill,
+   --accent-light, is ALWAYS bright mint regardless of theme, so ITS text
+   must always be dark — a fixed chrome tone, not --on-accent. */
 .card-continue {
   display: block;
   margin: 10px auto 0;
   max-width: 240px;
   padding: 9px 14px 11px;
   background: var(--accent, var(--here-chrome));
-  color: var(--header-bg, var(--chrome));
+  color: var(--on-accent);
   font-family: 'David Libre', serif;
   font-size: 0.8em;
   font-weight: 600;
@@ -499,6 +517,7 @@ body.dark-mode .landing-app-store-link:hover {
 }
 .card-continue:hover {
   background: var(--accent-light, var(--here-chrome));
+  color: var(--chrome-2);
   transform: scale(1.03);
   text-decoration: none;
 }
@@ -587,7 +606,7 @@ body.dark-mode .landing-app-store-link:hover {
   justify-content: center;
   gap: 12px;
   background: var(--accent, var(--here-chrome));
-  color: var(--header-bg, var(--chrome));
+  color: var(--on-accent);
   max-width: 520px;
   width: calc(100% - 32px);
   margin: 0 auto 24px;
@@ -606,12 +625,13 @@ body.dark-mode .landing-app-store-link:hover {
 }
 #continue-reading:hover {
   background: var(--accent-light, var(--here-chrome));
+  color: var(--chrome-2);
   transform: scale(1.02);
 }
 #continue-reading .cr-ref {
   font-size: 1.08rem;
   font-weight: 700;
-  color: var(--header-bg, var(--chrome));
+  color: var(--on-accent);
   line-height: 1.35;
 }
 /* Hebrew book name — readable size (was 0.82em of parent, far too small) */
@@ -620,7 +640,7 @@ body.dark-mode .landing-app-store-link:hover {
   font-weight: 700;
   font-family: 'David Libre', serif;
   direction: rtl;
-  color: var(--header-bg, var(--chrome));
+  color: var(--on-accent);
   margin-top: 0;
   line-height: 1.35;
   letter-spacing: 0.02em;
@@ -660,14 +680,14 @@ html.sw-in-app .landing-update-note { display: none; }
   font-family: 'David Libre', serif;
   font-size: 1em;
   font-weight: 600;
-  color: var(--header-bg, var(--chrome));
+  color: var(--on-accent);
   background: var(--accent, var(--here-chrome));
   border: 2px solid var(--header-bg, var(--chrome));
   border-radius: 6px;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
-.gs-go:active { background: var(--accent-light, var(--here-chrome)); transform: scale(0.96); }
+.gs-go:active { background: var(--accent-light, var(--here-chrome)); color: var(--chrome-2); transform: scale(0.96); }
 .global-search-wrap #gs-filter {
   flex-shrink: 0;
   margin: 0;
@@ -731,11 +751,11 @@ html.sw-in-app .landing-update-note { display: none; }
   transition: background 0.15s, transform 0.15s;
 }
 .gs-result-link:hover {
-  background: var(--volume-card-blue-deep);
+  background: color-mix(in srgb, var(--here) 10%, var(--card-bg));
   transform: translateY(-1px);
 }
 body.dark-mode .gs-result-link:hover {
-  background: var(--volume-card-blue-deep);
+  background: color-mix(in srgb, var(--here-chrome) 16%, var(--card-bg));
 }
 .gs-result-link .gs-heb {
   font-family: 'David Libre', serif;

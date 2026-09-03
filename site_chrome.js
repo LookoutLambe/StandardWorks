@@ -141,7 +141,7 @@
     a.setAttribute('aria-label', 'Open books and navigation');
     a.title = 'Books and navigation';
     a.style.cssText = 'background:none;border:none;padding:0;cursor:pointer';
-    a.innerHTML = '<img src="' + assetBase() + 'icons/sw-mark.svg" alt="" style="width:38px;height:38px;display:block;border-radius:9px">';
+    a.innerHTML = '<img src="' + assetBase() + 'icons/sw-mark.svg?v=2" alt="" style="width:38px;height:38px;display:block;border-radius:9px">';
     a.addEventListener('click', openMenu);
     return a;
   }
