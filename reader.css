@@ -1135,20 +1135,20 @@ body.dark-mode #xref-panel {
   margin-bottom:14px;
 }
 .rsc-il-card {
-  border:1px solid color-mix(in srgb, var(--here-chrome) 28%, transparent);
+  /* a paper card. The 3%-white fill and mint hairline this had were drawn
+     for a dark chrome panel; on the popup's white ground the card had no
+     visible edge at all. */
+  border:1px solid var(--rule-light);
   border-radius:9px;
   padding:10px 12px;
   margin:9px 0;
-  background:rgba(255,255,255,0.03);
+  background:var(--paper-2);
 }
-.rsc-il-ref {
-  color:var(--on-chrome);
-  font-weight:700;
-  font-size:1em;
-  margin-bottom:6px;
-  border-bottom:1px solid color-mix(in srgb, var(--here-chrome) 25%, transparent);
-  padding-bottom:4px;
-}
+/* stale chrome copy of .rsc-il-ref deleted — it re-pointed the verse
+   reference to --on-chrome AFTER the paper fix higher up this same file,
+   so the corrected rule never took effect and the heading rendered
+   #ecfdf5 on white at 1.05:1. Only the alignment was unique to it. */
+.rsc-il-ref { align-self:center; }
 .rsc-il-load {
   opacity:0.6;
   font-style:italic;
@@ -1166,47 +1166,22 @@ body.dark-mode #xref-panel {
   flex-direction:column;
   align-items:center;
 }
-#rsc-panel .xref-ref-word .hw {
-  font-family:'David Libre',serif;
-  font-size:1.35em;
-  color:var(--on-chrome);
-  line-height:1.5;
-}
-#rsc-panel .xref-ref-word .en {
-  font-size:0.92em;
-  color:var(--on-chrome);
-  opacity:1;
-  direction:ltr;
-  line-height:1.35;
-}
+/* stale chrome copies of the reference word/gloss deleted — same defect:
+   they overrode the paper versions above, so every Hebrew word and English
+   gloss in the references sheet rendered #ecfdf5 on white at 1.05:1. */
+#rsc-panel .xref-ref-word .en { opacity:1; }
 #rsc-panel .xref-ref-arr {
   opacity:0.35;
   align-self:center;
 }
-.rsc-il-more {
-  display:block;
-  width:100%;
-  margin:8px 0 2px;
-  padding:9px;
-  border-radius:8px;
-  cursor:pointer;
-  background:color-mix(in srgb, var(--here-chrome) 14%, transparent);
-  border:1px solid color-mix(in srgb, var(--here-chrome) 45%, transparent);
-  color:var(--sw-gold,var(--here-chrome));
-  font-size:0.9em;
-  min-height:44px;
-}
+/* stale chrome copy of .rsc-il-more deleted — the paper version above
+   carries the same layout with readable colours. */
 .rsc-block + .rsc-block {
   margin-top:12px;
   padding-top:10px;
   border-top:1px solid color-mix(in srgb, var(--here-chrome) 35%, transparent);
 }
-.rsc-part {
-  font-size:1.15em;
-  color:var(--sw-gold,var(--here-chrome));
-  margin-bottom:3px;
-  direction:rtl;
-}
+/* stale chrome copy of .rsc-part deleted (--sw-gold on paper). */
 .rsc-chips {
   display:flex;
   flex-wrap:wrap;
@@ -1499,8 +1474,10 @@ body.dark-mode #glossary-panel {
   color:var(--ink-2) !important;
   border-bottom-color:var(--rule-light) !important;
 }
+/* .glossary-controls is a CHROME strip, not paper — paper ink on it was
+   dark-on-dark (1.9:1) and the "Sort:" label was effectively invisible. */
 #glossary-panel .glossary-sort {
-  color:var(--ink-2) !important;
+  color:var(--on-chrome-2) !important;
 }
 #glossary-panel .glossary-detail strong {
   color:var(--ink) !important;
