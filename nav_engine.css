@@ -4,26 +4,14 @@
 
 /* ── Overlay ── */
 #nav-overlay {
-  display: none; position: fixed; inset: 0; z-index: 5000;
+  display: none; position: fixed; inset: 0; z-index: var(--z-scrim);
   background: rgba(0,0,0,0.5); backdrop-filter: blur(2px);
   opacity: 0; transition: opacity 0.25s ease;
 }
 #nav-overlay.open { display: block; opacity: 1; }
 
 /* ── Sidebar Panel (palette matches right #xref-panel / Study drawer) ── */
-#nav-sidebar {
-  position: fixed; top: 0; left: 0; bottom: 0; z-index: 5001;
-  width: 360px; max-width: 90vw;
-  background: var(--bg, var(--paper));
-  color: var(--ink, #1a1a1a);
-  transform: translateX(-100%);
-  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex; flex-direction: column;
-  font-family: 'David Libre', 'Georgia', serif;
-  border-right: 2px solid var(--accent, var(--here-chrome));
-  box-shadow: 4px 0 20px rgba(0,0,0,0.12);
-  overflow: hidden;
-}
+
 #nav-sidebar.open { transform: translateX(0); }
 
 /* ── Drawer contract (2026-09-02) ─────────────────────────────────────────
@@ -43,36 +31,14 @@
   transform: translateX(100%) !important;
   transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
-#glossary-panel {
-  left: 0 !important; right: auto !important;
-  transform: translateX(-100%) !important;
-  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
-}
+
 #xref-panel.open, #annotations-panel.open, #glossary-panel.open { transform: translateX(0) !important; }
 html.sw-shell-pending #nav-sidebar, html.sw-shell-pending #xref-panel,
 html.sw-shell-pending #annotations-panel, html.sw-shell-pending #glossary-panel { transition: none !important; }
 
 /* ── Search Bar ── */
-.nav-search-wrap {
-  display: flex; align-items: center; gap: 8px;
-  padding: 12px 16px;
-  border-bottom: 1px solid var(--sw-gold-border, color-mix(in srgb, var(--here-chrome) 55%, transparent));
-  background: var(--sw-navy, var(--chrome));
-  flex-shrink: 0;
-}
-.nav-search-wrap input {
-  flex: 1;
-  background: var(--sw-navy-hover, var(--surface-2));
-  border: 1px solid var(--sw-gold-border, color-mix(in srgb, var(--here-chrome) 55%, transparent));
-  border-radius: 6px;
-  padding: 8px 12px;
-  color: var(--sw-gold-bright, var(--on-chrome));
-  font-size: 0.95em;
-  font-family: 'David Libre', serif;
-  outline: none; transition: border-color 0.2s;
-}
-.nav-search-wrap input::placeholder { color: var(--sw-gold-muted, color-mix(in srgb, var(--here-chrome) 70%, transparent)); opacity: 0.85; }
-.nav-search-wrap input:focus { border-color: var(--sw-gold, var(--here-chrome)); }
+
+
 .nav-icon-btn {
   background: none; border: none;
   color: var(--sw-gold, var(--here-chrome));
@@ -105,64 +71,43 @@ html.sw-shell-pending #annotations-panel, html.sw-shell-pending #glossary-panel 
 .nf-bm-heb { font-family: 'David Libre',serif; font-size: 1.05em; color: var(--accent, var(--here-chrome)); margin-top: 2px; }
 
 /* ── Search Results ── */
-.nav-search-results {
-  display: none;
-  background: var(--bg-deep, var(--paper-2));
-  border-bottom: 1px solid var(--rule, var(--rule));
-  max-height: 280px; overflow-y: auto; flex-shrink: 0;
-}
+
 .nav-search-results.open { display: block; }
-.nav-search-result {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 10px 16px; cursor: pointer;
-  border-bottom: 1px solid var(--rule-light, var(--rule-light));
-  transition: background 0.15s;
-}
-.nav-search-result:hover, .nav-search-result.active { background: color-mix(in srgb, var(--here-chrome) 12%, transparent); }
-.nav-search-result .sr-name { font-size: 0.95em; color: var(--ink, #1a1a1a); }
-.nav-search-result .sr-heb { font-family: 'David Libre',serif; font-size: 1em; color: var(--accent, var(--here-chrome)); }
+
+
 .nav-search-result .sr-vol { font-size: 0.75em; color: var(--ink-light, #888); margin-left: 8px; }
 
 /* ── Volume Tabs ── */
-.nav-vol-tabs {
-  display: flex; flex-shrink: 0;
-  border-bottom: 1px solid var(--rule, var(--rule));
-  background: var(--bg-deep, var(--paper-2));
-}
+/* ── Direction: the chrome reads LTR, only its Hebrew is RTL ──────────
+   The drawer inherits direction:rtl from the page, because the page is a
+   Hebrew reader. That is right for the text and wrong for every control
+   around it, and it failed in two ways that both looked like width bugs:
+
+     · `text-overflow: ellipsis` truncates at the INLINE END, which under
+       rtl is the LEFT. "Old Testament" rendered as "…AMENT" — the half
+       that identifies it, cut off.
+     · An overflowing input scrolls to its inline start, so the English
+       placeholder showed its tail: "r jump to a verse… — / or Ctrl+K".
+
+   Neither is fixed by more room. Set direction where the language changes,
+   and isolate the Hebrew inside so it still runs right-to-left. */
+.nav-search-wrap, .nav-vol-tabs { direction: ltr; }
+
+
 .nav-vol-tab {
   flex: 1; text-align: center; padding: 10px 4px 8px; cursor: pointer;
   border-bottom: 2px solid transparent;
   transition: background 0.15s, border-color 0.2s;
   min-width: 0;
 }
-.nav-vol-tab:hover { background: color-mix(in srgb, var(--here-chrome) 8%, transparent); }
-.nav-vol-tab.active {
-  border-bottom-color: var(--accent, var(--here-chrome));
-  background: color-mix(in srgb, var(--here-chrome) 10%, transparent);
-}
-.nav-vol-tab .vt-heb {
-  display: block; font-family: 'David Libre',serif;
-  font-size: 0.85em; color: var(--chrome); line-height: 1.2; font-weight: 600;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-}
-.nav-vol-tab .vt-en {
-  display: block; font-size: 0.65em; color: var(--chrome); margin-top: 2px; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.05em;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-}
+
+
 .nav-vol-tab.active .vt-heb { color: var(--chrome); }
-.nav-vol-tab.active .vt-en { color: var(--chrome); }
+
 
 /* ── Library view ── */
-.nav-library { flex: 1; overflow-y: auto; padding: 12px 16px 16px; }
-.nl-sec-title {
-  font-size: 0.72em;
-  color: var(--chrome);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-weight: 700;
-  margin: 6px 0 10px;
-}
+
+
 .nl-card {
   border: 1px solid var(--rule); border-radius: 10px; padding: 12px;
   background: var(--paper); cursor: pointer;
@@ -215,15 +160,7 @@ html.sw-shell-pending #annotations-panel, html.sw-shell-pending #glossary-panel 
 .nav-book-list::-webkit-scrollbar-thumb { background: var(--rule, var(--rule)); border-radius: 3px; }
 
 /* ── Footer tools (Export/Import) ── */
-.nav-footer {
-  padding: 6px 12px 10px;
-  border-top: 1px solid var(--rule, var(--rule));
-  background: var(--bg-deep, var(--paper-2));
-  flex-shrink: 0;
-  max-height: 42vh;
-  overflow-y: auto;
-  scrollbar-width: thin;
-}
+
 .nav-footer .nf-details {
   border-bottom: 1px solid var(--rule-light, var(--rule-light));
 }
@@ -281,16 +218,7 @@ html.sw-shell-pending #annotations-panel, html.sw-shell-pending #glossary-panel 
 .nav-footer .nf-hint { margin-top: 8px; font-size: 0.75em; color: var(--ink-light, #888); line-height: 1.35; }
 
 /* ── Division Headers ── */
-.nav-division {
-  padding: 12px 16px 4px;
-  font-size: 0.72em;
-  color: var(--chrome);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 700;
-  border-top: 1px solid var(--rule-light, var(--rule-light));
-  margin-top: 4px;
-}
+
 .nav-division:first-child { border-top: none; margin-top: 0; }
 
 /* ── Book Row ── */
@@ -349,45 +277,42 @@ html.sw-shell-pending #annotations-panel, html.sw-shell-pending #glossary-panel 
 .nav-ch-cell.current .ch-heb { color: var(--chrome); }
 .nav-ch-cell.current .ch-num { color: var(--chrome); }
 
-/* ── Dark mode: left panel matches right #xref-panel / Study drawer ── */
-body.dark-mode #nav-sidebar {
-  background: #252525;
-  color: var(--ink, var(--on-chrome));
-  border-right-color: var(--here-chrome);
-  box-shadow: 4px 0 24px rgba(0,0,0,0.45);
-}
+/* ── Dark mode: left panel matches right #xref-panel / Study drawer ──
+   These were neutral greys (#252525 #2a2a2a #333333 #383838 #444444) left
+   over from the grey dark mode that preceded the emerald scheme, so in dark
+   mode the drawer went grey while every other surface in the app went
+   emerald-dark. Mapped BY ROLE — surface, recessed control, hairline — not
+   by matching one hex to one token, which is how a palette change turns
+   into a hunt through five files a second time. */
+
 body.dark-mode .nav-search-wrap {
-  background: #2a2a2a;
-  border-bottom-color: #444444;
+  background: var(--chrome);
+  border-bottom-color: var(--chrome-line);
 }
-body.dark-mode .nav-search-wrap input {
-  background: #333333;
-  border-color: #444444;
-  color: var(--ink, var(--on-chrome));
-}
+
 body.dark-mode .nav-search-results {
-  background: #2a2a2a;
-  border-bottom-color: #444444;
+  background: var(--chrome);
+  border-bottom-color: var(--chrome-line);
 }
 body.dark-mode .nav-search-result {
-  border-bottom-color: #383838;
+  border-bottom-color: var(--chrome-line);
 }
 body.dark-mode .nav-search-result .sr-name { color: var(--ink, var(--on-chrome)); }
 body.dark-mode .nav-vol-tabs {
-  background: #2a2a2a;
-  border-bottom-color: #444444;
+  background: var(--chrome);
+  border-bottom-color: var(--chrome-line);
 }
-body.dark-mode .nav-book-list::-webkit-scrollbar-track { background: #252525; }
-body.dark-mode .nav-book-list::-webkit-scrollbar-thumb { background: #444444; }
-body.dark-mode .nav-book-list { scrollbar-color: #444444 #252525; }
+body.dark-mode .nav-book-list::-webkit-scrollbar-track { background: var(--panel); }
+body.dark-mode .nav-book-list::-webkit-scrollbar-thumb { background: var(--chrome-line); }
+body.dark-mode .nav-book-list { scrollbar-color: var(--chrome-line) var(--panel); }
 body.dark-mode .nav-footer {
-  background: #2a2a2a;
-  border-top-color: #444444;
+  background: var(--chrome);
+  border-top-color: var(--chrome-line);
 }
-body.dark-mode .nav-footer .nf-details { border-bottom-color: #383838; }
+body.dark-mode .nav-footer .nf-details { border-bottom-color: var(--chrome-line); }
 body.dark-mode .nav-footer button {
-  background: #333333;
-  border-color: #444444;
+  background: var(--chrome-2);
+  border-color: var(--chrome-line);
   color: var(--ink, var(--on-chrome));
 }
 body.dark-mode .nl-card,
@@ -413,14 +338,14 @@ body.dark-mode .nf-bm {
 }
 body.dark-mode .nav-ch-grid { background: rgba(0,0,0,0.2); }
 body.dark-mode .nav-ch-cell {
-  background: #333333;
-  border-color: #444444;
+  background: var(--chrome-2);
+  border-color: var(--chrome-line);
 }
-body.dark-mode .nav-division { border-top-color: #383838; }
+body.dark-mode .nav-division { border-top-color: var(--chrome-line); }
 
 /* ── Breadcrumb ── */
 #nav-breadcrumb {
-  position: fixed; top: var(--sw-chrome-h, 52px); left: 0; right: 0; z-index: 99;
+  position: fixed; top: var(--sw-chrome-h, 52px); left: 0; right: 0; z-index: var(--z-chrome);
   font-family: 'David Libre', serif; font-size: 0.78em;
   color: color-mix(in srgb, var(--chrome) 75%, transparent);
   padding: 6px max(16px, env(safe-area-inset-right, 0px)) 6px max(16px, env(safe-area-inset-left, 0px));
@@ -498,7 +423,7 @@ body.dark-mode .continue-reading .cr-heb { color: var(--chrome); }
 .nav-swipe-hint {
   position: fixed; left: 0; top: 50%; transform: translateY(-50%);
   width: 4px; height: 60px; background: color-mix(in srgb, var(--here-chrome) 30%, transparent);
-  border-radius: 0 4px 4px 0; z-index: 998;
+  border-radius: 0 4px 4px 0; z-index: var(--z-chrome);
   animation: swipeHintPulse 2s ease-in-out infinite;
   pointer-events: none;
 }
@@ -515,7 +440,7 @@ body.dark-mode .continue-reading .cr-heb { color: var(--chrome); }
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 99;
+  z-index: var(--z-chrome);
   box-sizing: border-box;
   width: 100%;
   padding-bottom: env(safe-area-inset-bottom, 0px);
@@ -767,62 +692,28 @@ body.reader-footer-hidden #sw-reader-footer .nqd-chapter-now {
    the drawer used to fall back to the cream --bg while the rest of
    the app wears var(--chrome)/var(--here-chrome).
    ══════════════════════════════════════════════════════════════════ */
-#nav-sidebar {
-  background: var(--sw-navy, var(--chrome)) !important;
-  color: var(--on-chrome) !important;
-  border-right: 2px solid var(--sw-gold, var(--here-chrome)) !important;
-  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.35) !important;
-}
+
 #nav-sidebar .nav-division,
 #nav-sidebar .nl-sec-title {
   color: var(--sw-gold, var(--here-chrome)) !important;
   border-top-color: color-mix(in srgb, var(--here-chrome) 25%, transparent) !important;
 }
-#nav-sidebar .nav-book-row:hover,
-#nav-sidebar .nav-book-row.expanded,
-#nav-sidebar .nav-book-row.nav-focus-row {
-  background: var(--sw-navy-hover, var(--surface-2)) !important;
-}
+
 #nav-sidebar .nav-book-row.nav-focus-row {
   border-bottom-color: color-mix(in srgb, var(--here-chrome) 30%, transparent) !important;
 }
-#nav-sidebar .nav-book-row .nb-heb { color: var(--sw-gold, var(--here-chrome)) !important; }
-#nav-sidebar .nav-book-row .nb-en { color: var(--sw-gold-bright, var(--on-chrome)) !important; }
+
+
 #nav-sidebar .nav-book-row .nb-ch { color: var(--sw-gold-muted, color-mix(in srgb, var(--here-chrome) 92%, transparent)) !important; }
 #nav-sidebar .nav-book-row .nb-arrow { color: var(--sw-gold-muted, color-mix(in srgb, var(--here-chrome) 92%, transparent)) !important; }
-#nav-sidebar .nav-ch-grid { background: rgba(0, 0, 0, 0.25) !important; }
-#nav-sidebar .nav-ch-cell {
-  background: var(--sw-navy-hover, var(--surface-2)) !important;
-  border-color: color-mix(in srgb, var(--here-chrome) 28%, transparent) !important;
-}
-#nav-sidebar .nav-ch-cell:hover {
-  background: var(--surface-3) !important;
-  border-color: var(--sw-gold, var(--here-chrome)) !important;
-}
-#nav-sidebar .nav-ch-cell.current {
-  background: var(--sw-gold, var(--here-chrome)) !important;
-  border-color: var(--sw-gold, var(--here-chrome)) !important;
-}
-#nav-sidebar .nav-ch-cell .ch-heb { color: var(--sw-gold, var(--here-chrome)) !important; }
-#nav-sidebar .nav-ch-cell .ch-num { color: var(--sw-gold-bright, var(--on-chrome)) !important; }
-#nav-sidebar .nav-ch-cell.current .ch-heb,
-#nav-sidebar .nav-ch-cell.current .ch-num { color: var(--sw-navy, var(--chrome)) !important; }
-#nav-sidebar .nav-search-results { background: var(--chrome-2) !important; }
-#nav-sidebar .nav-search-result { border-bottom-color: color-mix(in srgb, var(--here-chrome) 12%, transparent) !important; }
+
+
 #nav-sidebar .nav-search-result:hover,
 #nav-sidebar .nav-search-result.active { background: var(--sw-navy-hover, var(--surface-2)) !important; }
-#nav-sidebar .nav-search-result .sr-name { color: var(--on-chrome) !important; }
-#nav-sidebar .nav-search-result .sr-heb { color: var(--sw-gold, var(--here-chrome)) !important; }
-#nav-sidebar .nav-footer {
-  background: var(--chrome-2) !important;
-  border-top-color: color-mix(in srgb, var(--here-chrome) 30%, transparent) !important;
-}
-#nav-sidebar .nav-footer .nf-hint { color: color-mix(in srgb, var(--on-chrome) 60%, transparent) !important; }
+
+
 /* Dark mode: follow the chrome's near-black variant */
-body.dark-mode #nav-sidebar {
-  background: var(--chrome) !important;
-  border-right-color: var(--sw-gold, var(--here-chrome)) !important;
-}
+
 body.dark-mode #nav-sidebar .nav-book-row:hover,
 body.dark-mode #nav-sidebar .nav-book-row.expanded,
 body.dark-mode #nav-sidebar .nav-book-row.nav-focus-row,
@@ -849,7 +740,7 @@ body.dark-mode #nav-sidebar .nav-footer { background: var(--chrome-2) !important
 #nav-sidebar .nl-heb,
 #nav-sidebar .nl-bm-heb,
 #nav-sidebar .nl-card-text { color: var(--sw-gold, var(--here-chrome)) !important; }
-#nav-sidebar .nl-sub { color: color-mix(in srgb, var(--on-chrome) 65%, transparent) !important; }
+
 #nav-sidebar .nav-book-list {
   scrollbar-color: color-mix(in srgb, var(--here-chrome) 40%, transparent) var(--sw-navy, var(--chrome)) !important;
 }
@@ -873,11 +764,4 @@ body.dark-mode #nav-sidebar .nl-tile { background: var(--surface-1) !important; 
   flex-wrap: wrap;
   justify-content: center;
 }
-#sw-reader-footer .controls-bottom button {
-  min-height: 44px;
-  padding: 4px 5px;
-  font-size: 12px;
-  line-height: 1.25;
-  flex: 1 1 auto;
-  min-width: 0;
-}
+

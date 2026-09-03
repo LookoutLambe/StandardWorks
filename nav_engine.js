@@ -1,69 +1,4 @@
 
-/* ── One bar: location, not branding ─────────────────────────────────────
-   The approved layout puts prev / chapter / next IN the bar and removes
-   the footer. Live, the bar carried the site name and a size stepper
-   while navigation sat in a separate 57px footer.
-
-   Everything here MOVES existing nodes — the chapter button, prev and
-   next keep their handlers, and the size stepper and theme toggle go to
-   the settings sheet where they belong.
-   ─────────────────────────────────────────────────────────────────────── */
-(function () {
-  if (typeof document === 'undefined') return;
-  function build() {
-    var bar = document.querySelector('.sw-top-bar-inner');
-    var foot = document.querySelector('.sw-reader-footer');
-    if (!bar || document.getElementById('sw-locbar')) return;
-
-    var loc = document.createElement('div');
-    loc.id = 'sw-locbar';
-
-    // move the footer's three controls into the bar, in reading order
-    if (foot) {
-      var prev = foot.querySelector('[onclick*="rev"], .nqd-prev, [class*="prev"]');
-      var next = foot.querySelector('[onclick*="ext"], .nqd-next, [class*="next"]');
-      var chap = foot.querySelector('.nqd-chapter-now, [class*="chapter"]');
-      [prev, chap, next].forEach(function (el) { if (el) loc.appendChild(el); });
-      foot.classList.add('sw-footer-emptied');
-    }
-    var brand = bar.querySelector('.sw-top-bar-brand');
-    if (brand) brand.parentNode.insertBefore(loc, brand.nextSibling);
-    else bar.appendChild(loc);
-    if (brand) brand.classList.add('sw-brand-quiet');
-
-    // the size stepper and theme toggle are settings
-    var sheet = document.getElementById('sw-settings-sheet');
-    if (sheet) {
-      var stepper = document.querySelector('.sw-size-stepper');
-      var theme = document.querySelector('.sw-chrome-btn[aria-label*="ark"], .sw-chrome-btn[aria-label*="heme"]');
-      if (stepper || theme) {
-        var lab = document.createElement('div');
-        lab.className = 'sw-sheet-label'; lab.textContent = 'Display';
-        sheet.appendChild(lab);
-        var wrap = document.createElement('div'); wrap.className = 'sw-sheet-row';
-        if (stepper) wrap.appendChild(stepper);
-        if (theme) wrap.appendChild(theme);
-        sheet.appendChild(wrap);
-      }
-    }
-
-    // position hairline
-    var prog = document.createElement('div');
-    prog.id = 'sw-progress';
-    (document.querySelector('.sw-top-bar') || bar).appendChild(prog);
-    function tick() {
-      var d = document.documentElement;
-      var max = d.scrollHeight - window.innerHeight;
-      prog.style.width = (max > 0 ? Math.min(100, (window.scrollY / max) * 100) : 0) + '%';
-    }
-    window.addEventListener('scroll', tick, { passive: true });
-    window.addEventListener('resize', tick);
-    tick();
-  }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', build);
-  else build();
-  window.addEventListener('load', build);
-})();
 
 /* ══════════════════════════════════════════════════════
    NAV ENGINE — Unified Navigation for Standard Works
@@ -100,7 +35,7 @@
   // ── Volume Registry ──
   var VOLUMES = {
     ot: {
-      key: 'ot', name: 'Old Testament', heb: '\u05EA\u05E0\u05F4\u05DA', abbr: '\u05EA\u05E0\u05F4\u05DA',
+      key: 'ot', short: 'OT', name: 'Old Testament', heb: '\u05EA\u05E0\u05F4\u05DA', abbr: '\u05EA\u05E0\u05F4\u05DA',
       page: 'ot.html',
       divisions: [
         { name: '\u05EA\u05D5\u05E8\u05D4 \u00B7 Torah', books: [
@@ -151,7 +86,7 @@
       ]
     },
     nt: {
-      key: 'nt', name: 'New Testament', heb:'\u05D4\u05D1\u05E8\u05D9\u05EA \u05D4\u05D7\u05D3\u05E9\u05D4', abbr:'\u05D1\u05F4\u05D7',
+      key: 'nt', short: 'NT', name: 'New Testament', heb:'\u05D4\u05D1\u05E8\u05D9\u05EA \u05D4\u05D7\u05D3\u05E9\u05D4', abbr:'\u05D1\u05F4\u05D7',
       page: 'nt.html',
       divisions: [
         { name: '\u05D1\u05E9\u05D5\u05E8\u05D5\u05EA \u00B7 Gospels', books: [
@@ -194,7 +129,7 @@
       ]
     },
     bom: {
-      key: 'bom', name: 'Book of Mormon', heb:'\u05E1\u05E4\u05E8 \u05DE\u05D5\u05E8\u05DE\u05D5\u05DF', abbr:'\u05E1\u05D5\u05F4\u05DE',
+      key: 'bom', short: 'BoM', name: 'Book of Mormon', heb:'\u05E1\u05E4\u05E8 \u05DE\u05D5\u05E8\u05DE\u05D5\u05DF', abbr:'\u05E1\u05D5\u05F4\u05DE',
       page: 'bom/bom.html',
       divisions: [
         { name: '\u05D4\u05E7\u05D3\u05DE\u05D5\u05EA \u00B7 Front Matter', books: [
@@ -232,7 +167,7 @@
       ]
     },
     dc: {
-      key: 'dc', name: 'D&C', heb:'הלקח והבריתות', abbr:'\u05DC.\u05D1',
+      key: 'dc', short: 'D&C', name: 'D&C', heb:'הלקח והבריתות', abbr:'\u05DC.\u05D1',
       page: 'dc.html',
       divisions: [
         { name: '\u05D4\u05E7\u05D3\u05DE\u05D5\u05EA \u00B7 Front Matter', books: [
@@ -253,7 +188,7 @@
       ]
     },
     pgp: {
-      key: 'pgp', name: 'Pearl of Great Price', heb:'פנינת המחיר הגדול', abbr:'\u05E4\u05E0\u05F4\u05D4',
+      key: 'pgp', short: 'PGP', name: 'Pearl of Great Price', heb:'פנינת המחיר הגדול', abbr:'\u05E4\u05E0\u05F4\u05D4',
       page: 'pgp.html',
       divisions: [
         { name: '\u05D4\u05E7\u05D3\u05DE\u05D5\u05EA \u00B7 Front Matter', books: [
@@ -270,7 +205,7 @@
       ]
     },
     jst: {
-      key: 'jst', name: 'JST', heb:'\u05EA\u05E8\u05D2\u05D5\u05DD \u05D9\u05D5\u05E1\u05E3 \u05E1\u05DE\u05D9\u05EA', abbr:'\u05EA\u05D2\u05F4\u05E1',
+      key: 'jst', short: 'JST', name: 'JST', heb:'\u05EA\u05E8\u05D2\u05D5\u05DD \u05D9\u05D5\u05E1\u05E3 \u05E1\u05DE\u05D9\u05EA', abbr:'\u05EA\u05D2\u05F4\u05E1',
       page: 'jst.html',
       divisions: [
         { name: '\u05D4\u05E7\u05D3\u05DE\u05D5\u05EA \u00B7 Front Matter', books: [
@@ -427,7 +362,6 @@
     });
     document.body.appendChild(_overlayEl);
 
-    _injectAccentTheme();
 
     // Sidebar
     _sidebarEl = document.createElement('div');
@@ -497,7 +431,8 @@
       tab.className = 'nav-vol-tab' + (vk === _config.volume ? ' active' : '');
       tab.setAttribute('data-vol', vk);
       tab.title = vol.heb + ' · ' + vol.name;
-      tab.innerHTML = '<span class="vt-heb">' + vol.abbr + '</span><span class="vt-en">' + vol.name + '</span>';
+      tab.innerHTML = '<span class="vt-heb">' + vol.abbr + '</span><span class="vt-en">' + (vol.short || vol.name) + '</span>';
+      tab.title = vol.name;   /* the full name is a tooltip, not a truncation */
       tab.onclick = function() { switchVolTab(vk); };
       _tabsRowEl.appendChild(tab);
     });
@@ -1429,104 +1364,13 @@
   // ── Site accent theme for the drawer and the right cross-reference panel ──
   // Injected as a late <style> (external-sheet overrides were not reliably
   // applied for these elements); navy var(--chrome) + gold var(--here-chrome) like .sw-top-bar.
-  function _injectAccentTheme() {
-    if (document.getElementById('sw-accent-theme')) return;
-    var st = document.createElement('style');
-    st.id = 'sw-accent-theme';
-    st.textContent =
-      /* left drawer */
-      '#nav-sidebar{background:var(--surface-0) !important;color:var(--on-surface) !important;border-right:2px solid var(--gold-bright) !important;box-shadow:4px 0 24px rgba(0,0,0,0.35) !important;}' +
-      'body.dark-mode #nav-sidebar{background:var(--surface-0) !important;}' +
-      '#nav-sidebar .nav-division,#nav-sidebar .nl-sec-title{color:var(--gold-bright) !important;border-top-color:color-mix(in srgb, var(--gold-bright) 25%, transparent) !important;}' +
-      '#nav-sidebar .nav-book-row:hover,#nav-sidebar .nav-book-row.expanded,#nav-sidebar .nav-book-row.nav-focus-row{background:var(--surface-2) !important;}' +
-      '#nav-sidebar .nav-book-row .nb-heb{color:var(--gold-bright) !important;}' +
-      '#nav-sidebar .nav-book-row .nb-en{color:var(--gold-pale) !important;}' +
-      '#nav-sidebar .nav-book-row .nb-ch,#nav-sidebar .nav-book-row .nb-arrow{color:color-mix(in srgb, var(--gold-bright) 85%, transparent) !important;}' +
-      '#nav-sidebar .nav-ch-grid{background:rgba(0,0,0,0.25) !important;}' +
-      '#nav-sidebar .nav-ch-cell{background:var(--surface-2) !important;border-color:color-mix(in srgb, var(--gold-bright) 28%, transparent) !important;}' +
-      '#nav-sidebar .nav-ch-cell:hover{background:var(--surface-3) !important;border-color:var(--gold-bright) !important;}' +
-      '#nav-sidebar .nav-ch-cell.current{background:var(--gold-bright) !important;border-color:var(--gold-bright) !important;}' +
-      '#nav-sidebar .nav-ch-cell .ch-heb{color:var(--gold-bright) !important;}' +
-      '#nav-sidebar .nav-ch-cell .ch-num{color:var(--gold-pale) !important;}' +
-      '#nav-sidebar .nav-ch-cell.current .ch-heb,#nav-sidebar .nav-ch-cell.current .ch-num{color:var(--surface-0) !important;}' +
-      '#nav-sidebar .nav-search-results{background:var(--surface-sunken) !important;}' +
-      '#nav-sidebar .nav-search-result{border-bottom-color:color-mix(in srgb, var(--gold-bright) 12%, transparent) !important;}' +
-      '#nav-sidebar .nav-search-result:hover,#nav-sidebar .nav-search-result.active{background:var(--surface-2) !important;}' +
-      '#nav-sidebar .nav-search-result .sr-name{color:var(--on-surface) !important;}' +
-      '#nav-sidebar .nav-search-result .sr-heb{color:var(--gold-bright) !important;}' +
-      '#nav-sidebar .nav-footer{background:var(--surface-sunken) !important;border-top-color:color-mix(in srgb, var(--gold-bright) 30%, transparent) !important;}' +
-      '#nav-sidebar .nav-footer .nf-hint{color:rgba(232,224,208,0.6) !important;}' +
-      '#nav-sidebar .nl-card,#nav-sidebar .nl-bm,#nav-sidebar .nl-tile{background:var(--surface-2) !important;border-color:color-mix(in srgb, var(--gold-bright) 30%, transparent) !important;}' +
-      '#nav-sidebar .nl-card:hover,#nav-sidebar .nl-bm:hover,#nav-sidebar .nl-tile:hover{background:var(--surface-3) !important;border-color:var(--gold-bright) !important;}' +
-      '#nav-sidebar .nl-card-title,#nav-sidebar .nl-name,#nav-sidebar .nl-bm-title{color:var(--gold-pale) !important;}' +
-      '#nav-sidebar .nl-card-heb,#nav-sidebar .nl-heb,#nav-sidebar .nl-bm-heb,#nav-sidebar .nl-card-text{color:var(--gold-bright) !important;}' +
-      '#nav-sidebar .nl-sub{color:rgba(232,224,208,0.65) !important;}' +
-      'body.dark-mode #nav-sidebar .nav-book-row:hover,body.dark-mode #nav-sidebar .nav-book-row.expanded,' +
-      'body.dark-mode #nav-sidebar .nav-ch-cell,body.dark-mode #nav-sidebar .nl-card,' +
-      'body.dark-mode #nav-sidebar .nl-bm,body.dark-mode #nav-sidebar .nl-tile{background:var(--surface-1) !important;}' +
-      'body.dark-mode #nav-sidebar .nav-search-results,body.dark-mode #nav-sidebar .nav-footer{background:var(--surface-sunken) !important;}' +
-      '#nav-sidebar .nav-library,#nav-sidebar .nav-book-list{background:transparent !important;}' +
-      '#nav-sidebar .nav-search-wrap{background:var(--surface-sunken) !important;border-bottom:1px solid color-mix(in srgb, var(--here-chrome) 35%, transparent) !important;}' +
-      '#nav-sidebar .nav-search-wrap input{background:var(--surface-2) !important;color:var(--gold-pale) !important;border:1px solid color-mix(in srgb, var(--here-chrome) 40%, transparent) !important;}' +
-      '#nav-sidebar .nav-search-wrap input::placeholder{color:color-mix(in srgb, var(--gold-bright) 55%, transparent) !important;}' +
-      '#nav-sidebar .nav-icon-btn,#nav-sidebar .nav-close-btn{color:var(--gold-bright) !important;}' +
-      '#nav-sidebar .nav-vol-tabs{background:var(--surface-sunken) !important;border-bottom:1px solid color-mix(in srgb, var(--here-chrome) 30%, transparent) !important;}' +
-      '#nav-sidebar .nav-vol-tab{color:color-mix(in srgb, var(--gold-bright) 80%, transparent) !important;}' +
-      '#nav-sidebar .nav-vol-tab:hover{background:var(--surface-2) !important;}' +
-      '#nav-sidebar .nav-vol-tab.active{background:var(--surface-2) !important;border-bottom-color:var(--gold-bright) !important;}' +
-      '#nav-sidebar .nav-vol-tab .vt-heb{color:var(--gold-bright) !important;}' +
-      '#nav-sidebar .nav-vol-tab .vt-en{color:color-mix(in srgb, var(--gold-bright) 85%, transparent) !important;}' +
-      '#nav-sidebar .nav-vol-tab.active .vt-en{color:var(--gold-pale) !important;}' +
-      /* right cross-reference / study panel */
-      '#xref-panel{background:var(--surface-0) !important;color:var(--on-surface) !important;border-left:2px solid var(--gold-bright) !important;}' +
-      'body.dark-mode #xref-panel{background:var(--surface-0) !important;}' +
-      '#xref-panel .xref-panel-header{background:var(--surface-sunken) !important;border-bottom:1px solid color-mix(in srgb, var(--here-chrome) 35%, transparent) !important;}' +
-      '#xref-panel .xref-panel-header h3,#xref-panel .xref-panel-word{color:var(--gold-bright) !important;}' +
-      '#xref-panel .xref-panel-category{color:rgba(232,224,208,0.75) !important;}' +
-      '#xref-panel .xref-panel-close{color:var(--gold-bright) !important;}' +
-      '#xref-panel .xref-study-tabs{background:var(--surface-sunken) !important;border-bottom-color:color-mix(in srgb, var(--gold-bright) 30%, transparent) !important;}' +
-      '#xref-panel .xref-study-tab{background:var(--surface-2) !important;color:color-mix(in srgb, var(--gold-bright) 85%, transparent) !important;border-color:color-mix(in srgb, var(--gold-bright) 30%, transparent) !important;}' +
-      '#xref-panel .xref-study-tab.active{background:var(--gold-bright) !important;color:var(--surface-0) !important;font-weight:700 !important;}' +
-      '#xref-panel .xref-ref-word,#xref-panel .xref-category{color:var(--gold-bright) !important;}' +
-      '#xref-panel .xref-ref-content{color:var(--on-surface) !important;}' +
-      '#xref-panel .xf-bookmark-item{background:var(--surface-2) !important;border-color:color-mix(in srgb, var(--gold-bright) 25%, transparent) !important;}' +
-      '#xref-panel .xf-bookmark-item:hover{background:var(--surface-3) !important;}' +
-      '#xref-panel .xf-bookmark-item .xf-bm-title{color:var(--gold-pale) !important;}' +
-      '#xref-panel .xf-bookmark-item .xf-bm-heb{color:var(--gold-bright) !important;}' +
-      '#xref-panel .study-pane-hint,#xref-panel .study-pane-sub{color:rgba(232,224,208,0.7) !important;}' +
-      '#xref-panel .study-btn-row button{background:var(--surface-2) !important;color:var(--gold-pale) !important;border:1px solid color-mix(in srgb, var(--here-chrome) 40%, transparent) !important;}' +
-      '#xref-panel .study-btn-row button:hover{background:var(--surface-3) !important;border-color:var(--gold-bright) !important;}' +
-      /* interlinear verse previews inside the panel: readable on navy */
-      '#xref-panel .hw{color:var(--gold-bright) !important;}' +
-      '#xref-panel .tl{color:rgba(232,224,208,0.65) !important;}' +
-      '#xref-panel .gl{color:var(--gold-pale) !important;}' +
-      '#xref-panel .arr-tl,#xref-panel .arr-gl{color:color-mix(in srgb, var(--gold-bright) 45%, transparent) !important;}' +
-      '#xref-panel .verse-num{color:color-mix(in srgb, var(--gold-bright) 80%, transparent) !important;}' +
-      '#xref-panel .verse{border-color:color-mix(in srgb, var(--gold-bright) 15%, transparent) !important;}' +
-      '#xref-panel .xref-refs,#xref-panel .xref-pane{color:var(--on-surface) !important;}' +
-      '#xref-panel .xref-ref-loading,#xref-panel .xref-ref-nodata{color:rgba(232,224,208,0.7) !important;}' +
-      /* cross-reference cards: title row, go-to link, interlinear words */
-      '#xref-panel .xref-ref-card{background:var(--surface-2) !important;border:1px solid color-mix(in srgb, var(--here-chrome) 20%, transparent) !important;border-radius:10px;}' +
-      '#xref-panel .xref-ref-title,#xref-panel .xref-ref-title span{color:var(--gold-bright) !important;}' +
-      '#xref-panel .xref-ref-goto{color:var(--gold-bright) !important;text-decoration:underline;}' +
-      '#xref-panel .xref-ref-word{color:var(--on-surface) !important;}' +
-      '#xref-panel .xref-ref-word .en,#xref-panel .en{color:var(--gold-pale) !important;}' +
-      '#xref-panel .xref-ref-word .he,#xref-panel .he{color:var(--gold-bright) !important;}' +
-      /* Phones: slide panels take the FULL screen — half-panels are useless on
-         a small display (user request). Widths only, as 100% of the viewport's usable width (100vw counts the
-         scrollbar and hangs a drawer 15px off the edge on a narrow desktop window);
-         where a drawer sits is the drawer contract in nav_engine.css. */
-      '@media (max-width: 700px) {' +
-        '#nav-sidebar{width:100% !important;max-width:100% !important;}' +
-        '#glossary-panel{width:100% !important;max-width:100% !important;}' +
-        '#xref-panel{width:100% !important;max-width:100% !important;}' +
-        '#annotations-panel{width:100% !important;max-width:100% !important;}' +
-        '#rsc-panel .rsc-panel-card{width:100vw !important;max-width:100vw !important;height:100dvh;max-height:100dvh !important;' +
-          'border-radius:0 !important;border-left:none !important;border-right:none !important;' +
-          'left:0 !important;top:0 !important;transform:none !important;}' +
-      '}';
-    document.head.appendChild(st);
-  }
+  /* _injectAccentTheme() removed 2026-09-03 — its 72 rules moved to
+   reader.css. It existed because "external-sheet overrides were not
+   reliably applied for these elements", which stopped being true once
+   reader.css loaded last with the tokens centralised. A sheet appended
+   at runtime outranks every stylesheet, which is what turned each fix
+   into a specificity fight. */
+
 
   // ── Reading Position Memory ──
   function saveReadingPosition(volKey, chapterId, book) {
@@ -2737,5 +2581,231 @@
     mountStudyToolsIntoXrefPanel: mountStudyToolsIntoXrefPanel,
     VOLUMES: VOLUMES,
     installReaderFooterChrome: installReaderFooterChrome
+  };
+})();
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+   SWLayers — the one arbitrator for every overlay surface
+   ═══════════════════════════════════════════════════════════════════════
+   THE BUG THIS EXISTS TO KILL: the drawer, the Study panel and the word
+   popup were three independent overlays that knew nothing about each
+   other. All three could be open at once, each sized without reference to
+   the others, so on an 820px viewport the drawer (360) plus Study (380)
+   covered 740px and the reader survived as an 80px sliver with a centred
+   popup on top of it. closeAllPanels() existed but omitted the Study panel
+   and was bound to Escape only — nothing called it when a NEW layer opened.
+
+   The rule is opening, not closing: a surface that opens must displace the
+   surfaces it cannot share the screen with. Ranks come from the same names
+   as the z-index scale in sw_theme.css, so layer order and layer behaviour
+   can never drift apart.
+
+     panel   drawer · Study · glossary · annotations
+             -> closes every other panel and every popover.
+                Side panels are mutually exclusive: one at a time, always.
+     popover word popup · share · highlight pop · selection toolbar
+             -> closes other popovers. Closes panels ONLY when the viewport
+                is too narrow to hold a panel and a popover side by side.
+     sheet   shortcuts · root scorecard panel
+             -> closes everything. A sheet owns the screen.
+
+   No call sites were edited to get this. A MutationObserver watches the
+   class and style attributes of every registered surface, so a page that
+   ships its own copy of the open/close functions (bom.html does) is
+   arbitrated identically without knowing this file exists.
+   ═══════════════════════════════════════════════════════════════════════ */
+window.SWLayers = (function () {
+  'use strict';
+
+  /* Width below which a panel and a popover cannot coexist. A 380px panel
+     plus a 460px popup needs 840 before they stop overlapping; 1000 leaves
+     the reading column something to be. */
+  var COEXIST_MIN = 1000;
+
+  var SURFACES = [
+    { id: 'nav-sidebar',       kind: 'panel',   side: 'left'  },
+    { id: 'glossary-panel',    kind: 'panel',   side: 'left'  },
+    { id: 'xref-panel',        kind: 'panel',   side: 'right' },
+    { id: 'annotations-panel', kind: 'panel',   side: 'right' },
+    { id: 'word-popup',        kind: 'popover' },
+    { id: 'share-popup',       kind: 'popover' },
+    { id: 'hl-pop',            kind: 'popover' },
+    { id: 'sel-toolbar',       kind: 'popover' },
+    { id: 'shortcuts-overlay', kind: 'sheet'   },
+    { id: 'rsc-panel',         kind: 'sheet'   }
+  ];
+
+  /* Named close functions the pages already define. Preferred over blunt
+     DOM edits so each surface still runs its own teardown (saved scroll
+     position, aria state, focus return). Falls back when absent. */
+  var CLOSERS = {
+    'nav-sidebar':       ['closeSidebar'],
+    'glossary-panel':    ['closeGlossary'],
+    'xref-panel':        ['closeXrefPanel'],
+    'annotations-panel': ['closeAnnotationsPanel'],
+    'word-popup':        ['closePopup'],
+    'share-popup':       ['closeSharePopup'],
+    'shortcuts-overlay': ['closeShortcuts'],
+    'rsc-panel':         ['closeRootScorecard', 'closeRscPanel']   /* plus RootScorecard.closePanel, below */
+  };
+
+  var _busy = false;          /* re-entry guard: closing fires the observer */
+  var _obs  = null;
+
+  function el(id) { return document.getElementById(id); }
+
+  function isOpen(node) {
+    if (!node) return false;
+    if (node.classList.contains('open')) return true;
+    var d = node.style.display;
+    return d === 'block' || d === 'flex';
+  }
+
+  function close(surface) {
+    var node = el(surface.id);
+    if (!node || !isOpen(node)) return false;
+    var fns = CLOSERS[surface.id] || [];
+    for (var i = 0; i < fns.length; i++) {
+      if (typeof window[fns[i]] === 'function') {
+        try { window[fns[i]](); return true; } catch (e) {}
+      }
+    }
+    if (surface.id === 'nav-sidebar' && window.NavEngine && NavEngine.close) {
+      try { NavEngine.close(); return true; } catch (e) {}
+    }
+    if (surface.id === 'rsc-panel' && window.RootScorecard && RootScorecard.closePanel) {
+      try { RootScorecard.closePanel(); return true; } catch (e) {}
+    }
+    node.classList.remove('open');
+    if (node.style.display === 'block' || node.style.display === 'flex') {
+      node.style.display = 'none';
+    }
+    return true;
+  }
+
+  /* Which open surfaces must yield to `opened`. */
+  function displacedBy(opened) {
+    var narrow = window.innerWidth < COEXIST_MIN;
+    return SURFACES.filter(function (s) {
+      if (s.id === opened.id) return false;
+      if (!isOpen(el(s.id))) return false;
+      if (opened.kind === 'sheet')   return true;
+      if (opened.kind === 'panel')   return s.kind === 'panel' || s.kind === 'popover';
+      if (opened.kind === 'popover') return s.kind === 'popover' || (narrow && s.kind === 'panel');
+      return false;
+    });
+  }
+
+  /* Desktop: an open side panel INSETS the reader instead of covering it.
+     Body classes drive it so the whole rule lives in reader.css. */
+  function reflow() {
+    var left = false, right = false;
+    SURFACES.forEach(function (s) {
+      if (s.kind !== 'panel' || !isOpen(el(s.id))) return;
+      if (s.side === 'left') left = true; else right = true;
+    });
+    document.body.classList.toggle('sw-panel-left',  left);
+    document.body.classList.toggle('sw-panel-right', right);
+    document.body.classList.toggle('sw-panel-open',  left || right);
+  }
+
+  function arbitrate(surface) {
+    if (_busy) return;
+    _busy = true;
+    try {
+      displacedBy(surface).forEach(close);
+      reflow();
+    } finally {
+      _busy = false;
+    }
+  }
+
+  function watch() {
+    if (_obs) return;
+    _obs = new MutationObserver(function (records) {
+      if (_busy) return;
+      for (var i = 0; i < records.length; i++) {
+        var node = records[i].target;
+        var surface = null;
+        for (var j = 0; j < SURFACES.length; j++) {
+          if (SURFACES[j].id === node.id) { surface = SURFACES[j]; break; }
+        }
+        if (surface && isOpen(node)) { arbitrate(surface); return; }
+      }
+      reflow();
+    });
+    SURFACES.forEach(function (s) {
+      var node = el(s.id);
+      if (node) _obs.observe(node, { attributes: true, attributeFilter: ['class', 'style'] });
+    });
+    reflow();
+  }
+
+  /* Surfaces are created lazily on some pages — re-scan for any we missed.
+
+     A surface built and opened in the SAME tick (#rsc-panel is inserted
+     with .open already set) produces no attribute mutation after we start
+     observing it, so adoption must arbitrate on the spot. Without this the
+     references sheet opened on top of the drawer instead of replacing it. */
+  function rescan() {
+    if (!_obs) { watch(); return; }
+    var justOpened = null;
+    SURFACES.forEach(function (s) {
+      var node = el(s.id);
+      if (node && !node.__swWatched) {
+        node.__swWatched = true;
+        _obs.observe(node, { attributes: true, attributeFilter: ['class', 'style'] });
+        if (isOpen(node)) justOpened = s;
+      }
+    });
+    if (justOpened) arbitrate(justOpened);
+    else reflow();
+  }
+
+  function closeAll() {
+    _busy = true;
+    try { SURFACES.forEach(close); reflow(); } finally { _busy = false; }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', watch);
+  } else {
+    watch();
+  }
+  document.addEventListener('DOMContentLoaded', rescan);
+  window.addEventListener('load', rescan);
+  window.addEventListener('resize', reflow);
+
+  /* Surfaces built on first use — #rsc-panel, the "View all references"
+     sheet, is created the first time it opens, long after load. Watching
+     only at startup left it unarbitrated: it appeared over the word popup
+     and whatever panel was open. Watch <body> for new children and adopt
+     any registered surface the moment it is inserted. */
+  var _bodyObs = new MutationObserver(function (records) {
+    for (var i = 0; i < records.length; i++) {
+      var added = records[i].addedNodes;
+      for (var j = 0; j < added.length; j++) {
+        var n = added[j];
+        if (n.nodeType !== 1 || !n.id) continue;
+        for (var k = 0; k < SURFACES.length; k++) {
+          if (SURFACES[k].id === n.id) { rescan(); return; }
+        }
+      }
+    }
+  });
+  function watchBody() {
+    if (document.body) _bodyObs.observe(document.body, { childList: true });
+  }
+  if (document.body) watchBody();
+  else document.addEventListener('DOMContentLoaded', watchBody);
+
+  return {
+    closeAll:  closeAll,
+    rescan:    rescan,
+    reflow:    reflow,
+    isOpen:    function (id) { return isOpen(el(id)); },
+    openCount: function () { return SURFACES.filter(function (s) { return isOpen(el(s.id)); }).length; },
+    SURFACES:  SURFACES
   };
 })();

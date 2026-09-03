@@ -856,12 +856,12 @@ detailHtml += '</div>';
     if (directXref) {
       var xrefObj = JSON.parse(directXref);
       var refCount = xrefObj.refs ? xrefObj.refs.length : 0;
-      detailHtml += '<br><span class="popup-xref-direct" style="cursor:pointer;color:var(--here-chrome);text-decoration:underline;font-size:0.9em;">View Cross-References (' + refCount + ') \u2192</span>';
+      detailHtml += '<br><span class="popup-xref-direct">View Cross-References (' + refCount + ') \u2192</span>';
     }
     if (true) {
       var rootXrefs = window._rootXrefs && window._rootXrefs[root];
       if (rootXrefs && rootXrefs.length > 0) {
-        detailHtml += '<br><span class="popup-xref-link" style="cursor:pointer;color:var(--here-chrome);text-decoration:underline;font-size:0.9em;">Cross-References for root (' + rootXrefs.length + ') \u2192</span>';
+        detailHtml += '<br><span class="popup-xref-link">Cross-References for root (' + rootXrefs.length + ') \u2192</span>';
       }
     }
     popupDetail.innerHTML = detailHtml;

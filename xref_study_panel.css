@@ -1,13 +1,6 @@
 /* Tabbed Study panel (cross-refs + bookmarks + notes + more) — loaded with scripture volumes */
 
-#xref-panel {
-  display: flex !important;
-  flex-direction: column !important;
-  padding: 0 !important;
-}
-#xref-panel .xref-panel-header {
-  flex-shrink: 0;
-}
+
 .xref-study-tabs {
   display: flex;
   flex-wrap: wrap;
@@ -17,7 +10,7 @@
   background: var(--bg-deep);
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: var(--z-raised);
 }
 .xref-study-tab {
   flex: 1;
@@ -144,12 +137,9 @@ body.dark-mode .study-btn-row button {
    The pane below stays parchment: the cross-references render as Hebrew
    interlinear, which is designed against that background.                    */
 
-#xref-panel .xref-panel-header {
-  background: var(--chrome);
-  border-bottom: 1px solid color-mix(in srgb, var(--here-chrome) 35%, transparent);
-}
+
 #xref-panel .xref-panel-header h3 { color: var(--here-chrome); }
-#xref-panel .xref-panel-close { color: var(--here-chrome); opacity: 0.85; }
+
 #xref-panel .xref-panel-close:hover {
   background: color-mix(in srgb, var(--here-chrome) 18%, transparent);
   color: var(--on-chrome);
@@ -175,7 +165,7 @@ body.dark-mode .study-btn-row button {
   color: var(--chrome);
   font-weight: 650;
 }
-#xref-panel { border-left: 2px solid var(--here-chrome); }
+
 
 /* Dark mode keeps the same relationship, one step deeper */
 body.dark-mode #xref-panel .xref-panel-header,

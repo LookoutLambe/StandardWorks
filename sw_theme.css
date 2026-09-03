@@ -9,117 +9,13 @@
    Nothing crosses that line. When a new component appears, that rule
    already decides most of it.
    ══════════════════════════════════════════════════════════════════════ */
-:root {
-  /* ── TYPE ──────────────────────────────────────────────────────────
-     One ratio, seven steps, nothing outside it. Declared in em because
-     the A+/A− control sets a percentage on #page — a px scale would
-     silently kill the reader's zoom. (Was 22 ad-hoc sizes.)          */
-  --t-micro:   0.6875em;   /* 11 — labels, counts, verse numerals */
-  --t-small:   0.8125em;   /* 13 — transliteration, meta          */
-  --t-body:    0.9375em;   /* 15 — the gloss, UI text             */
-  --t-large:   1.1875em;   /* 19 — book names, English body       */
-  --t-title:   1.5em;      /* 24 — section heads                  */
-  --t-heb:     1.875em;    /* 30 — the reading size               */
-  --t-display: 2.375em;    /* 38 — chapter opening                */
 
-  /* ── SPACE — 4px rhythm ── */
-  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px;
-
-  /* ── RADIUS ── */
-  --r-bar:0; --r-control:8px; --r-card:12px; --r-sheet:18px;
-
-  /* ── ELEVATION ── */
-  --e1: 0 1px 2px rgba(26,26,26,.04), 0 4px 14px rgba(26,26,26,.05);
-  --e2: 0 2px 4px rgba(26,26,26,.05), 0 10px 26px rgba(26,26,26,.09);
-  --e3: 0 6px 18px rgba(26,26,26,.10), 0 20px 54px rgba(26,26,26,.18);
-
-  /* ── MOTION — one pair, not one duration copied everywhere ── */
-  --m-state: 120ms ease;
-  --m-move:  220ms ease;
-
-  /* ── SURFACES ── */
-  --paper:   #fbfbfa;   /* the reading ground        */
-  --paper-2: #f3f5f3;   /* recessed on paper         */
-  --panel:   #f3f5f3;   /* the tool ground           */
-  --card:    #ffffff;   /* a thing you can act on    */
-  --chrome:  #0b2a20;   /* bars. always. both themes */
-  --chrome-2:#082018;   /* recessed chrome           */
-  --chrome-line:#1d4636;
-
-  /* ── INKS — every pair clears 4.5:1 on its surface ── */
-  --ink:        #141614;   /* 16.9:1 on paper */
-  --ink-2:      #4a524c;   /*  8.9:1 */
-  --ink-3:      #646e67;   /* the gloss. 5.29:1 on card, 4.83:1 on panel.
-                             #8b948d came out of the palette mock as a LABEL
-                             colour and was 3.13:1 here — 856 failures.  */   /*  5.7:1 — quietest legible */
-  --on-chrome:  #ecfdf5;   /* 12.6:1 on chrome */
-  --on-chrome-2:#9dc3b3;   /*  6.0:1 */
-
-  /* ── ROLES. An accent is a MEANING, not a decoration. Three, each
-     with exactly one job. If a colour is not one of these, it is ink
-     or it is a surface. This rules out gold-because-a-box-needed-an-
-     edge and blue-because-a-word-is-tappable.                       */
-  --here:        #046b4a;  /* your current location, on paper */
-  --here-chrome: #34d399;  /* the same meaning, on navy       */
-  --signal:      #dc2626;  /* qamats qatan — the only hue that
-                              carries linguistic information  */
-  --signal-chrome:#f87171;
-  /* a REFERENCE is not a colour: it is a dotted rule under the gloss */
-
-}
 
 /* The alias layer lives on BODY, not :root — deliberately.
    body.dark-mode overrides the primitives ON BODY, and an alias declared
    on :root would resolve against :root's light primitive and never flip.
    Declared here, every alias sees the theme that is actually in force. */
-body {
-  /* ── Compatibility: the names the rest of the codebase already uses,
-     mapped onto the system so nothing downstream had to change. ── */
-  --gold-deep: var(--here);  --gold: var(--on-chrome);
-  --gold-bright: var(--on-chrome);   /* chrome TEXT, not the accent */
-  --gold-pale: var(--on-chrome-2);
-  --label-gold: var(--here);
-  --qq: var(--signal); --qq-bright: var(--signal-chrome);
-  --tap: var(--here); --tap-bright: var(--here-chrome);
-  --navy: var(--chrome); --navy-2: #14392c;
-  --navy-line: var(--chrome-line); --navy-line-dim: #123528;
-  --surface-sunken: var(--chrome-2); --surface-0: var(--chrome);
-  --surface-1: #103528; --surface-2: #14392c; --surface-3: #1d4636;
-  --surface-line: var(--chrome-line);
-  --on-surface: var(--on-chrome); --on-surface-muted: var(--on-chrome-2);
-  --on-surface-accent: var(--here-chrome);
-  --paper-0: var(--paper); --paper-1: var(--paper-2);
-  --on-paper: var(--ink); --on-paper-muted: var(--ink-3);
-  --on-paper-accent: var(--here);
-  --panel-ground: var(--panel);
-  --card-bg: var(--card); --card-title: var(--ink);
-  --card-tl: var(--ink-3); --card-body: var(--ink-2);
-  --card-radius: var(--r-sheet); --tile-radius: var(--r-card);
-  --card-gap: var(--s4); --tile-gap: 10px;
-  --card-shadow: var(--e1); --card-shadow-hover: var(--e2);
-  --card-motion: var(--m-move);
-  --chrome-bg: var(--chrome); --chrome-gold: var(--on-chrome);
-  --chrome-ink: var(--on-chrome); --chrome-muted: var(--on-chrome-2);
-  --sw-navy: var(--chrome); --sw-navy-hover: #2d3245;
-  --sw-gold: var(--on-chrome); --sw-gold-bright: var(--gold-pale);
-  --sw-gold-muted: var(--on-chrome-2);
-  --sw-gold-border: color-mix(in srgb, var(--on-chrome) 28%, transparent);
-  --sw-hub-bg: var(--paper); --sw-hub-bg-deep: var(--paper-2);
 
-  /* The semantic layer the reader consumes. Each one points at a system
-     token, so these follow the theme without a second definition. */
-  --bg: var(--paper);            --bg-deep: var(--paper-2);
-  --ink-light: var(--ink-3);     --gloss: var(--ink-3);
-  --accent: var(--gold);         --accent-deep: var(--here);
-  --accent-light: var(--here-chrome);
-  --verse-num: var(--here);      --hw: var(--ink);
-  --xref: var(--tap);            --tap-blue: var(--tap);
-  --header-bg: var(--chrome);    --header-text: var(--on-chrome);
-  --row-alt: var(--paper);
-  --rule: #dfe3e0;               --rule-light: #e5e7e4;
-  --highlight: rgba(4,107,74,.09);
-  --hover-wash: rgba(4,107,74,.07);
-}
 
 body.dark-mode {
   /* Designed alongside light, never inferred from it. Paper inverts to
@@ -132,6 +28,12 @@ body.dark-mode {
   --ink-2:   #c3cec7;
   --ink-3:   #9fb0a7;
   --here:    #34d399;
+  /* --here brightens to mint here — dark surfaces need a punchier accent
+     than the deep stop. Anything FILLED with --accent/--here must pair it
+     with a text colour that ALSO flips, or a button that was white text on
+     deep green in light mode becomes white text on bright mint here —
+     1.92:1, unreadable. Same near-black already proven for .rsc-chip-here. */
+  --on-accent: var(--chrome-2);
   --signal:  var(--signal-chrome);
   --e1: 0 1px 2px rgba(0,0,0,.28), 0 4px 14px rgba(0,0,0,.30);
   --e2: 0 2px 4px rgba(0,0,0,.32), 0 10px 26px rgba(0,0,0,.40);
@@ -155,14 +57,13 @@ body.dark-mode {
    hold no colour at all — change it here and it changes everywhere.
    ══════════════════════════════════════════════════════════════════════ */
 /* ── The interlinear word, in both themes ── */
-.hw { color: var(--hw); }
+
 .word-unit.sof .hw::after { color: var(--hw); }
-.gl { color: var(--gloss); }
-.tl { color: var(--ink-light); }   /* was #1a2744 in pgp/jst/bom */
+
+   /* was #1a2744 in pgp/jst/bom */
 /* No bold in the verses. The verse numeral was 700 and the Hebrew 500;
    both sit at 400 now, like the gloss and the transliteration. */
-.verse-num { font-weight: 400 !important; }
-.hw { font-weight: 400 !important; }
+
 
 /* ── Surfaces that are ALWAYS navy ───────────────────────────────────────
    The chrome, the footer, the slide-outs and the popovers are navy in
@@ -207,7 +108,7 @@ body.dark-mode {
 }
 .hw .qq { color: var(--qq); }
 body.dark-mode .hw .qq { color: var(--qq-bright); }
-.verse-num { color: var(--verse-num); }
+
 .word-unit.xref-linked .hw,
 .word-unit.xref-linked .gl { color: var(--xref) !important; }
 .word-unit.xref-linked:hover .hw,
@@ -357,13 +258,25 @@ body:not(.dark-mode) #annotations-panel {
   --surface-line:   rgba(26,26,26,.10);
   --on-surface:       var(--on-paper);
   --on-surface-muted: var(--on-paper-muted);
-  --gold-bright:    var(--label-gold);  /* gold on paper must be the deep stop, and
-                                          --gold-deep only reaches 4.16:1 once the
-                                          panel ground went silver. Mapping the
-                                          token fixes every gold in the drawer at
-                                          once; chasing it selector by selector
-                                          just loses to the injected sheet. */
-  --gold-pale:      var(--on-paper-muted);
+  /* THIS BLOCK IS THE PAPER-PANEL SCOPE, and these two tokens are re-pointed
+     ON PURPOSE. --gold-bright means "the emphatic text colour for the
+     surface you are on". On the dark bars that is near-white --on-chrome;
+     in here, where the panel ground is paper, near-white is 1.04:1 and the
+     emphatic colour has to be the deep stop instead.
+
+     I flattened these to --on-chrome once, reasoning that a token must mean
+     one thing everywhere. That is right for a PRIMITIVE and wrong for a
+     surface alias: 16 drawer labels went near-white on light paper —
+     "Topical Guide", "Glossary", "My Annotations", every library card.
+     A scoped alias re-pointed per surface is the mechanism working, not a
+     collision. The real collisions were tokens re-pointed on the SAME
+     surface, and those are gone.
+
+     (--on-paper-muted, which the old value chained through, was never
+     defined at this layer, so --gold-pale silently fell back. Both now
+     name a real token.) */
+  --gold-bright:    var(--here);      /* emphatic ON PAPER = the deep stop */
+  --gold-pale:      var(--ink-3);     /* muted ON PAPER                     */
   --tap-bright:     var(--tap);
   --navy:           var(--panel-ground);
   --navy-2:         var(--card-bg);
@@ -395,37 +308,32 @@ body:not(.dark-mode) #annotations-panel {
 }
 #nav-sidebar .nav-book-row .nb-ch,
 #nav-sidebar .nav-book-row .nb-arrow { color: var(--card-tl) !important; }
-#nav-sidebar .nav-ch-cell .ch-heb { color: var(--card-tl) !important; }
-#nav-sidebar .nav-ch-cell .ch-num { color: var(--card-title) !important; }
-body:not(.dark-mode) #nav-sidebar .nav-division,
-body:not(.dark-mode) #nav-sidebar .nl-sec-title,
-body:not(.dark-mode) .landing-section-group h3,
-body:not(.dark-mode) .lsg-stack .lsg-s-en { color: var(--label-gold) !important; }
-body.dark-mode #nav-sidebar .nav-division,
-body.dark-mode #nav-sidebar .nl-sec-title,
-body.dark-mode .landing-section-group h3 { color: var(--gold-bright) !important; }
-#nav-sidebar .nav-ch-grid { background: transparent !important; }
+
+
+/* Section titles, split BY SURFACE — which is what the old rule got wrong.
+   It was one gold-era selector list painting all of these --gold-bright,
+   and --gold-bright means CHROME TEXT (near-white). That is right for the
+   drawer's dividers, which sit on the dark bar, and catastrophic for the
+   landing page's section headings, which sit on paper: "Front Matter"
+   rendered near-white on white at 1.05:1 — invisible, in both themes,
+   for as long as the rule existed.
+
+   Two surfaces are two rules. A single selector list spanning both is the
+   bug, not the formatting. (The same list also forced every book name to
+   the accent colour via .lsg-s-en; that selector is gone — a book name is
+   content and the page's own `color: var(--ink)` now applies.) */
+#nav-sidebar .nav-division,
+#nav-sidebar .nl-sec-title { color: var(--on-chrome) !important; }
+
+.landing-section-group h3 { color: var(--ink-2) !important; }
+
 
 /* ── Panel tabs and close controls ───────────────────────────────────────
    The tabs went white with the rest of the panel but kept gold text —
    1.57:1. On a card the text is ink; the selected tab carries the accent
    as a fill, which is the same rule the current chapter follows. */
-#xref-panel .xref-study-tab,
-#glossary-panel .glossary-tab,
-#annotations-panel .ann-tab {
-  background: var(--card-bg) !important;
-  color: var(--card-title) !important;
-  border: 0 !important;
-  border-radius: 10px !important;
-  box-shadow: var(--card-shadow) !important;
-  min-height: 44px !important;
-}
-#xref-panel .xref-study-tab.active,
-#glossary-panel .glossary-tab.active,
-#annotations-panel .ann-tab.active {
-  background: var(--gold-deep) !important;
-  color: #fff !important;
-}
+
+
 body.dark-mode #xref-panel .xref-study-tab.active,
 body.dark-mode #glossary-panel .glossary-tab.active,
 body.dark-mode #annotations-panel .ann-tab.active {
@@ -456,12 +364,7 @@ body.dark-mode #annotations-panel .ann-tab.active {
   transform: translateY(-2px) !important;
   box-shadow: var(--card-shadow-hover) !important;
 }
-#nav-sidebar .nav-ch-cell.current {
-  background: var(--gold-deep) !important;
-  box-shadow: 0 2px 6px rgba(138,106,28,.30) !important;
-}
-#nav-sidebar .nav-ch-cell.current .ch-heb,
-#nav-sidebar .nav-ch-cell.current .ch-num { color: #fff !important; }
+
 
 /* ── A slide-out's header and footer are chrome, same as the page's ──
    Getting this wrong is what made the drawer stop matching the site:
@@ -488,12 +391,8 @@ body.dark-mode #annotations-panel .ann-tab.active {
   color: var(--chrome-gold) !important;
   border-color: var(--chrome-line) !important;
 }
-#nav-sidebar .nav-search-wrap input {
-  background: rgba(255,255,255,.06) !important;
-  color: var(--chrome-ink) !important;
-  border: 1px solid var(--chrome-line) !important;
-}
-#nav-sidebar .nav-search-wrap input::placeholder { color: var(--chrome-muted) !important; }
+
+
 /* controls that live IN the drawer's chrome bar take the chrome gold —
    the drawer scope maps gold to a paper-safe stop, which is 2.69:1 on navy */
 #nav-sidebar .nav-close-btn, #nav-sidebar .nav-close-btn *,
@@ -503,11 +402,7 @@ body.dark-mode #annotations-panel .ann-tab.active {
   color: var(--chrome-gold) !important;
   stroke: var(--chrome-gold) !important;
 }
-#nav-sidebar .nav-footer .nf-hint { color: var(--chrome-muted) !important; }
-#nav-sidebar .nav-vol-tab.active {
-  background: color-mix(in srgb, var(--here-chrome) 14%, transparent) !important;
-  border-bottom: 2px solid var(--chrome-gold) !important;
-}
+
 
 /* One grid for both. Detecting "is this a named card or a numeral tile"
    was guesswork — I keyed it on the transliteration line and the D&C
@@ -607,101 +502,164 @@ body.dark-mode #annotations-panel .ann-tab.active {
 
 
 /* ── Hamburger panel shell (cream like hub + navy/gold cards) ── */
-#nav-sidebar {
-  background: var(--sw-hub-bg) !important;
-  color: #1a1a1a;
-  border-right: 2px solid var(--sw-gold) !important;
-  box-shadow: 4px 0 24px rgba(30, 34, 51, 0.18) !important;
-}
+
 .nav-search-wrap {
-  background: var(--sw-navy) !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
   border-bottom: 1px solid var(--sw-gold-border) !important;
+  background: var(--sw-navy) !important;
+  flex-shrink: 0;
 }
 .nav-search-wrap input {
+  /* typed Hebrew still renders RTL */
+  flex: 1;
   background: var(--sw-navy-hover) !important;
   border: 1px solid var(--sw-gold-border) !important;
+  border-radius: 6px;
+  padding: 8px 12px;
   color: var(--sw-gold-bright) !important;
+  font-size: 0.95em;
+  font-family: 'David Libre', serif;
+  outline: none;
+  transition: border-color 0.2s;
+  direction: ltr;
+  unicode-bidi: plaintext;
+  text-overflow: ellipsis;
 }
 .nav-search-wrap input:focus {
   border-color: var(--sw-gold) !important;
 }
 .nav-search-wrap input::placeholder {
   color: var(--sw-gold-muted) !important;
+  opacity: 0.85;
 }
 .nav-icon-btn,
 .nav-close-btn {
   color: var(--sw-gold) !important;
 }
 .nav-search-results {
+  display: none;
   background: var(--sw-hub-bg-deep) !important;
   border-bottom: 1px solid var(--sw-gold-border) !important;
+  max-height: 280px;
+  overflow-y: auto;
+  flex-shrink: 0;
 }
 .nav-search-result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--rule-light, var(--rule-light));
+  transition: background 0.15s;
   border-bottom-color: color-mix(in srgb, var(--here) 12%, transparent) !important;
 }
-.nav-search-result:hover,
-.nav-search-result.active {
+.nav-search-result:hover, .nav-search-result.active {
   background: rgba(30, 34, 51, 0.07) !important;
 }
 .nav-search-result .sr-name {
-  color: #1a1a1a !important;
+  font-size: 0.95em;
+  color: var(--panel) !important;
 }
 .nav-search-result .sr-heb {
+  font-family: 'David Libre',serif;
+  font-size: 1em;
   color: var(--sw-gold) !important;
 }
 .nav-vol-tabs {
-  background: var(--sw-navy) !important;
+  display: flex;
+  flex-shrink: 0;
   border-bottom: 1px solid var(--sw-gold-border) !important;
+  background: var(--sw-navy) !important;
 }
 .nav-vol-tab:hover {
   background: var(--sw-navy-hover) !important;
 }
 .nav-vol-tab.active {
-  background: var(--sw-navy-hover) !important;
   border-bottom-color: var(--sw-gold) !important;
+  background: var(--sw-navy-hover) !important;
 }
 .nav-vol-tab .vt-heb {
+  direction: rtl;
+  unicode-bidi: isolate;
+  display: block;
+  font-family: 'David Libre',serif;
+  font-size: 0.85em;
   color: var(--sw-gold) !important;
+  line-height: 1.2;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .nav-vol-tab .vt-en {
+  display: block;
+  font-size: 0.65em;
   color: var(--sw-gold-muted) !important;
+  margin-top: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .nav-vol-tab.active .vt-en {
   color: var(--sw-gold-bright) !important;
 }
 .nav-library {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 16px 16px;
   background: var(--sw-hub-bg) !important;
 }
 .nl-sec-title {
+  font-size: 0.72em;
   color: var(--sw-navy) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
   font-weight: 700;
+  margin: 6px 0 10px;
 }
 .nav-division {
+  padding: 12px 16px 4px;
+  font-size: 0.72em;
   color: var(--sw-navy) !important;
-  border-top-color: var(--sw-gold-border) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   font-weight: 700;
+  border-top: 1px solid var(--rule-light, var(--rule-light));
+  margin-top: 4px;
+  border-top-color: var(--sw-gold-border) !important;
 }
 .nav-footer {
+  padding: 6px 12px 10px;
+  border-top: 1px solid var(--rule, var(--rule));
   background: var(--sw-hub-bg-deep) !important;
+  flex-shrink: 0;
+  max-height: 42vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
   border-top-color: var(--sw-gold-border) !important;
 }
-body.dark-mode #nav-sidebar {
-  background: #1a1a1a !important;
-  border-right-color: var(--sw-gold) !important;
-}
+
 body.dark-mode .nav-search-wrap,
 body.dark-mode .nav-search-results,
 body.dark-mode .nav-vol-tabs,
 body.dark-mode .nav-footer {
-  background: #252525 !important;
-  border-color: rgba(212, 175, 55, 0.25) !important;
+  background: var(--chrome) !important;
+  border-color: color-mix(in srgb, var(--here-chrome) 25%, transparent) !important;
 }
 body.dark-mode .nav-search-wrap input {
-  background: #333333 !important;
-  color: #e8e0d0 !important;
+  background: var(--chrome-2) !important;
+  border-color: var(--chrome-line);
+  color: var(--on-chrome) !important;
 }
 body.dark-mode .nav-library {
-  background: #1a1a1a !important;
+  background: var(--panel) !important;
 }
 body.dark-mode .nl-sec-title,
 body.dark-mode .nav-division {
@@ -743,52 +701,30 @@ body.dark-mode .nav-division {
   border-radius: 6px;
   border: 1px solid transparent;
 }
-#nav-sidebar .nav-book-row:hover,
-#nav-sidebar .nav-book-row.expanded,
-#nav-sidebar .nav-book-row.nav-focus-row {
-  background: var(--sw-navy-hover);
+#nav-sidebar .nav-book-row:hover, #nav-sidebar .nav-book-row.expanded, #nav-sidebar .nav-book-row.nav-focus-row {
+  background: var(--sw-navy-hover, var(--surface-2)) !important;
   border-color: var(--sw-gold-border);
 }
-#nav-sidebar .nav-book-row .nb-heb {
-  color: var(--sw-gold);
-}
+
 #nav-sidebar .nav-book-row .nb-en,
 #nav-sidebar .nav-book-row .nb-ch,
 #nav-sidebar .nav-book-row .nb-arrow {
   color: var(--sw-gold-muted);
 }
 
-#nav-sidebar .nav-ch-grid {
-  background: rgba(30, 34, 51, 0.08);
-  padding-left: 10px;
-  padding-right: 10px;
-}
-#nav-sidebar .nav-ch-cell {
-  background: var(--sw-navy);
-  border: 1px solid var(--sw-gold-border);
-}
-#nav-sidebar .nav-ch-cell:hover {
-  background: var(--sw-navy-hover);
-  border-color: var(--sw-gold);
-}
-#nav-sidebar .nav-ch-cell.current {
-  background: var(--sw-navy-hover);
-  border-color: var(--sw-gold);
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--here) 25%, transparent);
-}
-#nav-sidebar .nav-ch-cell .ch-heb {
-  color: var(--sw-gold);
-}
-#nav-sidebar .nav-ch-cell .ch-num {
-  color: var(--sw-gold-muted);
-}
-#nav-sidebar .nav-ch-cell.current .ch-heb,
-#nav-sidebar .nav-ch-cell.current .ch-num {
-  color: var(--sw-gold-bright);
+
+#nav-sidebar .nav-ch-cell.current .ch-heb, #nav-sidebar .nav-ch-cell.current .ch-num {
+  color: #fff !important;
 }
 
 /* ── Footer mode bar (inactive = outline, active = gold fill) ── */
 #sw-reader-footer .controls-bottom button {
+  min-height: 44px;
+  padding: 4px 5px;
+  font-size: 12px;
+  line-height: 1.25;
+  flex: 1 1 auto;
+  min-width: 0;
   background: transparent;
   color: var(--sw-gold);
   border-color: var(--sw-gold-border);

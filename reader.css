@@ -13,11 +13,15 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { overflow-x: hidden; }
-.skip-link { position: absolute; top: -100px; left: 0; background: var(--chrome); color: var(--sw-gold, var(--here-chrome)); padding: 10px 20px; z-index: 9999; font-size: 1em; text-decoration: none; }
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+.skip-link { position: absolute; top: -100px; left: 0; background: var(--chrome); color: var(--sw-gold, var(--here-chrome)); padding: 10px 20px; z-index: var(--z-skip); font-size: 1em; text-decoration: none; }
 .skip-link:focus { top: 0; }
 body.dark-mode *:focus-visible { outline-color: var(--here-chrome); }
-body { background: var(--bg); color: var(--ink); font-family: 'David Libre', serif; min-height: 100vh; }
+
 .book-header { text-align: center; padding: 20px 0 10px; margin-bottom: 8px; }
 .book-subtitle { font-size: 1.1em; font-weight: 400; color: var(--ink-light); letter-spacing: 0.06em; }
 .ornament { text-align: center; padding: 6px 0 12px; color: var(--accent-deep, var(--here)); font-size: 1.2em; letter-spacing: 0.5em; }
@@ -34,9 +38,9 @@ body.dual-mode .verse-num { order: -1; }
 body.dual-mode .gl { display: none; }
 body.dual-mode .arr { display: none; }
 body.dual-mode .word-unit { padding-bottom: 3px; }
-#word-popup .popup-close { position: absolute; top: max(4px, env(safe-area-inset-top, 0px)); right: max(8px, env(safe-area-inset-right, 0px)); cursor: pointer; color: #888; font-size: 16px; padding: 10px; min-width: 44px; min-height: 44px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; z-index: 2; }
+#word-popup .popup-close { position: absolute; top: max(4px, env(safe-area-inset-top, 0px)); right: max(8px, env(safe-area-inset-right, 0px)); cursor: pointer; color: #888; font-size: 16px; padding: 10px; min-width: 44px; min-height: 44px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; z-index: var(--z-pop); }
 #search-results.open { display: block; }
-#shortcuts-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 2000; background: rgba(0,0,0,0.7); justify-content: center; align-items: center; }
+#shortcuts-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: var(--z-sheet); background: rgba(0,0,0,0.7); justify-content: center; align-items: center; }
 #shortcuts-overlay.open { display: flex; }
 #shortcuts-overlay kbd { background: var(--bg-deep); padding: 2px 8px; border-radius: 3px; border: 1px solid var(--rule); font-family: 'David Libre', serif; font-size: 0.85em; }
 .nav-row { display: flex; align-items: center; gap: 12px; direction: ltr; }
@@ -62,12 +66,11 @@ body.dark-mode #search-results { background: var(--chrome); }
 body.dark-mode #search-results .search-result { color: var(--on-chrome); }
 #panel-overlay.open { display: block; }
 .glossary-entry.expanded .glossary-detail { display: block; }
-.glossary-form-chip:hover { background: var(--accent); color: #fff; }
 body.dark-mode #glossary-search { background: #222838; color: var(--on-chrome); border-color: var(--chrome-line); }
 .ann-tabs { display: flex; gap: 4px; margin-bottom: 12px; }
 #sel-toolbar.visible { display: flex; }
 #sel-toolbar button:hover { background: var(--surface-2); }
-#hl-pop { display: none; position: fixed; z-index: 1300; background: var(--chrome); border: 1.5px solid var(--here); border-radius: 12px; box-shadow: 0 8px 28px rgba(0,0,0,0.45); padding: 10px 12px; direction: ltr; -webkit-user-select: none; user-select: none; max-width: calc(100vw - 16px); }
+#hl-pop { display: none; position: fixed; z-index: var(--z-pop); background: var(--chrome); border: 1.5px solid var(--here); border-radius: 12px; box-shadow: 0 8px 28px rgba(0,0,0,0.45); padding: 10px 12px; direction: ltr; -webkit-user-select: none; user-select: none; max-width: calc(100vw - 16px); }
 #hl-pop.visible { display: block; left: 50%; top: 50%; transform: translate(-50%, -50%); }
 #hl-pop .hl-actions { display: flex; align-items: center; gap: 4px; margin-top: 8px; border-top: 1px solid rgba(154,154,176,0.25); padding-top: 4px; }
 #hl-pop .hl-actions button { background: transparent; border: none; color: var(--here); cursor: pointer; font-size: 1.05em; padding: 6px 0; flex: 1; min-height: 44px; border-radius: 8px; font-family: 'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',emoji; }
@@ -77,7 +80,7 @@ body.hide-sel-toolbar #sel-toolbar { display: none !important; pointer-events: n
 .xref-marker:hover { opacity: 1; text-decoration: underline; }
 body.hide-gloss .xref-marker, body.dual-mode .xref-marker { font-size: 0.5em; }
 .word-unit.xref-linked { cursor: pointer; }
-.xref-panel-header { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--rule); position: sticky; top: 0; background: var(--bg); z-index: 2; }
+.xref-panel-header { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--rule); position: sticky; top: 0; background: var(--bg); z-index: var(--z-raised); }
 .xref-panel-header h3 { margin: 0; font-size: 1.1em; color: var(--accent); font-weight: 600; }
 .xref-panel-close { cursor: pointer; font-size: 1.3em; color: var(--ink-light); padding: 2px 6px; border-radius: 4px; }
 .xref-panel-word { font-weight: 600; color: var(--accent); font-size: 1.1em; padding: 12px 16px 0; }
@@ -91,12 +94,12 @@ body.hide-gloss .xref-marker, body.dual-mode .xref-marker { font-size: 0.5em; }
 .xref-ref-word .en { font-size: 0.65em; color: var(--gloss); direction: ltr; }
 .xref-ref-arr { display: inline-flex; align-items: center; color: var(--accent); opacity: 0.5; font-size: 1.1em; padding: 0 1px; direction: ltr; unicode-bidi: isolate; }
 body.dark-mode #xref-panel { background: var(--chrome); border-color: var(--here-chrome); }
-:root { font-family: 'David Libre', serif; }
+
 * { font-family: inherit; }
 button, input, select, textarea, option, optgroup, ::placeholder { font-family: inherit; }
 #sel-toolbar {left:auto!important;right:6px!important;top:50%!important;bottom:auto!important;transform:translateY(-50%)!important;max-height:90vh;overflow-y:auto;flex-direction:column!important;flex-wrap:nowrap!important;max-width:none!important;}
 body:not(.hide-sel-toolbar) #sel-toolbar {display:flex!important;}
-#sel-toolbar-reopen {display:none;position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:1290;background:var(--chrome);color:var(--here);border:1px solid var(--chrome-line);border-right:none;border-radius:10px 0 0 10px;padding:12px 7px;cursor:pointer;font-size:1.05em;line-height:1;box-shadow:-2px 2px 8px rgba(0,0,0,0.3);font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',emoji;}
+#sel-toolbar-reopen {display:none;position:fixed;right:0;top:50%;transform:translateY(-50%);z-index: var(--z-pop);background:var(--chrome);color:var(--here);border:1px solid var(--chrome-line);border-right:none;border-radius:10px 0 0 10px;padding:12px 7px;cursor:pointer;font-size:1.05em;line-height:1;box-shadow:-2px 2px 8px rgba(0,0,0,0.3);font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',emoji;}
 #sel-toolbar-reopen:hover {background:var(--surface-2);}
 body.hide-sel-toolbar #sel-toolbar-reopen {display:block;}
 body.dual-mode .verse-english { font-size: 0.85em; flex: 45 1 0; }
@@ -149,9 +152,24 @@ body.dual-mode .hw { font-size: 1em; }
 }
 
 /* the three tiers, ranked instead of competing */
-.hw { font-size: var(--t4) !important; line-height: 1.5; font-weight: 400 !important; }
-.gl { font-size: var(--t1) !important; line-height: 1.3; max-width: 7.2em; margin-top: 1px; }
-.tl { font-size: var(--t0) !important; opacity: .62 !important; }
+.hw {
+  color: var(--hw);
+  font-weight: 400 !important;
+  font-size: var(--t4) !important;
+  line-height: 1.5;
+}
+.gl {
+  color: var(--gloss);
+  font-size: var(--t1) !important;
+  line-height: 1.3;
+  max-width: 7.2em;
+  margin-top: 1px;
+}
+.tl {
+  color: var(--ink-light);
+  font-size: var(--t0) !important;
+  opacity: .62 !important;
+}
 
 /* the arrows go: 714 marks per chapter saying what the script already says */
 .arr, .arr-hw, .arr-tl, .arr-gl { display: none !important; }
@@ -160,9 +178,14 @@ body.dual-mode .hw { font-size: 1em; }
 .word-unit { padding: 2px 0 !important; }
 
 /* verse numerals hang small and quiet in the margin */
-.verse-num { font-size: var(--t1) !important; font-weight: 400 !important;
-  color: var(--accent-deep) !important; min-width: 1.8em !important; padding-top: .8em !important;
-  line-height: 1.15; }
+.verse-num {
+  font-weight: 400 !important;
+  color: var(--accent-deep) !important;
+  font-size: var(--t1) !important;
+  min-width: 1.8em !important;
+  padding-top: .8em !important;
+  line-height: 1.15;
+}
 /* both numerals stay — the Hebrew letter is the traditional marker and the
    Arabic is what a reader scans for. Quiet, not hidden. */
 .verse-num .verse-num-arabic { display: block !important; font-size: .78em !important;
@@ -196,15 +219,18 @@ body.dual-mode .hw { font-size: 1em; }
    A reference is the same grammar as the text, one step quieter.
    ══════════════════════════════════════════════════════════════════════ */
 
-/* ── the tab strip sits in the chrome bar, so it IS chrome ── */
+/* ── the tab strip sits in the chrome bar, so it IS chrome ──
+   #glossary-panel has no .glossary-tabs wrapper — its tab row is
+   .glossary-controls (it also holds the sort <select>), so this rule
+   never matched there. The tab BUTTONS still hardcoded on-chrome text
+   (below), so the label said "I'm on chrome" while its own bar, never
+   painted, said "I'm on paper" underneath it — near-white on white. */
 #xref-panel .xref-study-tabs,
-#glossary-panel .glossary-tabs,
+#glossary-panel .glossary-controls,
 #annotations-panel .ann-tabs { background: var(--chrome) !important; padding: 8px 10px !important; gap: 6px !important; }
-#xref-panel .xref-study-tab,
-#glossary-panel .glossary-tab,
-#annotations-panel .ann-tab {
+#xref-panel .xref-study-tab, #glossary-panel .glossary-tab, #annotations-panel .ann-tab {
   /* the runtime sheet tints the background from the accent; the label must
-     be a SOLID on-chrome ink or the two collapse to the same colour (1:1) */
+       be a SOLID on-chrome ink or the two collapse to the same colour (1:1) */
   background: transparent !important;
   color: var(--on-chrome) !important;
   border: 1px solid color-mix(in srgb, var(--here-chrome) 35%, transparent) !important;
@@ -217,9 +243,7 @@ body.dual-mode .hw { font-size: 1em; }
 #xref-panel .xref-study-tab:hover,
 #glossary-panel .glossary-tab:hover,
 #annotations-panel .ann-tab:hover { background: color-mix(in srgb, var(--here-chrome) 12%, transparent) !important; }
-#xref-panel .xref-study-tab.active,
-#glossary-panel .glossary-tab.active,
-#annotations-panel .ann-tab.active {
+#xref-panel .xref-study-tab.active, #glossary-panel .glossary-tab.active, #annotations-panel .ann-tab.active {
   background: var(--here-chrome) !important;
   color: var(--chrome) !important;
   border-color: transparent !important;
@@ -260,7 +284,7 @@ body.dual-mode .hw { font-size: 1em; }
    holding white cards. Re-pointing them back here fixes it at the source
    instead of fighting the sheet's specificity. ── */
 #xref-panel .xref-panel-header, #xref-panel .xref-study-tabs,
-#glossary-panel .glossary-header, #glossary-panel .glossary-tabs,
+#glossary-panel .glossary-header, #glossary-panel .glossary-controls,
 #annotations-panel .ann-header, #annotations-panel .ann-tabs,
 #nav-sidebar .nav-search-wrap, #nav-sidebar .nav-vol-tabs, #nav-sidebar .nav-footer {
   --surface-0: var(--chrome);
@@ -271,8 +295,13 @@ body.dual-mode .hw { font-size: 1em; }
   --surface-line: var(--chrome-line);
   --on-surface: var(--on-chrome);
   --on-surface-muted: var(--on-chrome-2);
-  --gold-bright: var(--here-chrome);
-  --gold-pale: var(--on-chrome);
+  /* --gold-bright is the legacy alias for CHROME TEXT. It was pointed at
+     --here-chrome here, so all 48 rules that read it painted the panel
+     chrome mint — every volume tab, not just the current one, which is
+     the same job-doubling that made the old gold unreadable. Chrome text
+     is --on-chrome; mint is reserved for state and nothing else. */
+  --gold-bright: var(--on-chrome);
+  --gold-pale: var(--on-chrome-2);
   --card-bg: transparent;
   --ink: var(--on-chrome);
   --ink-3: var(--on-chrome-2);
@@ -422,9 +451,6 @@ body #nav-sidebar .nl-sec-title {
   border-color: color-mix(in srgb, var(--on-chrome) 24%, transparent) !important;
   background: transparent !important;
 }
-#nav-sidebar .nav-search-wrap input {
-  border-color: color-mix(in srgb, var(--on-chrome) 26%, transparent) !important;
-}
 
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -474,6 +500,14 @@ body .landing-section-grid:has(.sec-tl) .landing-sec-btn {
   min-height: 44px !important; padding: 11px 4px !important;
   border-bottom: 1px solid var(--rule-light) !important;
   justify-content: space-between !important; flex-direction: row !important;
+  /* MUST be stated. sw_theme.css sets `flex: 1 1 232px !important` on this
+     same element, from the older design where these were 232px-WIDE cards
+     wrapping in a row. The line above turns the container to a column, and
+     in a column flex-basis is the HEIGHT — so every front-matter row became
+     232px tall: three words of text over a third of a screen of nothing.
+     Two files described the same element as two different layouts and the
+     survivor was a hybrid of both. Content height, explicitly. */
+  flex: 0 0 auto !important;
 }
 body .landing-section-grid:has(.sec-tl) .sec-heb {
   display: block !important; font-size: var(--t-large) !important; color: var(--ink) !important;
@@ -500,13 +534,13 @@ body #nav-sidebar [class*="volume"] {
 
 /* ── the settings sheet the mode row now lives in ── */
 #sw-settings-scrim {
-  position: fixed; inset: 0; z-index: 1290;
+  position: fixed; inset: 0; z-index: var(--z-scrim);
   background: color-mix(in srgb, var(--chrome) 42%, transparent);
   opacity: 0; pointer-events: none; transition: opacity var(--m-move);
 }
 body.sw-settings-open #sw-settings-scrim { opacity: 1; pointer-events: auto; }
 #sw-settings-sheet {
-  position: fixed; left: 0; right: 0; bottom: 0; z-index: 1300;
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: var(--z-panel);
   background: var(--chrome);
   border-radius: var(--r-sheet) var(--r-sheet) 0 0;
   padding: 10px 14px calc(16px + env(safe-area-inset-bottom, 0px));
@@ -528,66 +562,105 @@ body.sw-settings-open #sw-settings-sheet { transform: translateY(0); }
   #sw-settings-sheet, #sw-settings-scrim { transition: none; }
 }
 /* the reader gets the 55px back */
-body { --sw-mode-row-h: 0px; }
+body {
+  /* ── Compatibility: the names the rest of the codebase already uses,
+       mapped onto the system so nothing downstream had to change. ── */
+  /* chrome TEXT, not the accent */
+  /* The semantic layer the reader consumes. Each one points at a system
+       token, so these follow the theme without a second definition. */
+  --gold-deep: var(--here);
+  --gold: var(--on-chrome);
+  --gold-bright: var(--on-chrome);
+  --gold-pale: var(--on-chrome-2);
+  --label-gold: var(--here);
+  --qq: var(--signal);
+  --qq-bright: var(--signal-chrome);
+  --tap: var(--here);
+  --tap-bright: var(--here-chrome);
+  --navy: var(--chrome);
+  --navy-2: #14392c;
+  --navy-line: var(--chrome-line);
+  --navy-line-dim: #123528;
+  --surface-sunken: var(--chrome-2);
+  --surface-0: var(--chrome);
+  --surface-1: #103528;
+  --surface-2: #14392c;
+  --surface-3: #1d4636;
+  --surface-line: var(--chrome-line);
+  --on-surface: var(--on-chrome);
+  --on-surface-muted: var(--on-chrome-2);
+  --on-surface-accent: var(--here-chrome);
+  --paper-0: var(--paper);
+  --paper-1: var(--paper-2);
+  --on-paper: var(--ink);
+  --on-paper-muted: var(--ink-3);
+  --on-paper-accent: var(--here);
+  --panel-ground: var(--panel);
+  --card-bg: var(--card);
+  --card-title: var(--ink);
+  --card-tl: var(--ink-3);
+  --card-body: var(--ink-2);
+  --card-radius: var(--r-sheet);
+  --tile-radius: var(--r-card);
+  --card-gap: var(--s4);
+  --tile-gap: 10px;
+  --card-shadow: var(--e1);
+  --card-shadow-hover: var(--e2);
+  --card-motion: var(--m-move);
+  --chrome-bg: var(--chrome);
+  --chrome-gold: var(--on-chrome);
+  --chrome-ink: var(--on-chrome);
+  --chrome-muted: var(--on-chrome-2);
+  --sw-navy: var(--chrome);
+  --sw-navy-hover: color-mix(in srgb, var(--here-chrome) 14%, var(--chrome));
+  --sw-gold: var(--on-chrome);
+  --sw-gold-bright: var(--on-chrome);
+  --sw-gold-muted: var(--on-chrome-2);
+  --sw-gold-border: color-mix(in srgb, var(--on-chrome) 28%, transparent);
+  --sw-hub-bg: var(--paper);
+  --sw-hub-bg-deep: var(--paper-2);
+  --bg: var(--paper);
+  --bg-deep: var(--paper-2);
+  --ink-light: var(--ink-3);
+  --gloss: var(--ink-3);
+  /* --accent chained to --gold (= --on-chrome, near-white) while its own
+     sibling --accent-deep already correctly pointed at --here. Every real
+     consumer of --accent — 30+ inline `background: var(--accent); color:
+     #fff` buttons and badges across every page (Export Annotations, Start
+     Reading, category badges, table headers) — wanted the saturated fill,
+     not chrome text, so all of them rendered near-invisible. The few
+     usages that DID want chrome text (.xref-panel-word, .xref-panel-header
+     h3) are already governed by more specific !important rules elsewhere
+     and never depended on this value. */
+  --accent: var(--here);
+  --accent-deep: var(--here);
+  --accent-light: var(--here-chrome);
+  --verse-num: var(--here);
+  /* text color for something FILLED with --accent (a solid button, a
+     count badge). --here brightens to mint in dark mode by design (dark
+     UIs need a punchier accent against a dark ground) — but a hardcoded
+     `color: #fff` paired with it doesn't adapt, so a button that was
+     white-on-deep-green in light mode becomes white-on-bright-mint in
+     dark mode: 1.92:1. Same fix already proven for .rsc-chip-here. */
+  --on-accent: #fff;
+  --hw: var(--ink);
+  --xref: var(--tap);
+  --tap-blue: var(--tap);
+  --header-bg: var(--chrome);
+  --header-text: var(--on-chrome);
+  --row-alt: var(--paper);
+  --rule: #dfe3e0;
+  --rule-light: #e5e7e4;
+  --highlight: rgba(4,107,74,.09);
+  --hover-wash: rgba(4,107,74,.07);
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'David Libre', serif;
+  min-height: 100vh;
+  --sw-mode-row-h: 0px;
+}
 
 
-/* ── the bar carries location, the footer goes away ── */
-#sw-locbar {
-  /* column 3 is the brand's old slot. Column 2 belongs to .sw-chrome-home,
-     and putting both there made the grid open a second 44px row. */
-  display: flex; align-items: center; justify-content: center; gap: 2px;
-  grid-column: 3; grid-row: 1; min-width: 0;
-}
-/* prev / next are chevrons in the bar, not stacked bilingual labels */
-#sw-locbar .nqd-nav-btn { position: relative; width: 44px; padding: 0 !important; }
-#sw-locbar .nqd-nav-btn > * { display: none !important; }
-#sw-locbar .nqd-nav-btn::before {
-  content: '\203A'; font-size: 20px; line-height: 1; color: var(--on-chrome);
-}
-#sw-locbar .nqd-nav-btn:last-child::before { content: '\2039'; }
-#sw-locbar .nqd-row { flex: 0 1 auto; min-width: 0; }
-#sw-locbar .nqd-chapter-now {
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-  max-width: 46vw; padding: 0 8px !important;
-}
-#sw-locbar > * {
-  background: transparent !important; border: 0 !important; box-shadow: none !important;
-  color: var(--on-chrome) !important; min-height: 44px !important;
-  display: inline-flex !important; align-items: center !important; justify-content: center !important;
-}
-#sw-locbar .nqd-chapter-now, #sw-locbar [class*="chapter"] {
-  font-size: var(--t-body) !important; padding: 0 10px !important;
-}
-/* the brand steps back — the bar's job is to say where you are */
-.sw-brand-quiet { display: none !important; }
-.sw-footer-emptied { display: none !important; }
-#sw-progress {
-  position: absolute; left: 0; bottom: 0; height: 2px; width: 0;
-  background: var(--here-chrome); transition: width .1s linear;
-}
-.sw-top-bar { position: relative; }
-.sw-sheet-row { display: flex; align-items: center; gap: 10px; padding: 2px 0 6px; }
-.sw-sheet-row .sw-size-stepper, .sw-sheet-row .sw-chrome-btn { color: var(--on-chrome) !important; }
-@media (prefers-reduced-motion: reduce) { #sw-progress { transition: none; } }
-
-
-/* ── panel tabs: SOLID values, so neither the eye nor an audit can be
-   fooled by two semi-transparent colours over the same ground ── */
-body #xref-panel .xref-study-tab,
-body #glossary-panel .glossary-tab,
-body #annotations-panel .ann-tab {
-  color: var(--on-chrome) !important;
-  background: var(--surface-1) !important;
-  border: 1px solid var(--chrome-line) !important;
-  opacity: 1 !important;
-}
-body #xref-panel .xref-study-tab.active,
-body #glossary-panel .glossary-tab.active,
-body #annotations-panel .ann-tab.active {
-  background: var(--here-chrome) !important;
-  color: var(--chrome) !important;
-  border-color: transparent !important;
-}
 
 /* ── the selection toolbar and its icons ── */
 #sel-toolbar, #hl-pop, #share-popup {
@@ -652,16 +725,11 @@ body #word-popup .rsc-block + .rsc-block {
 body #word-popup .rsc-root, body #word-popup a { color: var(--here) !important; }
 body #word-popup .rsc-note { color: var(--ink-3) !important; font-style: italic !important; }
 /* the volume counts read as a row of quiet chips, not a paragraph */
+/* Only the popup's own spacing — the chip's colours come from .rsc-chip
+   itself now, so there is nothing here to keep in sync with it. */
 body #word-popup .rsc-chip {
-  background: var(--paper-2) !important;
-  color: var(--ink-2) !important;
-  border: 1px solid var(--rule-light) !important;
-  border-radius: 999px !important;
   padding: 3px 10px !important; font-size: var(--t-small) !important;
-  display: inline-block !important; margin: 0 4px 4px 0 !important;
-}
-body #word-popup .rsc-chip-here {
-  background: var(--here) !important; color: #fff !important; border-color: transparent !important;
+  margin: 0 4px 4px 0 !important;
 }
 /* Forms / Glossed were run-on lists — label them and let them breathe */
 body #word-popup .rsc-forms, body #word-popup .rsc-gloss-refs {
@@ -682,7 +750,7 @@ body #word-popup .rsc-block b {
    navigation people actually use. Compact, on-system, and reachable. */
 .controls-bottom {
   display: flex !important;
-  position: fixed !important; left: 0; right: 0; bottom: 0; z-index: 900;
+  position: fixed !important; left: 0; right: 0; bottom: 0; z-index: var(--z-chrome);
   background: var(--chrome) !important;
   padding: 7px 8px calc(7px + env(safe-area-inset-bottom, 0px)) !important;
   gap: 6px !important;
@@ -702,14 +770,1053 @@ body #word-popup .rsc-block b {
   border-color: transparent !important;
 }
 
-/* the word card is PAPER — near-white ink on white was 1.05:1 */
-body #word-popup .popup-hebrew,
-body #word-popup .popup-hebrew * { color: var(--ink) !important; }
+/* the word card is PAPER — near-white ink on white was 1.05:1.
+
+   COLOUR IS SET ON CONTAINERS AND INHERITED. It used to be forced onto
+   every descendant with `.popup-hebrew *` and `.rsc-slot *`, and a blanket
+   `*` at !important cannot be reasoned about locally — it silently beat two
+   deliberate rules declared just above it at equal specificity:
+     · .rsc-chip-here asked for #fff on emerald and rendered at 1.23:1
+     · .qq (qamats qatan) is red everywhere in the reader and was black here
+   Both were invisible in a screenshot. Set the container, add exceptions. */
+body #word-popup .popup-hebrew { color: var(--ink) !important; }
 body #word-popup .popup-strong,
 body #word-popup .popup-detail,
-body #word-popup .rsc-slot,
-body #word-popup .rsc-slot * { color: var(--ink-2) !important; }
+body #word-popup .rsc-slot { color: var(--ink-2) !important; }
+body #word-popup .popup-detail strong { color: var(--ink) !important; }
 body #word-popup .popup-translit { color: var(--ink-3) !important; }
 body #word-popup .popup-gloss { color: var(--ink) !important; }
 body #word-popup .rsc-root, body #word-popup a,
 body #word-popup .rsc-refs-link { color: var(--here) !important; }
+/* Every "go somewhere" link in the card looks the same and is stated ONCE.
+   These three used to carry their colour inline from JavaScript — mint,
+   which is the accent for dark chrome bars and is near-invisible on paper.
+   Removing the inline style removed the underline with it, so they read as
+   plain grey text with no affordance; both halves belong here, not in JS. */
+body #word-popup .rsc-refs-link,
+body #word-popup .popup-xref-direct,
+body #word-popup .popup-xref-link {
+  color: var(--here) !important;
+  text-decoration: underline !important;
+  cursor: pointer !important;
+  font-size: 0.9em !important;
+  display: inline-block !important;
+  padding: 6px 0 !important;
+  min-height: 32px !important;
+}
+/* the qamats qatan stays red in the card, exactly as it is in the reader */
+body #word-popup .qq, body #word-popup .popup-hebrew .qq { color: var(--qq) !important; }
+body.dark-mode #word-popup .qq,
+body.dark-mode #word-popup .popup-hebrew .qq { color: var(--qq-bright) !important; }
+/* the phone dismiss button — was gold on navy, two schemes ago */
+body #word-popup .popup-dismiss-mobile {
+  background: var(--here) !important; color: #fff !important;
+  border: none !important; font-weight: 600 !important;
+}
+
+
+/* ══════════════════════════════════════════════════════════════════════
+   FORMERLY INJECTED FROM JAVASCRIPT — moved here 2026-09-03.
+
+   nav_engine.js and root_scorecard.js each built a <style> at runtime and
+   appended it to <head>, which wins the cascade at equal specificity. No
+   rule in this file could beat them, so every fix became a specificity
+   fight or an edit to the JS.
+
+   !important IS KEPT. I stripped it on the first attempt, reasoning that
+   nothing outranks these now — wrong: reader.css is a LINKED sheet and
+   every volume page has an inline <style> that comes after it. Without
+   !important the page rules win and the chapter headings render as raw
+   interlinear stacks. The runtime sheet was never the only thing these
+   had to beat.
+   ══════════════════════════════════════════════════════════════════════ */
+
+/* ── from nav_engine.js: the drawer and the study panel ── */
+#nav-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: var(--z-panel);
+  width: 360px;
+  max-width: 90vw;
+  background: var(--surface-0) !important;
+  color: var(--on-surface) !important;
+  transform: translateX(-100%);
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  font-family: 'David Libre', 'Georgia', serif;
+  border-right: 2px solid var(--gold-bright) !important;
+  box-shadow: 4px 0 24px rgba(0,0,0,0.35) !important;
+  overflow: hidden;
+}
+#nav-sidebar .nav-division,#nav-sidebar .nl-sec-title {
+  color:var(--gold-bright) !important;
+  border-top-color:color-mix(in srgb, var(--gold-bright) 25%, transparent) !important;
+}
+#nav-sidebar .nav-book-row:hover,#nav-sidebar .nav-book-row.expanded,#nav-sidebar .nav-book-row.nav-focus-row {
+  background:var(--surface-2) !important;
+}
+#nav-sidebar .nav-book-row .nb-heb {
+  color: var(--gold-bright) !important;
+}
+#nav-sidebar .nav-book-row .nb-en {
+  color: var(--gold-pale) !important;
+}
+#nav-sidebar .nav-book-row .nb-ch,#nav-sidebar .nav-book-row .nb-arrow {
+  color:color-mix(in srgb, var(--gold-bright) 85%, transparent) !important;
+}
+#nav-sidebar .nav-ch-grid {
+  background: rgba(0,0,0,0.25) !important;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#nav-sidebar .nav-ch-cell {
+  background: var(--surface-2) !important;
+  border: 1px solid color-mix(in srgb, var(--gold-bright) 28%, transparent) !important;
+}
+#nav-sidebar .nav-ch-cell:hover {
+  background: var(--surface-3) !important;
+  border-color: var(--gold-bright) !important;
+}
+#nav-sidebar .nav-ch-cell.current {
+  background: var(--gold-bright) !important;
+  border-color: var(--gold-bright) !important;
+  box-shadow: 0 2px 6px rgba(138,106,28,.30) !important;
+}
+#nav-sidebar .nav-ch-cell .ch-heb {
+  color: var(--gold-bright) !important;
+}
+#nav-sidebar .nav-ch-cell .ch-num {
+  color: var(--gold-pale) !important;
+}
+#nav-sidebar .nav-ch-cell.current .ch-heb,#nav-sidebar .nav-ch-cell.current .ch-num {
+  color:var(--surface-0) !important;
+}
+#nav-sidebar .nav-search-results {
+  background: var(--surface-sunken) !important;
+}
+#nav-sidebar .nav-search-result {
+  border-bottom-color: color-mix(in srgb, var(--gold-bright) 12%, transparent) !important;
+}
+#nav-sidebar .nav-search-result:hover,#nav-sidebar .nav-search-result.active {
+  background:var(--surface-2) !important;
+}
+#nav-sidebar .nav-search-result .sr-name {
+  color: var(--on-surface) !important;
+}
+#nav-sidebar .nav-search-result .sr-heb {
+  color: var(--gold-bright) !important;
+}
+#nav-sidebar .nav-footer {
+  background: var(--surface-sunken) !important;
+  border-top-color: color-mix(in srgb, var(--gold-bright) 30%, transparent) !important;
+}
+#nav-sidebar .nav-footer .nf-hint {
+  color: var(--ink-3) !important;
+}
+#nav-sidebar .nl-card,#nav-sidebar .nl-bm,#nav-sidebar .nl-tile {
+  background:var(--surface-2) !important;
+  border-color:color-mix(in srgb, var(--gold-bright) 30%, transparent) !important;
+}
+#nav-sidebar .nl-card:hover,#nav-sidebar .nl-bm:hover,#nav-sidebar .nl-tile:hover {
+  background:var(--surface-3) !important;
+  border-color:var(--gold-bright) !important;
+}
+#nav-sidebar .nl-card-title,#nav-sidebar .nl-name,#nav-sidebar .nl-bm-title {
+  color:var(--gold-pale) !important;
+}
+#nav-sidebar .nl-card-heb,#nav-sidebar .nl-heb,#nav-sidebar .nl-bm-heb,#nav-sidebar .nl-card-text {
+  color:var(--gold-bright) !important;
+}
+#nav-sidebar .nl-sub {
+  color: var(--ink-3) !important;
+}
+body.dark-mode #nav-sidebar .nav-book-row:hover,body.dark-mode #nav-sidebar .nav-book-row.expanded,body.dark-mode #nav-sidebar .nav-ch-cell,body.dark-mode #nav-sidebar .nl-card,body.dark-mode #nav-sidebar .nl-bm,body.dark-mode #nav-sidebar .nl-tile {
+  background:var(--surface-1) !important;
+}
+body.dark-mode #nav-sidebar .nav-search-results,body.dark-mode #nav-sidebar .nav-footer {
+  background:var(--surface-sunken) !important;
+}
+#nav-sidebar .nav-library,#nav-sidebar .nav-book-list {
+  background:transparent !important;
+}
+#nav-sidebar .nav-search-wrap {
+  background:var(--surface-sunken) !important;
+  border-bottom:1px solid color-mix(in srgb, var(--here-chrome) 35%, transparent) !important;
+}
+#nav-sidebar .nav-search-wrap input {
+  background: var(--surface-2) !important;
+  color: var(--gold-pale) !important;
+  border: 1px solid color-mix(in srgb, var(--here-chrome) 40%, transparent) !important;
+}
+#nav-sidebar .nav-search-wrap input::placeholder {
+  color: color-mix(in srgb, var(--gold-bright) 55%, transparent) !important;
+}
+#nav-sidebar .nav-icon-btn,#nav-sidebar .nav-close-btn {
+  color:var(--gold-bright) !important;
+}
+#nav-sidebar .nav-vol-tabs {
+  background:var(--surface-sunken) !important;
+  border-bottom:1px solid color-mix(in srgb, var(--here-chrome) 30%, transparent) !important;
+}
+#nav-sidebar .nav-vol-tab {
+  color:color-mix(in srgb, var(--gold-bright) 80%, transparent) !important;
+}
+#nav-sidebar .nav-vol-tab:hover {
+  background:var(--surface-2) !important;
+}
+
+/* Volume tabs: the CURRENT volume is the only one that gets emphasis.
+   Inactive tabs recede to muted chrome text; the active one comes forward
+   to full chrome text and carries the mint underline. Mint appears exactly
+   once in this row, which is what makes it mean "you are here". */
+#nav-sidebar .nav-vol-tab .vt-heb,
+#nav-sidebar .nav-vol-tab .vt-en {
+  color:var(--on-chrome-2) !important;
+}
+#nav-sidebar .nav-vol-tab.active .vt-heb,
+#nav-sidebar .nav-vol-tab.active .vt-en {
+  color:var(--on-chrome) !important;
+}
+#nav-sidebar .nav-vol-tab.active {
+  background: var(--surface-2) !important;
+  border-bottom: 2px solid var(--chrome-gold) !important;
+  border-bottom-color: var(--here-chrome) !important;
+}
+#xref-panel {
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 0 !important;
+  border-left: 2px solid var(--gold-bright) !important;
+  background: var(--surface-0) !important;
+  color: var(--on-surface) !important;
+}
+
+/* .rsc-il-ref / .xref-ref-word / .rsc-il-more / .rsc-part render inside
+   #rsc-panel, the references sheet already rebuilt as a paper card. They
+   were missed in that pass because they carry their own class names
+   instead of an .rsc-panel-* prefix — same surface, same rule. */
+.rsc-il-ref {
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 1em;
+  margin-bottom: 6px;
+  border-bottom: 1px solid var(--rule-light);
+  padding-bottom: 4px;
+}
+#rsc-panel .xref-ref-word .hw {
+  font-family: 'David Libre', serif;
+  font-size: 1.35em;
+  color: var(--ink);
+  line-height: 1.5;
+}
+#rsc-panel .xref-ref-word .en {
+  font-size: 0.92em;
+  color: var(--ink-2);
+  direction: ltr;
+  line-height: 1.35;
+}
+.rsc-il-more {
+  display: block;
+  width: 100%;
+  margin: 8px 0 2px;
+  padding: 9px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--paper-2);
+  border: 1px solid var(--rule-light);
+  color: var(--here);
+  font-size: 0.9em;
+  min-height: 44px;
+}
+.rsc-part {
+  font-size: 1.15em;
+  color: var(--here);
+  margin-bottom: 3px;
+  direction: rtl;
+}
+body.dark-mode #xref-panel {
+  background:var(--surface-0) !important;
+}
+#xref-panel .xref-panel-header {
+  flex-shrink: 0;
+  background: var(--surface-sunken) !important;
+  border-bottom: 1px solid color-mix(in srgb, var(--here-chrome) 35%, transparent) !important;
+}
+#xref-panel .xref-panel-header h3,#xref-panel .xref-panel-word {
+  color:var(--gold-bright) !important;
+}
+#xref-panel .xref-panel-category {
+  color:var(--ink-3) !important;
+}
+#xref-panel .xref-panel-close {
+  color: var(--gold-bright) !important;
+  opacity: 0.85;
+}
+#xref-panel .xref-study-tabs {
+  background:var(--surface-sunken) !important;
+  border-bottom-color:color-mix(in srgb, var(--gold-bright) 30%, transparent) !important;
+}
+#xref-panel .xref-study-tab {
+  background:var(--surface-2) !important;
+  color:color-mix(in srgb, var(--gold-bright) 85%, transparent) !important;
+  border-color:color-mix(in srgb, var(--gold-bright) 30%, transparent) !important;
+}
+#xref-panel .xref-study-tab.active {
+  background:var(--gold-bright) !important;
+  color:var(--surface-0) !important;
+  font-weight:700 !important;
+}
+#xref-panel .xref-ref-word,#xref-panel .xref-category {
+  color:var(--gold-bright) !important;
+}
+#xref-panel .xref-ref-content {
+  color:var(--on-surface) !important;
+}
+#xref-panel .xf-bookmark-item {
+  background:var(--surface-2) !important;
+  border-color:color-mix(in srgb, var(--gold-bright) 25%, transparent) !important;
+}
+#xref-panel .xf-bookmark-item:hover {
+  background:var(--surface-3) !important;
+}
+#xref-panel .xf-bookmark-item .xf-bm-title {
+  color:var(--gold-pale) !important;
+}
+#xref-panel .xf-bookmark-item .xf-bm-heb {
+  color:var(--gold-bright) !important;
+}
+#xref-panel .study-pane-hint,#xref-panel .study-pane-sub {
+  color:var(--ink-3) !important;
+}
+#xref-panel .study-btn-row button {
+  background:var(--surface-2) !important;
+  color:var(--gold-pale) !important;
+  border:1px solid color-mix(in srgb, var(--here-chrome) 40%, transparent) !important;
+}
+#xref-panel .study-btn-row button:hover {
+  background:var(--surface-3) !important;
+  border-color:var(--gold-bright) !important;
+}
+#xref-panel .hw {
+  color:var(--gold-bright) !important;
+}
+#xref-panel .tl {
+  color:var(--ink-3) !important;
+}
+#xref-panel .gl {
+  color:var(--gold-pale) !important;
+}
+#xref-panel .arr-tl,#xref-panel .arr-gl {
+  color:color-mix(in srgb, var(--gold-bright) 45%, transparent) !important;
+}
+#xref-panel .verse-num {
+  color:color-mix(in srgb, var(--gold-bright) 80%, transparent) !important;
+}
+#xref-panel .verse {
+  border-color:color-mix(in srgb, var(--gold-bright) 15%, transparent) !important;
+}
+#xref-panel .xref-refs,#xref-panel .xref-pane {
+  color:var(--on-surface) !important;
+}
+#xref-panel .xref-ref-loading,#xref-panel .xref-ref-nodata {
+  color:var(--ink-3) !important;
+}
+#xref-panel .xref-ref-card {
+  background:var(--surface-2) !important;
+  border:1px solid color-mix(in srgb, var(--here-chrome) 20%, transparent) !important;
+  border-radius:10px;
+}
+#xref-panel .xref-ref-title,#xref-panel .xref-ref-title span {
+  color:var(--gold-bright) !important;
+}
+#xref-panel .xref-ref-goto {
+  color:var(--gold-bright) !important;
+  text-decoration:underline;
+}
+#xref-panel .xref-ref-word {
+  color:var(--on-surface) !important;
+}
+#xref-panel .xref-ref-word .en,#xref-panel .en {
+  color:var(--gold-pale) !important;
+}
+#xref-panel .xref-ref-word .he,#xref-panel .he {
+  color:var(--gold-bright) !important;
+}
+
+
+/* ── from root_scorecard.js: the word card and the references panel ── */
+.tt-mark {
+  color:var(--tap-blue,var(--here));
+  font-weight:700;
+}
+.tt-note {
+  font-style:italic;
+  font-size:0.9em;
+  opacity:0.85;
+}
+.rsc-il-wrap {
+  margin-bottom:14px;
+}
+.rsc-il-card {
+  border:1px solid color-mix(in srgb, var(--here-chrome) 28%, transparent);
+  border-radius:9px;
+  padding:10px 12px;
+  margin:9px 0;
+  background:rgba(255,255,255,0.03);
+}
+.rsc-il-ref {
+  color:var(--on-chrome);
+  font-weight:700;
+  font-size:1em;
+  margin-bottom:6px;
+  border-bottom:1px solid color-mix(in srgb, var(--here-chrome) 25%, transparent);
+  padding-bottom:4px;
+}
+.rsc-il-load {
+  opacity:0.6;
+  font-style:italic;
+  font-size:0.85em;
+}
+#rsc-panel .xref-ref-content {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 12px;
+  direction:rtl;
+  align-items:flex-start;
+}
+#rsc-panel .xref-ref-word {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+#rsc-panel .xref-ref-word .hw {
+  font-family:'David Libre',serif;
+  font-size:1.35em;
+  color:var(--on-chrome);
+  line-height:1.5;
+}
+#rsc-panel .xref-ref-word .en {
+  font-size:0.92em;
+  color:var(--on-chrome);
+  opacity:1;
+  direction:ltr;
+  line-height:1.35;
+}
+#rsc-panel .xref-ref-arr {
+  opacity:0.35;
+  align-self:center;
+}
+.rsc-il-more {
+  display:block;
+  width:100%;
+  margin:8px 0 2px;
+  padding:9px;
+  border-radius:8px;
+  cursor:pointer;
+  background:color-mix(in srgb, var(--here-chrome) 14%, transparent);
+  border:1px solid color-mix(in srgb, var(--here-chrome) 45%, transparent);
+  color:var(--sw-gold,var(--here-chrome));
+  font-size:0.9em;
+  min-height:44px;
+}
+.rsc-block + .rsc-block {
+  margin-top:12px;
+  padding-top:10px;
+  border-top:1px solid color-mix(in srgb, var(--here-chrome) 35%, transparent);
+}
+.rsc-part {
+  font-size:1.15em;
+  color:var(--sw-gold,var(--here-chrome));
+  margin-bottom:3px;
+  direction:rtl;
+}
+.rsc-chips {
+  display:flex;
+  flex-wrap:wrap;
+  gap:4px;
+  margin:6px 0;
+  direction:ltr;
+}
+/* The volume chip states its OWN colour pair. It used to set a background
+   and let the text colour arrive from whatever ancestor happened to win,
+   which is how the selected chip ended up at 1.23:1 inside the word card.
+   A component that carries a background owns its foreground — always. */
+.rsc-chip {
+  display:inline-block;
+  padding:2px 9px;
+  border-radius:999px;
+  font-size:0.78em;
+  background:var(--paper-2);
+  color:var(--ink-2);
+  border:1px solid var(--rule-light);
+  white-space:nowrap;
+}
+.rsc-chip-here {
+  background:var(--here);
+  color:#fff;
+  border-color:transparent;
+  font-weight:600;
+}
+body.dark-mode .rsc-chip-here {
+  background:var(--here);
+  color:var(--chrome-2);
+}
+#rsc-panel {
+  position:fixed;
+  inset:0;
+  z-index: var(--z-sheet);
+  display:none;
+  direction:ltr;
+}
+#rsc-panel.open {
+  display:block;
+}
+/* ── The references sheet IS the word card, at full size ───────────────
+   It was background:var(--chrome) with a mint border, a mint title and a
+   mint close — a dark green panel holding green chips and green headings,
+   so every element competed and none read as primary. The word popup two
+   screens away was already paper with ink text and one accent per region,
+   and that is the one the reader liked. Same component, same treatment:
+   paper surface, ink text, accent used ONCE per region (group heading,
+   selected chip, link). Nothing here is a new colour — it is the card's
+   own tokens applied to the sheet that forgot them. */
+#rsc-panel .rsc-panel-backdrop {
+  position:absolute;
+  inset:0;
+  background:color-mix(in srgb, var(--chrome) 55%, transparent);
+}
+#rsc-panel .rsc-panel-card {
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:min(560px,92vw);
+  max-height:82vh;
+  display:flex;
+  flex-direction:column;
+  background:var(--card);
+  color:var(--ink);
+  border:1px solid var(--rule-light);
+  border-radius:var(--r-sheet);
+  box-shadow:var(--e3);
+  overflow:hidden;
+}
+#rsc-panel .rsc-panel-head {
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  padding:16px 18px 12px;
+  border-bottom:1px solid var(--rule-light);
+}
+#rsc-panel .rsc-panel-title {
+  color:var(--ink);
+  line-height:1.3;
+}
+#rsc-panel .rsc-panel-meaning {
+  color:var(--ink-2);
+  font-size:0.85em;
+  font-style:italic;
+  margin-top:2px;
+}
+#rsc-panel .rsc-panel-close {
+  background:none;
+  border:none;
+  color:var(--ink-3);
+  font-size:26px;
+  line-height:1;
+  cursor:pointer;
+  padding:0 4px;
+  min-width:44px;
+  min-height:34px;
+}
+#rsc-panel .rsc-panel-body {
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+  padding:12px 18px 20px;
+  font-size:0.92em;
+}
+#rsc-panel .rsc-vol {
+  margin-bottom:14px;
+}
+/* the volume heading is the ONE accent in its region */
+#rsc-panel .rsc-vol-title {
+  color:var(--here);
+  font-weight:700;
+  margin:10px 0 6px;
+  border-bottom:1px solid var(--rule-light);
+  padding-bottom:3px;
+}
+#rsc-panel .rsc-vol-count {
+  color:var(--ink-3);
+  font-weight:400;
+  font-size:0.85em;
+}
+#rsc-panel .rsc-book {
+  margin:3px 0;
+  line-height:1.7;
+}
+#rsc-panel .rsc-book-name {
+  font-weight:700;
+  color:var(--ink);
+}
+#rsc-panel a.rsc-ref {
+  color:var(--here);
+  text-decoration:none;
+  padding:1px 2px;
+  min-height:32px;
+}
+#rsc-panel a.rsc-ref:hover {
+  text-decoration:underline;
+}
+#rsc-panel .rsc-books {
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+}
+/* book counts are the card's chips — quiet on paper, not outlined in accent */
+#rsc-panel .rsc-bookcount {
+  background:var(--paper-2);
+  color:var(--ink-2);
+  border:1px solid var(--rule-light);
+  border-radius:999px;
+  padding:2.5px 9px;
+  font-size:0.85em;
+}
+#rsc-panel .rsc-bookcount.rsc-chip-here {
+  background:var(--here);
+  color:#fff;
+  border-color:transparent;
+  font-weight:600;
+}
+#rsc-panel .rsc-note {
+  color:var(--ink-3);
+  font-style:italic;
+  margin-bottom:8px;
+}
+#rsc-panel .rsc-loading {
+  color:var(--ink-3);
+  padding:16px 0;
+  text-align:center;
+}
+
+body.dark-mode #glossary-panel {
+  background:#0a0a0a !important;
+}
+#glossary-panel .glossary-header {
+  border-bottom:1px solid color-mix(in srgb, var(--here-chrome) 35%, transparent) !important;
+}
+#glossary-panel .glossary-header h3 {
+  color:var(--sw-gold,var(--here-chrome)) !important;
+}
+#glossary-panel .glossary-close {
+  color:var(--sw-gold,var(--here-chrome)) !important;
+}
+#glossary-panel .glossary-controls input,#glossary-panel .glossary-controls select {
+  background:var(--sw-navy-hover,var(--surface-2)) !important;
+  color:var(--on-chrome) !important;
+  border:1px solid color-mix(in srgb, var(--here-chrome) 40%, transparent) !important;
+}
+#glossary-panel .glossary-controls input::placeholder {
+  color:color-mix(in srgb, var(--gold-bright) 60%, transparent);
+}
+#glossary-panel .glossary-tab {
+  background:var(--sw-navy-hover,var(--surface-2)) !important;
+  color:color-mix(in srgb, var(--gold-bright) 85%, transparent) !important;
+  border-color:color-mix(in srgb, var(--gold-bright) 35%, transparent) !important;
+}
+#glossary-panel .glossary-tab.active {
+  background:var(--sw-gold,var(--here-chrome)) !important;
+  color:var(--sw-navy,var(--chrome)) !important;
+  font-weight:700;
+}
+/* ══════════════════════════════════════════════════════════════════════
+   GLOSSARY ENTRY LIST — the last surviving piece of the pre-emerald
+   scheme. Every rule below read --on-chrome / --sw-gold / --sw-navy
+   DIRECTLY instead of through the surface-alias layer, so it painted
+   every one of 18,400 entries as if the panel were still dark chrome —
+   near-white text on white paper, invisible in both light and dark.
+   The panel's own background/border/card treatment is already correct
+   (sw_theme.css's "cards inside them get the card treatment" rule, which
+   is why #glossary-panel and .glossary-entry themselves are NOT restated
+   here) — only their CONTENT, which that rule doesn't reach, needed it.
+   One accent per region: the root/headword, category headings, links. ── */
+#glossary-panel .glossary-entry {
+  margin:6px 10px;
+  padding:10px 12px;
+}
+#glossary-panel .glossary-entry:hover {
+  border-color:var(--here);
+}
+#glossary-panel .glossary-root {
+  color:var(--here) !important;
+}
+#glossary-panel .glossary-count {
+  color:var(--ink-2) !important;
+  background:var(--paper-2);
+  border-radius:9px;
+  padding:1px 8px;
+  font-weight:700;
+}
+#glossary-panel .glossary-meaning {
+  color:var(--ink) !important;
+}
+#glossary-panel .glossary-detail {
+  color:var(--ink-2) !important;
+}
+#glossary-panel .glossary-category-badge {
+  background:var(--paper-2);
+  color:var(--ink-2) !important;
+  border:1px solid var(--rule-light);
+}
+#glossary-panel .glossary-category-header {
+  color:var(--here) !important;
+  border-bottom:1px solid var(--rule-light);
+}
+#glossary-panel .glossary-form-chip {
+  background:var(--paper-2);
+  color:var(--ink-2) !important;
+  border:1px solid var(--rule-light);
+}
+#glossary-panel .glossary-form-chip:hover {
+  background:color-mix(in srgb, var(--here) 10%, var(--paper-2));
+}
+#glossary-panel .glossary-biblical-ref-key {
+  color:var(--here) !important;
+}
+#glossary-panel .glossary-ref-link {
+  color:var(--here) !important;
+  text-decoration:underline;
+}
+#glossary-panel .glossary-refs-book {
+  color:var(--ink-2) !important;
+}
+#glossary-panel .glossary-highlight-btn {
+  background:var(--here) !important;
+  color:#fff !important;
+  border:none;
+}
+#glossary-panel .glossary-biblical-ref {
+  color:var(--ink-2) !important;
+}
+#glossary-panel .glossary-biblical-ref-note {
+  color:var(--ink-2) !important;
+}
+/* was declared twice (border-top-only, then again with the fill) — one
+   recessed reference block, merged into a single rule. */
+#glossary-panel .glossary-biblical-section {
+  background:var(--paper-2) !important;
+  border-top:1px solid var(--rule-light) !important;
+  color:var(--ink-2) !important;
+}
+#glossary-panel .glossary-biblical-section strong {
+  color:var(--here) !important;
+}
+#glossary-panel .glossary-refs-section {
+  border-top-color:var(--rule-light) !important;
+  color:var(--ink-2) !important;
+}
+#glossary-panel .glossary-refs-section > strong {
+  color:var(--here) !important;
+}
+#glossary-panel .glossary-controls {
+  color:var(--ink-2) !important;
+  border-bottom-color:var(--rule-light) !important;
+}
+#glossary-panel .glossary-sort {
+  color:var(--ink-2) !important;
+}
+#glossary-panel .glossary-detail strong {
+  color:var(--ink) !important;
+}
+#glossary-panel .glossary-entry small {
+  color:var(--ink-3);
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   ANNOTATIONS PANEL — the body content. Was byte-identical inline CSS in
+   ot/nt/dc/pgp/jst (five copies of the same twelve rules, edited five at
+   a time forever). One copy here; the page copies are deleted. bom.html
+   keeps its own — its annotations markup genuinely differs, and it is
+   out of scope for the sibling consolidation. The tab strip itself is
+   NOT restated: .ann-tab / :hover / .active are already governed by the
+   shared panel-tab rules above, alongside glossary and xref. ── */
+#annotations-panel .ann-panel-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 12px;
+}
+#annotations-panel .ann-panel-header h3 {
+  font-size: 1.3em; color: var(--here); margin: 0;
+}
+#annotations-panel .ann-panel-close {
+  cursor: pointer; font-size: 1.4em; color: var(--ink-3); padding: 4px 8px;
+}
+#annotations-panel .ann-export-btn {
+  background: var(--accent); color: var(--on-accent);
+  border: none; padding: 6px 14px; border-radius: var(--r-control);
+  cursor: pointer; font-family: 'David Libre', 'Georgia', serif;
+  font-size: 0.85em; margin-top: 12px; min-height: 44px;
+}
+#annotations-panel .ann-item {
+  padding: 8px; border: 1px solid var(--rule-light);
+  border-radius: var(--r-control); margin-bottom: 6px; font-size: 0.85em;
+}
+#annotations-panel .ann-item-ref {
+  font-weight: 600; color: var(--here); margin-bottom: 4px;
+}
+#annotations-panel .ann-item-text { color: var(--ink); direction: rtl; }
+#annotations-panel .ann-item-note {
+  font-style: italic; color: var(--ink-3); margin-top: 4px;
+}
+/* .ann-hl was declared twice per page with different radii (4px then
+   2px); the later value was the live one, so 2px is the real setting. */
+.ann-hl { border-radius: 2px; }
+.ann-ul {
+  text-decoration: underline; text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+/* Positioning only — background/color/border are sw_theme.css's job now
+   (its combined light/dark selector list already covers #glossary-panel
+   correctly) and restating them here just grows the same disease back. */
+#glossary-panel {
+  left: 0 !important;
+  right: auto !important;
+  transform: translateX(-100%) !important;
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  scrollbar-color: color-mix(in srgb, var(--here) 30%, transparent) var(--paper-2);
+}
+#glossary-panel::-webkit-scrollbar-thumb {
+  background:color-mix(in srgb, var(--here-chrome) 40%, transparent);
+}
+#glossary-panel::-webkit-scrollbar-track {
+  background:var(--paper-2);
+}
+@media (max-width:600px) {
+  #word-popup {
+  font-size:17px !important;
+  line-height:1.5 !important;
+  width:min(94vw,440px) !important;
+  max-width:94vw !important;
+  max-height:80vh !important;
+  overflow-y:auto !important;
+  -webkit-overflow-scrolling:touch;
+  padding-bottom:calc(12px + env(safe-area-inset-bottom,0px)) !important;
+}
+#word-popup .popup-hebrew,#word-popup #popup-hw {
+  font-size:1.6em !important;
+  line-height:1.4 !important;
+}
+#word-popup .popup-gloss,#word-popup #popup-gl {
+  font-size:1.1em !important;
+}
+#word-popup .popup-translit,#word-popup #popup-translit {
+  font-size:0.95em !important;
+}
+.rsc-chips {
+  gap:6px;
+  margin:8px 0;
+}
+.rsc-chip {
+  font-size:0.95em;
+  padding:5px 11px;
+  border-radius:13px;
+}
+.rsc-refs-link {
+  font-size:1em !important;
+  display:inline-block;
+  padding:9px 2px;
+  min-height:44px;
+}
+#rsc-panel .rsc-panel-card {
+  width:96vw;
+  max-height:88vh;
+}
+#rsc-panel .rsc-panel-body {
+  font-size:17px;
+  line-height:1.55;
+  padding-bottom:calc(18px + env(safe-area-inset-bottom,0px));
+}
+#rsc-panel .rsc-panel-title {
+  font-size:1.15em;
+}
+#rsc-panel .rsc-panel-meaning {
+  font-size:0.95em;
+}
+#rsc-panel .rsc-vol-title {
+  font-size:1.05em;
+}
+#rsc-panel .rsc-vol-count {
+  font-size:0.9em;
+}
+#rsc-panel a.rsc-ref {
+  display:inline-block;
+  padding:7px 6px;
+  min-height:44px;
+  min-width:34px;
+}
+#rsc-panel .rsc-panel-close {
+  font-size:32px;
+  min-width:48px;
+  min-height:48px;
+}
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+   PANEL REFLOW — a side panel insets the reader, it does not cover it
+   ═══════════════════════════════════════════════════════════════════════
+   Side panels are position:fixed overlays, so the reading column never knew
+   they were there. With the drawer (360px) and Study (380px) both open on
+   an 820px viewport, 740px of an 820px reader was underneath them and the
+   text survived as an 80px sliver.
+
+   SWLayers in nav_engine.js now guarantees at most one panel is open, and
+   sets .sw-panel-left / .sw-panel-right on <body>. Above COEXIST_MIN the
+   reader gives up the width instead of hiding under it; below it the panel
+   stays an overlay with a scrim, which is correct on a phone.
+
+   The widths here MUST match #nav-sidebar and #xref-panel. They are stated
+   once, as tokens, and both the panel and the inset read them.
+   ══════════════════════════════════════════════════════════════════════ */
+:root {
+  /* ── TYPE ──────────────────────────────────────────────────────────
+       One ratio, seven steps, nothing outside it. Declared in em because
+       the A+/A− control sets a percentage on #page — a px scale would
+       silently kill the reader's zoom. (Was 22 ad-hoc sizes.)          */
+  /* 11 — labels, counts, verse numerals */
+  /* 13 — transliteration, meta          */
+  /* 15 — the gloss, UI text             */
+  /* 19 — book names, English body       */
+  /* 24 — section heads                  */
+  /* 30 — the reading size               */
+  /* 38 — chapter opening                */
+  /* ── SPACE — 4px rhythm ── */
+  /* ── RADIUS ── */
+  /* ── ELEVATION ── */
+  /* ── LAYERS — the one z-index scale ────────────────────────────────
+       Before this existed there were 13 invented z-index values across five
+       files (2, 99, 110, 900, 998, 1290, 1300, 2000, 5000, 5001, 9500, 9999,
+       10050). The Study panel sat at 1200 and the drawer's scrim at 5000, so
+       opening the drawer dimmed a Study panel it could not close, while the
+       word popup at 9500 floated over both. Three overlays, no order.
+  
+       Never write a raw z-index again. Pick the rank that describes what the
+       thing IS; the gaps are deliberate so a component can sit just above its
+       own neighbour (--z-panel + 1) without reaching the next rank.
+  
+       Ranks also drive arbitration in reader_ui.js: opening a PANEL closes
+       other panels and popovers, a POPOVER closes other popovers, and a SHEET
+       closes everything. Layer order and layer behaviour agree by design. ── */
+  /* the page itself                                  */
+  /* sticky headers inside a scrolling panel          */
+  /* top bar, reader footer, reading progress         */
+  /* search, which covers the bar it launches from    */
+  /* the ONE dimmer, under whichever panel is topmost */
+  /* drawer, Study, glossary, annotations             */
+  /* word popup, share, highlight pop, sel toolbar    */
+  /* shortcuts and other full-screen sheets           */
+  /* offline banner, nav hint                         */
+  /* skip link — must outrank everything to be usable */
+  /* ── MOTION — one pair, not one duration copied everywhere ── */
+  /* ── SURFACES ── */
+  /* the reading ground        */
+  /* recessed on paper         */
+  /* the tool ground           */
+  /* a thing you can act on    */
+  /* bars. always. both themes */
+  /* recessed chrome           */
+  /* ── INKS — every pair clears 4.5:1 on its surface ── */
+  /* 16.9:1 on paper */
+  /*  8.9:1 */
+  /* the gloss. 5.29:1 on card, 4.83:1 on panel.
+                               #8b948d came out of the palette mock as a LABEL
+                               colour and was 3.13:1 here — 856 failures.  */
+  /*  5.7:1 — quietest legible */
+  /* 12.6:1 on chrome */
+  /*  6.0:1 */
+  /* ── ROLES. An accent is a MEANING, not a decoration. Three, each
+       with exactly one job. If a colour is not one of these, it is ink
+       or it is a surface. This rules out gold-because-a-box-needed-an-
+       edge and blue-because-a-word-is-tappable.                       */
+  /* your current location, on paper */
+  /* the same meaning, on navy       */
+  /* qamats qatan — the only hue that
+                                carries linguistic information  */
+  /* a REFERENCE is not a colour: it is a dotted rule under the gloss */
+  /* --header-bg / --sw-gold / --accent used to be redefined here, which
+       silently overrode sw_theme.css for the whole site — --accent was not
+       even read by this file. The gold for text on the navy chrome is
+       --gold (5.9:1 on --navy); see the ramp in sw_theme.css. */
+  --t-micro: 0.6875em;
+  --t-small: 0.8125em;
+  --t-body: 0.9375em;
+  --t-large: 1.1875em;
+  --t-title: 1.5em;
+  --t-heb: 1.875em;
+  --t-display: 2.375em;
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+  --s7: 48px;
+  --r-bar: 0;
+  --r-control: 8px;
+  --r-card: 12px;
+  --r-sheet: 18px;
+  --e1: 0 1px 2px rgba(26,26,26,.04), 0 4px 14px rgba(26,26,26,.05);
+  --e2: 0 2px 4px rgba(26,26,26,.05), 0 10px 26px rgba(26,26,26,.09);
+  --e3: 0 6px 18px rgba(26,26,26,.10), 0 20px 54px rgba(26,26,26,.18);
+  --z-base: 0;
+  --z-raised: 10;
+  --z-chrome: 100;
+  --z-search: 150;
+  --z-scrim: 300;
+  --z-panel: 310;
+  --z-pop: 400;
+  --z-sheet: 500;
+  --z-toast: 600;
+  --z-skip: 700;
+  --m-state: 120ms ease;
+  --m-move: 220ms ease;
+  --paper: #fbfbfa;
+  --paper-2: #f3f5f3;
+  --panel: #f3f5f3;
+  --card: #ffffff;
+  --chrome: #0b2a20;
+  --chrome-2: #082018;
+  --chrome-line: #1d4636;
+  --ink: #141614;
+  --ink-2: #4a524c;
+  --ink-3: #646e67;
+  --on-chrome: #ecfdf5;
+  --on-chrome-2: #9dc3b3;
+  --here: #046b4a;
+  --here-chrome: #34d399;
+  --signal: #dc2626;
+  --signal-chrome: #f87171;
+  --sw-chrome-h: 56px;
+  font-family: 'David Libre', serif;
+  --w-panel-left: 360px;
+  --w-panel-right: 380px;
+}
+
+@media (min-width: 1000px) {
+  .page, #page, #sw-reader-footer, #sw-top-bar, #reading-progress {
+    transition: margin var(--m-move), width var(--m-move);
+  }
+  body.sw-panel-left  .page, body.sw-panel-left  #sw-reader-footer,
+  body.sw-panel-left  #sw-top-bar, body.sw-panel-left  #reading-progress {
+    margin-left: var(--w-panel-left);
+  }
+  body.sw-panel-right .page, body.sw-panel-right #sw-reader-footer,
+  body.sw-panel-right #sw-top-bar, body.sw-panel-right #reading-progress {
+    margin-right: var(--w-panel-right);
+  }
+  /* the scrim is for overlay mode only — an inset panel dims nothing */
+  body.sw-panel-open #nav-overlay,
+  body.sw-panel-open #panel-overlay { opacity: 0 !important; pointer-events: none !important; }
+}

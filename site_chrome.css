@@ -1,5 +1,4 @@
-@import url('sw_theme.css?v=32');
-
+@import url('sw_theme.css?v=39');
 
 
 /* Hide body until chrome + footer are wired (prevents legacy bar flash) */
@@ -28,20 +27,14 @@ html:has(link[href*="site_chrome.css"]) #main-content {
 }
 
 /* Shared site header — menu · home · כתבי הקודש / The Holy Scriptures · size · dark */
-:root {
-  --sw-chrome-h: 56px;
-  /* --header-bg / --sw-gold / --accent used to be redefined here, which
-     silently overrode sw_theme.css for the whole site — --accent was not
-     even read by this file. The gold for text on the navy chrome is
-     --gold (5.9:1 on --navy); see the ramp in sw_theme.css. */
-}
+
 
 .sw-top-bar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 110;
+  z-index: var(--z-chrome);
   min-height: var(--sw-chrome-h);
   background: var(--header-bg);
   border-bottom: 2px solid var(--sw-gold, var(--here-chrome));
@@ -79,7 +72,7 @@ body.dark-mode .sw-top-bar {
   align-items: center;
   justify-content: center;
   text-align: center;
-  z-index: 0;
+  z-index: var(--z-chrome);
   pointer-events: auto;
   text-decoration: none;
   color: var(--sw-gold, var(--here-chrome));
@@ -125,7 +118,7 @@ body.dark-mode .sw-top-bar {
   grid-row: 1;
   justify-self: end;
   min-width: 0;
-  z-index: 2;
+  z-index: var(--z-chrome);
 }
 
 .sw-top-bar-tools label,
@@ -152,7 +145,7 @@ body.dark-mode .sw-top-bar {
   grid-column: 5;
   grid-row: 1;
   justify-self: end;
-  z-index: 2;
+  z-index: var(--z-raised);
 }
 
 #sw-chrome-menu {
@@ -338,20 +331,20 @@ a.sw-chrome-print {
 a.sw-chrome-print svg { display: block; }
 
 /* iPhone: keep text at its set size after rotation */
-html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
 
 /* Rights line — subtle, at the end of every page's content */
 #sw-rights {
   text-align: center;
   font-size: 11px;
-  color: #8a8776;
+  color: var(--ink-3);
   direction: ltr;
   padding: 26px 14px calc(14px + env(safe-area-inset-bottom, 0px));
   font-family: 'David Libre', Georgia, serif;
 }
 #sw-rights a { color: var(--here); text-decoration: none; }
 #sw-rights a:hover { text-decoration: underline; }
-body.dark-mode #sw-rights { color: #6b7288; }
+body.dark-mode #sw-rights { color: var(--ink-3); }
 body.dark-mode #sw-rights a { color: var(--here-chrome); }
 
 
@@ -415,3 +408,19 @@ body.has-sw-chrome.sw-chrome-reader #main-content { transition: padding-top 0.28
 
 /* Word units are keyboard-focusable (Enter / Space opens the word) */
 .word-unit:focus-visible { outline: 2px solid var(--sw-gold, var(--here-chrome)); outline-offset: 2px; border-radius: 4px; }
+
+
+/* ── Icons ────────────────────────────────────────────────────────────
+   Every UI icon is an inline SVG stroked with currentColor, so it takes
+   the colour of the text around it. Colour emoji cannot: they paint their
+   own hue and ignore `color:` completely, which is how the 🏠 in the bar
+   sat at 1.86:1 against paper while every rule claimed to have coloured it.
+   34 emoji were replaced. ✦ stays — it is a typographic ornament in the
+   chapter head, not an icon. */
+.sw-i {
+  width: 17px; height: 17px;
+  flex: 0 0 auto;
+  vertical-align: -3px;
+  display: inline-block;
+}
+.sw-i * { vector-effect: non-scaling-stroke; }

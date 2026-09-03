@@ -19,10 +19,10 @@
 <meta name="description" content="Hebrew Interlinear New Testament — Word-by-Word">
 <meta name="theme-color" content="var(--chrome)">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
-<link rel="stylesheet" href="nav_engine.css?v=33">
-<link rel="stylesheet" href="site_chrome.css?v=46">
-<link rel="stylesheet" href="xref_study_panel.css?v=9">
-<link rel="stylesheet" href="reader.css?v=24">
+<link rel="stylesheet" href="nav_engine.css?v=38">
+<link rel="stylesheet" href="site_chrome.css?v=57">
+<link rel="stylesheet" href="xref_study_panel.css?v=14">
+<link rel="stylesheet" href="reader.css?v=42">
 <style>
 *:focus-visible { outline: 2px solid var(--here); outline-offset: 2px; }
 
@@ -112,7 +112,7 @@ body.dark-mode .verse.user-highlight { background: color-mix(in srgb, var(--here
 
 /* === CONTROLS === */
 .controls-top {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-chrome);
   background: var(--chrome); color: var(--here);
   display: flex; justify-content: center; align-items: center;
   padding: 6px 12px; gap: 12px; flex-wrap: wrap;
@@ -120,7 +120,7 @@ body.dark-mode .verse.user-highlight { background: color-mix(in srgb, var(--here
   direction: ltr;
 }
 .controls-bottom {
-  position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: var(--z-chrome);
   background: var(--chrome);
   display: flex; justify-content: center;
   padding: 3px 0; gap: 3px;
@@ -151,14 +151,14 @@ body.dark-mode .verse.user-highlight { background: color-mix(in srgb, var(--here
 .nav-prev:disabled, .nav-next:disabled { opacity: 0.3; cursor: default; }
 
 /* === READING PROGRESS === */
-#reading-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--accent); z-index: 200; width: 0%; transition: width 0.1s; }
+#reading-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--accent); z-index: calc(var(--z-chrome) + 1); width: 0%; transition: width 0.1s; }
 
 
 
 
 /* === WORD POPUP === */
 #word-popup {
-  display: none; position: fixed; z-index: 300;
+  display: none; position: fixed; z-index: var(--z-pop);
   background: #fff; border: 2px solid var(--here);
   border-radius: 8px; padding: 14px 18px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
@@ -189,16 +189,16 @@ body.dark-mode .verse.user-highlight { background: color-mix(in srgb, var(--here
 
 /* === SEARCH === */
 #search-container {
-  position: fixed; top: -120px; left: 0; right: 0; z-index: 150;
+  position: fixed; top: -120px; left: 0; right: 0; z-index: var(--z-search);
   background: #fff; border-bottom: 2px solid var(--accent);
   display: flex; align-items: center; padding: 10px 16px; gap: 10px;
   transition: top 0.2s ease; direction: ltr;
 }
 #search-container.open { top: 0; padding-top: calc(10px + env(safe-area-inset-top, 0px)); }
 #search-input { flex: 1; border: 1px solid var(--rule); padding: 8px 12px; border-radius: 4px; font-size: 1em; font-family: 'David Libre', 'Georgia', serif; }
-#search-close { cursor: pointer; font-size: 1.2em; color: #888; padding: 4px 8px; min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center; margin: -8px 0; }
+#search-close { cursor: pointer; font-size: 1.2em; color: var(--ink-3); padding: 4px 8px; min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center; margin: -8px 0; }
 #search-results {
-  display: none; position: fixed; top: calc(50px + env(safe-area-inset-top, 0px)); left: 0; right: 0; z-index: 149;
+  display: none; position: fixed; top: calc(50px + env(safe-area-inset-top, 0px)); left: 0; right: 0; z-index: calc(var(--z-search) - 1);
   background: #fff; max-height: 60vh; overflow-y: auto;
   overscroll-behavior: contain; -webkit-overflow-scrolling: touch;
   border-bottom: 1px solid var(--rule); box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -213,7 +213,7 @@ body.dark-mode .verse.user-highlight { background: color-mix(in srgb, var(--here
 /* Keyboard shortcuts overlay */
 #shortcuts-overlay {
   display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-  z-index: 2000; background: rgba(0,0,0,0.7); justify-content: center; align-items: center;
+  z-index: var(--z-sheet); background: rgba(0,0,0,0.7); justify-content: center; align-items: center;
 }
 
 #dark-mode-toggle {
@@ -225,7 +225,7 @@ body.dark-mode .verse.user-highlight { background: color-mix(in srgb, var(--here
   position: fixed; bottom: 64px; left: 50%; transform: translateX(-50%);
   background: rgba(26,39,68,0.88); color: #fff;
   font-family: 'David Libre', 'Georgia', serif; font-size: 14px;
-  padding: 8px 20px; border-radius: 20px; z-index: 9999;
+  padding: 8px 20px; border-radius: 20px; z-index: var(--z-toast);
   pointer-events: none; opacity: 0; transition: opacity 0.5s ease;
   white-space: nowrap; direction: ltr;
 }
@@ -259,12 +259,12 @@ body.dark-mode .verse.user-highlight { background: color-mix(in srgb, var(--here
 .hlw-hw { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--ink); direction: rtl; white-space: nowrap; line-height: 1.3; }
 .hlw-tl { font-size: 0.72em; color: var(--ink-light); font-style: italic; margin-top: 2px; direction: ltr; }
 .hlw-gl { font-size: 0.85em; color: var(--ink); margin-top: 2px; direction: ltr; }
-#start-reading-btn { direction: ltr; background: var(--accent); color: #1a1a2e; border: none; padding: 12px 32px; font-family: 'David Libre', 'Georgia', serif; font-size: 1.1em; font-weight: 600; border-radius: 6px; cursor: pointer; transition: all 0.2s; letter-spacing: 0.5px; }
+#start-reading-btn { direction: ltr; background: var(--accent); color: var(--on-accent); border: none; padding: 12px 32px; font-family: 'David Libre', 'Georgia', serif; font-size: 1.1em; font-weight: 600; border-radius: 6px; cursor: pointer; transition: all 0.2s; letter-spacing: 0.5px; }
 #start-reading-btn:hover { filter: brightness(1.1); transform: scale(1.02); }
 .landing-section-group h3 .lsg-heb { font-size: 1.25em; color: var(--accent-deep); margin-right: 6px; }
 .landing-sec-btn .sec-tl { font-size: 0.6em; color: var(--ink-3); font-style: italic; direction: ltr; }
 .lsg-stack { display: flex; flex-direction: column; align-items: center; gap: 1px; margin: 18px 0 8px; }
-.lsg-stack .lsg-s-heb { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--accent-deep); }
+.lsg-stack .lsg-s-heb { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--ink); }
 .lsg-stack .lsg-s-tl { font-size: 0.78em; color: var(--ink-light); font-style: italic; direction: ltr; }
 .lsg-stack .lsg-s-en { font-family: 'David Libre', 'Georgia', serif; font-size: 0.92em; color: var(--ink); letter-spacing: 0.06em; direction: ltr; }
 
@@ -321,7 +321,6 @@ body.dark-mode .tl { color: var(--gloss); }
 /* Dark mode renders highlights as translucent washes over the navy — the
    solid light-mode pastels would bury the light ink. !important outranks the
    painter's inline background. */
-.ann-hl { border-radius: 4px; }
 body.dark-mode .verse.highlighted { background: color-mix(in srgb, var(--here) 12%, transparent); }
 body.dark-mode #search-input::placeholder { color: #6b7288; }
 body.dark-mode #search-results .search-result:hover { background: color-mix(in srgb, var(--here) 8%, transparent); }
@@ -330,12 +329,12 @@ body.dark-mode .landing-book-btn { background: var(--chrome); }
 body.dark-mode .landing-book-btn:hover { background: var(--surface-2); }
 
 /* === PANEL OVERLAY === */
-#panel-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.4); z-index: 3000; }
+#panel-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.4); z-index: var(--z-scrim); }
 
 /* === GLOSSARY PANEL === */
 #glossary-panel {
   display: none; position: fixed; top: 0; left: 0; bottom: 0; width: 380px; max-width: 90vw;
-  background: var(--bg); border-right: 2px solid var(--accent); z-index: 3100;
+  background: var(--bg); border-right: 2px solid var(--accent); z-index: var(--z-panel);
   overflow-y: auto; padding: 16px; font-family: 'David Libre', 'Georgia', serif;
   transform: translateX(-100%); transition: transform 0.25s ease;
 }
@@ -345,8 +344,6 @@ body.dark-mode .landing-book-btn:hover { background: var(--surface-2); }
 .glossary-close { cursor: pointer; font-size: 1.4em; color: var(--ink-light); padding: 4px 8px; }
 #glossary-search { width: 100%; padding: 8px 12px; border: 1px solid var(--rule); border-radius: 4px; font-size: 1em; font-family: 'David Libre', 'Georgia', serif; margin-bottom: 8px; background: var(--bg); color: var(--ink); }
 .glossary-controls { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
-.glossary-tab { background: transparent; border: 1px solid var(--rule); color: var(--ink-light); padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; }
-.glossary-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
 #glossary-sort-select { border: 1px solid var(--rule); padding: 4px 6px; border-radius: 3px; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; background: var(--bg); color: var(--ink); }
 .glossary-entry { border: 1px solid var(--rule-light); border-radius: 6px; padding: 10px 12px; margin-bottom: 6px; cursor: pointer; transition: all 0.15s; }
 .glossary-entry:hover { border-color: var(--accent); }
@@ -354,12 +351,10 @@ body.dark-mode .landing-book-btn:hover { background: var(--surface-2); }
 .glossary-root { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--accent-deep); direction: rtl; }
 .glossary-count { margin-left: auto; font-size: 0.8em; color: var(--ink-light); white-space: nowrap; }
 .glossary-meaning { font-size: 0.9em; color: var(--ink); margin-top: 2px; }
-.glossary-category-badge { display: inline-block; font-size: 0.7em; background: var(--accent); color: #fff; padding: 1px 6px; border-radius: 10px; margin-top: 4px; }
 .glossary-category-header { font-size: 0.85em; font-weight: 700; color: var(--accent-deep); padding: 8px 0 4px; border-bottom: 1px solid var(--rule-light); margin-bottom: 6px; }
 .glossary-detail { display: none; margin-top: 8px; font-size: 0.85em; color: var(--ink-light); line-height: 1.5; direction: ltr; }
 .glossary-forms-list { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; direction: rtl; }
 .glossary-form-chip { display: inline-block; font-family: 'David Libre', serif; font-size: 1.1em; background: var(--bg-deep); padding: 2px 8px; border-radius: 4px; cursor: pointer; direction: rtl; }
-.glossary-highlight-btn { display: block; margin-top: 8px; background: var(--accent); color: #fff; border: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; }
 .glossary-highlighted { background: color-mix(in srgb, var(--here) 25%, transparent) !important; border-radius: 3px; }
 .glossary-refs-section { margin-top: 8px; font-size: 0.85em; }
 .glossary-refs-book { margin: 2px 0; }
@@ -377,29 +372,17 @@ body.dark-mode .glossary-form-chip { background: var(--surface-1); }
 /* === ANNOTATIONS PANEL === */
 #annotations-panel {
   display: none; position: fixed; top: 0; right: 0; bottom: 0; width: 360px; max-width: 90vw;
-  background: var(--bg); border-left: 2px solid var(--accent); z-index: 3100;
+  background: var(--bg); border-left: 2px solid var(--accent); z-index: var(--z-panel);
   overflow-y: auto; padding: 16px; font-family: 'David Libre', 'Georgia', serif;
   transform: translateX(100%); transition: transform 0.25s ease;
 }
 #annotations-panel.open { display: block; transform: translateX(0); }
-.ann-panel-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
-.ann-panel-header h3 { font-size: 1.3em; color: var(--accent-deep); margin: 0; }
-.ann-panel-close { cursor: pointer; font-size: 1.4em; color: var(--ink-light); padding: 4px 8px; }
-.ann-tab { background: transparent; border: 1px solid var(--rule); color: var(--ink-light); padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; }
-.ann-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
-.ann-export-btn { background: var(--accent); color: #fff; border: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; margin-top: 12px; }
-.ann-item { padding: 8px; border: 1px solid var(--rule-light); border-radius: 4px; margin-bottom: 6px; font-size: 0.85em; }
-.ann-item-ref { font-weight: 600; color: var(--accent-deep); margin-bottom: 4px; }
-.ann-item-text { color: var(--ink); direction: rtl; }
-.ann-item-note { font-style: italic; color: var(--ink-light); margin-top: 4px; }
-.ann-hl { border-radius: 2px; }
-.ann-ul { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; }
 .note-marker { color: var(--accent-deep); cursor: pointer; font-size: 0.7em; margin-right: 2px; }
 body.dark-mode #annotations-panel { background: var(--chrome); border-color: var(--here-chrome); }
 
 /* === SELECTION TOOLBAR === */
 #sel-toolbar {
-  display: none; position: fixed; z-index: 1300;
+  display: none; position: fixed; z-index: var(--z-pop);
   background: var(--chrome); border: 1px solid var(--chrome-line); border-radius: 8px;
   padding: 6px; box-shadow: 0 4px 20px rgba(0,0,0,0.4);
   flex-direction: column; gap: 4px; align-items: center;
@@ -429,7 +412,7 @@ body.dark-mode #annotations-panel { background: var(--chrome); border-color: var
 /* Selection popover — appears at the selected text (Gospel-Library pattern):
    colors first, then note/copy/share; closes when the selection collapses. */
 #hl-pop {
-  display: none; position: fixed; z-index: 1300;
+  display: none; position: fixed; z-index: var(--z-pop);
   background: var(--chrome); border: 1.5px solid var(--here); border-radius: 12px;
   box-shadow: 0 8px 28px rgba(0,0,0,0.45);
   padding: 10px 12px; direction: ltr;
@@ -460,7 +443,7 @@ body.dark-mode #annotations-panel { background: var(--chrome); border-color: var
 #share-popup {
   display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
   background: var(--bg); border: 2px solid var(--accent); border-radius: 12px;
-  padding: 24px; z-index: 1200; min-width: 280px; max-width: 90vw;
+  padding: 24px; z-index: var(--z-pop); min-width: 280px; max-width: 90vw;
   box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center;
   font-family: 'David Libre', 'Georgia', serif;
 }
@@ -513,7 +496,7 @@ body.dark-mode #share-popup { background: var(--chrome); border-color: var(--her
    ANNOTATION and is deliberate -- never fold this change into it. */
 #xref-panel {
   position: fixed; top: 0; width: 380px; height: 100vh; height: 100dvh;
-  background: var(--bg); border-left: 2px solid var(--accent); z-index: 1200;
+  background: var(--bg); border-left: 2px solid var(--accent); z-index: var(--z-panel);
   overflow-y: auto; padding: 0; direction: ltr;
   font-family: 'David Libre', 'Georgia', serif; box-shadow: -4px 0 20px rgba(0,0,0,0.3);
 }
@@ -556,7 +539,7 @@ body, button, input, select, textarea,
 /* === Docked selection toolbar: RIGHT side (Hebrew is RTL), always visible while reading, no overlap === */
 #sel-toolbar{left:auto!important;right:6px!important;top:50%!important;bottom:auto!important;transform:translateY(-50%)!important;max-height:90vh;overflow-y:auto;flex-direction:column!important;flex-wrap:nowrap!important;max-width:none!important;}
 body:not(.hide-sel-toolbar) #sel-toolbar{display:flex!important;}
-#sel-toolbar-reopen{display:none;position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:1290;background:var(--chrome);color:var(--here);border:1px solid var(--chrome-line);border-right:none;border-radius:10px 0 0 10px;padding:12px 7px;cursor:pointer;font-size:1.05em;line-height:1;box-shadow:-2px 2px 8px rgba(0,0,0,0.3);font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',emoji;}
+#sel-toolbar-reopen{display:none;position:fixed;right:0;top:50%;transform:translateY(-50%);z-index: var(--z-pop);background:var(--chrome);color:var(--here);border:1px solid var(--chrome-line);border-right:none;border-radius:10px 0 0 10px;padding:12px 7px;cursor:pointer;font-size:1.05em;line-height:1;box-shadow:-2px 2px 8px rgba(0,0,0,0.3);font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',emoji;}
 #sel-toolbar-reopen:hover{background:var(--surface-2);}
 body.hide-sel-toolbar #sel-toolbar-reopen{display:block;}
 body:not(.hide-sel-toolbar) #main-content{padding-right:60px!important;}@media (max-width:600px) {body:not(.hide-sel-toolbar) #main-content{padding-right:52px!important;}}
@@ -637,7 +620,7 @@ body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direct
 <div id="sel-toolbar">
   <button id="sel-btn-close" onclick="toggleFloatingSelToolbar(event)" title="Hide tools — reopen from the tab at the screen edge" aria-label="Hide study tools">✕</button>
   <button id="sel-btn-highlight" onclick="selToolbarToggleColors()" title="Highlight" aria-label="Highlight"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4l5 5L9 20H4v-5z"/></svg></button>
-  <button id="sel-btn-note" onclick="selToolbarOpenNote()" title="Note" aria-label="Note">✎</button>
+  <button id="sel-btn-note" onclick="selToolbarOpenNote()" title="Note" aria-label="Note"><svg class="sw-i" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20h4.2L20 8.2a2.1 2.1 0 0 0-3-3L5.2 17 4 20Z"/><path d="m14.8 6.4 2.8 2.8"/></svg></button>
   <button id="sel-btn-copy" onclick="selToolbarCopy()" title="Copy" aria-label="Copy"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="4" width="12" height="16" rx="2"/><path d="M16 4V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v1"/><path d="M4 8v12a2 2 0 0 0 2 2h8"/></svg></button>
   <button id="sel-btn-share" onclick="selToolbarShare()" title="Share" aria-label="Share">↗</button>
   <button id="sel-btn-delete" onclick="selToolbarClearAll()" title="Clear" aria-label="Clear annotations"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/></svg></button>
@@ -798,7 +781,7 @@ body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direct
 
 <div class="controls-top">
   <div class="nav-row">
-    <a href="index.html" style="background:transparent;border:1px solid var(--chrome-line);color:var(--here);padding:5px 10px;border-radius:3px;text-decoration:none;font-size:0.95em;line-height:1;display:flex;align-items:center;" title="Standard Works Home" aria-label="Standard Works Home">🏠</a>
+    <a href="index.html" style="background:transparent;border:1px solid var(--chrome-line);color:var(--here);padding:5px 10px;border-radius:3px;text-decoration:none;font-size:0.95em;line-height:1;display:flex;align-items:center;" title="Standard Works Home" aria-label="Standard Works Home"><svg class="sw-i" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 10.2 12 3l9 7.2"/><path d="M5.4 9.3V20a1 1 0 0 0 1 1h11.2a1 1 0 0 0 1-1V9.3"/><path d="M9.6 21v-6.2h4.8V21"/></svg></a>
     <button class="nav-prev" id="nav-prev" onclick="goPrev()" disabled aria-label="Previous chapter">&#x2190;</button>
     <span class="nav-label-wrap">
       <span id="nav-label" tabindex="0" role="button" aria-label="Open navigation">&#x05D4;&#x05B7;&#x05D1;&#x05BC;&#x05B0;&#x05E8;&#x05B4;&#x05D9;&#x05EA; &#x05D4;&#x05B7;&#x05D7;&#x05B2;&#x05D3;&#x05B8;&#x05E9;&#x05C1;&#x05B8;&#x05D4; &#x25BE;</span>
@@ -810,7 +793,7 @@ body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direct
     <span style="color:var(--chrome-line)">&#x2502;</span>
     <button id="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode" aria-label="Toggle dark mode">&#x263D;</button>
     <button id="search-toggle" style="background:transparent;border:1px solid var(--chrome-line);color:var(--here);padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openSearch()" title="Search" aria-label="Search">&#x2315;</button>
-    <button type="button" id="study-drawer-toggle" style="background:transparent;border:1px solid var(--chrome-line);color:var(--here);padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openXrefStudyAt('bookmarks')" title="Bookmarks, notes, refs" aria-label="Study drawer">📌</button>
+    <button type="button" id="study-drawer-toggle" style="background:transparent;border:1px solid var(--chrome-line);color:var(--here);padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openXrefStudyAt('bookmarks')" title="Bookmarks, notes, refs" aria-label="Study drawer"><svg class="sw-i" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3h6l-1 6 4 3v2H6v-2l4-3-1-6Z"/><path d="M12 14v7"/></svg></button>
     <button type="button" id="annotations-toggle" style="background:transparent;border:1px solid var(--chrome-line);color:var(--here);padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openAnnotationsPanel()" title="Annotations" aria-label="Annotations"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M14 4l6 6L9 21H3v-6z"/></svg></button>
     <button type="button" id="glossary-toggle" style="background:transparent;border:1px solid var(--chrome-line);color:var(--here);padding:5px 10px;border-radius:3px;cursor:pointer;font-size:0.9em;" onclick="openGlossary()" title="Glossary" aria-label="Glossary"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6v14"/><path d="M3 5h6a3 3 0 0 1 3 3M21 5h-6a3 3 0 0 0-3 3"/><path d="M3 5v13h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6V5"/></svg></button>
   </div>
@@ -887,8 +870,8 @@ window.READER = {
   cats: ['Gospels', 'History', 'Pauline', 'General', 'Prophecy'],
   catEn: { 'Gospels': 'Gospels', 'History': 'History', 'Pauline': 'Pauline Epistles', 'General': 'General Epistles', 'Prophecy': 'Prophecy' },
   catHe: { 'Gospels': 'בְּשׂוֹרוֹת', 'History': 'דִּבְרֵי הַיָּמִים', 'Pauline': 'אִגְּרוֹת פּוֹלוּס', 'General': 'אִגְּרוֹת כְּלָלִיּוֹת', 'Prophecy': 'נְבוּאָה' },
-  heroHtml: '<span class="hlw"><span class="hlw-hw" style="font-size:2.3em;color:var(--accent-deep)">הַבְּרִית</span><span class="hlw-tl">habberit</span><span class="hlw-gl">The Testament</span></span>' +
-        '<span class="hlw"><span class="hlw-hw" style="font-size:2.3em;color:var(--accent-deep)">הַחֲדָשָׁה</span><span class="hlw-tl">hachadasha</span><span class="hlw-gl">New</span></span>',
+  heroHtml: '<span class="hlw"><span class="hlw-hw" style="font-size:2.3em">הַבְּרִית</span><span class="hlw-tl">habberit</span><span class="hlw-gl">The Testament</span></span>' +
+        '<span class="hlw"><span class="hlw-hw" style="font-size:2.3em">הַחֲדָשָׁה</span><span class="hlw-tl">hachadasha</span><span class="hlw-gl">New</span></span>',
   bookTranslit: {
     matt:'mattay', mark:'markos', luke:'lukas', john:'yochanan', acts:'maase hashshelichim',
     rom:'romim', '1co':'korintim 1', '2co':'korintim 2', gal:'galatim', eph:'efesim', php:'filippim',
@@ -904,7 +887,7 @@ window.READER = {
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=2"></script>
 <script src="verse_loader.js?v=4"></script>
-<script src="root_scorecard.js?v=70"></script>
+<script src="root_scorecard.js?v=74"></script>
 <script>RootScorecard.init({ vol: 'nt', base: '' });</script>
 
 <!-- Verse data files -->
@@ -919,13 +902,13 @@ window.READER = {
 <!-- Cross-reference data + engine -->
 <script src="nt_crossrefs.js"></script>
 <script>window._volumeCrossrefsData = window._ntCrossrefsData;</script>
-<script src="crossrefs_engine.js?v=10"></script>
+<script src="crossrefs_engine.js?v=12"></script>
 
-<script src="reader_ui.js?v=20"></script>
+<script src="reader_ui.js?v=23"></script>
 <script src="notes_engine.js"></script>
 <script src="site_chrome.js?v=36" data-sw-volume="nt"></script>
 <script src="verse_search.js?v=3"></script>
-<script src="nav_engine.js?v=52"></script>
+<script src="nav_engine.js?v=59"></script>
 <script src="xref_study_panel.js"></script>
 <script>
 NavEngine.init({
