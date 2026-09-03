@@ -8,12 +8,48 @@
      scattered across the pages; every one of them now resolves here. */
   --gold-deep:   #8a6a1c;   /* gold TEXT on paper — 4.92:1 on --bg      */
   --gold:        #c8a84e;   /* fills, borders, rules, gold on navy       */
-  --gold-bright: #e3c46e;   /* gold TEXT on navy                         */
+  --gold-bright: #f4ca48;   /* gold TEXT on navy — 10.1:1, and SATURATED.
+                               #e3c46e was brighter on paper but drained the
+                               chroma out, which reads as faded on a dark
+                               ground. This is the value site_chrome.css used
+                               before the consolidation, and it was right.  */
   --gold-pale:   #ecd9a0;   /* subdued gold text on navy                 */
-  --navy:        #1e2233;   /* the chrome ground                         */
-  --navy-2:      #2a3050;   /* raised / hover navy                       */
-  --navy-line:   #3a4054;   /* borders on navy                           */
-  --navy-line-dim: #2f3550; /* hairline rules on navy                    */
+  /* ── SURFACES ─────────────────────────────────────────────────────────
+     An elevation scale, not a pile of navies. Every step holds the chrome
+     hue (228.6°) and lets saturation TAPER as lightness rises — the rule
+     is that dark-mode variants desaturate as they lift. The first ramp did
+     the opposite (--navy-2 at 31.1% saturation against the ground's 26%)
+     and the slide-outs read as a field of blue tiles.
+     Adjacent steps sit 1.10–1.18:1 apart: visible, not stripey.        */
+  --surface-sunken: #171a29; /* recessed — search results, footer S 28.0% */
+  --surface-0:    #1e2233;  /* ground — chrome bar, panel base   S 26.0% */
+  --surface-1:    #25293c;  /* hairlines, alternating rows       S 23.5% */
+  --surface-2:    #2d3245;  /* raised — tiles, rows, buttons     S 21.0% */
+  --surface-3:    #383d52;  /* overlay sitting above a panel     S 18.5% */
+  --surface-line: #3f445a;  /* borders on navy                   S 17.0% */
+
+  /* ── ON-SURFACE ───────────────────────────────────────────────────────
+     What is legible ON those surfaces. Every one of these clears 4.5:1 on
+     every surface step above, including the highest.                   */
+  --on-surface:        #ece5d5;   /* primary text     12.6:1 … 8.6:1     */
+  --on-surface-muted:  #b4ab9c;   /* secondary text    7.0:1 … 4.7:1     */
+  --on-surface-accent: var(--gold-bright);  /* gold   10.1:1 … 6.8:1     */
+
+  /* ── PAPER ────────────────────────────────────────────────────────────
+     The reading ground and what is legible on it. Gold is NEVER body
+     text here — --on-paper-accent is the only gold that clears 4.5:1,
+     and it reads brown by necessity. Real gold belongs on a surface.  */
+  --paper-0:           #fdfcf8;
+  --paper-1:           #f7f4ec;
+  --on-paper:          #1a1a1a;   /* 16.9:1 */
+  --on-paper-muted:    #5a5647;   /*  6.9:1 */
+  --on-paper-accent:   var(--gold-deep);  /* 4.92:1 */
+
+  /* Legacy navy names, mapped onto the scale. */
+  --navy:        var(--surface-0);
+  --navy-2:      var(--surface-2);
+  --navy-line:   var(--surface-line);
+  --navy-line-dim: var(--surface-1);
   --tap:         #2b6491;   /* link / crossref on paper                  */
   --tap-bright:  #8ec2e2;   /* link / crossref on navy                   */
 
@@ -28,7 +64,7 @@
   /* ── Legacy names, kept so nothing downstream breaks ── */
   --sw-navy: var(--navy);
   --sw-navy-hover: var(--navy-2);
-  --sw-gold: var(--gold);
+  --sw-gold: var(--gold-bright);   /* chrome text — the bar, footer, panels */
   --sw-gold-bright: var(--gold-pale);
   --sw-gold-muted: rgba(200, 168, 78, 0.92);
   --sw-gold-border: rgba(200, 168, 78, 0.55);
@@ -52,17 +88,17 @@ body.dark-mode {
    hold no colour at all — change it here and it changes everywhere.
    ══════════════════════════════════════════════════════════════════════ */
 :root {
-  --bg: #fdfcf8;
-  --bg-deep: #f7f4ec;
-  --ink: #1a1a1a;
-  --ink-light: #5a5647;
+  --bg: var(--paper-0);
+  --bg-deep: var(--paper-1);
+  --ink: var(--on-paper);
+  --ink-light: var(--on-paper-muted);
   --accent: var(--gold);
   --accent-deep: var(--gold-deep);      /* gold TEXT on beige — 4.5:1 */
   --accent-light: var(--gold-bright);
   --rule: #d6ceb8;
   --rule-light: #e6dfcd;
   --gloss: #333;
-  --verse-num: var(--gold-deep);        /* was a fourth blue, #4a7ba6 */
+  --verse-num: var(--on-paper-accent);  /* was a fourth blue, #4a7ba6 */
   --highlight: rgba(200, 168, 78, 0.10);
   --hover-wash: rgba(200, 168, 78, 0.10);
   --header-bg: var(--navy);
@@ -77,16 +113,16 @@ body.dark-mode {
 }
 
 body.dark-mode {
-  --bg: var(--navy);
-  --bg-deep: #232842;
-  --ink: #ece5d5;
-  --ink-light: #a89f89;
-  --accent: var(--gold-bright);
-  --accent-deep: var(--gold-bright);
+  --bg: var(--surface-0);
+  --bg-deep: var(--surface-1);
+  --ink: var(--on-surface);
+  --ink-light: var(--on-surface-muted);
+  --accent: var(--on-surface-accent);
+  --accent-deep: var(--on-surface-accent);
   --accent-light: var(--gold-pale);
-  --rule: var(--navy-line);
-  --rule-light: var(--navy-line-dim);
-  --gloss: #c2baa2;
+  --rule: var(--surface-line);
+  --rule-light: var(--surface-1);
+  --gloss: var(--on-surface-muted);
   --verse-num: var(--gold-bright);
   --highlight: rgba(200, 168, 78, 0.15);
   --hover-wash: rgba(200, 168, 78, 0.09);
@@ -103,6 +139,41 @@ body.dark-mode {
 .word-unit.sof .hw::after { color: var(--hw); }
 .gl { color: var(--gloss); }
 .tl { color: var(--ink-light); }   /* was #1a2744 in pgp/jst/bom */
+
+/* ── Surfaces that are ALWAYS navy ───────────────────────────────────────
+   The chrome, the footer, the slide-outs and the popovers are navy in
+   BOTH themes. In light mode they were still inheriting the paper tokens
+   from :root, so anything using --ink-light landed at #5a5647 on navy —
+   2.15:1, effectively invisible (the study panel's "(בָּרָא) to create"
+   gloss). Re-declaring the on-navy set here fixes the whole class at
+   once instead of one element at a time. */
+#nav-sidebar,
+#xref-panel,
+#glossary-panel,
+#word-popup,
+#sel-toolbar,
+#hl-pop,
+#share-popup,
+.controls-bottom,
+.sw-top-bar {
+  --bg: var(--surface-0);
+  --bg-deep: var(--surface-2);
+  --ink: var(--on-surface);
+  --ink-light: var(--on-surface-muted);
+  --gloss: var(--on-surface-muted);
+  --accent: var(--on-surface-accent);
+  --accent-deep: var(--on-surface-accent);
+  --accent-light: var(--gold-pale);
+  --rule: var(--surface-line);
+  --rule-light: var(--surface-1);
+  --verse-num: var(--on-surface-accent);
+  --hw: var(--on-surface);
+  --xref: var(--tap-bright);
+  --tap-blue: var(--tap-bright);
+  --row-alt: var(--surface-1);
+  --highlight: rgba(244, 202, 72, 0.14);
+  --hover-wash: rgba(244, 202, 72, 0.10);
+}
 
 /* Hover wash on the WORD only. The whole-verse wash (.verse:hover) is
    deliberately gone — landing on a verse darkened the entire row, which
