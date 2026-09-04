@@ -27,8 +27,46 @@ body.dark-mode *:focus-visible { outline-color: var(--here-chrome); }
 .ornament { text-align: center; padding: 6px 0 12px; color: var(--accent-deep, var(--here)); font-size: 1.2em; letter-spacing: 0.5em; }
 .chapter-heading { text-align: center; padding: 16px 0 20px; border-bottom: 2px solid var(--rule); margin-bottom: 24px; }
 .word-group { display: inline-flex; align-items: flex-start; vertical-align: top; direction: rtl; }
-.arr-hw { visibility: hidden; max-width: 0; font-size: 1.85em; line-height: 1.5; }
-.arr-gl { font-size: 0.9em; font-weight: normal; transform: scale(2); font-style: normal; line-height: 1; margin-top: 2px; visibility: visible; }
+/* ── THE CHEVRONS — one home, and each row MIRRORS the tier beside it ──
+   Restored 2026-09-04 and consolidated out of the six volume pages, which
+   held three drifted copies between them (jst's margin-top was 2px where
+   the others were 4px; pgp/jst/bom had lost the line-height entirely).
+
+   Why they were misaligned: .arr-hw is an invisible zero-width spacer whose
+   only job is to be exactly as tall as the Hebrew, so the two chevrons land
+   on the transliteration and the gloss. Every page set it to 1.85em — the
+   Hebrew's old size. The type scale moved the Hebrew to --t4 with an
+   !important that the page copies of `.hw` all lost to, and NOTHING moved
+   the spacer with it, so the column stood 0.4em too tall and both chevrons
+   sat a row low. A copied constant cannot track a scale; the mirror has to
+   name the same token. It does now, !important like its twin, so the stale
+   page mirrors lose exactly the way the stale `.hw` copies already do.
+
+   transform: scale() is layout-free, so the glyph can be drawn at reading
+   size while its box stays the height of the row it belongs to. */
+/* The word and its chevron are ONE row. pgp/jst/bom gave .word-unit a 2px
+   vertical margin that .arr never had, so the chevrons rode 2px high on
+   those three and sat flush on ot/nt/dc — the same copied-constant drift in
+   its other dress. Settled to zero on both, here, where the reading stack
+   is defined. Each page's horizontal margin is untouched. */
+.word-unit { margin-block: 0 !important; }
+.arr {
+  display: inline-flex; flex-direction: column;
+  align-items: center; justify-content: flex-start;
+  vertical-align: top;
+  color: var(--accent-deep);
+  font-family: 'David Libre', serif; font-style: normal; font-weight: 400;
+  padding: 3px 0; margin: 0; opacity: 1;
+  direction: ltr; unicode-bidi: isolate; line-height: 1.2;
+  user-select: none; -webkit-user-select: none;
+}
+.arr-hw { visibility: hidden; max-width: 0; font-size: var(--t4) !important; line-height: 1.5; }
+.arr-tl { font-size: var(--t0) !important; line-height: 1.2;  margin-top: 2px; transform: scale(2.5); visibility: visible; }
+.arr-gl { font-size: var(--t0) !important; line-height: 1.35; margin-top: 2px; transform: scale(2.5); visibility: visible; }
+.word-unit.sof + .arr { display: none; }
+body.hide-translit .arr-tl { display: none; }
+body.hide-gloss .arr-gl { display: none; }
+body.hide-gloss.hide-translit .arr { display: none; }
 .word-unit .gl, .word-unit .tl, .arr .arr-tl, .arr .arr-gl { user-select: none !important; -webkit-user-select: none !important; }
 body.english-only .word-unit .gl { user-select: text !important; -webkit-user-select: text !important; }
 .verse-english { display: none; }
@@ -220,6 +258,21 @@ body:not(.dual-mode) .verse > .word-flow { width: 100%; }
   --t5: 2.375em;   /* chapter title                      38/16 */
 }
 
+/* THE TIERS OPT OUT OF THE ROW'S JUSTIFICATION.
+   The verse row is justified with `text-align-last: start` so the last line
+   of a verse stays ragged (see JUSTIFIED ROWS below). Both properties
+   INHERIT. Each tier re-declares `text-align: center` and none of them
+   re-declared text-align-last, so every gloss that wrapped centred all of
+   its lines except the last, which hung left — the defect was one inherited
+   property away from a rule that never mentions the gloss. A tier is a
+   centred object under its word, not set copy: it opts out here, once, for
+   the word column and the chevron column alike. */
+.word-unit, .word-unit .hw, .word-unit .tl, .word-unit .gl,
+.arr, .arr-hw, .arr-tl, .arr-gl {
+  text-align: center;
+  text-align-last: center;
+}
+
 /* the three tiers, ranked instead of competing */
 .hw {
   color: var(--hw);
@@ -239,13 +292,18 @@ body:not(.dual-mode) .verse > .word-flow { width: 100%; }
 .gl {
   color: var(--gloss);
   font-size: var(--t0) !important;
-  line-height: 1.3;
+  /* 1.35 and 2px are what pgp/jst/bom already computed to — the page copies
+     load after this file and won this. Stated here with !important so all
+     six agree and the chevron column can mirror one number, not six. */
+  line-height: 1.35 !important;
   max-width: 9em;
-  margin-top: 1px;
+  margin-top: 2px !important;
 }
 .tl {
   color: var(--ink-light);
   font-size: var(--t0) !important;
+  line-height: 1.2 !important;
+  margin-top: 2px !important;
   opacity: .62 !important;
 }
 
@@ -305,14 +363,21 @@ body:not(.dual-mode) .verse > .word-flow { width: 100%; }
 .heading-flow .tl,
 .heading-flow .gl,
 .colophon .tl,
-.colophon .gl { font-size: max(12px, 1.05em) !important; }
+.colophon .gl,
+/* the chevron rows take the floor with them, or the apparatus chevrons
+   drift the same way the verse ones did */
+.heading-flow .arr-tl,
+.heading-flow .arr-gl,
+.colophon .arr-tl,
+.colophon .arr-gl { font-size: max(12px, 1.05em) !important; }
 .heading-flow .gl { max-width: 8em; }
 
-/* the arrows go: 714 marks per chapter saying what the script already says */
-.arr, .arr-hw, .arr-tl, .arr-gl { display: none !important; }
-/* the stack now carries the pairing, so words need real air between them */
-.word-flow { gap: 2px 0.9em !important; }
-.word-unit { padding: 2px 0 !important; }
+/* The chevrons STAY. They were hidden here once and the user asked for them
+   back: with a wrapping RTL flow, the mark is what tells you the reading
+   order of the line, and « closes the verse. Each page's own .arr rule
+   styles them; nothing overrides it. The word gap goes back to the page
+   base too — the chevron carries the separation, so the 0.9em air that
+   replaced it would now double the spacing. */
 
 /* verse numerals hang small and quiet in the margin */
 .verse-num {
@@ -708,14 +773,14 @@ body {
   --tap: var(--here);
   --tap-bright: var(--here-chrome);
   --navy: var(--chrome);
-  --navy-2: #14392c;
+  --navy-2: #243652;
   --navy-line: var(--chrome-line);
-  --navy-line-dim: #123528;
+  --navy-line-dim: #22334C;
   --surface-sunken: var(--chrome-2);
   --surface-0: var(--chrome);
-  --surface-1: #103528;
-  --surface-2: #14392c;
-  --surface-3: #1d4636;
+  --surface-1: #22334C;
+  --surface-2: #243652;
+  --surface-3: #2E4260;
   --surface-line: var(--chrome-line);
   --on-surface: var(--on-chrome);
   --on-surface-muted: var(--on-chrome-2);
@@ -793,10 +858,12 @@ body {
   --header-bg: var(--chrome);
   --header-text: var(--on-chrome);
   --row-alt: var(--paper);
-  --rule: #dfe3e0;
-  --rule-light: #e5e7e4;
-  --highlight: rgba(4,107,74,.09);
-  --hover-wash: rgba(4,107,74,.07);
+  --rule: #E2DCD2;
+  --rule-light: #EDE8E0;
+  /* derived, never a literal: these were raw emerald rgba and stayed green
+     through two palette changes because nothing pointed them at the accent */
+  --highlight: color-mix(in srgb, var(--here) 14%, transparent);
+  --hover-wash: color-mix(in srgb, var(--here) 9%, transparent);
   background: var(--bg);
   color: var(--ink);
   font-family: 'David Libre', serif;
@@ -2007,19 +2074,32 @@ body.dark-mode #glossary-panel {
   --z-skip: 700;
   --m-state: 120ms ease;
   --m-move: 220ms ease;
-  --paper: #fbfbfa;
-  --paper-2: #f3f5f3;
-  --panel: #f3f5f3;
-  --card: #ffffff;
-  --chrome: #0b2a20;
-  --chrome-2: #082018;
-  --chrome-line: #1d4636;
-  --ink: #141614;
-  --ink-2: #4a524c;
-  --ink-3: #646e67;
-  --on-chrome: #ecfdf5;
-  --on-chrome-2: #9dc3b3;
-  --here: #046b4a;
+  /* ── INDIGO & GOLD (2026-09-04) ──────────────────────────────────────
+     The palette chosen on the Spanish interlinear, carried across so the
+     two books are bound alike. Same three-theme structure, same roles:
+     the paper family is warm and neutral, the chrome family is one deep
+     indigo, and the accent is gold — burnished and DEEP on paper, bright
+     only where it sits on the indigo. That split is the whole discipline
+     of this palette. Pale gold on a light ground is the one pairing it
+     must never make: it measures 1.5:1 and it is what "no gold text on
+     beige" was about. The gold on paper here is #8E6215, 5.16:1, which
+     reads as bronze; the bright #DDB768 exists only on the bars.
+     Every pair below was measured, not eyeballed. */
+  --paper: #FCFAF7;
+  --paper-2: #F0ECE5;
+  --panel: #F0ECE5;
+  --card: #FFFFFF;
+  --chrome: #1B2A41;
+  --chrome-2: #142132;
+  --chrome-line: #2E4260;
+  --ink: #191713;
+  --ink-2: #554E45;
+  --ink-3: #6D655B;
+  --on-chrome: #F3EDE2;
+  --on-chrome-2: #B9AEA0;
+  /* the accent as a MARK on paper: verse numerals, titles, ornaments.
+     Deep enough to be ink-weight (5.16:1), warm enough to read as gold. */
+  --here: #8E6215;
   /* THE CHROME ACCENT. Was #34d399, a saturated mint, and the mint was the
      single most-rejected colour in this design. Replaced with a warm stone
      neutral: it is not a complement to the green, it withdraws, so the deep
@@ -2027,8 +2107,10 @@ body.dark-mode #glossary-panel {
      the dark page. Mint also happened to be identical to --here in dark mode,
      which quietly collapsed the paper-vs-chrome rule exactly where it was
      needed; the two are distinct values again. */
-  --here-chrome: #d6d0c6;
-  --signal: #dc2626;
+  --here-chrome: #DDB768;
+  /* #dc2626 measured 4.05:1 on the sepia ground — under the floor for the
+     qamats-qatan mark, which is 12px linguistic information. Deepened. */
+  --signal: #B91C1C;
   --signal-chrome: #f87171;
   --sw-chrome-h: 56px;
   font-family: 'David Libre', serif;

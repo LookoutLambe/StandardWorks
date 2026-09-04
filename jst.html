@@ -17,7 +17,7 @@
 <meta name="apple-mobile-web-app-title" content="כתבי הקודש">
 <title>Joseph Smith Translation · Hebrew Interlinear Standard Works</title>
 <meta name="description" content="Hebrew Interlinear Joseph Smith Translation — Classical Biblical Hebrew, Word-by-Word">
-<meta name="theme-color" content="#0b2a20">
+<meta name="theme-color" content="#1B2A41">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <style>
 
@@ -187,29 +187,7 @@ body.hide-translit .tl { display: none; }
   margin-top: 2px;
   opacity: 0.85;
 }
-.arr {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  color: var(--accent-deep);
-  font-family: 'David Libre', serif;
-  font-style: normal;
-  font-weight: normal;
-  vertical-align: top;
-  padding: 3px 0 3px;
-  margin: 0;
-  opacity: 1;
-  direction: ltr;
-  unicode-bidi: isolate;
-  user-select: none;
-  -webkit-user-select: none;
-}
-.arr-tl { font-size: 0.95em; font-weight: normal; transform: scale(2); line-height: 1; margin-top: 2px; visibility: visible; }
 /* Qamats qatan (U+05C7) coloured distinctly from ordinary qamats so the /o/ reading is visible */
-body.hide-translit .arr-tl { display: none; }
-body.hide-gloss .arr-gl { display: none; }
-body.hide-gloss.hide-translit .arr { display: none; }
 
 .word-unit.sof .hw::after {
   content: ' ׃';
@@ -327,14 +305,12 @@ body.hide-gloss.hide-translit .arr { display: none; }
 
 /* Hide glosses mode */
 body.hide-gloss .gl { display: none; }
-body.hide-gloss .arr-gl { display: none; }
-body.hide-gloss.hide-translit .arr { display: none; }
 body.hide-gloss .word-unit { padding-bottom: 3px; }
 
 /* Responsive */
 @media (max-width: 700px) {
   .page { padding: 55px 18px 50px; padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px)); }
-  .hw { font-size: 1.5em; } .arr-hw { font-size: 1.5em; }
+  .hw { font-size: 1.5em; }
   .gl { font-size: 0.68em; }
   .verse { gap: 8px; }
   .word-flow { margin: 0; }
@@ -701,7 +677,7 @@ body, button, input, select, textarea,
 <link rel="stylesheet" href="nav_engine.css?v=47">
 <link rel="stylesheet" href="site_chrome.css?v=69">
 <link rel="stylesheet" href="xref_study_panel.css?v=14">
-<link rel="stylesheet" href="reader.css?v=75">
+<link rel="stylesheet" href="reader.css?v=76">
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -1910,7 +1886,7 @@ document.querySelectorAll('#nav-dropdown .dd-book').forEach(function(book) {
     </table>
   </div>
 </div>
-<script src="site_chrome.js?v=42" data-sw-volume="jst"></script>
+<script src="site_chrome.js?v=43" data-sw-volume="jst"></script>
 <script src="verse_search.js?v=3"></script>
 <script src="nav_engine.js?v=65"></script>
 <script>

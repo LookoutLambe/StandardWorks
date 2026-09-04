@@ -121,17 +121,13 @@
     try {
       var m = document.querySelector('meta[name="theme-color"]');
       if (!m) return;
-      /* These are the header's ACTUAL painted colours — #0b2a20 is --chrome
-         in light, #0a0a0a is what body.dark-mode repaints the bar. Light was
-         still #1e2233, the navy from before the emerald scheme, so on an
-         iPhone the status bar sat navy above an emerald header. It also
-         overwrote the value in the markup at runtime, which is why fixing
-         the meta tag alone would not have held. */
-      /* the header's ACTUAL painted colour. The bar is the brand green in
-         ALL three themes now — only the paper changes — so this is constant.
-         It used to send #0a0a0a for dark, matching a hardcoded override in
-         site_chrome.css that has been removed. */
-      m.setAttribute('content', '#0b2a20');
+      /* The header's ACTUAL painted colour, which is what the iPhone status
+         bar has to match — set at runtime because this overwrites the markup
+         anyway, so fixing the meta tag alone would never have held.
+         Indigo & Gold paints one navy in light and sepia and deepens it in
+         dark, so unlike the emerald scheme this is no longer a constant. */
+      m.setAttribute('content',
+        document.body.classList.contains('dark-mode') ? '#101823' : '#1B2A41');
     } catch (e) {}
   }
   try {
@@ -183,7 +179,7 @@
     a.setAttribute('aria-label', 'Open books and navigation');
     a.title = 'Books and navigation';
     a.style.cssText = 'background:none;border:none;padding:0;cursor:pointer';
-    a.innerHTML = '<img src="' + assetBase() + 'icons/sw-mark.svg?v=2" alt="" style="width:38px;height:38px;display:block;border-radius:9px">';
+    a.innerHTML = '<img src="' + assetBase() + 'icons/sw-mark.svg?v=3" alt="" style="width:38px;height:38px;display:block;border-radius:9px">';
     a.addEventListener('click', openMenu);
     return a;
   }

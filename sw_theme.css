@@ -36,17 +36,36 @@ body.dark-mode {
 
      The bars keep their saturated brand green. That is identity, not
      accessibility, and it is not a thing to restyle on generic advice. */
-  --paper:   #121614;
-  --paper-2: #171c19;
-  --panel:   #171c19;
-  --card:    #1d2320;
-  --ink:     #e3e8e4;
-  --ink-2:   #b6c1ba;
-  --ink-3:   #90a096;
+  --paper:   #14120F;
+  --paper-2: #1C1916;
+  --panel:   #1C1916;
+  --card:    #221E19;
+  --ink:     #EDE6DA;
+  --ink-2:   #B5A896;
+  --ink-3:   #9A8D7C;
+  /* THE BINDING DEEPENS IN DARK. In the emerald system the bars were the
+     same colour in all three themes — the book bound alike, only the paper
+     changing. Indigo & Gold keeps that for light and sepia and makes one
+     exception here: #1B2A41 against a #14120F page reads as a lit slab
+     rather than a bar, because the chrome is LIGHTER than the paper it
+     frames. Deepened to #101823, which restores the order of the two
+     materials. --on-chrome cools with it; the gold brightens, as an accent
+     on a dark ground has to. */
+  --chrome:      #101823;
+  --chrome-2:    #0A0F17;
+  --chrome-line: #24334A;
+  --on-chrome:   #E7E0D4;
+  --on-chrome-2: #A79C8C;
+  --here-chrome: #E6C87E;
+  --navy-2:        #22304A;
+  --navy-line-dim: #1B2536;
+  --surface-1: #1B2536;
+  --surface-2: #22304A;
+  --surface-3: #2A3B58;
   /* the accent as a MARK on the dark page — verse numerals, titles,
      ornaments. Stone, matching the chrome accent, not the old mint. 11.90:1
      on the ground above. Filled surfaces use --accent-fill, never this. */
-  --here:    #d6d0c6;
+  --here:    #D9B45F;
   /* --here brightens to mint here — dark surfaces need a punchier accent
      than the deep stop. Anything FILLED with --accent/--here must pair it
      with a text colour that ALSO flips, or a button that was white text on
@@ -66,8 +85,8 @@ body.dark-mode {
      near-white text, so a filled button looks like the same button in both.
      #14724f: 5.45:1 against its own label (AA), and 3.26:1 against the page,
      so the button still reads as a shape. Marks keep --accent. */
-  --accent-fill: #14724f;
-  --on-fill: #f4f6f4;
+  --accent-fill: #7A5412;
+  --on-fill: #F5EFE3;
   --signal:  var(--signal-chrome);
   --e1: 0 1px 2px rgba(0,0,0,.28), 0 4px 14px rgba(0,0,0,.30);
   --e2: 0 2px 4px rgba(0,0,0,.32), 0 10px 26px rgba(0,0,0,.40);
@@ -75,14 +94,14 @@ body.dark-mode {
   --gold: var(--on-chrome);
   --tap: var(--here-chrome);
   /* only the values that do NOT follow --paper / --ink need restating */
-  --rule: #24463a;
-  --rule-light: #1f2a24;
+  --rule: #342E26;
+  --rule-light: #24201B;
   /* these two were still the old mint as a raw literal, so selection and
      hover washes stayed minty after the token changed. Derived now, so they
      follow the accent instead of pinning a hue. */
   --highlight: color-mix(in srgb, var(--here) 16%, transparent);
   --hover-wash: color-mix(in srgb, var(--here) 10%, transparent);
-  --sw-navy: #0b0f0d;
+  --sw-navy: #0A0F17;
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -106,21 +125,24 @@ body.dark-mode {
    themes and only the paper changes.
    ══════════════════════════════════════════════════════════════════════ */
 body.sepia-mode {
-  --paper:   #f4e8d0;
-  --paper-2: #ebdcc0;
-  --panel:   #ebdcc0;
-  --card:    #e5d4b5;
+  --paper:   #F4EAD8;
+  --paper-2: #E8DAC2;
+  --panel:   #E8DAC2;
+  --card:    #FAF2E4;
   /* warm near-black, never pure: 10.49:1 on the ground above */
-  --ink:     #3a3128;
-  --ink-2:   #5c5044;
+  --ink:     #2A2318;
+  --ink-2:   #5C503C;
   /* the gloss + transliteration tier. #7a6c5c read 4.19:1 and failed the
      4.5:1 floor for 12px text; this clears it at 4.88:1. */
-  --ink-3:   #6f6252;
-  --rule:       #d9c6a5;
-  --rule-light: #e2d3b8;
-  --row-alt:    #efe2c8;
-  --highlight:  rgba(4,107,74,.14);
-  --hover-wash: rgba(4,107,74,.09);
+  --ink-3:   #71634C;
+  /* the accent goes one step deeper than light's: the sepia ground is
+     itself warm, so #8E6215 loses separation against it. 5.67:1 here. */
+  --here:       #7A5412;
+  --rule:       #DCCDB2;
+  --rule-light: #E8DCC6;
+  --row-alt:    #EFE3CD;
+  --highlight:  color-mix(in srgb, var(--here) 14%, transparent);
+  --hover-wash: color-mix(in srgb, var(--here) 9%, transparent);
 }
 
 /* ══════════════════════════════════════════════════════════════════════

@@ -17,12 +17,12 @@
 <meta name="apple-mobile-web-app-title" content="כתבי הקודש">
 <title>Doctrine and Covenants · Hebrew Interlinear Standard Works</title>
 <meta name="description" content="הַלֶּקַח וְהַבְּרִיתוֹת — Hebrew Interlinear Doctrine and Covenants, Classical Biblical Hebrew word-by-word">
-<meta name="theme-color" content="#0b2a20">
+<meta name="theme-color" content="#1B2A41">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <link rel="stylesheet" href="nav_engine.css?v=47">
 <link rel="stylesheet" href="site_chrome.css?v=69">
 <link rel="stylesheet" href="xref_study_panel.css?v=14">
-<link rel="stylesheet" href="reader.css?v=75">
+<link rel="stylesheet" href="reader.css?v=76">
 <style>
 *:focus-visible { outline: 2px solid var(--here); outline-offset: 2px; }
 .book-title { font-size: 2.4em; font-weight: 700; color: var(--header-bg); letter-spacing: 0.04em; margin-bottom: 2px; }
@@ -43,11 +43,8 @@
 .hw { font-size: 1.85em; font-weight: 500; line-height: 1.5; direction: rtl; unicode-bidi: bidi-override; white-space: nowrap; }
 .gl { font-family: 'David Libre', 'Georgia', serif; font-size: 0.69em; color: var(--gloss); direction: ltr; text-align: center; white-space: normal; overflow-wrap: break-word; hyphens: none; line-height: 1.35; max-width: 96px; padding: 0 6px; font-style: normal; }
 .tl { font-family: 'David Libre', 'Georgia', serif; font-size: 0.78em; color: var(--ink-light); direction: ltr; text-align: center; white-space: nowrap; opacity: 0.7; }
-.arr { display: inline-flex; flex-direction: column; align-items: center; justify-content: flex-start; color: var(--accent-deep); font-family: 'David Libre', serif; font-style: normal; font-weight: normal; vertical-align: top; padding: 3px 0 3px; margin: 0; opacity: 1; direction: ltr; unicode-bidi: isolate; line-height: 1.2; user-select: none; -webkit-user-select: none; }
-.arr-tl { font-size: 0.95em; font-weight: normal; transform: scale(2); line-height: 1; margin-top: 4px; visibility: visible; }
-.word-unit.sof + .arr { display: none; }
 .word-unit.sof .hw::after { content: ' \05C3'; }
-body.hide-translit .tl, body.hide-translit .arr-tl { display: none; }
+body.hide-translit .tl { display: none; }
 /* Interlinear chapter headings: the summary as word-units, mode-aware */
 /* Interlinear chapter headings live in reader.css (.heading-flow). The copy
    that used to sit here was dead — .hw/.tl/.gl there are !important, so
@@ -59,11 +56,10 @@ body.dual-mode .chapter-heading .chapter-summary-en { display: block; }
 
 /* Hebrew Only drops the gloss; transliteration stays under the reader's own
    Transliterate toggle (body.hide-translit), which used to be overridden here */
-body.hide-gloss .gl, body.hide-gloss .arr-gl { display: none; }
+body.hide-gloss .gl { display: none; }
 body.hide-gloss .hw { font-size: 2.1em; }
 body.hide-gloss .verse { gap: 6px; }
 body.hide-gloss .word-unit { padding: 2px 3px; }
-body.hide-gloss .arr-hw { font-size: 2.1em; }
 body.dual-mode .hw { font-size: 1.3em; }@media (max-width: 700px) {
   body.dual-mode .hw { font-size: 1.3em; }
 }
@@ -192,7 +188,7 @@ body.dark-mode .verse.user-highlight { background: color-mix(in srgb, var(--here
 .chapter-panel.slide-left { animation: slideLeft 0.3s ease-out; }@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }@keyframes slideRight { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: none; } }@keyframes slideLeft { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: none; } }@media (max-width: 600px) {
   .page { padding: 50px 10px 45px; padding-left: max(10px, env(safe-area-inset-left, 0px)); padding-right: max(10px, env(safe-area-inset-right, 0px)); }
   .book-title { font-size: 1.8em; }
-  .hw { font-size: 1.5em; } .arr-hw { font-size: 1.5em; }
+  .hw { font-size: 1.5em; }
   .gl { font-size: 0.65em; }
   .verse-num { min-width: 24px; font-size: 1em; }
   .controls-top { padding: 5px 8px; }
@@ -764,7 +760,7 @@ function goToGlossaryVerse(verseKey) {
 </script>
 
 <script src="notes_engine.js"></script>
-<script src="site_chrome.js?v=42" data-sw-volume="dc"></script>
+<script src="site_chrome.js?v=43" data-sw-volume="dc"></script>
 <script src="verse_search.js?v=3"></script>
 <script src="nav_engine.js?v=65"></script>
 <script src="xref_study_panel.js"></script>
