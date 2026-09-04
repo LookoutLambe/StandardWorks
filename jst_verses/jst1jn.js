@@ -9,13 +9,13 @@ renderVerseSet(jst1jn_ch1Verses, 'jst1jn-ch1-verses');
 
 // === CH2: JST 1 John 3:9 ===
 var jst1jn_ch2Verses = [
-  { num:"ט", words:[["כׇּל","whosoever"],["הַנּוֹלָד","the-is-born-of"],["מֵאֱלֹהִים","God"],["אֵינוֹ","doth-not"],["מַמְשִׁיךְ","continue"],["לַחֲטֹא","in-sin"],["כִּי","for"],["רוּחַ","the-Spirit-of"],["אֱלֹהִים","God"],["שׁוֹכֶנֶת","remaineth"],["בּוֹ","in-him"],["וְאֵינוֹ","and-he-cannot"],["יָכוֹל","continue"],["לְהַמְשִׁיךְ","in-sin"],["לַחֲטֹא","in-sin"],["כִּי","because"],["נוֹלַד","he-is-born"],["מֵאֱלֹהִים","of-God"],["מְקַבֵּל","having-received"],["אֶת־רוּחַ","the-Spirit-of"],["הַקֹּדֶשׁ","the-Holy"],["הַבְטָחָה","of-promise"],["׃",""]] }
+  { num:"ט", words:[["כׇּל־הַנּוֹלָד","whosoever-is-born"],["מֵאֱלֹהִים","of-God"],["לֹא","not"],["יוֹסִיף","doth-continue"],["לַחֲטֹא","in-sin"],["כִּי","for"],["רוּחַ","the-Spirit-of"],["אֱלֹהִים","God"],["בּוֹ","in-him"],["תִּשָּׁאֵר","remaineth"],["וְלֹא","and-not"],["יוּכַל","he-can"],["לְהוֹסִיף","continue"],["לַחֲטֹא","in-sin"],["כִּי","because"],["מֵאֱלֹהִים","of-God"],["נוֹלַד","he-is-born"],["בְּקַבְּלוֹ","having-received"],["אֶת־רוּחַ","the-Spirit-of"],["הַקֹּדֶשׁ","holy"],["הַהִיא","that"],["רוּחַ","the-Spirit-of"],["הַהַבְטָחָה","promise"],["׃",""]] }
 ];
 renderVerseSet(jst1jn_ch2Verses, 'jst1jn-ch2-verses');
 
 // === CH3: JST 1 John 4:12 ===
 var jst1jn_ch3Verses = [
-  { num:"יב", words:[["אֵין","no"],["אִישׁ","man"],["רָאָה","hath-seen"],["אֶת־אֱלֹהִים","God"],["מֵעוֹלָם","at-any-time"],["אֶלָּא","except"],["הַמַּאֲמִינִים","the-them-who-believe"],["אִם","if"],["נֹאהַב","we-love"],["זֶה","one"],["אֶת־זֶה","God"],["אֱלֹהִים","dwelleth"],["שׁוֹכֵן","in-us"],["בָּנוּ","and"],["וְאַהֲבָתוֹ","his-love"],["נִשְׁלְמָה","is-perfected"],["בָּנוּ","in-us"],["׃",""]] }
+  { num:"יב", words:[["אֶת־הָאֱלֹהִים","God"],["לֹא־רָאָה","hath-not-seen"],["אִישׁ","no-man"],["מֵעוֹלָם","at-any-time"],["זוּלָתִי","except"],["הַמַּאֲמִינִים","them-who-believe"],["וְאִם־נֶאֱהַב","if-we-love"],["אִישׁ","one"],["אֶת־רֵעֵהוּ","another"],["הָאֱלֹהִים","God"],["יִשְׁכֹּן","dwelleth"],["בְּקִרְבֵּנוּ","in-us"],["וְאַהֲבָתוֹ","and-his-love"],["נִשְׁלְמָה־בָּנוּ","is-perfected-in-us"],["׃",""]] }
 ];
 renderVerseSet(jst1jn_ch3Verses, 'jst1jn-ch3-verses');
 
