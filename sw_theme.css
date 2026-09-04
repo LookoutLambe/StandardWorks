@@ -457,12 +457,6 @@ body.dark-mode #annotations-panel .ann-tab.active {
 #glossary-panel .glossary-header .glossary-close,
 #annotations-panel .ann-header .ann-panel-close,
 #nav-sidebar .nav-search-wrap .nav-close-btn { color: var(--chrome-gold) !important; }
-/* the quick-dock's current chapter sits in the FOOTER, which is chrome —
-   it was pale gold on a pale gold wash (1.57:1), not a card */
-.nqd-chapter-now {
-  color: var(--chrome-gold) !important;
-  background: color-mix(in srgb, var(--here-chrome) 14%, transparent) !important;
-}
 #nav-sidebar .nl-card:hover, #nav-sidebar .nl-tile:hover, #nav-sidebar .nl-bm:hover,
 #nav-sidebar .nav-book-row:hover,
 #xref-panel .xref-ref-card:hover, #xref-panel .xf-bookmark-item:hover {
@@ -836,22 +830,8 @@ body.dark-mode .nav-division {
   color: var(--sw-gold);
   border-color: var(--sw-gold-border);
 }
-/* Five buttons need 384px to sit on one line (measured: 70+81+38+87+68,
-   plus four gaps and the padding). Below that, `flex: 1 1 auto` let them
-   wrap wherever their labels happened to end — which stranded the fifth
-   alone on a row of its own, giving the reading area three levels of
-   chrome beneath it instead of two.
-
-   A third-width basis makes the wrap deliberate: exactly three on the
-   first line, the last two growing to half each on the second. Two rows,
-   never three, never an orphan. Three-up needs only 289px, so it holds
-   down to the narrowest phone, and each button ends up BIGGER than five
-   crammed onto one line. Above 480px all five fit and the bar stays one
-   row. This has to live here, next to the flex it overrides: sw_theme.css
-   loads after nav_engine.css, so the same rule there would never win. */
-@media (max-width: 480px) {
-  #sw-reader-footer .controls-bottom button { flex: 1 1 calc(33.333% - 4px); }
-}
+/* one row always now — the arrows and the short labels under 430px are
+   in nav_engine.css */
 #sw-reader-footer .controls-bottom button.active,
 #sw-reader-footer .controls-bottom button#btn-translit.active {
   background: var(--sw-gold);

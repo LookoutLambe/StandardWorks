@@ -1881,13 +1881,11 @@
 
   function setDockNavButtonLabels(btn, hebDefault, enDefault, destLabel) {
     if (!btn) return;
-    var he = btn.querySelector('.nqd-nav-he');
-    var en = btn.querySelector('.nqd-nav-en');
-    if (he) he.textContent = hebDefault;
-    if (en) {
-      if (destLabel) en.textContent = destLabel;
-      else en.textContent = enDefault;
-    }
+    /* icon-only arrows: the destination chapter is the tooltip and the
+       accessible name, so "Next chapter — 1 Nephi 2" is still announced */
+    var base = enDefault === 'Next' ? 'Next chapter' : 'Previous chapter';
+    btn.title = destLabel ? (base + ' \u2014 ' + destLabel) : base;
+    btn.setAttribute('aria-label', btn.title);
   }
 
   function dockChapterDisplayLabel(chapterId) {
@@ -1911,6 +1909,9 @@
   }
 
   function syncChapterCenterBtn(label) {
+    /* the chapter control lives in the HEADER now (site_chrome.js); this
+       keeps its text current from the same label the dock used to show */
+    try { if (typeof window.swSyncChapterPill === 'function') window.swSyncChapterPill(label || dockChapterDisplayLabel(getCurrentChapterId())); } catch (ePill) {}
     var center = document.getElementById('nqd-chapter-now');
     if (!center) return;
     var text = label || dockChapterDisplayLabel(getCurrentChapterId());
@@ -2296,64 +2297,56 @@
     return fb ? (fb.isFront ? fb.prefix : fb.prefix + '1') : null;
   }
 
-  /* ── Reading-modes drawer ────────────────────────────────────────────
-     Collapses ONLY the mode bar; the header and the chapter nav row stay.
-     Phones start collapsed (two bands: reading + nav row) because five
-     modes cannot sit on one line above ~384px of width without dropping
-     under the 12px label floor. A reader who opens it is remembered, so
-     the default applies to the first visit only, never to a choice. */
-  var MODES_LS = 'sw-modes-collapsed';
+  /* ── The reader footer, 2026-09-04: the Spanish/Samoan shape ──────────
+       [ next ]  Interlinear · Hebrew · Dual · Translit · Nikkud  [ prev ]
+     One row. The five modes are the page's own .controls-bottom buttons,
+     re-labelled short and moved in here; the two arrows flank them.
 
-  function modesCollapsed() {
-    return document.body.classList.contains('sw-modes-collapsed');
-  }
+     The modes drawer, its grip, and the separate chapter-nav row are gone:
+     three bands of chrome under the reading were the complaint, and the
+     drawer's "collapsed by default on phones" put the modes out of reach
+     on the device they matter most on.
 
-  function syncModesToggle() {
-    var t = document.getElementById('nqd-modes-toggle');
-    if (!t) return;
-    var open = !modesCollapsed();
-    t.setAttribute('aria-expanded', open ? 'true' : 'false');
-    t.setAttribute('aria-label', open ? 'Hide reading modes' : 'Show reading modes');
-    t.title = open ? 'Hide reading modes' : 'Show reading modes';
-  }
+     Arrow direction is HEBREW-NATIVE and matches the swipe: the next
+     chapter is to the LEFT, as the next page of a Hebrew book is, so the
+     left arrow is Next and the right arrow is Previous. The Samoan reader
+     reads left-to-right and is mirrored; the shape is ported, not the
+     direction. */
+  var MODE_SHORT = {
+    'btn-inter': ['Interlinear', 'Inter'],
+    'btn-heb':   ['Hebrew', 'Heb'],
+    'btn-dual':  ['Dual', 'Dual'],
+    'btn-translit': ['Translit', 'Tr'],
+    'btn-nikkud':   ['Nikkud', 'Nk']
+  };
 
-  function setModesCollapsed(collapsed, remember) {
-    document.body.classList.toggle('sw-modes-collapsed', !!collapsed);
-    if (remember) { try { localStorage.setItem(MODES_LS, collapsed ? '1' : '0'); } catch (e) {} }
-    syncModesToggle();
-    requestAnimationFrame(function() { try { syncQuickDockLayout(); } catch (e2) {} });
-  }
-
-  function createModesToggle(modeBar) {
-    var t = document.createElement('button');
-    t.type = 'button';
-    t.id = 'nqd-modes-toggle';
-    t.className = 'nqd-modes-toggle';
-    t.setAttribute('aria-controls', modeBar.id);
-    /* Named, not just a bar. Collapsed by default, the modes are gone from
-       the screen entirely, so the way back has to say what it is. */
-    t.innerHTML = '<span class="nqd-grip" aria-hidden="true">' +
-      '<span class="nqd-chev">▲</span><span class="nqd-grip-label">Modes</span>' +
-      '</span>';
-    t.onclick = function(e) {
-      e.stopPropagation();          // never let it reach the double-tap collapse
-      setModesCollapsed(!modesCollapsed(), true);
-    };
-    /* The opening state must not animate — without this the bar paints
-       open and then visibly slides shut on every load. Transitions are
-       suppressed for one frame while the initial class is applied. */
-    document.body.classList.add('sw-modes-no-anim');
-    requestAnimationFrame(function() {
-      requestAnimationFrame(function() {
-        document.body.classList.remove('sw-modes-no-anim');
-      });
+  function relabelModeButtons(modeBar) {
+    modeBar.querySelectorAll('button').forEach(function(b) {
+      var pair = MODE_SHORT[b.id];
+      if (!pair) return;
+      /* keep the full old text as the accessible name and the tooltip */
+      var full = (b.textContent || '').replace(/\s+/g, ' ').trim();
+      if (!b.getAttribute('aria-label')) b.setAttribute('aria-label', full);
+      if (!b.title) b.title = full;
+      b.textContent = pair[0];
+      b.setAttribute('data-short', pair[1]);
+      b.classList.add('nqd-mode');
     });
-    // A stored choice wins; otherwise phones start collapsed.
-    var stored = null;
-    try { stored = localStorage.getItem(MODES_LS); } catch (e) {}
-    if (stored === '1' || stored === '0') setModesCollapsed(stored === '1', false);
-    else setModesCollapsed(window.innerWidth <= 480, false);
-    return t;
+  }
+
+  function createArrowButton(which) {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'nqd-nav-btn nqd-nav-' + which;
+    btn.id = which === 'prev' ? 'nqd-nav-prev' : 'nqd-nav-next';
+    btn.setAttribute('aria-label', which === 'prev' ? 'Previous chapter' : 'Next chapter');
+    btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+      'stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      (which === 'next' ? '<path d="M19 12H5"/><path d="m11 6-6 6 6 6"/>'
+                        : '<path d="M5 12h14"/><path d="m13 6 6 6-6 6"/>') +
+      '</svg>';
+    btn.onclick = function() { triggerChapterNav(which); };
+    return btn;
   }
 
   function createQuickDock() {
@@ -2371,49 +2364,26 @@
     footer.setAttribute('role', 'contentinfo');
     footer.setAttribute('aria-label', 'Reader footer');
 
-    var rowNav = document.createElement('div');
-    rowNav.className = 'nqd-row nqd-chapter-nav';
-    rowNav.setAttribute('role', 'toolbar');
-    rowNav.setAttribute('aria-label', 'Chapter navigation');
-    /* RTL: first item sits on the right — Previous right, Next left */
-    rowNav.appendChild(createChapterNavButton('prev', '\u05D4\u05E7\u05D5\u05D3\u05DD', 'Prev'));
-    var centerBtn = document.createElement('button');
-    centerBtn.type = 'button';
-    centerBtn.className = 'nqd-chapter-now';
-    centerBtn.id = 'nqd-chapter-now';
-    centerBtn.setAttribute('dir', 'ltr');
-    centerBtn.setAttribute('lang', 'en');
-    centerBtn.setAttribute('aria-label', 'Open book list');
-    centerBtn.innerHTML = '<span class="nqd-now-icon" aria-hidden="true">' +
-      '<svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" ' +
-      'stroke-width="1.7" stroke-linecap="round">' +
-      '<path d="M2 4h12M2 8h12M2 12h12"/></svg></span>' +
-      '<span class="nqd-now-label"></span>';
-    centerBtn.onclick = function(e) {
-      e.stopPropagation();
-      openBooksForCurrentVolume();
-    };
-    rowNav.appendChild(centerBtn);
-    rowNav.appendChild(createChapterNavButton('next', '\u05D4\u05D1\u05D0', 'Next'));
-    rowNav.setAttribute('title', 'Double-tap or double-click anywhere to show or hide reading modes');
-    footer.appendChild(rowNav);
+    var row = document.createElement('div');
+    row.className = 'nqd-row nqd-dock';
+    row.setAttribute('role', 'toolbar');
+    row.setAttribute('aria-label', 'Chapter navigation and reading modes');
 
-    /* The five reading modes need two rows on a phone, which put three
-       bands of chrome under the reading area. They slide away instead,
-       behind a grip, leaving the chapter nav row — one band.
-
-       This is deliberately NOT the double-tap's `reader-footer-hidden`:
-       that one also slides the HEADER off screen (site_chrome.css), which
-       is an immersive-reading gesture. Collapsing the modes must leave the
-       header and the nav row exactly where they are. */
+    relabelModeButtons(modeBar);
     modeBar.classList.add('sw-footer-modes');
     modeBar.id = modeBar.id || 'sw-footer-modes';
-    footer.appendChild(createModesToggle(modeBar));
-    footer.appendChild(modeBar);
+
+    /* the arrows are in the HEADER, flanking the chapter pill (site_chrome.js);
+       the footer is the five modes and nothing else */
+    row.appendChild(modeBar);
+    footer.appendChild(row);
+    /* either script may finish first: leave the factory where the header
+       can find it, and also try now in case the header is already built */
+    window.swArrowFactory = createArrowButton;
+    try { if (typeof window.swMountChapterNav === 'function') window.swMountChapterNav(createArrowButton); } catch (eArr) {}
 
     document.body.appendChild(footer);
     document.body.classList.add('sw-footer-ready');
-    syncModesToggle();   // the grip is only in the DOM now, so label it here
     syncQuickDockActive();
     hookDockChapterNavSync();
     installSwipeChapterNav();
@@ -2452,7 +2422,6 @@
       var bomLegacyBar = localStorage.getItem('bom-hide-bottom-bar');
       if (sw === '1' || leg === '1' || bomLegacyBar === '1') {
         document.body.classList.add('reader-footer-hidden');
-        setModesCollapsed(true, false);   // keep the grip honest on boot
         document.body.classList.add('hide-bottom-bar');
         if (leg === '1' && sw !== '1') {
           localStorage.setItem(READ_FTR_LS, '1');
@@ -2495,10 +2464,6 @@
       if (!document.querySelector('.controls-bottom')) return;
       var hidden = document.body.classList.toggle('reader-footer-hidden');
       document.body.classList.toggle('hide-bottom-bar', hidden);
-      /* the double-tap and the MODES grip are two ways to do one thing, so
-         they must move one piece of state. Without this the grip could say
-         "open" while the bar was force-hidden by reader-footer-hidden. */
-      setModesCollapsed(hidden, true);
       try {
         localStorage.setItem(READ_FTR_LS, hidden ? '1' : '0');
         localStorage.removeItem(READ_FTR_LS_LEGACY);
@@ -2650,12 +2615,15 @@
       installVersePositionTracker();
     },
     open: openSidebar,
+    openBooks: openBooksForCurrentVolume,
+    chapterNav: triggerChapterNav,
     openJumpSearch: openSidebarAndFocusSearch,
     close: closeSidebar,
     toggle: toggleSidebar,
     update: function(chapterId) {
       _config.currentChapter = chapterId;
       updateBreadcrumb();
+      try { syncChapterCenterBtn(); } catch (ePill) {}
       saveReadingPosition(_config.volume, chapterId);
       rememberTorahDockChapter(chapterId);
       syncQuickDockActive();

@@ -448,10 +448,13 @@ body.dark-mode .continue-reading .cr-heb { color: var(--chrome); }
   50% { opacity: 0.7; width: 6px; }
 }
 
-/* ── Unified reader footer: chapter nav · modes · volumes ── */
+/* ── The reader footer, 2026-09-04: one row, the Spanish/Samoan shape ──
+     Interlinear · Hebrew · Dual · Translit · Nikkud
+   The whole chapter control — next · chapter · previous — is in the HEADER
+   now (site_chrome.css); the footer carries the five modes and nothing
+   else. */
 #sw-reader-footer {
   display: flex;
-  flex-direction: column;
   position: fixed;
   left: 0;
   right: 0;
@@ -459,239 +462,102 @@ body.dark-mode .continue-reading .cr-heb { color: var(--chrome); }
   z-index: var(--z-chrome);
   box-sizing: border-box;
   width: 100%;
-  padding-bottom: env(safe-area-inset-bottom, 0px);
   background: var(--chrome);
   border-top: 2px solid color-mix(in srgb, var(--here-chrome) 35%, transparent);
   font-family: 'David Libre', serif;
-  direction: rtl;
+  direction: ltr;              /* the arrows are placed by hand, Hebrew order */
 }
-
-#sw-reader-footer .nqd-row,
-#sw-reader-footer > .controls-bottom {
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#sw-reader-footer .nqd-row {
+#sw-reader-footer .nqd-dock {
   display: flex;
-  flex-direction: row;
   align-items: stretch;
-  justify-content: space-around;
-  gap: 2px;
+  gap: 6px;
   width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
   box-sizing: border-box;
-}
-
-#sw-reader-footer .nqd-row.nqd-chapter-nav {
-  flex-direction: row;
-  direction: rtl;
-  justify-content: center;
-  align-items: stretch;
-  gap: 8px;                 /* adjacent touch targets need 8px of separation */
-  padding: 5px 8px;
-  border-bottom: 1px solid color-mix(in srgb, var(--here-chrome) 18%, transparent);
-  cursor: default;
+  padding: 6px max(8px, env(safe-area-inset-right, 0px))
+           max(6px, env(safe-area-inset-bottom, 0px))
+           max(8px, env(safe-area-inset-left, 0px));
   -webkit-user-select: none;
   user-select: none;
 }
-
-#sw-reader-footer .nqd-chapter-now {
-  flex: 1.4 1 0;
-  min-width: 0;
-  max-width: 46%;
-  min-height: 44px;         /* iOS 44pt minimum for a primary control */
-  margin: 0;
-  padding: 4px 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  border: 1px solid color-mix(in srgb, var(--here-chrome) 75%, transparent);
-  border-radius: 8px;
-  background: color-mix(in srgb, var(--here-chrome) 16%, transparent);
-  color: var(--on-chrome);
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 0.78em;
-  font-weight: 650;
-  line-height: 1.15;
-  text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  direction: ltr;
-  unicode-bidi: isolate;
-  -webkit-tap-highlight-color: transparent;
-}
-#sw-reader-footer .nqd-chapter-now:hover {
-  background: color-mix(in srgb, var(--here-chrome) 26%, transparent);
-}
-#sw-reader-footer .nqd-chapter-now:active {
-  background: color-mix(in srgb, var(--here-chrome) 34%, transparent);
-  transform: scale(0.985);
-}
-#sw-reader-footer .nqd-chapter-now .nqd-now-icon {
-  display: inline-flex;
-  flex: 0 0 auto;
-  opacity: 0.85;
-}
-#sw-reader-footer .nqd-chapter-now .nqd-now-label {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-/* Touch devices: Android asks for 48dp, and the control is the main way in */
-@media (pointer: coarse) {
-  #sw-reader-footer .nqd-chapter-now { min-height: 48px; font-size: 0.84em; }
-  #sw-reader-footer .nqd-nav-btn { min-height: 48px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  #sw-reader-footer .nqd-chapter-now:active { transform: none; }
-}
-
 #sw-reader-footer .nqd-nav-btn {
-  flex: 1 1 0;
-  max-width: 32%;
+  flex: 0 0 44px;
+  min-width: 44px;
   min-height: 44px;
   margin: 0;
-  padding: 2px 8px 3px;
+  padding: 0;
   border: 1px solid color-mix(in srgb, var(--here-chrome) 50%, transparent);
   border-radius: 6px;
   background: transparent;
   color: var(--sw-gold, var(--here-chrome));
   cursor: pointer;
-  font-family: inherit;
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 1px;
   -webkit-tap-highlight-color: transparent;
-}
-#sw-reader-footer .nqd-nav-he {
-  font-size: 0.95em;
-  font-weight: 700;
-  line-height: 1.1;
-}
-#sw-reader-footer .nqd-nav-en {
-  font-size: 0.7em;
-  opacity: 0.9;
-  line-height: 1.05;
 }
 #sw-reader-footer .nqd-nav-btn:hover:not(:disabled) {
   background: color-mix(in srgb, var(--here-chrome) 12%, transparent);
 }
 #sw-reader-footer .nqd-nav-btn:disabled {
-  /* 0.35 blended to rgb(105,93,58) on navy — 2.42:1, unreadable.
-     0.65 keeps them clearly de-emphasised but legible (5.02:1). */
+  /* 0.65 keeps a dead arrow clearly de-emphasised but legible (5.02:1) */
   opacity: 0.65;
   cursor: default;
 }
-
+/* the page's mode bar, moved inside the row: it is a flex child now, not a
+   fixed bar. Every !important here beats reader.css's fixed-position rule. */
 #sw-reader-footer .controls-bottom {
   position: static !important;
+  display: flex !important;
+  flex: 1 1 auto;
+  min-width: 0;
   bottom: auto !important;
   left: auto !important;
   right: auto !important;
-  width: 100% !important;
+  width: auto !important;
   max-width: none !important;
   z-index: auto !important;
-  flex-shrink: 0;
-  border-top: none;
-  border-bottom: 1px solid color-mix(in srgb, var(--here-chrome) 15%, transparent);
+  gap: 6px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  justify-content: center;
+  align-items: stretch;
 }
-
-#sw-reader-footer .nqd-row.nqd-volumes {
-  padding: 2px 4px 3px;
-}
-
-#sw-reader-footer .nqd-item {
+#sw-reader-footer .controls-bottom button {
   flex: 1 1 0;
   min-width: 0;
-  margin: 0;
-  padding: 2px 1px 1px;
-  border: none;
-  background: transparent;
-  color: color-mix(in srgb, var(--here-chrome) 82%, transparent);
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 0px;
-  -webkit-tap-highlight-color: transparent;
-  font: inherit;
-}
-#sw-reader-footer .nqd-icon {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-}
-#sw-reader-footer .nqd-lbl {
-  font-size: 0.54em;
-  font-weight: 600;
-  line-height: 1.1;
-  text-align: center;
-  max-width: 100%;
+  min-height: 44px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-#sw-reader-footer .nqd-item.active {
-  color: var(--on-chrome);
+/* Under 430px the five labels cannot all fit beside two arrows; the short
+   form on data-short takes over. The full name stays as the accessible
+   name and the tooltip. */
+@media (max-width: 360px) {
+  #sw-reader-footer .nqd-dock { gap: 4px; }
+  #sw-reader-footer .controls-bottom { gap: 4px !important; }
+  #sw-reader-footer .controls-bottom button.nqd-mode { font-size: 0; }
+  #sw-reader-footer .controls-bottom button.nqd-mode::after {
+    content: attr(data-short);
+    font-size: 12px;
+    line-height: 1.2;
+  }
 }
-#sw-reader-footer .nqd-item.active .nqd-icon {
-  color: var(--on-chrome);
+@media (pointer: coarse) {
+  #sw-reader-footer .nqd-nav-btn,
+  #sw-reader-footer .controls-bottom button { min-height: 48px; }
 }
-#sw-reader-footer .nqd-home.active .nqd-icon {
-  color: var(--on-chrome);
-}
-
 body.dark-mode #sw-reader-footer {
-  background: var(--chrome);
   border-top-color: color-mix(in srgb, var(--here-chrome) 28%, transparent);
 }
-body.dark-mode #sw-reader-footer .nqd-item {
-  color: color-mix(in srgb, var(--here-chrome) 75%, transparent);
-}
-body.dark-mode #sw-reader-footer .nqd-item.active {
-  color: var(--on-chrome);
-}
 
-/* Double-tap: collapse to chapter nav row only (single row, no extra safe-area buffer) */
+/* Double-tap / double-click: the whole footer goes (the header goes with it
+   in site_chrome.css). One row, so there is nothing to keep. */
 body.reader-footer-hidden #sw-reader-footer {
-  padding-bottom: 0;
-}
-/* .sw-footer-modes is deliberately NOT in this list any more. Two classes
-   were hiding the mode bar — this one and sw-modes-collapsed — and this one
-   used display:none !important, so tapping the MODES grip toggled
-   sw-modes-collapsed, the grip changed, and nothing appeared: the mode
-   buttons stayed hidden and every control in them was dead.
-   sw-modes-collapsed is the single owner of the mode bar now; the double-tap
-   drives it (nav_engine.js) instead of hiding the bar behind its back. */
-body.reader-footer-hidden #sw-reader-footer .nqd-volumes,
-body.reader-footer-hidden #sw-reader-footer > .controls-bottom:not(.sw-footer-modes) {
   display: none !important;
-  height: 0 !important;
-  min-height: 0 !important;
-  max-height: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  border: none !important;
-  overflow: hidden !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-}
-body.reader-footer-hidden #sw-reader-footer .nqd-chapter-nav {
-  display: flex !important;
-  flex: 0 0 auto;
-  border-bottom: none;
-  padding: 8px 12px max(8px, env(safe-area-inset-bottom, 0px));
-}
-body.reader-footer-hidden #sw-reader-footer .nqd-nav-btn,
-body.reader-footer-hidden #sw-reader-footer .nqd-chapter-now {
-  min-height: 44px;
 }
 @media (max-width: 900px) {
   #sw-reader-footer,
@@ -776,105 +642,7 @@ body.dark-mode #nav-sidebar .nl-tile { background: var(--surface-1) !important; 
 #nav-sidebar, #glossary-panel, #xref-panel, #annotations-panel,
 .nav-library, .rsc-panel-card { overscroll-behavior: contain; }
 
-/* Mode bar (Interlinear / Hebrew Only / Dual / Transliterate / No Nikkud):
-   44 px targets and 12 px labels — they were 32 px tall with 10.4 px text,
-   under both the touch and the legibility floors. */
-#sw-reader-footer .controls-bottom {
-  gap: 4px;
-  padding: 4px max(6px, env(safe-area-inset-left, 0px)) max(6px, env(safe-area-inset-bottom, 0px)) max(6px, env(safe-area-inset-right, 0px));
-  flex-wrap: wrap;
-  justify-content: center;
-}
-/* The mode buttons' flex basis (and its narrow-screen 3-up rule) lives in
-   sw_theme.css beside their sizing — that file loads after this one via
-   site_chrome.css's @import, so a copy here would silently lose. */
+/* (the modes drawer, its grip and its collapse rules were removed 2026-09-04
+   with the one-row footer) */
 
-/* ── The reading-modes drawer ──────────────────────────────────────────
-   The grip that slides the mode bar away. Full-width so it is easy to hit
-   but visually just a handle, not another band of chrome. */
-/* 36px, not the 16px the grip needs to be seen: once the modes collapse
-   this is the ONLY way back to them, and a 16px strip at the bottom edge
-   of a phone — right where the home indicator sits — is under every touch
-   floor this project holds itself to. The bar stays 4px; the button around
-   it is what the thumb gets. */
-.nqd-modes-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-height: 36px;
-  border: 0;
-  background: none;
-  padding: 6px 0 4px;
-  cursor: pointer;
-  line-height: 0;
-  -webkit-tap-highlight-color: transparent;
-}
-/* A bare 4px bar was NOT enough. On an iPhone it sits a few pixels from
-   the system home indicator — same shape, same place, same colour family —
-   so it read as part of iOS, not as a control, and with the modes
-   collapsed by default the reader was left with no visible way back to
-   them. It says what it does now: a chevron that points up when the modes
-   are away and flips when they are out, on a bar bright enough to be
-   read as ours. */
-.nqd-modes-toggle .nqd-grip {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  color: color-mix(in srgb, var(--on-chrome) 72%, transparent);
-  font-size: 11px;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  line-height: 1;
-  transition: color 0.15s;
-}
-.nqd-modes-toggle .nqd-grip::before,
-.nqd-modes-toggle .nqd-grip::after {
-  content: '';
-  width: 22px; height: 2px;
-  border-radius: 1px;
-  background: color-mix(in srgb, var(--on-chrome) 42%, transparent);
-}
-.nqd-modes-toggle .nqd-chev {
-  display: inline-block;
-  transition: transform 0.26s ease;
-  font-size: 10px;
-}
-/* modes are OUT — the chevron points down, "put them away" */
-.nqd-modes-toggle[aria-expanded="true"] .nqd-chev { transform: rotate(180deg); }
-.nqd-modes-toggle:hover .nqd-grip,
-.nqd-modes-toggle:focus-visible .nqd-grip { color: var(--here-chrome); }
-.nqd-modes-toggle:focus-visible { outline: 2px solid var(--here-chrome); outline-offset: -2px; }
-
-/* The slide itself. max-height rather than display:none so it animates;
-   the mode bar is short and fixed-height, so a generous ceiling is safe. */
-#sw-reader-footer > .controls-bottom.sw-footer-modes {
-  overflow: hidden;
-  max-height: 220px;
-  transition: max-height 0.26s ease, opacity 0.18s ease,
-              padding-top 0.26s ease, padding-bottom 0.26s ease;
-}
-/* !important on the padding is not decoration: reader.css sets
-   `.controls-bottom { padding: … !important }`, which beats this selector
-   however specific it is, and left a 15px strip of empty chrome behind
-   after the bar had slid shut. */
-body.sw-modes-collapsed #sw-reader-footer > .controls-bottom.sw-footer-modes {
-  max-height: 0;
-  opacity: 0;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  border-top: 0;
-  border-bottom: 0;
-  pointer-events: none;
-}
-/* collapsed, the grip is the footer's last row — give it the safe area */
-body.sw-modes-collapsed #sw-reader-footer .nqd-modes-toggle {
-  padding-bottom: max(5px, env(safe-area-inset-bottom, 0px));
-}
-/* first paint applies the opening state — it must not animate */
-body.sw-modes-no-anim #sw-reader-footer > .controls-bottom.sw-footer-modes { transition: none !important; }
-@media (prefers-reduced-motion: reduce) {
-  #sw-reader-footer > .controls-bottom.sw-footer-modes { transition: none; }
-}
 

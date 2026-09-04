@@ -51,8 +51,8 @@
 <link rel="icon" type="image/png" sizes="192x192" href="../icons/icon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="../icons/icon-180.png">
 <link rel="apple-touch-icon" href="../icons/icon-192.png">
-<link rel="stylesheet" href="../nav_engine.css?v=47">
-<link rel="stylesheet" href="../site_chrome.css?v=69">
+<link rel="stylesheet" href="../nav_engine.css?v=48">
+<link rel="stylesheet" href="../site_chrome.css?v=70">
 <link rel="stylesheet" href="../xref_study_panel.css?v=14">
 <link rel="stylesheet" href="../reader.css?v=76">
 <style>
@@ -11712,28 +11712,8 @@ applyAllAnnotations();
 addNoteMarkers();
 
 // Navigation hint toast — shows once per session on first chapter load
-(function() {
-  var hintKey = 'bom-nav-hint-seen';
-  function showNavHint() {
-    if (sessionStorage.getItem(hintKey)) return;
-    sessionStorage.setItem(hintKey, '1');
-    var el = document.getElementById('nav-hint');
-    if (!el) return;
-    var isMobile = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
-    el.textContent = isMobile
-      ? 'Use \u05d4\u05d1\u05d0 / \u05d4\u05e7\u05d5\u05d3\u05dd below for prev/next chapter'
-      : '\u2190 Arrow keys \u2192 for prev/next chapter';
-    el.classList.add('show');
-    setTimeout(function() { el.classList.remove('show'); }, 4000);
-  }
-  // Hook into navTo — trigger hint after first navigation
-  var origNavTo = window.navTo;
-  var hintFired = false;
-  window.navTo = function() {
-    origNavTo.apply(this, arguments);
-    if (!hintFired) { hintFired = true; setTimeout(showNavHint, 800); }
-  };
-})();
+/* the first-visit nav hint was removed 2026-09-04: it described the
+   הבא / הקודם buttons, which the one-row footer no longer has */
 
 </script>
 
@@ -11764,9 +11744,9 @@ try {
 
 </script>
 
-<script src="../site_chrome.js?v=43" data-sw-volume="bom"></script>
+<script src="../site_chrome.js?v=44" data-sw-volume="bom"></script>
 <script src="../verse_search.js?v=3"></script>
-<script src="../nav_engine.js?v=65"></script>
+<script src="../nav_engine.js?v=66"></script>
 <script src="../xref_study_panel.js?v=6"></script>
 <script>
 NavEngine.init({

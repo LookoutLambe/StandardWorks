@@ -169,20 +169,136 @@
     return hidden;
   }
 
+  function isReader() {
+    return !!document.querySelector('.controls-bottom');
+  }
+
   function createHomeLink() {
-    // User ruling 2026-08-30: the כה"ק mark opens the navigation drawer (the
-    // hamburger is gone — the center title is the home link, so the mark and
-    // the title no longer duplicate each other).
-    var a = document.createElement('button');
-    a.type = 'button';
+    /* 2026-09-04: the reader header is the Spanish/Samoan shape now —
+         home · chapter pill · Aa · theme · search
+       so on a READER page the כה"ק mark is the way home, and the chapter
+       pill in the centre is the way into the books (it opens the drawer at
+       the volume in hand). That reverses the 2026-08-30 ruling for reader
+       pages only, because the centre title that ruling made the home link
+       is the thing the pill replaces. On the hub the mark still opens the
+       drawer: the hub has no pill, and its title is already the home link. */
+    var reader = isReader();
+    var a = document.createElement(reader ? 'a' : 'button');
+    if (reader) a.href = hubUrl(); else a.type = 'button';
     a.className = 'sw-chrome-home';
-    a.setAttribute('aria-label', 'Open books and navigation');
-    a.title = 'Books and navigation';
+    a.setAttribute('aria-label', reader ? 'Home \u2014 Standard Works' : 'Open books and navigation');
+    a.title = reader ? 'Home' : 'Books and navigation';
     a.style.cssText = 'background:none;border:none;padding:0;cursor:pointer';
     a.innerHTML = '<img src="' + assetBase() + 'icons/sw-mark.svg?v=3" alt="" style="width:38px;height:38px;display:block;border-radius:9px">';
-    a.addEventListener('click', openMenu);
+    if (!reader) a.addEventListener('click', openMenu);
     return a;
   }
+
+  /* ── The reader header's three controls ───────────────────────────── */
+  function createChapterPill() {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.id = 'sw-chrome-chapter';
+    b.className = 'sw-chrome-pill';
+    b.setAttribute('aria-label', 'Open the book list');
+    b.setAttribute('dir', 'ltr');
+    b.innerHTML = '<span class="sw-chrome-pill-text"></span><span class="sw-chrome-pill-caret" aria-hidden="true">\u25BE</span>';
+    b.addEventListener('click', function (e) {
+      e.stopPropagation();
+      try {
+        if (window.NavEngine && typeof NavEngine.openBooks === 'function') { NavEngine.openBooks(); return; }
+      } catch (err) {}
+      openMenu();
+    });
+    return b;
+  }
+
+  /* Aa opens the two-step size control the readers already have (A- / A+
+     over the hidden #sizeSlider), in a small popover under the button.
+     One button in the bar, the control on demand — the Samoan reader does
+     the same with a sheet. */
+  function createSizeButton() {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.id = 'sw-chrome-size';
+    b.className = 'sw-chrome-btn sw-chrome-size';
+    b.setAttribute('aria-label', 'Text size');
+    b.setAttribute('aria-haspopup', 'true');
+    b.setAttribute('aria-expanded', 'false');
+    b.title = 'Text size';
+    b.textContent = 'Aa';
+    b.addEventListener('click', function (e) {
+      e.stopPropagation();
+      toggleSizePopover();
+    });
+    return b;
+  }
+
+  function sizePopover() {
+    var pop = document.getElementById('sw-size-pop');
+    if (pop) return pop;
+    pop = document.createElement('div');
+    pop.id = 'sw-size-pop';
+    pop.className = 'sw-size-pop';
+    pop.setAttribute('role', 'group');
+    pop.setAttribute('aria-label', 'Text size');
+    pop.hidden = true;
+    pop.innerHTML =
+      '<button type="button" class="sw-size-btn" aria-label="Smaller text">A<span aria-hidden="true">\u2212</span></button>' +
+      '<span class="sw-size-pct" aria-live="polite"></span>' +
+      '<button type="button" class="sw-size-btn sw-size-btn-up" aria-label="Larger text">A<span aria-hidden="true">+</span></button>';
+    var btns = pop.querySelectorAll('.sw-size-btn');
+    btns[0].addEventListener('click', function () { window.stepSize(-10); syncSizePct(); });
+    btns[1].addEventListener('click', function () { window.stepSize(10); syncSizePct(); });
+    document.body.appendChild(pop);
+    document.addEventListener('click', function (e) {
+      if (pop.hidden) return;
+      if (e.target.closest && (e.target.closest('#sw-size-pop') || e.target.closest('#sw-chrome-size'))) return;
+      toggleSizePopover(false);
+    });
+    return pop;
+  }
+
+  function syncSizePct() {
+    var pct = document.querySelector('#sw-size-pop .sw-size-pct');
+    var s = document.getElementById('sizeSlider');
+    if (pct) pct.textContent = (s ? s.value : '100') + '%';
+  }
+
+  function toggleSizePopover(force) {
+    var pop = sizePopover();
+    var btn = document.getElementById('sw-chrome-size');
+    var show = typeof force === 'boolean' ? force : pop.hidden;
+    pop.hidden = !show;
+    if (btn) btn.setAttribute('aria-expanded', show ? 'true' : 'false');
+    if (show) syncSizePct();
+  }
+
+  /* NavEngine hands over its arrow-button factory once the dock exists; the
+     header seats them either side of the pill. Same ids as before
+     (#nqd-nav-prev / #nqd-nav-next), so nothing that syncs them changed. */
+  window.swMountChapterNav = function (makeArrow) {
+    var nav = document.getElementById('sw-chrome-nav');
+    if (!nav || nav.querySelector('.nqd-nav-btn')) return;
+    var pill = nav.querySelector('#sw-chrome-chapter');
+    nav.insertBefore(makeArrow('next'), pill);   /* left  */
+    nav.appendChild(makeArrow('prev'));          /* right */
+    try { if (typeof window.updateNavButtons === 'function') window.updateNavButtons(); } catch (e) {}
+  };
+
+  /* The pill's text comes from the reader's own chapter label; NavEngine
+     calls this on every chapter change. */
+  window.swSyncChapterPill = function (label) {
+    var t = document.querySelector('#sw-chrome-chapter .sw-chrome-pill-text');
+    if (!t) return;
+    var text = label;
+    if (!text) {
+      try { if (typeof window.getChapterLabel === 'function') text = String(window.getChapterLabel(window.currentChapterId || '')).replace(/\s*\u25BE\s*$/, ''); } catch (e) {}
+    }
+    t.textContent = text || 'Books';
+    var pill = document.getElementById('sw-chrome-chapter');
+    if (pill) pill.setAttribute('aria-label', (text || 'Books') + ' \u2014 open the book list');
+  };
 
   function ensureHomeLink() {
     var bar = document.querySelector('.sw-top-bar-inner');
@@ -229,13 +345,16 @@
 
     var toolsGroup = controls.querySelector('.tools-group');
     if (toolsGroup) {
+      /* The page's stepper and its hidden #sizeSlider are kept, out of the
+         bar, as the value store the Aa popover drives. Nothing else from the
+         legacy tools row goes into the header: search has its own icon now,
+         and the glossary / annotations / study panels are in the drawer. */
       var sliderLabel = toolsGroup.querySelector('.sw-size-stepper, label');
-      if (sliderLabel) {
-        tools.innerHTML = '';
-        tools.appendChild(sliderLabel);
-      }
+      if (sliderLabel) ensureNavHidden().appendChild(sliderLabel);
       var darkLegacy = toolsGroup.querySelector('#dark-mode-toggle');
       if (darkLegacy) ensureNavHidden().appendChild(darkLegacy);
+      tools.innerHTML = '';
+      tools.appendChild(createSizeButton());
     }
 
     controls.remove();
@@ -253,19 +372,40 @@
     header.id = 'sw-top-bar';
     header.className = 'sw-top-bar';
     header.setAttribute('role', 'banner');
+    var reader = isReader();
     header.innerHTML =
       '<div class="sw-top-bar-inner">' +
-        ''+   /* hamburger removed 2026-08-30 — the כה"ק mark opens the drawer */
-        '<a class="sw-top-bar-brand" href="' + hubUrl() + '" aria-label="Home — Hebrew Interlinear Standard Works">' +
-          '<span class="sw-top-bar-brand-he" lang="he" dir="rtl">\u05DB\u05EA\u05D1\u05D9 \u05D4\u05E7\u05D5\u05D3\u05E9</span>' +
-          '<span class="sw-top-bar-brand-en">Standard Works</span>' +
-        '</a>' +
-        '<div class="sw-top-bar-tools" id="sw-chrome-tools" aria-label="Font size"></div>' +
+        (reader
+          ? ''   /* the chapter pill is inserted below, after the home mark */
+          : '<a class="sw-top-bar-brand" href="' + hubUrl() + '" aria-label="Home — Hebrew Interlinear Standard Works">' +
+              '<span class="sw-top-bar-brand-he" lang="he" dir="rtl">\u05DB\u05EA\u05D1\u05D9 \u05D4\u05E7\u05D5\u05D3\u05E9</span>' +
+              '<span class="sw-top-bar-brand-en">Standard Works</span>' +
+            '</a>') +
+        '<div class="sw-top-bar-tools" id="sw-chrome-tools" aria-label="Text size"></div>' +
         '<button type="button" class="sw-chrome-btn" id="sw-chrome-dark" aria-label="Toggle dark mode">\u263D</button>' +
-      '</div>' +
-      ''   /* breadcrumb slot deleted 2026-08-29 */;
+      '</div>';
 
     document.body.insertBefore(header, document.body.firstChild);
+
+    if (reader) {
+      var inner = header.querySelector('.sw-top-bar-inner');
+      /* the chapter control is the three cells the footer used to carry —
+         next · chapter · previous, in Hebrew order (next to the LEFT, as the
+         next page of a Hebrew book is) — moved up here as one group. The
+         arrows are supplied by NavEngine when it builds the dock, so their
+         disabled state and destination tooltips keep syncing unchanged. */
+      var nav = document.createElement('div');
+      nav.className = 'sw-chrome-nav';
+      nav.id = 'sw-chrome-nav';
+      nav.setAttribute('role', 'group');
+      nav.setAttribute('aria-label', 'Chapter');
+      nav.appendChild(createChapterPill());
+      inner.insertBefore(nav, inner.firstChild);
+      /* no search icon: search is the top of the left slide-out, where the
+         drawer already has it */
+      window.swSyncChapterPill();
+      if (typeof window.swArrowFactory === 'function') window.swMountChapterNav(window.swArrowFactory);
+    }
 
     document.getElementById('sw-chrome-dark').addEventListener('click', function () {
       window.toggleDark();

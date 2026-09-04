@@ -1,4 +1,4 @@
-@import url('sw_theme.css?v=47');
+@import url('sw_theme.css?v=48');
 
 
 /* Hide body until chrome + footer are wired (prevents legacy bar flash) */
@@ -158,17 +158,104 @@ html:has(link[href*="site_chrome.css"]) #main-content {
    the two ends, each side carries one idea: identity + appearance on the
    left, the reading control on the right. The hub keeps the moon on the
    right — it has no size stepper, and the shopping bag holds that corner. */
+/* ── The READER header, 2026-09-04: the Spanish/Samoan shape ─────────────
+     home · [ next · chapter · prev ] · Aa · theme
+   One row. The chapter group is the way into the books (the pill opens the
+   drawer at this volume) and says where you are. Search is not here: it is
+   the top of the left slide-out, where the drawer already has it. */
 body.sw-chrome-reader .sw-top-bar-inner {
-  grid-template-columns: auto auto auto 1fr auto;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 6px;
 }
-body.sw-chrome-reader #sw-chrome-dark {
-  grid-column: 3;
-  justify-self: start;
+body.sw-chrome-reader .sw-chrome-home     { grid-column: 1; }
+body.sw-chrome-reader #sw-chrome-nav      { grid-column: 2; }
+body.sw-chrome-reader .sw-top-bar-tools   { grid-column: 3; justify-self: end; }
+body.sw-chrome-reader #sw-chrome-dark     { grid-column: 4; justify-self: end; }
+
+/* next · chapter · previous, one group, the pill taking the slack */
+.sw-chrome-nav {
+  min-width: 0;
+  display: flex;
+  align-items: stretch;
+  gap: 4px;
 }
-body.sw-chrome-reader .sw-top-bar-tools {
-  grid-column: 5;
-  justify-self: end;
+.sw-chrome-nav .sw-chrome-pill { flex: 1 1 auto; }
+.sw-chrome-nav .nqd-nav-btn {
+  flex: 0 0 44px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: 1px solid var(--sw-gold-border, var(--here-chrome));
+  border-radius: 6px;
+  background: transparent;
+  color: var(--sw-gold, var(--here-chrome));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
+.sw-chrome-nav .nqd-nav-btn:hover:not(:disabled) { background: color-mix(in srgb, var(--here-chrome) 14%, transparent); }
+.sw-chrome-nav .nqd-nav-btn:disabled { opacity: 0.55; cursor: default; }
+
+.sw-chrome-pill {
+  min-width: 0;
+  min-height: 44px;
+  padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid var(--sw-gold-border, var(--here-chrome));
+  border-radius: 6px;
+  color: var(--sw-gold, var(--here-chrome));
+  font-family: 'David Libre', serif;
+  font-size: 0.95em;
+  font-weight: 650;
+  line-height: 1.15;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+}
+.sw-chrome-pill-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+.sw-chrome-pill-caret { flex: 0 0 auto; opacity: 0.8; font-size: 0.85em; }
+.sw-chrome-pill:hover { background: color-mix(in srgb, var(--here-chrome) 14%, transparent); }
+.sw-chrome-pill:focus-visible { outline: 2px solid var(--sw-gold, var(--here-chrome)); outline-offset: 2px; }
+
+.sw-chrome-size { font-family: 'David Libre', serif; font-weight: 700; font-size: 1.05em; letter-spacing: 0.01em; }
+
+/* the Aa popover: the two-step control, under the button, on chrome */
+.sw-size-pop {
+  position: fixed;
+  top: calc(var(--sw-chrome-h, 58px) + env(safe-area-inset-top, 0px) + 4px);
+  right: max(10px, env(safe-area-inset-right, 0px));
+  z-index: calc(var(--z-chrome) + 1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background: var(--header-bg);
+  border: 1px solid var(--sw-gold-border, var(--here-chrome));
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+.sw-size-pop[hidden] { display: none; }
+.sw-size-pop .sw-size-pct { min-width: 3.2em; text-align: center; color: var(--sw-gold, var(--here-chrome)); font-size: 0.85em; font-variant-numeric: tabular-nums; }
+.sw-size-pop .sw-size-btn {
+  min-width: 44px; min-height: 44px;
+  background: transparent;
+  border: 1px solid var(--sw-gold-border, var(--here-chrome));
+  border-radius: 6px;
+  color: var(--sw-gold, var(--here-chrome));
+  font-family: 'David Libre', serif; font-size: 1em; cursor: pointer;
+}
+.sw-size-pop .sw-size-btn:hover { background: color-mix(in srgb, var(--here-chrome) 14%, transparent); }
 
 #sw-chrome-menu {
   grid-column: 1;
@@ -319,8 +406,7 @@ body.has-sw-chrome .dict-wrap {
   body.has-sw-chrome { --sw-chrome-h: 46px; }
   .sw-top-bar { padding-bottom: 3px; }
   .sw-top-bar-inner { min-height: 40px; }
-  #sw-reader-footer .nqd-chapter-nav { padding-top: 3px; padding-bottom: 3px; }
-  #sw-reader-footer .nqd-modes-toggle { min-height: 28px; padding: 4px 0 3px; }
+  #sw-reader-footer .nqd-dock { padding-top: 3px; padding-bottom: max(3px, env(safe-area-inset-bottom, 0px)); }
 }
 
 @media print {
@@ -352,9 +438,10 @@ body.has-sw-chrome .dict-wrap {
     width: 56px;
   }
   .sw-chrome-btn {
-    min-width: 40px;
-    padding: 6px 8px;
+    min-width: 44px;
+    padding: 6px 6px;
   }
+  .sw-chrome-pill { padding: 6px 8px; font-size: 0.88em; }
   .sw-chrome-home {
     min-width: 44px;
     min-height: 44px;
