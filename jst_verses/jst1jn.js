@@ -9,7 +9,7 @@ renderVerseSet(jst1jn_ch1Verses, 'jst1jn-ch1-verses');
 
 // === CH2: JST 1 John 3:9 ===
 var jst1jn_ch2Verses = [
-  { num:"ט", words:[["כׇּל־הַנּוֹלָד","whosoever-is-born"],["מֵאֱלֹהִים","of-God"],["לֹא","not"],["יוֹסִיף","doth-continue"],["לַחֲטֹא","in-sin"],["כִּי","for"],["רוּחַ","the-Spirit-of"],["אֱלֹהִים","God"],["בּוֹ","in-him"],["תִּשָּׁאֵר","remaineth"],["וְלֹא","and-not"],["יוּכַל","he-can"],["לְהוֹסִיף","continue"],["לַחֲטֹא","in-sin"],["כִּי","because"],["מֵאֱלֹהִים","of-God"],["נוֹלַד","he-is-born"],["בְּקַבְּלוֹ","having-received"],["אֶת־רוּחַ","the-Spirit-of"],["הַקֹּדֶשׁ","holy"],["הַהִיא","that"],["רוּחַ","the-Spirit-of"],["הַהַבְטָחָה","promise"],["׃",""]] }
+  { num:"ט", words:[["כׇּל־הַנּוֹלָד","whosoever-is-born"],["מֵאֱלֹהִים","of-God"],["לֹא","not"],["יוֹסִיף","doth-continue"],["לַחֲטֹא","in-sin"],["כִּי","for"],["רוּחַ","the-Spirit-of"],["אֱלֹהִים","God"],["בּוֹ","in-him"],["תִּשָּׁאֵר","remaineth"],["וְלֹא","and-not"],["יוּכַל","he-can"],["לְהוֹסִיף","continue"],["לַחֲטֹא","in-sin"],["כִּי","because"],["מֵאֱלֹהִים","of-God"],["נוֹלַד","he-is-born"],["בְּקַבְּלוֹ","having-received"],["אֶת־רוּחַ־הַקֹּדֶשׁ","holy-Spirit"],["הַהִיא","that"],["רוּחַ","the-Spirit-of"],["הַהַבְטָחָה","promise"],["׃",""]] }
 ];
 renderVerseSet(jst1jn_ch2Verses, 'jst1jn-ch2-verses');
 
