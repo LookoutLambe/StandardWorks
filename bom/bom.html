@@ -8020,7 +8020,12 @@ detailHtml += '<div class="rsc-slot">';   // RootScorecard upgrades this block w
       }
       detailHtml += '<br><span style="cursor:pointer;color:var(--accent);text-decoration:underline;font-size:0.9em;" onclick="event.stopPropagation();closePopup();openRootXrefPanel(\'' + root.replace(/'/g,"\\'") + '\')">View all references →</span>';
     } else {
-      detailHtml += '<span>Occurrences:</span> ' + (sInfo ? sInfo.count : 1);
+      // No sInfo means the form is not in this volume's verse text at all —
+      // chapter-summary vocabulary is the usual case, since wordFreq is built
+      // from _verseRegistry only. Printing "Occurrences: 1" there invented a
+      // count for a word that occurs zero times in the corpus; say so instead.
+      if (sInfo) detailHtml += '<span>Occurrences:</span> ' + sInfo.count;
+      else detailHtml += '<span style="font-style:italic;color:var(--ink-2);font-size:0.9em;">Not in the verse text \u2014 chapter summary only</span>';
     }
 
     // Show alternate glosses for this exact form
@@ -9120,11 +9125,44 @@ updateNavButtons();
     var hebHeadings = (typeof _chapterHeadingsHeb !== 'undefined') ? _chapterHeadingsHeb : {};
     // Heading-specific gloss overrides for words whose verse-data lookup gives wrong/missing results
     var _headGloss = {
+      'אֲהֵבָם':'He loveth them',
+      'אֲשֶׁר':'which',
+      'אֹתוֹת':'signs',
+      'א–ב':'1–2',
+      'בְּיַד':'by the hand of',
+      'בְּכַוָּנַת':'with the intent of',
+      'בִּקְהִלַּת':'in the church of',
+      'בַּחוּרֵי':'the stripling sons of',
+      'בַּכַּפָּרָה':'through the Atonement',
+      'בַּעֲבוּר':'because of',
+      'בָּאוּ':'came',
+      'בָּהּ':'in which',
+      'דְאֹג':'to take thought',
+      'הַיְרִיבוֹת':'rival',
+      'הַשְׁמָדַת':'the destruction of',
+      'וְיִזּוֹן':'and nourished',
+      'וְנב':'and 52',
+      'חֶסֶד':'mercy',
+      'יְשַׁחְרֵר':'would deliver',
+      'יִנָּטַע':'shall be planted',
+      'יֵעָצֵר':'shall be kept',
+      'יָדַע':'know',
+      'יָחֵלּוּ':'shall begin',
+      'יוּכְלוּ':'can',
+      'יוּכַל':'can',
+      'לְבִלְתִּי':'not to',
+      'לָמָנֵי':'the Lamanites of',
+      'מְשַׁמְּרוֹת':'preserve',
+      'מִמֶּנּוּ':'from which',
+      'מַטְבְּעוֹת':'the coins of',
       'מַתְחִיל':'begins','רוֹאֶה':'sees','בַּחָזוֹן':'in vision','עַמּוּד':'pillar',
       'וְקוֹרֵא':'and reads','מְהַלֵּל':'praises','מְנַבֵּא':'prophesies',
       'וּמִתְנַבֵּא':'and prophesies','נִרְדָּף':'is persecuted','בִּידֵי':'by',
       'הַיְּהוּדִים':'the Jews','הַיְּהוּדִים.':'the Jews','בְּעֵרֶךְ':'about',
       'לפנה״ס.':'B.C.','לפנה״ס':'B.C.','לסה״נ.':'A.D.','לסה״נ':'A.D.',
+      'נִבְלְלָה':'was confounded',
+      'עֲלֵיהֶן':'of whom',
+      'עֲנָפָיו':'its branches',
       'עַל':'about/upon','לוֹקֵחַ':'takes','מִשְׁפַּחְתּוֹ':'his family',
       'הַמִּדְבָּר':'the wilderness','עוֹזְבִים':'leave','רְכוּשָׁם':'their property',
       'מַקְרִיב':'offers','זֶבַח':'sacrifice','וּמְלַמֵּד':'and teaches',
@@ -9141,6 +9179,9 @@ updateNavButtons();
       'בְּמִצְוַת':'at command of','מַשִּׂיג':'secures','בְּתַחְבּוּלָה':'by stratagem',
       'בּוֹחֵר':'chooses','לְהִצְטָרֵף':'to join','מִשְׁפַּחַת':'family of',
       'בַּמִּדְבָּר':'in the wilderness','מִתְלוֹנֶנֶת':'complains','שְׁנֵיהֶם':'both',
+      'צֹרֶךְ':'need',
+      'קָדְמוּ':'went before',
+      'קָנָה':'acquired',
       'שְׂמֵחִים':'rejoice','שׁוּב':'return','בְּנֵיהֶם':'their sons',
       'מַקְרִיבִים':'offer','זְבָחִים':'sacrifices','מְכִילִים':'contain',
       'כִּתְבֵי':'writings of','הַנְּבִיאִים':'the prophets','מְזַהִים':'identify',
@@ -9190,6 +9231,9 @@ updateNavButtons();
       'גֵּוּוֹ':'his body',
       'מְסַמֶּלֶת':'symbolizes',
       'דֻגְמָה':'a type/pattern',
+      'שָׁבוּ':'repent',
+      'תְּבַקֵּשׁ':'seeketh',
+      'תִּבָּנֶה':'shall be built',
       'תֵּאָמַנְנָה':'shall be believed',
       'רַשָּׁאִים':'the wicked',
       'הַעֲלָאַת':'the offering of',
@@ -9213,6 +9257,8 @@ updateNavButtons();
       'הָאֲמָלֵקִים':'the Amalekites',
       'וּמְגַיְּרִים':'and converting',
       'דּוֹחִים':'reject',
+      'תָּבוֹאנָה':'shall come',
+      'תָבוֹא':'shall come',
       'תּוֹקְפָנוּת':'aggression',
       'מְתִשֶּׁשֶׁת':'is weakened',
       'לוֹעֵג':'mocks',
@@ -9265,8 +9311,7 @@ updateNavButtons();
       'כְּמִישׁ':'Chemish',
       'לָהֶם':'to them',
       'לַנֶּאֱמָנִים':'to the faithful',
-      'מְחֻלָּקוֹת':'are distributed'
-    ,
+      'מְחֻלָּקוֹת':'are distributed',
       '(אֲבִינָדִי)':'(Abinadi)',
       '(הַמָּשִׁיחַ)':'(the Messiah)',
       '(הָעוֹלָם)':'(the world)',
@@ -9330,7 +9375,7 @@ updateNavButtons();
       'אֶפְרוֹחֶיהָ':'gathers her chickens',
       'אֶצְבַּע':'finger of',
       'אֶרֶץ':'the land of',
-      'אֶת':'',
+      'אֵת':'',
       'אֶתֶר':'Ether',
       'אֶת־תּוֹלְדוֹת':'the genealogy of',
       'אַבְנֵי':'stones of',
@@ -9623,7 +9668,7 @@ updateNavButtons();
       'גּוּפוֹת':'the bodies of',
       'גוּפָנִי':'my vines',
       'גוּפָנִיּוֹת':'temporal',
-      'ד':'',
+      'ד':'4',
       'דְּבַר':'the word of',
       'דְּבָרִים':'things',
       'דְּחִיַּת':'the rejection of',
@@ -9652,7 +9697,7 @@ updateNavButtons();
       'דּוֹמָה':'is like unto',
       'דּוֹרְשִׁים':'claim',
       'דּוֹרֵשׁ':'requires',
-      'ה':'verse',
+      'ה':'5',
       'הֲמוֹנֵי':'multitudes of',
       'הֲשָׁבַת':'the restoration of',
       'הִוָּעֲצוּ':'take counsel',
@@ -9907,7 +9952,7 @@ updateNavButtons();
       'הוֹלֵךְ':'going',
       'הוּסְרוּ':'were taken away',
       'הוּשְׁמְדוּ':'were destroyed',
-      'ו':'the 6th',
+      'ו':'6',
       'וְאִישׁ':'and a man',
       'וְאֵין':'and there is no',
       'וְאֵיתָנִים':'and firm',
@@ -9915,7 +9960,7 @@ updateNavButtons();
       'וְאֶחָיו':'and his brethren',
       'וְאֶל':'and',
       'וְאֶמְצָעֵיהֶם':'and their means',
-      'וְאֶת':'and',
+      'וְאֵת':'and',
       'וְאַהֲבָה':'and charity',
       'וְאַחֲרָיו':'and after it',
       'וְאַחַר':'and then',
@@ -10260,7 +10305,7 @@ updateNavButtons();
       'וּתְרוּמוֹת':'and the offering of',
       'וּתְשׁוּבָה':'and repentance',
       'וּתַחְבּוּלָה':'and stratagem',
-      'ז':'7th',
+      'ז':'7',
       'זְכוּת':'a right',
       'זְמַן':'time',
       'זְנוּת':'fornication',
@@ -10280,7 +10325,7 @@ updateNavButtons();
       'זָרַחֶמְלָה':'Zarahemla',
       'זוֹ':'this',
       'זוֹכִים':'gain',
-      'ח':'and 8th',
+      'ח':'8',
       'חֲדָשָׁה':'new',
       'חֲדָשׁוֹת':'new',
       'חֲזוֹן':'a vision',
@@ -10473,10 +10518,10 @@ updateNavButtons();
       'יֻגְלוּ':'shall be revealed',
       'יֻלַּד':'he was born',
       'יֻרְכְּבוּ':'be grafted in',
-      'יא':'eleventh',
-      'יב':'',
-      'יג':'',
-      'יד':'hands',
+      'יא':'11',
+      'יב':'12',
+      'יג':'13',
+      'יד':'14',
       'יוֹדֵעַ':'knoweth',
       'יוֹחָנָן':'John',
       'יוֹם':'day',
@@ -10552,7 +10597,7 @@ updateNavButtons();
       'כּוֹעֵס':'is angry',
       'כּוֹפְרִים':'deny',
       'כּוֹפֵר':'denying',
-      'כט':'',
+      'כט':'29',
       'לְאִישׁ':'for a man',
       'לְאַחַר':'after',
       'לְאַלְמָא':'unto Alma',
@@ -11103,9 +11148,9 @@ updateNavButtons();
       'מוּמָתִים':'killed',
       'מוּצָא':'ore',
       'מוּשְׁמֶדֶת':'is destroyed',
-      'מח':'',
-      'מט':'falling down',
-      'נ':'',
+      'מח':'48',
+      'מט':'49',
+      'נ':'50',
       'נְבִיאִים':'prophets',
       'נְבִיאֵי':'the prophets of',
       'נְבוּאָה':'prophecy',
@@ -11213,9 +11258,9 @@ updateNavButtons();
       'נָתַן':'gave',
       'נֹהֲגִים':'drove',
       'נֹחַ':'Noah',
-      'נא':'',
-      'נג':'',
-      'נד':'a heap',
+      'נא':'51',
+      'נג':'53',
+      'נד':'54',
       'נוֹדְדִים':'wanderers',
       'נוֹלְדוּ':'have been born',
       'נוֹלַד':'was born',
@@ -11605,12 +11650,19 @@ updateNavButtons();
       'תּוֹרוֹתָיו':'his doctrines',
       'תּוֹשָׁבֶיהָ':'its inhabitants',
       'תּוּשְׁמַד':'will be destroyed',
-      'תוֹעֵבָה':'abominable'
+      'תוֹעֵבָה':'abominable',
+      'תוּכַל':'can'
     };
     var hebText = hebHeadings[key];
     if (hebText) {
-      // Strip trailing date annotation like "בְּעֵרֶךְ 200–187 לפנה״ס." before rendering interlinear
-      hebText = hebText.replace(/\s*בְּעֵרֶךְ[\s\S]*$/, '').replace(/\s*\.\s*$/, '').trim();
+      // Strip the trailing date annotation ("בְּעֵרֶךְ 200–187 לפנה״ס.") before
+      // rendering the interlinear. Two headings qualify their dates by verse
+      // range — Alma 17 "פְּסוּקִים א–ג בְּעֵרֶךְ …" and Alma 56 "פָּסוּק 1 בְּעֵרֶךְ …" —
+      // and anchoring only on בְּעֵרֶךְ left that qualifier standing, so "verse 1"
+      // rendered as heading words with glosses of their own.
+      hebText = hebText
+        .replace(/\s*(?:(?:פָּסוּק|פְּסוּקִים)\s*[\d\u05D0-\u05EA\u05B0-\u05BC–—-]+\s*)?בְּעֵרֶךְ[\s\S]*$/, '')
+        .replace(/\s*\.\s*$/, '').trim();
       var flowDiv = document.createElement('div');
       flowDiv.className = 'heading-flow';
       var hebWords = hebText.split(/\s+/);

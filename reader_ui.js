@@ -885,7 +885,12 @@ detailHtml += '<div class="rsc-slot">';   // RootScorecard upgrades this block w
     } else if (_ttTerm) {
       detailHtml += RootScorecard.ttNoteHtml(hText);
     } else {
-      detailHtml += '<span>Occurrences:</span> ' + (sInfo ? sInfo.count : 1);
+      // No sInfo means the form is not in this volume's verse text at all —
+      // chapter-summary vocabulary is the usual case, since wordFreq is built
+      // from _verseRegistry only. Printing "Occurrences: 1" there invented a
+      // count for a word that occurs zero times in the corpus; say so instead.
+      if (sInfo) detailHtml += '<span>Occurrences:</span> ' + sInfo.count;
+      else detailHtml += '<span style="font-style:italic;color:var(--ink-2);font-size:0.9em;">Not in the verse text \u2014 chapter summary only</span>';
     }
     if (sInfo && Object.keys(sInfo.glosses).length > 1) {
       var sorted = Object.entries(sInfo.glosses).sort(function(a,b) { return b[1]-a[1]; });
