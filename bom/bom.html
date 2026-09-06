@@ -6970,29 +6970,19 @@ function startReading() {
   navTo('ch1');
 }
 
-// "Continue Reading" jumps to the farthest chapter the reader has reached
+/* Continue Reading lives in nav_engine.js now, for all six volumes, and reads
+   the shared sw-last-read-<vol> bookmark — which carries the verse, not just
+   the chapter, and the position the reader actually left rather than the
+   farthest chapter they ever reached. The bom-farthest-chapter store and this
+   page's private copy of the button are gone. */
 function continueReading() {
-  var far = localStorage.getItem('bom-farthest-chapter');
-  if (far && chapterOrder.indexOf(far) >= 0) { navTo(far); } else { navTo('ch1'); }
-}
-
-// Show/refresh the Continue Reading button based on saved farthest progress
-function updateContinueButton() {
-  // The landing's one primary button: Continue for a reader with progress,
-  // Start otherwise. (It used to look for a #continue-reading-wrap that the
-  // markup never had, so Continue never showed; the primary button opened
-  // the preface instead.)
+  if (typeof window.NavEngineUpdateContinue === 'function') { window.NavEngineUpdateContinue(); }
   var btn = document.getElementById('start-reading-btn');
-  if (!btn) return;
-  var far = localStorage.getItem('bom-farthest-chapter');
-  if (far && chapterOrder.indexOf(far) > 0) {
-    var label = typeof getChapterLabel === 'function' ? getChapterLabel(far) : far;
-    btn.textContent = 'Continue Reading \u2014 ' + label + ' \u2192';
-    btn.onclick = continueReading;
-  } else {
-    btn.textContent = 'Start Reading \u2014 1 Nephi 1 \u2192';
-    btn.onclick = startReading;
-  }
+  if (btn && btn.onclick) { btn.onclick(); return; }
+  navTo('ch1');
+}
+function updateContinueButton() {
+  if (typeof window.NavEngineUpdateContinue === 'function') window.NavEngineUpdateContinue();
 }
 
 // Save last chapter + track farthest-reached chapter on every navigation
@@ -7003,25 +6993,18 @@ function updateContinueButton() {
     var id = arguments[0];
     if (id && !id.startsWith('front-') && id !== 'intro' && id !== 'landing' && id !== 'topical-guide' && id !== 'print-editions') {
       try { localStorage.setItem('bom-last-chapter', id); } catch(e) {}
-      try {
-        var nIdx = chapterOrder.indexOf(id);
-        var fIdx = chapterOrder.indexOf(localStorage.getItem('bom-farthest-chapter'));
-        if (nIdx >= 0 && nIdx > fIdx) { localStorage.setItem('bom-farthest-chapter', id); }
-      } catch(e) {}
+      /* bom-farthest-chapter is gone: Continue Reading follows the reader's
+         LAST position now (nav_engine's sw-last-read-bom), not the deepest
+         chapter they ever opened. */
     }
     try { updateContinueButton(); } catch(e) {}
   };
 })();
 
-// Seed farthest from last-read (for readers from before this feature), then render the button
+// Render the button once on load; nav_engine refreshes it on every scroll
+// capture thereafter, and the stale bom-farthest-chapter key is discarded.
 (function() {
-  try {
-    var far = localStorage.getItem('bom-farthest-chapter');
-    var last = localStorage.getItem('bom-last-chapter');
-    if (!far && last && chapterOrder.indexOf(last) >= 0) {
-      localStorage.setItem('bom-farthest-chapter', last);
-    }
-  } catch(e) {}
+  try { localStorage.removeItem('bom-farthest-chapter'); } catch(e) {}
   updateContinueButton();
 })();
 
@@ -11746,7 +11729,7 @@ try {
 
 <script src="../site_chrome.js?v=44" data-sw-volume="bom"></script>
 <script src="../verse_search.js?v=3"></script>
-<script src="../nav_engine.js?v=66"></script>
+<script src="../nav_engine.js?v=67"></script>
 <script src="../xref_study_panel.js?v=6"></script>
 <script>
 NavEngine.init({

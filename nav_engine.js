@@ -1516,6 +1516,7 @@
         timestamp: Date.now()
       }));
     } catch(e) {}
+    try { updateContinueButton(); } catch (e) {}
   }
   /* Leaving the page ENTIRELY — a cross-reference into another volume, the
      hub, a volume switch from the drawer — must not cost the reader their
@@ -1536,6 +1537,61 @@
       history.replaceState(null, '', '#' + hash + suffix);
     } catch (e) {}
   }
+
+  /* CONTINUE READING — the landing's primary button, for every volume.
+
+     It existed only in bom.html, on its own `bom-farthest-chapter` key, and it
+     showed the FARTHEST chapter reached rather than where the reader actually
+     was: "Continue Reading — Moroni 8" with no verse, after a session spent in
+     Alma. The five sibling volumes had no continue button at all.
+
+     captureVersePosition already writes everything needed, on scroll, for all
+     six volumes: chapter, verse, a "Moroni 8:5" label and a path deep-linked
+     to the verse. So this reads that one bookmark instead of a second store,
+     and the button lands the reader on the verse they left. */
+  function lastRead() {
+    if (!_config || !_config.volume) return null;
+    try {
+      var d = JSON.parse(localStorage.getItem('sw-last-read-' + _config.volume) || 'null');
+      return (d && d.chapter) ? d : null;
+    } catch (e) { return null; }
+  }
+
+  function updateContinueButton() {
+    var btn = document.getElementById('start-reading-btn');
+    if (!btn || !_config || !_config.volume) return;
+    var d = lastRead();
+    if (!d) return;                       // no progress yet: leave "Begin Reading"
+    var where = d.vlabel || d.label || '';
+    if (!where) return;
+    btn.textContent = 'Continue Reading \u2014 ' + where + ' \u2192';
+    btn.onclick = function (e) {
+      if (e) e.stopPropagation();
+      if (typeof window.navTo !== 'function') return;
+      window.navTo(d.chapter);
+      /* Scroll to the VERSE, explicitly. Putting the verse in the hash does
+         not survive: the readers' navTo wrapper pushes its own clean
+         '#<chapter>' immediately after, so ':4' was stripped and the reader
+         landed at the top of the chapter. The chapter may also still be
+         rendering (lazy books), so retry briefly rather than fire once. */
+      var want = parseInt(d.verse, 10) || 0;
+      if (!want) return;
+      var tries = 0;
+      (function seek() {
+        var host = document.getElementById('panel-' + d.chapter) || document;
+        var rows = host.querySelectorAll('.verse[data-verse-key]');
+        for (var i = 0; i < rows.length; i++) {
+          var k = rows[i].getAttribute('data-verse-key') || '';
+          if (parseInt(k.split('|').pop(), 10) === want) {
+            try { rows[i].scrollIntoView({ block: 'start', behavior: 'auto' }); } catch (e2) {}
+            return;
+          }
+        }
+        if (++tries < 20) setTimeout(seek, 150);
+      })();
+    };
+  }
+  window.NavEngineUpdateContinue = updateContinueButton;
 
   function installVersePositionTracker() {
     if (!_config || _config.hub || !_config.volume) return;
@@ -2613,6 +2669,7 @@
       installReaderFooterChrome();
       createQuickDock();
       installVersePositionTracker();
+      updateContinueButton();   // the landing's primary button, every volume
     },
     open: openSidebar,
     openBooks: openBooksForCurrentVolume,
