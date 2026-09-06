@@ -1568,30 +1568,122 @@
     btn.onclick = function (e) {
       if (e) e.stopPropagation();
       if (typeof window.navTo !== 'function') return;
-      window.navTo(d.chapter);
-      /* Scroll to the VERSE, explicitly. Putting the verse in the hash does
-         not survive: the readers' navTo wrapper pushes its own clean
-         '#<chapter>' immediately after, so ':4' was stripped and the reader
-         landed at the top of the chapter. The chapter may also still be
-         rendering (lazy books), so retry briefly rather than fire once. */
-      var want = parseInt(d.verse, 10) || 0;
-      if (!want) return;
-      var tries = 0;
-      (function seek() {
-        var host = document.getElementById('panel-' + d.chapter) || document;
-        var rows = host.querySelectorAll('.verse[data-verse-key]');
-        for (var i = 0; i < rows.length; i++) {
-          var k = rows[i].getAttribute('data-verse-key') || '';
-          if (parseInt(k.split('|').pop(), 10) === want) {
-            try { rows[i].scrollIntoView({ block: 'start', behavior: 'auto' }); } catch (e2) {}
-            return;
-          }
-        }
-        if (++tries < 20) setTimeout(seek, 150);
-      })();
+      goToVerse(d.chapter, d.verse);
     };
   }
   window.NavEngineUpdateContinue = updateContinueButton;
+  window.NavEngineMarkReturn = function () { markReturnPoint(); };
+  window.NavEngineShowReturn = function () { showReturnBanner(); };
+  window.NavEngineClearReturn = function () { clearReturnPoint(); };
+
+  /* Go to a chapter AND land on a verse. Putting the verse in the hash does
+     not survive: the readers' navTo wrapper pushes its own clean
+     '#<chapter>' immediately after, so ':4' is stripped and the reader lands
+     at the top. The chapter may also still be rendering (lazy books), so this
+     retries briefly rather than firing once.
+
+     ONE implementation, two callers — Continue Reading and the Return banner.
+     They must land identically or "where was I" means two different things. */
+  function goToVerse(chapter, verse) {
+    if (!chapter || typeof window.navTo !== 'function') return;
+    _returnArmed = Date.now();         // ours, not the reader moving on
+    window.navTo(chapter);
+    var want = parseInt(verse, 10) || 0;
+    if (!want) return;
+    var tries = 0;
+    (function seek() {
+      var host = document.getElementById('panel-' + chapter) || document;
+      var rows = host.querySelectorAll('.verse[data-verse-key]');
+      for (var i = 0; i < rows.length; i++) {
+        var k = rows[i].getAttribute('data-verse-key') || '';
+        if (parseInt(k.split('|').pop(), 10) === want) {
+          try { rows[i].scrollIntoView({ block: 'start', behavior: 'auto' }); } catch (e) {}
+          return;
+        }
+      }
+      if (++tries < 20) setTimeout(seek, 150);
+    })();
+  }
+
+  /* RETURN. Following a reference out of the study panel used to be one-way:
+     the reader landed in Alma 20 with no way back to the verse they had been
+     reading, and inside the iOS app there is no browser Back to fall back on.
+     markReturnPoint() is called before such a jump; the banner then offers the
+     way home and clears itself once used. */
+  var _returnTo = null, _returnEl = null, _returnArmed = 0;   // 0 = not ours; else the ms we armed at
+
+  /* The banner belongs to ONE journey: the jump you just took out of the study
+     panel. Any other movement — next chapter, the drawer, a bookmark — means
+     the reader has moved on under their own steam and the offer is stale, so
+     it clears. Without this it would sit there on every screen, which is not
+     what was asked for. */
+  (function watchOtherNavigation() {
+    var install = function () {
+      if (typeof window.navTo !== 'function' || window.__swReturnHooked) return;
+      window.__swReturnHooked = true;
+      var _prev = window.navTo;
+      window.navTo = function () {
+        /* A GRACE WINDOW, not a one-shot flag. A lazy-loaded book re-enters
+           navTo a second time once its verse file arrives (VolumeLoader.ensure
+           calls navTo again), so a single-use flag was already spent and the
+           re-entry cleared the return point before the banner could show. */
+        if (!_returnArmed || Date.now() - _returnArmed > 2500) clearReturnPoint();
+        return _prev.apply(this, arguments);
+      };
+    };
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', install);
+    else install();
+    setTimeout(install, 1200);   // the readers wrap navTo late; catch it either way
+  })();
+
+  function markReturnPoint() {
+    _returnArmed = Date.now();         // the jump about to happen is the study jump
+    if (!_config || !_config.volume) return;
+    var chap = _config.currentChapter;
+    if (!chap || chap === 'landing') return;
+    var book = findBook(_config.volume, chap);
+    if (!book) return;
+    /* Do NOT probe the viewport here. By the time a reference is clicked the
+       study panel is covering the page, so currentVerseNum() finds no verse at
+       the top and returns 0 — the banner then offered "Alma 32" with no verse
+       and landed the reader at the top of the chapter. The bookmark already
+       holds the last scrolled position for this volume, written on scroll
+       before any overlay opened, which is exactly "where I was reading". */
+    var v = 0;
+    try {
+      var d = JSON.parse(localStorage.getItem('sw-last-read-' + _config.volume) || 'null');
+      if (d && d.chapter === chap && d.verse) v = parseInt(d.verse, 10) || 0;
+    } catch (e) {}
+    if (!v) v = currentVerseNum();     // no bookmark yet: the probe is still worth a try
+    var chNum = chap.replace(book.prefix, '');
+    var label = book.en + (book.ch > 1 ? ' ' + chNum : '') + (v ? ':' + v : '');
+    _returnTo = { chapter: chap, verse: v, label: label };
+  }
+
+  function clearReturnPoint() {
+    _returnTo = null;
+    _returnArmed = 0;
+    if (_returnEl) _returnEl.classList.remove('open');
+  }
+
+  function showReturnBanner() {
+    if (!_returnTo) return;
+    if (!_returnEl) {
+      _returnEl = document.createElement('button');
+      _returnEl.id = 'sw-return';
+      _returnEl.type = 'button';
+      _returnEl.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var t = _returnTo;
+        clearReturnPoint();
+        if (t) goToVerse(t.chapter, t.verse);
+      });
+      document.body.appendChild(_returnEl);
+    }
+    _returnEl.innerHTML = '\u2190 Back to <b></b>';
+    _returnEl.querySelector('b').textContent = _returnTo.label;
+    _returnEl.classList.add('open');
+  }
 
   function installVersePositionTracker() {
     if (!_config || _config.hub || !_config.volume) return;

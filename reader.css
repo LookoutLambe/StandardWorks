@@ -2340,3 +2340,40 @@ body:not(.hide-gloss):not(.dual-mode) .heading-flow > .word-group {
   box-shadow: 0 0 0 1px var(--studied-edge);
 }
 .xref-ref-word--studied .en { color: var(--ink); font-weight: 600; }
+
+/* ── RETURN — the way back from a study reference ──
+   Following a reference out of the study panel is otherwise one-way, and
+   inside the iOS app there is no browser Back. Sits above the footer, out of
+   the reading column, and clears itself once used. */
+#sw-return {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  bottom: calc(var(--sw-footer-h, 64px) + max(10px, env(safe-area-inset-bottom, 0px)));
+  z-index: calc(var(--z-chrome) + 2);
+  display: none;
+  align-items: center;
+  gap: 6px;
+  max-width: min(92vw, 420px);
+  padding: 10px 18px;
+  min-height: 44px;
+  border: 1px solid var(--chrome-line);
+  border-radius: 999px;
+  background: var(--chrome);
+  color: var(--on-chrome);
+  font-family: 'David Libre', 'Georgia', serif;
+  font-size: 0.95em;
+  cursor: pointer;
+  /* the reading column is RTL, so without this the banner renders
+     "Alma 32:4 Back to ←" — the arrow and its label swapped ends. */
+  direction: ltr;
+  unicode-bidi: isolate;
+  white-space: nowrap;
+  box-shadow: var(--e2);
+  opacity: 0;
+  transition: opacity .18s ease, transform .18s ease;
+}
+#sw-return.open { display: flex; opacity: 1; transform: translateX(-50%) translateY(0); }
+#sw-return b { font-weight: 700; }
+#sw-return:hover { background: var(--surface-2); }
+@media (prefers-reduced-motion: reduce) { #sw-return { transition: none; } }

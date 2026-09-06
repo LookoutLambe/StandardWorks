@@ -733,7 +733,19 @@
     panelEl.addEventListener('click', function(e) {
       var a = e.target.closest ? e.target.closest('a.rsc-ref') : null;
       if (!a) return;
-      if (a.getAttribute('href').charAt(0) === '#') closePanel();
+      /* Following a reference out of here is a one-way trip otherwise: the
+         reader lands in another chapter with no way back to the verse they
+         were reading, and inside the iOS app there is no browser Back to fall
+         back on. Mark where we are BEFORE the jump, then offer the way home. */
+      try {
+        if (typeof window.NavEngineMarkReturn === 'function') window.NavEngineMarkReturn();
+      } catch (eR) {}
+      if (a.getAttribute('href').charAt(0) === '#') {
+        closePanel();
+        setTimeout(function () {
+          try { if (typeof window.NavEngineShowReturn === 'function') window.NavEngineShowReturn(); } catch (eS) {}
+        }, 400);
+      }
       // cross-volume links navigate away naturally
     });
     return panelEl;
