@@ -1242,7 +1242,15 @@
   // VERB lemma wins, the peel itself having proved the word a verb. Never
   // for a name: מוֹרוֹנִי would peel to מור "to change".
   function rootByMorphology(w) {
-    var LI = lemmaIndex(), c = normFinals(stripNikkud(w));
+    // Finals are kept intact through affix-peeling, since every suffix in
+    // _mSuf/_mVPre is itself a word-final form (כם ,הם ,ן ,ם...) and can
+    // only ever match a string whose final letter is still final. normFinals
+    // is applied ONLY to the residual candidate, at the point it is checked
+    // against the lemma index (whose keys are normFinals'd citation forms) —
+    // never to the whole word up front, or every suffix ending in a sofit
+    // letter (the vast majority of pronominal suffixes) silently fails to
+    // peel and the word falls through to fallback with its affixes intact.
+    var LI = lemmaIndex(), c = stripNikkud(w);
     if (c.length < 3) return '';
     var cands = [], i, j;
     for (i = 0; i < _mSuf.length; i++) {
@@ -1261,7 +1269,7 @@
       }
     }
     for (i = 0; i < cands.length; i++) {
-      var cand = cands[i];
+      var cand = normFinals(cands[i]);
       if (cand.length < 3) continue;
       if (LI[cand] !== undefined) { if (LI[cand]) return familyOf(LI[cand]); if (isShoresh(cand)) return cand; }
     }
@@ -1275,7 +1283,7 @@
         if (vbody.length > vs.length + 2 && vbody.slice(-vs.length) === vs) vcands.push(vbody.slice(0, -vs.length));
       }
       for (j = 0; j < vcands.length; j++) {
-        var vc = vcands[j];
+        var vc = normFinals(vcands[j]);
         if (vc.length < 3) continue;
         if (LI[vc]) return familyOf(LI[vc]);
         if (LI[vc] === null && _lemIdxVerb[vc]) return familyOf(_lemIdxVerb[vc]);
