@@ -61,7 +61,12 @@
   }
   // Punctuation the verse data glues to a word: sof pasuq, paseq, quotes,
   // brackets, and '*' (the transliterated-term mark, display-only).
-  function _clean(s) { return String(s || '').replace(/[׃׀"'`.,;:?!()*]/g, '').trim(); }
+  /* [ ] joined the list 2026-09-06. The class already dropped the ketiv's
+     parentheses but not the qere's brackets, so [לוֹ] and [וְלוֹ] carried them
+     all the way to the fallback key — the card was keyed on "[לו]" and could
+     never match anything. 81 forms. The apparatus itself stays in the data
+     (see the ketiv/qere rule); it is only invisible to the ROOT lookup. */
+  function _clean(s) { return String(s || '').replace(/[׃׀"'`.,;:?!()\[\]*]/g, '').trim(); }
   function _pieces(s) { return _clean(s).split(/[־\s]+/).filter(Boolean); }
   // The folded, dotless, letters-only skeleton — the key shape of every
   // generated table (root_names.js, the concordance buckets).
@@ -101,9 +106,21 @@
   // אֶרֶץ־מִצְרַיִם is the land card, כִּכְּרוֹת־לֶחֶם the loaves card.
     var _maqqefParticles = {'את':1,'אל':1,'על':1,'מן':1,'עד':1,'כל':1,'לא':1,'אם':1,
                           'גם':1,'כי':1,'פן':1,'אך':1,'רק':1,'אף':1,'אשר':1,'עם':1,'מה':1};
+    /* בַּל, the poetic negative, is NOT here, though it belongs beside לא and
+       פן on sense alone: while the ridden letter above is unchecked, adding a
+       two-letter particle also makes every three-letter word ending in it a
+       particle — בל turned נֵבֶל, חֶבֶל, אֵבֶל and קָבָל into particles too.
+       The two go together or not at all. */
   function _isMaqqefParticle(piece) {
     var c = stripNikkud(piece).replace(/[ׁׂ]/g, '');
     if (_maqqefParticles[c]) return true;
+    /* NOTE, for the user to rule on — not changed here. The ridden letter is
+       not required to be a proclitic, so any three-letter word ending in a
+       two-letter particle counts as one: נְאֻם reads as אם, which is why
+       נְאֻם־יְהֹוָה files under יהוה rather than under נאם like every other
+       content head (אֶרֶץ־מִצְרַיִם -> ארץ). Requiring a real proclitic fixes
+       it and moves 282 tokens of that formula; that is a design change, so it
+       is measured and reported rather than applied. */
     return c.length > 2 && _maqqefParticles[c.slice(1)];   // one prefix letter rides along: וְעַל־, בְּכׇל־
   }
   // Progressive peels, shallowest first: [the word exactly as given, the tail
@@ -135,6 +152,14 @@
   // ruling: a PARTICLE head is dropped and the card shows the word it is
   // attached to; a CONTENT head keeps the card (לֶחִי־נֶפִי is Lehi).
     var _particles = {'אך':1,'אל':1,'אם':1,'אף':1,'אשר':1,'את':1,'גם':1,'ואך':1,'ואל':1,'ואם':1,'ואף':1,'ואשר':1,'ואת':1,'וגם':1,'וכי':1,'וכל':1,'ולא':1,'ומן':1,'ועד':1,'ועל':1,'ועם':1,'ופן':1,'ורק':1,'כי':1,'כל':1,'לא':1,'מן':1,'עד':1,'על':1,'עם':1,'פן':1,'רק':1};
+  /* Deliberately the bare dict, NOT _isMaqqefParticle. Unifying the two looks
+     right on paper — stripLayers already knows that a prefix letter rides
+     along, so בְּכׇל־ and לְכׇל־ are particles there and not here — and it does
+     fix [לְכׇל־]עֲוֺנוֹתֵיהֶם, all one token of it. Measured, it also moves ~300
+     tokens of אֲשֶׁר־לוֹ, אֲשֶׁר־בּוֹ and מַה־לְּךָ onto their preposition+suffix
+     piece, which is the exact class of function word the cards are meant to
+     stop studying. The narrower test is the better one; the לְכׇל־ compounds
+     stay as they are. */
   function _contentPieces(ps) {
     var content = ps.filter(function (p) { return !_particles[stripNikkud(p)]; });
     return content.length ? content : ps;
@@ -1499,6 +1524,272 @@
     return '';
   }
 
+  // Stage 8b — BINYAN. The derived stems, undone by pattern.
+  //
+  // Everything above matches a SURFACE: the pointed form, its consonants, its
+  // skeleton, a mater variant. That works for qal, where the root is on the
+  // page, and fails for every derived stem, where the root is behind an
+  // affix the lexicon never lists as a citation form. 448 forms reached
+  // fallback for this one reason, in four dresses:
+  //
+  //   לְהַטִּיף  hiphil infinitive, I-nun assimilated   -> נטף
+  //   לְהָעִיד   hiphil infinitive, hollow root         -> עוד
+  //   נִקְרֵאתָ   niphal perfect                         -> קרא
+  //   הִשְׁתַּלְּמוּ hitpael, sibilant metathesis          -> שׁלם
+  //   מַכְרִיז   hiphil participle                      -> כרז
+  //
+  // Built to the standard the user set (2026-09-06): parse in LAYERS —
+  // particles, then the stem template, then the suffix; expect the root NOT
+  // to survive intact, because I-nun assimilates and a hollow root shows two
+  // consonants; read the binyan off the PREFIX AND VOWEL PATTERN, not off the
+  // meaning; and treat a well-formed pattern as a hypothesis until something
+  // attests it. Nothing here is accepted on its shape alone: every candidate
+  // must land on a real Strong's lemma or a Brauner shoresh, and a candidate
+  // that lands on two different families is refused rather than guessed.
+  //
+  // It runs LAST, after mater-collapse and before fallback, deliberately. In
+  // that position it can only ever turn a fallback into an answer — it cannot
+  // change an answer any earlier stage already gives. The engine keeps every
+  // result it had.
+  var _METATH = { 'ש': 'ת', 'ס': 'ת', 'ז': 'ד', 'צ': 'ט' };
+  /* Letter UNITS, not characters: stripNikkud keeps the shin/sin dots on
+     purpose (שׁמן and שׂמן are different roots), so a naive index walk splits
+     שׁ into two positions and every template misses by one. */
+  function _units(d) {
+    var u = [], i = 0;
+    while (i < d.length) {
+      var ch = d.charAt(i++);
+      while (i < d.length && (d.charCodeAt(i) === 0x05C1 || d.charCodeAt(i) === 0x05C2)) ch += d.charAt(i++);
+      u.push(ch);
+    }
+    return u;
+  }
+  /* Longest first: ולה must be tried before ול, or the ה of the infinitive
+     is left stranded on the stem. */
+  var _bPart = ['ולה', 'ובה', 'וכה', 'ולכ', 'וכש', 'כש', 'ול', 'וב', 'וכ', 'ומ', 'וש', 'לכ', 'ל', 'ב', 'כ', 'ש', 'ו'];
+  var _bSuf = ['ותיהם', 'ותיכם', 'ותינו', 'תיהם', 'תיכם', 'ותיו', 'ותיה', 'יהם', 'יכם',
+               'ינו', 'תיו', 'תיה', 'תם', 'תן', 'תי', 'נו', 'כם', 'הם', 'הן', 'ים', 'ות',
+               'ני', 'הו', 'יו', 'נה', 'ה', 'ו', 'י', 'ת', 'ם', 'ן', 'ך'];
+  /* ־וֹן is NOT here. It builds nouns (נִצָּחוֹן, רָצוֹן, חִזָּיוֹן), so stripping
+     it and then running a VERB template on what is left is incoherent: it
+     turned נִצָּחוֹן into צחה "to be dazzling" instead of leaving it on נצח. */
+  var _ALLSTEMS = ['q', 'N', 'p', 'P', 'h', 'H', 't'];
+  /* A root that shows only two consonants is a weak root with one radical
+     hidden, and WHICH radical is hidden is exactly what the pattern cannot
+     tell you — הטיף could be נטף, יטף or טפף on shape alone. So generate all
+     seven repairs and let attestation choose. */
+  function _weakRepairs(x, y) {
+    return ['נ' + x + y, 'י' + x + y, 'ו' + x + y, x + 'ו' + y, x + 'י' + y, x + y + y, x + y + 'ה'];
+  }
+
+  /* THE BINYAN INDEX — which stems the MT actually attests for each family,
+     read off the OSHB/TAHOT morph codes already in attested_forms.js
+     (HVhi2ms -> h). This is what makes the layer a parser rather than a
+     guesser: הַטִּיף repairs to both נטף and טפף on shape alone, and the
+     Masoretic text settles it — H5197 נטף carries eight hiphil forms
+     (תַטִּיף, יַטִּיפוּ, וְהִטִּיפוּ …) and H2952 טפף carries one qal and no
+     hiphil at all. The user's fourth rule: a well-formed pattern is a
+     hypothesis until something attests it. */
+  var _binIx = null;
+  function binyanIndex() {
+    if (_binIx) return _binIx;
+    var AF = (typeof window !== 'undefined' && window._attestedForms) || null;
+    if (!AF) return {};
+    _binIx = {};
+    for (var f in AF) {
+      var e = AF[f]; if (!e) continue;
+      var mm = String(e[1] || '').match(/V([a-zA-Z])/); if (!mm) continue;
+      var fam = familyOf(String(e[0])); if (!fam) continue;
+      (_binIx[fam] || (_binIx[fam] = {}))[mm[1]] = 1;
+    }
+    return _binIx;
+  }
+  /* Keyed on the FAMILY, not on the Strong's number. lemmaIndex() stores null
+     the moment two numbers share a lemma, which reads "ambiguous" even when
+     both numbers are the same root: קרא is H7121 "call" and H7122 "befall",
+     two entries and one family. Ask familyOf first and that homograph
+     disappears; a collision between genuinely different families is settled
+     below, by attestation and then by the verb rule. */
+  var _lemFam = null, _lemNums = null;
+  function lemmaFamilyIndex() {
+    if (_lemFam) return _lemFam;
+    var SR = _roots(); if (!SR) return {};
+    _lemFam = {}; _lemNums = {};
+    for (var n in SR) {
+      var e = SR[n]; if (!e || !e.w) continue;
+      var c = normFinals(stripNikkud(e.w)); if (c.length < 2) continue;
+      (_lemNums[c] || (_lemNums[c] = [])).push(n);
+      var f = familyOf(n); if (!f) continue;
+      if (_lemFam[c] === undefined) _lemFam[c] = f;
+      else if (_lemFam[c] !== f) _lemFam[c] = '*';
+    }
+    return _lemFam;
+  }
+  function _lemmaFamily(cand, stems) {
+    var n = normFinals(cand);
+    if (n.length < 3) return '';
+    var f = lemmaFamilyIndex()[n];
+    if (f && f !== '*') return f;
+    if (f !== '*') return '';
+    var BI = binyanIndex(), nums = _lemNums[n] || [], seen = {}, keep = [], i, j;
+    for (i = 0; i < nums.length; i++) {
+      var fam = familyOf(nums[i]); if (!fam || seen[fam]) continue; seen[fam] = 1;
+      var att = BI[fam] || {};
+      for (j = 0; j < stems.length; j++) if (att[stems[j]]) { keep.push(fam); break; }
+    }
+    if (keep.length === 1) return keep[0];
+    /* still tied — the peel itself proved the word a verb, so a verb lemma
+       wins, the same rule rootByMorphology already uses */
+    lemmaIndex();
+    if (_lemIdxVerb && _lemIdxVerb[n]) return familyOf(_lemIdxVerb[n]);
+    return '';
+  }
+  /* One family, or none. Where the templates land on two different roots the
+     MT is asked which of them is attested in the stem this template implies;
+     if that still does not separate them the honest answer is to leave the
+     word in fallback, keeping its own consonants, rather than to pick the
+     commoner root and be quietly wrong. */
+  function _soleFamily(cands, strict) {
+    var byFam = {}, i, j;
+    for (i = 0; i < cands.length; i++) {
+      var f = _lemmaFamily(cands[i].r, cands[i].s);
+      if (!f) continue;
+      var slot = byFam[f] || (byFam[f] = {});
+      for (j = 0; j < cands[i].s.length; j++) slot[cands[i].s[j]] = 1;
+    }
+    var fams = Object.keys(byFam);
+    if (!fams.length) return '';
+    if (fams.length === 1 && !strict) return fams[0];
+    var BI = binyanIndex(), keep = [];
+    for (i = 0; i < fams.length; i++) {
+      var att = BI[fams[i]] || {}, S = Object.keys(byFam[fams[i]]);
+      for (j = 0; j < S.length; j++) if (att[S[j]]) { keep.push(fams[i]); break; }
+    }
+    return keep.length === 1 ? keep[0] : '';
+  }
+
+  function rootByBinyan(w) {
+    var d = stripNikkud(String(w || '')).replace(/[^א-תׁׂ]/g, '');
+    if (d.length < 3) return '';
+    /* LAYER 1 — the proclitic particles, before any template. לְהַטִּיף is
+       ל + a hiphil infinitive, and a template run on the whole surface sees
+       only a ל it has no rule for. ה and מ are deliberately NOT peeled here:
+       in a derived stem they ARE the template, and peeling them as particles
+       is what turned הַטִּיף into טִּיף and lost the word. */
+    var stems = [d], later = [], i, j, k;
+    for (i = 0; i < _bPart.length; i++) {
+      var pt = _bPart[i];
+      if (d.indexOf(pt) === 0 && d.length - pt.length >= 3) stems.push(d.slice(pt.length));
+    }
+    for (k = 0; k < stems.length; k++) {
+      var st = stems[k];
+      for (i = 0; i < _bSuf.length; i++) {
+        var sfx = _bSuf[i];
+        if (st.length > sfx.length + 2 && st.slice(-sfx.length) === sfx) later.push(st.slice(0, -sfx.length));
+      }
+    }
+    /* MINIMAL ANALYSIS FIRST. Read the stem off the whole word before
+       stripping anything from its end, and only fall to the shortened bodies
+       if that finds nothing. Run together, לְהַמְשִׁיךְ offered both משׁכ (from
+       the whole hiphil) and משׁה (after its final ך was taken for a 2ms
+       suffix), and because the MT never inflects משׁך in the hiphil the
+       attestation test preferred the wrong one. Tried in order, the reading
+       that assumes least wins. */
+    return _solve(stems) || _solve(later);
+  }
+  function _solve(bodies) {
+    var i, j;
+    /* LAYER 2 — the stem template. Each candidate carries the binyan its own
+       template implies, so a tie can be tested against the MT rather than
+       broken by frequency. */
+    var three = [], two = [];
+    function put(r, st2) {
+      var ru = _units(r);
+      (ru.length === 2 ? two : three).push({ r: r, s: st2 });
+      /* A geminate or hollow root takes the polel/hitpolel shape, which writes
+         a ו (or י) after the first radical: הִשְׁתּוֹמֵם is שׁמם, not שׁומם.
+         Offer the shortened form too and let the lexicon choose. */
+      /* ו only. The polel/hitpolel vowel is a ו (הִשְׁתּוֹמֵם, קוֹמֵם); allowing
+         a י here shortened הַקֵּיסָם "the splinter" to קסם "to divine". */
+      if (ru.length === 4 && ru[1] === 'ו')
+        three.push({ r: ru[0] + ru.slice(2).join(''), s: st2 });
+    }
+    for (var bi = 0; bi < bodies.length; bi++) {
+      var u = _units(bodies[bi]), L = u.length;
+      if (L < 3) continue;
+      var p = u[0].charAt(0), r1 = u[1].charAt(0);
+      // hitpael, sibilant metathesis:  הִתְשַׁ -> הִשְׁתַּ,  הִתְצַ -> הִצְטַ
+      if ('המנת'.indexOf(p) >= 0 && _METATH[r1] === u[2].charAt(0) && L >= 4)
+        put(u[1] + u.slice(3).join(''), ['t']);
+      // hitpael, plain
+      if ('המנת'.indexOf(p) >= 0 && u[1] === 'ת' && L >= 4) put(u.slice(2).join(''), ['t']);
+      // hiphil and its participle: the י before the last radical belongs to
+      // the stem, not the root  (מַכְרִיז -> כרז,  הַטִּיף -> טף, two letters)
+      if ('המ'.indexOf(p) >= 0 && u[L - 2] === 'י') put(u.slice(1, L - 2).join('') + u[L - 1], ['h', 'H']);
+      /* נ and ה are NOT the same prefix, and lumping them cost נִמְנוּ. A
+         leading נ can only be a niphal; a leading ה can be the niphal
+         infinitive (where the nun has assimilated and shows as nothing at
+         all), a hiphil or a hophal. Told apart, נִמְנוּ repairs to מנה, which
+         the MT attests in the niphal, over יָמַן, which it attests only in the
+         hiphil — and the tie that had to be refused resolves itself. */
+      if (p === 'נ') put(u.slice(1).join(''), ['N']);
+      else if (p === 'ה') put(u.slice(1).join(''), ['N', 'h', 'H']);
+      // the מ of a derived participle
+      if (p === 'מ') put(u.slice(1).join(''), ['p', 'P', 'h', 'H', 't', 'N']);
+      /* No bare-body candidate. This stage undoes a TEMPLATE; the bare form,
+         peeled or not, is what the lexicon, skeleton and mater stages have
+         already tried and failed on, and letting it compete here only lets a
+         noun be re-read as a verb — ברית peeled to ברי and answered ברה
+         "to eat", ציון to ציו and answered צִיָּה "dry land". */
+    }
+    var got = _soleFamily(three);
+    if (got) return got;
+    /* A hollow root writes its middle radical as the other mater, or not at
+       all: הֵעִיד is עוד, not עיד. */
+    var swapped = [];
+    for (i = 0; i < three.length; i++) {
+      var tu = _units(three[i].r);
+      if (tu.length !== 3) continue;
+      if (tu[1] === 'י') swapped.push({ r: tu[0] + 'ו' + tu[2], s: three[i].s });
+      else if (tu[1] === 'ו') swapped.push({ r: tu[0] + 'י' + tu[2], s: three[i].s });
+      /* III-he: the ה of the lemma surfaces as י once anything is suffixed —
+         נַעֲשֵׂיתֶם peels to עשׂי and the root is עשׂה. A final ו is NOT the same
+         case: there it is the ־וֹן of a noun or a 3ms suffix, and treating it
+         as III-he read נִצָּחוֹן as צחה "to be dazzling" and בְּהַצִּילוֹ as צלה
+         instead of נצל. */
+      if (tu[2] === 'י') swapped.push({ r: tu[0] + tu[1] + 'ה', s: three[i].s });
+    }
+    got = _soleFamily(swapped);
+    if (got) return got;
+    var reps = [];
+    for (i = 0; i < two.length; i++) {
+      var wu = _units(two[i].r);
+      if (wu.length !== 2) continue;
+      var R = _weakRepairs(wu[0], wu[1]);
+      for (j = 0; j < R.length; j++) reps.push({ r: R[j], s: two[i].s });
+    }
+    /* strict: a repair INVENTS a radical, so it is never accepted on being
+       the only reading — the MT must attest that family in the stem this
+       template implies. מֵבִי repaired to H0942 בַּוַּי, a name that attests no
+       verb at all, and was the only candidate standing. */
+    return _soleFamily(reps, true);
+  }
+  /* POINTED FORMS ONLY. The third rule reads the binyan off the prefix AND
+     THE VOWEL PATTERN, so an unpointed surface does not license the analysis:
+     נביא could be נָבִיא the prophet or a niphal of בוא, and nothing in the
+     letters decides. Ungated, this layer answered הוא -> נוא (487 tokens),
+     ברית -> ברה, ציון -> ציה, מלך -> הלך and שנים -> נום, every one of them an
+     unpointed heading string or an unpointed ketiv. The pointed heading list
+     is a separate file and still resolves; what is gated out here is only the
+     unpointed gate-and-fallback copy. */
+  var _HAS_POINT = /[\u05B0-\u05BC\u05C7]/;
+  function stageBinyan(ctx) {
+    if (ctx.isName) return '';
+    var h = ctx.head || ctx.w;
+    if (!_HAS_POINT.test(h)) return '';
+    return rootByBinyan(h);
+  }
+
   // Stage 9 — FALLBACK. A real word the lexicon does not carry (Smith,
   // Sanhedrin, אֵינוֹ…) keyed by its OWN dotless consonants, never a stem —
   // a short result is a genuine short word (לוֹ, לִי), not a fragment. A
@@ -1539,6 +1830,7 @@
     ['consonants', stageConsonants],
     ['morphology', stageMorphology],
     ['mater-collapse', stageMaterCollapse],
+    ['binyan', stageBinyan],
     ['fallback', stageFallback]
   ];
   // No Hebrew word ends in a medial letter: a key that does is a folding
@@ -1669,6 +1961,7 @@
     stripPrefixes: stripPrefixes, stripLayers: stripLayers, stripNikkud: stripNikkud,
     toSofit: toSofit, normFinals: normFinals, rootMap: rootMap,
     pointedKey: pointedKey, parse: parse, attestedEntry: attestedEntry,
+    rootByBinyan: rootByBinyan, rootByMorphology: rootByMorphology,
     stages: PIPELINE.map(function (s) { return s[0]; })
   };
 })();
