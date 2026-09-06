@@ -481,7 +481,20 @@
      helps you read the line — and lose the corpus counts and the references
      link, which is all that was ever noise. A preposition FUSED to a content
      word (R/, Rd) is not affected: that token is the content word. */
-  var _FUNCTION_MORPH = /^(T[ocrndmi]|R|C)$/;
+  var _FUNCTION_MORPH = /^(T[ocrndmi]|Rd?|C|Pp[0-9a-z]*|Sp[0-9a-z]*)$/;
+  /* Pp (personal pronoun) and Sp (pronominal suffix) belong with the
+     particles. A concordance of "I" or "to him" tells a reader nothing:
+       אֲנִי 2704 · הוּא 2587 · אַתָּה 830      pronouns              9,991 tokens
+       לוֹ 2169 · לָכֶם 2114 · לִי 1298        preposition+suffix   23,425 tokens
+     אָנֹכִי is included. I proposed keeping it, since the divine "I" is a
+     distinction this corpus enforces; the user's ruling was that it is a
+     pronoun like any other.
+
+     A noun WITH a suffix is untouched, because the all-segments rule holds:
+     אָבִי is Ncmsc/Sp1bs — the word is "father", the suffix only "my" — so it
+     keeps its card, with עַמִּי "my people", אֱלֹהֶיךָ "your God" and
+     עַבְדִּי "my servant". That is 26,821 tokens of real study words, and
+     suppressing them would repeat the הָאֱלֹהִים mistake. */
   /* EVERY segment must be a function class. Taking split('/')[0] condemned the
      content word behind a prefix: הָאֱלֹהִים is Td/Ncmpa — article + NOUN, i.e.
      "God" — and it was being silently stripped of its concordance, along with
