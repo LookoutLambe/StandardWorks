@@ -57,6 +57,8 @@ vm.runInContext(engineSrc, engineCtx, { filename: 'root_engine.js' });
 if (!win.RootEngine || !win.RootEngine.getRoot) throw new Error('root_engine.js did not export RootEngine');
 const getRoot = win.RootEngine.getRoot;
 const getRoots = win.RootEngine.getRoots;
+const senseClass = win.RootEngine.senseClass;   // the SAME function the card uses
+if (!senseClass) throw new Error('root_engine.js did not export senseClass');
 
 // The transliterated-term exception table lives in root_scorecard.js on one
 // JSON line (TRANSLIT_TERMS); read it from the source so the two never drift.
@@ -329,7 +331,11 @@ function record(volIdx, chapId, verseNum, h, g) {
     let e = roots.get(root);
     if (!e) {
       e = { c: new Array(NVOL).fill(0), verses: Array.from({length: NVOL}, () => new Set()),
-            f: new Map(), g: new Map(), refs: Array.from({length: NVOL}, () => new Map()) };
+            f: new Map(), g: new Map(), refs: Array.from({length: NVOL}, () => new Map()),
+            // sense -> { label, c[], refs[Map(chapId->Set(verse))] }. A study card
+            // answers "where else does this word mean THIS", so the references
+            // have to be bucketed by sense, not only by root.
+            senses: new Map() };
       roots.set(root, e);
     }
     e.c[volIdx]++;
@@ -340,6 +346,26 @@ function record(volIdx, chapId, verseNum, h, g) {
     let vs = chMap.get(chapId);
     if (!vs) { vs = new Set(); chMap.set(chapId, vs); }
     vs.add(verseNum);
+
+    const sk = senseClass(pr.part || h);   // the FORM decides the sense, not the English
+    let se = e.senses.get(sk);
+    if (!se) {
+      se = { g: new Map(), f: new Map(), c: new Array(NVOL).fill(0),
+             verses: Array.from({length: NVOL}, () => new Set()),
+             refs: Array.from({length: NVOL}, () => new Map()) };
+      e.senses.set(sk, se);
+    }
+    se.c[volIdx]++;
+    // the label is the MOST COMMON gloss of the sense. Taking the shortest
+    // labelled the hithpael "pray" and the qal "surely" — real glosses, but
+    // not what either sense is usually called.
+    se.g.set(gNorm, (se.g.get(gNorm) || 0) + 1);
+    se.f.set(pr.part || h, (se.f.get(pr.part || h) || 0) + 1);
+    se.verses[volIdx].add(chapId + '|' + verseNum);
+    let sMap = se.refs[volIdx];
+    let sv = sMap.get(chapId);
+    if (!sv) { sv = new Set(); sMap.set(chapId, sv); }
+    sv.add(verseNum);
   }
 }
 
@@ -444,6 +470,7 @@ function bookPrefixFor(volKey, chapId) {
 }
 const keys = Array.from(roots.keys());
 const refsOut = [];   // parallel to keys; shipped in root_concordance_refs.js
+const sensesRefsOut = [];   // parallel to keys; per-SENSE refs, same lazy file
 const keyIdx = new Map(keys.map((k, i) => [k, i]));
 const rootsOut = keys.map(function(k) {
   const e = roots.get(k);
@@ -454,6 +481,52 @@ const rootsOut = keys.map(function(k) {
     f: topEntries(e.f, 6),
     g: topEntries(e.g, 10)
   };
+  /* Ship the sense buckets: key -> { g label, c counts, r refs }. Only senses
+     small enough to list verses carry refs; a very common sense gets counts
+     only, exactly as a very common root does. */
+  const senses = {};
+  const senseRefs = {};
+  Array.from(e.senses.entries()).forEach(function(pair) {
+    const sk = pair[0], se = pair[1];
+    const stotal = se.c.reduce((a, b) => a + b, 0);
+    let best = '', bestN = -1;
+    se.g.forEach(function(n, g) { if (n > bestN || (n === bestN && g.length < best.length)) { best = g; bestN = n; } });
+    // the sense carries its OWN forms, glosses and verse counts, so the card
+    // can describe the word you tapped instead of the whole root
+    /* A single-sense root IS its sense — repeating its forms and glosses here
+       added 2.4 MB to a file that loads on the first word tap. The card falls
+       back to the root's own lists when a root has one sense. */
+    /* n = tokens, v = verses, as TOTALS. Per-volume arrays cost six numbers a
+       sense across ~40,000 senses for a breakdown the card shows at root level
+       anyway. The per-volume chips stay root-level. */
+    const rec = { g: best, n: stotal, v: se.verses.reduce((a, x) => a + x.size, 0) };
+    if (e.senses.size > 1) { rec.gs = topEntries(se.g, 5); rec.fs = topEntries(se.f, 5); }
+    /* The refs themselves go in root_concordance_refs.js, which is fetched
+       only when the references panel opens. Carrying them here tripled
+       root_concordance.js — 2.09 MB to 7.18 — and that file loads on the
+       FIRST word tap. Counts and a label are all the card needs to draw. */
+    if (stotal <= REF_CAP) {
+      const sr = {};
+      VOLS.forEach(function(vol, vi) {
+        if (!se.refs[vi].size) return;
+        const o = {};
+        Array.from(se.refs[vi].entries()).forEach(function(pr) {
+          o[pr[0]] = Array.from(pr[1]).sort((a, b) => a - b);
+        });
+        sr[vol.key] = o;
+      });
+      senseRefs[sk] = sr;
+    }
+    senses[sk] = rec;
+  });
+  /* A root with ONE sense needs no sense buckets: its sense refs are its
+     root refs. Emitting both stored every such reference twice and took the
+     refs file from 2.32 MB to 6.47. The card falls back to the root refs
+     when a root has a single sense. */
+  const multi = Object.keys(senses).length > 1;
+  out.s = senses;
+  sensesRefsOut.push(multi ? senseRefs : 0);
+
   if (total <= REF_CAP) {
     const refs = {};
     VOLS.forEach(function(vol, vi) {
@@ -518,7 +591,10 @@ console.log('root_concordance.js written: %s MB (%d roots)', (js.length / 104857
 const refsJs = '// root_concordance_refs.js — auto-generated by tools/build_root_concordance.js. DO NOT EDIT.\n' +
   '// Verse references per root (parallel to _rootConcordance.keys). Entries with _b\n' +
   '// carry per-book verse counts instead (roots too common to list verse by verse).\n' +
-  'window._rootConcordanceRefs = ' + JSON.stringify(refsOut) + ';\n';
+  'window._rootConcordanceRefs = ' + JSON.stringify(refsOut) + ';\n' +
+  '// per-SENSE references, parallel to the same keys — a study card shows\n' +
+  '// only the verses where the word carries the sense you tapped.\n' +
+  'window._rootSenseRefs = ' + JSON.stringify(sensesRefsOut) + ';\n';
 fs.writeFileSync(path.join(ROOT, 'root_concordance_refs.js'), refsJs);
 console.log('root_concordance_refs.js written: %s MB', (refsJs.length / 1048576).toFixed(2));
 

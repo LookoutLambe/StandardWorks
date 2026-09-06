@@ -1593,8 +1593,78 @@
   // ======================================================================
   // 7. EXPORT — the surface bom.html and the tools alias; keep every member
   // ======================================================================
+  /* ── SENSE CLASS ─────────────────────────────────────────────────────
+     A study card answers "where else does this word mean THIS", not "where
+     else does this root occur". Tapping הִתְחַנְּנוּ "did plead" listed all
+     436 uses of חנן — favor, grace, without cause — because the card keyed
+     on the root and nothing finer.
+
+     The sense is a MORPHOLOGICAL fact, not an English one. My first attempt
+     clustered the gloss text and split one sense into many, because the
+     translator's variants for a single Hebrew form are not inflections of a
+     single English word: "plead", "beseech", "besought", "pled" and
+     "supplicating" are all the SAME thing — the hithpael of חנן — and no
+     amount of English stemming brings them together.
+
+     attested_forms.js already carries the analysis (OSHB + TAHOT), so use it:
+        חֵן          H2580 Ncmsa   -> H2580.N    favor
+        חִנָּם        H2600 D       -> H2600.D    without cause
+        חָנַן        H2603 Vqp3ms  -> H2603.Vq   be gracious
+        וַיִּתְחַנֵּן  H2603 Vtw3ms  -> H2603.Vt   PLEAD
+     One key per lexeme-and-stem, which is exactly the grain a study card
+     wants. Forms this translation supplies that the MT never inflects are
+     not in the table; for those the t-infix pattern still identifies a
+     hithpael, and anything left over falls back to the root itself.
+     ────────────────────────────────────────────────────────────────────── */
+  function _attested() {
+    try { return (typeof window !== 'undefined' && window._attestedForms) || null; } catch (e) { return null; }
+  }
+  var _T_INFIX = /^(ו?[הימנתא])ת[\u05D0-\u05EA]/;   // הת/ית/את/נת/תת — the hithpael marker
+
+  function senseClass(hw) {
+    var w = _clean(String(hw || ''));
+    var A = _attested();
+    var e = A && (A[w] || A[stripNikkud(w)]);
+    if (e && e[0]) {
+      var morph = String(e[1] || '');
+      var m = morph.match(/V([qNpPhHt])/);            // verb: keep the stem letter
+      if (m) return e[0] + '.V' + m[1];
+      var pos = morph.replace(/^H/, '').charAt(0);    // N noun, A adj, D adverb, P pronoun…
+      return e[0] + (pos ? '.' + pos : '');
+    }
+    /* Not in the MT — a form this translation supplies. The t-infix still
+       names a hithpael, but the key must be the SAME one the attested forms
+       produce or the BOM's הִתְחַנְּנוּ lands in a different bucket from the
+       Bible's וַיִּתְחַנֵּן and the card splits in half. So resolve the root
+       to the Strong's number its attested VERB forms carry. */
+    var bare = stripNikkud(w).replace(/־/g, '');
+    var root = getRoot(w);
+    var stem = _T_INFIX.test(bare) ? '.Vt' : '';
+    var lex = stem ? _verbStrongForRoot(root) : '';
+    return (lex || root || bare) + stem;
+  }
+
+  var _vsCache = null;
+  function _verbStrongForRoot(root) {
+    if (!root) return '';
+    if (!_vsCache) {
+      _vsCache = {};
+      var A = _attested();
+      if (A) {
+        for (var k in A) {
+          var e = A[k];
+          if (!e || !e[0] || !/V[qNpPhHt]/.test(String(e[1] || ''))) continue;
+          var r = getRoot(k);
+          if (r && !_vsCache[r]) _vsCache[r] = e[0];
+        }
+      }
+    }
+    return _vsCache[root] || '';
+  }
+
   var rootMap = SURFACE_MAP;   // the pages alias RootEngine.rootMap by this name
   window.RootEngine = {
+    senseClass: senseClass,
     getRoot: getRoot, getRoots: getRoots, explain: explain, resolve: resolve,
     stripPrefixes: stripPrefixes, stripLayers: stripLayers, stripNikkud: stripNikkud,
     toSofit: toSofit, normFinals: normFinals, rootMap: rootMap,

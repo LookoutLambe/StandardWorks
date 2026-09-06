@@ -521,29 +521,52 @@
     // a root that admitted only "in the eyes of". Now the form and the gloss
     // of this very token are appended — with their corpus count when the
     // concordance kept them, otherwise marked "here".
-    var forms = Object.keys(entry.f || {});
+    /* ── THE SENSE THIS WORD CARRIES ──────────────────────────────────
+       A study card answers "where else does this word mean THIS". Tapping
+       הִתְחַנְּנוּ "did plead" used to list all 436 uses of חנן — favor,
+       grace, without cause, the name Hanan — because every line came from
+       the root. RootEngine.senseClass keys the token by lexeme-and-stem
+       (H2603.Vt, the hithpael), and the concordance now buckets forms,
+       glosses, counts and references the same way, so the card can describe
+       the word instead of its whole family. A root with one sense, or a
+       token whose class is not in the bucket, keeps the old root-wide view. */
+    var senseKey = '';
+    try { senseKey = (window.RootEngine && window.RootEngine.senseClass) ? window.RootEngine.senseClass(surface) : ''; } catch (eS) {}
+    var sense = (senseKey && entry.s && entry.s[senseKey]) || null;
+    if (sense && sense.n && sense.n < (entry.c || []).reduce(function(a, b) { return a + b; }, 0)) {
+      h += '<div class="rsc-sense">' +
+           '<b>This sense</b> — ' + esc(sense.g) + ' · ' + sense.n + ' uses in ' + sense.v + ' verses' +
+           '</div>';
+    } else {
+      sense = null;
+    }
+    var forms = Object.keys((sense && sense.fs) || entry.f || {});
     var hereForm = String(found.part || cleanSurface(surface) || '').replace(/\u05C3$/, '');
     var formItems = forms.map(function(f) {
-      return '<span style="font-family:\'David Libre\',serif">' + esc(f) + '</span> (' + entry.f[f] + 'x)';
+      var src = (sense && sense.fs) || entry.f;
+      return '<span style="font-family:\'David Libre\',serif">' + esc(f) + '</span> (' + src[f] + 'x)';
     });
     if (hereForm && forms.indexOf(hereForm) < 0) {
       formItems.push('<span style="font-family:\'David Libre\',serif">' + esc(hereForm) + '</span> (here)');
     }
     if (formItems.length > 1) h += '<span>Forms:</span> ' + formItems.join(', ') + '<br>';
-    var glosses = Object.keys(entry.g || {});
+    var glosses = Object.keys((sense && sense.gs) || entry.g || {});
     var shown = glosses.slice(0, 4);
     var hereGloss = String(glossText || '').replace(/^[\s"'.,;:?!()\u2014\u2013-]+|[\s"'.,;:?!()\u2014\u2013-]+$/g, '');
-    var glossItems = shown.map(function(g) { return '"' + esc(g) + '" (' + entry.g[g] + 'x)'; });
+    var gsrc = (sense && sense.gs) || entry.g;
+    var glossItems = shown.map(function(g) { return '"' + esc(g) + '" (' + gsrc[g] + 'x)'; });
     if (hereGloss) {
       var lc = hereGloss.toLowerCase(), hit = null;
       for (var gi = 0; gi < glosses.length; gi++) {
         if (glosses[gi].toLowerCase() === lc) { hit = glosses[gi]; break; }
       }
-      if (hit && shown.indexOf(hit) < 0) glossItems.push('"' + esc(hit) + '" (' + entry.g[hit] + 'x)');
+      if (hit && shown.indexOf(hit) < 0) glossItems.push('"' + esc(hit) + '" (' + gsrc[hit] + 'x)');
       else if (!hit) glossItems.push('"' + esc(hereGloss) + '" (here)');
     }
     if (glossItems.length > 1) h += '<span>Glossed:</span> ' + glossItems.join(', ') + '<br>';
-    h += '<span class="rsc-refs-link">View all references →</span>';
+    h += '<span class="rsc-refs-link"' + (sense ? ' data-sense="' + esc(senseKey) + '"' : '') + '>' +
+         (sense ? 'View this sense\u2019s ' + sense.n + ' references \u2192'
+                : 'View all references \u2192') + '</span>';
     return h;
   }
 
@@ -624,7 +647,7 @@
             refsLink.addEventListener('click', function(ev) {
               ev.stopPropagation();
               if (typeof window.closePopup === 'function') { try { window.closePopup(); } catch (e) {} }
-              openPanel(found.idx);
+              openPanel(found.idx, refsLink.getAttribute('data-sense') || '');
             });
           }
         })(blocks[bj], all[bj]);
@@ -741,9 +764,10 @@
     renderNext();
   }
 
-  function openPanel(idx) {
+  function openPanel(idx, senseKey) {
     var conc = window._rootConcordance;
     var entry = conc.roots[idx];
+    var senseRec = (senseKey && entry.s && entry.s[senseKey]) || null;
     var d = rootDisplay(conc.keys[idx]);
     var p = buildPanel();
     p.querySelector('.rsc-panel-title').innerHTML =
@@ -754,9 +778,22 @@
     body.innerHTML = '<div class="rsc-loading">Loading references…</div>';
     p.classList.add('open');
     ensureRefs(function() {
-      var refs = (window._rootConcordanceRefs || [])[idx];
+      /* The point of a study card: show the verses where the word carries the
+         sense you tapped, not every use of its root. _rootSenseRefs is bucketed
+         by lexeme-and-stem; fall back to the root's own refs when the root has
+         a single sense (nothing to filter) or the bucket was too common to
+         list verse by verse. */
+      var senseAll = (window._rootSenseRefs || [])[idx];
+      var refs = (senseKey && senseAll && senseAll[senseKey]) ||
+                 (window._rootConcordanceRefs || [])[idx];
+      var scoped = !!(senseKey && senseAll && senseAll[senseKey]);
       if (!refs) { body.innerHTML = '<div class="rsc-loading">No references found.</div>'; return; }
       var h = '';
+      if (scoped && senseRec) {
+        h += '<div class="rsc-note">Showing only where this word means <b>' + esc(senseRec.g) +
+             '</b> — ' + senseRec.n + ' uses in ' + senseRec.v + ' verses, of ' +
+             (entry.c || []).reduce(function(a, b) { return a + b; }, 0) + ' for the whole root.</div>';
+      }
       // Order volumes: current volume first, then canonical order
       var order = [cfg.vol].concat(VOL_ORDER.filter(function(v) { return v !== cfg.vol; }));
       if (refs._b) {
