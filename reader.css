@@ -844,6 +844,12 @@ body {
   --accent-fill: var(--here);
   --on-fill: #fff;
   --accent-hover: color-mix(in srgb, var(--accent-fill) 85%, #fff);
+  /* the highlighter. Marks the word a study card is about, inside the
+     references panel. Yellow because that is what a highlighter is, and it
+     has to survive Light, Sepia and Dark — so it is a WASH behind the Hebrew,
+     never a text colour, and the ink on top stays --ink in every theme. */
+  --studied-wash: rgba(255, 209, 71, 0.42);
+  --studied-edge: rgba(214, 158, 18, 0.55);
   --verse-num: var(--here);
   /* text color for something FILLED with --accent (a solid button, a
      count badge). --here brightens to mint in dark mode by design (dark
@@ -2321,3 +2327,18 @@ body:not(.hide-gloss):not(.dual-mode) .heading-flow > .word-group {
   vertical-align: top;
   margin-bottom: 2px;     /* was the flex row-gap */
 }
+
+/* ── THE WORD BEING STUDIED, inside the references panel ──
+   The panel lists whole verses, so without a mark the reader has to hunt for
+   the word the card is about — in 2 Nephi 8:3 that is כָּל־חָרְבֹתֶיהָ, six
+   words in. A wash behind the Hebrew, not a text colour: the interlinear
+   already spends colour on the gloss tier, and a highlight has to read the
+   same in Light, Sepia and Dark. --highlight is the theme's own selection
+   wash and already flips with the theme. */
+.xref-ref-word--studied .hw {
+  background: var(--studied-wash);
+  border-radius: 4px;
+  padding: 0 4px;
+  box-shadow: 0 0 0 1px var(--studied-edge);
+}
+.xref-ref-word--studied .en { color: var(--ink); font-weight: 600; }

@@ -775,7 +775,31 @@
     return out;
   }
 
-  function renderOneVerse(host, r) {
+  /* Which words in a listed verse are the ones being studied. Matches on the
+     SENSE when the panel is sense-scoped (so חָרְבֹתֶיהָ "her waste places"
+     lights up on the waste sense but not on the sword sense), otherwise on the
+     root. Cheap per word and memoised, because a panel can list 800 verses. */
+  function studiedMatcher(rootKey, senseKey) {
+    var RE = window.RootEngine;
+    if (!RE || !RE.getRoots) return null;
+    var cache = {};
+    return function(hw) {
+      if (hw in cache) return cache[hw];
+      var hit = false;
+      try {
+        var parts = RE.getRoots(hw) || [];
+        for (var i = 0; i < parts.length; i++) {
+          if (parts[i].root !== rootKey) continue;
+          if (!senseKey) { hit = true; break; }
+          if (RE.senseClass && RE.senseClass(parts[i].part) === senseKey) { hit = true; break; }
+        }
+      } catch (e) { hit = false; }
+      cache[hw] = hit;
+      return hit;
+    };
+  }
+
+  function renderOneVerse(host, r, markFn) {
     if (!window.SWVerses) return;
     var card = document.createElement('div');
     card.className = 'rsc-il-card';
@@ -783,13 +807,13 @@
                      '<div class="rsc-il-body"><span class="rsc-il-load">Loading Hebrew…</span></div>';
     host.appendChild(card);
     window.SWVerses.get(r.book, r.ch, r.v, function(words) {
-      var html = window.SWVerses.interlinearHtml(words);
+      var html = window.SWVerses.interlinearHtml(words, markFn);
       if (!html) { if (card.parentNode) card.parentNode.removeChild(card); return; }
       card.querySelector('.rsc-il-body').innerHTML = html;
     });
   }
 
-  function appendInterlinearSection(body, refs, order) {
+  function appendInterlinearSection(body, refs, order, markFn) {
     if (!window.SWVerses) return;
     var list = collectVerseRefs(refs, order);
     if (!list.length) return;
@@ -809,7 +833,7 @@
     var i = 0, FIRST = 25, BATCH = 25;
     function renderNext() {
       var end = Math.min(i + (i === 0 ? FIRST : BATCH), list.length);
-      for (; i < end; i++) renderOneVerse(host, list[i]);
+      for (; i < end; i++) renderOneVerse(host, list[i], markFn);
       if (i >= list.length) { more.style.display = 'none'; return; }
       more.textContent = 'Show ' + Math.min(BATCH, list.length - i) + ' more of ' + (list.length - i) + ' remaining';
     }
@@ -904,7 +928,7 @@
         });
       }
       body.innerHTML = h;
-      appendInterlinearSection(body, refs, order);
+      appendInterlinearSection(body, refs, order, studiedMatcher(conc.keys[idx], scoped ? senseKey : ''));
     });
   }
 

@@ -254,7 +254,11 @@
     if (!url) { cb(null); return; }
     loadUrl(url, book, function() { cb(words(book, chapter, verse)); });
   }
-  function interlinearHtml(ws) {
+  /* markFn(hebrewWord) -> true marks that word as the one being studied. The
+     references panel lists whole verses, and without a mark the reader has to
+     hunt for the word the card is about — in 2 Nephi 8:3 that is
+     כָּל־חָרְבֹתֶיהָ, six words in. Optional: every other caller is unchanged. */
+  function interlinearHtml(ws, markFn) {
     if (!ws || !ws.length) return '';
     var esc = function(s) {
       return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -267,7 +271,10 @@
       if (!hw || hw === '\u05BE') continue;
       if (!first) html += '<span class="xref-ref-arr">\u2039</span>';
       first = false;
-      html += '<span class="xref-ref-word"><span class="hw">' + esc(hw) + '</span>';
+      var mark = false;
+      if (markFn) { try { mark = !!markFn(hw); } catch (e) { mark = false; } }
+      html += '<span class="xref-ref-word' + (mark ? ' xref-ref-word--studied' : '') +
+              '"><span class="hw">' + esc(hw) + '</span>';
       if (gl) html += '<span class="en">' + esc(String(gl).replace(/-/g, ' ')) + '</span>';
       html += '</span>';
     }
