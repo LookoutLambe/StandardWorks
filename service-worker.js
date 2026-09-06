@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-09-06T16-19-32';
+const BUILD_ID = '2026-09-06T16-31-45';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -65,6 +65,7 @@ const CORE_ASSETS = [
     '/StandardWorks/nt_crossrefs.js',
     '/StandardWorks/dc_crossrefs.js',
     '/StandardWorks/pgp_crossrefs.js',
+    '/StandardWorks/jst_crossrefs.js',
     '/StandardWorks/ot_heading_words.js',
     '/StandardWorks/nt_heading_words.js',
     '/StandardWorks/dc_heading_words.js',

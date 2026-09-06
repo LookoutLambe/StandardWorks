@@ -392,6 +392,47 @@ body:not(.dual-mode) .verse > .word-flow { width: 100%; }
    Arabic is what a reader scans for. Quiet, not hidden. */
 .verse-num .verse-num-arabic { display: block !important; font-size: .78em !important;
   color: var(--ink-light) !important; opacity: .75 !important; }
+/* JST. The Joseph Smith Translation revises particular OT and NT verses and
+   nothing on the verse said so. A mark, not a fill — gold is the accent's mark
+   role, and --accent already themes itself across light, sepia and dark, so
+   this needs no per-theme override.
+
+   A revision of the verse sits under the two numerals in the number column, so
+   it reads as an annotation ON that verse. An addition sits below the verse
+   entirely, because it points past it. */
+.verse-num .jst-mark, .verse > .jst-mark {
+  /* inline-block, not block: the arabic numeral above is display:block, so this
+     already starts on its own line — block stretched it to the full column
+     width (695px in the first cut). */
+  display: inline-block;
+  margin-top: .35em;
+  font-family: inherit;
+  font-size: .58em;
+  font-weight: 600;
+  letter-spacing: .06em;
+  line-height: 1;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  padding: 2px 3px;
+  opacity: .85;
+  direction: ltr;
+  unicode-bidi: isolate;
+  min-height: 0;
+}
+.verse-num .jst-mark:hover, .verse > .jst-mark:hover,
+.verse-num .jst-mark:focus-visible,
+.verse > .jst-mark:focus-visible { opacity: 1; background: var(--accent); color: var(--on-fill); }
+/* An ADDITION points past the verse rather than at it, so it sits below the
+   last verse instead of beside a number. The verse is display:block and the
+   english div before it is a block, so this starts on its own line; the column
+   is RTL, so it lands under the verse number. */
+.verse > .jst-mark { margin-top: .1em; margin-bottom: .1em; }
+/* Hebrew Only and Dual are reading modes, not study modes — the mark would be
+   noise there, exactly as the cross-reference markers are already hidden. */
+body.hide-gloss .verse-num .jst-mark, body.dual-mode .verse-num .jst-mark,
+body.hide-gloss .verse > .jst-mark,   body.dual-mode .verse > .jst-mark { display: none; }
 .verse { padding: 1em 0 !important; gap: .9em !important; border-bottom: 0 !important; }
 .verse + .verse { border-top: 1px solid var(--rule-light) !important; }
 

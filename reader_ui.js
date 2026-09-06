@@ -594,6 +594,10 @@ function closeAllPanels() {
 
   // Open verse actions menu on verse number click (does not alter selection)
   document.addEventListener('click', function(e) {
+    /* The JST mark lives INSIDE the number column and is a real link. This
+       listener is on the capture phase and preventDefaults, so without this the
+       link was swallowed and the tap just opened the verse menu. */
+    if (e.target.closest('.jst-mark')) return;
     var num = e.target.closest('.verse-num');
     if (!num) return;
     var verse = num.closest('.verse');

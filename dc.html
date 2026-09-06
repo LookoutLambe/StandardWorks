@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="nav_engine.css?v=48">
 <link rel="stylesheet" href="site_chrome.css?v=70">
 <link rel="stylesheet" href="xref_study_panel.css?v=14">
-<link rel="stylesheet" href="reader.css?v=80">
+<link rel="stylesheet" href="reader.css?v=84">
 <style>
 *:focus-visible { outline: 2px solid var(--here); outline-offset: 2px; }
 .book-title { font-size: 2.4em; font-weight: 700; color: var(--header-bg); letter-spacing: 0.04em; margin-bottom: 2px; }
@@ -695,7 +695,7 @@ window.READER = {
 </script>
 <!-- chapter summaries (250 KB eager) are now per-book in dc_headings/,
      fetched with the book by VolumeLoader. tools/build_heading_manifests.js -->
-<script src="reader_core.js?v=16"></script>
+<script src="reader_core.js?v=20"></script>
 
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=2"></script>
@@ -715,7 +715,7 @@ window.READER = {
 <!-- dc_crossrefs.js is fetched on idle by crossrefs_engine.js (it was 511 KB of blocking critical path) -->
 <script src="crossrefs_engine.js?v=15"></script>
 
-<script src="reader_ui.js?v=28"></script>
+<script src="reader_ui.js?v=29"></script>
 <script>
 // === D&C canon overrides (phase 2) — later function declarations win, so
 // these must load AFTER reader_ui.js: section-keyed chapter labels, the
