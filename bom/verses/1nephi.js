@@ -1274,7 +1274,7 @@ var ch8Verses = [
     ["יִוָּשֵׁעוּ","will be saved"],
     ["׃",""]
   ]},
-  { num: "ד", words: [["וְהִנֵּה","but behold"], ["לָמָן","Laman"], ["וּלְמוּאֵל","and Lemuel"], ["יָרֹא","exceedingly"], ["יָרֵאתִי","I fear"], ["בַּעֲבוּרְכֶם","because of you"], ["כִּי","for"], ["הִנֵּה","behold"], ["רָאִיתִי","methought I saw"], ["בַּחֲלוֹמִי","in my dream"], ["מִדְבָּר","a wilderness"], ["חֹשֶׁךְ","dark"], ["וְצַלְמָוֶת","and dreary"], ["׃",""]]},
+  { num: "ד", words: [["וְהִנֵּה","but behold"], ["לָמָן","Laman"], ["וּלְמוּאֵל","and Lemuel"], ["יָרֹא","exceedingly"], ["יָרֵאתִי","I fear"], ["בַּעֲבוּרְכֶם","because of you"], ["כִּי","for"], ["הִנֵּה","behold"], ["רָאִיתִי","methought I saw"], ["בַּחֲלוֹמִי","in my dream"], ["מִדְבָּר","a wilderness"], ["חֹשֶׁךְ","dark"], ["וּשְׁמָמָה","and dreary"], ["׃",""]]},
   { num: "ה", words: [["וָאֵרֶא","and I saw"], ["אִישׁ","a man"], ["וְהוּא","and he was"], ["לָבוּשׁ","dressed in"], ["מְעִיל","a robe"], ["לָבָן","white"], ["וַיָּבֹא","and he came"], ["וַיַּעֲמֹד","and stood"], ["לְפָנָי","before me"], ["׃",""]]},
   { num:"ו", words:[
     ["וַיְדַבֵּר","and he spake"],
