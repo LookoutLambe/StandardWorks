@@ -1226,18 +1226,67 @@
   // heads keep the card. Keys are returned UNFOLDED (final letters intact)
   // because the glossary cards are keyed on the final letter.
   var _PROCLITIC = /^[ובכלמשה]/;   // ו ב כ ל מ ש ה
+  /* Is this POINTED form a lexeme in its own right, and is that lexeme a
+     proper name? Strong's capitalises both the transliteration and the gloss
+     of a name (בֵּל -> x:"Bêl", g:"Bel") and lowercases a common word
+     (סַם -> x:"çam", g:"aroma"), so the table itself tells us which it is.
+     Exact pointed lookup only — no peeling, no fuzz. Fuzzy matching is what
+     filed every נֶפִי under H5297 נֹף, Memphis. */
+  function _pointedLexeme(w) {
+    var LK = _lookup(), SR = _roots();
+    if (!LK || !SR) return null;
+    var num = LK[w];
+    if (!num || !SR[num]) return null;
+    var e = SR[num];
+    /* The GLOSS decides, not the transliteration. Strong's transliterations
+       open with modifier letters — ʼÛwrîyâh, ʻêden, ṭâbᵉʼêl — so a
+       first-character capital test on `x` reads every one of those as a
+       common word and strips real names (Urijah, Tabeel). The `g` field
+       capitalises a proper noun and lowercases a common one, which is the
+       distinction we actually need. */
+    var g = String(e.g || '').replace(/^[^A-Za-z]+/, '');
+    if (!g) return null;
+    var c = g.charAt(0);
+    return { num: num, isName: c === c.toUpperCase() && c !== c.toLowerCase() };
+  }
+
   function stageNames(ctx) {
     var tbl = _names();
     if (!tbl) return '';
     var order = _contentPieces(ctx.pieces);
     for (var i = 0; i < order.length; i++) {
-      var raw = stripNikkud(order[i]);
+      var piece = order[i];
+      var raw = stripNikkud(piece);
       if (!tbl[normFinals(raw)]) continue;
+      /* THE NAME TABLE IS CONSONANTAL — 0 of its 6,169 keys carry a vowel —
+         so a homograph matched it exactly as the name did, and the pointing
+         that separates them was stripped on the line above. סַם "spice"
+         scored as Sam, בַּל "not" as Bel, גַּת "winepress" as Gath,
+         נָאווּ "they are beautiful" as Nauvoo, הַיָּד "the hand" as Hyde.
+         Both then keyed to the same bare consonants, so one scorecard held
+         two unrelated words and each undercounted the other.
+
+         The standing rule decides it: a form leaves the name table only on a
+         lexicon hit, the morphology never decides. So consult the POINTED
+         form. A lexeme whose gloss is a common word is not the name — fall
+         through and let the lexicon stage key it properly. A lexeme that IS
+         a name keys by its Strong's number, which is what keeps בֵּל (H1078)
+         off בַּל (H1077). A form with no lexeme at all is a name this
+         translation supplies — Sam, Nephi — and keeps the consonantal key. */
+      var lex = _pointedLexeme(piece);
+      if (lex && !lex.isName) continue;      // the common word; not a name
+      if (lex && lex.isName) return lex.num; // a named lexeme: key by its number
+      /* Peel proclitics so every spelling of one name lands on one card.
+         The old guard (best.length > 3 and shorter.length >= 3) meant a SHORT
+         name could never be de-prefixed: Sam scattered across three keys —
+         סם, וסם and ובסם — so his card showed a fraction of his ten mentions.
+         Two letters is the floor now, and the peel is still gated on the
+         shorter form being itself a known name, so it cannot eat a word. */
       var best = raw;
-      while (best.length > 3 && _PROCLITIC.test(best)) {
-        var shorter = best.slice(1);
-        if (shorter.length < 3 || !tbl[normFinals(shorter)]) break;
-        best = shorter;
+      for (var k = 1; k < raw.length - 1 && k <= 3; k++) {
+        if (!_PROCLITIC.test(raw.slice(k - 1))) break;   // only peel actual proclitics
+        var cand = raw.slice(k);
+        if (cand.length >= 2 && tbl[normFinals(cand)]) { best = cand; break; }
       }
       return best;
     }
