@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-09-06T01-53-04';
+const BUILD_ID = '2026-09-06T02-19-52';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -55,6 +55,7 @@ const CORE_ASSETS = [
   '/StandardWorks/fonts/davidlibre-700-hebrew.woff2',
   '/StandardWorks/fonts/davidlibre-700-latin.woff2',
     '/StandardWorks/root_concordance.js',
+    '/StandardWorks/attested_forms.js',
     '/StandardWorks/strongs_lookup.js',
     '/StandardWorks/strongs_roots.js',
     '/StandardWorks/interlinear_gloss.js',

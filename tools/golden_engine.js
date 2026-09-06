@@ -11,7 +11,8 @@ const fs = require('fs'), path = require('path'), vm = require('vm');
 const R = path.join(__dirname, '..');
 function load(engineFile) {
   const win = {};
-  ['strongs_lookup.js', 'strongs_roots.js', 'bdb_roots.js', 'shoroshim_roots.js', 'root_names.js', 'root_concordance.js']
+  ['strongs_lookup.js', 'strongs_roots.js', 'bdb_roots.js', 'shoroshim_roots.js', 'root_names.js', 'root_concordance.js', 'attested_forms.js']
+    .filter(f => fs.existsSync(path.join(R, f)))
     .forEach(f => vm.runInNewContext(fs.readFileSync(path.join(R, f), 'utf8'), { window: win }, { filename: f }));
   const ctx = { window: win, _strongsLookup: win._strongsLookup, _strongsRoots: win._strongsRoots };
   vm.createContext(ctx);

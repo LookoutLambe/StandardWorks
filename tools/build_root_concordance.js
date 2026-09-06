@@ -44,7 +44,8 @@ function evalIntoWindow(file) {
 evalIntoWindow('strongs_lookup.js');
 evalIntoWindow('strongs_roots.js');
 evalIntoWindow('bdb_roots.js');
-evalIntoWindow('shoroshim_roots.js');  // Brauner validation set for the engine's morphology gate   // BDB root per Strong's number; baseRoot prefers it
+evalIntoWindow('shoroshim_roots.js');
+if (fs.existsSync(path.join(ROOT, 'attested_forms.js'))) evalIntoWindow('attested_forms.js');   // the attested-form stage, same table the page loads  // Brauner validation set for the engine's morphology gate   // BDB root per Strong's number; baseRoot prefers it
 if (!win._strongsLookup || !win._strongsRoots) throw new Error('Strong\'s data failed to load');
 console.log('Strong\'s: %d forms, %d entries', Object.keys(win._strongsLookup).length, Object.keys(win._strongsRoots).length);
 

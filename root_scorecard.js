@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '84';   // bump when the generated data files change
+  var RSC_V = '85';   // bump when the generated data files change
   // Transliterated terms — an exception table in the tool, like the received
   // spellings in transliterate(): keyed by bare consonants, so every pointing
   // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.
@@ -133,6 +133,7 @@
     if (!window._rootProperNames) need.push('root_names.js?v=17');
     if (!window._shoroshimRoots)  need.push('shoroshim_roots.js?v=3');
     if (!window._rootGlossaryData) need.push('bom/roots_glossary.js?v=' + RSC_V);
+    if (!window._attestedForms)   need.push('attested_forms.js?v=' + RSC_V);   // the Masoretic Text's own parse of every attested form
     if (!need.length) { cb(); return; }
     var n = 0;
     function done() { if (++n >= need.length) cb(); }
@@ -369,6 +370,63 @@
     return cfg.base + PAGES[vol] + '#' + deep;
   }
 
+  // ---------- the morphology code, read into words ----------
+  // OSHB / TAHOT scheme (morphhb/parsing/HebrewMorphologyCodes.html): one
+  // language letter, then one code per segment separated by "/": part of
+  // speech, then type or stem, then conjugation, person, gender, number, state.
+  var MORPH_STEM = { q: 'qal', N: 'niphal', p: 'piel', P: 'pual', h: 'hiphil', H: 'hophal', t: 'hithpael',
+    o: 'polel', O: 'polal', r: 'hithpolel', m: 'poel', M: 'poal', k: 'palel', K: 'pulal', Q: 'qal passive',
+    l: 'pilpel', L: 'polpal', f: 'hithpalpel', D: 'nithpael', j: 'pealal', i: 'pilel', u: 'hothpaal',
+    c: 'tiphil', v: 'hishtaphel', w: 'nithpalel', y: 'nithpoel', z: 'hithpoel' };
+  var MORPH_CONJ = { p: 'perfect', q: 'sequential perfect', i: 'imperfect', w: 'sequential imperfect (wayyiqtol)',
+    h: 'cohortative', j: 'jussive', v: 'imperative', r: 'participle', s: 'passive participle',
+    a: 'infinitive absolute', c: 'infinitive construct' };
+  var MORPH_POS = { A: 'adjective', C: 'conjunction', D: 'adverb', N: 'noun', P: 'pronoun', R: 'preposition',
+    S: 'suffix', T: 'particle', V: 'verb' };
+  var MORPH_TYPE = { A: { a: '', c: 'cardinal', g: 'gentilic', o: 'ordinal' },
+    N: { c: '', g: 'gentilic', p: 'proper name' },
+    P: { d: 'demonstrative', f: 'indefinite', i: 'interrogative', p: 'personal', r: 'relative' },
+    R: { d: 'with the article' },
+    S: { d: 'directional he', h: 'paragogic he', n: 'paragogic nun', p: 'pronominal suffix' },
+    T: { a: 'affirmation', d: 'definite article', e: 'exhortation', i: 'interrogative', j: 'interjection',
+         m: 'demonstrative', n: 'negative', o: 'object marker', r: 'relative' } };
+  var MORPH_PGN = { '1': '1st', '2': '2nd', '3': '3rd', m: 'masc.', f: 'fem.', c: 'common', b: 'both',
+    s: 'sing.', p: 'plur.', d: 'dual', a: 'absolute', 'c_': 'construct', 'd_': 'determined' };
+  function morphSeg(code) {
+    if (!code) return '';
+    var pos = code.charAt(0), rest = code.slice(1), out = [];
+    if (pos === 'V') {
+      out.push(MORPH_STEM[rest.charAt(0)] || '');
+      out.push(MORPH_CONJ[rest.charAt(1)] || '');
+      var pgn = rest.slice(2);
+      var f = [];
+      for (var i = 0; i < pgn.length; i++) {
+        var ch = pgn.charAt(i);
+        if (i === 0 && /[123]/.test(ch)) f.push(MORPH_PGN[ch]);
+        else if (/[mfcb]/.test(ch) && f.length < 2 && !/plur|sing|dual/.test(f.join(' '))) f.push(MORPH_PGN[ch]);
+        else if (/[spd]/.test(ch) && !/plur|sing|dual/.test(f.join(' '))) f.push(MORPH_PGN[ch]);
+        else if (/[acd]/.test(ch)) f.push(ch === 'c' ? 'construct' : ch === 'd' ? 'determined' : 'absolute');
+      }
+      return (out.join(' ') + ' ' + f.join(' ')).replace(/\s+/g, ' ').trim();
+    }
+    var name = MORPH_POS[pos] || pos, t = (MORPH_TYPE[pos] || {})[rest.charAt(0)];
+    var tail = rest.slice(1), g = [];
+    if (t !== undefined) { if (t) g.push(t); } else tail = rest;
+    for (var k = 0; k < tail.length; k++) {
+      var c2 = tail.charAt(k), pos_ = k;
+      if (/[123]/.test(c2)) g.push(MORPH_PGN[c2]);
+      else if (/[mfcb]/.test(c2) && pos_ <= 1) g.push(MORPH_PGN[c2]);
+      else if (/[spd]/.test(c2) && pos_ <= 2) g.push(MORPH_PGN[c2]);
+      else if (/[acd]/.test(c2)) g.push(c2 === 'c' ? 'construct' : c2 === 'd' ? 'determined' : 'absolute');
+    }
+    return (name + ' ' + g.join(' ')).replace(/\s+/g, ' ').trim();
+  }
+  function morphLabel(code) {
+    var segs = String(code || '').replace(/^[HA]/, '').split('/');
+    var lang = /^A/.test(code) ? 'Aramaic ' : '';
+    return lang + segs.map(morphSeg).filter(Boolean).join(' + ');
+  }
+
   // ---------- popup slot ----------
   function detailHtml(found, surface, glossText) {
     var entry = found.entry;
@@ -383,6 +441,18 @@
       (d.translit ? ' <span style="font-size:0.85em;opacity:0.7;">(' + esc(d.translit) + ')</span>' : '') +
       '</span> — ' + total + ' uses in ' + totalVerses + ' verses across the scriptures';
     if (d.meaning) h += '<br><span style="font-style:italic;opacity:0.85;font-size:0.9em;">' + esc(d.meaning) + '</span>';
+    // THE PARSE, where the Masoretic Text attests this exact form: the analysis
+    // the OpenScriptures Hebrew Bible / STEPBible give it (attested_forms.js,
+    // via RootEngine.parse), read into words, with the source's cut between
+    // prefix, stem and suffix. Absent for a form the Tanakh does not have.
+    var pz = null;
+    try { pz = window.RootEngine && window.RootEngine.parse && window.RootEngine.parse(surface); } catch (e) { pz = null; }
+    if (pz && pz.morph) {
+      var pl = morphLabel(pz.morph);
+      h += '<br><span style="font-size:0.9em;opacity:0.9;"><b>Parse:</b> ' + esc(pl) +
+        (pz.segments ? ' · <span style="font-family:\'David Libre\',serif">' + esc(pz.segments.replace(/\//g, ' · ')) + '</span>' : '') +
+        (pz.n ? ' <span style="opacity:0.65;">(' + pz.n + 'x in the Tanakh)</span>' : '') + '</span>';
+    }
     // per-volume chips
     h += '<div class="rsc-chips">';
     VOL_ORDER.forEach(function(vk, vi) {
