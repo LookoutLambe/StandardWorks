@@ -135,7 +135,12 @@ body.sepia-mode {
   --paper:   #F4EAD8;
   --paper-2: #E8DAC2;
   --panel:   #E8DAC2;
-  --card:    #FAF2E4;
+  /* Sepia had the same defect in reverse: the card measured chroma 7.70
+     against a page of 9.94, so the card was LESS warm than the paper and
+     read as the white thing on a tan page. It is now 12.45 — warmer than
+     its ground, and still lighter than it (L 94.4 vs 93.3), so it gains
+     the tint without giving up the lift. Ink 15.55:1. */
+  --card:    #F9EED7;
   /* warm near-black, never pure: 10.49:1 on the ground above */
   --ink:     #2A2318;
   --ink-2:   #5C503C;

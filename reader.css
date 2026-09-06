@@ -2132,7 +2132,15 @@ body.dark-mode #glossary-panel {
   --paper: #FCFAF7;
   --paper-2: #F0ECE5;
   --panel: #F0ECE5;
-  --card: #FFFFFF;
+  /* THE CARD IS PAPER TOO. #FFFFFF measured chroma 0.01 — the one
+     achromatic surface in a palette whose whole paper family is warm, so
+     a card laid on the page read as a cold hole in it rather than a sheet
+     of it. Warmed to chroma 5.38, which is a shade above the page's own
+     1.66: the card is now the WARMER material, which is what makes it
+     read as laid on top. Ink holds at 16.62:1 and the card still parts
+     from the page at dE 3.96, so the surface-separation rule is intact
+     without leaning on the border to do all the work. */
+  --card: #FBF6EC;
   --chrome: #1B2A41;
   --chrome-2: #142132;
   --chrome-line: #2E4260;
