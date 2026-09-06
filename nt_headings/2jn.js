@@ -2,5 +2,5 @@
 (function(){ var W = window;
   Object.assign(W._ntChapterHeadings = W._ntChapterHeadings || {}, {"2 John 1":"John rejoices because the children of the elect lady are true and faithful."});
   Object.assign(W._ntChapterHeadingsHeb = W._ntChapterHeadingsHeb || {}, {"2 John 1":"יוחנן שמח כי ילדי הגברת הנבחרת הם אמתיים ונאמנים"});
-  Object.assign(W._ntHeadingWords = W._ntHeadingWords || {}, {"2 John 1":[["יוֹחָנָן","John"],["שָׂמֵחַ","happy"],["כִּי","that"],["יִלְדֵי","her fruit"],["הַגְּבֶרֶת","the lady"],["הַנִּבְחֶרֶת","of promise"],["הֵם","they"],["אֲמִתִּיִּים","true"],["וְנֶאֱמָנִים","and faithful"],["׃",""]]});
+  Object.assign(W._ntHeadingWords = W._ntHeadingWords || {}, {"2 John 1":[["יוֹחָנָן","John"],["שָׂמֵחַ","happy"],["כִּי","that"],["יִלְדֵי","the fruit of"],["הַגְּבֶרֶת","the lady"],["הַנִּבְחֶרֶת","of promise"],["הֵם","they"],["אֲמִתִּיִּים","true"],["וְנֶאֱמָנִים","and faithful"],["׃",""]]});
 })();

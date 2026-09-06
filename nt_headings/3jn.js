@@ -2,5 +2,5 @@
 (function(){ var W = window;
   Object.assign(W._ntChapterHeadings = W._ntChapterHeadings || {}, {"3 John 1":"John commends Gaius for his help to those who love the truth."});
   Object.assign(W._ntChapterHeadingsHeb = W._ntChapterHeadingsHeb || {}, {"3 John 1":"יוחנן משבח את גיוס על עזרתו לאלו אשר אוהבים את האמת"});
-  Object.assign(W._ntHeadingWords = W._ntHeadingWords || {}, {"3 John 1":[["יוֹחָנָן","John"],["מְשַׁבֵּחַ","praises"],["אֶת",""],["גָּיוֹס","Gaius"],["עַל","upon"],["עֶזְרָתוֹ","his help"],["לֹּא־לוֹ","not theirs"],["אֲשֶׁר","which"],["אוֹהֲבִים","who love"],["אֶת",""],["הָאֱמֶת","the truth"],["׃",""]]});
+  Object.assign(W._ntHeadingWords = W._ntHeadingWords || {}, {"3 John 1":[["יוֹחָנָן","John"],["מְשַׁבֵּחַ","praises"],["אֵת",""],["גָּיוֹס","Gaius"],["עַל","upon"],["עֶזְרָתוֹ","his help"],["לֹּא־לוֹ","not theirs"],["אֲשֶׁר","which"],["אוֹהֲבִים","who love"],["אֵת",""],["הָאֱמֶת","the truth"],["׃",""]]});
 })();

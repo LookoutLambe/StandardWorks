@@ -2,5 +2,5 @@
 (function(){ var W = window;
   Object.assign(W._otChapterHeadings = W._otChapterHeadings || {}, {"Obadiah 1":"Obadiah prophesies the downfall of Edom—Saviors will stand upon Mount Zion."});
   Object.assign(W._otChapterHeadingsHeb = W._otChapterHeadingsHeb || {}, {"Obadiah 1":"עבדיה מנבא את נפילת אדום מושיעים יעמדו על הר ציון"});
-  Object.assign(W._otHeadingWords = W._otHeadingWords || {}, {"Obadiah 1":[["עֹבַדְיָה","Obadiah"],["מְנַבֵּא","prophesies"],["אֶת",""],["נְפִילַת","the fall of"],["אֱדוֹם","Edom"],["מוֹשִׁיעִים","deliverers"],["יַעַמְדוּ","shall stand"],["עַל","upon"],["הַר","mountain"],["צִיּוֹן","Zion"],["׃",""]]});
+  Object.assign(W._otHeadingWords = W._otHeadingWords || {}, {"Obadiah 1":[["עֹבַדְיָה","Obadiah"],["מְנַבֵּא","prophesies"],["אֵת",""],["נְפִילַת","the fall of"],["אֱדוֹם","Edom"],["מוֹשִׁיעִים","deliverers"],["יַעַמְדוּ","shall stand"],["עַל","upon"],["הַר","mountain"],["צִיּוֹן","Zion"],["׃",""]]});
 })();
