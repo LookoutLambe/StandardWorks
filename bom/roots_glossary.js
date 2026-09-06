@@ -152,7 +152,7 @@ window._rootGlossaryData = {
   "שכנע": { "meaning": "(שִׁכְנֵעַ) to persuade", "category": "Uncategorized" },
   "רשם": { "meaning": "(רָשַׁם) to record, inscribe", "category": "Uncategorized" },
   "תכשיט": { "meaning": "(תַּכְשִׁיט) jewel, ornament", "category": "Uncategorized" },
-  "דרג": { "meaning": "(דַּרְגָּה) degree", "category": "Uncategorized" },
+  "דרג": { "meaning": "(מַדְרֵגָה) steep — the steep places; the steep place", "category": "Uncategorized" },
   "פמוט": { "meaning": "(פָּמוֹט) candlestick", "category": "Uncategorized" },
   "דוגמה": { "meaning": "(דֻּגְמָה) example, pattern", "category": "Uncategorized" },
   "השראה": { "meaning": "(הַשְׁרָאָה) inspiration", "category": "Uncategorized" },
@@ -188,7 +188,7 @@ window._rootGlossaryData = {
   "דפס": { "meaning": "(דְּפוּס) printing; (מַדְפִּיס) printer", "category": "Uncategorized" },
   "בזבז": { "meaning": "(בִּזְבֵּז) to squander, idle away", "category": "Uncategorized" },
   "אתגר": { "meaning": "(אֶתְגָּר) challenge", "category": "Uncategorized" },
-  "תאם": { "meaning": "(תֹּאַם) conformity; (תָּאַם) to match", "category": "Uncategorized" },
+  "תאם": { "meaning": "(תָּאוֹם) twin — twins; are bearing twins", "category": "Uncategorized" },
   "סוגיה": { "meaning": "(סוּגְיָה) issue, topic", "category": "Uncategorized" },
   "תברואה": { "meaning": "(תַּבְרוּאָה) sanitation", "category": "Uncategorized" },
   "כלשהו": { "meaning": "(כָּלְשֶׁהוּ) some, any", "category": "Uncategorized" },
@@ -461,7 +461,7 @@ window._rootGlossaryData = {
   "H7259": { "meaning": "Rebekah", "category": "Name" },
   "H0325": { "meaning": "Ahasuerus", "category": "Name" },
   "H0054": { "meaning": "Abiathar", "category": "Name" },
-  "H1660": { "meaning": "Gath", "category": "Name" },
+  "H1660": { "meaning": "(גַּת) press — in the winepress; the winepress", "category": "Name" },
   "H1390": { "meaning": "Gibeah", "category": "Name" },
   "H6721": { "meaning": "Zidon", "category": "Name" },
   "והפרושׁים": { "meaning": "(פְּרוּשִׁים) the Pharisees", "category": "Name" },
@@ -525,7 +525,7 @@ window._rootGlossaryData = {
   "H3379": { "meaning": "Jeroboam", "category": "Name" },
   "H3458": { "meaning": "Ishmael", "category": "Name" },
   "H0256": { "meaning": "Ahab", "category": "Name" },
-  "H3777": { "meaning": "Chaldeans", "category": "Name" },
+  "H3777": { "meaning": "(כֶּשֶׂד) Kesed — and Kesed", "category": "Name" },
   "H2596": { "meaning": "(חֲנוֹךְ) Enoch; (חָנַךְ) to dedicate, train", "category": "Name" },
   "H5146": { "meaning": "Noah", "category": "Name" },
   "פטרוס": { "meaning": "Peter", "category": "Name" },
@@ -691,7 +691,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "פלש": {
-    "meaning": "Philistia, Philistine",
+    "meaning": "(פָּלַשׁ) roll — they will roll; and roll",
     "category": "Society"
   },
   "בלה": {
@@ -2247,7 +2247,7 @@ window._rootGlossaryData = {
     "category": "Cognition"
   },
   "קים": {
-    "meaning": "raise up",
+    "meaning": "(קַיָּם) enduring, sure — Aramaic",
     "category": "Nature"
   },
   "יוסף": {
@@ -2349,7 +2349,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "חיי": {
-    "meaning": "eternal life",
+    "meaning": "(חָיַי) live — then she shall live",
     "category": "Time"
   },
   "רג": {
@@ -3010,7 +3010,7 @@ window._rootGlossaryData = {
     "category": "Theology"
   },
   "אלו": {
-    "meaning": "if",
+    "meaning": "(אֲלוּ) lo! — and lo!",
     "category": "Uncategorized"
   },
   "אול": {
@@ -3633,7 +3633,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "אלך": {
-    "meaning": "shall I go",
+    "meaning": "(אִלֵּךְ) these — these",
     "category": "Motion"
   },
   "יין": {
@@ -3833,7 +3833,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "ישם": {
-    "meaning": "made He",
+    "meaning": "(יְשִׁימוֹן) desolation — Jeshimon; in the desert",
     "category": "Society"
   },
   "יכרתו": {
@@ -5082,7 +5082,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "חמת": {
-    "meaning": "wrath of",
+    "meaning": "(חֵמֶת) skin bottle — and a skin of; from the skin",
     "category": "Society"
   },
   "אכלה": {
@@ -5206,7 +5206,7 @@ window._rootGlossaryData = {
     "category": "Motion"
   },
   "גרם": {
-    "meaning": "(גָּרַם) to cause",
+    "meaning": "(גֶּרֶם) bone — on the top of; and all their bones",
     "category": "Uncategorized"
   },
   "את־הממלכה": {
@@ -5382,7 +5382,7 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "סיר": {
-    "meaning": "remove",
+    "meaning": "(סִיר) pot, cauldron — also a thorn",
     "category": "Nature"
   },
   "פלא": {
@@ -5868,7 +5868,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "עות": {
-    "meaning": "hours",
+    "meaning": "(עָוַת) to bend, pervert, falsify",
     "category": "Uncategorized"
   },
   "ארצה׃": {
@@ -5988,7 +5988,7 @@ window._rootGlossaryData = {
     "category": "Family"
   },
   "ענו": {
-    "meaning": "did we heed",
+    "meaning": "(עָנָו) humble, meek",
     "category": "Quality"
   },
   "עבודה": {
@@ -6771,7 +6771,7 @@ window._rootGlossaryData = {
     "category": "Society"
   },
   "אתר": {
-    "meaning": "Ether",
+    "meaning": "(אֲתַר) place — after; upon its place",
     "category": "Uncategorized"
   },
   "אל־המדבר": {
@@ -7273,7 +7273,7 @@ window._rootGlossaryData = {
     "category": "Society"
   },
   "קרם": {
-    "category": "Uncategorized"
+    "meaning": "(קָרַם) cover — and I will cover; and it covered", "category": "Uncategorized"
   },
   "ופטים": {
     "meaning": "judges",
@@ -7733,7 +7733,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "רתם": {
-    "category": "Uncategorized"
+    "meaning": "(רֶתֶם) Spanish broom — a broom plant; juniper", "category": "Uncategorized"
   },
   "מרו": {
     "meaning": "beware",
@@ -7940,7 +7940,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "ינה": {
-    "meaning": "understanding",
+    "meaning": "(יָנָה) to oppress, maltreat",
     "category": "Cognition"
   },
   "יתפלל": {
@@ -8524,7 +8524,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "כתם": {
-    "category": "Uncategorized"
+    "meaning": "(כֶּתֶם) gold — a miktam; in the gold of", "category": "Uncategorized"
   },
   "שז": {
     "meaning": "Shez",
@@ -8735,7 +8735,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "נרד": {
-    "meaning": "shall we go down",
+    "meaning": "(נֵרְדְּ) nard — my nard; with nard plants",
     "category": "Motion"
   },
   "רכושנו": {
@@ -9196,7 +9196,7 @@ window._rootGlossaryData = {
     "category": "Action"
   },
   "דוד": {
-    "meaning": "David",
+    "meaning": "(דּוֹד) uncle — my beloved; O my beloved",
     "category": "Uncategorized"
   },
   "חצים": {
@@ -9748,7 +9748,7 @@ window._rootGlossaryData = {
     "category": "Action"
   },
   "אחל": {
-    "category": "Time"
+    "meaning": "(אַחְלָמָה) amethyst — and an amethyst; amethyst", "category": "Time"
   },
   "אראם": {
     "meaning": "should I show them",
@@ -10043,7 +10043,7 @@ window._rootGlossaryData = {
     "category": "Nature"
   },
   "ארד": {
-    "meaning": "I go down",
+    "meaning": "(אַרְדְּ) Ard — and Ard; Ard",
     "category": "Motion"
   },
   "חנם": {
@@ -13513,7 +13513,7 @@ window._rootGlossaryData = {
     "category": "Cognition"
   },
   "פחת": {
-    "category": "Family"
+    "meaning": "(פַּחַת) pit — to the pit; and pit", "category": "Family"
   },
   "תביטו": {
     "meaning": "you look",
@@ -13560,7 +13560,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "אהי": {
-    "meaning": "I was",
+    "meaning": "(אֱהִי) where — where is; and I will be",
     "category": "Uncategorized"
   },
   "עצל": {
@@ -15727,7 +15727,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "פשר": {
-    "category": "Uncategorized"
+    "meaning": "(פְּשַׁר) interpretation — and its interpretation; and the interpretation", "category": "Uncategorized"
   },
   "דוי": {
     "meaning": "diseases",
@@ -17222,7 +17222,7 @@ window._rootGlossaryData = {
     "category": "Motion"
   },
   "רמך": {
-    "meaning": "your vineyard",
+    "meaning": "(רַמָּךְ) brood mare — the mares",
     "category": "Uncategorized"
   },
   "טפחתי": {
@@ -17857,7 +17857,7 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "אוב": {
-    "meaning": "pain",
+    "meaning": "(אוֹב) a familiar spirit; a medium",
     "category": "Quality"
   },
   "ירע": {
@@ -17979,7 +17979,7 @@ window._rootGlossaryData = {
     "category": "Time"
   },
   "אחח": {
-    "meaning": "alas",
+    "meaning": "(אָח) fire-pot — the brother; Ahah",
     "category": "Uncategorized"
   },
   "בלון": {
@@ -20353,7 +20353,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "פוח": {
-    "meaning": "bellows",
+    "meaning": "(פּוּחַ) utter — that will breathe; I will blow",
     "category": "Uncategorized"
   },
   "בעיר": {
@@ -22269,7 +22269,7 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "קיץ": {
-    "meaning": "but he awakes",
+    "meaning": "(קַיִץ) summer; summer fruit",
     "category": "Uncategorized"
   },
   "תילילו": {
@@ -22953,7 +22953,7 @@ window._rootGlossaryData = {
     "category": "Quality"
   },
   "פחה": {
-    "meaning": "kindred",
+    "meaning": "(פֶּחָה) governor",
     "category": "Uncategorized"
   },
   "תפרץ": {
@@ -23691,7 +23691,7 @@ window._rootGlossaryData = {
     "category": "Family"
   },
   "איל": {
-    "meaning": "Lord in mercy",
+    "meaning": "(אַיִל) ram — rams; a ram",
     "category": "Theology"
   },
   "ירעדו": {
@@ -25235,7 +25235,7 @@ window._rootGlossaryData = {
     "category": "Theology"
   },
   "חקה": {
-    "meaning": "statute",
+    "meaning": "(חָקָה) carve — upon the carved work; traced",
     "category": "Uncategorized"
   },
   "ילבנו": {

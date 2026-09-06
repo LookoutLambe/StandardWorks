@@ -31,10 +31,18 @@
   // parses this same line so the concordance never files Ahman under Haman.
   // ONE LINE, VALID JSON — the builder reads it with JSON.parse.
   var TRANSLIT_TERMS = {"אדםאונדיאהמן":"Adam-ondi-Ahman","אהמן":"Ahman","שדולמק":"Shedolamak"};
-  function ttSkel(s) { return String(s || '').replace(/[\u0591-\u05C7]/g, '').replace(/[׃\[\]"'`.,;:?!()*]/g, ''); }
+  /* A Hebrew ACRONYM is not a word either, and the engine has no way to know:
+     תנ״ך was folding into תְּנוּךְ, the lobe of the ear (Lev 8:23), so tapping it
+     offered "Root תְּנוּךְ — 8 uses" and listed "upon the lobe of". Same
+     treatment as a transliterated term — no root, no Strong's — but its own
+     note, because the reason is different. */
+  var ACRONYM_TERMS = {"תנך":"תּוֹרָה, נְבִיאִים, כְּתוּבִים"};
+  // U+05F4 GERSHAYIM is the acronym's own punctuation and must strip like a quote.
+  function ttSkel(s) { return String(s || '').replace(/[\u0591-\u05C7]/g, '').replace(/[׃\[\]"'`.,;:?!()*\u05F3\u05F4]/g, ''); }
   function ttKey(part) {
-    if (TRANSLIT_TERMS[part]) return part;
-    if (/^[בכלמוהש]/.test(part) && TRANSLIT_TERMS[part.slice(1)]) return part.slice(1);
+    if (TRANSLIT_TERMS[part] || ACRONYM_TERMS[part]) return part;
+    var tail = part.slice(1);
+    if (/^[בכלמוהש]/.test(part) && (TRANSLIT_TERMS[tail] || ACRONYM_TERMS[tail])) return tail;
     return '';
   }
   // {all: every maqqef-part is a term, parts: [surface parts that are terms]}
@@ -50,7 +58,13 @@
   function ttNoteHtml(surface) {
     var tt = translitTermParts(surface);
     return tt.parts.map(function(p) {
-      var name = TRANSLIT_TERMS[ttKey(ttSkel(p.split(/[־\s]+/).join('')))] || '';
+      var key = ttKey(ttSkel(p.split(/[־\s]+/).join('')));
+      var acro = ACRONYM_TERMS[key];
+      if (acro) {
+        return '<span class="tt-note"><b>' + esc(acro) + '</b> \u2014 ' +
+          'an acronym, not a word: its letters stand for those three, so it has no Hebrew root and no Strong\u2019s number.</span>';
+      }
+      var name = TRANSLIT_TERMS[key] || '';
       return '<span class="tt-note">' + (name ? '<b>' + esc(name) + '</b> \u2014 ' : '') +
         'transliterated term: carried over from the English as it sounds, not a Hebrew word. It has no Hebrew root and no Strong\u2019s number.</span>';
     }).join('<br>');

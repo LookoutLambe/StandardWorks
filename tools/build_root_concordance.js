@@ -60,15 +60,21 @@ const getRoots = win.RootEngine.getRoots;
 const senseClass = win.RootEngine.senseClass;   // the SAME function the card uses
 if (!senseClass) throw new Error('root_engine.js did not export senseClass');
 
-// The transliterated-term exception table lives in root_scorecard.js on one
-// JSON line (TRANSLIT_TERMS); read it from the source so the two never drift.
-const TRANSLIT_TERMS = (() => {
-  const m = fs.readFileSync(path.join(ROOT, 'root_scorecard.js'), 'utf8').match(/var TRANSLIT_TERMS = (\{[^\n]*\});/);
-  if (!m) throw new Error('root_scorecard.js: TRANSLIT_TERMS line not found');
+// The exception tables live in root_scorecard.js, each on one JSON line
+// (TRANSLIT_TERMS for words carried over as they sound, ACRONYM_TERMS for
+// Hebrew acronyms like תנ״ך); read them from the source so they never drift.
+const readTable = name => {
+  const m = fs.readFileSync(path.join(ROOT, 'root_scorecard.js'), 'utf8')
+    .match(new RegExp('var ' + name + ' = (\\{[^\\n]*\\});'));
+  if (!m) throw new Error('root_scorecard.js: ' + name + ' line not found');
   return JSON.parse(m[1]);
-})();
-const ttSkel = s => String(s || '').replace(/[\u0591-\u05C7]/g, '').replace(/[\u05C3\[\]"'`.,;:?!()*]/g, '');
-const ttKey = p => TRANSLIT_TERMS[p] ? p : (/^[\u05D1\u05DB\u05DC\u05DE\u05D5\u05D4\u05E9]/.test(p) && TRANSLIT_TERMS[p.slice(1)] ? p.slice(1) : '');
+};
+const TRANSLIT_TERMS = readTable('TRANSLIT_TERMS');
+const ACRONYM_TERMS = readTable('ACRONYM_TERMS');
+const isTerm = p => !!(TRANSLIT_TERMS[p] || ACRONYM_TERMS[p]);
+// U+05F3/U+05F4 (geresh, gershayim) are the acronym's own punctuation.
+const ttSkel = s => String(s || '').replace(/[\u0591-\u05C7]/g, '').replace(/[\u05C3\[\]"'`.,;:?!()*\u05F3\u05F4]/g, '');
+const ttKey = p => isTerm(p) ? p : (/^[\u05D1\u05DB\u05DC\u05DE\u05D5\u05D4\u05E9]/.test(p) && isTerm(p.slice(1)) ? p.slice(1) : '');
 // Mirrors RootScorecard.translitTermParts: a maqqef chain whose JOINED
 // consonants are a term (אָדָם־אוֹנְדִי־אַהְמָן) is the term whole — testing its
 // parts one by one would pass אָדָם as ordinary Hebrew and file the whole form
