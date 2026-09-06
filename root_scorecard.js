@@ -481,9 +481,21 @@
      helps you read the line — and lose the corpus counts and the references
      link, which is all that was ever noise. A preposition FUSED to a content
      word (R/, Rd) is not affected: that token is the content word. */
-  var _FUNCTION_MORPH = /^H?(T[ocrndmi]|R)$/;
+  var _FUNCTION_MORPH = /^(T[ocrndmi]|R|C)$/;
+  /* EVERY segment must be a function class. Taking split('/')[0] condemned the
+     content word behind a prefix: הָאֱלֹהִים is Td/Ncmpa — article + NOUN, i.e.
+     "God" — and it was being silently stripped of its concordance, along with
+     הָאָרֶץ, הַמֶּלֶךְ and לֵאמֹר (R/Vqcc, a verb). That took the suppression
+     to 30.4% of the corpus instead of the intended particles only. A token is
+     a function word only when NOTHING in it is a noun, verb or adjective. */
   function isFunctionWord(morph) {
-    return !!morph && _FUNCTION_MORPH.test(String(morph).replace(/^H/, '').split('/')[0]);
+    if (!morph) return false;
+    var segs = String(morph).replace(/^H/, '').split('/').filter(Boolean);
+    if (!segs.length) return false;
+    for (var i = 0; i < segs.length; i++) {
+      if (!_FUNCTION_MORPH.test(segs[i].replace(/^H/, ''))) return false;
+    }
+    return true;
   }
 
   function detailHtml(found, surface, glossText) {
