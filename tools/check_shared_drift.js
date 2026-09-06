@@ -27,6 +27,7 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
+const vm = require('vm');   // the transliterator check evaluates both copies
 const ROOT = path.join(__dirname, '..');
 
 const read = f => fs.readFileSync(path.join(ROOT, f), 'utf8');
@@ -130,35 +131,62 @@ for (const name of ['_paintWordAnnotation', 'applyAnnotationToWord']) {
   if (!bad) ok('heading-flow loop identical across ot/nt/dc/pgp');
 }
 
-// ---- 5. the dagesh-forte (gemination) rule, forked into bom/bom.html
-// bom.html carries its own transliterator. The two have already diverged in
-// substance — 785 forms transliterate differently, and bom.html's copy is the
-// better one (avonam/haragti/tuma vs reader_ui's onam/harogti/tumea) — so
-// whole-function equality cannot be asserted yet. What IS identical, and what
-// was wrong in BOTH until 2026-09-06, is the gemination push: a doubled
-// digraph was repeated whole ("hashshamayim"). Guard that block so a future
-// fix cannot land in one copy and miss the other.
+// ---- 5. the transliterator, forked into bom/bom.html
+// The two copies had drifted on 789 of 107,318 distinct forms before
+// 2026-09-06. They agree exactly now — bom's _tlPointed rules (shva, qamats,
+// holam-vav) went into reader_ui.js, reader_ui's _tlReceived table came back
+// the other way — so BEHAVIOUR can be asserted, which is what actually matters
+// and is immune to the two files' different styles (escaped \uXXXX vs literal
+// Hebrew, brace placement). A deterministic sample keeps it quick.
 {
-  const PAIR = ['reader_ui.js', 'bom/bom.html'];
-  const START = 'var isDagForte =';
-  const END = 'doubled: true})';
-  let ref = null, refFile = null, bad = false;
-  for (const f of PAIR) {
-    const src = read(f);
-    const i = src.indexOf(START);
-    const j = i >= 0 ? src.indexOf(END, i) : -1;
-    if (i < 0 || j < 0) { fail('dagesh-forte anchors missing in ' + f); bad = true; continue; }
-    // compare the rule, not the prose: the two copies carry different comments
-    const nb = norm(src.slice(i, j).replace(/\/\/[^\n]*/g, ''));
-    if (ref === null) { ref = nb; refFile = f; continue; }
-    if (nb !== ref) {
-      bad = true;
-      fail('the dagesh-forte rule differs between ' + refFile + ' and ' + f +
-           ' — bom.html forks the transliterator; apply the same edit to both.\n  ' +
-           firstDiff(ref, nb));
+  const endOfFn = (src, name) => {
+    const m = src.match(new RegExp('function ' + name + '\\s*\\('));
+    if (!m) return -1;
+    let d = 0;
+    for (let j = src.indexOf('{', m.index); j < src.length; j++) {
+      if (src[j] === '{') d++;
+      else if (src[j] === '}') { d--; if (!d) return j + 1; }
     }
+    return -1;
+  };
+  const loadTl = f => {
+    const src = read(f);
+    const a = src.indexOf('var _tlReceived') >= 0
+      ? Math.min(src.indexOf('var _tlKnown'), src.indexOf('var _tlReceived'))
+      : src.indexOf('var _tlKnown');
+    const z = endOfFn(src, '_tlPointed');
+    if (a < 0 || z < 0) return null;
+    const ctx = { console };
+    vm.createContext(ctx);
+    vm.runInContext(src.slice(a, z), ctx);
+    return ctx.transliterate;
+  };
+  const ui = loadTl('reader_ui.js'), bm = loadTl('bom/bom.html');
+  if (!ui || !bm) fail('could not load the transliterator from one of the two copies');
+  else {
+    const forms = [];
+    for (const dir of ['ot_verses', 'nt_verses', 'dc_verses', 'pgp_verses', 'bom/verses', 'jst_verses']) {
+      const abs = path.join(ROOT, dir);
+      if (!fs.existsSync(abs)) continue;
+      for (const f of fs.readdirSync(abs)) {
+        if (!f.endsWith('.js')) continue;
+        const src = fs.readFileSync(path.join(abs, f), 'utf8');
+        const re = /\["([^"]*)","[^"]*"\]/g;
+        let m;
+        while ((m = re.exec(src))) if (/[\u05D0-\u05EA]/.test(m[1])) forms.push(m[1]);
+      }
+    }
+    const step = Math.max(1, Math.floor(forms.length / 4000));
+    let checked = 0, bad = 0, first = '';
+    for (let i = 0; i < forms.length; i += step) {
+      const w = forms[i], a = ui(w), b = bm(w);
+      checked++;
+      if (a !== b) { bad++; if (!first) first = w + ' -> reader_ui "' + a + '" vs bom.html "' + b + '"'; }
+    }
+    if (bad) fail('the transliterator differs between reader_ui.js and bom/bom.html on ' + bad +
+                  ' of ' + checked + ' sampled forms — bom.html forks it; apply the same edit to both.\n  ' + first);
+    else ok('transliterator identical in behaviour across ' + checked.toLocaleString() + ' sampled forms');
   }
-  if (!bad) ok('dagesh-forte rule identical in reader_ui.js and bom/bom.html');
 }
 
 if (failures) {

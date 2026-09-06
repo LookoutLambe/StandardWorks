@@ -101,6 +101,22 @@ var _tlReceived = { 'קולב':'kolob', 'בקולב':'bekolob', 'לקולב':'le
                     'קוקב':'kokob', 'קוקאובאם':'kokaubeam', 'שינהה':'shinehah', 'אליבליש':'oliblish',
                     // שמאול: the Masoretic mater vav sits AFTER the aleph (Gen 13:9) —
                     // the mechanical rules read it as consonantal 'v' (usmovl)
+                                        // Qamats QATAN: closed and UNSTRESSED. The mechanical rules
+                    // read a plain U+05B8 as gadol, which is right for the
+                    // pausal verbs (yadata, amarti, salachta — stressed) and
+                    // wrong for these nouns. The user: "its korban", and on the
+                    // rule: "if its a closed sylabel it gets the qamats qatan".
+                    'ארכה':'orka', 'בבשתם':'bevoshtam', 'בקרבן':'vekorban',
+                    'בשתם':'boshtam', 'הקרבן':'hakkorban', 'וארד':'vaord',
+                    'וארכה':'veorka', 'והקרבן':'vehakkorban', 'וחרבנם':'vechorbanam',
+                    'ולשלשתכם':'velishloshtekhem', 'ונבזביתך':'unvozbeyatakh', 'ורחבה':'verochba',
+                    'ושלשתם':'ushloshtam', 'חרבה':'chorba', 'חרבנה':'chorbana',
+                    'כקרבן':'kekorban', 'כרחבה':'kerochba', 'לבשתכם':'levoshtekhem',
+                    'לבשתנו':'levoshtenu', 'לקרבן':'lekorban', 'לרחבה':'lerochba',
+                    'מעצבך':'meotsbekha', 'מרדתא':'marodta', 'עצבי':'otsbi',
+                    'עצבכם':'otsbekhem', 'ערפך':'orpekha', 'קרבן':'korban',
+                    'קרבנה':'korbana', 'קרבנך':'korbanekha', 'קרבנם':'korbanam',
+                    'שלשתם':'sheloshtam',
                     'שמאול':'semol', 'ושמאול':'usmol', 'משמאול':'missemol',
                     'מהשמאול':'mehassemol', 'השמאול':'hassemol', 'שמאולך':'semolekh' };
 function _translitRaw(heb) {
@@ -128,24 +144,46 @@ function _translitRaw(heb) {
   return r;
 }
 
+/* The transliterator was forked into bom/bom.html, and the two drifted: 789 of
+   107,318 distinct forms came out differently, and bom's copy was the better
+   one on every class that could be settled against the corpus —
+
+     shva     shulchan / urvot / haumnam, not shulechan / urevot / haumenam
+              (a shva in a closed syllable is nach, and 389 forms turned on it);
+     qamats   yadata / karban, not yadota / korban. THIS corpus marks qamats
+              qatan EXPLICITLY with U+05C7 (10,353 of them: חׇכְמָה, כׇּל), so a
+              plain U+05B8 is gadol and there is nothing to guess. reader_ui was
+              inferring qatan from context and overriding the data, 210 times;
+     holam-vav avonam, not onam — עֲוֹן is consonantal.
+
+   bom's _tlPointed is therefore the copy that stands, and this is it. What does
+   NOT come across is _tlReceived, which bom has no equivalent of and which
+   _translitRaw still consults before the mechanical rules — the Abraham 3
+   astronomy names and שְׂמֹאול, where bom's rules read the mater vav after the
+   aleph as consonantal and produce semovl. */
 function _tlPointed(text) {
-  var stripped = text.replace(/[\u0591-\u05C7]/g, '');
+  // Tetragrammaton: always read as Adonai
+  var stripped = text.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, '');
   if (stripped === '\u05D5\u05DC\u05D9\u05D4\u05D5\u05D4') return 've-la-Adonai';
   if (stripped === '\u05D4\u05D9\u05D4\u05D5\u05D4') return 'ha-Adonai';
-  if (stripped === '\u05DC\u05D9\u05D4\u05D5\u05D4') return 'la-Adonai';
+  if (stripped === '\u05DC\u05D9\u05D4\u05D5\u05D4') return 'la-Adonai'; // לַיהוָה (qere)
   if (stripped === '\u05D1\u05D9\u05D4\u05D5\u05D4') return 'ba-Adonai';
   if (stripped === '\u05DE\u05D9\u05D4\u05D5\u05D4') return 'me-Adonai';
   if (stripped === '\u05DB\u05D9\u05D4\u05D5\u05D4') return 'ke-Adonai';
   if (stripped === '\u05D5\u05D9\u05D4\u05D5\u05D4') return 've-Adonai';
-  if (stripped === '\u05D9\u05D4\u05D5\u05D4') return 'Adonai';
+  if (stripped === '\u05D9\u05D4\u05D5\u05D4') return 'Adonai'; // יהוה
+  // Pratico & Van Pelt transliteration scheme (3rd Ed.)
+  // Short vowels: plain. Changeable long: macron. Hatef: breve.
   var vmap = {};
   vmap['\u05B0']='\u0115'; vmap['\u05B1']='\u0115'; vmap['\u05B2']='\u0103'; vmap['\u05B3']='\u014F';
   vmap['\u05B4']='i'; vmap['\u05B5']='\u0113'; vmap['\u05B6']='e'; vmap['\u05B7']='a';
   vmap['\u05B8']='\u0101'; vmap['\u05B9']='\u014D'; vmap['\u05BA']='\u014D'; vmap['\u05BB']='u'; vmap['\u05C7']='o';
-  var cmap = {'\u05D0':'','\u05D1':'v','\u05D2':'g','\u05D3':'d','\u05D4':'h','\u05D5':'v','\u05D6':'z','\u05D7':'ch','\u05D8':'t',
-    '\u05D9':'y','\u05DB':'kh','\u05DA':'kh','\u05DC':'l','\u05DE':'m','\u05DD':'m','\u05E0':'n','\u05DF':'n','\u05E1':'s',
-    '\u05E2':'','\u05E4':'f','\u05E3':'f','\u05E6':'ts','\u05E5':'ts','\u05E7':'q','\u05E8':'r','\u05E9':'sh','\u05EA':'t'};
-  var dmap = {'\u05D1':'b','\u05DB':'k','\u05DA':'k','\u05E4':'p','\u05E3':'p'};
+  // Consonants: P&VP — א/ע silent, ח=ch, ק=q
+  var cmap = {'א':'','ב':'v','ג':'g','ד':'d','ה':'h','ו':'v','ז':'z','ח':'ch','ט':'t',
+    'י':'y','כ':'kh','ך':'kh','ל':'l','מ':'m','ם':'m','נ':'n','ן':'n','ס':'s',
+    'ע':'','פ':'f','ף':'f','צ':'ts','ץ':'ts','ק':'q','ר':'r','ש':'sh','ת':'t'};
+  var dmap = {'ב':'b','כ':'k','ך':'k','פ':'p','ף':'p'};
+  // Parse into tokens: {cons, dagesh, sinDot, vowelChar}
   var tokens = [], i = 0;
   while (i < text.length) {
     var ch = text[i], code = ch.charCodeAt(0);
@@ -167,66 +205,76 @@ function _tlPointed(text) {
   var segments = [], len = tokens.length;
   for (var t = 0; t < len; t++) {
     var tk = tokens[t], isLast = (t === len - 1);
+    // Consonant transliteration
     var c;
-    if (tk.c === '\u05E9') c = tk.shin ? 'sh' : 's';
-    else if (tk.dag && dmap[tk.c]) c = dmap[tk.c];
+    if (tk.c === '\u05E9') c = tk.shin ? 'sh' : 's'; // shin vs sin
+    else if (tk.dag && dmap[tk.c]) c = dmap[tk.c]; // dagesh in bgdkpt
     else c = cmap[tk.c] || '';
+    // Shuruk: vav + dagesh + no vowel = û (unchangeable long, circumflex)
     if (tk.c === '\u05D5' && tk.dag && !tk.vowel) {
       if (t > 0 && tokens[t-1].c === '\u05D0' && !tokens[t-1].vowel) { segments.push({c:'\u02BE', v:'\u00FB'}); continue; }
       if (segments.length > 0) segments[segments.length-1].v = '\u00FB';
       else segments.push({c:'', v:'\u00FB'});
       continue;
     }
+    // Cholam male: vav with cholam = ô (unchangeable long, circumflex)
+    // Only treat as mater lectionis if previous consonant has no vowel yet;
+    // otherwise the vav is a root consonant bearing cholam (e.g. עֲוֹנוֹת)
     if (tk.c === '\u05D5' && tk.vowel === '\u05B9' && !tk.dag) {
       if (t > 0 && tokens[t-1].c === '\u05D0' && !tokens[t-1].vowel) { segments.push({c:'\u02BE', v:'\u00F4'}); continue; }
-      if (segments.length > 0) segments[segments.length-1].v = '\u00F4';
-      else segments.push({c:'', v:'\u00F4'});
-      continue;
+      var prevSeg = segments.length > 0 ? segments[segments.length-1] : null;
+      if (!prevSeg) { segments.push({c:'', v:'\u00F4'}); continue; }
+      if (!prevSeg.v) { prevSeg.v = '\u00F4'; continue; }
+      // Consonantal vav with cholam: fall through to produce 'v' + 'ô'
     }
+    // Cholam male variant: vav after cholam on prev consonant = silent
     if (tk.c === '\u05D5' && !tk.vowel && !tk.dag && t > 0 && tokens[t-1].vowel === '\u05B9') continue;
     if (tk.c === '\u05D0' && !tk.vowel && !tk.dag && t < len - 1) {
       var nxtAv = tokens[t + 1];
       if (nxtAv.c === '\u05D5' && (nxtAv.vowel === '\u05B9' || (nxtAv.dag && !nxtAv.vowel))) continue;
     }
+    // Final he without vowel = silent
     if (tk.c === '\u05D4' && isLast && !tk.vowel) continue;
+    // Chiriq male: yod after chiriq = î (unchangeable long, circumflex)
     if (tk.c === '\u05D9' && !tk.vowel && !tk.dag && t > 0 && tokens[t-1].vowel === '\u05B4') {
-      if (segments.length > 0) segments[segments.length-1].v = '\u00EE'; continue;
+      if (segments.length > 0) segments[segments.length-1].v = '\u00EE';
+      continue;
     }
+    // Tsere-yod: yod after tsere = ê (unchangeable long, circumflex)
     if (tk.c === '\u05D9' && !tk.vowel && !tk.dag && t > 0 && tokens[t-1].vowel === '\u05B5') {
-      if (segments.length > 0) segments[segments.length-1].v = '\u00EA'; continue;
+      if (segments.length > 0) segments[segments.length-1].v = '\u00EA';
+      continue;
     }
+    // Seghol-yod: yod after seghol = ê (unchangeable long, circumflex)
     if (tk.c === '\u05D9' && !tk.vowel && !tk.dag && t > 0 && tokens[t-1].vowel === '\u05B6') {
-      if (segments.length > 0) segments[segments.length-1].v = '\u00EA'; continue;
+      if (segments.length > 0) segments[segments.length-1].v = '\u00EA';
+      continue;
     }
+    // Vowel
     var v = tk.vowel ? (vmap[tk.vowel] || '') : '';
-    var bgdkpt = '\u05D1\u05D2\u05D3\u05DB\u05E4\u05EA';
+    var bgdkpt = '\u05D1\u05D2\u05D3\u05DB\u05E4\u05EA'; // בגדכפת
     var prevVowel = t > 0 ? tokens[t-1].vowel : '';
     var nextTok = t < len-1 ? tokens[t+1] : null;
+    // Shva rules: nach (silent) vs na (voiced as 'e')
     if (tk.vowel === '\u05B0') {
+      // Sheva na (vocal ĕ): under dagesh, or opens a syllable. Sheva nach (silent): closes prior syllable when no dagesh.
       if (isLast) v = '';
       else if (tk.dag) v = '\u0115';
-      else if (t > 0 && !tk.dag && prevVowel === '\u05B7') v = '';  // sheva after short patach = silent (shva nach)
+      else if (t > 0 && !tk.dag && prevVowel === '\u05B7') v = '';  // sheva after short patach = silent
       else if (t > 0 && (prevVowel === '\u05B4' || prevVowel === '\u05B5' || prevVowel === '\u05B6' || prevVowel === '\u05B9' || prevVowel === '\u05C7')) v = '';
+      else if (prevVowel === '\u05B7') v = '';
+      else if (prevVowel === '\u05BB') v = '';
       else if (t > 0 && tokens[t-1].c === '\u05D5' && tokens[t-1].dag && !tokens[t-1].vowel) v = '';
       else if (nextTok && bgdkpt.indexOf(nextTok.c) >= 0 && nextTok.dag) v = '';
       else if (nextTok && (t + 1 === len - 1) && !nextTok.vowel) v = '';
       else if (prevVowel === '\u05B0') v = '\u0115';
       else v = '\u0115';
     }
-    if (tk.vowel === '\u05B8' && !isLast) {
-      var nxt = tokens[t+1];
-      var nxtIsLast = (t+1 === len-1);
-      var suffixLetters = '\u05DD\u05DF\u05DA';
-      // A stressed CVC monosyllable with PLAIN qamats is qamats GADOL \u2014 az,
-      // rav, yad, shav (Sephardi, like the rest of this system). The old
-      // whitelist-else-'o' default rendered every unlisted word qatan (\u05D0\u05B8\u05D6
-      // came out 'oz'). Real qatan is marked explicitly with U+05C7 in this
-      // corpus and handled by its own rule; no monosyllable branch needed.
-      if (!nxtIsLast && nxt.vowel === '\u05B0') {
-        var nxt2 = t+2 < len ? tokens[t+2] : null;
-        if (nxt2 && bgdkpt.indexOf(nxt2.c) >= 0 && nxt2.dag) v = 'o';
-      }
-    }
+    // Qamets qatan is written explicitly in this corpus (U+05C7, the
+    // red-rendered sign), so the vowel itself decides /o/ vs /a/. A closed
+    // FINAL syllable carries the stress and keeps qamets gadol — \u05D0\u05B8\u05D6 is
+    // "az", \u05E8\u05B8\u05DD is "ram"; only a written \u05C7 (\u05DB\u05C7\u05DC\u05BE, \u05E7\u05C7\u05E8\u05B0\u05D1\u05B8\u05BC\u05DF) reads "o".
+    // Dagesh forte: double the consonant (non-bgdkpt with dagesh after a vowel)
     var isDagForte = tk.dag && bgdkpt.indexOf(tk.c) < 0 && t > 0 && prevVowel;
     // bgdkpt with dagesh after a vowel = also forte (doubled + hard)
     var isBgdkptForte = tk.dag && bgdkpt.indexOf(tk.c) >= 0 && t > 0 && prevVowel && prevVowel !== '\u05B0';
@@ -238,20 +286,37 @@ function _tlPointed(text) {
     if (isDagForte || isBgdkptForte) {
       segments.push({c: c.charAt(0), v: '', ov: '', hc: tk.c, dag: false, doubled: true});
     }
-    if (tk.c === '\u05D4' && isLast && tk.dag && !tk.vowel) { segments.push({c: 'h', v: '', ov: '', hc: tk.c, dag: true}); continue; }
+    // Mappiq he: final הּ with dagesh = pronounced "h"
+    if (tk.c === '\u05D4' && isLast && tk.dag && !tk.vowel) {
+      segments.push({c: 'h', v: '', ov: '', hc: tk.c, dag: true});
+      continue;
+    }
     if (tk.c === '\u05D0' && tk.vowel) { segments.push({c: '\u02BE', v: v, ov: tk.vowel || '', hc: tk.c, dag: !!tk.dag}); continue; }
     if (tk.c === '\u05E2' && tk.vowel) { segments.push({c: '\u02BF', v: v, ov: tk.vowel || '', hc: tk.c, dag: !!tk.dag}); continue; }
     segments.push({c: c, v: v, ov: tk.vowel || '', hc: tk.c, dag: !!tk.dag});
   }
-  var gutturals = '\u05D7\u05E2\u05D4';
+
+  // --- Patach furtivum: final guttural (ח,ע,ה) with patach → vowel BEFORE consonant ---
+  var gutturals = '\u05D7\u05E2\u05D4'; // חעה
+  var hasFurtive = false;
   if (segments.length >= 2) {
     var last = segments[segments.length - 1];
-    if (gutturals.indexOf(last.hc) >= 0 && last.ov === '\u05B7') { last.furtive = true; last.v = 'a'; }
+    if (gutturals.indexOf(last.hc) >= 0 && last.ov === '\u05B7') {
+      last.furtive = true;
+      last.v = 'a';
+      hasFurtive = true;
+    }
   }
+
+  // --- Build result --- (P&VP: no stress ticks; vowel marks indicate length)
   var result = '';
   for (var s = 0; s < segments.length; s++) {
     var seg = segments[s];
-    result += seg.furtive ? (seg.v + seg.c) : (seg.c + seg.v);
+    if (seg.furtive) {
+      result += seg.v + seg.c;
+    } else {
+      result += seg.c + seg.v;
+    }
   }
   return result;
 }

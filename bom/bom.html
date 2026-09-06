@@ -7075,6 +7075,28 @@ function _tlPopular(s) {
     .replace(/[\u02BE\u02BF]/g,'')
     .replace(/q/g,'k');
 }
+var _tlReceived = { 'קולב':'kolob', 'בקולב':'bekolob', 'לקולב':'lekolob', 'מקולב':'mikkolob',
+                    'קוקב':'kokob', 'קוקאובאם':'kokaubeam', 'שינהה':'shinehah', 'אליבליש':'oliblish',
+                    // שמאול: the Masoretic mater vav sits AFTER the aleph (Gen 13:9) —
+                    // the mechanical rules read it as consonantal 'v' (usmovl)
+                                        // Qamats QATAN: closed and UNSTRESSED. The mechanical rules
+                    // read a plain U+05B8 as gadol, which is right for the
+                    // pausal verbs (yadata, amarti, salachta — stressed) and
+                    // wrong for these nouns. The user: "its korban", and on the
+                    // rule: "if its a closed sylabel it gets the qamats qatan".
+                    'ארכה':'orka', 'בבשתם':'bevoshtam', 'בקרבן':'vekorban',
+                    'בשתם':'boshtam', 'הקרבן':'hakkorban', 'וארד':'vaord',
+                    'וארכה':'veorka', 'והקרבן':'vehakkorban', 'וחרבנם':'vechorbanam',
+                    'ולשלשתכם':'velishloshtekhem', 'ונבזביתך':'unvozbeyatakh', 'ורחבה':'verochba',
+                    'ושלשתם':'ushloshtam', 'חרבה':'chorba', 'חרבנה':'chorbana',
+                    'כקרבן':'kekorban', 'כרחבה':'kerochba', 'לבשתכם':'levoshtekhem',
+                    'לבשתנו':'levoshtenu', 'לקרבן':'lekorban', 'לרחבה':'lerochba',
+                    'מעצבך':'meotsbekha', 'מרדתא':'marodta', 'עצבי':'otsbi',
+                    'עצבכם':'otsbekhem', 'ערפך':'orpekha', 'קרבן':'korban',
+                    'קרבנה':'korbana', 'קרבנך':'korbanekha', 'קרבנם':'korbanam',
+                    'שלשתם':'sheloshtam',
+                    'שמאול':'semol', 'ושמאול':'usmol', 'משמאול':'missemol',
+                    'מהשמאול':'mehassemol', 'השמאול':'hassemol', 'שמאולך':'semolekh' };
 function _translitRaw(heb) {
   // Handle space-separated compounds (e.g. שְׁנֵים עָשָׂר → shenem asar)
   if (heb.indexOf(' ') >= 0) {
@@ -7084,6 +7106,11 @@ function _translitRaw(heb) {
   if (heb.indexOf('\u05BE') >= 0) {
     return heb.split('\u05BE').map(function(p) { return transliterate(p); }).join('-');
   }
+  // Received spellings beat the mechanical rules regardless of pointing —
+  // the Abraham 3 astronomy names, and שְׂמֹאול, whose mater vav the rules
+  // otherwise read as consonantal (semovl).
+  var _rc = heb.replace(/[\u0591-\u05C7]/g, '');
+  if (_tlReceived[_rc]) return _tlReceived[_rc];
   // Use nikkud-aware parser if vowel points present (includes stress marking)
   var hasNikkud = /[\u05B0-\u05BC\u05C7]/.test(heb);
   if (hasNikkud) {
