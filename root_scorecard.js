@@ -470,6 +470,22 @@
   }
 
   // ---------- popup slot ----------
+  /* A GRAMMATICAL PARTICLE IS NOT A STUDY WORD. The user, on tapping אֵת:
+     "the et i dont need to know how many times or have cross references to
+     that its everywhere." Quite right — a concordance of the object marker is
+     20,312 rows of noise, and the same goes for כִּי, אֲשֶׁר, לֹא and the bare
+     prepositions. The morphology already names them, so no hand-written list:
+       To object marker · Tc conjunction · Tr relative · Tn negative
+       Tm demonstrative · Ti interrogative · Td article · R bare preposition
+     These keep their word, transliteration, gloss and parse — everything that
+     helps you read the line — and lose the corpus counts and the references
+     link, which is all that was ever noise. A preposition FUSED to a content
+     word (R/, Rd) is not affected: that token is the content word. */
+  var _FUNCTION_MORPH = /^H?(T[ocrndmi]|R)$/;
+  function isFunctionWord(morph) {
+    return !!morph && _FUNCTION_MORPH.test(String(morph).replace(/^H/, '').split('/')[0]);
+  }
+
   function detailHtml(found, surface, glossText) {
     var entry = found.entry;
     var d = rootDisplay(found.key);
@@ -478,10 +494,14 @@
     entry.c.forEach(function(n) { total += n; });
     entry.vc.forEach(function(n) { totalVerses += n; });
     var h = '';
+    /* resolved here, before the counts line, so a particle can suppress it */
+    var pzEarly = null;
+    try { pzEarly = window.RootEngine && window.RootEngine.parse && window.RootEngine.parse(found.part || surface); } catch (ePz) { pzEarly = null; }
+    var isFn = !!(pzEarly && pzEarly.morph && isFunctionWord(pzEarly.morph));
     h += '<span class="rsc-root" style="cursor:pointer;text-decoration:none;color:var(--tap-blue,var(--here));">Root ' +
       '<span style="font-family:\'David Libre\',serif">' + esc(d.heb) + '</span>' +
       (d.translit ? ' <span style="font-size:0.85em;opacity:0.7;">(' + esc(d.translit) + ')</span>' : '') +
-      '</span> — ' + total + ' uses in ' + totalVerses + ' verses across the scriptures';
+      '</span>' + (isFn ? '' : ' — ' + total + ' uses in ' + totalVerses + ' verses across the scriptures');
     // THE PARSE, where the Masoretic Text attests this exact form: the analysis
     // the OpenScriptures Hebrew Bible / STEPBible give it (attested_forms.js,
     // via RootEngine.parse), read into words, with the source's cut between
@@ -506,14 +526,16 @@
         (pz.n ? ' <span style="opacity:0.65;">(' + pz.n + 'x in the Tanakh)</span>' : '') + '</span>';
     }
     // per-volume chips
-    h += '<div class="rsc-chips">';
-    VOL_ORDER.forEach(function(vk, vi) {
-      var n = entry.c[vi];
-      if (!n) return;
-      var label = (conc.volNames || {})[vk] || vk.toUpperCase();
-      h += '<span class="rsc-chip' + (vk === cfg.vol ? ' rsc-chip-here' : '') + '">' + esc(label) + ' ' + n + '</span>';
-    });
-    h += '</div>';
+    if (!isFn) {
+      h += '<div class="rsc-chips">';
+      VOL_ORDER.forEach(function(vk, vi) {
+        var n = entry.c[vi];
+        if (!n) return;
+        var label = (conc.volNames || {})[vk] || vk.toUpperCase();
+        h += '<span class="rsc-chip' + (vk === cfg.vol ? ' rsc-chip-here' : '') + '">' + esc(label) + ' ' + n + '</span>';
+      });
+      h += '</div>';
+    }
     // The tapped word itself always appears in both lists. The concordance
     // keeps only the six commonest forms and ten commonest glosses per root,
     // so an idiomatic rendering (לְעֵינַיִם "plainly" under עַיִן "eye") used
@@ -531,8 +553,13 @@
        the word instead of its whole family. A root with one sense, or a
        token whose class is not in the bucket, keeps the old root-wide view. */
     var senseKey = '';
-    try { senseKey = (window.RootEngine && window.RootEngine.senseClass) ? window.RootEngine.senseClass(surface) : ''; } catch (eS) {}
-    var sense = (senseKey && entry.s && entry.s[senseKey]) || null;
+    /* The PIECE, not the whole token. A maqqef joins two words and this card is
+       built once per piece, so אֶת־דִּבְרֵי asked for the sense of the whole
+       string and got nothing — every maqqef-joined word (13% of the corpus)
+       silently fell back to root-wide references. */
+    var senseSurface = found.part || cleanSurface(surface) || surface;
+    try { senseKey = (window.RootEngine && window.RootEngine.senseClass) ? window.RootEngine.senseClass(senseSurface) : ''; } catch (eS) {}
+    var sense = (!isFn && senseKey && entry.s && entry.s[senseKey]) || null;
     if (sense && sense.n && sense.n < (entry.c || []).reduce(function(a, b) { return a + b; }, 0)) {
       h += '<div class="rsc-sense">' +
            '<b>This sense</b> — ' + esc(sense.g) + ' · ' + sense.n + ' uses in ' + sense.v + ' verses' +
@@ -549,7 +576,7 @@
     if (hereForm && forms.indexOf(hereForm) < 0) {
       formItems.push('<span style="font-family:\'David Libre\',serif">' + esc(hereForm) + '</span> (here)');
     }
-    if (formItems.length > 1) h += '<span>Forms:</span> ' + formItems.join(', ') + '<br>';
+    if (!isFn && formItems.length > 1) h += '<span>Forms:</span> ' + formItems.join(', ') + '<br>';
     var glosses = Object.keys((sense && sense.gs) || entry.g || {});
     var shown = glosses.slice(0, 4);
     var hereGloss = String(glossText || '').replace(/^[\s"'.,;:?!()\u2014\u2013-]+|[\s"'.,;:?!()\u2014\u2013-]+$/g, '');
@@ -563,7 +590,8 @@
       if (hit && shown.indexOf(hit) < 0) glossItems.push('"' + esc(hit) + '" (' + gsrc[hit] + 'x)');
       else if (!hit) glossItems.push('"' + esc(hereGloss) + '" (here)');
     }
-    if (glossItems.length > 1) h += '<span>Glossed:</span> ' + glossItems.join(', ') + '<br>';
+    if (!isFn && glossItems.length > 1) h += '<span>Glossed:</span> ' + glossItems.join(', ') + '<br>';
+    if (isFn) return h;   // a particle: no counts, no references
     h += '<span class="rsc-refs-link"' + (sense ? ' data-sense="' + esc(senseKey) + '"' : '') + '>' +
          (sense ? 'View this sense\u2019s ' + sense.n + ' references \u2192'
                 : 'View all references \u2192') + '</span>';
@@ -798,13 +826,19 @@
       var order = [cfg.vol].concat(VOL_ORDER.filter(function(v) { return v !== cfg.vol; }));
       if (refs._b) {
         // Too common for verse-level refs: per-book verse counts
-        h += '<div class="rsc-note">This root is very common — showing verse counts by book.</div>';
+        h += '<div class="rsc-note">' + (scoped ? 'This sense' : 'This root') +
+             ' is very common — showing verse counts by book.</div>';
         order.forEach(function(vk) {
           var bObj = refs._b[vk];
           if (!bObj) return;
           var vi = VOL_ORDER.indexOf(vk);
+          /* Per-volume totals belong to the ROOT. In a sense-scoped view they
+             would overstate every line, so the count is dropped and the sense's
+             own totals stand in the note above. */
+          var volCount = scoped ? '' :
+            ' <span class="rsc-vol-count">' + entry.c[vi] + ' uses · ' + entry.vc[vi] + ' verses</span>';
           h += '<div class="rsc-vol"><div class="rsc-vol-title">' + esc((conc.volNames || {})[vk] || vk) +
-               ' <span class="rsc-vol-count">' + entry.c[vi] + ' uses · ' + entry.vc[vi] + ' verses</span></div><div class="rsc-books">';
+               volCount + '</div><div class="rsc-books">';
           Object.keys(bObj).forEach(function(bp) {
             var name = vk === 'dc' ? (bp === 'od' ? 'Official Declarations' : 'D&C') : bookNameFor(vk, bp + (bp === 'ch' ? '1' : 'ch1'));
             h += '<span class="rsc-bookcount">' + esc(name) + ' · ' + bObj[bp] + '</span>';

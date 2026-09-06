@@ -505,6 +505,11 @@ const rootsOut = keys.map(function(k) {
        only when the references panel opens. Carrying them here tripled
        root_concordance.js — 2.09 MB to 7.18 — and that file loads on the
        FIRST word tap. Counts and a label are all the card needs to draw. */
+    /* A sense too common to list verse by verse gets per-book counts — the
+       same shape a very common ROOT gets — but still scoped to the sense.
+       Emitting nothing here made the card fall back to the root's references,
+       which is precisely the thing this feature exists to stop: 46% of all
+       tokens were still being shown every use of their root. */
     if (stotal <= REF_CAP) {
       const sr = {};
       VOLS.forEach(function(vol, vi) {
@@ -516,6 +521,18 @@ const rootsOut = keys.map(function(k) {
         sr[vol.key] = o;
       });
       senseRefs[sk] = sr;
+    } else {
+      const sb = {};
+      VOLS.forEach(function(vol, vi) {
+        if (!se.refs[vi].size) return;
+        const bObj = {};
+        Array.from(se.refs[vi].entries()).forEach(function(pr) {
+          const bp = bookPrefixFor(vol.key, pr[0]);
+          bObj[bp] = (bObj[bp] || 0) + pr[1].size;
+        });
+        sb[vol.key] = bObj;
+      });
+      senseRefs[sk] = { _b: sb };
     }
     senses[sk] = rec;
   });
