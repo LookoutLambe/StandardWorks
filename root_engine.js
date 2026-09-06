@@ -105,23 +105,22 @@
   // its attached to"). A compound whose head is NOT here keeps head priority —
   // אֶרֶץ־מִצְרַיִם is the land card, כִּכְּרוֹת־לֶחֶם the loaves card.
     var _maqqefParticles = {'את':1,'אל':1,'על':1,'מן':1,'עד':1,'כל':1,'לא':1,'אם':1,
-                          'גם':1,'כי':1,'פן':1,'אך':1,'רק':1,'אף':1,'אשר':1,'עם':1,'מה':1};
-    /* בַּל, the poetic negative, is NOT here, though it belongs beside לא and
-       פן on sense alone: while the ridden letter above is unchecked, adding a
-       two-letter particle also makes every three-letter word ending in it a
-       particle — בל turned נֵבֶל, חֶבֶל, אֵבֶל and קָבָל into particles too.
-       The two go together or not at all. */
+                          'גם':1,'כי':1,'פן':1,'אך':1,'רק':1,'אף':1,'אשר':1,'עם':1,'מה':1,
+                          /* בַּל, the poetic negative, beside לא and פן. It could
+                             not be added until the proclitic test above was in
+                             place, or נֵבֶל, חֶבֶל, אֵבֶל and קָבָל became
+                             particles with it. */
+                          'בל':1};
+  var _PROCLITIC_LETTER = /^[ובכלמהש]$/;
   function _isMaqqefParticle(piece) {
     var c = stripNikkud(piece).replace(/[ׁׂ]/g, '');
     if (_maqqefParticles[c]) return true;
-    /* NOTE, for the user to rule on — not changed here. The ridden letter is
-       not required to be a proclitic, so any three-letter word ending in a
-       two-letter particle counts as one: נְאֻם reads as אם, which is why
-       נְאֻם־יְהֹוָה files under יהוה rather than under נאם like every other
-       content head (אֶרֶץ־מִצְרַיִם -> ארץ). Requiring a real proclitic fixes
-       it and moves 282 tokens of that formula; that is a design change, so it
-       is measured and reported rather than applied. */
-    return c.length > 2 && _maqqefParticles[c.slice(1)];   // one prefix letter rides along: וְעַל־, בְּכׇל־
+    /* One prefix letter rides along (וְעַל־, בְּכׇל־) — but it must BE a
+       proclitic. Untested, any three-letter word ending in a two-letter
+       particle counted as one: נְאֻם read as אם, so נְאֻם־יְהֹוָה handed its
+       card to יהוה instead of keeping it on נאם like every other content head
+       (אֶרֶץ־מִצְרַיִם -> ארץ), and שְׁאָל read as אל. */
+    return c.length > 2 && _PROCLITIC_LETTER.test(c.charAt(0)) && _maqqefParticles[c.slice(1)];
   }
   // Progressive peels, shallowest first: [the word exactly as given, the tail
   // after a PARTICLE maqqef head, one prefix off, two off]. The exact form is
@@ -1552,9 +1551,40 @@
   // change an answer any earlier stage already gives. The engine keeps every
   // result it had.
   var _METATH = { 'ש': 'ת', 'ס': 'ת', 'ז': 'ד', 'צ': 'ט' };
-  /* Letter UNITS, not characters: stripNikkud keeps the shin/sin dots on
-     purpose (שׁמן and שׂמן are different roots), so a naive index walk splits
-     שׁ into two positions and every template misses by one. */
+  /* Letter UNITS, POINTED. The first cut of this layer stripped the vowels
+     before matching and so implemented only half of the third rule: it read
+     the binyan off the prefix LETTER and ignored the prefix VOWEL, which is
+     the half that says whether the letter is a stem prefix at all. מִיל and
+     מִלּוּי were read as participles though מ־hiriq is the preposition מִן;
+     נְשִׁיקַת and נֹכַח as niphals though a niphal נ takes hiriq or patach and
+     never shva or holam; הֲנָאַת as a hiphil though no stem prefix takes a
+     hataf. Each unit now carries its vowel, its dagesh and its shin/sin dot,
+     and the templates test all three. */
+  function _punits(s) {
+    s = String(s || '').replace(/ׇ/g, 'ָ')
+                       .replace(/[^ְ-ּׁׂא-ת]/g, '');
+    var out = [], i = 0;
+    while (i < s.length) {
+      var ch = s.charAt(i++);
+      if (ch < 'א') continue;
+      var u = { c: ch, v: '', dag: false, dot: '' };
+      while (i < s.length && s.charAt(i) < 'א') {
+        var m = s.charAt(i++);
+        if (m === 'ּ') u.dag = true;
+        else if (m === 'ׁ' || m === 'ׂ') u.dot = m;
+        else if (!u.v) u.v = m;
+      }
+      /* SHURUQ IS NOT A DAGESH. וּ is a vav carrying U+05BC as its own vowel,
+         the same codepoint a dagesh forte uses, so מְנוּיִים read as though its
+         ו were doubled and satisfied the piel-participle test. A ו with that
+         mark and no other vowel is the vowel u. */
+      if (u.c === 'ו' && u.dag && !u.v) { u.dag = false; u.v = 'ּ'; }
+      out.push(u);
+    }
+    return out;
+  }
+  /* The consonant-level splitter, for candidate ROOT strings (which carry no
+     vowels but do keep the shin/sin dot, since שׁמן and שׂמן are two roots). */
   function _units(d) {
     var u = [], i = 0;
     while (i < d.length) {
@@ -1564,6 +1594,20 @@
     }
     return u;
   }
+  function _pcons(u, from, to) {
+    var out = '', i;
+    for (i = (from || 0); i < (to === undefined ? u.length : to); i++) out += u[i].c + u[i].dot;
+    return out;
+  }
+  /* The vowel each prefix must carry to BE that prefix.
+       niphal   נִקְטַל · נַעֲשֵׂיתֶם            hiriq, patach, segol
+       ה stem   הִקָּטֵל · הֵאָסֵר · הַטְבִּיל   hiriq, tsere, segol, patach, qamats
+       מ ptc    מְקַטֵּל · מַקְטִיל · מָקְטָל     shva, patach, qamats, segol
+       hitpael  הִתְ · מִתְ · נִתְ · תִּתְ        hiriq only  */
+  var _V_N = { 'ִ': 1, 'ַ': 1, 'ֶ': 1 };
+  var _V_H = { 'ִ': 1, 'ֵ': 1, 'ֶ': 1, 'ַ': 1, 'ָ': 1 };
+  var _V_M = { 'ְ': 1, 'ַ': 1, 'ָ': 1, 'ֶ': 1 };
+  var _V_T = { 'ִ': 1 };
   /* Longest first: ולה must be tried before ול, or the ה of the infinitive
      is left stranded on the stem. */
   var _bPart = ['ולה', 'ובה', 'וכה', 'ולכ', 'וכש', 'כש', 'ול', 'וב', 'וכ', 'ומ', 'וש', 'לכ', 'ל', 'ב', 'כ', 'ש', 'ו'];
@@ -1575,20 +1619,19 @@
      turned נִצָּחוֹן into צחה "to be dazzling" instead of leaving it on נצח. */
   var _ALLSTEMS = ['q', 'N', 'p', 'P', 'h', 'H', 't'];
   /* A root that shows only two consonants is a weak root with one radical
-     hidden, and WHICH radical is hidden is exactly what the pattern cannot
-     tell you — הטיף could be נטף, יטף or טפף on shape alone. So generate all
-     seven repairs and let attestation choose. */
-  function _weakRepairs(x, y) {
+     hidden. WHICH radical is usually what the pattern cannot tell you — but a
+     DAGESH FORTE in the first radical is not a guess: it is the assimilated
+     letter itself, and in Hebrew that letter is a nun. הַטִּיף, מַשָּׂא,
+     הִתִּיר and הַכִּיר all carry it, and all four are nun-initial roots. With
+     the dagesh there is one candidate, not seven. */
+  function _weakRepairs(x, y, dag) {
+    if (dag) return ['נ' + x + y];
     return ['נ' + x + y, 'י' + x + y, 'ו' + x + y, x + 'ו' + y, x + 'י' + y, x + y + y, x + y + 'ה'];
   }
 
   /* THE BINYAN INDEX — which stems the MT actually attests for each family,
      read off the OSHB/TAHOT morph codes already in attested_forms.js
-     (HVhi2ms -> h). This is what makes the layer a parser rather than a
-     guesser: הַטִּיף repairs to both נטף and טפף on shape alone, and the
-     Masoretic text settles it — H5197 נטף carries eight hiphil forms
-     (תַטִּיף, יַטִּיפוּ, וְהִטִּיפוּ …) and H2952 טפף carries one qal and no
-     hiphil at all. The user's fourth rule: a well-formed pattern is a
+     (HVhi2ms -> h). The user's fourth rule: a well-formed pattern is a
      hypothesis until something attests it. */
   var _binIx = null;
   function binyanIndex() {
@@ -1607,9 +1650,7 @@
   /* Keyed on the FAMILY, not on the Strong's number. lemmaIndex() stores null
      the moment two numbers share a lemma, which reads "ambiguous" even when
      both numbers are the same root: קרא is H7121 "call" and H7122 "befall",
-     two entries and one family. Ask familyOf first and that homograph
-     disappears; a collision between genuinely different families is settled
-     below, by attestation and then by the verb rule. */
+     two entries and one family. */
   var _lemFam = null, _lemNums = null;
   function lemmaFamilyIndex() {
     if (_lemFam) return _lemFam;
@@ -1625,9 +1666,23 @@
     }
     return _lemFam;
   }
+  /* A PROPER NAME IS NEVER A ROOT here. This layer only ever undoes a verb
+     stem, so a candidate that lands on a personal or place name has landed
+     wrong however well it matches: וּלְהִתְקַדְּמוּת kept its nominal ־וּת and
+     answered H6932, Kedemoth, instead of falling through to קדם. Strong's
+     capitalises a name's transliteration, which is the same test stageNames
+     already uses. */
+  function _allNames(n) {
+    var nums = _lemNums && _lemNums[n];
+    if (!nums || !nums.length) return false;
+    for (var i = 0; i < nums.length; i++) if (!_isNameEntry(nums[i])) return false;
+    return true;
+  }
   function _lemmaFamily(cand, stems) {
     var n = normFinals(cand);
     if (n.length < 3) return '';
+    lemmaFamilyIndex();
+    if (_allNames(n)) return '';
     var f = lemmaFamilyIndex()[n];
     if (f && f !== '*') return f;
     if (f !== '*') return '';
@@ -1638,17 +1693,14 @@
       for (j = 0; j < stems.length; j++) if (att[stems[j]]) { keep.push(fam); break; }
     }
     if (keep.length === 1) return keep[0];
-    /* still tied — the peel itself proved the word a verb, so a verb lemma
-       wins, the same rule rootByMorphology already uses */
     lemmaIndex();
     if (_lemIdxVerb && _lemIdxVerb[n]) return familyOf(_lemIdxVerb[n]);
     return '';
   }
   /* One family, or none. Where the templates land on two different roots the
-     MT is asked which of them is attested in the stem this template implies;
-     if that still does not separate them the honest answer is to leave the
-     word in fallback, keeping its own consonants, rather than to pick the
-     commoner root and be quietly wrong. */
+     MT is asked which is attested in the stem this template implies; if that
+     still does not separate them the word is LEFT in fallback, keeping its own
+     consonants, rather than assigned the commoner root. */
   function _soleFamily(cands, strict) {
     var byFam = {}, i, j;
     for (i = 0; i < cands.length; i++) {
@@ -1669,106 +1721,230 @@
   }
 
   function rootByBinyan(w) {
-    var d = stripNikkud(String(w || '')).replace(/[^א-תׁׂ]/g, '');
-    if (d.length < 3) return '';
+    var u0 = _punits(w);
+    if (u0.length < 3) return '';
     /* LAYER 1 — the proclitic particles, before any template. לְהַטִּיף is
        ל + a hiphil infinitive, and a template run on the whole surface sees
        only a ל it has no rule for. ה and מ are deliberately NOT peeled here:
-       in a derived stem they ARE the template, and peeling them as particles
-       is what turned הַטִּיף into טִּיף and lost the word. */
-    var stems = [d], later = [], i, j, k;
+       in a derived stem they ARE the template. */
+    var stems = [u0], later = [], i, k;
     for (i = 0; i < _bPart.length; i++) {
       var pt = _bPart[i];
-      if (d.indexOf(pt) === 0 && d.length - pt.length >= 3) stems.push(d.slice(pt.length));
+      if (u0.length - pt.length < 3) continue;
+      if (_pcons(u0, 0, pt.length).replace(/[ׁׂ]/g, '') !== pt) continue;
+      /* The relative שֶׁ, and only it. A bare ש peel is the same trap the
+         fallback stage already documents: שֹׁמְרוֹנִית peeled to מרונית and
+         answered רנן, שִׂמְחָתְךָ to מחתך and answered חתך. The relative is
+         pointed segol (tsere before a guttural); a ש carrying anything else
+         is the first radical. */
+      if (pt.charAt(0) === 'ש' && u0[0].v !== 'ֶ' && u0[0].v !== 'ֵ') continue;
+      stems.push(u0.slice(pt.length));
+    }
+    /* The ARTICLE before a participle. הַ geminates what follows, so
+       הַמְּאִירִים is הַ + מְאִירִים and its מ is the participle prefix — but
+       ה+patach+dagesh is also the shape of a hiphil whose nun assimilated
+       (הַטִּיף), so this peels only when the geminated letter is מ, where the
+       participle reading is the only one available. Read as a hiphil, it
+       answered מאר "to prick" instead of אור. */
+    if (u0.length >= 4 && u0[0].c === 'ה' && u0[0].v !== 'ִ' && _V_H[u0[0].v] && u0[1].c === 'מ')
+      stems.push(u0.slice(1));
+    /* ־וּת builds an abstract noun on a verb and is not part of the stem, so
+       it comes off WITH the prefix rather than a tier later: left on,
+       לְהִתְגָּאוֹת answered H1348, the noun גֵּאוּת, while מִתְגָּאִים beside it
+       answered גאה — the same word filed two ways. */
+    for (k = stems.length - 1; k >= 0; k--) {
+      var sk = stems[k];
+      if (sk.length >= 5 && sk[sk.length - 2].c === 'ו' && sk[sk.length - 1].c === 'ת')
+        stems.push(sk.slice(0, sk.length - 2));
     }
     for (k = 0; k < stems.length; k++) {
       var st = stems[k];
       for (i = 0; i < _bSuf.length; i++) {
         var sfx = _bSuf[i];
-        if (st.length > sfx.length + 2 && st.slice(-sfx.length) === sfx) later.push(st.slice(0, -sfx.length));
+        if (st.length > sfx.length + 2 &&
+            _pcons(st, st.length - sfx.length).replace(/[ׁׂ]/g, '') === sfx)
+          later.push(st.slice(0, st.length - sfx.length));
       }
     }
     /* MINIMAL ANALYSIS FIRST. Read the stem off the whole word before
-       stripping anything from its end, and only fall to the shortened bodies
-       if that finds nothing. Run together, לְהַמְשִׁיךְ offered both משׁכ (from
-       the whole hiphil) and משׁה (after its final ך was taken for a 2ms
-       suffix), and because the MT never inflects משׁך in the hiphil the
-       attestation test preferred the wrong one. Tried in order, the reading
-       that assumes least wins. */
-    return _solve(stems) || _solve(later);
+       stripping anything from its end. Run together, לְהַמְשִׁיךְ offered both
+       משׁכ (from the whole hiphil) and משׁה (after its final ך was taken for a
+       2ms suffix), and because the MT never inflects משׁך in the hiphil the
+       attestation test preferred the wrong one. */
+    _binSaw = false;
+    var got = _solve(stems);
+    if (got) return got;
+    /* STOP if the whole word already offered a real root that attestation
+       turned down. Falling through then does not find a better reading, it
+       finds a smaller one: שֶׁנִּגְרַם offers גרם, which the MT never inflects
+       in the niphal, and the next tier strips the ם — a radical — and answers
+       נגר. A root the lexicon knows but the MT does not attest in this stem is
+       a reason to leave the word alone, not to keep cutting. */
+    if (_binSaw) return '';
+    return _solve(later);
   }
+  var _binSaw = false;
   function _solve(bodies) {
-    var i, j;
-    /* LAYER 2 — the stem template. Each candidate carries the binyan its own
-       template implies, so a tie can be tested against the MT rather than
-       broken by frequency. */
-    var three = [], two = [];
-    function put(r, st2) {
+    var three = [], two = [], i, j;
+    function put(r, st2, dag, bodyLen, spec, lic) {
       var ru = _units(r);
-      (ru.length === 2 ? two : three).push({ r: r, s: st2 });
+      /* A two-letter residue means a radical is missing, and inventing one is
+         only licensed by evidence. The dagesh IS that evidence. Without it,
+         a three-letter surface minus its prefix is not a weak root at all —
+         it is a word whose first letter was never a prefix: מָשָׁל answered
+         נשל, מֵבִי answered H0942, שֶׁמַּלְאַךְ answered לאה. */
+      if (ru.length === 2) {
+        if (dag || lic || (bodyLen || 0) >= 4) two.push({ r: r, s: st2, dag: !!dag, spec: !!spec });
+      }
+      /* A root never ends in ־וּת or ־ִית: those build an abstract noun ON a
+         root, and accepting one lets the noun stand in for the root it is
+         built from — גֵּאוּת (H1348) answered for גאה while מִתְגָּאִים beside it
+         answered גאה. Reduplicated roots (ערער, גלגל) are real and stay. */
+      else if (!/(ות|ית)$/.test(r)) three.push({ r: r, s: st2, spec: !!spec });
       /* A geminate or hollow root takes the polel/hitpolel shape, which writes
-         a ו (or י) after the first radical: הִשְׁתּוֹמֵם is שׁמם, not שׁומם.
-         Offer the shortened form too and let the lexicon choose. */
-      /* ו only. The polel/hitpolel vowel is a ו (הִשְׁתּוֹמֵם, קוֹמֵם); allowing
-         a י here shortened הַקֵּיסָם "the splinter" to קסם "to divine". */
-      if (ru.length === 4 && ru[1] === 'ו')
-        three.push({ r: ru[0] + ru.slice(2).join(''), s: st2 });
+         a ו after the first radical: הִשְׁתּוֹמֵם is שׁמם, not שׁוממ. */
+      /* ...and only under a hitpael or piel, whose shape it is. Offered to a
+         niphal residue it shortened נַשְׁוִיל, i.e. Nashville, to שול. */
+      if (ru.length === 4 && ru[1] === 'ו' && (st2.indexOf('t') >= 0 || st2.indexOf('p') >= 0))
+        three.push({ r: ru[0] + ru.slice(2).join(''), s: st2, spec: !!spec });
     }
     for (var bi = 0; bi < bodies.length; bi++) {
-      var u = _units(bodies[bi]), L = u.length;
+      var u = bodies[bi], L = u.length;
       if (L < 3) continue;
-      var p = u[0].charAt(0), r1 = u[1].charAt(0);
+      var p = u[0], r1 = u[1], hadHiphil = false, hadHitpael = false;
       // hitpael, sibilant metathesis:  הִתְשַׁ -> הִשְׁתַּ,  הִתְצַ -> הִצְטַ
-      if ('המנת'.indexOf(p) >= 0 && _METATH[r1] === u[2].charAt(0) && L >= 4)
-        put(u[1] + u.slice(3).join(''), ['t']);
+      /* The metathesised sibilant carries SHVA — הִשְׁתַּ, הִסְתַּ, הִצְטַ,
+         הִזְדַּ — because the ת has moved in front of its own vowel. Without
+         that test any sibilant followed by a ת looked like metathesis, and
+         תִּסָּתֵרְנָה, a plain niphal of סתר, was read as סרנה, H5633. */
+      if ('המנת'.indexOf(p.c) >= 0 && _V_T[p.v] && L >= 4 && _METATH[r1.c] === u[2].c && r1.v === 'ְ')
+      { put(r1.c + r1.dot + _pcons(u, 3), ['t'], false, L, true); hadHitpael = true; }
       // hitpael, plain
-      if ('המנת'.indexOf(p) >= 0 && u[1] === 'ת' && L >= 4) put(u.slice(2).join(''), ['t']);
+      if ('המנת'.indexOf(p.c) >= 0 && _V_T[p.v] && L >= 4 && r1.c === 'ת')
+      { put(_pcons(u, 2), ['t'], false, L, true); hadHitpael = true; }
       // hiphil and its participle: the י before the last radical belongs to
       // the stem, not the root  (מַכְרִיז -> כרז,  הַטִּיף -> טף, two letters)
-      if ('המ'.indexOf(p) >= 0 && u[L - 2] === 'י') put(u.slice(1, L - 2).join('') + u[L - 1], ['h', 'H']);
-      /* נ and ה are NOT the same prefix, and lumping them cost נִמְנוּ. A
-         leading נ can only be a niphal; a leading ה can be the niphal
-         infinitive (where the nun has assimilated and shows as nothing at
-         all), a hiphil or a hophal. Told apart, נִמְנוּ repairs to מנה, which
-         the MT attests in the niphal, over יָמַן, which it attests only in the
-         hiphil — and the tie that had to be refused resolves itself. */
-      if (p === 'נ') put(u.slice(1).join(''), ['N']);
-      else if (p === 'ה') put(u.slice(1).join(''), ['N', 'h', 'H']);
-      // the מ of a derived participle
-      if (p === 'מ') put(u.slice(1).join(''), ['p', 'P', 'h', 'H', 't', 'N']);
-      /* No bare-body candidate. This stage undoes a TEMPLATE; the bare form,
-         peeled or not, is what the lexicon, skeleton and mater stages have
-         already tried and failed on, and letting it compete here only lets a
-         noun be re-read as a verb — ברית peeled to ברי and answered ברה
-         "to eat", ציון to ציו and answered צִיָּה "dry land". */
+      /* The article geminates, so it is the DAGESH that marks הַמְּאִירִים as
+         article + participle. Without that test the rule also caught
+         לְהַמְשִׁיךְ, a real hiphil whose first radical simply happens to be מ,
+         and sent it to משה. */
+      var artPtc = (p.c === 'ה' && p.v !== 'ִ' && r1.c === 'מ' && r1.dag);
+      /* A hiphil participle is מַקְטִיל — patach. מְ is the piel/pual prefix and
+         a piel participle has no י-infix at all, so reading one there turned
+         מְנָיוֹת into נו and then נוה. */
+      if (((p.c === 'ה' && _V_H[p.v]) || (p.c === 'מ' && p.v === 'ַ')) && !artPtc) {
+        if (u[L - 2].c === 'י' && !u[L - 2].v) {
+          put(_pcons(u, 1, L - 2) + u[L - 1].c + u[L - 1].dot, ['h', 'H'], r1.dag, L, true);
+          hadHiphil = true;
+        }
+      }
+      /* The niphal נ, and the ה of the niphal infinitive, where the nun has
+         assimilated into the dagesh of the first radical and shows as nothing.
+         Suppressed only when the hiphil template ALSO matched AND the first
+         radical carries a dagesh — that pair means the assimilated nun is the
+         root's own first letter, so the bare residue cannot be the root:
+         בְּהַכִּירְכֶם must restore it and reach נכר, not keep כיר. Either
+         signal alone is not enough. הָעִיד is a hiphil with no dagesh, and its
+         residue עיד IS the root (a hollow עוד); הִשָּׁאֵר has the dagesh but no
+         hiphil י, and there the hidden nun is the NIPHAL's, not the root's, so
+         its residue שאר is the root too. */
+      /* A dagesh in the first radical says a nun assimilated there; WHOSE nun
+         is read off that radical's own vowel. The niphal infinitive is
+         הִקָּטֵל — qamats — and there the hidden nun is the niphal's, so the
+         residue IS the root (הִשָּׁאֵר -> שאר, הִקָּרֵא -> קרא). Any other
+         vowel is a hiphil, where the hidden nun is the root's own first
+         letter and the residue is a fragment: הִכַּרְתִּי kept כרתי and
+         answered H3774, the Cherethites, instead of restoring נכר. */
+      /* Only ה. The niphal infinitive is הִקָּטֵל and never begins with מ, so
+         after a מ a dagesh always means the root's own nun assimilated:
+         בְּמַסָּעָיו read its qamats as a niphal and answered סעה instead of
+         restoring מַסָּע to נסע like בְּמַסָּעָם already did. */
+      var niphalInf = r1.dag && r1.v === 'ָ' && p.c === 'ה';
+      var res = _pcons(u, 1);
+      /* With a hiphil's dagesh the residue is only usable when it is down to
+         two letters — then the repair puts the root's nun back (הִכַּרְתִּי,
+         once its תי is off, is כר -> נכר). Longer than that and the residue
+         still carries the suffix, so taking it whole answered H3774, the
+         Cherethites. A niphal infinitive's dagesh hides the niphal's own nun,
+         so its residue is the root at any length. */
+      var dagOK = !r1.dag || niphalInf || _units(res).length === 2;
+      /* THE ARTICLE ALSO GEMINATES. הַ + dagesh looks exactly like a hiphil
+         whose nun assimilated, which is how הַתַּנַ became נתן and
+         הַמְּאִירִים became מאר. The article is הַ, הָ or הֶ and NEVER הִ, so a
+         dagesh with no hiphil י is only read as assimilation under hiriq. */
+      if (p.c === 'ה' && r1.dag && !niphalInf && p.v !== 'ִ') dagOK = false;
+      if (!(hadHiphil && r1.dag) && !hadHitpael) {
+        /* The niphal נ is the one prefix that is only ever a prefix — ה is
+           also the article and מ also מִן — so it licenses a two-letter
+           residue from a three-letter word where they do not. נִמְנוּ needs it
+           to reach מנה, and it is safe even when the נ turns out to be a
+           radical, because restoring the nun then just rebuilds the word
+           itself (נַעַר -> נער, נֶפֶשׁ -> נפש). */
+        if (p.c === 'נ' && _V_N[p.v] && dagOK) put(res, ['N'], r1.dag, L, false, true);
+        /* ...but not when that ה is the article on a participle. הַ, הָ and
+           הֶ before a מ are the article (the stem ה of a niphal or hiphil is
+           הִ, or הֵ before a guttural), and the מ is the participle's own
+           prefix — which the article peel above already handles. Read as a
+           stem prefix, הַמְצֻיָּן kept its מ and answered מצה. */
+        else if (p.c === 'ה' && _V_H[p.v] && dagOK && !(r1.c === 'מ' && p.v !== 'ִ' && p.v !== 'ֵ'))
+          put(res, ['N', 'h', 'H'], r1.dag, L);
+        /* The מ of a participle, and the shapes it actually takes. A hiphil
+           participle carries the י (handled above); a piel or pual doubles the
+           SECOND radical; a maqtal noun of a I-nun root doubles the FIRST and
+           takes qamats or patach there (מַסָּע, מַשָּׂא -> נסע, נשא). Anything
+           else beginning with מ has a מ that is a radical, not a prefix, and
+           reading it as one answered מְנָיָה as נוה and מַשֵּׁל as נשל. */
+        else if (p.c === 'מ' && _V_M[p.v] && dagOK &&
+                 (r1.dag ? (r1.v === 'ָ' || r1.v === 'ַ') : (L > 2 && u[2].dag)))
+          put(res, ['p', 'P', 'h', 'H', 't', 'N'], r1.dag, L);
+      }
     }
-    var got = _soleFamily(three);
+    /* TWO PASSES. The metathesis, the ת of a hitpael and the י of a hiphil are
+       specific enough to be trusted on their own — and they must be, since the
+       corpus inflects roots in stems the MT never does (לְהִצְטָרֵף, הִסְתַּכֵּל,
+       לְהַטְבִּיל are all correct and all unattested in their stem). The bare
+       prefix templates are not specific, so those must clear attestation.
+       Demanding it of everything cost 125 correct answers; demanding it of
+       nothing let מְנָיָה answer נוה. */
+    return _pass(three, two, true, false) || _pass(three, two, false, true);
+  }
+  function _pass(three, two, specOnly, strict) {
+    var i, j;
+    if (specOnly) {
+      three = three.filter(function (c) { return c.spec; });
+      two = two.filter(function (c) { return c.spec; });
+    }
+    /* The hollow and III-he swaps compete IN this tier rather than after it.
+       Tried only as a fallback, a candidate that happens to be a derived noun
+       won before its own verb was ever offered: תִּתְיַפֶּינָה matched יֳפִי
+       (H3308) and never reached יפה, which is the root the MT inflects in the
+       hitpael. Offered together, attestation picks the verb. */
+    /* snapshot the length: the loop appends to the array it walks, and
+       without this each swap gets swapped again, forever. */
+    var nBase = three.length;
+    for (i = 0; i < nBase; i++) {
+      var tu0 = _units(three[i].r);
+      if (tu0.length !== 3) continue;
+      if (tu0[1] === 'י') three.push({ r: tu0[0] + 'ו' + tu0[2], s: three[i].s, spec: three[i].spec });
+      else if (tu0[1] === 'ו') three.push({ r: tu0[0] + 'י' + tu0[2], s: three[i].s, spec: three[i].spec });
+      if (tu0[2] === 'י') three.push({ r: tu0[0] + tu0[1] + 'ה', s: three[i].s, spec: three[i].spec });
+    }
+    var got = _soleFamily(three, strict);
+    if (strict && !got && _soleFamily(three, false)) _binSaw = true;
     if (got) return got;
     /* A hollow root writes its middle radical as the other mater, or not at
-       all: הֵעִיד is עוד, not עיד. */
-    var swapped = [];
-    for (i = 0; i < three.length; i++) {
-      var tu = _units(three[i].r);
-      if (tu.length !== 3) continue;
-      if (tu[1] === 'י') swapped.push({ r: tu[0] + 'ו' + tu[2], s: three[i].s });
-      else if (tu[1] === 'ו') swapped.push({ r: tu[0] + 'י' + tu[2], s: three[i].s });
-      /* III-he: the ה of the lemma surfaces as י once anything is suffixed —
-         נַעֲשֵׂיתֶם peels to עשׂי and the root is עשׂה. A final ו is NOT the same
-         case: there it is the ־וֹן of a noun or a 3ms suffix, and treating it
-         as III-he read נִצָּחוֹן as צחה "to be dazzling" and בְּהַצִּילוֹ as צלה
-         instead of נצל. */
-      if (tu[2] === 'י') swapped.push({ r: tu[0] + tu[1] + 'ה', s: three[i].s });
-    }
-    got = _soleFamily(swapped);
-    if (got) return got;
+       all: הֵעִיד is עוד, not עיד.  III-he: the ה of the lemma surfaces as י
+       once anything is suffixed — נַעֲשֵׂיתֶם peels to עשׂי and the root is עשׂה.
+       A final ו is NOT that case: there it is the ־וֹן of a noun or a 3ms
+       suffix, and treating it as III-he read נִצָּחוֹן as צחה. */
     var reps = [];
     for (i = 0; i < two.length; i++) {
       var wu = _units(two[i].r);
       if (wu.length !== 2) continue;
-      var R = _weakRepairs(wu[0], wu[1]);
+      var R = _weakRepairs(wu[0], wu[1], two[i].dag);
       for (j = 0; j < R.length; j++) reps.push({ r: R[j], s: two[i].s });
     }
-    /* strict: a repair INVENTS a radical, so it is never accepted on being
+    /* strict: a repair INVENTS a radical, so it is never accepted for being
        the only reading — the MT must attest that family in the stem this
        template implies. מֵבִי repaired to H0942 בַּוַּי, a name that attests no
        verb at all, and was the only candidate standing. */
@@ -1778,11 +1954,9 @@
      THE VOWEL PATTERN, so an unpointed surface does not license the analysis:
      נביא could be נָבִיא the prophet or a niphal of בוא, and nothing in the
      letters decides. Ungated, this layer answered הוא -> נוא (487 tokens),
-     ברית -> ברה, ציון -> ציה, מלך -> הלך and שנים -> נום, every one of them an
-     unpointed heading string or an unpointed ketiv. The pointed heading list
-     is a separate file and still resolves; what is gated out here is only the
-     unpointed gate-and-fallback copy. */
-  var _HAS_POINT = /[\u05B0-\u05BC\u05C7]/;
+     ברית -> ברה, ציון -> ציה, מלך -> הלך and שנים -> נום, every one an
+     unpointed heading string or an unpointed ketiv. */
+  var _HAS_POINT = /[ְ-ׇּ]/;
   function stageBinyan(ctx) {
     if (ctx.isName) return '';
     var h = ctx.head || ctx.w;

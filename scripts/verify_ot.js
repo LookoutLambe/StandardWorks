@@ -21,7 +21,9 @@ for (const dir of dirs) {
     }
     const opens = (src.match(/\{ *num:/g) || []).length;
     // dc_chron.js is a chronological index, not verse data
-    if (!opens && !/chron|intro/.test(f)) { console.log('NO-VERSES', p); problems++; }
+    // manifest.js is the lazy loader's index, not a verse file — it has
+    // listed itself as a problem in every run since the loader landed
+    if (!opens && !/chron|intro|^manifest\.js$/.test(f)) { console.log('NO-VERSES', p); problems++; }
   }
 }
 console.log(`files: ${files}  tokens: ${tokens}`);
