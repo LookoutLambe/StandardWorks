@@ -737,16 +737,21 @@
          reader lands in another chapter with no way back to the verse they
          were reading, and inside the iOS app there is no browser Back to fall
          back on. Mark where we are BEFORE the jump, then offer the way home. */
+      var href = a.getAttribute('href') || '';
       try {
-        if (typeof window.NavEngineMarkReturn === 'function') window.NavEngineMarkReturn();
+        /* Hand over WHERE we are going, not just where we are. These references
+           are cross-volume — a root in Alma lists its uses in the OT, NT, D&C,
+           PGP and JST — and those links load a different page, so nav_engine
+           persists the return point and the destination page picks it up. */
+        if (typeof window.NavEngineMarkReturn === 'function') window.NavEngineMarkReturn(href);
       } catch (eR) {}
-      if (a.getAttribute('href').charAt(0) === '#') {
+      if (href.charAt(0) === '#') {
         closePanel();
         setTimeout(function () {
           try { if (typeof window.NavEngineShowReturn === 'function') window.NavEngineShowReturn(); } catch (eS) {}
         }, 400);
       }
-      // cross-volume links navigate away naturally
+      // cross-volume links navigate away; restoreReturnPoint() shows the banner there
     });
     return panelEl;
   }

@@ -1572,7 +1572,7 @@
     };
   }
   window.NavEngineUpdateContinue = updateContinueButton;
-  window.NavEngineMarkReturn = function () { markReturnPoint(); };
+  window.NavEngineMarkReturn = function (destHref) { markReturnPoint(destHref); };
   window.NavEngineShowReturn = function () { showReturnBanner(); };
   window.NavEngineClearReturn = function () { clearReturnPoint(); };
 
@@ -1596,12 +1596,33 @@
       var rows = host.querySelectorAll('.verse[data-verse-key]');
       for (var i = 0; i < rows.length; i++) {
         var k = rows[i].getAttribute('data-verse-key') || '';
-        if (parseInt(k.split('|').pop(), 10) === want) {
-          try { rows[i].scrollIntoView({ block: 'start', behavior: 'auto' }); } catch (e) {}
-          return;
-        }
+        if (parseInt(k.split('|').pop(), 10) === want) { _holdVerse(rows[i]); return; }
       }
       if (++tries < 20) setTimeout(seek, 150);
+    })();
+  }
+  /* Scrolling to the row ONCE is not enough on a cold page: the lazy loader is
+     still growing the content ABOVE it, so the verse drifts down and away —
+     it landed 1,131px off on a cross-volume Return. Hold the alignment for a
+     couple of seconds, and let go the moment the reader touches the page. */
+  function _holdVerse(row) {
+    var give_up = false;
+    var release = function () { give_up = true; };
+    ['wheel', 'touchstart', 'keydown'].forEach(function (ev) {
+      window.addEventListener(ev, release, { passive: true, once: true });
+    });
+    var n = 0;
+    (function align() {
+      if (give_up || n++ > 10) return;
+      /* A band, not a point. scrollIntoView lands the row just under the sticky
+         header, so its settled top is ~56 on some pages and 0 on others;
+         measuring drift against 0 re-scrolled forever without improving. Only
+         correct when the row has actually been pushed out of place. */
+      var top = row.getBoundingClientRect().top;
+      if (top < -8 || top > 140) {
+        try { row.scrollIntoView({ block: 'start', behavior: 'auto' }); } catch (e) {}
+      }
+      setTimeout(align, 220);
     })();
   }
 
@@ -1611,6 +1632,94 @@
      markReturnPoint() is called before such a jump; the banner then offers the
      way home and clears itself once used. */
   var _returnTo = null, _returnEl = null, _returnArmed = 0;   // 0 = not ours; else the ms we armed at
+
+  /* The study card's references are CROSS-VOLUME — a root in Alma lists its
+     uses in the OT, NT, D&C, PGP and JST too — and refHref() sends those to a
+     different PAGE. An in-memory return point dies with that page, so the way
+     home only ever worked inside one volume. The record is persisted instead,
+     under one global key, and every volume page claims it on load. */
+  var RETURN_KEY = 'sw-return-v1';
+  var RETURN_TTL = 10 * 60 * 1000;
+  function _loadReturn() {
+    try { return JSON.parse(localStorage.getItem(RETURN_KEY) || 'null'); } catch (e) { return null; }
+  }
+  function _saveReturn(rec) {
+    try { localStorage.setItem(RETURN_KEY, JSON.stringify(rec)); } catch (e) {}
+  }
+  function _dropReturn() {
+    try { localStorage.removeItem(RETURN_KEY); } catch (e) {}
+  }
+  /* Coming home ACROSS volumes is a page load, and the page's own hash handler
+     scrolls before the lazy loader has finished growing the content above —
+     which left the verse 169px down with its predecessor's tail on screen.
+     goToVerse() already re-seeks until the row exists, so hand the landing to
+     it instead of to the hash: the chapter goes in the URL, the verse comes
+     through here and is consumed on the far side. */
+  var LAND_KEY = 'sw-return-land';
+  function _saveLanding(v, ch, verse) {
+    try { localStorage.setItem(LAND_KEY, JSON.stringify({ volume: v, chapter: ch, verse: verse })); } catch (e) {}
+  }
+  function consumeLanding() {
+    var d = null;
+    try { d = JSON.parse(localStorage.getItem(LAND_KEY) || 'null'); localStorage.removeItem(LAND_KEY); } catch (e) {}
+    if (!d || !d.chapter) return;
+    if (!_config || d.volume !== _config.volume) return;
+    goToVerse(d.chapter, d.verse);
+  }
+  /* Which volume and chapter a reference link is about to land on. Longest page
+     path first: 'bom/bom.html' must win before a shorter sibling can match. */
+  function _parseDest(href) {
+    href = String(href || '');
+    var i = href.indexOf('#');
+    var page = i >= 0 ? href.slice(0, i) : href;
+    var hash = i >= 0 ? href.slice(i + 1) : '';
+    var vol = '';
+    if (!page) vol = _config && _config.volume;              // '#al-ch32:4' — this page
+    else {
+      var keys = Object.keys(VOLUMES).sort(function (a, b) {
+        return VOLUMES[b].page.length - VOLUMES[a].page.length;
+      });
+      for (var k = 0; k < keys.length; k++) {
+        if (page.indexOf(VOLUMES[keys[k]].page) >= 0) { vol = keys[k]; break; }
+      }
+    }
+    var chap = hash.split(/[:&]/)[0];
+    return (vol && chap) ? { volume: vol, chapter: chap } : null;
+  }
+  /* The deep-link syntax is per-volume, and matches what refHref() emits:
+     the BOM takes chapter:verse, every other volume chapter&v=verse. */
+  function _returnHref(from) {
+    var v = from && VOLUMES[from.volume];
+    if (!v) return null;
+    var deep = from.chapter + (from.verse
+      ? (from.volume === 'bom' ? ':' + from.verse : '&v=' + from.verse) : '');
+    return ((_config && _config.basePath) || '') + v.page + '#' + deep;
+  }
+  /* Claim the record on load. The page we LEFT never shows the banner; only the
+     page the reference pointed at does, and only while the record is fresh. */
+  function restoreReturnPoint() {
+    var rec = _loadReturn();
+    if (!rec || !rec.from) return;
+    if (Date.now() - (rec.at || 0) > RETURN_TTL) { _dropReturn(); return; }
+    var here = _config && _config.volume;
+    if (!here) return;
+    if (!rec.to || rec.to.volume !== here) {
+      if (rec.from.volume === here) _dropReturn();          // back home some other way
+      return;
+    }
+    _returnTo = rec.from;
+    _returnArmed = Date.now();                               // survive the boot navTo
+    var tries = 0;
+    (function waitForChapter() {
+      if (++tries > 40) return;                              // ~10s, then give up quietly
+      var id = rec.to.chapter;
+      if (id && !document.getElementById(id) && !document.getElementById('panel-' + id)) {
+        setTimeout(waitForChapter, 250); return;
+      }
+      _returnArmed = Date.now();      // restart the grace window now the page has settled
+      showReturnBanner();
+    })();
+  }
 
   /* The banner belongs to ONE journey: the jump you just took out of the study
      panel. Any other movement — next chapter, the drawer, a bookmark — means
@@ -1636,7 +1745,7 @@
     setTimeout(install, 1200);   // the readers wrap navTo late; catch it either way
   })();
 
-  function markReturnPoint() {
+  function markReturnPoint(destHref) {
     _returnArmed = Date.now();         // the jump about to happen is the study jump
     if (!_config || !_config.volume) return;
     var chap = _config.currentChapter;
@@ -1657,12 +1766,16 @@
     if (!v) v = currentVerseNum();     // no bookmark yet: the probe is still worth a try
     var chNum = chap.replace(book.prefix, '');
     var label = book.en + (book.ch > 1 ? ' ' + chNum : '') + (v ? ':' + v : '');
-    _returnTo = { chapter: chap, verse: v, label: label };
+    _returnTo = { volume: _config.volume, chapter: chap, verse: v, label: label };
+    /* Persist it. A cross-volume reference loads a different page, and the
+       in-memory copy does not survive that; the destination page reads this. */
+    _saveReturn({ from: _returnTo, to: _parseDest(destHref), at: Date.now() });
   }
 
   function clearReturnPoint() {
     _returnTo = null;
     _returnArmed = 0;
+    _dropReturn();
     if (_returnEl) _returnEl.classList.remove('open');
   }
 
@@ -1676,7 +1789,11 @@
         e.stopPropagation();
         var t = _returnTo;
         clearReturnPoint();
-        if (t) goToVerse(t.chapter, t.verse);
+        if (!t) return;
+        if (!t.volume || t.volume === (_config && _config.volume)) { goToVerse(t.chapter, t.verse); return; }
+        _saveLanding(t.volume, t.chapter, t.verse);   // goToVerse finishes it there
+        var url = _returnHref({ volume: t.volume, chapter: t.chapter, verse: 0 });
+        if (url) window.location.href = url;
       });
       document.body.appendChild(_returnEl);
     }
@@ -2762,6 +2879,8 @@
       createQuickDock();
       installVersePositionTracker();
       updateContinueButton();   // the landing's primary button, every volume
+      consumeLanding();         // finish a cross-volume Return on the verse, not the chapter
+      restoreReturnPoint();     // a study reference may have sent us here from another volume
     },
     open: openSidebar,
     openBooks: openBooksForCurrentVolume,
