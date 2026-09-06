@@ -9894,10 +9894,7 @@ window._rootGlossaryData = {
     "meaning": "work",
     "category": "Action"
   },
-  "רות": {
-    "meaning": "provoke",
-    "category": "Family"
-  },
+  "רות":{"meaning":"(רוּת) Ruth — the Moabitess of the genealogy","category":"Family"},
   "שפטיו": {
     "meaning": "His judgments",
     "category": "Uncategorized"
