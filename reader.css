@@ -76,7 +76,10 @@ body.dual-mode .verse-num { order: -1; }
 body.dual-mode .gl { display: none; }
 body.dual-mode .arr { display: none; }
 body.dual-mode .word-unit { padding-bottom: 3px; }
-#word-popup .popup-close { position: absolute; top: max(4px, env(safe-area-inset-top, 0px)); right: max(8px, env(safe-area-inset-right, 0px)); cursor: pointer; color: #888; font-size: 16px; padding: 10px; min-width: 44px; min-height: 44px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; z-index: var(--z-pop); }
+/* The ✕ is the ONLY close control now — the full-width mobile "Close" button
+   below the card is gone — so it carries the weight. The 44px box stays: it
+   is the touch target, and the glyph sits centred inside it. */
+#word-popup .popup-close { position: absolute; top: max(4px, env(safe-area-inset-top, 0px)); right: max(8px, env(safe-area-inset-right, 0px)); cursor: pointer; color: #888; font-size: 18px; font-weight: 700; padding: 10px; min-width: 44px; min-height: 44px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; z-index: var(--z-pop); }
 #search-results.open { display: block; }
 #shortcuts-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: var(--z-sheet); background: rgba(0,0,0,0.7); justify-content: center; align-items: center; }
 #shortcuts-overlay.open { display: flex; }
@@ -97,7 +100,6 @@ body.dark-mode .controls-top, body.dark-mode .controls-bottom { background: var(
 body.dark-mode .verse { border-color: var(--rule); }
 .ann-hl { border-radius: 4px; }
 body.dark-mode #word-popup { background: var(--chrome); border-color: var(--here-chrome); color: var(--on-chrome); }
-body.dark-mode #word-popup .popup-dismiss-mobile { border-color: var(--here-chrome); color: var(--on-chrome); background: color-mix(in srgb, var(--here-chrome) 12%, transparent); }
 body.dark-mode .book-title { color: var(--here-chrome); }
 body.dark-mode .book-subtitle { color: var(--on-chrome-2); }
 body.dark-mode .chapter-heading h2 { color: var(--on-chrome); }
@@ -222,7 +224,6 @@ body:not(.dual-mode) .verse > .word-flow { width: 100%; }
      its end handed the scroll to the chapter underneath, so the reading
      position moved while the reader was looking at a word. */
   #word-popup { max-width: 90vw; padding: 16px 20px; padding-top: max(16px, calc(env(safe-area-inset-top, 0px) + 12px)); max-height: min(78vh, calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 16px)); overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
-  #word-popup .popup-dismiss-mobile { display: block; }
   #glossary-panel { width: 100vw; max-width: 100vw; }
   #xref-panel { width: 55%; }
   body.dual-mode .verse { flex-wrap: wrap; }
@@ -1165,10 +1166,6 @@ body #word-popup .qq, body #word-popup .popup-hebrew .qq { color: var(--qq) !imp
 body.dark-mode #word-popup .qq,
 body.dark-mode #word-popup .popup-hebrew .qq { color: var(--qq-bright) !important; }
 /* the phone dismiss button — was gold on navy, two schemes ago */
-body #word-popup .popup-dismiss-mobile {
-  background: var(--here) !important; color: #fff !important;
-  border: none !important; font-weight: 600 !important;
-}
 
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -2227,7 +2224,6 @@ body.dark-mode #glossary-panel {
 #sel-toolbar-reopen:hover { background:var(--surface-2); }
 #share-popup h3 { color: var(--accent-deep); margin-bottom: 16px; }
 #share-popup.open { display: block; }
-#word-popup .popup-dismiss-mobile { display: none; width: 100%; margin-top: 12px; padding: 14px 16px; border-radius: 8px; border: 1px solid var(--here); background: color-mix(in srgb, var(--here) 12%, transparent); color: #8a7028; font-family: 'David Libre', 'Georgia', serif; font-size: 1.05em; font-weight: 600; cursor: pointer; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
 .glossary-category-header { font-size: 0.85em; font-weight: 700; color: var(--accent-deep); padding: 8px 0 4px; border-bottom: 1px solid var(--rule-light); margin-bottom: 6px; }
 .glossary-close { cursor: pointer; font-size: 1.4em; color: var(--ink-light); padding: 4px 8px; }
 .glossary-controls { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
@@ -2282,7 +2278,7 @@ body.dark-mode #glossary-panel {
 /* === ENHANCED POPUP (Strong's + Root) === */ .popup-strong { font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; color: var(--ink-light); text-align: center; margin-bottom: 4px; direction: ltr; }
 /* === GLOSSARY PANEL === */ #glossary-panel { display: none; position: fixed; top: 0; left: 0; bottom: 0; width: 380px; max-width: 90vw; background: var(--bg); border-right: 2px solid var(--accent); z-index: var(--z-panel); overflow-y: auto; padding: 16px; font-family: 'David Libre', 'Georgia', serif; transform: translateX(-100%); transition: transform 0.25s ease; }
 /* === LANDING PAGE === */ .landing-hero { text-align: center; padding: 40px 20px 30px; }
-/* === MOBILE POPUP ENLARGEMENT === */ @media (max-width: 600px) { #word-popup { max-width: 90vw; padding: 16px 20px; padding-top: max(16px, calc(env(safe-area-inset-top, 0px) + 12px)); max-height: min(78vh, calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 16px)); overflow-y: auto; -webkit-overflow-scrolling: touch; } #word-popup .popup-dismiss-mobile { display: block; } .popup-hebrew { font-size: 2.4em !important; } .popup-translit { font-size: 1.2em !important; } .popup-gloss { font-size: 1.3em !important; } .popup-detail { font-size: 1.0em !important; } .popup-strong { font-size: 1.0em !important; } #glossary-panel { width: 100vw; max-width: 100vw; } #annotations-panel { width: 100vw; max-width: 100vw; } #xref-panel { width: 55%; } }
+/* === MOBILE POPUP ENLARGEMENT === */ @media (max-width: 600px) { #word-popup { max-width: 90vw; padding: 16px 20px; padding-top: max(16px, calc(env(safe-area-inset-top, 0px) + 12px)); max-height: min(78vh, calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 16px)); overflow-y: auto; -webkit-overflow-scrolling: touch; } .popup-hebrew { font-size: 2.4em !important; } .popup-translit { font-size: 1.2em !important; } .popup-gloss { font-size: 1.3em !important; } .popup-detail { font-size: 1.0em !important; } .popup-strong { font-size: 1.0em !important; } #glossary-panel { width: 100vw; max-width: 100vw; } #annotations-panel { width: 100vw; max-width: 100vw; } #xref-panel { width: 55%; } }
 /* === PANEL OVERLAY === */ #panel-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.4); z-index: var(--z-scrim); }
 /* === SELECTION TOOLBAR === */ #sel-toolbar { display: none; position: fixed; z-index: var(--z-pop); background: var(--chrome); border: 1px solid var(--chrome-line); border-radius: 8px; padding: 6px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); flex-direction: column; gap: 4px; align-items: center; }
 /* === SHARE POPUP === */ #share-popup { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--bg); border: 2px solid var(--accent); border-radius: 12px; padding: 24px; z-index: var(--z-pop); min-width: 280px; max-width: 90vw; box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center; font-family: 'David Libre', 'Georgia', serif; }

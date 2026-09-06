@@ -54,7 +54,7 @@
 <link rel="stylesheet" href="../nav_engine.css?v=48">
 <link rel="stylesheet" href="../site_chrome.css?v=70">
 <link rel="stylesheet" href="../xref_study_panel.css?v=14">
-<link rel="stylesheet" href="../reader.css?v=84">
+<link rel="stylesheet" href="../reader.css?v=85">
 <style>
 
 /* Skip-to-content link (screen reader / keyboard) */
@@ -850,22 +850,6 @@ html.sw-boot #main-content, html.sw-boot .page { transition: none !important; }
 #word-popup .popup-strong { font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; color: var(--ink-light); text-align: center; margin-bottom: 4px; direction: ltr; }
 #word-popup .popup-strong a { color: var(--accent); text-decoration: none; }
 #word-popup .popup-strong a:hover { text-decoration: underline; }
-#word-popup .popup-dismiss-mobile {
-  display: none;
-  width: 100%;
-  margin-top: 12px;
-  padding: 14px 16px;
-  border-radius: 8px;
-  border: 1px solid var(--here-chrome);
-  background: color-mix(in srgb, var(--here-chrome) 12%, transparent);
-  color: #8a7028;
-  font-family: 'David Libre', 'Georgia', serif;
-  font-size: 1.05em;
-  font-weight: 600;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-}
 .word-unit { cursor: pointer; }
 
 /* === MOBILE POPUP ENLARGEMENT === */
@@ -883,7 +867,6 @@ html.sw-boot #main-content, html.sw-boot .page { transition: none !important; }
   #word-popup .popup-gloss { font-size: 1.3em !important; }
   #word-popup .popup-detail { font-size: 1.0em !important; }
   #word-popup .popup-strong { font-size: 1.0em !important; }
-  #word-popup .popup-dismiss-mobile { display: block; }
 }
 
 /* === ANNOTATIONS (Highlight / Underline / Notes) === */
@@ -1665,7 +1648,6 @@ body.dual-mode .chapter-summary { display: block; }
   <div class="popup-gloss" id="popup-gl"></div>
   <div class="popup-strong" id="popup-strong"></div>
   <div class="popup-detail" id="popup-detail"></div>
-  <button type="button" class="popup-dismiss-mobile" onclick="closePopup()" aria-label="Close word details">Close</button>
 </div>
 
 <!-- Selection toolbar (vertical icon strip on desktop, horizontal on mobile) -->
