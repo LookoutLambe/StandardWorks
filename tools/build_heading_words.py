@@ -1,7 +1,25 @@
 # -*- coding: utf-8 -*-
+#
+# ⚠ DO NOT RE-RUN THIS BLIND. Verified 2026-09-06: regenerating rewrites
+# 2,132 tokens across 992 chapters in all four volumes, and some of those are
+# REGRESSIONS of hand corrections that live only in the generated files —
+# בְּצַלְמוֹ goes back from "in His own image" to "after his own image" (the
+# wording the user had simplified), יְדֵי "the hands of" becomes יָדִי "my hand",
+# and PGP's "thou art created" becomes "you are created" (a D&C-only rule).
+# Coverage also drops from 100% to 99.7-99.9%, 29 misses.
+#
+# The generated {ot,nt,dc,pgp}_heading_words.js are downstream of hand work the
+# generator cannot reproduce. To change a heading, EDIT BOTH FILES BY HAND:
+# the unpointed *_chapter_headings_heb.js (which feeds the Dual paragraph) and
+# the pointed *_heading_words.js (which feeds the interlinear). If this tool is
+# ever needed again, diff every volume against git before keeping the output.
+#
 import re,pickle,collections,json,sys
 def strip_pts(s): return re.sub(r'[֑-ׇ]','',s)
-SCR='/private/tmp/claude-501/-Users-chrislambe-Desktop-untitled-folder/cd0c051d-11f0-4cd4-bda7-f780f38d44b0/scratchpad/'
+# diagnostics land in the OS temp dir — this used to be a hardcoded session
+# scratchpad that no longer exists, so the run died after writing its output.
+import tempfile, os as _os
+SCR=_os.path.join(tempfile.gettempdir(),'')
 REPO='/Users/chrislambe/Desktop/untitled folder/Escrituras/'
 import glob
 pointed=collections.defaultdict(collections.Counter)
