@@ -228,8 +228,16 @@ function _tlPointed(text) {
       }
     }
     var isDagForte = tk.dag && bgdkpt.indexOf(tk.c) < 0 && t > 0 && prevVowel;
+    // bgdkpt with dagesh after a vowel = also forte (doubled + hard)
     var isBgdkptForte = tk.dag && bgdkpt.indexOf(tk.c) >= 0 && t > 0 && prevVowel && prevVowel !== '\u05B0';
-    if (isDagForte || isBgdkptForte) segments.push({c: c, v: '', ov: '', hc: tk.c, dag: false, doubled: true});
+    // Gemination doubles the SOUND, not the spelling. Where a consonant is
+    // written as a digraph (sh, ts, ch, kh), repeating the whole pair gives
+    // "hashshamayim" / "hatstsaddik" — so only the digraph's first letter is
+    // laid down here: hasshamayim, hattsaddik, missham, asshur. Single-letter
+    // consonants are unaffected (hakkohen, atta, hammishpat).
+    if (isDagForte || isBgdkptForte) {
+      segments.push({c: c.charAt(0), v: '', ov: '', hc: tk.c, dag: false, doubled: true});
+    }
     if (tk.c === '\u05D4' && isLast && tk.dag && !tk.vowel) { segments.push({c: 'h', v: '', ov: '', hc: tk.c, dag: true}); continue; }
     if (tk.c === '\u05D0' && tk.vowel) { segments.push({c: '\u02BE', v: v, ov: tk.vowel || '', hc: tk.c, dag: !!tk.dag}); continue; }
     if (tk.c === '\u05E2' && tk.vowel) { segments.push({c: '\u02BF', v: v, ov: tk.vowel || '', hc: tk.c, dag: !!tk.dag}); continue; }

@@ -130,6 +130,37 @@ for (const name of ['_paintWordAnnotation', 'applyAnnotationToWord']) {
   if (!bad) ok('heading-flow loop identical across ot/nt/dc/pgp');
 }
 
+// ---- 5. the dagesh-forte (gemination) rule, forked into bom/bom.html
+// bom.html carries its own transliterator. The two have already diverged in
+// substance — 785 forms transliterate differently, and bom.html's copy is the
+// better one (avonam/haragti/tuma vs reader_ui's onam/harogti/tumea) — so
+// whole-function equality cannot be asserted yet. What IS identical, and what
+// was wrong in BOTH until 2026-09-06, is the gemination push: a doubled
+// digraph was repeated whole ("hashshamayim"). Guard that block so a future
+// fix cannot land in one copy and miss the other.
+{
+  const PAIR = ['reader_ui.js', 'bom/bom.html'];
+  const START = 'var isDagForte =';
+  const END = 'doubled: true})';
+  let ref = null, refFile = null, bad = false;
+  for (const f of PAIR) {
+    const src = read(f);
+    const i = src.indexOf(START);
+    const j = i >= 0 ? src.indexOf(END, i) : -1;
+    if (i < 0 || j < 0) { fail('dagesh-forte anchors missing in ' + f); bad = true; continue; }
+    // compare the rule, not the prose: the two copies carry different comments
+    const nb = norm(src.slice(i, j).replace(/\/\/[^\n]*/g, ''));
+    if (ref === null) { ref = nb; refFile = f; continue; }
+    if (nb !== ref) {
+      bad = true;
+      fail('the dagesh-forte rule differs between ' + refFile + ' and ' + f +
+           ' — bom.html forks the transliterator; apply the same edit to both.\n  ' +
+           firstDiff(ref, nb));
+    }
+  }
+  if (!bad) ok('dagesh-forte rule identical in reader_ui.js and bom/bom.html');
+}
+
 if (failures) {
   console.error('[drift] ' + failures + ' shared-code drift problem(s). Commit blocked.');
   process.exit(1);

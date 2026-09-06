@@ -7224,8 +7224,13 @@ function _tlPointed(text) {
     var isDagForte = tk.dag && bgdkpt.indexOf(tk.c) < 0 && t > 0 && prevVowel;
     // bgdkpt with dagesh after a vowel = also forte (doubled + hard)
     var isBgdkptForte = tk.dag && bgdkpt.indexOf(tk.c) >= 0 && t > 0 && prevVowel && prevVowel !== '\u05B0';
+    // Gemination doubles the SOUND, not the spelling. Where a consonant is
+    // written as a digraph (sh, ts, ch, kh), repeating the whole pair gives
+    // "hashshamayim" / "hatstsaddik" — so only the digraph's first letter is
+    // laid down here: hasshamayim, hattsaddik, missham, asshur. Single-letter
+    // consonants are unaffected (hakkohen, atta, hammishpat).
     if (isDagForte || isBgdkptForte) {
-      segments.push({c: c, v: '', ov: '', hc: tk.c, dag: false, doubled: true});
+      segments.push({c: c.charAt(0), v: '', ov: '', hc: tk.c, dag: false, doubled: true});
     }
     // Mappiq he: final הּ with dagesh = pronounced "h"
     if (tk.c === '\u05D4' && isLast && tk.dag && !tk.vowel) {
