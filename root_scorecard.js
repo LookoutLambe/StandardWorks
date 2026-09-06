@@ -427,6 +427,26 @@
     return lang + segs.map(morphSeg).filter(Boolean).join(' + ');
   }
 
+  // the one sense of a multi-sense glossary line that belongs to this lemma
+  function _consOf(heb) {
+    return String(heb || '').replace(/[\u0591-\u05C7]/g, '').replace(/[ךםןףץ]/g, function (c) { return { 'ך': 'כ', 'ם': 'מ', 'ן': 'נ', 'ף': 'פ', 'ץ': 'צ' }[c]; });
+  }
+  function senseFor(meaning, lemma) {
+    if (!meaning || !lemma) return meaning || '';
+    var want = _consOf(lemma);
+    if (!want) return meaning;
+    // the references ride on the whole line after an em dash; keep them aside
+    var dash = meaning.indexOf(' — ');
+    var body = dash >= 0 ? meaning.slice(0, dash) : meaning, refs = dash >= 0 ? meaning.slice(dash) : '';
+    var parts = body.split(/;\s*/), hits = [];
+    for (var i = 0; i < parts.length; i++) {
+      var m = /^\s*\(([^)]+)\)/.exec(parts[i]);
+      if (m && _consOf(m[1]) === want) hits.push(parts[i].trim());
+    }
+    if (parts.length < 2 || hits.length !== 1) return meaning;
+    return hits[0] + refs;
+  }
+
   // ---------- popup slot ----------
   function detailHtml(found, surface, glossText) {
     var entry = found.entry;
@@ -440,13 +460,23 @@
       '<span style="font-family:\'David Libre\',serif">' + esc(d.heb) + '</span>' +
       (d.translit ? ' <span style="font-size:0.85em;opacity:0.7;">(' + esc(d.translit) + ')</span>' : '') +
       '</span> — ' + total + ' uses in ' + totalVerses + ' verses across the scriptures';
-    if (d.meaning) h += '<br><span style="font-style:italic;opacity:0.85;font-size:0.9em;">' + esc(d.meaning) + '</span>';
     // THE PARSE, where the Masoretic Text attests this exact form: the analysis
     // the OpenScriptures Hebrew Bible / STEPBible give it (attested_forms.js,
     // via RootEngine.parse), read into words, with the source's cut between
     // prefix, stem and suffix. Absent for a form the Tanakh does not have.
     var pz = null;
     try { pz = window.RootEngine && window.RootEngine.parse && window.RootEngine.parse(surface); } catch (e) { pz = null; }
+    // THE SENSE OF THE WORD TAPPED (user, 2026-09-06: "the same root working
+    // only with the word showing not both"). A family's glossary line lists
+    // its lemmas each in parentheses -- "(נַחַל) river, wadi; (נַחֲלָה)
+    // inheritance" -- and the card knows which lemma this word is (the
+    // attested parse, else the Strong's lookup), so it shows that sense alone.
+    // A word whose lemma matches no listed sense, or matches more than one,
+    // keeps the whole line.
+    var wordNum = (pz && pz.strongs) || (window._strongsLookup && window._strongsLookup[surface]) || '';
+    var wordLemma = wordNum && window._strongsRoots && window._strongsRoots[wordNum] ? window._strongsRoots[wordNum].w : '';
+    var meaningLine = senseFor(d.meaning, wordLemma);
+    if (meaningLine) h += '<br><span style="font-style:italic;opacity:0.85;font-size:0.9em;">' + esc(meaningLine) + '</span>';
     if (pz && pz.morph) {
       var pl = morphLabel(pz.morph);
       h += '<br><span style="font-size:0.9em;opacity:0.9;"><b>Parse:</b> ' + esc(pl) +
