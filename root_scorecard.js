@@ -495,7 +495,18 @@
      helps you read the line — and lose the corpus counts and the references
      link, which is all that was ever noise. A preposition FUSED to a content
      word (R/, Rd) is not affected: that token is the content word. */
-  var _FUNCTION_MORPH = /^(T[ocrndmi]|Rd?|C|Pp[0-9a-z]*|Sp[0-9a-z]*)$/;
+  var _FUNCTION_MORPH = /^(T[ocrndmi]|Rd?|C|D|Pi|Pp[0-9a-z]*|Sp[0-9a-z]*)$/;
+  /* D and Pi joined them on the user's word — "Gam, other known words like
+     that shouldnt be studied either". They are the last two function classes
+     the morphology names and this list did not carry:
+       D  adverb              113 forms   גַּם · שָׁם · כֹּה · כֵּן · עַתָּה · אָז · רַק · אַךְ
+       Pi interrogative pron.  40 forms   מִי · מַה · לָמָּה · כַּמָּה · בַּמֶּה
+     Every form in both is a particle — checked the whole table, not a sample.
+     Tj (interjection) is deliberately NOT here. It is the one class the
+     morphology does not sort cleanly: הִנֵּה, נָא and הֵן belong with these,
+     but אָמֵן, סֶלָה, הוֹי, אוֹי and חָלִילָה are words a reader has every
+     reason to look up. Separating them needs a hand-written list, which is
+     exactly what this whole mechanism exists to avoid, so Tj keeps its cards. */
   /* Pp (personal pronoun) and Sp (pronominal suffix) belong with the
      particles. A concordance of "I" or "to him" tells a reader nothing:
        אֲנִי 2704 · הוּא 2587 · אַתָּה 830      pronouns              9,991 tokens
