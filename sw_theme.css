@@ -63,28 +63,30 @@ body.dark-mode {
   --surface-2: #22304A;
   --surface-3: #2A3B58;
   /* the accent as a MARK on the dark page — verse numerals, titles,
-     ornaments. Stone, matching the chrome accent, not the old mint. 11.90:1
-     on the ground above. Filled surfaces use --accent-fill, never this. */
+     ornaments. Filled surfaces use --accent-fill, never this. */
   --here:    #D9B45F;
-  /* --here brightens to mint here — dark surfaces need a punchier accent
-     than the deep stop. Anything FILLED with --accent/--here must pair it
-     with a text colour that ALSO flips, or a button that was white text on
-     deep green in light mode becomes white text on bright mint here —
-     1.92:1, unreadable. Same near-black already proven for .rsc-chip-here. */
+  /* --here brightens on dark — a dark surface needs a punchier accent than
+     the deep stop paper takes. Anything FILLED with --accent/--here must pair
+     it with a text colour that ALSO flips, or a button that was white-on-deep
+     in light mode becomes white-on-bright here: 1.92:1, unreadable. Same
+     near-black already proven for .rsc-chip-here. */
   --on-accent: var(--chrome-2);
   /* THE FILL/MARK SPLIT.
-     --here is bright mint in dark mode, and as a MARK — verse numerals, links,
-     icons, a 3px progress bar, text on the dark page — that is right: 10.04:1
-     and legible. As a SURFACE it is wrong. Every solid button on the page was
-     `background: var(--accent)`, so in dark mode each one became a slab of
-     #34d399 with near-black text: loud, and nothing like the light theme.
-     Worse, --here and --here-chrome are the SAME value in dark mode, so the
-     paper-vs-chrome rule that governs every accent decision silently stops
-     existing exactly where it is needed most.
-     So: --accent-fill is the accent as a SURFACE. Deep in both themes, with
-     near-white text, so a filled button looks like the same button in both.
-     #14724f: 5.45:1 against its own label (AA), and 3.26:1 against the page,
-     so the button still reads as a shape. Marks keep --accent. */
+     --here is the bright gold in dark mode, and as a MARK — verse numerals,
+     links, icons, a 3px progress bar, text on the dark page — that is right.
+     As a SURFACE it is wrong: every solid button was `background:
+     var(--accent)`, so in dark mode each became a slab of the bright accent
+     with near-black text, loud and nothing like the light theme. Worse,
+     --here and --here-chrome were the SAME value in dark, so the
+     paper-vs-chrome rule that governs every accent decision stopped existing
+     exactly where it was needed most.
+
+     So --accent-fill is the accent as a SURFACE: deep in every theme, with
+     near-white text, so a filled button looks like the same button in all
+     three. Marks keep --accent.
+
+     (The reasoning was worked out on the emerald palette this file used to
+     carry; the values are Indigo & Gold now and the rule is unchanged.) */
   --accent-fill: #7A5412;
   /* the highlighter, dark. A 42% yellow that reads on paper glares on a dark
      ground, and the Hebrew on top is near-white rather than near-black — so
@@ -101,9 +103,9 @@ body.dark-mode {
   /* only the values that do NOT follow --paper / --ink need restating */
   --rule: #342E26;
   --rule-light: #24201B;
-  /* these two were still the old mint as a raw literal, so selection and
-     hover washes stayed minty after the token changed. Derived now, so they
-     follow the accent instead of pinning a hue. */
+  /* these two were once a raw literal of the then-accent, so the selection
+     and hover washes kept the old hue after the token changed. Derived now,
+     so they follow the accent instead of pinning a colour. */
   --highlight: color-mix(in srgb, var(--here) 16%, transparent);
   --hover-wash: color-mix(in srgb, var(--here) 10%, transparent);
   --sw-navy: #0A0F17;
@@ -176,7 +178,7 @@ body.sepia-mode {
    once instead of one element at a time. */
 /* #word-popup is NOT here any more: it is dense reference text, so it
    sits on paper. Leaving it in this scope re-pointed --ink to near-white
-   and the headword rendered mint-on-white at 1.05:1. */
+   and the headword rendered accent-on-white at 1.05:1. */
 #sel-toolbar,
 #hl-pop,
 #share-popup,

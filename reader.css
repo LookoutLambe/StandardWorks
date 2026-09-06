@@ -91,7 +91,7 @@ body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
 body.dark-mode .tl { color: var(--gloss); }
 body.dark-mode .page { background: var(--chrome); }
 /* #0d111c and #303648 were navy — leftovers from the scheme before the
-   emerald one, so in dark mode the control bars and verse rules were still
+   one before it, so in dark mode the control bars and verse rules were still
    painting blue-black next to green chrome. Tokens, so they follow the theme. */
 body.dark-mode .controls-top, body.dark-mode .controls-bottom { background: var(--chrome); }
 body.dark-mode .verse { border-color: var(--rule); }
@@ -499,9 +499,9 @@ body:not(.dual-mode) .verse > .word-flow { width: 100%; }
   --on-surface-muted: var(--on-chrome-2);
   /* --gold-bright is the legacy alias for CHROME TEXT. It was pointed at
      --here-chrome here, so all 48 rules that read it painted the panel
-     chrome mint — every volume tab, not just the current one, which is
+     the chrome accent — every volume tab, not just the current one, which is
      the same job-doubling that made the old gold unreadable. Chrome text
-     is --on-chrome; mint is reserved for state and nothing else. */
+     is --on-chrome; the accent is reserved for state and nothing else. */
   --gold-bright: var(--on-chrome);
   --gold-pale: var(--on-chrome-2);
   --card-bg: transparent;
@@ -831,7 +831,7 @@ body {
   --accent-deep: var(--here);
   --accent-light: var(--here-chrome);
   /* The hover/press fill for anything sitting ON PAPER.
-     --accent-light is --here-chrome, which is ALWAYS bright mint regardless
+     --accent-light is --here-chrome, which is ALWAYS the bright chrome stop regardless
      of theme, because it is built to sit on the dark chrome. Paper-backed
      buttons had been reaching for it anyway (the app-store link's border and
      the hover fill of .gs-go, .card-continue and #continue-reading), which is
@@ -852,10 +852,10 @@ body {
   --studied-edge: rgba(214, 158, 18, 0.55);
   --verse-num: var(--here);
   /* text color for something FILLED with --accent (a solid button, a
-     count badge). --here brightens to mint in dark mode by design (dark
+     count badge). --here brightens in dark mode by design (dark
      UIs need a punchier accent against a dark ground) — but a hardcoded
      `color: #fff` paired with it doesn't adapt, so a button that was
-     white-on-deep-green in light mode becomes white-on-bright-mint in
+     white-on-deep in light mode becomes white-on-bright in
      dark mode: 1.92:1. Same fix already proven for .rsc-chip-here. */
   --on-accent: #fff;
   --hw: var(--ink);
@@ -866,7 +866,7 @@ body {
   --row-alt: var(--paper);
   --rule: #E2DCD2;
   --rule-light: #EDE8E0;
-  /* derived, never a literal: these were raw emerald rgba and stayed green
+  /* derived, never a literal: these were raw rgba of a past accent and stayed it
      through two palette changes because nothing pointed them at the accent */
   --highlight: color-mix(in srgb, var(--here) 14%, transparent);
   --hover-wash: color-mix(in srgb, var(--here) 9%, transparent);
@@ -914,11 +914,11 @@ body {
 body #word-popup {
   background: var(--card) !important;
   color: var(--ink) !important;
-  /* Emerald, not the hairline: --rule-light is #e5e7e4 on a #ffffff card, so
-     the card had no visible edge against paper. --here is the scheme's accent
-     and is already mode-aware (#046b4a on light, #34d399 in dark), which also
-     revives body.dark-mode's border-color below — that rule carries no
-     !important and was being beaten by this shorthand. */
+  /* The ACCENT, not the hairline: --rule-light is barely off the card's own
+     ground, so the card had no visible edge against paper. --here is the
+     scheme's accent and is already mode-aware, which also revives
+     body.dark-mode's border-color below — that rule carries no !important and
+     was being beaten by this shorthand. */
   border: 2px solid var(--here) !important;
   border-radius: var(--r-sheet) !important;
   box-shadow: var(--e3) !important;
@@ -2106,13 +2106,11 @@ body.dark-mode #glossary-panel {
   /* the accent as a MARK on paper: verse numerals, titles, ornaments.
      Deep enough to be ink-weight (5.16:1), warm enough to read as gold. */
   --here: #8E6215;
-  /* THE CHROME ACCENT. Was #34d399, a saturated mint, and the mint was the
-     single most-rejected colour in this design. Replaced with a warm stone
-     neutral: it is not a complement to the green, it withdraws, so the deep
-     green stays the only colour in the room. 10.03:1 on the bars, 11.90:1 on
-     the dark page. Mint also happened to be identical to --here in dark mode,
-     which quietly collapsed the paper-vs-chrome rule exactly where it was
-     needed; the two are distinct values again. */
+  /* THE CHROME ACCENT — the accent as it appears on the dark bars and drawer,
+     lighter than --here so it carries on chrome. It must stay a DIFFERENT
+     value from --here: when the two were identical the paper-vs-chrome rule
+     silently collapsed, and a colour meant for the bars started appearing on
+     paper. */
   --here-chrome: #DDB768;
   /* #dc2626 measured 4.05:1 on the sepia ground — under the floor for the
      qamats-qatan mark, which is 12px linguistic information. Deepened. */

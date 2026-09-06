@@ -294,9 +294,9 @@ html.sw-shell-pending #annotations-panel, html.sw-shell-pending #glossary-panel 
 
 /* ── Dark mode: left panel matches right #xref-panel / Study drawer ──
    These were neutral greys (#252525 #2a2a2a #333333 #383838 #444444) left
-   over from the grey dark mode that preceded the emerald scheme, so in dark
-   mode the drawer went grey while every other surface in the app went
-   emerald-dark. Mapped BY ROLE — surface, recessed control, hairline — not
+   over from a grey dark mode two schemes ago, so in dark mode the drawer went
+   grey while every other surface in the app followed the theme.
+   Mapped BY ROLE — surface, recessed control, hairline — not
    by matching one hex to one token, which is how a palette change turns
    into a hunt through five files a second time. */
 
