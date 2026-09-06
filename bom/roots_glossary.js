@@ -7319,10 +7319,8 @@ window._rootGlossaryData = {
     "meaning": "ACC his men",
     "category": "Uncategorized"
   },
-  "חפש": {
-    "meaning": "(חׇפְשִׁי) free, at liberty; (חִפֵּשׂ) to search",
-    "category": "Nature"
-  },
+  "חפש": { "meaning": "(חָפְשִׁי) free, at liberty — Ex 21:2, Deut 15:12; (חֻפְשָׁה) liberty, freedom — Lev 19:20", "category": "Lexical" },
+  "חפשׂ": { "meaning": "(חָפַשׂ) to search, search out, seek — Gen 31:35, Amos 9:3; (הִתְחַפֵּשׂ) to disguise oneself — 1 Sam 28:8", "category": "Lexical" },
   "את־אחיהם": {
     "meaning": "ACC their brothers",
     "category": "Family"

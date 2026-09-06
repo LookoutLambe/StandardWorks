@@ -823,6 +823,13 @@
                     'H2220': 'זרוע',   // arm, not זרע "seed"
                     'H1754': 'כדור',   // ball (the Liahona), not דור "generation"
                     'H2983': 'יבוסי',  // Jebusite, not בוס "trample"
+                    // SHIN AND SIN ARE DIFFERENT LETTERS. BDB's key drops the
+                    // dot, so חָפַשׂ "search" (and its hitpael "disguise
+                    // oneself") was filed with חָפַשׁ "be free" and the card for
+                    // וַנְּחַפְּשֵׂם (1 Ne 5:21) counted 132 uses of "free". The
+                    // search root keeps its sin. 41 more BDB families mix the
+                    // two letters the same way (user to rule, 2026-09-06).
+                    'H2664': 'חפשׂ', 'H2665': 'חפשׂ',
                     // ל"ה-derived nouns: the root's ה never surfaces in the
                     // noun, so the transparency gate rejects BDB's (correct)
                     // filing and the peeler invented a נין family that mixed
