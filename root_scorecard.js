@@ -431,20 +431,42 @@
   function _consOf(heb) {
     return String(heb || '').replace(/[\u0591-\u05C7]/g, '').replace(/[ךםןףץ]/g, function (c) { return { 'ך': 'כ', 'ם': 'מ', 'ן': 'נ', 'ף': 'פ', 'ץ': 'צ' }[c]; });
   }
-  function senseFor(meaning, lemma) {
-    if (!meaning || !lemma) return meaning || '';
-    var want = _consOf(lemma);
-    if (!want) return meaning;
-    // the references ride on the whole line after an em dash; keep them aside
+  // within one sense, the alternative the word's own gloss uses: "(רֹאשׁ) head,
+  // chief" becomes "(רֹאשׁ) chief" under a word glossed "the chief" and
+  // "(רֹאשׁ) head" under "his head" (user, 2026-09-06: "where it means chief
+  // does it say chief?"). The gloss is compared by stem, so "heads" finds
+  // "head"; when the gloss names none or several of the alternatives, the
+  // sense stays whole.
+  function narrowSense(sense, glossText) {
+    if (!sense || !glossText) return sense;
+    var m = /^(\s*\([^)]+\)\s*)([^—]*)$/.exec(sense);
+    if (!m) return sense;
+    var head = m[1], alts = m[2].split(/,\s*/).map(function (a) { return a.trim(); }).filter(Boolean);
+    if (alts.length < 2) return sense;
+    var g = ' ' + String(glossText).toLowerCase().replace(/[^a-z' ]/g, ' ') + ' ';
+    var stem = function (w) { return w.toLowerCase().replace(/(ies|es|s|ed|ing)$/, ''); };
+    var gw = g.split(/\s+/).filter(Boolean).map(stem);
+    var found = alts.filter(function (a) {
+      return a.split(/\s+/).some(function (w) { var sw = stem(w.replace(/[^a-z']/gi, '')); return sw.length >= 3 && gw.indexOf(sw) >= 0; });
+    });
+    return found.length === 1 ? head + found[0] : sense;
+  }
+  function senseFor(meaning, lemma, glossText) {
+    if (!meaning) return '';
     var dash = meaning.indexOf(' — ');
     var body = dash >= 0 ? meaning.slice(0, dash) : meaning, refs = dash >= 0 ? meaning.slice(dash) : '';
-    var parts = body.split(/;\s*/), hits = [];
-    for (var i = 0; i < parts.length; i++) {
-      var m = /^\s*\(([^)]+)\)/.exec(parts[i]);
-      if (m && _consOf(m[1]) === want) hits.push(parts[i].trim());
+    var parts = body.split(/;\s*/).map(function (x) { return x.trim(); }).filter(Boolean);
+    var want = lemma ? _consOf(lemma) : '';
+    var hits = [];
+    if (want) {
+      for (var i = 0; i < parts.length; i++) {
+        var m = /^\s*\(([^)]+)\)/.exec(parts[i]);
+        if (m && _consOf(m[1]) === want) hits.push(parts[i]);
+      }
     }
-    if (parts.length < 2 || hits.length !== 1) return meaning;
-    return hits[0] + refs;
+    if (parts.length >= 2 && hits.length === 1) return narrowSense(hits[0], glossText) + refs;
+    if (parts.length === 1) return narrowSense(parts[0], glossText) + refs;
+    return meaning;
   }
 
   // ---------- popup slot ----------
@@ -475,7 +497,7 @@
     // keeps the whole line.
     var wordNum = (pz && pz.strongs) || (window._strongsLookup && window._strongsLookup[surface]) || '';
     var wordLemma = wordNum && window._strongsRoots && window._strongsRoots[wordNum] ? window._strongsRoots[wordNum].w : '';
-    var meaningLine = senseFor(d.meaning, wordLemma);
+    var meaningLine = senseFor(d.meaning, wordLemma, glossText);
     if (meaningLine) h += '<br><span style="font-style:italic;opacity:0.85;font-size:0.9em;">' + esc(meaningLine) + '</span>';
     if (pz && pz.morph) {
       var pl = morphLabel(pz.morph);
