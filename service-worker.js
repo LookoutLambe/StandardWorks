@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-09-07T15-18-58';
+const BUILD_ID = '2026-09-07T15-29-59';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -66,10 +66,10 @@ const CORE_ASSETS = [
     '/StandardWorks/dc_crossrefs.js',
     '/StandardWorks/pgp_crossrefs.js',
     '/StandardWorks/jst_crossrefs.js',
-    '/StandardWorks/ot_heading_words.js',
-    '/StandardWorks/nt_heading_words.js',
-    '/StandardWorks/dc_heading_words.js',
-    '/StandardWorks/pgp_heading_words.js',
+    /* The four <vol>_heading_words.js monoliths were precached here and are
+       no longer fetched by anything: chapter summaries come from
+       <vol>_headings/<book>.js since the readers went lazy. 0.82 MB off every
+       first visit, downloading files no page asks for. */
     // BOM page — verse data handled by bom/sw.js
     '/StandardWorks/bom/bom.html',
     '/StandardWorks/bom/bom_book_loader.js?v=8',
