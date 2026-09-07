@@ -576,6 +576,60 @@
   // which is the point for a name (Lehi must not become "jaw").
     var SURFACE_PINS = {
 
+    // ORPHANED PLURALS AND INFINITIVES. Same shape as the ship below: a word
+    // whose singular reaches its family from the lexicon while its plural or
+    // its ל+infinitive falls through every stage and becomes a one-word family
+    // of its own. 33 of them, 52 tokens, each checked against the target
+    // family's OWN glosses before being pinned — because the obvious merge is
+    // wrong about a third of the time. The ones deliberately NOT pinned:
+    //   מהמניות  "of stock"        would land on H2001 HAMAN
+    //   בשערותיה "with her hair"   would land on שער "gate" (שֵׂעָר vs שַׁעַר —
+    //                              the shin/sin collision)
+    //   מוכחים   "rebuked"         would land on כח "power" (יכח, not כח)
+    //   שטותיות  "foolish"         would land on שוט "a scourge"
+    //   חזותיהם  "about their breasts" -> H2370 "to see" (חָזֶה breast, not חזה)
+    //   ומוצקים  "and steadfast"   -> צוק "distress" (יצק, not צוק)
+    //   והודאות  "acknowledgments" -> דאה "to swoop" (ידה, not דאה)
+    //   לרמות    "deceiving"       -> רמם "worm"  (its sibling ולרמות is
+    //                              correctly pinned to רמה "deceit")
+    //   במסעותיהם / מסעותיהם "journeyings" -> סעה "stormy" (belongs to נסע)
+    //   בהשתנות  "being changed"   -> שנה, whose family here is "year"
+    // Those stay in fallback, which keeps their own consonants and is honest.
+    "שָׁעוֹת": "שעה",
+    "חֲזִירִים": "חזר",
+    "בַּחֲזִירִים": "חזר",
+    "וַחֲזִירִים": "חזר",
+    "וְלַחֲזִירִים": "חזר",
+    "לְהִתְגָּאוֹת": "גאה",
+    "הַדָּתִיּוֹת": "H1881",
+    "טוֹעוֹת": "טעה",
+    "בַּמְּצוּקוֹת": "צוק",
+    "בִּמְצוּקוֹת": "צוק",
+    "לִלְווֹת": "לוה",
+    "לְהִלָּווֹת": "לוה",
+    "הַגֵּיאָיוֹת": "H1516",
+    "וְלַגֵּיאָיוֹת": "H1516",
+    "מְזֻזוֹת": "זוז",
+    "וְהַמִּשְׁתַּכְּרִים": "שכר",
+    "מֵהַשְּׁלִיחִים": "שלח",
+    "בִּיגִיעוֹת": "יגע",
+    "לְהֵעָנוֹת": "ענה",
+    "וּלְהִתְרַצּוֹת": "רצה",
+    "לְהִתְרַצּוֹת": "רצה",
+    "וּמְנוּיִים": "מנה",
+    "וּלְרַמּוֹת": "רמה",
+    "וּלְהִתְפַּתּוֹת": "פתה",
+    "וּלְנַקּוֹת": "נקה",
+    "הַמְּאִירִים": "אור",
+    "קְשׁוּרוֹת": "קשר",
+    "וְהַמַּשְׁחִירִים": "שחר",
+    "פּוֹשְׁעוֹת": "פשע",
+    "בִּשְׁעוֹתֵיהֶם": "שעה",
+    "לְהוֹצָאוֹתֶיהָ": "יצא",
+    "הַשֻּׂלְחָנִים": "שולחן",
+    "לְהַתְווֹת": "תוה",
+    "לְהִמָּחוֹת": "מחח",
+
     // THE SHIP. סְפִינָה is H5600, whose root is H5603 ספן "to deck over", and
     // the singular reaches that family on its own from every volume — Jonah's
     // הַסְּפִינָה, the NT's בַסְּפִינָה, the D&C's סְפִינָה. The BOM's PLURALS
