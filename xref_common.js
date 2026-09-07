@@ -11,9 +11,15 @@
  * applies at most one suffix rule, guards on length, and never strips the
  * second s of a doubled ending.
  *
- * parseScriptureRef is deliberately NOT here. Both copies are already
- * identical, so it causes no divergence, and it depends on the 66-entry
- * abbreviation map inside the engine's closure.
+ * parseScriptureRef WAS deliberately left out, on the grounds that both copies
+ * were already identical so it caused no divergence. That reasoning does not
+ * survive contact with time: "identical today" is not a property a codebase
+ * keeps by itself, and the abbreviation map it depends on had ALREADY drifted
+ * by the time anyone looked — the engine knew 87 books, bom.html 72. (The 15
+ * missing ones are the Book of Mormon's own, which bom.html routes through
+ * parseBomRef for in-page navigation instead; that split is deliberate and is
+ * preserved below.) Both now live here, and the split is expressed as data
+ * rather than as two tables that have to be kept in step by hand.
  */
 (function() {
   'use strict';
@@ -31,6 +37,89 @@
     return w;
   }
 
+  /* ── The abbreviation map ──────────────────────────────────────────────
+     Every book EXCEPT the Book of Mormon's own fifteen. Both the engine and
+     bom.html need exactly these; the engine layers the BOM's fifteen on top
+     (BOM_BOOK_ABBREV below) because a BOM reference from another volume is a
+     cross-volume link, while bom.html deliberately does NOT, because there a
+     BOM reference is an in-page jump handled by parseBomRef. That difference
+     is the ONLY thing the two are allowed to disagree about, and it is now
+     stated once, here, instead of being the accidental residue of two tables
+     that fell out of step. */
+  var BOOK_ABBREV = {
+    'Gen.': 'Genesis', 'Ex.': 'Exodus', 'Lev.': 'Leviticus', 'Num.': 'Numbers',
+    'Deut.': 'Deuteronomy', 'Josh.': 'Joshua', 'Judg.': 'Judges', 'Ruth': 'Ruth',
+    '1 Sam.': '1 Samuel', '2 Sam.': '2 Samuel', '1 Kgs.': '1 Kings', '2 Kgs.': '2 Kings',
+    '1 Chr.': '1 Chronicles', '2 Chr.': '2 Chronicles', 'Ezra': 'Ezra', 'Neh.': 'Nehemiah',
+    'Esth.': 'Esther', 'Job': 'Job', 'Ps.': 'Psalms', 'Prov.': 'Proverbs',
+    'Eccl.': 'Ecclesiastes', 'Song': 'Song of Solomon', 'Isa.': 'Isaiah', 'Jer.': 'Jeremiah',
+    'Lam.': 'Lamentations', 'Ezek.': 'Ezekiel', 'Dan.': 'Daniel', 'Hosea': 'Hosea',
+    'Joel': 'Joel', 'Amos': 'Amos', 'Obad.': 'Obadiah', 'Jonah': 'Jonah',
+    'Micah': 'Micah', 'Nahum': 'Nahum', 'Hab.': 'Habakkuk', 'Zeph.': 'Zephaniah',
+    'Hag.': 'Haggai', 'Zech.': 'Zechariah', 'Mal.': 'Malachi', 'Matt.': 'Matthew',
+    'Mark': 'Mark', 'Luke': 'Luke', 'John': 'John', 'Acts': 'Acts',
+    'Rom.': 'Romans', '1 Cor.': '1 Corinthians', '2 Cor.': '2 Corinthians', 'Gal.': 'Galatians',
+    'Eph.': 'Ephesians', 'Philip.': 'Philippians', 'Col.': 'Colossians', '1 Thes.': '1 Thessalonians',
+    '2 Thes.': '2 Thessalonians', '1 Tim.': '1 Timothy', '2 Tim.': '2 Timothy', 'Titus': 'Titus',
+    'Philem.': 'Philemon', 'Heb.': 'Hebrews', 'James': 'James', '1 Pet.': '1 Peter',
+    '2 Pet.': '2 Peter', '1 Jn.': '1 John', '2 Jn.': '2 John', '3 Jn.': '3 John',
+    'Jude': 'Jude', 'Rev.': 'Revelation', 'D&C': 'D&C', 'Moses': 'Moses',
+    'Abr.': 'Abraham', 'JS—H': 'JS-H', 'JS—M': 'JS-M', 'A of F': 'A-of-F'
+  };
+  var BOM_BOOK_ABBREV = {
+    '1 Ne.': '1 Nephi', '2 Ne.': '2 Nephi', 'Jacob': 'Jacob',
+    'Enos': 'Enos', 'Jarom': 'Jarom', 'Omni': 'Omni',
+    'W of M': 'Words of Mormon', 'Mosiah': 'Mosiah', 'Alma': 'Alma',
+    'Hel.': 'Helaman', '3 Ne.': '3 Nephi', '4 Ne.': '4 Nephi',
+    'Morm.': 'Mormon', 'Ether': 'Ether', 'Moro.': 'Moroni'
+  };
+
+  /* "Isa. 53:5" -> "Isaiah|53|5". The table is passed in rather than closed
+     over, so the one implementation serves both callers and their different
+     book sets. Non-breaking spaces are normalised first: crossrefs.json uses
+     U+00A0 inside "2 Kgs." and friends. */
+  function parseScriptureRefWith(table, refText) {
+    var norm = String(refText == null ? '' : refText).replace(/\u00a0/g, ' ');
+    for (var abbr in table) {
+      if (norm.indexOf(abbr) === 0) {
+        var rest = norm.substring(abbr.length).trim();
+        var m = rest.match(/^(\d+):(\d+)/);
+        if (m) return table[abbr] + '|' + m[1] + '|' + m[2];
+      }
+    }
+    return null;
+  }
+
+  /* "Isa. 53:5" or "Isa 53:5" or "Isaiah 53:5" -> "Isaiah|53|5".
+
+     Three ways of writing the same reference, and until now three different
+     amounts of support for them. The engine matched the abbreviation table
+     exactly and separately accepted a full book name; bom.html matched the
+     table exactly and then retried with a period appended, because the data is
+     not consistent about it — "Gen 15:6" sits beside "Gen. 15:6" and only the
+     second one resolved, so the first rendered as an inert span with no way to
+     follow it. Each copy had a trick the other lacked. This has both. */
+  function resolveRefKey(table, label) {
+    var direct = parseScriptureRefWith(table, label);
+    if (direct) return direct;
+    var m = String(label == null ? '' : label).replace(/\u00a0/g, ' ').trim()
+              .match(/^(.+?)\s+(\d+):(\d+)/);
+    if (!m) return null;
+    var book = m[1].trim();
+    // the table's own value (a full book name) is accepted as written
+    var full = table[book] || table[book + '.'] || null;
+    if (!full) {
+      for (var k in table) { if (table[k] === book) { full = book; break; } }
+    }
+    return full ? (full + '|' + m[2] + '|' + m[3]) : null;
+  }
+
   window.simpleStem = simpleStem;
-  window.SWXref = { simpleStem: simpleStem };
+  window.SWXref = {
+    simpleStem: simpleStem,
+    resolveRefKey: resolveRefKey,
+    BOOK_ABBREV: BOOK_ABBREV,
+    BOM_BOOK_ABBREV: BOM_BOOK_ABBREV,
+    parseScriptureRefWith: parseScriptureRefWith
+  };
 })();

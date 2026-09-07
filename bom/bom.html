@@ -3819,7 +3819,7 @@ body.dual-mode .chapter-summary { display: block; }
 <script src="bom_lazy_assets.js?v=1"></script>
 <script defer src="../bdb_roots.js?v=4"></script>
 <script defer src="../root_names.js?v=17"></script>
-<script src="../xref_common.js?v=2"></script>
+<script src="../xref_common.js?v=3"></script>
 <script src="../verse_loader.js?v=5"></script>
 <script src="../root_scorecard.js?v=89"></script>
 <script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
@@ -5689,7 +5689,7 @@ function addCrossRefMarkers(root) {
     }
 
     // Simple English stemmer: strip common suffixes
-    // simpleStem now comes from xref_common.js?v=2 — this copy reduced
+    // simpleStem now comes from xref_common.js?v=3 — this copy reduced
     // "bless" to "b" and "waters" to "wat".
 
     // Get official English text for position-based fallback matching
@@ -5947,41 +5947,15 @@ function getBomLink(refText) {
 }
 
 // Map LDS abbreviations to the full book names used in _scriptureVerses keys
-var _abbrToFullBook = {
-  'Gen.': 'Genesis', 'Ex.': 'Exodus', 'Lev.': 'Leviticus', 'Num.': 'Numbers',
-  'Deut.': 'Deuteronomy', 'Josh.': 'Joshua', 'Judg.': 'Judges', 'Ruth': 'Ruth',
-  '1 Sam.': '1 Samuel', '2 Sam.': '2 Samuel', '1 Kgs.': '1 Kings', '2 Kgs.': '2 Kings',
-  '1 Chr.': '1 Chronicles', '2 Chr.': '2 Chronicles', 'Ezra': 'Ezra', 'Neh.': 'Nehemiah',
-  'Esth.': 'Esther', 'Job': 'Job', 'Ps.': 'Psalms', 'Prov.': 'Proverbs',
-  'Eccl.': 'Ecclesiastes', 'Song': 'Song of Solomon', 'Isa.': 'Isaiah', 'Jer.': 'Jeremiah',
-  'Lam.': 'Lamentations', 'Ezek.': 'Ezekiel', 'Dan.': 'Daniel', 'Hosea': 'Hosea',
-  'Joel': 'Joel', 'Amos': 'Amos', 'Obad.': 'Obadiah', 'Jonah': 'Jonah',
-  'Micah': 'Micah', 'Nahum': 'Nahum', 'Hab.': 'Habakkuk', 'Zeph.': 'Zephaniah',
-  'Hag.': 'Haggai', 'Zech.': 'Zechariah', 'Mal.': 'Malachi',
-  'Matt.': 'Matthew', 'Mark': 'Mark', 'Luke': 'Luke', 'John': 'John',
-  'Acts': 'Acts', 'Rom.': 'Romans', '1 Cor.': '1 Corinthians', '2 Cor.': '2 Corinthians',
-  'Gal.': 'Galatians', 'Eph.': 'Ephesians', 'Philip.': 'Philippians', 'Col.': 'Colossians',
-  '1 Thes.': '1 Thessalonians', '2 Thes.': '2 Thessalonians',
-  '1 Tim.': '1 Timothy', '2 Tim.': '2 Timothy', 'Titus': 'Titus', 'Philem.': 'Philemon',
-  'Heb.': 'Hebrews', 'James': 'James', '1 Pet.': '1 Peter', '2 Pet.': '2 Peter',
-  '1 Jn.': '1 John', '2 Jn.': '2 John', '3 Jn.': '3 John', 'Jude': 'Jude', 'Rev.': 'Revelation',
-  'D&C': 'D&C', 'Moses': 'Moses', 'Abr.': 'Abraham', 'JS—H': 'JS-H', 'JS—M': 'JS-M', 'A of F': 'A-of-F'
-};
-
+/* Shared with crossrefs_engine.js through xref_common.js. The Book of Mormon's
+   own fifteen are deliberately NOT here: on this page a BOM reference is an
+   in-page jump handled by parseBomRef and _bomAbbrevsToBook, not a scripture
+   lookup. That is the one thing the two tables are allowed to differ about,
+   and it is now stated as data rather than left as drift. */
+var _abbrToFullBook = Object.assign({}, (window.SWXref || {}).BOOK_ABBREV);
+/* One implementation, in xref_common.js, over this page's book table. */
 function parseScriptureRef(refText) {
-  // Normalize non-breaking spaces (crossrefs.json uses \u00a0 in "2 Kgs." etc.)
-  var norm = refText.replace(/\u00a0/g, ' ');
-  // Parse any scripture reference to a lookup key for _scriptureVerses
-  for (var abbr in _abbrToFullBook) {
-    if (norm.indexOf(abbr) === 0) {
-      var rest = norm.substring(abbr.length).trim();
-      var m = rest.match(/^(\d+):(\d+)/);
-      if (m) {
-        return _abbrToFullBook[abbr] + '|' + m[1] + '|' + m[2];
-      }
-    }
-  }
-  return null;
+  return window.SWXref.parseScriptureRefWith(_abbrToFullBook, refText);
 }
 
 function getVerseContentHtml(verseKey) {
@@ -6789,13 +6763,12 @@ function closeXrefPanel() {
    rendered inert. Try the table, then the same name with a period, then the
    full book name; anything still unknown falls through and NavEngineRefHref
    declines it, which is what keeps "TG Faith" a plain span. */
+/* The label -> "Book|ch|v" resolver lives in xref_common.js and is shared with
+   crossrefs_engine.js. This page's table deliberately omits the Book of
+   Mormon's own books, so a BOM reference still returns null here and falls
+   through to parseBomRef, which is what routes it as an in-page jump. */
 function xrefRefKey(label) {
-  var k = parseScriptureRef(label);
-  if (k) return k;
-  var m = String(label || '').replace(/\u00a0/g, ' ').trim().match(/^(.+?)\s+(\d+):(\d+)/);
-  if (!m) return null;
-  var book = m[1].trim();
-  return (_abbrToFullBook[book] || _abbrToFullBook[book + '.'] || book) + '|' + m[2] + '|' + m[3];
+  return window.SWXref.resolveRefKey(_abbrToFullBook, label);
 }
 
 function xrefTitleRow(refText, parsed) {

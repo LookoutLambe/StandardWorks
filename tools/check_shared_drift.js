@@ -190,6 +190,31 @@ for (const name of ['_paintWordAnnotation', 'applyAnnotationToWord']) {
 }
 
 
+/* ── xref_common.js must load BEFORE anything that reads window.SWXref ──────
+   The shared book table and reference parser live there now, and the engine
+   builds its own table from them at parse time — so a page that loads the
+   engine first gets an EMPTY table and silently resolves no reference at all.
+   Ordering used to be free (both sides carried their own literal); it is a
+   real constraint now, so it is checked rather than remembered. */
+{
+  const PAGES = ['ot.html', 'nt.html', 'dc.html', 'pgp.html', 'jst.html', 'bom/bom.html'];
+  let bad = 0;
+  for (const page of PAGES) {
+    const src = read(page);
+    const tag = n => src.search(new RegExp('<script[^>]*\\ssrc="[^"]*' + n + '[^"]*"'));
+    const common = tag('xref_common\\.js');
+    const engine = tag('crossrefs_engine\\.js');
+    if (common < 0) { fail(page + ' does not load xref_common.js, which owns the shared book table'); bad++; continue; }
+    if (engine >= 0 && engine < common) {
+      fail(page + ' loads crossrefs_engine.js BEFORE xref_common.js. The engine reads\n' +
+           '        window.SWXref at parse time, so it would build an empty book table and\n' +
+           '        resolve no scripture reference on that page.');
+      bad++;
+    }
+  }
+  if (!bad) ok('xref_common.js loads before the engine on all ' + PAGES.length + ' pages');
+}
+
 /* ── bom.html's cross-reference panel is a FORK of crossrefs_engine.js ──────
    The five sibling volumes load crossrefs_engine.js; bom.html carries its own
    inline copy of the same UI, built on BOM-specific data. It is too entangled
