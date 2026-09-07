@@ -231,6 +231,14 @@ for (const name of ['_paintWordAnnotation', 'applyAnnotationToWord']) {
      /CrossrefsRootRefCount\b/],
     ['reader_ui.js', 'the word card survives opening the panel it launches',
      /closest\('#xref-panel'\)\)\s*return/],
+    ['reader_ui.js', 'the study-link row comes from the shared builder',
+     /SWXref\.studyLinksHtml\s*\(/],
+    ['crossrefs_engine.js', 'a verse renders through the shared interlinear renderer',
+     /SWXref\.renderInterlinear\s*\(/],
+    ['crossrefs_engine.js', 'the reference heading row comes from the shared builder',
+     /SWXref\.buildRefTitleRow\s*\(/],
+    ['crossrefs_engine.js', 'the label -> key resolver is the shared one',
+     /SWXref\.resolveRefKey\s*\(/],
   ];
   let drifted = 0;
   for (const [file, what, re] of INVARIANTS) {
