@@ -100,6 +100,17 @@
      second one resolved, so the first rendered as an inert span with no way to
      follow it. Each copy had a trick the other lacked. This has both. */
   function resolveRefKey(table, label) {
+    /* "JST Gen. 9:15" is a reference to the Joseph Smith Translation, a volume
+       this app ships — and not one of them was followable: 184 across the
+       corpus rendered as inert text, because the prefix made the rest fail to
+       parse. The prefix is stripped, the remainder resolved normally, and the
+       key marked so nav_engine can send it to the JST's own page rather than
+       to the book of the same name in the OT or NT. */
+    var jst = String(label == null ? '' : label).match(/^JST[,]?\s+(.+)$/);
+    if (jst) {
+      var inner = resolveRefKey(table, jst[1]);
+      return inner ? 'JST ' + inner : null;
+    }
     var direct = parseScriptureRefWith(table, label);
     if (direct) return direct;
     var m = String(label == null ? '' : label).replace(/\u00a0/g, ' ').trim()
@@ -114,8 +125,65 @@
     return full ? (full + '|' + m[2] + '|' + m[3]) : null;
   }
 
+  /* ── The reference heading ─────────────────────────────────────────────
+     The gold reference, and the "Go to verse" chip beside it, on every card in
+     every volume. Both panels built this themselves in near-identical code —
+     one with a <span role="link">, one with an <a>, and each with its own copy
+     of the keyboard handling and the class names.
+
+     What genuinely differs is only WHERE a reference goes: on bom.html a Book
+     of Mormon reference is an in-page jump through parseBomRef, everywhere
+     else it is a cross-volume trip through nav_engine. So the caller resolves
+     the destination and passes it in; the row itself is built once, here.
+
+     `dest` is null for a label with nowhere to go (a Topical Guide topic, say)
+     — the heading is then plain text, which is what keeps "TG Faith" from
+     pretending to be a link. Otherwise { href, go }: href for a real, copyable
+     anchor when there is one, go() for what actually happens on activation. */
+  function buildRefTitleRow(label, dest) {
+    var row = document.createElement('div');
+    row.className = 'xref-ref-title';
+    var text = String(label == null ? '' : label);
+
+    if (!dest || typeof dest.go !== 'function') {
+      var plain = document.createElement('span');
+      plain.textContent = text;
+      row.appendChild(plain);
+      return row;
+    }
+
+    var el;
+    if (dest.href) {
+      el = document.createElement('a');
+      el.href = dest.href;                       // copyable, and survives a
+      el.onclick = function (e) {                // handler that never runs
+        e.preventDefault();
+        dest.go();
+      };
+    } else {
+      el = document.createElement('span');
+      el.setAttribute('role', 'link');
+      el.setAttribute('tabindex', '0');
+      el.onclick = function () { dest.go(); };
+    }
+    el.className = 'xref-ref-link';
+    el.textContent = text;
+    el.onkeydown = function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); dest.go(); }
+    };
+    row.appendChild(el);
+
+    var chip = document.createElement('span');
+    chip.className = 'xref-ref-goto';
+    chip.textContent = 'Go to verse \u2192';
+    chip.onclick = function () { dest.go(); };
+    row.appendChild(chip);
+    return row;
+  }
+
   window.simpleStem = simpleStem;
   window.SWXref = {
+    buildRefTitleRow: buildRefTitleRow,
     simpleStem: simpleStem,
     resolveRefKey: resolveRefKey,
     BOOK_ABBREV: BOOK_ABBREV,

@@ -1667,7 +1667,8 @@ window.READER = {
 <script src="reader_core.js?v=20"></script>
 
 <!-- Strong's lookup + Root glossary data -->
-<script src="xref_common.js?v=3"></script>
+<script src="xref_common.js?v=4"></script>
+<script src="jst_refmap.js?v=1"></script>
 <script src="verse_loader.js?v=5"></script>
 <script src="root_scorecard.js?v=89"></script>
 <script>RootScorecard.init({ vol: 'jst', base: '' });</script>
@@ -1677,7 +1678,7 @@ window.READER = {
 <script src="jst_verses/manifest.js?v=2"></script>  <!-- lazy books: the verse files load on demand (reader_core.js VolumeLoader) -->
 
 <!-- Cross-reference data + engine (JST will get data later) -->
-<script src="crossrefs_engine.js?v=18"></script>
+<script src="crossrefs_engine.js?v=19"></script>
 
 <script src="reader_ui.js?v=32"></script>
 <script>
@@ -1887,7 +1888,7 @@ document.querySelectorAll('#nav-dropdown .dd-book').forEach(function(book) {
 </div>
 <script src="site_chrome.js?v=44" data-sw-volume="jst"></script>
 <script src="verse_search.js?v=3"></script>
-<script src="nav_engine.js?v=75"></script>
+<script src="nav_engine.js?v=76"></script>
 <script>
 NavEngine.init({
   volume: 'jst',

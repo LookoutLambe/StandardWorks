@@ -186,48 +186,32 @@ var _abbrToFullBook = Object.assign({}, (window.SWXref || {}).BOOK_ABBREV,
      heading itself now carries the jump, in one shape for both the references
      that live in this volume and the ones that do not, and it marks a return
      point first so there is a way back. */
+  /* The row is built by SWXref.buildRefTitleRow, shared with bom.html. All this
+     decides is WHERE the reference goes — which is the only thing the two
+     volumes genuinely differ about. */
   function buildRefTitleRow(fullRef, refKey, isInternal, sourceVerseKey) {
-    var titleDiv = document.createElement('div');
-    titleDiv.className = 'xref-ref-title';
-    var titleSpan = document.createElement('span');
-    titleSpan.textContent = fullRef;
-    titleDiv.appendChild(titleSpan);
-    if (!refKey) return titleDiv;
-
+    return window.SWXref.buildRefTitleRow(fullRef, refDest(refKey, isInternal, sourceVerseKey));
+  }
+  function refDest(refKey, isInternal, sourceVerseKey) {
+    if (!refKey) return null;
     var kp = refKey.split('|');
-    var go = null;
-    if (typeof window.NavEngineGoRef === 'function' &&
-        window.NavEngineRefHref && window.NavEngineRefHref(kp[0], kp[1], kp[2])) {
-      /* nav_engine owns the book table, the return point and the landing —
-         one trip, one implementation, for near and far references alike. */
-      go = function () { closeXrefPanel(); window.NavEngineGoRef(kp[0], kp[1], kp[2]); };
-    } else if (isInternal) {
-      go = function () { closeXrefPanel(); navigateToVerseKey(refKey); };
-    } else {
-      var url = buildCrossVolumeUrl(refKey, sourceVerseKey || '');
-      if (url) go = function () {
-        try {
-          if (typeof window.NavEngineMarkReturn === 'function') window.NavEngineMarkReturn(url);
-        } catch (e) {}
-        closeXrefPanel();
-        window.location.href = url;
-      };
+    var href = (typeof window.NavEngineRefHref === 'function')
+      ? window.NavEngineRefHref(kp[0], kp[1], kp[2]) : '';
+    /* nav_engine owns the book table, the return point and the landing — one
+       trip, one implementation, for near and far references alike. */
+    if (href && typeof window.NavEngineGoRef === 'function') {
+      return { href: href, go: function () { closeXrefPanel(); window.NavEngineGoRef(kp[0], kp[1], kp[2]); } };
     }
-    if (!go) return titleDiv;
-
-    titleSpan.className = 'xref-ref-link';
-    titleSpan.setAttribute('role', 'link');
-    titleSpan.setAttribute('tabindex', '0');
-    titleSpan.onclick = go;
-    titleSpan.onkeydown = function (e) {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
-    };
-    var chip = document.createElement('span');
-    chip.className = 'xref-ref-goto';
-    chip.textContent = 'Go to verse \u2192';
-    chip.onclick = go;
-    titleDiv.appendChild(chip);
-    return titleDiv;
+    if (isInternal) {
+      return { href: '', go: function () { closeXrefPanel(); navigateToVerseKey(refKey); } };
+    }
+    var url = buildCrossVolumeUrl(refKey, sourceVerseKey || '');
+    if (!url) return null;
+    return { href: url, go: function () {
+      try { if (typeof window.NavEngineMarkReturn === 'function') window.NavEngineMarkReturn(url); } catch (e) {}
+      closeXrefPanel();
+      window.location.href = url;
+    } };
   }
 
   /* One implementation, in xref_common.js, over this volume's book table. */

@@ -585,7 +585,11 @@
     var tgEl = document.getElementById('nl-topical');
     if (tgEl) {
       tgEl.onclick = function() {
-        window.location.href = (_config && _config.basePath || '') + VOLUMES.bom.page + '#topical-guide';
+        /* Leaving for the Topical Guide is a jump like any other, and it was
+           the one kind that left nothing to come back to. */
+        var u = (_config && _config.basePath || '') + VOLUMES.bom.page + '#topical-guide';
+        try { markReturnPoint(u); } catch (e) {}
+        window.location.href = u;
       };
       tgEl.onkeydown = function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); tgEl.click(); } };
     }
@@ -593,7 +597,9 @@
     var prEl = document.getElementById('nl-print');
     if (prEl) {
       prEl.onclick = function() {
-        window.location.href = (_config && _config.basePath || '') + VOLUMES.bom.page + '#print-editions';
+        var u = (_config && _config.basePath || '') + VOLUMES.bom.page + '#print-editions';
+        try { markReturnPoint(u); } catch (e) {}
+        window.location.href = u;
       };
       prEl.onkeydown = function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); prEl.click(); } };
     }
@@ -1655,6 +1661,27 @@
   window.NavEngineRefHref = function (bookEn, chapter, verse) {
     var chNum = parseInt(chapter, 10) || 1;
     var v = parseInt(verse, 10) || 0;
+    /* THE JST IS A VOLUME, AND ITS REFERENCES WERE ALL DEAD. Its chapter ids
+       are file positions rather than chapter numbers — jstgen-ch2 IS JST
+       Genesis 9 — so it cannot go through the book table below like the rest.
+       jst_refmap.js carries that mapping (generated from the verse files'
+       own headers by tools/build_jst_refmap.js). A reference whose chapter is
+       not in the JST resolves to nothing, which is correct: the JST revises
+       selected chapters, not whole books. */
+    var jstName = String(bookEn || '').match(/^JST\s+(.+)$/);
+    if (jstName) {
+      var jstId = (window._jstRefMap || {})[jstName[1].trim() + ' ' + chNum];
+      if (!jstId) return null;
+      /* NO VERSE ON A JST LINK. The JST keys its verses by file position —
+         a panel holding JST Genesis 9 emits data-verse-key "Genesis|2|1",
+         "Genesis|2|2" — so goToVerse, which matches the real verse number,
+         can never find verse 15 there. Emitting "&v=15" would be a promise
+         the link cannot keep; the reference lands on its chapter, which the
+         JST prints as a short excerpt anyway. */
+      var jstDeep = jstId;
+      if ((_config && _config.volume) === 'jst' && !(_config && _config.hub)) return '#' + jstDeep;
+      return ((_config && _config.basePath) || '') + VOLUMES.jst.page + '#' + jstDeep;
+    }
     var hit = _refBookLookup(bookEn);
     if (!hit && /^D&C$|^Doctrine/.test(String(bookEn || '').trim())) {
       hit = _refBookLookup('Section ' + chNum);
@@ -1860,12 +1887,37 @@
       if (typeof window.navTo !== 'function' || window.__swReturnHooked) return;
       window.__swReturnHooked = true;
       var _prev = window.navTo;
-      window.navTo = function () {
-        /* A GRACE WINDOW, not a one-shot flag. A lazy-loaded book re-enters
-           navTo a second time once its verse file arrives (VolumeLoader.ensure
-           calls navTo again), so a single-use flag was already spent and the
-           re-entry cleared the return point before the banner could show. */
-        if (!_returnArmed || Date.now() - _returnArmed > 2500) clearReturnPoint();
+      window.navTo = function (id, slideDir) {
+        /* IF YOU JUMP ANYWHERE, YOU GET A RETURN POINT.
+
+           This used to CLEAR the return point on any unarmed navigation, so
+           every way of moving that had not been taught to mark one destroyed
+           the way home instead — the drawer, a search result, a bookmark, the
+           dictionary, the Topical Guide. Each got fixed one at a time as it
+           was noticed, which is the wrong shape: the default was wrong, not
+           the call sites.
+
+           The default is inverted here. A jump marks where you were; only
+           READING ON clears it, and reading on is exactly the two paths that
+           pass a direction — navTo(next, 'next') and navTo(prev, 'prev') from
+           the chapter arrows. Everything else is a jump by definition, so no
+           new way of moving has to remember to opt in.
+
+           A GRACE WINDOW, not a one-shot flag: a lazy-loaded book re-enters
+           navTo once its verse file arrives (VolumeLoader.ensure calls navTo
+           again, forwarding the same slideDir), so a single-use flag was
+           already spent and the re-entry undid the mark before the banner
+           could show. */
+        if (!_returnArmed || Date.now() - _returnArmed > 2500) {
+          if (slideDir === 'next' || slideDir === 'prev') {
+            clearReturnPoint();                  // the reader is reading on
+          } else {
+            try {
+              var here = _config && _config.currentChapter;
+              if (here && here !== id) markReturnPoint('#' + buildHash(_config.volume, id));
+            } catch (eJ) {}
+          }
+        }
         return _prev.apply(this, arguments);
       };
     };

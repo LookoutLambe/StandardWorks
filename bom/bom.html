@@ -3819,7 +3819,8 @@ body.dual-mode .chapter-summary { display: block; }
 <script src="bom_lazy_assets.js?v=1"></script>
 <script defer src="../bdb_roots.js?v=4"></script>
 <script defer src="../root_names.js?v=17"></script>
-<script src="../xref_common.js?v=3"></script>
+<script src="../xref_common.js?v=4"></script>
+<script src="../jst_refmap.js?v=1"></script>
 <script src="../verse_loader.js?v=5"></script>
 <script src="../root_scorecard.js?v=89"></script>
 <script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
@@ -5689,7 +5690,7 @@ function addCrossRefMarkers(root) {
     }
 
     // Simple English stemmer: strip common suffixes
-    // simpleStem now comes from xref_common.js?v=3 — this copy reduced
+    // simpleStem now comes from xref_common.js?v=4 — this copy reduced
     // "bless" to "b" and "waters" to "wat".
 
     // Get official English text for position-based fallback matching
@@ -6771,45 +6772,23 @@ function xrefRefKey(label) {
   return window.SWXref.resolveRefKey(_abbrToFullBook, label);
 }
 
+/* The row is built by SWXref.buildRefTitleRow, shared with crossrefs_engine.js.
+   All this decides is WHERE the reference goes, which on this page has one
+   extra case: a Book of Mormon reference is an in-page jump through
+   parseBomRef, not a cross-volume trip. */
 function xrefTitleRow(refText, parsed) {
-  var titleDiv = document.createElement('div');
-  titleDiv.className = 'xref-ref-title';
-  var go = null, href = '', label = String(refText || '');
-
+  return window.SWXref.buildRefTitleRow(refText, xrefDest(refText, parsed));
+}
+function xrefDest(refText, parsed) {
   if (parsed && parsed.hash) {
-    href = parsed.hash;
-    go = function () { closeXrefPanel(); navigateToXrefVerse(parsed); };
-  } else {
-    var k = xrefRefKey(label);                        // "Isa. 53:5" -> "Isaiah|53|5"
-    var kp = k ? k.split('|') : null;
-    var u = kp && typeof window.NavEngineRefHref === 'function'
-      ? window.NavEngineRefHref(kp[0], kp[1], kp[2]) : '';
-    if (u) {
-      href = u;                                       // a REAL href: copyable, and
-                                                      // it still works if the
-                                                      // handler never runs
-      go = function () { closeXrefPanel(); window.NavEngineGoRef(kp[0], kp[1], kp[2]); };
-    }
+    return { href: parsed.hash, go: function () { closeXrefPanel(); navigateToXrefVerse(parsed); } };
   }
-
-  if (!go) {
-    var span = document.createElement('span');
-    span.textContent = label;
-    titleDiv.appendChild(span);
-    return titleDiv;
-  }
-
-  var link = document.createElement('a');
-  link.textContent = label;
-  link.href = href || '#';
-  link.onclick = function (e) { e.preventDefault(); go(); };
-  titleDiv.appendChild(link);
-  var chip = document.createElement('span');
-  chip.className = 'xref-ref-goto';
-  chip.textContent = 'Go to verse \u2192';
-  chip.onclick = go;
-  titleDiv.appendChild(chip);
-  return titleDiv;
+  var k = xrefRefKey(refText);
+  var kp = k ? k.split('|') : null;
+  var url = kp && typeof window.NavEngineRefHref === 'function'
+    ? window.NavEngineRefHref(kp[0], kp[1], kp[2]) : '';
+  if (!url) return null;
+  return { href: url, go: function () { closeXrefPanel(); window.NavEngineGoRef(kp[0], kp[1], kp[2]); } };
 }
 
 function navigateToXrefVerse(parsed) {
@@ -8918,6 +8897,14 @@ function openTopicalGuide(entryId) {
     var allTab = document.querySelector('.tg-tab[data-tab="all"]');
     if (allTab) allTab.classList.add('active');
   }
+  /* THE WAY BACK. This was a bare navTo(), and that wrapper CLEARS any return
+     point rather than setting one — so opening the Topical Guide from a verse
+     threw away the place the reader had come from, exactly as the dictionary
+     jump did. Mark before moving; the banner then offers the chapter and verse
+     back. */
+  try {
+    if (typeof window.NavEngineMarkReturn === 'function') window.NavEngineMarkReturn('#topical-guide');
+  } catch (eTG) {}
   navTo('topical-guide');
   renderTgAlphaBar();
   if (entryId) {
@@ -11881,7 +11868,7 @@ try {
 
 <script src="../site_chrome.js?v=44" data-sw-volume="bom"></script>
 <script src="../verse_search.js?v=3"></script>
-<script src="../nav_engine.js?v=75"></script>
+<script src="../nav_engine.js?v=76"></script>
 <script src="../xref_study_panel.js?v=6"></script>
 <script>
 NavEngine.init({
