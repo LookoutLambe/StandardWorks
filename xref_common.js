@@ -236,8 +236,64 @@
     return h;
   }
 
+  /* ── Highlighting a root's forms in the chapter ────────────────────────
+     "Highlight all in text", from the glossary card. It marked every matching
+     word and then did nothing else — so the reader was left looking at the
+     glossary panel while the highlights sat somewhere off-screen behind it,
+     and the button appeared to do nothing at all unless a match happened to
+     be in view. Marking is not showing.
+
+     Now it closes whatever is covering the page and brings the first match
+     into the middle of it. Written once: reader_ui.js and bom.html each had
+     their own copy, identical but for a null-guard, and their own copy of the
+     other two functions besides. */
+  function clearHighlightedWords() {
+    var els = document.querySelectorAll('.glossary-highlighted');
+    for (var i = 0; i < els.length; i++) els[i].classList.remove('glossary-highlighted');
+  }
+
+  function currentChapterPanel() {
+    return document.querySelector('.chapter-panel[style*="block"]');
+  }
+
+  /* Mark every word the test accepts, then SHOW the first one. Returns the
+     count so a caller can say "12 in this chapter" rather than guess. */
+  function highlightWords(test) {
+    clearHighlightedWords();
+    var panel = currentChapterPanel();
+    if (!panel) return 0;
+    var words = panel.querySelectorAll('.word-unit');
+    var first = null, n = 0;
+    for (var i = 0; i < words.length; i++) {
+      var wu = words[i], hw = wu.querySelector('.hw');
+      if (!hw || !test(wu, hw)) continue;
+      wu.classList.add('glossary-highlighted');
+      if (!first) first = wu;
+      n++;
+    }
+    if (first) {
+      /* The glossary is what the reader clicked from, and it covers the text
+         it just marked. Close it, and anything else over the page, before
+         scrolling — otherwise the highlight is revealed behind a panel. */
+      ['closeGlossary', 'closePopup', 'closeXrefPanel'].forEach(function (fn) {
+        if (typeof window[fn] === 'function') { try { window[fn](); } catch (e) {} }
+      });
+      var go = function () {
+        try { first.scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'center' }); }
+        catch (e) { first.scrollIntoView(); }
+      };
+      /* after the panel's own close transition, or the scroll lands against a
+         layout that is still moving */
+      setTimeout(go, 60);
+      setTimeout(go, 340);
+    }
+    return n;
+  }
+
   window.simpleStem = simpleStem;
   window.SWXref = {
+    clearHighlightedWords: clearHighlightedWords,
+    highlightWords: highlightWords,
     renderInterlinear: renderInterlinear,
     studyLinksHtml: studyLinksHtml,
     buildRefTitleRow: buildRefTitleRow,

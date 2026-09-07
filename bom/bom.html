@@ -3819,7 +3819,7 @@ body.dual-mode .chapter-summary { display: block; }
 <script src="bom_lazy_assets.js?v=1"></script>
 <script defer src="../bdb_roots.js?v=4"></script>
 <script defer src="../root_names.js?v=17"></script>
-<script src="../xref_common.js?v=5"></script>
+<script src="../xref_common.js?v=6"></script>
 <script src="../translit.js?v=1"></script>
 <script src="../jst_refmap.js?v=1"></script>
 <script src="../verse_loader.js?v=5"></script>
@@ -5691,7 +5691,7 @@ function addCrossRefMarkers(root) {
     }
 
     // Simple English stemmer: strip common suffixes
-    // simpleStem now comes from xref_common.js?v=5 — this copy reduced
+    // simpleStem now comes from xref_common.js?v=6 — this copy reduced
     // "bless" to "b" and "waters" to "wat".
 
     // Get official English text for position-based fallback matching
@@ -8189,7 +8189,10 @@ function openGlossary() {
 function closeGlossary() {
   document.getElementById('glossary-panel').classList.remove('open');
   document.getElementById('panel-overlay').classList.remove('open');
-  clearHighlightedWords();
+  /* The marks STAY. Closing used to clear them, which made "Highlight all in
+     text" self-defeating: the panel is what covers the text it just marked, so
+     getting out of the way was the point — and doing so wiped the highlight.
+     They are cleared by the next highlight, and by leaving the chapter. */
 }
 
 function setGlossaryTab(btn) {
@@ -8382,39 +8385,27 @@ function goToGlossaryVerse(verseKey) {
   }
 }
 
+/* All three live in xref_common.js now — reader_ui.js and bom.html had their
+   own copies, identical but for a null-guard. The globals stay because the
+   glossary card calls them from inline onclick handlers. */
 function highlightAllForms(rootKey) {
-  clearHighlightedWords();
-  var panel = document.querySelector('.chapter-panel[style*="block"]');
-  if (!panel) return;
-  // Canonical root via the shared engine (matches the scorecard/glossary keys);
-  // fall back to the page's own getRoot while the concordance loads.
   var canon = (window.RootScorecard && RootScorecard.ready())
-    ? function(w) { var f = RootScorecard.lookup(w); return f ? f.key : null; }
+    ? function (w) { var f = RootScorecard.lookup(w); return f ? f.key : null; }
     : null;
-  panel.querySelectorAll('.word-unit').forEach(function(wu) {
-    var hw = wu.querySelector('.hw');
-    if (!hw) return;
+  return window.SWXref.highlightWords(function (wu, hw) {
     var h = (wu.getAttribute && wu.getAttribute('data-h')) || hw.textContent;
     var wRoot = canon ? canon(h) : (window.getRoot ? window.getRoot(h) : h);
-    if (wRoot === rootKey) wu.classList.add('glossary-highlighted');
+    return wRoot === rootKey;
   });
 }
 
 function highlightForm(surfaceForm) {
-  clearHighlightedWords();
-  var panel = document.querySelector('.chapter-panel[style*="block"]');
-  if (!panel) return;
-  panel.querySelectorAll('.word-unit').forEach(function(wu) {
-    var hw = wu.querySelector('.hw');
-    if (hw && hw.textContent === surfaceForm) wu.classList.add('glossary-highlighted');
+  return window.SWXref.highlightWords(function (wu, hw) {
+    return hw.textContent === surfaceForm;
   });
 }
 
-function clearHighlightedWords() {
-  document.querySelectorAll('.glossary-highlighted').forEach(function(el) {
-    el.classList.remove('glossary-highlighted');
-  });
-}
+function clearHighlightedWords() { window.SWXref.clearHighlightedWords(); }
 
 function openGlossaryAtRoot(rootKey) {
   if (window.RootScorecard && !RootScorecard.ready()) {
@@ -11592,7 +11583,7 @@ try {
 
 <script src="../site_chrome.js?v=44" data-sw-volume="bom"></script>
 <script src="../verse_search.js?v=3"></script>
-<script src="../nav_engine.js?v=76"></script>
+<script src="../nav_engine.js?v=77"></script>
 <script src="../xref_study_panel.js?v=6"></script>
 <script>
 NavEngine.init({

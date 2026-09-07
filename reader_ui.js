@@ -1274,7 +1274,10 @@ function openGlossary() {
 function closeGlossary() {
   document.getElementById('glossary-panel').classList.remove('open');
   document.getElementById('panel-overlay').classList.remove('open');
-  clearHighlightedWords();
+  /* The marks STAY. Closing used to clear them, which made "Highlight all in
+     text" self-defeating: the panel is what covers the text it just marked, so
+     getting out of the way was the point — and doing so wiped the highlight.
+     They are cleared by the next highlight, and by leaving the chapter. */
 }
 
 function setGlossaryTab(btn) {
@@ -1416,35 +1419,27 @@ function findBookByName(name) {
   return null;
 }
 
+/* All three live in xref_common.js now — reader_ui.js and bom.html had their
+   own copies, identical but for a null-guard. The globals stay because the
+   glossary card calls them from inline onclick handlers. */
 function highlightAllForms(rootKey) {
-  clearHighlightedWords();
-  var panel = document.querySelector('.chapter-panel[style*="block"]');
-  if (!panel) return;
-  // Canonical root via the shared engine (matches the scorecard/glossary keys);
-  // fall back to the page's own getRoot while the concordance loads.
   var canon = (window.RootScorecard && RootScorecard.ready())
-    ? function(w) { var f = RootScorecard.lookup(w); return f ? f.key : null; }
+    ? function (w) { var f = RootScorecard.lookup(w); return f ? f.key : null; }
     : null;
-  panel.querySelectorAll('.word-unit').forEach(function(wu) {
-    var hw = wu.querySelector('.hw');
-    if (!hw) return;
+  return window.SWXref.highlightWords(function (wu, hw) {
     var h = (wu.getAttribute && wu.getAttribute('data-h')) || hw.textContent;
-    var wRoot = canon ? canon(h) : getRoot(h);
-    if (wRoot === rootKey) wu.classList.add('glossary-highlighted');
+    var wRoot = canon ? canon(h) : (window.getRoot ? window.getRoot(h) : h);
+    return wRoot === rootKey;
   });
 }
 
 function highlightForm(surfaceForm) {
-  clearHighlightedWords();
-  var panel = document.querySelector('.chapter-panel[style*="block"]');
-  if (!panel) return;
-  panel.querySelectorAll('.word-unit').forEach(function(wu) {
-    var hw = wu.querySelector('.hw');
-    if (hw && hw.textContent === surfaceForm) wu.classList.add('glossary-highlighted');
+  return window.SWXref.highlightWords(function (wu, hw) {
+    return hw.textContent === surfaceForm;
   });
 }
 
-function clearHighlightedWords() { document.querySelectorAll('.glossary-highlighted').forEach(function(el) { el.classList.remove('glossary-highlighted'); }); }
+function clearHighlightedWords() { window.SWXref.clearHighlightedWords(); }
 
 function openGlossaryAtRoot(rootKey) {
   if (window.RootScorecard && !RootScorecard.ready()) {

@@ -1932,6 +1932,13 @@
            again, forwarding the same slideDir), so a single-use flag was
            already spent and the re-entry undid the mark before the banner
            could show. */
+        /* Highlights belong to the chapter they were made in. They survive the
+           glossary closing — that is the whole point of "Highlight all in
+           text" — so something has to end them, and leaving the chapter is it. */
+        if (id !== (_config && _config.currentChapter) &&
+            window.SWXref && window.SWXref.clearHighlightedWords) {
+          try { window.SWXref.clearHighlightedWords(); } catch (eH) {}
+        }
         if (!_returnArmed || Date.now() - _returnArmed > 2500) {
           if (slideDir === 'next' || slideDir === 'prev') {
             clearReturnPoint();                  // the reader is reading on
