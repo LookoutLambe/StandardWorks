@@ -476,22 +476,13 @@ function parseScriptureRef(refText) {
     _drainVerseLoadQueue();
   }
 
+  /* Shared with bom.html — see xref_common.js. `sep` keeps this volume's
+     between-word marker, which reader.css hides inside the panel but which is
+     the markup other volumes have always emitted. */
   function renderInterlinearHtml(verseData) {
-    if (!verseData || !verseData.words) return '';
-    var html = '<div class="xref-ref-content">';
-    var first = true;
-    verseData.words.forEach(function(w) {
-      var hw = w[0], gl = w[1];
-      if (!hw || hw === '\u05C3' || hw === '׃') return; // skip sof pasuq
-      if (!first) html += '<span class="xref-ref-arr">\u2039</span>';
-      first = false;
-      html += '<span class="xref-ref-word">';
-      html += '<span class="hw">' + hw + '</span>';
-      if (gl) html += '<span class="en">' + gl + '</span>';
-      html += '</span>';
-    });
-    html += '</div>';
-    return html;
+    return (verseData && verseData.words)
+      ? window.SWXref.renderInterlinear(verseData.words, { sep: true })
+      : '';
   }
 
   function loadExternalInterlinear(refKey, container) {

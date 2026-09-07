@@ -3819,7 +3819,7 @@ body.dual-mode .chapter-summary { display: block; }
 <script src="bom_lazy_assets.js?v=1"></script>
 <script defer src="../bdb_roots.js?v=4"></script>
 <script defer src="../root_names.js?v=17"></script>
-<script src="../xref_common.js?v=4"></script>
+<script src="../xref_common.js?v=5"></script>
 <script src="../translit.js?v=1"></script>
 <script src="../jst_refmap.js?v=1"></script>
 <script src="../verse_loader.js?v=5"></script>
@@ -5691,7 +5691,7 @@ function addCrossRefMarkers(root) {
     }
 
     // Simple English stemmer: strip common suffixes
-    // simpleStem now comes from xref_common.js?v=4 — this copy reduced
+    // simpleStem now comes from xref_common.js?v=5 — this copy reduced
     // "bless" to "b" and "waters" to "wat".
 
     // Get official English text for position-based fallback matching
@@ -6238,20 +6238,11 @@ function getExternalVerseHtml(refText) {
 
   // Check if we have interlinear data already loaded
   if (window._extVerseRegistry[key]) {
-    var words = window._extVerseRegistry[key];
-    var html = '<div class="xref-ref-content">';
-    for (var i = 0; i < words.length; i++) {
-      var w = words[i];
-      if (!w[0] || w[0] === '\u05C3' || w[0] === '׃') continue;
-      var hw = w[0].replace(/\u05C3/g, '');
-      var gl = (w[1] || '').replace(/-/g, ' ');
-      html += '<span class="xref-ref-word">';
-      html += '<span class="hw">' + hw + '</span>';
-      html += '<span class="en">' + gl + '</span>';
-      html += '</span>';
-    }
-    html += '</div>';
-    return html;
+    /* Shared with crossrefs_engine.js — see xref_common.js. `dehyphen` keeps
+       this page's reading of a hyphenated gloss ("in-the-beginning" shown as
+       "in the beginning"); the other volumes leave the hyphens, which is a
+       disagreement worth a ruling rather than a silent merge. */
+    return window.SWXref.renderInterlinear(window._extVerseRegistry[key], { dehyphen: true });
   }
 
   // Not loaded yet — trigger load and return English fallback for now
@@ -7836,18 +7827,13 @@ detailHtml += '</div>';
       : (typeof window.CrossrefsRootRefCount === 'function'
           ? window.CrossrefsRootRefCount(root) : rootXrefs.length);
 
-    if (directXref) {
-      // Word has a direct LDS cross-reference — show link to open its xref panel
-      var xrefObj = JSON.parse(directXref);
-      var refCount = xrefObj.refs ? xrefObj.refs.length : 0;
-      detailHtml += '<br><span class="popup-xref-direct">View Cross-References (' + refCount + ') →</span>';
-    }
-    // Hide root xrefs for proper names (e.g. "Enos" shares root אנוש with "man" — irrelevant)
+    /* Hide root xrefs for proper names (e.g. "Enos" shares root אנוש with
+       "man" — irrelevant). This page's rule; the row itself is shared. */
     var isProperName = /^[A-Z][a-z]+$/.test(gText.trim());
-    if (xrefCount > 0 && !isProperName) {
-      // Root has aggregated cross-references across the BOM
-      detailHtml += '<br><span class="popup-xref-link">View Root Cross-References (' + xrefCount + ') →</span>';
-    }
+    detailHtml += window.SWXref.studyLinksHtml({
+      directCount: directXref ? ((JSON.parse(directXref).refs || []).length) : 0,
+      rootCount:   isProperName ? 0 : xrefCount
+    });
     // Topical Guide link
     var tgIdx = getTgIndex();
     var tgWordKey = _tgNormFinals(_tgStripNikkud(hText));

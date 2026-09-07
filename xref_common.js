@@ -181,8 +181,65 @@
     return row;
   }
 
+  /* ── A verse rendered as interlinear, inside a reference card ──────────
+     Both panels turned a verse's word array into the same markup, in their own
+     code: crossrefs_engine.renderInterlinearHtml and, inline, bom.html's
+     getExternalVerseHtml. Two differences, both preserved here as options
+     rather than silently picked, because either choice changes what a reader
+     sees on one of the volumes:
+
+       · `sep` — the engine emits <span class="xref-ref-arr">‹</span> between
+         words and bom.html does not. Invisible either way today: reader.css
+         hides .xref-ref-arr inside #xref-panel. Kept because the markup is
+         the engine's and something else may rely on it.
+       · `dehyphen` — bom.html renders "in-the-beginning" as "in the
+         beginning"; the engine leaves the hyphens in. The corpus uses both
+         separators, per chapter rather than per book, so neither is wrong —
+         but the two volumes disagree, and that is worth the translator's
+         ruling rather than a quiet decision here. */
+  function renderInterlinear(words, opts) {
+    if (!words || !words.length) return '';
+    opts = opts || {};
+    var html = '<div class="xref-ref-content">', first = true;
+    for (var i = 0; i < words.length; i++) {
+      var w = words[i] || [];
+      var hw = String(w[0] == null ? '' : w[0]).replace(/\u05C3/g, '');
+      if (!hw) continue;                                  // sof pasuq carries no word
+      var gl = String(w[1] == null ? '' : w[1]);
+      if (opts.dehyphen) gl = gl.replace(/-/g, ' ');
+      if (!first && opts.sep) html += '<span class="xref-ref-arr">\u2039</span>';
+      first = false;
+      html += '<span class="xref-ref-word"><span class="hw">' + hw + '</span>';
+      if (gl) html += '<span class="en">' + gl + '</span>';
+      html += '</span>';
+    }
+    return html + '</div>';
+  }
+
+  /* ── The study links under the word card ───────────────────────────────
+     "View Cross-References (2)" and the root link beneath it. Both pages built
+     this row themselves, and every bug in it this week had to be fixed twice —
+     the count that named markers instead of references, the handler that closed
+     the card, the Strong's link that left the app. They also disagreed on what
+     to call the same thing: five volumes said "Cross-References for root", the
+     Book of Mormon "View Root Cross-References". One row, one wording, the
+     parallel construction the direct link already uses. */
+  function studyLinksHtml(o) {
+    o = o || {};
+    var h = '';
+    if (o.directCount > 0) {
+      h += '<br><span class="popup-xref-direct">View Cross-References (' + o.directCount + ') \u2192</span>';
+    }
+    if (o.rootCount > 0) {
+      h += '<br><span class="popup-xref-link">View Root Cross-References (' + o.rootCount + ') \u2192</span>';
+    }
+    return h;
+  }
+
   window.simpleStem = simpleStem;
   window.SWXref = {
+    renderInterlinear: renderInterlinear,
+    studyLinksHtml: studyLinksHtml,
     buildRefTitleRow: buildRefTitleRow,
     simpleStem: simpleStem,
     resolveRefKey: resolveRefKey,

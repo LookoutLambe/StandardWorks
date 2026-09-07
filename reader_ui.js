@@ -735,27 +735,21 @@ detailHtml += '<div class="rsc-slot">';   // RootScorecard upgrades this block w
       detailHtml += '<br><span>Also glossed:</span> ' + sorted.slice(0, 4).map(function(pair) { return '"' + pair[0] + '" (' + pair[1] + 'x)'; }).join(', ');
     }
 detailHtml += '</div>';
-    // Cross-reference link
+    // The study-link row is shared with bom.html — see xref_common.js.
     var directXref = wu.getAttribute('data-xref-ref');
     var directXrefKey = wu.getAttribute('data-xref-key');
-    if (directXref) {
-      var xrefObj = JSON.parse(directXref);
-      var refCount = xrefObj.refs ? xrefObj.refs.length : 0;
-      detailHtml += '<br><span class="popup-xref-direct">View Cross-References (' + refCount + ') \u2192</span>';
-    }
-    if (true) {
-      var rootXrefs = window._rootXrefs && window._rootXrefs[root];
-      if (rootXrefs && rootXrefs.length > 0) {
-        /* COUNT WHAT THE PANEL WILL SHOW. This said rootXrefs.length — the
-           number of study-footnote MARKERS on the root — while the panel lists
-           the unique references those markers point at, so אֱלֹהִים promised 8
-           and opened 13. The engine owns that dedup and is asked for the
-           figure; markers are the fallback when it has not loaded. */
-        var _xrefN = (typeof window.CrossrefsRootRefCount === 'function')
-          ? window.CrossrefsRootRefCount(root) : rootXrefs.length;
-        detailHtml += '<br><span class="popup-xref-link">Cross-References for root (' + _xrefN + ') \u2192</span>';
-      }
-    }
+    var rootXrefs = window._rootXrefs && window._rootXrefs[root];
+    /* COUNT WHAT THE PANEL WILL SHOW. This said rootXrefs.length — the number
+       of study-footnote MARKERS on the root — while the panel lists the unique
+       references those markers point at, so אלהים promised 8 and opened 13.
+       The engine owns that dedup and is asked for the figure; markers are the
+       fallback when it has not loaded. */
+    detailHtml += window.SWXref.studyLinksHtml({
+      directCount: directXref ? ((JSON.parse(directXref).refs || []).length) : 0,
+      rootCount:   !rootXrefs ? 0
+        : (typeof window.CrossrefsRootRefCount === 'function'
+            ? window.CrossrefsRootRefCount(root) : rootXrefs.length)
+    });
     popupDetail.innerHTML = detailHtml;
 
     // Bind xref links
