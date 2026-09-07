@@ -25,7 +25,20 @@ function hebrewOf(body) {
   while ((m = TOK.exec(body))) out.push(m[1].normalize('NFC'));
   return out;
 }
-const digest = toks => crypto.createHash('sha256').update(toks.join('')).digest('hex').slice(0, 24);
+/* WHAT IS LOCKED IS THE HEBREW, NOT THE CELL BOUNDARIES.
+   This joined the tokens with U+001F, so the fingerprint encoded where one
+   cell ended and the next began as well as the text itself. Splitting a cell
+   that holds two Hebrew words — "אֶת־שֵׁם הַנַּחַל" into "אֶת־שֵׁם" and
+   "הַנַּחַל" — changes no letter, no point and no word order, only which gloss
+   attaches to which word, and that is gloss-layer work. The lock refused it
+   anyway, and refusing a change that cannot touch the text is the lock being
+   wrong, not the change.
+   Whitespace and the separator are both normalised out now: the fingerprint is
+   the verse's Hebrew character sequence, exactly and only. Any letter, point or
+   reordering still moves it. Verified first that the only whitespace inside a
+   BOM token is a plain word separator — none leading, trailing or exotic. */
+const digest = toks => crypto.createHash('sha256')
+  .update(toks.join('\u001f').replace(/[\s\u001f]+/g, '')).digest('hex').slice(0, 24);
 
 function fingerprint() {
   const hashes = {};
