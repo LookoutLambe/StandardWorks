@@ -858,6 +858,10 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
   document.addEventListener('click', function(e) {
     if (e.target.closest('#sel-toolbar')) return;
     if (e.target.closest('#word-popup')) return;
+    /* The card OPENED this panel, so a click inside it is not "the reader
+       moved on" — it is the same study gesture continuing. Without this the
+       card was destroyed by the first tap in the panel it had just launched. */
+    if (e.target.closest('#xref-panel')) return;
     var wu = e.target.closest('.word-unit');
     if (!wu) { closePopup(); return; }
     if (e.target.closest('.verse-num')) return;
@@ -879,7 +883,14 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
 
     // Strong's H-number
     var strongsNum = _ttTerm ? '' : _strongsLayered(hText);
-    if (strongsNum) {
+    /* THE SCORECARD CARRIES THE NUMBER NOW, as a quiet marker at the end of the
+       meaning line. This row read "Strong’s: H0430 — gods", and that archaic
+       headword sat directly under the card's own gloss "God", where it read as
+       a contradiction rather than a citation. The row stays for the fallback
+       path — a page without RootScorecard still needs the number somewhere. */
+    if (strongsNum && window.RootScorecard) {
+      popupStrong.style.display = 'none';
+    } else if (strongsNum) {
       // The lexeme's own definition, so a derived noun explains itself:
       // לֶקַח H3948 "learning, doctrine" beside its root לקח "take".
       var sEntry = window._strongsRoots && window._strongsRoots[strongsNum];
@@ -988,7 +999,6 @@ detailHtml += '</div>';
     if (directLink && directXref) {
       directLink.addEventListener('click', function(ev) {
         ev.stopPropagation();
-        closePopup();
         openXrefPanel(JSON.parse(wu.getAttribute('data-xref-ref')), wu.getAttribute('data-xref-key'), (window.getLemmaStrongs && getLemmaStrongs(hText)) || root);
       });
     }
@@ -996,7 +1006,11 @@ detailHtml += '</div>';
     if (xrefLink) {
       xrefLink.addEventListener('click', function(ev) {
         ev.stopPropagation();
-        closePopup();
+        /* THE CARD STAYS. Cross-references are a deeper view of the word the
+           card is about, not a departure from it — closing the card here threw
+           away the reader's context the moment they asked for more of it, and
+           left nothing to come back to. The panel opens over it; closing the
+           panel gives the card back. */
         openRootXrefPanel(root);
       });
     }
@@ -1028,6 +1042,12 @@ document.addEventListener(
     if (e.target.closest('#word-popup')) return;
     if (e.target.closest('#sel-toolbar')) return;
     if (e.target.closest('.word-unit')) return;
+    /* The cross-reference panel is the card's OWN deeper view, launched from a
+       link on the card. This capture-phase guard runs before every other
+       handler, so without the exclusion the card was destroyed by the very tap
+       that opened the panel — and the reader lost the word they were studying
+       at the moment they asked to see more of it. */
+    if (e.target.closest('#xref-panel')) return;
     closePopup();
   },
   true

@@ -79,6 +79,12 @@
 
   var PAGES = { ot: 'ot.html', nt: 'nt.html', bom: 'bom/bom.html', dc: 'dc.html', pgp: 'pgp.html', jst: 'jst.html' };
 
+  /* MIRRORS REF_CAP IN tools/build_root_concordance.js — change them together.
+     The generator writes verse-level references for a root at or under this
+     total and per-book counts above it, so this is exactly the line between a
+     root the references panel can show and one it cannot. */
+  var REF_CAP = 800;
+
   /* Warmup: pull the tap-time data in the background so the lazy split never
      costs the reader a slow first word card.
 
@@ -196,6 +202,16 @@
 
   function esc(s) {
     return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  /* Thousands separators. A study card carries a lot of counts and "6453"
+     reads as noise where "6,453" reads as a number. */
+  function num(n) {
+    return String(n == null ? '' : n).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+  /* Consonants only — for asking "is this root the same word the reader
+     tapped", where pointing must not make two spellings of one word differ. */
+  function cons(x) {
+    return String(x || '').replace(/[\u0591-\u05BD\u05BF-\u05C7]/g, '').trim();
   }
   function cleanSurface(s) {
     // sof pasuq + ketiv/qere brackets never reach the root key
@@ -548,10 +564,6 @@
     var pzEarly = null;
     try { pzEarly = window.RootEngine && window.RootEngine.parse && window.RootEngine.parse(found.part || surface); } catch (ePz) { pzEarly = null; }
     var isFn = !!(pzEarly && pzEarly.morph && isFunctionWord(pzEarly.morph));
-    h += '<span class="rsc-root" style="cursor:pointer;text-decoration:none;color:var(--tap-blue,var(--here));">Root ' +
-      '<span style="font-family:\'David Libre\',serif">' + esc(d.heb) + '</span>' +
-      (d.translit ? ' <span style="font-size:0.85em;opacity:0.7;">(' + esc(d.translit) + ')</span>' : '') +
-      '</span>' + (isFn ? '' : ' — ' + total + ' uses in ' + totalVerses + ' verses across the scriptures');
     // THE PARSE, where the Masoretic Text attests this exact form: the analysis
     // the OpenScriptures Hebrew Bible / STEPBible give it (attested_forms.js,
     // via RootEngine.parse), read into words, with the source's cut between
@@ -568,12 +580,48 @@
     var wordNum = (pz && pz.strongs) || (window._strongsLookup && window._strongsLookup[surface]) || '';
     var wordLemma = wordNum && window._strongsRoots && window._strongsRoots[wordNum] ? window._strongsRoots[wordNum].w : '';
     var meaningLine = senseFor(d.meaning, wordLemma, glossText);
-    if (meaningLine) h += '<br><span style="font-style:italic;opacity:0.85;font-size:0.9em;">' + esc(meaningLine) + '</span>';
+    /* THE FOURTH STATEMENT OF THE SAME WORD. A glossary line names its lemma in
+       parentheses — "God — the divine name Elohim (אלהים, אלוה)" — which is
+       how a line listing several senses tells them apart. The card has already
+       narrowed to ONE sense and shows the word in 2.4em at the top, so that
+       parenthetical is the word's fourth appearance on one card. Dropped only
+       when it is purely Hebrew AND holds the word we are looking at: an English
+       parenthetical ("(direct object marker)") is content, not a repetition. */
+    if (meaningLine) {
+      var _here = cons(found.part || cleanSurface(surface));
+      meaningLine = meaningLine.replace(/\s*\(([^()]*)\)\s*$/, function (m, inner) {
+        if (/[a-z0-9]/i.test(inner)) return m;                 // English: keep
+        if (!/[\u05D0-\u05EA]/.test(inner)) return m;           // no Hebrew: keep
+        return cons(inner).split(/[,\u00b7;]\s*/).indexOf(_here) >= 0 ? '' : m;
+      }).trim();
+    }
+
+    /* THE PARSE FIRST, and quietly. It answers "what is this word" — which is
+       what the reader tapped to find out — so it leads, unlabelled: the content
+       says what it is without a shouted "PARSE:" in front of it. */
     if (pz && pz.morph) {
-      var pl = morphLabel(pz.morph);
-      h += '<br><span style="font-size:0.9em;opacity:0.9;"><b>Parse:</b> ' + esc(pl) +
+      h += '<div class="rsc-parse">' + esc(morphLabel(pz.morph)) +
         (pz.segments ? ' · <span style="font-family:\'David Libre\',serif">' + esc(pz.segments.replace(/\//g, ' · ')) + '</span>' : '') +
-        (pz.n ? ' <span style="opacity:0.65;">(' + pz.n + 'x in the Tanakh)</span>' : '') + '</span>';
+        (pz.n ? ' <span class="rsc-dim">(' + num(pz.n) + '× in the Tanakh)</span>' : '') + '</div>';
+    }
+
+    /* THE MEANING, with the Strong's number as a quiet marker at its end. That
+       number used to head its own line as "Strong’s: H0430 — gods", whose
+       archaic headword sat directly under the card's own gloss "God" and read
+       like an error. The number is worth keeping; Strong's wording is not. */
+    if (meaningLine || wordNum) {
+      h += '<div class="rsc-meaning">' + (meaningLine ? esc(meaningLine) : '') +
+        (wordNum ? '<span class="rsc-strongs">' + esc(wordNum) + '</span>' : '') + '</div>';
+    }
+
+    /* THE ROOT, only when it is not the word already at the top of the card.
+       אלהים is its own root, so the card was naming the same word four times
+       over — heading, root line, meaning line, and first in Forms. */
+    if (!isFn && cons(d.heb) && cons(d.heb) !== cons(found.part || cleanSurface(surface))) {
+      h += '<div class="rsc-rootline"><span class="rsc-root">' +
+        '<span style="font-family:\'David Libre\',serif">' + esc(d.heb) + '</span>' +
+        (d.translit ? ' <span class="rsc-dim">(' + esc(d.translit) + ')</span>' : '') +
+        '</span></div>';
     }
     // per-volume chips
     if (!isFn) {
@@ -582,7 +630,7 @@
         var n = entry.c[vi];
         if (!n) return;
         var label = (conc.volNames || {})[vk] || vk.toUpperCase();
-        h += '<span class="rsc-chip' + (vk === cfg.vol ? ' rsc-chip-here' : '') + '">' + esc(label) + ' ' + n + '</span>';
+        h += '<span class="rsc-chip' + (vk === cfg.vol ? ' rsc-chip-here' : '') + '">' + esc(label) + ' ' + num(n) + '</span>';
       });
       h += '</div>';
     }
@@ -610,10 +658,16 @@
     var senseSurface = found.part || cleanSurface(surface) || surface;
     try { senseKey = (window.RootEngine && window.RootEngine.senseClass) ? window.RootEngine.senseClass(senseSurface) : ''; } catch (eS) {}
     var sense = (!isFn && senseKey && entry.s && entry.s[senseKey]) || null;
-    if (sense && sense.n && sense.n < (entry.c || []).reduce(function(a, b) { return a + b; }, 0)) {
-      h += '<div class="rsc-sense">' +
-           '<b>This sense</b> — ' + esc(sense.g) + ' · ' + sense.n + ' uses in ' + sense.v + ' verses' +
-           '</div>';
+    /* A PROPORTION, NOT A THIRD TOTAL. The card carried "6453 uses in 5505
+       verses" at the top, six volume chips that already sum to 6453, and then
+       "4337 uses in 3800 verses" here — four competing figures, none of which
+       announced itself as the one that mattered. The chips are the breakdown;
+       this says how much of them this sense is, and the button below carries
+       the count that the reader is actually about to act on. */
+    if (sense && sense.n && sense.n < total) {
+      var pct = Math.round((sense.n / total) * 100);
+      h += '<div class="rsc-sense">' + esc(sense.g) +
+           '<span class="rsc-dim"> · ' + pct + '% of this root\u2019s uses</span></div>';
     } else {
       sense = null;
     }
@@ -621,30 +675,47 @@
     var hereForm = String(found.part || cleanSurface(surface) || '').replace(/\u05C3$/, '');
     var formItems = forms.map(function(f) {
       var src = (sense && sense.fs) || entry.f;
-      return '<span style="font-family:\'David Libre\',serif">' + esc(f) + '</span> (' + src[f] + 'x)';
+      return '<span style="font-family:\'David Libre\',serif">' + esc(f) + '</span> <span class="rsc-dim">(' + num(src[f]) + '×)</span>';
     });
     if (hereForm && forms.indexOf(hereForm) < 0) {
-      formItems.push('<span style="font-family:\'David Libre\',serif">' + esc(hereForm) + '</span> (here)');
+      formItems.push('<span style="font-family:\'David Libre\',serif">' + esc(hereForm) + '</span> <span class="rsc-dim">(here)</span>');
     }
-    if (!isFn && formItems.length > 1) h += '<span>Forms:</span> ' + formItems.join(', ') + '<br>';
+    var disclosure = '';
+    if (!isFn && formItems.length > 1) disclosure += '<div class="rsc-dl-row"><span class="rsc-dl-k">Forms</span> ' + formItems.join(', ') + '</div>';
     var glosses = Object.keys((sense && sense.gs) || entry.g || {});
     var shown = glosses.slice(0, 4);
     var hereGloss = String(glossText || '').replace(/^[\s"'.,;:?!()\u2014\u2013-]+|[\s"'.,;:?!()\u2014\u2013-]+$/g, '');
     var gsrc = (sense && sense.gs) || entry.g;
-    var glossItems = shown.map(function(g) { return '"' + esc(g) + '" (' + gsrc[g] + 'x)'; });
+    var glossItems = shown.map(function(g) { return '“' + esc(g) + '” <span class="rsc-dim">(' + num(gsrc[g]) + '×)</span>'; });
     if (hereGloss) {
       var lc = hereGloss.toLowerCase(), hit = null;
       for (var gi = 0; gi < glosses.length; gi++) {
         if (glosses[gi].toLowerCase() === lc) { hit = glosses[gi]; break; }
       }
-      if (hit && shown.indexOf(hit) < 0) glossItems.push('"' + esc(hit) + '" (' + gsrc[hit] + 'x)');
-      else if (!hit) glossItems.push('"' + esc(hereGloss) + '" (here)');
+      if (hit && shown.indexOf(hit) < 0) glossItems.push('“' + esc(hit) + '” <span class="rsc-dim">(' + num(gsrc[hit]) + '×)</span>');
+      else if (!hit) glossItems.push('“' + esc(hereGloss) + '” <span class="rsc-dim">(here)</span>');
     }
-    if (!isFn && glossItems.length > 1) h += '<span>Glossed:</span> ' + glossItems.join(', ') + '<br>';
+    if (!isFn && glossItems.length > 1) disclosure += '<div class="rsc-dl-row"><span class="rsc-dl-k">Glossed</span> ' + glossItems.join(', ') + '</div>';
     if (isFn) return h;   // a particle: no counts, no references
-    h += '<span class="rsc-refs-link"' + (sense ? ' data-sense="' + esc(senseKey) + '"' : '') + '>' +
-         (sense ? 'View this sense\u2019s ' + sense.n + ' references \u2192'
-                : 'View all references \u2192') + '</span>';
+    /* FOLDED, NOT DELETED. Forms and glosses with their counts are concordance
+       output — "(2594x), (487x), (376x)…" — and they were two thirds of the
+       card's height, in front of the meaning the reader tapped for. They stay,
+       one tap away, for whoever wants them. */
+    if (disclosure) {
+      h += '<details class="rsc-more"><summary>Forms &amp; spellings</summary>' + disclosure + '</details>';
+    }
+    /* ONE primary action. Two competing small links sat here — this sense's
+       references and the root's cross-references — and neither looked like the
+       way on. This is the way on; reader_ui keeps cross-references beneath it. */
+    /* ...and only when there is something to open. The reference file stores
+       verse-level refs up to REF_CAP and per-book counts above it, so above the
+       cap this button led to a screen of tallies with nothing to study on it.
+       A button that cannot keep its promise is worse than no button. */
+    if ((sense ? sense.n : total) <= REF_CAP) {
+      h += '<button type="button" class="rsc-refs-link rsc-refs-btn"' +
+           (sense ? ' data-sense="' + esc(senseKey) + '"' : '') + '>' +
+           'View all ' + num(sense ? sense.n : total) + ' references \u2192</button>';
+    }
     return h;
   }
 
@@ -946,26 +1017,18 @@
       // Order volumes: current volume first, then canonical order
       var order = [cfg.vol].concat(VOL_ORDER.filter(function(v) { return v !== cfg.vol; }));
       if (refs._b) {
-        // Too common for verse-level refs: per-book verse counts
+        /* NOT OFFERED ANY MORE, and this is the safety net rather than a view.
+           164 of the 7,905 roots exceed the generator's reference cap, and they
+           are the commonest words in the corpus — God, the LORD, say, king,
+           house, land. For those there is no verse list to show, and what the
+           panel showed instead was a wall of per-book tallies: nothing on it
+           could be read, tapped or studied, and at 6,453 uses a list is not
+           worth having anyway. The card no longer offers the panel for these
+           roots at all, so this branch is only reached if something opens it
+           directly. Say so plainly instead of filling the screen with counts. */
         h += '<div class="rsc-note">' + (scoped ? 'This sense' : 'This root') +
-             ' is very common — showing verse counts by book.</div>';
-        order.forEach(function(vk) {
-          var bObj = refs._b[vk];
-          if (!bObj) return;
-          var vi = VOL_ORDER.indexOf(vk);
-          /* Per-volume totals belong to the ROOT. In a sense-scoped view they
-             would overstate every line, so the count is dropped and the sense's
-             own totals stand in the note above. */
-          var volCount = scoped ? '' :
-            ' <span class="rsc-vol-count">' + entry.c[vi] + ' uses · ' + entry.vc[vi] + ' verses</span>';
-          h += '<div class="rsc-vol"><div class="rsc-vol-title">' + esc((conc.volNames || {})[vk] || vk) +
-               volCount + '</div><div class="rsc-books">';
-          Object.keys(bObj).forEach(function(bp) {
-            var name = vk === 'dc' ? (bp === 'od' ? 'Official Declarations' : 'D&C') : bookNameFor(vk, bp + (bp === 'ch' ? '1' : 'ch1'));
-            h += '<span class="rsc-bookcount">' + esc(name) + ' · ' + bObj[bp] + '</span>';
-          });
-          h += '</div></div>';
-        });
+             ' appears too often to list verse by verse. The card\u2019s volume ' +
+             'counts show where it is concentrated.</div>';
       } else {
         order.forEach(function(vk) {
           var chObj = refs[vk];
@@ -1086,6 +1149,11 @@
     translitTermParts: translitTermParts,
     ttNoteHtml: ttNoteHtml,
     openPanel: openPanel,
-    closePanel: closePanel
+    closePanel: closePanel,
+    /* The reference cap, asked rather than copied. crossrefs_engine offers the
+       same panel from its own header card and must draw the line in the same
+       place; a second literal 800 in a second file would drift. */
+    listable: function(n) { return (parseInt(n, 10) || 0) <= REF_CAP; },
+    num: num
   };
 })();

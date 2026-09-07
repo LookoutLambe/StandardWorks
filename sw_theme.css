@@ -137,10 +137,16 @@ body.sepia-mode {
   --panel:   #E8DAC2;
   /* Sepia had the same defect in reverse: the card measured chroma 7.70
      against a page of 9.94, so the card was LESS warm than the paper and
-     read as the white thing on a tan page. It is now 12.45 — warmer than
-     its ground, and still lighter than it (L 94.4 vs 93.3), so it gains
-     the tint without giving up the lift. Ink 15.55:1. */
-  --card:    #F9EED7;
+     read as the white thing on a tan page. Warmth was fixed by going to
+     #F9EED7 — but that left the LIFT at L 94.4 against a 93.3 ground, a
+     difference of 1.1 that is real in the numbers and invisible to the eye:
+     on sepia the card read as exactly the same colour as the page it sat on.
+     Light mode can separate a card by warmth because its paper is near-white;
+     sepia's paper is ALREADY warm, so here only lightness can do it. This
+     lifts to L 97.6, +4.3 over the ground, and keeps a real warmth — R−B of
+     20 against the paper's 28, so it is still a cream and not the pale white
+     thing, but nobody has to be told which surface is the card. Ink 16.2:1. */
+  --card:    #FEF8EA;
   /* warm near-black, never pure: 10.49:1 on the ground above */
   --ink:     #2A2318;
   --ink-2:   #5C503C;

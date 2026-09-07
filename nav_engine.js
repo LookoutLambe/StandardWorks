@@ -3202,12 +3202,29 @@ window.SWLayers = (function () {
     return true;
   }
 
+  /* TWO HALVES OF ONE GESTURE. The word card opens the cross-reference panel
+     from a link on the card itself, so the panel is not a rival surface — it is
+     the card's own deeper view. Arbitrating them apart meant the card was
+     destroyed by the very tap that asked for more of the word it was showing,
+     and there was nothing left to come back to. This holds at every width: on a
+     narrow screen the panel covers the card completely, and closing the panel
+     gives it back rather than leaving the reader to hunt for the word again. */
+  var COEXIST = [['word-popup', 'xref-panel']];
+  function coexists(a, b) {
+    for (var i = 0; i < COEXIST.length; i++) {
+      if ((COEXIST[i][0] === a && COEXIST[i][1] === b) ||
+          (COEXIST[i][1] === a && COEXIST[i][0] === b)) return true;
+    }
+    return false;
+  }
+
   /* Which open surfaces must yield to `opened`. */
   function displacedBy(opened) {
     var narrow = window.innerWidth < COEXIST_MIN;
     return SURFACES.filter(function (s) {
       if (s.id === opened.id) return false;
       if (!isOpen(el(s.id))) return false;
+      if (coexists(opened.id, s.id)) return false;
       if (opened.kind === 'sheet')   return true;
       if (opened.kind === 'panel')   return s.kind === 'panel' || s.kind === 'popover';
       if (opened.kind === 'popover') return s.kind === 'popover' || (narrow && s.kind === 'panel');

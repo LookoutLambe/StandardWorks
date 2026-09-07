@@ -1169,12 +1169,20 @@
       (e.c || []).forEach(function(n) { total += n; });
       (e.vc || []).forEach(function(n) { verses += n; });
       if (!total) return;
+      /* THE SAME PROMISE, AND THE SAME LIMIT. The references panel this opens
+         has verse-level references only up to the generator's cap; above it the
+         file holds per-book counts, and the panel had nothing to show but
+         tallies. RootScorecard.listable() is the one place that line is drawn,
+         so this asks it rather than keeping a second copy of the number. */
+      if (window.RootScorecard && RootScorecard.listable && !RootScorecard.listable(total)) return;
       if (refsContainer.querySelector('.rsc-occ-card')) return;
       var card = document.createElement('div');
       card.className = 'xref-ref-card rsc-occ-card';
       card.style.cssText = 'cursor:pointer;';   /* paper styling lives in reader.css (.rsc-occ-card) */
       card.innerHTML = '<div class="rsc-occ-title">' +
-        'All ' + total + ' occurrences in ' + verses + ' verses \u2192</div>' +
+        'All ' + (window.RootScorecard && RootScorecard.num ? RootScorecard.num(total) : total) +
+        ' occurrences in ' + (window.RootScorecard && RootScorecard.num ? RootScorecard.num(verses) : verses) +
+        ' verses \u2192</div>' +
         '<div style="opacity:0.75;font-size:0.85em;margin-top:2px;">' +
         'every place this root appears across the scriptures</div>';
       card.addEventListener('click', function(ev) {
@@ -1248,6 +1256,10 @@
   // ── Click outside to close ──
   document.addEventListener('click', function(e) {
     var panel = document.getElementById('xref-panel');
+    /* ...and the reverse: the word card that opened this panel is not
+       "outside" it either. With both closing each other on any click, the two
+       halves of one study gesture kept destroying one another. */
+    if (e.target.closest && e.target.closest('#word-popup')) return;
     if (panel && panel.classList.contains('open') && !panel.contains(e.target) && !e.target.classList.contains('xref-marker')) {
       closeXrefPanel();
     }

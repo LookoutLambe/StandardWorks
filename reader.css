@@ -1163,7 +1163,6 @@ body #word-popup .rsc-refs-link { color: var(--here) !important; }
    which is the accent for dark chrome bars and is near-invisible on paper.
    Removing the inline style removed the underline with it, so they read as
    plain grey text with no affordance; both halves belong here, not in JS. */
-body #word-popup .rsc-refs-link,
 body #word-popup .popup-xref-direct,
 body #word-popup .popup-xref-link {
   color: var(--here) !important;
@@ -1174,6 +1173,105 @@ body #word-popup .popup-xref-link {
   padding: 6px 0 !important;
   min-height: 32px !important;
 }
+
+/* ── THE WORD CARD, SIMPLIFIED ───────────────────────────────────────────
+   The card stated the same word four times, carried four competing totals
+   (a header count, six chips that already summed to it, a sense count and a
+   Tanakh count), and ended on two small links of equal weight so neither
+   read as the way on. It now answers three questions in order — what is this
+   word · what is it built from · where else does it live — and nothing has
+   been deleted: the concordance detail is folded behind one disclosure. */
+body #word-popup .rsc-parse {
+  font-size: 0.88em !important;
+  color: var(--ink-3) !important;
+  margin: 2px 0 6px;
+  line-height: 1.45;
+}
+body #word-popup .rsc-meaning {
+  font-size: 0.98em !important;
+  color: var(--ink) !important;
+  line-height: 1.45;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+body #word-popup .rsc-meaning .rsc-strongs {
+  margin-left: auto;
+  flex: none;
+  font-size: 0.76em !important;
+  color: var(--ink-3) !important;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+body #word-popup .rsc-rootline { margin-top: 6px; font-size: 0.9em !important; }
+body #word-popup .rsc-root {
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+}
+body #word-popup .rsc-dim { color: var(--ink-3) !important; }
+body #word-popup .rsc-sense {
+  margin: 8px 0 2px;
+  font-size: 0.92em !important;
+  color: var(--ink) !important;
+}
+/* One disclosure for the concordance detail. The marker is the affordance, so
+   the summary needs no decoration of its own beyond a real touch target. */
+body #word-popup .rsc-more { margin: 8px 0 4px; }
+body #word-popup .rsc-more > summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.85em !important;
+  color: var(--ink-3) !important;
+  padding: 7px 0;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+body #word-popup .rsc-more > summary::-webkit-details-marker { display: none; }
+body #word-popup .rsc-more > summary::before {
+  content: '\25B8';
+  font-size: 0.9em;
+  transition: transform 0.15s ease;
+}
+body #word-popup .rsc-more[open] > summary::before { transform: rotate(90deg); }
+body #word-popup .rsc-more > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+body #word-popup .rsc-dl-row { font-size: 0.85em !important; line-height: 1.55; margin: 3px 0; }
+body #word-popup .rsc-dl-k { color: var(--ink-3) !important; margin-right: 4px; }
+/* The one primary action. It was a small underlined link the same size as the
+   cross-reference link beside it; a card with two equal small links has no
+   way on, only two guesses. */
+body #word-popup .rsc-refs-btn {
+  display: block !important;
+  width: 100%;
+  margin: 10px 0 2px;
+  padding: 11px 14px !important;
+  min-height: 44px !important;
+  font-family: inherit;
+  font-size: 0.92em !important;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  color: #fff !important;
+  background: var(--here);
+  border: 1px solid var(--here);
+  border-radius: 8px;
+}
+body #word-popup .rsc-refs-btn:hover { background: color-mix(in srgb, var(--here) 88%, #000); }
+body #word-popup .rsc-refs-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+/* In dark the accent is BRIGHT (#D9B45F), and a bright accent is a mark colour,
+   never a fill: a full-width slab of it glares in a dark reading card, and it
+   put white text at 1.97:1. Outlined instead — the same gold, used as a mark,
+   which reads at 8.4:1 on the card. */
+body.dark-mode #word-popup .rsc-refs-btn {
+  background: color-mix(in srgb, var(--here) 12%, transparent);
+  border-color: color-mix(in srgb, var(--here) 55%, transparent);
+  color: var(--here) !important;
+}
+body.dark-mode #word-popup .rsc-refs-btn:hover { background: color-mix(in srgb, var(--here) 20%, transparent); }
 /* the qamats qatan stays red in the card, exactly as it is in the reader */
 body #word-popup .qq, body #word-popup .popup-hebrew .qq { color: var(--qq) !important; }
 body.dark-mode #word-popup .qq,
