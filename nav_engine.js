@@ -1530,6 +1530,30 @@
       var el = document.elementFromPoint(px, pys[i]);
       probe = el && el.closest ? el.closest('.verse[data-verse-key]') : null;
     }
+    /* GEOMETRY WHEN HIT-TESTING FAILS — and it fails in the two situations
+       that matter most.
+
+       At the top of a chapter both probe points land on the chapter heading
+       (the title, the Hebrew name, the summary), not on a verse, so this
+       returned 0 and the reader had NO verse recorded until they scrolled.
+       Jump away before scrolling and the way back offered "Psalms 23" with no
+       verse — the reader came back to the top of the chapter instead of where
+       they were. And when the word card or the study panel is open it covers
+       these points, which is the failure the comment in markReturnPoint
+       already describes.
+
+       Neither depends on hit-testing. The verse the reader is looking at is
+       the first one whose bottom edge is still below the header line, and at
+       the top of a chapter that is verse 1 — which is the true answer, not a
+       missing one. */
+    if (!probe) {
+      var host = document.getElementById('panel-' + chap) || document;
+      var rows = host.querySelectorAll('.verse[data-verse-key]');
+      var line = pys[0];
+      for (var g = 0; g < rows.length; g++) {
+        if (rows[g].getBoundingClientRect().bottom > line) { probe = rows[g]; break; }
+      }
+    }
     if (!probe) return 0;
     var kp = (probe.getAttribute('data-verse-key') || '').split('|');
     var vNum = kp.length === 3 ? parseInt(kp[2], 10) : 0;
