@@ -18,7 +18,7 @@ html {
   text-size-adjust: 100%;
   overflow-x: hidden;
 }
-.skip-link { position: absolute; top: -100px; left: 0; background: var(--chrome); color: var(--sw-gold, var(--here-chrome)); padding: 10px 20px; z-index: var(--z-skip); font-size: 1em; text-decoration: none; }
+.skip-link { position: absolute; top: -100px; left: 0; background: var(--chrome); color: var(--sw-gold, var(--here-chrome)); padding: 10px 20px; min-height: 44px; box-sizing: border-box; display: flex; align-items: center; z-index: var(--z-skip); font-size: 1em; text-decoration: none; }
 .skip-link:focus { top: 0; }
 body.dark-mode *:focus-visible { outline-color: var(--here-chrome); }
 
@@ -954,7 +954,20 @@ body {
    sits on paper, even inside a popover.
    ══════════════════════════════════════════════════════════════════════ */
 body #word-popup {
-  background: var(--card) !important;
+  /* SCROLL SHADOW. The card scrolls on a phone — about 15% of a long entry is
+     below the fold on a 375x667 iPhone, and roughly half of it in landscape —
+     and nothing said so: the content simply stopped at the rounded edge. This
+     is the standard four-layer trick, pure CSS and self-cancelling: the two
+     `local` gradients scroll WITH the content and sit over the shadows at the
+     extremes, so a shadow only appears on the edge that actually has more
+     behind it, and neither appears when the card is short enough not to
+     scroll. Ink-coloured rather than black, so it reads in dark too. */
+  background:
+    linear-gradient(to bottom, var(--card) 34%, rgba(0,0,0,0)) top / 100% 30px local no-repeat,
+    linear-gradient(to top,    var(--card) 34%, rgba(0,0,0,0)) bottom / 100% 30px local no-repeat,
+    radial-gradient(farthest-side at 50% 0,    color-mix(in srgb, var(--ink) 30%, transparent), rgba(0,0,0,0)) top / 100% 15px scroll no-repeat,
+    radial-gradient(farthest-side at 50% 100%, color-mix(in srgb, var(--ink) 30%, transparent), rgba(0,0,0,0)) bottom / 100% 15px scroll no-repeat,
+    var(--card) !important;
   color: var(--ink) !important;
   /* The ACCENT, not the hairline: --rule-light is barely off the card's own
      ground, so the card had no visible edge against paper. --here is the
@@ -1114,7 +1127,7 @@ body #word-popup .rsc-block b {
   border-top: 1px solid var(--chrome-line) !important;
 }
 .controls-bottom button {
-  flex: 1 1 0; min-height: 42px !important;
+  flex: 1 1 0; min-height: 44px !important;   /* 42 was 2px under the touch minimum */
   border-radius: var(--r-control) !important;
   font-size: var(--t-small) !important;
   background: transparent !important;
@@ -1217,8 +1230,13 @@ body.dark-mode #word-popup .popup-hebrew .qq { color: var(--qq-bright) !importan
 #nav-sidebar .nav-book-row .nb-en {
   color: var(--gold-pale) !important;
 }
+/* Full strength, not 85%. The ▸ is the affordance that says a book opens
+   into its chapters, and at 85% it measured 3.76:1 in light and 4.26 in
+   sepia — over the 3:1 non-text bar but under the text floor, on an 11px
+   glyph. Removing the transparency clears 4.5:1 everywhere and costs
+   nothing. */
 #nav-sidebar .nav-book-row .nb-ch,#nav-sidebar .nav-book-row .nb-arrow {
-  color:color-mix(in srgb, var(--gold-bright) 85%, transparent) !important;
+  color:var(--gold-bright) !important;
 }
 /* The gold-era chapter grid lived here — filled cells, gold borders, a
    gold-tinted drop shadow (rgba(138,106,28,.30)) and gold numerals. It was
@@ -2422,3 +2440,28 @@ body:not(.hide-gloss):not(.dual-mode) .heading-flow > .word-group {
 #sw-return b { font-weight: 700; }
 #sw-return:hover { background: var(--surface-2); }
 @media (prefers-reduced-motion: reduce) { #sw-return { transition: none; } }
+
+
+/* ══════════════════════════════════════════════════════════════════════
+   TOUCH TARGETS — the shared floor.
+
+   Measured across the reader: the chapter arrows were 32x32, the search
+   field 34px tall and the skip link 36px, all under the 44px minimum. The
+   arrows are the primary chapter navigation, so they were the worst of it.
+
+   The arrow rule is declared in each volume page's own <style> block
+   (ot.html, nt.html, dc.html), which means a plain selector here would lose
+   on document order however specific the intent. Prefixing with `body`
+   raises specificity to 0,1,1 and wins wherever it is loaded, so the floor
+   lives once, here, instead of being pasted into every page — and it covers
+   pages that grow their own copy of the rule later.
+   ══════════════════════════════════════════════════════════════════════ */
+body .nav-prev,
+body .nav-next {
+  width: 44px;
+  height: 44px;
+}
+body #search-input {
+  min-height: 44px;
+  box-sizing: border-box;
+}

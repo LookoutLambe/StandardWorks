@@ -144,9 +144,16 @@ body.sepia-mode {
   /* warm near-black, never pure: 10.49:1 on the ground above */
   --ink:     #2A2318;
   --ink-2:   #5C503C;
-  /* the gloss + transliteration tier. #7a6c5c read 4.19:1 and failed the
-     4.5:1 floor for 12px text; this clears it at 4.88:1. */
-  --ink-3:   #71634C;
+  /* The gloss + transliteration tier. Measured against --paper it read
+     4.90:1 and looked settled — but every PANEL in sepia sits on --paper-2
+     (#E8DAC2), which is far darker here than in light or dark, and against
+     that ground the same value was 4.24:1. That is the navigation drawer:
+     its book names, its division headings and its chapter counts all take
+     this tier, and all three were under the floor in sepia only.
+     #665840 clears every sepia surface — 5.80 on paper, 5.02 on the panel,
+     6.01 on a card — which also puts sepia back in line with light
+     (5.50 / 4.87) and dark (5.40) instead of being the odd theme out. */
+  --ink-3:   #665840;
   /* the accent goes one step deeper than light's: the sepia ground is
      itself warm, so #8E6215 loses separation against it. 5.67:1 here. */
   --here:       #7A5412;
@@ -465,9 +472,15 @@ body.dark-mode #annotations-panel .ann-tab.active {
 #xref-panel .xref-panel-header, #xref-panel .xref-panel-header *,
 #glossary-panel .glossary-header, #glossary-panel .glossary-header *,
 #annotations-panel .ann-header, #annotations-panel .ann-header * { color: var(--chrome-gold) !important; }
+/* The close glyphs that sit on a CHROME surface. The group rule above gives
+   every close glyph --card-tl, which is a PAPER ink tier, so each one hosted
+   in a chrome header has to be named here instead. #share-popup was the one
+   never added: its ✕ sat on the popup's navy at 2.52:1 in light and 2.09 in
+   sepia, while every other glyph in this list measured 12.39–14.64. */
 #xref-panel .xref-panel-header .xref-panel-close,
 #glossary-panel .glossary-header .glossary-close,
 #annotations-panel .ann-header .ann-panel-close,
+#share-popup .share-close,
 #nav-sidebar .nav-search-wrap .nav-close-btn { color: var(--chrome-gold) !important; }
 #nav-sidebar .nl-card:hover, #nav-sidebar .nl-tile:hover, #nav-sidebar .nl-bm:hover,
 #nav-sidebar .nav-book-row:hover,

@@ -65,6 +65,10 @@ html:has(link[href*="site_chrome.css"]) #main-content {
 
 /* True viewport center (not centered in the gap between uneven side controls) */
 .sw-top-bar-brand {
+  /* 112x38 measured — the one control in the top bar under the 44px
+     minimum. It is a real link (it goes home), so it gets a real target. */
+  min-height: 44px;
+  justify-content: center;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -468,7 +472,11 @@ a.sw-chrome-print svg { display: block; }
   padding: 26px 14px calc(14px + env(safe-area-inset-bottom, 0px));
   font-family: 'David Libre', Georgia, serif;
 }
-#sw-rights a { color: var(--here); text-decoration: none; }
+/* 116x11 measured. A mailto people are meant to hit needs a real target;
+   inline-block plus padding gives it 44px without moving the line. */
+/* min-height, not padding arithmetic: padding alone gave 44px at the desktop
+   font size and 39px on a phone, where the type is smaller. */
+#sw-rights a { color: var(--here); text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; padding: 0 6px; }
 #sw-rights a:hover { text-decoration: underline; }
 body.dark-mode #sw-rights { color: var(--ink-3); }
 body.dark-mode #sw-rights a { color: var(--here-chrome); }

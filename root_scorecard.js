@@ -700,6 +700,29 @@
         if (mini || ttHtml) slotEl.innerHTML = mini + ttHtml;
         return;
       }
+      /* A maqqef-joined token is looked up segment by segment, and a segment
+         that is a particle has nothing to show: אֵת־הַשָּׁמַיִם rendered a block
+         for את reading "Root את (et) · (direct object marker)" and then
+         stopped — no counts, no volumes, no sense, no references, because the
+         function-word rule above deliberately suppresses all of those. The
+         suppression was right; rendering the empty shell around it was not.
+         Drop those segments and keep the ones that carry something, so the
+         card for אֵת־הַשָּׁמַיִם is simply the card for שָׁמַיִם.
+
+         Only ever when something else in the token HAS content: a token whose
+         every segment is a particle (אַל־נָא) keeps them, or the card would
+         come up blank. The tapped word still appears in full at the head of
+         the card, so nothing is hidden from the reader — only the analysis of
+         the part that had no analysis to give. */
+      if (all.length > 1) {
+        var contentful = [];
+        for (var fi = 0; fi < all.length; fi++) {
+          var pzF = null;
+          try { pzF = window.RootEngine && window.RootEngine.parse && window.RootEngine.parse(all[fi].part || surface); } catch (eF) { pzF = null; }
+          if (!(pzF && pzF.morph && isFunctionWord(pzF.morph))) contentful.push(all[fi]);
+        }
+        if (contentful.length) all = contentful;
+      }
       var html = '';
       for (var bi = 0; bi < all.length; bi++) {
         html += '<div class="rsc-block" data-rsc-block="' + bi + '">';
