@@ -572,8 +572,17 @@
     // the OpenScriptures Hebrew Bible / STEPBible give it (attested_forms.js,
     // via RootEngine.parse), read into words, with the source's cut between
     // prefix, stem and suffix. Absent for a form the Tanakh does not have.
+    /* THE PIECE, NOT THE WHOLE TOKEN — the same trap already fixed below for
+       the sense lookup, one line away and still live here. A maqqef joins two
+       words and this card is built once per piece, so אֵת־הַשָּׁמַיִם asked the
+       lexicon about the whole joined string, which is in no lexicon: the Parse
+       line vanished and the Strong's number with it. שָׁמַיִם is H8064 and says
+       so the moment it is asked on its own — but most of its occurrences are
+       maqqef-joined to אֵת, so most of the time the card showed no number at
+       all. 13% of the corpus is maqqef-joined. */
+    var pieceSurface = found.part || cleanSurface(surface) || surface;
     var pz = null;
-    try { pz = window.RootEngine && window.RootEngine.parse && window.RootEngine.parse(surface); } catch (e) { pz = null; }
+    try { pz = window.RootEngine && window.RootEngine.parse && window.RootEngine.parse(pieceSurface); } catch (e) { pz = null; }
     // THE SENSE OF THE WORD TAPPED (user, 2026-09-06: "the same root working
     // only with the word showing not both"). A family's glossary line lists
     // its lemmas each in parentheses -- "(נַחַל) river, wadi; (נַחֲלָה)
@@ -581,7 +590,8 @@
     // attested parse, else the Strong's lookup), so it shows that sense alone.
     // A word whose lemma matches no listed sense, or matches more than one,
     // keeps the whole line.
-    var wordNum = (pz && pz.strongs) || (window._strongsLookup && window._strongsLookup[surface]) || '';
+    var wordNum = (pz && pz.strongs) ||
+      (window._strongsLookup && (window._strongsLookup[pieceSurface] || window._strongsLookup[surface])) || '';
     var wordLemma = wordNum && window._strongsRoots && window._strongsRoots[wordNum] ? window._strongsRoots[wordNum].w : '';
     var meaningLine = senseFor(d.meaning, wordLemma, glossText);
     /* THE FOURTH STATEMENT OF THE SAME WORD. A glossary line names its lemma in
