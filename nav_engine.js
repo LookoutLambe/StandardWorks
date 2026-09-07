@@ -3332,14 +3332,29 @@ window.SWLayers = (function () {
     return true;
   }
 
-  /* TWO HALVES OF ONE GESTURE. The word card opens the cross-reference panel
-     from a link on the card itself, so the panel is not a rival surface — it is
-     the card's own deeper view. Arbitrating them apart meant the card was
-     destroyed by the very tap that asked for more of the word it was showing,
-     and there was nothing left to come back to. This holds at every width: on a
-     narrow screen the panel covers the card completely, and closing the panel
-     gives it back rather than leaving the reader to hunt for the word again. */
-  var COEXIST = [['word-popup', 'xref-panel']];
+  /* TWO HALVES OF ONE GESTURE. The word card opens these panels from links on
+     the card itself, so a panel is not a rival surface — it is the card's own
+     deeper view. Arbitrating them apart meant the card was destroyed by the
+     very tap that asked for more of the word it was showing, and there was
+     nothing left to come back to. This holds at every width: on a narrow
+     screen the panel covers the card completely, and closing the panel gives
+     it back rather than leaving the reader to hunt for the word again.
+
+     THE RULE IS "PANELS THE CARD LAUNCHES", and the list has to be complete or
+     the bug simply moves. Only the cross-reference panel was listed, so the
+     root headword and the Strong's number — which open the glossary at that
+     lexeme — still destroyed the card, the same defect in a second doorway.
+     Stacking needs no special case: #word-popup is already `--z-panel - 1`,
+     one rank under ANY panel, so the card sits behind whichever it opened.
+
+     #rsc-panel ("View all N references") is deliberately NOT here. It is a
+     true modal — inset:0 at --z-sheet behind a 55% scrim — so a card left open
+     underneath would be dimmed and unreachable; that path closes the card on
+     purpose. Coexisting is for panels that sit BESIDE the reader, not over it. */
+  var COEXIST = [
+    ['word-popup', 'xref-panel'],       /* "View Cross-References"            */
+    ['word-popup', 'glossary-panel'],   /* the root headword, the H-number    */
+  ];
   function coexists(a, b) {
     for (var i = 0; i < COEXIST.length; i++) {
       if ((COEXIST[i][0] === a && COEXIST[i][1] === b) ||

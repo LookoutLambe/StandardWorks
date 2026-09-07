@@ -1450,7 +1450,15 @@ function openGlossaryAtRoot(rootKey) {
       if (document.getElementById('glossary-panel').classList.contains('open')) renderGlossaryList();
     });
   }
-  closePopup();
+  /* THE CARD IS NOT A RIVAL — IT IS WHERE THIS TAP CAME FROM. This closed the
+     word card before opening the glossary, so tapping the root headword or the
+     Strong's number destroyed the card that offered them and left nothing to
+     come back to: the same defect the cross-reference link had, in a second
+     doorway. SWLayers in nav_engine.js owns which surfaces may sit together
+     (COEXIST pairs word-popup with the panels the card launches) and
+     #word-popup is already one z-rank under any panel, so the card stays open
+     behind the glossary and is there again when it closes. Nothing here should
+     be deciding that on its own. */
   buildGlossaryIndex();
   // For H-number roots, search by the Hebrew word instead
   var searchTerm = rootKey;
