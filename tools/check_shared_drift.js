@@ -239,6 +239,12 @@ for (const name of ['_paintWordAnnotation', 'applyAnnotationToWord']) {
      /SWXref\.buildRefTitleRow\s*\(/],
     ['crossrefs_engine.js', 'the label -> key resolver is the shared one',
      /SWXref\.resolveRefKey\s*\(/],
+    /* The cross-reference map arrives one book at a time in both copies now.
+       If either reverts to loading a whole map, it must not do so alone: a
+       latched _crossrefsLoaded silently freezes the map at the first chunk and
+       every later book loses its markers. Both sides fold new keys in instead. */
+    ['crossrefs_engine.js', 'the map is folded in incrementally, not latched',
+     /if\s*\(\s*_(?:bom)?[Ff]oldedKeys\[key\]\s*\)\s*continue/],
   ];
   let drifted = 0;
   for (const [file, what, re] of INVARIANTS) {
@@ -266,6 +272,22 @@ for (const name of ['_paintWordAnnotation', 'applyAnnotationToWord']) {
 {
   const fs2 = require('fs');
   let bad = 0;
+  /* The Book of Mormon's two maps are split by the same generator but have no
+     verse manifest to list them — bom_book_loader.js derives the chunk name
+     from its own BOOK_RULES — so the check is that every book has both. */
+  const BOM_BOOKS = ['1nephi', '2nephi', 'jacob', 'enos', 'jarom', 'omni',
+    'words_of_mormon', 'mosiah', 'alma', 'helaman', '3nephi', '4nephi',
+    'mormon', 'ether', 'moroni'];
+  for (const dir of ['bom/crossrefs', 'bom/inverse_crossrefs']) {
+    const missing = BOM_BOOKS.filter(b => !fs2.existsSync(path.join(ROOT, dir, b + '.js')));
+    if (missing.length) {
+      bad++;
+      fail(dir + '/ is missing ' + missing.length + ' book chunk(s) (' +
+           missing.slice(0, 3).join(', ') + ').\n' +
+           '        Every cross-reference in those books would silently vanish.\n' +
+           '        Fix: node tools/build_crossref_chunks.js');
+    }
+  }
   for (const vol of ['ot', 'nt', 'dc', 'pgp']) {
     const manPath = path.join(ROOT, vol + '_verses', 'manifest.js');
     if (!fs2.existsSync(manPath)) continue;
@@ -292,6 +314,44 @@ for (const name of ['_paintWordAnnotation', 'applyAnnotationToWord']) {
     }
   }
   if (!bad) ok('every volume\u2019s cross-reference chunks are listed and present');
+}
+
+/* ── The Book of Mormon's two chunk sets ───────────────────────────────────
+   bom.html has no verse manifest, so the contract is the loader's own
+   BOOK_RULES: every book it can route to must have a chunk in BOTH sets, or
+   that book loses its cross-references with no error anywhere. */
+{
+  const vm2 = require('vm');
+  const bomHtml = fs.readFileSync(path.join(ROOT, 'bom', 'bom.html'), 'utf8');
+  const loaderSrc = fs.readFileSync(path.join(ROOT, 'bom', 'bom_book_loader.js'), 'utf8');
+  const bdm = bomHtml.match(/var BOOK_DATA = (\[[\s\S]*?\n\];)/);
+  const lb = { window: {}, document: { addEventListener: function () {} } };
+  try { vm2.createContext(lb); vm2.runInContext(loaderSrc, lb); } catch (e) {}
+  const slugFor = lb.window.bomBookSlugForChapId;
+  if (!bdm || typeof slugFor !== 'function') {
+    fail('bom: could not read BOOK_DATA / bomBookSlugForChapId to verify the chunk sets');
+  } else {
+    const sb = {}; vm2.createContext(sb);
+    const BOOK_DATA = vm2.runInContext('(' + bdm[1].replace(/;$/, '') + ')', sb);
+    const missing = [];
+    for (const b of BOOK_DATA) {
+      const slug = slugFor(b.prefix + '1');
+      if (!slug) { missing.push(b.name + ' (loader routes it nowhere)'); continue; }
+      for (const dir of ['crossrefs', 'inverse_crossrefs']) {
+        if (!fs.existsSync(path.join(ROOT, 'bom', dir, slug + '.js'))) {
+          missing.push(b.name + ' -> bom/' + dir + '/' + slug + '.js');
+        }
+      }
+    }
+    if (missing.length) {
+      fail('bom: ' + missing.length + ' cross-reference chunk(s) missing — those books show\n' +
+           '        no cross-references at all, with no error:\n        ' +
+           missing.slice(0, 4).join('\n        ') +
+           '\n        Fix: node tools/build_crossref_chunks.js');
+    } else {
+      ok('the Book of Mormon\u2019s ' + BOOK_DATA.length + ' books all have both chunk sets');
+    }
+  }
 }
 
 if (failures) {

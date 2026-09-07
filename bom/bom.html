@@ -3813,23 +3813,25 @@ body.dual-mode .chapter-summary { display: block; }
   <button id="btn-nikkud" onclick="toggleNikkud()" title="Show/hide vowel points">No Nikkud<br>עִיצּוּרִים</button>
 </div>
 
-<script src="bom_book_loader.js?v=8"></script>
-<script src="bom_lazy_assets.js?v=1"></script>
+<script src="bom_book_loader.js?v=9"></script>
+<script src="bom_lazy_assets.js?v=2"></script>
 <script defer src="../bdb_roots.js?v=4"></script>
 <script defer src="../root_names.js?v=17"></script>
 <script src="../xref_common.js?v=6"></script>
 <script src="../translit.js?v=1"></script>
 <script src="../jst_refmap.js?v=1"></script>
 <script src="../verse_loader.js?v=5"></script>
-<script src="../root_scorecard.js?v=89"></script>
+<script src="../root_scorecard.js?v=90"></script>
 <script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
 <!-- Reference data (cross-references, glossary, roots, topical guide: ~2.4 MB)
      is deferred: it is consumed only after load (cross-ref markers at +500 ms,
      the word popup, the glossary, the topical guide), so it no longer blocks
      the first paint of the chapter. -->
-<script defer src="crossrefs.js?v=23"></script>
+<!-- crossrefs.js (785 KB) is split per book into crossrefs/<book>.js by
+     tools/build_crossref_chunks.js and fetched with the book — bom_book_loader.js -->
 <script defer src="roots_glossary.js?v=71"></script>
-<script defer src="bom_inverse_crossrefs.js?v=1"></script>
+<!-- bom_inverse_crossrefs.js (632 KB) is split the same way into
+     inverse_crossrefs/<book>.js -->
 <script src="chapter_headings.js"></script>
 <script src="chapter_headings_heb.js?v=7"></script>
 <script defer src="topical_guide.js?v=3"></script>
@@ -3986,6 +3988,21 @@ function navTo(id, slideDir, _bookReady) {
   // Lazy-render chapter DOM on first visit (saves mobile memory)
   if (!isLanding && !isTopicalGuide && !isPrintPage) {
     _ensureChapterRendered(id);
+    /* ...and this book's cross-reference chunks, at idle, AFTER the render.
+       Markers are decoration over a chapter that is already readable, so this
+       must never sit between the reader and the text. */
+    if (typeof ensureBomCrossrefsForChapId === 'function') {
+      (function (chapId) {
+        var go = function () {
+          ensureBomCrossrefsForChapId(chapId, function () {
+            if (typeof loadCrossRefs === 'function') loadCrossRefs();
+            if (typeof addCrossRefMarkers === 'function') addCrossRefMarkers();
+          });
+        };
+        if ('requestIdleCallback' in window) requestIdleCallback(go, { timeout: 2000 });
+        else setTimeout(go, 300);
+      })(id);
+    }
   }
   // Render topical guide content when navigating to it
   if (isTopicalGuide && typeof renderTgList === 'function') {
@@ -5574,11 +5591,25 @@ function exportAnnotations() {
 window._crossrefsLoaded = false;
 window._crossrefMap = {};
 
+/* THE MAP ARRIVES A BOOK AT A TIME, exactly as in crossrefs_engine.js — this
+   page forks that engine, so the same change is made in both copies and
+   tools/check_shared_drift.js asserts they agree. It ran once over a whole-file
+   map and latched _crossrefsLoaded; now it is called again as each chunk lands
+   and must fold the new keys in without rebuilding what is here or dropping the
+   markers already drawn. Keys only ever arrive; a chunk never revises one. */
+var _bomFoldedKeys = Object.create(null);
+/* Each chunk calls this as it lands (tools/build_crossref_chunks.js emits the
+   call). Defined on window so a chunk arriving before this block has run can
+   simply skip it — the render hook folds in whatever has accumulated. */
+window.__bomCrossrefsArrived = function () {
+  if (typeof loadCrossRefs === 'function') loadCrossRefs();
+};
 function loadCrossRefs() {
-  if (window._crossrefsLoaded) return;
   function filterTG(data) {
-    var filtered = {};
+    var filtered = window._crossrefMap || {};
     for (var key in data) {
+      if (_bomFoldedKeys[key]) continue;
+      _bomFoldedKeys[key] = 1;
       var entries = data[key];
       var kept = [];
       for (var i = 0; i < entries.length; i++) {
@@ -5601,12 +5632,15 @@ function loadCrossRefs() {
     return filtered;
   }
   function processData(data) {
+    var before = Object.keys(window._crossrefMap || {}).length;
     window._crossrefMap = filterTG(data);
     window._crossrefsLoaded = true;
-    console.log('Cross-references loaded:', Object.keys(window._crossrefMap).length, 'verses');
+    var after = Object.keys(window._crossrefMap).length;
+    if (after === before) return;              // nothing new: the markers already stand
+    console.log('Cross-references loaded:', after, 'verses');
     addCrossRefMarkers();
   }
-  // Use pre-loaded data from <script src="crossrefs.js"> if available
+  /* Whatever chunks have accumulated — they self-merge into _crossrefsData. */
   if (window._crossrefsData) {
     processData(window._crossrefsData);
     return;

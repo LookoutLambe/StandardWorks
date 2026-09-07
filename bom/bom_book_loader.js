@@ -108,6 +108,28 @@
 
   global.bomBookScriptForChapId = bookScriptFor;
 
+  /* The two cross-reference maps, split per book by the same generator that
+     splits the other five volumes (tools/build_crossref_chunks.js). They used
+     to be whole deferred files on the page — 785 KB and 632 KB — so they did
+     not block the parser, but 1.4 MB was still fetched on every visit, and
+     DOMContentLoaded still waited for it, to mark up one chapter. The slug is taken from this file's own BOOK_RULES so there is
+     no second table saying which book a chapter belongs to.
+
+     Deliberately NOT part of ensureBomBookForChapId: a marker is decoration
+     over a chapter that is already readable, so this is called at idle after
+     the render and never delays a page turn. */
+  function bomBookSlug(chapId) {
+    var src = bookScriptFor(chapId);
+    var m = src && src.match(/verses\/([^.?]+)\.js/);
+    return m ? m[1] : null;
+  }
+  global.bomBookSlugForChapId = bomBookSlug;
+  global.ensureBomCrossrefsForChapId = function (chapId, cb) {
+    var slug = bomBookSlug(chapId);
+    if (!slug) { if (cb) cb(); return; }
+    loadChain(['crossrefs/' + slug + '.js', 'inverse_crossrefs/' + slug + '.js'], cb || function () {});
+  };
+
   /* Search has to see the whole volume, not just the book being read, so this
      pulls in every book script once. ~5MB, fetched only when a search runs. */
   var _allLoaded = false;

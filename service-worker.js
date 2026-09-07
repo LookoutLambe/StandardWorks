@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-09-07T17-57-09';
+const BUILD_ID = '2026-09-07T23-53-32';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -67,7 +67,7 @@ const CORE_ASSETS = [
        first visit, downloading files no page asks for. */
     // BOM page — verse data handled by bom/sw.js
     '/StandardWorks/bom/bom.html',
-    '/StandardWorks/bom/bom_book_loader.js?v=8',
+    '/StandardWorks/bom/bom_book_loader.js?v=9',
     '/StandardWorks/bom/bom_lazy_assets.js',
     '/StandardWorks/bom/roots_glossary.js',
     '/StandardWorks/bom/scripture_verses.js',
@@ -177,6 +177,7 @@ function isVerseAssetPath(pathname) {
      falling through to the generic network-first branch, so every page turn
      into a new book waited on the network for its chapter summary. */
   return /\/(ot|nt|pgp|jst|dc|bom)_(verses|english|headings|crossrefs)\//.test(pathname) ||
+    /\/bom\/(crossrefs|inverse_crossrefs)\//.test(pathname) ||
     /\/bom\/scripture_verses\.js$/.test(pathname) ||
     /\/bom\/verses\//.test(pathname) ||
     /\/bom\/(official_verses|crossrefs|chapter_headings|chapter_headings_heb|topical_guide|roots_glossary|bom_book_loader|bom_lazy_assets)\.js$/.test(pathname);

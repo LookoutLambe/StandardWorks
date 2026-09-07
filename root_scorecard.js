@@ -94,11 +94,23 @@
      tapped a word. On a phone on cellular that is the whole point of the split
      spent on nothing.
 
-     Now it waits for a sign the reader is actually reading — a scroll or a
-     touch — and stands down entirely on a metered or slow connection, where
+     Now it waits for a sign the reader is actually reading — a touch, a wheel,
+     a key — and stands down entirely on a metered or slow connection, where
      the cost is highest and the benefit (a faster first popup) is worth least.
      Tapping a word still calls ensure() directly, so the data always arrives
-     when it is genuinely needed; the warmup only decides whether to be early. */
+     when it is genuinely needed; the warmup only decides whether to be early.
+
+     NOT 'scroll'. THE APP SCROLLS ITSELF. Opening any chapter link scrolls to
+     the verse, which fired a scroll event and tripped this gate ~60 ms after
+     DOMContentLoaded — so on every deep link (a bookmark, a shared reference,
+     the return point, the app reopening where the reader left off) the whole
+     13 MB started immediately and the gate bought nothing. Measured on
+     ot.html with no interaction at all: landing 15,026 ms (the fallback below,
+     working), #gen-ch1 118 ms. The events kept here are ones a programmatic
+     scroll cannot fire — touchstart covers scrolling on a phone, wheel covers
+     the trackpad and mouse, keydown covers space and the arrow keys — so the
+     signal is the reader moving, never the page moving itself. */
+  var WARM_ON = ['touchstart', 'wheel', 'pointerdown', 'keydown'];
   (function scheduleWarmup() {
     var done = false;
     function metered() {
@@ -110,15 +122,13 @@
     function kick() {
       if (done) return;
       done = true;
-      ['scroll', 'touchstart', 'pointerdown', 'keydown'].forEach(function (ev) {
-        window.removeEventListener(ev, kick, true);
-      });
+      WARM_ON.forEach(function (ev) { window.removeEventListener(ev, kick, true); });
       if (metered()) return;
       var run = function () { try { ensure(function () {}); } catch (e) {} };
       if ('requestIdleCallback' in window) requestIdleCallback(run, { timeout: 8000 });
       else setTimeout(run, 2000);
     }
-    ['scroll', 'touchstart', 'pointerdown', 'keydown'].forEach(function (ev) {
+    WARM_ON.forEach(function (ev) {
       window.addEventListener(ev, kick, { capture: true, passive: true });
     });
     // A reader who opens a chapter and simply reads without scrolling still

@@ -60,18 +60,18 @@
     strongsPromise.then(function() { if (cb) cb(); });
   };
 
-  function scheduleStrongsIdle() {
-    if (global._strongsLookup) return;
-    var run = function() { global.ensureStrongsData(function() {}); };
-    if ('requestIdleCallback' in global) global.requestIdleCallback(run, { timeout: 8000 });
-    else setTimeout(run, 4000);
-  }
+  /* NO WARMUP OF ITS OWN. This scheduled ensureStrongsData() on DOMContentLoaded
+     behind a bare requestIdleCallback — no interaction gate, no Data Saver or
+     2g check — and so pulled strongs_lookup.js + strongs_roots.js (3,073 KB)
+     on every visit to this page whether or not a word was ever tapped. It is
+     the pattern root_scorecard.js already replaced, kept alive here in a second
+     copy; and because bom.html loads BOTH, the ungated one simply won and the
+     gated one never got to decide anything.
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', scheduleStrongsIdle);
-  } else {
-    scheduleStrongsIdle();
-  }
+     root_scorecard.js owns the warmup policy for all six volumes now, and its
+     ensure() already routes through window.ensureStrongsData on this page, so
+     deleting the schedule here loses nothing: the data still arrives on the
+     same signal as everywhere else, and still immediately on the tap below. */
 
   document.addEventListener('click', function once(e) {
     if (!e.target.closest('.word-unit, .hw')) return;

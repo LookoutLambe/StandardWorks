@@ -3,9 +3,9 @@ const CACHE = 'bom-2026-09-07T12-46-22';
 /** Shell only — verse *.js files are cached at runtime, refreshed in the background (see fetch handler). */
 const ASSETS = [
   './bom.html',
-  './bom_book_loader.js?v=8',
-  './bom_lazy_assets.js?v=1',
-  '../root_scorecard.js?v=89',
+  './bom_book_loader.js?v=9',
+  './bom_lazy_assets.js?v=2',
+  '../root_scorecard.js?v=90',
   '../root_engine.js?v=38',
   '../root_concordance.js?v=83',
   '../xref_study_panel.css?v=14',
@@ -16,8 +16,10 @@ const ASSETS = [
   './chapter_headings.js',
   './chapter_headings_heb.js?v=7',
   './roots_glossary.js?v=68',
-  './crossrefs.js',
-  './bom_inverse_crossrefs.js?v=1',
+  /* crossrefs.js (785 KB) and bom_inverse_crossrefs.js (632 KB) were precached
+     here and are no longer fetched by anything: both are split per book into
+     crossrefs/<book>.js and inverse_crossrefs/<book>.js by
+     tools/build_crossref_chunks.js, and arrive with the book like the verses. */
   './topical_guide.js?v=3',
   './images/cover-dual.jpg',
   './images/cover-hebrew.jpg',
@@ -26,7 +28,12 @@ const ASSETS = [
 ];
 
 function isVerseScript(pathname) {
-  return /\/verses\/[^/]+\.js$/i.test(pathname);
+  /* The cross-reference chunks are the same kind of thing as the verse files —
+     generated per-book data, keyed by the deploy — so they take the same
+     cache-first-with-background-refresh path instead of falling through to the
+     network on every page turn into a new book. */
+  return /\/verses\/[^/]+\.js$/i.test(pathname) ||
+         /\/(crossrefs|inverse_crossrefs)\/[^/]+\.js$/i.test(pathname);
 }
 
 self.addEventListener('message', function (e) {

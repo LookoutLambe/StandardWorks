@@ -46,6 +46,13 @@ rsync -a --delete --delete-excluded \
    # and nt.html still load it with a plain tag for the JST marks. ` \
   --exclude='/ot_crossrefs.js'   --exclude='/nt_crossrefs.js' \
   --exclude='/dc_crossrefs.js'   --exclude='/pgp_crossrefs.js' \
+  `# ...and the Book of Mormon's two, split into bom/crossrefs/<book>.js and
+   # bom/inverse_crossrefs/<book>.js by the same generator. 1.4 MB. ` \
+  --exclude='/bom/crossrefs.js'  --exclude='/bom/bom_inverse_crossrefs.js' \
+  `# ...and the Book of Mormon's two, split into bom/crossrefs/<book>.js and
+   # bom/inverse_crossrefs/<book>.js. NOT anchored at the root: these live in
+   # bom/, and the excludes below must not catch bom/crossrefs/ the directory. ` \
+  --exclude='/bom/crossrefs.js'  --exclude='/bom/bom_inverse_crossrefs.js' \
   `# build-time only: nothing on a page or in a service worker asks for these ` \
   --exclude='/tools/' \
   --exclude='/scripts/' \
