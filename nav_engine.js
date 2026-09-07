@@ -1517,6 +1517,25 @@
      reader_ui.js / bom.html. If they ever probed differently, Back and the
      bookmark would disagree about where you were, which is worse than
      either being wrong on its own. */
+  /* THE JST'S ID IS A FILE POSITION, NOT A CHAPTER. jstgen-ch2 IS JST Genesis
+     9, and the page's own header says so — but a label built by stripping the
+     prefix reads "Genesis 2", so the way back named a chapter that does not
+     exist while the header above it said 9. jst_refmap.js already holds that
+     mapping for references; read it backwards for the label. */
+  var _jstLabelBy = null;
+  function chapterLabel(volKey, book, chap) {
+    if (volKey === 'jst') {
+      if (!_jstLabelBy) {
+        _jstLabelBy = {};
+        var m = window._jstRefMap || {};
+        for (var k in m) if (!_jstLabelBy[m[k]]) _jstLabelBy[m[k]] = k;
+      }
+      if (_jstLabelBy[chap]) return _jstLabelBy[chap];
+    }
+    var chNum = String(chap).replace(book.prefix, '');
+    return book.en + (book.ch > 1 ? ' ' + chNum : '');
+  }
+
   function currentVerseNum() {
     if (!_config || _config.hub || !_config.volume) return 0;
     var chap = _config.currentChapter;
@@ -1558,8 +1577,16 @@
     var kp = (probe.getAttribute('data-verse-key') || '').split('|');
     var vNum = kp.length === 3 ? parseInt(kp[2], 10) : 0;
     if (!vNum) return 0;
+    /* The guard rejects a probe that landed in some OTHER chapter's panel, by
+       comparing the key's middle field against the chapter number. That field
+       is not always the chapter: in the D&C a section IS the book, every id
+       ends "-ch1", and the verse key reads "D&C|20|5" — so 20 was compared
+       against 1 and every section lost its verse, which is why the way back
+       offered "Section 20" and landed at the top of it. The book table already
+       knows the section number; ask it rather than parsing the id. */
     var chNum = chap.replace(book.prefix, '');
-    if (kp[1] && String(kp[1]) !== String(chNum)) return 0;
+    var want = book.secNum ? String(book.secNum) : String(chNum);
+    if (kp[1] && String(kp[1]) !== want) return 0;
     return vNum;
   }
 
@@ -1572,8 +1599,7 @@
     var vNum = currentVerseNum();
     if (!vNum) return;
     var chNum = chap.replace(book.prefix, '');
-    var label = book.en;
-    if (book.ch > 1) label += ' ' + chNum;
+    var label = chapterLabel(_config.volume, book, chap);
     var vol = VOLUMES[_config.volume];
     var hash = buildHash(_config.volume, chap);
     var vSuffix = _config.volume === 'bom' ? ':' + vNum : '&v=' + vNum;
@@ -1977,7 +2003,7 @@
     } catch (e) {}
     if (!v) v = currentVerseNum();     // no bookmark yet: the probe is still worth a try
     var chNum = chap.replace(book.prefix, '');
-    var label = book.en + (book.ch > 1 ? ' ' + chNum : '') + (v ? ':' + v : '');
+    var label = chapterLabel(_config.volume, book, chap) + (v ? ':' + v : '');
     _returnTo = { volume: _config.volume, chapter: chap, verse: v, label: label };
     /* Persist it. A cross-volume reference loads a different page, and the
        in-memory copy does not survive that; the destination page reads this. */
