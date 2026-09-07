@@ -6464,7 +6464,8 @@ function openXrefPanel(ref, sourceVerseKey, hebrewRoot) {
       var card = document.createElement('div');
       card.className = 'xref-ref-card';
 
-      var titleDiv = xrefTitleRow(fullRef, parseBomRef(fullRef));
+      var parsed = parseBomRef(fullRef);
+      var titleDiv = xrefTitleRow(fullRef, parsed);
 
       card.appendChild(titleDiv);
 
@@ -6553,12 +6554,19 @@ function openRootXrefPanel(root) {
       (e.c || []).forEach(function(n) { total += n; });
       (e.vc || []).forEach(function(n) { verses += n; });
       if (!total) return;
+      /* Above the generator's reference cap the file holds per-book counts, not
+         verse references, so this opened a panel with nothing on it to read or
+         tap after promising "All 2,779 occurrences". RootScorecard.listable()
+         draws that line once; ask it rather than keeping the number here too. */
+      if (window.RootScorecard.listable && !window.RootScorecard.listable(total)) return;
       if (refsContainer.querySelector('.rsc-occ-card')) return;
       var card = document.createElement('div');
       card.className = 'xref-ref-card rsc-occ-card';
       card.style.cssText = 'cursor:pointer;';   /* paper styling lives in reader.css (.rsc-occ-card) */
       card.innerHTML = '<div class="rsc-occ-title">' +
-        'All ' + total + ' occurrences in ' + verses + ' verses \u2192</div>' +
+        'All ' + (window.RootScorecard.num ? RootScorecard.num(total) : total) +
+        ' occurrences in ' + (window.RootScorecard.num ? RootScorecard.num(verses) : verses) +
+        ' verses \u2192</div>' +
         '<div style="opacity:0.75;font-size:0.85em;margin-top:2px;">' +
         'every place this root appears across the scriptures</div>';
       card.addEventListener('click', function(ev) {
@@ -6657,7 +6665,8 @@ function openRootXrefPanel(root) {
       var card = document.createElement('div');
       card.className = 'xref-ref-card';
 
-      var titleDiv = xrefTitleRow(u.refText, parseBomRef(u.refText));
+      var parsed = parseBomRef(u.refText);
+      var titleDiv = xrefTitleRow(u.refText, parsed);
 
       card.appendChild(titleDiv);
 
@@ -6720,6 +6729,21 @@ function closeXrefPanel() {
 
    nav_engine owns the book table, the chapter ids, the per-volume deep-link
    syntax and the return point, so the outward trip is handed to it whole. */
+/* parseScriptureRef only matches the abbreviation table exactly, and the
+   reference data is not consistent about the abbreviating period — "Gen 15:6"
+   sits beside "Gen. 15:6" and only the second one resolved, so the first was
+   rendered inert. Try the table, then the same name with a period, then the
+   full book name; anything still unknown falls through and NavEngineRefHref
+   declines it, which is what keeps "TG Faith" a plain span. */
+function xrefRefKey(label) {
+  var k = parseScriptureRef(label);
+  if (k) return k;
+  var m = String(label || '').replace(/\u00a0/g, ' ').trim().match(/^(.+?)\s+(\d+):(\d+)/);
+  if (!m) return null;
+  var book = m[1].trim();
+  return (_abbrToFullBook[book] || _abbrToFullBook[book + '.'] || book) + '|' + m[2] + '|' + m[3];
+}
+
 function xrefTitleRow(refText, parsed) {
   var titleDiv = document.createElement('div');
   titleDiv.className = 'xref-ref-title';
@@ -6729,7 +6753,7 @@ function xrefTitleRow(refText, parsed) {
     href = parsed.hash;
     go = function () { closeXrefPanel(); navigateToXrefVerse(parsed); };
   } else {
-    var k = parseScriptureRef(label);                 // "Isa. 53:5" -> "Isaiah|53|5"
+    var k = xrefRefKey(label);                        // "Isa. 53:5" -> "Isaiah|53|5"
     var kp = k ? k.split('|') : null;
     var u = kp && typeof window.NavEngineRefHref === 'function'
       ? window.NavEngineRefHref(kp[0], kp[1], kp[2]) : '';
