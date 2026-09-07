@@ -247,8 +247,6 @@ body:not(.dual-mode) .verse > .word-flow { width: 100%; }
 #page {
   --t0: 0.75em;    /* the under-word tier: gloss + translit  12/16 */
   --t1: 0.94em;    /* verse numerals, small labels           15/16 */
-  --t2: 1.19em;    /* English body, subtitles            19/16 */
-  --t3: 1.50em;    /* section heads                      24/16 */
   /* The Hebrew was 1.875em (30/16) and only ~3 words fitted on a phone
      line. Density has to come from HERE: --t0 is already exactly 12px at
      100%, the legibility floor, so the gloss cannot give anything back —
@@ -782,18 +780,13 @@ body {
   /* The semantic layer the reader consumes. Each one points at a system
        token, so these follow the theme without a second definition. */
   --gold-deep: var(--here);
-  --gold: var(--on-chrome);
   --gold-bright: var(--on-chrome);
   --gold-pale: var(--on-chrome-2);
-  --label-gold: var(--here);
   --qq: var(--signal);
   --qq-bright: var(--signal-chrome);
   --tap: var(--here);
   --tap-bright: var(--here-chrome);
   --navy: var(--chrome);
-  --navy-2: #243652;
-  --navy-line: var(--chrome-line);
-  --navy-line-dim: #22334C;
   --surface-sunken: var(--chrome-2);
   --surface-0: var(--chrome);
   --surface-1: #22334C;
@@ -803,11 +796,8 @@ body {
   --on-surface: var(--on-chrome);
   --on-surface-muted: var(--on-chrome-2);
   --on-surface-accent: var(--here-chrome);
-  --paper-0: var(--paper);
-  --paper-1: var(--paper-2);
   --on-paper: var(--ink);
   --on-paper-muted: var(--ink-3);
-  --on-paper-accent: var(--here);
   --panel-ground: var(--panel);
   --card-bg: var(--card);
   --card-title: var(--ink);
@@ -823,7 +813,6 @@ body {
   --chrome-bg: var(--chrome);
   --chrome-gold: var(--on-chrome);
   --chrome-ink: var(--on-chrome);
-  --chrome-muted: var(--on-chrome-2);
   --sw-navy: var(--chrome);
   --sw-navy-hover: color-mix(in srgb, var(--here-chrome) 14%, var(--chrome));
   --sw-gold: var(--on-chrome);
@@ -892,7 +881,6 @@ body {
   color: var(--ink);
   font-family: 'David Libre', serif;
   min-height: 100vh;
-  --sw-mode-row-h: 0px;
 }
 
 
@@ -2192,24 +2180,14 @@ body.dark-mode #glossary-panel {
   --t-small: 0.8125em;
   --t-body: 0.9375em;
   --t-large: 1.1875em;
-  --t-title: 1.5em;
-  --t-heb: 1.875em;
   --t-display: 2.375em;
-  --s1: 4px;
-  --s2: 8px;
-  --s3: 12px;
   --s4: 16px;
-  --s5: 24px;
-  --s6: 32px;
-  --s7: 48px;
-  --r-bar: 0;
   --r-control: 8px;
   --r-card: 12px;
   --r-sheet: 18px;
   --e1: 0 1px 2px rgba(26,26,26,.04), 0 4px 14px rgba(26,26,26,.05);
   --e2: 0 2px 4px rgba(26,26,26,.05), 0 10px 26px rgba(26,26,26,.09);
   --e3: 0 6px 18px rgba(26,26,26,.10), 0 20px 54px rgba(26,26,26,.18);
-  --z-base: 0;
   --z-raised: 10;
   --z-chrome: 100;
   --z-search: 150;

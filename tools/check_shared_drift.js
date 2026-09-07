@@ -256,6 +256,44 @@ for (const name of ['_paintWordAnnotation', 'applyAnnotationToWord']) {
                    ' shared invariants');
 }
 
+/* ── The cross-reference chunks are reachable ──────────────────────────────
+   THE FAILURE THIS CATCHES IS SILENT. tools/build_verse_manifests.js rewrites
+   manifest.js wholesale, so running it without build_crossref_chunks.js after
+   drops the crossrefs[] key. Nothing errors: reader_core reports the volume as
+   having no chunks, crossrefs_engine falls back to a whole <vol>_crossrefs.js
+   that sync-www.sh no longer ships, the fetch 404s into its own onerror, and
+   every cross-reference marker in the volume just stops appearing. */
+{
+  const fs2 = require('fs');
+  let bad = 0;
+  for (const vol of ['ot', 'nt', 'dc', 'pgp']) {
+    const manPath = path.join(ROOT, vol + '_verses', 'manifest.js');
+    if (!fs2.existsSync(manPath)) continue;
+    let man;
+    try {
+      man = new Function('window',
+        fs2.readFileSync(manPath, 'utf8') + ';return window.READER_VERSE_MANIFEST;')({});
+    } catch (e) { man = null; }
+    const listed = (man && man.crossrefs) || [];
+    if (!listed.length) {
+      bad++;
+      fail(vol + '_verses/manifest.js has no crossrefs[] — every cross-reference\n' +
+           '        marker in the ' + vol.toUpperCase() + ' would silently disappear.\n' +
+           '        Fix: node tools/build_crossref_chunks.js (it must run AFTER\n' +
+           '        build_verse_manifests.js, which rewrites the manifest wholesale).');
+      continue;
+    }
+    const missing = listed.filter(f => !fs2.existsSync(path.join(ROOT, vol + '_crossrefs', f)));
+    if (missing.length) {
+      bad++;
+      fail(vol + '_verses/manifest.js lists ' + missing.length + ' cross-reference chunk(s)\n' +
+           '        that do not exist (' + missing.slice(0, 3).join(', ') + ').\n' +
+           '        Fix: node tools/build_crossref_chunks.js');
+    }
+  }
+  if (!bad) ok('every volume\u2019s cross-reference chunks are listed and present');
+}
+
 if (failures) {
   console.error('[drift] ' + failures + ' shared-code drift problem(s). Commit blocked.');
   process.exit(1);

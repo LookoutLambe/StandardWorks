@@ -53,7 +53,7 @@ var _abbrToFullBook = Object.assign({}, (window.SWXref || {}).BOOK_ABBREV,
     'Psalms': { page: 'ot.html', hash: function(c) { return 'psalms-' + c; } },
     'Proverbs': { page: 'ot.html', hash: function(c) { return 'proverbs-' + c; } },
     'Ecclesiastes': { page: 'ot.html', hash: function(c) { return 'ecclesiastes-' + c; } },
-    'Song of Solomon': { page: 'ot.html', hash: function(c) { return 'songofsolomon-' + c; } },
+    'Song of Songs': { page: 'ot.html', hash: function(c) { return 'songofsolomon-' + c; } },
     'Isaiah': { page: 'ot.html', hash: function(c) { return 'isaiah-' + c; } },
     'Jeremiah': { page: 'ot.html', hash: function(c) { return 'jeremiah-' + c; } },
     'Lamentations': { page: 'ot.html', hash: function(c) { return 'lamentations-' + c; } },
@@ -264,7 +264,7 @@ function parseScriptureRef(refText) {
     'Psalms': { dir: 'ot_verses', file: 'psa', chPfx: 'psa' },
     'Proverbs': { dir: 'ot_verses', file: 'pro', chPfx: 'pro' },
     'Ecclesiastes': { dir: 'ot_verses', file: 'ecc', chPfx: 'ecc' },
-    'Song of Solomon': { dir: 'ot_verses', file: 'sos', chPfx: 'sos' },
+    'Song of Songs': { dir: 'ot_verses', file: 'sos', chPfx: 'sos' },
     'Isaiah': { dir: 'ot_verses', file: 'isa', chPfx: 'isa' },
     'Jeremiah': { dir: 'ot_verses', file: 'jer', chPfx: 'jer' },
     'Lamentations': { dir: 'ot_verses', file: 'lam', chPfx: 'lam' },
@@ -558,16 +558,26 @@ function parseScriptureRef(refText) {
   }
 
   // ── Load cross-references ──
+  /* THE MAP ARRIVES A BOOK AT A TIME. It used to be one whole-corpus file per
+     volume, so this ran once over everything and latched _crossrefsLoaded.
+     tools/build_crossref_chunks.js splits it per book now, which means this is
+     called again each time a chunk lands — it must fold the new keys in
+     without rebuilding what is already here, and without dropping the markers
+     already drawn. Keys only ever arrive; a chunk never revises one. */
+  var _foldedKeys = Object.create(null);
   function loadCrossRefs() {
-    if (window._crossrefsLoaded) return;
     if (!window._volumeCrossrefsData) {
       console.warn('Cross-refs: No data found (window._volumeCrossrefsData not set)');
       return;
     }
     // Filter out TG (Topical Guide) entries and TG refs within other entries
     var raw = window._volumeCrossrefsData;
-    var filtered = {};
+    var filtered = window._crossrefMap || (window._crossrefMap = {});
+    var added = 0;
     for (var key in raw) {
+      if (_foldedKeys[key]) continue;
+      _foldedKeys[key] = 1;
+      added++;
       var entries = raw[key];
       var kept = [];
       for (var i = 0; i < entries.length; i++) {
@@ -587,19 +597,30 @@ function parseScriptureRef(refText) {
       }
       if (kept.length > 0) filtered[key] = kept;
     }
-    window._crossrefMap = filtered;
     window._crossrefsLoaded = true;
-    console.log('Cross-references loaded:', Object.keys(window._crossrefMap).length, 'verses');
-    seedRootXrefsFromData();
+    if (!added) return;                 // nothing new: the markers already stand
+    console.log('Cross-references loaded:', Object.keys(window._crossrefMap).length, 'verses',
+                '(+' + added + ')');
+    seedRootXrefsFromData();            // idempotent per verse: only new keys are indexed
     addCrossRefMarkers();
   }
+  /* Each chunk calls this as it lands — see tools/build_crossref_chunks.js. It
+     is defined on window so a chunk that arrives before this file has run can
+     simply skip it: the idle kick below folds in whatever has accumulated. */
+  window.__swCrossrefsArrived = function () { if (adoptVolumeData()) loadCrossRefs(); };
 
   // ── Seed the root→refs index from the full verse DATA (not just rendered DOM) ──
   // Makes "Cross-References for root" in the word popup deterministic on first
   // load instead of depending on which chapters the session happened to render.
-  var _rootXrefsSeeded = false;
+  /* Seeded PER VERSE, not once for the volume. Two things arrive late now — a
+     book's verses (VolumeLoader) and its cross-reference chunk — so this runs
+     again on each, and a boolean latch would either freeze the index at
+     whatever was loaded first or, if simply reset, push every root entry a
+     second time. Recording the verse keys already folded in makes re-running
+     exact and cheap. A verse is marked only once its refs are actually in
+     hand, so one that is rendered before its chunk lands is picked up later. */
+  var _seededVerseKeys = Object.create(null);
   function seedRootXrefsFromData() {
-    if (_rootXrefsSeeded) return;
     if (!window._verseRegistry || !window.getBookChapter || !window.getRoot) return;
     var map = window._crossrefMap || {};
     try {
@@ -611,6 +632,8 @@ function parseScriptureRef(refText) {
           var key = bk.book + '|' + bk.chapter + '|' + (vi + 1);
           var refs = map[key];
           if (!refs || !refs.length) continue;
+          if (_seededVerseKeys[key]) continue;
+          _seededVerseKeys[key] = 1;
           var words = reg.verses[vi].words || [];
           var glosses = [];
           for (var wi = 0; wi < words.length; wi++) {
@@ -634,7 +657,6 @@ function parseScriptureRef(refText) {
           }
         }
       }
-      _rootXrefsSeeded = true;
     } catch (e) { console.warn('CrossRefs: root seed failed', e); }
   }
 
@@ -733,8 +755,9 @@ function parseScriptureRef(refText) {
         }
 
         // Index by Hebrew root (legacy fallback — skipped when the data seed
-        // ran, which indexes every verse once and keeps counts stable)
-        if (!_rootXrefsSeeded && hwEl && window.getRoot) {
+        // ran, which indexes every verse once and keeps counts stable). The
+        // seed is per verse now, so the test is too: this verse, not the volume.
+        if (!_seededVerseKeys[key] && hwEl && window.getRoot) {
           var root = window.getRoot(hwEl.textContent);
           if (root) {
             if (!window._rootXrefs[root]) window._rootXrefs[root] = [];
@@ -1370,7 +1393,15 @@ function parseScriptureRef(refText) {
     return false;
   }
 
+  /* A CHUNKED VOLUME NEVER FETCHES THE WHOLE MAP. adoptVolumeData() goes true
+     the moment the first chunk lands, so it cannot be the gate here — the gate
+     is whether the manifest lists chunks at all. Volumes without them (and any
+     page still carrying static verse tags) keep the single-file path unchanged. */
   function ensureCrossrefData(cb) {
+    if (window.__swHasCrossrefChunks && window.__swHasCrossrefChunks()) {
+      window.__swEnsureCrossrefsRendered(function () { adoptVolumeData(); cb(); });
+      return;
+    }
     if (adoptVolumeData()) { cb(); return; }
     var file = crossrefDataFile();
     if (!file) { cb(); return; }          // e.g. the JST ships no crossref data
@@ -1385,6 +1416,18 @@ function parseScriptureRef(refText) {
   function kickCrossRefs() {
     ensureCrossrefData(function () { loadCrossRefs(); });
   }
+
+  /* A chapter rendered after the first idle pass — a page turn into another
+     book, or a deep link that lands mid-volume — brings its own chunk.
+     reader_ui.js calls this from _ensureChapterRendered, at idle, because a
+     marker is decoration over a chapter that is already readable. */
+  window.__swCrossrefsForChapter = function (chapId) {
+    if (!chapId || !window.__swHasCrossrefChunks || !window.__swHasCrossrefChunks()) return;
+    window.__swEnsureCrossrefs(chapId, function () {
+      if (adoptVolumeData()) loadCrossRefs();
+      addCrossRefMarkers();
+    });
+  };
 
   function scheduleCrossRefs() {
     if ('requestIdleCallback' in window) requestIdleCallback(kickCrossRefs, { timeout: 3000 });

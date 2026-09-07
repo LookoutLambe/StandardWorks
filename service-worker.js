@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-09-07T17-15-31';
+const BUILD_ID = '2026-09-07T17-47-23';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -48,12 +48,6 @@ const CORE_ASSETS = [
   '/StandardWorks/reader_core.js',
   '/StandardWorks/reader_ui.js',
   '/StandardWorks/fonts/david_libre.css',
-  '/StandardWorks/fonts/davidlibre-400-hebrew.woff2',
-  '/StandardWorks/fonts/davidlibre-400-latin.woff2',
-  '/StandardWorks/fonts/davidlibre-500-hebrew.woff2',
-  '/StandardWorks/fonts/davidlibre-500-latin.woff2',
-  '/StandardWorks/fonts/davidlibre-700-hebrew.woff2',
-  '/StandardWorks/fonts/davidlibre-700-latin.woff2',
     '/StandardWorks/root_concordance.js',
     '/StandardWorks/attested_forms.js',
     '/StandardWorks/strongs_lookup.js',
@@ -61,10 +55,11 @@ const CORE_ASSETS = [
     '/StandardWorks/interlinear_gloss.js',
     '/StandardWorks/version.json',
     '/StandardWorks/sw_register.js',
-    '/StandardWorks/ot_crossrefs.js',
-    '/StandardWorks/nt_crossrefs.js',
-    '/StandardWorks/dc_crossrefs.js',
-    '/StandardWorks/pgp_crossrefs.js',
+    /* The four <vol>_crossrefs.js monoliths were precached here — 2.3 MB, of
+       which the OT alone was 1.24 MB — to mark up whichever chapter the reader
+       opened. Split per book by tools/build_crossref_chunks.js and fetched
+       with the book, like the verse and heading chunks below.
+       jst_crossrefs.js stays: 9 KB, no chunks, still a plain tag on ot/nt. */
     '/StandardWorks/jst_crossrefs.js',
     /* The four <vol>_heading_words.js monoliths were precached here and are
        no longer fetched by anything: chapter summaries come from
@@ -177,7 +172,11 @@ function networkFirst(request, timeoutMs) {
 
 /** Verse payloads and English chunks — large; cache-first with background refresh, keyed by the deploy (CACHE_NAME). */
 function isVerseAssetPath(pathname) {
-  return /\/(ot|nt|pgp|jst|dc|bom)_(verses|english)\//.test(pathname) ||
+  /* headings/ and crossrefs/ are the same kind of thing as verses/ and
+     english/ — generated per-book chunks, keyed by the deploy — but were
+     falling through to the generic network-first branch, so every page turn
+     into a new book waited on the network for its chapter summary. */
+  return /\/(ot|nt|pgp|jst|dc|bom)_(verses|english|headings|crossrefs)\//.test(pathname) ||
     /\/bom\/scripture_verses\.js$/.test(pathname) ||
     /\/bom\/verses\//.test(pathname) ||
     /\/bom\/(official_verses|crossrefs|chapter_headings|chapter_headings_heb|topical_guide|roots_glossary|bom_book_loader|bom_lazy_assets)\.js$/.test(pathname);
@@ -196,7 +195,6 @@ function isShellUIPath(pathname) {
     /\/sw_register\.js$/i.test(pathname) ||
     /\/interlinear_gloss\.js$/i.test(pathname) ||
     /\/(site_chrome|sw_theme|nav_engine|reader|reader_ui|root_scorecard|verse_search|xref_study_panel|notes_engine|crossrefs_engine)\.(js|css)$/i.test(pathname) ||
-    /\/(ot|nt|dc|pgp)_crossrefs\.js$/i.test(pathname) ||
     /\/strongs_(lookup|roots)\.js$/i.test(pathname);
 }
 

@@ -68,6 +68,16 @@ for (const { vol, page } of VOLS) {
        - the D&C has no book table at all; "D&C 76" is section 76, id dc76-ch1
      All three are handled here rather than by dropping what does not match. */
   const ALIAS = { 'Song of Solomon': 'Song of Songs' };
+  /* THE ALIAS HAS TO REACH THE KEY, NOT JUST THE FILE. It was used only to
+     find which chunk a heading belonged in, so sos.js shipped correctly — but
+     still keyed "Song of Solomon 1", while the reader builds its lookup from
+     READER.books[].en and asks for "Song of Songs 1". Every chapter of that
+     book showed no summary at all. The book has one name here: the site's. */
+  function canonKey(key) {
+    const mm = key.match(/^(.*?)\s+(\d+)$/);
+    if (!mm) return key;
+    return (ALIAS[mm[1]] || mm[1]) + ' ' + mm[2];
+  }
   function fileForKey(key) {
     const mm = key.match(/^(.*?)\s+(\d+)$/);
     if (!mm) return null;
@@ -88,7 +98,7 @@ for (const { vol, page } of VOLS) {
       const f = fileForKey(key);
       if (!f) { unmapped.push(key); continue; }
       (byFile[f] = byFile[f] || {});
-      (byFile[f][s.name] = byFile[f][s.name] || {})[key] = data[s.name][key];
+      (byFile[f][s.name] = byFile[f][s.name] || {})[canonKey(key)] = data[s.name][key];
       mapped++;
     }
   }

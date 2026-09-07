@@ -2,12 +2,58 @@
    SEFER haKODESH — THE DESIGN SYSTEM
    Approved 2026-09-03. Everything below descends from one rule:
 
-        PAPER IS FOR READING.  NAVY IS FOR TOOLS.
+        PAPER IS FOR READING.  NAVY IS THE FRAME AROUND IT.
 
-   The text lives on paper and owns the screen. Every instrument — bars,
-   drawers, panels, the word card — is navy and gets out of the way.
-   Nothing crosses that line. When a new component appears, that rule
-   already decides most of it.
+   The text lives on paper and owns the screen. Navy is the frame: the
+   chrome bars, and the header of every panel. What a panel CONTAINS is
+   paper too — the drawer's book list, the Study panel's reference cards,
+   the Root Glossary's entries, the word card. A tool that swallows the
+   screen in navy competes with the reading; a navy header over a paper
+   body says "this is an instrument" without taking the page away.
+
+   (This rule read "NAVY IS FOR TOOLS — every instrument is navy" until
+   2026-09-07. The panels had been paper-bodied for some time by then;
+   the sentence had simply not caught up, and a design rule that no
+   longer describes the thing is worse than none, because it is quoted
+   in good faith. What is written here now is what is on screen.)
+
+   ── THE SURFACE LADDER ────────────────────────────────────────────
+   Four surfaces, in this order, and nothing else. Adjacent surfaces sit
+   close in value on purpose — a hairline --rule separates them, not a
+   contrast step — because a page of scripture should not look like a
+   dashboard of boxes.
+
+        page    --paper     the reading ground
+        panel   --paper-2   recessed: drawers, panels, sheets
+        card    --card      raised:   cards, the word card, entries
+        chrome  --chrome    the frame: bars and panel headers
+
+   The trap this ladder exists to prevent: in sepia the card and the page
+   were L 94.4 and 93.3 — a difference real in the numbers and invisible
+   to the eye, so the card read as the same colour as the page it sat on.
+   Light separates a card by WARMTH because its paper is near-white;
+   sepia's paper is already warm, so only lightness can do it there. A new
+   theme must be checked the same way: pick the axis its ground leaves free.
+
+   ── WHAT GOLD MEANS ───────────────────────────────────────────────
+   Two things, and no others:  the Hebrew headword,  and the way through
+   (a reference you can follow). Labels, chips, secondary links and body
+   text are ink. Gold applied to everything at once is what made nothing
+   stand out, because everything did.
+
+   On paper gold is --here (deep, #8E6215). On navy it is --here-chrome
+   (bright, #DDB768). A bright accent is a MARK colour on dark, never a
+   FILL: a full-width slab of #DDB768 glares, and white on it measures
+   1.97:1. Outline it instead — the same gold, used as a mark, reads 8.4:1.
+
+   ── ONE MORE THING WORTH KNOWING ──────────────────────────────────
+   56 colour token names resolve to 14 actual colours: nine names for the
+   deep gold alone, six for the cream on navy, four for the navy. Several
+   lie outright — --gold-bright is #F3EDE2, a near-white, and --tap-blue
+   is the gold. They are aliases kept so nothing breaks, not choices. When
+   you add a rule, reach for the four surface names, --ink / --ink-2 /
+   --ink-3, --on-chrome / --on-chrome-2, and the two golds. Everything
+   else is history.
    ══════════════════════════════════════════════════════════════════════ */
 
 
@@ -57,8 +103,6 @@ body.dark-mode {
   --on-chrome:   #E7E0D4;
   --on-chrome-2: #A79C8C;
   --here-chrome: #E6C87E;
-  --navy-2:        #22304A;
-  --navy-line-dim: #1B2536;
   --surface-1: #1B2536;
   --surface-2: #22304A;
   --surface-3: #2A3B58;
@@ -98,7 +142,6 @@ body.dark-mode {
   --e1: 0 1px 2px rgba(0,0,0,.28), 0 4px 14px rgba(0,0,0,.30);
   --e2: 0 2px 4px rgba(0,0,0,.32), 0 10px 26px rgba(0,0,0,.40);
   --e3: 0 6px 18px rgba(0,0,0,.40), 0 20px 54px rgba(0,0,0,.55);
-  --gold: var(--on-chrome);
   --tap: var(--here-chrome);
   /* only the values that do NOT follow --paper / --ink need restating */
   --rule: #342E26;
@@ -407,7 +450,6 @@ body:not(.dark-mode) #annotations-panel {
   --gold-pale:      var(--ink-3);     /* muted ON PAPER                     */
   --tap-bright:     var(--tap);
   --navy:           var(--panel-ground);
-  --navy-2:         var(--card-bg);
   background: var(--panel-ground) !important;
   color: var(--on-paper) !important;
   border-right-color: rgba(26,26,26,.10) !important;

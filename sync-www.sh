@@ -40,6 +40,12 @@ rsync -a --delete --delete-excluded \
   --exclude='/pgp_chapter_headings.js'    --exclude='/pgp_chapter_headings_heb.js' \
   --exclude='/ot_heading_words.js'  --exclude='/nt_heading_words.js' \
   --exclude='/dc_heading_words.js'  --exclude='/pgp_heading_words.js' \
+  `# ...and the same for the cross-reference map, split per book by
+   # tools/build_crossref_chunks.js into <vol>_crossrefs/<book>.js. 2.3 MB.
+   # jst_crossrefs.js is NOT excluded: it is 9 KB, has no chunks, and ot.html
+   # and nt.html still load it with a plain tag for the JST marks. ` \
+  --exclude='/ot_crossrefs.js'   --exclude='/nt_crossrefs.js' \
+  --exclude='/dc_crossrefs.js'   --exclude='/pgp_crossrefs.js' \
   `# build-time only: nothing on a page or in a service worker asks for these ` \
   --exclude='/tools/' \
   --exclude='/scripts/' \

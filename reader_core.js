@@ -343,6 +343,16 @@ var VolumeLoader = (function() {
     var m = manifest();
     return (m && m.headings && m.headings.indexOf(f) >= 0) ? window.READER.vol + '_headings/' + f : null;
   }
+  /* The cross-reference map, split the same way by tools/build_crossref_chunks.js.
+     It is deliberately NOT part of ensure(): markers are decoration over a
+     chapter that is already readable, so the chunk is fetched at idle after
+     the render (crossrefs_engine asks for it) and never delays a page turn.
+     The OT's map was 1.24 MB in one file — 41% of that page's bytes — to mark
+     up one chapter; the largest single book is now 115 KB. */
+  function crossrefSrc(f) {
+    var m = manifest();
+    return (m && m.crossrefs && m.crossrefs.indexOf(f) >= 0) ? window.READER.vol + '_crossrefs/' + f : null;
+  }
   function loadAll(srcs, cb) {
     var n = srcs.length; if (!n) { cb(); return; }
     srcs.forEach(function(src) { loadScript(src, function() { if (--n === 0) cb(); }); });
@@ -376,10 +386,36 @@ var VolumeLoader = (function() {
     srcs = srcs.concat(m.files.map(headingSrc).filter(Boolean));
     loadAll(srcs, cb);
   }
-  return { fileFor: fileFor, has: has, ensure: ensure, ensureEnglish: ensureEnglish, ensureAll: ensureAll };
+  /** The cross-reference chunk for one chapter's book — cb runs either way. */
+  function ensureCrossrefs(chapId, cb) {
+    var f = fileFor(chapId), src = f && crossrefSrc(f);
+    if (!src) { cb(); return; }
+    loadScript(src, cb);
+  }
+  /** The chunks of every chapter already rendered — the first idle pass, and a
+      Dual/theme reload that re-renders several panels before the engine wakes. */
+  function ensureCrossrefsRendered(cb) {
+    var srcs = {};
+    Object.keys(_renderedChapters).forEach(function(id) {
+      var f = fileFor(id), c = f && crossrefSrc(f); if (c) srcs[c] = 1;
+    });
+    loadAll(Object.keys(srcs), cb);
+  }
+  /** Whether this volume ships chunks at all — the JST has no cross-references,
+      and a page with no manifest still loads the one whole file it always did. */
+  function hasCrossrefChunks() {
+    var m = manifest(); return !!(m && m.crossrefs && m.crossrefs.length);
+  }
+  return { fileFor: fileFor, has: has, ensure: ensure, ensureEnglish: ensureEnglish,
+           ensureAll: ensureAll, ensureCrossrefs: ensureCrossrefs,
+           ensureCrossrefsRendered: ensureCrossrefsRendered, hasCrossrefChunks: hasCrossrefChunks };
 })();
 // verse_search.js preloads a lazy volume through this before searching it.
 window.__swLoadAllVerses = function(cb) { VolumeLoader.ensureAll(cb || function() {}); };
+// crossrefs_engine.js asks for cross-reference chunks through these.
+window.__swEnsureCrossrefs = function(chapId, cb) { VolumeLoader.ensureCrossrefs(chapId, cb || function() {}); };
+window.__swEnsureCrossrefsRendered = function(cb) { VolumeLoader.ensureCrossrefsRendered(cb || function() {}); };
+window.__swHasCrossrefChunks = function() { return VolumeLoader.hasCrossrefChunks(); };
 
 /* PSALM 119 IS AN ACROSTIC and the printed editions say so. 176 verses in 22
    stanzas of eight, each stanza opening with the next letter of the alphabet —

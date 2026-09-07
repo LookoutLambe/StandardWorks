@@ -1569,6 +1569,13 @@ function _injectChapterHeading(chapId) {
 _ensureChapterRendered = function(chapId) {
   _origEnsureRendered(chapId);
   setTimeout(applyAllAnnotations, 50);
+  /* The cross-reference map arrives one book at a time now, so a chapter is
+     not necessarily covered by what has already loaded — ask for this book's
+     chunk and let the engine draw the markers once it lands. It falls back to
+     the plain re-mark for a volume that ships no chunks. */
+  if (typeof window.__swCrossrefsForChapter === 'function') {
+    setTimeout(function() { window.__swCrossrefsForChapter(chapId); }, 100);
+  }
   if (window._crossrefsLoaded && typeof addCrossRefMarkers === 'function') setTimeout(addCrossRefMarkers, 100);
   _injectChapterHeading(chapId);
 };

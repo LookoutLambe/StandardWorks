@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
 <head>
-<link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/davidlibre-400-hebrew.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/davidlibre-700-hebrew.woff2">
 <link rel="stylesheet" href="fonts/david_libre.css?v=2">
 
 <meta charset="UTF-8">
@@ -22,7 +20,7 @@
 <link rel="stylesheet" href="nav_engine.css?v=49">
 <link rel="stylesheet" href="site_chrome.css?v=71">
 <link rel="stylesheet" href="xref_study_panel.css?v=14">
-<link rel="stylesheet" href="reader.css?v=87">
+<link rel="stylesheet" href="reader.css?v=88">
 <style>
 *:focus-visible { outline: 2px solid var(--here); outline-offset: 2px; }
 .book-title { font-size: 2.4em; font-weight: 700; color: var(--header-bg); letter-spacing: 0.04em; margin-bottom: 2px; }
@@ -692,7 +690,7 @@ window.READER = {
 </script>
 <!-- chapter summaries (250 KB eager) are now per-book in dc_headings/,
      fetched with the book by VolumeLoader. tools/build_heading_manifests.js -->
-<script src="reader_core.js?v=20"></script>
+<script src="reader_core.js?v=21"></script>
 
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=6"></script>
@@ -707,14 +705,14 @@ window.READER = {
 <!-- Section headings (official study summaries) -->
 
 <!-- Verse data files -->
-<script src="dc_verses/manifest.js?v=2"></script>  <!-- lazy books: the verse files load on demand (reader_core.js VolumeLoader) -->
+<script src="dc_verses/manifest.js?v=3"></script>  <!-- lazy books: the verse files load on demand (reader_core.js VolumeLoader) -->
 <script src="dc_verses/dc_chron.js?v=103"></script>
 
 <!-- Cross-reference data + engine -->
 <!-- dc_crossrefs.js is fetched on idle by crossrefs_engine.js (it was 511 KB of blocking critical path) -->
-<script src="crossrefs_engine.js?v=20"></script>
+<script src="crossrefs_engine.js?v=21"></script>
 
-<script src="reader_ui.js?v=35"></script>
+<script src="reader_ui.js?v=36"></script>
 <script>
 // === D&C canon overrides (phase 2) — later function declarations win, so
 // these must load AFTER reader_ui.js: section-keyed chapter labels, the
