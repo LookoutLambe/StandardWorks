@@ -6510,6 +6510,109 @@ function openXrefPanel(ref, sourceVerseKey, hebrewRoot) {
   panel.classList.add('open');
 }
 
+/* ONE DEDUP, so the number on the card and the list in the panel cannot
+   disagree. The card labelled this link with the number of study-footnote
+   MARKERS on the root while the panel lists the unique references those
+   markers point at, so a word could promise 7 and open 16. Both numbers were
+   right about different things, and the reader only ever sees one of them.
+   openRootXrefPanel built this list inline; it is a function now, and the
+   label counts exactly what the panel will render. */
+/* Hoisted out of openRootXrefPanel along with the dedup that uses them:
+   a nested helper is invisible to a function lifted to the top level. */
+function xrefCanonKey(s) {
+  if (!s) return '';
+  var t = String(s).replace(/\u00a0/g, ' ').trim();
+  t = t.replace(/^Ex\.?\s/i, 'Ex. ');
+  t = t.replace(/^Deut\.?\s/i, 'Deut. ');
+  t = t.replace(/^Isa\.?\s/i, 'Isa. ');
+  t = t.replace(/^Ps\.?\s/i, 'Ps. ');
+  t = t.replace(/\s+/g, ' ');
+  return t.toLowerCase();
+}
+function xrefNormalizeOtLabel(s) {
+  if (!s) return s;
+  var t = String(s).replace(/\u00a0/g, ' ').trim();
+  if (/^Ex\s/i.test(t) && !/^Ex\./i.test(t)) t = t.replace(/^Ex\s/i, 'Ex. ');
+  if (/^Deut\s/i.test(t) && !/^Deut\./i.test(t)) t = t.replace(/^Deut\s/i, 'Deut. ');
+  if (/^Isa\s/i.test(t) && !/^Isa\./i.test(t)) t = t.replace(/^Isa\s/i, 'Isa. ');
+  return t;
+}
+
+function bomRootRefs(root) {
+  var entries = (window._rootXrefs && window._rootXrefs[root]) || [];
+  var seen = {};
+  var uniqueRefs = [];
+  entries.forEach(function(entry) {
+    if (entry.ref.refs) {
+      entry.ref.refs.forEach(function(r) {
+        var rNorm = r.replace(/\u00a0/g, ' ');
+        // Skip TG-prefixed entries
+        if (rNorm.indexOf('TG ') === 0) return;
+        var ck = xrefCanonKey(rNorm);
+        if (!seen[ck]) {
+          seen[ck] = true;
+          uniqueRefs.push({ refText: rNorm, word: entry.ref.text, category: entry.ref.category, verseKey: entry.verseKey });
+        }
+      });
+    }
+  });
+
+  // Tanakh parallels from roots glossary (always merged; survives stale crossrefs.js cache)
+  var glossRoot = window._rootGlossaryData && window._rootGlossaryData[root];
+  if (glossRoot && glossRoot.biblicalRefs && glossRoot.biblicalRefs.length) {
+    glossRoot.biblicalRefs.forEach(function(br, gi) {
+      var raw = (br.ref || '').replace(/\u00a0/g, ' ').trim();
+      var note = (br.note || '').trim();
+      var isDash = raw === '\u2014' || raw === '-' || raw === '\u2013';
+      var isNoteOnly = !raw || isDash;
+      var label = isNoteOnly ? '' : xrefNormalizeOtLabel(raw);
+      var dedupeKey = label ? xrefCanonKey(label) : xrefCanonKey('gloss-note-' + gi + '-' + note.slice(0, 40));
+      if (seen[dedupeKey]) return;
+      seen[dedupeKey] = true;
+      var titleLine = isNoteOnly ? note : (label || raw);
+      if (isNoteOnly && titleLine.length > 120) titleLine = titleLine.slice(0, 117) + '\u2026';
+      uniqueRefs.push({
+        refText: titleLine,
+        rawOtRef: isNoteOnly ? '' : (label || raw),
+        word: 'Tanakh',
+        category: 'cross-ref',
+        verseKey: '',
+        glossaryNote: note,
+        fromGlossary: true
+      });
+    });
+  }
+
+  return uniqueRefs;
+}
+/* What the panel will actually list. Three sections render there and all three
+   count: the deduped references, minus TG (Topical Guide text is copyrighted
+   and is skipped), plus the "Cited in Standard Works footnotes" cards, which
+   come from a different source — bom_inverse_crossrefs — and were the four the
+   first version of this count still missed. */
+function bomInverseRefCount(root) {
+  var data = window._bomInverseXrefsData;
+  if (!data) return 0;
+  var entries = (window._rootXrefs && window._rootXrefs[root]) || [];
+  var keys = [], seen = {}, n = 0;
+  entries.forEach(function (e) {
+    if (e && e.verseKey && keys.indexOf(e.verseKey) < 0) keys.push(e.verseKey);
+  });
+  keys.forEach(function (vk) {
+    if (!data[vk]) return;
+    data[vk].forEach(function (row) {
+      var id = row.dedupeId || (row.sourceKey + '|' + (row.marker || '') + '|' + (row.anchorText || ''));
+      if (seen[id]) return;
+      seen[id] = true; n++;
+    });
+  });
+  return n;
+}
+window.CrossrefsRootRefCount = function (root) {
+  return bomRootRefs(root).filter(function (u) { return u.category !== 'tg'; }).length +
+         bomInverseRefCount(root);
+};
+
 function openRootXrefPanel(root) {
   var entries = window._rootXrefs[root] || [];
   // No early return on an empty footnote set: a root can have hundreds of
@@ -6588,68 +6691,8 @@ function openRootXrefPanel(root) {
     });
   })();
 
-  function xrefCanonKey(s) {
-    if (!s) return '';
-    var t = String(s).replace(/\u00a0/g, ' ').trim();
-    t = t.replace(/^Ex\.?\s/i, 'Ex. ');
-    t = t.replace(/^Deut\.?\s/i, 'Deut. ');
-    t = t.replace(/^Isa\.?\s/i, 'Isa. ');
-    t = t.replace(/^Ps\.?\s/i, 'Ps. ');
-    t = t.replace(/\s+/g, ' ');
-    return t.toLowerCase();
-  }
-  function xrefNormalizeOtLabel(s) {
-    if (!s) return s;
-    var t = String(s).replace(/\u00a0/g, ' ').trim();
-    if (/^Ex\s/i.test(t) && !/^Ex\./i.test(t)) t = t.replace(/^Ex\s/i, 'Ex. ');
-    if (/^Deut\s/i.test(t) && !/^Deut\./i.test(t)) t = t.replace(/^Deut\s/i, 'Deut. ');
-    if (/^Isa\s/i.test(t) && !/^Isa\./i.test(t)) t = t.replace(/^Isa\s/i, 'Isa. ');
-    return t;
-  }
 
-  // Deduplicate refs (same ref text from different verses)
-  var seen = {};
-  var uniqueRefs = [];
-  entries.forEach(function(entry) {
-    if (entry.ref.refs) {
-      entry.ref.refs.forEach(function(r) {
-        var rNorm = r.replace(/\u00a0/g, ' ');
-        // Skip TG-prefixed entries
-        if (rNorm.indexOf('TG ') === 0) return;
-        var ck = xrefCanonKey(rNorm);
-        if (!seen[ck]) {
-          seen[ck] = true;
-          uniqueRefs.push({ refText: rNorm, word: entry.ref.text, category: entry.ref.category, verseKey: entry.verseKey });
-        }
-      });
-    }
-  });
-
-  // Tanakh parallels from roots glossary (always merged; survives stale crossrefs.js cache)
-  var glossRoot = window._rootGlossaryData && window._rootGlossaryData[root];
-  if (glossRoot && glossRoot.biblicalRefs && glossRoot.biblicalRefs.length) {
-    glossRoot.biblicalRefs.forEach(function(br, gi) {
-      var raw = (br.ref || '').replace(/\u00a0/g, ' ').trim();
-      var note = (br.note || '').trim();
-      var isDash = raw === '\u2014' || raw === '-' || raw === '\u2013';
-      var isNoteOnly = !raw || isDash;
-      var label = isNoteOnly ? '' : xrefNormalizeOtLabel(raw);
-      var dedupeKey = label ? xrefCanonKey(label) : xrefCanonKey('gloss-note-' + gi + '-' + note.slice(0, 40));
-      if (seen[dedupeKey]) return;
-      seen[dedupeKey] = true;
-      var titleLine = isNoteOnly ? note : (label || raw);
-      if (isNoteOnly && titleLine.length > 120) titleLine = titleLine.slice(0, 117) + '\u2026';
-      uniqueRefs.push({
-        refText: titleLine,
-        rawOtRef: isNoteOnly ? '' : (label || raw),
-        word: 'Tanakh',
-        category: 'cross-ref',
-        verseKey: '',
-        glossaryNote: note,
-        fromGlossary: true
-      });
-    });
-  }
+  var uniqueRefs = bomRootRefs(root);
 
   // Group by category (skip TG — Topical Guide entries are copyrighted)
   var groups = { 'cross-ref': [], 'gst': [], 'other': [] };
@@ -7937,6 +7980,9 @@ document.addEventListener('keydown', function(e) {
     if (e.target.closest('#sel-toolbar')) return;
     // Clicks inside the word scorecard are handled there (links use stopPropagation); don't rely on top-right ✕ only
     if (e.target.closest('#word-popup')) return;
+    /* The card OPENED this panel, so a click inside it is not "the reader moved
+       on" — it is the same study gesture continuing. */
+    if (e.target.closest('#xref-panel')) return;
     var wu = e.target.closest('.word-unit');
     if (!wu) { closePopup(); return; }
     if (e.target.closest('.verse-num')) return; // don't trigger on verse nums
@@ -8095,7 +8141,10 @@ detailHtml += '</div>';
     var directXref = wu.getAttribute('data-xref-ref');
     var directXrefKey = wu.getAttribute('data-xref-key');
     var rootXrefs = window._rootXrefs && window._rootXrefs[root];
-    var xrefCount = rootXrefs ? rootXrefs.length : 0;
+    /* COUNT WHAT THE PANEL WILL SHOW, not how many footnote markers there are. */
+    var xrefCount = !rootXrefs ? 0
+      : (typeof window.CrossrefsRootRefCount === 'function'
+          ? window.CrossrefsRootRefCount(root) : rootXrefs.length);
 
     if (directXref) {
       // Word has a direct LDS cross-reference — show link to open its xref panel
@@ -8148,7 +8197,8 @@ detailHtml += '</div>';
     if (directLink && directXref) {
       directLink.addEventListener('click', function(ev) {
         ev.stopPropagation();
-        closePopup();
+        /* THE CARD STAYS. Cross-references are a deeper view of the word the
+           card is about, not a departure from it. */
         openXrefPanel(JSON.parse(directXref), directXrefKey, root);
       });
     }
@@ -8166,7 +8216,6 @@ detailHtml += '</div>';
     if (xrefLink) {
       xrefLink.addEventListener('click', function(ev) {
         ev.stopPropagation();
-        closePopup();
         openRootXrefPanel(root);
       });
     }
@@ -8210,6 +8259,9 @@ document.addEventListener(
     if (e.target.closest('#word-popup')) return;
     if (e.target.closest('#sel-toolbar')) return;
     if (e.target.closest('.word-unit')) return;
+    /* Runs before every other handler, so without this the card was destroyed
+       by the very tap that opened the cross-reference panel. */
+    if (e.target.closest('#xref-panel')) return;
     closePopup();
   },
   true

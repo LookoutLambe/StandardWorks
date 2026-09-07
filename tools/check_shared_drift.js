@@ -212,26 +212,37 @@ for (const name of ['_paintWordAnnotation', 'applyAnnotationToWord']) {
      because a COMMENT in bom.html mentioned NavEngineFollow by name while the
      call itself had been removed — a test a comment can satisfy tests nothing. */
   const stripComments = t => t.replace(/\/\*[\s\S]*?\*\//g, ' ').replace(/^[ \t]*\/\/.*$/gm, ' ');
-  const eng = stripComments(read('crossrefs_engine.js'));
+  /* The engine side of a given behaviour is not always crossrefs_engine.js:
+     the popup's own close guards live in reader_ui.js on the five volumes,
+     while bom.html holds every one of them inline. Each invariant names the
+     file that owns it. */
+  const SRC = {
+    'crossrefs_engine.js': stripComments(read('crossrefs_engine.js')),
+    'reader_ui.js':        stripComments(read('reader_ui.js')),
+  };
   const bom = stripComments(read('bom/bom.html'));
   const INVARIANTS = [
-    ['reference hrefs come from nav_engine, not a local book table',
-     /NavEngineRefHref\s*\(/, /NavEngineRefHref\s*\(/],
-    ['following a reference marks a return point',
-     /NavEngine(?:Follow|GoRef|MarkReturn)\s*\(/, /NavEngine(?:Follow|GoRef|MarkReturn)\s*\(/],
-    ['the occurrences card respects the reference cap',
-     /RootScorecard\.listable\s*\(/, /RootScorecard\.listable\s*\(/],
-    ['a scripture reference heading is a link, not an inert span',
-     /['"]xref-ref-goto['"]/, /['"]xref-ref-goto['"]/],
+    ['crossrefs_engine.js', 'reference hrefs come from nav_engine, not a local book table',
+     /NavEngineRefHref\s*\(/],
+    ['crossrefs_engine.js', 'following a reference marks a return point',
+     /NavEngine(?:Follow|GoRef|MarkReturn)\s*\(/],
+    ['crossrefs_engine.js', 'the occurrences card respects the reference cap',
+     /RootScorecard\.listable\s*\(/],
+    ['crossrefs_engine.js', 'a scripture reference heading is a link, not an inert span',
+     /['"]xref-ref-goto['"]/],
+    ['crossrefs_engine.js', 'the reference count on the card is what the panel will list',
+     /CrossrefsRootRefCount\b/],
+    ['reader_ui.js', 'the word card survives opening the panel it launches',
+     /closest\('#xref-panel'\)\)\s*return/],
   ];
   let drifted = 0;
-  for (const [what, reEng, reBom] of INVARIANTS) {
-    const a = reEng.test(eng), b = reBom.test(bom);
+  for (const [file, what, re] of INVARIANTS) {
+    const a = re.test(SRC[file]), b = re.test(bom);
     if (a !== b) {
       drifted++;
-      fail('bom.html and crossrefs_engine.js disagree on an invariant they must share:\n' +
+      fail('bom.html and ' + file + ' disagree on an invariant they must share:\n' +
            '        "' + what + '"\n' +
-           '        crossrefs_engine.js: ' + (a ? 'yes' : 'NO') +
+           '        ' + file + ': ' + (a ? 'yes' : 'NO') +
            '   bom/bom.html: ' + (b ? 'yes' : 'NO') + '\n' +
            '        bom.html forks this UI — apply the change to both copies.');
     }

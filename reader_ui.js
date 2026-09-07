@@ -991,7 +991,14 @@ detailHtml += '</div>';
     if (true) {
       var rootXrefs = window._rootXrefs && window._rootXrefs[root];
       if (rootXrefs && rootXrefs.length > 0) {
-        detailHtml += '<br><span class="popup-xref-link">Cross-References for root (' + rootXrefs.length + ') \u2192</span>';
+        /* COUNT WHAT THE PANEL WILL SHOW. This said rootXrefs.length — the
+           number of study-footnote MARKERS on the root — while the panel lists
+           the unique references those markers point at, so אֱלֹהִים promised 8
+           and opened 13. The engine owns that dedup and is asked for the
+           figure; markers are the fallback when it has not loaded. */
+        var _xrefN = (typeof window.CrossrefsRootRefCount === 'function')
+          ? window.CrossrefsRootRefCount(root) : rootXrefs.length;
+        detailHtml += '<br><span class="popup-xref-link">Cross-References for root (' + _xrefN + ') \u2192</span>';
       }
     }
     popupDetail.innerHTML = detailHtml;

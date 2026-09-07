@@ -1110,6 +1110,50 @@
   }
 
   // ── Open aggregated root xref panel ──
+  /* ONE DEDUP, so the number on the card and the list in the panel cannot
+     disagree. The card used to label this link with the number of study-footnote
+     MARKERS on the root, while the panel shows the unique scripture references
+     those markers collectively point at: אֱלֹהִים read "Cross-References for root
+     (8)" and then opened thirteen cards. Both numbers were right about
+     different things, and the reader only ever sees one of them. */
+  function collectRootRefs(entries) {
+    var scripture = {}, helps = { tg: {}, bd: {}, other: {} }, lastBookPrefix = '';
+    (entries || []).forEach(function(e) {
+      if (!e || !e.ref || !e.ref.refs) return;
+      e.ref.refs.forEach(function(r) {
+        var rNorm = String(r || '').replace(/\u00a0/g, ' ').trim();
+        if (!rNorm) return;
+        // Resolve abbreviated continuation references like "49:1"
+        var foundPrefix = '';
+        for (var abbr in _abbrToFullBook) {
+          if (rNorm.indexOf(abbr) === 0) { foundPrefix = abbr; break; }
+        }
+        var fullRef = rNorm;
+        if (foundPrefix) lastBookPrefix = foundPrefix;
+        else if (/^\d/.test(rNorm) && lastBookPrefix) fullRef = lastBookPrefix + ' ' + rNorm;
+        var cls = classifyRefText(fullRef);
+        if (cls.type === 'scripture') {
+          if (!scripture[cls.text]) scripture[cls.text] = { key: cls.key, text: cls.text, sourceVerseKey: e.verseKey };
+        } else {
+          var bucket = (cls.type === 'tg' || cls.type === 'bd') ? cls.type : 'other';
+          if (cls.text) helps[bucket][cls.text] = true;
+        }
+      });
+    });
+    return { scripture: scripture, helps: helps };
+  }
+  /* What the panel will actually list for this root — the label asks for it
+     rather than counting markers itself. */
+  window.CrossrefsRootRefCount = function (root) {
+    var entries = (window._rootXrefs && window._rootXrefs[root]) || [];
+    if (!entries.length) return 0;
+    var agg = collectRootRefs(entries);
+    return Object.keys(agg.scripture).length +
+           Object.keys(agg.helps.tg).length +
+           Object.keys(agg.helps.bd).length +
+           Object.keys(agg.helps.other).length;
+  };
+
   function openRootXrefPanel(root) {
     var entries = window._rootXrefs[root] || [];
     // No early return on an empty footnote set: a root can have hundreds of
@@ -1194,33 +1238,8 @@
   })();
 
     // Aggregate all refs across markers (don’t drop TG/BD/etc)
-    var seenScripture = {};
-    var studyHelps = { tg: {}, bd: {}, other: {} };
-    var lastBookPrefix = '';
-    entries.forEach(function(e) {
-      if (!e || !e.ref || !e.ref.refs) return;
-      e.ref.refs.forEach(function(r) {
-        var rNorm = String(r || '').replace(/\u00a0/g, ' ').trim();
-        if (!rNorm) return;
-
-        // Resolve abbreviated continuation references for scripture abbreviations like "49:1"
-        var foundPrefix = '';
-        for (var abbr in _abbrToFullBook) {
-          if (rNorm.indexOf(abbr) === 0) { foundPrefix = abbr; break; }
-        }
-        var fullRef = rNorm;
-        if (foundPrefix) lastBookPrefix = foundPrefix;
-        else if (/^\d/.test(rNorm) && lastBookPrefix) fullRef = lastBookPrefix + ' ' + rNorm;
-
-        var cls = classifyRefText(fullRef);
-        if (cls.type === 'scripture') {
-          if (!seenScripture[cls.text]) seenScripture[cls.text] = { key: cls.key, text: cls.text, sourceVerseKey: e.verseKey };
-        } else {
-          var bucket = (cls.type === 'tg' || cls.type === 'bd') ? cls.type : 'other';
-          if (cls.text) studyHelps[bucket][cls.text] = true;
-        }
-      });
-    });
+    var agg = collectRootRefs(entries);
+    var seenScripture = agg.scripture, studyHelps = agg.helps;
 
     // Render scripture refs (unique)
     Object.keys(seenScripture).sort().forEach(function(fullRef) {
