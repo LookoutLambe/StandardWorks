@@ -577,10 +577,14 @@ body #xref-panel .xref-note-kind {
    removes directional marks wherever they appear */
 body #xref-panel .xref-ref-arr,
 body #xref-panel .arr-hw { display: none !important; }
-/* "TRANSLATION NOTE" is a section label on the PANEL ground, but was using
-   a chrome cream: 1.08:1 */
+/* "TRANSLATION NOTE" / "STUDY FOOTNOTES" is a section LABEL on the panel
+   ground. It was gold, and the Root Glossary — the panel this one is meant to
+   match — reserves gold for the Hebrew headword alone and sets its count and
+   its meaning in ink. A label is not a headword. (A second rule further down
+   already said --ink-3 and lost on specificity; it has been removed, so this
+   is the only place the label's colour is stated.) */
 body #xref-panel .xref-panel-category {
-  color: var(--here) !important;
+  color: var(--ink-3) !important;
   font-size: var(--t-micro) !important;
   letter-spacing: .16em !important;
   text-transform: uppercase !important;
@@ -1141,9 +1145,12 @@ body #word-popup .rsc-refs-link { color: var(--here) !important; }
    which is the accent for dark chrome bars and is near-invisible on paper.
    Removing the inline style removed the underline with it, so they read as
    plain grey text with no affordance; both halves belong here, not in JS. */
+/* Secondary to the filled "View all N references" button above them, and on
+   paper — so ink, underlined, not a second gold call to action competing with
+   the primary one. */
 body #word-popup .popup-xref-direct,
 body #word-popup .popup-xref-link {
-  color: var(--here) !important;
+  color: var(--ink-2) !important;
   text-decoration: underline !important;
   cursor: pointer !important;
   font-size: 0.9em !important;
@@ -1489,9 +1496,6 @@ body.dark-mode #xref-panel {
 #xref-panel .xref-panel-header h3,#xref-panel .xref-panel-word {
   color:var(--gold-bright) !important;
 }
-#xref-panel .xref-panel-category {
-  color:var(--ink-3) !important;
-}
 #xref-panel .xref-panel-close {
   color: var(--gold-bright) !important;
   opacity: 0.85;
@@ -1578,12 +1582,21 @@ body.dark-mode #xref-panel {
   border:1px solid color-mix(in srgb, var(--here) 38%, transparent) !important;
   border-radius:10px;
 }
-#xref-panel .xref-ref-title,#xref-panel .xref-ref-title span {
+/* The REFERENCE, not "any span in the title row". That row now also holds the
+   "Go to verse" chip, and `.xref-ref-title span` was catching it and painting
+   it gold over its own ink — a rule that names a tag instead of a thing will
+   collect whatever is added to the row later. */
+#xref-panel .xref-ref-title,
+#xref-panel .xref-ref-title > .xref-ref-link,
+#xref-panel .xref-ref-title > span:not(.xref-ref-goto) {
   color:var(--gold-bright) !important;
 }
+/* The chip already has a border and a hover; its label does not also need to
+   be gold. Gold in this panel means the Hebrew headword and the reference
+   heading — the two things the reader is looking for. */
 #xref-panel .xref-ref-goto {
-  color:var(--gold-bright) !important;
-  text-decoration:underline;
+  color:var(--ink-2) !important;
+  text-decoration:none;
 }
 #xref-panel .xref-ref-word {
   color:var(--on-surface) !important;
