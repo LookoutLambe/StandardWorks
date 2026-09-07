@@ -189,6 +189,57 @@ for (const name of ['_paintWordAnnotation', 'applyAnnotationToWord']) {
   }
 }
 
+
+/* ── bom.html's cross-reference panel is a FORK of crossrefs_engine.js ──────
+   The five sibling volumes load crossrefs_engine.js; bom.html carries its own
+   inline copy of the same UI, built on BOM-specific data. It is too entangled
+   to fold in casually, and nothing warned when the two drifted — so on
+   2026-09-07 a single day's work had to be done twice, three times, and once
+   was missed entirely:
+
+     · reference hrefs went through nav_engine (engine) vs a stale local table
+       whose '#genesis-3' ids no reader has ever recognised (BOM),
+     · the "All N occurrences" card learned the reference cap (engine) and did
+       not (BOM), so the BOM went on opening a panel with nothing on it,
+     · non-BOM references were inert spans in the BOM — no way to follow a
+       cross-reference out of the volume at all.
+
+   This does not diff the code; the two are legitimately different. It asserts
+   the INVARIANTS both must hold, so the next divergence is caught here rather
+   than by the reader. Each is a behaviour, not a spelling. */
+{
+  /* Comments must not satisfy an invariant. The first cut of this check passed
+     because a COMMENT in bom.html mentioned NavEngineFollow by name while the
+     call itself had been removed — a test a comment can satisfy tests nothing. */
+  const stripComments = t => t.replace(/\/\*[\s\S]*?\*\//g, ' ').replace(/^[ \t]*\/\/.*$/gm, ' ');
+  const eng = stripComments(read('crossrefs_engine.js'));
+  const bom = stripComments(read('bom/bom.html'));
+  const INVARIANTS = [
+    ['reference hrefs come from nav_engine, not a local book table',
+     /NavEngineRefHref\s*\(/, /NavEngineRefHref\s*\(/],
+    ['following a reference marks a return point',
+     /NavEngine(?:Follow|GoRef|MarkReturn)\s*\(/, /NavEngine(?:Follow|GoRef|MarkReturn)\s*\(/],
+    ['the occurrences card respects the reference cap',
+     /RootScorecard\.listable\s*\(/, /RootScorecard\.listable\s*\(/],
+    ['a scripture reference heading is a link, not an inert span',
+     /['"]xref-ref-goto['"]/, /['"]xref-ref-goto['"]/],
+  ];
+  let drifted = 0;
+  for (const [what, reEng, reBom] of INVARIANTS) {
+    const a = reEng.test(eng), b = reBom.test(bom);
+    if (a !== b) {
+      drifted++;
+      fail('bom.html and crossrefs_engine.js disagree on an invariant they must share:\n' +
+           '        "' + what + '"\n' +
+           '        crossrefs_engine.js: ' + (a ? 'yes' : 'NO') +
+           '   bom/bom.html: ' + (b ? 'yes' : 'NO') + '\n' +
+           '        bom.html forks this UI — apply the change to both copies.');
+    }
+  }
+  if (!drifted) ok('bom.html’s cross-reference fork holds all ' + INVARIANTS.length +
+                   ' shared invariants');
+}
+
 if (failures) {
   console.error('[drift] ' + failures + ' shared-code drift problem(s). Commit blocked.');
   process.exit(1);
