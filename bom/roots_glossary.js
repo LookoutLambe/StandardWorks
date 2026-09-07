@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "ספן": { "meaning": "(ספן) to deck over, to panel — hence סְפִינָה, the COVERED vessel, the MT's one ship with a hold to go down into (Jon 1:5); the same root panels a house (1 Kgs 6:9) and ceils it (Hag 1:4)", "category": "Lexical" },
   "H7510": { "meaning": "(רִפְיוֹן) weakness, feebleness — Jer 47:3", "category": "Lexical" },
   "H2086": { "meaning": "(זֵד) proud, presumptuous — Mal 3:19, Ps 19:14", "category": "Lexical" },
   "שקע": {
@@ -465,7 +466,7 @@ window._rootGlossaryData = {
   "H1390": { "meaning": "Gibeah", "category": "Name" },
   "H6721": { "meaning": "Zidon", "category": "Name" },
   "והפרושׁים": { "meaning": "(פְּרוּשִׁים) the Pharisees", "category": "Name" },
-  "H6875": { "meaning": "Zeruiah", "category": "Name" },
+  "H6875": { "meaning": "(צֳרִי) balm", "category": "Lexical" },
   "שפן": { "meaning": "Shaphan", "category": "Name" },
   "אוליבר": { "meaning": "Oliver", "category": "Name" },
   "ריגדון": { "meaning": "Rigdon", "category": "Name" },
@@ -851,8 +852,8 @@ window._rootGlossaryData = {
     "category": "Number"
   },
   "ברה": {
-    "meaning": "covenant",
-    "category": "Theology"
+    "meaning": "(בָּרָה) to eat; to choose, select — בִּרְיָה food",
+    "category": "Lexical"
   },
   "עקב": {
     "meaning": "(יַעֲקֹב) Jacob; (עָקֵב) heel; (עֵקֶב) because",
@@ -2541,8 +2542,8 @@ window._rootGlossaryData = {
     "category": "Time"
   },
   "יען": {
-    "meaning": "because",
-    "category": "Speech"
+    "meaning": "(יַעֲנָה, בַּת־הַיַּעֲנָה) ostrich; not the conjunction יַעַן “because”",
+    "category": "Lexical"
   },
   "אהרן": {
     "meaning": "Aaron",
@@ -4397,8 +4398,8 @@ window._rootGlossaryData = {
     "category": "Speech"
   },
   "עים": {
-    "meaning": "seventy",
-    "category": "Quality"
+    "meaning": "",
+    "category": "Lexical"
   },
   "קהלות": {
     "meaning": "churches",
@@ -5218,8 +5219,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "תנה": {
-    "meaning": "gift",
-    "category": "Uncategorized"
+    "meaning": "(תָּנָה) to hire — אֶתְנָה hire, reward; also to recount, rehearse",
+    "category": "Lexical"
   },
   "נגבה": {
     "meaning": "southward",
@@ -6087,8 +6088,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "רור": {
-    "meaning": "plain",
-    "category": "Uncategorized"
+    "meaning": "(רוּר) to run, to secrete — of a discharge; the family also holds בָּרוּר clear, purified",
+    "category": "Lexical"
   },
   "אביכם": {
     "meaning": "your father",
@@ -6435,8 +6436,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "נשב": {
-    "meaning": "returned we",
-    "category": "Motion"
+    "meaning": "(נָשַׁב) to blow",
+    "category": "Lexical"
   },
   "רחב": {
     "meaning": "to be wide, broad; breadth, width",
@@ -7788,8 +7789,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "ותו": {
-    "meaning": "death",
-    "category": "Life"
+    "meaning": "(תָּו) the letter tav, last of the alphabet — renders “Omega”",
+    "category": "Lexical"
   },
   "נסתרות": {
     "meaning": "secret(f pl)",
@@ -8288,8 +8289,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "חור": {
-    "meaning": "chosen",
-    "category": "Uncategorized"
+    "meaning": "(חָוַר / חוּר) to be white, to grow pale — white linen",
+    "category": "Lexical"
   },
   "צלחה": {
     "meaning": "success",
@@ -8871,8 +8872,8 @@ window._rootGlossaryData = {
     "category": "Time"
   },
   "שלה": {
-    "meaning": "dominion",
-    "category": "Uncategorized"
+    "meaning": "(שָׁלָה / שַׁלְוָה) to be at ease, secure — quietness, prosperity; also to be negligent, to mislead",
+    "category": "Lexical"
   },
   "עורון": {
     "meaning": "blindness of",
@@ -11049,8 +11050,8 @@ window._rootGlossaryData = {
     "category": "Theology"
   },
   "אגד": {
-    "meaning": "declared",
-    "category": "Speech"
+    "meaning": "(אֲגֻדָּה) band, bundle, troop",
+    "category": "Lexical"
   },
   "ינות": {
     "meaning": "Hkinot",
@@ -16803,8 +16804,8 @@ window._rootGlossaryData = {
     "category": "Nature"
   },
   "בעה": {
-    "meaning": "satisfied",
-    "category": "Uncategorized"
+    "meaning": "(בָּעָה) to inquire, to ask; also to swell, boil up",
+    "category": "Lexical"
   },
   "נדיבים": {
     "meaning": "nobles",
@@ -18006,10 +18007,7 @@ window._rootGlossaryData = {
     "meaning": "brother of",
     "category": "Family"
   },
-  "ספינות": {
-    "meaning": "(סְפִינָה) a decked vessel, covered over — root ספן \"to panel, cover\" (1 Kgs 6:9, Hag 1:4); the MT's one ship with a hold to go down into, Jon 1:5",
-    "category": "Lexical"
-  },
+
   "יירשנה": {
     "meaning": "he will inherit it",
     "category": "Uncategorized"
@@ -19839,8 +19837,8 @@ window._rootGlossaryData = {
     "category": "Time"
   },
   "צדה": {
-    "meaning": "provisions",
-    "category": "Uncategorized"
+    "meaning": "(צָדָה) to lie in wait, to hunt — צְדִיָּה lying in wait",
+    "category": "Lexical"
   },
   "גוע": {
     "meaning": "perish",
@@ -19871,8 +19869,8 @@ window._rootGlossaryData = {
     "category": "Action"
   },
   "ארה": {
-    "meaning": "curse",
-    "category": "Uncategorized"
+    "meaning": "(אַרְיֵה, Aram. אַרְיָוָתָא) lion; this family also holds אֻרְוָה stall and אוֹרוֹת lights",
+    "category": "Lexical"
   },
   "חלמתי": {
     "meaning": "I dreamed",
@@ -21554,8 +21552,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "תרצו": {
-    "meaning": "reconcile yourselves",
-    "category": "Uncategorized"
+    "meaning": "(רָצָה) to be pleased with, to desire, to accept",
+    "category": "Lexical"
   },
   "אל־רצון": {
     "meaning": "unto the will of",
@@ -22038,8 +22036,8 @@ window._rootGlossaryData = {
     "category": "Motion"
   },
   "סלה": {
-    "meaning": "highway",
-    "category": "Nature"
+    "meaning": "(סָלָה) to weigh, to value; to cast aside, tread down",
+    "category": "Lexical"
   },
   "זכירו": {
     "meaning": "make mention that",

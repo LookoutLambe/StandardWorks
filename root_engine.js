@@ -576,6 +576,20 @@
   // which is the point for a name (Lehi must not become "jaw").
     var SURFACE_PINS = {
 
+    // THE SHIP. סְפִינָה is H5600, whose root is H5603 ספן "to deck over", and
+    // the singular reaches that family on its own from every volume — Jonah's
+    // הַסְּפִינָה, the NT's בַסְּפִינָה, the D&C's סְפִינָה. The BOM's PLURALS
+    // did not: peeling the feminine ־וֹת leaves ספינ, and the lemma ends in
+    // ־ָה, so they fell to fallback and became their own one-volume families.
+    // The card for the Jaredite barges therefore reported "3 uses" and showed
+    // a Book of Mormon chip alone, for a word that is in four volumes.
+    // Pinned rather than fixed with a general ־וֹת→־ָה rule in the morphology:
+    // measured, only 11 orphan keys would land on a real lemma that way and
+    // several of those land on the WRONG one — it would file 265 tokens of
+    // עֵדוּת "testimony" under עָדָה "to pass", and עניותם under a personal name.
+    'סְפִינוֹת': 'H5600', 'סְפִינוֹתֵיהֶם': 'H5600',
+    'אֶל־סְפִינוֹתֵיהֶם': 'H5600', 'סְפִינָתִי': 'H5600',
+
     // Names are their own family now, which makes one class of collision
     // visible for the first time: a BOM name whose skeleton accidentally
     // matches an ordinary Hebrew word THROUGH A PROCLITIC. These are not
