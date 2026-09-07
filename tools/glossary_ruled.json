@@ -1,0 +1,9 @@
+{
+  "_note": "Glossary meanings the TRANSLATOR has ruled on. The corroboration detector (a root's meaning must share a content word with that root's own top glosses) cannot see every real semantic link, so entries confirmed correct are recorded here and exempted from future runs. Nothing goes in this file that the translator has not personally ruled on.",
+  "_detector": "see reference-root-scorecard-architecture; run it against bom/roots_glossary.js + root_concordance.js",
+  "correct_as_written": {
+    "יוביל": "\"led\" vs the corpus's \"leadeth\" — the same verb; the corpus's English is KJV-register and lead/led is irregular, so no stemmer unifies them. Translator, 2026-09-07.",
+    "ידוע": "\"acquainted with\" vs the corpus's \"is compassed about\" — the same sense. Isa 53:3 וִידוּעַ חֹלִי, \"acquainted with grief\". Translator, 2026-09-07.",
+    "ספינות": "meaning rewritten 2026-09-07 (47bfee7b) to carry the root ספן \"to deck over\"; the Jaredite barges are sealed hulls, not ships."
+  }
+}
