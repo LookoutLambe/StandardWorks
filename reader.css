@@ -139,7 +139,7 @@ body.hide-gloss .xref-marker, body.dual-mode .xref-marker { font-size: 0.5em; }
 .xref-panel-category { font-size: 0.75em; color: var(--ink-light); text-transform: uppercase; letter-spacing: 0.5px; padding: 2px 16px 10px; border-bottom: 1px solid var(--rule-light); }
 .xref-ref-card { padding: 12px 16px; border-bottom: 1px solid var(--rule-light); }
 .xref-ref-card:last-child { border-bottom: none; }
-.xref-ref-goto { font-size: 0.75em; color: var(--ink-light); cursor: pointer; padding: 2px 8px; border: 1px solid var(--rule); border-radius: 3px; text-decoration: none; white-space: nowrap; }
+.xref-ref-goto { font-size: 0.75em; color: var(--ink-light); cursor: pointer; padding: 6px 10px; min-height: 32px; display: inline-flex; align-items: center; border: 1px solid var(--rule); border-radius: 3px; text-decoration: none; white-space: nowrap; margin-left: 10px; }
 .xref-ref-content { direction: rtl; display: flex; flex-wrap: wrap; gap: 4px 8px; margin: 6px 0; line-height: 1.7; }
 .xref-ref-word { display: inline-flex; flex-direction: column; align-items: center; text-align: center; padding: 2px 3px; }
 .xref-ref-word .hw { font-family: 'David Libre', serif; font-size: 1.05em; color: var(--ink); }
@@ -2297,6 +2297,10 @@ body.dark-mode #glossary-panel {
 .xref-ref-nodata { font-size: 0.85em; color: var(--ink-light); font-style: italic; padding: 16px; }
 .xref-ref-title { font-weight: 600; color: var(--ink); font-size: 0.95em; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; }
 .xref-ref-title span { color: var(--ink); }
+/* The reference heading IS the way through — it needs to look like one. */
+.xref-ref-link { cursor: pointer; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; text-decoration-color: color-mix(in srgb, currentColor 45%, transparent); }
+.xref-ref-link:hover, .xref-ref-link:focus-visible { text-decoration-color: currentColor; }
+.xref-ref-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
 /* === ANNOTATIONS PANEL === */ #annotations-panel { display: none; position: fixed; top: 0; right: 0; bottom: 0; width: 360px; max-width: 90vw; background: var(--bg); border-left: 2px solid var(--accent); z-index: var(--z-panel); overflow-y: auto; padding: 16px; font-family: 'David Libre', 'Georgia', serif; transform: translateX(100%); transition: transform 0.25s ease; }
 /* === CROSS-REFERENCES === */ .xref-marker { display: none; }
 /* === DARK MODE === */ body.dark-mode .tl { color: var(--gloss); }

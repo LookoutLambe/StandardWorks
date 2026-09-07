@@ -1050,6 +1050,28 @@
 
     var verseSuffix = (verseNum && verseNum > 0) ? '-v' + verseNum : '';
 
+    /* MARK THE RETURN POINT. Every jump that comes through here is a jump AWAY
+       from something the reader was in the middle of — a book picked out of the
+       drawer, a chapter cell, a search result, the D&C's intro or chronology.
+       Only the study references and the JST marks used to mark it, so the
+       banner never appeared for any of these; worse, the navTo wrapper below
+       CLEARS the stored point on any navigation it has not armed, so jumping a
+       book actively destroyed a return point you already had.
+
+       Sequential reading does not reach this function — the ← → chapter arrows
+       go through goPrev/goNext — so reading on never raises the banner.
+       markReturnPoint() ignores the call when there is nothing to return to
+       (the landing page, or no current chapter). */
+    if (!(_config && _config.currentChapter === chapterId && volKey === _config.volume)) {
+      try {
+        var _destHash = buildHash(volKey, chapterId);
+        var _destHref = (volKey === (_config && _config.volume) && !(_config && _config.hub))
+          ? '#' + _destHash
+          : ((_config && _config.basePath || '') + (VOLUMES[volKey] ? VOLUMES[volKey].page : '') + (_destHash ? '#' + _destHash : ''));
+        markReturnPoint(_destHref);
+      } catch (eMR) {}
+    }
+
     // Home hub (index.html): always load the target volume page
     if (_config && _config.hub) {
       var volHub = VOLUMES[volKey];
@@ -1574,7 +1596,93 @@
   window.NavEngineUpdateContinue = updateContinueButton;
   window.NavEngineMarkReturn = function (destHref) { markReturnPoint(destHref); };
   window.NavEngineShowReturn = function () { showReturnBanner(); };
+  /* ONE book table, ONE href builder. crossrefs_engine kept a second copy of
+     the book list whose hashes were '#genesis-3' and '#dc20' — ids nothing in
+     any reader has ever recognised — so every cross-volume reference landed on
+     the destination page's default view instead of the chapter, and never on
+     the verse. Volume, chapter id, deep-link syntax and basePath are all
+     decided here, where the book table actually lives.
+
+     The five names crossrefs uses that this table spells differently, plus the
+     D&C, whose "books" are its 138 sections rather than one book of 138
+     chapters — so its chapter number selects the BOOK, and the chapter id is
+     always that section's first (and only) chapter. */
+  var REF_BOOK_ALIAS = {
+    'Song of Solomon': 'Song of Songs',
+    'JS-H': 'JS\u2014History', 'JS-M': 'JS\u2014Matthew',
+    'A-of-F': 'Articles of Faith'
+  };
+  var _refBookIndex = null;
+  function _refBookLookup(name) {
+    if (!_refBookIndex) {
+      _refBookIndex = {};
+      for (var vk in VOLUMES) {
+        if (vk === 'jst') continue;      // JST repeats the OT/NT names; a bare
+                                         // "Genesis" is never the JST's Genesis
+        var divs = VOLUMES[vk].divisions || [];
+        for (var d = 0; d < divs.length; d++) {
+          var bs = divs[d].books || [];
+          for (var b = 0; b < bs.length; b++) {
+            if (!_refBookIndex[bs[b].en]) _refBookIndex[bs[b].en] = { volume: vk, book: bs[b] };
+          }
+        }
+      }
+    }
+    name = String(name || '').trim();
+    return _refBookIndex[REF_BOOK_ALIAS[name] || name] || null;
+  }
+  /* The href a scripture reference should point at, verse included. Returns a
+     bare '#hash' when the reference stays on this page, a full page path when
+     it does not — the same two shapes root_scorecard's refHref emits. */
+  window.NavEngineRefHref = function (bookEn, chapter, verse) {
+    var chNum = parseInt(chapter, 10) || 1;
+    var v = parseInt(verse, 10) || 0;
+    var hit = _refBookLookup(bookEn);
+    if (!hit && /^D&C$|^Doctrine/.test(String(bookEn || '').trim())) {
+      hit = _refBookLookup('Section ' + chNum);
+      chNum = 1;                                   // dc<N>-ch1 — the section IS the book
+    }
+    if (!hit) return null;
+    var chapId = hit.book.prefix + (hit.book.isFront ? '' : chNum);
+    var deep = chapId + (v ? (hit.volume === 'bom' ? ':' + v : '&v=' + v) : '');
+    if (hit.volume === (_config && _config.volume) && !(_config && _config.hub)) return '#' + deep;
+    return ((_config && _config.basePath) || '') + VOLUMES[hit.volume].page + '#' + deep;
+  };
+
   window.NavEngineClearReturn = function () { clearReturnPoint(); };
+  window.NavEngineGoToVerse = function (chapter, verse) { goToVerse(chapter, verse); };
+
+  /* FOLLOWING A REFERENCE, END TO END, in the one place that holds the book
+     table. The caller passes the reference; the way back is marked, and the
+     landing goes through goToVerse — so a reference lands exactly where
+     Continue Reading and the Return banner land, instead of wherever the raw
+     hash happened to stop (a cross-volume '&v=20' stopped ~250px short,
+     because the page scrolls before the lazy loader has finished growing the
+     content above it). Cross-volume, the verse is handed over in the landing
+     record rather than the URL, for that same reason. */
+  window.NavEngineGoRef = function (bookEn, chapter, verse) {
+    return window.NavEngineFollow(window.NavEngineRefHref(bookEn, chapter, verse));
+  };
+  /* The same trip for a deep href that is already built — the study card's
+     reference list works that way. ONE implementation, so a reference from the
+     scorecard and a reference from the cross-reference panel land identically. */
+  window.NavEngineFollow = function (href) {
+    if (!href) return false;
+    markReturnPoint(href);
+    var dest = _parseDest(href);
+    var m = String(href).match(/(?:&v=|:)(\d+)$/);
+    var v = m ? (parseInt(m[1], 10) || 0) : 0;
+    if (dest && dest.volume === (_config && _config.volume) && !(_config && _config.hub)) {
+      goToVerse(dest.chapter, v);
+      return true;
+    }
+    if (dest) {
+      _saveLanding(dest.volume, dest.chapter, v);
+      href = href.replace(/(?:&v=|:)\d+$/, '');   // consumeLanding does the verse
+    }
+    window.location.href = href;
+    return true;
+  };
 
   /* Go to a chapter AND land on a verse. Putting the verse in the hash does
      not survive: the readers' navTo wrapper pushes its own clean
@@ -1769,7 +1877,21 @@
     _returnTo = { volume: _config.volume, chapter: chap, verse: v, label: label };
     /* Persist it. A cross-volume reference loads a different page, and the
        in-memory copy does not survive that; the destination page reads this. */
-    _saveReturn({ from: _returnTo, to: _parseDest(destHref), at: Date.now() });
+    var dest = _parseDest(destHref);
+    _saveReturn({ from: _returnTo, to: dest, at: Date.now() });
+    /* SHOW IT HERE FOR A SAME-PAGE JUMP. restoreReturnPoint() is the only thing
+       that opens the banner and it runs on LOAD, so the offer appeared only
+       when the jump crossed volumes. Jumping books in the drawer, or following
+       a reference inside this volume, wrote the record and then showed nothing.
+       The delay lets navTo settle first — its own wrapper would otherwise see
+       the grace window and the re-entry of a lazy-loaded book at the same time. */
+    if (!dest || dest.volume === _config.volume) {
+      setTimeout(function () {
+        if (!_returnTo) return;                 // cleared meanwhile: the reader moved on
+        _returnArmed = Date.now();              // settling must not age out the window
+        showReturnBanner();
+      }, 500);
+    }
   }
 
   function clearReturnPoint() {

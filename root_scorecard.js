@@ -786,11 +786,19 @@
          were reading, and inside the iOS app there is no browser Back to fall
          back on. Mark where we are BEFORE the jump, then offer the way home. */
       var href = a.getAttribute('href') || '';
+      /* Hand the WHOLE trip to nav_engine: it marks the way back, and it lands
+         through goToVerse rather than the raw hash — so a reference from here
+         lands on its verse exactly like one from the cross-reference panel.
+         These are cross-volume (a root in Alma lists its uses in the OT, NT,
+         D&C, PGP and JST), so the return point is persisted and the
+         destination page claims it on boot. */
+      if (typeof window.NavEngineFollow === 'function') {
+        e.preventDefault();
+        closePanel();
+        window.NavEngineFollow(href);
+        return;
+      }
       try {
-        /* Hand over WHERE we are going, not just where we are. These references
-           are cross-volume — a root in Alma lists its uses in the OT, NT, D&C,
-           PGP and JST — and those links load a different page, so nav_engine
-           persists the return point and the destination page picks it up. */
         if (typeof window.NavEngineMarkReturn === 'function') window.NavEngineMarkReturn(href);
       } catch (eR) {}
       if (href.charAt(0) === '#') {
@@ -799,7 +807,6 @@
           try { if (typeof window.NavEngineShowReturn === 'function') window.NavEngineShowReturn(); } catch (eS) {}
         }, 400);
       }
-      // cross-volume links navigate away; restoreReturnPoint() shows the banner there
     });
     return panelEl;
   }

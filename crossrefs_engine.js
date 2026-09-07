@@ -157,6 +157,14 @@
     var vol = _bookToVolume[book];
     if (!vol) return null;
 
+    /* nav_engine owns the book table and the chapter-id scheme. Ask it. The
+       local table below emits hashes ('#genesis-3') that no reader page has
+       ever recognised, so it is a last resort, not the answer. */
+    if (typeof window.NavEngineRefHref === 'function') {
+      var href = window.NavEngineRefHref(book, chapter, parts[2]);
+      if (href) return href;
+    }
+
     // Don't link if we're already on that page
     var currentPage = window.location.pathname.split('/').pop() || '';
     if (currentPage === vol.page || currentPage === vol.page.replace('bom/', '')) return null;
@@ -172,7 +180,74 @@
       }
     }
 
-    return pagePath + '#' + vol.hash(chapter);
+    /* THE VERSE MUST TRAVEL WITH THE CHAPTER. This returned a bare chapter
+       hash, so "D&C 20:5" opened the top of section 20 and left the reader to
+       hunt for verse 5 — the reference had done half its job. The deep-link
+       syntax is per-volume and must match what nav_engine's _returnHref and
+       root_scorecard's refHref emit: the BOM takes chapter:verse, every other
+       volume chapter&v=verse. */
+    var verse = parseInt(parts[2], 10) || 0;
+    var deep = vol.hash(chapter);
+    if (deep && verse) deep += (_volKeyOf(vol) === 'bom' ? ':' + verse : '&v=' + verse);
+    return pagePath + '#' + deep;
+  }
+
+  /* _bookToVolume stores the volume OBJECT with no key on it, and the deep-link
+     syntax differs by volume, so the key is read back off the page name. */
+  function _volKeyOf(vol) {
+    var page = String((vol && vol.page) || '');
+    if (page.indexOf('bom') >= 0) return 'bom';
+    return page.replace(/^.*\//, '').replace(/\.html?$/, '');
+  }
+
+  /* THE GOLD REFERENCE IS THE LINK. Every card headed "D&C 20:5" used to be
+     inert, with the way through buried in an "Open Full Chapter" line under
+     the interlinear — and that line opened the chapter without the verse. The
+     heading itself now carries the jump, in one shape for both the references
+     that live in this volume and the ones that do not, and it marks a return
+     point first so there is a way back. */
+  function buildRefTitleRow(fullRef, refKey, isInternal, sourceVerseKey) {
+    var titleDiv = document.createElement('div');
+    titleDiv.className = 'xref-ref-title';
+    var titleSpan = document.createElement('span');
+    titleSpan.textContent = fullRef;
+    titleDiv.appendChild(titleSpan);
+    if (!refKey) return titleDiv;
+
+    var kp = refKey.split('|');
+    var go = null;
+    if (typeof window.NavEngineGoRef === 'function' &&
+        window.NavEngineRefHref && window.NavEngineRefHref(kp[0], kp[1], kp[2])) {
+      /* nav_engine owns the book table, the return point and the landing —
+         one trip, one implementation, for near and far references alike. */
+      go = function () { closeXrefPanel(); window.NavEngineGoRef(kp[0], kp[1], kp[2]); };
+    } else if (isInternal) {
+      go = function () { closeXrefPanel(); navigateToVerseKey(refKey); };
+    } else {
+      var url = buildCrossVolumeUrl(refKey, sourceVerseKey || '');
+      if (url) go = function () {
+        try {
+          if (typeof window.NavEngineMarkReturn === 'function') window.NavEngineMarkReturn(url);
+        } catch (e) {}
+        closeXrefPanel();
+        window.location.href = url;
+      };
+    }
+    if (!go) return titleDiv;
+
+    titleSpan.className = 'xref-ref-link';
+    titleSpan.setAttribute('role', 'link');
+    titleSpan.setAttribute('tabindex', '0');
+    titleSpan.onclick = go;
+    titleSpan.onkeydown = function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    };
+    var chip = document.createElement('span');
+    chip.className = 'xref-ref-goto';
+    chip.textContent = 'Go to verse \u2192';
+    chip.onclick = go;
+    titleDiv.appendChild(chip);
+    return titleDiv;
   }
 
   function parseScriptureRef(refText) {
@@ -894,41 +969,12 @@
         var card = document.createElement('div');
         card.className = 'xref-ref-card';
 
-        var titleDiv = document.createElement('div');
-        titleDiv.className = 'xref-ref-title';
 
         // Check if this is an internal reference (in the current volume)
         var refKey = cls.key;
         var isInternal = refKey && window._crossrefMap[refKey];
 
-        var titleSpan = document.createElement('span');
-        titleSpan.textContent = fullRef;
-        if (isInternal) {
-          titleSpan.style.cursor = 'pointer';
-          titleSpan.style.textDecoration = 'underline';
-          titleSpan.onclick = (function(k) {
-            return function() {
-              closeXrefPanel();
-              navigateToVerseKey(k);
-            };
-          })(refKey);
-        }
-        titleDiv.appendChild(titleSpan);
-
-        // Add "Go to verse" button for internal references
-        if (isInternal) {
-          var gotoBtn = document.createElement('span');
-          gotoBtn.className = 'xref-ref-goto';
-          gotoBtn.textContent = 'Go to verse \u2192';
-          gotoBtn.onclick = (function(k) {
-            return function() {
-              closeXrefPanel();
-              navigateToVerseKey(k);
-            };
-          })(refKey);
-          titleDiv.appendChild(gotoBtn);
-        }
-
+        var titleDiv = buildRefTitleRow(fullRef, refKey, isInternal, sourceVerseKey);
         card.appendChild(titleDiv);
 
         // Show verse content
@@ -955,21 +1001,6 @@
           loadExternalInterlinear(refKey, card);
         }
 
-        // Add "Open Full Chapter" link for cross-volume references
-        if (refKey && !isInternal) {
-          var crossUrl = buildCrossVolumeUrl(refKey, sourceVerseKey);
-          if (crossUrl) {
-            var crossDiv = document.createElement('div');
-            crossDiv.style.cssText = 'padding:4px 0;font-size:0.85em;';
-            var crossLink = document.createElement('a');
-            crossLink.href = crossUrl;
-            crossLink.style.cssText = 'color:var(--accent,var(--here));text-decoration:none;font-weight:600;';
-            crossLink.textContent = 'Open Full Chapter \u2192';
-            crossDiv.appendChild(crossLink);
-            card.appendChild(crossDiv);
-          }
-        }
-
         refsContainer.appendChild(card);
       });
 
@@ -989,6 +1020,18 @@
     // verseKey format: "BookName|Chapter|Verse"
     var parts = verseKey.split('|');
     if (parts.length < 3) return;
+
+    /* Following a cross-reference is the definition of a jump you want to come
+       back from, and it was not marking a return point — only the study
+       references and the JST marks did. Mark it before moving, with the same
+       hash this function is about to navigate to, so the banner offers the
+       verse the reader actually left. */
+    try {
+      if (typeof window.NavEngineMarkReturn === 'function') {
+        var _v = _bookToVolume[parts[0]];
+        window.NavEngineMarkReturn(_v && _v.hash ? '#' + _v.hash(parts[1]) : '');
+      }
+    } catch (eXR) {}
 
     // Try to find the verse already in the DOM
     var existing = document.querySelector('[data-verse-key="' + verseKey + '"]');
@@ -1176,11 +1219,7 @@
       var info = seenScripture[fullRef];
       var card = document.createElement('div');
       card.className = 'xref-ref-card';
-      var titleDiv = document.createElement('div');
-      titleDiv.className = 'xref-ref-title';
-      var titleSpan = document.createElement('span');
-      titleSpan.textContent = fullRef;
-      titleDiv.appendChild(titleSpan);
+      var titleDiv = buildRefTitleRow(fullRef, info.key, false, info.sourceVerseKey || '');
       card.appendChild(titleDiv);
 
       var extHtml = getExternalVerseHtml(fullRef);
@@ -1191,20 +1230,6 @@
       }
 
       if (info.key) loadExternalInterlinear(info.key, card);
-
-      if (info.key) {
-        var cUrl = buildCrossVolumeUrl(info.key, info.sourceVerseKey || '');
-        if (cUrl) {
-          var cDiv = document.createElement('div');
-          cDiv.style.cssText = 'padding:4px 0;font-size:0.85em;';
-          var cLink = document.createElement('a');
-          cLink.href = cUrl;
-          cLink.style.cssText = 'color:var(--accent,var(--here));text-decoration:none;font-weight:600;';
-          cLink.textContent = 'Open Full Chapter \u2192';
-          cDiv.appendChild(cLink);
-          card.appendChild(cDiv);
-        }
-      }
 
       refsContainer.appendChild(card);
     });
