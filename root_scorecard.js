@@ -395,7 +395,11 @@
     return mc ? book + ' ' + mc[1] : book + ' ' + chapId;
   }
   function refHref(vol, chapId, v) {
-    var deep = vol === 'bom' ? (chapId + (v ? ':' + v : '')) : (chapId + (v ? '&v=' + v : ''));
+    /* The BOM's URL hash is not its chapter id — 'al-ch32' is the panel,
+       'alma-32' is the address. nav_engine owns that mapping. */
+    var hash = (typeof window.NavEngineHashFor === 'function')
+      ? window.NavEngineHashFor(vol, chapId) : chapId;
+    var deep = vol === 'bom' ? (hash + (v ? ':' + v : '')) : (hash + (v ? '&v=' + v : ''));
     if (vol === cfg.vol) return '#' + deep;
     return cfg.base + PAGES[vol] + '#' + deep;
   }

@@ -6327,11 +6327,7 @@ function appendStandardWorksInverseCards(refsContainer, bomVerseKeys) {
     var card = document.createElement('div');
     card.className = 'xref-ref-card';
 
-    var titleDiv = document.createElement('div');
-    titleDiv.className = 'xref-ref-title';
-    var titleSpan = document.createElement('span');
-    titleSpan.textContent = displayRef;
-    titleDiv.appendChild(titleSpan);
+    var titleDiv = xrefTitleRow(displayRef, parseBomRef(displayRef));
     card.appendChild(titleDiv);
 
     var metaBits = [];
@@ -6468,35 +6464,7 @@ function openXrefPanel(ref, sourceVerseKey, hebrewRoot) {
       var card = document.createElement('div');
       card.className = 'xref-ref-card';
 
-      var parsed = parseBomRef(fullRef);
-      var titleDiv = document.createElement('div');
-      titleDiv.className = 'xref-ref-title';
-
-      if (parsed && parsed.hash) {
-        var titleLink = document.createElement('a');
-        titleLink.textContent = fullRef;
-        titleLink.href = parsed.hash;
-        titleLink.onclick = function(e) {
-          e.preventDefault();
-          closeXrefPanel();
-          navigateToXrefVerse(parsed);
-        };
-        titleDiv.appendChild(titleLink);
-
-        var gotoBtn = document.createElement('span');
-        gotoBtn.className = 'xref-ref-goto';
-        gotoBtn.textContent = 'Go to verse →';
-        gotoBtn.onclick = function() {
-          closeXrefPanel();
-          navigateToXrefVerse(parsed);
-        };
-        titleDiv.appendChild(gotoBtn);
-      } else {
-        // Non-BOM reference (Bible, D&C, TG, etc.)
-        var titleSpan = document.createElement('span');
-        titleSpan.textContent = fullRef;
-        titleDiv.appendChild(titleSpan);
-      }
+      var titleDiv = xrefTitleRow(fullRef, parseBomRef(fullRef));
 
       card.appendChild(titleDiv);
 
@@ -6689,34 +6657,7 @@ function openRootXrefPanel(root) {
       var card = document.createElement('div');
       card.className = 'xref-ref-card';
 
-      var parsed = parseBomRef(u.refText);
-      var titleDiv = document.createElement('div');
-      titleDiv.className = 'xref-ref-title';
-
-      if (parsed && parsed.hash) {
-        var titleLink = document.createElement('a');
-        titleLink.textContent = u.refText;
-        titleLink.href = parsed.hash;
-        titleLink.onclick = function(e) {
-          e.preventDefault();
-          closeXrefPanel();
-          navigateToXrefVerse(parsed);
-        };
-        titleDiv.appendChild(titleLink);
-
-        var gotoBtn = document.createElement('span');
-        gotoBtn.className = 'xref-ref-goto';
-        gotoBtn.textContent = 'Go to verse →';
-        gotoBtn.onclick = function() {
-          closeXrefPanel();
-          navigateToXrefVerse(parsed);
-        };
-        titleDiv.appendChild(gotoBtn);
-      } else {
-        var titleSpan = document.createElement('span');
-        titleSpan.textContent = u.refText;
-        titleDiv.appendChild(titleSpan);
-      }
+      var titleDiv = xrefTitleRow(u.refText, parseBomRef(u.refText));
 
       card.appendChild(titleDiv);
 
@@ -6768,8 +6709,67 @@ function closeXrefPanel() {
   _xrefPanelRefreshFn = null;
 }
 
+/* ONE reference heading for the whole panel, and one way through it.
+
+   Two things were wrong here. A BOM reference navigated without marking a
+   return point, so following one was a one-way trip and inside the iOS app
+   there is no browser Back to fall back on. And a reference to anywhere ELSE —
+   Isaiah, the D&C, the Pearl of Great Price — was rendered as an inert span:
+   from the Book of Mormon there was simply no way to follow a cross-reference
+   out of the volume at all, which is half of what a cross-reference is for.
+
+   nav_engine owns the book table, the chapter ids, the per-volume deep-link
+   syntax and the return point, so the outward trip is handed to it whole. */
+function xrefTitleRow(refText, parsed) {
+  var titleDiv = document.createElement('div');
+  titleDiv.className = 'xref-ref-title';
+  var go = null, href = '', label = String(refText || '');
+
+  if (parsed && parsed.hash) {
+    href = parsed.hash;
+    go = function () { closeXrefPanel(); navigateToXrefVerse(parsed); };
+  } else {
+    var k = parseScriptureRef(label);                 // "Isa. 53:5" -> "Isaiah|53|5"
+    var kp = k ? k.split('|') : null;
+    var u = kp && typeof window.NavEngineRefHref === 'function'
+      ? window.NavEngineRefHref(kp[0], kp[1], kp[2]) : '';
+    if (u) {
+      href = u;                                       // a REAL href: copyable, and
+                                                      // it still works if the
+                                                      // handler never runs
+      go = function () { closeXrefPanel(); window.NavEngineGoRef(kp[0], kp[1], kp[2]); };
+    }
+  }
+
+  if (!go) {
+    var span = document.createElement('span');
+    span.textContent = label;
+    titleDiv.appendChild(span);
+    return titleDiv;
+  }
+
+  var link = document.createElement('a');
+  link.textContent = label;
+  link.href = href || '#';
+  link.onclick = function (e) { e.preventDefault(); go(); };
+  titleDiv.appendChild(link);
+  var chip = document.createElement('span');
+  chip.className = 'xref-ref-goto';
+  chip.textContent = 'Go to verse \u2192';
+  chip.onclick = go;
+  titleDiv.appendChild(chip);
+  return titleDiv;
+}
+
 function navigateToXrefVerse(parsed) {
   if (!parsed || !parsed.hash) return;
+  /* Mark where we are BEFORE moving, so the banner can offer the way back.
+     Same-volume, so nav_engine shows it as soon as the jump settles. */
+  try {
+    if (typeof window.NavEngineMarkReturn === 'function') {
+      window.NavEngineMarkReturn(parsed.hash.charAt(0) === '#' ? parsed.hash : '#' + parsed.hash);
+    }
+  } catch (eR) {}
   window.location.hash = parsed.hash;
   if (parsed.key) {
     setTimeout(function() {

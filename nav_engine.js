@@ -1103,29 +1103,47 @@
   }
 
   // ── Build URL hash from chapter ID ──
+  /* THE BOM'S URL HASH IS NOT ITS CHAPTER ID. '#alma-32' in the address bar is
+     the panel 'al-ch32' in the DOM, and 1 Nephi's chapters are the bare 'ch1'…
+     'ch22'. Every other volume is 1:1. Both directions are needed and both were
+     not: a href had to be BUILT with the hash (or the BOM opened on nothing),
+     and READ BACK into a chapter id (or goToVerse, the landing record and the
+     chapter-exists probe were all handed a name no element has). */
+  var BOM_HASHES = {
+    'ch': '1-nephi-', '2n-ch': '2-nephi-', 'jc-ch': 'jacob-',
+    'en-ch': 'enos-', 'jr-ch': 'jarom-', 'om-ch': 'omni-',
+    'wm-ch': 'words-of-mormon-', 'mo-ch': 'mosiah-', 'al-ch': 'alma-',
+    'he-ch': 'helaman-', '3n-ch': '3-nephi-', '4n-ch': '4-nephi-',
+    'mm-ch': 'mormon-', 'et-ch': 'ether-', 'mr-ch': 'moroni-'
+  };
+  /* Longest prefix first in BOTH tables. 'ch' is a prefix of nothing else here,
+     but '1-nephi-' and '2-nephi-'/'3-nephi-'/'4-nephi-' are close enough that
+     an unsorted scan is a bug waiting to happen. */
+  function _longestFirst(obj) {
+    return Object.keys(obj).sort(function (a, b) { return b.length - a.length; });
+  }
   function buildHash(volKey, chapterId) {
-    if (volKey === 'bom') {
-      // BOM uses different hash format
-      var bomHashes = {
-        'ch': '1-nephi-', '2n-ch': '2-nephi-', 'jc-ch': 'jacob-',
-        'en-ch': 'enos-', 'jr-ch': 'jarom-', 'om-ch': 'omni-',
-        'wm-ch': 'words-of-mormon-', 'mo-ch': 'mosiah-', 'al-ch': 'alma-',
-        'he-ch': 'helaman-', '3n-ch': '3-nephi-', '4n-ch': '4-nephi-',
-        'mm-ch': 'mormon-', 'et-ch': 'ether-', 'mr-ch': 'moroni-'
-      };
-      if (chapterId.indexOf('-colophon') > 0) return chapterId;
-      var bomPrefixes = Object.keys(bomHashes).sort(function(a, b) { return b.length - a.length; });
-      for (var i = 0; i < bomPrefixes.length; i++) {
-        var prefix = bomPrefixes[i];
-        if (chapterId.indexOf(prefix) === 0) {
-          var num = chapterId.replace(prefix, '');
-          return bomHashes[prefix] + num;
-        }
-      }
+    chapterId = String(chapterId || '');
+    if (volKey !== 'bom' || chapterId.indexOf('-colophon') > 0) return chapterId;
+    var keys = _longestFirst(BOM_HASHES);
+    for (var i = 0; i < keys.length; i++) {
+      if (chapterId.indexOf(keys[i]) === 0) return BOM_HASHES[keys[i]] + chapterId.slice(keys[i].length);
     }
-    // For other volumes, the hash is typically derived from the page's navTo logic
-    // We return the chapterId as a reasonable hash for now
     return chapterId;
+  }
+  var _BOM_IDS = null;
+  function parseHash(volKey, hash) {
+    hash = String(hash || '');
+    if (volKey !== 'bom' || hash.indexOf('-colophon') > 0) return hash;
+    if (!_BOM_IDS) {
+      _BOM_IDS = {};
+      for (var k in BOM_HASHES) _BOM_IDS[BOM_HASHES[k]] = k;
+    }
+    var keys = _longestFirst(_BOM_IDS);
+    for (var i = 0; i < keys.length; i++) {
+      if (hash.indexOf(keys[i]) === 0) return _BOM_IDS[keys[i]] + hash.slice(keys[i].length);
+    }
+    return hash;
   }
 
   // ── Switch volume tab ──
@@ -1644,13 +1662,16 @@
     }
     if (!hit) return null;
     var chapId = hit.book.prefix + (hit.book.isFront ? '' : chNum);
-    var deep = chapId + (v ? (hit.volume === 'bom' ? ':' + v : '&v=' + v) : '');
+    var deep = buildHash(hit.volume, chapId) + (v ? (hit.volume === 'bom' ? ':' + v : '&v=' + v) : '');
     if (hit.volume === (_config && _config.volume) && !(_config && _config.hub)) return '#' + deep;
     return ((_config && _config.basePath) || '') + VOLUMES[hit.volume].page + '#' + deep;
   };
 
   window.NavEngineClearReturn = function () { clearReturnPoint(); };
   window.NavEngineGoToVerse = function (chapter, verse) { goToVerse(chapter, verse); };
+  /* The chapter-id -> URL-hash mapping, asked rather than copied: root_scorecard
+     builds its own reference hrefs and must spell the BOM the same way. */
+  window.NavEngineHashFor = function (volKey, chapterId) { return buildHash(volKey, chapterId); };
 
   /* FOLLOWING A REFERENCE, END TO END, in the one place that holds the book
      table. The caller passes the reference; the way back is marked, and the
@@ -1791,7 +1812,7 @@
         if (page.indexOf(VOLUMES[keys[k]].page) >= 0) { vol = keys[k]; break; }
       }
     }
-    var chap = hash.split(/[:&]/)[0];
+    var chap = parseHash(vol, hash.split(/[:&]/)[0]);
     return (vol && chap) ? { volume: vol, chapter: chap } : null;
   }
   /* The deep-link syntax is per-volume, and matches what refHref() emits:
@@ -1799,7 +1820,7 @@
   function _returnHref(from) {
     var v = from && VOLUMES[from.volume];
     if (!v) return null;
-    var deep = from.chapter + (from.verse
+    var deep = buildHash(from.volume, from.chapter) + (from.verse
       ? (from.volume === 'bom' ? ':' + from.verse : '&v=' + from.verse) : '');
     return ((_config && _config.basePath) || '') + v.page + '#' + deep;
   }
