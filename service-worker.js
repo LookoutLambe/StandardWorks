@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-09-07T12-46-22';
+const BUILD_ID = '2026-09-07T13-06-22';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -183,14 +183,19 @@ function isVerseAssetPath(pathname) {
     /\/bom\/(official_verses|crossrefs|chapter_headings|chapter_headings_heb|topical_guide|roots_glossary|bom_book_loader|bom_lazy_assets)\.js$/.test(pathname);
 }
 
-/** Shell / chrome — must be network-first so deploys never flash stale UI. */
+/** Shell / chrome — must be network-first so deploys never flash stale UI.
+    NAME THE FILE, not a prefix. 'reader' matches reader.css and reader.js and
+    nothing else: reader_ui.js and root_scorecard.js were absent from this list
+    and so served cache-first, which meant a returning reader kept an old word
+    card and an old popup until the cache was evicted. Every shared script the
+    volume pages load belongs here. */
 function isShellUIPath(pathname) {
   return /\.html$/i.test(pathname) ||
     /\/service-worker\.js$/i.test(pathname) ||
     /\/version\.json$/i.test(pathname) ||
     /\/sw_register\.js$/i.test(pathname) ||
     /\/interlinear_gloss\.js$/i.test(pathname) ||
-    /\/(site_chrome|sw_theme|nav_engine|reader|verse_search|xref_study_panel|notes_engine|crossrefs_engine)\.(js|css)$/i.test(pathname) ||
+    /\/(site_chrome|sw_theme|nav_engine|reader|reader_ui|root_scorecard|verse_search|xref_study_panel|notes_engine|crossrefs_engine)\.(js|css)$/i.test(pathname) ||
     /\/(ot|nt|dc|pgp)_crossrefs\.js$/i.test(pathname) ||
     /\/strongs_(lookup|roots)\.js$/i.test(pathname);
 }
