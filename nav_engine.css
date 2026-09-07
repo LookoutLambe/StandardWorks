@@ -115,45 +115,65 @@ html.sw-shell-pending #annotations-panel, html.sw-shell-pending #glossary-panel 
 /* ── Library view ── */
 
 
-.nl-card {
-  border: 1px solid var(--rule); border-radius: 10px; padding: 12px;
-  background: var(--paper); cursor: pointer;
+/* ══════════════════════════════════════════════════════════════════════
+   THE HUB LIBRARY PANEL — ONE HOME.
+
+   .nl-* is created only by renderLibrary(): it is the hub drawer's Continue /
+   Volumes / Study cards and it appears nowhere else. The reader's drawer is a
+   different thing built from .nav-vol-tab and .nav-book-row.
+
+   Its look used to be stated in SIX places across three files — three times
+   here, twice in sw_theme.css, four times in reader.css — several of them in
+   !important, and several through --sw-navy-hover / --sw-gold / --surface-2,
+   tokens the Indigo & Gold port redefined out from under them. What you saw
+   was whichever layer happened to win, which is how the panel ended up with
+   no card surface at all and gold text on beige. All of that is deleted. This
+   is the only block that describes these cards; nothing else may restate it.
+   ══════════════════════════════════════════════════════════════════════ */
+.nl-sec-title {
+  padding: 20px 16px 4px; margin: 16px 0 8px;
+  font-size: var(--t-micro, 0.72em); color: var(--ink-3);
+  text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700;
 }
-.nl-card:hover { border-color: var(--here-chrome); background: var(--paper-2); }
-.nl-card-title { font-size: 0.8em; color: var(--chrome); text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; }
-.nl-card-text { color: var(--chrome); font-size: 1.05em; margin-top: 6px; font-weight: 600; }
-.nl-card-heb { color: var(--chrome); font-family: 'David Libre',serif; font-size: 1.2em; margin-top: 4px; font-weight: 600; }
-.nl-bm-list { display: grid; gap: 8px; }
-.nl-bm { border: 1px solid var(--rule); border-radius: 10px; padding: 10px; background: var(--paper); cursor: pointer; }
-.nl-bm:hover { border-color: var(--here-chrome); background: var(--paper-2); }
-.nl-bm-title { color: var(--chrome); font-size: 0.95em; font-weight: 600; }
-.nl-bm-heb { color: var(--chrome); font-family: 'David Libre',serif; font-size: 1.1em; margin-top: 2px; font-weight: 600; }
 .nl-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-.nl-tile {
-  border: 1px solid var(--rule); border-radius: 12px; padding: 12px;
-  background: var(--paper); cursor: pointer;
+.nl-bm-list { display: grid; gap: 8px; }
+
+.nl-card, .nl-tile, .nl-bm {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 12px 14px;
+  min-height: 44px;
+  cursor: pointer;
 }
-.nl-tile:hover { border-color: var(--here-chrome); background: var(--paper-2); }
-.nl-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
-.nl-name {
-  color: var(--chrome);
-  font-size: 0.95em;
-  font-weight: 600;
-  line-height: 1.25;
-  flex: 1;
-  min-width: 0;
+.nl-card, .nl-bm { margin-bottom: 8px; }
+/* the edge marks the hover; the fill never moves, so the card does not flash */
+.nl-card:hover, .nl-tile:hover, .nl-bm:hover { border-color: var(--here); }
+
+/* STACKED, NOT SIDE BY SIDE. .nl-top used to be a flex row with the Hebrew
+   capped at 46%, so "Pearl of Great Price" and פנינת המחיר הגדול each broke
+   over three lines and interleaved. A name gets its own line. */
+.nl-top { display: block; }
+.nl-name, .nl-card-text, .nl-bm-title {
+  display: block; color: var(--ink);
+  font-size: var(--t-body, 0.95em); font-weight: 600; line-height: 1.25;
 }
-.nl-heb {
-  color: var(--chrome);
+.nl-heb, .nl-card-heb, .nl-bm-heb {
+  display: block; color: var(--ink-2);
   font-family: 'David Libre', serif;
-  font-size: 0.92em;
-  font-weight: 600;
-  line-height: 1.25;
-  text-align: right;
-  flex-shrink: 0;
-  max-width: 46%;
+  font-size: var(--t-large, 1.2em); font-weight: 600; line-height: 1.25;
 }
-.nl-sub { margin-top: 6px; font-size: 0.8em; color: #555; }
+.nl-name    { margin-bottom: 3px; }
+.nl-heb     { text-align: right; }
+.nl-card-text { margin-top: 6px; }
+.nl-card-heb  { margin-top: 4px; }
+.nl-bm-heb    { margin-top: 2px; }
+.nl-card-title {
+  color: var(--ink-3); font-size: var(--t-micro, 0.8em);
+  text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700;
+}
+.nl-sub { margin-top: 6px; font-size: var(--t-micro, 0.8em); color: var(--ink-3); }
 
 /* ── Book List (scrollable area) ── */
 .nav-book-list {
@@ -330,23 +350,8 @@ body.dark-mode .nav-footer button {
   border-color: var(--chrome-line);
   color: var(--ink, var(--on-chrome));
 }
-body.dark-mode .nl-card,
-body.dark-mode .nl-bm,
-body.dark-mode .nl-tile {
-  border-color: color-mix(in srgb, var(--here-chrome) 35%, transparent);
-  background: var(--chrome);
-}
-body.dark-mode .nl-card:hover,
-body.dark-mode .nl-bm:hover,
-body.dark-mode .nl-tile:hover {
-  background: var(--surface-1);
-}
-body.dark-mode .nl-name,
-body.dark-mode .nl-card-text,
-body.dark-mode .nl-bm-title { color: var(--here-chrome); }
-body.dark-mode .nl-heb,
-body.dark-mode .nl-card-heb,
-body.dark-mode .nl-bm-heb { color: var(--on-chrome); }
+/* dark needs nothing of its own: --card, --rule, --ink and --ink-2 are all
+   theme-scoped, so the one block below is already correct in every theme. */
 body.dark-mode .nf-bm {
   border-color: color-mix(in srgb, var(--here-chrome) 35%, transparent);
   background: var(--chrome);
@@ -581,8 +586,11 @@ body.reader-footer-hidden #sw-reader-footer {
    the app wears var(--chrome)/var(--here-chrome).
    ══════════════════════════════════════════════════════════════════ */
 
-#nav-sidebar .nav-division,
-#nav-sidebar .nl-sec-title {
+/* .nl-sec-title was in here too — the seventh place this panel was described,
+   and the one that actually won. --sw-gold resolves to #F3EDE2, a near-white,
+   so LIBRARY / VOLUMES / STUDY were painted invisible on the beige panel. The
+   library's labels are stated once, above, with the rest of it. */
+#nav-sidebar .nav-division {
   color: var(--sw-gold, var(--here-chrome)) !important;
   border-top-color: color-mix(in srgb, var(--here-chrome) 25%, transparent) !important;
 }
@@ -608,35 +616,12 @@ body.dark-mode #nav-sidebar .nav-book-row.nav-focus-row,
 body.dark-mode #nav-sidebar .nav-ch-cell { background: var(--surface-1) !important; }
 body.dark-mode #nav-sidebar .nav-search-results,
 body.dark-mode #nav-sidebar .nav-footer { background: var(--chrome-2) !important; }
-/* Library cards / bookmark tiles inside the drawer — navy cards, gold titles */
-#nav-sidebar .nl-card,
-#nav-sidebar .nl-bm,
-#nav-sidebar .nl-tile {
-  background: var(--sw-navy-hover, var(--surface-2)) !important;
-  border-color: color-mix(in srgb, var(--here-chrome) 30%, transparent) !important;
-}
-#nav-sidebar .nl-card:hover,
-#nav-sidebar .nl-bm:hover,
-#nav-sidebar .nl-tile:hover {
-  background: var(--surface-3) !important;
-  border-color: var(--sw-gold, var(--here-chrome)) !important;
-}
-#nav-sidebar .nl-card-title,
-#nav-sidebar .nl-name,
-#nav-sidebar .nl-bm-title { color: var(--sw-gold-bright, var(--on-chrome)) !important; }
-#nav-sidebar .nl-card-heb,
-#nav-sidebar .nl-heb,
-#nav-sidebar .nl-bm-heb,
-#nav-sidebar .nl-card-text { color: var(--sw-gold, var(--here-chrome)) !important; }
 
 #nav-sidebar .nav-book-list {
   scrollbar-color: color-mix(in srgb, var(--here-chrome) 40%, transparent) var(--sw-navy, var(--chrome)) !important;
 }
 #nav-sidebar .nav-book-list::-webkit-scrollbar-track { background: var(--sw-navy, var(--chrome)) !important; }
 #nav-sidebar .nav-book-list::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--here-chrome) 40%, transparent) !important; }
-body.dark-mode #nav-sidebar .nl-card,
-body.dark-mode #nav-sidebar .nl-bm,
-body.dark-mode #nav-sidebar .nl-tile { background: var(--surface-1) !important; }
 
 /* iPhone: drawer/panel scrolling must not chain to the page behind it */
 #nav-sidebar, #glossary-panel, #xref-panel, #annotations-panel,

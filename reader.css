@@ -600,12 +600,10 @@ body #xref-panel .xref-panel-category {
    ══════════════════════════════════════════════════════════════════════ */
 
 /* ── kill the card treatment ── */
-body #nav-sidebar .nl-card,
 /* .nav-ch-cell is deliberately NOT in this list: a chapter numeral is not
-   a card, so it is never given card styling to strip. Its one home is
-   nav_engine.css. */
-body #nav-sidebar .nl-tile,
-body #nav-sidebar .nl-bm,
+   a card, so it is never given card styling to strip. Nor are .nl-card /
+   .nl-tile / .nl-bm, which are the hub LIBRARY's cards and never appear in
+   the reader's drawer at all — their one home is nav_engine.css. */
 body #nav-sidebar .nav-book-row {
   background: transparent !important;
   box-shadow: none !important;
@@ -615,36 +613,14 @@ body #nav-sidebar .nav-book-row {
   transform: none !important;
   min-height: 0 !important;
 }
-body #nav-sidebar .nl-card::after,
-body #nav-sidebar .nl-tile::after,
 body #nav-sidebar .nav-book-row::after { content: none !important; }
-body #nav-sidebar .nl-card:hover,
-body #nav-sidebar .nl-tile:hover,
 body #nav-sidebar .nav-book-row:hover {
   background: color-mix(in srgb, var(--ink) 4%, transparent) !important;
   transform: none !important; box-shadow: none !important;
 }
 
-/* ── volumes are TABS ── */
-body #nav-sidebar .nl-tile {
-  display: inline-flex !important;
-  flex-direction: row !important;
-  align-items: baseline !important;
-  gap: 6px !important;
-  padding: 10px 11px 8px !important;
-  border-bottom: 2px solid transparent !important;
-  min-height: 44px !important;
-}
-body #nav-sidebar .nl-tile .nl-name { font-size: var(--t-small) !important; color: var(--ink-3) !important; order:1 !important; }
-body #nav-sidebar .nl-tile .nl-heb  { font-size: var(--t-small) !important; color: var(--ink-3) !important; order:2 !important; }
-body #nav-sidebar .nl-tile.current,
-body #nav-sidebar .nl-tile[aria-current="true"] { border-bottom-color: var(--here) !important; }
-body #nav-sidebar .nl-tile.current .nl-name,
-body #nav-sidebar .nl-tile.current .nl-heb { color: var(--here) !important; }
-
 /* ── books are rows on a hairline ── */
-body #nav-sidebar .nav-book-row,
-body #nav-sidebar .nl-card {
+body #nav-sidebar .nav-book-row {
   padding: 11px 16px !important;
   border-bottom: 1px solid var(--rule-light) !important;
   align-items: baseline !important;
@@ -655,98 +631,12 @@ body #nav-sidebar .nav-book-row .nb-ch  { font-size: var(--t-micro) !important; 
 body #nav-sidebar .nav-book-row.expanded .nb-heb { color: var(--here) !important; }
 
 
-/* ══════════════════════════════════════════════════════════════════════
-   THE HUB LIBRARY IS NOT THE READER'S DRAWER.
-
-   Everything above is the READER's drawer: volumes as tabs, books as rows
-   on a hairline, chapters as bare numerals. It is right there, and it is
-   why that drawer reads so well. But the hub's library panel builds its
-   Continue / Volumes / Study sections out of the same .nl-* classes inside
-   the same #nav-sidebar, so "kill the card treatment" stripped it too —
-   every tile lost its surface, its border and its radius, the volume grid
-   collapsed into two columns of loose --ink-3 text with the English and the
-   Hebrew colliding mid-phrase, and the .nl-card rows fell through to gold
-   on beige, which is the one thing the palette forbids: gold is for rules,
-   borders and chrome, never for text on paper.
-
-   The library gets its cards back here, on the Root Glossary's scheme —
-   cream --card on the --paper-2 body, hairline --rule border, ink text —
-   because that is the surface this app already uses for "a thing you can
-   open", and the two panels sit side by side in the same drawer.
-   ══════════════════════════════════════════════════════════════════════ */
-body #nav-sidebar .nav-library .nl-tile,
-body #nav-sidebar .nav-library .nl-card,
-body #nav-sidebar .nav-library .nl-bm {
-  display: block !important;
-  background: var(--card) !important;
-  border: 1px solid var(--rule) !important;
-  border-radius: 12px !important;
-  padding: 12px 14px !important;
-  min-height: 44px !important;
-  margin: 0 !important;
-}
-body #nav-sidebar .nav-library .nl-card,
-body #nav-sidebar .nav-library .nl-bm { margin-bottom: 8px !important; }
-body #nav-sidebar .nav-library .nl-tile:hover,
-body #nav-sidebar .nav-library .nl-card:hover,
-body #nav-sidebar .nav-library .nl-bm:hover {
-  background: var(--card) !important;
-  border-color: var(--here) !important;
-}
-/* STACKED, NOT SIDE BY SIDE. The tile put the English and the Hebrew in one
-   flex row at 46% max-width, so "Pearl of Great Price" and פנינת המחיר הגדול
-   each broke over three lines and interleaved. A name is one thing; it gets
-   one line of its own and wraps only if it must. */
-body #nav-sidebar .nav-library .nl-tile .nl-top {
-  display: block !important;
-}
-body #nav-sidebar .nav-library .nl-tile .nl-name {
-  display: block !important;
-  font-size: var(--t-body) !important;
-  color: var(--ink) !important;
-  font-weight: 600 !important;
-  max-width: none !important;
-  margin-bottom: 3px;
-}
-body #nav-sidebar .nav-library .nl-tile .nl-heb {
-  display: block !important;
-  font-size: var(--t-large) !important;
-  color: var(--ink-2) !important;
-  text-align: right !important;
-  max-width: none !important;
-}
-/* The card rows: a small-caps label, the thing itself, its Hebrew. Ink, not
-   gold — see the block comment above. */
-body #nav-sidebar .nav-library .nl-card-title {
-  color: var(--ink-3) !important;
-  font-size: var(--t-micro) !important;
-}
-body #nav-sidebar .nav-library .nl-card-text,
-body #nav-sidebar .nav-library .nl-bm-title {
-  color: var(--ink) !important;
-  font-size: var(--t-body) !important;
-}
-body #nav-sidebar .nav-library .nl-card-heb,
-body #nav-sidebar .nav-library .nl-bm-heb {
-  color: var(--ink-2) !important;
-  font-size: var(--t-large) !important;
-}
-body #nav-sidebar .nav-library .nl-sec-title {
-  color: var(--ink-3) !important;
-  margin: 16px 0 8px !important;
-}
-body #nav-sidebar .nav-library .nl-grid { gap: 10px !important; }
-
 /* "chapters are bare numerals" moved to nav_engine.css, which owns the
    grid. It was rebuilt here, in !important, on top of bubbles this file
    had just stripped — three layers to say one thing. */
 
 /* ── section labels ── */
 body #nav-sidebar .nav-division,
-body #nav-sidebar .nl-sec-title {
-  font-size: var(--t-micro) !important; letter-spacing: .2em !important;
-  color: var(--ink-3) !important; padding: 20px 16px 4px !important; opacity: 1 !important;
-}
 
 
 /* Chrome text is near-white; green is reserved for state. Gold used to do
@@ -837,7 +727,6 @@ body .landing-section-grid:has(.sec-tl) .sec-num {
 }
 
 /* ── 2. volumes are a tab ROW, not a grid ── */
-body #nav-sidebar .nl-tiles,
 body #nav-sidebar [class*="volume"] {
   display: flex !important; flex-wrap: wrap !important; gap: 0 !important;
   border-bottom: 1px solid var(--rule-light) !important;
@@ -1098,11 +987,6 @@ body #word-popup {
 .rsc-panel-card,
 .colophon {
   border: 1px solid color-mix(in srgb, var(--here) 38%, transparent) !important;
-}
-#nav-sidebar .nl-card,
-#nav-sidebar .nl-tile,
-#nav-sidebar .nl-bm {
-  border: 1px solid color-mix(in srgb, var(--here-chrome) 38%, transparent) !important;
 }
 
 /* The three links inside the word card — Topical Guide, Cross-References,
@@ -1422,7 +1306,7 @@ body.dark-mode #word-popup .popup-hebrew .qq { color: var(--qq-bright) !importan
   box-shadow: 4px 0 24px rgba(0,0,0,0.35) !important;
   overflow: hidden;
 }
-#nav-sidebar .nav-division,#nav-sidebar .nl-sec-title {
+#nav-sidebar .nav-division {
   color:var(--gold-bright) !important;
   border-top-color:color-mix(in srgb, var(--gold-bright) 25%, transparent) !important;
 }
@@ -1470,26 +1354,9 @@ body.dark-mode #word-popup .popup-hebrew .qq { color: var(--qq-bright) !importan
 #nav-sidebar .nav-footer .nf-hint {
   color: var(--ink-3) !important;
 }
-#nav-sidebar .nl-card,#nav-sidebar .nl-bm,#nav-sidebar .nl-tile {
-  background:var(--surface-2) !important;
-  border-color:color-mix(in srgb, var(--gold-bright) 30%, transparent) !important;
-}
-#nav-sidebar .nl-card:hover,#nav-sidebar .nl-bm:hover,#nav-sidebar .nl-tile:hover {
-  background:var(--surface-3) !important;
-  border-color:var(--gold-bright) !important;
-}
-#nav-sidebar .nl-card-title,#nav-sidebar .nl-name,#nav-sidebar .nl-bm-title {
-  color:var(--gold-pale) !important;
-}
-#nav-sidebar .nl-card-heb,#nav-sidebar .nl-heb,#nav-sidebar .nl-bm-heb,#nav-sidebar .nl-card-text {
-  color:var(--gold-bright) !important;
-}
-#nav-sidebar .nl-sub {
-  color: var(--ink-3) !important;
-}
 /* .nav-ch-cell dropped from this list — nav_engine.css already gives it the
    same var(--surface-1) dark fill alongside the book rows it sits among */
-body.dark-mode #nav-sidebar .nav-book-row:hover,body.dark-mode #nav-sidebar .nav-book-row.expanded,body.dark-mode #nav-sidebar .nl-card,body.dark-mode #nav-sidebar .nl-bm,body.dark-mode #nav-sidebar .nl-tile {
+body.dark-mode #nav-sidebar .nav-book-row:hover,body.dark-mode #nav-sidebar .nav-book-row.expanded {
   background:var(--surface-1) !important;
 }
 body.dark-mode #nav-sidebar .nav-search-results,body.dark-mode #nav-sidebar .nav-footer {

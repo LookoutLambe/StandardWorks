@@ -416,7 +416,6 @@ body:not(.dark-mode) #annotations-panel {
 /* the cards inside them get the card treatment.
    .nav-ch-cell is NOT one of them: a chapter numeral is not a card, and
    giving it card styling here is what forced reader.css to strip it again. */
-#nav-sidebar .nl-card, #nav-sidebar .nl-tile, #nav-sidebar .nl-bm,
 #nav-sidebar .nav-book-row,
 #xref-panel .xref-ref-card, #xref-panel .xf-bookmark-item,
 #glossary-panel .glossary-entry {
@@ -428,12 +427,10 @@ body:not(.dark-mode) #annotations-panel {
   transition: transform var(--card-motion), box-shadow var(--card-motion) !important;
 }
 /* the text inside a drawer card is ink, not gold on navy */
-#nav-sidebar .nav-book-row .nb-en,
-#nav-sidebar .nl-card-title, #nav-sidebar .nl-name, #nav-sidebar .nl-bm-title {
+#nav-sidebar .nav-book-row .nb-en {
   color: var(--card-title) !important;
 }
-#nav-sidebar .nav-book-row .nb-heb,
-#nav-sidebar .nl-card-heb, #nav-sidebar .nl-heb, #nav-sidebar .nl-bm-heb {
+#nav-sidebar .nav-book-row .nb-heb {
   color: var(--gold-deep) !important;
 }
 #nav-sidebar .nav-book-row .nb-ch,
@@ -453,7 +450,6 @@ body:not(.dark-mode) #annotations-panel {
    the accent colour via .lsg-s-en; that selector is gone — a book name is
    content and the page's own `color: var(--ink)` now applies.) */
 #nav-sidebar .nav-division,
-#nav-sidebar .nl-sec-title { color: var(--on-chrome) !important; }
 
 .landing-section-group h3 { color: var(--ink-2) !important; }
 
@@ -488,7 +484,6 @@ body.dark-mode #annotations-panel .ann-tab.active {
 #annotations-panel .ann-header .ann-panel-close,
 #share-popup .share-close,
 #nav-sidebar .nav-search-wrap .nav-close-btn { color: var(--chrome-gold) !important; }
-#nav-sidebar .nl-card:hover, #nav-sidebar .nl-tile:hover, #nav-sidebar .nl-bm:hover,
 #nav-sidebar .nav-book-row:hover,
 #xref-panel .xref-ref-card:hover, #xref-panel .xf-bookmark-item:hover {
   transform: translateY(-2px) !important;
@@ -625,7 +620,7 @@ body.dark-mode #annotations-panel .ann-tab.active {
   justify-content: center !important;
 }
 .nav-search-wrap input, #nav-sidebar .nav-search-input { min-height: 44px !important; }
-#nav-sidebar .nl-tile, #nav-sidebar .nl-card, #nav-sidebar .nav-book-row { min-height: 44px !important; }
+#nav-sidebar .nav-book-row { min-height: 44px !important; }
 .landing-sec-btn { min-height: 44px !important; }
 /* an icon button must announce itself and its glyph must not be read out */
 .nav-icon-btn svg, .sw-chrome-btn svg { pointer-events: none; }
@@ -750,14 +745,6 @@ body.dark-mode #annotations-panel .ann-tab.active {
   padding: 12px 16px 16px;
   background: var(--sw-hub-bg) !important;
 }
-.nl-sec-title {
-  font-size: 0.72em;
-  color: var(--sw-navy) !important;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-weight: 700;
-  margin: 6px 0 10px;
-}
 .nav-division {
   padding: 12px 16px 4px;
   font-size: 0.72em;
@@ -795,38 +782,12 @@ body.dark-mode .nav-search-wrap input {
 body.dark-mode .nav-library {
   background: var(--panel) !important;
 }
-body.dark-mode .nl-sec-title,
 body.dark-mode .nav-division {
   color: rgba(232, 226, 212, 0.92) !important;
 }
 
-/* ── Hamburger library cards (NavEngine) ── */
-.nl-card,
-.nl-tile,
-.nl-bm {
-  background: var(--sw-navy) !important;
-  border: 1px solid var(--sw-gold-border) !important;
-}
-.nl-card:hover,
-.nl-tile:hover,
-.nl-bm:hover {
-  background: var(--sw-navy-hover) !important;
-  border-color: var(--sw-gold) !important;
-}
-.nl-card-title,
-.nl-sub {
-  color: var(--sw-gold-muted) !important;
-}
-.nl-card-text,
-.nl-name,
-.nl-bm-title {
-  color: var(--sw-gold) !important;
-}
-.nl-heb,
-.nl-card-heb,
-.nl-bm-heb {
-  color: var(--sw-gold-bright) !important;
-}
+/* The "Hamburger library cards" block that stood here is gone; the library's
+   one home is nav_engine.css. */
 
 #nav-sidebar .nav-book-row {
   background: var(--sw-navy);
