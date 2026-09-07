@@ -1037,6 +1037,17 @@ body {
    sits on paper, even inside a popover.
    ══════════════════════════════════════════════════════════════════════ */
 body #word-popup {
+  /* UNDER THE PANEL IT OPENED. The card and the cross-reference panel now stay
+     open together, and the card was at --z-pop (400) against the panel's
+     --z-panel (310), so it sat ON TOP of the panel it had just launched and
+     covered the references the reader went there to read. It belongs behind:
+     the panel is the thing being read, the card is the context it came from.
+     One rank below the panel, still far above the chrome. Stated here because
+     each volume page declares this z-index in its own inline <style>, and an
+     inline sheet beats a linked one at equal specificity — `body #word-popup`
+     outranks all six copies without editing any of them. */
+  z-index: calc(var(--z-panel) - 1);
+
   /* SCROLL SHADOW. The card scrolls on a phone — about 15% of a long entry is
      below the fold on a 375x667 iPhone, and roughly half of it in landscape —
      and nothing said so: the content simply stopped at the rounded edge. This
