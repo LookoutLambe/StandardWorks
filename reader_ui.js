@@ -896,7 +896,10 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
       var sEntry = window._strongsRoots && window._strongsRoots[strongsNum];
       var gEntry = window._rootGlossaryData && window._rootGlossaryData[strongsNum];
       var sDef = (gEntry && gEntry.meaning) || (sEntry && sEntry.g) || '';
-      popupStrong.innerHTML = "Strong\u2019s: <a href='https://www.blueletterbible.org/lexicon/" + strongsNum.toLowerCase() + "/wlc/0/1/' target='_blank' rel='noopener'>" + strongsNum + "</a>" +
+      /* NO EXTERNAL LEXICON. This linked out to blueletterbible.org, which took
+         the reader off the app to look up a word the app already defines; the
+         number now opens our own dictionary. */
+      popupStrong.innerHTML = "Strong\u2019s: <span class='popup-strong-link' role='button' tabindex='0' data-strongs='" + strongsNum + "'>" + strongsNum + "</span>" +
         (sDef ? " <span style=\"font-style:italic;opacity:0.8;\">\u2014 " + sDef + "</span>" : "");
       popupStrong.style.display = '';
     } else {
@@ -1000,6 +1003,15 @@ detailHtml += '</div>';
       directLink.addEventListener('click', function(ev) {
         ev.stopPropagation();
         openXrefPanel(JSON.parse(wu.getAttribute('data-xref-ref')), wu.getAttribute('data-xref-key'), (window.getLemmaStrongs && getLemmaStrongs(hText)) || root);
+      });
+    }
+    /* The legacy Strong's row, when it is shown at all, opens the app's own
+       dictionary too — never an external lexicon. */
+    var sLink = popupStrong && popupStrong.querySelector('.popup-strong-link');
+    if (sLink && typeof window.openGlossaryAtRoot === 'function') {
+      sLink.addEventListener('click', function (ev) {
+        ev.stopPropagation();
+        window.openGlossaryAtRoot(sLink.getAttribute('data-strongs') || '');
       });
     }
     var xrefLink = popupDetail.querySelector('.popup-xref-link');
@@ -1626,7 +1638,17 @@ function goToGlossaryVerse(verseKey) {
   var book = findBookByName(parts[0]);
   if (!book) return;
   var chId = book.prefix + '-ch' + parts[1];
-  navTo(chId);
+  /* THE WAY BACK. A dictionary entry lists every verse the root appears in, so
+     this is the longest jump in the app — and it went through a bare navTo(),
+     whose wrapper CLEARS any return point rather than setting one. The reader
+     looked a word up from Alma 32, followed a reference, and had no way back
+     to the verse they were reading; inside the iOS app there is no browser
+     Back either. NavEngineFollow marks where we are and lands on the verse. */
+  if (typeof window.NavEngineFollow === 'function') {
+    window.NavEngineFollow('#' + chId + (parts[2] ? '&v=' + parts[2] : ''));
+  } else {
+    navTo(chId);
+  }
   setTimeout(function() {
     var verse = document.querySelector('[data-verse-key="' + verseKey + '"]');
     if (verse) { verse.classList.add('highlighted'); verse.scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'center' }); }

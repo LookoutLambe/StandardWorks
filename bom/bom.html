@@ -5536,7 +5536,18 @@ function navigateToVerse(verseKey) {
   var prefix = revMap[book];
   if (!prefix) return;
   var chapId = prefix + ch;
-  navTo(chapId);
+  /* THE WAY BACK. A dictionary entry lists every verse the root appears in, so
+     this is the longest jump in the app — and it went through a bare navTo(),
+     whose wrapper CLEARS any return point rather than setting one. The reader
+     looked a word up from Alma 32, followed a reference, and had no way back
+     to the verse they were reading; inside the iOS app there is no browser
+     Back either. NavEngineFollow marks where we are and lands on the verse. */
+  var vNum = parseInt(parts[2], 10) || 0;
+  if (typeof window.NavEngineFollow === 'function') {
+    window.NavEngineFollow('#' + chapId + (vNum ? ':' + vNum : ''));
+  } else {
+    navTo(chapId);
+  }
   setTimeout(function() {
     var el = document.querySelector('.verse[data-verse-key="' + verseKey + '"]');
     if (el) el.scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'center' });
@@ -7967,13 +7978,22 @@ document.addEventListener('keydown', function(e) {
       for (_lj = 0; _lj < _lyr.length && !strongsNum; _lj++) strongsNum = _strongsLookup[_lyr[_lj]] || '';
       for (_lj = 0; _lj < _lyr.length && !strongsNum; _lj++) strongsNum = _strongsLookup[_stripNikkud(_lyr[_lj])] || '';
     }
-    if (strongsNum) {
+    if (strongsNum && window.RootScorecard) {
+      /* The card below carries the number now, as a quiet marker at the end of
+         the meaning line. This row read "Strong's: H0530 — firmness" directly
+         under the card's own gloss "faith", where it read as a contradiction
+         rather than a citation. Kept only for the path with no scorecard. */
+      popupStrong.style.display = 'none';
+    } else if (strongsNum) {
       // The lexeme's own definition, so a derived noun explains itself:
       // לֶקַח H3948 "learning, doctrine" beside its root לקח "take".
       var sEntry = window._strongsRoots && window._strongsRoots[strongsNum];
       var gEntry = window._rootGlossaryData && window._rootGlossaryData[strongsNum];
       var sDef = (gEntry && gEntry.meaning) || (sEntry && sEntry.g) || '';
-      popupStrong.innerHTML = "Strong\u2019s: <a href='https://www.blueletterbible.org/lexicon/" + strongsNum.toLowerCase() + "/wlc/0/1/' target='_blank' rel='noopener'>" + strongsNum + "</a>" +
+      /* NO EXTERNAL LEXICON. This linked out to blueletterbible.org, which took
+         the reader off the app to look up a word the app already defines; the
+         number now opens our own dictionary. */
+      popupStrong.innerHTML = "Strong\u2019s: <span class='popup-strong-link' role='button' tabindex='0' data-strongs='" + strongsNum + "'>" + strongsNum + "</span>" +
         (sDef ? " <span style=\"font-style:italic;opacity:0.8;\">\u2014 " + sDef + "</span>" : "");
       popupStrong.style.display = '';
     } else {
@@ -8133,6 +8153,15 @@ detailHtml += '</div>';
       });
     }
     // Bind root xref link to open aggregated root xref panel
+    /* The legacy Strong's row, when it is shown at all, opens the app's own
+       dictionary too — never an external lexicon. */
+    var sLink = popupStrong && popupStrong.querySelector('.popup-strong-link');
+    if (sLink && typeof window.openGlossaryAtRoot === 'function') {
+      sLink.addEventListener('click', function (ev) {
+        ev.stopPropagation();
+        window.openGlossaryAtRoot(sLink.getAttribute('data-strongs') || '');
+      });
+    }
     var xrefLink = popupDetail.querySelector('.popup-xref-link');
     if (xrefLink) {
       xrefLink.addEventListener('click', function(ev) {

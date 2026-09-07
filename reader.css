@@ -1202,7 +1202,20 @@ body #word-popup .rsc-meaning .rsc-strongs {
   color: var(--ink-3) !important;
   letter-spacing: 0.04em;
   font-variant-numeric: tabular-nums;
+  /* It opens the app's own dictionary, so it has to look and behave like a
+     control: a 32px target, not a 9px number to poke at. */
+  cursor: pointer;
+  padding: 7px 2px 7px 10px;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
 }
+body #word-popup .rsc-meaning .rsc-strongs:hover { color: var(--here) !important; }
+body #word-popup .rsc-meaning .rsc-strongs:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+body #word-popup .popup-strong-link { cursor: pointer; text-decoration: underline; }
 body #word-popup .rsc-rootline { margin-top: 6px; font-size: 0.9em !important; }
 body #word-popup .rsc-root {
   cursor: pointer;

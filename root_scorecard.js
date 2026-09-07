@@ -615,7 +615,8 @@
        like an error. The number is worth keeping; Strong's wording is not. */
     if (meaningLine || wordNum) {
       h += '<div class="rsc-meaning">' + (meaningLine ? esc(meaningLine) : '') +
-        (wordNum ? '<span class="rsc-strongs">' + esc(wordNum) + '</span>' : '') + '</div>';
+        (wordNum ? '<span class="rsc-strongs" role="button" tabindex="0" data-strongs="' +
+          esc(wordNum) + '" title="Open in the dictionary">' + esc(wordNum) + '</span>' : '') + '</div>';
     }
 
     /* THE ROOT, only when it is not the word already at the top of the card.
@@ -816,6 +817,23 @@
             rootLink.addEventListener('click', function(ev) {
               ev.stopPropagation();
               window.openGlossaryAtRoot(found.key);
+            });
+          }
+          /* THE NUMBER OPENS OUR OWN DICTIONARY. It used to be an anchor out to
+             blueletterbible.org — sending the reader off the app, and out of
+             the Hebrew this edition actually renders, to look up a word the
+             app already defines. openGlossaryAtRoot resolves an H-number to
+             its lexeme and opens the glossary there. */
+          var sNum = blk.querySelector('.rsc-strongs');
+          if (sNum && typeof window.openGlossaryAtRoot === 'function') {
+            var openDict = function (ev) {
+              ev.stopPropagation();
+              ev.preventDefault();
+              window.openGlossaryAtRoot(sNum.getAttribute('data-strongs') || '');
+            };
+            sNum.addEventListener('click', openDict);
+            sNum.addEventListener('keydown', function (ev) {
+              if (ev.key === 'Enter' || ev.key === ' ') openDict(ev);
             });
           }
           var refsLink = blk.querySelector('.rsc-refs-link');
