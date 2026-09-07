@@ -243,24 +243,22 @@ body, button, input, select, textarea,
 
 /* -- Dual: Hebrew and English at the same size, split 55/45, and the
       chapter summary laid out side by side the way the verses are. -- */
-body.dual-mode .verse-english { font-size: 0.85em; flex: 45 1 0; }
+/* The desktop Dual split lives in reader.css (body.dual-mode .verse-english,
+   flex: 45 1 0) together with its @media(max-width:600px) override that
+   stacks the two columns on a phone. A verbatim COPY of the desktop rule
+   used to sit here, and because a page's inline <style> comes after the
+   linked sheet it beat that override at every width: on a 375px screen the
+   English kept flex 45 and the Hebrew collapsed to a 6px column whose words
+   spilled across it, so the two languages printed on top of each other.
+   Removed — reader.css owns this. bom/bom.html is not affected: it carries
+   the whole block inline, 600px override included, in the right order. */
 body.dual-mode .colophon .word-unit .hw { font-size: 1em; }
 
-body.dual-mode .chapter-heading { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0 14px; }
-body.dual-mode .chapter-heading > h2,
-body.dual-mode .chapter-heading > .chapter-label-en { flex: 0 0 100%; }
-body.dual-mode .chapter-heading > .chapter-summary-en,
-body.dual-mode .chapter-heading > .heading-flow {
-  min-width: 0; max-width: none; margin-top: 10px;
-}
-body.dual-mode .chapter-heading > .chapter-summary-en {
-  order: 1; flex: 45 1 0; direction: ltr; text-align: left; padding-left: 14px;
-  border-left: 1px solid var(--rule-light);
-}
-body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direction: rtl; text-align: right; }@media (max-width: 700px) {
-  body.dual-mode .chapter-heading > .chapter-summary-en { font-size: 0.78em; padding-right: 8px; }
-  body.dual-mode .chapter-heading > .chapter-summary-he { font-size: 0.9em; }
-}
+/* The Dual chapter-heading layout moved to reader.css. It lived here in four
+   identical copies, and because a page's inline <style> comes after the
+   linked sheet, those copies beat reader.css's @media(max-width:600px)
+   stacking rule at every width — which is why the summary stayed side by
+   side on a phone. One home now. */
 </style>
 </head>
 <body>

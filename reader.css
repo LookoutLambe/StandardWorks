@@ -2506,3 +2506,61 @@ body #search-input {
   .acrostic-stanza { margin: 26px 0 14px; padding: 11px 0 9px; }
   .acrostic-letter { font-size: 1.8rem; }
 }
+
+
+/* ══════════════════════════════════════════════════════════════════════
+   DUAL MODE — the chapter heading, and the phone rules for both.
+
+   The desktop split used to live in four identical copies inside ot/nt/dc/pgp's
+   own <style> blocks. A page's inline style comes AFTER the linked sheet, so
+   those copies beat this file's phone override at every width: the summary
+   stayed in a 45/55 split on a 375px screen. It lives here once now.
+   ══════════════════════════════════════════════════════════════════════ */
+body.dual-mode .chapter-heading { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0 14px; }
+body.dual-mode .chapter-heading > h2,
+body.dual-mode .chapter-heading > .chapter-label-en { flex: 0 0 100%; }
+body.dual-mode .chapter-heading > .chapter-summary-en,
+body.dual-mode .chapter-heading > .heading-flow { min-width: 0; max-width: none; margin-top: 10px; }
+body.dual-mode .chapter-heading > .chapter-summary-en {
+  order: 1; flex: 45 1 0; direction: ltr; text-align: left; padding-left: 14px;
+  border-left: 1px solid var(--rule-light);
+}
+body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direction: rtl; text-align: right; }
+@media (max-width: 700px) {
+  body.dual-mode .chapter-heading > .chapter-summary-en { font-size: 0.78em; padding-right: 8px; }
+  body.dual-mode .chapter-heading > .chapter-summary-he { font-size: 0.9em; }
+}
+
+/* ── PHONES ────────────────────────────────────────────────────────────
+   Two rules, both the translator's: Dual STACKS, and the two languages are
+   set at the SAME size — "the hebrew was supposed to be 12 point just like
+   the english; its the hebrew that needs to shrink."
+
+   Measured at 375px before this: the English ran 18.4px and the Hebrew 32.5px
+   beside it. Both inherit from .verse (22.4px), which is what the Aa control
+   scales, so both are expressed in em and the control keeps working — the
+   Hebrew simply comes down to the English's 0.82em instead of the English
+   being pushed up. The transliteration drops with it, or it would sit almost
+   as large as the Hebrew it belongs to.
+
+   Desktop is untouched: the 45/55 side-by-side split above still stands there.
+   ────────────────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  body.dual-mode .chapter-heading { flex-wrap: wrap; }
+  body.dual-mode .chapter-heading > .heading-flow { order: 1; flex: 1 1 100%; }
+  body.dual-mode .chapter-heading > .chapter-summary-en {
+    order: 2; flex: 1 1 100%; border-left: none; padding-left: 0; padding-top: 8px;
+    font-size: 0.82em;
+  }
+  /* The Hebrew comes down THROUGH ITS TOKEN, not past its !important. .hw is
+     `font-size: var(--t4) !important`, so a plain selector — however specific
+     — cannot touch it; redefining --t4 for this scope can, and the file's own
+     note on the scale says the token "is the right lever anyway". --t0 (the
+     translit/gloss tier) is left alone: it is documented as exactly 12px at
+     100%, the legibility floor, and must not be pushed under it.
+     0.82em is the English's own size, so the two now match exactly.
+     Scoped `body.dual-mode #page` because the scale is declared on #page —
+     an ID, specificity (1,0,0) — so a plain `body.dual-mode` (0,1,1) could
+     not reach it either. */
+  body.dual-mode #page { --t4: 0.82em; }
+}
