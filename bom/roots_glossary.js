@@ -18007,8 +18007,8 @@ window._rootGlossaryData = {
     "category": "Family"
   },
   "ספינות": {
-    "meaning": "ships",
-    "category": "Uncategorized"
+    "meaning": "(סְפִינָה) a decked vessel, covered over — root ספן \"to panel, cover\" (1 Kgs 6:9, Hag 1:4); the MT's one ship with a hold to go down into, Jon 1:5",
+    "category": "Lexical"
   },
   "יירשנה": {
     "meaning": "he will inherit it",
