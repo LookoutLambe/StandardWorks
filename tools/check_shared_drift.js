@@ -131,64 +131,36 @@ for (const name of ['_paintWordAnnotation', 'applyAnnotationToWord']) {
   if (!bad) ok('heading-flow loop identical across ot/nt/dc/pgp');
 }
 
-// ---- 5. the transliterator, forked into bom/bom.html
-// The two copies had drifted on 789 of 107,318 distinct forms before
-// 2026-09-06. They agree exactly now — bom's _tlPointed rules (shva, qamats,
-// holam-vav) went into reader_ui.js, reader_ui's _tlReceived table came back
-// the other way — so BEHAVIOUR can be asserted, which is what actually matters
-// and is immune to the two files' different styles (escaped \uXXXX vs literal
-// Hebrew, brace placement). A deterministic sample keeps it quick.
+// ---- 5. the transliterator — ONE implementation
+// It lived in reader_ui.js AND inline in bom.html, ~200 lines each, and this
+// check used to compare the two. Comparing copies is what you do when you have
+// given up on removing them; they are removed now, into translit.js, proved
+// identical to both predecessors across 20,245 corpus forms before the old
+// copies were deleted. What is asserted here is the property that actually
+// matters: that there is still only one, and that every page loads it.
 {
-  const endOfFn = (src, name) => {
-    const m = src.match(new RegExp('function ' + name + '\\s*\\('));
-    if (!m) return -1;
-    let d = 0;
-    for (let j = src.indexOf('{', m.index); j < src.length; j++) {
-      if (src[j] === '{') d++;
-      else if (src[j] === '}') { d--; if (!d) return j + 1; }
+  const OWNER = 'translit.js';
+  const src = read(OWNER);
+  if (!/function\s+_tlPointed\s*\(/.test(src)) fail(OWNER + ' no longer defines _tlPointed');
+  const strays = [];
+  for (const f of ['reader_ui.js', 'bom/bom.html', 'root_scorecard.js', 'crossrefs_engine.js']) {
+    const t = read(f);
+    for (const n of ['_tlPointed', '_tlPopular', '_translitRaw', '_tlKnown', '_tlReceived']) {
+      const re = new RegExp('function\\s+' + n + '\\s*\\(|(?:var|const|let)\\s+' + n + '\\s*=\\s*[{\\[]');
+      if (re.test(t)) strays.push(f + ' redefines ' + n);
     }
-    return -1;
-  };
-  const loadTl = f => {
-    const src = read(f);
-    const a = src.indexOf('var _tlReceived') >= 0
-      ? Math.min(src.indexOf('var _tlKnown'), src.indexOf('var _tlReceived'))
-      : src.indexOf('var _tlKnown');
-    const z = endOfFn(src, '_tlPointed');
-    if (a < 0 || z < 0) return null;
-    const ctx = { console };
-    vm.createContext(ctx);
-    vm.runInContext(src.slice(a, z), ctx);
-    return ctx.transliterate;
-  };
-  const ui = loadTl('reader_ui.js'), bm = loadTl('bom/bom.html');
-  if (!ui || !bm) fail('could not load the transliterator from one of the two copies');
-  else {
-    const forms = [];
-    for (const dir of ['ot_verses', 'nt_verses', 'dc_verses', 'pgp_verses', 'bom/verses', 'jst_verses']) {
-      const abs = path.join(ROOT, dir);
-      if (!fs.existsSync(abs)) continue;
-      for (const f of fs.readdirSync(abs)) {
-        if (!f.endsWith('.js')) continue;
-        const src = fs.readFileSync(path.join(abs, f), 'utf8');
-        const re = /\["([^"]*)","[^"]*"\]/g;
-        let m;
-        while ((m = re.exec(src))) if (/[\u05D0-\u05EA]/.test(m[1])) forms.push(m[1]);
-      }
-    }
-    const step = Math.max(1, Math.floor(forms.length / 4000));
-    let checked = 0, bad = 0, first = '';
-    for (let i = 0; i < forms.length; i += step) {
-      const w = forms[i], a = ui(w), b = bm(w);
-      checked++;
-      if (a !== b) { bad++; if (!first) first = w + ' -> reader_ui "' + a + '" vs bom.html "' + b + '"'; }
-    }
-    if (bad) fail('the transliterator differs between reader_ui.js and bom/bom.html on ' + bad +
-                  ' of ' + checked + ' sampled forms — bom.html forks it; apply the same edit to both.\n  ' + first);
-    else ok('transliterator identical in behaviour across ' + checked.toLocaleString() + ' sampled forms');
+  }
+  if (strays.length) {
+    fail('the transliterator has grown a second copy again:\n        ' +
+         strays.join('\n        ') + '\n        Its one home is ' + OWNER + '.');
+  }
+  const PAGES = ['ot.html', 'nt.html', 'dc.html', 'pgp.html', 'jst.html', 'bom/bom.html'];
+  const missing = PAGES.filter(p => !/<script[^>]*src="[^"]*translit\.js/.test(read(p)));
+  if (missing.length) fail('these pages do not load translit.js: ' + missing.join(', '));
+  if (!strays.length && !missing.length) {
+    ok('transliterator is one implementation (' + OWNER + '), loaded by all ' + PAGES.length + ' pages');
   }
 }
-
 
 /* ── xref_common.js must load BEFORE anything that reads window.SWXref ──────
    The shared book table and reference parser live there now, and the engine
