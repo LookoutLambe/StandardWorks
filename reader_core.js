@@ -381,6 +381,43 @@ var VolumeLoader = (function() {
 // verse_search.js preloads a lazy volume through this before searching it.
 window.__swLoadAllVerses = function(cb) { VolumeLoader.ensureAll(cb || function() {}); };
 
+/* PSALM 119 IS AN ACROSTIC and the printed editions say so. 176 verses in 22
+   stanzas of eight, each stanza opening with the next letter of the alphabet —
+   verse 1 אַשְׁרֵי, verse 9 בַּמֶּה, verse 17 גְּמֹל, verse 25 דָּבְקָה — and the
+   KJV heads each stanza with the letter's name. Without them the psalm reads
+   as 176 undifferentiated verses and the one structural fact about it is
+   invisible, even though the Hebrew carries it perfectly.
+
+   The letter itself is the heading, with its name beneath in the site's own
+   transliteration — the same Hebrew-over-transliteration idiom as every other
+   line in the book, rather than the KJV's archaic romanisation (VAU, JOD,
+   SCHIN). Nothing is added to the verse data: the stanza boundary is arithmetic
+   on the verse number, so no file needs a marker and nothing can drift. */
+var _PS119 = [
+  ['א','alef'], ['ב','bet'],   ['ג','gimel'], ['ד','dalet'], ['ה','he'],
+  ['ו','vav'],  ['ז','zayin'], ['ח','chet'],  ['ט','tet'],   ['י','yod'],
+  ['כ','kaf'],  ['ל','lamed'], ['מ','mem'],   ['נ','nun'],   ['ס','samekh'],
+  ['ע','ayin'], ['פ','pe'],    ['צ','tsadi'], ['ק','kof'],   ['ר','resh'],
+  ['ש','shin'], ['ת','tav']
+];
+function _appendAcrosticStanza(container, chId, verseNo) {
+  if (chId !== 'psa-ch119') return;
+  if ((verseNo - 1) % 8 !== 0) return;
+  var pair = _PS119[(verseNo - 1) / 8];
+  if (!pair) return;
+  var d = document.createElement('div');
+  d.className = 'acrostic-stanza';
+  d.setAttribute('aria-label', 'Stanza ' + pair[1]);
+  var he = document.createElement('span');
+  he.className = 'acrostic-letter';
+  he.textContent = pair[0];
+  var en = document.createElement('span');
+  en.className = 'acrostic-name';
+  en.textContent = pair[1];
+  d.appendChild(he); d.appendChild(en);
+  container.appendChild(d);
+}
+
 function _doRenderVerses(verseData, containerId) {
   var chId = containerId.replace('-verses', '');
   var container = document.getElementById(containerId);
@@ -388,6 +425,7 @@ function _doRenderVerses(verseData, containerId) {
   var bkInfo = getBookChapter(chId);
   verseData.forEach(function(v, idx) {
     var verseKey = bkInfo ? (bkInfo.book + '|' + bkInfo.chapter + '|' + (idx + 1)) : '';
+    _appendAcrosticStanza(container, chId, idx + 1);
     var verseDiv = document.createElement('div');
     verseDiv.className = 'verse';
     if (verseKey) verseDiv.setAttribute('data-verse-key', verseKey);

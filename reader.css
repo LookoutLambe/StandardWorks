@@ -2465,3 +2465,44 @@ body #search-input {
   min-height: 44px;
   box-sizing: border-box;
 }
+
+
+/* ══════════════════════════════════════════════════════════════════════
+   THE ACROSTIC STANZA (Psalm 119)
+
+   Twenty-two stanzas of eight, each opening on the next letter of the
+   alphabet. The letter is the heading — set large in the reading face, with
+   its name beneath in the transliteration tier, exactly as a word in the
+   interlinear is set. Rules either side so it reads as a division of the
+   psalm rather than a verse of it.
+   ══════════════════════════════════════════════════════════════════════ */
+.acrostic-stanza {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin: 34px 0 18px;
+  padding: 14px 0 12px;
+  border-top: 1px solid color-mix(in srgb, var(--here) 30%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--here) 18%, transparent);
+}
+.acrostic-stanza:first-child { margin-top: 6px; }
+.acrostic-letter {
+  font-family: 'David Libre', serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--here);
+  direction: rtl;
+}
+.acrostic-name {
+  font-family: 'David Libre', serif;
+  font-size: 0.82rem;
+  font-style: italic;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+}
+@media (max-width: 600px) {
+  .acrostic-stanza { margin: 26px 0 14px; padding: 11px 0 9px; }
+  .acrostic-letter { font-size: 1.8rem; }
+}
