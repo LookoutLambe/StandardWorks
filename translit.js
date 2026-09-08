@@ -29,28 +29,37 @@
 (function () {
   'use strict';
 
-  var _tlReceived = { 'קולב':'kolob', 'בקולב':'bekolob', 'לקולב':'lekolob', 'מקולב':'mikkolob',
-                      'קוקב':'kokob', 'קוקאובאם':'kokaubeam', 'שינהה':'shinehah', 'אליבליש':'oliblish',
-                      // שמאול: the Masoretic mater vav sits AFTER the aleph (Gen 13:9) —
-                      // the mechanical rules read it as consonantal 'v' (usmovl)
-                                          // Qamats QATAN: closed and UNSTRESSED. The mechanical rules
-                      // read a plain U+05B8 as gadol, which is right for the
-                      // pausal verbs (yadata, amarti, salachta — stressed) and
-                      // wrong for these nouns. The user: "its korban", and on the
-                      // rule: "if its a closed sylabel it gets the qamats qatan".
-                      'ארכה':'orka', 'בבשתם':'bevoshtam', 'בקרבן':'vekorban',
-                      'בשתם':'boshtam', 'הקרבן':'hakkorban', 'וארד':'vaord',
-                      'וארכה':'veorka', 'והקרבן':'vehakkorban', 'וחרבנם':'vechorbanam',
-                      'ולשלשתכם':'velishloshtekhem', 'ונבזביתך':'unvozbeyatakh', 'ורחבה':'verochba',
-                      'ושלשתם':'ushloshtam', 'חרבה':'chorba', 'חרבנה':'chorbana',
-                      'כקרבן':'kekorban', 'כרחבה':'kerochba', 'לבשתכם':'levoshtekhem',
-                      'לבשתנו':'levoshtenu', 'לקרבן':'lekorban', 'לרחבה':'lerochba',
-                      'מעצבך':'meotsbekha', 'מרדתא':'marodta', 'עצבי':'otsbi',
-                      'עצבכם':'otsbekhem', 'ערפך':'orpekha', 'קרבן':'korban',
-                      'קרבנה':'korbana', 'קרבנך':'korbanekha', 'קרבנם':'korbanam',
-                      'שלשתם':'sheloshtam',
-                      'שמאול':'semol', 'ושמאול':'usmol', 'משמאול':'missemol',
-                      'מהשמאול':'mehassemol', 'השמאול':'hassemol', 'שמאולך':'semolekh' };
+  /* Received spellings that beat the mechanical rules. TWO KINDS live here:
+     the Book of Abraham astronomy names, which are spelled the way that book
+     spells them, and words the corpus writes with a plain qamats where a
+     qamats QATAN is meant (or without the dagesh that makes a bet a 'b') —
+     "its korban", not karban.
+
+     KEYED ON THE POINTED FORM, NOT THE CONSONANTS. It used to strip all the
+     pointing before looking the word up, so one entry spoke for every word
+     sharing its letters: 'חרבה' -> "chorba" was being applied to six different
+     words, among them חֲרֵבָה "dry"; 'וארד' -> "vaord" was overriding וָאֵרֵד,
+     "and I went down", five times. Sixteen of the forty-five keys covered more
+     than one word. A patch for one word must not speak for another. */
+  var _tlReceived = {
+                      'אֳלִיבְלִישׁ':'oliblish', 'אָרְכָּהּ':'orka', 'בְּבָשְׁתָּם':'bevoshtam',
+                      'בְּקָרְבָּן':'vekorban', 'בְּקוֹלֹב':'bekolob', 'בְקָרְבָּן':'vekorban',
+                      'בָּשְׁתָּם':'boshtam', 'בָשְׁתָּם':'boshtam', 'הַקָּרְבָּן':'hakkorban',
+                      'הַקׇּרְבָן':'hakkorban', 'וְאָרְכָּהּ':'veorka', 'וְהַקָּרְבָּן':'vehakkorban',
+                      'וְחָרְבָּנָם':'vechorbanam', 'וְלִשְׁלָשְׁתְּכֶם':'velishloshtekhem', 'וְרָחְבָּהּ':'verochba',
+                      'וָאָרְדְּ':'vaord', 'וּנְבָזְבְּיָתָךְ':'unvozbeyatakh', 'וּשְׁלָשְׁתָּם':'ushloshtam',
+                      'וּשְׂמֹאול':'usmol', 'חָרְבָּה':'chorba', 'חָרְבָּנָהּ':'chorbana',
+                      'כְּקָרְבַּן':'kekorban', 'כְּרָחְבָּהּ':'kerochba', 'לְבָשְׁתְּכֶם':'levoshtekhem',
+                      'לְבָשְׁתֵּנוּ':'levoshtenu', 'לְקָרְבַּן':'lekorban', 'לְקָרְבָּן':'lekorban',
+                      'לְקוֹלֹב':'lekolob', 'לְרָחְבָּהּ':'lerochba', 'מִקּוֹלֹב':'mikkolob',
+                      'מִשְּׂמֹאול':'missemol', 'מֵהַשְּׂמֹאול':'mehassemol', 'מֵעָצְבְּךָ':'meotsbekha',
+                      'מָרָדְתָּא':'marodta', 'עָצְבְּכֶם':'otsbekhem', 'עָצְבִּי':'otsbi',
+                      'עָרְפֶּךָ':'orpekha', 'קָרְבַּן':'korban', 'קָרְבָּן':'korban',
+                      'קָרְבָּנְךָ':'korbanekha', 'קָרְבָּנָהּ':'korbana', 'קָרְבָּנָם':'korbanam',
+                      'קוֹלֹב':'kolob', 'קוֹקַאוּבְּאֵם':'kokaubeam', 'קוֹקֹב':'kokob',
+                      'שְׁלָשְׁתָּם':'sheloshtam', 'שְׂמֹאול':'semol', 'שְׂמֹאולֶךָ':'semolekh',
+                      'שִׁינֵהָה':'shinehah'
+  };
 
   var _tlKnown = {
     '\u05D0\u05D1':'av','\u05D0\u05D7':'ach','\u05D0\u05DC':'el','\u05D0\u05DD':'em','\u05D0\u05E9':'esh','\u05D0\u05EA':'et',
@@ -271,8 +280,7 @@
     if (heb.indexOf('\u05BE') >= 0) return heb.split('\u05BE').map(function(p) { return transliterate(p); }).join('-');
     // Received spellings beat the mechanical rules regardless of pointing —
     // the Abraham 3 astronomy names keep their Book of Abraham forms.
-    var _rc = heb.replace(/[\u0591-\u05C7]/g, '');
-    if (_tlReceived[_rc]) return _tlReceived[_rc];
+    if (_tlReceived[heb]) return _tlReceived[heb];
     var hasNikkud = /[\u05B0-\u05BC\u05C7]/.test(heb);
     if (hasNikkud) {
       var consonantsOnly = heb.replace(/[\u0591-\u05C7\u05B0-\u05BB\u05BD\u05BF\u05C1\u05C2]/g, '');
