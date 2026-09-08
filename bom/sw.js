@@ -10,7 +10,7 @@ const ASSETS = [
   '../root_engine.js?v=38',
   '../root_concordance.js?v=92',
   '../xref_study_panel.css?v=14',
-  '../reader.css?v=106',
+  '../reader.css?v=107',
   '../xref_study_panel.js?v=6',
   /* official_verses.js (1,852 KB) is split per book into english/<book>.js
      by tools/build_crossref_chunks.js and arrives with the book. */

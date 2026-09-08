@@ -2863,13 +2863,15 @@ body.dark-mode #nav-progress-text { color: #6a6550; }
 /* ── The front matter's disclosures ─────────────────────────────────────────
    The preface is 3,355px tall — measured at 1600px it was 59% of the hub's
    whole height, so the page people come to for six volumes had become mostly
-   essay. Each part folds now, and the fold's DEFAULT follows the viewport:
-   open where there is room to read, closed where the hub has to stay a hub.
+   essay. Each part folds, and it starts folded at EVERY width: the hub shows
+   the title, the one line that is the hook, and three rows saying what is
+   behind them. The reader opens what they want.
 
    <details>/<summary> rather than a scripted accordion: it is keyboard
    operable, announced correctly, and findable by the browser's own in-page
-   search without any of that having to be written or maintained. The script
-   only sets the initial state and stops as soon as the reader touches it. */
+   search without any of that having to be written or maintained. Closed is
+   the element's own default, so there is no state to set — the only script
+   is the one that opens a section a deep link points at. */
 .sw-front .tr-sec { border-top: 1px solid var(--rule-light); }
 .sw-front .tr-sec:first-of-type { border-top: none; }
 
