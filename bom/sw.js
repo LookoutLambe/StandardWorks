@@ -5,6 +5,7 @@ const ASSETS = [
   './bom.html',
   './bom_book_loader.js?v=10',
   './bom_lazy_assets.js?v=3',
+  '../reader_surface.js?v=1',
   '../root_scorecard.js?v=90',
   '../root_engine.js?v=38',
   '../root_concordance.js?v=83',

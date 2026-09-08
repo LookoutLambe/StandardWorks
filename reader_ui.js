@@ -77,7 +77,6 @@ function openShortcuts() { document.getElementById('shortcuts-overlay').classLis
 function closeShortcuts() { document.getElementById('shortcuts-overlay').classList.remove('open'); }
 
 
-
 // Keyboard shortcuts
 document.addEventListener('keydown', function(e) {
   if ((e.ctrlKey || e.metaKey) && e.key === 'f') { e.preventDefault(); openSearch(); return; }
@@ -796,10 +795,6 @@ detailHtml += '</div>';
   });
 })();
 
-function closePopup() {
-  var wp = document.getElementById('word-popup');
-  if (wp) wp.style.display = 'none';
-}
 
 document.addEventListener(
   'pointerdown',
@@ -845,20 +840,6 @@ function _annOf(wid) {
   return out;
 }
 
-function _paintWordAnnotation(el, ta) {
-  ['hw','tl','gl'].forEach(function(tier) {
-    var tierEl = el.querySelector('.' + tier);
-    if (!tierEl) return;
-    // Highlights and underlines paint the Hebrew line only (corpus-wide rule);
-    // the loop still visits tl/gl so stale paint from older data is cleaned.
-    var on = tier === 'hw';
-    if (on && ta.hl) { tierEl.classList.add('ann-hl'); tierEl.style.backgroundColor = ta.hl; tierEl.setAttribute('data-hlc', ta.hl); }
-    else { tierEl.classList.remove('ann-hl'); tierEl.style.backgroundColor = ''; tierEl.removeAttribute('data-hlc'); }
-    // Underlines were removed 2026-08-30 — they collided with the nikkud and
-    // made pointed text hard to read. Stale ann-ul paint is still cleaned.
-    tierEl.classList.remove('ann-ul'); tierEl.style.textDecorationColor = '';
-  });
-}
 
 function setWordAnnotation(wid, tier, type, color) {
   var cur = _annOf(wid);
@@ -868,12 +849,6 @@ function setWordAnnotation(wid, tier, type, color) {
   applyAnnotationToWord(wid);
 }
 
-function applyAnnotationToWord(wid) {
-  var ta = _annOf(wid);
-  document.querySelectorAll('.word-unit[data-wid="' + wid + '"]').forEach(function(el) {
-    _paintWordAnnotation(el, ta);
-  });
-}
 
 function applyAllAnnotations() {
   document.querySelectorAll('.word-unit[data-wid]').forEach(function(el) {
@@ -888,18 +863,10 @@ function openAnnotationsPanel() {
   document.getElementById('annotations-panel').classList.add('open');
   document.getElementById('panel-overlay').classList.add('open');
 }
-function closeAnnotationsPanel() {
-  document.getElementById('annotations-panel').classList.remove('open');
-  document.getElementById('panel-overlay').classList.remove('open');
-}
+
 
 var _currentAnnTab = 'highlights';
-function showAnnTab(tab) {
-  _currentAnnTab = tab;
-  document.querySelectorAll('.ann-tab').forEach(function(t) { t.classList.remove('active'); });
-  document.querySelector('.ann-tab[onclick*="' + tab + '"]').classList.add('active');
-  renderAnnotationsList();
-}
+
 
 function renderAnnotationsList() {
   var list = document.getElementById('annotations-list');
@@ -950,29 +917,6 @@ function _isSelReadingSurface(el) {
   return !!el.closest('.chapter-panel, .verse, .word-flow, .word-unit, #main-content, #page, .book-header, .landing-hero, .landing-content');
 }
 
-function initFloatingSelToolbarPref() {
-  // The tools rail starts hidden — selecting text pops the highlighter at the
-  // selection (Gospel-Library pattern); the crayon tab opens the full rail.
-  document.body.classList.add('hide-sel-toolbar');
-  _syncSelToolbarModeButton();
-}
-
-function _syncSelToolbarModeButton() {
-  var b = document.getElementById('sel-toolbar-mode-toggle');
-  if (!b) return;
-  var off = document.body.classList.contains('hide-sel-toolbar');
-  b.classList.toggle('active', off);
-  b.setAttribute('aria-pressed', off ? 'true' : 'false');
-  b.title = off ? 'Selection toolbar off — tap to turn on (tools appear after you select text)' : 'Hide floating selection toolbar (copy/select works normally)';
-}
-
-function toggleFloatingSelToolbar(e) {
-  if (e) { e.preventDefault(); e.stopPropagation(); }
-  document.body.classList.toggle('hide-sel-toolbar');
-  try { localStorage.setItem(SW_SEL_TB_LS, document.body.classList.contains('hide-sel-toolbar') ? '1' : '0'); } catch (err) {}
-  _syncSelToolbarModeButton();
-  _hideSelToolbar();
-}
 
 function _detectTier(node) {
   var el = node.nodeType === 3 ? node.parentElement : node;
@@ -1054,50 +998,6 @@ function _hideSelToolbar() {
   _selMode = '';
 }
 
-function hlPopClose() {
-  try { window.getSelection().removeAllRanges(); } catch (e) {}
-  _hideSelToolbar();
-}
-
-// Note editing inside the popover delegates to the rail's note plumbing so the
-// storage/marker logic stays in one place.
-function hlPopNote() {
-  var row = document.getElementById('hl-note-row');
-  if (!row) return;
-  if (row.style.display !== 'none') { row.style.display = 'none'; return; }
-  _loadSelNote();
-  var src = document.getElementById('sel-note-input');
-  var ta = document.getElementById('hl-note-input');
-  ta.value = src ? src.value : '';
-  ta.placeholder = src ? src.placeholder : 'Add a note...';
-  row.style.display = 'flex';
-  ta.focus();
-}
-
-function hlPopSaveNote() {
-  var ta = document.getElementById('hl-note-input');
-  var dst = document.getElementById('sel-note-input');
-  if (dst) dst.value = ta.value;
-  ta.value = '';
-  selToolbarSaveNote();
-}
-
-function _updateSelToolbarIndicators() {
-  if (_selWordUnits.length === 0) return;
-  var ta = _annOf(_selWordUnits[0].getAttribute('data-wid'));
-  document.querySelectorAll('#sel-toolbar .sel-color[data-ann="highlight"], #hl-pop .sel-color[data-ann="highlight"]').forEach(function(c) { c.classList.toggle('active', ta.hl === c.getAttribute('data-color')); });
-  document.querySelectorAll('#sel-toolbar .sel-color[data-ann="underline"], #hl-pop .sel-color[data-ann="underline"]').forEach(function(c) { c.classList.toggle('active', ta.ul === c.getAttribute('data-color')); });
-}
-
-function selToolbarApply(el) {
-  var annType = el.getAttribute('data-ann');
-  var color = el.getAttribute('data-color');
-  var type = annType === 'highlight' ? 'hl' : 'ul';
-  _selWordUnits.forEach(function(wu) { var wid = wu.getAttribute('data-wid'); if (wid) setWordAnnotation(wid, _selTier, type, color || null); });
-  _updateSelToolbarIndicators();
-  window.getSelection().removeAllRanges();
-  setTimeout(_hideSelToolbar, 150);
-}
 
 function selToolbarToggleColors() {
   var sp = document.getElementById('sel-subpanel');
@@ -1257,34 +1157,6 @@ function buildGlossaryIndex() {
   }
 }
 
-function openGlossary() {
-  if (window.RootScorecard && !RootScorecard.ready()) {
-    RootScorecard.ensure(function() {
-      if (!RootScorecard.ready()) return;
-      glossaryIndex = null;
-      buildGlossaryIndex();
-      if (document.getElementById('glossary-panel').classList.contains('open')) renderGlossaryList();
-    });
-  }
-  buildGlossaryIndex();
-  renderGlossaryList();
-  document.getElementById('glossary-panel').classList.add('open');
-  document.getElementById('panel-overlay').classList.add('open');
-}
-function closeGlossary() {
-  document.getElementById('glossary-panel').classList.remove('open');
-  document.getElementById('panel-overlay').classList.remove('open');
-  /* The marks STAY. Closing used to clear them, which made "Highlight all in
-     text" self-defeating: the panel is what covers the text it just marked, so
-     getting out of the way was the point — and doing so wiped the highlight.
-     They are cleared by the next highlight, and by leaving the chapter. */
-}
-
-function setGlossaryTab(btn) {
-  document.querySelectorAll('.glossary-tab').forEach(function(t) { t.classList.remove('active'); });
-  btn.classList.add('active');
-  renderGlossaryList();
-}
 
 function renderGlossaryList() {
   var list = document.getElementById('glossary-list');
@@ -1388,7 +1260,6 @@ function buildVerseRefsHtml(verseRefs) {
   return html;
 }
 
-function toggleGlossaryEntry(el) { el.classList.toggle('expanded'); }
 
 function goToGlossaryVerse(verseKey) {
   closeGlossary();
@@ -1422,24 +1293,7 @@ function findBookByName(name) {
 /* All three live in xref_common.js now — reader_ui.js and bom.html had their
    own copies, identical but for a null-guard. The globals stay because the
    glossary card calls them from inline onclick handlers. */
-function highlightAllForms(rootKey) {
-  var canon = (window.RootScorecard && RootScorecard.ready())
-    ? function (w) { var f = RootScorecard.lookup(w); return f ? f.key : null; }
-    : null;
-  return window.SWXref.highlightWords(function (wu, hw) {
-    var h = (wu.getAttribute && wu.getAttribute('data-h')) || hw.textContent;
-    var wRoot = canon ? canon(h) : (window.getRoot ? window.getRoot(h) : h);
-    return wRoot === rootKey;
-  });
-}
 
-function highlightForm(surfaceForm) {
-  return window.SWXref.highlightWords(function (wu, hw) {
-    return hw.textContent === surfaceForm;
-  });
-}
-
-function clearHighlightedWords() { window.SWXref.clearHighlightedWords(); }
 
 function openGlossaryAtRoot(rootKey) {
   if (window.RootScorecard && !RootScorecard.ready()) {
@@ -1588,17 +1442,7 @@ _ensureChapterRendered = function(chapId) {
   _injectChapterHeading(chapId);
 };
 
-// THEME — site_chrome.js is the single owner (light / sepia / dark).
-// This used to keep its own <vol>-dark-mode key AND add the class itself, so
-// there were two owners of one piece of state. The moment a third theme
-// existed that became visible: the shared system set sepia-mode while this
-// restored dark-mode from a stale per-volume key, and the body carried BOTH
-// at once — a cream page painted with dark-mode's rules.
-// Delegates now. The legacy key is migrated once so nobody loses their setting.
-function toggleDarkMode() {
-  if (typeof window.toggleDark === 'function') { window.toggleDark(); return; }
-  document.body.classList.toggle('dark-mode');   // only if the shared chrome never loaded
-}
+
 (function migrateLegacyThemeKey() {
   try {
     var k = window.READER.vol + '-dark-mode';
@@ -1630,12 +1474,7 @@ function buildSearchIndex() {
   }
 }
 
-function openSearch() { document.getElementById('search-container').classList.add('open'); document.getElementById('search-input').focus(); buildSearchIndex(); }
-function closeSearch() {
-  document.getElementById('search-container').classList.remove('open');
-  document.getElementById('search-results').classList.remove('open');
-  document.getElementById('search-input').value = '';
-}
+
 (function() {
   var debounce;
   document.addEventListener('input', function(e) {

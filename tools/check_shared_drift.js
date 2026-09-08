@@ -16,8 +16,8 @@
 //      must load it, must NOT contain an inline fork, and the RootEngine
 //      export must keep every member bom.html aliases.
 //   2. (folded into 1.)
-//   3. _paintWordAnnotation and applyAnnotationToWord are identical across
-//      all six volume pages.
+//   3. The reading surface (reader_surface.js) has exactly one copy — no page
+//      redeclares any of its 23 functions, and all six load it.
 //   4. The heading-flow builder loop is identical across ot/nt/dc/pgp.
 //
 // Run directly:  node tools/check_shared_drift.js
@@ -89,24 +89,13 @@ function firstDiff(a, b) {
   } else ok('root_engine.js exports the full RootEngine surface');
 }
 
-// ---- 3. functions identical across all six volume pages -------------------
+// ---- 3. RETIRED — replaced by the reading-surface check further down -------
+/* This kept _paintWordAnnotation and applyAnnotationToWord byte-identical
+   across six copies. They are not copied any more: both live in
+   reader_surface.js, once, and the check that matters now is that no page
+   redeclares them. Enforcing "all copies agree" is the second-best guarantee;
+   having one copy is the first. */
 const SIX = ['bom/bom.html', 'ot.html', 'nt.html', 'dc.html', 'pgp.html', 'jst.html'];
-for (const name of ['_paintWordAnnotation', 'applyAnnotationToWord']) {
-  let ref = null, refFile = null, bad = false;
-  for (const f of SIX) {
-    const body = fnBody(readPage(f), name, f);
-    if (body === null) { bad = true; continue; }
-    const nb = norm(body);
-    if (ref === null) { ref = nb; refFile = f; continue; }
-    if (nb !== ref) {
-      bad = true;
-      fail(name + ' differs between ' + refFile + ' and ' + f +
-           ' — this function is shared by all six volume pages; apply the same edit everywhere.\n  ' +
-           firstDiff(ref, nb));
-    }
-  }
-  if (!bad) ok(name + ' identical across all six volume pages');
-}
 
 // ---- 4. heading-flow loop identical across the four generated-heading pages
 {
@@ -314,6 +303,40 @@ for (const name of ['_paintWordAnnotation', 'applyAnnotationToWord']) {
     }
   }
   if (!bad) ok('every volume\u2019s cross-reference chunks are listed and present');
+}
+
+/* ── The reading surface has exactly one copy ──────────────────────────────
+   reader_surface.js holds the 23 panel / selection / annotation functions that
+   used to exist twice, byte-identically, in reader_ui.js and inline in
+   bom.html. The whole point is that there is now one. A page that re-declares
+   one of them shadows the shared copy silently — the two would drift apart
+   again with nothing to say so. */
+{
+  const SURFACE = path.join(ROOT, 'reader_surface.js');
+  if (!fs.existsSync(SURFACE)) {
+    fail('reader_surface.js is missing — the six pages all load it.');
+  } else {
+    const names = [...fs.readFileSync(SURFACE, 'utf8')
+      .matchAll(/^function\s+([A-Za-z0-9_$]+)\s*\(/gm)].map(m => m[1]);
+    const redeclared = [];
+    for (const file of ['reader_ui.js', 'bom/bom.html', 'reader_core.js', 'crossrefs_engine.js']) {
+      const src = fs.readFileSync(path.join(ROOT, file), 'utf8');
+      for (const n of names) {
+        if (new RegExp('^function\\s+' + n + '\\s*\\(', 'm').test(src)) {
+          redeclared.push(file + ' redeclares ' + n);
+        }
+      }
+    }
+    if (redeclared.length) {
+      fail('the reading surface is forked again:\n        ' + redeclared.slice(0, 6).join('\n        ') +
+           '\n        reader_surface.js is the one home for these — delete the copy.');
+    } else {
+      ok('the reading surface is one copy (' + names.length + ' functions, no page redeclares them)');
+    }
+    const missing = ['ot.html', 'nt.html', 'dc.html', 'pgp.html', 'jst.html', 'bom/bom.html']
+      .filter(f => !/reader_surface\.js/.test(fs.readFileSync(path.join(ROOT, f), 'utf8')));
+    if (missing.length) fail('these pages do not load reader_surface.js: ' + missing.join(', '));
+  }
 }
 
 /* ── The Book of Mormon's two chunk sets ───────────────────────────────────
