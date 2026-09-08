@@ -52,7 +52,7 @@
 <link rel="stylesheet" href="../nav_engine.css?v=49">
 <link rel="stylesheet" href="../site_chrome.css?v=71">
 <link rel="stylesheet" href="../xref_study_panel.css?v=14">
-<link rel="stylesheet" href="../reader.css?v=96">
+<link rel="stylesheet" href="../reader.css?v=99">
 <style>
 
 /* Skip-to-content link (screen reader / keyboard) */
@@ -1880,191 +1880,168 @@ body.dual-mode .chapter-summary { display: block; }
   <div class="chapter-panel" id="panel-intro" style="display:none">
     <div class="tr-body">
 
-      <h2 style="text-align:center;font-size:1.6em;margin-bottom:6px;color:var(--ink)">To the Reader</h2>
+      <h2 class="tr-title">To the Reader</h2>
       <hr class="tr-rule">
 
-      <!-- Quick Overview -->
-      <div style="background:var(--highlight);border-radius:8px;padding:18px 22px;margin-bottom:24px;border-left:4px solid var(--accent)">
-        <h3 style="margin:0 0 8px;font-size:1.1em;color:var(--ink)">Quick Overview</h3>
-        <p style="font-size:0.92em;line-height:1.7;color:var(--ink-2);margin:0 0 10px">
-          This is a complete Hebrew interlinear edition of the Book of Mormon—every book, every chapter—presented word by word and phrase by phrase.
-        </p>
-        <p style="font-size:0.92em;line-height:1.7;color:var(--ink-2);margin:0 0 10px">
-          The Hebrew text (vocalized, in a disciplined Biblical register) appears first, read right to left, with a literal English gloss stacked directly beneath each word and a small chevron (&#8249;) marking where one word ends and the next begins. Here are the first five words of the book, exactly as they appear in 1&nbsp;Nephi&nbsp;1:1 — read right to left, and notice that one Hebrew word can carry three English ones:
-        </p>
-        <div class="tr-example">
-          <div>
-            <span class="tr-example-he">אֲנִי</span>
-            <span class="tr-example-gl">I</span>
-          </div>
-          <div>
-            <span class="tr-example-he">נֶפִי</span>
-            <span class="tr-example-gl">Nephi</span>
-          </div>
-          <div>
-            <span class="tr-example-he">יֻלַּדְתִּי</span>
-            <span class="tr-example-gl">having been born</span>
-          </div>
-          <div>
-            <span class="tr-example-he">לְאָב</span>
-            <span class="tr-example-gl">of a father</span>
-          </div>
-          <div>
-            <span class="tr-example-he">חָסִיד</span>
-            <span class="tr-example-gl">goodly</span>
-          </div>
-        </div>
-        <p style="font-size:0.92em;line-height:1.7;color:var(--ink-2);margin:10px 0 10px">
-          This format is meant for study. It lets you see structure, roots, and grammar the way Tanakh interlinears do, while keeping the Book of Mormon’s covenant vocabulary visible instead of smoothing it away.
-        </p>
-        <p style="font-size:0.9em;line-height:1.7;color:var(--ink-2);margin:0">
-          It is especially useful if you already read Torah/Tanakh and want to hear the Book of Mormon in the same covenant world: the same kinds of key terms, parallelism, and narrative cadence, with repeated words staying repeated so you can track themes across chapters and books.
-        </p>
-        <p class="tr-muted">
-          This is an independent, personal project (not an official publication of The Church of Jesus Christ of Latter-day Saints). The full text is now available here. Glosses are based on careful analysis and will continue to be refined with time and feedback.
-        </p>
-      </div>
+      <!-- ─────────────── I. WHY THIS BOOK EXISTS ─────────────── -->
 
-      <hr class="tr-rule">
-
-      <p class="tr-p">
+      <p class="tr-p tr-p--lead">
         For ten years I looked for this book and it did not exist.
       </p>
       <p class="tr-p">
         I had studied Classical Biblical Hebrew. I had shelves full of Tanakh, Talmud, Zohar, grammars, lexicons. I had read the Book of Mormon in English, in Spanish, in Samoan — over and over, my whole life. And the one thing I wanted to do with it, I could not: I wanted to read it in Hebrew.
       </p>
       <p class="tr-p">
-        Not modern Hebrew. The Hebrew of the prophets. The Hebrew Nephi tells us his father spoke — the language of Jerusalem before the exile, the living tongue of the First Temple. I wanted to open a book and see <span class="tr-he" style="font-size:1.1em" dir="rtl">וַיְהִי</span> on the page where "and it came to pass" had always been. I wanted to hear <span class="tr-he" style="font-size:1.1em" dir="rtl">בְּרִית</span> where the English said "covenant" and know I was hearing the same word Abram heard at the ceremony of the pieces. I wanted the Book of Mormon to sound like what it claims to be.
+        Not modern Hebrew. The Hebrew of the prophets. The Hebrew Nephi tells us his father spoke — the language of Jerusalem before the exile, the living tongue of the First Temple. I wanted to open a book and see <span class="tr-he" dir="rtl">וַיְהִי</span> on the page where “and it came to pass” had always been. I wanted to hear <span class="tr-he" dir="rtl">בְּרִית</span> where the English said “covenant,” and know I was hearing the same word Abram heard at the ceremony of the pieces. I wanted the Book of Mormon to sound like what it claims to be.
       </p>
       <p class="tr-p">
         Nobody had made that book. So I made it.
       </p>
-      <p class="tr-p">
-        What you hold in your hands is the next step — an interlinear that lays the Hebrew and English side by side, word by word, so that anyone can walk through the text at the pace of the language itself. You do not need to know Hebrew to use this book. That is the whole point.
+      <p class="tr-muted">
+        This is an independent, personal project — not an official publication of The Church of Jesus Christ of Latter-day Saints. The whole text is here, and it is free. Glosses will keep being refined as long as I am reading them.
       </p>
 
       <hr class="tr-rule tr-rule--narrow">
 
+      <!-- ─────────────── II. AN ISRAELITE RECORD ─────────────── -->
+
+      <h3 class="tr-h">An Israelite record</h3>
+
       <p class="tr-p">
-        The Book of Mormon presents itself as an Israelite record. Its authors think in Hebrew categories, build arguments with Hebrew parallelism, and lean on covenant terms that do not map cleanly into English. President Russell M. Nelson has noted that <span class="tr-he" style="font-size:1.05em" dir="rtl">חֶסֶד</span> has no true one-word equivalent in English, and that translators end up reaching for multiple approximations—“mercy,” “goodness,” “lovingkindness,” and (in older English usage) even words like “goodly.” When Nephi writes about <span class="tr-he" style="font-size:1.1em" dir="rtl">חֶסֶד</span>, he is not using a vague feeling-word. He is invoking covenant loyalty and steadfast love—the kind of word that anchors prophetic appeals in the Tanakh (see Exodus 34:6).
+        The Book of Mormon presents itself as an Israelite record. Its authors think in Hebrew categories, build arguments with Hebrew parallelism, and lean on covenant terms that do not map cleanly into English. President Russell M. Nelson has noted that <span class="tr-he" dir="rtl">חֶסֶד</span> has no true one-word equivalent in English, and that translators end up reaching for several approximations at once — “mercy,” “goodness,” “lovingkindness,” and in older English even “goodly.” When Nephi writes about <span class="tr-he" dir="rtl">חֶסֶד</span> he is not using a vague feeling-word. He is invoking covenant loyalty and steadfast love, the word that anchors prophetic appeals across the Tanakh (Exodus 34:6).
       </p>
       <p class="tr-p">
-        This covenant language is not an abstraction in the Book of Mormon; it is carried forward by transmission. In the opening verses of 1 Nephi, the pattern is Deuteronomic: faithful parents teach, a son receives and is formed, and then he teaches again by writing for future hearers and readers. In the book’s grand arc, the Messiah fulfills the law; in the human arc, record-keepers fulfill covenant obligation by preserving, teaching, and passing the covenant forward.
+        English can bury that architecture. Read “grace,” “mercy,” “salvation” and you can quietly import later categories onto a text that is speaking in covenant terms. This edition does not replace the English. It shows you what the English cannot: which word is repeating, which words share a root, and how a claim is being made through a biblical pattern of speech rather than stated outright.
       </p>
+      <p class="tr-p">
+        The clearest way to see it is in the first verse of the book. Read it as covenant credentials that turn on a center point — and the center is <span class="tr-he" dir="rtl">חֶסֶד יְהוָה</span>.
+      </p>
+
       <div class="tr-box">
-        <div style="font-weight:700;color:var(--ink);margin-bottom:6px">A quick example: chiastic “hinge” in 1 Nephi 1:1</div>
-        <div style="font-size:0.92em;line-height:1.6;color:var(--ink-2)">
-          Read the verse as covenant credentials that turn on a center point. Here, the center is <span class="tr-he" style="font-size:1.05em" dir="rtl">חֶסֶד יְהוָה</span>:
-        </div>
-        <div class="tr-chiasm" style="margin-top:10px">
+        <div class="tr-box-title">1 Nephi 1:1</div>
+        <div class="tr-chiasm">
           <div class="tr-chiasm-label"><strong>A</strong></div>
           <div class="tr-chiasm-he">אֲנִי נֶפִי יֻלַּדְתִּי לְאָב חָסִיד וְאֵם חֲסִידָה</div>
-          <div class="tr-chiasm-en">I, Nephi, having been born of goodly parents</div>
+          <div class="tr-chiasm-en">born of covenant-faithful parents</div>
 
           <div class="tr-chiasm-label"><strong>B</strong></div>
-          <div class="tr-chiasm-he">לָכֵן הוֹרוּנִי <span style="font-weight:700">מְעַט</span> בְּכׇל־מוּסַר אָבִי וּבְדַעְתּוֹ</div>
-          <div class="tr-chiasm-en">therefore they taught me <em>somewhat</em> in all the learning of my father</div>
+          <div class="tr-chiasm-he">לָכֵן הוֹרוּנִי מְעַט בְּכׇל־מוּסַר אָבִי וּבְדַעְתּוֹ</div>
+          <div class="tr-chiasm-en">taught in his father’s learning</div>
 
           <div class="tr-chiasm-label"><strong>C</strong></div>
           <div class="tr-chiasm-he">רַב־עֳנִי רָאוּ עֵינַי בִּימֵי חַיַּי</div>
-          <div class="tr-chiasm-en">much affliction saw my eyes in the days of my life</div>
+          <div class="tr-chiasm-en">much affliction</div>
 
-          <div class="tr-chiasm-label"><strong>D</strong> <em style="font-style:italic;color:var(--ink-2)">(center)</em></div>
-          <div class="tr-chiasm-he">וְאַף עָזֹב לֹא־עֲזָבַנִי חֶסֶד יְהוָה כׇּל־הַיָּמִים</div>
-          <div class="tr-chiasm-en">and yet the chesed of YHWH in no wise forsook me, all the days</div>
+          <div class="tr-chiasm-label tr-chiasm-label--center"><strong>D</strong></div>
+          <div class="tr-chiasm-he tr-chiasm-he--center">וְאַף עָזֹב לֹא־עֲזָבַנִי חֶסֶד יְהוָה כׇּל־הַיָּמִים</div>
+          <div class="tr-chiasm-en tr-chiasm-en--center">and yet the <em>chesed</em> of the Lord in no wise forsook him</div>
 
           <div class="tr-chiasm-label"><strong>C′</strong></div>
           <div class="tr-chiasm-he">וַיִּתֶּן־לִי אֱלֹהִים בִּינָה גְדוֹלָה</div>
-          <div class="tr-chiasm-en">and God gave to me great understanding</div>
+          <div class="tr-chiasm-en">great understanding, answering the affliction</div>
 
           <div class="tr-chiasm-label"><strong>B′</strong></div>
-          <div class="tr-chiasm-he">עַל־כֵּן שַׂמְתִּי אֶת־דִּבְרֵי יָמַי בַּסֵּפֶר</div>
-          <div class="tr-chiasm-en">therefore I make the words of my days in the book (transmission)</div>
+          <div class="tr-chiasm-he">לָדַעַת סוֹדוֹ וְחַסְדּוֹ</div>
+          <div class="tr-chiasm-en">taught now by God, not only by his father</div>
 
           <div class="tr-chiasm-label"><strong>A′</strong></div>
-          <div class="tr-chiasm-he">לָדַעַת סוֹדוֹ וְחַסְדּוֹ</div>
-          <div class="tr-chiasm-en">to know His mysteries and His chesed</div>
-        </div>
-        <div style="font-size:0.9em;line-height:1.6;color:var(--ink-2);margin-top:10px">
-          This is one reason repeated covenant terms matter: the structure is teaching you what the verse is “about,” not only what it is “saying.”
+          <div class="tr-chiasm-he">עַל־כֵּן שַׂמְתִּי אֶת־דִּבְרֵי יָמַי בַּסֵּפֶר</div>
+          <div class="tr-chiasm-en">so he writes, and hands the covenant on</div>
         </div>
       </div>
+
       <p class="tr-p">
-        When Lehi blesses his sons, the patriarchal formulae are not borrowed from Genesis — they are the same tradition, because Lehi is a patriarch operating within the same covenant framework as Jacob and Isaac before him.
+        The verse turns on <span class="tr-he" dir="rtl">חֶסֶד</span> and comes back out the way it went in. He is born into the covenant and ends by passing it on; he is taught by his father and ends taught by God. That is not decoration. It is the argument, and it is made by the shape of the sentence.
       </p>
       <p class="tr-p">
-        English can obscure this architecture. You can read “grace,” “mercy,” and “salvation” and quietly import later categories onto a text that is trying to speak in covenant terms. This interlinear does not replace the English; it is a tool for seeing what the English often cannot show: repeated covenant keywords, root connections, and the way a claim becomes explicit through biblical patterns of speech.
+        The same thing happens across the book. When Lehi blesses his sons the patriarchal formulae are not borrowed from Genesis — they are the same tradition, because Lehi is a patriarch working inside the same covenant framework as Isaac and Jacob before him. In the opening chapters the pattern is Deuteronomic: faithful parents teach, a son receives and is formed, and then he teaches in his turn by writing for readers he will never meet. Record-keeping is not how the story is preserved. It is the covenant obligation being kept.
       </p>
 
-      <h2 style="text-align:center;font-size:1.4em;margin:36px 0 6px;color:var(--ink)">How to Use This Book</h2>
       <hr class="tr-rule tr-rule--narrow">
 
-      <p class="tr-p">
-        Each verse is presented as a sequence of word blocks, read from right to left. The upper line is the Hebrew word in its pointed (vocalized) form. Directly beneath it is the English gloss — a compact, literal rendering of that one word. Where a single Hebrew word carries a prefix or a suffix, the gloss carries them too, so “and into their houses” is one block, standing under one word.
-      </p>
-      <p class="tr-p">
-        The glosses are not elegant English. They are not meant to be. They are meant to be transparent — to show you what each Hebrew word is doing in its clause. The gloss “and it happened” for <span class="tr-he" style="font-size:1.1em" dir="rtl">וַיְהִי</span> tells you three things at once: the conjunction (and), the narrative tense (vav-consecutive), and the root (to be). That is more grammatical information than most English translations will ever give you in a single word.
-      </p>
-      <p class="tr-p">
-        Read the Hebrew line if you can. If you cannot, read the glosses and you will have a rough but honest rendering of each word. Over time, you will begin to recognize recurring terms — <span class="tr-he" style="font-size:1.1em" dir="rtl">יְהוָה</span> (the Lord), <span class="tr-he" style="font-size:1.1em" dir="rtl">בְּרִית</span> (covenant), <span class="tr-he" style="font-size:1.1em" dir="rtl">חֶסֶד</span> (lovingkindness), <span class="tr-he" style="font-size:1.1em" dir="rtl">צֶדֶק</span> (righteousness), <span class="tr-he" style="font-size:1.1em" dir="rtl">מִשְׁפָּט</span> (judgment) — and the theological landscape of the Book of Mormon will open in ways the English alone cannot show you.
-      </p>
-      <p class="tr-p">
-        A good way to use the interlinear is to track repeated words on purpose. When a covenant term returns, treat it as a signal, not as a synonym choice. Biblical texts often teach by repetition: the same word returns, the same pattern returns, and the reader is meant to notice.
-      </p>
+      <!-- ─────────────── III. THE HEBREW OF THIS EDITION ─────────────── -->
+
+      <h3 class="tr-h">The Hebrew of this edition</h3>
 
       <p class="tr-p">
-        The web and app editions do a few things the printed page cannot, and they are worth knowing about before you start:
+        The Hebrew here follows a strict discipline: Classical Biblical Hebrew, held to vocabulary and forms attested before 600 BC. This is the register scholars call Mikraic, the language of the Mikra. No post-biblical vocabulary. No rabbinic constructions. No modern coinages, apart from a small set of theological terms built from biblical roots and documented separately.
+      </p>
+      <p class="tr-p">
+        Where a concept in the Book of Mormon has no single pre-exilic equivalent, I have used what I would call a controlled adaptation: faithful where theology demands precision, idiomatic where Hebrew demands naturalness. Word order follows the verb-subject-object pattern native to biblical narrative. Covenant terminology maps onto its Tanakh parallels rather than being invented fresh.
+      </p>
+      <p class="tr-p">
+        This is not a claim about what the plates contained. It is a disciplined exercise in hearing the Book of Mormon in the linguistic world it claims for itself — the world of First Temple Israel.
+      </p>
+
+      <hr class="tr-rule tr-rule--narrow">
+
+      <!-- ─────────────── IV. HOW TO READ IT ─────────────── -->
+
+      <h3 class="tr-h">How to read it</h3>
+
+      <p class="tr-p">
+        Each verse is a row of word blocks, read right to left. On top is the Hebrew word, pointed. Directly beneath it is the English that word is carrying, with a small chevron marking where one word ends and the next begins. Here are the first five words of the book:
+      </p>
+
+      <div class="tr-example">
+        <div><span class="tr-example-he">אֲנִי</span><span class="tr-example-gl">I</span></div>
+        <div><span class="tr-example-he">נֶפִי</span><span class="tr-example-gl">Nephi</span></div>
+        <div><span class="tr-example-he">יֻלַּדְתִּי</span><span class="tr-example-gl">having been born</span></div>
+        <div><span class="tr-example-he">לְאָב</span><span class="tr-example-gl">of a father</span></div>
+        <div><span class="tr-example-he">חָסִיד</span><span class="tr-example-gl">goodly</span></div>
+      </div>
+
+      <p class="tr-p">
+        Two things that example is teaching. One Hebrew word can carry three English ones — <span class="tr-he" dir="rtl">יֻלַּדְתִּי</span> is a whole clause. And the gloss line reads in <em>Hebrew</em> order, not English: the adjective follows its noun, so <span class="tr-he" dir="rtl">לְאָב חָסִיד</span> glosses “of a father / goodly,” never “of a goodly / father.” Reordering it into comfortable English is exactly what would hide the grammar you came to see.
+      </p>
+      <p class="tr-p">
+        So the glosses are not elegant, and they are not meant to be. They are meant to be transparent. “And it happened” for <span class="tr-he" dir="rtl">וַיְהִי</span> tells you three things at once — the conjunction, the narrative tense, and the root — which is more grammar than most translations will give you in a single word anywhere.
+      </p>
+      <p class="tr-p">
+        Read the Hebrew line if you can. If you cannot, read the glosses; you will have a rough but honest rendering of every word. And read repetition on purpose. When a covenant term comes back, treat it as a signal rather than a synonym: biblical texts teach by returning to a word, and the reader is meant to notice. In time <span class="tr-he" dir="rtl">יְהוָה</span>, <span class="tr-he" dir="rtl">בְּרִית</span>, <span class="tr-he" dir="rtl">חֶסֶד</span>, <span class="tr-he" dir="rtl">צֶדֶק</span> and <span class="tr-he" dir="rtl">מִשְׁפָּט</span> will start to stand up off the page on their own.
+      </p>
+      <p class="tr-p">
+        This edition also does a few things the printed one cannot:
       </p>
       <ul class="tr-list">
-        <li><strong>Five ways to read.</strong> The bar at the bottom switches between <em>Interlinear</em> (Hebrew with the gloss beneath each word), <em>Hebrew</em> alone, <em>Dual</em> (the Hebrew beside the printed English), <em>Translit</em> (a Latin transliteration under each word), and <em>Nikkud</em>, which strips the vowel points for reading practice.</li>
-        <li><strong>Tap any word.</strong> A card opens with its transliteration, its gloss, a full grammatical parse — <em>conjunction + preposition + noun masc. plur. construct + suffix</em>, with the word broken into those pieces — its root, its Strong&rsquo;s number, and how often the root occurs in each volume of scripture.</li>
-        <li><strong>Follow the cross-references.</strong> Small letters beside a verse open the passages it points to, each shown as Hebrew interlinear rather than a bare reference, so you can read the connection instead of looking it up.</li>
-        <li><strong>The dictionary.</strong> From the root on any word card you reach the root glossary: every attested form of that root, what each one means, and every verse it appears in. This is the part that most rewards wandering.</li>
-        <li><strong>Search, mark and keep.</strong> Search Hebrew with or without vowel points, or search the English. Highlight and underline words, attach a note to a verse, and export the lot as a backup. There is also a topical guide, and the whole volume can be downloaded for reading with no connection at all.</li>
+        <li><strong>Five ways to read.</strong> The bar at the bottom switches between the interlinear, the Hebrew alone, the Hebrew beside the printed English, a transliteration, and a view with the vowel points stripped for practice.</li>
+        <li><strong>Tap any word.</strong> A card opens with its transliteration, its gloss, a full parse — the word broken into prefix, stem and suffix — its root, its Strong’s number, and how often that root occurs in each volume of scripture.</li>
+        <li><strong>Follow a cross-reference.</strong> The small letters beside a verse open the passages it points to, each shown as Hebrew interlinear rather than a bare reference, so you can read the connection instead of going to look it up.</li>
+        <li><strong>Open the dictionary.</strong> From the root on any word card you reach the root glossary: every attested form of that root, what each one means, and every verse it stands in. This is the part that most rewards wandering.</li>
+        <li><strong>Search, mark, keep.</strong> Search the Hebrew with or without points, or search the English. Highlight, underline, write a note on a verse, export the lot. There is a topical guide, and the whole volume downloads for reading with no connection at all.</li>
       </ul>
 
       <hr class="tr-rule tr-rule--narrow">
 
-      <p class="tr-p">
-        The Hebrew in this volume follows a strict discipline: Classical Biblical Hebrew constrained to vocabulary and forms attested before 600 BC. This is the register scholars call Mikraic — the language of the Mikra, the Hebrew Bible. No post-biblical vocabulary. No rabbinic constructions. No modern coinages, except a small set of theological terms built from biblical roots and documented separately.
-      </p>
-      <p class="tr-p">
-        Where a concept in the Book of Mormon has no single pre-exilic Hebrew equivalent, the approach is what I call a hybrid or controlled adaptation: faithful where theology demands precision, idiomatic where Hebrew demands naturalness. The word order follows the Verb-Subject-Object pattern native to biblical narrative. The covenant terminology maps directly onto its Tanakh parallels.
-      </p>
-      <p class="tr-p">
-        This is not a speculation about what the original plates contained. It is a disciplined exercise in hearing the Book of Mormon in the linguistic world it claims for itself — the world of First Temple Israel.
-      </p>
-
-      <hr class="tr-rule tr-rule--narrow">
+      <!-- ─────────────── V. CLOSING ─────────────── -->
 
       <p class="tr-p">
-        I did not set out to produce an academic work. I set out to fill a gap on my own shelf. The deeper I went into the Hebrew, the more the Book of Mormon opened up — not as a text that needs defending, but as a text that defends itself. The Hebraisms are not decorative. They are structural. The covenant language is not borrowed. It is native.
+        I did not set out to produce an academic work. I set out to fill a gap on my own shelf. The deeper I went into the Hebrew the more the book opened up — not as a text that needs defending, but as a text that defends itself. The Hebraisms are not decorative. They are structural. The covenant language is not borrowed. It is native.
       </p>
       <p class="tr-p">
-        I speak English, Samoan, and Spanish, and I have studied the Book of Mormon in all three my entire life. But it was Hebrew that brought me closest to what Nephi was trying to say. I hope this interlinear does the same for you.
+        I speak English, Samoan and Spanish, and I have studied the Book of Mormon in all three my whole life. It was Hebrew that brought me closest to what Nephi was trying to say. I hope it does the same for you.
       </p>
-      <p class="tr-p">
+      <p class="tr-p tr-p--blessing">
         May it bring you nearer to the God of Israel, who engraved His people on the palms of His hands and does not forget.
       </p>
-      <p style="font-size:0.95em;line-height:1.7;color:var(--ink-2);text-align:center;margin-top:24px;font-style:italic">
-        — Chris Lambe
-      </p>
+      <p class="tr-sig">— Chris Lambe</p>
 
-      <!-- Feedback & Links -->
+      <!-- ─────────────── VI. FEEDBACK &amp; ONWARD ─────────────── -->
+
       <hr class="tr-rule tr-rule--narrow" style="margin-top:30px">
-      <div style="text-align:center;margin:20px 0">
-        <h3 style="font-size:1.1em;color:var(--ink);margin-bottom:8px">Feedback Welcome</h3>
-        <p style="font-size:0.9em;line-height:1.6;color:var(--ink-2);max-width:600px;margin:0 auto 12px;direction:ltr">
-          If you spot a gloss that could be clearer, a root connection worth highlighting, or have thoughts and suggestions, please reach out — corrections from readers are how this text keeps getting better.
+      <div class="tr-end">
+        <h3 class="tr-h">Feedback welcome</h3>
+        <p class="tr-p">
+          If you spot a gloss that could be clearer, or a root connection worth drawing out, please reach out. Corrections from readers are how this text keeps getting better.
         </p>
-        <p style="font-size:0.9em;margin:8px 0">
-          <a href="#print-editions" onclick="navTo('print-editions');return false" style="color:var(--accent-deep);text-decoration:underline;text-underline-offset:3px;font-weight:500">Also available in print →</a>
+        <p class="tr-p">
+          <a href="#print-editions" onclick="navTo('print-editions');return false" class="tr-link">Also available in print →</a>
         </p>
       </div>
 
-      <div style="text-align:center;margin:30px 0 10px;direction:ltr; display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
-        <button class="glossary-highlight-btn" onclick="navTo('front-hebrew-guide')" style="font-size:1em;padding:10px 24px;border-width:2px">Continue: Reading Hebrew →</button>
-        <button class="glossary-highlight-btn" onclick="navTo('ch1')" style="font-size:1em;padding:10px 24px;border-width:2px; opacity:0.9">Skip to 1 Nephi 1 →</button>
+      <div class="tr-actions">
+        <button class="glossary-highlight-btn" onclick="navTo('front-hebrew-guide')">Continue: Reading Hebrew →</button>
+        <button class="glossary-highlight-btn tr-actions-alt" onclick="navTo('ch1')">Skip to 1 Nephi 1 →</button>
       </div>
 
     </div>

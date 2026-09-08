@@ -2729,80 +2729,148 @@ body.dark-mode #nav-progress-text { color: #6a6550; }
 }
 
 /* ── "To the Reader" (bom/bom.html #panel-intro) ───────────────────────────
-   Every rule in this panel used to be an inline style attribute, which is why
-   it broke in three ways at once and none of them could be fixed where they
-   lived. Written mobile-first — base rules are the phone, the media query adds
-   the wide layout — because desktop-first with max-width overrides is what
-   produced the mobile break in the first place.
+   The whole panel used to be inline style attributes, which is why it broke in
+   two ways that could not be fixed where they lived: the chiasmus box hardcoded
+   #fbfaf7 and went to 1.19:1 against its own themed ink in dark mode, and its
+   grid was `56px 1fr minmax(220px,0.9fr)`, so at 375px the middle column
+   collapsed to 51px and a verse of Hebrew wrapped inside it while 98px of the
+   grid was clipped away. Written mobile-first — the base rules are the phone,
+   the media query adds the wide layout.
 
-   DARK MODE. The chiasmus box hardcoded #fbfaf7, a near-white, and the ink over
-   it is themed — so in dark mode the Hebrew measured 1.19:1 against its own
-   background and the English 2.23:1, against a 4.5:1 requirement. The box was
-   invisible. An inline hex cannot answer a theme; these are the four surface
-   names from sw_theme.css.
-
-   MOBILE. The chiasmus grid was `56px 1fr minmax(220px, 0.9fr)`, so at 375px
-   the third column held its 220px floor, the middle collapsed to 51px, and a
-   whole verse of Hebrew wrapped inside 51 pixels — 98px of the grid clipped out
-   of its own box. It is one column until 700px. `text-align: justify` goes with
-   it: justified text in a narrow measure opens rivers of white space, and the
-   first screen of the page was mostly gaps.
-
-   MEASURE. The container was max-width:900px, which at this type size is 92
-   characters a line on a wide monitor; the readable range is 65–75. 44rem puts
-   it at 71.                                                                   */
+   The measure is 44rem: the old 900px ran to 92 characters a line on a wide
+   monitor, against a 65-75 readable range. This lands at 71.                */
 #panel-intro .tr-body {
-  max-width: 44rem; margin: 0 auto; padding: 16px 16px 24px;
+  max-width: 44rem; margin: 0 auto; padding: 16px 16px 28px;
   direction: ltr; text-align: left;
 }
-#panel-intro p.tr-p { font-size: 0.95em; line-height: 1.7; color: var(--ink); margin-bottom: 14px; }
-#panel-intro hr.tr-rule { width: 200px; margin: 0 auto 20px; border: none; border-top: 1px solid var(--rule); }
-#panel-intro hr.tr-rule--narrow { width: 180px; }
-#panel-intro .tr-list { font-size: 0.95em; line-height: 1.7; color: var(--ink); margin: 0 0 14px; padding-left: 1.25em; }
-#panel-intro .tr-list li { margin-bottom: 10px; }
-#panel-intro .tr-list li::marker { color: var(--accent); }
-#panel-intro .tr-muted { font-size: 0.85em; line-height: 1.6; color: var(--ink-3); margin: 12px 0 0; font-style: italic; }
-#panel-intro .tr-he { font-family: 'David Libre', 'Georgia', serif; font-weight: 700; }
 
-/* The Quick Overview card and the chiasmus box: raised surfaces on the page. */
-#panel-intro .tr-card {
-  background: var(--highlight); border-radius: 8px; padding: 14px 16px;
-  margin-bottom: 24px; border-left: 4px solid var(--accent);
+/* ── Type ───────────────────────────────────────────────────────────────── */
+#panel-intro .tr-title {
+  text-align: center; font-size: 1.6em; margin: 0 0 6px; color: var(--ink);
+  font-family: 'David Libre', 'Georgia', serif;
 }
+#panel-intro .tr-h {
+  font-family: 'David Libre', 'Georgia', serif; font-size: 1.18em; font-weight: 700;
+  color: var(--ink); margin: 26px 0 10px;
+}
+#panel-intro p.tr-p { font-size: 0.95em; line-height: 1.7; color: var(--ink); margin-bottom: 14px; }
+/* The first line carries the whole piece — give it room to be the opening. */
+#panel-intro p.tr-p--lead { font-size: 1.12em; line-height: 1.6; margin-bottom: 18px; }
+#panel-intro p.tr-p--blessing { margin-top: 20px; }
+#panel-intro .tr-sig {
+  font-size: 0.95em; line-height: 1.7; color: var(--ink-2);
+  text-align: center; margin-top: 22px; font-style: italic;
+}
+#panel-intro .tr-muted { font-size: 0.85em; line-height: 1.6; color: var(--ink-3); margin: 16px 0 0; font-style: italic; }
+#panel-intro .tr-he { font-family: 'David Libre', 'Georgia', serif; font-weight: 700; font-size: 1.1em; }
+
+#panel-intro hr.tr-rule { width: 200px; margin: 0 auto 20px; border: none; border-top: 1px solid var(--rule); }
+#panel-intro hr.tr-rule--narrow { width: 180px; margin: 26px auto 20px; }
+
+/* ── The interlinear example ────────────────────────────────────────────── */
+/* THIS BLOCK IS TEACHING THE READER'S OWN CONVENTION, so it is built from the
+   reader's own values rather than invented ones. The first version guessed —
+   1.3em bold Hebrew over a 0.85em italic gloss, with flex `gap` for spacing —
+   and looked nothing like the page it was describing, where the Hebrew is
+   --t4 at weight 400 and the gloss is --t0, upright, 2px under it. Same tokens
+   here, so the example tracks the type scale instead of drifting from it.
+
+   Spacing comes from the word block's own padding and margin (3px 2px 6px /
+   0 5px, as in .word-unit), not from a container `gap`. A gap spaces the
+   BOXES evenly, which reads as random when the boxes are different widths —
+   which is exactly what "goodly" beside "having been born" looked like. */
+#panel-intro .tr-example {
+  display: flex; justify-content: center; flex-wrap: wrap;
+  direction: rtl; margin: 18px 0 20px; row-gap: 6px;
+}
+#panel-intro .tr-example > div {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  padding: 3px 2px 6px; margin: 0 5px; min-width: 30px;
+}
+#panel-intro .tr-example-he {
+  font-family: 'David Libre', 'Georgia', serif;
+  font-size: var(--t4); font-weight: 400; line-height: 1.5; color: var(--hw);
+}
+#panel-intro .tr-example-gl {
+  font-family: 'David Libre', 'Georgia', serif;
+  font-size: var(--t0); font-style: normal; line-height: 1.35; color: var(--gloss);
+  margin-top: 2px; max-width: 9em; direction: ltr;
+}
+
+/* ── The chiasmus ───────────────────────────────────────────────────────── */
 #panel-intro .tr-box {
   background: var(--card); border: 1px solid var(--rule); border-radius: 8px;
-  padding: 14px 16px; margin: 0 0 14px;
+  padding: 14px 16px; margin: 0 0 16px;
 }
-
-/* A real clause, so the words must stay in their reading order and wrap as a
-   line of Hebrew does — right to left, not as five loose chips. */
-#panel-intro .tr-example { display: flex; justify-content: center; gap: 10px 18px; direction: rtl; margin: 14px 0; flex-wrap: wrap; }
-#panel-intro .tr-example > div { display: flex; flex-direction: column; align-items: center; text-align: center; }
-#panel-intro .tr-example-he { font-family: 'David Libre', serif; font-size: 1.3em; font-weight: 700; }
-#panel-intro .tr-example-gl { font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; font-style: italic; color: var(--ink-2); direction: ltr; }
-
-/* One column on a phone: the label, then the Hebrew at full width, then the
-   gloss. The Hebrew is the thing being taught — it never gets the short column. */
+#panel-intro .tr-box-title {
+  font-family: 'David Libre', 'Georgia', serif; font-weight: 700; color: var(--ink);
+  font-size: 0.95em; margin-bottom: 10px;
+}
+/* One column on a phone: label, then the Hebrew at full width, then the gloss.
+   The Hebrew is the thing being taught — it never gets the short column. */
 #panel-intro .tr-chiasm {
-  display: grid; grid-template-columns: 1fr; gap: 2px;
+  display: grid; grid-template-columns: 1fr; gap: 0;
   font-family: 'David Libre', 'Georgia', serif; font-size: 0.92em; line-height: 1.7; color: var(--ink);
 }
-#panel-intro .tr-chiasm-label { margin-top: 10px; }
-#panel-intro .tr-chiasm-he { direction: rtl; font-size: 1.12em; line-height: 1.9; }
+#panel-intro .tr-chiasm-label { margin-top: 12px; }
+#panel-intro .tr-chiasm-he { direction: rtl; text-align: right; font-size: 1.12em; line-height: 1.9; }
 /* Never justified: these are narrow columns, and justification in a narrow
-   measure is what opened rivers across the page in the first place. The
-   container's `text-align: justify` would otherwise cascade in. */
-#panel-intro .tr-chiasm-en { color: var(--ink-2); padding-bottom: 4px; text-align: left; }
-#panel-intro .tr-chiasm-he { text-align: right; }
+   measure is what opened rivers across this page in the first place. */
+#panel-intro .tr-chiasm-en { color: var(--ink-2); text-align: left; padding-bottom: 4px; }
+
+/* The hinge. Marked with rules and a wash, never with gold TEXT — on this
+   warm ground gold is a rule/border colour and the ink stays ink. */
+#panel-intro .tr-chiasm-label--center,
+#panel-intro .tr-chiasm-he--center,
+#panel-intro .tr-chiasm-en--center {
+  background: color-mix(in srgb, var(--here) 8%, transparent);
+  border-top: 1px solid color-mix(in srgb, var(--here) 45%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--here) 45%, transparent);
+}
+#panel-intro .tr-chiasm-label--center { padding: 8px 8px 4px; margin-top: 12px; }
+#panel-intro .tr-chiasm-he--center { padding: 0 8px 4px; }
+#panel-intro .tr-chiasm-en--center { padding: 0 8px 10px; }
+/* Stacked, the three cells are one column, so only the outer edges take a
+   rule — otherwise the band is drawn three times. */
+#panel-intro .tr-chiasm-he--center, #panel-intro .tr-chiasm-en--center { border-top: none; }
+#panel-intro .tr-chiasm-label--center, #panel-intro .tr-chiasm-he--center { border-bottom: none; }
+
+/* ── The feature list ───────────────────────────────────────────────────── */
+#panel-intro .tr-list { font-size: 0.95em; line-height: 1.7; color: var(--ink); margin: 0 0 14px; padding-left: 1.2em; }
+#panel-intro .tr-list li { margin-bottom: 10px; }
+#panel-intro .tr-list li::marker { color: var(--accent); }
+
+/* ── Close ──────────────────────────────────────────────────────────────── */
+#panel-intro .tr-end { text-align: center; margin: 20px 0 0; }
+#panel-intro .tr-end .tr-h { margin-top: 0; }
+#panel-intro .tr-link { color: var(--accent-deep); text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
+#panel-intro .tr-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin: 26px 0 10px; direction: ltr; }
+#panel-intro .tr-actions .glossary-highlight-btn { font-size: 1em; padding: 12px 24px; border-width: 2px; }
+#panel-intro .tr-actions-alt { opacity: 0.9; }
 
 @media (min-width: 701px) {
-  #panel-intro .tr-body { padding: 20px 30px; text-align: justify; }
-  #panel-intro .tr-card { padding: 18px 22px; }
+  #panel-intro .tr-body { padding: 20px 30px 30px; }
+  #panel-intro .tr-title { font-size: 1.75em; }
+  #panel-intro p.tr-p--lead { font-size: 1.2em; }
+  /* COLUMN-GAP IS ZERO ON PURPOSE. The hinge is a wash and two rules spanning
+     the row, and a grid gap cuts that band into three floating segments. The
+     spacing between columns comes from cell padding instead, so the band is
+     continuous across all three. */
   #panel-intro .tr-chiasm {
-    grid-template-columns: 56px 1fr minmax(180px, 0.9fr);
-    gap: 6px 12px; align-items: baseline;
+    grid-template-columns: 52px 1fr minmax(190px, 0.85fr);
+    column-gap: 0; row-gap: 4px; align-items: baseline;
   }
-  #panel-intro .tr-chiasm-label { margin-top: 0; }
-  #panel-intro .tr-chiasm-he { font-size: 1em; line-height: 1.7; }
-  #panel-intro .tr-chiasm-en { padding-bottom: 0; }
+  #panel-intro .tr-chiasm-label { margin-top: 6px; padding: 4px 10px 4px 4px; }
+  #panel-intro .tr-chiasm-he { font-size: 1em; line-height: 1.75; padding: 4px 10px; }
+  #panel-intro .tr-chiasm-en { padding: 4px 4px 4px 10px; }
+  #panel-intro .tr-chiasm-label--center { margin-top: 6px; padding-top: 8px; padding-bottom: 8px; }
+  #panel-intro .tr-chiasm-he--center,
+  #panel-intro .tr-chiasm-en--center { padding-top: 8px; padding-bottom: 8px; }
+  /* Side by side again: every cell in the row takes both rules. */
+  #panel-intro .tr-chiasm-label--center,
+  #panel-intro .tr-chiasm-he--center,
+  #panel-intro .tr-chiasm-en--center {
+    border-top: 1px solid color-mix(in srgb, var(--here) 45%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--here) 45%, transparent);
+  }
 }
