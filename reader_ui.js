@@ -603,46 +603,6 @@ function findBookByName(name) {
    own copies, identical but for a null-guard. The globals stay because the
    glossary card calls them from inline onclick handlers. */
 
-
-function openGlossaryAtRoot(rootKey) {
-  if (window.RootScorecard && !RootScorecard.ready()) {
-    RootScorecard.ensure(function() {
-      if (!RootScorecard.ready()) return;
-      glossaryIndex = null;
-      buildGlossaryIndex();
-      if (document.getElementById('glossary-panel').classList.contains('open')) renderGlossaryList();
-    });
-  }
-  /* THE CARD IS NOT A RIVAL — IT IS WHERE THIS TAP CAME FROM. This closed the
-     word card before opening the glossary, so tapping the root headword or the
-     Strong's number destroyed the card that offered them and left nothing to
-     come back to: the same defect the cross-reference link had, in a second
-     doorway. SWLayers in nav_engine.js owns which surfaces may sit together
-     (COEXIST pairs word-popup with the panels the card launches) and
-     #word-popup is already one z-rank under any panel, so the card stays open
-     behind the glossary and is there again when it closes. Nothing here should
-     be deciding that on its own. */
-  buildGlossaryIndex();
-  // For H-number roots, search by the Hebrew word instead
-  var searchTerm = rootKey;
-  if (/^H\d+$/.test(rootKey) && window._strongsRoots && _strongsRoots[rootKey]) {
-    searchTerm = _strongsRoots[rootKey].w;
-  }
-  document.getElementById('glossary-search').value = searchTerm;
-  renderGlossaryList();
-  document.getElementById('glossary-panel').classList.add('open');
-  document.getElementById('panel-overlay').classList.add('open');
-  setTimeout(function() {
-    var entries = document.querySelectorAll('#glossary-list .glossary-entry');
-    for (var i = 0; i < entries.length; i++) {
-      var rootEl = entries[i].querySelector('.glossary-root');
-      if (rootEl && (rootEl.getAttribute('data-root-key') === rootKey || rootEl.textContent === rootKey)) {
-        entries[i].classList.add('expanded'); entries[i].scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'start' }); break;
-      }
-    }
-  }, 100);
-}
-
 // Debounced glossary search
 (function() {
   var gd;

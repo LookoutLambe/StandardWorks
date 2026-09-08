@@ -2032,3 +2032,85 @@ function handleHash() {
     if (chapterOrder.indexOf(id1) >= 0) { go(id1); return; }
   }
 }
+
+
+/* ── Two more that were identical in both copies ───────────────────────────
+   Proved at runtime, not on disk: _keepVersePosition hashed the same on
+   ot.html and bom/bom.html, and openGlossaryAtRoot did NOT — the disk scan
+   said 100% and was wrong. The one real difference was that bom.html
+   null-guards #panel-overlay and reader_ui.js did not; the guarded copy is
+   the one kept, since a page without that element threw. */
+
+// (The Mechon-Mamre audio feature was removed entirely on 2026-08-29 —
+// user ruling: no audio anywhere in this.)
+
+// === MODE CONTROLS ===
+
+// Switching view mode (or translit/nikkud) reflows every verse above the
+// reading point, so a raw pixel scroll position lands somewhere else — the
+// verse being read must stay put. Pin the topmost visible verse across the
+// relayout and scroll by however far it moved.
+function _keepVersePosition(apply) {
+  var yRef = 4;
+  var bar = document.querySelector('.sw-top-bar');
+  if (bar) { var br = bar.getBoundingClientRect(); if (br.bottom > 0) yRef = br.bottom + 4; }
+  var anchor = null, verses = document.querySelectorAll('.verse');
+  for (var i = 0; i < verses.length; i++) {
+    var r = verses[i].getBoundingClientRect();
+    if (r.height > 0 && r.bottom > yRef) {
+      // A verse straddling the header line anchors by its BOTTOM edge — the
+      // boundary being read — so its own height change (interlinear verses
+      // are far taller than dual ones) cannot drag the next verse away.
+      var straddle = r.top < yRef;
+      anchor = { el: verses[i], pos: straddle ? r.bottom : r.top, straddle: straddle };
+      break;
+    }
+  }
+  apply();
+  if (anchor) {
+    var nr = anchor.el.getBoundingClientRect();
+    var np = anchor.straddle ? nr.bottom : nr.top;
+    if (np !== anchor.pos) window.scrollBy(0, np - anchor.pos);
+  }
+}
+
+
+function openGlossaryAtRoot(rootKey) {
+  if (window.RootScorecard && !RootScorecard.ready()) {
+    RootScorecard.ensure(function() {
+      if (!RootScorecard.ready()) return;
+      glossaryIndex = null;
+      buildGlossaryIndex();
+      if (document.getElementById('glossary-panel').classList.contains('open')) renderGlossaryList();
+    });
+  }
+  /* THE CARD IS NOT A RIVAL — IT IS WHERE THIS TAP CAME FROM. This closed the
+     word card before opening the glossary, so tapping the root headword or the
+     Strong's number destroyed the card that offered them and left nothing to
+     come back to: the same defect the cross-reference link had, in a second
+     doorway. SWLayers in nav_engine.js owns which surfaces may sit together
+     (COEXIST pairs word-popup with the panels the card launches) and
+     #word-popup is already one z-rank under any panel, so the card stays open
+     behind the glossary and is there again when it closes. Nothing here should
+     be deciding that on its own. */
+  buildGlossaryIndex();
+  var searchTerm = rootKey;
+  if (/^H\d+$/.test(rootKey) && window._strongsRoots && _strongsRoots[rootKey]) {
+    searchTerm = _strongsRoots[rootKey].w;
+  }
+  document.getElementById('glossary-search').value = searchTerm;
+  renderGlossaryList();
+  document.getElementById('glossary-panel').classList.add('open');
+  var _po = document.getElementById('panel-overlay'); if (_po) _po.classList.add('open');   // click-off closes the glossary
+  setTimeout(function() {
+    var entries = document.querySelectorAll('#glossary-list .glossary-entry');
+    for (var i = 0; i < entries.length; i++) {
+      var rootEl = entries[i].querySelector('.glossary-root');
+      if (rootEl && (rootEl.getAttribute('data-root-key') === rootKey || rootEl.textContent === rootKey)) {
+        entries[i].classList.add('expanded');
+        entries[i].scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'start' });
+        break;
+      }
+    }
+  }, 100);
+}

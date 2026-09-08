@@ -575,40 +575,6 @@ function navTo(id, slideDir) {
 }
 
 
-// (The Mechon-Mamre audio feature was removed entirely on 2026-08-29 —
-// user ruling: no audio anywhere in this.)
-
-// === MODE CONTROLS ===
-
-// Switching view mode (or translit/nikkud) reflows every verse above the
-// reading point, so a raw pixel scroll position lands somewhere else — the
-// verse being read must stay put. Pin the topmost visible verse across the
-// relayout and scroll by however far it moved.
-function _keepVersePosition(apply) {
-  var yRef = 4;
-  var bar = document.querySelector('.sw-top-bar');
-  if (bar) { var br = bar.getBoundingClientRect(); if (br.bottom > 0) yRef = br.bottom + 4; }
-  var anchor = null, verses = document.querySelectorAll('.verse');
-  for (var i = 0; i < verses.length; i++) {
-    var r = verses[i].getBoundingClientRect();
-    if (r.height > 0 && r.bottom > yRef) {
-      // A verse straddling the header line anchors by its BOTTOM edge — the
-      // boundary being read — so its own height change (interlinear verses
-      // are far taller than dual ones) cannot drag the next verse away.
-      var straddle = r.top < yRef;
-      anchor = { el: verses[i], pos: straddle ? r.bottom : r.top, straddle: straddle };
-      break;
-    }
-  }
-  apply();
-  if (anchor) {
-    var nr = anchor.el.getBoundingClientRect();
-    var np = anchor.straddle ? nr.bottom : nr.top;
-    if (np !== anchor.pos) window.scrollBy(0, np - anchor.pos);
-  }
-}
-
-
 function toggleNoNikkud() {
   _keepVersePosition(function() {
   window._noNikkud = !window._noNikkud;
