@@ -289,6 +289,47 @@ const SIX = ['bom/bom.html', 'ot.html', 'nt.html', 'dc.html', 'pgp.html', 'jst.h
   if (!bad) ok('every volume\u2019s cross-reference chunks are listed and present');
 }
 
+/* ── Every page asks for the same version of a shared asset ────────────────
+   THE SERVICE-WORKER CHECK BELOW ONLY COMPARES A WORKER TO ITS OWN PAGE, so it
+   could not see this: index.html had been left out of every ?v= bump for
+   months and was asking for reader.css?v=93 while the six volume pages had
+   moved to v99, and site_chrome.js?v=43 against their v44. Nothing errored —
+   the landing page simply rendered with a stylesheet six versions old, and a
+   returning visitor got it from cache. A shared file is shared: whoever loads
+   it must load the same one. */
+{
+  const PAGES = ['index.html', 'ot.html', 'nt.html', 'dc.html', 'pgp.html',
+                 'jst.html', 'bom/bom.html', 'dictionary.html', 'hebrew-study.html'];
+  const asked = new Map();          // basename -> Map(version -> [pages])
+  for (const page of PAGES) {
+    const full = path.join(ROOT, page);
+    if (!fs.existsSync(full)) continue;
+    const src = fs.readFileSync(full, 'utf8');
+    for (const m of src.matchAll(/(?:src|href)=["']([^"']+?\.(?:js|css))\?v=(\d+)["']/g)) {
+      const base = m[1].replace(/^.*\//, '');
+      if (!asked.has(base)) asked.set(base, new Map());
+      const byVer = asked.get(base);
+      if (!byVer.has(m[2])) byVer.set(m[2], []);
+      if (!byVer.get(m[2]).includes(page)) byVer.get(m[2]).push(page);
+    }
+  }
+  let split = 0;
+  for (const [base, byVer] of [...asked].sort()) {
+    if (byVer.size < 2) continue;   // one version everywhere, or only one page loads it
+    split++;
+    const newest = [...byVer.keys()].sort((a, b) => +b - +a)[0];
+    const behind = [...byVer].filter(([v]) => v !== newest)
+      .map(([v, pgs]) => 'v' + v + ' — ' + pgs.join(', '));
+    fail(base + ' is loaded at ' + byVer.size + ' different versions:\n' +
+         '        v' + newest + ' — ' + byVer.get(newest).join(', ') + '   (newest)\n        ' +
+         behind.join('\n        ') + '\n' +
+         '        A shared file is shared. The pages behind it render with a stale\n' +
+         '        copy and serve it from cache to returning readers.');
+  }
+  if (!split) ok('every page asks for the same version of each shared asset (' +
+                 asked.size + ' versioned files across ' + PAGES.length + ' pages)');
+}
+
 /* ── A service worker precaches the URL its page actually asks for ─────────
    THIS FAILS SILENTLY AND COSTS BANDWIDTH BOTH WAYS. Each SW's ASSETS list is
    hand-written with ?v= query strings, and every time a page bumps one the
