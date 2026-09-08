@@ -133,94 +133,10 @@ function findBook(prefix) {
 window._noNikkud = false;
  // geminated vav doubles in plene display: metavvekh -> מתווך, never מתוך
 
-// OT interlinear English under each Hebrew word comes from ot_verses/*.js (curated
-// per-word glosses — WLC interlinear, aligned with Blue Letter Bible). Do not
-// replace them with Strong's-lemma heuristics here; popups still link Strong's on tap.
-window._useStrongsMorphGloss = false;
 
 
-function _guessAffixParts(heb) {
-  // Returns {prefixTokens:[], base:"...", suffixToken:""} using surface heuristics.
-  // This is NOT full morphology, but it improves glossing vs Strong's-only.
-  var h = (heb || '').replace(/\u05C3/g, ''); // remove sof marker if present
-  var noMarks = _stripHebrewMarks(h);
-  // split on maqaf, but keep it simple (treat whole as one for Strong's lookup)
-  var s = noMarks.replace(/[\u05BE]/g, ''); // maqaf
 
-  var prefixTokens = [];
-  var i = 0;
-  // Handle very common single-letter prefixes
-  while (i < s.length) {
-    var ch = s[i];
-    // Conjunction ו-
-    if (ch === 'ו') { prefixTokens.push('and'); i++; continue; }
-    // Prepositions
-    if (ch === 'ב') { prefixTokens.push('in'); i++; continue; }
-    if (ch === 'ל') { prefixTokens.push('to'); i++; continue; }
-    if (ch === 'כ') { prefixTokens.push('as'); i++; continue; }
-    if (ch === 'מ') { prefixTokens.push('from'); i++; continue; }
-    if (ch === 'ש') { prefixTokens.push('that'); i++; continue; }
-    // Definite article ה-
-    if (ch === 'ה') { prefixTokens.push('the'); i++; continue; }
-    break;
-  }
 
-  var base = s.slice(i);
-
-  // Very rough pronominal suffix handling (common forms)
-  // These should really come from morphology tags; we keep it conservative.
-  var suffixToken = '';
-  var sufMap = [
-    ['יהם', 'their'], ['יהן', 'their'], ['יכם', 'your'], ['יכן', 'your'],
-    ['ינו', 'our'], ['ני', 'my'], ['י', 'my'],
-    ['ך', 'your'], ['כם', 'your'], ['כן', 'your'],
-    ['ו', 'his'], ['ה', 'her'], ['ם', 'their'], ['ן', 'their']
-  ];
-  for (var si = 0; si < sufMap.length; si++) {
-    var suf = sufMap[si][0];
-    if (base.length > suf.length + 1 && base.endsWith(suf)) {
-      suffixToken = sufMap[si][1];
-      base = base.slice(0, -suf.length);
-      break;
-    }
-  }
-
-  return { prefixTokens: prefixTokens, base: base, suffixToken: suffixToken };
-}
-
-function _strongsGlossForHebrew(hebBase) {
-  if (!hebBase || !window._strongsLookup || !window._strongsRoots) return '';
-  var sNum = _strongsLookup[hebBase] || _strongsLookup[_stripHebrewMarks(hebBase)] || '';
-  if (!sNum || !_strongsRoots[sNum]) return '';
-  return (_strongsRoots[sNum].g || '').trim();
-}
-
-function computeGlossFromHebrew(heb, fallbackGloss) {
-  try {
-    if (!window._useStrongsMorphGloss) return fallbackGloss;
-    var parts = _guessAffixParts(heb);
-    var lemmaGloss = _strongsGlossForHebrew(parts.base);
-    if (!lemmaGloss) return fallbackGloss;
-
-    var tokens = [];
-    parts.prefixTokens.forEach(function(t) { if (t) tokens.push(t); });
-    if (parts.suffixToken) tokens.push(parts.suffixToken);
-
-    // Normalize lemma gloss (BLB-style uses short gloss; keep first 1–3 words).
-    var lg = lemmaGloss.replace(/\s+/g, ' ').trim();
-    // If gloss is a phrase, keep it but avoid overly long definitions.
-    if (lg.split(' ').length > 5) lg = lg.split(' ').slice(0, 3).join(' ');
-
-    // Compose into hyphenated gloss like the existing dataset.
-    var composed = '';
-    if (tokens.length > 0) composed = tokens.join('-') + '-' + lg;
-    else composed = lg;
-
-    return composed.replace(/-/g, ' ').trim();
-  } catch (e) {
-    return fallbackGloss;
-  }
-}
 
 
 var _verseRegistry = [];

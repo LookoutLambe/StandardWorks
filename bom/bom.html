@@ -1853,7 +1853,7 @@ body.dual-mode .chapter-summary { display: block; }
               <img src="images/cover-hardcover.jpg?v=2" alt="Hebrew Book of Mormon — Hardcover" loading="lazy" style="max-height:250px;max-width:176px;width:auto;border-radius:4px;border:1px solid var(--rule);box-shadow:0 6px 18px rgba(26,39,68,0.22)">
             </span>
             <span style="font-family:'David Libre','Georgia',serif;font-size:0.9em;color:var(--ink);margin-top:12px;font-weight:600;line-height:1.35">Hardcover Edition</span>
-            <span style="font-size:0.78em;color:var(--ink-light);margin-top:2px;letter-spacing:0.04em">Cloth-Bound</span>
+            <span style="font-size:0.78em;color:var(--ink-light);margin-top:2px;letter-spacing:0.04em">Hard Cover</span>
           </a>
           <a href="https://www.amazon.com/dp/B0GGQZG9K9" target="_blank" rel="noopener" style="text-decoration:none;width:196px;display:flex;flex-direction:column;align-items:center">
             <span style="height:250px;display:flex;align-items:flex-end;justify-content:center">
@@ -3832,8 +3832,6 @@ window.READER = window.READER || {
     subEl.style.display = '';
     return true;
   },
-  /* Same hook dc.html and pgp.html use: the morph gloss for popup auditing. */
-  wordUnitExtra: function (div, h) { div.setAttribute('data-mgl', computeMorphGloss(h)); },
   /* This volume's English is per book too, and its renderer does not fetch it. */
   ensureEnglishFor: function (chapId, cb) {
     if (typeof ensureBomEnglishForChapId === 'function') ensureBomEnglishForChapId(chapId, cb);
@@ -3851,7 +3849,7 @@ window.READER = window.READER || {
   books: []      /* filled from BOOK_DATA the moment it exists, below */
 };
 </script>
-<script src="../reader_surface.js?v=29"></script>
+<script src="../reader_surface.js?v=30"></script>
 <script src="../crossrefs_engine.js?v=23"></script>  <!-- the cross-reference panel, shared with the other five -->  <!-- panels, selection tools, annotation marks: shared with the other five -->
 <script src="../translit.js?v=1"></script>
 <script src="../jst_refmap.js?v=1"></script>
@@ -4046,103 +4044,6 @@ function navTo(id, slideDir, _bookReady) {
 
 // RENDERER
 
-// Morphology-aware gloss (non-breaking): keep displayed gloss as-is,
-// compute a Strong's-derived "morph gloss" for popup auditing.
-window._useMorphGlossPopup = true;
-function _stripPrefixesForMorphGloss(w) {
-  // Copy of the BOM popup's stripPrefixes(), but global so computeMorphGloss can use it.
-  // Removes maqaf-joined particles first and then strips common prefixes (1–2 layers).
-  w = (w || '').replace(/\u05C3/g, '');
-  w = w.replace(/^.*־/, '');
-  var prefixes = [
-    /^וְ/, /^וַ/, /^וּ/, /^וָ/, /^וֶ/,
-    /^הַ/, /^הָ/, /^הֶ/,
-    /^בְּ/, /^בַּ/, /^בִּ/, /^בָּ/, /^בֶּ/, /^בְ/, /^בַ/, /^בִ/,
-    /^לְ/, /^לַ/, /^לִ/, /^לָ/, /^לֶ/,
-    /^מִ/, /^מֵ/, /^מְ/, /^מַ/,
-    /^כְּ/, /^כַּ/, /^כְ/, /^כַ/,
-    /^שֶׁ/, /^שֶ/
-  ];
-  var stripped = w;
-  for (var i = 0; i < prefixes.length; i++) {
-    if (prefixes[i].test(stripped) && stripped.replace(prefixes[i], '').length >= 2) {
-      stripped = stripped.replace(prefixes[i], '');
-      break;
-    }
-  }
-  for (var j = 0; j < prefixes.length; j++) {
-    if (prefixes[j].test(stripped) && stripped.replace(prefixes[j], '').length >= 2) {
-      stripped = stripped.replace(prefixes[j], '');
-      break;
-    }
-  }
-  return stripped;
-}
-function _guessAffixPartsForMorphGloss(heb) {
-  var h = (heb || '').replace(/\u05C3/g, '');
-  var s = _stripHebrewMarks(h).replace(/[\u05BE]/g, '');
-  var prefixTokens = [];
-  var i = 0;
-  while (i < s.length) {
-    var ch = s[i];
-    if (ch === 'ו') { prefixTokens.push('and'); i++; continue; }
-    if (ch === 'ב') { prefixTokens.push('in'); i++; continue; }
-    if (ch === 'ל') { prefixTokens.push('to'); i++; continue; }
-    if (ch === 'כ') { prefixTokens.push('as'); i++; continue; }
-    if (ch === 'מ') { prefixTokens.push('from'); i++; continue; }
-    if (ch === 'ש') { prefixTokens.push('that'); i++; continue; }
-    if (ch === 'ה') { prefixTokens.push('the'); i++; continue; }
-    break;
-  }
-  var base = s.slice(i);
-  var suffixToken = '';
-  var sufMap = [
-    ['יהם', 'their'], ['יהן', 'their'], ['יכם', 'your'], ['יכן', 'your'],
-    ['ינו', 'our'], ['ני', 'my'], ['י', 'my'],
-    ['ך', 'your'], ['כם', 'your'], ['כן', 'your'],
-    ['ו', 'his'], ['ה', 'her'], ['ם', 'their'], ['ן', 'their']
-  ];
-  for (var si = 0; si < sufMap.length; si++) {
-    var suf = sufMap[si][0];
-    if (base.length > suf.length + 1 && base.endsWith(suf)) {
-      suffixToken = sufMap[si][1];
-      base = base.slice(0, -suf.length);
-      break;
-    }
-  }
-  return { prefixTokens: prefixTokens, base: base, suffixToken: suffixToken };
-}
-function computeMorphGloss(heb) {
-  try {
-    if (!window._useMorphGlossPopup) return '';
-    if (!window._strongsLookup || !window._strongsRoots) return '';
-    var parts = _guessAffixPartsForMorphGloss(heb);
-    var surface = (heb || '').replace(/\u05C3/g, '');
-    var stripped = _stripPrefixesForMorphGloss(surface);
-    var baseForLookup = parts.base || stripped;
-    if (!baseForLookup) return '';
-    var sNum =
-      _strongsLookup[surface] ||
-      _strongsLookup[stripped] ||
-      _strongsLookup[baseForLookup] ||
-      _strongsLookup[_stripHebrewMarks(surface)] ||
-      _strongsLookup[_stripHebrewMarks(stripped)] ||
-      _strongsLookup[_stripHebrewMarks(baseForLookup)] ||
-      '';
-    if (!sNum || !_strongsRoots[sNum]) return '';
-    var lemmaGloss = (_strongsRoots[sNum].g || '').trim();
-    if (!lemmaGloss) return '';
-    lemmaGloss = lemmaGloss.replace(/\s+/g, ' ').trim();
-    if (lemmaGloss.split(' ').length > 5) lemmaGloss = lemmaGloss.split(' ').slice(0, 3).join(' ');
-    var tokens = [];
-    parts.prefixTokens.forEach(function(t) { if (t) tokens.push(t); });
-    if (parts.suffixToken) tokens.push(parts.suffixToken);
-    var composed = tokens.length ? (tokens.join('-') + '-' + lemmaGloss) : lemmaGloss;
-    return composed.replace(/-/g, ' ').trim();
-  } catch (e) {
-    return '';
-  }
-}
 
 
 function renderColophon() {
@@ -5597,9 +5498,6 @@ document.addEventListener('keydown', function(e) {
     document.getElementById('popup-translit').textContent = transliterate(hText);
     popupGl.textContent = gText;
 
-    // Morph gloss (non-breaking): compare Strong's-derived gloss vs curated gloss
-    var morphGloss = wu.getAttribute('data-mgl') || computeMorphGloss(hText) || '';
-
     // Strong's H-number lookup
     var popupStrong = document.getElementById('popup-strong');
     var strongsNum = '';
@@ -5648,11 +5546,6 @@ document.addEventListener('keydown', function(e) {
     }
     var sInfo = wordFreq[hText];
     var detailHtml = '';
-    if (false && morphGloss) {   // suppressed: _guessAffixPartsForMorphGloss over-peels lexeme letters ('his receive'); data-mgl kept for auditing
-      detailHtml += '<div style="direction:ltr;margin-bottom:6px;font-size:0.9em;color:var(--ink-2)">' +
-        '<strong>Morph gloss:</strong> <span style="color:var(--ink)">' + morphGloss + '</span>' +
-        '</div>';
-    }
 
 detailHtml += '<div class="rsc-slot">';   // RootScorecard upgrades this block with cross-volume counts
     // Root-based total (the main count)

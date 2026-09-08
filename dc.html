@@ -498,74 +498,6 @@ var DC_SECTIONS = [];
 for (var i = 1; i <= 138; i++) DC_SECTIONS.push(i);
 var DC_ODS = ['OD1', 'OD2'];
 
-window._useMorphGlossPopup = true;
-function _guessAffixPartsForMorphGloss(heb) {
-  var h = (heb || '').replace(/\u05C3/g, '');
-  var s = _stripHebrewMarks(h).replace(/[\u05BE]/g, '');
-  var prefixTokens = [];
-  var i = 0;
-  while (i < s.length) {
-    var ch = s[i];
-    if (ch === 'ו') { prefixTokens.push('and'); i++; continue; }
-    if (ch === 'ב') { prefixTokens.push('in'); i++; continue; }
-    if (ch === 'ל') { prefixTokens.push('to'); i++; continue; }
-    if (ch === 'כ') { prefixTokens.push('as'); i++; continue; }
-    if (ch === 'מ') { prefixTokens.push('from'); i++; continue; }
-    if (ch === 'ש') { prefixTokens.push('that'); i++; continue; }
-    if (ch === 'ה') { prefixTokens.push('the'); i++; continue; }
-    break;
-  }
-  var base = s.slice(i);
-  var suffixToken = '';
-  var sufMap = [
-    ['יהם', 'their'], ['יהן', 'their'], ['יכם', 'your'], ['יכן', 'your'],
-    ['ינו', 'our'], ['ני', 'my'], ['י', 'my'],
-    ['ך', 'your'], ['כם', 'your'], ['כן', 'your'],
-    ['ו', 'his'], ['ה', 'her'], ['ם', 'their'], ['ן', 'their']
-  ];
-  for (var si = 0; si < sufMap.length; si++) {
-    var suf = sufMap[si][0];
-    if (base.length > suf.length + 1 && base.endsWith(suf)) {
-      suffixToken = sufMap[si][1];
-      base = base.slice(0, -suf.length);
-      break;
-    }
-  }
-  return { prefixTokens: prefixTokens, base: base, suffixToken: suffixToken };
-}
-function computeMorphGloss(heb) {
-  try {
-    if (!window._useMorphGlossPopup) return '';
-    if (!window._strongsLookup || !window._strongsRoots) return '';
-    var parts = _guessAffixPartsForMorphGloss(heb);
-    // Use a Strong's lookup strategy similar to the popup (surface + prefix-stripped + stripped marks).
-    var surface = (heb || '').replace(/\u05C3/g, '');
-    var stripped = (typeof stripPrefixes === 'function') ? stripPrefixes(surface) : surface;
-    var baseForLookup = parts.base || stripped;
-    if (!baseForLookup) return '';
-    var sNum =
-      _strongsLookup[surface] ||
-      _strongsLookup[stripped] ||
-      _strongsLookup[baseForLookup] ||
-      _strongsLookup[_stripHebrewMarks(surface)] ||
-      _strongsLookup[_stripHebrewMarks(stripped)] ||
-      _strongsLookup[_stripHebrewMarks(baseForLookup)] ||
-      '';
-    if (!sNum || !_strongsRoots[sNum]) return '';
-    var lemmaGloss = (_strongsRoots[sNum].g || '').trim();
-    if (!lemmaGloss) return '';
-    // Keep it short like interlinear glosses.
-    lemmaGloss = lemmaGloss.replace(/\s+/g, ' ').trim();
-    if (lemmaGloss.split(' ').length > 5) lemmaGloss = lemmaGloss.split(' ').slice(0, 3).join(' ');
-    var tokens = [];
-    parts.prefixTokens.forEach(function(t) { if (t) tokens.push(t); });
-    if (parts.suffixToken) tokens.push(parts.suffixToken);
-    var composed = tokens.length ? (tokens.join('-') + '-' + lemmaGloss) : lemmaGloss;
-    return composed.replace(/-/g, ' ').trim();
-  } catch (e) {
-    return '';
-  }
-}
 
 window.READER = {
   vol: 'dc',
@@ -684,7 +616,6 @@ window.READER = {
         }
     return true;
   },
-  wordUnitExtra: function(div, h) { div.setAttribute('data-mgl', computeMorphGloss(h)); },
   parseHash: function(hash) {
     var m = hash.match(/(?:dc|section)[\/\-]?(\d+)/i);
     if (m) { var n = parseInt(m[1], 10); if (n >= 1 && n <= 138) return 'dc' + n + '-ch1'; }
@@ -696,7 +627,7 @@ window.READER = {
 </script>
 <!-- chapter summaries (250 KB eager) are now per-book in dc_headings/,
      fetched with the book by VolumeLoader. tools/build_heading_manifests.js -->
-<script src="reader_core.js?v=31"></script>
+<script src="reader_core.js?v=32"></script>
 
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=6"></script>
@@ -718,7 +649,7 @@ window.READER = {
 <!-- dc_crossrefs.js is fetched on idle by crossrefs_engine.js (it was 511 KB of blocking critical path) -->
 <script src="crossrefs_engine.js?v=23"></script>
 
-<script src="reader_surface.js?v=29"></script>  <!-- panels, selection tools, annotation marks: one copy for all six pages -->
+<script src="reader_surface.js?v=30"></script>  <!-- panels, selection tools, annotation marks: one copy for all six pages -->
 <script src="reader_ui.js?v=57"></script>
 <script>
 // === D&C canon overrides (phase 2) — later function declarations win, so

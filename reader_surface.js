@@ -1137,18 +1137,36 @@ function selToolbarShare() {
    Both copies did the same job and each had something the other lacked.
 
      inert on the five   computeGlossFromHebrew(h, baseGloss) is gated on
-                         window._useStrongsMorphGloss, which reader_core sets
-                         to false and nothing ever sets true — so it returned
-                         its fallback unchanged. Dropped rather than carried.
+                         window._useStrongsMorphGloss, which reader_core set
+                         to false and nothing ever set true — so it returned
+                         its fallback unchanged. Dropped rather than carried,
+                         and deleted outright on 2026-09-08 with the rest of
+                         the morph-gloss subsystem (see below).
      missing on the BOM  the exception mark. root_scorecard's registry covers
                          transliterated names (Adam-ondi-Ahman, Ahman,
                          Shedolamak) AND Hebrew acronyms — both are words with
                          no root that the engine must skip — and bom.html
                          rendered תנ״ך with no mark at all. It gets one now.
                          The title says both things, because the registry does.
-     data-mgl            dc.html and pgp.html already set it through the
-                         READER.wordUnitExtra hook; bom.html did it inline.
-                         It goes through the hook there too.
+     data-mgl            REMOVED 2026-09-08. Three pages set it on every
+                         word through READER.wordUnitExtra, and its own
+                         display had been off for a year behind
+                         `if (false && morphGloss)` because the affix peeler
+                         ate lexeme letters. Measured before deleting: on a
+                         chapter rendered after Strong's lands it filled 870
+                         of 1,020 words and the values were WRONG — וְעַתָּה
+                         "and now" came back "and her at this time" (the ה of
+                         עתה read as a "her" suffix), אֲנִי "I" as "my I",
+                         כֹּתֵב "writing" as "as write", אֲשֶׁר־דִּבֶּר "who spoke"
+                         as "subdue". Before the warmup it filled nothing, so
+                         the attribute was empty on a first render and wrong
+                         on every later one. The word card's Parse line
+                         (root_scorecard.js) supersedes it and is correct:
+                         "conjunction + adverb · וְ · עַתָּה". The
+                         READER.wordUnitExtra hook itself stays — it is the
+                         sanctioned way for a page to touch a word unit — but
+                         nothing implements it now, and nothing should put
+                         Strong's-dependent work back on the render path.
 
    The no-nikkud state is read through _swNoNikkud() because the two pages
    record it differently — window._noNikkud on the five, a body class on the

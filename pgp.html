@@ -1066,77 +1066,6 @@ body.dual-mode .colophon .word-unit .hw { font-size: 1em; }
 
 <script src="interlinear_gloss.js?v=2"></script>
 <script>
-// === READER CONFIG (phase 2) — the Pearl of Great Price reader runs on the
-// shared reader_core.js / reader_ui.js. Its landing and chapter panels are
-// static HTML in this page, so buildPages is a no-op; titles, chapter order
-// and hash grammar come from the hooks. Canon overrides load AFTER
-// reader_ui.js (second block below).
-window._useMorphGlossPopup = true;
-function _guessAffixPartsForMorphGloss(heb) {
-  var h = (heb || '').replace(/\u05C3/g, '');
-  var s = _stripHebrewMarks(h).replace(/[\u05BE]/g, '');
-  var prefixTokens = [];
-  var i = 0;
-  while (i < s.length) {
-    var ch = s[i];
-    if (ch === 'ו') { prefixTokens.push('and'); i++; continue; }
-    if (ch === 'ב') { prefixTokens.push('in'); i++; continue; }
-    if (ch === 'ל') { prefixTokens.push('to'); i++; continue; }
-    if (ch === 'כ') { prefixTokens.push('as'); i++; continue; }
-    if (ch === 'מ') { prefixTokens.push('from'); i++; continue; }
-    if (ch === 'ש') { prefixTokens.push('that'); i++; continue; }
-    if (ch === 'ה') { prefixTokens.push('the'); i++; continue; }
-    break;
-  }
-  var base = s.slice(i);
-  var suffixToken = '';
-  var sufMap = [
-    ['יהם', 'their'], ['יהן', 'their'], ['יכם', 'your'], ['יכן', 'your'],
-    ['ינו', 'our'], ['ני', 'my'], ['י', 'my'],
-    ['ך', 'your'], ['כם', 'your'], ['כן', 'your'],
-    ['ו', 'his'], ['ה', 'her'], ['ם', 'their'], ['ן', 'their']
-  ];
-  for (var si = 0; si < sufMap.length; si++) {
-    var suf = sufMap[si][0];
-    if (base.length > suf.length + 1 && base.endsWith(suf)) {
-      suffixToken = sufMap[si][1];
-      base = base.slice(0, -suf.length);
-      break;
-    }
-  }
-  return { prefixTokens: prefixTokens, base: base, suffixToken: suffixToken };
-}
-function computeMorphGloss(heb) {
-  try {
-    if (!window._useMorphGlossPopup) return '';
-    if (!window._strongsLookup || !window._strongsRoots) return '';
-    var parts = _guessAffixPartsForMorphGloss(heb);
-    var surface = (heb || '').replace(/\u05C3/g, '');
-    var stripped = (typeof stripPrefixes === 'function') ? stripPrefixes(surface) : surface;
-    var baseForLookup = parts.base || stripped;
-    if (!baseForLookup) return '';
-    var sNum =
-      _strongsLookup[surface] ||
-      _strongsLookup[stripped] ||
-      _strongsLookup[baseForLookup] ||
-      _strongsLookup[_stripHebrewMarks(surface)] ||
-      _strongsLookup[_stripHebrewMarks(stripped)] ||
-      _strongsLookup[_stripHebrewMarks(baseForLookup)] ||
-      '';
-    if (!sNum || !_strongsRoots[sNum]) return '';
-    var lemmaGloss = (_strongsRoots[sNum].g || '').trim();
-    if (!lemmaGloss) return '';
-    lemmaGloss = lemmaGloss.replace(/\s+/g, ' ').trim();
-    if (lemmaGloss.split(' ').length > 5) lemmaGloss = lemmaGloss.split(' ').slice(0, 3).join(' ');
-    var tokens = [];
-    parts.prefixTokens.forEach(function(t) { if (t) tokens.push(t); });
-    if (parts.suffixToken) tokens.push(parts.suffixToken);
-    var composed = tokens.length ? (tokens.join('-') + '-' + lemmaGloss) : lemmaGloss;
-    return composed.replace(/-/g, ' ').trim();
-  } catch (e) {
-    return '';
-  }
-}
 
 window.READER = {
   vol: 'pgp',
@@ -1205,7 +1134,6 @@ window.READER = {
       }
     return true;
   },
-  wordUnitExtra: function(div, h) { div.setAttribute('data-mgl', computeMorphGloss(h)); },
   parseHash: function(hash) {
     var friendlyMap = { 'moses': 'ms-ch', 'abraham': 'ab-ch', 'js-matthew': 'jsm-ch', 'js-history': 'jsh-ch', 'articles-of-faith': 'aof-ch' };
     for (var name in friendlyMap) {
@@ -1219,7 +1147,7 @@ window.READER = {
 </script>
 <!-- chapter summaries (19 KB eager) are now per-book in pgp_headings/,
      fetched with the book by VolumeLoader. tools/build_heading_manifests.js -->
-<script src="reader_core.js?v=31"></script>
+<script src="reader_core.js?v=32"></script>
 
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=6"></script>
@@ -1240,7 +1168,7 @@ window.READER = {
 <!-- pgp_crossrefs.js is fetched on idle by crossrefs_engine.js (it was 73 KB of blocking critical path) -->
 <script src="crossrefs_engine.js?v=23"></script>
 
-<script src="reader_surface.js?v=29"></script>  <!-- panels, selection tools, annotation marks: one copy for all six pages -->
+<script src="reader_surface.js?v=30"></script>  <!-- panels, selection tools, annotation marks: one copy for all six pages -->
 <script src="reader_ui.js?v=57"></script>
 <script>
 // === PGP canon overrides (phase 2) — later function declarations win, so
