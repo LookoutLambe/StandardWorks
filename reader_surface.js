@@ -1436,3 +1436,89 @@ function _getSelectedWordUnits(sel) {
   });
   return result;
 }
+
+/* ── The view mode (Interlinear / Hebrew only / Dual) ──────────────────────
+   Three differences, and the copies disagreed about which buttons the mode
+   owns. The five exclude BOTH #btn-translit and #btn-nikkud from the
+   deactivation sweep; bom.html excluded only #btn-translit — and it has a
+   nikkud button, so switching view mode silently cleared its active state
+   while the vowel points stayed off. The five's selector is the correct one.
+
+   Turning the Dual column on has to fetch this book's English on the Book of
+   Mormon, whose renderer does not; the five's loadEnglishText fetches its own.
+   READER.ensureEnglishFor is the volume saying which it is, the same shape as
+   READER.ensureBook. */
+function setMode(mode) {
+  _keepVersePosition(function() {
+    document.body.classList.remove('hide-gloss', 'english-only', 'dual-mode');
+    document.querySelectorAll('.controls-bottom button:not(#btn-translit):not(#btn-nikkud)')
+      .forEach(function(b) { b.classList.remove('active'); });
+    if (mode === 'heb') {
+      document.body.classList.add('hide-gloss');
+      document.getElementById('btn-heb').classList.add('active');
+    } else if (mode === 'dual') {
+      document.body.classList.add('dual-mode');
+      document.getElementById('btn-dual').classList.add('active');
+      var R = window.READER || {};
+      if (typeof R.ensureEnglishFor === 'function' && window.currentChapterId) {
+        R.ensureEnglishFor(window.currentChapterId, function () { loadEnglishText(); });
+      } else {
+        loadEnglishText();   // idempotent; in chunk mode it also fetches what is on the page
+      }
+    } else {
+      document.getElementById('btn-inter').classList.add('active');
+    }
+  });
+  try { localStorage.setItem((window.READER && window.READER.vol) + '-view-mode', mode || 'inter'); } catch(e) {}
+}
+
+/* ── The English column ────────────────────────────────────────────────────
+   TWO SHAPES OF THE SAME DATA. The five's English chunks call registerEnglish
+   and fill _englishMap as they load, so all this has to do is make sure the
+   chunks for the chapters on the page have arrived. The Book of Mormon's
+   chunks concat rows into _officialVersesData, which have to be folded in
+   here. Both then fill the same divs.
+
+   Folding is idempotent — keyed by book|chapter|verse, so re-processing a
+   verse rewrites it with itself — which matters because this is called again
+   every time a chunk lands.
+
+   bom.html also carried a fetch/XHR fallback to official_verses.json for
+   file:// use. That file does not exist and has not for as long as the repo
+   records, so the branch was unreachable; it is not carried across. */
+function loadEnglishText() {
+  var R = window.READER || {};
+  var rows = window.defined_verses || window._officialVersesData;
+  if (rows && rows.length) {
+    var before = Object.keys(window._englishMap).length;
+    rows.forEach(function (v) {
+      window._englishMap[v.book + '|' + v.chapter + '|' + v.verse] = v.english;
+    });
+    window._englishLoaded = true;
+    if (Object.keys(window._englishMap).length !== before) populateEnglishDivs();
+    return;
+  }
+  if (R.englishDir) {
+    window._englishLoaded = true;
+    if (typeof window.__swEnsureEnglishRendered === 'function') {
+      window.__swEnsureEnglishRendered(populateEnglishDivs);
+    } else {
+      populateEnglishDivs();
+    }
+    return;
+  }
+  if (window._englishLoaded) return;
+  var eng = R.englishData && window[R.englishData];
+  if (!eng) {
+    /* The view-mode restore calls this BEFORE the English data script tag has
+       run — without a retry a saved Dual page rendered a permanently empty
+       column. Retry once every page script has executed. */
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', loadEnglishText);
+    return;
+  }
+  eng.forEach(function (v) {
+    window._englishMap[v.book + '|' + v.chapter + '|' + v.verse] = v.english;
+  });
+  window._englishLoaded = true;
+  populateEnglishDivs();
+}

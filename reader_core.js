@@ -352,6 +352,8 @@ window.__swLoadAllVerses = function(cb) { VolumeLoader.ensureAll(cb || function(
 // crossrefs_engine.js asks for cross-reference chunks through these.
 window.__swEnsureCrossrefs = function(chapId, cb) { VolumeLoader.ensureCrossrefs(chapId, cb || function() {}); };
 window.__swEnsureCrossrefsRendered = function(cb) { VolumeLoader.ensureCrossrefsRendered(cb || function() {}); };
+// reader_surface.js's loadEnglishText asks for the English of what is rendered.
+window.__swEnsureEnglishRendered = function(cb) { VolumeLoader.ensureEnglish(cb || function() {}); };
 window.__swHasCrossrefChunks = function() { return VolumeLoader.hasCrossrefChunks(); };
 
 /* PSALM 119 IS AN ACROSTIC and the printed editions say so. 176 verses in 22
@@ -606,24 +608,6 @@ function _keepVersePosition(apply) {
   }
 }
 
-function setMode(mode) {
-  _keepVersePosition(function() {
-  document.body.classList.remove('hide-gloss', 'dual-mode');
-  document.querySelectorAll('.controls-bottom button:not(#btn-translit):not(#btn-nikkud)').forEach(function(b) { b.classList.remove('active'); });
-  if (mode === 'heb') {
-    document.body.classList.add('hide-gloss');
-    document.getElementById('btn-heb').classList.add('active');
-  } else if (mode === 'dual') {
-    document.body.classList.add('dual-mode');
-    document.getElementById('btn-dual').classList.add('active');
-    loadEnglishText();   // idempotent; in chunk mode it also fetches the English of the chapters on the page
-  } else {
-    document.getElementById('btn-inter').classList.add('active');
-  }
-  });
-  try { localStorage.setItem(window.READER.vol + '-view-mode', mode || 'inter'); } catch(e) {}
-}
-
 
 function toggleNoNikkud() {
   _keepVersePosition(function() {
@@ -708,32 +692,6 @@ function toggleNoNikkud() {
 // === DUAL MODE ENGLISH TEXT ===
 window._englishLoaded = false;
 window._englishMap = {};
-
-function loadEnglishText() {
-  if (window.READER.englishDir) {
-    // Chunk mode: the English column arrives one verse file at a time
-    // (<englishDir>/<verse file>, each calling registerEnglish), fetched with
-    // the book while the Dual view is on. Called again on a later Dual
-    // switch-on, this fetches the chunks of the chapters already on the page.
-    window._englishLoaded = true;
-    VolumeLoader.ensureEnglish(populateEnglishDivs);
-    return;
-  }
-  if (window._englishLoaded) return;
-  var _engData = window[window.READER.englishData];
-  if (!_engData) {
-    // The INIT view-mode restore calls this BEFORE the english data script
-    // tag has run — without a retry, saved-dual pages rendered a permanently
-    // empty English column. Retry once every page script has executed.
-    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', loadEnglishText);
-    return;
-  }
-  _engData.forEach(function(v) {
-    window._englishMap[v.book + '|' + v.chapter + '|' + v.verse] = v.english;
-  });
-  window._englishLoaded = true;
-  populateEnglishDivs();
-}
 
 
 /** One English chunk (<englishDir>/<verse file>): rows of [book, chapter, verse, english]. */

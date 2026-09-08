@@ -3807,6 +3807,11 @@ window.READER = window.READER || {
      reader_core's _ensureChapterRendered loads the verse file itself. */
   /* Same hook dc.html and pgp.html use: the morph gloss for popup auditing. */
   wordUnitExtra: function (div, h) { div.setAttribute('data-mgl', computeMorphGloss(h)); },
+  /* This volume's English is per book too, and its renderer does not fetch it. */
+  ensureEnglishFor: function (chapId, cb) {
+    if (typeof ensureBomEnglishForChapId === 'function') ensureBomEnglishForChapId(chapId, cb);
+    else cb();
+  },
   ensureBook: function (chapId, cb) {
     if (typeof ensureBomBookForChapId === 'function') ensureBomBookForChapId(chapId, cb);
     else cb();
@@ -3814,7 +3819,7 @@ window.READER = window.READER || {
   books: []      /* filled from BOOK_DATA the moment it exists, below */
 };
 </script>
-<script src="../reader_surface.js?v=14"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
+<script src="../reader_surface.js?v=15"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
 <script src="../translit.js?v=1"></script>
 <script src="../jst_refmap.js?v=1"></script>
 <script src="../verse_loader.js?v=5"></script>
@@ -4306,35 +4311,6 @@ function _keepVersePosition(apply) {
     var np = anchor.straddle ? nr.bottom : nr.top;
     if (np !== anchor.pos) window.scrollBy(0, np - anchor.pos);
   }
-}
-
-function setMode(mode) {
-  _keepVersePosition(function() {
-  document.body.classList.remove('hide-gloss', 'english-only', 'dual-mode');
-  document.querySelectorAll('.controls-bottom button:not(#btn-translit)').forEach(b => b.classList.remove('active'));
-
-  if (mode === 'heb') {
-    document.body.classList.add('hide-gloss');
-    document.getElementById('btn-heb').classList.add('active');
-  } else if (mode === 'dual') {
-    document.body.classList.add('dual-mode');
-    document.getElementById('btn-dual').classList.add('active');
-    /* Straight to the fetch — the reader asked for the column, so this one is
-       not deferred to idle like the render-path warm above. */
-    /* window.currentChapterId, not the bare name: it is declared in a later
-       inline <script> block, so a bare reference here throws ReferenceError if
-       this ever runs during boot (restoring the saved view mode) before that
-       block has executed. A property read cannot throw. */
-    if (typeof ensureBomEnglishForChapId === 'function' && window.currentChapterId) {
-      ensureBomEnglishForChapId(window.currentChapterId, function () { loadEnglishText(); });
-    } else {
-      loadEnglishText();
-    }
-  } else {
-    document.getElementById('btn-inter').classList.add('active');
-  }
-  });
-  try { localStorage.setItem('bom-view-mode', mode || 'inter'); } catch(e) {}
 }
 
 
@@ -6258,48 +6234,6 @@ setTimeout(loadCrossRefs, 500);
 window._englishLoaded = false;
 window._englishMap = {};
 
-function loadEnglishText() {
-  /* Folds in whatever has arrived instead of latching on the first call: the
-     English is per book now, so this runs again as each chunk lands. Keyed by
-     book|chapter|verse, so re-processing a verse rewrites it with itself. */
-  function processData(data) {
-    if (!data || !data.length) return;
-    var before = Object.keys(window._englishMap).length;
-    data.forEach(function(v) {
-      window._englishMap[v.book + '|' + v.chapter + '|' + v.verse] = v.english;
-    });
-    window._englishLoaded = true;
-    if (Object.keys(window._englishMap).length === before) return;   // nothing new
-    populateEnglishDivs();
-  }
-  if (window.defined_verses || window._officialVersesData) {
-    processData(window.defined_verses || window._officialVersesData);
-    return;
-  }
-  /* NO WHOLE-CORPUS FALLBACK. This used to call ensureOfficialVerses(), which
-     fetches official_verses.js — all 1,852 KB — the moment the map was empty;
-     with the English split per book that is exactly the load being avoided,
-     and every caller now asks ensureBomEnglishForChapId for the book it needs
-     first. Nothing to fold in yet simply means the chunk has not landed, and
-     __bomEnglishArrived calls this again when it does. The fetch/XHR path
-     below stays for file:// and for a chunk that 404s. */
-  if (window.location.protocol === 'file:') fetchOrXhrOfficial();
-
-  function fetchOrXhrOfficial() {
-  // Fallback: try fetch, then XHR
-  if (typeof fetch !== 'undefined' && window.location.protocol !== 'file:') {
-    fetch('official_verses.json?v=4')
-      .then(function(r) { return r.json(); })
-      .then(processData)
-      .catch(function(err) {
-        console.warn('fetch failed, trying XHR:', err);
-        loadViaXHR('official_verses.json?v=4', processData);
-      });
-  } else {
-    loadViaXHR('official_verses.json?v=4', processData);
-  }
-  }
-}
 
 function loadViaXHR(url, callback) {
   var xhr = new XMLHttpRequest();
@@ -6418,20 +6352,12 @@ document.addEventListener('keydown', function(e) {
   else if (e.key === 'm' || e.key === 'M' || e.key === 'b' || e.key === 'B') { if (window.NavEngine) NavEngine.toggle(); }
 });
 
-// Fix setMode to scope button selection to controls-bottom only
-(function() {
-  var origSetMode = window.setMode;
-  if (!origSetMode) return;
-  window.setMode = function(mode) {
-    origSetMode(mode);
-    var cb = document.querySelector('.controls-bottom');
-    if (cb) {
-      cb.querySelectorAll('button:not(#btn-translit)').forEach(function(b) { b.classList.remove('active'); });
-      var id = mode === 'inter' ? 'btn-inter' : mode === 'heb' ? 'btn-heb' : mode === 'dual' ? 'btn-dual' : null;
-      if (id) document.getElementById(id).classList.add('active');
-    }
-  };
-})();
+/* A wrapper here re-ran setMode's button sweep "to scope button selection to
+   controls-bottom only". The shared setMode in reader_surface.js already scopes
+   to .controls-bottom, so the wrapper was redundant — and it swept with
+   'button:not(#btn-translit)', which does NOT spare #btn-nikkud, so every view
+   change quietly cleared the No Nikkud button while the vowel points stayed
+   off. Removed; the shared selector spares both. */
 
 // 1. URL HASH ROUTING
 (function() {
