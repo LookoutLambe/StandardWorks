@@ -52,7 +52,7 @@
 <link rel="stylesheet" href="../nav_engine.css?v=49">
 <link rel="stylesheet" href="../site_chrome.css?v=71">
 <link rel="stylesheet" href="../xref_study_panel.css?v=14">
-<link rel="stylesheet" href="../reader.css?v=89">
+<link rel="stylesheet" href="../reader.css?v=90">
 <style>
 
 /* Skip-to-content link (screen reader / keyboard) */
@@ -1471,15 +1471,8 @@ body.dark-mode #search-results .search-result:hover { background: color-mix(in s
    the top now builds exactly like ot.html/nt.html — shared chrome only. */
 
 /* Nav-label progress subtitle */
-#nav-progress-text {
-  display: block;
-  font-size: 0.7em;
-  font-weight: 400;
-  color: #8a8570;
-  margin-top: 1px;
-  line-height: 1;
-}
-body.dark-mode #nav-progress-text { color: #6a6550; }
+
+body.dark-mode 
 
 /* === NAV DROPDOWN === styles moved to nav_engine.css */
 /* Navigation hint toast */
@@ -3792,6 +3785,7 @@ body.dual-mode .chapter-summary { display: block; }
 window.READER = window.READER || {
   vol: 'bom',
   landingTitle: 'Book of Mormon',
+  navLabelHe: 'Book of Mormon',
   shareTitle: '\u05E1\u05E4\u05E8 \u05DE\u05D5\u05E8\u05DE\u05D5\u05DF \u2014 Hebrew Interlinear Book of Mormon',
   /* Ids that are not chapters. reader_surface.js's getChapterLabel checks
      these before it tries to read a book and a number out of the id. */
@@ -3820,7 +3814,7 @@ window.READER = window.READER || {
   books: []      /* filled from BOOK_DATA the moment it exists, below */
 };
 </script>
-<script src="../reader_surface.js?v=11"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
+<script src="../reader_surface.js?v=12"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
 <script src="../translit.js?v=1"></script>
 <script src="../jst_refmap.js?v=1"></script>
 <script src="../verse_loader.js?v=5"></script>
@@ -4547,65 +4541,12 @@ function getBookProgress(chapterId) {
   return null;
 }
 
-function updateNavButtons() {
-  var prevBtn = document.getElementById('nav-prev');
-  var nextBtn = document.getElementById('nav-next');
-  var label = document.getElementById('nav-label');
-  var idx = fullPageOrder.indexOf(currentPageId);
-  prevBtn.disabled = idx <= 0;
-  nextBtn.disabled = idx >= fullPageOrder.length - 1;
-  prevBtn.textContent = '\u2190';
-  nextBtn.textContent = '\u2192';
-  if (label) {
-    if (currentChapterId) {
-      var progress = getBookProgress(currentChapterId);
-      if (progress) {
-        var mainText = progress.bookName;
-        if (progress.totalChapters > 1) mainText += ' ' + progress.chapterNum;
-        label.innerHTML = mainText + ' \u25BE' +
-          '<span id="nav-progress-text">' +
-          progress.chapterNum + '/' + progress.totalChapters +
-          ' \u00B7 Book ' + progress.bookIndex + ' of ' + progress.totalBooks +
-          '</span>';
-      } else {
-        label.textContent = getChapterLabel(currentChapterId) + ' \u25BE';
-      }
-    } else {
-      label.textContent = 'Book of Mormon \u25BE';
-    }
-  }
-}
 
 // Page flow: landing → intro → front matter pages → ch1 → ch2 → ...
 // Keep this list in sync with the actual front-matter panels in the HTML.
 var frontOrder = ['front-hebrew-guide','front-translator','front-titlepage','front-introduction','front-three','front-eight','front-js','front-brief'];
 var fullPageOrder = ['landing','intro'].concat(frontOrder).concat(chapterOrder);
 
-function goNext() {
-  // Prefer chapterOrder when reading a chapter; currentPageId can get stale in PWA
-  // edge-cases (e.g., navigation triggered externally / timing with SW restore).
-  if (currentChapterId && chapterOrder.indexOf(currentChapterId) >= 0) {
-    var cidx = chapterOrder.indexOf(currentChapterId);
-    if (cidx >= 0 && cidx < chapterOrder.length - 1) {
-      navTo(chapterOrder[cidx + 1], 'next');
-    }
-    return;
-  }
-  var idx = fullPageOrder.indexOf(currentPageId);
-  if (idx >= 0 && idx < fullPageOrder.length - 1) navTo(fullPageOrder[idx + 1], 'next');
-}
-
-function goPrev() {
-  if (currentChapterId && chapterOrder.indexOf(currentChapterId) >= 0) {
-    var cidx = chapterOrder.indexOf(currentChapterId);
-    if (cidx > 0) {
-      navTo(chapterOrder[cidx - 1], 'prev');
-    }
-    return;
-  }
-  var idx = fullPageOrder.indexOf(currentPageId);
-  if (idx > 0) navTo(fullPageOrder[idx - 1], 'prev');
-}
 
 // === ANNOTATIONS (Highlight / Underline / Notes) ===
 // Tier-specific: each word can have annotations per tier (hw, tl, gl)
@@ -6518,19 +6459,7 @@ function updateContinueButton() {
 })();
 
 // Unified panel close
-function closeAllPanels() {
-  if (window.NavEngine) NavEngine.close();
-  var sc = document.getElementById('search-container');
-  if (sc && sc.classList.contains('open')) closeSearch();
-  var wp = document.getElementById('word-popup');
-  if (wp && wp.style.display !== 'none' && wp.style.display !== '') closePopup();
-  var ap = document.getElementById('annotations-panel');
-  if (ap && ap.classList.contains('open')) closeAnnotationsPanel();
-  var gp = document.getElementById('glossary-panel');
-  if (gp && gp.classList.contains('open')) closeGlossary();
-  var xp = document.getElementById('xref-panel');
-  if (xp && xp.classList.contains('open')) closeXrefPanel();
-}
+
 
 // Double-tap / double-click to hide the bottom mode bar: handled globally in nav_engine.js
 // (syncs reader-footer-hidden + hide-bottom-bar + bom-hide-bottom-bar for BOM CSS).

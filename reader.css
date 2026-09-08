@@ -2673,3 +2673,22 @@ body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direct
   background: rgba(0,0,0,0.4); z-index: var(--z-scrim);
 }
 #share-overlay.visible { display: block; }
+
+/* The reading-progress line inside the chapter pill ("32/63 · Book 9 of 15").
+   Only the Book of Mormon renders it today — it is the one volume that defines
+   getBookProgress — but the rule belongs with every other reader rule rather
+   than inline in that page.
+   THE SECOND SELECTOR IS body.dark-mode, and it matters: lifting these out of
+   bom.html I first matched on '#nav-progress-text {' and dropped the prefix,
+   which turned a dark-only override into an unconditional one. The colours are
+   still hardcoded from before Indigo & Gold and want tokens, but that is a
+   separate change from moving them. */
+#nav-progress-text {
+  display: block;
+  font-size: 0.7em;
+  font-weight: 400;
+  color: #8a8570;
+  margin-top: 1px;
+  line-height: 1;
+}
+body.dark-mode #nav-progress-text { color: #6a6550; }

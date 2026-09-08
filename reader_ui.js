@@ -10,31 +10,6 @@ var currentChapterId = null;
 var currentPageId = 'landing';
 var fullPageOrder = ['landing'].concat(window.READER.extraPages || []).concat(chapterOrder);
 
-function updateNavButtons() {
-  var prevBtn = document.getElementById('nav-prev');
-  var nextBtn = document.getElementById('nav-next');
-  var label = document.getElementById('nav-label');
-  var idx = fullPageOrder.indexOf(currentPageId);
-  prevBtn.disabled = idx <= 0;
-  nextBtn.disabled = idx >= fullPageOrder.length - 1;
-  if (label) {
-    if (currentChapterId) {
-      label.innerHTML = getChapterLabel(currentChapterId) + ' \u25BE';
-    } else {
-      label.innerHTML = window.READER.navLabelHe + ' \u25BE';
-    }
-  }
-}
-
-function goNext() {
-  var idx = fullPageOrder.indexOf(currentPageId);
-  if (idx >= 0 && idx < fullPageOrder.length - 1) navTo(fullPageOrder[idx + 1], 'next');
-}
-
-function goPrev() {
-  var idx = fullPageOrder.indexOf(currentPageId);
-  if (idx > 0) navTo(fullPageOrder[idx - 1], 'prev');
-}
 
 // Initialize nav buttons for the landing page on load — mirrors bom.html's
 // own boot-time call (its one reader NOT on this shared file). Without it,
@@ -95,22 +70,6 @@ document.addEventListener('keydown', function(e) {
   else if (e.key === '?') { openShortcuts(); }
 });
 
-function closeAllPanels() {
-  var sc = document.getElementById('search-container');
-  if (sc && sc.classList.contains('open')) closeSearch();
-  var wp = document.getElementById('word-popup');
-  if (wp && wp.style.display !== 'none' && wp.style.display !== '') closePopup();
-  var gp = document.getElementById('glossary-panel');
-  if (gp && gp.classList.contains('open')) closeGlossary();
-  var ap = document.getElementById('annotations-panel');
-  if (ap && ap.classList.contains('open')) closeAnnotationsPanel();
-  var sp = document.getElementById('share-popup');
-  if (sp && sp.classList.contains('open')) closeSharePopup();
-  _hideSelToolbar();
-  if (window.NavEngine) NavEngine.close();
-  var sh = document.getElementById('shortcuts-overlay');
-  if (sh && sh.classList.contains('open')) closeShortcuts();
-}
 
 // HISTORY: Make chapter navigation create real Back/Forward entries.
 //

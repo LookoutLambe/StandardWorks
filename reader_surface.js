@@ -878,7 +878,7 @@ function getShareContent() {
 function openSharePopup() {
   _shareContent = getShareContent();
   document.getElementById('share-title').textContent =
-    _shareContent.text.includes(':') ? 'Share verse' : 'Share ' + _getChapterLabel();
+    _shareContent.text.includes(':') ? 'Share verse' : 'Share ' + getChapterLabel(window.currentChapterId);
   document.getElementById('share-preview').textContent =
     _shareContent.text.length > 120 ? _shareContent.text.substring(0, 120) + '...' : _shareContent.text;
   document.getElementById('copy-label').textContent = 'Copy';
@@ -1110,15 +1110,15 @@ function selToolbarShare() {
     });
     var wid = _selWordUnits[0].getAttribute('data-wid') || '';
     var parts = wid.split('|');
-    ref = parts.length >= 3 ? parts[0] + ' ' + parts[1] + ':' + parts[2] : _getChapterLabel();
+    ref = parts.length >= 3 ? parts[0] + ' ' + parts[1] + ':' + parts[2] : getChapterLabel(window.currentChapterId);
     shareText = heb.join(' ') + '\n' + eng.join(' · ') + '\n(' + ref + ')';
   } else {
     var sel = window.getSelection();
     shareText = sel ? sel.toString() : '';
-    ref = typeof _getChapterLabel === 'function' ? _getChapterLabel() : 'Book of Mormon';
+    ref = getChapterLabel(window.currentChapterId);
   }
   _shareContent = {
-    title: ref + ' — Hebrew Interlinear',
+    title: ref + ' \u2014 ' + _swShareTitle(),
     text: shareText,
     url: typeof _getShareUrl === 'function' ? _getShareUrl() : window.location.href
   };
@@ -1190,4 +1190,93 @@ function makeWordUnit(h, e, isSof) {
   div.setAttribute('role', 'button');
   if (window.READER && window.READER.wordUnitExtra) window.READER.wordUnitExtra(div, h);
   return div;
+}
+
+/* ── Moving between chapters, and closing what is open ─────────────────────
+   goNext / goPrev  bom.html consults chapterOrder first when a chapter is
+                    open, because currentPageId can go stale in PWA edge cases
+                    — a navigation triggered from outside the page, or timing
+                    against the service worker's restore — and the page-order
+                    lookup then lands nowhere. The five had only the page-order
+                    path. Keeping the fast path costs them nothing.
+   updateNavButtons bom.html shows reading progress ("Alma 32 · 32/63 · Book 9
+                    of 15") through getBookProgress, which only that page
+                    defines; the call is guarded, so the five keep the plain
+                    label until they define one. The landing label was a
+                    hardcoded 'Book of Mormon' and is READER.navLabelHe now.
+   closeAllPanels   the two had drifted into closing different sets. bom.html
+                    had gained NavEngine.close() and the annotations panel; the
+                    five still closed the share popup by a class it no longer
+                    uses. The union, with .visible — which is the class all six
+                    share since sharing became one implementation. */
+
+function goNext() {
+  // Prefer chapterOrder when reading a chapter; currentPageId can get stale in PWA
+  // edge-cases (e.g., navigation triggered externally / timing with SW restore).
+  if (currentChapterId && chapterOrder.indexOf(currentChapterId) >= 0) {
+    var cidx = chapterOrder.indexOf(currentChapterId);
+    if (cidx >= 0 && cidx < chapterOrder.length - 1) {
+      navTo(chapterOrder[cidx + 1], 'next');
+    }
+    return;
+  }
+  var idx = fullPageOrder.indexOf(currentPageId);
+  if (idx >= 0 && idx < fullPageOrder.length - 1) navTo(fullPageOrder[idx + 1], 'next');
+}
+
+function goPrev() {
+  if (currentChapterId && chapterOrder.indexOf(currentChapterId) >= 0) {
+    var cidx = chapterOrder.indexOf(currentChapterId);
+    if (cidx > 0) {
+      navTo(chapterOrder[cidx - 1], 'prev');
+    }
+    return;
+  }
+  var idx = fullPageOrder.indexOf(currentPageId);
+  if (idx > 0) navTo(fullPageOrder[idx - 1], 'prev');
+}
+
+function updateNavButtons() {
+  var prevBtn = document.getElementById('nav-prev');
+  var nextBtn = document.getElementById('nav-next');
+  var label = document.getElementById('nav-label');
+  var idx = fullPageOrder.indexOf(currentPageId);
+  prevBtn.disabled = idx <= 0;
+  nextBtn.disabled = idx >= fullPageOrder.length - 1;
+  prevBtn.textContent = '\u2190';
+  nextBtn.textContent = '\u2192';
+  if (label) {
+    if (currentChapterId) {
+      var progress = (typeof getBookProgress === 'function') ? getBookProgress(currentChapterId) : null;
+      if (progress) {
+        var mainText = progress.bookName;
+        if (progress.totalChapters > 1) mainText += ' ' + progress.chapterNum;
+        label.innerHTML = mainText + ' \u25BE' +
+          '<span id="nav-progress-text">' +
+          progress.chapterNum + '/' + progress.totalChapters +
+          ' \u00B7 Book ' + progress.bookIndex + ' of ' + progress.totalBooks +
+          '</span>';
+      } else {
+        label.textContent = getChapterLabel(currentChapterId) + ' \u25BE';
+      }
+    } else {
+      label.textContent = (window.READER && window.READER.navLabelHe ? window.READER.navLabelHe : '') + ' \u25BE';
+    }
+  }
+}
+
+function closeAllPanels() {
+  if (window.NavEngine) NavEngine.close();
+  var sc = document.getElementById('search-container');
+  if (sc && sc.classList.contains('open')) closeSearch();
+  var wp = document.getElementById('word-popup');
+  if (wp && wp.style.display !== 'none' && wp.style.display !== '') closePopup();
+  var ap = document.getElementById('annotations-panel');
+  if (ap && ap.classList.contains('open')) closeAnnotationsPanel();
+  var sp = document.getElementById('share-popup');
+  if (sp && sp.classList.contains('visible')) closeSharePopup();
+  var gp = document.getElementById('glossary-panel');
+  if (gp && gp.classList.contains('open')) closeGlossary();
+  var xp = document.getElementById('xref-panel');
+  if (xp && xp.classList.contains('open')) closeXrefPanel();
 }
