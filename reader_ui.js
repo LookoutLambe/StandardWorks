@@ -522,37 +522,6 @@ try { _swNotes = JSON.parse(localStorage.getItem(window.READER.vol + '-notes') |
 var _currentAnnTab = 'highlights';
 
 
-function renderAnnotationsList() {
-  var list = document.getElementById('annotations-list');
-  var html = '';
-  if (_currentAnnTab === 'highlights') {
-    var wids = Object.keys(_swAnnotations);
-    if (wids.length === 0) { html = '<div style="color:var(--ink-light);padding:16px;font-style:italic;">No highlights yet. Select text and use the toolbar to highlight.</div>'; }
-    else {
-      wids.forEach(function(wid) {
-        var parts = wid.split('|');
-        var ref = parts.length >= 3 ? parts[0] + ' ' + parts[1] + ':' + parts[2] : wid;
-        var el = document.querySelector('.word-unit[data-wid="' + wid + '"]');
-        var hw = el ? el.querySelector('.hw') : null;
-        var text = hw ? hw.textContent : '';
-        html += '<div class="ann-item"><div class="ann-item-ref">' + ref + '</div><div class="ann-item-text">' + text + '</div></div>';
-      });
-    }
-  } else {
-    var vks = Object.keys(_swNotes);
-    if (vks.length === 0) { html = '<div style="color:var(--ink-light);padding:16px;font-style:italic;">No notes yet. Select text and use the toolbar to add notes.</div>'; }
-    else {
-      vks.forEach(function(vk) {
-        var parts = vk.split('|');
-        var ref = parts.length >= 3 ? parts[0] + ' ' + parts[1] + ':' + parts[2] : vk;
-        html += '<div class="ann-item"><div class="ann-item-ref">' + ref + '</div><div class="ann-item-note">' + _swNotes[vk] + '</div></div>';
-      });
-    }
-  }
-  list.innerHTML = html;
-}
-
-
 // === SELECTION TOOLBAR ===
 var _selWordUnits = [];
 var _selTier = '';
@@ -597,43 +566,6 @@ var _shareVerseKey = '';
 // === GLOSSARY SYSTEM ===
 var glossaryIndex = null;
 var glossaryExclude = new Set(['', ' ']);
-
-function buildGlossaryIndex() {
-  if (glossaryIndex) return;
-  // Cross-volume index from the concordance: every root in the whole corpus,
-  // with total counts — the in-page fallback below only sees this volume.
-  if (window.RootScorecard && RootScorecard.ready()) {
-    glossaryIndex = RootScorecard.glossaryEntries(typeof glossaryExclude !== 'undefined' ? glossaryExclude : null);
-    if (glossaryIndex) return;
-  }
-  glossaryIndex = [];
-  var curated = window._rootGlossaryData || {};
-  for (var root in rootFreq) {
-    if (glossaryExclude.has(root)) continue;
-    var rInfo = rootFreq[root];
-    // For Strong's H-number roots, resolve display info and curated data
-    var displayHeb = root, displayTranslit = '';
-    var cInfo = curated[root] || {};
-    if (/^H\d+$/.test(root) && window._strongsRoots && _strongsRoots[root]) {
-      var sEntry = _strongsRoots[root];
-      displayHeb = sEntry.w;
-      displayTranslit = (typeof transliterate === 'function' && sEntry.w ? transliterate(sEntry.w) : '') || sEntry.x || '';
-      if (!cInfo.meaning) {
-        var consRoot = _stripNikkud(sEntry.w);
-        cInfo = curated[consRoot] || {};
-      }
-    }
-    var topGloss = '', topCount = 0;
-    for (var g in rInfo.glosses) { if (rInfo.glosses[g] > topCount) { topCount = rInfo.glosses[g]; topGloss = g; } }
-    var autoMeaning = topGloss.replace(/^(and-|the-|to-|in-|from-|as-|that-|by-|for-|with-|a-|an-)+/g,'').replace(/-/g,' ');
-    glossaryIndex.push({
-      root: root, displayHeb: displayHeb, displayTranslit: displayTranslit,
-      meaning: cInfo.meaning || autoMeaning || '', category: cInfo.category || 'Uncategorized',
-      count: rInfo.count, forms: rInfo.forms, glosses: rInfo.glosses,
-      exampleVerse: rInfo.exampleVerse || '', verseRefs: rInfo.verseRefs || {}, biblicalRefs: cInfo.biblicalRefs || []
-    });
-  }
-}
 
 
 function buildVerseRefsHtml(verseRefs) {

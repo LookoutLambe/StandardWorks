@@ -1301,27 +1301,7 @@ function closeAllPanels() {
                         here and every page gets both buttons. */
 function goToGlossaryVerse(verseKey) {
   closeGlossary();
-  var parts = String(verseKey || '').split('|');
-  if (parts.length < 3) return;
-  var books = _swBooks(), book = null;
-  for (var i = 0; i < books.length; i++) {
-    if (_swBookName(books[i]) === parts[0]) { book = books[i]; break; }
-  }
-  if (!book) return;
-  var chId = _swBookIdPrefix(book) + parts[1] + (book.idSuffix || '');
-  var href = (typeof swVerseDeepLink === 'function') ? swVerseDeepLink(chId, parts[2]) : '';
-  if (typeof window.NavEngineFollow === 'function' && href) {
-    window.NavEngineFollow('#' + href.split('#')[1]);
-  } else {
-    navTo(chId);
-  }
-  setTimeout(function() {
-    var verse = document.querySelector('[data-verse-key="' + verseKey + '"]');
-    if (verse) {
-      verse.classList.add('highlighted');
-      verse.scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'center' });
-    }
-  }, 200);
+  swGoToVerseKey(verseKey);
 }
 
 function exportAnnotations() {
@@ -1668,4 +1648,179 @@ function renderGlossaryEntry(entry) {
         entry.root.replace(/'/g, "\\'") + '\')">Highlight all in text</button>' +
     '</div>' +
   '</div>';
+}
+
+/* ── Building the dictionary index ─────────────────────────────────────────
+   Two differences. bom.html read window.rootFreq through a guard where the five
+   read the bare name, which throws if the concordance has not landed — that
+   guard is kept. And bom.html stripped the pointing with its own inline regex
+   where the five call _stripNikkud; routed through _stripNikkud, each page
+   keeps its own idea of which marks are letters (the BOM's spares the maqqef
+   and the shin/sin dots) and the function itself is one. */
+function buildGlossaryIndex() {
+  if (glossaryIndex) return;
+  // Cross-volume index from the concordance: every root in the whole corpus,
+  // with total counts — the in-page fallback below only sees this volume.
+  if (window.RootScorecard && RootScorecard.ready()) {
+    glossaryIndex = RootScorecard.glossaryEntries(typeof glossaryExclude !== 'undefined' ? glossaryExclude : null);
+    if (glossaryIndex) return;
+  }
+  glossaryIndex = [];
+  var curated = window._rootGlossaryData || {};
+  var rf = window.rootFreq || {};
+  for (var root in rf) {
+    if (glossaryExclude.has(root)) continue;
+    var rInfo = rf[root];
+    // For Strong's H-number roots, resolve display info and curated data
+    var displayHeb = root, displayTranslit = '';
+    var cInfo = curated[root] || {};
+    if (/^H\d+$/.test(root) && window._strongsRoots && _strongsRoots[root]) {
+      var sEntry = _strongsRoots[root];
+      displayHeb = sEntry.w;
+      displayTranslit = (typeof transliterate === 'function' && sEntry.w ? transliterate(sEntry.w) : '') || sEntry.x || '';
+      if (!cInfo.meaning) {
+        var consRoot = _stripNikkud(sEntry.w);
+        cInfo = curated[consRoot] || {};
+      }
+    }
+    var topGloss = '', topCount = 0;
+    for (var g in rInfo.glosses) { if (rInfo.glosses[g] > topCount) { topCount = rInfo.glosses[g]; topGloss = g; } }
+    var autoMeaning = topGloss.replace(/^(and-|the-|to-|in-|from-|as-|that-|by-|for-|with-|a-|an-)+/g,'').replace(/-/g,' ');
+    glossaryIndex.push({
+      root: root, displayHeb: displayHeb, displayTranslit: displayTranslit,
+      meaning: cInfo.meaning || autoMeaning || '', category: cInfo.category || 'Uncategorized',
+      count: rInfo.count, forms: rInfo.forms, glosses: rInfo.glosses,
+      exampleVerse: rInfo.exampleVerse || '', verseRefs: rInfo.verseRefs || {}, biblicalRefs: cInfo.biblicalRefs || []
+    });
+  }
+}
+
+/* ── The annotations panel ─────────────────────────────────────────────────
+   bom.html's was much the fuller — highlights grouped by verse with their
+   colours, an Underlines tab the five never had, a note editor with a verse
+   picker — so it is the one that survives and the five gain all of it. Its one
+   defect is fixed on the way (see the read below), and its verse links go
+   through swGoToVerseKey, so following one now leaves a return point. */
+function swGoToVerseKey(verseKey) {
+  var parts = String(verseKey || '').split('|');
+  if (parts.length < 3) return;
+  var books = _swBooks(), book = null;
+  for (var i = 0; i < books.length; i++) {
+    if (_swBookName(books[i]) === parts[0]) { book = books[i]; break; }
+  }
+  if (!book) return;
+  var chId = _swBookIdPrefix(book) + parts[1] + (book.idSuffix || '');
+  var href = (typeof swVerseDeepLink === 'function') ? swVerseDeepLink(chId, parts[2]) : '';
+  if (typeof window.NavEngineFollow === 'function' && href) {
+    window.NavEngineFollow('#' + href.split('#')[1]);
+  } else {
+    navTo(chId);
+  }
+  setTimeout(function() {
+    var verse = document.querySelector('[data-verse-key="' + verseKey + '"]');
+    if (verse) {
+      verse.classList.add('highlighted');
+      verse.scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'center' });
+    }
+  }, 200);
+}
+function renderAnnotationsList() {
+  /* bom.html calls it ann-list, the five annotations-list. */
+  var list = document.getElementById('ann-list') || document.getElementById('annotations-list');
+  if (!list) return;
+  var html = '';
+
+  if (_currentAnnTab === 'highlights' || _currentAnnTab === 'underlines') {
+    var type = _currentAnnTab === 'highlights' ? 'hl' : 'ul';
+    var entries = [];
+    /* THROUGH _annOf, NOT THE RAW RECORD. setWordAnnotation writes a FLAT
+       { hl, ul } — it has for as long as _annOf has been folding the older
+       per-tier records down — and this read only ever looked for the per-tier
+       shape. So on this page a highlight was stored, was painted in the text,
+       and the panel still said "No highlights yet". _annOf returns whichever
+       shape the record is in; the tier is recovered separately, and only for
+       choosing the font. */
+    Object.keys(_swAnnotations).forEach(function(wid) {
+      var a = _annOf(wid);
+      if (!a[type]) return;
+      var raw = _swAnnotations[wid] || {}, tier = 'hw';
+      ['hw', 'tl', 'gl'].forEach(function(t) { if (raw[t] && raw[t][type]) tier = t; });
+      entries.push({ wid: wid, tier: tier, color: a[type] });
+    });
+    entries.sort(function(a, b) { return a.wid.localeCompare(b.wid); });
+    if (entries.length === 0) {
+      html = '<p class="ann-empty">No ' + _currentAnnTab + ' yet. Select text to add one.</p>';
+    } else {
+      // Group by verse
+      var groups = {};
+      entries.forEach(function(e) {
+        var parts = e.wid.split('|');
+        var vKey = parts.slice(0, 3).join('|');
+        if (!groups[vKey]) groups[vKey] = [];
+        groups[vKey].push(e);
+      });
+      Object.keys(groups).sort().forEach(function(vKey) {
+        var parts = vKey.split('|');
+        var label = parts[0] + ' ' + parts[1] + ':' + parts[2];
+        html += '<div class="ann-entry">';
+        html += '<div class="ann-entry-ref" onclick="closeAnnotationsPanel(); swGoToVerseKey(\'' + vKey.replace(/'/g, "\\'") + '\')">' + label + '</div>';
+        html += '<div class="ann-entry-text">';
+        groups[vKey].forEach(function(e) {
+          html += '<span class="ann-entry-color" style="background:' + e.color + '"></span>';
+          var wu = document.querySelector('.word-unit[data-wid="' + e.wid + '"]');
+          var tierEl = wu ? wu.querySelector('.' + e.tier) : null;
+          var wText = tierEl ? tierEl.textContent : e.wid.split('|')[3];
+          var fontStyle = e.tier === 'hw' ? 'font-family:\'David Libre\',serif;direction:rtl' : 'font-family:\'David Libre\',serif';
+          html += '<span style="' + fontStyle + '">' + wText + '</span> ';
+        });
+        html += '</div></div>';
+      });
+    }
+  } else if (_currentAnnTab === 'notes') {
+    var keys = Object.keys(_swNotes).sort();
+    if (keys.length === 0) {
+      html = '<p class="ann-empty">No notes yet. Use the notes tab to add verse notes.</p>';
+    } else {
+      keys.forEach(function(key) {
+        var parts = key.split('|');
+        var label = parts[0] + ' ' + parts[1] + ':' + parts[2];
+        html += '<div class="ann-entry">';
+        html += '<div class="ann-entry-ref" onclick="closeAnnotationsPanel(); swGoToVerseKey(\'' + key.replace(/'/g, "\\'") + '\')">' + label + '</div>';
+        html += '<div class="ann-entry-text">' + (_swNotes[key] || '').substring(0, 120) + (_swNotes[key].length > 120 ? '...' : '') + '</div>';
+        html += '</div>';
+      });
+    }
+    // Add new note area
+    html += '<div style="margin-top:16px;border-top:1px solid var(--rule);padding-top:12px;">';
+    html += '<label style="font-size:0.85em;color:var(--ink-light);">Add note for current verse:</label>';
+    html += '<select id="ann-note-verse" style="width:100%;padding:6px;margin:6px 0;border:1px solid var(--rule);border-radius:4px;background:var(--bg);color:var(--ink);font-family:\'David Libre\',serif;font-size:0.85em;">';
+    // Populate with visible verses
+    var visPanel = document.querySelector('.chapter-panel[style*="block"]');
+    if (visPanel) {
+      visPanel.querySelectorAll('.verse[data-verse-key]').forEach(function(v) {
+        var vk = v.getAttribute('data-verse-key');
+        var parts = vk.split('|');
+        var label = parts[0] + ' ' + parts[1] + ':' + parts[2];
+        var selected = _swNotes[vk] ? ' selected' : '';
+        html += '<option value="' + vk + '"' + selected + '>' + label + '</option>';
+      });
+    }
+    html += '</select>';
+    html += '<textarea id="ann-note-text" class="ann-note-textarea" placeholder="Write your note..." oninput="saveAnnotationNote()"></textarea>';
+    html += '</div>';
+    html += '<button class="ann-export" onclick="copyAllNotes()">Copy All Notes</button>';
+    html += '<button class="ann-export" onclick="exportAnnotations()">Export Annotations (JSON)</button>';
+  }
+
+  list.innerHTML = html;
+
+  // Load selected note text
+  if (_currentAnnTab === 'notes') {
+    var sel = document.getElementById('ann-note-verse');
+    var ta = document.getElementById('ann-note-text');
+    if (sel && ta) {
+      ta.value = _swNotes[sel.value] || '';
+      sel.onchange = function() { ta.value = _swNotes[sel.value] || ''; };
+    }
+  }
 }

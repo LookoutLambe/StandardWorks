@@ -3819,7 +3819,7 @@ window.READER = window.READER || {
   books: []      /* filled from BOOK_DATA the moment it exists, below */
 };
 </script>
-<script src="../reader_surface.js?v=18"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
+<script src="../reader_surface.js?v=20"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
 <script src="../translit.js?v=1"></script>
 <script src="../jst_refmap.js?v=1"></script>
 <script src="../verse_loader.js?v=5"></script>
@@ -4794,99 +4794,6 @@ function selToolbarXref() {
 
 // Clear all annotations from selected word-units
 
-
-function renderAnnotationsList() {
-  var list = document.getElementById('ann-list');
-  var html = '';
-
-  if (_currentAnnTab === 'highlights' || _currentAnnTab === 'underlines') {
-    var type = _currentAnnTab === 'highlights' ? 'hl' : 'ul';
-    var entries = [];
-    Object.keys(_swAnnotations).forEach(function(wid) {
-      var ann = _swAnnotations[wid];
-      ['hw', 'tl', 'gl'].forEach(function(tier) {
-        if (ann[tier] && ann[tier][type]) {
-          entries.push({ wid: wid, tier: tier, color: ann[tier][type] });
-        }
-      });
-    });
-    entries.sort(function(a, b) { return a.wid.localeCompare(b.wid); });
-    if (entries.length === 0) {
-      html = '<p class="ann-empty">No ' + _currentAnnTab + ' yet. Select text to add one.</p>';
-    } else {
-      // Group by verse
-      var groups = {};
-      entries.forEach(function(e) {
-        var parts = e.wid.split('|');
-        var vKey = parts.slice(0, 3).join('|');
-        if (!groups[vKey]) groups[vKey] = [];
-        groups[vKey].push(e);
-      });
-      Object.keys(groups).sort().forEach(function(vKey) {
-        var parts = vKey.split('|');
-        var label = parts[0] + ' ' + parts[1] + ':' + parts[2];
-        html += '<div class="ann-entry">';
-        html += '<div class="ann-entry-ref" onclick="closeAnnotationsPanel(); navigateToVerse(\'' + vKey.replace(/'/g, "\\'") + '\')">' + label + '</div>';
-        html += '<div class="ann-entry-text">';
-        groups[vKey].forEach(function(e) {
-          html += '<span class="ann-entry-color" style="background:' + e.color + '"></span>';
-          var wu = document.querySelector('.word-unit[data-wid="' + e.wid + '"]');
-          var tierEl = wu ? wu.querySelector('.' + e.tier) : null;
-          var wText = tierEl ? tierEl.textContent : e.wid.split('|')[3];
-          var fontStyle = e.tier === 'hw' ? 'font-family:\'David Libre\',serif;direction:rtl' : 'font-family:\'David Libre\',serif';
-          html += '<span style="' + fontStyle + '">' + wText + '</span> ';
-        });
-        html += '</div></div>';
-      });
-    }
-  } else if (_currentAnnTab === 'notes') {
-    var keys = Object.keys(_swNotes).sort();
-    if (keys.length === 0) {
-      html = '<p class="ann-empty">No notes yet. Use the notes tab to add verse notes.</p>';
-    } else {
-      keys.forEach(function(key) {
-        var parts = key.split('|');
-        var label = parts[0] + ' ' + parts[1] + ':' + parts[2];
-        html += '<div class="ann-entry">';
-        html += '<div class="ann-entry-ref" onclick="closeAnnotationsPanel(); navigateToVerse(\'' + key.replace(/'/g, "\\'") + '\')">' + label + '</div>';
-        html += '<div class="ann-entry-text">' + (_swNotes[key] || '').substring(0, 120) + (_swNotes[key].length > 120 ? '...' : '') + '</div>';
-        html += '</div>';
-      });
-    }
-    // Add new note area
-    html += '<div style="margin-top:16px;border-top:1px solid var(--rule);padding-top:12px;">';
-    html += '<label style="font-size:0.85em;color:var(--ink-light);">Add note for current verse:</label>';
-    html += '<select id="ann-note-verse" style="width:100%;padding:6px;margin:6px 0;border:1px solid var(--rule);border-radius:4px;background:var(--bg);color:var(--ink);font-family:\'David Libre\',serif;font-size:0.85em;">';
-    // Populate with visible verses
-    var visPanel = document.querySelector('.chapter-panel[style*="block"]');
-    if (visPanel) {
-      visPanel.querySelectorAll('.verse[data-verse-key]').forEach(function(v) {
-        var vk = v.getAttribute('data-verse-key');
-        var parts = vk.split('|');
-        var label = parts[0] + ' ' + parts[1] + ':' + parts[2];
-        var selected = _swNotes[vk] ? ' selected' : '';
-        html += '<option value="' + vk + '"' + selected + '>' + label + '</option>';
-      });
-    }
-    html += '</select>';
-    html += '<textarea id="ann-note-text" class="ann-note-textarea" placeholder="Write your note..." oninput="saveAnnotationNote()"></textarea>';
-    html += '</div>';
-    html += '<button class="ann-export" onclick="copyAllNotes()">Copy All Notes</button>';
-    html += '<button class="ann-export" onclick="exportAnnotations()">Export Annotations (JSON)</button>';
-  }
-
-  list.innerHTML = html;
-
-  // Load selected note text
-  if (_currentAnnTab === 'notes') {
-    var sel = document.getElementById('ann-note-verse');
-    var ta = document.getElementById('ann-note-text');
-    if (sel && ta) {
-      ta.value = _swNotes[sel.value] || '';
-      sel.onchange = function() { ta.value = _swNotes[sel.value] || ''; };
-    }
-  }
-}
 
 var _annNoteSaveTimer = null;
 function saveAnnotationNote() {
@@ -7083,51 +6990,6 @@ var glossaryExclude = new Set([
   // Single-letter artifacts
   'ל','ב','מ','כ','ש'
 ]);
-
-function buildGlossaryIndex() {
-  if (glossaryIndex) return;
-  // Cross-volume index from the concordance: every root in the whole corpus,
-  // with total counts — the in-page fallback below only sees this volume.
-  if (window.RootScorecard && RootScorecard.ready()) {
-    glossaryIndex = RootScorecard.glossaryEntries(typeof glossaryExclude !== 'undefined' ? glossaryExclude : null);
-    if (glossaryIndex) return;
-  }
-  glossaryIndex = [];
-  var curated = window._rootGlossaryData || {};
-  var rf = window.rootFreq || {};
-  for (var root in rf) {
-    if (glossaryExclude.has(root)) continue;
-    var rInfo = rf[root];
-    var displayHeb = root, displayTranslit = '';
-    var cInfo = curated[root] || {};
-    if (/^H\d+$/.test(root) && window._strongsRoots && _strongsRoots[root]) {
-      var sEntry = _strongsRoots[root];
-      displayHeb = sEntry.w;
-      displayTranslit = (typeof transliterate === 'function' && sEntry.w ? transliterate(sEntry.w) : '') || sEntry.x || '';
-      if (!cInfo.meaning) {
-        var consRoot = (sEntry.w || '').replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, '');
-        cInfo = curated[consRoot] || {};
-      }
-    }
-    // Get top gloss as auto-meaning
-    var topGloss = '', topCount = 0;
-    for (var g in rInfo.glosses) {
-      if (rInfo.glosses[g] > topCount) { topCount = rInfo.glosses[g]; topGloss = g; }
-    }
-    var autoMeaning = topGloss.replace(/^(and-|the-|to-|in-|from-|as-|that-|by-|for-|with-|a-|an-)+/g,'').replace(/-/g,' ');
-    glossaryIndex.push({
-      root: root, displayHeb: displayHeb, displayTranslit: displayTranslit,
-      meaning: cInfo.meaning || autoMeaning || '',
-      category: cInfo.category || 'Uncategorized',
-      count: rInfo.count,
-      forms: rInfo.forms,
-      glosses: rInfo.glosses,
-      exampleVerse: rInfo.exampleVerse || '',
-      verseRefs: rInfo.verseRefs || {},
-      biblicalRefs: cInfo.biblicalRefs || []
-    });
-  }
-}
 
 
 function buildVerseRefsHtml(verseRefs) {
