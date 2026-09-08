@@ -1259,6 +1259,12 @@ function updateNavButtons() {
       } else {
         label.textContent = getChapterLabel(currentChapterId) + ' \u25BE';
       }
+    } else if (window.currentPageId && (((window.READER || {}).frontTitles || {})[window.currentPageId])) {
+      /* Front matter and the topical guide are pages, not chapters, so
+         currentChapterId is null there and the pill fell back to the volume's
+         name — "Book of Mormon" while the Title Page was on screen.
+         getChapterLabel names them, so use it. */
+      label.textContent = getChapterLabel(window.currentPageId) + ' \u25BE';
     } else {
       label.textContent = (window.READER && window.READER.navLabelHe ? window.READER.navLabelHe : '') + ' \u25BE';
     }
@@ -1923,4 +1929,106 @@ function doSearch(query) {
   html += '</div>';
   results.innerHTML = html;
   results.classList.add('open');
+}
+
+/* ── The address bar ───────────────────────────────────────────────────────
+   Both copies parsed a hash into a chapter, each with its own hand-written
+   table of friendly book names — "alma" -> al-ch on bom.html, "genesis" -> gen
+   on the five — and each understood only its own verse syntax. Neither table
+   is needed now: READER.books carries the id scheme, and nav_engine already
+   owns the BOM's friendly-hash mapping in BOM_HASHES (it has to, because
+   buildHash writes those links).
+
+   BOTH verse syntaxes are accepted here rather than one per page. #alma-32:5
+   and #gen-ch1&v=5 are the two this app emits, a link is a thing people paste,
+   and neither form is ambiguous — the colon form has no '&v=', the other has
+   no trailing ':N'. */
+function _swScrollToVerseNum(n) {
+  if (!n || n < 1) return;
+  setTimeout(function() {
+    var panel = document.querySelector('.chapter-panel[style*="block"]');
+    if (!panel) return;
+    /* By key where the panel has them: a colophon carries .verse on the Book of
+       Mormon, so the nth .verse is not verse n there. */
+    var v = null, bc = getBookChapter((_config_currentChapterId()) || '');
+    if (bc) v = panel.querySelector('[data-verse-key="' + bc.book + '|' + bc.chapter + '|' + n + '"]');
+    if (!v) v = panel.querySelectorAll('.verse')[n - 1];
+    if (!v) return;
+    v.scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'center' });
+    v.classList.add('highlighted');
+    setTimeout(function() { v.classList.remove('highlighted'); }, 3000);
+  }, 350);
+}
+function _config_currentChapterId() {
+  return window.currentChapterId || '';
+}
+
+function handleHash() {
+  var raw = window.location.hash.replace('#', '');
+  if (!raw) return;
+  if (raw === 'home') { history.replaceState(null, '', window.location.pathname); return; }
+
+  var hash = raw, verseNum = 0;
+  var amp = raw.split('&');
+  if (amp.length > 1) {
+    hash = amp[0];
+    for (var i = 1; i < amp.length; i++) {
+      var kv = amp[i].split('=');
+      if (kv[0] === 'v') verseNum = parseInt(kv[1] || '0', 10) || 0;
+    }
+  }
+  var colon = hash.match(/^(.+):(\d+)$/);
+  if (colon) { hash = colon[1]; verseNum = parseInt(colon[2], 10) || 0; }
+
+  function go(id) {
+    window.__swNavFromHash = true;
+    try { navTo(id); } finally { window.__swNavFromHash = false; }
+    _swScrollToVerseNum(verseNum);
+  }
+
+  var R = window.READER || {};
+  /* Ids that are not chapters: the front matter, the topical guide. Declared in
+     READER.frontTitles, which is also what names them in the chapter pill. */
+  var front = R.frontTitles || {};
+  if (front[hash]) { go(hash); return; }
+
+  /* A volume with its own hash grammar (the D&C's #dc/109, #section-109). */
+  if (R.parseHash) {
+    var custom = R.parseHash(hash);
+    if (custom) { go(custom); return; }
+  }
+
+  /* nav_engine translates the BOM's #alma-32 to al-ch32 and returns every
+     other volume's hash unchanged. */
+  var mapped = (typeof window.NavEngineParseHash === 'function')
+    ? window.NavEngineParseHash(R.vol || '', hash) : hash;
+  if (chapterOrder.indexOf(mapped) >= 0) { go(mapped); return; }
+  if (chapterOrder.indexOf(hash) >= 0) { go(hash); return; }
+
+  /* Friendly book name, with or without a chapter: #genesis/1, #gen-1,
+     #alma-32, #psalms. Matched against READER.books instead of a table. */
+  function bookByFriendly(name) {
+    var want = String(name || '').toLowerCase().replace(/[\s_]+/g, '-').replace(/-/g, '');
+    var books = _swBooks();
+    for (var i = 0; i < books.length; i++) {
+      var en = _swBookName(books[i]).toLowerCase().replace(/[\s_]+/g, '-').replace(/-/g, '');
+      if (en === want) return books[i];
+    }
+    return null;
+  }
+  function idFor(book, ch) { return _swBookIdPrefix(book) + ch + (book.idSuffix || ''); }
+
+  var m = hash.match(/^(.+?)[\/-](\d+)$/);
+  if (m) {
+    var b = bookByFriendly(m[1]);
+    if (b) {
+      var id = idFor(b, parseInt(m[2], 10));
+      if (chapterOrder.indexOf(id) >= 0) { go(id); return; }
+    }
+  }
+  var only = bookByFriendly(hash);
+  if (only) {
+    var id1 = idFor(only, 1);
+    if (chapterOrder.indexOf(id1) >= 0) { go(id1); return; }
+  }
 }

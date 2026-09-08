@@ -1138,6 +1138,11 @@
     return chapterId;
   }
   var _BOM_IDS = null;
+  /* Exposed: reader_surface.js's handleHash resolves a friendly hash through
+     this rather than keeping its own book-name table. The BOM's #alma-32 is
+     the only volume that needs translating; every other volume's hash IS its
+     chapter id, and this returns it unchanged. */
+  window.NavEngineParseHash = function (volKey, hash) { return parseHash(volKey, hash); };
   function parseHash(volKey, hash) {
     hash = String(hash || '');
     if (volKey !== 'bom' || hash.indexOf('-colophon') > 0) return hash;

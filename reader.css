@@ -2489,10 +2489,17 @@ body:not(.hide-gloss):not(.dual-mode) .heading-flow > .word-group {
   max-width: min(92vw, 420px);
   padding: 10px 18px;
   min-height: 44px;
-  border: 1px solid var(--chrome-line);
+  /* IT HAS TO BE SEEN, AND IT CANNOT BE NAVY. This sat on var(--chrome) with a
+     --chrome-line border, and it hovers over the footer bar, which is also
+     chrome — navy on navy, invisible exactly where it matters. It is the way
+     back out of a jump, so it takes the same treatment as the active mode
+     button beside it: gold ground, chrome ink. That is the one place in this
+     palette where the accent is allowed to be a fill rather than a mark —
+     a single primary action on chrome, never a slab of text. */
+  border: 1px solid var(--here-chrome);
   border-radius: 999px;
-  background: var(--chrome);
-  color: var(--on-chrome);
+  background: var(--accent);
+  color: var(--on-accent);
   font-family: 'David Libre', 'Georgia', serif;
   font-size: 0.95em;
   cursor: pointer;
@@ -2507,7 +2514,8 @@ body:not(.hide-gloss):not(.dual-mode) .heading-flow > .word-group {
 }
 #sw-return.open { display: flex; opacity: 1; transform: translateX(-50%) translateY(0); }
 #sw-return b { font-weight: 700; }
-#sw-return:hover { background: var(--surface-2); }
+#sw-return:hover { background: var(--here-chrome); }
+#sw-return:focus-visible { outline: 2px solid var(--on-chrome); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { #sw-return { transition: none; } }
 
 

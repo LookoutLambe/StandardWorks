@@ -814,60 +814,6 @@ window.addEventListener('scroll', function() {
   var _al = window.READER.bookAliases || {};
   for (var _k in _al) bookNameMap[_k] = _al[_k];
 
-  function handleHash() {
-    var hashRaw = window.location.hash.replace('#', '');
-    if (!hashRaw) return;
-
-    // Support verse deep-link: #gen-ch1&v=5 or #genesis/1&v=5
-    var parts = hashRaw.split('&');
-    var hash = parts[0] || '';
-    var vNum = 0;
-    for (var pi = 1; pi < parts.length; pi++) {
-      var kv = parts[pi].split('=');
-      if (kv[0] === 'v') vNum = parseInt(kv[1] || '0', 10) || 0;
-    }
-
-    function scrollToVerseNum(n) {
-      if (!n || n < 1) return;
-      setTimeout(function() {
-        var panel = document.querySelector('.chapter-panel[style*="block"]');
-        if (!panel) return;
-        var verses = panel.querySelectorAll('.verse');
-        var v = verses[n - 1];
-        if (v) {
-          v.scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'center' });
-          v.classList.add('highlighted');
-          setTimeout(function() { v.classList.remove('highlighted'); }, 3000);
-        }
-      }, 350);
-    }
-    // Direct match: gen-ch1, psa-ch150
-    if (chapterOrder.indexOf(hash) >= 0) { window.__swNavFromHash = true; try { navTo(hash); } finally { window.__swNavFromHash = false; } scrollToVerseNum(vNum); return; }
-    // A volume with its own hash grammar (D&C: #dc/109, #section-109)
-    // supplies READER.parseHash(hash) → chapId or null.
-    if (window.READER.parseHash) {
-      var _custom = window.READER.parseHash(hash);
-      if (_custom) { window.__swNavFromHash = true; try { navTo(_custom); } finally { window.__swNavFromHash = false; } scrollToVerseNum(vNum); return; }
-    }
-    // Friendly: genesis/1, gen-1, gen/1, psalms/23
-    var m = hash.match(/^([a-z0-9\s]+?)[\/-](\d+)$/i);
-    if (m) {
-      var bookKey = m[1].toLowerCase().replace(/\s+/g, ' ');
-      var ch = parseInt(m[2], 10);
-      var prefix = bookNameMap[bookKey];
-      if (prefix) {
-        var book = findBook(prefix);
-        if (book && ch >= 1 && ch <= book.ch) { window.__swNavFromHash = true; try { navTo(prefix + '-ch' + ch); } finally { window.__swNavFromHash = false; } scrollToVerseNum(vNum); return; }
-      }
-    }
-    // Just a book name without chapter: genesis, psalms
-    var bookOnly = hash.toLowerCase().replace(/[\/-]/g, '');
-    if (bookNameMap[bookOnly]) {
-      window.__swNavFromHash = true; try { navTo(bookNameMap[bookOnly] + '-ch1'); } finally { window.__swNavFromHash = false; }
-      scrollToVerseNum(vNum);
-      return;
-    }
-  }
   // The initial route must wait for DOMContentLoaded: dc/pgp/jst override
   // getBookChapter/parseHash in a script AFTER this file, and rendering the
   // landing chapter before those run keys its verses with the canon
