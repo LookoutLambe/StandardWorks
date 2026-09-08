@@ -3823,7 +3823,7 @@ body.dual-mode .chapter-summary { display: block; }
    the five carry a much larger READER object that shapes their reader. */
 window.READER = window.READER || { vol: 'bom' };
 </script>
-<script src="../reader_surface.js?v=3"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
+<script src="../reader_surface.js?v=5"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
 <script src="../translit.js?v=1"></script>
 <script src="../jst_refmap.js?v=1"></script>
 <script src="../verse_loader.js?v=5"></script>
@@ -4694,13 +4694,7 @@ try { _swNotes = JSON.parse(localStorage.getItem(window.READER.vol + '-notes') |
 
 
 // Apply all saved annotations to visible word-units
-function applyAllAnnotations(root) {
-  (root || document).querySelectorAll('.word-unit[data-wid]').forEach(function(el) {
-    var wid = el.getAttribute('data-wid');
-    if (!_swAnnotations[wid]) return;
-    _paintWordAnnotation(el, _annOf(wid));
-  });
-}
+
 
 // === Selection-based highlighting ===
 // Uses native browser text selection, then detects the tier and applies annotations.
@@ -4731,26 +4725,9 @@ function _selRangeContainsNode(sel, node) {
   } catch (e2) { return false; }
 }
 
-function _isSelReadingSurface(el) {
-  if (!el || !el.closest) return false;
-  return !!el.closest('.chapter-panel, .verse, .word-flow, .heading-flow, .word-unit, #main-content, #page, .book-header, .landing-hero, .landing-content');
-}
-
 
 // Detect which tier a node belongs to
-function _detectTier(node) {
-  var el = node.nodeType === 3 ? node.parentElement : node;
-  while (el && !el.classList.contains('word-unit')) {
-    if (el.classList.contains('hw')) return 'hw';
-    if (el.classList.contains('tl')) return 'tl';
-    if (el.classList.contains('gl')) return 'gl';
-    if (el.classList.contains('arr-hw')) return 'hw';
-    if (el.classList.contains('arr-tl')) return 'tl';
-    if (el.classList.contains('arr-gl')) return 'gl';
-    el = el.parentElement;
-  }
-  return '';
-}
+
 
 // Get all word-units whose tier element is within the selection range
 function _getSelectedWordUnits(sel) {
@@ -4828,30 +4805,9 @@ function _showSelToolbar() {
   if (_selMode === 'word') _updateSelToolbarIndicators();
 }
 
-function _hideSelToolbar() {
-  var tb = document.getElementById('sel-toolbar');
-  if (tb) tb.classList.remove('visible');
-  var pop = document.getElementById('hl-pop');
-  if (pop) pop.classList.remove('visible');
-  var pnr = document.getElementById('hl-note-row');
-  if (pnr) pnr.style.display = 'none';
-  var sp = document.getElementById('sel-subpanel');
-  if (sp) sp.style.display = 'none';
-  var hlBtn = document.getElementById('sel-btn-highlight');
-  if (hlBtn) hlBtn.classList.remove('active');
-  _selWordUnits = [];
-  _selTier = '';
-  _selMode = '';
-}
-
 
 // Get the verse key from the first selected word-unit
-function _selVerseKey() {
-  if (_selWordUnits.length === 0) return '';
-  var wid = _selWordUnits[0].getAttribute('data-wid');
-  if (!wid) return '';
-  return wid.split('|').slice(0, 3).join('|');
-}
+
 
 // Toggle note input in the floating toolbar
 function selToolbarOpenNote() {
@@ -5309,14 +5265,6 @@ function selToolbarClearAll() {
   });
   window.getSelection().removeAllRanges();
   setTimeout(_hideSelToolbar, 150);
-}
-
-function openAnnotationsPanel() {
-  renderAnnotationsList();
-  var panel = document.getElementById('annotations-panel');
-  panel.scrollTop = 0;
-  panel.classList.add('open');
-  document.getElementById('panel-overlay').classList.add('open');
 }
 
 
@@ -7208,272 +7156,8 @@ document.addEventListener('keydown', function(e) {
 })();
 
 // 3. VERSE HIGHLIGHT + COPY/SHARE (verse number menu)
-(function() {
-  var HIGHLIGHTS_KEY = 'sw-highlights-v1';
-  var menu = null;
-  var currentVerseEl = null;
-
-  function loadHighlights() {
-    try { return JSON.parse(localStorage.getItem(HIGHLIGHTS_KEY) || '{}') || {}; } catch(e) { return {}; }
-  }
-  function saveHighlights(obj) {
-    try { localStorage.setItem(HIGHLIGHTS_KEY, JSON.stringify(obj || {})); } catch(e) {}
-  }
-  function verseKeyOf(verseEl) {
-    return verseEl ? verseEl.getAttribute('data-verse-key') : null;
-  }
-
-  function ensureMenu() {
-    if (menu) return menu;
-    menu = document.createElement('div');
-    menu.id = 'verse-action-menu';
-    menu.style.position = 'fixed';
-    menu.style.zIndex = '9999';
-    menu.style.display = 'none';
-    menu.style.minWidth = '180px';
-    menu.style.background = 'color-mix(in srgb, var(--chrome) 98%, transparent)';
-    menu.style.border = '1px solid color-mix(in srgb, var(--here-chrome) 35%, transparent)';
-    menu.style.borderRadius = '8px';
-    menu.style.boxShadow = '0 10px 30px rgba(0,0,0,0.35)';
-    menu.style.padding = '8px';
-    menu.style.direction = 'ltr';
-    menu.style.backdropFilter = 'blur(6px)';
-
-    menu.innerHTML = '' +
-      '<button data-act=\"highlight\" style=\"width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid color-mix(in srgb, var(--here-chrome) 35%, transparent);background:var(--chrome);color:var(--here-chrome);cursor:pointer;font-family:inherit;font-size:0.95em;\">Highlight / Unhighlight</button>' +
-      '<button data-act=\"note\" style=\"width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid color-mix(in srgb, var(--here-chrome) 25%, transparent);background:#151929;color:var(--on-chrome);cursor:pointer;font-family:inherit;font-size:0.95em;\">Note</button>' +
-      '<button data-act=\"copy\" style=\"width:100%;margin:0 0 6px 0;padding:10px 12px;border-radius:6px;border:1px solid color-mix(in srgb, var(--here-chrome) 25%, transparent);background:#151929;color:var(--on-chrome);cursor:pointer;font-family:inherit;font-size:0.95em;\">Copy verse</button>' +
-      '<button data-act=\"share\" style=\"width:100%;margin:0;padding:10px 12px;border-radius:6px;border:1px solid color-mix(in srgb, var(--here-chrome) 25%, transparent);background:#151929;color:var(--on-chrome);cursor:pointer;font-family:inherit;font-size:0.95em;\">Share verse</button>';
-
-    menu.addEventListener('click', function(e) {
-      var btn = e.target.closest('button[data-act]');
-      if (!btn) return;
-      e.preventDefault();
-      e.stopPropagation();
-      var act = btn.getAttribute('data-act');
-      if (!currentVerseEl) return;
-      if (act === 'highlight') { togglePersistentHighlight(currentVerseEl); hideMenu(); }
-      else if (act === 'note') { openNoteEditor(currentVerseEl); hideMenu(); }
-      else if (act === 'copy') { copyVerseOnly(currentVerseEl); hideMenu(); }
-      else if (act === 'share') { shareVerseOnly(currentVerseEl); hideMenu(); }
-    });
-
-    document.body.appendChild(menu);
-    return menu;
-  }
-
-  function getVerseText(verseEl) {
-    var key = verseKeyOf(verseEl) || '';
-    var ref = key ? key.replace(/\|/g, ' ') : '';
-    var heb = '';
-    try {
-      var hws = verseEl.querySelectorAll('.word-unit .hw');
-      var parts = [];
-      for (var i = 0; i < hws.length; i++) {
-        var t = (hws[i].textContent || '').trim();
-        if (t) parts.push(t);
-      }
-      heb = parts.join(' ');
-    } catch(e) {}
-    var eng = '';
-    try {
-      var engDiv = verseEl.querySelector('.verse-english');
-      if (engDiv) eng = (engDiv.textContent || '').trim();
-    } catch(e) {}
-    var out = (ref ? ref + '\n' : '') + (heb ? heb + '\n' : '') + (eng ? eng : '');
-    return out.trim();
-  }
-
-  function togglePersistentHighlight(verseEl) {
-    var key = verseKeyOf(verseEl);
-    if (!key) return;
-    var map = loadHighlights();
-    if (map[key]) delete map[key];
-    else map[key] = { on: true, ts: Date.now() };
-    saveHighlights(map);
-    verseEl.classList.toggle('user-highlight', !!map[key]);
-  }
-
-  function applyNoteMarker(verseEl, hasNote) {
-    var num = verseEl ? verseEl.querySelector('.verse-num') : null;
-    if (!num) return;
-    num.classList.toggle('has-note', !!hasNote);
-  }
-
-  function ensureNoteModal() {
-    var existing = document.getElementById('note-modal');
-    if (existing) return existing;
-    var overlay = document.createElement('div');
-    overlay.id = 'note-modal';
-    overlay.style.position = 'fixed';
-    overlay.style.left = '0';
-    overlay.style.top = '0';
-    overlay.style.right = '0';
-    overlay.style.bottom = '0';
-    overlay.style.background = 'rgba(0,0,0,0.45)';
-    overlay.style.zIndex = '10000';
-    overlay.style.display = 'none';
-    overlay.innerHTML =
-      '<div id=\"note-modal-card\" style=\"max-width:720px;width:92%;margin:10vh auto;background:var(--bg);color:var(--ink);border:2px solid var(--accent);border-radius:10px;box-shadow:0 14px 40px rgba(0,0,0,0.35);padding:16px;direction:ltr;font-family:David Libre,serif;\">' +
-        '<div style=\"display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;\">' +
-          '<div style=\"font-weight:700;color:var(--accent);font-size:1.05em;\" id=\"note-modal-title\">Note</div>' +
-          '<button id=\"note-modal-close\" style=\"border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer;\">Close</button>' +
-        '</div>' +
-        '<textarea id=\"note-modal-text\" style=\"width:100%;min-height:180px;resize:vertical;border:1px solid var(--rule);border-radius:8px;padding:10px 12px;font-family:David Libre,serif;font-size:1em;line-height:1.4;background:var(--bg-deep);color:var(--ink);\"></textarea>' +
-        '<div style=\"display:flex;justify-content:flex-end;gap:10px;margin-top:12px;\">' +
-          '<button id=\"note-modal-delete\" style=\"border:1px solid rgba(180,60,60,0.4);background:transparent;color:#b43c3c;border-radius:8px;padding:8px 12px;cursor:pointer;\">Delete</button>' +
-          '<button id=\"note-modal-save\" style=\"border:1px solid var(--accent);background:var(--accent);color:var(--chrome);border-radius:8px;padding:8px 12px;cursor:pointer;font-weight:700;\">Save</button>' +
-        '</div>' +
-      '</div>';
-    document.body.appendChild(overlay);
-    overlay.addEventListener('click', function(e) {
-      if (e.target === overlay) hideNoteModal();
-    });
-    document.getElementById('note-modal-close').addEventListener('click', function() { hideNoteModal(); });
-    return overlay;
-  }
-
-  function hideNoteModal() {
-    var overlay = document.getElementById('note-modal');
-    if (overlay) overlay.style.display = 'none';
-  }
-
-  async function openNoteEditor(verseEl) {
-    var key = verseKeyOf(verseEl);
-    if (!key || !window.NotesEngine) return;
-    ensureNoteModal();
-    var title = document.getElementById('note-modal-title');
-    title.textContent = key.replace(/\|/g, ' ');
-    var ta = document.getElementById('note-modal-text');
-    var existing = await window.NotesEngine.getNote(key);
-    ta.value = existing && existing.text ? existing.text : '';
-    document.getElementById('note-modal').style.display = 'block';
-    setTimeout(function() { try { ta.focus(); ta.selectionStart = ta.value.length; } catch(e) {} }, 0);
-
-    var saveBtn = document.getElementById('note-modal-save');
-    var delBtn = document.getElementById('note-modal-delete');
-
-    saveBtn.onclick = async function() {
-      await window.NotesEngine.upsertNote(key, ta.value);
-      applyNoteMarker(verseEl, (ta.value || '').trim().length > 0);
-      hideNoteModal();
-    };
-    delBtn.onclick = async function() {
-      ta.value = '';
-      await window.NotesEngine.deleteNote(key);
-      applyNoteMarker(verseEl, false);
-      hideNoteModal();
-    };
-  }
-
-  async function copyVerseOnly(verseEl) {
-    var text = getVerseText(verseEl);
-    try {
-      if (navigator.clipboard && navigator.clipboard.writeText) await navigator.clipboard.writeText(text);
-      else {
-        var ta = document.createElement('textarea');
-        ta.value = text;
-        ta.style.position = 'fixed';
-        ta.style.left = '-9999px';
-        document.body.appendChild(ta);
-        ta.focus();
-        ta.select();
-        document.execCommand('copy');
-        document.body.removeChild(ta);
-      }
-    } catch(e) {}
-  }
-
-  async function shareVerseOnly(verseEl) {
-    var text = getVerseText(verseEl);
-    try {
-      // Add a shareable deep link to this verse (BOM supports #alma-32:5)
-      var key = verseKeyOf(verseEl) || '';
-      var verseNum = 0;
-      if (key) {
-        var ps = key.split('|');
-        verseNum = ps.length >= 3 ? parseInt(ps[2], 10) || 0 : 0;
-      }
-      var link = '';
-      if (verseNum && currentChapterId) {
-        var label = (typeof getChapterLabel === 'function') ? getChapterLabel(currentChapterId).toLowerCase().replace(/\s+/g, '-') : '';
-        if (label) link = window.location.origin + window.location.pathname + '#' + label + ':' + verseNum;
-        else link = window.location.origin + window.location.pathname + '#' + currentChapterId + ':' + verseNum;
-        text = link + '\n' + text;
-      }
-      if (navigator.share) {
-        await navigator.share({ text: text });
-      } else {
-        await copyVerseOnly(verseEl);
-      }
-    } catch(e) {}
-  }
-
-  function applySavedHighlights(scopeEl) {
-    var map = loadHighlights();
-    (scopeEl || document).querySelectorAll('.verse[data-verse-key]').forEach(function(v) {
-      var key = verseKeyOf(v);
-      if (key && map[key]) v.classList.add('user-highlight');
-    });
-  }
-
-  async function applySavedNotes(scopeEl) {
-    if (!window.NotesEngine) return;
-    var verses = (scopeEl || document).querySelectorAll('.verse[data-verse-key]');
-    for (var i = 0; i < verses.length; i++) {
-      var v = verses[i];
-      var key = verseKeyOf(v);
-      if (!key) continue;
-      try {
-        var note = await window.NotesEngine.getNote(key);
-        applyNoteMarker(v, !!(note && note.text));
-      } catch(e) {}
-    }
-  }
-
-  function showMenuFor(numEl, verseEl) {
-    ensureMenu();
-    currentVerseEl = verseEl;
-    var rect = numEl.getBoundingClientRect();
-    var x = Math.min(rect.left, window.innerWidth - 220);
-    var y = Math.min(rect.bottom + 8, window.innerHeight - 170);
-    menu.style.left = Math.max(8, x) + 'px';
-    menu.style.top = Math.max(8, y) + 'px';
-    menu.style.display = 'block';
-  }
-  function hideMenu() {
-    if (!menu) return;
-    menu.style.display = 'none';
-    currentVerseEl = null;
-  }
-
-  document.addEventListener('click', function(e) {
-    var num = e.target.closest('.verse-num');
-    if (!num) return;
-    var verse = num.closest('.verse');
-    if (!verse) return;
-    e.preventDefault();
-    e.stopPropagation();
-    showMenuFor(num, verse);
-  }, true);
-
-  document.addEventListener('click', function(e) {
-    if (menu && menu.style.display === 'block' && !e.target.closest('#verse-action-menu') && !e.target.closest('.verse-num')) hideMenu();
-  });
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') hideMenu();
-  });
-
-  document.addEventListener('DOMContentLoaded', function() { applySavedHighlights(document); applySavedNotes(document); });
-  var _origEnsure = window._ensureChapterRendered;
-  if (typeof _origEnsure === 'function') {
-    window._ensureChapterRendered = function(chapId) {
-      _origEnsure(chapId);
-      var panel = document.getElementById('panel-' + chapId);
-      if (panel) { applySavedHighlights(panel); applySavedNotes(panel); }
-    };
-  }
-})();
+/* The verse-actions block (number menu, note modal, per-verse highlights) now
+   lives once in reader_surface.js, loaded above. */
 
 // 4. WORD POPUP (tap a word)
 (function() {
@@ -7879,35 +7563,6 @@ document.addEventListener(
 
 // 6. SEARCH
 var searchIndex = null;
-
-function buildSearchIndex() {
-  if (searchIndex) return;
-  searchIndex = [];
-  // Build from JS data arrays (lightweight) instead of DOM traversal (crashes mobile)
-  for (var r = 0; r < _verseRegistry.length; r++) {
-    var reg = _verseRegistry[r];
-    var label = getChapterLabel(reg.chapId);
-    for (var vi = 0; vi < reg.verses.length; vi++) {
-      var v = reg.verses[vi];
-      var hWords = [];
-      var eWords = [];
-      for (var wi = 0; wi < v.words.length; wi++) {
-        var w = v.words[wi];
-        if (w[0] !== '\u05C3') {
-          hWords.push(w[0]);
-          eWords.push(w[1].replace(/-/g, ' '));
-        }
-      }
-      searchIndex.push({
-        chapId: reg.chapId,
-        ref: label + ':' + (vi + 1),
-        hebrew: hWords.join(' '),
-        english: eWords.join(' '),
-        verseIdx: vi
-      });
-    }
-  }
-}
 
 
 (function() {
