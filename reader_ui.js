@@ -817,43 +817,23 @@ document.addEventListener(
 );
 
 // === ANNOTATIONS SYSTEM ===
-var _otAnnotations = {};
-try { _otAnnotations = JSON.parse(localStorage.getItem(window.READER.vol + '-annotations') || '{}'); } catch(e) {}
-var _otNotes = {};
-try { _otNotes = JSON.parse(localStorage.getItem(window.READER.vol + '-notes') || '{}'); } catch(e) {}
+/* Named for no volume in particular: the five write these under
+   READER.vol, and bom.html shares the same code now. It was _otAnnotations,
+   which read as Old-Testament-only and was not. */
+var _swAnnotations = {};
+try { _swAnnotations = JSON.parse(localStorage.getItem(window.READER.vol + '-annotations') || '{}'); } catch(e) {}
+var _swNotes = {};
+try { _swNotes = JSON.parse(localStorage.getItem(window.READER.vol + '-notes') || '{}'); } catch(e) {}
 
-function _saveAnnotations() { try { localStorage.setItem(window.READER.vol + '-annotations', JSON.stringify(_otAnnotations)); } catch(e) {} }
-function _saveNotes() { try { localStorage.setItem(window.READER.vol + '-notes', JSON.stringify(_otNotes)); } catch(e) {} }
 
 // Annotations are stored per word, not per tier, so a highlight made in any
 // view (interlinear, Hebrew-only, dual, transliteration) shows in all of them.
-function _annOf(wid) {
-  var a = _otAnnotations[wid];
-  if (!a) return {};
-  if (a.hl || a.ul) return { hl: a.hl, ul: a.ul };
-  var out = {};                       // legacy per-tier record — fold it down
-  ['hw','tl','gl'].forEach(function(t) {
-    if (!a[t]) return;
-    if (a[t].hl && !out.hl) out.hl = a[t].hl;
-    if (a[t].ul && !out.ul) out.ul = a[t].ul;
-  });
-  return out;
-}
-
-
-function setWordAnnotation(wid, tier, type, color) {
-  var cur = _annOf(wid);
-  if (color) { cur[type] = color; } else { delete cur[type]; }
-  if (cur.hl || cur.ul) { _otAnnotations[wid] = cur; } else { delete _otAnnotations[wid]; }
-  _saveAnnotations();
-  applyAnnotationToWord(wid);
-}
 
 
 function applyAllAnnotations() {
   document.querySelectorAll('.word-unit[data-wid]').forEach(function(el) {
     var wid = el.getAttribute('data-wid');
-    if (!_otAnnotations[wid]) return;
+    if (!_swAnnotations[wid]) return;
     _paintWordAnnotation(el, _annOf(wid));
   });
 }
@@ -872,7 +852,7 @@ function renderAnnotationsList() {
   var list = document.getElementById('annotations-list');
   var html = '';
   if (_currentAnnTab === 'highlights') {
-    var wids = Object.keys(_otAnnotations);
+    var wids = Object.keys(_swAnnotations);
     if (wids.length === 0) { html = '<div style="color:var(--ink-light);padding:16px;font-style:italic;">No highlights yet. Select text and use the toolbar to highlight.</div>'; }
     else {
       wids.forEach(function(wid) {
@@ -885,13 +865,13 @@ function renderAnnotationsList() {
       });
     }
   } else {
-    var vks = Object.keys(_otNotes);
+    var vks = Object.keys(_swNotes);
     if (vks.length === 0) { html = '<div style="color:var(--ink-light);padding:16px;font-style:italic;">No notes yet. Select text and use the toolbar to add notes.</div>'; }
     else {
       vks.forEach(function(vk) {
         var parts = vk.split('|');
         var ref = parts.length >= 3 ? parts[0] + ' ' + parts[1] + ':' + parts[2] : vk;
-        html += '<div class="ann-item"><div class="ann-item-ref">' + ref + '</div><div class="ann-item-note">' + _otNotes[vk] + '</div></div>';
+        html += '<div class="ann-item"><div class="ann-item-ref">' + ref + '</div><div class="ann-item-note">' + _swNotes[vk] + '</div></div>';
       });
     }
   }
@@ -899,7 +879,7 @@ function renderAnnotationsList() {
 }
 
 function exportAnnotations() {
-  var data = { annotations: _otAnnotations, notes: _otNotes, exported: new Date().toISOString(), reader: window.READER.readerName };
+  var data = { annotations: _swAnnotations, notes: _swNotes, exported: new Date().toISOString(), reader: window.READER.readerName };
   var blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
   var url = URL.createObjectURL(blob);
   var a = document.createElement('a'); a.href = url; a.download = window.READER.vol + '-annotations.json'; a.click();
@@ -1019,14 +999,14 @@ function _selVerseKey() {
 function _loadSelNote() {
   var ta = document.getElementById('sel-note-input');
   var vk = _selVerseKey();
-  ta.value = vk ? (_otNotes[vk] || '') : '';
+  ta.value = vk ? (_swNotes[vk] || '') : '';
 }
 
 function selToolbarSaveNote() {
   var vk = _selVerseKey();
   if (!vk) return;
   var ta = document.getElementById('sel-note-input');
-  if (ta.value.trim()) { _otNotes[vk] = ta.value; } else { delete _otNotes[vk]; }
+  if (ta.value.trim()) { _swNotes[vk] = ta.value; } else { delete _swNotes[vk]; }
   _saveNotes();
   ta.value = '';
   _hideSelToolbar();
@@ -1048,7 +1028,7 @@ function selToolbarShare() { _hideSelToolbar(); openSharePopup(); }
 function selToolbarClearAll() {
   _selWordUnits.forEach(function(wu) {
     var wid = wu.getAttribute('data-wid');
-    if (wid && _otAnnotations[wid]) { delete _otAnnotations[wid]; _saveAnnotations(); applyAnnotationToWord(wid); }
+    if (wid && _swAnnotations[wid]) { delete _swAnnotations[wid]; _saveAnnotations(); applyAnnotationToWord(wid); }
   });
   _hideSelToolbar();
 }

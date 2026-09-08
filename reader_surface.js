@@ -243,3 +243,36 @@ function populateEnglishDivs(root) {
     if (window._englishMap[key]) div.textContent = window._englishMap[key];
   });
 }
+
+/* ── The annotation store (de-fork step 3) ─────────────────────────────────
+   Held twice, over state the two pages named differently: _otAnnotations /
+   _otNotes on the five (an OT-only name for something every volume used)
+   and _bomAnnotations / _bomNotes on bom.html. Both are _swAnnotations /
+   _swNotes now, each page still declaring and loading its own — the store is
+   per volume, only the code is shared. The localStorage keys are untouched:
+   READER.vol + '-annotations' is 'bom-annotations' on that page, which is
+   what its readers already have. */
+function _annOf(wid) {
+  var a = _swAnnotations[wid];
+  if (!a) return {};
+  if (a.hl || a.ul) return { hl: a.hl, ul: a.ul };
+  var out = {};                       // legacy per-tier record — fold it down
+  ['hw','tl','gl'].forEach(function(t) {
+    if (!a[t]) return;
+    if (a[t].hl && !out.hl) out.hl = a[t].hl;
+    if (a[t].ul && !out.ul) out.ul = a[t].ul;
+  });
+  return out;
+}
+
+function setWordAnnotation(wid, tier, type, color) {
+  var cur = _annOf(wid);
+  if (color) { cur[type] = color; } else { delete cur[type]; }
+  if (cur.hl || cur.ul) { _swAnnotations[wid] = cur; } else { delete _swAnnotations[wid]; }
+  _saveAnnotations();
+  applyAnnotationToWord(wid);
+}
+
+function _saveAnnotations() { try { localStorage.setItem(window.READER.vol + '-annotations', JSON.stringify(_swAnnotations)); } catch(e) {} }
+
+function _saveNotes() { try { localStorage.setItem(window.READER.vol + '-notes', JSON.stringify(_swNotes)); } catch(e) {} }

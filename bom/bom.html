@@ -3823,7 +3823,7 @@ body.dual-mode .chapter-summary { display: block; }
    the five carry a much larger READER object that shapes their reader. */
 window.READER = window.READER || { vol: 'bom' };
 </script>
-<script src="../reader_surface.js?v=2"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
+<script src="../reader_surface.js?v=3"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
 <script src="../translit.js?v=1"></script>
 <script src="../jst_refmap.js?v=1"></script>
 <script src="../verse_loader.js?v=5"></script>
@@ -4657,52 +4657,35 @@ var _annColors = [
   { name: 'purple', hex: '#e1bee7' }
 ];
 
-var _bomAnnotations = {};
-try { _bomAnnotations = JSON.parse(localStorage.getItem('bom-annotations') || '{}'); } catch(e) {}
+var _swAnnotations = {};
+try { _swAnnotations = JSON.parse(localStorage.getItem(window.READER.vol + '-annotations') || '{}'); } catch(e) {}
 // Migrate old flat format { "wid": { "highlight": "#c", "underline": "#c" } } to tier format
 (function migrateAnnotations() {
   var changed = false;
-  Object.keys(_bomAnnotations).forEach(function(wid) {
-    var a = _bomAnnotations[wid];
+  Object.keys(_swAnnotations).forEach(function(wid) {
+    var a = _swAnnotations[wid];
     if (a.highlight || a.underline) {
       // Old format — convert to tier-based (default to hw)
       var hw = {};
       if (a.highlight) hw.hl = a.highlight;
       if (a.underline) hw.ul = a.underline;
-      _bomAnnotations[wid] = { hw: hw };
+      _swAnnotations[wid] = { hw: hw };
       changed = true;
     }
   });
   if (changed) {
-    try { localStorage.setItem('bom-annotations', JSON.stringify(_bomAnnotations)); } catch(e) {}
+    try { localStorage.setItem(window.READER.vol + '-annotations', JSON.stringify(_swAnnotations)); } catch(e) {}
   }
 })();
 
-var _bomNotes = {};
-try { _bomNotes = JSON.parse(localStorage.getItem('bom-notes') || '{}'); } catch(e) {}
+var _swNotes = {};
+try { _swNotes = JSON.parse(localStorage.getItem(window.READER.vol + '-notes') || '{}'); } catch(e) {}
 
-function _saveAnnotations() {
-  try { localStorage.setItem('bom-annotations', JSON.stringify(_bomAnnotations)); } catch(e) {}
-}
-function _saveNotes() {
-  try { localStorage.setItem('bom-notes', JSON.stringify(_bomNotes)); } catch(e) {}
-}
 
 // Set annotation for a specific word + tier (hw/tl/gl) + type (hl/ul)
 // Annotations are stored per word, not per tier, so a highlight made in any
 // view (interlinear, Hebrew-only, dual, transliteration) shows in all of them.
-function _annOf(wid) {
-  var a = _bomAnnotations[wid];
-  if (!a) return {};
-  if (a.hl || a.ul) return { hl: a.hl, ul: a.ul };
-  var out = {};                       // legacy per-tier record — fold it down
-  ['hw','tl','gl'].forEach(function(t) {
-    if (!a[t]) return;
-    if (a[t].hl && !out.hl) out.hl = a[t].hl;
-    if (a[t].ul && !out.ul) out.ul = a[t].ul;
-  });
-  return out;
-}
+
 
 /* The reading surface's panels, selection tools and annotation marks —
    23 functions that were byte-identical to reader_ui.js's copies — now live
@@ -4710,20 +4693,11 @@ function _annOf(wid) {
    the move: 23 checked, 0 differing. */
 
 
-function setWordAnnotation(wid, tier, type, color) {
-  var cur = _annOf(wid);
-  if (color) { cur[type] = color; } else { delete cur[type]; }
-  if (cur.hl || cur.ul) { _bomAnnotations[wid] = cur; } else { delete _bomAnnotations[wid]; }
-  _saveAnnotations();
-  applyAnnotationToWord(wid);
-}
-
-
 // Apply all saved annotations to visible word-units
 function applyAllAnnotations(root) {
   (root || document).querySelectorAll('.word-unit[data-wid]').forEach(function(el) {
     var wid = el.getAttribute('data-wid');
-    if (!_bomAnnotations[wid]) return;
+    if (!_swAnnotations[wid]) return;
     _paintWordAnnotation(el, _annOf(wid));
   });
 }
@@ -4907,9 +4881,9 @@ function selToolbarSaveNote() {
   var ta = document.getElementById('sel-note-input');
   if (!ta) return;
   if (ta.value.trim()) {
-    _bomNotes[vk] = ta.value;
+    _swNotes[vk] = ta.value;
   } else {
-    delete _bomNotes[vk];
+    delete _swNotes[vk];
   }
   _saveNotes();
   var noteText = ta.value.trim();
@@ -4928,7 +4902,7 @@ function _loadSelNote() {
   var ta = document.getElementById('sel-note-input');
   if (!ta) return;
   var vk = _selVerseKey();
-  ta.value = vk ? (_bomNotes[vk] || '') : '';
+  ta.value = vk ? (_swNotes[vk] || '') : '';
   // Show verse reference as placeholder
   if (vk) {
     var parts = vk.split('|');
@@ -4943,8 +4917,8 @@ function addNoteMarkers() {
   // Remove existing note markers
   document.querySelectorAll('.note-marker').forEach(function(m) { m.remove(); });
   // Add markers for each note
-  Object.keys(_bomNotes).forEach(function(vk) {
-    if (!_bomNotes[vk] || !_bomNotes[vk].trim()) return;
+  Object.keys(_swNotes).forEach(function(vk) {
+    if (!_swNotes[vk] || !_swNotes[vk].trim()) return;
     var verse = document.querySelector('[data-verse-key="' + vk + '"]');
     if (!verse) return;
     var verseNum = verse.querySelector('.verse-num');
@@ -4983,7 +4957,7 @@ function openNoteInXrefPanel(verseKey) {
 
   var textDiv = document.createElement('div');
   textDiv.className = 'xref-note-text';
-  textDiv.textContent = _bomNotes[verseKey] || '';
+  textDiv.textContent = _swNotes[verseKey] || '';
   card.appendChild(textDiv);
 
   var editLink = document.createElement('span');
@@ -5353,8 +5327,8 @@ function renderAnnotationsList() {
   if (_currentAnnTab === 'highlights' || _currentAnnTab === 'underlines') {
     var type = _currentAnnTab === 'highlights' ? 'hl' : 'ul';
     var entries = [];
-    Object.keys(_bomAnnotations).forEach(function(wid) {
-      var ann = _bomAnnotations[wid];
+    Object.keys(_swAnnotations).forEach(function(wid) {
+      var ann = _swAnnotations[wid];
       ['hw', 'tl', 'gl'].forEach(function(tier) {
         if (ann[tier] && ann[tier][type]) {
           entries.push({ wid: wid, tier: tier, color: ann[tier][type] });
@@ -5391,7 +5365,7 @@ function renderAnnotationsList() {
       });
     }
   } else if (_currentAnnTab === 'notes') {
-    var keys = Object.keys(_bomNotes).sort();
+    var keys = Object.keys(_swNotes).sort();
     if (keys.length === 0) {
       html = '<p class="ann-empty">No notes yet. Use the notes tab to add verse notes.</p>';
     } else {
@@ -5400,7 +5374,7 @@ function renderAnnotationsList() {
         var label = parts[0] + ' ' + parts[1] + ':' + parts[2];
         html += '<div class="ann-entry">';
         html += '<div class="ann-entry-ref" onclick="closeAnnotationsPanel(); navigateToVerse(\'' + key.replace(/'/g, "\\'") + '\')">' + label + '</div>';
-        html += '<div class="ann-entry-text">' + (_bomNotes[key] || '').substring(0, 120) + (_bomNotes[key].length > 120 ? '...' : '') + '</div>';
+        html += '<div class="ann-entry-text">' + (_swNotes[key] || '').substring(0, 120) + (_swNotes[key].length > 120 ? '...' : '') + '</div>';
         html += '</div>';
       });
     }
@@ -5415,7 +5389,7 @@ function renderAnnotationsList() {
         var vk = v.getAttribute('data-verse-key');
         var parts = vk.split('|');
         var label = parts[0] + ' ' + parts[1] + ':' + parts[2];
-        var selected = _bomNotes[vk] ? ' selected' : '';
+        var selected = _swNotes[vk] ? ' selected' : '';
         html += '<option value="' + vk + '"' + selected + '>' + label + '</option>';
       });
     }
@@ -5432,8 +5406,8 @@ function renderAnnotationsList() {
     var sel = document.getElementById('ann-note-verse');
     var ta = document.getElementById('ann-note-text');
     if (sel && ta) {
-      ta.value = _bomNotes[sel.value] || '';
-      sel.onchange = function() { ta.value = _bomNotes[sel.value] || ''; };
+      ta.value = _swNotes[sel.value] || '';
+      sel.onchange = function() { ta.value = _swNotes[sel.value] || ''; };
     }
   }
 }
@@ -5447,9 +5421,9 @@ function saveAnnotationNote() {
     if (!sel || !ta) return;
     var key = sel.value;
     if (ta.value.trim()) {
-      _bomNotes[key] = ta.value;
+      _swNotes[key] = ta.value;
     } else {
-      delete _bomNotes[key];
+      delete _swNotes[key];
     }
     _saveNotes();
   }, 300);
@@ -5487,12 +5461,12 @@ function navigateToVerse(verseKey) {
 }
 
 function exportAnnotations() {
-  var keys = Object.keys(_bomNotes).sort();
+  var keys = Object.keys(_swNotes).sort();
   var text = 'Book of Mormon Study Notes\n' + '='.repeat(30) + '\n\n';
   keys.forEach(function(key) {
     var parts = key.split('|');
     text += parts[0] + ' ' + parts[1] + ':' + parts[2] + '\n';
-    text += _bomNotes[key] + '\n\n';
+    text += _swNotes[key] + '\n\n';
   });
   navigator.clipboard.writeText(text).then(function() {
     alert('Notes copied to clipboard!');
@@ -7290,7 +7264,7 @@ document.addEventListener('keydown', function(e) {
 
   function getVerseText(verseEl) {
     var key = verseKeyOf(verseEl) || '';
-    var ref = key ? key.replace(/\\|/g, ' ') : '';
+    var ref = key ? key.replace(/\|/g, ' ') : '';
     var heb = '';
     try {
       var hws = verseEl.querySelectorAll('.word-unit .hw');
@@ -7306,7 +7280,7 @@ document.addEventListener('keydown', function(e) {
       var engDiv = verseEl.querySelector('.verse-english');
       if (engDiv) eng = (engDiv.textContent || '').trim();
     } catch(e) {}
-    var out = (ref ? ref + '\\n' : '') + (heb ? heb + '\\n' : '') + (eng ? eng : '');
+    var out = (ref ? ref + '\n' : '') + (heb ? heb + '\n' : '') + (eng ? eng : '');
     return out.trim();
   }
 
@@ -7369,7 +7343,7 @@ document.addEventListener('keydown', function(e) {
     if (!key || !window.NotesEngine) return;
     ensureNoteModal();
     var title = document.getElementById('note-modal-title');
-    title.textContent = key.replace(/\\|/g, ' ');
+    title.textContent = key.replace(/\|/g, ' ');
     var ta = document.getElementById('note-modal-text');
     var existing = await window.NotesEngine.getNote(key);
     ta.value = existing && existing.text ? existing.text : '';
