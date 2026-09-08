@@ -10,7 +10,7 @@ var jstmatt_ch1Verses = [
   { num:"ו", words:[["דְּבַר","the-word-of"],["יְהוָה","the-Lord"],["בָּא","came"],["אֵלֵינוּ","unto-us"],["לֵאמֹר","saying"],["וְאַתָּה","and-you"],["בֵּית","Beth-"],["לֶחֶם","lehem"],["אֲשֶׁר","which-lieth"],["בְּאֶרֶץ","in-the-land-of"],["יְהוּדָה","Judea"],["בְּךָ","in-you"],["יִוָּלֵד","shall-be-born"],["אַלּוּף","a-prince"],["אֵינְךָ","which-art-not"],["צָעִיר","the-least"],["בְּאַלֻּפֵי","among-the-princes-of"],["יְהוּדָה","Judea"],["כִּי","for"],["מִמְּךָ","out-of-you"],["יֵצֵא","shall-come"],["הַמָּשִׁיחַ","the-Messiah"],["אֲשֶׁר","who"],["יוֹשִׁיעַ","shall-save"],["אֶת־עַמִּי","my-people"],["יִשְׂרָאֵל","Israel"],["׃",""]] },
   { num:"כד", words:[["וַיְהִי","and-it-came-to-pass"],["כִּי","that"],["גָּדַל","grew-up"],["יֵשׁוּעַ","Jesus"],["עִם","with"],["אֶחָיו","his-brethren"],["וַיֶּחֱזַק","and-waxed-strong"],["וַיְחַכֶּה","and-waited"],["לַיהוָה","upon-the-Lord"],["לְעֵת","for-the-time-of"],["עֲבוֹדָתוֹ","his-ministry"],["לָבוֹא","to-come"],["׃",""]] },
   { num:"כה", words:[["וַיְשָׁרֵת","and-he-served"],["תַּחַת","under"],["אָבִיו","his-father"],["וְלֹא","and-not"],["דִּבֵּר","he-spake"],["כִּשְׁאָר","as-other"],["אֲנָשִׁים","men"],["וְלֹא","neither"],["יָכְלוּ","could-he"],["לְלַמְּדוֹ","be-taught"],["כִּי","for"],["לֹא","not"],["חָסַר","he-needed"],["אִישׁ","any-man"],["אֲשֶׁר","that"],["יְלַמְּדֶנּוּ","should-teach-him"],["׃",""]] },
-  { num:"כו", words:[["וְאַחַר","and-after"],["שָׁנִים","years"],["רַבּוֹת","many"],["קָרְבָה","drew-nigh"],["שְׁעַת","the-hour-of"],["עֲבוֹדָתוֹ","his-ministry"],["׃",""]] }
+  { num:"כו", words:[["וְאַחַר","and-after"],["שָׁנִים","years"],["רַבּוֹת","many"],["קׇרְבָה","drew-nigh"],["שְׁעַת","the-hour-of"],["עֲבוֹדָתוֹ","his-ministry"],["׃",""]] }
 ];
 renderVerseSet(jstmatt_ch1Verses, 'jstmatt-ch1-verses');
 
@@ -166,7 +166,7 @@ renderVerseSet(jstmatt_ch16Verses, 'jstmatt-ch16-verses');
 var jstmatt_ch17Verses = [
   { num:"ג", words:[["וַיַּרְא","then-when-he-saw"],["יְהוּדָה","Judas"],["הַמֹּסֵר","who-had-betrayed"],["אוֹתוֹ","him"],["כִּי","that"],["הִרְשִׁיעֻהוּ","he-was-condemned"],["וַיִּנָּחֵם","repented-himself"],["וַיָּשֶׁב","and-brought-again"],["אֶת־שְׁלֹשִׁים","the-thirty"],["הַכֶּסֶף","pieces-of-silver"],["אֶל־רָאשֵׁי","to-the-chief"],["הַכֹּהֲנִים","priests"],["וְהַזְּקֵנִים","and-elders"],["׃",""]] },
   { num:"ד", words:[["לֵאמֹר","saying"],["חָטָאתִי","I-have-sinned"],["כִּי־דָם","in-that-blood"],["נָקִי","the-innocent"],["הִסְגָּרְתִּי","I-have-betrayed"],["׃",""]] },
-  { num:"ה", words:[["וַיַּשְׁלֵךְ","and-he-cast-down"],["אֶת־הַכֶּסֶף","the-pieces-of-silver"],["אֶל־הַהֵיכָל","in-the-temple"],["וַיִּפֶן","and-departed"],["וַיֵּלֶךְ","and-went"],["וַיֵּחָנַק","and-hanged-himself"],["עַל־עֵץ","on-a-tree"],["וּפִתְאֹם","and-straightway"],["נָפַל","he-fell-down"],["וַיִּשָּׁפְכוּ","and-gushed-out"],["מֵעָיו","his-bowels"],["וַיָּמֹת","and-he-died"],["׃",""]] }
+  { num:"ה", words:[["וַיַּשְׁלֵךְ","and-he-cast-down"],["אֶת־הַכֶּסֶף","the-pieces-of-silver"],["אֶל־הַהֵיכׇל","in-the-temple"],["וַיִּפֶן","and-departed"],["וַיֵּלֶךְ","and-went"],["וַיֵּחָנַק","and-hanged-himself"],["עַל־עֵץ","on-a-tree"],["וּפִתְאֹם","and-straightway"],["נָפַל","he-fell-down"],["וַיִּשָּׁפְכוּ","and-gushed-out"],["מֵעָיו","his-bowels"],["וַיָּמֹת","and-he-died"],["׃",""]] }
 ];
 renderVerseSet(jstmatt_ch17Verses, 'jstmatt-ch17-verses');
 

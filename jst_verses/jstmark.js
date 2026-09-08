@@ -24,7 +24,7 @@ renderVerseSet(jstmark_ch2Verses, 'jstmark-ch2-verses');
 // Jesus condemns those who reject the prophets.
 var jstmark_ch3Verses = [
   { num:"י", words:[["הֵיטֵב","full-well"],["כָּתוּב","is-it-written"],["עֲלֵיכֶם","of-you"],["עַל","by"],["יְדֵי","the-hands-of"],["הַנְּבִיאִים","the-prophets"],["אֲשֶׁר","whom"],["מְאַסְתֶּם","you-have-rejected"],["׃",""]] },
-  { num:"יא", words:[["הֵם","they"],["אָמְנָם","of-a-truth"],["הֵעִידוּ","testified"],["אֶת־הַדְּבָרִים","the-things"],["הָאֵלֶּה","these"],["וְדָמָם","and-their-blood"],["יִהְיֶה","shall-be"],["עֲלֵיכֶם","upon-you"],["׃",""]] },
+  { num:"יא", words:[["הֵם","they"],["אׇמְנָם","of-a-truth"],["הֵעִידוּ","testified"],["אֶת־הַדְּבָרִים","the-things"],["הָאֵלֶּה","these"],["וְדָמָם","and-their-blood"],["יִהְיֶה","shall-be"],["עֲלֵיכֶם","upon-you"],["׃",""]] },
   { num:"יב", words:[["לֹא","not"],["שְׁמַרְתֶּם","you-have-kept"],["אֶת־חֻקּוֹת","the-ordinances-of"],["אֱלֹהִים","God"],["כִּי","for"],["מֹשֶׁה","Moses"],["אָמַר","said"],["כַּבֵּד","honor"],["אֶת־אָבִיךָ","your-father"],["וְאֶת־אִמֶּךָ","and-your-mother"],["וּמְקַלֵּל","and-whoso-curseth"],["אָב","father"],["אוֹ","or"],["אֵם","mother"],["יָמוּת","let-him-die"],["מוֹת","the-death-of"],["הַפֹּשֵׁעַ","the-transgressor"],["כַּכָּתוּב","as-it-is-written"],["בְּתוֹרַתְכֶם","in-your-law"],["אַךְ","but"],["אֵינְכֶם","you-not"],["שׁוֹמְרִים","keep"],["אֶת־הַתּוֹרָה","the-law"],["׃",""]] }
 ];
 renderVerseSet(jstmark_ch3Verses, 'jstmark-ch3-verses');

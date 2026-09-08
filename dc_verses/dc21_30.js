@@ -431,10 +431,10 @@ var dc29_ch1Verses = [
     ["עַל","upon"],
     ["הָרְשָׁעִים׃","the wicked"]
   ]},
-  { num: "ט", words: [["כִּי","for"], ["קָרְבָה","is nigh"], ["הַשָּׁעָה","the hour"], ["וְהַיּוֹם","and the day"], ["מְמַהֵר","soon"], ["לָבוֹא","at hand"], ["בַּאֲשֶׁר","when"], ["הָאָרֶץ","the earth"], ["בָּשְׁלָה","is ripe"], ["וְכׇל־זֵדִים","and the proud"], ["וְעֹשֵׂי","and they that do"], ["רִשְׁעָה","wickedly"], ["יִהְיוּ","shall be"], ["כְקַשׁ","as stubble"], ["וּשְׂרַפְתִּים","I will burn them up"], ["נְאֻם","says"], ["יְהוָה","the Lord of"], ["צְבָאוֹת","Hosts"], ["וְלֹא","and not"], ["תִהְיֶה","shall be"], ["רִשְׁעָה","wickedness"], ["עַל","upon"], ["הָאָרֶץ׃","the earth"]]},
+  { num: "ט", words: [["כִּי","for"], ["קׇרְבָה","is nigh"], ["הַשָּׁעָה","the hour"], ["וְהַיּוֹם","and the day"], ["מְמַהֵר","soon"], ["לָבוֹא","at hand"], ["בַּאֲשֶׁר","when"], ["הָאָרֶץ","the earth"], ["בָּשְׁלָה","is ripe"], ["וְכׇל־זֵדִים","and the proud"], ["וְעֹשֵׂי","and they that do"], ["רִשְׁעָה","wickedly"], ["יִהְיוּ","shall be"], ["כְקַשׁ","as stubble"], ["וּשְׂרַפְתִּים","I will burn them up"], ["נְאֻם","says"], ["יְהוָה","the Lord of"], ["צְבָאוֹת","Hosts"], ["וְלֹא","and not"], ["תִהְיֶה","shall be"], ["רִשְׁעָה","wickedness"], ["עַל","upon"], ["הָאָרֶץ׃","the earth"]]},
   { num: "י", words: [
     ["כִּי","for"],
-    ["קָרְבָה","is nigh"],
+    ["קׇרְבָה","is nigh"],
     ["הַשָּׁעָה","the hour"],
     ["וַאֲשֶׁר","and that which"],
     ["דִּבְּרוּ","was spoken"],

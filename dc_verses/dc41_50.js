@@ -221,7 +221,7 @@ var dc42_ch1Verses = [
     ["שׁוּבוּ","repent"],
     ["שׁוּבוּ","repent"],
     ["כִּי","for"],
-    ["קָרְבָה","is at hand"],
+    ["קׇרְבָה","is at hand"],
     ["מַלְכוּת","the kingdom of"],
     ["הַשָּׁמָיִם׃","heaven"]
   ]},
@@ -1326,7 +1326,7 @@ var dc45_ch1Verses = [
     ["בִּבְשָׂרָם׃","in their flesh"]
   ]},
   { num: "טו", words: [["לָכֵן","wherefore"], ["שִׁמְעוּ","hearken"], ["וְאִוָּכַח","and I will reason"], ["אִתְּכֶם","with you"], ["וַאֲדַבֵּר","and I will speak"], ["אֲלֵיכֶם","unto you"], ["וְאִנָּבֵא","and prophesy"], ["כְּאֶל","as unto"], ["אֲנָשִׁים","men"], ["בִּימֵי","in the days of"], ["קֶדֶם׃","old"]]},
-  { num: "טז", words: [["וַאֲרֶאֲכֶם","and I will show unto you"], ["בַּאֵר־הֵיטֵב","very plainly"], ["כַּאֲשֶׁר","as"], ["הֶרְאֵיתִי","I showed it"], ["לְתַלְמִידַי","to my disciples"], ["בְּעָמְדִי","when I stood"], ["לִפְנֵיהֶם","before them"], ["בַּבָּשָׂר","in the flesh"], ["וָאֲדַבֵּר","and I spoke"], ["אֲלֵיהֶם","unto them"], ["לֵאמֹר","saying"], ["כַּאֲשֶׁר","as"], ["שְׁאַלְתֶּם","you have asked"], ["מִמֶּנִּי","of me"], ["עַל","concerning"], ["אֹתוֹת","the signs of"], ["בּוֹאִי","my coming"], ["בַּיּוֹם","in the day"], ["אֲשֶׁר","when"], ["אָבוֹא","I shall come"], ["בִּכְבוֹדִי","in my glory"], ["בְּעַנְנֵי","in the clouds of"], ["הַשָּׁמַיִם","heaven"], ["לְמַלֵּא","to fulfil"], ["הַהַבְטָחוֹת","the promises"], ["אֲשֶׁר","that"], ["הִבְטַחְתִּי","I have made"], ["לַאֲבוֹתֵיכֶם׃","unto your fathers"]]},
+  { num: "טז", words: [["וַאֲרֶאֲכֶם","and I will show unto you"], ["בַּאֵר־הֵיטֵב","very plainly"], ["כַּאֲשֶׁר","as"], ["הֶרְאֵיתִי","I showed it"], ["לְתַלְמִידַי","to my disciples"], ["בְּעׇמְדִי","when I stood"], ["לִפְנֵיהֶם","before them"], ["בַּבָּשָׂר","in the flesh"], ["וָאֲדַבֵּר","and I spoke"], ["אֲלֵיהֶם","unto them"], ["לֵאמֹר","saying"], ["כַּאֲשֶׁר","as"], ["שְׁאַלְתֶּם","you have asked"], ["מִמֶּנִּי","of me"], ["עַל","concerning"], ["אֹתוֹת","the signs of"], ["בּוֹאִי","my coming"], ["בַּיּוֹם","in the day"], ["אֲשֶׁר","when"], ["אָבוֹא","I shall come"], ["בִּכְבוֹדִי","in my glory"], ["בְּעַנְנֵי","in the clouds of"], ["הַשָּׁמַיִם","heaven"], ["לְמַלֵּא","to fulfil"], ["הַהַבְטָחוֹת","the promises"], ["אֲשֶׁר","that"], ["הִבְטַחְתִּי","I have made"], ["לַאֲבוֹתֵיכֶם׃","unto your fathers"]]},
   { num: "יז", words: [
     ["כִּי","for"],
     ["כַּאֲשֶׁר","as"],
@@ -1350,7 +1350,7 @@ var dc45_ch1Verses = [
     ["וְעַתָּה","and now"],
     ["אַתֶּם","you"],
     ["רוֹאִים","behold"],
-    ["אֶת־הַהֵיכָל","the temple"],
+    ["אֶת־הַהֵיכׇל","the temple"],
     ["הַזֶּה","this"],
     ["אֲשֶׁר","which is"],
     ["בִּירוּשָׁלַיִם","in Jerusalem"],
@@ -1369,7 +1369,7 @@ var dc45_ch1Verses = [
   ]},
   { num: "יט", words: [["אַךְ","but"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["כִּי","that"], ["שַׁמָּה","desolation"], ["תָבוֹא","shall come"], ["עַל","upon"], ["הַדּוֹר","the generation"], ["הַזֶּה","this"], ["כְּגַנָּב","as a thief"], ["בַּלָּיְלָה","in the night"], ["וְהָעָם","and the people"], ["הַזֶּה","this"], ["יִשָּׁמֵד","shall be destroyed"], ["וְנָפוֹץ","and scattered"], ["בֵּין","among"], ["כׇּל","all"], ["הַגּוֹיִם׃","the nations"]]},
   { num: "כ", words: [
-    ["וְהַהֵיכָל","and the temple"],
+    ["וְהַהֵיכׇל","and the temple"],
     ["הַזֶּה","this"],
     ["אֲשֶׁר","which"],
     ["אַתֶּם","you"],

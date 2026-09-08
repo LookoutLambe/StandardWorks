@@ -1426,7 +1426,7 @@ var ch8Verses = [
   { num:"כה", words:[
     ["וַיְהִי","and it happened"],
     ["אַחֲרֵי","that after"],
-    ["אָכְלָם","they had partaken"],
+    ["אׇכְלָם","they had partaken"],
     ["מִפְּרִי","of the fruit of"],
     ["הָעֵץ","the tree"],
     ["וַיִּשְׂאוּ","they did cast"],
@@ -2308,7 +2308,7 @@ var ch13Verses = [
     ["וּמֶשִׁי","and silks"],
     ["וְשָׁנִי","and scarlets"],
     ["וְשֵׁשׁ","and fine linen"],
-    ["מָשְׁזָר","twined"],
+    ["מׇשְׁזָר","twined"],
     ["וְכׇל־בִּגְדֵי","and all manner of"],
     ["חֲמֻדוֹת","precious clothing"],
     ["וָאֵרֶא","and I saw"],
@@ -3788,7 +3788,7 @@ var ch18Verses = [
 ];
 var ch19Verses = [
   { num: "א", words: [["וַיְצַוֵּנִי","and commanded me"], ["יְהוָה","the Lord"], ["עַל־כֵּן","wherefore"], ["עָשִׂיתִי","I did make"], ["לוּחֹת","plates of"], ["עַפְרֹת","ore"], ["לַחֲקֹק","that I might engraven"], ["עֲלֵיהֶם","upon them"], ["אֶת־דִּבְרֵי","the record of"], ["עַמִּי","my people"], ["וְעַל־הַלֻּחֹת","and upon the plates"], ["אֲשֶׁר","which"], ["עָשִׂיתִי","I made"], ["חָקַקְתִּי","I did engraven"], ["אֶת־דִּבְרֵי","the record of"], ["אָבִי","my father"], ["וְגַם","and also"], ["אֶת־מַסְעֵינוּ","our journeyings"], ["בַמִּדְבָּר","in the wilderness"], ["וְאֶת־נְבוּאוֹת","and the prophecies of"], ["אָבִי","my father"], ["וְגַם","and also"], ["רַבּוֹת","many"], ["מִנְּבוּאוֹתַי","of mine own prophecies"], ["חָקַקְתִּי","have I engraven"], ["עֲלֵיהֶם","upon them"], ["׃",""]]},
-  { num: "ב", words: [["וּבַעֲשׂוֹתִי","and at the time when I made"], ["אֹתָם","them"], ["לֹא","not"], ["יָדַעְתִּי","I knew"], ["כִּי","that"], ["יְצַוֵּנִי","I should be commanded of"], ["יְהוָה","the Lord"], ["לַעֲשׂוֹת","to make"], ["אֶת־הַלֻּחֹת","the plates"], ["הָאֵלֶּה","these"], ["לָכֵן","wherefore"], ["דִּבְרֵי","the record of"], ["אָבִי","my father"], ["וְתוֹלְדוֹת","and the genealogy of"], ["אֲבֹתָיו","his fathers"], ["וְרֹב","and the more part of"], ["כׇּל־מַעֲשֵׂינוּ","all our proceedings"], ["בַמִּדְבָּר","in the wilderness"], ["עַל־הַלֻּחֹת","upon the plates"], ["הָרִאשֹׁנוֹת","first"], ["הֵם","are"], ["חֲקוּקִים","engraven"], ["אֲשֶׁר","of which"], ["דִּבַּרְתִּי","I have spoken"], ["עֲלֵיהֶן","(of them)"], ["לָכֵן","wherefore"], ["הַדְּבָרִים","the things"], ["אֲשֶׁר","which"], ["הָיוּ","transpired"], ["בְּטֶרֶם","before"], ["עָשִׂיתִי","I made"], ["אֶת־הַלֻּחֹת","the plates"], ["הָאֵלֶּה","these"], ["אָמְנָם","of a truth"], ["בְּיֶתֶר","more"], ["שְׂאֵת","particularly"], ["נִזְכָּרִים","are made mention"], ["עַל־הַלֻּחֹת","upon the plates"], ["הָרִאשֹׁנוֹת","the first"], ["׃",""]]},
+  { num: "ב", words: [["וּבַעֲשׂוֹתִי","and at the time when I made"], ["אֹתָם","them"], ["לֹא","not"], ["יָדַעְתִּי","I knew"], ["כִּי","that"], ["יְצַוֵּנִי","I should be commanded of"], ["יְהוָה","the Lord"], ["לַעֲשׂוֹת","to make"], ["אֶת־הַלֻּחֹת","the plates"], ["הָאֵלֶּה","these"], ["לָכֵן","wherefore"], ["דִּבְרֵי","the record of"], ["אָבִי","my father"], ["וְתוֹלְדוֹת","and the genealogy of"], ["אֲבֹתָיו","his fathers"], ["וְרֹב","and the more part of"], ["כׇּל־מַעֲשֵׂינוּ","all our proceedings"], ["בַמִּדְבָּר","in the wilderness"], ["עַל־הַלֻּחֹת","upon the plates"], ["הָרִאשֹׁנוֹת","first"], ["הֵם","are"], ["חֲקוּקִים","engraven"], ["אֲשֶׁר","of which"], ["דִּבַּרְתִּי","I have spoken"], ["עֲלֵיהֶן","(of them)"], ["לָכֵן","wherefore"], ["הַדְּבָרִים","the things"], ["אֲשֶׁר","which"], ["הָיוּ","transpired"], ["בְּטֶרֶם","before"], ["עָשִׂיתִי","I made"], ["אֶת־הַלֻּחֹת","the plates"], ["הָאֵלֶּה","these"], ["אׇמְנָם","of a truth"], ["בְּיֶתֶר","more"], ["שְׂאֵת","particularly"], ["נִזְכָּרִים","are made mention"], ["עַל־הַלֻּחֹת","upon the plates"], ["הָרִאשֹׁנוֹת","the first"], ["׃",""]]},
   { num: "ג", words: [["וְאַחֲרֵי","and after"], ["עֲשׂוֹתִי","I had made"], ["אֶת־הַלֻּחֹת","the plates"], ["הָאֵלֶּה","these"], ["כְּמִצְוָה","by way of commandment"], ["צֻוֵּיתִי","received a commandment"], ["אֲנִי","I"], ["נֶפִי","Nephi"], ["לִכְתֹּב","that should be written"], ["עַל־הַלֻּחֹת","upon the plates"], ["הָאֵלֶּה","these"], ["אֶת־הָעֲבוֹדָה","the ministry"], ["וְאֶת־הַנְּבוּאוֹת","and the prophecies"], ["אֶת־הַחֲלָקִים","the parts"], ["הַבְּרוּרִים","the more plain"], ["וְהַיְקָרִים","and precious"], ["מֵהֶם","of them"], ["וְלִשְׁמֹר","and that should be kept"], ["אֶת־הַכָּתוּב","the things which were written"], ["לְהוֹרוֹת","for the instruction of"], ["אֶת־עַמִּי","my people"], ["אֲשֶׁר","who"], ["יִירְשׁוּ","should possess"], ["אֶת־הָאָרֶץ","the land"], ["וְגַם","and also"], ["לְעֵצוֹת","for purposes"], ["חֲכָמוֹת","wise"], ["אֲחֵרוֹת","other"], ["הַיְדוּעוֹת","which purposes are known"], ["לַיהוָה","unto the Lord"], ["׃",""]]},
   { num: "ד", words: [["לָכֵן","wherefore"], ["עַל־הַלֻּחֹת","upon the plates"], ["הָאֲחֵרִים","the other"], ["כָּתַבְתִּי","did make"], ["אֲנִי","I"], ["נֶפִי","Nephi"], ["סֵפֶר","a record"], ["הַמְסַפֵּר","which gives an account"], ["אוֹ","or"], ["הַמַּרְבֶּה","which gives a greater"], ["לְסַפֵּר","account"], ["אֶת־מִלְחֲמוֹת","of the wars of"], ["עַמִּי","my people"], ["וּמְרִיבוֹתָיו","and their contentions"], ["וְחׇרְבוֹתָיו","and their destructions"], ["וְזֹאת","and this"], ["עָשִׂיתִי","have I done"], ["וָאֲצַו","and commanded"], ["אֶת־עַמִּי","my people"], ["אֵת","(that)"], ["אֲשֶׁר","what"], ["יַעֲשׂוּ","they should do"], ["אַחֲרֵי","after"], ["לֶכְתִּי","I was gone"], ["וְכִי","and that"], ["יַעַבְרוּ","should be handed down"], ["הַלֻּחֹת","the plates"], ["הָאֵלֶּה","these"], ["מִדּוֹר","from one generation"], ["לְדוֹר","to another"], ["אוֹ","or"], ["מִנָּבִיא","from one prophet"], ["לְנָבִיא","to another"], ["עַד","until"], ["אֲשֶׁר","that"], ["יְצַוֶּה","commandments of"], ["יְהוָה","the Lord"], ["עוֹד","further"], ["׃",""]]},
   { num: "ה", words: [["וְעַל","and of"], ["עֲשׂוֹתִי","my making"], ["אֶת־הַלֻּחֹת","the plates"], ["הָאֵלֶּה","these"], ["אֲסַפֵּר","an account shall be given"], ["אַחֲרֵי־כֵן","hereafter"], ["וְעַתָּה","and then"], ["הִנֵּה","behold"], ["אֹסִיף","I proceed"], ["כַּאֲשֶׁר","according to that which"], ["דִּבַּרְתִּי","I have spoken"], ["וְזֹאת","and this"], ["אֶעֱשֶׂה","I do"], ["לְמַעַן","that"], ["יִשָּׁמְרוּ","may be kept"], ["הַדְּבָרִים","the things"], ["הַקְּדוֹשִׁים","sacred"], ["יוֹתֵר","the more"], ["לְדַעַת","for the knowledge of"], ["עַמִּי","my people"], ["׃",""]]},
@@ -3946,7 +3946,7 @@ var ch20Verses = [
     ["אָתָּה","you are"],
     ["וְגִיד","and sinew of"],
     ["בַּרְזֶל","iron"],
-    ["עָרְפֶּךָ","your neck"],
+    ["עׇרְפֶּךָ","your neck"],
     ["וּמִצְחֲךָ","and your brow"],
     ["נְחוּשָׁה","brass"],
     ["׃",""]
@@ -3961,7 +3961,7 @@ var ch20Verses = [
     ["וָאַרְאֵם","and I shewed them"],
     ["לְמַעַן","for fear"],
     ["פֶּן־תֹּאמַר","lest you should say"],
-    ["עָצְבִּי","mine idol"],
+    ["עׇצְבִּי","mine idol"],
     ["עָשָׂם","hath done them"],
     ["וּפִסְלִי","and my graven image"],
     ["וְנִסְכִּי","and my molten image"],
@@ -3987,7 +3987,7 @@ var ch20Verses = [
     ["׃",""]
   ]},
   { num: "ח", words: [["גַּם","yea"], ["לֹא־שָׁמַעְתָּ","you heard not"], ["גַּם","yea"], ["לֹא","not"], ["יָדַעְתָּ","did you know"], ["גַּם","yea"], ["מֵאָז","from of old"], ["לֹא־פִתְּחָה","was not opened"], ["אׇזְנֶךָ","your ear"], ["כִּי","for"], ["יָדַעְתִּי","I knew"], ["בָּגוֹד","very treacherously"], ["תִּבְגֹּד","you would deal"], ["וּפוֹשֵׁעַ","and a transgressor"], ["מִבֶּטֶן","from the womb"], ["קֹרָא","were you called"], ["לָךְ","unto you"], ["׃",""]]},
-  { num: "ט", words: [["אַךְ","nevertheless"], ["לְמַעַן","for"], ["שְׁמִי","My name's sake"], ["אַאֲרִיךְ","will I defer"], ["אַפִּי","Mine anger"], ["וּתְהִלָּתִי","and for My praise"], ["אֶחֱטָם־לָךְ","will I refrain from you"], ["לְבִלְתִּי","that not"], ["הַכְרִיתֶךָ","I cut you off"], ["׃",""]]},
+  { num: "ט", words: [["אַךְ","nevertheless"], ["לְמַעַן","for"], ["שְׁמִי","My name's sake"], ["אַאֲרִיךְ","will I defer"], ["אַפִּי","Mine anger"], ["וּתְהִלָּתִי","and for My praise"], ["אֶחֱטׇם־לָךְ","will I refrain from you"], ["לְבִלְתִּי","that not"], ["הַכְרִיתֶךָ","I cut you off"], ["׃",""]]},
   { num:"י", words:[
     ["כִּי","for"],
     ["הִנֵּה","behold"],
@@ -4175,7 +4175,7 @@ var ch21Verses = [
     ["וּבְיוֹם","and in a day of"],
     ["יְשׁוּעָה","salvation"],
     ["עֲזַרְתִּיךָ","have I helped you"],
-    ["וְאֶצָּרְךָ","and I will preserve you"],
+    ["וְאֶצׇּרְךָ","and I will preserve you"],
     ["וְאֶתֶּנְךָ","and give you"],
   ["עַבְדִּי","my servant"],
     ["לִבְרִית","for a covenant of"],
@@ -4225,7 +4225,7 @@ var ch21Verses = [
   ]},
   { num: "יב", words: [["וְאָז","and then"], ["בֵּית־יִשְׂרָאֵל","O house of Israel"], ["הִנֵּה","behold"], ["אֵלֶּה","these"], ["מֵרָחוֹק","from far"], ["יָבֹאוּ","shall come"], ["וְהִנֵּה־אֵלֶּה","and lo, these"], ["מִצָּפוֹן","from the north"], ["וּמִמַּעֲרָב","and from the west"], ["וְאֵלֶּה","and these"], ["מֵאֶרֶץ","from the land of"], ["סִינִים","Sinim"], ["׃",""]]},
   { num:"יג", words:[
-    ["רָנּוּ","sing"],
+    ["רׇנּוּ","sing"],
     ["שָׁמַיִם","O heavens"],
     ["וְגִילִי","and be joyful"],
     ["אָרֶץ","O earth"],
@@ -4314,7 +4314,7 @@ var ch21Verses = [
     ["אֲשֶׁר","which"],
     ["יִהְיוּ־לָךְ","you shall have"],
     ["אַחֲרֵי","after"],
-    ["אָבְדָן","you have lost"],
+    ["אׇבְדָן","you have lost"],
     ["הָרִאשֹׁנִים","the first"],
     ["עוֹד","again"],
     ["יֹאמְרוּ","shall say"],

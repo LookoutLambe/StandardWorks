@@ -31,7 +31,7 @@ var dc71_ch1Verses = [
   ]},
   { num: "ה", words: [["וְעַתָּה","and now"], ["הִנֵּה","behold"], ["זֹאת","this is"], ["חׇכְמָה","wisdom"], ["הַקּוֹרֵא","whoso reads"], ["יָבִין","let him understand"], ["וְגַם","and also"], ["יְקַבֵּל׃","receive"]]},
   { num: "ו", words: [["כִּי","for"], ["לַמְקַבֵּל","unto him that receives"], ["יִנָּתֵן","it shall be given"], ["בְּשֶׁפַע","abundantly"], ["יוֹתֵר","more"], ["גַּם","even"], ["כֹּחַ׃","power"]]},
-  { num: "ז", words: [["לָכֵן","wherefore"], ["הָבִישׁוּ","confound"], ["אֶת־אוֹיְבֵיכֶם","your enemies"], ["קִרְאוּ","call"], ["לָהֶם","upon them"], ["לִפְגֹּשׁ","to meet"], ["אֶתְכֶם","you"], ["גַּם","both"], ["בַּגָּלוּי","in public"], ["וְגַם","and"], ["בַּסֵּתֶר","in private"], ["וּכְפִי","and inasmuch"], ["אֲשֶׁר","as"], ["תִּהְיוּ","you are"], ["נֶאֱמָנִים","faithful"], ["בָּשְׁתָּם","their shame"], ["תִּגָּלֶה׃","shall be made manifest"]]},
+  { num: "ז", words: [["לָכֵן","wherefore"], ["הָבִישׁוּ","confound"], ["אֶת־אוֹיְבֵיכֶם","your enemies"], ["קִרְאוּ","call"], ["לָהֶם","upon them"], ["לִפְגֹּשׁ","to meet"], ["אֶתְכֶם","you"], ["גַּם","both"], ["בַּגָּלוּי","in public"], ["וְגַם","and"], ["בַּסֵּתֶר","in private"], ["וּכְפִי","and inasmuch"], ["אֲשֶׁר","as"], ["תִּהְיוּ","you are"], ["נֶאֱמָנִים","faithful"], ["בׇּשְׁתָּם","their shame"], ["תִּגָּלֶה׃","shall be made manifest"]]},
   { num: "ח", words: [
     ["לָכֵן","wherefore"],
     ["יָבִיאוּ","let them bring forth"],
@@ -739,7 +739,7 @@ var dc76_ch1Verses = [
     ["הַבָּא׃","to come"]
   ]},
   { num: "לה", words: [["כִּי","for"], ["כִּחֲשׁוּ","having denied"], ["בְּרוּחַ־הַקֹּדֶשׁ","the Holy Spirit"], ["אַחֲרֵי","after"], ["קַבְּלָם","having received"], ["אוֹתוֹ","it"], ["וְכִחֲשׁוּ","and having denied"], ["בִּיחִיד","the Only Begotten Son of"], ["הָאָב","the Father"], ["וְצָלְבוּ","and having crucified"], ["אוֹתוֹ","him"], ["לָהֶם","unto themselves"], ["וּנְתָנוּהוּ","and put him"], ["לְבוּשָׁה","to shame"], ["גְלוּיָה׃","open"]]},
-  { num: "לו", words: [["אֵלֶּה","these are they"], ["יֵלְכוּ","who shall go away"], ["לַאֲגַם","into the lake of"], ["אֵשׁ","fire"], ["וְגָפְרִית","and brimstone"], ["עִם","with"], ["הַשָּׂטָן","the devil"], ["וּמַלְאָכָיו׃","and his angels"]]},
+  { num: "לו", words: [["אֵלֶּה","these are they"], ["יֵלְכוּ","who shall go away"], ["לַאֲגַם","into the lake of"], ["אֵשׁ","fire"], ["וְגׇפְרִית","and brimstone"], ["עִם","with"], ["הַשָּׂטָן","the devil"], ["וּמַלְאָכָיו׃","and his angels"]]},
   { num: "לז", words: [
     ["וְהֵם","and they are"],
     ["הַיְחִידִים","the only ones"],
@@ -837,7 +837,7 @@ var dc76_ch1Verses = [
     ["הַצַּדִּיקִים׃","the just"]
   ]},
   { num: "נא", words: [["הֵם","they are"], ["אֵלֶּה","they"], ["אֲשֶׁר","who"], ["קִבְּלוּ","received"], ["אֶת־עֵדוּת","the testimony of"], ["יֵשׁוּעַ","Jesus"], ["וְהֶאֱמִינוּ","and believed"], ["בִּשְׁמוֹ","on his name"], ["וְנִטְבְּלוּ","and were baptized"], ["כְּדֶרֶךְ","after the manner of"], ["קְבוּרָתוֹ","his burial"], ["נִקְבְּרוּ","being buried"], ["בַּמַּיִם","in the water"], ["בִּשְׁמוֹ","in his name"], ["וְזֹאת","and this"], ["לְפִי","according to"], ["הַמִּצְוָה","the commandment"], ["אֲשֶׁר","which"], ["נָתָן׃","he has given"]]},
-  { num: "נב", words: [["לְמַעַן","that"], ["בְּשָׁמְרָם","by their keeping"], ["אֶת־הַמִּצְווֹת","the commandments"], ["יֵרָחֲצוּ","they might be washed"], ["וְיִטְהֲרוּ","and cleansed"], ["מִכׇּל","from all"], ["חַטֹּאתָם","their sins"], ["וִיקַבְּלוּ","and receive"], ["אֶת־רוּחַ־הַקֹּדֶשׁ","the Holy Spirit"], ["בִּסְמִיכַת","by the laying on of"], ["יְדֵי","the hands of"], ["הַנִּסְמָךְ","him who is ordained"], ["וְהַנֶּחְתָּם","and sealed"], ["לַכֹּחַ","unto power"], ["הַזֶּה׃","this"]]},
+  { num: "נב", words: [["לְמַעַן","that"], ["בְּשׇׁמְרָם","by their keeping"], ["אֶת־הַמִּצְווֹת","the commandments"], ["יֵרָחֲצוּ","they might be washed"], ["וְיִטְהֲרוּ","and cleansed"], ["מִכׇּל","from all"], ["חַטֹּאתָם","their sins"], ["וִיקַבְּלוּ","and receive"], ["אֶת־רוּחַ־הַקֹּדֶשׁ","the Holy Spirit"], ["בִּסְמִיכַת","by the laying on of"], ["יְדֵי","the hands of"], ["הַנִּסְמָךְ","him who is ordained"], ["וְהַנֶּחְתָּם","and sealed"], ["לַכֹּחַ","unto power"], ["הַזֶּה׃","this"]]},
   { num: "נג", words: [["וַאֲשֶׁר","and who"], ["מְנַצְּחִים","overcome"], ["בֶּאֱמוּנָה","by faith"], ["וְנֶחְתָּמִים","and are sealed"], ["בְּרוּחַ־הַקֹּדֶשׁ","by the Holy Spirit"], ["רוּחַ","the Spirit of"], ["הַהַבְטָחָה","promise"], ["אֲשֶׁר","which"], ["הָאָב","the Father"], ["שׁוֹפֵךְ","sheds forth"], ["עַל","upon"], ["כׇּל","all"], ["הַצַּדִּיקִים","those who are just"], ["וְהַנֶּאֱמָנִים׃","and true"]]},
   { num: "נד", words: [["הֵם","they are they"], ["כְּנֵסִיַּת","the church of"], ["הַבְּכוֹר׃","the Firstborn"]]},
   { num: "נה", words: [
@@ -929,7 +929,7 @@ var dc76_ch1Verses = [
     ["הָאָרֶץ","the earth"],
     ["אֲשֶׁר","who"],
     ["עֻוְּרוּ","were blinded"],
-    ["בְּעָרְמַת","by the craftiness of"],
+    ["בְּעׇרְמַת","by the craftiness of"],
     ["אֲנָשִׁים׃","men"]
   ]},
   { num: "עו", words: [

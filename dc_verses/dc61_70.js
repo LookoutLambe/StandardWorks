@@ -309,7 +309,7 @@ var dc62_ch1Verses = [
     ["וְשִׂמְחוּ","and rejoice"],
     ["יַחְדָּו","together"],
     ["וְהַקְרִיבוּ","and offer"],
-    ["קָרְבָּן","a sacrament"],
+    ["קׇרְבָּן","a sacrament"],
     ["לָעֶלְיוֹן׃","unto the Most High"]
   ]},
   { num: "ה", words: [["וְאָז","and then"], ["תּוּכְלוּ","you may"], ["לָשׁוּב","return"], ["לְהָעִיד","to bear record"], ["אַף","yea, even"], ["כֻּלְּכֶם","all of you"], ["יַחְדָּו","together"], ["אוֹ","or"], ["שְׁנַיִם","two"], ["שְׁנַיִם","by two"], ["כַּטּוֹב","as is good"], ["בְּעֵינֵיכֶם","in your eyes"], ["אַחַת","it matters"], ["הִיא","not"], ["לִי","unto me"], ["רַק","only"], ["הֱיוּ","be"], ["נֶאֱמָנִים","faithful"], ["וְהַכְרִיזוּ","and declare"], ["בְּשׂוֹרָה","tidings"], ["טוֹבָה","glad"], ["לְיוֹשְׁבֵי","unto the inhabitants of"], ["הָאָרֶץ","the earth"], ["אוֹ","or"], ["בְּקֶרֶב","among"], ["קְהִלּוֹת","the congregations of"], ["הָרְשָׁעִים׃","the wicked"]]},
@@ -450,7 +450,7 @@ var dc63_ch1Verses = [
     ["הָעָם׃","the people"]
   ]},
   { num: "טז", words: [["וְאָמֵן","and verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לָכֶם","unto you"], ["כַּאֲשֶׁר","as"], ["אָמַרְתִּי","I have said"], ["לִפְנֵי","before"], ["הַמַּבִּיט","he that looks"], ["עַל","upon"], ["אִשָּׁה","a woman"], ["לְחָמְדָהּ","to lust after her"], ["אוֹ","or"], ["אִם","if any"], ["יְנָאֲפוּ","shall commit adultery"], ["בְּלִבָּם","in their hearts"], ["לֹא","not"], ["יִהְיֶה","shall have"], ["לָהֶם","unto them"], ["הָרוּחַ","the Spirit"], ["כִּי־אִם","but"], ["יְכַחֲשׁוּ","they shall deny"], ["בָאֱמוּנָה","the faith"], ["וְיִפְחָדוּ׃","and shall fear"]]},
-  { num: "יז", words: [["לָכֵן","wherefore"], ["אֲנִי","I"], ["יְהוָה","the Lord"], ["אָמַרְתִּי","have said"], ["כִּי","that"], ["רַכֵּי־הַלֵּב","the faint of heart"], ["וַאֲשֶׁר","and those who"], ["לֹא־אֵמֻן","are unbelieving"], ["בָּם","in them"], ["וְכׇל","and all"], ["הַמְכַזְּבִים","the liars"], ["וְכׇל","and every"], ["אוֹהֵב","one who loves"], ["וְעוֹשֶׂה","and makes"], ["שֶׁקֶר","a lie"], ["וְהַזּוֹנֶה","and the whoremonger"], ["וְהַמְכַשֵּׁף","and the sorcerer"], ["חֶלְקָם","their part"], ["יִהְיֶה","shall be"], ["בַּאֲגָם","in that lake"], ["הַבּוֹעֵר","that burns"], ["בְּאֵשׁ","with fire"], ["וְגָפְרִית","and brimstone"], ["אֲשֶׁר","which"], ["הוּא","is"], ["הַמָּוֶת","the death"], ["הַשֵּׁנִי׃","the second"]]},
+  { num: "יז", words: [["לָכֵן","wherefore"], ["אֲנִי","I"], ["יְהוָה","the Lord"], ["אָמַרְתִּי","have said"], ["כִּי","that"], ["רַכֵּי־הַלֵּב","the faint of heart"], ["וַאֲשֶׁר","and those who"], ["לֹא־אֵמֻן","are unbelieving"], ["בָּם","in them"], ["וְכׇל","and all"], ["הַמְכַזְּבִים","the liars"], ["וְכׇל","and every"], ["אוֹהֵב","one who loves"], ["וְעוֹשֶׂה","and makes"], ["שֶׁקֶר","a lie"], ["וְהַזּוֹנֶה","and the whoremonger"], ["וְהַמְכַשֵּׁף","and the sorcerer"], ["חֶלְקָם","their part"], ["יִהְיֶה","shall be"], ["בַּאֲגָם","in that lake"], ["הַבּוֹעֵר","that burns"], ["בְּאֵשׁ","with fire"], ["וְגׇפְרִית","and brimstone"], ["אֲשֶׁר","which"], ["הוּא","is"], ["הַמָּוֶת","the death"], ["הַשֵּׁנִי׃","the second"]]},
   { num: "יח", words: [
     ["אָמֵן","verily"],
     ["אֲנִי","I"],
@@ -1059,7 +1059,7 @@ var dc64_ch1Verses = [
     ["וְאָמֵן","and verily"],
     ["הוּא","it is"],
     ["יוֹם","a day of"],
-    ["קָרְבָּן","sacrifice"],
+    ["קׇרְבָּן","sacrifice"],
     ["וְיוֹם","and a day"],
     ["לְמַעְשַׂר","for the tithing of"],
     ["עַמִּי","my people"],

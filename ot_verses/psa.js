@@ -2662,7 +2662,7 @@ var psa_ch119Verses = [
   { num:"קסד", words:[["שֶׁבַע","seven"],["בַּיּוֹם","in the day"],["הִלַּלְתִּיךָ","I praise You"],["עַל","upon"],["מִשְׁפְּטֵי","the judgments of"],["צִדְקֶךָ","Your righteousness"],["׃",""]] },
   { num:"קסה", words:[["שָׁלוֹם","peace"],["רָב","great"],["לְאֹהֲבֵי","to those who love"],["תוֹרָתֶךָ","Your law"],["וְאֵין־לָמוֹ","and nothing shall make them"],["מִכְשׁוֹל","stumble"],["׃",""]] },
   { num:"קסו", words:[["שִׂבַּרְתִּי","I have hoped"],["לִישׁוּעָתְךָ","for Your deliverance"],["יְהֹוָה","the LORD"],["וּמִצְוֺתֶיךָ","and Your commandments"],["עָשִׂיתִי","I made"],["׃",""]] },
-  { num:"קסז", words:[["שָׁמְרָה","guarded"],["נַפְשִׁי","my soul"],["עֵדֹתֶיךָ","Your testimonies"],["וָאֹהֲבֵם","and I have loved them"],["מְאֹד","greatly"],["׃",""]] },
+  { num:"קסז", words:[["שׇׁמְרָה","guarded"],["נַפְשִׁי","my soul"],["עֵדֹתֶיךָ","Your testimonies"],["וָאֹהֲבֵם","and I have loved them"],["מְאֹד","greatly"],["׃",""]] },
   { num:"קסח", words:[["שָׁמַרְתִּי","I have kept"],["פִקּוּדֶיךָ","Your precepts"],["וְעֵדֹתֶיךָ","and Your testimonies"],["כִּי","for"],["כׇל־דְּרָכַי","all my ways"],["נֶגְדֶּךָ","before You"],["׃",""]] },
   { num:"קסט", words:[["תִּקְרַב","You draw near"],["רִנָּתִי","to my cry"],["לְפָנֶיךָ","before You"],["יְהֹוָה","the LORD"],["כִּדְבָרְךָ","according to Your command"],["הֲבִינֵנִי","give me understanding"],["׃",""]] },
   { num:"קע", words:[["תָּבוֹא","shall come"],["תְחִנָּתִי","my supplication"],["לְפָנֶיךָ","before You"],["כְּאִמְרָתְךָ","according to Your word"],["הַצִּילֵנִי","deliver me"],["׃",""]] },

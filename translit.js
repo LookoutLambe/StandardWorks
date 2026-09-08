@@ -42,23 +42,18 @@
      "and I went down", five times. Sixteen of the forty-five keys covered more
      than one word. A patch for one word must not speak for another. */
   var _tlReceived = {
-                      'אֳלִיבְלִישׁ':'oliblish', 'אָרְכָּהּ':'orka', 'בְּבָשְׁתָּם':'bevoshtam',
-                      'בְּקָרְבָּן':'vekorban', 'בְּקוֹלֹב':'bekolob', 'בְקָרְבָּן':'vekorban',
-                      'בָּשְׁתָּם':'boshtam', 'בָשְׁתָּם':'boshtam', 'הַקָּרְבָּן':'hakkorban',
-                      'הַקׇּרְבָן':'hakkorban', 'וְאָרְכָּהּ':'veorka', 'וְהַקָּרְבָּן':'vehakkorban',
-                      'וְחָרְבָּנָם':'vechorbanam', 'וְלִשְׁלָשְׁתְּכֶם':'velishloshtekhem', 'וְרָחְבָּהּ':'verochba',
+                      'אֳלִיבְלִישׁ':'oliblish', 'בְּבָשְׁתָּם':'bevoshtam', 'בְּקָרְבָּן':'vekorban',
+                      'בְּקוֹלֹב':'bekolob', 'בְקָרְבָּן':'vekorban', 'בָשְׁתָּם':'boshtam',
+                      'הַקָּרְבָּן':'hakkorban', 'הַקׇּרְבָן':'hakkorban', 'וְאָרְכָּהּ':'veorka',
+                      'וְהַקָּרְבָּן':'vehakkorban', 'וְחָרְבָּנָם':'vechorbanam', 'וְלִשְׁלָשְׁתְּכֶם':'velishloshtekhem',
                       'וָאָרְדְּ':'vaord', 'וּנְבָזְבְּיָתָךְ':'unvozbeyatakh', 'וּשְׁלָשְׁתָּם':'ushloshtam',
-                      'וּשְׂמֹאול':'usmol', 'חָרְבָּה':'chorba', 'חָרְבָּנָהּ':'chorbana',
-                      'כְּקָרְבַּן':'kekorban', 'כְּרָחְבָּהּ':'kerochba', 'לְבָשְׁתְּכֶם':'levoshtekhem',
-                      'לְבָשְׁתֵּנוּ':'levoshtenu', 'לְקָרְבַּן':'lekorban', 'לְקָרְבָּן':'lekorban',
+                      'וּשְׂמֹאול':'usmol', 'חָרְבָּנָהּ':'chorbana', 'כְּקָרְבַּן':'kekorban',
+                      'כְּרָחְבָּהּ':'kerochba', 'לְבָשְׁתְּכֶם':'levoshtekhem', 'לְבָשְׁתֵּנוּ':'levoshtenu',
                       'לְקוֹלֹב':'lekolob', 'לְרָחְבָּהּ':'lerochba', 'מִקּוֹלֹב':'mikkolob',
-                      'מִשְּׂמֹאול':'missemol', 'מֵהַשְּׂמֹאול':'mehassemol', 'מֵעָצְבְּךָ':'meotsbekha',
-                      'מָרָדְתָּא':'marodta', 'עָצְבְּכֶם':'otsbekhem', 'עָצְבִּי':'otsbi',
-                      'עָרְפֶּךָ':'orpekha', 'קָרְבַּן':'korban', 'קָרְבָּן':'korban',
-                      'קָרְבָּנְךָ':'korbanekha', 'קָרְבָּנָהּ':'korbana', 'קָרְבָּנָם':'korbanam',
+                      'מִשְּׂמֹאול':'missemol', 'מֵהַשְּׂמֹאול':'mehassemol', 'מָרָדְתָּא':'marodta',
+                      'עָצְבְּכֶם':'otsbekhem', 'קָרְבָּנְךָ':'korbanekha', 'קָרְבָּנָהּ':'korbana',
                       'קוֹלֹב':'kolob', 'קוֹקַאוּבְּאֵם':'kokaubeam', 'קוֹקֹב':'kokob',
-                      'שְׁלָשְׁתָּם':'sheloshtam', 'שְׂמֹאול':'semol', 'שְׂמֹאולֶךָ':'semolekh',
-                      'שִׁינֵהָה':'shinehah'
+                      'שְׂמֹאול':'semol', 'שְׂמֹאולֶךָ':'semolekh', 'שִׁינֵהָה':'shinehah'
   };
 
   var _tlKnown = {

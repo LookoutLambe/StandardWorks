@@ -222,7 +222,7 @@ var dc33_ch1Verses = [
     ["וְיַשְּׁרוּ","and make straight"],
     ["מְסִלּוֹתָיו","his paths"],
     ["כִּי","for"],
-    ["קָרְבָה","is at hand"],
+    ["קׇרְבָה","is at hand"],
     ["מַלְכוּת","the kingdom of"],
     ["הַשָּׁמָיִם׃","heaven"]
   ]},
@@ -297,7 +297,7 @@ var dc34_ch1Verses = [
   ]},
   { num: "ה", words: [["וּבָרוּךְ","and blessed are"], ["אַתָּה","you"], ["עוֹד","more"], ["כִּי","because"], ["נִקְרֵאתָ","you are called"], ["מִמֶּנִּי","of me"], ["לְהַטִּיף","to preach"], ["בְּשׂוֹרָתִי׃","my gospel"]]},
   { num: "ו", words: [["לְהָרִים","to lift up"], ["קוֹלְךָ","your voice"], ["כְּקוֹל","as with the sound of"], ["שׁוֹפָר","a trump"], ["גַּם","both"], ["אָרֹךְ","long"], ["וְגַם","and"], ["חָזָק","loud"], ["וְלִקְרֹא","and cry"], ["תְשׁוּבָה","repentance"], ["לְדוֹר","unto a generation"], ["עִקֵּשׁ","crooked"], ["וּפְתַלְתֹּל","and perverse"], ["לְפַנּוֹת","preparing"], ["דֶּרֶךְ","the way of"], ["יְהוָה","the Lord"], ["לְבוֹאוֹ","for his coming"], ["הַשֵּׁנִי׃","second"]]},
-  { num: "ז", words: [["כִּי","for"], ["הִנֵּה","behold"], ["אָמֵן","verily"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לְךָ","unto you"], ["בִּמְהֵרָה","soon"], ["קָרְבָה","is at hand"], ["הָעֵת","the time"], ["אֲשֶׁר","that"], ["אָבוֹא","I shall come"], ["בְּעָנָן","in a cloud"], ["בְּכֹחַ","with power"], ["וּבְכָבוֹד","and glory"], ["גָּדוֹל׃","great"]]},
+  { num: "ז", words: [["כִּי","for"], ["הִנֵּה","behold"], ["אָמֵן","verily"], ["אָמֵן","verily"], ["אֲנִי","I"], ["אֹמֵר","say"], ["לְךָ","unto you"], ["בִּמְהֵרָה","soon"], ["קׇרְבָה","is at hand"], ["הָעֵת","the time"], ["אֲשֶׁר","that"], ["אָבוֹא","I shall come"], ["בְּעָנָן","in a cloud"], ["בְּכֹחַ","with power"], ["וּבְכָבוֹד","and glory"], ["גָּדוֹל׃","great"]]},
   { num: "ח", words: [
     ["וְהָיָה","and it shall be"],
     ["יוֹם","a day"],
@@ -1308,7 +1308,7 @@ var dc39_ch1Verses = [
     ["בְקוֹל","with a voice"],
     ["גָּדוֹל","loud"],
     ["לֵאמֹר","saying"],
-    ["קָרְבָה","is at hand"],
+    ["קׇרְבָה","is at hand"],
     ["מַלְכוּת","the kingdom of"],
     ["הַשָּׁמָיִם","heaven"],
     ["קְרָא","crying"],
