@@ -677,7 +677,7 @@ function swVerseDeepLink(chapId, verseNum) {
     var wrapped = function(chapId) {
       orig(chapId);
       var panel = document.getElementById('panel-' + chapId);
-      if (panel) { applySavedHighlights(panel); applySavedNotes(panel); applyStressMarks(panel); }
+      if (panel) { applySavedHighlights(panel); applySavedNotes(panel); applyStressMarks(panel); applyNameCaps(panel); }
     };
     wrapped.__swHighlightsWrapped = true;
     window._ensureChapterRendered = wrapped;
@@ -2446,9 +2446,110 @@ function _swEscape(s) {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
+/* ── A name looks like a name ──────────────────────────────────────────────
+   The transliteration line ran everything lowercase, so "lemuel" and "laman"
+   read like common nouns and "ulemuel" hid the Lemuel inside it. A capital
+   tells the reader, at a glance, that this word is somebody's name.
+
+   THE CORPUS ALREADY KNOWS WHICH WORDS ARE NAMES — the gloss says so. 10,393
+   forms across the six volumes are glossed with a proper name, 47,993
+   occurrences. Nothing has to be listed here and no table has to be shipped:
+   the gloss is already in the DOM beside the word.
+
+   WHERE the capital goes is the harder half. וּלְמוּאֵל is "and Lemuel", so the
+   name begins after the conjunction and the word should read uLemuel, not
+   Ulemuel — capitalising the "and" would be worse than leaving it alone.
+   The prefix is stripped off the Hebrew, the remainder transliterated, and
+   that string found inside the whole: whatever it starts at is the name.
+
+   Reverence capitals are not names. "God", "the LORD", "He", "His" are
+   capitalised for other reasons and must not turn יְהוָה into a surname. */
+var _SW_NOT_A_NAME = ('I He His Him Himself God LORD Lord Thou Thee Thy Ye You My O And The A An ' +
+  'In Of It They We Behold Yea Now Then But For That This Who Not All So When If As There ' +
+  'Their Her She Me Us Our Your Its Is Was Be Have Do Did Shall Will Unto Upon With From By ' +
+  'On At To No Nor Or Yet After Before Because Amen Selah').split(' ');
+
+/* Particles that attach with a maqqef and carry no English of their own. */
+var _SW_BOUND_PARTICLES = ['\u05D0\u05EA', '\u05D0\u05DC', '\u05E2\u05DC', '\u05DB\u05DC', '\u05DE\u05DF',
+                           '\u05E2\u05D3', '\u05D1\u05DF', '\u05D1\u05EA'];
+
+var _SW_HEB_PREFIX = ['וְהַ', 'וּבְ', 'וְ', 'וּ', 'וַ', 'וָ', 'הַ', 'הָ', 'הֶ', 'בְּ', 'בַּ', 'בִּ', 'בָּ', 'בְ',
+                      'לְ', 'לַ', 'לִ', 'לָ', 'מִ', 'מֵ', 'כְּ', 'כַּ', 'כְ', 'שֶׁ'];
+
+function _swGlossHasName(gloss) {
+  if (!gloss) return false;
+  var m = gloss.match(/\b[A-Z][a-z]+\b/g);
+  if (!m) return false;
+  for (var i = 0; i < m.length; i++) {
+    if (_SW_NOT_A_NAME.indexOf(m[i]) < 0) return true;
+  }
+  return false;
+}
+
+/* Returns the transliteration with the name's first letter capitalised.
+   THE GLOSS SAYS WHETHER THERE IS A PREFIX TO SKIP AT ALL. "Lemuel" is the
+   whole word; "and Lemuel" is a conjunction and then the word. Without that
+   test the lamed of לְמוּאֵל and the qamats of לָמָן were being read as the
+   prepositions they look like, giving leMuel and laMan for words that are
+   simply Lemuel and Laman. */
+function swCapitaliseName(heb, tl, gloss) {
+  if (!tl || typeof transliterate !== 'function') return tl;
+  var cap0 = function (s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; };
+  var cap = function (s, i) {
+    return i < 0 || i >= s.length ? s : s.slice(0, i) + s.charAt(i).toUpperCase() + s.slice(i + 1);
+  };
+  var h = heb.normalize ? heb.normalize('NFC') : heb;
+  /* the name is the first thing the gloss says — nothing precedes it */
+  var first = (gloss || '').trim().split(/\s+/)[0] || '';
+  var glossStartsWithName = /^[A-Z][a-z]/.test(first) && _SW_NOT_A_NAME.indexOf(first) < 0;
+  /* A maqqef binds a particle to the word: אֶת־לָבָן glosses simply "Laban",
+     because the object marker has no English of its own — so the gloss looks
+     name-initial while the name is on the far side of the hyphen. These
+     particles are never names. */
+  var head = h.split('\u05BE')[0].replace(/[\u0591-\u05C7]/g, '');
+  if (h.indexOf('\u05BE') > 0 && _SW_BOUND_PARTICLES.indexOf(head) >= 0) {
+    var hy = tl.indexOf('-');
+    if (hy >= 0) return cap(tl, hy + 1);
+  }
+  if (glossStartsWithName) return cap0(tl);
+  /* A maqqef joins two words and the transliterator joins them with a hyphen;
+     the name is whichever side the gloss's capital belongs to, and the last
+     part is right far more often than not (אֶת־לָבָן — Laban). */
+  var dash = tl.lastIndexOf('-');
+  for (var p = 0; p < _SW_HEB_PREFIX.length; p++) {
+    var pre = _SW_HEB_PREFIX[p].normalize ? _SW_HEB_PREFIX[p].normalize('NFC') : _SW_HEB_PREFIX[p];
+    if (h.indexOf(pre) !== 0) continue;
+    var base = h.slice(pre.length);
+    if (!base || base.charAt(0) === '־') continue;
+    var tb = transliterate(base);
+    if (!tb || tb.length < 2) continue;
+    /* the first consonant can spirantise under a prefix (בְּ -> ve/be), so
+       match on the tail and step back one */
+    var at = tl.indexOf(tb.slice(1), 1);
+    if (at > 0) return cap(tl, at - 1);
+    break;
+  }
+  return cap(tl, dash >= 0 ? dash + 1 : 0);
+}
+
+function applyNameCaps(root) {
+  var units = (root || document).querySelectorAll('.word-unit');
+  for (var i = 0; i < units.length; i++) {
+    var wu = units[i];
+    var tlEl = wu.querySelector('.tl');
+    if (!tlEl || !tlEl.textContent) continue;
+    if (wu.getAttribute('data-named') === '1') continue;
+    var glEl = wu.querySelector('.gl');
+    if (!_swGlossHasName(glEl && glEl.textContent)) continue;
+    tlEl.textContent = swCapitaliseName(wu.getAttribute('data-h') || '', tlEl.textContent,
+                                        glEl && glEl.textContent);
+    wu.setAttribute('data-named', '1');
+  }
+}
+
 /* The table is deferred, so it arrives after the first chapter has rendered.
    It calls this when it lands; the render hook covers every chapter after. */
-window.__swStressArrived = function () { applyStressMarks(document); };
+window.__swStressArrived = function () { applyStressMarks(document); applyNameCaps(document); };
 
 /* ANYTHING THAT REDRAWS THE HEBREW WIPES THE MARK, because it rewrites .hw
    wholesale. Stripping the vowel points and putting them back was doing
@@ -2463,7 +2564,7 @@ window.__swStressArrived = function () { applyStressMarks(document); };
     var wrapped = function () {
       var r = orig.apply(this, arguments);
       /* after the redraw, not during it */
-      setTimeout(function () { applyStressMarks(document); }, 0);
+      setTimeout(function () { applyStressMarks(document); applyNameCaps(document); }, 0);
       return r;
     };
     wrapped.__swStressWrapped = true;
