@@ -3814,7 +3814,7 @@ window.READER = window.READER || {
   books: []      /* filled from BOOK_DATA the moment it exists, below */
 };
 </script>
-<script src="../reader_surface.js?v=13"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
+<script src="../reader_surface.js?v=14"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
 <script src="../translit.js?v=1"></script>
 <script src="../jst_refmap.js?v=1"></script>
 <script src="../verse_loader.js?v=5"></script>
@@ -4171,34 +4171,6 @@ function computeMorphGloss(heb) {
   }
 }
 
-
-function renderWords(words, container, verseKey) {
-  const realWords = words.filter(([h]) => h !== '\u05C3');
-  const lastRealIdx = realWords.length - 1;
-  let realCount = 0;
-  words.forEach(([h, e], i) => {
-    if (h === '\u05C3') return;
-    const isSof = (i + 1 < words.length && words[i+1][0] === '\u05C3') || (realCount === lastRealIdx);
-    const isLastWord = (realCount === lastRealIdx);
-    const el = makeWordUnit(h, e, isSof);
-    // Assign word ID for annotations
-    if (el && verseKey) {
-      el.setAttribute('data-wid', verseKey + '|' + realCount);
-    }
-    // Schottenstein-style chevron between words (point left in RTL flow)
-    const chevron = document.createElement('span');
-    chevron.className = 'arr';
-    const sym = isLastWord ? '\u00ab' : '\u2039';
-    chevron.innerHTML = '<span class="arr-hw">\u200B</span><span class="arr-tl">' + sym + '</span><span class="arr-gl">' + sym + '</span>';
-    // Group word + chevron so they wrap together
-    const group = document.createElement('span');
-    group.className = 'word-group';
-    if (el) group.appendChild(el);
-    group.appendChild(chevron);
-    appendWordGroup(container, group);   // interlinear_gloss.js — one home for all four builders
-    realCount++;
-  });
-}
 
 function renderColophon() {
   const container = document.getElementById('colophon-flow');
@@ -4614,55 +4586,11 @@ function _hasReadableSelection() {
   } catch (e) { return false; }
 }
 
-function _selRangeContainsNode(sel, node) {
-  if (!sel || !sel.rangeCount || !node) return false;
-  try {
-    if (typeof sel.containsNode === 'function') return sel.containsNode(node, true);
-  } catch (e1) {}
-  try {
-    var range = sel.getRangeAt(0);
-    var nr = document.createRange();
-    nr.selectNodeContents(node);
-    return range.compareBoundaryPoints(Range.END_TO_START, nr) < 0 &&
-      range.compareBoundaryPoints(Range.START_TO_END, nr) > 0;
-  } catch (e2) { return false; }
-}
-
 
 // Detect which tier a node belongs to
 
 
 // Get all word-units whose tier element is within the selection range
-function _getSelectedWordUnits(sel) {
-  if (!sel.rangeCount) return [];
-  var range = sel.getRangeAt(0);
-  var tier = _detectTier(sel.anchorNode);
-  if (!tier) tier = _detectTier(sel.focusNode);
-  if (!tier) return [];
-  _selTier = tier;
-
-  var container = range.commonAncestorContainer;
-  if (container.nodeType === 3) container = container.parentElement;
-  while (container && !container.classList.contains('verse') &&
-         !container.classList.contains('word-flow') &&
-         !container.classList.contains('heading-flow') &&
-         !container.classList.contains('chapter-panel')) {
-    if (container.tagName === 'BODY') return []; // don't scan entire DOM
-    container = container.parentElement;
-  }
-  if (!container) return [];
-
-  var wordUnits = container.querySelectorAll('.word-unit[data-wid]');
-  var result = [];
-  wordUnits.forEach(function(wu) {
-    var tierEl = wu.querySelector('.' + tier);
-    if (!tierEl) return;
-    if (_selRangeContainsNode(sel, tierEl)) {
-      result.push(wu);
-    }
-  });
-  return result;
-}
 
 
 // Get the verse key from the first selected word-unit

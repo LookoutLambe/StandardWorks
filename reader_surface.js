@@ -1352,3 +1352,87 @@ function copyAllNotes() {
     alert(keys.length ? 'Notes copied to clipboard!' : 'No notes yet.');
   });
 }
+
+/* One word row. The two copies were the same function written twice — the five
+   in ES5, bom.html in ES6 with destructured parameters — and nothing else
+   differed. The ES5 form is kept because that is what the rest of this codebase
+   is; bom.html's comments are kept because they say what the shapes are for. */
+function renderWords(words, container, verseKey) {
+  var realWords = words.filter(function(w) { return w[0] !== '\u05C3'; });
+  var lastRealIdx = realWords.length - 1;
+  var realCount = 0;
+  words.forEach(function(w, i) {
+    var h = w[0], e = w[1];
+    if (h === '\u05C3') return;
+    var isSof = (i + 1 < words.length && words[i+1][0] === '\u05C3') || (realCount === lastRealIdx);
+    var isLastWord = (realCount === lastRealIdx);
+    var el = makeWordUnit(h, e, isSof);
+    if (el && verseKey) el.setAttribute('data-wid', verseKey + '|' + realCount);   // the annotation key
+    /* Schottenstein-style chevron between words (points left in the RTL flow). */
+    var chevron = document.createElement('span');
+    chevron.className = 'arr';
+    var sym = isLastWord ? '\u00ab' : '\u2039';
+    chevron.innerHTML = '<span class="arr-hw">\u200B</span><span class="arr-tl">' + sym + '</span><span class="arr-gl">' + sym + '</span>';
+    /* Word and chevron wrap as one. */
+    var group = document.createElement('span');
+    group.className = 'word-group';
+    if (el) group.appendChild(el);
+    group.appendChild(chevron);
+    appendWordGroup(container, group);   // interlinear_gloss.js — one home for all four builders
+    realCount++;
+  });
+}
+
+/* ── Which words a selection actually covers ───────────────────────────────
+   Two real differences, and bom.html had the better of both.
+
+   It stops the walk at .heading-flow as well as .verse / .word-flow. That
+   matters more now than it did: without it a selection inside a chapter
+   summary walks all the way up to .chapter-panel and then tests every word in
+   the chapter — hundreds of them — instead of the heading's own. Since the
+   headings became annotatable this is the difference between scoping the
+   selection and scanning the panel.
+
+   And it tests containment through _selRangeContainsNode, which falls back to
+   comparing range boundary points where Selection.containsNode is missing or
+   throws, rather than calling it bare. */
+function _selRangeContainsNode(sel, node) {
+  if (!sel || !sel.rangeCount || !node) return false;
+  try {
+    if (typeof sel.containsNode === 'function') return sel.containsNode(node, true);
+  } catch (e1) {}
+  try {
+    var range = sel.getRangeAt(0);
+    var nr = document.createRange();
+    nr.selectNodeContents(node);
+    return range.compareBoundaryPoints(Range.END_TO_START, nr) < 0 &&
+      range.compareBoundaryPoints(Range.START_TO_END, nr) > 0;
+  } catch (e2) { return false; }
+}
+
+function _getSelectedWordUnits(sel) {
+  if (!sel.rangeCount) return [];
+  var range = sel.getRangeAt(0);
+  var tier = _detectTier(sel.anchorNode);
+  if (!tier) tier = _detectTier(sel.focusNode);
+  if (!tier) return [];
+  _selTier = tier;
+  var container = range.commonAncestorContainer;
+  if (container.nodeType === 3) container = container.parentElement;
+  while (container && !container.classList.contains('verse') &&
+         !container.classList.contains('word-flow') &&
+         !container.classList.contains('heading-flow') &&
+         !container.classList.contains('chapter-panel')) {
+    if (container.tagName === 'BODY') return [];      // never scan the whole DOM
+    container = container.parentElement;
+  }
+  if (!container) return [];
+  var wordUnits = container.querySelectorAll('.word-unit[data-wid]');
+  var result = [];
+  wordUnits.forEach(function(wu) {
+    var tierEl = wu.querySelector('.' + tier);
+    if (!tierEl) return;
+    if (_selRangeContainsNode(sel, tierEl)) result.push(wu);
+  });
+  return result;
+}

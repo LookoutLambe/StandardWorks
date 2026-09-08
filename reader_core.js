@@ -224,30 +224,6 @@ function computeGlossFromHebrew(heb, fallbackGloss) {
 }
 
 
-function renderWords(words, container, verseKey) {
-  var realWords = words.filter(function(w) { return w[0] !== '\u05C3'; });
-  var lastRealIdx = realWords.length - 1;
-  var realCount = 0;
-  words.forEach(function(w, i) {
-    var h = w[0], e = w[1];
-    if (h === '\u05C3') return;
-    var isSof = (i + 1 < words.length && words[i+1][0] === '\u05C3') || (realCount === lastRealIdx);
-    var isLastWord = (realCount === lastRealIdx);
-    var el = makeWordUnit(h, e, isSof);
-    if (el && verseKey) el.setAttribute('data-wid', verseKey + '|' + realCount);
-    var chevron = document.createElement('span');
-    chevron.className = 'arr';
-    var sym = isLastWord ? '\u00ab' : '\u2039';
-    chevron.innerHTML = '<span class="arr-hw">\u200B</span><span class="arr-tl">' + sym + '</span><span class="arr-gl">' + sym + '</span>';
-    var group = document.createElement('span');
-    group.className = 'word-group';
-    if (el) group.appendChild(el);
-    group.appendChild(chevron);
-    appendWordGroup(container, group);   // interlinear_gloss.js — one home for all four builders
-    realCount++;
-  });
-}
-
 var _verseRegistry = [];
 var _pendingRenders = [];
 var _renderedChapters = {};

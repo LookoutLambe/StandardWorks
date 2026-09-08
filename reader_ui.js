@@ -559,30 +559,6 @@ var _selMode = '';
 var SW_SEL_TB_LS = 'sw-hide-sel-toolbar';
 
 
-function _getSelectedWordUnits(sel) {
-  if (!sel.rangeCount) return [];
-  var range = sel.getRangeAt(0);
-  var tier = _detectTier(sel.anchorNode);
-  if (!tier) tier = _detectTier(sel.focusNode);
-  if (!tier) return [];
-  _selTier = tier;
-  var container = range.commonAncestorContainer;
-  if (container.nodeType === 3) container = container.parentElement;
-  while (container && !container.classList.contains('verse') && !container.classList.contains('word-flow') && !container.classList.contains('chapter-panel')) {
-    if (container.tagName === 'BODY') return [];
-    container = container.parentElement;
-  }
-  if (!container) return [];
-  var wordUnits = container.querySelectorAll('.word-unit[data-wid]');
-  var result = [];
-  wordUnits.forEach(function(wu) {
-    var tierEl = wu.querySelector('.' + tier);
-    if (tierEl && sel.containsNode(tierEl, true)) result.push(wu);
-  });
-  return result;
-}
-
-
 // Selection event listeners — do not dismiss on taps inside verse text (fixes double-tap / drag / native copy)
 var _selToolbarLastInteract = 0;
 document.addEventListener('mouseup', function(e) { if (!e.target.closest('#sel-toolbar') && !e.target.closest('#hl-pop')) setTimeout(_showSelToolbar, 10); });
