@@ -244,7 +244,12 @@ body:not(.dual-mode) .verse > .word-flow { width: 100%; }
    #page { font-size: N% } and everything downstream inherits from it.
    A px scale here would silently break the reader's zoom.
    ══════════════════════════════════════════════════════════════════════ */
-#page {
+/* .sw-front is here so the front matter's interlinear example is drawn at the
+   reader's own tiers rather than inventing sizes. index.html has no #page —
+   it is a hub, not a reader — so without this the example fell back to 16px
+   for both the Hebrew and its gloss and stopped looking like the thing it is
+   teaching. One declaration, two scopes; never a second copy of the numbers. */
+#page, .sw-front {
   --t0: 0.75em;    /* the under-word tier: gloss + translit  12/16 */
   --t1: 0.94em;    /* verse numerals, small labels           15/16 */
   /* The Hebrew was 1.875em (30/16) and only ~3 words fitted on a phone
@@ -2728,7 +2733,12 @@ body.dark-mode #nav-progress-text { color: #6a6550; }
   line-height: 1.35;
 }
 
-/* ── "To the Reader" (bom/bom.html #panel-intro) ───────────────────────────
+/* ── Front matter: .sw-front ───────────────────────────────────────────────
+   ONE definition, three homes — the preface on index.html, the Reading Hebrew
+   primer on hebrew-study.html, and the Book of Mormon's own volume note in
+   bom/bom.html. It was written scoped to #panel-intro when the only front
+   matter on the site was locked inside the Book of Mormon; the site is six
+   volumes now and the preface belongs to all of them.
    The whole panel used to be inline style attributes, which is why it broke in
    two ways that could not be fixed where they lived: the chiasmus box hardcoded
    #fbfaf7 and went to 1.19:1 against its own themed ink in dark mode, and its
@@ -2739,33 +2749,43 @@ body.dark-mode #nav-progress-text { color: #6a6550; }
 
    The measure is 44rem: the old 900px ran to 92 characters a line on a wide
    monitor, against a 65-75 readable range. This lands at 71.                */
-#panel-intro .tr-body {
-  max-width: 44rem; margin: 0 auto; padding: 16px 16px 28px;
+/* BOTH selectors. In bom/bom.html .tr-body is a child of the .sw-front panel;
+   on index.html the section carries both classes, and a descendant selector
+   cannot match one element — which is why the hub ran to 129 characters a
+   line while the panel sat correctly at 71. */
+.sw-front .tr-body,
+.sw-front.tr-body {
+  /* CHARACTER-BASED, not a fixed rem. 44rem is 71 characters in the reader's
+     type and 85 on the hub, whose base size is smaller — the same width is a
+     different measure on each page. `ch` resolves against the element's own
+     font, so the line length holds at ~71 in both. The rem stays as a ceiling
+     so the column never grows absurdly wide at large text sizes. */
+  max-width: min(44rem, 75ch); margin: 0 auto; padding: 16px 16px 28px;
   direction: ltr; text-align: left;
 }
 
 /* ── Type ───────────────────────────────────────────────────────────────── */
-#panel-intro .tr-title {
+.sw-front .tr-title {
   text-align: center; font-size: 1.6em; margin: 0 0 6px; color: var(--ink);
   font-family: 'David Libre', 'Georgia', serif;
 }
-#panel-intro .tr-h {
+.sw-front .tr-h {
   font-family: 'David Libre', 'Georgia', serif; font-size: 1.18em; font-weight: 700;
   color: var(--ink); margin: 26px 0 10px;
 }
-#panel-intro p.tr-p { font-size: 0.95em; line-height: 1.7; color: var(--ink); margin-bottom: 14px; }
+.sw-front p.tr-p { font-size: 0.95em; line-height: 1.7; color: var(--ink); margin-bottom: 14px; }
 /* The first line carries the whole piece — give it room to be the opening. */
-#panel-intro p.tr-p--lead { font-size: 1.12em; line-height: 1.6; margin-bottom: 18px; }
-#panel-intro p.tr-p--blessing { margin-top: 20px; }
-#panel-intro .tr-sig {
+.sw-front p.tr-p--lead { font-size: 1.12em; line-height: 1.6; margin-bottom: 18px; }
+.sw-front p.tr-p--blessing { margin-top: 20px; }
+.sw-front .tr-sig {
   font-size: 0.95em; line-height: 1.7; color: var(--ink-2);
   text-align: center; margin-top: 22px; font-style: italic;
 }
-#panel-intro .tr-muted { font-size: 0.85em; line-height: 1.6; color: var(--ink-3); margin: 16px 0 0; font-style: italic; }
-#panel-intro .tr-he { font-family: 'David Libre', 'Georgia', serif; font-weight: 700; font-size: 1.1em; }
+.sw-front .tr-muted { font-size: 0.85em; line-height: 1.6; color: var(--ink-3); margin: 16px 0 0; font-style: italic; }
+.sw-front .tr-he { font-family: 'David Libre', 'Georgia', serif; font-weight: 700; font-size: 1.1em; }
 
-#panel-intro hr.tr-rule { width: 200px; margin: 0 auto 20px; border: none; border-top: 1px solid var(--rule); }
-#panel-intro hr.tr-rule--narrow { width: 180px; margin: 26px auto 20px; }
+.sw-front hr.tr-rule { width: 200px; margin: 0 auto 20px; border: none; border-top: 1px solid var(--rule); }
+.sw-front hr.tr-rule--narrow { width: 180px; margin: 26px auto 20px; }
 
 /* ── The interlinear example ────────────────────────────────────────────── */
 /* THIS BLOCK IS TEACHING THE READER'S OWN CONVENTION, so it is built from the
@@ -2779,97 +2799,130 @@ body.dark-mode #nav-progress-text { color: #6a6550; }
    0 5px, as in .word-unit), not from a container `gap`. A gap spaces the
    BOXES evenly, which reads as random when the boxes are different widths —
    which is exactly what "goodly" beside "having been born" looked like. */
-#panel-intro .tr-example {
+.sw-front .tr-example {
   display: flex; justify-content: center; flex-wrap: wrap;
   direction: rtl; margin: 18px 0 20px; row-gap: 6px;
 }
-#panel-intro .tr-example > div {
+.sw-front .tr-example > div {
   display: flex; flex-direction: column; align-items: center; text-align: center;
   padding: 3px 2px 6px; margin: 0 5px; min-width: 30px;
 }
-#panel-intro .tr-example-he {
+.sw-front .tr-example-he {
   font-family: 'David Libre', 'Georgia', serif;
   font-size: var(--t4); font-weight: 400; line-height: 1.5; color: var(--hw);
 }
-#panel-intro .tr-example-gl {
+.sw-front .tr-example-gl {
   font-family: 'David Libre', 'Georgia', serif;
   font-size: var(--t0); font-style: normal; line-height: 1.35; color: var(--gloss);
   margin-top: 2px; max-width: 9em; direction: ltr;
 }
 
 /* ── The chiasmus ───────────────────────────────────────────────────────── */
-#panel-intro .tr-box {
+.sw-front .tr-box {
   background: var(--card); border: 1px solid var(--rule); border-radius: 8px;
   padding: 14px 16px; margin: 0 0 16px;
 }
-#panel-intro .tr-box-title {
+.sw-front .tr-box-title {
   font-family: 'David Libre', 'Georgia', serif; font-weight: 700; color: var(--ink);
   font-size: 0.95em; margin-bottom: 10px;
 }
 /* One column on a phone: label, then the Hebrew at full width, then the gloss.
    The Hebrew is the thing being taught — it never gets the short column. */
-#panel-intro .tr-chiasm {
+.sw-front .tr-chiasm {
   display: grid; grid-template-columns: 1fr; gap: 0;
   font-family: 'David Libre', 'Georgia', serif; font-size: 0.92em; line-height: 1.7; color: var(--ink);
 }
-#panel-intro .tr-chiasm-label { margin-top: 12px; }
-#panel-intro .tr-chiasm-he { direction: rtl; text-align: right; font-size: 1.12em; line-height: 1.9; }
+.sw-front .tr-chiasm-label { margin-top: 12px; }
+.sw-front .tr-chiasm-he { direction: rtl; text-align: right; font-size: 1.12em; line-height: 1.9; }
 /* Never justified: these are narrow columns, and justification in a narrow
    measure is what opened rivers across this page in the first place. */
-#panel-intro .tr-chiasm-en { color: var(--ink-2); text-align: left; padding-bottom: 4px; }
+.sw-front .tr-chiasm-en { color: var(--ink-2); text-align: left; padding-bottom: 4px; }
 
 /* The hinge. Marked with rules and a wash, never with gold TEXT — on this
    warm ground gold is a rule/border colour and the ink stays ink. */
-#panel-intro .tr-chiasm-label--center,
-#panel-intro .tr-chiasm-he--center,
-#panel-intro .tr-chiasm-en--center {
+.sw-front .tr-chiasm-label--center,
+.sw-front .tr-chiasm-he--center,
+.sw-front .tr-chiasm-en--center {
   background: color-mix(in srgb, var(--here) 8%, transparent);
   border-top: 1px solid color-mix(in srgb, var(--here) 45%, transparent);
   border-bottom: 1px solid color-mix(in srgb, var(--here) 45%, transparent);
 }
-#panel-intro .tr-chiasm-label--center { padding: 8px 8px 4px; margin-top: 12px; }
-#panel-intro .tr-chiasm-he--center { padding: 0 8px 4px; }
-#panel-intro .tr-chiasm-en--center { padding: 0 8px 10px; }
+.sw-front .tr-chiasm-label--center { padding: 8px 8px 4px; margin-top: 12px; }
+.sw-front .tr-chiasm-he--center { padding: 0 8px 4px; }
+.sw-front .tr-chiasm-en--center { padding: 0 8px 10px; }
 /* Stacked, the three cells are one column, so only the outer edges take a
    rule — otherwise the band is drawn three times. */
-#panel-intro .tr-chiasm-he--center, #panel-intro .tr-chiasm-en--center { border-top: none; }
-#panel-intro .tr-chiasm-label--center, #panel-intro .tr-chiasm-he--center { border-bottom: none; }
+.sw-front .tr-chiasm-he--center, .sw-front .tr-chiasm-en--center { border-top: none; }
+.sw-front .tr-chiasm-label--center, .sw-front .tr-chiasm-he--center { border-bottom: none; }
 
 /* ── The feature list ───────────────────────────────────────────────────── */
-#panel-intro .tr-list { font-size: 0.95em; line-height: 1.7; color: var(--ink); margin: 0 0 14px; padding-left: 1.2em; }
-#panel-intro .tr-list li { margin-bottom: 10px; }
-#panel-intro .tr-list li::marker { color: var(--accent); }
+/* On the hub the front matter is a band between the shelf and the source
+   editions, so it needs air above and below that the in-panel copy does not. */
+.hub-front { margin: 34px auto 10px; border-top: 1px solid var(--rule-light); padding-top: 30px; }
+
+/* ── The provenance table ───────────────────────────────────────────────── */
+/* Who wrote which volume's Hebrew. On a phone a three-column table would
+   force a horizontal scroll, so each row becomes a block: the volume name as
+   a heading with its statement beneath. */
+.sw-front .tr-table { width: 100%; border-collapse: collapse; font-size: 0.95em; line-height: 1.7; margin: 4px 0 16px; }
+.sw-front .tr-table thead { display: none; }
+.sw-front .tr-table tr { display: block; padding: 10px 0; border-bottom: 1px solid var(--rule-light); }
+.sw-front .tr-table tr:last-child { border-bottom: none; }
+.sw-front .tr-table th[scope="row"] {
+  display: block; text-align: left; font-family: 'David Libre', 'Georgia', serif;
+  font-weight: 700; color: var(--ink); padding: 0 0 2px;
+}
+.sw-front .tr-table td { display: block; color: var(--ink-2); padding: 0; }
+
+.sw-front .tr-list { font-size: 0.95em; line-height: 1.7; color: var(--ink); margin: 0 0 14px; padding-left: 1.2em; }
+.sw-front .tr-list li { margin-bottom: 10px; }
+.sw-front .tr-list li::marker { color: var(--accent); }
 
 /* ── Close ──────────────────────────────────────────────────────────────── */
-#panel-intro .tr-end { text-align: center; margin: 20px 0 0; }
-#panel-intro .tr-end .tr-h { margin-top: 0; }
-#panel-intro .tr-link { color: var(--accent-deep); text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
-#panel-intro .tr-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin: 26px 0 10px; direction: ltr; }
-#panel-intro .tr-actions .glossary-highlight-btn { font-size: 1em; padding: 12px 24px; border-width: 2px; }
-#panel-intro .tr-actions-alt { opacity: 0.9; }
+.sw-front .tr-end { text-align: center; margin: 20px 0 0; }
+.sw-front .tr-end .tr-h { margin-top: 0; }
+.sw-front .tr-link { color: var(--accent-deep); text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
+.sw-front .tr-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin: 26px 0 10px; direction: ltr; }
+.sw-front .tr-actions .glossary-highlight-btn { font-size: 1em; padding: 12px 24px; border-width: 2px; }
+.sw-front .tr-actions-alt { opacity: 0.9; }
 
 @media (min-width: 701px) {
-  #panel-intro .tr-body { padding: 20px 30px 30px; }
-  #panel-intro .tr-title { font-size: 1.75em; }
-  #panel-intro p.tr-p--lead { font-size: 1.2em; }
+  .sw-front .tr-body,
+  .sw-front.tr-body { padding: 20px 30px 30px; }
+  /* Room for real rows now. */
+  .sw-front .tr-table thead { display: table-header-group; }
+  .sw-front .tr-table tr { display: table-row; padding: 0; }
+  .sw-front .tr-table th, .sw-front .tr-table td {
+    display: table-cell; vertical-align: baseline; padding: 9px 14px 9px 0;
+    border-bottom: 1px solid var(--rule-light);
+  }
+  .sw-front .tr-table thead th {
+    font-size: 0.82em; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--ink-3); font-weight: 600; border-bottom: 1px solid var(--rule);
+  }
+  .sw-front .tr-table th[scope="row"] { width: 12em; padding-right: 18px; }
+  .sw-front .tr-table tbody tr:last-child th,
+  .sw-front .tr-table tbody tr:last-child td { border-bottom: none; }
+  .sw-front .tr-title { font-size: 1.75em; }
+  .sw-front p.tr-p--lead { font-size: 1.2em; }
   /* COLUMN-GAP IS ZERO ON PURPOSE. The hinge is a wash and two rules spanning
      the row, and a grid gap cuts that band into three floating segments. The
      spacing between columns comes from cell padding instead, so the band is
      continuous across all three. */
-  #panel-intro .tr-chiasm {
+  .sw-front .tr-chiasm {
     grid-template-columns: 52px 1fr minmax(190px, 0.85fr);
     column-gap: 0; row-gap: 4px; align-items: baseline;
   }
-  #panel-intro .tr-chiasm-label { margin-top: 6px; padding: 4px 10px 4px 4px; }
-  #panel-intro .tr-chiasm-he { font-size: 1em; line-height: 1.75; padding: 4px 10px; }
-  #panel-intro .tr-chiasm-en { padding: 4px 4px 4px 10px; }
-  #panel-intro .tr-chiasm-label--center { margin-top: 6px; padding-top: 8px; padding-bottom: 8px; }
-  #panel-intro .tr-chiasm-he--center,
-  #panel-intro .tr-chiasm-en--center { padding-top: 8px; padding-bottom: 8px; }
+  .sw-front .tr-chiasm-label { margin-top: 6px; padding: 4px 10px 4px 4px; }
+  .sw-front .tr-chiasm-he { font-size: 1em; line-height: 1.75; padding: 4px 10px; }
+  .sw-front .tr-chiasm-en { padding: 4px 4px 4px 10px; }
+  .sw-front .tr-chiasm-label--center { margin-top: 6px; padding-top: 8px; padding-bottom: 8px; }
+  .sw-front .tr-chiasm-he--center,
+  .sw-front .tr-chiasm-en--center { padding-top: 8px; padding-bottom: 8px; }
   /* Side by side again: every cell in the row takes both rules. */
-  #panel-intro .tr-chiasm-label--center,
-  #panel-intro .tr-chiasm-he--center,
-  #panel-intro .tr-chiasm-en--center {
+  .sw-front .tr-chiasm-label--center,
+  .sw-front .tr-chiasm-he--center,
+  .sw-front .tr-chiasm-en--center {
     border-top: 1px solid color-mix(in srgb, var(--here) 45%, transparent);
     border-bottom: 1px solid color-mix(in srgb, var(--here) 45%, transparent);
   }

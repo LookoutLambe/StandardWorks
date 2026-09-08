@@ -133,7 +133,7 @@
       page: 'bom/bom.html',
       divisions: [
         { name: '\u05D4\u05E7\u05D3\u05DE\u05D5\u05EA \u00B7 Front Matter', books: [
-          { id:'intro', en:'To the Reader', heb:'\u05D0\u05DC \u05D4\u05E7\u05D5\u05E8\u05D0', ch:1, prefix:'intro', isFront:true },
+          { id:'intro', en:'About this volume', heb:'\u05E2\u05DC \u05D4\u05DB\u05E8\u05DA \u05D4\u05D6\u05D4', ch:1, prefix:'intro', isFront:true },
           { id:'front-translator', en:"Translator's Preface", heb:'\u05D4\u05E7\u05D3\u05DE\u05EA \u05D4\u05DE\u05EA\u05E8\u05D2\u05DD', ch:1, prefix:'front-translator', isFront:true },
           { id:'front-titlepage', en:'Title Page', heb:'\u05D3\u05E3 \u05D4\u05E9\u05E2\u05E8', ch:1, prefix:'front-titlepage', isFront:true },
           { id:'front-introduction', en:'Introduction', heb:'\u05DE\u05D1\u05D5\u05D0', ch:1, prefix:'front-introduction', isFront:true },
@@ -141,7 +141,6 @@
           { id:'front-eight', en:'Eight Witnesses', heb:'\u05E9\u05DE\u05D5\u05E0\u05D4 \u05E2\u05D3\u05D9\u05DD', ch:1, prefix:'front-eight', isFront:true },
           { id:'front-js', en:'Joseph Smith', heb:'\u05D9\u05D5\u05E1\u05E3 \u05E1\u05DE\u05D9\u05EA', ch:1, prefix:'front-js', isFront:true },
           { id:'front-brief', en:'Brief Explanation', heb:'\u05D4\u05E1\u05D1\u05E8 \u05E7\u05E6\u05E8', ch:1, prefix:'front-brief', isFront:true },
-          { id:'front-hebrew-guide', en:'Hebrew Guide', heb:'\u05DE\u05D3\u05E8\u05D9\u05DA \u05E2\u05D1\u05E8\u05D9\u05EA', ch:1, prefix:'front-hebrew-guide', isFront:true }
         ]},
         { name: '\u05DC\u05D5\u05D7\u05D5\u05EA \u05E7\u05D8\u05E0\u05D9\u05DD \u00B7 Small Plates', books: [
           { id:'1ne', en:'1 Nephi', heb:"\u05E0\u05E4\u05D9 \u05D0\u05F3", ch:22, prefix:'ch' },

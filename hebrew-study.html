@@ -1,115 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Biblical Hebrew Study</title>
-  <meta name="theme-color" content="#1B2A41" />
-  <style>
-    :root {
-      --bg: #faf8f2;
-      --ink: #1a1a1a;
-      --muted: #555;
-      --accent: #c8a84e;
-      --header: #1e2233;
-      --rule: #d6ceb8;
-    }
-    body {
-      margin: 0;
-      font-family: 'David Libre', Georgia, serif;
-      background: var(--bg);
-      color: var(--ink);
-    }
-    .top {
-      background: var(--header);
-      border-bottom: 2px solid var(--accent);
-      padding: 14px 20px;
-      text-align: center;
-    }
-    .top h1 {
-      margin: 0;
-      font-family: 'David Libre', serif;
-      font-size: 1.35rem;
-      font-weight: 600;
-      color: var(--accent);
-      letter-spacing: 0.03em;
-    }
-    main {
-      max-width: 560px;
-      margin: 0 auto;
-      padding: 36px 20px 64px;
-    }
-    .lede {
-      font-size: 1.08rem;
-      line-height: 1.55;
-      color: var(--muted);
-      margin: 0 0 28px;
-    }
-    ul.nav-cards {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    ul.nav-cards a {
-      display: block;
-      padding: 16px 18px;
-      border: 1px solid var(--rule);
-      border-radius: 10px;
-      background: #fffefb;
-      text-decoration: none;
-      color: var(--ink);
-      transition: border-color .15s, box-shadow .15s;
-    }
-    ul.nav-cards a:hover {
-      border-color: var(--accent);
-      box-shadow: 0 2px 14px rgba(30,34,51,0.08);
-    }
-    ul.nav-cards a strong {
-      display: block;
-      font-family: 'David Libre', serif;
-      font-size: 1.15rem;
-      margin-bottom: 4px;
-    }
-    ul.nav-cards a span {
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-    .footer-note {
-      margin-top: 40px;
-      padding-top: 22px;
-      border-top: 1px solid var(--rule);
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-    .footer-note a {
-      color: var(--muted);
-    }
-  </style>
-  <link rel="stylesheet" href="fonts/david_libre.css?v=2">
+<link rel="stylesheet" href="fonts/david_libre.css?v=2">
+<meta charset="UTF-8">
+<script>document.documentElement.classList.add('sw-shell-pending');</script>
+<script>if(location.protocol==='file:')document.documentElement.classList.add('sw-in-app');</script>
+<script>(function(){var h=(location.hostname||'').toLowerCase(),p=location.pathname.split('/').filter(Boolean),gh=h.slice(-10)==='github.io'&&p.length>0,m=gh?'manifest.github.json':'manifest.json';document.write('<link rel="manifest" href="'+m+'" id="sw-manifest-link">');})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<script>(function(){var h=(location.hostname||'').toLowerCase(),p=location.pathname.split('/').filter(Boolean),gh=h.slice(-10)==='github.io',base=gh&&p.length?location.origin+'/'+p[0]:location.origin,root=(h==='sefermormon.com'?'https://sefermormon.com':base).replace(/\/$/,'');window._swSiteRoot=root;})();</script>
+<meta name="theme-color" content="#1B2A41">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="nav_engine.css?v=49">
+<link rel="stylesheet" href="site_chrome.css?v=71">
+<link rel="stylesheet" href="reader.css?v=105">
+html.sw-in-app .landing-app-store { display: none; }
+html.sw-in-app .landing-update-note { display: none; }
+<link rel="canonical" id="canonical-link" href="https://sefermormon.com/hebrew-study.html">
+<title>Reading Hebrew — the letters, the vowels and the marks</title>
+<meta name="description" content="A short guide to reading pointed Biblical Hebrew: the aleph-bet, the vowel signs, the marks you meet in an interlinear, and how to use the reader. Part of the Hebrew Interlinear Standard Works.">
+<meta property="og:title" content="Reading Hebrew — Hebrew Interlinear Standard Works">
+<meta property="og:description" content="The aleph-bet, the vowel system, and the marks you meet in a pointed Hebrew text.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Hebrew Interlinear Standard Works">
 <style>
-/* David Libre is the only Hebrew face across the whole site. */
-:root { font-family: 'David Libre', serif; }
-* { font-family: inherit; }
-button, input, select, textarea, option, optgroup, ::placeholder { font-family: inherit; }
+/* The primer's own table striping, lifted with it out of bom/bom.html and
+   re-scoped from #panel-front-hebrew-guide to .hg-page. */
+.hg-page .hg-alt{background:#f8f6f0} body.dark-mode .hg-page .hg-alt{background:rgba(255,255,255,0.06)} body.dark-mode .hg-page td{color:var(--on-chrome) !important}
+/* This page is one long document: no reader chrome, no panels. */
+.hg-page { padding-bottom: 60px; }
 </style>
 </head>
 <body>
-  <header class="top">
-    <h1>Biblical Hebrew study · לימוד עברית מקראית</h1>
-  </header>
-  <main>
-    <p class="lede">
-      Hebrew study tools that remain in this bundle: Strong’s dictionary. For scripture volumes, use the library hub.
-    </p>
-    <ul class="nav-cards">
-      <li><a href="dictionary.html"><strong>Dictionary</strong><span>Strong’s Hebrew lookup tools</span></a></li>
-    </ul>
-    <p class="footer-note">
-      Looking for Torah / New Testament / Book of Mormon? That is separate: <a href="index.html">Standard Works volumes</a>.
-    </p>
-  </main>
+
+<div class="page">
+  <div class="sw-front tr-body hg-page">
+
+    <div style="max-width:900px;margin:0 auto;padding:20px 30px;direction:ltr;text-align:left">
+
+      <h2 style="text-align:center;font-size:1.6em;margin-bottom:2px;color:var(--ink)">Reading Hebrew</h2>
+      <p style="text-align:center;font-family:'David Libre',serif;font-size:1.3em;color:var(--ink);margin:0 0 6px">קריאת עברית</p>
+      <hr style="width:200px;margin:0 auto 20px;border:none;border-top:1px solid #ccc">
+
+      <p style="font-size:0.95em;line-height:1.7;color:var(--ink);margin-bottom:14px">
+        Hebrew is read <strong>right to left</strong>. In this interlinear edition, each Hebrew word appears above its English gloss; the Transliterate button adds a pronunciation under every word, and a tap on any word opens its root scorecard. This guide introduces the Hebrew alphabet and vowel system, the marks you will meet in this edition, and the reader itself, so you can begin reading on your own.
+      </p>
+
+      <!-- THE ALEPH-BET -->
+      <h3 style="font-size:1.2em;color:var(--ink);margin:28px 0 10px;text-align:center">The Aleph-Bet (Consonants)</h3>
+      <hr style="width:140px;margin:0 auto 16px;border:none;border-top:1px solid #ccc">
+
+      <div style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:0.92em;margin-bottom:20px">
+        <thead>
+          <tr style="background:var(--accent);color:var(--on-accent);">
+            <th style="padding:6px 10px;text-align:center">Letter</th>
+            <th style="padding:6px 10px;text-align:left">Name</th>
+            <th style="padding:6px 10px;text-align:center">Sound</th>
+            <th style="padding:6px 10px;text-align:left">As in...</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.4em">א</td><td style="padding:5px 10px">Aleph</td><td style="padding:5px 10px;text-align:center">silent</td><td style="padding:5px 10px;color:var(--ink-2)">(vowel carrier)</td></tr>
+          <tr class="hg-alt"><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.4em">בּ / ב</td><td style="padding:5px 10px">Bet / Vet</td><td style="padding:5px 10px;text-align:center">b / v</td><td style="padding:5px 10px;color:var(--ink-2)"><strong>b</strong>oy / <strong>v</strong>ine</td></tr>
+          <tr><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.4em">ג</td><td style="padding:5px 10px">Gimel</td><td style="padding:5px 10px;text-align:center">g</td><td style="padding:5px 10px;color:var(--ink-2)"><strong>g</strong>ood</td></tr>
+          <tr class="hg-alt"><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.4em">ד</td><td style="padding:5px 10px">Dalet</td><td style="padding:5px 10px;text-align:center">d</td><td style="padding:5px 10px;color:var(--ink-2)"><strong>d</strong>oor</td></tr>
+          <tr><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.4em">ה</td><td style="padding:5px 10px">He</td><td style="padding:5px 10px;text-align:center">h</td><td style="padding:5px 10px;color:var(--ink-2)"><strong>h</strong>ouse</td></tr>
+          <tr class="hg-alt"><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.4em">ו</td><td style="padding:5px 10px">Vav</td><td style="padding:5px 10px;text-align:center">v</td><td style="padding:5px 10px;color:var(--ink-2)"><strong>v</strong>ine (also used as vowel: o, u)</td></tr>
+          <tr><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.4em">ז</td><td style="padding:5px 10px">Zayin</td><td style="padding:5px 10px;text-align:center">z</td><td style="padding:5px 10px;color:var(--ink-2)"><strong>z</strong>oo</td></tr>
+          <tr class="hg-alt"><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.4em">ח</td><td style="padding:5px 10px">Chet</td><td style="padding:5px 10px;text-align:center">ch</td><td style="padding:5px 10px;color:var(--ink-2)">Ba<strong>ch</strong> (guttural, not "ch" as in church)</td></tr>
+          <tr><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.4em">ט</td><td style="padding:5px 10px">Tet</td><td style="padding:5px 10px;text-align:center">t</td><td style="padding:5px 10px;color:var(--ink-2)"><strong>t</strong>op</td></tr>
+          <tr class="hg-alt"><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.4em">י</td><td style="padding:5px 10px">Yod</td><td style="padding:5px 10px;text-align:center">y</td><td style="padding:5px 10px;color:var(--ink-2)"><strong>y</strong>es (also used as vowel: i, e)</td></tr>
+          <tr><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.4em">כּ / כ / ך</td><td style="padding:5px 10px">Kaf / Khaf</td><td style="padding:5px 10px;text-align:center">k / kh</td><td style="padding:5px 10px;color:var(--ink-2)"><strong>k</strong>ing / lo<strong>ch</strong></td></tr>
+          <tr class="hg-alt"><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.4em">ל</td><td style="padding:5px 10px">Lamed</td><td style="padding:5px 10px;text-align:center">l</td><td style="padding:5px 10px;color:var(--ink-2)"><strong>l</strong>ight</td></tr>
+          <tr><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.4em">מ / ם</td><td style="padding:5px 10px">Mem</td><td style="padding:5px 10px;text-align:center">m</td><td style="padding:5px 10px;color:var(--ink-2)"><strong>m</strong>other</td></tr>
+          <tr class="hg-alt"><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.4em">נ / ן</td><td style="padding:5px 10px">Nun</td><td style="padding:5px 10px;text-align:center">n</td><td style="padding:5px 10px;color:var(--ink-2)"><strong>n</strong>ight</td></tr>
+          <tr><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.4em">ס</td><td style="padding:5px 10px">Samekh</td><td style="padding:5px 10px;text-align:center">s</td><td style="padding:5px 10px;color:var(--ink-2)"><strong>s</strong>un</td></tr>
+          <tr class="hg-alt"><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.4em">ע</td><td style="padding:5px 10px">Ayin</td><td style="padding:5px 10px;text-align:center">silent</td><td style="padding:5px 10px;color:var(--ink-2)">(guttural vowel carrier)</td></tr>
+          <tr><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.4em">פּ / פ / ף</td><td style="padding:5px 10px">Pe / Fe</td><td style="padding:5px 10px;text-align:center">p / f</td><td style="padding:5px 10px;color:var(--ink-2)"><strong>p</strong>ark / <strong>f</strong>ire</td></tr>
+          <tr class="hg-alt"><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.4em">צ / ץ</td><td style="padding:5px 10px">Tsade</td><td style="padding:5px 10px;text-align:center">ts</td><td style="padding:5px 10px;color:var(--ink-2)">ca<strong>ts</strong></td></tr>
+          <tr><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.4em">ק</td><td style="padding:5px 10px">Qof</td><td style="padding:5px 10px;text-align:center">q / k</td><td style="padding:5px 10px;color:var(--ink-2)"><strong>k</strong>ing (deeper in throat)</td></tr>
+          <tr class="hg-alt"><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.4em">ר</td><td style="padding:5px 10px">Resh</td><td style="padding:5px 10px;text-align:center">r</td><td style="padding:5px 10px;color:var(--ink-2)"><strong>r</strong>un (slightly rolled)</td></tr>
+          <tr><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.4em">שׁ / שׂ</td><td style="padding:5px 10px">Shin / Sin</td><td style="padding:5px 10px;text-align:center">sh / s</td><td style="padding:5px 10px;color:var(--ink-2)"><strong>sh</strong>ine / <strong>s</strong>un (dot right = sh, dot left = s)</td></tr>
+          <tr class="hg-alt"><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.4em">ת</td><td style="padding:5px 10px">Tav</td><td style="padding:5px 10px;text-align:center">t</td><td style="padding:5px 10px;color:var(--ink-2)"><strong>t</strong>ree</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <!-- NIKKUD (VOWELS) -->
+      <h3 style="font-size:1.2em;color:var(--ink);margin:28px 0 10px;text-align:center">Nikkud (Vowel Points)</h3>
+      <hr style="width:140px;margin:0 auto 16px;border:none;border-top:1px solid #ccc">
+
+      <p style="font-size:0.92em;line-height:1.7;color:var(--ink);margin-bottom:14px">
+        Biblical Hebrew writes vowels as small dots and marks placed <strong>above or below</strong> the consonant letters. These are called <em>nikkud</em> (literally "dotting"). The consonant is always spoken first, followed by its vowel.
+      </p>
+
+      <div style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:0.92em;margin-bottom:20px">
+        <thead>
+          <tr style="background:var(--accent);color:var(--on-accent);">
+            <th style="padding:6px 10px;text-align:center">Symbol</th>
+            <th style="padding:6px 10px;text-align:left">Name</th>
+            <th style="padding:6px 10px;text-align:center">Sound</th>
+            <th style="padding:6px 10px;text-align:left">As in...</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.6em">בַ</td><td style="padding:5px 10px">Patach</td><td style="padding:5px 10px;text-align:center">a</td><td style="padding:5px 10px;color:var(--ink-2)">f<strong>a</strong>ther (short)</td></tr>
+          <tr class="hg-alt"><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.6em">בָ</td><td style="padding:5px 10px">Qamats</td><td style="padding:5px 10px;text-align:center">a</td><td style="padding:5px 10px;color:var(--ink-2)">f<strong>a</strong>ther (long)</td></tr>
+          <tr><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.6em">בֶ</td><td style="padding:5px 10px">Segol</td><td style="padding:5px 10px;text-align:center">e</td><td style="padding:5px 10px;color:var(--ink-2)">b<strong>e</strong>d</td></tr>
+          <tr class="hg-alt"><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.6em">בֵ</td><td style="padding:5px 10px">Tsere</td><td style="padding:5px 10px;text-align:center">e</td><td style="padding:5px 10px;color:var(--ink-2)">th<strong>ey</strong> (long "ay")</td></tr>
+          <tr><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.6em">בִ</td><td style="padding:5px 10px">Chiriq</td><td style="padding:5px 10px;text-align:center">i</td><td style="padding:5px 10px;color:var(--ink-2)">mach<strong>i</strong>ne</td></tr>
+          <tr class="hg-alt"><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.6em">בֹ</td><td style="padding:5px 10px">Cholam</td><td style="padding:5px 10px;text-align:center">o</td><td style="padding:5px 10px;color:var(--ink-2)">g<strong>o</strong> (long "oh")</td></tr>
+          <tr><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.6em">בוֹ</td><td style="padding:5px 10px">Cholam Male</td><td style="padding:5px 10px;text-align:center">o</td><td style="padding:5px 10px;color:var(--ink-2)">g<strong>o</strong> (with vav as vowel letter)</td></tr>
+          <tr class="hg-alt"><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.6em">בֻ</td><td style="padding:5px 10px">Qubbuts</td><td style="padding:5px 10px;text-align:center">u</td><td style="padding:5px 10px;color:var(--ink-2)">r<strong>u</strong>le</td></tr>
+          <tr><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.6em">בוּ</td><td style="padding:5px 10px">Shuruk</td><td style="padding:5px 10px;text-align:center">u</td><td style="padding:5px 10px;color:var(--ink-2)">r<strong>u</strong>le (vav with dot = "oo")</td></tr>
+          <tr class="hg-alt"><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.6em">בְ</td><td style="padding:5px 10px">Shva</td><td style="padding:5px 10px;text-align:center">e / &#8709;</td><td style="padding:5px 10px;color:var(--ink-2)">quick "uh" or silent</td></tr>
+          <tr><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.6em">בֲ</td><td style="padding:5px 10px">Chataf Patach</td><td style="padding:5px 10px;text-align:center">a</td><td style="padding:5px 10px;color:var(--ink-2)">quick "ah"</td></tr>
+          <tr class="hg-alt"><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.6em">בֱ</td><td style="padding:5px 10px">Chataf Segol</td><td style="padding:5px 10px;text-align:center">e</td><td style="padding:5px 10px;color:var(--ink-2)">quick "eh"</td></tr>
+          <tr><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.6em">בֳ</td><td style="padding:5px 10px">Chataf Qamats</td><td style="padding:5px 10px;text-align:center">o</td><td style="padding:5px 10px;color:var(--ink-2)">quick "oh"</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <!-- DAGESH -->
+      <h3 style="font-size:1.2em;color:var(--ink);margin:28px 0 10px;text-align:center">The Dagesh (Dot Inside a Letter)</h3>
+      <hr style="width:140px;margin:0 auto 16px;border:none;border-top:1px solid #ccc">
+
+      <p style="font-size:0.92em;line-height:1.7;color:var(--ink);margin-bottom:14px">
+        A dot placed <strong>inside</strong> a consonant is called a <em>dagesh</em>. For three letters, it changes the pronunciation:
+      </p>
+      <div style="overflow-x:auto">
+      <table style="width:100%;max-width:500px;margin:0 auto 20px;border-collapse:collapse;font-size:0.95em">
+        <tr>
+          <td style="padding:8px 14px;text-align:center;font-family:'David Libre',serif;font-size:1.5em">בּ</td>
+          <td style="padding:8px 14px"><strong>b</strong> (boy)</td>
+          <td style="padding:8px 14px;text-align:center;font-family:'David Libre',serif;font-size:1.5em">ב</td>
+          <td style="padding:8px 14px"><strong>v</strong> (vine)</td>
+        </tr>
+        <tr class="hg-alt">
+          <td style="padding:8px 14px;text-align:center;font-family:'David Libre',serif;font-size:1.5em">כּ</td>
+          <td style="padding:8px 14px"><strong>k</strong> (king)</td>
+          <td style="padding:8px 14px;text-align:center;font-family:'David Libre',serif;font-size:1.5em">כ</td>
+          <td style="padding:8px 14px"><strong>kh</strong> (loch)</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 14px;text-align:center;font-family:'David Libre',serif;font-size:1.5em">פּ</td>
+          <td style="padding:8px 14px"><strong>p</strong> (park)</td>
+          <td style="padding:8px 14px;text-align:center;font-family:'David Libre',serif;font-size:1.5em">פ</td>
+          <td style="padding:8px 14px"><strong>f</strong> (fire)</td>
+        </tr>
+      </table>
+      </div>
+      <p style="font-size:0.92em;line-height:1.7;color:var(--ink-2);margin-bottom:14px">
+        For all other letters, the dagesh simply indicates a doubled or strengthened sound.
+      </p>
+
+      <!-- MAQQEF -->
+      <h3 style="font-size:1.2em;color:var(--ink);margin:28px 0 10px;text-align:center">The Maqqef (Hebrew Hyphen)</h3>
+      <hr style="width:140px;margin:0 auto 16px;border:none;border-top:1px solid #ccc">
+
+      <p style="font-size:0.92em;line-height:1.7;color:var(--ink);margin-bottom:14px">
+        The maqqef <span style="font-family:'David Libre',serif;font-size:1.2em">&#x05BE;</span> is a small horizontal line that joins two or more words into a single unit, much like a hyphen in English. For example: <span dir="rtl" style="font-family:'David Libre',serif;font-size:1.1em;color:var(--ink)">אֶת־הָאָרֶץ</span> (<em>et-ha'arets</em>) = "[ACC]-the-land."
+      </p>
+
+      <!-- MARKS IN THIS EDITION -->
+<h3 style="font-size:1.2em;color:var(--ink);margin:28px 0 10px;text-align:center">Other Marks You Will Meet in This Edition</h3>
+<hr style="width:140px;margin:0 auto 16px;border:none;border-top:1px solid #ccc">
+<p style="font-size:0.92em;line-height:1.7;color:var(--ink);margin-bottom:14px">A few marks are not in the tables above but appear on every page of this edition.</p>
+<div style="overflow-x:auto">
+<table style="width:100%;border-collapse:collapse;font-size:0.92em;margin-bottom:20px">
+<thead>
+<tr style="background:var(--accent);color:var(--on-accent);"><th style="padding:6px 10px;text-align:center">Mark</th><th style="padding:6px 10px;text-align:left">Name</th><th style="padding:6px 10px;text-align:center">Sound</th><th style="padding:6px 10px;text-align:left">What it does</th></tr>
+</thead>
+<tbody>
+<tr><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.5em">כׇּ</td><td style="padding:5px 10px">Qamats Qatan</td><td style="padding:5px 10px;text-align:center">o</td><td style="padding:5px 10px;color:var(--ink-2)">a short "o", written like a qamats: this edition shows it in <span style="color:#c0392b">red</span> so you know to read <em>kol</em>, not <em>kal</em>, in <span dir="rtl" style="font-family:'David Libre',serif;font-size:1.15em;color:var(--ink)">כׇּל</span> "all"</td></tr>
+<tr class="hg-alt"><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.5em">׃</td><td style="padding:5px 10px">Sof Pasuq</td><td style="padding:5px 10px;text-align:center">&#8212;</td><td style="padding:5px 10px;color:var(--ink-2)">marks the end of a verse</td></tr>
+<tr><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.5em">בְּרֵאשִׁית</td><td style="padding:5px 10px">Vocal Shva</td><td style="padding:5px 10px;text-align:center">e</td><td style="padding:5px 10px;color:var(--ink-2)">a shva under the first letter of a word, or after a long vowel or a doubled letter, is a quick "e": <em>be-re-sheet</em>; otherwise it is silent</td></tr>
+<tr class="hg-alt"><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.5em">רוּחַ</td><td style="padding:5px 10px">Furtive Patach</td><td style="padding:5px 10px;text-align:center">a</td><td style="padding:5px 10px;color:var(--ink-2)">a patach under a final ח, ע or הּ is spoken <em>before</em> the letter: <em>ru-ach</em>, not <em>ru-cha</em></td></tr>
+<tr><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.5em">וַיֹּאמֶר</td><td style="padding:5px 10px">Vav Consecutive</td><td style="padding:5px 10px;text-align:center">va-</td><td style="padding:5px 10px;color:var(--ink-2)">vav with patach and a doubled letter turns a future form into narrative past: <em>vayomer</em>, "and he said" — the commonest verb shape in the book</td></tr>
+<tr class="hg-alt"><td style="padding:5px 10px;text-align:center;font-family:'David Libre',serif;font-size:1.5em">יְהוָה</td><td style="padding:5px 10px">The Name</td><td style="padding:5px 10px;text-align:center">Adonai</td><td style="padding:5px 10px;color:var(--ink-2)">the four letters of the divine name are not sounded; read <em>Adonai</em>, "the Lord", which is what the Transliterate button writes</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- TRANSLITERATION -->
+<h3 style="font-size:1.2em;color:var(--ink);margin:28px 0 10px;text-align:center">The Transliteration in This Edition</h3>
+<hr style="width:140px;margin:0 auto 16px;border:none;border-top:1px solid #ccc">
+<p style="font-size:0.92em;line-height:1.7;color:var(--ink);margin-bottom:14px">The Transliterate button writes each word in Latin letters. The scheme is the popular one, not the scholarly one: <strong>ch</strong> is ח (as in Bach), <strong>kh</strong> is כ without a dagesh (loch), <strong>ts</strong> is צ, <strong>k</strong> stands for both ק and כּ, <strong>sh</strong> and <strong>s</strong> follow the dot on שׁ and שׂ, and א and ע are not written. A doubled consonant shows a dagesh forte: <em>lakkore</em> for <span dir="rtl" style="font-family:'David Libre',serif;font-size:1.15em;color:var(--ink)">לַקּוֹרֵא</span>. Words joined by a maqqef are joined by a hyphen: <em>devar-Adonai</em>.</p>
+
+<!-- USING THE READER -->
+<h3 style="font-size:1.2em;color:var(--ink);margin:28px 0 10px;text-align:center">Using the Reader</h3>
+<hr style="width:140px;margin:0 auto 16px;border:none;border-top:1px solid #ccc">
+<p style="font-size:0.92em;line-height:1.7;color:var(--ink);margin-bottom:14px">The bar at the foot of the screen sets the view: <strong>Interlinear</strong> (Hebrew with a gloss under each word), <strong>Hebrew Only</strong>, <strong>Dual</strong> (Hebrew and English side by side), <strong>Transliterate</strong>, and <strong>No Nikkud</strong> (the consonants alone, as in a Torah scroll). Beside it the buttons turn the chapter, and the chapter name between them opens the list of books. The two letters at the head of the page change the size of the text; the moon turns on night reading.</p>
+<p style="font-size:0.92em;line-height:1.7;color:var(--ink);margin-bottom:14px"><strong>Tap any Hebrew word</strong> and its root scorecard opens: the root and its meaning, how many times that root occurs in each of the six volumes, its forms and glosses, and every reference. The scorecards are there so that you can test the translation for yourself: a word chosen for the Book of Mormon can be weighed against the same root in the Hebrew Bible, and where a root is rare or unattested the card says so.</p>
+<p style="font-size:0.92em;line-height:1.7;color:var(--ink);margin-bottom:14px"><strong>Words in blue</strong> belong to the major themes of the Topical Guide; tap one to open the theme. <strong>Press and hold</strong> to select a run of words, then highlight it, add a note, copy or share it, or open its cross-references and glossary. <strong>Search</strong> finds Hebrew with or without vowel points, or English. The other five volumes open from the Standard Works page, and every scorecard reaches across all six.</p>
+<p style="font-size:0.92em;line-height:1.7;color:var(--ink);margin-bottom:14px">The Hebrew text is an original translation into Biblical Hebrew by Chris Lambe; the English shown in Dual view is the 1920 edition. The reader itself was built with artificial intelligence under the translator's direction. The Brief Explanation in the front matter says more: <a href="#"  style="color:var(--tap-blue,var(--here))">About this edition &rarr;</a></p>
+
+<!-- PRACTICE EXAMPLES -->
+      <h3 style="font-size:1.2em;color:var(--ink);margin:28px 0 10px;text-align:center">Practice: Words from the Book of Mormon</h3>
+      <hr style="width:140px;margin:0 auto 16px;border:none;border-top:1px solid #ccc">
+
+      <p style="font-size:0.92em;line-height:1.7;color:var(--ink);margin-bottom:16px">
+        Try sounding out these common words. Remember: read <strong>right to left</strong>, consonant first, then its vowel.
+      </p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-bottom:24px">
+
+        <div style="background:var(--highlight);border-radius:8px;padding:16px;border-left:4px solid var(--accent)">
+          <div style="text-align:center;font-family:'David Libre',serif;font-size:1.8em;color:var(--ink);direction:rtl">וַיְהִי</div>
+          <div style="text-align:center;font-style:italic;color:var(--ink-3);margin:4px 0">vayehi</div>
+          <div style="text-align:center;font-weight:600;margin-bottom:8px">and-it-came-to-pass</div>
+          <div style="font-size:0.82em;color:var(--ink-2);line-height:1.5">
+            <span style="font-family:'David Libre',serif">וַ</span> va (vav + patach) &middot;
+            <span style="font-family:'David Libre',serif">יְ</span> ye (yod + shva) &middot;
+            <span style="font-family:'David Libre',serif">הִי</span> hi (he + chiriq + yod)
+          </div>
+        </div>
+
+        <div style="background:var(--highlight);border-radius:8px;padding:16px;border-left:4px solid var(--accent)">
+          <div style="text-align:center;font-family:'David Libre',serif;font-size:1.8em;color:var(--ink);direction:rtl">שָׁלוֹם</div>
+          <div style="text-align:center;font-style:italic;color:var(--ink-3);margin:4px 0">shalom</div>
+          <div style="text-align:center;font-weight:600;margin-bottom:8px">peace</div>
+          <div style="font-size:0.82em;color:var(--ink-2);line-height:1.5">
+            <span style="font-family:'David Libre',serif">שָׁ</span> sha (shin + qamats) &middot;
+            <span style="font-family:'David Libre',serif">לוֹ</span> lo (lamed + cholam vav) &middot;
+            <span style="font-family:'David Libre',serif">ם</span> m (final mem)
+          </div>
+        </div>
+
+        <div style="background:var(--highlight);border-radius:8px;padding:16px;border-left:4px solid var(--accent)">
+          <div style="text-align:center;font-family:'David Libre',serif;font-size:1.8em;color:var(--ink);direction:rtl">יְרוּשָׁלַיִם</div>
+          <div style="text-align:center;font-style:italic;color:var(--ink-3);margin:4px 0">yerushalayim</div>
+          <div style="text-align:center;font-weight:600;margin-bottom:8px">Jerusalem</div>
+          <div style="font-size:0.82em;color:var(--ink-2);line-height:1.5">
+            <span style="font-family:'David Libre',serif">יְ</span> ye (yod + shva) &middot;
+            <span style="font-family:'David Libre',serif">רוּ</span> ru (resh + shuruk) &middot;
+            <span style="font-family:'David Libre',serif">שָׁ</span> sha (shin + qamats) &middot;
+            <span style="font-family:'David Libre',serif">לַ</span> la (lamed + patach) &middot;
+<span style="font-family:'David Libre',serif">יִם</span> yim (yod + chiriq + final mem)
+          </div>
+        </div>
+
+        <div style="background:var(--highlight);border-radius:8px;padding:16px;border-left:4px solid var(--accent)">
+          <div style="text-align:center;font-family:'David Libre',serif;font-size:1.8em;color:var(--ink);direction:rtl">דְּבַר־יהוה</div>
+          <div style="text-align:center;font-style:italic;color:var(--ink-3);margin:4px 0">devar-YHVH</div>
+          <div style="text-align:center;font-weight:600;margin-bottom:8px">word-of-the-LORD</div>
+          <div style="font-size:0.82em;color:var(--ink-2);line-height:1.5">
+            <span style="font-family:'David Libre',serif">דְּ</span> de (dalet + dagesh + shva) &middot;
+            <span style="font-family:'David Libre',serif">בַר</span> var (bet + patach + resh) &middot;
+            <span style="font-family:'David Libre',serif">יהוה</span> the LORD
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center;margin:30px 0 20px">
+        <a class="glossary-highlight-btn" href="bom/bom.html#1-nephi-1">Start Reading: 1 Nephi 1 &rarr;</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="site_chrome.js?v=44" data-sw-volume="hub"></script>
+<script src="nav_engine.js?v=82"></script>
+<script src="sw_register.js?v=3"></script>
 </body>
 </html>
