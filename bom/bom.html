@@ -3818,7 +3818,7 @@ window.READER = window.READER || {
   books: []      /* filled from BOOK_DATA the moment it exists, below */
 };
 </script>
-<script src="../reader_surface.js?v=9"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
+<script src="../reader_surface.js?v=10"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
 <script src="../translit.js?v=1"></script>
 <script src="../jst_refmap.js?v=1"></script>
 <script src="../verse_loader.js?v=5"></script>
@@ -4737,110 +4737,18 @@ function _getSelectedWordUnits(sel) {
   return result;
 }
 
-function _showSelToolbar() {
-  var sel = window.getSelection();
-  if (!sel || sel.isCollapsed || sel.toString().trim().length === 0) {
-    _hideSelToolbar();
-    return;
-  }
-  // Don't trigger on inputs/textareas or inside the toolbar itself
-  var anchor = sel.anchorNode && (sel.anchorNode.nodeType === 3 ? sel.anchorNode.parentElement : sel.anchorNode);
-  if (anchor && (anchor.closest('#sel-toolbar') || anchor.closest('#hl-pop') || anchor.closest('input') || anchor.closest('textarea') || anchor.closest('#search-results'))) return;
-
-  var wus = _getSelectedWordUnits(sel);
-  if (wus.length > 0) {
-    _selMode = 'word';
-    _selWordUnits = wus;
-  } else {
-    _selMode = 'text';
-    _selWordUnits = [];
-  }
-
-  var range = sel.getRangeAt(0);
-  var rect = range.getBoundingClientRect();
-
-  // Reset the rail's sub-panels
-  var sp = document.getElementById('sel-subpanel');
-  if (sp) sp.style.display = 'none';
-  var snr = document.getElementById('sel-note-row');
-  if (snr) snr.style.display = 'none';
-  var hlBtn = document.getElementById('sel-btn-highlight');
-  if (hlBtn) hlBtn.classList.remove('active');
-
-  // The popover appears at the selection: color rows for word selections,
-  // note/copy/share always; it closes when the selection collapses.
-  var pop = document.getElementById('hl-pop');
-  if (!pop) return;
-  var rowHl = document.getElementById('hl-row-hl');
-  if (rowHl) rowHl.style.display = _selMode === 'word' ? 'flex' : 'none';
-  var rowUl = document.getElementById('hl-row-ul');
-  if (rowUl) rowUl.style.display = _selMode === 'word' ? 'flex' : 'none';
-  var noteRow = document.getElementById('hl-note-row');
-  if (noteRow) noteRow.style.display = 'none';
-  pop.classList.add('visible');
-  if (_selMode === 'word') _updateSelToolbarIndicators();
-}
-
 
 // Get the verse key from the first selected word-unit
 
 
 // Toggle note input in the floating toolbar
-function selToolbarOpenNote() {
-  var row = document.getElementById('sel-note-row');
-  var panel = document.getElementById('sel-subpanel');
-  if (!row || !panel) return;
-  var showing = row.style.display !== 'none';
-  if (showing) {
-    row.style.display = 'none';
-    var hlBtn = document.getElementById('sel-btn-highlight');
-    if (!hlBtn || !hlBtn.classList.contains('active')) {
-      panel.style.display = 'none';
-    }
-  } else {
-    panel.style.display = 'block';
-    row.style.display = 'block';
-    _loadSelNote();
-    var ta = document.getElementById('sel-note-input');
-    if (ta) ta.focus();
-  }
-}
+
 
 // Save note from the floating toolbar
-function selToolbarSaveNote() {
-  var vk = _selVerseKey();
-  if (!vk) return;
-  var ta = document.getElementById('sel-note-input');
-  if (!ta) return;
-  if (ta.value.trim()) {
-    _swNotes[vk] = ta.value;
-  } else {
-    delete _swNotes[vk];
-  }
-  _saveNotes();
-  var noteText = ta.value.trim();
-  ta.value = '';
-  window.getSelection().removeAllRanges();
-  _hideSelToolbar();
-  // Add note marker to the verse and open in xref panel
-  addNoteMarkers();
-  if (noteText) {
-    openNoteInXrefPanel(vk);
-  }
-}
+
 
 // Load existing note into the toolbar when showing
-function _loadSelNote() {
-  var ta = document.getElementById('sel-note-input');
-  if (!ta) return;
-  var vk = _selVerseKey();
-  ta.value = vk ? (_swNotes[vk] || '') : '';
-  // Show verse reference as placeholder
-  if (vk) {
-    var parts = vk.split('|');
-    ta.placeholder = 'Note for ' + parts[0] + ' ' + parts[1] + ':' + parts[2] + '...';
-  }
-}
+
 
 // === Note markers on verses (integrated with cross-reference panel) ===
 
@@ -4956,80 +4864,11 @@ var _currentAnnTab = 'highlights';
 // === SHARE FUNCTIONALITY ===
 
 
-
-
-function selToolbarShare() {
-  var shareText, ref;
-  if (_selMode === 'word' && _selWordUnits.length > 0) {
-    var heb = [], eng = [];
-    _selWordUnits.forEach(function(wu) {
-      var hw = wu.querySelector('.hw');
-      var gl = wu.querySelector('.gl');
-      if (hw) heb.push(hw.textContent);
-      if (gl && gl.textContent.trim()) eng.push(gl.textContent.trim());
-    });
-    var wid = _selWordUnits[0].getAttribute('data-wid') || '';
-    var parts = wid.split('|');
-    ref = parts.length >= 3 ? parts[0] + ' ' + parts[1] + ':' + parts[2] : _getChapterLabel();
-    shareText = heb.join(' ') + '\n' + eng.join(' · ') + '\n(' + ref + ')';
-  } else {
-    var sel = window.getSelection();
-    shareText = sel ? sel.toString() : '';
-    ref = typeof _getChapterLabel === 'function' ? _getChapterLabel() : 'Book of Mormon';
-  }
-  _shareContent = {
-    title: ref + ' — Hebrew Interlinear',
-    text: shareText,
-    url: typeof _getShareUrl === 'function' ? _getShareUrl() : window.location.href
-  };
-  document.getElementById('share-title').textContent = 'Share selection';
-  document.getElementById('share-preview').textContent =
-    _shareContent.text.length > 120 ? _shareContent.text.substring(0, 120) + '...' : _shareContent.text;
-  document.getElementById('copy-label').textContent = 'Copy';
-  if (navigator.share) document.getElementById('share-native-btn').style.display = '';
-  document.getElementById('share-popup').classList.add('visible');
-  document.getElementById('share-overlay').classList.add('visible');
-}
-
 // Toggle highlight/underline color sub-panel
-function selToolbarToggleColors() {
-  var panel = document.getElementById('sel-subpanel');
-  var btn = document.getElementById('sel-btn-highlight');
-  var noteRow = document.getElementById('sel-note-row');
-  if (panel.style.display === 'none' || panel.style.display === '') {
-    noteRow.style.display = 'none';
-    panel.style.display = 'block';
-    btn.classList.add('active');
-    _updateSelToolbarIndicators();
-  } else {
-    panel.style.display = 'none';
-    btn.classList.remove('active');
-  }
-}
+
 
 // Copy selected text to clipboard
-function selToolbarCopy() {
-  var text;
-  if (_selMode === 'word' && _selWordUnits.length > 0) {
-    var heb = [], eng = [];
-    _selWordUnits.forEach(function(wu) {
-      var hw = wu.querySelector('.hw');
-      var gl = wu.querySelector('.gl');
-      if (hw) heb.push(hw.textContent);
-      if (gl && gl.textContent.trim()) eng.push(gl.textContent.trim());
-    });
-    text = heb.join(' ') + '\n' + eng.join(' \u00b7 ');
-  } else {
-    var sel = window.getSelection();
-    text = sel ? sel.toString() : '';
-  }
-  navigator.clipboard.writeText(text).then(function() {
-    ['sel-btn-copy', 'hl-btn-copy'].forEach(function(id) {
-      var btn = document.getElementById(id);
-      if (btn) { btn.style.color = 'var(--here-chrome)'; setTimeout(function() { btn.style.color = ''; }, 1200); }
-    });
-  });
-}
+
 
 // Open cross-reference panel for selected word's root
 function selToolbarXref() {
@@ -5123,17 +4962,6 @@ function selToolbarXref() {
 }
 
 // Clear all annotations from selected word-units
-function selToolbarClearAll() {
-  _selWordUnits.forEach(function(wu) {
-    var wid = wu.getAttribute('data-wid');
-    if (wid) {
-      setWordAnnotation(wid, _selTier, 'hl', null);
-      setWordAnnotation(wid, _selTier, 'ul', null);
-    }
-  });
-  window.getSelection().removeAllRanges();
-  setTimeout(_hideSelToolbar, 150);
-}
 
 
 function renderAnnotationsList() {

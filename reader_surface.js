@@ -928,3 +928,205 @@ function shareNative() {
   navigator.share({ title: c.title, text: c.text, url: c.url }).catch(function() {});
   closeSharePopup();
 }
+
+/* ══════════════════════════════════════════════════════════════════════
+   THE SELECTION TOOLBAR — one implementation
+   ══════════════════════════════════════════════════════════════════════
+   Eight functions, and in every one of them bom.html's was the fuller copy —
+   not a different design, the same design further along: null guards on
+   elements the five dereferenced blind, the highlight button showing its
+   active state, the note field carrying the verse reference as its
+   placeholder, the selection cleared after an action so the toolbar does not
+   linger over nothing, and clearing an annotation going through
+   setWordAnnotation instead of reaching into the store.
+
+   The five's DOM already has every id these touch — sel-subpanel,
+   sel-note-row, sel-btn-highlight — so they gain the behaviour with no markup
+   change.
+
+   addNoteMarkers and openNoteInXrefPanel exist only on bom.html; they belong
+   to the cross-reference panel, which is still forked. They are called through
+   a typeof guard so this file does not depend on a cluster it has not reached
+   yet — on the five the guard is simply false, which is exactly what those
+   pages did before. */
+
+function _showSelToolbar() {
+  var sel = window.getSelection();
+  if (!sel || sel.isCollapsed || sel.toString().trim().length === 0) {
+    _hideSelToolbar();
+    return;
+  }
+  // Don't trigger on inputs/textareas or inside the toolbar itself
+  var anchor = sel.anchorNode && (sel.anchorNode.nodeType === 3 ? sel.anchorNode.parentElement : sel.anchorNode);
+  if (anchor && (anchor.closest('#sel-toolbar') || anchor.closest('#hl-pop') || anchor.closest('input') || anchor.closest('textarea') || anchor.closest('#search-results'))) return;
+
+  var wus = _getSelectedWordUnits(sel);
+  if (wus.length > 0) {
+    _selMode = 'word';
+    _selWordUnits = wus;
+  } else {
+    _selMode = 'text';
+    _selWordUnits = [];
+  }
+
+  var range = sel.getRangeAt(0);
+  var rect = range.getBoundingClientRect();
+
+  // Reset the rail's sub-panels
+  var sp = document.getElementById('sel-subpanel');
+  if (sp) sp.style.display = 'none';
+  var snr = document.getElementById('sel-note-row');
+  if (snr) snr.style.display = 'none';
+  var hlBtn = document.getElementById('sel-btn-highlight');
+  if (hlBtn) hlBtn.classList.remove('active');
+
+  // The popover appears at the selection: color rows for word selections,
+  // note/copy/share always; it closes when the selection collapses.
+  var pop = document.getElementById('hl-pop');
+  if (!pop) return;
+  var rowHl = document.getElementById('hl-row-hl');
+  if (rowHl) rowHl.style.display = _selMode === 'word' ? 'flex' : 'none';
+  var rowUl = document.getElementById('hl-row-ul');
+  if (rowUl) rowUl.style.display = _selMode === 'word' ? 'flex' : 'none';
+  var noteRow = document.getElementById('hl-note-row');
+  if (noteRow) noteRow.style.display = 'none';
+  pop.classList.add('visible');
+  if (_selMode === 'word') _updateSelToolbarIndicators();
+}
+
+function _loadSelNote() {
+  var ta = document.getElementById('sel-note-input');
+  if (!ta) return;
+  var vk = _selVerseKey();
+  ta.value = vk ? (_swNotes[vk] || '') : '';
+  // Show verse reference as placeholder
+  if (vk) {
+    var parts = vk.split('|');
+    ta.placeholder = 'Note for ' + parts[0] + ' ' + parts[1] + ':' + parts[2] + '...';
+  }
+}
+
+function selToolbarToggleColors() {
+  var panel = document.getElementById('sel-subpanel');
+  var btn = document.getElementById('sel-btn-highlight');
+  var noteRow = document.getElementById('sel-note-row');
+  if (panel.style.display === 'none' || panel.style.display === '') {
+    noteRow.style.display = 'none';
+    panel.style.display = 'block';
+    btn.classList.add('active');
+    _updateSelToolbarIndicators();
+  } else {
+    panel.style.display = 'none';
+    btn.classList.remove('active');
+  }
+}
+
+function selToolbarOpenNote() {
+  var row = document.getElementById('sel-note-row');
+  var panel = document.getElementById('sel-subpanel');
+  if (!row || !panel) return;
+  var showing = row.style.display !== 'none';
+  if (showing) {
+    row.style.display = 'none';
+    var hlBtn = document.getElementById('sel-btn-highlight');
+    if (!hlBtn || !hlBtn.classList.contains('active')) {
+      panel.style.display = 'none';
+    }
+  } else {
+    panel.style.display = 'block';
+    row.style.display = 'block';
+    _loadSelNote();
+    var ta = document.getElementById('sel-note-input');
+    if (ta) ta.focus();
+  }
+}
+
+function selToolbarSaveNote() {
+  var vk = _selVerseKey();
+  if (!vk) return;
+  var ta = document.getElementById('sel-note-input');
+  if (!ta) return;
+  if (ta.value.trim()) {
+    _swNotes[vk] = ta.value;
+  } else {
+    delete _swNotes[vk];
+  }
+  _saveNotes();
+  var noteText = ta.value.trim();
+  ta.value = '';
+  window.getSelection().removeAllRanges();
+  _hideSelToolbar();
+  // Add note marker to the verse and open in xref panel
+  if (typeof addNoteMarkers === 'function') addNoteMarkers();
+  if (noteText) {
+    if (typeof openNoteInXrefPanel === 'function') openNoteInXrefPanel(vk);
+  }
+}
+
+function selToolbarClearAll() {
+  _selWordUnits.forEach(function(wu) {
+    var wid = wu.getAttribute('data-wid');
+    if (wid) {
+      setWordAnnotation(wid, _selTier, 'hl', null);
+      setWordAnnotation(wid, _selTier, 'ul', null);
+    }
+  });
+  window.getSelection().removeAllRanges();
+  setTimeout(_hideSelToolbar, 150);
+}
+
+function selToolbarCopy() {
+  var text;
+  if (_selMode === 'word' && _selWordUnits.length > 0) {
+    var heb = [], eng = [];
+    _selWordUnits.forEach(function(wu) {
+      var hw = wu.querySelector('.hw');
+      var gl = wu.querySelector('.gl');
+      if (hw) heb.push(hw.textContent);
+      if (gl && gl.textContent.trim()) eng.push(gl.textContent.trim());
+    });
+    text = heb.join(' ') + '\n' + eng.join(' \u00b7 ');
+  } else {
+    var sel = window.getSelection();
+    text = sel ? sel.toString() : '';
+  }
+  navigator.clipboard.writeText(text).then(function() {
+    ['sel-btn-copy', 'hl-btn-copy'].forEach(function(id) {
+      var btn = document.getElementById(id);
+      if (btn) { btn.style.color = 'var(--here-chrome)'; setTimeout(function() { btn.style.color = ''; }, 1200); }
+    });
+  });
+}
+
+function selToolbarShare() {
+  var shareText, ref;
+  if (_selMode === 'word' && _selWordUnits.length > 0) {
+    var heb = [], eng = [];
+    _selWordUnits.forEach(function(wu) {
+      var hw = wu.querySelector('.hw');
+      var gl = wu.querySelector('.gl');
+      if (hw) heb.push(hw.textContent);
+      if (gl && gl.textContent.trim()) eng.push(gl.textContent.trim());
+    });
+    var wid = _selWordUnits[0].getAttribute('data-wid') || '';
+    var parts = wid.split('|');
+    ref = parts.length >= 3 ? parts[0] + ' ' + parts[1] + ':' + parts[2] : _getChapterLabel();
+    shareText = heb.join(' ') + '\n' + eng.join(' · ') + '\n(' + ref + ')';
+  } else {
+    var sel = window.getSelection();
+    shareText = sel ? sel.toString() : '';
+    ref = typeof _getChapterLabel === 'function' ? _getChapterLabel() : 'Book of Mormon';
+  }
+  _shareContent = {
+    title: ref + ' — Hebrew Interlinear',
+    text: shareText,
+    url: typeof _getShareUrl === 'function' ? _getShareUrl() : window.location.href
+  };
+  document.getElementById('share-title').textContent = 'Share selection';
+  document.getElementById('share-preview').textContent =
+    _shareContent.text.length > 120 ? _shareContent.text.substring(0, 120) + '...' : _shareContent.text;
+  document.getElementById('copy-label').textContent = 'Copy';
+  if (navigator.share) document.getElementById('share-native-btn').style.display = '';
+  document.getElementById('share-popup').classList.add('visible');
+  document.getElementById('share-overlay').classList.add('visible');
+}

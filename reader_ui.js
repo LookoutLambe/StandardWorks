@@ -630,87 +630,6 @@ function _getSelectedWordUnits(sel) {
   return result;
 }
 
-function _showSelToolbar() {
-  var sel = window.getSelection();
-  if (!sel || sel.isCollapsed || sel.toString().trim().length === 0) { _hideSelToolbar(); return; }
-  var anchor = sel.anchorNode && (sel.anchorNode.nodeType === 3 ? sel.anchorNode.parentElement : sel.anchorNode);
-  if (anchor && (anchor.closest('#sel-toolbar') || anchor.closest('#hl-pop') || anchor.closest('input') || anchor.closest('textarea'))) return;
-  var wus = _getSelectedWordUnits(sel);
-  if (wus.length > 0) { _selMode = 'word'; _selWordUnits = wus; }
-  else { _selMode = 'text'; _selWordUnits = []; }
-  var range = sel.getRangeAt(0);
-  var rect = range.getBoundingClientRect();
-  // Every popover part is optional: the underline row (hl-row-ul) no longer
-  // exists on any page, and an unguarded .style on a missing id threw here on
-  // every real selection, so the popover never opened (the nav_engine wrapper
-  // only forwarded the call and took the blame in the console).
-  var sp = document.getElementById('sel-subpanel');
-  if (sp) sp.style.display = 'none';
-  var snr = document.getElementById('sel-note-row');
-  if (snr) snr.style.display = 'none';
-  // The popover appears at the selection: color rows for word selections,
-  // note/copy/share always; it closes when the selection collapses.
-  var pop = document.getElementById('hl-pop');
-  if (!pop) return;
-  var rowHl = document.getElementById('hl-row-hl');
-  if (rowHl) rowHl.style.display = _selMode === 'word' ? 'flex' : 'none';
-  var rowUl = document.getElementById('hl-row-ul');
-  if (rowUl) rowUl.style.display = _selMode === 'word' ? 'flex' : 'none';
-  var noteRow = document.getElementById('hl-note-row');
-  if (noteRow) noteRow.style.display = 'none';
-  pop.classList.add('visible');
-  if (_selMode === 'word') _updateSelToolbarIndicators();
-}
-
-
-function selToolbarToggleColors() {
-  var sp = document.getElementById('sel-subpanel');
-  sp.style.display = sp.style.display === 'none' ? 'block' : 'none';
-}
-
-function selToolbarOpenNote() {
-  var row = document.getElementById('sel-note-row');
-  var panel = document.getElementById('sel-subpanel');
-  if (row.style.display !== 'none') { row.style.display = 'none'; } else { panel.style.display = 'block'; row.style.display = 'block'; _loadSelNote(); document.getElementById('sel-note-input').focus(); }
-}
-
-
-function _loadSelNote() {
-  var ta = document.getElementById('sel-note-input');
-  var vk = _selVerseKey();
-  ta.value = vk ? (_swNotes[vk] || '') : '';
-}
-
-function selToolbarSaveNote() {
-  var vk = _selVerseKey();
-  if (!vk) return;
-  var ta = document.getElementById('sel-note-input');
-  if (ta.value.trim()) { _swNotes[vk] = ta.value; } else { delete _swNotes[vk]; }
-  _saveNotes();
-  ta.value = '';
-  _hideSelToolbar();
-}
-
-function selToolbarCopy() {
-  var text = '';
-  _selWordUnits.forEach(function(wu) {
-    var el = wu.querySelector('.' + _selTier);
-    if (el) text += (text ? ' ' : '') + el.textContent;
-  });
-  if (!text && _selMode === 'text') text = window.getSelection().toString();
-  if (text) { navigator.clipboard.writeText(text).catch(function() {}); }
-  _hideSelToolbar();
-}
-
-function selToolbarShare() { _hideSelToolbar(); openSharePopup(); }
-
-function selToolbarClearAll() {
-  _selWordUnits.forEach(function(wu) {
-    var wid = wu.getAttribute('data-wid');
-    if (wid && _swAnnotations[wid]) { delete _swAnnotations[wid]; _saveAnnotations(); applyAnnotationToWord(wid); }
-  });
-  _hideSelToolbar();
-}
 
 // Selection event listeners — do not dismiss on taps inside verse text (fixes double-tap / drag / native copy)
 var _selToolbarLastInteract = 0;
@@ -1017,6 +936,20 @@ function _injectChapterHeading(chapId) {
               hf.className = 'heading-flow';
               hf.setAttribute('dir', 'rtl');
               var hws = window[window.READER.headingWords][key];
+              /* THE HEADING IS READING SURFACE TOO. Its words are the same
+                 interlinear stack as a verse's — Hebrew, transliteration,
+                 gloss — but they carried no data-wid, and every annotation
+                 path keys off that: _getSelectedWordUnits filters
+                 .word-unit[data-wid], so a selection in the summary found
+                 nothing, and highlighting, underlining and notes were all
+                 silently unavailable there. A heading has no verse number, so
+                 the key is the chapter's own with 'heading' where the verse
+                 would be: "Genesis|1|heading|3". _selVerseKey() then yields
+                 "Genesis|1|heading", which is a perfectly good note key, and
+                 applyAllAnnotations paints these like any other word. */
+              var _hbc = (typeof getBookChapter === 'function') ? getBookChapter(chapId) : null;
+              var _hwid = _hbc ? (_hbc.book + '|' + _hbc.chapter + '|heading') : '';
+              var _hIdx = 0;
               for (var hi = 0; hi < hws.length; hi++) {
                 var hh = hws[hi][0], hg = hws[hi][1] || '';
                 if (hh === '\u2014' || hh === '\u2013' || hh === '-') {
@@ -1034,6 +967,7 @@ function _injectChapterHeading(chapId) {
                 }
                 var wu = makeWordUnit(hh, hg, false);
                 if (wu) {
+                  if (_hwid) wu.setAttribute('data-wid', _hwid + '|' + (_hIdx++));
                   if (!/[\u05D0-\u05EA]/.test(hh)) { wu.style.direction = 'ltr'; wu.style.unicodeBidi = 'isolate'; var hwSpan = wu.querySelector('.hw'); if (hwSpan) { hwSpan.style.direction = 'ltr'; hwSpan.style.unicodeBidi = 'isolate'; } }
                   var tls = wu.querySelector('.tl');
                   if (tls && typeof transliterate === 'function' && /[\u05D0-\u05EA]/.test(hh)) { try { tls.textContent = transliterate(hh); } catch(eT) {} }
