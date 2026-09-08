@@ -3814,7 +3814,16 @@ body.dual-mode .chapter-summary { display: block; }
 <script defer src="../bdb_roots.js?v=4"></script>
 <script defer src="../root_names.js?v=17"></script>
 <script src="../xref_common.js?v=6"></script>
-<script src="../reader_surface.js?v=1"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
+<script>
+/* The volume key, the way the other five declare it. reader_surface.js's
+   toggleTranslit and setSize write localStorage under READER.vol, so this page
+   has to say what it is — and it must stay 'bom', because that is the prefix
+   of the keys readers already have ("bom-show-translit", "bom-font-size").
+   Nothing else this page loads reads window.READER, so this is the whole of it;
+   the five carry a much larger READER object that shapes their reader. */
+window.READER = window.READER || { vol: 'bom' };
+</script>
+<script src="../reader_surface.js?v=2"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
 <script src="../translit.js?v=1"></script>
 <script src="../jst_refmap.js?v=1"></script>
 <script src="../verse_loader.js?v=5"></script>
@@ -4409,16 +4418,6 @@ function setMode(mode) {
   try { localStorage.setItem('bom-view-mode', mode || 'inter'); } catch(e) {}
 }
 
-function toggleTranslit() {
-  _keepVersePosition(function() {
-  document.body.classList.toggle('hide-translit');
-  var btn = document.getElementById('btn-translit');
-  btn.classList.toggle('active');
-  try {
-    localStorage.setItem('bom-show-translit', btn.classList.contains('active') ? '1' : '0');
-  } catch(e) {}
-  });
-}
 
 function toggleNikkud() {
   _keepVersePosition(_toggleNikkudBody);
@@ -4436,12 +4435,6 @@ function _toggleNikkudBody() {
   try { localStorage.setItem('bom-no-nikkud', isNow ? '1' : '0'); } catch(e) {}
 }
 
-function setSize(val) {
-  _keepVersePosition(function() {
-  document.getElementById('page').style.fontSize = val + '%';
-  });
-  try { localStorage.setItem('bom-font-size', val); } catch(e) {}
-}
 
 // === READING POSITION MEMORY ===
 // The verse at the top of the view is saved as the reader scrolls; the next
@@ -6882,14 +6875,6 @@ function loadViaXHR(url, callback) {
   xhr.send();
 }
 
-function populateEnglishDivs(root) {
-  (root || document).querySelectorAll('.verse-english[data-key]').forEach(function(div) {
-    var key = div.getAttribute('data-key');
-    if (window._englishMap[key]) {
-      div.textContent = window._englishMap[key];
-    }
-  });
-}
 
 // === NAVIGATION ENHANCEMENTS ===
 

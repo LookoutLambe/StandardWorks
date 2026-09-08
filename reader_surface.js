@@ -204,3 +204,42 @@ function closeSearch() {
   document.getElementById('search-results').classList.remove('open');
   document.getElementById('search-input').value = '';
 }
+
+
+/* ── Reconciled from two copies (de-fork step 2) ───────────────────────────
+   These three differed between reader_core.js and bom.html for no reason that
+   survived inspection:
+
+     toggleTranslit / setSize   the shared copy wrote localStorage under
+                                READER.vol + '-show-translit'; bom.html wrote
+                                the literal 'bom-show-translit'. Same key once
+                                READER.vol is 'bom', which bom.html now
+                                declares — so no reader loses a saved
+                                preference.
+     populateEnglishDivs        bom.html's took an optional root to repopulate
+                                one panel; the shared one always did the whole
+                                document. The parameter is a superset, so the
+                                five keep working unchanged and the Book of
+                                Mormon keeps the narrower call it needs. */
+function toggleTranslit() {
+  _keepVersePosition(function() {
+  document.body.classList.toggle('hide-translit');
+  var btn = document.getElementById('btn-translit');
+  btn.classList.toggle('active');
+  try { localStorage.setItem(window.READER.vol + '-show-translit', btn.classList.contains('active') ? '1' : '0'); } catch(e) {}
+  });
+}
+
+function setSize(val) {
+  _keepVersePosition(function() {
+  document.getElementById('page').style.fontSize = val + '%';
+  });
+  try { localStorage.setItem(window.READER.vol + '-font-size', val); } catch(e) {}
+}
+
+function populateEnglishDivs(root) {
+  (root || document).querySelectorAll('.verse-english[data-key]').forEach(function(div) {
+    var key = div.getAttribute('data-key');
+    if (window._englishMap[key]) div.textContent = window._englishMap[key];
+  });
+}
