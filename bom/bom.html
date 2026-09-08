@@ -3781,6 +3781,10 @@ body.dual-mode .chapter-summary { display: block; }
    the five carry a much larger READER object that shapes their reader. */
 window.READER = window.READER || {
   vol: 'bom',
+  /* _stripNikkud spares the maqqef and the shin/sin dots on this volume — a
+     consonantal pattern written with a maqqef cannot match a string it has
+     been stripped from, and folding the dots merges שׂ with שׁ. */
+  keepMaqqefAndSinDots: true,
   landingTitle: 'Book of Mormon',
   navLabelHe: 'Book of Mormon',
   /* So the shared search does not offer this volume as an "other volume". */
@@ -3823,7 +3827,7 @@ window.READER = window.READER || {
   books: []      /* filled from BOOK_DATA the moment it exists, below */
 };
 </script>
-<script src="../reader_surface.js?v=26"></script>
+<script src="../reader_surface.js?v=27"></script>
 <script src="../crossrefs_engine.js?v=23"></script>  <!-- the cross-reference panel, shared with the other five -->  <!-- panels, selection tools, annotation marks: shared with the other five -->
 <script src="../translit.js?v=1"></script>
 <script src="../jst_refmap.js?v=1"></script>
@@ -4085,7 +4089,6 @@ function navTo(id, slideDir, _bookReady) {
 // Morphology-aware gloss (non-breaking): keep displayed gloss as-is,
 // compute a Strong's-derived "morph gloss" for popup auditing.
 window._useMorphGlossPopup = true;
-function _stripHebrewMarks(s) { return (s || '').replace(/[\u0591-\u05C7]/g, ''); }
 function _stripPrefixesForMorphGloss(w) {
   // Copy of the BOM popup's stripPrefixes(), but global so computeMorphGloss can use it.
   // Removes maqaf-joined particles first and then strips common prefixes (1–2 layers).
@@ -5946,7 +5949,6 @@ var searchIndex = null;
   // Keyboard handling moved to unified handler above
 })();
 
-function _stripNikkud(s) { return s.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, ''); }
 
 
 // 8. ROOT GLOSSARY

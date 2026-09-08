@@ -725,7 +725,6 @@ var searchIndex = null;
   });
 })();
 
-function _stripNikkud(s) { return s.replace(/[\u0591-\u05C7]/g, ''); }
 
 // READING PROGRESS BAR
 window.addEventListener('scroll', function() {

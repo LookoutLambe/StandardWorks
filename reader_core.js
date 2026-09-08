@@ -138,7 +138,6 @@ window._noNikkud = false;
 // replace them with Strong's-lemma heuristics here; popups still link Strong's on tap.
 window._useStrongsMorphGloss = false;
 
-function _stripHebrewMarks(s) { return (s || '').replace(/[\u0591-\u05C7]/g, ''); }
 
 function _guessAffixParts(heb) {
   // Returns {prefixTokens:[], base:"...", suffixToken:""} using surface heuristics.

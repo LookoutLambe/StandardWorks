@@ -2211,3 +2211,30 @@ function renderVerseSet(verseData, containerId) {
      whole volume out of memory on a phone. */
   _pendingRenders.push({ verseData: verseData, containerId: containerId, chapId: renderAt });
 }
+
+
+/* ── Stripping the pointing ────────────────────────────────────────────────
+   _stripHebrewMarks existed FOUR times, byte-identical: reader_core.js and
+   inline in dc.html, pgp.html and bom/bom.html. One line, four homes.
+
+   _stripNikkud is the one that genuinely differed, and the difference is real
+   linguistics, not drift, so it is declared as data instead of being copied:
+
+     the five  [\u0591-\u05C7]                              everything
+     the BOM   [\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]  spares U+05BE maqqef,
+                                                        U+05C1/2 shin & sin dots
+
+   The BOM keeps the maqqef because a consonantal pattern written with one can
+   never match a string the maqqef has been stripped from, and keeps the shin
+   and sin dots because folding them merges שׂ with שׁ — two different letters,
+   and two different roots (חפשׂ against חפשׁ). Changing the Tanakh's root
+   extraction is a corpus decision, not a refactor, so the five keep what they
+   have; READER.keepMaqqefAndSinDots says which a volume wants. */
+function _stripHebrewMarks(s) { return (s || '').replace(/[\u0591-\u05C7]/g, ''); }
+
+var _SW_NIKKUD_ALL  = /[\u0591-\u05C7]/g;
+var _SW_NIKKUD_KEEP = /[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g;
+function _stripNikkud(s) {
+  var keep = !!(window.READER && window.READER.keepMaqqefAndSinDots);
+  return (s || '').replace(keep ? _SW_NIKKUD_KEEP : _SW_NIKKUD_ALL, '');
+}
