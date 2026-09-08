@@ -2340,6 +2340,12 @@ body.dark-mode #glossary-panel {
 .glossary-refs-book { margin: 2px 0; }
 .glossary-refs-book-name { font-weight: 600; }
 .glossary-refs-section { margin-top: 8px; font-size: 0.85em; }
+/* The expander under a long reference list. Was inline in bom/bom.html while
+   the five had no expander at all — they truncated at 30 references instead.
+   buildVerseRefsHtml is one function now, so all six render this. */
+.glossary-refs-overflow { margin-top: 2px; }
+.glossary-refs-toggle { display: inline-block; margin-top: 6px; color: var(--accent-deep); cursor: pointer; font-size: 0.9em; font-weight: 500; }
+.glossary-refs-toggle:hover { text-decoration: underline; color: var(--accent-light); }
 .glossary-root { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--accent-deep); direction: rtl; }
 .landing-back { text-align: center; margin-top: 20px; }
 .landing-back a { font-family: 'David Libre', 'Georgia', serif; background: var(--sw-gold, var(--on-chrome)); color: var(--header-bg, var(--chrome)); text-decoration: none; font-size: 1.05em; font-weight: 600; letter-spacing: 0.03em; border: 2px solid var(--header-bg, var(--chrome)); padding: 14px 32px; border-radius: 10px; box-shadow: 0 4px 14px color-mix(in srgb, var(--chrome) 18%, transparent); transition: background 0.2s, transform 0.2s; direction: ltr; display: inline-block; }

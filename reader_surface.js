@@ -2114,3 +2114,100 @@ function openGlossaryAtRoot(rootKey) {
     }
   }, 100);
 }
+
+
+/* ── The reference list under a glossary entry ─────────────────────────────
+   This was forked, and the two copies were not two spellings of one feature —
+   they were two different features, and the five had the worse one.
+
+   reader_ui.js listed at most 10 verses per book and stopped entirely after
+   30, with nothing on screen to say a reference had been dropped: a root with
+   400 occurrences showed 30 and looked complete. It also ordered the books
+   ALPHABETICALLY, so the Tanakh read Amos, Chronicles, Daniel.
+
+   bom.html showed every reference in canonical order behind a "Show all N"
+   expander. That is the one kept — a silent cap is exactly the defect the
+   Root Glossary's forms list was fixed for. The book order now comes from
+   READER.books instead of a hardcoded list, so it is each volume's own
+   canonical order; a book the volume does not name (a cross-volume key) is
+   still listed, after the ones it does, alphabetically. */
+function buildVerseRefsHtml(verseRefs) {
+  var keys = Object.keys(verseRefs);
+  if (keys.length === 0) return '';
+
+  var byBook = {};
+  keys.forEach(function (vk) {
+    var parts = vk.split('|');
+    if (parts.length !== 3) return;
+    if (!byBook[parts[0]]) byBook[parts[0]] = [];
+    byBook[parts[0]].push({ ch: parseInt(parts[1], 10), vs: parseInt(parts[2], 10), key: vk });
+  });
+  for (var b in byBook) {
+    byBook[b].sort(function (a, c) { return a.ch !== c.ch ? a.ch - c.ch : a.vs - c.vs; });
+  }
+
+  /* Canonical first, in this volume's own order, then anything else. */
+  var canonical = ((window.READER && window.READER.books) || []).map(function (bk) { return bk.en; });
+  var order = canonical.filter(function (n) { return byBook[n]; });
+  var extra = Object.keys(byBook).filter(function (n) { return canonical.indexOf(n) < 0; }).sort();
+  order = order.concat(extra);
+
+  var total = keys.length;
+  var INITIAL_SHOW = 20;
+  var html = '<div class="glossary-refs-section"><strong>All References (' + total + ' verses):</strong>';
+  var shown = 0, hidden = '', overflowing = false;
+
+  order.forEach(function (book) {
+    var refs = byBook[book];
+    var bookHtml = '<div class="glossary-refs-book"><span class="glossary-refs-book-name">' +
+      book + ':</span> ' + refs.map(function (r) {
+        return '<span class="glossary-ref-link" onclick="event.stopPropagation();goToGlossaryVerse(\'' +
+          r.key.replace(/'/g, "\\'") + '\')">' + r.ch + ':' + r.vs + '</span>';
+      }).join(', ') + '</div>';
+    shown += refs.length;
+    /* A book is never split across the fold — once past the initial count,
+       every remaining book goes behind it. */
+    if (!overflowing && shown <= INITIAL_SHOW) html += bookHtml;
+    else { overflowing = true; hidden += bookHtml; }
+  });
+
+  if (hidden) {
+    html += '<div class="glossary-refs-overflow" style="display:none;">' + hidden + '</div>';
+    html += '<span class="glossary-refs-toggle" data-refs-total="' + total +
+      '" onclick="event.stopPropagation();toggleRefsOverflow(this)">Show all ' +
+      total + ' references ▼</span>';
+  }
+  return html + '</div>';
+}
+
+function toggleRefsOverflow(el) {
+  var overflow = el.previousElementSibling;
+  if (!overflow || !overflow.classList.contains('glossary-refs-overflow')) return;
+  var showing = overflow.style.display !== 'none';
+  overflow.style.display = showing ? 'none' : 'block';
+  /* Collapsing used to drop the count and read "Show all references" — the
+     number is the whole point of the label, so it is carried on the element. */
+  var total = el.getAttribute('data-refs-total');
+  el.textContent = showing
+    ? 'Show all ' + (total || '') + ' references ▼'
+    : 'Hide references ▲';
+}
+
+
+/* ── Where every verse file lands ──────────────────────────────────────────
+   Each <vol>_verses/<book>.js calls this as it loads. reader_core.js and
+   bom.html both had it; the BOM's is a strict superset, because only the Book
+   of Mormon has book colophons and on the five the two extra lines are no-ops
+   (a containerId with no '-colophon' in it makes the replace and the test
+   both do nothing). One copy, the superset. */
+function renderVerseSet(verseData, containerId) {
+  var chId = containerId.replace('-verses', '').replace('-colophon', '');
+  _verseRegistry.push({ chapId: chId, verses: verseData });
+  /* A book colophon is displayed inside that book's chapter-1 panel (the way
+     1 Nephi does it), so its DOM has to be built when chapter 1 is built —
+     nobody ever navigates to a bare book id like '2n'. */
+  var renderAt = /-colophon-verses$/.test(containerId) ? chId + '-ch1' : chId;
+  /* Deferred: the DOM is built on the first navTo, which is what keeps a
+     whole volume out of memory on a phone. */
+  _pendingRenders.push({ verseData: verseData, containerId: containerId, chapId: renderAt });
+}

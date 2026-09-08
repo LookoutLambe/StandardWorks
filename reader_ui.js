@@ -568,32 +568,6 @@ var glossaryIndex = null;
 var glossaryExclude = new Set(['', ' ']);
 
 
-function buildVerseRefsHtml(verseRefs) {
-  var keys = Object.keys(verseRefs);
-  if (keys.length === 0) return '';
-  var byBook = {};
-  keys.forEach(function(vk) {
-    var parts = vk.split('|');
-    if (parts.length !== 3) return;
-    if (!byBook[parts[0]]) byBook[parts[0]] = [];
-    byBook[parts[0]].push({ ch: parseInt(parts[1],10), vs: parseInt(parts[2],10), key: vk });
-  });
-  for (var b in byBook) byBook[b].sort(function(a,c) { return a.ch !== c.ch ? a.ch - c.ch : a.vs - c.vs; });
-  var html = '<div class="glossary-refs-section"><strong>References (' + keys.length + ' verses):</strong>';
-  var count = 0;
-  Object.keys(byBook).sort().forEach(function(book) {
-    if (count >= 30) return;
-    var refs = byBook[book].slice(0, 10);
-    html += '<div class="glossary-refs-book"><span class="glossary-refs-book-name">' + book + ':</span> ';
-    html += refs.map(function(r) { return '<span class="glossary-ref-link" onclick="event.stopPropagation();goToGlossaryVerse(\'' + r.key.replace(/'/g,"\\'") + '\')">' + r.ch + ':' + r.vs + '</span>'; }).join(', ');
-    html += '</div>';
-    count += refs.length;
-  });
-  html += '</div>';
-  return html;
-}
-
-
 function findBookByName(name) {
   for (var i = 0; i < BOOKS.length; i++) { if (BOOKS[i].en === name) return BOOKS[i]; }
   return null;

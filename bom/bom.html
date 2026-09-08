@@ -52,7 +52,7 @@
 <link rel="stylesheet" href="../nav_engine.css?v=49">
 <link rel="stylesheet" href="../site_chrome.css?v=71">
 <link rel="stylesheet" href="../xref_study_panel.css?v=14">
-<link rel="stylesheet" href="../reader.css?v=93">
+<link rel="stylesheet" href="../reader.css?v=94">
 <style>
 
 /* Skip-to-content link (screen reader / keyboard) */
@@ -1108,9 +1108,6 @@ body.dark-mode .glossary-biblical-section { background: color-mix(in srgb, var(-
 .glossary-refs-book-name { font-weight: 600; color: var(--ink); margin-right: 4px; }
 .glossary-ref-link { color: var(--accent); cursor: pointer; text-decoration: none; padding: 1px 2px; border-radius: 2px; }
 .glossary-ref-link:hover { text-decoration: underline; background: color-mix(in srgb, var(--here-chrome) 12%, transparent); }
-.glossary-refs-toggle { display: inline-block; margin-top: 6px; color: var(--accent); cursor: pointer; font-size: 0.9em; font-weight: 500; }
-.glossary-refs-toggle:hover { text-decoration: underline; }
-.glossary-refs-overflow { margin-top: 2px; }
 .glossary-highlight-btn {
   display: inline-block; margin-top: 6px; padding: 4px 10px; background: transparent;
   border: 1px solid var(--accent); border-radius: 3px; color: var(--accent-deep);
@@ -3826,7 +3823,7 @@ window.READER = window.READER || {
   books: []      /* filled from BOOK_DATA the moment it exists, below */
 };
 </script>
-<script src="../reader_surface.js?v=25"></script>
+<script src="../reader_surface.js?v=26"></script>
 <script src="../crossrefs_engine.js?v=23"></script>  <!-- the cross-reference panel, shared with the other five -->  <!-- panels, selection tools, annotation marks: shared with the other five -->
 <script src="../translit.js?v=1"></script>
 <script src="../jst_refmap.js?v=1"></script>
@@ -4193,17 +4190,6 @@ function renderColophon() {
 var _verseRegistry = [];
 var _pendingRenders = []; // deferred DOM renders for lazy loading
 var _renderedChapters = {}; // chapId -> true once DOM is built
-
-function renderVerseSet(verseData, containerId) {
-  var chId = containerId.replace('-verses', '').replace('-colophon', '');
-  _verseRegistry.push({ chapId: chId, verses: verseData });
-  // A book colophon is displayed inside that book's chapter-1 panel (the way
-  // 1 Nephi does it), so its DOM has to be built when chapter 1 is built —
-  // nobody ever navigates to a bare book id like '2n'.
-  var renderAt = /-colophon-verses$/.test(containerId) ? chId + '-ch1' : chId;
-  // Defer DOM creation — built on first navTo (saves mobile memory)
-  _pendingRenders.push({ verseData: verseData, containerId: containerId, chapId: renderAt });
-}
 
 function _doRenderVerses(verseData, containerId) {
   var chId = containerId.replace('-verses', '').replace('-colophon', '');
@@ -5990,67 +5976,6 @@ var glossaryExclude = new Set([
   // Single-letter artifacts
   'ל','ב','מ','כ','ש'
 ]);
-
-
-function buildVerseRefsHtml(verseRefs) {
-  // Group verse keys by book, then sort by chapter:verse
-  var bookOrder = ['1 Nephi','2 Nephi','Jacob','Enos','Jarom','Omni','Words of Mormon',
-    'Mosiah','Alma','Helaman','3 Nephi','4 Nephi','Mormon','Ether','Moroni'];
-  var byBook = {};
-  var keys = Object.keys(verseRefs);
-  if (keys.length === 0) return '';
-  keys.forEach(function(vk) {
-    var parts = vk.split('|');
-    if (parts.length !== 3) return;
-    var book = parts[0], ch = parseInt(parts[1],10), vs = parseInt(parts[2],10);
-    if (!byBook[book]) byBook[book] = [];
-    byBook[book].push({ ch: ch, vs: vs, key: vk });
-  });
-  // Sort each book's refs by chapter then verse
-  for (var b in byBook) {
-    byBook[b].sort(function(a,c) { return a.ch !== c.ch ? a.ch - c.ch : a.vs - c.vs; });
-  }
-  var totalRefs = keys.length;
-  var INITIAL_SHOW = 20;
-  var html = '<div class="glossary-refs-section"><strong>All References (' + totalRefs + ' verses):</strong>';
-  var refCount = 0;
-  var hiddenHtml = '';
-  var inHidden = false;
-  bookOrder.forEach(function(book) {
-    if (!byBook[book]) return;
-    var refs = byBook[book];
-    var bookHtml = '<div class="glossary-refs-book"><span class="glossary-refs-book-name">' + book + ':</span> ';
-    var links = refs.map(function(r) {
-      return '<span class="glossary-ref-link" onclick="event.stopPropagation();goToGlossaryVerse(\'' +
-        r.key.replace(/'/g,"\\'") + '\')">' + r.ch + ':' + r.vs + '</span>';
-    });
-    bookHtml += links.join(', ') + '</div>';
-    refCount += refs.length;
-    if (!inHidden && refCount <= INITIAL_SHOW) {
-      html += bookHtml;
-    } else if (!inHidden) {
-      inHidden = true;
-      hiddenHtml += bookHtml;
-    } else {
-      hiddenHtml += bookHtml;
-    }
-  });
-  if (hiddenHtml) {
-    html += '<div class="glossary-refs-overflow" style="display:none;">' + hiddenHtml + '</div>';
-    html += '<span class="glossary-refs-toggle" onclick="event.stopPropagation();toggleRefsOverflow(this)">Show all ' + totalRefs + ' references ▼</span>';
-  }
-  html += '</div>';
-  return html;
-}
-
-function toggleRefsOverflow(el) {
-  var overflow = el.previousElementSibling;
-  if (overflow && overflow.classList.contains('glossary-refs-overflow')) {
-    var showing = overflow.style.display !== 'none';
-    overflow.style.display = showing ? 'none' : 'block';
-    el.textContent = showing ? 'Show all references ▼' : 'Hide references ▲';
-  }
-}
 
 
 /* All three live in xref_common.js now — reader_ui.js and bom.html had their
