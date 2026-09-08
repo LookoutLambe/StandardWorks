@@ -2860,6 +2860,55 @@ body.dark-mode #nav-progress-text { color: #6a6550; }
    editions, so it needs air above and below that the in-panel copy does not. */
 .hub-front { margin: 34px auto 10px; border-top: 1px solid var(--rule-light); padding-top: 30px; }
 
+/* ── The front matter's disclosures ─────────────────────────────────────────
+   The preface is 3,355px tall — measured at 1600px it was 59% of the hub's
+   whole height, so the page people come to for six volumes had become mostly
+   essay. Each part folds now, and the fold's DEFAULT follows the viewport:
+   open where there is room to read, closed where the hub has to stay a hub.
+
+   <details>/<summary> rather than a scripted accordion: it is keyboard
+   operable, announced correctly, and findable by the browser's own in-page
+   search without any of that having to be written or maintained. The script
+   only sets the initial state and stops as soon as the reader touches it. */
+.sw-front .tr-sec { border-top: 1px solid var(--rule-light); }
+.sw-front .tr-sec:first-of-type { border-top: none; }
+
+.sw-front .tr-sec-head {
+  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+  /* 44px minimum target, and it is the whole row, not just the caret. */
+  min-height: 44px; padding: 13px 0 13px 26px; position: relative;
+  cursor: pointer; list-style: none; user-select: none;
+}
+.sw-front .tr-sec-head::-webkit-details-marker { display: none; }
+/* The caret is drawn here so it can be positioned and rotated; the native
+   marker cannot be. */
+.sw-front .tr-sec-head::before {
+  content: ''; position: absolute; left: 4px; top: 50%;
+  width: 7px; height: 7px; margin-top: -5px;
+  border-right: 1.6px solid var(--accent-deep);
+  border-bottom: 1.6px solid var(--accent-deep);
+  transform: rotate(-45deg); transform-origin: 60% 60%;
+  transition: transform 0.18s ease;
+}
+.sw-front .tr-sec[open] > .tr-sec-head::before { transform: rotate(45deg); }
+@media (prefers-reduced-motion: reduce) {
+  .sw-front .tr-sec-head::before { transition: none; }
+}
+.sw-front .tr-sec-head:hover .tr-sec-title { color: var(--accent-deep); }
+.sw-front .tr-sec-head:focus-visible {
+  outline: 2px solid var(--accent-deep); outline-offset: 2px; border-radius: 4px;
+}
+.sw-front .tr-sec-title {
+  font-family: 'David Libre', 'Georgia', serif; font-size: 1.18em; font-weight: 700; color: var(--ink);
+}
+/* The one-line hint of what is behind the fold, so a closed section still
+   says what it holds. */
+.sw-front .tr-sec-note { font-size: 0.85em; color: var(--ink-3); font-style: italic; }
+.sw-front .tr-sec-body { padding: 2px 0 18px; }
+.sw-front .tr-sec-body > .tr-p:first-child { margin-top: 0; }
+/* The rules inside a section are the section's own boundary now. */
+.sw-front .tr-sec-body > hr.tr-rule { display: none; }
+
 /* ── The provenance table ───────────────────────────────────────────────── */
 /* Who wrote which volume's Hebrew. On a phone a three-column table would
    force a horizontal scroll, so each row becomes a block: the volume name as

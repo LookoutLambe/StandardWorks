@@ -66,7 +66,7 @@
 
 <link rel="stylesheet" href="nav_engine.css?v=49">
 <link rel="stylesheet" href="site_chrome.css?v=71">
-<link rel="stylesheet" href="reader.css?v=105">
+<link rel="stylesheet" href="reader.css?v=106">
 <style>
 
 /* ========== THEME ========== */
@@ -1153,6 +1153,11 @@ body, button, input, select, textarea,
       <p class="tr-p tr-p--lead" id="to-the-reader">
         For ten years I looked for this book and it did not exist.
       </p>
+
+      <details class="tr-sec" id="why-this-exists">
+        <summary class="tr-sec-head"><span class="tr-sec-title">Why this exists</span><span class="tr-sec-note">the ten years, and the six volumes</span></summary>
+        <div class="tr-sec-body">
+
       <p class="tr-p">
         I had studied Classical Biblical Hebrew. I had shelves full of Tanakh, Talmud, Zohar, grammars, lexicons. I had read the Book of Mormon in English, in Spanish, in Samoan — over and over, my whole life. And the one thing I wanted to do with it, I could not: I wanted to read it in Hebrew.
       </p>
@@ -1166,11 +1171,30 @@ body, button, input, select, textarea,
         And it could not stop there. Reading the Book of Mormon in Hebrew means reading it against the Tanakh — the same covenant words, the same cadences — so the Tanakh had to be here too, and the New Testament with it. The Doctrine and Covenants and the Pearl of Great Price nobody had put into Biblical Hebrew at all, so I translated those as well. What began as one book is six, gathered into one place, every word carrying its gloss beneath it.
       </p>
 
-      <hr class="tr-rule tr-rule--narrow">
+      <p class="tr-p">
+        I did not set out to produce an academic work. I set out to fill a gap on my own shelf. The deeper I went into the Hebrew the more these books opened up — not as texts that need defending, but as texts that defend themselves. The Hebraisms are not decorative. They are structural. The covenant language is not borrowed. It is native.
+      </p>
+      <p class="tr-p">
+        I speak English, Samoan and Spanish, and I have studied these books in all three my whole life. It was Hebrew that brought me closest to what they were trying to say. I hope it does the same for you.
+      </p>
+      <p class="tr-p tr-p--blessing">
+        May it bring you nearer to the God of Israel, who engraved His people on the palms of His hands and does not forget.
+      </p>
+      <p class="tr-sig">— Chris Lambe</p>
 
-      <!-- ─────────────── WHAT IS HERE, AND WHOSE IT IS ─────────────── -->
+      <div class="tr-end">
+        <p class="tr-p">
+          If you spot a gloss that could be clearer, or a root connection worth drawing out, please reach out — corrections from readers are how this text keeps getting better.
+        </p>
+        <p class="tr-p"><a href="mailto:chris@sefermormon.com" class="tr-link">chris@sefermormon.com</a></p>
+      </div>
 
-      <h3 class="tr-h" id="whose-hebrew">What is here, and whose it is</h3>
+            </div>
+      </details>
+      <details class="tr-sec" id="whose-hebrew">
+        <summary class="tr-sec-head"><span class="tr-sec-title">What is here, and whose it is</span><span class="tr-sec-note">whose Hebrew is in each volume</span></summary>
+        <div class="tr-sec-body">
+
 
       <p class="tr-p">
         An edition should say what its text rests on before you read it, not after. Three of these volumes I translated into Hebrew. Three carry Hebrew I did not translate, and have set here in the same apparatus so they can be read beside the others.
@@ -1215,11 +1239,12 @@ body, button, input, select, textarea,
         This is an independent, personal project — not an official publication of The Church of Jesus Christ of Latter-day Saints. The whole text is here, and it is free. Glosses will keep being refined as long as I am reading them.
       </p>
 
-      <hr class="tr-rule tr-rule--narrow">
+              </div>
+      </details>
+      <details class="tr-sec" id="how-to-read">
+        <summary class="tr-sec-head"><span class="tr-sec-title">How to read it</span><span class="tr-sec-note">the word blocks, and what the reader does</span></summary>
+        <div class="tr-sec-body">
 
-      <!-- ─────────────── HOW TO READ IT ─────────────── -->
-
-      <h3 class="tr-h" id="how-to-read">How to read it</h3>
 
       <p class="tr-p">
         Each verse is a row of word blocks, read right to left. On top is the Hebrew word, pointed. Directly beneath it is the English that word is carrying, with a small chevron marking where one word ends and the next begins. Here are the first five words of the Book of Mormon:
@@ -1257,27 +1282,8 @@ body, button, input, select, textarea,
         If the alphabet itself is new to you, start here instead: <a href="hebrew-study.html" class="tr-link">Reading Hebrew — the letters, the vowels, and the marks →</a>
       </p>
 
-      <hr class="tr-rule tr-rule--narrow">
-
-      <!-- ─────────────── CLOSING ─────────────── -->
-
-      <p class="tr-p">
-        I did not set out to produce an academic work. I set out to fill a gap on my own shelf. The deeper I went into the Hebrew the more these books opened up — not as texts that need defending, but as texts that defend themselves. The Hebraisms are not decorative. They are structural. The covenant language is not borrowed. It is native.
-      </p>
-      <p class="tr-p">
-        I speak English, Samoan and Spanish, and I have studied these books in all three my whole life. It was Hebrew that brought me closest to what they were trying to say. I hope it does the same for you.
-      </p>
-      <p class="tr-p tr-p--blessing">
-        May it bring you nearer to the God of Israel, who engraved His people on the palms of His hands and does not forget.
-      </p>
-      <p class="tr-sig">— Chris Lambe</p>
-
-      <div class="tr-end">
-        <p class="tr-p">
-          If you spot a gloss that could be clearer, or a root connection worth drawing out, please reach out — corrections from readers are how this text keeps getting better.
-        </p>
-        <p class="tr-p"><a href="mailto:chris@sefermormon.com" class="tr-link">chris@sefermormon.com</a></p>
-      </div>
+              </div>
+      </details>
 
     </section>
 
@@ -1662,6 +1668,55 @@ document.addEventListener('keydown', function(e) {
     a.querySelector('.cc-ref').textContent = data.vlabel || data.label;
     a.addEventListener('click', function(e) { e.stopPropagation(); });
     lab.appendChild(a);
+  });
+})();
+</script>
+<script>
+/* The front matter's folds open by default where there is room to read them
+   and stay closed where the hub has to remain a hub. CSS cannot set the `open`
+   attribute, so it is set here — once, and then handed to the reader: the
+   moment anyone toggles a section, the width stops deciding for them. A link
+   into a section (index.html#whose-hebrew) opens that one whatever the width,
+   because arriving at a heading that is folded shut is the same as arriving
+   nowhere. */
+(function () {
+  var secs = document.querySelectorAll('.hub-front .tr-sec');
+  if (!secs.length) return;
+  var wide = window.matchMedia('(min-width: 1000px)');
+  var userDecided = false;
+
+  function applyWidth() {
+    if (userDecided) return;
+    for (var i = 0; i < secs.length; i++) secs[i].open = wide.matches;
+    openHash();
+  }
+  function openHash() {
+    var id = (location.hash || '').slice(1);
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (!el) return;
+    var sec = el.closest ? el.closest('.tr-sec') : null;
+    if (sec) sec.open = true;
+    else if (el.classList && el.classList.contains('tr-sec')) el.open = true;
+  }
+
+  applyWidth();
+  /* CLICK, NOT `toggle`. Setting .open fires a toggle event of its own, and it
+     fires ASYNCHRONOUSLY, so a toggle listener marks the reader as having
+     decided the instant applyWidth runs — the width then never gets to decide
+     again, and the sections stayed open on a phone. A click on the summary is
+     unambiguously the reader (and covers the keyboard: Enter and Space on a
+     summary dispatch one). */
+  for (var i = 0; i < secs.length; i++) {
+    var sum = secs[i].querySelector('summary');
+    if (sum) sum.addEventListener('click', function () { userDecided = true; });
+  }
+  if (wide.addEventListener) wide.addEventListener('change', applyWidth);
+  else if (wide.addListener) wide.addListener(applyWidth);
+  window.addEventListener('hashchange', function () {
+    openHash();
+    var el = document.getElementById((location.hash || '').slice(1));
+    if (el) el.scrollIntoView({ block: 'start' });
   });
 })();
 </script>
