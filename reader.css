@@ -2710,3 +2710,14 @@ body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direct
   line-height: 1;
 }
 body.dark-mode #nav-progress-text { color: #6a6550; }
+
+/* The provenance line under a "cited in" card — which volume, which footnote
+   marker, the anchor word. bom.html drew it with a hardcoded #9aa3bc, which
+   answered to no theme; the card sits on chrome, so this is the muted ink for
+   that ground. */
+.xref-ref-meta {
+  font-size: 0.82em;
+  color: var(--on-chrome-2);
+  margin-top: 4px;
+  line-height: 1.35;
+}

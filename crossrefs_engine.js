@@ -852,6 +852,64 @@ function parseScriptureRef(refText) {
   }
 
   // ── Open cross-reference panel ──
+
+  /* ── Cited in Standard Works footnotes ────────────────────────────────────
+     The other direction: not what THIS verse cites, but which verses in the
+     other volumes cite it. Only bom.html had this, because only the Book of
+     Mormon ships the inverse index — bom/inverse_crossrefs/<book>.js. The
+     guard is the data, so this is inert on a volume that has none, and the
+     section moves here rather than staying behind in the fork.
+
+     The title row goes through the shared builder, so the citing verse is a
+     working link out to its own volume instead of the bare span bom.html drew. */
+  function appendInverseCitationCards(refsContainer, verseKeys) {
+    var data = window._bomInverseXrefsData;
+    if (!data || !refsContainer) return;
+    var keys = Array.isArray(verseKeys) ? verseKeys : (verseKeys ? [verseKeys] : []);
+    var collected = [], seen = {};
+    keys.forEach(function (vk) {
+      if (!vk || !data[vk]) return;
+      data[vk].forEach(function (row) {
+        var id = row.dedupeId || (row.sourceKey + '|' + (row.marker || '') + '|' + (row.anchorText || ''));
+        if (seen[id]) return;
+        seen[id] = true;
+        collected.push(row);
+      });
+    });
+    if (!collected.length) return;
+
+    var heading = document.createElement('div');
+    heading.className = 'xref-cat-heading';
+    heading.textContent = 'Cited in Standard Works footnotes (' + collected.length + ')';
+    refsContainer.appendChild(heading);
+
+    collected.forEach(function (row) {
+      var displayRef = row.displayRef || '';
+      var card = document.createElement('div');
+      card.className = 'xref-ref-card';
+      card.appendChild(buildRefTitleRow(displayRef, row.sourceKey || '', false, ''));
+
+      var bits = [];
+      if (row.volumeTag) bits.push(row.volumeTag);
+      if (row.marker) bits.push('marker ' + row.marker);
+      if (row.anchorText) bits.push('\u201c' + row.anchorText + '\u201d');
+      if (bits.length) {
+        var meta = document.createElement('div');
+        meta.className = 'xref-ref-meta';      /* was a hardcoded #9aa3bc */
+        meta.textContent = bits.join(' \u00b7 ');
+        card.appendChild(meta);
+      }
+
+      var extHtml = getExternalVerseHtml(displayRef);
+      if (extHtml) {
+        var extDiv = document.createElement('div');
+        extDiv.innerHTML = extHtml;
+        card.appendChild(extDiv);
+      }
+      refsContainer.appendChild(card);
+    });
+  }
+
   function openXrefPanel(ref, sourceVerseKey, hebrewRoot) {
     var panel = document.getElementById('xref-panel');
     if (!panel) return;
@@ -972,6 +1030,8 @@ function parseScriptureRef(refText) {
       noData.textContent = 'No additional references available.';
       refsContainer.appendChild(noData);
     }
+
+    appendInverseCitationCards(refsContainer, sourceVerseKey);
 
     panel.scrollTop = 0;
     panel.classList.add('open');
