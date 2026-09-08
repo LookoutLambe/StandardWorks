@@ -289,6 +289,55 @@ const SIX = ['bom/bom.html', 'ot.html', 'nt.html', 'dc.html', 'pgp.html', 'jst.h
   if (!bad) ok('every volume\u2019s cross-reference chunks are listed and present');
 }
 
+/* ── A service worker precaches the URL its page actually asks for ─────────
+   THIS FAILS SILENTLY AND COSTS BANDWIDTH BOTH WAYS. Each SW's ASSETS list is
+   hand-written with ?v= query strings, and every time a page bumps one the
+   list is left behind. A stale entry is a cache key nobody ever matches: the
+   install still downloads it, the page still goes to the network, and the file
+   has no offline copy — with nothing anywhere to say so. Found four stale
+   (reader_surface v24 against the page's v29, reader.css v93/v94,
+   roots_glossary v68/v71, and four covers listed with no ?v= at all while the
+   page asked for one). */
+{
+  const PAIRS = [
+    ['bom/sw.js', 'bom/bom.html'],
+    ['service-worker.js', 'ot.html'],
+  ];
+  let stale = 0;
+  for (const [swFile, pageFile] of PAIRS) {
+    const swPath = path.join(ROOT, swFile);
+    if (!fs.existsSync(swPath)) continue;
+    const sw = fs.readFileSync(swPath, 'utf8');
+    const page = fs.readFileSync(path.join(ROOT, pageFile), 'utf8');
+    const list = (sw.match(/const ASSETS = \[([\s\S]*?)\n\];/) || [])[1] || '';
+    for (const m of list.matchAll(/'([^']+)'/g)) {
+      const entry = m[1];
+      /* Only files the page itself names can be checked here. */
+      /* Strip any leading path: entries are written './x', '../x' and
+         '/StandardWorks/x' for the same file. */
+      const base = entry.replace(/\?.*$/, '').replace(/^.*\//, '');
+      const asked = [...page.matchAll(new RegExp('[\'"/]' +
+        base.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(\\?v=\\d+)?["\'?]', 'g'))]
+        .map(x => x[1] || '');
+      if (!asked.length) continue;                       // not referenced by this page
+      /* A file can be named twice — an og:image meta carries no ?v= while the
+         <img> does. The versioned mention is the one the browser fetches, and
+         taking the first match instead let cover-interlinear.jpg slip through
+         this check while its three siblings failed. */
+      const want = asked.find(v => v) || '';
+      const have = (entry.match(/\?v=\d+/) || [''])[0];
+      if (want !== have) {
+        stale++;
+        fail(swFile + ' precaches ' + entry + '\n' +
+             '        but ' + pageFile + ' asks for ' + base + want + '\n' +
+             '        A query string is part of the cache key: that entry is downloaded\n' +
+             '        on install and never matched, and the file has no offline copy.');
+      }
+    }
+  }
+  if (!stale) ok('every service-worker precache entry matches the URL its page requests');
+}
+
 /* ── The cross-reference engine has exactly one copy ───────────────────────
    bom/bom.html carried its own inline copy of the whole cross-reference UI —
    11 functions, 744 lines — and the two drifted. The BOM's copy placed every

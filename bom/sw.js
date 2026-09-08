@@ -5,28 +5,28 @@ const ASSETS = [
   './bom.html',
   './bom_book_loader.js?v=10',
   './bom_lazy_assets.js?v=3',
-  '../reader_surface.js?v=24',
+  '../reader_surface.js?v=29',
   '../root_scorecard.js?v=93',
   '../root_engine.js?v=38',
   '../root_concordance.js?v=92',
   '../xref_study_panel.css?v=14',
-  '../reader.css?v=93',
+  '../reader.css?v=94',
   '../xref_study_panel.js?v=6',
   /* official_verses.js (1,852 KB) is split per book into english/<book>.js
      by tools/build_crossref_chunks.js and arrives with the book. */
   './scripture_verses.js',
   './chapter_headings.js',
   './chapter_headings_heb.js?v=7',
-  './roots_glossary.js?v=68',
+  './roots_glossary.js?v=71',
   /* crossrefs.js (785 KB) and bom_inverse_crossrefs.js (632 KB) were precached
      here and are no longer fetched by anything: both are split per book into
      crossrefs/<book>.js and inverse_crossrefs/<book>.js by
      tools/build_crossref_chunks.js, and arrive with the book like the verses. */
   './topical_guide.js?v=3',
-  './images/cover-dual.jpg',
-  './images/cover-hebrew.jpg',
-  './images/cover-interlinear.jpg',
-  './images/cover-triple.jpg'
+  './images/cover-dual.jpg?v=2',
+  './images/cover-hebrew.jpg?v=4',
+  './images/cover-interlinear.jpg?v=5',
+  './images/cover-triple.jpg?v=5'
 ];
 
 function isVerseScript(pathname) {
