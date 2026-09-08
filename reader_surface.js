@@ -799,3 +799,132 @@ function scheduleAdjacentPrefetch() {
   if ('requestIdleCallback' in window) requestIdleCallback(run, { timeout: 1500 });
   else setTimeout(run, 250);
 }
+
+/* ══════════════════════════════════════════════════════════════════════
+   SHARE — one implementation for all six volumes
+   ══════════════════════════════════════════════════════════════════════
+   Held twice, and the two were not variants of one design — they disagreed
+   about what getShareContent even returns. The five built a STRING out of the
+   selected Hebrew words; bom.html builds an OBJECT { title, text, url } from
+   the highlighted verse, with the Hebrew, the English and the reference, and
+   shows a preview of it before you send. The BOM's is the better one, so it is
+   the one that survives, and the five gain the preview, the scrim, the icons
+   and the native-share button that only appears where navigator.share exists.
+
+   Two things in it were about the Book of Mormon rather than about sharing,
+   and both now come from READER:
+     the title    was the hardcoded Hebrew name of this volume; it is
+                  READER.shareTitle, which all five already declared.
+     the chapter  was read out of #nav-label's text; it is
+                  getChapterLabel(currentChapterId), which is shared as of
+                  the id-scheme work and does not depend on the chrome.
+   ══════════════════════════════════════════════════════════════════════ */
+var _shareContent = null;
+function _swShareTitle() {
+  return (window.READER && window.READER.shareTitle) || document.title || '';
+}
+
+function _getHighlightedVerse() {
+  var active = document.querySelector('.chapter-panel.active');
+  if (!active) {
+    var panels = document.querySelectorAll('.chapter-panel');
+    for (var i = 0; i < panels.length; i++) {
+      if (getComputedStyle(panels[i]).display !== 'none') { active = panels[i]; break; }
+    }
+  }
+  if (!active) return null;
+  var hl = active.querySelector('.verse.highlighted');
+  if (!hl) return null;
+  var numEl = hl.querySelector('.verse-num-arabic');
+  var verseNum = numEl ? numEl.textContent : '';
+  var wus = hl.querySelectorAll('.word-unit[data-wid]');
+  var heb = [], eng = [];
+  wus.forEach(function(wu) {
+    var hw = wu.querySelector('.hw');
+    var gl = wu.querySelector('.gl');
+    if (hw) heb.push(hw.textContent);
+    if (gl && gl.textContent.trim()) eng.push(gl.textContent.trim());
+  });
+  var wid = wus.length > 0 ? wus[0].getAttribute('data-wid') : '';
+  var parts = wid.split('|');
+  var ref = parts.length >= 3 ? parts[0] + ' ' + parts[1] + ':' + verseNum : '';
+  return { heb: heb.join(' '), eng: eng.join(' · '), ref: ref, num: verseNum };
+}
+
+function _getShareUrl() {
+  var base = window.location.href.split('#')[0];
+  var hash = window.location.hash;
+  return base + hash;
+}
+
+function getShareContent() {
+  var url = _getShareUrl();
+  var chapter = getChapterLabel(window.currentChapterId);
+  var verse = _getHighlightedVerse();
+  if (verse && verse.heb) {
+    return {
+      title: verse.ref + ' \u2014 ' + _swShareTitle(),
+      text: verse.heb + '\n' + verse.eng + '\n(' + verse.ref + ')',
+      url: url
+    };
+  }
+  return {
+    title: _swShareTitle(),
+    text: chapter + ' \u2014 ' + _swShareTitle(),
+    url: url
+  };
+}
+
+function openSharePopup() {
+  _shareContent = getShareContent();
+  document.getElementById('share-title').textContent =
+    _shareContent.text.includes(':') ? 'Share verse' : 'Share ' + _getChapterLabel();
+  document.getElementById('share-preview').textContent =
+    _shareContent.text.length > 120 ? _shareContent.text.substring(0, 120) + '...' : _shareContent.text;
+  document.getElementById('copy-label').textContent = 'Copy';
+  // Show native share on mobile
+  if (navigator.share) {
+    document.getElementById('share-native-btn').style.display = '';
+  }
+  document.getElementById('share-popup').classList.add('visible');
+  document.getElementById('share-overlay').classList.add('visible');
+}
+
+function closeSharePopup() {
+  document.getElementById('share-popup').classList.remove('visible');
+  document.getElementById('share-overlay').classList.remove('visible');
+}
+
+function shareCopyLink() {
+  var c = _shareContent || getShareContent();
+  var copyText = c.text + '\n' + c.url;
+  navigator.clipboard.writeText(copyText).then(function() {
+    document.getElementById('copy-label').textContent = 'Copied!';
+    setTimeout(function() { document.getElementById('copy-label').textContent = 'Copy'; }, 2000);
+  });
+}
+
+function shareToTruth() {
+  var c = _shareContent || getShareContent();
+  var text = c.text + '\n' + c.url;
+  window.open('https://truthsocial.com/share?text=' + encodeURIComponent(text), '_blank');
+  closeSharePopup();
+}
+
+function shareToFacebook() {
+  var c = _shareContent || getShareContent();
+  window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(c.url) + '&quote=' + encodeURIComponent(c.text), '_blank');
+  closeSharePopup();
+}
+
+function shareToX() {
+  var c = _shareContent || getShareContent();
+  window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(c.text) + '&url=' + encodeURIComponent(c.url), '_blank');
+  closeSharePopup();
+}
+
+function shareNative() {
+  var c = _shareContent || getShareContent();
+  navigator.share({ title: c.title, text: c.text, url: c.url }).catch(function() {});
+  closeSharePopup();
+}

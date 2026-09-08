@@ -744,36 +744,7 @@ initFloatingSelToolbarPref();
 
 // === SHARE SYSTEM ===
 var _shareVerseKey = '';
-function _getShareUrl() {
-  var hash = currentChapterId || '';
-  return window.location.origin + window.location.pathname + '#' + hash;
-}
 
-function getShareContent() {
-  var text = '';
-  if (_selWordUnits.length > 0) {
-    _selWordUnits.forEach(function(wu) { var hw = wu.querySelector('.hw'); if (hw) text += (text ? ' ' : '') + hw.textContent; });
-  }
-  return text;
-}
-
-function openSharePopup() {
-  var preview = document.getElementById('share-verse-preview');
-  preview.textContent = getShareContent() || 'Select text to share';
-  document.getElementById('share-popup').classList.add('open');
-}
-function closeSharePopup() { document.getElementById('share-popup').classList.remove('open'); }
-
-function shareToFacebook() { window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(_getShareUrl()), '_blank'); closeSharePopup(); }
-function shareToX() { var text = getShareContent(); window.open('https://x.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(_getShareUrl()), '_blank'); closeSharePopup(); }
-function shareCopyLink() {
-  navigator.clipboard.writeText(_getShareUrl()).then(function() { var btn = document.querySelector('.share-btn:nth-child(3)'); if (btn) { btn.textContent = 'Copied!'; setTimeout(function() { btn.textContent = 'Copy Link'; }, 1500); } });
-  closeSharePopup();
-}
-function shareNative() {
-  if (navigator.share) { navigator.share({ title: window.READER.shareTitle, text: getShareContent(), url: _getShareUrl() }).catch(function() {}); }
-  closeSharePopup();
-}
 
 // === GLOSSARY SYSTEM ===
 var glossaryIndex = null;

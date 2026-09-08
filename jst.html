@@ -673,7 +673,7 @@ body, button, input, select, textarea,
 <link rel="stylesheet" href="nav_engine.css?v=49">
 <link rel="stylesheet" href="site_chrome.css?v=71">
 <link rel="stylesheet" href="xref_study_panel.css?v=14">
-<link rel="stylesheet" href="reader.css?v=88">
+<link rel="stylesheet" href="reader.css?v=89">
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -849,15 +849,17 @@ body, button, input, select, textarea,
 </div>
 
 <!-- Share Popup -->
+<div id="share-overlay" onclick="closeSharePopup()"></div>
 <div id="share-popup">
   <span class="share-close" onclick="closeSharePopup()">✕</span>
-  <h3>Share This Verse</h3>
-  <div id="share-verse-preview" style="font-family:'David Libre',serif;font-size:1.1em;color:var(--ink);direction:rtl;margin-bottom:12px;padding:8px;background:var(--bg-deep);border-radius:4px;"></div>
-  <div class="share-btns">
-    <button class="share-btn" onclick="shareToFacebook()">Facebook</button>
-    <button class="share-btn" onclick="shareToX()">𝕏 / Twitter</button>
-    <button class="share-btn" onclick="shareCopyLink()">Copy Link</button>
-    <button class="share-btn" onclick="shareNative()">Share...</button>
+  <div class="share-title" id="share-title">Share this page</div>
+  <div class="share-preview" id="share-preview"></div>
+  <div class="share-row">
+    <button class="share-btn" onclick="shareToTruth()"><span class="share-icon">TS</span> Truth Social</button>
+    <button class="share-btn" onclick="shareToFacebook()"><span class="share-icon">f</span> Facebook</button>
+    <button class="share-btn" onclick="shareToX()"><span class="share-icon">𝕏</span> X</button>
+    <button class="share-btn" onclick="shareCopyLink()"><span class="share-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l2-2a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 0 0 7 7l1-1"/></svg></span> <span id="copy-label">Copy</span></button>
+    <button class="share-btn" id="share-native-btn" onclick="shareNative()" style="display:none"><span class="share-icon">↗</span> Share...</button>
   </div>
 </div>
 
@@ -1713,8 +1715,8 @@ window.READER = {
 <!-- Cross-reference data + engine (JST will get data later) -->
 <script src="crossrefs_engine.js?v=21"></script>
 
-<script src="reader_surface.js?v=8"></script>  <!-- panels, selection tools, annotation marks: one copy for all six pages -->
-<script src="reader_ui.js?v=41"></script>
+<script src="reader_surface.js?v=9"></script>  <!-- panels, selection tools, annotation marks: one copy for all six pages -->
+<script src="reader_ui.js?v=42"></script>
 <script>
 // === JST canon overrides (phase 2) — later function declarations win, so
 // these load AFTER reader_ui.js: JST_REF chapter labels, book progress in
