@@ -1130,3 +1130,64 @@ function selToolbarShare() {
   document.getElementById('share-popup').classList.add('visible');
   document.getElementById('share-overlay').classList.add('visible');
 }
+
+/* ══════════════════════════════════════════════════════════════════════
+   ONE WORD UNIT — the hottest function in the reader
+   ══════════════════════════════════════════════════════════════════════
+   Both copies did the same job and each had something the other lacked.
+
+     inert on the five   computeGlossFromHebrew(h, baseGloss) is gated on
+                         window._useStrongsMorphGloss, which reader_core sets
+                         to false and nothing ever sets true — so it returned
+                         its fallback unchanged. Dropped rather than carried.
+     missing on the BOM  the exception mark. root_scorecard's registry covers
+                         transliterated names (Adam-ondi-Ahman, Ahman,
+                         Shedolamak) AND Hebrew acronyms — both are words with
+                         no root that the engine must skip — and bom.html
+                         rendered תנ״ך with no mark at all. It gets one now.
+                         The title says both things, because the registry does.
+     data-mgl            dc.html and pgp.html already set it through the
+                         READER.wordUnitExtra hook; bom.html did it inline.
+                         It goes through the hook there too.
+
+   The no-nikkud state is read through _swNoNikkud() because the two pages
+   record it differently — window._noNikkud on the five, a body class on the
+   Book of Mormon — and both are still their own to set. The display rules
+   themselves were already identical, geminated vav and all. */
+function _swNoNikkud() {
+  return !!window._noNikkud ||
+    !!(document.body && document.body.classList.contains('no-nikkud'));
+}
+function _stripNikkudDisplay(s) {
+  /* geminated vav doubles in plene display: metavvekh -> מתווך, never מתוך */
+  return s.replace(/ו(ּ[\u05B0-\u05C7\u05BB]|[\u05B0-\u05C7\u05BB]ּ)/g, 'וו$1')
+          .replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, '');
+}
+function _isTranslitTerm(h) {
+  try {
+    return !!(window.RootScorecard && window.RootScorecard.isTranslitTerm &&
+              window.RootScorecard.isTranslitTerm(h));
+  } catch (e) { return false; }
+}
+
+function makeWordUnit(h, e, isSof) {
+  if (h === '\u05C3') return '';
+  h = h.replace(/\u05C3/g, '');            // embedded sof pasuq: CSS ::after draws it
+  var div = document.createElement('div');
+  div.className = 'word-unit' + (isSof ? ' sof' : '');
+  div.setAttribute('data-h', h);
+  var gloss = augmentGlossWithPrefixes(h, e.replace(/-/g, ' '));
+  var displayH = _swNoNikkud()
+    ? _stripNikkudDisplay(h)
+    : h.replace(/([\u05D0-\u05EA][\u0591-\u05C6]*\u05C7[\u0591-\u05C6]*)/g, '<span class="qq">$1</span>');
+  if (_isTranslitTerm(h)) {
+    displayH += '<span class="tt-mark" title="transliterated term or acronym — no Hebrew root">*</span>';
+  }
+  var glCls = 'gl' + ((gloss && gloss.length <= 18 && gloss.split(' ').length <= 3) ? ' gl-nw' : '');
+  div.innerHTML = '<span class="hw" lang="he">' + displayH + '</span>' +
+                  '<span class="tl"></span><span class="' + glCls + '">' + gloss + '</span>';
+  div.setAttribute('tabindex', '0');
+  div.setAttribute('role', 'button');
+  if (window.READER && window.READER.wordUnitExtra) window.READER.wordUnitExtra(div, h);
+  return div;
+}

@@ -131,7 +131,7 @@ function findBook(prefix) {
 // === RENDERING ENGINE ===
 
 window._noNikkud = false;
-function _stripNikkudDisplay(s) { return s.replace(/ו(ּ[ְ-ׇֻ]|[ְ-ׇֻ]ּ)/g,'וו$1').replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, ''); } // geminated vav doubles in plene display: metavvekh -> מתווך, never מתוך
+ // geminated vav doubles in plene display: metavvekh -> מתווך, never מתוך
 
 // OT interlinear English under each Hebrew word comes from ot_verses/*.js (curated
 // per-word glosses — WLC interlinear, aligned with Blue Letter Bible). Do not
@@ -223,31 +223,6 @@ function computeGlossFromHebrew(heb, fallbackGloss) {
   }
 }
 
-function _isTranslitTerm(h) {
-  try { return !!(window.RootScorecard && window.RootScorecard.isTranslitTerm && window.RootScorecard.isTranslitTerm(h)); } catch (e) { return false; }
-}
-
-function makeWordUnit(h, e, isSof) {
-  if (h === '\u05C3') return '';
-  h = h.replace(/\u05C3/g, '');
-  var div = document.createElement('div');
-  div.className = 'word-unit' + (isSof ? ' sof' : '');
-  div.setAttribute('data-h', h);
-  var baseGloss = augmentGlossWithPrefixes(h, e.replace(/-/g, ' '));
-  var gloss = computeGlossFromHebrew(h, baseGloss);
-  var displayH = window._noNikkud ? _stripNikkudDisplay(h) : h;
-  if (!window._noNikkud) displayH = displayH.replace(/([\u05D0-\u05EA][\u0591-\u05C6]*\u05C7[\u0591-\u05C6]*)/g, '<span class="qq">$1</span>');
-  // A transliterated term (the exception table in root_scorecard.js:
-  // Adam-ondi-Ahman, Ahman, Shedolamak) gets a mark drawn beside it; the data
-  // stays plain Hebrew and the word is never transliterated or given a root.
-  if (_isTranslitTerm(h)) displayH += '<span class="tt-mark" title="transliterated term">*</span>';
-  var glCls = 'gl' + ((gloss && gloss.length <= 18 && gloss.split(' ').length <= 3) ? ' gl-nw' : '');
-  div.innerHTML = '<span class="hw" lang="he">' + displayH + '</span><span class="tl"></span><span class="' + glCls + '">' + gloss + '</span>';
-  div.setAttribute('tabindex', '0');
-  div.setAttribute('role', 'button');
-  if (window.READER.wordUnitExtra) window.READER.wordUnitExtra(div, h);
-  return div;
-}
 
 function renderWords(words, container, verseKey) {
   var realWords = words.filter(function(w) { return w[0] !== '\u05C3'; });

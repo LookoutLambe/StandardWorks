@@ -3811,6 +3811,8 @@ window.READER = window.READER || {
   /* This volume's books load on demand and its renderer does not fetch them,
      so the shared prefetch asks through here. The five need no equivalent —
      reader_core's _ensureChapterRendered loads the verse file itself. */
+  /* Same hook dc.html and pgp.html use: the morph gloss for popup auditing. */
+  wordUnitExtra: function (div, h) { div.setAttribute('data-mgl', computeMorphGloss(h)); },
   ensureBook: function (chapId, cb) {
     if (typeof ensureBomBookForChapId === 'function') ensureBomBookForChapId(chapId, cb);
     else cb();
@@ -3818,7 +3820,7 @@ window.READER = window.READER || {
   books: []      /* filled from BOOK_DATA the moment it exists, below */
 };
 </script>
-<script src="../reader_surface.js?v=10"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
+<script src="../reader_surface.js?v=11"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
 <script src="../translit.js?v=1"></script>
 <script src="../jst_refmap.js?v=1"></script>
 <script src="../verse_loader.js?v=5"></script>
@@ -4175,22 +4177,6 @@ function computeMorphGloss(heb) {
   }
 }
 
-function makeWordUnit(h, e, isSof) {
-  if (h === '\u05C3') return '';
-  h = h.replace(/\u05C3/g, '');  // strip embedded sof pasuk (CSS ::after adds it)
-  const div = document.createElement('div');
-  div.className = 'word-unit' + (isSof ? ' sof' : '');
-  div.setAttribute('data-h', h);
-  var gloss = augmentGlossWithPrefixes(h, e.replace(/-/g, ' '));
-  // Preserve curated gloss; add morph gloss for popup auditing.
-  div.setAttribute('data-mgl', computeMorphGloss(h));
-  var displayH = document.body.classList.contains('no-nikkud') ? h.replace(/ו(ּ[ְ-ׇֻ]|[ְ-ׇֻ]ּ)/g,'וו$1').replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g,'') : h.replace(/([\u05D0-\u05EA][\u0591-\u05C6]*\u05C7[\u0591-\u05C6]*)/g, '<span class="qq">$1</span>');
-  var glCls = 'gl' + ((gloss && gloss.length <= 18 && gloss.split(' ').length <= 3) ? ' gl-nw' : '');
-  div.innerHTML = `<span class="hw" lang="he">${displayH}</span><span class="tl"></span><span class="${glCls}">${gloss}</span>`;
-  div.setAttribute('tabindex', '0');
-  div.setAttribute('role', 'button');
-  return div;
-}
 
 function renderWords(words, container, verseKey) {
   const realWords = words.filter(([h]) => h !== '\u05C3');
