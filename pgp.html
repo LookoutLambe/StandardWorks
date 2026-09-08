@@ -398,8 +398,6 @@ body.dual-mode .hw { font-size: 1.3em; }@media (max-width: 700px) {
 }
 
 
-
-
 /* === WORD POPUP === */
 #word-popup {
   display: none;
@@ -1140,7 +1138,18 @@ function computeMorphGloss(heb) {
 window.READER = {
   vol: 'pgp',
   selfPage: 'pgp.html',
-  books: [],
+  /* The id scheme, for reader_surface.js. ab-fac IS the book
+     'Abraham-Facsimile' but reads 'Facsimile No. 2'; pgp-intro carries no
+     number at all, which the shared matcher reads as chapter 1. */
+  books: [
+    { idPrefix: 'ms-ch',     en: 'Moses' },
+    { idPrefix: 'ab-ch',     en: 'Abraham' },
+    { idPrefix: 'ab-fac',    en: 'Abraham-Facsimile', label: 'Facsimile No.' },
+    { idPrefix: 'pgp-intro', en: 'PGP-Introduction',  label: 'Introduction', soloLabel: true },
+    { idPrefix: 'jsm-ch',    en: 'JS-Matthew',        soloLabel: true },
+    { idPrefix: 'jsh-ch',    en: 'JS-History',        soloLabel: true },
+    { idPrefix: 'aof-ch',    en: 'Articles of Faith', soloLabel: true }
+  ],
   landingTitle: 'Pearl of Great Price',
   navLabelHe: '\u05DB\u05EA\u05D1\u05D9 \u05D4\u05E7\u05D5\u05D3\u05E9',
   readerName: 'Pearl of Great Price',
@@ -1207,7 +1216,7 @@ window.READER = {
 </script>
 <!-- chapter summaries (19 KB eager) are now per-book in pgp_headings/,
      fetched with the book by VolumeLoader. tools/build_heading_manifests.js -->
-<script src="reader_core.js?v=22"></script>
+<script src="reader_core.js?v=23"></script>
 
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=6"></script>
@@ -1228,47 +1237,13 @@ window.READER = {
 <!-- pgp_crossrefs.js is fetched on idle by crossrefs_engine.js (it was 73 KB of blocking critical path) -->
 <script src="crossrefs_engine.js?v=21"></script>
 
-<script src="reader_surface.js?v=5"></script>  <!-- panels, selection tools, annotation marks: one copy for all six pages -->
+<script src="reader_surface.js?v=7"></script>  <!-- panels, selection tools, annotation marks: one copy for all six pages -->
 <script src="reader_ui.js?v=41"></script>
 <script>
 // === PGP canon overrides (phase 2) — later function declarations win, so
 // these load AFTER reader_ui.js: book-map chapter labels, the progress nav
 // label, PGP glossary verse jumps, and the one-chapter-book heading keys.
-function getBookChapter(chId) {
-  var bookMap = {
-    'ms-ch': 'Moses', 'ab-ch': 'Abraham', 'ab-fac': 'Abraham-Facsimile',
-    'pgp-intro': 'PGP-Introduction',
-    'jsm-ch': 'JS-Matthew', 'jsh-ch': 'JS-History',
-    'aof-ch': 'Articles of Faith'
-  };
-  for (var prefix in bookMap) {
-    if (chId.indexOf(prefix) === 0) {
-      var num = parseInt(chId.replace(prefix, ''), 10);
-      return { book: bookMap[prefix], chapter: num || 1 };
-    }
-  }
-  return null;
-}
 
-function getChapterLabel(id) {
-  if (!id) return 'Pearl of Great Price';
-  if (id === 'landing') return 'Pearl of Great Price';
-  var bookMap = {
-    'ms-ch': 'Moses', 'ab-ch': 'Abraham', 'ab-fac': 'Facsimile No.',
-    'pgp-intro': 'Introduction',
-    'jsm-ch': 'JS-Matthew', 'jsh-ch': 'JS-History',
-    'aof-ch': 'Articles of Faith'
-  };
-  var singleChapter = {'jsm-ch':1,'jsh-ch':1,'aof-ch':1,'pgp-intro':1};
-  for (var prefix in bookMap) {
-    if (id.indexOf(prefix) === 0) {
-      var num = id.replace(prefix, '');
-      if (singleChapter[prefix]) return bookMap[prefix];
-      return bookMap[prefix] + ' ' + num;
-    }
-  }
-  return id;
-}
 
 var PGP_BOOKS = [
   {prefix:'ms-ch', en:'Moses'},

@@ -69,20 +69,6 @@ function findBook(prefix) {
   return null;
 }
 
-function getBookChapter(chId) {
-  var m = chId.match(/^([a-z0-9]+)-ch(\d+)$/);
-  if (!m) return null;
-  var book = findBook(m[1]);
-  if (!book) return null;
-  return { book: book.en, chapter: parseInt(m[2], 10), bookData: book };
-}
-
-function getChapterLabel(id) {
-  if (!id || id === 'landing') return window.READER.landingTitle;
-  var info = getBookChapter(id);
-  if (!info) return id;
-  return info.book + ' ' + info.chapter;
-}
 
 // Dynamically create landing page and chapter panels
 (function buildPanels() {

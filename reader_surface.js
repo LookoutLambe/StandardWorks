@@ -687,3 +687,80 @@ function swVerseDeepLink(chapId, verseNum) {
     document.addEventListener('DOMContentLoaded', _installRenderHook);
   }
 })();
+
+/* ══════════════════════════════════════════════════════════════════════
+   CHAPTER IDS ARE DATA, NOT CODE
+   ══════════════════════════════════════════════════════════════════════
+   getBookChapter and getChapterLabel were forked FIVE ways: reader_core.js for
+   ot/nt, and a hand-written prefix→name map inline in dc.html, pgp.html,
+   jst.html and bom.html — each of them twice, once per function, so ten maps
+   describing the same thing.
+
+   None of it is logic. It is each volume describing its own id scheme, so it
+   moves into READER.books and the code below is the same for everyone.
+
+     idPrefix   the literal start of a chapter id. Absent, '-ch' is appended to
+                prefix, which is how ot/nt already declare their books
+                (prefix:'gen' for gen-ch1). The others state it outright:
+                'al-ch' for the BOM's al-ch32, a bare 'ch' for its ch1, 'dc'
+                for the D&C's dc76-ch1, 'jstgen-ch' for the JST's.
+     idSuffix   what follows the number. The D&C's ids are dc76-ch1: the
+                section is the number and '-ch1' is fixed.
+     label      the display name, when it differs from the book identity. The
+                Pearl's ab-fac IS the book 'Abraham-Facsimile' but reads
+                'Facsimile No. 2'.
+     soloLabel  show the book name with no number. PER BOOK, not per volume:
+                the Pearl does it for JS-Matthew and the BOM for Enos, while
+                the Tanakh has Obadiah — one chapter, and it still reads
+                "Obadiah 1".
+     frontTitles (on READER) ids that are not chapters at all.
+
+   Longest prefix wins, so a bare 'ch' cannot swallow '2n-ch', and an id with
+   nothing after the prefix is chapter 1 (the Pearl's pgp-intro).
+   ══════════════════════════════════════════════════════════════════════ */
+function _swBooks() { return (window.READER && window.READER.books) || []; }
+function _swBookName(b) { return (b && (b.en || b.name)) || ''; }
+function _swBookLabel(b) { return (b && (b.label || b.en || b.name)) || ''; }
+function _swBookIdPrefix(b) {
+  if (!b) return '';
+  if (b.idPrefix) return b.idPrefix;
+  var p = b.prefix || '';
+  return /-ch$/.test(p) ? p : (p ? p + '-ch' : '');
+}
+
+/** The book entry whose id scheme matches chId, and the chapter number in it. */
+function _swMatchChapterId(chId) {
+  if (!chId) return null;
+  var books = _swBooks(), best = null, bestRest = null, bestLen = -1;
+  for (var i = 0; i < books.length; i++) {
+    var b = books[i], p = _swBookIdPrefix(b);
+    if (!p || chId.indexOf(p) !== 0 || p.length <= bestLen) continue;
+    var rest = chId.slice(p.length), suf = b.idSuffix || '';
+    if (suf) {
+      if (rest.length < suf.length || rest.slice(-suf.length) !== suf) continue;
+      rest = rest.slice(0, rest.length - suf.length);
+    }
+    if (rest !== '' && !/^\d+$/.test(rest)) continue;
+    best = b; bestRest = rest; bestLen = p.length;
+  }
+  if (!best) return null;
+  return { book: best, chapter: bestRest === '' ? 1 : (parseInt(bestRest, 10) || 1) };
+}
+
+function getBookChapter(chId) {
+  var m = _swMatchChapterId(chId);
+  if (!m) return null;
+  return { book: _swBookName(m.book), chapter: m.chapter, bookData: m.book };
+}
+
+function getChapterLabel(id) {
+  var R = window.READER || {};
+  if (!id) return R.landingTitle || '';
+  var front = R.frontTitles || {};
+  if (front[id]) return front[id];
+  if (id === 'landing') return R.landingTitle || id;
+  var m = _swMatchChapterId(id);
+  if (!m) return id;
+  if (m.book.soloLabel) return _swBookLabel(m.book);
+  return _swBookLabel(m.book) + ' ' + m.chapter;
+}

@@ -3821,9 +3821,28 @@ body.dual-mode .chapter-summary { display: block; }
    of the keys readers already have ("bom-show-translit", "bom-font-size").
    Nothing else this page loads reads window.READER, so this is the whole of it;
    the five carry a much larger READER object that shapes their reader. */
-window.READER = window.READER || { vol: 'bom' };
+window.READER = window.READER || {
+  vol: 'bom',
+  landingTitle: 'Book of Mormon',
+  /* Ids that are not chapters. reader_surface.js's getChapterLabel checks
+     these before it tries to read a book and a number out of the id. */
+  frontTitles: {
+    'landing': 'Book of Mormon',
+    'topical-guide': 'Topical Guide',
+    'print-editions': 'In Print',
+    'front-hebrew-guide': 'Hebrew Guide',
+    'front-translator': 'Translator\u2019s Preface',
+    'front-titlepage': 'Title Page',
+    'front-introduction': 'Introduction',
+    'front-three': 'Testimony of Three Witnesses',
+    'front-eight': 'Testimony of Eight Witnesses',
+    'front-js': 'Testimony of the Prophet',
+    'front-brief': 'Brief Explanation'
+  },
+  books: []      /* filled from BOOK_DATA the moment it exists, below */
+};
 </script>
-<script src="../reader_surface.js?v=5"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
+<script src="../reader_surface.js?v=7"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
 <script src="../translit.js?v=1"></script>
 <script src="../jst_refmap.js?v=1"></script>
 <script src="../verse_loader.js?v=5"></script>
@@ -4572,6 +4591,15 @@ var BOOK_DATA = [
   { prefix: 'et-ch', name: 'Ether',           count: 15, index: 14 },
   { prefix: 'mr-ch', name: 'Moroni',          count: 10, index: 15 }
 ];
+
+/* The id scheme, handed to the shared reader. BOOK_DATA's prefix IS the literal
+   start of a chapter id here — 'al-ch' for al-ch32, and a bare 'ch' for
+   1 Nephi's ch1 — so it goes across as idPrefix and no rule has to guess it. */
+window.READER.books = BOOK_DATA.map(function (b) {
+  /* soloLabel is per BOOK, not per volume: "Enos", but "Alma 32". The Tanakh
+     has Obadiah — also one chapter — and still labels it "Obadiah 1". */
+  return { idPrefix: b.prefix, en: b.name, ch: b.count, soloLabel: b.count === 1 };
+});
 
 function getBookProgress(chapterId) {
   if (!chapterId) return null;
@@ -6714,24 +6742,6 @@ setTimeout(loadCrossRefs, 500);
 
 // === DUAL MODE: Official English text ===
 
-function getBookChapter(chId) {
-  var bookMap = {
-    'ch': '1 Nephi', '2n-ch': '2 Nephi',
-    'jc-ch': 'Jacob',
-    'en-ch': 'Enos', 'jr-ch': 'Jarom', 'om-ch': 'Omni',
-    'wm-ch': 'Words of Mormon', 'mo-ch': 'Mosiah', 'al-ch': 'Alma',
-    'he-ch': 'Helaman', '3n-ch': '3 Nephi',
-    '4n-ch': '4 Nephi',
-    'mm-ch': 'Mormon', 'et-ch': 'Ether', 'mr-ch': 'Moroni'
-  };
-  for (var prefix in bookMap) {
-    if (chId.indexOf(prefix) === 0) {
-      var num = parseInt(chId.replace(prefix, ''), 10);
-      return { book: bookMap[prefix], chapter: num || 1 };
-    }
-  }
-  return null;
-}
 
 window._englishLoaded = false;
 window._englishMap = {};
@@ -6800,40 +6810,6 @@ function loadViaXHR(url, callback) {
 
 // === NAVIGATION ENHANCEMENTS ===
 
-function getChapterLabel(id) {
-  if (!id) return 'Book of Mormon';
-  var frontMap = {
-    'landing': 'Book of Mormon',
-    'topical-guide': 'Topical Guide',
-    'print-editions': 'In Print',
-    'front-hebrew-guide': 'Hebrew Guide',
-    'front-translator': 'Translator\'s Preface',
-    'front-titlepage': 'Title Page',
-    'front-introduction': 'Introduction',
-    'front-three': 'Testimony of Three Witnesses',
-    'front-eight': 'Testimony of Eight Witnesses',
-    'front-js': 'Testimony of the Prophet',
-    'front-brief': 'Brief Explanation'
-  };
-  if (frontMap[id]) return frontMap[id];
-  var bookMap = {
-    'ch': '1 Nephi', '2n-ch': '2 Nephi', 'jc-ch': 'Jacob',
-    'en-ch': 'Enos', 'jr-ch': 'Jarom', 'om-ch': 'Omni',
-    'wm-ch': 'Words of Mormon', 'mo-ch': 'Mosiah', 'al-ch': 'Alma',
-    'he-ch': 'Helaman', '3n-ch': '3 Nephi',
-    '4n-ch': '4 Nephi',
-    'mm-ch': 'Mormon', 'et-ch': 'Ether', 'mr-ch': 'Moroni'
-  };
-  var singleChapter = {'en-ch':1,'jr-ch':1,'om-ch':1,'wm-ch':1,'4n-ch':1};
-  for (var prefix in bookMap) {
-    if (id.indexOf(prefix) === 0) {
-      var num = id.replace(prefix, '');
-      if (singleChapter[prefix]) return bookMap[prefix];
-      return bookMap[prefix] + ' ' + num;
-    }
-  }
-  return id;
-}
 
 // Override updateNavButtons to show English label with dropdown arrow
 (function() {

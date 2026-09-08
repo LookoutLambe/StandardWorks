@@ -362,8 +362,6 @@ body.hide-gloss .word-unit { padding-bottom: 3px; }
 }
 
 
-
-
 /* === WORD POPUP === */
 #word-popup {
   display: none;
@@ -1460,7 +1458,43 @@ body, button, input, select, textarea,
 window.READER = {
   vol: 'jst',
   selfPage: 'jst.html',
-  books: [],
+  /* The id scheme, for reader_surface.js. Every JST id is jst<book>-ch<N>;
+     the chapter number is a FILE POSITION, not the biblical chapter (see
+     jst_refmap.js), which is why nav_engine keeps its own label for the
+     reference row. */
+  books: [
+    { idPrefix: 'jstgen-ch', en: 'Genesis' },
+    { idPrefix: 'jstexo-ch', en: 'Exodus' },
+    { idPrefix: 'jstdeu-ch', en: 'Deuteronomy' },
+    { idPrefix: 'jst1sa-ch', en: '1 Samuel' },
+    { idPrefix: 'jst2sa-ch', en: '2 Samuel' },
+    { idPrefix: 'jst1ch-ch', en: '1 Chronicles' },
+    { idPrefix: 'jst2ch-ch', en: '2 Chronicles' },
+    { idPrefix: 'jstpsa-ch', en: 'Psalms' },
+    { idPrefix: 'jstisa-ch', en: 'Isaiah' },
+    { idPrefix: 'jstjer-ch', en: 'Jeremiah' },
+    { idPrefix: 'jstamo-ch', en: 'Amos' },
+    { idPrefix: 'jstmatt-ch', en: 'Matthew' },
+    { idPrefix: 'jstmark-ch', en: 'Mark' },
+    { idPrefix: 'jstluke-ch', en: 'Luke' },
+    { idPrefix: 'jstjohn-ch', en: 'John' },
+    { idPrefix: 'jstacts-ch', en: 'Acts' },
+    { idPrefix: 'jstrom-ch', en: 'Romans' },
+    { idPrefix: 'jst1co-ch', en: '1 Corinthians' },
+    { idPrefix: 'jst2co-ch', en: '2 Corinthians' },
+    { idPrefix: 'jstgal-ch', en: 'Galatians' },
+    { idPrefix: 'jsteph-ch', en: 'Ephesians' },
+    { idPrefix: 'jstcol-ch', en: 'Colossians' },
+    { idPrefix: 'jst1th-ch', en: '1 Thessalonians' },
+    { idPrefix: 'jst2th-ch', en: '2 Thessalonians' },
+    { idPrefix: 'jst1ti-ch', en: '1 Timothy' },
+    { idPrefix: 'jstheb-ch', en: 'Hebrews' },
+    { idPrefix: 'jstjas-ch', en: 'James' },
+    { idPrefix: 'jst1pe-ch', en: '1 Peter' },
+    { idPrefix: 'jst2pe-ch', en: '2 Peter' },
+    { idPrefix: 'jst1jn-ch', en: '1 John' },
+    { idPrefix: 'jstrev-ch', en: 'Revelation' }
+  ],
   /* the JST ships no cross-reference data. Declared, so crossrefs_engine.js
      does not go looking for jst_crossrefs.js and 404 on every load. */
   crossrefsFile: '',
@@ -1662,7 +1696,7 @@ window.READER = {
   }
 };
 </script>
-<script src="reader_core.js?v=22"></script>
+<script src="reader_core.js?v=23"></script>
 
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=6"></script>
@@ -1679,102 +1713,16 @@ window.READER = {
 <!-- Cross-reference data + engine (JST will get data later) -->
 <script src="crossrefs_engine.js?v=21"></script>
 
-<script src="reader_surface.js?v=5"></script>  <!-- panels, selection tools, annotation marks: one copy for all six pages -->
+<script src="reader_surface.js?v=7"></script>  <!-- panels, selection tools, annotation marks: one copy for all six pages -->
 <script src="reader_ui.js?v=41"></script>
 <script>
 // === JST canon overrides (phase 2) — later function declarations win, so
 // these load AFTER reader_ui.js: JST_REF chapter labels, book progress in
 // the nav label, and the JST glossary verse jump.
-function getBookChapter(chId) {
-  var bookMap = {
-    'jstgen-ch': 'Genesis',
-    'jstexo-ch': 'Exodus',
-    'jstdeu-ch': 'Deuteronomy',
-    'jst1sa-ch': '1 Samuel',
-    'jst2sa-ch': '2 Samuel',
-    'jst1ch-ch': '1 Chronicles',
-    'jst2ch-ch': '2 Chronicles',
-    'jstpsa-ch': 'Psalms',
-    'jstisa-ch': 'Isaiah',
-    'jstjer-ch': 'Jeremiah',
-    'jstamo-ch': 'Amos',
-    'jstmatt-ch': 'Matthew',
-    'jstmark-ch': 'Mark',
-    'jstluke-ch': 'Luke',
-    'jstjohn-ch': 'John',
-    'jstacts-ch': 'Acts',
-    'jstrom-ch': 'Romans',
-    'jst1co-ch': '1 Corinthians',
-    'jst2co-ch': '2 Corinthians',
-    'jstgal-ch': 'Galatians',
-    'jsteph-ch': 'Ephesians',
-    'jstcol-ch': 'Colossians',
-    'jst1th-ch': '1 Thessalonians',
-    'jst2th-ch': '2 Thessalonians',
-    'jst1ti-ch': '1 Timothy',
-    'jstheb-ch': 'Hebrews',
-    'jstjas-ch': 'James',
-    'jst1pe-ch': '1 Peter',
-    'jst2pe-ch': '2 Peter',
-    'jst1jn-ch': '1 John',
-    'jstrev-ch': 'Revelation'
-  };
-  for (var prefix in bookMap) {
-    if (chId.indexOf(prefix) === 0) {
-      var num = parseInt(chId.replace(prefix, ''), 10);
-      return { book: bookMap[prefix], chapter: num || 1 };
-    }
-  }
-  return null;
-}
+
 
 var JST_REF = {"jst1ch-ch1": "1 Chronicles 21", "jst1co-ch1": "1 Corinthians 7", "jst1co-ch2": "1 Corinthians 15", "jst1jn-ch1": "1 John 2", "jst1jn-ch2": "1 John 3", "jst1jn-ch3": "1 John 4", "jst1pe-ch1": "1 Peter 3", "jst1pe-ch2": "1 Peter 4", "jst1sa-ch1": "1 Samuel 16", "jst1th-ch1": "1 Thessalonians 4", "jst1ti-ch1": "1 Timothy 2", "jst1ti-ch2": "1 Timothy 3", "jst1ti-ch3": "1 Timothy 6", "jst2ch-ch1": "2 Chronicles 18", "jst2co-ch1": "2 Corinthians 5", "jst2pe-ch1": "2 Peter 3", "jst2sa-ch1": "2 Samuel 12", "jst2th-ch1": "2 Thessalonians 2", "jstacts-ch1": "Acts 9", "jstacts-ch2": "Acts 22", "jstamo-ch1": "Amos 7", "jstcol-ch1": "Colossians 2", "jstdeu-ch1": "Deuteronomy 10", "jsteph-ch1": "Ephesians 4", "jstexo-ch1": "Exodus 4", "jstexo-ch2": "Exodus 18", "jstexo-ch3": "Exodus 22", "jstexo-ch4": "Exodus 32", "jstexo-ch5": "Exodus 33", "jstexo-ch6": "Exodus 34", "jstgal-ch1": "Galatians 3", "jstgen-ch1": "Genesis 1–8", "jstgen-ch2": "Genesis 9", "jstgen-ch3": "Genesis 14", "jstgen-ch4": "Genesis 15", "jstgen-ch5": "Genesis 17", "jstgen-ch6": "Genesis 19", "jstgen-ch7": "Genesis 21", "jstgen-ch8": "Genesis 48", "jstgen-ch9": "Genesis 50", "jstheb-ch1": "Hebrews 1", "jstheb-ch2": "Hebrews 4", "jstheb-ch3": "Hebrews 6", "jstheb-ch4": "Hebrews 7", "jstheb-ch5": "Hebrews 11", "jstisa-ch1": "Isaiah 29", "jstisa-ch2": "Isaiah 42", "jstjas-ch1": "James 1", "jstjas-ch2": "James 2", "jstjer-ch1": "Jeremiah 26", "jstjohn-ch1": "John 1", "jstjohn-ch2": "John 4", "jstjohn-ch3": "John 6", "jstjohn-ch4": "John 13", "jstjohn-ch5": "John 14", "jstluke-ch1": "Luke 1", "jstluke-ch10": "Luke 17", "jstluke-ch11": "Luke 18", "jstluke-ch12": "Luke 21", "jstluke-ch13": "Luke 23", "jstluke-ch14": "Luke 24", "jstluke-ch2": "Luke 2", "jstluke-ch3": "Luke 3", "jstluke-ch4": "Luke 6", "jstluke-ch5": "Luke 9", "jstluke-ch6": "Luke 11", "jstluke-ch7": "Luke 12", "jstluke-ch8": "Luke 14", "jstluke-ch9": "Luke 16", "jstmark-ch1": "Mark 2", "jstmark-ch2": "Mark 3", "jstmark-ch3": "Mark 7", "jstmark-ch4": "Mark 8", "jstmark-ch5": "Mark 9", "jstmark-ch6": "Mark 12", "jstmark-ch7": "Mark 14", "jstmark-ch8": "Mark 16", "jstmatt-ch1": "Matthew 3", "jstmatt-ch10": "Matthew 16", "jstmatt-ch11": "Matthew 17", "jstmatt-ch12": "Matthew 18", "jstmatt-ch13": "Matthew 19", "jstmatt-ch14": "Matthew 21", "jstmatt-ch15": "Matthew 23", "jstmatt-ch16": "Matthew 26", "jstmatt-ch17": "Matthew 27", "jstmatt-ch2": "Matthew 4", "jstmatt-ch3": "Matthew 5", "jstmatt-ch4": "Matthew 6", "jstmatt-ch5": "Matthew 7", "jstmatt-ch6": "Matthew 9", "jstmatt-ch7": "Matthew 11", "jstmatt-ch8": "Matthew 12", "jstmatt-ch9": "Matthew 13", "jstpsa-ch1": "Psalm 11", "jstpsa-ch2": "Psalm 14", "jstpsa-ch3": "Psalm 24", "jstpsa-ch4": "Psalm 109", "jstrev-ch1": "Revelation 1", "jstrev-ch2": "Revelation 2", "jstrev-ch3": "Revelation 5", "jstrev-ch4": "Revelation 12", "jstrev-ch5": "Revelation 19", "jstrom-ch1": "Romans 3", "jstrom-ch2": "Romans 4", "jstrom-ch3": "Romans 7", "jstrom-ch4": "Romans 8", "jstrom-ch5": "Romans 13"};
 
-function getChapterLabel(id) {
-  if (!id) return 'Joseph Smith Translation';
-  if (id === 'landing') return 'Joseph Smith Translation';
-  var bookMap = {
-    'jstgen-ch': 'Genesis',
-    'jstexo-ch': 'Exodus',
-    'jstdeu-ch': 'Deuteronomy',
-    'jst1sa-ch': '1 Samuel',
-    'jst2sa-ch': '2 Samuel',
-    'jst1ch-ch': '1 Chronicles',
-    'jst2ch-ch': '2 Chronicles',
-    'jstpsa-ch': 'Psalms',
-    'jstisa-ch': 'Isaiah',
-    'jstjer-ch': 'Jeremiah',
-    'jstamo-ch': 'Amos',
-    'jstmatt-ch': 'Matthew',
-    'jstmark-ch': 'Mark',
-    'jstluke-ch': 'Luke',
-    'jstjohn-ch': 'John',
-    'jstacts-ch': 'Acts',
-    'jstrom-ch': 'Romans',
-    'jst1co-ch': '1 Corinthians',
-    'jst2co-ch': '2 Corinthians',
-    'jstgal-ch': 'Galatians',
-    'jsteph-ch': 'Ephesians',
-    'jstcol-ch': 'Colossians',
-    'jst1th-ch': '1 Thessalonians',
-    'jst2th-ch': '2 Thessalonians',
-    'jst1ti-ch': '1 Timothy',
-    'jstheb-ch': 'Hebrews',
-    'jstjas-ch': 'James',
-    'jst1pe-ch': '1 Peter',
-    'jst2pe-ch': '2 Peter',
-    'jst1jn-ch': '1 John',
-    'jstrev-ch': 'Revelation'
-  };
-  for (var prefix in bookMap) {
-    if (id.indexOf(prefix) === 0) {
-      if (typeof JST_REF !== 'undefined' && JST_REF[id]) return JST_REF[id];
-      var num = id.replace(prefix, '');
-      return bookMap[prefix] + ' ' + num;
-    }
-  }
-  return id;
-}
 
 var JST_BOOKS = [
   {prefix:'jstgen-ch', en:'Genesis'},

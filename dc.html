@@ -112,8 +112,6 @@ body.dark-mode .verse.user-highlight { background: color-mix(in srgb, var(--here
 #reading-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--accent); z-index: calc(var(--z-chrome) + 1); width: 0%; transition: width 0.1s; }
 
 
-
-
 /* === WORD POPUP === */
 #word-popup {
   display: none; position: fixed; z-index: var(--z-pop);
@@ -569,7 +567,12 @@ function computeMorphGloss(heb) {
 window.READER = {
   vol: 'dc',
   selfPage: 'dc.html',
-  books: [],
+  /* The id scheme, for reader_surface.js's getBookChapter/getChapterLabel.
+     A section id is dc76-ch1: the section IS the number, '-ch1' is fixed. */
+  books: [
+    { idPrefix: 'dc', idSuffix: '-ch1', en: 'D&C' },
+    { idPrefix: 'od', idSuffix: '-ch1', en: 'OD'  }
+  ],
   landingTitle: 'Doctrine and Covenants',
   navLabelHe: '\u05D4\u05B7\u05DC\u05BC\u05B6\u05E7\u05B7\u05D7 \u05D5\u05B0\u05D4\u05B7\u05D1\u05BC\u05B0\u05E8\u05B4\u05D9\u05EA\u05D5\u05B9\u05EA',
   readerName: 'D&C',
@@ -690,7 +693,7 @@ window.READER = {
 </script>
 <!-- chapter summaries (250 KB eager) are now per-book in dc_headings/,
      fetched with the book by VolumeLoader. tools/build_heading_manifests.js -->
-<script src="reader_core.js?v=22"></script>
+<script src="reader_core.js?v=23"></script>
 
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=6"></script>
@@ -712,7 +715,7 @@ window.READER = {
 <!-- dc_crossrefs.js is fetched on idle by crossrefs_engine.js (it was 511 KB of blocking critical path) -->
 <script src="crossrefs_engine.js?v=21"></script>
 
-<script src="reader_surface.js?v=5"></script>  <!-- panels, selection tools, annotation marks: one copy for all six pages -->
+<script src="reader_surface.js?v=7"></script>  <!-- panels, selection tools, annotation marks: one copy for all six pages -->
 <script src="reader_ui.js?v=41"></script>
 <script>
 // === D&C canon overrides (phase 2) — later function declarations win, so
@@ -720,22 +723,6 @@ window.READER = {
 // label-keyed heading injector, and the D&C glossary verse jump.
 // === HELPER FUNCTIONS ===
 
-function getBookChapter(chId) {
-  var m = chId.match(/^dc(\d+)-ch1$/);
-  if (m) return { book: 'D&C', chapter: parseInt(m[1], 10) };
-  if (chId === 'od1-ch1') return { book: 'OD', chapter: 1 };
-  if (chId === 'od2-ch1') return { book: 'OD', chapter: 2 };
-  return null;
-}
-
-function getChapterLabel(id) {
-  if (!id || id === 'landing') return 'D&C';
-  var m = id.match(/^dc(\d+)-ch1$/);
-  if (m) return 'D&C ' + m[1];
-  if (id === 'od1-ch1') return 'OD 1';
-  if (id === 'od2-ch1') return 'OD 2';
-  return id;
-}
 
 function goToGlossaryVerse(verseKey) {
   closeGlossary();
