@@ -390,6 +390,7 @@ body.dual-mode .colophon .word-unit .hw { font-size: 1em; }
   </div>
   <div id="annotations-list"></div>
   <button class="ann-export-btn" onclick="exportAnnotations()">Export Annotations (JSON)</button>
+  <button class="ann-export-btn" onclick="copyAllNotes()">Copy All Notes</button>
 </div>
 
 <!-- Cross-Reference Panel -->
@@ -595,8 +596,8 @@ window.READER = {
 <!-- ot_crossrefs.js is fetched on idle by crossrefs_engine.js (it was 1.24 MB of blocking critical path) -->
 <script src="crossrefs_engine.js?v=21"></script>
 
-<script src="reader_surface.js?v=12"></script>  <!-- panels, selection tools, annotation marks: one copy for all six pages -->
-<script src="reader_ui.js?v=45"></script>
+<script src="reader_surface.js?v=13"></script>  <!-- panels, selection tools, annotation marks: one copy for all six pages -->
+<script src="reader_ui.js?v=46"></script>
 <script src="notes_engine.js"></script>
 <script src="site_chrome.js?v=44" data-sw-volume="ot"></script>
 <script src="verse_search.js?v=3"></script>

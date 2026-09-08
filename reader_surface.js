@@ -1280,3 +1280,75 @@ function closeAllPanels() {
   var xp = document.getElementById('xref-panel');
   if (xp && xp.classList.contains('open')) closeXrefPanel();
 }
+
+/* ── Leaving the glossary for a verse, and getting your notes out ──────────
+   goToGlossaryVerse    the five's version is the one that was deliberately
+                        fixed: a dictionary entry lists every verse a root
+                        appears in, so this is the longest jump in the app, and
+                        a bare navTo() CLEARS the return point instead of
+                        setting one — the reader looked a word up from Alma 32,
+                        followed it, and had no way back (and inside the iOS app
+                        there is no browser Back either). It built the chapter
+                        id by hand from the five's scheme, which is why the BOM
+                        could not use it; it goes through the shared id model
+                        now and works for both.
+
+   export / copy        these were not two versions of one function. The five
+                        download a JSON file with the annotations AND the
+                        notes; bom.html copies the notes to the clipboard as
+                        readable text. Both are worth having and each page
+                        promised only one of them in its button, so both are
+                        here and every page gets both buttons. */
+function goToGlossaryVerse(verseKey) {
+  closeGlossary();
+  var parts = String(verseKey || '').split('|');
+  if (parts.length < 3) return;
+  var books = _swBooks(), book = null;
+  for (var i = 0; i < books.length; i++) {
+    if (_swBookName(books[i]) === parts[0]) { book = books[i]; break; }
+  }
+  if (!book) return;
+  var chId = _swBookIdPrefix(book) + parts[1] + (book.idSuffix || '');
+  var href = (typeof swVerseDeepLink === 'function') ? swVerseDeepLink(chId, parts[2]) : '';
+  if (typeof window.NavEngineFollow === 'function' && href) {
+    window.NavEngineFollow('#' + href.split('#')[1]);
+  } else {
+    navTo(chId);
+  }
+  setTimeout(function() {
+    var verse = document.querySelector('[data-verse-key="' + verseKey + '"]');
+    if (verse) {
+      verse.classList.add('highlighted');
+      verse.scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'center' });
+    }
+  }, 200);
+}
+
+function exportAnnotations() {
+  var data = {
+    annotations: _swAnnotations, notes: _swNotes,
+    exported: new Date().toISOString(),
+    reader: (window.READER && window.READER.readerName) || document.title
+  };
+  var blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = ((window.READER && window.READER.vol) || 'reader') + '-annotations.json';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function copyAllNotes() {
+  var keys = Object.keys(_swNotes).sort();
+  var title = ((window.READER && window.READER.readerName) || 'Reader') + ' Study Notes';
+  var text = title + '\n' + '='.repeat(title.length) + '\n\n';
+  keys.forEach(function(key) {
+    var parts = key.split('|');
+    text += (parts.length >= 3 ? parts[0] + ' ' + parts[1] + ':' + parts[2] : key) + '\n';
+    text += _swNotes[key] + '\n\n';
+  });
+  navigator.clipboard.writeText(text).then(function() {
+    alert(keys.length ? 'Notes copied to clipboard!' : 'No notes yet.');
+  });
+}

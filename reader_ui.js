@@ -551,13 +551,6 @@ function renderAnnotationsList() {
   list.innerHTML = html;
 }
 
-function exportAnnotations() {
-  var data = { annotations: _swAnnotations, notes: _swNotes, exported: new Date().toISOString(), reader: window.READER.readerName };
-  var blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-  var url = URL.createObjectURL(blob);
-  var a = document.createElement('a'); a.href = url; a.download = window.READER.vol + '-annotations.json'; a.click();
-  URL.revokeObjectURL(url);
-}
 
 // === SELECTION TOOLBAR ===
 var _selWordUnits = [];
@@ -768,30 +761,6 @@ function buildVerseRefsHtml(verseRefs) {
   return html;
 }
 
-
-function goToGlossaryVerse(verseKey) {
-  closeGlossary();
-  var parts = verseKey.split('|');
-  if (parts.length < 3) return;
-  var book = findBookByName(parts[0]);
-  if (!book) return;
-  var chId = book.prefix + '-ch' + parts[1];
-  /* THE WAY BACK. A dictionary entry lists every verse the root appears in, so
-     this is the longest jump in the app — and it went through a bare navTo(),
-     whose wrapper CLEARS any return point rather than setting one. The reader
-     looked a word up from Alma 32, followed a reference, and had no way back
-     to the verse they were reading; inside the iOS app there is no browser
-     Back either. NavEngineFollow marks where we are and lands on the verse. */
-  if (typeof window.NavEngineFollow === 'function') {
-    window.NavEngineFollow('#' + chId + (parts[2] ? '&v=' + parts[2] : ''));
-  } else {
-    navTo(chId);
-  }
-  setTimeout(function() {
-    var verse = document.querySelector('[data-verse-key="' + verseKey + '"]');
-    if (verse) { verse.classList.add('highlighted'); verse.scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'center' }); }
-  }, 200);
-}
 
 function findBookByName(name) {
   for (var i = 0; i < BOOKS.length; i++) { if (BOOKS[i].en === name) return BOOKS[i]; }

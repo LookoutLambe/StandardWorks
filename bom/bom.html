@@ -3814,7 +3814,7 @@ window.READER = window.READER || {
   books: []      /* filled from BOOK_DATA the moment it exists, below */
 };
 </script>
-<script src="../reader_surface.js?v=12"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
+<script src="../reader_surface.js?v=13"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
 <script src="../translit.js?v=1"></script>
 <script src="../jst_refmap.js?v=1"></script>
 <script src="../verse_loader.js?v=5"></script>
@@ -4967,7 +4967,8 @@ function renderAnnotationsList() {
     html += '</select>';
     html += '<textarea id="ann-note-text" class="ann-note-textarea" placeholder="Write your note..." oninput="saveAnnotationNote()"></textarea>';
     html += '</div>';
-    html += '<button class="ann-export" onclick="exportAnnotations()">Copy All Notes</button>';
+    html += '<button class="ann-export" onclick="copyAllNotes()">Copy All Notes</button>';
+    html += '<button class="ann-export" onclick="exportAnnotations()">Export Annotations (JSON)</button>';
   }
 
   list.innerHTML = html;
@@ -5031,18 +5032,6 @@ function navigateToVerse(verseKey) {
   }, 200);
 }
 
-function exportAnnotations() {
-  var keys = Object.keys(_swNotes).sort();
-  var text = 'Book of Mormon Study Notes\n' + '='.repeat(30) + '\n\n';
-  keys.forEach(function(key) {
-    var parts = key.split('|');
-    text += parts[0] + ' ' + parts[1] + ':' + parts[2] + '\n';
-    text += _swNotes[key] + '\n\n';
-  });
-  navigator.clipboard.writeText(text).then(function() {
-    alert('Notes copied to clipboard!');
-  });
-}
 
 // popupAnnotate and updatePopupAnnIndicators removed — annotations now use selection toolbar
 
@@ -7462,13 +7451,6 @@ function renderGlossaryEntry(entry) {
   '</div>';
 }
 
-
-function goToGlossaryVerse(verseKey) {
-  closeGlossary();
-  if (typeof navigateToVerse === 'function') {
-    navigateToVerse(verseKey);
-  }
-}
 
 /* All three live in xref_common.js now — reader_ui.js and bom.html had their
    own copies, identical but for a null-guard. The globals stay because the
