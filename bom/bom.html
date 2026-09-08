@@ -3812,6 +3812,26 @@ window.READER = window.READER || {
   /* This volume's books load on demand and its renderer does not fetch them,
      so the shared prefetch asks through here. The five need no equivalent —
      reader_core's _ensureChapterRendered loads the verse file itself. */
+  /* The header title. This was a SIXTEEN-BRANCH if/else inside navTo — one
+     `id.startsWith('al-')` per book, each hardcoding the same Hebrew and
+     English name READER.books already carries. dc.html, pgp.html and jst.html
+     have used this hook all along; only this page open-coded it. */
+  panelTitle: function (titleEl, subEl, id) {
+    if (id === 'intro' || id.indexOf('front-') === 0) {
+      titleEl.textContent = '\u05E1\u05E4\u05E8 \u05DE\u05D5\u05E8\u05DE\u05D5\u05DF';
+      subEl.textContent = '\u05E2\u05D3\u05D5\u05EA \u05D0\u05D7\u05E8\u05EA \u05D9\u05E9\u05D5\u05E2 \u05D4\u05DE\u05E9\u05D9\u05D7';
+      subEl.style.display = '';
+      return true;
+    }
+    var info = (typeof getBookChapter === 'function') ? getBookChapter(id) : null;
+    /* Not a chapter and not front matter: the landing, the topical guide and
+       the print page carry their own titles, and navTo hides the header. */
+    if (!info || !info.bookData) return true;
+    titleEl.textContent = info.bookData.he || info.bookData.en;
+    subEl.textContent = info.bookData.en;
+    subEl.style.display = '';
+    return true;
+  },
   /* Same hook dc.html and pgp.html use: the morph gloss for popup auditing. */
   wordUnitExtra: function (div, h) { div.setAttribute('data-mgl', computeMorphGloss(h)); },
   /* This volume's English is per book too, and its renderer does not fetch it. */
@@ -3831,7 +3851,7 @@ window.READER = window.READER || {
   books: []      /* filled from BOOK_DATA the moment it exists, below */
 };
 </script>
-<script src="../reader_surface.js?v=28"></script>
+<script src="../reader_surface.js?v=29"></script>
 <script src="../crossrefs_engine.js?v=23"></script>  <!-- the cross-reference panel, shared with the other five -->  <!-- panels, selection tools, annotation marks: shared with the other five -->
 <script src="../translit.js?v=1"></script>
 <script src="../jst_refmap.js?v=1"></script>
@@ -3912,81 +3932,17 @@ function navTo(id, slideDir, _bookReady) {
   const isPrintPage = id === 'print-editions';
   const isFront = id.startsWith('front-');
   const isIntro = id === 'intro';
-  const is2N = id.startsWith('2n-');
-  const isJC = id.startsWith('jc-');
-  const isEN = id.startsWith('en-');
-  const isJR = id.startsWith('jr-');
-  const isOM = id.startsWith('om-');
-  const isWM = id.startsWith('wm-');
-  const isMO = id.startsWith('mo-');
-  const isAL = id.startsWith('al-');
-  const isHE = id.startsWith('he-');
-  const is3N = id.startsWith('3n-');
-  const is4N = id.startsWith('4n-');
-  const isMM = id.startsWith('mm-');
-  const isET = id.startsWith('et-');
-  const isMR = id.startsWith('mr-');
 
   // Update book header
   const headerEl = document.getElementById('book-header');
   const ornamentEl = document.getElementById('main-ornament');
   const titleEl = document.getElementById('main-book-title');
   const subEl = document.getElementById('main-book-subtitle');
-  // Show header for all pages except landing and topical guide (they have their own titles)
-  headerEl.style.display = (isLanding || isTopicalGuide || isPrintPage) ? 'none' : '';
-  ornamentEl.style.display = (isLanding || isTopicalGuide || isPrintPage) ? 'none' : '';
-  if (isLanding || isTopicalGuide || isPrintPage) {
-    // header hidden above
-  } else if (isFront || isIntro) {
-    titleEl.textContent = 'ספר מורמון';
-    subEl.textContent = 'עדות אחרת ישוע המשיח';
-    subEl.style.display = '';
-  } else if (is2N) {
-    titleEl.textContent = 'נפי ב׳';
-    subEl.textContent = '2 Nephi'; subEl.style.display = '';
-  } else if (isJC) {
-    titleEl.textContent = 'יעקב';
-    subEl.textContent = 'Jacob'; subEl.style.display = '';
-  } else if (isEN) {
-    titleEl.textContent = 'אנוש';
-    subEl.textContent = 'Enos'; subEl.style.display = '';
-  } else if (isJR) {
-    titleEl.textContent = 'ירום';
-    subEl.textContent = 'Jarom'; subEl.style.display = '';
-  } else if (isOM) {
-    titleEl.textContent = 'עמני';
-    subEl.textContent = 'Omni'; subEl.style.display = '';
-  } else if (isWM) {
-    titleEl.textContent = 'דברי מורמון';
-    subEl.textContent = 'Words of Mormon'; subEl.style.display = '';
-  } else if (isMO) {
-    titleEl.textContent = 'מושיה';
-    subEl.textContent = 'Mosiah'; subEl.style.display = '';
-  } else if (isAL) {
-    titleEl.textContent = 'אלמא';
-    subEl.textContent = 'Alma'; subEl.style.display = '';
-  } else if (isHE) {
-    titleEl.textContent = 'הילמן';
-    subEl.textContent = 'Helaman'; subEl.style.display = '';
-  } else if (is3N) {
-    titleEl.textContent = 'נפי ג׳';
-    subEl.textContent = '3 Nephi'; subEl.style.display = '';
-  } else if (is4N) {
-    titleEl.textContent = 'נפי ד׳';
-    subEl.textContent = '4 Nephi'; subEl.style.display = '';
-  } else if (isMM) {
-    titleEl.textContent = 'מורמון';
-    subEl.textContent = 'Mormon'; subEl.style.display = '';
-  } else if (isET) {
-    titleEl.textContent = 'עתר';
-    subEl.textContent = 'Ether'; subEl.style.display = '';
-  } else if (isMR) {
-    titleEl.textContent = 'מורוני';
-    subEl.textContent = 'Moroni'; subEl.style.display = '';
-  } else {
-    titleEl.textContent = 'נפי א׳';
-    subEl.textContent = '1 Nephi'; subEl.style.display = '';
-  }
+  // The landing, the topical guide and the print page carry their own titles.
+  const selfTitled = isLanding || isTopicalGuide || isPrintPage;
+  headerEl.style.display = selfTitled ? 'none' : '';
+  ornamentEl.style.display = selfTitled ? 'none' : '';
+  if (!selfTitled) window.READER.panelTitle(titleEl, subEl, id);
 
   // Load per-book verse JS on demand (~5MB saved on initial landing)
   if (!_bookReady && !isLanding && !isTopicalGuide && !isPrintPage && typeof ensureBomBookForChapId === 'function') {
@@ -4382,21 +4338,21 @@ var chapterOrder = [
 
 // Book metadata for progress tracking
 var BOOK_DATA = [
-  { prefix: 'ch',    name: '1 Nephi',         count: 22, index: 1 },
-  { prefix: '2n-ch', name: '2 Nephi',         count: 33, index: 2 },
-  { prefix: 'jc-ch', name: 'Jacob',           count: 7,  index: 3 },
-  { prefix: 'en-ch', name: 'Enos',            count: 1,  index: 4 },
-  { prefix: 'jr-ch', name: 'Jarom',           count: 1,  index: 5 },
-  { prefix: 'om-ch', name: 'Omni',            count: 1,  index: 6 },
-  { prefix: 'wm-ch', name: 'Words of Mormon', count: 1,  index: 7 },
-  { prefix: 'mo-ch', name: 'Mosiah',          count: 29, index: 8 },
-  { prefix: 'al-ch', name: 'Alma',            count: 63, index: 9 },
-  { prefix: 'he-ch', name: 'Helaman',         count: 16, index: 10 },
-  { prefix: '3n-ch', name: '3 Nephi',         count: 30, index: 11 },
-  { prefix: '4n-ch', name: '4 Nephi',         count: 1,  index: 12 },
-  { prefix: 'mm-ch', name: 'Mormon',          count: 9,  index: 13 },
-  { prefix: 'et-ch', name: 'Ether',           count: 15, index: 14 },
-  { prefix: 'mr-ch', name: 'Moroni',          count: 10, index: 15 }
+  { prefix: 'ch',    name: '1 Nephi',         count: 22, index: 1, he: 'נפי א׳' },
+  { prefix: '2n-ch', name: '2 Nephi',         count: 33, index: 2, he: 'נפי ב׳' },
+  { prefix: 'jc-ch', name: 'Jacob',           count: 7,  index: 3, he: 'יעקב' },
+  { prefix: 'en-ch', name: 'Enos',            count: 1,  index: 4, he: 'אנוש' },
+  { prefix: 'jr-ch', name: 'Jarom',           count: 1,  index: 5, he: 'ירום' },
+  { prefix: 'om-ch', name: 'Omni',            count: 1,  index: 6, he: 'עמני' },
+  { prefix: 'wm-ch', name: 'Words of Mormon', count: 1,  index: 7, he: 'דברי מורמון' },
+  { prefix: 'mo-ch', name: 'Mosiah',          count: 29, index: 8, he: 'מושיה' },
+  { prefix: 'al-ch', name: 'Alma',            count: 63, index: 9, he: 'אלמא' },
+  { prefix: 'he-ch', name: 'Helaman',         count: 16, index: 10, he: 'הילמן' },
+  { prefix: '3n-ch', name: '3 Nephi',         count: 30, index: 11, he: 'נפי ג׳' },
+  { prefix: '4n-ch', name: '4 Nephi',         count: 1,  index: 12, he: 'נפי ד׳' },
+  { prefix: 'mm-ch', name: 'Mormon',          count: 9,  index: 13, he: 'מורמון' },
+  { prefix: 'et-ch', name: 'Ether',           count: 15, index: 14, he: 'עתר' },
+  { prefix: 'mr-ch', name: 'Moroni',          count: 10, index: 15, he: 'מורוני' }
 ];
 
 /* The id scheme, handed to the shared reader. BOOK_DATA's prefix IS the literal
@@ -4405,7 +4361,7 @@ var BOOK_DATA = [
 window.READER.books = BOOK_DATA.map(function (b) {
   /* soloLabel is per BOOK, not per volume: "Enos", but "Alma 32". The Tanakh
      has Obadiah — also one chapter — and still labels it "Obadiah 1". */
-  return { idPrefix: b.prefix, en: b.name, ch: b.count, soloLabel: b.count === 1 };
+  return { idPrefix: b.prefix, en: b.name, he: b.he, ch: b.count, soloLabel: b.count === 1 };
 });
 
 function getBookProgress(chapterId) {
