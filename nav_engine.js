@@ -2927,179 +2927,28 @@
     }, 0);
   }
 
-  // ── Site-wide reader footer hide (double-tap touch / double-click) ──
-  var READ_FTR_LS = 'sw-reader-footer-hidden';
-  var READ_FTR_LS_LEGACY = 'bom-reader-footer-hidden';
-  var _readFtrInstalled = false;
+  /* ── The reader footer is PINNED (user ruling 2026-09-08) ────────────
+     A double-tap anywhere in the reading area used to sweep the footer
+     away, and the hidden state persisted in localStorage. That is gone.
+     The five modes are the only chrome left under the text, they are what
+     a reader reaches for constantly, and a gesture that fires by accident
+     mid-sentence was a bad trade for one row of pixels.
 
-  function installReaderFooterChrome() {
-    if (_readFtrInstalled) return;
-    if (!document.querySelector('.controls-bottom')) return;
-    _readFtrInstalled = true;
+     Everything that hid it is deleted with it — the touch and dblclick
+     listeners, the two body classes, and the display:none rules that stood
+     in nav_engine.css and bom/bom.html. What remains here is the cleanup:
+     a reader who hid the bar before today has '1' sitting in localStorage
+     and no gesture left to undo it, so the state is cleared on load rather
+     than left to strand them with no way to bring the modes back. */
+  var RETIRED_FOOTER_KEYS = ['sw-reader-footer-hidden',
+                             'bom-reader-footer-hidden',
+                             'bom-hide-bottom-bar'];
 
-    try {
-      var sw = localStorage.getItem(READ_FTR_LS);
-      var leg = localStorage.getItem(READ_FTR_LS_LEGACY);
-      var bomLegacyBar = localStorage.getItem('bom-hide-bottom-bar');
-      if (sw === '1' || leg === '1' || bomLegacyBar === '1') {
-        document.body.classList.add('reader-footer-hidden');
-        document.body.classList.add('hide-bottom-bar');
-        if (leg === '1' && sw !== '1') {
-          localStorage.setItem(READ_FTR_LS, '1');
-          localStorage.removeItem(READ_FTR_LS_LEGACY);
-        }
-        if (sw !== '1') localStorage.setItem(READ_FTR_LS, '1');
-        try {
-          localStorage.setItem('bom-hide-bottom-bar', '1');
-        } catch (eBom) {}
-      }
-    } catch (e) {}
-
-    // Overlays / panels only — footer, header, and reading surface accept double-tap to collapse.
-    var SEL_IGNORE =
-      '#nav-sidebar, #nav-overlay, ' +
-      '.nav-search-wrap, .nav-search-results, .nav-library, .nav-vol-tabs, .nav-book-list, ' +
-      '#xref-panel.open, #word-popup, #search-container.open, #search-results.open, ' +
-      '#glossary-panel, #annotations-panel, #share-popup, #share-overlay, #shortcuts-overlay.open, ' +
-      '#sel-toolbar, #verse-action-menu, .safari-browser-tip, .global-search-wrap, #gs-results, ' +
-      '[role="dialog"]';
-    var SEL_INTERACTIVE =
-      'button, a[href], input, textarea, select, label[for], [role="button"], [role="link"], [contenteditable="true"]';
-    function collapseGestureTarget(el) {
-      if (!el) return false;
-      if (el.nodeType === 3 && el.parentElement) el = el.parentElement;
-      if (!el || el.nodeType !== 1 || !el.closest) return false;
-      if (el.closest(SEL_IGNORE)) return false;
-      if (el.closest(SEL_INTERACTIVE)) return false;
-      return true;
+  function pinReaderFooter() {
+    document.body.classList.remove('reader-footer-hidden', 'hide-bottom-bar');
+    for (var i = 0; i < RETIRED_FOOTER_KEYS.length; i++) {
+      try { localStorage.removeItem(RETIRED_FOOTER_KEYS[i]); } catch (e) {}
     }
-    function hasReadableTextSelection() {
-      try {
-        var sel = window.getSelection();
-        return !!(sel && !sel.isCollapsed && /\S/.test((sel.toString() || '').replace(/\u00a0/g, ' ')));
-      } catch (eSel) {
-        return false;
-      }
-    }
-    function toggleReadingFooterBar() {
-      if (!document.querySelector('.controls-bottom')) return;
-      var hidden = document.body.classList.toggle('reader-footer-hidden');
-      document.body.classList.toggle('hide-bottom-bar', hidden);
-      try {
-        localStorage.setItem(READ_FTR_LS, hidden ? '1' : '0');
-        localStorage.removeItem(READ_FTR_LS_LEGACY);
-        localStorage.setItem('bom-hide-bottom-bar', hidden ? '1' : '0');
-      } catch (e2) {}
-      try {
-        window.dispatchEvent(new Event('resize'));
-      } catch (e3) {}
-      requestAnimationFrame(function() {
-        syncQuickDockLayout();
-        syncDockChapterNav();
-      });
-    }
-
-    var lastTap = 0, lastTapX = 0, lastTapY = 0;
-    var tapStartX = 0, tapStartY = 0, tapMoved = false;
-
-    // The first tap of the gesture opens the word popup, so the SECOND tap lands
-    // on #word-popup — which SEL_IGNORE would otherwise reject, killing the
-    // gesture every time. Treat a popup that the pending first tap opened as
-    // transparent, and dismiss it along with the toggle.
-    function onPendingWordPopup(el) {
-      if (!lastTap || !el || !el.closest) return false;
-      return !!el.closest('#word-popup, #word-popup-overlay');
-    }
-    function dismissWordPopup() {
-      try {
-        if (typeof window.closePopup === 'function') window.closePopup();
-      } catch (ePop) {}
-    }
-
-    function doubleTapWindowMs() {
-      var tapWin = 650;
-      try {
-        if ('ontouchstart' in window || (navigator.maxTouchPoints || 0) > 0) tapWin = 850;
-      } catch (eTap) {}
-      return tapWin;
-    }
-
-    document.addEventListener(
-      'touchstart',
-      function(e) {
-        if (!e.touches || e.touches.length !== 1) {
-          tapMoved = true;
-          lastTap = 0;
-          return;
-        }
-        tapStartX = e.touches[0].clientX;
-        tapStartY = e.touches[0].clientY;
-        tapMoved = false;
-      },
-      { passive: true, capture: true }
-    );
-
-    document.addEventListener(
-      'touchmove',
-      function(e) {
-        if (tapMoved) return;
-        if (!e.touches || e.touches.length !== 1) {
-          tapMoved = true;
-          return;
-        }
-        var t = e.touches[0];
-        if (Math.abs(t.clientX - tapStartX) > 12 || Math.abs(t.clientY - tapStartY) > 12) tapMoved = true;
-      },
-      { passive: true, capture: true }
-    );
-
-    document.addEventListener(
-      'touchend',
-      function(e) {
-        if (!document.querySelector('.controls-bottom')) return;
-        var ct = e.changedTouches;
-        if (!ct || ct.length !== 1) return;
-        // A scroll ends in a touchend too — it must not seed or complete the gesture.
-        if (tapMoved) {
-          tapMoved = false;
-          lastTap = 0;
-          return;
-        }
-        var onPopup = onPendingWordPopup(e.target);
-        if (!onPopup && !collapseGestureTarget(e.target)) {
-          lastTap = 0;
-          return;
-        }
-        var t = ct[0];
-        var now = Date.now();
-        var tapWin = doubleTapWindowMs();
-        var near = Math.abs(t.clientX - lastTapX) <= 48 && Math.abs(t.clientY - lastTapY) <= 48;
-        if (lastTap && near && now - lastTap < tapWin && now - lastTap > 12) {
-          if (onPopup) dismissWordPopup();
-          toggleReadingFooterBar();
-          lastTap = 0;
-          return;
-        }
-        lastTap = now;
-        lastTapX = t.clientX;
-        lastTapY = t.clientY;
-      },
-      { passive: true, capture: true }
-    );
-
-    document.addEventListener(
-      'dblclick',
-      function(e) {
-        if (!document.querySelector('.controls-bottom')) return;
-        var dcPopup = !!(e.target && e.target.closest && e.target.closest('#word-popup, #word-popup-overlay'));
-        if (!dcPopup && !collapseGestureTarget(e.target)) return;
-        if (hasReadableTextSelection()) return;
-        e.preventDefault();
-        if (dcPopup) dismissWordPopup();
-        toggleReadingFooterBar();
-      },
-      true
-    );
   }
 
   // ── Public API ──
@@ -3131,7 +2980,7 @@
           }
         };
       }
-      installReaderFooterChrome();
+      pinReaderFooter();
       createQuickDock();
       installVersePositionTracker();
       updateContinueButton();   // the landing's primary button, every volume
@@ -3231,8 +3080,7 @@
     refreshBookmarksUI: renderBookmarks,
     renderOfflineStatusPublic: renderOfflineStatus,
     mountStudyToolsIntoXrefPanel: mountStudyToolsIntoXrefPanel,
-    VOLUMES: VOLUMES,
-    installReaderFooterChrome: installReaderFooterChrome
+    VOLUMES: VOLUMES
   };
 })();
 

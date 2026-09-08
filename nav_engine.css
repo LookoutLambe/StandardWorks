@@ -435,9 +435,6 @@ body.dark-mode .continue-reading .cr-heb { color: var(--chrome); }
     padding-left: max(12px, env(safe-area-inset-left, 0px));
     padding-right: max(12px, env(safe-area-inset-right, 0px));
   }
-  body.reader-footer-hidden .page {
-    padding-bottom: calc(var(--sw-reader-footer-h, 58px) + 12px);
-  }
 }
 
 /* ── Swipe hint (first visit) ── */
@@ -557,12 +554,6 @@ body.dark-mode .continue-reading .cr-heb { color: var(--chrome); }
 }
 body.dark-mode #sw-reader-footer {
   border-top-color: color-mix(in srgb, var(--here-chrome) 28%, transparent);
-}
-
-/* Double-tap / double-click: the whole footer goes (the header goes with it
-   in site_chrome.css). One row, so there is nothing to keep. */
-body.reader-footer-hidden #sw-reader-footer {
-  display: none !important;
 }
 @media (max-width: 900px) {
   #sw-reader-footer,

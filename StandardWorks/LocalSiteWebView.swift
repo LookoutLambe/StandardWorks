@@ -44,33 +44,17 @@ struct LocalSiteWebView: UIViewRepresentable {
             injectionTime: .atDocumentStart,
             forMainFrameOnly: false))
 
-        // Disable double-tap zoom and inject a reliable footer-toggle double-tap handler.
-        let doubleTapScript = """
+        // Disable double-tap zoom. The footer-toggle handler that used to ride
+        // along with it is gone: the footer is pinned (2026-09-08), and this
+        // was a SECOND implementation of a gesture nav_engine.js already had —
+        // the native copy kept firing against classes the web copy no longer
+        // defines. touch-action stays, so a double-tap on a word does not zoom
+        // the page out from under the tap that opens its card.
+        let touchActionScript = """
         document.documentElement.style.touchAction = 'manipulation';
-        (function() {
-          var last = 0;
-          var IGNORE = '.controls-top,.controls-bottom,#nav-sidebar,#nav-overlay,#word-popup,#word-popup-overlay,#xref-panel,[role="dialog"]';
-          document.addEventListener('touchend', function(e) {
-            var ct = e.changedTouches;
-            if (!ct || ct.length !== 1) return;
-            var el = e.target;
-            if (el && el.closest && el.closest(IGNORE)) return;
-            var now = Date.now();
-            if (last && now - last < 500 && now - last > 30) {
-              var hidden = document.body.classList.toggle('reader-footer-hidden');
-              document.body.classList.toggle('hide-bottom-bar', hidden);
-              try { localStorage.setItem('sw-reader-footer-hidden', hidden ? '1' : '0'); } catch(_) {}
-              try { localStorage.setItem('bom-hide-bottom-bar', hidden ? '1' : '0'); } catch(_) {}
-              try { window.dispatchEvent(new Event('resize')); } catch(_) {}
-              last = 0;
-            } else {
-              last = now;
-            }
-          }, { passive: true, capture: true });
-        })();
         """
         config.userContentController.addUserScript(WKUserScript(
-            source: doubleTapScript,
+            source: touchActionScript,
             injectionTime: .atDocumentStart,
             forMainFrameOnly: false))
 

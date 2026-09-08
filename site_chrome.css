@@ -482,27 +482,26 @@ body.dark-mode #sw-rights { color: var(--ink-3); }
 body.dark-mode #sw-rights a { color: var(--here-chrome); }
 
 
-/* ── Immersive reading. The double-tap gesture (nav_engine.js — "closes the
-   second layer") sweeps the footer chrome away.
+/* ── Immersive reading. NOTHING COLLAPSES ANY MORE (user ruling 2026-09-08:
+   "you can pin the footer now no need to hide it").
 
-   THE HEADER STAYS (user ruling 2026-09-03, reversing the 2026-08-29 one
-   that had this gesture sweep the header and breadcrumb too). It is the
-   only thing on screen naming the volume and holding A+/A-/dark, and
-   losing it to a stray double-tap while reading was worse than the space
-   it costs. The reading modes now have their own grip in the footer, so
-   collapsing chrome no longer has to mean collapsing everything.
+   This gesture went in two stages and came out in two. The 2026-08-29 build
+   had a double-tap sweep the header, the breadcrumb and the footer together;
+   2026-09-03 gave the header back, because it is the only thing on screen
+   naming the volume and holding A+/A-/dark and a stray double-tap while
+   reading cost more than the strip of pixels it saved. The footer is the
+   same argument one row further down — it is the five reading modes, the
+   control a reader reaches for most — so it is pinned and the gesture is
+   gone entirely.
 
-   touch-action: manipulation keeps iOS from stealing the double-tap for
-   zoom. The transition stays: the header is still animated by other
-   states. */
+   The rules below stay. touch-action: manipulation still keeps iOS from
+   turning a double-tap into a zoom, which would land on a word and fight
+   the tap that opens its card; the transitions still animate the header,
+   which other states move. */
 .sw-chrome-reader .page { touch-action: manipulation; }
 #sw-top-bar { transition: transform 0.28s ease; }
 body.has-sw-chrome .page, body.has-sw-chrome.sw-chrome-reader .page,
 body.has-sw-chrome.sw-chrome-reader #main-content { transition: padding-top 0.28s ease; }
-/* Double-tap collapse keeps the chapter dock (הבא · chapter · הקודם) —
-   user ruling 2026-08-30: "keep this footer bar but everything else can
-   collapse". Header, mode bar and volume row hide; the dock stays. */
-
 /* ── UX audit 2026-08-30 ─────────────────────────────────────────────── */
 /* Respect the OS reduced-motion setting: page turns become instant. */
 @media (prefers-reduced-motion: reduce) {
