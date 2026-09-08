@@ -764,3 +764,38 @@ function getChapterLabel(id) {
   if (m.book.soloLabel) return _swBookLabel(m.book);
   return _swBookLabel(m.book) + ' ' + m.chapter;
 }
+
+/* ── Prefetching the next and previous chapter ─────────────────────────────
+   Forked over two things. isChapter() was a hand-written list of ids that are
+   NOT chapters — 'landing' on the five, and on bom.html also 'intro',
+   'topical-guide', 'print-editions' and everything starting with 'front-'.
+   With the id scheme in READER.books that list is redundant: getBookChapter
+   returns null for exactly those, so asking it IS the test.
+
+   The other was how a book gets loaded before the chapter renders. The five
+   need nothing — reader_core's _ensureChapterRendered fetches the verse file
+   itself — while bom.html's renderer does not, and had to call
+   ensureBomBookForChapId first. A volume that needs it says so in READER,
+   instead of the shared code knowing the Book of Mormon by name. */
+function _swEnsureBook(chapId, cb) {
+  var R = window.READER || {};
+  if (typeof R.ensureBook === 'function') { R.ensureBook(chapId, cb); return; }
+  cb();
+}
+
+function scheduleAdjacentPrefetch() {
+  if (!currentPageId || typeof _ensureChapterRendered !== 'function') return;
+  var idx = fullPageOrder.indexOf(currentPageId);
+  if (idx < 0) return;
+  var nextId = (idx < fullPageOrder.length - 1) ? fullPageOrder[idx + 1] : null;
+  var prevId = (idx > 0) ? fullPageOrder[idx - 1] : null;
+  function prefetch(id) {
+    if (!id || !getBookChapter(id)) return;   // landing, front matter, the topical guide
+    _swEnsureBook(id, function () { _ensureChapterRendered(id); });
+  }
+  function run() {
+    try { prefetch(nextId); prefetch(prevId); } catch (e) {}
+  }
+  if ('requestIdleCallback' in window) requestIdleCallback(run, { timeout: 1500 });
+  else setTimeout(run, 250);
+}

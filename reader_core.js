@@ -621,24 +621,6 @@ function navTo(id, slideDir) {
   scheduleAdjacentPrefetch();
 }
 
-function scheduleAdjacentPrefetch() {
-  if (!currentPageId || typeof _ensureChapterRendered !== 'function') return;
-  var idx = fullPageOrder.indexOf(currentPageId);
-  if (idx < 0) return;
-  var nextId = (idx >= 0 && idx < fullPageOrder.length - 1) ? fullPageOrder[idx + 1] : null;
-  var prevId = (idx > 0) ? fullPageOrder[idx - 1] : null;
-
-  function isChapter(id) { return id && id !== 'landing'; }
-  function run() {
-    try {
-      if (isChapter(nextId)) _ensureChapterRendered(nextId);
-      if (isChapter(prevId)) _ensureChapterRendered(prevId);
-    } catch (e) {}
-  }
-
-  if ('requestIdleCallback' in window) requestIdleCallback(run, { timeout: 1500 });
-  else setTimeout(run, 250);
-}
 
 // (The Mechon-Mamre audio feature was removed entirely on 2026-08-29 —
 // user ruling: no audio anywhere in this.)

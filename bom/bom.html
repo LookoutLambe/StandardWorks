@@ -3839,10 +3839,17 @@ window.READER = window.READER || {
     'front-js': 'Testimony of the Prophet',
     'front-brief': 'Brief Explanation'
   },
+  /* This volume's books load on demand and its renderer does not fetch them,
+     so the shared prefetch asks through here. The five need no equivalent —
+     reader_core's _ensureChapterRendered loads the verse file itself. */
+  ensureBook: function (chapId, cb) {
+    if (typeof ensureBomBookForChapId === 'function') ensureBomBookForChapId(chapId, cb);
+    else cb();
+  },
   books: []      /* filled from BOOK_DATA the moment it exists, below */
 };
 </script>
-<script src="../reader_surface.js?v=7"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
+<script src="../reader_surface.js?v=8"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
 <script src="../translit.js?v=1"></script>
 <script src="../jst_refmap.js?v=1"></script>
 <script src="../verse_loader.js?v=5"></script>
@@ -4077,34 +4084,6 @@ function navTo(id, slideDir, _bookReady) {
   scheduleAdjacentPrefetch();
 }
 
-function scheduleAdjacentPrefetch() {
-  if (!currentPageId || typeof _ensureChapterRendered !== 'function') return;
-  var idx = fullPageOrder.indexOf(currentPageId);
-  if (idx < 0) return;
-  var nextId = (idx >= 0 && idx < fullPageOrder.length - 1) ? fullPageOrder[idx + 1] : null;
-  var prevId = (idx > 0) ? fullPageOrder[idx - 1] : null;
-
-  function isChapter(id) {
-    return id && id !== 'landing' && id !== 'intro' && !id.startsWith('front-') && id !== 'topical-guide' && id !== 'print-editions';
-  }
-  function prefetch(id) {
-    if (!isChapter(id)) return;
-    if (typeof ensureBomBookForChapId === 'function') {
-      ensureBomBookForChapId(id, function() { _ensureChapterRendered(id); });
-    } else {
-      _ensureChapterRendered(id);
-    }
-  }
-  function run() {
-    try {
-      prefetch(nextId);
-      prefetch(prevId);
-    } catch (e) {}
-  }
-
-  if ('requestIdleCallback' in window) requestIdleCallback(run, { timeout: 1500 });
-  else setTimeout(run, 250);
-}
 
 // CHAPTER 13 VERSES
 
