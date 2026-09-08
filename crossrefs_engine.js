@@ -1458,6 +1458,14 @@ function parseScriptureRef(refText) {
      is whether the manifest lists chunks at all. Volumes without them (and any
      page still carrying static verse tags) keep the single-file path unchanged. */
   function ensureCrossrefData(cb) {
+    /* A volume with its own chunk loader says so. The five go through
+       reader_core's VolumeLoader; bom.html has bom_book_loader and declares
+       READER.ensureCrossrefsFor, the same shape as READER.ensureBook. */
+    var R = window.READER || {};
+    if (typeof R.ensureCrossrefsFor === 'function') {
+      R.ensureCrossrefsFor(window.currentChapterId || '', function () { adoptVolumeData(); cb(); });
+      return;
+    }
     if (window.__swHasCrossrefChunks && window.__swHasCrossrefChunks()) {
       window.__swEnsureCrossrefsRendered(function () { adoptVolumeData(); cb(); });
       return;

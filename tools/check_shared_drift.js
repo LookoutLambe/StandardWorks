@@ -208,32 +208,16 @@ const SIX = ['bom/bom.html', 'ot.html', 'nt.html', 'dc.html', 'pgp.html', 'jst.h
   };
   const bom = stripComments(read('bom/bom.html'));
   const INVARIANTS = [
-    ['crossrefs_engine.js', 'reference hrefs come from nav_engine, not a local book table',
-     /NavEngineRefHref\s*\(/],
-    ['crossrefs_engine.js', 'following a reference marks a return point',
-     /NavEngine(?:Follow|GoRef|MarkReturn)\s*\(/],
-    ['crossrefs_engine.js', 'the occurrences card respects the reference cap',
-     /RootScorecard\.listable\s*\(/],
-    ['crossrefs_engine.js', 'a scripture reference heading is a link, not an inert span',
-     /['"]xref-ref-goto['"]/],
-    ['crossrefs_engine.js', 'the reference count on the card is what the panel will list',
-     /CrossrefsRootRefCount\b/],
+    /* Only reader_ui.js invariants remain. The cross-reference UI used to live
+       twice — crossrefs_engine.js for the five, inline in bom.html for the
+       Book of Mormon — and this list checked the two copies agreed. bom.html
+       loads the engine now, so parity is structural and the guard below
+       ("no page redeclares them") is the one that matters. reader_ui.js is
+       still forked inline on this page, so these two stay. */
     ['reader_ui.js', 'the word card survives opening the panel it launches',
      /closest\('#xref-panel'\)\)\s*return/],
     ['reader_ui.js', 'the study-link row comes from the shared builder',
      /SWXref\.studyLinksHtml\s*\(/],
-    ['crossrefs_engine.js', 'a verse renders through the shared interlinear renderer',
-     /SWXref\.renderInterlinear\s*\(/],
-    ['crossrefs_engine.js', 'the reference heading row comes from the shared builder',
-     /SWXref\.buildRefTitleRow\s*\(/],
-    ['crossrefs_engine.js', 'the label -> key resolver is the shared one',
-     /SWXref\.resolveRefKey\s*\(/],
-    /* The cross-reference map arrives one book at a time in both copies now.
-       If either reverts to loading a whole map, it must not do so alone: a
-       latched _crossrefsLoaded silently freezes the map at the first chunk and
-       every later book loses its markers. Both sides fold new keys in instead. */
-    ['crossrefs_engine.js', 'the map is folded in incrementally, not latched',
-     /if\s*\(\s*_(?:bom)?[Ff]oldedKeys\[key\]\s*\)\s*continue/],
   ];
   let drifted = 0;
   for (const [file, what, re] of INVARIANTS) {
@@ -247,8 +231,8 @@ const SIX = ['bom/bom.html', 'ot.html', 'nt.html', 'dc.html', 'pgp.html', 'jst.h
            '        bom.html forks this UI — apply the change to both copies.');
     }
   }
-  if (!drifted) ok('bom.html’s cross-reference fork holds all ' + INVARIANTS.length +
-                   ' shared invariants');
+  if (!drifted) ok('bom.html holds all ' + INVARIANTS.length +
+                   ' reader_ui invariants it still forks');
 }
 
 /* ── The cross-reference chunks are reachable ──────────────────────────────
@@ -303,6 +287,45 @@ const SIX = ['bom/bom.html', 'ot.html', 'nt.html', 'dc.html', 'pgp.html', 'jst.h
     }
   }
   if (!bad) ok('every volume\u2019s cross-reference chunks are listed and present');
+}
+
+/* ── The cross-reference engine has exactly one copy ───────────────────────
+   bom/bom.html carried its own inline copy of the whole cross-reference UI —
+   11 functions, 744 lines — and the two drifted. The BOM's copy placed every
+   marker TWICE (236 rendered where 118 exist) because two code paths both
+   called addCrossRefMarkers on the same chapter; the five never did.
+   bom.html loads crossrefs_engine.js now. A page that re-declares one of the
+   engine's functions shadows the shared copy silently, which is exactly how
+   the fork came back last time. */
+{
+  const ENGINE = path.join(ROOT, 'crossrefs_engine.js');
+  const engineSrc = fs.readFileSync(ENGINE, 'utf8');
+  /* The engine's functions sit inside an IIFE, so they are indented. */
+  const names = [...engineSrc.matchAll(/^\s{2}function\s+([A-Za-z0-9_$]+)\s*\(/gm)].map(m => m[1]);
+  const PAGES = ['ot.html', 'nt.html', 'dc.html', 'pgp.html', 'jst.html', 'bom/bom.html'];
+  const problems = [];
+  for (const page of PAGES) {
+    const src = fs.readFileSync(path.join(ROOT, page), 'utf8');
+    /* A COMMENT NAMING THE FILE MUST NOT SATISFY THIS. Four comments in
+       bom.html mention crossrefs_engine.js by name, so a bare substring test
+       passes even after the <script> tag is gone — proved by breaking it. */
+    if (!/<script[^>]*\bsrc=["'][^"']*crossrefs_engine\.js/.test(src)) {
+      problems.push(page + ' no longer loads crossrefs_engine.js');
+      continue;
+    }
+    for (const n of names) {
+      if (new RegExp('^function\\s+' + n + '\\s*\\(', 'm').test(src)) {
+        problems.push(page + ' redeclares ' + n);
+      }
+    }
+  }
+  if (problems.length) {
+    fail('the cross-reference engine is forked again:\n        ' + problems.slice(0, 6).join('\n        ') +
+         '\n        crossrefs_engine.js is the one home for these — delete the copy.');
+  } else {
+    ok('the cross-reference engine is one copy (' + names.length +
+       ' functions, all 6 pages load it, none redeclares them)');
+  }
 }
 
 /* ── The reading surface has exactly one copy ──────────────────────────────

@@ -253,7 +253,11 @@ for (const v of VOLS) {
             + '(function(){ var W = window;\n'
             + '  Object.assign(W.' + M.global + ' = W.' + M.global + ' || {}, '
             + JSON.stringify(perBook[slug]) + ');\n'
-            + '  if (typeof W.__bomCrossrefsArrived === \'function\') W.__bomCrossrefsArrived();\n'
+            /* ONE arrival hook for all six volumes. These called
+               __bomCrossrefsArrived, which only bom.html defined; now that the
+               page loads crossrefs_engine.js the engine's own hook is the one
+               that adopts the data and folds it in. */
+            + '  if (typeof W.__swCrossrefsArrived === \'function\') W.__swCrossrefsArrived();\n'
             + '})();\n';
           fs.writeFileSync(path.join(outDir, slug + '.js'), body);
           bytes += Buffer.byteLength(body);
