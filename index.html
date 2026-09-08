@@ -66,7 +66,7 @@
 
 <link rel="stylesheet" href="nav_engine.css?v=49">
 <link rel="stylesheet" href="site_chrome.css?v=71">
-<link rel="stylesheet" href="reader.css?v=107">
+<link rel="stylesheet" href="reader.css?v=108">
 <style>
 
 /* ========== THEME ========== */
@@ -1675,31 +1675,40 @@ document.addEventListener('keydown', function(e) {
 /* The front matter starts folded, always — on a phone and on a 1600px monitor
    alike. The hub is a hub: three lines saying what is behind them, and the
    reader opens what they want. <details> is closed by default, so there is no
-   state to set and no width to watch; the only thing this has to do is make a
-   deep link work.
+   state to set and no width to watch.
 
-   A link into a folded section is a link to nowhere, so index.html#whose-hebrew
-   — which is how every volume points here — opens that section and scrolls to
-   it. Without this you arrive at a heading with the answer shut underneath. */
+   The one thing this has to do is make a deep link work. A link into a folded
+   section is a link to nowhere, so index.html#whose-hebrew — which is how every
+   volume points here — opens that section and scrolls to it.
+
+   AND THEN CLEARS THE HASH. Without that the deep link is not a link, it is a
+   setting: the fragment stays in the address bar, so every later reload,
+   bookmark and back-navigation re-opens that section and the page never returns
+   to the folded state it is supposed to have. Opening is a one-time act of
+   arriving, so the URL goes back to being the page's own. */
 (function () {
   var band = document.querySelector('.hub-front');
   if (!band) return;
 
-  function openHash(scroll) {
+  function consumeHash(scroll) {
     var id = (location.hash || '').slice(1);
     if (!id) return;
     var el = document.getElementById(id);
-    if (!el) return;
-    var sec = el.classList && el.classList.contains('tr-sec')
-      ? el
-      : (el.closest ? el.closest('.tr-sec') : null);
+    var sec = el && (el.classList && el.classList.contains('tr-sec')
+      ? el : (el.closest ? el.closest('.tr-sec') : null));
     if (!sec) return;
     sec.open = true;
     if (scroll) sec.scrollIntoView({ block: 'start' });
+    /* Spent. Leave the path and any query, drop the fragment. */
+    try {
+      history.replaceState(null, '', location.pathname + location.search);
+    } catch (e) {}
   }
 
-  openHash(false);                       /* on arrival the browser scrolls itself */
-  window.addEventListener('hashchange', function () { openHash(true); });
+  /* On arrival the browser does its own scroll to the fragment first, so wait
+     a frame before taking the fragment away from it. */
+  if (location.hash) requestAnimationFrame(function () { consumeHash(true); });
+  window.addEventListener('hashchange', function () { consumeHash(true); });
 })();
 </script>
 </body>
