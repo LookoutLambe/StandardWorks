@@ -1824,3 +1824,103 @@ function renderAnnotationsList() {
     }
   }
 }
+
+/* ── Search ────────────────────────────────────────────────────────────────
+   Each copy had something the other needed. bom.html preloaded the volume
+   first, which the five did not and badly needed — they are lazy too, so a
+   search from Genesis quietly searched Genesis. And it landed on the VERSE,
+   where the five navigated to the top of the chapter and left the reader to
+   find the line they had just searched for.
+
+   The five escaped the result text and showed the side the query was asked in
+   — Hebrew for a Hebrew query, the translation for an English one — and built
+   the other-volumes list by filtering READER.selfPage out of the six, where
+   bom.html hardcoded five and could not have listed itself. Both kept. */
+function _swVolHref(page) {
+  /* bom.html sits in bom/, so a sibling volume is one level up; from a volume
+     page the Book of Mormon is one level down. The pages are named once, in
+     the list below, and this is the only thing that differs. */
+  var self = (window.READER && window.READER.selfPage) || '';
+  var inBom = self.indexOf('bom') >= 0 || window.location.pathname.indexOf('/bom/') >= 0;
+  if (inBom) return page.indexOf('bom/') === 0 ? page.replace('bom/', '') : '../' + page;
+  return page;
+}
+
+function goToSearchResult(chapId, verseIdx) {
+  closeSearch();
+  navTo(chapId);
+  setTimeout(function() {
+    var panel = document.querySelector('.chapter-panel[style*="block"]');
+    if (!panel) return;
+    /* BY VERSE KEY, NOT BY POSITION. panel.querySelectorAll('.verse')[verseIdx]
+       assumes the nth .verse in the DOM is verse n+1, and on the Book of Mormon
+       it is not — a colophon carries the class too, so clicking "Alma 1:25"
+       landed on Alma 1:24. The key is exact wherever the extra elements are;
+       the positional lookup stays as a fallback for a panel with no keys. */
+    var bc = getBookChapter(chapId);
+    var v = null;
+    if (bc) v = panel.querySelector('[data-verse-key="' + bc.book + '|' + bc.chapter + '|' + (verseIdx + 1) + '"]');
+    if (!v) v = panel.querySelectorAll('.verse')[verseIdx];
+    if (!v) return;
+    v.scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'center' });
+    v.classList.add('highlighted');
+    /* Stamp the verse into the URL the way THIS volume writes one — the BOM's
+       #alma-32:5 against the others' #gen-ch1&v=5 — instead of appending ':'. */
+    var link = (typeof swVerseDeepLink === 'function') ? swVerseDeepLink(chapId, verseIdx + 1) : '';
+    if (link) { try { history.replaceState(null, '', link); } catch (e) {} }
+    setTimeout(function() { v.classList.remove('highlighted'); }, 3000);
+  }, 300);
+}
+
+function doSearch(query) {
+  var results = document.getElementById('search-results');
+  if (!query || query.trim().length === 0) { results.classList.remove('open'); results.innerHTML = ''; return; }
+  /* THE VOLUME LOADS ONE BOOK AT A TIME, AND SEARCH NEEDS ALL OF IT. Only
+     bom.html did this. On the other five, searching from Genesis searched the
+     1,533 verses of Genesis and said nothing about the rest — no message, no
+     partial-results warning, just a short list that looked complete. */
+  if (window.SWSearch && window.SWSearch.needsPreload && window.SWSearch.needsPreload()) {
+    results.innerHTML = '<div style="color:var(--ink-light);padding:12px;font-family:David Libre,serif;">Loading the rest of ' +
+      ((window.READER && window.READER.readerName) || 'this volume') + '\u2026</div>';
+    results.classList.add('open');
+    window.SWSearch.preload(function () { doSearch(query); });
+    return;
+  }
+  if (!searchIndex || !searchIndex.length) buildSearchIndex();
+  var q = query.trim().toLowerCase(), qStripped = _stripNikkud(q);
+  var matches = [];
+  for (var i = 0; i < searchIndex.length && matches.length < 100; i++) {
+    var si = searchIndex[i];
+    var hebStripped = _stripNikkud(si.hebrew);
+    // Hebrew without nikkud, and English from the gloss or the translation
+    if (window.SWSearch ? window.SWSearch.matches(si, query.trim())
+        : (hebStripped.indexOf(qStripped) >= 0 || si.english.toLowerCase().indexOf(q) >= 0 || si.hebrew.indexOf(q) >= 0)) matches.push(si);
+  }
+  if (matches.length === 0) {
+    results.innerHTML = '<div style="padding:12px;color:#888;font-family:David Libre,serif;">No results found</div>';
+    results.classList.add('open'); return;
+  }
+  var html = '';
+  matches.forEach(function(m) {
+    // show the side the query was asked in: Hebrew for Hebrew, translation for English
+    var displayText, _rtl = true;
+    if (window.SWSearch) {
+      displayText = window.SWSearch.snippet(m, query.trim(), 78);
+      _rtl = window.SWSearch.hasHebrew(displayText);
+    } else {
+      displayText = m.hebrew.length > 60 ? m.hebrew.substring(0, 60) + '\u2026' : m.hebrew;
+    }
+    displayText = String(displayText).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    html += '<div class="search-result" onclick="goToSearchResult(\'' + m.chapId + '\',' + m.verseIdx + ')">';
+    html += '<div class="search-result-ref">' + m.ref + '</div>';
+    html += '<div class="search-result-text" dir="' + (_rtl ? 'rtl' : 'ltr') + '" style="text-align:' + (_rtl ? 'right' : 'left') + ';">' + displayText + '</div></div>';
+  });
+  html += '<div style="padding:12px 16px;border-top:2px solid var(--rule);direction:ltr;font-family:David Libre,serif;font-size:0.85em;color:var(--ink-light);">';
+  html += '<div style="font-weight:600;margin-bottom:6px;">Search other volumes:</div>';
+  [{name:'Old Testament',page:'ot.html'},{name:'New Testament',page:'nt.html'},{name:'Book of Mormon',page:'bom/bom.html'},{name:'D&C',page:'dc.html'},{name:'Pearl of Great Price',page:'pgp.html'},{name:'JST',page:'jst.html'}].filter(function(v) { return v.page !== window.READER.selfPage; }).forEach(function(v) {
+    html += '<a href="' + _swVolHref(v.page) + '?q=' + encodeURIComponent(query.trim()) + '" style="display:inline-block;margin:3px 4px;color:var(--accent);text-decoration:none;padding:4px 10px;border:1px solid var(--accent);border-radius:3px;font-size:0.9em;">' + v.name + '</a>';
+  });
+  html += '</div>';
+  results.innerHTML = html;
+  results.classList.add('open');
+}

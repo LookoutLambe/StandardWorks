@@ -3786,6 +3786,8 @@ window.READER = window.READER || {
   vol: 'bom',
   landingTitle: 'Book of Mormon',
   navLabelHe: 'Book of Mormon',
+  /* So the shared search does not offer this volume as an "other volume". */
+  selfPage: 'bom/bom.html',
   shareTitle: '\u05E1\u05E4\u05E8 \u05DE\u05D5\u05E8\u05DE\u05D5\u05DF \u2014 Hebrew Interlinear Book of Mormon',
   /* Ids that are not chapters. reader_surface.js's getChapterLabel checks
      these before it tries to read a book and a number out of the id. */
@@ -3819,7 +3821,7 @@ window.READER = window.READER || {
   books: []      /* filled from BOOK_DATA the moment it exists, below */
 };
 </script>
-<script src="../reader_surface.js?v=20"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
+<script src="../reader_surface.js?v=22"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
 <script src="../translit.js?v=1"></script>
 <script src="../jst_refmap.js?v=1"></script>
 <script src="../verse_loader.js?v=5"></script>
@@ -6887,81 +6889,6 @@ var searchIndex = null;
 
 function _stripNikkud(s) { return s.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, ''); }
 
-function doSearch(query) {
-  var results = document.getElementById('search-results');
-  if (!query || query.trim().length === 0) {
-    results.classList.remove('open');
-    results.innerHTML = '';
-    return;
-  }
-  // the reader loads one book at a time; search needs the whole volume
-  if (window.SWSearch && window.SWSearch.needsPreload()) {
-    results.innerHTML = '<div style="color:var(--ink-3);padding:12px;font-family:David Libre,serif;">Loading the rest of the Book of Mormon…</div>';
-    results.classList.add('open');
-    window.SWSearch.preload(function () { doSearch(query); });
-    return;
-  }
-  if (!searchIndex) buildSearchIndex();
-  var q = query.toLowerCase();
-  var qStripped = _stripNikkud(query);
-  var matches = [];
-  var MAX_RESULTS = 100;
-  for (var i = 0; i < searchIndex.length; i++) {
-    var item = searchIndex[i];
-    // Hebrew without nikkud, and English from the gloss or the translation
-    if (window.SWSearch ? window.SWSearch.matches(item, query.trim())
-        : (item.hebrew.includes(query) || _stripNikkud(item.hebrew).includes(qStripped) || item.english.toLowerCase().includes(q))) {
-      matches.push(item);
-    }
-  }
-  if (matches.length === 0) {
-    results.innerHTML = '<div style="color:var(--ink-3);padding:12px;font-family:David Libre,serif;">No results found</div>';
-    results.classList.add('open');
-    return;
-  }
-  var shown = matches.length > MAX_RESULTS ? matches.slice(0, MAX_RESULTS) : matches;
-  var countMsg = matches.length + ' result' + (matches.length !== 1 ? 's' : '') + ' found';
-  if (matches.length > MAX_RESULTS) countMsg = 'Showing ' + MAX_RESULTS + ' of ' + matches.length + ' results';
-  var html = '<div style="color:var(--here-chrome);padding:8px 12px;font-size:0.85em;font-family:David Libre,serif;border-bottom:1px solid var(--surface-2);">' + countMsg + '</div>';
-  shown.forEach(function(m) {
-    var preview = m.english.length > 80 ? m.english.substring(0, 80) + '...' : m.english;
-    // Highlight match in preview
-    var idx = preview.toLowerCase().indexOf(q);
-    if (idx >= 0) {
-      preview = preview.substring(0, idx) + '<mark>' + preview.substring(idx, idx + query.length) + '</mark>' + preview.substring(idx + query.length);
-    }
-    html += '<div class="search-result" onclick="goToSearchResult(\'' + m.chapId + '\',' + m.verseIdx + ')">';
-    html += '<div class="search-result-ref">' + m.ref + '</div>';
-    html += '<div class="search-result-text">' + m.hebrew.substring(0, 60) + '</div>';
-    html += '<div style="color:var(--ink-3);font-size:0.8em;font-family:David Libre,serif;">' + preview + '</div>';
-    html += '</div>';
-  });
-  html += '<div style="padding:12px 16px;border-top:2px solid var(--rule);direction:ltr;font-family:David Libre,serif;font-size:0.85em;color:var(--ink-light);">';
-  html += '<div style="font-weight:600;margin-bottom:6px;">Search other volumes:</div>';
-  [{name:'Old Testament',page:'../ot.html'},{name:'New Testament',page:'../nt.html'},{name:'D&C',page:'../dc.html'},{name:'Pearl of Great Price',page:'../pgp.html'},{name:'JST',page:'../jst.html'}].forEach(function(v) {
-    html += '<a href="' + v.page + '?q=' + encodeURIComponent(query.trim()) + '" target="_blank" style="display:inline-block;margin:3px 4px;color:var(--accent);text-decoration:none;padding:4px 10px;border:1px solid var(--accent);border-radius:3px;font-size:0.9em;">' + v.name + '</a>';
-  });
-  html += '</div>';
-  results.innerHTML = html;
-  results.classList.add('open');
-}
-
-function goToSearchResult(chapId, verseIdx) {
-  closeSearch();
-  navTo(chapId);
-  setTimeout(function() {
-    var panel = document.querySelector('.chapter-panel[style*="block"]');
-    if (!panel) return;
-    var verses = panel.querySelectorAll('.verse');
-    if (verses[verseIdx]) {
-      verses[verseIdx].scrollIntoView({ behavior: (window.swScrollBehavior || 'smooth'), block: 'center' });
-      verses[verseIdx].classList.add('highlighted');
-      // Stamp verse number into URL: #mosiah-16:3
-      history.replaceState(null, '', window.location.hash + ':' + (verseIdx + 1));
-      setTimeout(function() { verses[verseIdx].classList.remove('highlighted'); }, 3000);
-    }
-  }, 300);
-}
 
 // 8. ROOT GLOSSARY
 var glossaryIndex = null;

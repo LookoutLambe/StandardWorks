@@ -792,46 +792,6 @@ var searchIndex = null;
 })();
 
 function _stripNikkud(s) { return s.replace(/[\u0591-\u05C7]/g, ''); }
-function doSearch(query) {
-  var results = document.getElementById('search-results');
-  if (!query || query.trim().length === 0) { results.classList.remove('open'); results.innerHTML = ''; return; }
-  var q = query.trim().toLowerCase(), qStripped = _stripNikkud(q);
-  var matches = [];
-  for (var i = 0; i < searchIndex.length && matches.length < 50; i++) {
-    var si = searchIndex[i];
-    var hebStripped = _stripNikkud(si.hebrew);
-    // Hebrew without nikkud, and English from the gloss or the translation
-    if (window.SWSearch ? window.SWSearch.matches(si, query.trim())
-        : (hebStripped.indexOf(qStripped) >= 0 || si.english.toLowerCase().indexOf(q) >= 0 || si.hebrew.indexOf(q) >= 0)) matches.push(si);
-  }
-  if (matches.length === 0) {
-    results.innerHTML = '<div style="padding:12px;color:#888;font-family:David Libre,serif;">No results found</div>';
-    results.classList.add('open'); return;
-  }
-  var html = '';
-  matches.forEach(function(m) {
-    // show the side the query was asked in: Hebrew for Hebrew, translation for English
-    var displayText, _rtl = true;
-    if (window.SWSearch) {
-      displayText = window.SWSearch.snippet(m, query.trim(), 78);
-      _rtl = window.SWSearch.hasHebrew(displayText);
-    } else {
-      displayText = m.hebrew.length > 60 ? m.hebrew.substring(0, 60) + '\u2026' : m.hebrew;
-    }
-    displayText = String(displayText).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-    html += '<div class="search-result" onclick="closeSearch();navTo(\'' + m.chapId + '\')">';
-    html += '<div class="search-result-ref">' + m.ref + '</div>';
-    html += '<div class="search-result-text" dir="' + (_rtl ? 'rtl' : 'ltr') + '" style="text-align:' + (_rtl ? 'right' : 'left') + ';">' + displayText + '</div></div>';
-  });
-  html += '<div style="padding:12px 16px;border-top:2px solid var(--rule);direction:ltr;font-family:David Libre,serif;font-size:0.85em;color:var(--ink-light);">';
-  html += '<div style="font-weight:600;margin-bottom:6px;">Search other volumes:</div>';
-  [{name:'Old Testament',page:'ot.html'},{name:'New Testament',page:'nt.html'},{name:'Book of Mormon',page:'bom/bom.html'},{name:'D&C',page:'dc.html'},{name:'Pearl of Great Price',page:'pgp.html'},{name:'JST',page:'jst.html'}].filter(function(v) { return v.page !== window.READER.selfPage; }).forEach(function(v) {
-    html += '<a href="' + v.page + '?q=' + encodeURIComponent(query.trim()) + '" style="display:inline-block;margin:3px 4px;color:var(--accent);text-decoration:none;padding:4px 10px;border:1px solid var(--accent);border-radius:3px;font-size:0.9em;">' + v.name + '</a>';
-  });
-  html += '</div>';
-  results.innerHTML = html;
-  results.classList.add('open');
-}
 
 // READING PROGRESS BAR
 window.addEventListener('scroll', function() {
