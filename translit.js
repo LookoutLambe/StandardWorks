@@ -187,7 +187,17 @@
         else if (t > 0 && (prevVowel === '\u05B4' || prevVowel === '\u05B5' || prevVowel === '\u05B6' || prevVowel === '\u05B9' || prevVowel === '\u05C7')) v = '';
         else if (prevVowel === '\u05B7') v = '';
         else if (prevVowel === '\u05BB') v = '';
-        else if (t > 0 && tokens[t-1].c === '\u05D5' && tokens[t-1].dag && !tokens[t-1].vowel) v = '';
+        /* A vav with a dagesh and no vowel IS the shureq. Word-internally the
+           sheva after it stays silent — that is what this rule was for. But at
+           the START of a word the shureq is the CONJUNCTION, and there the
+           sheva is vocal: וּ is the form ו takes precisely BECAUSE the next
+           letter has a sheva, and the two are read u-CE-. Treating it as silent
+           gave "ulmuel" for וּלְמוּאֵל where לְמוּאֵל alone gave "lemuel", and
+           "ushmuel" for Samuel. 9,034 tokens across the six volumes match
+           וּ + consonant + sheva. Word-internal is left alone: whether מוּסְרֵי
+           is muserei or musrei is a separate question and this is not the
+           change that should answer it. */
+        else if (t > 1 && tokens[t-1].c === '\u05D5' && tokens[t-1].dag && !tokens[t-1].vowel) v = '';
         else if (nextTok && bgdkpt.indexOf(nextTok.c) >= 0 && nextTok.dag) v = '';
         else if (nextTok && (t + 1 === len - 1) && !nextTok.vowel) v = '';
         else if (prevVowel === '\u05B0') v = '\u0115';
