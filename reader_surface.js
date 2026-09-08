@@ -2436,14 +2436,29 @@ function applyStressMarks(root) {
     if (v === undefined) continue;
     var start = v; while (start > 0 && !isLetter(w[start])) start--;
     var end = v + 1; while (end < w.length && !isLetter(w[end])) end++;
-    hw.innerHTML = _swEscape(w.slice(0, start)) +
-                   '<span class="sacc">' + _swEscape(w.slice(start, end)) + '</span>' +
-                   _swEscape(w.slice(end));
+    /* THE QAMATS QATAN IS RED, AND REBUILDING .hw FROM THE RAW STRING ERASED IT.
+       makeWordUnit wraps every letter carrying U+05C7 in .qq, which is what
+       makes the sign red — the whole point of writing it. Writing innerHTML
+       from data-h threw that markup away, so every red qamats in the corpus
+       went black the moment the stress marks were applied. The wrapping is
+       re-applied here, on each of the three pieces, so a letter can carry both
+       the red and the accent mark. */
+    hw.innerHTML = _swQq(w.slice(0, start)) +
+                   '<span class="sacc">' + _swQq(w.slice(start, end)) + '</span>' +
+                   _swQq(w.slice(end));
   }
 }
 
 function _swEscape(s) {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+/* Escape, then wrap the qamats qatan the same way makeWordUnit does — ONE
+   pattern, so the red can never again be lost by something that redraws a
+   word. */
+function _swQq(s) {
+  return _swEscape(s).replace(/([\u05D0-\u05EA][\u0591-\u05C6]*\u05C7[\u0591-\u05C6]*)/g,
+                              '<span class="qq">$1</span>');
 }
 
 /* ── A name looks like a name ──────────────────────────────────────────────
