@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="nav_engine.css?v=49">
 <link rel="stylesheet" href="site_chrome.css?v=71">
 <link rel="stylesheet" href="xref_study_panel.css?v=14">
-<link rel="stylesheet" href="reader.css?v=90">
+<link rel="stylesheet" href="reader.css?v=91">
 <style>
 *:focus-visible { outline: 2px solid var(--here); outline-offset: 2px; }
 .book-title { font-size: 2.4em; font-weight: 700; color: var(--header-bg); letter-spacing: 0.04em; margin-bottom: 2px; }
@@ -703,7 +703,7 @@ window.READER = {
 <script src="translit.js?v=1"></script>
 <script src="jst_refmap.js?v=1"></script>
 <script src="verse_loader.js?v=5"></script>
-<script src="root_scorecard.js?v=90"></script>
+<script src="root_scorecard.js?v=93"></script>
 <script>RootScorecard.init({ vol: 'dc', base: '' });</script>
 
 <!-- English text for dual mode -->
@@ -718,8 +718,8 @@ window.READER = {
 <!-- dc_crossrefs.js is fetched on idle by crossrefs_engine.js (it was 511 KB of blocking critical path) -->
 <script src="crossrefs_engine.js?v=21"></script>
 
-<script src="reader_surface.js?v=15"></script>  <!-- panels, selection tools, annotation marks: one copy for all six pages -->
-<script src="reader_ui.js?v=47"></script>
+<script src="reader_surface.js?v=18"></script>  <!-- panels, selection tools, annotation marks: one copy for all six pages -->
+<script src="reader_ui.js?v=50"></script>
 <script>
 // === D&C canon overrides (phase 2) — later function declarations win, so
 // these must load AFTER reader_ui.js: section-keyed chapter labels, the
@@ -750,7 +750,7 @@ function goToGlossaryVerse(verseKey) {
 <script src="notes_engine.js"></script>
 <script src="site_chrome.js?v=44" data-sw-volume="dc"></script>
 <script src="verse_search.js?v=3"></script>
-<script src="nav_engine.js?v=79"></script>
+<script src="nav_engine.js?v=80"></script>
 <script src="xref_study_panel.js"></script>
 <script>
 NavEngine.init({

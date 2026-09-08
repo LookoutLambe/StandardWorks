@@ -1522,3 +1522,150 @@ function loadEnglishText() {
   window._englishLoaded = true;
   populateEnglishDivs();
 }
+
+/* ── The glossary list ─────────────────────────────────────────────────────
+   The two copies were identical apart from ONE thing repeated seven times: how
+   much of the pointing to strip before matching. The five stripped
+   \u0591-\u05C7 — everything; bom.html stripped a narrower range that keeps
+   the maqqef and the shin/sin dots, because ש with the left dot is not the same
+   consonant as ש with the right one and folding them merges roots that are
+   deliberately separate.
+
+   That difference is real and it already has a home: _stripNikkud, which each
+   page declares for itself and which is the one function in this de-fork that
+   stays forked ON PURPOSE. Routing these seven inline regexes through it makes
+   the rest of the function identical, so the list can be shared while each
+   volume keeps its own idea of what a letter is. */
+function renderGlossaryList() {
+  var list = document.getElementById('glossary-list');
+  var searchVal = (document.getElementById('glossary-search').value || '').trim().toLowerCase();
+  var activeTab = document.querySelector('.glossary-tab.active');
+  var tab = activeTab ? activeTab.getAttribute('data-tab') : 'all';
+  var sortVal = document.getElementById('glossary-sort-select').value;
+  var filtered = glossaryIndex.filter(function(e) {
+    if (searchVal) {
+      // normFinals must be applied to BOTH sides. Folding ם→מ on the search
+      // term only made every word ending in a final letter unfindable —
+      // "שבעים" became "שבעימ" and matched nothing. That is all ־ים plurals.
+      var svNorm = normFinals(_stripNikkud(searchVal));
+      var rootNorm = normFinals(_stripNikkud(e.root));
+      var dispNorm = normFinals(_stripNikkud(e.displayHeb || ''));
+      return rootNorm.indexOf(svNorm) === 0 || dispNorm.indexOf(svNorm) === 0 ||
+        e.root.toLowerCase().indexOf(searchVal) >= 0 ||
+        e.meaning.toLowerCase().indexOf(searchVal) >= 0 ||
+        Object.keys(e.glosses).some(function(g) { return g.toLowerCase().indexOf(searchVal) >= 0; }) ||
+        Object.keys(e.forms || {}).some(function(f) { var fn2 = normFinals(_stripNikkud(f)); return fn2.indexOf(svNorm) === 0; });
+    }
+    return true;
+  });
+  // A search naming a root exactly should return that root, not every root it
+  // is a prefix of: "חלם" listed חַלָּמִישׁ (flint) beside חָלַם.
+  if (searchVal) {
+    var svExactNarrow = normFinals(_stripNikkud(searchVal));
+    var exactHits = filtered.filter(function(e) {
+      var r0 = normFinals(_stripNikkud(String(e.root || '')));
+      var d0 = normFinals(_stripNikkud(String(e.displayHeb || '')));
+      return r0 === svExactNarrow || d0 === svExactNarrow;
+    });
+    if (exactHits.length) filtered = exactHits;
+  }
+  if (sortVal === 'freq-desc') filtered.sort(function(a,b) { return b.count - a.count; });
+  else if (sortVal === 'freq-asc') filtered.sort(function(a,b) { return a.count - b.count; });
+  else if (sortVal === 'alpha-heb') filtered.sort(function(a,b) { return a.root.localeCompare(b.root,'he'); });
+  else if (sortVal === 'alpha-eng') filtered.sort(function(a,b) { return a.meaning.localeCompare(b.meaning,'en'); });
+  var html = '';
+  if (tab === 'category') {
+    var cats = {};
+    filtered.forEach(function(e) { var c = e.category || 'Uncategorized'; if (!cats[c]) cats[c] = []; cats[c].push(e); });
+    Object.keys(cats).sort().forEach(function(cat) {
+      html += '<div class="glossary-category-header">' + cat + ' (' + cats[cat].length + ')</div>';
+      cats[cat].forEach(function(e) { html += renderGlossaryEntry(e); });
+    });
+  } else if (tab === 'frequent') {
+    filtered.sort(function(a,b) { return b.count - a.count; });
+    filtered.slice(0, 100).forEach(function(e) { html += renderGlossaryEntry(e); });
+  } else {
+    filtered.forEach(function(e) { html += renderGlossaryEntry(e); });
+  }
+  if (!html) html = '<div style="color:var(--ink-light);padding:20px;font-style:italic;">No roots found.</div>';
+  list.innerHTML = html;
+}
+
+/* ── Panels the word card launches ─────────────────────────────────────────
+   A click inside one of these is the same study gesture continuing, not "the
+   reader moved on", so the outside-click closer must not treat it as a reason
+   to destroy the card. The list had been written out as a bare
+   closest('#xref-panel') in FOUR places, and the glossary was never added to
+   any of them — so opening the Root Glossary from a word (which is what the
+   root headword and the Strong's number do) left a panel where every click,
+   including its own ✕, closed the card behind it.
+
+   Same set as nav_engine's COEXIST, and stated here so the two cannot drift:
+   nav_engine builds its pairs from this list. */
+window.SW_CARD_PANELS = ['xref-panel', 'glossary-panel'];
+function _swInsideCardPanel(target) {
+  if (!target || !target.closest) return false;
+  for (var i = 0; i < window.SW_CARD_PANELS.length; i++) {
+    if (target.closest('#' + window.SW_CARD_PANELS[i])) return true;
+  }
+  return false;
+}
+
+/* ── A dictionary entry ────────────────────────────────────────────────────
+   bom.html's was the fuller of the two — it also lists Tanakh cross-references
+   — so it is the one that survives, and the five gain that section.
+
+   EVERY FORM, not the top eight (user's ask). Two caps were hiding them, and
+   the renderer's was the lesser one: tools/build_root_concordance.js kept only
+   the top SIX surface forms per root, so ברא came back with six no matter what
+   the panel did, and 20% of roots were silently truncated in the DATA. Both
+   caps are gone. The cost is real and accepted — root_concordance.js grew
+   5.55 MB → 6.95 MB — and it is an idle-loaded file, not on the reading path.
+
+   A common root can now carry hundreds of forms (max in the corpus: 522), so
+   the list scrolls inside its own box instead of running the panel off the
+   screen, and the heading says how many there are. */
+function renderGlossaryEntry(entry) {
+  var formPairs = Object.entries(entry.forms || {}).sort(function(a, b) { return b[1] - a[1]; });
+  var formsList = formPairs.map(function(pair) {
+    return '<span class="glossary-form-chip" onclick="event.stopPropagation();highlightForm(\'' +
+      pair[0].replace(/'/g, "\\'") + '\')">' + pair[0] + ' <small>(' + pair[1] + ')</small></span>';
+  }).join('');
+  var glossList = Object.entries(entry.glosses || {}).sort(function(a, b) { return b[1] - a[1]; })
+    .map(function(pair) { return '"' + pair[0] + '" (' + pair[1] + 'x)'; }).join(', ');
+  var refsHtml = buildVerseRefsHtml(entry.verseRefs || {});
+  var rootHeb = entry.displayHeb || toSofit(entry.root);
+  var rootTranslit = entry.displayTranslit || transliterate(toSofit(entry.root));
+
+  var biblHtml = '';
+  if (entry.biblicalRefs && entry.biblicalRefs.length > 0) {
+    biblHtml = '<div class="glossary-biblical-section"><strong>Tanakh Cross-References:</strong>' +
+      '<div class="glossary-biblical-list">';
+    entry.biblicalRefs.forEach(function(br) {
+      biblHtml += '<div class="glossary-biblical-ref">' +
+        '<span class="glossary-biblical-ref-key">' + br.ref + '</span> ' +
+        '<span class="glossary-biblical-ref-note">' + br.note + '</span></div>';
+    });
+    biblHtml += '</div></div>';
+  }
+
+  return '<div class="glossary-entry" onclick="toggleGlossaryEntry(this)">' +
+    '<div class="glossary-entry-header">' +
+      '<span class="glossary-root" data-root-key="' + entry.root + '">' + rootHeb + '</span>' +
+      '<span style="font-size:0.75em;opacity:0.6;margin-left:6px;">' + rootTranslit + '</span>' +
+      '<span class="glossary-count">' + entry.count + 'x</span>' +
+    '</div>' +
+    '<div class="glossary-meaning">' + (entry.meaning || '<em style="color:var(--ink-light)">(tap to expand)</em>') + '</div>' +
+    (entry.category !== 'Uncategorized' ? '<span class="glossary-category-badge">' + entry.category + '</span>' : '') +
+    '<div class="glossary-detail">' +
+      (entry._rscChips ? '<div style="margin-bottom:6px;">' + entry._rscChips + '</div>' : '') +
+      '<div><strong>Glosses:</strong> ' + glossList + '</div>' +
+      '<div style="margin-top:6px;"><strong>Forms</strong> (' + formPairs.length + '):</div>' +
+      '<div class="glossary-forms-list">' + formsList + '</div>' +
+      biblHtml +
+      refsHtml +
+      '<button class="glossary-highlight-btn" onclick="event.stopPropagation();highlightAllForms(\'' +
+        entry.root.replace(/'/g, "\\'") + '\')">Highlight all in text</button>' +
+    '</div>' +
+  '</div>';
+}

@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '89';   // bump when the generated data files change
+  var RSC_V = '92';   // bump when the generated data files change
   // Transliterated terms — an exception table in the tool, like the received
   // spellings in transliterate(): keyed by bare consonants, so every pointing
   // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.
@@ -696,39 +696,13 @@
     } else {
       sense = null;
     }
-    var forms = Object.keys((sense && sense.fs) || entry.f || {});
-    var hereForm = String(found.part || cleanSurface(surface) || '').replace(/\u05C3$/, '');
-    var formItems = forms.map(function(f) {
-      var src = (sense && sense.fs) || entry.f;
-      return '<span style="font-family:\'David Libre\',serif">' + esc(f) + '</span> <span class="rsc-dim">(' + num(src[f]) + '×)</span>';
-    });
-    if (hereForm && forms.indexOf(hereForm) < 0) {
-      formItems.push('<span style="font-family:\'David Libre\',serif">' + esc(hereForm) + '</span> <span class="rsc-dim">(here)</span>');
-    }
-    var disclosure = '';
-    if (!isFn && formItems.length > 1) disclosure += '<div class="rsc-dl-row"><span class="rsc-dl-k">Forms</span> ' + formItems.join(', ') + '</div>';
-    var glosses = Object.keys((sense && sense.gs) || entry.g || {});
-    var shown = glosses.slice(0, 4);
-    var hereGloss = String(glossText || '').replace(/^[\s"'.,;:?!()\u2014\u2013-]+|[\s"'.,;:?!()\u2014\u2013-]+$/g, '');
-    var gsrc = (sense && sense.gs) || entry.g;
-    var glossItems = shown.map(function(g) { return '“' + esc(g) + '” <span class="rsc-dim">(' + num(gsrc[g]) + '×)</span>'; });
-    if (hereGloss) {
-      var lc = hereGloss.toLowerCase(), hit = null;
-      for (var gi = 0; gi < glosses.length; gi++) {
-        if (glosses[gi].toLowerCase() === lc) { hit = glosses[gi]; break; }
-      }
-      if (hit && shown.indexOf(hit) < 0) glossItems.push('“' + esc(hit) + '” <span class="rsc-dim">(' + num(gsrc[hit]) + '×)</span>');
-      else if (!hit) glossItems.push('“' + esc(hereGloss) + '” <span class="rsc-dim">(here)</span>');
-    }
-    if (!isFn && glossItems.length > 1) disclosure += '<div class="rsc-dl-row"><span class="rsc-dl-k">Glossed</span> ' + glossItems.join(', ') + '</div>';
+    /* NO FORMS-AND-SPELLINGS FOLD HERE. It listed every surface form and every
+       gloss with counts, which is concordance output, and it belongs in the
+       Root Glossary — that panel exists to show a root's whole range, and it
+       does now, all 81 spellings of ברא included. The card answers a narrower
+       question: what is THIS word, here. (User, 2026-09-08: "dont put the forms
+       and spelling on the score card thats what the root glossary is for".) */
     if (isFn) return h;   // a particle: no counts, no references
-    /* FOLDED, NOT DELETED. Forms and glosses with their counts are concordance
-       output — "(2594x), (487x), (376x)…" — and they were two thirds of the
-       card's height, in front of the meaning the reader tapped for. They stay,
-       one tap away, for whoever wants them. */
-    if (disclosure) {
-      h += '<details class="rsc-more"><summary>Forms &amp; spellings</summary>' + disclosure + '</details>';
-    }
     /* ONE primary action. Two competing small links sat here — this sense's
        references and the root's cross-references — and neither looked like the
        way on. This is the way on; reader_ui keeps cross-references beneath it. */

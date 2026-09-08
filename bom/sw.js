@@ -5,12 +5,12 @@ const ASSETS = [
   './bom.html',
   './bom_book_loader.js?v=10',
   './bom_lazy_assets.js?v=3',
-  '../reader_surface.js?v=15',
-  '../root_scorecard.js?v=90',
+  '../reader_surface.js?v=18',
+  '../root_scorecard.js?v=93',
   '../root_engine.js?v=38',
-  '../root_concordance.js?v=83',
+  '../root_concordance.js?v=92',
   '../xref_study_panel.css?v=14',
-  '../reader.css?v=90',
+  '../reader.css?v=91',
   '../xref_study_panel.js?v=6',
   /* official_verses.js (1,852 KB) is split per book into english/<book>.js
      by tools/build_crossref_chunks.js and arrives with the book. */

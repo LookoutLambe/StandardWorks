@@ -2320,7 +2320,17 @@ body.dark-mode #glossary-panel {
 .glossary-entry-header { display: flex; align-items: baseline; gap: 4px; }
 .glossary-entry:hover { border-color: var(--accent); }
 .glossary-form-chip { display: inline-block; font-family: 'David Libre', serif; font-size: 1.1em; background: var(--bg-deep); padding: 2px 8px; border-radius: 4px; cursor: pointer; direction: rtl; }
-.glossary-forms-list { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; direction: rtl; }
+/* EVERY attested form of the root, which is the point of the thing: no other
+   Hebrew interlinear shows you what a root actually does across the corpus.
+   A common root has hundreds (522 is the maximum here), so the list scrolls in
+   its own box rather than running the panel off the screen — but nothing is
+   hidden, and the heading counts them. */
+.glossary-forms-list {
+  display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; direction: rtl;
+  max-height: 40vh; overflow-y: auto; overscroll-behavior: contain;
+  padding: 6px; border: 1px solid var(--rule); border-radius: 6px;
+  background: color-mix(in srgb, var(--paper-2, var(--bg)) 60%, transparent);
+}
 .glossary-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
 .glossary-header h3 { font-size: 1.3em; color: var(--accent-deep); margin: 0; }
 .glossary-highlighted { background: color-mix(in srgb, var(--here) 25%, transparent) !important; border-radius: 3px; }

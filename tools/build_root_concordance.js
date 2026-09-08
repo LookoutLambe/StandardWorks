@@ -484,8 +484,18 @@ const rootsOut = keys.map(function(k) {
   const out = {
     c: e.c,
     vc: e.verses.map(s => s.size),
-    f: topEntries(e.f, 6),
-    g: topEntries(e.g, 10)
+    /* EVERY surface form, not the top six. The dictionary panel lists a root's
+       forms, and capping the DATA at six meant it could only ever show six —
+       ברא came back as 6 when the corpus has more. The renderer's own slice is
+       lifted too; measured cost is in the build log below. */
+    f: topEntries(e.f, Infinity),
+    /* Glosses stay capped, and forms do not, because they are not the same kind
+       of list. A form is a fact about the language — ברא has 81 attested
+       spellings and every one teaches something. A "gloss" here is the English
+       used at each occurrence, so an uncapped list is 7,135 near-duplicate
+       phrasings for one root and 3.1 MB of them across the corpus. Twenty-five
+       is enough to show the range without turning the card into a transcript. */
+    g: topEntries(e.g, 25)
   };
   /* Ship the sense buckets: key -> { g label, c counts, r refs }. Only senses
      small enough to list verses carry refs; a very common sense gets counts
@@ -506,6 +516,12 @@ const rootsOut = keys.map(function(k) {
        sense across ~40,000 senses for a breakdown the card shows at root level
        anyway. The per-volume chips stay root-level. */
     const rec = { g: best, n: stotal, v: se.verses.reduce((a, x) => a + x.size, 0) };
+    /* Back to five. These per-sense lists had ONE reader — the card's
+       "Forms & spellings" fold — and that fold is gone: a root's whole range
+       belongs in the Root Glossary, which reads the root-level f above. Kept at
+       the original size rather than deleted, so nothing that walks the sense
+       records finds a missing field; uncapping them cost 1.78 MB for a surface
+       that no longer exists. */
     if (e.senses.size > 1) { rec.gs = topEntries(se.g, 5); rec.fs = topEntries(se.f, 5); }
     /* The refs themselves go in root_concordance_refs.js, which is fetched
        only when the references panel opens. Carrying them here tripled

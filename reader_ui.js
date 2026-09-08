@@ -302,8 +302,9 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
     if (e.target.closest('#word-popup')) return;
     /* The card OPENED this panel, so a click inside it is not "the reader
        moved on" — it is the same study gesture continuing. Without this the
-       card was destroyed by the first tap in the panel it had just launched. */
-    if (e.target.closest('#xref-panel')) return;
+       card was destroyed by the first tap in the panel it had just launched.
+       The list lives in reader_surface.js: the glossary belongs to it too. */
+    if (_swInsideCardPanel(e.target)) return;
     var wu = e.target.closest('.word-unit');
     if (!wu) { closePopup(); return; }
     if (e.target.closest('.verse-num')) return;
@@ -498,7 +499,7 @@ document.addEventListener(
        handler, so without the exclusion the card was destroyed by the very tap
        that opened the panel — and the reader lost the word they were studying
        at the moment they asked to see more of it. */
-    if (e.target.closest('#xref-panel')) return;
+    if (_swInsideCardPanel(e.target)) return;   /* xref AND glossary — see SW_CARD_PANELS */
     closePopup();
   },
   true
@@ -634,83 +635,6 @@ function buildGlossaryIndex() {
   }
 }
 
-
-function renderGlossaryList() {
-  var list = document.getElementById('glossary-list');
-  var searchVal = (document.getElementById('glossary-search').value || '').trim().toLowerCase();
-  var activeTab = document.querySelector('.glossary-tab.active');
-  var tab = activeTab ? activeTab.getAttribute('data-tab') : 'all';
-  var sortVal = document.getElementById('glossary-sort-select').value;
-  var filtered = glossaryIndex.filter(function(e) {
-    if (searchVal) {
-      // normFinals must be applied to BOTH sides. Folding ם→מ on the search
-      // term only made every word ending in a final letter unfindable —
-      // "שבעים" became "שבעימ" and matched nothing. That is all ־ים plurals.
-      var svNorm = normFinals(searchVal.replace(/[\u0591-\u05C7]/g, ''));
-      var rootNorm = normFinals(e.root.replace(/[\u0591-\u05C7]/g, ''));
-      var dispNorm = normFinals((e.displayHeb || '').replace(/[\u0591-\u05C7]/g, ''));
-      return rootNorm.indexOf(svNorm) === 0 || dispNorm.indexOf(svNorm) === 0 ||
-        e.root.toLowerCase().indexOf(searchVal) >= 0 ||
-        e.meaning.toLowerCase().indexOf(searchVal) >= 0 ||
-        Object.keys(e.glosses).some(function(g) { return g.toLowerCase().indexOf(searchVal) >= 0; }) ||
-        Object.keys(e.forms || {}).some(function(f) { var fn2 = normFinals(f.replace(/[\u0591-\u05C7]/g, '')); return fn2.indexOf(svNorm) === 0; });
-    }
-    return true;
-  });
-  // A search naming a root exactly should return that root, not every root it
-  // is a prefix of: "חלם" listed חַלָּמִישׁ (flint) beside חָלַם.
-  if (searchVal) {
-    var svExactNarrow = normFinals(searchVal.replace(/[֑-ׇ]/g, ''));
-    var exactHits = filtered.filter(function(e) {
-      var r0 = normFinals(String(e.root || '').replace(/[֑-ׇ]/g, ''));
-      var d0 = normFinals(String(e.displayHeb || '').replace(/[֑-ׇ]/g, ''));
-      return r0 === svExactNarrow || d0 === svExactNarrow;
-    });
-    if (exactHits.length) filtered = exactHits;
-  }
-  if (sortVal === 'freq-desc') filtered.sort(function(a,b) { return b.count - a.count; });
-  else if (sortVal === 'freq-asc') filtered.sort(function(a,b) { return a.count - b.count; });
-  else if (sortVal === 'alpha-heb') filtered.sort(function(a,b) { return a.root.localeCompare(b.root,'he'); });
-  else if (sortVal === 'alpha-eng') filtered.sort(function(a,b) { return a.meaning.localeCompare(b.meaning,'en'); });
-  var html = '';
-  if (tab === 'category') {
-    var cats = {};
-    filtered.forEach(function(e) { var c = e.category || 'Uncategorized'; if (!cats[c]) cats[c] = []; cats[c].push(e); });
-    Object.keys(cats).sort().forEach(function(cat) {
-      html += '<div class="glossary-category-header">' + cat + ' (' + cats[cat].length + ')</div>';
-      cats[cat].forEach(function(e) { html += renderGlossaryEntry(e); });
-    });
-  } else if (tab === 'frequent') {
-    filtered.sort(function(a,b) { return b.count - a.count; });
-    filtered.slice(0, 100).forEach(function(e) { html += renderGlossaryEntry(e); });
-  } else {
-    filtered.forEach(function(e) { html += renderGlossaryEntry(e); });
-  }
-  if (!html) html = '<div style="color:var(--ink-light);padding:20px;font-style:italic;">No roots found.</div>';
-  list.innerHTML = html;
-}
-
-function renderGlossaryEntry(entry) {
-  var formsList = Object.entries(entry.forms).sort(function(a,b) { return b[1]-a[1]; }).slice(0,8)
-    .map(function(pair) { return '<span class="glossary-form-chip" onclick="event.stopPropagation();highlightForm(\'' + pair[0].replace(/'/g,"\\'") + '\')">' + pair[0] + ' <small>(' + pair[1] + ')</small></span>'; }).join('');
-  var glossList = Object.entries(entry.glosses).sort(function(a,b) { return b[1]-a[1]; }).slice(0,6)
-    .map(function(pair) { return '"' + pair[0] + '" (' + pair[1] + 'x)'; }).join(', ');
-  var refsHtml = buildVerseRefsHtml(entry.verseRefs || {});
-  var rootHeb = entry.displayHeb || toSofit(entry.root);
-  var rootTranslit = entry.displayTranslit || transliterate(toSofit(entry.root));
-  return '<div class="glossary-entry" onclick="toggleGlossaryEntry(this)">' +
-    '<div class="glossary-entry-header"><span class="glossary-root" data-root-key="' + entry.root + '">' + rootHeb + '</span>' +
-    '<span style="font-size:0.75em;opacity:0.6;margin-left:6px;">' + rootTranslit + '</span>' +
-    '<span class="glossary-count">' + entry.count + 'x</span></div>' +
-    '<div class="glossary-meaning">' + (entry.meaning || '') + '</div>' +
-    (entry.category !== 'Uncategorized' ? '<span class="glossary-category-badge">' + entry.category + '</span>' : '') +
-    '<div class="glossary-detail">' +
-      (entry._rscChips ? '<div style="margin-bottom:6px;">' + entry._rscChips + '</div>' : '') +
-      '<div><strong>Glosses:</strong> ' + glossList + '</div>' +
-    '<div style="margin-top:6px;"><strong>Forms:</strong></div><div class="glossary-forms-list">' + formsList + '</div>' +
-    refsHtml +
-    '<button class="glossary-highlight-btn" onclick="event.stopPropagation();highlightAllForms(\'' + entry.root.replace(/'/g,"\\'") + '\')">Highlight all in text</button></div></div>';
-}
 
 function buildVerseRefsHtml(verseRefs) {
   var keys = Object.keys(verseRefs);

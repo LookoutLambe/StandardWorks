@@ -52,7 +52,7 @@
 <link rel="stylesheet" href="../nav_engine.css?v=49">
 <link rel="stylesheet" href="../site_chrome.css?v=71">
 <link rel="stylesheet" href="../xref_study_panel.css?v=14">
-<link rel="stylesheet" href="../reader.css?v=90">
+<link rel="stylesheet" href="../reader.css?v=91">
 <style>
 
 /* Skip-to-content link (screen reader / keyboard) */
@@ -1088,7 +1088,7 @@ body.in-chapter #sel-toolbar { flex-direction: column; flex-wrap: nowrap; max-wi
 .glossary-meaning { font-size: 0.95em; color: var(--ink); margin-top: 2px; font-weight: 500; }
 .glossary-category-badge { font-size: 0.7em; color: var(--accent); text-transform: uppercase; letter-spacing: 0.5px; }
 .glossary-detail { display: none; padding-top: 8px; font-size: 0.85em; color: var(--ink-light); line-height: 1.5; }
-.glossary-forms-list { display: flex; flex-wrap: wrap; gap: 4px; margin: 6px 0; }
+/* .glossary-forms-list is styled once, in reader.css. */
 .glossary-form-chip {
   font-family: 'David Libre',serif; background: var(--highlight); padding: 2px 8px;
   border-radius: 3px; font-size: 0.95em; direction: rtl; cursor: pointer;
@@ -3819,11 +3819,11 @@ window.READER = window.READER || {
   books: []      /* filled from BOOK_DATA the moment it exists, below */
 };
 </script>
-<script src="../reader_surface.js?v=15"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
+<script src="../reader_surface.js?v=18"></script>  <!-- panels, selection tools, annotation marks: shared with the other five -->
 <script src="../translit.js?v=1"></script>
 <script src="../jst_refmap.js?v=1"></script>
 <script src="../verse_loader.js?v=5"></script>
-<script src="../root_scorecard.js?v=90"></script>
+<script src="../root_scorecard.js?v=93"></script>
 <script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
 <!-- Reference data (cross-references, glossary, roots, topical guide: ~2.4 MB)
      is deferred: it is consumed only after load (cross-ref markers at +500 ms,
@@ -6676,7 +6676,7 @@ document.addEventListener('keydown', function(e) {
     if (e.target.closest('#word-popup')) return;
     /* The card OPENED this panel, so a click inside it is not "the reader moved
        on" — it is the same study gesture continuing. */
-    if (e.target.closest('#xref-panel')) return;
+    if (_swInsideCardPanel(e.target)) return;   /* xref AND glossary — see SW_CARD_PANELS */
     var wu = e.target.closest('.word-unit');
     if (!wu) { closePopup(); return; }
     if (e.target.closest('.verse-num')) return; // don't trigger on verse nums
@@ -6946,7 +6946,7 @@ document.addEventListener(
     if (e.target.closest('.word-unit')) return;
     /* Runs before every other handler, so without this the card was destroyed
        by the very tap that opened the cross-reference panel. */
-    if (e.target.closest('#xref-panel')) return;
+    if (_swInsideCardPanel(e.target)) return;   /* xref AND glossary — see SW_CARD_PANELS */
     closePopup();
   },
   true
@@ -7130,69 +7130,6 @@ function buildGlossaryIndex() {
 }
 
 
-function renderGlossaryList() {
-  var list = document.getElementById('glossary-list');
-  var searchVal = (document.getElementById('glossary-search').value || '').trim().toLowerCase();
-  var activeTab = document.querySelector('.glossary-tab.active');
-  var tab = activeTab ? activeTab.getAttribute('data-tab') : 'all';
-  var sortVal = document.getElementById('glossary-sort-select').value;
-
-  var filtered = glossaryIndex.filter(function(e) {
-    if (searchVal) {
-      var svNorm = normFinals(searchVal.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, ''));
-      // normFinals must be applied to BOTH sides — folding ם→מ on the search
-      // term only made every ־ים plural unfindable ("שבעים" → "שבעימ").
-      var rootNorm = normFinals(e.root.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, ''));
-      var dispNorm = normFinals((e.displayHeb || '').replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, ''));
-      return rootNorm.indexOf(svNorm) === 0 || dispNorm.indexOf(svNorm) === 0 ||
-             e.root.toLowerCase().indexOf(searchVal) >= 0 ||
-             e.meaning.toLowerCase().indexOf(searchVal) >= 0 ||
-             Object.keys(e.glosses).some(function(g) { return g.toLowerCase().indexOf(searchVal) >= 0; }) ||
-             Object.keys(e.forms || {}).some(function(f) { var fn2 = normFinals(f.replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, '')); return fn2.indexOf(svNorm) === 0; });
-    }
-    return true;
-  });
-
-  // Sort
-  // A search naming a root exactly should return that root, not every root it
-  // is a prefix of: "חלם" listed חַלָּמִישׁ (flint) beside חָלַם.
-  if (searchVal) {
-    var svExactNarrow = normFinals(searchVal.replace(/[֑-ֽֿ-׀׃-ׇ]/g, ''));
-    var exactHits = filtered.filter(function(e) {
-      var r0 = normFinals(String(e.root || '').replace(/[֑-ֽֿ-׀׃-ׇ]/g, ''));
-      var d0 = normFinals(String(e.displayHeb || '').replace(/[֑-ֽֿ-׀׃-ׇ]/g, ''));
-      return r0 === svExactNarrow || d0 === svExactNarrow;
-    });
-    if (exactHits.length) filtered = exactHits;
-  }
-  if (sortVal === 'freq-desc') filtered.sort(function(a,b) { return b.count - a.count; });
-  else if (sortVal === 'freq-asc') filtered.sort(function(a,b) { return a.count - b.count; });
-  else if (sortVal === 'alpha-heb') filtered.sort(function(a,b) { return a.root.localeCompare(b.root,'he'); });
-  else if (sortVal === 'alpha-eng') filtered.sort(function(a,b) { return a.meaning.localeCompare(b.meaning,'en'); });
-
-  var html = '';
-  if (tab === 'category') {
-    var cats = {};
-    filtered.forEach(function(e) {
-      var c = e.category || 'Uncategorized';
-      if (!cats[c]) cats[c] = [];
-      cats[c].push(e);
-    });
-    Object.keys(cats).sort().forEach(function(cat) {
-      html += '<div class="glossary-category-header">' + cat + ' (' + cats[cat].length + ')</div>';
-      cats[cat].forEach(function(e) { html += renderGlossaryEntry(e); });
-    });
-  } else if (tab === 'frequent') {
-    filtered.sort(function(a,b) { return b.count - a.count; });
-    filtered.slice(0, 100).forEach(function(e) { html += renderGlossaryEntry(e); });
-  } else {
-    filtered.forEach(function(e) { html += renderGlossaryEntry(e); });
-  }
-
-  if (!html) html = '<div style="color:var(--ink-light);padding:20px;font-style:italic;">No roots found.</div>';
-  list.innerHTML = html;
-}
-
 function buildVerseRefsHtml(verseRefs) {
   // Group verse keys by book, then sort by chapter:verse
   var bookOrder = ['1 Nephi','2 Nephi','Jacob','Enos','Jarom','Omni','Words of Mormon',
@@ -7251,58 +7188,6 @@ function toggleRefsOverflow(el) {
     overflow.style.display = showing ? 'none' : 'block';
     el.textContent = showing ? 'Show all references ▼' : 'Hide references ▲';
   }
-}
-
-function renderGlossaryEntry(entry) {
-  var formsList = Object.entries(entry.forms)
-    .sort(function(a,b) { return b[1]-a[1]; }).slice(0,8)
-    .map(function(pair) {
-      return '<span class="glossary-form-chip" onclick="event.stopPropagation();highlightForm(\'' +
-        pair[0].replace(/'/g,"\\'") + '\')">' + pair[0] + ' <small>(' + pair[1] + ')</small></span>';
-    }).join('');
-
-  var glossList = Object.entries(entry.glosses)
-    .sort(function(a,b) { return b[1]-a[1]; }).slice(0,6)
-    .map(function(pair) { return '"' + pair[0] + '" (' + pair[1] + 'x)'; }).join(', ');
-
-  var refsHtml = buildVerseRefsHtml(entry.verseRefs || {});
-
-  // Biblical cross-references from Tanakh
-  var biblHtml = '';
-  if (entry.biblicalRefs && entry.biblicalRefs.length > 0) {
-    biblHtml = '<div class="glossary-biblical-section">' +
-      '<strong>Tanakh Cross-References:</strong>' +
-      '<div class="glossary-biblical-list">';
-    entry.biblicalRefs.forEach(function(br) {
-      biblHtml += '<div class="glossary-biblical-ref">' +
-        '<span class="glossary-biblical-ref-key">' + br.ref + '</span> ' +
-        '<span class="glossary-biblical-ref-note">' + br.note + '</span>' +
-      '</div>';
-    });
-    biblHtml += '</div></div>';
-  }
-
-  var rootHeb = entry.displayHeb || toSofit(entry.root);
-  var rootTranslit = entry.displayTranslit || transliterate(toSofit(entry.root));
-  return '<div class="glossary-entry" onclick="toggleGlossaryEntry(this)">' +
-    '<div class="glossary-entry-header">' +
-      '<span class="glossary-root" data-root-key="' + entry.root + '">' + rootHeb + '</span>' +
-      '<span style="font-size:0.75em;opacity:0.6;margin-left:6px;">' + rootTranslit + '</span>' +
-      '<span class="glossary-count">' + entry.count + 'x</span>' +
-    '</div>' +
-    '<div class="glossary-meaning">' + (entry.meaning || '<em style="color:var(--ink-light)">(tap to expand)</em>') + '</div>' +
-    (entry.category !== 'Uncategorized' ? '<span class="glossary-category-badge">' + entry.category + '</span>' : '') +
-    '<div class="glossary-detail">' +
-      (entry._rscChips ? '<div style="margin-bottom:6px;">' + entry._rscChips + '</div>' : '') +
-      '<div><strong>Glosses:</strong> ' + glossList + '</div>' +
-      '<div style="margin-top:6px;"><strong>Forms:</strong></div>' +
-      '<div class="glossary-forms-list">' + formsList + '</div>' +
-      biblHtml +
-      refsHtml +
-      '<button class="glossary-highlight-btn" onclick="event.stopPropagation();highlightAllForms(\'' +
-        entry.root.replace(/'/g,"\\'") + '\')">Highlight all in text</button>' +
-    '</div>' +
-  '</div>';
 }
 
 
@@ -10495,7 +10380,7 @@ try {
 
 <script src="../site_chrome.js?v=44" data-sw-volume="bom"></script>
 <script src="../verse_search.js?v=3"></script>
-<script src="../nav_engine.js?v=79"></script>
+<script src="../nav_engine.js?v=80"></script>
 <script src="../xref_study_panel.js?v=6"></script>
 <script>
 NavEngine.init({

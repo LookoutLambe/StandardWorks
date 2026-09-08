@@ -3351,10 +3351,11 @@ window.SWLayers = (function () {
      true modal — inset:0 at --z-sheet behind a 55% scrim — so a card left open
      underneath would be dimmed and unreachable; that path closes the card on
      purpose. Coexisting is for panels that sit BESIDE the reader, not over it. */
-  var COEXIST = [
-    ['word-popup', 'xref-panel'],       /* "View Cross-References"            */
-    ['word-popup', 'glossary-panel'],   /* the root headword, the H-number    */
-  ];
+  /* Built from reader_surface.js's SW_CARD_PANELS so the arbiter and the
+     outside-click closer cannot disagree about which panels the card owns —
+     they did, and the glossary was in one list and not the other. */
+  var COEXIST = ((window.SW_CARD_PANELS || ['xref-panel', 'glossary-panel'])
+    .map(function (id) { return ['word-popup', id]; }));
   function coexists(a, b) {
     for (var i = 0; i < COEXIST.length; i++) {
       if ((COEXIST[i][0] === a && COEXIST[i][1] === b) ||
