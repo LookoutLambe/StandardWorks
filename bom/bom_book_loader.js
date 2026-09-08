@@ -130,6 +130,17 @@
     loadChain(['crossrefs/' + slug + '.js', 'inverse_crossrefs/' + slug + '.js'], cb || function () {});
   };
 
+  /* The official English for one book. official_verses.js was 1,852 KB of it
+     in one file, and it sat on the critical path because addCrossRefMarkers()
+     pre-fetched the whole corpus for its position-based fallback — so a reader
+     in Hebrew-only view downloaded every English verse in the book to place a
+     marker. The Dual column wants the same chunk, so both go through here. */
+  global.ensureBomEnglishForChapId = function (chapId, cb) {
+    var slug = bomBookSlug(chapId);
+    if (!slug) { if (cb) cb(); return; }
+    loadChain(['english/' + slug + '.js'], cb || function () {});
+  };
+
   /* Search has to see the whole volume, not just the book being read, so this
      pulls in every book script once. ~5MB, fetched only when a search runs. */
   var _allLoaded = false;

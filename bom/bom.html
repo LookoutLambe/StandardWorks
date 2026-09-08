@@ -3813,8 +3813,8 @@ body.dual-mode .chapter-summary { display: block; }
   <button id="btn-nikkud" onclick="toggleNikkud()" title="Show/hide vowel points">No Nikkud<br>עִיצּוּרִים</button>
 </div>
 
-<script src="bom_book_loader.js?v=9"></script>
-<script src="bom_lazy_assets.js?v=2"></script>
+<script src="bom_book_loader.js?v=10"></script>
+<script src="bom_lazy_assets.js?v=3"></script>
 <script defer src="../bdb_roots.js?v=4"></script>
 <script defer src="../root_names.js?v=17"></script>
 <script src="../xref_common.js?v=6"></script>
@@ -3991,12 +3991,23 @@ function navTo(id, slideDir, _bookReady) {
     /* ...and this book's cross-reference chunks, at idle, AFTER the render.
        Markers are decoration over a chapter that is already readable, so this
        must never sit between the reader and the text. */
-    if (typeof ensureBomCrossrefsForChapId === 'function') {
+    /* This book's English and its two cross-reference maps, at idle, in that
+       ORDER. The order is not incidental: addCrossRefMarkers places a marker
+       using the English text as a positional fallback when no gloss matches,
+       and then sets data-xrefs-applied so the verse is never marked twice. Run
+       the other way round and a verse marked before its English landed would
+       keep the placement it got without it — markers silently sitting on
+       different words than they used to. English first, then mark. */
+    if (typeof ensureBomEnglishForChapId === 'function') {
       (function (chapId) {
         var go = function () {
-          ensureBomCrossrefsForChapId(chapId, function () {
-            if (typeof loadCrossRefs === 'function') loadCrossRefs();
-            if (typeof addCrossRefMarkers === 'function') addCrossRefMarkers();
+          ensureBomEnglishForChapId(chapId, function () {
+            if (typeof loadEnglishText === 'function') loadEnglishText();
+            if (typeof ensureBomCrossrefsForChapId !== 'function') return;
+            ensureBomCrossrefsForChapId(chapId, function () {
+              if (typeof loadCrossRefs === 'function') loadCrossRefs();
+              if (typeof addCrossRefMarkers === 'function') addCrossRefMarkers();
+            });
           });
         };
         if ('requestIdleCallback' in window) requestIdleCallback(go, { timeout: 2000 });
@@ -4383,7 +4394,17 @@ function setMode(mode) {
   } else if (mode === 'dual') {
     document.body.classList.add('dual-mode');
     document.getElementById('btn-dual').classList.add('active');
-    if (!window._englishLoaded) loadEnglishText();
+    /* Straight to the fetch — the reader asked for the column, so this one is
+       not deferred to idle like the render-path warm above. */
+    /* window.currentChapterId, not the bare name: it is declared in a later
+       inline <script> block, so a bare reference here throws ReferenceError if
+       this ever runs during boot (restoring the saved view mode) before that
+       block has executed. A property read cannot throw. */
+    if (typeof ensureBomEnglishForChapId === 'function' && window.currentChapterId) {
+      ensureBomEnglishForChapId(window.currentChapterId, function () { loadEnglishText(); });
+    } else {
+      loadEnglishText();
+    }
   } else {
     document.getElementById('btn-inter').classList.add('active');
   }
@@ -5601,8 +5622,16 @@ var _bomFoldedKeys = Object.create(null);
 /* Each chunk calls this as it lands (tools/build_crossref_chunks.js emits the
    call). Defined on window so a chunk arriving before this block has run can
    simply skip it — the render hook folds in whatever has accumulated. */
+/* Folds the chunk in. This DOES end up placing markers — loadCrossRefs calls
+   addCrossRefMarkers whenever it folds in new keys — which is why the render
+   hook requests the English chunk first and only then the cross-reference
+   ones: by the time any chunk can fire this, the English is already in and the
+   placement fallback sees what it always saw. */
 window.__bomCrossrefsArrived = function () {
   if (typeof loadCrossRefs === 'function') loadCrossRefs();
+};
+window.__bomEnglishArrived = function () {
+  if (typeof loadEnglishText === 'function') loadEnglishText();
 };
 function loadCrossRefs() {
   function filterTG(data) {
@@ -5663,8 +5692,13 @@ function loadCrossRefs() {
 window._rootXrefs = {};
 
 function addCrossRefMarkers(root) {
-  // Ensure English text is loaded for position-based matching (Strategy 3)
-  if (!window._englishLoaded) loadEnglishText();
+  /* This used to call loadEnglishText() here, which fetched official_verses.js
+     — 1,852 KB, the whole English Book of Mormon — on EVERY page view, in every
+     view mode, purely so the placement fallback below could read engText. The
+     English is split per book now and arrives with the chapter (see
+     ensureBomEnglishForChapId); the fallback already degrades to '' when it is
+     not there, and the marker pass re-runs when the chunk lands, so placement
+     is unchanged. Nothing is forced from here. */
 
   var allVerses = (root || document).querySelectorAll('[data-verse-key]');
   allVerses.forEach(function(verseDiv) {
@@ -6887,30 +6921,31 @@ window._englishLoaded = false;
 window._englishMap = {};
 
 function loadEnglishText() {
-  if (window._englishLoaded) return;
+  /* Folds in whatever has arrived instead of latching on the first call: the
+     English is per book now, so this runs again as each chunk lands. Keyed by
+     book|chapter|verse, so re-processing a verse rewrites it with itself. */
   function processData(data) {
+    if (!data || !data.length) return;
+    var before = Object.keys(window._englishMap).length;
     data.forEach(function(v) {
       window._englishMap[v.book + '|' + v.chapter + '|' + v.verse] = v.english;
     });
     window._englishLoaded = true;
+    if (Object.keys(window._englishMap).length === before) return;   // nothing new
     populateEnglishDivs();
-  }
-  function afterOfficialReady() {
-    if (window.defined_verses || window._officialVersesData) {
-      processData(window.defined_verses || window._officialVersesData);
-      return;
-    }
-    fetchOrXhrOfficial();
   }
   if (window.defined_verses || window._officialVersesData) {
     processData(window.defined_verses || window._officialVersesData);
     return;
   }
-  if (typeof ensureOfficialVerses === 'function') {
-    ensureOfficialVerses(afterOfficialReady);
-    return;
-  }
-  fetchOrXhrOfficial();
+  /* NO WHOLE-CORPUS FALLBACK. This used to call ensureOfficialVerses(), which
+     fetches official_verses.js — all 1,852 KB — the moment the map was empty;
+     with the English split per book that is exactly the load being avoided,
+     and every caller now asks ensureBomEnglishForChapId for the book it needs
+     first. Nothing to fold in yet simply means the chunk has not landed, and
+     __bomEnglishArrived calls this again when it does. The fetch/XHR path
+     below stays for file:// and for a chunk that 404s. */
+  if (window.location.protocol === 'file:') fetchOrXhrOfficial();
 
   function fetchOrXhrOfficial() {
   // Fallback: try fetch, then XHR

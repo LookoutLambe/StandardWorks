@@ -13,19 +13,9 @@
     document.head.appendChild(el);
   }
 
-  var officialPromise = null;
-  global.ensureOfficialVerses = function(cb) {
-    if (global.defined_verses || global._officialVersesData) {
-      if (cb) cb();
-      return;
-    }
-    if (!officialPromise) {
-      officialPromise = new Promise(function(resolve) {
-        loadScript('official_verses.js?v=10', resolve);
-      });
-    }
-    officialPromise.then(function() { if (cb) cb(); });
-  };
+  /* ensureOfficialVerses lived here and fetched official_verses.js whole
+     (1,852 KB). The English is split per book now — bom_book_loader.js's
+     ensureBomEnglishForChapId — and nothing called this any more. */
 
   var scripturePromise = null;
   global.ensureScriptureVerses = function(cb) {

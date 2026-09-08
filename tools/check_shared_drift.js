@@ -337,7 +337,7 @@ for (const name of ['_paintWordAnnotation', 'applyAnnotationToWord']) {
     for (const b of BOOK_DATA) {
       const slug = slugFor(b.prefix + '1');
       if (!slug) { missing.push(b.name + ' (loader routes it nowhere)'); continue; }
-      for (const dir of ['crossrefs', 'inverse_crossrefs']) {
+      for (const dir of ['crossrefs', 'inverse_crossrefs', 'english']) {
         if (!fs.existsSync(path.join(ROOT, 'bom', dir, slug + '.js'))) {
           missing.push(b.name + ' -> bom/' + dir + '/' + slug + '.js');
         }
@@ -349,7 +349,7 @@ for (const name of ['_paintWordAnnotation', 'applyAnnotationToWord']) {
            missing.slice(0, 4).join('\n        ') +
            '\n        Fix: node tools/build_crossref_chunks.js');
     } else {
-      ok('the Book of Mormon\u2019s ' + BOOK_DATA.length + ' books all have both chunk sets');
+      ok('the Book of Mormon\u2019s ' + BOOK_DATA.length + ' books all have all three chunk sets');
     }
   }
 }
