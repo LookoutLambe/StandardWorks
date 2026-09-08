@@ -2733,6 +2733,34 @@ body.dark-mode #nav-progress-text { color: #6a6550; }
   line-height: 1.35;
 }
 
+/* ── Where the accent falls ────────────────────────────────────────────────
+   A "<" above the stressed vowel. Placement comes from the Masoretic accents
+   (tools/build_stress_map.py); this is only the mark.
+
+   direction:ltr AND unicode-bidi:isolate are both load-bearing. "<" is a
+   BIDI-MIRRORED character, so inside the Hebrew's right-to-left run the
+   browser draws it as ">". Isolating it as its own left-to-right run is what
+   keeps it a "<".
+
+   Times New Roman on purpose: at this size David Libre's angle bracket reads
+   as a check mark. */
+.hw .sacc { position: relative; }
+.hw .sacc::before {
+  content: '<';
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  direction: ltr; unicode-bidi: isolate;
+  position: absolute; left: 50%; top: -0.5em;
+  transform: translateX(-50%);
+  font-size: 0.42em; line-height: 1;
+  color: var(--here);
+  pointer-events: none;
+}
+body.dark-mode .hw .sacc::before { color: var(--here-chrome); }
+/* The word card and the cross-reference panel render their own copies of a
+   word; the mark belongs to the reading line only. */
+#word-popup .hw .sacc::before, #xref-panel .hw .sacc::before { content: none; }
+
 /* ── Front matter: .sw-front ───────────────────────────────────────────────
    ONE definition, three homes — the preface on index.html, the Reading Hebrew
    primer on hebrew-study.html, and the Book of Mormon's own volume note in

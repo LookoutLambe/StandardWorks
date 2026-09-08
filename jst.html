@@ -673,7 +673,7 @@ body, button, input, select, textarea,
 <link rel="stylesheet" href="nav_engine.css?v=49">
 <link rel="stylesheet" href="site_chrome.css?v=71">
 <link rel="stylesheet" href="xref_study_panel.css?v=14">
-<link rel="stylesheet" href="reader.css?v=108">
+<link rel="stylesheet" href="reader.css?v=109">
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -1717,7 +1717,8 @@ window.READER = {
 <!-- Cross-reference data + engine (JST will get data later) -->
 <script src="crossrefs_engine.js?v=23"></script>
 
-<script src="reader_surface.js?v=30"></script>  <!-- panels, selection tools, annotation marks: one copy for all six pages -->
+<script src="reader_surface.js?v=32"></script>
+<script defer src="jst_stress.js?v=1"></script>  <!-- where the accent falls; deferred, applied on arrival -->  <!-- panels, selection tools, annotation marks: one copy for all six pages -->
 <script src="reader_ui.js?v=57"></script>
 <script>
 // === JST canon overrides (phase 2) — later function declarations win, so

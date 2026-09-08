@@ -5,12 +5,12 @@ const ASSETS = [
   './bom.html',
   './bom_book_loader.js?v=10',
   './bom_lazy_assets.js?v=3',
-  '../reader_surface.js?v=30',
+  '../reader_surface.js?v=32',
   '../root_scorecard.js?v=93',
   '../root_engine.js?v=38',
   '../root_concordance.js?v=92',
   '../xref_study_panel.css?v=14',
-  '../reader.css?v=108',
+  '../reader.css?v=109',
   '../xref_study_panel.js?v=6',
   /* official_verses.js (1,852 KB) is split per book into english/<book>.js
      by tools/build_crossref_chunks.js and arrives with the book. */
@@ -35,6 +35,7 @@ function isVerseScript(pathname) {
      cache-first-with-background-refresh path instead of falling through to the
      network on every page turn into a new book. */
   return /\/verses\/[^/]+\.js$/i.test(pathname) ||
+         /\/stress\.js$/i.test(pathname) ||
          /\/(crossrefs|inverse_crossrefs|english)\/[^/]+\.js$/i.test(pathname);
 }
 

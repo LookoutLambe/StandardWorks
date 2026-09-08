@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-09-08T10-25-11';
+const BUILD_ID = '2026-09-08T12-32-22';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -178,6 +178,7 @@ function isVerseAssetPath(pathname) {
      falling through to the generic network-first branch, so every page turn
      into a new book waited on the network for its chapter summary. */
   return /\/(ot|nt|pgp|jst|dc|bom)_(verses|english|headings|crossrefs)\//.test(pathname) ||
+    /\/(ot|nt|pgp|jst|dc)_stress\.js$/.test(pathname) || /\/bom\/stress\.js$/.test(pathname) ||
     /\/bom\/(crossrefs|inverse_crossrefs|english)\//.test(pathname) ||
     /\/bom\/scripture_verses\.js$/.test(pathname) ||
     /\/bom\/verses\//.test(pathname) ||

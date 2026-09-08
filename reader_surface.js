@@ -677,7 +677,7 @@ function swVerseDeepLink(chapId, verseNum) {
     var wrapped = function(chapId) {
       orig(chapId);
       var panel = document.getElementById('panel-' + chapId);
-      if (panel) { applySavedHighlights(panel); applySavedNotes(panel); }
+      if (panel) { applySavedHighlights(panel); applySavedNotes(panel); applyStressMarks(panel); }
     };
     wrapped.__swHighlightsWrapped = true;
     window._ensureChapterRendered = wrapped;
@@ -2380,3 +2380,97 @@ function _doRenderVerses(verseData, containerId) {
     container.appendChild(verseDiv);
   });
 }
+
+/* ── Where the accent falls ────────────────────────────────────────────────
+   A small "<" above the stressed vowel, so a reader who does not know Hebrew
+   can say the word with the accent in the right place. Hebrew does not write
+   its stress and it is not always final — הוֹרוּנִי is horu-NÍ, מֶלֶךְ is
+   MÉ-lekh — so the placement comes from the Masoretic accents, read out of the
+   Westminster Leningrad Codex by tools/build_stress_map.py.
+
+   THE TABLE HOLDS ONLY THE EXCEPTIONS. 83% of the corpus is stressed on its
+   last vowel, which is Hebrew's default, so a word absent from SW_STRESS takes
+   the last vowel and ships nothing. That is 484 KB instead of 2.8 MB.
+
+   THE MARK GOES OVER THE VOWEL, NOT THE CONSONANT. In בִּלְשׁוֹן the stressed
+   vowel is the holam, and the holam is written on the vav — not on the shin
+   that opens the syllable. The span therefore runs from the letter through to
+   the next letter, so a shin keeps its dot and a letter keeps its dagesh
+   rather than being split from them.
+
+   Nothing here touches the verse data. The Book of Mormon's Hebrew is locked
+   and the Tanakh's is untouchable; this is a lookup applied at render. */
+function _swVowelSlots(w) {
+  var out = [], i, c, nx;
+  for (i = 0; i < w.length; i++) {
+    c = w[i];
+    if ((c >= 'ְ' && c <= 'ֻ') || c === 'ׇ') out.push(i);
+    else if (c === 'ּ' && i > 0 && w[i - 1] === 'ו') {
+      nx = w[i + 1] || ' ';
+      /* a shureq — a dagesh inside a vav, carrying the syllable's vowel */
+      if (!((nx >= 'ְ' && nx <= 'ֻ') || nx === 'ׇ')) out.push(i);
+    }
+  }
+  return out;
+}
+
+function applyStressMarks(root) {
+  var table = window.SW_STRESS;
+  if (!table) return;                       /* the volume's table has not landed yet */
+  var isLetter = function (c) { return c >= 'א' && c <= 'ת'; };
+  var units = (root || document).querySelectorAll('.word-unit .hw');
+  for (var u = 0; u < units.length; u++) {
+    var hw = units[u];
+    if (hw.querySelector('.sacc')) continue;               /* already marked */
+    var wu = hw.parentNode;
+    var w = (wu && wu.getAttribute('data-h')) || '';
+    if (!w) continue;
+    w = w.normalize ? w.normalize('NFC') : w;
+    /* No points on screen means no vowel to mark. */
+    if (hw.textContent.indexOf('ְ') < 0 && !/[ֱ-ׇֻ]/.test(hw.textContent)) continue;
+    var slots = _swVowelSlots(w);
+    if (!slots.length) continue;
+    var k = table[w];
+    if (k === undefined) k = slots.length - 1;             /* the default: last vowel */
+    var v = slots[k];
+    if (v === undefined) continue;
+    var start = v; while (start > 0 && !isLetter(w[start])) start--;
+    var end = v + 1; while (end < w.length && !isLetter(w[end])) end++;
+    hw.innerHTML = _swEscape(w.slice(0, start)) +
+                   '<span class="sacc">' + _swEscape(w.slice(start, end)) + '</span>' +
+                   _swEscape(w.slice(end));
+  }
+}
+
+function _swEscape(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+/* The table is deferred, so it arrives after the first chapter has rendered.
+   It calls this when it lands; the render hook covers every chapter after. */
+window.__swStressArrived = function () { applyStressMarks(document); };
+
+/* ANYTHING THAT REDRAWS THE HEBREW WIPES THE MARK, because it rewrites .hw
+   wholesale. Stripping the vowel points and putting them back was doing
+   exactly that: 1,217 marks went to 0 and never came back. Rather than
+   teaching each of those functions about this one, wrap them here — the same
+   order-independent pattern the highlights use, since the six pages define
+   them at different times. */
+(function () {
+  function wrap(name) {
+    var orig = window[name];
+    if (typeof orig !== 'function' || orig.__swStressWrapped) return !!orig;
+    var wrapped = function () {
+      var r = orig.apply(this, arguments);
+      /* after the redraw, not during it */
+      setTimeout(function () { applyStressMarks(document); }, 0);
+      return r;
+    };
+    wrapped.__swStressWrapped = true;
+    window[name] = wrapped;
+    return true;
+  }
+  function install() { ['toggleNoNikkud', 'setMode', 'toggleTranslit', 'setSize'].forEach(wrap); }
+  install();
+  document.addEventListener('DOMContentLoaded', install);
+})();
