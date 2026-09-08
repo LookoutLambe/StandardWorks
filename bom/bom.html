@@ -1233,11 +1233,15 @@ body.dark-mode .tg-expanded { background: var(--surface-1); border-color: var(--
   transition: opacity 0.2s;
 }
 /* Note markers on verses */
+/* The marker is an SVG pencil, not a text glyph. It was styled as one —
+   font-size 0.55em, line-height 0, a serif family — none of which sizes an
+   inline SVG, so the icon needs its own box. .sw-i is 17px square; 13 sits
+   better beside a verse number. */
 .note-marker {
-  display: inline-block; font-size: 0.55em; color: var(--here-chrome); cursor: pointer;
-  vertical-align: super; line-height: 0; margin: 0 2px; font-family: 'David Libre', 'Georgia', serif;
-  font-weight: 700; opacity: 0.8; transition: opacity 0.2s;
+  display: inline-block; color: var(--here-chrome); cursor: pointer;
+  line-height: 1; margin: 0 3px; opacity: 0.85; transition: opacity 0.2s;
 }
+.note-marker .sw-i { width: 13px; height: 13px; vertical-align: -1px; }
 .note-marker:hover { opacity: 1; }
 .xref-note-card {
   padding: 14px 16px; border-bottom: 1px solid var(--rule-light);
@@ -3827,7 +3831,7 @@ window.READER = window.READER || {
   books: []      /* filled from BOOK_DATA the moment it exists, below */
 };
 </script>
-<script src="../reader_surface.js?v=27"></script>
+<script src="../reader_surface.js?v=28"></script>
 <script src="../crossrefs_engine.js?v=23"></script>  <!-- the cross-reference panel, shared with the other five -->  <!-- panels, selection tools, annotation marks: shared with the other five -->
 <script src="../translit.js?v=1"></script>
 <script src="../jst_refmap.js?v=1"></script>
@@ -4194,48 +4198,6 @@ var _verseRegistry = [];
 var _pendingRenders = []; // deferred DOM renders for lazy loading
 var _renderedChapters = {}; // chapId -> true once DOM is built
 
-function _doRenderVerses(verseData, containerId) {
-  var chId = containerId.replace('-verses', '').replace('-colophon', '');
-  const container = document.getElementById(containerId);
-  if (!container) return;
-  const bkInfo = getBookChapter(chId);
-  // Count superscriptions so numbered verses start at 1
-  const superCount = verseData.filter(v => v.num === '∗').length;
-  // A book colophon is a headnote, not a numbered verse — 1 Nephi's renders
-  // through renderWords and carries no number, so these must not either.
-  const isColophon = /-colophon-verses$/.test(containerId);
-  verseData.forEach((v, idx) => {
-    const verseKey = bkInfo ? (bkInfo.book + '|' + bkInfo.chapter + '|' + (idx + 1)) : '';
-    const verseDiv = document.createElement('div');
-    verseDiv.className = 'verse';
-    if (verseKey) verseDiv.setAttribute('data-verse-key', verseKey);
-
-    const numDiv = document.createElement('div');
-    numDiv.className = 'verse-num';
-    numDiv.textContent = v.num;
-    const arabicNum = document.createElement('span');
-    arabicNum.className = 'verse-num-arabic';
-    // Superscription (∗) is not a numbered verse — skip the Arabic counter
-    if (v.num !== '∗' && !isColophon) arabicNum.textContent = idx + 1 - superCount;
-    numDiv.appendChild(arabicNum);
-    verseDiv.appendChild(numDiv);
-
-    const flowDiv = document.createElement('div');
-    flowDiv.className = 'word-flow';
-    renderWords(v.words, flowDiv, verseKey);
-    verseDiv.appendChild(flowDiv);
-
-    // Hidden English text for Dual mode (populated on first activation)
-    const engDiv = document.createElement('div');
-    engDiv.className = 'verse-english';
-    if (verseKey) engDiv.setAttribute('data-key', verseKey);
-    // If verse has inline english field (e.g. front matter), use it directly
-    if (v.english) engDiv.textContent = v.english;
-    verseDiv.appendChild(engDiv);
-
-    container.appendChild(verseDiv);
-  });
-}
 
 function _ensureChapterRendered(chapId) {
   if (_renderedChapters[chapId]) return;
@@ -4565,7 +4527,10 @@ function addNoteMarkers() {
     if (!verseNum) return;
     var marker = document.createElement('sup');
     marker.className = 'note-marker';
-    marker.textContent = '<svg class="sw-i" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20h4.2L20 8.2a2.1 2.1 0 0 0-3-3L5.2 17 4 20Z"/><path d="m14.8 6.4 2.8 2.8"/></svg>';
+    /* innerHTML, not textContent: an SVG assigned as text is ESCAPED, so the
+       marker rendered its own source as a run of 8px gold characters under
+       the verse number instead of the pencil. */
+    marker.innerHTML = '<svg class="sw-i" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20h4.2L20 8.2a2.1 2.1 0 0 0-3-3L5.2 17 4 20Z"/><path d="m14.8 6.4 2.8 2.8"/></svg>';
     marker.title = 'Personal note';
     marker.onclick = function(e) {
       e.stopPropagation();

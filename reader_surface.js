@@ -2238,3 +2238,127 @@ function _stripNikkud(s) {
   var keep = !!(window.READER && window.READER.keepMaqqefAndSinDots);
   return (s || '').replace(keep ? _SW_NIKKUD_KEEP : _SW_NIKKUD_ALL, '');
 }
+
+
+/* ── Building one chapter's verses ─────────────────────────────────────────
+   _doRenderVerses was the last renderer that was two functions, and they were
+   two halves rather than two versions: each carried features the other simply
+   did not have, and every one of them is a no-op where its data is absent.
+
+     from reader_core.js   the Psalm 119 acrostic stanza headers
+                           the gold JST marks beside and below a verse
+     from bom.html         book colophons (a headnote, so no verse number)
+                           superscriptions (v.num "*"), which must not consume
+                             an Arabic verse number — Mosiah is the only
+                             chapter in the six volumes that has one
+                           v.english, the inline English of front matter
+
+   Both additions guard themselves. _appendAcrosticStanza returns unless the
+   chapter is psa-ch119; _appendJstMark returns unless window._jstCrossrefs has
+   that id, and bom.html does not even load jst_crossrefs.js. The colophon and
+   superscription tests are false for every chapter in the five. So the merged
+   function is each page's own behaviour, unchanged, from one copy.
+
+   _PS119, _appendAcrosticStanza and _appendJstMark come along because they
+   were in reader_core.js, which bom.html does not load. */
+
+var _PS119 = [
+  ['א','alef'], ['ב','bet'],   ['ג','gimel'], ['ד','dalet'], ['ה','he'],
+  ['ו','vav'],  ['ז','zayin'], ['ח','chet'],  ['ט','tet'],   ['י','yod'],
+  ['כ','kaf'],  ['ל','lamed'], ['מ','mem'],   ['נ','nun'],   ['ס','samekh'],
+  ['ע','ayin'], ['פ','pe'],    ['צ','tsadi'], ['ק','kof'],   ['ר','resh'],
+  ['ש','shin'], ['ת','tav']
+];
+
+function _appendAcrosticStanza(container, chId, verseNo) {
+  if (chId !== 'psa-ch119') return;
+  if ((verseNo - 1) % 8 !== 0) return;
+  var pair = _PS119[(verseNo - 1) / 8];
+  if (!pair) return;
+  var d = document.createElement('div');
+  d.className = 'acrostic-stanza';
+  d.setAttribute('aria-label', 'Stanza ' + pair[1]);
+  var he = document.createElement('span');
+  he.className = 'acrostic-letter';
+  he.textContent = pair[0];
+  var en = document.createElement('span');
+  en.className = 'acrostic-name';
+  en.textContent = pair[1];
+  d.appendChild(he); d.appendChild(en);
+  container.appendChild(d);
+}
+
+function _appendJstMark(host, chapId, verseNum, wantAdded) {
+  var X = window._jstCrossrefs;
+  if (!X || !chapId) return;
+  var e = X[chapId] && X[chapId][verseNum];
+  if (!e) return;
+  var isAdded = !!e[2];
+  if (isAdded !== !!wantAdded) return;          // the other placement will take it
+  var a = document.createElement('a');
+  a.className = 'jst-mark' + (isAdded ? ' jst-mark--added' : '');
+  a.href = 'jst.html#' + e[0] + '&v=' + e[1];
+  a.textContent = isAdded ? 'JST +' : 'JST';
+  a.title = isAdded
+    ? 'The Joseph Smith Translation continues past this verse'
+    : 'Joseph Smith Translation of this verse';
+  /* Same one-way trip a study reference used to be: this leaves the volume, and
+     inside the iOS app there is no browser Back. Mark the return point so the
+     JST page offers "← Back to Genesis 9:4". */
+  a.addEventListener('click', function () {
+    try {
+      if (typeof window.NavEngineMarkReturn === 'function') window.NavEngineMarkReturn(a.getAttribute('href'));
+    } catch (e) {}
+  });
+  host.appendChild(a);
+}
+
+function _doRenderVerses(verseData, containerId) {
+  var chId = containerId.replace('-verses', '').replace('-colophon', '');
+  var container = document.getElementById(containerId);
+  if (!container) return;
+  var bkInfo = getBookChapter(chId);
+
+  /* Superscriptions are not numbered verses, so the Arabic counter has to skip
+     them or every verse after one reads a number too high. */
+  var superCount = 0;
+  for (var s = 0; s < verseData.length; s++) if (verseData[s].num === '∗') superCount++;
+  /* A book colophon is a headnote, not a numbered verse — 1 Nephi's renders
+     through renderWords and carries no number, so these must not either. */
+  var isColophon = /-colophon-verses$/.test(containerId);
+
+  verseData.forEach(function (v, idx) {
+    var verseKey = bkInfo ? (bkInfo.book + '|' + bkInfo.chapter + '|' + (idx + 1)) : '';
+    _appendAcrosticStanza(container, chId, idx + 1);
+
+    var verseDiv = document.createElement('div');
+    verseDiv.className = 'verse';
+    if (verseKey) verseDiv.setAttribute('data-verse-key', verseKey);
+
+    var numDiv = document.createElement('div');
+    numDiv.className = 'verse-num';
+    numDiv.textContent = v.num;
+    var arabicNum = document.createElement('span');
+    arabicNum.className = 'verse-num-arabic';
+    if (v.num !== '∗' && !isColophon) arabicNum.textContent = idx + 1 - superCount;
+    numDiv.appendChild(arabicNum);
+    verseDiv.appendChild(numDiv);
+    _appendJstMark(numDiv, chId, idx + 1, false);   // a revision OF this verse
+
+    var flowDiv = document.createElement('div');
+    flowDiv.className = 'word-flow';
+    renderWords(v.words, flowDiv, verseKey);
+    verseDiv.appendChild(flowDiv);
+
+    // Hidden English for Dual mode, populated on first activation — except
+    // front matter, which carries its English in the verse itself.
+    var engDiv = document.createElement('div');
+    engDiv.className = 'verse-english';
+    if (verseKey) engDiv.setAttribute('data-key', verseKey);
+    if (v.english) engDiv.textContent = v.english;
+    verseDiv.appendChild(engDiv);
+
+    _appendJstMark(verseDiv, chId, idx + 1, true);  // material added AFTER this verse
+    container.appendChild(verseDiv);
+  });
+}
