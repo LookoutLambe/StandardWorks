@@ -125,8 +125,19 @@
      on this list. */
   var BINDS = /\b(of|in|to|unto|with|from|upon|on|all|the|a|under|over|before|after|against|among|between|into|through|beneath|above|beside|toward|towards|about|and)$/i;
 
-  var SUBST = [[/יְהוָה/g, 'אֲדֹנָי'],   /* יהוה -> אדני  */
-               [/יְהוִה/g, 'אֱלֹהִים']]; /* יהוה(Elohim) -> אלהים */
+  /* THE SPOKEN FORM, WHICH IS NOT THE WRITTEN ONE. Both of these are cases
+     where reading the letters as they stand produces something no Hebrew
+     speaker says, and in both the display is left exactly as it is. */
+  var SUBST = [
+    [/יְהוָה/g, 'אֲדֹנָי'],     /* the Name: pointed for Adonai, so say Adonai */
+    [/יְהוִה/g, 'אֱלֹהִים'],    /* ... and for Elohim where it is pointed so   */
+    /* ־ָיו, the third-masculine-plural suffix, is said "-av": elav, alav,
+       lefanav, banav. The yod is not sounded, and Carmit reads the letters —
+       בָּנָיו comes out "banaiyu". Dropping the yod leaves qamats + vav, which
+       is the ordinary spelling of that sound (עַכְשָׁו akhshav, קָו kav). 6,183
+       words carry it across the six volumes. */
+    [/\u05B8\u05D9\u05D5(?=$|\u05BE|\s)/g, '\u05B8\u05D5']
+  ];
 
   /** does this word open a clause? (measured — see the table above) */
   function opensClause(heb) {

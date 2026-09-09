@@ -178,16 +178,22 @@ def align(gwords, ewords):
 #
 #   לֵאמֹר   272  saying          הִנֵּה   1158  behold   (הֵנָּה 29 is "hither")
 #   אַף      693  yea             וְהִנֵּה  400  and behold
-#   וְאַף     62  yea, and        אָמֵן    109  verily / Amen
-#   לָכֵן    783  therefore       הֵן      261  yea
-#   עַל־כֵּן  138  wherefore       אָכֵן     14  surely
-#   וְעַתָּה  678  and now         עַתָּה     48  now
+#   לָכֵן    783  therefore       אָמֵן    109  verily / Amen
+#   עַל־כֵּן  138  wherefore       הֵן      261  yea
+#   וְעַתָּה  678  and now         אָכֵן     14  surely
+#                                 עַתָּה     48  now
+#
+# וְאַף IS NOT ONE OF THEM (user, 2026-09-09). It reads "and yet" and runs
+# straight on into its clause — "and yet in no wise hath he forsaken me" — so
+# it takes the pause BEFORE it, where the WLC puts one 85% of the time, and
+# none after. Bare אַף is different: it is "yea" 588 times of 694, standing at
+# the head of its own clause.
 #
 # אַף is the interesting one: the WLC puts a break after it only 40% of the
 # time, which is why read_aloud.js leaves it alone in the Tanakh. In THIS
 # volume it is "yea" 588 times out of 694 — a different word doing a
 # different job — and it takes the pause.
-ALWAYS_AFTER = set([u'לֵאמֹר', u'אַף', u'וְאַף', u'לָכֵן', u'עַל־כֵּן', u'וְעַתָּה',
+ALWAYS_AFTER = set([u'לֵאמֹר', u'אַף', u'לָכֵן', u'עַל־כֵּן', u'וְעַתָּה',
                     u'עַתָּה', u'אָכֵן', u'הִנֵּה', u'וְהִנֵּה', u'אָמֵן', u'הֵן'])
 
 # WORDS THAT ARE NEVER LEFT AT THE END OF A PHRASE, because they govern what
@@ -280,6 +286,7 @@ def breakiness(toks, i):
 MIN_PHRASE = 2      # a phrase of one word must earn it (a connective does)
 LONG = 8            # words: past this a clause wants a breath in it
 SPLIT_MIN = 0.4     # ... and the model must be surer than even money to add one
+VETO = -4.0         # ... and this sure before it overrules the printed English
 
 def eng_words(text):
     """[(word, punct_class)] — 0 none, 1 comma, 2 full stop."""
@@ -299,8 +306,12 @@ def breaks_for(tokens, entext):
     n = len(speak)
 
     marks = {}                                   # speakable index -> class
-    def put(i, c):
-        if 0 <= i < n - 1: marks[i] = max(marks.get(i, 0), c)
+    from_english = set()
+    def put(i, c, eng=False):
+        if 0 <= i < n - 1:
+            marks[i] = max(marks.get(i, 0), c)
+            if eng: from_english.add(i)
+            else: from_english.discard(i)
 
     # 1. THE SOF PASUQ, where the corpus itself ends a sentence mid-verse.
     si = -1
@@ -383,13 +394,25 @@ def breaks_for(tokens, entext):
                         if (anchor[t + 1] < 0 and re.match(r'and\b', nxt_g)
                                 and t + 2 < n and anchor[t + 2] > j):
                             q = t; break
-            put(q, cls)
+            put(q, cls, eng=True)
 
     # 4. THE WORDS THAT ALWAYS TAKE A PAUSE AFTER THEM.
     for i, (h, g) in enumerate(speak):
         if nfc(h) in ALWAYS_AFTER: put(i, 1)
 
     # ---- what may not be broken -------------------------------------
+    #  AN APPOSITION IS NOT A PAUSE. "Zedekiah, king of Judah" and "my father,
+    #  Lehi, having dwelt" are punctuated the way English punctuates a name,
+    #  and the Hebrew — צִדְקִיָּהוּ מֶלֶךְ יְהוּדָה, יֹשֵׁב בִּירוּשָׁלַיִם — is one breath
+    #  through both. The floor catches this when it strands ONE word; it does
+    #  not when the apposition is long enough to look like a clause. The
+    #  Tanakh knows the difference, so a break the printed English asked for
+    #  is dropped when the Masoretes are firmly against it: -8.53 for
+    #  "dwelling | in Jerusalem", against -0.80 for the weakest break in
+    #  1 Nephi 1:1 that survives. Only the ENGLISH's breaks are open to this —
+    #  the corpus's own marks and the words that always break are not.
+    for i in list(marks):
+        if i in from_english and breakiness(speak, i) < VETO: marks.pop(i); continue
     for i in list(marks):
         if nfc(speak[i][0]) in ALWAYS_AFTER: continue    # these always win
         gl = speak[i][1].rstrip(u' ,;:.\u2014')
