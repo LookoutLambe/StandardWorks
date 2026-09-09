@@ -834,8 +834,10 @@
      a few milliseconds. Both conditions are required. A browser that never
      implements onboundary would otherwise re-speak every phrase it reads,
      and a phrase heard twice is worse than the bug. */
-  var SILENT_MS  = 150;    /* no real utterance of one word returns this fast */
-  var MAX_SPLIT  = 4;      /* halving a 9-word cap reaches single words */
+  var SILENT_MS   = 150;   /* no real utterance of one word returns this fast */
+  var MAX_SPLIT   = 4;     /* halving a 9-word cap reaches single words */
+  var WATCH_MS    = 400;   /* how often to ask the engine whether it is busy */
+  var WATCH_TRIES = 3;     /* ... and how many idle answers mean it is done */
 
   /** speak one clause, highlighting each word as the engine reaches it */
   function speakPhrase(els, token, pitch, rate, depth) {
@@ -856,7 +858,7 @@
       u.rate = RATE * (rate || 1);
       u.pitch = pitch || 1;
 
-      var heard = 0, t0 = Date.now(), settled = false;
+      var heard = 0, t0 = Date.now(), settled = false, quiet = 0;
       u.onboundary = function (e) {
         heard++;
         if (token !== state.token) return;
@@ -873,14 +875,41 @@
         if (token !== state.token) return resolve();
         if (heard || Date.now() - t0 >= SILENT_MS ||
             els.length < 2 || (depth || 0) >= MAX_SPLIT) return resolve();
-        /* nothing was spoken: halve it and say the halves */
+        /* NOTHING WAS SPOKEN — halve it and say the halves, FROM A TIMER.
+           Never from inside this handler: WebKit will not start an utterance
+           from within an onend dispatch, so a speak() called here does not
+           run, its onend never arrives, and the chapter stops on the phrase
+           that was supposed to be rescued. That is exactly what happened —
+           1 Nephi 8 played verse 1 and halted. The emulator that proved this
+           guard fired onend from a timer, so the retry never re-entered the
+           engine the way the real one does, and the bug could not appear. */
         var mid = Math.ceil(els.length / 2), d = (depth || 0) + 1;
-        speakPhrase(els.slice(0, mid), token, pitch, rate, d)
-          .then(function () { return speakPhrase(els.slice(mid), token, pitch, rate, d); })
-          .then(resolve);
+        setTimeout(function () {
+          speakPhrase(els.slice(0, mid), token, pitch, rate, d)
+            .then(function () { return speakPhrase(els.slice(mid), token, pitch, rate, d); })
+            .then(resolve, resolve);
+        }, 0);
       }
       u.onend = done;
       u.onerror = done;
+
+      /* THE READING MUST NEVER BE ABLE TO STOP, whatever the engine does.
+         An utterance whose onend never arrives hangs the chapter for good,
+         and there is no way back except pressing stop. This polls instead of
+         trusting the event, and it only concludes while the synthesiser
+         itself reports that it is neither speaking nor holding anything
+         queued — so it can never cut a phrase that is still playing. The
+         worst it can do is give up on a phrase and read the next one, which
+         is what the reader did before any of this existed. */
+      (function watch() {
+        if (settled || token !== state.token) return;
+        var busy = true;
+        try { busy = speechSynthesis.speaking || speechSynthesis.pending; } catch (e) {}
+        quiet = (busy || state.paused) ? 0 : quiet + 1;
+        if (quiet >= WATCH_TRIES && Date.now() - t0 > SILENT_MS) return done();
+        setTimeout(watch, WATCH_MS);
+      })();
+
       speechSynthesis.speak(u);
     });
   }
