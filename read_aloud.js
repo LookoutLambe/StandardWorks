@@ -143,20 +143,40 @@
      WORD to say, not a patched spelling. These are ordinary modern Hebrew
      words — אליו, עליו, לפניו, אחריו, ימיו, בניו, דבריו — and unpointed is the
      form she has them in, so the points come off the whole word and she reads
-     it as the word it is. The maqqef stays, because כׇּל־יָמָיו is one word.
+     it as the word it is, and ONLY that half of a maqqef compound.
 
      Scoped to words that actually carry the suffix. Stripping the pointing off
      the corpus at large would be a different and much worse idea: the pointing
      is what tells הִנֵּה "behold" from הֵנָּה "hither". */
-  var YAV = /\u05B8\u05D9\u05D5(?=$|\u05BE|\s)/;
+  var YAV = /\u05B8\u05D9\u05D5$/;
   var POINTS = /[\u0591-\u05BD\u05BF-\u05C7]/g;   /* NOT U+05BE, the maqqef */
+
+  /* SAY IT LIKE THIS. An override table for words the voice gets wrong even
+     when the spelling is unambiguous to a reader — the same idea as the Name,
+     applied per word rather than to the whole token. כׇּל came out "cli": the
+     qamats qatan is the one point that cannot be inferred from the letters,
+     and it is evidently not enough for her either. כול is the everyday ktiv
+     male, and it cannot be read as anything but "kol". */
+  var SAY_AS = { '\u05DB\u05C7\u05BC\u05DC': '\u05DB\u05D5\u05DC',   /* כׇּל -> כול */
+                 '\u05DB\u05B8\u05BC\u05DC': '\u05DB\u05D5\u05DC' }; /* כָּל -> כול */
 
   /** the form to SPEAK for a word — never the form to show */
   function spoken(heb) {
     var s = heb;
     for (var i = 0; i < SUBST.length; i++) s = s.replace(SUBST[i][0], SUBST[i][1]);
-    if (YAV.test(s)) s = s.replace(POINTS, '');
-    return s;
+    /* WORD BY WORD, NOT TOKEN BY TOKEN. כׇּל־יָמָיו is one token and two words,
+       and they need different treatment: the first is looked up, the second
+       is unpointed. Unpointing the pair together took the qamats qatan off
+       כׇּל and lost "kol" altogether.
+       The maqqef becomes a SPACE for the voice. It joins two words that are
+       still pronounced as two, and a hyphen inside a word is one more thing
+       for the synthesiser to get wrong. */
+    var parts = s.split('\u05BE');
+    for (var k = 0; k < parts.length; k++) {
+      if (SAY_AS[parts[k]]) parts[k] = SAY_AS[parts[k]];
+      else if (YAV.test(parts[k])) parts[k] = parts[k].replace(POINTS, '');
+    }
+    return parts.join(' ');
   }
 
   /** does this word open a clause? (measured — see the table above) */
