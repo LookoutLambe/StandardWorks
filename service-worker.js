@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-09-09T19-30-37';
+const BUILD_ID = '2026-09-09T19-51-19';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -41,12 +41,11 @@ const CORE_ASSETS = [
     '/StandardWorks/reader.css',
     '/StandardWorks/xref_study_panel.js',
     '/StandardWorks/read_aloud.js',
-    '/StandardWorks/ot_phrase_breaks.js',
-    '/StandardWorks/imperatives.js',
-    '/StandardWorks/nt_phrase_breaks.js',
-    '/StandardWorks/dc_phrase_breaks.js',
-    '/StandardWorks/pgp_phrase_breaks.js',
-    '/StandardWorks/jst_phrase_breaks.js',
+    /* The five <vol>_phrase_breaks.js tables and imperatives.js were precached
+       here — 208 KB gzipped of which one page can use at most 96 — so every
+       volume carried the other four volumes' phrasing. They are the same kind
+       of thing as <vol>_stress.js, which was never precached and has always
+       come cache-first with a background refresh, so they go the same way. */
     '/StandardWorks/notes_engine.js',
     '/StandardWorks/crossrefs_engine.js',
     '/StandardWorks/root_scorecard.js',
@@ -56,8 +55,11 @@ const CORE_ASSETS = [
   '/StandardWorks/reader_surface.js',
   '/StandardWorks/reader_ui.js',
   '/StandardWorks/fonts/david_libre.css',
-    '/StandardWorks/root_concordance.js',
-    '/StandardWorks/attested_forms.js',
+    /* root_concordance.js (1.62 MB gzipped) and attested_forms.js (0.81 MB)
+       were precached here and NO page has a script tag for either: the root
+       scorecard fetches them itself the first time a word card is opened
+       (root_scorecard.js ensure/ensureStrongs). 2.43 MB off every first
+       visit, and off every deploy, for two panels most readers never open. */
     '/StandardWorks/strongs_lookup.js',
     '/StandardWorks/strongs_roots.js',
     '/StandardWorks/interlinear_gloss.js',
@@ -78,7 +80,9 @@ const CORE_ASSETS = [
     '/StandardWorks/bom/bom_book_loader.js?v=9',
     '/StandardWorks/bom/bom_lazy_assets.js',
     '/StandardWorks/bom/roots_glossary.js',
-    '/StandardWorks/bom/scripture_verses.js',
+    /* scripture_verses.js (1.32 MB gzipped) is fetched by ensureScriptureVerses
+       in bom_lazy_assets.js when a cross-reference is first opened, and already
+       matches isVerseAssetPath below. */
   ];
 
 // Verse data files for all volumes — cached individually so one failure
@@ -186,10 +190,16 @@ function isVerseAssetPath(pathname) {
      into a new book waited on the network for its chapter summary. */
   return /\/(ot|nt|pgp|jst|dc|bom)_(verses|english|headings|crossrefs)\//.test(pathname) ||
     /\/(ot|nt|pgp|jst|dc)_stress\.js$/.test(pathname) || /\/bom\/stress\.js$/.test(pathname) ||
+    /\/(ot|nt|pgp|jst|dc)_phrase_breaks\.js$/.test(pathname) || /\/bom\/bom_phrase_breaks\.js$/.test(pathname) ||
+    /\/(imperatives|root_concordance|root_concordance_refs|attested_forms)\.js$/.test(pathname) ||
     /\/bom\/(crossrefs|inverse_crossrefs|english)\//.test(pathname) ||
     /\/bom\/scripture_verses\.js$/.test(pathname) ||
     /\/bom\/verses\//.test(pathname) ||
-    /\/bom\/(official_verses|crossrefs|chapter_headings|chapter_headings_heb|topical_guide|roots_glossary|bom_book_loader|bom_lazy_assets)\.js$/.test(pathname);
+    /\/bom\/(official_verses|crossrefs|chapter_headings|chapter_headings_heb|topical_guide|roots_glossary|bom_book_loader|bom_lazy_assets)\.js$/.test(pathname) ||
+    /* Strong's is a lexicon, not chrome. It sat in isShellUIPath and so went
+       network-first: 579 KB revalidated on the wire every time the dictionary
+       was opened, to fetch a file that had not changed since it was generated. */
+    /\/strongs_(lookup|roots)\.js$/.test(pathname);
 }
 
 /** Shell / chrome — must be network-first so deploys never flash stale UI.
@@ -204,8 +214,7 @@ function isShellUIPath(pathname) {
     /\/version\.json$/i.test(pathname) ||
     /\/sw_register\.js$/i.test(pathname) ||
     /\/interlinear_gloss\.js$/i.test(pathname) ||
-    /\/(site_chrome|sw_theme|nav_engine|reader|reader_ui|reader_surface|root_scorecard|verse_search|xref_study_panel|notes_engine|crossrefs_engine)\.(js|css)$/i.test(pathname) ||
-    /\/strongs_(lookup|roots)\.js$/i.test(pathname);
+    /\/(site_chrome|sw_theme|nav_engine|reader|reader_ui|reader_surface|root_scorecard|verse_search|xref_study_panel|notes_engine|crossrefs_engine|read_aloud)\.(js|css)$/i.test(pathname);
 }
 
 // Cache-first with background refresh — verse files and English chunks. Served

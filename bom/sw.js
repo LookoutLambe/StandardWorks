@@ -4,7 +4,7 @@
     the hook did not touch it (it pointed at scripts/write_build_version.js,
     which does not exist), so the list below had been frozen for days and
     every Book of Mormon asset change was served stale. Never hand-edit. */
-const CACHE = 'bom-2026-09-09T19-30-37';
+const CACHE = 'bom-2026-09-09T19-51-19';
 /** Shell only — verse *.js files are cached at runtime, refreshed in the background (see fetch handler). */
 const ASSETS = [
   './bom.html',
@@ -13,16 +13,18 @@ const ASSETS = [
   '../reader_surface.js?v=38',
   '../root_scorecard.js?v=93',
   '../root_engine.js?v=38',
-  '../root_concordance.js?v=92',
   '../xref_study_panel.css?v=14',
   '../reader.css?v=111',
   '../xref_study_panel.js?v=6',
   '../read_aloud.js?v=26',
-  './bom_phrase_breaks.js',
-  '../imperatives.js',
+  /* root_concordance.js (1.62 MB gzipped) and scripture_verses.js (1.32 MB)
+     were precached here and neither has a script tag on this page: the root
+     scorecard and ensureScriptureVerses fetch them when a word card or a
+     cross-reference is first opened. bom_phrase_breaks.js and imperatives.js
+     join stress.js on the cache-first path below. 3.0 MB off every first
+     visit and off every commit. */
   /* official_verses.js (1,852 KB) is split per book into english/<book>.js
      by tools/build_crossref_chunks.js and arrives with the book. */
-  './scripture_verses.js',
   './chapter_headings.js',
   './chapter_headings_heb.js?v=7',
   './roots_glossary.js?v=71',
@@ -45,6 +47,7 @@ function isVerseScript(pathname) {
      network on every page turn into a new book. */
   return /\/verses\/[^/]+\.js$/i.test(pathname) ||
          /\/stress\.js$/i.test(pathname) ||
+         /\/(bom_phrase_breaks|imperatives|root_concordance|root_concordance_refs|attested_forms|scripture_verses)\.js$/i.test(pathname) ||
          /\/(crossrefs|inverse_crossrefs|english)\/[^/]+\.js$/i.test(pathname);
 }
 
