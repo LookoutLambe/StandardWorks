@@ -291,21 +291,30 @@
          away within a verse or two — and scrolling back up to reach it means
          fighting the very scroll you are trying to stop. This rides the
          viewport instead, clear of the mode bar and its safe area. */
+      /* THE SAME BROWN PILL AS "Continue Reading" — --accent-fill with
+         --on-fill on it, which is the volume's one filled-button pair and
+         is already resolved for Light, Sepia and Dark. The navy chrome
+         this first used belongs to the bars at the edges of the screen;
+         floating in the middle of the reading it read as a different app. */
       '#ra-float{position:fixed;left:50%;transform:translateX(-50%);' +
       'bottom:calc(66px + env(safe-area-inset-bottom,0px));z-index:var(--z-chrome,60);' +
-      'display:none;align-items:center;gap:7px;font-family:inherit;font-size:.92em;' +
-      'cursor:pointer;direction:ltr;padding:9px 17px;border-radius:999px;' +
-      'background:var(--chrome,#12213F);color:var(--chrome-ink,#F3EDE2);' +
-      'border:1px solid var(--chrome-line,#2C4270);' +
-      'box-shadow:0 4px 18px rgba(0,0,0,.35)}' +
+      'display:none;align-items:stretch;direction:ltr;border-radius:999px;overflow:hidden;' +
+      'background:var(--accent-fill,#7A5412);color:var(--on-fill,#FFF);' +
+      'box-shadow:0 6px 20px rgba(0,0,0,.28)}' +
       '#ra-float.on{display:flex}' +
-      '#ra-float:active{transform:translateX(-50%) scale(.97)}';
+      /* 44px is the floor for a control you tap without looking, and these
+         are tapped mid-sentence with the page moving under them. */
+      '#ra-float button{font-family:inherit;font-size:.95em;font-weight:600;' +
+      'cursor:pointer;display:flex;align-items:center;gap:7px;min-height:44px;' +
+      'padding:0 18px;background:transparent;color:inherit;border:0}' +
+      '#ra-float button:active{background:rgba(0,0,0,.16)}' +
+      '#ra-stop{border-left:1px solid rgba(255,255,255,.34)}';
     document.head.appendChild(s);
   }
 
   /* ---- playback ------------------------------------------------------- */
 
-  var state = { on: false, token: 0, btn: null, mark: null, touched: 0 };
+  var state = { on: false, paused: false, token: 0, btn: null, mark: null, touched: 0 };
   function handTaken() { state.touched = Date.now(); }
   window.addEventListener('wheel', handTaken, { passive: true });
   window.addEventListener('touchmove', handTaken, { passive: true });
@@ -326,17 +335,69 @@
     for (var i = 0; i < m.length; i++) m[i].classList.remove('ra-speaking');
   }
 
-  /** the stop that rides the viewport while the chapter is being read */
+  /* THE CONTROLS THAT RIDE THE VIEWPORT. The reading scrolls the page to keep
+     the spoken word in view, so the button that started it is a chapter away
+     within a verse or two. Pause is the one a reader reaches for most — to
+     look at a word, or to be interrupted — and having to stop and start over
+     is not the same thing, because starting over begins the chapter again. */
   function ensureFloat() {
     var f = document.getElementById('ra-float');
     if (f) return f;
-    f = document.createElement('button');
+    f = document.createElement('div');
     f.id = 'ra-float';
-    f.type = 'button';
-    f.innerHTML = '<span aria-hidden="true">\u25A0</span><span>Stop reading</span>';
-    f.addEventListener('click', function () { stop(); });
+
+    var p = document.createElement('button');
+    p.type = 'button';
+    p.id = 'ra-pause';
+    p.addEventListener('click', function () { pause(!state.paused); });
+    f.appendChild(p);
+
+    var s2 = document.createElement('button');
+    s2.type = 'button';
+    s2.id = 'ra-stop';
+    s2.innerHTML = '<span aria-hidden="true">\u25A0</span><span>Stop</span>';
+    s2.addEventListener('click', function () { stop(); });
+    f.appendChild(s2);
+
     document.body.appendChild(f);
+    setPauseLabel();
     return f;
+  }
+
+  function setPauseLabel() {
+    var p = document.getElementById('ra-pause');
+    if (!p) return;
+    p.innerHTML = state.paused
+      ? '<span aria-hidden="true">\u25B6</span><span>Resume</span>'
+      : '<span aria-hidden="true">\u2758\u2758</span><span>Pause</span>';
+    p.setAttribute('aria-pressed', state.paused ? 'true' : 'false');
+  }
+
+  /** hold the reading where it is, or let it go on */
+  function pause(on) {
+    if (!state.on || state.paused === on) return;
+    state.paused = on;
+    /* Two things have to hold: the utterance being spoken, and the silence
+       between clauses. Pausing only the engine would let the gap timer run
+       on and fire the next clause the instant the reader resumed — or worse,
+       while they were still paused. */
+    try { on ? speechSynthesis.pause() : speechSynthesis.resume(); } catch (e) {}
+    setPauseLabel();
+  }
+
+  /** a gap that does not run down while the reading is held */
+  function gap(ms, token) {
+    return new Promise(function (resolve) {
+      var left = ms, last = Date.now();
+      (function tick() {
+        if (token !== state.token) return;          /* stopped: never resolve */
+        var now = Date.now();
+        if (!state.paused) left -= now - last;
+        last = now;
+        if (left <= 0) return resolve();
+        setTimeout(tick, left < 60 ? left : 60);
+      })();
+    });
   }
 
   function setButton(on) {
@@ -394,6 +455,8 @@
     var verses = Array.prototype.slice.call(root.querySelectorAll('.verse[data-verse-key]'));
     if (!verses.length) return;
     var token = ++state.token;
+    state.paused = false;
+    setPauseLabel();
     setButton(true);
 
     (function next(vi) {
@@ -413,7 +476,7 @@
         }
         speakPhrase(groups[pi], token).then(function () {
           if (token !== state.token) return;
-          setTimeout(function () { step(pi + 1); }, groups[pi].gap || PHRASE_GAP);
+          gap(groups[pi].gap || PHRASE_GAP, token).then(function () { step(pi + 1); });
         });
       })(0);
     })(0);
@@ -421,7 +484,13 @@
 
   function stop() {
     state.token++;
+    /* A PAUSED SYNTHESISER CAN IGNORE cancel() — the queue is suspended, so
+       the utterance sits there and starts speaking again the next time
+       anything resumes it. Let it go first, then cancel. */
+    try { speechSynthesis.resume(); } catch (e) {}
     try { speechSynthesis.cancel(); } catch (e) {}
+    state.paused = false;
+    setPauseLabel();
     clearMarks();
     setButton(false);
   }
