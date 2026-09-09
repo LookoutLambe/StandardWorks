@@ -36,9 +36,28 @@
 (function () {
   'use strict';
 
-  var RATE = 0.75;          // of normal. Slower than this and Carmit slurs.
+  /* SPEED IS A MULTIPLIER OF THE BROWSER'S DEFAULT, and the browser's default
+     is faster than the command line's. Measured on 1 Nephi 1:1 — 36 words,
+     six clauses, the same 420ms gaps throughout — the browser at 0.75 runs
+     20.2s against 25.6s for the rendered file at the pace we settled on, so
+     0.75 here is NOT the 75% we tuned by ear. The scale is also compressed at
+     the low end, so the choice belongs to the reader rather than to a
+     constant: the chip beside the button cycles it and the choice sticks. */
+  var SPEEDS = [0.75, 0.6, 0.5, 0.4, 0.3];
+  var RATE = 0.5;           // the default; overridden by the stored choice
   var PHRASE_GAP = 420;     // ms of silence between clauses
   var MAX_PHRASE = 8;       // words, before a long clause is split again
+  /* A BREATH GROUP HAS A FLOOR. Biblical narrative is one long chain of
+     wayyiqtols — "and he came, and he saw, and he heard" — so breaking at
+     every link shreds a verse into one- and two-word fragments: 1 Nephi 1:6
+     came out in seven pieces, two of them a single word. A clause opener only
+     starts a new group once the current one is a phrase in its own right. */
+  var MIN_PHRASE = 4;
+
+  try {
+    var stored = parseFloat(localStorage.getItem('sw-read-rate'));
+    if (stored > 0) RATE = stored;
+  } catch (e) {}
 
   /* The connectives, as the gloss column names them. */
   var CONNECTIVE = /^(therefore|wherefore|and yet|but|nevertheless|yea|for|behold|now|and now|and it came to pass)\b/i;
@@ -75,14 +94,15 @@
     units.forEach(function (el, i) {
       var heb = el.getAttribute('data-h') || '';
       var gloss = (el.querySelector('.gl') || {}).textContent || '';
-      if (i > 0 && cur.length && (CONNECTIVE.test(gloss) || WAYYIQTOL.test(heb))) {
+      if (i > 0 && cur.length >= MIN_PHRASE &&
+          (CONNECTIVE.test(gloss) || WAYYIQTOL.test(heb))) {
         out.push(cur); cur = [];
       }
       if (silent(heb)) return;
       cur.push(el);
       /* the gloss carries the English punctuation; a comma there is a real
          boundary the connectives would otherwise miss */
-      if (/[,;:—]\s*$/.test(gloss) && cur.length) { out.push(cur); cur = []; }
+      if (/[,;:—]\s*$/.test(gloss) && cur.length >= MIN_PHRASE) { out.push(cur); cur = []; }
     });
     if (cur.length) out.push(cur);
 
@@ -144,7 +164,11 @@
       'align-items:center;gap:7px;direction:ltr}' +
       '.ra-btn:hover{background:var(--highlight,rgba(0,0,0,.06))}' +
       '.ra-btn[aria-pressed="true"]{background:var(--highlight,rgba(0,0,0,.1));' +
-      'border-color:var(--here,#7A5412)}';
+      'border-color:var(--here,#7A5412)}' +
+      '.ra-speed{font-family:inherit;font-size:.74em;letter-spacing:.03em;cursor:pointer;' +
+      'background:transparent;color:var(--here,#7A5412);border:1px solid var(--rule,#DCCDB2);' +
+      'border-radius:999px;padding:4px 11px;margin:6px 0 2px 8px;direction:ltr;min-width:44px}' +
+      '.ra-speed:hover{background:var(--highlight,rgba(0,0,0,.06))}';
     document.head.appendChild(s);
   }
 
@@ -272,6 +296,24 @@
         });
       })(b, heads[i]);
       heads[i].appendChild(b);
+
+      /* the speed chip — cycles, persists, and takes effect on the next
+         clause without interrupting the one being spoken */
+      var sp = document.createElement('button');
+      sp.type = 'button';
+      sp.className = 'ra-speed';
+      sp.title = 'Reading speed';
+      sp.textContent = RATE.toFixed(2).replace(/0$/, '') + '\u00d7';
+      sp.addEventListener('click', function () {
+        var i = SPEEDS.indexOf(RATE);
+        RATE = SPEEDS[(i + 1) % SPEEDS.length];
+        try { localStorage.setItem('sw-read-rate', String(RATE)); } catch (e) {}
+        var chips = document.querySelectorAll('.ra-speed');
+        for (var k = 0; k < chips.length; k++) {
+          chips[k].textContent = RATE.toFixed(2).replace(/0$/, '') + '\u00d7';
+        }
+      });
+      heads[i].appendChild(sp);
     }
   }
 
@@ -290,5 +332,11 @@
   if (document.body) mo.observe(document.body, { childList: true, subtree: true });
 
   window.SWReadAloud = { play: play, stop: stop, phrases: phrases, spoken: spoken,
-                         mount: mount, get playing() { return state.on; } };
+                         mount: mount, speeds: SPEEDS,
+                         setRate: function (r) {
+                           RATE = r;
+                           try { localStorage.setItem('sw-read-rate', String(r)); } catch (e) {}
+                         },
+                         get rate() { return RATE; },
+                         get playing() { return state.on; } };
 })();
