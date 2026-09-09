@@ -666,31 +666,58 @@
     return Array.prototype.slice.call(verse.querySelectorAll('.word-unit'));
   }
 
-  /** read every verse of a chapter in order */
+  /* THE CHAPTER ON SCREEN. All 250 panels are in the document at once and the
+     reader shows one; .active is set on some pages and not on others, so the
+     test that holds everywhere is which one is actually RENDERED. offsetParent
+     is null for anything inside a display:none subtree, which is exactly the
+     249 that are put away. */
+  function activePanel() {
+    var a = document.querySelector('.chapter-panel.active');
+    if (a) return a;
+    var ps = document.querySelectorAll('.chapter-panel');
+    for (var i = 0; i < ps.length; i++) if (ps[i].offsetParent !== null) return ps[i];
+    return null;
+  }
+
+  /** repaint a chapter's own button without touching playback state */
+  function paintBtn(btn, on) {
+    if (!btn) return;
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    var l = btn.querySelector('.ra-label'), i = btn.querySelector('.ra-icon');
+    if (l) l.textContent = on ? 'Stop' : 'Read aloud';
+    if (i) i.textContent = on ? '\u25A0' : '\u25B6';
+  }
+
   function play(scope) {
-    var root = scope || document;
-    /* Numbered verses only. The colophon is a .verse too but carries no
-       data-verse-key — it is the book's superscription, not scripture to be
-       read aloud, so the chapter starts at אֲנִי נֶפִי. */
-    var verses = Array.prototype.slice.call(root.querySelectorAll('.verse[data-verse-key]'));
-    if (!verses.length) return;
+    var panel = scope || activePanel();
+    if (!panel) return;
     var token = ++state.token;
     state.paused = false;
     setPauseLabel();
     setButton(true);
+    readPanel(panel, token);
+  }
 
+  /* READING DOES NOT STOP AT THE CHAPTER LINE. A reader who starts 1 Nephi 1
+     wants 1 Nephi, not one chapter of it — the book runs on, and so should the
+     voice. At the last verse the reader turns the page itself, by the same
+     goNext() the arrow uses, and picks up at verse one of the next chapter.
+     The chapter has to be WAITED FOR: verses arrive lazily, a book at a time,
+     so the panel can be on screen and empty for a second. And goNext() does
+     nothing at all at the end of the volume, which is how the reading knows
+     to stop — the chapter never changes, and the wait gives up. */
+  function readPanel(panel, token) {
+    var verses = Array.prototype.slice.call(
+      panel.querySelectorAll('.verse[data-verse-key]'));
+    if (!verses.length) { advance(panel, token); return; }
     (function next(vi) {
       if (token !== state.token) return;
-      if (vi >= verses.length) { stop(); return; }
+      if (vi >= verses.length) { advance(panel, token); return; }
       var groups = phrases(wordsOf(verses[vi]),
                            verses[vi].getAttribute('data-verse-key'));
       (function step(pi) {
         if (token !== state.token) return;
         if (pi >= groups.length) { next(vi + 1); return; }
-        /* A floor under the following, for an engine that never fires
-           onboundary: at worst the page still moves once per clause. The band
-           check inside means this does nothing when the word is already
-           where it should be. */
         if (groups[pi].length) keepInView(groups[pi][0]);
         speakPhrase(groups[pi], token).then(function () {
           if (token !== state.token) return;
@@ -698,6 +725,29 @@
         });
       })(0);
     })(0);
+  }
+
+  function advance(from, token) {
+    if (token !== state.token) return;
+    if (typeof window.goNext !== 'function') { stop(); return; }
+    var wasId = window.currentChapterId;
+    paintBtn(from.querySelector('.ra-btn'), false);
+    window.goNext();
+    var t0 = Date.now();
+    (function wait() {
+      if (token !== state.token) return;
+      var moved = window.currentChapterId !== wasId;
+      if (!moved && Date.now() - t0 > 1500) { stop(); return; }   /* end of the volume */
+      var p = activePanel();
+      if (moved && p && p !== from && p.querySelector('.verse[data-verse-key]')) {
+        state.btn = p.querySelector('.ra-btn') || state.btn;
+        paintBtn(state.btn, true);
+        readPanel(p, token);
+        return;
+      }
+      if (Date.now() - t0 > 20000) { stop(); return; }            /* it never came */
+      setTimeout(wait, 180);
+    })();
   }
 
   function stop() {
