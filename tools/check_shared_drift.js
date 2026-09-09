@@ -21,8 +21,11 @@
 //   4. The heading-flow builder loop is identical across ot/nt/dc/pgp.
 //
 // Run directly:  node tools/check_shared_drift.js
-// Wired into .git/hooks/pre-commit (hooks are not tracked by git — on a new
-// clone, re-add the check line there).
+// Wired into tools/hooks/pre-commit. THAT is the hook that runs: core.hooksPath
+// points at tools/hooks, so .git/hooks/pre-commit is inert and editing it does
+// nothing — this comment used to say the opposite and cost a commit that passed
+// a check it never ran. Being tracked, the hook ships with a clone; a fresh one
+// needs `git config core.hooksPath tools/hooks` and nothing else.
 
 'use strict';
 const fs = require('fs');
