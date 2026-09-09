@@ -200,24 +200,26 @@ def align(gwords, ewords):
 # page does not mark it. Counted in this corpus, with the gloss they actually
 # carry — the POINTED form, because the pointing is the distinction:
 #
-#   לֵאמֹר   272  saying          הִנֵּה   1158  behold   (הֵנָּה 29 is "hither")
-#   אַף      693  yea             וְהִנֵּה  400  and behold
+#   לֵאמֹר   272  saying          וְהִנֵּה  400  and behold
 #   לָכֵן    783  therefore       אָמֵן    109  verily / Amen
 #   עַל־כֵּן  138  wherefore       הֵן      261  yea
 #   וְעַתָּה  678  and now         אָכֵן     14  surely
-#                                 עַתָּה     48  now
+#   הִנֵּה   1158  behold          עַתָּה     48  now
+#          (הֵנָּה 29 is "hither" — by the pointing, not the letters)
 #
-# וְאַף IS NOT ONE OF THEM (user, 2026-09-09). It reads "and yet" and runs
-# straight on into its clause — "and yet in no wise hath he forsaken me" — so
-# it takes the pause BEFORE it, where the WLC puts one 85% of the time, and
-# none after. Bare אַף is different: it is "yea" 588 times of 694, standing at
-# the head of its own clause.
+# NEITHER אַף NOR וְאַף IS ONE OF THEM (translator, 2026-09-09 — אַף was on the
+# list at their word and came off it at their ear: "it doesnt sound good").
+# Both run straight on into the clause they open — "and yet in no wise hath he
+# forsaken me" — so they take the pause BEFORE, where the WLC puts one 85% of
+# the time, and none after. The measurement said אַף was a connective here,
+# "yea" 588 times of 694, and it is; a connective that leads into its clause
+# is still not a connective you stop on.
 #
 # אַף is the interesting one: the WLC puts a break after it only 40% of the
 # time, which is why read_aloud.js leaves it alone in the Tanakh. In THIS
 # volume it is "yea" 588 times out of 694 — a different word doing a
 # different job — and it takes the pause.
-ALWAYS_AFTER = set([u'לֵאמֹר', u'אַף', u'לָכֵן', u'עַל־כֵּן', u'וְעַתָּה',
+ALWAYS_AFTER = set([u'לֵאמֹר', u'לָכֵן', u'עַל־כֵּן', u'וְעַתָּה',
                     u'עַתָּה', u'אָכֵן', u'הִנֵּה', u'וְהִנֵּה', u'אָמֵן', u'הֵן'])
 
 # WORDS THAT ARE NEVER LEFT AT THE END OF A PHRASE, because they govern what
