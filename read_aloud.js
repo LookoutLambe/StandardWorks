@@ -163,8 +163,111 @@
      that cannot be inferred from the letters, and it is evidently not enough
      for her either. כול is the everyday ktiv male and cannot be read as
      anything else. */
-  var SAY_AS = { '\u05DB\u05C7\u05BC\u05DC': '\u05DB\u05D5\u05DC',   /* כׇּל  -> כול */
-                 '\u05DB\u05B8\u05BC\u05DC': '\u05DB\u05D5\u05DC' }; /* כָּל  -> כול */
+  var SAY_AS = {
+    '\u05DB\u05C7\u05BC\u05DC': '\u05DB\u05D5\u05DC',   /* כׇּל  -> כול */
+    '\u05DB\u05B8\u05BC\u05DC': '\u05DB\u05D5\u05DC',   /* כָּל  -> כול */
+
+    /* THE צוה FAMILY AND ITS NEIGHBOURS, WRITTEN OUT ONE BY ONE. Every rule
+       tried on these made them worse — writing the dagesh's doubling out
+       turned צִוָּה into "tivisii" — so they are spelled, not derived. These
+       are the ordinary modern spellings: ציווה, מצווה, ציוויתי, the ones a
+       Hebrew speaker writes without points and the voice therefore knows.
+       1,012 tokens over 44 forms.
+
+       KEYED ON THE POINTED FORM, AND ONLY WHERE THE GLOSS AGREES. The
+       unpointed skeleton ענו is nine different words — עָנָו "humble", עָנוּ
+       "they answered", עִנּוּ "they abused" — and a table keyed on the
+       skeleton would have sent all nine to ענב. The gloss decides, and it
+       threw out ten forms, one of them לְהוֹשֵׁעַ, which is Hoshea. */
+    '\u05E6\u05B4\u05D5\u05B8\u05BC\u05D4':
+      '\u05E6\u05D9\u05D5\u05D5\u05D4',   /* צִוָּה -> ציווה */
+    '\u05D5\u05B7\u05D9\u05B0\u05E6\u05B7\u05D5':
+      '\u05D5\u05D9\u05E6\u05D1',   /* וַיְצַו -> ויצב */
+    '\u05DE\u05B4\u05E6\u05B0\u05D5\u05B8\u05D4':
+      '\u05DE\u05E6\u05D5\u05D5\u05D4',   /* מִצְוָה -> מצווה */
+    '\u05E6\u05B4\u05D5\u05B4\u05BC\u05D9\u05EA\u05B4\u05D9':
+      '\u05E6\u05D9\u05D5\u05D5\u05D9\u05EA\u05D9',   /* צִוִּיתִי -> ציוויתי */
+    '\u05DE\u05B0\u05E6\u05B7\u05D5\u05B6\u05BC\u05D4':
+      '\u05DE\u05E6\u05D5\u05D5\u05D4',   /* מְצַוֶּה -> מצווה */
+    '\u05DE\u05B0\u05E6\u05B7\u05D5\u05B0\u05BC\u05DA\u05B8':
+      '\u05DE\u05E6\u05D5\u05D5\u05DA',   /* מְצַוְּךָ -> מצווך */
+    '\u05E6\u05B4\u05D5\u05B7\u05BC\u05E0\u05B4\u05D9':
+      '\u05E6\u05D9\u05D5\u05D5\u05E0\u05D9',   /* צִוַּנִי -> ציווני */
+    '\u05E6\u05B4\u05D5\u05B4\u05BC\u05D9\u05EA\u05B4\u05D9\u05DA\u05B8':
+      '\u05E6\u05D9\u05D5\u05D5\u05D9\u05EA\u05D9\u05DA',   /* צִוִּיתִיךָ -> ציוויתיך */
+    '\u05E6\u05B4\u05D5\u05B8\u05BC\u05D4\u05D5\u05BC':
+      '\u05E6\u05D9\u05D5\u05D5\u05D4\u05D5',   /* צִוָּהוּ -> ציווהו */
+    '\u05D0\u05B4\u05D5\u05B6\u05BC\u05DC\u05B6\u05EA':
+      '\u05D0\u05D9\u05D5\u05D5\u05DC\u05EA',   /* אִוֶּלֶת -> איוולת */
+    '\u05E6\u05BB\u05D5\u05B5\u05BC\u05D9\u05EA\u05B4\u05D9':
+      '\u05E6\u05D5\u05D5\u05D9\u05EA\u05D9',   /* צֻוֵּיתִי -> ציוויתי */
+    '\u05D4\u05B7\u05D7\u05B4\u05D5\u05B4\u05BC\u05D9':
+      '\u05D4\u05D7\u05D9\u05D5\u05D5\u05D9',   /* הַחִוִּי -> החיווי */
+    '\u05DC\u05B0\u05D4\u05B4\u05D5\u05B8\u05BC\u05E9\u05B7\u05C1\u05E2':
+      '\u05DC\u05D4\u05D9\u05D5\u05D5\u05E9\u05E2',   /* לְהִוָּשַׁע -> להיוושע */
+    '\u05E6\u05BB\u05D5\u05B8\u05BC\u05D4':
+      '\u05E6\u05D5\u05D5\u05D4',   /* צֻוָּה -> ציווה */
+    '\u05E2\u05B8\u05E0\u05B8\u05D5':
+      '\u05E2\u05E0\u05D1',   /* עָנָו -> ענב */
+    '\u05E6\u05B4\u05D5\u05B4\u05BC\u05D9\u05EA\u05B8':
+      '\u05E6\u05D9\u05D5\u05D5\u05D9\u05EA',   /* צִוִּיתָ -> ציווית */
+    '\u05E6\u05BB\u05D5\u05BC\u05D5\u05BC':
+      '\u05E6\u05D9\u05D5\u05D5',   /* צֻוּוּ -> ציוו */
+    '\u05E6\u05B4\u05D5\u05B0\u05BC\u05DA\u05B8':
+      '\u05E6\u05D9\u05D5\u05D5\u05DA',   /* צִוְּךָ -> ציווך */
+    '\u05D5\u05B7\u05D9\u05B0\u05E6\u05B7\u05D5\u05B5\u05BC\u05D4\u05D5\u05BC':
+      '\u05D5\u05D9\u05E6\u05D5\u05D5\u05D4\u05D5',   /* וַיְצַוֵּהוּ -> ויצווהו */
+    '\u05E6\u05B4\u05D5\u05B5\u05BC\u05D9\u05EA\u05B4\u05D9':
+      '\u05E6\u05D9\u05D5\u05D5\u05D9\u05EA\u05D9',   /* צִוֵּיתִי -> ציוויתי */
+    '\u05E6\u05B4\u05D5\u05BC\u05D5\u05BC':
+      '\u05E6\u05D9\u05D5\u05D5',   /* צִוּוּ -> ציוו */
+    '\u05E6\u05B4\u05D5\u05B8\u05BC\u05E0\u05B4\u05D9':
+      '\u05E6\u05D9\u05D5\u05D5\u05E0\u05D9',   /* צִוָּנִי -> ציווני */
+    '\u05DC\u05B0\u05D4\u05B4\u05D5\u05B8\u05BC\u05E9\u05B5\u05C1\u05E2\u05B7':
+      '\u05DC\u05D4\u05D9\u05D5\u05D5\u05E9\u05E2',   /* לְהִוָּשֵׁעַ -> להיוושע */
+    '\u05E6\u05B7\u05D5\u05B5\u05BC\u05D4':
+      '\u05E6\u05D9\u05D5\u05D5\u05D4',   /* צַוֵּה -> ציווה */
+    '\u05DE\u05B0\u05E6\u05BB\u05D5\u05B4\u05BC\u05D9\u05DD':
+      '\u05DE\u05E6\u05D5\u05D5\u05D9\u05DD',   /* מְצֻוִּים -> מצווים */
+    '\u05E6\u05B4\u05D5\u05B4\u05BC\u05D9\u05EA\u05B4\u05DD':
+      '\u05E6\u05D9\u05D5\u05D5\u05D9\u05EA\u05DD',   /* צִוִּיתִם -> ציוויתם */
+    '\u05E6\u05B4\u05D5\u05B8\u05BC\u05DA\u05B0':
+      '\u05E6\u05D9\u05D5\u05D5\u05DA',   /* צִוָּךְ -> ציווך */
+    '\u05E6\u05BB\u05D5\u05B5\u05BC\u05D9\u05EA\u05B6\u05DD':
+      '\u05E6\u05D9\u05D5\u05D5\u05D9\u05EA\u05DD',   /* צֻוֵּיתֶם -> ציוויתם */
+    '\u05E6\u05B4\u05D5\u05B4\u05BC\u05D9\u05EA\u05B4\u05D9\u05C3':
+      '\u05E6\u05D9\u05D5\u05D5\u05D9\u05EA\u05D9',   /* צִוִּיתִי׃ -> ציוויתי */
+    '\u05DE\u05B0\u05E6\u05B7\u05D5\u05B6\u05BC\u05DA\u05B8\u05BC':
+      '\u05DE\u05E6\u05D5\u05D5\u05DA',   /* מְצַוֶּךָּ -> מצווך */
+    '\u05E6\u05BB\u05D5\u05B5\u05BC\u05D9\u05EA\u05B8':
+      '\u05E6\u05D9\u05D5\u05D5\u05D9\u05EA',   /* צֻוֵּיתָ -> ציווית */
+    '\u05DE\u05B0\u05E6\u05B7\u05D5\u05B8\u05BC\u05D4':
+      '\u05DE\u05E6\u05D5\u05D5\u05D4',   /* מְצַוָּה -> מצווה */
+    '\u05DE\u05B0\u05E6\u05B7\u05D5\u05B6\u05BC\u05DA\u05B8':
+      '\u05DE\u05E6\u05D5\u05D5\u05DA',   /* מְצַוֶּךָ -> מצווך */
+    '\u05E6\u05B4\u05D5\u05B4\u05BC\u05D9\u05EA\u05B6\u05DD':
+      '\u05E6\u05D9\u05D5\u05D5\u05D9\u05EA\u05DD',   /* צִוִּיתֶם -> ציוויתם */
+    '\u05DE\u05B0\u05E6\u05BB\u05D5\u05B6\u05BC\u05D4':
+      '\u05DE\u05E6\u05D5\u05D5\u05D4',   /* מְצֻוֶּה -> מצווה */
+    '\u05E6\u05B4\u05D5\u05B7\u05BC\u05E0\u05B4\u05BC\u05D9':
+      '\u05E6\u05D9\u05D5\u05D5\u05E0\u05D9',   /* צִוַּנִּי -> ציווני */
+    '\u05DE\u05B0\u05E6\u05B7\u05D5\u05B4\u05BC\u05D9\u05DD':
+      '\u05DE\u05E6\u05D5\u05D5\u05D9\u05DD',   /* מְצַוִּים -> מצווים */
+    '\u05E6\u05B4\u05BC\u05D5\u05B8\u05BC\u05D4':
+      '\u05E6\u05D9\u05D5\u05D5\u05D4',   /* צִּוָּה -> ציווה */
+    '\u05DC\u05B0\u05D4\u05B4\u05D5\u05B8\u05BC\u05E9\u05B7\u05C1\u05E2\u05C3':
+      '\u05DC\u05D4\u05D9\u05D5\u05D5\u05E9\u05E2',   /* לְהִוָּשַׁע׃ -> להיוושע */
+    '\u05DE\u05B0\u05E6\u05B7\u05D5\u05B6\u05BC\u05D4\u05C3':
+      '\u05DE\u05E6\u05D5\u05D5\u05D4',   /* מְצַוֶּה׃ -> מצווה */
+    '\u05DE\u05B4\u05E6\u05B0\u05D5\u05B8\u05D4\u05C3':
+      '\u05DE\u05E6\u05D5\u05D5\u05D4',   /* מִצְוָה׃ -> מצווה */
+    '\u05E6\u05B4\u05D5\u05B4\u05BC\u05D9\u05EA\u05B8\u05DD\u05C3':
+      '\u05E6\u05D9\u05D5\u05D5\u05D9\u05EA\u05DD',   /* צִוִּיתָם׃ -> ציוויתם */
+    '\u05E2\u05B8\u05E0\u05B8\u05D5\u05C3':
+      '\u05E2\u05E0\u05D1',   /* עָנָו׃ -> ענב */
+    '\u05E6\u05B4\u05D5\u05B4\u05BC\u05D9\u05EA\u05B4\u05D9\u05DA\u05B8\u05C3':
+      '\u05E6\u05D9\u05D5\u05D5\u05D9\u05EA\u05D9\u05DA',   /* צִוִּיתִיךָ׃ -> ציוויתיך */
+  };
 
   var YAV = /\u05B8\u05D9\u05D5$/;
   /* BOTH OF THE /o/ SIGNS SHE DOES NOT KNOW. U+05C7 is the explicit qamats
