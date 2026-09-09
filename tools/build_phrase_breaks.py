@@ -66,6 +66,40 @@ N = lambda s: ud.normalize('NFC', s)
 # consonantal skeleton is what identifies a word, and it matches exactly.
 CMP = lambda s: ''.join(c for c in N(s) if 'א' <= c <= 'ת')
 
+# THE KETIV IS NOT READ, so it is not a word the break positions count. The
+# Masoretes kept both readings where the written text and the spoken one
+# diverge: the ketiv parenthesised and unpointed, the qere bracketed and
+# pointed. read_aloud.js skips the first, and if this file did not, every
+# break after one in the same verse would land a word out. The same test,
+# stated twice, in the two languages that need it.
+KETIV = re.compile(r'^\(.*\)$')
+POINTED = re.compile(u'[\u05B0-\u05BB\u05BD\u05BF\u05C1\u05C2\u05C7]')
+def ketiv(h): return bool(KETIV.match(h or '')) and not POINTED.search(h or '')
+
+
+def drop_ketiv(tokens, breaks):
+    """Re-number break positions into the list of words that are SPOKEN.
+
+       THE KETIV STAYS FOR THE ALIGNMENT AND GOES FOR THE INDEX. It has to
+       stay, because the WLC word this corpus is being aligned against carries
+       the ketiv's own consonants — dropping it before the walk cost two
+       points of alignment, 94.1% down to 92.1%, since the qere's consonants
+       are by definition the ones that differ. And it has to go from the
+       index, because read_aloud.js will not say it. A break landing on the
+       ketiv itself moves back to the last word actually spoken."""
+    keep = [i for i, t in enumerate(tokens) if not ketiv(t)]
+    at = {}
+    pos = -1
+    for i in range(len(tokens)):
+        if not ketiv(tokens[i]): pos += 1
+        at[i] = pos                      # a ketiv inherits the word before it
+    out = []
+    for b in breaks:
+        n = at.get(b, -1)
+        if n >= 0 and n < len(keep) - 1 and (not out or out[-1] != n):
+            out.append(n)
+    return out
+
 # this corpus's file prefix -> the WLC's book file
 BOOKS = [
     ('gen', 'Gen'), ('exo', 'Exod'), ('lev', 'Lev'), ('num', 'Num'),
@@ -79,6 +113,36 @@ BOOKS = [
     ('mic', 'Mic'), ('nah', 'Nah'), ('hab', 'Hab'), ('zep', 'Zeph'),
     ('hag', 'Hag'), ('zec', 'Zech'), ('mal', 'Mal'),
 ]
+
+
+def array_bodies(src, name_re):
+    """[(name, body)] for each `var <name> = [ ... ];`, found by MATCHING THE
+       BRACKET rather than by looking for a newline before it.
+
+       Anchoring on "\n];" is the obvious thing and it is wrong: Ether 14
+       closes on the same line as its last verse — ...["\u05c3",""]]},]; — so a
+       non-greedy match ran straight past it and swallowed Ether 15 whole. The
+       book then reported 65 verses in chapter 14 and none in 15, which looked
+       exactly like a data fault and was not: the file is valid JavaScript and
+       always was. Depth counting is string-aware because a gloss may itself
+       contain a bracket."""
+    out = []
+    for m in re.finditer(name_re, src):
+        i = src.index('[', m.end() - 1)
+        depth, j, in_str = 0, i, False
+        while j < len(src):
+            c = src[j]
+            if in_str:
+                if c == '\\': j += 2; continue
+                if c == '"': in_str = False
+            elif c == '"': in_str = True
+            elif c == '[': depth += 1
+            elif c == ']':
+                depth -= 1
+                if depth == 0: break
+            j += 1
+        out.append((m, src[i + 1:j]))
+    return out
 
 
 def english_names():
@@ -119,9 +183,8 @@ def corpus_verses(prefix):
     # A JS identifier cannot begin with a digit, so 1 Samuel's variables are
     # _1sa_ch1Verses, not 1sa_ch1Verses. Seven books read as zero verses until
     # this allowed the leading underscore.
-    for m in re.finditer(r'var _?%s_ch(\d+)Verses\s*=\s*\[(.*?)\n\];' % prefix, src, re.S):
+    for m, body in array_bodies(src, r'var _?%s_ch(\d+)Verses\s*=\s*\[' % prefix):
         ch = int(m.group(1))
-        body = m.group(2)
         for vi, vm in enumerate(re.finditer(r'\{\s*num:\s*"[^"]*"\s*,\s*words:\s*\[(.*?)\]\s*\}',
                                             body, re.S)):
             toks = [t for t in re.findall(r'\["([^"]*)","[^"]*"\]', vm.group(1))]
@@ -176,6 +239,7 @@ def main():
                 misses_by_book[en] = misses_by_book.get(en, 0) + 1
                 continue
             ok += 1
+            got = drop_ketiv(toks, got)
             if got:
                 table['%s|%d|%d' % (en, ch, v)] = got
 

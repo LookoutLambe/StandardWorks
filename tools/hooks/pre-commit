@@ -1,0 +1,81 @@
+#!/bin/sh
+# 1) Stamp the deploy version (resurrects sw_register.js's auto-upgrade flow).
+#    Same timestamp goes into version.json and the service worker BUILD_ID.
+ROOT="$(git rev-parse --show-toplevel)"
+
+# 0) Shared-code drift guard. The volume pages share blocks by duplication,
+#    and root_engine.js is auto-generated from bom/bom.html — a shared block
+#    edited in one copy only is a latent bug. Blocks the commit BEFORE any
+#    stamping side effects. (tools/check_shared_drift.js says how to fix.)
+node "$ROOT/tools/check_shared_drift.js" || exit 1
+# 0b) The Book of Mormon Hebrew is locked (user, 2026-09-05): only glosses may
+#     change. tools/check_bom_hebrew_lock.js compares every Hebrew token sequence
+#     in bom/verses/ against tools/bom_hebrew_lock.json and blocks the commit.
+node "$ROOT/tools/check_bom_hebrew_lock.js" || exit 1
+STAMP="$(date -u +%Y-%m-%dT%H-%M-%S)"
+ISO="$(date -u +%Y-%m-%dT%H:%M:%S).000Z"
+printf '{\n  "build": "%s",\n  "builtAt": "%s"\n}\n' "$STAMP" "$ISO" > "$ROOT/version.json"
+sed -i '' "s|const BUILD_ID = '[^']*';|const BUILD_ID = '$STAMP';|" "$ROOT/service-worker.js"
+# The Book of Mormon has a service worker OF ITS OWN and it was not being
+# stamped: bom/sw.js held a hardcoded cache name frozen at 2026-09-07, so its
+# precache list never re-ran and every BoM asset change was served stale to
+# anyone who had the worker installed. Both workers get the same stamp.
+sed -i '' "s|const CACHE = '[^']*';|const CACHE = 'bom-$STAMP';|" "$ROOT/bom/sw.js"
+git add "$ROOT/version.json" "$ROOT/service-worker.js" "$ROOT/bom/sw.js"
+echo "[pre-commit] version stamped: $STAMP"
+# 2) Mirror the site into the iOS app bundle.
+"$ROOT/sync-www.sh" >/dev/null
+echo "[pre-commit] StandardWorks/www synced with site files"
+
+# 3) If any verse data changed, rebuild the root scorecard index. It counts
+#    across all six volumes (561k tokens), which is why it is precomputed
+#    rather than done in the browser — and why it silently goes stale the
+#    moment the corpus is edited unless something rebuilds it here.
+if git diff --cached --name-only | grep -Eq '^(ot_verses|nt_verses|dc_verses|pgp_verses|jst_verses|bom/verses)/'; then
+  node "$ROOT/tools/build_root_concordance.js" >/dev/null
+  git add "$ROOT/root_concordance.js" "$ROOT/root_concordance_refs.js" \
+          "$ROOT/root_names.js"
+  echo "[pre-commit] root scorecard index rebuilt (verse data changed)"
+fi
+
+# 3b) The JST reference map. The JST's chapter ids are file positions, not
+#     chapter numbers, and the real reference lives only in a comment above each
+#     verse set — so this is generated from those comments and goes stale the
+#     moment the JST verse files change.
+if git diff --cached --name-only | grep -Eq '^jst_verses/'; then
+  node "$ROOT/tools/build_jst_refmap.js" >/dev/null
+  git add "$ROOT/jst_refmap.js"
+  echo "[pre-commit] JST reference map rebuilt (JST verse data changed)"
+fi
+
+# 4) Same for the hub's text-search index — it holds every verse of all six
+#    volumes and goes stale the moment any verse or translation column changes.
+if git diff --cached --name-only | grep -Eq '^(ot_verses|nt_verses|dc_verses|pgp_verses|jst_verses|bom/verses)/|^(ot|nt|dc|pgp|jst)_english\.js$|^bom/official_verses\.js$'; then
+  node "$ROOT/tools/build_search_index.js" >/dev/null
+  git add "$ROOT/search_index.js"
+  echo "[pre-commit] hub search index rebuilt (verse data changed)"
+fi
+
+# 5) The readers' lazy loader: which verse file holds which chapter, and the
+#    Dual-view English split per verse file (<vol>_verses/manifest.js and
+#    <vol>_english/). Derived from the verse files and <vol>_english.js by
+#    tools/build_verse_manifests.js — stale the moment either changes.
+#    build_heading_manifests.js MUST run after it and is not optional: the
+#    verse builder rewrites manifest.js wholesale and drops the headings[] key,
+#    which is how the reader finds a chapter's summary chunk. Running one
+#    without the other leaves every chapter summary blank.
+#    build_crossref_chunks.js is the THIRD in the same chain and for the same
+#    reason: it adds crossrefs[] to manifest.js, which the verse builder also
+#    wipes. Order is fixed — verses, then headings, then cross-references —
+#    and a manifest missing crossrefs[] makes the reader fall back to a whole
+#    <vol>_crossrefs.js that is no longer shipped, so the markers vanish.
+if git diff --cached --name-only | grep -Eq '^(ot|nt|dc|pgp|jst)_verses/|^(ot|nt|dc|pgp|jst)_english\.js$|^(ot|nt|dc|pgp)_(chapter_headings|chapter_headings_heb|heading_words)\.js$|^(ot|nt|dc|pgp)_crossrefs\.js$|^bom/(crossrefs|bom_inverse_crossrefs|official_verses)\.js$'; then
+  node "$ROOT/tools/build_verse_manifests.js" >/dev/null || exit 1
+  node "$ROOT/tools/build_heading_manifests.js" >/dev/null || exit 1
+  node "$ROOT/tools/build_crossref_chunks.js" >/dev/null || exit 1
+  for v in ot nt dc pgp jst; do git add "$ROOT/${v}_verses/manifest.js" "$ROOT/${v}_english"; done
+  for v in ot nt dc pgp; do git add "$ROOT/${v}_headings" "$ROOT/${v}_crossrefs"; done
+  git add "$ROOT/bom/crossrefs" "$ROOT/bom/inverse_crossrefs" "$ROOT/bom/english"
+  node "$ROOT/tools/check_bom_hebrew_lock.js" >/dev/null || exit 1   # the BOM chunks touch nothing Hebrew; prove it
+  echo "[pre-commit] verse manifests + English chunks + heading chunks + cross-reference chunks rebuilt"
+fi

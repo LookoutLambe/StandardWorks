@@ -72,29 +72,53 @@ GEM = {u'א':1,u'ב':2,u'ג':3,u'ד':4,u'ה':5,u'ו':6,u'ז':7,u'ח':8,u'ט':9,u
        u'ר':200,u'ש':300,u'ת':400,u'ך':20,u'ם':40,u'ן':50,u'ף':80,u'ץ':90}
 def gem(s): return sum(GEM.get(c, 0) for c in s)
 
+def array_bodies(src, name_re):
+    """[(name, body)] for each `var <name> = [ ... ];`, found by MATCHING THE
+       BRACKET rather than by looking for a newline before it.
+
+       Anchoring on "\n];" is the obvious thing and it is wrong: Ether 14
+       closes on the same line as its last verse — ...["\u05c3",""]]},]; — so a
+       non-greedy match ran straight past it and swallowed Ether 15 whole. The
+       book then reported 65 verses in chapter 14 and none in 15, which looked
+       exactly like a data fault and was not: the file is valid JavaScript and
+       always was. Depth counting is string-aware because a gloss may itself
+       contain a bracket."""
+    out = []
+    for m in re.finditer(name_re, src):
+        i = src.index('[', m.end() - 1)
+        depth, j, in_str = 0, i, False
+        while j < len(src):
+            c = src[j]
+            if in_str:
+                if c == '\\': j += 2; continue
+                if c == '"': in_str = False
+            elif c == '"': in_str = True
+            elif c == '[': depth += 1
+            elif c == ']':
+                depth -= 1
+                if depth == 0: break
+            j += 1
+        out.append((m, src[i + 1:j]))
+    return out
+
+
 def corpus(root, file, prefix):
     """{(chapter, position): (english_ref, tokens)} for one book.
 
-       THE KEY IS THE POSITION AND THE ENGLISH IS THE NUMERAL, and they are
-       not always the same thing. reader_surface.js builds data-verse-key from
-       the ARRAY POSITION, so a break table has to be keyed that way to be
-       found at all. But two chapters do not line up: Mosiah 9 opens with a
-       ∗ colophon entry that is not verse 1, and Ether 14's array holds 65
-       entries because chapter 15 was appended to it — its numerals restart at
-       א halfway through. Pairing English by position there put the whole of
-       Mosiah 9 one verse out and gave Ether 15 the words of Ether 14. The
-       verse's own num field says which verse it really is, so the key comes
-       from the position and the English lookup comes from the numeral."""
+       THE KEY IS THE POSITION AND THE ENGLISH IS THE NUMERAL. reader_surface.js
+       builds data-verse-key from the ARRAY POSITION, so a break table has to be
+       keyed that way to be found at all. They are not always the same number:
+       Mosiah 9 opens with a ∗ entry, which is the superscription the printed
+       book has there — "The Record of Zeniff" — and not verse 1. It carries no
+       numeral, so it gets no English and no breaks from one."""
     src = io.open(os.path.join(root,'bom/verses',file+'.js'), encoding='utf-8').read()
     out = {}
-    for m in re.finditer(r'var %sch(\d+)Verses\s*=\s*\[(.*?)\n\];' % re.escape(prefix), src, re.S):
-        ch, ech, seen = int(m.group(1)), int(m.group(1)), 0
+    for m, body in array_bodies(src, r'var %sch(\d+)Verses\s*=\s*\[' % re.escape(prefix)):
+        ch = int(m.group(1))
         for vi, vm in enumerate(re.finditer(
-                r'\{\s*num:\s*"([^"]*)"\s*,\s*words:\s*\[(.*?)\]\s*\}', m.group(2), re.S)):
+                r'\{\s*num:\s*"([^"]*)"\s*,\s*words:\s*\[(.*?)\]\s*\}', body, re.S)):
             g = gem(vm.group(1))
-            if g == 1 and seen: ech += 1          # the array runs on into the next chapter
-            if g: seen = 1
-            ref = (ech, g) if g else None         # no numeral: a colophon, no English
+            ref = (ch, g) if g else None          # no numeral: a colophon
             out[(ch, vi+1)] = (ref, re.findall(r'\["([^"]*)","([^"]*)"\]', vm.group(2)))
     return out
 

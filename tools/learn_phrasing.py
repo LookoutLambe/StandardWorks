@@ -72,10 +72,10 @@ def corpus_with_glosses(prefix):
         return []
     src = open(path, encoding='utf-8').read()
     out = []
-    for m in re.finditer(r'var _?%s_ch(\d+)Verses\s*=\s*\[(.*?)\n\];' % prefix, src, re.S):
+    for m, body in array_bodies(src, r'var _?%s_ch(\d+)Verses\s*=\s*\[' % prefix):
         ch = int(m.group(1))
         for vi, vm in enumerate(re.finditer(
-                r'\{\s*num:\s*"[^"]*"\s*,\s*words:\s*\[(.*?)\]\s*\}', m.group(2), re.S)):
+                r'\{\s*num:\s*"[^"]*"\s*,\s*words:\s*\[(.*?)\]\s*\}', body, re.S)):
             toks = [(B.N(h), g) for h, g in
                     re.findall(r'\["([^"]*)","([^"]*)"\]', vm.group(1)) if B.CMP(h)]
             if toks:
@@ -87,7 +87,7 @@ def corpus_with_glosses(prefix):
 # The feature contract lives in build_bom_breaks.py, which is the file that
 # has to reproduce it exactly. Training and applying must never drift apart.
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from build_bom_breaks import feats
+from build_bom_breaks import feats, array_bodies
 
 
 def train(rows):

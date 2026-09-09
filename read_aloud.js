@@ -152,29 +152,55 @@
   var POINTS = /[\u0591-\u05BD\u05BF-\u05C7]/g;   /* NOT U+05BE, the maqqef */
 
   /* SAY IT LIKE THIS. An override table for words the voice gets wrong even
-     when the spelling is unambiguous to a reader — the same idea as the Name,
-     applied per word rather than to the whole token. כׇּל came out "cli": the
-     qamats qatan is the one point that cannot be inferred from the letters,
-     and it is evidently not enough for her either. כול is the everyday ktiv
-     male, and it cannot be read as anything but "kol". */
-  var SAY_AS = { '\u05DB\u05C7\u05BC\u05DC': '\u05DB\u05D5\u05DC',   /* כׇּל -> כול */
-                 '\u05DB\u05B8\u05BC\u05DC': '\u05DB\u05D5\u05DC' }; /* כָּל -> כול */
+     where the spelling is unambiguous to a reader — the Name's mechanism
+     applied per word. כׇּל came out "cli": the qamats qatan is the one point
+     that cannot be inferred from the letters, and it is evidently not enough
+     for her either. כול is the everyday ktiv male and cannot be read as
+     anything else. */
+  var SAY_AS = { '\u05DB\u05C7\u05BC\u05DC': '\u05DB\u05D5\u05DC',   /* כׇּל  -> כול */
+                 '\u05DB\u05B8\u05BC\u05DC': '\u05DB\u05D5\u05DC' }; /* כָּל  -> כול */
+
+  var YAV = /\u05B8\u05D9\u05D5$/;
+  var POINTS = /[\u0591-\u05BD\u05BF-\u05C7]/g;   /* NOT U+05BE, the maqqef */
+
+  /* UNPOINTING IS NOT JUST DELETING THE POINTS. Modern Hebrew spells without
+     them, and it pays for that by writing some vowels as letters — ktiv male.
+     Take the points off אֱלֹהָיו and you get אלהיו, which is not how anyone
+     writes "his God"; the word is אלוהיו, and the vav is carrying the holam
+     that was on the ל. Carmit reads what is written, so the vav has to be put
+     back or she has no vowel to read.
+        holam on a consonant   ֹ      -> that consonant + ו   (אלהיו -> אלוהיו)
+        holam haser for vav    ֺ      -> doubled vav          (מצותיו -> מצוותיו)
+        qibbuts                ֻ      -> that consonant + ו
+     A holam already sitting on a vav (וֹ, the holam male) and a shuruk (וּ)
+     have their letter written, so they only lose the point. */
+  var KTIV = [
+    [/\u05D5\u05BA/g, '\u05D5\u05D5'],                    /* ֺ on vav: double it */
+    [/([\u05D0-\u05EA])\u05B9(?!\u05D5)/g, '$1\u05D5'],   /* holam haser  */
+    [/([\u05D0-\u05EA])\u05BB/g, '$1\u05D5']              /* qibbuts      */
+  ];
+  function ktivMale(w) {
+    var s = w;
+    for (var i = 0; i < KTIV.length; i++) s = s.replace(KTIV[i][0], KTIV[i][1]);
+    return s.replace(POINTS, '');
+  }
 
   /** the form to SPEAK for a word — never the form to show */
   function spoken(heb) {
     var s = heb;
     for (var i = 0; i < SUBST.length; i++) s = s.replace(SUBST[i][0], SUBST[i][1]);
-    /* WORD BY WORD, NOT TOKEN BY TOKEN. כׇּל־יָמָיו is one token and two words,
-       and they need different treatment: the first is looked up, the second
-       is unpointed. Unpointing the pair together took the qamats qatan off
-       כׇּל and lost "kol" altogether.
-       The maqqef becomes a SPACE for the voice. It joins two words that are
+    /* WORD BY WORD, NOT TOKEN BY TOKEN. כׇּל־יָמָיו is one token and two words
+       needing different treatment: the first is looked up, the second goes to
+       ktiv male. Unpointing the pair together took the qamats qatan off כׇּל
+       and lost "kol" altogether.
+       The maqqef becomes a SPACE for the voice: it joins two words that are
        still pronounced as two, and a hyphen inside a word is one more thing
-       for the synthesiser to get wrong. */
+       for a synthesiser to get wrong. */
+    s = s.replace(/[\[\]()]/g, '');      /* a qere's brackets are not said */
     var parts = s.split('\u05BE');
     for (var k = 0; k < parts.length; k++) {
       if (SAY_AS[parts[k]]) parts[k] = SAY_AS[parts[k]];
-      else if (YAV.test(parts[k])) parts[k] = parts[k].replace(POINTS, '');
+      else if (YAV.test(parts[k])) parts[k] = ktivMale(parts[k]);
     }
     return parts.join(' ');
   }
@@ -193,8 +219,28 @@
     return false;
   }
 
-  /** true for punctuation-only tokens (sof pasuq, paseq) — nothing to say */
-  function silent(heb) { return !/[א-ת]/.test(heb || ''); }
+  /* THE KETIV IS NOT READ. WHERE THE MASORETES FOUND THE WRITTEN TEXT AND THE
+     READ TEXT DIVERGING they preserved both: the ketiv, what the consonants
+     say, and the qere, what the reader says instead. This corpus keeps the
+     pair, and marks them the way a printed Tanakh does — the ketiv in
+     parentheses and UNPOINTED, because there is no way to say it; the qere in
+     brackets, with the vowels on it. 713 and 850 of them.
+
+     So a voice must skip every parenthesised ketiv, or it says each of those
+     verses twice over. Both conditions are needed: the parentheses AND the
+     absence of pointing. A parenthetical that IS pointed is ordinary text —
+     the Book of Mormon has asides like "(לְמַעַן ... בָּם)" — and is read.
+
+     THE SAME TEST IS IN tools/build_phrase_breaks.py, because the break
+     positions count speakable words: if one side skips a word and the other
+     does not, every break after it in that verse lands one word out. */
+  var KETIV = /^\(.*\)$/;
+  function ketiv(heb) {
+    return KETIV.test(heb || '') && !/[\u05B0-\u05BB\u05BD\u05BF\u05C1\u05C2\u05C7]/.test(heb);
+  }
+
+  /** true for anything with nothing to say: punctuation, and the ketiv */
+  function silent(heb) { return !/[א-ת]/.test(heb || '') || ketiv(heb); }
 
   /**
    * Group a verse's word-units into clauses.
