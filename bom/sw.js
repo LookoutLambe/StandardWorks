@@ -12,6 +12,7 @@ const ASSETS = [
   '../xref_study_panel.css?v=14',
   '../reader.css?v=109',
   '../xref_study_panel.js?v=6',
+  '../read_aloud.js?v=1',
   /* official_verses.js (1,852 KB) is split per book into english/<book>.js
      by tools/build_crossref_chunks.js and arrives with the book. */
   './scripture_verses.js',
