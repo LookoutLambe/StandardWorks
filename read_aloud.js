@@ -157,12 +157,6 @@
   var QATAN = /[\u05C7\u05B3]/g;
   var POINTS = /[\u0591-\u05BD\u05BF-\u05C7]/g;   /* NOT U+05BE, the maqqef */
 
-  /* SAY IT LIKE THIS. An override table for words the voice gets wrong even
-     where the spelling is unambiguous to a reader — the Name's mechanism
-     applied per word. כׇּל came out "cli": the qamats qatan is the one point
-     that cannot be inferred from the letters, and it is evidently not enough
-     for her either. כול is the everyday ktiv male and cannot be read as
-     anything else. */
   /* SAY IT LIKE THIS — and only where the pointing has been PROVED to fail.
      THE POINTING IS THE INFORMATION. It is what says the qamats on צִוִּיתִיךָ
      is an /a/, so the word ends "-kha" and not "-k". An override throws all of
@@ -180,16 +174,6 @@
     '\u05DB\u05C7\u05BC\u05DC': '\u05DB\u05D5\u05DC',   /* כׇּל -> כול */
     '\u05DB\u05B8\u05BC\u05DC': '\u05DB\u05D5\u05DC'    /* כָּל -> כול */
   };
-
-
-  var YAV = /\u05B8\u05D9\u05D5$/;
-  /* BOTH OF THE /o/ SIGNS SHE DOES NOT KNOW. U+05C7 is the explicit qamats
-     qatan and U+05B3 is the hataf qamats — חֳדָשִׁים, עֳנִי, מׇרְדֳּכַי — and
-     both are an /o/ that she reads as an /a/. Transcribed: רַב־עֳנִי comes
-     back "rav ani", and with a holam on it "rav oni". 14,118 words carry the
-     first and 1,013 the second. A holam is the same sound and she reads it. */
-  var QATAN = /[\u05C7\u05B3]/g;
-  var POINTS = /[\u0591-\u05BD\u05BF-\u05C7]/g;   /* NOT U+05BE, the maqqef */
 
   /* UNPOINTING IS NOT JUST DELETING THE POINTS. Modern Hebrew spells without
      them, and it pays for that by writing some vowels as letters — ktiv male.
