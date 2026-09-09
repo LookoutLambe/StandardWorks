@@ -56,6 +56,26 @@
      list. The Old Testament's te'amim entries are all full stops and the
      rules produce nothing else, so only the weighted entries use this. */
   var COMMA_GAP = 240;
+
+  /* SPEECH THAT DOES NOT MOVE IS NOT SPEECH. Every phrase was going out at the
+     same pitch and the same rate, which is what "monotone" means literally —
+     the reader was correct and it was not a matter of taste.
+     Web Speech gives pitch and rate PER UTTERANCE and nothing finer, and this
+     reader already speaks one phrase per utterance, so the contour can be
+     drawn phrase by phrase, which is the level a sentence's intonation lives
+     at anyway:
+       DECLINATION  a sentence drifts downward as it goes — each phrase a
+                    little lower than the one before, which is what makes a
+                    long verse sound like one sentence and not a list
+       CONTINUATION a phrase that ends on a comma stays UP, because the
+                    sentence is not finished and the voice says so
+       FINALITY     the last phrase of a sentence drops and slows, which is
+                    the strongest cue in speech that a thought has landed */
+  var PITCH_TOP  = 1.06;   /* where a sentence starts */
+  var PITCH_STEP = 0.03;   /* how far it falls per phrase */
+  var PITCH_MIN  = 0.94;   /* ... and no further, mid-sentence */
+  var PITCH_END  = 0.88;   /* the drop on the phrase that ends it */
+  var RATE_END   = 0.92;   /* final lengthening, as a factor of the rate */
   var MAX_PHRASE = 9;       // words: the cap is a last resort, not routine
   /* A BREATH GROUP HAS A FLOOR. Biblical narrative is one long chain of
      wayyiqtols — "and he came, and he saw, and he heard" — so breaking at
@@ -400,6 +420,7 @@
         if (at >= from && at < speakable.length - 1) {
           cur = speakable.slice(from, at + 1);
           cur.gap = w === 1 ? COMMA_GAP : PHRASE_GAP;
+          cur.stop = (w !== 1);
           out.push(cur);
           from = at + 1;
         }
@@ -419,7 +440,9 @@
         cur.push(el);
         /* the gloss carries the English punctuation; a comma there is a real
            boundary the connectives would otherwise miss */
-        if (/[,;:—]\s*$/.test(gloss) && cur.length >= MIN_PHRASE) { out.push(cur); cur = []; }
+        if (/[,;:—]\s*$/.test(gloss) && cur.length >= MIN_PHRASE) {
+          cur.stop = /[;:.]\s*$/.test(gloss); out.push(cur); cur = [];
+        }
       });
       if (cur.length) out.push(cur);
     }
@@ -446,7 +469,9 @@
       if (best < 0) { split.push(p); return; }
       var head = p.slice(0, best), tail = p.slice(best);
       head.gap = COMMA_GAP;              /* a cap is a breath, not a stop */
+      head.stop = false;
       tail.gap = p.gap;
+      tail.stop = p.stop;
       split.push(head, tail);
     });
     return split;
@@ -642,7 +667,7 @@
   }
 
   /** speak one clause, highlighting each word as the engine reaches it */
-  function speakPhrase(els, token) {
+  function speakPhrase(els, token, pitch, rate) {
     return new Promise(function (resolve) {
       var text = '', spans = [];
       els.forEach(function (el, i) {
@@ -657,7 +682,8 @@
       var v = hebrewVoice();
       if (v) u.voice = v;
       u.lang = 'he-IL';
-      u.rate = RATE;
+      u.rate = RATE * (rate || 1);
+      u.pitch = pitch || 1;
 
       u.onboundary = function (e) {
         if (token !== state.token) return;
@@ -727,11 +753,17 @@
       if (vi >= verses.length) { advance(panel, token); return; }
       var groups = phrases(wordsOf(verses[vi]),
                            verses[vi].getAttribute('data-verse-key'));
+      var inSentence = 0;                 /* how far into the current sentence */
       (function step(pi) {
         if (token !== state.token) return;
         if (pi >= groups.length) { next(vi + 1); return; }
         if (groups[pi].length) keepInView(groups[pi][0]);
-        speakPhrase(groups[pi], token).then(function () {
+        var last = (pi === groups.length - 1) || groups[pi].stop;
+        var pitch = Math.max(PITCH_MIN, PITCH_TOP - PITCH_STEP * inSentence);
+        var rate = 1;
+        if (last) { pitch = PITCH_END; rate = RATE_END; inSentence = 0; }
+        else inSentence++;
+        speakPhrase(groups[pi], token, pitch, rate).then(function () {
           if (token !== state.token) return;
           gap(groups[pi].gap || PHRASE_GAP, token).then(function () { step(pi + 1); });
         });
