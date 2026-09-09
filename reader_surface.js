@@ -2426,8 +2426,18 @@ function applyStressMarks(root) {
     var w = (wu && wu.getAttribute('data-h')) || '';
     if (!w) continue;
     w = w.normalize ? w.normalize('NFC') : w;
-    /* No points on screen means no vowel to mark. */
-    if (hw.textContent.indexOf('ְ') < 0 && !/[ֱ-ׇֻ]/.test(hw.textContent)) continue;
+    /* No points on screen means no vowel to mark — the reader can turn the
+       nikkud off, and an unpointed word has no vowel to put an accent over.
+       ASK _swVowelSlots, which is the one definition of what a vowel is here.
+       This used to be its own character class and the class ran U+05B0-U+05BB
+       plus the qamats qatan, which leaves out U+05BC — THE SHURUK, a vowel
+       written as a dagesh inside a vav, and the very case _swVowelSlots goes
+       out of its way to catch twenty lines above. So a word whose vowels are
+       all shuruks looked vowel-less and was skipped: הוּא, סוּף, and שׁוּבוּ,
+       whose stress the table knows perfectly well is on the first. 114 words
+       of the 6,984 in this chapter alone. Two definitions of one thing, and
+       the copy was subtly narrower than the original. */
+    if (!_swVowelSlots(hw.textContent).length) continue;
     var slots = _swVowelSlots(w);
     if (!slots.length) continue;
     var k = table[w];
