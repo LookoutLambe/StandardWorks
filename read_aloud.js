@@ -125,19 +125,39 @@
      on this list. */
   var BINDS = /\b(of|in|to|unto|with|from|upon|on|all|the|a|under|over|before|after|against|among|between|into|through|beneath|above|beside|toward|towards|about|and)$/i;
 
-  /* THE SPOKEN FORM, WHICH IS NOT THE WRITTEN ONE. Both of these are cases
+  /* THE SPOKEN FORM, WHICH IS NOT THE WRITTEN ONE. Every rule here is a case
      where reading the letters as they stand produces something no Hebrew
-     speaker says, and in both the display is left exactly as it is. */
+     speaker says, and in every one the DISPLAY IS LEFT EXACTLY AS IT IS. */
   var SUBST = [
     [/יְהוָה/g, 'אֲדֹנָי'],     /* the Name: pointed for Adonai, so say Adonai */
-    [/יְהוִה/g, 'אֱלֹהִים'],    /* ... and for Elohim where it is pointed so   */
-    /* ־ָיו, the third-masculine-plural suffix, is said "-av": elav, alav,
-       lefanav, banav. The yod is not sounded, and Carmit reads the letters —
-       בָּנָיו comes out "banaiyu". Dropping the yod leaves qamats + vav, which
-       is the ordinary spelling of that sound (עַכְשָׁו akhshav, קָו kav). 6,183
-       words carry it across the six volumes. */
-    [/\u05B8\u05D9\u05D5(?=$|\u05BE|\s)/g, '\u05B8\u05D5']
+    [/יְהוִה/g, 'אֱלֹהִים']     /* ... and for Elohim where it is pointed so   */
   ];
+
+  /* ־ָיו IS SAID "-av": elav, alav, lefanav, banav, kol-yamav. The yod is not
+     sounded and the vav is a consonant, and Carmit gets both wrong from the
+     pointed spelling — בָּנָיו came out "banaiyu", and dropping the yod alone
+     only moved it to "banau", because קָו-shaped qamats+vav reads to her as a
+     vowel.
+
+     So the substitution is the one the Name already uses: give her a DIFFERENT
+     WORD to say, not a patched spelling. These are ordinary modern Hebrew
+     words — אליו, עליו, לפניו, אחריו, ימיו, בניו, דבריו — and unpointed is the
+     form she has them in, so the points come off the whole word and she reads
+     it as the word it is. The maqqef stays, because כׇּל־יָמָיו is one word.
+
+     Scoped to words that actually carry the suffix. Stripping the pointing off
+     the corpus at large would be a different and much worse idea: the pointing
+     is what tells הִנֵּה "behold" from הֵנָּה "hither". */
+  var YAV = /\u05B8\u05D9\u05D5(?=$|\u05BE|\s)/;
+  var POINTS = /[\u0591-\u05BD\u05BF-\u05C7]/g;   /* NOT U+05BE, the maqqef */
+
+  /** the form to SPEAK for a word — never the form to show */
+  function spoken(heb) {
+    var s = heb;
+    for (var i = 0; i < SUBST.length; i++) s = s.replace(SUBST[i][0], SUBST[i][1]);
+    if (YAV.test(s)) s = s.replace(POINTS, '');
+    return s;
+  }
 
   /** does this word open a clause? (measured — see the table above) */
   function opensClause(heb) {
@@ -151,13 +171,6 @@
   function bindsBack(heb) {
     for (var i = 0; i < BINDS_HEB.length; i++) if (BINDS_HEB[i].test(heb)) return true;
     return false;
-  }
-
-  /** the form to SPEAK for a word — never the form to show */
-  function spoken(heb) {
-    var s = heb;
-    for (var i = 0; i < SUBST.length; i++) s = s.replace(SUBST[i][0], SUBST[i][1]);
-    return s;
   }
 
   /** true for punctuation-only tokens (sof pasuq, paseq) — nothing to say */
