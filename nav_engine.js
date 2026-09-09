@@ -730,13 +730,19 @@
       (man.english || []).forEach(function(f) { list.push(vk + '_english/' + f); });
       return list;
     }
-    if (vk === 'bom') return ['bom/bom.html'].concat(READ_ALOUD_ASSETS(vk)).concat([
-      'bom/official_verses.js','bom/crossrefs.js','bom/roots_glossary.js','bom/chapter_headings.js','bom/chapter_headings_heb.js',
-      'bom/scripture_verses.js','bom/topical_guide.js',
-      'bom/verses/frontmatter.js','bom/verses/1nephi.js','bom/verses/book_colophons.js','bom/verses/2nephi.js','bom/verses/jacob.js','bom/verses/enos.js','bom/verses/jarom.js',
-      'bom/verses/omni.js','bom/verses/words_of_mormon.js','bom/verses/mosiah.js','bom/verses/alma.js','bom/verses/helaman.js','bom/verses/3nephi.js',
-      'bom/verses/4nephi.js','bom/verses/mormon.js','bom/verses/ether.js','bom/verses/moroni.js'
-    ]);
+    /* The Book of Mormon's set comes from bom_book_loader.js's own BOOK_RULES
+       (bomOfflineAssets), for the same reason the five above come from the
+       manifest: a hand-typed copy goes stale, and this one had — asking for
+       official_verses.js and crossrefs.js, which nothing fetches any more,
+       while missing every per-book English and cross-reference chunk that
+       replaced them. */
+    if (vk === 'bom') {
+      var books = (typeof window.bomOfflineAssets === 'function') ? window.bomOfflineAssets() : [];
+      return ['bom/bom.html'].concat(READ_ALOUD_ASSETS(vk)).concat([
+        'bom/roots_glossary.js', 'bom/chapter_headings.js', 'bom/chapter_headings_heb.js',
+        'bom/scripture_verses.js', 'bom/topical_guide.js'
+      ]).concat(books);
+    }
     return [];
   }
   function _postToSW(msg) {

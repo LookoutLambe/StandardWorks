@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-09-09T19-54-21';
+const BUILD_ID = '2026-09-09T20-19-45';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -31,16 +31,20 @@ const CORE_ASSETS = [
     '/StandardWorks/icons/icon-192.png',
     '/StandardWorks/icons/icon-512.png',
     '/StandardWorks/icons/icon-maskable.png',
-    '/StandardWorks/site_chrome.css',
-    '/StandardWorks/sw_theme.css',
-    '/StandardWorks/site_chrome.js',
-    '/StandardWorks/nav_engine.js',
-    '/StandardWorks/verse_search.js',
-    '/StandardWorks/nav_engine.css',
-    '/StandardWorks/xref_study_panel.css',
-    '/StandardWorks/reader.css',
-    '/StandardWorks/xref_study_panel.js',
-    '/StandardWorks/read_aloud.js',
+    '/StandardWorks/site_chrome.css?v=72',
+    /* sw_theme.css was precached here and no page links it — checked in the
+       browser, document.styleSheets holds david_libre, nav_engine,
+       site_chrome, xref_study_panel and reader, and nothing else. The tokens
+       it defines (--here, --highlight, --rule) live in reader.css now. The
+       file is left on disk; only the download is removed. */
+    '/StandardWorks/site_chrome.js?v=44',
+    '/StandardWorks/nav_engine.js?v=85',
+    '/StandardWorks/verse_search.js?v=3',
+    '/StandardWorks/nav_engine.css?v=50',
+    '/StandardWorks/xref_study_panel.css?v=14',
+    '/StandardWorks/reader.css?v=111',
+    '/StandardWorks/xref_study_panel.js?v=6',
+    '/StandardWorks/read_aloud.js?v=26',
     /* The five <vol>_phrase_breaks.js tables and imperatives.js were precached
        here — 208 KB gzipped of which one page can use at most 96 — so every
        volume carried the other four volumes' phrasing. They are the same kind

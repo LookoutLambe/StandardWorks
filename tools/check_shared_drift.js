@@ -305,23 +305,32 @@ const SIX = ['bom/bom.html', 'ot.html', 'nt.html', 'dc.html', 'pgp.html', 'jst.h
     const full = path.join(ROOT, page);
     if (!fs.existsSync(full)) continue;
     const src = fs.readFileSync(full, 'utf8');
-    for (const m of src.matchAll(/(?:src|href)=["']([^"']+?\.(?:js|css))\?v=(\d+)["']/g)) {
+    /* A BARE REFERENCE COUNTS AS A VERSION — the empty one. Matching only
+       `?v=N` made a page that asks for the file WITHOUT a version invisible
+       here, and that is the worse case, not the better one: five volume pages
+       loaded xref_study_panel.js bare while bom.html asked for ?v=6, so an
+       edit reached the Book of Mormon at once and the other five whenever
+       their cache happened to expire. This rule was written to catch exactly
+       that and could not see it. */
+    for (const m of src.matchAll(/(?:src|href)=["']([^"']+?\.(?:js|css))(?:\?v=(\d+))?["']/g)) {
       const base = m[1].replace(/^.*\//, '');
+      const ver = m[2] || '';
       if (!asked.has(base)) asked.set(base, new Map());
       const byVer = asked.get(base);
-      if (!byVer.has(m[2])) byVer.set(m[2], []);
-      if (!byVer.get(m[2]).includes(page)) byVer.get(m[2]).push(page);
+      if (!byVer.has(ver)) byVer.set(ver, []);
+      if (!byVer.get(ver).includes(page)) byVer.get(ver).push(page);
     }
   }
   let split = 0;
   for (const [base, byVer] of [...asked].sort()) {
     if (byVer.size < 2) continue;   // one version everywhere, or only one page loads it
     split++;
-    const newest = [...byVer.keys()].sort((a, b) => +b - +a)[0];
+    const label = v => v ? 'v' + v : 'no version at all';
+    const newest = [...byVer.keys()].sort((a, b) => (+b || 0) - (+a || 0))[0];
     const behind = [...byVer].filter(([v]) => v !== newest)
-      .map(([v, pgs]) => 'v' + v + ' — ' + pgs.join(', '));
+      .map(([v, pgs]) => label(v) + ' — ' + pgs.join(', '));
     fail(base + ' is loaded at ' + byVer.size + ' different versions:\n' +
-         '        v' + newest + ' — ' + byVer.get(newest).join(', ') + '   (newest)\n        ' +
+         '        ' + label(newest) + ' — ' + byVer.get(newest).join(', ') + '   (newest)\n        ' +
          behind.join('\n        ') + '\n' +
          '        A shared file is shared. The pages behind it render with a stale\n' +
          '        copy and serve it from cache to returning readers.');
@@ -350,7 +359,11 @@ const SIX = ['bom/bom.html', 'ot.html', 'nt.html', 'dc.html', 'pgp.html', 'jst.h
     if (!fs.existsSync(swPath)) continue;
     const sw = fs.readFileSync(swPath, 'utf8');
     const page = fs.readFileSync(path.join(ROOT, pageFile), 'utf8');
-    const list = (sw.match(/const ASSETS = \[([\s\S]*?)\n\];/) || [])[1] || '';
+    /* CORE_ASSETS, not just ASSETS. This read `const ASSETS` only, so for
+       service-worker.js — whose list is CORE_ASSETS — it matched nothing and
+       the loop below ran zero times. Half of what this rule claimed to check
+       had never been checked. */
+    const list = (sw.match(/const (?:CORE_)?ASSETS = \[([\s\S]*?)\n\s*\];/) || [])[1] || '';
     for (const m of list.matchAll(/'([^']+)'/g)) {
       const entry = m[1];
       /* Only files the page itself names can be checked here. */
@@ -377,6 +390,64 @@ const SIX = ['bom/bom.html', 'ot.html', 'nt.html', 'dc.html', 'pgp.html', 'jst.h
     }
   }
   if (!stale) ok('every service-worker precache entry matches the URL its page requests');
+}
+
+/* ── Nothing is precached that nothing fetches ─────────────────────────────
+   THREE TIMES NOW a monolith has been superseded and left in the list. The
+   four <vol>_crossrefs.js went first, then the four <vol>_heading_words.js,
+   then root_concordance.js, attested_forms.js and bom/scripture_verses.js —
+   4 MB gzipped on 2026-09-09, downloaded at install and thrown away again on
+   every deploy, for files no page had a script tag for. The rule above cannot
+   see any of it: it only compares ?v= strings on entries a page DOES name, so
+   an entry nobody names at all passes it silently.
+
+   Reachable means one of two things, and both are how this app really loads:
+   a <script>/<link> on a page, or a quoted string in a script that fetches it
+   at runtime (root_scorecard's ensure/ensureStrongs, bom_lazy_assets, the
+   book loader). Anything else in the list is dead weight with nothing left in
+   the codebase pointing at it. */
+{
+  const SW_FILES = ['service-worker.js', 'bom/sw.js'];
+  /* Pages and every non-generated script that could name an asset. The verse
+     and gloss data are excluded by size, and they never name assets. */
+  const HTML = ['index.html', 'ot.html', 'nt.html', 'dc.html', 'pgp.html', 'jst.html',
+                'bom/bom.html', 'hebrew-study.html', 'dictionary.html'];
+  const SOURCES = HTML.concat(fs.readdirSync(ROOT)
+      .filter(f => f.endsWith('.js') && !SW_FILES.includes(f) && fs.statSync(path.join(ROOT, f)).size < 600 * 1024))
+    .concat(fs.readdirSync(path.join(ROOT, 'bom'))
+      .filter(f => f.endsWith('.js') && fs.statSync(path.join(ROOT, 'bom', f)).size < 600 * 1024)
+      .map(f => 'bom/' + f));
+  const haystack = SOURCES.map(f => { try { return read(f); } catch (e) { return ''; } }).join('\n');
+
+  const dead = [];
+  for (const swFile of SW_FILES) {
+    const swPath = path.join(ROOT, swFile);
+    if (!fs.existsSync(swPath)) continue;
+    const sw = fs.readFileSync(swPath, 'utf8');
+    const list = (sw.match(/const (?:CORE_)?ASSETS = \[([\s\S]*?)\n\s*\];/) || [])[1] || '';
+    for (const m of list.matchAll(/'([^']+)'/g)) {
+      const entry = m[1].replace(/\?.*$/, '');
+      /* Only scripts and stylesheets. A page is the app's own; icons, fonts,
+         covers and manifests are reached from CSS and metadata this cannot
+         follow, and none of them has ever been the thing left behind. */
+      if (!/\.(js|css)$/.test(entry)) continue;
+      const base = entry.replace(/^.*\//, '');
+      if (base === 'sw_register.js' || base === 'service-worker.js') continue;  // the workers' own plumbing
+      const re = new RegExp('[\'"/]' + base.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '["\'?]');
+      if (!re.test(haystack)) {
+        const sz = (() => { try { return Math.round(fs.statSync(path.join(ROOT, entry.replace(/^\/StandardWorks\//, ''))).size / 1024) + ' KB'; } catch (e) { return 'missing'; } })();
+        dead.push(swFile + ' precaches ' + m[1] + ' (' + sz + ') — no page tags it and no script fetches it');
+      }
+    }
+  }
+  if (dead.length) {
+    fail('the precache is carrying files nothing loads:\n        ' + dead.join('\n        ') +
+         '\n        Every install downloads these, and CACHE_NAME carries the build id,\n' +
+         '        so activate throws them away and the next deploy downloads them again.\n' +
+         '        Delete the entry, or say in a comment what still fetches it.');
+  } else {
+    ok('nothing is precached that nothing fetches');
+  }
 }
 
 /* ── The cross-reference engine has exactly one copy ───────────────────────

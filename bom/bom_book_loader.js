@@ -153,4 +153,33 @@
     }
     loadChain(srcs, function () { if (cb) cb(); });
   };
+
+  /* EVERY FILE THIS VOLUME IS MADE OF, for the offline save — derived from
+     BOOK_RULES, so there is no second list to fall out of step with the first.
+     The five shared readers get this from their generated manifest and their
+     own comment says the set is "never typed out here"; the Book of Mormon had
+     no equivalent, so nav_engine.js carried a hand-typed list instead. It had
+     gone stale in both directions: it still asked for official_verses.js and
+     crossrefs.js, both split per book long ago and fetched by nothing, and it
+     had never gained the per-book chunks that replaced them — so saving the
+     volume downloaded 2.6 MB of dead weight and still left the Dual English
+     and both cross-reference maps missing when the reader went offline.
+
+     frontmatter and book_colophons are verse files with no English or
+     cross-reference chunk of their own, which is why the three chunk
+     directories hold fifteen files and verses/ holds seventeen. */
+  global.bomOfflineAssets = function () {
+    var out = ['bom/verses/book_colophons.js'], seen = {};
+    for (var i = 0; i < BOOK_RULES.length; i++) {
+      var m = BOOK_RULES[i].src.match(/verses\/([^.?]+)\.js/);
+      if (!m || seen[m[1]]) continue;
+      var slug = seen[m[1]] = m[1];
+      out.push('bom/verses/' + slug + '.js');
+      if (slug === 'frontmatter') continue;
+      out.push('bom/english/' + slug + '.js');
+      out.push('bom/crossrefs/' + slug + '.js');
+      out.push('bom/inverse_crossrefs/' + slug + '.js');
+    }
+    return out;
+  };
 })(window);
