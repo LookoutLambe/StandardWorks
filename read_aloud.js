@@ -149,7 +149,12 @@
      the corpus at large would be a different and much worse idea: the pointing
      is what tells הִנֵּה "behold" from הֵנָּה "hither". */
   var YAV = /\u05B8\u05D9\u05D5$/;
-  var QATAN = /\u05C7/g;              /* the explicit qamats qatan */
+  /* BOTH OF THE /o/ SIGNS SHE DOES NOT KNOW. U+05C7 is the explicit qamats
+     qatan and U+05B3 is the hataf qamats — חֳדָשִׁים, עֳנִי, מׇרְדֳּכַי — and
+     both are an /o/ that she reads as an /a/. Transcribed: רַב־עֳנִי comes
+     back "rav ani", and with a holam on it "rav oni". 14,118 words carry the
+     first and 1,013 the second. A holam is the same sound and she reads it. */
+  var QATAN = /[\u05C7\u05B3]/g;
   var POINTS = /[\u0591-\u05BD\u05BF-\u05C7]/g;   /* NOT U+05BE, the maqqef */
 
   /* SAY IT LIKE THIS. An override table for words the voice gets wrong even
@@ -162,7 +167,12 @@
                  '\u05DB\u05B8\u05BC\u05DC': '\u05DB\u05D5\u05DC' }; /* כָּל  -> כול */
 
   var YAV = /\u05B8\u05D9\u05D5$/;
-  var QATAN = /\u05C7/g;              /* the explicit qamats qatan */
+  /* BOTH OF THE /o/ SIGNS SHE DOES NOT KNOW. U+05C7 is the explicit qamats
+     qatan and U+05B3 is the hataf qamats — חֳדָשִׁים, עֳנִי, מׇרְדֳּכַי — and
+     both are an /o/ that she reads as an /a/. Transcribed: רַב־עֳנִי comes
+     back "rav ani", and with a holam on it "rav oni". 14,118 words carry the
+     first and 1,013 the second. A holam is the same sound and she reads it. */
+  var QATAN = /[\u05C7\u05B3]/g;
   var POINTS = /[\u0591-\u05BD\u05BF-\u05C7]/g;   /* NOT U+05BE, the maqqef */
 
   /* UNPOINTING IS NOT JUST DELETING THE POINTS. Modern Hebrew spells without
@@ -304,6 +314,15 @@
          The spelling that produces is the ordinary one — כׇּל becomes כֹּל,
          which is how the Tanakh writes that word anyway. */
       parts[k] = parts[k].replace(QATAN, '\u05B9');
+      /* THE SHEVA IN A WEAK WAYYIQTOL. וַיְהִי is "vay-HI" and she read it
+         "vehi", losing the yod: transcribed as והיא every one of the five
+         times it occurs in 1 Nephi 1. It is not the waw-consecutive itself —
+         וַיֹּאמֶר, where the yod carries a dagesh, comes back right. It is the
+         SHEVA under the yod, which the weak verbs take: וַיְהִי, וַיְדַבֵּר,
+         וַיְצַו, 4,677 words. That sheva is a sheva NA, a real if very short
+         vowel, and writing it as the segol it sounds like is enough — וַיֶּהִי
+         transcribes correctly where וַיְהִי does not. */
+      parts[k] = parts[k].replace(/^\u05D5\u05B7\u05D9\u05B0/, '\u05D5\u05B7\u05D9\u05B6');
       if (YAV.test(parts[k])) { parts[k] = ktivMale(parts[k]); continue; }
       if (endsInV(parts[k])) {
         var bare = parts[k].replace(POINTS, '');
