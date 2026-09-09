@@ -167,24 +167,63 @@
 
   /* UNPOINTING IS NOT JUST DELETING THE POINTS. Modern Hebrew spells without
      them, and it pays for that by writing some vowels as letters — ktiv male.
-     Take the points off אֱלֹהָיו and you get אלהיו, which is not how anyone
-     writes "his God"; the word is אלוהיו, and the vav is carrying the holam
-     that was on the ל. Carmit reads what is written, so the vav has to be put
-     back or she has no vowel to read.
-        holam on a consonant   ֹ      -> that consonant + ו   (אלהיו -> אלוהיו)
-        holam haser for vav    ֺ      -> doubled vav          (מצותיו -> מצוותיו)
-        qibbuts                ֻ      -> that consonant + ו
-     A holam already sitting on a vav (וֹ, the holam male) and a shuruk (וּ)
-     have their letter written, so they only lose the point. */
-  var KTIV = [
-    [/\u05D5\u05BA/g, '\u05D5\u05D5'],                    /* ֺ on vav: double it */
-    [/([\u05D0-\u05EA])\u05B9(?!\u05D5)/g, '$1\u05D5'],   /* holam haser  */
-    [/([\u05D0-\u05EA])\u05BB/g, '$1\u05D5']              /* qibbuts      */
-  ];
+     Take the points off אֱלֹהָיו and you get אלהיו, which is nobody's spelling
+     of "his God": the word is אלוהיו, the vav carrying the holam that was on
+     the ל. Carmit reads what is written, so the letter has to be put back.
+
+     THE WHOLE DIFFICULTY IS THE VAV, because it is three things. It is the
+     consonant /v/; it is the vowel /o/ (holam male, וֹ); and it is the vowel
+     /u/ (shuruk, וּ). Unpointed, ktiv male tells them apart by DOUBLING the
+     consonant — מצווה, not מצוה — and the pointing says which is which:
+
+        the vav is a CONSONANT when the letter before it carries a vowel of
+        its own, because that letter's syllable is already closed
+            מִצְוֹתָיו   צ has a sheva   ->  מצוותיו   mitzvotav
+        the vav is a VOWEL when the letter before it has none, because it is
+        that letter's vowel
+            בְנוֹתָיו    נ has nothing   ->  בנותיו    benotav
+            צְבָאוֹתָיו  א has nothing   ->  צבאותיו   tsivotav
+
+     Doubling every holam-vav gets the first right and the other two wrong —
+     צבאוותיו, בנוותיו. A vav carrying any other vowel is always a consonant;
+     one at the head of a word never doubles (וְאֶחָיו is ואחיו, not וואחיו).
+     A holam or qibbuts on any other letter simply gains its vav. */
+  var LETTER = /[\u05D0-\u05EA]/;
+  var MARK   = /[\u0591-\u05C7]/;
+  var VOWEL  = /[\u05B0-\u05BB\u05C7]/;      /* sheva through qibbuts, and qatan */
+  var HOLAM  = /[\u05B9\u05BA]/;
+  var DAGESH = '\u05BC';
+
+  function units(w) {                      /* a letter and the marks upon it */
+    var out = [], i = 0;
+    while (i < w.length) {
+      if (!LETTER.test(w[i])) { i++; continue; }
+      var j = i + 1;
+      while (j < w.length && MARK.test(w[j])) j++;
+      out.push([w[i], w.slice(i + 1, j)]);
+      i = j;
+    }
+    return out;
+  }
+
   function ktivMale(w) {
-    var s = w;
-    for (var i = 0; i < KTIV.length; i++) s = s.replace(KTIV[i][0], KTIV[i][1]);
-    return s.replace(POINTS, '');
+    var u = units(w), out = '';
+    for (var i = 0; i < u.length; i++) {
+      var ch = u[i][0], m = u[i][1];
+      var prevVowel = i > 0 && VOWEL.test(u[i - 1][1]);
+      if (ch === '\u05D5') {                                   /* a vav */
+        if (i === 0) out += ch;                               /* וְ, וּ: never doubles */
+        else if (m.indexOf('\u05BA') >= 0) out += '\u05D5\u05D5';  /* always consonantal */
+        else if (HOLAM.test(m) || m === DAGESH || m === '')
+          out += prevVowel ? '\u05D5\u05D5' : '\u05D5';        /* vowel, or consonant + it */
+        else out += '\u05D5\u05D5';                            /* any other vowel: /v/ */
+      } else if (HOLAM.test(m) || m.indexOf('\u05BB') >= 0) {
+        out += ch + '\u05D5';                                  /* holam or qibbuts gains a vav */
+      } else {
+        out += ch;
+      }
+    }
+    return out;
   }
 
   /** the form to SPEAK for a word — never the form to show */
@@ -419,7 +458,33 @@
   function mark(el) {
     if (state.mark && state.mark !== el) state.mark.classList.remove('ra-speaking');
     state.mark = el || null;
-    if (el) el.classList.add('ra-speaking');
+    if (el) { el.classList.add('ra-speaking'); keepInView(el); }
+  }
+
+  /* FOLLOW THE WORD, NOT THE VERSE. This scrolled once per verse, to the
+     verse's first word, which is fine for a two-line verse and useless for
+     Alma: the reading walks down off the bottom of the screen and the page
+     sits still until the next verse begins, then jumps. What the reader sees
+     is a page that waits and then catches up, rather than one that follows.
+
+     So the marked word is kept inside a band in the middle of the viewport,
+     and the page moves only when it leaves — scrolling on every word would
+     be a page that never stops moving, and the band is what makes it stop.
+     The band is high of centre because the reading always travels downward:
+     landing a word at the middle buys twice as much room ahead as behind.
+
+     Two things hold it back. The reader's own gesture wins for four seconds,
+     as before. And one scroll is allowed every 600ms, because a smooth scroll
+     that is interrupted and restarted several times a second never arrives. */
+  var lastScrolled = 0;
+  function keepInView(el) {
+    if (Date.now() - state.touched < 4000) return;     /* their hands, not ours */
+    if (Date.now() - lastScrolled < 600) return;
+    var h = window.innerHeight || document.documentElement.clientHeight;
+    var r = el.getBoundingClientRect();
+    if (r.top >= h * 0.22 && r.bottom <= h * 0.62) return;      /* still in the band */
+    lastScrolled = Date.now();
+    el.scrollIntoView({ block: 'center', behavior: 'smooth' });
   }
   function clearMarks() {
     mark(null);
@@ -559,13 +624,11 @@
       (function step(pi) {
         if (token !== state.token) return;
         if (pi >= groups.length) { next(vi + 1); return; }
-        /* Follow the voice — but yield to a reader who is moving the page
-           themselves. Their own gesture wins for a few seconds, and only a
-           gesture counts: listening for 'scroll' would catch this very call
-           and switch the following off permanently. */
-        if (pi === 0 && groups[0].length && Date.now() - state.touched > 4000) {
-          groups[0][0].scrollIntoView({ block: 'center', behavior: 'smooth' });
-        }
+        /* A floor under the following, for an engine that never fires
+           onboundary: at worst the page still moves once per clause. The band
+           check inside means this does nothing when the word is already
+           where it should be. */
+        if (groups[pi].length) keepInView(groups[pi][0]);
         speakPhrase(groups[pi], token).then(function () {
           if (token !== state.token) return;
           gap(groups[pi].gap || PHRASE_GAP, token).then(function () { step(pi + 1); });
