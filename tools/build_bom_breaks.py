@@ -313,6 +313,24 @@ MIN_PHRASE = 2      # a phrase of one word must earn it (a connective does)
 LONG = 8            # words: past this a clause wants a breath in it
 SPLIT_MIN = 0.4     # ... and the model must be surer than even money to add one
 VETO = -4.0         # ... and this sure before it overrules the printed English
+MT_BREAK = 0.75     # the Masoretes break in front of this word at least this often
+MT_BIND  = 0.06     # ... or so rarely that a break in front of it is a mistake
+
+_MT = [None]
+def mt_before():
+    """How often the Tanakh puts a break in FRONT of a given word.
+
+       THE VOCABULARY IS SHARED EVEN WHERE THE SENTENCES ARE NOT (translator's
+       observation): this volume is built from the words of the MT and the NT.
+       Measured, only 9.7% of its adjacent word PAIRS occur in the Tanakh — it
+       is its own text and its word order is its own — but the FOLLOWING WORD
+       is attested for 63.9% of positions, and that is exactly the half of the
+       question the accents can answer."""
+    if _MT[0] is None:
+        f = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'mt_break_before.json')
+        try: _MT[0] = json.load(io.open(f, encoding='utf-8'))
+        except Exception: _MT[0] = {}
+    return _MT[0]
 
 def eng_words(text):
     """[(word, punct_class)] — 0 none, 1 comma, 2 full stop."""
@@ -422,7 +440,29 @@ def breaks_for(tokens, entext):
                             q = t; break
             put(q, cls, eng=True)
 
-    # 4. THE WORDS THAT ALWAYS TAKE A PAUSE AFTER THEM.
+    # 4. AND THE MASORETES ON THE WORD THAT FOLLOWS.
+    #
+    #    The English marks the ends of its own clauses and knows nothing of
+    #    Hebrew's. כִּי opens one 89% of the time in the Tanakh, over 1,811
+    #    occasions, and the English comma is simply not there — so this table
+    #    was missing the break in front of it in 1,696 places. read_aloud.js's
+    #    rules knew about כִּי; the table replaced the rules and lost it.
+    #    The same for כַּאֲשֶׁר (84%), לְמַעַן (84%), וְגַם (95%), לְבִלְתִּי (92%).
+    #
+    #    And the reverse, which matters as much: the Tanakh almost never
+    #    breaks in front of נְאֻם־יְהוָה (3% of 223) or יְהוָה (4% of 4,377) or
+    #    הַמֶּלֶךְ (2% of 711), and a break there cuts a name off what it
+    #    belongs to. Where the accents are that emphatic they overrule.
+    mt = mt_before()
+    for i in range(n - 1):
+        r = mt.get(bare(speak[i + 1][0]))
+        if not r: continue
+        rate = r[0] / float(r[1])
+        if rate >= MT_BREAK: put(i, 1)
+        elif rate <= MT_BIND and i in marks and i not in from_english: marks.pop(i)
+        elif rate <= MT_BIND and i in marks: marks.pop(i)
+
+    # 5. THE WORDS THAT ALWAYS TAKE A PAUSE AFTER THEM.
     for i, (h, g) in enumerate(speak):
         if nfc(h) in ALWAYS_AFTER: put(i, 1)
 

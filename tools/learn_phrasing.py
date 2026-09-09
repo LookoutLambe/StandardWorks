@@ -87,7 +87,7 @@ def corpus_with_glosses(prefix):
 # The feature contract lives in build_bom_breaks.py, which is the file that
 # has to reproduce it exactly. Training and applying must never drift apart.
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from build_bom_breaks import feats, array_bodies
+from build_bom_breaks import feats, array_bodies, bare
 
 
 def train(rows):
@@ -113,7 +113,48 @@ def scoreof(prior, w, f):
     return prior + sum(w.get(k, 0.0) for k in f)
 
 
+def break_before_table():
+    """{word: [breaks, total]} — how often the Masoretes put a break in FRONT
+       of this word. THE VOCABULARY IS SHARED EVEN WHERE THE SENTENCES ARE NOT.
+       Only 9.7% of the Book of Mormon's adjacent word PAIRS occur in the
+       Tanakh — it is a different text and its word order is its own — but the
+       following WORD is attested for 63.9% of positions, and that is the half
+       of the question the accents can answer."""
+    names = english_names()
+    uni = {}
+    for prefix, wlcbook in B.BOOKS:
+        if prefix not in names: continue
+        ref = {}
+        for osis, marked in B.wlc_verses(wlcbook):
+            p = osis.split('.')
+            if len(p) == 3: ref[(int(p[1]), int(p[2]))] = marked
+        for ch, v, toks in corpus_with_glosses(prefix):
+            m = ref.get((ch, v))
+            if not m: continue
+            got = B.align([t[0] for t in toks], m)
+            if got is None: continue
+            brk = set(got)
+            for i in range(len(toks) - 1):
+                w = bare(toks[i + 1][0])
+                r = uni.setdefault(w, [0, 0])
+                r[0] += 1 if i in brk else 0
+                r[1] += 1
+    return dict((w, r) for w, r in uni.items() if r[1] >= 25)
+
+
+def english_names():
+    return B.english_names()
+
+
 def main():
+    tbl = break_before_table()
+    path = os.path.join(ROOT, 'tools', 'mt_break_before.json')
+    json.dump(tbl, open(path, 'w'), ensure_ascii=False)
+    strong = sum(1 for r in tbl.values() if r[0] / float(r[1]) >= 0.75)
+    weak = sum(1 for r in tbl.values() if r[0] / float(r[1]) <= 0.06)
+    print('break-before table: %s words seen 25+ times   %d almost always, %d almost never'
+          % (format(len(tbl), ','), strong, weak))
+
     rows = training_pairs()
     if not rows:
         sys.exit('no training rows — is the WLC at ~/Desktop/morphhb/wlc ?')
