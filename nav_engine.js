@@ -698,6 +698,23 @@
   function _saveOfflineMeta(meta) {
     try { localStorage.setItem(OFFLINE_META_KEY, JSON.stringify(meta || {})); } catch(e) {}
   }
+  /* THE VOLUME'S OWN VOICE AND POINTING. A saved volume was verse files and
+     English chunks only, and read-aloud's phrasing rode along by accident:
+     the service worker precached all five <vol>_phrase_breaks.js tables at
+     install, so every reader carried every volume's phrasing whether or not
+     they saved anything. That precache is gone — the right table now arrives
+     with the page, and belongs in the saved set of the volume it phrases.
+     <vol>_stress.js is the same kind of thing for the Transliterate view and
+     had the same gap. read_aloud.js is small and makes the volume answer for
+     itself across a deploy, when the shell cache is thrown away.
+     Read aloud still SPEAKS without the table — phrases() falls through to
+     the connective rules — but it speaks the OT without the te'amim and the
+     Book of Mormon without the printed English's commas. */
+  function READ_ALOUD_ASSETS(vk) {
+    if (vk === 'bom') return ['bom/bom_phrase_breaks.js', 'bom/stress.js', 'imperatives.js', 'read_aloud.js'];
+    return [vk + '_phrase_breaks.js', vk + '_stress.js', 'imperatives.js', 'read_aloud.js'];
+  }
+
   function _offlineAssetsForCurrentVolume() {
     if (!_config || !_config.volume) return [];
     var vk = _config.volume;
@@ -707,13 +724,13 @@
     // English chunk beside it — never typed out here.
     var man = window.READER_VERSE_MANIFEST;
     if (man && man.files && /^(ot|nt|dc|pgp|jst)$/.test(vk)) {
-      var list = [vk + '.html', vk + '_verses/manifest.js'];
+      var list = [vk + '.html', vk + '_verses/manifest.js'].concat(READ_ALOUD_ASSETS(vk));
       if (vk === 'dc') list.push('dc_verses/dc_chron.js');   // a table the page loads statically
       man.files.forEach(function(f) { list.push(vk + '_verses/' + f); });
       (man.english || []).forEach(function(f) { list.push(vk + '_english/' + f); });
       return list;
     }
-    if (vk === 'bom') return ['bom/bom.html'].concat([
+    if (vk === 'bom') return ['bom/bom.html'].concat(READ_ALOUD_ASSETS(vk)).concat([
       'bom/official_verses.js','bom/crossrefs.js','bom/roots_glossary.js','bom/chapter_headings.js','bom/chapter_headings_heb.js',
       'bom/scripture_verses.js','bom/topical_guide.js',
       'bom/verses/frontmatter.js','bom/verses/1nephi.js','bom/verses/book_colophons.js','bom/verses/2nephi.js','bom/verses/jacob.js','bom/verses/enos.js','bom/verses/jarom.js',
