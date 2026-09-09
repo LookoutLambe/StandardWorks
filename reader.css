@@ -2529,6 +2529,9 @@ body:not(.hide-gloss):not(.dual-mode) .heading-flow > .word-group {
   transform: translateY(8px);
 }
 #sw-totop.open { display: flex; opacity: 1; transform: translateY(0); }
+/* Back-to-top lands on verse one with block:'start'; this keeps it off
+   the very edge of the viewport when it gets there. */
+.verse[data-verse-key] { scroll-margin-top: 12px; }
 #sw-totop:hover { background: var(--highlight, var(--paper)); }
 #sw-totop:focus-visible { outline: 2px solid var(--here); outline-offset: 2px; }
 #sw-totop .tt-arrow { color: var(--here); font-weight: 700; }

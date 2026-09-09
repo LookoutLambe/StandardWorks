@@ -2425,6 +2425,18 @@ function _swVowelSlots(w) {
    from its own scrolling, and 'scroll' fires for both. This only asks how far
    down the page is, which is the same answer whoever did the scrolling. */
 var _ttEl = null, _ttTick = false;
+
+/* The chapter on screen: all its panels are in the document at once and only
+   one is rendered, which offsetParent answers on every page — .active is set
+   on some and not others. Same test read_aloud.js uses to find its chapter. */
+function _swFirstVerse() {
+  var ps = document.querySelectorAll('.chapter-panel');
+  for (var i = 0; i < ps.length; i++) {
+    if (ps[i].offsetParent === null) continue;
+    return ps[i].querySelector('.verse[data-verse-key]') || ps[i].querySelector('.verse');
+  }
+  return document.querySelector('.verse[data-verse-key]');
+}
 function _swToTop() {
   if (_ttEl) return _ttEl;
   var b = document.createElement('button');
@@ -2434,7 +2446,16 @@ function _swToTop() {
   b.innerHTML = '<span class="tt-arrow" aria-hidden="true">\u2191</span><span>Top</span>';
   b.addEventListener('click', function () {
     var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    var how = reduce ? 'auto' : 'smooth';
+    /* TO VERSE ONE, NOT TO THE TOP OF THE DOCUMENT. Above the first verse sit
+       the chapter heading, the summary and the summary's own interlinear
+       flow — on the Book of Mormon, the book's colophon as well — and none of
+       that is what someone means by "back to the top" of a chapter they are
+       reading. The anchor is the same one the reading control uses: the first
+       KEYED verse of the chapter on screen. */
+    var v = _swFirstVerse();
+    if (v) v.scrollIntoView({ behavior: how, block: 'start' });
+    else window.scrollTo({ top: 0, behavior: how });
     b.classList.remove('open');
   });
   document.body.appendChild(b);
@@ -2444,7 +2465,15 @@ function _swToTop() {
 function _swToTopSync() {
   _ttTick = false;
   var y = window.pageYOffset || document.documentElement.scrollTop || 0;
-  _swToTop().classList.toggle('open', y > window.innerHeight * 1.5);
+  /* MEASURED FROM WHERE IT TAKES YOU, not from the top of the document. Every
+     chapter panel lives in the same document, so 1 Nephi 1 verse 1 sits 3,000
+     pixels down behind the front matter — against the document top the button
+     was still showing the moment after it had done its job, which reads as a
+     control that did not work. The distance that matters is how far below
+     verse one the reader is. */
+  var v = _swFirstVerse(), from = 0;
+  if (v) from = v.getBoundingClientRect().top + y;
+  _swToTop().classList.toggle('open', y - from > window.innerHeight * 1.5);
 }
 window.addEventListener('scroll', function () {
   if (_ttTick) return;
