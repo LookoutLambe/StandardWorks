@@ -149,7 +149,31 @@
    * Group a verse's word-units into clauses.
    * Returns an array of arrays of elements.
    */
-  function phrases(units) {
+  function phrases(units, verseKey) {
+    /* THE MASORETES ANSWER FIRST. For the Old Testament this text IS the
+       Masoretic Text, and where it breathes was marked a thousand years ago.
+       tools/build_phrase_breaks.py aligns the corpus against the accented
+       WLC and ships the break positions for 21,838 of the Tanakh's 23,204
+       verses — 94.1%. Where an entry exists the rules do not run at all;
+       where it does not (a versification or spelling divergence, and no
+       other volume has any entry at all) they do. */
+    var exact = verseKey && window.SW_BREAKS && window.SW_BREAKS[verseKey];
+    if (exact && exact.length) {
+      var speakable = [], k;
+      for (k = 0; k < units.length; k++) {
+        if (!silent(units[k].getAttribute('data-h') || '')) speakable.push(units[k]);
+      }
+      var groups = [], from = 0;
+      for (k = 0; k < exact.length; k++) {
+        if (exact[k] >= from && exact[k] < speakable.length - 1) {
+          groups.push(speakable.slice(from, exact[k] + 1));
+          from = exact[k] + 1;
+        }
+      }
+      if (from < speakable.length) groups.push(speakable.slice(from));
+      if (groups.length) return groups;
+    }
+
     var out = [], cur = [];
     units.forEach(function (el, i) {
       var heb = el.getAttribute('data-h') || '';
@@ -310,7 +334,8 @@
     (function next(vi) {
       if (token !== state.token) return;
       if (vi >= verses.length) { stop(); return; }
-      var groups = phrases(wordsOf(verses[vi]));
+      var groups = phrases(wordsOf(verses[vi]),
+                           verses[vi].getAttribute('data-verse-key'));
       (function step(pi) {
         if (token !== state.token) return;
         if (pi >= groups.length) { next(vi + 1); return; }

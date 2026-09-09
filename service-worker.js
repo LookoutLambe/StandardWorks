@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-09-09T03-06-42';
+const BUILD_ID = '2026-09-09T10-21-56';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -41,6 +41,7 @@ const CORE_ASSETS = [
     '/StandardWorks/reader.css',
     '/StandardWorks/xref_study_panel.js',
     '/StandardWorks/read_aloud.js',
+    '/StandardWorks/ot_phrase_breaks.js',
     '/StandardWorks/notes_engine.js',
     '/StandardWorks/crossrefs_engine.js',
     '/StandardWorks/root_scorecard.js',
