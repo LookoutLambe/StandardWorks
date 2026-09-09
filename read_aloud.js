@@ -48,7 +48,14 @@
      file, and the default is the setting almost every reader will keep. */
   var SPEEDS = [0.3, 0.4, 0.5, 0.6, 0.75];
   var RATE = 0.3;           // the default; overridden by the stored choice
-  var PHRASE_GAP = 420;     // ms of silence between clauses
+  var PHRASE_GAP = 420;     // ms of silence at a full stop
+  /* A COMMA IS NOT A FULL STOP. The Book of Mormon's breaks are carried
+     across from the printed English, which marks both — "having been born of
+     goodly parents, therefore I was taught ... my father;" — and reading the
+     comma and the semicolon at the same length flattens the sentence into a
+     list. The Old Testament's te'amim entries are all full stops and the
+     rules produce nothing else, so only the weighted entries use this. */
+  var COMMA_GAP = 240;
   var MAX_PHRASE = 9;       // words: the cap is a last resort, not routine
   /* A BREATH GROUP HAS A FLOOR. Biblical narrative is one long chain of
      wayyiqtols — "and he came, and he saw, and he heard" — so breaking at
@@ -158,36 +165,47 @@
        where it does not (a versification or spelling divergence, and no
        other volume has any entry at all) they do. */
     var exact = verseKey && window.SW_BREAKS && window.SW_BREAKS[verseKey];
+    var out = [], cur = [], k;
     if (exact && exact.length) {
-      var speakable = [], k;
+      /* AN ENTRY IS EITHER A BARE INDEX OR AN [index, weight] PAIR. The
+         Tanakh's are bare — every disjunctive accent that ships is a
+         division of the verse or of its half, so every one is a full stop.
+         The Book of Mormon's carry the weight of the English mark they came
+         from, 1 for a comma and 2 for a stop. */
+      var speakable = [];
       for (k = 0; k < units.length; k++) {
         if (!silent(units[k].getAttribute('data-h') || '')) speakable.push(units[k]);
       }
-      var groups = [], from = 0;
+      var from = 0;
       for (k = 0; k < exact.length; k++) {
-        if (exact[k] >= from && exact[k] < speakable.length - 1) {
-          groups.push(speakable.slice(from, exact[k] + 1));
-          from = exact[k] + 1;
+        var at = exact[k], w = 2;
+        if (at && at.length) { w = at[1]; at = at[0]; }
+        if (at >= from && at < speakable.length - 1) {
+          cur = speakable.slice(from, at + 1);
+          cur.gap = w === 1 ? COMMA_GAP : PHRASE_GAP;
+          out.push(cur);
+          from = at + 1;
         }
       }
-      if (from < speakable.length) groups.push(speakable.slice(from));
-      if (groups.length) return groups;
+      if (from < speakable.length) out.push(speakable.slice(from));
     }
 
-    var out = [], cur = [];
-    units.forEach(function (el, i) {
-      var heb = el.getAttribute('data-h') || '';
-      var gloss = (el.querySelector('.gl') || {}).textContent || '';
-      if (i > 0 && cur.length >= MIN_PHRASE && opensClause(heb)) {
-        out.push(cur); cur = [];
-      }
-      if (silent(heb)) return;
-      cur.push(el);
-      /* the gloss carries the English punctuation; a comma there is a real
-         boundary the connectives would otherwise miss */
-      if (/[,;:—]\s*$/.test(gloss) && cur.length >= MIN_PHRASE) { out.push(cur); cur = []; }
-    });
-    if (cur.length) out.push(cur);
+    if (!out.length) {
+      cur = [];
+      units.forEach(function (el, i) {
+        var heb = el.getAttribute('data-h') || '';
+        var gloss = (el.querySelector('.gl') || {}).textContent || '';
+        if (i > 0 && cur.length >= MIN_PHRASE && opensClause(heb)) {
+          out.push(cur); cur = [];
+        }
+        if (silent(heb)) return;
+        cur.push(el);
+        /* the gloss carries the English punctuation; a comma there is a real
+           boundary the connectives would otherwise miss */
+        if (/[,;:—]\s*$/.test(gloss) && cur.length >= MIN_PHRASE) { out.push(cur); cur = []; }
+      });
+      if (cur.length) out.push(cur);
+    }
 
     /* A fronted object opens a clause with nothing to announce it — the
        te'amim would mark it, and this corpus has no accents. Cap the length
@@ -209,7 +227,10 @@
         }
       }
       if (best < 0) { split.push(p); return; }
-      split.push(p.slice(0, best), p.slice(best));
+      var head = p.slice(0, best), tail = p.slice(best);
+      head.gap = COMMA_GAP;              /* a cap is a breath, not a stop */
+      tail.gap = p.gap;
+      split.push(head, tail);
     });
     return split;
   }
@@ -253,13 +274,30 @@
       'border-radius:999px;padding:4px 11px;margin:6px 0 2px 8px;direction:ltr;min-width:44px}' +
       '.ra-speed:hover{background:var(--highlight,rgba(0,0,0,.06))}' +
       '.ra-bar{display:flex;align-items:center;justify-content:center;gap:0;'+
-      'margin:2px 0 14px;direction:ltr}';
+      'margin:2px 0 14px;direction:ltr}' +
+      /* THE STOP HAS TO COME WITH YOU. The reading scrolls the page to keep
+         the spoken word in view, so the button that started it is a chapter
+         away within a verse or two — and scrolling back up to reach it means
+         fighting the very scroll you are trying to stop. This rides the
+         viewport instead, clear of the mode bar and its safe area. */
+      '#ra-float{position:fixed;left:50%;transform:translateX(-50%);' +
+      'bottom:calc(66px + env(safe-area-inset-bottom,0px));z-index:var(--z-chrome,60);' +
+      'display:none;align-items:center;gap:7px;font-family:inherit;font-size:.92em;' +
+      'cursor:pointer;direction:ltr;padding:9px 17px;border-radius:999px;' +
+      'background:var(--chrome,#12213F);color:var(--chrome-ink,#F3EDE2);' +
+      'border:1px solid var(--chrome-line,#2C4270);' +
+      'box-shadow:0 4px 18px rgba(0,0,0,.35)}' +
+      '#ra-float.on{display:flex}' +
+      '#ra-float:active{transform:translateX(-50%) scale(.97)}';
     document.head.appendChild(s);
   }
 
   /* ---- playback ------------------------------------------------------- */
 
-  var state = { on: false, token: 0, btn: null, mark: null };
+  var state = { on: false, token: 0, btn: null, mark: null, touched: 0 };
+  function handTaken() { state.touched = Date.now(); }
+  window.addEventListener('wheel', handTaken, { passive: true });
+  window.addEventListener('touchmove', handTaken, { passive: true });
 
   /* Track the marked element rather than searching for it. Scoping the
      search to the current verse left the previous verse's last word lit
@@ -277,8 +315,22 @@
     for (var i = 0; i < m.length; i++) m[i].classList.remove('ra-speaking');
   }
 
+  /** the stop that rides the viewport while the chapter is being read */
+  function ensureFloat() {
+    var f = document.getElementById('ra-float');
+    if (f) return f;
+    f = document.createElement('button');
+    f.id = 'ra-float';
+    f.type = 'button';
+    f.innerHTML = '<span aria-hidden="true">\u25A0</span><span>Stop reading</span>';
+    f.addEventListener('click', function () { stop(); });
+    document.body.appendChild(f);
+    return f;
+  }
+
   function setButton(on) {
     state.on = on;
+    ensureFloat().classList.toggle('on', on);
     if (!state.btn) return;
     state.btn.setAttribute('aria-pressed', on ? 'true' : 'false');
     state.btn.querySelector('.ra-label').textContent = on ? 'Stop' : 'Read aloud';
@@ -341,12 +393,16 @@
       (function step(pi) {
         if (token !== state.token) return;
         if (pi >= groups.length) { next(vi + 1); return; }
-        if (pi === 0 && groups[0].length) {
+        /* Follow the voice — but yield to a reader who is moving the page
+           themselves. Their own gesture wins for a few seconds, and only a
+           gesture counts: listening for 'scroll' would catch this very call
+           and switch the following off permanently. */
+        if (pi === 0 && groups[0].length && Date.now() - state.touched > 4000) {
           groups[0][0].scrollIntoView({ block: 'center', behavior: 'smooth' });
         }
         speakPhrase(groups[pi], token).then(function () {
           if (token !== state.token) return;
-          setTimeout(function () { step(pi + 1); }, PHRASE_GAP);
+          setTimeout(function () { step(pi + 1); }, groups[pi].gap || PHRASE_GAP);
         });
       })(0);
     })(0);
