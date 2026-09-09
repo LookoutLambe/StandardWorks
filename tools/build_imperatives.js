@@ -42,13 +42,12 @@ function pointedKey(s) {
    distinguishes an imperative from a perfect here, and it returns "the day",
    "unto you", "Elijah" and "the vineyard" — 5,697 candidates, almost all
    wrong. So they are listed, one at a time, on the evidence of the gloss.
-   This is the right place to add the next one. */
+   ONE FORM AT A TIME, ON THE TRANSLATOR'S WORD. Four siblings were added
+   here on the strength of their glosses — הׇרְגוֹ, הׇרְגֵנִי, הֲרֹגוּ, הִרְגוּ
+   — and taken out again: the ruling was for this form, not for the pattern.
+   This is the right place to add the next one when it is asked for. */
 const EXTRA = [
-  'הׇרְגֵהוּ',   // slay him   — 1 Nephi 4:12, the Spirit to Nephi
-  'הׇרְגוֹ',     // slay him   — 1 Nephi 4:10
-  'הׇרְגֵנִי',   // kill me
-  'הֲרֹגוּ',     // kill       (plural)
-  'הִרְגוּ'      // kill       (plural)
+  'הׇרְגֵהוּ'    // slay him — 1 Nephi 4:12, the Spirit to Nephi
 ];
 
 const keys = {};
