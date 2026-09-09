@@ -149,6 +149,7 @@
      the corpus at large would be a different and much worse idea: the pointing
      is what tells הִנֵּה "behold" from הֵנָּה "hither". */
   var YAV = /\u05B8\u05D9\u05D5$/;
+  var QATAN = /\u05C7/g;              /* the explicit qamats qatan */
   var POINTS = /[\u0591-\u05BD\u05BF-\u05C7]/g;   /* NOT U+05BE, the maqqef */
 
   /* SAY IT LIKE THIS. An override table for words the voice gets wrong even
@@ -161,6 +162,7 @@
                  '\u05DB\u05B8\u05BC\u05DC': '\u05DB\u05D5\u05DC' }; /* כָּל  -> כול */
 
   var YAV = /\u05B8\u05D9\u05D5$/;
+  var QATAN = /\u05C7/g;              /* the explicit qamats qatan */
   var POINTS = /[\u0591-\u05BD\u05BF-\u05C7]/g;   /* NOT U+05BE, the maqqef */
 
   /* UNPOINTING IS NOT JUST DELETING THE POINTS. Modern Hebrew spells without
@@ -199,8 +201,19 @@
     s = s.replace(/[\[\]()]/g, '');      /* a qere's brackets are not said */
     var parts = s.split('\u05BE');
     for (var k = 0; k < parts.length; k++) {
-      if (SAY_AS[parts[k]]) parts[k] = SAY_AS[parts[k]];
-      else if (YAV.test(parts[k])) parts[k] = ktivMale(parts[k]);
+      if (SAY_AS[parts[k]]) { parts[k] = SAY_AS[parts[k]]; continue; }
+      /* THE QAMATS QATAN IS AN /o/ AND SHE READS IT AS AN /a/. This corpus
+         marks it with the explicit U+05C7 rather than leaving it to be
+         guessed from a plain qamats — which is the right call for a reader
+         and the wrong one for a synthesiser, because U+05C7 is a rare
+         codepoint she does not know and falls back on. חׇכְמָה came out
+         "chachma", וַיָּמׇת "vayyamat", יָרׇבְעָם "Yarav'am". 14,118 words
+         across the six volumes.
+         A holam is the same sound and she reads it, so she gets a holam.
+         The spelling that produces is the ordinary one — כׇּל becomes כֹּל,
+         which is how the Tanakh writes that word anyway. */
+      parts[k] = parts[k].replace(QATAN, '\u05B9');
+      if (YAV.test(parts[k])) parts[k] = ktivMale(parts[k]);
     }
     return parts.join(' ');
   }
