@@ -221,11 +221,22 @@ def align(tokens, marked):
     return breaks if wi == len(marked) else None
 
 
+def english_column():
+    """{'Genesis|1|1': 'In the beginning...'} from ot_english.js."""
+    src = open(os.path.join(ROOT, 'ot_english.js'), encoding='utf-8').read()
+    out = {}
+    for m in re.finditer(r'"book":\s*"((?:[^"\\]|\\.)*)",\s*"chapter":\s*(\d+),'
+                         r'\s*"verse":\s*(\d+),\s*"english":\s*"((?:[^"\\]|\\.)*)"', src):
+        out['%s|%s|%s' % (m.group(1), m.group(2), m.group(3))] = \
+            m.group(4).encode().decode('unicode_escape')
+    return out
+
+
 def main():
     if not os.path.isdir(WLC):
         sys.exit('WLC not found at %s' % WLC)
     names = english_names()
-    table, ok, miss, verses = {}, 0, 0, 0
+    table, ask, ok, miss, verses = {}, {}, 0, 0, 0
     misses_by_book = {}
     for prefix, wlcbook in BOOKS:
         en = names.get(prefix)
@@ -266,6 +277,12 @@ def main():
             if got:
                 table['%s|%d|%d' % (en, ch, v)] = got
 
+    # the KJV column says which verses are questions; a falling contour on one
+    # is wrong, and 1,048 of the Tanakh's verses end in a question mark
+    eng = english_column()
+    for k in table:
+        t = eng.get(k, '')
+        if t.rstrip().endswith('?'): ask[k] = 1
     body = json.dumps(table, ensure_ascii=False, separators=(',', ':'))
     path = os.path.join(ROOT, 'ot_phrase_breaks.js')
     with open(path, 'w', encoding='utf-8') as fh:
@@ -275,6 +292,8 @@ def main():
         fh.write('// ENDS on. The corpus has no accents and none are added; this is a\n')
         fh.write('// separate lookup, exactly as ot_stress.js is.\n')
         fh.write('window.SW_BREAKS = Object.assign(window.SW_BREAKS || {}, %s);\n' % body)
+        fh.write('window.SW_ASK = Object.assign(window.SW_ASK || {}, %s);\n'
+                 % json.dumps(ask, ensure_ascii=False, separators=(',', ':')))
 
     print('verses: %s   aligned: %s (%.1f%%)   unaligned: %s'
           % (format(verses, ','), format(ok, ','), 100 * ok / max(verses, 1), format(miss, ',')))

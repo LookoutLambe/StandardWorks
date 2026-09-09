@@ -103,7 +103,7 @@ def build(vol):
     idx = {}
     for (b, c, v) in EN:
         idx.setdefault(b, {}).setdefault(c, set()).add(v)
-    table, n, noeng, plain = {}, 0, 0, 0
+    table, ask, n, noeng, plain = {}, {}, 0, 0, 0
     for key, ref, toks in verses(vol, bk, idx):
         speak = [t for t in toks if not silent(t[0])]
         if len(speak) < 3:
@@ -112,6 +112,7 @@ def build(vol):
         ent = EN.get(ref) if ref else None
         if not ent:
             noeng += 1
+        if ent and ent.rstrip().endswith('?'): ask[key] = 1
         br = breaks_for(toks, ent)
         if br:
             table[key] = [[i, c] for i, c in br]
@@ -126,6 +127,8 @@ def build(vol):
                  u'// The Hebrew is untouched — this is a separate lookup, as stress.js is.\n' % vol)
         fh.write(u'window.SW_BREAKS = Object.assign(window.SW_BREAKS || {}, %s);\n'
                  % json.dumps(table, ensure_ascii=False, separators=(',', ':')))
+        fh.write(u'window.SW_ASK = Object.assign(window.SW_ASK || {}, %s);\n'
+                 % json.dumps(ask, ensure_ascii=False, separators=(',', ':')))
     print('%-4s %6s verses  %6s with breaks (%.1f%%)  %5s breaks  %4s no English  %s KB'
           % (vol, format(n, ','), format(len(table), ','), 100.0 * len(table) / max(n, 1),
              format(sum(len(x) for x in table.values()), ','), format(noeng, ','),

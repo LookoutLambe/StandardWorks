@@ -76,6 +76,16 @@
   var PITCH_MIN  = 0.94;   /* ... and no further, mid-sentence */
   var PITCH_END  = 0.88;   /* the drop on the phrase that ends it */
   var RATE_END   = 0.92;   /* final lengthening, as a factor of the rate */
+
+  /* A QUESTION RISES. 1,937 verses across the six volumes end in a question
+     mark and every one was being read as a statement — the contour fell, the
+     rate slowed, and it landed like an assertion. That is the difference
+     between reading aloud and reciting, and the printed English is the only
+     thing that knows which verses they are, so the keys ship beside the
+     breaks in the same file. The rise goes ABOVE where the sentence started
+     and does not slow: a question that trails off is not a question. */
+  var PITCH_ASK  = 1.22;
+  var RATE_ASK   = 1.0;
   var MAX_PHRASE = 9;       // words: the cap is a last resort, not routine
   /* A BREATH GROUP HAS A FLOOR. Biblical narrative is one long chain of
      wayyiqtols — "and he came, and he saw, and he heard" — so breaking at
@@ -779,7 +789,9 @@
     if (!verses.length) { advance(panel, token); return; }
     var all = [];
     for (var i = 0; i < verses.length; i++) {
-      var gs = phrases(wordsOf(verses[i]), verses[i].getAttribute('data-verse-key'));
+      var key = verses[i].getAttribute('data-verse-key');
+      var gs = phrases(wordsOf(verses[i]), key);
+      if (gs.length && window.SW_ASK && window.SW_ASK[key]) gs[gs.length - 1].ask = true;
       for (var j = 0; j < gs.length; j++) all.push(gs[j]);
     }
     state.list = all;
@@ -804,7 +816,8 @@
     var last = (state.at === state.list.length - 1) || g.stop;
     var pitch = Math.max(PITCH_MIN, PITCH_TOP - PITCH_STEP * state.inSentence);
     var rate = 1;
-    if (last) { pitch = PITCH_END; rate = RATE_END; state.inSentence = 0; }
+    if (g.ask) { pitch = PITCH_ASK; rate = RATE_ASK; state.inSentence = 0; }
+    else if (last) { pitch = PITCH_END; rate = RATE_END; state.inSentence = 0; }
     else state.inSentence++;
     var t0 = Date.now();
     speakPhrase(g, token, pitch, rate).then(function () {
