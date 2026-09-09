@@ -236,44 +236,25 @@
     return out;
   }
 
-  /* A DAGESH IN A VAV THAT ALSO CARRIES A VOWEL IS A DOUBLING, NOT A SHURUK.
-     וַיְצַוֵּהוּ is "vaytsavvehu" — the וֵּ is a doubled consonantal /v/, and the
-     tsere on it says so, because a shuruk וּ carries no other vowel. Carmit
-     reads the vav-with-dagesh as the /u/ it is far more often and the word
-     falls apart. 1,861 words have one, most of them the צוה family: צִוָּה,
-     מְצַוֶּה, צִוִּיתִי, and also אִוֶּלֶת, הַחִוִּי, לְהִוָּשַׁע.
+  /* WRITING THE DOUBLING OUT MADE IT WORSE, AND IT IS REVERTED (1adb35d9).
+     The reasoning was sound and the result was not. וַיְצַוֵּהוּ is
+     "vaytsavvehu" and the וֵּ really is a doubled consonantal /v/ — a shuruk
+     carries no other vowel — so the vav became two and the dagesh went. But
+     the words that rule touched came out GARBLED, not merely wrong:
+     transcribed, צִוָּה is "צי ו" as written and "תי וב" with the doubling
+     written out, and the translator heard the same thing — "garbled like
+     tivisii". 1,861 words, made worse by a change I shipped on the strength
+     of one rendered file sounding better to me.
 
-     So the doubling is written out, which is all the dagesh was saying:
-     the vav becomes two, the dagesh goes, and EVERY OTHER POINT STAYS. That
-     is the whole difference between this and ktiv male, which cannot be
-     turned loose on the corpus at large — it spells מֹשֶׁה as מושה and
-     דָּוִד as דווד, because names keep conventional spellings that no
-     mechanical rule knows. This changes one letter and invents nothing. */
-  function writeDoubling(w) {
-    var u = units(w), out = '';
-    for (var i = 0; i < u.length; i++) {
-      var ch = u[i][0], m = u[i][1];
-      if (ch === '\u05D5' && m.indexOf(DAGESH) >= 0 && VOWEL.test(m)) {
-        out += '\u05D5\u05D5' + m.split(DAGESH).join('');
-      } else {
-        out += ch + m;
-      }
-    }
-    return out;
-  }
+     The lesson is the one this whole day keeps teaching: a transform that is
+     phonetically correct on paper still has to be HEARD before it ships, and
+     "the consonants came back right" is not hearing it, because Hebrew ASR
+     writes unpointed and cannot show a vowel. */
 
   /* A WORD-FINAL BARE VAV IS THE CONSONANT /v/ and she reads it as a vowel:
-     וַיְצַו came out "vayetsao". It closes the syllable — vay-tsav — and the
+     וַיְצַו came out "vayetsao". It closes the syllable — vay-TSAV — and the
      tell is the letter before it, which carries a vowel of its own. 807 words
-     end this way, and three forms are 59% of them: יַחְדָּו, וַיְצַו, עֵשָׂו.
-
-     These are overrides rather than a rule, matched as an ENDING on the
-     unpointed form so that prefixes come along without entries of their own:
-     לְעֵשָׂו unpoints to לעשו, not עשו, so an exact key would miss the nine of
-     those and the seven וְעֵשָׂו. Modern Hebrew writes two of
-     them with a yod, and עשו is the reason a rule would not do: unpointed it
-     is equally עָשׂוּ, "they did", so stripping the points off the patriarch's
-     name has her saying "asu". A name is worth an entry. */
+     end this way and three forms are 59% of them: יַחְדָּו, וַיְצַו, עֵשָׂו. */
   var SAY_BARE = {
     '\u05D9\u05D7\u05D3\u05D5': '\u05D9\u05D7\u05D3\u05D9\u05D5',   /* יחדו -> יחדיו  yachdav */
     '\u05E2\u05E9\u05D5': '\u05E2\u05E9\u05D9\u05D5'                  /* עשו  -> עשיו   Esav    */
@@ -334,7 +315,6 @@
         parts[k] = bare;
         continue;
       }
-      parts[k] = writeDoubling(parts[k]);
     }
     return parts.join(' ');
   }
