@@ -24,6 +24,7 @@ const ASSETS = [
      tools/build_crossref_chunks.js, and arrive with the book like the verses. */
   './topical_guide.js?v=3',
   './images/cover-dual.jpg?v=2',
+  './images/cover-hardcover.jpg?v=3',
   './images/cover-hebrew.jpg?v=4',
   './images/cover-interlinear.jpg?v=5',
   './images/cover-triple.jpg?v=5'
