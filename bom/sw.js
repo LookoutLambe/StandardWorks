@@ -1,5 +1,10 @@
-/** Replaced on deploy by scripts/write_build_version.js */
-const CACHE = 'bom-2026-09-07T12-46-22';
+/** Stamped on every commit by the pre-commit hook, with the same timestamp
+    version.json and service-worker.js's BUILD_ID get. A NEW NAME IS WHAT
+    RE-RUNS THE PRECACHE — until 2026-09-09 this line was hand-written and
+    the hook did not touch it (it pointed at scripts/write_build_version.js,
+    which does not exist), so the list below had been frozen for days and
+    every Book of Mormon asset change was served stale. Never hand-edit. */
+const CACHE = 'bom-2026-09-09T11-04-29';
 /** Shell only — verse *.js files are cached at runtime, refreshed in the background (see fetch handler). */
 const ASSETS = [
   './bom.html',
