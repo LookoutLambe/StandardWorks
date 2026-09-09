@@ -172,7 +172,20 @@
      כול. That is the whole bar. */
   var SAY_AS = {
     '\u05DB\u05C7\u05BC\u05DC': '\u05DB\u05D5\u05DC',   /* כׇּל -> כול */
-    '\u05DB\u05B8\u05BC\u05DC': '\u05DB\u05D5\u05DC'    /* כָּל -> כול */
+    '\u05DB\u05B8\u05BC\u05DC': '\u05DB\u05D5\u05DC',   /* כָּל -> כול */
+
+    /* SARIAH ENDS ON AN AYIN FOR THE VOICE (translator's suggestion). The
+       final ־ָה of שְׂרָיָה is a mater — the he is not sounded and the word
+       ends "-yah" — but she sounds it, and the name came out "sa-rai-ya-HA",
+       a syllable too long. An ayin is silent in modern Hebrew and carries the
+       same qamats, so the vowel survives and the consonant does not. Nothing
+       else changes: the pointing stays exactly as the corpus writes it. */
+    '\u05D5\u05BC\u05E9\u05B0\u05C2\u05E8\u05B8\u05D9\u05B8\u05D4':
+      '\u05D5\u05BC\u05E9\u05B0\u05C2\u05E8\u05B8\u05D9\u05B8\u05E2',   /* וּשְׂרָיָה -> וּשְׂרָיָע */
+    '\u05DC\u05B4\u05E9\u05B0\u05C2\u05E8\u05B8\u05D9\u05B8\u05D4':
+      '\u05DC\u05B4\u05E9\u05B0\u05C2\u05E8\u05B8\u05D9\u05B8\u05E2',   /* לִשְׂרָיָה -> לִשְׂרָיָע */
+    '\u05E9\u05B0\u05C2\u05E8\u05B8\u05D9\u05B8\u05D4':
+      '\u05E9\u05B0\u05C2\u05E8\u05B8\u05D9\u05B8\u05E2',   /* שְׂרָיָה -> שְׂרָיָע */
   };
 
   /* UNPOINTING IS NOT JUST DELETING THE POINTS. Modern Hebrew spells without
