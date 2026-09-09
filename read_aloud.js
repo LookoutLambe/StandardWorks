@@ -449,13 +449,30 @@
       parts[k] = parts[k].replace(/^\u05D5\u05B7\u05D9\u05B0/, '\u05D5\u05B7\u05D9\u05B6');
       if (YAV.test(parts[k])) { parts[k] = ktivMale(parts[k]); continue; }
       if (endsInV(parts[k])) {
-        var bare = parts[k].replace(POINTS, '');
+        /* A FINAL VAV IS A CONSONANT AND UNPOINTING IS NOT ENOUGH TO SAY SO.
+           Stripping the points handed the word to the modern reader, and the
+           modern reader takes a bare final vav for a MATER — an /o/ or an
+           /u/ — which is the one thing it is not here. Heard: דְּרָכָו "his
+           ways" came back "darko", his way, singular; עָלָו "upon him" came
+           back "lula"; וַיְקַו "and he waited" came back "vekhulam"; and
+           וַיְצַו "and he commanded" lost its verb altogether and ran into
+           the next word. 155 forms, 807 occurrences.
+
+           A word-final bet with no dagesh is /v/, the same sound, and she
+           reads it without hesitating — so the vav becomes a bet FOR THE
+           VOICE ONLY and every point stays where the corpus put it, which
+           is what tells her the vowels. The two names keep their own
+           spellings: יַחְדָּו and עֵשָׂו were proved on the plene yod-vav
+           before this rule existed, and both still read correctly. */
+        var bare = parts[k].replace(POINTS, ''), named = false;
         for (var b in SAY_BARE) {
           if (bare.length >= b.length && bare.slice(-b.length) === b) {
-            bare = bare.slice(0, -b.length) + SAY_BARE[b]; break;
+            parts[k] = bare.slice(0, -b.length) + SAY_BARE[b];
+            named = true;
+            break;
           }
         }
-        parts[k] = bare;
+        if (!named) parts[k] = parts[k].replace(/\u05D5$/, '\u05D1');
         continue;
       }
     }
@@ -798,8 +815,30 @@
     state.btn.querySelector('.ra-icon').textContent = on ? '■' : '▶';
   }
 
+  /* SOMETIMES SHE SAYS NOTHING AT ALL, AND THE READING WALKS ON PAST IT.
+     Carmit's analyser can fail on a PAIR of words and take the whole
+     utterance down with it, silently: onend fires, no error, no audio. The
+     reader heard 1 Nephi 8:2 begin at "and he said unto us" — its first four
+     words, וַיְהִי בְּשֶׁבֶת אָבִי בַּמִּדְבָּר, were never spoken.
+
+     The trigger is a bigram, not a word. Each of those four says itself
+     perfectly alone; בְּשֶׁבֶת אָבִי together is silence, and so is
+     בְּשֶׁבֶת אָדָם, while בְּשֶׁבֶת דָּוִד and לְשֶׁבֶת אָבִי are fine.
+     The failure is scoped to the SENTENCE: putting a full stop between the
+     two words brings the whole utterance back, and so does splitting it into
+     two utterances — which is what this does. No table of bad pairs can be
+     right for long, because the analyser is Apple's and ships with the OS;
+     the phrase itself reports the failure, so the phrase is what is asked.
+
+     A silent utterance is unmistakable: no boundary events and it returns in
+     a few milliseconds. Both conditions are required. A browser that never
+     implements onboundary would otherwise re-speak every phrase it reads,
+     and a phrase heard twice is worse than the bug. */
+  var SILENT_MS  = 150;    /* no real utterance of one word returns this fast */
+  var MAX_SPLIT  = 4;      /* halving a 9-word cap reaches single words */
+
   /** speak one clause, highlighting each word as the engine reaches it */
-  function speakPhrase(els, token, pitch, rate) {
+  function speakPhrase(els, token, pitch, rate, depth) {
     return new Promise(function (resolve) {
       var text = '', spans = [];
       els.forEach(function (el, i) {
@@ -817,7 +856,9 @@
       u.rate = RATE * (rate || 1);
       u.pitch = pitch || 1;
 
+      var heard = 0, t0 = Date.now(), settled = false;
       u.onboundary = function (e) {
+        heard++;
         if (token !== state.token) return;
         for (var i = 0; i < spans.length; i++) {
           if (e.charIndex >= spans[i].start && e.charIndex < spans[i].end) {
@@ -826,8 +867,20 @@
           }
         }
       };
-      u.onend = function () { resolve(); };
-      u.onerror = function () { resolve(); };
+      function done() {
+        if (settled) return;             /* onend and onerror can both arrive */
+        settled = true;
+        if (token !== state.token) return resolve();
+        if (heard || Date.now() - t0 >= SILENT_MS ||
+            els.length < 2 || (depth || 0) >= MAX_SPLIT) return resolve();
+        /* nothing was spoken: halve it and say the halves */
+        var mid = Math.ceil(els.length / 2), d = (depth || 0) + 1;
+        speakPhrase(els.slice(0, mid), token, pitch, rate, d)
+          .then(function () { return speakPhrase(els.slice(mid), token, pitch, rate, d); })
+          .then(resolve);
+      }
+      u.onend = done;
+      u.onerror = done;
       speechSynthesis.speak(u);
     });
   }

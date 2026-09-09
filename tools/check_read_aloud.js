@@ -77,6 +77,17 @@ const CASES = [
   ['כׇּל־יָמָיו',  'כול ימיו', 'one token, two words, two different rules — and the maqqef is a SPACE'],
   ['יַחְדָּו',     'יחדיו',    'a consonantal vav read as a vowel'],
   ['עֵשָׂו',      'עשיו',     'the same, for Esau'],
+  /* THOSE TWO NAMES WERE THE ONLY FINAL VAV EVER GUARDED, and they are the
+     two the rule does NOT touch — so the branch stayed green while it broke
+     153 other forms and 807 occurrences. Unpointing handed a bare final vav
+     to the modern reader, which takes it for a mater: heard as "darko" for
+     "his ways", "lula" for "upon him", "vekhulam" for "and he waited". The
+     word-final bet is the same /v/ and keeps every point in place. */
+  ['וַיְצַו',      'וַיֶצַב',   '"vaytsav it being pronounced as vi-itstov" — unpointed ויצו is an itpael to her'],
+  ['וָאֲצַו',     'וָאֲצַב',   'the same verb in the first person'],
+  ['דְּרָכָו',     'דְּרָכָב',   'the archaic ־ָו for ־ָיו: "darko", his way, for derakhav, his ways'],
+  ['עָלָו',       'עָלָב',     'upon him — she read the bare form "lula"'],
+  ['שָׁלֵו',      'שָׁלֵב',    'at ease; the vav is the last consonant, not a vowel'],
   ['אֶת־לֶחִי',    'אֶת לֶחִי',  'a maqqef between two pointed words: it separates, it does not strip'],
   ['הׇרְגֵהוּ',    'הֹרְגֵהוּ',  'slay him, 1 Nephi 4:12 — the one imperative listed by hand'],
   ['שְׂרָיָה',     'שְׂרָיָע',   '"its pronouncing sariah as sa-rai-yaha thats bad" — the he becomes an ayin'],
