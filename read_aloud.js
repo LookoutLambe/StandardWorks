@@ -134,6 +134,56 @@
     return false;
   }
 
+  /* A COMMAND DOES NOT SIT ON THE DOWNSLOPE. "Slay him" is not another step
+     in a declining sentence, and reading it as one is why the Spirit's command
+     in 1 Nephi 4:12 landed like a remark (translator). An imperative breaks
+     the declination: it lifts clear of wherever the sentence had got to, and
+     slows, because a command is delivered deliberately.
+
+     THIS IS THE ONE PLACE TODAY A TABLE BEATS THE GLOSS. Hebrew has no
+     surface mark for an imperative — לְכוּ "go" and לָקְחוּ "they took" differ
+     by pointing alone — so imperatives.js ships the 889 forms the Masoretic
+     morphology PARSES as one (HV<stem>v, from OpenScriptures and TAHOT).
+     5,387 tokens across the six volumes match. 18 KB, because the full
+     attested_forms.js is 3.4 MB and no page loads it. */
+  var PITCH_CMD  = 1.14;   /* clear of the declination, wherever it had got to */
+  var RATE_CMD   = 0.94;   /* ... and deliberate */
+  var PITCH_CMD_END = 0.84;  /* a command that ENDS the sentence lands harder */
+
+  /* AND THE PARSE ALONE IS NOT ENOUGH EITHER — the same trap as every other
+     sweep today. The table says which forms CAN be an imperative, not which
+     ones are one here, and Hebrew is full of forms that are both:
+     הִתְפַּלֵּל is "pray!" and "he prayed"; הָחֵל is "begin!" and "beginning";
+     שְׁבִי is "dwell!" and "captive". The gloss decides, as always.
+
+     A command has NO SUBJECT and NO TENSE. Rejecting on an -ed or -ing ENDING
+     was wrong in both directions — it threw out "sing", "bring" and "take
+     heed", which are commands, and let "beginning" through anyway. What marks
+     a non-command is a subject ("they taught me") or an auxiliary ("hath
+     saved"), and "have" only counts as one when a subject is in front of it,
+     because "have mercy on me" is a command. 5,270 kept, 109 dropped. */
+  var NOT_CMD = /^(he|she|they|i|we|it)\b|^and (he|she|they|i|we|it)\b|\b(hath|hast|has|had|was|were|shall|will|would|is|are|am|did|does)\b|\b(?:i|we|they|you|ye|he|she|it) have\b/i;
+  /* a bare past tense with no subject — "prayed" — is still not a command, but
+     the -ed ENDING alone cannot say so: "take heed" and "give heed" end in one
+     and are commands, so the handful of English words that merely look past
+     are listed rather than guessed at */
+  var OK_ED   = /\b(heed|feed|speed|need|exceed|proceed|succeed|indeed|seed|deed)\b/i;
+
+  function isCommand(el) {
+    var t = window.SW_IMPERATIVE;
+    if (!t || !window.RootEngine || !RootEngine.pointedKey) return false;
+    var h = el.getAttribute('data-h') || '';
+    var parts = h.split('\u05BE');
+    var form = false;
+    for (var i = 0; i < parts.length && !form; i++) form = !!t[RootEngine.pointedKey(parts[i])];
+    if (!form) return false;
+    var g = ((el.querySelector('.gl') || {}).textContent || '').replace(/-/g, ' ').trim();
+    if (!g || NOT_CMD.test(g)) return false;
+    var lastWord = g.split(/\s+/).pop() || '';
+    if (/ed$/.test(lastWord) && !OK_ED.test(g)) return false;
+    return true;
+  }
+
   var PITCH_ASK  = 1.22;
   var RATE_ASK   = 1.0;
   var MAX_PHRASE = 9;       // words: the cap is a last resort, not routine
@@ -853,6 +903,11 @@
         gs[k].ask = true;
       }
       if (gs.length && window.SW_ASK && window.SW_ASK[key]) gs[gs.length - 1].ask = true;
+      for (var c = 0; c < gs.length; c++) {
+        for (var y = 0; y < gs[c].length; y++) {
+          if (isCommand(gs[c][y])) { gs[c].cmd = true; break; }
+        }
+      }
       for (var j = 0; j < gs.length; j++) all.push(gs[j]);
     }
     state.list = all;
@@ -878,6 +933,8 @@
     var pitch = Math.max(PITCH_MIN, PITCH_TOP - PITCH_STEP * state.inSentence);
     var rate = 1;
     if (g.ask) { pitch = PITCH_ASK; rate = RATE_ASK; state.inSentence = 0; }
+    else if (g.cmd && last) { pitch = PITCH_CMD_END; rate = RATE_CMD; state.inSentence = 0; }
+    else if (g.cmd) { pitch = PITCH_CMD; rate = RATE_CMD; state.inSentence++; }
     else if (last) { pitch = PITCH_END; rate = RATE_END; state.inSentence = 0; }
     else state.inSentence++;
     var t0 = Date.now();
