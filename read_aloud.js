@@ -150,10 +150,21 @@
 
   /* ---- playback ------------------------------------------------------- */
 
-  var state = { on: false, token: 0, btn: null };
+  var state = { on: false, token: 0, btn: null, mark: null };
 
-  function clearMarks(root) {
-    var m = (root || document).querySelectorAll('.ra-speaking');
+  /* Track the marked element rather than searching for it. Scoping the
+     search to the current verse left the previous verse's last word lit
+     when playback crossed the boundary — two words marked at once — and
+     searching the whole document on every boundary event means walking
+     7,000 word-units several times a second. One reference does both jobs. */
+  function mark(el) {
+    if (state.mark && state.mark !== el) state.mark.classList.remove('ra-speaking');
+    state.mark = el || null;
+    if (el) el.classList.add('ra-speaking');
+  }
+  function clearMarks() {
+    mark(null);
+    var m = document.querySelectorAll('.ra-speaking');   /* belt and braces */
     for (var i = 0; i < m.length; i++) m[i].classList.remove('ra-speaking');
   }
 
@@ -187,8 +198,7 @@
         if (token !== state.token) return;
         for (var i = 0; i < spans.length; i++) {
           if (e.charIndex >= spans[i].start && e.charIndex < spans[i].end) {
-            clearMarks(spans[i].el.closest('.verse') || document);
-            spans[i].el.classList.add('ra-speaking');
+            mark(spans[i].el);
             return;
           }
         }
@@ -206,7 +216,10 @@
   /** read every verse of a chapter in order */
   function play(scope) {
     var root = scope || document;
-    var verses = Array.prototype.slice.call(root.querySelectorAll('.verse'));
+    /* Numbered verses only. The colophon is a .verse too but carries no
+       data-verse-key — it is the book's superscription, not scripture to be
+       read aloud, so the chapter starts at אֲנִי נֶפִי. */
+    var verses = Array.prototype.slice.call(root.querySelectorAll('.verse[data-verse-key]'));
     if (!verses.length) return;
     var token = ++state.token;
     setButton(true);
@@ -232,7 +245,7 @@
   function stop() {
     state.token++;
     try { speechSynthesis.cancel(); } catch (e) {}
-    clearMarks(document);
+    clearMarks();
     setButton(false);
   }
 
