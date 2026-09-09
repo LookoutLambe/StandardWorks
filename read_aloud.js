@@ -49,7 +49,7 @@
   var SPEEDS = [0.3, 0.4, 0.5, 0.6, 0.75];
   var RATE = 0.3;           // the default; overridden by the stored choice
   var PHRASE_GAP = 420;     // ms of silence between clauses
-  var MAX_PHRASE = 8;       // words, before a long clause is split again
+  var MAX_PHRASE = 9;       // words: the cap is a last resort, not routine
   /* A BREATH GROUP HAS A FLOOR. Biblical narrative is one long chain of
      wayyiqtols — "and he came, and he saw, and he heard" — so breaking at
      every link shreds a verse into one- and two-word fragments: 1 Nephi 1:6
@@ -62,21 +62,78 @@
     if (stored > 0) RATE = stored;
   } catch (e) {}
 
-  /* The connectives, as the gloss column names them. */
-  var CONNECTIVE = /^(therefore|wherefore|and yet|but|nevertheless|yea|for|behold|now|and now|and it came to pass)\b/i;
-  /* The waw-consecutive: waw + patach/qamats + a prefix-conjugation letter.
-     This is the form that opens a new narrative clause, and it needs no word
-     list — the shape is the grammar. */
-  var WAYYIQTOL = /^ו[ַָ][יתנא]/;
-  /* A gloss ending in any of these binds to the next word and must not be
-     split off from it. "of" is the construct; the rest are prepositions that
-     govern what follows. */
-  var BINDS = /\b(of|in|to|unto|with|from|upon|all|the)$/i;
-  /* A waw-word continues a phrase; it never starts one afresh. */
-  var CONTINUES = /^[ו]/;
+  /* WHERE A PHRASE ENDS, MEASURED RATHER THAN GUESSED.
+   *
+   * The te'amim are a punctuation system: every Masoretic accent is either
+   * disjunctive (break after this word) or conjunctive (bind it forward).
+   * The Tanakh is fully accented, so the question "where does a phrase end"
+   * has 283,561 worked examples in it. tools/build_phrase_map.py counts them.
+   *
+   * Across those, 22.1% of non-verse-final words carry a rank<=2 disjunctive.
+   * That is the baseline every rule below is measured against — the share of
+   * cases that really are a break when the NEXT word is of this shape:
+   *
+   *     וְעַתָּה           97.3%   lift 4.41x
+   *     לָכֵן             96.8%        4.39x
+   *     וַיְהִי           93.4%        4.23x
+   *     יַעַן             93.1%        4.22x
+   *     וְאַף             85.0%        3.85x
+   *     פֶּן              82.7%        3.75x
+   *     כִּי              81.9%        3.71x
+   *     הִנֵּה            79.3%        3.60x
+   *     any wayyiqtol     79.0%        3.58x
+   *
+   * Everything below is left alone, because near chance is not a rule:
+   * אֲשֶׁר 46%, עַתָּה 44%, אַף 40%.
+   *
+   * A PLAIN WAW IS NOT A BREAK, and this is where the first attempt went
+   * wrong in both directions. Taken flat it looks like one — 57.8%, nearly
+   * three times chance — so the rule was added, and it promptly split "a
+   * goodly father AND a goodly mother". The WLC's morphology tags say why:
+   *
+   *     וְ + verb    70.2%      וְ + noun       48.2%
+   *     וְ + pronoun 86.0%      וְ + adjective  36.5%
+   *
+   * A waw before a verb opens a clause; a waw before a noun coordinates
+   * inside one. The reader has no morphology to tell them apart, so the
+   * blanket rule is dropped and only the waw-consecutive — which IS
+   * detectable, by its patach — is kept.
+   *
+   * These BIND. They follow a break LESS often than chance, which is the
+   * construct chain showing up in the measurement:
+   *
+   *     אֵת / אֶת         17.9%   lift 0.81x
+   *     כֹּל / כׇּל       15.8%        0.72x
+   */
+  var BREAK_BEFORE = [
+    /^וְעַתָּה/, /^לָכֵן/, /^עַל־?כֵּן/, /^וַיְהִי/, /^יַעַן/,
+    /^וְאַף/, /^פֶּן/, /^כִּי/, /^ו?ְ?הִנֵּה/,
+    /^ו[ַָ][איתנ]/               /* the waw-consecutive */
+  ];
+  /* Below chance: these bind to what precedes them. */
+  var BINDS_HEB = [/^אֵת/, /^אֶת/, /^כׇּל/, /^כָּל/];
+  /* A gloss ending in "of" is the construct chain, which no accent may split
+     — and the same is true of any preposition governing what follows. Gen 1:9
+     was coming out "…the waters UNDER | THE HEAVENS…" because "under" was not
+     on this list. */
+  var BINDS = /\b(of|in|to|unto|with|from|upon|on|all|the|a|under|over|before|after|against|among|between|into|through|beneath|above|beside|toward|towards|about|and)$/i;
 
   var SUBST = [[/יְהוָה/g, 'אֲדֹנָי'],   /* יהוה -> אדני  */
                [/יְהוִה/g, 'אֱלֹהִים']]; /* יהוה(Elohim) -> אלהים */
+
+  /** does this word open a clause? (measured — see the table above) */
+  function opensClause(heb) {
+    if (bindsBack(heb)) return false;
+    for (var i = 0; i < BREAK_BEFORE.length; i++) {
+      if (BREAK_BEFORE[i].test(heb)) return true;
+    }
+    return false;
+  }
+  /** the object marker and כל bind to what precedes; never break before them */
+  function bindsBack(heb) {
+    for (var i = 0; i < BINDS_HEB.length; i++) if (BINDS_HEB[i].test(heb)) return true;
+    return false;
+  }
 
   /** the form to SPEAK for a word — never the form to show */
   function spoken(heb) {
@@ -97,8 +154,7 @@
     units.forEach(function (el, i) {
       var heb = el.getAttribute('data-h') || '';
       var gloss = (el.querySelector('.gl') || {}).textContent || '';
-      if (i > 0 && cur.length >= MIN_PHRASE &&
-          (CONNECTIVE.test(gloss) || WAYYIQTOL.test(heb))) {
+      if (i > 0 && cur.length >= MIN_PHRASE && opensClause(heb)) {
         out.push(cur); cur = [];
       }
       if (silent(heb)) return;
@@ -122,7 +178,7 @@
         for (var k = 0; k < 2; k++) {
           var j = cands[k];
           if (j <= 0 || j >= p.length) continue;
-          if (CONTINUES.test(p[j].getAttribute('data-h') || '')) continue;
+          if (bindsBack(p[j].getAttribute('data-h') || '')) continue;
           var prevGloss = (p[j - 1].querySelector('.gl') || {}).textContent || '';
           if (BINDS.test(prevGloss.replace(/[,;:—]\s*$/, '').trim())) continue;
           best = j; break;
