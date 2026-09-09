@@ -251,7 +251,9 @@
       '.ra-speed{font-family:inherit;font-size:.74em;letter-spacing:.03em;cursor:pointer;' +
       'background:transparent;color:var(--here,#7A5412);border:1px solid var(--rule,#DCCDB2);' +
       'border-radius:999px;padding:4px 11px;margin:6px 0 2px 8px;direction:ltr;min-width:44px}' +
-      '.ra-speed:hover{background:var(--highlight,rgba(0,0,0,.06))}';
+      '.ra-speed:hover{background:var(--highlight,rgba(0,0,0,.06))}' +
+      '.ra-bar{display:flex;align-items:center;justify-content:center;gap:0;'+
+      'margin:2px 0 14px;direction:ltr}';
     document.head.appendChild(s);
   }
 
@@ -359,45 +361,69 @@
 
   /* ---- the control ---------------------------------------------------- */
 
+  /** the control bar for one chapter — play button plus the speed chip */
+  function buildBar(panel) {
+    var bar = document.createElement('div');
+    bar.className = 'ra-bar';
+
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'ra-btn';
+    b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = '<span class="ra-icon" aria-hidden="true">▶</span>' +
+                  '<span class="ra-label">Read aloud</span>';
+    b.addEventListener('click', function () {
+      if (state.on) { stop(); return; }
+      state.btn = b;
+      play(panel);
+    });
+    bar.appendChild(b);
+
+    /* cycles, persists, and takes effect on the next clause without
+       interrupting the one being spoken */
+    var sp = document.createElement('button');
+    sp.type = 'button';
+    sp.className = 'ra-speed';
+    sp.title = 'Reading speed';
+    sp.textContent = RATE.toFixed(2).replace(/0$/, '') + '\u00d7';
+    sp.addEventListener('click', function () {
+      var n = SPEEDS.indexOf(RATE);
+      RATE = SPEEDS[(n + 1) % SPEEDS.length];
+      try { localStorage.setItem('sw-read-rate', String(RATE)); } catch (e) {}
+      var chips = document.querySelectorAll('.ra-speed');
+      for (var k = 0; k < chips.length; k++) {
+        chips[k].textContent = RATE.toFixed(2).replace(/0$/, '') + '\u00d7';
+      }
+    });
+    bar.appendChild(sp);
+    return bar;
+  }
+
   function mount() {
     if (!window.speechSynthesis) return;          // no engine: no control
     ensureStyle();
     var heads = document.querySelectorAll('.chapter-heading');
     for (var i = 0; i < heads.length; i++) {
-      if (heads[i].querySelector('.ra-btn')) continue;
-      var b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'ra-btn';
-      b.setAttribute('aria-pressed', 'false');
-      b.innerHTML = '<span class="ra-icon" aria-hidden="true">▶</span>' +
-                    '<span class="ra-label">Read aloud</span>';
-      (function (btn, head) {
-        btn.addEventListener('click', function () {
-          if (state.on) { stop(); return; }
-          state.btn = btn;
-          /* the chapter is whatever shares this heading's panel */
-          play(head.closest('.chapter-panel') || head.parentNode);
-        });
-      })(b, heads[i]);
-      heads[i].appendChild(b);
+      var head = heads[i];
+      var panel = head.closest('.chapter-panel') || head.parentNode;
+      var bar = panel.querySelector('.ra-bar') || buildBar(panel);
 
-      /* the speed chip — cycles, persists, and takes effect on the next
-         clause without interrupting the one being spoken */
-      var sp = document.createElement('button');
-      sp.type = 'button';
-      sp.className = 'ra-speed';
-      sp.title = 'Reading speed';
-      sp.textContent = RATE.toFixed(2).replace(/0$/, '') + '\u00d7';
-      sp.addEventListener('click', function () {
-        var i = SPEEDS.indexOf(RATE);
-        RATE = SPEEDS[(i + 1) % SPEEDS.length];
-        try { localStorage.setItem('sw-read-rate', String(RATE)); } catch (e) {}
-        var chips = document.querySelectorAll('.ra-speed');
-        for (var k = 0; k < chips.length; k++) {
-          chips[k].textContent = RATE.toFixed(2).replace(/0$/, '') + '\u00d7';
-        }
-      });
-      heads[i].appendChild(sp);
+      /* IT BELONGS AFTER THE CHAPTER SUMMARY AND ABOVE VERSE ONE, and it has
+         to be PLACED rather than appended once. A chapter heading is empty
+         when this first runs — the summary, its Hebrew and that summary's own
+         interlinear flow are all rendered afterwards — so a bar appended to
+         the heading ends up ABOVE everything the renderer adds next. Anchor
+         it to the first verse instead, and re-anchor whenever the observer
+         sees the chapter fill in. The keyed verse is the anchor, so on the
+         Book of Mormon it lands below the colophon rather than above it,
+         which is also where the reading starts. */
+      var first = panel.querySelector('.verse[data-verse-key]') ||
+                  panel.querySelector('.verse');
+      if (first && first.parentNode) {
+        if (bar.nextElementSibling !== first) first.parentNode.insertBefore(bar, first);
+      } else if (!bar.parentNode) {
+        head.appendChild(bar);                    // nothing rendered yet
+      }
     }
   }
 
