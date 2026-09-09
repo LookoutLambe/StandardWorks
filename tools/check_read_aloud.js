@@ -103,6 +103,30 @@ for (const [input, want, why] of CASES) {
          '\n        got  ' + cp(got) + '\n        want ' + cp(want));
   }
 }
+/* ── the pairs she renders as silence ─────────────────────────────────────
+   A bigram Carmit cannot say takes the WHOLE utterance down with it — onend
+   fires, no error, no audio — and the reading walks straight past it. Only a
+   full stop between the two words brings it back. Each pair below was proved
+   with `say -v Carmit -o f.aiff`: silent renders a header-only 4096-byte
+   AIFF, and with the period it renders real audio. */
+const join = sb.window.SWReadAloud && sb.window.SWReadAloud.sayJoin;
+if (!join) { fail('window.SWReadAloud.sayJoin is gone — the say-stop pairs are unguarded'); process.exit(1); }
+const SAY_STOP_CASES = [
+  ['בְּשֶׁבֶת', 'אָבִי',      '1 Nephi 8:2 — "this WHOLE phrase is being left off"'],
+  ['גִד',      'וְטֵאוֹמְנֶר', 'Alma 58:20 and 58:23 — Gid and Teomner'],
+  ['וַיֹּאמֶר', 'אֵלֵינוּ',    'NOT a stop — an ordinary pair must still be joined by a space'],
+];
+let joinBad = 0;
+for (const [a, b, why] of SAY_STOP_CASES) {
+  const wantStop = !/NOT a stop/.test(why);
+  const got = join(a, b);
+  if ((got === '. ') !== wantStop) {
+    joinBad++;
+    fail(a + ' + ' + b + ' joined by "' + got + '"\n        ' + why);
+  }
+}
+if (!joinBad) ok(SAY_STOP_CASES.length + ' say-stop pairs join as they must (a period only where she needs one)');
+
 if (!bad) ok(CASES.length + ' pronunciation rules still hold (the Name, qamats qatan, weak wayyiqtol, ־ָיו, consonantal vav, Sariah, the maqqef)');
 
 /* ── invariants over the real corpus, not a sample of hand-picked words ───

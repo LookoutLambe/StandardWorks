@@ -816,38 +816,53 @@
   }
 
   /* SOMETIMES SHE SAYS NOTHING AT ALL, AND THE READING WALKS ON PAST IT.
-     Carmit's analyser can fail on a PAIR of words and take the whole
-     utterance down with it, silently: onend fires, no error, no audio. The
-     reader heard 1 Nephi 8:2 begin at "and he said unto us" — its first four
-     words, וַיְהִי בְּשֶׁבֶת אָבִי בַּמִּדְבָּר, were never spoken.
+     Carmit's analyser fails on a PAIR of words and takes the whole utterance
+     down with it, silently: onend fires, no error, no audio. The translator
+     heard 1 Nephi 8:2 begin at "and he said unto us" — its first four words,
+     וַיְהִי בְּשֶׁבֶת אָבִי בַּמִּדְבָּר, were never spoken.
 
      The trigger is a bigram, not a word. Each of those four says itself
      perfectly alone; בְּשֶׁבֶת אָבִי together is silence, and so is
      בְּשֶׁבֶת אָדָם, while בְּשֶׁבֶת דָּוִד and לְשֶׁבֶת אָבִי are fine.
-     The failure is scoped to the SENTENCE: putting a full stop between the
-     two words brings the whole utterance back, and so does splitting it into
-     two utterances — which is what this does. No table of bad pairs can be
-     right for long, because the analyser is Apple's and ships with the OS;
-     the phrase itself reports the failure, so the phrase is what is asked.
+     The failure is scoped to the SENTENCE, and a FULL STOP between the two
+     words brings the whole utterance back — 4 KB of header becomes 98 KB of
+     audio. Nothing else does: not a comma, not a newline, not two spaces.
 
-     A silent utterance is unmistakable: no boundary events and it returns in
-     a few milliseconds. Both conditions are required. A browser that never
-     implements onboundary would otherwise re-speak every phrase it reads,
-     and a phrase heard twice is worse than the bug. */
-  var SILENT_MS   = 150;   /* no real utterance of one word returns this fast */
-  var MAX_SPLIT   = 4;     /* halving a 9-word cap reaches single words */
-  var WATCH_MS    = 400;   /* how often to ask the engine whether it is busy */
-  var WATCH_TRIES = 3;     /* ... and how many idle answers mean it is done */
+     So the period is the whole fix, and it is a change to the TEXT — the
+     reading still speaks one phrase per utterance and the control flow is
+     untouched. THAT MATTERS. Two attempts to detect the silence at runtime
+     and re-speak the phrase both stopped the reader dead: the retry cannot
+     be issued from inside onend (WebKit will not start an utterance there),
+     and a watchdog cannot tell a wedged engine from a busy one. Neither
+     failure was reachable in a harness, because this browser has no voice to
+     test against. A table cannot stall anything: its worst case is a needless
+     pause, where a mis-detection's worst case is silence.
+
+     Every entry is a pair proved with `say -v Carmit -o f.aiff`, which is the
+     same synthesiser — a swallowed phrase writes a header-only 4096-byte
+     AIFF, so it needs no ear and no transcription to find. */
+  var SAY_STOP = [
+    'בְּשֶׁבֶת אָבִי',      /* 1 Nephi 8:2 — the phrase the translator heard go missing */
+    'גִד וְטֵאוֹמְנֶר'      /* Alma 58:20 and 58:23 — Gid and Teomner, the same way */
+  ];
+
+  /** what joins two words of one phrase: a space, or a stop she needs */
+  function sayJoin(prev, next) {
+    var pair = prev + ' ' + next;
+    for (var i = 0; i < SAY_STOP.length; i++) if (pair === SAY_STOP[i]) return '. ';
+    return ' ';
+  }
 
   /** speak one clause, highlighting each word as the engine reaches it */
-  function speakPhrase(els, token, pitch, rate, depth) {
+  function speakPhrase(els, token, pitch, rate) {
     return new Promise(function (resolve) {
-      var text = '', spans = [];
+      var text = '', spans = [], prev = '';
       els.forEach(function (el, i) {
         var w = spoken(el.getAttribute('data-h') || '');
-        if (i) text += ' ';
+        if (i) text += sayJoin(prev, w);
         spans.push({ start: text.length, end: text.length + w.length, el: el });
         text += w;
+        prev = w;
       });
       if (!text.trim()) return resolve();
 
@@ -858,9 +873,7 @@
       u.rate = RATE * (rate || 1);
       u.pitch = pitch || 1;
 
-      var heard = 0, t0 = Date.now(), settled = false, quiet = 0;
       u.onboundary = function (e) {
-        heard++;
         if (token !== state.token) return;
         for (var i = 0; i < spans.length; i++) {
           if (e.charIndex >= spans[i].start && e.charIndex < spans[i].end) {
@@ -869,47 +882,8 @@
           }
         }
       };
-      function done() {
-        if (settled) return;             /* onend and onerror can both arrive */
-        settled = true;
-        if (token !== state.token) return resolve();
-        if (heard || Date.now() - t0 >= SILENT_MS ||
-            els.length < 2 || (depth || 0) >= MAX_SPLIT) return resolve();
-        /* NOTHING WAS SPOKEN — halve it and say the halves, FROM A TIMER.
-           Never from inside this handler: WebKit will not start an utterance
-           from within an onend dispatch, so a speak() called here does not
-           run, its onend never arrives, and the chapter stops on the phrase
-           that was supposed to be rescued. That is exactly what happened —
-           1 Nephi 8 played verse 1 and halted. The emulator that proved this
-           guard fired onend from a timer, so the retry never re-entered the
-           engine the way the real one does, and the bug could not appear. */
-        var mid = Math.ceil(els.length / 2), d = (depth || 0) + 1;
-        setTimeout(function () {
-          speakPhrase(els.slice(0, mid), token, pitch, rate, d)
-            .then(function () { return speakPhrase(els.slice(mid), token, pitch, rate, d); })
-            .then(resolve, resolve);
-        }, 0);
-      }
-      u.onend = done;
-      u.onerror = done;
-
-      /* THE READING MUST NEVER BE ABLE TO STOP, whatever the engine does.
-         An utterance whose onend never arrives hangs the chapter for good,
-         and there is no way back except pressing stop. This polls instead of
-         trusting the event, and it only concludes while the synthesiser
-         itself reports that it is neither speaking nor holding anything
-         queued — so it can never cut a phrase that is still playing. The
-         worst it can do is give up on a phrase and read the next one, which
-         is what the reader did before any of this existed. */
-      (function watch() {
-        if (settled || token !== state.token) return;
-        var busy = true;
-        try { busy = speechSynthesis.speaking || speechSynthesis.pending; } catch (e) {}
-        quiet = (busy || state.paused) ? 0 : quiet + 1;
-        if (quiet >= WATCH_TRIES && Date.now() - t0 > SILENT_MS) return done();
-        setTimeout(watch, WATCH_MS);
-      })();
-
+      u.onend = function () { resolve(); };
+      u.onerror = function () { resolve(); };
       speechSynthesis.speak(u);
     });
   }
@@ -1171,6 +1145,7 @@
   if (document.body) mo.observe(document.body, { childList: true, subtree: true });
 
   window.SWReadAloud = { play: play, stop: stop, phrases: phrases, spoken: spoken,
+                         sayJoin: sayJoin,
                          mount: mount, speeds: SPEEDS,
                          setRate: function (r) {
                            RATE = r;
