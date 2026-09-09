@@ -84,6 +84,35 @@
      thing that knows which verses they are, so the keys ship beside the
      breaks in the same file. The rise goes ABOVE where the sentence started
      and does not slow: a question that trails off is not a question. */
+  /* AND THE QUESTION MARK IS NOT THE ONLY QUESTION. A verse may ask something
+     in the MIDDLE of itself and go on afterwards, and the English question
+     mark at the end — which is all SW_ASK records — says nothing about that.
+     Hebrew marks it in the text: the INTERROGATIVE HE, הֲ, a he carrying a
+     hataf patach at the head of a word. הֲלוֹא "is it not", הֲיֵשׁ "is there",
+     הֲתוּכְלוּ "can you". 1,006 of them across the six volumes.
+
+     THE PARTICLE ALONE IS NOT ENOUGH — 782 more words open with that same
+     hataf patach and are not asking anything: הֲדַד is Ben-hadad, הֲדַדְעֶזֶר
+     Hadadezer, הֲמוֹן "the multitude of", הֲוֵית "I was". The gloss decides, as
+     it did for the ענו family: the English of a real interrogative OPENS with
+     one — "is it not", "do you suppose", "can you" — and a name does not.
+     A handful of particles are interrogative whatever the gloss says. */
+  var ASK_HE    = /^\u05D4\u05B2/;
+  var ASK_GLOSS = /^(is|are|was|were|am|do|does|did|can|could|shall|will|would|has|have|had|why|what|who|whom|whose|where|when|how|whether|should)\b/i;
+  var ASK_ALWAYS = { '\u05D4\u05B2\u05DC\u05B9\u05D0': 1,              /* הֲלֹא  */
+                     '\u05D4\u05B2\u05DC\u05D5\u05B9\u05D0': 1,        /* הֲלוֹא */
+                     '\u05D4\u05B2\u05DB\u05B4\u05D9': 1 };             /* הֲכִי  */
+
+  /** does this word open a question? */
+  function opensQuestion(el) {
+    var h = el.getAttribute('data-h') || '';
+    var seg = h.split('\u05BE')[0];
+    if (!ASK_HE.test(seg)) return false;
+    if (ASK_ALWAYS[seg]) return true;
+    var g = ((el.querySelector('.gl') || {}).textContent || '').replace(/-/g, ' ').trim();
+    return ASK_GLOSS.test(g);
+  }
+
   var PITCH_ASK  = 1.22;
   var RATE_ASK   = 1.0;
   var MAX_PHRASE = 9;       // words: the cap is a last resort, not routine
@@ -791,6 +820,17 @@
     for (var i = 0; i < verses.length; i++) {
       var key = verses[i].getAttribute('data-verse-key');
       var gs = phrases(wordsOf(verses[i]), key);
+      /* A question RISES WHERE IT ENDS, not where it starts — so from the
+         phrase holding the interrogative he, walk on to the end of that
+         clause and put the rise there. */
+      for (var q = 0; q < gs.length; q++) {
+        var opens = false;
+        for (var w = 0; w < gs[q].length && !opens; w++) opens = opensQuestion(gs[q][w]);
+        if (!opens) continue;
+        var k = q;
+        while (k < gs.length - 1 && !gs[k].stop) k++;
+        gs[k].ask = true;
+      }
       if (gs.length && window.SW_ASK && window.SW_ASK[key]) gs[gs.length - 1].ask = true;
       for (var j = 0; j < gs.length; j++) all.push(gs[j]);
     }
