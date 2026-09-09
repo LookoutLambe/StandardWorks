@@ -43,8 +43,11 @@
      0.75 here is NOT the 75% we tuned by ear. The scale is also compressed at
      the low end, so the choice belongs to the reader rather than to a
      constant: the chip beside the button cycles it and the choice sticks. */
-  var SPEEDS = [0.75, 0.6, 0.5, 0.4, 0.3];
-  var RATE = 0.5;           // the default; overridden by the stored choice
+  /* Slowest first, so the default is the head of the cycle and tapping only
+     ever speeds up. 0.3 is where this was tuned by ear against the rendered
+     file, and the default is the setting almost every reader will keep. */
+  var SPEEDS = [0.3, 0.4, 0.5, 0.6, 0.75];
+  var RATE = 0.3;           // the default; overridden by the stored choice
   var PHRASE_GAP = 420;     // ms of silence between clauses
   var MAX_PHRASE = 8;       // words, before a long clause is split again
   /* A BREATH GROUP HAS A FLOOR. Biblical narrative is one long chain of
