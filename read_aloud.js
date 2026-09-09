@@ -539,7 +539,7 @@
       'cursor:pointer;display:flex;align-items:center;gap:7px;min-height:44px;' +
       'padding:0 18px;background:transparent;color:inherit;border:0}' +
       '#ra-float button:active{background:rgba(0,0,0,.16)}' +
-      '#ra-stop,#ra-pause,#ra-fwd{border-left:1px solid rgba(255,255,255,.34)}' +
+      '#ra-stop,#ra-pause,#ra-back{border-left:1px solid rgba(255,255,255,.34)}' +
       '#ra-back span:last-child,#ra-fwd span:last-child{font-size:.82em;opacity:.9}' +
       '#ra-back,#ra-fwd{padding:0 14px;gap:4px}';
     document.head.appendChild(s);
@@ -606,17 +606,16 @@
     f = document.createElement('div');
     f.id = 'ra-float';
 
-    /* BACK FIRST, because it is the one that gets used. Hearing a phrase
-       again is the whole point of a control like this; skipping forward is
-       the rarer wish, and it sits on the far side so the thumb finds Back
-       without looking. */
-    var back = document.createElement('button');
-    back.type = 'button';
-    back.id = 'ra-back';
-    back.innerHTML = '<span aria-hidden="true">\u21BA</span><span>10</span>';
-    back.setAttribute('aria-label', 'Back ten seconds');
-    back.addEventListener('click', function () { skip(-10); });
-    f.appendChild(back);
+    /* THE READING RUNS RIGHT TO LEFT, so back is on the RIGHT and forward on
+       the LEFT — the buttons point the way the text moves, not the way an
+       English media player does. */
+    var fwd = document.createElement('button');
+    fwd.type = 'button';
+    fwd.id = 'ra-fwd';
+    fwd.innerHTML = '<span aria-hidden="true">\u21BA</span><span>10</span>';
+    fwd.setAttribute('aria-label', 'Forward ten seconds');
+    fwd.addEventListener('click', function () { skip(10); });
+    f.appendChild(fwd);
 
     var p = document.createElement('button');
     p.type = 'button';
@@ -631,13 +630,13 @@
     s2.addEventListener('click', function () { stop(); });
     f.appendChild(s2);
 
-    var fwd = document.createElement('button');
-    fwd.type = 'button';
-    fwd.id = 'ra-fwd';
-    fwd.innerHTML = '<span aria-hidden="true">\u21BB</span><span>10</span>';
-    fwd.setAttribute('aria-label', 'Forward ten seconds');
-    fwd.addEventListener('click', function () { skip(10); });
-    f.appendChild(fwd);
+    var back = document.createElement('button');
+    back.type = 'button';
+    back.id = 'ra-back';
+    back.innerHTML = '<span aria-hidden="true">\u21BB</span><span>10</span>';
+    back.setAttribute('aria-label', 'Back ten seconds');
+    back.addEventListener('click', function () { skip(-10); });
+    f.appendChild(back);
 
     document.body.appendChild(f);
     setPauseLabel();
