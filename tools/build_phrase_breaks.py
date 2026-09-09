@@ -47,6 +47,7 @@ phrases for seven words, which is correct for chant and far too fine to read
 along to.
 """
 import glob, json, os, re, sys, unicodedata as ud
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 WLC = os.path.expanduser('~/Desktop/morphhb/wlc')
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -56,6 +57,12 @@ RANK = {0x0591: 1, 0x0592: 2, 0x0593: 2, 0x0594: 2, 0x0595: 2, 0x0597: 2,
         0x059C: 4, 0x059D: 4, 0x059E: 4, 0x059F: 4, 0x05A0: 4, 0x05A1: 4,
         0x05A2: 2, 0x05AB: 3, 0x05AD: 3, 0x05AE: 3}
 BREAK_AT = 2
+BARE = lambda h: re.sub(u'[\u0591-\u05BD\u05BF-\u05C7]', '', h or '')
+try:
+    MT = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                     'mt_break_before.json'), encoding='utf-8'))
+except Exception:
+    MT = {}
 ALL_ACC = set(range(0x0591, 0x05B0)) | {0x05BD}
 
 N = lambda s: ud.normalize('NFC', s)
@@ -235,8 +242,24 @@ def main():
             marked = by_ref.get((ch, v))
             got = align(toks, marked) if marked else None
             if got is None:
+                # THE 1,366 THAT WOULD NOT ALIGN STILL GET AN ANSWER. A
+                # versification or spelling divergence loses this verse's own
+                # accents, and it used to fall through to read_aloud.js's nine
+                # rules with nothing else. But the Tanakh has an opinion about
+                # the WORDS in it — how often a break falls in front of each,
+                # over every other place it occurs — and that opinion is
+                # already built for the Book of Mormon. Same table, same
+                # threshold.
                 miss += 1
                 misses_by_book[en] = misses_by_book.get(en, 0) + 1
+                keep = [t for t in toks if not ketiv(t)]
+                fb = []
+                for i in range(len(keep) - 1):
+                    r = MT.get(BARE(keep[i + 1]))
+                    if r and r[1] >= 25 and r[0] / float(r[1]) >= 0.75:
+                        if not fb or i - fb[-1] >= 2: fb.append(i)
+                if fb:
+                    table['%s|%d|%d' % (en, ch, v)] = fb
                 continue
             ok += 1
             got = drop_ketiv(toks, got)
