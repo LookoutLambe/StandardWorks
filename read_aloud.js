@@ -252,6 +252,32 @@
     return out;
   }
 
+  /* A WORD-FINAL BARE VAV IS THE CONSONANT /v/ and she reads it as a vowel:
+     וַיְצַו came out "vayetsao". It closes the syllable — vay-tsav — and the
+     tell is the letter before it, which carries a vowel of its own. 807 words
+     end this way, and three forms are 59% of them: יַחְדָּו, וַיְצַו, עֵשָׂו.
+
+     These are overrides rather than a rule, matched as an ENDING on the
+     unpointed form so that prefixes come along without entries of their own:
+     לְעֵשָׂו unpoints to לעשו, not עשו, so an exact key would miss the nine of
+     those and the seven וְעֵשָׂו. Modern Hebrew writes two of
+     them with a yod, and עשו is the reason a rule would not do: unpointed it
+     is equally עָשׂוּ, "they did", so stripping the points off the patriarch's
+     name has her saying "asu". A name is worth an entry. */
+  var SAY_BARE = {
+    '\u05D9\u05D7\u05D3\u05D5': '\u05D9\u05D7\u05D3\u05D9\u05D5',   /* יחדו -> יחדיו  yachdav */
+    '\u05E2\u05E9\u05D5': '\u05E2\u05E9\u05D9\u05D5'                  /* עשו  -> עשיו   Esav    */
+  };
+
+  /** does this word end in a consonantal vav — one with no vowel of its own,
+      after a letter that has one? */
+  function endsInV(w) {
+    var u = units(w);
+    if (u.length < 2) return false;
+    var last = u[u.length - 1];
+    return last[0] === '\u05D5' && last[1] === '' && VOWEL.test(u[u.length - 2][1]);
+  }
+
   /** the form to SPEAK for a word — never the form to show */
   function spoken(heb) {
     var s = heb;
@@ -278,7 +304,18 @@
          The spelling that produces is the ordinary one — כׇּל becomes כֹּל,
          which is how the Tanakh writes that word anyway. */
       parts[k] = parts[k].replace(QATAN, '\u05B9');
-      parts[k] = YAV.test(parts[k]) ? ktivMale(parts[k]) : writeDoubling(parts[k]);
+      if (YAV.test(parts[k])) { parts[k] = ktivMale(parts[k]); continue; }
+      if (endsInV(parts[k])) {
+        var bare = parts[k].replace(POINTS, '');
+        for (var b in SAY_BARE) {
+          if (bare.length >= b.length && bare.slice(-b.length) === b) {
+            bare = bare.slice(0, -b.length) + SAY_BARE[b]; break;
+          }
+        }
+        parts[k] = bare;
+        continue;
+      }
+      parts[k] = writeDoubling(parts[k]);
     }
     return parts.join(' ');
   }
