@@ -2488,6 +2488,52 @@ body:not(.hide-gloss):not(.dual-mode) .heading-flow > .word-group {
    Following a reference out of the study panel is otherwise one-way, and
    inside the iOS app there is no browser Back. Sits above the footer, out of
    the reading column, and clears itself once used. */
+/* ── Back to top ───────────────────────────────────────────────────────────
+   A chapter of Alma is a long way down and the only way back was a swipe or
+   the scroll bar. This appears once the reader is well past the top and takes
+   them there.
+
+   BOTTOM LEFT, and that is not arbitrary: the reading control pill floats
+   CENTRED and #sw-return floats centred too, so the centre is taken. The left
+   corner is the one place a persistent control can sit without ever landing
+   under the reader's thumb mid-verse or colliding with either of them.
+
+   It sits at the same height as #sw-return, above the footer and clear of the
+   home indicator, and it is NOT navy for the reason recorded there — it hovers
+   over the footer bar, which is chrome, and navy on navy is invisible exactly
+   where it matters. Paper ground and a gold rule: quieter than the return
+   banner, which is a primary action, and this is a convenience. */
+#sw-totop {
+  position: fixed;
+  left: max(12px, env(safe-area-inset-left, 0px));
+  bottom: calc(var(--sw-footer-h, 64px) + max(10px, env(safe-area-inset-bottom, 0px)));
+  z-index: calc(var(--z-chrome) + 2);
+  display: none;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;              /* a control tapped without looking */
+  padding: 8px 15px;
+  border: 1px solid var(--here);
+  border-radius: 999px;
+  background: var(--paper, var(--bg));
+  color: var(--ink);
+  font-family: 'David Libre', 'Georgia', serif;
+  font-size: 0.92em;
+  cursor: pointer;
+  direction: ltr;
+  unicode-bidi: isolate;
+  white-space: nowrap;
+  box-shadow: var(--e2);
+  opacity: 0;
+  transition: opacity .18s ease, transform .18s ease;
+  transform: translateY(8px);
+}
+#sw-totop.open { display: flex; opacity: 1; transform: translateY(0); }
+#sw-totop:hover { background: var(--highlight, var(--paper)); }
+#sw-totop:focus-visible { outline: 2px solid var(--here); outline-offset: 2px; }
+#sw-totop .tt-arrow { color: var(--here); font-weight: 700; }
+@media (prefers-reduced-motion: reduce) { #sw-totop { transition: none; } }
+
 #sw-return {
   position: fixed;
   left: 50%;

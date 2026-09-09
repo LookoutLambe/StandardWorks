@@ -2414,6 +2414,44 @@ function _swVowelSlots(w) {
   return out;
 }
 
+/* ── Back to top ───────────────────────────────────────────────────────────
+   A chapter of Alma runs to a hundred screens and the only way back up was a
+   swipe or the scroll bar. The control appears once the reader is a screen
+   and a half down and goes quiet again near the top, so it is never in the
+   way of someone who is already there.
+
+   IT LISTENS FOR 'scroll' AND THAT IS SAFE HERE, unlike the read-aloud
+   follower, which must not: that one distinguishes the reader's own gesture
+   from its own scrolling, and 'scroll' fires for both. This only asks how far
+   down the page is, which is the same answer whoever did the scrolling. */
+var _ttEl = null, _ttTick = false;
+function _swToTop() {
+  if (_ttEl) return _ttEl;
+  var b = document.createElement('button');
+  b.id = 'sw-totop';
+  b.type = 'button';
+  b.setAttribute('aria-label', 'Back to top');
+  b.innerHTML = '<span class="tt-arrow" aria-hidden="true">\u2191</span><span>Top</span>';
+  b.addEventListener('click', function () {
+    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    b.classList.remove('open');
+  });
+  document.body.appendChild(b);
+  _ttEl = b;
+  return b;
+}
+function _swToTopSync() {
+  _ttTick = false;
+  var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+  _swToTop().classList.toggle('open', y > window.innerHeight * 1.5);
+}
+window.addEventListener('scroll', function () {
+  if (_ttTick) return;
+  _ttTick = true;
+  requestAnimationFrame(_swToTopSync);
+}, { passive: true });
+
 function applyStressMarks(root) {
   var table = window.SW_STRESS;
   if (!table) return;                       /* the volume's table has not landed yet */
