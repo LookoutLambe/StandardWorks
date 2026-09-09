@@ -12,6 +12,14 @@ node "$ROOT/tools/check_shared_drift.js" || exit 1
 #     change. tools/check_bom_hebrew_lock.js compares every Hebrew token sequence
 #     in bom/verses/ against tools/bom_hebrew_lock.json and blocks the commit.
 node "$ROOT/tools/check_bom_hebrew_lock.js" || exit 1
+# 0c) The read-aloud pronunciation rules, which have no other guard. Every one
+#     was found by ear — "banav is reading as banaiyu", "tsivitik for
+#     tsivitika", "its pronouncing sariah as sa-rai-yaha thats bad" — and the
+#     only symptom of losing one is a word that sounds wrong somewhere in
+#     728,289 of them. tools/check_read_aloud.js pins the exact string handed
+#     to the synthesiser for each, and sweeps the corpus for the qamats qatan
+#     and stripped-maqqef invariants.
+node "$ROOT/tools/check_read_aloud.js" || exit 1
 STAMP="$(date -u +%Y-%m-%dT%H-%M-%S)"
 ISO="$(date -u +%Y-%m-%dT%H:%M:%S).000Z"
 printf '{\n  "build": "%s",\n  "builtAt": "%s"\n}\n' "$STAMP" "$ISO" > "$ROOT/version.json"
