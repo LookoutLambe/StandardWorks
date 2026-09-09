@@ -226,6 +226,32 @@
     return out;
   }
 
+  /* A DAGESH IN A VAV THAT ALSO CARRIES A VOWEL IS A DOUBLING, NOT A SHURUK.
+     וַיְצַוֵּהוּ is "vaytsavvehu" — the וֵּ is a doubled consonantal /v/, and the
+     tsere on it says so, because a shuruk וּ carries no other vowel. Carmit
+     reads the vav-with-dagesh as the /u/ it is far more often and the word
+     falls apart. 1,861 words have one, most of them the צוה family: צִוָּה,
+     מְצַוֶּה, צִוִּיתִי, and also אִוֶּלֶת, הַחִוִּי, לְהִוָּשַׁע.
+
+     So the doubling is written out, which is all the dagesh was saying:
+     the vav becomes two, the dagesh goes, and EVERY OTHER POINT STAYS. That
+     is the whole difference between this and ktiv male, which cannot be
+     turned loose on the corpus at large — it spells מֹשֶׁה as מושה and
+     דָּוִד as דווד, because names keep conventional spellings that no
+     mechanical rule knows. This changes one letter and invents nothing. */
+  function writeDoubling(w) {
+    var u = units(w), out = '';
+    for (var i = 0; i < u.length; i++) {
+      var ch = u[i][0], m = u[i][1];
+      if (ch === '\u05D5' && m.indexOf(DAGESH) >= 0 && VOWEL.test(m)) {
+        out += '\u05D5\u05D5' + m.split(DAGESH).join('');
+      } else {
+        out += ch + m;
+      }
+    }
+    return out;
+  }
+
   /** the form to SPEAK for a word — never the form to show */
   function spoken(heb) {
     var s = heb;
@@ -252,7 +278,7 @@
          The spelling that produces is the ordinary one — כׇּל becomes כֹּל,
          which is how the Tanakh writes that word anyway. */
       parts[k] = parts[k].replace(QATAN, '\u05B9');
-      if (YAV.test(parts[k])) parts[k] = ktivMale(parts[k]);
+      parts[k] = YAV.test(parts[k]) ? ktivMale(parts[k]) : writeDoubling(parts[k]);
     }
     return parts.join(' ');
   }
