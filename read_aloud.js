@@ -539,13 +539,16 @@
       'cursor:pointer;display:flex;align-items:center;gap:7px;min-height:44px;' +
       'padding:0 18px;background:transparent;color:inherit;border:0}' +
       '#ra-float button:active{background:rgba(0,0,0,.16)}' +
-      '#ra-stop{border-left:1px solid rgba(255,255,255,.34)}';
+      '#ra-stop,#ra-pause,#ra-fwd{border-left:1px solid rgba(255,255,255,.34)}' +
+      '#ra-back span:last-child,#ra-fwd span:last-child{font-size:.82em;opacity:.9}' +
+      '#ra-back,#ra-fwd{padding:0 14px;gap:4px}';
     document.head.appendChild(s);
   }
 
   /* ---- playback ------------------------------------------------------- */
 
-  var state = { on: false, paused: false, token: 0, btn: null, mark: null, touched: 0 };
+  var state = { on: false, paused: false, token: 0, btn: null, mark: null, touched: 0,
+                list: [], at: 0, seek: null, inSentence: 0, panel: null };
   function handTaken() { state.touched = Date.now(); }
   window.addEventListener('wheel', handTaken, { passive: true });
   window.addEventListener('touchmove', handTaken, { passive: true });
@@ -603,6 +606,18 @@
     f = document.createElement('div');
     f.id = 'ra-float';
 
+    /* BACK FIRST, because it is the one that gets used. Hearing a phrase
+       again is the whole point of a control like this; skipping forward is
+       the rarer wish, and it sits on the far side so the thumb finds Back
+       without looking. */
+    var back = document.createElement('button');
+    back.type = 'button';
+    back.id = 'ra-back';
+    back.innerHTML = '<span aria-hidden="true">\u21BA</span><span>10</span>';
+    back.setAttribute('aria-label', 'Back ten seconds');
+    back.addEventListener('click', function () { skip(-10); });
+    f.appendChild(back);
+
     var p = document.createElement('button');
     p.type = 'button';
     p.id = 'ra-pause';
@@ -615,6 +630,14 @@
     s2.innerHTML = '<span aria-hidden="true">\u25A0</span><span>Stop</span>';
     s2.addEventListener('click', function () { stop(); });
     f.appendChild(s2);
+
+    var fwd = document.createElement('button');
+    fwd.type = 'button';
+    fwd.id = 'ra-fwd';
+    fwd.innerHTML = '<span aria-hidden="true">\u21BB</span><span>10</span>';
+    fwd.setAttribute('aria-label', 'Forward ten seconds');
+    fwd.addEventListener('click', function () { skip(10); });
+    f.appendChild(fwd);
 
     document.body.appendChild(f);
     setPauseLabel();
@@ -730,6 +753,7 @@
     var panel = scope || activePanel();
     if (!panel) return;
     var token = ++state.token;
+    state.seek = null; state.inSentence = 0;
     state.paused = false;
     setPauseLabel();
     setButton(true);
@@ -744,31 +768,76 @@
      so the panel can be on screen and empty for a second. And goNext() does
      nothing at all at the end of the volume, which is how the reading knows
      to stop — the chapter never changes, and the wait gives up. */
+  /* THE CHAPTER IS ONE LIST OF PHRASES, NOT A LIST PER VERSE.
+     Skipping ten seconds means moving some number of phrases, and a phrase
+     index that resets at every verse cannot be moved backwards across a verse
+     boundary without unwinding the recursion that built it. Flattening the
+     chapter once, up front, makes a seek a single assignment. A chapter is a
+     few hundred phrases — Alma 32 is 258 — so this costs nothing. */
   function readPanel(panel, token) {
     var verses = Array.prototype.slice.call(
       panel.querySelectorAll('.verse[data-verse-key]'));
     if (!verses.length) { advance(panel, token); return; }
-    (function next(vi) {
+    var all = [];
+    for (var i = 0; i < verses.length; i++) {
+      var gs = phrases(wordsOf(verses[i]), verses[i].getAttribute('data-verse-key'));
+      for (var j = 0; j < gs.length; j++) all.push(gs[j]);
+    }
+    state.list = all;
+    state.at = 0;
+    state.panel = panel;
+    step(token);
+  }
+
+  /* HOW LONG A PHRASE TAKES IS MEASURED, NOT ASSUMED. The rate is a
+     multiplier of the browser's own default, which differs by browser and by
+     voice, so a table of seconds-per-word would be wrong everywhere but here.
+     Each phrase times itself and feeds a running average, and ten seconds is
+     however many phrases that average says it is. */
+  var wps = 2.2;                       /* words per second, until measured */
+  function estimate(g) { return (g.length / wps) + (g.gap || PHRASE_GAP) / 1000; }
+
+  function step(token) {
+    if (token !== state.token) return;
+    var g = state.list[state.at];
+    if (!g) { advance(state.panel, token); return; }
+    if (g.length) keepInView(g[0]);
+    var last = (state.at === state.list.length - 1) || g.stop;
+    var pitch = Math.max(PITCH_MIN, PITCH_TOP - PITCH_STEP * state.inSentence);
+    var rate = 1;
+    if (last) { pitch = PITCH_END; rate = RATE_END; state.inSentence = 0; }
+    else state.inSentence++;
+    var t0 = Date.now();
+    speakPhrase(g, token, pitch, rate).then(function () {
       if (token !== state.token) return;
-      if (vi >= verses.length) { advance(panel, token); return; }
-      var groups = phrases(wordsOf(verses[vi]),
-                           verses[vi].getAttribute('data-verse-key'));
-      var inSentence = 0;                 /* how far into the current sentence */
-      (function step(pi) {
-        if (token !== state.token) return;
-        if (pi >= groups.length) { next(vi + 1); return; }
-        if (groups[pi].length) keepInView(groups[pi][0]);
-        var last = (pi === groups.length - 1) || groups[pi].stop;
-        var pitch = Math.max(PITCH_MIN, PITCH_TOP - PITCH_STEP * inSentence);
-        var rate = 1;
-        if (last) { pitch = PITCH_END; rate = RATE_END; inSentence = 0; }
-        else inSentence++;
-        speakPhrase(groups[pi], token, pitch, rate).then(function () {
-          if (token !== state.token) return;
-          gap(groups[pi].gap || PHRASE_GAP, token).then(function () { step(pi + 1); });
-        });
-      })(0);
-    })(0);
+      var secs = (Date.now() - t0) / 1000;
+      if (secs > 0.25 && g.length) {     /* a cancelled phrase teaches nothing */
+        wps = wps * 0.8 + (g.length / secs) * 0.2;
+      }
+      if (state.seek !== null) {         /* a skip landed while this was speaking */
+        state.at = state.seek; state.seek = null; state.inSentence = 0;
+        step(token); return;
+      }
+      state.at++;
+      gap(g.gap || PHRASE_GAP, token).then(function () { step(token); });
+    });
+  }
+
+  /** move roughly `secs` seconds through the reading, in whole phrases */
+  function skip(secs) {
+    if (!state.on || !state.list.length) return;
+    var i = state.at, budget = Math.abs(secs);
+    while (budget > 0) {
+      var j = secs < 0 ? i - 1 : i + 1;
+      if (j < 0) { i = 0; break; }
+      if (j >= state.list.length) { i = state.list.length - 1; break; }
+      i = j;
+      budget -= estimate(state.list[i]);
+    }
+    state.seek = i;
+    state.paused = false; setPauseLabel();
+    /* cancel resolves the phrase in flight, and its handler takes the seek */
+    try { speechSynthesis.resume(); speechSynthesis.cancel(); } catch (e) {}
   }
 
   function advance(from, token) {
