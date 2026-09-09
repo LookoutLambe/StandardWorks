@@ -103,14 +103,35 @@
                      '\u05D4\u05B2\u05DC\u05D5\u05B9\u05D0': 1,        /* הֲלוֹא */
                      '\u05D4\u05B2\u05DB\u05B4\u05D9': 1 };             /* הֲכִי  */
 
+  /* AND MOST QUESTIONS DO NOT USE THE PARTICLE AT ALL — they use a pronoun.
+     "Why do ye smite your younger brother with a rod?" opens on לָמָּה, and
+     the interrogative he never appears in it, so the rise landed on the NEXT
+     question in the verse and that whole clause was read flat (translator).
+     2,361 of these against 1,006 of the he: מִי who, לָמָּה and מַדּוּעַ why,
+     מָה what, אֵיךְ how, אָנָה whither, מָתַי when, אַיֵּה where.
+
+     The gloss decides again, because the letters are shared with words that
+     ask nothing: מֵי is "the waters of", אֲנָה is "I", and מִי is "O that" or
+     "would that" as often as it is "who". 397 dropped on that test. */
+  var ASK_WORD = { '\u05DC\u05DE\u05D4':1, '\u05DE\u05D3\u05D5\u05E2':1, '\u05DE\u05D9':1,
+                   '\u05DE\u05D4':1, '\u05D0\u05D9\u05DA':1, '\u05D0\u05D9\u05DB\u05D4':1,
+                   '\u05D0\u05D9\u05D4':1, '\u05D0\u05E0\u05D4':1, '\u05DE\u05EA\u05D9':1,
+                   '\u05DB\u05DE\u05D4':1, '\u05D0\u05D9':1, '\u05D1\u05DE\u05D4':1,
+                   '\u05DC\u05DE\u05D9':1 };
+  var ASK_WORD_GLOSS = /\b(why|who|whom|whose|what|how|where|when|whither|wherein|wherewith|wherefore)\b/i;
+  var POINTS_ANY = /[\u0591-\u05BD\u05BF-\u05C7]/g;
+
   /** does this word open a question? */
   function opensQuestion(el) {
     var h = el.getAttribute('data-h') || '';
     var seg = h.split('\u05BE')[0];
-    if (!ASK_HE.test(seg)) return false;
-    if (ASK_ALWAYS[seg]) return true;
     var g = ((el.querySelector('.gl') || {}).textContent || '').replace(/-/g, ' ').trim();
-    return ASK_GLOSS.test(g);
+    if (ASK_HE.test(seg)) {
+      if (ASK_ALWAYS[seg]) return true;
+      return ASK_GLOSS.test(g);
+    }
+    if (ASK_WORD[seg.replace(POINTS_ANY, '')]) return ASK_WORD_GLOSS.test(g);
+    return false;
   }
 
   var PITCH_ASK  = 1.22;
