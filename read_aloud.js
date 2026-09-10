@@ -842,8 +842,10 @@
      same synthesiser — a swallowed phrase writes a header-only 4096-byte
      AIFF, so it needs no ear and no transcription to find. */
   var SAY_STOP = [
-    'בְּשֶׁבֶת אָבִי',      /* 1 Nephi 8:2 — the phrase the translator heard go missing */
-    'גִד וְטֵאוֹמְנֶר'      /* Alma 58:20 and 58:23 — Gid and Teomner, the same way */
+    'בְּשֶׁבֶת אָבִי',      /* 1 Nephi 8:2, 10:16 and 16:6 — the pair the translator
+                              heard go missing, and it was eating two more verses */
+    'גִד וְטֵאוֹמְנֶר',     /* Alma 58:20 and 58:23 — Gid and Teomner, the same way */
+    'בַר הָאַחֲרוֹן'        /* Jacob 5:40 */
   ];
 
   /** what joins two words of one phrase: a space, or a stop she needs */
