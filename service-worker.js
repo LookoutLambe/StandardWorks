@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-09-10T17-24-45';
+const BUILD_ID = '2026-09-10T18-17-10';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -27,17 +27,17 @@ const CORE_ASSETS = [
     '/StandardWorks/jst.html',
     '/StandardWorks/manifest.json',
     '/StandardWorks/manifest.github.json',
-    '/StandardWorks/icons/icon-180.png',
-    '/StandardWorks/icons/icon-192.png',
-    '/StandardWorks/icons/icon-512.png',
-    '/StandardWorks/icons/icon-maskable.png',
+    '/StandardWorks/icons/icon-180.png?v=2',
+    '/StandardWorks/icons/icon-192.png?v=2',
+    '/StandardWorks/icons/icon-512.png?v=2',
+    '/StandardWorks/icons/icon-maskable.png?v=2',
     '/StandardWorks/site_chrome.css?v=72',
     /* sw_theme.css was precached here and no page links it — checked in the
        browser, document.styleSheets holds david_libre, nav_engine,
        site_chrome, xref_study_panel and reader, and nothing else. The tokens
        it defines (--here, --highlight, --rule) live in reader.css now. The
        file is left on disk; only the download is removed. */
-    '/StandardWorks/site_chrome.js?v=44',
+    '/StandardWorks/site_chrome.js?v=45',
     '/StandardWorks/nav_engine.js?v=86',
     '/StandardWorks/verse_search.js?v=3',
     '/StandardWorks/nav_engine.css?v=50',

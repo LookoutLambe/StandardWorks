@@ -189,7 +189,11 @@
     a.setAttribute('aria-label', reader ? 'Home \u2014 Standard Works' : 'Open books and navigation');
     a.title = reader ? 'Home' : 'Books and navigation';
     a.style.cssText = 'background:none;border:none;padding:0;cursor:pointer';
-    a.innerHTML = '<img src="' + assetBase() + 'icons/sw-mark.svg?v=3" alt="" style="width:38px;height:38px;display:block;border-radius:9px">';
+    /* THE MARK IN THE NAVY BAR IS THE LOGO. Gold scroll on transparent, so the
+       bar's own navy shows through behind it. It is padded to a SQUARE in the
+       file: the slot is a fixed 38x38 and the scroll is 814x592, so a raw crop
+       would be squashed by a third. */
+    a.innerHTML = '<img src="' + assetBase() + 'icons/sw-mark.png?v=1" alt="" style="width:38px;height:38px;display:block;border-radius:9px">';
     if (!reader) a.addEventListener('click', openMenu);
     return a;
   }
@@ -472,8 +476,8 @@
     if (document.querySelector('link[rel="icon"][href*="sw-mark"]')) return;
     var l = document.createElement('link');
     l.rel = 'icon';
-    l.type = 'image/svg+xml';
-    l.href = assetBase() + 'icons/sw-mark.svg';
+    l.type = 'image/png';
+    l.href = assetBase() + 'icons/sw-mark.png?v=1';
     document.head.appendChild(l);
   }
   mountFavicon();
