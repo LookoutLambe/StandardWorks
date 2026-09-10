@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-09-10T18-24-34';
+const BUILD_ID = '2026-09-10T18-31-29';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -37,7 +37,7 @@ const CORE_ASSETS = [
        site_chrome, xref_study_panel and reader, and nothing else. The tokens
        it defines (--here, --highlight, --rule) live in reader.css now. The
        file is left on disk; only the download is removed. */
-    '/StandardWorks/site_chrome.js?v=46',
+    '/StandardWorks/site_chrome.js?v=48',
     '/StandardWorks/nav_engine.js?v=86',
     '/StandardWorks/verse_search.js?v=3',
     '/StandardWorks/nav_engine.css?v=50',

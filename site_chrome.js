@@ -472,12 +472,19 @@
   }
 
   // Rights line — every page carries it at the end of the content flow.
+  /* THE FAVICON IS THE COLOUR MARK, NOT THE WHITE ONE. sw-mark.png is white on
+     transparency — right against the navy bar, invisible on a browser's white
+     tab strip, which is exactly where it went. The favicon has to stand on
+     whatever ground the browser gives it, so it is the original navy-and-gold
+     artwork: dark rollers and gold pages read on light chrome and on dark.
+     The gold-on-navy square is for a HOME SCREEN, where the icon supplies its
+     own tile; a tab is not a tile. */
   function mountFavicon() {
-    if (document.querySelector('link[rel="icon"][href*="sw-mark"]')) return;
+    if (document.querySelector('link[rel="icon"][href*="sw-mark-colour"]')) return;
     var l = document.createElement('link');
     l.rel = 'icon';
     l.type = 'image/png';
-    l.href = assetBase() + 'icons/sw-mark.png?v=2';
+    l.href = assetBase() + 'icons/sw-mark-colour.png?v=1';
     document.head.appendChild(l);
   }
   mountFavicon();
