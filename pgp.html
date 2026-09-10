@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="nav_engine.css?v=50">
 <link rel="stylesheet" href="site_chrome.css?v=72">
 <link rel="stylesheet" href="xref_study_panel.css?v=14">
-<link rel="stylesheet" href="reader.css?v=111">
+<link rel="stylesheet" href="reader.css?v=116">
 <style>
 
 /* Skip-to-content link (screen reader / keyboard) */
@@ -359,26 +359,7 @@ body.dual-mode .hw { font-size: 1.3em; }@media (max-width: 700px) {
   #word-popup { display: none !important; }
 }
 
-.chapter-panel { opacity: 0; }
-.chapter-panel.fade-in { opacity: 1; }
-#panel-landing { opacity: 1; }@keyframes page-flip-in-left {
-  0%   { transform: perspective(1200px) rotateY(-90deg); opacity: 0; }
-  40%  { opacity: 1; }
-  100% { transform: none; opacity: 1; }
-}@keyframes page-flip-in-right {
-  0%   { transform: perspective(1200px) rotateY(90deg); opacity: 0; }
-  40%  { opacity: 1; }
-  100% { transform: none; opacity: 1; }
-}
-.chapter-panel.slide-left {
-  transform-origin: right center;
-  animation: page-flip-in-left 0.45s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
-}
-.chapter-panel.slide-right {
-  transform-origin: left center;
-  animation: page-flip-in-right 0.45s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
-}
-
+#panel-landing { opacity: 1; }
 /* === VERSE HIGHLIGHTING === */
 .verse.highlighted {
   background: color-mix(in srgb, var(--here) 8%, transparent);
@@ -1168,9 +1149,9 @@ window.READER = {
 <!-- pgp_crossrefs.js is fetched on idle by crossrefs_engine.js (it was 73 KB of blocking critical path) -->
 <script src="crossrefs_engine.js?v=23"></script>
 
-<script src="reader_surface.js?v=38"></script>
+<script src="reader_surface.js?v=46"></script>
 <script defer src="pgp_stress.js?v=1"></script>  <!-- where the accent falls; deferred, applied on arrival -->  <!-- panels, selection tools, annotation marks: one copy for all six pages -->
-<script src="reader_ui.js?v=57"></script>
+<script src="reader_ui.js?v=59"></script>
 <script>
 // === PGP canon overrides (phase 2) — later function declarations win, so
 // these load AFTER reader_ui.js: book-map chapter labels, the progress nav

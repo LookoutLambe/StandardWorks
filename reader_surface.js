@@ -2538,6 +2538,25 @@ function _swQq(s) {
                               '<span class="qq">$1</span>');
 }
 
+/* THE OUTGOING LEAF IS NOT HERE, AND THIS IS WHY.
+
+   A fold needs the page you are LEAVING, which means getting hold of it
+   before navTo hides it — and the only hook is navTo itself. The Book of
+   Mormon stacks FIVE wrappers around it (four in bom.html, one in
+   nav_engine.js) over a base that re-enters window.navTo from inside its own
+   lazy book loader, passing a third argument, _bookReady, to say the book has
+   already arrived. Adding a sixth wrapper reopened that cycle: the callback
+   came back through the whole chain, the flag was lost somewhere in it, the
+   book loaded again, and the stack overflowed. The Book of Mormon would not
+   open at all. Forwarding every argument through this wrapper was necessary
+   and was not sufficient.
+
+   So the turn is CSS only: the arriving page flips in 3-D, hinged on the
+   spine, in reader.css. That part is real and works in all six volumes.
+   Folding the departing leaf needs the panel swap to expose a proper hook —
+   a single navTo that reports what it is replacing — not another wrapper
+   guessing at the arity of five it cannot see. */
+
 /* ── A name looks like a name ──────────────────────────────────────────────
    The transliteration line ran everything lowercase, so "lemuel" and "laman"
    read like common nouns and "ulemuel" hid the Lemuel inside it. A capital

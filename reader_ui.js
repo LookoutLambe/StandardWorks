@@ -111,22 +111,10 @@ document.addEventListener('keydown', function(e) {
   };
 })();
 
-// PAGE-FLIP ANIMATION
-(function() {
-  var _navFade = window.navTo;
-  window.navTo = function(id, slideDir) {
-    _navFade(id, slideDir);
-    if (window.__swNavDeferred) return;   // book still loading — the old page stays exactly as it is
-    document.querySelectorAll('.chapter-panel').forEach(function(p) { p.classList.remove('fade-in', 'slide-left', 'slide-right'); });
-    setTimeout(function() {
-      document.querySelectorAll('.chapter-panel').forEach(function(p) {
-        if (p.style.display !== 'none') {
-          p.classList.add(slideDir ? (slideDir === 'next' ? 'slide-right' : 'slide-left') : 'fade-in');
-        }
-      });
-    }, 20);
-  };
-})();
+/* THE PAGE TURN MOVED TO reader_surface.js. It lived here, and bom.html does
+   not load this file — so the Book of Mormon, the volume the edition is named
+   for, was the one volume with no page turn. reader_surface.js is loaded by
+   all six and is where shared reading behaviour belongs. */
 
 // (audio word-highlight removed with the audio feature, 2026-08-29)
 

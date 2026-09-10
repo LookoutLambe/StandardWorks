@@ -747,6 +747,95 @@ body #nav-sidebar [class*="volume"] {
   margin-inline: auto;
 }
 
+/* ── THE PAGE TURN — one definition, for all six volumes ──────────────────
+   This lived in SIX page files and had drifted two different ways. pgp, jst
+   and bom flipped in 3D; ot, nt and dc still slid 40px sideways and faded —
+   so half the edition turned pages and half did not, and nobody could tell
+   from any one file. The two groups also disagreed about the DEFAULT:
+   ot/nt/dc set .chapter-panel to opacity 1, while pgp/jst/bom set it to 0
+   and relied on .fade-in to reveal it, so the copies could not simply be
+   deleted without leaving three volumes blank. Panels are shown and hidden
+   with `display`, so that opacity gate was never doing any work — the
+   default here is visible, which is the safe direction to fail in.
+
+   A HEBREW BOOK TURNS THE OTHER WAY. The spine is on the RIGHT, the free
+   edge of a leaf is on the LEFT, and going forward the leaf swings rightward
+   onto the spine. Every copy that did flip used the Latin convention —
+   hinged on the left to go forward — which is this book mirrored. It is the
+   same mistake the cover made: KDP puts the front panel on the right of a
+   wrap, and this book's front is on the left.
+
+   AND IT HAS TO BE A LEAF, NOT THE WORDS. The panel is transparent, so
+   rotating it turned a column of floating text above the page beneath it.
+   It now carries the reading ground — inherited, so it follows Light, Sepia
+   and Dark without restating a single colour — and a shadow that is deepest
+   while the leaf stands on edge and gone once it lies flat.
+
+   The leaf is what is ON SCREEN, not the whole chapter: a chapter is a
+   continuous scroll thousands of pixels tall and has no bottom edge to turn.
+   A chapter change always lands at the top, which is why turning the visible
+   sheet reads correctly. Paginating for real is a different project.
+
+   The reduced-motion guard at the top of this file switches all of it off. */
+.chapter-panel { opacity: 1; }
+
+.chapter-panel.slide-left,
+.chapter-panel.slide-right {
+  /* THE PAPER. `inherit` looked elegant and gave transparent: the panel's
+     parent is #main-content, which has no background of its own — the ground
+     is painted two levels up on .page. So the colour is named, and named the
+     same way .page names it, dark mode included. */
+  background: var(--paper);
+  backface-visibility: hidden;
+  will-change: transform;
+  /* THE HINGE SITS AT THE TOP, NOT THE MIDDLE. A panel is a whole chapter —
+     six thousand pixels tall — so `center` put the axis and the vanishing
+     point about 3,000px below the fold, and the visible sheet sheared instead
+     of turning. A chapter change always lands at the top of the page, so that
+     is where the spine belongs. */
+  perspective-origin: top center;
+}
+body.dark-mode .chapter-panel.slide-left,
+body.dark-mode .chapter-panel.slide-right { background: var(--chrome); }
+.chapter-panel.slide-right {        /* forward — hinged on the spine, right */
+  transform-origin: right top;
+  animation: sw-leaf-next 520ms cubic-bezier(.25, .6, .3, 1) both;
+}
+.chapter-panel.slide-left {         /* back */
+  transform-origin: left top;
+  animation: sw-leaf-prev 520ms cubic-bezier(.25, .6, .3, 1) both;
+}
+.chapter-panel.fade-in {            /* a jump, not a turn: no leaf, just settle */
+  animation: sw-leaf-settle 240ms ease-out both;
+}
+
+/* THE SHADOW IS WHAT MAKES IT A PAGE. The leaf carries the same --paper as
+   the ground behind it, so with a faint shadow it is invisible — the turn
+   read as the text being squeezed, not as a sheet moving. What sells it is
+   the edge: a hard, close shadow hugging the leading edge (the leaf's own
+   thickness) over a wide soft one (what it casts on the page beneath), both
+   strongest while it stands on edge and gone once it lies flat. The spread
+   is negative so the shadow only escapes on the side the leaf lifts from. */
+@keyframes sw-leaf-next {
+  from { transform: perspective(1600px) rotateY(-74deg); opacity: 0;
+         box-shadow: -2px 0 0 0 rgba(0,0,0,.30), -22px 0 40px -6px rgba(0,0,0,.55); }
+  35%  { opacity: 1; }
+  70%  { box-shadow: -1px 0 0 0 rgba(0,0,0,.16), -14px 0 30px -8px rgba(0,0,0,.28); }
+  to   { transform: perspective(1600px) rotateY(0deg); opacity: 1;
+         box-shadow: 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(0,0,0,0); }
+}
+@keyframes sw-leaf-prev {
+  from { transform: perspective(1600px) rotateY(74deg); opacity: 0;
+         box-shadow: 2px 0 0 0 rgba(0,0,0,.30), 22px 0 40px -6px rgba(0,0,0,.55); }
+  35%  { opacity: 1; }
+  70%  { box-shadow: 1px 0 0 0 rgba(0,0,0,.16), 14px 0 30px -8px rgba(0,0,0,.28); }
+  to   { transform: perspective(1600px) rotateY(0deg); opacity: 1;
+         box-shadow: 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(0,0,0,0); }
+}
+@keyframes sw-leaf-settle { from { opacity: .55; } to { opacity: 1; } }
+
+
+
 
 /* ── the settings sheet the mode row now lives in ── */
 #sw-settings-scrim {
@@ -2194,6 +2283,9 @@ body.dark-mode #glossary-panel {
   --e2: 0 2px 4px rgba(26,26,26,.05), 0 10px 26px rgba(26,26,26,.09);
   --e3: 0 6px 18px rgba(26,26,26,.10), 0 20px 54px rgba(26,26,26,.18);
   --z-raised: 10;
+  /* the turning page: over everything it is made of, under the bars that
+     frame it — a book's chrome does not fold with the leaf */
+  --z-leaf: 90;
   --z-chrome: 100;
   --z-search: 150;
   --z-scrim: 300;

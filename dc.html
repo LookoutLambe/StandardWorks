@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="nav_engine.css?v=50">
 <link rel="stylesheet" href="site_chrome.css?v=72">
 <link rel="stylesheet" href="xref_study_panel.css?v=14">
-<link rel="stylesheet" href="reader.css?v=111">
+<link rel="stylesheet" href="reader.css?v=116">
 <style>
 *:focus-visible { outline: 2px solid var(--here); outline-offset: 2px; }
 .book-title { font-size: 2.4em; font-weight: 700; color: var(--header-bg); letter-spacing: 0.04em; margin-bottom: 2px; }
@@ -178,10 +178,7 @@ body.dark-mode .verse.user-highlight { background: color-mix(in srgb, var(--here
 .landing-sec-btn .sec-num { font-family: 'David Libre', 'Georgia', serif; font-size: 0.65em; color: var(--ink-3); }
 
 /* === PAGE ANIMATIONS === */
-.chapter-panel { opacity: 1; transition: opacity 0.3s ease; }
-.chapter-panel.fade-in { animation: fadeIn 0.35s ease-out; }
-.chapter-panel.slide-right { animation: slideRight 0.3s ease-out; }
-.chapter-panel.slide-left { animation: slideLeft 0.3s ease-out; }@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }@keyframes slideRight { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: none; } }@keyframes slideLeft { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: none; } }@media (max-width: 600px) {
+@media (max-width: 600px) {
   .page { padding: 50px 10px 45px; padding-left: max(10px, env(safe-area-inset-left, 0px)); padding-right: max(10px, env(safe-area-inset-right, 0px)); }
   .book-title { font-size: 1.8em; }
   .hw { font-size: 1.5em; }
@@ -649,9 +646,9 @@ window.READER = {
 <!-- dc_crossrefs.js is fetched on idle by crossrefs_engine.js (it was 511 KB of blocking critical path) -->
 <script src="crossrefs_engine.js?v=23"></script>
 
-<script src="reader_surface.js?v=38"></script>
+<script src="reader_surface.js?v=46"></script>
 <script defer src="dc_stress.js?v=1"></script>  <!-- where the accent falls; deferred, applied on arrival -->  <!-- panels, selection tools, annotation marks: one copy for all six pages -->
-<script src="reader_ui.js?v=57"></script>
+<script src="reader_ui.js?v=59"></script>
 <script>
 // === D&C canon overrides (phase 2) — later function declarations win, so
 // these must load AFTER reader_ui.js: section-keyed chapter labels, the

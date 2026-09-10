@@ -52,7 +52,7 @@
 <link rel="stylesheet" href="../nav_engine.css?v=50">
 <link rel="stylesheet" href="../site_chrome.css?v=72">
 <link rel="stylesheet" href="../xref_study_panel.css?v=14">
-<link rel="stylesheet" href="../reader.css?v=111">
+<link rel="stylesheet" href="../reader.css?v=116">
 <style>
 
 /* Skip-to-content link (screen reader / keyboard) */
@@ -678,8 +678,6 @@ body.dark-mode .landing-preface-link { color: var(--here-chrome); }
 }
 
 /* === CHAPTER PAGE TRANSITION (3D page flip) === */
-.chapter-panel { opacity: 0; }
-.chapter-panel.fade-in { opacity: 1; }
 #panel-intro { opacity: 1; }
 #panel-landing { opacity: 1; }
 /* Boot gate (html.sw-boot, set in <head> when the URL names a page): the
@@ -730,24 +728,7 @@ html.sw-boot #main-content, html.sw-boot .page { transition: none !important; }
 .lsg-stack .lsg-s-tl { font-size: 0.78em; color: var(--ink-light); font-style: italic; direction: ltr; }
 .lsg-stack .lsg-s-en { font-family: 'David Libre', 'Georgia', serif; font-size: 0.92em; color: var(--ink); letter-spacing: 0.06em; direction: ltr; }
 .landing-sec-btn .sec-tl { font-size: 0.6em; color: var(--ink-3); font-style: italic; direction: ltr; }
-.landing-sec-btn .sec-num { font-family: 'David Libre', 'Georgia', serif; font-size: 0.65em; color: var(--ink-3); }@keyframes page-flip-in-left {
-  0%   { transform: perspective(1200px) rotateY(-90deg); opacity: 0; }
-  40%  { opacity: 1; }
-  100% { transform: none; opacity: 1; }
-}@keyframes page-flip-in-right {
-  0%   { transform: perspective(1200px) rotateY(90deg); opacity: 0; }
-  40%  { opacity: 1; }
-  100% { transform: none; opacity: 1; }
-}
-.chapter-panel.slide-left {
-  transform-origin: right center;
-  animation: page-flip-in-left 0.45s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
-}
-.chapter-panel.slide-right {
-  transform-origin: left center;
-  animation: page-flip-in-right 0.45s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
-}
-
+.landing-sec-btn .sec-num { font-family: 'David Libre', 'Georgia', serif; font-size: 0.65em; color: var(--ink-3); }
 /* === VERSE HIGHLIGHTING === */
 .verse.highlighted {
   background: color-mix(in srgb, var(--here-chrome) 8%, transparent);
@@ -3531,7 +3512,7 @@ window.READER = window.READER || {
   books: []      /* filled from BOOK_DATA the moment it exists, below */
 };
 </script>
-<script src="../reader_surface.js?v=38"></script>
+<script src="../reader_surface.js?v=46"></script>
 <script defer src="stress.js?v=1"></script>  <!-- where the accent falls; deferred, applied on arrival -->
 <script src="../crossrefs_engine.js?v=23"></script>  <!-- the cross-reference panel, shared with the other five -->  <!-- panels, selection tools, annotation marks: shared with the other five -->
 <script src="../translit.js?v=5"></script>
