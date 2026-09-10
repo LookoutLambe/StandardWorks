@@ -1031,10 +1031,25 @@
     try { speechSynthesis.resume(); speechSynthesis.cancel(); } catch (e) {}
   }
 
+  /* THREE SECONDS AT A BOOK BOUNDARY (translator's ruling 2026-09-10).
+     Inside a book a chapter runs into the next one on the ordinary phrase
+     gap, which is right — the narrative carries straight on. The end of a
+     BOOK is a different kind of stop and the reading should say so, or
+     Moroni's last verse runs into the title page of the next thing with no
+     more pause than a comma.
+
+     The book is the chapter id with its chapter number taken off, which is
+     how nav_engine names them: 1ne-ch22 -> 1ne, gen-ch50 -> gen. In the
+     Doctrine and Covenants every SECTION is its own book in that model, all
+     138 of them, so the pause falls between sections there — which is what
+     they are, separate revelations rather than chapters of one narrative. */
+  var BOOK_GAP = 3000;
+  function bookOf(id) { return String(id || '').replace(/-ch\d+$/, ''); }
+
   function advance(from, token) {
     if (token !== state.token) return;
     if (typeof window.goNext !== 'function') { stop(); return; }
-    var wasId = window.currentChapterId;
+    var wasId = window.currentChapterId, wasBook = bookOf(wasId);
     paintBtn(from.querySelector('.ra-btn'), false);
     window.goNext();
     var t0 = Date.now();
@@ -1046,7 +1061,13 @@
       if (moved && p && p !== from && p.querySelector('.verse[data-verse-key]')) {
         state.btn = p.querySelector('.ra-btn') || state.btn;
         paintBtn(state.btn, true);
-        readPanel(p, token);
+        if (bookOf(window.currentChapterId) !== wasBook) {
+          /* gap() honours Pause and the stop token, so the three seconds can
+             be interrupted like any other silence in the reading. */
+          gap(BOOK_GAP, token).then(function () { readPanel(p, token); });
+        } else {
+          readPanel(p, token);
+        }
         return;
       }
       if (Date.now() - t0 > 20000) { stop(); return; }            /* it never came */
