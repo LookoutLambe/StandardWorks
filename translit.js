@@ -215,13 +215,22 @@
       var isDagForte = tk.dag && bgdkpt.indexOf(tk.c) < 0 && t > 0 && prevVowel;
       // bgdkpt with dagesh after a vowel = also forte (doubled + hard)
       var isBgdkptForte = tk.dag && bgdkpt.indexOf(tk.c) >= 0 && t > 0 && prevVowel && prevVowel !== '\u05B0';
-      // Gemination doubles the SOUND, not the spelling. Where a consonant is
-      // written as a digraph (sh, ts, ch, kh), repeating the whole pair gives
-      // "hashshamayim" / "hatstsaddik" — so only the digraph's first letter is
-      // laid down here: hasshamayim, hattsaddik, missham, asshur. Single-letter
-      // consonants are unaffected (hakkohen, atta, hammishpat).
+      /* GEMINATION REPEATS THE WHOLE DIGRAPH (translator's ruling 2026-09-10,
+         on קַצְּרִי: "this is katstseri"). A dagesh forte doubles the
+         consonant, and where that consonant is spelled as a digraph — sh, ts,
+         ch, kh — the doubling is of the CONSONANT, so both letters come with
+         it: katstseri, hashshamayim, ishsha, mishsham, hatstsaddik.
+
+         This reverses what I did on 2026-09-06, which laid down only the
+         digraph's first letter (kattseri, hasshamayim, issha). That was my
+         call, not the translator's, and it was argued from אַשּׁוּר — whose
+         received English really is Asshur. But a received NAME is a spelling
+         question and belongs in the received table, not in a rule that
+         silently reshapes 20,335 tokens of ordinary vocabulary to protect it.
+         Single-letter consonants never moved either way: hakkohen, atta,
+         hammishpat, vayyomer. */
       if (isDagForte || isBgdkptForte) {
-        segments.push({c: c.charAt(0), v: '', ov: '', hc: tk.c, dag: false, doubled: true});
+        segments.push({c: c, v: '', ov: '', hc: tk.c, dag: false, doubled: true});
       }
       // Mappiq he: final הּ with dagesh = pronounced "h"
       if (tk.c === '\u05D4' && isLast && tk.dag && !tk.vowel) {
