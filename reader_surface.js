@@ -2557,6 +2557,52 @@ function _swQq(s) {
    a single navTo that reports what it is replacing — not another wrapper
    guessing at the arity of five it cannot see. */
 
+/* ── THE TURN MUST NOT HAND THE COMPOSITOR A WHOLE CHAPTER ───────────────
+   Chromium caps a composited layer's texture at about 8,192 px per dimension
+   on most GPUs. A chapter panel is one continuous column — Alma 32 is 12,805
+   px — so promoting it for a 3-D transform overflows the texture and drops to
+   tiling or software raster: the turn sticks. WebKit takes the oversize case
+   differently, which is why it is smooth in Safari and not in Brave, and why
+   the browser pane here (WebKit) could not reproduce it.
+
+   Gating by height was the obvious answer and it is wrong: at a phone's width
+   the crossover is near 250 words, which is most of the edition, so the flip
+   would be switched off almost everywhere it is seen.
+
+   Instead the panel is clipped to ONE SCREEN while it turns — reader.css does
+   that on .slide-left / .slide-right — so whatever the chapter's length, the
+   layer is viewport-sized and inside every cap. The navigation has already
+   scrolled to the top by then, so the screen being clipped is exactly the one
+   being shown.
+
+   THE CLASS MUST COME OFF AGAIN OR THE CHAPTER STAYS ONE SCREEN LONG. navTo
+   only clears it on the NEXT navigation, which would leave every chapter
+   truncated in between. This listens on the document rather than wrapping
+   navTo — bom.html stacks five wrappers over a re-entrant base and a sixth
+   stops the volume opening (see the note above). A timeout backs the event
+   up, because a clipped chapter is far worse than a missed animation. */
+(function () {
+  var TURN_ANIMS = { 'sw-leaf-next': 1, 'sw-leaf-prev': 1, 'sw-leaf-settle': 1 };
+
+  function unclip(el) {
+    if (el && el.classList) el.classList.remove('slide-left', 'slide-right', 'fade-in');
+  }
+
+  document.addEventListener('animationend', function (e) {
+    if (!TURN_ANIMS[e.animationName]) return;          /* not one of ours */
+    var el = e.target;
+    if (el && el.classList && el.classList.contains('chapter-panel')) unclip(el);
+  }, true);
+
+  /* the belt: if animationend never arrives, nothing stays clipped */
+  document.addEventListener('animationstart', function (e) {
+    if (!TURN_ANIMS[e.animationName]) return;
+    var el = e.target;
+    if (!el || !el.classList || !el.classList.contains('chapter-panel')) return;
+    setTimeout(function () { unclip(el); }, 1400);
+  }, true);
+})();
+
 /* ── A name looks like a name ──────────────────────────────────────────────
    The transliteration line ran everything lowercase, so "lemuel" and "laman"
    read like common nouns and "ulemuel" hid the Lemuel inside it. A capital

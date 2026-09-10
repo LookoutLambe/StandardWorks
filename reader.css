@@ -8,7 +8,15 @@
 
 
 @media (prefers-reduced-motion: reduce) {
-  .chapter-panel.slide-left, .chapter-panel.slide-right, .chapter-panel.fade-in { animation: none !important; opacity: 1 !important; transform: none !important; }
+  /* max-height and overflow MUST be released here too. The clip that keeps a
+     12,805px chapter out of the compositor is taken off by an animationend
+     listener — and with the animation switched off that event never fires, so
+     the chapter would stay ONE SCREEN TALL for anyone who asked for reduced
+     motion. The rest of the book would simply be gone. */
+  .chapter-panel.slide-left, .chapter-panel.slide-right, .chapter-panel.fade-in {
+    animation: none !important; opacity: 1 !important; transform: none !important;
+    max-height: none !important; overflow: visible !important;
+  }
   .chapter-panel, .verse, .word-unit, .page, #main-content, .nqd-nav-btn, .nqd-chapter-now { transition: none !important; }
 }
 
@@ -786,8 +794,15 @@ body #nav-sidebar [class*="volume"] {
      is painted two levels up on .page. So the colour is named, and named the
      same way .page names it, dark mode included. */
   background: var(--paper);
-  backface-visibility: hidden;
-  will-change: transform;
+  /* ONE SCREEN WHILE IT TURNS. A chapter is a continuous column — Alma 32 is
+     12,805 px — and Chromium cannot fit that in a composited layer's texture
+     (~8,192 px), so the turn sticks in Brave while Safari is fine. Clipped to
+     the viewport the layer is always in range. reader_surface.js takes the
+     class off again when the animation ends; without that the chapter would
+     stay one screen long. will-change and backface-visibility are deliberately
+     NOT set here — both force promotion of the very layer being avoided. */
+  max-height: 100vh;
+  overflow: hidden;
   /* THE HINGE SITS AT THE TOP, NOT THE MIDDLE. A panel is a whole chapter —
      six thousand pixels tall — so `center` put the axis and the vanishing
      point about 3,000px below the fold, and the visible sheet sheared instead
