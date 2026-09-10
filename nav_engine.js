@@ -2596,24 +2596,23 @@
       el.style.transform = 'translateX(0px)';
       setTimeout(function() { releaseSheet(el); clipX(false); }, 200);
     }
+    /* THE COMMIT HANDS OVER TO THE PAGE TURN; IT NO LONGER ANIMATES ITSELF.
+       This used to slide the whole sheet off with translateX and slide the
+       next one in from the other side — and then call triggerChapterNav,
+       which runs reader.css's 3-D turn. So every swipe played TWO animations
+       back to back: a flat sideways slide, then the page flipping. That is
+       what "I get the slide effect and then the page turn animation" was.
+
+       The drag still follows the finger, because that is what makes a swipe
+       feel like paper under your hand. Only the RELEASE changed: the sheet's
+       transform is dropped at once so the turn starts from a clean slate,
+       and the flip is the whole of the commit animation. One gesture, one
+       animation. */
     function completeTurn(dir, dx) {
       var el = sheet; sheet = null; locked = false;
-      if (!el) { clipX(false); return; }
-      if (reduceMotion) { releaseSheet(el); triggerChapterNav(dir); clipX(false); return; }
-      var off = (dx > 0 ? 1 : -1) * (window.innerWidth + 60);
-      el.style.transition = 'transform 0.2s ease-in';
-      el.style.transform = 'translateX(' + off + 'px)';
-      setTimeout(function() {
-        releaseSheet(el);
-        triggerChapterNav(dir);
-        var incoming = currentSheet() || el;
-        incoming.style.transition = 'none';
-        incoming.style.transform = 'translateX(' + (-off) + 'px)';
-        void incoming.offsetWidth;
-        incoming.style.transition = 'transform 0.22s ease-out';
-        incoming.style.transform = 'translateX(0px)';
-        setTimeout(function() { releaseSheet(incoming); clipX(false); }, 260);
-      }, 210);
+      releaseSheet(el);
+      clipX(false);
+      triggerChapterNav(dir);
     }
 
     document.addEventListener('touchstart', function(e) {

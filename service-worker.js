@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-09-10T16-11-48';
+const BUILD_ID = '2026-09-10T17-24-45';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -38,11 +38,11 @@ const CORE_ASSETS = [
        it defines (--here, --highlight, --rule) live in reader.css now. The
        file is left on disk; only the download is removed. */
     '/StandardWorks/site_chrome.js?v=44',
-    '/StandardWorks/nav_engine.js?v=85',
+    '/StandardWorks/nav_engine.js?v=86',
     '/StandardWorks/verse_search.js?v=3',
     '/StandardWorks/nav_engine.css?v=50',
     '/StandardWorks/xref_study_panel.css?v=14',
-    '/StandardWorks/reader.css?v=118',
+    '/StandardWorks/reader.css?v=120',
     '/StandardWorks/xref_study_panel.js?v=6',
     '/StandardWorks/read_aloud.js?v=32',
     /* The five <vol>_phrase_breaks.js tables and imperatives.js were precached

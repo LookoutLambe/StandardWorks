@@ -803,6 +803,8 @@ body #nav-sidebar [class*="volume"] {
      NOT set here — both force promotion of the very layer being avoided. */
   max-height: 100vh;
   overflow: hidden;
+  /* the shading overlay below is absolutely positioned against this */
+  position: relative;
   /* THE HINGE SITS AT THE TOP, NOT THE MIDDLE. A panel is a whole chapter —
      six thousand pixels tall — so `center` put the axis and the vanishing
      point about 3,000px below the fold, and the visible sheet sheared instead
@@ -832,22 +834,56 @@ body.dark-mode .chapter-panel.slide-right { background: var(--chrome); }
    strongest while it stands on edge and gone once it lies flat. The spread
    is negative so the shadow only escapes on the side the leaf lifts from. */
 @keyframes sw-leaf-next {
-  from { transform: perspective(1600px) rotateY(-74deg); opacity: 0;
+  from { transform: perspective(900px) rotateY(-84deg); opacity: 0;
          box-shadow: -2px 0 0 0 rgba(0,0,0,.30), -22px 0 40px -6px rgba(0,0,0,.55); }
   35%  { opacity: 1; }
   70%  { box-shadow: -1px 0 0 0 rgba(0,0,0,.16), -14px 0 30px -8px rgba(0,0,0,.28); }
-  to   { transform: perspective(1600px) rotateY(0deg); opacity: 1;
+  to   { transform: perspective(900px) rotateY(0deg); opacity: 1;
          box-shadow: 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(0,0,0,0); }
 }
 @keyframes sw-leaf-prev {
-  from { transform: perspective(1600px) rotateY(74deg); opacity: 0;
+  from { transform: perspective(900px) rotateY(84deg); opacity: 0;
          box-shadow: 2px 0 0 0 rgba(0,0,0,.30), 22px 0 40px -6px rgba(0,0,0,.55); }
   35%  { opacity: 1; }
   70%  { box-shadow: 1px 0 0 0 rgba(0,0,0,.16), 14px 0 30px -8px rgba(0,0,0,.28); }
-  to   { transform: perspective(1600px) rotateY(0deg); opacity: 1;
+  to   { transform: perspective(900px) rotateY(0deg); opacity: 1;
          box-shadow: 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(0,0,0,0); }
 }
 @keyframes sw-leaf-settle { from { opacity: .55; } to { opacity: 1; } }
+
+/* ── THE LIGHT ON THE PAGE ────────────────────────────────────────────────
+   Geometry alone does not read as paper. A leaf swinging on a spine is dark
+   where it folds away and bright across the face turning toward you, and it
+   is that gradient sweeping over the text — not the rotation — that the eye
+   takes for depth. Without it the turn looks like the page is simply moving.
+   Painted over the whole clipped screen, strongest while the page stands on
+   edge, gone by the time it lies flat. pointer-events: none so it never
+   intercepts a tap on a word. */
+.chapter-panel.slide-left::before,
+.chapter-panel.slide-right::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.chapter-panel.slide-right::before {
+  background: linear-gradient(to left,
+              rgba(0,0,0,.34) 0%, rgba(0,0,0,.10) 26%,
+              rgba(255,255,255,.10) 62%, rgba(0,0,0,.22) 100%);
+  animation: sw-leaf-light 520ms cubic-bezier(.25, .6, .3, 1) both;
+}
+.chapter-panel.slide-left::before {
+  background: linear-gradient(to right,
+              rgba(0,0,0,.34) 0%, rgba(0,0,0,.10) 26%,
+              rgba(255,255,255,.10) 62%, rgba(0,0,0,.22) 100%);
+  animation: sw-leaf-light 520ms cubic-bezier(.25, .6, .3, 1) both;
+}
+@keyframes sw-leaf-light {
+  from { opacity: 1; }
+  70%  { opacity: .45; }
+  to   { opacity: 0; }
+}
 
 
 
