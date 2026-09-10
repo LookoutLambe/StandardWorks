@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-09-10T00-25-19';
+const BUILD_ID = '2026-09-10T01-05-41';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -44,7 +44,7 @@ const CORE_ASSETS = [
     '/StandardWorks/xref_study_panel.css?v=14',
     '/StandardWorks/reader.css?v=111',
     '/StandardWorks/xref_study_panel.js?v=6',
-    '/StandardWorks/read_aloud.js?v=30',
+    '/StandardWorks/read_aloud.js?v=31',
     /* The five <vol>_phrase_breaks.js tables and imperatives.js were precached
        here — 208 KB gzipped of which one page can use at most 96 — so every
        volume carried the other four volumes' phrasing. They are the same kind

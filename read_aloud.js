@@ -845,7 +845,10 @@
     'בְּשֶׁבֶת אָבִי',      /* 1 Nephi 8:2, 10:16 and 16:6 — the pair the translator
                               heard go missing, and it was eating two more verses */
     'גִד וְטֵאוֹמְנֶר',     /* Alma 58:20 and 58:23 — Gid and Teomner, the same way */
-    'בַר הָאַחֲרוֹן'        /* Jacob 5:40 */
+    'בַר הָאַחֲרוֹן',       /* Jacob 5:40 */
+    'בֹא לְהִלָּחֵם',        /* Alma 56:18 */
+    'גִד הָאֵלֶּה',          /* Alma 57:36 — Gid again, and a different partner */
+    'דַם אָחִיךָ'           /* Helaman 9:32 — "the blood of thy brother", Cain's line */
   ];
 
   /** what joins two words of one phrase: a space, or a stop she needs */

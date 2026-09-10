@@ -115,6 +115,9 @@ const SAY_STOP_CASES = [
   ['בְּשֶׁבֶת', 'אָבִי',      '1 Nephi 8:2 — "this WHOLE phrase is being left off"'],
   ['גִד',      'וְטֵאוֹמְנֶר', 'Alma 58:20 and 58:23 — Gid and Teomner'],
   ['בַר',      'הָאַחֲרוֹן',   'Jacob 5:40 — found by the sweep, not by ear'],
+  ['בֹא',      'לְהִלָּחֵם',    'Alma 56:18'],
+  ['גִד',      'הָאֵלֶּה',     'Alma 57:36 — Gid again, with a different partner'],
+  ['דַם',      'אָחִיךָ',      'Helaman 9:32'],
   ['וַיֹּאמֶר', 'אֵלֵינוּ',    'NOT a stop — an ordinary pair must still be joined by a space'],
 ];
 let joinBad = 0;
