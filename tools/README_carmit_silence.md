@@ -37,3 +37,38 @@ a standard deviation of 14% (mean 5,004 bytes/letter, n=160), so one
 missing phrase in a large batch is inside the noise. K must stay small
 enough that a missing phrase moves the total well past 14%: K=5 removes
 ~20%, K=8 removes ~12% and is already marginal. Expect ~5x, not 50x.
+
+# Auditing PRONUNCIATION (not silence)
+
+Render each verse as the reader speaks it, transcribe with faster-whisper
+`medium`, and compare. `carmit_pronunciation_audit.py` renders + transcribes;
+`carmit_pronunciation_compare.py` does the comparison off the saved
+transcripts, so the analysis can be redone for free — only transcription is
+expensive (635 PGP verses ≈ 40 min on 14 cores).
+
+## The comparison is the hard part, and I got it wrong twice
+
+**Not the consonant skeleton.** Folding ו and י out of both sides forgives
+whisper's ktiv male — and destroys the one thing a Hebrew transcript CAN say
+about a vowel, since modern spelling writes /o/ and /u/ with a vav. חכמה vs
+חוכמה IS the sound changing. That is how the hataf qamats was found.
+
+**Not every ו/י difference either.** That flags הייתה against היתה — correct
+modern orthography — as a defect. Doubled yod and vav are orthography.
+
+**The yardstick is the source run through read_aloud.js's own ktivMale()**,
+with doubled yod/vav normalised away and a MISSING vav treated as signal.
+
+## STILL UNFINISHED: ktivMale over-applies, and it dominates the output
+
+מֹשֶׁה -> מושה, וְלֹא -> ולוא, הַזֹּאת -> הזואת. Modern writes משה, לא, זאת.
+These frozen spellings are the top of the findings list and they are the
+TOOL's error, not the voice's. Until an exception list exists the output
+cannot be read as findings.
+
+## PGP result, 2026-09-10: no confirmed defect
+
+635 verses transcribed. Every repeated candidate traced back to the ktivMale
+gap above. The strongest survivor, וַיַּרְא (29x), is a false alarm — the
+alef is silent, she says vayyar correctly, and whisper simply spells what it
+hears as ויר.

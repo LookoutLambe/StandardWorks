@@ -1171,7 +1171,7 @@
   if (document.body) mo.observe(document.body, { childList: true, subtree: true });
 
   window.SWReadAloud = { play: play, stop: stop, phrases: phrases, spoken: spoken,
-                         sayJoin: sayJoin,
+                         sayJoin: sayJoin, ktivMale: ktivMale,
                          mount: mount, speeds: SPEEDS,
                          setRate: function (r) {
                            RATE = r;
