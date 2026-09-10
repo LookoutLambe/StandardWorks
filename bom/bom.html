@@ -3529,7 +3529,7 @@ window.READER = window.READER || {
 <!-- bom_inverse_crossrefs.js (632 KB) is split the same way into
      inverse_crossrefs/<book>.js -->
 <script src="chapter_headings.js"></script>
-<script src="chapter_headings_heb.js?v=7"></script>
+<script src="chapter_headings_heb.js?v=8"></script>
 <script defer src="topical_guide.js?v=3"></script>
 <script src="../notes_engine.js"></script>
 <script src="../interlinear_gloss.js?v=2"></script>
@@ -5934,6 +5934,8 @@ updateNavButtons();
     var hebHeadings = (typeof _chapterHeadingsHeb !== 'undefined') ? _chapterHeadingsHeb : {};
     // Heading-specific gloss overrides for words whose verse-data lookup gives wrong/missing results
     var _headGloss = {
+      'בְּכִתְבֵי־הַקֹּדֶשׁ':'in the Holy Bible',
+      'מִכִּתְבֵי־הַקֹּדֶשׁ':'from the Holy Bible',
       'אֲהֵבָם':'He loveth them',
       'אֲשֶׁר':'which',
       'אֹתוֹת':'signs',

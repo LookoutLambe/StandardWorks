@@ -4,7 +4,7 @@
     the hook did not touch it (it pointed at scripts/write_build_version.js,
     which does not exist), so the list below had been frozen for days and
     every Book of Mormon asset change was served stale. Never hand-edit. */
-const CACHE = 'bom-2026-09-10T21-45-10';
+const CACHE = 'bom-2026-09-10T21-48-36';
 /** Shell only — verse *.js files are cached at runtime, refreshed in the background (see fetch handler). */
 const ASSETS = [
   './bom.html',
@@ -26,7 +26,7 @@ const ASSETS = [
   /* official_verses.js (1,852 KB) is split per book into english/<book>.js
      by tools/build_crossref_chunks.js and arrives with the book. */
   './chapter_headings.js',
-  './chapter_headings_heb.js?v=7',
+  './chapter_headings_heb.js?v=8',
   './roots_glossary.js?v=71',
   /* crossrefs.js (785 KB) and bom_inverse_crossrefs.js (632 KB) were precached
      here and are no longer fetched by anything: both are split per book into
