@@ -193,7 +193,7 @@
        bar's own navy shows through behind it. It is padded to a SQUARE in the
        file: the slot is a fixed 38x38 and the scroll is 814x592, so a raw crop
        would be squashed by a third. */
-    a.innerHTML = '<img src="' + assetBase() + 'icons/sw-mark.png?v=1" alt="" style="width:38px;height:38px;display:block;border-radius:9px">';
+    a.innerHTML = '<img src="' + assetBase() + 'icons/sw-mark.png?v=2" alt="" style="width:38px;height:38px;display:block;border-radius:9px">';
     if (!reader) a.addEventListener('click', openMenu);
     return a;
   }
@@ -477,7 +477,7 @@
     var l = document.createElement('link');
     l.rel = 'icon';
     l.type = 'image/png';
-    l.href = assetBase() + 'icons/sw-mark.png?v=1';
+    l.href = assetBase() + 'icons/sw-mark.png?v=2';
     document.head.appendChild(l);
   }
   mountFavicon();
