@@ -736,6 +736,14 @@
     'רוֹשׁ': 'רוש',
     'אֵת־עִנּוּיֵי': 'ענה', 'בְּעִנּוּיִים': 'ענה', 'בְּעִנּוּיִם': 'ענה', 'בְּעִנּוּיֵי': 'ענה', 'בְּעִנּוּיַי': 'ענה', 'בְעִנּוּיִם': 'ענה', 'הָעִנּוּיִים': 'ענה', 'וְעִנּוּי': 'ענה', 'וְעִנּוּיָיו': 'ענה', 'וְעִנּוּיָם': 'ענה', 'וּבְעִנּוּי': 'ענה', 'וּבָעִנּוּיִם': 'ענה', 'כִּי־עִנּוּיִם': 'ענה', 'לְעִנּוּי': 'ענה', 'לָעִנּוּי': 'ענה', 'עִנּוּי': 'ענה', 'עִנּוּיִים': 'ענה', 'עִנּוּיִם': 'ענה', 'עִנּוּיֵי': 'ענה', 'עִנּוּיֵיהֶם': 'ענה', 'עִנּוּיֵיכֶם': 'ענה', 'עִנּוּיֵינוּ': 'ענה', 'עִנּוּיָהּ': 'ענה', 'עִנּוּיָיו': 'ענה', 'עִנּוּיָם': 'ענה', 'עַל־עִנּוּיֵי': 'ענה', 'שֶׁעִנּוּיֵי': 'ענה',
 
+    // תלה "to hang" vs H3494 יִתְלָה, the PLACE Jithlah (Josh 19:42).
+    // Built for the 600 BC crucify idiom 2026-09-10 (2 Ne 10:3, 10:5).
+    // Strong's carries Jithlah, so _strongsFor matches these imperfects to
+    // the place name -- rootMap could not fix it, only _headPins can.
+    // SAFE to pin as strings: Jithlah is pointed יִתְלָה (qamats); these are
+    // segol forms, so the place name's own spelling is untouched.
+    'יִתָּלֶה': 'תלה', 'יִתְלֶה': 'תלה',
+
     // THE NEPHITE MEASURES OF ALMA 11 (2026-08-31). Senine, senum, seon, shum,
     // limnah, amnor, ezrom, onti, antion, shiblon, shiblum -- Nephite names,
     // not Hebrew roots. Every prefixed form had splintered into its OWN family
