@@ -342,7 +342,7 @@
     'הַזֶה': 'H2088', 'הַזֹּרֵע': 'H2232', 'הַחֲזֵקּ': 'H2388', 'הַחשֵׁב': 'H2803', 'הַיְשָׁנוֹת': 'H3462', 'הַיָּקָר': 'H3365', 'הַיָּתֵר': 'H3498', 'הַיֹּשֵׁר': 'H3474', 'הַיוֹם': 'H3117', 'הַכְּבֵדוֹת': 'H3513', 'הַמְחֻבָּרִים': 'H2266', 'הַמְיַחֲלוֹת': 'H3176',
     'הַמִּצְוֺת': 'H6680', 'הַמֶָּלֶךְ': 'H4427', 'הַמֻּשְׁלָכוֹת': 'H7993', 'הַנְּפוֹצוֹת': 'H6327', 'הַנִּגְלִים': 'H1540', 'הַנִּיחִי': 'H5117', 'הַנִּפְלָא': 'H6381', 'הַנִּקְהָלָה': 'H6950', 'הַנִּרְאִים': 'H7200', 'הַקְּדֹשִׂים': 'H6942', 'הַקְּדשִׁים': 'H6942', 'הַקְּרָב': 'H7126',
     'הַרְאֵה': 'H7200', 'הַרֹאֶה': 'H7200', 'הַשְּׁמוּרִים': 'H8053', 'הַשְּׂמוּעָה': 'H8052', 'הַשָּׁפֵל': 'H8213', 'הַשָּׁת־כֹּל': 'H3605', 'הַשָּׂמֵחַ': 'H8055', 'הַשֹּׁאֵל': 'H7592', 'הַשׁאֵל': 'H7592', 'הַתְּשׂוּבָה': 'H7725', 'הָאִשָׁה': 'H0802', 'הָאֶרֶץ': 'H0776',
-    'הָאָהוּב': 'H0157', 'הָחֵלוּ': 'H2490', 'הָרַבָּה': 'H7235', 'הָרוּחוֹת': 'H7306', 'הֹרְסִים': 'H2040', 'הֻקְדְּשׁוּ': 'H6942', 'הֻרְכְּבוּ': 'H7392', 'הׇאֳלֹהִים': 'H0430', 'הׇחֳרָבָה': 'H2717', 'הׇמְלַךְ': 'H4427', 'הׇעֳמַד': 'H5975', 'הוֹצִיאוֹ': 'H3318',
+    'הָאָהוּב': 'H0157', 'הָחֵלוּ': 'H2490', 'הָחֵלּוּ': 'H2490', 'הָרַבָּה': 'H7235', 'הָרוּחוֹת': 'H7306', 'הֹרְסִים': 'H2040', 'הֻקְדְּשׁוּ': 'H6942', 'הֻרְכְּבוּ': 'H7392', 'הׇאֳלֹהִים': 'H0430', 'הׇחֳרָבָה': 'H2717', 'הׇמְלַךְ': 'H4427', 'הׇעֳמַד': 'H5975', 'הוֹצִיאוֹ': 'H3318',
     'הוֹרָה': 'H2029', 'הוּא־אָמַר': 'H0559', 'וְאֲחֵרִים': 'H0309', 'וְאִם־אָב': 'H0001', 'וְאִם־בָּא': 'H0935', 'וְאִם־זֶבַח': 'H2076', 'וְאִם־עַל־יְדֵי': 'H3027', 'וְאֵין־אֹמֵר': 'H0559', 'וְאֵרֵד': 'H3381', 'וְאֶבְלֵנוּ': 'H0056', 'וְאֶל־אֱלֹהַי': 'H0430', 'וְאֶל־אֲדֹנָי': 'H0113',
     'וְאֶל־לֵב': 'H3820', 'וְאֶל־מֶלֶךְ': 'H4427', 'וְאֶל־עֲוֺנָם': 'H5771', 'וְאֶל־עַמִּי': 'H5973', 'וְאֶל־עַמִּים': 'H5973', 'וְאֶל־תַּחַת': 'H8478', 'וְאֶת־אֱלֹהֵי': 'H0430', 'וְאֶת־גׇּדְלוֹ': 'H1431', 'וְאֶת־דְּבַר': 'H1696', 'וְאֶת־דְּרוֹרָם': 'H1865', 'וְאֶת־הַכֹּהֵן': 'H3547', 'וְאֶת־הַתּוֹרָה': 'H8451',
     'וְאֶת־הָאֱלֹהִים': 'H0430', 'וְאֶת־הָאֱמוּנָה': 'H0530', 'וְאֶת־יָדִי': 'H3027', 'וְאֶת־כׇּל־הֲמוֹנֹה': 'H1995', 'וְאֶת־לֵב': 'H3820', 'וְאֶת־מֶלֶךְ': 'H4427', 'וְאֶת־עֲוֺן': 'H5771', 'וְאֶת־עֲמָלְךָ': 'H5998', 'וְאֶת־עֶבֶד': 'H5647', 'וְאֶת־עַיִן': 'H5869', 'וְאֶת־עַמְּךָ': 'H5973', 'וְאֶת־עַמִּי': 'H5973',
@@ -748,6 +748,31 @@
     // through ־ֵיהֶם: the peeler eats the mem and lands on junk 'דיה'.
     // Built for the possessor class at 2 Ne 27:26, 2026-09-10.
     'וּמְלֻמְּדֵיהֶם': 'למד', 'מְלֻמְּדֵיהֶם': 'למד',
+
+    // בַּר "open country" -> "wild" in the Jacob 5 allegory, the pole opposite
+    // תַּרְבּוּת "tame" (זַיִת הַבַּר / זַיִת הַתַּרְבּוּת, both in 5:9-14) and
+    // beside הָאֵם "natural". MT anchor: Job 39:4 בַבָּר "in the open field".
+    // Strong's files bare בר as H1247/H1248, Aramaic בַּר "son", so the family
+    // card read "son (Aramaic); Bar- in names" and בַּר־נַבָּא (Barnabas) took
+    // 33% of the root's uses -- three unrelated words in one family.
+    // Pinned 2026-09-10. ONLY these three surfaces: all are absent from the MT,
+    // so nothing outside Jacob 5 can move. NOT pinned: bare בַּר and בָּר,
+    // which ARE the MT's "grain" (Amos 8:6 + 6 more) and cannot be separated
+    // by string -- same rule as בְּרוֹשׁ above. Those three stay reported.
+    // פְּרִי־בָר (5:25, 5:45): maqqef-joined so the raw key is distinct from
+    // the MT's bare בָּר "grain" -- which is why the join was needed at all.
+    // Dagesh lene drops inside the unit (cf. MT פְּרִי־בָטֶן, פְּרִי־בִטְנְךָ).
+    // ONLY הַבַּר. Every other spelling of this word is a live homograph as a
+    // MAQQEF MEMBER -- and the card splits a unit and re-resolves each member
+    // from the bare string, so a whole-token pin cannot protect them:
+    //   בָר    -> וְיִצְבְּרוּ־בָר (Gen 41:35), יַעַטְפוּ־בָר (Ps 65:14) = GRAIN
+    //   הַבָּר  -> אֶת־הַבָּר = the wheat
+    //   לְבַר   -> לְבַר־אֱלָהִין "son of God", לְבַר־נַבָּא = BARNABAS
+    //   בַּר    -> 40 sites, Aramaic "son" and wheat
+    // Pinning any of them puts "wild" on Barnabas and on the MT's grain --
+    // the same בְּרוֹשׁ rule as above. The Jacob 5 sites reach this family by
+    // being spelled הַבַּר, not by a pin that would corrupt the Tanakh.
+    'הַבַּר': 'בר',
 
     // THE NEPHITE MEASURES OF ALMA 11 (2026-08-31). Senine, senum, seon, shum,
     // limnah, amnor, ezrom, onti, antion, shiblon, shiblum -- Nephite names,

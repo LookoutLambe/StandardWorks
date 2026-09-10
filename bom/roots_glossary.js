@@ -2194,8 +2194,8 @@ window._rootGlossaryData = {
     "category": "Uncategorized"
   },
   "בר": {
-    "meaning": "wild",
-    "category": "Society"
+    "meaning": "(בַּר) open country, the open field — Job 39:4 בַבָּר; hence, of a tree or its branches, WILD, uncultivated — the pole opposite תַּרְבּוּת \"tame\" (זַיִת הַבַּר / זַיִת הַתַּרְבּוּת, Jacob 5:9-14) and beside הָאֵם \"natural\". NOT H1247/H1248 בַּר \"son\" (Aramaic, as in בַּר־נַבָּא Barnabas), and not בָּר \"grain\" from ברר.",
+    "category": "Lexical"
   },
   "רק": {
     "meaning": "only",
