@@ -744,6 +744,11 @@
     // segol forms, so the place name's own spelling is untouched.
     'יִתָּלֶה': 'תלה', 'יִתְלֶה': 'תלה',
 
+    // מְלֻמָּד (pual ptc, 'learned') keeps its root through ־ָיו but NOT
+    // through ־ֵיהֶם: the peeler eats the mem and lands on junk 'דיה'.
+    // Built for the possessor class at 2 Ne 27:26, 2026-09-10.
+    'וּמְלֻמְּדֵיהֶם': 'למד', 'מְלֻמְּדֵיהֶם': 'למד',
+
     // THE NEPHITE MEASURES OF ALMA 11 (2026-08-31). Senine, senum, seon, shum,
     // limnah, amnor, ezrom, onti, antion, shiblon, shiblum -- Nephite names,
     // not Hebrew roots. Every prefixed form had splintered into its OWN family
