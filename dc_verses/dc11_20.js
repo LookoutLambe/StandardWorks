@@ -122,7 +122,7 @@ var dc11_ch1Verses = [
     ["הִיא","it is"],
     ["בְשׂוֹרָתִי׃","my gospel"]
   ]},
-  { num: "כה", words: [["אַל","do not"], ["תְּכַחֵשׁ","deny"], ["בְּרוּחַ","spirit of"], ["הֶחָזוֹן","revelation"], ["וְלֹא","and not"], ["בְרוּחַ","spirit of"], ["הַנְּבוּאָה","prophecy"], ["כִּי","for"], ["אוֹי","woe"], ["לַמְכַחֵשׁ","to him who denies"], ["בְּאֵלֶּה׃","these"]]},
+  { num: "כה", words: [["אַל","do not"], ["תְּכַחֵשׁ","deny"], ["בְּרוּחַ","spirit of"], ["הֶחָזוֹן","revelation"], ["וְלֹא","and not"], ["בְרוּחַ","spirit of"], ["הַנְּבוּאָה","prophecy"], ["כִּי","for"], ["אוֹי","wo"], ["לַמְכַחֵשׁ","to him who denies"], ["בְּאֵלֶּה׃","these"]]},
   { num: "כו", words: [
     ["עַל־כֵּן","therefore"],
     ["צְפֹן","treasure up"],
