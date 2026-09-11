@@ -343,8 +343,8 @@ var dc42_ch1Verses = [
     ["לֹא","not"],
     ["תִנְאָף","you shall commit adultery"],
     ["וְהַנֹּאֵף","and he that commits adultery"],
-    ["וְלֹא","and"],
-    ["יָשׁוּב","repents not"],
+    ["וְלֹא","and not"],
+    ["יָשׁוּב","repents"],
     ["יְגֹרָשׁ׃","shall be cast out"]
   ]},
   { num: "כה", words: [
@@ -382,8 +382,8 @@ var dc42_ch1Verses = [
     ["נְתוּנִים","are given"],
     ["בִּכְתוּבַי","in my scriptures"],
     ["הַחוֹטֵא","he that sins"],
-    ["וְלֹא","and"],
-    ["יָשׁוּב","repents not"],
+    ["וְלֹא","and not"],
+    ["יָשׁוּב","repents"],
     ["יְגֹרָשׁ׃","shall be cast out"]
   ]},
   { num: "כט", words: [
@@ -417,7 +417,7 @@ var dc42_ch1Verses = [
     ["לִישׁוּעַת","for the salvation of"],
     ["עַמִּי׃","my people"]
   ]},
-  { num: "לז", words: [["וְהָיָה","and it shall come to pass"], ["הַחוֹטֵא","that he that sins"], ["וְלֹא","and"], ["יָשׁוּב","repents not"], ["יְגֹרָשׁ","shall be cast out"], ["מִן","from"], ["הַכְּנֵסִיָּה","the church"], ["וְלֹא","and shall not"], ["יְקַבֵּל","receive"], ["עוֹד","again"], ["אֶת־אֲשֶׁר","that which"], ["הִקְדִּישׁ","he has consecrated"], ["לָעֲנִיִּים","unto the poor"], ["וְלָאֶבְיוֹנִים","and needy"], ["אֲשֶׁר","of"], ["בִּכְנֵסִיָּתִי","my church"], ["אוֹ","or"], ["בְמִלִּים","in words"], ["אֲחֵרוֹת","other"], ["לִי׃","unto me"]]},
+  { num: "לז", words: [["וְהָיָה","and it shall come to pass"], ["הַחוֹטֵא","that he that sins"], ["וְלֹא","and not"], ["יָשׁוּב","repents"], ["יְגֹרָשׁ","shall be cast out"], ["מִן","from"], ["הַכְּנֵסִיָּה","the church"], ["וְלֹא","and shall not"], ["יְקַבֵּל","receive"], ["עוֹד","again"], ["אֶת־אֲשֶׁר","that which"], ["הִקְדִּישׁ","he has consecrated"], ["לָעֲנִיִּים","unto the poor"], ["וְלָאֶבְיוֹנִים","and needy"], ["אֲשֶׁר","of"], ["בִּכְנֵסִיָּתִי","my church"], ["אוֹ","or"], ["בְמִלִּים","in words"], ["אֲחֵרוֹת","other"], ["לִי׃","unto me"]]},
   { num: "לח", words: [
     ["כִּי","for"],
     ["כְּפִי","inasmuch"],
