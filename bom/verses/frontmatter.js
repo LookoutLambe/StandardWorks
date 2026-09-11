@@ -864,7 +864,7 @@ var frontThreeWit = [
     ["הֵם","they"],
     ["אֵל","God"],
     ["אֶחָד","one"],
-    ["אָמֵן","amen"],
+    ["אָמֵן","Amen"],
   ], english:"And the honor be to the Father, and to the Son, and to the Holy Ghost, which is one God. Amen. — Oliver Cowdery, David Whitmer, Martin Harris"},
 ];
 var frontEightWit = [

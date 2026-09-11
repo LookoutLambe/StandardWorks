@@ -44,6 +44,31 @@
     // "than" is the SAME mem in its comparative sense (מֵחֵלֶב "more than the fat"),
     // so a gloss carrying either word already accounts for the preposition.
     if (!g || /\b(from|than)\b/i.test(g)) return g;
+    // A gloss that OPENS with "of" / "out of" / "off" is ALREADY rendering this
+    // same mem, so prepending turns it into "from of your substance". Position
+    // is what separates the two senses: a LEADING "of" is the preposition, a
+    // trailing one is the construct chain ("the sons of"), which still needs
+    // "from". Testing the start of the string keeps מִבְּנֵי אָדָם working while
+    // fixing 1,232 tokens site-wide (527 BoM, 415 NT, 290 OT).
+    // Hyphen-tolerant: this corpus stores the same gloss both as "out of Egypt"
+    // and as "out-of-Egypt", and matching only the spaced form silently skips
+    // most of it.
+    if (/^(?:out[\s-]+of|off|of)\b/i.test(g)) return g;
+
+    // THE MEM IS NOT ONLY DIRECTIONAL. It is also causal (מֵרֹב "because of the
+    // greatness of"), agentive (מֵאֱלֹהִים "by God"), temporal (מֵעֵת "since"),
+    // partitive, and simply lexicalised (מִמׇּחֳרָת "on the morrow",
+    // מִמּוּל "over against", מִמִּזְרָח "on the east", מֵעַל "over").
+    // Wherever the gloss ALREADY OPENS with one of these English function words
+    // the translator has decided how this mem reads, and the renderer must not
+    // overwrite that decision — "from on the morrow", "from because of the
+    // greatness of", "from by God" are simply broken English.
+    //
+    // The words below are exactly those that cannot follow "from". The
+    // directional adverbs that CAN — above, beyond, across, behind, within,
+    // among, beneath, without, afar, whence, henceforth — are deliberately
+    // absent, so "from above" and "from afar off" keep working.
+    if (/^(?:on|by|because|for|to|in|at|with|upon|after|over|into|through|since|about|against|concerning)\b/i.test(g)) return g;
 
     var h = String(heb).replace(/\u05C3/g, '');
     // Directional "from" is only unambiguous as explicit מִן־ or double-mem
@@ -58,7 +83,12 @@
       // Idioms where מֵ is not directional "from"
       if (/^מאז/.test(bare) || /^מה/.test(bare)) return g;
       if (MEM_NOT_FROM[bare]) return g;
-      if (/^for[- ]/i.test(g)) return g.replace(/^for[- ]/i, 'from ');
+      // (A rule here once rewrote a leading "for" into "from". It was wrong and
+      // is gone: every מ + "for" gloss in the corpus is either CAUSAL — "for
+      // want of food", "for fear of the law", "for joy", "for the multitude of
+      // fishes" — or the COMPARATIVE mem after "too" — "too strong for me",
+      // "nothing too hard for You", "too great for man". "from" fits none of
+      // them, and the guard above now returns before this point anyway.)
       return 'from ' + g;
     }
 
