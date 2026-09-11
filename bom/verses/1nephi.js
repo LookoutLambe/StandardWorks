@@ -2128,7 +2128,7 @@ var ch12Verses = [
     ["עָשָׂר","ten"],
     ["שִׁבְטֵי","tribes of"],
     ["יִשְׂרָאֵל","Israel"],
-    ["לָכֵן","therefore"],
+    ["לָכֵן","wherefore"],
     ["יִשָּׁפְטוּ","shall be judged"],
     ["שְׁנֵים","the two"],
     ["עָשָׂר","ten"],
@@ -3592,7 +3592,7 @@ var ch17Verses = [
     ["דִּבֵּר","He spake"],
     ["׃",""]
   ]},
-  { num: "נה", words: [["וְעַתָּה","and now"], ["אָמְרוּ","they said"], ["יָדֹעַ","of a surety"], ["יָדַעְנוּ","we know"], ["כִּי־יְהוָה","that the Lord"], ["אִתָּךְ","is with you"], ["כִּי","for"], ["כֹחַ","the power of"], ["יְהוָה","the Lord"], ["הִרְעִישָׁנוּ","shook us"], ["וַיִּפְּלוּ","and they fell"], ["לְפָנַי","before me"], ["וַיַּחְפְּצוּ","and they desired"], ["לְהִשְׁתַּחֲוֹת","to worship"], ["לִי","me"], ["וְלֹא","but not"], ["נְתַתִּים","I gave them"], ["לֵאמֹר","saying"], ["אָחִיכֶם","your brother"], ["אֲנִי","I am"], ["אַף","yea"], ["אֲחִיכֶם","your brother"], ["הַצָּעִיר","the younger"], ["לָכֵן","therefore"], ["הִשְׁתַּחֲווּ","worship"], ["לַיהוָה","unto the Lord"], ["אֱלֹהֵיכֶם","your God"], ["וְכַבְּדוּ","and honor"], ["אֶת־אֲבִיכֶם","your father"], ["וְאֶת־אִמְּכֶם","and your mother"], ["לְמַעַן","that"], ["תַּאֲרִיכוּ","may be prolonged"], ["יָמִים","your days"], ["עַל־הָאָרֶץ","upon the land"], ["אֲשֶׁר","which"], ["יִתֵּן","shall give"], ["לָכֶם","to you"], ["יְהוָה","the Lord"], ["אֱלֹהֵיכֶם","your God"], ["׃",""]]}
+  { num: "נה", words: [["וְעַתָּה","and now"], ["אָמְרוּ","they said"], ["יָדֹעַ","of a surety"], ["יָדַעְנוּ","we know"], ["כִּי־יְהוָה","that the Lord"], ["אִתָּךְ","is with you"], ["כִּי","for"], ["כֹחַ","the power of"], ["יְהוָה","the Lord"], ["הִרְעִישָׁנוּ","shook us"], ["וַיִּפְּלוּ","and they fell"], ["לְפָנַי","before me"], ["וַיַּחְפְּצוּ","and they desired"], ["לְהִשְׁתַּחֲוֹת","to worship"], ["לִי","me"], ["וְלֹא","but not"], ["נְתַתִּים","I gave them"], ["לֵאמֹר","saying"], ["אָחִיכֶם","your brother"], ["אֲנִי","I am"], ["אַף","yea"], ["אֲחִיכֶם","your brother"], ["הַצָּעִיר","the younger"], ["לָכֵן","wherefore"], ["הִשְׁתַּחֲווּ","worship"], ["לַיהוָה","unto the Lord"], ["אֱלֹהֵיכֶם","your God"], ["וְכַבְּדוּ","and honor"], ["אֶת־אֲבִיכֶם","your father"], ["וְאֶת־אִמְּכֶם","and your mother"], ["לְמַעַן","that"], ["תַּאֲרִיכוּ","may be prolonged"], ["יָמִים","your days"], ["עַל־הָאָרֶץ","upon the land"], ["אֲשֶׁר","which"], ["יִתֵּן","shall give"], ["לָכֶם","to you"], ["יְהוָה","the Lord"], ["אֱלֹהֵיכֶם","your God"], ["׃",""]]}
 ];
 var ch18Verses = [
   { num: "א", words: [["וַיִּשְׁתַּחֲווּ","and they did worship"], ["לַיהוָה","the Lord"], ["וַיֵּלְכוּ","and did go forth"], ["אִתִּי","with me"], ["וַנַּחְרֹשׁ","and we did work"], ["עֲצֵי","timbers of"], ["מַעֲשֵׂה","of workmanship"], ["חֹשֵׁב","curious"], ["וַיַּרְאֵנִי","and did shew me"], ["יְהוָה","the Lord"], ["מֵעֵת","from time"], ["לְעֵת","to time"], ["אֵיךְ","how"], ["אֶחֱרֹשׁ","I should work"], ["אֶת־עֲצֵי","the timbers of"], ["הׇאֳנִיָּה","the ship"], ["׃",""]]},
