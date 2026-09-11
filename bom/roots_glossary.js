@@ -925,7 +925,7 @@ window._rootGlossaryData = {
     "category": "Particle"
   },
   "אשר": {
-    "meaning": "(אֲשֶׁר) which, that, who; (אָשֵׁר) Asher; (אָשַׁר) to be blessed",
+    "meaning": "(אֲשֶׁר) the relative particle \u2014 who, which, that; after a preposition it carries the clause: בַּאֲשֶׁר where, in that; לַאֲשֶׁר to whom; מֵאֲשֶׁר than; כַּאֲשֶׁר as, when",
     "category": "Particle"
   },
   "לא": {

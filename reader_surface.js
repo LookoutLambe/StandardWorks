@@ -1547,6 +1547,13 @@ function renderGlossaryList() {
   var tab = activeTab ? activeTab.getAttribute('data-tab') : 'all';
   var sortVal = document.getElementById('glossary-sort-select').value;
   var filtered = glossaryIndex.filter(function(e) {
+    /* Browsing hides the function words; a search must still find them.
+       Match the RAW key, exactly as glossaryEntries() did when it filtered at
+       build time. Do NOT normalise: the exclude set stores its keys with final
+       letters (מן, בין, כן, אין, פן, ען, אכן), so folding ן→נ here silently
+       un-hid all seven of them. */
+    if (!searchVal && typeof glossaryExclude !== 'undefined' && glossaryExclude &&
+        glossaryExclude.has(e.root)) return false;
     if (searchVal) {
       // normFinals must be applied to BOTH sides. Folding ם→מ on the search
       // term only made every word ending in a final letter unfindable —
@@ -1686,7 +1693,14 @@ function buildGlossaryIndex() {
   // Cross-volume index from the concordance: every root in the whole corpus,
   // with total counts — the in-page fallback below only sees this volume.
   if (window.RootScorecard && RootScorecard.ready()) {
-    glossaryIndex = RootScorecard.glossaryEntries(typeof glossaryExclude !== 'undefined' ? glossaryExclude : null);
+    /* NOT filtered here any more. glossaryExclude holds the 75 function words
+       kept OUT OF THE BROWSE LIST because they carry no theological weight —
+       but baking the exclusion into the index made them unFINDABLE too, and a
+       reader who typed אֲשֶׁר got back only its homograph אָשֵׁר, the name,
+       tagged NAME: the commonest word in the Hebrew Bible presented as the
+       Asherah pole. The exclusion is a browsing decision, so it now applies
+       in renderGlossaryList() only when there is no search term. */
+    glossaryIndex = RootScorecard.glossaryEntries(null);
     if (glossaryIndex) return;
   }
   glossaryIndex = [];
