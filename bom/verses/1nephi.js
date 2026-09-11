@@ -3585,7 +3585,7 @@ var ch17Verses = [
     ["וְלֹא","and not"],
     ["יָבְשׁוּ","they withered"],
     ["לְפָנַי","before me"],
-    ["וַיַּרְעִישֵׁם","and He shook them"],
+    ["וַיַּרְעִישֵׁם","and did shake them"],
     ["יְהוָה","the Lord"],
     ["כִּדְבָרוֹ","according to His word"],
     ["אֲשֶׁר","which"],
@@ -3595,7 +3595,7 @@ var ch17Verses = [
   { num: "נה", words: [["וְעַתָּה","and now"], ["אָמְרוּ","they said"], ["יָדֹעַ","of a surety"], ["יָדַעְנוּ","we know"], ["כִּי־יְהוָה","that the Lord"], ["אִתָּךְ","is with you"], ["כִּי","for"], ["כֹחַ","the power of"], ["יְהוָה","the Lord"], ["הִרְעִישָׁנוּ","shook us"], ["וַיִּפְּלוּ","and they fell"], ["לְפָנַי","before me"], ["וַיַּחְפְּצוּ","and they desired"], ["לְהִשְׁתַּחֲוֹת","to worship"], ["לִי","me"], ["וְלֹא","but not"], ["נְתַתִּים","I gave them"], ["לֵאמֹר","saying"], ["אָחִיכֶם","your brother"], ["אֲנִי","I am"], ["אַף","yea"], ["אֲחִיכֶם","your brother"], ["הַצָּעִיר","the younger"], ["לָכֵן","therefore"], ["הִשְׁתַּחֲווּ","worship"], ["לַיהוָה","unto the Lord"], ["אֱלֹהֵיכֶם","your God"], ["וְכַבְּדוּ","and honor"], ["אֶת־אֲבִיכֶם","your father"], ["וְאֶת־אִמְּכֶם","and your mother"], ["לְמַעַן","that"], ["תַּאֲרִיכוּ","may be prolonged"], ["יָמִים","your days"], ["עַל־הָאָרֶץ","upon the land"], ["אֲשֶׁר","which"], ["יִתֵּן","shall give"], ["לָכֶם","to you"], ["יְהוָה","the Lord"], ["אֱלֹהֵיכֶם","your God"], ["׃",""]]}
 ];
 var ch18Verses = [
-  { num: "א", words: [["וַיִּשְׁתַּחֲווּ","and they did worship"], ["לַיהוָה","the Lord"], ["וַיֵּלְכוּ","and did go forth"], ["אִתִּי","with me"], ["וַנַּחְרֹשׁ","and we did work"], ["עֲצֵי","timbers of"], ["מַעֲשֵׂה","of workmanship"], ["חֹשֵׁב","curious"], ["וַיַּרְאֵנִי","and He shewed me"], ["יְהוָה","the Lord"], ["מֵעֵת","from time"], ["לְעֵת","to time"], ["אֵיךְ","how"], ["אֶחֱרֹשׁ","I should work"], ["אֶת־עֲצֵי","the timbers of"], ["הׇאֳנִיָּה","the ship"], ["׃",""]]},
+  { num: "א", words: [["וַיִּשְׁתַּחֲווּ","and they did worship"], ["לַיהוָה","the Lord"], ["וַיֵּלְכוּ","and did go forth"], ["אִתִּי","with me"], ["וַנַּחְרֹשׁ","and we did work"], ["עֲצֵי","timbers of"], ["מַעֲשֵׂה","of workmanship"], ["חֹשֵׁב","curious"], ["וַיַּרְאֵנִי","and did shew me"], ["יְהוָה","the Lord"], ["מֵעֵת","from time"], ["לְעֵת","to time"], ["אֵיךְ","how"], ["אֶחֱרֹשׁ","I should work"], ["אֶת־עֲצֵי","the timbers of"], ["הׇאֳנִיָּה","the ship"], ["׃",""]]},
   { num:"ב", words:[
     ["וְלֹא","and not"],
     ["חָרַשְׁתִּי","did I work"],
@@ -3610,7 +3610,7 @@ var ch18Verses = [
     ["אָדָם","men"],
     ["כִּי־אִם","but"],
     ["כַּאֲשֶׁר","according as"],
-    ["הוֹרַנִי","He had shewn me"],
+    ["הוֹרַנִי","had shewn me"],
     ["יְהוָה","the Lord"],
     ["לָכֵן","wherefore"],
     ["לֹא","not"],
@@ -3630,7 +3630,7 @@ var ch18Verses = [
     ["פְּעָמִים","times"],
     ["רַבּוֹת","many"],
     ["לָכֵן","wherefore"],
-    ["הֶרְאַנִי","He shewed unto me"],
+    ["הֶרְאַנִי","shewed unto me"],
     ["יְהוָה","the Lord"],
     ["דְּבָרִים","things"],
     ["גְּדוֹלִים","great"],
