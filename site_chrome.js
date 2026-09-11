@@ -189,14 +189,14 @@
     a.setAttribute('aria-label', reader ? 'Home \u2014 Standard Works' : 'Open books and navigation');
     a.title = reader ? 'Home' : 'Books and navigation';
     a.style.cssText = 'background:none;border:none;padding:0;cursor:pointer';
-    /* THE MARK IN THE NAVY BAR IS THE LOGO: the engraved scroll-book (two
-       scrolls opening into one book), reversed — paper drawing, gold star, on
-       transparent so the bar's own navy is its ground (user, 2026-09-11: "make
-       it the logo for the blue"). The file is 3:2 (228x152) with the drawing
-       filling it; the slot is a 44px-minimum auto column, so 60x40 fits without
-       squashing. Rendered from the traced drawing by the logo build, not drawn
-       by hand. */
-    a.innerHTML = '<img src="' + assetBase() + 'icons/sw-mark.png?v=4" alt="" style="width:60px;height:40px;display:block">';
+    /* THE MARK IN THE NAVY BAR: the open book with the spire, star and arc
+       (icons/sefer-mormon-book.svg), reversed — paper drawing, gold star, on
+       transparent so the bar's own navy is its ground. User, 2026-09-11: the
+       bar should not repeat the scroll-book that sits right below it on the
+       landing page; the scroll-book stays for the landing, the favicon and
+       the app icons. The file is 3:2 (228x152); the slot is a 44px-minimum
+       auto column, so 60x40 fits without squashing. */
+    a.innerHTML = '<img src="' + assetBase() + 'icons/sw-mark.png?v=5" alt="" style="width:60px;height:40px;display:block">';
     if (!reader) a.addEventListener('click', openMenu);
     return a;
   }
