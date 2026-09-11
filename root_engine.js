@@ -31,6 +31,40 @@
   function stripNikkud(s) {
     return s.replace(/[֑-ֽֿ-׀׃-ׇ]/g, '');
   }
+  /* stripNikkud leaves the shin/sin dots standing: U+05C1 and U+05C2 fall in
+     the gap between its two ranges, and that is deliberate, because the dot
+     is what tells שׁ from שׂ and the attested/lexicon layers are keyed by the
+     pointed surface. But a root KEY minted by peeling is consonantal, and
+     every other stage that mints one says so (stageMaterCollapse and
+     stageFallback both strip these two before keying). rootByMorphology did
+     not, so its raw candidates were returned dotted and landed in phantom
+     families beside the real ones — שׁאר beside שאר (589 tokens), שׁמע beside
+     שמע (2,465), 41 keys in all. Measured over the six volumes: 187 tokens
+     move, every one of them onto the undotted family that already existed.
+     Only the minted key is undotted; the tables keep their own spelling, so
+     the FAMILY_SPLIT keys that are deliberately dotted (חפשׂ, H2664/H2665)
+     are untouched — they come from familyOf, not from this branch. */
+  var _dottedFamily = null;
+  function undot(s) {
+    s = String(s || '');
+    if (!/[ׁׂ]/.test(s)) return s;
+    /* ... with ONE exception, and it is the whole reason this is a function
+       and not a replace(): where the project has DELIBERATELY split a family
+       on the dot, the dot is the family key and must survive. FAMILY_SPLIT
+       holds seven dotted values; six are fully pointed lexemes (יָבֵשׁ,
+       שְׁכֶם, שָׂעִיר, פָּרָשׁ, שְׂרָיָה, אָשֵׁר) that a consonantal candidate can
+       never equal, and one is consonantal — חפשׂ "search" (H2664/H2665),
+       kept apart from חפש "free". Without this guard לְחַפֵּשׂ and לְחָפְשָׂם
+       (5 tokens) fell back into חפש and undid that split. */
+    if (!_dottedFamily) {
+      _dottedFamily = {};
+      for (var k in FAMILY_SPLIT) {
+        if (Object.prototype.hasOwnProperty.call(FAMILY_SPLIT, k) && /[ׁׂ]/.test(FAMILY_SPLIT[k]))
+          _dottedFamily[FAMILY_SPLIT[k]] = 1;
+      }
+    }
+    return _dottedFamily[s] ? s : s.replace(/[ׁׂ]/g, '');
+  }
   function normFinals(s) {
     return s.replace(/ך/g, 'כ').replace(/ם/g, 'מ').replace(/ן/g, 'נ').replace(/ף/g, 'פ').replace(/ץ/g, 'צ');
   }
@@ -1624,7 +1658,7 @@
     for (i = 0; i < cands.length; i++) {
       var cand = normFinals(cands[i]);
       if (cand.length < 3) continue;
-      if (LI[cand] !== undefined) { if (LI[cand]) return familyOf(LI[cand]); if (isShoresh(cand)) return cand; }
+      if (LI[cand] !== undefined) { if (LI[cand]) return familyOf(LI[cand]); if (isShoresh(cand)) return undot(cand); }
     }
     for (i = 0; i < _mVPre.length; i++) {
       var vp = _mVPre[i];
