@@ -581,6 +581,7 @@ window._rootGlossaryData = {
   "מסר": { "meaning": "(מָסַר) to deliver, commit", "category": "Uncategorized" },
   "H8095": { "meaning": "Simeon, Simon", "category": "Name" },
   "H2377": { "meaning": "vision, revelation", "category": "Theology" },
+  "H2384": { "meaning": "(חִזָּיוֹן / חֶזְיוֹן) the vision seen — the night-vision of Job 4:13, 7:14, 33:15 and Isaiah’s גֵּיְא חִזָּיוֹן (Isa 22:1, 22:5); its plural חֶזְיוֹנוֹת carries “revelations” in this volume", "category": "Theology" },
   "מעל": { "meaning": "(מַעַל) unfaithfulness, unbelief; (מְעִיל) robe", "category": "Morality" },
   "H4069": { "meaning": "why, wherefore", "category": "Particle" },
   "באר": { "meaning": "(בְּאֵר) well; (בֵּאֵר) to explain", "category": "Nature" },
