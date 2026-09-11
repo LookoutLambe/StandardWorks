@@ -150,7 +150,14 @@
   // The full particle-head list (bare + waw-prefixed) per the 2026-08-30
   // ruling: a PARTICLE head is dropped and the card shows the word it is
   // attached to; a CONTENT head keeps the card (לֶחִי־נֶפִי is Lehi).
-    var _particles = {'אך':1,'אל':1,'אם':1,'אף':1,'אשר':1,'את':1,'גם':1,'ואך':1,'ואל':1,'ואם':1,'ואף':1,'ואשר':1,'ואת':1,'וגם':1,'וכי':1,'וכל':1,'ולא':1,'ומן':1,'ועד':1,'ועל':1,'ועם':1,'ופן':1,'ורק':1,'כי':1,'כל':1,'לא':1,'מן':1,'עד':1,'על':1,'עם':1,'פן':1,'רק':1};
+    /* The כל family is a particle WITH its proclitic too. The unification the
+       note below rejects would have dragged אֲשֶׁר and מָה along with it; adding
+       only בכל/לכל/מכל/ככל (and their waw forms) does not. Measured over all six
+       volumes: 449 tokens / 310 surfaces move, every one of them OFF כלל "all,
+       every" and onto the word the phrase is actually about — בְּכׇל־נַפְשְׁךָ to
+       נפש, בְּכׇל־חֲרִיצוּת to חרץ, לְכׇל־הַמַּאֲמִינִים to אמן. Nothing moves the
+       other way, and no token lands on a preposition+suffix piece. */
+    var _particles = {'אך':1,'אל':1,'אם':1,'אף':1,'אשר':1,'את':1,'בכל':1,'גם':1,'ואך':1,'ואל':1,'ואם':1,'ואף':1,'ואשר':1,'ואת':1,'ובכל':1,'וגם':1,'וכי':1,'וככל':1,'וכל':1,'ולא':1,'ולכל':1,'ומכל':1,'ומן':1,'ועד':1,'ועל':1,'ועם':1,'ופן':1,'ורק':1,'כי':1,'ככל':1,'כל':1,'לא':1,'לכל':1,'מכל':1,'מן':1,'עד':1,'על':1,'עם':1,'פן':1,'רק':1};
   /* Deliberately the bare dict, NOT _isMaqqefParticle. Unifying the two looks
      right on paper — stripLayers already knows that a prefix letter rides
      along, so בְּכׇל־ and לְכׇל־ are particles there and not here — and it does

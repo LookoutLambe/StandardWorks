@@ -626,6 +626,7 @@ window._rootGlossaryData = {
   "H0175": { "meaning": "Aaron", "category": "Name" },
   "H5771": { "meaning": "iniquity, guilt", "category": "Morality" },
   "בדד": { "meaning": "(לְבַד) alone, apart; (בַּד) pole, part", "category": "Uncategorized" },
+  "H3553": { "meaning": "(כּוֹבַע / קוֹבַע) helmet, head-plate — Goliath's at 1 Sam 17:5, the helmet of salvation at Isa 59:17, and the plural וְכוֹבָעִים in Uzziah's armoury beside shields, spears and bows (2 Chr 26:14) — the Book of Mormon's head-plate", "category": "Objects" },
   "H3627": { "meaning": "(כְּלִי) vessel, instrument, weapon; armor", "category": "Objects" },
   "חקק": { "meaning": "(חֹק) statute, law; (חָקַק) to inscribe, decree", "category": "Law" },
   "כנס": { "meaning": "(בֵּית כְּנֶסֶת) synagogue — the place (Alma, Helaman, 3 Ne); (כִּנֵּס) to gather. \"Church\" is a different word: עֵדָה / קְהִלָּה.", "category": "Society" },
