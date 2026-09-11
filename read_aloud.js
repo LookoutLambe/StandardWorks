@@ -316,6 +316,34 @@
       '\u05DC\u05B4\u05E9\u05B0\u05C2\u05E8\u05B8\u05D9\u05B8\u05E2',   /* לִשְׂרָיָה -> לִשְׂרָיָע */
     '\u05E9\u05B0\u05C2\u05E8\u05B8\u05D9\u05B8\u05D4':
       '\u05E9\u05B0\u05C2\u05E8\u05B8\u05D9\u05B8\u05E2',   /* שְׂרָיָה -> שְׂרָיָע */
+
+    /* ZARAHEMLA IS STRESSED ON THE CHET (translator's ruling, 2026-09-11):
+       za-ra-CHEM-la, not za-ra-chem-LA. Hebrew's default is final stress and
+       she takes it.
+
+       THE POINTING CANNOT MOVE IT. Synthesised and measured: a meteg on the
+       chet, a dagesh, a final alef, a final ayin (the Sariah device above) and
+       a final patah ALL produce byte-identical audio -- 43,116 bytes each.
+       She ignores the pointing on this word completely. (Byte size does track
+       duration -- one letter is 34,462 bytes and three words 65,334 -- so that
+       identity is real, not a measuring artefact.) The only thing that changed
+       her rendering at all was SPLITTING the word, which puts the chet syllable
+       at the end of the first word, where the default stress already falls.
+
+       The space is safe: all 11 word pairs the split creates in the corpus --
+       the six words that precede the name and the five that follow it -- were
+       run through the silence detector and not one is swallowed.
+
+       Keyed three times because the table is exact-match and the name occurs
+       in three forms (146 bare, 4 with a bet, 1 carrying a sof pasuq; the
+       sof pasuq is dropped from the spoken string, as the unpointing drops it
+       on the ordinary path). */
+    '\u05D6\u05B8\u05E8\u05B7\u05D7\u05B6\u05DE\u05B0\u05DC\u05B8\u05D4':
+      '\u05D6\u05B8\u05E8\u05B7\u05D7\u05B6\u05DD\u0020\u05DC\u05B8\u05D4',
+    '\u05D1\u05B0\u05BC\u05D6\u05B8\u05E8\u05B7\u05D7\u05B6\u05DE\u05B0\u05DC\u05B8\u05D4':
+      '\u05D1\u05B0\u05BC\u05D6\u05B8\u05E8\u05B7\u05D7\u05B6\u05DD\u0020\u05DC\u05B8\u05D4',
+    '\u05D6\u05B8\u05E8\u05B7\u05D7\u05B6\u05DE\u05B0\u05DC\u05B8\u05D4\u05C3':
+      '\u05D6\u05B8\u05E8\u05B7\u05D7\u05B6\u05DD\u0020\u05DC\u05B8\u05D4',
   };
 
   /* UNPOINTING IS NOT JUST DELETING THE POINTS. Modern Hebrew spells without

@@ -35,7 +35,10 @@
     // proper names
     '\u05DE\u05D9\u05E9\u05DA', '\u05DE\u05D9\u05D3\u05D1\u05D0',
     // idioms whose curated gloss already carries the directional sense
-    '\u05DE\u05E2\u05D5\u05DC\u05DD', '\u05DE\u05D7\u05D3\u05E9', '\u05DE\u05E8\u05D0\u05E9', '\u05DE\u05E2\u05E9\u05D5\u05EA'
+    '\u05DE\u05E2\u05D5\u05DC\u05DD', '\u05DE\u05D7\u05D3\u05E9', '\u05DE\u05E8\u05D0\u05E9', '\u05DE\u05E2\u05E9\u05D5\u05EA',
+    // mem-PREFORMATIVE nouns that themselves begin \u05DE\u05B4\u05DE- :
+    // \u05DE\u05B4\u05DE\u05B0\u05E9\u05B7\u05C1\u05DC "reign", \u05DE\u05B4\u05DE\u05B0\u05DB\u05BC\u05B8\u05E8 "sale", \u05DE\u05B4\u05DE\u05B0\u05E1\u05B8\u05DA\u05BC "mixed wine"
+    '\u05DE\u05DE\u05E9\u05DC', '\u05DE\u05DE\u05DB\u05E8', '\u05DE\u05DE\u05DB\u05E8\u05D5', '\u05DE\u05DE\u05DB\u05E8\u05D9\u05D5', '\u05DE\u05DE\u05DB\u05E8\u05EA', '\u05DE\u05DE\u05E9\u05D7', '\u05DE\u05DE\u05E1\u05DA', '\u05DE\u05DE\u05E9\u05E7'
   ]).forEach(function (w) { MEM_NOT_FROM[w] = 1; });
 
   function augmentGlossWithPrefixes(heb, gloss) {
@@ -86,10 +89,22 @@
     // "from him"). A bare מִ- is usually a root/preformative letter, not the
     // preposition (מִצְרַיִם "Egypt", מִשְׁפָּט "judgment", מִי "who"), so it
     // must NOT trigger "from".
-    if (/^מִן/.test(h) || /^מִמ/.test(h)) return 'from ' + g;
+    var bare = h.replace(/[\u0591-\u05C7]/g, '').replace(/־/g, '');
+
+    /* מִמ IS NOT ALWAYS THE PREPOSITION. A mem-preformative noun can itself
+       begin מִמ־ — מִמְשַׁל "reign", מִמְכָּר "sale", מִמְסָךְ "mixed wine",
+       מִמְשַׁח, מִמְשַׁק — and מִמׇחֳרָת is the fixed idiom "on the morrow",
+       not "from the morrow". MEM_NOT_FROM used to be consulted only by the מֵ
+       branch below, so this one prepended "from" unconditionally and the READER
+       saw "and thus began FROM the reign of the judges" at Mosiah 29:44 and
+       29:47. Both branches now share the same escape. */
+    if (/^מִן/.test(h) || /^מִמ/.test(h)) {
+      if (/^ממחרת/.test(bare)) return g;
+      if (MEM_NOT_FROM[bare]) return g;
+      return 'from ' + g;
+    }
 
     if (/^מֵ/.test(h)) {
-      var bare = h.replace(/[\u0591-\u05C7]/g, '').replace(/־/g, '');
       // Idioms where מֵ is not directional "from"
       if (/^מאז/.test(bare) || /^מה/.test(bare)) return g;
       if (MEM_NOT_FROM[bare]) return g;

@@ -61,6 +61,22 @@ ALL_ACC = set(range(0x0591, 0x05B0)) | {0x05BD}
 PREFIXES = ('וְהַ', 'וּבְ', 'וְ', 'וּ', 'וַ', 'הַ', 'הָ', 'הֶ', 'בְּ', 'בַּ', 'בִּ', 'בָּ',
             'לְ', 'לַ', 'לִ', 'לָ', 'מִ', 'מֵ', 'כְּ', 'כַּ', 'שֶׁ')
 
+# THE TRANSLATOR'S OWN STRESS, for names the Masoretes never wrote.
+# The WLC lexicon can only speak for words that are IN the Tanakh. A Book of
+# Mormon name is not, so it falls through to Hebrew's default -- final stress --
+# and there is nothing to appeal to but the translator's ear.
+#
+# Zarahemla is za-ra-CHEM-la, on the chet (ruling, 2026-09-11). Left to the
+# default the chevron sat on the last vowel and the voice said za-ra-chem-LA.
+#
+# These merge INTO the WLC lexicon, so resolve()'s maqqef and prefix fallbacks
+# reach them for free: אֶת־זָרַחֶמְלָה and בְּזָרַחֶמְלָה need no entry of their own.
+# PUT RULINGS HERE, NEVER IN THE GENERATED FILES -- they carry a DO NOT EDIT
+# banner because this script overwrites all six of them on every run.
+HAND = {
+    '\u05D6\u05B8\u05E8\u05B7\u05D7\u05B6\u05DE\u05B0\u05DC\u05B8\u05D4': 2,   # za-ra-CHEM-la
+}
+
 N = lambda s: ud.normalize('NFC', s)
 is_letter = lambda c: 'א' <= c <= 'ת'
 strip_accents = lambda s: ''.join(c for c in s if ord(c) not in ALL_ACC)
@@ -119,8 +135,14 @@ def read_wlc():
 
 
 def resolve(word, lex):
-    """(slot, source). Falls back through the maqqef and one prefix before
-       giving up and assuming final stress."""
+    """(slot, source). Falls back through the sof pasuq, the maqqef and one
+       prefix before giving up and assuming final stress."""
+    # THE D&C ATTACHES THE SOF PASUQ TO THE LAST WORD of the verse, where every
+    # other volume makes it a token of its own. 3,723 D&C words carry one, and
+    # every one of them missed the lexicon and fell to default final stress.
+    # U+05C3 is not a vowel and it comes last, so the slot index is unchanged.
+    if word.endswith('\u05C3'):
+        return resolve(word[:-1], lex)
     if word in lex:
         return lex[word], 'wlc'
     if '־' in word:                          # the maqqef is not a letter — see note 4
@@ -144,6 +166,7 @@ VOLUMES = [('ot',  'ot_verses/*.js',  'ot_stress.js'),
 
 def main():
     lex = read_wlc()
+    lex.update(HAND)                      # a ruling outranks the WLC and the default
     print('WLC stress lexicon: %s forms' % format(len(lex), ','))
     print('\n%-5s %10s %10s %11s %9s' % ('vol', 'tokens', 'forms', 'from the MT', 'shipped'))
     for vol, pattern, outfile in VOLUMES:
