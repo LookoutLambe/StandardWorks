@@ -70,6 +70,16 @@
     // absent, so "from above" and "from afar off" keep working.
     if (/^(?:on|by|because|for|to|in|at|with|upon|after|over|into|through|since|about|against|concerning)\b/i.test(g)) return g;
 
+    // "above" / "beneath" are the LOCATIVE and COMPARATIVE senses of this mem
+    // (מִמַּעַל … מִתָּחַת "in the heavens above and in the earth beneath";
+    // מֵאֶחָיו "above his brethren"; מֵחֲבֵרֶךָ "above thy fellows"), and
+    // prepending turns them into "from above his brethren". The translator
+    // writes "from above" EXPLICITLY at the 31 sites that are directional, so a
+    // bare "above" is a deliberate choice: 51 of 52 such tokens are locative or
+    // comparative. (The one that was relying on the renderer, 3 Nephi 9:11
+    // "I did send down fire", now stores "from above" like the other 31.)
+    if (/^(?:above|beneath|below|underneath)\b/i.test(g)) return g;
+
     var h = String(heb).replace(/\u05C3/g, '');
     // Directional "from" is only unambiguous as explicit מִן־ or double-mem
     // מִמ (from + a mem-initial word, e.g. מִמִּצְרַיִם "from Egypt", מִמֶּנּוּ
