@@ -55,5 +55,10 @@ rsync -a --delete --delete-excluded \
   `# build-time only: nothing on a page or in a service worker asks for these ` \
   --exclude='/tools/' \
   --exclude='/scripts/' \
+  `# the crawlable face of the site (tools/build_static_pages.js): one plain
+   # page per chapter for search engines, 46 MB the app would never open ` \
+  --exclude='/hebrew/' \
+  --exclude='/sitemap.xml' \
+  --exclude='/robots.txt' \
   "$ROOT/" "$DEST/"
 echo "Synced repo root -> StandardWorks/www"

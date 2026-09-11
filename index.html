@@ -553,6 +553,10 @@ html.sw-in-app .landing-app-store { display: none; }
 }
 .scripture-card, .card-continue { user-select: none; -webkit-user-select: none; }
 .scripture-card:active .card-cover { transform: scale(0.97); transition: transform 0.1s; }
+/* The card is an onclick div (it also hosts the "Continue reading" link, and
+   an <a> cannot nest an <a>), so the volume name is the crawlable link: same
+   destination as the card, styled to vanish into the label. */
+.card-link { color: inherit; text-decoration: none; }
 .card-continue:active { transform: scale(0.96); background: var(--accent-hover); color: var(--on-fill); }
 .gs-result-link:active { background: var(--highlight); }
 .global-search-input { min-height: 44px; }
@@ -1045,7 +1049,7 @@ body, button, input, select, textarea,
         </div>
         <div class="card-label">
           <div class="card-label-he">תנ״ך</div>
-          <div class="card-label-en">Old Testament</div>
+          <div class="card-label-en"><a class="card-link" href="ot.html">Old Testament</a></div>
         </div>
       </div>
 
@@ -1060,7 +1064,7 @@ body, button, input, select, textarea,
         </div>
         <div class="card-label">
           <div class="card-label-he">הברית החדשה</div>
-          <div class="card-label-en">New Testament</div>
+          <div class="card-label-en"><a class="card-link" href="nt.html">New Testament</a></div>
         </div>
       </div>
 
@@ -1075,7 +1079,7 @@ body, button, input, select, textarea,
         </div>
         <div class="card-label">
           <div class="card-label-he">ספר מורמון</div>
-          <div class="card-label-en">The Book of Mormon</div>
+          <div class="card-label-en"><a class="card-link" href="bom/bom.html">The Book of Mormon</a></div>
         </div>
       </div>
 
@@ -1090,7 +1094,7 @@ body, button, input, select, textarea,
         </div>
         <div class="card-label">
           <div class="card-label-he">הלקח והבריתות</div>
-          <div class="card-label-en">Doctrine and Covenants</div>
+          <div class="card-label-en"><a class="card-link" href="dc.html">Doctrine and Covenants</a></div>
         </div>
       </div>
 
@@ -1105,7 +1109,7 @@ body, button, input, select, textarea,
         </div>
         <div class="card-label">
           <div class="card-label-he">פנינת המחיר הגדול</div>
-          <div class="card-label-en">Pearl of Great Price</div>
+          <div class="card-label-en"><a class="card-link" href="pgp.html">Pearl of Great Price</a></div>
         </div>
       </div>
 
@@ -1121,7 +1125,7 @@ body, button, input, select, textarea,
         </div>
         <div class="card-label">
           <div class="card-label-he">תרגום ג׳וזף סמית</div>
-          <div class="card-label-en">Joseph Smith Translation</div>
+          <div class="card-label-en"><a class="card-link" href="jst.html">Joseph Smith Translation</a></div>
         </div>
       </div>
 
@@ -1310,7 +1314,8 @@ body, button, input, select, textarea,
       <p class="hub-footer-contact" data-sw-rights>
         <span lang="he" dir="rtl" style="font-family:'David Libre',serif;font-size:1.25em;color:var(--accent-deep);display:block;margin-bottom:2px">כתבי הקודש</span>
         Hebrew Interlinear Standard Works<br>
-        <a href="mailto:chris@sefermormon.com">chris@sefermormon.com</a>
+        <a href="mailto:chris@sefermormon.com">chris@sefermormon.com</a><br>
+        <a href="hebrew/index.html">Every chapter as a plain page</a>
       </p>
       <div class="hub-footer-colophon">
         <div class="hub-footer-colophon-lis">

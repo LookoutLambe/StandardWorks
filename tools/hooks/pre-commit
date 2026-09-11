@@ -87,3 +87,15 @@ if git diff --cached --name-only | grep -Eq '^(ot|nt|dc|pgp|jst)_verses/|^(ot|nt
   node "$ROOT/tools/check_bom_hebrew_lock.js" >/dev/null || exit 1   # the BOM chunks touch nothing Hebrew; prove it
   echo "[pre-commit] verse manifests + English chunks + heading chunks + cross-reference chunks rebuilt"
 fi
+
+# 6) The crawlable pages — hebrew/<volume>/<book>/<n>.html and sitemap.xml,
+#    one plain page per chapter so search engines see the text the readers
+#    only draw with JavaScript. Derived from the verse files, the licensed
+#    English columns, the book tables in the pages and the JST reference map
+#    (so it runs AFTER 3b), by tools/build_static_pages.js. Stale the moment
+#    any of those change; never edited by hand.
+if git diff --cached --name-only | grep -Eq '^(ot_verses|nt_verses|dc_verses|pgp_verses|jst_verses|bom/verses)/|^(nt|dc|pgp)_english\.js$|^bom/official_verses\.js$|^(ot|nt|pgp|jst)\.html$|^bom/bom\.html$|^jst_refmap\.js$|^tools/build_static_pages\.js$'; then
+  node "$ROOT/tools/build_static_pages.js" >/dev/null || exit 1
+  git add "$ROOT/hebrew" "$ROOT/sitemap.xml"
+  echo "[pre-commit] crawlable chapter pages + sitemap rebuilt"
+fi

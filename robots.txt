@@ -1,0 +1,8 @@
+# sefermormon.com — everything is crawlable except build sources and the iOS project.
+User-agent: *
+Disallow: /tools/
+Disallow: /scripts/
+Disallow: /StandardWorks/
+Allow: /
+
+Sitemap: https://sefermormon.com/sitemap.xml
