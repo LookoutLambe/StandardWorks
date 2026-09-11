@@ -288,7 +288,58 @@
     window._strongsConsIdxCache = { exact: idx, demater: idx2 };
     return window._strongsConsIdxCache;
   }
+  /* POINTED ROOT KEYS THE CONSONANTAL INDEX CANNOT REACH.
+     _strongsConsIdx is built from lemmas with the points stripped, but a root
+     key that still CARRIES its points is handed to _strongsForCons unstripped,
+     so it can never match and the card shows no H number at all. 2,587 roots
+     resolve nothing; these 20 are the ones a pointed lookup answers correctly.
+
+     STRIPPING THE POINTS IS NOT THE FIX. It was measured: 77 roots gain a
+     number that way and the numbers are WRONG, because the pointing is the
+     only thing separating the homographs --
+         אֶל  "to"     -> H0408  אַל  "not"        (should be H0413)
+         עִם  "with"   -> H5971  עַם  "people"     (should be H5973)
+         בֵּין "between"-> H0995 בין  "discern"    (should be H0996)
+         פֹּה "here"    -> H6310 פֶּה "mouth"      (should be H6311)
+     -- the same trap the name table documents ("סַם spice scored as Sam").
+
+     Nor is a blanket "look the pointed key up in _strongsLookup" safe: it
+     answers 28, and EIGHT of those are wrong, every one a name and a common
+     word sharing identical pointing --
+         שֵׁת Seth -> H8351 "tumult"   (Seth is H8352)
+         אָשֵׁר Asher -> H0833 "happy" (Asher is H0836)
+         שְׁכֶם Shechem -> H7926 "neck" (Shechem is H7927)
+         יָבֵשׁ Jabesh -> H3001 "wither" (Jabesh is H3003)
+         פָּרָשׁ "horsemen" -> H6567 "separate" (horseman is H6571)
+         עוֹג  the BoM's "anchors" -> H5747 OG, king of Bashan
+         לָנוּ, בָּהֶן -> H9035/H9039, morphology codes with no lemma at all
+     So the 20 below are an explicit, hand-verified table: each was read
+     against the corpus's own dominant gloss before it was written down.
+     A new entry earns its place the same way. Covers 17,052 tokens. */
+  var ROOT_STRONGS = {
+    '\u05D0\u05B6\u05DC': 'H0413',   // to, unto
+    '\u05E2\u05B4\u05DD': 'H5973',   // with
+    '\u05D0\u05B7\u05DC': 'H0408',   // not (vetitive)
+    '\u05D1\u05B5\u05BC\u05D9\u05DF': 'H0996',   // between
+    '\u05D3\u05B4\u05BC\u05D9': 'H1768',   // which (Aramaic)
+    '\u05E8\u05B9\u05E2\u05B6\u05D4': 'H7462',   // shepherd
+    '\u05D0\u05B2\u05D1\u05B8\u05DC': 'H0061',   // but, nay
+    '\u05D4\u05B5\u05E0\u05B8\u05BC\u05D4': 'H2007',   // hither, they
+    '\u05E4\u05B9\u05BC\u05D4': 'H6311',   // here
+    '\u05E2\u05B4\u05D5\u05B5\u05BC\u05E8': 'H5787',   // blind
+    '\u05D7\u05B8\u05DC\u05B8\u05DC': 'H2491',   // slain, pierced
+    '\u05DC\u05D5\u05BC': 'H3863',   // if, would that
+    '\u05E9\u05B8\u05C2\u05E2\u05B4\u05D9\u05E8': 'H8163',   // he-goat
+    '\u05E2\u05B9\u05DC': 'H5923',   // yoke
+    '\u05D7\u05B8\u05DC\u05B8\u05D1': 'H2461',   // milk
+    '\u05E9\u05B0\u05C2\u05E8\u05B8\u05D9\u05B8\u05D4': 'H8304',   // Seraiah
+    '\u05D9\u05B0\u05E4\u05BB\u05E0\u05B6\u05BC\u05D4': 'H3312',   // Jephunneh
+    '\u05DE\u05B8\u05DB\u05B4\u05D9\u05E8': 'H4353',   // Machir
+    '\u05D1\u05B0\u05BC\u05DE\u05D5\u05B9': 'H1119',   // in, with
+    '\u05DC\u05B0\u05DE\u05D5\u05B9': 'H3926',   // to, for
+  };
   function _strongsForCons(key) {
+    if (ROOT_STRONGS[key]) return ROOT_STRONGS[key];
     var c = _strongsConsIdx();
     var fin = { 'ך':'כ','ם':'מ','ן':'נ','ף':'פ','ץ':'צ' };
     var k = String(key || '').replace(/[ךםןףץ]/g, function (ch) { return fin[ch]; });
