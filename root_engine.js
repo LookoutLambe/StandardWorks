@@ -794,6 +794,20 @@
     // BOM's "happened" (12) -- one string, two words, so it stays reported.
     'יִּקְרֶה': 'קרה', 'קָּרָה': 'קרה',
 
+    // PLENE QAL PARTICIPLES. Not a derived stem, so the binyan reader rightly
+    // declines them; Strong's carries the verb, not the participle; and letting
+    // the consonantal peel loose on mater variants was far worse (יוֹד the
+    // letter name went to יד "hand", כְּגוֹן "such as" to גנן, לַשׂוּעָלִים
+    // "foxes" to שעל). A closed, enumerable set is the honest fix here.
+    // שׁוֹקֵד is the one the user caught: its card read "Book of Mormon 2" for
+    // a family the OT uses 23 times.
+    'שׁוֹקֵד': 'שקד', 'כּוֹתֵב': 'כתב', 'פּוֹעֵל': 'פעל', 'רוֹעֵד': 'רעד',
+    'רוֹעֶדֶת': 'רעד', 'בּוֹעֵר': 'בער', 'גּוֹבֵל': 'גבל', 'דּוֹבֵר': 'דבר',
+    'תּוֹבֵעַ': 'תבע', 'כּוֹלֵל': 'כלל',
+
+    // ...and the three the binyan fix now reaches by a WRONG parent.
+    'בְּהִשְׁתַּנּוֹת': 'שנה', 'וְהִתְעֵיתָ': 'תעה', 'לְכוֹנֶנְכֶם': 'כון',
+
     // THE NEPHITE MEASURES OF ALMA 11 (2026-08-31). Senine, senum, seon, shum,
     // limnah, amnor, ezrom, onti, antion, shiblon, shiblum -- Nephite names,
     // not Hebrew roots. Every prefixed form had splintered into its OWN family
@@ -2087,7 +2101,22 @@
     if (ctx.isName) return '';
     var h = ctx.head || ctx.w;
     if (!_HAS_POINT.test(h)) return '';
-    return rootByBinyan(h);
+    var r = rootByBinyan(h);
+    if (r) return r;
+    /* A PLENE spelling hides the pattern. The binyan templates are written on
+       the DEFECTIVE skeleton, so שׁוֹקֵד -- an ordinary qal participle of שׁקד,
+       23 OT tokens in its family -- was read as a four-consonant root שוקד and
+       kept its mater as a radical; the card then reported the word as Book of
+       Mormon only. Stage 8 does collapse maters, but retries just the lexicon
+       and the surface map, so a form the PATTERN would have resolved never
+       reaches it. Offer each single-mater collapse to the pattern reader too.
+       Same class: כּוֹתֵב, פּוֹעֵל, דּוֹבֵר, רוֹעֵד, כּוֹלֵל, תּוֹבֵעַ. */
+    var mv = _materVariants(h);
+    for (var mvi = 0; mvi < mv.length; mvi++) {
+      var rv = rootByBinyan(mv[mvi]);
+      if (rv) return rv;
+    }
+    return '';
   }
 
   // Stage 9 — FALLBACK. A real word the lexicon does not carry (Smith,
