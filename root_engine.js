@@ -774,6 +774,26 @@
     // being spelled הַבַּר, not by a pin that would corrupt the Tanakh.
     'הַבַּר': 'בר',
 
+    // הַרְכָּבָה "a graft" -- the noun the whole Jacob 5 allegory runs on. A
+    // hiphil-pattern verbal noun off biblical רכב (הִרְכִּיב "to graft in", used
+    // throughout the chapter), so it is a normal derivation and stands. But the
+    // peeler chokes on the ARTICLED form: לַהַרְכָּבָה resolves to רכב while
+    // הַהַרְכָּבָה keeps both he's and lands on junk 'ההרכבה'. Pre-existing --
+    // 5:64 הַהַרְכָּבוֹת was already wrong before this pass.
+    'הַהַרְכָּבָה': 'רכב', 'מִן־הַהַרְכָּבָה': 'רכב', 'הַהַרְכָּבוֹת': 'רכב',
+
+    // Same shape: bare מִלָּה resolves to מלל, the articled form peels to 'המל'.
+    'הַמִּלָּה': 'מלל',
+
+    // קרה "to happen" vs יקר "precious" / קרר "to be cold" -- three roots that
+    // collide once the pointing is ignored. The card filed מַה־יִּקְרֶה
+    // (Jacob 1:5, "what should happen") under יָקָר "precious", and מַה־קָּרָה
+    // (Alma) under the cold root. SAFE to pin: both carry the dagesh forte that
+    // מַה־ puts on the next letter, and neither spelling exists in the Tanakh.
+    // NOT pinned: bare קָרָה, which IS the MT's "cold" (3 tokens) as well as the
+    // BOM's "happened" (12) -- one string, two words, so it stays reported.
+    'יִּקְרֶה': 'קרה', 'קָּרָה': 'קרה',
+
     // THE NEPHITE MEASURES OF ALMA 11 (2026-08-31). Senine, senum, seon, shum,
     // limnah, amnor, ezrom, onti, antion, shiblon, shiblum -- Nephite names,
     // not Hebrew roots. Every prefixed form had splintered into its OWN family

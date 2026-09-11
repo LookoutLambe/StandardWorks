@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "יאל": { "meaning": "(יָאַל) to be willing, undertake, consent \u2014 \u05D5\u05B7\u05D9\u05BC\u05D5\u05B9\u05D0\u05B6\u05DC \u05D4\u05B7\u05DC\u05B5\u05BC\u05D5\u05B4\u05D9 \u05DC\u05B8\u05E9\u05B6\u05C1\u05D1\u05B6\u05EA (Judg 17:11), \u05D4\u05D5\u05B9\u05D0\u05B7\u05DC\u05B0\u05EA\u05B4\u05BC\u05D9 \u05DC\u05B0\u05D3\u05B7\u05D1\u05B5\u05BC\u05E8 (Gen 18:27); hence to promise or undertake a thing.", "category": "Lexical" },
   "ספן": { "meaning": "(ספן) to deck over, to panel — hence סְפִינָה, the COVERED vessel, the MT's one ship with a hold to go down into (Jon 1:5); the same root panels a house (1 Kgs 6:9) and ceils it (Hag 1:4)", "category": "Lexical" },
   "H7510": { "meaning": "(רִפְיוֹן) weakness, feebleness — Jer 47:3", "category": "Lexical" },
   "H2086": { "meaning": "(זֵד) proud, presumptuous — Mal 3:19, Ps 19:14", "category": "Lexical" },

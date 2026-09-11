@@ -666,7 +666,7 @@ var dc54_ch1Verses = [
     ["אֲחֶיךָ","your brethren"],
     ["יִרְצוּ","desire"],
     ["לְהִמָּלֵט","to escape"],
-    ["מֵאֹיְבֵיהֶם","their enemies"],
+    ["מֵאֹיְבֵיהֶם","from their enemies"],
     ["יָשׁוּבוּ","let them repent"],
     ["מִכׇּל","of all"],
     ["חַטֹּאתֵיהֶם","their sins"],

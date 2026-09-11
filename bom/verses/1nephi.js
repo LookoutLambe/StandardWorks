@@ -4259,20 +4259,7 @@ var ch21Verses = [
     ["כִּי־לֹא","that He hath not"],
     ["׃",""]
   ]},
-  { num:"טו", words:[
-    ["הֲתִשְׁכַּח","can forget"],
-    ["אִשָּׁה","a woman"],
-    ["עוּלָהּ","her sucking child"],
-    ["מֵרַחֵם","that she should not have compassion"],
-    ["בֶּן־בִּטְנָהּ","on the son of her womb"],
-    ["גַּם־אֵלֶּה","yea, they"],
-    ["תִשְׁכַּחְנָה","may forget"],
-    ["וְאָנֹכִי","yet will I"],
-    ["לֹא","not"],
-    ["אֶשְׁכָּחֵךְ","forget you"],
-    ["בֵּית־יִשְׂרָאֵל","O house of Israel"],
-    ["׃",""]
-  ]},
+  { num: "טו", words: [["הֲתִשְׁכַּח","can forget"], ["אִשָּׁה","a woman"], ["עוּלָהּ","her sucking child"], ["מֵרַחֵם","from having compassion"], ["בֶּן־בִּטְנָהּ","on the son of her womb"], ["גַּם־אֵלֶּה","yea, they"], ["תִשְׁכַּחְנָה","may forget"], ["וְאָנֹכִי","yet will I"], ["לֹא","not"], ["אֶשְׁכָּחֵךְ","forget you"], ["בֵּית־יִשְׂרָאֵל","O house of Israel"], ["׃",""]]},
   { num:"טז", words:[
     ["הֵן","behold"],
     ["עַל־כַּפַּיִם","upon the palms of My hands"],
