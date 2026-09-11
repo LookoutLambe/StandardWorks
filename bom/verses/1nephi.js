@@ -136,7 +136,7 @@ var ch1Verses = [
   { num:"ד", words:[
     ["וַיְהִי","and it was"],
     ["בִּתְחִלַּת","in the start of"], ["שְׁנַת","the year of"],
-    ["אַחַת","one"],
+    ["אַחַת","first"],
     ["לְמַלְכוּת","of the reign of"],
     ["צִדְקִיָּהוּ","Zedekiah"],
     ["מֶלֶךְ","king of"],
