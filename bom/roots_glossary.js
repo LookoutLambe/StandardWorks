@@ -988,7 +988,7 @@ window._rootGlossaryData = {
     "category": "Speech"
   },
   "אלהים": {
-    "meaning": "God — the divine name Elohim (אֱלֹהִים, אֱלוֹהַּ)",
+    "meaning": "God — the divine name Elohim (אֱלֹהִים, אֱלוֹהַּ), and its Aramaic אֱלָהּ / אֱלָהָא in Daniel and Ezra",
     "category": "Theology"
   },
   "זה": {

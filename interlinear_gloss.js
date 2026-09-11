@@ -21,6 +21,12 @@
     '\u05DE\u05EA', '\u05DE\u05EA\u05D4', '\u05DE\u05EA\u05D5', '\u05DE\u05EA\u05D9\u05DD', '\u05DE\u05EA\u05D9', '\u05DE\u05EA\u05D9\u05D5', '\u05DE\u05EA\u05D9\u05D4', '\u05DE\u05EA\u05D9\u05D4\u05DD', '\u05DE\u05EA\u05D9\u05DB\u05DD', '\u05DE\u05EA\u05D9\u05E0\u05D5',
     // construct of \u05DE\u05B7\u05D9\u05B4\u05DD "waters"
     '\u05DE\u05D9', '\u05DE\u05D9\u05DE\u05D9', '\u05DE\u05D9\u05DE\u05D9\u05D5', '\u05DE\u05D9\u05DE\u05D9\u05D4', '\u05DE\u05D9\u05E8\u05D0\u05E9',
+    // \u05DE\u05B5\u05D9\u05EA\u05B8\u05E8 "cord" \u2014 mem is the noun's preformative, not \u05DE\u05B4\u05DF
+    '\u05DE\u05D9\u05EA\u05E8', '\u05DE\u05D9\u05EA\u05E8\u05D9\u05DD', '\u05DE\u05D9\u05EA\u05E8\u05D9\u05D5', '\u05DE\u05D9\u05EA\u05E8\u05D9\u05D4', '\u05DE\u05D9\u05EA\u05E8\u05D9\u05DA', '\u05DE\u05D9\u05EA\u05E8\u05D9\u05DB\u05DD',
+    // the rest of the \u05DE\u05B5\u05D9\u05DE\u05B5\u05D9 "waters of" suffix set
+    '\u05DE\u05D9\u05DE\u05D9\u05DA', '\u05DE\u05D9\u05DE\u05D9\u05DB\u05DD', '\u05DE\u05D9\u05DE\u05D9\u05D4\u05DD', '\u05DE\u05D9\u05DE\u05D9\u05E0\u05D5', '\u05DE\u05D9\u05DE\u05D9\u05D9',
+    // \u05DE\u05B5\u05EA "dead" with the 2ms/2fs suffixes the table lacked
+    '\u05DE\u05EA\u05DA', '\u05DE\u05EA\u05D9\u05DA',
     // \u05DE\u05B5\u05E2\u05B6\u05D4 "bowels"
     '\u05DE\u05E2\u05D9', '\u05DE\u05E2\u05D9\u05D5', '\u05DE\u05E2\u05D9\u05D4', '\u05DE\u05E2\u05D9\u05DA', '\u05DE\u05E2\u05D9\u05DB\u05DD', '\u05DE\u05E2\u05D9\u05E0\u05D5',
     // root \u05DE\u05D0\u05DF "to refuse"
@@ -57,6 +63,11 @@
     // and as "out-of-Egypt", and matching only the spaced form silently skips
     // most of it.
     if (/^(?:out[\s-]+of|off|of)\b/i.test(g)) return g;
+    // ... and the same "of" behind a bare copula. וְצִדְקָתָם מֵאִתִּי is "their
+    // righteousness IS OF me" (3 Ne 22:17) and מֵאֱלֹהִים is "IS OF God"
+    // (D&C 46:26-27): the mem is already rendered, and prepending produced
+    // "from is of me". Only the copulas, and only with "of" right behind them.
+    if (/^(?:is|are|was|were|am)[\s-]+(?:out[\s-]+of|off|of)\b/i.test(g)) return g;
 
     // THE MEM IS NOT ONLY DIRECTIONAL. It is also causal (מֵרֹב "because of the
     // greatness of"), agentive (מֵאֱלֹהִים "by God"), temporal (מֵעֵת "since"),
@@ -98,16 +109,26 @@
        branch below, so this one prepended "from" unconditionally and the READER
        saw "and thus began FROM the reign of the judges" at Mosiah 29:44 and
        29:47. Both branches now share the same escape. */
+    /* A MAQQEF JOINS TWO WORDS, and `bare` above strips it — so מֵי־נֹחַ
+       arrives as "מינח" and every MEM_NOT_FROM entry silently misses. The mem
+       belongs to the FIRST element and that is what the table keys on: מֵי
+       "the waters of" (מֵי־נֹחַ, מֵי־בוֹרוֹ), מֵאָה "hundred" (מֵאָה־שָׁנָה,
+       מֵאָה־וּשְׁמוֹנִים). Test it as well as the whole. This can only ever ADD a
+       suppression the table already asks for; it never turns one off. */
+    var head = bare;
+    if (h.indexOf('־') >= 0) head = String(heb).split('־')[0].replace(/[\u0591-\u05C7]/g, '');
+    var notFrom = MEM_NOT_FROM[bare] || MEM_NOT_FROM[head];
+
     if (/^מִן/.test(h) || /^מִמ/.test(h)) {
       if (/^ממחרת/.test(bare)) return g;
-      if (MEM_NOT_FROM[bare]) return g;
+      if (notFrom) return g;
       return 'from ' + g;
     }
 
     if (/^מֵ/.test(h)) {
       // Idioms where מֵ is not directional "from"
       if (/^מאז/.test(bare) || /^מה/.test(bare)) return g;
-      if (MEM_NOT_FROM[bare]) return g;
+      if (notFrom) return g;
       // (A rule here once rewrote a leading "for" into "from". It was wrong and
       // is gone: every מ + "for" gloss in the corpus is either CAUSAL — "for
       // want of food", "for fear of the law", "for joy", "for the multitude of
