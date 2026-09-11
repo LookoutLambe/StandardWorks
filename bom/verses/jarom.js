@@ -88,7 +88,7 @@ var jr_ch1Verses = [
     ["אֶת־הַלֻּחוֹת","the plates"], ["הָאֵלֶּה","these"],
     ["בְּיַד","into the hands of"],
     ["בְּנִי","my son"],
-    ["אָמְנִי","Omni"],
+    ["אׇמְנַי","Omni"],
     ["לְמַעַן","that"],
     ["יִשָּׁמְרוּ","they may be kept"],
     ["כְּמִצְוַת","according to the commandments of"],
