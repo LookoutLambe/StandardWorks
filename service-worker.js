@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-09-11T22-38-18';
+const BUILD_ID = '2026-09-11T22-55-38';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -27,10 +27,10 @@ const CORE_ASSETS = [
     '/StandardWorks/jst.html',
     '/StandardWorks/manifest.json',
     '/StandardWorks/manifest.github.json',
-    '/StandardWorks/icons/icon-180.png?v=2',
-    '/StandardWorks/icons/icon-192.png?v=2',
-    '/StandardWorks/icons/icon-512.png?v=2',
-    '/StandardWorks/icons/icon-maskable.png?v=2',
+    '/StandardWorks/icons/icon-180.png?v=3',
+    '/StandardWorks/icons/icon-192.png?v=3',
+    '/StandardWorks/icons/icon-512.png?v=3',
+    '/StandardWorks/icons/icon-maskable.png?v=3',
     '/StandardWorks/site_chrome.css?v=72',
     /* sw_theme.css was precached here and no page links it — checked in the
        browser, document.styleSheets holds david_libre, nav_engine,
