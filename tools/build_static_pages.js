@@ -28,9 +28,9 @@
 //   bom / dc / pgp : the 2013 English is licensed side-by-side with the Hebrew
 //                    (user, 2026-09-04), which is exactly this layout → shown.
 //   nt             : KJV, public domain → shown.
-//   ot             : the Dual column is the Koren Jerusalem Bible (copyright
-//                    Koren) → NOT reproduced on a plain page. Flip
-//                    `english` on the ot entry below if permission is obtained.
+//   ot             : KJV aligned to the Masoretic numbering by
+//                    tools/build_ot_english_kjv.py (user, 2026-09-11; it
+//                    replaced the copyrighted Koren column) → shown.
 //   jst            : the JST English column has no licence note on file →
 //                    withheld the same way.
 // The Hebrew and the glosses are the site's own work in every volume (the OT
@@ -183,8 +183,8 @@ function jstBooks() {
 // ---------- the volumes ----------
 const VOLUMES = [
   { key: 'ot', slug: 'old-testament', en: 'Old Testament', he: 'תנ״ך', page: 'ot.html', verseDir: 'ot_verses',
-    books: () => otNtBooks('ot.html'), english: null,
-    blurb: 'The Tanakh in the Masoretic Text, every word glossed in English.',
+    books: () => otNtBooks('ot.html'), english: ['ot_english.js', '_otEnglishData'],   // KJV since 2026-09-11 (tools/build_ot_english_kjv.py)
+    blurb: 'The Tanakh in the Masoretic Text, every word glossed in English, beside the King James text.',
     hebrewNote: 'Masoretic Text' },
   { key: 'nt', slug: 'new-testament', en: 'New Testament', he: 'הברית החדשה', page: 'nt.html', verseDir: 'nt_verses',
     books: () => otNtBooks('nt.html'), english: ['nt_english.js', '_ntEnglishData'],
