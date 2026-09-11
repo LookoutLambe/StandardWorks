@@ -241,7 +241,7 @@ function head(rel, title, desc, canonical, extra) {
     '<meta property="og:site_name" content="Sefer Mormon">\n' +
     '<meta property="og:image" content="' + SITE + 'bom/images/cover-hebrew.jpg">\n' +
     '<meta name="theme-color" content="#1B2A41">\n' +
-    '<link rel="icon" href="' + rel + 'icons/icon-192.png?v=2">\n' +
+    '<link rel="icon" href="' + rel + 'icons/icon-192.png?v=3">\n' +
     '<link rel="stylesheet" href="' + rel + 'fonts/david_libre.css?v=2">\n' +
     '<link rel="stylesheet" href="' + rel + 'hebrew/static.css?v=1">\n' +
     (extra || '') + '</head>\n';

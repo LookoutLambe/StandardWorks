@@ -57,9 +57,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="כתבי הקודש">
-<link rel="icon" type="image/png" href="icons/sw-mark-colour.png?v=1">
-<link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png?v=2">
-<link rel="apple-touch-icon" href="icons/icon-192.png?v=2">
+<link rel="icon" type="image/png" href="icons/sw-mark-colour.png?v=2">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png?v=3">
+<link rel="apple-touch-icon" href="icons/icon-192.png?v=3">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -235,6 +235,17 @@ button, input, select, textarea, option, optgroup, ::placeholder { font-family: 
   direction: rtl;
   padding-bottom: 14px;
   border-bottom: 1px solid color-mix(in srgb, var(--accent-deep, var(--here)) 34%, transparent);
+}
+/* The site mark above the title: the engraved scroll-book (icons/sefer-mormon-engraved.svg,
+   two scrolls opening into one book). A CSS mask so the theme's ink colours it —
+   an <img> could not follow light/sepia/dark. */
+.landing-mark {
+  width: clamp(200px, 38vw, 290px);
+  aspect-ratio: 937 / 606;
+  margin: 0 auto 10px;
+  background-color: var(--ink);
+  -webkit-mask: url(icons/sefer-mormon-engraved.svg?v=1) center / contain no-repeat;
+  mask: url(icons/sefer-mormon-engraved.svg?v=1) center / contain no-repeat;
 }
 .landing-title-hebrew {
   font-family: 'David Libre', serif;
@@ -983,6 +994,7 @@ body, button, input, select, textarea,
     <header class="landing-header">
 
       <div class="lh-plate">
+        <div class="landing-mark" role="img" aria-label="Sefer Mormon"></div>
         <h1 class="landing-title-hebrew">כתבי הקודש</h1>
         <p class="landing-he-en">Standard Works<span class="lh-sep">·</span><span class="lh-he">מהדורה בין־שורתית</span><span class="lh-sep">·</span>Interlinear Edition</p>
       </div>

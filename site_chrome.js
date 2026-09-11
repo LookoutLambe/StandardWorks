@@ -189,11 +189,14 @@
     a.setAttribute('aria-label', reader ? 'Home \u2014 Standard Works' : 'Open books and navigation');
     a.title = reader ? 'Home' : 'Books and navigation';
     a.style.cssText = 'background:none;border:none;padding:0;cursor:pointer';
-    /* THE MARK IN THE NAVY BAR IS THE LOGO. Gold scroll on transparent, so the
-       bar's own navy shows through behind it. It is padded to a SQUARE in the
-       file: the slot is a fixed 38x38 and the scroll is 814x592, so a raw crop
-       would be squashed by a third. */
-    a.innerHTML = '<img src="' + assetBase() + 'icons/sw-mark.png?v=2" alt="" style="width:38px;height:38px;display:block;border-radius:9px">';
+    /* THE MARK IN THE NAVY BAR IS THE LOGO: the engraved scroll-book (two
+       scrolls opening into one book), reversed — paper drawing, gold star, on
+       transparent so the bar's own navy is its ground (user, 2026-09-11: "make
+       it the logo for the blue"). The file is 3:2 (228x152) with the drawing
+       filling it; the slot is a 44px-minimum auto column, so 60x40 fits without
+       squashing. Rendered from the traced drawing by the logo build, not drawn
+       by hand. */
+    a.innerHTML = '<img src="' + assetBase() + 'icons/sw-mark.png?v=4" alt="" style="width:60px;height:40px;display:block">';
     if (!reader) a.addEventListener('click', openMenu);
     return a;
   }
@@ -484,7 +487,7 @@
     var l = document.createElement('link');
     l.rel = 'icon';
     l.type = 'image/png';
-    l.href = assetBase() + 'icons/sw-mark-colour.png?v=1';
+    l.href = assetBase() + 'icons/sw-mark-colour.png?v=2';
     document.head.appendChild(l);
   }
   mountFavicon();
