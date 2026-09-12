@@ -1020,6 +1020,8 @@
     // THE 1 NEPHI 6 CARD AUDIT (2026-09-12), heading words:
     'מַטְּרַת': 'מטרה',                                    // "purpose of" (מַטָּרָה), not מָטָר "rain"
     'לְשַׁכְנֵעַ': 'שכנע',                                  // "to persuade" — a one-word family
+    // THE 1 NEPHI 7 CARD AUDIT (2026-09-12):
+    'קוֹשְׁרִים': 'קשר', 'מְשֻׁחְרָר': 'שחרר', 'יַנִּיחוּנִי': 'נוח',   // heading "bind", "is freed"; "they might leave me" — one-word families
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
