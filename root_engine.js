@@ -621,6 +621,10 @@
     'כְנֵסִיּוֹת': 'כנס', 'כְּנֶסִיַּת': 'כנס',
     'תְּקוּפוֹת': 'תקופה',   // the plural falls to the morphology stage, which keyed it under קוף "ape"
     'אֶלָּא': 'אֶלָּא',       // the rabbinic "but rather" — its lexicon match is H0414 Ela, a name
+    /* Two Book of Mormon names the lexicon peeled to a common word: Limhi (57 uses) sat
+       under מְחִי "battering", Comnor/Kimnor under מָנוֹר "weaver's beam" (2026-09-12). */
+    'לִמְחִי': 'למחי', 'וְלִמְחִי': 'למחי', 'לְלִמְחִי': 'למחי', 'מִלִּמְחִי': 'למחי',
+    'כָּמְנוֹר': 'כמנור', 'כִּמְנוֹר': 'כמנור',
     // HOLAM HASER FOR VAV (U+05BA): the OT spells מִצְוֺת with it, the lexicon
     // with the plain holam, and the bare consonants מצות are ambiguous with
     // unleavened bread — so the form fell to the morphology stage and צות "blaze"
@@ -1185,7 +1189,17 @@
       'נָחָשׁ':    { name: 'H5176', word: 'H5175', en: /Nahash/ },    // Nahash (9) · serpent (60)
       'מְרִיבָה':  { name: 'H4809', word: 'H4808', en: /Meribah/ },   // Meribah (9) · strife, contention (47)
       'מִשְׂרְפוֹת': { name: 'H4956', word: 'H4955', en: /Misrephoth/ }, // Misrephoth-maim (1) · burnings (2)
-      'מְנַחֵם':   { name: 'H4505', word: 'H5162', en: /Menahem|Manaen/ } // Menahem, Manaen (2) · comforter, who comforteth (5)
+      'מְנַחֵם':   { name: 'H4505', word: 'H5162', en: /Menahem|Manaen/ }, // Menahem, Manaen (2) · comforter, who comforteth (5)
+      'צוּף':     { name: 'H6689', word: 'H6688', en: /Zuph|Zophai/ },    // Zuph (5) · honeycomb (2)
+      'וְדָן':     { name: 'H2051', word: 'H1835', en: /Vedan/ },          // Vedan (Ezek 27:19) · and Dan
+      'יֵצֶר':     { name: 'H3337', word: 'H3336', en: /Jezer/ },          // Jezer (3) · form, imagination, disposition
+      'עֲלָמוֹת':   { name: 'H5961', word: 'H5959', en: /Alamoth/i },       // upon Alamoth (2) · maidens, virgins (4)
+      'כִלְיוֹן':   { name: 'H3630', word: 'H3631', en: /Chilion/ },        // Chilion (3) · destruction, failing, corruption
+      'כִּלְיוֹן':   { name: 'H3630', word: 'H3631', en: /Chilion/ },
+      'הַמֵּאָה':   { name: 'H3968', word: 'H3967', en: /Meah/ },           // the tower of Meah (1) · the hundred (10)
+      /* Not a name at all, but the same two-way split: Daniel's יַתִּיר "surpassing" and
+         Delitzsch's יַתִּיר "he will loose" (hiphil of נתר) are one spelling. */
+      'יַתִּיר':    { name: 'H5425', word: 'H3493', en: /loos/ }
     };
     var _HG_BLIND = /[ּֽֿ]/g;
     var _HG_INDEX = null;
