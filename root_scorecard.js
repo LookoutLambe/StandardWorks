@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '101';   // bump when the generated data files change
+  var RSC_V = '102';   // bump when the generated data files change
   // Transliterated terms — an exception table in the tool, like the received
   // spellings in transliterate(): keyed by bare consonants, so every pointing
   // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.
@@ -438,7 +438,16 @@
       if (_pf) heb = _pf;
       else if (window.RootEngine && window.RootEngine.toSofit) heb = window.RootEngine.toSofit(key);
       var cur2 = (window._rootGlossaryData || {})[key];
-      if (cur2 && cur2.meaning) meaning = cur2.meaning;
+      if (cur2 && cur2.meaning) {
+        meaning = cur2.meaning;
+        /* The curated line opens with the family's own lemma — "(שָׂכָר) hire" —
+           and that is a better face for the family than BDB's pointing of the
+           dotless key, which for a homograph pair is one of the two at random
+           (שָׁכַר "drunk" for the hire family). Hebrew only; a line that opens
+           on an English note keeps the BDB form. */
+        var _m1 = /^\s*\(([^)]+)\)/.exec(cur2.meaning);
+        if (_m1) { var _f1 = _m1[1].split(/[,·;]/)[0].replace(/\s+(I|II|III|IV)\s*$/, '').trim(); if (/^[\u0591-\u05F4]+$/.test(_f1)) heb = _f1; }
+      }
       /* A NAME THIS TRANSLATION SUPPLIES — Shemlon, Zeniff, Kishkumen — has no
          Strong's number and keys by its consonants; with no curated row its
          card opened on nothing but the counts. The same rule as a Strong's
@@ -1218,7 +1227,12 @@
       for (var v = 0; v < entry.c.length; v++) total += entry.c[v];
       var d = rootDisplay(key);
       var cons = d.heb.replace(/[֑-ֽֿ-׀׃-ׇ]/g, '');
-      var cInfo = curated[cons] || curated[key] || {};
+      /* THE FAMILY KEY FIRST. The consonants of the display lemma keep their
+         shin/sin dot, and once a dotted family exists beside the dotless one
+         (שׁכר "drunk" beside שכר "hire", 2026-09-12) the dotless family's
+         lemma — BDB points it שָׁכַר — found the other family's line. A
+         Strong's-keyed family (H6031) likewise fell to its consonants (ענה). */
+      var cInfo = curated[key] || curated[cons] || {};
       var meaning = cInfo.meaning || d.meaning;
       if (!meaning) {
         var topG = '', topN = 0;

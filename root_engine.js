@@ -1056,6 +1056,52 @@
                        לִקְרָאתָם (Alma 2:12, "to meet them") read "to call" (2026-09-12).
                        They keep the family BDB gives them: קרה. */
                     'H7122': 'קרה', 'H7125': 'קרה',
+                    /* Two roots under one dotless BDB key, both alive in this corpus
+                       (found by the family audit of 2026-09-12; the קרא/קרה split
+                       was the first). The minority root keeps its own family: a
+                       dotted key where the שׂ/שׁ dot is the difference, else its
+                       Strong's number. Derived lexemes travel with their root;
+                       names never do. */
+                    'H0833': 'H0833',
+                    'H0835': 'H0833',
+                    'H0837': 'H0833',
+                    'H0857': 'H0857',
+                    'H0858': 'H0857',
+                    'H2820': 'חשׂך',
+                    'H2978': 'H0857',
+                    'H3533': 'כבשׁ',
+                    'H3534': 'כבשׁ',
+                    'H3536': 'כבשׁ',
+                    'H4707': 'H6822',
+                    'H4860': 'נשׁא',
+                    'H5065': 'נגשׂ',
+                    'H5377': 'נשׁא',
+                    'H6031': 'H6031',
+                    'H6033': 'H6031',
+                    'H6035': 'H6031',
+                    'H6037': 'H6031',
+                    'H6038': 'H6031',
+                    'H6039': 'H6031',
+                    'H6040': 'H6031',
+                    'H6041': 'H6031',
+                    'H6822': 'H6822',
+                    'H6836': 'H6822',
+                    'H6844': 'H6822',
+                    'H7646': 'שׂבע',
+                    'H7647': 'שׂבע',
+                    'H7648': 'שׂבע',
+                    'H7649': 'שׂבע',
+                    'H7653': 'שׂבע',
+                    'H7654': 'שׂבע',
+                    'H7908': 'שׁכל',
+                    'H7909': 'שׁכל',
+                    'H7910': 'שׁכר',
+                    'H7921': 'שׁכל',
+                    'H7923': 'שׁכל',
+                    'H7937': 'שׁכר',
+                    'H7941': 'שׁכר',
+                    'H7943': 'שׁכר',
+                    'H8589': 'H6031',
                     /* אֱלֹהִים is not אֵלֶּה and not אָלָה. BDB files H0430 under
                        the same אלה key as the demonstrative אֵלֶּה "these" and the
                        verb אָלָה "to swear", so every route that produced the
