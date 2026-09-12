@@ -1,4 +1,4 @@
-@import url('sw_theme.css?v=53');
+@import url('sw_theme.css?v=54');
 
 
 /* Hide body until chrome + footer are wired (prevents legacy bar flash) */
@@ -28,6 +28,12 @@ html:has(link[href*="site_chrome.css"]) #main-content {
 
 /* Shared site header — menu · home · כתבי הקודש / The Holy Scriptures · size · dark */
 
+
+/* Skip link: off-canvas until it has keyboard focus, then a chrome-coloured
+   tab at the top-left, above the bar. */
+.sw-skip { position: absolute; left: -999px; top: 8px; z-index: 1000; padding: 8px 14px; border-radius: 6px;
+  background: var(--chrome); color: var(--on-chrome); font-family: 'David Libre', serif; font-size: 0.95em; text-decoration: none; }
+.sw-skip:focus-visible { left: 8px; outline: 2px solid var(--here-chrome); outline-offset: 2px; }
 
 .sw-top-bar {
   position: fixed;

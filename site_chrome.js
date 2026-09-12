@@ -394,6 +394,20 @@
 
     document.body.insertBefore(header, document.body.firstChild);
 
+    /* Skip link — the first thing a keyboard reaches on every page. The
+       target is the page's own content root (main, or the .page wrapper);
+       it keeps whatever id it has and gets tabindex=-1 so focus can land. */
+    var main = document.querySelector('main, .page');
+    if (main) {
+      if (!main.id) main.id = 'sw-main';
+      if (!main.hasAttribute('tabindex')) main.setAttribute('tabindex', '-1');
+      var skip = document.createElement('a');
+      skip.className = 'sw-skip';
+      skip.href = '#' + main.id;
+      skip.textContent = 'Skip to content';
+      document.body.insertBefore(skip, header);
+    }
+
     if (reader) {
       var inner = header.querySelector('.sw-top-bar-inner');
       /* the chapter control is the three cells the footer used to carry —

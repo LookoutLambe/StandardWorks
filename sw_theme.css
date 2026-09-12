@@ -63,6 +63,9 @@
    Declared here, every alias sees the theme that is actually in force. */
 
 
+/* Native controls, scrollbars and form fields render dark with the theme */
+html:has(body.dark-mode) { color-scheme: dark; }
+
 body.dark-mode {
   /* Designed alongside light, never inferred from it. Paper inverts to
      the chrome family; the tools stay exactly where they were.       */

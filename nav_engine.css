@@ -622,3 +622,12 @@ body.dark-mode #nav-sidebar .nav-footer { background: var(--chrome-2) !important
    with the one-row footer) */
 
 
+
+/* Reduced motion: the drawer, the side panels, the tabs and the dock snap
+   instead of sliding, matching reader.css's own reduced-motion rules. */
+@media (prefers-reduced-motion: reduce) {
+  #nav-overlay, #nav-sidebar, #xref-panel, #annotations-panel, #glossary-panel,
+  .nav-vol-tab, .nl-card, [class^="nqd-"], [class*=" nqd-"], #sw-reader-footer {
+    transition: none !important; animation: none !important;
+  }
+}
