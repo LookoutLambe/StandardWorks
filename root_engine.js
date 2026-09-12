@@ -1028,6 +1028,10 @@
     'וַיּוֹבִיל': 'H2986', 'יוֹבִיל': 'H2986', 'יוֹבִילֵנוּ': 'H2986',   // "led" (hiphil of יָבַל)
     'כְּמִתְבּוֹשְׁשִׁים': 'בוש',                             // "as if ashamed"
     'מְמַשְּׁשִׁים': 'משש',                                  // "feeling their way", not שִׁשִּׁים "sixty"
+    // THE 1 NEPHI 9 CARD AUDIT (2026-09-12), heading words, and the desire forms the antelope still held:
+    'נִקְרֵאת': 'קרא', 'מְכִילוֹת': 'כול', 'חֻלִּין;': 'חלל', 'חֻלִּין': 'חלל', 'עוֹסְקוֹת': 'עסק',
+    'וְתַאֲווֹת': 'אוה', 'תָּאָו': 'אוה', 'כַּתַּאֲוֹת': 'אוה', 'וּבְתַאֲוֹת': 'אוה', 'בְּתַאֲוָתָם': 'אוה', 'תַאֲווֹתַי': 'אוה', 'אֶתְאַו': 'אוה',
+    'כְּתַאֲוָתוֹ': 'אוה', 'תַּאֲווֹתֶיךָ': 'אוה', 'לְתַאֲוָתָם': 'אוה', 'תַּאֲווֹתֵיהֶם': 'אוה', 'תַּאֲווֹתֵיכֶם': 'אוה',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1178,7 +1182,7 @@
                     /* נַחֲלָה "inheritance" (נָחַל) is not נַחַל "stream" (1 Nephi 1 audit). */
                     'H5157': 'H5157', 'H5159': 'H5157',
                     /* מְעִיל "robe" is not מַעַל "unfaithfulness"; אֶצְבַּע "finger" is not צֶבַע "dye" (1 Nephi 8). */
-                    'H4598': 'H4598', 'H0676': 'H0676',
+                    'H4598': 'H4598', 'H0676': 'H0676', 'H0677': 'H0676',
                     /* Two roots under one dotless BDB key, both alive in this corpus
                        (found by the family audit of 2026-09-12; the קרא/קרה split
                        was the first). The minority root keeps its own family: a
