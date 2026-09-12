@@ -1099,6 +1099,20 @@
     'מְמַהֲרִים': 'מהר', 'הַמְמַהֲרִים': 'מהר',                // "swift", not רְאֵם "wild ox"
     'תִּמְנְעוּ': 'מנע',                                   // "withhold", not Timna
     'יְצַוֵּנִי': 'צוה', 'לְהוֹרֹתֵנִי': 'ירה', 'לְהוֹרֹת': 'ירה', 'לְהוֹרֹתְכֶם': 'ירה', 'אַרְעִישֵׁם': 'רעש',   // one-word families
+    // the concordance's leftovers after the 1 Nephi 17 pins:
+    'תוּבְלוּ': 'H2986',                                   // the dagesh-less spelling
+    'יְקַיֵּם': 'קום', 'יְקִימֵנִי': 'קום', 'וִיקַיֵּם': 'קום',   // "shall keep, fulfil" (piel of קום), not Jakim
+    'תִמְנְעוּ': 'מנע', 'תִמְנַע': 'מנע', 'וְתִמְנְעוּ': 'מנע', 'תִּמָּנְעוּ': 'מנע',   // "refrain, withhold", not Timna
+    'תִּתְאוֹנֲנוּ': 'אנן', 'תִּתְאוֹנְנִי': 'אנן', 'הִתְאוֹנְנוּ': 'אנן',   // "murmur", not Onan
+    // THE 1 NEPHI 18 CARD AUDIT (2026-09-12):
+    'צֻוֵּינוּ': 'צוה', 'וַיְצֻוּוּ': 'צוה', 'צֻוּוּ': 'צוה', 'צֻוָּה': 'צוה',   // pual "was commanded", not צַו "precept"
+    'בְּאֵיזֶה': 'אי', 'אֵיזֶה': 'אי', 'וּבְאֵיזֶה': 'אי',        // "by what, which" (אֵי־זֶה), not the Aramaic אֲזָא "heat"
+    'לְהִתְנוֹעֵעַ': 'נוע',                                 // "to move"
+    'לְהִדָּחֵנוּ': 'נדח', 'הִדָּחֲנוּ': 'נדח', 'וּלְהִדָּחוֹת': 'נדח',   // niphal "be driven", not דֹּחַן "millet"
+    'צָבֹה': 'צבה', 'צָבְתוּ': 'צבה',                         // "swollen" (צָבָה), not צָב or צֶבֶת
+    'הֲלִינוֹתִי': 'לון',                                   // "did I murmur" collapsed to נָוֶה
+    'וּמֵעֲוֹן': 'עון',                                    // "from the iniquity of"
+    'וְהָעֵז': 'H5795', 'לְהָעֵז': 'H5795', 'וְעִזִּים': 'H5795',   // the goat, not עֹז "strength"
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1509,7 +1523,8 @@
       'צוּרִי':     { name: 'H6701', word: 'H6697', en: /Zuri/ },             // my rock · Zurishaddai (1 Nephi 13)
       'וְצוּרִי':    { name: 'H6701', word: 'H6697', en: /Zuri/ },
       'הָרַבָּה':   { name: 'H7237', word: 'H7227', en: /Rabbah/ },
-      'צָדִים':     { name: 'H6661', word: 'H6679', en: /Ziddim/ }            // slaying · Ziddim (1 Nephi 16)
+      'צָדִים':     { name: 'H6661', word: 'H6679', en: /Ziddim/ },
+      'וְיָקִים':    { name: 'H3356', word: 'H6965', en: /Jakim/ }             // He raiseth up · Jakim (1 Nephi 17)
     };
     var _HG_BLIND = /[ּֽֿ]/g;
     var _HG_INDEX = null;
