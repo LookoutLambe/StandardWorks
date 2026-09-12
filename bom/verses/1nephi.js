@@ -196,7 +196,7 @@ var ch2Verses = [
     ["אֶת־שֵׁם הַנַּחַל","the name of the river"],
     ["לָמָן","Laman"],
     ["וְהוּא","and it"],
-    ["הֹלֵךְ","emptied"],
+    ["הֹלֵךְ","flowing"],
     ["אֶל","into"],
     ["יַם־סוּף","the Red Sea"],
     ["וְהָעֵמֶק","and the valley"],
@@ -206,7 +206,7 @@ var ch2Verses = [
     ["הַנָּחַל","the river"],
     ["׃",""]
   ]},
-  { num: "ט", words: [["וַיְהִי","and it happened"], ["כִּרְאוֹת","when saw"], ["אָבִי","my father"], ["כִּי־מֵי","that waters of"], ["הַנַּחַל","the river"], ["הֹלְכִים","emptied"], ["אֶל־מְקוֹר","into the fountain of"], ["יַם־סוּף","the Red Sea"], ["וַיֹּאמֶר","and he said"], ["אֶל־לָמָן","unto Laman"], ["לֵאמֹר","saying"], ["מִי־יִתֵּן","O that"], ["וְהָיִיתָ","you might be"], ["כַנַּחַל","like unto the river"], ["הַזֶּה","this"], ["הֹלֵךְ","running"], ["תָּמִיד","continually"], ["אֶל־מְקוֹר","into the fountain of"], ["כׇּל־צְדָקָה","all righteousness"], ["׃",""]]},
+  { num: "ט", words: [["וַיְהִי","and it happened"], ["כִּרְאוֹת","when saw"], ["אָבִי","my father"], ["כִּי־מֵי","that waters of"], ["הַנַּחַל","the river"], ["הֹלְכִים","flowing"], ["אֶל־מְקוֹר","into the fountain of"], ["יַם־סוּף","the Red Sea"], ["וַיֹּאמֶר","and he said"], ["אֶל־לָמָן","unto Laman"], ["לֵאמֹר","saying"], ["מִי־יִתֵּן","O that"], ["וְהָיִיתָ","you might be"], ["כַנַּחַל","like unto the river"], ["הַזֶּה","this"], ["הֹלֵךְ","running"], ["תָּמִיד","continually"], ["אֶל־מְקוֹר","into the fountain of"], ["כׇּל־צְדָקָה","all righteousness"], ["׃",""]]},
   { num: "י", words: [["וַיֹּאמֶר","and he said"], ["גַּם","also"], ["אֶל־לְמוּאֵל","unto Lemuel"], ["מִי־יִתֵּן","O that"], ["וְהָיִיתָ","you might be"], ["כָּעֵמֶק","like unto the valley"], ["הַזֶּה","this"], ["אֵיתָן","firm"], ["וְנֶאֱמָן","and steadfast"], ["וְלֹא־יִמּוֹט","and immovable"], ["בִּשְׁמֹר","in keeping"], ["מִצְוֹת","the commandments of"], ["יְהוָה","the Lord"], ["׃",""]]},
   { num: "יא", words: [["כֹּה","thus"], ["דִבֶּר","he spake"], ["עַל","because of"], ["קְשִׁי־עֹרֶף","the stiffneckedness of"], ["לָמָן","Laman"], ["וּלְמוּאֵל","and Lemuel"], ["כִּי","for"], ["הִנֵּה","behold"], ["הֵלִינוּ","they murmured"], ["עַל־אֲבִיהֶם","against their father"], ["בִּדְבָרִים","in things"], ["רַבִּים","many"], ["כִּי","because"], ["אִישׁ","a man of"], ["מַרְאוֹת","visions"], ["הוּא","he was"], ["וַיּוֹצִיאֵם","and had led them out"], ["מֵאֶרֶץ","from the land of"], ["יְרוּשָׁלַיִם","Jerusalem"], ["לַעֲזֹב","to leave"], ["אֶת־אֶרֶץ","the land of"], ["מוֹרָשְׁתָּם","their inheritance"], ["וְאֶת־זְהָבָם","and their gold"], ["וְאֶת־כַּסְפָּם","and their silver"], ["וְאֶת־כׇּל־חֲמֻדֹתֵיהֶם","and all their precious things"], ["לִגְוֹעַ","to perish"], ["בַּמִּדְבָּר","in the wilderness"], ["וְכֹה","and thus"], ["אָמְרוּ","they said"], ["כִּי־עָשָׂה","that he had done"], ["זֹאת","this"], ["בְּיֵצֶר","in the imaginations of"], ["לִבּוֹ","his heart"], ["הָאֱוִלִי","the foolish"], ["׃",""]]},
   { num: "יב", words: [["כֹּה","thus"], ["הֵלִינוּ","murmured"], ["לָמָן","Laman"], ["וּלְמוּאֵל","and Lemuel"], ["הַגְּדֹלִים","being the eldest"], ["עַל־אֲבִיהֶם","against their father"], ["וַיָּלִינוּ","and they did murmur"], ["כִּי־לֹא","because not"], ["יָדְעוּ","they knew"], ["אֶת־מִפְעֲלוֹת","the dealings of"], ["הָאֱלֹהִים","that God"], ["אֲשֶׁר","who"], ["בְּרָאָם","created them"], ["׃",""]]},

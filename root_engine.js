@@ -989,6 +989,13 @@
     'וַתָּגֶל': 'גיל',                                     // "and rejoiced"
     'מְזַמְּרִים': 'זמר', 'וּמְזַמְּרִים': 'זמר',              // "singing", not Zimri
     'וְכֹחֲךָ': 'H3581', 'בְּכֹחֲכֶם': 'H3581', 'בְּכֹחֲךָ': 'H3581', 'וּכֹחֲכֶם': 'H3581', 'מִכֹּחֲכֶם': 'H3581', 'כֹּחֲךָ': 'H3581', 'כֹּחֲכֶם': 'H3581',   // "your power" peeled to חֵךְ "palate"
+    // THE 1 NEPHI 2 CARD AUDIT (2026-09-12):
+    'מוֹרָשְׁתּוֹ': 'H3423', 'מוֹרָשְׁתָּם': 'H3423',          // מוֹרָשָׁה "inheritance" is ירשׁ, not רֶשֶׁת "net"
+    'וַיֹּדֶה': 'ידה', 'וַיּוֹדוּ': 'ידה', 'הוֹדוּ': 'ידה', 'וְהוֹדוּ': 'ידה', 'אוֹדֶה': 'ידה', 'וְאוֹדֶה': 'ידה', 'נוֹדֶה': 'ידה',   // "gave thanks" peeled to יָד "hand"
+    'דְּרַשְׁתָּנִי': 'דרש',                                // "you have sought me" — a one-word family
+    'וְהוּבַלְתֶּם': 'H2986', 'הוּבַל': 'H2986', 'הוּבַלְנוּ': 'H2986',   // hophal of יָבַל "be led", not תָּמַם
+    'מוֹרֶה': 'ירה', 'וּמוֹרֶה': 'ירה', 'וּלְמוֹרֶה': 'ירה', 'כְּמוֹרֶה': 'ירה', 'לְמוֹרֶה': 'ירה',   // "teacher" (hiphil participle of ירה), not מָרָה "rebel"
+    'לְהָעִיר': 'עור', 'וּלְהָעִיר': 'עור',                   // "to stir up" is עוּר, not עִיר "city"
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1564,10 +1571,17 @@
       var _bw = _weakFirstBdb(sNum);
       if (_bw) return _bw;
     }
+    /* Build the derivation table only once the Strong's roots have ARRIVED. On the
+       pages the data files load lazily, and the first familyOf() call could run
+       before strongs_roots.js: the table was then cached EMPTY for the life of the
+       page, so no derived noun ever walked to its base — דַּעַת stayed H1847,
+       צֵידָה stayed H6720, and each card said "no verse occurrences" while the
+       concordance (built with the roots present) filed them under ידע and צוד
+       (2026-09-12). */
     if (!_baseOf) {
-      _baseOf = {};
       var SR = _roots();
       if (SR) {
+        _baseOf = {};
         var skel = function (w) { return normFinals(stripNikkud(String(w || ''))).replace(/[^א-ת]/g, ''); };
         var SUF = ['ות', 'ים', 'ון', 'ית', 'ה', 'ת', 'י', 'ם', 'ן'];
         var derives = function (src, base) {
@@ -1619,7 +1633,7 @@
         }
       }
     }
-    var fam = _baseOf[sNum] || sNum;
+    var fam = (_baseOf && _baseOf[sNum]) || sNum;
     // THE BASE OF THE CHAIN HAS ITS OWN FAMILY. דַּעַת (H1847) derives from ידע
     // (H3045); the chain used to stop at the base's NUMBER while the lexicon,
     // handed H3045 directly, said ידע through BDB. The base is resolved the same
