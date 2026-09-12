@@ -4,7 +4,7 @@
     the hook did not touch it (it pointed at scripts/write_build_version.js,
     which does not exist), so the list below had been frozen for days and
     every Book of Mormon asset change was served stale. Never hand-edit. */
-const CACHE = 'bom-2026-09-12T04-06-30';
+const CACHE = 'bom-2026-09-12T12-11-37';
 /** Shell only — verse *.js files are cached at runtime, refreshed in the background (see fetch handler). */
 const ASSETS = [
   './bom.html',
