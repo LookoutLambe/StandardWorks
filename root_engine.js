@@ -1064,6 +1064,10 @@
     // THE 1 NEPHI 14 CARD AUDIT (2026-09-12):
     'יִכָּלֵם': 'כלם', 'וַיִּכָּלְמוּ': 'כלם', 'תִּכָּלְמִי': 'כלם',   // niphal "be confounded", not יָכֹל "be able"
     'כִּשְׁבִי': 'H7628',                                  // "according to the captivity of", not כֶּשֶׂב "lamb"
+    // THE 1 NEPHI 15 CARD AUDIT (2026-09-12):
+    'קֹשִׁי': 'קשה', 'בְּקֹשִׁי': 'קשה', 'וּבְקֹשִׁי': 'קשה', 'לְקֹשִׁי': 'קשה',   // "hardness" (קְשִׁי), not קַשׁ "stubble"
+    'וּלְהוֹלִיכוֹ': 'הלך', 'לְהוֹלִיכָם': 'הלך', 'הוֹלִיכָם': 'הלך', 'הוֹלִיכָנוּ': 'הלך', 'לְהוֹלִיכֵנוּ': 'הלך', 'הוֹלִיכוֹ': 'הלך', 'וְהוֹלִיכֻהוּ': 'הלך', 'הוֹלִיךְ': 'הלך', 'לְהוֹלִיךְ': 'הלך',   // hiphil "lead", not נָכָה "smite"
+    'מְפָרֵשׁ': 'פרשׁ', 'מְפֹרָשׁ': 'פרשׁ', 'לְפָרֵשׁ': 'פרשׁ', 'אֲפָרֵשׁ': 'פרשׁ', 'וַיְפָרֵשׁ': 'פרשׁ', 'פֵּרוּשׁוֹ': 'פרשׁ', 'פֵּרוּשׁ': 'פרשׁ',   // interpret, declare (shin), not פָּרַשׂ "spread"
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1217,6 +1221,7 @@
                     'H4598': 'H4598', 'H0676': 'H0676', 'H0677': 'H0676',
                     'H8293': 'שרת',     // שֵׁרוּת "ministry" is שָׁרַת's noun
                     'H3123': 'H3123',   // the dove is not יָוָן Greece (Strong's derivation)
+                    'H6567': 'פרשׁ',    // פֵּרֵשׁ "declare, interpret" (shin) is not פָּרַשׂ "spread" (sin)
                     'H0199': 'H0199',   // אוּלָם "but" is not אִלֵּם "mute"
                     'H5959': 'H5959',   // עַלְמָה "virgin" is not עוֹלָם (1 Nephi 11)
                     /* Two roots under one dotless BDB key, both alive in this corpus
@@ -1471,7 +1476,8 @@
       'וְאוּלָם':    { name: 'H0197', word: 'H0199', en: /porch|hall/i },
       'הַצֻּרִים':   { name: 'H2521', word: 'H6697', en: /Helkath/ },
       'צוּרִי':     { name: 'H6701', word: 'H6697', en: /Zuri/ },             // my rock · Zurishaddai (1 Nephi 13)
-      'וְצוּרִי':    { name: 'H6701', word: 'H6697', en: /Zuri/ }
+      'וְצוּרִי':    { name: 'H6701', word: 'H6697', en: /Zuri/ },
+      'הָרַבָּה':   { name: 'H7237', word: 'H7227', en: /Rabbah/ }            // great · Rabbah (1 Nephi 15)
     };
     var _HG_BLIND = /[ּֽֿ]/g;
     var _HG_INDEX = null;
