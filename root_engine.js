@@ -1009,6 +1009,14 @@
     'אַחֵי': 'H0251',                                    // "the brethren of" — a one-word family read as Achi
     'יָרֹא': 'ירא',                                      // the infinitive absolute of "fear", not רָאָה
     'וְזוֹרָם': 'זורם',                                   // Zoram with the conjunction fell to זָר "stranger"
+    // THE 1 NEPHI 5 CARD AUDIT (2026-09-12):
+    'שָׂרְיָה': 'שְׂרָיָה',                                 // Sariah's second pointing sat under שָׂרַר "rule"
+    'הֵלִינָה': 'לון',                                     // "she complained" read as יָנָה "oppress"
+    'בַּעֲלוֹתֵנוּ': 'עלה',                                 // "while we went up", not the town Bealoth
+    'וַתִּנָּחֵם': 'נחם', 'וָאֶנָּחֵם': 'נחם', 'לְהִנָּחֵם': 'נחם',   // niphal "be comforted" peeled to נוּחַ "rest"
+    'הוֹדוֹתָם': 'ידה', 'בְּהוֹדוֹת': 'ידה', 'לְהוֹדוֹת': 'ידה', 'וּלְהוֹדוֹת': 'ידה',   // "give thanks" read as הוֹד "splendor"
+    'מִמּוֹת': 'מות',                                      // "from perishing" — the מִן took the whole word
+    'יִכְהוּ': 'כהה',                                      // "be dimmed" is כָּהָה, not נָכָה "smite"
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

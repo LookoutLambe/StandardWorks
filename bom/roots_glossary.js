@@ -2421,7 +2421,7 @@ window._rootGlossaryData = {
   "חפשי": {"meaning":"free","category":"Uncategorized"},
   "נאבד": {"meaning":"we perish","category":"Uncategorized"},
   "אליה": {"meaning":"her","category":"Uncategorized"},
-  "נחם": {"meaning":"to comfort, repent, relent","category":"Theology"},
+  "נחם": {"meaning":"(נִחַם) to comfort, console; to repent, relent","category":"Theology"},
   "יודו": {"meaning":"gave thanks","category":"Action"},
   "לכם": {"meaning":"(לָכֶם) to you, for you (masc. pl.)","category":"Particle"},
   "חבלים": {"meaning":"cords","category":"Uncategorized"},
