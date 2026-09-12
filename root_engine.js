@@ -1068,6 +1068,19 @@
     'קֹשִׁי': 'קשה', 'בְּקֹשִׁי': 'קשה', 'וּבְקֹשִׁי': 'קשה', 'לְקֹשִׁי': 'קשה',   // "hardness" (קְשִׁי), not קַשׁ "stubble"
     'וּלְהוֹלִיכוֹ': 'הלך', 'לְהוֹלִיכָם': 'הלך', 'הוֹלִיכָם': 'הלך', 'הוֹלִיכָנוּ': 'הלך', 'לְהוֹלִיכֵנוּ': 'הלך', 'הוֹלִיכוֹ': 'הלך', 'וְהוֹלִיכֻהוּ': 'הלך', 'הוֹלִיךְ': 'הלך', 'לְהוֹלִיךְ': 'הלך',   // hiphil "lead", not נָכָה "smite"
     'מְפָרֵשׁ': 'פרשׁ', 'מְפֹרָשׁ': 'פרשׁ', 'לְפָרֵשׁ': 'פרשׁ', 'אֲפָרֵשׁ': 'פרשׁ', 'וַיְפָרֵשׁ': 'פרשׁ', 'פֵּרוּשׁוֹ': 'פרשׁ', 'פֵּרוּשׁ': 'פרשׁ',   // interpret, declare (shin), not פָּרַשׂ "spread"
+    // THE 1 NEPHI 16 CARD AUDIT (2026-09-12):
+    'הַלִּיַּהוֹנָה': 'ליהונה', 'לִיַּהוֹנָה': 'ליהונה',        // the Liahona — its own family
+    'מַנְחָה': 'H4503',                                    // the offering (heading), not נוּחַ "rest"
+    'מַלִּינָה': 'לון',                                    // "murmurs" read as יָנָה "oppress"
+    'תַחְתֹּךְ': 'חתך',                                    // "it cutteth" (חָתַךְ), not תַּחַת "under"
+    'צֵידָתֵנוּ': 'צוד', 'צָדְתִּי': 'צוד',                    // "our provisions", "I had slain" — one-word families
+    'וְחִצֵּינוּ': 'חצץ', 'וּבְחִצֵּינוּ': 'חצץ', 'חִצֵּינוּ': 'חצץ', 'וְחִצֵּיהֶם': 'חצץ', 'וּבְחִצֵּיהֶם': 'חצץ', 'חִצֵּיהֶם': 'חצץ', 'חִצֵּי': 'חצץ', 'לְחִצֵּי': 'חצץ',   // arrows (חֵץ), not חֲצִי "half"
+    'מִמַּסָּעָם': 'H4550',                                // "their journeying" (מַסַּע)
+    'וְעׇנְיָם': 'H6031', 'עׇנְיָם': 'H6031',                  // "afflictions" (עֳנִי), not the town Anim
+    'הֲבָנָה': 'בין',                                      // "understanding", not ebony
+    'נָחוֹם': 'נָחוֹם',                                     // Nahom, not נוּחַ
+    'נַדְנוּ': 'נדד',                                      // "we have wandered", not נָדָן "sheath"
+    'וַתַּחְפֹּצְנָה': 'חפץ',                                // "they were desirous"
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1477,7 +1490,8 @@
       'הַצֻּרִים':   { name: 'H2521', word: 'H6697', en: /Helkath/ },
       'צוּרִי':     { name: 'H6701', word: 'H6697', en: /Zuri/ },             // my rock · Zurishaddai (1 Nephi 13)
       'וְצוּרִי':    { name: 'H6701', word: 'H6697', en: /Zuri/ },
-      'הָרַבָּה':   { name: 'H7237', word: 'H7227', en: /Rabbah/ }            // great · Rabbah (1 Nephi 15)
+      'הָרַבָּה':   { name: 'H7237', word: 'H7227', en: /Rabbah/ },
+      'צָדִים':     { name: 'H6661', word: 'H6679', en: /Ziddim/ }            // slaying · Ziddim (1 Nephi 16)
     };
     var _HG_BLIND = /[ּֽֿ]/g;
     var _HG_INDEX = null;
