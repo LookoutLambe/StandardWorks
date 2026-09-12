@@ -1041,6 +1041,14 @@ body, button, input, select, textarea,
 
     <!-- ===== UPDATE NOTE (web only — hidden inside the iOS app via html.sw-in-app) ===== -->
 
+    <!-- ===== GLOBAL SEARCH ===== -->
+    <div class="global-search-wrap">
+      <input type="text" id="global-search" class="global-search-input" placeholder="Search all volumes…" autocomplete="off" aria-label="Search all volumes">
+      <button type="button" id="gs-go" class="gs-go" aria-label="Search">Search</button>
+      <span class="gs-hint" aria-hidden="true">Press / or Ctrl+K</span>
+      <div class="global-search-results" id="gs-results"></div>
+    </div>
+
     <!-- ===== CARD GRID ===== -->
     <div class="card-grid">
 
@@ -1135,14 +1143,6 @@ body, button, input, select, textarea,
     <div class="shelf-foot">
       <p class="shelf-scale"><span class="sf-n"><b>605,824</b> words of Hebrew</span><span class="sf-sep">·</span><span class="sf-n"><b>1,705</b> chapters</span><span class="sf-sep">·</span><span class="sf-n">six volumes</span></p>
       <p class="landing-update-note">The interlinear is always being updated for corrections</p>
-    </div>
-
-    <!-- ===== GLOBAL SEARCH ===== -->
-    <div class="global-search-wrap">
-      <input type="text" id="global-search" class="global-search-input" placeholder="Search all volumes…" autocomplete="off" aria-label="Search all volumes">
-      <button type="button" id="gs-go" class="gs-go" aria-label="Search">Search</button>
-      <span class="gs-hint" aria-hidden="true">Press / or Ctrl+K</span>
-      <div class="global-search-results" id="gs-results"></div>
     </div>
 
     <!-- ===== AFTER THE SHELF: what this is, whose hand, the app ===== -->
