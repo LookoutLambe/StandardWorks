@@ -1124,6 +1124,9 @@
     // THE 1 NEPHI 20 (ISAIAH 48) CARD AUDIT (2026-09-12):
     'הֻגְּדוּ': 'נגד',                                     // hophal "were declared", not גְּדוּד "troop"
     'כִּמְעוֹתָיו': 'מעה',                                  // "like the gravel thereof" (מָעָה), not the name Uthai
+    // THE 1 NEPHI 21 (ISAIAH 49) CARD AUDIT (2026-09-12):
+    'וּמְשַׁחְרֵר': 'שחרר', 'אוֹמְנֵיהֶם': 'אמן',            // heading "loosens", "their craftsmen" (אֻמָּן)
+    'שְׁבִי': 'H7628',                                     // "the captives" after the maqqef, not יָשַׁב "sit"
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1536,7 +1539,10 @@
       'הָרַבָּה':   { name: 'H7237', word: 'H7227', en: /Rabbah/ },
       'צָדִים':     { name: 'H6661', word: 'H6679', en: /Ziddim/ },
       'וְיָקִים':    { name: 'H3356', word: 'H6965', en: /Jakim/ },
-      'כְּאָדָם':    { name: 'H0121', word: 'H0120', en: /Adam/ }              // as a man · Adam (1 Nephi 19)
+      'כְּאָדָם':    { name: 'H0121', word: 'H0120', en: /Adam/ },
+      'עֻזִּי':     { name: 'H5813', word: 'H5797', en: /Uzzi/ },              // my strength · Uzzi (1 Nephi 21)
+      'גִדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },            // brought up · Giddel
+      'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ }
     };
     var _HG_BLIND = /[ּֽֿ]/g;
     var _HG_INDEX = null;
