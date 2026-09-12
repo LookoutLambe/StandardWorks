@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '100';   // bump when the generated data files change
+  var RSC_V = '101';   // bump when the generated data files change
   // Transliterated terms — an exception table in the tool, like the received
   // spellings in transliterate(): keyed by bare consonants, so every pointing
   // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.
@@ -606,7 +606,9 @@
     if (want) {
       for (var i = 0; i < parts.length; i++) {
         var m = /^\s*\(([^)]+)\)/.exec(parts[i]);
-        if (m && _consOf(m[1]) === want) hits.push(parts[i]);
+        /* A homograph's lemma may carry its lexicon numeral — "(קָרָא II) to
+           meet" beside קרא I "call" — which is not part of the consonants. */
+        if (m && _consOf(m[1].replace(/\s+(I|II|III|IV)\s*$/, '')) === want) hits.push(parts[i]);
       }
     }
     if (parts.length >= 2 && hits.length === 1) return narrowSense(hits[0], glossText) + refs;

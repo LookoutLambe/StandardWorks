@@ -7253,7 +7253,7 @@ window._rootGlossaryData = {
     "category": "Life"
   },
   "קרה": {
-    "meaning": "(קָרָה) to happen, befall; (קָרָא II) to meet, encounter; (לִקְרַאת) toward, to meet, against; (קִרְיָה) city, town",
+    "meaning": "(קָרָה) to happen, befall; (קָרָא II) to meet, encounter, go out against; (לִקְרַאת) toward, to meet, against; (קִרְיָה) city, town",
     "category": "Uncategorized"
   },
   "תחנן": {
