@@ -1113,6 +1113,14 @@
     'הֲלִינוֹתִי': 'לון',                                   // "did I murmur" collapsed to נָוֶה
     'וּמֵעֲוֹן': 'עון',                                    // "from the iniquity of"
     'וְהָעֵז': 'H5795', 'לְהָעֵז': 'H5795', 'וְעִזִּים': 'H5795',   // the goat, not עֹז "strength"
+    // THE 1 NEPHI 19 CARD AUDIT (2026-09-12):
+    'מַתֶּכֶת': 'נתך',                                    // "metal" (from נָתַךְ), not מוּת "die"
+    'וַיְצַוֵּנִי': 'צוה', 'אֶצְטַדָּק': 'צדק', 'יַקְשִׁיבוּ': 'קשב', 'לְהַרְאוֹתֵנִי': 'ראה', 'וּבָזוּ': 'בזה',   // one-word families
+    'מִנְּבוּאוֹתַי': 'נבא', 'נְבוּאוֹת': 'נבא', 'וּנְבוּאוֹת': 'נבא', 'בִּנְבוּאוֹת': 'נבא', 'כִּנְבוּאוֹתֵינוּ': 'נבא',   // prophecies, not בּוֹא "come"
+    'לְהוֹרוֹת': 'ירה',                                    // "for instruction", not Ruth
+    'וּמְרִיבוֹתָיו': 'ריב', 'מְרִיבוֹתָיו': 'ריב', 'וּמְרִיבוֹתֵיהֶם': 'ריב', 'וּמְרִיבוֹתֵיכֶם': 'ריב', 'לִמְרִיבוֹת': 'ריב', 'וּבִמְרִיבוֹת': 'ריב',   // contentions, not Merib-baal
+    'עֲצוֹתָיו': 'עצה', 'לַעֲצוֹת': 'עצה',                    // counsels, not עֵץ "tree"
+    'אֲפַתֵּם': 'פתה',                                     // "persuade them", not the name Appaim
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1524,7 +1532,8 @@
       'וְצוּרִי':    { name: 'H6701', word: 'H6697', en: /Zuri/ },
       'הָרַבָּה':   { name: 'H7237', word: 'H7227', en: /Rabbah/ },
       'צָדִים':     { name: 'H6661', word: 'H6679', en: /Ziddim/ },
-      'וְיָקִים':    { name: 'H3356', word: 'H6965', en: /Jakim/ }             // He raiseth up · Jakim (1 Nephi 17)
+      'וְיָקִים':    { name: 'H3356', word: 'H6965', en: /Jakim/ },
+      'כְּאָדָם':    { name: 'H0121', word: 'H0120', en: /Adam/ }              // as a man · Adam (1 Nephi 19)
     };
     var _HG_BLIND = /[ּֽֿ]/g;
     var _HG_INDEX = null;
