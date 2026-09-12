@@ -51,7 +51,7 @@
 <link rel="stylesheet" href="../nav_engine.css?v=50">
 <link rel="stylesheet" href="../site_chrome.css?v=72">
 <link rel="stylesheet" href="../xref_study_panel.css?v=14">
-<link rel="stylesheet" href="../reader.css?v=120">
+<link rel="stylesheet" href="../reader.css?v=121">
 <style>
 
 /* Skip-to-content link (screen reader / keyboard) */
@@ -1803,43 +1803,10 @@ body.dual-mode .chapter-summary { display: block; }
         Every edition is the same translation you read here; the web edition
         is free and always carries the latest corrections.
       </p>
-<div style="display:flex;justify-content:center;align-items:flex-start;gap:30px 22px;flex-wrap:wrap;max-width:720px;margin:0 auto 8px">
-          <a href="https://www.amazon.com/dp/B0GVZFM6YR" target="_blank" rel="noopener" style="text-decoration:none;width:196px;display:flex;flex-direction:column;align-items:center">
-            <span style="height:250px;display:flex;align-items:flex-end;justify-content:center">
-              <img src="images/cover-interlinear.jpg?v=5" alt="Hebrew Book of Mormon Interlinear Edition" loading="lazy" style="height:250px;width:auto;border-radius:4px;border:1px solid var(--rule);box-shadow:0 6px 18px rgba(26,39,68,0.22)">
-            </span>
-            <span style="font-family:'David Libre','Georgia',serif;font-size:0.9em;color:var(--ink);margin-top:12px;font-weight:600;line-height:1.35">Interlinear Edition</span>
-            <span style="font-size:0.78em;color:var(--ink-light);margin-top:2px;letter-spacing:0.04em">Soft Cover</span>
-          </a>
-          <a href="https://www.amazon.com/dp/B0DVTJC9HJ" target="_blank" rel="noopener" style="text-decoration:none;width:196px;display:flex;flex-direction:column;align-items:center">
-            <span style="height:250px;display:flex;align-items:flex-end;justify-content:center">
-              <img src="images/cover-hebrew.jpg?v=5" alt="Hebrew Book of Mormon" loading="lazy" style="height:250px;width:auto;border-radius:4px;border:1px solid var(--rule);box-shadow:0 6px 18px rgba(26,39,68,0.22)">
-            </span>
-            <span style="font-family:'David Libre','Georgia',serif;font-size:0.9em;color:var(--ink);margin-top:12px;font-weight:600;line-height:1.35">Full Hebrew Edition</span>
-            <span style="font-size:0.78em;color:var(--ink-light);margin-top:2px;letter-spacing:0.04em">Soft Cover</span>
-          </a>
-          <a href="https://www.lulu.com/shop/christopher-lambe/%D7%A1%D7%A4%D7%A8-%D7%9E%D7%95%D7%A8%D7%9E%D7%95%D7%9F/hardcover/product-2m87weq.html" target="_blank" rel="noopener" style="text-decoration:none;width:196px;display:flex;flex-direction:column;align-items:center">
-            <span style="height:250px;display:flex;align-items:flex-end;justify-content:center">
-              <img src="images/cover-hardcover.jpg?v=3" alt="Hebrew Book of Mormon, footnote edition — blue linen hardcover with dust jacket" loading="lazy" style="height:250px;width:auto;border-radius:4px;border:1px solid var(--rule);box-shadow:0 6px 18px rgba(26,39,68,0.22)">
-            </span>
-            <span style="font-family:'David Libre','Georgia',serif;font-size:0.9em;color:var(--ink);margin-top:12px;font-weight:600;line-height:1.35">Footnote Edition</span>
-            <span style="font-size:0.78em;color:var(--ink-light);margin-top:2px;letter-spacing:0.04em">Blue Linen &middot; Dust Jacket</span>
-          </a>
-          <a href="https://www.amazon.com/dp/B0GGQZG9K9" target="_blank" rel="noopener" style="text-decoration:none;width:196px;display:flex;flex-direction:column;align-items:center">
-            <span style="height:250px;display:flex;align-items:flex-end;justify-content:center">
-              <img src="images/cover-dual.jpg?v=2" alt="Dual Language Book of Mormon" loading="lazy" style="height:250px;width:auto;border-radius:4px;border:1px solid var(--rule);box-shadow:0 6px 18px rgba(26,39,68,0.22)">
-            </span>
-            <span style="font-family:'David Libre','Georgia',serif;font-size:0.9em;color:var(--ink);margin-top:12px;font-weight:600;line-height:1.35">Dual Language Edition</span>
-            <span style="font-size:0.78em;color:var(--ink-light);margin-top:2px;letter-spacing:0.04em">Soft Cover</span>
-          </a>
-          <a href="https://www.amazon.com/dp/B0H11CV516" target="_blank" rel="noopener" style="text-decoration:none;width:196px;display:flex;flex-direction:column;align-items:center">
-            <span style="height:250px;display:flex;align-items:flex-end;justify-content:center">
-              <img src="images/cover-triple.jpg?v=5" alt="Triple Combination" loading="lazy" style="height:250px;width:auto;border-radius:4px;border:1px solid var(--rule);box-shadow:0 6px 18px rgba(26,39,68,0.22)">
-            </span>
-            <span style="font-family:'David Libre','Georgia',serif;font-size:0.9em;color:var(--ink);margin-top:12px;font-weight:600;line-height:1.35">Triple Combination</span>
-            <span style="font-size:0.78em;color:var(--ink-light);margin-top:2px;letter-spacing:0.04em">Soft Cover</span>
-          </a>
-        </div>
+        <div id="print-editions-cards"></div>
+        <p class="ed-more"><a href="../in-print.html">About each edition →</a></p>
+        <script src="../editions.js?v=1"></script>
+        <script>document.getElementById('print-editions-cards').innerHTML = Editions.cards('images/');</script>
       <div style="margin-top:34px">
         <button class="glossary-highlight-btn" onclick="navTo('landing')" style="font-size:1em;padding:8px 24px">← Back to Sefer Mormon</button>
       </div>

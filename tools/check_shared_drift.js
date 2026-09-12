@@ -361,7 +361,15 @@ const SIX = ['bom/bom.html', 'ot.html', 'nt.html', 'dc.html', 'pgp.html', 'jst.h
     const swPath = path.join(ROOT, swFile);
     if (!fs.existsSync(swPath)) continue;
     const sw = fs.readFileSync(swPath, 'utf8');
-    const page = fs.readFileSync(path.join(ROOT, pageFile), 'utf8');
+    let page = fs.readFileSync(path.join(ROOT, pageFile), 'utf8');
+    /* A page can ask for a file THROUGH a data script it loads: the five
+       cover images are named in editions.js (one table for the reader's In
+       Print panel and in-print.html), not in bom.html's markup. What that
+       script names, the page requests, so its source counts as the page's. */
+    for (const m of page.matchAll(/<script src="([^"?]*editions\.js)[^"]*"/g)) {
+      const f = path.join(path.dirname(path.join(ROOT, pageFile)), m[1]);
+      if (fs.existsSync(f)) page += '\n' + fs.readFileSync(f, 'utf8');
+    }
     /* CORE_ASSETS, not just ASSETS. This read `const ASSETS` only, so for
        service-worker.js — whose list is CORE_ASSETS — it matched nothing and
        the loop below ran zero times. Half of what this rule claimed to check

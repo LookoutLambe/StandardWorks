@@ -268,7 +268,7 @@ function chrome(rel, crumbs) {
     '<nav class="crumbs" aria-label="Breadcrumb">' + trail + '</nav>\n';
 }
 function foot(rel) {
-  return '<footer class="foot"><p><a href="' + rel + '">sefermormon.com</a> · <a href="' + rel + 'hebrew-study.html">How to read pointed Hebrew</a> · <a href="' + rel + 'hebrew/index.html">All chapters</a></p>' +
+  return '<footer class="foot"><p><a href="' + rel + '">sefermormon.com</a> · <a href="' + rel + 'hebrew-study.html">How to read pointed Hebrew</a> · <a href="' + rel + 'hebrew/index.html">All chapters</a> · <a href="' + rel + 'in-print.html">In print</a></p>' +
     '<p>Hebrew Interlinear Standard Works. The interlinear reader adds transliteration, roots, cross-references, notes and read-aloud.</p></footer>\n</body>\n</html>\n';
 }
 function breadcrumbLd(items) {
@@ -425,6 +425,34 @@ h2{font-size:1.15rem;margin:1.4rem 0 .4rem;font-weight:600;border-bottom:1px sol
 .foot{max-width:46rem;margin:0 auto;padding:1rem 1rem 2.5rem;font-size:.85rem;color:var(--ink-3);border-top:1px solid var(--rule)}
 `;
 
+// ---------- in-print.html: the cards and the structured data, from editions.js ----------
+// The page itself is hand-written at the root; only the block between the
+// editions markers is generated, so the page's head keeps the same asset
+// versions as every other root page.
+function refreshInPrint(urls) {
+  const Editions = require(path.join(ROOT, 'editions.js'));
+  const file = path.join(ROOT, 'in-print.html');
+  const html = fs.readFileSync(file, 'utf8');
+  const ld = {
+    '@context': 'https://schema.org', '@type': 'ItemList', name: 'Sefer Mormon in print', url: SITE + 'in-print.html',
+    itemListElement: Editions.EDITIONS.map((e, i) => ({
+      '@type': 'ListItem', position: i + 1,
+      item: { '@type': 'Book', name: e.name, alternateName: 'Sefer Mormon — ' + e.title,
+        author: { '@type': 'Person', name: 'Chris Lambe' }, inLanguage: 'he',
+        bookFormat: /Hardcover/.test(e.spec) ? 'https://schema.org/Hardcover' : 'https://schema.org/Paperback',
+        image: SITE + 'bom/images/' + e.img.replace(/\?.*$/, ''), url: e.href,
+        offers: { '@type': 'Offer', url: e.href, availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: e.seller } } }
+    }))
+  };
+  const block = '<!-- editions:start (generated from editions.js by tools/build_static_pages.js — do not edit) -->\n' +
+    Editions.cards('bom/images/', { detail: true }) + '\n' +
+    '<script type="application/ld+json">' + JSON.stringify(ld) + '</script>\n' +
+    '<!-- editions:end -->';
+  if (!/editions:start/.test(html)) throw new Error('in-print.html has no editions markers');
+  fs.writeFileSync(file, html.replace(/<!-- editions:start[\s\S]*?<!-- editions:end -->/, block));
+  urls.push(SITE + 'in-print.html');
+}
+
 // ---------- main ----------
 function main() {
   fs.rmSync(OUT, { recursive: true, force: true });
@@ -438,6 +466,7 @@ function main() {
     catch (err) { console.error('  ! %s failed: %s', vol.key, err.stack || err.message); process.exitCode = 1; }
   }
   buildHub(summary, urls);
+  refreshInPrint(urls);
   const sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
     urls.map(u => '  <url><loc>' + esc(u) + '</loc></url>').join('\n') + '\n</urlset>\n';
   fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sm);

@@ -3198,3 +3198,16 @@ body.dark-mode .hw .sacc::before { color: var(--here-chrome); }
     border-bottom: 1px solid color-mix(in srgb, var(--here) 45%, transparent);
   }
 }
+
+/* ===== Print editions (editions.js renders these; the reader's In Print
+   panel and in-print.html share the markup) ===== */
+.ed-grid{display:flex;justify-content:center;align-items:flex-start;gap:30px 22px;flex-wrap:wrap;max-width:720px;margin:0 auto 8px}
+.ed-card{text-decoration:none;width:196px;display:flex;flex-direction:column;align-items:center;color:var(--ink)}
+.ed-cover{height:250px;display:flex;align-items:flex-end;justify-content:center}
+.ed-cover img{height:250px;width:auto;border-radius:4px;border:1px solid var(--rule);box-shadow:0 6px 18px rgba(26,39,68,0.22)}
+.ed-title{font-family:'David Libre','Georgia',serif;font-size:0.9em;color:var(--ink);margin-top:12px;font-weight:600;line-height:1.35;text-align:center}
+.ed-format{font-size:0.78em;color:var(--ink-light);margin-top:2px;letter-spacing:0.04em;text-align:center}
+.ed-blurb{font-size:0.82em;color:var(--ink-light);line-height:1.55;margin-top:8px;text-align:center}
+.ed-buy{font-size:0.82em;color:var(--here);margin-top:8px;font-weight:600}
+.ed-more{margin:14px 0 0;font-size:0.9em}
+.ed-more a{color:var(--here)}
