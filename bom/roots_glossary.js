@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "רבק": {"meaning":"(מַרְבֵּק) stall (for fattening)","category":"Lexical"},
   "שרב": {"meaning":"(שָׁרָב) heat, parched ground","category":"Lexical"},
   "אנן": {"meaning":"(הִתְאוֹנֵן) to complain, murmur","category":"Lexical"},
   "ליהונה": {"meaning":"(לִיַּהוֹנָה) Liahona — the compass, the director (1 Nephi 16:10; Alma 37:38)","category":"Name"},
@@ -767,7 +768,7 @@ window._rootGlossaryData = {
   "יו": {"meaning":"were","category":"Motion"},
   "ידע": {"meaning":"(יָדַע) to know, perceive, understand; (דַּעַת) knowledge; (מַדָּע) knowledge, thought","category":"Cognition"},
   "איש": {"meaning":"(אִישׁ) man, person, husband; (אֲנָשִׁים) men","category":"Person"},
-  "אמן": {"meaning":"(אָמַן) to believe, trust; (אָמֵן) amen, verily, truly; (אֱמוּנָה) faith, faithfulness; (אׇמְנָם) truly, verily","category":"Theology","biblicalRefs":[{"ref":"Gen 15:6","note":"Abram believed (הֶאֱמִן) in the LORD"},{"ref":"Ex 14:31","note":"They believed (וַיַּאֲמִינוּ) in the LORD and in Moses his servant"},{"ref":"Isa 7:9","note":"If you do not stand firm in faith, you will not stand at all"},{"ref":"Hab 2:4","note":"The righteous shall live by his faith (אֱמוּנָה)"},{"ref":"Deut 7:9","note":"The faithful (הַנֶּאֱמָן) God who keeps covenant"}]},
+  "אמן": {"meaning":"(אָמַן) to believe, trust; (אָמֵן) amen, verily, truly; (אֱמוּנָה) faith, faithfulness; (אֻמָּן) craftsman, artisan; (אׇמְנָם) truly, verily","category":"Theology","biblicalRefs":[{"ref":"Gen 15:6","note":"Abram believed (הֶאֱמִן) in the LORD"},{"ref":"Ex 14:31","note":"They believed (וַיַּאֲמִינוּ) in the LORD and in Moses his servant"},{"ref":"Isa 7:9","note":"If you do not stand firm in faith, you will not stand at all"},{"ref":"Hab 2:4","note":"The righteous shall live by his faith (אֱמוּנָה)"},{"ref":"Deut 7:9","note":"The faithful (הַנֶּאֱמָן) God who keeps covenant"}]},
   "נתן": {"meaning":"(נָתַן) to give, put, set","category":"Action"},
   "ראה": {"meaning":"(רָאָה) to see, look; (הֶרְאָה) to show; (מַרְאֶה) appearance, vision; (רָאוּי) worthy, fitting, proper","category":"Action"},
   "רוח": {"meaning":"(רוּחַ) spirit, wind, breath; (רוּחַ) smell, delight","category":"Theology"},
@@ -7688,7 +7689,7 @@ window._rootGlossaryData = {
   "ספח": {"meaning":"(סַפַּחַת) skin rash; (נִסְפַּח) to cleave, join","category":"Uncategorized"},
   "הון": {"meaning":"(הוֹן) wealth, substance","category":"Uncategorized"},
   "שגג": {"meaning":"(שְׁגָגָה) error, inadvertence","category":"Uncategorized"},
-  "בוך": {"meaning":"(מְבוּכָה) confusion; (נָבוֹךְ) entangled","category":"Uncategorized"},
+  "בוך": {"meaning":"(בּוּךְ) to be confused, perplexed; (נָבוֹךְ) entangled; (מְבוּכָה) confusion","category":"Uncategorized"},
   "מוש": {"meaning":"(מוּשׁ) to feel, handle; (מוּשׁ) to depart, remove","category":"Uncategorized"},
   "צנן": {"meaning":"(צִנָּה) shield, buckler","category":"Uncategorized"},
   "H4046": {"meaning":"(מַגֵּפָה) plague, slaughter","category":"Uncategorized"},

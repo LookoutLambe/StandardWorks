@@ -1127,6 +1127,14 @@
     // THE 1 NEPHI 21 (ISAIAH 49) CARD AUDIT (2026-09-12):
     'וּמְשַׁחְרֵר': 'שחרר', 'אוֹמְנֵיהֶם': 'אמן',            // heading "loosens", "their craftsmen" (אֻמָּן)
     'שְׁבִי': 'H7628',                                     // "the captives" after the maqqef, not יָשַׁב "sit"
+    // THE 1 NEPHI 22 CARD AUDIT (2026-09-12):
+    'תּוּשְׁמַד': 'שמד', 'עִקְּשָׁה': 'עקש', 'הַנּוֹסְדָה': 'יסד', 'אֶעֱרֹב': 'ערב',   // one-word families (heading "will be destroyed", perverted, established, durst)
+    'הֲיוּבְנוּ': 'בין', 'יוּבְנוּ': 'בין',                     // hophal "be understood", not Job
+    'לִהְיוֹתָם': 'היה',                                    // "unto their being", not Jotham
+    'מְכֻלְכָּלִים': 'כול',                                  // "nourished" (כִּלְכֵּל), not יָם "sea"
+    'וְהַבְּנוּיִים': 'H1129', 'הַבְּנוּיִים': 'H1129',          // "those built up", not Binnui
+    'מוֹלֵךְ': 'H4428',                                     // "reigneth", not מוּל "circumcise"
+    'לְבַדֵּנוּ': 'בדד', 'לִמַּדְנוּ': 'למד',                    // "we alone", "taught" — both had fallen to דִּין
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1542,7 +1550,8 @@
       'כְּאָדָם':    { name: 'H0121', word: 'H0120', en: /Adam/ },
       'עֻזִּי':     { name: 'H5813', word: 'H5797', en: /Uzzi/ },              // my strength · Uzzi (1 Nephi 21)
       'גִדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },            // brought up · Giddel
-      'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ }
+      'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
+      'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ }       // captivity, unless the gloss says sit (1 Nephi 21)
     };
     var _HG_BLIND = /[ּֽֿ]/g;
     var _HG_INDEX = null;
