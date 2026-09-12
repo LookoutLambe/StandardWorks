@@ -197,6 +197,14 @@ const VOLUMES = [
     // name: what the world types into a search box. The default for a volume
     // is '<en> in Hebrew'; this one is searched for as a book, not a language.
     name: 'Hebrew Book of Mormon',
+    // intro: the prose a search engine ranks on. The other volumes are the
+    // Masoretic Text, Delitzsch, and translations of shorter books; this is
+    // the one the site exists for, so it is the one that gets the page.
+    intro: [
+      'This is the Hebrew Book of Mormon: the whole book, 1 Nephi to Moroni, rendered into pre-exilic Classical Biblical Hebrew, the register of Isaiah and Jeremiah, the language Nephi says his father spoke in Jerusalem before the exile. Not Modern Hebrew. Where the English has always read “and it came to pass”, the Hebrew reads <span lang="he" dir="rtl">וַיְהִי</span>; where it says “covenant”, <span lang="he" dir="rtl">בְּרִית</span>, the word Abram heard at the covenant of the pieces. The translation is the work of one hand, Chris Lambe.',
+      'Every word carries its English gloss beneath it, so a reader with a little Hebrew can follow the line word by word, and a reader with none can see how the book sounds in the tongue it claims for itself. The chapters below are plain pages: the Hebrew, the gloss under each word, and the English verse beside it. The interlinear reader adds transliteration, the root of every word, cross-references into the Tanakh, notes and read-aloud.',
+      'It is free to read here and in the app, and it is in print: a <a href="https://www.amazon.com/dp/B0DVTJC9HJ">Hebrew edition</a> and an <a href="https://www.amazon.com/dp/B0GVZFM6YR">interlinear edition</a> with the English glosses, both on Amazon. The Tanakh, the New Testament, the Doctrine and Covenants and the Pearl of Great Price stand beside it in the same form, because reading the Book of Mormon in Hebrew means reading it against the Tanakh: the same covenant words, the same cadences.'
+    ],
     books: () => bomBooks(), english: ['bom/official_verses.js', '_officialVersesData'],
     blurb: 'The Hebrew Book of Mormon: Sefer Mormon, the Book of Mormon in Classical Biblical Hebrew, every word glossed, beside the English.',
     hebrewNote: 'Classical Biblical Hebrew translation' },
@@ -351,6 +359,7 @@ function buildVolume(vol, urls) {
     vol.blurb + ' ' + pages + ' chapters, each a plain page with the Hebrew and its word-by-word English.', vurl, breadcrumbLd(crumbs)) +
     '<body class="volume">\n' + chrome(vrel, crumbs) + '<main>\n<h1>' + esc(volName(vol)) + ' <span class="h1he" lang="he" dir="rtl">' + esc(vol.he) + '</span></h1>\n' +
     '<p class="lede">' + esc(vol.blurb) + ' <a class="open" href="' + vrel + vol.page + '">Open the ' + esc(vol.en) + ' reader</a>.</p>\n' +
+    (vol.intro || []).map(t => '<p class="intro">' + t + '</p>').join('\n') + (vol.intro ? '\n' : '') +
     list + '\n</main>\n' + foot(vrel);
   fs.writeFileSync(path.join(volDir, 'index.html'), vhtml);
   urls.push(vurl);
@@ -389,6 +398,8 @@ h1{font-size:1.7rem;line-height:1.25;margin:.3rem 0 .6rem;font-weight:600}
 h2{font-size:1.15rem;margin:1.4rem 0 .4rem;font-weight:600;border-bottom:1px solid var(--rule);padding-bottom:.2rem}
 .h1he,h2 [lang=he]{font-family:'David Libre',serif;font-weight:400;color:var(--ink-2);font-size:.9em;margin-left:.5em;white-space:nowrap}
 .lede{color:var(--ink-2);font-size:.95rem;margin:0 0 1rem}
+.intro{max-width:40rem;font-size:.97rem;line-height:1.6;margin:0 0 .9rem}
+.intro+.book{margin-top:1.6rem}
 .open{font-weight:600}
 .pn{display:flex;justify-content:space-between;align-items:center;gap:1rem;font-size:.9rem;margin:.75rem 0;padding:.4rem 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 .pn .up{color:var(--ink-3)}
