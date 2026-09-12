@@ -1002,6 +1002,13 @@
     'הֱלִינוֹתָ': 'לון',                                   // "you have murmured" collapsed to נָוֶה
     'וַנָּנָס': 'נוס',                                     // "and we fled"
     'וְנוֹכָחִים': 'נכח', 'נוֹכָחִים': 'נכח',                // "sober, present" is נֹכַח, not יָכַח "reprove"
+    // THE 1 NEPHI 4 CARD AUDIT (2026-09-12):
+    'וָאֶתְגַּנֵּב': 'גנב', 'וָאֶסּוֹג': 'סוג',                  // "I crept", "I shrunk" — one-word families
+    'תִדְעַךְ': 'דעך', 'יִדְעַךְ': 'דעך', 'יִדְעֲכוּ': 'דעך', 'וְיִדְעֲכוּ': 'דעך', 'דָּעֲכוּ': 'דעך', 'דָעֲכוּ': 'דעך', 'דָעֲכָם': 'דעך', 'וְדָעֲכוּ': 'דעך',   // "dwindle" is דָּעַךְ, not ידע
+    'שִׁרְיוֹנוֹ': 'H8302', 'שִׁרְיוֹנָם': 'H8302', 'שִׁרְיוֹנֵיהֶם': 'H8302', 'וְשִׁרְיוֹנִים': 'H8302', 'בְּשִׁרְיוֹנִים': 'H8302', 'שִׁרְיוֹנֵיכֶם': 'H8302', 'וְשִׁרְיוֹנֵיהֶם': 'H8302', 'בְּשִׁרְיוֹן': 'H8302',   // armor, not Aramaic שְׁרֵא
+    'אַחֵי': 'H0251',                                    // "the brethren of" — a one-word family read as Achi
+    'יָרֹא': 'ירא',                                      // the infinitive absolute of "fear", not רָאָה
+    'וְזוֹרָם': 'זורם',                                   // Zoram with the conjunction fell to זָר "stranger"
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
