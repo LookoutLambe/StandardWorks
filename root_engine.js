@@ -1061,6 +1061,9 @@
     'וַיּוּבַל': 'H2986',                                  // hophal "was carried", not בָּלַל "mix"
     'וְהוּרְמוּ': 'רום', 'הוּרְמוּ': 'רום', 'הוּרְמָה': 'רום',   // hophal "lifted up", not מִרְמָה "deceit"
     'צִיּוֹנִי': 'H6726',                                  // "my Zion", not צָוָה "command"
+    // THE 1 NEPHI 14 CARD AUDIT (2026-09-12):
+    'יִכָּלֵם': 'כלם', 'וַיִּכָּלְמוּ': 'כלם', 'תִּכָּלְמִי': 'כלם',   // niphal "be confounded", not יָכֹל "be able"
+    'כִּשְׁבִי': 'H7628',                                  // "according to the captivity of", not כֶּשֶׂב "lamb"
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
