@@ -1048,6 +1048,12 @@
     'לֹבֶן': 'לבן',                                        // "whiteness" read as בֵּן "son"
     'נָצְרַת': 'נָצְרַת',                                    // Nazareth, not נָצַר "keep"
     'עַלְמָה': 'H5959', 'הָעַלְמָה': 'H5959', 'הָעֲלָמוֹת': 'H5959',   // the virgin is not עוֹלָם "forever"
+    // THE 1 NEPHI 12 CARD AUDIT (2026-09-12):
+    'תּוֹשָׁבֶיהָ': 'ישב',                                  // heading "its inhabitants" (תּוֹשָׁב)
+    'בִּכְפִירָה': 'כפר',                                   // "through the atonement", not the town Chephirah
+    'וּמַקְשׁוֹת': 'קשה',                                  // "hardeneth" (hiphil of קָשָׁה), not מוֹקֵשׁ "snare"
+    'וּמוֹלִיכוֹת': 'הלך', 'מוֹלִיכוֹת': 'הלך', 'וּמוֹלִיכָם': 'הלך', 'מוֹלִיכִים': 'הלך', 'מוֹלִיכָם': 'הלך', 'כְּמוֹלִיכִים': 'הלך',   // "leadeth" (hiphil of הָלַךְ), not נָכָה "smite"
+    'חָשׁוּךְ': 'חשך',                                     // "dark", not חוּשׁ "hasten"
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1200,6 +1206,8 @@
                     /* מְעִיל "robe" is not מַעַל "unfaithfulness"; אֶצְבַּע "finger" is not צֶבַע "dye" (1 Nephi 8). */
                     'H4598': 'H4598', 'H0676': 'H0676', 'H0677': 'H0676',
                     'H8293': 'שרת',     // שֵׁרוּת "ministry" is שָׁרַת's noun
+                    'H3123': 'H3123',   // the dove is not יָוָן Greece (Strong's derivation)
+                    'H0199': 'H0199',   // אוּלָם "but" is not אִלֵּם "mute"
                     'H5959': 'H5959',   // עַלְמָה "virgin" is not עוֹלָם (1 Nephi 11)
                     /* Two roots under one dotless BDB key, both alive in this corpus
                        (found by the family audit of 2026-09-12; the קרא/קרה split
@@ -1450,7 +1458,8 @@
       'וְיוֹנָה':    { name: 'H3124', word: 'H3123', en: /Jonah|Jonas/ },
       'לְיוֹנָה':    { name: 'H3124', word: 'H3123', en: /Jonah|Jonas/ },
       'אוּלָם':     { name: 'H0197', word: 'H0199', en: /porch|hall/i },
-      'וְאוּלָם':    { name: 'H0197', word: 'H0199', en: /porch|hall/i }
+      'וְאוּלָם':    { name: 'H0197', word: 'H0199', en: /porch|hall/i },
+      'הַצֻּרִים':   { name: 'H2521', word: 'H6697', en: /Helkath/ }          // the rocks · Helkath-hazzurim (1 Nephi 12)
     };
     var _HG_BLIND = /[ּֽֿ]/g;
     var _HG_INDEX = null;
