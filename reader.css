@@ -2438,7 +2438,7 @@ body.dark-mode #glossary-panel {
    position preserves the precedence these rules effectively had.
    ══════════════════════════════════════════════════════════════════════ */
 #annotations-panel.open { display: block; transform: translateX(0); }
-#dark-mode-toggle { background: transparent; border: 1px solid var(--chrome-line); color: var(--here); padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 0.9em; transition: all 0.2s; }
+#dark-mode-toggle { background: transparent; border: 1px solid var(--chrome-line); color: var(--here); padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 0.9em; transition: background-color 0.2s, border-color 0.2s, color 0.2s; }
 #glossary-panel.open { display: block; transform: translateX(0); }
 #glossary-search { width: 100%; padding: 8px 12px; border: 1px solid var(--rule); border-radius: 4px; font-size: 1em; font-family: 'David Libre', 'Georgia', serif; margin-bottom: 8px; background: var(--bg); color: var(--ink); }
 #glossary-sort-select { border: 1px solid var(--rule); padding: 4px 6px; border-radius: 3px; font-size: 0.8em; font-family: 'David Libre', 'Georgia', serif; background: var(--bg); color: var(--ink); }
@@ -2464,7 +2464,7 @@ body.dark-mode #glossary-panel {
 .glossary-controls { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
 .glossary-count { margin-left: auto; font-size: 0.8em; color: var(--ink-light); white-space: nowrap; }
 .glossary-detail { display: none; margin-top: 8px; font-size: 0.85em; color: var(--ink-light); line-height: 1.5; direction: ltr; }
-.glossary-entry { border: 1px solid var(--rule-light); border-radius: 6px; padding: 10px 12px; margin-bottom: 6px; cursor: pointer; transition: all 0.15s; }
+.glossary-entry { border: 1px solid var(--rule-light); border-radius: 6px; padding: 10px 12px; margin-bottom: 6px; cursor: pointer; transition: background-color 0.15s, border-color 0.15s; }
 .glossary-entry-header { display: flex; align-items: baseline; gap: 4px; }
 .glossary-entry:hover { border-color: var(--accent); }
 .glossary-form-chip { display: inline-block; font-family: 'David Libre', serif; font-size: 1.1em; background: var(--bg-deep); padding: 2px 8px; border-radius: 4px; cursor: pointer; direction: rtl; }
@@ -2505,7 +2505,7 @@ body.dark-mode #glossary-panel {
 .page { max-width: none; margin: 0 auto; padding: 55px 24px 50px; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); background: var(--paper); min-height: 100vh; box-shadow: none; position: relative; touch-action: manipulation; }
 .popup-strong a { color: var(--accent); text-decoration: none; }
 .popup-strong a:hover { text-decoration: underline; }
-.sel-color { width: 22px; height: 22px; border-radius: 50%; cursor: pointer; border: 2px solid transparent; transition: all 0.15s; }
+.sel-color { width: 22px; height: 22px; border-radius: 50%; cursor: pointer; border: 2px solid transparent; transition: transform 0.15s, border-color 0.15s; }
 .sel-color-row { flex-wrap: wrap; max-width: 320px; display: flex; gap: 3px; margin-bottom: 3px; align-items: center; }
 .sel-color-row-label { font-size: 0.6em; color: var(--here); min-width: 12px; font-family: 'David Libre', 'Georgia', serif; }
 .sel-color.active { border-color: #fff; box-shadow: 0 0 4px rgba(255,255,255,0.5); }
@@ -2908,11 +2908,10 @@ body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direct
   display: block;
   font-size: 0.7em;
   font-weight: 400;
-  color: #8a8570;
+  color: var(--ink-3);   /* the token switches with the theme; #6a6550 measured 3.2:1 in dark */
   margin-top: 1px;
   line-height: 1;
 }
-body.dark-mode #nav-progress-text { color: #6a6550; }
 
 /* The provenance line under a "cited in" card — which volume, which footnote
    marker, the anchor word. bom.html drew it with a hardcoded #9aa3bc, which
@@ -3211,3 +3210,6 @@ body.dark-mode .hw .sacc::before { color: var(--here-chrome); }
 .ed-buy{font-size:0.82em;color:var(--here);margin-top:8px;font-weight:600}
 .ed-more{margin:14px 0 0;font-size:0.9em}
 .ed-more a{color:var(--here)}
+
+/* Headings on the front pages: no orphaned last word */
+.sw-front h1, .sw-front h2, .sw-front h3, .landing-title-hebrew, .tr-title { text-wrap: balance; }

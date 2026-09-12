@@ -693,12 +693,12 @@ body.dark-mode #annotations-panel .ann-tab.active {
      16px is the threshold, not a preference. */
   font-size: 16px;
   font-family: 'David Libre', serif;
-  outline: none;
   transition: border-color 0.2s;
   direction: ltr;
   unicode-bidi: plaintext;
   text-overflow: ellipsis;
 }
+.nav-search-wrap input:focus-visible { outline: 2px solid var(--here-chrome); outline-offset: 2px; }
 .nav-search-wrap input:focus {
   border-color: var(--sw-gold) !important;
 }
