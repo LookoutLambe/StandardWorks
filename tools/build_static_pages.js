@@ -181,6 +181,9 @@ function jstBooks() {
 }
 
 // ---------- the volumes ----------
+// The English name a volume is searched for by; defaults to '<en> in Hebrew'.
+const volName = vol => vol.name || (vol.en + ' in Hebrew');
+
 const VOLUMES = [
   { key: 'ot', slug: 'old-testament', en: 'Old Testament', he: 'תנ״ך', page: 'ot.html', verseDir: 'ot_verses',
     books: () => otNtBooks('ot.html'), english: ['ot_english.js', '_otEnglishData'],   // KJV since 2026-09-11 (tools/build_ot_english_kjv.py)
@@ -191,8 +194,11 @@ const VOLUMES = [
     blurb: 'The New Testament in Hebrew (Delitzsch), every word glossed, beside the King James text.',
     hebrewNote: 'Delitzsch Hebrew New Testament' },
   { key: 'bom', slug: 'book-of-mormon', en: 'Book of Mormon', he: 'ספר מורמון', page: 'bom/bom.html', verseDir: 'bom/verses',
+    // name: what the world types into a search box. The default for a volume
+    // is '<en> in Hebrew'; this one is searched for as a book, not a language.
+    name: 'Hebrew Book of Mormon',
     books: () => bomBooks(), english: ['bom/official_verses.js', '_officialVersesData'],
-    blurb: 'Sefer Mormon: the Book of Mormon in Classical Biblical Hebrew, every word glossed, beside the English.',
+    blurb: 'The Hebrew Book of Mormon: Sefer Mormon, the Book of Mormon in Classical Biblical Hebrew, every word glossed, beside the English.',
     hebrewNote: 'Classical Biblical Hebrew translation' },
   { key: 'dc', slug: 'doctrine-and-covenants', en: 'Doctrine and Covenants', he: 'הלקח והבריתות', page: 'dc.html', verseDir: 'dc_verses',
     books: sets => dcBooks(sets), english: ['dc_english.js', '_dcEnglishData'],
@@ -312,7 +318,7 @@ function buildVolume(vol, urls) {
     const ld = '<script type="application/ld+json">' + JSON.stringify({
       '@context': 'https://schema.org', '@type': 'Chapter', name: label + ' in Hebrew', url,
       inLanguage: english ? ['he', 'en'] : ['he'], position: c.n,
-      isPartOf: { '@type': 'Book', name: vol.en + ' in Hebrew (' + vol.he + ')', url: SITE + vol.page, inLanguage: 'he' }
+      isPartOf: { '@type': 'Book', name: volName(vol) + ' (' + vol.he + ')', url: SITE + vol.page, inLanguage: 'he' }
     }) + '</script>\n' + breadcrumbLd(crumbs);
     let missing = 0;
     const body = verses.map((v, i) => {
@@ -341,9 +347,9 @@ function buildVolume(vol, urls) {
     '<section class="book"><h2>' + esc(b.en) + (b.he ? ' <span lang="he" dir="rtl">' + esc(b.he) + '</span>' : '') + '</h2>' +
     '<p class="cells">' + b.chapters.filter(c => sets[c.id]).map(c =>
       '<a href="' + b.slug + '/' + c.n + '.html" title="' + esc(chapterLabel(b, c)) + '">' + c.n + '</a>').join('') + '</p></section>').join('\n');
-  const vhtml = head(vrel, vol.en + ' in Hebrew — ' + vol.he + ' · Sefer Mormon',
+  const vhtml = head(vrel, volName(vol) + ' — ' + vol.he + ' · Sefer Mormon',
     vol.blurb + ' ' + pages + ' chapters, each a plain page with the Hebrew and its word-by-word English.', vurl, breadcrumbLd(crumbs)) +
-    '<body class="volume">\n' + chrome(vrel, crumbs) + '<main>\n<h1>' + esc(vol.en) + ' <span class="h1he" lang="he" dir="rtl">' + esc(vol.he) + '</span></h1>\n' +
+    '<body class="volume">\n' + chrome(vrel, crumbs) + '<main>\n<h1>' + esc(volName(vol)) + ' <span class="h1he" lang="he" dir="rtl">' + esc(vol.he) + '</span></h1>\n' +
     '<p class="lede">' + esc(vol.blurb) + ' <a class="open" href="' + vrel + vol.page + '">Open the ' + esc(vol.en) + ' reader</a>.</p>\n' +
     list + '\n</main>\n' + foot(vrel);
   fs.writeFileSync(path.join(volDir, 'index.html'), vhtml);
