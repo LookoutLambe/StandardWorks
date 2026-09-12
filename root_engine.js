@@ -1017,6 +1017,9 @@
     'הוֹדוֹתָם': 'ידה', 'בְּהוֹדוֹת': 'ידה', 'לְהוֹדוֹת': 'ידה', 'וּלְהוֹדוֹת': 'ידה',   // "give thanks" read as הוֹד "splendor"
     'מִמּוֹת': 'מות',                                      // "from perishing" — the מִן took the whole word
     'יִכְהוּ': 'כהה',                                      // "be dimmed" is כָּהָה, not נָכָה "smite"
+    // THE 1 NEPHI 6 CARD AUDIT (2026-09-12), heading words:
+    'מַטְּרַת': 'מטרה',                                    // "purpose of" (מַטָּרָה), not מָטָר "rain"
+    'לְשַׁכְנֵעַ': 'שכנע',                                  // "to persuade" — a one-word family
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

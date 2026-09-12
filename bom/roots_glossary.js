@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "מטרה": {"meaning":"(מַטָּרָה) purpose, aim; target, mark","category":"Lexical"},
   "סרב": {"meaning":"(סֵרֵב) to refuse; (סָרָב) thorn, brier","category":"Lexical"},
   "H3885": {"meaning":"(לוּן) to lodge, pass the night; (הִלִּין) to murmur, complain","category":"Lexical"},
   "סקל": {"meaning":"(סָקַל) to stone; to clear of stones","category":"Lexical"},
