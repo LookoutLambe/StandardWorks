@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '96';   // bump when the generated data files change
+  var RSC_V = '97';   // bump when the generated data files change
   // Transliterated terms — an exception table in the tool, like the received
   // spellings in transliterate(): keyed by bare consonants, so every pointing
   // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.
@@ -157,7 +157,7 @@
       return;
     }
     var need = [];
-    if (!window._strongsLookup)   need.push('strongs_lookup.js?v=3');
+    if (!window._strongsLookup)   need.push('strongs_lookup.js?v=4');
     if (!window._strongsRoots)    need.push('strongs_roots.js?v=2');
     if (!window._bdbRoots)        need.push('bdb_roots.js?v=4');
     if (!window._rootProperNames) need.push('root_names.js?v=17');
@@ -359,6 +359,39 @@
     }
     return '';
   }
+  /* A NAME'S MEANING IS ITS ENGLISH NAME. Strong's glosses a proper noun with
+     its own transliteration — "Mosheh", "Mitsrajim", "Shelomah", "Kasdite" —
+     and the card then read like an error under a word the print spells Moses:
+     217 name families, 6,779 uses (the scorecard bug pass, 2026-09-12). The
+     corpus's own glosses spell the name the way the reader just read it, so a
+     name family with no curated row takes the capitalized word its glosses use
+     most — the first capitalized word of each gloss, past particles, so "son of
+     Solomon" and "to Solomon" both count Solomon — and only when that word
+     carries at least half the family's glosses. A lowercase majority (a common
+     word wearing a name's number) keeps Strong's line, and the detector keeps
+     flagging it. */
+  function _isNameEntry(e) {
+    var x = String(e && e.x || '').replace(/^[^A-Za-z\u00C0-\u024F\u1E00-\u1EFF]+/, ''), c = x.charAt(0);   // as root_engine.js familyOf: the first LETTER of the transliteration, past ʼ ʻ
+    return !!c && c === c.toUpperCase() && c !== c.toLowerCase();
+  }
+  var _NAME_STOP = /^(The|And|Of|To|Unto|In|Into|From|With|For|By|Upon|On|At|Against|Before|After|Over|Under|Through|Toward|Towards|Between|Among|Out|Son|Sons|Daughter|Daughters|Children|King|Kings|Queen|Land|House|Men|Man|People|City|Cities|River|Mount|Mountain|Wife|Brother|Brethren|Father|Fathers|Mother|God|Lord|LORD|O|Even|Also|All|But|That|Which|Who|Nor|Or|As|Like|Till|Until|His|Her|Their|My|Our|Your|Is|Was|Be|It|This|These|Those|Not|No|A|An|Now|Behold|Yea|Thus|So|Then|When|If|Because|Therefore|Wherefore|Every|Each|Some|Many|Other|Another|Same|Own|Great|Holy|Whole|Half|Both)$/;
+  function _corpusName(key) {
+    var rc = window._rootConcordance;
+    if (!rc || !keyIdx || keyIdx[key] === undefined) return '';
+    var g = rc.roots[keyIdx[key]].g || {}, tally = {}, total = 0, best = '', bn = 0;
+    for (var gl in g) {
+      var n = g[gl]; total += n;
+      var ws = gl.replace(/[^A-Za-z'\-]+/g, ' ').split(' ').filter(Boolean);
+      for (var k = 0; k < ws.length; k++) {
+        var w = ws[k].replace(/^-+|-+$/g, '');
+        if (w.length < 2 || !/^[A-Z]/.test(w) || _NAME_STOP.test(w)) continue;
+        tally[w] = (tally[w] || 0) + n;
+        if (tally[w] > bn) { bn = tally[w]; best = w; }
+        break;
+      }
+    }
+    return (best && bn * 2 >= total) ? best : '';
+  }
   function rootDisplay(key) {
     var heb = key, translit = '', meaning = '';
     if (/^H\d+$/.test(key) && window._strongsRoots && window._strongsRoots[key]) {
@@ -385,9 +418,15 @@
         // showing "flesh" because בשר (the flesh family) shares its consonants.
         var rc = window._rootConcordance;
         var claimed = rc && rc.keys && rc.keys.indexOf(cons) >= 0;
-        if (!claimed) cur = gd[cons];
+        /* ...and never onto a NAME. The bulk glossary holds junk consonantal
+           rows — "יפתח": "he opened", "תרצה": "of thyself" — which read as the
+           meaning of Jephthah and Tirzah the moment their consonants had no
+           family of their own. A bare-consonant row describes a common word;
+           a Strong's name takes only an exact H-key row or its corpus name. */
+        if (!claimed && !_isNameEntry(e)) cur = gd[cons];
       }
       if (cur && cur.meaning) meaning = cur.meaning;
+      else if (_isNameEntry(e)) { var cn = _corpusName(key); if (cn) meaning = cn; }
     } else {
       // A bare consonantal root transliterates to nothing readable, so use
       // BDB's vocalised spelling of it where we have one: אבה -> אָבָה, which

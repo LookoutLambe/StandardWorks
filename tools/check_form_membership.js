@@ -62,15 +62,40 @@ for (const n in S) {
   const d = c.charAt(0) + c.slice(1).replace(/[וי]/g, '');
   if (d.length >= 3 && !dematIdx[d]) dematIdx[d] = consIdx[c] || n;
 }
+// A NAME'S MEANING IS ITS ENGLISH NAME — mirrors root_scorecard.js (2026-09-12).
+function isNameEntry(e) {
+  const x = String(e && e.x || '').replace(/^[^A-Za-z\u00C0-\u024F\u1E00-\u1EFF]+/, ''), c = x.charAt(0);
+  return !!c && c === c.toUpperCase() && c !== c.toLowerCase();
+}
+const NAME_STOP = /^(The|And|Of|To|Unto|In|Into|From|With|For|By|Upon|On|At|Against|Before|After|Over|Under|Through|Toward|Towards|Between|Among|Out|Son|Sons|Daughter|Daughters|Children|King|Kings|Queen|Land|House|Men|Man|People|City|Cities|River|Mount|Mountain|Wife|Brother|Brethren|Father|Fathers|Mother|God|Lord|LORD|O|Even|Also|All|But|That|Which|Who|Nor|Or|As|Like|Till|Until|His|Her|Their|My|Our|Your|Is|Was|Be|It|This|These|Those|Not|No|A|An|Now|Behold|Yea|Thus|So|Then|When|If|Because|Therefore|Wherefore|Every|Each|Some|Many|Other|Another|Same|Own|Great|Holy|Whole|Half|Both)$/;
+function corpusName(key) {
+  const i = rc.keys.indexOf(key);
+  if (i < 0) return '';
+  const g = rc.roots[i].g || {}, tally = {};
+  let total = 0, best = '', bn = 0;
+  for (const gl in g) {
+    const n = g[gl]; total += n;
+    const ws = gl.replace(/[^A-Za-z'\-]+/g, ' ').split(' ').filter(Boolean);
+    for (let k = 0; k < ws.length; k++) {
+      const w = ws[k].replace(/^-+|-+$/g, '');
+      if (w.length < 2 || !/^[A-Z]/.test(w) || NAME_STOP.test(w)) continue;
+      tally[w] = (tally[w] || 0) + n;
+      if (tally[w] > bn) { bn = tally[w]; best = w; }
+      break;
+    }
+  }
+  return (best && bn * 2 >= total) ? best : '';
+}
 function displayedMeaning(key, keySet) {
   if (/^H\d+$/.test(key) && S[key]) {
     let meaning = S[key].g || strongsGloss(S[key].r || S[key].u) || '';
     let cur = gd[key];
     if (!cur) {
       const cons = strip(S[key].w);
-      if (!keySet.has(cons)) cur = gd[cons];
+      if (!keySet.has(cons) && !isNameEntry(S[key])) cur = gd[cons];   // a bare-consonant row never leaks onto a name (mirrors rootDisplay)
     }
     if (cur && cur.meaning) meaning = cur.meaning;
+    else if (isNameEntry(S[key])) { const cn = corpusName(key); if (cn) meaning = cn; }
     return meaning;
   }
   let cur = gd[key];

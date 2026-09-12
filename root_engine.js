@@ -616,6 +616,14 @@
   // through FAMILY; a bare string returns as is and never reaches baseRoot —
   // which is the point for a name (Lehi must not become "jaw").
     var SURFACE_PINS = {
+    // church/synagogue spellings the כנס block missed: 15 "synagogues" tokens
+    // filed under נסס "banner" (the scorecard bug pass, 2026-09-12)
+    'כְנֵסִיּוֹת': 'כנס', 'כְּנֶסִיַּת': 'כנס',
+    'תְּקוּפוֹת': 'תקופה',   // the plural falls to the morphology stage, which keyed it under קוף "ape"
+    // HOLAM HASER FOR VAV (U+05BA): the OT spells מִצְוֺת with it, the lexicon
+    // with the plain holam, and the bare consonants מצות are ambiguous with
+    // unleavened bread — so the form fell to the morphology stage and צות "blaze"
+    'מִצְוֺת': 'H4687', 'אֶת־מִצְוֺת': 'H4687', 'אֶת־כׇּל־מִצְוֺת': 'H4687', 'אֶל־מִצְוֺת': 'H4687',
 
     // ORPHANED PLURALS AND INFINITIVES. Same shape as the ship below: a word
     // whose singular reaches its family from the lexicon while its plural or
@@ -959,7 +967,7 @@
     'זוֹמְמוֹת': 'זמם', 'מַזְמִין': 'זמנ', 'וּמַזְמִין': 'זמנ', 'מַזְמִינָה': 'זמנ', 'לְהַזְמָנָתָם': 'זמנ', 'הִזְדַּמְּנֻיּוֹת': 'זמנ',
     'וְלַנִּזְקָקִים': 'זקק', 'וְהַנִּזְקָקִים': 'זקק', 'בַּחֲבִיבוּת': 'חבב', 'מִתְחַבְּרִים': 'חבר', 'חֲגִיגִית': 'חגג', 'חַגָּיו': 'חגג',
     'וְחָס': 'חוס', 'נֶחֱזִים': 'חזה', 'חוֹזֵר': 'חזר', 'הַחוֹזְרִים': 'חזר', 'חוֹזְרִים': 'חזר', 'חוֹזֶרֶת': 'חזר', 'שֶׁחוֹזֶרֶת': 'חזר',
-    'שֶׁחוֹזְרִים': 'חזר', 'יַחְזְרוּ': 'חזר', 'מַחְזִיר': 'חזר', 'מֻחְזָרִים': 'חזר', 'לְהַחְזִיר': 'חזר', 'חֲזָרָה': 'חזר', 'חֲזָרַת': 'חזר',
+    'שֶׁחוֹזְרִים': 'חזר', 'יַחְזְרוּ': 'חזר', 'מַחְזִיר': 'חזיר', 'מֻחְזָרִים': 'חזר', 'לְהַחְזִיר': 'חזיר', 'חֲזָרָה': 'חזר', 'חֲזָרַת': 'חזר',
     'הַחֲזָרָה': 'חזר', 'לַחֲזָרָה': 'חזר', 'תַּחֲזֹר': 'חזר', 'לַחוֹזֵר': 'חזר', 'יִתְחַיּוּ': 'חיה', 'חִלּוּל': 'חלל', 'מַחֲלִיף': 'חלף',
     'חָלוּק': 'חלק', 'שֶׁיְּחַלְּקוּ': 'חלק', 'חֶלְקִית': 'חלק', 'חֲמוֹרָיו': 'חמר', 'חָמְרִיִּים': 'חמר', 'מַחְמִיאוֹת': 'חנף', 'מַחְסַן': 'חסן',
     'בַּמַּחְסָן': 'חסן', 'אִחְסוּן': 'חסן', 'בְּחִפּוּשׂ': 'חפש', 'נֶחֱרָבִים': 'חרב', 'הַחֻרְבָּן': 'חרב', 'לְחֻרְבַּן': 'חרב', 'מֵחֻרְבַּן': 'חרב',
@@ -1133,7 +1141,26 @@
                     'H2491': 'חָלָל',   // slain (the noun), pointed key vs the verb's חלל
                     'H2486': 'חלילה',  // far be it — the exclamation
                     'H8462': 'תחלה',   // beginning — the ת-derivative, the מנין/בנין class
-                    'H1551': 'גליל', 'H1552': 'גליל', 'H1553': 'גליל' };
+                    'H1551': 'גליל', 'H1552': 'גליל', 'H1553': 'גליל',
+                    // the scorecard bug pass (2026-09-12): each of these sat on a
+                    // card whose meaning line named the wrong word
+                    'H2534': 'חֵמָה',   // wrath, fury (217 uses) — BDB's יחם "conceive"; the bare חמה is the WALL family
+                    'H8622': 'תקופה',   // circuit of time, the D&C's dispensation — not קוף "ape"
+                    'H2386': 'חזיר',    // swine — not the heading vocabulary's חזר "return"
+                    'H0271': 'אָחָז',   // Ahaz the king — not אחז "seize"
+                    'H4605': 'H4605',   // מַעַל "above, upward" — its homograph מַעַל "unfaithfulness" keeps the bare key
+                    'H3528': 'כבר',     // כְּבָר "already" — Strong's derivation pointer led it to H3529, the river Chebar
+                    'H1000': 'ביצה',    // eggs — BDB filed them with בּוּץ fine linen
+                    'H0801': 'אִשֶּׁה',  // the offering made by fire — not אִשָּׁה "woman" (identical consonants)
+                    'H5980': 'H5980',   // לְעֻמַּת "over against, beside" — BDB folds it into עַם "people"
+                    // THE ATTESTED TABLE IS KEYED BY FORM, NOT BY VERSE: where one spelling is
+                    // both a name and a common word, its one lemma decides for every
+                    // occurrence. These three name-lemmas win the form while the common
+                    // word carries most of the tokens, so the name joins the word's family
+                    // and the meaning line names both (2026-09-12):
+                    'H3529': 'כבר',     // the river Chebar (8) — כְּבָר "already" (49)
+                    'H5176': 'נחש',     // Nahash the Ammonite (8) — נָחָשׁ "serpent" (14 + 103)
+                    'H4809': 'ריב' };   // Meribah (6) — מְרִיבָה "strife, contention" (80)
 
   // 2e. Numerals keep their own entries — Strong's pointers chain them.
     var NUMERAL = {H0259:1,H8147:1,H7969:1,H0702:1,H2568:1,H8337:1,H7651:1,
@@ -1279,7 +1306,18 @@
   var _baseOf = null;
   function _isNameEntry(sNum) {
     var e = _roots() && _roots()[sNum];
-    return !!(e && /^[A-Z]/.test(String(e.x || '').trim()));
+    /* THE FIRST LETTER OF THE TRANSLITERATION, PAST THE MODIFIER MARKS. Strong's
+       opens a name's transliteration with a capital — but after ʼ ʻ where the
+       word begins with aleph or ayin (ʼĂzaryâh, ʼÛwrîyâh, ʼĔmôrîy, ʻÔbadyâh),
+       and a test on the raw first CHARACTER read Azariah as the verb "help",
+       Uriah as "light", the Amorite as "say", Obadiah as "serve" (found
+       2026-09-12 when the name stage started keying through this family).
+       The gloss is no substitute: Strong's capitalises "Messiah", "Sabbath",
+       "Passover", "Lord" and "I", and testing it pulled 1,501 anointed-tokens
+       out of משח. So: strip everything that is not a letter, then ask whether
+       the first letter is an upper-case one. */
+    var x = String(e && e.x || '').replace(/^[^A-Za-z\u00C0-\u024F\u1E00-\u1EFF]+/, ''), c = x.charAt(0);
+    return !!c && c === c.toUpperCase() && c !== c.toLowerCase();
   }
   function familyOf(sNum) {
     if (FAMILY_SPLIT[sNum]) return FAMILY_SPLIT[sNum];
@@ -1428,9 +1466,13 @@
   // an exact SURFACE_PIN. These outrank the lexicon because each was placed
   // by hand against a specific wrong answer the lexicon gives.
   function stagePins(ctx) {
-    var lex = _mapLayered(SURFACE_MAP, ctx.raw);
+    /* The CLEANED surface, not the raw one: three D&C tokens carry a sof pasuq
+       glued to the word (הַכְּנֵסִיָּה׃), and against ctx.raw no pin could ever
+       match them — they fell through to the lexicon and filed under נסס. Every
+       other stage already reads ctx.w. */
+    var lex = _mapLayered(SURFACE_MAP, ctx.w);
     if (lex && PINNED_LEXEMES[lex]) return _keyOf(lex);
-    var pin = SURFACE_PINS[ctx.raw];
+    var pin = SURFACE_PINS[ctx.w];
     return pin ? _keyOf(pin) : '';
   }
 
@@ -1494,7 +1536,13 @@
          translation supplies — Sam, Nephi — and keeps the consonantal key. */
       var lex = _pointedLexeme(piece);
       if (lex && !lex.isName) continue;      // the common word; not a name
-      if (lex && lex.isName) return lex.num; // a named lexeme: key by its number
+      /* THROUGH THE FAMILY, like every other stage. Returned raw, the number
+         bypassed FAMILY_SPLIT, so לַיהוָה / וַיהוָה (961 uses) keyed 'H3068' — a
+         card reading Strong's "Existent" — while the bare Name went through the
+         lexicon stage to 'יהוה'; Job, Benjamin, Enoch and every split name were
+         two cards the same way. When a pinned family and its Strong's number
+         disagree, the disagreement is the bug (the Elohim lesson, 2026-09-11). */
+      if (lex && lex.isName) return familyOf(lex.num); // a named lexeme: key by its family
       /* Peel proclitics so every spelling of one name lands on one card.
          The old guard (best.length > 3 and shorter.length >= 3) meant a SHORT
          name could never be de-prefixed: Sam scattered across three keys —
