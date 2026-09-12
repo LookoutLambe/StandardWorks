@@ -1042,6 +1042,12 @@
     'נִזָּרֶה': 'זרה',                                     // niphal "be scattered", not נָזִיר
     'נִסְיֹנְכֶם': 'נסה', 'נִסְיוֹנְכֶם': 'נסה', 'בְּנִסְיוֹנוֹת': 'נסה', 'נִסְיוֹנָם': 'נסה', 'נִסְיוֹנִי': 'נסה', 'נִסְיוֹנוֹ': 'נסה', 'בְּנִסְיוֹנוֹתָיו': 'נסה',   // probation (נִסָּיוֹן), not the wilderness of Sin
     'לְהַכְחִישָׁם': 'כחש', 'לְהַכְחִישׁ': 'כחש', 'הַמַּכְחִישׁ': 'כחש', 'תַּכְחִישׁ': 'כחש', 'תַכְחִישׁ': 'כחש', 'וְתַכְחִישׁוּ': 'כחש', 'הֲתַכְחִישׁ': 'כחש', 'וַיַּכְחֵשׁ': 'כחש',   // deny (כָּחַשׁ), not חִישׁ "quickly"
+    // THE 1 NEPHI 11 CARD AUDIT (2026-09-12):
+    'וּצְלִיבָתוֹ': 'צלב', 'קְרִיאַת': 'קרא',                 // heading "his crucifixion", "the reading of" — one-word families
+    'וְשֵׁרוּתָם': 'שרת',                                   // "their ministry" read as שִׁיר "song"
+    'לֹבֶן': 'לבן',                                        // "whiteness" read as בֵּן "son"
+    'נָצְרַת': 'נָצְרַת',                                    // Nazareth, not נָצַר "keep"
+    'עַלְמָה': 'H5959', 'הָעַלְמָה': 'H5959', 'הָעֲלָמוֹת': 'H5959',   // the virgin is not עוֹלָם "forever"
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1193,6 +1199,8 @@
                     'H5157': 'H5157', 'H5159': 'H5157',
                     /* מְעִיל "robe" is not מַעַל "unfaithfulness"; אֶצְבַּע "finger" is not צֶבַע "dye" (1 Nephi 8). */
                     'H4598': 'H4598', 'H0676': 'H0676', 'H0677': 'H0676',
+                    'H8293': 'שרת',     // שֵׁרוּת "ministry" is שָׁרַת's noun
+                    'H5959': 'H5959',   // עַלְמָה "virgin" is not עוֹלָם (1 Nephi 11)
                     /* Two roots under one dotless BDB key, both alive in this corpus
                        (found by the family audit of 2026-09-12; the קרא/קרה split
                        was the first). The minority root keeps its own family: a
@@ -1434,7 +1442,15 @@
       'רָם':      { name: 'H7410', word: 'H7311', en: /\bRam\b/ },          // high · Ram
       'הִלֵּל':    { name: 'H1985', word: 'H1984', en: /Hillel/ },   // praised · Hillel
       'וּמוֹרֶה':   { name: 'H4784', word: 'H3384', en: /rebel/ },          // teacher · rebellious
-      'מוֹרֶה':    { name: 'H4784', word: 'H3384', en: /rebel/ }
+      'מוֹרֶה':    { name: 'H4784', word: 'H3384', en: /rebel/ },
+      /* 1 Nephi 11: white vs Lebanah, the dove vs Jonah, and אוּלָם "but" vs the porch (not a name, same two-way split). */
+      'וּלְבָנָה':   { name: 'H3838', word: 'H3836', en: /Lebanah/ },
+      'לִלְבָנָה':   { name: 'H3838', word: 'H3836', en: /Lebanah/ },
+      'יוֹנָה':     { name: 'H3124', word: 'H3123', en: /Jonah|Jonas/ },
+      'וְיוֹנָה':    { name: 'H3124', word: 'H3123', en: /Jonah|Jonas/ },
+      'לְיוֹנָה':    { name: 'H3124', word: 'H3123', en: /Jonah|Jonas/ },
+      'אוּלָם':     { name: 'H0197', word: 'H0199', en: /porch|hall/i },
+      'וְאוּלָם':    { name: 'H0197', word: 'H0199', en: /porch|hall/i }
     };
     var _HG_BLIND = /[ּֽֿ]/g;
     var _HG_INDEX = null;
