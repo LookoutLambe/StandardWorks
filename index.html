@@ -477,6 +477,8 @@ html.sw-in-app .landing-app-store { display: none; }
 }
 
 .card-cover {
+  color: inherit;
+  text-decoration: none;
   width: 100%;
   aspect-ratio: 3 / 4;
   border-radius: 4px;
@@ -490,6 +492,10 @@ html.sw-in-app .landing-app-store { display: none; }
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0,0,0,0.18), 0 1px 4px rgba(0,0,0,0.10);
   transition: box-shadow 0.2s;
+}
+.card-cover:focus-visible {
+  outline: 2px solid var(--here);
+  outline-offset: 3px;
 }
 .scripture-card:hover .card-cover {
   box-shadow: 0 8px 28px rgba(0,0,0,0.25), 0 2px 8px rgba(0,0,0,0.12);
@@ -1058,14 +1064,13 @@ body, button, input, select, textarea,
     <div class="card-grid">
 
       <!-- Old Testament -->
-      <div class="scripture-card" data-vol="ot" onclick="window.location.href='ot.html'">
-        <div class="card-cover ot">
+      <div class="scripture-card" data-vol="ot">
+        <a class="card-cover ot" href="ot.html" aria-label="Old Testament">
           <div class="rule-top"></div>
           <div class="card-cover-hebrew">תנ״ך</div>
           <div class="rule-bottom"></div>
           <div class="card-cover-title">Old<br>Testament</div>
-          <div class="rule-bottom"></div>
-        </div>
+          <div class="rule-bottom"></div></a>
         <div class="card-label">
           <div class="card-label-he">תנ״ך</div>
           <div class="card-label-en"><a class="card-link" href="ot.html">Old Testament</a></div>
@@ -1073,14 +1078,13 @@ body, button, input, select, textarea,
       </div>
 
       <!-- New Testament -->
-      <div class="scripture-card" data-vol="nt" onclick="window.location.href='nt.html'">
-        <div class="card-cover nt">
+      <div class="scripture-card" data-vol="nt">
+        <a class="card-cover nt" href="nt.html" aria-label="New Testament">
           <div class="rule-top"></div>
           <div class="card-cover-hebrew">הברית<br>החדשה</div>
           <div class="rule-bottom"></div>
           <div class="card-cover-title">New<br>Testament</div>
-          <div class="rule-bottom"></div>
-        </div>
+          <div class="rule-bottom"></div></a>
         <div class="card-label">
           <div class="card-label-he">הברית החדשה</div>
           <div class="card-label-en"><a class="card-link" href="nt.html">New Testament</a></div>
@@ -1088,14 +1092,13 @@ body, button, input, select, textarea,
       </div>
 
       <!-- Book of Mormon -->
-      <div class="scripture-card" data-vol="bom" onclick="window.location.href='bom/bom.html#home'">
-        <div class="card-cover bom">
+      <div class="scripture-card" data-vol="bom">
+        <a class="card-cover bom" href="bom/bom.html#home" aria-label="The Book of Mormon">
           <div class="rule-top"></div>
           <div class="card-cover-hebrew">ספר<br>מורמון</div>
           <div class="rule-bottom"></div>
           <div class="card-cover-title">The<br>Book of<br>Mormon</div>
-          <div class="rule-bottom"></div>
-        </div>
+          <div class="rule-bottom"></div></a>
         <div class="card-label">
           <div class="card-label-he">ספר מורמון</div>
           <div class="card-label-en"><a class="card-link" href="bom/bom.html">The Book of Mormon</a></div>
@@ -1103,14 +1106,13 @@ body, button, input, select, textarea,
       </div>
 
       <!-- Doctrine and Covenants -->
-      <div class="scripture-card" data-vol="dc" onclick="window.location.href='dc.html'">
-        <div class="card-cover dc">
+      <div class="scripture-card" data-vol="dc">
+        <a class="card-cover dc" href="dc.html" aria-label="Doctrine and Covenants">
           <div class="rule-top"></div>
           <div class="card-cover-hebrew">הלקח<br>והבריתות</div>
           <div class="rule-bottom"></div>
           <div class="card-cover-title">Doctrine<br>and<br>Covenants</div>
-          <div class="rule-bottom"></div>
-        </div>
+          <div class="rule-bottom"></div></a>
         <div class="card-label">
           <div class="card-label-he">הלקח והבריתות</div>
           <div class="card-label-en"><a class="card-link" href="dc.html">Doctrine and Covenants</a></div>
@@ -1118,14 +1120,13 @@ body, button, input, select, textarea,
       </div>
 
       <!-- Pearl of Great Price -->
-      <div class="scripture-card" data-vol="pgp" onclick="window.location.href='pgp.html'">
-        <div class="card-cover pgp">
+      <div class="scripture-card" data-vol="pgp">
+        <a class="card-cover pgp" href="pgp.html" aria-label="Pearl of Great Price">
           <div class="rule-top"></div>
           <div class="card-cover-hebrew">פנינת<br>המחיר הגדול</div>
           <div class="rule-bottom"></div>
           <div class="card-cover-title">Pearl<br>of Great<br>Price</div>
-          <div class="rule-bottom"></div>
-        </div>
+          <div class="rule-bottom"></div></a>
         <div class="card-label">
           <div class="card-label-he">פנינת המחיר הגדול</div>
           <div class="card-label-en"><a class="card-link" href="pgp.html">Pearl of Great Price</a></div>
@@ -1134,14 +1135,13 @@ body, button, input, select, textarea,
 
 
       <!-- Joseph Smith Translation -->
-      <div class="scripture-card" data-vol="jst" onclick="window.location.href='jst.html'">
-        <div class="card-cover jst">
+      <div class="scripture-card" data-vol="jst">
+        <a class="card-cover jst" href="jst.html" aria-label="Joseph Smith Translation">
           <div class="rule-top"></div>
           <div class="card-cover-hebrew">תרגום<br>ג׳וזף סמית</div>
           <div class="rule-bottom"></div>
           <div class="card-cover-title">Joseph<br>Smith<br>Translation</div>
-          <div class="rule-bottom"></div>
-        </div>
+          <div class="rule-bottom"></div></a>
         <div class="card-label">
           <div class="card-label-he">תרגום ג׳וזף סמית</div>
           <div class="card-label-en"><a class="card-link" href="jst.html">Joseph Smith Translation</a></div>
