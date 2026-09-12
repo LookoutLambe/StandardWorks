@@ -970,6 +970,17 @@
     'וְעִוְרוֹן': 'עִוֵּר', 'וּלְעִוְרוֹן': 'עִוֵּר', 'עִוְרוֹנָם': 'עִוֵּר', 'עִוְרוֹן': 'עִוֵּר', 'בְּעִוְרוֹן': 'עִוֵּר',   // blindness is עִוֵּר, not עוּר "awake"
     'וּלְעַוֵּר': 'עִוֵּר', 'לְעַוְּרוֹ': 'עִוֵּר', 'וְלַעֲוֵר': 'עִוֵּר', 'עִוְרֵיהֶם': 'עִוֵּר', 'הַמְעַוְּרוֹת': 'עִוֵּר',
     'בְּגַרְגִּיר': 'גרגיר',   // "with a particle of" (Alma 32:28) was its own one-word family
+    // THE 3 NEPHI 11 CARD AUDIT (2026-09-12):
+    'אֶת־כַּפָּרָתוֹ': 'כפר', 'כַּפָּרָתוֹ': 'כפר',       // "his atonement" peeled to פַּר "bullock"
+    'וּבְצִדּוֹ': 'H6654', 'לְצִדּוֹ': 'H6654', 'שֶׁלְּצִדּוֹ': 'H6654',   // the rest of the "side" spellings (צוּד "hunt")
+    'הוֹשַׁנָּא': 'H3467',                                 // Hosanna is הוֹשַׁע נָא, not שָׂנֵא "hate"
+    'רָצִיתִי': 'רצה', 'וְרָצִיתִי': 'רצה',                  // "I am well pleased" — רָצָה, not רָצַץ "bruise"
+    'בְּעׇלְתִי': 'H5927',                                 // "when I am ascended" — עָלָה, not בַּעַל
+    'תַטְבִּילוּ': 'טבל', 'תַּטְבִּילוּ': 'טבל', 'וַיַּטְבִּילוּ': 'טבל', 'וַיַּטְבִּילוּם': 'טבל', 'אַטְבִּיל': 'טבל',   // hiphil "baptize" forms with no card
+    'יָעִיד': 'העיד', 'הַמְּעִידִים': 'העיד', 'הַמְעִידִים': 'העיד', 'הַמְּעִידָה': 'העיד', 'בְּהָעִידְכֶם': 'העיד',   // "bear record" strays (מוֹעֵד, עֵדָה, a one-word family)
+    'יִדּוֹן': 'H1777',                                    // "shall be damned" (niphal of דִּין), not Jadon
+    'בָנוּי': 'H1129',                                     // "built" (passive participle), not Binnui
+    'קוֹבֵעַ': 'קבע',                                     // "establishes", not קוֹבַע "helmet"
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1114,6 +1125,9 @@
                        skin. The verb keeps the bare key — its BoM forms reach it through
                        the lexicon, not the attested table — and the nouns key by number. */
                     'H5785': 'H5785', 'H6174': 'ערם', 'H6172': 'ערם',
+                    /* שְׁאוֹל is not שָׁאַל "ask" (Strong's derivation), and שֵׂעָר "hair" /
+                       שָׂעַר "bristle, storm" are not שַׁעַר "gate" (3 Nephi 11 audit). */
+                    'H7585': 'H7585', 'H8181': 'שׂער', 'H8185': 'שׂער', 'H8175': 'שׂער', 'H8178': 'שׂער',
                     /* Two roots under one dotless BDB key, both alive in this corpus
                        (found by the family audit of 2026-09-12; the קרא/קרה split
                        was the first). The minority root keeps its own family: a
