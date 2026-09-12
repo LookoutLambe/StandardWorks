@@ -928,6 +928,27 @@
     // nikkud-conflation sweep pins:
     'גַּם': 'גם', 'גַם': 'גם', 'וְגַם': 'גם', 'הֲגַם': 'גם', 'שֶׁגַּם': 'גם',
     'בַּעֲבוּר': 'בעבור', 'וּבַעֲבוּר': 'בעבור', 'בַעֲבוּר': 'בעבור',
+    // THE ALMA 2 CARD AUDIT (2026-09-12): every scorecard in the chapter read
+    // against its Hebrew. Forms the attested table does not carry fell to the
+    // morphology stage and were peeled to a look-alike root:
+    'כֹּחוֹתֵיהֶם': 'H3581', 'מִכֹּחוֹתֵיהֶם': 'H3581',   // "their forces" read as חוה "declare" (the כ taken as a preposition)
+    'וַיּוּמַת': 'H4191',                                 // hophal "was put to death", not יוֹם "day"
+    'הֵסִית': 'סות',                                     // hiphil "stirred up" (7 tokens), not הָסָה "hush"; bare key — H5496 walks to שׁית
+    'בְּצִדּוֹ': 'H6654', 'בְצִדּוֹ': 'H6654', 'צִדּוֹ': 'H6654',                // "on his side" — צַד, not צוּד "hunt"
+    'לְהִשָּׁחֵת': 'H7843', 'מֵהִשָּׁחֵת': 'H7843', 'הֻשְׁחַת': 'H7843',   // niphal/hophal of שָׁחַת "destroy", not שָׁחַח "bow down"
+    'לְהוֹבִילָם': 'H2986',                               // hiphil of יָבַל "lead" — was a one-word family with no card
+    // the suffixed plurals of אִישׁ (אַנְשֵׁי- + suffix) peeled to אנשׁ "mortal";
+    // OSHB tags אֲנָשִׁים / אַנְשֵׁי themselves H0376, so the suffixed forms follow
+    'אַנְשֵׁיהֶם': 'H0376', 'וּלְאַנְשֵׁי': 'H0376', 'מֵאֲנָשָׁיו': 'H0376', 'מֵאַנְשֵׁינוּ': 'H0376', 'מֵאֲנָשִׁים': 'H0376',
+    'וַאֲנָשָׁו': 'H0376', 'וְלַאֲנָשָׁיו': 'H0376', 'מֵאַנְשֵׁיהֶם': 'H0376', 'מֵאֲנָשֵׁינוּ': 'H0376', 'בַּאֲנָשֵׁינוּ': 'H0376',
+    'וַאֲנָשַׁי': 'H0376', 'וּמֵאַנְשֵׁיכֶם': 'H0376', 'מֵאֲנָשֶׁיךָ': 'H0376', 'אֲנָשֵׁי': 'H0376', 'לַאֲנָשֵׁי': 'H0376', 'מֵאֲנָשַׁי': 'H0376',
+    // names: Nehor (נִחוֹר, hiriq) sat with Abraham's brother נָחוֹר under H5152 —
+    // it joins the family its other spelling נְהוֹר already has; Zoram's defective
+    // spelling זֹרָם sat in זֶרֶם "storm", and so did the spy Zeram, whose
+    // pointing (patach) is its own family, the שֵׁת precedent
+    'נִחוֹר': 'נהור', 'זֹרָם': 'זורם', 'זֶרַם': 'זֶרַם',
+    'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
+    'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
     'בָּהֶם': 'הם', 'בָהֶם': 'הם',
     // The grammaticalized-word ruling (2026-08-30): a fused particle whose
@@ -1056,6 +1077,15 @@
                        לִקְרָאתָם (Alma 2:12, "to meet them") read "to call" (2026-09-12).
                        They keep the family BDB gives them: קרה. */
                     'H7122': 'קרה', 'H7125': 'קרה',
+                    /* עָשַׁר "be rich" (shin) is not עֶשֶׂר "ten" (sin): the card on עָשָׂר
+                       (Alma 2:19, "twelve thousand") listed riches. And שָׁפָה "sweep
+                       bare" / יָשְׁפֵה "jasper" are not שָׂפָה "lip, bank" (2026-09-12). */
+                    'H6238': 'עשׁר', 'H6239': 'עשׁר', 'H6223': 'עשׁר',
+                    'H8192': 'שׁפה', 'H8205': 'שׁפה', 'H3471': 'ישׁפה',
+                    /* לָחַם "fight" (H3898) is BDB's own homonym of לֶחֶם "bread": one dotless key
+                       put a loaf on the card for "and they fought" (Alma 2:17). The verb keys by
+                       its number, the way ענה and אשׁר already do; מִלְחָמָה stays its own family. */
+                    'H3898': 'H3898',
                     /* Two roots under one dotless BDB key, both alive in this corpus
                        (found by the family audit of 2026-09-12; the קרא/קרה split
                        was the first). The minority root keeps its own family: a
@@ -1262,7 +1292,24 @@
       'קְרָאֻנִי':   { name: 'H7122', word: 'H7121', en: /\bmet\b|befall|befell|come upon|came upon|chance|happen|toward|against|encounter/i },
       'תִקְרֶאנָה':  { name: 'H7122', word: 'H7121', en: /\bmet\b|befall|befell|come upon|came upon|chance|happen|toward|against|encounter/i },
       'תִּקְרֶאנָה':  { name: 'H7122', word: 'H7121', en: /\bmet\b|befall|befell|come upon|came upon|chance|happen|toward|against|encounter/i },
-      'וַתִּקְרֶאנָה': { name: 'H7122', word: 'H7121', en: /\bmet\b|befall|befell|come upon|came upon|chance|happen|toward|against|encounter/i }
+      'וַתִּקְרֶאנָה': { name: 'H7122', word: 'H7121', en: /\bmet\b|befall|befell|come upon|came upon|chance|happen|toward|against|encounter/i },
+      /* גִּבְעָה the hill (H1389) and Gibeah the town (H1390) are one spelling; OSHB
+         hands the articled and prefixed forms to the town, so "upon the hill"
+         (Alma 2:17) showed Gibeah. The gloss decides (2026-09-12). */
+      'הַגִּבְעָה':   { name: 'H1390', word: 'H1389', en: /Gibeah|Geba\b/ },
+      'בַּגִּבְעָה':   { name: 'H1390', word: 'H1389', en: /Gibeah|Geba\b/ },
+      'לַגִּבְעָה':   { name: 'H1390', word: 'H1389', en: /Gibeah|Geba\b/ },
+      'הַגִּבְעָתָה':  { name: 'H1390', word: 'H1389', en: /Gibeah|Geba\b/ },
+      'גִּבְעָתָה':   { name: 'H1390', word: 'H1389', en: /Gibeah|Geba\b/ },
+      'גִּבְעַת':    { name: 'H1390', word: 'H1389', en: /Gibeah|Geba\b/ },
+      'בְּגִבְעַת':   { name: 'H1390', word: 'H1389', en: /Gibeah|Geba\b/ },
+      'מִגִּבְעַת':   { name: 'H1390', word: 'H1389', en: /Gibeah|Geba\b/ },
+      'לְגִבְעַת':   { name: 'H1390', word: 'H1389', en: /Gibeah|Geba\b/ },
+      'גִּבְעָה':    { name: 'H1390', word: 'H1389', en: /Gibeah|Geba\b/ },
+      /* Not a name: OSHB tags the infinitive לִמְשֹׁל (Gen 1:18) H4914 מְשׁוֹל "byword"
+         while every other form of the verb is H4910 "rule"; the card on
+         "the reign of the judges" (Alma 2:1) carried the byword number. */
+      'לִמְשֹׁל':    { name: 'H4914', word: 'H4910', en: /byword|satire|proverb/i }
     };
     var _HG_BLIND = /[ּֽֿ]/g;
     var _HG_INDEX = null;

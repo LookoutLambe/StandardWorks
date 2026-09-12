@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '102';   // bump when the generated data files change
+  var RSC_V = '103';   // bump when the generated data files change
   // Transliterated terms — an exception table in the tool, like the received
   // spellings in transliterate(): keyed by bare consonants, so every pointing
   // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.
@@ -435,7 +435,11 @@
       // BDB's vocalised spelling of it where we have one: אבה -> אָבָה, which
       // the site's own transliterate() renders the same way it does the text.
       var _pf = (window._bdbRootForms || {})[key];
-      if (_pf) heb = _pf;
+      /* Only a POINTED form is a face. BDB's table holds some keys unpointed
+         (אישׁ, אשׁה, נפשׁ — the shin dot and nothing else), and an unpointed face
+         transliterates to consonant soup ("yash", "shah"); left as the bare
+         key, the lookups below find the real lemma (2026-09-12). */
+      if (_pf && /[\u05B0-\u05BC\u05C7]/.test(_pf)) heb = _pf;
       else if (window.RootEngine && window.RootEngine.toSofit) heb = window.RootEngine.toSofit(key);
       var cur2 = (window._rootGlossaryData || {})[key];
       if (cur2 && cur2.meaning) {
@@ -461,10 +465,19 @@
         // already supplied a meaning — gated on meaning alone, a family with
         // a curated meaning skipped straight to the most-frequent form and
         // an inflected surface served as the "root" (וְתוֹעֲבוֹתֵיהֶם for תעב).
+        /* ...but never for a NAME family. The consonant lookup drops matres
+           lectionis, and a name this translation coined has no lemma to find:
+           Sidon (סידון) came back as סָדִין "linen sheet", Minon as מָנוֹן, Amnihu
+           as אֱמוּנָה. A family whose own glosses are a name keeps its own
+           pointed form (the branch below) and the name as its meaning (2026-09-12). */
+        var cn0 = _corpusName(key);
+        if (cn0) { if (!meaning) meaning = cn0; }
+        else {
         var sNum = _strongsForCons(key);
         if (sNum) {
           if (!meaning) meaning = window._strongsRoots[sNum].g || _strongsGloss(sNum);
           if (heb === key && window._strongsRoots[sNum].w) heb = window._strongsRoots[sNum].w;
+        }
         }
       }
       if (heb === key) {
