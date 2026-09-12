@@ -288,6 +288,21 @@ const isTranslitTerm = surface => translitTermParts(surface).parts.length > 0;
     if (process.env.RELEASE_LOG) fs.writeFileSync(process.env.RELEASE_LOG, out.join('\n') + '\n');
   }
 
+  // THE VALUE IS THE NAME'S ID (2026-09-12). The engine peels a proclitic off a
+  // table form only when the shorter form is the SAME name — וסם and סם are both
+  // Sam — so every key carries a small integer per English name word instead of
+  // a bare 1. Peeled letter by letter and checked only for membership, וְשִׁמְרֹן
+  // reached מרן and שְׂמַחְנָה reached חנה, Hannah.
+  {
+    const ids = Object.create(null); let next = 1;
+    for (const k of Object.keys(names)) {
+      const t = nameTally[k]; let W = '', best = 0;
+      if (t && t.words) for (const w in t.words) if (t.words[w] > best) { best = t.words[w]; W = w; }
+      W = W || k;
+      names[k] = ids[W] || (ids[W] = next++);
+    }
+    console.log('distinct name words behind the table: %d', next - 1);
+  }
   win._rootProperNames = names;
   console.log('proper-name forms held back from peeling: %d', Object.keys(names).length);
   engineCtx.window = win;
@@ -321,14 +336,16 @@ function record(volIdx, chapId, verseNum, h, g) {
   // listing its own form — רַב־עֳנִי counts under רַב "much" AND עֳנִי
   // "affliction". Resolving the token to a single root discarded the other word,
   // and 13% of the corpus is maqqef-joined.
-  let pairs = words.get(h);
+  // cached by surface AND gloss: a homograph form (חֶשְׁבּוֹן Heshbon/account) keys by its gloss
+  const wkey = h + '\u0001' + g;
+  let pairs = words.get(wkey);
   // Transliterated terms (root_scorecard.js's exception table, parsed above)
   // are not Hebrew words and get no root bucket — filing אַהְמָן under המן
   // would put Ahman beside Haman. A term part of a maqqef pair is dropped and
   // the Hebrew part keeps its count, matching RootEngine.getRoots on the page.
   if (pairs === undefined) {
-    pairs = translitTermParts(h).all ? [] : (getRoots(h) || []).filter(pr => !isTranslitTerm(pr.part));
-    words.set(h, pairs);
+    pairs = translitTermParts(h).all ? [] : (getRoots(h, g) || []).filter(pr => !isTranslitTerm(pr.part));
+    words.set(wkey, pairs);
   }
   const gNorm = g.replace(/-/g, ' ').trim();
   for (const pr of pairs) {

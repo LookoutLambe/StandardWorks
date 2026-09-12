@@ -109,6 +109,8 @@ function displayedMeaning(key) {
   let cur = gd[key];
   if (cur && cur.meaning) return cur.meaning;
   const k = key.replace(/[ךםןףץ]/g, c => FIN[c]);
+  // a consonantal key in the name table shows its corpus name (mirrors rootDisplay, 2026-09-12)
+  if (win._rootProperNames && win._rootProperNames[k]) { const cn = corpusName(key); if (cn) return cn; }
   let sNum = consIdx[k];
   if (!sNum) {
     const d = k.charAt(0) + k.slice(1).replace(/[וי]/g, '');

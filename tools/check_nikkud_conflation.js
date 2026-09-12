@@ -98,8 +98,9 @@ const wordCache = new Map();
 function record(h, g) {
   h = h.replace(/[׃\[\]]/g, '');
   if (!h.trim() || !g.trim()) return;
-  let pairs = wordCache.get(h);
-  if (pairs === undefined) { pairs = getRoots(h) || []; wordCache.set(h, pairs); }
+  const wkey = h + '\u0001' + g;   // a homograph form keys by its gloss, as the builder does
+  let pairs = wordCache.get(wkey);
+  if (pairs === undefined) { pairs = getRoots(h, g) || []; wordCache.set(wkey, pairs); }
   const gNorm = g.replace(/-/g, ' ').trim();
   for (const pr of pairs) {
     if (!pr.root) continue;

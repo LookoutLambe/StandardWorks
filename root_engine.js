@@ -620,6 +620,7 @@
     // filed under נסס "banner" (the scorecard bug pass, 2026-09-12)
     'כְנֵסִיּוֹת': 'כנס', 'כְּנֶסִיַּת': 'כנס',
     'תְּקוּפוֹת': 'תקופה',   // the plural falls to the morphology stage, which keyed it under קוף "ape"
+    'אֶלָּא': 'אֶלָּא',       // the rabbinic "but rather" — its lexicon match is H0414 Ela, a name
     // HOLAM HASER FOR VAV (U+05BA): the OT spells מִצְוֺת with it, the lexicon
     // with the plain holam, and the bare consonants מצות are ambiguous with
     // unleavened bread — so the form fell to the morphology stage and צות "blaze"
@@ -1153,14 +1154,47 @@
                     'H1000': 'ביצה',    // eggs — BDB filed them with בּוּץ fine linen
                     'H0801': 'אִשֶּׁה',  // the offering made by fire — not אִשָּׁה "woman" (identical consonants)
                     'H5980': 'H5980',   // לְעֻמַּת "over against, beside" — BDB folds it into עַם "people"
-                    // THE ATTESTED TABLE IS KEYED BY FORM, NOT BY VERSE: where one spelling is
-                    // both a name and a common word, its one lemma decides for every
-                    // occurrence. These three name-lemmas win the form while the common
-                    // word carries most of the tokens, so the name joins the word's family
-                    // and the meaning line names both (2026-09-12):
-                    'H3529': 'כבר',     // the river Chebar (8) — כְּבָר "already" (49)
-                    'H5176': 'נחש',     // Nahash the Ammonite (8) — נָחָשׁ "serpent" (14 + 103)
-                    'H4809': 'ריב' };   // Meribah (6) — מְרִיבָה "strife, contention" (80)
+                    'H7497': 'רפאים',   // the Rephaim, the shades — not רפא "heal"
+                    'H4296': 'מִטָּה',   // bed — not מַטֶּה "tribe, staff" (identical consonants)
+                    'H3884': 'לוּלֵי',   // if-not, except — not לוֹ "to him"
+                    'H3841': 'לִבְנָה',   // Libnah the city — not לָבָן "white"
+                    /* ONE NAME, TWO NUMBERS. Strong's gives the Aramaic chapters of
+                       Daniel and Ezra their own entry for the same person or city;
+                       the card showed Darius, Shadrach, Meshach, Belteshazzar,
+                       Belshazzar, Cyrus and Jerusalem twice each (2026-09-12). */
+                    'H1868': 'H1867', 'H7715': 'H7714', 'H4336': 'H4335', 'H1096': 'H1095',
+                    'H1113': 'H1112', 'H3567': 'H3566', 'H3390': 'H3389' };
+
+  // 2f. HOMOGRAPHS — one spelling, a name AND a common word, identical bytes.
+  // The attested table and the lexicon are keyed by FORM, so on their own
+  // they hand every occurrence to one lemma (Chebar took "already", Nahash
+  // took "the serpent", Heshbon took "account"). But the token's own English
+  // gloss knows which it is, and both the concordance builder and the tapped
+  // card have that gloss: getRoots(hw, gloss) asks here first. A gloss that
+  // names the person or place keys the name (its own family, per the ruling);
+  // any other gloss keys the word. Without a gloss the pipeline's own answer
+  // stands. Keys are dagesh/meteg-blind so the article's dagesh forte
+  // (הַנָּחָשׁ) still matches. (2026-09-12)
+    var HOMOGRAPHS = {
+      'חֶשְׁבּוֹן': { name: 'H2809', word: 'H2808', en: /Heshbon/ },   // Heshbon (37) · account, reckoning (36)
+      'הֶבֶל':    { name: 'H1893', word: 'H1892', en: /Abel/ },      // Abel (29) · vanity, breath (78)
+      'הָבֶל':    { name: 'H1893', word: 'H1892', en: /Abel/ },
+      'כַּרְמִי':   { name: 'H3756', word: 'H3754', en: /Carmi/ },     // Carmi (9) · my vineyard (66)
+      'כְּבָר':    { name: 'H3529', word: 'H3528', en: /Chebar/ },    // the river Chebar (8) · already (86)
+      'כְבָר':    { name: 'H3529', word: 'H3528', en: /Chebar/ },
+      'נָחָשׁ':    { name: 'H5176', word: 'H5175', en: /Nahash/ },    // Nahash (9) · serpent (60)
+      'מְרִיבָה':  { name: 'H4809', word: 'H4808', en: /Meribah/ },   // Meribah (9) · strife, contention (47)
+      'מִשְׂרְפוֹת': { name: 'H4956', word: 'H4955', en: /Misrephoth/ }, // Misrephoth-maim (1) · burnings (2)
+      'מְנַחֵם':   { name: 'H4505', word: 'H5162', en: /Menahem|Manaen/ } // Menahem, Manaen (2) · comforter, who comforteth (5)
+    };
+    var _HG_BLIND = /[ּֽֿ]/g;
+    var _HG_INDEX = null;
+    function _homograph(piece) {
+      if (!_HG_INDEX) { _HG_INDEX = {}; for (var k in HOMOGRAPHS) _HG_INDEX[k.replace(_HG_BLIND, '')] = HOMOGRAPHS[k]; }
+      var L = stripLayers(piece);
+      for (var i = 0; i < L.length; i++) { var e = _HG_INDEX[L[i].replace(_HG_BLIND, '')]; if (e) return e; }
+      return null;
+    }
 
   // 2e. Numerals keep their own entries — Strong's pointers chain them.
     var NUMERAL = {H0259:1,H8147:1,H7969:1,H0702:1,H2568:1,H8337:1,H7651:1,
@@ -1493,11 +1527,75 @@
      (סַם -> x:"çam", g:"aroma"), so the table itself tells us which it is.
      Exact pointed lookup only — no peeling, no fuzz. Fuzzy matching is what
      filed every נֶפִי under H5297 נֹף, Memphis. */
+  /* IS THE GLOSS A NAME? The concordance builder's own test (nameWordOf in
+     tools/build_root_concordance.js — keep the two in step): a leading
+     particle or two, then ONE capitalised word that is not a sentence opener
+     or a pronoun. "and Omer" is a name, "and Hell" is (the KJV capitalises
+     it), "the oaths" and "who comforteth" are not. */
+  var _GLOSS_LEAD = { the: 1, and: 1, to: 1, unto: 1, of: 1, from: 1, 'in': 1, into: 1, upon: 1, on: 1,
+    'for': 1, 'with': 1, by: 1, at: 1, even: 1, yea: 1, o: 1, a: 1, an: 1, before: 1, against: 1, over: 1, after: 1 };
+  var _GLOSS_COMMON = { The: 1, And: 1, God: 1, Lord: 1, But: 1, For: 1, Behold: 1, Then: 1, Now: 1, Yea: 1,
+    That: 1, This: 1, All: 1, When: 1, Who: 1, What: 1, Amen: 1, If: 1, So: 1, It: 1, He: 1, She: 1, They: 1, We: 1,
+    In: 1, Of: 1, To: 1, A: 1, An: 1, O: 1, Be: 1, Is: 1, Was: 1, Are: 1, Not: 1, No: 1, Yes: 1, My: 1, His: 1, Her: 1,
+    Their: 1, Our: 1, Your: 1, Its: 1, Him: 1, Them: 1, Me: 1, Thou: 1, Thee: 1, Thy: 1, Ye: 1, I: 1 };
+  function _isNameGloss(g) {
+    var parts = String(g || '').replace(/[\[\]()]/g, '').trim().replace(/[.,;:!?]+$/, '').split(/[\s\u2014-]+/).filter(Boolean);
+    var i = 0;
+    while (i < parts.length && _GLOSS_LEAD[parts[i].toLowerCase()]) i++;
+    if (parts.length - i !== 1) return false;
+    var w = parts[i];
+    return /^[A-Z][A-Za-z\u2019'-]+$/.test(w) && !_GLOSS_COMMON[w];
+  }
+  function _undotSkel(w) { return stripNikkud(w).replace(/[\u05C1\u05C2]/g, ''); }
+  /* THE BLIND KEY: dagesh, meteg, rafe and the combining grapheme joiner
+     (U+034F) hidden, then NFC — once the joiner that held them apart is gone,
+     two vowels under one letter fall into canonical order, so the corpus's
+     יְרוּשָׁלַ͏ִם and the lexicon's יְרוּשָׁלִַם become one key. Null where two
+     numbers share a blind key: the pointing is then the only separator. */
+  function _blindKey(w) { return String(w).replace(/[\u05BC\u05BD\u05BF\u034F]/g, '').normalize('NFC'); }
+  var _bli = null;
+  function _blindIndex() {
+    if (_bli) return _bli;
+    var LK = _lookup(); if (!LK) return {};
+    _bli = {};
+    for (var k in LK) {
+      var b = _blindKey(k);
+      if (_bli[b] === undefined) _bli[b] = LK[k];
+      else if (_bli[b] !== LK[k]) _bli[b] = null;
+    }
+    return _bli;
+  }
+  /* The lexeme of a form through its pointed layers — exact first, then
+     blind — shallowest first, with the letter count of the layer that hit
+     (the release floor in stageNames). */
+  function _layerLexeme(w) {
+    var LK = _lookup(), SR = _roots();
+    if (!LK || !SR) return null;
+    var BI = _blindIndex(), layers = stripLayers(w);
+    for (var i = 0; i < layers.length; i++) {
+      var L = layers[i], num = LK[L] || BI[_blindKey(L)];
+      if (!num || !SR[num]) continue;
+      var info = _lexemeInfo(num);
+      if (!info) continue;
+      info.len = stripNikkud(L).replace(/[^א-ת]/g, '').length;
+      /* The relative שֶׁ is a layer the lexicon needs (D&C Hebrew), but a NAME
+         beginning with shin is far commoner than a שֶׁ-clause in this corpus:
+         Shemlon peeled to מְלוֹן "lodging place" and left for לון. A layer
+         reached across a שֶׁ never releases a table form (2026-09-12). */
+      info.viaShe = i > 0 && /^שֶ/.test(layers[i - 1]) && layers[i - 1].slice(-L.length) === L;
+      return info;
+    }
+    return null;
+  }
   function _pointedLexeme(w) {
     var LK = _lookup(), SR = _roots();
     if (!LK || !SR) return null;
     var num = LK[w];
     if (!num || !SR[num]) return null;
+    return _lexemeInfo(num);
+  }
+  function _lexemeInfo(num) {
+    var SR = _roots();
     var e = SR[num];
     /* The GLOSS decides, not the transliteration. Strong's transliterations
        open with modifier letters — ʼÛwrîyâh, ʻêden, ṭâbᵉʼêl — so a
@@ -1506,7 +1604,12 @@
        capitalises a proper noun and lowercases a common one, which is the
        distinction we actually need. */
     var g = String(e.g || '').replace(/^[^A-Za-z]+/, '');
-    if (!g) return null;
+    /* An EMPTY gloss is Strong's Aramaic duplicate of a Hebrew entry (H1868
+       Darius, H3390 Jerusalem, H7715 Shadrach — all "" with r: the Hebrew
+       number). Read as "no lexeme", דָרְיָוֶשׁ minted a consonantal card beside
+       H1867; the transliteration's first letter still tells the name
+       (2026-09-12). */
+    if (!g) return String(e.x || '').replace(/^[^A-Za-z\u00C0-\u024F\u1E00-\u1EFF]+/, '') ? { num: num, isName: _isNameEntry(num) } : null;
     var c = g.charAt(0);
     return { num: num, isName: c === c.toUpperCase() && c !== c.toLowerCase() };
   }
@@ -1517,7 +1620,13 @@
     var order = _contentPieces(ctx.pieces);
     for (var i = 0; i < order.length; i++) {
       var piece = order[i];
-      var raw = stripNikkud(piece);
+      /* UNDOTTED, like the table. stripNikkud keeps the shin/sin dot, but the
+         name table is minted from the bare skeleton (0 of its 6,174 keys carry
+         one), so every name written with a ש missed it: Jershon (25 uses) fell
+         to the morphology as ירש "inherit", Shemlon lodged under לון, and
+         Shiblon and Mosiah stayed on their cards only because a hand pin held
+         them there (2026-09-12). 1,160 of the table's keys contain a shin. */
+      var raw = _undotSkel(piece);
       if (!tbl[normFinals(raw)]) continue;
       /* THE NAME TABLE IS CONSONANTAL — 0 of its 6,169 keys carry a vowel —
          so a homograph matched it exactly as the name did, and the pointing
@@ -1543,17 +1652,48 @@
          two cards the same way. When a pinned family and its Strong's number
          disagree, the disagreement is the bug (the Elohim lesson, 2026-09-11). */
       if (lex && lex.isName) return familyOf(lex.num); // a named lexeme: key by its family
-      /* Peel proclitics so every spelling of one name lands on one card.
-         The old guard (best.length > 3 and shorter.length >= 3) meant a SHORT
-         name could never be de-prefixed: Sam scattered across three keys —
-         סם, וסם and ובסם — so his card showed a fraction of his ten mentions.
-         Two letters is the floor now, and the peel is still gated on the
-         shorter form being itself a known name, so it cannot eat a word. */
-      var best = raw;
-      for (var k = 1; k < raw.length - 1 && k <= 3; k++) {
-        if (!_PROCLITIC.test(raw.slice(k - 1))) break;   // only peel actual proclitics
-        var cand = raw.slice(k);
-        if (cand.length >= 2 && tbl[normFinals(cand)]) { best = cand; break; }
+      /* NO EXACT LEXEME. The table is keyed by the WHOLE form's skeleton, so a
+         spelling the lookup does not carry letter-for-letter got this far and
+         minted a consonantal card beside the name's own family: מִמֹּשֶׁה,
+         וְהַיִּשְׁמְעֵאלִים, and the corpus's יְרוּשָׁלַ͏ִם, whose grapheme joiner
+         holds its two vowels in the other order (231 tokens). And a common
+         word sharing a name's skeleton stayed a name: וּשְׁאוֹל "and Hell"
+         (11 uses) beside וְשָׁאוּל "and Saul". The builder's own release rule
+         decides here too — the pointed proclitic layers, dagesh/meteg/joiner-
+         blind. A layer that is a NAME keys its family; a layer that is a
+         common word of three or more letters releases the form. Two letters
+         never release: לָמָן peels to מָן "manna", and Laman is a name
+         (2026-09-12). */
+      var lay = _layerLexeme(piece);
+      if (lay && lay.isName && !lay.viaShe) return familyOf(lay.num);
+      /* ...and only when the GLOSS agrees that this token is not the name.
+         עֹמֶר is a measure in the lexicon and Omer a Jaredite king in this
+         corpus; "and Omer" keeps וְעֹמֶר with the king, "the oaths" releases
+         הַשָּׁבוּעוֹת from Pentecost. With no gloss in hand (a cold call) the
+         builder's decision stands and the form stays a name. */
+      if (lay && !lay.isName && lay.len >= 3 && !lay.viaShe && ctx.gloss != null && !_isNameGloss(ctx.gloss)) continue;
+      /* Peel proclitics so every spelling of one name lands on one card —
+         Sam was scattered across סם, וסם and ובסם. The peel is POINTED (the
+         lexicon's own layers, so a radical that happens to be a proclitic
+         letter is never cut) and it may only land on the SAME name: the
+         table's value is the name's id. Peeled letter by letter and checked
+         only for table membership, וְשִׁמְרֹן reached מרן and שְׂמַחְנָה reached
+         חנה, Hannah (2026-09-12). */
+      var rawKey = normFinals(raw), best = raw;
+      var layers = stripLayers(piece);
+      if (layers.length === 1 && !/[\u05B0-\u05BC\u05C7]/.test(piece)) {
+        /* An UNPOINTED form (the chapter headings' word lists) has no pointed
+           layer to peel; the letters stand in, gated on the same name still. */
+        for (var k = 1; k < raw.length - 1 && k <= 3; k++) {
+          if (!_PROCLITIC.test(raw.slice(k - 1))) break;
+          var uc = raw.slice(k);
+          if (uc.length >= 2 && tbl[normFinals(uc)] === tbl[rawKey]) { best = uc; break; }
+        }
+        return best;
+      }
+      for (var li = 1; li < layers.length; li++) {
+        var cand = _undotSkel(layers[li]);
+        if (cand.length >= 2 && tbl[normFinals(cand)] === tbl[rawKey]) { best = cand; break; }
       }
       return best;
     }
@@ -2272,17 +2412,18 @@
   function _unfold(r) {
     return (typeof r === 'string' && /[כמנפצ]$/.test(r) && /^[֐-׿]+$/.test(r)) ? toSofit(r) : r;
   }
-  function resolve(hw) {
+  function resolve(hw, gloss) {
     hw = String(hw || '').replace(/\*/g, '');
     var ctx = _context(hw);
+    ctx.gloss = gloss == null ? null : String(gloss);   // the name stage's release test reads it
     for (var i = 0; i < PIPELINE.length; i++) {
       var key = PIPELINE[i][1](ctx);
       if (key) return { key: _unfold(key), stage: PIPELINE[i][0] };
     }
     return { key: '', stage: '' };
   }
-  function getRoot(hw) { return resolve(hw).key; }
-  function explain(hw) { return resolve(hw); }
+  function getRoot(hw, gloss) { return resolve(hw, gloss).key; }
+  function explain(hw, gloss) { return resolve(hw, gloss); }
 
   // A maqqef joins two words; each is its own lexeme and each deserves its own
   // scorecard entry (רַב־עֳנִי is רַב AND עֳנִי; 13% of the corpus is
@@ -2293,24 +2434,38 @@
   function _isTT(s) {
     try { return !!(typeof window !== 'undefined' && window.RootScorecard && window.RootScorecard.isTranslitTerm && window.RootScorecard.isTranslitTerm(s)); } catch (e) { return false; }
   }
-  function getRoots(hw) {
+  // For the card: the Strong's number the GLOSS chose for a homograph piece, or
+  // '' when the piece is not one — so the chip and the parse line follow the
+  // gloss too, not the attested form's single lemma.
+  function homographNumber(part, gloss) {
+    if (!gloss) return '';
+    var hg = _homograph(_clean(part));
+    return hg ? (hg.en.test(String(gloss)) ? hg.name : hg.word) : '';
+  }
+  function _glossKey(part, gloss) {
+    if (!gloss) return '';
+    var hg = _homograph(part);
+    if (!hg) return '';
+    return _unfold(_keyOf(hg.en.test(String(gloss)) ? hg.name : hg.word)) || '';
+  }
+  function getRoots(hw, gloss) {
     var w = _clean(hw);
     var parts = _pieces(w);
     if (parts.length <= 1) {
       if (_isTT(w)) return [];
-      var r = getRoot(hw);
+      var r = _glossKey(w, gloss) || getRoot(hw, gloss);
       return r ? [{ part: w, root: r }] : [];
     }
     if (typeof window !== 'undefined' && window.RootScorecard && window.RootScorecard.translitTermParts && window.RootScorecard.translitTermParts(w).all) return [];
     var out = [], seen = {};
     for (var i = 0; i < parts.length; i++) {
       if (_isTT(parts[i])) continue;
-      var rp = getRoot(parts[i]);
+      var rp = _glossKey(parts[i], gloss) || getRoot(parts[i], gloss);
       if (!rp || seen[rp]) continue;
       seen[rp] = 1;
       out.push({ part: parts[i], root: rp });
     }
-    if (!out.length) { var r2 = getRoot(hw); if (r2) out.push({ part: w, root: r2 }); }
+    if (!out.length) { var r2 = getRoot(hw, gloss); if (r2) out.push({ part: w, root: r2 }); }
     return out;
   }
 
@@ -2389,7 +2544,7 @@
   var rootMap = SURFACE_MAP;   // the pages alias RootEngine.rootMap by this name
   window.RootEngine = {
     senseClass: senseClass,
-    getRoot: getRoot, getRoots: getRoots, explain: explain, resolve: resolve,
+    getRoot: getRoot, getRoots: getRoots, explain: explain, resolve: resolve, homographNumber: homographNumber,
     stripPrefixes: stripPrefixes, stripLayers: stripLayers, stripNikkud: stripNikkud,
     toSofit: toSofit, normFinals: normFinals, rootMap: rootMap,
     pointedKey: pointedKey, parse: parse, attestedEntry: attestedEntry,

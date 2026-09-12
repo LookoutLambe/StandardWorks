@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '97';   // bump when the generated data files change
+  var RSC_V = '98';   // bump when the generated data files change
   // Transliterated terms — an exception table in the tool, like the received
   // spellings in transliterate(): keyed by bare consonants, so every pointing
   // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.
@@ -157,10 +157,10 @@
       return;
     }
     var need = [];
-    if (!window._strongsLookup)   need.push('strongs_lookup.js?v=4');
+    if (!window._strongsLookup)   need.push('strongs_lookup.js?v=5');
     if (!window._strongsRoots)    need.push('strongs_roots.js?v=2');
     if (!window._bdbRoots)        need.push('bdb_roots.js?v=4');
-    if (!window._rootProperNames) need.push('root_names.js?v=17');
+    if (!window._rootProperNames) need.push('root_names.js?v=18');
     if (!window._shoroshimRoots)  need.push('shoroshim_roots.js?v=3');
     if (!window._rootGlossaryData) need.push('bom/roots_glossary.js?v=' + RSC_V);
     if (!window._attestedForms)   need.push('attested_forms.js?v=' + RSC_V);   // the Masoretic Text's own parse of every attested form
@@ -240,12 +240,15 @@
 
   // A maqqef joins two words and each is its own lexeme, so each gets its own
   // scorecard block: רַב־עֳנִי shows רַב "much" and עֳנִי "affliction".
-  function lookupAll(surface) {
+  function lookupAll(surface, glossText) {
     if (loadState !== 2) return [];
     var s = cleanSurface(surface);
     if (!s) return [];
+    /* The gloss goes with the surface: a homograph (חֶשְׁבּוֹן is Heshbon AND
+       "account") keys by what this token's English says it is — the same
+       answer the concordance builder gave it, so the card and its counts agree. */
     var parts = (window.RootEngine && window.RootEngine.getRoots)
-      ? window.RootEngine.getRoots(s) : [{ part: s, root: window.RootEngine.getRoot(s) }];
+      ? window.RootEngine.getRoots(s, glossText) : [{ part: s, root: window.RootEngine.getRoot(s) }];
     var out = [];
     for (var i = 0; i < parts.length; i++) {
       var idx = keyIdx[parts[i].root];
@@ -436,6 +439,14 @@
       else if (window.RootEngine && window.RootEngine.toSofit) heb = window.RootEngine.toSofit(key);
       var cur2 = (window._rootGlossaryData || {})[key];
       if (cur2 && cur2.meaning) meaning = cur2.meaning;
+      /* A NAME THIS TRANSLATION SUPPLIES — Shemlon, Zeniff, Kishkumen — has no
+         Strong's number and keys by its consonants; with no curated row its
+         card opened on nothing but the counts. The same rule as a Strong's
+         name (above): the capitalised word its own glosses use most
+         (2026-09-12). */
+      else if (window._rootProperNames && window.RootEngine && window._rootProperNames[window.RootEngine.normFinals(key)]) {
+        var cn2 = _corpusName(key); if (cn2) meaning = cn2;
+      }
       if (!meaning || heb === key) {
         // The lemma lookup must run for the DISPLAY even when the glossary
         // already supplied a meaning — gated on meaning alone, a family with
@@ -690,7 +701,15 @@
     // attested parse, else the Strong's lookup), so it shows that sense alone.
     // A word whose lemma matches no listed sense, or matches more than one,
     // keeps the whole line.
-    var wordNum = (pz && pz.strongs) ||
+    /* A HOMOGRAPH FOLLOWS ITS GLOSS HERE TOO. The attested table gives חֶשְׁבּוֹן
+       one lemma — Heshbon — so an "account" token would carry the city's
+       number and a "noun proper name" parse. The engine already keyed this
+       card by the gloss; take the number it chose, and drop a parse that
+       describes the other word. */
+    var hgNum = '';
+    try { hgNum = (window.RootEngine && window.RootEngine.homographNumber) ? window.RootEngine.homographNumber(pieceSurface, glossText) : ''; } catch (eH) { hgNum = ''; }
+    if (hgNum && pz && pz.strongs && pz.strongs !== hgNum) pz = null;
+    var wordNum = hgNum || (pz && pz.strongs) ||
       (window._strongsLookup && (window._strongsLookup[pieceSurface] || window._strongsLookup[surface])) || '';
     var wordLemma = wordNum && window._strongsRoots && window._strongsRoots[wordNum] ? window._strongsRoots[wordNum].w : '';
     var meaningLine = senseFor(d.meaning, wordLemma, glossText);
@@ -825,7 +844,7 @@
       if (token !== fillToken) return;                    // a newer popup superseded this one
       if (!document.contains(slotEl)) return;             // popup closed
       if (loadState !== 2) return;                        // load failed; keep legacy content
-      var all = lookupAll(surface);
+      var all = lookupAll(surface, glossText);
       if (!all.length) {
         // No concordance bucket — chapter-heading vocabulary (מילניום,
         // באמצעות...) lives only in the summaries, which the concordance
@@ -834,7 +853,7 @@
         // render root + meaning without counts; otherwise keep legacy content.
         var s2 = cleanSurface(surface);
         var parts2 = (s2 && window.RootEngine && window.RootEngine.getRoots)
-          ? window.RootEngine.getRoots(s2) : [];
+          ? window.RootEngine.getRoots(s2, glossText) : [];
         var mini = '';
         for (var pi2 = 0; pi2 < parts2.length; pi2++) {
           var k2 = parts2[pi2].root;

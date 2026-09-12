@@ -69,9 +69,11 @@ function isNameEntry(e) {
 }
 const NAME_STOP = /^(The|And|Of|To|Unto|In|Into|From|With|For|By|Upon|On|At|Against|Before|After|Over|Under|Through|Toward|Towards|Between|Among|Out|Son|Sons|Daughter|Daughters|Children|King|Kings|Queen|Land|House|Men|Man|People|City|Cities|River|Mount|Mountain|Wife|Brother|Brethren|Father|Fathers|Mother|God|Lord|LORD|O|Even|Also|All|But|That|Which|Who|Nor|Or|As|Like|Till|Until|His|Her|Their|My|Our|Your|Is|Was|Be|It|This|These|Those|Not|No|A|An|Now|Behold|Yea|Thus|So|Then|When|If|Because|Therefore|Wherefore|Every|Each|Some|Many|Other|Another|Same|Own|Great|Holy|Whole|Half|Both)$/;
 function corpusName(key) {
-  const i = rc.keys.indexOf(key);
-  if (i < 0) return '';
-  const g = rc.roots[i].g || {}, tally = {};
+  const fm = buckets.get(key);   // this detector's own walk: form -> gloss -> count
+  if (!fm) return '';
+  const g = {};
+  for (const [, gm] of fm) for (const [gl, n] of gm) g[gl] = (g[gl] || 0) + n;
+  const tally = {};
   let total = 0, best = '', bn = 0;
   for (const gl in g) {
     const n = g[gl]; total += n;
@@ -123,8 +125,9 @@ const wordCache = new Map();
 function record(h, g) {
   h = h.replace(/[׃\[\]]/g, '');
   if (!h.trim() || !g.trim()) return;
-  let pairs = wordCache.get(h);
-  if (pairs === undefined) { pairs = getRoots(h) || []; wordCache.set(h, pairs); }
+  const wkey = h + '\u0001' + g;   // a homograph form keys by its gloss, as the builder does
+  let pairs = wordCache.get(wkey);
+  if (pairs === undefined) { pairs = getRoots(h, g) || []; wordCache.set(wkey, pairs); }
   const gNorm = g.replace(/-/g, ' ').trim();
   for (const pr of pairs) {
     if (!pr.root) continue;
