@@ -1054,6 +1054,13 @@
     'וּמַקְשׁוֹת': 'קשה',                                  // "hardeneth" (hiphil of קָשָׁה), not מוֹקֵשׁ "snare"
     'וּמוֹלִיכוֹת': 'הלך', 'מוֹלִיכוֹת': 'הלך', 'וּמוֹלִיכָם': 'הלך', 'מוֹלִיכִים': 'הלך', 'מוֹלִיכָם': 'הלך', 'כְּמוֹלִיכִים': 'הלך',   // "leadeth" (hiphil of הָלַךְ), not נָכָה "smite"
     'חָשׁוּךְ': 'חשך',                                     // "dark", not חוּשׁ "hasten"
+    // THE 1 NEPHI 13 CARD AUDIT (2026-09-12):
+    'וְהִתְיַשְּׁבוּתָהּ': 'ישב',                             // heading "its settlement"
+    'מִכָּךְ': 'H3651',                                    // "thereby" (מִן + כָּךְ), not מוּךְ "be poor"
+    'וְאוֹסֶרֶת': 'אסר',                                   // "bindeth", not יִסַּר "chasten"
+    'וַיּוּבַל': 'H2986',                                  // hophal "was carried", not בָּלַל "mix"
+    'וְהוּרְמוּ': 'רום', 'הוּרְמוּ': 'רום', 'הוּרְמָה': 'רום',   // hophal "lifted up", not מִרְמָה "deceit"
+    'צִיּוֹנִי': 'H6726',                                  // "my Zion", not צָוָה "command"
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1459,7 +1466,9 @@
       'לְיוֹנָה':    { name: 'H3124', word: 'H3123', en: /Jonah|Jonas/ },
       'אוּלָם':     { name: 'H0197', word: 'H0199', en: /porch|hall/i },
       'וְאוּלָם':    { name: 'H0197', word: 'H0199', en: /porch|hall/i },
-      'הַצֻּרִים':   { name: 'H2521', word: 'H6697', en: /Helkath/ }          // the rocks · Helkath-hazzurim (1 Nephi 12)
+      'הַצֻּרִים':   { name: 'H2521', word: 'H6697', en: /Helkath/ },
+      'צוּרִי':     { name: 'H6701', word: 'H6697', en: /Zuri/ },             // my rock · Zurishaddai (1 Nephi 13)
+      'וְצוּרִי':    { name: 'H6701', word: 'H6697', en: /Zuri/ }
     };
     var _HG_BLIND = /[ּֽֿ]/g;
     var _HG_INDEX = null;
