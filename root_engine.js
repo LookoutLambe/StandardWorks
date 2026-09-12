@@ -1049,6 +1049,13 @@
   // is not אָדָם, בְּשׂוֹרָה is not שׁוֹר, the Name is not הוה "to be", and a
   // name coined from a verb (Nadab, Og, Machir) is not that verb.
     var FAMILY_SPLIT = { 'H4325': 'מים', 'H0127': 'אדמה', 'H4057': 'מדבר',
+                    /* קָרָא II "meet, encounter, befall" (H7122) and its frozen infinitive
+                       לִקְרַאת "toward, to meet" (H7125) are BDB's own byform of קָרָה
+                       "befall" — the same lexeme, spelled with aleph. Under the dotless
+                       key they sat inside קרא I "call, proclaim, read", so the card on
+                       לִקְרָאתָם (Alma 2:12, "to meet them") read "to call" (2026-09-12).
+                       They keep the family BDB gives them: קרה. */
+                    'H7122': 'קרה', 'H7125': 'קרה',
                     /* אֱלֹהִים is not אֵלֶּה and not אָלָה. BDB files H0430 under
                        the same אלה key as the demonstrative אֵלֶּה "these" and the
                        verb אָלָה "to swear", so every route that produced the
@@ -1199,7 +1206,17 @@
       'הַמֵּאָה':   { name: 'H3968', word: 'H3967', en: /Meah/ },           // the tower of Meah (1) · the hundred (10)
       /* Not a name at all, but the same two-way split: Daniel's יַתִּיר "surpassing" and
          Delitzsch's יַתִּיר "he will loose" (hiphil of נתר) are one spelling. */
-      'יַתִּיר':    { name: 'H5425', word: 'H3493', en: /loos/ }
+      'יַתִּיר':    { name: 'H5425', word: 'H3493', en: /loos/ },
+      /* קָרָא I "call" and קָרָא II "meet, befall" share these spellings, and the
+         lookup table hands each surface to one number (H7122). The gloss says
+         which: "met / befell / came upon / toward / against" is II, any other
+         gloss ("was called", "called me", "do you call") is I. (2026-09-12) */
+      'וַיִּקָּרֵא':  { name: 'H7122', word: 'H7121', en: /\bmet\b|befall|befell|come upon|came upon|chance|happen|toward|against|encounter/i },
+      'קְרָאַנִי':   { name: 'H7122', word: 'H7121', en: /\bmet\b|befall|befell|come upon|came upon|chance|happen|toward|against|encounter/i },
+      'קְרָאֻנִי':   { name: 'H7122', word: 'H7121', en: /\bmet\b|befall|befell|come upon|came upon|chance|happen|toward|against|encounter/i },
+      'תִקְרֶאנָה':  { name: 'H7122', word: 'H7121', en: /\bmet\b|befall|befell|come upon|came upon|chance|happen|toward|against|encounter/i },
+      'תִּקְרֶאנָה':  { name: 'H7122', word: 'H7121', en: /\bmet\b|befall|befell|come upon|came upon|chance|happen|toward|against|encounter/i },
+      'וַתִּקְרֶאנָה': { name: 'H7122', word: 'H7121', en: /\bmet\b|befall|befell|come upon|came upon|chance|happen|toward|against|encounter/i }
     };
     var _HG_BLIND = /[ּֽֿ]/g;
     var _HG_INDEX = null;
