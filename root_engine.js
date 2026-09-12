@@ -1121,6 +1121,9 @@
     'וּמְרִיבוֹתָיו': 'ריב', 'מְרִיבוֹתָיו': 'ריב', 'וּמְרִיבוֹתֵיהֶם': 'ריב', 'וּמְרִיבוֹתֵיכֶם': 'ריב', 'לִמְרִיבוֹת': 'ריב', 'וּבִמְרִיבוֹת': 'ריב',   // contentions, not Merib-baal
     'עֲצוֹתָיו': 'עצה', 'לַעֲצוֹת': 'עצה',                    // counsels, not עֵץ "tree"
     'אֲפַתֵּם': 'פתה',                                     // "persuade them", not the name Appaim
+    // THE 1 NEPHI 20 (ISAIAH 48) CARD AUDIT (2026-09-12):
+    'הֻגְּדוּ': 'נגד',                                     // hophal "were declared", not גְּדוּד "troop"
+    'כִּמְעוֹתָיו': 'מעה',                                  // "like the gravel thereof" (מָעָה), not the name Uthai
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
