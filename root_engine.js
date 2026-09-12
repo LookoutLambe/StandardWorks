@@ -996,6 +996,12 @@
     'וְהוּבַלְתֶּם': 'H2986', 'הוּבַל': 'H2986', 'הוּבַלְנוּ': 'H2986',   // hophal of יָבַל "be led", not תָּמַם
     'מוֹרֶה': 'ירה', 'וּמוֹרֶה': 'ירה', 'וּלְמוֹרֶה': 'ירה', 'כְּמוֹרֶה': 'ירה', 'לְמוֹרֶה': 'ירה',   // "teacher" (hiphil participle of ירה), not מָרָה "rebel"
     'לְהָעִיר': 'עור', 'וּלְהָעִיר': 'עור',                   // "to stir up" is עוּר, not עִיר "city"
+    // THE 1 NEPHI 3 CARD AUDIT (2026-09-12):
+    'מִינֵי': 'מין', 'לְמִינֵיהֶם': 'מין', 'מִינֵיהֶם': 'מין', 'מִינִים': 'מין',   // "all manner of" — the lexicon read מִינֵי as מ + נוא
+    'גּוֹנֵב': 'גנב',                                     // "steals" — a one-word family
+    'הֱלִינוֹתָ': 'לון',                                   // "you have murmured" collapsed to נָוֶה
+    'וַנָּנָס': 'נוס',                                     // "and we fled"
+    'וְנוֹכָחִים': 'נכח', 'נוֹכָחִים': 'נכח',                // "sober, present" is נֹכַח, not יָכַח "reprove"
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1384,7 +1390,9 @@
       'בְּעֶצֶם':   { name: 'H6107', word: 'H6106', en: /Ezem|Azem/ },     // selfsame · Ezem
       'וּבְעֶצֶם':  { name: 'H6107', word: 'H6106', en: /Ezem|Azem/ },
       'רָם':      { name: 'H7410', word: 'H7311', en: /\bRam\b/ },          // high · Ram
-      'הִלֵּל':    { name: 'H1985', word: 'H1984', en: /Hillel/ }           // praised · Hillel
+      'הִלֵּל':    { name: 'H1985', word: 'H1984', en: /Hillel/ },   // praised · Hillel
+      'וּמוֹרֶה':   { name: 'H4784', word: 'H3384', en: /rebel/ },          // teacher · rebellious
+      'מוֹרֶה':    { name: 'H4784', word: 'H3384', en: /rebel/ }
     };
     var _HG_BLIND = /[ּֽֿ]/g;
     var _HG_INDEX = null;
