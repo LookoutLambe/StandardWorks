@@ -692,6 +692,7 @@ window._rootGlossaryData = {
   "H4193": {"meaning":"(מוֹת) death — Aramaic","category":"Lexical"},
   "H0778": {"meaning":"(אֲרַק) earth — Aramaic","category":"Lexical"},
   "H4479": {"meaning":"(מָן) who — Aramaic","category":"Lexical"},
+  "להן": {"meaning":"(לָהֶן) to them, for them","category":"Grammar"},
   "מטרה": {"meaning":"(מַטָּרָה) purpose, aim; target, mark","category":"Lexical"},
   "סרב": {"meaning":"(סֵרֵב) to refuse; (סָרָב) thorn, brier","category":"Lexical"},
   "H3885": {"meaning":"(לוּן) to lodge, pass the night; (הִלִּין) to murmur, complain","category":"Lexical"},

@@ -2740,6 +2740,22 @@
     'הִשְׁתַּמֵּשׁ': 'שמש', 'לְהִשְׁתַּמֵּשׁ': 'שמש', 'וְהִשְׁתַּמְּשׁוּ': 'שמש',
     'בְּהַצְבִּיעוֹ': 'צבע',   // "pointing" — הִצְבִּיעַ, cut off by the Aramaic split
     'וּבִמְנַעַנְעִים': 'נוע',   // rattles/sistra — נוּעַ to shake, not נָעִים
+    /* Aramaic scope (2026-09-13) — a word standing in a book that was not
+       written in Aramaic is Hebrew. These forms carry an Aramaic morph code,
+       but these tokens stand outside Dan 2:4b-7, Ezra 4:8-6:18 / 7:12-26,
+       Jer 10:11 and Gen 31:47, so they keep their Hebrew families. */
+    'רַבִּי': 'רבה', 'וְהֵן': 'הן', 'זְמַן': 'זמן',
+    'מְדִינַת': 'דין', 'שְׁלִיחַ': 'שלח', 'מִדַּת': 'מדד',
+    'שַׁלִּיט': 'שלט', 'מִלַּת': 'מלל', 'וִיקָרָה': 'יקר',
+    'יוֹמִין': 'יום', 'בְּמַלְכוּתִי': 'מלך', 'לְצֶלֶם': 'צלם',
+    'תִשְׁמְעוּן': 'שמע', 'יַצִּיב': 'יצב', 'מַן': 'מן',
+    'מַלְכָּה': 'מלך', 'סָפַר': 'ספר', 'וְשַׁלִּיט': 'שלט',
+    'מִלָּה': 'מלל', 'בִּזְרַע': 'זרע', 'וְיַצִּיב': 'יצב',
+    'בִּמְדִינַת': 'דין', 'וּשְׂעַר': 'שׂער', 'אֻמָּה': 'אמם',
+    'יְדַעְתָּ': 'ידע', 'רֵאשׁ': 'ראש', 'עָבְדָה': 'עבד',
+    'בִּשְׁאָר': 'שאר', 'אֲתָא': 'H0857', 'בַּיְתָה': 'בית',
+    'לְמִנְיָן': 'מנה', 'וּתְקָרֵב': 'קרב', 'מְשַׁח': 'משח',
+   
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -3273,6 +3289,15 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },
+      /* לָהֵן is Aramaic "but, therefore" inside Daniel, and the Hebrew
+         לְ + הֵן "to them" everywhere else (Heb 11:13). */
+      'לָהֵן': { name: 'להן', word: 'H3861', en: /them/i },
+      /* שַׂגִּיא is Aramaic "exalted" in Daniel and the Hebrew שָׂגָא "to grow
+         great" in Job 36:26, 37:23. */
+      'שַׂגִּיא': { name: 'שגא', word: 'H7690', en: /great|excellent/i },
+      /* מְאָה: the Aramaic hundred of Daniel and Ezra, and the Hebrew מֵאָה
+         of Moses 6:10. */
+      'מְאָה': { name: 'מאה', word: 'H3969', en: /an hundred/i },
       /* וּרְדוּ is רָדָה "have dominion" and יָרַד "go down" in one spelling. */
       'וּרְדוּ': { name: 'רדה', word: 'ירד', en: /dominion|rule/i },
       /* אֵלִים without the yod is two words: the plural of אַיִל "ram"
