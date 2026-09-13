@@ -1657,6 +1657,10 @@
     'בְּעַמּוֹנִיחָה': 'עמוניחה', 'וּלְכַפְרֵיהֶם': 'כפר', 'כַּפְרֵיהֶם': 'כפר', 'מֵעִירָם': 'עיר', 'נֶפִיִּי': 'הנפיים', 'וַאֲסַפְתָּנִי': 'אסף',
     'הַנֶּפִיִּי': 'הנפיים',   // "the Nephite"
     // in Ammonihah, villages (כְּפָר, not פְּרִי fruit), of their city (not Iram), a Nephite, taken me in
+    // Alma 9 audit (2026-09-13)
+    'כְּהַחֵלִּי': 'חלל', 'הִבָּחֲרָם': 'בחר', 'וְהִוָּשְׁעָם': 'ישע', 'מַחֲלוֹת': 'חלה', 'אָבוּד': 'אבד', 'יַשְׁלִיכֻנִי': 'שלך', 'לְקַחְתֵּנִי': 'לקח',
+    'לְהִוָּשֵׁעַ': 'ישע', 'וְהוֹשִׁעַ': 'ישע', 'אִבּוּד': 'אבד',   // to be saved (not Hoshea); lost, wasted
+    // as I began (הֵחֵל, not חָלָה sick), favored (בָּחַר, not חָרַם), being saved (not Hoshea), diseases (מַחֲלָה), lost, cast me, take me
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
