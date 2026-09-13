@@ -1662,7 +1662,7 @@
     'לְהִוָּשֵׁעַ': 'ישע', 'וְהוֹשִׁעַ': 'ישע', 'אִבּוּד': 'אבד',   // to be saved (not Hoshea); lost, wasted
     // as I began (הֵחֵל, not חָלָה sick), favored (בָּחַר, not חָרַם), being saved (not Hoshea), diseases (מַחֲלָה), lost, cast me, take me
     // Alma 10 audit (2026-09-13)
-    'פֵּרַשׁ': 'פרש', 'רָכַשְׁתִּי': 'רכש', 'תַאֲכִיל': 'אכל', 'לְעַקֵּשׁ': 'עקש', 'הַנֶּאֱמָרִים': 'אמר', 'הַמְּדַבֵּר': 'דבר', 'הוּעֲדוּ': 'עוד', 'תֻּכּוּ': 'נכה', 'בָּחַרְנוּ': 'בחר', 'כַּאֲמִתָּם': 'אמת', 'לְהַאֲשִׁים': 'אשם',
+    'פֵּרַשׁ': 'פרשׁ', 'רָכַשְׁתִּי': 'רכש', 'תַאֲכִיל': 'אכל', 'לְעַקֵּשׁ': 'עקש', 'הַנֶּאֱמָרִים': 'אמר', 'הַמְּדַבֵּר': 'דבר', 'הוּעֲדוּ': 'עוד', 'תֻּכּוּ': 'נכה', 'בָּחַרְנוּ': 'בחר', 'כַּאֲמִתָּם': 'אמת', 'לְהַאֲשִׁים': 'אשם',
     'עֵדוּתִי': 'עוד', 'לְעֵדוּתִי': 'עוד', 'יִתְעַדּוּ': 'עדה', 'תִתְעַדּוּ': 'עדה',   // my testimony, adorned (strays of the Iddo family)
     // interpreted, acquired, feed, pervert, spoken, who speaks (not מִדְבָּר wilderness), accused (הוּעַד, not Iddo), smitten, selected (not Haran), truth, to accuse (not the fire offering)
     // Alma 11 audit (2026-09-13)
@@ -1951,7 +1951,7 @@
     'וַיֻּשְׁבוּ': 'שוב',                                  // "and driven back" (הוּשַׁב), not יָשַׁב dwell
     'וַיְעוֹרְרוּם': 'עור',
     // Helaman 1 audit (2026-09-13)
-    'מְפָרַשׁ': 'פרש',   // "made distinct" (פֵּרֵשׁ) — the פָּרַשׁ homograph would send it to the horsemen
+    'מְפָרַשׁ': 'פרשׁ',   // "made distinct" (פֵּרֵשׁ) — the פָּרַשׁ homograph would send it to the horsemen
     // the horseman family held all thirteen of the dissenters (פּוֹרֵשׁ, one who secedes)
     'פּוֹרֵשׁ': 'פרש', 'פּוֹרְשִׁים': 'פרש', 'פוֹרְשִׁים': 'פרש', 'הַפּוֹרְשִׁים': 'פרש',
     'הַפֹּרְשִׁים': 'פרש', 'מֵהַפּוֹרְשִׁים': 'פרש', 'וְהַפּוֹרְשִׁים': 'פרש',
@@ -2444,6 +2444,22 @@
     'הַנַּעֲלֶה': 'עלה',   // "exalted" was מַעֲלָל, doings
     'מֻכְרָז': 'כרז',   // "is acclaimed" was H7328 רָז, the Aramaic secret
     'דָתִית': 'דת', 'בְּמַסְעָם': 'נסע',
+    // shin/sin dot audit (2026-09-13) — coined forms with no Strong’s number to split on
+    'וּבְשׂוֹרַת': 'בשורה', 'שׂוֹטֵן': 'שטן', 'וְשׂוֹטֵן': 'שטן',
+    'הַפּוֹרְשִׁים': 'פרשׁ', 'פּוֹרְשִׁים': 'פרשׁ', 'פוֹרְשִׁים': 'פרשׁ',
+    'שׁוֹמֵם': 'שמם', 'קַשְׂקַשֵּׂי': 'קשׂקשׂ', 'וְהַמִּשְׁתַּכְּרִים': 'שׁכר',
+    // shin/sin dot audit, second round (2026-09-13)
+    'עשֶׁר': 'עשׁר', 'כְּעשֶׁר': 'עשׁר', 'תֶּעֱשַׁר': 'עשׁר',
+    'בְּעׇשְׁרֵי': 'עשׁר', 'לְעֹשֶׂר': 'עשׁר', 'פּוֹרֵשׁ': 'פרשׁ',
+    'פּוֹרְשֵׁי': 'פרשׁ', 'הַפֹּרְשִׁים': 'פרשׁ', 'פֵּרַשׁ': 'פרשׁ',
+    'בְּפָרֵשׁ': 'פרשׁ', 'וּמְשָׁרֲתֵי': 'שרת', 'וּמְשָׁרֲתִי': 'שרת',
+    'יִשְּׁרוּ': 'ישר', 'אׇשְׁרְכֶם': 'H0833', 'וּשְׂפֻנֵי': 'שפנ',
+    'שָׁרֶד': 'שָׁרֶד', 'בְּשָׁרֶד': 'שָׁרֶד', 'אֶת־שָׁרֶד': 'שָׁרֶד',
+    'עַל־שָׁרֶד': 'שָׁרֶד',
+    // …rebuilt from the corpus literals: the shin dot sorts after the vowel here
+    'שָׁרֶד': 'שָׁרֶד', 'אֶת־שָׁרֶד': 'שָׁרֶד', 'עַל־שָׁרֶד': 'שָׁרֶד',
+    'בְּשָׁרֶד': 'שָׁרֶד', 'וּמְשָׁרֲתֵי': 'שרת', 'וּמְשָׁרֲתִי': 'שרת',
+    'פָּרַשׁ': 'פרשׁ',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2654,6 +2670,24 @@
                     'H7941': 'שׁכר',
                     'H7943': 'שׁכר',
                     'H8589': 'H6031',
+                    /* The shin/sin dot audit (2026-09-13). A form whose own dot disagrees with
+                       the dot its family's other members carry is in the wrong family — the test
+                       is orthographic, so it needs no gloss. Strong's already tells these lexemes
+                       apart; only the walk to a dotless BDB key merged them. Splitting here rather
+                       than by surface pin keeps names safe: FAMILY_SPLIT runs after the name stage. */
+                    'H8307': 'שׁרר', 'H8324': 'שׁרר', 'H8306': 'שׁרר', 'H8285': 'שׁרר',
+                    'H8133': 'שׁנא', 'H8132': 'שׁנא', 'H8264': 'שׁקק', 'H4944': 'שׁקק',
+                    'H6575': 'פרשׁ', 'H6568': 'פרשׁ', 'H6569': 'פרשׁ', 'H5378': 'נשׁה',
+                    'H4855': 'נשׁה', 'H4859': 'נשׁה',  
+                    'H8284': 'שׁרה', 'H7603': 'שׂאר', 'H2789': 'חרשׂ', 'H7663': 'שׂבר',
+                    'H7664': 'שׂבר', 'H7811': 'שׂחה', 'H7847': 'שׂטה', 'H7193': 'קשׂקשׂ',
+                    'H8321': 'שׂרק', 'H8320': 'שׂרק', 'H8291': 'שׂרק', 'H8305': 'שׂרק',
+                    'H7685': 'שׂגה', 'H7905': 'שׂכך', 'H7900': 'שׂכך', 'H7899': 'שׂכך',
+                    'H6587': 'פשׂע', 'H6585': 'פשׂע', 'H7786': 'שׂור', 'H7787': 'שׂור',
+                    'H8164': 'שׂער', 'H8166': 'שׂער', 'H8183': 'שׂער', 'H7184': 'קשׂוה',
+                    'H5400': 'נשׂק', 'H1643': 'גרשׂ', 'H0814': 'אשכר', 'H8079': 'שׂממית',
+                    'H6229': 'עשׂק',  'H7818': 'שׂחט', 'H0782': 'ארשת',
+                    'H7702': 'שׂדד', 'H7742': 'שׂוח', 'H7795': 'שׂורה', 'H7750': 'שׂטה',
                     /* אֱלֹהִים is not אֵלֶּה and not אָלָה. BDB files H0430 under
                        the same אלה key as the demonstrative אֵלֶּה "these" and the
                        verb אָלָה "to swear", so every route that produced the
@@ -2896,7 +2930,7 @@
     'בָּנוּ': { name: 'בָּנוּ', word: 'בנה', en: /\b(us|our)\b/i },   // בְּ + us / they built (Helaman 8)
     'וְיוּכַל': { name: 'H3116', word: 'יכל', en: /Jucal/ },        // Jucal son of Shelemiah / and he can (Helaman 5)
     'וְקָנָה': { name: 'H7071', word: 'קנה', en: /Kanah/ },        // the brook Kanah / and he bought, obtained (Helaman 2)
-    'פָּרַשׁ': { name: 'פרש', word: 'פָּרָשׁ', en: /dissent|withdrew|withdraw|secede|distinct|explain|interpret/i },   // he dissented / a horseman (Helaman 1)
+    'פָּרַשׁ': { name: 'פרשׁ', word: 'פָּרָשׁ', en: /dissent|withdrew|withdraw|secede|distinct|explain|interpret/i },   // he dissented / a horseman (Helaman 1)
     'עֶזְרָה': { name: 'H5834', word: 'עזר', en: /Ezrah/ },          // the son of Ezrah / help, assistance (Alma 50)
     'הָרִים': { name: 'רום', word: 'הרר', en: /raise|lift|rear|hoist|take off|take away/i },   // he raises (הֵרִים) / mountains (Alma 48)
     'נוֹצְרִים': { name: 'נוֹצְרִי', word: 'נצר', en: /Christian/i },   // Christians (Alma 46 heading) / watchmen
