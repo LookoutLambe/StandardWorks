@@ -1859,6 +1859,16 @@
     'צִיּוּנֵי': 'H6725',                                 // "the monuments of" (צִיּוּן waymark), not צִוָּה command
     // the impoverish family held the smiters and the blows of נָכָה
     'מוּכִּים': 'נכה', 'מַכֵּי': 'נכה', 'וּמַכֵּי': 'נכה', 'מַכּוֹתֵיהֶם': 'נכה', 'מַכּוֹתָיו': 'נכה',
+    // Alma 51 audit (2026-09-13)
+    'הִגָּדְעָם': 'גדע',                                  // "their being smitten down" (גָּדַע), not Gidom
+    'הָאֲצִילִים': 'אצל', 'וּלְהַאֲצִיל': 'אצל',            // "the nobles" / "that I may impart", not Beth-ha-Etsel
+    'הִתְגָּאוּ': 'גאה', 'לִדְרוֹרָם': 'דרר', 'וּלְהַשְׁווֹתָם': 'שוה',   // one-word families
+    // the blood family held glory, likeness, majesty, silence and teaching
+    'וּכְבוֹדָם': 'כבד', 'לִכְבוֹדָם': 'כבד',
+    'בְּדָמְךָ': 'דמה', 'הַמְדַמִּים': 'דמה', 'כִּמְדֻמֶּה': 'דמה', 'מְדֻמִּים': 'דמה', 'מְדֻמֶּה': 'דמה',
+    'וְהוֹדָם': 'הוד', 'וָדֹם': 'דמם', 'מְלַמְּדָם': 'למד',
+    // the vanity family held the equal words of שָׁוָה and one lifting up
+    'וְהֻשְׁווּ': 'שוה', 'הַשָּׁוָה': 'שוה', 'שְׁוֵי': 'שוה', 'בְּשׂוֹא': 'נשא',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
