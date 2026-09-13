@@ -2121,6 +2121,11 @@
     'לְרַפְּאֹתְכֶם': 'רפא',
     // 3 Nephi 18 audit (2026-09-13)
     'תִמְנָעוּם': 'מנע', 'תְגָרְשׁוּהוּ': 'גרש', 'תְּשָׁרְתוּהוּ': 'שרת',
+    // 3 Nephi 19 audit (2026-09-13) — the twelve disciples, one prefixed form each
+    'וְקוּמֵן': 'קומן',   // Kumen, not qam "arose"
+    'וְקוּמֵנוֹנְהִי': 'קומנונהי',
+    'וְשֶׁמְנוֹן': 'שמנון',   // Shemnon, not H5126 Nun
+    'וּמַתּוֹנִיהָה': 'מתוניהה',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
