@@ -2356,6 +2356,14 @@
     'צְלַבְךָ': 'צלב', 'צְלַבְכֶם': 'צלב', 'צְלַבְתֶּם': 'צלב',
     'מִצָּרֹתֶיךָ': 'צרה', 'הַהַסְכָּמָה': 'סכם', 'יְשַׁמְּשׁוּ': 'שמש',
     'רוּחָנִיִּים': 'רוח', 'מוּכָח': 'יכח', 'וְתַרְמִיל': 'תרמיל',
+    // Doctrine and Covenants 31–40 audit (2026-09-13)
+    'הַמַּלְבִּין': 'לבן',   // "which is white" was בִּין, to understand
+    'לֶכְתְּכֶם': 'הלך',   // "you should go" was נָכָה, to smite
+    'וּבְרָכָה': 'ברך',   // "and a blessing" was H1294 Berakah, the valley
+    'גּוֹרְמִים': 'גרם',   // "cause" was H1636, the Garmite
+    'וְנִסִּים': 'נסס',   // the vav form of the miracles, still under נוּס
+    'וּמֻבְטָח': 'בטח', 'נִצְלַב': 'צלב', 'מְאַסְתַּנִי': 'מאס',
+    'הִסִּיתֻהוּ': 'סות', 'לִדְחִיַּת': 'דחה',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2783,6 +2791,7 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },
+      'שַׁמּוֹת':    { name: 'H8054', word: 'שמם', en: /Shammoth/ },   // "desolations, destructions" is not the man Shammoth
       'פֶּטֶר':     { name: 'פטרוס', word: 'H6363', en: /Peter/ },   // the apostle, not פֶּטֶר "that which opens the womb"
       'בְּצוּרָה':   { name: 'צור', word: 'בצר', en: /figure|manner/i },   // "in Figure 2" is בְּ + צוּרָה, not a fortified city
       'מָרָה':      { name: 'מרה', word: 'מרר', en: /rebel|disobedien/i },   // eleven uses are "bitter", two are מָרָה to rebel

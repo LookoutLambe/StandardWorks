@@ -166,6 +166,7 @@ window._rootGlossaryData = {
   "תמד": {"meaning":"(מַתְמִיד) continuous, persistent; (תָּמִיד) continually","category":"Time"},
   "פייג׳": {"meaning":"Page — Hiram Page, one of the Eight Witnesses","category":"Name"},
   "תרמיל": {"meaning":"(תַּרְמִיל) scrip, knapsack","category":"Tools"},
+  "פרטרידג׳": {"meaning":"Partridge — Edward Partridge, the first bishop of the Church","category":"Name"},
   "תרנגול": {"meaning":"(תַּרְנְגוֹל) cock, rooster","category":"Nature"},
   "מתודיסט": {"meaning":"(מֶתוֹדִיסְט) Methodist","category":"Name"},
   "פרסביטרין": {"meaning":"(פְּרֶסְבִּיטֶרְיָן) Presbyterian","category":"Name"},

@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '364';   // bump when the generated data files change
+  var RSC_V = '365';   // bump when the generated data files change
   // Transliterated terms — an exception table in the tool, like the received
   // spellings in transliterate(): keyed by bare consonants, so every pointing
   // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.
@@ -45,6 +45,19 @@
      language, and only the pair (numeral letters, a bare number as its gloss)
      identifies one. Same treatment as an acronym — no root, no Strong's. */
   var NUM_LETTERS = /^[\u05D0-\u05EA]{1,4}$/;
+  /* An INITIAL is not a word either. Joseph Smith, Jun., Frederick G. Williams,
+     Newel K. Whitney — the D&C is full of middle initials, and each one is a
+     single Hebrew letter carrying an English capital and a period as its gloss.
+     78 of them, every one a blank card. The surface must be ONE letter and the
+     gloss exactly a capital with its point, which is what keeps ordinary
+     one-letter words (the prefixes, the numerals) out of it. */
+  function initialNote(surface, glossText) {
+    var g = String(glossText || '').trim().replace(/,$/, '');
+    if (!/^[A-Z]\.$/.test(g)) return '';
+    if (ttSkel(surface).length !== 1) return '';
+    return '<span class="tt-note"><b>' + esc(g) + '</b> \u2014 ' +
+      'an initial: the letter stands in for a name, so it has no Hebrew root and no Strong\u2019s number.</span>';
+  }
   function numeralNote(surface, glossText) {
     /* The gloss is the number itself, but it arrives dressed as the sentence
        left it: "1902.", "1976,", "and 138.", "60 61". Every one of those was
@@ -926,6 +939,8 @@
     if (tt.all) { slotEl.innerHTML = ttNoteHtml(surface); return; }
     var numNote = numeralNote(surface, glossText);
     if (numNote) { slotEl.innerHTML = numNote; return; }
+    var initNote = initialNote(surface, glossText);
+    if (initNote) { slotEl.innerHTML = initNote; return; }
     var ttHtml = tt.parts.length ? tt.parts.map(function(p) {
       return '<div class="rsc-block"><div class="rsc-part"><span style="font-family:\'David Libre\',serif">' + esc(p) + '</span></div>' + ttNoteHtml(p) + '</div>';
     }).join('') : '';
