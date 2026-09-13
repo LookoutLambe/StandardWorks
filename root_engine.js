@@ -1367,6 +1367,14 @@
     'אֶטַאֲטֵא': 'טאטא',                                       // "will I sweep away" (one-word family)
     // Jacob 6 audit (2026-09-13)
     'וּתְכַבּוּ': 'כבה', 'תִכְבֶּינָה': 'כבה',                     // "quench", "be quenched" (one-word families)
+    // Jacob 7 audit (2026-09-13)
+    'כּוֹפֵר': 'כפר',                                         // "denying" (כָּפַר, not פָּרַר break)
+    'הַחֲזֹנוֹת': 'חזה',                                       // "the revelations" (one-word family)
+    'נִאוּץ': 'נאץ',                                          // "blasphemy" (נִאֵץ, not אוּץ hasten)
+    'אַכְחִישֶׁנּוּ': 'כחש',                                    // "deny him" (one-word family)
+    'לִמְּדָם': 'למד',                                        // "he had taught them" (was blood)
+    'וּלְהַחֲזִיר': 'חזר',                                     // "and to restore" (הֶחֱזִיר; had the swine's key)
+    'חֲזִירִים': 'חזיר', 'בַּחֲזִירִים': 'חזיר', 'וַחֲזִירִים': 'חזיר', 'וְלַחֲזִירִים': 'חזיר',   // "swine" (חֲזִיר, its own family)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1794,6 +1802,7 @@
       'רַשָּׁאִים': { name: 'H7563', word: 'רשות', en: /wicked/i },
       'גַּלִּים':   { name: 'H1554', word: 'H1530', en: /Gallim/i },   // Bath-gallim · waves, heaps (גַּל) (Jacob 4)
       'זְבֻל':     { name: 'H2083', word: 'H2073', en: /Zebul/ },      // Zebul (Judg 9) · habitation, lofty abode (זְבֻל) (Jacob 5)
+      'רָב':       { name: 'H7378', word: 'H7227', en: /contend|strive|plead/i },   // he contended (רִיב) · many, great (רַב) (Jacob 7)
       'וּזְבֻל':    { name: 'H2083', word: 'H2073', en: /Zebul/ },   // the wicked (רָשָׁע, ten verse tokens) · may, permitted (רַשַּׁאי, the Jacob 2 heading)
       'מַסָּה': { name: 'H4532', word: 'H4531', en: /Massah/ },   // Massah the place · temptation, trial (מַסָּה) (Jacob 1)
       'בְּמַסָּה': { name: 'H4532', word: 'H4531', en: /Massah/ },
