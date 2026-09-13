@@ -1795,6 +1795,9 @@
     // Alma 40 audit (2026-09-13)
     'וְיוּשַׁב': 'שוב', 'וַתִּירַשׁ': 'ירש', 'וְהַלְווּ': 'לוה', 'וְו': 'וו', 'מוּבָלִים': 'יבל', 'הוֹוִים': 'היה', 'הַנֶּאֱמֶרֶת': 'אמר', 'וּמְסִירָתָן': 'מסר', 'תּוּשַׁב': 'שוב', 'יוּשַׁב': 'שוב', 'לְמִכְנָתָם': 'כון', 'וּגְוִיּוֹתֵיהֶם': 'גוה', 'שִׁמְרֵי': 'שמר',
     // take possession (יָרַשׁ, not תִּירוֹשׁ wine), led (מוּבָל, not יָם sea), who are (הֹוֶה, not וָו hook), their consignation (מְסִירָה, not סִיר pot), shall be restored (not Jushab-hesed), their frame (מַתְכֹּנֶת), their bodies (גְּוִיָּה, not גּוֹי nation)
+    // Alma 41 audit (2026-09-13)
+    'שֵׁדִי': 'שד', 'הֵעַזְתָּ': 'עזז', 'הֲפֵרוּשׁ': 'פרשׁ',           // "devilish" (שֵׁד demon, not Shaddai), "you have dared", "is the meaning of"
+    'נִשְׁתָּנִים': 'שנה', 'תִשְׁתַּנֶּה': 'שנה', 'מִשְׁתַּנִּים': 'שנה',                                       // "changed" (הִשְׁתַּנָּה, not שָׁתַן urinate)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
