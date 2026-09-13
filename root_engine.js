@@ -2190,6 +2190,9 @@
     'הֲשָׁבָתָם': 'שוב',   // "their restoration" was שָׁבַת too
     'וְשֻׁנּוּ': 'שנה',   // "and altered" was שֵׁן, a tooth
     'פּוֹסְקִים': 'פסק', 'הַמְּכַחֵשׁ': 'כחש', 'וְיִסְטוּ': 'שטה', 'וְהַנִּטְבָּל': 'טבל', 'דִּבּוּרֵנוּ': 'דבר',
+    // Ether 1 audit (2026-09-13)
+    'בְּמִגְדַּל': 'מגדל',   // "at the tower of Babel" was H4029 Migdal-eder
+    'אֶמֶר': 'אֶמֶר', 'וְאֶמֶר': 'אֶמֶר',   // Emer the Jaredite king, not אֵמֶר a word
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
