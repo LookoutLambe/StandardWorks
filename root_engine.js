@@ -1641,6 +1641,18 @@
     // Alma 6 audit (2026-09-13)
     'נוֹסְדָה': 'יסד',                                         // "was established" (נוֹסַד)
     'לְהַחֲשֹׁתוֹ': 'חשה', 'חֹשֶׁך': 'חשך', 'לְכַחֶשׁ': 'כחש',          // hold his peace, darkness, deny (strays of the feel family)
+    // Alma 7 audit (2026-09-13)
+    'מִמִּרְיָם': 'H4813',                                       // "of Mary" (not מָרָה rebel)
+    'יִזְכּוּ': 'זכך',                                          // "they shall receive" (זָכָה gain, merit)
+    'בְּבַקָּשַׁת': 'בקש', 'בְּבַקָּשַׁתְכֶם': 'בקש',                    // "supplicating", "your request" (בַּקָּשָׁה, not קֶשֶׁת bow)
+    'שַׁתֶּם': 'שית',                                           // "you have set" (שִׁית)
+    'תְצַפּוּ': 'צפה', 'תְּצַפּוּ': 'צפה',                          // "you look forward" (צִפָּה, not Zepho)
+    'יָסֵךְ': 'סכך',                                           // "shall be overshadowed" (סָכַךְ)
+    'הַכּוֹבְלִים': 'כבל',                                       // "which bind" (כֶּבֶל, not יָם sea)
+    'תִוָּלְדוּ': 'ילד', 'תִּוָּלְדוּ': 'ילד', 'וּבְתוֹלְדוֹתֵיכֶם': 'ילד',   // "you are born", "your lineage" (not Tolad)
+    'וּכְנוּעִים': 'כנע',                                        // "and submissive" (כָּנַע, not נוּעַ move)
+    'וְהַקֶּשֶׁב': 'קשב',                                        // "and heed"
+    'אָסוּר': 'אסר',                                           // "confined" (אָסַר, not סוּר)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
