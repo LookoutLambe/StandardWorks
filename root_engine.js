@@ -1448,6 +1448,18 @@
     // Mosiah 6 audit (2026-09-13)
     'רוֹשֵׁם': 'רשם',                                         // "records" (heading; רָשַׁם, not רוֹשׁ gall)
     'וּמְמַנֶּה': 'מנה',                                       // "and appoints" (heading; מִנָּה, not מִן from)
+    // Mosiah 7 audit (2026-09-13)
+    'אַמּוֹן': 'H5983',                                        // Ammon (heading spelling with aleph; was אמם skilled)
+    'לִמְהִי': 'למחי',                                        // Limhi (heading spelling with he; was נְהִי wailing)
+    'מְשֻׁעְבָּד': 'שעבד',                                     // "in bondage" (heading; one-word family)
+    'וְהַבּוֹטְחִים': 'בטח',                                    // "the ones who trust" (בָּטַח, not טוּחַ plaster)
+    'וְחֶלֶם': 'חֶלֶם', 'וְחֵם': 'חֵם',                           // Helem and Hem, Ammon's companions (one-word families)
+    'וַיֻּתְּרוּ': 'נתר',                                       // "and were loosed" (הֻתַּר, not the name Jethro)
+    'הֵעַזְתֶּם': 'עזז',                                       // "you have dared" (הֵעֵז; one-word family)
+    'וּמִשְׁמָרִי': 'שמר',                                      // "and my guards" (מִשְׁמָר, not the name Shimri)
+    'וּבְנִכְלָיו': 'נכל',                                      // "and by his craftiness" (one-word family)
+    'וּשְׂעוֹרָתֵנוּ': 'שעורה',                                  // "and our barley" (one-word family)
+    'יִתְמַהּ': 'תמה',                                        // "shall wonder" (תָּמַהּ, not the name Ithmah)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
