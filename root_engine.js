@@ -1536,6 +1536,19 @@
     'לְהָפִיחַ': 'פוח', 'מְפִיחִים': 'פוח', 'הֲתֵשְׁבוּ': 'ישב',                                        // "to breathe out" (הֵפִיחַ, not פִּיחַ soot)
     'חָס': 'חוס',                                                   // "spared" (חָס, from חוּס)
     'שָׁבוּי': 'שבה', 'וַיִּשְׁבּוּם': 'שבה',                                                   // "took them captive" (שָׁבָה, not שְׁבוּ agate)
+    // Mosiah 20 audit (2026-09-13)
+    'לָמָנִיּוֹת': 'הלמנים',                                    // "Lamanite (daughters)" (heading; not מנה count)
+    'מוּדָפִים': 'הדף',                                        // "are driven" (heading; הָדַף, not דֳּפִי fault)
+    'וַתִּקָּהֵלְנָה': 'קהל',                                    // "and gathered together"
+    'וּבַיְּעָרִים': 'יער',                                      // "and in the forests" (יַעַר, not Kirjath-jearim)
+    'נְמִיתֵהוּ': 'מות',                                        // "let us slay him"
+    'הֵפַרְתִּי': 'פרר',                                        // "I have broken" (הֵפֵר, not פָּרָה be fruitful)
+    'לְכַפָּרָה': 'כפר', 'וַיְפָרְכוּ': 'פרך',                      // propitiation, rubbed (strays of the fruitful family)
+    'סַרְנוּ': 'סור',                                          // "we turned" (סוּר, not סֶרֶן axle, lord)
+    'נַשְׁקִיטָה': 'שקט',                                       // "let us pacify"
+    'וּנְקַיְּמָה': 'קום',                                       // "and we will fulfill" (קִיֵּם, not נָקִי innocent)
+    'נַשְׁבִּית': 'שבת',                                        // "let us put a stop" (הִשְׁבִּית, not שָׁבָה captive)
+    'הֲכָנָתָם': 'כון',                                         // "their preparations" (הֲכָנָה)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
