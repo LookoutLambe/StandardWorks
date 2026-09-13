@@ -1899,6 +1899,12 @@
     'וְהִגֵּנוּ': 'גנן', 'מְשֻׁחְרָרִים': 'שחרר', 'מְשֻׁחֲרָרִים': 'שחרר',
     // the sinew family held הִגִּיד "declare" and one treason
     'בְּהַגִּידָם': 'נגד', 'בְּהַגִּידוֹ': 'נגד', 'וּמַגִּידִים': 'נגד', 'מַגִּידִים': 'נגד', 'וּבְגִידָה': 'בגד',
+    // Alma 56 audit (2026-09-13)
+    'מָסֹרְתָם': 'מסר',        // "their tradition" (מָסֹרֶת), not סוּר turn aside
+    'וַנָּכִין': 'כון',                                    // "we had prepared" (הֵכִין), not נָכָה smite
+    'חֵילֵנוּ': 'חיל', 'בְּחֵילֵנוּ': 'חיל',                 // "our force" (חַיִל), not Hilen
+    'וְצָרוֹתֵינוּ': 'צרה', 'וְצָרוֹתֶיךָ': 'צרה', 'וְצָרוּ': 'צור',   // troubles and besieging are not Tyre
+    'אַשְׁרֵיהֶם': 'אשרי', 'וְאַשְׁרֵיהֶם': 'אשרי',           // "blessed are they" (אַשְׁרֵי), not Asher or an Asherah
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
