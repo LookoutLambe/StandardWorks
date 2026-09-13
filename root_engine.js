@@ -1677,6 +1677,10 @@
     'הֲתַעֲנֶה': 'ענה',                                         // "will you answer"
     'בְּצוּרָתָם': 'צור',                                       // "in their form" (צוּרָה, not בָּצַר fortify)
     'וְכָאִלּוּ': 'כְּאִלּוּ',                                     // "as though" (כְּאִלּוּ)
+    // Alma 12 audit (2026-09-13)
+    'וּבְמִרְמָתוֹ': 'רמה', 'עֲרוּמָה': 'ערם', 'כַּקֶּשֶׁב': 'קשב', 'יִשָּׁבוּ': 'שבה', 'כַּבְלֵי': 'כבל', 'וּבָרָעָה': 'רעע', 'נָעֵז': 'עזז', 'נַכְעִיס': 'כעס', 'לְבָשְׁתֵּנוּ': 'בוש', 'לֶהָבָתוֹ': 'להב',
+    'וְהַמִּרְמוֹת': 'רמה', 'בְּמִרְמָתוֹ': 'רמה', 'בְּמִרְמַת': 'רמה', 'מִרְמָתָם': 'רמה',   // the deceits (מִרְמָה, not Meremoth)
+    // his deceiving (מִרְמָה, not Meremoth), subtle, heed, taken captive (שָׁבָה, not יָשַׁב dwell), chains (כֶּבֶל, not בְּלִי), awful state, dare, provoke, our shame (בֹּשֶׁת, not שִׁית), flame (לֶהָבָה, not בַּת daughter)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

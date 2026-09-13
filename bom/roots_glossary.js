@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "H8333": {"meaning":"(שַׁרְשְׁרָה) chain","category":"Objects"},
   "H3676": {"meaning":"(כֵּס) throne; the bar (of judgment)","category":"Society"},
   "כְּאִלּוּ": {"meaning":"(כְּאִלּוּ) as if, as though","category":"Grammar"},
   "לֵאָה": {"meaning":"(לֵאָה) leah — a Nephite measure of silver, half a shiblum (Alma 11:17)","category":"Society"},
@@ -1592,7 +1593,7 @@ window._rootGlossaryData = {
   "אחרונים": {"meaning":"last","category":"Time"},
   "תמה": {"meaning":"(תָּמַהּ) to be astonished, amazed; (תִּמָּהוֹן) astonishment","category":"Time"},
   "ציד": {"meaning":"(צַיִד) game, provision, food; hunting","category":"Uncategorized"},
-  "ריב": {"meaning":"(רִיב) to strive, contend, plead, and strife, controversy, cause; (מְרִיבָה) contention — Meribah, the waters of strife (Ex 17:7)","category":"Society"},
+  "ריב": {"meaning":"(רִיב) to strive, contend, plead; (רִיב) strife, controversy; (מְרִיבָה) contention, provocation; Meribah","category":"Society"},
   "קשיבו": {"meaning":"hearken","category":"Cognition"},
   "חרבות": {"meaning":"swords","category":"Speech"},
   "לכה": {"meaning":"queen","category":"Society"},
@@ -7979,7 +7980,7 @@ window._rootGlossaryData = {
   // the wrath family "conceive", the fig tree "naughtiness". Appended at the
   // bottom so a later key wins over any earlier row of the same name.
   "חֵמָה": {"meaning":"(חֵמָה) wrath, fury, hot anger; venom, poison","category":"Quality"},
-  "תקופה": {"meaning":"(תְּקוּפָה) circuit, course of time, the turn of the year — the D&C's dispensation","category":"Time"},
+  "תקופה": {"meaning":"(תְּקוּפָה) circuit, turn of the year; period, dispensation","category":"Time"},
   "חזיר": {"meaning":"(חֲזִיר) swine, boar, pig","category":"Animals"},
   "אָחָז": {"meaning":"Ahaz — king of Judah, son of Jotham (2 Kgs 16; Isa 7)","category":"Names"},
   "כסא": {"meaning":"(כִּסֵּא) throne, seat","category":"Society"},
