@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "רבנה": {"meaning":"Rabbanah — powerful or great king, the title the Lamanites gave Ammon (Alma 18:13)","category":"Name"},
   "H3681": {"meaning":"(כִּסּוּי) covering","category":"Objects"},
   "אָחָה": {"meaning":"Aha — a Nephite captain, son of Zoram (Alma 16:5)","category":"Name"},
   "H8004": {"meaning":"(שָׁלֵם) Salem — the city of Melchizedek","category":"Place"},
@@ -357,7 +358,7 @@ window._rootGlossaryData = {
   "מצרים": {"meaning":"(מִצְרַיִם) Egypt","category":"Uncategorized"},
   "כיצד": {"meaning":"(כֵּיצַד) how","category":"Uncategorized"},
   "אמצע": {"meaning":"(אֶמְצַע) middle; (בְּאֶמְצָעוּת) through, by means of","category":"Uncategorized"},
-  "סבר": {"meaning":"(הִסְבִּיר) to explain, make clear; (סֵבֶר) hope, expectation","category":"Uncategorized"},
+  "סבר": {"meaning":"(סָבַר) to suppose, think, reckon; (סְבָרָה) opinion, reasoning; (הִסְבִּיר) to explain, make clear; (סֵבֶר) hope, expectation","category":"Uncategorized"},
   "היירם": {"meaning":"(הַיְירָם) Hiram, Hyrum","category":"Uncategorized"},
   "H7613": {"meaning":"(שְׂאֵת) to bear, take up; swelling, dignity","category":"Uncategorized"},
   "H2752": {"meaning":"(חֹרִים) nobles, freemen; (חֹרִי) Horite","category":"Uncategorized"},
@@ -1764,7 +1765,7 @@ window._rootGlossaryData = {
   "לא׃": {"meaning":"prison","category":"Family"},
   "על־פי": {"meaning":"according to","category":"Uncategorized"},
   "מש": {"meaning":"sun","category":"Uncategorized"},
-  "נחל": {"meaning":"(נַחַל) stream, wadi, valley","category":"Nature"},
+  "נחל": {"meaning":"(נָחַל) to inherit, receive as a possession; (נַחֲלָה) inheritance; (נַחַל) stream, wadi, valley","category":"Nature"},
   "עדם": {"meaning":"on their behalf","category":"Uncategorized"},
   "נכרתו": {"meaning":"they were cut off","category":"Action"},
   "נינו": {"meaning":"our children","category":"Theology"},
