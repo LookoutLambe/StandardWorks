@@ -14,7 +14,7 @@ let depth=0,end=open;
 for(let i=open;i<html.length;i++){const c=html[i];if(c==='{')depth++;else if(c==='}'){depth--;if(!depth){end=i;break;}}}
 const G={};
 for(const m of html.slice(open+1,end).matchAll(/'([^']+)'\s*:\s*'((?:[^'\\]|\\.)*)'/g)) G[m[1]]=m[2].replace(/\\'/g,"'");
-const PRON=/\b(i|me|my|mine|we|us|our|ours|you|your|yours|ye|thee|thy|thine|thou)\b/i;
+const PRON=/\b(i|me|my|mine|myself|we|us|our|ours|ourselves|you|your|yours|yourself|yourselves|ye|thee|thy|thine|thou|thyself)\b/i;
 let hits=0;
 for(const key of Object.keys(HE)){
   const en=EN[key]; if(!en) continue;
