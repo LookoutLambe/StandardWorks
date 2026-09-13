@@ -29,11 +29,23 @@ html:has(link[href*="site_chrome.css"]) #main-content {
 /* Shared site header — menu · home · כתבי הקודש / The Holy Scriptures · size · dark */
 
 
-/* Skip link: off-canvas until it has keyboard focus, then a chrome-coloured
-   tab at the top-left, above the bar. */
-.sw-skip { position: absolute; left: -999px; top: 8px; z-index: 1000; padding: 8px 14px; border-radius: 6px;
+/* Skip link: out of sight until it has keyboard focus, then a chrome-coloured
+   tab at the top-left, above the bar.
+
+   It used to hide at left:-999px. That is the ordinary trick and it is safe on
+   an LTR page, where overflow to the left is not scrollable — but every reader
+   here is direction:rtl, and in RTL that axis is mirrored, so those 999px
+   became real scrollable width. The whole reading surface could be dragged
+   sideways under a thumb, the text sliding off the screen while the fixed bars
+   stayed put. Clipping to a 1px box keeps the link in the tab order and off
+   the screen without adding a single pixel of scroll, in either direction. */
+.sw-skip { position: absolute; left: auto; top: auto; width: 1px; height: 1px; margin: -1px;
+  padding: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+  z-index: 1000; border-radius: 6px;
   background: var(--chrome); color: var(--on-chrome); font-family: 'David Libre', serif; font-size: 0.95em; text-decoration: none; }
-.sw-skip:focus-visible { left: 8px; outline: 2px solid var(--here-chrome); outline-offset: 2px; }
+.sw-skip:focus, .sw-skip:focus-visible { left: 8px; top: 8px; width: auto; height: auto; margin: 0;
+  padding: 8px 14px; overflow: visible; clip: auto; clip-path: none;
+  outline: 2px solid var(--here-chrome); outline-offset: 2px; }
 
 .sw-top-bar {
   position: fixed;
