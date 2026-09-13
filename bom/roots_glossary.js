@@ -1,7 +1,7 @@
 window._rootGlossaryData = {
   "יריעה": {"meaning":"(יְרִיעָה) curtain, tent-curtain","category":"Objects"},
   "זעזע": {"meaning":"(זַעֲזוּעַ) upheaval, shock; (זִעְזֵעַ) to shake violently","category":"Nature"},
-  "מוֹרֶה": {"meaning":"(מוֹרֶה) teacher, guide, master","category":"Person"},
+  "מוֹרֶה": {"meaning":"(מוֹרֶה) teacher, guide, master; (הוֹרָה) to teach, instruct; (הוֹרָאָה) instruction, teaching","category":"Person"},
   "דרא": {"meaning":"(דֵּרָאוֹן) abhorrence, contempt","category":"Quality"},
   "בָּנוּ": {"meaning":"(בָּנוּ) in us, among us, against us","category":"Particle"},
   "רחת": {"meaning":"(רַחַת) winnowing shovel, fan","category":"Objects"},
