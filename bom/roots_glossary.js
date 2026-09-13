@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "H8550": {"meaning":"(תֻּמִּים) Thummim — with the Urim, the interpreters","category":"Theology"},
   "חִמְנִי": {"meaning":"Himni — a son of King Mosiah, a missionary to the Lamanites (Mosiah 27–28, Alma 23)","category":"Name"},
   "דף": {"meaning":"(דַּף) leaf, page, board","category":"Society"},
   "הֵלָם": {"meaning":"Helam — a Nephite baptized at the waters of Mormon; the land and city of Helam (Mosiah 18, 23)","category":"Name"},

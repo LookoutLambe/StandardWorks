@@ -1592,6 +1592,11 @@
     'חִמְנִי': 'חִמְנִי', 'וְחִמְנִי': 'חִמְנִי', 'מַכְרִיזִים': 'כרז', 'תּוֹדֶה': 'ידה', 'שִׁבְיַת': 'שבה', 'בְּרִיָּה': 'ברא', 'לִבְרִיּוֹת': 'ברא', 'מִשְּׂרֵפַת': 'שרף', 'אֵבָרָיו': 'אבר', 'אֲקִימֶנָּה': 'קום', 'יַפִּילֶנָּה': 'נפל', 'תּוּבָא': 'בוא', 'וַיּוֹבִילֻהוּ': 'יבל', 'וַיַּטִּיפוּ': 'נטף',
     'יִתְוַדֶּה': 'ידה', 'נִתְוַדֶּה': 'ידה', 'וְיִתְוַדֶּה': 'ידה', 'וּלְהִתְוַדּוֹת': 'ידה',   // the verses' Himni forms; confess (הִתְוַדָּה); the mysteries (רָז)
     // Himni his own family (not חמם heat), proclaiming (הִכְרִיז, not רָזוֹן leanness), confess (הוֹדָה), captivity, creature (בְּרִיָּה, not בָּרַר purify), burning (not Misrephoth), limbs, five one-word forms
+    // Mosiah 28 audit (2026-09-13)
+    'הַחוֹזִים': 'חזה',                                        // "the seers" (חֹזֶה, not the name Hozai)
+    'סִפּוּר': 'ספר',                                          // "an account of" (סִפּוּר)
+    'וְהַתֻּמִּים': 'H8550',                                     // "and the Thummim" joins the Thummim
+    'וּתְמִיכוֹת': 'תמך',                                       // "helps" (תְּמִיכָה, not Thummim)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
