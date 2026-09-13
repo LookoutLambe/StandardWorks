@@ -2214,6 +2214,9 @@
     'פִּילִים': 'פיל', 'הַפִּילִים': 'פיל',   // the elephants were falling under נָפַל
     'וְקוּרֵלוֹמִים': 'קורלומים', 'וְהַקּוּרֵלוֹמִים': 'קורלומים',
     'וְקוּמוֹמִים': 'קומומים', 'וְהַקּוּמוֹמִים': 'קומומים',
+    // Ether 10 audit (2026-09-13)
+    'לְהִתְפַּשֵּׁט': 'פשט', 'בִּמְרִידָה': 'מרד',   // "in rebellion" was יָרַד, to go down
+    'שִׁכְמֵי': 'שכם',   // "upon the shoulders of" was H7930, the Shechemites
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
