@@ -814,6 +814,17 @@
     var ld = document.getElementById('xref-sp-dict');
     if (ld) ld.onclick = function() { window.location.href = dictHref(); };
 
+    /* The vocabulary path sits beside the dictionary: the dictionary answers
+       "what does this word mean", this answers "which word should I learn
+       next". Same ../ rule — bom.html is a directory down from both. */
+    var lv = document.getElementById('xref-sp-vocab');
+    if (lv) lv.onclick = function() {
+      var p = (window.location && window.location.pathname) ? window.location.pathname : '';
+      var href = (p.indexOf('/bom/') >= 0 || /\\bom\\/.test(p)) ? '../vocabulary.html' : 'vocabulary.html';
+      try { if (window.NavEngineMarkReturn) NavEngineMarkReturn(href); } catch (e) {}
+      window.location.href = href;
+    };
+
     var ex = document.getElementById('xref-ne-export');
     var im = document.getElementById('xref-ne-import');
     if (ex) ex.onclick = exportNotes;
