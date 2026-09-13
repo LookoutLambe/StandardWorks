@@ -1665,6 +1665,18 @@
     'פֵּרַשׁ': 'פרש', 'רָכַשְׁתִּי': 'רכש', 'תַאֲכִיל': 'אכל', 'לְעַקֵּשׁ': 'עקש', 'הַנֶּאֱמָרִים': 'אמר', 'הַמְּדַבֵּר': 'דבר', 'הוּעֲדוּ': 'עוד', 'תֻּכּוּ': 'נכה', 'בָּחַרְנוּ': 'בחר', 'כַּאֲמִתָּם': 'אמת', 'לְהַאֲשִׁים': 'אשם',
     'עֵדוּתִי': 'עוד', 'לְעֵדוּתִי': 'עוד', 'יִתְעַדּוּ': 'עדה', 'תִתְעַדּוּ': 'עדה',   // my testimony, adorned (strays of the Iddo family)
     // interpreted, acquired, feed, pervert, spoken, who speaks (not מִדְבָּר wilderness), accused (הוּעַד, not Iddo), smitten, selected (not Haran), truth, to accuse (not the fire offering)
+    // Alma 11 audit (2026-09-13)
+    'שִׁיטַת': 'שִׁיטָה',                                        // "the system of" (heading; שִׁיטָה)
+    'בְּאַלְמָוֶת': 'אלם', 'בַּאֲלֻמּוֹת': 'אלם', 'אֲלֻמּוֹת': 'אלם',       // "in bundles", sheaves (אֲלֻמָּה, not אוּלָם porch)
+    'לְעֶרְכָּם': 'ערך',                                        // "according to their value" (עֵרֶךְ, not Er)
+    'וְהַשֵּׁמוֹת': 'H8034',                                     // "and the names" (not שָׁמֵם desolate)
+    'שִׁנּוּ': 'שנה', 'חֶשְׁבּוֹנָם': 'חשב', 'לְחֶשְׁבּוֹנָם': 'חשב', 'כִּשְׁלֹשָׁה': 'שלש', 'וְזִיזְרוֹם': 'זיזרום', 'תְנַסֵּנִי': 'נסה', 'הָאָנְטִי': 'אנטי',   // one-word forms home
+    'כִּשְׁלשָׁה': 'שלש',   // "as three"
+    'שׁוּם': 'שׁוּם',                                            // the shum, a Nephite measure (shin, not שׂוּם set)
+    'לִמְהוּמוֹת': 'הום',                                       // "to riotings" (מְהוּמָה, not מוּת die)
+    'הֲתַעֲנֶה': 'ענה',                                         // "will you answer"
+    'בְּצוּרָתָם': 'צור',                                       // "in their form" (צוּרָה, not בָּצַר fortify)
+    'וְכָאִלּוּ': 'כְּאִלּוּ',                                     // "as though" (כְּאִלּוּ)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2087,6 +2099,8 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'וְלֵאָה': { name: 'H3812', word: 'לֵאָה', en: /Leah/ },         // Leah / a leah, the Nephite measure (Alma 11)
+    'עֵר': { name: 'H6147', word: 'עור', en: /\bEr\b/ },            // Er / awake
     'יָאִיר': { name: 'H2971', word: 'אור', en: /jair/i },           // Jair / shall shine (Alma 5)
     'וְיָאִיר': { name: 'H2971', word: 'אור', en: /jair/i },
     'דּוֹאֵג': { name: 'H1673', word: 'דאג', en: /Doeg/ },          // Doeg / is troubled (Alma 1 heading)
