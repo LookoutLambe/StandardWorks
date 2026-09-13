@@ -2374,6 +2374,15 @@
     'נַעֲנוֹת': 'ענה',   // "are answered" was עָנָה II, to afflict
     'וּלְלִמּוּדְכֶם': 'למד', 'מְגֻנּוֹת': 'גנה', 'לְהִוָּעֵד': 'יעד',
     'הַנִּסְמָךְ': 'סמך', 'וּשְׁעַת': 'שעה', 'מֻתֶּרֶת': 'מתר',
+    // Doctrine and Covenants 51–60 audit (2026-09-13)
+    'הַמּוּאָרִים': 'אור',   // "those enlightened" was H0758 Aram
+    'לְפִרְסוּם': 'פרסם',   // "for publication" was H6539 Persia
+    'עֲטָרָה': 'עטר',   // "a crown" was H5851 Atarah, Jerahmeel's wife
+    'וּבְחִירַת': 'בחר', 'וּבְחִירָתְךָ': 'בחר',   // "the election of" was H6367 Pi-hahiroth
+    'יְמַנֶּה': 'מנה',   // "shall be appointed" was יָמִין, the right hand
+    'הֻפְרָה': 'פרר', 'וְהֻפְרָה': 'פרר',   // "has been broken" was פָּרָה, to bear fruit
+    'לְמִיזוּרִי': 'מיזורי', 'מְסֻיָּמִים': 'שום',
+    'נִצְלַבְתִּי': 'צלב', 'צְלָבוֹ': 'צלב',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2779,7 +2788,7 @@
       'רָם':      { name: 'H7410', word: 'H7311', en: /\bRam\b/ },          // high · Ram
       'הִלֵּל':    { name: 'H1985', word: 'H1984', en: /Hillel/ },   // praised · Hillel
       'וּמוֹרֶה':   { name: 'H4784', word: 'H3384', en: /rebel/ },          // teacher · rebellious
-      'מוֹרֶה':    { name: 'מוֹרֶה', word: 'H3384', en: /teach|master|guide|direct/i },  // the teacher / shoots, the early rain
+      'מוֹרֶה':    { name: 'מוֹרֶה', word: 'H3384', en: /teach|master|guide|direct|bespeak|indicat/i },  // the teacher / shoots, the early rain
       'וּמוֹרֶה':  { name: 'H4784', word: 'מוֹרֶה', en: /rebel/ },              // and rebellious / and a teacher
       /* 1 Nephi 11: white vs Lebanah, the dove vs Jonah, and אוּלָם "but" vs the porch (not a name, same two-way split). */
       'וּלְבָנָה':   { name: 'H3838', word: 'H3836', en: /Lebanah/ },
