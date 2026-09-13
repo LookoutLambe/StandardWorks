@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '368';   // bump when the generated data files change
+  var RSC_V = '371';   // bump when the generated data files change
   // Transliterated terms — an exception table in the tool, like the received
   // spellings in transliterate(): keyed by bare consonants, so every pointing
   // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.
@@ -66,6 +66,14 @@
        trailing sentence punctuation are stripped before the test; a maqqef or
        hyphen inside the Hebrew (ס-סא) is stripped too. */
     var g = String(glossText || '').trim().replace(/^and\s+/i, '').replace(/^No\.\s*/i, '').replace(/[.,;:]+$/, '');
+    /* A figure written in figures — "7,000", "144,000" — carries NO gloss at all
+       in the data, so the gloss test below would throw it away. Decide those on
+       the surface alone. */
+    var digits = ttSkel(surface);           // ttSkel eats the thousands comma
+    if (/^\d{1,9}$/.test(digits)) {
+      return '<span class="tt-note"><b>' + esc(String(surface).trim()) + '</b> \u2014 ' +
+        'a number, not a word: it has no Hebrew root and no Strong\u2019s number.</span>';
+    }
     /* An ordinal gloss is only safe on a one- or two-letter surface — the bare
        ג of a facsimile caption. Hebrew writes its own ordinals as words, and
        הַשִּׁשִּׁי "sixth" strips to four letters, so without this guard the rule
@@ -83,7 +91,7 @@
        those pointers are tokens like any other. 575 of them in the Doctrine and
        Covenants headings alone, every one a blank card until now. The surface is
        digits, so say so in the numeral's own words rather than claiming letters. */
-    if (/^\d{1,4}([\s\u2013\u2014-]+\d{1,4})?$/.test(raw)) {
+    if (/^\d{1,3}(,\d{3})*([\s\u2013\u2014-]+\d{1,3}(,\d{3})*)?$/.test(raw) || /^\d{1,7}([\s\u2013\u2014-]+\d{1,7})?$/.test(raw)) {
       return '<span class="tt-note"><b>' + esc(raw) + '</b> \u2014 ' +
         'a number, not a word: a summary\u2019s pointer to the verses it covers, with no Hebrew root and no Strong\u2019s number.</span>';
     }
