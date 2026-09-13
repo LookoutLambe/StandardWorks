@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "וו": {"meaning":"(וָו) hook, peg; the letter vav","category":"Objects"},
   "סירון": {"meaning":"Siron — a land on the Lamanite border (Alma 39:3)","category":"Name"},
   "איזבל": {"meaning":"Isabel — the harlot in the land of Siron (Alma 39:3)","category":"Name"},
   "רסן": {"meaning":"(רֶסֶן) bridle, halter; (רִסֵּן) to bridle, restrain","category":"Action"},
@@ -1257,7 +1258,7 @@ window._rootGlossaryData = {
   "עלה": {"meaning":"(עָלָה) to go up, ascend; (עֹלָה) burnt offering; (עֲלִיָּה) upper, chamber, room; (עָלֶה) leaf, leaves, leafage; (תְּעָלָה) trench, aqueduct, canal","category":"Motion"},
   "זרעך": {"meaning":"your seed","category":"Uncategorized"},
   "עבדי": {"meaning":"servants of","category":"Theology"},
-  "שמר": {"meaning":"(שָׁמַר) to keep, guard, observe; take heed; (מִשְׁמֶרֶת) charge, duty; (אַשְׁמֻרָה) watch, night","category":"Action"},
+  "שמר": {"meaning":"(שָׁמַר) to keep, guard, observe; take heed; (מִשְׁמֶרֶת) charge, duty; (אַשְׁמֻרָה) watch, night; (שְׁמָרִים) dregs, lees","category":"Action"},
   "נורא": {"meaning":"terrible","category":"Uncategorized"},
   "יתנו": {"meaning":"they gave","category":"Action"},
   "תחשבו": {"meaning":"do you suppose","category":"Cognition"},
