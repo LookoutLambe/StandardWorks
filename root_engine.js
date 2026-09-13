@@ -2364,6 +2364,16 @@
     'וְנִסִּים': 'נסס',   // the vav form of the miracles, still under נוּס
     'וּמֻבְטָח': 'בטח', 'נִצְלַב': 'צלב', 'מְאַסְתַּנִי': 'מאס',
     'הִסִּיתֻהוּ': 'סות', 'לִדְחִיַּת': 'דחה',
+    // Doctrine and Covenants 41–50 audit (2026-09-13)
+    'לְבִישׁוֹף': 'בישוף',   // "as bishop" was שׁוּף, to bruise
+    'לִתְמִיכָה': 'תמך',   // "for the support" was H8550, the Thummim
+    'נִשְׁלָחִים': 'שלח',   // "being sent out" was H7978 Shilhim, a city of Judah
+    'וּבְכֹחוֹת': 'כחח',   // "the forces of" was H2334 Havvoth-jair
+    'וּכְפִיתַת': 'כפת',   // "the binding of" was פַּת, a morsel of bread
+    'לְהֶאָרָה': 'אור',   // "enlightenment" was אַרְיֵה, a lion
+    'נַעֲנוֹת': 'ענה',   // "are answered" was עָנָה II, to afflict
+    'וּלְלִמּוּדְכֶם': 'למד', 'מְגֻנּוֹת': 'גנה', 'לְהִוָּעֵד': 'יעד',
+    'הַנִּסְמָךְ': 'סמך', 'וּשְׁעַת': 'שעה', 'מֻתֶּרֶת': 'מתר',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
