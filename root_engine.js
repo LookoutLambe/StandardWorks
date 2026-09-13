@@ -2193,6 +2193,12 @@
     // Ether 1 audit (2026-09-13)
     'בְּמִגְדַּל': 'מגדל',   // "at the tower of Babel" was H4029 Migdal-eder
     'אֶמֶר': 'אֶמֶר', 'וְאֶמֶר': 'אֶמֶר',   // Emer the Jaredite king, not אֵמֶר a word
+    // Ether 2 audit (2026-09-13)
+    'לְהַצִּיעַ': 'יצע', 'יִירָשֶׁנָּה': 'ירש', 'נַנְהִיג': 'נהג', 'וְדָפְנֵיהֶן': 'דפן',
+    'כְּקַלּוּת': 'קלל',   // "as the lightness of" was קוֹל, a voice
+    'וּקְצוֹתֵיהֶן': 'קצה',   // "the ends thereof" was קוֹץ, a thorn
+    'נִגְוַע': 'גוע', 'נִגְוָע': 'גוע',   // "we shall perish" (גָּוַע) was נָגַע, to touch
+    'וְדַלְתָּן': 'דלת',   // "the door thereof" was filed with דַּל, the poor
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
