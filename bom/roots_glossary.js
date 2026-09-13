@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "תשש": {"meaning":"(תָּשַׁשׁ) to grow weak, fail; (תָּשׁוּשׁ) weak, feeble","category":"Quality"},
   "חיץ": {"meaning":"(חִיצוֹן) outer, outward; (מְחִיצָה) partition, wall; (הַסְּפָרִים הַחִיצוֹנִים) the Apocrypha","category":"Place"},
   "שמנילום": {"meaning":"Shimnilom — a Lamanite city whose people were converted (Alma 23:12)","category":"Name"},
   "לקה": {"meaning":"(לָקָה) to be flogged, smitten; (הִלְקָה) to flog, scourge; (מַלְקוֹת) lashes","category":"Action"},
@@ -3166,7 +3167,7 @@ window._rootGlossaryData = {
   "צלת": {"meaning":"deliverance of","category":"Life"},
   "רגנו": {"meaning":"we did slay","category":"Uncategorized"},
   "תכונן": {"meaning":"prepare","category":"Uncategorized"},
-  "יסר": {"meaning":"(יִסַּר) to chasten, discipline, scourge; (מוּסָר) instruction, chastening","category":"Action"},
+  "יסר": {"meaning":"(יִסֵּר) to chasten, discipline, instruct; (מוּסָר) instruction, chastening; (יִסּוּרִים) sufferings","category":"Action"},
   "ידחו": {"meaning":"they were driven back","category":"Uncategorized"},
   "נתים": {"meaning":"two years","category":"Time"},
   "יתפשו": {"meaning":"they took him","category":"Action"},

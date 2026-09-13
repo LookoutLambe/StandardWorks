@@ -1752,6 +1752,9 @@
     // Alma 26 audit (2026-09-13)
     'נְהַלֵּל': 'הלל', 'סִבָּתֵנוּ': 'סבב', 'בִּשְׁגִיאַת': 'שגה', 'נוֹשִׁיעַ': 'ישע', 'וְלִמַּדְנוּם': 'למד', 'וְלִמַּדְנוּ': 'למד', 'וְהוֹדָיָתִי': 'ידה',
     // our reason (סִבָּה), we will praise (הִלֵּל, not Nahalol), incorrectness (שְׁגִיאָה), we might save, taught them (לִמֵּד, not דִּין judgment), my thanksgiving (הוֹדָיָה, not הוֹד splendor)
+    // Alma 27 audit (2026-09-13)
+    'הַמָּרָה': 'מרר', 'מְתִשֶּׁשֶׁת': 'תשש', 'בְיִסּוּרִים': 'יסר', 'הַמְּסִיתִים': 'סות', 'לְהַסִּיתָם': 'סות', 'נָגֵן': 'גנן', 'בֻּלַּע': 'בלע', 'בְּיִסּוּרִים': 'יסר', 'מָרִים': 'מרר',
+    // is weakened (heading; תָּשַׁשׁ), stir up (הֵסִית, not מָסַס melt), protect (הֵגֵן, not נָגַן play), sore (מַר, not Marah), swallowed up (בֻּלַּע, not לֹעַ throat), sufferings (יִסּוּרִים), aggravating (מַר, not רוּם exalt)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
