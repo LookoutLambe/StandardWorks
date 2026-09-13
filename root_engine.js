@@ -2013,6 +2013,11 @@
     'וּמְמַהֲרִים': 'מהר', 'הַמְּמַהֲרִים': 'מהר',
     'הַמּוֹכְרִים': 'מכר', 'וּמוֹכְרִים': 'מכר',
     'הַהוֹרִים': 'הרה', 'הוֹרִים': 'הרה', 'מְרִיָם': 'H4805', 'הֵרִימָם': 'רום',
+    // Helaman 13 audit (2026-09-13)
+    'נְתָנוּהוּ': 'נתן',                                   // "they would suffer him" (נָתַן), not נָוֶה a habitation
+    'וְרִכְשָׁם': 'רכש', 'וּתְגָרְשׁוּהוּ': 'גרש', 'וְתַלְבִּישׁוּהוּ': 'לבש',
+    'לְהוֹבִילְכֶם': 'יבל', 'שִׁמְמַתְכֶם': 'שמם',
+    'בְּהַשְׁחָתַתְכֶם': 'שחת', 'וְהַשְׁחָתַתְכֶם': 'שחת', 'הַשְׁחָתַתְכֶם': 'שחת',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2440,6 +2445,7 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'מוֹרִים': { name: 'מוֹרֶה', word: 'H3384', en: /teach|guide|direct/i },   // teachers, guides / shew, shoot (Helaman 13)
     'מוּשִׁי': { name: 'H4187', word: 'מוש', en: /Mushi/ },         // Mushi son of Merari / move, depart (Helaman 12)
     'שַׁמָּה': { name: 'H8048', word: 'שמם', en: /Shammah/ },       // Shammah / desolation, astonishment, havoc (Helaman 11)
     'בָּנוּ': { name: 'בָּנוּ', word: 'בנה', en: /\b(us|our)\b/i },   // בְּ + us / they built (Helaman 8)
