@@ -2097,6 +2097,9 @@
     'רְעִידוֹת': 'רעד', 'צְלִיבַת': 'צלב',
     // 3 Nephi 9 audit (2026-09-13)
     'תִּסָּתֵרְנָה': 'סתר',                                // "might be hid" (נִסְתַּר), a family of one
+    // 3 Nephi 10 audit (2026-09-13)
+    'כְּתַרְנְגֹלֶת': 'תרנגלת',                            // the prefixed hen had a family beside the bare one
+    'וּמִלְּיַלֵל': 'ילל', 'מִרְעוֹד': 'רעד',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
