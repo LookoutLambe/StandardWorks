@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "יריעה": {"meaning":"(יְרִיעָה) curtain, tent-curtain","category":"Objects"},
   "זעזע": {"meaning":"(זַעֲזוּעַ) upheaval, shock; (זִעְזֵעַ) to shake violently","category":"Nature"},
   "מוֹרֶה": {"meaning":"(מוֹרֶה) teacher, guide, master","category":"Person"},
   "דרא": {"meaning":"(דֵּרָאוֹן) abhorrence, contempt","category":"Quality"},
