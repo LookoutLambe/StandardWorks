@@ -1375,6 +1375,12 @@
     'לִמְּדָם': 'למד',                                        // "he had taught them" (was blood)
     'וּלְהַחֲזִיר': 'חזר',                                     // "and to restore" (הֶחֱזִיר; had the swine's key)
     'חֲזִירִים': 'חזיר', 'בַּחֲזִירִים': 'חזיר', 'וַחֲזִירִים': 'חזיר', 'וְלַחֲזִירִים': 'חזיר',   // "swine" (חֲזִיר, its own family)
+    // Enos audit (2026-09-13)
+    'אֵנוֹשׁ': 'H0583',   // Enos the prophet (spelled with tsere; peeled to נוּשׁ be sick)
+    'בְּהַבְטִיחַ': 'בטח', 'לְהַבְטִיחַ': 'בטח', 'וְהִבְטִיחוּ': 'בטח', 'וּמַבְטִיחַ': 'בטח',   // "promise" (הִבְטִיחַ, not טִיחַ plaster)
+    'הַמַּאֲבָק': 'אבק',                                       // "the wrestle" (one-word family)
+    'וְעִזֵּי': 'H5795',                                       // "and goats of" (one-word family)
+    'נִפְעַלְתִּי': 'פעל',                                     // "I was wrought upon" (was the name Peullethai)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
