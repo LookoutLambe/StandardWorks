@@ -2439,6 +2439,11 @@
     'הַירָם': 'היירם',   // Hyrum Smith was reading H2036 Horam, king of Gezer
     'בְּרִיגְהַם': 'בריגם', 'וּמְשֻׁחְרָר': 'שחרר', 'בְּמַסָּעֶיךָ': 'נסע',
     'בַּהֲקִימָם': 'קום', 'הַנִּכְנָסִים': 'כנס',
+    // Doctrine and Covenants 131–138 audit (2026-09-13)
+    'בְּמֶמְשְׁלוֹתֵיהֶם': 'משל',   // "their governments" was שָׁלָה, to be at ease
+    'הַנַּעֲלֶה': 'עלה',   // "exalted" was מַעֲלָל, doings
+    'מֻכְרָז': 'כרז',   // "is acclaimed" was H7328 רָז, the Aramaic secret
+    'דָתִית': 'דת', 'בְּמַסְעָם': 'נסע',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
