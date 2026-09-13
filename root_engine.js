@@ -1826,6 +1826,22 @@
     'פּוֹרְשֵׁי': 'פרשׁ', 'הִכַּרְתֶּם': 'נכר', 'תַּהְכְּרוּ': 'נכר', 'הִכַּרְתִּיו': 'נכר', 'הִכָּרְתָם': 'נכר',                                       // "dissenters of" (פּוֹרֵשׁ, one who separates)
     'יָקוּצוּ': 'יקץ', 'כִּלְכַבְּדוֹ': 'כבד', 'הֻכַּר': 'נכר',            // "they awoke", "as if to honor him", "he was acknowledged"
     'בְּהִלָּמְדָם': 'למד',                                      // "being taught" (לָמַד, not דָּם blood)
+    // Alma 48 audit (2026-09-13)
+    'וַיַּעֲוֵר': 'עִוֵּר', 'וַיְעַוֵּר': 'עִוֵּר',      // "and blinded" — a one-word family of its own
+    'וְיַזְהִירֵם': 'זהר', 'וַיַּזְהִירֵם': 'זהר',      // "and would warn them"
+    'הַנּוֹצְרִים': 'נוֹצְרִי',                          // "the Christians" (heading), not נָצַר keep/watch
+    'בְּהָרִימָם': 'רום',                               // "lifting up" (הֵרִים), not הַר mountain
+    'מִמּוֹרֵיהֶם': 'ירה',                              // "of their teachers" (מוֹרֶה), not הֵמִיר exchange
+    // every prefixed Moroni fell into מור "exchange"; the bare form reaches the name stage
+    'כְּמוֹרוֹנִי': 'מורוני', 'מִמּוֹרוֹנִי': 'מורוני', 'וּמוֹרוֹנִי': 'מורוני',
+    'לְמוֹרוֹנִי': 'מורוני', 'וּלְמוֹרוֹנִי': 'מורוני',
+    // the שלו junk drawer: the quail (sin), ease (שלה), שֶׁל, ripeness and reward all sat together
+    'בְּשֶׁלּוֹ': 'של', 'מִשֶּׁלּוֹ': 'של',
+    'בְשַׁלְוִי': 'שלה', 'וְהַשַּׁלְוָה': 'שלה', 'וְשַׁלְוֵי': 'שלה', 'וְשָׁלֵיו': 'שלה',
+    'וּלְשַׁלְוָתָם': 'שלה', 'וּשְׁלֵוָה': 'שלה', 'שְׁלֵיו': 'שלה', 'שַׁלְוָתָם': 'שלה',
+    'שָׁלֵו': 'שלה', 'שָׁלוּ': 'שלה',
+    'הַשְּׂלָו': 'שׂלו', 'שְׂלָו': 'שׂלו', 'שַׂלְוִים': 'שׂלו',
+    'בַּשִּׁלּוּם': 'שלם', 'בָשְׁלוּ': 'בשל', 'משְׁלוֹת': 'משל',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1949,6 +1965,10 @@
   // is not אָדָם, בְּשׂוֹרָה is not שׁוֹר, the Name is not הוה "to be", and a
   // name coined from a verb (Nadab, Og, Machir) is not that verb.
     var FAMILY_SPLIT = { 'H4325': 'מים', 'H0127': 'אדמה', 'H4057': 'מדבר',
+                    /* שְׂלָו the quail (sin, H7958) and שָׁלֵו "at ease" (shin, H7961) shared one
+                       dotless key with שֶׁלּוֹ and שָׁלוּ; the card on "and their safety" (Alma 48)
+                       read "quail". The quail keeps its sin, the ease words join שָׁלָה. */
+                    'H7958': 'שׂלו', 'H7961': 'שלה',
                     /* קָרָא II "meet, encounter, befall" (H7122) and its frozen infinitive
                        לִקְרַאת "toward, to meet" (H7125) are BDB's own byform of קָרָה
                        "befall" — the same lexeme, spelled with aleph. Under the dotless
@@ -2248,6 +2268,8 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'הָרִים': { name: 'רום', word: 'הרר', en: /raise|lift|rear|hoist|take off|take away/i },   // he raises (הֵרִים) / mountains (Alma 48)
+    'נוֹצְרִים': { name: 'נוֹצְרִי', word: 'נצר', en: /Christian/i },   // Christians (Alma 46 heading) / watchmen
     'חֶבֶר': { name: 'H2268', word: 'חבר', en: /Heber/ },          // Heber / a band, a company (Alma 46)
     'אִיזָבֶל': { name: 'איזבל', word: 'H0348', en: /Isabel/ },     // Isabel the harlot of Siron / Jezebel
     'חַד': { name: 'חדד', word: 'H2298', en: /sharp|exquisite/i },  // the Aramaic one / sharp, exquisite (Alma 36)

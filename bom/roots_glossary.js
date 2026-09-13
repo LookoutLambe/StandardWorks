@@ -1,4 +1,6 @@
 window._rootGlossaryData = {
+  "שׂלו": {"meaning":"(שְׂלָו) quail","category":"Nature"},
+  "נוֹצְרִי": {"meaning":"(נוֹצְרִי) Christian, Nazarene","category":"Theology"},
   "ישט": {"meaning":"(הוֹשִׁיט) to extend, stretch out; (יָשַׁט) to hold out","category":"Action"},
   "חשל": {"meaning":"(חִשֵּׁל) to forge, temper; (חָשַׁל) to shatter, weaken","category":"Action"},
   "שרין": {"meaning":"(שִׁרְיוֹן) coat of mail, breastplate","category":"War"},
@@ -215,7 +217,7 @@ window._rootGlossaryData = {
   "שמרון": {"meaning":"(שֹׁמְרוֹן) Samaria","category":"Uncategorized"},
   "בשורה": {"meaning":"(בְּשׂוֹרָה) gospel, good tidings","category":"Uncategorized"},
   "קצץ": {"meaning":"(קֵץ) end; (קָצַץ) to cut off","category":"Uncategorized"},
-  "H6440": {"meaning":"(פָּנִים) face, presence; (לִפְנֵי) before; (מִפְּנֵי) because of","category":"Uncategorized"},
+  "H6440": {"meaning":"(פָּנִים) face, presence; (לִפְנֵי) before; (מִפְּנֵי) because of; (לְפָנִים) formerly, of old, before","category":"Uncategorized"},
   "שיר": {"meaning":"(שִׁיר) song; to sing","category":"Uncategorized"},
   "מחר": {"meaning":"(מָחָר) tomorrow; (מׇחֳרָת) the morrow, next day; (מְחִיר) price, without, mehir","category":"Uncategorized"},
   "H2416": {"meaning":"(חַי) living, alive; (חַיָּה) beast; life","category":"Uncategorized"},
@@ -4722,7 +4724,6 @@ window._rootGlossaryData = {
   "אט": {"meaning":"slowly, gently","category":"Uncategorized"},
   "נפיו": {"meaning":"His wings","category":"Uncategorized"},
   "נגף": {"meaning":"(נָגַף) to strike, smite; (נֶגֶף) plague, stumbling","category":"Uncategorized"},
-  "שלו": {"meaning":"","category":"Quality"},
   "חלקם": {"meaning":"when they divide","category":"Uncategorized"},
   "קנאת": {"meaning":"zeal of","category":"Uncategorized"},
   "חנף": {"meaning":"(חָנֵף) hypocrite; (חָנֵף) polluted, defiled, corrupt","category":"Uncategorized"},
