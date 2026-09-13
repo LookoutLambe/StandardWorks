@@ -7666,7 +7666,7 @@ window._rootGlossaryData = {
   "H6663": {"meaning":"(צָדַק) to be just; (צִדְקִיָּהוּ) Zedekiah","category":"Lexical"},
   "H5382": {"meaning":"Manasseh","category":"Lexical"},
   "H0559": {"meaning":"Amorite","category":"Lexical"},
-  "H0833": {"meaning":"(אָשַׁר) to go straight, be blessed; (אֶשֶׁר, אֹשֶׁר) happiness — אַשְׁרֵי “blessed is”, “happy is”","category":"Quality"},
+  "H0833": {"meaning":"(אָשַׁר) to go straight, be blessed; (אִשֵּׁר) to confirm, to approve; (אֶשֶׁר, אֹשֶׁר) happiness — אַשְׁרֵי “blessed is”, “happy is”","category":"Quality"},
   "H2975": {"meaning":"the Nile; the River","category":"Lexical"},
   "H0339": {"meaning":"(אִי) island, isle, coastland — as in the isles of the sea","category":"Lexical"},
   "H7218": {"meaning":"head, top, chief","category":"Lexical"},

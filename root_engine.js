@@ -2134,6 +2134,9 @@
     'אֲמִתִּים': 'אמת', 'הָאֲמִתִּים': 'אמת', 'הָאֲמִתִּיִּם': 'אמת', 'וַאֲמִתִּים': 'אמת',
     // 3 Nephi 22 audit (2026-09-13)
     'תְּמוּטֶינָה': 'מוט',   // Isa. 54:10 "nor shall the hills be removed" — its own one-word family
+    // 3 Nephi 23 audit (2026-09-13)
+    'כְּתַבְתֶּם': 'כתב',   // "you have written" was reading כ + תֵּבָה, the ark
+    'הַלָּמָנִי': 'הלמנים',   // the singular Lamanite sat in a family of its own
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
