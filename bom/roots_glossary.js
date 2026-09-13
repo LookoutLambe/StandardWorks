@@ -2627,7 +2627,7 @@ window._rootGlossaryData = {
   "ינתנו": {"meaning":"shall be delivered","category":"Action"},
   "ל־המאמינים": {"meaning":"all who believe","category":"Quality"},
   "־היום": {"meaning":"every day","category":"Time"},
-  "שד": {"meaning":"devil","category":"Quality"},
+  "שד": {"meaning":"(שֵׁד) demon, devil; (שֵׁדִי) devilish","category":"Theology"},
   "ילבש": {"meaning":"shall put on","category":"Action"},
   "ישארו": {"meaning":"shall remain","category":"Quality"},
   "אם־אין": {"meaning":"if there be no","category":"Uncategorized"},
