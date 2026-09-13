@@ -1002,7 +1002,7 @@
     'וַיֹּדֶה': 'ידה', 'וַיּוֹדוּ': 'ידה', 'הוֹדוּ': 'ידה', 'וְהוֹדוּ': 'ידה', 'אוֹדֶה': 'ידה', 'וְאוֹדֶה': 'ידה', 'נוֹדֶה': 'ידה',   // "gave thanks" peeled to יָד "hand"
     'דְּרַשְׁתָּנִי': 'דרש',                                // "you have sought me" — a one-word family
     'וְהוּבַלְתֶּם': 'H2986', 'הוּבַל': 'H2986', 'הוּבַלְנוּ': 'H2986',   // hophal of יָבַל "be led", not תָּמַם
-    'מוֹרֶה': 'ירה', 'וּמוֹרֶה': 'ירה', 'וּלְמוֹרֶה': 'ירה', 'כְּמוֹרֶה': 'ירה', 'לְמוֹרֶה': 'ירה',   // "teacher" (hiphil participle of ירה), not מָרָה "rebel"
+    'מוֹרֶה': 'ירה', 'וּמוֹרֶה': 'ירה', 'וּלְמוֹרֶה': 'מוֹרֶה', 'כְּמוֹרֶה': 'מוֹרֶה', 'לְמוֹרֶה': 'מוֹרֶה',   // "teacher" (hiphil participle of ירה), not מָרָה "rebel"
     'לְהָעִיר': 'עור', 'וּלְהָעִיר': 'עור',                   // "to stir up" is עוּר, not עִיר "city"
     // THE 1 NEPHI 3 CARD AUDIT (2026-09-12):
     'מִינֵי': 'מין', 'לְמִינֵיהֶם': 'מין', 'מִינֵיהֶם': 'מין', 'מִינִים': 'מין',   // "all manner of" — the lexicon read מִינֵי as מ + נוא
@@ -2006,6 +2006,13 @@
     'תַּתִּיר': 'נתר', 'תַּתִּירוּ': 'נתר',                  // the sealing power's "ye shall loose" (הִתִּיר)
     // Helaman 11 audit (2026-09-13)
     'מְשַׁכְנֵעַ': 'שכנע',                                  // "persuades" (שִׁכְנֵעַ), a family of one
+    // Helaman 12 audit (2026-09-13)
+    'וּלְאָשְׁרָם': 'אשרי', 'יִתְנוֹעֵעַ': 'נוע', 'הַנָּעָה': 'נוע', 'יִתְרוֹפְפוּ': 'רפה',
+    'וּמוֹרֵיהֶם': 'מוֹרֶה',            // "a guide", "their teachers" — מוֹרֶה, not יָרָה shoot
+    // the wild-ox family was a junk drawer: haste, selling, parents, rebellion and lifting up
+    'וּמְמַהֲרִים': 'מהר', 'הַמְּמַהֲרִים': 'מהר',
+    'הַמּוֹכְרִים': 'מכר', 'וּמוֹכְרִים': 'מכר',
+    'הַהוֹרִים': 'הרה', 'הוֹרִים': 'הרה', 'מְרִיָם': 'H4805', 'הֵרִימָם': 'רום',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2411,7 +2418,8 @@
       'רָם':      { name: 'H7410', word: 'H7311', en: /\bRam\b/ },          // high · Ram
       'הִלֵּל':    { name: 'H1985', word: 'H1984', en: /Hillel/ },   // praised · Hillel
       'וּמוֹרֶה':   { name: 'H4784', word: 'H3384', en: /rebel/ },          // teacher · rebellious
-      'מוֹרֶה':    { name: 'H4784', word: 'H3384', en: /rebel/ },
+      'מוֹרֶה':    { name: 'מוֹרֶה', word: 'H3384', en: /teach|master|guide|direct/i },  // the teacher / shoots, the early rain
+      'וּמוֹרֶה':  { name: 'H4784', word: 'מוֹרֶה', en: /rebel/ },              // and rebellious / and a teacher
       /* 1 Nephi 11: white vs Lebanah, the dove vs Jonah, and אוּלָם "but" vs the porch (not a name, same two-way split). */
       'וּלְבָנָה':   { name: 'H3838', word: 'H3836', en: /Lebanah/ },
       'לִלְבָנָה':   { name: 'H3838', word: 'H3836', en: /Lebanah/ },
@@ -2432,6 +2440,7 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'מוּשִׁי': { name: 'H4187', word: 'מוש', en: /Mushi/ },         // Mushi son of Merari / move, depart (Helaman 12)
     'שַׁמָּה': { name: 'H8048', word: 'שמם', en: /Shammah/ },       // Shammah / desolation, astonishment, havoc (Helaman 11)
     'בָּנוּ': { name: 'בָּנוּ', word: 'בנה', en: /\b(us|our)\b/i },   // בְּ + us / they built (Helaman 8)
     'וְיוּכַל': { name: 'H3116', word: 'יכל', en: /Jucal/ },        // Jucal son of Shelemiah / and he can (Helaman 5)

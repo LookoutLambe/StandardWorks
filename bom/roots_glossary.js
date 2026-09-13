@@ -1,4 +1,6 @@
 window._rootGlossaryData = {
+  "מוֹרֶה": {"meaning":"(מוֹרֶה) teacher, guide, master","category":"Person"},
+  "דרא": {"meaning":"(דֵּרָאוֹן) abhorrence, contempt","category":"Quality"},
   "בָּנוּ": {"meaning":"(בָּנוּ) in us, among us, against us","category":"Particle"},
   "רחת": {"meaning":"(רַחַת) winnowing shovel, fan","category":"Objects"},
   "H2441": {"meaning":"(חֵךְ) palate, roof of the mouth, taste","category":"Body"},
