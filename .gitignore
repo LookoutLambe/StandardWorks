@@ -9,9 +9,14 @@ StandardWorks/www/
 .claude/
 
 # Xcode project state — never goes to GitHub (translator's standing rule).
+# The two xcuserdata rules were anchored: one to the .xcodeproj, one to a
+# workspace at the REPO ROOT. Xcode's is at
+# StandardWorks.xcodeproj/project.xcworkspace/xcuserdata/, which is neither,
+# so UserInterfaceState.xcuserstate — window positions and open tabs, rewritten
+# every time the project is opened — was tracked and showed the tree dirty in
+# every session. One unanchored rule covers both places.
 StandardWorks.xcodeproj/project.pbxproj
-StandardWorks.xcodeproj/xcuserdata/
-*.xcworkspace/xcuserdata/
+**/xcuserdata/
 
 # Never commit the KDP print interior (standing rule).
 # Broadened 2026-08-31: the narrow "*KDP 6x9.docx" rule did not cover the
