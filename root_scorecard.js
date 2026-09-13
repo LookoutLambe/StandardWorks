@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '382';   // bump when the generated data files change
+  var RSC_V = '383';   // bump when the generated data files change
   // Transliterated terms — an exception table in the tool, like the received
   // spellings in transliterate(): keyed by bare consonants, so every pointing
   // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.
@@ -70,9 +70,20 @@
        in the data, so the gloss test below would throw it away. Decide those on
        the surface alone. */
     var digits = ttSkel(surface);           // ttSkel eats the thousands comma
+    /* A FIGURE CAN CARRY A HEBREW PREFIX. The chapter headings write כ־3,000
+       "about 3,000", ה־144,000 "the 144,000", מ־603,550 "by 603,550" — one
+       letter and a maqqef in front of the digits. Without this the whole token
+       fell through: כ־3,000 rendered a blank card, and ה־144,000 resolved its
+       ה־ to מַעַל and offered "above, upward, on high" for a number. */
+    var pfx = /^([\u05D0-\u05EA])[\u05B0-\u05BC\u05C1\u05C2\u05C7]*\u05BE(.+)$/.exec(String(surface).trim());
+    var barePfx = '';
+    if (pfx && /^[\d,]{1,13}$/.test(pfx[2])) { barePfx = pfx[1]; digits = ttSkel(pfx[2]); }
     if (/^\d{1,9}$/.test(digits)) {
+      var lead = barePfx
+        ? 'a number with its prefix ' + esc(barePfx) + '\u05BE attached: the figure itself has no Hebrew root'
+        : 'a number, not a word: it has no Hebrew root';
       return '<span class="tt-note"><b>' + esc(String(surface).trim()) + '</b> \u2014 ' +
-        'a number, not a word: it has no Hebrew root and no Strong\u2019s number.</span>';
+        lead + ' and no Strong\u2019s number.</span>';
     }
     /* An ordinal gloss is only safe on a one- or two-letter surface — the bare
        ג of a facsimile caption. Hebrew writes its own ordinals as words, and

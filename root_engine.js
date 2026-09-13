@@ -2591,6 +2591,25 @@
     'שֶׁיַּחְפֹּץ': 'חפץ', 'חֲנִינַתְכֶם': 'חנן', 'יַעֲסֹק': 'עסק',
     'נִתְמַנּוּ': 'מנה', 'שֶׁיַּחְשְׁבֶנּוּ': 'חשב', 'הַמְאָרֵחַ': 'ארח',
     'מִמְּרִיבִי׃': 'ריב', 'שָׁעָתוֹ': 'שעה', 'הָאֱלֹהוּת': 'אלהים',
+    // a common word sitting in a name family (2026-09-13)
+    'לִכְיוּן': 'כון', 'וְלִכְיוּן': 'כון', 'וְעִיּוּן': 'עין',
+    'וּבְעִיּוּן': 'עין', 'שְׁמוֹתֵינוּ': 'שם', 'אַנְתּוּן': 'אתה',
+    /* CHAPTER HEADINGS (2026-09-13). The headings are a corpus of their own —
+       28,000 tokens across four volumes — and every detector I had written
+       scanned only *_verses, so none of this was visible. They render in the
+       reader exactly like a verse and get exactly the same word card. */
+    'הַתַּנַ״ךְ': 'תנך', 'הַמֵּכִיל': 'כול', 'בְּנִגּוּד': 'נגד',
+    'דּוֹגְלִים': 'דגל', 'צִיְּתָה': 'צית', 'לַחֲזֹר': 'חזר',
+    'וּתְבַיֵּשׁ': 'בוש', 'הַנֵּפִים': 'נפי', 'גַּבּוֹ': 'גבב',
+    'דָּחֲתָה': 'דחה', 'כִּבְכוֹר': 'בכר', 'מֻפְסֶקֶת': 'פסק',
+    'יְסַיְּעוּ': 'סיע', 'יִסְתַּכְּלוּ': 'סכל', 'כְּמִבְחָן': 'בחן',
+    'הַגֵּיהִנֹּם': 'גיהנם', 'שׁוֹנֵי': 'שנה', 'מֵהַגֵּיהִנֹּם': 'גיהנם',
+    'הַמְתַוֵּךְ': 'מתוך', 'יְפַקְפְּקוּ': 'פקפק', 'בִּמְשֻׁתָּף': 'שתף',
+    'בְּסִילָא': 'סילא', 'הַקֵּיסָר': 'קיסר', 'לַגָּלָטִים': 'גלטים',
+    'בַּחֲזָרָה': 'חזר', 'לְנַקְדִּימוֹן': 'נקדימון', 'לְפִילָטוֹס': 'פילטוס',
+    'הַמּוֹנוֹגַמְיָה': 'מונוגמיה', 'לְסִיּוּם': 'סום', 'מֻקְדָּשׁ': 'קדש',
+    'גּוֹמֵר': 'גמר',
+    'מֻשְׁלֶמֶת': 'שלם',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -3036,6 +3055,18 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },
+      /* A NAME AND A WORD IN ONE FORM. כְּנַעַן is Canaan 54 times and
+         "a merchant" 6; דִּינָה is Dinah 7 and "Avenge"/"the judgment" 6;
+         רִצְפָּה is Rizpah 8 and "a live coal" 2. The name stage cannot
+         see the difference and a pin would pick one and be wrong about
+         the other, so the gloss decides. */
+      'כְּנַעַן': { name: 'H3667', word: 'כנע', en: /Canaan/ },
+      'כְּנָעַן': { name: 'H3667', word: 'כנע', en: /Canaan/ },
+      'כְנַעַן': { name: 'H3667', word: 'כנע', en: /Canaan/ },
+      'כְנָעַן': { name: 'H3667', word: 'כנע', en: /Canaan/ },
+      'רִצְפָּה': { name: 'H7532', word: 'רצף', en: /Rizpah/ },
+      'רִצְפָה': { name: 'H7532', word: 'רצף', en: /Rizpah/ },
+      'הוֹסֵף': { name: 'הוסף', word: 'יסף', en: /Increase/ },
       'שְׁנָתוֹ': { name: 'ישן', word: 'שנה', en: /sleep|slumber|slept|asleep/i },
       /* שְׁנַת is the construct of BOTH שָׁנָה "year" (126 tokens) and
          שֵׁנָה "sleep" (2) — same consonants, same pointing. A surface pin
