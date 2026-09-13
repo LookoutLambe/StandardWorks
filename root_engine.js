@@ -2240,6 +2240,8 @@
     'מֵהֵאָבֵק': 'אבק',
     // Moroni 1 audit (2026-09-13)
     'יַשְׁמִידוּנִי': 'שמד',
+    // Moroni 6 audit (2026-09-13)
+    'וּמַשְׁלִים': 'שלם',   // "and finisher of" (הִשְׁלִים) was H7987 שְׁלִי, quietness
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
