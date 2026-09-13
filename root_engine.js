@@ -1819,6 +1819,9 @@
     // Alma 45 audit (2026-09-13)
     'צָמוּ': 'צום', 'יֻגַּד': 'נגד',                              // "they did fast", "should be declared"
     'וְהַמְּהוּמוֹת': 'הום',                                     // "and disturbances" (מְהוּמָה, not מוּת die)
+    // Alma 46 audit (2026-09-13)
+    'קוֹשֵׁר': 'קשר', 'מֵהַקְּהִלָּה': 'קהל', 'וַיִּתְחַמְּשׁוּ': 'חמש', 'וַיּוּשְׁבוּ': 'שוב', 'הַמַּחֲלוֹת': 'חלה', 'לִתְּמוֹת': 'תמם',
+    // a conspiracy (heading; קוֹשֵׁר), from the church, a band (חֶבֶר, not Heber), armed themselves (הִתְחַמֵּשׁ), taken back, the diseases (מַחֲלָה, not חָלַל begin), to the end of (תֹּם, not מוּת die)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2241,6 +2244,7 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'חֶבֶר': { name: 'H2268', word: 'חבר', en: /Heber/ },          // Heber / a band, a company (Alma 46)
     'אִיזָבֶל': { name: 'איזבל', word: 'H0348', en: /Isabel/ },     // Isabel the harlot of Siron / Jezebel
     'חַד': { name: 'חדד', word: 'H2298', en: /sharp|exquisite/i },  // the Aramaic one / sharp, exquisite (Alma 36)
     'חֲדָה': { name: 'חדד', word: 'H2298', en: /sharp|exquisite/i },  // the Aramaic one / sharper
