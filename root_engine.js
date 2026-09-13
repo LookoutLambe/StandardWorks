@@ -1627,6 +1627,17 @@
     'קִינָה': 'קון', 'לְקִינָה': 'קון', 'בְּקִינוֹתֵיהֶם': 'קון', 'הַקִּינוֹת': 'קון', 'הַקִּינָה': 'קון', 'קִנִים': 'קון', 'וְקִינָתָם': 'קון', 'לְקִינוֹת': 'קון',   // lamentation (קִינָה, not Cain)
     'פִּלְיָתָם': 'פלה',                                        // "their inequality"
     'מַפְנִים': 'פנה',                                         // "turning" (הִפְנָה)
+    // Alma 5 audit (2026-09-13)
+    'הוּאֲרוּ': 'אור', 'וּבָאֲרוֹ': 'באר',                          // "were illuminated", "and expounded" (not the Aramaic lo!)
+    'וְשׁוֹאֵל': 'שאל', 'וַתִּרְחַבְנָה': 'רחב', 'הֲנוֹלַדְתֶּם': 'ילד', 'לְהִטָּהֵר': 'טהר', 'חַשְׁתֶּם': 'חוש', 'שֻׁתָּפִים': 'שתף',   // one-word forms home
+    'נִתְּרוּ': 'נתר',                                          // "they were loosed" (הִתִּיר, not יֶתֶר rest)
+    'הַתְדַמּוּ': 'דמה',                                        // "do you imagine" (דָּמָה, not דָּמַם be silent)
+    'לְכַזֵּב': 'כזב',                                          // "lie" (כִּזֵּב, not זוּב flow)
+    'מַעֲרִים': 'ערם',                                          // "that heaps" (הֶעֱרִים, not עִיר city)
+    'רֹעֲכֶם': 'רֹעֶה',                                          // "your shepherd" (not רֵעַ friend)
+    'אֲמִתָּם': 'אמת',                                          // "their surety" (אֱמֶת, not אֵם mother)
+    'הַבֵּינַיִם': 'בֵּין', 'הֵבִינוּם': 'בין', 'יָנוּמוּ': 'נום',        // "middle age", "understood", "let slumber" (not Janum)
+    'וְהַקּוֹנִים': 'קנה', 'הַקּוֹנִים': 'קנה', 'וְתִקּוּנֵי': 'תקן',       // buyers, rudiments (strays of the lament family)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2049,6 +2060,8 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'יָאִיר': { name: 'H2971', word: 'אור', en: /jair/i },           // Jair / shall shine (Alma 5)
+    'וְיָאִיר': { name: 'H2971', word: 'אור', en: /jair/i },
     'דּוֹאֵג': { name: 'H1673', word: 'דאג', en: /Doeg/ },          // Doeg / is troubled (Alma 1 heading)
     'פְּלָיָה': { name: 'H6411', word: 'פלה', en: /Pelaiah/ },       // Pelaiah / inequality (Mosiah 29)
     'וּפְלָיָה': { name: 'H6411', word: 'פלה', en: /Pelaiah/ },
