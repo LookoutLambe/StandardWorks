@@ -2202,6 +2202,8 @@
     // Ether 3 audit (2026-09-13)
     'מְתֻרְגְּמָנִים': 'תרגם',   // "interpreters" stood alone
     'לְבָנוֹת': 'לבן',   // "white" was H1323 בַּת, a daughter
+    // Ether 4 audit (2026-09-13)
+    'וְהַמְּכַחֵשׁ': 'כחש',   // the vav form of the denier Mormon 9 left behind
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
