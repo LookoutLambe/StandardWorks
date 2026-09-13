@@ -1578,6 +1578,12 @@
     'לְהִלָּמֵד': 'למד',                                        // "to be taught"
     'בְּקַלּוּת': 'קלל',                                        // "with ease" (קַלּוּת, not the Aramaic voice)
     'וְאַצִּיל': 'נצל',                                         // "and deliver" (הִצִּיל, not אֵצֶל beside)
+    // Mosiah 25 audit (2026-09-13)
+    'מַסְמִיךְ': 'סמך',                                        // "ordains" (heading)
+    'מִמִּסְפַּר': 'ספר',   // "the number of" (מִסְפָּר belongs to ספר)
+    'לַּחְשֹׁב': 'חשב', 'לַחְשֹׁב': 'חשב', 'לְחַשֵׁב': 'חשב',                          // "what to think"
+    'וּבִרְאוֹתָם': 'ראה',   // "when they beheld" (רָאָה, not בָּרָא create)
+    'לְהִקָּרֵא': 'קרא',                                        // "to be called"
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

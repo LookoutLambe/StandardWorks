@@ -4,15 +4,15 @@
     the hook did not touch it (it pointed at scripts/write_build_version.js,
     which does not exist), so the list below had been frozen for days and
     every Book of Mormon asset change was served stale. Never hand-edit. */
-const CACHE = 'bom-2026-09-13T09-32-41';
+const CACHE = 'bom-2026-09-13T09-35-05';
 /** Shell only — verse *.js files are cached at runtime, refreshed in the background (see fetch handler). */
 const ASSETS = [
   './bom.html',
   './bom_book_loader.js?v=11',
   './bom_lazy_assets.js?v=3',
   '../reader_surface.js?v=48',
-  '../root_scorecard.js?v=194',
-  '../root_engine.js?v=137',
+  '../root_scorecard.js?v=195',
+  '../root_engine.js?v=138',
   '../xref_study_panel.css?v=14',
   '../reader.css?v=122',
   '../editions.js?v=2',
@@ -28,7 +28,7 @@ const ASSETS = [
      by tools/build_crossref_chunks.js and arrives with the book. */
   './chapter_headings.js',
   './chapter_headings_heb.js?v=11',
-  './roots_glossary.js?v=172',
+  './roots_glossary.js?v=173',
   /* crossrefs.js (785 KB) and bom_inverse_crossrefs.js (632 KB) were precached
      here and are no longer fetched by anything: both are split per book into
      crossrefs/<book>.js and inverse_crossrefs/<book>.js by
