@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '359';   // bump when the generated data files change
+  var RSC_V = '360';   // bump when the generated data files change
   // Transliterated terms — an exception table in the tool, like the received
   // spellings in transliterate(): keyed by bare consonants, so every pointing
   // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.
@@ -56,7 +56,16 @@
     var ORD = {first:'1st',second:'2nd',third:'3rd',fourth:'4th',fifth:'5th',sixth:'6th',seventh:'7th',eighth:'8th',ninth:'9th',tenth:'10th'};
     if (ORD[g.toLowerCase()]) g = ORD[g.toLowerCase()];
     if (!/^\d{1,4}(st|nd|rd|th)?([\s\u2013\u2014-]+\d{1,4})?$/i.test(g)) return '';
-    var sk = ttSkel(surface).replace(/[-\u05BE]/g, '');
+    var raw = ttSkel(surface);
+    /* A section summary points at the verses it covers — "1\u20138", "9\u201315" — and
+       those pointers are tokens like any other. 575 of them in the Doctrine and
+       Covenants headings alone, every one a blank card until now. The surface is
+       digits, so say so in the numeral's own words rather than claiming letters. */
+    if (/^\d{1,4}([\s\u2013\u2014-]+\d{1,4})?$/.test(raw)) {
+      return '<span class="tt-note"><b>' + esc(raw) + '</b> \u2014 ' +
+        'a number, not a word: a summary\u2019s pointer to the verses it covers, with no Hebrew root and no Strong\u2019s number.</span>';
+    }
+    var sk = raw.replace(/[-\u05BE]/g, '');
     if (!NUM_LETTERS.test(sk)) return '';
     return '<span class="tt-note"><b>' + esc(g) + '</b> \u2014 ' +
       'a Hebrew numeral: the letters stand for the number, so it has no Hebrew root and no Strong\u2019s number.</span>';

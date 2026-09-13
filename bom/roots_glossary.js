@@ -8026,6 +8026,7 @@ window._rootGlossaryData = {
   "קרן": {"meaning":"(קֶרֶן) horn; ray; (קָרַן) to shine, send out rays","category":"Nature"},
   "נדב": {"meaning":"(נָדַב) to offer freely; (נְדָבָה) freewill offering; (נָדִיב) noble","category":"Action"},
   "H5355": {"meaning":"(נָקִי) innocent, clean","category":"Lexical"},
+  "בדה": {"meaning":"(בָּדָא) to invent, to feign, to make up","category":"Speech"},
   "בדל": {"meaning":"(בָּדַל) to divide, separate; (הִבְדִּיל) to set apart","category":"Action"},
   "ברז": {"meaning":"(בַּרְזֶל) iron","category":"Nature"},
   "זור": {"meaning":"(זָר) strange, a stranger","category":"Lexical"},
