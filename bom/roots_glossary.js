@@ -169,6 +169,7 @@ window._rootGlossaryData = {
   "פרטרידג׳": {"meaning":"Partridge — Edward Partridge, the first bishop of the Church","category":"Name"},
   "גנה": {"meaning":"(גִּנָּה) to condemn, denounce; (מְגֻנֶּה) condemned, disgraceful","category":"Morality"},
   "כפת": {"meaning":"(כָּפַת) to bind, to tie up; (כְּפִיתָה) a binding","category":"Action"},
+  "ממש": {"meaning":"(מַמָּשׁ) actually, really, the very thing; (מַמָּשׁוּת) substance","category":"Quality"},
   "תרנגול": {"meaning":"(תַּרְנְגוֹל) cock, rooster","category":"Nature"},
   "מתודיסט": {"meaning":"(מֶתוֹדִיסְט) Methodist","category":"Name"},
   "פרסביטרין": {"meaning":"(פְּרֶסְבִּיטֶרְיָן) Presbyterian","category":"Name"},
