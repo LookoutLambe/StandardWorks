@@ -3232,7 +3232,7 @@ window._rootGlossaryData = {
   "את־אלמא": {"meaning":"ACC Alma","category":"Uncategorized"},
   "עשיהם׃": {"meaning":"according to their works","category":"Action"},
   "ישליכום": {"meaning":"they did cast them","category":"Uncategorized"},
-  "סידום": {"meaning":"Sidom","category":"Uncategorized"},
+  "סידום": {"meaning":"Sidom — the land where Alma and Amulek found the believers cast out of Ammonihah (Alma 15)","category":"Name"},
   "את־אחיך": {"meaning":"[ACC] your brothers","category":"Family"},
   "נצחון": {"meaning":"victory","category":"Uncategorized"},
   "סבוס": {"meaning":"Sebus","category":"Uncategorized"},

@@ -1694,6 +1694,8 @@
     // Alma 14 audit (2026-09-13)
     'קָדְשָׁם': 'קדש', 'וְנוֹשִׁיעֵם': 'ישע', 'עָנוּהוּ': 'ענה', 'עָנוּם': 'ענה', 'לִרְאוֹתָם': 'ראה', 'נִזּוֹקוּ': 'נזק', 'מָעוֹת': 'מעה', 'מְעוֹת': 'מעה',
     // consecrated them (heading), save them, answered (עָנָה, not the afflict family), to see them (רָאָה, not יָרֵא fear), hurt, money (מָעוֹת, a stray of the pervert family)
+    // Alma 15 audit (2026-09-13)
+    'כִּשְׁמוֹעַ': 'שמע', 'כִּשְׁמוֹעָם': 'שמע', 'וּמְכוֹנְנִים': 'כון', 'מְרַפֵּא': 'רפא',   // establish, heals (רָפָא, not רָפָה slack), obeying (שָׁמַע, not Shammua)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
