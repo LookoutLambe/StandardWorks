@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "בָּנוּ": {"meaning":"(בָּנוּ) in us, among us, against us","category":"Particle"},
   "רחת": {"meaning":"(רַחַת) winnowing shovel, fan","category":"Objects"},
   "H2441": {"meaning":"(חֵךְ) palate, roof of the mouth, taste","category":"Body"},
   "הזורמים": {"meaning":"Zoramite, Zoramites","category":"Name"},
