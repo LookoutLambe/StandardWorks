@@ -1470,6 +1470,19 @@
     'הוּכְנוּ': 'כון',                                        // "were prepared" (הוּכַן, not כֵּן gnats)
     'הַבּוֹרֵחַ': 'ברח',                                       // "which flees" (one-word family)
     'לְתוֹעֶלֶת': 'יעל',                                       // "a benefit" (תּוֹעֶלֶת, not עָלָה go up)
+    // Mosiah 9 audit (2026-09-13)
+    'מִזָּרַחֶמְלָה': 'זרחמלה',                                  // "from Zarahemla" (heading; one-word family)
+    'מַרְשֶׁה': 'רשות',                                        // "permits" (heading; הִרְשָׁה)
+    'וְנֵעַס': 'נעס', 'וְשֵׁאוּם': 'שאום',                         // neas and sheum, the Nephite grains (Mosiah 9:9)
+    'שִׁבְתֵּנוּ': 'ישב',                                       // "we had dwelt" (יָשַׁב, not שָׁבַת cease)
+    'לְהִדָּאֵג': 'דאג',                                       // "to grow uneasy" (one-word family)
+    'וְעוֹבְדֵי': 'עבד',                                       // "worshippers of" (עָבַד, not the name Obed)
+    'מִיגִיעַ': 'יגע',                                        // "with the labors of" (יְגִיעַ, not נָגַע touch)
+    'דְּגַן': 'דגן',                                          // "the corn of" (דָּגָן, not דָּג fish)
+    'לַחֲשׁוֹב': 'חשב',                                        // "to devise" (חָשַׁב, not the name Hashub)
+    'הֵעַרְנוּ': 'עור',                                        // "we had been awakened" (הֵעִיר, not the name Eran)
+    'גֵּרַשְׁנוּם': 'גרש',                                      // "we had driven them" (one-word family)
+    'הָעוֹבְדִים': 'עבד', 'עוֹבְדֵי': 'עבד', 'וְעוֹבְדִים': 'עבד',    // participles of עָבַד, not the name Obed
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1892,6 +1905,8 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'עוֹבֵד': { name: 'H5744', word: 'עבד', en: /Obed/ },          // Obed / one who serves (Mosiah 9)
+    'וְעוֹבֵד': { name: 'H5744', word: 'עבד', en: /Obed/ },
       'שִׁמְעִי':    { name: 'H8096', word: 'H8085', en: /Shimei/ }, // hear! (fs) · Shimei (2 Nephi 8)
       'שָׂרַי':     { name: 'H8297', word: 'H8269', en: /Sarai/ }, // my princes · Sarai (2 Nephi 20)
       'וְרָבוּ':    { name: 'H7378', word: 'H7235', en: /contend|strive|plead/i }, // and they shall contend (רִיב) · and multiply (רָבָה) (2 Nephi 28)
