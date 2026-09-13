@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '384';   // bump when the generated data files change
+  var RSC_V = '385';   // bump when the generated data files change
   // Transliterated terms — an exception table in the tool, like the received
   // spellings in transliterate(): keyed by bare consonants, so every pointing
   // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.
@@ -65,7 +65,10 @@
        matter, where the dates are all Hebrew numerals. Leading "and" and
        trailing sentence punctuation are stripped before the test; a maqqef or
        hyphen inside the Hebrew (ס-סא) is stripped too. */
-    var g = String(glossText || '').trim().replace(/^and\s+/i, '').replace(/^No\.\s*/i, '').replace(/[.,;:]+$/, '');
+    /* The leading "and" is joined by a HYPHEN in the volumes that gloss with
+       hyphens — "and-138." — so \s+ alone left וקלח with a blank card, the
+       last one in 242,906 pairs. */
+    var g = String(glossText || '').trim().replace(/^and[\s-]+/i, '').replace(/^No\.\s*/i, '').replace(/[.,;:]+$/, '');
     /* A figure written in figures — "7,000", "144,000" — carries NO gloss at all
        in the data, so the gloss test below would throw it away. Decide those on
        the surface alone. */
