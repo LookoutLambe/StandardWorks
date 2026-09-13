@@ -1226,6 +1226,8 @@
     'אוֹיוֹת': 'אוי',                                         // "woes" (one-word family)
     'בָתָה': 'בתה',                                           // "waste" (בָּתָה desolation, not the bath measure)
     'בִתָּהּ': 'H1323', 'בְּבִתָּהּ': 'H1323',                 // "her daughter" (בַּת, not בָּתָה waste)
+    // 2 Nephi 16 audit (2026-09-13)
+    'וְהָשַׁע': 'שעע',                                        // "and shut [their eyes]" (שָׁעַע smear over, not שָׁעָה hour)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
