@@ -1928,7 +1928,7 @@ window._rootGlossaryData = {
   "אנוש": {"meaning":"Enos","category":"Uncategorized"},
   "סמית": {"meaning":"Smith","category":"Uncategorized"},
   "גבעת": {"meaning":"hill of","category":"Uncategorized"},
-  "מנה": {"meaning":"(מָנָה) to count, number, appoint; (מִנְיָן) quorum, reckoning; (מָנֶה) minas, pounds","category":"Lexical"},
+  "מנה": {"meaning":"(מָנָה) to count, number, appoint; (מִנְיָן) quorum, reckoning; (מָנֶה) minas, pounds; (מִנָּה) to appoint","category":"Lexical"},
   "יג": {"meaning":"has obtained","category":"Society"},
   "ידיו": {"meaning":"His hands","category":"Person"},
   "כנים": {"meaning":"prepared","category":"Life"},
