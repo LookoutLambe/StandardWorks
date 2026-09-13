@@ -1441,6 +1441,10 @@
     'הַמּוֹנְעִים': 'מנע',                                      // "who deny" (מָנַע withhold, not נָעַם pleasant)
     'יִזְכֶּה': 'זכך',                                        // "he might win" (זָכָה gain, not be translucent)
     'הִסְכִּים': 'סכם',                                        // "he agreed" (הִסְכִּים, not the name Sarsekim)
+    // Mosiah 5 audit (2026-09-13)
+    'אֵיתָנִים': 'איתן', 'וְאֵיתָנִים': 'איתן',                  // "firm" (אֵיתָן, not the month Ethanim H0388)
+    'הוֹלִידְכֶם': 'ילד',                                      // "He has begotten you" (הוֹלִיד, not יָד hand)
+    'נִקְרֵאתֶם': 'קרא',                                       // "you are called" (one-word family of 14)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1577,6 +1581,8 @@
                     'H6238': 'עשׁר', 'H6239': 'עשׁר', 'H6223': 'עשׁר',
                     'H8192': 'שׁפה', 'H8205': 'שׁפה', 'H3471': 'ישׁפה',
                    'H8265': 'שׂקר',   // שָׂקַר to ogle (Isa 3:16) keeps its sin — not שֶׁקֶר lie
+                   'H0386': 'איתן',   // אֵיתָן firm, enduring — BDB walks it to יתן (Mosiah 5)
+                   'H2377': 'חזה',    // חָזוֹן vision belongs with חָזָה to see in vision (Mosiah 5)
                    'H1682': 'דבורה',  // דְּבוֹרָה the bee — BDB files it under דבר speak (Isa 7:18, Deut 1:44)
                     /* לָחַם "fight" (H3898) is BDB's own homonym of לֶחֶם "bread": one dotless key
                        put a loaf on the card for "and they fought" (Alma 2:17). The verb keys by
@@ -1870,6 +1876,7 @@
       'זְבֻל':     { name: 'H2083', word: 'H2073', en: /Zebul/ },      // Zebul (Judg 9) · habitation, lofty abode (זְבֻל) (Jacob 5)
       'רָב':       { name: 'H7378', word: 'H7227', en: /contend|strive|plead/i },   // he contended (רִיב) · many, great (רַב) (Jacob 7)
       'עֲמָלֵקִי':  { name: 'עמלקי', word: 'H6003', en: /Amaleki(?!te)/ },   // Amaleki the record-keeper · an Amalekite (Omni)
+      'נָבִיא':    { name: 'H5030', word: 'H0935', en: /prophet|seer/i },   // a prophet (נָבִיא) · we may bring (נָבִיא, hiphil of בּוֹא) (Mosiah 5)
       'וּזְבֻל':    { name: 'H2083', word: 'H2073', en: /Zebul/ },   // the wicked (רָשָׁע, ten verse tokens) · may, permitted (רַשַּׁאי, the Jacob 2 heading)
       'מַסָּה': { name: 'H4532', word: 'H4531', en: /Massah/ },   // Massah the place · temptation, trial (מַסָּה) (Jacob 1)
       'בְּמַסָּה': { name: 'H4532', word: 'H4531', en: /Massah/ },
