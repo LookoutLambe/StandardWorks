@@ -1605,6 +1605,13 @@
     'יֵהָנֶה': 'נֶהֱנָה',                                        // "shall enjoy" (נֶהֱנָה, not הִנֵּה behold)
     'הַמּוֹרֵד': 'מרד',                                         // "whosoever rebels" (מָרַד, not מוֹרָד descent)
     'הַפְּלָיָה': 'פלה', 'פְּלִיָּה': 'פלה',                         // "the inequality" (הַפְלָיָה, not Pelaiah)
+    // Alma 1 audit (2026-09-13)
+    'דּוֹאֲגִים': 'דאג',                                        // "worried" (דָּאַג, not Doeg)
+    'מִיתַת': 'מות', 'מִיתָתוֹ': 'מות',                            // "a death of" (מִיתָה, not Jetheth)
+    'וְנָאִים': 'נאה',                                          // "and comely" (נָאֶה, not No/Thebes)
+    'וַנֵּאוֹת': 'אות',                                         // "and agreed" (נֵאוֹת)
+    'מֵהִתְפַּשֵּׁט': 'פשט',                                      // "from spreading"
+    'הַלּוֹמֵד': 'למד',                                         // "the learner"
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2027,6 +2034,7 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'דּוֹאֵג': { name: 'H1673', word: 'דאג', en: /Doeg/ },          // Doeg / is troubled (Alma 1 heading)
     'פְּלָיָה': { name: 'H6411', word: 'פלה', en: /Pelaiah/ },       // Pelaiah / inequality (Mosiah 29)
     'וּפְלָיָה': { name: 'H6411', word: 'פלה', en: /Pelaiah/ },
     'עׇפְרָה': { name: 'H6084', word: 'עפר', en: /Ophrah/ },        // Ophrah / ore (Mosiah 21)
