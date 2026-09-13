@@ -1173,7 +1173,7 @@
     'וִיעֻנּוּ': 'H6031', 'יְעֻנּוּ': 'H6031',                // "afflicted" (pual of ענה II, not answer / shovel)
     'קֹוִים': 'H6960',                                     // "wait" (קָוָה, not קַו line)
     // 2 Nephi 7 audit (2026-09-13)
-    'גֵּוּוֹ': 'גו', 'גֵוִי': 'גו',                          // "his body", "my back" (גֵּו, not a one-word family / nation)
+    'גֵּוּוֹ': 'H1460', 'גֵוִי': 'H1460',                    // "his body", "my back" (גֵּו, not a one-word family / nation)
     'הִזְנַחְתִּיךְ': 'זנח',                                 // "have I cast you off" (one-word family)
     'בַעַל': 'בעל',                                        // "who is [master of my judgment]" (attested top lemma was Baal-Peor)
     'בְּאוּר': 'אור',                                       // "in the light of [your fire]" (was the name Ur)
@@ -1594,7 +1594,8 @@
       'גִדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },            // brought up · Giddel
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
-      'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ }               // mighty · Gaza (2 Nephi 4)
+      'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+      'שִׁמְעִי':    { name: 'H8096', word: 'H8085', en: /Shimei/ }             // hear! (fs) · Shimei (2 Nephi 8)
     };
     var _HG_BLIND = /[ּֽֿ]/g;
     var _HG_INDEX = null;
@@ -2865,6 +2866,9 @@
     return _unfold(_keyOf(hg.en.test(String(gloss)) ? hg.name : hg.word)) || '';
   }
   function getRoots(hw, gloss) {
+    /* A letter-numeral — נא, וְנב, א–ב in a heading glossed "51", "and 52",
+       "1–2" — is not a word; without this guard נב walks to the town Nob. */
+    if (/^(and\s+)?\d+([–-]\d+)?$/.test(String(gloss || '').trim())) return [];
     var w = _clean(hw);
     var parts = _pieces(w);
     if (parts.length <= 1) {
