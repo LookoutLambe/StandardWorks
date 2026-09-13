@@ -1497,6 +1497,18 @@
     'כָּתְלֵי': 'כתל',                                         // "the walls of" (כֹּתֶל, not תְּלִי quiver)
     'תִּלֵּי': 'תלל',                                          // "heaps of" (תֵּל mound)
     'וּבְרָעוֹתָם': 'רֹעֶה', 'וּרְעוּ': 'רֹעֶה',                     // "while they were tending", "and feed" (רָעָה, not the name Reu)
+    // Mosiah 12 audit (2026-09-13)
+    'מְצַטְּטִים': 'צטט',                                      // "quote" (צִטֵּט)
+    'שׁוֹמְרֵי': 'שמר', 'הַשּׁוֹמֵר': 'שמר',                       // "any who kept", "the guard" (שָׁמַר, not the name Shomer)
+    'גַּבָּם': 'גב',                                           // "their backs" (גַּב)
+    'בְּהַבְשִׁילוֹ': 'בשל',                                     // "it is ripe" (הִבְשִׁיל, not Shiloh)
+    'תִשֹּׁב': 'נשב', 'תִּשֹּׁב': 'נשב',                          // "if blows" (נָשַׁב)
+    'תָּשֹׁב': 'שוב',                                          // "return" (שׁוּב)
+    'לְיַשֵּׁב': 'ישב', 'וַיַּשֵּׁב': 'ישב', 'יַשֵּׁב': 'ישב',          // "to settle" (יִשֵּׁב, not נָשַׁב blow)
+    'הַנִּשְׁבִּים': 'שבה',                                      // "those who were taken captive" (נִשְׁבָּה)
+    'עִקַּשְׁתֶּם': 'עקש',                                       // "you have perverted"
+    'וַחֲרֹד': 'חרד',                                          // "and tremble" (חָרַד, not En-harod)
+    'הֲתָבֹא': 'בוא',                                          // "does come"
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1919,6 +1931,7 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'הַקּוֹץ': { name: 'H6976', word: 'קוץ', en: /Coz|Hakkoz/ },   // Hakkoz / the thistle
     'רְעוּ': { name: 'H7466', word: 'רֹעֶה', en: /Reu/ },           // Reu / feed! (Mosiah 11)
     'רָחָב': { name: 'H7343', word: 'רחב', en: /Rahab/ },           // Rahab / wide, spacious
     'זִיפָם': { name: 'H2128', word: 'זיף', en: /Ziph/ },          // Ziph / ziff, the Nephite metal
