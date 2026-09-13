@@ -946,7 +946,7 @@ window._rootGlossaryData = {
   "אליהם": {"meaning":"unto them","category":"Society"},
   "ספר": {"meaning":"(סִפֵּר) to tell, recount; (סָפַר) to count; (מִסְפָּר) number; (סֵפֶר) book; scribe; (סַפִּיר) sapphire, sapphires, stone","category":"Society"},
   "בו": {"meaning":"(בּוֹ) in him, in it, against him","category":"Particle"},
-  "אתם": {"meaning":"you","category":"Motion"},
+  "אתם": {"meaning":"Ethem — a Jaredite king, son of Ahah","category":"Names"},
   "אמת": {"meaning":"(אֱמֶת) truth, faithfulness; in truth, verily, of a surety; (אֲמִתִּי) true, real","category":"Quality"},
   "אותם": {"meaning":"them","category":"Uncategorized"},
   "עשות": {"meaning":"do","category":"Action"},
