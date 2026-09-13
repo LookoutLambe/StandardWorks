@@ -1208,6 +1208,9 @@
     'בְּאִי': 'H0339', 'אִיֵּי': 'H0339',                      // "isle of", "isles of" (אִי island, not אֵי where)
     'תְּהַלְלוּהוּ': 'הלל',                                   // "you may praise him" (one-word family)
     'הֲאֵין': 'אין', 'הַאֵַין': 'אין',                        // "is there not" (אֵין, not אִי island)
+    // 2 Nephi 11 audit (2026-09-13)
+    'וְדַמּוּ': 'דמה',                                        // "and you may liken" (was blood)
+    'מוֹעֲדֵיהֶם': 'H4150', 'וּמוֹעֲדֵיהֶם': 'H4150', 'וּבְמוֹעֲדֵיהֶם': 'H4150', // "their appointed times" (מוֹעֵד, not עֵד witness)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
