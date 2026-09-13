@@ -1733,6 +1733,18 @@
     'וּמְשֻׁחְרָרִים': 'שחרר',                                    // "and loosed" (heading)
     'דּוֹחִים': 'דחה',                                          // "reject" (heading; דָּחָה, not הֵדִיחַ rinse)
     'יַלְקוּם': 'לקה',                                          // "scourge them" (הִלְקָה, not לָקַק lick)
+    // Alma 24 audit (2026-09-13)
+    'בּוֹחֲרִים': 'בחר', 'הַבּוֹחֲרִים': 'בחר', 'חֹרִים': 'H2715', 'וְנִכְוִים': 'כוה',                                        // "choose" (heading; not the Horites)
+    'וּלְהוֹכִיחֵנוּ': 'יכח',                                     // "to convince us" (הוֹכִיחַ, not חָנָה camp)
+    'כִּתְמֵנוּ': 'כתם', 'כְּתָמֵינוּ': 'כתם', 'כִתַּמְנוּ': 'כתם',       // "our stain", "stained" (כֶּתֶם, not תָּמַם)
+    'נְטַלְנוּם': 'נטל',                                        // "used them"
+    'וּבְכָרְתָם': 'כרת',                                       // "and cutting" (כָּרַת, not בְּכוֹר firstborn)
+    'בַּלּוֹת': 'בלה',                                          // "spend" (בִּלָּה, not the Aramaic tribute)
+    'נִכָּווּ': 'כוה',                                          // "they were stung" (נִכְוָה, not Necho)
+    'הוּאַר': 'אור',                                           // "enlightened" (not the Nile)
+    'וַיֵּרְעוּ': 'רעע',                                        // "they become worse" (not יְרִיעָה curtain)
+    'וַעֲמוּלוֹנִים': 'העמולונים',                                 // "and Amulonites"
+    'זְרוֹעָם': 'זרוע',                                         // "their arms" (זְרוֹעַ, not זֶרַע seed)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

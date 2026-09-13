@@ -10,6 +10,10 @@ final class LocalSiteWebViewLogger: NSObject, WKNavigationDelegate {
     }
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         NSLog("[WebView] didFinish: \(webView.url?.absoluteString ?? "nil")")
+        // A navigation rebuilds the scroll view's zoom state from the new
+        // page's viewport, so the clamp has to be re-applied per page and not
+        // once at construction. See pinLayoutScale for why.
+        LocalSiteWebView.pinLayoutScale(webView)
     }
 }
 
@@ -58,14 +62,65 @@ struct LocalSiteWebView: UIViewRepresentable {
             injectionTime: .atDocumentStart,
             forMainFrameOnly: false))
 
+        // Pinch-to-zoom off (2026-09-13). The reader sizes its own text with
+        // A+/A-; a pinch shrank the whole layout inside the viewport instead,
+        // which left a band of bare paper beside the column — on the LEFT,
+        // because the Hebrew column is right-aligned — and no gesture in the
+        // app put it back except pinching out again.
+        //
+        // scrollView.minimumZoomScale/maximumZoomScale alone did NOT hold it:
+        // WKWebView derives its own zoom range from each page's viewport meta
+        // and re-applies it on every navigation, overwriting whatever the
+        // scroll view was set to at construction. The viewport is therefore
+        // where the fix belongs, and the pages ship none of these keys:
+        // `width=device-width, initial-scale=1, viewport-fit=cover`.
+        //
+        // This is a user script rather than an edit to the shipped HTML on
+        // purpose: the same files serve sefermormon.com, where pinch-zoom is
+        // an accessibility affordance (WCAG 1.4.4) and must stay. The app is
+        // the only surface that has A+/A- as its replacement, so the app is
+        // the only surface that clamps. `config.ignoresViewportScaleLimits`
+        // is false by default, which is what makes WKWebView honour these.
+        let viewportScript = """
+        (function () {
+          function clamp() {
+            var head = document.head || document.getElementsByTagName('head')[0];
+            if (!head) return false;
+            var m = head.querySelector('meta[name="viewport"]');
+            if (!m) {
+              m = document.createElement('meta');
+              m.setAttribute('name', 'viewport');
+              m.setAttribute('content', 'width=device-width, initial-scale=1, viewport-fit=cover');
+              head.appendChild(m);
+            }
+            var c = m.getAttribute('content') || '';
+            var parts = c.split(',').map(function (s) { return s.trim(); }).filter(Boolean)
+              .filter(function (s) { return !/^(user-scalable|minimum-scale|maximum-scale)\\s*=/i.test(s); });
+            parts.push('minimum-scale=1', 'maximum-scale=1', 'user-scalable=no');
+            m.setAttribute('content', parts.join(', '));
+            return true;
+          }
+          if (!clamp()) {
+            // documentStart can beat the parser to <head>; catch it the moment
+            // it appears rather than waiting for DOMContentLoaded.
+            var obs = new MutationObserver(function () { if (clamp()) obs.disconnect(); });
+            obs.observe(document.documentElement, { childList: true, subtree: true });
+          }
+          document.addEventListener('DOMContentLoaded', clamp);
+        })();
+        """
+        config.userContentController.addUserScript(WKUserScript(
+            source: viewportScript,
+            injectionTime: .atDocumentStart,
+            forMainFrameOnly: false))
+
         let webView = WKWebView(frame: .zero, configuration: config)
         webView.navigationDelegate = context.coordinator
         webView.isOpaque = true
         webView.backgroundColor = UIColor.systemBackground
         webView.scrollView.backgroundColor = UIColor.systemBackground
         webView.scrollView.contentInsetAdjustmentBehavior = .automatic
-        webView.scrollView.minimumZoomScale = 1.0
-        webView.scrollView.maximumZoomScale = 1.0
+        LocalSiteWebView.pinLayoutScale(webView)
         webView.allowsBackForwardNavigationGestures = true
 
         let indexURL = wwwDirectoryURL.appendingPathComponent("index.html")
@@ -78,4 +133,21 @@ struct LocalSiteWebView: UIViewRepresentable {
     }
 
     func updateUIView(_ webView: WKWebView, context: Context) {}
+
+    /// Hold the page at 1:1. The viewport user script is what actually stops
+    /// WKWebView from offering a zoom range; these three are the native half,
+    /// and they have to be re-set after every navigation because WKWebView
+    /// rebuilds the scroll view's zoom state from each new page.
+    ///
+    /// `pinchGestureRecognizer` is the one that stops the gesture outright, so
+    /// a page that rewrites its own viewport later cannot hand it back. Panning
+    /// and long-press selection are separate recognizers and are untouched.
+    static func pinLayoutScale(_ webView: WKWebView) {
+        let scroll = webView.scrollView
+        scroll.minimumZoomScale = 1.0
+        scroll.maximumZoomScale = 1.0
+        scroll.bouncesZoom = false
+        scroll.pinchGestureRecognizer?.isEnabled = false
+        if scroll.zoomScale != 1.0 { scroll.setZoomScale(1.0, animated: false) }
+    }
 }
