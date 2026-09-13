@@ -219,6 +219,7 @@ window._rootGlossaryData = {
   "פטפט": {"meaning":"(פִּטְפֵּט) to babble, to prate; (פַּטְפְּטָן) a babbler","category":"Speech"},
   "פרוטה": {"meaning":"(פְּרוּטָה) a peruta — the smallest coin, the farthing of the widow’s mite","category":"Society"},
   "מיל": {"meaning":"(מִיל) a mile — the Roman mile of a thousand paces","category":"Quantity"},
+  "חרדל": {"meaning":"(חַרְדָּל) mustard — the mustard seed of the parable","category":"Nature"},
   "מטרה": {"meaning":"(מַטָּרָה) purpose, aim; target, mark","category":"Lexical"},
   "סרב": {"meaning":"(סֵרֵב) to refuse; (סָרָב) thorn, brier","category":"Lexical"},
   "H3885": {"meaning":"(לוּן) to lodge, pass the night; (הִלִּין) to murmur, complain","category":"Lexical"},

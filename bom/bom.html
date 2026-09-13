@@ -1774,6 +1774,7 @@ body.dual-mode .chapter-summary { display: block; }
       <div style="margin:24px 0 4px">
         <button id="start-reading-btn" onclick="startReading()">Start Reading — 1 Nephi 1 →</button>
         <div style="margin-top:14px;font-size:0.95em;direction:ltr"><a href="#intro" class="landing-preface-link" onclick="navTo('intro');return false;">To the Reader — the translator’s preface →</a></div>
+        <div style="margin-top:8px;font-size:0.95em;direction:ltr"><a href="../vocabulary.html" class="landing-preface-link" onclick="try{if(window.NavEngineMarkReturn)NavEngineMarkReturn(this.getAttribute('href'));}catch(e){}">The shortest way in — 300 roots carry 85% of this book →</a></div>
       </div>
       <hr class="landing-divider">
       <div id="landing-contents" class="landing-sections" style="text-align:initial"></div>
@@ -3488,7 +3489,7 @@ window.READER = window.READER || {
 <script src="../translit.js?v=5"></script>
 <script src="../jst_refmap.js?v=1"></script>
 <script src="../verse_loader.js?v=5"></script>
-<script src="../root_scorecard.js?v=381"></script>
+<script src="../root_scorecard.js?v=382"></script>
 <script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
 <!-- Reference data (cross-references, glossary, roots, topical guide: ~2.4 MB)
      is deferred: it is consumed only after load (cross-ref markers at +500 ms,
@@ -3496,7 +3497,7 @@ window.READER = window.READER || {
      the first paint of the chapter. -->
 <!-- crossrefs.js (785 KB) is split per book into crossrefs/<book>.js by
      tools/build_crossref_chunks.js and fetched with the book — bom_book_loader.js -->
-<script defer src="roots_glossary.js?v=297"></script>
+<script defer src="roots_glossary.js?v=298"></script>
 <!-- bom_inverse_crossrefs.js (632 KB) is split the same way into
      inverse_crossrefs/<book>.js -->
 <script src="chapter_headings.js"></script>
@@ -3834,7 +3835,7 @@ try {
 } catch(e) {}
 </script>
 <script defer src="../shoroshim_roots.js?v=3"></script>
-<script src="../root_engine.js?v=319"></script>
+<script src="../root_engine.js?v=320"></script>
 <script>
 
 // PREV / NEXT CHAPTER NAVIGATION (bottom bar)
@@ -8576,7 +8577,7 @@ try {
 
 <script src="../site_chrome.js?v=49" data-sw-volume="bom"></script>
 <script src="../verse_search.js?v=3"></script>
-<script src="../nav_engine.js?v=87"></script>
+<script src="../nav_engine.js?v=88"></script>
 <script src="./bom_phrase_breaks.js" defer></script>
 <script src="../imperatives.js" defer></script>
 <script src="../read_aloud.js?v=33"></script>
