@@ -2281,6 +2281,9 @@
     // Moses 8 audit (2026-09-13)
     'נַעֲנְתָה': 'ענה',   // "heeded" was H6067 Anath, Shamgar's father
     'גּוֹזֵר': 'גזר',
+    // Abraham 2 audit (2026-09-13) — the pronoun-with-suffix leftovers
+    'וּבְךָ': 'בך', 'וָבָךְ': 'בך', 'כָּהֶם': 'להם', 'לְהוֹם': 'להם', 'לָּכֶם': 'לכם',
+    'הֲלָנוּ': 'לָנוּ', 'לַנָא': 'לָנוּ', 'וְלָנוּ': 'לָנוּ',   // "and to us" was לוּן, to lodge
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
