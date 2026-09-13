@@ -1245,6 +1245,18 @@
     'הֵילֵל': 'הֵילֵל',                                       // "O Lucifer" (הֵילֵל shining one, not הָלַל praise; H1966 walks to הלל)
     'מְרִידָתוֹ': 'מרד',                                      // "his rebellion" (מְרִידָה, not יָרַד descend)
     'וּבָהּ': 'בה',                                           // "and in it" (one-word family)
+    // 2 Nephi 25 audit (2026-09-13)
+    'בִּבְהִירוּת': 'בהר',                                     // "in clarity" (בְּהִירוּת, not יָרָה teach)
+    'תֵּאָמַנְנָה': 'אמן',                                     // "shall be believed" (one-word family)
+    'צֵאתִי': 'יצא',                                          // "I came out" (one-word family)
+    'כּוֹתְבָם': 'כתב',                                        // "write them" (one-word family)
+    'נְכֹחָתִי': 'נכח',                                        // "my plainness" (נְכֹחָה, not יָכַח reprove)
+    'תִּשָּׁלַמְנָה': 'שלם',                                    // "shall be fulfilled" (one-word family)
+    'נְבוּאָתִי': 'נבא',                                       // "my prophecy" (נְבוּאָה, not בּוֹא come)
+    'וְנִרְאוֹתוֹ': 'ראה',                                     // "and hath manifested himself" (was יָרֵא fear)
+    'וְיִסְּרָם': 'יסר',                                       // "and hath scourged them" (יִסַּר chastise, not סוּר)
+    'מְצַפִּים': 'צפה', 'וּמְצַפִּים': 'צפה',                    // "look forward" (צָפָה watch, not the name Tsophim)
+    'נְשִׁיכַת': 'נשך',                                        // "the biting of" (one-word family)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
