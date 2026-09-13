@@ -1784,6 +1784,8 @@
     // Alma 37 audit (2026-09-13)
     'יָבִישׁ': 'יבש', 'יְדוּעִים': 'ידע', 'וְיָדוּעַ': 'ידע', 'בְיָדוּעַ': 'ידע', 'יְדוּעָה': 'ידע', 'לִמַּדְתִּים': 'למד', 'לְמַד': 'למד', 'הַנֶּעֱווֹת': 'עוה', 'הֱשִׁיבוּם': 'שוב', 'בַּהֲשִׁיבוֹ': 'שוב', 'הַנִּרְצָחִים': 'רצח', 'וּלְקִשְׁרֵי': 'קשר', 'לִיאַהוֹנָה': 'ליהונה', 'גָזֶלֶם': 'גזלם', 'יַנְחֲךָ': 'נחה', 'לַמְּדֵם': 'למד', 'וּלְמַד': 'למד', 'לְמַד': 'למד',
     // doth confound (הוֹבִישׁ), incorrect (נַעֲוֶה, not נוּעַ move), brought back, murdered, combinations, Liahona's second spelling, Gazelem (the seer stone, not גָּזַל rob), direct you (הִנְחָה, not נִחַם comfort), learn and teach them (לָמַד, not מָדַד measure or דָּם blood), known (not Jaddua)
+    // Alma 38 audit (2026-09-13)
+    'רְסוּ': 'רסן', 'תִרְסֹן': 'רסן',                              // "are bridled", "you bridle" (רִסֵּן, not רָסַס sprinkle)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
