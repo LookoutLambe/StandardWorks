@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "תוה": {"meaning":"(תָּוָה) to mark, make a mark; (תָּו) mark, sign","category":"Action"},
   "נֶהֱנָה": {"meaning":"(נֶהֱנָה) to enjoy, benefit from; (הֲנָאָה) enjoyment, benefit","category":"Emotion"},
   "פלה": {"meaning":"(הִפְלָה) to distinguish, set apart, make a difference; (נִפְלָה) to be distinct; (הַפְלָיָה) discrimination, inequality","category":"Society"},
   "H8550": {"meaning":"(תֻּמִּים) Thummim — with the Urim, the interpreters","category":"Theology"},

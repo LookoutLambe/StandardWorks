@@ -1612,6 +1612,10 @@
     'וַנֵּאוֹת': 'אות',                                         // "and agreed" (נֵאוֹת)
     'מֵהִתְפַּשֵּׁט': 'פשט',                                      // "from spreading"
     'הַלּוֹמֵד': 'למד',                                         // "the learner"
+    // Alma 3 audit (2026-09-13)
+    'סִמְּנוּ': 'סמן', 'לָמָנִי': 'הלמנים', 'בְּמִצְחוֹתֵיהֶם': 'מצח', 'בְּהָחֵלָּם': 'חלל',
+    'בְּמִצְחוֹתָם': 'מצח', 'מְמֻנֶּה': 'מנה', 'הַמְמֻנֶּה': 'מנה', 'הַמְּמֻנָּה': 'מנה', 'וּמַנּוּ': 'מנה',   // foreheads; appointed (מִנָּה, not מִן from)
+    // marked (סִמֵּן, not סַם spice), a Lamanite (not מִן from), foreheads (מֵצַח, not צַח bright), began (הֵחֵל, not חָלַם dream)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
