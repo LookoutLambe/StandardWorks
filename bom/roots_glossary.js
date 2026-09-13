@@ -714,7 +714,7 @@ window._rootGlossaryData = {
   "שפל": {"meaning":"(שָׁפָל) low, lowly; (שְׁפֵלָה) the Shephelah; (שִׁפְלוּת) lowliness, worthlessness","category":"Uncategorized"},
   "שכח": {"meaning":"(שָׁכַח) to forget","category":"Mind"},
   "כנף": {"meaning":"(כָּנָף) wing; skirt, corner","category":"Body"},
-  "כלא": {"meaning":"(כֶּלֶא) prison; (כָּלָא) to shut up, restrain; (מִכְלָה) fold, sheepfold","category":"Law"},
+  "כלא": {"meaning":"(כֶּלֶא) prison; (כָּלָא) to shut up, restrain; (מִכְלָא) fold, sheepfold","category":"Law"},
   "שכם": {"meaning":"(הִשְׁכִּים) to rise early; (שְׁכֶם) shoulder","category":"Action"},
   "לכד": {"meaning":"(לָכַד) to capture, take, catch; (מַלְכֹּדֶת) trap","category":"War"},
   "מאס": {"meaning":"(מָאַס) to reject, refuse, despise","category":"Emotion"},
