@@ -1412,6 +1412,18 @@
     'תּוֹעִילוּ': 'יעל', 'תוֹעִילוּ': 'יעל',   // "you may profit" (one-word family; both spellings)
     'אַכְרִיז': 'כרז',                                        // "I shall proclaim" (one-word family)
     'בִּשְׁמִירַת': 'שמר',                                     // "in keeping" (שָׁמַר, not the town Shamir)
+    // Mosiah 2 audit (2026-09-13)
+    'וְרוּחָנִיּוּתָהּ': 'רוח',                                 // "and its spirituality" (heading; one-word family)
+    'מְיַעֲצָם': 'יעץ',                                        // "counsels them" (יָעַץ, not עֶצֶם bone)
+    'וַיּוֹרֵם': 'ירה',                                        // "and he taught them" (הוֹרָה, not the name Joram)
+    'בְּנוֹתָיו': 'H1323', 'מִבְּנוֹתָיו': 'H1323', 'וּבְנוֹתֵיהֶן': 'H1323', 'וּבְנוֹתָם': 'H1323',   // "daughters" (בַּת, not בֵּן son)
+    'לִכְלֹא': 'כלא',                                         // "to be confined" (כָּלָא, not לֹא not)
+    'אַאֲשִׁימְכֶם': 'אשם',                                     // "I might accuse you" (one-word family)
+    'נוֹצַרְתֶּם': 'יצר',                                      // "you were created" (niphal of יָצַר, not נָצַר keep)
+    'בְּנַסּוֹתִי': 'נסה', 'בְּנַסּוֹתָם': 'נסה', 'בְּנַס': 'נסה',   // "while attempting" (נִסָּה; the בְּ had become a root letter)
+    'לְהַכִּיר': 'נכר',                                        // "to the knowledge of" (הִכִּיר, not כִּיר)
+    'נַכִּיר': 'נכר', 'יַכִּירֻהוּ': 'נכר',                      // "we recognize", "they recognize him" (same)
+    'יוֹרֵם': 'ירה',                                          // "he teaches them" (הוֹרָה, not the king Joram)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
