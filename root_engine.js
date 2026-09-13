@@ -1429,6 +1429,18 @@
     'וּדְמֻיּוֹת': 'דמה',                                      // "and types" (דְּמוּת, not blood)
     'לְפַתּוֹת': 'פתה',                                        // "to the enticings of" (פִּתָּה, not לָפַת turn)
     'לְהַטִּיל': 'טול',                                        // "to inflict" (הֵטִיל; one-word family)
+    // Mosiah 4 audit (2026-09-13)
+    'בִּבְשָׂרָם': 'בשר',                                      // "in their own carnal state" (בָּשָׂר, not שָׂרַר rule)
+    'רֵעַי': 'H7453',                                         // "my friends" (רֵעַ; one-word family of 15)
+    'הֵעִירָה': 'עור',                                        // "has awakened" (הֵעִיר, not עִיר city)
+    'אַפְסוּתְכֶם': 'אפס', 'וְאַפְסוּתְכֶם': 'אפס',                // "your nothingness" (one-word families)
+    'לַנִּצְרָכִים': 'צרך', 'לַנִּצְרָךְ': 'צרך',                  // "those that stand in need" (נִצְרָךְ, not נָצַר keep)
+    'מִלַּחְמִי': 'לחם',                                       // "of my food" (לֶחֶם, not the Bethlehemite)
+    'עֳנָשָׁיו': 'ענש',                                        // "his punishments" (one-word family)
+    'וּתְחַיְּבוּ': 'חוב',                                      // "and condemn" (חִיֵּב; one-word family)
+    'הַמּוֹנְעִים': 'מנע',                                      // "who deny" (מָנַע withhold, not נָעַם pleasant)
+    'יִזְכֶּה': 'זכך',                                        // "he might win" (זָכָה gain, not be translucent)
+    'הִסְכִּים': 'סכם',                                        // "he agreed" (הִסְכִּים, not the name Sarsekim)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
