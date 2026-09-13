@@ -2219,6 +2219,12 @@
     'שִׁכְמֵי': 'שכם',   // "upon the shoulders of" was H7930, the Shechemites
     // Ether 11 audit (2026-09-13)
     'שׁוֹלְטוֹת': 'שלט', 'הַגְּמוּרָה': 'גמר', 'וְאֶתֶם': 'אתם',
+    // Ether 12 audit (2026-09-13)
+    'אִפְשְׁרָה': 'אפשר', 'הֵזִיז': 'זוז',   // "moved" was זִיז, the beasts of the field
+    'וּמוּצָקִים': 'יצק', 'לְהִשְׁתַּתֵּף': 'שתף', 'וּלְהִשְׁתַּתֵּף': 'שתף',
+    'עָשׂוּם': 'עשה',   // "wrought them" was H6215 Esau
+    'בְּכׇתְבֵנוּ': 'כתב',   // "in our writing" was בָּנָה, to build
+    'בְּשִׂימַת': 'שום',   // "in the placing of" was Bosmath
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

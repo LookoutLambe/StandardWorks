@@ -6606,7 +6606,7 @@ window._rootGlossaryData = {
   "נמנעו": {"meaning":"they refrained","category":"Uncategorized"},
   "את־הכל": {"meaning":"[ACC] all","category":"Quality"},
   "־צדק׃": {"meaning":"all righteousness","category":"Quality"},
-  "זוז": {"meaning":"(מְזוּזָה) doorpost","category":"Uncategorized"},
+  "זוז": {"meaning":"(זָז) to move, budge; (הֵזִיז) to move something, to shift it; (מְזוּזָה) doorpost","category":"Uncategorized"},
   "חיב": {"meaning":"must/obligated","category":"Uncategorized"},
   "את־חייך": {"meaning":"[ACC] your life","category":"Uncategorized"},
   "אבי׃": {"meaning":"my father","category":"Family"},
