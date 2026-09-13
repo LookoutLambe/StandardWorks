@@ -2269,6 +2269,8 @@
     'שָׁבַתִּי': 'שבת',   // "I had rested" was שׁוּב, to return
     'וָאֶפַּח': 'פוח',
     'לָאֲוִיר': 'אויר', 'הָאֲוִיר': 'אויר', 'בַּאֲוִיר': 'אויר', 'בָּאֲוִיר': 'אויר', 'בָאֲוִיר': 'אויר',   // the air: one form sat in אוֹר the light, the rest in families of one
+    // Moses 4 audit (2026-09-13)
+    'בְּהִתְהַלְּכָם': 'הלך',   // "as they were walking" was הָלַל, to praise — every other הִתְהַלֵּךְ was already right
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
