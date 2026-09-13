@@ -1803,6 +1803,14 @@
     'תְּנַסֶּה': 'נסה',                                         // "you do try" (נִסָּה, not נוּס flee)
     'בְּמוֹתָם': 'מות',                                        // "in their death" (מָוֶת, not בָּמָה high place)
     'וְתַאֲוָנִיִּים': 'אוה', 'הַהֲכָנָה': 'כון',                     // "sensual", "the preparation"
+    // Alma 43 audit (2026-09-13)
+    'חֵרוּתָם': 'חרר',                                        // "their liberty" (heading; חֵרוּת)
+    'וְדָתָם': 'דת',                                           // "and their religion" (דָּת, not "according to the measure")
+    'וּמְצַוָּם': 'צוה',                                        // "and commander" (מְצַוֶּה, not צוֹם a fast)
+    'מִשִּׁרְיוֹנֵיהֶם': 'שרין', 'תָּגִנּוּ': 'גנן', 'וַיְעוֹרֵר': 'עור',   // breastplates, you shall defend, inspired
+    'בְּהַכִּירוֹ': 'נכר',                                       // "perceiving" (הִכִּיר, not יָרָה teach)
+    'בֶּהֱלָתָם': 'בהל',                                       // "their terror" (בֶּהָלָה, not תָּמַם)
+    'חָבוּ': 'חוב',                                           // "they owed" (חָב, not חָבַב cherish)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
