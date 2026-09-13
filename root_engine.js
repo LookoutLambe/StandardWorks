@@ -2126,6 +2126,9 @@
     'וְקוּמֵנוֹנְהִי': 'קומנונהי',
     'וְשֶׁמְנוֹן': 'שמנון',   // Shemnon, not H5126 Nun
     'וּמַתּוֹנִיהָה': 'מתוניהה',
+    // 3 Nephi 20 audit (2026-09-13)
+    'בְּאַמֶרִיקָה': 'אמריקה', 'הָאַמֶרִיקוֹת': 'אמריקה',
+    'מִגְּוִיָּתִי': 'גוה',   // "of my body" (גְּוִיָּה), not H1471 גּוֹי nation
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2552,7 +2555,8 @@
       'גִדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },            // brought up · Giddel
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
-      'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+      'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },
+      'מִשְׁחַת':   { name: 'שחת', word: 'משח', en: /marr/i },   // Isa. 52:14 "so marred" is שָׁחַת, every other מִשְׁחַת is the Anointed              // mighty · Gaza (2 Nephi 4)
     'מֵעֵין': { name: 'H5872', word: 'עין', en: /En-/ },   // from En-gedi / out of the eye of (3 Nephi 14)
     'נֵר': { name: 'H5369', word: 'ניר', en: /\bNer\b/ },             // Ner the father of Abner / a lamp (3 Nephi 12)
     'וְנֵר': { name: 'H5369', word: 'ניר', en: /\bNer\b/ },
