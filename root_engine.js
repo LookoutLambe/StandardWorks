@@ -2274,6 +2274,8 @@
     // Moses 5 audit (2026-09-13)
     'מוֹלִידִים': 'ילד', 'מוֹלִידוֹת': 'ילד', 'מוֹלִידוֹ': 'ילד',   // "bring forth", "they do gender" — H4140 is Molid the man
     'מוֹרֵד': 'מרד',   // "rebels" was H4174 מוֹרָד, a descent
+    // Moses 6 audit (2026-09-13)
+    'וֶאֱנוֹשׁ': 'אנש', 'עֲשָׂאכֶם': 'עשה',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2701,6 +2703,7 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },
+      'מָרָה':      { name: 'מרה', word: 'מרר', en: /rebel|disobedien/i },   // eleven uses are "bitter", two are מָרָה to rebel
       'מוֹלִיד':    { name: 'H4140', word: 'ילד', en: /Molid/ },   // "begets" six times, Molid once
       'רָמָה':      { name: 'H7414', word: 'רום', en: /Rama/ },   // the hill Ramah, not רוּם
       'רָצָה':     { name: 'רצה', word: 'רוץ', en: /pleas|desir|will|would|disposed/i },   // "she ran forth" is the only רוּץ
