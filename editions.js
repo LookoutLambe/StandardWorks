@@ -14,7 +14,7 @@
       blurb: 'The whole Book of Mormon with its English gloss set under every Hebrew word, two columns to a large page. The edition this site’s interlinear view is printed from.' },
     { key: 'hebrew', title: 'Full Hebrew Edition', name: 'Sefer Mormon: the Book of Mormon in Hebrew',
       format: 'Soft Cover', spec: 'Softcover · 6 × 9 in', seller: 'Amazon', href: 'https://www.amazon.com/dp/B0DVTJC9HJ',
-      w: 600, h: 900, img: 'cover-hebrew.jpg?v=6', alt: 'Hebrew Book of Mormon',
+      w: 600, h: 900, img: 'cover-hebrew.jpg?v=7', alt: 'Hebrew Book of Mormon',
       blurb: 'The Hebrew text alone, pointed, verse by verse, in a reader’s volume. Nothing on the page but the Book of Mormon in the Hebrew of the prophets.' },
     { key: 'footnote', title: 'Footnote Edition', name: 'Sefer Mormon: Footnote Edition, blue linen hardcover',
       format: 'Blue Linen · Dust Jacket', spec: 'Hardcover · Blue linen · Dust jacket', seller: 'Lulu',
@@ -23,11 +23,11 @@
       blurb: 'The Hebrew text with the translator’s footnotes, bound in blue linen under a dust jacket. The edition for the shelf.' },
     { key: 'dual', title: 'Dual Language Edition', name: 'Sefer Mormon: Dual Language Edition, Hebrew and English',
       format: 'Soft Cover', spec: 'Softcover · 7 × 10 in', seller: 'Amazon', href: 'https://www.amazon.com/dp/B0GGQZG9K9',
-      w: 629, h: 900, img: 'cover-dual.jpg?v=2', alt: 'Dual Language Book of Mormon',
+      w: 629, h: 900, img: 'cover-dual.jpg?v=3', alt: 'Dual Language Book of Mormon',
       blurb: 'Hebrew on the left page and the English on the right, verse for verse, for reading the two side by side.' },
     { key: 'triple', title: 'Triple Combination', name: 'Sefer Mormon: Triple Combination in Hebrew',
       format: 'Soft Cover', spec: 'Softcover', seller: 'Amazon', href: 'https://www.amazon.com/dp/B0H11CV516',
-      w: 600, h: 900, img: 'cover-triple.jpg?v=5', alt: 'Triple Combination',
+      w: 600, h: 900, img: 'cover-triple.jpg?v=6', alt: 'Triple Combination',
       blurb: 'The Book of Mormon, the Doctrine and Covenants and the Pearl of Great Price in Hebrew, bound as one volume.' }
   ];
   function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
