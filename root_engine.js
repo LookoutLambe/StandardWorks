@@ -2249,6 +2249,10 @@
     // Moroni 8 audit (2026-09-13)
     'וִיכֹלִים': 'יכל',   // "and capable" was הִכְלִים, to put to shame
     'וּמַכִּיר': 'נכר',
+    // Moroni 9 audit (2026-09-13)
+    'מְעַנִּים': 'H6031',   // "afflicted" was לְמַעַן, for the sake of
+    'יִשְׁרוּ': 'ישר',   // "make straight" was שַׂר, a prince
+    'נוּבָא': 'בוא',   // "we should be brought" was נָבָא, to prophesy
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
