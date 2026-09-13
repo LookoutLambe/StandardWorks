@@ -126,7 +126,24 @@ struct LocalSiteWebView: UIViewRepresentable {
         webView.scrollView.backgroundColor = UIColor.systemBackground
         webView.scrollView.contentInsetAdjustmentBehavior = .automatic
         LocalSiteWebView.pinLayoutScale(webView)
-        webView.allowsBackForwardNavigationGestures = true
+        // The horizontal swipe belongs to the page turn, not to history.
+        // A Hebrew book's spine is on the right, so turning FORWARD drags
+        // rightward — which is the very gesture iOS reads as "go back" when
+        // it starts near the leading edge. With this on, a forward page turn
+        // taken a little too close to the edge became a history pop instead,
+        // landing on the last chapter VISITED rather than the next one.
+        //
+        // The reader is one WKWebView holding index.html for the whole
+        // edition; every chapter is a pushState inside it, and the way back
+        // is the sidebar, the footer arrows and Return — none of which this
+        // gesture provides uniquely. Reading apps give horizontal swipe to
+        // the page for the same reason.
+        //
+        // The turn itself stays in nav_engine.js. Do NOT add a native
+        // recognizer for it: the double-tap handler that used to live here
+        // was a second copy of a gesture the web already owned, and it kept
+        // firing against classes the web copy no longer defined.
+        webView.allowsBackForwardNavigationGestures = false
 
         let indexURL = wwwDirectoryURL.appendingPathComponent("index.html")
         // loadFileURL is the App-Sandbox-friendly way to display bundled HTML.
