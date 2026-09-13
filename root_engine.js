@@ -1655,7 +1655,8 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
-      'שִׁמְעִי':    { name: 'H8096', word: 'H8085', en: /Shimei/ }             // hear! (fs) · Shimei (2 Nephi 8)
+      'שִׁמְעִי':    { name: 'H8096', word: 'H8085', en: /Shimei/ }, // hear! (fs) · Shimei (2 Nephi 8)
+      'שָׂרַי':     { name: 'H8297', word: 'H8269', en: /Sarai/ }              // my princes · Sarai (2 Nephi 20)
     };
     var _HG_BLIND = /[ּֽֿ]/g;
     var _HG_INDEX = null;
