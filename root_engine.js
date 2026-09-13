@@ -1661,6 +1661,10 @@
     'כְּהַחֵלִּי': 'חלל', 'הִבָּחֲרָם': 'בחר', 'וְהִוָּשְׁעָם': 'ישע', 'מַחֲלוֹת': 'חלה', 'אָבוּד': 'אבד', 'יַשְׁלִיכֻנִי': 'שלך', 'לְקַחְתֵּנִי': 'לקח',
     'לְהִוָּשֵׁעַ': 'ישע', 'וְהוֹשִׁעַ': 'ישע', 'אִבּוּד': 'אבד',   // to be saved (not Hoshea); lost, wasted
     // as I began (הֵחֵל, not חָלָה sick), favored (בָּחַר, not חָרַם), being saved (not Hoshea), diseases (מַחֲלָה), lost, cast me, take me
+    // Alma 10 audit (2026-09-13)
+    'פֵּרַשׁ': 'פרש', 'רָכַשְׁתִּי': 'רכש', 'תַאֲכִיל': 'אכל', 'לְעַקֵּשׁ': 'עקש', 'הַנֶּאֱמָרִים': 'אמר', 'הַמְּדַבֵּר': 'דבר', 'הוּעֲדוּ': 'עוד', 'תֻּכּוּ': 'נכה', 'בָּחַרְנוּ': 'בחר', 'כַּאֲמִתָּם': 'אמת', 'לְהַאֲשִׁים': 'אשם',
+    'עֵדוּתִי': 'עוד', 'לְעֵדוּתִי': 'עוד', 'יִתְעַדּוּ': 'עדה', 'תִתְעַדּוּ': 'עדה',   // my testimony, adorned (strays of the Iddo family)
+    // interpreted, acquired, feed, pervert, spoken, who speaks (not מִדְבָּר wilderness), accused (הוּעַד, not Iddo), smitten, selected (not Haran), truth, to accuse (not the fire offering)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
