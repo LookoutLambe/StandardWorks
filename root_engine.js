@@ -1488,6 +1488,15 @@
     'וּבַד': 'H0906',                                        // "and cloth" (בַּד linen, not לְבַד alone)
     'חֲגוֹרַת': 'חגר',                                        // "a girdle of" (חֲגוֹרָה)
     'סָפַרְנוּם': 'ספר',                                      // "we numbered them"
+    // Mosiah 11 audit (2026-09-13)
+    'נִפְתּוּ': 'פתה',                                         // "they were deceived" (נִפְתָּה, not נֹפֶת honeycomb)
+    'אֻמָּנָיו': 'אמן',                                        // "his workmen" (אֻמָּן craftsman)
+    'בִּלּוּ': 'בלה',                                          // "spent" (בִּלָּה)
+    'אַצִּילֵם': 'נצל',                                        // "will I deliver them" (הִצִּיל, not אֵצֶל beside)
+    'יְשֻׁעְבַּד': 'שעבד', 'יְשַׁעְבֵּד': 'שעבד',                     // "shall be brought into bondage" (שִׁעְבֵּד)
+    'כָּתְלֵי': 'כתל',                                         // "the walls of" (כֹּתֶל, not תְּלִי quiver)
+    'תִּלֵּי': 'תלל',                                          // "heaps of" (תֵּל mound)
+    'וּבְרָעוֹתָם': 'רֹעֶה', 'וּרְעוּ': 'רֹעֶה',                     // "while they were tending", "and feed" (רָעָה, not the name Reu)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1910,6 +1919,10 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'רְעוּ': { name: 'H7466', word: 'רֹעֶה', en: /Reu/ },           // Reu / feed! (Mosiah 11)
+    'רָחָב': { name: 'H7343', word: 'רחב', en: /Rahab/ },           // Rahab / wide, spacious
+    'זִיפָם': { name: 'H2128', word: 'זיף', en: /Ziph/ },          // Ziph / ziff, the Nephite metal
+    'וְזִיף': { name: 'H2128', word: 'זיף', en: /Ziph/ },
     'בַּדִּים': { name: 'H0906', word: 'בדד', en: /linen|cloth|garment|sheet|breech/i }, // linen (H0906) / branches, parts (H0905)
     'עוֹבֵד': { name: 'H5744', word: 'עבד', en: /Obed/ },          // Obed / one who serves (Mosiah 9)
     'וְעוֹבֵד': { name: 'H5744', word: 'עבד', en: /Obed/ },
