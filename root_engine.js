@@ -1500,7 +1500,7 @@
     // Mosiah 12 audit (2026-09-13)
     'מְצַטְּטִים': 'צטט',                                      // "quote" (צִטֵּט)
     'שׁוֹמְרֵי': 'שמר', 'הַשּׁוֹמֵר': 'שמר',                       // "any who kept", "the guard" (שָׁמַר, not the name Shomer)
-    'גַּבָּם': 'גב',                                           // "their backs" (גַּב)
+    'גַּבָּם': 'גבב', 'גָּב': 'גבב',                              // "their backs", "a platform" (גַּב)
     'בְּהַבְשִׁילוֹ': 'בשל',                                     // "it is ripe" (הִבְשִׁיל, not Shiloh)
     'תִשֹּׁב': 'נשב', 'תִּשֹּׁב': 'נשב',                          // "if blows" (נָשַׁב)
     'תָּשֹׁב': 'שוב',                                          // "return" (שׁוּב)
@@ -1571,6 +1571,13 @@
     'מוֹרֵיהֶם': 'ירה', 'וּמוֹרֶיהָ': 'ירה',                        // "their teachers" (מוֹרֶה, not Moriah)
     'יְרַכֵּךְ': 'רכך',                                         // "He would soften" (רִכֵּךְ, not יָרֵךְ thigh)
     'אֲחֵיהֶן': 'H0251', 'אֲחִיהֶן': 'H0251',                       // "their brethren", "their brother" (אָח, not Ahijah)
+    // Mosiah 24 audit (2026-09-13)
+    'רוֹדֶה': 'רדה', 'רָד': 'רדה', 'תָּרִיד': 'רדה',                // "he who ruled" (רָדָה, not רוּד roam)
+    'מְאֻיָּמִים': 'אים',                                       // "are threatened" (heading; אִיֵּם)
+    'מֵקֵל': 'קלל',                                           // "lightens" (heading; הֵקֵל)
+    'לְהִלָּמֵד': 'למד',                                        // "to be taught"
+    'בְּקַלּוּת': 'קלל',                                        // "with ease" (קַלּוּת, not the Aramaic voice)
+    'וְאַצִּיל': 'נצל',                                         // "and deliver" (הִצִּיל, not אֵצֶל beside)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
