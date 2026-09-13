@@ -2253,6 +2253,8 @@
     'מְעַנִּים': 'H6031',   // "afflicted" was לְמַעַן, for the sake of
     'יִשְׁרוּ': 'ישר',   // "make straight" was שַׂר, a prince
     'נוּבָא': 'בוא',   // "we should be brought" was נָבָא, to prophesy
+    // Moroni 10 audit (2026-09-13)
+    'לוֹווֹת': 'לוה', 'אַזְהִיר': 'זהר', 'רוּחָנִיּוֹת': 'רוח',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
