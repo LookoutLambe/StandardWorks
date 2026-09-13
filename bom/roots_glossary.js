@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "הזורמים": {"meaning":"Zoramite, Zoramites","category":"Name"},
   "H6725": {"meaning":"(צִיּוּן) monument, signpost, waymark","category":"Lexical"},
   "שׂלו": {"meaning":"(שְׂלָו) quail","category":"Nature"},
   "נוֹצְרִי": {"meaning":"(נוֹצְרִי) Christian, Nazarene","category":"Theology"},
@@ -7233,7 +7234,6 @@ window._rootGlossaryData = {
   "חכות": {"meaning":"they waited of","category":"Uncategorized"},
   "לק׃": {"meaning":"Mulek","category":"Uncategorized"},
   "על־עיר": {"meaning":"upon city of","category":"Society"},
-  "זורמי": {"meaning":"Zoramite","category":"Uncategorized"},
   "ובם": {"category":"Motion"},
   "יראו׃": {"meaning":"feared his","category":"Cognition"},
   "תנפל": {"meaning":"fall upon","category":"Quality"},
@@ -8016,7 +8016,7 @@ window._rootGlossaryData = {
   "ניר": {"meaning":"(נֵר) lamp; (נִיר) to break up untilled ground","category":"Lexical"},
   "אזר": {"meaning":"(אָזַר) to gird, gird up; (אֵזוֹר) girdle, belt","category":"Action"},
   "לוץ": {"meaning":"(לֵץ) scorner, scoffer; (מֵלִיץ) interpreter, spokesman, advocate","category":"Society"},
-  "שטה": {"meaning":"(שִׁטָּה) acacia — the shittim wood of the tabernacle; (שָׂטָה) to turn aside, go astray","category":"Lexical"},
+  "שטה": {"meaning":"(שִׁטָּה) acacia — the shittim wood of the tabernacle; (שָׂטָה) to turn aside, go astray; (הִסִּיט) to shift, divert, draw aside","category":"Lexical"},
   "H5716": {"meaning":"(עֲדִי) ornament, finery","category":"Society"},
   "נכס": {"meaning":"(נְכָסִים) riches, goods, property","category":"Society"},
   "גפר": {"meaning":"(גׇּפְרִית) brimstone, sulphur; (גֹּפֶר) gopher wood (Gen 6:14)","category":"Nature"},

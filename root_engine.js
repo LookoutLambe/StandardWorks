@@ -1869,6 +1869,13 @@
     'וְהוֹדָם': 'הוד', 'וָדֹם': 'דמם', 'מְלַמְּדָם': 'למד',
     // the vanity family held the equal words of שָׁוָה and one lifting up
     'וְהֻשְׁווּ': 'שוה', 'הַשָּׁוָה': 'שוה', 'שְׁוֵי': 'שוה', 'בְּשׂוֹא': 'נשא',
+    // Alma 52 audit (2026-09-13)
+    'הַזּוֹרָמִי': 'הזורמים', 'זוֹרָמִי': 'הזורמים',       // the singular Zoramite had drifted out of the Zoramites
+    'בִּבְנוֹת': 'בנה',                                   // "by building" (בָּנָה), not בַּת daughter
+    'מְצַוָּם': 'צוה',                                    // "their commander" (מְצַוֶּה), not צוֹם a fast
+    'יָצֵרוּ': 'צרר',                                     // "should harass" (הֵצֵר), not יָצַר form, fashion
+    'וּלְהַסִּיט': 'שטה', 'יַפְתּוּם': 'פתה', 'יַדְבִּיקֵם': 'דבק',   // one-word families
+    'שְׁבוּיֵי': 'שבה', 'יְכׇלְתּוֹ': 'יכל', 'כִּיכׇלְתּוֹ': 'יכל',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
