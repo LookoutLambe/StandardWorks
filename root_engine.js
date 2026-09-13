@@ -1342,6 +1342,29 @@
     'הַגַּלִּים': 'גלל', 'וְהַגַּלִּים': 'גלל',                  // "the waves" (גַּל, not the town Gallim H1554)
     'מִגַּלִּים': 'H1554',                                     // "of Gallim" (Isa 10:30) stays with the town
     'גְּלִימָה': 'גלימה', 'הַגְּלִימָה': 'גלימה',                 // "a robe" (post-biblical גְּלִימָה; had joined Gallim)
+    // Jacob 5 audit (2026-09-13) — the allegory's horticulture had landed on names
+    'מְצַטֵּט': 'צטט',                                        // "quotes" (heading; post-biblical)
+    'נִרְמָזִים': 'רמז', 'רְמָזִים': 'רמז',                       // "foreshadowed", "foreshadowings" (one-word families)
+    'וְלַלָּמָנִים': 'הלמנים',                                  // "and the Lamanites" (the name family)
+    'לְבַסּוֹף': 'סוף',                                        // "at length" (one-word family)
+    'תַּרְבּוּת': 'רבה', 'תַרְבּוּת': 'רבה', 'וְתַרְבּוּת': 'רבה', 'הַתַּרְבּוּת': 'רבה',   // "tame" (תַּרְבּוּת cultivated, not the brood H8635)
+    'הָרָאשִׁי': 'ראש', 'הָרָאשִׁיִּים': 'ראש',                    // "the main" (one-word families)
+    'וְנַשְׁלִיכֵם': 'שלך', 'הֻשְׁלָךְ': 'שלך', 'הָשְׁלֵךְ': 'שלך', 'הֻשְׁלְכָם': 'שלך',   // "cast" (שָׁלַךְ, not נָשַׁל drop / שַׁל error)
+    'הֻשְׁלַם': 'שלם', 'הִשְׁלִים': 'שלם', 'הַשִּׁלֻּם': 'שלם',      // "completed", "recompense" (had joined שַׁל error)
+    'מֵהָעֲנָפִים': 'ענף',                                     // "of the branches" (one-word family)
+    'בַר': 'בר', 'לְבַר': 'בר',                                // "wild" (the curated בַּר open-field key, not Aramaic son)
+    'וַיָּחֵל': 'חלל',                                        // "and begun" (הֵחֵל, not יִחֵל hope)
+    'בְּלֵחוֹת': 'לחח', 'הַלֵּחַ': 'לחח', 'הַלָּח': 'לחח',          // "moisture", "green" (לֵחַ / לַח, not לוּחַ plate)
+    'תּוֹרֵנִי': 'ירה',                                       // "counsel me" (הוֹרָה instruct, not תּוּר spy)
+    'הַכָּרֶם': 'כרם',                                        // "the vineyard" (was Beth-hakkerem H1021, ten uses)
+    'אֶטַּע': 'נטע', 'אָטַע': 'נטע',                           // "I might plant", "I will plant" (one-word families)
+    'הַטִּפּוּחַ': 'טפח',                                       // "the care" (one-word family)
+    'וָאֲזַבְּלֵהוּ': 'זבל', 'וְזַבְּלוּ': 'זבל', 'וְזִבַּלְתִּיו': 'זבל',   // "dung" (זִבֵּל, not the name Zebul)
+    'יַכְבִּידוּ': 'כבד',                                      // "they shall cumber" (was Jochebed)
+    'וְנַרְכִּיבֵם': 'רכב', 'וְנַרְכִּיב': 'רכב', 'תַּרְכִּיבוּ': 'רכב',   // "graft" (one-word families)
+    'וּנְזַמֵּר': 'זמר',                                       // "and we will trim up" (one-word family)
+    'נָכִין': 'כון', 'תָּכִינוּ': 'כון', 'וְתָכִינוּ': 'כון',      // "prepare" (הֵכִין, not the peacock H8500)
+    'אֶטַאֲטֵא': 'טאטא',                                       // "will I sweep away" (one-word family)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1767,7 +1790,9 @@
       'וְרָבוּ':    { name: 'H7378', word: 'H7235', en: /contend|strive|plead/i }, // and they shall contend (רִיב) · and multiply (רָבָה) (2 Nephi 28)
       'יִרְאוּ':    { name: 'H3372', word: 'H7200', en: /fear|afraid|revere|dread/i }, // fear (יָרֵא) · they shall see (רָאָה) (2 Nephi 28)
       'רַשָּׁאִים': { name: 'H7563', word: 'רשות', en: /wicked/i },
-      'גַּלִּים':   { name: 'H1554', word: 'H1530', en: /Gallim/i },   // Bath-gallim · waves, heaps (גַּל) (Jacob 4)   // the wicked (רָשָׁע, ten verse tokens) · may, permitted (רַשַּׁאי, the Jacob 2 heading)
+      'גַּלִּים':   { name: 'H1554', word: 'H1530', en: /Gallim/i },   // Bath-gallim · waves, heaps (גַּל) (Jacob 4)
+      'זְבֻל':     { name: 'H2083', word: 'H2073', en: /Zebul/ },      // Zebul (Judg 9) · habitation, lofty abode (זְבֻל) (Jacob 5)
+      'וּזְבֻל':    { name: 'H2083', word: 'H2073', en: /Zebul/ },   // the wicked (רָשָׁע, ten verse tokens) · may, permitted (רַשַּׁאי, the Jacob 2 heading)
       'מַסָּה': { name: 'H4532', word: 'H4531', en: /Massah/ },   // Massah the place · temptation, trial (מַסָּה) (Jacob 1)
       'בְּמַסָּה': { name: 'H4532', word: 'H4531', en: /Massah/ },
       'לַמַּסָּה': { name: 'H4532', word: 'H4531', en: /Massah/ },
