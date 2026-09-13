@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "H2441": {"meaning":"(חֵךְ) palate, roof of the mouth, taste","category":"Body"},
   "הזורמים": {"meaning":"Zoramite, Zoramites","category":"Name"},
   "H6725": {"meaning":"(צִיּוּן) monument, signpost, waymark","category":"Lexical"},
   "שׂלו": {"meaning":"(שְׂלָו) quail","category":"Nature"},
