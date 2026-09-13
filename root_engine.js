@@ -2610,6 +2610,8 @@
     'הַמּוֹנוֹגַמְיָה': 'מונוגמיה', 'לְסִיּוּם': 'סום', 'מֻקְדָּשׁ': 'קדש',
     'גּוֹמֵר': 'גמר',
     'מֻשְׁלֶמֶת': 'שלם',
+    // "being in subjection" was reading as Canaan
+    'בְּהִכָּנְעָן': 'כנע',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
