@@ -1973,6 +1973,11 @@
     'לְהִכָּלֵל': 'כלל', 'הַנּוֹשָׁבִים': 'ישב',            // one-word families: be contained, the settled
     // the En-hakkore family held only the calling and reading of קָרָא — no En-hakkore in the corpus
     'הֲקוֹרֵא': 'קרא', 'הַקּוֹרְאִים': 'קרא', 'וְהַקּוֹרֵא': 'קרא',
+    // Helaman 4 audit (2026-09-13)
+    'פּוֹרְשֵׁי': 'פרש',                                   // "the dissenters of" belongs with the other dissenters
+    'וַיִּכֹּנוּ': 'כון',                                  // "they were preparing" (הֵכִין), not נָכָה smite
+    // the pleasantness family held the withholding of מָנַע and one humbling
+    'בְּמׇנְעָם': 'מנע', 'וּמֹנְעִים': 'מנע', 'מְנָעָם': 'מנע', 'הַמַּכְנִיעִים': 'כנע',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
