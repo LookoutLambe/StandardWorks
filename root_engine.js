@@ -2004,6 +2004,8 @@
     // Helaman 10 audit (2026-09-13)
     'לִקְשֹׁר': 'קשר',                                     // "unto conspiracies of" (קֶשֶׁר), a family of one
     'תַּתִּיר': 'נתר', 'תַּתִּירוּ': 'נתר',                  // the sealing power's "ye shall loose" (הִתִּיר)
+    // Helaman 11 audit (2026-09-13)
+    'מְשַׁכְנֵעַ': 'שכנע',                                  // "persuades" (שִׁכְנֵעַ), a family of one
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2430,6 +2432,7 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'שַׁמָּה': { name: 'H8048', word: 'שמם', en: /Shammah/ },       // Shammah / desolation, astonishment, havoc (Helaman 11)
     'בָּנוּ': { name: 'בָּנוּ', word: 'בנה', en: /\b(us|our)\b/i },   // בְּ + us / they built (Helaman 8)
     'וְיוּכַל': { name: 'H3116', word: 'יכל', en: /Jucal/ },        // Jucal son of Shelemiah / and he can (Helaman 5)
     'וְקָנָה': { name: 'H7071', word: 'קנה', en: /Kanah/ },        // the brook Kanah / and he bought, obtained (Helaman 2)
