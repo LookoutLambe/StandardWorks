@@ -2100,6 +2100,10 @@
     // 3 Nephi 10 audit (2026-09-13)
     'כְּתַרְנְגֹלֶת': 'תרנגלת',                            // the prefixed hen had a family beside the bare one
     'וּמִלְּיַלֵל': 'ילל', 'מִרְעוֹד': 'רעד',
+    // 3 Nephi 12 audit (2026-09-13)
+    'וּמְקַדְּמוֹת': 'קדם', 'הַהַקְדָּמוֹת': 'קדם',           // "the former time of" — not Kedemoth the Levitical city
+    'הִתְרַצֵּה': 'רצה', 'וְהִתְרַצֵּה': 'רצה', 'הֲמִתְרַצֶּה': 'רצה', 'הֲתִרְצֶה': 'רצה',   // "be reconciled", not Tirzah
+    'לְנַבֵּל': 'נבל', 'הַסֶּנִין': 'סנין', 'צְלָבְכֶם': 'צלב',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2527,6 +2531,9 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'נֵר': { name: 'H5369', word: 'ניר', en: /\bNer\b/ },             // Ner the father of Abner / a lamp (3 Nephi 12)
+    'וְנֵר': { name: 'H5369', word: 'ניר', en: /\bNer\b/ },
+    'נָבָל': { name: 'H5037', word: 'נבל', en: /Nabal/ },            // Nabal the Carmelite / a fool, a churl
     'עוֹלֹת': { name: 'עול', word: 'עלה', en: /wrong|iniquit|injustice/i },   // the wrongs / the burnt offerings (3 Nephi 3)
     'מוֹרִים': { name: 'מוֹרֶה', word: 'H3384', en: /teach|guide|direct/i },   // teachers, guides / shew, shoot (Helaman 13)
     'מוּשִׁי': { name: 'H4187', word: 'מוש', en: /Mushi/ },         // Mushi son of Merari / move, depart (Helaman 12)
