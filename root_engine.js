@@ -2289,6 +2289,10 @@
     // Abraham 4 audit (2026-09-13)
     'עֲצוֹתֵיהֶם': 'יעץ',   // "their plans" (עֵצָה) was H6086 עֵץ, a tree
     'עֲצוֹתָיו': 'יעץ', 'לַעֲצוֹת': 'יעץ', 'לָעֵצָה': 'יעץ',   // the rest of the counsel forms; עצה keeps the backbone and 'one who shuts'
+    // Abraham 5 audit (2026-09-13)
+    'תִּכְנוּן': 'תכנן',   // "their planning" was נָכָה, to smite
+    'יְצוּר': 'יצר',   // "a being, a creature" (16 uses) was צוּר, a rock
+    'בְּהִוָּעֲצָם': 'יעץ', 'בְּהִוָּצְרָם': 'יצר',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
