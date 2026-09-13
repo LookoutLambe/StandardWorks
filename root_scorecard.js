@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '141';   // bump when the generated data files change
+  var RSC_V = '142';   // bump when the generated data files change
   // Transliterated terms — an exception table in the tool, like the received
   // spellings in transliterate(): keyed by bare consonants, so every pointing
   // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.

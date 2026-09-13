@@ -1222,6 +1222,10 @@
     // 2 Nephi 14 audit (2026-09-13)
     'וְעָשָׁן': 'עשן',                                        // "and smoke" (was the town Ashan)
     'וְאָנוּ': 'אנה',                                         // "and shall lament" (אָנָה, not the pronoun we) — 2 Nephi 13
+    // 2 Nephi 15 audit (2026-09-13)
+    'אוֹיוֹת': 'אוי',                                         // "woes" (one-word family)
+    'בָתָה': 'בתה',                                           // "waste" (בָּתָה desolation, not the bath measure)
+    'בִתָּהּ': 'H1323', 'בְּבִתָּהּ': 'H1323',                 // "her daughter" (בַּת, not בָּתָה waste)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
