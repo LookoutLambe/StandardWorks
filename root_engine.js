@@ -1597,6 +1597,14 @@
     'סִפּוּר': 'ספר',                                          // "an account of" (סִפּוּר)
     'וְהַתֻּמִּים': 'H8550',                                     // "and the Thummim" joins the Thummim
     'וּתְמִיכוֹת': 'תמך',                                       // "helps" (תְּמִיכָה, not Thummim)
+    // Mosiah 29 audit (2026-09-13)
+    'וּמוֹשִׁיָּה': 'מושיה',                                     // "and Mosiah" (not שָׁיָה forget)
+    'מַצִּיעַ': 'יצע',                                          // "proposes" (heading; הִצִּיעַ)
+    'וּלְעַקֵּשׁ': 'עקש',                                        // "and to pervert"
+    'וְנַבִּיטָה': 'נבט',                                        // "and look"
+    'יֵהָנֶה': 'נֶהֱנָה',                                        // "shall enjoy" (נֶהֱנָה, not הִנֵּה behold)
+    'הַמּוֹרֵד': 'מרד',                                         // "whosoever rebels" (מָרַד, not מוֹרָד descent)
+    'הַפְּלָיָה': 'פלה', 'פְּלִיָּה': 'פלה',                         // "the inequality" (הַפְלָיָה, not Pelaiah)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2019,6 +2027,8 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'פְּלָיָה': { name: 'H6411', word: 'פלה', en: /Pelaiah/ },       // Pelaiah / inequality (Mosiah 29)
+    'וּפְלָיָה': { name: 'H6411', word: 'פלה', en: /Pelaiah/ },
     'עׇפְרָה': { name: 'H6084', word: 'עפר', en: /Ophrah/ },        // Ophrah / ore (Mosiah 21)
     'וְעׇפְרָה': { name: 'H6084', word: 'עפר', en: /Ophrah/ },
     'הַקּוֹץ': { name: 'H6976', word: 'קוץ', en: /Coz|Hakkoz/ },   // Hakkoz / the thistle
