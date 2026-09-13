@@ -4418,7 +4418,7 @@ window._rootGlossaryData = {
   "קהל׃": {"meaning":"unto the church","category":"Uncategorized"},
   "אשכן": {"meaning":"I will dwell","category":"Life"},
   "חפצתם": {"meaning":"you desired","category":"Uncategorized"},
-  "אמוס": {"meaning":"he also","category":"Uncategorized"},
+  "אמוס": {"meaning":"Amos — the son of Nephi who kept the record, and Amos his son after him","category":"Name"},
   "ארבעת": {"meaning":"four of","category":"Uncategorized"},
   "יזהר": {"meaning":"warned","category":"Society"},
   "אל־המים": {"meaning":"waters","category":"Nature"},

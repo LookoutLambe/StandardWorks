@@ -2159,6 +2159,9 @@
     'הֲשִׁיבָם': 'שוב', 'וְהִשִּׂיגַתְכֶם': 'נשג',
     // 3 Nephi 30 audit (2026-09-13)
     'תִּמָּנוּ': 'מנה',   // "you may be numbered" (נִמְנָה) was תָּמַם, to be finished
+    // 4 Nephi audit (2026-09-13)
+    'נִסִּים': 'נסס',   // "miracles" was נוּס, to flee
+    'לִמְאֻרוֹת': 'אור', 'מְאֻרוֹת': 'אור',   // "dens" (מְאוּרָה) was אָרַר, to curse
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
