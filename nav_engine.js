@@ -2575,18 +2575,19 @@
   // chapter, leftward the previous.
   function installSwipeChapterNav() {
     if (window._swSwipeNavHooked) return;
-    /* HONOUR skipSwipeNav. Every reader passes skipSwipeNav:true, the hub
-       passes it, and init forces it true on any page carrying
-       .controls-bottom — and for all that, nothing ever read the flag and
-       this drag was installed on every page anyway. That is what moved the
-       reading area sideways during a vertical scroll, and what could leave
-       the sheet translated with the text shoved off the right edge.
+    /* HONOUR skipSwipeNav, and nothing else. It once also returned on any
+       page carrying .controls-bottom — but this function is called from the
+       footer builder, which only runs when .controls-bottom exists, so that
+       clause was an unconditional off switch and the page turn was dead on
+       every reader. The flag is the single say: readers pass false, the hub
+       passes true.
 
-       The .controls-bottom test is repeated here rather than trusting
-       _config alone, because the footer that calls this can be built before
-       NavEngine.init has run and set it. Chapter movement on a reader is the
-       pinned footer's prev/next; there is no horizontal gesture. */
-    if ((_config && _config.skipSwipeNav) || document.querySelector('.controls-bottom')) return;
+       What made the reader draggable sideways was never this gesture. It was
+       the document overflowing its viewport (the skip link in 20afe77e, and
+       an unsplittable .word-unit wider than its line); those fixes stand, as
+       does touch-action: pan-y, which stops the BROWSER panning horizontally
+       while still delivering these touch events to JavaScript. */
+    if (_config && _config.skipSwipeNav) return;
     window._swSwipeNavHooked = true;
     var sx = 0, sy = 0, st = 0, live = false, locked = false, sheet = null, fromWord = false;
     /* The finger travel already spent proving horizontal intent. The sheet
@@ -3020,10 +3021,9 @@
     init: function(config) {
       _config = config || {};
       _config.hub = !!_config.hub;
-      // Reader pages use pinned footer prev/next; disable chapter swipe unless explicitly opted in
-      if (_config.skipSwipeNav !== false && document.querySelector('.controls-bottom')) {
-        _config.skipSwipeNav = true;
-      }
+      // A reader turns chapters two ways: the pinned footer arrows and the
+      // horizontal page swipe. Each page declares which it wants through
+      // skipSwipeNav; init no longer overrides that declaration.
       createSidebar();
       document.addEventListener('keydown', onKeydown);
       document.addEventListener('touchstart', onTouchStart, { passive: true });
