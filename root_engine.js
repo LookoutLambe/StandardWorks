@@ -1403,6 +1403,15 @@
     'הַמְכִילִים': 'כול',                                      // "which contain" (הֵכִיל; one-word family)
     'לוֹחֵשׁ': 'לחש',                                         // "it whispers" (was the name Hallohesh)
     'וְנֶסְתְּמוּ': 'סתם',                                     // "and were shut" (סָתַם, not נוּס flee)
+    // Mosiah 1 audit (2026-09-13)
+    'וּנְבוּאוֹתָיו': 'נבא', 'נְבוּאוֹתֵיהֶם': 'נבא', 'וּנְבוּאוֹתֵיהֶם': 'נבא',   // "prophecies" (נְבוּאָה, not בּוֹא come)
+    'בִּזְכוּת': 'זכך',                                        // "through the merits of" (זְכוּת, not the Aramaic H2136)
+    'וְהֵלוֹרוּם': 'הלורום',                                    // Helorum, son of Benjamin (one-word family)
+    'לְלַמְּדָן': 'למד', 'וּלְלַמְּדָן': 'למד',                    // "to teach them" (were the tribe Dan)
+    'מָסֹרוֹת': 'H4562', 'בְּמָסֹרוֹת': 'H4562', 'מִמָּסֹרוֹת': 'H4562', 'בְּמָסֹרוֹתֵיהֶם': 'H4562',   // "traditions" (מָסֹרֶת, not the camp Moserah)
+    'תּוֹעִילוּ': 'יעל', 'תוֹעִילוּ': 'יעל',   // "you may profit" (one-word family; both spellings)
+    'אַכְרִיז': 'כרז',                                        // "I shall proclaim" (one-word family)
+    'בִּשְׁמִירַת': 'שמר',                                     // "in keeping" (שָׁמַר, not the town Shamir)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

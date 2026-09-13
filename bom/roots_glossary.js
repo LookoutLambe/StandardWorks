@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "הלורום": {"meaning":"(הֵלוֹרוּם) Helorum — son of King Benjamin","category":"Name"},
   "כמיש": {"meaning":"(כְּמִישׁ) Chemish — son of Omni, brother of Amaron","category":"Name"},
   "עמני": {"meaning":"(עׇמְנִי) Omni — son of Jarom, the Book of Omni","category":"Name"},
   "H4551": {"meaning":"(מַסָּע) dart, missile; quarry","category":"Tools"},
@@ -1968,7 +1969,7 @@ window._rootGlossaryData = {
   "צעיר": {"meaning":"younger","category":"Uncategorized"},
   "אזעק": {"meaning":"I cried","category":"Speech"},
   "שמח": {"meaning":"(שָׂמַח) to rejoice, be glad; (שִׂמְחָה) joy, gladness","category":"Perception"},
-  "נסע": {"meaning":"to pull up, set out, journey","category":"Motion"},
+  "נסע": {"meaning":"(נָסַע) to pull up, set out, journey","category":"Motion"},
   "אהלינו": {"meaning":"our tents","category":"Uncategorized"},
   "יתו": {"meaning":"his household","category":"Time"},
   "ינס": {"meaning":"fled","category":"Uncategorized"},
@@ -4049,7 +4050,7 @@ window._rootGlossaryData = {
   "ל־העם": {"meaning":"all the people","category":"Society"},
   "יעצמו": {"meaning":"waxed great","category":"Quality"},
   "ן־המגדל": {"meaning":"tower","category":"Uncategorized"},
-  "נאף": {"meaning":"commit adultery","category":"Uncategorized"},
+  "נאף": {"meaning":"(נָאַף) to commit adultery; (נִאוּף) adultery","category":"Uncategorized"},
   "יכלות": {"meaning":"temples","category":"Uncategorized"},
   "אשמתו": {"meaning":"his own guilt","category":"Uncategorized"},
   "שפטו": {"meaning":"His judgment","category":"Quality"},
