@@ -2255,6 +2255,12 @@
     'נוּבָא': 'בוא',   // "we should be brought" was נָבָא, to prophesy
     // Moroni 10 audit (2026-09-13)
     'לוֹווֹת': 'לוה', 'אַזְהִיר': 'זהר', 'רוּחָנִיּוֹת': 'רוח',
+    // Cross-volume audit (2026-09-13) — wrong families found outside the Book of Mormon
+    'תּוֹעֶלֶת': 'יעל',   // "the profit of" was עָלָה, to go up
+    'הַמְכֻנֶּה': 'כנה',   // "whose surname is" was כּוּן; the bare מְכֻנֶּה was already right
+    'וּבַקָּשׁוֹת': 'בקש',   // "and intercessions" was קָשֶׁה, hard
+    'וַיֹּראוּ': 'ירה',   // 2 Sam. 11:24 "and the shooters shot" — defective ירה, not ירא to fear
+    'שֶׁל־הָאוֹתִיּוֹת': 'אות', 'בְּאוֹתִיּוֹת': 'אות', 'בָּאוֹתִיּוֹת': 'אות', 'אֶת־הָאוֹתִיּוֹת': 'אות', 'וְלָאוֹתִיּוֹת': 'אות', 'אוֹתִיּוֹת': 'אות', 'הָאוֹתִיּוֹת': 'אות',   // the letters of the alphabet, filed under the object marker
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
