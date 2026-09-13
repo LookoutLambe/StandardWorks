@@ -1996,6 +1996,11 @@
     // Helaman 8 audit (2026-09-13)
     'וַיָּגֶל': 'גיל',                                     // "and did rejoice" (גִּיל), not גָּלַל to roll
     'תִלָּקַחְנָה': 'לקח', 'לִשְׁלֹט': 'שלט',
+    // Helaman 9 audit (2026-09-13)
+    'רַצְנוּ': 'רוץ',                                      // "we ran" (רוּץ), not רָצוֹן will, favor
+    'מְזַהֶה': 'זהה',                                      // "identifies" (זִהָה), not the hapax מָזֶה exhausted
+    'וְתוֹדֶה': 'ידה', 'תוֹדֶה': 'ידה', 'לְהִתְוַדּוֹת': 'ידה',   // the confessing verb, not תּוֹדָה the offering
+    'יַאֲשִׁימוּהוּ': 'אשם', 'קָשׁוּר': 'קשר', 'קָשַׁרְתָּ': 'קשר',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
