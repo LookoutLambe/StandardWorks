@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '167';   // bump when the generated data files change
+  var RSC_V = '168';   // bump when the generated data files change
   // Transliterated terms — an exception table in the tool, like the received
   // spellings in transliterate(): keyed by bare consonants, so every pointing
   // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.
@@ -733,36 +733,30 @@
     var hgNum = '';
     try { hgNum = (window.RootEngine && window.RootEngine.homographNumber) ? window.RootEngine.homographNumber(pieceSurface, glossText) : ''; } catch (eH) { hgNum = ''; }
     if (hgNum && pz && pz.strongs && pz.strongs !== hgNum) pz = null;
-    /* A PINNED FORM DROPS THE OTHER WORD'S PARSE THE SAME WAY. וְעָשָׁן "and
-       smoke" is attested only as the town Ashan (H6228, "noun proper name");
-       the engine keyed the card to עשן, so a parse whose number belongs to a
-       different family describes a word this token is not (2 Nephi 14). Only a
-       proper-name parse (Np) is examined: לָהֶם keys to the bare particle להם
-       while its parse carries H9038, and that parse is the whole card. A
-       proper-name parse survives only when the number IS a name and that name
-       is this card's family — the table also stamps Np on the wolf (זְאֵב,
-       H2061) and on נְבֻנוֹתִי "I am prudent", and those are not names at all
-       (measured 2026-09-13: 60 Np parses over three Isaiah chapters, the three
-       dropped were exactly those). */
-    if (pz && pz.strongs && /Np/.test(pz.morph || '') && found.key && window.RootEngine && window.RootEngine.familyOf &&
-        !(window.RootEngine.isNameEntry && window.RootEngine.isNameEntry(pz.strongs) &&
-          window.RootEngine.familyOf(pz.strongs) === found.key)) pz = null;
-    /* AND A COMMON-WORD PARSE FROM ANOTHER FAMILY. מֵעִיר "will stir up" is
-       attested only as מִן + עִיר city (H5892); the card keys to עוּר rouse. A
-       parse whose lexeme is another family's word, and whose consonants are
-       not even inside this family's, describes a word this token is not.
+    /* A NUMBER THAT DESCRIBES ANOTHER FAMILY'S WORD IS NOT THIS WORD'S NUMBER.
+       The attested table and the Strong's lookup each hand the card a number
+       for the surface; the engine has already keyed the card to a family. When
+       the number's own family is a different one, the card must not wear it:
+       a proper name from elsewhere (וְעָשָׁן "smoke" is attested only as the
+       town Ashan; כְּמִישׁ Chemish looks up as the god Chemosh) is never this
+       word, and a common word whose lexeme consonants are not even inside this
+       family's (מֵעִיר "stir up" attested as מִן + עִיר city) is not either.
        OSHB's H9xxx suffix and prefix numbers are not lexemes, and לָכֵן's כֵּן
-       sits inside לכן — both keep their parse (measured 2026-09-13: 271
-       parses in Isaiah 13, one dropped, this one). */
-    if (pz && pz.strongs && /^H[0-8]/.test(pz.strongs) && found.key && window.RootEngine && window.RootEngine.familyOf &&
-        window.RootEngine.familyOf(pz.strongs) !== found.key) {
-      var _SR = window._strongsRoots || {};
-      var _lw = _consOf(_SR[pz.strongs] && _SR[pz.strongs].w);
-      var _kc = /^H\d{4}$/.test(found.key) ? _consOf(_SR[found.key] && _SR[found.key].w) : _consOf(found.key);
-      if (_lw && String(_kc || '').indexOf(_lw) < 0) pz = null;
-    }
+       sits inside לכן — both keep theirs (2 Nephi 14, 23; Omni; measured
+       2026-09-13 over 271 parses in Isaiah 13: one dropped, the right one). */
+    var _RE = window.RootEngine, _SR = window._strongsRoots || {};
+    var _kc = found.key ? (/^H\d{4}$/.test(found.key) ? _consOf(_SR[found.key] && _SR[found.key].w) : _consOf(found.key)) : '';
+    var _otherWord = function (num) {
+      if (!num || !/^H[0-8]/.test(num) || !found.key || !_RE || !_RE.familyOf) return false;
+      if (_RE.familyOf(num) === found.key) return false;
+      if (_RE.isNameEntry && _RE.isNameEntry(num)) return true;
+      var lw = _consOf(_SR[num] && _SR[num].w);
+      return !!lw && String(_kc || '').indexOf(lw) < 0;
+    };
+    if (pz && pz.strongs && (/Np/.test(pz.morph || '') && !(_RE && _RE.isNameEntry && _RE.isNameEntry(pz.strongs) && _RE.familyOf(pz.strongs) === found.key) || _otherWord(pz.strongs))) pz = null;
     var wordNum = hgNum || (pz && pz.strongs) ||
       (window._strongsLookup && (window._strongsLookup[pieceSurface] || window._strongsLookup[surface])) || '';
+    if (wordNum && !hgNum && _otherWord(wordNum)) wordNum = '';   // the lookup's number can be the other word too (Chemish → Chemosh)
     var wordLemma = wordNum && window._strongsRoots && window._strongsRoots[wordNum] ? window._strongsRoots[wordNum].w : '';
     var meaningLine = senseFor(d.meaning, wordLemma, glossText);
     /* THE FOURTH STATEMENT OF THE SAME WORD. A glossary line names its lemma in

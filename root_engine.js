@@ -1391,6 +1391,14 @@
     'מְעֻלָּה': 'עלה',                                        // "fine" (מְעֻלֶּה superior, not מַעַל trespass)
     'וּבִמְכוֹנוֹת': 'כון',                                     // "and in machinery" (מְכוֹנָה, not נָוֶה habitation)
     'מִלְחֲמוֹתָם': 'מלחמה', 'מִלְחֲמוֹתָיו': 'מלחמה', 'מִלְחֲמוֹתֵינוּ': 'מלחמה',   // "wars" (had fallen to לֶחֶם bread)
+    // Omni audit (2026-09-13)
+    'כְּמִישׁ': 'כמיש',                                        // Chemish, son of Omni (was the god Chemosh)
+    'וַאֲמָלֵקִי': 'עמלקי', 'עֲמָלְקִי': 'עמלקי',                  // Amaleki (was מָלַק wring the neck)
+    'הַיָּרֶדִים': 'ירדים', 'הַיָּרֵדִים': 'ירדים', 'כַּיָּרֶדִים': 'ירדים', 'יָרֵדִים': 'ירדים',   // the Jaredites (were יָרַד descend)
+    'מָסַרְתִּי': 'מסר', 'מְסָרָם': 'מסר',                        // "deliver" (מָסַר, not סוּר turn aside)
+    'הַנִּכְתָּב': 'כתב',                                       // "that which is written" (one-word family)
+    'כָּרִיאַנְתוּמְר': 'קוריאנטומר', 'כָרִיאַנְתוּמְר': 'קוריאנטומר',   // Coriantumr, the second spelling joins the first
+    'וּמוֹלֵךְ': 'מלך',                                        // "and reigns" (מָלַךְ, not מוּל circumcise)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1819,6 +1827,7 @@
       'גַּלִּים':   { name: 'H1554', word: 'H1530', en: /Gallim/i },   // Bath-gallim · waves, heaps (גַּל) (Jacob 4)
       'זְבֻל':     { name: 'H2083', word: 'H2073', en: /Zebul/ },      // Zebul (Judg 9) · habitation, lofty abode (זְבֻל) (Jacob 5)
       'רָב':       { name: 'H7378', word: 'H7227', en: /contend|strive|plead/i },   // he contended (רִיב) · many, great (רַב) (Jacob 7)
+      'עֲמָלֵקִי':  { name: 'עמלקי', word: 'H6003', en: /Amaleki(?!te)/ },   // Amaleki the record-keeper · an Amalekite (Omni)
       'וּזְבֻל':    { name: 'H2083', word: 'H2073', en: /Zebul/ },   // the wicked (רָשָׁע, ten verse tokens) · may, permitted (רַשַּׁאי, the Jacob 2 heading)
       'מַסָּה': { name: 'H4532', word: 'H4531', en: /Massah/ },   // Massah the place · temptation, trial (מַסָּה) (Jacob 1)
       'בְּמַסָּה': { name: 'H4532', word: 'H4531', en: /Massah/ },
