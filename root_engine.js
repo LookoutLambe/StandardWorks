@@ -1168,6 +1168,10 @@
     'יְפַתּוּ': 'פתה',                                     // "enticing", not Japheth
     'לְזִכְרִי': 'זכר',                                    // "in remembrance of me", not Zichri
     'וְרָצוּ': 'רצה',                                     // "they will be pleased", not רוּץ "run"
+    // 2 Nephi 6 audit (2026-09-13)
+    'וּצְלִיבַת': 'צלב',                                   // "crucifixion of" (one-word family)
+    'וִיעֻנּוּ': 'H6031', 'יְעֻנּוּ': 'H6031',                // "afflicted" (pual of ענה II, not answer / shovel)
+    'קֹוִים': 'H6960',                                     // "wait" (קָוָה, not קַו line)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
