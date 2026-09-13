@@ -4910,7 +4910,7 @@ window._rootGlossaryData = {
   "חוטאים": {"meaning":"sinners","category":"Uncategorized"},
   "תסלחו": {"meaning":"shall ye forgive","category":"Action"},
   "יתודו": {"meaning":"did confess","category":"Uncategorized"},
-  "כפר": {"meaning":"(כִּפֶּר) to atone, forgive; (כַּפֹּרֶת) mercy seat; (כְּפִיר) young, lion, faces; (כֹּפֶר) ransom, henna, open; (כְּפוֹר) bowls, frost, hoar","category":"Theology","biblicalRefs":[{"ref":"Lev 16:30","note":"On this day atonement (יְכַפֵּר) shall be made for you"},{"ref":"Lev 17:11","note":"The blood makes atonement (לְכַפֵּר) for the soul"},{"ref":"Isa 6:7","note":"Your iniquity is removed and your sin is atoned for (כֻּפָּר)"},{"ref":"Ex 30:10","note":"Once a year he shall make atonement upon it"},{"ref":"Dan 9:24","note":"To atone for (לְכַפֵּר) iniquity and bring everlasting righteousness"}]},
+  "כפר": {"meaning":"(כִּפֶּר) to atone, forgive, cover; (כָּפַר) to deny; (כַּפֹּרֶת) mercy seat; (כְּפִיר) young, lion, faces; (כֹּפֶר) ransom, henna, open; (כְּפוֹר) bowls, frost, hoar","category":"Theology","biblicalRefs":[{"ref":"Lev 16:30","note":"On this day atonement (יְכַפֵּר) shall be made for you"},{"ref":"Lev 17:11","note":"The blood makes atonement (לְכַפֵּר) for the soul"},{"ref":"Isa 6:7","note":"Your iniquity is removed and your sin is atoned for (כֻּפָּר)"},{"ref":"Ex 30:10","note":"Once a year he shall make atonement upon it"},{"ref":"Dan 9:24","note":"To atone for (לְכַפֵּר) iniquity and bring everlasting righteousness"}]},
   "תענינה": {"meaning":"prayers of His servants","category":"Theology"},
   "תראני": {"meaning":"behold me","category":"Time"},
   "דרכך": {"meaning":"thy way","category":"Nature"},

@@ -1161,6 +1161,13 @@
     'וְתִתְמַהְמַהּ': 'מהה', 'הִתְמַהְמַהּ': 'מהה', 'וַיִּתְמַהְמַהּ': 'מהה',   // "linger"
     'וּלְעַנּוֹת': 'H6031', 'לְעַנּוֹת': 'H6031', 'וּלְעַנּוֹתָם': 'H6031', 'לְעַנּוֹתָם': 'H6031',   // "afflict" (piel), not "answer"
     'הֲתַעֲשֵׂנִי': 'עשה', 'תִּסָּגֵרְנָה': 'סגר',            // one-word families
+    // THE 2 NEPHI 5 CARD AUDIT (2026-09-12):
+    'וַיַּזְהִירֵנִי': 'זהר', 'בְּאַזְהָרוֹת': 'זהר', 'וַנַּצְלִיחַ': 'צלח', 'בַחֲקוּקַי': 'חקק',   // one-word families
+    'אָסוּר': 'סור',                                      // "I will depart" (סוּר), not אָסַר "bind"
+    'וָאֶבֶן': 'בנה',                                     // "and I did build", not אֶבֶן "stone"
+    'יְפַתּוּ': 'פתה',                                     // "enticing", not Japheth
+    'לְזִכְרִי': 'זכר',                                    // "in remembrance of me", not Zichri
+    'וְרָצוּ': 'רצה',                                     // "they will be pleased", not רוּץ "run"
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
