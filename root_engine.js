@@ -1653,6 +1653,10 @@
     'וּכְנוּעִים': 'כנע',                                        // "and submissive" (כָּנַע, not נוּעַ move)
     'וְהַקֶּשֶׁב': 'קשב',                                        // "and heed"
     'אָסוּר': 'אסר',                                           // "confined" (אָסַר, not סוּר)
+    // Alma 8 audit (2026-09-13)
+    'בְּעַמּוֹנִיחָה': 'עמוניחה', 'וּלְכַפְרֵיהֶם': 'כפר', 'כַּפְרֵיהֶם': 'כפר', 'מֵעִירָם': 'עיר', 'נֶפִיִּי': 'הנפיים', 'וַאֲסַפְתָּנִי': 'אסף',
+    'הַנֶּפִיִּי': 'הנפיים',   // "the Nephite"
+    // in Ammonihah, villages (כְּפָר, not פְּרִי fruit), of their city (not Iram), a Nephite, taken me in
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
