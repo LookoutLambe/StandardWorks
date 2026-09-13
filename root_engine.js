@@ -1172,6 +1172,11 @@
     'וּצְלִיבַת': 'צלב',                                   // "crucifixion of" (one-word family)
     'וִיעֻנּוּ': 'H6031', 'יְעֻנּוּ': 'H6031',                // "afflicted" (pual of ענה II, not answer / shovel)
     'קֹוִים': 'H6960',                                     // "wait" (קָוָה, not קַו line)
+    // 2 Nephi 7 audit (2026-09-13)
+    'גֵּוּוֹ': 'גו', 'גֵוִי': 'גו',                          // "his body", "my back" (גֵּו, not a one-word family / nation)
+    'הִזְנַחְתִּיךְ': 'זנח',                                 // "have I cast you off" (one-word family)
+    'בַעַל': 'בעל',                                        // "who is [master of my judgment]" (attested top lemma was Baal-Peor)
+    'בְּאוּר': 'אור',                                       // "in the light of [your fire]" (was the name Ur)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
