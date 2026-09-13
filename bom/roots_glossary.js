@@ -170,6 +170,7 @@ window._rootGlossaryData = {
   "גנה": {"meaning":"(גִּנָּה) to condemn, denounce; (מְגֻנֶּה) condemned, disgraceful","category":"Morality"},
   "כפת": {"meaning":"(כָּפַת) to bind, to tie up; (כְּפִיתָה) a binding","category":"Action"},
   "ממש": {"meaning":"(מַמָּשׁ) actually, really, the very thing; (מַמָּשׁוּת) substance","category":"Quality"},
+  "רשה": {"meaning":"(הִרְשָׁה) to permit, to allow; (רְשׁוּת) permission, authority","category":"Society"},
   "תרנגול": {"meaning":"(תַּרְנְגוֹל) cock, rooster","category":"Nature"},
   "מתודיסט": {"meaning":"(מֶתוֹדִיסְט) Methodist","category":"Name"},
   "פרסביטרין": {"meaning":"(פְּרֶסְבִּיטֶרְיָן) Presbyterian","category":"Name"},

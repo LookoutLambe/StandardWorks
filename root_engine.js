@@ -2418,6 +2418,18 @@
     'מַמָּשׁ': 'ממש',   // "actually" was H4851 Mash
     'מְסֻיָּמוֹת': 'שום', 'לַהֲקָמַת': 'קום', 'מוּכָחִים': 'יכח',
     'וְהַמְקַבֵּל': 'קבל', 'בְּהוֹכָחַת': 'יכח', 'תַּכְרִיזוּ': 'כרז',
+    // Doctrine and Covenants 101–110 audit (2026-09-13)
+    'חוֹתֵךְ': 'חתך',   // "renders [a decision]" was H2334 Havvoth-jair
+    'הָעִרְעוּר': 'ערר',   // "of appeal" was H6177 Aroer
+    'הֻעֲנְקָה': 'ענק',   // "it was conferred" was H6061 Anak
+    'בָּסִיס': 'בסס',   // "the basis of" was סוּס, a horse
+    'מְהַוִּים': 'הוה',   // "constitute" was יָם, the sea
+    'תְּקוּפוֹתֵיהֶם': 'תקופה',   // "their revolutions" was קוֹף, a monkey
+    'וּמוֹסְרִים': 'מסר',   // "and commit" was מוּסָר, discipline
+    'בָאֵלֶּה': 'אלה',   // "by these things" was H0410 אֵל, God
+    'הִוָּסֵר': 'יסר', 'לִשְׁמִיעַת': 'שמע', 'הִרְשָׁה': 'רשה', 'סְאַת': 'סאה',
+    'לְהַדְפָּסַת': 'דפס', 'הַסְכָּמָה': 'סכם', 'וְיַטִּיף': 'נטף', 'וְיַזְהִיר': 'זהר',
+    'וְיִתְקַיֵּם': 'קום',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
