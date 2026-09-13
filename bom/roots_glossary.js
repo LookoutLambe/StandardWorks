@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "קוצה": {"meaning":"(קְוֻצּוֹת) locks, ringlets of hair","category":"Body"},
   "תשש": {"meaning":"(תָּשַׁשׁ) to grow weak, fail; (תָּשׁוּשׁ) weak, feeble","category":"Quality"},
   "חיץ": {"meaning":"(חִיצוֹן) outer, outward; (מְחִיצָה) partition, wall; (הַסְּפָרִים הַחִיצוֹנִים) the Apocrypha","category":"Place"},
   "שמנילום": {"meaning":"Shimnilom — a Lamanite city whose people were converted (Alma 23:12)","category":"Name"},
@@ -2444,7 +2445,7 @@ window._rootGlossaryData = {
   "בשר": {"meaning":"(בָּשָׂר) flesh","category":"Lexical"},
   "אל־בית": {"meaning":"house of","category":"Uncategorized"},
   "רמס": {"meaning":"(רָמַס) to trample, tread down","category":"Uncategorized"},
-  "נחה": {"meaning":"(נָחָה) to lead, guide","category":"Quality"},
+  "נחה": {"meaning":"(נָחָה) to lead, guide; (הִנְחָה) to lead, guide, bring","category":"Motion"},
   "בב": {"meaning":"hearts of","category":"Cognition"},
   "סתיר": {"meaning":"hide","category":"Uncategorized"},
   "יער": {"meaning":"(יַעַר) forest, thicket; honeycomb","category":"Quality"},
