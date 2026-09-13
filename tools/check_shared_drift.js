@@ -302,7 +302,8 @@ const SIX = ['bom/bom.html', 'ot.html', 'nt.html', 'dc.html', 'pgp.html', 'jst.h
    it must load the same one. */
 {
   const PAGES = ['index.html', 'ot.html', 'nt.html', 'dc.html', 'pgp.html',
-                 'jst.html', 'bom/bom.html', 'dictionary.html', 'hebrew-study.html'];
+                 'jst.html', 'bom/bom.html', 'dictionary.html', 'hebrew-study.html',
+                 'vocabulary.html'];
   const asked = new Map();          // basename -> Map(version -> [pages])
   for (const page of PAGES) {
     const full = path.join(ROOT, page);
@@ -422,7 +423,7 @@ const SIX = ['bom/bom.html', 'ot.html', 'nt.html', 'dc.html', 'pgp.html', 'jst.h
   /* Pages and every non-generated script that could name an asset. The verse
      and gloss data are excluded by size, and they never name assets. */
   const HTML = ['index.html', 'ot.html', 'nt.html', 'dc.html', 'pgp.html', 'jst.html',
-                'bom/bom.html', 'hebrew-study.html', 'dictionary.html'];
+                'bom/bom.html', 'hebrew-study.html', 'dictionary.html', 'vocabulary.html'];
   const SOURCES = HTML.concat(fs.readdirSync(ROOT)
       .filter(f => f.endsWith('.js') && !SW_FILES.includes(f) && fs.statSync(path.join(ROOT, f)).size < 600 * 1024))
     .concat(fs.readdirSync(path.join(ROOT, 'bom'))

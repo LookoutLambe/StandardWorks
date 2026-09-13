@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-09-13T17-15-28';
+const BUILD_ID = '2026-09-13T17-18-12';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -19,6 +19,8 @@ function scopedUrl(legacyPath) {
 const CORE_ASSETS = [
     '/StandardWorks/index.html',
     '/StandardWorks/dictionary.html',
+    '/StandardWorks/vocabulary.html',
+    '/StandardWorks/vocab_path.js?v=1',
     '/StandardWorks/in-print.html',
     '/StandardWorks/dictionary.js',
     '/StandardWorks/ot.html',

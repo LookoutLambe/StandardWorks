@@ -268,7 +268,7 @@ function chrome(rel, crumbs) {
     '<nav class="crumbs" aria-label="Breadcrumb">' + trail + '</nav>\n';
 }
 function foot(rel) {
-  return '<footer class="foot"><p><a href="' + rel + '">sefermormon.com</a> · <a href="' + rel + 'hebrew-study.html">How to read pointed Hebrew</a> · <a href="' + rel + 'hebrew/index.html">All chapters</a> · <a href="' + rel + 'in-print.html">In print</a></p>' +
+  return '<footer class="foot"><p><a href="' + rel + '">sefermormon.com</a> · <a href="' + rel + 'hebrew-study.html">How to read pointed Hebrew</a> · <a href="' + rel + 'vocabulary.html">Vocabulary by frequency</a> · <a href="' + rel + 'hebrew/index.html">All chapters</a> · <a href="' + rel + 'in-print.html">In print</a></p>' +
     '<p>Hebrew Interlinear Standard Works. The interlinear reader adds transliteration, roots, cross-references, notes and read-aloud.</p></footer>\n</body>\n</html>\n';
 }
 function breadcrumbLd(items) {
@@ -459,7 +459,7 @@ function main() {
   fs.mkdirSync(OUT, { recursive: true });
   fs.writeFileSync(path.join(OUT, 'static.css'), CSS);
   const urls = [SITE, SITE + 'bom/bom.html', SITE + 'ot.html', SITE + 'nt.html', SITE + 'dc.html', SITE + 'pgp.html', SITE + 'jst.html',
-    SITE + 'hebrew-study.html', SITE + 'dictionary.html'];
+    SITE + 'hebrew-study.html', SITE + 'vocabulary.html', SITE + 'dictionary.html'];
   const summary = [];
   for (const vol of VOLUMES) {
     try { summary.push(buildVolume(vol, urls)); }
