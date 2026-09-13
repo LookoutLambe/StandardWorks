@@ -1282,6 +1282,12 @@
     'יַרְגִּיעַ': 'רגע',                                       // "will he pacify" (one-word family)
     'יְקַבְּלֶנָּה': 'קבל',                                    // "receiveth it" (one-word family)
     'וּמַטִּים': 'נטה',                                        // "and lend [an ear]" (hiphil of נָטָה, not מוֹט)
+    // 2 Nephi 29 audit (2026-09-13)
+    'יְדַמּוּ': 'דמה',                                        // "what do [these words] mean" (דִּמָּה liken, not דָּמַם be silent)
+    'הַהִשַּׂגְתֶּם': 'נשג',                                    // "have you obtained" (one-word family)
+    'כָּלוֹת': 'כלה',                                         // "not yet finished" (infinitive absolute of כָּלָה, not כֹּל)
+    'הַנִּכְתָּבִים': 'כתב',                                    // "which shall be written" (one-word family)
+    'הוֹבַלְתִּי': 'יבל',                                      // "I have led away" (one-word family)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
