@@ -2228,6 +2228,12 @@
     // Ether 13 audit (2026-09-13)
     'וּבְשִׁבְתּוֹ': 'ישב',   // "as he dwelt" was שָׁבַת, to cease
     'הַנִּמְנִים': 'מנה', 'וַיִּסְתַּתֵּר': 'סתר',
+    // Ether 14 audit (2026-09-13)
+    'עָכִישׁ': 'אכיש',   // the verses spell Akish both ways; one family for both
+    'כָּמְנוֹר': 'כָּמְנוֹר',   // the hill Comnor, not כִּמְנוֹר "like a weaver's beam"
+    'כִּמְנוֹר': 'נור',   // "like a weaver's beam" belongs with מְנוֹרָה
+    'מְהִירָה': 'מהר',   // "swift" (מָהִיר) was יָרָה, to throw
+    'מִקִּשְׁרֵי': 'קשר', 'לְאׇבְדָנָם': 'אבד',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
