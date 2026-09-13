@@ -1745,6 +1745,10 @@
     'וַיֵּרְעוּ': 'רעע',                                        // "they become worse" (not יְרִיעָה curtain)
     'וַעֲמוּלוֹנִים': 'העמולונים',                                 // "and Amulonites"
     'זְרוֹעָם': 'זרוע',                                         // "their arms" (זְרוֹעַ, not זֶרַע seed)
+    // Alma 25 audit (2026-09-13)
+    'תּוֹקְפָנוּת': 'תקף',                                      // "aggression" (heading; תּוֹקְפָנוּת)
+    'צָפוּ': 'צפה', 'צוֹפֵיהֶם': 'צפה', 'הַצּוֹפִים': 'צפה', 'וְצָפוּ': 'צפה', 'הַצּוֹפֵן': 'צפן',                                            // "they did look forward" (צָפָה, not צוּף float)
+    'הַחִיצוֹנִים': 'חיץ',                                       // "outward" (חִיצוֹן)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

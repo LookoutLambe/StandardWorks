@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "חיץ": {"meaning":"(חִיצוֹן) outer, outward; (מְחִיצָה) partition, wall; (הַסְּפָרִים הַחִיצוֹנִים) the Apocrypha","category":"Place"},
   "שמנילום": {"meaning":"Shimnilom — a Lamanite city whose people were converted (Alma 23:12)","category":"Name"},
   "לקה": {"meaning":"(לָקָה) to be flogged, smitten; (הִלְקָה) to flog, scourge; (מַלְקוֹת) lashes","category":"Action"},
   "העמולונים": {"meaning":"Amulonites — the descendants of Amulon and King Noah’s priests (Alma 21–25)","category":"Name"},
@@ -5117,7 +5118,7 @@ window._rootGlossaryData = {
   "נטהר": {"meaning":"we shall be purified","category":"Quality"},
   "צריכים": {"meaning":"needing","category":"Uncategorized"},
   "יצור": {"meaning":"creature","category":"Life"},
-  "תקף": {"meaning":"(תֹּקֶף) strength, force","category":"Time"},
+  "תקף": {"meaning":"(תֹּקֶף) strength, force; (תּוֹקְפָנוּת) aggression","category":"Time"},
   "מלא": {"meaning":"(מָלֵא) to fill, be full; (מְלֹא) fulness; (מִלֻּא) installation, offering, consecration; (מִלּוֹא) millo","category":"Uncategorized"},
   "אסם": {"category":"Uncategorized"},
   "פי־חרב": {"meaning":"edge of sword","category":"Speech"},
@@ -8534,7 +8535,7 @@ window._rootGlossaryData = {
   "צמר": {"meaning":"(צֶמֶר) wool; (צַמֶּרֶת) treetop","category":"Lexical"},
   "הדף": {"meaning":"(הָדַף) to thrust, push, drive away","category":"Lexical"},
   "פקח": {"meaning":"(פָּקַח) to open the eyes, open the ears","category":"Lexical"},
-  "צוף": {"meaning":"(צוּף) caused, float, overflow","category":"Lexical"},
+  "צוף": {"meaning":"(צוּף) to float, overflow; (צוּף) honeycomb","category":"Lexical"},
   "מחח": {"meaning":"(מֵחַ) fat one, fatling; (מָחָה) to blot out, wipe away","category":"Lexical"},
   "נשל": {"meaning":"(נָשַׁל) off, clear, away","category":"Lexical"},
   "כבס": {"meaning":"(כִּבֵּס) to wash, full cloth; (כּוֹבֵס) fuller","category":"Lexical"},
