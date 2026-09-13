@@ -4926,7 +4926,7 @@ window._rootGlossaryData = {
   "פרק": {"meaning":"(פֶּרֶק) chapter, section; crossroads; (פָּרַק) to tear off, break","category":"Uncategorized"},
   "רגל": {"meaning":"(רֶגֶל) foot; (רָגַל) to go about, spy out; (מְרַגְּלִים) spies","category":"Uncategorized"},
   "עשקום": {"meaning":"they were wronged","category":"Uncategorized"},
-  "גזלם": {"category":"Uncategorized"},
+  "גזלם": {"category":"Name","meaning":"Gazelem — the name of a servant, and of the stone that shines forth in darkness (Alma 37:23)"},
   "ישמידום": {"meaning":"they might destroy them","category":"Uncategorized"},
   "אוסיף": {"meaning":"more","category":"Quality"},
   "יחטא": {"meaning":"they shall be answered","category":"Speech"},
