@@ -1713,6 +1713,9 @@
     'וּבְהוֹדָיָה': 'ידה', 'וּמָחָה': 'מחה', 'אֶמְחֶה': 'מחה', 'וַיִּמָּחוּ': 'מחה', 'וּמָחִיתִי': 'מחה', 'יִמְחֶה': 'מחה', 'יִמָּחֶה': 'מחה', 'וְנִמְחוּ': 'מחה', 'תִמָּחֶה': 'מחה', 'יִמַּח': 'מחה', 'תִּמָּח': 'מחה', 'יִמָּחוּ': 'מחה', 'מְחֵה': 'מחה', 'תִּמָּחֶה': 'מחה', 'מָחִיתָ': 'מחה', 'וַיִּמַּח': 'מחה', 'וּמָסֹרְתָם': 'H4562', 'רָצָה': 'רוץ', 'לַנֶּפִיִּי': 'הנפיים', 'בְּהָגִנּוֹ': 'גנן', 'הִקְהִילָה': 'קהל', 'הַמְּבֹרָךְ': 'ברך', 'הוּבְנוּ': 'בין',
     'הַקְּהִילָּה': 'קהל', 'תֶּמְחִי': 'מחה', 'תֶּמַח': 'מחה', 'לַמְחוֹת': 'מחה', 'וְיִמָּחוּ': 'מחה', 'נִמְחוּ': 'מחה', 'לְמִחְיָתִי': 'חיה',   // the church (קְהִלָּה); blot out; my support
     // dispelled (מָחָה, not מֵחַ fat), their traditions (מָסֹרֶת), thanksgiving (הוֹדָיָה, not Hodiah), she ran (רוּץ, not רָצָה be pleased), the Nephite, defending, gathered, the blessed, understood (הוּבַן, not בֵּן son)
+    // Alma 20 audit (2026-09-13)
+    'מִידּוֹנִי': 'מדוני', 'מַכְרִיחַ': 'כרח', 'לְהַסְכִּים': 'סכם', 'לְשִׁחְרוּר': 'שחרר', 'יַרְאֵהוּ': 'ראה', 'יִדּוֹנוּ': 'דין', 'מַסְכִּים': 'סכם', 'מַסְכִּימִים': 'סכם', 'אֲחַלֶּה': 'חלה', 'שָׁחוּק': 'שחק', 'לִפֹּל': 'נפל',
+    // Middoni (heading spelling, not Jadon), compels (הִכְרִיחַ, not רֵיחַ smell), consent (הִסְכִּים, not Sarsekim), release, show him (הֶרְאָה, not יָרֵא fear), Ammah (not עַם people), flatter (חִלָּה), worn (שָׁחַק), to fall
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2135,6 +2138,7 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'וְעַמָּה': { name: 'עַמָּה', word: 'H5972', en: /Ammah/ },      // Ammah / and her people (Alma 20)
     'הַקֹּרוֹת': { name: 'H7136', word: 'H7136', en: /./ },        // "the circumstances" (קָרָה happen; the table stamped קוֹרָה beam)
     'הָאַרְבַּע': { name: 'H7153', word: 'ארבע', en: /arba/i },       // Kirjath-arba / the four
     'מְרַפֵּא': { name: 'רפה', word: 'רפא', en: /weaken/i },         // heals (רָפָא) / weakens (רָפָה, Jer 38:4)

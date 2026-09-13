@@ -1,4 +1,8 @@
 window._rootGlossaryData = {
+  "אנטיומנו": {"meaning":"Antiomno — the Lamanite king of the land of Middoni (Alma 20:4)","category":"Name"},
+  "מולוקי": {"meaning":"Muloki — a Nephite missionary imprisoned at Middoni with Aaron and Ammah (Alma 20:2, 21:11)","category":"Name"},
+  "עַמָּה": {"meaning":"Ammah — a Nephite missionary imprisoned at Middoni with Aaron and Muloki (Alma 20:2, 21:11)","category":"Name"},
+  "כרח": {"meaning":"(הִכְרִיחַ) to compel, force; (הֶכְרֵחַ) necessity","category":"Action"},
   "אביש": {"meaning":"Abish — the Lamanite woman, servant of Lamoni’s queen, converted years before by a vision of her father (Alma 19)","category":"Name"},
   "רבנה": {"meaning":"Rabbanah — powerful or great king, the title the Lamanites gave Ammon (Alma 18:13)","category":"Name"},
   "H3681": {"meaning":"(כִּסּוּי) covering","category":"Objects"},
@@ -8428,7 +8432,7 @@ window._rootGlossaryData = {
   "רמח": {"meaning":"(רֹמַח) spear, javelin, lances","category":"Lexical"},
   "חמס": {"meaning":"(חָמָס) violence, wrong; (חָמַס) to do violence, wrong","category":"Lexical"},
   "קמח": {"meaning":"(קֶמַח) flour, meal, handful","category":"Lexical"},
-  "שחק": {"meaning":"(שָׂחַק) play, laugh, merry; (שַׁחַק) clouds, skies, sky; (שְׂחוֹק) laughter, laughing, stock","category":"Lexical"},
+  "שחק": {"meaning":"(שָׁחַק) to rub away, wear out, grind; (שָׂחַק) play, laugh, merry; (שַׁחַק) clouds, skies, sky; (שְׂחוֹק) laughter, laughing, stock","category":"Lexical"},
   "כנר": {"meaning":"(כִּנּוֹר) harp, lyre, lyres","category":"Lexical"},
   "גרן": {"meaning":"(גֹּרֶן) threshing, floor, threshingfloor","category":"Lexical"},
   "שמט": {"meaning":"(שָׁמַט) shook, fall, release; (שְׁמִטָּה) remission","category":"Lexical"},
