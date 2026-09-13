@@ -26,6 +26,28 @@ html {
   text-size-adjust: 100%;
   overflow-x: hidden;
 }
+/* THE READER NEVER PANS SIDEWAYS. overflow-x:hidden above only clips; it does
+   not stop a touch from dragging the page horizontally, and any element that
+   overflows its line — a long word, a stress mark past the margin — makes the
+   whole sheet draggable left and right under a thumb that meant to scroll
+   down. pan-y tells the compositor the only gesture it may act on is a
+   vertical scroll, so a sideways component is discarded instead of moving the
+   text. Chapter movement is the footer's prev/next, not a gesture. */
+html, body { touch-action: pan-y; overflow-x: hidden; }
+
+/* NOTHING IN A VERSE MAY BE WIDER THAN ITS LINE — it wraps to the next one.
+   .word-flow already wraps, but a flex item cannot be split: one word-unit
+   wider than the container runs off the edge and takes the line with it, and
+   the six volume stylesheets each set `.gl.gl-nw { max-width: none }` to keep
+   a short gloss off two lines, which removes the only cap there was. The unit
+   is bounded to the line here, and a gl-nw gloss that genuinely cannot fit
+   gives up its no-break rather than overflow. Specificity (.word-flow
+   prefix) so it lands regardless of which stylesheet loaded last. */
+.word-flow .word-unit { max-width: 100%; }
+.word-flow .gl.gl-nw { max-width: 100%; }
+@media (max-width: 430px) {
+  .word-flow .gl.gl-nw { white-space: normal; overflow-wrap: break-word; }
+}
 .skip-link { position: absolute; top: -100px; left: 0; background: var(--chrome); color: var(--sw-gold, var(--here-chrome)); padding: 10px 20px; min-height: 44px; box-sizing: border-box; display: flex; align-items: center; z-index: var(--z-skip); font-size: 1em; text-decoration: none; }
 .skip-link:focus { top: 0; }
 body.dark-mode *:focus-visible { outline-color: var(--here-chrome); }

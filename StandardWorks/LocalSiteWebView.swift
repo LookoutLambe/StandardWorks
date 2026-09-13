@@ -54,8 +54,13 @@ struct LocalSiteWebView: UIViewRepresentable {
         // the native copy kept firing against classes the web copy no longer
         // defines. touch-action stays, so a double-tap on a word does not zoom
         // the page out from under the tap that opens its card.
+        // pan-y, not 'manipulation'. Both kill the double-tap zoom, but
+        // 'manipulation' still permits a horizontal pan — and as an INLINE
+        // style on <html> it outranks reader.css's rule, so the reading area
+        // could be dragged sideways in the app while the web was fine. Zoom
+        // is already pinned by min/maximumZoomScale below, so nothing is lost.
         let touchActionScript = """
-        document.documentElement.style.touchAction = 'manipulation';
+        document.documentElement.style.touchAction = 'pan-y';
         """
         config.userContentController.addUserScript(WKUserScript(
             source: touchActionScript,

@@ -2564,8 +2564,23 @@
   // chapter, leftward the previous.
   function installSwipeChapterNav() {
     if (window._swSwipeNavHooked) return;
+    /* HONOUR skipSwipeNav. Every reader passes skipSwipeNav:true, the hub
+       passes it, and init forces it true on any page carrying
+       .controls-bottom — and for all that, nothing ever read the flag and
+       this drag was installed on every page anyway. That is what moved the
+       reading area sideways during a vertical scroll, and what could leave
+       the sheet translated with the text shoved off the right edge.
+
+       The .controls-bottom test is repeated here rather than trusting
+       _config alone, because the footer that calls this can be built before
+       NavEngine.init has run and set it. Chapter movement on a reader is the
+       pinned footer's prev/next; there is no horizontal gesture. */
+    if ((_config && _config.skipSwipeNav) || document.querySelector('.controls-bottom')) return;
     window._swSwipeNavHooked = true;
     var sx = 0, sy = 0, st = 0, live = false, locked = false, sheet = null, fromWord = false;
+    /* The finger travel already spent proving horizontal intent. The sheet
+       is offset by it so the drag starts from zero — see the touchmove. */
+    var lockDx = 0;
     var reduceMotion = false;
     try { reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (eRM) {}
 
@@ -2644,28 +2659,42 @@
         // elsewhere 14px is enough. The selection timer itself survives 22px.
         var lockAt = fromWord ? 34 : 14;
         if (fromWord && window._swWselPending) return;
-        if (Math.abs(dy) > 14 && Math.abs(dy) > Math.abs(dx)) { live = false; return; }
-        if (Math.abs(dx) > lockAt && Math.abs(dx) > 1.4 * Math.abs(dy)) {
-          try {
-            var sel = window.getSelection();
-            if (sel && !sel.isCollapsed && sel.toString().trim()) { live = false; return; }
-          } catch (err) {}
-          var pop = document.getElementById('hl-pop');
-          if (pop && pop.classList.contains('visible')) { live = false; return; }
-          sheet = currentSheet();
-          if (!sheet) { live = false; return; }
-          locked = true;
-          sheet.style.willChange = 'transform';
-          clipX(true);
-        } else {
-          return;
-        }
+        /* ONE decision, taken once the gesture leaves the slop radius, with
+           both axes judged on the same footing. The old pair of tests let
+           horizontal win on its own 14px threshold while vertical had to
+           clear 14px AND beat dx — so a thumb flick down, which arcs 15-25px
+           sideways before it has travelled 14px down, satisfied the lock test
+           on its first frame (dx 16, dy 8) and the sheet then slid left and
+           right for the rest of the scroll. That was "swiping down moves it
+           to the right or left". Now nothing moves until the gesture has left
+           the slop, and at that moment a scroll wins unless the horizontal
+           component clearly dominates. The verdict is final either way: a
+           gesture ruled a scroll is dropped (live = false) and cannot come
+           back as a page drag halfway down the screen. */
+        if (Math.max(Math.abs(dx), Math.abs(dy)) < lockAt) return;
+        if (Math.abs(dx) < 1.8 * Math.abs(dy)) { live = false; return; }
+        try {
+          var sel = window.getSelection();
+          if (sel && !sel.isCollapsed && sel.toString().trim()) { live = false; return; }
+        } catch (err) {}
+        var pop = document.getElementById('hl-pop');
+        if (pop && pop.classList.contains('visible')) { live = false; return; }
+        sheet = currentSheet();
+        if (!sheet) { live = false; return; }
+        locked = true;
+        lockDx = dx;
+        sheet.style.willChange = 'transform';
+        clipX(true);
       }
       e.preventDefault();
       if (sheet) {
+        // The travel spent proving intent is subtracted, so the sheet is at 0
+        // the instant it locks and moves with the finger from there. Applying
+        // the raw dx snapped it sideways by the whole threshold in one frame.
+        var mv = dx - lockDx;
         // a turn that cannot happen (first/last chapter) drags with resistance
-        var blocked = navDisabled(dx > 0 ? 'next' : 'prev');
-        sheet.style.transform = 'translateX(' + (blocked ? dx / 3 : dx) + 'px)';
+        var blocked = navDisabled(mv > 0 ? 'next' : 'prev');
+        sheet.style.transform = 'translateX(' + (blocked ? mv / 3 : mv) + 'px)';
       }
     }, { passive: false });
 
@@ -2675,7 +2704,9 @@
       if (!locked || !sheet) return;
       var t = e.changedTouches && e.changedTouches[0];
       if (!t) { springBack(); return; }
-      var dx = t.clientX - sx, dt = Math.max(Date.now() - st, 1);
+      // Measured from the lock, not the touch, so the distance tested is the
+      // distance the sheet actually travelled under the finger.
+      var dx = (t.clientX - sx) - lockDx, dt = Math.max(Date.now() - st, 1);
       var dir = dx > 0 ? 'next' : 'prev';
       var flick = Math.abs(dx) / dt > 0.5 && Math.abs(dx) > 40;
       if ((Math.abs(dx) > window.innerWidth * 0.28 || flick) && !navDisabled(dir)) {
