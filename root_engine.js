@@ -1816,6 +1816,9 @@
     'וּלְדָתֵנוּ': 'דת',                                        // "and our religion" (דָּת, not יָלַד bear)
     'אֶת־זְרוֹעֵנוּ': 'זרוע', 'זְרוֹעֵנוּ': 'זרוע',                   // "our arms" (זְרוֹעַ, not זֶרַע seed)
     'נָפֵר': 'פרר', 'חֹד': 'חדד',                                 // "we shall break" (הֵפֵר), "the point" (חֹד)
+    // Alma 45 audit (2026-09-13)
+    'צָמוּ': 'צום', 'יֻגַּד': 'נגד',                              // "they did fast", "should be declared"
+    'וְהַמְּהוּמוֹת': 'הום',                                     // "and disturbances" (מְהוּמָה, not מוּת die)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
