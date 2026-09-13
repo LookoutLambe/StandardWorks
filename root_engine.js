@@ -2347,6 +2347,15 @@
     'וְאִשּׁוּר': 'H0833', 'וְתַשְׁכִּיחֲךָ': 'שכח',
     // Doctrine and Covenants 11–20 audit (2026-09-13)
     'וַעֲזֹר': 'עזר', 'וְהֵעַדְתֶּם': 'עוד',
+    // Doctrine and Covenants 21–30 audit (2026-09-13)
+    'הֵעַרְתִּיו': 'עור',   // "him have I inspired" was H5785 עוֹר, a skin
+    'וַאֲרִימְךָ': 'רום',   // "and I have lifted you up" was H0758 Aram
+    'עֶקְרוֹנוֹת': 'עקר',   // "the principles of" was H6138 Ekron, the Philistine city
+    'תְּפִילָּה': 'פלל',   // the plene spelling of the prayer, still falling under נָפַל
+    'קְרִיאָתְךָ': 'קרא', 'קְרִיאָתֵךְ': 'קרא', 'בִּקְרִיאָתוֹ': 'קרא',
+    'צְלַבְךָ': 'צלב', 'צְלַבְכֶם': 'צלב', 'צְלַבְתֶּם': 'צלב',
+    'מִצָּרֹתֶיךָ': 'צרה', 'הַהַסְכָּמָה': 'סכם', 'יְשַׁמְּשׁוּ': 'שמש',
+    'רוּחָנִיִּים': 'רוח', 'מוּכָח': 'יכח', 'וְתַרְמִיל': 'תרמיל',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

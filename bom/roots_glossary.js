@@ -164,6 +164,8 @@ window._rootGlossaryData = {
   "וכוח": {"meaning":"(וִכּוּחַ) argument, dispute, contest","category":"Speech"},
   "אכסן": {"meaning":"(הִתְאַכְסֵן) to lodge, to board; (אַכְסַנְיָה) lodging","category":"Society"},
   "תמד": {"meaning":"(מַתְמִיד) continuous, persistent; (תָּמִיד) continually","category":"Time"},
+  "פייג׳": {"meaning":"Page — Hiram Page, one of the Eight Witnesses","category":"Name"},
+  "תרמיל": {"meaning":"(תַּרְמִיל) scrip, knapsack","category":"Tools"},
   "תרנגול": {"meaning":"(תַּרְנְגוֹל) cock, rooster","category":"Nature"},
   "מתודיסט": {"meaning":"(מֶתוֹדִיסְט) Methodist","category":"Name"},
   "פרסביטרין": {"meaning":"(פְּרֶסְבִּיטֶרְיָן) Presbyterian","category":"Name"},
