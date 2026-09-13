@@ -1723,6 +1723,12 @@
     'שִׁחְרוּרָם': 'שחרר',                                       // "their release"
     'בָּנִינוּ': 'בנה',                                         // "we have built" (בָּנָה, not בֵּן son)
     'וַיַּלְבִּישׁוּם': 'לבש', 'וַיַּקְשִׁיבוּ': 'קשב', 'וְיַקְשִׁיבוּ': 'קשב',                  // "clothed", "gave heed"
+    // Alma 22 audit (2026-09-13)
+    'מְבֹאָרֶת': 'באר',                                        // "is described" (heading; מְבֹאֶרֶת)
+    'וַתְּצַו': 'צוה', 'עֲבָדֶיהָ': 'עבד',                          // "she commanded", "her servants"
+    'הַגּוֹבְלִים': 'גבל',                                       // "bordering" (גָּבַל, not the Gebalites)
+    'הַמִּזְרָחִי': 'זרח', 'הַמִּזְרָחִיּוֹת': 'זרח', 'הַמִּזְרָחִית': 'זרח',                                       // "east" (מִזְרָחִי, not the Zerahites)
+    'וְהִמְנִי': 'חִמְנִי', 'בְהִמְנִי': 'חִמְנִי', 'הִמְנִי': 'חִמְנִי',   // Himni's second spelling
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
