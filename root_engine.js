@@ -2298,6 +2298,8 @@
     // Abraham facsimile 2 audit (2026-09-13)
     'בִּשְׁלִיטָה': 'שלט',
     'בְּמִדָּתוֹ': 'מדד', 'וּבְמִדָּתוֹ': 'מדד', 'וּמִדָּתוֹ': 'מדד',   // "its measure" was H1881 דָּת, a royal edict
+    // Abraham facsimile 3 audit (2026-09-13)
+    'בְּפַקְסִימִילְיָה': 'פקסימיליה',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2725,6 +2727,7 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },
+      'בְּצוּרָה':   { name: 'צור', word: 'בצר', en: /figure|manner/i },   // "in Figure 2" is בְּ + צוּרָה, not a fortified city
       'מָרָה':      { name: 'מרה', word: 'מרר', en: /rebel|disobedien/i },   // eleven uses are "bitter", two are מָרָה to rebel
       'מוֹלִיד':    { name: 'H4140', word: 'ילד', en: /Molid/ },   // "begets" six times, Molid once
       'רָמָה':      { name: 'H7414', word: 'רום', en: /Rama/ },   // the hill Ramah, not רוּם
