@@ -1852,6 +1852,13 @@
     'מְלֵאַת': 'מלא', 'בִּיאָתוֹ': 'בוא', 'לְבִיאָתוֹ': 'בוא', 'לַבָּאוֹת': 'בוא', 'לְאוֹתָן': 'H0853',
     // strays in the come family: Abba is the Aramaic father, not "he came"
     'אַבָּא': 'H0001', 'בָאֱמֶת': 'אמת', 'בָאִי': 'H0339',
+    // Alma 50 audit (2026-09-13)
+    'טֵיאַנְקוּם': 'טאנקום', 'לְטֵיאַנְקוּם': 'טאנקום', 'וְטֵיאַנְקוּם': 'טאנקום',   // Teancum's second spelling had its own empty family
+    'וּכְכֹחָם': 'כחח', 'הַהֲגָנָה': 'גנן',                 // one-word families: "their strength", "the defense"
+    'וּמַצּוֹתֵיהֶם': 'נצה',                              // "their contentions" (מַצָּה strife), not צִוָּה command
+    'צִיּוּנֵי': 'H6725',                                 // "the monuments of" (צִיּוּן waymark), not צִוָּה command
+    // the impoverish family held the smiters and the blows of נָכָה
+    'מוּכִּים': 'נכה', 'מַכֵּי': 'נכה', 'וּמַכֵּי': 'נכה', 'מַכּוֹתֵיהֶם': 'נכה', 'מַכּוֹתָיו': 'נכה',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2278,6 +2285,7 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'עֶזְרָה': { name: 'H5834', word: 'עזר', en: /Ezrah/ },          // the son of Ezrah / help, assistance (Alma 50)
     'הָרִים': { name: 'רום', word: 'הרר', en: /raise|lift|rear|hoist|take off|take away/i },   // he raises (הֵרִים) / mountains (Alma 48)
     'נוֹצְרִים': { name: 'נוֹצְרִי', word: 'נצר', en: /Christian/i },   // Christians (Alma 46 heading) / watchmen
     'חֶבֶר': { name: 'H2268', word: 'חבר', en: /Heber/ },          // Heber / a band, a company (Alma 46)
