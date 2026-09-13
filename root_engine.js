@@ -1237,6 +1237,10 @@
     'לוֹחֵם': 'H3898',                                        // "the warrior" (לָחַם fight, not לוּחַ plate)
     // 2 Nephi 21 audit (2026-09-13)
     'עוֹנֹתָם': 'עון',                                        // "their iniquities" (defective עֲוֺנֹתָם; had fallen into עים heat)
+    // 2 Nephi 23 audit (2026-09-13)
+    'לְהָבִים': 'להב',                                        // "flames" (was the people Lehabim)
+    'מֵעִיר': 'עור',                                          // "will stir up" (עוּר rouse, not עִיר city)
+    'אַשְׁמִידֶנָּה': 'שמד',                                   // "I will destroy her" (one-word family)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

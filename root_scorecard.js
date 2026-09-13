@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '148';   // bump when the generated data files change
+  var RSC_V = '149';   // bump when the generated data files change
   // Transliterated terms — an exception table in the tool, like the received
   // spellings in transliterate(): keyed by bare consonants, so every pointing
   // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.
@@ -747,6 +747,20 @@
     if (pz && pz.strongs && /Np/.test(pz.morph || '') && found.key && window.RootEngine && window.RootEngine.familyOf &&
         !(window.RootEngine.isNameEntry && window.RootEngine.isNameEntry(pz.strongs) &&
           window.RootEngine.familyOf(pz.strongs) === found.key)) pz = null;
+    /* AND A COMMON-WORD PARSE FROM ANOTHER FAMILY. מֵעִיר "will stir up" is
+       attested only as מִן + עִיר city (H5892); the card keys to עוּר rouse. A
+       parse whose lexeme is another family's word, and whose consonants are
+       not even inside this family's, describes a word this token is not.
+       OSHB's H9xxx suffix and prefix numbers are not lexemes, and לָכֵן's כֵּן
+       sits inside לכן — both keep their parse (measured 2026-09-13: 271
+       parses in Isaiah 13, one dropped, this one). */
+    if (pz && pz.strongs && /^H[0-8]/.test(pz.strongs) && found.key && window.RootEngine && window.RootEngine.familyOf &&
+        window.RootEngine.familyOf(pz.strongs) !== found.key) {
+      var _SR = window._strongsRoots || {};
+      var _lw = _consOf(_SR[pz.strongs] && _SR[pz.strongs].w);
+      var _kc = /^H\d{4}$/.test(found.key) ? _consOf(_SR[found.key] && _SR[found.key].w) : _consOf(found.key);
+      if (_lw && String(_kc || '').indexOf(_lw) < 0) pz = null;
+    }
     var wordNum = hgNum || (pz && pz.strongs) ||
       (window._strongsLookup && (window._strongsLookup[pieceSurface] || window._strongsLookup[surface])) || '';
     var wordLemma = wordNum && window._strongsRoots && window._strongsRoots[wordNum] ? window._strongsRoots[wordNum].w : '';
