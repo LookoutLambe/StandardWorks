@@ -10,11 +10,11 @@
   var EDITIONS = [
     { key: 'interlinear', title: 'Interlinear Edition', name: 'Hebrew Book of Mormon: Interlinear Edition',
       format: 'Soft Cover', spec: 'Softcover · 8.5 × 11 in', seller: 'Amazon', href: 'https://www.amazon.com/dp/B0GVZFM6YR',
-      w: 696, h: 900, img: 'cover-interlinear.jpg?v=5', alt: 'Hebrew Book of Mormon Interlinear Edition',
+      w: 696, h: 900, img: 'cover-interlinear.jpg?v=6', alt: 'Hebrew Book of Mormon Interlinear Edition',
       blurb: 'The whole Book of Mormon with its English gloss set under every Hebrew word, two columns to a large page. The edition this site’s interlinear view is printed from.' },
     { key: 'hebrew', title: 'Full Hebrew Edition', name: 'Sefer Mormon: the Book of Mormon in Hebrew',
       format: 'Soft Cover', spec: 'Softcover · 6 × 9 in', seller: 'Amazon', href: 'https://www.amazon.com/dp/B0DVTJC9HJ',
-      w: 600, h: 900, img: 'cover-hebrew.jpg?v=5', alt: 'Hebrew Book of Mormon',
+      w: 600, h: 900, img: 'cover-hebrew.jpg?v=6', alt: 'Hebrew Book of Mormon',
       blurb: 'The Hebrew text alone, pointed, verse by verse, in a reader’s volume. Nothing on the page but the Book of Mormon in the Hebrew of the prophets.' },
     { key: 'footnote', title: 'Footnote Edition', name: 'Sefer Mormon: Footnote Edition, blue linen hardcover',
       format: 'Blue Linen · Dust Jacket', spec: 'Hardcover · Blue linen · Dust jacket', seller: 'Lulu',
