@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "רחש": {"meaning":"(רָחַשׁ) to stir, be moved; feelings","category":"Lexical"},
   "דום": {"meaning":"(דּוּמָם) silent, still; (דּוּמָה) silence","category":"Lexical"},
   "רבק": {"meaning":"(מַרְבֵּק) stall (for fattening)","category":"Lexical"},
   "שרב": {"meaning":"(שָׁרָב) heat, parched ground","category":"Lexical"},
@@ -1887,7 +1888,7 @@ window._rootGlossaryData = {
   "ראשיהם": {"meaning":"heads of them","category":"Person"},
   "עמרון": {"meaning":"Ammaron","category":"Uncategorized"},
   "ימין": {"meaning":"Imin","category":"Person"},
-  "אמץ": {"meaning":"courage","category":"Time"},
+  "אמץ": {"meaning":"(אָמַץ) to be strong, bold, courageous; (אֹמֶץ) strength, courage","category":"Time"},
   "לשה": {"meaning":"three","category":"Uncategorized"},
   "אנא": {"meaning":"(אָנָּא) O!, I beseech, please","category":"Theology"},
   "זעקו": {"meaning":"cry out!(pl)","category":"Speech"},
@@ -3771,7 +3772,7 @@ window._rootGlossaryData = {
   "נוסדה": {"meaning":"was established","category":"Uncategorized"},
   "ישכנו": {"meaning":"they may dwell","category":"Life"},
   "טקסט": {"meaning":"text of","category":"Uncategorized"},
-  "אזן": {"meaning":"(אֹזֶן) ear; (מֹאזֵן) balances, balance, scales","category":"Uncategorized"},
+  "אזן": {"meaning":"(אֹזֶן) ear; (הֶאֱזִין) to give ear, listen; (מֹאזְנַיִם) balances","category":"Uncategorized"},
   "תעודה": {"meaning":"testimony","category":"Uncategorized"},
   "קף": {"meaning":"surrounded","category":"Uncategorized"},
   "עתיק": {"meaning":"ancient","category":"Uncategorized"},

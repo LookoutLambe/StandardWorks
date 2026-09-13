@@ -1152,6 +1152,15 @@
     'וְהַנִּכְתָּב': 'כתב',                                 // "that which shall be written"
     'לְהָבִישׁ': 'בוש',                                    // "confounding" (hiphil of בּוֹשׁ), not יֵשׁ
     'אַתִּיר': 'H5425',                                    // "I will loose" (hiphil of נתר), not אֲתַר "place"
+    // THE 2 NEPHI 4 CARD AUDIT (2026-09-12):
+    'תַּאֲזִינוּ': 'אזן', 'הַאֲזִינוּ': 'אזן', 'וְהַאֲזִינוּ': 'אזן',   // "give ear" (hiphil of אזן), not אָז "then"
+    'כַלּוֹתוֹ': 'כלה', 'כְּכַלּוֹתוֹ': 'כלה', 'וּבְכַלּוֹתוֹ': 'כלה', 'וְיִכְלֶה': 'כלה',   // "made an end", "waste away" — כלה, not תָּו or כֶּלֶא
+    'לוּחֹתַי': 'לוח',                                     // "my plates", not the Hittite
+    'לְבָנָי': 'בן', 'לְבָנַי': 'בן', 'וּלְבָנַי': 'בן', 'לְבָנָיו': 'בן',   // "my children" (בָּנַי), not לָבָן "white"
+    'שְׁמָרַנִי': 'שמר',                                   // "hath preserved me", not Shimron
+    'וְתִתְמַהְמַהּ': 'מהה', 'הִתְמַהְמַהּ': 'מהה', 'וַיִּתְמַהְמַהּ': 'מהה',   // "linger"
+    'וּלְעַנּוֹת': 'H6031', 'לְעַנּוֹת': 'H6031', 'וּלְעַנּוֹתָם': 'H6031', 'לְעַנּוֹתָם': 'H6031',   // "afflict" (piel), not "answer"
+    'הֲתַעֲשֵׂנִי': 'עשה', 'תִּסָּגֵרְנָה': 'סגר',            // one-word families
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1568,7 +1577,8 @@
       'עֻזִּי':     { name: 'H5813', word: 'H5797', en: /Uzzi/ },              // my strength · Uzzi (1 Nephi 21)
       'גִדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },            // brought up · Giddel
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
-      'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ }       // captivity, unless the gloss says sit (1 Nephi 21)
+      'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
+      'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ }               // mighty · Gaza (2 Nephi 4)
     };
     var _HG_BLIND = /[ּֽֿ]/g;
     var _HG_INDEX = null;
