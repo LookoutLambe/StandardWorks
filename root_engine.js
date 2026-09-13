@@ -2115,6 +2115,10 @@
     'מִכְלָא': 'כלא', 'הַמִּכְלָא': 'כלא',                   // "the fold" of the other sheep (מִכְלָא), not the negative לֹא
     // 3 Nephi 16 audit (2026-09-13)
     'כְּשֶׁיָּשִׁיב': 'שוב',                                // "when he shall return" — a family of one, blank card
+    // 3 Nephi 17 audit (2026-09-13)
+    'לִכְרֹעַ': 'כרע',                                     // "kneel down" (כָּרַע), not רַע evil
+    'דַּיָּהּ': 'די',                                      // "is sufficient" (דַּי), not דַּיָּה the kite
+    'לְרַפְּאֹתְכֶם': 'רפא',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
