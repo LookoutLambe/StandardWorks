@@ -2640,6 +2640,13 @@
     'וּמְעַוְּתִים': 'עות', 'מִכֵּיוָן': 'מכיון', 'מוֹפִיעִים': 'יפע',
     'כִּנְעָנֶיהָ': 'כנע',   // whose traffickers are — not Canaan
     'גְאֻלָּתָהּ': 'גאל',
+    /* A PLENE SPELLING THE LEXICON DOES NOT HAVE. בִּתְפִילּוֹתַי is תְּפִלָּה
+       written with a mater yod; the lexicon has only the defectiva, misses, and
+       the form falls through to נָפַל "to fall" — so "in my prayers" opened a
+       card about falling down. Same shape: הֵמִירוּ "changed" to יָרָה "to throw"
+       (the singular הֵמִיר was fine) and כָלֶה "corruptible" to כֹּל "all". */
+    'בִּתְפִילּוֹתַי': 'פלל', 'הֵמִירוּ': 'מור', 'וּבִתְפִילָּה': 'פלל',
+    'וּתְפִילָּתִי': 'פלל', 'כָלֶה': 'כלה', 'תְּפִילָּה': 'פלל',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
