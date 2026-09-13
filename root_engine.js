@@ -1232,6 +1232,9 @@
     'דְּבוֹרַת': 'דבורה',                                     // "a bee of" (one-word family)
     // 2 Nephi 18 audit (2026-09-13)
     'בְּמַלְכָּם': 'מלך',                                     // "their king" (Isa 8:21; the attested lemma was the idol Malcam)
+    // 2 Nephi 19 audit (2026-09-13)
+    'מוּצָק': 'צוק',                                          // "vexation" (מוּצָק distress, not יָצַק pour)
+    'לוֹחֵם': 'H3898',                                        // "the warrior" (לָחַם fight, not לוּחַ plate)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
