@@ -303,6 +303,7 @@ window._rootGlossaryData = {
   "בסס": {"meaning":"(בִּסֵּס) to establish, base","category":"Uncategorized"},
   "הנאה": {"meaning":"(הֲנָאָה) enjoyment; (נֶהֱנָה) to enjoy","category":"Uncategorized"},
   "כרז": {"meaning":"(הִכְרִיז) to proclaim","category":"Uncategorized"},
+  "תבע": {"meaning":"(תָּבַע) to claim, to demand; (תְּבִיעָה) claim, demand","category":"Society"},
   "שדל": {"meaning":"(הִשְׁתַּדֵּל) to intercede, endeavor; (הִשְׁתַּדְּלוּת) intercession","category":"Uncategorized"},
   "רכז": {"meaning":"(רִכֵּז) to center, concentrate","category":"Uncategorized"},
   "פקפק": {"meaning":"(פִּקְפֵּק) to doubt","category":"Uncategorized"},
