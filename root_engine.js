@@ -1303,6 +1303,12 @@
     'בְּלֶכְתְּכֶם': 'הלך',                                     // "by following" (לֶכֶת, not נָכָה smite)
     'הִוָּשֵׁעַ': 'ישע', 'הוֹשַׂע': 'ישע',   // "be saved" (niphal; one-word family across BoM / NT / JST spellings)
     'וְלַבֵּן': 'בן',                                          // "and of the Son" (בֵּן, not the psalm title Muth-labben)
+    // 2 Nephi 33 audit (2026-09-13)
+    'תְּפִלּוֹתַי': 'פלל', 'תְּפִלּוֹתָיו': 'פלל', 'שֶׁיִּתְפַּלֲלוּ': 'פלל',   // "my prayers" — תְּפִלָּה forms had fallen into נָפַל fall
+    'כָרִי': 'כרר',                                           // "my pillow" (כַּר cushion, not the Carite guard)
+    'וְתַרְטַבְנָה': 'רטב',                                     // "and water [my pillow]" (one-word family)
+    'לְיַחֵל': 'יחל',                                         // "hope" (יִחֵל, not חָלַל profane)
+    'יִתְרַצּוּ': 'רצה',                                       // "they shall be reconciled" (one-word family)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

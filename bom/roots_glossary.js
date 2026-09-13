@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "רטב": {"meaning":"(רָטַב) to be moist, wet; to water","category":"Nature"},
   "H5183": {"meaning":"(נַחַת) quietness, rest; descent; carefully","category":"Lexical"},
   "קוש": {"meaning":"(קוּשׁ) to lay a snare, set a trap","category":"Action"},
   "H6261": {"meaning":"(עִתִּי) timely, in due time","category":"Time"},
@@ -8145,7 +8146,7 @@ window._rootGlossaryData = {
   "רוה": {"meaning":"(רָוָה) to be saturated, drink one's fill; to water, soak; (רָוֶה) watered, well-watered","category":"Action"},
   "כהה": {"meaning":"(כָּהָה) to grow dim, dull, faint; to restrain, rebuke","category":"Quality"},
   "נקר": {"meaning":"(נָקַר) to bore, pick out, pluck out, thrust out; (נְקָרָה) cleft, cavity of a rock","category":"Action"},
-  "כרר": {"meaning":"(כִּרְכֵּר) to dance, whirl, leap about; (כַּר) lamb; battering ram; meadow, pasture; saddle","category":"Action"},
+  "כרר": {"meaning":"(כִּרְכֵּר) to dance, whirl, leap about; (כַּר) lamb; battering ram; meadow, pasture; saddle-cushion, pillow","category":"Action"},
   "גרה": {"meaning":"(גָּרָה) to stir up strife, engage in strife, wage war, contend","category":"Action"},
   "רקד": {"meaning":"(רָקַד) to dance, skip, leap about","category":"Action"},
   "תבן": {"meaning":"(תֶּבֶן) straw, stubble, chopped straw","category":"Nature"},
