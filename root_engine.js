@@ -1772,6 +1772,8 @@
     // Alma 31 audit (2026-09-13)
     'כּוֹזֶבֶת': 'כזב', 'וְקַוְּצוֹתֵיהֶם': 'קוצה', 'לְהַנְחוֹת': 'נחה', 'מַכְאִיבָה': 'כאב',
     // false (כּוֹזֵב, not זוּב flow), their ringlets (קְוֻצּוֹת, not קוֹץ thorn), to lead (הִנְחָה, not נוּחַ rest), doth pain (הִכְאִיב, not אֹיֵב enemy)
+    // Alma 33 audit (2026-09-13)
+    'קְהִלּוֹתֶיךָ': 'קהל', 'יְעֻנֶּה': 'ענה',                       // "your congregations", "he shall suffer" (עֻנָּה)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
