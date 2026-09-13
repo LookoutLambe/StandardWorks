@@ -2104,6 +2104,13 @@
     'וּמְקַדְּמוֹת': 'קדם', 'הַהַקְדָּמוֹת': 'קדם',           // "the former time of" — not Kedemoth the Levitical city
     'הִתְרַצֵּה': 'רצה', 'וְהִתְרַצֵּה': 'רצה', 'הֲמִתְרַצֶּה': 'רצה', 'הֲתִרְצֶה': 'רצה',   // "be reconciled", not Tirzah
     'לְנַבֵּל': 'נבל', 'הַסֶּנִין': 'סנין', 'צְלָבְכֶם': 'צלב',
+    // 3 Nephi 13 audit (2026-09-13)
+    'תַּחְצְרוּ': 'חצר', 'חֲצֵרוֹ': 'חצר',                   // "do not sound" a trumpet, "his palace" — not Hezro
+    'בַחֲדָרֶךָ': 'חדר', 'בְּחַדְרְךָ': 'חדר', 'בְחֶדְרְךָ': 'חדר',   // "into your closet" (חֶדֶר), not Hadrach
+    'הַמָּמוֹן': 'ממון', 'וְהַמָּמוֹן': 'ממון', 'מָמוֹן': 'ממון',   // Mammon, not הָמַם confounded
+    'יִטְווּ': 'טוה',                                      // "do they spin" (טָוָה), not נָטָה stretch out
+    'מַלְבִּישׁ': 'לבש', 'יַלְבִּישׁ': 'לבש',                 // "clothe" (הִלְבִּישׁ), not the particle יֵשׁ
+    'צָמִים': 'צום',                                       // "to fast" (צָם), not צַמָּה a veil
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

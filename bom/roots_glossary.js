@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "ממון": {"meaning":"(מָמוֹן) mammon, riches","category":"Objects"},
   "פיזיים": {"meaning":"(פִיזִי) physical, bodily","category":"Quality"},
   "יריעה": {"meaning":"(יְרִיעָה) curtain, tent-curtain","category":"Objects"},
   "זעזע": {"meaning":"(זַעֲזוּעַ) upheaval, shock; (זִעְזֵעַ) to shake violently","category":"Nature"},
@@ -818,7 +819,7 @@ window._rootGlossaryData = {
   "כרם": {"meaning":"(כֶּרֶם) vineyard","category":"Place"},
   "ימן": {"meaning":"(יָמִין) right hand; south; (יָמַן) to go to the right","category":"Direction"},
   "שבר": {"meaning":"(שָׁבַר) to break, shatter; (שֶׁבֶר) breach, destruction; (שָׁבַר II) to buy grain","category":"Conflict"},
-  "חצר": {"meaning":"(חָצֵר) court, courtyard, enclosure, village; (חָצִיר) grass, herb","category":"Place"},
+  "חצר": {"meaning":"(חָצֵר) court, courtyard, enclosure, village; (חִצְצֵר) to sound a trumpet; (חָצִיר) grass, herb","category":"Place"},
   "הן": {"meaning":"(הֵן) behold, lo; yea, if; (הִנֵּה) behold; (הִנְנִי) here am I; (הֵנָּה) hither, hitherto; they (f.)","category":"Particle"},
   "שמם": {"meaning":"(שָׁמֵם) to be desolate, appalled; (שְׁמָמָה) desolation, waste","category":"Quality"},
   "רבב": {"meaning":"(רַב) many, great; (רֹב) multitude, most; abundance; (רְבָבָה) thousands, ten, myriad; (רִבּוֹ) ten, thousand, six; (רַבְרְבָן) nobles","category":"Quantity"},
@@ -8284,7 +8285,7 @@ window._rootGlossaryData = {
   "פוג": {"meaning":"(פּוּג) to grow numb, faint, feeble, wax cold, be slack; (פּוּגָה) rest, respite","category":"Quality"},
   "שוך": {"meaning":"(שׂוּךְ) to hedge, fence about; (שׂוֹכָה) bough, branch; (מְשׂוּכָה) hedge","category":"Action"},
   "ישה": {"meaning":"(תּוּשִׁיָּה) sound wisdom, effectual working, substance, enterprise; Joshah","category":"Quality"},
-  "צמם": {"meaning":"(צַמָּה) veil, locks (Song 4:1); (צָמַם) to fast — צום; (צַמִּים) robber, snare (Job 5:5)","category":"Tools"},
+  "צמם": {"meaning":"(צַמָּה) veil, locks; (צַמִּים) robber, snare","category":"Tools"},
   "פרז": {"meaning":"(פְּרָזוֹת) unwalled villages, open country; (פְּרָזִי) villager, rural; (פֶּרֶז) chieftain","category":"Place"},
   "פוק": {"meaning":"(פּוּק) to totter, stumble, waver, stagger; (הֵפִיק) to obtain, draw out, furnish; (פּוּקָה) stumbling","category":"Action"},
   "יאש": {"meaning":"(נוֹאַשׁ) to despair, give up hope, be hopeless","category":"Quality"},
