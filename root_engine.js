@@ -1716,6 +1716,13 @@
     // Alma 20 audit (2026-09-13)
     'מִידּוֹנִי': 'מדוני', 'מַכְרִיחַ': 'כרח', 'לְהַסְכִּים': 'סכם', 'לְשִׁחְרוּר': 'שחרר', 'יַרְאֵהוּ': 'ראה', 'יִדּוֹנוּ': 'דין', 'מַסְכִּים': 'סכם', 'מַסְכִּימִים': 'סכם', 'אֲחַלֶּה': 'חלה', 'שָׁחוּק': 'שחק', 'לִפֹּל': 'נפל',
     // Middoni (heading spelling, not Jadon), compels (הִכְרִיחַ, not רֵיחַ smell), consent (הִסְכִּים, not Sarsekim), release, show him (הֶרְאָה, not יָרֵא fear), Ammah (not עַם people), flatter (חִלָּה), worn (שָׁחַק), to fall
+    // Alma 21 audit (2026-09-13)
+    'הָאֲמָלֵקִים': 'עמלקים', 'וְהָעֲמָלֵקִים': 'עמלקים',            // the Amalekites — three spellings, one family
+    'וְכַפָּרָתוֹ': 'כפר',                                       // "and his atonement" (כַּפָּרָה, not פָּרַר)
+    'בְּמִידּוֹנִי': 'מדוני',                                     // "at Middoni" (not Jadon)
+    'שִׁחְרוּרָם': 'שחרר',                                       // "their release"
+    'בָּנִינוּ': 'בנה',                                         // "we have built" (בָּנָה, not בֵּן son)
+    'וַיַּלְבִּישׁוּם': 'לבש', 'וַיַּקְשִׁיבוּ': 'קשב', 'וְיַקְשִׁיבוּ': 'קשב',                  // "clothed", "gave heed"
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2138,6 +2145,7 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'עָנִי': { name: 'ענטי', word: 'H6031', en: /\bAni\b/ },        // Ani-Anti, the village / poor, afflicted
     'וְעַמָּה': { name: 'עַמָּה', word: 'H5972', en: /Ammah/ },      // Ammah / and her people (Alma 20)
     'הַקֹּרוֹת': { name: 'H7136', word: 'H7136', en: /./ },        // "the circumstances" (קָרָה happen; the table stamped קוֹרָה beam)
     'הָאַרְבַּע': { name: 'H7153', word: 'ארבע', en: /arba/i },       // Kirjath-arba / the four

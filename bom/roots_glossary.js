@@ -1,4 +1,6 @@
 window._rootGlossaryData = {
+  "העמולונים": {"meaning":"Amulonites — the descendants of Amulon and King Noah’s priests (Alma 21–25)","category":"Name"},
+  "ענטי": {"meaning":"Ani-Anti — a Lamanite village where Aaron and his brethren preached (Alma 21:11)","category":"Name"},
   "אנטיומנו": {"meaning":"Antiomno — the Lamanite king of the land of Middoni (Alma 20:4)","category":"Name"},
   "מולוקי": {"meaning":"Muloki — a Nephite missionary imprisoned at Middoni with Aaron and Ammah (Alma 20:2, 21:11)","category":"Name"},
   "עַמָּה": {"meaning":"Ammah — a Nephite missionary imprisoned at Middoni with Aaron and Muloki (Alma 20:2, 21:11)","category":"Name"},
@@ -1712,7 +1714,7 @@ window._rootGlossaryData = {
   "נטי": {"meaning":"Manti","category":"Uncategorized"},
   "נפיחה": {"meaning":"Nephihah — the second chief judge of the Nephites; a city and land (Alma 4, 50)","category":"Name"},
   "ן׃": {"meaning":"thus","category":"Time"},
-  "עמלקים": {"meaning":"Amalekites","category":"Uncategorized"},
+  "עמלקים": {"meaning":"Amalekites — Nephite dissenters among the Lamanites, of the order of Nehor (Alma 21–43); not the Amalekites of the Tanakh","category":"Name"},
   "צרהמלה": {"meaning":"Zarahemla","category":"Uncategorized"},
   "ימלא": {"meaning":"was filled","category":"Time"},
   "עשותם": {"meaning":"committing","category":"Society"},
