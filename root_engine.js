@@ -1228,6 +1228,8 @@
     'בִתָּהּ': 'H1323', 'בְּבִתָּהּ': 'H1323',                 // "her daughter" (בַּת, not בָּתָה waste)
     // 2 Nephi 16 audit (2026-09-13)
     'וְהָשַׁע': 'שעע',                                        // "and shut [their eyes]" (שָׁעַע smear over, not שָׁעָה hour)
+    // 2 Nephi 17 audit (2026-09-13)
+    'דְּבוֹרַת': 'דבורה',                                     // "a bee of" (one-word family)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1364,6 +1366,7 @@
                     'H6238': 'עשׁר', 'H6239': 'עשׁר', 'H6223': 'עשׁר',
                     'H8192': 'שׁפה', 'H8205': 'שׁפה', 'H3471': 'ישׁפה',
                    'H8265': 'שׂקר',   // שָׂקַר to ogle (Isa 3:16) keeps its sin — not שֶׁקֶר lie
+                   'H1682': 'דבורה',  // דְּבוֹרָה the bee — BDB files it under דבר speak (Isa 7:18, Deut 1:44)
                     /* לָחַם "fight" (H3898) is BDB's own homonym of לֶחֶם "bread": one dotless key
                        put a loaf on the card for "and they fought" (Alma 2:17). The verb keys by
                        its number, the way ענה and אשׁר already do; מִלְחָמָה stays its own family. */
