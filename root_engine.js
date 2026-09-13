@@ -2234,6 +2234,10 @@
     'כִּמְנוֹר': 'נור',   // "like a weaver's beam" belongs with מְנוֹרָה
     'מְהִירָה': 'מהר',   // "swift" (מָהִיר) was יָרָה, to throw
     'מִקִּשְׁרֵי': 'קשר', 'לְאׇבְדָנָם': 'אבד',
+    // Ether 15 audit (2026-09-13)
+    'מְקַבְּצִים': 'קבץ',   // "gathering" was H6911 Kibzaim, a Levitical city
+    'וּלְבוּשִׁים': 'לבש',   // "and clothed" was בּוֹשׁ, to be ashamed
+    'מֵהֵאָבֵק': 'אבק',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2661,6 +2665,7 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },
+      'רָמָה':      { name: 'H7414', word: 'רום', en: /Rama/ },   // the hill Ramah, not רוּם
       'רָצָה':     { name: 'רצה', word: 'רוץ', en: /pleas|desir|will|would|disposed/i },   // "she ran forth" is the only רוּץ
       'שֶׁלֶם':     { name: 'שֶׁלֶם', word: 'שלם', en: /Shelem/ },   // mount Shelem, not the peace offering
       'שֵׁם':       { name: 'H8035', word: 'H8034', en: /\bShem\b/ },   // the land of Shem, not שֵׁם "a name"
