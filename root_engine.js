@@ -1549,6 +1549,17 @@
     'וּנְקַיְּמָה': 'קום',                                       // "and we will fulfill" (קִיֵּם, not נָקִי innocent)
     'נַשְׁבִּית': 'שבת',                                        // "let us put a stop" (הִשְׁבִּית, not שָׁבָה captive)
     'הֲכָנָתָם': 'כון',                                         // "their preparations" (הֲכָנָה)
+    // Mosiah 21 audit (2026-09-13)
+    'לְאַמּוֹן': 'H5983', 'וְאַמּוֹן': 'H5983',                     // "to Ammon" (heading; not אֵם mother)
+    'לְגָרְשָׁם': 'גרש', 'לְגָרֲשֵׁם': 'גרש', 'בְּגׇרְשָׁם': 'גרש', 'וּלְגָרְשָׁם': 'גרש', 'גֵּרוּשָׁם': 'גרש',   // "to drive them" (גֵּרֵשׁ, not Gershom)
+    'וַתִּזְעַקְנָה': 'זעק',                                     // "and they did cry"
+    'וַיְעוֹרֲרוּ': 'עור', 'וַיְעוֹרְרוּ': 'עור',   // "and stirred up" (עוֹרֵר)
+    'עָפְרָה': 'עפר',                                          // "ore" (the plain-qamats spelling)
+    'וַיְחַכּוּ': 'חכה',                                         // "waiting"
+    'כְּאַלְמָא': 'אלמא',                                        // "even as Alma"
+    'וְסִפּוּר': 'ספר',                                         // "and an account of"
+    'הַדַּף': 'דף',                                            // "the leaf" (דַּף page, not הָדַף thrust)
+    'הַמְּחַיֶּה': 'חיה', 'הַמִּחְיָה': 'חיה', 'מַחְיָה': 'חיה', 'לְמַחְיַת': 'חיה', 'מְחֻיָּה': 'חיה', 'לְמִחְיָתָם': 'חיה',   // quicken, sustenance (חָיָה, not מְחִי blow)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1971,6 +1982,8 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'עׇפְרָה': { name: 'H6084', word: 'עפר', en: /Ophrah/ },        // Ophrah / ore (Mosiah 21)
+    'וְעׇפְרָה': { name: 'H6084', word: 'עפר', en: /Ophrah/ },
     'הַקּוֹץ': { name: 'H6976', word: 'קוץ', en: /Coz|Hakkoz/ },   // Hakkoz / the thistle
     'רְעוּ': { name: 'H7466', word: 'רֹעֶה', en: /Reu/ },           // Reu / feed! (Mosiah 11)
     'רָחָב': { name: 'H7343', word: 'רחב', en: /Rahab/ },           // Rahab / wide, spacious
