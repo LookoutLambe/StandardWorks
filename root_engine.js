@@ -2145,6 +2145,10 @@
     'תִּגֹּל': 'גלל',   // "shall be rolled together as a scroll" stood alone, glossed rejoiced
     'מְשַׁתְּפִים': 'שתף', 'מִקְבִּילִים': 'קבל',   // one-word families with nothing to say
     'רְפוּאוֹת': 'רפא',   // "cures" was H7505 Raphu, a man's name
+    // 3 Nephi 27 audit (2026-09-13)
+    'הַצְלֵב': 'צלב', 'הַצְּלָב': 'צלב', 'הֲצָלֹב': 'צלב',   // the cross and "crucify" sat in a family keyed with the article
+    'הַשּׁוֹאֵל': 'שאל', 'בַּהֲשִׁיבִי': 'שוב', 'תִּרְצוּ': 'רצה', 'תִרְצוּ': 'רצה',
+    'הַמּוֹצְאִים': 'מצא', 'מוֹצֵא': 'מצא',   // "that find" / "finds" was יצא, to go out
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
