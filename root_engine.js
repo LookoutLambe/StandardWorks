@@ -2206,6 +2206,8 @@
     'וְהַמְּכַחֵשׁ': 'כחש',   // the vav form of the denier Mormon 9 left behind
     // Ether 6 audit (2026-09-13)
     'יָקוֹם': 'יָקוֹם',   // Jacom, son of Jared — not קָוָה, to hope
+    // Ether 7 audit (2026-09-13)
+    'וְכוֹהוֹר': 'כוהור',   // the vav form stood in an empty family of its own
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
