@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "גלימה": {"meaning":"(גְּלִימָה) robe, cloak","category":"Lexical"},
   "H4007": {"meaning":"(מַבָּט) glance, look; expectation","category":"Lexical"},
   "H1322": {"meaning":"(בֹּשֶׁת) shame","category":"Emotion"},
   "H4532": {"meaning":"(מַסָּה) Massah, the place of testing (Ex 17:7)","category":"Name"},
@@ -142,7 +143,7 @@ window._rootGlossaryData = {
   "אפק": {"meaning":"(אֲפִיקִים) channels, ravines; (הִתְאַפֵּק) to refrain; (אָפַק) forbear, myself, restrained","category":"Uncategorized"},
   "שרד": {"meaning":"(שָׂרִיד) survivor, remnant; (שְׂרָד) woven material","category":"Uncategorized"},
   "שלף": {"meaning":"(שָׁלַף) to draw a sword","category":"Uncategorized"},
-  "בוז": {"meaning":"(בּוּז) contempt; Buz; (בּוּז) despise, despises, neighbor","category":"Uncategorized"},
+  "בוז": {"meaning":"(בּוּז) contempt; (בָּז) to despise","category":"Uncategorized"},
   "H5209": {"meaning":"(בִּנְיָן) building; quorum","category":"Uncategorized"},
   "שרץ": {"meaning":"(שֶׁרֶץ) swarming thing; (שָׁרַץ) to swarm","category":"Uncategorized"},
   "פחח": {"meaning":"(פַּח) snare, trap","category":"Uncategorized"},
@@ -8489,7 +8490,7 @@ window._rootGlossaryData = {
   "דחף": {"meaning":"(דָּחַף) hurried, hasty, urged","category":"Lexical"},
   "סוך": {"meaning":"(סוּךְ) anoint, yourself, indeed","category":"Lexical"},
   "נדד": {"meaning":"(נָדַד) to flee, wander, depart; (נְדֻדִים) tossings","category":"Lexical"},
-  "זוע": {"meaning":"(זַעֲוָה) terror","category":"Lexical"},
+  "זוע": {"meaning":"(זוּעַ) to tremble, be shaken; (זַעֲוָה) terror, trembling","category":"Lexical"},
   "לבא": {"meaning":"(לָבִיא) lion, bring, lioness","category":"Lexical"},
   "סתם": {"meaning":"(סָתַם) stopped, secret, stop","category":"Lexical"},
   "בדק": {"meaning":"(בֶּדֶק) damage, leaks","category":"Lexical"},

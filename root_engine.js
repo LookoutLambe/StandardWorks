@@ -1333,6 +1333,15 @@
     'לְחַוֹּת': 'חוה', 'חַוָּתוֹ': 'חוה',                         // "to declare", "his declaration" (same)
     'תָּקִיצוּ': 'קוץ',                                       // "you shall awaken" (הֵקִיץ, not קַיִץ summer)
     'וְהִתְּרוּ': 'נתר',                                       // "and loose yourselves" (הִתִּיר, not תּוּר spy)
+    // Jacob 4 audit (2026-09-13)
+    'הַעֲלָאַת': 'עלה',                                        // "the offering of" (heading; one-word family)
+    'שֵׁרַתִּי': 'שרת',                                        // "I ministered" (שֵׁרֵת, not שָׂרַר rule)
+    'כָּתַבְנוּ': 'כתב',                                       // "we wrote" (was בָּנָה build)
+    'גַּלֵּי': 'גלל',                                         // "the waves of" (one-word family)
+    'מוּבָל': 'יבל',                                          // "am led" (הוּבַל, not בַּל not)
+    'הַגַּלִּים': 'גלל', 'וְהַגַּלִּים': 'גלל',                  // "the waves" (גַּל, not the town Gallim H1554)
+    'מִגַּלִּים': 'H1554',                                     // "of Gallim" (Isa 10:30) stays with the town
+    'גְּלִימָה': 'גלימה', 'הַגְּלִימָה': 'גלימה',                 // "a robe" (post-biblical גְּלִימָה; had joined Gallim)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1757,7 +1766,8 @@
       'שָׂרַי':     { name: 'H8297', word: 'H8269', en: /Sarai/ }, // my princes · Sarai (2 Nephi 20)
       'וְרָבוּ':    { name: 'H7378', word: 'H7235', en: /contend|strive|plead/i }, // and they shall contend (רִיב) · and multiply (רָבָה) (2 Nephi 28)
       'יִרְאוּ':    { name: 'H3372', word: 'H7200', en: /fear|afraid|revere|dread/i }, // fear (יָרֵא) · they shall see (רָאָה) (2 Nephi 28)
-      'רַשָּׁאִים': { name: 'H7563', word: 'רשות', en: /wicked/i },   // the wicked (רָשָׁע, ten verse tokens) · may, permitted (רַשַּׁאי, the Jacob 2 heading)
+      'רַשָּׁאִים': { name: 'H7563', word: 'רשות', en: /wicked/i },
+      'גַּלִּים':   { name: 'H1554', word: 'H1530', en: /Gallim/i },   // Bath-gallim · waves, heaps (גַּל) (Jacob 4)   // the wicked (רָשָׁע, ten verse tokens) · may, permitted (רַשַּׁאי, the Jacob 2 heading)
       'מַסָּה': { name: 'H4532', word: 'H4531', en: /Massah/ },   // Massah the place · temptation, trial (מַסָּה) (Jacob 1)
       'בְּמַסָּה': { name: 'H4532', word: 'H4531', en: /Massah/ },
       'לַמַּסָּה': { name: 'H4532', word: 'H4531', en: /Massah/ },
