@@ -2770,7 +2770,7 @@ window._rootGlossaryData = {
   "ארח": {"meaning":"(אֹרַח) way, path; (אָרַח) to journey; (אֹרֵחַ) wayfarer, guest","category":"Nature"},
   "תעו": {"meaning":"have all gone astray","category":"Quality"},
   "קדימה": {"meaning":"forward","category":"Society"},
-  "עצה": {"meaning":"(עֵצָה) counsel, advice, plan, purpose","category":"Uncategorized"},
+  "עצה": {"meaning":"(עָצֶה) backbone; (עָצָה) to shut the eyes","category":"Uncategorized"},
   "מדם": {"meaning":"teach them","category":"Uncategorized"},
   "תוככם": {"meaning":"among you","category":"Uncategorized"},
   "אתמול": {"meaning":"yesterday","category":"Time"},
