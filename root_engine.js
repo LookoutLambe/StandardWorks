@@ -1774,6 +1774,10 @@
     // false (כּוֹזֵב, not זוּב flow), their ringlets (קְוֻצּוֹת, not קוֹץ thorn), to lead (הִנְחָה, not נוּחַ rest), doth pain (הִכְאִיב, not אֹיֵב enemy)
     // Alma 33 audit (2026-09-13)
     'קְהִלּוֹתֶיךָ': 'קהל', 'יְעֻנֶּה': 'ענה',                       // "your congregations", "he shall suffer" (עֻנָּה)
+    // Alma 34 audit (2026-09-13)
+    'מוֹרָה': 'ירה',                                           // "pointing" (heading; מוֹרֶה, not הֵמִיר exchange)
+    'גוּפָנִיּוֹת': 'גוף',                                       // "temporal" (heading; גּוּפָנִי, not גֶּפֶן vine)
+    'יַסְפִּיק': 'ספק', 'חָשׂוּף': 'חשף', 'תִדְחוּ': 'דחה', 'נֵיטִיב': 'יטב', 'תְּקַבְּלוּהוּ': 'קבל', 'אַרְכֵי': 'ארך',   // one-word forms home (suffice, exposed, procrastinate, improve, receive it, patient — not the Archites)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
