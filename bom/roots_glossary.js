@@ -1500,7 +1500,7 @@ window._rootGlossaryData = {
   "אבדן": {"meaning":"loss of","category":"Quality"},
   "יכרת": {"meaning":"cut off","category":"Theology"},
   "עונם": {"meaning":"their iniquity","category":"Uncategorized"},
-  "ישם": {"meaning":"(יְשִׁימוֹן) desolation — Jeshimon; in the desert","category":"Society"},
+  "ישם": {"meaning":"(יְשִׁימוֹן) Jeshimon, desolation, desert; (יָשַׁם) to be desolate, be appalled","category":"Society"},
   "יכרתו": {"meaning":"they shall be cut off","category":"Action"},
   "דין": {"meaning":"(דָּן) to judge, contend; (דִּין) judgment, cause; (נִדּוֹן) to be judged; (מְדִינָה) province","category":"Society"},
   "עונותיהם": {"meaning":"their iniquities","category":"Society"},

@@ -1933,6 +1933,12 @@
     'לִתְפֹּס': 'תפש', 'לְפָהוֹרָן': 'פהורן',
     // the means: אֶמְצַע's family is אמצע, not מַצָּע a couch
     'אֶמְצַע': 'אמצע', 'בָּאֶמְצָעִים': 'אמצע', 'וְאֶמְצָעֵיהֶם': 'אמצע', 'אֶמְצָעֵיהֶם': 'אמצע', 'אֶמְצָעִים': 'אמצע',
+    // Alma 61 audit (2026-09-13)
+    'וְהַמְּרִידָה': 'מרד', 'הַמְּרִידָה': 'מרד', 'מְרִידָה': 'מרד',   // "the rebellion" (מָרַד), not יָרַד descend
+    'לְאַסֹּף': 'אסף',                                   // the name stage claimed "gather" — pins run before it
+    'תָּפְסוּ': 'תפש',
+    // the Jeshimon family held three sin forms of שׂוּם "to place"
+    'יֻשַׂם': 'שום', 'וַיִּישֶׂם': 'שום', 'יְשִׂמֵהוּ': 'שום',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
