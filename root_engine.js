@@ -238,7 +238,7 @@
     // most tokens mean "behold".
     'אֲנִי':'אני','וַאֲנִי':'אני',
     'אָנֹכִי':'אנכי','וְאָנֹכִי':'אנכי',
-    'אֲנַחְנוּ':'אנחנו','וַאֲנַחְנוּ':'אנחנו','נַחְנוּ':'אנחנו','אָנוּ':'אנחנו','וְאָנוּ':'אנחנו',
+    'אֲנַחְנוּ':'אנחנו','וַאֲנַחְנוּ':'אנחנו','נַחְנוּ':'אנחנו','אָנוּ':'אנחנו',  // וְאָנוּ is never the pronoun here — all three tokens (Isa 3:26, 19:8, 2 Ne 13:26) are "and shall lament" (אָנָה)
     'אַתָּה':'אתה','וְאַתָּה':'אתה','אַתְּ':'אתה','וְאַתְּ':'אתה',
     'אַתֶּם':'אתה','וְאַתֶּם':'אתה','אַתֶּן':'אתה','וְאַתֶּן':'אתה','אַתֵּנָה':'אתה',
     'הוּא':'הוא','וְהוּא':'הוא','הַהוּא':'הוא','שֶׁהוּא':'הוא',
@@ -1219,6 +1219,9 @@
     'יְשַׂפַּח': 'שׂפח',                                      // "smite with a scab" (שִׂפַּח, not מִשְׁפָּחָה)
     'וְהַשֵּׁרוֹת': 'שֵׁרָה',                                 // "the bracelets" (שֵׁרָה, not song; H8285 walks to its parent)
     'כְּוִי': 'כוה',                                          // "burning" (one-word family)
+    // 2 Nephi 14 audit (2026-09-13)
+    'וְעָשָׁן': 'עשן',                                        // "and smoke" (was the town Ashan)
+    'וְאָנוּ': 'אנה',                                         // "and shall lament" (אָנָה, not the pronoun we) — 2 Nephi 13
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1354,6 +1357,7 @@
                        bare" / יָשְׁפֵה "jasper" are not שָׂפָה "lip, bank" (2026-09-12). */
                     'H6238': 'עשׁר', 'H6239': 'עשׁר', 'H6223': 'עשׁר',
                     'H8192': 'שׁפה', 'H8205': 'שׁפה', 'H3471': 'ישׁפה',
+                   'H8265': 'שׂקר',   // שָׂקַר to ogle (Isa 3:16) keeps its sin — not שֶׁקֶר lie
                     /* לָחַם "fight" (H3898) is BDB's own homonym of לֶחֶם "bread": one dotless key
                        put a loaf on the card for "and they fought" (Alma 2:17). The verb keys by
                        its number, the way ענה and אשׁר already do; מִלְחָמָה stays its own family. */
@@ -1955,18 +1959,22 @@
     return '';
   }
 
-  // Stage 1 — PINS. A SURFACE_MAP hit whose value is a pinned lexeme, then
-  // an exact SURFACE_PIN. These outrank the lexicon because each was placed
+  // Stage 1 — PINS. An exact SURFACE_PIN, then a SURFACE_MAP hit whose value
+  // is a pinned lexeme. These outrank the lexicon because each was placed
   // by hand against a specific wrong answer the lexicon gives.
   function stagePins(ctx) {
     /* The CLEANED surface, not the raw one: three D&C tokens carry a sof pasuq
        glued to the word (הַכְּנֵסִיָּה׃), and against ctx.raw no pin could ever
        match them — they fell through to the lexicon and filed under נסס. Every
        other stage already reads ctx.w. */
-    var lex = _mapLayered(SURFACE_MAP, ctx.w);
-    if (lex && PINNED_LEXEMES[lex]) return _keyOf(lex);
+    /* THE EXACT PIN FIRST. The layered map peels a prefix, and וְאָנוּ "and
+       shall lament" peeled to אָנוּ, a pinned pronoun — so the hand pin on the
+       whole form never got a hearing (2 Nephi 13). A pin names this exact
+       form; a peel is a guess about it. */
     var pin = SURFACE_PINS[ctx.w];
-    return pin ? _keyOf(pin) : '';
+    if (pin) return _keyOf(pin);
+    var lex = _mapLayered(SURFACE_MAP, ctx.w);
+    return (lex && PINNED_LEXEMES[lex]) ? _keyOf(lex) : '';
   }
 
   // Stage 2 — NAMES. Ruling 2026-09-01: a Book of Mormon name is its own
@@ -3007,6 +3015,7 @@
   window.RootEngine = {
     senseClass: senseClass,
     getRoot: getRoot, getRoots: getRoots, explain: explain, resolve: resolve, homographNumber: homographNumber,
+    familyOf: familyOf,   // the family a Strong's number keys to — the card drops a parse that describes another family's word
     stripPrefixes: stripPrefixes, stripLayers: stripLayers, stripNikkud: stripNikkud,
     toSofit: toSofit, normFinals: normFinals, rootMap: rootMap,
     pointedKey: pointedKey, parse: parse, attestedEntry: attestedEntry,

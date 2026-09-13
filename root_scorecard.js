@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '140';   // bump when the generated data files change
+  var RSC_V = '141';   // bump when the generated data files change
   // Transliterated terms — an exception table in the tool, like the received
   // spellings in transliterate(): keyed by bare consonants, so every pointing
   // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.
@@ -733,6 +733,14 @@
     var hgNum = '';
     try { hgNum = (window.RootEngine && window.RootEngine.homographNumber) ? window.RootEngine.homographNumber(pieceSurface, glossText) : ''; } catch (eH) { hgNum = ''; }
     if (hgNum && pz && pz.strongs && pz.strongs !== hgNum) pz = null;
+    /* A PINNED FORM DROPS THE OTHER WORD'S PARSE THE SAME WAY. וְעָשָׁן "and
+       smoke" is attested only as the town Ashan (H6228, "noun proper name");
+       the engine keyed the card to עשן, so a parse whose number belongs to a
+       different family describes a word this token is not (2 Nephi 14). Only a
+       proper-name parse (Np) is dropped: לָהֶם keys to the bare particle להם
+       while its parse carries H9038, and that parse is the whole card. */
+    if (pz && pz.strongs && /Np/.test(pz.morph || '') && found.key && window.RootEngine && window.RootEngine.familyOf &&
+        window.RootEngine.familyOf(pz.strongs) !== found.key) pz = null;
     var wordNum = hgNum || (pz && pz.strongs) ||
       (window._strongsLookup && (window._strongsLookup[pieceSurface] || window._strongsLookup[surface])) || '';
     var wordLemma = wordNum && window._strongsRoots && window._strongsRoots[wordNum] ? window._strongsRoots[wordNum].w : '';
