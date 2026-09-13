@@ -34,6 +34,44 @@ const pins = new Map();
 const re = /'([֐-׿־‏-]+)':\s*'([^']+)',/g;
 let m; while ((m = re.exec(src.slice(start, end)))) pins.set(m[1], m[2]);
 
+/* TWO SILENT WAYS A PIN NEVER FIRES, both found the hard way.
+   1. A DEAD KEY. The lookup is SURFACE_PINS[ctx.w] and ctx.w is _clean(raw),
+      which strips ׃ ׀ quotes and brackets. A key carrying any of them can
+      never match. 27 were sitting in the file, 14 of them older than today.
+   2. A DUPLICATE KEY. This is a JS object literal, so when the same form is
+      pinned twice the LATER line wins silently. That is usually the newer
+      correction and fine — but פּוֹרְשֵׁי "the dissenters of" was being pinned
+      to פרשׁ and then back to פרשׂ "to spread out" by an older line further
+      down, and nothing said so. */
+const DIRT = /[׃׀"'`.,;:?!()\[\]*]/;
+{
+  const start2 = src.indexOf('var SURFACE_PINS = {');
+  let d2 = 0, end2 = start2;
+  for (let i = src.indexOf('{', start2); i < src.length; i++) {
+    if (src[i] === '{') d2++;
+    else if (src[i] === '}') { d2--; if (!d2) { end2 = i; break; } }
+  }
+  const blk = src.slice(start2, end2);
+  const seen = new Map(); const dead = []; const dup = [];
+  const rx = /'([֐-׿־‏"'`.,;:?!()\[\]*]+)':\s*'([^']+)',/g;
+  let mm; while ((mm = rx.exec(blk))) {
+    const k = mm[1], v = mm[2];
+    if (DIRT.test(k)) dead.push(k + " -> " + v);
+    if (seen.has(k) && seen.get(k) !== v) dup.push(k + ': ' + seen.get(k) + ' then ' + v);
+    seen.set(k, v);
+  }
+  if (dead.length) {
+    console.log('[pins] ' + dead.length + ' pin key(s) carry punctuation the engine strips before the lookup — they can never fire:');
+    dead.slice(0, 12).forEach(x => console.log('    ' + x));
+  }
+  if (dup.length) {
+    console.log('[pins] ' + dup.length + ' duplicate key(s); the LATER line wins. Check each is the one you meant:');
+    dup.slice(0, 12).forEach(x => console.log('    ' + x));
+  }
+  if (dead.length || dup.length) process.exitCode = 1;
+  else console.log('[pins] ok: no dead keys, no duplicate keys');
+}
+
 const VOLS = ['ot_verses', 'nt_verses', 'dc_verses', 'pgp_verses', 'jst_verses', 'bom/verses'];
 const byForm = new Map();
 for (const d of VOLS) {
