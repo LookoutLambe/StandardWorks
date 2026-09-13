@@ -1811,6 +1811,11 @@
     'בְּהַכִּירוֹ': 'נכר',                                       // "perceiving" (הִכִּיר, not יָרָה teach)
     'בֶּהֱלָתָם': 'בהל',                                       // "their terror" (בֶּהָלָה, not תָּמַם)
     'חָבוּ': 'חוב',                                           // "they owed" (חָב, not חָבַב cherish)
+    // Alma 44 audit (2026-09-13)
+    'הַהַצָּעָה': 'יצע',                                       // "the proposal" (heading; הַצָּעָה, not צָעָה stoop)
+    'וּלְדָתֵנוּ': 'דת',                                        // "and our religion" (דָּת, not יָלַד bear)
+    'אֶת־זְרוֹעֵנוּ': 'זרוע', 'זְרוֹעֵנוּ': 'זרוע',                   // "our arms" (זְרוֹעַ, not זֶרַע seed)
+    'נָפֵר': 'פרר', 'חֹד': 'חדד',                                 // "we shall break" (הֵפֵר), "the point" (חֹד)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

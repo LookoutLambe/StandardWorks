@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "ישט": {"meaning":"(הוֹשִׁיט) to extend, stretch out; (יָשַׁט) to hold out","category":"Action"},
   "חשל": {"meaning":"(חִשֵּׁל) to forge, temper; (חָשַׁל) to shatter, weaken","category":"Action"},
   "שרין": {"meaning":"(שִׁרְיוֹן) coat of mail, breastplate","category":"War"},
   "וו": {"meaning":"(וָו) hook, peg; the letter vav","category":"Objects"},
@@ -4706,7 +4707,6 @@ window._rootGlossaryData = {
   "נור": {"meaning":"lamp, lampstand; fire","category":"Lexical"},
   "חטאה": {"meaning":"sin","category":"Theology"},
   "סך": {"meaning":"(סַךְ) total, sum","category":"Uncategorized"},
-  "חד": {"meaning":"sharp; one","category":"Uncategorized"},
   "יכסה": {"meaning":"he covered","category":"Uncategorized"},
   "פתים": {"meaning":"lips","category":"Uncategorized"},
   "את־קול": {"meaning":"[ACC] the voice of","category":"Speech"},
