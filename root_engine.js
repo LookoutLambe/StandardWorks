@@ -1638,6 +1638,9 @@
     'אֲמִתָּם': 'אמת',                                          // "their surety" (אֱמֶת, not אֵם mother)
     'הַבֵּינַיִם': 'בֵּין', 'הֵבִינוּם': 'בין', 'יָנוּמוּ': 'נום',        // "middle age", "understood", "let slumber" (not Janum)
     'וְהַקּוֹנִים': 'קנה', 'הַקּוֹנִים': 'קנה', 'וְתִקּוּנֵי': 'תקן',       // buyers, rudiments (strays of the lament family)
+    // Alma 6 audit (2026-09-13)
+    'נוֹסְדָה': 'יסד',                                         // "was established" (נוֹסַד)
+    'לְהַחֲשֹׁתוֹ': 'חשה', 'חֹשֶׁך': 'חשך', 'לְכַחֶשׁ': 'כחש',          // hold his peace, darkness, deny (strays of the feel family)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
