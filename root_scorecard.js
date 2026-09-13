@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '361';   // bump when the generated data files change
+  var RSC_V = '363';   // bump when the generated data files change
   // Transliterated terms — an exception table in the tool, like the received
   // spellings in transliterate(): keyed by bare consonants, so every pointing
   // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.
@@ -53,9 +53,18 @@
        trailing sentence punctuation are stripped before the test; a maqqef or
        hyphen inside the Hebrew (ס-סא) is stripped too. */
     var g = String(glossText || '').trim().replace(/^and\s+/i, '').replace(/^No\.\s*/i, '').replace(/[.,;:]+$/, '');
+    /* An ordinal gloss is only safe on a one- or two-letter surface — the bare
+       ג of a facsimile caption. Hebrew writes its own ordinals as words, and
+       הַשִּׁשִּׁי "sixth" strips to four letters, so without this guard the rule
+       called a real word a numeral (caught in D&C 20). */
     var ORD = {first:'1st',second:'2nd',third:'3rd',fourth:'4th',fifth:'5th',sixth:'6th',seventh:'7th',eighth:'8th',ninth:'9th',tenth:'10th'};
-    if (ORD[g.toLowerCase()]) g = ORD[g.toLowerCase()];
+    if (ORD[g.toLowerCase()]) {
+      if (ttSkel(surface).replace(/[-\u05BE]/g, '').length > 2) return '';
+      g = ORD[g.toLowerCase()];
+    }
     if (!/^\d{1,4}(st|nd|rd|th)?([\s\u2013\u2014-]+\d{1,4})?$/i.test(g)) return '';
+    // an ordinal in figures ("6th") is the same trap as one in words
+    if (/\d(st|nd|rd|th)$/i.test(g) && ttSkel(surface).replace(/[-\u05BE]/g, '').length > 2) return '';
     var raw = ttSkel(surface);
     /* A section summary points at the verses it covers — "1\u20138", "9\u201315" — and
        those pointers are tokens like any other. 575 of them in the Doctrine and

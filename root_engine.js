@@ -2345,6 +2345,8 @@
     'הֵבַנְתָּ': 'בין',   // "you have understood" was בָּנָה, to build
     'וְהוֹסֵף': 'יסף',   // "and continue" was סַף, a threshold
     'וְאִשּׁוּר': 'H0833', 'וְתַשְׁכִּיחֲךָ': 'שכח',
+    // Doctrine and Covenants 11–20 audit (2026-09-13)
+    'וַעֲזֹר': 'עזר', 'וְהֵעַדְתֶּם': 'עוד',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2772,6 +2774,7 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },
+      'פֶּטֶר':     { name: 'פטרוס', word: 'H6363', en: /Peter/ },   // the apostle, not פֶּטֶר "that which opens the womb"
       'בְּצוּרָה':   { name: 'צור', word: 'בצר', en: /figure|manner/i },   // "in Figure 2" is בְּ + צוּרָה, not a fortified city
       'מָרָה':      { name: 'מרה', word: 'מרר', en: /rebel|disobedien/i },   // eleven uses are "bitter", two are מָרָה to rebel
       'מוֹלִיד':    { name: 'H4140', word: 'ילד', en: /Molid/ },   // "begets" six times, Molid once
