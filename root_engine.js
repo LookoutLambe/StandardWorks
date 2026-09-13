@@ -2164,6 +2164,10 @@
     'לִמְאֻרוֹת': 'אור', 'מְאֻרוֹת': 'אור',   // "dens" (מְאוּרָה) was אָרַר, to curse
     // Mormon 1 audit (2026-09-13)
     'מִלְּהַטִּיף': 'נטף', 'חַלְקְלַקִּים': 'חלק', 'וּלְחָשִׁים': 'לחש',
+    // Mormon 2 audit (2026-09-13)
+    'מְהֻמָה': 'הום',   // "a revolution" (מְהוּמָה tumult) was מָה, what
+    'מַבְחִין': 'בחן',   // "sufficient to behold" (הִבְחִין) was חָנַן, to be gracious
+    'וַיֻּצְּדוּ': 'צוד', 'וָאֲעוֹרְרֵם': 'עור',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2591,6 +2595,7 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },
+      'שֵׁם':       { name: 'H8035', word: 'H8034', en: /\bShem\b/ },   // the land of Shem, not שֵׁם "a name"
       'כְּפִירָה':  { name: 'H3716', word: 'כפר', en: /Chephirah/ },   // "unbelief" (כָּפַר, to deny) is not the city
       'הַבָּז':     { name: 'בוז', word: 'בזז', en: /spurn|despis|contempt|scorn/i },   // "that spurneth" vs "the prey"
       'מַלְאָכִי':  { name: 'H4401', word: 'לאך', en: /Malachi/ },   // the prophet, not מַלְאָכִי "my angel"

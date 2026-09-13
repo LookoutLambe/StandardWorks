@@ -8485,7 +8485,7 @@ window._rootGlossaryData = {
   "בירה": {"meaning":"(בִּירָה) citadel, palace","category":"Lexical"},
   "רקם": {"meaning":"(רִקְמָה) embroidered, variegated, material; (רָקַם) worker, colors, needlework","category":"Lexical"},
   "סגל": {"meaning":"(סְגֻלָּה) treasure, treasured, peculiar","category":"Lexical"},
-  "בחן": {"meaning":"(בָּחַן) to test, try, examine; (בֹּחַן) testing","category":"Lexical"},
+  "בחן": {"meaning":"(בָּחַן) to test, try, examine; (הִבְחִין) to discern, distinguish, make out; (בֹּחַן) testing","category":"Lexical"},
   "חיק": {"meaning":"(חֵיק) bosom, gutter, bottom","category":"Lexical"},
   "חמם": {"meaning":"(חֹם) heat, hot, until; (חָמַם) warm, hot, became; (חַמָּה) sun, warm, heat; (חַמָּן) incense, altars, sun","category":"Lexical"},
   "הום": {"meaning":"(מְהוּמָה) tumult, confusion, stir; (הוּם) moved, excited, trembled","category":"Lexical"},
