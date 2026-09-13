@@ -1324,6 +1324,15 @@
     'וּלְשַׁחְרֵר': 'שחרר',                                     // "and to liberate" (one-word family)
     'הִכְאַבְתֶּם': 'כאב',                                      // "have afflicted" (was אָב father)
     'יִשְׁבּוּ': 'שבה',                                        // "they shall lead away captive" (שָׁבָה, not יָשַׁב dwell)
+    // Jacob 3 audit (2026-09-13)
+    'וְיָרִיב': 'ריב',                                        // "and he shall plead" (was the name Jarib)
+    'מֵעוֹרְכֶם': 'H5785',                                     // "than your skin" (עוֹר skin, not עוּר rouse)
+    'כֹּחוֹת': 'כחח', 'וְכֹחוֹת': 'כחח', 'הַכֹּחוֹת': 'כחח', 'לְכֹחוֹת': 'כחח', 'בְּכֹחוֹת': 'כחח', 'וְהַכֹּחוֹת': 'כחח', 'מִכֹּחוֹת': 'כחח', 'כֹחוֹת': 'כחח',   // "the faculties of", "powers" (כֹּחַ strength — the attested lemma was Havvoth-jair H2334)
+    'חוֹתַם': 'חתם', 'חותָם': 'חתם', 'לְחוֹתַם': 'חתם',        // "seal" (had joined the Havvoth-jair family)
+    'חוֹתֵן': 'חתן',                                          // "father-in-law" (same)
+    'לְחַוֹּת': 'חוה', 'חַוָּתוֹ': 'חוה',                         // "to declare", "his declaration" (same)
+    'תָּקִיצוּ': 'קוץ',                                       // "you shall awaken" (הֵקִיץ, not קַיִץ summer)
+    'וְהִתְּרוּ': 'נתר',                                       // "and loose yourselves" (הִתִּיר, not תּוּר spy)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
