@@ -934,7 +934,7 @@ window._rootGlossaryData = {
   "נית": {"meaning":"again","category":"Time"},
   "ני": {"meaning":"unto the children of","category":"Theology"},
   "אלי": {"meaning":"me","category":"Uncategorized"},
-  "מה": {"meaning":"(מָה) what; (לָמָּה) why; (כַּמָּה) how many","category":"Action"},
+  "מה": {"meaning":"(מָה) what; (לָמָּה) why; (כַּמָּה) how many; (מַהוּת) nature, essence","category":"Action"},
   "כה": {"meaning":"thus","category":"Society"},
   "שפט": {"meaning":"(שָׁפַט) to judge; (מִשְׁפָּט) judgment, justice, right; (שֹׁפֵט) judge","category":"Society","biblicalRefs":[{"ref":"Gen 18:25","note":"Shall not the Judge (הֲשֹׁפֵט) of all the earth do justice?"},{"ref":"Ps 96:13","note":"He will judge (יִשְׁפֹּט) the world in righteousness"},{"ref":"Isa 2:4","note":"He shall judge (וְשָׁפַט) between the nations"},{"ref":"Mic 6:8","note":"To do justice (מִשְׁפָּט) and love mercy"}]},
   "אף": {"meaning":"(אַף) yea, even, moreover; (אַף) nose, anger","category":"Perception"},
