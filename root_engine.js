@@ -2590,8 +2590,9 @@
     'נִתְמַנּוּ': 'מנה', 'שֶׁיַּחְשְׁבֶנּוּ': 'חשב', 'הַמְאָרֵחַ': 'ארח',
     'מִמְּרִיבִי': 'ריב', 'שָׁעָתוֹ': 'שעה', 'הָאֱלֹהוּת': 'אלהים',
     // a common word sitting in a name family (2026-09-13)
+    'אַנְתּוּן': 'אנתון־ארמית',   // Aramaic "you" (pl.) — NOT the Hebrew אַתֶּם
     'לִכְיוּן': 'כון', 'וְלִכְיוּן': 'כון', 'וְעִיּוּן': 'עין',
-    'וּבְעִיּוּן': 'עין', 'שְׁמוֹתֵינוּ': 'שם', 'אַנְתּוּן': 'אתה',
+    'וּבְעִיּוּן': 'עין', 'שְׁמוֹתֵינוּ': 'שם',
     /* CHAPTER HEADINGS (2026-09-13). The headings are a corpus of their own —
        28,000 tokens across four volumes — and every detector I had written
        scanned only *_verses, so none of this was visible. They render in the
@@ -2728,6 +2729,9 @@
     'בְּעׇשְׁרֵי': 'עשׁר', 'וּגְוִיָּתִי': 'גוה', 'קְשָׁיִים': 'קשה',
     'וּבְבִקּוּר': 'בקר',
     'מוֹנֵעַ': 'מנע', 'בְּהִירוּת': 'בהר', 'לְעֵדוּת': 'עדה', 'לָעֵדוֹת': 'עדה',
+    /* הָאֵלִים "the rams" and בָּאֵלִים "among the terebinths" are the
+       DEFECTIVA of אַיִל, not the divine name. They were reading as Elohim. */
+    'הָאֵלִים': 'איל', 'בָּאֵלִים': 'איל',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -3173,6 +3177,11 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },
+      /* אֵלִים without the yod is two words: the plural of אַיִל "ram"
+         (also post, terebinth) and the plural of אֵל "mighty one".
+         It had been reading as אֱלֹהִים, the divine name, for both. */
+      'אֵלִים': { name: 'איל', word: 'H0410', en: /ram|terebinth|oak|post/i },
+      'אֶל־יָם': { name: 'איל', word: 'H0410', en: /ram|terebinth|oak|post/i },
       'הַמּוֹנְעִים': { name: 'נוע', word: 'נעם', en: /move|moving/i },
       'הַנָּעִים': { name: 'נוע', word: 'נעם', en: /move|moving/i },
       'וְהַנָּעִים': { name: 'נוע', word: 'נעם', en: /move|moving/i },
