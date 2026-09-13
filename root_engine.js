@@ -1950,6 +1950,21 @@
     // Alma 63 audit (2026-09-13)
     'וַיֻּשְׁבוּ': 'שוב',                                  // "and driven back" (הוּשַׁב), not יָשַׁב dwell
     'וַיְעוֹרְרוּם': 'עור',
+    // Helaman 1 audit (2026-09-13)
+    'מְפָרַשׁ': 'פרש',   // "made distinct" (פֵּרֵשׁ) — the פָּרַשׁ homograph would send it to the horsemen
+    // the horseman family held all thirteen of the dissenters (פּוֹרֵשׁ, one who secedes)
+    'פּוֹרֵשׁ': 'פרש', 'פּוֹרְשִׁים': 'פרש', 'פוֹרְשִׁים': 'פרש', 'הַפּוֹרְשִׁים': 'פרש',
+    'הַפֹּרְשִׁים': 'פרש', 'מֵהַפּוֹרְשִׁים': 'פרש', 'וְהַפּוֹרְשִׁים': 'פרש',
+    'וְכוֹבֵשׁ': 'כבשׁ',                                   // "temperate" — one who subdues himself (כָּבַשׁ), not בּוֹשׁ ashamed
+    'וְקוֹרִיאַנְטוּמְר': 'קוריאנטומר', 'אֶת־קוֹרִיאַנְטוּמְר': 'קוריאנטומר',
+    'לְמוֹשְׁלָם': 'משל', 'שֹׁלְחָיו': 'שלח',              // "their governor" (מוֹשֵׁל); "those that sent him", not Shilhi
+    // the winter family held הֵסִית "incite", and one form of נִסָּה
+    'הֵסִיתוּ': 'סות', 'הוּסְתוּ': 'סות', 'נַסֹּתוֹ': 'נסה',
+    // the stubble family held hardness, seeking, snares and knocking
+    'הַקֹּשִׁי': 'קשה', 'וְהַקֹּשִׁי': 'קשה', 'כִּקְשִׁי': 'קשה',
+    'הִקְשֵׁינוּ': 'קשה', 'הַקְשׁוֹתָם': 'קשה', 'קָשׁוּ': 'קשה',
+    'בְּבַקְשֵׁנוּ': 'בקש', 'בְּבַקְשָׁם': 'בקש', 'וּבְבַקְּשִׁי': 'בקש',
+    'בְּמוֹקְשֵׁיהֶם': 'H4170', 'בְּמוֹקְשָׁם': 'H4170', 'הַקֵּשׁ': 'נקש',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2376,6 +2391,7 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'פָּרַשׁ': { name: 'פרש', word: 'פָּרָשׁ', en: /dissent|withdrew|withdraw|secede|distinct|explain|interpret/i },   // he dissented / a horseman (Helaman 1)
     'עֶזְרָה': { name: 'H5834', word: 'עזר', en: /Ezrah/ },          // the son of Ezrah / help, assistance (Alma 50)
     'הָרִים': { name: 'רום', word: 'הרר', en: /raise|lift|rear|hoist|take off|take away/i },   // he raises (הֵרִים) / mountains (Alma 48)
     'נוֹצְרִים': { name: 'נוֹצְרִי', word: 'נצר', en: /Christian/i },   // Christians (Alma 46 heading) / watchmen
