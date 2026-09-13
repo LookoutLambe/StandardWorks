@@ -1565,6 +1565,12 @@
     'לְהִוָּעֵץ': 'יעץ', 'הִוָּעֵץ': 'יעץ',                          // "to take counsel" (נוֹעַץ, not עֵץ tree)
     'בְּהִלָּחֲמֵנוּ': 'H3898', 'הַלּחֵם': 'H3898',                     // "when we have fought" (נִלְחַם, not לֶחֶם bread)
     'שִׁילוֹם': 'שילם',                                         // Shilom, plene spelling
+    // Mosiah 23 audit (2026-09-13)
+    'הֵילָם': 'הֵלָם',                                          // Helam, the heading's plene spelling
+    'חֵלָם': 'הֵלָם',                                           // the verses' חֵלָם spelling of Helam (not חָלַם dream)
+    'מוֹרֵיהֶם': 'ירה', 'וּמוֹרֶיהָ': 'ירה',                        // "their teachers" (מוֹרֶה, not Moriah)
+    'יְרַכֵּךְ': 'רכך',                                         // "He would soften" (רִכֵּךְ, not יָרֵךְ thigh)
+    'אֲחֵיהֶן': 'H0251', 'אֲחִיהֶן': 'H0251',                       // "their brethren", "their brother" (אָח, not Ahijah)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
