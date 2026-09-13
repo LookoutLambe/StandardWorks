@@ -2341,6 +2341,10 @@
     // Doctrine and Covenants 1–10 audit (2026-09-13)
     'הָאַזְהָרָה': 'זהר', 'יֻפְרוּ': 'פרר', 'בַּדּוֹת': 'בדה',
     'מַכְשִׁירוֹת': 'כשר',   // "qualify" was שִׁיר, a song
+    // Doctrine and Covenants 6–10 audit (2026-09-13)
+    'הֵבַנְתָּ': 'בין',   // "you have understood" was בָּנָה, to build
+    'וְהוֹסֵף': 'יסף',   // "and continue" was סַף, a threshold
+    'וְאִשּׁוּר': 'H0833', 'וְתַשְׁכִּיחֲךָ': 'שכח',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
