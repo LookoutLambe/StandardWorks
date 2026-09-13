@@ -2433,6 +2433,12 @@
     // Doctrine and Covenants 111–120 audit (2026-09-13)
     'וְהַנְעֵל': 'נעל',   // "let his feet be shod" was מַעֲלָל, doings
     'אַזְהָרָתְךָ': 'זהר', 'בַּפְּסוּקִים': 'פסוק', 'בַּפָּסוּק': 'פסוק',
+    // Doctrine and Covenants 121–130 audit (2026-09-13)
+    'מוֹבִילָה': 'יבל',   // "leads" was H1088 Balah, a city of Simeon
+    'לְזַהוֹת': 'זהה',   // "to recognize" was זֶה, this
+    'הַירָם': 'היירם',   // Hyrum Smith was reading H2036 Horam, king of Gezer
+    'בְּרִיגְהַם': 'בריגם', 'וּמְשֻׁחְרָר': 'שחרר', 'בְּמַסָּעֶיךָ': 'נסע',
+    'בַּהֲקִימָם': 'קום', 'הַנִּכְנָסִים': 'כנס',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
