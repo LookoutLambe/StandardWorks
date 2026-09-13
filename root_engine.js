@@ -2119,6 +2119,8 @@
     'לִכְרֹעַ': 'כרע',                                     // "kneel down" (כָּרַע), not רַע evil
     'דַּיָּהּ': 'די',                                      // "is sufficient" (דַּי), not דַּיָּה the kite
     'לְרַפְּאֹתְכֶם': 'רפא',
+    // 3 Nephi 18 audit (2026-09-13)
+    'תִמְנָעוּם': 'מנע', 'תְגָרְשׁוּהוּ': 'גרש', 'תְּשָׁרְתוּהוּ': 'שרת',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
