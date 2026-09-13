@@ -1778,6 +1778,9 @@
     'מוֹרָה': 'ירה',                                           // "pointing" (heading; מוֹרֶה, not הֵמִיר exchange)
     'גוּפָנִיּוֹת': 'גוף',                                       // "temporal" (heading; גּוּפָנִי, not גֶּפֶן vine)
     'יַסְפִּיק': 'ספק', 'חָשׂוּף': 'חשף', 'תִדְחוּ': 'דחה', 'נֵיטִיב': 'יטב', 'תְּקַבְּלוּהוּ': 'קבל', 'אַרְכֵי': 'ארך',   // one-word forms home (suffice, exposed, procrastinate, improve, receive it, patient — not the Archites)
+    // Alma 36 audit (2026-09-13)
+    'יִסּוּרֵי': 'יסר', 'וְחַד': 'חדד', 'מָרַדְתִּי': 'מרד', 'הוֹבַלְתִּים': 'יבל', 'שָׁמַעְתִּים': 'שמע', 'לְאֵיתָנָם': 'איתן',
+    // the sufferings of (יִסּוּרִים, not סוּר), I had rebelled (מָרַד, not יָרַד), led them away, did I hear them, exquisite (חַד sharp, not the Aramaic one), to their strength (אֵיתָן, not Ethan)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2200,6 +2203,9 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'חַד': { name: 'חדד', word: 'H2298', en: /sharp|exquisite/i },  // the Aramaic one / sharp, exquisite (Alma 36)
+    'חֲדָה': { name: 'חדד', word: 'H2298', en: /sharp|exquisite/i },  // the Aramaic one / sharper
+    'כַחֲדָה': { name: 'חדד', word: 'H2298', en: /sharp|exquisite/i },
     'עָנִי': { name: 'ענטי', word: 'H6031', en: /\bAni\b/ },        // Ani-Anti, the village / poor, afflicted
     'וְעַמָּה': { name: 'עַמָּה', word: 'H5972', en: /Ammah/ },      // Ammah / and her people (Alma 20)
     'הַקֹּרוֹת': { name: 'H7136', word: 'H7136', en: /./ },        // "the circumstances" (קָרָה happen; the table stamped קוֹרָה beam)

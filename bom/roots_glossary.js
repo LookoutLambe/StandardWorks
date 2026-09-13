@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "נדה": {"meaning":"(נָדָה) to put away, banish, exclude","category":"Action"},
   "קוצה": {"meaning":"(קְוֻצּוֹת) locks, ringlets of hair","category":"Body"},
   "תשש": {"meaning":"(תָּשַׁשׁ) to grow weak, fail; (תָּשׁוּשׁ) weak, feeble","category":"Quality"},
   "חיץ": {"meaning":"(חִיצוֹן) outer, outward; (מְחִיצָה) partition, wall; (הַסְּפָרִים הַחִיצוֹנִים) the Apocrypha","category":"Place"},
