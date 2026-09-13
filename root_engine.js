@@ -1365,6 +1365,8 @@
     'וּנְזַמֵּר': 'זמר',                                       // "and we will trim up" (one-word family)
     'נָכִין': 'כון', 'תָּכִינוּ': 'כון', 'וְתָכִינוּ': 'כון',      // "prepare" (הֵכִין, not the peacock H8500)
     'אֶטַאֲטֵא': 'טאטא',                                       // "will I sweep away" (one-word family)
+    // Jacob 6 audit (2026-09-13)
+    'וּתְכַבּוּ': 'כבה', 'תִכְבֶּינָה': 'כבה',                     // "quench", "be quenched" (one-word families)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
