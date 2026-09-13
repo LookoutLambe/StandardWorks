@@ -1681,6 +1681,16 @@
     'וּבְמִרְמָתוֹ': 'רמה', 'עֲרוּמָה': 'ערם', 'כַּקֶּשֶׁב': 'קשב', 'יִשָּׁבוּ': 'שבה', 'כַּבְלֵי': 'כבל', 'וּבָרָעָה': 'רעע', 'נָעֵז': 'עזז', 'נַכְעִיס': 'כעס', 'לְבָשְׁתֵּנוּ': 'בוש', 'לֶהָבָתוֹ': 'להב',
     'וְהַמִּרְמוֹת': 'רמה', 'בְּמִרְמָתוֹ': 'רמה', 'בְּמִרְמַת': 'רמה', 'מִרְמָתָם': 'רמה',   // the deceits (מִרְמָה, not Meremoth)
     // his deceiving (מִרְמָה, not Meremoth), subtle, heed, taken captive (שָׁבָה, not יָשַׁב dwell), chains (כֶּבֶל, not בְּלִי), awful state, dare, provoke, our shame (בֹּשֶׁת, not שִׁית), flame (לֶהָבָה, not בַּת daughter)
+    // Alma 13 audit (2026-09-13)
+    'יַכְרִיזוּ': 'כרז', 'לַדִּבְרָה': 'דבר',                          // "they shall proclaim", "of the order"
+    'בִּקְרִיאַת': 'קרא', 'לִקְרִיאַת': 'קרא', 'הַמִּקְרָא': 'קרא', 'הַמְקֹרָא': 'קרא',   // "the calling of" (קְרִיאָה, not קָרָה happen)
+    'כִּפֻּרֵי': 'כפר',                                         // "the atonement of" (כִּפּוּר, not פְּרִי fruit)
+    'בְּבׇחֳרָם': 'בחר',                                        // "they choosing" (בָּחַר, not חָרַם)
+    'דִּבְרָתוֹ': 'דבר',                                        // "His order" (דִּבְרָה, not Daberath)
+    'וּמַלְכִּי': 'H4442',                                       // "and Melchizedek" (not Malchi-shua)
+    'תְּעַוְּתוּ': 'עות',                                        // "you will wrest" (עִוֵּת, not תָּעָה wander)
+    'כַרְמֵנוּ': 'כרם',                                         // "our vineyard" (כֶּרֶם, not רִמּוֹן pomegranate)
+    'תְנֻסּוּ': 'נסה', 'מִתְנַסֶּה': 'נסה', 'הַתְנַסֶּה': 'נסה',          // "tempted" (נִסָּה, not נוּס flee)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2103,6 +2113,8 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'מַלְכִּי': { name: 'H4442', word: 'מלך', en: /Melchizedek/ },        // Melchizedek / my king
+    'שָׁלֵם': { name: 'H8004', word: 'שלם', en: /Salem/ },          // Salem / complete
     'וְלֵאָה': { name: 'H3812', word: 'לֵאָה', en: /Leah/ },         // Leah / a leah, the Nephite measure (Alma 11)
     'עֵר': { name: 'H6147', word: 'עור', en: /\bEr\b/ },            // Er / awake
     'יָאִיר': { name: 'H2971', word: 'אור', en: /jair/i },           // Jair / shall shine (Alma 5)
