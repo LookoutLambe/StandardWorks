@@ -1965,6 +1965,9 @@
     'הִקְשֵׁינוּ': 'קשה', 'הַקְשׁוֹתָם': 'קשה', 'קָשׁוּ': 'קשה',
     'בְּבַקְשֵׁנוּ': 'בקש', 'בְּבַקְשָׁם': 'בקש', 'וּבְבַקְּשִׁי': 'בקש',
     'בְּמוֹקְשֵׁיהֶם': 'H4170', 'בְּמוֹקְשָׁם': 'H4170', 'הַקֵּשׁ': 'נקש',
+    // Helaman 2 audit (2026-09-13)
+    'בּוֹרַחַת': 'ברח',                                    // "is fleeing" (בָּרַח), not רַחַת a winnowing shovel
+    'הִכְרַחְתֶּם': 'כרח', 'הִכְרִיחַ': 'כרח',              // "have compelled" (הִכְרִיחַ), not the shovel or a smell
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2391,6 +2394,7 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'וְקָנָה': { name: 'H7071', word: 'קנה', en: /Kanah/ },        // the brook Kanah / and he bought, obtained (Helaman 2)
     'פָּרַשׁ': { name: 'פרש', word: 'פָּרָשׁ', en: /dissent|withdrew|withdraw|secede|distinct|explain|interpret/i },   // he dissented / a horseman (Helaman 1)
     'עֶזְרָה': { name: 'H5834', word: 'עזר', en: /Ezrah/ },          // the son of Ezrah / help, assistance (Alma 50)
     'הָרִים': { name: 'רום', word: 'הרר', en: /raise|lift|rear|hoist|take off|take away/i },   // he raises (הֵרִים) / mountains (Alma 48)
