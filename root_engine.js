@@ -2168,6 +2168,9 @@
     'מְהֻמָה': 'הום',   // "a revolution" (מְהוּמָה tumult) was מָה, what
     'מַבְחִין': 'בחן',   // "sufficient to behold" (הִבְחִין) was חָנַן, to be gracious
     'וַיֻּצְּדוּ': 'צוד', 'וָאֲעוֹרְרֵם': 'עור',
+    // Mormon 3 audit (2026-09-13)
+    'בִּתְפִלּוֹתַי': 'פלל', 'בִּתְפִלּוֹתָי': 'פלל', 'וּתְפִלּוֹתָיו': 'פלל',   // תְּפִלָּה prayer was falling under נָפַל
+    'וְכֵלֵי': 'H3627',   // "the instruments of" was כֹּל, all
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
