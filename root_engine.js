@@ -1424,6 +1424,11 @@
     'לְהַכִּיר': 'נכר',                                        // "to the knowledge of" (הִכִּיר, not כִּיר)
     'נַכִּיר': 'נכר', 'יַכִּירֻהוּ': 'נכר',                      // "we recognize", "they recognize him" (same)
     'יוֹרֵם': 'ירה',                                          // "he teaches them" (הוֹרָה, not the king Joram)
+    // Mosiah 3 audit (2026-09-13)
+    'הַמּוֹלֵךְ': 'מלך',                                       // "who reigns" (מָלַךְ, not מוּל circumcise)
+    'וּדְמֻיּוֹת': 'דמה',                                      // "and types" (דְּמוּת, not blood)
+    'לְפַתּוֹת': 'פתה',                                        // "to the enticings of" (פִּתָּה, not לָפַת turn)
+    'לְהַטִּיל': 'טול',                                        // "to inflict" (הֵטִיל; one-word family)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
