@@ -2179,6 +2179,11 @@
     // Mormon 7 audit (2026-09-13)
     'לָמָנֵי': 'הלמנים',   // "the Lamanites of" was reading מִן, from
     'לְשׁוֹרֵר': 'שיר',   // "to sing" (מְשׁוֹרֵר) stood alone
+    // Mormon 8 audit (2026-09-13)
+    'הַמְּפִיחִים': 'פוח',   // "the breathing out" was פִּיחַ, ashes
+    'הַמּוּמִים': 'מום', 'הֹמִים': 'המה',   // a blemish and a roaring, both filed under מַיִם water
+    'שְׁחִיתוּת': 'שחת', 'וּשְׁמַד': 'שמד', 'כֻּלָּן': 'כלל', 'וּבַעֲלֵיהֶן': 'בעל',
+    'שִׁנִּיתֶם': 'שנה', 'הַנִּרְקָב': 'רקב',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

@@ -986,6 +986,7 @@ window._rootGlossaryData = {
   "קרב": {"meaning":"(קָרַב) to draw near; (קָרוֹב) near; (קֶרֶב) midst, inwards; (בְּקֶרֶב) among; (קׇרְבָּן) offering","category":"Quality"},
   "יחלו": {"meaning":"began","category":"Time"},
   "יות": {"meaning":"be","category":"Quality"},
+  "מום": {"meaning":"(מוּם) blemish, defect, imperfection","category":"Quality"},
   "מים": {"meaning":"(מַיִם) water","category":"Nature"},
   "ימים": {"meaning":"days","category":"Time"},
   "ירושלים": {"meaning":"Jerusalem","category":"Uncategorized"},
