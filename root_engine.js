@@ -1822,6 +1822,10 @@
     // Alma 46 audit (2026-09-13)
     'קוֹשֵׁר': 'קשר', 'מֵהַקְּהִלָּה': 'קהל', 'וַיִּתְחַמְּשׁוּ': 'חמש', 'וַיּוּשְׁבוּ': 'שוב', 'הַמַּחֲלוֹת': 'חלה', 'לִתְּמוֹת': 'תמם',
     // a conspiracy (heading; קוֹשֵׁר), from the church, a band (חֶבֶר, not Heber), armed themselves (הִתְחַמֵּשׁ), taken back, the diseases (מַחֲלָה, not חָלַל begin), to the end of (תֹּם, not מוּת die)
+    // Alma 47 audit (2026-09-13)
+    'פּוֹרְשֵׁי': 'פרשׁ', 'הִכַּרְתֶּם': 'נכר', 'תַּהְכְּרוּ': 'נכר', 'הִכַּרְתִּיו': 'נכר', 'הִכָּרְתָם': 'נכר',                                       // "dissenters of" (פּוֹרֵשׁ, one who separates)
+    'יָקוּצוּ': 'יקץ', 'כִּלְכַבְּדוֹ': 'כבד', 'הֻכַּר': 'נכר',            // "they awoke", "as if to honor him", "he was acknowledged"
+    'בְּהִלָּמְדָם': 'למד',                                      // "being taught" (לָמַד, not דָּם blood)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
