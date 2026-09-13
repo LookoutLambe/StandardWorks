@@ -1523,6 +1523,15 @@
     'הוֹרוּ': 'ירה', 'וְעֹקֶץ': 'עקץ', 'לִתְקוּמַת': 'קום',   // "teach" is הוֹרָה (ירה), not הָרָה conceive; the sting; the resurrection
     // Mosiah 17 audit (2026-09-13)
     'תְּצֻדוּ': 'צוד',                                         // "you shall be hunted" (צוּד)
+    // Mosiah 18 audit (2026-09-13)
+    'הֵלָם': 'הֵלָם', 'וְהֵלָם': 'הֵלָם',   // Helam, the man and the land — its own family, not הֲלֹם hither
+    'מְפַרְנְסִים': 'פרנס',                                    // "support (themselves)" (heading; פִּרְנֵס)
+    'וּמְלַמְּדִים': 'למד',                                     // "and teaching" (heading; לִמֵּד, not דַּי enough)
+    'בּוֹרְחִים': 'ברח', 'בָּרְחָה': 'ברח',                        // "flee", "fled" (בָּרַח, not רֵחַיִם mill)
+    'וּמֵעֲוֹנוֹתָיו': 'עון',                                    // "and from his iniquities" (עָוֹן, not Maon)
+    'וּתְקוּמָתוֹ': 'קום',                                      // "and His resurrection"
+    'הַנִּצְרָכִים': 'צרך',                                     // "that stood in need"
+    'וְתִמָּנוּ': 'מנה',                                        // "and be numbered" (נִמְנָה, not תָּמַם)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
