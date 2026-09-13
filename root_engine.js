@@ -2261,6 +2261,9 @@
     'וּבַקָּשׁוֹת': 'בקש',   // "and intercessions" was קָשֶׁה, hard
     'וַיֹּראוּ': 'ירה',   // 2 Sam. 11:24 "and the shooters shot" — defective ירה, not ירא to fear
     'שֶׁל־הָאוֹתִיּוֹת': 'אות', 'בְּאוֹתִיּוֹת': 'אות', 'בָּאוֹתִיּוֹת': 'אות', 'אֶת־הָאוֹתִיּוֹת': 'אות', 'וְלָאוֹתִיּוֹת': 'אות', 'אוֹתִיּוֹת': 'אות', 'הָאוֹתִיּוֹת': 'אות',   // the letters of the alphabet, filed under the object marker
+    // Moses 1 audit (2026-09-13)
+    'בְּרָאתִיו': 'ברא', 'בְּרָאתִים': 'ברא', 'בְרָאתִים': 'ברא', 'בָּרָאתִי': 'ברא', 'בָּרָאתִים': 'ברא', 'בָרָאתִי': 'ברא',   // "I created them" peeled to בְּ + רָאָה, to see
+    'בָּעוֹלָמוֹת': 'עלם', 'הָעוֹלָמוֹת': 'עלם', 'עוֹלָמוֹת': 'עלם',   // the worlds, held by the name stage in a family of their own
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
