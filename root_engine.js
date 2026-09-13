@@ -1295,6 +1295,14 @@
     'כָּלוֹת': 'כלה',                                         // "not yet finished" (infinitive absolute of כָּלָה, not כֹּל)
     'הַנִּכְתָּבִים': 'כתב',                                    // "which shall be written" (one-word family)
     'הוֹבַלְתִּי': 'יבל',                                      // "I have led away" (one-word family)
+    // 2 Nephi 31 audit (2026-09-13)
+    'לְשׁוֹמְרֵי': 'שמר',                                      // "to those who keep" (was the name Shomer)
+    'כִּנְכֹחַת': 'נכח',                                       // "according to the plainness of" (נְכֹחָה, not reprove)
+    'הֲנוּכַל': 'יכל',                                        // "can we" (one-word family)
+    'הַנִּטְבָּל': 'טבל',                                      // "he who is baptized" (one-word family)
+    'בְּלֶכְתְּכֶם': 'הלך',                                     // "by following" (לֶכֶת, not נָכָה smite)
+    'הִוָּשֵׁעַ': 'ישע', 'הוֹשַׂע': 'ישע',   // "be saved" (niphal; one-word family across BoM / NT / JST spellings)
+    'וְלַבֵּן': 'בן',                                          // "and of the Son" (בֵּן, not the psalm title Muth-labben)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

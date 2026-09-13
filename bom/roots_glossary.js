@@ -317,7 +317,7 @@ window._rootGlossaryData = {
   "מצרים": {"meaning":"(מִצְרַיִם) Egypt","category":"Uncategorized"},
   "כיצד": {"meaning":"(כֵּיצַד) how","category":"Uncategorized"},
   "אמצע": {"meaning":"(אֶמְצַע) middle; (בְּאֶמְצָעוּת) through, by means of","category":"Uncategorized"},
-  "סבר": {"meaning":"(סֵבֶר) hope","category":"Uncategorized"},
+  "סבר": {"meaning":"(הִסְבִּיר) to explain, make clear; (סֵבֶר) hope, expectation","category":"Uncategorized"},
   "היירם": {"meaning":"(הַיְירָם) Hiram, Hyrum","category":"Uncategorized"},
   "H7613": {"meaning":"(שְׂאֵת) to bear, take up; swelling, dignity","category":"Uncategorized"},
   "H2752": {"meaning":"(חֹרִים) nobles, freemen; (חֹרִי) Horite","category":"Uncategorized"},
