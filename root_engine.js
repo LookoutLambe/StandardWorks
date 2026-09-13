@@ -2001,6 +2001,9 @@
     'מְזַהֶה': 'זהה',                                      // "identifies" (זִהָה), not the hapax מָזֶה exhausted
     'וְתוֹדֶה': 'ידה', 'תוֹדֶה': 'ידה', 'לְהִתְוַדּוֹת': 'ידה',   // the confessing verb, not תּוֹדָה the offering
     'יַאֲשִׁימוּהוּ': 'אשם', 'קָשׁוּר': 'קשר', 'קָשַׁרְתָּ': 'קשר',
+    // Helaman 10 audit (2026-09-13)
+    'לִקְשֹׁר': 'קשר',                                     // "unto conspiracies of" (קֶשֶׁר), a family of one
+    'תַּתִּיר': 'נתר', 'תַּתִּירוּ': 'נתר',                  // the sealing power's "ye shall loose" (הִתִּיר)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
