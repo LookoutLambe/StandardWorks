@@ -1560,6 +1560,11 @@
     'וְסִפּוּר': 'ספר',                                         // "and an account of"
     'הַדַּף': 'דף',                                            // "the leaf" (דַּף page, not הָדַף thrust)
     'הַמְּחַיֶּה': 'חיה', 'הַמִּחְיָה': 'חיה', 'מַחְיָה': 'חיה', 'לְמַחְיַת': 'חיה', 'מְחֻיָּה': 'חיה', 'לְמִחְיָתָם': 'חיה',   // quicken, sustenance (חָיָה, not מְחִי blow)
+    // Mosiah 22 audit (2026-09-13)
+    'מִשִּׁעְבּוּד': 'שעבד',                                     // "from bondage"
+    'לְהִוָּעֵץ': 'יעץ', 'הִוָּעֵץ': 'יעץ',                          // "to take counsel" (נוֹעַץ, not עֵץ tree)
+    'בְּהִלָּחֲמֵנוּ': 'H3898', 'הַלּחֵם': 'H3898',                     // "when we have fought" (נִלְחַם, not לֶחֶם bread)
+    'שִׁילוֹם': 'שילם',                                         // Shilom, plene spelling
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
