@@ -1786,6 +1786,12 @@
     // doth confound (הוֹבִישׁ), incorrect (נַעֲוֶה, not נוּעַ move), brought back, murdered, combinations, Liahona's second spelling, Gazelem (the seer stone, not גָּזַל rob), direct you (הִנְחָה, not נִחַם comfort), learn and teach them (לָמַד, not מָדַד measure or דָּם blood), known (not Jaddua)
     // Alma 38 audit (2026-09-13)
     'רְסוּ': 'רסן', 'תִרְסֹן': 'רסן',                              // "are bridled", "you bridle" (רִסֵּן, not רָסַס sprinkle)
+    // Alma 39 audit (2026-09-13)
+    'פּוֹעֶלֶת': 'פעל',                                        // "was active" (heading; פּוֹעֶלֶת, not Peullethai)
+    'לְמַפְרֵעַ': 'פרע',                                        // "backward" (heading; לְמַפְרֵעַ)
+    'וּגְדֹר': 'גדר',                                          // "and fence" (גָּדַר, not Gedor)
+    'נִקְרֵאתָ': 'קרא',                                         // "you were called"
+    'אָנִיחַ': 'נוח',                                          // "I will ease" (הֵנִיחַ, not אָנַח groan)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2208,6 +2214,7 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'אִיזָבֶל': { name: 'איזבל', word: 'H0348', en: /Isabel/ },     // Isabel the harlot of Siron / Jezebel
     'חַד': { name: 'חדד', word: 'H2298', en: /sharp|exquisite/i },  // the Aramaic one / sharp, exquisite (Alma 36)
     'חֲדָה': { name: 'חדד', word: 'H2298', en: /sharp|exquisite/i },  // the Aramaic one / sharper
     'כַחֲדָה': { name: 'חדד', word: 'H2298', en: /sharp|exquisite/i },
