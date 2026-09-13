@@ -631,7 +631,7 @@
     'אֶלָּא': 'אֶלָּא',       // the rabbinic "but rather" — its lexicon match is H0414 Ela, a name
     /* Two Book of Mormon names the lexicon peeled to a common word: Limhi (57 uses) sat
        under מְחִי "battering", Comnor/Kimnor under מָנוֹר "weaver's beam" (2026-09-12). */
-    'לִמְחִי': 'למחי', 'וְלִמְחִי': 'למחי', 'לְלִמְחִי': 'למחי', 'מִלִּמְחִי': 'למחי',
+    'לִמְהִי': 'למהי', 'וְלִמְהִי': 'למהי', 'לְלִמְהִי': 'למהי', 'מִלִּמְהִי': 'למהי',
     'כָּמְנוֹר': 'כמנור', 'כִּמְנוֹר': 'כמנור',
     // HOLAM HASER FOR VAV (U+05BA): the OT spells מִצְוֺת with it, the lexicon
     // with the plain holam, and the bare consonants מצות are ambiguous with
@@ -744,7 +744,7 @@
     // one card, and the ordinary Hebrew word keeps its own.
     'וְנֶפִי': 'נפי', 'וּנֶפִי': 'נפי', 'כְּנֶפִי': 'נפי', 'כׇּל־נֶפִי': 'נפי', 'לְנֶפִי': 'נפי', 'לִנֶפִי': 'נפי', 'נֶפִי': 'נפי', 
     'וְלַעֲמוּלֶק': 'עמולק', 'וַעֲמוּלֶק': 'עמולק', 'עֲמוּלֶק': 'עמולק', 
-    'וְלִמְחִי': 'למחי', 'לְלִמְחִי': 'למחי', 'לִמְחִי': 'למחי', 'מִלִּמְחִי': 'למחי',
+    'וְלִמְהִי': 'למהי', 'לְלִמְהִי': 'למהי', 'לִמְהִי': 'למהי', 'מִלִּמְהִי': 'למהי',
     'בְּלָמָן': 'למן', 'וְלָמָן': 'למן', 'לְלָמָן': 'למן', 'לָמָּן': 'למן', 'לָמָן': 'למן', 
     'וְלָמוֹנִי': 'למוני', 'לָמוֹנִי': 'למוני',
     'וּלְמוּאֵל': 'למואל', 'לְמוּאֵל': 'למואל',
@@ -754,7 +754,7 @@
     'אָכִישׁ': 'אכיש', 'לְאָכִישׁ': 'אכיש', 
     'מוֹרִיאַנְטוֹן': 'מוריאנטון',
     'לָכוֹנֵאוּס': 'לכונאוס',
-    'לְמוֹרוֹנִיחָה': 'מורוניחה', 'מוֹרוֹנִיחָה': 'מורוניחה',
+    'לְמוֹרוֹנִיהָה': 'מורוניהה', 'מוֹרוֹנִיהָה': 'מורוניהה',
     'בְּמִדּוֹנִי': 'מדוני', 'מִדּוֹנִי': 'מדוני', 'מִמִּדּוֹנִי': 'מדוני',
     'בְּמוֹרוֹן': 'מורון', 'וּמוֹרוֹן': 'מורון', 'לְמוֹרוֹן': 'מורון', 'מוֹרוֹן': 'מורון', 
 
@@ -950,11 +950,11 @@
     'אַנְשֵׁיהֶם': 'H0376', 'וּלְאַנְשֵׁי': 'H0376', 'מֵאֲנָשָׁיו': 'H0376', 'מֵאַנְשֵׁינוּ': 'H0376', 'מֵאֲנָשִׁים': 'H0376',
     'וַאֲנָשָׁו': 'H0376', 'וְלַאֲנָשָׁיו': 'H0376', 'מֵאַנְשֵׁיהֶם': 'H0376', 'מֵאֲנָשֵׁינוּ': 'H0376', 'בַּאֲנָשֵׁינוּ': 'H0376',
     'וַאֲנָשַׁי': 'H0376', 'וּמֵאַנְשֵׁיכֶם': 'H0376', 'מֵאֲנָשֶׁיךָ': 'H0376', 'אֲנָשֵׁי': 'H0376', 'לַאֲנָשֵׁי': 'H0376', 'מֵאֲנָשַׁי': 'H0376',
-    // names: Nehor (נִחוֹר, hiriq) sat with Abraham's brother נָחוֹר under H5152 —
+    // names: Nehor (נֵהוֹר, hiriq) sat with Abraham's brother נָחוֹר under H5152 —
     // it joins the family its other spelling נְהוֹר already has; Zoram's defective
     // spelling זֹרָם sat in זֶרֶם "storm", and so did the spy Zeram, whose
     // pointing (patach) is its own family, the שֵׁת precedent
-    'נִחוֹר': 'נהור', 'זֹרָם': 'זורם', 'זֶרַם': 'זֶרַם',
+    'נֵהוֹר': 'נהור', 'זֹרָם': 'זורם', 'זֶרַם': 'זֶרַם',
     // THE ALMA 32 CARD AUDIT (2026-09-12), same method:
     'הַכְּנֶסֶת': 'כנס',                                  // the segol spelling of the synagogue sat in כנע "humble"
     'לִבְנוֹתָם': 'H1129', 'לִבְנוֹתוֹ': 'H1129',            // "to build them" read as נָוֶה "habitation"
@@ -1086,7 +1086,7 @@
     'מִמַּסָּעָם': 'H4550',                                // "their journeying" (מַסַּע)
     'וְעׇנְיָם': 'H6031', 'עׇנְיָם': 'H6031',                  // "afflictions" (עֳנִי), not the town Anim
     'הֲבָנָה': 'בין',                                      // "understanding", not ebony
-    'נָחוֹם': 'נָחוֹם',                                     // Nahom, not נוּחַ
+    'נָהוֹם': 'נָהוֹם',                                     // Nahom, not נוּחַ
     'נַדְנוּ': 'נדד',                                      // "we have wandered", not נָדָן "sheath"
     'וַתַּחְפֹּצְנָה': 'חפץ',                                // "they were desirous"
     // THE 1 NEPHI 17 CARD AUDIT (2026-09-12):
@@ -1450,10 +1450,10 @@
     'וּמְמַנֶּה': 'מנה',                                       // "and appoints" (heading; מִנָּה, not מִן from)
     // Mosiah 7 audit (2026-09-13)
     'אַמּוֹן': 'H5983',                                        // Ammon (heading spelling with aleph; was אמם skilled)
-    'לִמְהִי': 'למחי',                                        // Limhi (heading spelling with he; was נְהִי wailing)
+    'לִמְהִי': 'למהי',                                        // Limhi (heading spelling with he; was נְהִי wailing)
     'מְשֻׁעְבָּד': 'שעבד',                                     // "in bondage" (heading; one-word family)
     'וְהַבּוֹטְחִים': 'בטח',                                    // "the ones who trust" (בָּטַח, not טוּחַ plaster)
-    'וְחֶלֶם': 'חֶלֶם', 'וְחֵם': 'חֵם',                           // Helem and Hem, Ammon's companions (one-word families)
+    'וְהֶלֶם': 'הֶלֶם', 'וְחֵם': 'חֵם',                           // Helem and Hem, Ammon's companions (one-word families)
     'וַיֻּתְּרוּ': 'נתר',                                       // "and were loosed" (הֻתַּר, not the name Jethro)
     'הֵעַזְתֶּם': 'עזז',                                       // "you have dared" (הֵעֵז; one-word family)
     'וּמִשְׁמָרִי': 'שמר',                                      // "and my guards" (מִשְׁמָר, not the name Shimri)
@@ -1471,7 +1471,7 @@
     'הַבּוֹרֵחַ': 'ברח',                                       // "which flees" (one-word family)
     'לְתוֹעֶלֶת': 'יעל',                                       // "a benefit" (תּוֹעֶלֶת, not עָלָה go up)
     // Mosiah 9 audit (2026-09-13)
-    'מִזָּרַחֶמְלָה': 'זרחמלה',                                  // "from Zarahemla" (heading; one-word family)
+    'מִזָּרַחֶמְלָה': 'זרהמלה',                                  // "from Zarahemla" (heading; one-word family)
     'מַרְשֶׁה': 'רשות',                                        // "permits" (heading; הִרְשָׁה)
     'וְנֵעַס': 'נעס', 'וְשֵׁאוּם': 'שאום',                         // neas and sheum, the Nephite grains (Mosiah 9:9)
     'שִׁבְתֵּנוּ': 'ישב',                                       // "we had dwelt" (יָשַׁב, not שָׁבַת cease)
@@ -1567,7 +1567,7 @@
     'שִׁילוֹם': 'שילם',                                         // Shilom, plene spelling
     // Mosiah 23 audit (2026-09-13)
     'הֵילָם': 'הֵלָם',                                          // Helam, the heading's plene spelling
-    'חֵלָם': 'הֵלָם',                                           // the verses' חֵלָם spelling of Helam (not חָלַם dream)
+    'הֵלָם': 'הֵלָם',                                           // the verses' הֵלָם spelling of Helam (not חָלַם dream)
     'מוֹרֵיהֶם': 'ירה', 'וּמוֹרֶיהָ': 'ירה',                        // "their teachers" (מוֹרֶה, not Moriah)
     'יְרַכֵּךְ': 'רכך',                                         // "He would soften" (רִכֵּךְ, not יָרֵךְ thigh)
     'אֲחֵיהֶן': 'H0251', 'אֲחִיהֶן': 'H0251',                       // "their brethren", "their brother" (אָח, not Ahijah)
@@ -1654,7 +1654,7 @@
     'וְהַקֶּשֶׁב': 'קשב',                                        // "and heed"
     'אָסוּר': 'אסר',                                           // "confined" (אָסַר, not סוּר)
     // Alma 8 audit (2026-09-13)
-    'בְּעַמּוֹנִיחָה': 'עמוניחה', 'וּלְכַפְרֵיהֶם': 'כפר', 'כַּפְרֵיהֶם': 'כפר', 'מֵעִירָם': 'עיר', 'נֶפִיִּי': 'הנפיים', 'וַאֲסַפְתָּנִי': 'אסף',
+    'בְּעַמּוֹנִיהָה': 'עמוניהה', 'וּלְכַפְרֵיהֶם': 'כפר', 'כַּפְרֵיהֶם': 'כפר', 'מֵעִירָם': 'עיר', 'נֶפִיִּי': 'הנפיים', 'וַאֲסַפְתָּנִי': 'אסף',
     'הַנֶּפִיִּי': 'הנפיים',   // "the Nephite"
     // in Ammonihah, villages (כְּפָר, not פְּרִי fruit), of their city (not Iram), a Nephite, taken me in
     // Alma 9 audit (2026-09-13)
@@ -1697,7 +1697,7 @@
     // Alma 15 audit (2026-09-13)
     'כִּשְׁמוֹעַ': 'שמע', 'כִּשְׁמוֹעָם': 'שמע', 'וּמְכוֹנְנִים': 'כון',   // establish, heals (רָפָא, not רָפָה slack), obeying (שָׁמַע, not Shammua)
     // Alma 16 audit (2026-09-13)
-    'וְאָחָה': 'אָחָה', 'מֵהָעַמּוֹנִיחָהִים': 'עמוניחה', 'נִחוֹרִים': 'נהור', 'הַנִּחוֹרִים': 'נהור', 'מַשּׂוֹא': 'נשא', 'יִסּוּד': 'יסד', 'תַּמָּה': 'תמם',
+    'וְאָחָה': 'אָחָה', 'מֵהָעַמּוֹנִיהָהִים': 'עמוניהה', 'נֵהוֹרִים': 'נהור', 'הַנֵּהוֹרִים': 'נהור', 'מַשּׂוֹא': 'נשא', 'יִסּוּד': 'יסד', 'תַּמָּה': 'תמם',
     // Aha, the Ammonihahites, the Nehors, the four (not Kirjath-arba), respect of persons (מַשּׂוֹא, not שָׁוְא vanity), the establishment (יִסּוּד, not סוֹד counsel), thus ended (תַּמָּה, not the Aramaic there)
     // Alma 17 audit (2026-09-13)
     'וּבְלַמְּדָם': 'למד',                                       // "when they taught" (לִמֵּד, not דָּם blood)
@@ -1912,7 +1912,7 @@
     'יָשַׁנּוּ': 'ישן',                                    // "we did sleep" (יָשֵׁן), not the particle יֵשׁ
     'שָׁלַחְנוּ': 'שלח',                                   // "we sent" (שָׁלַח), not שֻׁלְחָן a table
     'אִמּוֹתֵיהֶם': 'אמם', 'אִמּוֹתָם': 'אמם',              // "their mothers" (אֵם), not מוּת to die
-    'הָעַמּוֹנִיחָהִים': 'עמוניחה',
+    'הָעַמּוֹנִיהָהִים': 'עמוניהה',
     'וְהַהֲגָנָה': 'גנן', 'שְׁבוּיֵינוּ': 'שבה', 'בַּמָּצוֹק': 'צוק', 'שָׁאַלְנוּם': 'שאל',
     // Alma 58 audit (2026-09-13)
     'הֵעַזְנוּ': 'עזז',                                    // "we durst" (הֵעֵז), not Azzan

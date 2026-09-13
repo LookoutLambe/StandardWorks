@@ -194,7 +194,7 @@ var et_colophonVerses = [
     ["אֲשֶׁר","which"],
     ["מָצְאוּ","found"],
     ["עַם","the people of"],
-    ["לִמְחִי","Limhi"],
+    ["לִמְהִי","Limhi"],
     ["הַנִּקְרָאִים","who are called"],
     ["לוּחוֹת","plates of"],
     ["אֶתֶר","Ether"],

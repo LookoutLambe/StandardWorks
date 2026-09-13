@@ -3380,7 +3380,7 @@ var ch16Verses = [
     ["וַיִּקָּבֵר","and was buried"],
     ["בַּמָּקוֹם","in the place"],
     ["הַנִּקְרָא","which was called"],
-    ["נָחוֹם","Nahom"],
+    ["נָהוֹם","Nahom"],
     ["׃",""]
   ]},
   { num: "לה", words: [["וַיְהִי","and"], ["כִּי","that"], ["הִתְאַבֵּל","exceedingly"], ["הִתְאַבַּלְנָה","did mourn"], ["בְנוֹת","the daughters of"], ["יִשְׁמָעֵאל","Ishmael"], ["עַל־אׇבְדַן","because of the loss of"], ["אֲבִיהֶן","their father"], ["וּמִפְּנֵי","and because of"], ["עׇנְיָן","their afflictions"], ["בַּמִּדְבָּר","in the wilderness"], ["וַתִּתְלוֹנֵנָּה","and they did murmur"], ["עַל־אָבִי","against my father"], ["כִּי","because"], ["הוֹצִיאָן","he had brought them"], ["מֵאֶרֶץ","out of the land of"], ["יְרוּשָׁלַיִם","Jerusalem"], ["לֵאמֹר","saying"], ["אָבִינוּ","our father"], ["מֵת","is dead"], ["וְאַף","yea, and"], ["נַדְנוּ","we have wandered"], ["הַרְבֵּה","much"], ["בַּמִּדְבָּר","in the wilderness"], ["וְסָבַלְנוּ","and we have suffered"], ["הַרְבֵּה","much"], ["עֳנִי","affliction"], ["רָעָב","hunger"], ["וְצָמָא","thirst"], ["וַעֲיֵפוּת","and fatigue"], ["וְאַחֲרֵי","and after"], ["כׇל־הַסֵּבֶל","all the sufferings"], ["הַזֶּה","this"], ["נֹאבַד","we must perish"], ["בַּמִּדְבָּר","in the wilderness"], ["בָּרָעָב","with hunger"], ["׃",""]]},

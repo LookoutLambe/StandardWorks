@@ -70,7 +70,7 @@ PREFIXES = ('וְהַ', 'וּבְ', 'וְ', 'וּ', 'וַ', 'הַ', 'הָ', 'ה�
 # default the chevron sat on the last vowel and the voice said za-ra-chem-LA.
 #
 # These merge INTO the WLC lexicon, so resolve()'s maqqef and prefix fallbacks
-# reach them for free: אֶת־זָרַחֶמְלָה and בְּזָרַחֶמְלָה need no entry of their own.
+# reach them for free: אֶת־זָרַהֶמְלָה and בְּזָרַהֶמְלָה need no entry of their own.
 # PUT RULINGS HERE, NEVER IN THE GENERATED FILES -- they carry a DO NOT EDIT
 # banner because this script overwrites all six of them on every run.
 HAND = {
