@@ -1309,6 +1309,9 @@
     'וְתַרְטַבְנָה': 'רטב',                                     // "and water [my pillow]" (one-word family)
     'לְיַחֵל': 'יחל',                                         // "hope" (יִחֵל, not חָלַל profane)
     'יִתְרַצּוּ': 'רצה',                                       // "they shall be reconciled" (one-word family)
+    // Jacob 1 audit (2026-09-13)
+    'אֶגַּע': 'נגע', 'וְאֶגַּע': 'נגע',                          // "should I touch", "and I shall touch upon" (one-word families)
+    'חֲזֹנוֹת': 'חזה',                                        // "revelations" (חָזוֹן; one-word family)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1732,7 +1735,13 @@
       'שִׁמְעִי':    { name: 'H8096', word: 'H8085', en: /Shimei/ }, // hear! (fs) · Shimei (2 Nephi 8)
       'שָׂרַי':     { name: 'H8297', word: 'H8269', en: /Sarai/ }, // my princes · Sarai (2 Nephi 20)
       'וְרָבוּ':    { name: 'H7378', word: 'H7235', en: /contend|strive|plead/i }, // and they shall contend (רִיב) · and multiply (רָבָה) (2 Nephi 28)
-      'יִרְאוּ':    { name: 'H3372', word: 'H7200', en: /fear|afraid|revere|dread/i } // fear (יָרֵא) · they shall see (רָאָה) (2 Nephi 28)
+      'יִרְאוּ':    { name: 'H3372', word: 'H7200', en: /fear|afraid|revere|dread/i }, // fear (יָרֵא) · they shall see (רָאָה) (2 Nephi 28)
+      'מַסָּה': { name: 'H4532', word: 'H4531', en: /Massah/ },   // Massah the place · temptation, trial (מַסָּה) (Jacob 1)
+      'בְּמַסָּה': { name: 'H4532', word: 'H4531', en: /Massah/ },
+      'לַמַּסָּה': { name: 'H4532', word: 'H4531', en: /Massah/ },
+      'בַּמַּסָּה': { name: 'H4532', word: 'H4531', en: /Massah/ },
+      'וּבְמַסָּה': { name: 'H4532', word: 'H4531', en: /Massah/ },
+      'הַמַּסָּה': { name: 'H4532', word: 'H4531', en: /Massah/ }
     };
     var _HG_BLIND = /[ּֽֿ]/g;
     var _HG_INDEX = null;
