@@ -1,4 +1,6 @@
 window._rootGlossaryData = {
+  "H3681": {"meaning":"(כִּסּוּי) covering","category":"Objects"},
+  "אָחָה": {"meaning":"Aha — a Nephite captain, son of Zoram (Alma 16:5)","category":"Name"},
   "H8004": {"meaning":"(שָׁלֵם) Salem — the city of Melchizedek","category":"Place"},
   "H8333": {"meaning":"(שַׁרְשְׁרָה) chain","category":"Objects"},
   "H3676": {"meaning":"(כֵּס) throne; the bar (of judgment)","category":"Society"},
@@ -1101,7 +1103,7 @@ window._rootGlossaryData = {
   "אדבר": {"meaning":"I speak","category":"Speech"},
   "ידעתם": {"meaning":"you know","category":"Cognition"},
   "חיים": {"meaning":"life","category":"Life"},
-  "ארבע": {"meaning":"four","category":"Uncategorized"},
+  "ארבע": {"meaning":"(אַרְבַּע) four; (אַרְבָּעִים) forty","category":"Number"},
   "רמון": {"meaning":"Mormon","category":"Uncategorized"},
   "חיי": {"meaning":"(חָיַי) live — then she shall live","category":"Time"},
   "רג": {"meaning":"slay","category":"Uncategorized"},

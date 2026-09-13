@@ -1695,7 +1695,10 @@
     'קָדְשָׁם': 'קדש', 'וְנוֹשִׁיעֵם': 'ישע', 'עָנוּהוּ': 'ענה', 'עָנוּם': 'ענה', 'לִרְאוֹתָם': 'ראה', 'נִזּוֹקוּ': 'נזק', 'מָעוֹת': 'מעה', 'מְעוֹת': 'מעה',
     // consecrated them (heading), save them, answered (עָנָה, not the afflict family), to see them (רָאָה, not יָרֵא fear), hurt, money (מָעוֹת, a stray of the pervert family)
     // Alma 15 audit (2026-09-13)
-    'כִּשְׁמוֹעַ': 'שמע', 'כִּשְׁמוֹעָם': 'שמע', 'וּמְכוֹנְנִים': 'כון', 'מְרַפֵּא': 'רפא',   // establish, heals (רָפָא, not רָפָה slack), obeying (שָׁמַע, not Shammua)
+    'כִּשְׁמוֹעַ': 'שמע', 'כִּשְׁמוֹעָם': 'שמע', 'וּמְכוֹנְנִים': 'כון',   // establish, heals (רָפָא, not רָפָה slack), obeying (שָׁמַע, not Shammua)
+    // Alma 16 audit (2026-09-13)
+    'וְאָחָה': 'אָחָה', 'מֵהָעַמּוֹנִיחָהִים': 'עמוניחה', 'נִחוֹרִים': 'נהור', 'הַנִּחוֹרִים': 'נהור', 'מַשּׂוֹא': 'נשא', 'יִסּוּד': 'יסד', 'תַּמָּה': 'תמם',
+    // Aha, the Ammonihahites, the Nehors, the four (not Kirjath-arba), respect of persons (מַשּׂוֹא, not שָׁוְא vanity), the establishment (יִסּוּד, not סוֹד counsel), thus ended (תַּמָּה, not the Aramaic there)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -2118,6 +2121,8 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'הָאַרְבַּע': { name: 'H7153', word: 'ארבע', en: /arba/i },       // Kirjath-arba / the four
+    'מְרַפֵּא': { name: 'רפה', word: 'רפא', en: /weaken/i },         // heals (רָפָא) / weakens (רָפָה, Jer 38:4)
     'מַלְכִּי': { name: 'H4442', word: 'מלך', en: /Melchizedek/ },        // Melchizedek / my king
     'שָׁלֵם': { name: 'H8004', word: 'שלם', en: /Salem/ },          // Salem / complete
     'וְלֵאָה': { name: 'H3812', word: 'לֵאָה', en: /Leah/ },         // Leah / a leah, the Nephite measure (Alma 11)
