@@ -2141,6 +2141,10 @@
     'נִכְלֵיתֶם': 'כלה',   // "you are consumed" was H3627 כְּלִי, a vessel
     'גְזַלְנוּךָ': 'גזל',   // "have we robbed you" stood in a family of one
     'יְכִין': 'כון',   // "prepares" was H3199 Jachin
+    // 3 Nephi 26 audit (2026-09-13)
+    'תִּגֹּל': 'גלל',   // "shall be rolled together as a scroll" stood alone, glossed rejoiced
+    'מְשַׁתְּפִים': 'שתף', 'מִקְבִּילִים': 'קבל',   // one-word families with nothing to say
+    'רְפוּאוֹת': 'רפא',   // "cures" was H7505 Raphu, a man's name
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

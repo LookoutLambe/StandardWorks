@@ -2483,7 +2483,7 @@ window._rootGlossaryData = {
   "פרט": {"meaning":"(פָּרַט) to improvise on an instrument, chant; (פֶּרֶט) the fallen grapes; (פְּרָט) detail; Pratt","category":"Action"},
   "נינים": {"meaning":"buildings","category":"Action"},
   "קולם": {"meaning":"their voices","category":"Speech"},
-  "אסר": {"meaning":"(אָסַר) to bind, imprison; (אֵסוּר) bond; (אֱסָר) obligation, vow","category":"Uncategorized"},
+  "אסר": {"meaning":"(אָסַר) to bind, imprison; (אָסוּר) bound, forbidden, not permitted; (אֵסוּר) bond; (אֱסָר) obligation, vow","category":"Uncategorized"},
   "יעבד": {"meaning":"he will serve","category":"Action"},
   "זנונים": {"meaning":"whoredoms","category":"Uncategorized"},
   "דרום": {"meaning":"(דָּרוֹם) south","category":"Lexical"},
