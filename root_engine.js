@@ -1268,6 +1268,11 @@
     'כְּקִשְׁרֵי': 'קשר',                                      // "according to the combinations of" (one-word family)
     'הֲיִקְרָא': 'קרא',                                        // "doth he cry" (one-word family)
     'מָנוּעַ': 'מנע',                                         // "are forbidden" (מָנַע withhold, not נוּעַ move)
+    // 2 Nephi 27 audit (2026-09-13)
+    'וּשְׁמָד': 'שמד',                                        // "and destruction" (heading; one-word family)
+    'יִרְאוּהוּ': 'ראה',                                      // "shall behold it" (רָאָה see, not יָרֵא fear)
+    'וְתַצְפִּינֵהוּ': 'צפן',                                  // "and hide it up" (צָפַן hide, not צָפָה watch)
+    'לַסְתִּיר': 'סתר',                                       // "to hide" (one-word family)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
