@@ -1509,6 +1509,11 @@
     'עִקַּשְׁתֶּם': 'עקש',                                       // "you have perverted"
     'וַחֲרֹד': 'חרד',                                          // "and tremble" (חָרַד, not En-harod)
     'הֲתָבֹא': 'בוא',                                          // "does come"
+    // Mosiah 13 audit (2026-09-13)
+    'וְלוֹ': 'לו', 'וָלוֹ': 'לו',                                // "and to him" joins לוֹ
+    'בָּאוֹת': 'בוא', 'הַבָּאוֹת': 'בוא',                          // "things to come" (בָּא, not אוֹת sign)
+    'וַיִּקְרְנוּ': 'קרן',                                       // "and shone" (קָרַן, not יָקָר precious)
+    'מַשָּׂאִי': 'משא',                                         // "my message" (מַשָּׂא)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
