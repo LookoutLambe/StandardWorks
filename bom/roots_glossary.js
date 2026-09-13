@@ -41,7 +41,7 @@ window._rootGlossaryData = {
   "H3676": {"meaning":"(כֵּס) throne; the bar (of judgment)","category":"Society"},
   "כְּאִלּוּ": {"meaning":"(כְּאִלּוּ) as if, as though","category":"Grammar"},
   "לֵאָה": {"meaning":"(לֵאָה) leah — a Nephite measure of silver, half a shiblum (Alma 11:17)","category":"Society"},
-  "שׁוּם": {"meaning":"(שׁוּם) shum — a Nephite measure of gold, two seons (Alma 11:5, 9)","category":"Society"},
+  "שׁוּם": {"meaning":"(שׁוּם) Shum — a Nephite measure of gold, two seons (Alma 11:5, 9); and the land of Shum, seen by Enoch (Moses 7:7)","category":"Society"},
   "שִׁיטָה": {"meaning":"(שִׁיטָה) system, method, order","category":"Society"},
   "גדונה": {"meaning":"Giddonah — the father of Amulek (Alma 10:2)","category":"Name"},
   "H8345": {"meaning":"(שִׁשִּׁי) sixth","category":"Number"},
