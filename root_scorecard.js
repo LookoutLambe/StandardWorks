@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '302';   // bump when the generated data files change
+  var RSC_V = '303';   // bump when the generated data files change
   // Transliterated terms — an exception table in the tool, like the received
   // spellings in transliterate(): keyed by bare consonants, so every pointing
   // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.
@@ -37,6 +37,22 @@
      treatment as a transliterated term — no root, no Strong's — but its own
      note, because the reason is different. */
   var ACRONYM_TERMS = {"תנך":"תּוֹרָה, נְבִיאִים, כְּתוּבִים"};
+  /* A Hebrew NUMERAL is not a word either. The chapter summaries cite their
+     Isaiah and Matthew chapters in letters — הַשְׁווֵה יְשַׁעְיָהוּ נד — and every one of
+     those tokens fell through the whole pipeline to a blank card: no family,
+     no Strong's, nothing to say. The English beside it is the number itself,
+     which is what makes this safe: ב is the commonest preposition in the
+     language, and only the pair (numeral letters, a bare number as its gloss)
+     identifies one. Same treatment as an acronym — no root, no Strong's. */
+  var NUM_LETTERS = /^[\u05D0-\u05EA]{1,4}$/;
+  function numeralNote(surface, glossText) {
+    var g = String(glossText || '').trim();
+    if (!/^\d{1,4}(\s*[\u2013\u2014-]\s*\d{1,4})?$/.test(g)) return '';
+    var sk = ttSkel(surface);
+    if (!NUM_LETTERS.test(sk)) return '';
+    return '<span class="tt-note"><b>' + esc(g) + '</b> \u2014 ' +
+      'a Hebrew numeral: the letters stand for the number, so it has no Hebrew root and no Strong\u2019s number.</span>';
+  }
   // U+05F4 GERSHAYIM is the acronym's own punctuation and must strip like a quote.
   function ttSkel(s) { return String(s || '').replace(/[\u0591-\u05C7]/g, '').replace(/[׃\[\]"'`.,;:?!()*\u05F3\u05F4]/g, ''); }
   function ttKey(part) {
@@ -882,6 +898,8 @@
     if (!slotEl) return;
     var tt = translitTermParts(surface);
     if (tt.all) { slotEl.innerHTML = ttNoteHtml(surface); return; }
+    var numNote = numeralNote(surface, glossText);
+    if (numNote) { slotEl.innerHTML = numNote; return; }
     var ttHtml = tt.parts.length ? tt.parts.map(function(p) {
       return '<div class="rsc-block"><div class="rsc-part"><span style="font-family:\'David Libre\',serif">' + esc(p) + '</span></div>' + ttNoteHtml(p) + '</div>';
     }).join('') : '';
