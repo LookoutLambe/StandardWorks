@@ -1230,6 +1230,8 @@
     'וְהָשַׁע': 'שעע',                                        // "and shut [their eyes]" (שָׁעַע smear over, not שָׁעָה hour)
     // 2 Nephi 17 audit (2026-09-13)
     'דְּבוֹרַת': 'דבורה',                                     // "a bee of" (one-word family)
+    // 2 Nephi 18 audit (2026-09-13)
+    'בְּמַלְכָּם': 'מלך',                                     // "their king" (Isa 8:21; the attested lemma was the idol Malcam)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
