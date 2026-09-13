@@ -1211,6 +1211,9 @@
     // 2 Nephi 11 audit (2026-09-13)
     'וְדַמּוּ': 'דמה',                                        // "and you may liken" (was blood)
     'מוֹעֲדֵיהֶם': 'H4150', 'וּמוֹעֲדֵיהֶם': 'H4150', 'וּבְמוֹעֲדֵיהֶם': 'H4150', // "their appointed times" (מוֹעֵד, not עֵד witness)
+    // 2 Nephi 12 audit (2026-09-13)
+    'תְּעִיתֶם': 'תעה',                                       // "gone astray" (one-word family)
+    'אֶצְבְּעֹתֵיהֶם': 'H0676',                               // "their own fingers" (one-word family; אֶצְבַּע lives at H0676)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
