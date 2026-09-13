@@ -2383,6 +2383,15 @@
     'הֻפְרָה': 'פרר', 'וְהֻפְרָה': 'פרר',   // "has been broken" was פָּרָה, to bear fruit
     'לְמִיזוּרִי': 'מיזורי', 'מְסֻיָּמִים': 'שום',
     'נִצְלַבְתִּי': 'צלב', 'צְלָבוֹ': 'צלב',
+    // Doctrine and Covenants 61–70 audit (2026-09-13)
+    'הָעֵדֻיּוֹת': 'עוד', 'הָעַדְתֶּם': 'עוד',   // "testimonies" was H5709, the Aramaic "to pass"
+    'הַמְאֹרָעוֹת': 'ארע',   // "events" was רַע, evil
+    'וְיִתְדַּיְּנוּ': 'דין',   // "and reason" was יָתֵד, a tent peg
+    'מֵאֲבִי': 'H0001',   // "from the Father of" was H0021 Abi, Hezekiah's mother
+    'לִרְשֹׁם': 'רשם',   // "to record" was רוֹשׁ, the poison-herb
+    'וְיֻכְּנוּ': 'כון',   // "and be prepared" was נָכָה, to smite
+    'כְּבִישׁוֹף': 'בישוף', 'הַשִּׁנּוּי': 'שנה', 'מֻרְשָׁע': 'רשע',
+    'תַּכְרִיז': 'כרז', 'כְּרוּז': 'כרז', 'תִּתְמַהְמַהּ': 'מהה', 'הַמֻּנָּחוֹת': 'נוח',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
