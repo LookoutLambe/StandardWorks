@@ -1257,6 +1257,17 @@
     'וְיִסְּרָם': 'יסר',                                       // "and hath scourged them" (יִסַּר chastise, not סוּר)
     'מְצַפִּים': 'צפה', 'וּמְצַפִּים': 'צפה',                    // "look forward" (צָפָה watch, not the name Tsophim)
     'נְשִׁיכַת': 'נשך',                                        // "the biting of" (one-word family)
+    // 2 Nephi 26 audit (2026-09-13)
+    'אוֹסֵר': 'אסר',                                          // "binds" (אָסַר bind, not יִסַּר chasten)
+    'לֵדָתוֹ': 'ילד',                                         // "his birth" (לֵדָה, not דָּת decree)
+    'יְכַלֵּם': 'כלה',                                        // "shall consume them" (כִּלָּה, not יָכֹל be able)
+    'וְרָפָא': 'רפא',                                         // "and he shall heal" (was the name Rapha)
+    'גַּאֲוָתָם': 'גאה',                                       // "their pride" (גַּאֲוָה, not גֵּא)
+    'לְלַחֵשׁ': 'לחש',                                        // "to whisper" (one-word family)
+    'וְלִמּוּדָם': 'למד',                                      // "and their own learning" (was blood)
+    'כְּקִשְׁרֵי': 'קשר',                                      // "according to the combinations of" (one-word family)
+    'הֲיִקְרָא': 'קרא',                                        // "doth he cry" (one-word family)
+    'מָנוּעַ': 'מנע',                                         // "are forbidden" (מָנַע withhold, not נוּעַ move)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
