@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "חשל": {"meaning":"(חִשֵּׁל) to forge, temper; (חָשַׁל) to shatter, weaken","category":"Action"},
   "שרין": {"meaning":"(שִׁרְיוֹן) coat of mail, breastplate","category":"War"},
   "וו": {"meaning":"(וָו) hook, peg; the letter vav","category":"Objects"},
   "סירון": {"meaning":"Siron — a land on the Lamanite border (Alma 39:3)","category":"Name"},
