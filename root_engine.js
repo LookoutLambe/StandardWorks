@@ -2399,6 +2399,18 @@
     'הַמְּעוֹנוֹת': 'מעון',   // the definite form the 3 Nephi 28 fix left behind
     'פָּאוּלוּס': 'פולוס', 'תִתְמַהְמְהוּ': 'מהה', 'תֻפַרְנָה': 'פרר',
     'הַנִּזְכָּרוֹת': 'זכר', 'הַחוֹזֶה': 'חזה', 'הַנִּסְמָכִים': 'סמך', 'אִידֶן': 'עדן',
+    // Doctrine and Covenants 81–90 audit (2026-09-13)
+    'שָׁרוּי': 'שרה',   // "lieth" was H8298 Sharai
+    'חֲרִיפִים': 'חרף',   // "strong drinks" was H2756 Hariph
+    'וּבִכְלָל': 'כלל',   // "and in fine" was H3636 Kelal
+    'מְכִינִים': 'כון',   // "prepare" was H3241 Janim, a city of Judah
+    'לְאֻמַּת': 'אמם',   // "the nation of" (אֻמָּה) was אֱמֶת, truth
+    'הַמַּתְאִים': 'תאם',   // "suited" was תָּא, a chamber
+    'מוּשָׁלוֹת': 'משל',   // "are governed" was שָׁלָה, to be at ease
+    'מִנָּהוּ': 'מנה',   // "he has appointed" was מִן, the preposition
+    'תְּבִיעָה': 'תבע', 'בַּעֲלֵיהֶן': 'בעל', 'בַעֲלֵיהֶן': 'בעל',
+    'תֵּחָלַקְנָה': 'חלק', 'הַדְּרוֹמִית': 'דרום', 'וְרוּחָנִיּוֹת': 'רוח',
+    'בַּנְּשִׂיאוּת': 'נשא', 'לַגּוֹיִים': 'H1471',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
