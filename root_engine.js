@@ -1519,6 +1519,8 @@
     'הַשְׁווֵה': 'שוה', 'שָׁוִים': 'שוה', 'שָׁוֶה': 'שוה', 'וְהַשָּׁוֶה': 'שוה',   // equal, compare (שָׁוָה, not שָׁוְא vanity)
     // Mosiah 15 audit (2026-09-13)
     'בֵּינֵיהֵן': 'בֵּין', 'בֵּינָם': 'בֵּין', 'בֵינֵיכֶם': 'בֵּין', 'בֵּינֵיכֶם': 'בֵּין', 'הִלְבִּין': 'לבן', 'לְהַלְבִּין': 'לבן',   // "betwixt them" is the preposition בֵּין, not בִּין understand; הִלְבִּין whitens (לבן)
+    // Mosiah 16 audit (2026-09-13)
+    'הוֹרוּ': 'ירה', 'וְעֹקֶץ': 'עקץ', 'לִתְקוּמַת': 'קום',   // "teach" is הוֹרָה (ירה), not הָרָה conceive; the sting; the resurrection
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
