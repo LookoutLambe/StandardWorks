@@ -1241,6 +1241,10 @@
     'לְהָבִים': 'להב',                                        // "flames" (was the people Lehabim)
     'מֵעִיר': 'עור',                                          // "will stir up" (עוּר rouse, not עִיר city)
     'אַשְׁמִידֶנָּה': 'שמד',                                   // "I will destroy her" (one-word family)
+    // 2 Nephi 24 audit (2026-09-13)
+    'הֵילֵל': 'הֵילֵל',                                       // "O Lucifer" (הֵילֵל shining one, not הָלַל praise; H1966 walks to הלל)
+    'מְרִידָתוֹ': 'מרד',                                      // "his rebellion" (מְרִידָה, not יָרַד descend)
+    'וּבָהּ': 'בה',                                           // "and in it" (one-word family)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
