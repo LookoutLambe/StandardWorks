@@ -1135,6 +1135,19 @@
     'וְהַבְּנוּיִים': 'H1129', 'הַבְּנוּיִים': 'H1129',          // "those built up", not Binnui
     'מוֹלֵךְ': 'H4428',                                     // "reigneth", not מוּל "circumcise"
     'לְבַדֵּנוּ': 'בדד', 'לִמַּדְנוּ': 'למד',                    // "we alone", "taught" — both had fallen to דִּין
+    // THE 2 NEPHI 1 CARD AUDIT (2026-09-12):
+    'נָחַלְנוּ': 'H5157',                                  // "we have obtained" (inherit), not the stream
+    'הַבְטָחָה': 'H0982', 'בִּטְחוֹן': 'H0982', 'לְבִטְחוֹן': 'H0982',   // promise, security — בטח, not טָחָה / טָחַן
+    'הַקַּר': 'קרר',                                       // "cold", not יָקָר "precious"
+    'אוּרַד': 'ירד',                                       // hophal "be brought down", not the name Ard
+    'אַנִּיחַ': 'נוח',                                     // "I leave", not אָנַח "sigh"
+    'יַזִּיק': 'נזק', 'יַזִּיקוּ': 'נזק', 'יַזִּיקֵם': 'נזק',       // "harm" — one-word families
+    // THE 2 NEPHI 2 CARD AUDIT (2026-09-12):
+    'הַבְּחִירָה': 'בחר', 'בְּחִירָה': 'בחר',                  // election, choice — בחר, not the name Hirah
+    'בְכוֹרִי': 'בכר', 'בְּכוֹרִי': 'בכר',                     // "my firstborn", not רִי "moisture"
+    'וְהֻרוּ': 'ירה', 'הֻרוּ': 'ירה',                         // hophal "are instructed", not הַר "mountain"
+    'בְרֹאוֹ': 'ברא', 'הִבָּרְאוֹ': 'ברא',                      // create, not רָאָה "see"
+    'הַמְּתַוֵּךְ': 'תוך', 'מְתַוֵּךְ': 'תוך',                   // the Mediator (מְתַוֵּךְ)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
