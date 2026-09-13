@@ -1273,6 +1273,15 @@
     'יִרְאוּהוּ': 'ראה',                                      // "shall behold it" (רָאָה see, not יָרֵא fear)
     'וְתַצְפִּינֵהוּ': 'צפן',                                  // "and hide it up" (צָפַן hide, not צָפָה watch)
     'לַסְתִּיר': 'סתר',                                       // "to hide" (one-word family)
+    // 2 Nephi 28 audit (2026-09-13)
+    'תְּלַמֵּדְנָה': 'למד', 'בְּלִמּוּדָם': 'למד',              // "shall teach", "with their learning" (one-word family / blood)
+    'יִזְעַם': 'זעם',                                         // "shall be angry" (זָעַם, not יֶזַע sweat)
+    'בּוֹנֵי': 'בנה',                                         // "every one that hath built up" (was the name Bunni)
+    'מִצְוָתֵנוּ': 'צוה',                                      // "our precept" (מִצְוָה, not מַצּוּת)
+    'בְּדַבְרֵי': 'דבר',                                       // "for a thing of" (was the name Dibri)
+    'יַרְגִּיעַ': 'רגע',                                       // "will he pacify" (one-word family)
+    'יְקַבְּלֶנָּה': 'קבל',                                    // "receiveth it" (one-word family)
+    'וּמַטִּים': 'נטה',                                        // "and lend [an ear]" (hiphil of נָטָה, not מוֹט)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -1694,7 +1703,9 @@
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
       'שִׁמְעִי':    { name: 'H8096', word: 'H8085', en: /Shimei/ }, // hear! (fs) · Shimei (2 Nephi 8)
-      'שָׂרַי':     { name: 'H8297', word: 'H8269', en: /Sarai/ }              // my princes · Sarai (2 Nephi 20)
+      'שָׂרַי':     { name: 'H8297', word: 'H8269', en: /Sarai/ }, // my princes · Sarai (2 Nephi 20)
+      'וְרָבוּ':    { name: 'H7378', word: 'H7235', en: /contend|strive|plead/i }, // and they shall contend (רִיב) · and multiply (רָבָה) (2 Nephi 28)
+      'יִרְאוּ':    { name: 'H3372', word: 'H7200', en: /fear|afraid|revere|dread/i } // fear (יָרֵא) · they shall see (רָאָה) (2 Nephi 28)
     };
     var _HG_BLIND = /[ּֽֿ]/g;
     var _HG_INDEX = null;
