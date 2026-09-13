@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '353';   // bump when the generated data files change
+  var RSC_V = '354';   // bump when the generated data files change
   // Transliterated terms — an exception table in the tool, like the received
   // spellings in transliterate(): keyed by bare consonants, so every pointing
   // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.
@@ -30,7 +30,7 @@
   // says so, the root engine skips it, and tools/build_root_concordance.js
   // parses this same line so the concordance never files Ahman under Haman.
   // ONE LINE, VALID JSON — the builder reads it with JSON.parse.
-  var TRANSLIT_TERMS = {"אדםאונדיאהמן":"Adam-ondi-Ahman","אהמן":"Ahman","שדולמק":"Shedolamak"};
+  var TRANSLIT_TERMS = {"אדםאונדיאהמן":"Adam-ondi-Ahman","אהמן":"Ahman","שדולמק":"Shedolamak","אנישגואוןדוש":"Enish-go-on-dosh","יוגהיועי":"Jah-oh-eh","כעעענטרש":"Kae-e-vanrash","פלועיש":"Floeese","קליפלוסאיסאס":"Kli-flos-is-es"};
   /* A Hebrew ACRONYM is not a word either, and the engine has no way to know:
      תנ״ך was folding into תְּנוּךְ, the lobe of the ear (Lev 8:23), so tapping it
      offered "Root תְּנוּךְ — 8 uses" and listed "upon the lobe of". Same

@@ -2295,6 +2295,9 @@
     'בְּהִוָּעֲצָם': 'יעץ', 'בְּהִוָּצְרָם': 'יצר',
     // Abraham facsimile 1 audit (2026-09-13)
     'לְמַשֵּׁל': 'משל',   // "to represent, to signify" stood alone
+    // Abraham facsimile 2 audit (2026-09-13)
+    'בִּשְׁלִיטָה': 'שלט',
+    'בְּמִדָּתוֹ': 'מדד', 'וּבְמִדָּתוֹ': 'מדד', 'וּמִדָּתוֹ': 'מדד',   // "its measure" was H1881 דָּת, a royal edict
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
