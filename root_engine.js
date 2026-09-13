@@ -2089,6 +2089,12 @@
     'בְּחֻקֵּיהֶם': 'חקק',                                 // "in their laws" (חֹק), not חֵיק a bosom
     'וּמַחֲלוֹתֵיהֶם': 'חלה', 'מַחֲלוֹתֵיהֶם': 'חלה',        // "their infirmities" (מַחֲלָה), not חָלַל profane
     'וְכַחֲזִירָה': 'חזיר', 'מֵהֶשֵּׂג': 'נשג', 'וַיַּטֵּף': 'נטף',
+    // 3 Nephi 8 audit (2026-09-13)
+    'מְקוֹנְנִים': 'קון', 'מְקוֹנֵן': 'קון',                 // "lament" (קוֹנֵן), not קֵן a nest
+    'לָמֻשׁ': 'משש',                                       // "to feel" (מָשַׁשׁ), not Mash son of Aram
+    'אִמּוֹתֵינוּ': 'אמם',                                 // "our mothers" — the suffix the Alma 57 pin did not reach
+    'חַדִּים': 'חדד',                                      // "sharp" (חַד), not the Aramaic חֲדִי a breast
+    'רְעִידוֹת': 'רעד', 'צְלִיבַת': 'צלב',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

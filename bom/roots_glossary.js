@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "פיזיים": {"meaning":"(פִיזִי) physical, bodily","category":"Quality"},
   "יריעה": {"meaning":"(יְרִיעָה) curtain, tent-curtain","category":"Objects"},
   "זעזע": {"meaning":"(זַעֲזוּעַ) upheaval, shock; (זִעְזֵעַ) to shake violently","category":"Nature"},
   "מוֹרֶה": {"meaning":"(מוֹרֶה) teacher, guide, master; (הוֹרָה) to teach, instruct; (הוֹרָאָה) instruction, teaching","category":"Person"},
