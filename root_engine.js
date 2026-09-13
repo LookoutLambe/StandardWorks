@@ -1235,6 +1235,8 @@
     // 2 Nephi 19 audit (2026-09-13)
     'מוּצָק': 'צוק',                                          // "vexation" (מוּצָק distress, not יָצַק pour)
     'לוֹחֵם': 'H3898',                                        // "the warrior" (לָחַם fight, not לוּחַ plate)
+    // 2 Nephi 21 audit (2026-09-13)
+    'עוֹנֹתָם': 'עון',                                        // "their iniquities" (defective עֲוֺנֹתָם; had fallen into עים heat)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -3031,6 +3033,7 @@
     senseClass: senseClass,
     getRoot: getRoot, getRoots: getRoots, explain: explain, resolve: resolve, homographNumber: homographNumber,
     familyOf: familyOf,   // the family a Strong's number keys to — the card drops a parse that describes another family's word
+    isNameEntry: _isNameEntry,   // is this Strong's number a proper name (capitalised transliteration)
     stripPrefixes: stripPrefixes, stripLayers: stripLayers, stripNikkud: stripNikkud,
     toSofit: toSofit, normFinals: normFinals, rootMap: rootMap,
     pointedKey: pointedKey, parse: parse, attestedEntry: attestedEntry,

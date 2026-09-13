@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '147';   // bump when the generated data files change
+  var RSC_V = '148';   // bump when the generated data files change
   // Transliterated terms — an exception table in the tool, like the received
   // spellings in transliterate(): keyed by bare consonants, so every pointing
   // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.
@@ -737,10 +737,16 @@
        smoke" is attested only as the town Ashan (H6228, "noun proper name");
        the engine keyed the card to עשן, so a parse whose number belongs to a
        different family describes a word this token is not (2 Nephi 14). Only a
-       proper-name parse (Np) is dropped: לָהֶם keys to the bare particle להם
-       while its parse carries H9038, and that parse is the whole card. */
+       proper-name parse (Np) is examined: לָהֶם keys to the bare particle להם
+       while its parse carries H9038, and that parse is the whole card. A
+       proper-name parse survives only when the number IS a name and that name
+       is this card's family — the table also stamps Np on the wolf (זְאֵב,
+       H2061) and on נְבֻנוֹתִי "I am prudent", and those are not names at all
+       (measured 2026-09-13: 60 Np parses over three Isaiah chapters, the three
+       dropped were exactly those). */
     if (pz && pz.strongs && /Np/.test(pz.morph || '') && found.key && window.RootEngine && window.RootEngine.familyOf &&
-        window.RootEngine.familyOf(pz.strongs) !== found.key) pz = null;
+        !(window.RootEngine.isNameEntry && window.RootEngine.isNameEntry(pz.strongs) &&
+          window.RootEngine.familyOf(pz.strongs) === found.key)) pz = null;
     var wordNum = hgNum || (pz && pz.strongs) ||
       (window._strongsLookup && (window._strongsLookup[pieceSurface] || window._strongsLookup[surface])) || '';
     var wordLemma = wordNum && window._strongsRoots && window._strongsRoots[wordNum] ? window._strongsRoots[wordNum].w : '';
