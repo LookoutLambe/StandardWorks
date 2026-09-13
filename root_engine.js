@@ -122,6 +122,13 @@
       /^שֶׁ/, /^שֶ/                        // she-
   ];
   function _stripOneLayer(w) {
+    /* THE CONJUNCTIVE VAV BEFORE A YOD-SHVA takes hiriq and the yod drops its
+       shva: יְהוּדִים → וִיהוּדִים, יְרוּשָׁלַיִם → וִירוּשָׁלַיִם. Peeling the
+       וִ alone leaves an unpointed yod the lexicon never carries, so "and the
+       Jews" could not be released from the name table and minted a one-word
+       card (2 Nephi 30). Give the yod its shva back. */
+    var vy = /^וִי(?![\u05B0-\u05BC\u05C7])/.exec(w);
+    if (vy && w.length - 3 >= 2) return 'יְ' + w.slice(3);
     for (var i = 0; i < _prefixList.length; i++) {
       if (_prefixList[i].test(w) && w.replace(_prefixList[i], '').length >= 2) return w.replace(_prefixList[i], '');
     }

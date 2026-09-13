@@ -599,7 +599,7 @@ window._rootGlossaryData = {
   "H4853": {"meaning":"(מַשָּׂא) burden; oracle","category":"Uncategorized"},
   "אלל": {"meaning":"(אֱלִיל) idol; (אַלּוֹן) oaks","category":"Worship"},
   "רכש": {"meaning":"(רְכוּשׁ) property, substance; (רָכַשׁ) to acquire","category":"Objects"},
-  "H1616": {"meaning":"(גֵּר) sojourner, stranger","category":"Society"},
+  "H1616": {"meaning":"(גֵּר) sojourner, stranger, proselyte; (גִּיֵּר) to convert, and מְגֻיָּר converted","category":"Society"},
   "דבק": {"meaning":"to cleave, cling","category":"Uncategorized"},
   "קרע": {"meaning":"(קָרַע) to rend, tear","category":"Uncategorized"},
   "H1817": {"meaning":"door, gate","category":"Objects"},
