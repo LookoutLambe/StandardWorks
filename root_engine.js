@@ -2647,6 +2647,32 @@
        (the singular הֵמִיר was fine) and כָלֶה "corruptible" to כֹּל "all". */
     'בִּתְפִילּוֹתַי': 'פלל', 'הֵמִירוּ': 'מור', 'וּבִתְפִילָּה': 'פלל',
     'וּתְפִילָּתִי': 'פלל', 'כָלֶה': 'כלה', 'תְּפִילָּה': 'פלל',
+    /* A PLENE SPELLING THE LEXICON DOES NOT CARRY (2026-09-13, NT pass).
+       Every one of these sat in a real family with a real sense line and a
+       fully-formed, confident, WRONG card — invisible to the structural scan.
+       יָדִינוּ "shall judge" read as יָד "hand"; הַמֹּדֲדִים "measuring" as דּוֹד
+       "beloved"; הַלּמְדוֹת "ever learning" as מָדַד "to measure"; מוֹצְאִים
+       "find" as יָצָא "to go out". Found by collapsing one mater at a time. */ 'יָדִינוּ': 'דין', 'לְמַעֲנוֹ': 'מען',
+    'בַּחֲנוּ': 'בחן', 'וִיגִיעַת': 'יגע', 'בוֹזֶה': 'בזה',
+    'וּבִתְחִנּוֹת': 'חנן', 'וּבִמְהוּמוֹת': 'הום', 'וְשׁוֹבִים': 'שבה',
+    'הַמֹּדֲדִים': 'מדד', 'לִתְמוֹהַּ': 'תמה', 'וּבְעֵירוֹם': 'ערם',
+    'לְכֹבְשׁוֹ': 'כבשׁ', 'הַמְּסוּרָה': 'מסר', 'הַלּמְדוֹת': 'למד',
+    'הַיְּכֹלִים': 'יכל', 'כִּנּוּהוּ': 'כנה',
+    'מִצּוֹר': 'H6865', 'לְבָדְקוֹ': 'בדק', 'הַאֲרִיכָם': 'ארך',
+    'בֹּרְאוֹ': 'ברא', 'הָרֹגְנִים': 'רגן', 'תְּחִנּוֹת': 'חנן',
+    'מַכְלִימֵיכֶם': 'כלם', 'סוֹכֵן': 'סכן', 'וּבְזָרְעוֹ': 'זרע',
+    'וּבְבוֹאָהּ': 'בוא', 'וּמִיָּמַי': 'יום', 'הֶעֱרִים': 'ערם',
+    'גְלִילִי': 'גליל', 'גְּלִילִי': 'גליל', 'לְכָבְשׁוֹ': 'כבשׁ',
+    'וּמוּכָנָה': 'כון', 'וּבְצֹר': 'בצר', 'וּנְחַכֶּה': 'חכה',
+    'וּמַתַּן': 'נתן', 'חָזְרוּ': 'חזר', 'לֵאלִים': 'H0410',
+    'מוֹצְאִים': 'מצא', 'בְּבִיאָתוֹ': 'בוא', 'כִּשּׁוּרִים': 'כשר',
+    'וּמַעֲנִיקִים': 'ענק', 'מוֹשַׁחַת': 'משח', 'הֻלַּדְתּוֹ': 'ילד',
+    'חִזְרוּ': 'חזר', 'הַכּוֹזְבִים': 'כזב', 'חֲדֵלִים': 'חדל',
+    'יִעוּד': 'יעד', 'כִּשּׁוּרֵיהֶם': 'כשר',
+    'וְהִכָּנְעוּ': 'כנע',
+    // Matthew is מַתַּי with a patach; מָתַי with a qamats is "when"
+    'מַתַּי': 'מַתַּי', 'מַתָּי': 'מַתַּי',
+    'אֵת־מַתַּי': 'מַתַּי', 'וּמַתַּי': 'מַתַּי', 'לְמַתַּי': 'מַתַּי',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
@@ -3092,6 +3118,9 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },
+      /* אָסִיר is "a prisoner" and "I will remove" in the same pointing —
+         אָסַר "to bind" against הֵסִיר "to take away". Only the gloss knows. */
+      'אָסִיר': { name: 'אסר', word: 'סור', en: /prisoner|bound|captive/i },
       /* דִּינָה is Dinah 7 times and "Avenge"/"the judgment" 6. A homograph
          alone was not enough: _homograph peels prefixes, so it also caught
          מְדִינָה "province" and moved 16 precise cards to "judgment". The

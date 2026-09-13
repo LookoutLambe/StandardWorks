@@ -240,6 +240,7 @@ window._rootGlossaryData = {
   "נדיר": {"meaning":"(נָדִיר) rare, uncommon","category":"Quality"},
   "נקוד": {"meaning":"(נִקּוּד) the vowel points, the pointing of a Hebrew text","category":"Lexical"},
   "מכיון": {"meaning":"(מִכֵּיוָן שֶׁ) because, since, inasmuch as","category":"Particle"},
+  "מַתַּי": {"meaning":"Matthew — the publican called from the receipt of custom, and the Gospel that bears his name","category":"Names"},
   "מטרה": {"meaning":"(מַטָּרָה) purpose, aim; target, mark","category":"Lexical"},
   "סרב": {"meaning":"(סֵרֵב) to refuse; (סָרָב) thorn, brier","category":"Lexical"},
   "H3885": {"meaning":"(לוּן) to lodge, pass the night; (הִלִּין) to murmur, complain","category":"Lexical"},
