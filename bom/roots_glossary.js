@@ -186,7 +186,7 @@ window._rootGlossaryData = {
   "H6957": {"meaning":"(קַו) line — line upon line","category":"Uncategorized"},
   "H6969": {"meaning":"(קוֹנֵן) to chant a dirge, lament; (קֵינִי) Kenite","category":"Uncategorized"},
   "מתק": {"meaning":"(מָתוֹק) sweet","category":"Uncategorized"},
-  "שגה": {"meaning":"(שָׁגָה) to err, go astray","category":"Uncategorized"},
+  "שגה": {"meaning":"(שָׁגָה) to err, go astray; (שְׁגִיאָה) error, mistake","category":"Uncategorized"},
   "אפק": {"meaning":"(הִתְאַפֵּק) to restrain oneself, refrain, forbear; (אָפִיק) channel, stream, ravine","category":"Uncategorized"},
   "שרד": {"meaning":"(שָׂרַד) to survive, escape; (שָׂרִיד) survivor, remnant; (שְׂרָד) woven material","category":"Uncategorized"},
   "שלף": {"meaning":"(שָׁלַף) to draw a sword","category":"Uncategorized"},

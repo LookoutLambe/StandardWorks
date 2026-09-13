@@ -1749,6 +1749,9 @@
     'תּוֹקְפָנוּת': 'תקף',                                      // "aggression" (heading; תּוֹקְפָנוּת)
     'צָפוּ': 'צפה', 'צוֹפֵיהֶם': 'צפה', 'הַצּוֹפִים': 'צפה', 'וְצָפוּ': 'צפה', 'הַצּוֹפֵן': 'צפן',                                            // "they did look forward" (צָפָה, not צוּף float)
     'הַחִיצוֹנִים': 'חיץ',                                       // "outward" (חִיצוֹן)
+    // Alma 26 audit (2026-09-13)
+    'נְהַלֵּל': 'הלל', 'סִבָּתֵנוּ': 'סבב', 'בִּשְׁגִיאַת': 'שגה', 'נוֹשִׁיעַ': 'ישע', 'וְלִמַּדְנוּם': 'למד', 'וְלִמַּדְנוּ': 'למד', 'וְהוֹדָיָתִי': 'ידה',
+    // our reason (סִבָּה), we will praise (הִלֵּל, not Nahalol), incorrectness (שְׁגִיאָה), we might save, taught them (לִמֵּד, not דִּין judgment), my thanksgiving (הוֹדָיָה, not הוֹד splendor)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
