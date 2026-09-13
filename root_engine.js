@@ -2264,6 +2264,11 @@
     // Moses 1 audit (2026-09-13)
     'בְּרָאתִיו': 'ברא', 'בְּרָאתִים': 'ברא', 'בְרָאתִים': 'ברא', 'בָּרָאתִי': 'ברא', 'בָּרָאתִים': 'ברא', 'בָרָאתִי': 'ברא',   // "I created them" peeled to בְּ + רָאָה, to see
     'בָּעוֹלָמוֹת': 'עלם', 'הָעוֹלָמוֹת': 'עלם', 'עוֹלָמוֹת': 'עלם',   // the worlds, held by the name stage in a family of their own
+    // Moses 3 audit (2026-09-13)
+    'כִּלֵּיתִי': 'כלה', 'כֻּלּוּ': 'כלה',   // "ended" was H3627 כְּלִי a vessel, "were finished" was כֹּל all
+    'שָׁבַתִּי': 'שבת',   // "I had rested" was שׁוּב, to return
+    'וָאֶפַּח': 'פוח',
+    'לָאֲוִיר': 'אויר', 'הָאֲוִיר': 'אויר', 'בַּאֲוִיר': 'אויר', 'בָּאֲוִיר': 'אויר', 'בָאֲוִיר': 'אויר',   // the air: one form sat in אוֹר the light, the rest in families of one
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

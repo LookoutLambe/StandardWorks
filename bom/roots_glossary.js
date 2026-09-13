@@ -1056,6 +1056,7 @@ window._rootGlossaryData = {
   "חלק": {"meaning":"(חֵלֶק) part, portion; (חָלַק) to divide; (מַחֲלֹקֶת) division, dissension","category":"Uncategorized"},
   "זרהמלה": {"meaning":"Zarahemla","category":"Uncategorized"},
   "יצא": {"meaning":"(יָצָא) to go out, come forth; (תּוֹצָאָה) extremities, limits, sources; (צֶאֱצָא) offspring, descendants","category":"Motion"},
+  "אויר": {"meaning":"(אֲוִיר) air, atmosphere","category":"Nature"},
   "אור": {"meaning":"(אוֹר) light; (הֵאִיר) to give light, to shine, to make the face shine; (מָאוֹר) luminary, light-giver; (אוּר) flame, fire, the light of a fire; (מְאוּרָה) den, lair","category":"Quality"},
   "אחיהם": {"meaning":"their brethren","category":"Family"},
   "יותר": {"meaning":"more","category":"Uncategorized"},
