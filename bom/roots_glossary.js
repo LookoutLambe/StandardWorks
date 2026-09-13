@@ -7888,7 +7888,7 @@ window._rootGlossaryData = {
   "רען": {"meaning":"(רַעֲנָן) green, luxuriant, flourishing","category":"Quality"},
   "נחץ": {"meaning":"(נָחוּץ) necessary, urgent","category":"Quality"},
   "ציה": {"meaning":"(צִיָּה) dry land, drought","category":"Lexical"},
-  "חרץ": {"meaning":"(חָרוּץ) diligent, sharp; gold; (חֲרִיצוּת) diligence; (חָרַץ) to decide, determine","category":"Action"},
+  "חרץ": {"meaning":"(חָרוּץ) diligent, sharp; gold; (חֲרִיצוּת) diligence; (חָרַץ) to decide, determine; (חָרִיץ) trench, ditch","category":"Action"},
   "אֶל": {"meaning":"(אֶל) to, unto, toward","category":"Particle"},
   "אַל": {"meaning":"(אַל) not, do not","category":"Particle"},
   "H0484": {"meaning":"(אַלְמֻגִּים) almug wood","category":"Lexical"},
