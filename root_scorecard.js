@@ -22,7 +22,7 @@
  */
 (function() {
   'use strict';
-  var RSC_V = '355';   // bump when the generated data files change
+  var RSC_V = '356';   // bump when the generated data files change
   // Transliterated terms — an exception table in the tool, like the received
   // spellings in transliterate(): keyed by bare consonants, so every pointing
   // and any one prefix letter (בְּאָדָם־אוֹנְדִּי־אַהְמָן in a heading) matches.
@@ -30,7 +30,7 @@
   // says so, the root engine skips it, and tools/build_root_concordance.js
   // parses this same line so the concordance never files Ahman under Haman.
   // ONE LINE, VALID JSON — the builder reads it with JSON.parse.
-  var TRANSLIT_TERMS = {"אדםאונדיאהמן":"Adam-ondi-Ahman","אהמן":"Ahman","שדולמק":"Shedolamak","אנישגואוןדוש":"Enish-go-on-dosh","יוגהיועי":"Jah-oh-eh","כעעענטרש":"Kae-e-vanrash","פלועיש":"Floeese","קליפלוסאיסאס":"Kli-flos-is-es"};
+  var TRANSLIT_TERMS = {"אדםאונדיאהמן":"Adam-ondi-Ahman","אהמן":"Ahman","שדולמק":"Shedolamak","אנישגואוןדוש":"Enish-go-on-dosh","יוגהיועי":"Jah-oh-eh","כעעענטרש":"Kae-e-vanrash","פלועיש":"Floeese","קליפלוסאיסאס":"Kli-flos-is-es","טימס":"Times","אנד":"and","סיזנס":"Seasons","סיזונס":"Seasons","ונטורת":"Wentworth","פרנקלין":"Franklin","סיטי":"City","נאבו":"Nauvoo"};
   /* A Hebrew ACRONYM is not a word either, and the engine has no way to know:
      תנ״ך was folding into תְּנוּךְ, the lobe of the ear (Lev 8:23), so tapping it
      offered "Root תְּנוּךְ — 8 uses" and listed "upon the lobe of". Same
@@ -46,9 +46,15 @@
      identifies one. Same treatment as an acronym — no root, no Strong's. */
   var NUM_LETTERS = /^[\u05D0-\u05EA]{1,4}$/;
   function numeralNote(surface, glossText) {
-    var g = String(glossText || '').trim();
-    if (!/^\d{1,4}(\s*[\u2013\u2014-]\s*\d{1,4})?$/.test(g)) return '';
-    var sk = ttSkel(surface);
+    /* The gloss is the number itself, but it arrives dressed as the sentence
+       left it: "1902.", "1976,", "and 138.", "60 61". Every one of those was
+       falling through to a blank card in the Pearl of Great Price front
+       matter, where the dates are all Hebrew numerals. Leading "and" and
+       trailing sentence punctuation are stripped before the test; a maqqef or
+       hyphen inside the Hebrew (ס-סא) is stripped too. */
+    var g = String(glossText || '').trim().replace(/^and\s+/i, '').replace(/[.,;:]+$/, '');
+    if (!/^\d{1,4}([\s\u2013\u2014-]+\d{1,4})?$/.test(g)) return '';
+    var sk = ttSkel(surface).replace(/[-\u05BE]/g, '');
     if (!NUM_LETTERS.test(sk)) return '';
     return '<span class="tt-note"><b>' + esc(g) + '</b> \u2014 ' +
       'a Hebrew numeral: the letters stand for the number, so it has no Hebrew root and no Strong\u2019s number.</span>';
