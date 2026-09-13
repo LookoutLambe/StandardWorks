@@ -1729,6 +1729,10 @@
     'הַגּוֹבְלִים': 'גבל',                                       // "bordering" (גָּבַל, not the Gebalites)
     'הַמִּזְרָחִי': 'זרח', 'הַמִּזְרָחִיּוֹת': 'זרח', 'הַמִּזְרָחִית': 'זרח',                                       // "east" (מִזְרָחִי, not the Zerahites)
     'וְהִמְנִי': 'חִמְנִי', 'בְהִמְנִי': 'חִמְנִי', 'הִמְנִי': 'חִמְנִי',   // Himni's second spelling
+    // Alma 23 audit (2026-09-13)
+    'וּמְשֻׁחְרָרִים': 'שחרר',                                    // "and loosed" (heading)
+    'דּוֹחִים': 'דחה',                                          // "reject" (heading; דָּחָה, not הֵדִיחַ rinse)
+    'יַלְקוּם': 'לקה',                                          // "scourge them" (הִלְקָה, not לָקַק lick)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

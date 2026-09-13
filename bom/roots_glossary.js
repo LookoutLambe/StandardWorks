@@ -1,4 +1,6 @@
 window._rootGlossaryData = {
+  "שמנילום": {"meaning":"Shimnilom — a Lamanite city whose people were converted (Alma 23:12)","category":"Name"},
+  "לקה": {"meaning":"(לָקָה) to be flogged, smitten; (הִלְקָה) to flog, scourge; (מַלְקוֹת) lashes","category":"Action"},
   "העמולונים": {"meaning":"Amulonites — the descendants of Amulon and King Noah’s priests (Alma 21–25)","category":"Name"},
   "ענטי": {"meaning":"Ani-Anti — a Lamanite village where Aaron and his brethren preached (Alma 21:11)","category":"Name"},
   "אנטיומנו": {"meaning":"Antiomno — the Lamanite king of the land of Middoni (Alma 20:4)","category":"Name"},
