@@ -3480,7 +3480,7 @@ window._rootGlossaryData = {
   "חתום": {"meaning":"seal","category":"Nature"},
   "רעבים": {"meaning":"hungry","category":"Uncategorized"},
   "יגילו": {"meaning":"they rejoice","category":"Quality"},
-  "שרה": {"meaning":"(שָׂרַר) to rule, hold office; (שְׂרָרָה) government, office; (שָׂרָה) Sarah","category":"Society"},
+  "שרה": {"meaning":"(שָׂרַר) to rule, hold office; (שְׂרָרָה) government, office; (הִשְׁרָה) to inspire, imbue; (מֻשְׁרֶה) inspired; (שָׂרָה) Sarah","category":"Society"},
   "עזרה": {"meaning":"help","category":"Uncategorized"},
   "ערה": {"meaning":"(עֵרָה) to lay bare, uncover, pour out; (עֶרְוָה) nakedness","category":"Quality"},
   "אם־יהיה": {"meaning":"though be","category":"Uncategorized"},
