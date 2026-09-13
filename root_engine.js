@@ -1984,6 +1984,11 @@
     'כִּפְנֵי': 'H6440',                                   // "as the face of" (פָּנִים), not כָּפָן famine
     'וַיּוּכְלוּ': 'יכל',                                  // "and they could" (יָכֹל), not Jucal
     'רוֹעֶשֶׁת': 'רעש', 'מְשׂוֹחֲחִים': 'שיח', 'כִּשְׁלֹשׁ': 'שלש',
+    // Helaman 6 audit (2026-09-13)
+    'תּוֹפְסִים': 'תפש',                                   // "seize" (תָּפַשׂ), not Vopshi the father of Nahbi
+    'אוֹתוֹתֵיהֶם': 'אות', 'אוֹתוֹתָם': 'אות',              // "their signs" (אוֹת), not the accusative marker
+    'וַיָּזֹם': 'זמם',                                     // "and he did plot" (זָמַם), not הִזָּה sprinkle
+    'לִרְצִיחָה': 'רצח', 'וַיְזַקְּקוּם': 'זקק', 'נוֹסַד': 'יסד',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
