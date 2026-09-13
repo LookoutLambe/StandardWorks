@@ -2278,6 +2278,9 @@
     'וֶאֱנוֹשׁ': 'אנש', 'עֲשָׂאכֶם': 'עשה',
     // Moses 7 audit (2026-09-13)
     'וָאַבֵּט': 'נבט', 'וָאֶתְנַבֵּא': 'נבא', 'וּשְׁמָמָתָהּ': 'שמם',
+    // Moses 8 audit (2026-09-13)
+    'נַעֲנְתָה': 'ענה',   // "heeded" was H6067 Anath, Shamgar's father
+    'גּוֹזֵר': 'גזר',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

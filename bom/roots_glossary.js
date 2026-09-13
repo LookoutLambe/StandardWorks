@@ -1095,7 +1095,7 @@ window._rootGlossaryData = {
   "צאת": {"meaning":"come forth","category":"Motion"},
   "ראיתי": {"meaning":"I saw","category":"Uncategorized"},
   "מע": {"meaning":"hear","category":"Society"},
-  "נפל": {"meaning":"(נָפַל) to fall, fall down","category":"Motion"},
+  "נפל": {"meaning":"(נָפַל) to fall, fall down; (הִפִּיל) to cast down, overthrow; (נְפִילִים) the giants, the Nephilim","category":"Motion"},
   "לאך": {"meaning":"(מַלְאָךְ) angel, messenger; (מְלָאכוּת) embassy, mission","category":"Speech"},
   "בה": {"meaning":"(בָּהּ) in her, in it","category":"Motion"},
   "רים": {"meaning":"mountains","category":"Nature"},
