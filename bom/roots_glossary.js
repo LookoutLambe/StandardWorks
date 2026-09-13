@@ -8014,6 +8014,7 @@ window._rootGlossaryData = {
   "מושיה": {"meaning":"Mosiah — proper name (Book of Mormon)","category":"Names"},
   "שֵׁת": {"meaning":"Seth — proper name (Genesis; Moses)","category":"Names"},
   "אֶמֶר": {"meaning":"Emer — a Jaredite king, son of Omer","category":"Names"},
+  "שֶׁלֶם": {"meaning":"Shelem — the exceeding high mountain the brother of Jared climbed","category":"Names"},
   "שִׁים": {"meaning":"Shim — proper name (Book of Mormon)","category":"Names"},
   "שומ": {"meaning":"Shum — Nephite name (Book of Mormon): two seons of gold, Alma 11","category":"Names"},
   "קימ": {"meaning":"Kim — proper name (Book of Mormon)","category":"Names"},
