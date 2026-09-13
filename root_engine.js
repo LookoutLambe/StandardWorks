@@ -1968,6 +1968,11 @@
     // Helaman 2 audit (2026-09-13)
     'בּוֹרַחַת': 'ברח',                                    // "is fleeing" (בָּרַח), not רַחַת a winnowing shovel
     'הִכְרַחְתֶּם': 'כרח', 'הִכְרִיחַ': 'כרח',              // "have compelled" (הִכְרִיחַ), not the shovel or a smell
+    // Helaman 3 audit (2026-09-13)
+    'וּמְהוּמוֹת': 'הום', 'מְהוּמוֹת': 'הום',              // "disturbances" (מְהוּמָה), not מוּת to die
+    'לְהִכָּלֵל': 'כלל', 'הַנּוֹשָׁבִים': 'ישב',            // one-word families: be contained, the settled
+    // the En-hakkore family held only the calling and reading of קָרָא — no En-hakkore in the corpus
+    'הֲקוֹרֵא': 'קרא', 'הַקּוֹרְאִים': 'קרא', 'וְהַקּוֹרֵא': 'קרא',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

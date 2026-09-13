@@ -7814,7 +7814,6 @@ window._rootGlossaryData = {
   "שחד": {"meaning":"(שֹׁחַד) bribe","category":"Uncategorized"},
   "H8302": {"meaning":"(שִׁרְיוֹן) breastplate, armor","category":"Uncategorized"},
   "פתל": {"meaning":"(פְּתַלְתֹּל) crooked, perverse; (פָּתִיל) cord, lace","category":"Uncategorized"},
-  "H5875": {"meaning":"the calling, the one who cries; (עֵין הַקּוֹרֵא) En-hakkore","category":"Uncategorized"},
   "H1613": {"meaning":"(גֹּפֶר) gopher wood; (גָּפְרִית) brimstone","category":"Uncategorized"},
   "כסס": {"meaning":"(מֶכֶס) tax, custom; covered","category":"Uncategorized"},
   "H2184": {"meaning":"(זְנוּת) whoredom, fornication","category":"Uncategorized"},
