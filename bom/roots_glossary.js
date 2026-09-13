@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "כשר": {"meaning":"(כֹּשֶׁר) skill, ability, success; (כָּשֵׁר) to prosper, be fit, proper","category":"Quality"},
   "חֵם": {"meaning":"(חֵם) Hem — companion of Ammon in the land of Nephi (Mosiah 7)","category":"Name"},
   "חֶלֶם": {"meaning":"(חֶלֶם) Helem — companion of Ammon in the land of Nephi (Mosiah 7)","category":"Name"},
   "הלורום": {"meaning":"(הֵלוֹרוּם) Helorum — son of King Benjamin","category":"Name"},
@@ -1190,7 +1191,7 @@ window._rootGlossaryData = {
   "וני": {"meaning":"Lamoni","category":"Uncategorized"},
   "ישר": {"meaning":"(יָשָׁר) upright, just, straight; (מִישׁוֹר) plain, level, equity","category":"Quality"},
   "אותי": {"meaning":"me","category":"Uncategorized"},
-  "קדם": {"meaning":"(קֶדֶם) east; ancient, of old; (קָדִים) east wind; (קֳדָם) before, in the presence of (Aramaic)","category":"Time"},
+  "קדם": {"meaning":"(קֶדֶם) east; ancient, of old; (קָדִים) east wind; (קֳדָם) before, in the presence of (Aramaic); (קָדוּם) ancient, early","category":"Time"},
   "טאנקום": {"meaning":"Teancum","category":"Uncategorized"},
   "ירדו": {"meaning":"they came down","category":"Motion"},
   "אחיך": {"meaning":"your brothers","category":"Family"},
@@ -1514,7 +1515,7 @@ window._rootGlossaryData = {
   "ירשון": {"meaning":"Jershon","category":"Uncategorized"},
   "יחשב": {"meaning":"he thinks","category":"Cognition"},
   "גרשו": {"meaning":"they were driven out","category":"Uncategorized"},
-  "יעל": {"meaning":"(יָעֵל) wild goat, ibex; (הוֹעִיל) to profit, avail, be of use","category":"Motion"},
+  "יעל": {"meaning":"(יָעֵל) wild goat, ibex; (הוֹעִיל) to profit, avail, be of use; (תּוֹעֶלֶת) benefit, use","category":"Motion"},
   "צותי": {"meaning":"My commandments","category":"Speech"},
   "יקר": {"meaning":"(יָקָר) precious, rare; (יְקָר) honor, preciousness","category":"Quality"},
   "אברהם": {"meaning":"Abraham; (אַבְרָם) Abram","category":"Name"},

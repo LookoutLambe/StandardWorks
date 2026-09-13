@@ -1460,6 +1460,16 @@
     'וּבְנִכְלָיו': 'נכל',                                      // "and by his craftiness" (one-word family)
     'וּשְׂעוֹרָתֵנוּ': 'שעורה',                                  // "and our barley" (one-word family)
     'יִתְמַהּ': 'תמה',                                        // "shall wonder" (תָּמַהּ, not the name Ithmah)
+    // Mosiah 8 audit (2026-09-13)
+    'חוֹזִים': 'חזה',                                         // "seers" (חֹזֶה, not the name Hozai)
+    'לְתַרְגְּמָם': 'תרגם', 'יְתֻרְגְּמוּ': 'תרגם',                // "translate" (תִּרְגֵּם, not רָגַם stone)
+    'קָרָה': 'קרה',                                           // "happened" (קָרָה, not קַר cold)
+    'מְכֻסָּה': 'כסה',                                        // "covered" (כִּסָּה, not מֶכֶס tax)
+    'הַמַּתָּנָה': 'נתן',                                      // "the gift" (מַתָּנָה, not the place Mattanah)
+    'יָאוֹת': 'יאה',                                          // "is fitting" (יָאָה, not אוֹת sign)
+    'הוּכְנוּ': 'כון',                                        // "were prepared" (הוּכַן, not כֵּן gnats)
+    'הַבּוֹרֵחַ': 'ברח',                                       // "which flees" (one-word family)
+    'לְתוֹעֶלֶת': 'יעל',                                       // "a benefit" (תּוֹעֶלֶת, not עָלָה go up)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
