@@ -7969,7 +7969,7 @@ window._rootGlossaryData = {
   "H8548": {"meaning":"(תָּמִיד) continually, always; the daily offering","category":"Lexical"},
   "שנא": {"meaning":"(שָׂנֵא) to hate; (שִׂנְאָה) hatred; (שְׁנָא) changed, violate, different","category":"Action"},
   "H6869": {"meaning":"(צָרָה) distress, trouble, affliction","category":"Lexical"},
-  "ברא": {"meaning":"(בָּרָא) to create; (בְּרִיאָה) creation; (בְּרִיָּה) creature","category":"Action"},
+  "ברא": {"meaning":"(בָּרָא) to create; (בְּרִיאָה) creation; (בְּרִיָּה) creature; (בָּרִיא) healthy, whole, fat","category":"Action"},
   "בכר": {"meaning":"(בְּכוֹר) firstborn; (בִּכּוּרִים) firstfruits","category":"Lexical"},
   "H8337": {"meaning":"(שֵׁשׁ) six","category":"Lexical"},
   "H8336": {"meaning":"(שֵׁשׁ) fine linen","category":"Lexical"},
