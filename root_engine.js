@@ -1798,6 +1798,11 @@
     // Alma 41 audit (2026-09-13)
     'שֵׁדִי': 'שד', 'הֵעַזְתָּ': 'עזז', 'הֲפֵרוּשׁ': 'פרשׁ',           // "devilish" (שֵׁד demon, not Shaddai), "you have dared", "is the meaning of"
     'נִשְׁתָּנִים': 'שנה', 'תִשְׁתַּנֶּה': 'שנה', 'מִשְׁתַּנִּים': 'שנה',                                       // "changed" (הִשְׁתַּנָּה, not שָׁתַן urinate)
+    // Alma 42 audit (2026-09-13)
+    'לְאַפְשֵׁר': 'אפשר',                                      // "to enable" (heading; אִפְשֵׁר)
+    'תְּנַסֶּה': 'נסה',                                         // "you do try" (נִסָּה, not נוּס flee)
+    'בְּמוֹתָם': 'מות',                                        // "in their death" (מָוֶת, not בָּמָה high place)
+    'וְתַאֲוָנִיִּים': 'אוה', 'הַהֲכָנָה': 'כון',                     // "sensual", "the preparation"
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

@@ -6170,7 +6170,7 @@ window._rootGlossaryData = {
   "דובר": {"meaning":"speaks","category":"Society"},
   "יכשלו": {"meaning":"they might stumble","category":"Quality"},
   "יחידי": {"meaning":"only","category":"Uncategorized"},
-  "אפשר": {"meaning":"(אֶפְשָׁר) possible","category":"Uncategorized"},
+  "אפשר": {"meaning":"(אֶפְשָׁר) possible; (אִפְשֵׁר) to make possible, enable; (אֶפְשָׁרוּת) possibility","category":"Uncategorized"},
   "יטפחהו": {"meaning":"nourished it","category":"Uncategorized"},
   "אעדר": {"meaning":"dig about","category":"Uncategorized"},
   "ראשיים": {"meaning":"main","category":"Uncategorized"},
