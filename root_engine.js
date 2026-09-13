@@ -1381,6 +1381,16 @@
     'הַמַּאֲבָק': 'אבק',                                       // "the wrestle" (one-word family)
     'וְעִזֵּי': 'H5795',                                       // "and goats of" (one-word family)
     'נִפְעַלְתִּי': 'פעל',                                     // "I was wrought upon" (was the name Peullethai)
+    // Jarom audit (2026-09-13)
+    'יָרוֹם': 'ירום',   // Jarom (the lexicon read the name as רוּם be exalted)
+    'עׇמְנִי': 'עמני', 'עָמְנִי': 'עמני',                        // Omni (was the Ammonite H5984)
+    'חֶזְיוֹנוֹתָי': 'חזה',                                     // "my revelations" (חִזָּיוֹן, not the Aramaic H2370)
+    'וַנִּטְאֲטֵאנוּם': 'טאטא',                                  // "and we swept them away" (one-word family)
+    'וַנָּחֵל': 'חלל',                                        // "and we began" (הֵחֵל, not נַחַל stream)
+    'וַנִּרֶב': 'רבה',                                         // "and we multiplied" (one-word family)
+    'מְעֻלָּה': 'עלה',                                        // "fine" (מְעֻלֶּה superior, not מַעַל trespass)
+    'וּבִמְכוֹנוֹת': 'כון',                                     // "and in machinery" (מְכוֹנָה, not נָוֶה habitation)
+    'מִלְחֲמוֹתָם': 'מלחמה', 'מִלְחֲמוֹתָיו': 'מלחמה', 'מִלְחֲמוֹתֵינוּ': 'מלחמה',   // "wars" (had fallen to לֶחֶם bread)
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

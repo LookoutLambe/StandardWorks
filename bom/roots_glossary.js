@@ -1,4 +1,6 @@
 window._rootGlossaryData = {
+  "עמני": {"meaning":"(עׇמְנִי) Omni — son of Jarom, the Book of Omni","category":"Name"},
+  "H4551": {"meaning":"(מַסָּע) dart, missile; quarry","category":"Tools"},
   "H4148": {"meaning":"(מוּסָר) discipline, instruction, chastening","category":"Theology"},
   "חדה": {"meaning":"(חָדָה) to rejoice; (חֶדְוָה) joy, gladness","category":"Emotion"},
   "H0583": {"meaning":"(אֱנוֹשׁ) Enos — son of Seth (Gen 4:26); son of Jacob, the Book of Enos","category":"Name"},
@@ -3495,7 +3497,7 @@ window._rootGlossaryData = {
   "תחזקו": {"meaning":"did fortify","category":"Uncategorized"},
   "טחים": {"meaning":"Botchim","category":"Perception"},
   "זקנתי": {"meaning":"had grown old","category":"Time"},
-  "ירום": {"meaning":"Jarom","category":"Uncategorized"},
+  "ירום": {"meaning":"(יָרוֹם) Jarom — son of Enos, the Book of Jarom","category":"Name"},
   "גדפו": {"meaning":"they blasphemed","category":"Uncategorized"},
   "כינו": {"meaning":"prepare","category":"Society"},
   "ארצותינו": {"meaning":"out of our lands","category":"Nature"},
