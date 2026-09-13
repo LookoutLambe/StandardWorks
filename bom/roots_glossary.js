@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "אביש": {"meaning":"Abish — the Lamanite woman, servant of Lamoni’s queen, converted years before by a vision of her father (Alma 19)","category":"Name"},
   "רבנה": {"meaning":"Rabbanah — powerful or great king, the title the Lamanites gave Ammon (Alma 18:13)","category":"Name"},
   "H3681": {"meaning":"(כִּסּוּי) covering","category":"Objects"},
   "אָחָה": {"meaning":"Aha — a Nephite captain, son of Zoram (Alma 16:5)","category":"Name"},
@@ -1231,7 +1232,7 @@ window._rootGlossaryData = {
   "דה": {"meaning":"field","category":"Nature"},
   "תפלל": {"meaning":"pray","category":"Theology"},
   "צוני": {"meaning":"commanded me","category":"Speech"},
-  "מחה": {"meaning":"joy","category":"Perception"},
+  "מחה": {"meaning":"(מָחָה) to wipe out, blot out, dispel","category":"Action"},
   "רצון": {"meaning":"(רָצוֹן) will, favor, delight","category":"Uncategorized"},
   "ארבעים": {"meaning":"forty","category":"Uncategorized"},
   "אנשי": {"meaning":"men of","category":"Uncategorized"},
