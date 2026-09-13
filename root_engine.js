@@ -2538,6 +2538,7 @@
       'גִּדֵּל':     { name: 'H1435', word: 'H1431', en: /Giddel/ },
       'שְׁבִי':     { name: 'H3427', word: 'H7628', en: /\bsit\b|dwell/ },
       'עַזָּה':     { name: 'H5804', word: 'H5794', en: /Gaza/ },              // mighty · Gaza (2 Nephi 4)
+    'מֵעֵין': { name: 'H5872', word: 'עין', en: /En-/ },   // from En-gedi / out of the eye of (3 Nephi 14)
     'נֵר': { name: 'H5369', word: 'ניר', en: /\bNer\b/ },             // Ner the father of Abner / a lamp (3 Nephi 12)
     'וְנֵר': { name: 'H5369', word: 'ניר', en: /\bNer\b/ },
     'נָבָל': { name: 'H5037', word: 'נבל', en: /Nabal/ },            // Nabal the Carmelite / a fool, a churl

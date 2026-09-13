@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "הקיסם": {"meaning":"(קֵיסָם) mote, splinter, chip of wood","category":"Objects"},
   "ממון": {"meaning":"(מָמוֹן) mammon, riches","category":"Objects"},
   "פיזיים": {"meaning":"(פִיזִי) physical, bodily","category":"Quality"},
   "יריעה": {"meaning":"(יְרִיעָה) curtain, tent-curtain","category":"Objects"},
