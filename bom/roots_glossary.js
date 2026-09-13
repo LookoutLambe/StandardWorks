@@ -7823,7 +7823,7 @@ window._rootGlossaryData = {
   "H0343": {"meaning":"(אֵיד) calamity, disaster","category":"Uncategorized"},
   "דגה": {"meaning":"(דָּגָה) fish","category":"Uncategorized"},
   "ענב": {"meaning":"(עֵנָב) grape","category":"Uncategorized"},
-  "ענק": {"meaning":"(עֲנָק) Anak, the Anakim; necklace","category":"Uncategorized"},
+  "ענק": {"meaning":"(הֶעֱנִיק) to bestow, grant liberally; (עֲנָק) Anak, the Anakim; necklace","category":"Uncategorized"},
   "בעת": {"meaning":"(בִּעֵת) to terrify","category":"Uncategorized"},
   "תא": {"meaning":"(תָּא) chamber, guardroom; (תַּאֲוֹת) lusts","category":"Uncategorized"},
   "חשה": {"meaning":"(חָשָׁה) to be silent, hold peace","category":"Uncategorized"},

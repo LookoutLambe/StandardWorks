@@ -1757,6 +1757,8 @@
     // is weakened (heading; תָּשַׁשׁ), stir up (הֵסִית, not מָסַס melt), protect (הֵגֵן, not נָגַן play), sore (מַר, not Marah), swallowed up (בֻּלַּע, not לֹעַ throat), sufferings (יִסּוּרִים), aggravating (מַר, not רוּם exalt)
     // Alma 28 audit (2026-09-13)
     'וּמִבְטָחָם': 'בטח', 'פְּלָיַת': 'פלה',   // their safety (מִבְטָח, not Betah), the inequality of (הַפְלָיָה, not Peleth)
+    // Alma 29 audit (2026-09-13)
+    'מַעֲנִיק': 'ענק', 'וְאֶתְהַלֵּל': 'הלל', 'תַאֲוָתוֹ': 'אוה', 'וְאֶתְהַלָּל': 'הלל', 'יַעֲשֵׂנִי': 'עשה',   // bestows (הֶעֱנִיק, not the Anakim), his desire (תַּאֲוָה, not אוֹת sign), I glory, may make me
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
