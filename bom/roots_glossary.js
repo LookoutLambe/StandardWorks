@@ -4962,7 +4962,7 @@ window._rootGlossaryData = {
   "מלכה׃": {"meaning":"kingdom","category":"Society"},
   "יולך": {"meaning":"Oiolk","category":"Uncategorized"},
   "את־צרות": {"meaning":"[ACC] afflictions","category":"Uncategorized"},
-  "שקר": {"meaning":"to deal falsely, lie; falsehood, deception","category":"Uncategorized"},
+  "שקר": {"meaning":"(שֶׁקֶר) lie, falsehood; (שִׁקֵּר) to deal falsely, lie","category":"Uncategorized"},
   "ועותיהם": {"meaning":"their oaths","category":"Uncategorized"},
   "זועקים": {"meaning":"crying out","category":"Speech"},
   "גרשום": {"meaning":"they cast out(pl)","category":"Uncategorized"},

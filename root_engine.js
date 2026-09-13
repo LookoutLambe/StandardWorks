@@ -1148,6 +1148,10 @@
     'וְהֻרוּ': 'ירה', 'הֻרוּ': 'ירה',                         // hophal "are instructed", not הַר "mountain"
     'בְרֹאוֹ': 'ברא', 'הִבָּרְאוֹ': 'ברא',                      // create, not רָאָה "see"
     'הַמְּתַוֵּךְ': 'תוך', 'מְתַוֵּךְ': 'תוך',                   // the Mediator (מְתַוֵּךְ)
+    // THE 2 NEPHI 3 CARD AUDIT (2026-09-12):
+    'וְהַנִּכְתָּב': 'כתב',                                 // "that which shall be written"
+    'לְהָבִישׁ': 'בוש',                                    // "confounding" (hiphil of בּוֹשׁ), not יֵשׁ
+    'אַתִּיר': 'H5425',                                    // "I will loose" (hiphil of נתר), not אֲתַר "place"
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
