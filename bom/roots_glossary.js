@@ -936,7 +936,7 @@ window._rootGlossaryData = {
   "מים": {"meaning":"(מַיִם) water","category":"Nature"},
   "ימים": {"meaning":"days","category":"Time"},
   "ירושלים": {"meaning":"Jerusalem","category":"Uncategorized"},
-  "קום": {"meaning":"(קוּם) to rise, stand up, establish; (קוֹמָה) height, stature, high","category":"Action"},
+  "קום": {"meaning":"(קוּם) to rise, stand up, establish; (קוֹמָה) height, stature, high; (תְּקוּמָה) resurrection, rising","category":"Action"},
   "ידעתי": {"meaning":"I know","category":"Cognition"},
   "יצאו": {"meaning":"went forth","category":"Motion"},
   "יחל": {"meaning":"(יִחֵל) to wait, hope, trust; (תּוֹחֶלֶת) hope, expectation","category":"Society"},
