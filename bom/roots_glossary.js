@@ -1,4 +1,5 @@
 window._rootGlossaryData = {
+  "זעזע": {"meaning":"(זַעֲזוּעַ) upheaval, shock; (זִעְזֵעַ) to shake violently","category":"Nature"},
   "מוֹרֶה": {"meaning":"(מוֹרֶה) teacher, guide, master","category":"Person"},
   "דרא": {"meaning":"(דֵּרָאוֹן) abhorrence, contempt","category":"Quality"},
   "בָּנוּ": {"meaning":"(בָּנוּ) in us, among us, against us","category":"Particle"},
@@ -5504,7 +5505,7 @@ window._rootGlossaryData = {
   "ובלתם": {"meaning":"be led","category":"Uncategorized"},
   "ארר": {"meaning":"(אָרַר) to curse; (מְאֵרָה) curse","category":"Uncategorized"},
   "אאר": {"meaning":"I shall curse","category":"Action"},
-  "ארה": {"meaning":"(אַרְיֵה, Aram. אַרְיָוָתָא) lion; this family also holds אֻרְוָה stall and אוֹרוֹת lights","category":"Lexical"},
+  "ארה": {"meaning":"(אַרְיֵה, Aram. אַרְיָוָתָא) lion; (אֻרְוָה) stall; (אָרָה) to pluck, gather","category":"Lexical"},
   "חלמתי": {"meaning":"I dreamed","category":"Uncategorized"},
   "אבתי": {"meaning":"my fathers","category":"Family"},
   "עלותנו": {"meaning":"when we ascended","category":"Motion"},
