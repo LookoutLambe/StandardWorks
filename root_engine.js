@@ -1989,6 +1989,10 @@
     'אוֹתוֹתֵיהֶם': 'אות', 'אוֹתוֹתָם': 'אות',              // "their signs" (אוֹת), not the accusative marker
     'וַיָּזֹם': 'זמם',                                     // "and he did plot" (זָמַם), not הִזָּה sprinkle
     'לִרְצִיחָה': 'רצח', 'וַיְזַקְּקוּם': 'זקק', 'נוֹסַד': 'יסד',
+    // Helaman 7 audit (2026-09-13)
+    'בְּגַנּוֹ': 'גנן', 'בְגַנּוֹ': 'גנן', 'גִּנָּתוֹ': 'גנן',   // Nephi's garden tower — גַּן, not בַּג food or Ginath
+    'וַיִּצְבֶּה': 'צבה',                                  // "was swollen" (צָבָה), not צָבָא an army
+    'תִּלָּקַחְנָה': 'לקח',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',

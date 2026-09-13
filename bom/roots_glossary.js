@@ -5423,7 +5423,6 @@ window._rootGlossaryData = {
   "קרבם׃": {"meaning":"among them","category":"Uncategorized"},
   "בתם": {"meaning":"their restoration","category":"Theology"},
   "את־חבורת": {"meaning":"[ACC] the band of","category":"Uncategorized"},
-  "תלקחנה": {"meaning":"they shall be taken","category":"Action"},
   "ארצותיכם": {"meaning":"your lands","category":"Nature"},
   "צעקו": {"meaning":"they cried out","category":"Uncategorized"},
   "את־בואו": {"meaning":"[ACC] His coming","category":"Uncategorized"},
