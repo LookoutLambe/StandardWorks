@@ -1881,6 +1881,15 @@
     'לְנִצְחוֹנוֹת': 'נצח', 'גְּדַת': 'גדה', 'הֶעֱסִיק': 'עסק',      // one-word families: victories, the bank of, employed
     'שְׁבוּיָיו': 'שבה', 'שְׁבוּיָו': 'שבה',
     'בִּמְצוּקָתָם': 'צוק', 'מְצוּקָתֵנוּ': 'צוק', 'וַאֲצִיק': 'צוק',   // distress is צוּק, not יָצַק pour
+    // Alma 54 audit (2026-09-13)
+    'הַתְקָפוֹתֵיהֶם': 'תקף', 'הַתְקָפָה': 'תקף', 'הַתְקָפוֹת': 'תקף',   // "their attacks" (הַתְקָפָה), not תְּקוּפָה a season
+    'הִכָּרְתָם': 'כרת',                                   // "their extinction" (כָּרַת), not נָכַר recognize
+    'אוֹאִיל': 'יאל',                                     // "I will grant" (הוֹאִיל), not Uel
+    'חֲלִיפַת': 'חלף', 'אַחֲלִיף': 'חלף',                    // one-word families: changes of, I will exchange
+    'וְיַפְסִיקוּ': 'פסק', 'הַמְּצַפָּה': 'צפה',
+    // the bow family held four forms of בָּקַשׁ, and the groaning family the avenging
+    'בִקַּשְׁתָּ': 'H1245', 'בַּקָּשָׁתְךָ': 'בקש', 'וּבִקַּשְׁתָּ': 'H1245', 'כְּבַקָּשָׁתְךָ': 'בקש',
+    'אֶנְקֹם': 'נקם', 'אֲנַקֶּה': 'נקה',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
