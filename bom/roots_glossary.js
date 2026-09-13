@@ -8350,7 +8350,7 @@ window._rootGlossaryData = {
   "עקד": {"meaning":"(עָקַד) to bind; (עָקֹד) striped, ring-streaked","category":"Action"},
   "רזן": {"meaning":"(רוֹזֵן) ruler, prince, dignitary","category":"Society"},
   "אלץ": {"meaning":"(אָלַץ) to urge, press, constrain, oblige","category":"Action"},
-  "גדה": {"meaning":"(גָּדָה) bank of a river; (גְּדִי) kid, young goat","category":"Place"},
+  "גדה": {"meaning":"(גָּדָה) bank of a river; (גְּדִי) kid, young goat; (הַגָּדָה) fable, legend","category":"Place"},
   "נדן": {"meaning":"(נָדָן) sheath; (נֵדֶה) gift; (נָדַד) to wander; called in question (NT)","category":"Tools"},
   "מעך": {"meaning":"(מָעַךְ) to press, squeeze, crush, handle; choked (NT); stuck in the ground","category":"Action"},
   "סמל": {"meaning":"(סֶמֶל) image, figure, idol; (סֵמֶל) symbol; (סִמֵּל) to symbolize","category":"Tools"},
