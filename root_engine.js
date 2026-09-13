@@ -1842,6 +1842,16 @@
     'שָׁלֵו': 'שלה', 'שָׁלוּ': 'שלה',
     'הַשְּׂלָו': 'שׂלו', 'שְׂלָו': 'שׂלו', 'שַׂלְוִים': 'שׂלו',
     'בַּשִּׁלּוּם': 'שלם', 'בָשְׁלוּ': 'בשל', 'משְׁלוֹת': 'משל',
+    // Alma 49 audit (2026-09-13)
+    'בְּשָׁוֶה': 'שוה', 'בַּשָּׁוֶה': 'שוה',        // "equally" — segol, not בְּשָׁוֵה "in Shaveh" (H7740)
+    'חֲפִירֵיהֶם': 'חפר', 'נֶחְפַּר': 'חפר',        // "their ditches"/"had been dug" — חָפַר dig, not the Hepherites
+    'תְּמִיהָה': 'תמה',                            // "with astonishment" — the noun of תָּמַהּ
+    'מוֹסִיפִים': 'יסף',                           // "continue, are increasing" (הוֹסִיף), not בּוֹא
+    // strays in the sign family: תַּאֲוָה is אִוָּה "desire", and five more were peeled to אוֹת
+    'תַּאֲוָתוֹ': 'אוה', 'הַכְאוֹת': 'כאה', 'הַלְאוֹת': 'לאה', 'נָאוֹת': 'נאה',
+    'מְלֵאַת': 'מלא', 'בִּיאָתוֹ': 'בוא', 'לְבִיאָתוֹ': 'בוא', 'לַבָּאוֹת': 'בוא', 'לְאוֹתָן': 'H0853',
+    // strays in the come family: Abba is the Aramaic father, not "he came"
+    'אַבָּא': 'H0001', 'בָאֱמֶת': 'אמת', 'בָאִי': 'H0339',
     'בִּקַּשְׁתָּ': 'H1245',   // "you have desired" (piel 2ms of בקשׁ) was peeled to ב + קֶשֶׁת "bow"
     'מִלְחֲמוֹתֵיהֶם': 'H4421',   // "their wars" — the suffixed plural fell out of the מלחמה family
     'לָנוּ': 'לָנוּ', 'לָּנוּ': 'לָנוּ',
