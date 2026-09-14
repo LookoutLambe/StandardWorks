@@ -37,9 +37,14 @@ NAMES = {'gen':'Genesis','exo':'Exodus','lev':'Leviticus','num':'Numbers',
  'zec':'Zechariah','mal':'Malachi','psa':'Psalms','pro':'Proverbs','job':'Job',
  'sng':'Song of Songs','ecc':'Ecclesiastes','lam':'Lamentations','est':'Esther',
  'dan':'Daniel','ezr':'Ezra','neh':'Nehemiah','1ch':'1 Chronicles','2ch':'2 Chronicles'}
-VOL_BOOK = {
- 'pgp': {'ms':'Moses','abr':'Abraham','jsm':'JS-Matthew','jsh':'JS-History'},
- 'nt':  None, 'dc': None, 'jst': None}
+# The target volume is read through build_volume_breaks' own reader, not a
+# second copy of it. That file already knows the three shapes the pages use —
+# the NT's {prefix,en}, the Pearl and JST's idPrefix, and the D&C, whose
+# sections are its chapters — and the JST's double positional quirk. A key
+# derived any other way is a key the table is never found under.
+sys.path.insert(0, HERE)
+from build_volume_breaks import books, verses as vol_verses
+from build_bom_breaks import silent
 
 def bare(s): return POINTS.sub('', s)
 
@@ -76,7 +81,7 @@ def lcs_map(a, b):
 
 def main():
     which = sys.argv[1] if len(sys.argv) > 1 else 'pgp'
-    vols = ['pgp'] if which == 'pgp' else [which]
+    vols = ['nt', 'dc', 'pgp', 'jst'] if which == 'all' else [which]
     BR = ot_breaks()
     MT, by_word = [], {}
     for f in sorted(os.listdir(os.path.join(ROOT, 'ot_verses'))):
@@ -92,42 +97,44 @@ def main():
                 if len(t) >= 3: by_word.setdefault(t, []).append(idx)
     out, stats = {}, {'matched': 0, 'carried': 0, 'verses': 0}
     for vol in vols:
-        books = VOL_BOOK.get(vol)
-        if not books: continue
-        for f in sorted(os.listdir(os.path.join(ROOT, vol + '_verses'))):
-            if not f.endswith('.js') or f == 'manifest.js': continue
-            for ch, v, w, pfx in verses(os.path.join(ROOT, vol + '_verses', f)):
-                bk = books.get(pfx)
-                if not bk or len(w) < 3: continue
-                stats['verses'] += 1
-                cand = {}
-                for t in set(w):
-                    for i in by_word.get(t, []): cand[i] = cand.get(i, 0) + 1
-                best, score = None, 0.0
-                S = set(w)
-                for i, c in cand.items():
-                    if c < 3: continue
-                    B = set(MT[i][3]); inter = len(S & B)
-                    s = inter / float(len(S) + len(B) - inter)
-                    if s > score: score, best = s, i
-                if best is None or score < MIN_OVERLAP: continue
-                stats['matched'] += 1
-                mb, mw, mbr = MT[best][:3], MT[best][3], MT[best][4]
-                amap = lcs_map(w, mw)                    # target idx -> MT idx
-                rev = {}
-                for ti, mi in amap.items(): rev[mi] = ti
-                got = []
-                for x in mbr:
-                    mi = x[0] if isinstance(x, list) else x
-                    ti = rev.get(mi)
-                    if ti is not None and 0 <= ti < len(w) - 1: got.append([ti, 2])
-                if got:
-                    got.sort()
-                    dedup = [got[0]]
-                    for g in got[1:]:
-                        if g[0] != dedup[-1][0]: dedup.append(g)
-                    out['%s|%d|%d' % (bk, ch, v)] = dedup
-                    stats['carried'] += len(dedup)
+        for key, ref, toks in vol_verses(vol, books(vol)):
+            w = [bare(t[0]) for t in toks if not silent(t[0]) and SPEAK.search(t[0])]
+            if len(w) < 3:
+                continue
+            stats['verses'] += 1
+            cand = {}
+            for t in set(w):
+                for i in by_word.get(t, []):
+                    cand[i] = cand.get(i, 0) + 1
+            best, score, S = None, 0.0, set(w)
+            for i, c in cand.items():
+                if c < 3:
+                    continue
+                B = set(MT[i][3]); inter = len(S & B)
+                sc = inter / float(len(S) + len(B) - inter)
+                if sc > score:
+                    score, best = sc, i
+            if best is None or score < MIN_OVERLAP:
+                continue
+            stats['matched'] += 1
+            mw, mbr = MT[best][3], MT[best][4]
+            rev = {}
+            for ti, mi in lcs_map(w, mw).items():
+                rev[mi] = ti
+            got = []
+            for x in mbr:
+                mi = x[0] if isinstance(x, list) else x
+                ti = rev.get(mi)
+                if ti is not None and 0 <= ti < len(w) - 1:
+                    got.append([ti, 2])
+            if got:
+                got.sort()
+                dedup = [got[0]]
+                for g in got[1:]:
+                    if g[0] != dedup[-1][0]:
+                        dedup.append(g)
+                out[key] = dedup
+                stats['carried'] += len(dedup)
     p = os.path.join(HERE, 'mt_parallel_breaks.json')
     io.open(p, 'w', encoding='utf-8').write(
         json.dumps(out, ensure_ascii=False, sort_keys=True, separators=(',', ':')))
