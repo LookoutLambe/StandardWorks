@@ -411,8 +411,17 @@
     var u = units(w), out = '';
     for (var i = 0; i < u.length; i++) {
       var ch = u[i][0], m = u[i][1];
+      /* A SHURUK IS A BARE VAV AND A DAGESH AND NOTHING ELSE. Put a vowel
+         under it — צֻוָּה, dagesh AND qamats — and it is not a vowel any more,
+         it is a doubled consonant carrying a vowel of its own. That is the
+         translator's test and it is the plainer one, so it is first here.
+         The second half catches what it cannot: צִוּוּ, where the geminated
+         vav has no vowel because the vav AFTER it is the shuruk, and the
+         syllable in front is what gives it away (93 tokens, all of the
+         double-vav forms — צִוּוּ, לְצַוּוֹת, תְּקַוּוּ).
+         A real shuruk fails both: no vowel of its own, and none before it. */
       if (ch === '\u05D5' && m.indexOf(DAGESH) >= 0 &&
-          i > 0 && VOWEL.test(u[i - 1][1])) {
+          (VOWEL.test(m) || (i > 0 && VOWEL.test(u[i - 1][1])))) {
         m = m.split(DAGESH).join('');
       }
       out += ch + m;
