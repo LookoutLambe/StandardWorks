@@ -526,6 +526,14 @@
      as the explicit U+05C7, so a plain qamats here really is the long one. */
   var _LONG = /[\u05B9\u05BA\u05B5\u05B8]/;
   function voiceShevaNa(w) {
+    /* A TOKEN MAY ALREADY HOLD TWO WORDS. The corpus has "יָסֵךְ עָלֶיהָ" and
+       "רֹךְ לְבָבָם" in one cell, and a double maqqef (הַנִּתְּנָה־־לִּי) leaves a
+       space behind as well. Walking the letters straight through means the
+       final kaf of the FIRST word is not last in the list and its sheva gets
+       voiced — יָסֵךֶ, which is wrong: a word-final sheva is always nach.
+       Found by tools/check_voice_corpus.js, never by reading a chapter. */
+    if (w.indexOf(' ') >= 0)
+      return w.split(' ').map(voiceShevaNa).join(' ');
     var u = _units(w), out = w, edits = [], n, cur, prev, next, na;
     for (n = 0; n < u.length; n++) {
       cur = u[n];
@@ -753,7 +761,10 @@
         continue;
       }
     }
-    return parts.join(' ');
+    /* A maqqef at the edge of a token (אִם־) or doubled (־־) leaves an empty
+       part behind, and a digits-only part is dropped entirely; collapse what
+       that leaves rather than handing her a ragged string. */
+    return parts.join(' ').replace(/\s+/g, ' ').trim();
   }
 
   /** does this word open a clause? (measured — see the table above) */
