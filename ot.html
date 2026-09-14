@@ -13,10 +13,10 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="כתבי הקודש">
-<title>Tanakh / Old Testament · Hebrew Interlinear Standard Works</title>
-<meta name="description" content="Hebrew Interlinear Tanakh (Old Testament) — Masoretic Text, Word-by-Word">
+<title>Hebrew Old Testament Interlinear — Tanakh · Standard Works</title>
+<meta name="description" content="The Hebrew Old Testament, the Masoretic Text word by word, with the King James beside it. Every word carries its transliteration and English gloss.">
 <link rel="canonical" id="canonical-link" href="https://sefermormon.com/ot.html">
-<meta property="og:title" content="Tanakh / Old Testament in Hebrew — Hebrew Interlinear Standard Works">
+<meta property="og:title" content="Hebrew Old Testament Interlinear — Tanakh · Standard Works">
 <meta property="og:description" content="The Masoretic Text word by word with English glosses, transliteration and roots.">
 <meta property="og:url" content="https://sefermormon.com/ot.html">
 <meta property="og:type" content="book">
@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="nav_engine.css?v=51">
 <link rel="stylesheet" href="site_chrome.css?v=74">
 <link rel="stylesheet" href="xref_study_panel.css?v=14">
-<link rel="stylesheet" href="reader.css?v=122">
+<link rel="stylesheet" href="reader.css?v=123">
 <style>
 *:focus-visible { outline: 2px solid var(--here); outline-offset: 2px; }
 .book-title { font-size: 2.4em; font-weight: 700; color: var(--header-bg); letter-spacing: 0.04em; margin-bottom: 2px; line-height: 1.2; }
@@ -488,7 +488,7 @@ body.dual-mode .colophon .word-unit .hw { font-size: 1em; }
 <div class="page" id="page">
   <div class="book-header" id="book-header" style="display:none">
     <h1 class="book-title" id="main-book-title" lang="he">תנ״ך</h1>
-    <div class="book-subtitle" id="main-book-subtitle">Tanakh / Old Testament</div>
+    <div class="book-subtitle" id="main-book-subtitle">Old Testament</div>
   </div>
   <div class="ornament" id="main-ornament" style="display:none">✦ ✦ ✦</div>
   <main id="main-content">
@@ -547,10 +547,13 @@ window.READER = {
   vol: 'ot',
   selfPage: 'ot.html',
   books: OT_BOOKS,
-  landingTitle: 'Tanakh',
+  // The volume's English name, and the one string that carries it: the chapter
+  // picker, the landing h1 and the study-notes header all read it from here.
+  // "Old Testament", not "Tanakh" — the user's ruling, 2026-09-14.
+  landingTitle: 'Old Testament',
   navLabelHe: '\u05EA\u05B7\u05BC\u05E0\u05B7"\u05DA\u05B0',
-  readerName: 'OT / Tanakh',
-  shareTitle: 'Hebrew Tanakh',
+  readerName: 'OT / Old Testament',
+  shareTitle: 'Hebrew Old Testament',
   firstChapter: 'gen-ch1',
   englishData: '_otEnglishData',
   verseDir: 'ot_verses',      // lazy books: <verseDir>/manifest.js says which file holds which chapter
@@ -580,7 +583,7 @@ window.READER = {
 </script>
 <!-- chapter summaries (856 KB eager) are now per-book in ot_headings/,
      fetched with the book by VolumeLoader. tools/build_heading_manifests.js -->
-<script src="reader_core.js?v=32"></script>
+<script src="reader_core.js?v=33"></script>
 <script src="jst_crossrefs.js?v=2"></script>
 
 <!-- Strong's lookup + Root glossary data -->

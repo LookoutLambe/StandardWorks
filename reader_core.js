@@ -85,7 +85,14 @@ function findBook(prefix) {
     '<div class="hero-lis-row">' +
     window.READER.heroHtml +
     '</div>' +
-    '<div style="font-family:\'David Libre\',serif;font-size:0.95em;color:var(--ink-light);letter-spacing:0.1em;direction:ltr;margin-top:16px">HEBREW INTERLINEAR</div>' +
+    // The volume's name in English, and it is the h1: the landing is the URL
+    // Google indexes, and #book-header's h1 is display:none until a chapter
+    // opens, so these pages had no heading a crawler could read. One name —
+    // READER.landingTitle, the same string the chapter picker shows. Styling
+    // (and why each half is nowrap) is in reader.css.
+    '<h1 class="hero-lis-name"><span>Hebrew ' + (window.READER.landingTitle || '') +
+      '&nbsp;\u00b7</span> <span>Standard Works</span></h1>' +
+    '<div class="hero-lis-kicker">INTERLINEAR EDITION</div>' +
     '</div>' +
     '<div style="margin:24px 0 4px"><button id="start-reading-btn" onclick="navTo(\''+window.READER.firstChapter+'\')">Begin Reading \u2192</button></div>' +
     '</div><hr class="landing-divider"><div class="landing-sections">';

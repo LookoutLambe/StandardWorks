@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="nav_engine.css?v=51">
 <link rel="stylesheet" href="site_chrome.css?v=74">
 <link rel="stylesheet" href="xref_study_panel.css?v=14">
-<link rel="stylesheet" href="reader.css?v=122">
+<link rel="stylesheet" href="reader.css?v=123">
 <style>
 *:focus-visible { outline: 2px solid var(--here); outline-offset: 2px; }
 .book-title { font-size: 2.4em; font-weight: 700; color: var(--header-bg); letter-spacing: 0.04em; margin-bottom: 2px; }
@@ -540,9 +540,10 @@ window.READER = {
     
       // Build landing page with section grid
       var landingHtml = '<div class="landing-hero">' +
-        '<h1>הלקח והבריתות</h1>' +
-        '<div class="subtitle-en">Doctrine and Covenants</div>' +
-        '<div class="subtitle-heb">Hebrew Interlinear</div>' +
+        '<h1><span class="lh-he" lang="he">הלקח והבריתות</span>' +
+          '<span class="lh-en"><span>Hebrew Doctrine and Covenants&nbsp;\u00b7</span>' +
+          ' <span>Standard Works</span></span></h1>' +
+        '<div class="subtitle-heb">Interlinear Edition</div>' +
         '</div><hr class="landing-divider"><div class="landing-sections">';
     
       // Front matter links
@@ -632,7 +633,7 @@ window.READER = {
 </script>
 <!-- chapter summaries (250 KB eager) are now per-book in dc_headings/,
      fetched with the book by VolumeLoader. tools/build_heading_manifests.js -->
-<script src="reader_core.js?v=32"></script>
+<script src="reader_core.js?v=33"></script>
 
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=6"></script>

@@ -2521,8 +2521,68 @@ body.dark-mode #glossary-panel {
 .landing-back a { font-family: 'David Libre', 'Georgia', serif; background: var(--sw-gold, var(--on-chrome)); color: var(--header-bg, var(--chrome)); text-decoration: none; font-size: 1.05em; font-weight: 600; letter-spacing: 0.03em; border: 2px solid var(--header-bg, var(--chrome)); padding: 14px 32px; border-radius: 10px; box-shadow: 0 4px 14px color-mix(in srgb, var(--chrome) 18%, transparent); transition: background 0.2s, transform 0.2s; direction: ltr; display: inline-block; }
 .landing-back a:hover { background: var(--on-chrome); color: var(--header-bg, var(--chrome)); border-color: var(--header-bg, var(--chrome)); transform: scale(1.02); }
 .landing-hero .subtitle-en { font-family: 'David Libre', 'Georgia', serif; font-size: 1.1em; color: var(--ink-light); letter-spacing: 0.08em; direction: ltr; }
-.landing-hero .subtitle-heb { font-size: 1.3em; color: var(--ink); margin-top: 4px; }
+.landing-hero .subtitle-heb { font-family: 'David Libre', 'Georgia', serif; font-size: 0.95em; color: var(--ink-light); letter-spacing: 0.1em; direction: ltr; margin-top: 6px; }
 .landing-hero h1 { font-size: 2.2em; color: var(--accent-deep); margin-bottom: 6px; font-weight: 700; }
+
+/* ═══ THE VOLUME'S NAME IN ENGLISH, INSIDE ITS h1 ═══════════════════════════
+   Every volume was headed in Hebrew alone, and on the URL Google indexes —
+   the landing, with no hash — four of the six had no visible h1 at all: the
+   one in #book-header is display:none until a chapter opens. After the title
+   tag the h1 is the strongest thing a crawler reads, so the pages competing
+   for "hebrew old testament", "hebrew new testament", "hebrew book of mormon"
+   were competing with no English in their heading.
+
+   The generated chapter pages have always set both scripts in the h1
+   (`Alma 32 · אלמא פרק ל״ב`); this is the landings joining them. The wording
+   is the user's (2026-09-14): "Hebrew <volume> · Standard Works", because the
+   site is more than any one volume.
+
+   Two shapes, one look. .hero-lis-name is a standalone h1 under an
+   interlinear hero (Old Testament, New Testament, Pearl of Great Price, Book
+   of Mormon); .landing-hero h1 .lh-en is the same line nested inside the
+   Hebrew h1 that the D&C and the JST already had. Smaller than the Hebrew and
+   in --ink rather than the title's indigo, so the Hebrew still leads, and the
+   kicker beneath both dropped the word "Hebrew" — with the name above it,
+   "HEBREW INTERLINEAR" said Hebrew twice.
+
+   Each half is nowrap and the mid-dot is glued to the word before it with an
+   nbsp, so a narrow screen can only break BETWEEN the two phrases. Left free,
+   text-wrap:balance broke before the dot and line two opened with a bare "·",
+   and the narrower hero column split "Standard" from "Works". */
+.hero-lis-name {
+  font-family: 'David Libre', serif;
+  font-size: clamp(1.05rem, 2.8vw, 1.35rem);
+  font-weight: 600;
+  color: var(--ink);
+  direction: ltr;
+  unicode-bidi: isolate;
+  letter-spacing: 0.015em;
+  line-height: 1.25;
+  margin: 18px 0 0;
+}
+.hero-lis-kicker {
+  font-family: 'David Libre', serif;
+  font-size: 0.95em;
+  color: var(--ink-light);
+  letter-spacing: 0.1em;
+  direction: ltr;
+  margin-top: 6px;
+}
+.landing-hero h1 .lh-he { display: block; }
+.landing-hero h1 .lh-en {
+  display: block;
+  font-family: 'David Libre', serif;
+  font-size: 0.5em;
+  font-weight: 600;
+  color: var(--ink);
+  direction: ltr;
+  unicode-bidi: isolate;
+  letter-spacing: 0.015em;
+  line-height: 1.25;
+  margin-top: 7px;
+}
+.hero-lis-name > span,
+.landing-hero h1 .lh-en > span { white-space: nowrap; }
 .note-marker { color: var(--accent-deep); cursor: pointer; font-size: 0.7em; margin-right: 2px; }
 .page { max-width: none; margin: 0 auto; padding: 55px 24px 50px; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); background: var(--paper); min-height: 100vh; box-shadow: none; position: relative; touch-action: manipulation; }
 .popup-strong a { color: var(--accent); text-decoration: none; }
