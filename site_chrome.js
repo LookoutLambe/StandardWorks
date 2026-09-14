@@ -512,7 +512,7 @@
     if (document.querySelector('[data-sw-rights]')) return;
     var d = document.createElement('div');
     d.id = 'sw-rights';
-    d.innerHTML = '\u00a9 Christopher Lambe. All rights reserved. Licensing inquiries: <a href="mailto:chris@sefermormon.com">chris@sefermormon.com</a>';
+    d.innerHTML = '\u00a9 Chris Lambe. All rights reserved. Licensing inquiries: <a href="mailto:chris@sefermormon.com">chris@sefermormon.com</a>';
     var page = document.querySelector('.page');
     (page || document.body).appendChild(d);
   }
