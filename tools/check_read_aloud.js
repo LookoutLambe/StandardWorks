@@ -117,11 +117,11 @@ const CASES = [
      גָּדוֹל/גָדוֹל, תּוֹרָה/תוֹרָה byte-identical — ג ד ת do not alternate in
      modern Hebrew — while בַּיִת, כֶּסֶף and פֶּה all differ, which is why
      those three keep it. `say -v Carmit -f w.txt -o w.aiff`, compare sizes. */
-  ['הַדְּבָרִים', 'הַדֶבָרִים', 'dalet: sheva voiced AND the dagesh dropped — "ha-de-varim"'],
-  ['הַגְּדוֹלָה', 'הַגֶדוֹלָה', 'gimel: same — it cannot spirantize'],
-  ['הַנְּבִיאִים', 'הַנֶבִיאִים', 'nun: a forte on a non-bgdkpt letter is pure gemination'],
-  ['הַבְּרִית', 'הַבֶרִית', 'bet LOSES its dagesh and stays hard — "ha-be-rit", heard and confirmed'],
-  ['מִפְּרִי', 'מִפֶרִי', 'pe LOSES its dagesh and stays hard — מִפְּנֵי cannot hold this case any more, it is the פֵּנֵי exception now'],
+  ['הַדְּבָרִים', 'הַדֶ בָרִים', 'dalet: sheva voiced AND the dagesh dropped — "ha-de-varim"'],
+  ['הַגְּדוֹלָה', 'הַגֶ דוֹלָה', 'gimel: same — it cannot spirantize'],
+  ['הַנְּבִיאִים', 'הַנֶ בִיאִים', 'nun: a forte on a non-bgdkpt letter is pure gemination'],
+  ['הַבְּרִית', 'הַבֶ רִית', 'bet LOSES its dagesh and stays hard — "ha-be-rit", heard and confirmed'],
+  ['מִפְּרִי', 'מִפֶ רִי', 'pe LOSES its dagesh and stays hard — מִפְּנֵי cannot hold this case any more, it is the פֵּנֵי exception now'],
   /* THE NAME IS SPOKEN CORRECTLY OR NOT AT ALL (translator, 2026-09-14:
      "its Elohim! be respectful to the name", "even Carmit needs to be
      respectful by speaking it correctly"). Pointed, she sometimes said
@@ -147,16 +147,16 @@ const CASES = [
   ['\u05E2\u05B7\u05DC\u05BE\u05E4\u05B0\u05BC\u05E0\u05B5\u05D9', '\u05E2\u05B7\u05DC \u05E4\u05BC\u05B5\u05E0\u05B5\u05D9', 'the maqqef form: split first, so the pe is word-initial and only THIS rule reaches it'],
   ['\u05DE\u05B4\u05E4\u05B0\u05BC\u05E0\u05B5\u05D9', '\u05DE\u05B4\u05E4\u05BC\u05B5\u05E0\u05B5\u05D9', 'the prefixed form takes it too, not the general segol'],
   /* the other vocal-sheva classes (2026-09-14) */
-  ['הָיְתָה', 'הָיֶתָה', 'after a LONG vowel: "ha-ye-ta", not "hayta"'],
-  ['שָׁמְעוּ', 'שָׁמֶעוּ', 'after a long vowel: "sha-me-u"'],
-  ['עַבְדְּךָ', 'עַבְדֶךָ', 'SECOND of two shevas is the vocal one: "av-de-kha"'],
-  ['הִנְנִי', 'הִנֶנִי', 'before the SAME letter: "hi-ne-ni"'],
+  ['הָיְתָה', 'הָיֶ תָה', 'after a LONG vowel: "ha-ye-ta", not "hayta"'],
+  ['שָׁמְעוּ', 'שָׁמֶ עוּ', 'after a long vowel: "sha-me-u"'],
+  ['עַבְדְּךָ', 'עַבְדֶ ךָ', 'SECOND of two shevas is the vocal one: "av-de-kha"'],
+  ['הִנְנִי', 'הִנֶ נִי', 'before the SAME letter: "hi-ne-ni"'],
   ['יִשְׂרָאֵל', 'יִשְׂרָאֵל', 'NOT touched — a plain nach: "yis-ra-el", never "yi-se-ra-el"'],
   ['לִפְנֵי', 'לִפְנֵי', 'NOT touched — nach after a short vowel: "lif-nei"'],
   ['לָךְ', 'לָךְ', 'NOT touched — a word-FINAL sheva is always nach, long vowel or not'],
   /* the sheva after a dagesh forte is NA and she swallowed it (2026-09-14) */
-  ['בַּגְּבוּלוֹת', 'בַּגֶבוּלוֹת', 'in the borders — "ba-ge-vu-lot"; she read it "bagvulot", and the bet must KEEP its dagesh'],
-  ['הַשְּׁבִיעִי', 'הַשֶׁבִיעִי', 'the seventh — the shin-dot has to survive the substitution'],
+  ['בַּגְּבוּלוֹת', 'בַּגֶ בוּלוֹת', 'in the borders — "ba-ge-vu-lot"; she read it "bagvulot", and the bet must KEEP its dagesh'],
+  ['הַשְּׁבִיעִי', 'הַשֶׁ בִיעִי', 'the seventh — the shin-dot has to survive the substitution'],
   ['בְּרֵאשִׁית', 'בְּרֵאשִׁית', 'NOT touched — a word-initial dagesh is LENE and its sheva already sounds'],
   ['כְּמוֹ', 'כְּמוֹ', 'NOT touched — same reason: no vowel before it, so the dagesh is lene'],
 ];

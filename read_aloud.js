@@ -428,7 +428,15 @@
   /** strip the dagesh from a vav that is a doubled CONSONANT, not a shuruk.
       Same test as ktivMale's: the vav is a consonant when the letter before
       it carries a vowel of its own. Points elsewhere are untouched. */
+  /* A SPACE INSIDE A WORD IS DELIBERATE AND MUST SURVIVE. voiceShevaNa ends a
+     vocal-sheva syllable with one, because for a word Carmit has in her
+     lexicon no pointing can deliver that vowel — only two words can. This
+     function rebuilds its output from letters and marks alone, so it would
+     silently eat the space and put the syllable back; running it per
+     space-separated chunk keeps it. Cost an hour to find: the rule looked
+     correct in the source and did nothing in the output. */
   function deGeminateVav(w) {
+    if (w.indexOf(' ') >= 0) return w.split(' ').map(deGeminateVav).join(' ');
     var u = units(w), out = '';
     for (var i = 0; i < u.length; i++) {
       var ch = u[i][0], m = u[i][1];
@@ -561,10 +569,22 @@
        There is no third option. With a dagesh on the letter she renders
        audio byte-identical to the unpointed word — הַבְּרִית and הַבֶּרִית are
        the same bytes — so the vowel is only heard once the dagesh is gone. */
+    /* AND THE SYLLABLE IS SPLIT OFF WITH A SPACE (translator, 2026-09-14:
+       "its the vocal shva", on הַשְּׁבִיעִי in Moses 3:3). Writing the segol is
+       not always enough: for a word Carmit has in her lexicon she reads the
+       skeleton and ignores every vowel written on it — הַשְּׁבִיעִי, הַשֶׁבִיעִי,
+       הַשֶּׁבִיעִי, הַשֵּׁבִיעִי and bare השביעי all render BYTE-IDENTICAL, so no
+       pointing can deliver that sheva. Ending the syllable with a space does:
+       הַשֶׁ בִיעִי is "ha-she-vi-'i".
+
+       She is handed two words where the page shows one. That is the whole
+       trick, and it is the same principle as the utterance split above —
+       what she plans her prosody over is what she is given, not what is
+       written. THE DISPLAY NEVER MOVES. */
     for (n = edits.length - 1; n >= 0; n--) {                   /* right to left: indices hold */
       cur = edits[n];
       out = out.slice(0, cur.at + 1) +
-            cur.marks.replace('\u05B0', '\u05B6').replace('\u05BC', '') +
+            cur.marks.replace('\u05B0', '\u05B6').replace('\u05BC', '') + ' ' +
             out.slice(cur.end);
     }
     return out;
