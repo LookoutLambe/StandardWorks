@@ -104,6 +104,14 @@ const CASES = [
   ['הׇרְגֵהוּ',    'הֹרְגֵהוּ',  'slay him, 1 Nephi 4:12 — the one imperative listed by hand'],
   ['שְׂרָיָה',     'שְׂרָיָע',   '"its pronouncing sariah as sa-rai-yaha thats bad" — the he becomes an ayin'],
   ['חַסְדּוֹ',     'חַסְדּוֹ',   'NOT touched — a vav with a holam of its own is a vowel, not a final consonant'],
+  /* the other vocal-sheva classes (2026-09-14) */
+  ['הָיְתָה', 'הָיֶתָה', 'after a LONG vowel: "ha-ye-ta", not "hayta"'],
+  ['שָׁמְעוּ', 'שָׁמֶעוּ', 'after a long vowel: "sha-me-u"'],
+  ['עַבְדְּךָ', 'עַבְדֶּךָ', 'SECOND of two shevas is the vocal one: "av-de-kha"'],
+  ['הִנְנִי', 'הִנֶנִי', 'before the SAME letter: "hi-ne-ni"'],
+  ['יִשְׂרָאֵל', 'יִשְׂרָאֵל', 'NOT touched — a plain nach: "yis-ra-el", never "yi-se-ra-el"'],
+  ['לִפְנֵי', 'לִפְנֵי', 'NOT touched — nach after a short vowel: "lif-nei"'],
+  ['לָךְ', 'לָךְ', 'NOT touched — a word-FINAL sheva is always nach, long vowel or not'],
   /* the sheva after a dagesh forte is NA and she swallowed it (2026-09-14) */
   ['בַּגְּבוּלוֹת', 'בַּגֶּבוּלוֹת', 'in the borders — "ba-ge-vu-lot"; she read it "bagvulot", and the bet must KEEP its dagesh'],
   ['הַדְּבָרִים', 'הַדֶּבָרִים', 'the words — the commonest of the class, 1,141 tokens'],

@@ -482,6 +482,46 @@
     return last[0] === '\u05D5' && last[1] === '' && VOWEL.test(u[u.length - 2][1]);
   }
 
+  /* Split a word into letter units, each with the marks that follow it. */
+  function _units(w) {
+    var out = [], i, j, m;
+    for (i = 0; i < w.length; i++) {
+      if (!/[\u05D0-\u05EA]/.test(w[i])) continue;
+      for (j = i + 1, m = ''; j < w.length && /[\u0591-\u05C7]/.test(w[j]); j++) m += w[j];
+      out.push({ c: w[i], marks: m, at: i, end: j });
+    }
+    return out;
+  }
+  /* A long vowel on the PREVIOUS letter makes the next sheva na. The qamats
+     qatan is excluded because it is short — and this corpus always writes it
+     as the explicit U+05C7, so a plain qamats here really is the long one. */
+  var _LONG = /[\u05B9\u05BA\u05B5\u05B8]/;
+  function voiceShevaNa(w) {
+    var u = _units(w), out = w, edits = [], n, cur, prev, next, na;
+    for (n = 0; n < u.length; n++) {
+      cur = u[n];
+      if (cur.marks.indexOf('\u05B0') < 0) continue;
+      prev = n > 0 ? u[n - 1] : null;
+      next = n < u.length - 1 ? u[n + 1] : null;
+      na = false;
+      if (n === u.length - 1) na = false;                       /* final: always nach */
+      else if (n === 0) na = false;                             /* initial: she says it */
+      else if (cur.marks.indexOf('\u05BC') >= 0 &&
+               prev && /[\u05B1-\u05BB\u05C7]/.test(prev.marks)) na = true;   /* forte */
+      else if (prev && prev.marks.indexOf('\u05B0') >= 0) na = true;            /* 2nd of two */
+      else if (next && next.c === cur.c) na = true;                             /* same letter */
+      else if (prev && _LONG.test(prev.marks.replace(/\u05BC/g, ''))) na = true; /* long vowel */
+      if (na) edits.push(cur);
+    }
+    for (n = edits.length - 1; n >= 0; n--) {                   /* right to left: indices hold */
+      cur = edits[n];
+      out = out.slice(0, cur.at + 1) +
+            cur.marks.replace('\u05B0', '\u05B6') +
+            out.slice(cur.end);
+    }
+    return out;
+  }
+
   /** the form to SPEAK for a word — never the form to show */
   function spoken(heb) {
     var s = heb;
@@ -497,6 +537,14 @@
     var parts = s.split('\u05BE');
     for (var k = 0; k < parts.length; k++) {
       if (SAY_AS[parts[k]]) { parts[k] = SAY_AS[parts[k]]; continue; }
+      /* BEFORE THE QAMATS QATAN IS TURNED INTO A HOLAM, because that
+         substitution destroys the evidence this rule needs: a qamats
+         qatan is SHORT, so the sheva after it is nach, and once it has
+         become a holam this classifier reads it as long and voices it.
+         חׇכְמָה came out "cho-che-ma" and הׇרְגֵהוּ "ho-re-gehu" — both
+         caught by tools/check_read_aloud.js, which is what that table
+         is for. */
+      parts[k] = voiceShevaNa(parts[k]);
       /* THE QAMATS QATAN IS AN /o/ AND SHE READS IT AS AN /a/. This corpus
          marks it with the explicit U+05C7 rather than leaving it to be
          guessed from a plain qamats — which is the right call for a reader
@@ -517,30 +565,35 @@
          vowel, and writing it as the segol it sounds like is enough — וַיֶּהִי
          transcribes correctly where וַיְהִי does not. */
       parts[k] = parts[k].replace(/^\u05D5\u05B7\u05D9\u05B0/, '\u05D5\u05B7\u05D9\u05B6');
-      /* THE SHEVA AFTER A DAGESH FORTE IS ALSO NA, AND SHE SWALLOWS IT.
-         בַּגְּבוּלוֹת is "ba-ge-vu-lot" — the gimel is hard and the sheva
-         under it is sounded — and she read it "bagvulot", closing the
-         syllable and losing the vowel entirely (translator, 2026-09-14:
-         "shes supposed to pronounce it as a hard with vocal and shes not").
+      /* A SHEVA NA IS A VOWEL AND SHE SWALLOWS IT (translator, 2026-09-14:
+         "voicing a vocal shewa when its needed"). בַּגְּבוּלוֹת is
+         "ba-ge-vu-lot" and she read it "bagvulot"; הִנְנִי is "hi-ne-ni" and
+         she closed the syllable. The remedy is the one already proved on the
+         weak wayyiqtol above — write the sheva as the segol it sounds like,
+         FOR THE VOICE ONLY — but which shevas get it has to be decided by
+         the classical rules, not by a pattern, because the silent sheva
+         outnumbers the vocal one and voicing it would wreck the reading:
+         יִשְׂרָאֵל is "yis-ra-el", never "yi-se-ra-el".
 
-         A letter carrying BOTH a sheva and a dagesh, with a vowel before it,
-         is a dagesh FORTE: the doubling of the definite article or a prefix.
-         Its sheva is a sheva na, exactly like the one in וַיְהִי above, and
-         the same remedy works — write it as the segol it sounds like. The
-         dagesh STAYS, because on a בג"ד כפ"ת letter it is what keeps the
-         consonant hard: הַבְּרִית has to stay "ha-be-rit" and not "ha-ve-rit".
+         NA (voiced) — 23,400 words, on top of the 16,271 after a forte:
+           after a dagesh forte    הַדְּבָרִים    ha-de-varim
+           after a long vowel      הָיְתָה        ha-ye-ta
+           second of two shevas    עַבְדְּךָ      av-de-kha
+           before the same letter  הִנְנִי        hi-ne-ni
+         NACH (left silent):
+           word-final              מֶלֶךְ         melekh   — ALWAYS nach, and
+             this is tested FIRST: ranking the long-vowel rule above it makes
+             לָךְ and בְּתוֹךְ vocal and puts a vowel on the end of the word.
+           everything else         יִשְׂרָאֵל, לִפְנֵי, יִהְיֶה
 
-         Word-initial בְּ/כְּ/לְ is deliberately NOT touched — that dagesh is
-         lene, its sheva is already sounded, and בְּרֵאשִׁית reads correctly.
-         The vowel before the letter is what tells the two apart.
-         10,430 words across the six volumes. THE DISPLAY NEVER MOVES; this
-         is only what Carmit is handed.
-         The previous letter's own dagesh is captured and put back: בַּגְּבוּלוֹת
-         opens on a bet with a dagesh lene, and dropping it turned the word
-         into "va-" instead of "ba-". */
-      parts[k] = parts[k].replace(
-        /([\u05B1-\u05BB\u05C7])(\u05BC?)([\u05D0-\u05EA])\u05B0\u05BC/g,
-        '$1$2$3\u05B6\u05BC');
+         The INITIAL sheva is deliberately left alone: it is na, but she
+         already sounds it — בְּרֵאשִׁית and כְּמוֹ read correctly — and the
+         bar here is that a rule earns its place by fixing something heard.
+
+         The dagesh always stays. On a בג"ד כפ"ת letter it is what keeps the
+         consonant hard (הַבְּרִית is "ha-be-rit"), and the PRECEDING letter's
+         own dagesh is preserved too — dropping it turned בַּגְּבוּלוֹת into
+         "va-ge-vu-lot" on the first attempt. THE DISPLAY NEVER MOVES. */
       /* A DOUBLED VAV IS NOT A SHURUK, AND SHE READS IT AS ONE. וּ is two
          things wearing the same two codepoints: the vowel /u/, and a vav
          carrying a dagesh forte — a doubled consonant /vv/. Carmit takes it
