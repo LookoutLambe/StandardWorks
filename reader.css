@@ -2530,6 +2530,12 @@ body.dark-mode #glossary-panel {
    Each volume now points at its own plain twin. Quiet text rather than a
    second gold button beside .landing-back — this is a way of reading the
    same chapters, not a way out of the reader. */
+/* A volume's prose, set on its landing rather than behind a tab. ot.html and
+   nt.html carried 142 and 141 English words between the whole page — for the
+   two volumes that are 70% of the site's 1,712 pages — so there was nothing
+   for a reader or a search engine to read about the largest thing here. It
+   reuses the .sw-front front-matter type, which already sets the measure. */
+.landing-about { margin-top: 34px; }
 .landing-plain { text-align: center; margin-top: 26px; direction: ltr; }
 .landing-plain a {
   font-family: 'David Libre', 'Georgia', serif;

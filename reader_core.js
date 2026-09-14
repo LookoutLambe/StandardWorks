@@ -127,6 +127,18 @@ function findBook(prefix) {
   }
   landingHtml += '<div class="landing-back"><a href="index.html">\u2190 Standard Works Home</a></div>';
   landingPanel.innerHTML = landingHtml;
+  // The volume's prose is real markup in the page, not a string in the READER
+  // config: it can be edited as prose, and a crawler that runs none of this
+  // still reads it. It sits outside the landing panel in the source because
+  // the innerHTML above would have destroyed it, and is moved in here —
+  // after the chapter grids, before the link to the plain pages.
+  var about = document.getElementById('volume-about');
+  if (about) {
+    var tail = landingPanel.querySelector('.landing-plain') ||
+               landingPanel.querySelector('.landing-back');
+    if (tail) landingPanel.insertBefore(about, tail);
+    else landingPanel.appendChild(about);
+  }
 
   // Create chapter panels dynamically for all 929 chapters
   BOOKS.forEach(function(book) {

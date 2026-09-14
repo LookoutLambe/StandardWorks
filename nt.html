@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="nav_engine.css?v=51">
 <link rel="stylesheet" href="site_chrome.css?v=74">
 <link rel="stylesheet" href="xref_study_panel.css?v=14">
-<link rel="stylesheet" href="reader.css?v=124">
+<link rel="stylesheet" href="reader.css?v=125">
 <style>
 *:focus-visible { outline: 2px solid var(--here); outline-offset: 2px; }
 .book-title { font-size: 2.4em; font-weight: 700; color: var(--header-bg); letter-spacing: 0.04em; margin-bottom: 2px; line-height: 1.2; }
@@ -489,6 +489,51 @@ body.dual-mode .colophon .word-unit .hw { font-size: 1em; }
   <div class="ornament" id="main-ornament" style="display:none">&#x2726; &#x2726; &#x2726;</div>
   <main id="main-content">
     <div class="chapter-panel" id="panel-landing" style="display:block;"></div>
+  <!-- The volume's prose. Real markup, not a string inside the READER config,
+       so it can be edited as prose and so it is readable without running any
+       JavaScript; reader_core.js moves it into the landing after the chapter
+       grids are built (innerHTML there would destroy it in place). -->
+  <div id="volume-about" class="sw-front tr-body landing-about">
+    <hr class="tr-rule tr-rule--narrow">
+    <h2 class="tr-title">About this volume</h2>
+
+    <p class="tr-p">
+      The Hebrew here is Franz Delitzsch&rsquo;s &mdash; his Hebrew New Testament
+      (1877&ndash;1892), long in the public domain. It is not a translation of mine.
+      Delitzsch occasionally renders a quotation from his own reading rather than the
+      verse in front of him; where that happens I have brought it back to the text being
+      quoted, and nowhere else.
+    </p>
+
+    <p class="tr-p">
+      Beneath every word is its transliteration and an English gloss: one gloss for one
+      Hebrew word, standing in Hebrew order. It does not read as English prose and it is
+      not meant to. The English prose is already in the column beside it &mdash; the King
+      James, verse by verse. What the line underneath shows you is what that column
+      cannot: which word is repeating, which words share a root, and where the English has
+      quietly made one word out of two.
+    </p>
+
+    <p class="tr-p">
+      Twenty-seven books, 260 chapters. Tap any word and its root opens &mdash; the root
+      itself, what it means, and how often it occurs in each volume. The bar at the foot of
+      the page switches the view: the interlinear, the Hebrew on its own, the Hebrew beside
+      the King James, transliteration, and the vowels on or off.
+    </p>
+
+    <p class="tr-p">
+      Where the New Testament quotes the Hebrew Bible, the Tanakh is in this same edition
+      and a mark on the verse will take you to it. That is the reason both are here: the
+      quotation and the verse it quotes, in the same script, a tap apart.
+    </p>
+
+    <p class="tr-muted">
+      For the preface to the whole edition &mdash; why it exists, whose Hebrew is in each
+      volume, and how to read an interlinear &mdash; see
+      <a href="index.html#to-the-reader" class="tr-link">To the Reader</a>.
+    </p>
+  </div>
+
   </main>
 </div>
 
@@ -559,7 +604,7 @@ window.READER = {
 </script>
 <!-- chapter summaries (251 KB eager) are now per-book in nt_headings/,
      fetched with the book by VolumeLoader. tools/build_heading_manifests.js -->
-<script src="reader_core.js?v=34"></script>
+<script src="reader_core.js?v=35"></script>
 <script src="jst_crossrefs.js?v=2"></script>
 
 <!-- Strong's lookup + Root glossary data -->
