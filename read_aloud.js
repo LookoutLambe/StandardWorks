@@ -1234,7 +1234,14 @@
   var following = null;                  /* the phrase currently being walked */
 
   function followByClock(spans, rate, token) {
-    var cps = speedFor(rate);
+    /* An unmeasured rate used to freeze on the phrase's first word, which
+       reads as a SKIPPED WORD: the rest of that phrase never lit and the next
+       phrase began. A provisional speed is better than none, because the
+       one-word step and the walk at the end mean a wrong guess can only make
+       the mark early or late — never make it miss a word. The guess is scaled
+       by the rate only because it has nothing better to go on; the first
+       measurement replaces it. */
+    var cps = speedFor(rate) || 12 * rate;
     mark(spans[0].el);                   /* the phrase has started, regardless */
 
     var last = Date.now(), chars = 0, i = 0;
@@ -1248,7 +1255,7 @@
       if (!state.paused) chars += (now - last) / 1000 * cps;
       last = now;
       if (ending) {
-        if (i >= spans.length - 1 || ++spent > 8) return;   /* done, or too far */
+        if (i >= spans.length - 1 || ++spent > 20) return;  /* done, or too far */
         step();
       } else if (cps && chars >= spans[i + 1 < spans.length ? i + 1 : i].start) {
         step();                          /* ONE word, never two */
@@ -1259,7 +1266,7 @@
     return {
       stop: function () { stopped = true; },
       /* let the walk finish the phrase during the silence after it */
-      finish: function () { if (cps) ending = true; else stopped = true; }
+      finish: function () { ending = true; }
     };
   }
 
@@ -1294,15 +1301,32 @@
       u.rate = RATE * (rate || 1);
       u.pitch = pitch || 1;
 
-      var began = Date.now(), held = false, unclock = null;
+      /* TIME THE VOICE, NOT THE QUEUE.
+         This measured from the speak() call, which on Android includes the
+         engine's startup latency before any sound — hundreds of milliseconds
+         on a short phrase. That silence was being counted as speaking, so
+         every phrase measured slower than the voice really is, the estimate
+         trailed, and the highlight sat one word behind. onstart is when the
+         sound begins, and it is both when the clock should start and what the
+         measurement should run from. */
+      var began = 0, held = false, unclock = null, walking = false;
       var wasPaused = function () { if (state.paused) held = true; };
       var holdWatch = setInterval(wasPaused, 100);
+
+      function walk() {
+        if (walking || CLOCK.boundaries || token !== state.token) return;
+        walking = true;
+        if (following) following.stop();      /* the last phrase lets go */
+        unclock = following = followByClock(spans, u.rate, token);
+      }
 
       function done() {
         clearInterval(holdWatch);
         if (unclock) unclock.finish();   /* read the phrase to its end */
-        /* Only a clean, unpaused run says anything about the voice's speed. */
-        if (!CLOCK.boundaries && !held) measureSpeed(text.length, Date.now() - began, u.rate);
+        /* Only a clean, unpaused run that we timed from the sound itself says
+           anything about the voice's speed. */
+        if (!CLOCK.boundaries && !held && began)
+          measureSpeed(text.length, Date.now() - began, u.rate);
         resolve();
       }
 
@@ -1317,17 +1341,18 @@
           }
         }
       };
+      /* The sound has begun: start the clock here, not when we asked. */
+      u.onstart = function () { began = Date.now(); walk(); };
       u.onend = done;
       u.onerror = done;
       speechSynthesis.speak(u);
 
-      /* Give a talkative engine the first word before falling back to the
-         clock, so the estimate never fights a real position. */
+      /* If the engine never says it started either, fall back to the queue —
+         late by whatever its latency is, but following rather than frozen. */
       if (!CLOCK.boundaries) setTimeout(function () {
-        if (CLOCK.boundaries || token !== state.token) return;
-        if (following) following.stop();      /* the last phrase lets go */
-        unclock = following = followByClock(spans, u.rate, token);
-      }, 260);
+        if (!began) began = Date.now();
+        walk();
+      }, 300);
     });
   }
 
