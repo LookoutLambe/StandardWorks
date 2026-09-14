@@ -404,6 +404,22 @@
     return out;
   }
 
+  /** strip the dagesh from a vav that is a doubled CONSONANT, not a shuruk.
+      Same test as ktivMale's: the vav is a consonant when the letter before
+      it carries a vowel of its own. Points elsewhere are untouched. */
+  function deGeminateVav(w) {
+    var u = units(w), out = '';
+    for (var i = 0; i < u.length; i++) {
+      var ch = u[i][0], m = u[i][1];
+      if (ch === '\u05D5' && m.indexOf(DAGESH) >= 0 &&
+          i > 0 && VOWEL.test(u[i - 1][1])) {
+        m = m.split(DAGESH).join('');
+      }
+      out += ch + m;
+    }
+    return out;
+  }
+
   function ktivMale(w) {
     var u = units(w), out = '';
     for (var i = 0; i < u.length; i++) {
@@ -492,6 +508,27 @@
          vowel, and writing it as the segol it sounds like is enough — וַיֶּהִי
          transcribes correctly where וַיְהִי does not. */
       parts[k] = parts[k].replace(/^\u05D5\u05B7\u05D9\u05B0/, '\u05D5\u05B7\u05D9\u05B6');
+      /* A DOUBLED VAV IS NOT A SHURUK, AND SHE READS IT AS ONE. וּ is two
+         things wearing the same two codepoints: the vowel /u/, and a vav
+         carrying a dagesh forte — a doubled consonant /vv/. Carmit takes it
+         for the vowel every time, so צִוָּה "he commanded" came out with a
+         /u/ in it instead of tsivah, and the whole family with it.
+
+         The two are told apart by the letter BEFORE, and this file already
+         trusts that test for ktiv male: a shuruk follows a letter with no
+         vowel of its own, because the shuruk IS that letter's vowel; a
+         geminated vav follows a letter whose syllable is already closed by a
+         vowel. So where the previous letter is vowelled, the dagesh comes off
+         FOR THE VOICE and the vav is left a plain consonant, which she reads
+         /v/ without hesitating. Word-initial וּ is untouched — there is no
+         previous letter — and so is every real shuruk.
+
+         1,954 tokens, 630 forms, all six volumes: צִוָּה 224, צִוִּיתִי 71,
+         מְצַוֶּה 54, עִוֵּר, יִוָּדַע, אִוֶּלֶת, וַיִּוָּעַץ. A table of
+         them would have been 630 entries and still short; this is the rule
+         they all follow. SAY_AS is consulted first, so a word the translator
+         has ruled on individually keeps that ruling. */
+      parts[k] = deGeminateVav(parts[k]);
       if (YAV.test(parts[k])) { parts[k] = ktivMale(parts[k]); continue; }
       if (endsInV(parts[k])) {
         /* A FINAL VAV IS A CONSONANT AND UNPOINTING IS NOT ENOUGH TO SAY SO.
