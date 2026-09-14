@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.sefermormon.standardworks",
+      "sha256_cert_fingerprints": ["0F:7B:A1:2E:D3:45:43:B2:92:CC:74:07:D3:B8:DB:43:77:70:63:3D:37:C0:C7:BE:9B:39:85:7F:14:FC:90:96"]
+    }
+  }
+]
