@@ -703,6 +703,38 @@ html.sw-boot #main-content, html.sw-boot .page { transition: none !important; }
 .hlw-hw { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--ink); direction: rtl; white-space: nowrap; line-height: 1.3; }
 .hlw-tl { font-size: 0.72em; color: var(--ink-light); font-style: italic; margin-top: 2px; direction: ltr; }
 .hlw-gl { font-size: 0.85em; color: var(--ink); margin-top: 2px; direction: ltr; }
+/* The volume's name in English, under the title set interlinear. This page's
+   only <h1> lives in #book-header, which the landing HIDES (selfTitled), so
+   the URL Google actually indexes carried no heading at all — the strongest
+   on-page signal after the title tag, on the page that should own the query
+   "hebrew book of mormon". This is that h1, set where the home page sets the
+   same line, and it is why the kicker under it dropped the word "Hebrew":
+   the two lines were saying it twice. The nbsp before the mid-dot keeps a
+   narrow screen from opening line two with a bare separator. */
+.hero-lis-name {
+  font-family: 'David Libre', serif;
+  font-size: clamp(1.05rem, 2.8vw, 1.35rem);
+  font-weight: 600;
+  color: var(--ink);
+  direction: ltr;
+  unicode-bidi: isolate;
+  letter-spacing: 0.015em;
+  line-height: 1.25;
+  margin: 18px 0 0;
+}
+/* Each half wraps as a WHOLE. This hero's column is narrower than the home
+   page's (30px side padding inside 700px), so at 375px the line broke
+   between "Standard" and "Works"; the only break allowed is now the one
+   between the two phrases. */
+.hero-lis-name > span { white-space: nowrap; }
+.hero-lis-kicker {
+  font-family: 'David Libre', serif;
+  font-size: 0.95em;
+  color: var(--ink-light);
+  letter-spacing: 0.1em;
+  direction: ltr;
+  margin-top: 6px;
+}
 /* Landing contents — the D&C-style chapter grid */
 .landing-sections { max-width: 600px; margin: 0 auto 30px; padding: 0 12px; }
 .landing-section-group { margin-bottom: 16px; }
@@ -1769,7 +1801,8 @@ body.dual-mode .chapter-summary { display: block; }
           <span class="hlw"><span class="hlw-hw" lang="he">יֵשׁוּעַ</span><span class="hlw-tl">yeshua</span><span class="hlw-gl">of Jesus</span></span>
           <span class="hlw"><span class="hlw-hw" lang="he">הַמָּשִׁיחַ</span><span class="hlw-tl">hammashiach</span><span class="hlw-gl">Christ</span></span>
         </div>
-        <div style="font-family:'David Libre',serif;font-size:0.95em;color:var(--ink-light);letter-spacing:0.1em;direction:ltr;margin-top:16px">HEBREW INTERLINEAR</div>
+        <h1 class="hero-lis-name"><span>Hebrew Book of Mormon&nbsp;·</span> <span>Standard Works</span></h1>
+        <div class="hero-lis-kicker">INTERLINEAR EDITION</div>
       </div>
       <div style="margin:24px 0 4px">
         <button id="start-reading-btn" onclick="startReading()">Start Reading — 1 Nephi 1 →</button>
