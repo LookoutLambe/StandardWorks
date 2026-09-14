@@ -2536,15 +2536,6 @@ body.dark-mode #glossary-panel {
    for a reader or a search engine to read about the largest thing here. It
    reuses the .sw-front front-matter type, which already sets the measure. */
 .landing-about { margin-top: 34px; }
-
-/* Shown only inside the app. html.sw-in-app is set by the page itself when it
-   is loaded over file://, which is how the app serves the bundled www. An App
-   Store link is meaningless to a web visitor, and a "rate this" line on the
-   website would be noise; in the app it is the one place a reader who wants to
-   leave a review can find one, since Apple forbids putting the system prompt
-   behind a button. */
-.sw-app-only { display: none; }
-html.sw-in-app .sw-app-only { display: inline; }
 .landing-plain { text-align: center; margin-top: 26px; direction: ltr; }
 .landing-plain a {
   font-family: 'David Libre', 'Georgia', serif;
