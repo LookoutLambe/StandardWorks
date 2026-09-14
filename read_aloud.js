@@ -616,6 +616,23 @@
           ? b.replace(/\u05D0\u05DC\u05D4\u05D9\u05DD$/, '\u05D0\u05DC\u05D5\u05D4\u05D9\u05DD')
           : w;
       })(parts[k]);
+      /* פְּנֵי IS "p'nei" — A HARD P (translator, 2026-09-14: "the p is a bit
+         soft... penei its pronounced as a vocal kinda feels off"). This one
+         does NOT take the general remedy. Everywhere else the dagesh comes
+         off and the sheva becomes a segol; here the dagesh STAYS, because it
+         is what keeps the p hard, and the sheva becomes a TSERE. He picked
+         פֵּנֵי by ear over both the corpus spelling and the segol.
+
+         It runs BEFORE voiceShevaNa on purpose: once the sheva is a tsere
+         there is nothing left for that rule to voice, so the two cannot
+         disagree about the same letter. עַל־פְּנֵי reaches it because the
+         maqqef is split first and the pe is then word-initial — which the
+         general rule skips, so without this the commonest form of the word
+         would never have been touched at all.
+
+         20 spellings, 1,110 tokens: פְּנֵי, מִפְּנֵי, מִפְּנֵיהֶם, פְּנֵיכֶם. */
+      parts[k] = parts[k].replace(/\u05E4\u05B0\u05BC\u05E0\u05B5/g,
+                                  '\u05E4\u05BC\u05B5\u05E0\u05B5');
       parts[k] = voiceShevaNa(parts[k]);
       /* THE QAMATS QATAN IS AN /o/ AND SHE READS IT AS AN /a/. This corpus
          marks it with the explicit U+05C7 rather than leaving it to be

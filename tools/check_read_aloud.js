@@ -121,7 +121,7 @@ const CASES = [
   ['הַגְּדוֹלָה', 'הַגֶדוֹלָה', 'gimel: same — it cannot spirantize'],
   ['הַנְּבִיאִים', 'הַנֶבִיאִים', 'nun: a forte on a non-bgdkpt letter is pure gemination'],
   ['הַבְּרִית', 'הַבֶרִית', 'bet LOSES its dagesh and stays hard — "ha-be-rit", heard and confirmed'],
-  ['מִפְּנֵי', 'מִפֶנֵי', 'pe LOSES its dagesh too — the spirantizing fear was never tested and was wrong'],
+  ['מִפְּרִי', 'מִפֶרִי', 'pe LOSES its dagesh and stays hard — מִפְּנֵי cannot hold this case any more, it is the פֵּנֵי exception now'],
   /* THE NAME IS SPOKEN CORRECTLY OR NOT AT ALL (translator, 2026-09-14:
      "its Elohim! be respectful to the name", "even Carmit needs to be
      respectful by speaking it correctly"). Pointed, she sometimes said
@@ -139,6 +139,13 @@ const CASES = [
      corpus's own pointing. Chosen by ear from four rendered candidates. */
   ['\u05D5\u05B7\u05D9\u05B0\u05D4\u05B4\u05D9', '\u05D5\u05B7\u05D9\u05B0\u05D4\u05B4\u05D9', 'vay-hi — UNTOUCHED; a segol here says "vay-yehi"'],
   ['\u05D5\u05B7\u05D9\u05B0\u05D4\u05B4\u05D9\u05BE\u05E2\u05B6\u05E8\u05B6\u05D1', '\u05D5\u05B7\u05D9\u05B0\u05D4\u05B4\u05D9 \u05E2\u05B6\u05E8\u05B6\u05D1', 'the maqqef form reaches the exception too'],
+  /* פְּנֵי IS THE EXCEPTION TO THE EXCEPTION. Everywhere else the dagesh comes
+     off and the sheva becomes a SEGOL; here the dagesh STAYS (it keeps the p
+     hard) and the sheva becomes a TSERE. Chosen by ear. It must run BEFORE
+     voiceShevaNa, or that rule would voice the same sheva its own way. */
+  ['\u05E4\u05B0\u05BC\u05E0\u05B5\u05D9', '\u05E4\u05BC\u05B5\u05E0\u05B5\u05D9', 'p\u2019nei \u2014 hard p, tsere, dagesh KEPT'],
+  ['\u05E2\u05B7\u05DC\u05BE\u05E4\u05B0\u05BC\u05E0\u05B5\u05D9', '\u05E2\u05B7\u05DC \u05E4\u05BC\u05B5\u05E0\u05B5\u05D9', 'the maqqef form: split first, so the pe is word-initial and only THIS rule reaches it'],
+  ['\u05DE\u05B4\u05E4\u05B0\u05BC\u05E0\u05B5\u05D9', '\u05DE\u05B4\u05E4\u05BC\u05B5\u05E0\u05B5\u05D9', 'the prefixed form takes it too, not the general segol'],
   /* the other vocal-sheva classes (2026-09-14) */
   ['הָיְתָה', 'הָיֶתָה', 'after a LONG vowel: "ha-ye-ta", not "hayta"'],
   ['שָׁמְעוּ', 'שָׁמֶעוּ', 'after a long vowel: "sha-me-u"'],
