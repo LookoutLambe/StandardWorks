@@ -562,6 +562,30 @@
          חׇכְמָה came out "cho-che-ma" and הׇרְגֵהוּ "ho-re-gehu" — both
          caught by tools/check_read_aloud.js, which is what that table
          is for. */
+      /* ELOHIM IS SPELLED THE MODERN WAY FOR THE VOICE (translator,
+         2026-09-14: "it needs to always say elohim never eloyam"). Pointed,
+         she sometimes reads אֱלֹהִים as "elo-YAM" — the he lost and the yod
+         turned into a glide — and sometimes not; it depends on what sits
+         beside it, and no amount of repointing moved her off it.
+
+         So this is the remedy the Name and כׇּל already use: give her a
+         DIFFERENT SPELLING to read, one she has in her lexicon. אלוהים is
+         how modern Hebrew writes the word, it is unambiguous — nothing else
+         has that skeleton — and she says it. The prefix rides along:
+         לֵאלֹהִים -> לאלוהים, מֵאֱלֹהִים -> מאלוהים, וּבֵאלֹהִים -> ובאלוהים.
+
+         Unpointing is safe HERE and is not safe in general: it works because
+         there is exactly one word with these consonants. 4,502 tokens in 32
+         spellings across the six volumes. THE DISPLAY NEVER MOVES. */
+      parts[k] = (function (w) {
+        var b = w.replace(/[\u0591-\u05C7]/g, '');          /* points and the sof pasuq */
+        /* Any prefix at all rides along — the corpus has ה the article, ש the
+           relative, and stacks of them: וְהָאֱלֹהִים, וּמֵהָאֱלֹהִים,
+           שֶׁלֵּאלֹהִים. Enumerating prefixes missed a third of the tokens. */
+        return /\u05D0\u05DC\u05D4\u05D9\u05DD$/.test(b)
+          ? b.replace(/\u05D0\u05DC\u05D4\u05D9\u05DD$/, '\u05D0\u05DC\u05D5\u05D4\u05D9\u05DD')
+          : w;
+      })(parts[k]);
       parts[k] = voiceShevaNa(parts[k]);
       /* THE QAMATS QATAN IS AN /o/ AND SHE READS IT AS AN /a/. This corpus
          marks it with the explicit U+05C7 rather than leaving it to be

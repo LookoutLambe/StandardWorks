@@ -64,7 +64,7 @@ if (typeof spoken !== 'function') {
 /* ── what the reader heard, and what fixed it ───────────────────────────── */
 const CASES = [
   ['יְהוָה',      'אֲדֹנָי',   'the Name carries Adonai\'s vowels; read literally she says "Yehova", the medieval misreading'],
-  ['יְהוִה',      'אֱלֹהִים',  'where the Masoretes pointed it with Elohim\'s vowels instead'],
+  ['יְהוִה',      'אלוהים',  'where the Masoretes pointed it with Elohim\'s vowels instead' + ' — and then spelled for the voice like every Elohim'],
   ['כׇּל',        'כול',      '"col yamaiu its yamav" — kol, and the qamats qatan is not enough on its own'],
   ['כָּל',        'כול',      'the same word spelled with a plain qamats'],
   ['חׇכְמָה',      'חֹכְמָה',   'U+05C7 is a codepoint she does not know: "chachma" for chochmah'],
@@ -116,6 +116,17 @@ const CASES = [
   ['הַנְּבִיאִים', 'הַנֶבִיאִים', 'nun: a forte on a non-bgdkpt letter is pure gemination'],
   ['הַבְּרִית', 'הַבֶּרִית', 'BET KEEPS ITS DAGESH — without it "ha-be-rit" becomes "ha-ve-rit"'],
   ['מִפְּנֵי', 'מִפֶּנֵי', 'PE KEEPS ITS DAGESH — it would go to /f/'],
+  /* THE NAME IS SPOKEN CORRECTLY OR NOT AT ALL (translator, 2026-09-14:
+     "its Elohim! be respectful to the name", "even Carmit needs to be
+     respectful by speaking it correctly"). Pointed, she sometimes said
+     "elo-YAM". She is handed the modern spelling instead, which she has in
+     her lexicon and cannot misread. Every prefix rides along; 4,502 tokens
+     in 32 spellings. The DISPLAY keeps its pointing. */
+  ['אֱלֹהִים', 'אלוהים', 'Elohim — spoken as modern אלוהים'],
+  ['הָאֱלֹהִים', 'האלוהים', 'ha-Elohim — the article rides along (1,256 tokens)'],
+  ['וּמֵהָאֱלֹהִים', 'ומהאלוהים', 'stacked prefixes ride along too'],
+  ['אֱלֹהֵינוּ', 'אֱלֹהֵינוּ', 'NOT touched — Eloheinu is a different word'],
+  ['אֵלִים', 'אֵלִים', 'NOT touched — elim, not Elohim'],
   /* the other vocal-sheva classes (2026-09-14) */
   ['הָיְתָה', 'הָיֶתָה', 'after a LONG vowel: "ha-ye-ta", not "hayta"'],
   ['שָׁמְעוּ', 'שָׁמֶעוּ', 'after a long vowel: "sha-me-u"'],
