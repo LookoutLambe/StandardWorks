@@ -1,0 +1,17 @@
+# Bubblewrap regenerates the whole Android project from twa-manifest.json, so
+# none of it belongs in the repo. `bubblewrap build` rebuilds all of this.
+node_modules/
+package-lock.json
+app/
+*.log
+
+# THE UPLOAD KEY NEVER GOES IN A PUBLIC REPO.
+# It lives at ~/sefermormon-release.keystore (alias: sefermormon) and is the
+# only thing that lets you ship an update to the existing Play listing.
+*.keystore
+*.jks
+
+# Build outputs.
+*.aab
+*.apk
+*.idsig

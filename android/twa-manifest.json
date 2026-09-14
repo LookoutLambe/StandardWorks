@@ -1,0 +1,66 @@
+{
+  "packageId": "com.sefermormon.standardworks",
+  "host": "sefermormon.com",
+  "name": "Sefer Mormon: Standard Works",
+  "launcherName": "Sefer Mormon",
+  "display": "standalone",
+  "orientation": "any",
+  "themeColor": "#1B2A41",
+  "themeColorDark": "#1B2A41",
+  "navigationColor": "#1B2A41",
+  "navigationColorDark": "#1B2A41",
+  "navigationDividerColor": "#00000000",
+  "navigationDividerColorDark": "#00000000",
+  "backgroundColor": "#1B2A41",
+  "enableNotifications": false,
+  "startUrl": "/index.html",
+  "iconUrl": "https://sefermormon.com/icons/icon-512.png?v=3",
+  "maskableIconUrl": "https://sefermormon.com/icons/icon-maskable.png?v=3",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "~/sefermormon-release.keystore",
+    "alias": "sefermormon"
+  },
+  "appVersionName": "1.0.0",
+  "appVersionCode": 1,
+  "shellVersion": "1.0.0",
+  "webManifestUrl": "https://sefermormon.com/manifest.json",
+  "fallbackType": "customtabs",
+  "features": {},
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "fullScopeUrl": "https://sefermormon.com/",
+  "minSdkVersion": 23,
+  "shortcuts": [
+    {
+      "name": "בית — כתבי הקודש",
+      "shortName": "בית",
+      "url": "/index.html",
+      "chosenIconUrl": "https://sefermormon.com/icons/icon-192.png?v=3"
+    },
+    {
+      "name": "תנ״ך",
+      "shortName": "תנ״ך",
+      "url": "/ot.html",
+      "chosenIconUrl": "https://sefermormon.com/icons/icon-192.png?v=3"
+    },
+    {
+      "name": "ברית חדשה",
+      "shortName": "ב״ח",
+      "url": "/nt.html",
+      "chosenIconUrl": "https://sefermormon.com/icons/icon-192.png?v=3"
+    },
+    {
+      "name": "ספר מורמון",
+      "shortName": "סו״מ",
+      "url": "/bom/bom.html",
+      "chosenIconUrl": "https://sefermormon.com/icons/icon-192.png?v=3"
+    }
+  ],
+  "generatorApp": "bubblewrap-cli",
+  "appVersion": "1.0.0"
+}
