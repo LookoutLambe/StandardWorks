@@ -301,6 +301,23 @@
      by being heard: כׇּל read as "cli" pointed, and reads as "kol" spelled
      כול. That is the whole bar. */
   var SAY_AS = {
+    /* מְצַוֶּה IS "mitsveh" (translator's ruling, 2026-09-14). She was reading
+       it "mitzawe" — the dagesh in the vav taken as a vowel, so the word came
+       apart into three syllables and the /v/ turned into a /w/.
+
+       It cannot be fixed by unpointing it. ktivMale() turns מְצַוֶּה into
+       מצווה — and it turns מִצְוָה, the NOUN, into מצווה as well: stripped of
+       their points the participle and the commandment are the same string,
+       and nothing in modern spelling tells them apart. So the word is
+       respelled for the voice instead, closing the tsade's syllable with a
+       sheva and leaving the vav a plain consonant before the segol. Every
+       point in the corpus stays where it is; only what Carmit hears changes.
+
+       The prefixed form needs its own entry — SAY_AS matches a whole token. */
+    '\u05DE\u05B0\u05E6\u05B7\u05D5\u05B6\u05BC\u05D4':
+      '\u05DE\u05B4\u05E6\u05B0\u05D5\u05B6\u05D4',                 /* מְצַוֶּה -> מִצְוֶה */
+    '\u05D5\u05BC\u05DE\u05B0\u05E6\u05B7\u05D5\u05B6\u05BC\u05D4':
+      '\u05D5\u05BC\u05DE\u05B4\u05E6\u05B0\u05D5\u05B6\u05D4',   /* וּמְצַוֶּה -> וּמִצְוֶה */
     '\u05DB\u05C7\u05BC\u05DC': '\u05DB\u05D5\u05DC',   /* כׇּל -> כול */
     '\u05DB\u05B8\u05BC\u05DC': '\u05DB\u05D5\u05DC',   /* כָּל -> כול */
 
