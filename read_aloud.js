@@ -1218,24 +1218,49 @@
 
   function speedFor(rate) { return CLOCK.at[rate.toFixed(2)] || 0; }
 
-  /** follow the reading by the clock; returns the function that stops it */
+  /* ONE WORD AT A TIME, ALWAYS, SO A SKIP CANNOT HAPPEN.
+     The estimate is never exact, and the first version let it jump: when it
+     lagged, the closing words of a phrase were never lit and the highlight
+     leapt into the next phrase. Tuning the speed does not fix that — no
+     estimate is exact — so the STEP is what changes. The mark advances by a
+     single word per tick however far the clock thinks the voice has gone.
+     Running ahead now costs a small lag that closes itself; it can no longer
+     cost a skipped word.
+
+     And when the utterance ends the phrase is walked to its end rather than
+     abandoned, so the last words are read too. That walk is capped: if more
+     than a few words remain the estimate was badly wrong, and racing through
+     them would look worse than stopping. */
+  var following = null;                  /* the phrase currently being walked */
+
   function followByClock(spans, rate, token) {
     var cps = speedFor(rate);
-    mark(spans[0].el);                    /* the phrase has started, regardless */
-    if (!cps) return function () {};      /* unmeasured: one word, no guessing */
+    mark(spans[0].el);                   /* the phrase has started, regardless */
 
-    var last = Date.now(), chars = 0, i = 0, stopped = false;
+    var last = Date.now(), chars = 0, i = 0;
+    var stopped = false, ending = false, spent = 0;
+
+    function step() { if (i < spans.length - 1) { i++; mark(spans[i].el); } }
+
     (function tick() {
       if (stopped || token !== state.token || CLOCK.boundaries) return;
       var now = Date.now();
       if (!state.paused) chars += (now - last) / 1000 * cps;
       last = now;
-      var n = i;
-      while (n < spans.length - 1 && chars >= spans[n + 1].start) n++;
-      if (n !== i) { i = n; mark(spans[i].el); }
-      setTimeout(tick, 60);
+      if (ending) {
+        if (i >= spans.length - 1 || ++spent > 8) return;   /* done, or too far */
+        step();
+      } else if (cps && chars >= spans[i + 1 < spans.length ? i + 1 : i].start) {
+        step();                          /* ONE word, never two */
+      }
+      setTimeout(tick, 55);
     })();
-    return function () { stopped = true; };
+
+    return {
+      stop: function () { stopped = true; },
+      /* let the walk finish the phrase during the silence after it */
+      finish: function () { if (cps) ending = true; else stopped = true; }
+    };
   }
 
   /* What the voice actually did, blended into what we thought it would do.
@@ -1275,7 +1300,7 @@
 
       function done() {
         clearInterval(holdWatch);
-        if (unclock) unclock();
+        if (unclock) unclock.finish();   /* read the phrase to its end */
         /* Only a clean, unpaused run says anything about the voice's speed. */
         if (!CLOCK.boundaries && !held) measureSpeed(text.length, Date.now() - began, u.rate);
         resolve();
@@ -1283,7 +1308,7 @@
 
       u.onboundary = function (e) {
         CLOCK.boundaries = true;               /* it talks: never guess again */
-        if (unclock) { unclock(); unclock = null; }
+        if (unclock) { unclock.stop(); unclock = null; }
         if (token !== state.token) return;
         for (var i = 0; i < spans.length; i++) {
           if (e.charIndex >= spans[i].start && e.charIndex < spans[i].end) {
@@ -1300,7 +1325,8 @@
          clock, so the estimate never fights a real position. */
       if (!CLOCK.boundaries) setTimeout(function () {
         if (CLOCK.boundaries || token !== state.token) return;
-        unclock = followByClock(spans, u.rate, token);
+        if (following) following.stop();      /* the last phrase lets go */
+        unclock = following = followByClock(spans, u.rate, token);
       }, 260);
     });
   }
