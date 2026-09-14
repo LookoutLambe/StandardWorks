@@ -104,18 +104,29 @@ const CASES = [
   ['הׇרְגֵהוּ',    'הֹרְגֵהוּ',  'slay him, 1 Nephi 4:12 — the one imperative listed by hand'],
   ['שְׂרָיָה',     'שְׂרָיָע',   '"its pronouncing sariah as sa-rai-yaha thats bad" — the he becomes an ayin'],
   ['חַסְדּוֹ',     'חַסְדּוֹ',   'NOT touched — a vav with a holam of its own is a vowel, not a final consonant'],
+  /* THE DAGESH COMES OFF FOR THE VOICE on letters that cannot spirantize.
+     Proved by rendering, not by reading the string: with a dagesh on the
+     letter Carmit returns audio byte-identical to the unpointed word, so
+     writing the segol alone was INERT. And she renders דָּבָר/דָבָר,
+     גָּדוֹל/גָדוֹל, תּוֹרָה/תוֹרָה byte-identical — ג ד ת do not alternate in
+     modern Hebrew — while בַּיִת, כֶּסֶף and פֶּה all differ, which is why
+     those three keep it. `say -v Carmit -f w.txt -o w.aiff`, compare sizes. */
+  ['הַדְּבָרִים', 'הַדֶבָרִים', 'dalet: sheva voiced AND the dagesh dropped — "ha-de-varim"'],
+  ['הַגְּדוֹלָה', 'הַגֶדוֹלָה', 'gimel: same — it cannot spirantize'],
+  ['הַנְּבִיאִים', 'הַנֶבִיאִים', 'nun: a forte on a non-bgdkpt letter is pure gemination'],
+  ['הַבְּרִית', 'הַבֶּרִית', 'BET KEEPS ITS DAGESH — without it "ha-be-rit" becomes "ha-ve-rit"'],
+  ['מִפְּנֵי', 'מִפֶּנֵי', 'PE KEEPS ITS DAGESH — it would go to /f/'],
   /* the other vocal-sheva classes (2026-09-14) */
   ['הָיְתָה', 'הָיֶתָה', 'after a LONG vowel: "ha-ye-ta", not "hayta"'],
   ['שָׁמְעוּ', 'שָׁמֶעוּ', 'after a long vowel: "sha-me-u"'],
-  ['עַבְדְּךָ', 'עַבְדֶּךָ', 'SECOND of two shevas is the vocal one: "av-de-kha"'],
+  ['עַבְדְּךָ', 'עַבְדֶךָ', 'SECOND of two shevas is the vocal one: "av-de-kha"'],
   ['הִנְנִי', 'הִנֶנִי', 'before the SAME letter: "hi-ne-ni"'],
   ['יִשְׂרָאֵל', 'יִשְׂרָאֵל', 'NOT touched — a plain nach: "yis-ra-el", never "yi-se-ra-el"'],
   ['לִפְנֵי', 'לִפְנֵי', 'NOT touched — nach after a short vowel: "lif-nei"'],
   ['לָךְ', 'לָךְ', 'NOT touched — a word-FINAL sheva is always nach, long vowel or not'],
   /* the sheva after a dagesh forte is NA and she swallowed it (2026-09-14) */
-  ['בַּגְּבוּלוֹת', 'בַּגֶּבוּלוֹת', 'in the borders — "ba-ge-vu-lot"; she read it "bagvulot", and the bet must KEEP its dagesh'],
-  ['הַדְּבָרִים', 'הַדֶּבָרִים', 'the words — the commonest of the class, 1,141 tokens'],
-  ['הַשְּׁבִיעִי', 'הַשֶּׁבִיעִי', 'the seventh — the shin-dot has to survive the substitution'],
+  ['בַּגְּבוּלוֹת', 'בַּגֶבוּלוֹת', 'in the borders — "ba-ge-vu-lot"; she read it "bagvulot", and the bet must KEEP its dagesh'],
+  ['הַשְּׁבִיעִי', 'הַשֶׁבִיעִי', 'the seventh — the shin-dot has to survive the substitution'],
   ['בְּרֵאשִׁית', 'בְּרֵאשִׁית', 'NOT touched — a word-initial dagesh is LENE and its sheva already sounds'],
   ['כְּמוֹ', 'כְּמוֹ', 'NOT touched — same reason: no vowel before it, so the dagesh is lene'],
 ];

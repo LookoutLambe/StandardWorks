@@ -513,11 +513,29 @@
       else if (prev && _LONG.test(prev.marks.replace(/\u05BC/g, ''))) na = true; /* long vowel */
       if (na) edits.push(cur);
     }
+    /* THE DAGESH COMES OFF FOR THE VOICE — but only where the letter cannot
+       spirantize. Writing the segol is not enough on its own: with a dagesh
+       on the letter Carmit renders audio byte-identical to the unpointed
+       word, so הַדֶּבָרִים and הַדְּבָרִים and הדברים are all "hadvarim".
+       Take the dagesh off and she says it: הַדֶבָרִים is "ha-de-varim"
+       (translator, 2026-09-14, choosing it by ear from a rendered pair).
+
+       ONLY ב, כ and פ spirantize in modern Hebrew. On those the dagesh is
+       what keeps the consonant hard, and dropping it would turn הַבְּרִית
+       into "ha-ve-rit" — so they keep it, and their sheva stays unvoiced
+       until there is a spelling that buys both. ג, ד and ת are always hard
+       for an Israeli speaker, and on every other letter the forte is pure
+       gemination, which modern Hebrew does not pronounce anyway.
+
+       THE DISPLAY NEVER MOVES ("you cannot take out the dagesh from the
+       rendering though that needs to be there"). This is spoken(): a string
+       built for the synthesiser. The corpus and the page keep every point. */
+    var SPIRANTIZES = '\u05D1\u05DB\u05E4';                  /* bet kaf pe */
     for (n = edits.length - 1; n >= 0; n--) {                   /* right to left: indices hold */
       cur = edits[n];
-      out = out.slice(0, cur.at + 1) +
-            cur.marks.replace('\u05B0', '\u05B6') +
-            out.slice(cur.end);
+      var marks = cur.marks.replace('\u05B0', '\u05B6');
+      if (SPIRANTIZES.indexOf(cur.c) < 0) marks = marks.replace('\u05BC', '');
+      out = out.slice(0, cur.at + 1) + marks + out.slice(cur.end);
     }
     return out;
   }
