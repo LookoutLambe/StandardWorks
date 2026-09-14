@@ -29,6 +29,48 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from build_bom_breaks import (array_bodies, breaks_for, silent, gem)
 
+# ---- the Masoretes' veto -------------------------------------------------
+# An English comma does not always fall where a Hebrew phrase does. The
+# printed column reads "without form, and void" and the extraction carries
+# that comma across, but תֹהוּ וָבֹהוּ is one breath: the Masoretes break AFTER
+# וָבֹהוּ, never between the two. tools/mt_bound_pairs.json lists every
+# adjacent pair the Tanakh attests and never once splits; a break that would
+# split one of them is dropped. Rebuild it with tools/build_mt_bound_pairs.py.
+_POINTS = re.compile(u'[\u0591-\u05C7]')
+
+# ---- and where the text IS the Tanakh's, its phrasing comes with it -------
+# tools/build_mt_parallels.py finds every verse running parallel to an MT
+# verse, aligns the two word sequences and carries the te'amim's breaks over.
+# Those outrank the English-derived extraction for that verse entirely: the
+# printed column's commas are a second-hand answer where the first-hand one
+# survives. Moses 2-8 retells Genesis 1-6, much of it word for word.
+_PARALLEL = None
+def mt_parallels():
+    global _PARALLEL
+    if _PARALLEL is None:
+        f = os.path.join(HERE, 'mt_parallel_breaks.json')
+        _PARALLEL = json.load(io.open(f, encoding='utf-8')) if os.path.exists(f) else {}
+    return _PARALLEL
+_BOUND = None
+def bound_pairs():
+    global _BOUND
+    if _BOUND is None:
+        f = os.path.join(HERE, 'mt_bound_pairs.json')
+        _BOUND = json.load(io.open(f, encoding='utf-8')) if os.path.exists(f) else {}
+    return _BOUND
+
+def drop_split_pairs(br, speak):
+    """Remove any break that would split a pair the Masoretes never split."""
+    B, out, cut = bound_pairs(), [], 0
+    for i, c in br:
+        if 0 <= i < len(speak) - 1:
+            k = _POINTS.sub('', speak[i][0]) + '\t' + _POINTS.sub('', speak[i+1][0])
+            if k in B:
+                cut += 1
+                continue
+        out.append((i, c))
+    return out, cut
+
 ROOT = os.path.dirname(HERE)
 
 
@@ -104,6 +146,8 @@ def build(vol):
     for (b, c, v) in EN:
         idx.setdefault(b, {}).setdefault(c, set()).add(v)
     table, ask, n, noeng, plain = {}, {}, 0, 0, 0
+    vetoed = [0]
+    fromMT = [0]
     for key, ref, toks in verses(vol, bk, idx):
         speak = [t for t in toks if not silent(t[0])]
         if len(speak) < 3:
@@ -113,7 +157,14 @@ def build(vol):
         if not ent:
             noeng += 1
         if ent and ent.rstrip().endswith('?'): ask[key] = 1
+        mt = mt_parallels().get(key)
+        if mt:
+            table[key] = [list(x) for x in mt]
+            fromMT[0] += 1
+            continue
         br = breaks_for(toks, ent)
+        br, cut = drop_split_pairs(br, speak)
+        vetoed[0] += cut
         if br:
             table[key] = [[i, c] for i, c in br]
         else:
@@ -133,6 +184,10 @@ def build(vol):
           % (vol, format(n, ','), format(len(table), ','), 100.0 * len(table) / max(n, 1),
              format(sum(len(x) for x in table.values()), ','), format(noeng, ','),
              format(os.path.getsize(path) // 1024, ',')))
+    print('     %s verse(s) phrased by the Masoretes themselves (MT parallel)'
+          % format(fromMT[0], ','))
+    print('     %s break(s) vetoed: they would have split a pair the Masoretes never split'
+          % format(vetoed[0], ','))
 
 
 if __name__ == '__main__':
