@@ -14,8 +14,15 @@
 <link rel="stylesheet" href="nav_engine.css?v=51">
 <link rel="stylesheet" href="site_chrome.css?v=74">
 <link rel="stylesheet" href="reader.css?v=125">
+<style>
+/* These two rules were sitting BARE in <head>. Character data there ends
+   the head element, so everything after them — the canonical link, the
+   title and the meta description — was parsed into the BODY, where Google
+   ignores a canonical outright, and the rules themselves rendered as
+   visible text on the page. */
 html.sw-in-app .landing-app-store { display: none; }
 html.sw-in-app .landing-update-note { display: none; }
+</style>
 <link rel="canonical" id="canonical-link" href="https://sefermormon.com/hebrew-study.html">
 <title>Reading Hebrew — the letters, the vowels and the marks</title>
 <meta name="description" content="A short guide to reading pointed Biblical Hebrew: the aleph-bet, the vowel signs, and the marks you meet in an interlinear.">

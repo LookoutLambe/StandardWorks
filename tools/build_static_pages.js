@@ -459,7 +459,8 @@ function main() {
   fs.mkdirSync(OUT, { recursive: true });
   fs.writeFileSync(path.join(OUT, 'static.css'), CSS);
   const urls = [SITE, SITE + 'bom/bom.html', SITE + 'ot.html', SITE + 'nt.html', SITE + 'dc.html', SITE + 'pgp.html', SITE + 'jst.html',
-    SITE + 'hebrew-study.html', SITE + 'vocabulary.html', SITE + 'dictionary.html'];
+    SITE + 'hebrew-study.html', SITE + 'vocabulary.html', SITE + 'dictionary.html',
+    SITE + 'he.html'];
   const summary = [];
   for (const vol of VOLUMES) {
     try { summary.push(buildVolume(vol, urls)); }
