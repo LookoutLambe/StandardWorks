@@ -187,7 +187,7 @@ const volName = vol => vol.name || (vol.en + ' in Hebrew');
 const VOLUMES = [
   { key: 'ot', slug: 'old-testament', en: 'Old Testament', he: 'תנ״ך', page: 'ot.html', verseDir: 'ot_verses',
     books: () => otNtBooks('ot.html'), english: ['ot_english.js', '_otEnglishData'],   // KJV since 2026-09-11 (tools/build_ot_english_kjv.py)
-    blurb: 'The Tanakh in the Masoretic Text, every word glossed in English, beside the King James text.',
+    blurb: 'The Old Testament in the Masoretic Text, every word glossed in English, beside the King James text.',
     hebrewNote: 'Masoretic Text' },
   { key: 'nt', slug: 'new-testament', en: 'New Testament', he: 'הברית החדשה', page: 'nt.html', verseDir: 'nt_verses',
     books: () => otNtBooks('nt.html'), english: ['nt_english.js', '_ntEnglishData'],
