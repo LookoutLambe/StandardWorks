@@ -79,6 +79,8 @@ const CASES = [
   ['צִוִּיתִי',     'צִוִיתִי',   'the same gemination, 71 tokens'],
   ['עִוֵּר',       'עִוֵר',     'not only the צוה family — 630 forms carry a doubled vav'],
   ['יִוָּדַע',      'יִוָדַע',    'a niphal with it too'],
+  ['צֻוָּה',       'צֻוָה',     'the pual: a qubuts is a vowel like any other, so the vav after it is still doubled'],
+  ['מְצֻוֶּה',      'מְצֻוֶה',    'the pual participle, the passive of the one the translator ruled on'],
   ['וּבְנֵי',       'וּבְנֵי',    'NOT touched — a word-initial shuruk has no letter before it'],
   ['יָקוּם',       'יָקוּם',    'NOT touched — a real shuruk: the qof it follows has no vowel of its own'],
   ['הוּא',        'הוּא',     'NOT touched — the commonest shuruk in the corpus'],
