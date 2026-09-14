@@ -551,12 +551,21 @@
        THE DISPLAY NEVER MOVES ("you cannot take out the dagesh from the
        rendering though that needs to be there"). This is spoken(): a string
        built for the synthesiser. The corpus and the page keep every point. */
-    var SPIRANTIZES = '\u05D1\u05DB\u05E4';                  /* bet kaf pe */
+    /* EVERY LETTER, ב כ פ INCLUDED (translator, 2026-09-14: "you should be
+       doing that vocal shva rule everywhere"). These three were held back on
+       my assumption that losing the dagesh would spirantize them — that
+       הַבֶרִית would come out "ha-VE-rit". Rendered and heard, it does not:
+       the bet stays hard and the sheva sounds. The assumption was never
+       tested and was the only thing keeping 18,456 tokens silent.
+
+       There is no third option. With a dagesh on the letter she renders
+       audio byte-identical to the unpointed word — הַבְּרִית and הַבֶּרִית are
+       the same bytes — so the vowel is only heard once the dagesh is gone. */
     for (n = edits.length - 1; n >= 0; n--) {                   /* right to left: indices hold */
       cur = edits[n];
-      var marks = cur.marks.replace('\u05B0', '\u05B6');
-      if (SPIRANTIZES.indexOf(cur.c) < 0) marks = marks.replace('\u05BC', '');
-      out = out.slice(0, cur.at + 1) + marks + out.slice(cur.end);
+      out = out.slice(0, cur.at + 1) +
+            cur.marks.replace('\u05B0', '\u05B6').replace('\u05BC', '') +
+            out.slice(cur.end);
     }
     return out;
   }

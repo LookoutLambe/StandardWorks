@@ -120,8 +120,8 @@ const CASES = [
   ['הַדְּבָרִים', 'הַדֶבָרִים', 'dalet: sheva voiced AND the dagesh dropped — "ha-de-varim"'],
   ['הַגְּדוֹלָה', 'הַגֶדוֹלָה', 'gimel: same — it cannot spirantize'],
   ['הַנְּבִיאִים', 'הַנֶבִיאִים', 'nun: a forte on a non-bgdkpt letter is pure gemination'],
-  ['הַבְּרִית', 'הַבֶּרִית', 'BET KEEPS ITS DAGESH — without it "ha-be-rit" becomes "ha-ve-rit"'],
-  ['מִפְּנֵי', 'מִפֶּנֵי', 'PE KEEPS ITS DAGESH — it would go to /f/'],
+  ['הַבְּרִית', 'הַבֶרִית', 'bet LOSES its dagesh and stays hard — "ha-be-rit", heard and confirmed'],
+  ['מִפְּנֵי', 'מִפֶנֵי', 'pe LOSES its dagesh too — the spirantizing fear was never tested and was wrong'],
   /* THE NAME IS SPOKEN CORRECTLY OR NOT AT ALL (translator, 2026-09-14:
      "its Elohim! be respectful to the name", "even Carmit needs to be
      respectful by speaking it correctly"). Pointed, she sometimes said
