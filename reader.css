@@ -2591,6 +2591,22 @@ body.dark-mode #glossary-panel {
   line-height: 1.25;
   margin: 18px 0 0;
 }
+/* WHOSE WORK THIS IS, IN WORDS, ON THE PAGE. The name appeared in visible
+   text on exactly two pages — a signature at the foot of To the Reader and the
+   copyright line — while every volume talked about him in the first person and
+   never named him ("not a translation of mine", "that discipline is this
+   volume's alone"). Google's AI Overview described the edition accurately off
+   these pages and credited nobody, because there was no sentence joining the
+   work to a person for it to lift. Structured data says it in a field; this
+   says it in a line a reader and a summariser both read. */
+.vol-byline {
+  font-family: 'David Libre', 'Georgia', serif;
+  font-size: 0.88em;
+  color: var(--ink-light);
+  direction: ltr;
+  unicode-bidi: isolate;
+  margin-top: 10px;
+}
 .hero-lis-kicker {
   font-family: 'David Libre', serif;
   font-size: 0.95em;
