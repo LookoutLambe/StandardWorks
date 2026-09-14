@@ -9,7 +9,7 @@
  *
  * THE TEST is not "does this form carry two senses" — hundreds do, and most of
  * that is one sense worded two ways. It is whether the pin FOLLOWS A MINORITY
- * SENSE: take the form's commonest gloss and ask whether the family the pin
+ * SENSE: take the form's most common gloss and ask whether the family the pin
  * names says anything resembling it. A form's glosses are gathered from the
  * whole token AND from each maqqef-separated part, which is how the "year"
  * sense of שְׁנָתוֹ hid inside בֶּן־שְׁנָתוֹ "a year old".
@@ -173,11 +173,11 @@ if (!found.length) {
   console.log('[pins] ok: no pin follows a minority sense (' + pins.size + ' pins checked)');
   process.exit(0);
 }
-console.log('[pins] ' + found.length + " pin(s) name a family that says nothing like the form's commonest gloss.");
+console.log('[pins] ' + found.length + " pin(s) name a family that says nothing like the form's most common gloss.");
 console.log('[pins] That is how the pin on שְׁנַת made "the year of" read "to sleep". Use a HOMOGRAPH, not a pin.');
 for (const f of found) {
   console.log('\n  ' + f.form + '  -> [' + f.target + ']');
-  console.log('      commonest gloss: "' + f.topGloss + '"  (' + f.topN + ' of ' + f.total + ' tokens)');
+  console.log('      most common gloss: "' + f.topGloss + '"  (' + f.topN + ' of ' + f.total + ' tokens)');
   const other = f.groups.slice(1, 4).map(g => '"' + g[0] + '" x' + g[1]).join(', ');
   if (other) console.log('      also: ' + other);
 }

@@ -1697,7 +1697,7 @@ function buildGlossaryIndex() {
        kept OUT OF THE BROWSE LIST because they carry no theological weight —
        but baking the exclusion into the index made them unFINDABLE too, and a
        reader who typed אֲשֶׁר got back only its homograph אָשֵׁר, the name,
-       tagged NAME: the commonest word in the Hebrew Bible presented as the
+       tagged NAME: the most common word in the Hebrew Bible presented as the
        Asherah pole. The exclusion is a browsing decision, so it now applies
        in renderGlossaryList() only when there is no search term. */
     glossaryIndex = RootScorecard.glossaryEntries(null);

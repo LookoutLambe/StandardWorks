@@ -24,7 +24,7 @@
 <style>
 /* ── THE VOCABULARY PATH ──────────────────────────────────────────────
    One page, one claim: the corpus is far more repetitive than it looks,
-   and a reader who learns its commonest roots IN ORDER opens it fastest.
+   and a reader who learns its most common roots IN ORDER opens it fastest.
    Everything here is measured — the order, the counts and the coverage
    all come out of root_concordance.js by way of tools/build_vocab_path.js.
 
@@ -325,8 +325,8 @@
   function thesis() {
     var L = list(), r = L.length >= 300 ? 300 : L.length;
     $('vp-thesis').innerHTML = '<b>' + num(r) + ' root families carry ' + at(r).toFixed(0) + '% of ' +
-      esc(prose(vol)) + '.</b> Learn them in this order and you meet the commonest word ' +
-      'in the book first, the second commonest next, and nothing before its time.';
+      esc(prose(vol)) + '.</b> Learn them in this order and you meet the most common word ' +
+      'in the book first, the second most common next, and nothing before its time.';
     $('vp-total').textContent = num(D.totals[vol] || 0);
   }
 

@@ -41,7 +41,7 @@
      Isaiah and Matthew chapters in letters — הַשְׁווֵה יְשַׁעְיָהוּ נד — and every one of
      those tokens fell through the whole pipeline to a blank card: no family,
      no Strong's, nothing to say. The English beside it is the number itself,
-     which is what makes this safe: ב is the commonest preposition in the
+     which is what makes this safe: ב is the most common preposition in the
      language, and only the pair (numeral letters, a bare number as its gloss)
      identifies one. Same treatment as an acronym — no root, no Strong's. */
   var NUM_LETTERS = /^[\u05D0-\u05EA]{1,4}$/;
@@ -892,7 +892,7 @@
       h += '</div>';
     }
     // The tapped word itself always appears in both lists. The concordance
-    // keeps only the six commonest forms and ten commonest glosses per root,
+    // keeps only the six most common forms and ten most common glosses per root,
     // so an idiomatic rendering (לְעֵינַיִם "plainly" under עַיִן "eye") used
     // to vanish from the card: the reader saw "plainly" as the definition and
     // a root that admitted only "in the eyes of". Now the form and the gloss
@@ -1271,7 +1271,7 @@
       if (refs._b) {
         /* NOT OFFERED ANY MORE, and this is the safety net rather than a view.
            164 of the 7,905 roots exceed the generator's reference cap, and they
-           are the commonest words in the corpus — God, the LORD, say, king,
+           are the most common words in the corpus — God, the LORD, say, king,
            house, land. For those there is no verse list to show, and what the
            panel showed instead was a wall of per-book tallies: nothing on it
            could be read, tapped or studied, and at 6,453 uses a list is not
