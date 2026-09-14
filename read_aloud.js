@@ -43,11 +43,18 @@
      0.75 here is NOT the 75% we tuned by ear. The scale is also compressed at
      the low end, so the choice belongs to the reader rather than to a
      constant: the chip beside the button cycles it and the choice sticks. */
-  /* Slowest first, so the default is the head of the cycle and tapping only
-     ever speeds up. 0.3 is where this was tuned by ear against the rendered
-     file, and the default is the setting almost every reader will keep. */
-  var SPEEDS = [0.3, 0.4, 0.5, 0.6, 0.75];
-  var RATE = 0.3;           // the default; overridden by the stored choice
+  /* THE NUMBER IS NOT A SPEED, IT IS A REQUEST.
+     0.3 was tuned by ear against Carmit, and on Apple's voice it reads at a
+     deliberate pace. Android hands the same 0.3 to Google's engine, which
+     takes it far more literally — the same setting crawls. 0.7 is where the
+     two platforms sound like each other.
+
+     The ladder ascends from the default so that tapping speeds up, and it
+     wraps, so the one step past the top is the slow setting a learner wants
+     for a hard verse. Anyone who has ever touched the control keeps their own
+     choice; this only moves the starting point. */
+  var SPEEDS = [0.7, 0.85, 1.0, 1.15, 0.5];
+  var RATE = 0.7;           // the default; overridden by the stored choice
   var PHRASE_GAP = 420;     // ms of silence at a full stop
   /* A COMMA IS NOT A FULL STOP. The Book of Mormon's breaks are carried
      across from the printed English, which marks both — "having been born of
@@ -1184,6 +1191,52 @@
     return ' ';
   }
 
+  /* SOME ENGINES NEVER SAY WHERE THEY ARE.
+     The highlight rides on onboundary, which Safari fires and Chrome on
+     Android does not — not for Google's speech service, which is what the
+     Android app runs on. The word was spoken and nothing lit up, so the
+     reading followed on the website and stood still in the app.
+
+     When no boundary event arrives, the position is estimated from the clock
+     instead: how many characters the engine should have reached by now, at a
+     measured speaking speed. Two things keep the estimate honest. The speed
+     is not guessed once but re-measured on every utterance that finishes, so
+     it converges on the device's real voice within a phrase or two. And a
+     phrase is short — the reading is already cut into clauses — so the
+     estimate restarts constantly and drift has nowhere to accumulate.
+
+     The clock is only consulted while the engine is silent about itself: the
+     first boundary event ever seen turns this off for the session, because a
+     real position always beats an estimated one. */
+  var CLOCK = { boundaries: false, cps: 11, measured: 0 };
+
+  /** follow the reading by the clock; returns the function that stops it */
+  function followByClock(spans, rate, token) {
+    var last = Date.now(), chars = 0, i = -1, stopped = false;
+    (function tick() {
+      if (stopped || token !== state.token || CLOCK.boundaries) return;
+      var now = Date.now();
+      if (!state.paused) chars += (now - last) / 1000 * CLOCK.cps * rate;
+      last = now;
+      var n = i;
+      while (n < spans.length - 1 && chars >= spans[n + 1].start) n++;
+      if (n < 0) n = 0;
+      if (n !== i) { i = n; mark(spans[i].el); }
+      setTimeout(tick, 60);
+    })();
+    return function () { stopped = true; };
+  }
+
+  /* What the voice actually did, blended into what we expected it to do. The
+     first measurement is taken whole because the default is only a guess. */
+  function measureSpeed(chars, ms, rate) {
+    if (!ms || ms < 400 || !chars) return;             /* too short to trust */
+    var cps = chars / (ms / 1000) / rate;
+    if (!(cps > 2 && cps < 60)) return;                /* nonsense: ignore */
+    CLOCK.cps = CLOCK.measured ? CLOCK.cps * 0.7 + cps * 0.3 : cps;
+    CLOCK.measured++;
+  }
+
   /** speak one clause, highlighting each word as the engine reaches it */
   function speakPhrase(els, token, pitch, rate) {
     return new Promise(function (resolve) {
@@ -1204,7 +1257,21 @@
       u.rate = RATE * (rate || 1);
       u.pitch = pitch || 1;
 
+      var began = Date.now(), held = false, unclock = null;
+      var wasPaused = function () { if (state.paused) held = true; };
+      var holdWatch = setInterval(wasPaused, 100);
+
+      function done() {
+        clearInterval(holdWatch);
+        if (unclock) unclock();
+        /* Only a clean, unpaused run says anything about the voice's speed. */
+        if (!CLOCK.boundaries && !held) measureSpeed(text.length, Date.now() - began, u.rate);
+        resolve();
+      }
+
       u.onboundary = function (e) {
+        CLOCK.boundaries = true;               /* it talks: never guess again */
+        if (unclock) { unclock(); unclock = null; }
         if (token !== state.token) return;
         for (var i = 0; i < spans.length; i++) {
           if (e.charIndex >= spans[i].start && e.charIndex < spans[i].end) {
@@ -1213,9 +1280,16 @@
           }
         }
       };
-      u.onend = function () { resolve(); };
-      u.onerror = function () { resolve(); };
+      u.onend = done;
+      u.onerror = done;
       speechSynthesis.speak(u);
+
+      /* Give a talkative engine the first word before falling back to the
+         clock, so the estimate never fights a real position. */
+      if (!CLOCK.boundaries) setTimeout(function () {
+        if (CLOCK.boundaries || token !== state.token) return;
+        unclock = followByClock(spans, u.rate, token);
+      }, 260);
     });
   }
 
