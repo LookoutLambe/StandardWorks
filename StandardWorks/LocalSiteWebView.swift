@@ -1,7 +1,36 @@
 import SwiftUI
 import WebKit
+import UIKit
 
 final class LocalSiteWebViewLogger: NSObject, WKNavigationDelegate {
+    /// Set by the representable each update; the view decides what a settled
+    /// page is worth, this class only reports one.
+    var onPageSettled: () -> Void = {}
+
+    /// The first didFinish of a launch is the app booting into index.html, not
+    /// the reader choosing anything. Only what follows it counts.
+    private var hasSettledOnce = false
+
+    /// Anything that is not the bundled site belongs to the system, not to the
+    /// reader. The site carries real outbound links — four Amazon editions, a
+    /// Lulu hardcover, mailto: — and with no policy here WKWebView loaded them
+    /// INSIDE the reader: the app navigated off its own bundle, and with
+    /// allowsBackForwardNavigationGestures off there was no way back short of
+    /// force-quitting it. mailto: did nothing at all.
+    func webView(_ webView: WKWebView,
+                 decidePolicyFor navigationAction: WKNavigationAction,
+                 decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        guard let url = navigationAction.request.url else {
+            decisionHandler(.allow); return
+        }
+        let scheme = url.scheme?.lowercased()
+        if url.isFileURL || scheme == nil || scheme == "about" || scheme == "blob" || scheme == "data" {
+            decisionHandler(.allow); return
+        }
+        decisionHandler(.cancel)
+        UIApplication.shared.open(url)
+    }
+
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         NSLog("[WebView] didFail: \(error.localizedDescription)")
     }
@@ -14,11 +43,13 @@ final class LocalSiteWebViewLogger: NSObject, WKNavigationDelegate {
         // page's viewport, so the clamp has to be re-applied per page and not
         // once at construction. See pinLayoutScale for why.
         LocalSiteWebView.pinLayoutScale(webView)
+        if hasSettledOnce { onPageSettled() } else { hasSettledOnce = true }
     }
 }
 
 struct LocalSiteWebView: UIViewRepresentable {
     let wwwDirectoryURL: URL
+    var onPageSettled: () -> Void = {}
 
     func makeCoordinator() -> LocalSiteWebViewLogger { LocalSiteWebViewLogger() }
 
@@ -121,6 +152,7 @@ struct LocalSiteWebView: UIViewRepresentable {
 
         let webView = WKWebView(frame: .zero, configuration: config)
         webView.navigationDelegate = context.coordinator
+        context.coordinator.onPageSettled = onPageSettled
         webView.isOpaque = true
         webView.backgroundColor = UIColor.systemBackground
         webView.scrollView.backgroundColor = UIColor.systemBackground
@@ -154,7 +186,11 @@ struct LocalSiteWebView: UIViewRepresentable {
         return webView
     }
 
-    func updateUIView(_ webView: WKWebView, context: Context) {}
+    func updateUIView(_ webView: WKWebView, context: Context) {
+        // Re-bound every update: the closure captures the view's environment,
+        // and makeCoordinator() only ever runs once.
+        context.coordinator.onPageSettled = onPageSettled
+    }
 
     /// Hold the page at 1:1. The viewport user script is what actually stops
     /// WKWebView from offering a zoom range; these three are the native half,
