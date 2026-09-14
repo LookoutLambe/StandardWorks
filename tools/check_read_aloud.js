@@ -104,6 +104,12 @@ const CASES = [
   ['הׇרְגֵהוּ',    'הֹרְגֵהוּ',  'slay him, 1 Nephi 4:12 — the one imperative listed by hand'],
   ['שְׂרָיָה',     'שְׂרָיָע',   '"its pronouncing sariah as sa-rai-yaha thats bad" — the he becomes an ayin'],
   ['חַסְדּוֹ',     'חַסְדּוֹ',   'NOT touched — a vav with a holam of its own is a vowel, not a final consonant'],
+  /* the sheva after a dagesh forte is NA and she swallowed it (2026-09-14) */
+  ['בַּגְּבוּלוֹת', 'בַּגֶּבוּלוֹת', 'in the borders — "ba-ge-vu-lot"; she read it "bagvulot", and the bet must KEEP its dagesh'],
+  ['הַדְּבָרִים', 'הַדֶּבָרִים', 'the words — the commonest of the class, 1,141 tokens'],
+  ['הַשְּׁבִיעִי', 'הַשֶּׁבִיעִי', 'the seventh — the shin-dot has to survive the substitution'],
+  ['בְּרֵאשִׁית', 'בְּרֵאשִׁית', 'NOT touched — a word-initial dagesh is LENE and its sheva already sounds'],
+  ['כְּמוֹ', 'כְּמוֹ', 'NOT touched — same reason: no vowel before it, so the dagesh is lene'],
 ];
 let bad = 0;
 for (const [input, want, why] of CASES) {

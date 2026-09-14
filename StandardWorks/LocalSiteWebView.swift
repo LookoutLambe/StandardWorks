@@ -7,6 +7,11 @@ final class LocalSiteWebViewLogger: NSObject, WKNavigationDelegate {
     /// page is worth, this class only reports one.
     var onPageSettled: () -> Void = {}
 
+    /// Read aloud's route to the voice on Mac Catalyst, where the web view has
+    /// no Web Speech API. Held here because AVSpeechSynthesizer keeps only a
+    /// weak delegate, and the coordinator is what outlives makeUIView.
+    let speech = SpeechBridge()
+
     /// The first didFinish of a launch is the app booting into index.html, not
     /// the reader choosing anything. Only what follows it counts.
     private var hasSettledOnce = false
@@ -56,6 +61,17 @@ struct LocalSiteWebView: UIViewRepresentable {
     func makeUIView(context: Context) -> WKWebView {
         let config = WKWebViewConfiguration()
         config.defaultWebpagePreferences.preferredContentMode = .mobile
+
+        // Read aloud needs a speech engine. iOS has one in the web view; Mac
+        // Catalyst does not, so the page gets a stand-in that speaks through
+        // AVSpeechSynthesizer instead. The shim no-ops wherever the real API
+        // exists, so this changes nothing on iOS. See SpeechBridge.
+        config.userContentController.add(context.coordinator.speech,
+                                         name: SpeechBridge.handlerName)
+        config.userContentController.addUserScript(WKUserScript(
+            source: SpeechBridge.shimSource,
+            injectionTime: .atDocumentStart,
+            forMainFrameOnly: false))
 
         // Force the page visible even if its own shell-ready signal never fires.
         let forceVisibleScript = """
@@ -152,6 +168,7 @@ struct LocalSiteWebView: UIViewRepresentable {
 
         let webView = WKWebView(frame: .zero, configuration: config)
         webView.navigationDelegate = context.coordinator
+        context.coordinator.speech.attach(to: webView)
         context.coordinator.onPageSettled = onPageSettled
         webView.isOpaque = true
         webView.backgroundColor = UIColor.systemBackground

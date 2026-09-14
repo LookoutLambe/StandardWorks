@@ -517,6 +517,30 @@
          vowel, and writing it as the segol it sounds like is enough — וַיֶּהִי
          transcribes correctly where וַיְהִי does not. */
       parts[k] = parts[k].replace(/^\u05D5\u05B7\u05D9\u05B0/, '\u05D5\u05B7\u05D9\u05B6');
+      /* THE SHEVA AFTER A DAGESH FORTE IS ALSO NA, AND SHE SWALLOWS IT.
+         בַּגְּבוּלוֹת is "ba-ge-vu-lot" — the gimel is hard and the sheva
+         under it is sounded — and she read it "bagvulot", closing the
+         syllable and losing the vowel entirely (translator, 2026-09-14:
+         "shes supposed to pronounce it as a hard with vocal and shes not").
+
+         A letter carrying BOTH a sheva and a dagesh, with a vowel before it,
+         is a dagesh FORTE: the doubling of the definite article or a prefix.
+         Its sheva is a sheva na, exactly like the one in וַיְהִי above, and
+         the same remedy works — write it as the segol it sounds like. The
+         dagesh STAYS, because on a בג"ד כפ"ת letter it is what keeps the
+         consonant hard: הַבְּרִית has to stay "ha-be-rit" and not "ha-ve-rit".
+
+         Word-initial בְּ/כְּ/לְ is deliberately NOT touched — that dagesh is
+         lene, its sheva is already sounded, and בְּרֵאשִׁית reads correctly.
+         The vowel before the letter is what tells the two apart.
+         10,430 words across the six volumes. THE DISPLAY NEVER MOVES; this
+         is only what Carmit is handed.
+         The previous letter's own dagesh is captured and put back: בַּגְּבוּלוֹת
+         opens on a bet with a dagesh lene, and dropping it turned the word
+         into "va-" instead of "ba-". */
+      parts[k] = parts[k].replace(
+        /([\u05B1-\u05BB\u05C7])(\u05BC?)([\u05D0-\u05EA])\u05B0\u05BC/g,
+        '$1$2$3\u05B6\u05BC');
       /* A DOUBLED VAV IS NOT A SHURUK, AND SHE READS IT AS ONE. וּ is two
          things wearing the same two codepoints: the vowel /u/, and a vav
          carrying a dagesh forte — a doubled consonant /vv/. Carmit takes it
