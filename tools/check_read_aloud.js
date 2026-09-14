@@ -224,6 +224,40 @@ if (!bad) ok(CASES.length + ' pronunciation rules still hold (the Name, qamats q
   else ok('the Book of Mormon phrasing table is keyed as phrases() reads it (' + n.toLocaleString() + ' verses, ' + table[key].length + ' marks on ' + key + ')');
 }
 
+/* ── a word that must end its utterance actually does ────────────────────
+   Carmit plans prosody across the whole string she is handed, so some words
+   are only said correctly when nothing follows them: וְהָאַחֲרִית is
+   "acharit" utterance-final and "achari-YAT" otherwise. A period inside the
+   phrase does NOT cure it — proved by rendering — so phrases() has to hand
+   her two utterances. This checks the split still happens; without it the
+   defect returns silently, because nothing else in this file can hear. */
+{
+  const ph = sb.window.SWReadAloud && sb.window.SWReadAloud.phrases;
+  if (typeof ph !== 'function') {
+    fail('window.SWReadAloud.phrases is gone — the utterance split is unguarded');
+  } else {
+    const W = ['\u05D0\u05B2\u05E0\u05B4\u05D9',
+               '\u05D4\u05B8\u05E8\u05B5\u05D0\u05E9\u05B4\u05C1\u05D9\u05EA',
+               '\u05D5\u05B0\u05D4\u05B8\u05D0\u05B7\u05D7\u05B2\u05E8\u05B4\u05D9\u05EA',
+               '\u05D0\u05B5\u05DC', '\u05E9\u05B7\u05C1\u05D3\u05BC\u05B7\u05D9'];
+    const units = W.map(function (h) {
+      return { getAttribute: function () { return h; },
+               querySelector: function () { return { textContent: '' }; } };
+    });
+    let out = [];
+    try { out = ph(units, null) || []; } catch (e) { fail('phrases() threw: ' + e.message); }
+    const target = '\u05D5\u05B0\u05D4\u05B8\u05D0\u05B7\u05D7\u05B2\u05E8\u05B4\u05D9\u05EA';
+    let good = false;
+    out.forEach(function (grp) {
+      const hs = grp.map(function (u) { return u.getAttribute('data-h'); });
+      const i = hs.indexOf(target);
+      if (i >= 0 && i === hs.length - 1) good = true;
+    });
+    if (!good) fail('\u05D5\u05B0\u05D4\u05B8\u05D0\u05B7\u05D7\u05B2\u05E8\u05B4\u05D9\u05EA no longer ends its utterance \u2014 Moses 2:1 will say "achari-YAT" again');
+    else ok('a word that must end its utterance still does (Moses 2:1 splits before \u05D0\u05B5\u05DC)');
+  }
+}
+
 if (failures) {
   console.error('[read-aloud] ' + failures + ' problem(s). Commit blocked.');
   process.exit(1);

@@ -811,7 +811,45 @@
       tail.stop = p.stop;
       split.push(head, tail);
     });
-    return split;
+
+    /* SOME WORDS SHE ONLY SAYS RIGHT WHEN NOTHING FOLLOWS THEM. וְהָאַחֲרִית
+       is "acharit" at the end of an utterance and "achari-YAT" with anything
+       after it — the translator heard it in Moses 2:1, where the phrase runs
+       אֲנִי הָרֵאשִׁית וְהָאַחֲרִית אֵל שַׁדַּי. It reads correctly in D&C 19:1,
+       where the same words end the phrase.
+
+       A STOP INSIDE THE PHRASE DOES NOT CURE IT — "...וְהָאַחֲרִית. אֵל שַׁדַּי"
+       is still wrong, proved by rendering. Carmit plans her prosody across
+       the whole string she is given, so the words have to go to her in
+       SEPARATE utterances, and one phrase is one utterance (speakPhrase).
+       That is why this sits here and not in SAY_STOP, which only inserts a
+       period into a phrase already being spoken as one breath.
+
+       The split is a breath, not a full stop: the sense runs on. */
+    var ENDS_UTTERANCE = ['\u05D5\u05B0\u05D4\u05B8\u05D0\u05B7\u05D7\u05B2\u05E8\u05B4\u05D9\u05EA'];
+    function mustEnd(h) {
+      for (var i = 0; i < ENDS_UTTERANCE.length; i++) if (h === ENDS_UTTERANCE[i]) return true;
+      return false;
+    }
+    var forced = [];
+    split.forEach(function (p) {
+      var rest = p;
+      while (rest.length) {
+        var cut = -1, i;
+        for (i = 0; i < rest.length - 1; i++) {
+          if (mustEnd(rest[i].getAttribute('data-h') || '')) { cut = i + 1; break; }
+        }
+        if (cut < 0) { forced.push(rest); break; }
+        var head = rest.slice(0, cut);
+        head.gap = COMMA_GAP;
+        head.stop = false;
+        forced.push(head);
+        rest = rest.slice(cut);
+        rest.gap = p.gap;
+        rest.stop = p.stop;
+      }
+    });
+    return forced;
   }
 
   /* ---- the voice ------------------------------------------------------ */
