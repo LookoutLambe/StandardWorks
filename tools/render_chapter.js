@@ -80,7 +80,12 @@ const script = lines.join('\n[[slnc 700]]\n');
 const base = path.join(OUT, vol + '_' + book + '_' + chap);
 fs.writeFileSync(base + '.txt', script);
 cp.execFileSync('say', ['-v', 'Carmit', '-r', WPM, '-f', base + '.txt', '-o', base + '.aiff']);
-try { cp.execFileSync('afconvert', ['-f', 'm4af', '-d', 'aac', base + '.aiff', base + '.m4a']); } catch (e) {}
+/* keep only the compressed copy — the AIFF is ten times the size and the
+   whole corpus is 131 hours of audio */
+try {
+  cp.execFileSync('afconvert', ['-f', 'm4af', '-d', 'aac', base + '.aiff', base + '.m4a']);
+  fs.unlinkSync(base + '.aiff');
+} catch (e) {}
 const kb = n => (fs.statSync(n).size / 1024).toFixed(0) + ' KB';
 console.log(lines.length + ' verses rendered at ' + WPM + ' wpm');
 console.log('  ' + base + '.m4a  (' + kb(base + '.m4a') + ')');

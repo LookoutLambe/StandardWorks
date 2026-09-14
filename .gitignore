@@ -39,3 +39,7 @@ IAS-reference*/
 tahot_*.txt
 tahot_index.json
 tools/morphology/harness/truth.json
+
+# Rendered readings for a listening pass (tools/render_chapter.js).
+# Build-time only and large — 131 hours of audio for the whole corpus.
+.voice/
