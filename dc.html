@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="nav_engine.css?v=51">
 <link rel="stylesheet" href="site_chrome.css?v=74">
 <link rel="stylesheet" href="xref_study_panel.css?v=14">
-<link rel="stylesheet" href="reader.css?v=123">
+<link rel="stylesheet" href="reader.css?v=124">
 <style>
 *:focus-visible { outline: 2px solid var(--here); outline-offset: 2px; }
 .book-title { font-size: 2.4em; font-weight: 700; color: var(--header-bg); letter-spacing: 0.04em; margin-bottom: 2px; }
@@ -579,7 +579,9 @@ window.READER = {
         '<div class="landing-sec-btn" onclick="navTo(\'od2-ch1\')"><span class="sec-heb">הכרזה ב׳</span><span class="sec-num">OD 2</span></div>' +
         '</div></div>';
     
-      landingHtml += '</div><div class="landing-back"><a href="index.html">\u2190 Standard Works Home</a></div>';
+      landingHtml += '</div>' +
+        '<div class="landing-plain"><a href="hebrew/doctrine-and-covenants/index.html">Every chapter as a plain page →</a></div>' +
+        '<div class="landing-back"><a href="index.html">\u2190 Standard Works Home</a></div>';
       landingPanel.innerHTML = landingHtml;
     
       // Create section panels dynamically
@@ -633,7 +635,7 @@ window.READER = {
 </script>
 <!-- chapter summaries (250 KB eager) are now per-book in dc_headings/,
      fetched with the book by VolumeLoader. tools/build_heading_manifests.js -->
-<script src="reader_core.js?v=33"></script>
+<script src="reader_core.js?v=34"></script>
 
 <!-- Strong's lookup + Root glossary data -->
 <script src="xref_common.js?v=6"></script>

@@ -2517,6 +2517,31 @@ body.dark-mode #glossary-panel {
 .glossary-refs-toggle { display: inline-block; margin-top: 6px; color: var(--accent-deep); cursor: pointer; font-size: 0.9em; font-weight: 500; }
 .glossary-refs-toggle:hover { text-decoration: underline; color: var(--accent-light); }
 .glossary-root { font-family: 'David Libre', serif; font-size: 1.5em; font-weight: 700; color: var(--accent-deep); direction: rtl; }
+/* ═══ THE PLAIN PAGES, LINKED FROM THE VOLUME THEY BELONG TO ═════════════
+   tools/build_static_pages.js generates 1,701 plain chapter pages under
+   hebrew/<volume>/<book>/<n>.html — 930 of them the Tanakh alone — and until
+   now the whole tree hung off ONE link, in index.html's footer. The pages
+   below it are linked properly (hebrew/index → six volume indexes →
+   old-testament/index links all 929 chapters → each chapter links prev, next
+   and up), so the tree was never unreachable; it simply had one thread of
+   crawl priority feeding it, and 632 of the 1,712 sitemap urls were still
+   unindexed a week after submission.
+
+   Each volume now points at its own plain twin. Quiet text rather than a
+   second gold button beside .landing-back — this is a way of reading the
+   same chapters, not a way out of the reader. */
+.landing-plain { text-align: center; margin-top: 26px; direction: ltr; }
+.landing-plain a {
+  font-family: 'David Libre', 'Georgia', serif;
+  font-size: 0.98em;
+  color: var(--ink-light);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--ink-light) 40%, transparent);
+  padding-bottom: 1px;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+.landing-plain a:hover { color: var(--ink); border-bottom-color: var(--ink); }
 .landing-back { text-align: center; margin-top: 20px; }
 .landing-back a { font-family: 'David Libre', 'Georgia', serif; background: var(--sw-gold, var(--on-chrome)); color: var(--header-bg, var(--chrome)); text-decoration: none; font-size: 1.05em; font-weight: 600; letter-spacing: 0.03em; border: 2px solid var(--header-bg, var(--chrome)); padding: 14px 32px; border-radius: 10px; box-shadow: 0 4px 14px color-mix(in srgb, var(--chrome) 18%, transparent); transition: background 0.2s, transform 0.2s; direction: ltr; display: inline-block; }
 .landing-back a:hover { background: var(--on-chrome); color: var(--header-bg, var(--chrome)); border-color: var(--header-bg, var(--chrome)); transform: scale(1.02); }

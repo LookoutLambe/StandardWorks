@@ -117,7 +117,15 @@ function findBook(prefix) {
     });
     landingHtml += '</div>';
   });
-  landingHtml += '</div><div class="landing-back"><a href="index.html">\u2190 Standard Works Home</a></div>';
+  landingHtml += '</div>';
+  // The volume's plain chapter pages (tools/build_static_pages.js). The page
+  // declares its own href in READER.plainPages; the slugs are the generator's
+  // and live there, not here.
+  if (window.READER.plainPages) {
+    landingHtml += '<div class="landing-plain"><a href="' + window.READER.plainPages +
+      '">Every chapter as a plain page \u2192</a></div>';
+  }
+  landingHtml += '<div class="landing-back"><a href="index.html">\u2190 Standard Works Home</a></div>';
   landingPanel.innerHTML = landingHtml;
 
   // Create chapter panels dynamically for all 929 chapters
