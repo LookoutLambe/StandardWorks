@@ -95,6 +95,14 @@
   color: var(--ink-3); cursor: pointer; user-select: none; min-height: 32px; }
 .vp-check input { width: 15px; height: 15px; accent-color: var(--here); cursor: pointer; }
 
+/* A set marked learned folds its words away. The head stays — it already
+   names what is behind it ("Set 1 · roots 1-25") and what it reaches — so
+   nothing is lost from the page, and unticking the box brings the roots back.
+   The class is toggled in place rather than by redrawing: a redraw would
+   rebuild every set and throw the reader back up the page. */
+.vp-set--done .vp-row { display: none; }
+.vp-set--done .vp-set-n { color: var(--ink-2); }
+
 .vp-row { display: grid; grid-template-columns: 2.6em minmax(5.5em, auto) 1fr auto;
   gap: 12px; align-items: baseline; padding: 7px 2px;
   border-bottom: 1px solid var(--rule, rgba(0,0,0,0.06)); }
@@ -291,7 +299,7 @@
     for (s = 0; s < n; s++) {
       var a = s * SET, b = Math.min(a + SET, L.length);
       var on = got.indexOf(s) >= 0;
-      html += '<section class="vp-set"><div class="vp-set-head">' +
+      html += '<section class="vp-set' + (on ? ' vp-set--done' : '') + '"><div class="vp-set-head">' +
         '<span class="vp-set-n">Set ' + (s + 1) + ' &middot; roots ' + (a + 1) + '&ndash;' + b + '</span>' +
         '<label class="vp-check"><input type="checkbox" data-set="' + s + '"' + (on ? ' checked' : '') + '> learned</label>' +
         '<span class="vp-set-reach">takes you to <b>' + at(b).toFixed(1) + '%</b></span>' +
@@ -348,11 +356,14 @@
     var c = e.target; if (!c.dataset || c.dataset.set === undefined) return;
     var s = +c.dataset.set, got = (learned[vol] || []).slice(), k = got.indexOf(s);
     if (c.checked && k < 0) got.push(s); else if (!c.checked && k >= 0) got.splice(k, 1);
-    learned[vol] = got; save(learned); progress(); });
+    learned[vol] = got; save(learned);
+    var sec = c.closest('.vp-set'); if (sec) sec.classList.toggle('vp-set--done', c.checked);
+    progress(); });
   $('vp-more').addEventListener('click', function () { shown += 4; draw(); });
   $('vp-reset').addEventListener('click', function () {
     learned[vol] = []; save(learned);
     [].forEach.call($('vp-sets').querySelectorAll('input[data-set]'), function (c) { c.checked = false; });
+    [].forEach.call($('vp-sets').querySelectorAll('.vp-set--done'), function (x) { x.classList.remove('vp-set--done'); });
     progress(); });
 
   setVol('bom');
