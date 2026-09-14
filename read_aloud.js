@@ -319,6 +319,27 @@
     '\u05D5\u05BC\u05DE\u05B0\u05E6\u05B7\u05D5\u05B6\u05BC\u05D4':
       '\u05D5\u05BC\u05DE\u05B4\u05E6\u05B0\u05D5\u05B6\u05D4',   /* וּמְצַוֶּה -> וּמִצְוֶה */
     '\u05DB\u05C7\u05BC\u05DC': '\u05DB\u05D5\u05DC',   /* כׇּל -> כול */
+    /* וַיְהִי IS "vay-hi" AND THE SHEVA IS NACH (translator, 2026-09-14: "the
+       y is supposed to be silent... its pronouncing it as vay-yehi"). The
+       wayyiqtol rule below writes that sheva as a segol, on a comment that
+       calls it a sheva na. It is not: וַיְהִי is way-hî, the yod closing the
+       syllable after the patah, and the same is true of the whole וַיְ class.
+       That rule was written to stop her reading the word "vehi" with the yod
+       lost altogether, which is a real failure — so it is not simply deleted,
+       it is EXCEPTED here for the word that was heard.
+
+       SAY_AS matches a whole token and short-circuits every rule after it,
+       so mapping the word to ITSELF is the exception: it reaches Carmit with
+       the corpus's own pointing and the segol rule never sees it. The
+       translator picked that reading over the modern spelling and over the
+       segol by ear, from four rendered candidates. 2,633 tokens; the maqqef
+       forms come through here too, because spoken() splits on the maqqef
+       first.
+
+       An identity entry looks like a no-op and is not one — it is the only
+       way to say "leave this word alone" to the rules below. */
+    '\u05D5\u05B7\u05D9\u05B0\u05D4\u05B4\u05D9': '\u05D5\u05B7\u05D9\u05B0\u05D4\u05B4\u05D9',   /* וַיְהִי -> itself */
+
     '\u05DB\u05B8\u05BC\u05DC': '\u05DB\u05D5\u05DC',   /* כָּל -> כול */
 
     /* SARIAH ENDS ON AN AYIN FOR THE VOICE (translator's suggestion). The

@@ -69,7 +69,13 @@ const CASES = [
   ['כָּל',        'כול',      'the same word spelled with a plain qamats'],
   ['חׇכְמָה',      'חֹכְמָה',   'U+05C7 is a codepoint she does not know: "chachma" for chochmah'],
   ['וַיָּמׇת',     'וַיָּמֹת',  'the same gap: "vayyamat" for vayyamot'],
-  ['וַיְהִי',      'וַיֶהִי',   'the sheva under the yod is a sheva na; she dropped the yod and said "vehi"'],
+  /* SUPERSEDED 2026-09-14. This asserted וַיְהִי -> וַיֶהִי on the claim that
+     the sheva under the yod is NA. It is not — וַיְהִי is way-hî, the yod
+     closing the syllable — and the segol made her say "vay-YEH-hi", which the
+     translator heard in Moses 2:1. The word is excepted in SAY_AS now and its
+     case is below. The wayyiqtol rule still covers the rest of the וַיְ class,
+     so וַיְדַבֵּר holds it here until those are heard too. */
+  ['וַיְדַבֵּר',   'וַיֶדַבֵּר', 'the wayyiqtol segol rule still applies to the rest of the class'],
   ['וַיְדַבֵּר',    'וַיֶדַבֵּר', 'the same weak wayyiqtol, 4,677 words'],
   ['וַיֹּאמֶר',    'וַיֹּאמֶר',  'NOT touched — the yod carries a dagesh here and she reads it right'],
   ['מְצַוֶּה',     'מִצְוֶה',   'the dagesh-vav came out "mitzawe"; mitsveh, and unpointing cannot help — ktiv male makes it מצווה, which is also the noun מִצְוָה'],
@@ -127,6 +133,12 @@ const CASES = [
   ['וּמֵהָאֱלֹהִים', 'ומהאלוהים', 'stacked prefixes ride along too'],
   ['אֱלֹהֵינוּ', 'אֱלֹהֵינוּ', 'NOT touched — Eloheinu is a different word'],
   ['אֵלִים', 'אֵלִים', 'NOT touched — elim, not Elohim'],
+  /* וַיְהִי IS "vay-hi": the sheva is NACH and the yod closes the syllable.
+     The wayyiqtol rule writes that sheva as a segol and made it "vay-YEH-hi";
+     an identity entry in SAY_AS excepts the word so it reaches her with the
+     corpus's own pointing. Chosen by ear from four rendered candidates. */
+  ['\u05D5\u05B7\u05D9\u05B0\u05D4\u05B4\u05D9', '\u05D5\u05B7\u05D9\u05B0\u05D4\u05B4\u05D9', 'vay-hi — UNTOUCHED; a segol here says "vay-yehi"'],
+  ['\u05D5\u05B7\u05D9\u05B0\u05D4\u05B4\u05D9\u05BE\u05E2\u05B6\u05E8\u05B6\u05D1', '\u05D5\u05B7\u05D9\u05B0\u05D4\u05B4\u05D9 \u05E2\u05B6\u05E8\u05B6\u05D1', 'the maqqef form reaches the exception too'],
   /* the other vocal-sheva classes (2026-09-14) */
   ['הָיְתָה', 'הָיֶתָה', 'after a LONG vowel: "ha-ye-ta", not "hayta"'],
   ['שָׁמְעוּ', 'שָׁמֶעוּ', 'after a long vowel: "sha-me-u"'],
