@@ -43,18 +43,11 @@
      0.75 here is NOT the 75% we tuned by ear. The scale is also compressed at
      the low end, so the choice belongs to the reader rather than to a
      constant: the chip beside the button cycles it and the choice sticks. */
-  /* THE NUMBER IS NOT A SPEED, IT IS A REQUEST.
-     0.3 was tuned by ear against Carmit, and on Apple's voice it reads at a
-     deliberate pace. Android hands the same 0.3 to Google's engine, which
-     takes it far more literally — the same setting crawls. 0.7 is where the
-     two platforms sound like each other.
-
-     The ladder ascends from the default so that tapping speeds up, and it
-     wraps, so the one step past the top is the slow setting a learner wants
-     for a hard verse. Anyone who has ever touched the control keeps their own
-     choice; this only moves the starting point. */
-  var SPEEDS = [0.7, 0.85, 1.0, 1.15, 0.5];
-  var RATE = 0.7;           // the default; overridden by the stored choice
+  /* Slowest first, so the default is the head of the cycle and tapping only
+     ever speeds up. 0.3 is where this was tuned by ear against the rendered
+     file, and the default is the setting almost every reader will keep. */
+  var SPEEDS = [0.3, 0.4, 0.5, 0.6, 0.75];
+  var RATE = 0.3;           // the default; overridden by the stored choice
   var PHRASE_GAP = 420;     // ms of silence at a full stop
   /* A COMMA IS NOT A FULL STOP. The Book of Mormon's breaks are carried
      across from the printed English, which marks both — "having been born of
