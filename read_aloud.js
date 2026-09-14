@@ -1200,34 +1200,53 @@
 
      The clock is only consulted while the engine is silent about itself: the
      first boundary event ever seen turns this off for the session, because a
-     real position always beats an estimated one. */
-  var CLOCK = { boundaries: false, cps: 11, measured: 0 };
+     real position always beats an estimated one.
+
+     SPEED IS MEASURED PER RATE, AND NEVER GUESSED.
+     Two things were wrong in the first attempt and both made the highlight
+     skip. It carried ONE speed and divided it by the rate, which assumes a
+     voice at 0.3 takes three-and-a-bit times as long as at 1.0 — true of
+     Apple's, not of Google's, which is disproportionately slow at the low
+     end. And it started from a guessed speed, so the first phrases of every
+     session ran ahead of the voice and jumped whole words.
+
+     So the speed is stored against the rate it was measured at, and until a
+     rate has been measured the clock does not run at all: the first word of
+     the phrase is lit and left there. One phrase of a still highlight buys a
+     measurement, and everything after it follows properly. */
+  var CLOCK = { boundaries: false, at: {} };
+
+  function speedFor(rate) { return CLOCK.at[rate.toFixed(2)] || 0; }
 
   /** follow the reading by the clock; returns the function that stops it */
   function followByClock(spans, rate, token) {
-    var last = Date.now(), chars = 0, i = -1, stopped = false;
+    var cps = speedFor(rate);
+    mark(spans[0].el);                    /* the phrase has started, regardless */
+    if (!cps) return function () {};      /* unmeasured: one word, no guessing */
+
+    var last = Date.now(), chars = 0, i = 0, stopped = false;
     (function tick() {
       if (stopped || token !== state.token || CLOCK.boundaries) return;
       var now = Date.now();
-      if (!state.paused) chars += (now - last) / 1000 * CLOCK.cps * rate;
+      if (!state.paused) chars += (now - last) / 1000 * cps;
       last = now;
       var n = i;
       while (n < spans.length - 1 && chars >= spans[n + 1].start) n++;
-      if (n < 0) n = 0;
       if (n !== i) { i = n; mark(spans[i].el); }
       setTimeout(tick, 60);
     })();
     return function () { stopped = true; };
   }
 
-  /* What the voice actually did, blended into what we expected it to do. The
-     first measurement is taken whole because the default is only a guess. */
+  /* What the voice actually did, blended into what we thought it would do.
+     The first measurement at a rate is taken whole, because there is nothing
+     to blend it with. */
   function measureSpeed(chars, ms, rate) {
     if (!ms || ms < 400 || !chars) return;             /* too short to trust */
-    var cps = chars / (ms / 1000) / rate;
-    if (!(cps > 2 && cps < 60)) return;                /* nonsense: ignore */
-    CLOCK.cps = CLOCK.measured ? CLOCK.cps * 0.7 + cps * 0.3 : cps;
-    CLOCK.measured++;
+    var cps = chars / (ms / 1000);
+    if (!(cps > 0.5 && cps < 80)) return;              /* nonsense: ignore */
+    var k = rate.toFixed(2);
+    CLOCK.at[k] = CLOCK.at[k] ? CLOCK.at[k] * 0.7 + cps * 0.3 : cps;
   }
 
   /** speak one clause, highlighting each word as the engine reaches it */
