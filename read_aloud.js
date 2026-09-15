@@ -627,7 +627,15 @@
        still pronounced as two, and a hyphen inside a word is one more thing
        for a synthesiser to get wrong. */
     s = s.replace(/[\[\]()]/g, '');      /* a qere's brackets are not said */
-    var parts = s.split('\u05BE');
+    /* AND ON WHITESPACE, NOT THE MAQQEF ALONE (2026-09-15). spoken() is
+       handed a PHRASE — the first utterance of 1 Nephi 1 is אֲנִי נֶפִי, two
+       words — so splitting only on the maqqef leaves several words in one
+       part, and SAY_AS, which matches a whole part, can never see them.
+       כׇּל hid this: it is nearly always followed by a maqqef, so it lands in
+       a part of its own and its entry fires. יֻלַּדְתִּי is not, and its entry
+       never fired outside a unit test. Parts are rejoined with a space
+       below, which is what the maqqef became anyway, so nothing else moves. */
+    var parts = s.split(/[\u05BE\s]+/);
     for (var k = 0; k < parts.length; k++) {
       if (SAY_AS[parts[k]]) { parts[k] = SAY_AS[parts[k]]; continue; }
       /* BEFORE THE QAMATS QATAN IS TURNED INTO A HOLAM, because that
