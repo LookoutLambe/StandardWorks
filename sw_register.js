@@ -74,12 +74,6 @@
     });
   }
 
-  function purgeAllCaches() {
-    if (!('caches' in window)) return Promise.resolve();
-    return caches.keys().then(function (keys) {
-      return Promise.all(keys.map(function (k) { return caches.delete(k); }));
-    });
-  }
 
   /** New deploy detected — clear PWA caches and activate waiting workers. */
   function applyDeployUpgrade(meta) {
@@ -90,10 +84,13 @@
     try { sessionStorage.setItem(DEPLOY_KEY, build); } catch (e) {}
     if (!prev || prev === build) return Promise.resolve(false);
 
-    return purgeAllCaches()
-      .then(function () {
-        return navigator.serviceWorker.getRegistrations();
-      })
+    /* NO CACHE PURGE HERE. service-worker.js's activate handler already
+       deletes stale shell caches by build id, and it deliberately spares
+       standard-works-offline-* — the volumes a reader saved for offline.
+       Purging from the page threw those away on every deploy, and left the
+       app with nothing to serve until the network answered, which is the
+       pause a reader felt before they could navigate again. */
+    return navigator.serviceWorker.getRegistrations()
       .then(function (regs) {
         return Promise.all((regs || []).map(function (r) { return r.update(); }));
       })
@@ -142,11 +139,22 @@
     document.body.appendChild(bar);
   }
 
+  /* A SILENT RELOAD IS ONLY SAFE ON A PAGE NOBODY HAS TOUCHED.
+     The ten-second window was meant to catch a page still settling, but a
+     reader who opened a chapter and tapped within that window was thrown
+     back to where they started. Any sign of use — a tap, a key, a chapter
+     change — and the update waits behind the banner instead. */
   var loadedAt = Date.now();
+  var interacted = false;
+  function handTaken() { interacted = true; }
+  ['pointerdown', 'keydown', 'hashchange', 'popstate'].forEach(function (ev) {
+    window.addEventListener(ev, handTaken, { passive: true, once: true });
+  });
+
   navigator.serviceWorker.addEventListener('controllerchange', function () {
     if (reloadOnce) return;
     reloadOnce = true;
-    if (Date.now() - loadedAt < 10000) { location.reload(); return; }
+    if (!interacted && Date.now() - loadedAt < 10000) { location.reload(); return; }
     showUpdateBanner();
   });
 
