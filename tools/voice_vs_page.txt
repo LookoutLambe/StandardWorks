@@ -1,0 +1,850 @@
+THE VOICE AGAINST THE PAGE
+generated 2026-09-15   read_aloud.js v=62  vs  translit.js
+
+Method: transliterate the word, transliterate what the voice is handed, compare.
+Grouped, because most differences are deliberate.
+
+  1 the Name               5 forms     2249 tokens   intended
+  2 unpointed respell     63 forms     9878 tokens   intended (כָּל, אלוהים)
+  3 ־ָיו suffix          812 forms     6179 tokens   intended
+  4 gemination         20473 forms   120186 tokens   intended (v=61)
+  5 EVERYTHING ELSE     6001 forms    21135 tokens   <-- the review list
+
+========================================================================
+5. THE REVIEW LIST — differences with no deliberate rule behind them
+========================================================================
+
+  count  word              page says            voice is handed
+  -----  ----------------  -------------------  -------------------
+   1141  הַדְּבָרִים       haddevarim           hade varim
+    299  וַיְדַבֵּר        vaydabber            vayedaver
+    258  הַיְּהוּדִים      hayyehudim           haye hudim
+    246  הִנְנִי           hinni                hine ni
+    218  הַנְּבִיאִים      hanneviim            hane viim
+    202  הַגְּדוֹלָה       haggedola            hage dola
+    179  וַיְצַו           vaytsav              vayetsav
+    160  הַכְּנֵסִיָּה     hakkenesiyya         hakhe nesiya
+    159  וַתְּהִי          vattehi              vate hi
+    128  הַבְּרִית         habberit             have rit
+    124  הַקְּדוֹשִׁים     hakkedoshim          hake doshim
+    115  מִבְּנֵי          mibbene              mive ne
+    112  הַבְּשׂוֹרָה      habbesora            have sora
+    100  הַכְּהֻנָּה       hakkehunna           hakhe huna
+     99  הַשְּׁבִיעִי      hashshevii           hashe vii
+     87  וַיִּתְּנוּ       vayyittenu           vayite nu
+     87  הַשְּׁלִישִׁי     hashshelishi         hashe lishi
+     86  נִתְּנָה          nittena              nite na
+     86  מִמְּךָ           mimmekha             mime kha
+     81  עַמְּךָ           ammekha              ame kha
+     79  הַזְּקֵנִים       hazzekenim           haze kenim
+     75  אִתְּכֶם          ittekhem             ite khem
+     73  וַיִּשְׁמְעוּ     vayyishmeu           vayishme u
+     73  הַגְּדוֹלִים      haggedolim           hage dolim
+     73  הַמְּלָאכָה       hammelakha           hame lakha
+     71  וַיְבַקְשׁוּ      vayvakshu            vayevakshu
+     71  דִּבְּרוּ         dibberu              dive ru
+     70  וַיִּקְרְאוּ      vayyikreu            vayikre u
+     68  נִתְּנוּ          nittenu              nite nu
+     66  וַיְחִי           vaychi               vayechi
+     64  הַכְּתוּבִים      hakketuvim           hakhe tuvim
+     64  הַסְּפָרִים       hassefarim           hase farim
+     61  בַּדְּבָרִים      baddevarim           bade varim
+     60  עִמְּךָ           immekha              ime kha
+     58  הַנְּחֹשֶׁת       hannechoshet         hane choshet
+     57  מִלְּבַד          millevad             mile vad
+     57  הַפְּרוּשִׁים     happerushim          hafe rushim
+     56  הַמְּלָכִים       hammelakhim          hame lakhim
+     56  וַיִּשְׁלְחוּ     vayyishlechu         vayishle chu
+     54  וַיִּפְּלוּ       vayyippelu           vayife lu
+     54  כֻּלְּכֶם         kullekhem            kule khem
+     54  מְצַוֶּה          metsavve             mitsve
+     54  שָׁוְא            shav                 shave 
+     53  וַיְבָרֶךְ        vayvarekh            vayevarekh
+     52  וַיְבַקֵּשׁ       vayvakkesh           vayevakesh
+     51  הַבְּהֵמָה        habbehema            have hema
+     50  הַכְּנַעֲנִי      hakkenaani           hakhe naani
+     50  לִבְּךָ           libbekha             live kha
+     50  יְקַבְּלוּ        yekabbelu            yekave lu
+     49  יִפְּלוּ          yippelu              yife lu
+     48  אִתְּךָ           ittekha              ite kha
+     48  הַגְּבוּל         haggevul             hage vul
+     47  וַיְדַבְּרוּ      vaydabberu           vayedave ru
+     47  מִפְּרִי          mipperi              mife ri
+     47  הַשְּׁלִיחִים     hashshelichim        hashe lichim
+     46  יִתְּנוּ          yittenu              yite nu
+     44  קִבְּלוּ          kibbelu              kive lu
+     43  הַקְּטַנִּים      hakketannim          hake tanim
+     42  וַיִּגְּשׁוּ      vayyiggeshu          vayige shu
+     41  תִּתְּנוּ         tittenu              tite nu
+     41  הַקְּדוֹשָׁה      hakkedosha           hake dosha
+     41  לַכְּנֵסִיָּה     lakkenesiyya         lakhe nesiya
+     40  הַבְּכוֹר         habbekhor            have khor
+     40  לַשָּׁוְא         lashshav             lashave 
+     38  מְצַוְּךָ         metsavvekha          metsave kha
+     38  הַכְּנֵסֶת        hakkeneset           hakhe neset
+     37  וַיִּמְצְאוּ      vayyimtseu           vayimtse u
+     35  הַשְּׁלָמִים      hashshelamim         hashe lamim
+     35  הַגְּאֻלָּה       haggeulla            hage ula
+     34  הַצְּדָקָה        hatstsedaka          hatse daka
+     34  הַלְלוּ           hallu                hale lu
+     34  הַנְּבוּאָה       hannevua             hane vua
+     34  תְּקַבְּלוּ       tekabbelu            te kave lu
+     33  הַשְּׁמִינִי      hashshemini          hashe mini
+     33  הַפְּלִשְׁתִּי    happelishti          hafe lishti
+     33  לִבְּכֶם          libbekhem            live khem
+     33  וְהַפְּרוּשִׁים   vehapperushim        vehafe rushim
+     32  וְהַדְּבָרִים     vehaddevarim         vehade varim
+     32  בׇּאֳנִיָּה       booniyya             booniya
+     32  בַּכְּנֵסִיָּה    bakkenesiyya         bakhe nesiya
+     31  וַיִּתְּנֵם       vayyittenem          vayite nem
+     31  וַיְשַׁלַּח       vayshallach          vayeshalach
+     31  הִשָּׁמְרוּ       hishshameru          hishame ru
+     30  כַּדְּבָרִים      kaddevarim           kade varim
+     30  הַקְּהִלָּה       hakkehilla           hake hila
+     29  מִבְּלִי          mibbeli              mive li
+     29  לַיְּהוּדִים      layyehudim           laye hudim
+     28  וְהַזְּקֵנִים     vehazzekenim         vehaze kenim
+     28  הַנְּעָרִים       hannearim            hane arim
+     28  יִמָּלְאוּ        yimmaleu             yimale u
+     28  וַיִּתְמְהוּ      vayyitmehu           vayitme hu
+     28  הַשּׁוֹדְדִים     hashshoddim          hashode dim
+     27  וּמִבְּנֵי        umibbene             umive ne
+     27  מִבְּנוֹת         mibbenot             mive not
+     27  הַפְּרִי          happeri              hafe ri
+     27  הַכְּנֵסִיָּה׃    hakkenesiyya         hakhe nesiya
+     26  הַשְּׁנֵים        hashshenem           hashe nem
+     26  הַלְּבָנוֹן       hallevanon           hale vanon
+     26  מִלְּפָנִים       millefanim           mile fanim
+     25  הַשְּׁלֹשִׁים     hashsheloshim        hashe loshim
+     25  וַיִּשְׂמְחוּ     vayyismechu          vayisme chu
+     25  לַדְּבָרִים       laddevarim           lade varim
+     25  בְּתוֹכְכֶם       betokhkhem           betokhe khem
+     24  בַּקְּשׁוּ        bakkeshu             bake shu
+     24  וּמִכׇּל          umikkol              umikhol
+     24  הַפְּנִימִי       happenimi            hafe nimi
+     24  וַיְמַהֵר         vaymaher             vayemaher
+     24  הַגְּדֹלִים       haggedolim           hage dolim
+     24  חַלְלֵי           challe               chale le
+     24  הַבְּרָכָה        habberakha           have rakha
+     24  וַיִּמָּלְאוּ     vayyimmaleu          vayimale u
+     23  וַיִּרְדְּפוּ     vayyirdefu           vayirde fu
+     23  וַיְסַפֵּר        vaysapper            vayesafer
+     22  הַמְּלוּכָה       hammelukha           hame lukha
+     22  הַכְּרוּבִים      hakkeruvim           hakhe ruvim
+     22  חַיָּיו           chayyayv             chayav
+     22  הַכְּרֻבִים       hakkeruvim           hakhe ruvim
+     22  הַשְּׁבוּעָה      hashshevua           hashe vua
+     22  וְהַנְּבִיאִים    vehanneviim          vehane viim
+     22  יִכָּרְתוּ        yikkaretu            yikhare tu
+     22  הַמְּנַחֵם        hammenachem          hame nachem
+     22  הַנְּשִׂיאוּת     hannesiut            hane siut
+     21  וַיִּתְּנֵהוּ     vayyittenehu         vayite nehu
+     21  הַנְּבִאִים       hanneviim            hane viim
+     21  יְדַבְּרוּ        yedabberu            yedave ru
+     21  אַפְּךָ           appekha              afe kha
+     21  כֻלְּכֶם          khullekhem           khule khem
+     21  הַקְּהִלּוֹת      hakkehillot          hake hilot
+     20  הַשְּׁלִישִׁית    hashshelishit        hashe lishit
+     20  הַקְּלָלָה        hakkelala            hake lala
+     20  הַגְּוִיָּה       haggeviyya           hage viya
+     20  יִשָּׁמְרוּ       yishshameru          yishame ru
+     20  הַכְּנֵסִיּוֹת    hakkenesiyyot        hakhe nesivot
+     19  הַגְּדוּד         haggedud             hage dud
+     19  בַּלָּיְלָה       ballayela            balaye la
+     19  הַיְּהוּדִי       hayyehudi            haye hudi
+     19  מְדַבְּרִים       medabberim           medave rim
+     19  מִשְּׁנֵי         mishshene            mishe ne
+     19  הַבְּרִיאָה       habberia             have ria
+     19  תִתְּנוּ          tittenu              tite nu
+     19  הַתְּשׁוּבָה      hatteshuva           hate shuva
+     19  מְקַבְּלִים       mekabbelim           mekave lim
+     19  אֶדְוָרְד         edvard               edvare d
+     18  וַיְכַל           vaykhal              vayekhal
+     18  וַתְּדַבֵּר       vattedabber          vate daver
+     18  וַיְחַזֵּק        vaychazzek           vayechazek
+     18  הַתְּרוּמָה       hatteruma            hate ruma
+     18  הַבְּאֵר          habbeer              have er
+     18  יִכָּשְׁלוּ       yikkashelu           yikhashe lu
+     18  הַזְּכָרִים       hazzekharim          haze kharim
+     18  הַדְּרוֹר         hadderor             hade ror
+     18  יִנָּתְנוּ        yinnatenu            yinate nu
+     18  הַכְּתָבִים       hakketavim           hakhe tavim
+     18  וַיְלַמֵּד        vaylammed            vayelamed
+     18  הַקְּדֹשִׁים      hakkedoshim          hake doshim
+     17  מִלְּפָנַי        millefanay           mile fanay
+     17  הַכְּלָבִים       hakkelavim           hakhe lavim
+     17  דַּבְּרוּ         dabberu              dave ru
+     17  הִנְּךָ           hinnekha             hine kha
+     17  כִּכְּרוֹת        kikkerot             kikhe rot
+     17  וַיֵּאָסְפוּ      vayyeasefu           vayease fu
+     17  אֶתְּנֶנָּה       ettenenna            ete nena
+     17  הַגְּבָעוֹת       haggevaot            hage vaot
+     17  וַיְמַלֵּא        vaymalle             vayemale
+     17  יִשָּׁפְטוּ       yishshafetu          yishafe tu
+     16  הַקְּטֹרֶת        hakketoret           hake toret
+     16  זַמְּרוּ          zammeru              zame ru
+     16  וַיִּקְרְבוּ      vayyikrevu           vayikre vu
+     16  הַפְּנִימִית      happenimit           hafe nimit
+     16  בַּדָּיו          baddayv              badav
+     16  הַקְּטַנָּה       hakketanna           hake tana
+     16  וַיִּקְצְפוּ      vayyiktsefu          vayiktse fu
+     16  וּמִמׇּחֳרָת      umimmochorat         umimochorat
+     16  אֲדַבְּרָה        adabbera             adave ra
+     16  מִפְּאַת          mippeat              mife at
+     16  הַתְּאֵנָה        hatteena             hate ena
+     16  וְהַיְּהוּדִים    vehayyehudim         vehaye hudim
+     16  הַלְלוּהוּ        halluhu              hale luhu
+     16  הַטְּבִילָה       hattevila            hate vila
+     16  וַיִּתְחַבְּרוּ   vayyitchabberu       vayitchave ru
+     15  הַשְּׁעָרִים      hashshearim          hashe arim
+     15  הַמְשֹׁרְרִים     hamshorrim           hamshore rim
+     15  וַיְגָרֶשׁ        vaygaresh            vayegaresh
+     15  וְהִנְנִי         vehinni              vehine ni
+     15  וַיִּכְרְתוּ      vayyikhretu          vayikhre tu
+     15  הַכְּרוּב         hakkeruv             hakhe ruv
+     15  כַּפָּיו          kappayv              kafav
+     15  וְהִתְפַּלְלוּ    vehitpallu           vehitpale lu
+     15  וַיְבִיאֵהוּ      vayviehu             vayeviehu
+     15  לִמְּדוּ          limmedu              lime du
+     15  הַנְּפוֹצִים      hannefotsim          hane fotsim
+     15  יִוָּשְׁעוּ       yivvasheu            yivashe u
+     15  הַתְּחִיָּה       hattechiyya          hate chiya
+     15  הַמְקַבְּלִים     hamkabbelim          hamkave lim
+     14  הַלְּשָׁכוֹת      halleshakhot         hale shakhot
+     14  הַשְּׁבָטִים      hashshevatim         hashe vatim
+     14  וַיְצַף           vaytsaf              vayetsaf
+     14  וְאֶתְּנָה        veettena             veete na
+     14  הַבְּעָלִים       habbealim            have alim
+     14  בַּבְּרִית        babberit             bave rit
+     14  וַיְמָאֵן         vaymaen              vayemaen
+     14  וַיִּכָּנְעוּ     vayyikkaneu          vayikhane u
+     14  הַקְּרוּאִים      hakkeruim            hake ruim
+     14  בְּדַבְּרוֹ       bedabbero            bedave ro
+     14  מְרַגְּלִים       meraggelim           merage lim
+     14  וְהַפְּרִזִּי     vehapperizzi         vehafe rizi
+     14  וַיְצַוֵּם        vaytsavvem           vayetsavem
+     14  וַיִּקָּרְאוּ     vayyikkareu          vayikare u
+     14  וּבַבְּהֵמָה      uvabbehema           uvave hema
+     14  הַמְּנֹרָה        hammenora            hame nora
+     14  הַפְּקֻדִים       happekudim           hafe kudim
+     14  וַיְבִיאֻהוּ      vayviuhu             vayeviuhu
+     14  מִשְּׁנֵים        mishshenem           mishe nem
+     14  הַגְּדוֹלוֹת      haggedolot           hage dolot
+     14  וְהִטָּבְלוּ      vehittavelu          vehitave lu
+     14  הַשְּׁמָמָה       hashshemama          hashe mama
+     14  בַּקְּהִלָּה      bakkehilla           bake hila
+     14  מְלַמְּדִים       melammedim           melame dim
+     13  הַשְּׁלִשִׁי      hashshelishi         hashe lishi
+     13  וַיִּקָּבְצוּ     vayyikkavetsu        vayikave tsu
+     13  הַתְּשִׁיעִי      hatteshii            hate shii
+     13  יִקָּרְאוּ        yikkareu             yikare u
+     13  מִלְּפָנֶיךָ      millefanekha         mile fanekha
+     13  הַתְּפִלָּה       hattefilla           hate fila
+     13  וְהִנְּךָ         vehinnekha           vehine kha
+     13  נִגְּשׁוּ         niggeshu             nige shu
+     13  הַמְּקֹמוֹת       hammekomot           hame komot
+     13  הַשְּׁבִיעִית     hashsheviit          hashe viit
+     13  הַבְּרֵכָה        habberekha           have rekha
+     13  הַתְּשִׁיעִית     hatteshiit           hate shiit
+     13  וַאֲדַבְּרָה      vaadabbera           vaadave ra
+     13  הַמְּדִינָה       hammedina            hame dina
+     13  הַכְּתָב          hakketav             hakhe tav
+     13  הַכְּלָיֹת        hakkelayot           hakhe layot
+     13  מַעַלְלֵיהֶם      maallehem            maale lehem
+     13  הַפְּקֻדָּה       happekudda           hafe kuda
+     13  מִצְּפוֹן         mitstsefon           mitse fon
+     13  נִבְּאוּ          nibbeu               nive u
+     13  נִצְּלוּ          nitstselu            nitse lu
+     13  יִוָּדְעוּ        yivvadeu             yivade u
+     13  לַכְּהֻנָּה       lakkehunna           lakhe huna
+     13  הַשְּׁבוּיִים     hashshevuyim         hashe vuyim
+     13  מְבַקְּשִׁים      mevakkeshim          mevake shim
+     12  הַקְּהָתִי        hakkehati            hake hati
+     12  הַנְּשִׂיאִים     hannesiim            hane siim
+     12  הַשְּׁלֹשָׁה      hashshelosha         hashe losha
+     12  הַמְּכֹנוֹת       hammekhonot          hame khonot
+     12  וְעַמְּךָ         veammekha            veame kha
+     12  וַיְמַהֲרוּ       vaymaharu            vayemaharu
+     12  וָאֶתְּנָה        vaettena             vaete na
+     12  הַמְּקוֹמוֹת      hammekomot           hame komot
+     12  הַמְּעִיל         hammeil              hame il
+     12  לְכֻלְּכֶם        lekhullekhem         lekhule khem
+     12  אִמְּךָ           immekha              ime kha
+     12  בַּתְּחִלָּה      battechilla          bate chila
+     12  וְהַכְּנַעֲנִי    vehakkenaani         vehakhe naani
+     12  בַּמְּרוֹמִים     bammeromim           bame romim
+     12  טַבְּעֹת          tabbeot              tave ot
+     12  הַמְּגִלָּה       hammegilla           hame gila
+     12  וַיְצַוּוּ        vaytsu               vayetsavu
+     12  הַסְּלָעִים       hasselaim            hase laim
+     12  יִקָּבְצוּ        yikkavetsu           yikave tsu
+     12  בַּגְּבוּלוֹת     baggevulot           bage vulot
+     12  הַנְּבוּאוֹת      hannevuot            hane vuot
+     12  וְהַקְּדוֹשִׁים   vehakkedoshim        vehake doshim
+     12  וַיְקַבֵּל        vaykabbel            vayekavel
+     12  וַיְשָׁרֵת        vaysharet            vayesharet
+     12  מַתְּנַת          mattenat             mate nat
+     11  בַּמְּלָאכָה      bammelakha           bame lakha
+     11  וְהַמְשֹׁרְרִים   vehamshorrim         vehamshore rim
+     11  הַנְּטוּיָה       hannetuya            hane tuya
+     11  וַיִּתְנַבְּאוּ   vayyitnabbeu         vayitnave u
+     11  בַּפְּלִשְׁתִּים  bappelishtim         bafe lishtim
+     11  וַיְקַדֵּשׁ       vaykaddesh           vayekadesh
+     11  וַיְלַמְּדוּ      vaylammedu           vayelame du
+     11  הַבְּרָכוֹת       habberakhot          have rakhot
+     11  מִמְּקוֹמוֹ       mimmekomo            mime komo
+     11  וְהַלְּשֹׁנוֹת    vehalleshonot        vehale shonot
+     11  הַקְּרִיאָה       hakkeria             hake ria
+     11  הַשְּׁלוּחִים     hashsheluchim        hashe luchim
+     11  מַתְּנוֹת         mattenot             mate not
+     11  יִכָּנְעוּ        yikkaneu             yikhane u
+     11  לֻמְּדוּ          lummedu              lume du
+     11  הַזְּמַן          hazzeman             haze man
+     11  וַיִּטָּבְלוּ     vayyittavelu         vayitave lu
+     11  הִנְּכֶם          hinnekhem            hine khem
+     11  תְקַבְּלוּ        tekabbelu            tekave lu
+     11  הַזְּנוּת         hazzenut             haze nut
+     11  הַצְּלוּב         hatstseluv           hatse luv
+     11  וִיקַבְּלוּ       vikabbelu            vikave lu
+     11  וִילְיָמְס        vileyams             vileyame s
+     10  הִתְקַדְּשׁוּ     hitkaddeshu          hitkade shu
+     10  וַיְשַׁלְּחֵם     vayshallechem        vayeshale chem
+     10  הַצְּבָאוֹת       hatstsevaot          hatse vaot
+     10  הַגְּמַלִּים      haggemallim          hage malim
+     10  בַּלְּבָנוֹן      ballevanon           bale vanon
+     10  וַיִּתְּנָהּ      vayyittena           vayite na
+     10  הַשְּׁמוּעָה      hashshemua           hashe mua
+     10  צִוְּךָ           tsivvekha            tsive kha
+     10  הַמְּעָרָה        hammeara             hame ara
+     10  מִמְּקֹמוֹ        mimmekomo            mime komo
+     10  מִלְּפָנָי        millefanay           mile fanay
+     10  נִבְּאִים         nibbeim              nive im
+     10  הַשְּׁאֵלָה       hashsheela           hashe ela
+     10  הַתְּרָפִים       hatterafim           hate rafim
+     10  וַתְּמַהֵר        vattemaher           vate maher
+     10  הַשְּׁאֵרִית      hashsheerit          hashe erit
+     10  וַיְבָרְכֵהוּ     vayvarekhehu         vayevare khehu
+     10  גִּדְּפוּ         giddefu              gide fu
+     10  מִלְּתָא          milleta              mile ta
+     10  הַגְּדֹלָה        haggedola            hage dola
+     10  הַכְּתוּבָה       hakketuva            hakhe tuva
+     10  וַיִּפְגְּעוּ     vayyifgeu            vayifge u
+     10  הַמְּנוֹרָה       hammenora            hame nora
+     10  יִנָּשְׂאוּ       yinnaseu             yinase u
+     10  וְלַכְּבָשִׂים    velakkevasim         velakhe vasim
+     10  לְלַמְּדָם        lelammedam           lelame dam
+     10  תְּדַבְּרוּ       tedabberu            te dave ru
+     10  הַיְּוָנִים       hayyevanim           haye vanim
+     10  וַיִּשְׁמְרוּ     vayyishmeru          vayishme ru
+     10  הַבְּרִיתוֹת      habberitot           have ritot
+     10  בַּכְּתוּבִים     bakketuvim           bakhe tuvim
+     10  לַקְּדוֹשִׁים     lakkedoshim          lake doshim
+     10  הִתְפַּלְּלוּ     hitpallelu           hitpale lu
+     10  בַּתְּחִיָּה      battechiyya          bate chiya
+     10  בַּכְּנֵסִיָּה׃   bakkenesiyya         bakhe nesiya
+      9  וַיְמִיתֵהוּ      vaymitehu            vayemitehu
+      9  וַיְבִיאֵם        vayviem              vayeviem
+      9  הַבְּרוּרִים      habberurim           have rurim
+      9  וַיְבִיאוּם       vayvium              vayevium
+      9  וַיְשִׂימֵהוּ     vaysimehu            vayesimehu
+      9  וַיְצַוֵּהוּ      vaytsavvehu          vayetsavehu
+      9  מְזַבְּחִים       mezabbechim          mezave chim
+      9  לְעַמְּךָ         leammekha            leame kha
+      9  לְבַדְּךָ         levaddekha           levade kha
+      9  וַיְרַפֵּא        vayrappe             vayerafe
+      9  הִתְחַזְּקוּ      hitchazzeku          hitchaze ku
+      9  בַּנְּבִיאִים     banneviim            bane viim
+      9  וְהַשְּׁלִשִׁית   vehashshelishit      vehashe lishit
+      9  וַיְקַצֵּץ        vaykatstsets         vayekatsets
+      9  בַּשְּׁבִי        bashshevi            bashe vi
+      9  וַיְקַבְּלוּ      vaykabbelu           vayekave lu
+      9  הַבְּגָדִים       habbegadim           have gadim
+      9  הַגְּדֹלוֹת       haggedolot           hage dolot
+      9  חֻקָּיו           chukkayv             chukav
+      9  הִנְנוּ           hinnu                hine nu
+      9  קִלְלַת           killat               kile lat
+      9  מִשְּׁמֹעַ        mishshemoa           mishe moa
+      9  הַשְּׁבִי         hashshevi            hashe vi
+      9  הַקְּרָשִׁים      hakkerashim          hake rashim
+      9  הַתְּנוּפָה       hattenufa            hate nufa
+      9  מֵאִתְּכֶם        meittekhem           meite khem
+      9  הַנִּבְּאִים      hannibbeim           hanive im
+      9  הַנְּפָשׁוֹת      hannefashot          hane fashot
+      9  הִתְהַלְּכוּ      hithallekhu          hithale khu
+      9  מַעַלְלֵיכֶם      maallekhem           maale lekhem
+      9  שׁוֹדְדֵי         shodde               shode de
+      9  וְיִמָּלְאוּ      veyimmaleu           veyimale u
+      9  אֲזַמְּרָה        azammera             azame ra
+      9  לַמְּדֵנִי        lammedeni            lame deni
+      9  הִתְחַבְּרוּ      hitchabberu          hitchave ru
+      9  הִתְפַּלְלוּ      hitpallu             hitpale lu
+      9  וַיְבָאֵר         vayvaer              vayevaer
+      9  לַתְּשׁוּבָה      latteshuva           late shuva
+      9  וַיְלַמְּדֵם      vaylammedem          vayelame dem
+      9  יִלָּקְחוּ        yillakechu           yilake chu
+      9  הַצְּעִירִים      hatstseirim          hatse irim
+      9  וְהַשְּׁלִיחִים   vehashshelichim      vehashe lichim
+      9  וְהַבְּרִיתוֹת    vehabberitot         vehave ritot
+      9  הַסְּעוּדָה       hasseuda             hase uda
+      9  לַקְּהִלּוֹת      lakkehillot          lake hilot
+      8  הַשְּׁבִעִי       hashshevii           hashe vii
+      8  וַיְשַׁלְּחוּ     vayshallechu         vayeshale chu
+      8  מִבְּאֵר          mibbeer              mive er
+      8  לַמְּלָאכָה       lammelakha           lame lakha
+      8  וַיְבָרְכוּ       vayvarekhu           vayevare khu
+      8  הַפְּרִזִּי       happerizzi           hafe rizi
+      8  וַיִּרְגְּמוּ     vayyirgemu           vayirge mu
+      8  הַמְּדִינוֹת      hammedinot           hame dinot
+      8  וַיְשַׁלְּחֵהוּ   vayshallechehu       vayeshale chehu
+      8  בַּסְּפָרִים      bassefarim           base farim
+      8  הַפְּלִשְׁתִּים   happelishtim         hafe lishtim
+      8  הִתְקַבְּצוּ      hitkabbetsu          hitkave tsu
+      8  וַיְסַפְּרוּ      vaysapperu           vayesafe ru
+      8  וַיְקַלֵּל        vaykallel            vayekalel
+      8  הַשְּׁלִשִׁית     hashshelishit        hashe lishit
+      8  וַיִּשָּׁבְעוּ    vayyishshaveu        vayishave u
+      8  הַכְּבָשִׂים      hakkevasim           hakhe vasim
+      8  הַמְדַבְּרִים     hamdabberim          hamdave rim
+      8  קַדְּשׁוּ         kaddeshu             kade shu
+      8  וְהַבְּרִית       vehabberit           vehave rit
+      8  סֹלְלָה           solla                sole la
+      8  יִשָּׁמְעוּ       yishshameu           yishame u
+      8  וַיְמַן           vayman               vayeman
+      8  בַּתְּפִלָּה      battefilla           bate fila
+      8  לְקַדְּשׁוֹ       lekaddesho           lekade sho
+      8  הַמְּנוּחָה       hammenucha           hame nucha
+      8  וַיְכַס           vaykhas              vayekhas
+      8  שַׁבְּתוֹתַי      shabbetotay          shave totay
+      8  וַיְבִיאֵנִי      vayvieni             vayevieni
+      8  הַנְּתִינִים      hannetinim           hane tinim
+      8  וַיִּגְדְּלוּ     vayyigdelu           vayigde lu
+      8  וַיִּתְעַצְּבוּ   vayyitatstsevu       vayitatse vu
+      8  וַיְבָרְכֵם       vayvarekhem          vayevare khem
+      8  הַטְּמֵאִים       hattemeim            hate meim
+      8  שִׁנָּיו          shinnayv             shinav
+      8  מִשְּׁאוֹל        mishsheol            mishe ol
+      8  דֻּבְּרוּ         dubberu              duve ru
+      8  תִּמָּצְאוּ       timmatseu            timatse u
+      8  וַיְשָׁרְתוּ      vaysharetu           vayeshare tu
+      8  הַשְּׁאוֹל        hashsheol            hashe ol
+      8  לַצְּדָקָה        latstsedaka          latse daka
+      8  תִּוָּשְׁעוּ      tivvasheu            tivashe u
+      8  הַתְּהוֹם         hattehom             hate hom
+      8  מִנְּפֹל          minnefol             mine fol
+      8  לְקַבְּלָם        lekabbelam           lekave lam
+      8  וַיִּתְפַּלְלוּ   vayyitpallu          vayitpale lu
+      8  וְהַמְּרִיבוֹת    vehammerivot         vehame rivot
+      8  הַתְּקוּמָה       hattekuma            hate kuma
+      8  הִכָּנְעוּ        hikkaneu             hikhane u
+      8  דַבְּרוֹ          dabbero              dave ro
+      8  הַצְּדָדִים       hatstsedadim         hatse dadim
+      8  הַמְּחִיר         hammechir            hame chir
+      8  הַנְּתוּנָה       hannetuna            hane tuna
+      8  הַקְּהִילָּה      hakkehila            hake hila
+      8  הַזְּכוּת         hazzekhut            haze khut
+      8  לַכְּנֵסִיָּה׃    lakkenesiyya         lakhe nesiya
+      7  הַבְּכֹר          habbekhor            have khor
+      7  וְהַנְּתִינִים    vehannetinim         vehane tinim
+      7  וַיִּמְשְׁחוּ     vayyimshechu         vayimshe chu
+      7  הַשְּׁמִינִית     hashsheminit         hashe minit
+      7  תִּגְּעוּ         tiggeu               tige u
+      7  וַיְמִתֵהוּ       vaymitehu            vayemitehu
+      7  הַדְּבִיר         haddevir             hade vir
+      7  וְחֻקָּיו         vechukkayv           vechukav
+      7  בַּמְּעָרָה       bammeara             bame ara
+      7  וְיִתְּנוּ        veyittenu            veyite nu
+      7  בַּצׇּהֳרָיִם     batstsohorayim       batsohorayim
+      7  וַיִּתְאַבְּלוּ   vayyitabbelu         vayitave lu
+      7  הִתְיַצְּבוּ      hityatstsevu         hityatse vu
+      7  הַבְּכִירָה       habbekhira           have khira
+      7  וַתְּכַס          vattekhas            vate khas
+      7  וְנִתְּנָה        venittena            venite na
+      7  הַיִּדְּעֹנִים    hayyiddeonim         hayide onim
+      7  וַיְשַׁבֵּר       vayshabber           vayeshaver
+      7  בַבְּרִית         vabberit             vave rit
+      7  הַבְּצֻרוֹת       habbetsurot          have tsurot
+      7  וַיִּקְשְׁרוּ     vayyiksheru          vayikshe ru
+      7  בִּתְּךָ          bittekha             bite kha
+      7  וַיִּסְמְכוּ      vayyismekhu          vayisme khu
+      7  אִגְּרוֹת         iggerot              ige rot
+      7  וַיִּפְצְרוּ      vayyiftseru          vayiftse ru
+      7  יֻלְּדוּ          yulledu              yule du
+      7  מִדְּמֵי          middeme              mide me
+      7  עַמְמַיָּא        ammayya              ame maya
+      7  וְהִנְּכֶם        vehinnekhem          vehine khem
+      7  מִבְּשָׂרָם       mibbesaram           mive saram
+      7  מִבְּשַׂר         mibbesar             mive sar
+      7  טַפְּכֶם          tappekhem            tafe khem
+      7  לְבַדְּכֶם        levaddekhem          levade khem
+      7  עַמָּיו           ammayv               amav
+      7  הַכְּסִיל         hakkesil             hakhe sil
+      7  בְּחַיָּיו        bechayyayv           bechayav
+      7  וְלִבְּךָ         velibbekha           velive kha
+      7  וַיְגָרְשׁוּם     vaygareshum          vayegare shum
+      7  הַסְּנֶה          hassene              hase ne
+      7  בְּדַבְּרָם       bedabberam           bedave ram
+      7  יִזָּכְרוּ        yizzakheru           yizakhe ru
+      7  הִקָּבְצוּ        hikkavetsu           hikave tsu
+      7  וּלְלַמֵּד        ulelammed            ule lamed
+      7  הַשָּׁוְא         hashshav             hashave 
+      7  מִמְּקוֹמָהּ      mimmekoma            mime koma
+      7  הַלְּבָנָה        hallevana            hale vana
+      7  יִתְקַבְּצוּ      yitkabbetsu          yitkave tsu
+      7  אִמְּכֶם          immekhem             ime khem
+      7  הַלְּחִי          hallechi             hale chi
+      7  הַתְּשׁוּעָה      hatteshua            hate shua
+      7  הַכְּלִי          hakkeli              hakhe li
+      7  הַקְּרוֹבָה       hakkerova            hake rova
+      7  הַנְּחָשִׁים      hannechashim         hane chashim
+      7  יְהַלְלוּ         yehallu              yehale lu
+      7  עֻזְּךָ           uzzekha              uze kha
+      7  הַסּוֹרְרִים      hassorrim            hasore rim
+      7  מִנְּעוּרָי       minneuray            mine uray
+      7  וּבַדְּבָרִים     uvaddevarim          uvade varim
+      7  בַּמְּקוֹמוֹת     bammekomot           bame komot
+      7  הַנְּפִילָה       hannefila            hane fila
+      7  יִתְחַבְּרוּ      yitchabberu          yitchave ru
+      7  בַדְּבָרִים       vaddevarim           vade varim
+      7  הַמְּעִידִים      hammeidim            hame idim
+      7  וְחַיָּיו         vechayyayv           vechayav
+      7  וַיְבָרֵךְ        vayvarekh            vayevarekh
+      7  שׁוֹדְדִים        shoddim              shode dim
+      7  וְהַכְּהֻנָּה     vehakkehunna         vehakhe huna
+      7  וַיַּחְשְׁבוּ     vayyachshevu         vayachshe vu
+      7  וַיְבַשְּׂרוּ     vayvasseru           vayevase ru
+      7  הַנְּכָסִים       hannekhasim          hane khasim
+      7  וְהִנְנוּ         vehinnu              vehine nu
+      7  מִכְּבוֹד         mikkevod             mikhe vod
+      7  בְּלִבְּךָ        belibbekha           belive kha
+      7  בַּגְּלִילוֹת     baggelilot           bage lilot
+      7  בַּסְּבִיבוֹת     bassevivot           base vivot
+      7  הַמְּמֻנִּים      hammemunnim          hame munim
+      7  וּתְקַבְּלוּ      utekabbelu           utekave lu
+      7  הַכְּלָלִי        hakkelali            hakhe lali
+      7  הַשְּׁמֵימִי      hashshememi          hashe memi
+      6  וְעִמְּךָ         veimmekha            veime kha
+      6  נִקְּבוּ          nikkevu              nike vu
+      6  וַיִּפְשְׁטוּ     vayyifshetu          vayifshe tu
+      6  הַגְּבָרִים       haggevarim           hage varim
+      6  וַיִּתְקְעוּ      vayyitkeu            vayitke u
+      6  וַיְצַפֵּהוּ      vaytsappehu          vayetsafehu
+      6  הַמְּנֹרוֹת       hammenorot           hame norot
+      6  עֻלְּכֶם          ullekhem             ule khem
+      6  וַיְקַנְאוּ       vaykanu              vayekanu
+      6  הַנְּחָלִים       hannechalim          hane chalim
+      6  וַיְחַלְּקוּ      vaychalleku          vayechale ku
+      6  מִתְנַבְּאִים     mitnabbeim           mitnave im
+      6  וּמְקַטְּרִים     umekatterim          umekate rim
+      6  וַיְבִאֻהוּ       vayviuhu             vayeviuhu
+      6  וַיִּתְקַבְּצוּ   vayyitkabbetsu       vayitkave tsu
+      6  וַיְמָאֲנוּ       vaymaanu             vayemaanu
+      6  מֵהַנְּעָרִים     mehannearim          mehane arim
+      6  וַיְבִאֵהוּ       vayviehu             vayeviehu
+      6  הַגְּשׁוּרִי      haggeshuri           hage shuri
+      6  וַיִּשְׂרְפוּ     vayyisrefu           vayisre fu
+      6  לַמְּלָכִים       lammelakhim          lame lakhim
+      6  וּכְכַלּוֹת       ukhekhallot          ukhe khalot
+      6  וַיְחַזְּקֵם      vaychazzekem         vayechaze kem
+      6  וַיִּתְאַמְּצוּ   vayyitammetsu        vayitame tsu
+      6  הַשְּׂמָאלִית     hassemalit           hase malit
+      6  וַיִּזְרְקוּ      vayyizreku           vayizre ku
+      6  הַנְּבִיאָה       hannevia             hane via
+      6  דִּבְּרָה         dibbera              dive ra
+      6  חִזְּקוּ          chizzeku             chize ku
+      6  הַשְּׁחִין        hashshechin          hashe chin
+      6  מֵאִתְּךָ         meittekha            meite kha
+      6  יִנָּצְלוּ        yinnatselu           yinatse lu
+      6  בַּבְּהֵמָה       babbehema            bave hema
+      6  וְהַבְּהֵמָה      vehabbehema          vehave hema
+      6  קִדְּמוּ          kiddemu              kide mu
+      6  יִתְּנֶנּוּ       yittenennu           yite nenu
+      6  שֶׁכְּבָר         shekkevar            shekhe var
+      6  וַיַּחְדְּלוּ     vayyachdelu          vayachde lu
+      6  שַׁבְּתֹתַי       shabbetotay          shave totay
+      6  צַוְּארֵי         tsavvere             tsave re
+      6  מִבְּשָׂרִי       mibbesari            mive sari
+      6  הַטְּהוֹרָה       hattehora            hate hora
+      6  הַגְּבֹהִים       haggevohim           hage vohim
+      6  וַיִּמְלְאוּ      vayyimleu            vayimle u
+      6  הַשְּׁפָחוֹת      hashshefachot        hashe fachot
+      6  סוֹרְרִים         sorrim               sore rim
+      6  וַיְקַו           vaykav               vayekav
+      6  הַשְּׂרָפִים      hasserafim           hase rafim
+      6  וַיִּבְטְחוּ      vayyivtechu          vayivte chu
+      6  חׇנֵּנוּ          chonnenu             chonenu
+      6  יַשְּׁרוּ         yashsheru            yashe ru
+      6  רׇנּוּ            ronnu                ronu
+      6  רַנְּנוּ          rannenu              rane nu
+      6  בַּשְּׁעָרִים     bashshearim          bashe arim
+      6  וַיִּדְרְשׁוּ     vayyidreshu          vayidre shu
+      6  וַיְגָרְשׁוּ      vaygareshu           vayegare shu
+      6  אֶתְּנֶנּוּ       ettenennu            ete nenu
+      6  וְהַנְּבִאִים     vehanneviim          vehane viim
+      6  לַשְּׁבִי         lashshevi            lashe vi
+      6  וּמִלְּבַד        umillevad            umile vad
+      6  לַגְּוִיָּה       laggeviyya           lage viya
+      6  הַסְּגָנִים       hasseganim           hase ganim
+      6  אֲסַפְּרָה        asappera             asafe ra
+      6  מְסַפְּרִים       mesapperim           mesafe rim
+      6  לַזְּקֵנִים       lazzekenim           laze kenim
+      6  לַנְּבִיאִים      lanneviim            lane viim
+      6  וַיִּתְחַנְּנוּ   vayyitchannenu       vayitchane nu
+      6  בַּגְּוִיָּה      baggeviyya           bage viya
+      6  תִּכָּרְתוּ       tikkaretu            tikhare tu
+      6  מִבְּרִיאַת       mibberiat            mive riat
+      6  יִכָּתְבוּ        yikkatevu            yikhate vu
+      6  וַיִּתְחַזְּקוּ   vayyitchazzeku       vayitchaze ku
+      6  וַיְרַחֵם         vayrachem            vayerachem
+      6  קִבְּלוּנִי       kibbeluni            kive luni
+      6  תִּקָּרְאוּ       tikkareu             tikare u
+      6  כְּדַבְּרוֹ       kedabbero            kedave ro
+      6  וַיֻּשְׁלְכוּ     vayyushlekhu         vayushle khu
+      6  הַפְּשָׁעִים      happeshaim           hafe shaim
+      6  יִשָּׁלְחוּ       yishshalechu         yishale chu
+      6  הַשְּׁלֵמָה       hashshelema          hashe lema
+      6  בְּלִבְּכֶם       belibbekhem          belive khem
+      6  הַקְּדוֹשׁוֹת     hakkedoshot          hake doshot
+      6  בַּדְּרוֹר        badderor             bade ror
+      6  כַּקְּעָרָה       kakkeara             kake ara
+      6  וְהַגְּדוֹלִים    vehaggedolim         vehage dolim
+      6  לִמְּדָם          limmedam             lime dam
+      6  בִּקְּשׁוּ        bikkeshu             bike shu
+      6  יִמָּצְאוּ        yimmatseu            yimatse u
+      6  בַּתְּקוּמָה      battekuma            bate kuma
+      6  בַּבְּשׂוֹרָה     babbesora            bave sora
+      6  הַבְּחִירִים      habbechirim          have chirim
+      6  וַיְבַשֵּׂר       vayvasser            vayevaser
+      6  עִקְּרֵי          ikkere               ike re
+      6  הַכְּפָר          hakkefar             hakhe far
+      6  יְאַבְּדֶנָּה     yeabbedenna          yeave dena
+      6  וּמְקַבְּלִים     umekabbelim          umekave lim
+      6  וְהַבְּשׂוֹרָה    vehabbesora          vehave sora
+      6  הַשְּׁאָר         hashshear            hashe ar
+      6  וְהַשְּׁאָר       vehashshear          vehashe ar
+      6  מִמְּלֹאוֹ        mimmeloo             mime loo
+      6  לְסֶפְּטֶמְבֶּר   leseppetember        lesefe tember
+      5  וַיִּתְיַצְּבוּ   vayyityatstsevu      vayityatse vu
+      5  הַנְּטֹפָתִי      hannetofati          hane tofati
+      5  הַקְּרוֹבִים      hakkerovim           hake rovim
+      5  וַיִּתְקַדְּשׁוּ  vayyitkaddeshu       vayitkade shu
+      5  וַיִּתְהַלְּכוּ   vayyithallekhu       vayithale khu
+      5  וְהַפְּלֵתִי      vehappeleti          vehafe leti
+      5  בַּשְּׁפֵלָה      bashshefela          bashe fela
+      5  וְהַמְּלָאכָה     vehammelakha         vehame lakha
+      5  הַגְּדֻלָּה       haggedulla           hage dula
+      5  וְהַגְּבוּרָה     vehaggevura          vehage vura
+      5  וַיִּקְּדוּ       vayyikkedu           vayike du
+      5  וַיִּבְרְחוּ      vayyivrechu          vayivre chu
+      5  יִתְפַּלְלוּ      yitpallu             yitpale lu
+      5  הַנְּבֵלָה        hannevela            hane vela
+      5  בׇּאֳנִיּוֹת      booniyyot            boonivot
+      5  מִמְּלֹךְ         mimmelokh            mime lokh
+      5  וַיִּכְרְעוּ      vayyikhreu           vayikhre u
+      5  לַבְּעָלִים       labbealim            lave alim
+      5  שִׁלְּחוּ         shillechu            shile chu
+      5  וּבַשְּׁפֵלָה     uvashshefela         uvashe fela
+      5  הַשְּׁפֵלָה       hashshefela          hashe fela
+      5  וַיְהַלְלוּ       vayhallu             vayehale lu
+      5  יִתְקַדְּשׁוּ     yitkaddeshu          yitkade shu
+      5  הַקְּבָרִים       hakkevarim           hake varim
+      5  הַנְּבָלָה        hannevala            hane vala
+      5  לְשַׁלְּחוֹ       leshallecho          leshale cho
+      5  יִשָּׂרְפוּ       yissarefu            yisare fu
+      5  וּלְלַמְּדָם      ulelammedam          ule lame dam
+      5  וּבְדַבְּרוֹ      uvedabbero           uvedave ro
+      5  הַקְּרֹבִים       hakkerovim           hake rovim
+      5  יִמָּלְטוּ        yimmaletu            yimale tu
+      5  וְהַלְּבָנוֹן     vehallevanon         vehale vanon
+      5  וְהַקְּלָלָה      vehakkelala          vehake lala
+      5  מִתְּמוֹל         mittemol             mite mol
+      5  יְלַמְּדוּ        yelammedu            yelame du
+      5  הַמְּהוּמָה       hammehuma            hame huma
+      5  הַשְּׁנַיִם       hashshenayim         hashe nayim
+      5  בַשְּׁתִי         vashsheti            vashe ti
+      5  הַמְּדָתָא        hammedata            hame data
+      5  הַלְּבוּשׁ        hallevush            hale vush
+      5  וַיִּפְגְּשֵׁהוּ  vayyifgeshehu        vayifge shehu
+      5  מִלְּמַטָּה       millematta           mile mata
+      5  מֵעַמָּיו         meammayv             meamav
+      5  הַטְּהֹרָה        hattehora            hate hora
+      5  וַיְמַלְאוּ       vaymalu              vayemalu
+      5  חַלְלֵיהֶם        challehem            chale lehem
+      5  הַקְּטַנּוֹת      hakketannot          hake tanot
+      5  טִמְּאוּ          timmeu               time u
+      5  וּמַעַלְלֵיכֶם    umaallekhem          umaale lekhem
+      5  וָאֶתְּנֵם        vaettenem            vaete nem
+      5  יְטַמְּאוּ        yetammeu             yetame u
+      5  וְיִכָּלְמוּ      veyikkalemu          veyikhale mu
+      5  הַשְּׂעֹרִים      hasseorim            hase orim
+      5  וַיְכַלּוּ        vaykhallu            vayekhalu
+      5  מִשְּׂמֹאל        missemol             mise mol
+      5  מִשְּׁנָתוֹ       mishshenato          mishe nato
+      5  וַיִּמְשְׁכוּ     vayyimshekhu         vayimshe khu
+      5  וַיִּקְרְעוּ      vayyikreu            vayikre u
+      5  וַיְשִׂימֵנִי     vaysimeni            vayesimeni
+      5  אִלְּמִים         illemim              ile mim
+      5  אֲקַבְּצֵם        akabbetsem           akave tsem
+      5  חִצָּיו           chitstsayv           chitsav
+      5  וַיְגַל           vaygal               vayegal
+      5  מִשְּׁמוֹעַ       mishshemoa           mishe moa
+      5  יִזְּלוּ          yizzelu              yize lu
+      5  וְהַגְּבָעוֹת     vehaggevaot          vehage vaot
+      5  הַבְּתוּלָה       habbetula            have tula
+      5  הִתְבּוֹנְנוּ     hitbonnu             hitbone nu
+      5  דַבְּרִי          dabberi              dave ri
+      5  וַיִּרְדְּפוּם    vayyirdefum          vayirde fum
+      5  הַכְּסָלִים       hakkesalim           hakhe salim
+      5  יְחַלְּלוּ        yechallelu           yechale lu
+      5  מִשְּׁנַת         mishshenat           mishe nat
+      5  הַטְּמֵאָה        hattemea             hate mea
+      5  הַדְּלָתוֹת       haddelatot           hade latot
+      5  יִפָּתְחוּ        yippatechu           yifate chu
+      5  וַיְנַסּוּ        vaynassu             vayenasu
+      5  הַתְּעוּדָה       hatteuda             hate uda
+      5  הַסְּתָו          hassetav             hase tav
+      5  בַּגְּבוּל        baggevul             bage vul
+      5  מִבְּשׂוֹרַת      mibbesorat           mive sorat
+      5  וַיְגַדְּפוּ      vaygaddefu           vayegade fu
+      5  מֵהַדְּבָרִים     mehaddevarim         mehade varim
+      5  לְעוֹרְרָם        leorram              leore ram
+      5  יִטָּבְלוּ        yittavelu            yitave lu
+      5  לַיְּהוּדִי       layyehudi            laye hudi
+      5  וַיֵּאָנְסוּ      vayyeanesu           vayeane su
+      5  הַתְּשַׁע         hattesha             hate sha
+      5  הַמְּרִיבָה       hammeriva            hame riva
+      5  הַבְּרִיאִים      habberiim            have riim
+      5  הַשְּׁנִיָּה      hashsheniyya         hashe niya
+      5  יִסָּלְחוּ        yissalechu           yisale chu
+      5  הַמְּדַבֵּר       hammedabber          hame daver
+      5  וְיִשָּׁפְטוּ     veyishshafetu        veyishafe tu
+      5  יִפָּרְדוּ        yipparedu            yifare du
+      5  וַיְצֻוּוּ        vaytsu               vayetsuvu
+      5  וַתְּבַקֵּשׁ      vattevakkesh         vate vakesh
+      5  וַיִּתְוַכְּחוּ   vayyitvakkechu       vayitvakhe chu
+      5  וַיְקַבֵּץ        vaykabbets           vayekavets
+      5  הַנְּתוּנִים      hannetunim           hane tunim
+      5  וְהַלְּשׁוֹנוֹת   vehalleshonot        vehale shonot
+      5  בְּלַמְּדוֹ       belammedo            belame do
+      5  אֲקַבְּלֶנּוּ     akabbelennu          akave lenu
+      5  בְּעִקְּבוֹת      beikkevot            beike vot
+      5  מִתְפַּלְּלִים    mitpallelim          mitpale lim
+      5  תְּהִלָּתֵנוּ     tehillatenu          te hilatenu
+      5  מִתְהַלְּכִים     mithallekhim         mithale khim
+      5  וַיְשַׁבְּחוּ     vayshabbechu         vayeshave chu
+      5  שֶׁלְּךָ          shellekha            shele kha
+      5  וַיְבָרֲכֵם       vayvarakhem          vayevarakhem
+      5  הַשְּׁלֵמוּת      hashshelemut         hashe lemut
+      5  וְהַמְקַבְּלִים   vehamkabbelim        vehamkave lim
+      5  וַיְכַחֵשׁ        vaykhachesh          vayekhachesh
+      5  הַפְּתוֹתִים      happetotim           hafe totim
+      5  בַּקְּעָרָה       bakkeara             bake ara
+      5  הַמְבַקְּשִׁים    hamvakkeshim         hamvake shim
+      5  לַיְּהוּדִים׃     layyehudim           laye hudim
+      5  הַמְמֻנִּים       hammunnim            hame munim
+      5  הַבְּשׂוֹרָה׃     habbesora            have sora
+      5  בֻּשְּׂרָה        bussera              buse ra
+      5  בְּעַנְנֵי        beanne               beane ne
+      5  קִבְּלָהּ         kibbela              kive la
+      4  וְהִתְעַלְּלוּ    vehitallelu          vehitale lu
+      4  בַּמְּצוּדָה      bammetsuda           bame tsuda
+      4  סִבְּכַי          sibbekhay            sive khay
+      4  וְהַשְּׁלָמִים    vehashshelamim       vehashe lamim
+      4  וַיְחַלֵּק        vaychallek           vayechalek
+      4  יְרַנְּנוּ        yerannenu            yerane nu
+      4  כְּעַמְּךָ        keammekha            keame kha
+      4  וְהַמְּלָכִים     vehammelakhim        vehame lakhim
+      4  הַכְּרָמִים       hakkeramim           hakhe ramim
+      4  כִּכְּרֵי         kikkere              kikhe re
+      4  הִתְנַדְּבוּ      hitnaddevu           hitnade vu
+      4  וּמְהַלְלִים      umehallim            umehale lim
+      4  וְהַכְּרֵתִי      vehakkereti          vehakhe reti
+      4  וַיִּפְרְשׂוּ     vayyifresu           vayifre su
+      4  הַשְּׂבָכָה       hassevakha           hase vakha
+      4  הַמְּכוֹנָה       hammekhona           hame khona
+      4  מִשְּׂמֹאול       missemol             mise movl
+      4  וְהִתְחַנְּנוּ    vehitchannenu        vehitchane nu
+      4  מֵעַמְּךָ         meammekha            meame kha
+      4  מִלְּבוֹא         millevo              mile vo
+      4  הַגְּבִירָה       haggevira            hage vira
+      4  שַׁלְּחֵנִי       shallecheni          shale cheni
+      4  וַיְחַל           vaychal              vayechal
+      4  וַיְשִׁיבֵהוּ     vayshivehu           vayeshivehu
+      4  לַפְּלִשְׁתִּים   lappelishtim         lafe lishtim
+      4  הַתְּעָלָה        hatteala             hate ala
+      4  וַיַּחְגְּרוּ     vayyachgeru          vayachge ru
+      4  הַתְּרוּעָה       hatterua             hate rua
+      4  וַיְשַׁלְּחוּם    vayshallechum        vayeshale chum
+      4  מִתּוֹכְכֶם       mittokhkhem          mitokhe khem
+      4  וַיִּנָּגְפוּ     vayyinnagefu         vayinage fu
+      4  הַרְּאִיתֶם       harreitem            hare item
+      4  וַיְשִׂמֵהוּ      vaysimehu            vayesimehu
+      4  לְאַפָּיו         leappayv             leafav
+      4  וַיִּפְרְצוּ      vayyifretsu          vayifre tsu
+      4  וַיְכַסּוּ        vaykhassu            vayekhasu
+      4  וַיְחַזְּקוּ      vaychazzeku          vayechaze ku
+      4  וְהַנְּבוּאָה     vehannevua           vehane vua
+      4  הַתְּמָרִים       hattemarim           hate marim
+      4  וְהַפְּסִלִים     vehappesilim         vehafe silim
+      4  מִתְאַבְּלִים     mitabbelim           mitave lim
+      4  וַיִּתְּנוּם      vayyittenum          vayite num
+      4  הֲמִבְּלִי        hamibbeli            hamive li
+      4  מִדְּבַר          middevar             mide var
+      4  שִׁבְּרוּ         shibberu             shive ru
+      4  וַיְקַטְּרוּ      vaykatteru           vayekate ru
+      4  הַכְּתֻבִים       hakketuvim           hakhe tuvim
+      4  קִטְּרוּ          kitteru              kite ru
+      4  וַיְמִיתֵם        vaymitem             vayemitem
+      4  הַצְּבִי          hatstsevi            hatse vi
+      4  הַבְּאֵרֹתִי      habbeeroti           have eroti
+      4  וַיִּוָּלְדוּ     vayyivvaledu         vayivale du
+      4  הַזְּבָחִים       hazzevachim          haze vachim
+      4  כֻּתׇּנְתּוֹ      kuttonto             kutonto
+      4  הַשְּׂמֵחִים      hassemechim          hase mechim
+      4  שַׂבְּכָא         sabbekha             save kha
+      4  וְטַפְּכֶם        vetappekhem          vetafe khem
+      4  הַשְּׁבִיעִת      hashsheviit          hashe viit
+      4  וְדִבְּרוּ        vedibberu            vedive ru
+      4  יַכְּכָה          yakkekha             yakhe kha
+      4  יְשַׁלְּחֶנּוּ    yeshallechennu       yeshale chenu
+      4  וְהִתְיַצְּבוּ    vehityatstsevu       vehityatse vu
+      4  רִבְבוֹת          rivvot               rive vot
+      4  וַיִּתְּמוּ       vayyittemu           vayite mu
+      4  הַכְּסִילִים      hakkesilim           hakhe silim
+      4  הַבְּתוּלוֹת      habbetulot           have tulot
+      4  מַטְּךָ           mattekha             mate kha
+      4  לְשַׁלְּחָם       leshallecham         leshale cham
+      4  בְּדַבְּרִי       bedabberi            bedave ri
+      4  הַתְּכֵלֶת        hattekhelet          hate khelet
+      4  הַנְּשִׂאִים      hannesiim            hane siim
+
+  ... 5,201 more
+
+========================================================================
+3. ־ָיו — worth a look: the PAGE may be the wrong one here
+========================================================================
+
+   1158  אֵלָיו            elayv                elav
+    754  עָלָיו            alayv                alav
+    217  לְפָנָיו          lefanayv             lefanav
+    182  אַחֲרָיו          acharayv             acharav
+    148  בָּנָיו           banayv               banav
+    136  עֲבָדָיו          avadayv              avadav
+    122  פָּנָיו           panayv               panav
+    120  אֶחָיו            echayv               echav
+    106  וְאֶחָיו          veechayv             veechav
+     96  תַּלְמִידָיו      talmidayv            talmidav
+     92  עֵינָיו           enayv                enav
+     84  יָדָיו            yadayv               yadav
+     75  אֲבֹתָיו          avotayv              avotav
+     75  דְּבָרָיו         devarayv             de varav
+     71  אֱלֹהָיו          elohayv              elohav
+     67  רַגְלָיו          raglayv              raglav
+     65  בְּגָדָיו         begadayv             begadav
+     64  בְּעֵינָיו        beenayv              beenav
+     60  אֲדֹנָיו          adonayv              adonav
+     57  וּבָנָיו          uvanayv              uvanav
+     53  יָמָיו            yamayv               yamav
+     42  מִצְוֹתָיו        mitsotayv            mitsotav
+     40  בָנָיו            vanayv               vanav
+     37  כֵּלָיו           kelayv               kelav
+     36  מֵעָלָיו          mealayv              mealav
