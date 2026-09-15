@@ -773,6 +773,24 @@
       parts[k] = parts[k].replace(/\u05E4\u05B0\u05BC\u05E0\u05B5/g,
                                   '\u05E4\u05BC\u05B5\u05E0\u05B5');
       parts[k] = voiceShevaNa(parts[k]);
+      /* ־ְתִּי IS SPLIT OFF (translator, 2026-09-15, choosing it by ear three
+         times: יֻלַּדְתִּי, עָמַדְתִּי, יָדַעְתִּי). A closed syllable followed by the
+         1cs perfect ending is one she cannot read: she doubles the consonant
+         that closes it — "amad-de-ti" — whether or not there is a dagesh on
+         it, and in עָמַדְתִּי there is none. Nothing done to the points moved
+         her; the space does, the same way it does for זָרַחֶם לָה.
+
+         The sheva goes with it and the tav keeps no dagesh: she gets the
+         closed syllable, a space, then "ti". 3,452 tokens, 768 forms — and it
+         covers יֻלַּדְתִּי, whose SAY_AS entry above is now redundant but
+         harmless: SAY_AS runs first and produces the same string.
+
+         בִּלְתִּי and לְבִלְתִּי are held back. They match by shape but they are
+         "lest", not a verb, and they have not been heard yet. */
+      parts[k] = (function (w) {
+        if (/^(\u05DC\u05B0)?\u05D1\u05BC?\u05B4\u05DC\u05B0\u05EA/.test(w)) return w;
+        return w.replace(/\u05B0\u05EA[\u05BC\u05B4]{0,2}\u05D9$/, ' \u05EA\u05B4\u05D9');
+      })(parts[k]);
       /* A VAV WITH A HOLAM AFTER A SILENT SHEVA IS A CONSONANT, AND SHE NEEDS
          TO SEE TWO (translator, 2026-09-15, on אֶת־מִצְוֹת: "its mitsvot",
          choosing מִצְווֹת from a rendered set). A lone vav carrying a holam IS
