@@ -357,7 +357,7 @@
        Respelled rather than unpointed: ktivMale gives יולדתי, which is also
        יוֹלֶדֶת's, and she would read the participle. */
     '\u05D9\u05BB\u05DC\u05B7\u05BC\u05D3\u05B0\u05EA\u05B4\u05BC\u05D9':
-      '\u05D9\u05BB\u05DC\u05B7\u05D3\u05EA\u05B4\u05D9',   /* יֻלַּדְתִּי -> יֻלַדתִי — KEY IN THE CORPUS'S MARK ORDER: vowel, then dagesh */
+      '\u05D9\u05BB\u05DC\u05B7\u05D3\u0020\u05EA\u05B4\u05D9',   /* יֻלַּדְתִּי -> יֻלַד תִי — yu-lad-ti, chosen from a rendered set */
 
     /* SARIAH ENDS ON AN AYIN FOR THE VOICE (translator's suggestion). The
        final ־ָה of שְׂרָיָה is a mater — the he is not sounded and the word
