@@ -68,16 +68,16 @@ const CASES = [
   ['כׇּל',        'כול',      '"col yamaiu its yamav" — kol, and the qamats qatan is not enough on its own'],
   ['כָּל',        'כול',      'the same word spelled with a plain qamats'],
   ['חׇכְמָה',      'חֹכְמָה',   'U+05C7 is a codepoint she does not know: "chachma" for chochmah'],
-  ['וַיָּמׇת',     'וַיָּמֹת',  'the same gap: "vayyamat" for vayyamot'],
+  ['וַיָּמׇת',     'וַיָמֹת',  'the same gap: "vayyamat" for vayyamot'],
   /* SUPERSEDED 2026-09-14. This asserted וַיְהִי -> וַיֶהִי on the claim that
      the sheva under the yod is NA. It is not — וַיְהִי is way-hî, the yod
      closing the syllable — and the segol made her say "vay-YEH-hi", which the
      translator heard in Moses 2:1. The word is excepted in SAY_AS now and its
      case is below. The wayyiqtol rule still covers the rest of the וַיְ class,
      so וַיְדַבֵּר holds it here until those are heard too. */
-  ['וַיְדַבֵּר',   'וַיֶדַבֵּר', 'the wayyiqtol segol rule still applies to the rest of the class'],
-  ['וַיְדַבֵּר',    'וַיֶדַבֵּר', 'the same weak wayyiqtol, 4,677 words'],
-  ['וַיֹּאמֶר',    'וַיֹּאמֶר',  'NOT touched — the yod carries a dagesh here and she reads it right'],
+  ['וַיְדַבֵּר',   'וַיֶדַבֵר', 'the wayyiqtol segol rule still applies to the rest of the class'],
+  ['וַיְדַבֵּר',    'וַיֶדַבֵר', 'the same weak wayyiqtol, 4,677 words'],
+  ['וַיֹּאמֶר',    'וַיֹאמֶר',  'NOT touched — the yod carries a dagesh here and she reads it right'],
   ['מְצַוֶּה',     'מִצְוֶה',   'the dagesh-vav came out "mitzawe"; mitsveh, and unpointing cannot help — ktiv male makes it מצווה, which is also the noun מִצְוָה'],
   ['וּמְצַוֶּה',    'וּמִצְוֶה',  'the prefixed form: SAY_AS matches a whole token, so it needs its own entry'],
   ['מִצְוָה',      'מִצְוָה',   'NOT touched — the noun keeps its own pointing and its own sound'],

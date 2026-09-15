@@ -715,6 +715,52 @@
          would never have been touched at all.
 
          20 spellings, 1,110 tokens: פְּנֵי, מִפְּנֵי, מִפְּנֵיהֶם, פְּנֵיכֶם. */
+      /* A DAGESH FORTE IS PURE GEMINATION AND MODERN HEBREW DOES NOT SOUND IT
+         (translator, 2026-09-15, choosing from rendered pairs on וַיִּקַּח, שַׁמָּה,
+         הַנָּהָר, אֵלֶּה, מִשָּׁם, גִּבּוֹר and כִּתִּים). She sounds it, so every one of
+         these grew a syllable: va-yik-KAK-kach, sham-MAH, hag-gib-BOR.
+         158,087 tokens across the six volumes carried one into speech.
+
+         FORTE ONLY, and that is decided by the letter BEFORE: a dagesh is
+         forte when the previous letter carries a real vowel. Three things
+         therefore keep theirs, and each was heard:
+
+           word-initial   בְּרֵאשִׁית, כְּמוֹ, פְּרִי — lene, and on ב כ פ it is what
+                          keeps the letter hard. Nothing before it, so no forte.
+           after a silent sheva   וַיַּחְפְּצוּ — lene again, same reason (v=60).
+           the shureq     וּ is a vowel, not a doubled vav.
+
+         ב כ פ are NOT excepted here. In this position the translator kept
+         גִּבּוֹר without its bet-dagesh — it does not spirantize after a vowel,
+         which is the 2026-09-14 result for the sheva case holding good. The
+         exceptions above are all positions where the dagesh is LENE.
+
+         A word boundary resets the test, so the second half of a split is
+         word-initial in its own right. */
+      parts[k] = (function (w) {
+        var out = '', prevMarks = null, i = 0, c, j, marks;
+        while (i < w.length) {
+          c = w.charAt(i);
+          if (c < '\u05D0' || c > '\u05EA') {            /* space, punctuation */
+            if (c === ' ') prevMarks = null;               /* a new word begins */
+            out += c; i++; continue;
+          }
+          for (j = i + 1, marks = ''; j < w.length &&
+               w.charAt(j) >= '\u0591' && w.charAt(j) <= '\u05C7'; j++) marks += w.charAt(j);
+          if (marks.indexOf('\u05BC') >= 0) {
+            var bare = marks.replace('\u05BC', '');
+            var shureq = c === '\u05D5' && !/[\u05B0-\u05BB\u05C7]/.test(bare);
+            var forte = prevMarks !== null && /[\u05B1-\u05BB\u05C7]/.test(prevMarks);
+            /* FORTE + A FULL VOWEL ONLY. Forte + a SHEVA is the other rule's
+               business — voiceShevaNa above owns it, and it has its own
+               rulings written into it: מִפְּנֵי keeps a HARD p and becomes
+               מִפֵּנֵי, which this would undo. */
+            if (forte && !shureq && bare.indexOf('\u05B0') < 0) marks = bare;
+          }
+          out += c + marks; prevMarks = marks; i = j;
+        }
+        return out;
+      })(parts[k]);
       parts[k] = parts[k].replace(/\u05E4\u05B0\u05BC\u05E0\u05B5/g,
                                   '\u05E4\u05BC\u05B5\u05E0\u05B5');
       parts[k] = voiceShevaNa(parts[k]);
