@@ -310,15 +310,15 @@ function buildVolume(vol, urls) {
     const enKey = n => english && english[b.engKey + '|' + (c.filePos || c.n) + '|' + n];
     const firstEn = english ? enKey(gematria(verses[0] && verses[0].num) || 1) : null;
     const quote = firstEn ? ' “' + (firstEn.length > 110 ? firstEn.slice(0, 110).replace(/\s+\S*$/, '') + '…' : firstEn) + '”' : '';
-    /* "Hebrew Book of Mormon" has to survive as one phrase — split across the
-       title as "… in Hebrew … Book of Mormon" it never appears intact, which is
-       the term the volume is searched by. Where the chapter label already names
-       the volume (Doctrine and Covenants Section 1) repeating it reads badly, so
-       those keep the older wording. Middots throughout: no em dash, and the dot
-       is bidi-neutral so it holds position against the Hebrew run. */
-    const namesVol = label.indexOf(vol.en) !== -1;
-    const title = label + (namesVol ? ' in Hebrew' : ' · Hebrew ' + vol.en) +
-                  (heb ? ' · ' + heb : '');
+    /* VOLUME FIRST (user, 2026-09-15): "Hebrew Book of Mormon: 1 Nephi 1".
+       The phrase the volume is searched by leads the title, where Google cannot
+       truncate it away. Where the chapter label already opens with the volume
+       name — "Doctrine and Covenants Section 1" — that prefix is dropped from the
+       label rather than printed twice, so every title reads the same way.
+       Middot before the Hebrew, never an em dash: the dot is bidi-neutral and
+       holds its position where the right-to-left run begins. */
+    const tail = label.indexOf(vol.en + ' ') === 0 ? label.slice(vol.en.length + 1) : label;
+    const title = 'Hebrew ' + vol.en + ': ' + tail + (heb ? ' · ' + heb : '');
     const desc = label + ' in Hebrew, every word with its English gloss' + (english ? ', beside the English text.' : '.') + quote +
       ' ' + vol.en + ' · ' + vol.hebrewNote + '.';
     const prev = flat[k - 1], next = flat[k + 1];
