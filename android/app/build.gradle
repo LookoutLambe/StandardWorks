@@ -1,0 +1,53 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.sefermormon.standardworks'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.sefermormon.standardworks"
+        minSdk 24
+        targetSdk 36
+        versionCode 3
+        versionName "1.1.0"
+    }
+
+    /* The upload key is never stored in this repo. Gradle reads it from the
+       environment, so the password exists only in the shell that runs the
+       build. See README.md, "Shipping an update". */
+    signingConfigs {
+        release {
+            def storePathValue = System.getenv("SM_KEYSTORE") ?: "${System.properties['user.home']}/sefermormon-release.keystore"
+            storeFile file(storePathValue)
+            storePassword System.getenv("SM_KEYSTORE_PASSWORD")
+            keyAlias System.getenv("SM_KEY_ALIAS") ?: "sefermormon"
+            keyPassword System.getenv("SM_KEY_PASSWORD") ?: System.getenv("SM_KEYSTORE_PASSWORD")
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    /* androidx.webkit still pulls kotlin-stdlib-jdk7/jdk8 1.6.21, whose classes
+       were folded into kotlin-stdlib itself at 1.8. Without this the two sets
+       collide and the build fails on duplicate classes. */
+    implementation platform('org.jetbrains.kotlin:kotlin-bom:1.8.22')
+
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'androidx.browser:browser:1.8.0'
+    implementation 'androidx.webkit:webkit:1.12.1'
+}

@@ -1,8 +1,11 @@
-# Bubblewrap regenerates the whole Android project from twa-manifest.json, so
-# none of it belongs in the repo. `bubblewrap build` rebuilds all of this.
+# The Android project is real source now (a WebView app, not a generated TWA
+# shell), so app/ is tracked. Only build output and secrets stay out.
+.gradle/
+build/
+app/build/
+local.properties
 node_modules/
 package-lock.json
-app/
 *.log
 
 # THE UPLOAD KEY NEVER GOES IN A PUBLIC REPO.

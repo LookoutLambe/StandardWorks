@@ -55,6 +55,16 @@ rsync -a --delete --delete-excluded \
   `# build-time only: nothing on a page or in a service worker asks for these ` \
   --exclude='/tools/' \
   --exclude='/scripts/' \
+  `# the Android wrapper's build config (Bubblewrap TWA): package.json and
+   # twa-manifest.json were shipping inside the iOS and Mac app, where nothing
+   # reads them. The directory's own .gitignore and README already stayed out
+   # only because of the README* and dotfile rules above — exclude the whole
+   # directory so the Android side never leaks into an Apple bundle again. ` \
+  --exclude='/android/' \
+  `# ...and the Digital Asset Links file that verifies that Android wrapper
+   # against the domain. It is read by Google off the live site, never by an
+   # app, and least of all by this one. ` \
+  --exclude='/.well-known/assetlinks.json' \
   `# the crawlable face of the site (tools/build_static_pages.js): one plain
    # page per chapter for search engines, 46 MB the app would never open ` \
   --exclude='/hebrew/' \
