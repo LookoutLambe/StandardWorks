@@ -3847,6 +3847,13 @@ function _toggleNikkudBody() {
 })();
 
 // INIT
+/* A HEBREW BROWSER READS HEBREW. Transliteration, the English gloss and the
+   vowel points are all scaffolding for someone who cannot read the script;
+   a native reader wants none of them. Israeli Hebrew is written unpointed,
+   so the nikkud goes too — he.html already tells them to strip it by hand.
+   Each restore below keeps its own rule; this only decides the FIRST visit,
+   and every toggle writes the reader's choice the moment they touch it. */
+var _heBrowser = /^(he|iw)\b/i.test(navigator.language || '');
 // Restore transliteration toggle state (default: hidden)
 try {
   if (localStorage.getItem('bom-show-translit') === '1') {
@@ -3857,7 +3864,11 @@ try {
 } catch(e) { document.body.classList.add('hide-translit'); }
 // Restore no-nikkud state (default: off)
 try {
-  if (localStorage.getItem('bom-no-nikkud') === '1') {
+  /* Nothing is written here. The default is recomputed each load and is
+     identical every time; the toggle writes the reader's own choice the
+     moment they make one, and a stored value always wins below. */
+  var _nik = localStorage.getItem('bom-no-nikkud');
+  if (_nik === '1' || (_nik === null && _heBrowser)) {
     document.getElementById('btn-nikkud').classList.add('active');
     document.body.classList.add('no-nikkud');
   }
@@ -3867,6 +3878,15 @@ try {
 try {
   var _savedMode = localStorage.getItem('bom-view-mode');
   if (_savedMode === 'heb' || _savedMode === 'dual') setMode(_savedMode);
+  /* A HEBREW BROWSER OPENS IN HEBREW. The transliteration and the English
+     gloss under every word serve a reader who cannot read the Hebrew; for
+     one who can they are noise down the middle of the page. Only when
+     NOTHING is stored — setMode writes the choice on every call, so one tap
+     on the bottom bar settles it and this never fires again.
+     THE SAME LINE IS IN reader_core.js. bom.html does not load that file,
+     so the Book of Mormon — the one volume a Hebrew reader is sent to —
+     would have been the only volume this missed. */
+  else if (!_savedMode && _heBrowser) setMode('heb');
 } catch(e) {}
 </script>
 <script defer src="../shoroshim_roots.js?v=3"></script>

@@ -523,6 +523,13 @@ function registerEnglish(rows) {
 }
 
 // INIT: Restore settings
+/* A HEBREW BROWSER READS HEBREW. Transliteration, the English gloss and the
+   vowel points are scaffolding for someone who cannot read the script; a
+   native reader wants none of them, and Israeli Hebrew is written unpointed.
+   Each restore below keeps its own rule; this only decides the FIRST visit,
+   and every toggle writes the reader's choice the moment they touch it.
+   THE SAME BLOCK IS IN bom.html, which does not load this file. */
+var _heBrowser = /^(he|iw)\b/i.test(navigator.language || '');
 try {
   if (localStorage.getItem(window.READER.vol + '-show-translit') === '1') {
     document.getElementById('btn-translit').classList.add('active');
@@ -533,7 +540,11 @@ try {
   if (savedSize) { document.getElementById('page').style.fontSize = savedSize + '%'; document.getElementById('sizeSlider').value = savedSize; }
 } catch(e) {}
 try {
-  if (localStorage.getItem(window.READER.vol + '-no-nikkud') === '1') {
+  /* Nothing is written here. The default is recomputed each load and is
+     identical every time; the toggle writes the reader's own choice the
+     moment they make one, and a stored value always wins below. */
+  var _nik = localStorage.getItem(window.READER.vol + '-no-nikkud');
+  if (_nik === '1' || (_nik === null && _heBrowser)) {
     window._noNikkud = true;
     document.getElementById('btn-nikkud').classList.add('active');
   }
@@ -543,4 +554,15 @@ try {
   // reader must not be dropped back to interlinear on every load.
   var _savedMode = localStorage.getItem(window.READER.vol + '-view-mode');
   if (_savedMode === 'heb' || _savedMode === 'dual') setMode(_savedMode);
+  /* A HEBREW BROWSER OPENS IN HEBREW. The transliteration and the English
+     gloss under every word are there for a reader who cannot read the
+     Hebrew; for one who can they are noise down the middle of the page.
+     he.html already tells them to switch by hand — they should not have to.
+     Only when NOTHING is stored: setMode writes the choice on every call,
+     so one tap on the bottom bar settles it for good and this never fires
+     again. navigator.language, not languages: the browser's own UI language
+     is the defensible signal, and someone running an English phone chose
+     English. It applies in every volume, not only the Book of Mormon — a
+     Hebrew reader opening the Tanakh wants it least of all there. */
+  else if (!_savedMode && _heBrowser) setMode('heb');
 } catch(e) {}

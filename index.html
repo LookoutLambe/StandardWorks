@@ -6,6 +6,21 @@
 <meta charset="UTF-8">
 <script>document.documentElement.classList.add('sw-shell-pending');</script>
 <script>if(location.protocol==='file:')document.documentElement.classList.add('sw-in-app');</script>
+<!-- A Hebrew browser is sent to the Book of Mormon. The Hebrew queries this
+     site actually receives are מורמון, מורמונים, הכנסיה המורמונית — people
+     asking what Mormons are, not people looking for a Tanakh they already
+     own. The landing page offers six books; only one of them is why they
+     came. Runs before paint so there is no flash of the wrong page.
+     ONCE ONLY, and never on a deep link: a reader who comes back to the
+     landing on purpose is not bounced again, and the flag is what makes
+     "on purpose" knowable. Googlebot crawls in en and never sees this. -->
+<script>(function(){try{
+  if(!/^(he|iw)\b/i.test(navigator.language||''))return;
+  if(location.hash||location.search)return;
+  if(localStorage.getItem('sw-he-routed'))return;
+  localStorage.setItem('sw-he-routed','1');
+  location.replace('bom/bom.html');
+}catch(e){}})();</script>
 <script>(function(){var h=(location.hostname||'').toLowerCase(),p=location.pathname.split('/').filter(Boolean),gh=h.slice(-10)==='github.io'&&p.length>0,m=gh?'manifest.github.json':'manifest.json';document.write('<link rel="manifest" href="'+m+'" id="sw-manifest-link">');})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <script>(function(){var h=(location.hostname||'').toLowerCase(),p=location.pathname.split('/').filter(Boolean),gh=h.slice(-10)==='github.io',base=gh&&p.length?location.origin+'/'+p[0]:location.origin,root=(h==='sefermormon.com'?'https://sefermormon.com':base).replace(/\/$/,'');window._swSiteRoot=root;})();</script>
