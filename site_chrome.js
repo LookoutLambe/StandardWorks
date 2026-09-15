@@ -507,13 +507,13 @@
   mountFavicon();
 
   /* The Play closed test needs twelve testers to keep the app installed for
-     fourteen days before Google will release it. The ask goes to every reader,
-     not just phones: the traffic is desktop, and a desktop reader may own an
-     Android phone. Not shown inside the app itself, where they are already the
-     test, and never again once dismissed. */
+     fourteen days before Google will release it. Only Android phones on the
+     web are asked: no one else can answer it. Not shown inside the app itself,
+     where they are already the test, and never again once dismissed. */
   var BETA_KEY = 'sw-beta-invite-dismissed';
 
   function betaInviteWanted() {
+    if (!/Android/i.test(navigator.userAgent || '')) return false;
     /* Inside the installed app the invitation is pointless: they are the test. */
     try {
       if (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) return false;
