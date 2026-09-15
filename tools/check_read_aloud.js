@@ -78,6 +78,17 @@ const CASES = [
   ['וַיְדַבֵּר',   'וַיֶדַבֵּר', 'the wayyiqtol segol rule still applies to the rest of the class'],
   ['וַיְדַבֵּר',    'וַיֶדַבֵּר', 'the same weak wayyiqtol, 4,677 words'],
   ['וַיֹּאמֶר',    'וַי אֹמֶר',  'vay-o-mer: the dagesh gave "ya ya" and stripping it lost the syllable; only the split works'],
+  /* LOCKED 2026-09-15. Two rulings made the same evening, each by ear from
+     rendered pairs, each reversing a note that had stood in this file. The
+     strip below them is the rule they carve out of, so it is pinned too. */
+  ['מִפִּרְיוֹ',    'מִפִּרְיוֹ',  'the pe keeps its dagesh: stripped it spirantized to "mifiryo" (1 Nephi 8:13)'],
+  ['גִּבּוֹר',    'גִּבּוֹר',  'and the bet: "givor" without it. This reverses the 2026-09-14 reading of this very word'],
+  ['הַכֹּהֵן',    'הַכֹּהֵן',  'and the kaf: "hakhohen" without it'],
+  ['מִכָּל',    'מִכָּל',  'the same kaf under a qamats'],
+  ['וַיִּקַּח',    'וַיִקַח',  'EVERY OTHER letter still loses the forte, or va-yik-KAK-kach comes back'],
+  ['וַתֹּאמֶר',    'וַת אֹמֶר',  'the tav prefix splits the same way: vat-o-mer'],
+  ['וַיֹּאמְרוּ',    'וַי אֹמְרוּ',  'the plural: vay-om-ru'],
+  ['וַיֹּאכַל',    'וַי אֹכַל',  'and the אכל forms, not only אמר'],
   ['מְצַוֶּה',     'מִצְוֶה',   'the dagesh-vav came out "mitzawe"; mitsveh, and unpointing cannot help — ktiv male makes it מצווה, which is also the noun מִצְוָה'],
   ['וּמְצַוֶּה',    'וּמִצְוֶה',  'the prefixed form: SAY_AS matches a whole token, so it needs its own entry'],
   ['מִצְוָה',      'מִצְוָה',   'NOT touched — the noun keeps its own pointing and its own sound'],
