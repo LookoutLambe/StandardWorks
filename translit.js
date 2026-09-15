@@ -151,7 +151,14 @@
         if (t > 0 && tokens[t-1].c === '\u05D0' && !tokens[t-1].vowel) { segments.push({c:'\u02BE', v:'\u00F4'}); continue; }
         var prevSeg = segments.length > 0 ? segments[segments.length-1] : null;
         if (!prevSeg) { segments.push({c:'', v:'\u00F4'}); continue; }
-        if (!prevSeg.v) { prevSeg.v = '\u00F4'; continue; }
+        /* A SILENT SHEVA IS NOT "no vowel yet" — it CLOSES the syllable, so the
+           vav cannot be its mater and has to be a consonant carrying the holam
+           (translator, 2026-09-15, on אֶת־מִצְוֹת: "its mitsvot").
+           It renders as an empty v, which this test read as vowel-less, and
+           מִצְוֹת came out "mitsot" with the /v/ gone. The corpus proves the
+           point itself: where it writes the same word with U+05BA, the holam
+           haser FOR VAV, this engine already prints mitsvot. */
+        if (!prevSeg.v && !(t > 0 && tokens[t-1].vowel === '\u05B0')) { prevSeg.v = '\u00F4'; continue; }
         // Consonantal vav with cholam: fall through to produce 'v' + 'ô'
       }
       // Cholam male variant: vav after cholam on prev consonant = silent
