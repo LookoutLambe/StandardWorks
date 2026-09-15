@@ -75,8 +75,8 @@ const CASES = [
      translator heard in Moses 2:1. The word is excepted in SAY_AS now and its
      case is below. The wayyiqtol rule still covers the rest of the וַיְ class,
      so וַיְדַבֵּר holds it here until those are heard too. */
-  ['וַיְדַבֵּר',   'וַיֶדַבֵר', 'the wayyiqtol segol rule still applies to the rest of the class'],
-  ['וַיְדַבֵּר',    'וַיֶדַבֵר', 'the same weak wayyiqtol, 4,677 words'],
+  ['וַיְדַבֵּר',   'וַיֶדַבֵּר', 'the wayyiqtol segol rule still applies to the rest of the class'],
+  ['וַיְדַבֵּר',    'וַיֶדַבֵּר', 'the same weak wayyiqtol, 4,677 words'],
   ['וַיֹּאמֶר',    'וַיֹאמֶר',  'NOT touched — the yod carries a dagesh here and she reads it right'],
   ['מְצַוֶּה',     'מִצְוֶה',   'the dagesh-vav came out "mitzawe"; mitsveh, and unpointing cannot help — ktiv male makes it מצווה, which is also the noun מִצְוָה'],
   ['וּמְצַוֶּה',    'וּמִצְוֶה',  'the prefixed form: SAY_AS matches a whole token, so it needs its own entry'],

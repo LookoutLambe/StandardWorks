@@ -739,10 +739,21 @@
            after a silent sheva   וַיַּחְפְּצוּ — lene again, same reason (v=60).
            the shureq     וּ is a vowel, not a doubled vav.
 
-         ב כ פ are NOT excepted here. In this position the translator kept
-         גִּבּוֹר without its bet-dagesh — it does not spirantize after a vowel,
-         which is the 2026-09-14 result for the sheva case holding good. The
-         exceptions above are all positions where the dagesh is LENE.
+         ב כ פ ARE excepted (translator, 2026-09-15, on מִפִּרְיוֹ in
+         1 Nephi 8:13: "its being pronounced with an f its a pe with a
+         dagesh"). On those three the dagesh is the whole difference between
+         the hard consonant and the soft one, forte or lene, and stripping it
+         spirantizes: מִפִּרְיוֹ came out "mifiryo", גִּבּוֹר "givor", הַכֹּהֵן
+         "hakhohen". Rendered in pairs and chosen by ear, all three.
+
+         This reverses the 2026-09-14 note that stood here, which generalised
+         from one word — גִּבּוֹר — to the whole class. Heard again beside its
+         alternative, that word wanted its dagesh too.
+
+         The doubling comes back with it, and that is correct: gib-bor and
+         hak-ko-hen are the Masoretic reading. ג ד ת and every other letter
+         still lose theirs, so hag-gib-BOR stays fixed where it was the
+         gemination alone that grew a syllable.
 
          A word boundary resets the test, so the second half of a split is
          word-initial in its own right. */
@@ -764,7 +775,8 @@
                business — voiceShevaNa above owns it, and it has its own
                rulings written into it: מִפְּנֵי keeps a HARD p and becomes
                מִפֵּנֵי, which this would undo. */
-            if (forte && !shureq && bare.indexOf('\u05B0') < 0) marks = bare;
+            if (forte && !shureq && bare.indexOf('\u05B0') < 0 &&
+                '\u05D1\u05DB\u05E4'.indexOf(c) < 0) marks = bare;
           }
           out += c + marks; prevMarks = marks; i = j;
         }
