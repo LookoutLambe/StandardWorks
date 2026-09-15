@@ -67,8 +67,13 @@ for (const [vol, d] of Object.entries(VOLS)) {
            the archaic ־ָו — דְּרָכָו is given a bet, because the vav there is a
            consonant and she reads the bare form as a vowel
          Both are guarded by their own cases in check_read_aloud.js. */
+      /* ...and since 2026-09-15 the ־ָיו suffix does the same: it is written
+         qamats + BET for the voice, for the same reason and by the same
+         device, so אֵלָיו is spoken אֵלָב and מִצְוֹתָיו מִצְווֹתָב. 6,179 tokens.
+         Guarded by its own cases in check_read_aloud.js. */
       const SUBSTITUTED = /\u05D9\u05B0\u05D4\u05D5[\u05B8\u05B4]\u05D4/.test(h) ||
-                          /\u05B8\u05D5$/.test(h);
+                          /\u05B8\u05D5$/.test(h) ||
+                          /\u05B8\u05D9\u05D5$/.test(h);
       if (outL > inL && !SUBSTITUTED) {
         const strip = t => (t.match(/[\u05D0-\u05EA]/g) || [])
                              .filter(c => c !== '\u05D5' && c !== '\u05D9').join('');

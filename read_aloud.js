@@ -773,6 +773,22 @@
       parts[k] = parts[k].replace(/\u05E4\u05B0\u05BC\u05E0\u05B5/g,
                                   '\u05E4\u05BC\u05B5\u05E0\u05B5');
       parts[k] = voiceShevaNa(parts[k]);
+      /* A VAV WITH A HOLAM AFTER A SILENT SHEVA IS A CONSONANT, AND SHE NEEDS
+         TO SEE TWO (translator, 2026-09-15, on אֶת־מִצְוֹת: "its mitsvot",
+         choosing מִצְווֹת from a rendered set). A lone vav carrying a holam IS
+         the /o/ to her, so the /v/ vanished and מִצְוֹת came out "mitsot".
+         Nothing done to the points recovered it — the corpus's own U+05BA
+         spelling did not either — because there is no consonant left to sound.
+
+         Modern Hebrew writes the word מצוות, with the vav twice: one
+         consonant, one vowel. So that is what she is handed.
+
+         SAME CONDITION AS THE PAGE. translit.js was wrong here for the same
+         reason and was fixed the same way: a silent sheva CLOSES the syllable,
+         so the vav cannot be its mater. This runs after voiceShevaNa, so a
+         sheva that survives to here is one that rule left silent. */
+      parts[k] = parts[k].replace(
+        /([\u05D0-\u05EA])\u05B0(\u05D5[\u05B9\u05BA])/g, '$1\u05B0\u05D5$2');
       /* THE QAMATS QATAN IS AN /o/ AND SHE READS IT AS AN /a/. This corpus
          marks it with the explicit U+05C7 rather than leaving it to be
          guessed from a plain qamats — which is the right call for a reader
