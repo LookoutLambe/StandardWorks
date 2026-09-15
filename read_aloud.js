@@ -582,6 +582,20 @@
       else if (prev && prev.marks.indexOf('\u05B0') >= 0) na = true;            /* 2nd of two */
       else if (next && next.c === cur.c) na = true;                             /* same letter */
       else if (prev && _LONG.test(prev.marks.replace(/\u05BC/g, ''))) na = true; /* long vowel */
+      /* A DAGESH LENE IS NOT A DOUBLING AND MUST NOT COME OFF (translator,
+         2026-09-15, on וַיַּחְפְּצוּ: she reads the token as written and the
+         treatment broke it). Where the letter before carries a SILENT sheva the
+         syllable is closed, so this letter's dagesh is lene — it is what keeps
+         the pe a /p/, and taking it off gives "vayachfetsu".
+
+         ONLY ב כ פ, because only they spirantize. On ג ד ת a lene dagesh is
+         inaudible either way, so it comes off and the sheva sounds — which is
+         what עַבְדְּךָ "av-de-kha" needs, heard and pinned on 2026-09-14. Same
+         position, opposite treatment, decided by the letter. */
+      if (na && cur.marks.indexOf('\u05BC') >= 0 &&
+          '\u05D1\u05DB\u05E4'.indexOf(cur.c) >= 0 &&
+          prev && prev.marks.indexOf('\u05B0') >= 0 &&
+          !/[\u05B1-\u05BB\u05C7]/.test(prev.marks)) na = false;
       if (na) edits.push(cur);
     }
     /* THE DAGESH COMES OFF FOR THE VOICE — but only where the letter cannot
