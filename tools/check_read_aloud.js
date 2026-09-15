@@ -90,9 +90,14 @@ const CASES = [
   ['וּבְנֵי',       'וּבְנֵי',    'NOT touched — a word-initial shuruk has no letter before it'],
   ['יָקוּם',       'יָקוּם',    'NOT touched — a real shuruk: the qof it follows has no vowel of its own'],
   ['הוּא',        'הוּא',     'NOT touched — the commonest shuruk in the corpus'],
-  ['יָמָיו',      'ימיו',     'the ־ָיו suffix: "yamaiyu" for yamav'],
-  ['בָּנָיו',      'בניו',     '"banav is reading as banaiyu"'],
-  ['כׇּל־יָמָיו',  'כול ימיו', 'one token, two words, two different rules — and the maqqef is a SPACE'],
+  /* THE ־ָיו SUFFIX IS NOW WRITTEN qamats + bet, NOT UNPOINTED (translator,
+     2026-09-15: "any ־ָיו is going to be pronouncing the vowel not the yod",
+     chosen from rendered pairs). Unpointing only worked for words Carmit has
+     in her lexicon; וְסָבִיבָיו came back "sabibiv". These three expectations
+     were recorded under the old strategy. */
+  ['יָמָיו',      'יָמָב',     'the ־ָיו suffix: "yamaiyu" for yamav'],
+  ['בָּנָיו',      'בָּנָב',     '"banav is reading as banaiyu"'],
+  ['כׇּל־יָמָיו',  'כול יָמָב', 'one token, two words, two different rules — and the maqqef is a SPACE'],
   ['יַחְדָּו',     'יחדיו',    'a consonantal vav read as a vowel'],
   ['עֵשָׂו',      'עשיו',     'the same, for Esau'],
   /* THOSE TWO NAMES WERE THE ONLY FINAL VAV EVER GUARDED, and they are the

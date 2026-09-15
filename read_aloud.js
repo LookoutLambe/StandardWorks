@@ -774,7 +774,21 @@
          they all follow. SAY_AS is consulted first, so a word the translator
          has ruled on individually keeps that ruling. */
       parts[k] = deGeminateVav(parts[k]);
-      if (YAV.test(parts[k])) { parts[k] = ktivMale(parts[k]); continue; }
+      /* ־ָיו IS ALWAYS "-av" — THE QAMATS CARRIES IT AND THE YOD IS SILENT
+         (translator, 2026-09-15: "any ־ָיו is going to be pronouncing the
+         vowel not the yod"). This used to unpoint the word and hand it to the
+         modern reader, which is right for a word Carmit HAS — אליו, עליו,
+         בניו all came back correct — and wrong for one she does not: וְסָבִיבָיו
+         came back "sabibiv", spelled out letter by letter. Nothing in the
+         string says which words those are, so the lexicon cannot be relied on.
+
+         So the suffix is written as qamats + bet instead, which is the device
+         the ־ָו rule immediately below already uses: a word-final bet with no
+         dagesh is /v/, the same sound, and she reads it without hesitating.
+         It does not matter whether she knows the word. 6,179 tokens, 812
+         forms; rendered against אליו, עליו, בניו, תלמידיו and וסביביו and
+         chosen by ear. */
+      if (YAV.test(parts[k])) { parts[k] = parts[k].replace(YAV, '\u05B8\u05D1'); continue; }
       if (endsInV(parts[k])) {
         /* A FINAL VAV IS A CONSONANT AND UNPOINTING IS NOT ENOUGH TO SAY SO.
            Stripping the points handed the word to the modern reader, and the
