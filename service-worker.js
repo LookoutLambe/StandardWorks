@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-09-15T10-19-06';
+const BUILD_ID = '2026-09-15T10-20-52';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -42,7 +42,7 @@ const CORE_ASSETS = [
        file is left on disk; only the download is removed. */
     '/StandardWorks/site_chrome.js?v=50',
     '/StandardWorks/editions.js?v=2',
-    '/StandardWorks/nav_engine.js?v=89',
+    '/StandardWorks/nav_engine.js?v=90',
     '/StandardWorks/verse_search.js?v=3',
     '/StandardWorks/nav_engine.css?v=51',
     '/StandardWorks/xref_study_panel.css?v=14',
