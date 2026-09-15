@@ -342,6 +342,23 @@
 
     '\u05DB\u05B8\u05BC\u05DC': '\u05DB\u05D5\u05DC',   /* כָּל -> כול */
 
+    /* יֻלַּדְתִּי IS "yuladti", THREE SYLLABLES (translator, 2026-09-15: "its
+       supposed to be stressed as a lamed but read as one lamed not two" /
+       "its still saying as yulaladedti"). Two triggers: the dagesh in the
+       lamed, which she sounds as a doubled lamed, and the sheva under the
+       dalet, which is nach and which she voices. Five syllables out of three.
+
+       WHY NOT THE RULE AT L.556. That one owns the forte + sheva case —
+       הַדְּבָרִים, 18,456 tokens — and this is forte + a full vowel, which it
+       does not reach. A rule for that class cannot be written blind: וַיֹּאמֶר
+       is the same shape and is pinned at check_read_aloud.js:80 as heard
+       CORRECT with its dagesh. So it is one word, by ear, like כׇּל.
+
+       Respelled rather than unpointed: ktivMale gives יולדתי, which is also
+       יוֹלֶדֶת's, and she would read the participle. */
+    '\u05D9\u05BB\u05DC\u05BC\u05B7\u05D3\u05B0\u05EA\u05BC\u05B4\u05D9':
+      '\u05D9\u05BB\u05DC\u05B7\u05D3\u05EA\u05BC\u05B4\u05D9',   /* יֻלַּדְתִּי -> יֻלַדתִּי */
+
     /* SARIAH ENDS ON AN AYIN FOR THE VOICE (translator's suggestion). The
        final ־ָה of שְׂרָיָה is a mater — the he is not sounded and the word
        ends "-yah" — but she sounds it, and the name came out "sa-rai-ya-HA",
