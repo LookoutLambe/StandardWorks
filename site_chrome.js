@@ -506,6 +506,67 @@
   }
   mountFavicon();
 
+  /* The Play closed test needs twelve testers to keep the app installed for
+     fourteen days before Google will release it. The ask goes to every reader,
+     not just phones: the traffic is desktop, and a desktop reader may own an
+     Android phone. Not shown inside the app itself, where they are already the
+     test, and never again once dismissed. */
+  var BETA_KEY = 'sw-beta-invite-dismissed';
+
+  function betaInviteWanted() {
+    /* Inside the installed app the invitation is pointless: they are the test. */
+    try {
+      if (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) return false;
+    } catch (e) {}
+    if (window.navigator.standalone) return false;
+    try {
+      if (localStorage.getItem(BETA_KEY)) return false;
+    } catch (e) {}
+    return true;
+  }
+
+  function mountBetaInvite() {
+    if (document.getElementById('sw-beta-invite')) return;
+    if (!betaInviteWanted()) return;
+
+    var d = document.createElement('aside');
+    d.id = 'sw-beta-invite';
+    d.setAttribute('aria-label', 'Android testing');
+
+    var msg = document.createElement('p');
+    msg.className = 'sw-beta-msg';
+    msg.textContent = 'The Android edition is built and in testing. Google will not ' +
+                      'release it until twelve people have kept it installed for ' +
+                      'fourteen days. If you have an Android phone and will do that, ' +
+                      'email chris@sefermormon.com and I will send you the link.';
+
+    var join = document.createElement('a');
+    join.className = 'sw-beta-join';
+    join.href = 'mailto:chris@sefermormon.com?subject=' +
+                encodeURIComponent('Android tester');
+    join.textContent = 'Email Chris';
+
+    var close = document.createElement('button');
+    close.type = 'button';
+    close.className = 'sw-beta-close';
+    close.setAttribute('aria-label', 'Dismiss');
+    close.innerHTML = '\u00d7';
+    close.addEventListener('click', function () {
+      try { localStorage.setItem(BETA_KEY, '1'); } catch (e) {}
+      d.remove();
+      syncChromeHeight();
+    });
+
+    d.appendChild(msg);
+    d.appendChild(join);
+    d.appendChild(close);
+
+    var page = document.querySelector('.page');
+    if (page) page.insertBefore(d, page.firstChild);
+    else document.body.appendChild(d);
+    syncChromeHeight();
+  }
+
   function mountRights() {
     if (document.getElementById('sw-rights')) return;
     // pages with their own rights block (the hub footer) keep just that one
@@ -516,9 +577,13 @@
     var page = document.querySelector('.page');
     (page || document.body).appendChild(d);
   }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', mountRights);
-  } else {
+  function mountLate() {
     mountRights();
+    mountBetaInvite();
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', mountLate);
+  } else {
+    mountLate();
   }
 })();
