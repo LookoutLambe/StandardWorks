@@ -103,7 +103,7 @@ const CASES = [
      word-final bet is the same /v/ and keeps every point in place. */
   ['וַיְצַו',      'וַיֶצַב',   '"vaytsav it being pronounced as vi-itstov" — unpointed ויצו is an itpael to her'],
   ['וָאֲצַו',     'וָאֲצַב',   'the same verb in the first person'],
-  ['דְּרָכָו',     'דְּרָכָב',   'the archaic ־ָו for ־ָיו: "darko", his way, for derakhav, his ways'],
+  ['דְּרָכָו',     'דֶ רָכָב',   'the archaic ־ָו for ־ָיו: "darko", his way, for derakhav, his ways; the initial dalet now takes the vocal-sheva treatment too (translator, 2026-09-15, on דְּבָרִים) — this expectation predates that ruling'],
   ['עָלָו',       'עָלָב',     'upon him — she read the bare form "lula"'],
   ['שָׁלֵו',      'שָׁלֵב',    'at ease; the vav is the last consonant, not a vowel'],
   ['אֶת־לֶחִי',    'אֶת לֶחִי',  'a maqqef between two pointed words: it separates, it does not strip'],

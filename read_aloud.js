@@ -559,7 +559,24 @@
       next = n < u.length - 1 ? u[n + 1] : null;
       na = false;
       if (n === u.length - 1) na = false;                       /* final: always nach */
-      else if (n === 0) na = false;                             /* initial: she says it */
+      /* INITIAL: she says it — UNLESS THE LETTER CARRIES A DAGESH (translator,
+         2026-09-15: "דְּבָרִים now is not pronouncing the vocal shewa under the
+         daleth"). A bare initial sheva she voices on her own — לְאָב is "le-av"
+         and always was. But a dagesh renders the word byte-identical to the
+         unpointed one, which is the same trap this rule already documents for
+         the forte: דְּבָרִים and דברים are both "dvarim", and the sheva is only
+         heard once the dagesh comes off. Word-initial the dagesh is LENE, so
+         the forte test below never reached it. */
+      else if (n === 0)
+        /* ...AND ONLY WHERE THE LETTER CANNOT SPIRANTIZE. Rendered and heard
+           2026-09-15: בֶ רֵאשִׁית, כֶ בָר and פֶ רִי all soften — "ve-reshit",
+           "khe-var", "fe-ri" — so word-initially ב כ פ keep their dagesh and
+           their sheva stays silent. That is the opposite of the forte case
+           above, where taking the dagesh off ב does NOT soften it; the
+           position matters and the 2026-09-14 result does not carry over.
+           ג ד ת are always hard, so they take it: דְּבָרִים is "de-varim". */
+        na = cur.marks.indexOf('\u05BC') >= 0 &&
+             '\u05D1\u05DB\u05E4'.indexOf(cur.c) < 0;
       else if (cur.marks.indexOf('\u05BC') >= 0 &&
                prev && /[\u05B1-\u05BB\u05C7]/.test(prev.marks)) na = true;   /* forte */
       else if (prev && prev.marks.indexOf('\u05B0') >= 0) na = true;            /* 2nd of two */
