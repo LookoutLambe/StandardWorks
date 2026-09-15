@@ -77,7 +77,7 @@ const CASES = [
      so וַיְדַבֵּר holds it here until those are heard too. */
   ['וַיְדַבֵּר',   'וַיֶדַבֵּר', 'the wayyiqtol segol rule still applies to the rest of the class'],
   ['וַיְדַבֵּר',    'וַיֶדַבֵּר', 'the same weak wayyiqtol, 4,677 words'],
-  ['וַיֹּאמֶר',    'וַיֹאמֶר',  'NOT touched — the yod carries a dagesh here and she reads it right'],
+  ['וַיֹּאמֶר',    'וַי אֹמֶר',  'vay-o-mer: the dagesh gave "ya ya" and stripping it lost the syllable; only the split works'],
   ['מְצַוֶּה',     'מִצְוֶה',   'the dagesh-vav came out "mitzawe"; mitsveh, and unpointing cannot help — ktiv male makes it מצווה, which is also the noun מִצְוָה'],
   ['וּמְצַוֶּה',    'וּמִצְוֶה',  'the prefixed form: SAY_AS matches a whole token, so it needs its own entry'],
   ['מִצְוָה',      'מִצְוָה',   'NOT touched — the noun keeps its own pointing and its own sound'],

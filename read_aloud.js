@@ -709,6 +709,26 @@
           ? b.replace(/\u05D0\u05DC\u05D4\u05D9\u05DD$/, '\u05D0\u05DC\u05D5\u05D4\u05D9\u05DD')
           : w;
       })(parts[k]);
+      /* וַיֹּאמֶר IS "vay-o-mer" (translator, 2026-09-15, choosing וַי אֹמֶר from
+         eleven rendered spellings: "none of them are good ... vay-o-mer").
+         Neither the dagesh nor the doubled yod gets her there — with the
+         dagesh she says "ya ya", without it the yod runs into the holam and
+         the syllable is lost. Only closing וַי as a word of its own does it,
+         and then the alef carries the holam.
+
+         The prefix letter stays with the vav; everything from the alef on
+         becomes a second word. וַתֹּאמֶר goes the same way — "vat-o-mer",
+         heard — as do the אכל and אבד forms.
+
+         36 spellings, 4,547 tokens, and וַיֹּאמֶר alone is 3,181 of them: the
+         commonest verb in the corpus.
+
+         IT RUNS BEFORE THE FORTE STRIP. That strip would take the dagesh off
+         the yod and leave וַיֹאמֶר, which this pattern no longer matches, so
+         the order is what makes the rule reachable at all. */
+      parts[k] = parts[k].replace(
+        /^(\u05D5\u05B7[\u05D9\u05EA])(?:\u05BC\u05B9|\u05B9\u05BC)\u05D0/,
+        '$1 \u05D0\u05B9');
       /* פְּנֵי IS "p'nei" — A HARD P (translator, 2026-09-14: "the p is a bit
          soft... penei its pronounced as a vocal kinda feels off"). This one
          does NOT take the general remedy. Everywhere else the dagesh comes
