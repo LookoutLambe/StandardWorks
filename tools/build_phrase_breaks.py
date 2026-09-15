@@ -50,6 +50,7 @@ import glob, json, os, re, sys, unicodedata as ud
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 WLC = os.path.expanduser('~/Desktop/morphhb/wlc')
+SEFARIA = os.path.expanduser('~/Desktop/sefaria-tanakh')
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 RANK = {0x0591: 1, 0x0592: 2, 0x0593: 2, 0x0594: 2, 0x0595: 2, 0x0597: 2,
@@ -161,6 +162,64 @@ def english_names():
     return out
 
 
+SEF_FILE = {'Gen':'Genesis','Exod':'Exodus','Lev':'Leviticus','Num':'Numbers','Deut':'Deuteronomy',
+ 'Josh':'Joshua','Judg':'Judges','1Sam':'I_Samuel','2Sam':'II_Samuel','1Kgs':'I_Kings','2Kgs':'II_Kings',
+ '1Chr':'I_Chronicles','2Chr':'II_Chronicles','Ezra':'Ezra','Neh':'Nehemiah','Esth':'Esther','Job':'Job',
+ 'Ps':'Psalms','Prov':'Proverbs','Eccl':'Ecclesiastes','Song':'Song_of_Songs','Isa':'Isaiah',
+ 'Jer':'Jeremiah','Lam':'Lamentations','Ezek':'Ezekiel','Dan':'Daniel','Hos':'Hosea','Joel':'Joel',
+ 'Amos':'Amos','Obad':'Obadiah','Jonah':'Jonah','Mic':'Micah','Nah':'Nahum','Hab':'Habakkuk',
+ 'Zeph':'Zephaniah','Hag':'Haggai','Zech':'Zechariah','Mal':'Malachi','Ruth':'Ruth'}
+
+
+def _mark(words):
+    """A word breaks after it if it ends the verse or carries a disjunctive
+       of rank <= BREAK_AT. Identical rule to the WLC reader."""
+    marked = []
+    for i, w in enumerate(words):
+        ranks = [RANK[ord(c)] for c in w if ord(c) in RANK]
+        marked.append((w, (i == len(words) - 1) or (bool(ranks) and min(ranks) <= BREAK_AT)))
+    return marked
+
+
+def sefaria_verses(wlcbook):
+    """THE SAME ACCENTS OUT OF THIS CORPUS'S OWN EDITION.
+
+       The WLC loses 1,366 verses to what its own report calls versification
+       or spelling differences — Ezekiel 110, Psalms 101, Daniel 97. Those are
+       differences between Leningrad and the text this Old Testament is set
+       from, which is Sefaria's Miqra according to the Masorah. Read the
+       accents out of MAM and the divergence is not there to lose.
+
+       Used only where the WLC fails to align, so nothing already working
+       changes."""
+    if not os.path.isdir(SEFARIA):
+        return {}
+    name = SEF_FILE.get(wlcbook)
+    if not name:
+        return {}
+    path = os.path.join(SEFARIA, name + '.json')
+    if not os.path.isfile(path):
+        return {}
+    try: d = json.load(open(path, encoding='utf-8'))
+    except Exception: return {}
+    vs = d.get('versions') or []
+    if not vs: return {}
+    chapters = vs[0].get('text') or []
+    out = {}
+    for ci, chap in enumerate(chapters, 1):
+        if not isinstance(chap, list): continue
+        for vi, verse in enumerate(chap, 1):
+            if not isinstance(verse, str): continue
+            t = re.sub(r'<[^>]*>', ' ', verse)
+            t = t.replace('&thinsp;', ' ').replace('&nbsp;', ' ')
+            t = re.sub(r'\{[^}]*\}', ' ', t)
+            t = re.sub(r'[\u034f\u200d\u200e\u200f]', '', t)
+            words = [w for w in t.split() if CMP(w)]
+            if words:
+                out[(ci, vi)] = _mark(words)
+    return out
+
+
 def wlc_verses(book):
     """[(osisID, [(word, breaks_after_it), ...]), ...] for one WLC book."""
     path = os.path.join(WLC, book + '.xml')
@@ -237,6 +296,7 @@ def main():
         sys.exit('WLC not found at %s' % WLC)
     names = english_names()
     table, ask, ok, miss, verses = {}, {}, 0, 0, 0
+    rescued = 0
     misses_by_book = {}
     for prefix, wlcbook in BOOKS:
         en = names.get(prefix)
@@ -248,10 +308,19 @@ def main():
             parts = osis.split('.')
             if len(parts) == 3:
                 by_ref[(int(parts[1]), int(parts[2]))] = marked
+        sef = sefaria_verses(wlcbook)
         for ch, v, toks in corpus_verses(prefix):
             verses += 1
             marked = by_ref.get((ch, v))
             got = align(toks, marked) if marked else None
+            if got is None and sef:
+                # THE WLC LOST THIS VERSE. Try the same accents out of the
+                # edition this corpus is actually set from — see
+                # sefaria_verses(). Only reached where Leningrad already failed.
+                m2 = sef.get((ch, v))
+                got = align(toks, m2) if m2 else None
+                if got is not None:
+                    rescued += 1
             if got is None:
                 # THE 1,366 THAT WOULD NOT ALIGN STILL GET AN ANSWER. A
                 # versification or spelling divergence loses this verse's own
@@ -295,6 +364,7 @@ def main():
         fh.write('window.SW_ASK = Object.assign(window.SW_ASK || {}, %s);\n'
                  % json.dumps(ask, ensure_ascii=False, separators=(',', ':')))
 
+    print('   of the aligned, %s were rescued from Sefaria where the WLC failed' % format(rescued, ','))
     print('verses: %s   aligned: %s (%.1f%%)   unaligned: %s'
           % (format(verses, ','), format(ok, ','), 100 * ok / max(verses, 1), format(miss, ',')))
     print('shipped: %s verses carry at least one internal break   (%s KB)'
