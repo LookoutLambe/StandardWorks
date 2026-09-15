@@ -541,7 +541,16 @@
   /* A long vowel on the PREVIOUS letter makes the next sheva na. The qamats
      qatan is excluded because it is short — and this corpus always writes it
      as the explicit U+05C7, so a plain qamats here really is the long one. */
-  var _LONG = /[\u05B9\u05BA\u05B5\u05B8]/;
+  /* QAMATS ONLY — the transliteration already decides this and it is on the
+     page (translator, 2026-09-15, on כִּי־תֵלְכוּ: "tel-chu"). translit.js
+     writes a sheva SILENT after patah, hiriq, tsere, segol, holam, qamats
+     qatan and qubuts, and vocal after a plain qamats. This list had holam and
+     tsere in it too, so תֵלְכוּ was voiced into "te-le-khu" where the line
+     under it on the same screen reads telkhu.
+     The two classifiers should not disagree: one of them is rendered and has
+     been read. יָצְאוּ, יָלְדָה and הָרְבִיעִי are after a qamats and stay
+     voiced, which is what translit.js says of them too. */
+  var _LONG = /[\u05B8]/;
   function voiceShevaNa(w) {
     /* A TOKEN MAY ALREADY HOLD TWO WORDS. The corpus has "יָסֵךְ עָלֶיהָ" and
        "רֹךְ לְבָבָם" in one cell, and a double maqqef (הַנִּתְּנָה־־לִּי) leaves a
