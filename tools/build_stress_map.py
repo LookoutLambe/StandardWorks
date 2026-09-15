@@ -50,6 +50,7 @@ between 484 KB and 2.8 MB.
 import json, glob, os, re, sys, unicodedata as ud
 
 WLC = os.path.expanduser('~/Desktop/morphhb/wlc')
+SEFARIA = os.path.expanduser('~/Desktop/sefaria-tanakh')
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 PREPOSITIVE  = {0x05A0, 0x059A, 0x05AD}
@@ -113,6 +114,52 @@ def stressed_slot(w, accent_pos):
     return after[0] if after else len(slots) - 1   # שָׁל֔וֹם — it is on the mater
 
 
+def _flat(x, out):
+    if isinstance(x, str): out.append(x)
+    elif isinstance(x, list):
+        for y in x: _flat(y, out)
+
+
+def read_sefaria():
+    """THE SAME ACCENTS, FROM THE EDITION THIS CORPUS IS ACTUALLY SET FROM.
+
+       The Old Testament here is Sefaria's "Miqra according to the Masorah"
+       with the te'amim stripped for display — and MAM writes qamats qatan as
+       the explicit U+05C7 this corpus uses, where the WLC writes a plain
+       qamats. So 7,552 OT tokens (69% of everything the WLC lexicon misses)
+       are words like כׇּל, וְכׇל, בְּכׇל, וַיָּקׇם, יָרׇבְעָם: present in the WLC's text,
+       unreachable by its key. Reading the accents out of MAM instead reaches
+       them, because it is the same spelling.
+
+       Merged with the WLC rather than replacing it — the two agree on 39,768
+       shared forms and differ on 105, and each holds forms the other lacks."""
+    counts = {}
+    if not os.path.isdir(SEFARIA):
+        return {}
+    for f in glob.glob(os.path.join(SEFARIA, '*.json')):
+        try: d = json.load(open(f, encoding='utf-8'))
+        except Exception: continue
+        vs = d.get('versions') or []
+        if not vs: continue
+        out = []; _flat(vs[0].get('text'), out)
+        for line in out:
+            line = re.sub(r'<[^>]*>', ' ', line)
+            line = line.replace('&thinsp;', ' ').replace('&nbsp;', ' ')
+            line = re.sub(r'\{[^}]*\}', ' ', line)      # {ס} {פ} — the section markers
+            for w in line.split():
+                w = re.sub(r'[\u034f\u200d\u200e\u200f]', '', w)
+                if not re.search(r'[\u05d0-\u05ea]', w): continue
+                acc = [i for i, c in enumerate(w) if ord(c) in ACCENTS]
+                if not acc: continue
+                n = stressed_slot(w, acc[-1])
+                if n is None: continue
+                key = N(strip_accents(w))
+                if key:
+                    counts.setdefault(key, {})
+                    counts[key][n] = counts[key].get(n, 0) + 1
+    return {k: max(v, key=v.get) for k, v in counts.items()}
+
+
 def read_wlc():
     if not os.path.isdir(WLC):
         sys.exit('WLC not found at %s — this needs OpenScriptures morphhb on the Desktop.' % WLC)
@@ -166,8 +213,13 @@ VOLUMES = [('ot',  'ot_verses/*.js',  'ot_stress.js'),
 
 def main():
     lex = read_wlc()
-    lex.update(HAND)                      # a ruling outranks the WLC and the default
-    print('WLC stress lexicon: %s forms' % format(len(lex), ','))
+    n_wlc = len(lex)
+    sef = read_sefaria()
+    added = sum(1 for k in sef if k not in lex)
+    lex.update(sef)                       # MAM reaches the qamats-qatan spellings
+    lex.update(HAND)                      # a ruling outranks both and the default
+    print('stress lexicon: %s forms  (WLC %s + Sefaria %s new)'
+          % (format(len(lex), ','), format(n_wlc, ','), format(added, ',')))
     print('\n%-5s %10s %10s %11s %9s' % ('vol', 'tokens', 'forms', 'from the MT', 'shipped'))
     for vol, pattern, outfile in VOLUMES:
         tokens = []
