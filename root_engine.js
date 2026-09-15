@@ -2282,6 +2282,24 @@
     // Abraham 2 audit (2026-09-13) — the pronoun-with-suffix leftovers
     'וּבְךָ': 'בך', 'וָבָךְ': 'בך', 'כָּהֶם': 'להם', 'לְהוֹם': 'להם', 'לָּכֶם': 'לכם',
     'הֲלָנוּ': 'לָנוּ', 'לַנָא': 'לָנוּ', 'וְלָנוּ': 'לָנוּ',   // "and to us" was לוּן, to lodge
+    'וָלָנוּ': 'לָנוּ',                             // Ezra 4:3, the vav pointed qamats — same bug, spelling the line above missed
+    /* לון I "lodge" is not לון II "murmur". Strong's derives both from H3885 and
+       BDB files all four lexemes under לון, so neither corrects the other and the
+       lodging words sat on a card headed "to murmur". The nouns split by number in
+       FAMILY_SPLIT; the qal verb shares H3885 with the murmuring, so its two forms
+       are pinned by surface (both unique in the corpus). */
+    'לָן': 'לין', 'נָלִינָה': 'לין',        // Gen 32:22 "lodged"; Song 7:12 "let us pass the night"
+    /* The same card was a junk drawer: five כלל "all of them" forms, two of
+       לוה "lend / bring on one's way", a numeral, and one more לָנוּ written with
+       puncta extraordinaria. None of them is this root. */
+    'כֻלָּן': 'כלל',
+    'וְכֻלָּן': 'כלל',
+    'וּמִכֻּלָּן': 'כלל',
+    'וּבִכְלָלָן': 'כלל',
+    'לָׄנׄוּׄ': 'לָנוּ',
+    'תְּלַוֻּנִי': 'לוה',
+    'הַלְוֵנִי': 'לוה',
+    'מִילְיוֹן': 'מיליון',
     // Abraham 3 audit (2026-09-13)
     'הַמְּיֻעָד': 'יעד',
     // Abraham 4 audit (2026-09-13)
@@ -2915,6 +2933,10 @@
                     'H5157': 'H5157', 'H5159': 'H5157',
                     /* מְעִיל "robe" is not מַעַל "unfaithfulness"; אֶצְבַּע "finger" is not צֶבַע "dye" (1 Nephi 8). */
                     'H4598': 'H4598', 'H0676': 'H0676', 'H0677': 'H0676',
+                     /* מָלוֹן lodging place/inn and מְלוּנָה hut belong to לון I "lodge",
+                        not לון II "murmur" (user, 2026-09-15). Strong's hangs both senses on
+                        H3885 and BDB agrees, so FAMILY_SPLIT is the only lever. */
+                     'H4411': 'לין', 'H4412': 'לין',
                     'H8293': 'שרת',     // שֵׁרוּת "ministry" is שָׁרַת's noun
                     'H3123': 'H3123',   // the dove is not יָוָן Greece (Strong's derivation)
                     'H6567': 'פרשׁ',    // פֵּרֵשׁ "declare, interpret" (shin) is not פָּרַשׂ "spread" (sin)
