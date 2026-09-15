@@ -310,15 +310,18 @@ function buildVolume(vol, urls) {
     const enKey = n => english && english[b.engKey + '|' + (c.filePos || c.n) + '|' + n];
     const firstEn = english ? enKey(gematria(verses[0] && verses[0].num) || 1) : null;
     const quote = firstEn ? ' “' + (firstEn.length > 110 ? firstEn.slice(0, 110).replace(/\s+\S*$/, '') + '…' : firstEn) + '”' : '';
-    /* VOLUME FIRST (user, 2026-09-15): "Hebrew Book of Mormon: 1 Nephi 1".
-       The phrase the volume is searched by leads the title, where Google cannot
-       truncate it away. Where the chapter label already opens with the volume
-       name — "Doctrine and Covenants Section 1" — that prefix is dropped from the
-       label rather than printed twice, so every title reads the same way.
-       Middot before the Hebrew, never an em dash: the dot is bidi-neutral and
-       holds its position where the right-to-left run begins. */
-    const tail = label.indexOf(vol.en + ' ') === 0 ? label.slice(vol.en.length + 1) : label;
-    const title = 'Hebrew ' + vol.en + ': ' + tail + (heb ? ' · ' + heb : '');
+    /* REVERTED 2026-09-15. This read "Hebrew Book of Mormon: 1 Nephi 1" for a
+       few hours. The form below is the one Google had indexed and the one that
+       held #1 and #2 on "book of mormon hebrew interlinear"; rewriting all
+       1,694 titles at once dropped the site off that query's first page within
+       the day, while the index still showed the OLD titles — Google had
+       noticed the change without recrawling it.
+
+       Whatever the new titles' merits, they were not worth the position, and
+       the position was weeks in the making. If the volume name is ever worth
+       adding again it should go a few books at a time, not the whole corpus in
+       one push. */
+    const title = label + ' in Hebrew' + (heb ? ' — ' + heb : '') + ' · Sefer Mormon';
     const desc = label + ' in Hebrew, every word with its English gloss' + (english ? ', beside the English text.' : '.') + quote +
       ' ' + vol.en + ' · ' + vol.hebrewNote + '.';
     const prev = flat[k - 1], next = flat[k + 1];
