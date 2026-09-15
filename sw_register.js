@@ -144,6 +144,17 @@
      reader who opened a chapter and tapped within that window was thrown
      back to where they started. Any sign of use — a tap, a key, a chapter
      change — and the update waits behind the banner instead. */
+  /* A FIRST INSTALL IS NOT AN UPDATE (translator, 2026-09-15: the refresh on
+     first start-up, on the website and in the Android app). When a page loads
+     with no controller, the worker installs and takes control a moment later
+     and controllerchange fires — but that page is ALREADY the newest version,
+     so there is nothing to refresh to. The reload below was firing on every
+     first visit, and in the app on every start after the worker had been
+     evicted: the screen blinked and the reader was put back where they began.
+
+     navigator.serviceWorker.controller is null exactly in that case, and it is
+     read HERE, at load, because by the time controllerchange runs it is set. */
+  var hadController = !!navigator.serviceWorker.controller;
   var loadedAt = Date.now();
   var interacted = false;
   function handTaken() { interacted = true; }
@@ -154,6 +165,7 @@
   navigator.serviceWorker.addEventListener('controllerchange', function () {
     if (reloadOnce) return;
     reloadOnce = true;
+    if (!hadController) return;      /* first install: this page is already it */
     if (!interacted && Date.now() - loadedAt < 10000) { location.reload(); return; }
     showUpdateBanner();
   });

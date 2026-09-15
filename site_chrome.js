@@ -477,7 +477,7 @@
     window.addEventListener('resize', syncChromeHeight);
 
     var swReg = document.createElement('script');
-    swReg.src = assetBase() + 'sw_register.js?v=4';
+    swReg.src = assetBase() + 'sw_register.js?v=5';
     swReg.async = true;
     document.body.appendChild(swReg);
   }
