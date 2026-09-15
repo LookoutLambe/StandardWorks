@@ -310,7 +310,15 @@ function buildVolume(vol, urls) {
     const enKey = n => english && english[b.engKey + '|' + (c.filePos || c.n) + '|' + n];
     const firstEn = english ? enKey(gematria(verses[0] && verses[0].num) || 1) : null;
     const quote = firstEn ? ' “' + (firstEn.length > 110 ? firstEn.slice(0, 110).replace(/\s+\S*$/, '') + '…' : firstEn) + '”' : '';
-    const title = label + ' in Hebrew' + (heb ? ' — ' + heb : '') + ' · Sefer Mormon';
+    /* "Hebrew Book of Mormon" has to survive as one phrase — split across the
+       title as "… in Hebrew … Book of Mormon" it never appears intact, which is
+       the term the volume is searched by. Where the chapter label already names
+       the volume (Doctrine and Covenants Section 1) repeating it reads badly, so
+       those keep the older wording. Middots throughout: no em dash, and the dot
+       is bidi-neutral so it holds position against the Hebrew run. */
+    const namesVol = label.indexOf(vol.en) !== -1;
+    const title = label + (namesVol ? ' in Hebrew' : ' · Hebrew ' + vol.en) +
+                  (heb ? ' · ' + heb : '');
     const desc = label + ' in Hebrew, every word with its English gloss' + (english ? ', beside the English text.' : '.') + quote +
       ' ' + vol.en + ' · ' + vol.hebrewNote + '.';
     const prev = flat[k - 1], next = flat[k + 1];
