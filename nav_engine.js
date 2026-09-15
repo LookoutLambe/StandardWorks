@@ -1645,7 +1645,15 @@
       localStorage.setItem('sw-last-read-' + _config.volume, JSON.stringify({
         volume: _config.volume, chapter: chap, label: label,
         heb: book.heb, verse: vNum,
-        vlabel: book.en + ' ' + (book.ch > 1 ? chNum : '1') + ':' + vNum,
+        /* A BOOK WHOSE NAME ALREADY CARRIES ITS NUMBER TAKES NO CHAPTER. The D&C's
+           sections are books of one chapter each, so this read "Section 6 1:16"
+           on the landing card where the reference is Section 6:16; "OD 1" and the
+           facsimiles had it too. Enos and Jarom still want their 1 — Enos 1:5 is
+           the citation — so the test is a trailing digit, not a single chapter.
+           chapterLabel() above drops the number from every one-chapter book, which
+           is right for a heading and wrong for a verse reference; hence the two. */
+        vlabel: book.en + (book.ch === 1 && /\d$/.test(book.en) ? ''
+                          : ' ' + (book.ch > 1 ? chNum : '1')) + ':' + vNum,
         path: vol.page + (hash ? '#' + hash + vSuffix : ''),
         timestamp: Date.now()
       }));
