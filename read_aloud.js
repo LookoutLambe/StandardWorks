@@ -1355,9 +1355,34 @@
      rate has been measured the clock does not run at all: the first word of
      the phrase is lit and left there. One phrase of a still highlight buys a
      measurement, and everything after it follows properly. */
+  /* THE ENGINE'S SILENCE IS NOT SPEECH. measureSpeed timed from onstart to
+     onend and divided by the character count, but onend arrives after a
+     trailing pause the engine adds, so every measurement came back SLOWER than
+     the voice really speaks. The clock then ran slow and the highlight fell
+     further behind the further into a phrase it got — the lag the translator
+     kept hearing on Android (2026-09-15).
+
+     So the two are separated. Each utterance gives a point (chars, ms), and
+     ms = lead + chars/cps is fitted across them by least squares: `lead` is
+     the fixed overhead at either end, `cps` the rate she actually reads at.
+     The follower then waits out the lead and counts characters at the true
+     rate. Two points are enough to fit; below that the old single-ratio
+     estimate is used, which is better than nothing and self-corrects. */
   var CLOCK = { boundaries: false, at: {} };
 
-  function speedFor(rate) { return CLOCK.at[rate.toFixed(2)] || 0; }
+  function fit(rate) {
+    var a = CLOCK.at[rate.toFixed(2)];
+    if (!a) return null;
+    if (a.n < 2) return { cps: a.sy ? a.sx / (a.sy / 1000) : 0, lead: 0 };
+    var d = a.n * a.sxx - a.sx * a.sx;
+    if (!d) return { cps: a.sx / (a.sy / 1000), lead: 0 };
+    var b = (a.n * a.sxy - a.sx * a.sy) / d;          /* ms per character */
+    var c = (a.sy - b * a.sx) / a.n;                  /* fixed overhead, ms */
+    if (!(b > 0)) return { cps: a.sx / (a.sy / 1000), lead: 0 };
+    return { cps: 1000 / b, lead: c > 0 ? Math.min(c, 1200) : 0 };
+  }
+
+  function speedFor(rate) { var f = fit(rate); return f ? f.cps : 0; }
 
   /* ONE WORD AT A TIME, ALWAYS, SO A SKIP CANNOT HAPPEN.
      The estimate is never exact, and the first version let it jump: when it
@@ -1382,10 +1407,12 @@
        the mark early or late — never make it miss a word. The guess is scaled
        by the rate only because it has nothing better to go on; the first
        measurement replaces it. */
-    var cps = speedFor(rate) || 12 * rate;
+    var f = fit(rate);
+    var cps = (f && f.cps) || 12 * rate;
+    var lead = f ? f.lead : 0;           /* silence before the first word */
     mark(spans[0].el);                   /* the phrase has started, regardless */
 
-    var last = Date.now(), chars = 0, i = 0;
+    var last = Date.now(), chars = 0, i = 0, waited = 0;
     var stopped = false, ending = false, spent = 0;
 
     function step() { if (i < spans.length - 1) { i++; mark(spans[i].el); } }
@@ -1393,7 +1420,11 @@
     (function tick() {
       if (stopped || token !== state.token || CLOCK.boundaries) return;
       var now = Date.now();
-      if (!state.paused) chars += (now - last) / 1000 * cps;
+      if (!state.paused) {
+        var dt = now - last;
+        if (waited < lead) { waited += dt; dt -= Math.min(dt, lead - waited + dt); }
+        if (dt > 0) chars += dt / 1000 * cps;
+      }
       last = now;
       if (ending) {
         if (i >= spans.length - 1 || ++spent > 20) return;  /* done, or too far */
@@ -1401,7 +1432,7 @@
       } else if (cps && chars >= spans[i + 1 < spans.length ? i + 1 : i].start) {
         step();                          /* ONE word, never two */
       }
-      setTimeout(tick, 55);
+      setTimeout(tick, 25);
     })();
 
     return {
@@ -1418,8 +1449,9 @@
     if (!ms || ms < 400 || !chars) return;             /* too short to trust */
     var cps = chars / (ms / 1000);
     if (!(cps > 0.5 && cps < 80)) return;              /* nonsense: ignore */
-    var k = rate.toFixed(2);
-    CLOCK.at[k] = CLOCK.at[k] ? CLOCK.at[k] * 0.7 + cps * 0.3 : cps;
+    var k = rate.toFixed(2), a = CLOCK.at[k];
+    if (!a) a = CLOCK.at[k] = { n: 0, sx: 0, sy: 0, sxx: 0, sxy: 0 };
+    a.n++; a.sx += chars; a.sy += ms; a.sxx += chars * chars; a.sxy += chars * ms;
   }
 
   /** speak one clause, highlighting each word as the engine reaches it */
