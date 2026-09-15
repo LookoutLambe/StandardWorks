@@ -265,7 +265,7 @@ var ch3Verses = [
     ["יְרוּשָׁלָיְמָה","unto Jerusalem"],
     ["׃",""]
   ]},
-  { num: "ג", words: [["כִּי","for"], ["הִנֵּה","behold"], ["סֵפֶר","the record of"], ["הַיְּהוּדִים","the Jews"], ["בְּיַד־לָבָן","is in the hand of Laban"], ["וְגַם","and also"], ["תּוֹלְדוֹת","the genealogy of"], ["אֲבֹתֶיךָ","your forefathers"], ["וְהֵמָּה","and they are"], ["חֲרוּתִים","engraven"], ["עַל־לוּחוֹת","upon plates of"], ["נְחֹשֶׁת","brass"], ["׃",""]]},
+  { num: "ג", words: [["כִּי","for"], ["הִנֵּה","behold"], ["סֵפֶר","the record of"], ["הַיְּהוּדִים","the Jews"], ["בְּיַד־לָבָן","is in the hand of Laban"], ["וְגַם","and also"], ["תּוֹלְדוֹת","the genealogy of"], ["אֲבוֹתַי","my forefathers"], ["וְהֵמָּה","and they are"], ["חֲרוּתִים","engraven"], ["עַל־לוּחוֹת","upon plates of"], ["נְחֹשֶׁת","brass"], ["׃",""]]},
   { num:"ד", words:[
     ["עַל־כֵּן","wherefore"],
     ["צִוָּה","hath commanded"],
