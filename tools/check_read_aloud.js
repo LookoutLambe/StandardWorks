@@ -203,25 +203,64 @@ for (const [input, want, why] of CASES) {
    AIFF, and with the period it renders real audio. */
 const join = sb.window.SWReadAloud && sb.window.SWReadAloud.sayJoin;
 if (!join) { fail('window.SWReadAloud.sayJoin is gone — the say-stop pairs are unguarded'); process.exit(1); }
-const SAY_STOP_CASES = [
-  ['בְּשֶׁבֶת', 'אָבִי',      '1 Nephi 8:2 — "this WHOLE phrase is being left off"'],
-  ['גִד',      'וְטֵאוֹמְנֶר', 'Alma 58:20 and 58:23 — Gid and Teomner'],
-  ['בַר',      'הָאַחֲרוֹן',   'Jacob 5:40 — found by the sweep, not by ear'],
-  ['בֹא',      'לְהִלָּחֵם',    'Alma 56:18'],
-  ['גִד',      'הָאֵלֶּה',     'Alma 57:36 — Gid again, with a different partner'],
-  ['דַם',      'אָחִיךָ',      'Helaman 9:32'],
-  ['וַיֹּאמֶר', 'אֵלֵינוּ',    'NOT a stop — an ordinary pair must still be joined by a space'],
-];
-let joinBad = 0;
-for (const [a, b, why] of SAY_STOP_CASES) {
-  const wantStop = !/NOT a stop/.test(why);
-  const got = join(a, b);
-  if ((got === '. ') !== wantStop) {
-    joinBad++;
-    fail(a + ' + ' + b + ' joined by "' + got + '"\n        ' + why);
+/* EVERY SAY_STOP ENTRY MUST MATCH A PAIR THE READER REALLY PRODUCES.
+   The old test here passed HAND-TYPED words to sayJoin and asserted it
+   returned a period. That is circular: it compares the table against itself,
+   never against spoken(). Five of the six entries were dead when this was
+   written (2026-09-16) and this test was green for all of them — two killed by
+   a later dagesh-forte strip that changed what spoken() emits, three by a
+   combining-mark order that merely LOOKS identical.
+
+   So the pairs come from the corpus now. Every adjacent token of every verse
+   goes through spoken() exactly as speakPhrase joins it, and each entry has to
+   turn up in that set. A dead entry means a verse that goes silent with no
+   error and no sound — the worst failure this reader has. */
+const SAY_STOP_SRC = fs.readFileSync(path.join(ROOT, 'read_aloud.js'), 'utf8');
+const stopBlock = SAY_STOP_SRC.slice(SAY_STOP_SRC.indexOf('var SAY_STOP = ['),
+                                     SAY_STOP_SRC.indexOf('];', SAY_STOP_SRC.indexOf('var SAY_STOP = [')));
+const ENTRIES = (stopBlock.match(/'((?:\\u[0-9A-Fa-f]{4}|[^'\\])+)'/g) || [])
+  .map(q => q.slice(1, -1).replace(/\\u([0-9A-Fa-f]{4})/g,
+                                   (_, h) => String.fromCharCode(parseInt(h, 16))));
+const nfc = t => (t.normalize ? t.normalize('NFC') : t);
+{
+  const real = new Set();
+  const dir = path.join(ROOT, 'bom', 'verses');
+  for (const f of fs.readdirSync(dir).filter(x => x.endsWith('.js'))) {
+    const src = fs.readFileSync(path.join(dir, f), 'utf8');
+    /* 1 Nephi declares bare chNVerses; every other book prefixes it */
+    const CH = /var\s+(?:\w+_)?ch\w*Verses\s*=\s*\[/g;
+    const marks = []; let m;
+    while ((m = CH.exec(src))) marks.push(m.index + m[0].length);
+    marks.forEach((mk, ci) => {
+      const body = src.slice(mk, ci + 1 < marks.length ? marks[ci + 1] : src.length);
+      const st = []; const NUM = /\{\s*num\s*:/g; let v;
+      while ((v = NUM.exec(body))) st.push(v.index);
+      st.forEach((s0, vi) => {
+        const vb = body.slice(s0, vi + 1 < st.length ? st[vi + 1] : body.length);
+        const w = []; const TOK = /\["([^"]*)","([^"]*)"\]/g; let t;
+        while ((t = TOK.exec(vb))) if (/[\u05D0-\u05EA]/.test(t[1])) w.push(t[1]);
+        for (let i = 0; i < w.length - 1; i++) {
+          const a = spoken(w[i]), b = spoken(w[i + 1]);
+          if (a && b) real.add(nfc(a + ' ' + b));
+        }
+      });
+    });
   }
+  const dead = ENTRIES.filter(e => !real.has(nfc(e)));
+  if (!ENTRIES.length) fail('SAY_STOP could not be read out of read_aloud.js — the table is unguarded');
+  else if (dead.length)
+    fail(dead.length + ' of ' + ENTRIES.length + ' SAY_STOP entries match no pair the reader produces —\n' +
+         '        those verses go SILENT with no error:\n' +
+         dead.map(d => '          ' + JSON.stringify(d)).join('\n'));
+  else ok('all ' + ENTRIES.length + ' say-stop pairs are pairs the reader really produces (' +
+          real.size.toLocaleString() + ' distinct spoken pairs)');
 }
-if (!joinBad) ok(SAY_STOP_CASES.length + ' say-stop pairs join as they must (a period only where she needs one)');
+/* and an ordinary pair must still be joined by a space, not a stop */
+let joinBad = 0;
+if (join('\u05D5\u05B7\u05D9\u05BC\u05B9\u05D0\u05DE\u05B6\u05E8', '\u05D0\u05B5\u05DC\u05B5\u05D9\u05E0\u05D5\u05BC') !== ' ') {
+  joinBad++; fail('an ordinary pair is being broken by a stop');
+}
+if (!joinBad) ok('an ordinary pair still joins with a space');
 
 if (!bad) ok(CASES.length + ' pronunciation rules still hold (the Name, qamats qatan, weak wayyiqtol, ־ָיו, consonantal vav, Sariah, the maqqef)');
 

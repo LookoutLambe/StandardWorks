@@ -1510,22 +1510,58 @@
      Every entry is a pair proved with `say -v Carmit -o f.aiff`, which is the
      same synthesiser — a swallowed phrase writes a header-only 4096-byte
      AIFF, so it needs no ear and no transcription to find. */
+  /* EVERY ENTRY IS THE PAIR AS spoken() ACTUALLY EMITS IT, HARVESTED FROM THE
+     CORPUS — never hand-typed. Five of the six entries here were silently DEAD
+     when this was checked (2026-09-16), and the verses they name had gone back
+     to silence without anyone noticing:
+
+       - בְּשֶׁבֶת אָבִי was written with the dagesh BEFORE the sheva, and the
+         corpus writes it after. Same letters, same look, different code point
+         order, so === never matched. NFC fixes that class for good: canonical
+         ordering sorts combining marks by class, so the two spellings compare
+         equal now however they were typed.
+       - בֹא לְהִלָּחֵם and גִד הָאֵלֶּה were written before the dagesh-forte
+         strip existed. spoken() now emits לְהִלָחֵם and הָאֵלֶה, so the entries
+         aimed at words the reader no longer produces.
+
+     A dead entry is invisible — the reading simply goes quiet again — which is
+     why check_read_aloud.js now asserts that every entry here matches a real
+     adjacent pair somewhere in the corpus. */
   var SAY_STOP = [
-    'בְּשֶׁבֶת אָבִי',      /* 1 Nephi 8:2, 10:16 and 16:6 — the pair the translator
-                              heard go missing, and it was eating two more verses */
-    'גִד וְטֵאוֹמְנֶר',     /* Alma 58:20 and 58:23 — Gid and Teomner, the same way */
-    'בַר הָאַחֲרוֹן',       /* Jacob 5:40 */
-    'בֹא לְהִלָּחֵם',        /* Alma 56:18 */
-    'גִד הָאֵלֶּה',          /* Alma 57:36 — Gid again, and a different partner */
-    'דַם אָחִיךָ'           /* Helaman 9:32 — "the blood of thy brother", Cain's line */
+    '\u05D1\u05B0\u05BC\u05E9\u05B6\u05C1\u05D1\u05B6\u05EA \u05D0\u05B8\u05D1\u05B4\u05D9',
+      /* 1 Nephi 8:2, 10:16 and 16:6 — the pair the translator heard go
+         missing, and it was eating two more verses */
+    '\u05D0\u05B6\u05EA\u05BE\u05D3\u05B6 \u05D1\u05B7\u05E8 \u05D0\u05B2\u05D3\u05B9\u05E0\u05B8\u05D9',
+      /* אֶת־דְּבַר יהוה, "the word of the LORD" — 1 Nephi 10:13, Helaman 10:12,
+         10:14 and 13:26. The translator heard 1 Nephi 10:13 stop dead after
+         הַנַּחֲלָה. דְּבַר reaches her as דֶ בַר through the vocal-sheva split,
+         and בַר + אֲדֹנָי is silence — the same first half as בַר הָאַחֲרוֹן
+         below. Each word says itself perfectly alone. */
+    '\u05D1\u05B7\u05E8 \u05D4\u05B8\u05D0\u05B7\u05D7\u05B2\u05E8\u05D5\u05B9\u05DF',
+      /* Jacob 5:40 */
+    '\u05D1\u05B9\u05D0 \u05DC\u05B0\u05D4\u05B4\u05DC\u05B8\u05D7\u05B5\u05DD',
+      /* Alma 56:18 */
+    '\u05D2\u05B4\u05D3 \u05D4\u05B8\u05D0\u05B5\u05DC\u05B6\u05D4',
+      /* Alma 57:36 — Gid again, and a different partner */
+    '\u05D2\u05B4\u05D3 \u05D5\u05B0\u05D8\u05B5\u05D0\u05D5\u05B9\u05DE\u05B0\u05E0\u05B6\u05E8',
+      /* Alma 58:20 and 58:23 — Gid and Teomner, the same way */
+    '\u05D3\u05B7\u05DD \u05D0\u05B8\u05D7\u05B4\u05D9\u05DA\u05B8'
+      /* Helaman 9:32 — "the blood of thy brother", Cain's line */
   ];
 
   /** what joins two words of one phrase: a space, or a stop she needs */
+  var _stopSet = null;
   function sayJoin(prev, next) {
-    var pair = prev + ' ' + next;
-    for (var i = 0; i < SAY_STOP.length; i++) if (pair === SAY_STOP[i]) return '. ';
-    return ' ';
+    if (!_stopSet) {
+      _stopSet = {};
+      for (var j = 0; j < SAY_STOP.length; j++) _stopSet[nfc(SAY_STOP[j])] = 1;
+    }
+    return _stopSet[nfc(prev + ' ' + next)] ? '. ' : ' ';
   }
+  /* Points are compared CANONICALLY, never by code point order: a dagesh
+     written before its sheva and one written after are the same word and must
+     match. See the note on SAY_STOP above. */
+  function nfc(s) { return s.normalize ? s.normalize('NFC') : s; }
 
   /* SOME ENGINES NEVER SAY WHERE THEY ARE.
      The highlight rides on onboundary, which Safari fires and Chrome on
