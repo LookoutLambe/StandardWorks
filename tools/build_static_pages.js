@@ -42,6 +42,7 @@
 const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
+const cp = require('child_process');
 const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'hebrew');
 const SITE = 'https://sefermormon.com/';
@@ -465,7 +466,56 @@ function refreshInPrint(urls) {
 }
 
 // ---------- main ----------
+/* ---------- lastmod ----------
+   THE SITEMAP CARRIED NO <lastmod> AT ALL, AND GOOGLE USES IT. Of the three
+   optional sitemap fields Google documents, it ignores <changefreq> and
+   <priority> outright and reads <lastmod> — but only while it stays honest.
+   A date that moves on every build teaches it the field is noise, which is
+   worse than leaving it out, and this generator rm -rf's hebrew/ and rewrites
+   all 1,701 pages every run, so "the file was written just now" means nothing.
+
+   So the date is the date the CONTENT last changed:
+     - the page is snapshotted before the rebuild and compared after it. A
+       page whose bytes differ (or that did not exist) is dated now.
+     - a page that came back byte-identical keeps the commit date git has for
+       it, which is when its content really last moved.
+   Root pages are not generated here, so they take their git date directly.
+   Any page git has never seen falls back to now. */
+function gitDates() {
+  const map = new Map();
+  try {
+    const out = cp.execFileSync('git', ['log', '--name-only', '--pretty=format:%cI', '--no-renames'],
+                                { cwd: ROOT, maxBuffer: 256 * 1024 * 1024 }).toString();
+    let when = null;
+    for (const line of out.split('\n')) {
+      if (!line) continue;
+      if (/^\d{4}-\d\d-\d\dT/.test(line)) { when = line.trim(); continue; }
+      if (when && !map.has(line)) map.set(line, when);   /* log is newest-first */
+    }
+  } catch (e) { /* no git, shallow clone, whatever — every page falls back to now */ }
+  return map;
+}
+/* the repo path a sitemap URL is served from */
+function repoPath(url) {
+  const rel = url.slice(SITE.length);
+  return rel === '' ? 'index.html' : rel;
+}
+function snapshot(dir) {
+  const seen = new Map();
+  (function walk(d) {
+    let ents = [];
+    try { ents = fs.readdirSync(d, { withFileTypes: true }); } catch (e) { return; }
+    for (const e of ents) {
+      const full = path.join(d, e.name);
+      if (e.isDirectory()) walk(full);
+      else if (e.isFile()) { try { seen.set(full, fs.readFileSync(full)); } catch (err) {} }
+    }
+  })(dir);
+  return seen;
+}
+
 function main() {
+  const before = snapshot(OUT);
   fs.rmSync(OUT, { recursive: true, force: true });
   fs.mkdirSync(OUT, { recursive: true });
   fs.writeFileSync(path.join(OUT, 'static.css'), CSS);
@@ -479,9 +529,23 @@ function main() {
   }
   buildHub(summary, urls);
   refreshInPrint(urls);
+  const git = gitDates(), now = new Date().toISOString().replace(/\.\d+Z$/, '+00:00');
+  let moved = 0;
+  const lastmod = u => {
+    const rel = repoPath(u), full = path.join(ROOT, rel);
+    if (rel.startsWith('hebrew/')) {
+      let cur = null;
+      try { cur = fs.readFileSync(full); } catch (e) { return (moved++, now); }
+      const was = before.get(full);
+      if (!was || !was.equals(cur)) { moved++; return now; }
+    }
+    return git.get(rel) || now;
+  };
   const sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-    urls.map(u => '  <url><loc>' + esc(u) + '</loc></url>').join('\n') + '\n</urlset>\n';
+    urls.map(u => '  <url><loc>' + esc(u) + '</loc><lastmod>' + lastmod(u) + '</lastmod></url>').join('\n') +
+    '\n</urlset>\n';
   fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sm);
-  console.log('[static] %d pages, sitemap.xml %d urls', summary.reduce((a, s) => a + s.pages, 0) + summary.length + 1, urls.length);
+  console.log('[static] %d pages, sitemap.xml %d urls (%d with a new lastmod)',
+              summary.reduce((a, s) => a + s.pages, 0) + summary.length + 1, urls.length, moved);
 }
 main();
