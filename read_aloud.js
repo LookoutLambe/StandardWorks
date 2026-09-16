@@ -285,6 +285,8 @@
      back "rav ani", and with a holam on it "rav oni". 14,118 words carry the
      first and 1,013 the second. A holam is the same sound and she reads it. */
   var QATAN = /[\u05C7\u05B3]/g;
+  var HOLAM_VAV    = /\u05BA/g;            /* holam haser for vav — a holam */
+  var SILENT_MARKS = /[\u05BF\u05C4\u05C5]/g;  /* rafe, and the puncta extraordinaria */
   var POINTS = /[\u0591-\u05BD\u05BF-\u05C7]/g;   /* NOT U+05BE, the maqqef */
 
   /* SAY IT LIKE THIS — and only where the pointing has been PROVED to fail.
@@ -876,6 +878,32 @@
          The spelling that produces is the ordinary one — כׇּל becomes כֹּל,
          which is how the Tanakh writes that word anyway. */
       parts[k] = parts[k].replace(QATAN, '\u05B9');
+
+      /* THE OTHER MARKS SHE DOES NOT KNOW. The qamats qatan above is one of a
+         family: a codepoint rare enough that a modern synthesiser has no rule
+         for it, sitting in a corpus that uses it correctly. A census of every
+         combining mark in the six volumes finds the whole tail, and all of it
+         survived into the voice string until now:
+
+           U+05BA  HOLAM HASER FOR VAV   417  מִצְוֺת, מִצְוֺתֶיךָ, חַוֺּת
+           U+05BF  RAFE                   63  בְּבֹאָהֿ, אׇכְלָהֿ
+           U+05C4  UPPER DOT              17  the puncta extraordinaria
+           U+05C5  LOWER DOT               1  Psalm 27:13's לׅׄוּׅׄלֵׅׄאׅׄ
+
+         U+05BA IS A HOLAM and is treated as one, exactly as U+05C7 is: it
+         marks a holam ON a consonantal vav, which is why מִצְוֺת is mitsvot
+         and not mitsvoht. Losing it would cost the vowel.
+
+         The other three carry no sound and are removed. The rafe marks the
+         ABSENCE of a dagesh — on these 63 it is a final he that is silent,
+         which is what she does with a bare final he anyway. The upper and
+         lower dots are scribal marks on words the Masoretes doubted; they
+         are not pronunciation and never were.
+
+         All four are Old Testament only in this corpus. Nothing in the text
+         changes — the Tanakh's pointing is untouchable and untouched; this is
+         the string handed to the synthesiser. */
+      parts[k] = parts[k].replace(HOLAM_VAV, '\u05B9').replace(SILENT_MARKS, '');
       /* THE SHEVA IN A WEAK WAYYIQTOL. וַיְהִי is "vay-HI" and she read it
          "vehi", losing the yod: transcribed as והיא every one of the five
          times it occurs in 1 Nephi 1. It is not the waw-consecutive itself —

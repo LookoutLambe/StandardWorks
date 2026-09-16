@@ -73,6 +73,10 @@ const CASES = [
   ['כׇּל',        'כול',      '"col yamaiu its yamav" — kol, and the qamats qatan is not enough on its own'],
   ['כָּל',        'כול',      'the same word spelled with a plain qamats'],
   ['חׇכְמָה',      'חֹכְמָה',   'U+05C7 is a codepoint she does not know: "chachma" for chochmah'],
+  ['מִצְוֺת',      'מִצְווֹת',   'U+05BA holam-haser-for-vav, 417 tokens: the same unknown-codepoint failure as the qatan'],
+  ['מִצְוֺתֶיךָ',   'מִצְווֹתֶיךָ','and it survives a suffix'],
+  ['בְּבֹאָהֿ',     'בְּבֹאָה',   'the rafe marks the ABSENCE of a dagesh — no sound, 63 tokens, removed'],
+  ['לָׄנׄוּׄ',       'לָנוּ',      'the puncta extraordinaria are scribal doubt marks, not pronunciation'],
   ['וַיָּמׇת',     'וַיָמֹת',  'the same gap: "vayyamat" for vayyamot'],
   /* SUPERSEDED 2026-09-14. This asserted וַיְהִי -> וַיֶהִי on the claim that
      the sheva under the yod is NA. It is not — וַיְהִי is way-hî, the yod
