@@ -1527,26 +1527,83 @@
      A dead entry is invisible — the reading simply goes quiet again — which is
      why check_read_aloud.js now asserts that every entry here matches a real
      adjacent pair somewhere in the corpus. */
+  /* EVERY ENTRY IS THE PAIR AS spoken() ACTUALLY EMITS IT, DERIVED BY RENDERING
+     THE WHOLE CORPUS — never hand-typed and never guessed.
+
+     How these were found (2026-09-16): all 23,411 distinct utterances the
+     reader speaks were rendered with `say -v Carmit` and checked for the
+     header-only 4096-byte AIFF that means she swallowed one. 28 came back
+     silent; each was then bisected to the adjacent pair that kills it.
+
+     THE TRIGGER IS THE VOCAL-SHEVA SPLIT MEETING CERTAIN FOLLOWERS. דְּבַר
+     reaches her as דֶ בַר, and דֶ בַר + אֲדֹנָי, אָבִינוּ or הָאֱמֶת is
+     silence while דֶ בַר + אלוהים, הַמֶלֶךְ, טוֹב or שָׁלוֹם is fine. The
+     split itself is NOT the fault — דֶ מוּת, הַדֶ בָרִים and הַגֶ דוֹלָה all
+     speak normally with a follower — so the split stays as the translator
+     chose it and the pair gets a stop.
+
+     A DEAD ENTRY IS INVISIBLE: the verse simply goes quiet, onend fires, no
+     error. Five of the six entries here were dead when this was rebuilt —
+     three written with the dagesh before the sheva where the corpus writes it
+     after, two aimed at spellings the dagesh-forte strip had since changed.
+     So sayJoin now compares under NFC, and check_read_aloud.js requires every
+     entry to match a pair the reader really produces. */
   var SAY_STOP = [
-    '\u05D1\u05B0\u05BC\u05E9\u05B6\u05C1\u05D1\u05B6\u05EA \u05D0\u05B8\u05D1\u05B4\u05D9',
-      /* 1 Nephi 8:2, 10:16 and 16:6 — the pair the translator heard go
-         missing, and it was eating two more verses */
-    '\u05D0\u05B6\u05EA\u05BE\u05D3\u05B6 \u05D1\u05B7\u05E8 \u05D0\u05B2\u05D3\u05B9\u05E0\u05B8\u05D9',
-      /* אֶת־דְּבַר יהוה, "the word of the LORD" — 1 Nephi 10:13, Helaman 10:12,
-         10:14 and 13:26. The translator heard 1 Nephi 10:13 stop dead after
-         הַנַּחֲלָה. דְּבַר reaches her as דֶ בַר through the vocal-sheva split,
-         and בַר + אֲדֹנָי is silence — the same first half as בַר הָאַחֲרוֹן
-         below. Each word says itself perfectly alone. */
-    '\u05D1\u05B7\u05E8 \u05D4\u05B8\u05D0\u05B7\u05D7\u05B2\u05E8\u05D5\u05B9\u05DF',
+    '\u05D0\u05B6\u05EA\u05BE\u05D3\u05B6\u0020\u05D1\u05B7\u05E8\u0020\u05D0\u05B2\u05D3\u05B9\u05E0\u05B8\u05D9',
+      /* 1nephi 10:13 — אֶת־דֶ בַר אֲדֹנָי */
+    '\u05D3\u05B6\u0020\u05D1\u05B7\u05E8\u0020\u05D0\u05B8\u05D1\u05B4\u05D9\u05E0\u05D5\u05BC',
+      /* 1nephi 15:13 — דֶ בַר אָבִינוּ */
+    '\u05D3\u05B6\u0020\u05D1\u05B7\u05E8\u0020\u05D5\u05B0\u05DB\u05B9\u05D7\u05B7',
+      /* alma 17:17 — דֶ בַר וְכֹחַ */
+    '\u05E2\u05B7\u05DC\u05BE\u05D3\u05B6\u0020\u05D1\u05B7\u05E8\u0020\u05E0\u05B0\u05E4\u05B4\u05D9\u05DC\u05B7\u05EA',
+      /* alma 18:36 — עַל־דֶ בַר נְפִילַת */
+    '\u05E2\u05B7\u05DC\u05BE\u05D3\u05B6\u0020\u05D1\u05B7\u05E8\u0020\u05DE\u05B0\u05E8\u05B4\u05D9',
+      /* alma 18:38 — עַל־דֶ בַר מְרִי */
+    '\u05DC\u05B7\u05DE\u05B6\u0020\u05D3\u05B5\u05DD\u0020\u05DC\u05B0\u05D4\u05B4\u05DB\u05B8\u05BC\u05E0\u05B7\u05E2',
+      /* alma 37:33 — לַמֶ דֵם לְהִכָּנַע */
+    '\u05DC\u05B7\u05DE\u05B6\u0020\u05D3\u05B5\u05DD\u0020\u05DC\u05B0\u05D1\u05B4\u05DC\u05B0\u05EA\u05B4\u05BC\u05D9',
+      /* alma 37:34 — לַמֶ דֵם לְבִלְתִּי */
+    '\u05D3\u05B6\u0020\u05D1\u05B7\u05E8\u0020\u05D4\u05B8\u05D0\u05B1\u05DE\u05B6\u05EA',
+      /* alma 38:9 — דֶ בַר הָאֱמֶת */
+    '\u05E2\u05B7\u05DC\u05BE\u05D3\u05B6\u0020\u05D1\u05B7\u05E8\u0020\u05D4\u05B8\u05E8\u05B6\u05D5\u05B7\u05D7',
+      /* alma 40:9 — עַל־דֶ בַר הָרֶוַח */
+    '\u05E2\u05B7\u05DC\u05BE\u05D3\u05B6\u0020\u05D1\u05B7\u05E8\u0020\u05DE\u05B0\u05D6\u05B4\u05DE\u05B8\u05EA\u05B8\u05DD',
+      /* alma 50:31 — עַל־דֶ בַר מְזִמָתָם */
+    '\u05D5\u05B0\u05D0\u05B6\u05EA\u05BE\u05D3\u05B6\u0020\u05D1\u05B7\u05E8\u0020\u05D0\u05B1\u05DC\u05B9\u05D4\u05B5\u05D9\u05E0\u05D5\u05BC',
+      /* alma 54:10 — וְאֶת־דֶ בַר אֱלֹהֵינוּ */
+    '\u05D1\u05B9\u05D0\u0020\u05DC\u05B0\u05D4\u05B4\u05DC\u05B8\u05D7\u05B5\u05DD',
+      /* alma 56:18 — בֹא לְהִלָחֵם */
+    '\u05D2\u05B4\u05D3\u0020\u05D4\u05B8\u05D0\u05B5\u05DC\u05B6\u05D4',
+      /* alma 57:36 — גִד הָאֵלֶה */
+    '\u05D3\u05B6\u0020\u05D1\u05B7\u05E8\u0020\u05D4\u05B8\u05E2\u05B2\u05D6\u05D5\u05BC\u05D1\u05B8\u05D4',
+      /* alma 60:6 — דֶ בַר הָעֲזוּבָה */
+    '\u05D3\u05B6\u0020\u05D1\u05B7\u05E8\u0020\u05D0\u05B2\u05D7\u05B4\u05D9',
+      /* ether 7:5 — דֶ בַר אֲחִי */
+    '\u05D3\u05B6\u0020\u05D1\u05B7\u05E8\u0020\u05D4\u05B8\u05D0\u05B5\u05D1\u05B6\u05DC',
+      /* helaman 7:11 — דֶ בַר הָאֵבֶל */
+    '\u05E2\u05B7\u05DC\u05BE\u05D3\u05B6\u0020\u05D1\u05B7\u05E8\u0020\u05D4\u05B8\u05E2\u05B8\u05DD\u05BE\u05D4\u05B7\u05D6\u05B6\u05D4',
+      /* mormon 1:3 — עַל־דֶ בַר הָעָם־הַזֶה */
+    '\u05D5\u05B7\u05D9\u05B4\u05E4\u05B0\u05E7\u05B6\u0020\u05D3\u05B5\u05DD\u0020\u05D0\u05B2\u05D3\u05B9\u05E0\u05B8\u05D9',
+      /* mosiah 27:7 — וַיִפְקֶ דֵם אֲדֹנָי */
+    '\u05E2\u05B7\u05DC\u05BE\u05D3\u05B6\u0020\u05D1\u05B7\u05E8\u0020\u05D0\u05B2\u05D1\u05D5\u05B9\u05EA\u05B8\u05D1',
+      /* omni 1:22 — עַל־דֶ בַר אֲבוֹתָב */
+    '\u05D1\u05B0\u05BC\u05E9\u05B6\u05C1\u05D1\u05B6\u05EA\u0020\u05D0\u05B8\u05D1\u05B4\u05D9',
+      /* 1 Nephi 8:2, 10:16, 16:6 — the pair the translator first heard go missing */
+    '\u05D1\u05B7\u05E8\u0020\u05D4\u05B8\u05D0\u05B7\u05D7\u05B2\u05E8\u05D5\u05B9\u05DF',
       /* Jacob 5:40 */
-    '\u05D1\u05B9\u05D0 \u05DC\u05B0\u05D4\u05B4\u05DC\u05B8\u05D7\u05B5\u05DD',
-      /* Alma 56:18 */
-    '\u05D2\u05B4\u05D3 \u05D4\u05B8\u05D0\u05B5\u05DC\u05B6\u05D4',
-      /* Alma 57:36 — Gid again, and a different partner */
-    '\u05D2\u05B4\u05D3 \u05D5\u05B0\u05D8\u05B5\u05D0\u05D5\u05B9\u05DE\u05B0\u05E0\u05B6\u05E8',
-      /* Alma 58:20 and 58:23 — Gid and Teomner, the same way */
-    '\u05D3\u05B7\u05DD \u05D0\u05B8\u05D7\u05B4\u05D9\u05DA\u05B8'
-      /* Helaman 9:32 — "the blood of thy brother", Cain's line */
+    '\u05D2\u05B4\u05D3\u0020\u05D5\u05B0\u05D8\u05B5\u05D0\u05D5\u05B9\u05DE\u05B0\u05E0\u05B6\u05E8',
+      /* Alma 58:20 and 58:23 */
+    '\u05D3\u05B7\u05DD\u0020\u05D0\u05B8\u05D7\u05B4\u05D9\u05DA\u05B8'
+      /* Helaman 9:32 — Cain’s line */,
+    /* THREE VERSES FAIL ON A TRIPLE, NOT A PAIR. אֶת־דֶ בַר אלוהים כול־יְמֵי
+       (Helaman 5:4) is silence, while אֶת־דֶ בַר אלוהים and אלוהים כול־יְמֵי
+       each speak perfectly. sayJoin only ever sees two adjacent words, so a
+       triple cannot be named directly; the stop goes after the דֶ בַר fragment
+       instead, exactly as every entry above does, and that cures all three. */
+    '\u05D0\u05B6\u05EA\u05BE\u05D3\u05B6\u0020\u05D1\u05B7\u05E8\u0020\u05D0\u05DC\u05D5\u05D4\u05D9\u05DD',
+      /* helaman 6:2 — אֶת־דֶ בַר אלוהים : a TRIPLE, not a pair — both halves speak alone */
+    '\u05D5\u05B0\u05D2\u05B7\u05DD\u05BE\u05D3\u05B6\u0020\u05D1\u05B7\u05E8\u0020\u05D0\u05DC\u05D5\u05D4\u05D9\u05DD',
+      /* alma 42:5 — וְגַם־דֶ בַר אלוהים : a TRIPLE, not a pair — both halves speak alone */
   ];
 
   /** what joins two words of one phrase: a space, or a stop she needs */
