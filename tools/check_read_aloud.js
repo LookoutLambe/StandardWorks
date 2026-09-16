@@ -64,6 +64,11 @@ if (typeof spoken !== 'function') {
 /* ── what the reader heard, and what fixed it ───────────────────────────── */
 const CASES = [
   ['יְהוָה',      'אֲדֹנָי',   'the Name carries Adonai\'s vowels; read literally she says "Yehova", the medieval misreading'],
+  ['בַּיהוָה',     'בַּאֲדֹנָי', 'the Name under an inseparable prefix — she read the letters, "baiba"'],
+  ['לַיהֹוָה',     'לַאֲדֹנָי',  'the commonest of them, 678 tokens, and the holam spelling with it'],
+  ['וַיהוָה',      'וַאֲדֹנָי',  'the prefix keeps its own pointing: the Masoretes set it for the qere'],
+  ['מֵיְהוָה',     'מֵאֲדֹנָי',  'a tsere prefix, not a patah'],
+  ['וַיְהִי',      'וַיְהִי',    'NOT touched — vav yod he yod is not the Name, and the rule must not eat it'],
   ['יְהוִה',      'אלוהים',  'where the Masoretes pointed it with Elohim\'s vowels instead' + ' — and then spelled for the voice like every Elohim'],
   ['כׇּל',        'כול',      '"col yamaiu its yamav" — kol, and the qamats qatan is not enough on its own'],
   ['כָּל',        'כול',      'the same word spelled with a plain qamats'],

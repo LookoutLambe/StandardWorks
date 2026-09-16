@@ -300,6 +300,12 @@
      So this table is small on purpose, and everything in it earned its place
      by being heard: כׇּל read as "cli" pointed, and reads as "kol" spelled
      כול. That is the whole bar. */
+  var ADONAI = '\u05D0\u05B2\u05D3\u05B9\u05E0\u05B8\u05D9';      /* אֲדֹנָי */
+  var ELOHIM = '\u05D0\u05B1\u05DC\u05B9\u05D4\u05B4\u05D9\u05DD';  /* אֱלֹהִים */
+  /* one inseparable prefix and its points, then exactly the Name's four
+     letters and nothing after them. Group 2 holds the points on the vav,
+     which is where the Masoretes put the qere's vowel. */
+  var NAME_PREFIXED = /^([\u05D1\u05DB\u05DC\u05DE\u05D5\u05D4\u05E9][\u0591-\u05C7]*)\u05D9[\u0591-\u05C7]*\u05D4[\u0591-\u05C7]*\u05D5([\u0591-\u05C7]*)\u05D4[\u0591-\u05C7]*$/;
   var SAY_AS = {
     /* מְצַוֶּה IS "mitsveh" (translator's ruling, 2026-09-14). She was reading
        it "mitzawe" — the dagesh in the vav taken as a vowel, so the word came
@@ -678,6 +684,26 @@
     var parts = s.split(/[\u05BE\s]+/);
     for (var k = 0; k < parts.length; k++) {
       if (SAY_AS[parts[k]]) { parts[k] = SAY_AS[parts[k]]; continue; }
+      /* THE NAME UNDER AN INSEPARABLE PREFIX. SAY_AS carries the bare
+         יְהוָה and reads it אֲדֹנָי, and a maqqef compound works by accident
+         of the maqqef becoming a space — אֶת־יְהוָה splits and the second half
+         is looked up. An inseparable prefix is neither: בַּיהוָה, לַיהוָה and
+         וַיהוָה reached Carmit whole and she read the letters, which is how
+         1 Nephi 8 came out "baiba".
+
+         989 tokens across the six volumes: לַ 678, בַּ 127, וַ 125, מֵ 40,
+         בַ 12, כַּ 4, and one each of הַ, שֶׁ and שֱׁ. A table of prefixes is
+         the wrong shape for it; this is the one rule they all follow.
+
+         The Masoretes already pointed the prefix FOR the qere — the patah in
+         בַּיהוָה is the ba- of ba-Adonai, not a vowel the Name owns — so the
+         prefix and its pointing are kept exactly as written and only the four
+         letters of the Name are replaced. A hiriq under the vav means the
+         Masoretes pointed it with Elohim's vowels instead, and it is read
+         that way; there are none in this corpus, but the bare rule makes the
+         same distinction and this one must not quietly lose it. */
+      var pfx = NAME_PREFIXED.exec(parts[k]);
+      if (pfx) { parts[k] = pfx[1] + (/\u05B4/.test(pfx[2]) ? ELOHIM : ADONAI); continue; }
       /* BEFORE THE QAMATS QATAN IS TURNED INTO A HOLAM, because that
          substitution destroys the evidence this rule needs: a qamats
          qatan is SHORT, so the sheva after it is nach, and once it has
