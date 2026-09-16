@@ -671,9 +671,28 @@
        needing different treatment: the first is looked up, the second goes to
        ktiv male. Unpointing the pair together took the qamats qatan off כׇּל
        and lost "kol" altogether.
-       The maqqef becomes a SPACE for the voice: it joins two words that are
-       still pronounced as two, and a hyphen inside a word is one more thing
-       for a synthesiser to get wrong. */
+       THE MAQQEF IS SPLIT FOR THE RULES AND PUT BACK FOR THE VOICE
+       (translator, 2026-09-16). It used to become a space, on the reasoning
+       that "a hyphen inside a word is one more thing for a synthesiser to
+       get wrong". Rendering says the reverse. Carmit SWALLOWS the he of an
+       article that follows a space and SOUNDS it after a maqqef: across ten
+       article words after אֵת/אֶת the energy at the he went from 40-43% of
+       peak (a vowel onset, no /h/ at all) to 12-13% (a breathy one), every
+       time. The translator heard it first as אֵת־הַשָּׁמַיִם coming out
+       "et-ashamayim", and chose the maqqef rendering over the spaced one.
+
+       This is the ONLY text lever that reaches her here. Measured against
+       byte-identical audio: the dagesh, patah-vs-qamats, meteg and all
+       fourteen cantillation accents change NOTHING. Her vowel inventory is
+       six sounds, not eleven — sheva/hataf-segol/tsere collapse together,
+       and so do hataf-patah/hataf-qamats/patah/qamats. Only letters, spaces
+       and the maqqef move her, which is why every fix that ever stuck on
+       this voice changed LETTERS.
+
+       A maqqef that follows an inseparable prefix is stripped by HER, not
+       by us: וְ־הָאָרֶץ renders byte-identical to וְהָאָרֶץ, so the he
+       inside a prefixed token is still elided and nothing here can reach
+       it. That defect is open. */
     s = s.replace(/[\[\]()]/g, '');      /* a qere's brackets are not said */
     /* AND ON WHITESPACE, NOT THE MAQQEF ALONE (2026-09-15). spoken() is
        handed a PHRASE — the first utterance of 1 Nephi 1 is אֲנִי נֶפִי, two
@@ -681,8 +700,11 @@
        part, and SAY_AS, which matches a whole part, can never see them.
        כׇּל hid this: it is nearly always followed by a maqqef, so it lands in
        a part of its own and its entry fires. יֻלַּדְתִּי is not, and its entry
-       never fired outside a unit test. Parts are rejoined with a space
-       below, which is what the maqqef became anyway, so nothing else moves. */
+       never fired outside a unit test. Parts are rejoined below ON THE
+       SEPARATOR THEY CAME APART AT, so a maqqef compound is still looked up
+       word by word and still reaches her as one. */
+    s = s.replace(/^[\u05BE\s]+|[\u05BE\s]+$/g, '');
+    var seps = s.match(/[\u05BE\s]+/g) || [];
     var parts = s.split(/[\u05BE\s]+/);
     for (var k = 0; k < parts.length; k++) {
       if (SAY_AS[parts[k]]) { parts[k] = SAY_AS[parts[k]]; continue; }
@@ -1008,8 +1030,17 @@
     }
     /* A maqqef at the edge of a token (אִם־) or doubled (־־) leaves an empty
        part behind, and a digits-only part is dropped entirely; collapse what
-       that leaves rather than handing her a ragged string. */
-    return parts.join(' ').replace(/\s+/g, ' ').trim();
+       that leaves rather than handing her a ragged string. Each gap is
+       rejoined with the separator it was split on — a maqqef where the text
+       had one, a space otherwise — so no compound is fused and none is
+       silently respaced. */
+    var out = parts[0] || '';
+    for (var j = 1; j < parts.length; j++) {
+      if (!parts[j]) continue;
+      var sep = (seps[j - 1] || ' ').indexOf('\u05BE') >= 0 ? '\u05BE' : ' ';
+      out += (out ? sep : '') + parts[j];
+    }
+    return out.replace(/\s+/g, ' ').replace(/\u05BE+/g, '\u05BE').trim();
   }
 
   /** does this word open a clause? (measured — see the table above) */
@@ -1150,9 +1181,76 @@
 
        The split is a breath, not a full stop: the sense runs on. */
     var ENDS_UTTERANCE = ['\u05D5\u05B0\u05D4\u05B8\u05D0\u05B7\u05D7\u05B2\u05E8\u05B4\u05D9\u05EA'];
+
+    /* THE DEFINITE ARTICLE IS THE SAME DEFECT, AND IT IS A CLASS (translator,
+       2026-09-16: "its a class of words... הַיַּבָּשָׁה , הַמַּיִם , הָאָרֶץ
+       and others", and then "it needs the h sound").
+
+       Carmit DROPS /h/ BEFORE /a/ AND ONLY BEFORE /a/. Rendered with the
+       vowel as the only variable, הִ, הֹ and הֻ all keep the he and הַ/הָ lose
+       it — so הַמַּיִם comes out "amayim" and הָאָרֶץ "aarets". The article is
+       always /a/, which is why no respelling reaches it: the dagesh,
+       patah-vs-qamats, meteg and all fourteen cantillation accents each
+       render BYTE-IDENTICAL audio, and only letters, spaces and the maqqef
+       move her at all.
+
+       What DOES restore it is the same cure וְהָאַחֲרִית needed above: the
+       word has to END ITS UTTERANCE. She plans prosody across the whole
+       string, and the he survives only when nothing follows it inside that
+       string. The translator chose the split rendering over the joined one
+       for the prefixed form and for two bare ones (וְהַמַּיִם, הָאָרֶץ,
+       הַמַּיִם), so it is the article as such, not the prefix.
+
+       WHICH he IS THE ARTICLE IS DECIDED BY HEBREW, NOT BY A PATTERN ON THE
+       LETTERS. A blind prefix+ה rule would fire on וְהָיָה — the commonest
+       narrative word in the book — and on every hiphil. So:
+         - only the conjunction may precede it (ל ב כ מ swallow the article),
+         - before א ע ר, which cannot double, the vowel MUST be qamats,
+         - before ה ח it may stand bare,
+         - anywhere else the next letter must carry the dagesh forte,
+         - a next letter pointed with sheva is AMBIGUOUS (the Masorah omits
+           the dagesh there) and is left alone — under-applying costs only
+           the reading it already has, while over-applying breaks a verb,
+         - הֶ followed by a hataf is the hiphil of a guttural root
+           (הֶחֱזִיק, הֶחֱלִיק), never the article.
+       That leaves thirteen forms Hebrew cannot separate — hiphil imperatives
+       mostly, הַגֵּד "declare" beside הַגָּדוֹל "the great" — and they are
+       listed. A miss here costs a stray breath after the word, never a
+       mispronunciation, because this rule moves a boundary and never a
+       letter. */
+    var ART_HEAD  = /^(?:[\u05D5\u05E9][\u05B0-\u05BC]*)?\u05D4([\u05B7\u05B8\u05B6])([\u05D0-\u05EA])([\u05B0-\u05BC]*)/;
+    var ART_PLAIN = /[\u05D0\u05E2\u05E8]/;      /* alef ayin resh: never double */
+    var ART_GUTT  = /[\u05D4\u05D7]/;             /* he het: never double either */
+    var ART_HATAF = /[\u05B1\u05B2\u05B3]/;
+    var NOT_ARTICLE = [
+    '\u05D4\u05B7\u05DB\u05BC\u05D5\u05B9\u05EA',  /* הַכּוֹת  to smite */
+    '\u05D4\u05B7\u05D2\u05B4\u05BC\u05D9\u05D3\u05D5\u05BC',  /* הַגִּידוּ  declare you */
+    '\u05D4\u05B8\u05E8\u05B8\u05D4',  /* הָרָה  shall conceive */
+    '\u05D5\u05B0\u05D4\u05B7\u05D2\u05B4\u05BC\u05D9\u05D3\u05D5\u05BC',  /* וְהַגִּידוּ  and declare */
+    '\u05D4\u05B7\u05D8\u05B5\u05BC\u05D4\u05BE\u05DC\u05D5\u05B9',  /* הַטֵּה־לוֹ  turn to him */
+    '\u05D4\u05B7\u05E6\u05B4\u05BC\u05D9\u05DC\u05B5\u05E0\u05D5\u05BC',  /* הַצִּילֵנוּ  deliver us */
+    '\u05D5\u05B0\u05D4\u05B7\u05D7\u05B2\u05E8\u05B7\u05DE\u05B0\u05EA\u05B4\u05BC\u05D9',  /* וְהַחֲרַמְתִּי  and I will consecrate */
+    '\u05D5\u05B0\u05D4\u05B8\u05E8\u05B7\u05E1\u05B0\u05EA\u05B4\u05BC\u05D9',  /* וְהָרַסְתִּי  and I will throw down */
+    '\u05D4\u05B7\u05D2\u05B6\u05BC\u05D3\u05BE\u05DC\u05B4\u05D9',  /* הַגֶּד־לִי  tell me */
+    '\u05D4\u05B7\u05EA\u05B9\u05BC\u05D0\u05DE\u05B7\u05E8',  /* הַתֹּאמַר  will you say */
+    '\u05D5\u05B0\u05D4\u05B7\u05D2\u05B5\u05BC\u05D3',  /* וְהַגֵּד  and declare */
+    '\u05D4\u05B7\u05D2\u05B5\u05BC\u05D3',  /* הַגֵּד  declare */
+    '\u05D5\u05B0\u05D4\u05B7\u05DC\u05B9\u05BC\u05D0',  /* וְהַלֹּא  and he that not */
+    ];
+    function isArticle(h) {
+      var m = ART_HEAD.exec(h);
+      if (!m) return false;
+      var vowel = m[1], next = m[2], marks = m[3];
+      if (marks.indexOf('\u05B0') >= 0) return false;                  /* sheva: ambiguous */
+      if (vowel === '\u05B6' && ART_HATAF.test(marks)) return false;   /* הֶחֱזִיק: hiphil */
+      if (ART_PLAIN.test(next)) { if (vowel !== '\u05B8') return false; }
+      else if (!ART_GUTT.test(next) && marks.indexOf('\u05BC') < 0) return false;
+      for (var i = 0; i < NOT_ARTICLE.length; i++) if (h === NOT_ARTICLE[i]) return false;
+      return true;
+    }
     function mustEnd(h) {
       for (var i = 0; i < ENDS_UTTERANCE.length; i++) if (h === ENDS_UTTERANCE[i]) return true;
-      return false;
+      return isArticle(h);
     }
     var forced = [];
     split.forEach(function (p) {

@@ -117,7 +117,7 @@ const CASES = [
      were recorded under the old strategy. */
   ['יָמָיו',      'יָמָב',     'the ־ָיו suffix: "yamaiyu" for yamav'],
   ['בָּנָיו',      'בָּנָב',     '"banav is reading as banaiyu"'],
-  ['כׇּל־יָמָיו',  'כול יָמָב', 'one token, two words, two different rules — and the maqqef is a SPACE'],
+  ['כׇּל־יָמָיו',  'כול־יָמָב', 'one token, two words, two different rules — and the maqqef is a SPACE'],
   ['יַחְדָּו',     'יחדיו',    'a consonantal vav read as a vowel'],
   ['עֵשָׂו',      'עשיו',     'the same, for Esau'],
   /* THOSE TWO NAMES WERE THE ONLY FINAL VAV EVER GUARDED, and they are the
@@ -131,7 +131,7 @@ const CASES = [
   ['דְּרָכָו',     'דֶ רָכָב',   'the archaic ־ָו for ־ָיו: "darko", his way, for derakhav, his ways; the initial dalet now takes the vocal-sheva treatment too (translator, 2026-09-15, on דְּבָרִים) — this expectation predates that ruling'],
   ['עָלָו',       'עָלָב',     'upon him — she read the bare form "lula"'],
   ['שָׁלֵו',      'שָׁלֵב',    'at ease; the vav is the last consonant, not a vowel'],
-  ['אֶת־לֶחִי',    'אֶת לֶחִי',  'a maqqef between two pointed words: it separates, it does not strip'],
+  ['אֶת־לֶחִי',    'אֶת־לֶחִי',  'a maqqef between two pointed words: it separates, it does not strip'],
   ['הׇרְגֵהוּ',    'הֹרְגֵהוּ',  'slay him, 1 Nephi 4:12 — the one imperative listed by hand'],
   ['שְׂרָיָה',     'שְׂרָיָע',   '"its pronouncing sariah as sa-rai-yaha thats bad" — the he becomes an ayin'],
   ['חַסְדּוֹ',     'חַסְדּוֹ',   'NOT touched — a vav with a holam of its own is a vowel, not a final consonant'],
@@ -163,13 +163,13 @@ const CASES = [
      an identity entry in SAY_AS excepts the word so it reaches her with the
      corpus's own pointing. Chosen by ear from four rendered candidates. */
   ['\u05D5\u05B7\u05D9\u05B0\u05D4\u05B4\u05D9', '\u05D5\u05B7\u05D9\u05B0\u05D4\u05B4\u05D9', 'vay-hi — UNTOUCHED; a segol here says "vay-yehi"'],
-  ['\u05D5\u05B7\u05D9\u05B0\u05D4\u05B4\u05D9\u05BE\u05E2\u05B6\u05E8\u05B6\u05D1', '\u05D5\u05B7\u05D9\u05B0\u05D4\u05B4\u05D9 \u05E2\u05B6\u05E8\u05B6\u05D1', 'the maqqef form reaches the exception too'],
+  ['\u05D5\u05B7\u05D9\u05B0\u05D4\u05B4\u05D9\u05BE\u05E2\u05B6\u05E8\u05B6\u05D1', '\u05D5\u05B7\u05D9\u05B0\u05D4\u05B4\u05D9\u05BE\u05E2\u05B6\u05E8\u05B6\u05D1', 'the maqqef form reaches the exception too'],
   /* פְּנֵי IS THE EXCEPTION TO THE EXCEPTION. Everywhere else the dagesh comes
      off and the sheva becomes a SEGOL; here the dagesh STAYS (it keeps the p
      hard) and the sheva becomes a TSERE. Chosen by ear. It must run BEFORE
      voiceShevaNa, or that rule would voice the same sheva its own way. */
   ['\u05E4\u05B0\u05BC\u05E0\u05B5\u05D9', '\u05E4\u05BC\u05B5\u05E0\u05B5\u05D9', 'p\u2019nei \u2014 hard p, tsere, dagesh KEPT'],
-  ['\u05E2\u05B7\u05DC\u05BE\u05E4\u05B0\u05BC\u05E0\u05B5\u05D9', '\u05E2\u05B7\u05DC \u05E4\u05BC\u05B5\u05E0\u05B5\u05D9', 'the maqqef form: split first, so the pe is word-initial and only THIS rule reaches it'],
+  ['\u05E2\u05B7\u05DC\u05BE\u05E4\u05B0\u05BC\u05E0\u05B5\u05D9', '\u05E2\u05B7\u05DC\u05BE\u05E4\u05BC\u05B5\u05E0\u05B5\u05D9', 'the maqqef form: split first, so the pe is word-initial and only THIS rule reaches it'],
   ['\u05DE\u05B4\u05E4\u05B0\u05BC\u05E0\u05B5\u05D9', '\u05DE\u05B4\u05E4\u05BC\u05B5\u05E0\u05B5\u05D9', 'the prefixed form takes it too, not the general segol'],
   /* the other vocal-sheva classes (2026-09-14) */
   ['הָיְתָה', 'הָיֶ תָה', 'after a LONG vowel: "ha-ye-ta", not "hayta"'],
@@ -231,7 +231,17 @@ if (!bad) ok(CASES.length + ' pronunciation rules still hold (the Name, qamats q
    U+05C7 she cannot read at all. The maqqef must never be deleted — "no do
    not strip out the maqqef" — and because U+05BE sits inside the accent
    range [֑-ׇ], the obvious way to write that regex removes it. It has to
-   leave as a SPACE, never by fusing its two words into one. */
+   leave INTACT, never by fusing its two words into one.
+
+   IT LEAVES AS A MAQQEF, NOT AS A SPACE (translator, 2026-09-16, choosing
+   the rendered maqqef over the spaced one by ear). The old note reasoned
+   that "a hyphen inside a word is one more thing for a synthesiser to get
+   wrong". Measured, the opposite holds: Carmit swallows the he of an
+   article that follows a SPACE and sounds it after a MAQQEF. Across ten
+   article words the energy at the he went from 40-43% of peak (a vowel
+   onset, no /h/) to 12-13% (a breathy one), every time. Nothing else moves
+   her -- the dagesh, patah-vs-qamats, meteg and all fourteen cantillation
+   accents each render BYTE-IDENTICAL audio. */
 {
   const files = fs.readdirSync(path.join(ROOT, 'bom', 'verses')).filter(f => f.endsWith('.js'));
   const re = /[֐-״]+(?:־[֐-״]+)*/g;
@@ -244,7 +254,7 @@ if (!bad) ok(CASES.length + ' pronunciation rules still hold (the Name, qamats q
       if (/ׇ/.test(out) && !qatan++) firstQatan = m + ' → ' + out;
       /* a maqqef in, the same number of words out */
       if (m.indexOf('־') >= 0) {
-        const inWords = m.split('־').length, outWords = out.split(' ').length;
+        const inWords = m.split('־').length, outWords = out.split(/[ ־]/).length;
         if (outWords < inWords && !fused++) firstFused = m + ' → ' + out;
       }
     }
