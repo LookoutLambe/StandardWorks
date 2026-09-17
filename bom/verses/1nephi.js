@@ -814,7 +814,7 @@ var ch4Verses = [
     ["בְּתוֹכָם","among them"],
     ["׃",""]
   ]},
-  { num: "כג", words: [["וָאֲדַבֵּר","and I spake"], ["אֵלָיו","unto him"], ["כְּלָבָן","as if it had been Laban"], ["׃",""]]},
+  { num: "כג", words: [["וָאֲדַבֵּר","and I spake"], ["אֵלָיו","unto him"], ["כְּלָבָן","as Laban"], ["׃",""]]},
   { num: "כד", words: [["וָאֹמַר","and I spake"], ["אֵלָיו","unto him"], ["כִּי","that"], ["אֶשָּׂא","I would carry"], ["אֶת־הַחֲרוּתִים","the engravings"], ["אֲשֶׁר","which"], ["עַל־לוּחוֹת","upon the plates of"], ["הַנְּחֹשֶׁת","brass"], ["אֶל־אַחַי","unto my brethren"], ["הַגְּדֹלִים","the elder"], ["אֲשֶׁר","which"], ["מִחוּץ","without"], ["לַחוֹמוֹת","the walls"], ["׃",""]]},
   { num: "כה", words: [["וְגַם","and also"], ["אָמַרְתִּי","I bade"], ["לוֹ","unto him"], ["לָלֶכֶת","that he should go"], ["אַחֲרָי","after me"], ["׃",""]]},
   { num:"כו", words:[
