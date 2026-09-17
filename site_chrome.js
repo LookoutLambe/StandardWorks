@@ -489,19 +489,27 @@
   }
 
   // Rights line — every page carries it at the end of the content flow.
-  /* THE FAVICON IS THE COLOUR MARK, NOT THE WHITE ONE. sw-mark.png is white on
-     transparency — right against the navy bar, invisible on a browser's white
-     tab strip, which is exactly where it went. The favicon has to stand on
-     whatever ground the browser gives it, so it is the original navy-and-gold
-     artwork: dark rollers and gold pages read on light chrome and on dark.
-     The gold-on-navy square is for a HOME SCREEN, where the icon supplies its
-     own tile; a tab is not a tile. */
+  /* THE FAVICON IS THE NAVY TILE — the same icon as the app (user, 2026-09-17).
+     It was the transparent colour mark, on the reasoning that a favicon has to
+     stand on whatever ground the browser gives it and "a tab is not a tile".
+     True of a tab, and wrong about the place this icon is actually read: in a
+     Google result it sits on a white card beside the site name, where a mark
+     with no ground of its own has no shape and reads as a smudge, while every
+     result around it — the .org's blue circle, Apple's — is a solid field with
+     one simple form on it. The tile supplies that ground in both places, and a
+     solid-field icon in a tab is what Apple, GitHub and Google themselves use.
+
+     This function is why changing the markup alone did nothing: it appends
+     rel="icon" to EVERY page that loads site_chrome.js, so whatever it names
+     wins over the <link> in the page. The guard below has to name the same
+     file it mounts or it appends a second, losing link on every page that
+     already declares one. */
   function mountFavicon() {
-    if (document.querySelector('link[rel="icon"][href*="sw-mark-colour"]')) return;
+    if (document.querySelector('link[rel="icon"][href*="icon-192"]')) return;
     var l = document.createElement('link');
     l.rel = 'icon';
     l.type = 'image/png';
-    l.href = assetBase() + 'icons/sw-mark-colour.png?v=2';
+    l.href = assetBase() + 'icons/icon-192.png?v=3';
     document.head.appendChild(l);
   }
   mountFavicon();
