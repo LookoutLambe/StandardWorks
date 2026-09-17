@@ -182,6 +182,63 @@ function jstBooks() {
   }).filter(b => b.chapters.length);
 }
 
+/* ---------- the snippet test (2026-09-17) ----------
+   THE OLD TESTAMENT IS THE SITE'S BIGGEST SURFACE AND ITS WORST CONVERTER.
+   Three months of Search Console, bucketed by position so ranking cannot
+   explain it away:
+
+       position 1-3   OT  0 clicks / 37 impressions   NT  7 clicks / 38
+       position 4-6   OT  0 clicks / 130              NT  2 clicks / 78
+       position 7-10  OT  1 click  / 323              NT  1 click  / 41
+
+   At the top three results, on near-identical exposure, the OT takes nothing
+   and the NT takes seven. That is not a ranking problem.
+
+   The results pages say why. On "jeremiah 8 hebrew" four of the top ten
+   already carry "interlinear" in the title — Bible Hub twice, Bible Maximum,
+   hebrewbible.app — beside Mechon-Mamre and Chabad. On "colossians 1 in
+   hebrew" there is no interlinear at all: Modern Hebrew translations, the
+   Orthodox Jewish Bible, the Hebrew Names Version. The same snippet wins
+   where it is the only one of its kind and loses where it is the fifth, and
+   ours names nothing the other four do not already promise. The word
+   "interlinear" — the term they lead with and the term this site ranks #1 for
+   — is in the body of every chapter page and in none of their titles,
+   descriptions or h1s, which is the only text a searcher reads.
+
+   SO THIS IS A TEST, NOT A ROLLOUT, and the reason is four lines further
+   down: rewriting all 1,694 titles at once is what cost the #1 position in
+   September, and the note there asks for a few books at a time. These four
+   carry 134 of the OT's 542 impressions at positions 6.4-7.3 — enough to read
+   a result, all of it at ranks where the click is the binding constraint —
+   and the other ~810 OT pages stay exactly as Google has them, as the
+   control. Psalms is the biggest pool (113 impressions) and is deliberately
+   NOT here: at position 10.5 its clicks are limited by rank, so it would
+   confound the thing being measured.
+
+   It tests the snippet as a package — the word "interlinear", what follows
+   the dash, and dropping "Sefer Mormon" from the tail of an Old Testament
+   page — not which of the three did the work. That is the decision this has
+   to inform: ship this snippet or keep the old one.
+
+   READ IT by comparing these four books' CTR against the rest of the Old
+   Testament, not against their own past: the whole site's impressions are
+   still climbing steeply, so a before/after on one book measures the growth
+   curve. Bucket by position on both sides, the way the numbers above are
+   bucketed — the September revert showed a title change moving rank on its
+   own, before anything was recrawled, so raw CTR here would be reading a
+   snippet effect and a ranking wobble as one number. Give it until these
+   pages are recrawled, which the sitemap now dates honestly. Roll a book out
+   by adding its name; roll the test back by emptying the set. Nothing outside
+   it is touched.
+
+   Old Testament ONLY, and the volume check is not decoration: the Joseph
+   Smith Translation has books called Jeremiah and 1 Samuel too, and matching
+   on the book name alone put "JST Jeremiah 26 in the Masoretic text" on two
+   pages — wrong about the text they carry, and two pages of a different
+   volume leaking into the sample. */
+const SNIPPET_TEST = new Set(['Jeremiah', '1 Samuel', 'Proverbs', 'Ruth']);
+const inSnippetTest = (vol, book) => vol.key === 'ot' && SNIPPET_TEST.has(book.en);
+
 // ---------- the volumes ----------
 // The English name a volume is searched for by; defaults to '<en> in Hebrew'.
 const volName = vol => vol.name || (vol.en + ' in Hebrew');
@@ -338,9 +395,15 @@ function buildVolume(vol, urls) {
        the position was weeks in the making. If the volume name is ever worth
        adding again it should go a few books at a time, not the whole corpus in
        one push. */
-    const title = label + ' in Hebrew' + (heb ? ' — ' + heb : '') + ' · Sefer Mormon';
-    const desc = label + ' in Hebrew, every word with its English gloss' + (english ? ', beside the English text.' : '.') + quote +
-      ' ' + vol.en + ' · ' + vol.hebrewNote + '.';
+    /* SNIPPET_TEST — the variant is above; everything else keeps the indexed form. */
+    const title = inSnippetTest(vol, b)
+      ? label + ' Hebrew Interlinear — every word glossed'
+      : label + ' in Hebrew' + (heb ? ' — ' + heb : '') + ' · Sefer Mormon';
+    const desc = inSnippetTest(vol, b)
+      ? label + ' in the Masoretic text, word by word: an English gloss under every Hebrew word, the King James verse beside it.' +
+        quote + ' Free to read, with transliteration and the root of every word in the reader.'
+      : label + ' in Hebrew, every word with its English gloss' + (english ? ', beside the English text.' : '.') + quote +
+        ' ' + vol.en + ' · ' + vol.hebrewNote + '.';
     const prev = flat[k - 1], next = flat[k + 1];
     const navLink = (e2, cls) => !e2 ? '<span class="' + cls + '"></span>'
       : '<a class="' + cls + '" href="../' + e2.b.slug + '/' + e2.c.n + '.html">' +
