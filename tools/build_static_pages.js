@@ -43,6 +43,7 @@ const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 const cp = require('child_process');
+const crypto = require('crypto');
 const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'hebrew');
 const SITE = 'https://sefermormon.com/';
@@ -218,8 +219,23 @@ const VOLUMES = [
     blurb: 'The Pearl of Great Price in Hebrew, every word glossed, beside the English.',
     hebrewNote: 'Hebrew translation' },
   { key: 'jst', slug: 'joseph-smith-translation', en: 'Joseph Smith Translation', he: 'תרגום יוסף סמית', page: 'jst.html', verseDir: 'jst_verses',
-    books: () => jstBooks(), english: null,
-    blurb: 'The Joseph Smith Translation excerpts in Hebrew, every word glossed.',
+    /* name: the abbreviation is how this volume is cited and searched — the
+       Church's own footnotes read "JST, Gen. 9:1" — but the words behind it
+       are what someone who has never seen it types. They are different query
+       strings and a page matches only the one it carries, so the volume page
+       carries both. The chapter pages already did ("JST Exodus 22" in the
+       title and h1, the full name in the crumb); this landing page said JST
+       nowhere a crawler reads it, only inside 107 title= tooltips. */
+    name: 'Joseph Smith Translation (JST) in Hebrew',
+    /* enByPosition: the JST English is keyed by the verse's POSITION in its file
+       chapter, not by its printed number, because a JST "chapter" is a file
+       position holding scattered verses — JST Exodus 4:21, 24-27 are rows 1-5 of
+       Exodus|1. Every other volume numbers straight through, so gematria(num)
+       and the position agree there and only the JST needs the flag. Keying the
+       JST by gematria resolved 135 of 401 verses, all to the wrong English, so
+       these 107 pages shipped with none at all. */
+    books: () => jstBooks(), english: ['jst_english.js', '_jstEnglishData'], enByPosition: true,
+    blurb: 'The Joseph Smith Translation (JST) in Hebrew: every verse Joseph Smith revised, each word glossed, beside the English.',
     hebrewNote: 'Hebrew translation' }
 ];
 
@@ -309,7 +325,7 @@ function buildVolume(vol, urls) {
     const label = chapterLabel(b, c), heb = chapterHeb(b, c);
     const readerHref = rel + vol.page + '#' + (c.hash || c.id);
     const enKey = n => english && english[b.engKey + '|' + (c.filePos || c.n) + '|' + n];
-    const firstEn = english ? enKey(gematria(verses[0] && verses[0].num) || 1) : null;
+    const firstEn = english ? enKey(vol.enByPosition ? 1 : (gematria(verses[0] && verses[0].num) || 1)) : null;
     const quote = firstEn ? ' “' + (firstEn.length > 110 ? firstEn.slice(0, 110).replace(/\s+\S*$/, '') + '…' : firstEn) + '”' : '';
     /* REVERTED 2026-09-15. This read "Hebrew Book of Mormon: 1 Nephi 1" for a
        few hours. The form below is the one Google had indexed and the one that
@@ -342,7 +358,7 @@ function buildVolume(vol, urls) {
     }) + '</script>\n' + breadcrumbLd(crumbs);
     let missing = 0;
     const body = verses.map((v, i) => {
-      const n = gematria(v.num) || (i + 1);
+      const n = vol.enByPosition ? (i + 1) : (gematria(v.num) || (i + 1));
       const en = enKey(n);
       if (english && !en) missing++;
       return renderVerse(v, i, en);
@@ -474,13 +490,23 @@ function refreshInPrint(urls) {
    worse than leaving it out, and this generator rm -rf's hebrew/ and rewrites
    all 1,701 pages every run, so "the file was written just now" means nothing.
 
-   So the date is the date the CONTENT last changed:
-     - the page is snapshotted before the rebuild and compared after it. A
-       page whose bytes differ (or that did not exist) is dated now.
-     - a page that came back byte-identical keeps the commit date git has for
-       it, which is when its content really last moved.
-   Root pages are not generated here, so they take their git date directly.
-   Any page git has never seen falls back to now. */
+   So the date is the date the CONTENT last changed, and the thing to compare
+   against is WHAT IS PUBLISHED — the blob git has at HEAD — not the previous
+   build sitting in the working tree:
+     - a page whose bytes differ from HEAD (or that git has never seen) is
+       changing in this commit, and is dated now.
+     - a page identical to HEAD keeps the commit date git has for it, which is
+       when its content really last moved.
+
+   IT USED TO COMPARE AGAINST THE PREVIOUS BUILD ON DISK, and that is only the
+   same question while nobody has run the generator by hand. Run it twice and
+   the second run sees its own output, finds no difference, and hands every
+   page it just rewrote the OLD commit date. The pre-commit hook runs it at
+   exactly that moment, so anyone who built once to look at the output shipped
+   a sitemap swearing the pages in their own commit had not changed — the one
+   failure this field cannot survive, since a lastmod that lies about a change
+   is worse than no lastmod at all. Hashing against HEAD asks the real
+   question and gives the same answer however many times it runs. */
 function gitDates() {
   const map = new Map();
   try {
@@ -500,22 +526,28 @@ function repoPath(url) {
   const rel = url.slice(SITE.length);
   return rel === '' ? 'index.html' : rel;
 }
-function snapshot(dir) {
-  const seen = new Map();
-  (function walk(d) {
-    let ents = [];
-    try { ents = fs.readdirSync(d, { withFileTypes: true }); } catch (e) { return; }
-    for (const e of ents) {
-      const full = path.join(d, e.name);
-      if (e.isDirectory()) walk(full);
-      else if (e.isFile()) { try { seen.set(full, fs.readFileSync(full)); } catch (err) {} }
+/* repo path -> the blob hash git has for it at HEAD */
+function headBlobs() {
+  const map = new Map();
+  try {
+    /* default format, not --format: that flag wants git 2.36. -z keeps paths
+       unquoted, so a name with a quote or a non-ASCII byte still matches. */
+    const out = cp.execFileSync('git', ['ls-tree', '-r', '-z', 'HEAD'],
+                                { cwd: ROOT, maxBuffer: 256 * 1024 * 1024 }).toString();
+    for (const rec of out.split('\0')) {
+      const tab = rec.indexOf('\t');
+      if (tab < 0) continue;
+      map.set(rec.slice(tab + 1), rec.slice(0, tab).split(' ')[2]);
     }
-  })(dir);
-  return seen;
+  } catch (e) { /* no git, shallow clone, no commits yet — every page is "new" */ }
+  return map;
 }
+/* the hash git would store for these bytes, so a file can be compared to HEAD
+   without shelling out once per page */
+const gitHash = buf => crypto.createHash('sha1')
+  .update('blob ' + buf.length + '\0').update(buf).digest('hex');
 
 function main() {
-  const before = snapshot(OUT);
   fs.rmSync(OUT, { recursive: true, force: true });
   fs.mkdirSync(OUT, { recursive: true });
   fs.writeFileSync(path.join(OUT, 'static.css'), CSS);
@@ -529,16 +561,19 @@ function main() {
   }
   buildHub(summary, urls);
   refreshInPrint(urls);
-  const git = gitDates(), now = new Date().toISOString().replace(/\.\d+Z$/, '+00:00');
+  const git = gitDates(), head = headBlobs();
+  const now = new Date().toISOString().replace(/\.\d+Z$/, '+00:00');
   let moved = 0;
+  /* Every page, generated or hand-written: differs from HEAD => it is moving
+     in this commit. The hand-written root pages need this as much as the
+     chapter pages did — editing dictionary.html and reading its git date back
+     dates it to the commit BEFORE the edit. */
   const lastmod = u => {
-    const rel = repoPath(u), full = path.join(ROOT, rel);
-    if (rel.startsWith('hebrew/')) {
-      let cur = null;
-      try { cur = fs.readFileSync(full); } catch (e) { return (moved++, now); }
-      const was = before.get(full);
-      if (!was || !was.equals(cur)) { moved++; return now; }
-    }
+    const rel = repoPath(u);
+    let cur = null;
+    try { cur = fs.readFileSync(path.join(ROOT, rel)); } catch (e) { return (moved++, now); }
+    const was = head.get(rel);
+    if (!was || was !== gitHash(cur)) { moved++; return now; }
     return git.get(rel) || now;
   };
   const sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +

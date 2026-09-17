@@ -2359,8 +2359,17 @@ function _doRenderVerses(verseData, containerId) {
      through renderWords and carries no number, so these must not either. */
   var isColophon = /-colophon-verses$/.test(containerId);
 
+  /* The English tables are keyed by NUMBERED verse, so a superscription must
+     not consume a row: keyed on idx + 1, Mosiah 9's headnote took verse 1's
+     English and every verse after it read the next verse's, with 19 left
+     blank. This runs its own counter and is separate from verseKey on
+     purpose — verseKey is the annotation and navigation key (data-wid is
+     verseKey + '|' + n) and renumbering it would orphan saved highlights. */
+  var enPos = 0;
   verseData.forEach(function (v, idx) {
     var verseKey = bkInfo ? (bkInfo.book + '|' + bkInfo.chapter + '|' + (idx + 1)) : '';
+    if (v.num !== '∗') enPos++;
+    var enKey = (bkInfo && v.num !== '∗') ? (bkInfo.book + '|' + bkInfo.chapter + '|' + enPos) : '';
     _appendAcrosticStanza(container, chId, idx + 1);
 
     var verseDiv = document.createElement('div');
@@ -2386,7 +2395,7 @@ function _doRenderVerses(verseData, containerId) {
     // front matter, which carries its English in the verse itself.
     var engDiv = document.createElement('div');
     engDiv.className = 'verse-english';
-    if (verseKey) engDiv.setAttribute('data-key', verseKey);
+    if (enKey) engDiv.setAttribute('data-key', enKey);
     if (v.english) engDiv.textContent = v.english;
     verseDiv.appendChild(engDiv);
 
