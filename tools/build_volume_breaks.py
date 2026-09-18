@@ -1,9 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """Build the phrase-break table for the New Testament, D&C, Pearl of Great
-   Price and JST — the four volumes that had none.
+   Price, JST — the four volumes that had none — and the Book of Mormon.
 
-    python3 tools/build_volume_breaks.py [nt|dc|pgp|jst|all]
+    python3 tools/build_volume_breaks.py [nt|dc|pgp|jst|bom|all]
+
+THE BOOK OF MORMON WAS SKIPPED BECAUSE IT ALREADY HAD A TABLE, and that was
+the wrong reason: the table it had came from tools/build_bom_breaks.py, which
+reads the printed English and nothing else. So the volume with the most Isaiah
+in it was the one volume phrased entirely by an 1830s editor's commas. It gets
+neither of the two things this file added — the Masoretes' veto on breaks that
+would split a pair the Tanakh never splits, and the te'amim themselves carried
+across every verse that runs parallel to an MT verse.
 
 WHY THEY HAD NOTHING. The Old Testament is the Masoretic Text and ships the
 te'amim themselves; the Book of Mormon got a table built from its printed
@@ -75,7 +83,16 @@ ROOT = os.path.dirname(HERE)
 
 
 def english(vol):
-    """{(book, chapter, verse): english} from <vol>_english.js."""
+    """{(book, chapter, verse): english} from <vol>_english.js.
+
+       The Book of Mormon's column is bom/official_verses.js, pretty-printed,
+       so the one-line regex below cannot see it; it is plain JSON and is read
+       as JSON."""
+    if vol == 'bom':
+        src = io.open(os.path.join(ROOT, 'bom', 'official_verses.js'),
+                      encoding='utf-8').read()
+        data = json.loads(src[src.index('['): src.rindex(']') + 1])
+        return {(r['book'], r['chapter'], r['verse']): r['english'] for r in data}
     src = io.open(os.path.join(ROOT, vol + '_english.js'), encoding='utf-8').read()
     out = {}
     for m in re.finditer(r'"book":"((?:[^"\\]|\\.)*)","chapter":(\d+),"verse":(\d+),'
@@ -95,6 +112,20 @@ def books(vol):
        prefix with '-ch' on it; and the Doctrine and Covenants is ONE book
        whose sections are its chapters, so dc111_ch1Verses is D&C 111 and the
        array's own ch1 means nothing."""
+    if vol == 'bom':
+        src = io.open(os.path.join(ROOT, 'bom', 'bom.html'), encoding='utf-8').read()
+        out = {}
+        for m in re.finditer(r"\{\s*prefix:\s*'([a-z0-9-]+)'\s*,\s*name:\s*'([^']+)'", src):
+            out[m.group(1).replace('-', '_')] = (m.group(2), None)
+        # A JAVASCRIPT VARIABLE CANNOT START WITH A DIGIT, so the three books
+        # whose page prefix does — 2n-ch, 3n-ch, 4n-ch — are named something
+        # else in the verse data, and it is not a transformation, it is three
+        # hand-picked names. Verified against the files: every one of the
+        # fifteen books' chapter counts matches the page table.
+        for alias, pref in (('n2_ch', '2n_ch'), ('tn_ch', '3n_ch'), ('fn_ch', '4n_ch')):
+            if pref in out:
+                out[alias] = out[pref]
+        return out
     src = io.open(os.path.join(ROOT, vol + '.html'), encoding='utf-8').read()
     out = {}
     for m in re.finditer(r"\{prefix:'([A-Za-z0-9]+)',\s*en:'((?:[^'\\]|\\.)*)'", src):
@@ -107,12 +138,23 @@ def books(vol):
 def verses(vol, prefix_map, english_index=None):
     """[(key, english_ref, tokens)] for one volume."""
     out = []
-    for path in sorted(os.listdir(os.path.join(ROOT, vol + '_verses'))):
-        if not path.endswith('.js'):
+    vdir = os.path.join(ROOT, 'bom', 'verses') if vol == 'bom' \
+           else os.path.join(ROOT, vol + '_verses')
+    # THE BOOK OF MORMON NAMES ITS ARRAYS <prefix><n>Verses, and the prefix is
+    # the book table's own with the hyphen turned to an underscore: Mosiah 1 is
+    # mo_ch1Verses, but 1 Nephi's prefix is bare 'ch' so its first chapter is
+    # ch1Verses with no _ch in it at all. One regex for both, the prefix
+    # resolved against the table rather than assumed.
+    pat = r'var ([A-Za-z0-9_]+?)(\d+)Verses\s*=\s*\[' if vol == 'bom' \
+          else r'var (_?[A-Za-z0-9]+)_ch(\d+)Verses\s*=\s*\['
+    for path in sorted(os.listdir(vdir)):
+        if not path.endswith('.js') or path == 'manifest.js':
             continue
-        src = io.open(os.path.join(ROOT, vol + '_verses', path), encoding='utf-8').read()
-        for m, body in array_bodies(src, r'var (_?[A-Za-z0-9]+)_ch(\d+)Verses\s*=\s*\['):
+        src = io.open(os.path.join(vdir, path), encoding='utf-8').read()
+        for m, body in array_bodies(src, pat):
             pre, ch = m.group(1).lstrip('_'), int(m.group(2))
+            if vol == 'bom':
+                pre = pre.rstrip('_')
             if vol == 'dc':
                 mm = re.match(r'^(dc|od)(\d+)$', pre)
                 if not mm:
@@ -169,7 +211,8 @@ def build(vol):
             table[key] = [[i, c] for i, c in br]
         else:
             plain += 1
-    path = os.path.join(ROOT, vol + '_phrase_breaks.js')
+    path = os.path.join(ROOT, 'bom', 'bom_phrase_breaks.js') if vol == 'bom' \
+           else os.path.join(ROOT, vol + '_phrase_breaks.js')
     with io.open(path, 'w', encoding='utf-8') as fh:
         fh.write(u'// %s_phrase_breaks.js — auto-generated by tools/build_volume_breaks.py.\n'
                  u'// DO NOT EDIT. Where each verse breathes: [index, weight], the index into\n'
@@ -192,5 +235,5 @@ def build(vol):
 
 if __name__ == '__main__':
     which = sys.argv[1] if len(sys.argv) > 1 else 'all'
-    for v in (['nt', 'dc', 'pgp', 'jst'] if which == 'all' else [which]):
+    for v in (['nt', 'dc', 'pgp', 'jst', 'bom'] if which == 'all' else [which]):
         build(v)

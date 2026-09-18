@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Carry the Masoretic breaks into the volumes that quote the Tanakh.
 
-    python3 tools/build_mt_parallels.py [pgp|nt|dc|jst|all]
+    python3 tools/build_mt_parallels.py [pgp|nt|dc|jst|bom|all]
         -> tools/mt_parallel_breaks.json
 
 WHERE THE TEXT IS THE TANAKH'S, THE PHRASING SHOULD BE TOO. Moses 2-8 retells
@@ -81,7 +81,7 @@ def lcs_map(a, b):
 
 def main():
     which = sys.argv[1] if len(sys.argv) > 1 else 'pgp'
-    vols = ['nt', 'dc', 'pgp', 'jst'] if which == 'all' else [which]
+    vols = ['nt', 'dc', 'pgp', 'jst', 'bom'] if which == 'all' else [which]
     BR = ot_breaks()
     MT, by_word = [], {}
     for f in sorted(os.listdir(os.path.join(ROOT, 'ot_verses'))):
