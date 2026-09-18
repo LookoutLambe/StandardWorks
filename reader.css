@@ -3342,3 +3342,33 @@ body.dark-mode .hw .sacc::before { color: var(--here-chrome); }
 
 /* Headings on the front pages: no orphaned last word */
 .sw-front h1, .sw-front h2, .sw-front h3, .landing-title-hebrew, .tr-title { text-wrap: balance; }
+
+/* THE LANDING'S PRIMARY BUTTON — one home, because it had none.
+   nav_engine's updateContinueButton() rewrites this into
+   "Continue Reading — <where> →" on every volume, and NavEngine.init() calls it
+   for all six. But the button itself was markup each page supplied privately:
+   bom and pgp wrote it by hand, reader_core.js created it for ot and nt, and
+   the two volumes that supply their own READER.buildPages — the D&C and the
+   JST — skipped that builder and so had no button at all. Resume worked in
+   four volumes of six, and silently did nothing in the other two: open the
+   D&C after a month in section 76 and it offered you nothing.
+   The rule lives here so a landing that needs the button can just add it.
+   ot/nt/pgp still carry an identical private copy and bom a slightly wider
+   one; those override this harmlessly and are a separate tidy-up. */
+#start-reading-btn {
+  direction: ltr;
+  background: var(--accent-fill);
+  color: var(--on-fill);
+  border: none;
+  padding: 12px 32px;
+  font-family: 'David Libre', 'Georgia', serif;
+  font-size: 1.1em;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.5px;
+  max-width: 100%;
+}
+#start-reading-btn:hover { filter: brightness(1.1); transform: scale(1.02); }
+@media (max-width: 600px) { #start-reading-btn { padding: 12px 18px; font-size: 1.02em; } }

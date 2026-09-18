@@ -29,7 +29,7 @@
 <link rel="stylesheet" href="nav_engine.css?v=51">
 <link rel="stylesheet" href="site_chrome.css?v=76">
 <link rel="stylesheet" href="xref_study_panel.css?v=14">
-<link rel="stylesheet" href="reader.css?v=128">
+<link rel="stylesheet" href="reader.css?v=129">
 <style>
 *:focus-visible { outline: 2px solid var(--here); outline-offset: 2px; }
 .book-title { font-size: 2.4em; font-weight: 700; color: var(--header-bg); letter-spacing: 0.04em; margin-bottom: 2px; }
@@ -548,7 +548,9 @@ window.READER = {
           ' <span>Standard Works</span></span></h1>' +
         '<div class="subtitle-heb">Interlinear Edition</div>' +
         '<div class="vol-byline">Translated into Classical Biblical Hebrew by Chris Lambe.</div>' +
-        '</div><hr class="landing-divider"><div class="landing-sections">';
+        '</div>' +
+        '<div style="margin:24px 0 4px"><button id="start-reading-btn" onclick="navTo(\'dc1-ch1\')">Begin Reading →</button></div>' +
+        '<hr class="landing-divider"><div class="landing-sections">';
     
       // Front matter links
       landingHtml += '<div class="landing-section-group"><h3>הקדמות · Front Matter</h3><div class="landing-section-grid" style="grid-template-columns:1fr 1fr;">' +
