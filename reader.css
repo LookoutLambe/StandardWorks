@@ -672,9 +672,19 @@ body #nav-sidebar .nav-book-row.expanded .nb-heb { color: var(--here) !important
    grid. It was rebuilt here, in !important, on top of bubbles this file
    had just stripped — three layers to say one thing. */
 
-/* ── section labels ── */
-body #nav-sidebar .nav-division,
-
+/* ── section labels ──
+   .nav-division IS NOT CHROME. It sat in the selector list below, which
+   paints the top bar, the footer and the drawer's search bar --on-chrome,
+   a near-white that is right on navy. But the drawer itself is the PAPER
+   panel: sw_theme.css re-points --surface-0 to the beige ground and
+   --gold-bright to the deep stop inside this scope, and --on-chrome is not
+   re-pointed because the bars nested in here really are chrome. So
+   FRONT MATTER and SMALL PLATES rendered #F3EDE2 on #E8DAC2 — 1.18:1,
+   invisible. This is the same bug the comment in nav_engine.css records
+   for .nl-sec-title; that one was lifted out and given var(--ink-3), and
+   its neighbour in the same declaration was left behind.
+   Removed from the group: the rule below at "#nav-sidebar .nav-division"
+   already says var(--gold-bright), which is #7A5412 here — 4.87:1. */
 
 /* Chrome text is near-white; green is reserved for state. Gold used to do
    both jobs, so the swap made every bar green-on-green. */
