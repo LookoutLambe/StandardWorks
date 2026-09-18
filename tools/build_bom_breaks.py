@@ -320,6 +320,19 @@ SPLIT_MIN = 0.4     # ... and the model must be surer than even money to add one
 VETO = -4.0         # ... and this sure before it overrules the printed English
 MT_BREAK = 0.75     # the Masoretes break in front of this word at least this often
 MT_BIND  = 0.06     # ... or so rarely that a break in front of it is a mistake
+# THE RATE IS THE RAW RATE. mt_break_before.json used to be cut at 25
+# occurrences, which kept 1,189 words of the 50,193 the Tanakh has evidence
+# for; the accents could speak to 47% of the Book of Mormon's positions when
+# 81% were attested. The cut is now 2.
+#
+# I ALSO SMOOTHED THE RATE TOWARD THE CORPUS PRIOR and it measured worse, so
+# it is gone. The reasoning was that a word seen twice should not read 1.00 —
+# true in general, and wrong here, because these two thresholds are already
+# extreme. A word the Tanakh shows twice and never breaks before is real
+# evidence about that word, and pulling it toward 0.26 threw it away. On
+# 21,838 Tanakh verses, smoothed at alpha=5: 72.1% precision, 0.57 wrong
+# pauses per verse. Unsmoothed: 76.2% and 0.50, catching 59.3% of real breaks
+# against 55.4%. Better on all three. Do not add it back without measuring.
 
 _MT = [None]
 def mt_before():

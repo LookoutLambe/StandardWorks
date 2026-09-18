@@ -139,7 +139,18 @@ def break_before_table():
                 r = uni.setdefault(w, [0, 0])
                 r[0] += 1 if i in brk else 0
                 r[1] += 1
-    return dict((w, r) for w, r in uni.items() if r[1] >= 25)
+    # KEEP THE EVIDENCE. This cut was >= 25 and threw away 98% of it: 1,189
+    # words survived of the 50,193 the Tanakh actually has break-before data
+    # for, so the accents could only speak to 53% of the Book of Mormon's
+    # break positions when 81% were attested. The cut was standing in for
+    # "is this estimate trustworthy", and the answer turned out to be that it
+    # did not need to: MT_BREAK (0.75) and MT_BIND (0.06) are extreme enough
+    # that thin evidence is still evidence. Measured on 21,838 Tanakh verses,
+    # lowering this cut moved precision 72.0% -> 76.2% and wrong pauses per
+    # verse 0.57 -> 0.50 while catching MORE real breaks, 55.4% -> 59.3%.
+    # (Smoothing the rate toward the prior was tried on top and measured
+    # worse on all three; see the note in build_bom_breaks.py.)
+    return dict((w, r) for w, r in uni.items() if r[1] >= 2)
 
 
 def english_names():
@@ -152,7 +163,7 @@ def main():
     json.dump(tbl, open(path, 'w'), ensure_ascii=False)
     strong = sum(1 for r in tbl.values() if r[0] / float(r[1]) >= 0.75)
     weak = sum(1 for r in tbl.values() if r[0] / float(r[1]) <= 0.06)
-    print('break-before table: %s words seen 25+ times   %d almost always, %d almost never'
+    print('break-before table: %s words seen 2+ times   %d almost always, %d almost never'
           % (format(len(tbl), ','), strong, weak))
 
     rows = training_pairs()
