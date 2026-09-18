@@ -316,6 +316,21 @@ function renderVerse(v, i, english) {
   const en = english ? '<p class="en">' + esc(english) + '</p>' : '';
   return '<li id="v' + n + '"><span class="n"><a href="#v' + n + '">' + n + '</a></span><p class="he" lang="he" dir="rtl">' + units + '</p>' + en + '</li>';
 }
+/* Safari on iOS draws Apple's own install banner from this one tag — icon,
+   name, Open/View — and it is the highest-converting path to the app there is,
+   on traffic this site already has. It was on no page at all: a site with
+   1,264 indexed pages never once told an iPhone reader the app existed.
+
+   NOT ON THE 1,701 CHAPTER PAGES, deliberately. The tag changes nothing Google
+   indexes, but putting it in head() would rewrite every page and reset every
+   lastmod, and this month's whole problem was 426 pages Google had discovered
+   and never crawled — a site-wide refresh spends the crawl budget re-reading
+   what it already has. It also lands mid-flight in the four-book snippet test.
+   So: the pages people actually land on now, and the chapter pages folded into
+   whatever corpus change ships next, when their lastmod moves anyway.
+   WKWebView ignores it, so it is a no-op inside the app's own bundled copy. */
+const APP_BANNER = '<meta name="apple-itunes-app" content="app-id=6767954376">\n';
+
 function head(rel, title, desc, canonical, extra) {
   return '<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="UTF-8">\n' +
     '<meta name="viewport" content="width=device-width, initial-scale=1">\n' +
@@ -447,7 +462,7 @@ function buildVolume(vol, urls) {
     '<p class="cells">' + b.chapters.filter(c => sets[c.id]).map(c =>
       '<a href="' + b.slug + '/' + c.n + '.html" title="' + esc(chapterLabel(b, c)) + '">' + c.n + '</a>').join('') + '</p></section>').join('\n');
   const vhtml = head(vrel, volName(vol) + ' — ' + vol.he + ' · Sefer Mormon',
-    vol.blurb + ' ' + pages + ' chapters, each a plain page with the Hebrew and its word-by-word English.', vurl, breadcrumbLd(crumbs)) +
+    vol.blurb + ' ' + pages + ' chapters, each a plain page with the Hebrew and its word-by-word English.', vurl, APP_BANNER + breadcrumbLd(crumbs)) +
     '<body class="volume">\n' + chrome(vrel, crumbs) + '<main>\n<h1>' + esc(volName(vol)) + ' <span class="h1he" lang="he" dir="rtl">' + esc(vol.he) + '</span></h1>\n' +
     '<p class="lede">' + esc(vol.blurb) + ' <a class="open" href="' + vrel + vol.page + '">Open the ' + esc(vol.en) + ' reader</a>.</p>\n' +
     (vol.intro || []).map(t => '<p class="intro">' + t + '</p>').join('\n') + (vol.intro ? '\n' : '') +
@@ -465,7 +480,7 @@ function buildHub(summary, urls) {
   const cards = summary.map(s =>
     '<li><a href="' + s.vol.slug + '/index.html"><span class="vhe" lang="he" dir="rtl">' + esc(s.vol.he) + '</span><span class="ven">' + esc(s.vol.en) + '</span><span class="vn">' + s.pages + ' chapters</span></a><p>' + esc(s.vol.blurb) + '</p></li>').join('\n');
   const html = head(rel, 'The Standard Works in Hebrew, chapter by chapter · Sefer Mormon',
-    'Every chapter of the Old Testament, New Testament, Book of Mormon, Doctrine and Covenants, Pearl of Great Price and Joseph Smith Translation in Hebrew, word by word with English glosses.', url, breadcrumbLd(crumbs)) +
+    'Every chapter of the Old Testament, New Testament, Book of Mormon, Doctrine and Covenants, Pearl of Great Price and Joseph Smith Translation in Hebrew, word by word with English glosses.', url, APP_BANNER + breadcrumbLd(crumbs)) +
     '<body class="hub">\n' + chrome(rel, crumbs) + '<main>\n<h1>The Standard Works in Hebrew <span class="h1he" lang="he" dir="rtl">כתבי הקודש</span></h1>\n' +
     '<p class="lede">Plain pages, one per chapter: the Hebrew with every word glossed in English. The <a class="open" href="' + rel + '">interlinear reader</a> adds transliteration, roots, cross-references, notes and read-aloud.</p>\n' +
     '<ul class="volumes">\n' + cards + '\n</ul>\n</main>\n' + foot(rel);
