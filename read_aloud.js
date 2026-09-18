@@ -1883,6 +1883,34 @@
     for (var i = 0; i < verses.length; i++) {
       var key = verses[i].getAttribute('data-verse-key');
       var gs = phrases(wordsOf(verses[i]), key);
+      /* A QUESTION ASKED INSIDE A PHRASE. "And he said unto me: What
+         desirest thou?" is ONE phrase — 1 Nephi 11:10 is the whole verse,
+         וַיֹּאמֶר אֵלַי מַה־תַּחְפֹּץ, with no break in it at all — so the rise
+         landed on the lot and "and he said unto me" was asked as a question
+         too (translator). The interrogative was always found; what was wrong
+         is that the rise is applied per PHRASE and the phrase was the verse.
+
+         There is no seam there to have carried: measured on the Tanakh, the
+         Masoretes break after "said unto X", in front of the speech, 41.9%
+         of the time against a 26.2% baseline everywhere. Real, and a long
+         way from a rule — which is why the break table is right not to force
+         one, and why this splits for the VOICE only.
+
+         So split the phrase at the interrogative. Only what follows rises,
+         and the head takes a comma-length gap rather than a stop, because a
+         seam the accents mark two times in five is light, not final. */
+      for (var q = 0; q < gs.length; q++) {
+        for (var w = 1; w < gs[q].length; w++) {
+          if (!opensQuestion(gs[q][w])) continue;
+          var tail = gs[q].slice(w);
+          tail.gap = gs[q].gap; tail.stop = gs[q].stop;
+          var head = gs[q].slice(0, w);
+          head.gap = COMMA_GAP; head.stop = false;
+          gs.splice(q, 1, head, tail);
+          q++;                       /* the tail is already the question */
+          break;
+        }
+      }
       /* A question RISES WHERE IT ENDS, not where it starts — so from the
          phrase holding the interrogative he, walk on to the end of that
          clause and put the rise there. */
