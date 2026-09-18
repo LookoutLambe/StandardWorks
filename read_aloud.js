@@ -1750,7 +1750,7 @@
   }
 
   /** speak one clause, highlighting each word as the engine reaches it */
-  function speakPhrase(els, token, pitch, rate) {
+  function speakPhrase(els, token, pitch, rate, ask) {
     return new Promise(function (resolve) {
       var text = '', spans = [], prev = '';
       els.forEach(function (el, i) {
@@ -1761,6 +1761,19 @@
         prev = w;
       });
       if (!text.trim()) return resolve();
+
+      /* A QUESTION NEEDS THE MARK, NOT JUST A HIGHER PITCH. u.pitch is a flat
+         multiplier over the whole utterance — it lifts the register and makes
+         no contour, so Carmit still read הֲיָדַעְתָּ פִּתְרוֹן הָעֵץ אֲשֶׁר רָאָה
+         אָבִיךָ as a statement: level, then falling, with a lift only at the
+         very end (translator). The text she is handed is bare words joined by
+         sayJoin, with no punctuation in it at all, and a declarative is what
+         she was asked for. The question mark is what builds the contour, and
+         she builds it across the whole clause.
+
+         Appended AFTER the spans are measured, so the character offsets that
+         onboundary uses to highlight each word are untouched. */
+      if (ask) text += '?';
 
       var u = new SpeechSynthesisUtterance(text);
       var v = hebrewVoice();
@@ -1958,7 +1971,7 @@
     else if (last) { pitch = PITCH_END; rate = RATE_END; state.inSentence = 0; }
     else state.inSentence++;
     var t0 = Date.now();
-    speakPhrase(g, token, pitch, rate).then(function () {
+    speakPhrase(g, token, pitch, rate, g.ask).then(function () {
       if (token !== state.token) return;
       var secs = (Date.now() - t0) / 1000;
       if (secs > 0.25 && g.length) {     /* a cancelled phrase teaches nothing */
