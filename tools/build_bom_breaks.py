@@ -334,6 +334,44 @@ MT_BIND  = 0.06     # ... or so rarely that a break in front of it is a mistake
 # pauses per verse. Unsmoothed: 76.2% and 0.50, catching 59.3% of real breaks
 # against 55.4%. Better on all three. Do not add it back without measuring.
 
+CLASS_MIN = 30      # a paradigm class needs this many observations to rule
+
+def break_class(h):
+    """THE PARADIGM, from the pointed surface alone.
+
+       18.6% of the Book of Mormon's positions are in front of a word the
+       Tanakh never attests — not because the word is not Hebrew, but because
+       a 300,000-word corpus cannot contain every inflection of every root.
+       הֲתוּכְלוּ and לְהִשָּׁפֵט are regular forms of attested roots; the MT simply
+       never happens to inflect them that way. Absence from the corpus is a
+       gap in the evidence, never proof the form is not Hebrew.
+
+       So an unattested word falls back to its class, and the class is the
+       FIRST LETTER WITH ITS POINT. Whether a phrase may begin on a word is
+       mostly a question of what it begins with — a conjunction, a preposition,
+       an interrogative — and the vowel is half the answer: וְ is a conjunctive
+       waw and וַ a waw-consecutive, and they phrase nothing alike.
+
+       Measured against three alternatives on 46,636 held-out positions whose
+       exact form the table had not seen, counting only rulings that actually
+       fire: first-letter-with-point 4,196 rulings at 75.2%; first two
+       consonants 4,062 at 73.0%; last three consonants 1,769 at 70.7%;
+       proclitic plus ending 2,568 at 72.6%. This one fires most often AND is
+       right most often, and the exact-form table itself only manages 76.2%."""
+    n = ud.normalize('NFC', h or '')
+    return n[:2]
+
+
+_MTC = [None]
+def mt_class():
+    """{class: [breaks, total]} — the same question asked of the paradigm."""
+    if _MTC[0] is None:
+        f = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'mt_break_class.json')
+        try: _MTC[0] = json.load(io.open(f, encoding='utf-8'))
+        except Exception: _MTC[0] = {}
+    return _MTC[0]
+
+
 _MT = [None]
 def mt_before():
     """How often the Tanakh puts a break in FRONT of a given word.
@@ -471,10 +509,15 @@ def breaks_for(tokens, entext):
     #    breaks in front of נְאֻם־יְהוָה (3% of 223) or יְהוָה (4% of 4,377) or
     #    הַמֶּלֶךְ (2% of 711), and a break there cuts a name off what it
     #    belongs to. Where the accents are that emphatic they overrule.
-    mt = mt_before()
+    mt, mtc = mt_before(), mt_class()
     for i in range(n - 1):
-        r = mt.get(bare(speak[i + 1][0]))
-        if not r: continue
+        w = speak[i + 1][0]
+        r = mt.get(bare(w))
+        if not r:
+            # the word is unattested; ask its paradigm instead
+            c = mtc.get(break_class(w))
+            if not c or c[1] < CLASS_MIN: continue
+            r = c
         rate = r[0] / float(r[1])
         if rate >= MT_BREAK: put(i, 1)
         elif rate <= MT_BIND and i in marks and i not in from_english: marks.pop(i)
