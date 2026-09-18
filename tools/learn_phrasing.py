@@ -87,7 +87,7 @@ def corpus_with_glosses(prefix):
 # The feature contract lives in build_bom_breaks.py, which is the file that
 # has to reproduce it exactly. Training and applying must never drift apart.
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from build_bom_breaks import feats, array_bodies, bare, break_class
+from build_bom_breaks import feats, array_bodies, bare
 
 
 def train(rows):
@@ -113,21 +113,6 @@ def scoreof(prior, w, f):
     return prior + sum(w.get(k, 0.0) for k in f)
 
 
-ROWS = []          # every (pointed word, was-broken-before) pair, for the class table
-
-
-def class_before_table(rows):
-    """{paradigm class: [breaks, total]} — the same counts keyed by the first
-       letter with its point, so a form the Tanakh never attests can still be
-       ruled on. break_class() in build_bom_breaks.py says why that is the
-       signature and what the three alternatives measured."""
-    cls = {}
-    for w, hit in rows:
-        r = cls.setdefault(break_class(w), [0, 0])
-        r[0] += hit; r[1] += 1
-    return cls
-
-
 def break_before_table():
     """{word: [breaks, total]} — how often the Masoretes put a break in FRONT
        of this word. THE VOCABULARY IS SHARED EVEN WHERE THE SENTENCES ARE NOT.
@@ -150,24 +135,11 @@ def break_before_table():
             if got is None: continue
             brk = set(got)
             for i in range(len(toks) - 1):
-                raw = toks[i + 1][0]
-                hit = 1 if i in brk else 0
-                ROWS.append((raw, hit))
-                r = uni.setdefault(bare(raw), [0, 0])
-                r[0] += hit
+                w = bare(toks[i + 1][0])
+                r = uni.setdefault(w, [0, 0])
+                r[0] += 1 if i in brk else 0
                 r[1] += 1
-    # KEEP THE EVIDENCE. This cut was >= 25 and threw away 98% of it: 1,189
-    # words survived of the 50,193 the Tanakh actually has break-before data
-    # for, so the accents could only speak to 53% of the Book of Mormon's
-    # break positions when 81% were attested. The cut was standing in for
-    # "is this estimate trustworthy", and the answer turned out to be that it
-    # did not need to: MT_BREAK (0.75) and MT_BIND (0.06) are extreme enough
-    # that thin evidence is still evidence. Measured on 21,838 Tanakh verses,
-    # lowering this cut moved precision 72.0% -> 76.2% and wrong pauses per
-    # verse 0.57 -> 0.50 while catching MORE real breaks, 55.4% -> 59.3%.
-    # (Smoothing the rate toward the prior was tried on top and measured
-    # worse on all three; see the note in build_bom_breaks.py.)
-    return dict((w, r) for w, r in uni.items() if r[1] >= 2)
+    return dict((w, r) for w, r in uni.items() if r[1] >= 25)
 
 
 def english_names():
@@ -178,16 +150,9 @@ def main():
     tbl = break_before_table()
     path = os.path.join(ROOT, 'tools', 'mt_break_before.json')
     json.dump(tbl, open(path, 'w'), ensure_ascii=False)
-    cls = class_before_table(ROWS)
-    json.dump(cls, open(os.path.join(ROOT, 'tools', 'mt_break_class.json'), 'w'),
-              ensure_ascii=False)
-    decisive = sum(1 for r in cls.values() if r[1] >= 30
-                   and (r[0] / float(r[1]) >= 0.75 or r[0] / float(r[1]) <= 0.06))
-    print('paradigm classes: %s (first letter + point), %d decisive'
-          % (format(len(cls), ','), decisive))
     strong = sum(1 for r in tbl.values() if r[0] / float(r[1]) >= 0.75)
     weak = sum(1 for r in tbl.values() if r[0] / float(r[1]) <= 0.06)
-    print('break-before table: %s words seen 2+ times   %d almost always, %d almost never'
+    print('break-before table: %s words seen 25+ times   %d almost always, %d almost never'
           % (format(len(tbl), ','), strong, weak))
 
     rows = training_pairs()
