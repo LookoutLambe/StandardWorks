@@ -14,7 +14,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.outlined.Notes
+import androidx.compose.material.icons.outlined.Description
 import androidx.compose.material.icons.outlined.Bookmark
 import androidx.compose.material.icons.outlined.BorderColor
 import androidx.compose.material3.Icon
@@ -98,7 +98,7 @@ fun NotesView(shell: WebShell) {
         if (loaded && empty) {
             Box(Modifier.fillMaxSize().padding(32.dp), contentAlignment = Alignment.Center) {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Icon(Icons.AutoMirrored.Outlined.Notes, null, tint = p.ink3, modifier = Modifier.size(48.dp))
+                    Icon(Icons.Outlined.Description, null, tint = p.ink3, modifier = Modifier.size(48.dp))
                     Spacer(Modifier.height(12.dp))
                     Text("Nothing marked yet", color = p.ink, fontSize = 20.sp, fontWeight = FontWeight.Bold)
                     Spacer(Modifier.height(6.dp))

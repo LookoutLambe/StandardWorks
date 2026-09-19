@@ -36,7 +36,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.automirrored.outlined.ArrowBack
 import androidx.compose.material.icons.automirrored.outlined.MenuBook
-import androidx.compose.material.icons.automirrored.outlined.Notes
+import androidx.compose.material.icons.outlined.Description
+import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.LibraryBooks
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.outlined.Close
@@ -148,7 +149,7 @@ fun ShellTabBar(shell: WebShell) {
         RowItem("Library", Icons.Outlined.LibraryBooks, Icons.Filled.LibraryBooks, WebShell.Tab.LIBRARY),
         RowItem("Read", Icons.AutoMirrored.Outlined.MenuBook, Icons.AutoMirrored.Filled.MenuBook, WebShell.Tab.READ),
         RowItem("Search", Icons.Outlined.Search, Icons.Outlined.Search, WebShell.Tab.SEARCH),
-        RowItem("Notes", Icons.AutoMirrored.Outlined.Notes, Icons.AutoMirrored.Outlined.Notes, WebShell.Tab.NOTES),
+        RowItem("Notes", Icons.Outlined.Description, Icons.Filled.Description, WebShell.Tab.NOTES),
         RowItem("Settings", Icons.Outlined.Settings, Icons.Filled.Settings, WebShell.Tab.SETTINGS),
         RowItem("Listen", Icons.Outlined.Headphones, Icons.Outlined.Headphones, null),
     )
