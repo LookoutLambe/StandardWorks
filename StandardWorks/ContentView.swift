@@ -10,10 +10,10 @@ struct ContentView: View {
         Group {
             if let www = Bundle.main.url(forResource: "www", withExtension: nil),
                FileManager.default.fileExists(atPath: www.appendingPathComponent("index.html").path) {
-                LocalSiteWebView(wwwDirectoryURL: www, onPageSettled: {
+                // The five tabs and the one web view: see ShellRoot and WebShell.
+                ShellRoot(www: www, onPageSettled: {
                     ReviewPrompt.consider { requestReview() }
                 })
-                    .ignoresSafeArea(.container, edges: .bottom)
             } else {
                 MissingContentView()
             }

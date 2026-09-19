@@ -1,0 +1,249 @@
+import SwiftUI
+import WebKit
+import CoreText
+
+/// ONE WEB VIEW, FIVE TABS.
+///
+/// The reader is the site's own pages in a single WKWebView; the app around
+/// it is native SwiftUI — a bottom tab bar (Library · Read · Search · Notes ·
+/// Settings) the way a scripture app has one. This object is what the two
+/// halves share: the web view itself (made once by LocalSiteWebView and kept
+/// here so switching tabs never reloads the book), the site's registry for
+/// the native Library, the selected tab, and the few calls the native tabs
+/// make into the page — open a chapter, run a search, list the notes, step
+/// the text size. Every one of those goes through the page's own globals
+/// (navTo, VerseSearch, NotesEngine, stepSize, swApplyTheme); the shell
+/// never reimplements what the page already does.
+@MainActor
+final class WebShell: ObservableObject {
+    enum Tab: Hashable { case library, read, search, notes, settings }
+
+    @Published var tab: Tab = .read
+    @Published private(set) var volumes: [Volume] = []
+    @Published var chromeHidden = false
+    /// The Library's navigation stack, so a route can be pushed from outside a tap.
+    @Published var libraryPath: [LibraryRoute] = []
+    /// The chapter the page is showing, for the Read tab's own sense of place.
+    @Published private(set) var whereLabel = ""
+    /// Read-aloud (the site's read_aloud.js, Carmit through Web Speech): whether
+    /// this page has it, whether it is speaking, and the speeds it offers.
+    @Published private(set) var canListen = false
+    @Published private(set) var listening = false
+    @Published private(set) var listenPaused = false
+    @Published private(set) var listenRates: [Double] = []
+    @Published private(set) var listenRate: Double = 0
+    private var listenTimer: Timer?
+
+    let wwwDirectoryURL: URL
+    /// The whole canon's verse index, loaded once in the background. See SearchIndex.
+    let searchIndex: SearchIndex
+    private(set) var bomHashes: [String: String] = [:]
+    var webView: WKWebView?
+    private var scrollObservation: NSKeyValueObservation?
+    private var lastOffset: CGFloat = 0
+
+    init(www: URL) {
+        wwwDirectoryURL = www
+        searchIndex = SearchIndex(www: www)
+        ShellTheme.registerFonts(www: www)
+        volumes = LibraryRegistry.load(www: www)
+        bomHashes = LibraryRegistry.bomHashes(www: www)
+    }
+
+    // MARK: - the page
+
+    /// The web view is made by LocalSiteWebView; it hands it over here once.
+    func adopt(_ wv: WKWebView) {
+        guard webView !== wv else { return }
+        webView = wv
+        watchScroll(wv)
+    }
+
+    /// Runs JavaScript in the page and ignores the answer.
+    func run(_ js: String) {
+        webView?.evaluateJavaScript(js) { _, _ in }
+    }
+
+    /// Runs JavaScript that may `await`, and answers with its return value.
+    func call(_ body: String, _ completion: @escaping (Any?) -> Void) {
+        guard let wv = webView else { completion(nil); return }
+        wv.callAsyncJavaScript(body, arguments: [:], in: nil, in: .page) { result in
+            switch result {
+            case .success(let v): completion(v)
+            case .failure: completion(nil)
+            }
+        }
+    }
+
+    /// The Library tapped a chapter: the page shows it and the Read tab comes up.
+    func open(volume: Volume, book: Book, chapter: Int) {
+        let chapterId = book.chapterId(chapter)
+        let hash = LibraryRegistry.hash(volume: volume.key, chapterId: chapterId, bomHashes: bomHashes)
+        open(path: volume.page + "#" + hash)
+    }
+
+    /// A root-relative site path (bom/bom.html#1-nephi-3), the way the site's
+    /// own links and its last-read record spell one.
+    func open(path: String) {
+        tab = .read
+        guard let wv = webView else { return }
+        let target = wwwDirectoryURL.appendingPathComponent(path.split(separator: "#").first.map(String.init) ?? path)
+        let fragment = path.split(separator: "#").dropFirst().joined(separator: "#")
+        let current = wv.url?.standardizedFileURL.path ?? ""
+        if current == target.standardizedFileURL.path, !fragment.isEmpty {
+            // Same page: a hash change is a chapter turn the page handles itself,
+            // and it fires no didFinish — so the label is read back after it.
+            run("location.hash = \(jsString("#" + fragment));")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) { [weak self] in self?.refreshWhere() }
+        } else {
+            var comps = URLComponents(url: target, resolvingAgainstBaseURL: false)
+            comps?.fragment = fragment.isEmpty ? nil : fragment
+            if let u = comps?.url { wv.loadFileURL(u, allowingReadAccessTo: wwwDirectoryURL) }
+        }
+    }
+
+    func stepTextSize(_ delta: Int) {
+        run("window.stepSize && window.stepSize(\(delta));")
+    }
+
+    // MARK: - listen
+
+    /// The Listen button: play the chapter from the page's own reader, or stop it.
+    func toggleListen() {
+        run("(function(){ var r = window.SWReadAloud; if (!r) return; if (r.playing) r.stop(); else r.play(); })();")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { [weak self] in self?.refreshListen() }
+    }
+
+    func setListenRate(_ rate: Double) {
+        run("window.SWReadAloud && window.SWReadAloud.setRate(\(rate));")
+        listenRate = rate
+    }
+
+    /// The player bar's controls drive the page's own transport (#ra-pause,
+    /// #ra-back, #ra-fwd), which stays wired even while the app hides it.
+    func pauseListen() { press("ra-pause") }
+    func skipListen(back: Bool) { press(back ? "ra-back" : "ra-fwd") }
+    func stopListen() {
+        run("window.SWReadAloud && window.SWReadAloud.stop();")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in self?.refreshListen() }
+    }
+    private func press(_ id: String) {
+        run("(function(){ var b = document.getElementById(\(jsString(id))); if (b) b.click(); })();")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in self?.refreshListen() }
+    }
+
+    /// The volume the page is showing, by its file, for the player's cover tile.
+    var currentVolume: Volume? {
+        guard let file = webView?.url?.lastPathComponent else { return nil }
+        return volumes.first { ($0.page as NSString).lastPathComponent == file }
+    }
+
+    /// Asks the page whether reading aloud exists here and is running; while
+    /// it runs, asks again every second so the button follows the voice.
+    func refreshListen() {
+        webView?.evaluateJavaScript("(function(){ var r = window.SWReadAloud; if (!r) return null; var p = document.getElementById('ra-pause'); return { on: !!r.playing, paused: !!(p && p.getAttribute('aria-pressed') === 'true'), rate: Number(r.rate) || 0, speeds: (r.speeds || []).map(Number) }; })()") { [weak self] v, _ in
+            guard let self else { return }
+            guard let d = v as? [String: Any] else {
+                self.canListen = false; self.listening = false; self.listenTimer?.invalidate(); self.listenTimer = nil
+                return
+            }
+            self.canListen = true
+            let wasListening = self.listening
+            self.listening = (d["on"] as? Bool) ?? false
+            self.listenPaused = self.listening && ((d["paused"] as? Bool) ?? false)
+            if wasListening != self.listening {
+                // The page's own footer steps aside while the player is up (AppShell CSS).
+                self.run("document.documentElement.classList.toggle('sw-app-listening', \(self.listening));")
+            }
+            self.listenRate = (d["rate"] as? Double) ?? self.listenRate
+            if let sp = d["speeds"] as? [Double], !sp.isEmpty { self.listenRates = sp }
+            if self.listening, self.listenTimer == nil {
+                self.listenTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in self?.refreshListen() }
+            } else if !self.listening { self.listenTimer?.invalidate(); self.listenTimer = nil }
+        }
+    }
+
+    // MARK: - chrome that gets out of the way
+
+    /// Reading hides the tab bar; a scroll back up, or reaching the top,
+    /// brings it back. Measured against the page's own scroll view, so a
+    /// page that scrolls inside a panel does not move the bar.
+    private func watchScroll(_ wv: WKWebView) {
+        scrollObservation = wv.scrollView.observe(\.contentOffset, options: [.new]) { [weak self] sv, _ in
+            guard let self else { return }
+            let y = sv.contentOffset.y
+            let dy = y - self.lastOffset
+            self.lastOffset = y
+            if y <= 40 { if self.chromeHidden { withAnimation { self.chromeHidden = false } }; return }
+            // A finger, not the page: a chapter opened at a verse scrolls itself
+            // there, and that must not take the tab bar away before reading starts.
+            guard sv.isDragging || sv.isDecelerating else { return }
+            if abs(dy) < 6 { return }
+            let hide = dy > 0
+            if hide != self.chromeHidden { withAnimation(.easeInOut(duration: 0.2)) { self.chromeHidden = hide } }
+        }
+    }
+
+    func pageSettled(_ wv: WKWebView) {
+        lastOffset = wv.scrollView.contentOffset.y
+        if chromeHidden { chromeHidden = false }
+        refreshWhere()
+        refreshListen()
+    }
+
+    func refreshWhere() {
+        webView?.evaluateJavaScript("(document.getElementById('sw-chrome-chapter') || {}).textContent || ''") { [weak self] v, _ in
+            self?.whereLabel = ((v as? String) ?? "").replacingOccurrences(of: "\u{25BE}", with: "").trimmingCharacters(in: .whitespaces)
+        }
+    }
+}
+
+func jsString(_ s: String) -> String {
+    let data = try? JSONSerialization.data(withJSONObject: [s])
+    let arr = data.flatMap { String(data: $0, encoding: .utf8) } ?? "[\"\"]"
+    return String(arr.dropFirst().dropLast())
+}
+
+/// The native tabs wear the site's navy bar too: one chrome across the app,
+/// and white status-bar text that reads on every tab (the status bar is
+/// light app-wide for the reader's sake; a white native bar would have put
+/// white on white).
+struct ShellBar: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .toolbarBackground(ShellTheme.navy, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
+            .toolbarColorScheme(.dark, for: .navigationBar)
+    }
+}
+extension View {
+    func shellBar() -> some View { modifier(ShellBar()) }
+}
+
+/// The site's palette and Hebrew face, for the native tabs — so a Library
+/// row and a Hebrew name look like the page beside them.
+enum ShellTheme {
+    static let navy = Color(red: 0x1B / 255, green: 0x2A / 255, blue: 0x41 / 255)
+    static let gold = Color(red: 0xC8 / 255, green: 0x9B / 255, blue: 0x3C / 255)
+
+    private static var fontsRegistered = false
+    private static var hebrewFamily = "David Libre"
+
+    /// David Libre ships in www/fonts for the page; the native tabs register
+    /// the same files with CoreText once, so their Hebrew is the page's.
+    static func registerFonts(www: URL) {
+        guard !fontsRegistered else { return }
+        fontsRegistered = true
+        let dir = www.appendingPathComponent("fonts")
+        guard let files = try? FileManager.default.contentsOfDirectory(at: dir, includingPropertiesForKeys: nil) else { return }
+        for f in files where ["ttf", "otf"].contains(f.pathExtension.lowercased()) && f.lastPathComponent.lowercased().contains("david") {
+            CTFontManagerRegisterFontsForURL(f as CFURL, .process, nil)
+        }
+    }
+
+    static func hebrew(_ size: CGFloat) -> Font {
+        if UIFont(name: "DavidLibre-Regular", size: size) != nil { return .custom("DavidLibre-Regular", size: size) }
+        if UIFont(name: hebrewFamily, size: size) != nil { return .custom(hebrewFamily, size: size) }
+        return .system(size: size)
+    }
+}
