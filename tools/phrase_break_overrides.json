@@ -1,0 +1,25 @@
+{
+  "_": "Hand-audited read-aloud breaks, applied last by tools/build_volume_breaks.py. Key = verse key, value = [[index, weight], ...] over the verse's speakable words (1 = comma, 2 = stop). A verse listed here replaces whatever the generator derived for it. 1 Nephi 1 audited 2026-09-18 against the Hebrew clause structure: no break after לָכֵן / וְעַתָּה / הִנֵּה / עַל־כֵּן alone, never between a name and its apposition (אָבִי לֶחִי, אֲנִי נֶפִי), never inside an infinitive-absolute pair (גַּלֵּה גִלּוּ) or a verb chain (גֵּרְשׁוּ וְסָקְלוּ וְהָרָגוּ); a clause ends with a stop, a list item with a comma.",
+  "bom": {
+    "1 Nephi|1|1":  [[1,1],[6,2],[12,2],[17,2],[23,2],[27,1],[30,2]],
+    "1 Nephi|1|2":  [[4,2],[8,1]],
+    "1 Nephi|1|3":  [[4,1],[8,2]],
+    "1 Nephi|1|4":  [[7,2],[13,2],[16,1],[19,1],[22,2],[23,1]],
+    "1 Nephi|1|5":  [[3,1],[5,2],[7,1]],
+    "1 Nephi|1|6":  [[2,2],[4,1],[7,2],[10,2],[14,1]],
+    "1 Nephi|1|7":  [[2,2],[4,1],[7,1]],
+    "1 Nephi|1|8":  [[2,1],[4,2],[7,1],[13,2],[18,1]],
+    "1 Nephi|1|9":  [[4,2]],
+    "1 Nephi|1|10": [[6,2]],
+    "1 Nephi|1|11": [[3,2],[5,1],[8,2],[10,1]],
+    "1 Nephi|1|12": [[1,1]],
+    "1 Nephi|1|13": [[1,2],[4,1],[8,2],[14,2],[16,1],[20,1]],
+    "1 Nephi|1|14": [[3,1],[8,2],[13,2],[16,1],[19,2],[22,1],[27,2]],
+    "1 Nephi|1|15": [[4,2],[6,1],[8,1],[11,1]],
+    "1 Nephi|1|16": [[4,1],[8,2],[12,1],[16,2],[19,1],[23,2]],
+    "1 Nephi|1|17": [[3,2],[7,1],[12,2],[17,1]],
+    "1 Nephi|1|18": [[3,1],[10,1],[13,2],[17,1],[22,1]],
+    "1 Nephi|1|19": [[2,1],[6,2],[11,2],[17,1],[19,1],[23,1]],
+    "1 Nephi|1|20": [[4,1],[6,2],[11,1],[15,2],[18,2],[22,1],[24,1],[28,1]]
+  }
+}

@@ -1248,9 +1248,21 @@
       for (var i = 0; i < NOT_ARTICLE.length; i++) if (h === NOT_ARTICLE[i]) return false;
       return true;
     }
+    /* THE ARTICLE NO LONGER ENDS AN UTTERANCE (translator, 2026-09-18: "it
+       should be natural breaks, not breaks because there's three definite
+       articles together... it kills the flow"). Each forced seam was a
+       separate utterance, and a separate utterance is a hitch whatever gap
+       it is given — the engine restarts its prosody there. Measured again
+       on 2026-09-19 with `say -v Carmit` before giving the flow up: a maqqef
+       joining the article word to the word before it (the cure that works
+       after אֵת) restores nothing here — וּבְעֶצֶם־הַשָּׁנָה renders
+       byte-identical with the he and with an alef — and no vowel or dagesh
+       moves her either. So the /h/ of a mid-phrase article is Carmit's
+       defect and stays hers; where an article word already ends a phrase it
+       is still heard. isArticle is kept for that day the engine learns. */
     function mustEnd(h) {
       for (var i = 0; i < ENDS_UTTERANCE.length; i++) if (h === ENDS_UTTERANCE[i]) return true;
-      return isArticle(h);
+      return false;
     }
     var forced = [];
     split.forEach(function (p) {
@@ -1262,7 +1274,14 @@
         }
         if (cut < 0) { forced.push(rest); break; }
         var head = rest.slice(0, cut);
-        head.gap = COMMA_GAP;
+        /* NO SILENCE AT THIS SEAM. The split exists only so the article's
+           /h/ survives (a separate utterance is the cure); it is not a
+           breath. With COMMA_GAP here every הַ-word ended in a pause —
+           "הַשָּׁנָה, הַהִיא", "הָעִיר, הַגְּדוֹלָה" — and the flow died on
+           three articles in a row (translator, 2026-09-18: "it should be
+           natural breaks, not breaks because there's three definite
+           articles together"). Breaths come from the phrasing alone. */
+        head.gap = 0;
         head.stop = false;
         forced.push(head);
         rest = rest.slice(cut);
@@ -1955,7 +1974,7 @@
      Each phrase times itself and feeds a running average, and ten seconds is
      however many phrases that average says it is. */
   var wps = 2.2;                       /* words per second, until measured */
-  function estimate(g) { return (g.length / wps) + (g.gap || PHRASE_GAP) / 1000; }
+  function estimate(g) { return (g.length / wps) + (typeof g.gap === 'number' ? g.gap : PHRASE_GAP) / 1000; }
 
   function step(token) {
     if (token !== state.token) return;
@@ -1982,7 +2001,8 @@
         step(token); return;
       }
       state.at++;
-      gap(g.gap || PHRASE_GAP, token).then(function () { step(token); });
+      /* a gap of 0 is a real value (the article seam), not an unset one */
+      gap(typeof g.gap === 'number' ? g.gap : PHRASE_GAP, token).then(function () { step(token); });
     });
   }
 
