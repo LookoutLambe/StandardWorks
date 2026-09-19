@@ -1,22 +1,29 @@
 plugins {
     id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.plugin.compose'
 }
 
+/* THE ANDROID APP IS THE IPHONE APP'S TWIN: a native Compose shell around
+   the one WebView, over the same bundled www, with the same injected
+   scripts (app-shell/ at the repo root). See README.md. */
 android {
     namespace 'com.sefermormon.standardworks'
     compileSdk 36
 
     defaultConfig {
         applicationId "com.sefermormon.standardworks"
-        minSdk 24
+        minSdk 26            // TextToSpeech's onRangeStart (word highlighting) is API 26
         targetSdk 36
-        versionCode 3
-        versionName "1.1.0"
+        versionCode 4
+        versionName "6"
     }
 
     /* The upload key is never stored in this repo. Gradle reads it from the
        environment, so the password exists only in the shell that runs the
-       build. See README.md, "Shipping an update". */
+       build. See README.md, "Shipping an update". Without a password the
+       release build signs with the debug key, so it can still be built and
+       run locally. */
     signingConfigs {
         release {
             def storePathValue = System.getenv("SM_KEYSTORE") ?: "${System.properties['user.home']}/sefermormon-release.keystore"
@@ -29,25 +36,60 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
-            signingConfig signingConfigs.release
+            // R8 strips the icon library down to the six icons the row uses.
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig System.getenv("SM_KEYSTORE_PASSWORD") ? signingConfigs.release : signingConfigs.debug
         }
+        debug {
+            applicationIdSuffix ""
+        }
+    }
+
+    buildFeatures {
+        compose true
+        buildConfig true
     }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
+    kotlinOptions { jvmTarget = '17' }
+
+    sourceSets {
+        main {
+            // app-shell/ and www arrive by the copy task below.
+            assets.srcDirs += [layout.buildDirectory.dir('shell-assets').get().asFile]
+        }
+    }
+
+    packaging {
+        resources.excludes += ['META-INF/AL2.0', 'META-INF/LGPL2.1']
+    }
 }
 
-dependencies {
-    /* androidx.webkit still pulls kotlin-stdlib-jdk7/jdk8 1.6.21, whose classes
-       were folded into kotlin-stdlib itself at 1.8. Without this the two sets
-       collide and the build fails on duplicate classes. */
-    implementation platform('org.jetbrains.kotlin:kotlin-bom:1.8.22')
+/* ONE SOURCE. The site lives at the repo root and sync-www.sh mirrors it into
+   StandardWorks/www for the iPhone app (the pre-commit hook runs it); this
+   task carries that same mirror, and app-shell/, into this app's assets, so
+   the two apps always bundle the same content and the same scripts. */
+tasks.register('copyShellAssets', Copy) {
+    from('../../app-shell') { into 'app-shell' }
+    from('../../StandardWorks/www') { into 'www' }
+    into layout.buildDirectory.dir('shell-assets')
+}
+tasks.named('preBuild') { dependsOn 'copyShellAssets' }
 
-    implementation 'androidx.appcompat:appcompat:1.7.0'
-    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
-    implementation 'androidx.browser:browser:1.8.0'
+dependencies {
+    def composeBom = platform('androidx.compose:compose-bom:2024.12.01')
+    implementation composeBom
+    implementation 'androidx.compose.ui:ui'
+    implementation 'androidx.compose.ui:ui-tooling-preview'
+    implementation 'androidx.compose.material3:material3'
+    implementation 'androidx.compose.material:material-icons-extended'
+    implementation 'androidx.activity:activity-compose:1.9.3'
+    implementation 'androidx.lifecycle:lifecycle-runtime-compose:2.8.7'
+    implementation 'androidx.core:core-splashscreen:1.0.1'
     implementation 'androidx.webkit:webkit:1.12.1'
 }

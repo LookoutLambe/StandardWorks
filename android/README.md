@@ -1,74 +1,85 @@
 # Android — Sefer Mormon: Standard Works
 
-The Android app is a **WebView app**: a native shell whose one screen is a
-full-screen WebView pointed at https://sefermormon.com. The app *is* the
-website, so every commit that ships the site ships the Android app too — you
-only rebuild this shell when the shell itself changes (icon, name, colours,
-version, or the speech bridge).
+The Android app is the **iPhone app's twin**: a native Jetpack Compose shell
+around one WebView that shows the bundled site, with the same injected scripts
+(`app-shell/` at the repo root, shared byte for byte) and the same native
+screens — Library · Read · Search · Notes · Settings · Listen in one navy row
+along the bottom, the logo at launch, Light / Sepia / Dark on every screen.
+Each Kotlin file names the Swift file it mirrors.
 
-## Why not a TWA
+| Kotlin | Mirrors | Role |
+|---|---|---|
+| `AppShell.kt` | `AppShell.swift` | the palette per theme, the shared scripts, the message ports |
+| `LocalSiteWebView.kt` | `LocalSiteWebView.swift` | the one WebView: asset loader, injected scripts, paper, first request |
+| `WebShell.kt` | `WebShell.swift` | the state the two halves share; every call into the page |
+| `SpeechBridge.kt` | `SpeechBridge.swift` | Read aloud through the phone's text-to-speech, the same protocol |
+| `Library.kt`, `SearchIndex.kt`, `SearchView.kt`, `NotesView.kt`, `SettingsView.kt` | the same names | the native pages |
+| `ShellRoot.kt` | `ShellRoot.swift` | the frame: the row, the player, the splash |
+| `DebugBridge.kt` | `DebugBridge` | debug builds only: the app driven from adb |
 
-It was a Trusted Web Activity until 2026-09-15. A TWA hands the site to Chrome
-and shows it full-screen, so the reading happens **inside Chrome, not inside the
-app**. Google's production-access review looks for activity inside the app,
-finds almost none, and refuses — blaming tester engagement. The listing sat at
-8 opted-in testers under exactly that rule.
+## The site is bundled, as on the iPhone
 
-Do **not** "fix" this by setting `fallbackType: "webview"` on a Bubblewrap
-build. That fallback only applies on phones with no TWA-capable browser, so on
-any phone with Chrome the app is still a TWA.
+`copyShellAssets` (app/build.gradle) copies `../../StandardWorks/www` — the
+mirror `sync-www.sh` makes of the repo root, refreshed by the pre-commit hook
+— and `../../app-shell` into the assets. The page is served by
+`WebViewAssetLoader` at `https://appassets.androidplatform.net/assets/www/`,
+an https origin, so localStorage, IndexedDB (the notes) and the last-read
+record behave exactly as on the web. Nothing is fetched from the network; the
+app works offline. Content updates ship with the app, as on the iPhone.
 
-## The read-aloud bridge
+It was a WebView over the live site until 2026-09-19, and a Trusted Web
+Activity before 2026-09-15 (a TWA hands the reading to Chrome, and Google's
+production review found no activity inside the app).
 
-Android's WebView has no Web Speech API, so `read_aloud.js` would find no
-`speechSynthesis` and hide its control. Two files put it back:
+## Read aloud
 
-| File | Role |
-|---|---|
-| `app/src/main/java/.../SpeechBridge.java` | exposes the phone's TextToSpeech engine to the page as `SMTTS` |
-| `app/src/main/assets/tts_shim.js` | re-implements `speechSynthesis` and `SpeechSynthesisUtterance` over it |
-
-The shim is injected as a **document-start** script, because `read_aloud.js`
-tests for an engine as it loads — injecting after `onPageFinished` is too late.
-
-One limitation: Android's engine cannot pause mid-utterance. `pause()` stops the
-voice and `resume()` speaks the current verse again from its start.
+The WebView has no Web Speech API. `app-shell/speech_shim.js` stands
+`speechSynthesis` up over a message port and `SpeechBridge.kt` is the native
+end, through `android.speech.tts.TextToSpeech`, with the engine's
+`onRangeStart` feeding the page's word highlighting. Android's engine cannot
+pause mid-utterance: pause stops the voice and resume speaks that utterance
+again from its start. Web rates map onto an Android band (0.3 → 0.62 … 1.0 →
+1.15) in `androidRate`.
 
 ## Identity — do not change these
 
 - **packageId `com.sefermormon.standardworks`** is permanent. Play identifies
   the listing by it; a different id is a different app.
 - **`~/sefermormon-release.keystore`** (alias `sefermormon`) is the upload key.
-  Back it up somewhere that is not this Mac. Losing it does not lose the app —
-  Google can reset an upload key — but it is days of waiting.
+  Back it up somewhere that is not this Mac.
 
 ## Build tools
 
-JDK 17 and the Android SDK, both installed under your home folder:
+JDK 17 and the Android SDK (`~/Library/Android/sdk`; `local.properties`
+points at it and is gitignored). Debug build and run on the emulator:
 
-    ~/Library/Java/JavaVirtualMachines/jdk-17*/Contents/Home
-    ~/Library/Android/sdk
+    cd android
+    export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+    ./gradlew :app:assembleDebug
+    adb install -r app/build/outputs/apk/debug/app-debug.apk
 
-`local.properties` points the build at the SDK and is gitignored.
+Debug builds carry `DebugBridge`: write a command to the app's
+`files/shell_cmd.js` (through `adb shell run-as`) and read
+`files/shell_out.txt` — `@state`, `@tab library`, `@open bom/bom.html#1-nephi-3`,
+`@listen`, `@appearance sepia`, or any JavaScript for the page.
 
 ## Shipping an update
 
 1. Bump `versionCode` (strictly higher than anything already uploaded — Play
    rejects a repeat) and `versionName` in `app/build.gradle`.
-2. Build. **The keystore password is never stored in this repo**; the build
-   reads it from the environment, so it lives only in the shell you type it in:
+2. Build with the upload key. **The keystore password is never stored in this
+   repo**; the build reads it from the environment, so it lives only in the
+   shell you type it in (without it, a release build signs with the debug key
+   and can only be run locally):
 
         cd android
-        export JAVA_HOME="$HOME/Library/Java/JavaVirtualMachines/jdk-17.0.20.1+1/Contents/Home"
+        export JAVA_HOME=$(/usr/libexec/java_home -v 17)
         read -rs -p "Keystore password: " SM_KEYSTORE_PASSWORD; echo
         export SM_KEYSTORE_PASSWORD
         ./gradlew :app:bundleRelease   # app/build/outputs/bundle/release/app-release.aab
-        ./gradlew :app:assembleRelease # app/build/outputs/apk/release/app-release.apk
         unset SM_KEYSTORE_PASSWORD
 
-3. Play Console → Closed testing → Create new release → upload the `.aab`.
-
-Content updates need none of this. Push the site and the app follows.
+3. Play Console → the testing track → Create new release → upload the `.aab`.
 
 ## Store presence
 

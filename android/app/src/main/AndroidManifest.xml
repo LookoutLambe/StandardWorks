@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <!-- The read-aloud bridge talks to whatever text-to-speech engine the
          phone has installed, so the app must be allowed to see it. -->
     <queries>
@@ -21,6 +18,9 @@
         android:usesCleartextTraffic="false"
         android:theme="@style/Theme.SeferMormon">
 
+        <!-- configChanges: the one WebView survives a rotation or a theme
+             change in place; recreating the Activity would reload the book
+             and cancel the reading. -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
