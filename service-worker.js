@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-09-19T14-15-33';
+const BUILD_ID = '2026-09-19T15-54-56';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -41,6 +41,16 @@ const CORE_ASSETS = [
        it defines (--here, --highlight, --rule) live in reader.css now. The
        file is left on disk; only the download is removed. */
     '/StandardWorks/site_chrome.js?v=53',
+    /* the phone shell (app-shell/pwa_shell.js): the row, the panels and the
+       shared injected scripts the apps use; a computer never fetches past the
+       first file, which returns at its gate */
+    '/StandardWorks/app-shell/pwa_shell.js?v=1',
+    '/StandardWorks/app-shell/pwa_shell.css?v=1',
+    '/StandardWorks/app-shell/shell_start.js',
+    '/StandardWorks/app-shell/shell_end.js',
+    '/StandardWorks/app-shell/shell_mark.js',
+    '/StandardWorks/app-shell/appmark.png',
+    '/StandardWorks/app-shell/launch_logo.png',
     '/StandardWorks/editions.js?v=2',
     '/StandardWorks/nav_engine.js?v=90',
     '/StandardWorks/verse_search.js?v=3',

@@ -2,7 +2,7 @@
   "name": "The Standard Works — Hebrew Interlinear",
   "short_name": "כתבי הקודש",
   "description": "Study the Standard Works in Hebrew with word-by-word interlinear translation, transliteration, and English glosses.",
-  "start_url": "/StandardWorks/index.html",
+  "start_url": "/StandardWorks/index.html?boot=1",
   "scope": "/StandardWorks/",
   "display": "standalone",
   "background_color": "#1B2A41",

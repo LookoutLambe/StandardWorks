@@ -428,7 +428,12 @@ const SIX = ['bom/bom.html', 'ot.html', 'nt.html', 'dc.html', 'pgp.html', 'jst.h
       .filter(f => f.endsWith('.js') && !SW_FILES.includes(f) && fs.statSync(path.join(ROOT, f)).size < 600 * 1024))
     .concat(fs.readdirSync(path.join(ROOT, 'bom'))
       .filter(f => f.endsWith('.js') && fs.statSync(path.join(ROOT, 'bom', f)).size < 600 * 1024)
-      .map(f => 'bom/' + f));
+      .map(f => 'bom/' + f))
+    /* the phone shell's loader (app-shell/pwa_shell.js) fetches the shared
+       injected scripts and its stylesheet at runtime by name */
+    .concat(fs.existsSync(path.join(ROOT, 'app-shell'))
+      ? fs.readdirSync(path.join(ROOT, 'app-shell')).filter(f => f.endsWith('.js')).map(f => 'app-shell/' + f)
+      : []);
   const haystack = SOURCES.map(f => { try { return read(f); } catch (e) { return ''; } }).join('\n');
 
   const dead = [];

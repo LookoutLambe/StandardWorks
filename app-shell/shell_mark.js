@@ -1,5 +1,6 @@
 (function () {
-  var SRC = __SW_MARK_URI__;
+  /* the apps replace __SW_MARK_URI__ with a data URI; the web shell sets __SW_MARK_SRC to a URL first */
+  var SRC = window.__SW_MARK_SRC || __SW_MARK_URI__;
   function apply() {
     var img = document.querySelector('.sw-chrome-home img');
     if (!img) return false;

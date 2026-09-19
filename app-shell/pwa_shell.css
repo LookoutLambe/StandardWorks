@@ -1,0 +1,148 @@
+/* THE WEB SHELL'S OWN SURFACE (pwa_shell.js): the six-icon row, the panels,
+   the player, the launch logo. Every colour is the site's own token, so the
+   panels are cut from the same cloth as the reader in Light, Sepia and Dark.
+   Nothing here applies without html.sw-web-shell, which only a phone gets. */
+
+/* the shell's own surfaces read left to right, whatever the page's direction (the reader is a Hebrew, RTL document) */
+#sw-app-row, #sw-app-panel, #sw-app-player { direction: ltr; }
+
+html.sw-web-shell {
+  --sw-app-row-h: 54px;
+  /* things the reader floats above its footer clear the row too */
+  --sw-footer-h: calc(58px + var(--sw-app-row-h));
+  --sw-app-font: -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Segoe UI", sans-serif;
+}
+/* the row takes real height below the page: room at the bottom of the scroll */
+html.sw-web-shell body { padding-bottom: calc(var(--sw-app-row-h) + env(safe-area-inset-bottom, 0px)) !important; }
+
+/* THE PAGE'S FOOTER SITS ON THE ROW, and on the player while the page reads;
+   folded (sw-app-reading, from the shared stylesheet) it slides down behind the row. */
+html.sw-web-shell #sw-reader-footer {
+  bottom: calc(var(--sw-app-row-h) + env(safe-area-inset-bottom, 0px)) !important;
+  padding-bottom: 0 !important;
+}
+html.sw-web-shell.sw-app-listening #sw-reader-footer { bottom: calc(var(--sw-app-player-h, 58px) + env(safe-area-inset-bottom, 0px)) !important; }
+html.sw-web-shell .controls-bottom { padding-bottom: 7px !important; }
+
+/* THE LOGO BEFORE ANYTHING: painted with the first frame, lifted when the page is up. */
+html.sw-web-shell.sw-app-booting::before {
+  content: ''; position: fixed; inset: 0; z-index: 2147483600;
+  background: #1B2A41 url(launch_logo.png) center / 512px auto no-repeat;
+}
+
+/* THE ROW: six icons on the chrome, no names; the selected one in the "here" gold. */
+#sw-app-row {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 2147483000;
+  display: flex; align-items: center; box-sizing: border-box;
+  height: calc(var(--sw-app-row-h) + env(safe-area-inset-bottom, 0px));
+  padding: 0 12px env(safe-area-inset-bottom, 0px);
+  background: var(--chrome, #1B2A41); font-family: var(--sw-app-font);
+}
+#sw-app-row button {
+  flex: 1 1 0; min-height: 52px; margin: 0; padding: 0; background: none; border: 0; border-radius: 12px;
+  color: var(--on-chrome, #F3EDE2); display: flex; align-items: center; justify-content: center;
+  -webkit-tap-highlight-color: transparent; cursor: pointer;
+}
+#sw-app-row button[aria-current="page"] { color: var(--here-chrome, #DDB768); }
+#sw-app-row button[aria-current="page"] svg { stroke-width: 2.2; }
+html.sw-app-listening #sw-app-row { display: none; }
+
+/* THE PANEL: a native page on the reader's paper, between the bar and the row. */
+#sw-app-panel {
+  position: fixed; left: 0; right: 0; top: 0; z-index: 2147482900;
+  bottom: calc(var(--sw-app-row-h) + env(safe-area-inset-bottom, 0px));
+  display: none; flex-direction: column; background: var(--panel, #F0ECE5); color: var(--ink, #191713);
+  font-family: var(--sw-app-font); font-size: 17px; line-height: 1.3;
+}
+#sw-app-panel.open { display: flex; }
+.sw-app-bar {
+  position: relative; flex: none; background: var(--chrome, #1B2A41); color: var(--on-chrome, #F3EDE2);
+  padding-top: env(safe-area-inset-top, 0px);
+}
+.sw-app-title { min-height: 56px; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 17px; padding: 0 60px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sw-app-back {
+  position: absolute; left: 8px; top: calc(env(safe-area-inset-top, 0px) + 6px); width: 44px; height: 44px;
+  background: none; border: 0; border-radius: 50%; color: var(--on-chrome, #F3EDE2); padding: 0;
+  display: flex; align-items: center; justify-content: center; -webkit-tap-highlight-color: transparent;
+}
+.sw-app-scroll { flex: 1 1 auto; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 16px; overscroll-behavior: contain; }
+.sw-app-h { color: var(--ink-2, #554E45); font-weight: 600; font-size: 15px; margin: 0 0 8px 4px; }
+.sw-app-gap { height: 20px; }
+.sw-app-hint { color: var(--ink-2, #554E45); padding: 16px; font-size: 15px; }
+.sw-app-card { background: var(--card, #FBF6EC); border-radius: 12px; overflow: hidden; }
+.sw-app-r {
+  display: flex; align-items: center; gap: 14px; width: 100%; min-height: 56px; box-sizing: border-box;
+  padding: 10px 16px; margin: 0; background: none; border: 0; border-top: 1px solid var(--rule, #E2DCD2);
+  color: inherit; font: inherit; text-align: left; -webkit-tap-highlight-color: transparent;
+}
+.sw-app-card > .sw-app-r:first-child { border-top: 0; }
+button.sw-app-r:active { background: color-mix(in srgb, var(--ink, #191713) 6%, transparent); }
+.sw-app-grow { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; }
+.sw-app-t { color: var(--ink, #191713); }
+.sw-app-med { font-weight: 500; }
+.sw-app-bold { font-weight: 700; font-size: 20px; }
+.sw-app-sub { color: var(--ink-2, #554E45); font-size: 15px; }
+.sw-app-sub2 { color: var(--ink-2, #554E45); font-size: 16px; }
+.sw-app-n { color: var(--ink-3, #6D655B); font-size: 13px; }
+.sw-app-right { float: right; }
+.sw-app-ref { color: var(--here, #8E6215); font-size: 13px; font-weight: 600; display: block; }
+.sw-app-here { color: var(--here, #8E6215); }
+.sw-app-ic { display: flex; align-items: center; flex: none; }
+.sw-app-chev { color: var(--ink-3, #6D655B); display: flex; flex: none; }
+.sw-app-heb { font-family: 'David Libre', 'Frank Ruhl Libre', serif; }
+.sw-app-clamp { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.sw-app-clamp4 { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.sw-app-tile {
+  flex: none; width: 44px; height: 56px; border-radius: 6px; background: var(--chrome, #1B2A41);
+  color: var(--here-chrome, #DDB768); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 12px;
+}
+.sw-app-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(52px, 1fr)); gap: 10px; }
+.sw-app-ch {
+  min-height: 44px; border: 0; border-radius: 8px; background: var(--card, #FBF6EC); color: var(--ink, #191713);
+  font: inherit; font-variant-numeric: tabular-nums; padding: 12px 0; -webkit-tap-highlight-color: transparent;
+}
+.sw-app-empty { text-align: center; padding: 40px 16px; display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--ink-3, #6D655B); }
+.sw-app-empty .sw-app-sub { max-width: 30em; }
+.sw-app-sizebtn {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 8px 16px; border-radius: 10px;
+  background: color-mix(in srgb, var(--here, #8E6215) 16%, transparent); border: 1px solid color-mix(in srgb, var(--here, #8E6215) 30%, transparent);
+  color: var(--ink, #191713); font: inherit; -webkit-tap-highlight-color: transparent;
+}
+
+/* SEARCH: the field and the scopes live in the navy bar. */
+.sw-app-bar-tall .sw-app-title { min-height: 56px; }
+.sw-app-searchbox {
+  display: flex; align-items: center; gap: 8px; margin: 0 16px 8px; height: 40px; border-radius: 10px; padding: 0 10px;
+  background: color-mix(in srgb, var(--on-chrome, #F3EDE2) 14%, transparent); color: var(--on-chrome, #F3EDE2);
+}
+.sw-app-searchbox input {
+  flex: 1 1 auto; min-width: 0; background: none; border: 0; outline: 0; color: inherit; font: inherit; font-size: 17px;
+  -webkit-appearance: none; appearance: none;
+}
+.sw-app-searchbox input::placeholder { color: color-mix(in srgb, var(--on-chrome, #F3EDE2) 60%, transparent); }
+.sw-app-searchbox input::-webkit-search-cancel-button { display: none; }
+.sw-app-sic { display: flex; opacity: .7; }
+.sw-app-clear { background: none; border: 0; color: inherit; padding: 0; display: flex; opacity: .8; }
+.sw-app-scopes { display: flex; gap: 6px; overflow-x: auto; padding: 0 16px 10px; scrollbar-width: none; }
+.sw-app-scopes::-webkit-scrollbar { display: none; }
+.sw-app-chip {
+  flex: none; min-height: 32px; padding: 6px 12px; border-radius: 8px; font: inherit; font-size: 14px; color: var(--on-chrome, #F3EDE2);
+  background: color-mix(in srgb, var(--on-chrome, #F3EDE2) 8%, transparent); border: 1px solid color-mix(in srgb, var(--on-chrome, #F3EDE2) 12%, transparent);
+  -webkit-tap-highlight-color: transparent;
+}
+.sw-app-chip.on { background: color-mix(in srgb, var(--on-chrome, #F3EDE2) 22%, transparent); border-color: color-mix(in srgb, var(--on-chrome, #F3EDE2) 35%, transparent); font-weight: 600; }
+
+/* THE NOW-PLAYING BAR, in the row's place while the page reads. */
+#sw-app-player {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 2147483000; display: none; align-items: center; gap: 4px;
+  box-sizing: border-box; min-height: calc(var(--sw-app-player-h, 58px) + env(safe-area-inset-bottom, 0px));
+  padding: 5px 6px calc(5px + env(safe-area-inset-bottom, 0px)); background: var(--chrome, #1B2A41); color: var(--on-chrome, #F3EDE2);
+  font-family: var(--sw-app-font);
+}
+html.sw-app-listening #sw-app-player { display: flex; }
+.sw-app-pb { width: 44px; height: 44px; flex: none; background: none; border: 0; border-radius: 50%; color: inherit; padding: 0; display: flex; align-items: center; justify-content: center; -webkit-tap-highlight-color: transparent; }
+.sw-app-ptile { flex: none; width: 36px; height: 36px; box-sizing: border-box; border: 1px solid var(--here-chrome, #DDB768); border-radius: 6px; color: var(--here-chrome, #DDB768); font-size: 10px; line-height: 1.1; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2px; margin: 0 6px 0 2px; }
+.sw-app-pinfo { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; }
+.sw-app-ptitle { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sw-app-psub { font-size: 12px; opacity: .85; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sw-app-rate { background: none; border: 0; padding: 0; color: var(--here-chrome, #DDB768); font: inherit; font-weight: 600; }
