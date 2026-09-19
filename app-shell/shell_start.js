@@ -20,9 +20,12 @@
      and the style is moved to the end of <body> once the body exists,
      so it is also last in the cascade. */
   var CSS = [
-    'html #sw-beta-invite, html .landing-app-store, html .landing-update-note, html .landing-after,',
-    'html .hub-front, html .hub-sources, html .hub-footer-colophon, html .hub-footer-copy, html .shelf-foot,',
-    'html .sw-chrome-print, html #safari-browser-tip { display: none !important; }',
+    /* ...but only inside the APPS. On the website itself — the phone web
+       shell, html.sw-web-shell — the landing page IS the website's home and
+       keeps every part of it. */
+    'html:not(.sw-web-shell) #sw-beta-invite, html:not(.sw-web-shell) .landing-app-store, html:not(.sw-web-shell) .landing-update-note, html:not(.sw-web-shell) .landing-after,',
+    'html:not(.sw-web-shell) .hub-front, html:not(.sw-web-shell) .hub-sources, html:not(.sw-web-shell) .hub-footer-colophon, html:not(.sw-web-shell) .hub-footer-copy, html:not(.sw-web-shell) .shelf-foot,',
+    'html:not(.sw-web-shell) .sw-chrome-print, html:not(.sw-web-shell) #safari-browser-tip { display: none !important; }',
     /* LISTEN IS IN THE APP'S ROW. The page's floating transport pill and
        its inline "Read aloud" bar above verse one would double it
        (translator, 2026-09-19: "the read aloud doesnt need to be there
@@ -37,7 +40,7 @@
     'html #sw-reader-footer { transition: transform .22s ease !important; will-change: transform; }',
     'html.sw-app-reading #sw-reader-footer { transform: translateY(100%) !important; pointer-events: none !important; }',
     '@media (prefers-reduced-motion: reduce) { html #sw-reader-footer { transition: none !important; } }',
-    'html .hub-footer-contact a[href^="mailto:"] { display: none !important; }',
+    'html:not(.sw-web-shell) .hub-footer-contact a[href^="mailto:"] { display: none !important; }',
     /* 7. THE PAGE RUNS UNDER THE STATUS BAR, and the site measures its bar
        WITH that inset (site_chrome.js: --sw-chrome-h = bar.offsetHeight,
        and the bar pads by env(safe-area-inset-top)). Rules that then add

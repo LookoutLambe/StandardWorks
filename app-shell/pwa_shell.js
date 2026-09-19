@@ -468,7 +468,13 @@
 
   /* ── messages from the shared scripts ────────────────────────────────── */
   shell.receive = function (m) {
-    if (m.op === 'library') { if (current === 'library') closePanel(); else openPanel('library'); }
+    /* The mark in the bar: on the website it goes HOME, to the landing page
+       (the Library has its own icon in the row); on the landing itself,
+       where home is already here, it opens the Library. */
+    if (m.op === 'library') {
+      if (currentVolume()) { closePanel(); location.href = BASE + 'index.html'; }
+      else if (current === 'library') closePanel(); else openPanel('library');
+    }
     /* 'theme': the site's own variables recolour everything; nothing to do. */
   };
 
