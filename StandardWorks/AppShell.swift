@@ -61,6 +61,28 @@ enum AppShell {
         }
     }
 
+    // MARK: - chrome
+
+    /// The site's bar colour per theme (sw_theme.css --chrome): the same navy
+    /// in light and sepia, deepened in dark so the bar stays darker than the
+    /// page it frames. The shell's own bottom band is this colour, so the
+    /// page's footer and the icon row read as ONE footer (translator,
+    /// 2026-09-19: "can the entire footer area be navy blue?").
+    static func chrome(theme: String) -> UIColor {
+        theme == "dark" ? UIColor(red: 0x10 / 255, green: 0x18 / 255, blue: 0x23 / 255, alpha: 1)
+                        : UIColor(red: 0x1B / 255, green: 0x2A / 255, blue: 0x41 / 255, alpha: 1)
+    }
+    /// Text and icons on that chrome (--on-chrome).
+    static func onChrome(theme: String) -> UIColor {
+        theme == "dark" ? UIColor(red: 0xE7 / 255, green: 0xE0 / 255, blue: 0xD4 / 255, alpha: 1)
+                        : UIColor(red: 0xF3 / 255, green: 0xED / 255, blue: 0xE2 / 255, alpha: 1)
+    }
+    /// The gold that marks "here" on chrome (--here-chrome), brighter in dark.
+    static func hereChrome(theme: String) -> UIColor {
+        theme == "dark" ? UIColor(red: 0xE6 / 255, green: 0xC8 / 255, blue: 0x7E / 255, alpha: 1)
+                        : UIColor(red: 0xDD / 255, green: 0xB7 / 255, blue: 0x68 / 255, alpha: 1)
+    }
+
     // MARK: - scripts
 
     /// Applies a theme through the page's own switch. The page persists it,
@@ -101,21 +123,20 @@ enum AppShell {
         'html #sw-beta-invite, html .landing-app-store, html .landing-update-note, html .landing-after,',
         'html .hub-front, html .hub-sources, html .hub-footer-colophon, html .hub-footer-copy, html .shelf-foot,',
         'html .sw-chrome-print, html #safari-browser-tip { display: none !important; }',
-        /* the app has its own Listen button; the page's floating transport pill would double it */
-        'html #ra-float { display: none !important; }',
-        /* LISTEN IN THE BAR, beside Aa and the theme toggle, where it covers no
-           word in either orientation (a floating button sat on the last words
-           of a row). Injected by the script below; gold while speaking. */
-        'html body.sw-chrome-reader .sw-app-listen { grid-column: 5; }',
-        /* narrower than the site's 44px so the chapter pill keeps its name; the tap area stays 44 tall and 38 wide */
-        'html .sw-app-listen { min-width: 38px !important; padding: 6px 3px !important; }',
-        'html .sw-app-listen svg { width: 20px; height: 20px; display: block; }',
-        /* real gold and real navy: --sw-gold is a near-white in this bar */
-        'html.sw-app-listening .sw-app-listen { background: #C89B3C !important; color: #1B2A41 !important; }',
-        /* while the app's player is up, the page's bottom bar steps aside so
-           the reader keeps its room: player + tab bar, as a scripture app has */
-        'html.sw-app-listening .controls-bottom, html.sw-app-listening #sw-reader-footer { display: none !important; }',
-        'html.sw-app-listening { --sw-footer-h: 0px !important; }',
+        /* LISTEN IS IN THE APP'S ROW. The page's floating transport pill and
+           its inline "Read aloud" bar above verse one would double it
+           (translator, 2026-09-19: "the read aloud doesnt need to be there
+           anymore since its in the footer"). The transport buttons stay in
+           the DOM, hidden, because the player bar clicks them. */
+        'html #ra-float, html .ra-bar { display: none !important; }',
+        /* READING FOLDS THE MODE ROW. A scroll down puts sw-app-reading on
+           <html> (WebShell.chromeHidden) and the page's own footer — the
+           Interlinear · Hebrew · Dual · Translit · Nikkud row — slides out
+           below the page's edge, where the app's row is; a scroll up brings
+           it back. The row with Listen never moves. */
+        'html #sw-reader-footer { transition: transform .22s ease !important; will-change: transform; }',
+        'html.sw-app-reading #sw-reader-footer { transform: translateY(100%) !important; pointer-events: none !important; }',
+        '@media (prefers-reduced-motion: reduce) { html #sw-reader-footer { transition: none !important; } }',
         'html .hub-footer-contact a[href^="mailto:"] { display: none !important; }',
         /* 7. THE PAGE RUNS UNDER THE STATUS BAR, and the site measures its bar
            WITH that inset (site_chrome.js: --sw-chrome-h = bar.offsetHeight,
@@ -209,32 +230,28 @@ enum AppShell {
         port.postMessage({ op: 'library' });
       }, true);
 
-      /* 9. LISTEN, in the bar. Only where the page can read aloud (SWReadAloud
-         arrives with read_aloud.js, up to several seconds after the bar), and
-         only with a native shell listening for the tap. */
+      /* 9. THE THEME, AS THE PAGE CHANGES IT. The page's own theme button
+         (◐) swaps body classes; the shell's surfaces — the bottom band, the
+         player, the native bars — are cut from the page's chrome per theme,
+         so they hear every change here rather than only at page load. */
       (function () {
         var port = window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.swShell;
-        if (!port) return;
-        var tries = 0;
-        var t = setInterval(function () {
-          var bar = document.querySelector('.sw-top-bar-inner');
-          var dark = document.getElementById('sw-chrome-dark');
-          if (++tries > 300) { clearInterval(t); return; }
-          if (!bar || !dark || !window.SWReadAloud) return;
-          clearInterval(t);
-          if (document.querySelector('.sw-app-listen')) return;
-          var b = document.createElement('button');
-          b.type = 'button';
-          b.className = 'sw-chrome-btn sw-app-listen';
-          b.setAttribute('aria-label', 'Listen');
-          b.title = 'Listen';
-          b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-            '<path d="M4 14v-2a8 8 0 0 1 16 0v2"/>' +
-            '<rect x="3.5" y="13" width="4.5" height="7" rx="1.6"/>' +
-            '<rect x="16" y="13" width="4.5" height="7" rx="1.6"/></svg>';
-          b.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); port.postMessage({ op: 'listen' }); });
-          dark.insertAdjacentElement('afterend', b);
-        }, 100);
+        if (!port || !window.MutationObserver) return;
+        var last = null;
+        function tell() {
+          var t = window.swCurrentTheme ? String(window.swCurrentTheme())
+                : (document.body.classList.contains('dark-mode') ? 'dark' : document.body.classList.contains('sepia-mode') ? 'sepia' : 'light');
+          if (t === last) return;
+          last = t;
+          port.postMessage({ op: 'theme', theme: t });
+        }
+        function arm() {
+          if (!document.body) return false;
+          new MutationObserver(tell).observe(document.body, { attributes: true, attributeFilter: ['class'] });
+          tell();
+          return true;
+        }
+        if (!arm()) document.addEventListener('DOMContentLoaded', arm);
       })();
 
       var NAME = 'Sefer Mormon: Standard Works';

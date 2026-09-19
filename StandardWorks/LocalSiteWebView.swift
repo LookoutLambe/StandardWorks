@@ -39,21 +39,22 @@ final class LocalSiteWebViewLogger: NSObject, WKNavigationDelegate, WKScriptMess
         let store = UserDefaults.standard
         guard store.string(forKey: Self.appliedSchemeKey) != want else { return }
         store.set(want, forKey: Self.appliedSchemeKey)
-        webView.evaluateJavaScript(AppShell.applyThemeScript(dark: systemDark)) { _, _ in
-            Self.matchPaper(webView)
+        webView.evaluateJavaScript(AppShell.applyThemeScript(dark: systemDark)) { [weak self] _, _ in
+            Self.matchPaper(webView, shell: self?.shell)
         }
     }
 
     /// Paints the web view's own background with the page's current paper,
     /// so what shows before the next page paints is paper and not system
     /// white or black. See AppShell.
-    static func matchPaper(_ webView: WKWebView) {
+    static func matchPaper(_ webView: WKWebView, shell: WebShell? = nil) {
         webView.evaluateJavaScript(AppShell.currentThemeScript) { value, _ in
             let theme = (value as? String) ?? "light"
             let paper = AppShell.paper(theme: theme)
             webView.backgroundColor = paper
             webView.scrollView.backgroundColor = paper
             webView.underPageBackgroundColor = paper
+            if let shell, shell.theme != theme { shell.theme = theme }
         }
     }
 
@@ -90,7 +91,7 @@ final class LocalSiteWebViewLogger: NSObject, WKNavigationDelegate, WKScriptMess
         // once at construction. See pinLayoutScale for why.
         LocalSiteWebView.pinLayoutScale(webView)
         applySystemThemeIfChanged(webView)
-        LocalSiteWebViewLogger.matchPaper(webView)
+        LocalSiteWebViewLogger.matchPaper(webView, shell: shell)
         shell?.pageSettled(webView)
         if hasSettledOnce { onPageSettled() } else { hasSettledOnce = true }
     }
@@ -365,7 +366,8 @@ enum DebugBridge {
                     switch verb {
                     case "tab":
                         let names: [String: WebShell.Tab] = ["library": .library, "read": .read, "search": .search, "notes": .notes, "settings": .settings]
-                        if parts.count > 1, let t = names[parts[1]] { sh.tab = t } else { answer = "unknown tab" }
+                        if parts.count > 1, parts[1] == "listen" { sh.toggleListen() }
+                        else if parts.count > 1, let t = names[parts[1]] { sh.tab = t } else { answer = "unknown tab" }
                     case "open":
                         if parts.count > 1 { sh.open(path: parts[1]) }
                     case "library":
@@ -398,6 +400,16 @@ enum DebugBridge {
                         sh.stopListen()
                     case "size":
                         sh.stepTextSize(Int(parts.count > 1 ? parts[1] : "10") ?? 10)
+                    case "reading":
+                        // "@reading 1" / "@reading 0": the scroll state, without a finger
+                        sh.chromeHidden = parts.count > 1 && parts[1] == "1"
+                    case "rotate":
+                        // "@rotate landscape" / "@rotate portrait": simctl cannot
+                        // turn the device, so the app turns its own scene.
+                        let want: UIInterfaceOrientationMask = (parts.count > 1 && parts[1].hasPrefix("land")) ? .landscapeRight : .portrait
+                        if let scene = UIApplication.shared.connectedScenes.compactMap({ $0 as? UIWindowScene }).first {
+                            scene.requestGeometryUpdate(.iOS(interfaceOrientations: want)) { err in NSLog("[DebugBridge] rotate: \(err)") }
+                        } else { answer = "no scene" }
                     case "state":
                         answer = "tab=\(sh.tab) chromeHidden=\(sh.chromeHidden) where=\(sh.whereLabel) volumes=\(sh.volumes.count) path=\(sh.libraryPath) canListen=\(sh.canListen) listening=\(sh.listening) paused=\(sh.listenPaused) rate=\(sh.listenRate) rates=\(sh.listenRates)"
                     default:

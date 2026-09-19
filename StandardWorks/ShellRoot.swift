@@ -1,12 +1,18 @@
 import SwiftUI
 
-/// THE APP'S FRAME: five tabs along the bottom, the reader in the middle one.
+/// THE APP'S FRAME: six icons along the bottom, the reader behind them.
 ///
-/// Library · Read · Search · Notes · Settings — the shape of a scripture app,
-/// and the reason this no longer reads as a web page in a box. The Read tab
-/// is the one WKWebView; the other four are native and reach into it through
-/// WebShell. Reading hides the tab bar (chromeHidden) and a scroll back up
-/// restores it, so the text has the whole screen while it is being read.
+/// Library · Read · Search · Notes · Settings · Listen — the row a scripture
+/// app has, drawn by the app itself (ShellTabBar) rather than the system's
+/// tab bar, which caps a phone at five items and folds the rest into "More";
+/// the translator wants all six, icons only, and Listen never behind a menu.
+/// The TabView underneath only holds the five pages and switches them; its
+/// own bar is hidden. The Read page is the one WKWebView; the other four are
+/// native and reach into it through WebShell. The row is sticky: reading
+/// (a scroll down) collapses the PAGE'S mode row above it, not this one
+/// (translator, 2026-09-19: "you cant hide the second line now where the
+/// listen button is"); listening alone replaces it with the player, until
+/// the reading is stopped.
 struct ShellRoot: View {
     @StateObject private var shell: WebShell
     @Environment(\.colorScheme) private var colorScheme
@@ -20,67 +26,59 @@ struct ShellRoot: View {
     }
 
     var body: some View {
-        Group {
-            if #available(iOS 18.0, *) {
-                // iOS 18's Tab API: on the iPad this becomes a sidebar (with the
-                // system's own switch back to a tab bar); on the phone it is
-                // the same bottom bar. The `if` is static, so the tab view is
-                // never rebuilt — rebuilding it re-parents the web view and
-                // cancels speech.
-                TabView(selection: $shell.tab) {
-                    Tab("Library", systemImage: "books.vertical", value: WebShell.Tab.library) { LibraryView() }
-                    Tab("Read", systemImage: "book", value: WebShell.Tab.read) { readTab }
-                    Tab("Search", systemImage: "magnifyingglass", value: WebShell.Tab.search) { SearchView() }
-                    Tab("Notes", systemImage: "note.text", value: WebShell.Tab.notes) { NotesView() }
-                    Tab("Settings", systemImage: "gearshape", value: WebShell.Tab.settings) { SettingsView() }
-                }
-                .tabViewStyle(.sidebarAdaptable)
-            } else {
-                TabView(selection: $shell.tab) {
-                    LibraryView()
-                        .tabItem { Label("Library", systemImage: "books.vertical") }
-                        .tag(WebShell.Tab.library)
-                    readTab
-                        .tabItem { Label("Read", systemImage: "book") }
-                        .tag(WebShell.Tab.read)
-                    SearchView()
-                        .tabItem { Label("Search", systemImage: "magnifyingglass") }
-                        .tag(WebShell.Tab.search)
-                    NotesView()
-                        .tabItem { Label("Notes", systemImage: "note.text") }
-                        .tag(WebShell.Tab.notes)
-                    SettingsView()
-                        .tabItem { Label("Settings", systemImage: "gearshape") }
-                        .tag(WebShell.Tab.settings)
-                }
+        // The row is a SIBLING below the pages, not an inset over them: an
+        // inset only asks a page to leave room, and the web view — a UIKit
+        // view filling its frame — took none, so the row sat on the page's
+        // own footer (translator: "it cannot hide over the footer"). As a
+        // sibling it takes real height; the reader ends where it begins.
+        // Its ground is the page's chrome, so under the reader the site's
+        // navy footer and this row are one navy band to the bottom of the
+        // glass, and under the native pages the same navy answers the navy
+        // bar at the top ("can the entire footer area be navy blue?").
+        VStack(spacing: 0) {
+            TabView(selection: $shell.tab) {
+                LibraryView().tag(WebShell.Tab.library).toolbar(.hidden, for: .tabBar)
+                readTab.tag(WebShell.Tab.read).toolbar(.hidden, for: .tabBar)
+                SearchView().tag(WebShell.Tab.search).toolbar(.hidden, for: .tabBar)
+                NotesView().tag(WebShell.Tab.notes).toolbar(.hidden, for: .tabBar)
+                SettingsView().tag(WebShell.Tab.settings).toolbar(.hidden, for: .tabBar)
+            }
+            if !barHidden {
+                ShellTabBar()
+                    .padding(.bottom, max(ShellRoot.homeIndicatorInset, 8))
+                    .background(shell.chrome)
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
+        // The stack runs to the bottom of the glass; the row pads itself above
+        // the home indicator, and when the row is gone the page takes it all.
+        .ignoresSafeArea(.container, edges: .bottom)
+        // Chrome behind everything: a hairline the layout leaves between the
+        // page and the row, or the bands beside the page in landscape, is
+        // navy and not a white seam.
+        .background(shell.chrome.ignoresSafeArea())
+        .animation(UIAccessibility.isReduceMotionEnabled ? nil : .easeInOut(duration: 0.2), value: barHidden)
         .environmentObject(shell)
         .tint(ShellTheme.gold)
     }
 
-    /// The Read tab: the one web view and what rides on it.
+    /// Gone only while the player is up.
+    private var barHidden: Bool { shell.listening }
+
+    /// The Read page: the one web view and what rides on it.
     private var readTab: some View {
         LocalSiteWebView(shell: shell, systemDark: systemDark, onPageSettled: onPageSettled)
-            // LISTEN is a button in the page's own bar (AppShell injects it
-            // beside Aa and the theme toggle); a floating one covered the last
-            // words of a row. The player bar below is native.
+            // The player bar, native, above the page while it reads.
             .modifier(ListenBarBelowContent(shell: shell))
             // The page runs under the status bar and pads its own bar by
-            // env(safe-area-inset-top). The bottom edge is SwiftUI's while
-            // the tab bar shows (the page's footer sits on the tab bar) and
-            // the page's own once it hides (the footer pads by
-            // env(safe-area-inset-bottom) down to the home indicator;
-            // leaving that edge to SwiftUI left a white band there).
-            // Listening is its own mode: both bars go, only the player stays
-            // (translator, 2026-09-18: "close both bars and only the
-            // playback should be opened"); the tab bar returns on stop.
-            .ignoresSafeArea(.container, edges: (shell.chromeHidden && !shell.listening) ? [.top, .bottom] : [.top])
-            .toolbar((shell.chromeHidden || shell.listening) ? .hidden : .visible, for: .tabBar)
+            // env(safe-area-inset-top). Its bottom edge is always the row's
+            // (or the player's): the page's footer sits on that edge and the
+            // row never leaves it.
+            .ignoresSafeArea(.container, edges: [.top])
     }
 
-    /// The bottom safe-area inset of the window, for the floating button when
-    /// the page owns the bottom edge.
+    /// The bottom safe-area inset of the window, for anything that floats
+    /// while the page owns the bottom edge.
     static var homeIndicatorInset: CGFloat {
         UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }
             .flatMap(\.windows).first { $0.isKeyWindow }?.safeAreaInsets.bottom ?? 34
@@ -96,35 +94,92 @@ struct ShellRoot: View {
     }
 }
 
-/// THE NOW-PLAYING BAR, the way a scripture app shows one while it reads:
-/// close · the volume's tile · chapter and voice · back ten seconds · pause.
-/// Inset above the Read tab's content (see ListenBarBelowContent); it
-/// drives the page's own transport through WebShell.
-struct ListenBar: View {
+/// THE ROW: six icons on the chrome, no names (translator, 2026-09-19: "you
+/// can have them all there if you only had the icon and not the name"). Five
+/// select a page; Listen starts or stops the reading. Each icon is a 52-pt
+/// target with its name for VoiceOver, drawn in the site's on-chrome paper,
+/// the selected one in the gold the site uses for "here" on navy.
+struct ShellTabBar: View {
     @EnvironmentObject var shell: WebShell
-    var compact = false
+
+    private struct Item: Identifiable {
+        let id: String, symbol: String, tab: WebShell.Tab?
+    }
+    private let items: [Item] = [
+        Item(id: "Library",  symbol: "books.vertical", tab: .library),
+        Item(id: "Read",     symbol: "book",           tab: .read),
+        Item(id: "Search",   symbol: "magnifyingglass", tab: .search),
+        Item(id: "Notes",    symbol: "note.text",      tab: .notes),
+        Item(id: "Settings", symbol: "gearshape",      tab: .settings),
+        Item(id: "Listen",   symbol: "headphones",     tab: nil),
+    ]
 
     var body: some View {
-        HStack(spacing: compact ? 8 : 10) {
+        HStack(spacing: 0) {
+            ForEach(items) { item in
+                let selected = item.tab != nil && item.tab == shell.tab
+                Button {
+                    if let t = item.tab { shell.tab = t } else { shell.toggleListen() }
+                } label: {
+                    Image(systemName: selected ? filled(item.symbol) : item.symbol)
+                        .font(.system(size: 22, weight: .medium))
+                        .symbolRenderingMode(.hierarchical)
+                        .foregroundStyle(selected ? shell.hereChrome : shell.onChrome)
+                        .frame(maxWidth: .infinity, minHeight: 52)
+                        .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel(item.id)
+                .accessibilityAddTraits(selected ? [.isSelected] : [])
+            }
+        }
+        .padding(.horizontal, 12)
+        .padding(.top, 2)
+        .sensoryFeedback(.selection, trigger: shell.tab)
+    }
+
+    /// The selected page's icon is the filled variant where SF Symbols has one.
+    private func filled(_ symbol: String) -> String {
+        switch symbol {
+        case "book": return "book.fill"
+        case "gearshape": return "gearshape.fill"
+        case "note.text": return "note.text"
+        case "books.vertical": return "books.vertical.fill"
+        default: return symbol
+        }
+    }
+}
+
+/// THE NOW-PLAYING BAR, the way a scripture app shows one while it reads:
+/// close · the volume's tile · chapter and voice · back ten seconds · pause.
+/// It takes the row's place on the same navy band (see
+/// ListenBarBelowContent) and drives the page's own transport through
+/// WebShell. Paper on chrome, the speed in the "here" gold.
+struct ListenBar: View {
+    @EnvironmentObject var shell: WebShell
+
+    var body: some View {
+        HStack(spacing: 10) {
             Button { shell.stopListen() } label: {
                 Image(systemName: "xmark").font(.system(size: 16, weight: .semibold)).frame(width: 44, height: 44)
             }
             .accessibilityLabel("Stop listening")
-            if !compact {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 6, style: .continuous).fill(ShellTheme.navy)
-                    Text(shell.currentVolume?.heb ?? "\u{05DB}\u{05EA}\u{05D1}\u{05D9} \u{05D4}\u{05E7}\u{05D3}\u{05E9}")
-                        .font(ShellTheme.hebrew(11)).foregroundStyle(ShellTheme.gold)
-                        .multilineTextAlignment(.center).minimumScaleFactor(0.6).padding(3)
-                }
-                .frame(width: 36, height: 36)
+            ZStack {
+                RoundedRectangle(cornerRadius: 6, style: .continuous).strokeBorder(shell.hereChrome, lineWidth: 1)
+                Text(shell.currentVolume?.heb ?? "\u{05DB}\u{05EA}\u{05D1}\u{05D9} \u{05D4}\u{05E7}\u{05D3}\u{05E9}")
+                    .font(ShellTheme.hebrew(11)).foregroundStyle(shell.hereChrome)
+                    .multilineTextAlignment(.center).minimumScaleFactor(0.6).padding(3)
             }
+            .frame(width: 36, height: 36)
             VStack(alignment: .leading, spacing: 1) {
                 Text(shell.whereLabel.isEmpty ? "Reading" : shell.whereLabel)
                     .font(.footnote.weight(.semibold)).lineLimit(1)
                 HStack(spacing: 4) {
+                    // The volume's name gives way first (scaled, then cut)
+                    // so "Carmit" and the speed always show whole.
                     Text("\(shell.currentVolume?.name ?? "Hebrew") | Carmit \u{00B7}")
-                        .font(.caption).foregroundStyle(.secondary).lineLimit(1)
+                        .font(.caption).foregroundStyle(shell.onChrome.opacity(0.72))
+                        .lineLimit(1).minimumScaleFactor(0.85)
                     Menu {
                         ForEach(shell.listenRates, id: \.self) { r in
                             Button { shell.setListenRate(r) } label: {
@@ -133,43 +188,44 @@ struct ListenBar: View {
                             }
                         }
                     } label: {
-                        Text(String(format: "%g\u{00D7}", shell.listenRate)).font(.caption.weight(.semibold)).foregroundStyle(ShellTheme.gold)
+                        Text(String(format: "%g\u{00D7}", shell.listenRate)).font(.caption.weight(.semibold)).foregroundStyle(shell.hereChrome)
                     }
+                    .fixedSize()
                     .accessibilityLabel("Reading speed")
                 }
             }
             Spacer(minLength: 4)
-            if !compact {
-                Button { shell.skipListen(back: true) } label: {
-                    Image(systemName: "gobackward.10").font(.system(size: 20)).frame(width: 44, height: 44)
-                }
-                .accessibilityLabel("Back ten seconds")
+            Button { shell.skipListen(back: true) } label: {
+                Image(systemName: "gobackward.10").font(.system(size: 20)).frame(width: 44, height: 44)
             }
+            .accessibilityLabel("Back ten seconds")
             Button { shell.pauseListen() } label: {
                 Image(systemName: shell.listenPaused ? "play.fill" : "pause.fill").font(.system(size: 20)).frame(width: 44, height: 44)
             }
             .accessibilityLabel(shell.listenPaused ? "Resume" : "Pause")
         }
-        .foregroundStyle(.primary)
-        .padding(.horizontal, compact ? 8 : 10)
-        .padding(.vertical, compact ? 4 : 5)
+        .foregroundStyle(shell.onChrome)
+        .padding(.horizontal, 10)
+        .padding(.vertical, 5)
     }
 }
 
-/// The bar sits above the Read tab's content, inset so the page moves up
-/// under it. Not the tab view's own bottom accessory: adding or removing
-/// that accessory rebuilt the tab view, which re-parented the web view and
-/// cancelled the very speech the bar was showing. An inset with conditional
-/// content changes nothing above it.
+/// The player sits above the Read page's content, inset so the page moves
+/// up under it, on the chrome that runs to the bottom of the glass. Not the
+/// tab view's own bottom accessory: adding or removing that accessory
+/// rebuilt the tab view, which re-parented the web view and cancelled the
+/// very speech the bar was showing. An inset with conditional content
+/// changes nothing above it.
 struct ListenBarBelowContent: ViewModifier {
     @ObservedObject var shell: WebShell
     func body(content: Content) -> some View {
         content.safeAreaInset(edge: .bottom) {
             if shell.listening {
                 ListenBar().environmentObject(shell)
-                    .background(.regularMaterial, in: Capsule())
-                    .padding(.horizontal, 10)
-                    .padding(.bottom, 6)
+                    .padding(.horizontal, 6)
+                    .padding(.top, 2)
+                    .frame(maxWidth: .infinity)
+                    .background(shell.chrome.ignoresSafeArea(edges: .bottom))
             }
         }
     }

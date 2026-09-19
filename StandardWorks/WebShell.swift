@@ -22,8 +22,23 @@ final class WebShell: ObservableObject {
     /// The Search tab's text, kept here so the tab keeps it across visits.
     @Published var searchQuery = ""
     @Published var searchPresented = false
+    /// The theme the page is showing ("light", "sepia", "dark"), as last read
+    /// by LocalSiteWebViewLogger.matchPaper, so the shell's own surfaces — the
+    /// bottom band, the player, the native bars — are cut from the page's
+    /// chrome in every theme.
+    @Published var theme = "light"
+    var chrome: Color { Color(AppShell.chrome(theme: theme)) }
+    var onChrome: Color { Color(AppShell.onChrome(theme: theme)) }
+    var hereChrome: Color { Color(AppShell.hereChrome(theme: theme)) }
     @Published private(set) var volumes: [Volume] = []
-    @Published var chromeHidden = false
+    /// Reading: a finger scrolled the page down. The page's mode row
+    /// (Interlinear · Hebrew · Dual · Translit · Nikkud) collapses while this
+    /// is set and pops back on a scroll up (translator, 2026-09-19); the
+    /// shell's own row stays. Carried to the page as a class on <html>, which
+    /// the app's injected stylesheet (AppShell) reads.
+    @Published var chromeHidden = false {
+        didSet { if chromeHidden != oldValue { run("document.documentElement.classList.toggle('sw-app-reading', \(chromeHidden));") } }
+    }
     /// The Library's navigation stack, so a route can be pushed from outside a tap.
     @Published var libraryPath: [LibraryRoute] = []
     /// The chapter the page is showing, for the Read tab's own sense of place.
@@ -76,7 +91,9 @@ final class WebShell: ObservableObject {
     func handle(message: [String: Any]) {
         switch message["op"] as? String {
         case "library": tab = .library
-        case "listen": toggleListen()
+        // The page changed its theme (its own ◐ button): re-cut the shell's
+        // chrome and the web view's paper to match.
+        case "theme": if let wv = webView { LocalSiteWebViewLogger.matchPaper(wv, shell: self) }
         default: break
         }
     }
@@ -139,8 +156,11 @@ final class WebShell: ObservableObject {
 
     // MARK: - listen
 
-    /// The Listen button: play the chapter from the page's own reader, or stop it.
+    /// The Listen item in the tab row: play the chapter from the page's own
+    /// reader (bringing the Read tab up if another was showing), or stop it.
     func toggleListen() {
+        if tab != .read { tab = .read }
+        guard canListen else { return }
         run("(function(){ var r = window.SWReadAloud; if (!r) return; if (r.playing) r.stop(); else r.play(); })();")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { [weak self] in self?.refreshListen() }
     }
@@ -196,9 +216,9 @@ final class WebShell: ObservableObject {
 
     // MARK: - chrome that gets out of the way
 
-    /// Reading hides the tab bar; a scroll back up, or reaching the top,
-    /// brings it back. Measured against the page's own scroll view, so a
-    /// page that scrolls inside a panel does not move the bar.
+    /// Reading collapses the page's mode row; a scroll back up, or reaching
+    /// the top, brings it back. Measured against the page's own scroll view,
+    /// so a page that scrolls inside a panel does not move it.
     private func watchScroll(_ wv: WKWebView) {
         scrollObservation = wv.scrollView.observe(\.contentOffset, options: [.new]) { [weak self] sv, _ in
             guard let self else { return }
@@ -207,7 +227,7 @@ final class WebShell: ObservableObject {
             self.lastOffset = y
             if y <= 40 { if self.chromeHidden { withAnimation { self.chromeHidden = false } }; return }
             // A finger, not the page: a chapter opened at a verse scrolls itself
-            // there, and that must not take the tab bar away before reading starts.
+            // there, and that must not fold the mode row before reading starts.
             guard sv.isDragging || sv.isDecelerating else { return }
             if abs(dy) < 6 { return }
             let hide = dy > 0
@@ -243,9 +263,10 @@ func jsString(_ s: String) -> String {
 /// light app-wide for the reader's sake; a white native bar would have put
 /// white on white).
 struct ShellBar: ViewModifier {
+    @EnvironmentObject var shell: WebShell
     func body(content: Content) -> some View {
         content
-            .toolbarBackground(ShellTheme.navy, for: .navigationBar)
+            .toolbarBackground(shell.chrome, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarColorScheme(.dark, for: .navigationBar)
     }
