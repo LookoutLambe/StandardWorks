@@ -195,6 +195,40 @@ enum AppShell {
     })();
     """
 
+    /// Document end, main frame only: THE MARK IN THE BAR IS THE APP'S. The
+    /// site draws the open book with the spire (icons/sw-mark.png) at the
+    /// top left; the app draws its own icon's art there — the scroll-book with
+    /// the star (translator, 2026-09-19: "the logo to be this main one in the
+    /// upper left hand corner... the other is just for the website"). The art
+    /// ships in the asset catalog (AppMark.dataset: the icon with its navy
+    /// knocked out, fitted 3:2 at 3×; drawn 66×44, the height of the buttons beside it) and comes in as a
+    /// data URI, so www holds nothing of the app's. Re-applied whenever the
+    /// bar is (re)built.
+    static func markSource(dataURI: String) -> String {
+        """
+        (function () {
+          var SRC = \(jsString(dataURI));
+          function apply() {
+            var img = document.querySelector('.sw-chrome-home img');
+            if (!img) return false;
+            if (img.getAttribute('src') !== SRC) {
+              img.setAttribute('src', SRC);
+              img.style.width = '66px'; img.style.height = '44px';
+              img.style.objectFit = 'contain'; img.style.display = 'block';
+            }
+            return true;
+          }
+          if (!apply()) {
+            var tries = 0;
+            var t = setInterval(function () { if (apply() || ++tries > 60) clearInterval(t); }, 50);
+          }
+          if (window.MutationObserver) {
+            new MutationObserver(function () { apply(); }).observe(document.documentElement, { childList: true, subtree: true });
+          }
+        })();
+        """
+    }
+
     /// Document end, main frame only: the bar's English line is the App
     /// Store's name. The site builds its bar in site_chrome.js at load, so
     /// this waits for the span rather than assuming it.

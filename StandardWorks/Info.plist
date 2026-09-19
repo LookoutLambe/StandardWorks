@@ -4,5 +4,16 @@
 <dict>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<!-- THE LAUNCH SCREEN. Xcode's INFOPLIST_KEY_UILaunchScreen_* settings stop
+	     reaching the built plist once a real Info.plist is merged in (measured:
+	     UILaunchScreen came out as an empty dict, so the app launched to a blank
+	     screen instead of the logo). The same logo and navy, stated here. -->
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>LaunchBackground</string>
+		<key>UIImageName</key>
+		<string>LaunchLogo</string>
+	</dict>
 </dict>
 </plist>

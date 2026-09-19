@@ -246,6 +246,14 @@ struct LocalSiteWebView: UIViewRepresentable {
             source: AppShell.documentEndSource,
             injectionTime: .atDocumentEnd,
             forMainFrameOnly: true))
+        // The app's own mark in the bar (AppShell.markSource): the icon's
+        // art from the asset catalog, handed to the page as a data URI.
+        if let mark = NSDataAsset(name: "AppMark")?.data {
+            config.userContentController.addUserScript(WKUserScript(
+                source: AppShell.markSource(dataURI: "data:image/png;base64," + mark.base64EncodedString()),
+                injectionTime: .atDocumentEnd,
+                forMainFrameOnly: true))
+        }
 
         let webView = WKWebView(frame: .zero, configuration: config)
         webView.navigationDelegate = coordinator

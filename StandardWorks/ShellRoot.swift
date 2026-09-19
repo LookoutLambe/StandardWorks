@@ -17,6 +17,9 @@ struct ShellRoot: View {
     @StateObject private var shell: WebShell
     @Environment(\.colorScheme) private var colorScheme
     @AppStorage("shell.appearance") private var appearance = "system"
+    /// The launch splash stays at least this long, and never past the cap.
+    @State private var splashMinimumPassed = false
+    @State private var splashGaveUp = false
 
     let onPageSettled: () -> Void
 
@@ -58,8 +61,28 @@ struct ShellRoot: View {
         // navy and not a white seam.
         .background(shell.chrome.ignoresSafeArea())
         .animation(UIAccessibility.isReduceMotionEnabled ? nil : .easeInOut(duration: 0.2), value: barHidden)
+        // THE LOGO BEFORE ANYTHING. iOS shows the launch screen only while the
+        // process starts; the page behind it is still loading when it goes.
+        // This holds the same logo on the same navy until the first page has
+        // finished (WebShell.firstPageReady), at least 0.9 s so it is seen,
+        // and never past 4.5 s, then fades — the way the Android shell opens
+        // (translator, 2026-09-19: "i want that to happen with the iphone").
+        .overlay {
+            if splashShowing { LaunchSplash().transition(.opacity) }
+        }
+        .animation(UIAccessibility.isReduceMotionEnabled ? nil : .easeOut(duration: 0.4), value: splashShowing)
+        .task {
+            try? await Task.sleep(nanoseconds: 900_000_000)
+            splashMinimumPassed = true
+            try? await Task.sleep(nanoseconds: 3_600_000_000)
+            splashGaveUp = true
+        }
         .environmentObject(shell)
         .tint(ShellTheme.gold)
+    }
+
+    private var splashShowing: Bool {
+        !splashGaveUp && !(shell.firstPageReady && splashMinimumPassed)
     }
 
     /// Gone only while the player is up.
@@ -101,6 +124,24 @@ struct ShellRoot: View {
         case "light", "sepia", "dark": return appearance
         default: return colorScheme == .dark ? "dark" : "light"
         }
+    }
+}
+
+/// THE LAUNCH SCREEN, CONTINUED: the same LaunchLogo on the same
+/// LaunchBackground, laid out as iOS lays the launch image out (its own
+/// point size, centred, the edges the screen cannot hold clipped), so the
+/// hand-over from the system's launch screen to this is invisible.
+struct LaunchSplash: View {
+    var body: some View {
+        ZStack {
+            Color("LaunchBackground")
+            Image("LaunchLogo")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 512, height: 512)
+        }
+        .ignoresSafeArea()
+        .accessibilityHidden(true)
     }
 }
 

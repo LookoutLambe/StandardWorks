@@ -47,6 +47,8 @@ final class WebShell: ObservableObject {
     /// is set and pops back on a scroll up (translator, 2026-09-19); the
     /// shell's own row stays. Carried to the page as a class on <html>, which
     /// the app's injected stylesheet (AppShell) reads.
+    /// The first page has finished loading: the launch splash may go.
+    @Published private(set) var firstPageReady = false
     @Published var chromeHidden = false {
         didSet { if chromeHidden != oldValue { run("document.documentElement.classList.toggle('sw-app-reading', \(chromeHidden));") } }
     }
@@ -268,6 +270,19 @@ final class WebShell: ObservableObject {
     }
 
     func pageSettled(_ wv: WKWebView) {
+        if !firstPageReady {
+            // The boot request (index.html?boot=1) finishes BEFORE the chapter
+            // it redirects to (measured: didFinish for both, half a second
+            // apart), so it only counts as the first page when there is no
+            // record to redirect to — the landing is then the page.
+            if (wv.url?.query ?? "").contains(AppShell.bootQuery) {
+                wv.evaluateJavaScript("!!localStorage.getItem('sw-last-read')") { [weak self] v, _ in
+                    if (v as? Bool) != true { self?.firstPageReady = true }
+                }
+            } else {
+                firstPageReady = true
+            }
+        }
         lastOffset = wv.scrollView.contentOffset.y
         if chromeHidden { chromeHidden = false }
         refreshWhere()
