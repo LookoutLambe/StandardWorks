@@ -62,16 +62,9 @@ struct ShellRoot: View {
     /// The Read tab: the one web view and what rides on it.
     private var readTab: some View {
         LocalSiteWebView(shell: shell, systemDark: systemDark, onPageSettled: onPageSettled)
-            // LISTEN, where a scripture app keeps it: a round button at the
-            // right, above the page's own footer. It drives the site's
-            // read-aloud (Carmit); a long press picks the speed.
-            .overlay(alignment: .bottomTrailing) {
-                if shell.canListen && !shell.listening {
-                    ListenButton()
-                        .padding(.trailing, 14)
-                        .padding(.bottom, 64 + 12 + (shell.chromeHidden ? ShellRoot.homeIndicatorInset : 0))
-                }
-            }
+            // LISTEN is a button in the page's own bar (AppShell injects it
+            // beside Aa and the theme toggle); a floating one covered the last
+            // words of a row. The player bar below is native.
             .modifier(ListenBarBelowContent(shell: shell))
             // The page runs under the status bar and pads its own bar by
             // env(safe-area-inset-top). The bottom edge is SwiftUI's while
@@ -103,37 +96,6 @@ struct ShellRoot: View {
     }
 }
 
-/// The round headphones button. Navy on the paper like the site's own chrome,
-/// gold when speaking; a long press offers the reader's speeds.
-struct ListenButton: View {
-    @EnvironmentObject var shell: WebShell
-
-    var body: some View {
-        Button {
-            shell.toggleListen()
-        } label: {
-            Image(systemName: shell.listening ? "stop.fill" : "headphones")
-                .font(.system(size: 20, weight: .semibold))
-                .foregroundStyle(shell.listening ? ShellTheme.navy : ShellTheme.gold)
-                .frame(width: 52, height: 52)
-                .background(shell.listening ? ShellTheme.gold : ShellTheme.navy, in: Circle())
-                .shadow(color: .black.opacity(0.25), radius: 6, y: 3)
-        }
-        .accessibilityLabel(shell.listening ? "Stop reading aloud" : "Listen")
-        .sensoryFeedback(.impact(weight: .light), trigger: shell.listening)
-        .contextMenu {
-            ForEach(shell.listenRates, id: \.self) { r in
-                Button {
-                    shell.setListenRate(r)
-                } label: {
-                    if abs(r - shell.listenRate) < 0.001 { Label(String(format: "%g\u{00D7}", r), systemImage: "checkmark") }
-                    else { Text(String(format: "%g\u{00D7}", r)) }
-                }
-            }
-        }
-    }
-}
-
 /// THE NOW-PLAYING BAR, the way a scripture app shows one while it reads:
 /// close · the volume's tile · chapter and voice · back ten seconds · pause.
 /// Inset above the Read tab's content (see ListenBarBelowContent); it
@@ -160,8 +122,21 @@ struct ListenBar: View {
             VStack(alignment: .leading, spacing: 1) {
                 Text(shell.whereLabel.isEmpty ? "Reading" : shell.whereLabel)
                     .font(.footnote.weight(.semibold)).lineLimit(1)
-                Text("\(shell.currentVolume?.name ?? "Hebrew") | Carmit \u{00B7} \(String(format: "%g\u{00D7}", shell.listenRate))")
-                    .font(.caption).foregroundStyle(.secondary).lineLimit(1)
+                HStack(spacing: 4) {
+                    Text("\(shell.currentVolume?.name ?? "Hebrew") | Carmit \u{00B7}")
+                        .font(.caption).foregroundStyle(.secondary).lineLimit(1)
+                    Menu {
+                        ForEach(shell.listenRates, id: \.self) { r in
+                            Button { shell.setListenRate(r) } label: {
+                                if abs(r - shell.listenRate) < 0.001 { Label(String(format: "%g\u{00D7}", r), systemImage: "checkmark") }
+                                else { Text(String(format: "%g\u{00D7}", r)) }
+                            }
+                        }
+                    } label: {
+                        Text(String(format: "%g\u{00D7}", shell.listenRate)).font(.caption.weight(.semibold)).foregroundStyle(ShellTheme.gold)
+                    }
+                    .accessibilityLabel("Reading speed")
+                }
             }
             Spacer(minLength: 4)
             if !compact {

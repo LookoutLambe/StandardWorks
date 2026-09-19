@@ -103,6 +103,15 @@ enum AppShell {
         'html .sw-chrome-print, html #safari-browser-tip { display: none !important; }',
         /* the app has its own Listen button; the page's floating transport pill would double it */
         'html #ra-float { display: none !important; }',
+        /* LISTEN IN THE BAR, beside Aa and the theme toggle, where it covers no
+           word in either orientation (a floating button sat on the last words
+           of a row). Injected by the script below; gold while speaking. */
+        'html body.sw-chrome-reader .sw-app-listen { grid-column: 5; }',
+        /* narrower than the site's 44px so the chapter pill keeps its name; the tap area stays 44 tall and 38 wide */
+        'html .sw-app-listen { min-width: 38px !important; padding: 6px 3px !important; }',
+        'html .sw-app-listen svg { width: 20px; height: 20px; display: block; }',
+        /* real gold and real navy: --sw-gold is a near-white in this bar */
+        'html.sw-app-listening .sw-app-listen { background: #C89B3C !important; color: #1B2A41 !important; }',
         /* while the app's player is up, the page's bottom bar steps aside so
            the reader keeps its room: player + tab bar, as a scripture app has */
         'html.sw-app-listening .controls-bottom, html.sw-app-listening #sw-reader-footer { display: none !important; }',
@@ -199,6 +208,34 @@ enum AppShell {
         e.preventDefault(); e.stopPropagation();
         port.postMessage({ op: 'library' });
       }, true);
+
+      /* 9. LISTEN, in the bar. Only where the page can read aloud (SWReadAloud
+         arrives with read_aloud.js, up to several seconds after the bar), and
+         only with a native shell listening for the tap. */
+      (function () {
+        var port = window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.swShell;
+        if (!port) return;
+        var tries = 0;
+        var t = setInterval(function () {
+          var bar = document.querySelector('.sw-top-bar-inner');
+          var dark = document.getElementById('sw-chrome-dark');
+          if (++tries > 300) { clearInterval(t); return; }
+          if (!bar || !dark || !window.SWReadAloud) return;
+          clearInterval(t);
+          if (document.querySelector('.sw-app-listen')) return;
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'sw-chrome-btn sw-app-listen';
+          b.setAttribute('aria-label', 'Listen');
+          b.title = 'Listen';
+          b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+            '<path d="M4 14v-2a8 8 0 0 1 16 0v2"/>' +
+            '<rect x="3.5" y="13" width="4.5" height="7" rx="1.6"/>' +
+            '<rect x="16" y="13" width="4.5" height="7" rx="1.6"/></svg>';
+          b.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); port.postMessage({ op: 'listen' }); });
+          dark.insertAdjacentElement('afterend', b);
+        }, 100);
+      })();
 
       var NAME = 'Sefer Mormon: Standard Works';
       function rename() {

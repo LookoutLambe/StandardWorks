@@ -76,6 +76,7 @@ final class WebShell: ObservableObject {
     func handle(message: [String: Any]) {
         switch message["op"] as? String {
         case "library": tab = .library
+        case "listen": toggleListen()
         default: break
         }
     }
