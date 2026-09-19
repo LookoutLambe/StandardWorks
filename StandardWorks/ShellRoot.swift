@@ -120,6 +120,7 @@ struct ListenButton: View {
                 .shadow(color: .black.opacity(0.25), radius: 6, y: 3)
         }
         .accessibilityLabel(shell.listening ? "Stop reading aloud" : "Listen")
+        .sensoryFeedback(.impact(weight: .light), trigger: shell.listening)
         .contextMenu {
             ForEach(shell.listenRates, id: \.self) { r in
                 Button {
@@ -144,7 +145,7 @@ struct ListenBar: View {
     var body: some View {
         HStack(spacing: compact ? 8 : 10) {
             Button { shell.stopListen() } label: {
-                Image(systemName: "xmark").font(.system(size: 16, weight: .semibold)).frame(width: 32, height: 32)
+                Image(systemName: "xmark").font(.system(size: 16, weight: .semibold)).frame(width: 44, height: 44)
             }
             .accessibilityLabel("Stop listening")
             if !compact {
@@ -165,12 +166,12 @@ struct ListenBar: View {
             Spacer(minLength: 4)
             if !compact {
                 Button { shell.skipListen(back: true) } label: {
-                    Image(systemName: "gobackward.10").font(.system(size: 20)).frame(width: 36, height: 36)
+                    Image(systemName: "gobackward.10").font(.system(size: 20)).frame(width: 44, height: 44)
                 }
                 .accessibilityLabel("Back ten seconds")
             }
             Button { shell.pauseListen() } label: {
-                Image(systemName: shell.listenPaused ? "play.fill" : "pause.fill").font(.system(size: 20)).frame(width: 36, height: 36)
+                Image(systemName: shell.listenPaused ? "play.fill" : "pause.fill").font(.system(size: 20)).frame(width: 44, height: 44)
             }
             .accessibilityLabel(shell.listenPaused ? "Resume" : "Pause")
         }

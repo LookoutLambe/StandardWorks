@@ -2,7 +2,7 @@ import SwiftUI
 import WebKit
 import UIKit
 
-final class LocalSiteWebViewLogger: NSObject, WKNavigationDelegate {
+final class LocalSiteWebViewLogger: NSObject, WKNavigationDelegate, WKScriptMessageHandler {
     /// Set by the representable each update; the view decides what a settled
     /// page is worth, this class only reports one.
     var onPageSettled: () -> Void = {}
@@ -21,6 +21,12 @@ final class LocalSiteWebViewLogger: NSObject, WKNavigationDelegate {
 
     /// The shell that shares this web view with the native tabs.
     weak var shell: WebShell?
+
+    /// Messages from the page's app-only scripts (AppShell): {op: "library"}.
+    func userContentController(_ controller: WKUserContentController, didReceive message: WKScriptMessage) {
+        guard message.name == "swShell", let body = message.body as? [String: Any] else { return }
+        shell?.handle(message: body)
+    }
 
     /// The theme the shell last pushed into the page for the system's sake.
     /// Kept in UserDefaults so a launch does not re-push a setting the page
@@ -99,18 +105,25 @@ struct LocalSiteWebView: UIViewRepresentable {
 
     private var wwwDirectoryURL: URL { shell.wwwDirectoryURL }
 
-    func makeCoordinator() -> LocalSiteWebViewLogger { LocalSiteWebViewLogger() }
+    func makeCoordinator() -> LocalSiteWebViewLogger { shell.pageDelegate }
 
     func makeUIView(context: Context) -> WKWebView {
-        // Made once for the life of the app. SwiftUI may build this
-        // representable again (a tab re-entered, a scene change); the book
-        // must not reload when it does.
-        if let existing = shell.webView {
-            context.coordinator.shell = shell
-            existing.navigationDelegate = context.coordinator
-            context.coordinator.onPageSettled = onPageSettled
-            return existing
-        }
+        // The web view is made by the shell at launch (see makeWebView), so
+        // the reader is already loading while the Library is browsed and a
+        // chapter tapped there has somewhere to go. This representable only
+        // seats it and keeps its delegate current.
+        let webView = shell.webView ?? LocalSiteWebView.makeWebView(shell: shell, coordinator: context.coordinator,
+                                                                    systemDark: systemDark)
+        context.coordinator.shell = shell
+        context.coordinator.onPageSettled = onPageSettled
+        webView.navigationDelegate = context.coordinator
+        return webView
+    }
+
+    /// Builds the one web view: its configuration, the injected scripts, the
+    /// paper behind it, the first request. Called once, by WebShell.init.
+    static func makeWebView(shell: WebShell, coordinator: LocalSiteWebViewLogger, systemDark: Bool) -> WKWebView {
+        let wwwDirectoryURL = shell.wwwDirectoryURL
         let config = WKWebViewConfiguration()
         config.defaultWebpagePreferences.preferredContentMode = .mobile
 
@@ -118,8 +131,9 @@ struct LocalSiteWebView: UIViewRepresentable {
         // Catalyst does not, so the page gets a stand-in that speaks through
         // AVSpeechSynthesizer instead. The shim no-ops wherever the real API
         // exists, so this changes nothing on iOS. See SpeechBridge.
-        config.userContentController.add(context.coordinator.speech,
+        config.userContentController.add(coordinator.speech,
                                          name: SpeechBridge.handlerName)
+        config.userContentController.add(coordinator, name: "swShell")
         config.userContentController.addUserScript(WKUserScript(
             source: SpeechBridge.shimSource,
             injectionTime: .atDocumentStart,
@@ -231,10 +245,9 @@ struct LocalSiteWebView: UIViewRepresentable {
             forMainFrameOnly: true))
 
         let webView = WKWebView(frame: .zero, configuration: config)
-        webView.navigationDelegate = context.coordinator
-        context.coordinator.speech.attach(to: webView)
-        context.coordinator.onPageSettled = onPageSettled
-        context.coordinator.shell = shell
+        webView.navigationDelegate = coordinator
+        coordinator.speech.attach(to: webView)
+        coordinator.shell = shell
         // Paper behind everything, never system white: the launch used to
         // flash white between the launch screen and the first page, and every
         // volume switch showed a white frame. The page's own paper instead,
@@ -248,7 +261,7 @@ struct LocalSiteWebView: UIViewRepresentable {
         // bar and the page pads its own bars by env(safe-area-inset-*): with
         // .automatic WebKit would add the status-bar height a second time.
         webView.scrollView.contentInsetAdjustmentBehavior = .never
-        context.coordinator.systemDark = systemDark
+        coordinator.systemDark = systemDark
         LocalSiteWebView.pinLayoutScale(webView)
         // The horizontal swipe belongs to the page turn, not to history.
         // A Hebrew book's spine is on the right, so turning FORWARD drags
@@ -368,6 +381,8 @@ enum DebugBridge {
                            let b = v.divisions.flatMap(\.books).first(where: { $0.id == parts[2] }) {
                             sh.open(volume: v, book: b, chapter: n)
                         } else { answer = "unknown chapter" }
+                    case "type":
+                        sh.searchQuery = parts.dropFirst().joined(separator: " ")
                     case "search":
                         let q = parts.dropFirst().joined(separator: " ")
                         let hits = sh.searchIndex.find(q)

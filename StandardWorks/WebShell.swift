@@ -19,6 +19,8 @@ final class WebShell: ObservableObject {
     enum Tab: Hashable { case library, read, search, notes, settings }
 
     @Published var tab: Tab = .read
+    /// The Search tab's text, kept here so the tab keeps it across visits.
+    @Published var searchQuery = ""
     @Published private(set) var volumes: [Volume] = []
     @Published var chromeHidden = false
     /// The Library's navigation stack, so a route can be pushed from outside a tap.
@@ -37,6 +39,9 @@ final class WebShell: ObservableObject {
     let wwwDirectoryURL: URL
     /// The whole canon's verse index, loaded once in the background. See SearchIndex.
     let searchIndex: SearchIndex
+    /// The web view's navigation delegate and speech bridge, owned here so the
+    /// web view can exist before the Read tab is ever shown.
+    let pageDelegate = LocalSiteWebViewLogger()
     private(set) var bomHashes: [String: String] = [:]
     var webView: WKWebView?
     private var scrollObservation: NSKeyValueObservation?
@@ -48,6 +53,26 @@ final class WebShell: ObservableObject {
         ShellTheme.registerFonts(www: www)
         volumes = LibraryRegistry.load(www: www)
         bomHashes = LibraryRegistry.bomHashes(www: www)
+        // A first launch opens on the Library, the way a scripture app does;
+        // every launch after that opens in the book (AppShell's boot redirect).
+        if !UserDefaults.standard.bool(forKey: "shell.launchedBefore") {
+            UserDefaults.standard.set(true, forKey: "shell.launchedBefore")
+            tab = .library
+        }
+        // The reader loads from the first moment, whichever tab is showing.
+        pageDelegate.shell = self
+        let dark = UITraitCollection.current.userInterfaceStyle == .dark
+        _ = LocalSiteWebView.makeWebView(shell: self, coordinator: pageDelegate, systemDark: dark)
+    }
+
+    /// The page's own home mark, tapped in the app: not the website's landing
+    /// page but the Library tab. Posted by the script in AppShell through
+    /// the "swShell" message handler.
+    func handle(message: [String: Any]) {
+        switch message["op"] as? String {
+        case "library": tab = .library
+        default: break
+        }
     }
 
     // MARK: - the page
@@ -180,7 +205,10 @@ final class WebShell: ObservableObject {
             guard sv.isDragging || sv.isDecelerating else { return }
             if abs(dy) < 6 { return }
             let hide = dy > 0
-            if hide != self.chromeHidden { withAnimation(.easeInOut(duration: 0.2)) { self.chromeHidden = hide } }
+            if hide != self.chromeHidden {
+                if UIAccessibility.isReduceMotionEnabled { self.chromeHidden = hide }
+                else { withAnimation(.easeInOut(duration: 0.2)) { self.chromeHidden = hide } }
+            }
         }
     }
 
@@ -241,9 +269,10 @@ enum ShellTheme {
         }
     }
 
+    /// Scales with the reader's Dynamic Type setting, like the system text beside it.
     static func hebrew(_ size: CGFloat) -> Font {
-        if UIFont(name: "DavidLibre-Regular", size: size) != nil { return .custom("DavidLibre-Regular", size: size) }
-        if UIFont(name: hebrewFamily, size: size) != nil { return .custom(hebrewFamily, size: size) }
+        if UIFont(name: "DavidLibre-Regular", size: size) != nil { return .custom("DavidLibre-Regular", size: size, relativeTo: .body) }
+        if UIFont(name: hebrewFamily, size: size) != nil { return .custom(hebrewFamily, size: size, relativeTo: .body) }
         return .system(size: size)
     }
 }

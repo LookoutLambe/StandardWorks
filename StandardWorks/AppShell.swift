@@ -188,6 +188,18 @@ enum AppShell {
       window.addEventListener('resize', measure);
       window.addEventListener('orientationchange', function () { setTimeout(measure, 100); });
 
+      /* 8. THE MARK IN THE BAR IS THE LIBRARY, not the website's home page.
+         Captured before the site's own handler, and only where a native
+         shell is listening. */
+      document.addEventListener('click', function (e) {
+        var a = e.target && e.target.closest ? e.target.closest('.sw-chrome-home, .sw-top-bar-brand') : null;
+        if (!a) return;
+        var port = window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.swShell;
+        if (!port) return;
+        e.preventDefault(); e.stopPropagation();
+        port.postMessage({ op: 'library' });
+      }, true);
+
       var NAME = 'Sefer Mormon: Standard Works';
       function rename() {
         var en = document.querySelector('.sw-top-bar-brand-en');

@@ -12,7 +12,7 @@ import JavaScriptCore
 /// thread, evaluated in JavaScriptCore exactly as the page would evaluate it,
 /// and searches it the way the home page does: Hebrew with or without nikkud
 /// (points stripped, finals folded, maqqef a space), English case-blind.
-final class SearchIndex {
+final class SearchIndex: ObservableObject {
     struct Row {
         let volume: String
         let link: String       // the reader's deep-link hash
@@ -34,7 +34,7 @@ final class SearchIndex {
     private var pages: [String: String] = [:]
     private var rows: [String: [Row]] = [:]
     private var lowered: [String: [String]] = [:]
-    private(set) var loaded = false
+    @Published private(set) var loaded = false
     private let queue = DispatchQueue(label: "search-index", qos: .userInitiated)
 
     init(www: URL) {
@@ -85,7 +85,7 @@ final class SearchIndex {
     }
 
     /// Hits in the site's volume order, at most `perVolume` from each.
-    func find(_ query: String, perVolume: Int = 60) -> [Hit] {
+    func find(_ query: String, perVolume: Int = 200) -> [Hit] {
         let q = query.trimmingCharacters(in: .whitespaces)
         guard loaded, q.count >= 2 else { return [] }
         let isHeb = Self.hasHebrew(q)

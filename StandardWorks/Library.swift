@@ -262,6 +262,7 @@ struct ChaptersView: View {
                             .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 8, style: .continuous))
                     }
                     .foregroundStyle(.primary)
+                    .accessibilityLabel("Chapter \(n)")
                 }
             }
             .padding(16)
