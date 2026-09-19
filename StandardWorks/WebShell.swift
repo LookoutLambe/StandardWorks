@@ -27,9 +27,20 @@ final class WebShell: ObservableObject {
     /// bottom band, the player, the native bars — are cut from the page's
     /// chrome in every theme.
     @Published var theme = "light"
-    var chrome: Color { Color(AppShell.chrome(theme: theme)) }
-    var onChrome: Color { Color(AppShell.onChrome(theme: theme)) }
-    var hereChrome: Color { Color(AppShell.hereChrome(theme: theme)) }
+    var dark: Bool { theme == "dark" }
+    /// The page's palette for this theme (AppShell.Palette), as SwiftUI colours.
+    var palette: AppShell.Palette { AppShell.palette(theme: theme) }
+    var paper: Color { Color(palette.paper) }
+    var panel: Color { Color(palette.panel) }
+    var card: Color { Color(palette.card) }
+    var ink: Color { Color(palette.ink) }
+    var ink2: Color { Color(palette.ink2) }
+    var ink3: Color { Color(palette.ink3) }
+    var rule: Color { Color(palette.rule) }
+    var here: Color { Color(palette.here) }
+    var chrome: Color { Color(palette.chrome) }
+    var onChrome: Color { Color(palette.onChrome) }
+    var hereChrome: Color { Color(palette.hereChrome) }
     @Published private(set) var volumes: [Volume] = []
     /// Reading: a finger scrolled the page down. The page's mode row
     /// (Interlinear · Hebrew · Dual · Translit · Nikkud) collapses while this
@@ -81,8 +92,10 @@ final class WebShell: ObservableObject {
         }
         // The reader loads from the first moment, whichever tab is showing.
         pageDelegate.shell = self
-        let dark = UITraitCollection.current.userInterfaceStyle == .dark
-        _ = LocalSiteWebView.makeWebView(shell: self, coordinator: pageDelegate, systemDark: dark)
+        let phone = UITraitCollection.current.userInterfaceStyle == .dark ? "dark" : "light"
+        let choice = UserDefaults.standard.string(forKey: "shell.appearance") ?? "system"
+        _ = LocalSiteWebView.makeWebView(shell: self, coordinator: pageDelegate,
+                                         wantedTheme: ["light", "sepia", "dark"].contains(choice) ? choice : phone)
     }
 
     /// The page's own home mark, tapped in the app: not the website's landing
@@ -92,10 +105,26 @@ final class WebShell: ObservableObject {
         switch message["op"] as? String {
         case "library": tab = .library
         // The page changed its theme (its own ◐ button): re-cut the shell's
-        // chrome and the web view's paper to match.
-        case "theme": if let wv = webView { LocalSiteWebViewLogger.matchPaper(wv, shell: self) }
+        // chrome and the web view's paper to match, and make it the choice.
+        case "theme":
+            if let wv = webView { LocalSiteWebViewLogger.matchPaper(wv, shell: self) }
+            if let t = message["theme"] as? String { adoptPageTheme(t) }
         default: break
         }
+    }
+
+    /// The page shows a theme. It is now the choice Settings shows — "Match
+    /// phone" only while it is the phone's own scheme — and the theme the
+    /// shell counts as already applied, so the next page load does not push
+    /// an older choice back over it.
+    private func adoptPageTheme(_ t: String) {
+        guard ["light", "sepia", "dark"].contains(t) else { return }
+        let store = UserDefaults.standard
+        store.set(t, forKey: LocalSiteWebViewLogger.appliedThemeKey)
+        let phone = ShellRoot.phoneIsDark ? "dark" : "light"
+        let choice = store.string(forKey: "shell.appearance") ?? "system"
+        let want = ["light", "sepia", "dark"].contains(choice) ? choice : phone
+        if want != t { store.set(t, forKey: "shell.appearance") }
     }
 
     // MARK: - the page
@@ -271,8 +300,32 @@ struct ShellBar: ViewModifier {
             .toolbarColorScheme(.dark, for: .navigationBar)
     }
 }
+
+/// A NATIVE PAGE ON THE READER'S PAPER. The list's ground is the site's
+/// panel, its ink the site's ink, its accent the site's "here" (the mark on
+/// paper — never the bar's gold, which is 2:1 on white), and the system's own
+/// pieces (chevrons, menus, the empty state, the search field) go dark with
+/// the Dark theme. So a Library row in Sepia is on sepia, and in Dark on the
+/// dark card, exactly like the reader beside it.
+struct ShellPage: ViewModifier {
+    @EnvironmentObject var shell: WebShell
+    func body(content: Content) -> some View {
+        content
+            .scrollContentBackground(.hidden)
+            .background(shell.panel.ignoresSafeArea())
+            .foregroundStyle(shell.ink)
+            .tint(shell.here)
+            .environment(\.colorScheme, shell.dark ? .dark : .light)
+    }
+}
 extension View {
     func shellBar() -> some View { modifier(ShellBar()) }
+    func shellPage() -> some View { modifier(ShellPage()) }
+    /// A list row (or a whole section of them) on the page's card, ruled in
+    /// the page's rule colour.
+    func shellRow(_ shell: WebShell) -> some View {
+        listRowBackground(shell.card).listRowSeparatorTint(shell.rule)
+    }
 }
 
 /// The site's palette and Hebrew face, for the native tabs — so a Library

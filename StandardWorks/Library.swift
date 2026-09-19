@@ -143,27 +143,30 @@ struct LibraryView: View {
                     Section {
                         Button { shell.tab = .read } label: {
                             HStack(spacing: 14) {
-                                Image(systemName: "book.pages").font(.title3).foregroundStyle(ShellTheme.gold).frame(width: 44)
+                                Image(systemName: "book.pages").font(.title3).foregroundStyle(shell.here).frame(width: 44)
                                 VStack(alignment: .leading, spacing: 2) {
-                                    Text("Continue reading").font(.caption).foregroundStyle(.secondary)
+                                    Text("Continue reading").font(.caption).foregroundStyle(shell.ink2)
                                     Text(shell.whereLabel).font(.body.weight(.medium))
                                 }
                                 Spacer()
-                                Image(systemName: "chevron.right").font(.footnote.weight(.semibold)).foregroundStyle(.tertiary)
+                                Image(systemName: "chevron.right").font(.footnote.weight(.semibold)).foregroundStyle(shell.ink3)
                             }
                         }
-                        .foregroundStyle(.primary)
+                        .foregroundStyle(shell.ink)
                     }
+                    .shellRow(shell)
                 }
-                Section("Volumes") {
+                Section(header: Text("Volumes").foregroundStyle(shell.ink2)) {
                     ForEach(shell.volumes) { volume in
                         NavigationLink(value: LibraryRoute.volume(volume.key)) {
                             VolumeRow(volume: volume)
                         }
                     }
                 }
+                .shellRow(shell)
             }
             .listStyle(.insetGrouped)
+            .shellPage()
             .navigationTitle("Library")
             .navigationBarTitleDisplayMode(.inline)
             .shellBar()
@@ -183,17 +186,18 @@ struct LibraryView: View {
 }
 
 private struct VolumeRow: View {
+    @EnvironmentObject var shell: WebShell
     let volume: Volume
     var body: some View {
         HStack(spacing: 14) {
             ZStack {
-                RoundedRectangle(cornerRadius: 6, style: .continuous).fill(ShellTheme.navy)
-                Text(volume.short).font(.caption.weight(.semibold)).foregroundStyle(ShellTheme.gold)
+                RoundedRectangle(cornerRadius: 6, style: .continuous).fill(shell.chrome)
+                Text(volume.short).font(.caption.weight(.semibold)).foregroundStyle(shell.hereChrome)
             }
             .frame(width: 44, height: 56)
             VStack(alignment: .leading, spacing: 3) {
                 Text(volume.name).font(.body.weight(.medium))
-                Text(volume.heb).font(ShellTheme.hebrew(15)).foregroundStyle(.secondary)
+                Text(volume.heb).font(ShellTheme.hebrew(15)).foregroundStyle(shell.ink2)
             }
             Spacer()
         }
@@ -208,21 +212,23 @@ struct BooksView: View {
     var body: some View {
         List {
             ForEach(Array(volume.divisions.enumerated()), id: \.offset) { _, division in
-                Section(division.name) {
+                Section(header: Text(division.name).foregroundStyle(shell.ink2)) {
                     ForEach(division.books) { book in
                         if book.isFrontMatter || book.ch == 1 {
                             Button {
                                 shell.open(volume: volume, book: book, chapter: 1)
                             } label: { BookRow(book: book) }
-                            .foregroundStyle(.primary)
+                            .foregroundStyle(shell.ink)
                         } else {
                             NavigationLink(value: LibraryRoute.book(volume.key, book.id)) { BookRow(book: book) }
                         }
                     }
                 }
+                .shellRow(shell)
             }
         }
         .listStyle(.insetGrouped)
+        .shellPage()
         .navigationTitle(volume.name)
         .navigationBarTitleDisplayMode(.inline)
         .shellBar()
@@ -230,15 +236,16 @@ struct BooksView: View {
 }
 
 private struct BookRow: View {
+    @EnvironmentObject var shell: WebShell
     let book: Book
     var body: some View {
         HStack {
             Text(book.en)
             Spacer()
             if book.ch > 1 {
-                Text("\(book.ch)").font(.footnote).foregroundStyle(.tertiary)
+                Text("\(book.ch)").font(.footnote).foregroundStyle(shell.ink3)
             }
-            Text(book.heb).font(ShellTheme.hebrew(16)).foregroundStyle(.secondary)
+            Text(book.heb).font(ShellTheme.hebrew(16)).foregroundStyle(shell.ink2)
         }
     }
 }
@@ -259,15 +266,15 @@ struct ChaptersView: View {
                         Text("\(n)")
                             .font(.body.monospacedDigit())
                             .frame(maxWidth: .infinity, minHeight: 44)
-                            .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+                            .background(shell.card, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
                     }
-                    .foregroundStyle(.primary)
+                    .foregroundStyle(shell.ink)
                     .accessibilityLabel("Chapter \(n)")
                 }
             }
             .padding(16)
         }
-        .background(Color(.systemGroupedBackground))
+        .shellPage()
         .navigationTitle(book.en)
         .navigationBarTitleDisplayMode(.inline)
         .shellBar()

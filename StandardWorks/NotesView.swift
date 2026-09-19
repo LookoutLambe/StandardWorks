@@ -27,56 +27,60 @@ struct NotesView: View {
                 } else {
                     List {
                         if !bookmarks.isEmpty {
-                            Section("Bookmarks") {
+                            Section(header: Text("Bookmarks").foregroundStyle(shell.ink2)) {
                                 ForEach(bookmarks) { b in
                                     Button { shell.open(path: b.path) } label: {
                                         HStack {
-                                            Image(systemName: "bookmark.fill").foregroundStyle(ShellTheme.gold)
+                                            Image(systemName: "bookmark.fill").foregroundStyle(shell.here)
                                             Text(b.label).font(.body.weight(.medium))
                                             Spacer()
-                                            Text(b.heb).font(ShellTheme.hebrew(16)).foregroundStyle(.secondary)
+                                            Text(b.heb).font(ShellTheme.hebrew(16)).foregroundStyle(shell.ink2)
                                         }
                                     }
-                                    .foregroundStyle(.primary)
+                                    .foregroundStyle(shell.ink)
                                 }
                             }
+                            .shellRow(shell)
                         }
                         if !highlights.isEmpty {
-                            Section("Highlights") {
+                            Section(header: Text("Highlights").foregroundStyle(shell.ink2)) {
                                 ForEach(highlights) { h in
                                     Button { open(verseKey: h.key) } label: {
                                         HStack {
-                                            Image(systemName: "highlighter").foregroundStyle(ShellTheme.gold)
+                                            Image(systemName: "highlighter").foregroundStyle(shell.here)
                                             Text(h.ref)
                                             Spacer()
-                                            Text(h.when, style: .date).font(.caption).foregroundStyle(.tertiary)
+                                            Text(h.when, style: .date).font(.caption).foregroundStyle(shell.ink3)
                                         }
                                     }
-                                    .foregroundStyle(.primary)
+                                    .foregroundStyle(shell.ink)
                                 }
                             }
+                            .shellRow(shell)
                         }
                         if !notes.isEmpty {
-                            Section("Notes") {
+                            Section(header: Text("Notes").foregroundStyle(shell.ink2)) {
                                 ForEach(notes) { note in
                                     Button { open(verseKey: note.key) } label: {
                                         VStack(alignment: .leading, spacing: 4) {
                                             HStack {
-                                                Text(note.ref).font(.footnote.weight(.semibold)).foregroundStyle(ShellTheme.gold)
+                                                Text(note.ref).font(.footnote.weight(.semibold)).foregroundStyle(shell.here)
                                                 Spacer()
-                                                Text(note.when, style: .date).font(.caption).foregroundStyle(.tertiary)
+                                                Text(note.when, style: .date).font(.caption).foregroundStyle(shell.ink3)
                                             }
                                             Text(note.text).font(.body).lineLimit(4)
                                         }
                                     }
-                                    .foregroundStyle(.primary)
+                                    .foregroundStyle(shell.ink)
                                 }
                             }
+                            .shellRow(shell)
                         }
                     }
                     .listStyle(.insetGrouped)
                 }
             }
+            .shellPage()
             .navigationTitle("Notes")
             .navigationBarTitleDisplayMode(.inline)
             .shellBar()

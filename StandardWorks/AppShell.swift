@@ -48,47 +48,51 @@ enum AppShell {
     /// who tapped the mark to come back to the landing on purpose.
     static let bootQuery = "boot=1"
 
-    // MARK: - paper
+    // MARK: - palette
 
-    /// The page's own background per theme (reader.css --paper, sw_theme.css),
-    /// so what shows through before and between pages is paper, not system
-    /// white or system black.
-    static func paper(theme: String) -> UIColor {
+    /// THE SITE'S TOKENS PER THEME (reader.css :root, sw_theme.css
+    /// body.sepia-mode and body.dark-mode), so a native page is cut from the
+    /// same cloth as the reader beside it: paper and panel under it, cards on
+    /// it, ink on those, "here" for a mark on paper, and the chrome band with
+    /// its own ink and gold. Sepia and Dark reach every tab through this, not
+    /// the reading alone (translator, 2026-09-19: "the sepia and the dark
+    /// doesnt hit anything except the reading areas... its not good").
+    /// Chrome is the same navy in light and sepia and deepens in dark so the
+    /// bar stays darker than the page it frames.
+    struct Palette {
+        let paper, panel, card, ink, ink2, ink3, rule, here, chrome, onChrome, hereChrome: UIColor
+    }
+    static func palette(theme: String) -> Palette {
         switch theme {
-        case "dark":  return UIColor(red: 0x14 / 255, green: 0x12 / 255, blue: 0x0F / 255, alpha: 1)
-        case "sepia": return UIColor(red: 0xF4 / 255, green: 0xEA / 255, blue: 0xD8 / 255, alpha: 1)
-        default:      return UIColor(red: 0xFC / 255, green: 0xFA / 255, blue: 0xF7 / 255, alpha: 1)
+        case "dark":
+            return Palette(paper: hex(0x14120F), panel: hex(0x1C1916), card: hex(0x221E19),
+                           ink: hex(0xEDE6DA), ink2: hex(0xB5A896), ink3: hex(0x9A8D7C), rule: hex(0x3A342C),
+                           here: hex(0xD9B45F), chrome: hex(0x101823), onChrome: hex(0xE7E0D4), hereChrome: hex(0xE6C87E))
+        case "sepia":
+            return Palette(paper: hex(0xF4EAD8), panel: hex(0xE8DAC2), card: hex(0xFEF8EA),
+                           ink: hex(0x2A2318), ink2: hex(0x5C503C), ink3: hex(0x665840), rule: hex(0xDCCDB2),
+                           here: hex(0x7A5412), chrome: hex(0x1B2A41), onChrome: hex(0xF3EDE2), hereChrome: hex(0xDDB768))
+        default:
+            return Palette(paper: hex(0xFCFAF7), panel: hex(0xF0ECE5), card: hex(0xFBF6EC),
+                           ink: hex(0x191713), ink2: hex(0x554E45), ink3: hex(0x6D655B), rule: hex(0xE2DCD2),
+                           here: hex(0x8E6215), chrome: hex(0x1B2A41), onChrome: hex(0xF3EDE2), hereChrome: hex(0xDDB768))
         }
     }
+    private static func hex(_ v: Int) -> UIColor {
+        UIColor(red: CGFloat((v >> 16) & 0xFF) / 255, green: CGFloat((v >> 8) & 0xFF) / 255, blue: CGFloat(v & 0xFF) / 255, alpha: 1)
+    }
 
-    // MARK: - chrome
-
-    /// The site's bar colour per theme (sw_theme.css --chrome): the same navy
-    /// in light and sepia, deepened in dark so the bar stays darker than the
-    /// page it frames. The shell's own bottom band is this colour, so the
-    /// page's footer and the icon row read as ONE footer (translator,
-    /// 2026-09-19: "can the entire footer area be navy blue?").
-    static func chrome(theme: String) -> UIColor {
-        theme == "dark" ? UIColor(red: 0x10 / 255, green: 0x18 / 255, blue: 0x23 / 255, alpha: 1)
-                        : UIColor(red: 0x1B / 255, green: 0x2A / 255, blue: 0x41 / 255, alpha: 1)
-    }
-    /// Text and icons on that chrome (--on-chrome).
-    static func onChrome(theme: String) -> UIColor {
-        theme == "dark" ? UIColor(red: 0xE7 / 255, green: 0xE0 / 255, blue: 0xD4 / 255, alpha: 1)
-                        : UIColor(red: 0xF3 / 255, green: 0xED / 255, blue: 0xE2 / 255, alpha: 1)
-    }
-    /// The gold that marks "here" on chrome (--here-chrome), brighter in dark.
-    static func hereChrome(theme: String) -> UIColor {
-        theme == "dark" ? UIColor(red: 0xE6 / 255, green: 0xC8 / 255, blue: 0x7E / 255, alpha: 1)
-                        : UIColor(red: 0xDD / 255, green: 0xB7 / 255, blue: 0x68 / 255, alpha: 1)
-    }
+    /// The page's own background per theme, so what shows through before and
+    /// between pages is paper, not system white or system black.
+    static func paper(theme: String) -> UIColor { palette(theme: theme).paper }
 
     // MARK: - scripts
 
-    /// Applies a theme through the page's own switch. The page persists it,
-    /// so it also survives into the next page and the next launch.
-    static func applyThemeScript(dark: Bool) -> String {
-        "window.swApplyTheme && window.swApplyTheme('\(dark ? "dark" : "light")');"
+    /// Applies a theme ("light", "sepia", "dark") through the page's own
+    /// switch. The page persists it, so it also survives into the next page
+    /// and the next launch.
+    static func applyThemeScript(theme: String) -> String {
+        "window.swApplyTheme && window.swApplyTheme('\(["light", "sepia", "dark"].contains(theme) ? theme : "light")');"
     }
 
     /// Asks the page which theme it is showing: "light", "sepia" or "dark".

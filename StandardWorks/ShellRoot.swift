@@ -67,7 +67,7 @@ struct ShellRoot: View {
 
     /// The Read page: the one web view and what rides on it.
     private var readTab: some View {
-        LocalSiteWebView(shell: shell, systemDark: systemDark, onPageSettled: onPageSettled)
+        LocalSiteWebView(shell: shell, wantedTheme: wantedTheme, onPageSettled: onPageSettled)
             // The player bar, native, above the page while it reads.
             .modifier(ListenBarBelowContent(shell: shell))
             // The page runs under the status bar and pads its own bar by
@@ -84,12 +84,22 @@ struct ShellRoot: View {
             .flatMap(\.windows).first { $0.isKeyWindow }?.safeAreaInsets.bottom ?? 34
     }
 
-    /// The theme the page should follow: the phone's, unless Settings chose one.
-    private var systemDark: Bool {
+    /// The phone's own appearance, whatever theme the page shows: a native
+    /// page overrides colorScheme with the theme's (ShellPage), so Settings'
+    /// "Match phone" asks the window instead of its environment.
+    static var phoneIsDark: Bool {
+        UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }
+            .first?.traitCollection.userInterfaceStyle == .dark
+    }
+
+    /// The theme the page should show: Settings' choice, or under "Match
+    /// phone" the phone's scheme. The ONE path a theme choice takes to the
+    /// page (LocalSiteWebView.updateUIView → applyWantedThemeIfChanged);
+    /// Settings only writes the choice.
+    private var wantedTheme: String {
         switch appearance {
-        case "dark": return true
-        case "light", "sepia": return false
-        default: return colorScheme == .dark
+        case "light", "sepia", "dark": return appearance
+        default: return colorScheme == .dark ? "dark" : "light"
         }
     }
 }

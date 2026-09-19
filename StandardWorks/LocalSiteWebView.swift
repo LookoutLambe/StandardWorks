@@ -16,8 +16,10 @@ final class LocalSiteWebViewLogger: NSObject, WKNavigationDelegate, WKScriptMess
     /// the reader choosing anything. Only what follows it counts.
     private var hasSettledOnce = false
 
-    /// The phone's appearance as the representable last passed it in.
-    var systemDark = false
+    /// The theme the shell wants on the page, as the representable last
+    /// passed it in: Settings' choice, or the phone's scheme under "Match
+    /// phone" (ShellRoot.wantedTheme).
+    var wantedTheme = "light"
 
     /// The shell that shares this web view with the native tabs.
     weak var shell: WebShell?
@@ -28,18 +30,18 @@ final class LocalSiteWebViewLogger: NSObject, WKNavigationDelegate, WKScriptMess
         shell?.handle(message: body)
     }
 
-    /// The theme the shell last pushed into the page for the system's sake.
-    /// Kept in UserDefaults so a launch does not re-push a setting the page
-    /// already has — and so a theme the reader chose by hand in between
-    /// (sepia) is left alone until the phone itself changes.
-    private static let appliedSchemeKey = "shell.appliedSystemScheme"
+    /// The theme the shell last pushed into the page. Kept in UserDefaults so
+    /// a launch does not re-push what the page already has; WebShell also
+    /// writes it when the page changes its own theme (adoptPageTheme), so
+    /// the page's choice is never pushed back over.
+    static let appliedThemeKey = "shell.appliedSystemScheme"
 
-    func applySystemThemeIfChanged(_ webView: WKWebView) {
-        let want = systemDark ? "dark" : "light"
+    func applyWantedThemeIfChanged(_ webView: WKWebView) {
+        let want = wantedTheme
         let store = UserDefaults.standard
-        guard store.string(forKey: Self.appliedSchemeKey) != want else { return }
-        store.set(want, forKey: Self.appliedSchemeKey)
-        webView.evaluateJavaScript(AppShell.applyThemeScript(dark: systemDark)) { [weak self] _, _ in
+        guard store.string(forKey: Self.appliedThemeKey) != want else { return }
+        store.set(want, forKey: Self.appliedThemeKey)
+        webView.evaluateJavaScript(AppShell.applyThemeScript(theme: want)) { [weak self] _, _ in
             Self.matchPaper(webView, shell: self?.shell)
         }
     }
@@ -90,7 +92,7 @@ final class LocalSiteWebViewLogger: NSObject, WKNavigationDelegate, WKScriptMess
         // page's viewport, so the clamp has to be re-applied per page and not
         // once at construction. See pinLayoutScale for why.
         LocalSiteWebView.pinLayoutScale(webView)
-        applySystemThemeIfChanged(webView)
+        applyWantedThemeIfChanged(webView)
         LocalSiteWebViewLogger.matchPaper(webView, shell: shell)
         shell?.pageSettled(webView)
         if hasSettledOnce { onPageSettled() } else { hasSettledOnce = true }
@@ -100,8 +102,8 @@ final class LocalSiteWebViewLogger: NSObject, WKNavigationDelegate, WKScriptMess
 struct LocalSiteWebView: UIViewRepresentable {
     /// Owns the one web view once it exists; see WebShell.
     @ObservedObject var shell: WebShell
-    /// The phone's appearance; applied to the page once per change. See AppShell.
-    var systemDark: Bool = false
+    /// The theme the shell wants on the page; applied once per change. See AppShell.
+    var wantedTheme: String = "light"
     var onPageSettled: () -> Void = {}
 
     private var wwwDirectoryURL: URL { shell.wwwDirectoryURL }
@@ -114,7 +116,7 @@ struct LocalSiteWebView: UIViewRepresentable {
         // chapter tapped there has somewhere to go. This representable only
         // seats it and keeps its delegate current.
         let webView = shell.webView ?? LocalSiteWebView.makeWebView(shell: shell, coordinator: context.coordinator,
-                                                                    systemDark: systemDark)
+                                                                    wantedTheme: wantedTheme)
         context.coordinator.shell = shell
         context.coordinator.onPageSettled = onPageSettled
         webView.navigationDelegate = context.coordinator
@@ -123,7 +125,7 @@ struct LocalSiteWebView: UIViewRepresentable {
 
     /// Builds the one web view: its configuration, the injected scripts, the
     /// paper behind it, the first request. Called once, by WebShell.init.
-    static func makeWebView(shell: WebShell, coordinator: LocalSiteWebViewLogger, systemDark: Bool) -> WKWebView {
+    static func makeWebView(shell: WebShell, coordinator: LocalSiteWebViewLogger, wantedTheme: String) -> WKWebView {
         let wwwDirectoryURL = shell.wwwDirectoryURL
         let config = WKWebViewConfiguration()
         config.defaultWebpagePreferences.preferredContentMode = .mobile
@@ -253,7 +255,7 @@ struct LocalSiteWebView: UIViewRepresentable {
         // flash white between the launch screen and the first page, and every
         // volume switch showed a white frame. The page's own paper instead,
         // re-matched to the page's theme after each load (matchPaper).
-        let paper = AppShell.paper(theme: systemDark ? "dark" : "light")
+        let paper = AppShell.paper(theme: wantedTheme)
         webView.isOpaque = false
         webView.backgroundColor = paper
         webView.scrollView.backgroundColor = paper
@@ -262,7 +264,7 @@ struct LocalSiteWebView: UIViewRepresentable {
         // bar and the page pads its own bars by env(safe-area-inset-*): with
         // .automatic WebKit would add the status-bar height a second time.
         webView.scrollView.contentInsetAdjustmentBehavior = .never
-        coordinator.systemDark = systemDark
+        coordinator.wantedTheme = wantedTheme
         LocalSiteWebView.pinLayoutScale(webView)
         // The horizontal swipe belongs to the page turn, not to history.
         // A Hebrew book's spine is on the right, so turning FORWARD drags
@@ -307,10 +309,10 @@ struct LocalSiteWebView: UIViewRepresentable {
         // Re-bound every update: the closure captures the view's environment,
         // and makeCoordinator() only ever runs once.
         context.coordinator.onPageSettled = onPageSettled
-        // The phone changed its appearance while the app was up.
-        if context.coordinator.systemDark != systemDark {
-            context.coordinator.systemDark = systemDark
-            context.coordinator.applySystemThemeIfChanged(webView)
+        // The phone changed its appearance, or Settings chose a theme.
+        if context.coordinator.wantedTheme != wantedTheme {
+            context.coordinator.wantedTheme = wantedTheme
+            context.coordinator.applyWantedThemeIfChanged(webView)
         }
     }
 
@@ -400,6 +402,9 @@ enum DebugBridge {
                         sh.stopListen()
                     case "size":
                         sh.stepTextSize(Int(parts.count > 1 ? parts[1] : "10") ?? 10)
+                    case "appearance":
+                        // "@appearance sepia|light|dark|system": what the Settings picker writes
+                        if parts.count > 1 { UserDefaults.standard.set(parts[1], forKey: "shell.appearance") } else { answer = "which?" }
                     case "reading":
                         // "@reading 1" / "@reading 0": the scroll state, without a finger
                         sh.chromeHidden = parts.count > 1 && parts[1] == "1"
