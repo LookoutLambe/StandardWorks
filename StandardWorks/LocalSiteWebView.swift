@@ -383,6 +383,7 @@ enum DebugBridge {
                         } else { answer = "unknown chapter" }
                     case "type":
                         sh.searchQuery = parts.dropFirst().joined(separator: " ")
+                        sh.searchPresented = true
                     case "search":
                         let q = parts.dropFirst().joined(separator: " ")
                         let hits = sh.searchIndex.find(q)

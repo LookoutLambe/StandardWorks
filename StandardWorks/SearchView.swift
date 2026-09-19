@@ -62,7 +62,7 @@ struct SearchView: View {
             .navigationTitle("Search")
             .navigationBarTitleDisplayMode(.inline)
             .shellBar()
-            .searchable(text: query, prompt: "Hebrew or English")
+            .searchable(text: query, isPresented: $shell.searchPresented, prompt: "Hebrew or English")
             .searchScopes($scope, activation: .onSearchPresentation) {
                 Text("All").tag("")
                 ForEach(shell.volumes) { v in Text(v.short).tag(v.key) }

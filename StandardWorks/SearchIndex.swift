@@ -35,6 +35,9 @@ final class SearchIndex: ObservableObject {
     private var rows: [String: [Row]] = [:]
     private var lowered: [String: [String]] = [:]
     @Published private(set) var loaded = false
+    /// Book name → its place in the canon, from the site's registry (WebShell
+    /// sets it), so hits read Genesis before 1 Kings and not in file order.
+    var bookOrder: [String: Int] = [:]
     private let queue = DispatchQueue(label: "search-index", qos: .userInitiated)
 
     init(www: URL) {
@@ -94,17 +97,29 @@ final class SearchIndex: ObservableObject {
         var hits: [Hit] = []
         for v in volumes {
             let list = rows[v] ?? [], low = lowered[v] ?? []
-            var n = 0
-            for (i, r) in list.enumerated() where n < perVolume {
+            var found: [(Int, Int, Int, Hit)] = []
+            for (i, r) in list.enumerated() {
                 let hay = isHeb ? r.heb : low[i]
                 guard let range = hay.range(of: nq) else { continue }
                 let text = isHeb ? r.heb : r.eng
-                hits.append(Hit(row: r, volumeName: names[v] ?? v, page: pages[v] ?? "",
-                                snippet: Self.snippet(text, around: range, in: hay)))
-                n += 1
+                let (book, ch, vs) = Self.place(r.ref)
+                found.append((bookOrder[book] ?? Int.max, ch, vs,
+                              Hit(row: r, volumeName: names[v] ?? v, page: pages[v] ?? "",
+                                  snippet: Self.snippet(text, around: range, in: hay))))
             }
+            // The canon's order, then chapter and verse; the cap after the sort
+            // so Genesis is never crowded out by 1 Chronicles.
+            found.sort { ($0.0, $0.1, $0.2) < ($1.0, $1.1, $1.2) }
+            hits.append(contentsOf: found.prefix(perVolume).map { $0.3 })
         }
         return hits
+    }
+
+    /// "1 Kings 3:3" → ("1 Kings", 3, 3)
+    static func place(_ ref: String) -> (String, Int, Int) {
+        guard let sp = ref.lastIndex(of: " ") else { return (ref, 0, 0) }
+        let book = String(ref[..<sp]), cv = ref[ref.index(after: sp)...].split(separator: ":")
+        return (book, Int(cv.first ?? "") ?? 0, Int(cv.count > 1 ? cv[1] : "") ?? 0)
     }
 
     /// A window of the verse around the match; the offsets of the lowered

@@ -21,6 +21,7 @@ final class WebShell: ObservableObject {
     @Published var tab: Tab = .read
     /// The Search tab's text, kept here so the tab keeps it across visits.
     @Published var searchQuery = ""
+    @Published var searchPresented = false
     @Published private(set) var volumes: [Volume] = []
     @Published var chromeHidden = false
     /// The Library's navigation stack, so a route can be pushed from outside a tap.
@@ -53,6 +54,10 @@ final class WebShell: ObservableObject {
         ShellTheme.registerFonts(www: www)
         volumes = LibraryRegistry.load(www: www)
         bomHashes = LibraryRegistry.bomHashes(www: www)
+        var order: [String: Int] = [:], n = 0
+        for v in volumes { for d in v.divisions { for b in d.books { if order[b.en] == nil { order[b.en] = n; n += 1 } } } }
+        order["D&C"] = order["D&C"] ?? n   // the D&C's rows are "D&C 76:1", one book
+        searchIndex.bookOrder = order
         // A first launch opens on the Library, the way a scripture app does;
         // every launch after that opens in the book (AppShell's boot redirect).
         if !UserDefaults.standard.bool(forKey: "shell.launchedBefore") {
