@@ -99,209 +99,37 @@ enum AppShell {
     static let currentThemeScript =
         "(window.swCurrentTheme ? String(window.swCurrentTheme()) : (document.body && document.body.classList.contains('dark-mode') ? 'dark' : 'light'))"
 
-    /// Document start, main frame only: the boot redirect, and the app-only
-    /// stylesheet, attached the moment <head> exists.
-    static let documentStartSource = """
-    (function () {
-      /* 1. OPEN IN THE BOOK. Only on the shell's first request (?boot=1), only
-         on the landing, and only when the page has a record to go back to.
-         The record is the page's own — nav_engine.js writes it on every
-         chapter — and its path is root-relative (bom/bom.html#…), so
-         replace() resolves it against index.html's folder: the www root. */
-      try {
-        if (/(^|[?&])boot=1(&|$)/.test(location.search) && /(^|\\/)index\\.html$/.test(location.pathname)) {
-          var g = JSON.parse(localStorage.getItem('sw-last-read') || 'null');
-          if (g && typeof g.path === 'string' && /^[A-Za-z0-9_\\/.-]+\\.html(#[^\\s]*)?$/.test(g.path)) {
-            location.replace(g.path);
-            return;
-          }
-        }
-      } catch (e) {}
+    // MARK: - the injected sources
 
-      /* 5. WEBSITE THINGS STAY ON THE WEBSITE. Every selector is prefixed
-         with `html` so it outweighs the site's own !important display rules
-         (the bar's buttons carry one), whatever order the sheets load in;
-         and the style is moved to the end of <body> once the body exists,
-         so it is also last in the cascade. */
-      var CSS = [
-        'html #sw-beta-invite, html .landing-app-store, html .landing-update-note, html .landing-after,',
-        'html .hub-front, html .hub-sources, html .hub-footer-colophon, html .hub-footer-copy, html .shelf-foot,',
-        'html .sw-chrome-print, html #safari-browser-tip { display: none !important; }',
-        /* LISTEN IS IN THE APP'S ROW. The page's floating transport pill and
-           its inline "Read aloud" bar above verse one would double it
-           (translator, 2026-09-19: "the read aloud doesnt need to be there
-           anymore since its in the footer"). The transport buttons stay in
-           the DOM, hidden, because the player bar clicks them. */
-        'html #ra-float, html .ra-bar { display: none !important; }',
-        /* READING FOLDS THE MODE ROW. A scroll down puts sw-app-reading on
-           <html> (WebShell.chromeHidden) and the page's own footer — the
-           Interlinear · Hebrew · Dual · Translit · Nikkud row — slides out
-           below the page's edge, where the app's row is; a scroll up brings
-           it back. The row with Listen never moves. */
-        'html #sw-reader-footer { transition: transform .22s ease !important; will-change: transform; }',
-        'html.sw-app-reading #sw-reader-footer { transform: translateY(100%) !important; pointer-events: none !important; }',
-        '@media (prefers-reduced-motion: reduce) { html #sw-reader-footer { transition: none !important; } }',
-        'html .hub-footer-contact a[href^="mailto:"] { display: none !important; }',
-        /* 7. THE PAGE RUNS UNDER THE STATUS BAR, and the site measures its bar
-           WITH that inset (site_chrome.js: --sw-chrome-h = bar.offsetHeight,
-           and the bar pads by env(safe-area-inset-top)). Rules that then add
-           env() again put the reading-progress line and the text-size
-           popover a status bar too low and opened a blank band under the
-           header. Here they are offset by the measured bar alone. */
-        /* --sw-app-bar-h is the bar as drawn, inset included, measured by the
-           script below with a ResizeObserver: on the phone the site's own
-           --sw-chrome-h already carries the inset, on the iPad it is the
-           stylesheet's static 56px, so neither can be trusted from here. */
-        'html body.has-sw-chrome .page, html:has(link[href*="site_chrome.css"]) .page, html:has(link[href*="site_chrome.css"]) #main-content { padding-top: calc(var(--sw-app-bar-h, calc(var(--sw-chrome-h, 58px) + env(safe-area-inset-top, 0px))) + 8px) !important; }',
-        'html body.has-sw-chrome.sw-chrome-reader .page, html body.has-sw-chrome.sw-chrome-reader #main-content { padding-top: calc(var(--sw-app-bar-h, calc(var(--sw-chrome-h, 58px) + env(safe-area-inset-top, 0px))) + 12px) !important; }',
-        'html body.has-sw-chrome .page #main-content, html .page #main-content { padding-top: 0 !important; }',
-        'html body.has-sw-chrome #reading-progress { top: var(--sw-app-bar-h, calc(var(--sw-chrome-h, 58px) + env(safe-area-inset-top, 0px))) !important; }',
-        'html .sw-size-pop { top: calc(var(--sw-app-bar-h, calc(var(--sw-chrome-h, 58px) + env(safe-area-inset-top, 0px))) + 4px) !important; }',
-        'html body.has-sw-chrome .dict-wrap { padding-top: calc(var(--sw-app-bar-h, calc(var(--sw-chrome-h, 58px) + env(safe-area-inset-top, 0px))) + 12px) !important; }',
-        /* panels that slide in from the top of the glass leave the status bar its room */
-        'html #glossary-panel, html #annotations-panel, html #rsc-panel { padding-top: calc(env(safe-area-inset-top, 0px) + 16px) !important; box-sizing: border-box !important; }',
-        'html #nav-sidebar { padding-top: env(safe-area-inset-top, 0px) !important; box-sizing: border-box !important; }',
-        /* and the status bar itself always sits on chrome, whatever is under it */
-        'html #sw-app-statusbar { position: fixed; top: 0; left: 0; right: 0; height: env(safe-area-inset-top, 0px); background: var(--chrome, #1B2A41); z-index: 2147483646; pointer-events: none; }'
-      ].join('\\n');
-      function node() {
-        var s = document.getElementById('sw-app-shell');
-        if (s) return s;
-        s = document.createElement('style');
-        s.id = 'sw-app-shell';
-        s.textContent = CSS;
-        return s;
-      }
-      function attach() {
-        var head = document.head || document.getElementsByTagName('head')[0];
-        if (!head) return false;
-        if (!document.getElementById('sw-app-shell')) head.appendChild(node());
-        return true;
-      }
-      if (!attach()) {
-        var obs = new MutationObserver(function () { if (attach()) obs.disconnect(); });
-        obs.observe(document.documentElement, { childList: true, subtree: true });
-      }
-      document.addEventListener('DOMContentLoaded', function () {
-        if (!document.body) return;
-        document.body.appendChild(node());
-        if (!document.getElementById('sw-app-statusbar')) {
-          var bar = document.createElement('div');
-          bar.id = 'sw-app-statusbar';
-          bar.setAttribute('aria-hidden', 'true');
-          document.body.appendChild(bar);
+    /// THE SHELL'S SCRIPTS ARE FILES, in app-shell/ at the repo root, and both
+    /// apps load the same files: this one from the bundle (the folder ships
+    /// as a folder reference), the Android app from its assets. One source,
+    /// so "exactly the same" is by construction, not by copying.
+    static func shellFile(_ name: String) -> String {
+        guard let url = Bundle.main.url(forResource: name, withExtension: nil, subdirectory: "app-shell"),
+              let s = try? String(contentsOf: url, encoding: .utf8) else {
+            assertionFailure("app-shell/\(name) is missing from the bundle")
+            return ""
         }
-      });
-    })();
-    """
-
-    /// Document end, main frame only: THE MARK IN THE BAR IS THE APP'S. The
-    /// site draws the open book with the spire (icons/sw-mark.png) at the
-    /// top left; the app draws its own icon's art there — the scroll-book with
-    /// the star (translator, 2026-09-19: "the logo to be this main one in the
-    /// upper left hand corner... the other is just for the website"). The art
-    /// ships in the asset catalog (AppMark.dataset: the icon with its navy
-    /// knocked out, fitted 3:2 at 3×; drawn 66×44, the height of the buttons beside it) and comes in as a
-    /// data URI, so www holds nothing of the app's. Re-applied whenever the
-    /// bar is (re)built.
-    static func markSource(dataURI: String) -> String {
-        """
-        (function () {
-          var SRC = \(jsString(dataURI));
-          function apply() {
-            var img = document.querySelector('.sw-chrome-home img');
-            if (!img) return false;
-            if (img.getAttribute('src') !== SRC) {
-              img.setAttribute('src', SRC);
-              img.style.width = '66px'; img.style.height = '44px';
-              img.style.objectFit = 'contain'; img.style.display = 'block';
-            }
-            return true;
-          }
-          if (!apply()) {
-            var tries = 0;
-            var t = setInterval(function () { if (apply() || ++tries > 60) clearInterval(t); }, 50);
-          }
-          if (window.MutationObserver) {
-            new MutationObserver(function () { apply(); }).observe(document.documentElement, { childList: true, subtree: true });
-          }
-        })();
-        """
+        return s
     }
 
-    /// Document end, main frame only: the bar's English line is the App
-    /// Store's name. The site builds its bar in site_chrome.js at load, so
-    /// this waits for the span rather than assuming it.
-    static let documentEndSource = """
-    (function () {
-      /* THE BAR AS DRAWN. --sw-app-bar-h follows .sw-top-bar's real height,
-         inset and all, through a ResizeObserver, so everything the app
-         offsets from the bar (page padding, the progress line, the size
-         popover) sits exactly under it on every device and orientation. */
-      var observed = null;
-      function measure() {
-        var bar = document.querySelector('.sw-top-bar');
-        if (!bar) return false;
-        document.documentElement.style.setProperty('--sw-app-bar-h', bar.offsetHeight + 'px');
-        if (observed !== bar && window.ResizeObserver) {
-          observed = bar;
-          new ResizeObserver(function () { measure(); }).observe(bar);
-        }
-        return true;
-      }
-      if (!measure()) {
-        var tries = 0;
-        var t = setInterval(function () { if (measure() || ++tries > 60) clearInterval(t); }, 50);
-      }
-      window.addEventListener('resize', measure);
-      window.addEventListener('orientationchange', function () { setTimeout(measure, 100); });
+    /// Document start, main frame only: the boot redirect and the app-only
+    /// stylesheet (shell_start.js).
+    static var documentStartSource: String { shellFile("shell_start.js") }
 
-      /* 8. THE MARK IN THE BAR IS THE LIBRARY, not the website's home page.
-         Captured before the site's own handler, and only where a native
-         shell is listening. */
-      document.addEventListener('click', function (e) {
-        var a = e.target && e.target.closest ? e.target.closest('.sw-chrome-home, .sw-top-bar-brand') : null;
-        if (!a) return;
-        var port = window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.swShell;
-        if (!port) return;
-        e.preventDefault(); e.stopPropagation();
-        port.postMessage({ op: 'library' });
-      }, true);
+    /// Document end, main frame only: the bar's measured height, the mark as
+    /// the Library, the theme message, the App Store name (shell_end.js).
+    static var documentEndSource: String { shellFile("shell_end.js") }
 
-      /* 9. THE THEME, AS THE PAGE CHANGES IT. The page's own theme button
-         (◐) swaps body classes; the shell's surfaces — the bottom band, the
-         player, the native bars — are cut from the page's chrome per theme,
-         so they hear every change here rather than only at page load. */
-      (function () {
-        var port = window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.swShell;
-        if (!port || !window.MutationObserver) return;
-        var last = null;
-        function tell() {
-          var t = window.swCurrentTheme ? String(window.swCurrentTheme())
-                : (document.body.classList.contains('dark-mode') ? 'dark' : document.body.classList.contains('sepia-mode') ? 'sepia' : 'light');
-          if (t === last) return;
-          last = t;
-          port.postMessage({ op: 'theme', theme: t });
-        }
-        function arm() {
-          if (!document.body) return false;
-          new MutationObserver(tell).observe(document.body, { attributes: true, attributeFilter: ['class'] });
-          tell();
-          return true;
-        }
-        if (!arm()) document.addEventListener('DOMContentLoaded', arm);
-      })();
+    /// THE MARK IN THE BAR IS THE APP'S: the icon's art (app-shell/appmark.png,
+    /// its navy knocked out, 3:2) drawn at 66×44 in place of the website's
+    /// open book (translator, 2026-09-19). shell_mark.js takes the data URI.
+    static func markSource(dataURI: String) -> String {
+        shellFile("shell_mark.js").replacingOccurrences(of: "__SW_MARK_URI__", with: jsString(dataURI))
+    }
+    static var markData: Data? {
+        Bundle.main.url(forResource: "appmark", withExtension: "png", subdirectory: "app-shell").flatMap { try? Data(contentsOf: $0) }
+    }
 
-      var NAME = 'Sefer Mormon: Standard Works';
-      function rename() {
-        var en = document.querySelector('.sw-top-bar-brand-en');
-        if (!en) return false;
-        if (en.textContent !== NAME) en.textContent = NAME;
-        return true;
-      }
-      if (rename()) return;
-      var tries = 0;
-      var t = setInterval(function () { if (rename() || ++tries > 40) clearInterval(t); }, 50);
-    })();
-    """
 }

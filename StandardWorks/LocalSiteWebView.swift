@@ -247,8 +247,8 @@ struct LocalSiteWebView: UIViewRepresentable {
             injectionTime: .atDocumentEnd,
             forMainFrameOnly: true))
         // The app's own mark in the bar (AppShell.markSource): the icon's
-        // art from the asset catalog, handed to the page as a data URI.
-        if let mark = NSDataAsset(name: "AppMark")?.data {
+        // art from app-shell/, handed to the page as a data URI.
+        if let mark = AppShell.markData {
             config.userContentController.addUserScript(WKUserScript(
                 source: AppShell.markSource(dataURI: "data:image/png;base64," + mark.base64EncodedString()),
                 injectionTime: .atDocumentEnd,
