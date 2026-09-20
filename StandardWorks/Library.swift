@@ -135,38 +135,78 @@ enum LibraryRoute: Hashable {
 
 struct LibraryView: View {
     @EnvironmentObject var shell: WebShell
+    /// Which volumes are open. The reader's volume opens itself whenever the
+    /// Library is shown; the rest fold to a row each, so the whole library is
+    /// one screen to scan (user, 2026-09-20: "its hard to see and navigate").
+    @State private var open: Set<String> = []
+
+    private func rowId(_ volume: Volume, _ book: Book) -> String { "book-\(volume.key)-\(book.id)" }
+    private var hereBook: (Volume, Book)? {
+        guard let v = shell.volumes.first(where: { $0.key == shell.currentVolumeKey }), let b = shell.book(in: v, chapterId: shell.currentChapterId) else { return nil }
+        return (v, b)
+    }
+    private func focus(_ proxy: ScrollViewProxy) {
+        if !shell.currentVolumeKey.isEmpty { open = [shell.currentVolumeKey] } else if let first = shell.volumes.first { open = [first.key] }
+        guard let (v, b) = hereBook else { return }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) { withAnimation { proxy.scrollTo(rowId(v, b), anchor: .center) } }
+    }
 
     var body: some View {
         NavigationStack(path: $shell.libraryPath) {
-            List {
-                if !shell.whereLabel.isEmpty {
-                    Section {
-                        Button { shell.tab = .read } label: {
-                            HStack(spacing: 14) {
-                                Image(systemName: "book.pages").font(.title3).foregroundStyle(shell.here).frame(width: 44)
-                                VStack(alignment: .leading, spacing: 2) {
-                                    Text("Continue reading").font(.caption).foregroundStyle(shell.ink2)
-                                    Text(shell.whereLabel).font(.body.weight(.medium))
+            ScrollViewReader { proxy in
+                List {
+                    if !shell.whereLabel.isEmpty {
+                        Section {
+                            Button { shell.tab = .read } label: {
+                                HStack(spacing: 14) {
+                                    Image(systemName: "book.pages").font(.title3).foregroundStyle(shell.here).frame(width: 44)
+                                    VStack(alignment: .leading, spacing: 2) {
+                                        Text("Continue reading").font(.caption).foregroundStyle(shell.ink2)
+                                        Text(shell.whereLabel).font(.body.weight(.medium))
+                                    }
+                                    Spacer()
+                                    Image(systemName: "chevron.right").font(.footnote.weight(.semibold)).foregroundStyle(shell.ink3)
                                 }
-                                Spacer()
-                                Image(systemName: "chevron.right").font(.footnote.weight(.semibold)).foregroundStyle(shell.ink3)
                             }
+                            .foregroundStyle(shell.ink)
                         }
-                        .foregroundStyle(shell.ink)
+                        .shellRow(shell)
                     }
-                    .shellRow(shell)
-                }
-                Section(header: Text("Volumes").foregroundStyle(shell.ink2)) {
                     ForEach(shell.volumes) { volume in
-                        NavigationLink(value: LibraryRoute.volume(volume.key)) {
-                            VolumeRow(volume: volume)
+                        Section {
+                            DisclosureGroup(isExpanded: Binding(get: { open.contains(volume.key) }, set: { on in if on { open.insert(volume.key) } else { open.remove(volume.key) } })) {
+                                ForEach(Array(volume.divisions.enumerated()), id: \.offset) { _, division in
+                                    if volume.divisions.count > 1 {
+                                        Text(division.name.uppercased()).font(.caption2.weight(.semibold)).kerning(0.8).foregroundStyle(shell.ink3)
+                                            .listRowBackground(shell.panel)
+                                            .accessibilityAddTraits(.isHeader)
+                                    }
+                                    ForEach(division.books) { book in
+                                        let here = shell.currentVolumeKey == volume.key && shell.book(in: volume, chapterId: shell.currentChapterId)?.id == book.id
+                                        Group {
+                                            if book.isFrontMatter || book.ch == 1 {
+                                                Button { shell.open(volume: volume, book: book, chapter: 1) } label: { BookRow(book: book, here: here) }
+                                                    .foregroundStyle(shell.ink)
+                                            } else {
+                                                NavigationLink(value: LibraryRoute.book(volume.key, book.id)) { BookRow(book: book, here: here) }
+                                            }
+                                        }
+                                        .id(rowId(volume, book))
+                                    }
+                                }
+                            } label: {
+                                VolumeRow(volume: volume, here: shell.currentVolumeKey == volume.key)
+                            }
+                            .tint(shell.here)
                         }
+                        .shellRow(shell)
                     }
                 }
-                .shellRow(shell)
+                .listStyle(.insetGrouped)
+                .shellPage()
+                .onAppear { focus(proxy) }
+                .onChange(of: shell.libraryFocus) { _, _ in focus(proxy) }
             }
-            .listStyle(.insetGrouped)
-            .shellPage()
             .navigationTitle("Library")
             .navigationBarTitleDisplayMode(.inline)
             .shellBar()
@@ -188,6 +228,8 @@ struct LibraryView: View {
 private struct VolumeRow: View {
     @EnvironmentObject var shell: WebShell
     let volume: Volume
+    /// The volume being read: its name in the "here" colour.
+    var here = false
     var body: some View {
         HStack(spacing: 14) {
             ZStack {
@@ -196,7 +238,7 @@ private struct VolumeRow: View {
             }
             .frame(width: 44, height: 56)
             VStack(alignment: .leading, spacing: 3) {
-                Text(volume.name).font(.body.weight(.medium))
+                Text(volume.name).font(.body.weight(here ? .semibold : .medium)).foregroundStyle(here ? shell.here : shell.ink)
                 Text(volume.heb).font(ShellTheme.hebrew(15)).foregroundStyle(shell.ink2)
             }
             Spacer()

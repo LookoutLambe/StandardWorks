@@ -61,6 +61,11 @@ final class WebShell: ObservableObject {
     }
     /// The Library's navigation stack, so a route can be pushed from outside a tap.
     @Published var libraryPath: [LibraryRoute] = []
+    /// Bumped whenever the Library should show the WHOLE library again, opened
+    /// at the reader's place (LibraryView expands that volume and scrolls to
+    /// the book). The tab's own icon, the page's mark and a front-matter pill
+    /// all come here; only a book of chapters goes deeper.
+    @Published var libraryFocus = 0
     /// The chapter the page is showing, for the Read tab's own sense of place.
     @Published private(set) var whereLabel = ""
     /// Where the page is, from its own last-read record — the volume key and
@@ -137,7 +142,7 @@ final class WebShell: ObservableObject {
     /// the "swShell" message handler.
     func handle(message: [String: Any]) {
         switch message["op"] as? String {
-        case "library": tab = .library
+        case "library": showLibrary()
         // The page's chapter pill, tapped in the app: the native Library at
         // this book's chapters — one contents, not two (app-shell/shell_end.js, 10).
         case "chapters":
@@ -236,10 +241,23 @@ final class WebShell: ObservableObject {
     func openChapters(volumeKey: String, chapterId: String) {
         if !volumeKey.isEmpty { currentVolumeKey = volumeKey }       // the page's own word for where it is
         if !chapterId.isEmpty { currentChapterId = chapterId }
-        guard let v = volumes.first(where: { $0.key == volumeKey }) else { tab = .library; return }
-        var path: [LibraryRoute] = [.volume(v.key)]
-        if let b = book(in: v, chapterId: chapterId), !b.isFrontMatter, b.ch > 1 { path.append(.book(v.key, b.id)) }
-        libraryPath = path
+        guard let v = volumes.first(where: { $0.key == volumeKey }) else { showLibrary(); return }
+        // one level deep, never two: Back from the chapter grid is the whole
+        // library, opened at this book (user, 2026-09-20: "it stays on the
+        // current book not the full thing")
+        if let b = book(in: v, chapterId: chapterId), !b.isFrontMatter, b.ch > 1 { libraryPath = [.book(v.key, b.id)] }
+        else { libraryPath = [] }
+        libraryFocus += 1
+        tab = .library
+    }
+
+    /// THE WHOLE LIBRARY, at the reader's place: the stack popped to its root,
+    /// the current volume open, the current book in view. What the Library
+    /// icon and the page's mark do — tapping the icon again while there does
+    /// it again, the way an iOS tab pops to its root.
+    func showLibrary() {
+        libraryPath = []
+        libraryFocus += 1
         tab = .library
     }
 

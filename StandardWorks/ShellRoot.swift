@@ -200,7 +200,7 @@ struct ShellTabBar: View {
             ForEach(items) { item in
                 let selected = item.tab != nil && item.tab == shell.tab
                 Button {
-                    if let t = item.tab { shell.tab = t } else { shell.toggleListen() }
+                    if let t = item.tab { if t == .library { shell.showLibrary() } else { shell.tab = t } } else { shell.toggleListen() }
                 } label: {
                     Image(systemName: selected ? filled(item.symbol) : item.symbol)
                         .font(.system(size: 22, weight: .medium))

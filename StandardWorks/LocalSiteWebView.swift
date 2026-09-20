@@ -394,11 +394,14 @@ enum DebugBridge {
                     case "open":
                         if parts.count > 1 { sh.open(path: parts[1]) }
                     case "library":
-                        sh.tab = .library
-                        var path: [LibraryRoute] = []
-                        if parts.count > 1 { path.append(.volume(parts[1])) }
-                        if parts.count > 2 { path.append(.book(parts[1], parts[2])) }
-                        sh.libraryPath = path
+                        // "@library" = the whole library at the reader's place; "@library ot" a volume's list; "@library bom 1ne" a book's chapters
+                        if parts.count == 1 { sh.showLibrary() } else {
+                            sh.tab = .library
+                            var path: [LibraryRoute] = []
+                            if parts.count > 1 { path.append(.volume(parts[1])) }
+                            if parts.count > 2 { path.append(.book(parts[1], parts[2])) }
+                            sh.libraryPath = path
+                        }
                     case "chapters":
                         // "@chapters bom ch3": what the page's chapter pill posts
                         sh.openChapters(volumeKey: parts.count > 1 ? parts[1] : "", chapterId: parts.count > 2 ? parts[2] : "")
