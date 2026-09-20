@@ -55,7 +55,7 @@
        below the page's edge, where the app's row is; a scroll up brings
        it back. The row with Listen never moves. */
     'html #sw-reader-footer { transition: transform .22s ease !important; will-change: transform; }',
-    'html.sw-app-reading #sw-reader-footer { transform: translateY(100%) !important; pointer-events: none !important; }',
+    'html.sw-app-reading #sw-reader-footer { transform: translateY(calc(100% + var(--sw-app-row-h, 0px) + 24px)) !important; pointer-events: none !important; }',
     '@media (prefers-reduced-motion: reduce) { html #sw-reader-footer { transition: none !important; } }',
     'html:not(.sw-web-shell) .hub-footer-contact a[href^="mailto:"] { display: none !important; }',
     /* 7. THE PAGE RUNS UNDER THE STATUS BAR, and the site measures its bar
@@ -121,7 +121,10 @@
     'html.sw-app-row-overlay .page, html.sw-app-row-overlay #main-content.page { padding-bottom: calc(var(--sw-reader-footer-h, 62px) + var(--sw-app-row-h, 0px) + 20px) !important; }',
     'html.sw-app-row-overlay #sw-return { bottom: calc(var(--sw-reader-footer-h, 62px) + var(--sw-app-row-h, 0px) + 10px) !important; }',
     'html.sw-app-row-overlay.sw-app-reading #sw-return { bottom: calc(var(--sw-app-row-h, 0px) + 10px) !important; }',
-    'html.sw-app-row-overlay.sw-app-listening #sw-reader-footer { transform: translateY(100%) !important; pointer-events: none !important; }',
+    /* listening: the player takes the row's place, so the chapter row goes
+       all the way off — its own height AND the native overlay under it
+       (user, 2026-09-20: "it doesnt collapse when its in reading mode") */
+    'html.sw-app-row-overlay.sw-app-listening #sw-reader-footer { transform: translateY(calc(100% + var(--sw-app-row-h, 0px) + 24px)) !important; pointer-events: none !important; }',
     /* CLEAR CHROME: the header and the chapter row let the text show through,
        the way a scripture app's do. */
     /* -- as CAPSULES floating on the text, the way a scripture app draws
@@ -130,16 +133,19 @@
        around the chapter row; circles for the buttons, no boxes. */
     'html.sw-app-clear .sw-top-bar { background: transparent !important; border: 0 !important; box-shadow: none !important; }',
     'html.sw-app-clear .sw-top-bar-inner { display: flex !important; align-items: center; gap: 6px; margin: 4px 12px 0; padding: 4px 6px; min-height: 52px; border-radius: 30px;',
-    '  background: color-mix(in srgb, var(--chrome, #1B2A41) 84%, transparent) !important; -webkit-backdrop-filter: saturate(160%) blur(18px); backdrop-filter: saturate(160%) blur(18px); box-shadow: 0 6px 22px rgba(0,0,0,.22); }',
+    '  background: color-mix(in srgb, var(--chrome, #1B2A41) 60%, transparent) !important; -webkit-backdrop-filter: blur(22px) saturate(160%) brightness(.7); backdrop-filter: blur(22px) saturate(160%) brightness(.7); box-shadow: 0 6px 22px rgba(0,0,0,.18), inset 0 0 0 1px color-mix(in srgb, var(--on-chrome, #F3EDE2) 9%, transparent); }',
     'html.sw-app-clear #sw-chrome-nav { flex: 1 1 auto; display: flex; justify-content: center; min-width: 0; }',
     'html.sw-app-clear .sw-chrome-home img { width: 58px !important; height: 38px !important; }',
     'html.sw-app-clear #sw-app-more { width: 44px !important; height: 44px !important; min-width: 44px !important; min-height: 44px !important; padding: 0 !important; border: 0 !important; border-radius: 50% !important; background: color-mix(in srgb, var(--on-chrome, #F3EDE2) 14%, transparent) !important; }',
     'html.sw-app-clear #sw-reader-footer { background: transparent !important; border-top: 0 !important; box-shadow: none !important; }',
     'html.sw-app-clear #sw-app-chapter-row { margin: 0 12px 8px !important; padding: 5px 6px !important; width: auto !important; border-radius: 30px; gap: 6px;',
-    '  background: color-mix(in srgb, var(--chrome, #1B2A41) 84%, transparent); -webkit-backdrop-filter: saturate(160%) blur(18px); backdrop-filter: saturate(160%) blur(18px); box-shadow: 0 -6px 22px rgba(0,0,0,.18); }',
+    '  background: color-mix(in srgb, var(--chrome, #1B2A41) 60%, transparent); -webkit-backdrop-filter: blur(22px) saturate(160%) brightness(.7); backdrop-filter: blur(22px) saturate(160%) brightness(.7); box-shadow: 0 -6px 22px rgba(0,0,0,.14), inset 0 0 0 1px color-mix(in srgb, var(--on-chrome, #F3EDE2) 9%, transparent); }',
     'html.sw-app-clear #sw-app-chapter-row .sw-app-arrow { border: 0 !important; border-radius: 22px !important; min-height: 44px !important; background: color-mix(in srgb, var(--on-chrome, #F3EDE2) 12%, transparent) !important; }',
     'html.sw-app-clear #sw-app-chapter-row .sw-app-arrow:disabled { background: transparent !important; }',
     'html.sw-app-clear #sw-app-chapter-pill { border: 0 !important; min-height: 44px !important; }',
+    /* no Top floater in the app (user, 2026-09-20): it sat on the chapter
+       row; a tap on the status bar scrolls to the top */
+    'html.sw-app-clear #sw-totop { display: none !important; }',
     /* the clock reads on the paper, not on scrolled text: a fade of the
        paper over the status bar, no band */
     'html.sw-app-clear #sw-app-statusbar { background: linear-gradient(to bottom, var(--paper, #FCFAF7) 55%, color-mix(in srgb, var(--paper, #FCFAF7) 0%, transparent)) !important; height: calc(env(safe-area-inset-top, 0px) + 14px); }',

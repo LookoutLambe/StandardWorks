@@ -300,7 +300,11 @@ struct ListenBar: View {
 struct ListenBarBelowContent: ViewModifier {
     @ObservedObject var shell: WebShell
     func body(content: Content) -> some View {
-        content.safeAreaInset(edge: .bottom) {
+        // an OVERLAY, not a safe-area inset: an inset shrinks the web view by
+        // the player's height (measured: innerHeight 874 → 774), so the text
+        // stopped under the player's glass and the chapter row, sliding down
+        // by the overlay's height, landed behind it instead of off-screen
+        content.overlay(alignment: .bottom) {
             if shell.listening {
                 ListenBar().environmentObject(shell)
                     .padding(.horizontal, 4)
@@ -325,10 +329,14 @@ struct ListenBarBelowContent: ViewModifier {
 struct FloatingChrome: View {
     @ObservedObject var shell: WebShell
     var body: some View {
+        // glass, not paint: the system blur, darkened, with 60% of the chrome
+        // over it — the text shows through, and on-chrome stays ≥ 4.5:1
         ZStack {
             Rectangle().fill(.ultraThinMaterial)
-            shell.chrome.opacity(0.84)
+            Color.black.opacity(0.3)
+            shell.chrome.opacity(0.6)
         }
+        .environment(\.colorScheme, shell.dark ? .dark : .light)
     }
 }
 
