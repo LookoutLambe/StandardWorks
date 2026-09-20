@@ -146,6 +146,12 @@
     /* no Top floater in the app (user, 2026-09-20): it sat on the chapter
        row; a tap on the status bar scrolls to the top */
     'html.sw-app-clear #sw-totop { display: none !important; }',
+    /* NO RETURN BANNER, NO PROGRESS LINE in the app (user, 2026-09-20: "take
+       off the back to now i dont need that and the progression line on the
+       top of every volume needs to be gone completely"). The site keeps both;
+       the app's chrome is the header, the chapter row and the native row. */
+    'html.sw-app-clear #sw-return { display: none !important; }',
+    'html.sw-app-clear #reading-progress { display: none !important; }',
     /* the clock reads on the paper, not on scrolled text: a fade of the
        paper over the status bar, no band */
     'html.sw-app-clear #sw-app-statusbar { background: linear-gradient(to bottom, var(--paper, #FCFAF7) 55%, color-mix(in srgb, var(--paper, #FCFAF7) 0%, transparent)) !important; height: calc(env(safe-area-inset-top, 0px) + 14px); }',
