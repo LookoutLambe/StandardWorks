@@ -3485,7 +3485,7 @@ var ch17Verses = [
     ["כִּי","for"],
     ["אָמַר","He said"],
     ["אֶעֱשֶׂה","I will make"],
-    ["אֶת־מַאֲכָלְכֶם","your food"],
+    ["אֶת־מַאֲכַלְכֶם","your food"],
     ["לְמָתוֹק","sweet"],
     ["וְלֹא","and not"],
     ["תְבַשְּׁלוּהוּ","shall you cook it"],
