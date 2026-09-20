@@ -13,9 +13,9 @@ android {
 
     defaultConfig {
         applicationId "com.sefermormon.standardworks"
-        minSdk 26            // TextToSpeech's onRangeStart (word highlighting) is API 26
+        minSdk 24            // as the previous release; onRangeStart (word highlighting) needs 26 and is simply never called below it
         targetSdk 36
-        versionCode 4
+        versionCode 5
         versionName "1.2.0"
     }
 
