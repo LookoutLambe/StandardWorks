@@ -3881,47 +3881,9 @@ var ch19Verses = [
   ]},
 ];
 var ch20Verses = [
-  { num:"א", words:[
-    ["הַקְשִׁיבוּ","hearken you"],
-    ["וְשִׁמְעוּ","and hear"],
-    ["זֹאת","this"],
-    ["בֵּית־יַעֲקֹב","O house of Jacob"],
-    ["הַנִּקְרָאִים","who are called"],
-    ["בְּשֵׁם","by the name of"],
-    ["יִשְׂרָאֵל","Israel"],
-    ["וַאֲשֶׁר","and who"],
-    ["יָצְאוּ","are come forth"],
-    ["מִמֵּי","out of the waters of"],
-    ["יְהוּדָה","Judah"],
-    ["אוֹ","or"],
-    ["מִמֵּי","out of the waters of"],
-    ["הַטְּבִילָה","baptism"],
-    ["הַנִּשְׁבָּעִים","who swear"],
-    ["בְּשֵׁם","by the name of"],
-    ["יְהוָה","the Lord"],
-    ["וֵאלֹהֵי","and the God of"],
-    ["יִשְׂרָאֵל","Israel"],
-    ["יַזְכִּירוּ","they make mention"],
-    ["אַךְ","yet"],
-    ["לֹא","not"],
-    ["בֶאֱמֶת","in truth"],
-    ["וְלֹא","nor"],
-    ["בִצְדָקָה","in righteousness"],
-    ["׃",""]
-  ]},
-  { num: "ב", words: [["אַךְ","nevertheless"], ["מֵעִיר","of the city of"], ["הַקֹּדֶשׁ","the holy"], ["יִקָּרְאוּ","they call themselves"], ["וְעַל־אֱלֹהֵי","and upon the God of"], ["יִשְׂרָאֵל","Israel"], ["לֹא","not"], ["נִסְמָכוּ","do they stay themselves"], ["אֲשֶׁר","which"], ["הוּא","He is"], ["יְהוָה","the Lord"], ["צְבָאוֹת","of Hosts"], ["אַף","yea"], ["יְהוָה","the Lord"], ["צְבָאוֹת","of Hosts"], ["שְׁמוֹ","is His name"], ["׃",""]]},
-  { num:"ג", words:[
-    ["הִנֵּה","behold"],
-    ["הִגַּדְתִּי","I have declared"],
-    ["הָרִאשֹׁנוֹת","the former things"],
-    ["מֵרֹאשׁ","from the beginning"],
-    ["וּמִפִּי","and from My mouth"],
-    ["יָצְאוּ","they went forth"],
-    ["וָאַרְאֵם","and I shewed them"],
-    ["פִּתְאֹם","suddenly"],
-    ["הֶרְאֵיתִים","I shewed them"],
-    ["׃",""]
-  ]},
+  { num: "א", words: [["הַקְשִׁיבוּ","hearken you"], ["וְשִׁמְעוּ","and hear"], ["זֹאת","this"], ["בֵּית־יַעֲקֹב","O house of Jacob"], ["הַנִּקְרָאִים","who are called"], ["בְּשֵׁם","by the name of"], ["יִשְׂרָאֵל","Israel"], ["וַאֲשֶׁר","and who"], ["יָצְאוּ","are come forth"], ["מִמֵּי","out of the waters of"], ["יְהוּדָה","Judah"], ["אוֹ","or"], ["מִמֵּי","out of the waters of"], ["הַטְּבִילָה","baptism"], ["הַנִּשְׁבָּעִים","who swear"], ["בְּשֵׁם","by the name of"], ["יְהוָה","the Lord"], ["וּבֵאלֹהֵי","and of the God of"], ["יִשְׂרָאֵל","Israel"], ["יַזְכִּירוּ","they make mention"], ["אַךְ","yet"], ["לֹא","not"], ["בֶאֱמֶת","in truth"], ["וְלֹא","nor"], ["בִצְדָקָה","in righteousness"], ["׃",""]]},
+  { num: "ב", words: [["אַךְ","nevertheless"], ["מֵעִיר","of the city of"], ["הַקֹּדֶשׁ","the holy"], ["נִקְרָאוּ","they call themselves"], ["וְעַל־אֱלֹהֵי","and upon the God of"], ["יִשְׂרָאֵל","Israel"], ["לֹא","not"], ["נִסְמָכוּ","do they stay themselves"], ["אֲשֶׁר","which"], ["הוּא","He is"], ["יְהוָה","the Lord"], ["צְבָאוֹת","of Hosts"], ["אַף","yea"], ["יְהוָה","the Lord"], ["צְבָאוֹת","of Hosts"], ["שְׁמוֹ","is His name"], ["׃",""]]},
+  { num: "ג", words: [["הִנֵּה","behold"], ["הִגַּדְתִּי","I have declared"], ["הָרִאשֹׁנוֹת","the former things"], ["מֵאָז","from the beginning"], ["וּמִפִּי","and from My mouth"], ["יָצְאוּ","they went forth"], ["וְאַשְׁמִיעֵם","and I reported them"], ["פִּתְאֹם","suddenly"], ["הֶרְאֵיתִים","I shewed them"], ["׃",""]]},
   { num:"ד", words:[
     ["וָאַעַשׂ","and I did it"],
     ["כִּי","because"],
@@ -3936,42 +3898,10 @@ var ch20Verses = [
     ["נְחוּשָׁה","brass"],
     ["׃",""]
   ]},
-  { num:"ה", words:[
-    ["וָאַגֵּד","and I have declared"],
-    ["לְךָ","to you"],
-    ["מֵאָז","from of old"],
-    ["בְּטֶרֶם","before"],
-    ["תָּבוֹא","it came"],
-    ["הֶרְאֵיתִיךָ","I shewed you"],
-    ["וָאַרְאֵם","and I shewed them"],
-    ["לְמַעַן","for fear"],
-    ["פֶּן־תֹּאמַר","lest you should say"],
-    ["עׇצְבִּי","mine idol"],
-    ["עָשָׂם","hath done them"],
-    ["וּפִסְלִי","and my graven image"],
-    ["וְנִסְכִּי","and my molten image"],
-    ["צִוָּם","hath commanded them"],
-    ["׃",""]
-  ]},
+  { num: "ה", words: [["וָאַגִּיד","I have even declared it"], ["לְךָ","to you"], ["מֵאָז","from of old"], ["בְּטֶרֶם","before"], ["תָּבוֹא","it came"], ["הֶרְאֵיתִיךָ","I shewed you"], ["וָאַרְאֵם","and I shewed them"], ["לְמַעַן","for fear"], ["פֶּן־תֹּאמַר","lest you should say"], ["עׇצְבִּי","mine idol"], ["עָשָׂם","hath done them"], ["וּפִסְלִי","and my graven image"], ["וְנִסְכִּי","and my molten image"], ["צִוָּם","hath commanded them"], ["׃",""]]},
   { num: "ו", words: [["רָאִיתָ","you have seen"], ["וְשָׁמַעְתָּ","and heard"], ["כׇל־זֹאת","all this"], ["וְאַתֶּם","and you"], ["הֲלוֹא","shall not"], ["תַגִּידוּ","declare them"], ["וְהֶרְאֵיתִיךָ","and I have shewed you"], ["חֲדָשׁוֹת","new things"], ["מֵעַתָּה","from this time"], ["וּנְצֻרוֹת","even hidden things"], ["וְלֹא","and not"], ["יְדַעְתָּם","did you know them"], ["׃",""]]},
-  { num:"ז", words:[
-    ["עַתָּה","now"],
-    ["נִבְרְאוּ","are they created"],
-    ["וְלֹא","and not"],
-    ["מֵאָז","from of old"],
-    ["וְלִפְנֵי","and before"],
-    ["הַיּוֹם","the day"],
-    ["אֲשֶׁר","when"],
-    ["לֹא","not"],
-    ["שְׁמַעְתָּם","you heard them"],
-    ["הֻגְּדוּ","were they declared"],
-    ["לְךָ","unto you"],
-    ["פֶּן־תֹּאמַר","lest you should say"],
-    ["הִנֵּה","behold"],
-    ["יְדַעְתִּים","I knew them"],
-    ["׃",""]
-  ]},
-  { num: "ח", words: [["גַּם","yea"], ["לֹא־שָׁמַעְתָּ","you heard not"], ["גַּם","yea"], ["לֹא","not"], ["יָדַעְתָּ","did you know"], ["גַּם","yea"], ["מֵאָז","from of old"], ["לֹא־פִתְּחָה","was not opened"], ["אׇזְנֶךָ","your ear"], ["כִּי","for"], ["יָדַעְתִּי","I knew"], ["בָּגוֹד","very treacherously"], ["תִּבְגֹּד","you would deal"], ["וּפוֹשֵׁעַ","and a transgressor"], ["מִבֶּטֶן","from the womb"], ["קֹרָא","were you called"], ["לָךְ","unto you"], ["׃",""]]},
+  { num: "ז", words: [["עַתָּה","now"], ["נִבְרְאוּ","are they created"], ["וְלֹא","and not"], ["מֵאָז","from of old"], ["וְלִפְנֵי","and before"], ["יוֹם","and before this day"], ["וְלֹא","and not"], ["שְׁמַעְתָּם","you heard them"], ["הֻגְּדוּ","were they declared"], ["לְךָ","unto you"], ["פֶּן־תֹּאמַר","lest you should say"], ["הִנֵּה","behold"], ["יְדַעְתִּין","I knew them"], ["׃",""]]},
+  { num: "ח", words: [["גַּם","yea"], ["לֹא־שָׁמַעְתָּ","you heard not"], ["גַּם","yea"], ["לֹא","not"], ["יָדַעְתָּ","did you know"], ["גַּם","yea"], ["מֵאָז","from of old"], ["לֹא־פִתְּחָה","was not opened"], ["אׇזְנֶךָ","your ear"], ["כִּי","for"], ["יָדַעְתִּי","I knew"], ["בָּגוֹד","very treacherously"], ["תִּבְגּוֹד","you would deal treacherously"], ["וּפֹשֵׁעַ","and a transgressor"], ["מִבֶּטֶן","from the womb"], ["קֹרָא","were you called"], ["לָךְ","unto you"], ["׃",""]]},
   { num: "ט", words: [["אַךְ","nevertheless"], ["לְמַעַן","for"], ["שְׁמִי","My name's sake"], ["אַאֲרִיךְ","will I defer"], ["אַפִּי","Mine anger"], ["וּתְהִלָּתִי","and for My praise"], ["אֶחֱטׇם־לָךְ","will I refrain from you"], ["לְבִלְתִּי","that not"], ["הַכְרִיתֶךָ","I cut you off"], ["׃",""]]},
   { num:"י", words:[
     ["כִּי","for"],
@@ -4039,7 +3969,7 @@ var ch20Verses = [
     ["׃",""]
   ]},
   { num: "יח", words: [["לוּא","O that"], ["הִקְשַׁבְתָּ","you had hearkened"], ["לְמִצְוֹתָי","to My commandments"], ["וַיְהִי","then had been"], ["כַנָּהָר","as a river"], ["שְׁלוֹמֶךָ","your peace"], ["וְצִדְקָתְךָ","and your righteousness"], ["כְּגַלֵּי","as the waves of"], ["הַיָּם","the sea"], ["׃",""]]},
-  { num: "יט", words: [["וַיְהִי","also had been"], ["כַחוֹל","as the sand"], ["זַרְעֶךָ","your seed"], ["וְצֶאֱצָאֵי","and the offspring of"], ["מֵעֶיךָ","your bowels"], ["כִּמְעוֹתָיו","like the gravel thereof"], ["לֹא־יִכָּרֵת","should not have been cut off"], ["וְלֹא־יִשָּׁמֵד","nor destroyed"], ["שְׁמוֹ","his name"], ["מִלְּפָנָי","from before Me"], ["׃",""]]},
+  { num: "יט", words: [["וַיְהִי","also had been"], ["כַחוֹל","as the sand"], ["זַרְעֶךָ","your seed"], ["וְצֶאֱצָאֵי","and the offspring of"], ["מֵעֶיךָ","your bowels"], ["כִּמְעֹתָיו","like its pebbles"], ["לֹא־יִכָּרֵת","should not have been cut off"], ["וְלֹא־יִשָּׁמֵד","nor destroyed"], ["שְׁמוֹ","his name"], ["מִלְּפָנָי","from before Me"], ["׃",""]]},
   { num:"כ", words:[
     ["צְאוּ","go you forth"],
     ["מִבָּבֶל","of Babylon"],
@@ -4060,7 +3990,7 @@ var ch20Verses = [
     ["יַעֲקֹב","Jacob"],
     ["׃",""]
   ]},
-  { num: "כא", words: [["וְלֹא","and not"], ["צָמְאוּ","they thirsted"], ["הוֹלִיכָם","He led them"], ["בַּחֳרָבוֹת","through the deserts"], ["מַיִם","waters"], ["מִצּוּר","out of the rock"], ["הִזִּיל","He caused to flow"], ["לָמוֹ","for them"], ["וַיִּבְקַע־צוּר","He clave the rock also"], ["וַיָּזֻבוּ","and gushed out"], ["מָיִם","the waters"], ["׃",""]]},
+  { num: "כא", words: [["וְלֹא","and not"], ["צָמְאוּ","they thirsted"], ["בׇּחֳרָבוֹת","through the deserts"], ["הוֹלִיכָם","he led them"], ["מַיִם","water"], ["מִצּוּר","out of the rock"], ["הִזִּיל","he caused to flow"], ["לָמוֹ","for them"], ["וַיִּבְקַע־צוּר","he split the rock"], ["וַיָּזֻבוּ","and gushed out"], ["מָיִם","water"], ["׃",""]]},
   { num: "כב", words: [["וְאַף־גַּם־זֹאת","and notwithstanding"], ["כִּי־עָשָׂה","He hath done"], ["כׇּל־זֹאת","all this"], ["וּגְדֹלוֹת","and greater things"], ["מֵאֵלֶּה","than these"], ["אֵין","there is no"], ["שָׁלוֹם","peace"], ["אָמַר","saith"], ["יְהוָה","the Lord"], ["לָרְשָׁעִים","unto the wicked"], ["׃",""]]}
 ];
 var ch21Verses = [
@@ -4148,7 +4078,7 @@ var ch21Verses = [
     ["הָאָרֶץ","the earth"],
     ["׃",""]
   ]},
-  { num: "ז", words: [["כֹּה־אָמַר","thus saith"], ["יְהוָה","the Lord"], ["גֹּאֵל","the Redeemer of"], ["יִשְׂרָאֵל","Israel"], ["קְדוֹשׁוֹ","his Holy One"], ["לִבְזוּי־נֶפֶשׁ","to him whom man despiseth"], ["לִמְתָעֵב","to him whom abhorreth"], ["גּוֹי","the nation"], ["לְעֶבֶד","to a servant of"], ["מֹשְׁלִים","rulers"], ["מְלָכִים","kings"], ["יִרְאוּ","shall see"], ["וָקָמוּ","and arise"], ["שָׂרִים","princes"], ["וְיִשְׁתַּחֲווּ","also shall worship"], ["לְמַעַן","because of"], ["יְהוָה","the Lord"], ["אֲשֶׁר","who is"], ["נֶאֱמָן","faithful"], ["׃",""]]},
+  { num: "ז", words: [["כֹּה־אָמַר","thus saith"], ["יְהוָה","the Lord"], ["גֹּאֵל","the Redeemer of"], ["יִשְׂרָאֵל","Israel"], ["קְדוֹשׁוֹ","his Holy One"], ["לִבְזֹה־נֶפֶשׁ","to him whom man despiseth"], ["לִמְתָעֵב","to him whom abhorreth"], ["גּוֹי","the nation"], ["לְעֶבֶד","to a servant of"], ["מֹשְׁלִים","rulers"], ["מְלָכִים","kings"], ["יִרְאוּ","shall see"], ["וָקָמוּ","and arise"], ["שָׂרִים","princes"], ["וְיִשְׁתַּחֲווּ","also shall worship"], ["לְמַעַן","because of"], ["יְהוָה","the Lord"], ["אֲשֶׁר","who is"], ["נֶאֱמָן","faithful"], ["׃",""]]},
   { num:"ח", words:[
     ["כֹּה־אָמַר","thus saith"],
     ["יְהוָה","the Lord"],
@@ -4208,7 +4138,7 @@ var ch21Verses = [
     ["יְרֻמוּן","shall be exalted"],
     ["׃",""]
   ]},
-  { num: "יב", words: [["וְאָז","and then"], ["בֵּית־יִשְׂרָאֵל","O house of Israel"], ["הִנֵּה","behold"], ["אֵלֶּה","these"], ["מֵרָחוֹק","from far"], ["יָבֹאוּ","shall come"], ["וְהִנֵּה־אֵלֶּה","and lo, these"], ["מִצָּפוֹן","from the north"], ["וּמִמַּעֲרָב","and from the west"], ["וְאֵלֶּה","and these"], ["מֵאֶרֶץ","from the land of"], ["סִינִים","Sinim"], ["׃",""]]},
+  { num: "יב", words: [["וְאָז","and then"], ["בֵּית־יִשְׂרָאֵל","O house of Israel"], ["הִנֵּה","behold"], ["אֵלֶּה","these"], ["מֵרָחוֹק","from far"], ["יָבֹאוּ","shall come"], ["וְהִנֵּה־אֵלֶּה","and lo, these"], ["מִצָּפוֹן","from the north"], ["וּמִיָּם","and from the west"], ["וְאֵלֶּה","and these"], ["מֵאֶרֶץ","from the land of"], ["סִינִים","Sinim"], ["׃",""]]},
   { num:"יג", words:[
     ["רׇנּוּ","sing"],
     ["שָׁמַיִם","O heavens"],
@@ -4280,7 +4210,7 @@ var ch21Verses = [
     ["כַּכַּלָּה","as a bride doth"],
     ["׃",""]
   ]},
-  { num: "יט", words: [["כִּי","for"], ["חׇרְבֹתַיִךְ","your waste places"], ["וְשֹׁמְמֹתַיִךְ","and your desolate places"], ["וְאֶרֶץ","and the land of"], ["הֲרִיסֻתֵךְ","your destruction"], ["כִּי","that"], ["עַתָּה","now"], ["תֵּצְרִי","shall even be too narrow"], ["מִיּוֹשֵׁב","by reason of the inhabitants"], ["וְרָחֲקוּ","and shall be far away"], ["מְבַלְּעָיִךְ","they that swallowed you up"], ["׃",""]]},
+  { num: "יט", words: [["כִּי","because"], ["חׇרְבֹתַיִךְ","your waste places"], ["וְשֹׁמְמֹתַיִךְ","and your desolate places"], ["וְאֶרֶץ","and the land of"], ["הֲרִסֻתֵךְ","your destruction"], ["כִּי","because"], ["עַתָּה","now"], ["תֵּצְרִי","shall be too narrow"], ["מִיּוֹשֵׁב","for the inhabitants"], ["וְרָחֲקוּ","shall be far away"], ["מְבַלְּעָיִךְ","and they that swallowed you up"], ["׃",""]]},
   { num:"כ", words:[
     ["בָּנִים","the children"],
     ["אֲשֶׁר","which"],
