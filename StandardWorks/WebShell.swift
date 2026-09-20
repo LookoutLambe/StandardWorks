@@ -68,6 +68,13 @@ final class WebShell: ObservableObject {
     /// A site page shown in a sheet over the app (Settings' print and privacy
     /// pages): never loaded into the reader, which would take the book away.
     @Published var sheetPage: String?
+    /// The reading modes the page is showing, as the page reports them
+    /// ({op:'modes'} from app-shell/shell_end.js): the layout ("inter",
+    /// "heb", "dual"), transliteration and vowel points. Settings shows and
+    /// sets them; the footer no longer carries the five buttons in the app.
+    @Published private(set) var readLayout = "inter"
+    @Published private(set) var readTranslit = true
+    @Published private(set) var readNikkud = true
     /// Read-aloud (the site's read_aloud.js, Carmit through Web Speech): whether
     /// this page has it, whether it is speaking, and the speeds it offers.
     @Published private(set) var canListen = false
@@ -122,6 +129,10 @@ final class WebShell: ObservableObject {
         // this book's chapters — one contents, not two (app-shell/shell_end.js, 10).
         case "chapters":
             openChapters(volumeKey: (message["volume"] as? String) ?? "", chapterId: (message["chapter"] as? String) ?? "")
+        case "modes":
+            if let l = message["layout"] as? String { readLayout = l }
+            if let t = message["translit"] as? Bool { readTranslit = t }
+            if let n = message["nikkud"] as? Bool { readNikkud = n }
         // The page changed its theme (its own ◐ button): re-cut the shell's
         // chrome and the web view's paper to match, and make it the choice.
         case "theme":
@@ -200,6 +211,13 @@ final class WebShell: ObservableObject {
 
     /// A site page in a sheet (SettingsView): the reader stays where it is.
     func presentPage(_ path: String) { sheetPage = path }
+
+    /// Settings' reading switches, applied through the page's own (the page
+    /// then reports the result back, which is what Settings shows).
+    func setReading(layout: String, translit: Bool, nikkud: Bool) {
+        readLayout = layout; readTranslit = translit; readNikkud = nikkud
+        run("window.__swSetReading && window.__swSetReading({ layout: \(jsString(layout)), translit: \(translit), nikkud: \(nikkud) });")
+    }
 
     /// The Library tapped a chapter: the page shows it and the Read tab comes up.
     func open(volume: Volume, book: Book, chapter: Int) {

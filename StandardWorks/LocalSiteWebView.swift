@@ -242,7 +242,7 @@ struct LocalSiteWebView: UIViewRepresentable {
         // the chapter sit in the folding band, in thumb reach; `returnPoint`
         // — the shell marks a way back before every jump it makes.
         config.userContentController.addUserScript(WKUserScript(
-            source: "window.__swShellCaps = { chapters: true, chapterRow: true, returnPoint: true }; document.documentElement.classList.add('sw-app-chapter-row');",
+            source: "window.__swShellCaps = { chapters: true, chapterRow: true, returnPoint: true, modes: true, readingDefaults: true }; document.documentElement.classList.add('sw-app-chapter-row', 'sw-app-modes-in-settings');",
             injectionTime: .atDocumentStart,
             forMainFrameOnly: true))
         // The app's own surface over the site — the boot redirect, the
@@ -429,6 +429,9 @@ enum DebugBridge {
                     case "appearance":
                         // "@appearance sepia|light|dark|system": what the Settings picker writes
                         if parts.count > 1 { UserDefaults.standard.set(parts[1], forKey: "shell.appearance") } else { answer = "which?" }
+                    case "modes":
+                        // "@modes dual 1 0": layout, transliteration, nikkud — what Settings sends
+                        if parts.count > 3 { sh.setReading(layout: parts[1], translit: parts[2] == "1", nikkud: parts[3] == "1") } else { answer = "layout translit nikkud" }
                     case "reading":
                         // "@reading 1" / "@reading 0": the scroll state, without a finger
                         sh.chromeHidden = parts.count > 1 && parts[1] == "1"

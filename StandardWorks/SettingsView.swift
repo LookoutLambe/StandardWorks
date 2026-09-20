@@ -17,6 +17,23 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             Form {
+                // THE READING MODES, here instead of the footer (user,
+                // 2026-09-20): the layout, the transliteration and the vowel
+                // points, each the page's own switch. The default is
+                // interlinear with both (seeded once by AppShell's start script).
+                Section(header: Text("Reading").foregroundStyle(shell.ink2)) {
+                    Picker("Layout", selection: Binding(get: { shell.readLayout }, set: { shell.setReading(layout: $0, translit: shell.readTranslit, nikkud: shell.readNikkud) })) {
+                        Text("Interlinear").tag("inter")
+                        Text("Hebrew only").tag("heb")
+                        Text("Dual").tag("dual")
+                    }
+                    .pickerStyle(.segmented)
+                    Toggle("Transliteration", isOn: Binding(get: { shell.readTranslit }, set: { shell.setReading(layout: shell.readLayout, translit: $0, nikkud: shell.readNikkud) }))
+                    Toggle("Vowel points (nikkud)", isOn: Binding(get: { shell.readNikkud }, set: { shell.setReading(layout: shell.readLayout, translit: shell.readTranslit, nikkud: $0) }))
+                    Text("Interlinear sets the English gloss under every word; Hebrew only is the text alone; Dual sets the English beside it.")
+                        .font(.footnote).foregroundStyle(shell.ink2)
+                }
+                .shellRow(shell)
                 Section(header: Text("Appearance").foregroundStyle(shell.ink2)) {
                     Picker("Theme", selection: $appearance) {
                         Text("Match phone").tag("system")

@@ -14,6 +14,23 @@
     }
   } catch (e) {}
 
+  /* 2. THE DEFAULT IS INTERLINEAR WITH TRANSLITERATION AND VOWELS (user,
+     2026-09-20). The readers boot from three keys per volume and, with
+     nothing stored, hide the transliteration; a shell that says
+     readingDefaults seeds the keys ONCE, only where nothing is stored, so
+     a choice already made anywhere is never overwritten, and every later
+     tap in Settings writes the reader's own choice as before. */
+  try {
+    var caps = window.__swShellCaps || {};
+    if (caps.readingDefaults) {
+      ['bom', 'ot', 'nt', 'dc', 'pgp', 'jst'].forEach(function (vol) {
+        if (localStorage.getItem(vol + '-show-translit') === null) localStorage.setItem(vol + '-show-translit', '1');
+        if (localStorage.getItem(vol + '-no-nikkud') === null) localStorage.setItem(vol + '-no-nikkud', '0');
+        if (localStorage.getItem(vol + '-view-mode') === null) localStorage.setItem(vol + '-view-mode', 'inter');
+      });
+    }
+  } catch (e) {}
+
   /* 5. WEBSITE THINGS STAY ON THE WEBSITE. Every selector is prefixed
      with `html` so it outweighs the site's own !important display rules
      (the bar's buttons carry one), whatever order the sheets load in;
@@ -70,6 +87,11 @@
     'html.sw-app-chapter-row #sw-chrome-nav .nqd-nav-btn { display: none !important; }',
     'html.sw-app-chapter-row #sw-chrome-chapter { pointer-events: none !important; border-color: transparent !important; background: transparent !important; }',
     'html.sw-app-chapter-row #sw-chrome-chapter .sw-chrome-pill-caret { display: none !important; }',
+    /* THE MODES LIVE IN SETTINGS (user, 2026-09-20): the footer is the
+       chapter row alone; the five buttons stay in the DOM, hidden, because
+       Settings drives the page's own switches through them. */
+    'html.sw-app-modes-in-settings #sw-reader-footer .nqd-dock { display: none !important; }',
+    'html.sw-app-modes-in-settings #sw-app-chapter-row { padding-bottom: max(6px, env(safe-area-inset-bottom, 0px)); }',
     'html #sw-reader-footer:has(#sw-app-chapter-row) { flex-direction: column !important; }',
     'html #sw-app-chapter-row { display: flex; align-items: stretch; gap: 8px; width: 100%; max-width: 960px; margin: 0 auto; box-sizing: border-box; direction: ltr;',
     '  padding: 6px max(8px, env(safe-area-inset-right, 0px)) 0 max(8px, env(safe-area-inset-left, 0px)); }',

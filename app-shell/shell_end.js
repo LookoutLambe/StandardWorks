@@ -40,22 +40,55 @@
   (function () {
     var port = window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.swShell;
     if (!port || !window.MutationObserver) return;
-    var last = null;
+    var last = null, lastModes = null;
     function tell() {
       var t = window.swCurrentTheme ? String(window.swCurrentTheme())
             : (document.body.classList.contains('dark-mode') ? 'dark' : document.body.classList.contains('sepia-mode') ? 'sepia' : 'light');
-      if (t === last) return;
-      last = t;
-      port.postMessage({ op: 'theme', theme: t });
+      if (t !== last) { last = t; port.postMessage({ op: 'theme', theme: t }); }
+      /* 9b. THE READING MODES, the same way (user, 2026-09-20: the modes live
+         in Settings). Layout and transliteration are body classes; the
+         vowels are a body class in the Book of Mormon and the button's own
+         state elsewhere. */
+      var m = readingModes();
+      if (m && m.key !== lastModes) { lastModes = m.key; port.postMessage({ op: 'modes', layout: m.layout, translit: m.translit, nikkud: m.nikkud }); }
     }
     function arm() {
       if (!document.body) return false;
       new MutationObserver(tell).observe(document.body, { attributes: true, attributeFilter: ['class'] });
+      var nik = document.getElementById('btn-nikkud');
+      if (nik) new MutationObserver(tell).observe(nik, { attributes: true, attributeFilter: ['class'] });
       tell();
       return true;
     }
     if (!arm()) document.addEventListener('DOMContentLoaded', arm);
   })();
+
+  function readingModes() {
+    var b = document.body;
+    if (!b || !document.getElementById('btn-inter')) return null;
+    var nik = document.getElementById('btn-nikkud');
+    var layout = b.classList.contains('dual-mode') ? 'dual' : b.classList.contains('hide-gloss') ? 'heb' : 'inter';
+    var translit = !b.classList.contains('hide-translit');
+    var nikkud = !(b.classList.contains('no-nikkud') || (nik && nik.classList.contains('active')));
+    return { layout: layout, translit: translit, nikkud: nikkud, key: layout + (translit ? 't' : '') + (nikkud ? 'n' : '') };
+  }
+  /* Settings' switches, applied through the page's OWN: setMode writes the
+     layout, toggleTranslit and toggleNikkud / toggleNoNikkud flip only when
+     the wanted state differs, and each writes the reader's choice as a tap
+     on the footer used to. */
+  window.__swSetReading = function (want) {
+    var m = readingModes();
+    if (!m) return false;
+    try {
+      if (want.layout && want.layout !== m.layout && typeof window.setMode === 'function') window.setMode(want.layout);
+      if (typeof want.translit === 'boolean' && want.translit !== m.translit && typeof window.toggleTranslit === 'function') window.toggleTranslit();
+      if (typeof want.nikkud === 'boolean' && want.nikkud !== m.nikkud) {
+        var f = window.toggleNikkud || window.toggleNoNikkud;
+        if (typeof f === 'function') f();
+      }
+    } catch (e) { return false; }
+    return true;
+  };
 
   /* 10. ONE CONTENTS. A shell that has a native Library says so
      (window.__swShellCaps.chapters, set by the app before the page runs).
