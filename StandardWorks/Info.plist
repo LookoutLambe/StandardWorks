@@ -2,12 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
-	<!-- THE LAUNCH SCREEN. Xcode's INFOPLIST_KEY_UILaunchScreen_* settings stop
-	     reaching the built plist once a real Info.plist is merged in (measured:
-	     UILaunchScreen came out as an empty dict, so the app launched to a blank
-	     screen instead of the logo). The same logo and navy, stated here. -->
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIColorName</key>
@@ -15,5 +9,12 @@
 		<key>UIImageName</key>
 		<string>LaunchLogo</string>
 	</dict>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<!-- the read-aloud keeps speaking with the phone locked (user, 2026-09-20) -->
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+	</array>
 </dict>
 </plist>

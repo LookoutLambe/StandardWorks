@@ -2540,6 +2540,14 @@
     if (next) dockNext.disabled = !!next.disabled;
 
     var peers = getAdjacentChapterIds();
+    /* A volume's first and last chapter have no neighbour on that side, and
+       the page's own nav buttons do not always say so (Genesis 1's "Previous
+       chapter" was enabled and did nothing, 2026-09-20). The order is the
+       whole volume even under the lazy loader, so no neighbour means the end. */
+    if (getCurrentChapterId()) {
+      if (!peers.prev) dockPrev.disabled = true;
+      if (!peers.next) dockNext.disabled = true;
+    }
     var prevLabel = dockChapterDisplayLabel(peers.prev);
     var nextLabel = dockChapterDisplayLabel(peers.next);
     setDockNavButtonLabels(dockPrev, '\u05D4\u05E7\u05D5\u05D3\u05DD', 'Prev', prevLabel);

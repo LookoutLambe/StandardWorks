@@ -1,6 +1,8 @@
 import SwiftUI
 import WebKit
 import CoreText
+import AVFoundation
+import MediaPlayer
 
 /// ONE WEB VIEW, FIVE TABS.
 ///
@@ -345,8 +347,16 @@ final class WebShell: ObservableObject {
     func toggleListen() {
         if tab != .read { tab = .read }
         guard canListen else { return }
-        run("(function(){ var r = window.SWReadAloud; if (!r) return; if (r.playing) r.stop(); else r.play(); })();")
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { [weak self] in self?.refreshListen() }
+        // the session is playback BEFORE the first word, so the voice is
+        // already on a background-capable session when the phone locks
+        let start = "(function(){ var r = window.SWReadAloud; if (!r) return; if (r.playing) r.stop(); else r.play(); })();"
+        if listening {
+            run(start)
+        } else {
+            wireRemoteCommands()
+            audioSession(active: true) { [weak self] in self?.run(start) }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) { [weak self] in self?.refreshListen() }
     }
 
     func setListenRate(_ rate: Double) {
@@ -365,6 +375,81 @@ final class WebShell: ObservableObject {
     private func press(_ id: String) {
         run("(function(){ var b = document.getElementById(\(jsString(id))); if (b) b.click(); })();")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in self?.refreshListen() }
+    }
+
+    // MARK: - the voice keeps going with the phone locked
+
+    /// THE READ-ALOUD IS THE PAGE'S OWN speechSynthesis, which WebKit voices
+    /// from this process — so it follows this app's audio session. A playback
+    /// session plus the `audio` background mode (Info.plist) keeps the app,
+    /// and the voice, running when the phone locks or another app comes up
+    /// (user, 2026-09-20: "when i close my phone i need it to continue to
+    /// read and stay active"). Spoken-audio mode ducks nothing and pauses for
+    /// interruptions like a podcast player would.
+    private static let audioQueue = DispatchQueue(label: "shell.audio-session")
+    private func audioSession(active: Bool, then: (() -> Void)? = nil) {
+        // off the main thread: activating a session can block (a runtime
+        // fault, "AVAudioSession Hang Risk", flagged the main-thread call)
+        WebShell.audioQueue.async {
+            let s = AVAudioSession.sharedInstance()
+            do {
+                if active {
+                    try s.setCategory(.playback, mode: .spokenAudio, options: [])
+                    try s.setActive(true)
+                } else {
+                    try s.setActive(false, options: .notifyOthersOnDeactivation)
+                }
+            } catch { NSLog("[shell] audio session \(active ? "on" : "off"): \(error)") }
+            if let then { DispatchQueue.main.async(execute: then) }
+        }
+    }
+
+    /// The lock screen and the earbuds drive the same transport the player
+    /// bar does: play/pause, ±10 s, stop.
+    private var remoteCommandsWired = false
+    private func wireRemoteCommands() {
+        guard !remoteCommandsWired else { return }
+        remoteCommandsWired = true
+        UIApplication.shared.beginReceivingRemoteControlEvents()
+        let c = MPRemoteCommandCenter.shared()
+        c.playCommand.addTarget { [weak self] _ in
+            guard let self, self.listening else { return .noActionableNowPlayingItem }
+            if self.listenPaused { self.pauseListen() }
+            return .success
+        }
+        c.pauseCommand.addTarget { [weak self] _ in
+            guard let self, self.listening else { return .noActionableNowPlayingItem }
+            if !self.listenPaused { self.pauseListen() }
+            return .success
+        }
+        c.togglePlayPauseCommand.addTarget { [weak self] _ in
+            guard let self, self.listening else { return .noActionableNowPlayingItem }
+            self.pauseListen()
+            return .success
+        }
+        c.stopCommand.addTarget { [weak self] _ in self?.stopListen(); return .success }
+        c.skipBackwardCommand.preferredIntervals = [10]
+        c.skipBackwardCommand.addTarget { [weak self] _ in self?.skipListen(back: true); return .success }
+        c.skipForwardCommand.preferredIntervals = [10]
+        c.skipForwardCommand.addTarget { [weak self] _ in self?.skipListen(back: false); return .success }
+        c.nextTrackCommand.isEnabled = false
+        c.previousTrackCommand.isEnabled = false
+    }
+
+    /// What the lock screen shows: the chapter, the volume, the app's logo.
+    private func updateNowPlaying() {
+        let center = MPNowPlayingInfoCenter.default()
+        guard listening else { center.nowPlayingInfo = nil; return }
+        var info: [String: Any] = [
+            MPMediaItemPropertyTitle: whereLabel.isEmpty ? "Sefer Mormon" : whereLabel,
+            MPMediaItemPropertyArtist: currentVolume?.name ?? "Sefer Mormon: Standard Works",
+            MPNowPlayingInfoPropertyPlaybackRate: listenPaused ? 0.0 : 1.0,
+            MPNowPlayingInfoPropertyMediaType: MPNowPlayingInfoMediaType.audio.rawValue,
+        ]
+        if let img = UIImage(named: "LaunchLogo") {
+            info[MPMediaItemPropertyArtwork] = MPMediaItemArtwork(boundsSize: img.size) { _ in img }
+        }
+        center.nowPlayingInfo = info
     }
 
     /// The volume the page is showing, by its file, for the player's cover tile.
@@ -389,7 +474,10 @@ final class WebShell: ObservableObject {
             if wasListening != self.listening {
                 // The page's own footer steps aside while the player is up (AppShell CSS).
                 self.run("document.documentElement.classList.toggle('sw-app-listening', \(self.listening));")
+                self.audioSession(active: self.listening)
+                if self.listening { self.wireRemoteCommands() }
             }
+            if self.listening || wasListening { self.updateNowPlaying() }
             self.listenRate = (d["rate"] as? Double) ?? self.listenRate
             if let sp = d["speeds"] as? [Double], !sp.isEmpty { self.listenRates = sp }
             if self.listening, self.listenTimer == nil {
