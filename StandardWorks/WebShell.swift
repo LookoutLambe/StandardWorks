@@ -32,7 +32,7 @@ final class WebShell: ObservableObject {
     /// bottom band, the player, the native bars — are cut from the page's
     /// chrome in every theme.
     @Published var theme = "light"
-    var dark: Bool { theme == "dark" }
+    var dark: Bool { theme == "dark" || AppShell.darkVariants.contains(theme) }
     /// The page's palette for this theme (AppShell.Palette), as SwiftUI colours.
     var palette: AppShell.Palette { AppShell.palette(theme: theme) }
     var paper: Color { Color(palette.paper) }
@@ -75,6 +75,17 @@ final class WebShell: ObservableObject {
     @Published private(set) var readLayout = "inter"
     @Published private(set) var readTranslit = true
     @Published private(set) var readNikkud = true
+    /// The reading size the page shows, 70…150 (its #sizeSlider).
+    @Published private(set) var textSize = 100
+    /// The header's ⋯ (app-shell/shell_end.js, 12) and what it opens.
+    @Published var showDisplayOptions = false
+    @Published var shareURL: URL?
+    /// The height of whatever floats over the page's bottom — the row, or the
+    /// player — handed to the page as --sw-app-row-h so its own footer sits
+    /// above it and its text ends clear of it (AppShell's stylesheet).
+    @Published var bottomOverlay: CGFloat = 0 {
+        didSet { if bottomOverlay != oldValue { pushOverlayHeight() } }
+    }
     /// Read-aloud (the site's read_aloud.js, Carmit through Web Speech): whether
     /// this page has it, whether it is speaking, and the speeds it offers.
     @Published private(set) var canListen = false
@@ -133,6 +144,7 @@ final class WebShell: ObservableObject {
             if let l = message["layout"] as? String { readLayout = l }
             if let t = message["translit"] as? Bool { readTranslit = t }
             if let n = message["nikkud"] as? Bool { readNikkud = n }
+        case "more": showDisplayOptions = true      // the header's ⋯ opens Display Options itself, the way a scripture app's does
         // The page changed its theme (its own ◐ button): re-cut the shell's
         // chrome and the web view's paper to match, and make it the choice.
         case "theme":
@@ -152,8 +164,42 @@ final class WebShell: ObservableObject {
         store.set(t, forKey: LocalSiteWebViewLogger.appliedThemeKey)
         let phone = ShellRoot.phoneIsDark ? "dark" : "light"
         let choice = store.string(forKey: "shell.appearance") ?? "system"
-        let want = ["light", "sepia", "dark"].contains(choice) ? choice : phone
+        let want = ["light", "sepia", "dark"].contains(choice) ? choice : (AppShell.darkVariants.contains(choice) ? "dark" : phone)
         if want != t { store.set(t, forKey: "shell.appearance") }
+    }
+
+    /// "Full screen on scroll": the header folds with the chapter row while
+    /// reading. Stored by the shell, carried to the page as a class.
+    var fullScreenOnScroll: Bool {
+        get { UserDefaults.standard.bool(forKey: "shell.fullScreenOnScroll") }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "shell.fullScreenOnScroll")
+            objectWillChange.send()
+            pushFullScreen()
+        }
+    }
+    private func pushFullScreen() {
+        run("document.documentElement.classList.toggle('sw-app-fullscreen', \(fullScreenOnScroll));")
+    }
+
+    private func pushOverlayHeight() {
+        run("document.documentElement.style.setProperty('--sw-app-row-h', '\(Int(bottomOverlay.rounded()))px'); window.dispatchEvent(new Event('resize'));")
+    }
+
+    /// The page's reading size, through its own setter (which persists it per volume).
+    func setTextSize(_ n: Int) {
+        let v = max(70, min(150, n))
+        textSize = v
+        run("(function (v) { var s = document.getElementById('sizeSlider'); if (s) s.value = v; if (window.setSize) window.setSize(v); })(\(v));")
+    }
+
+    /// The chapter's address on the website, for sharing.
+    var currentSiteURL: URL? {
+        guard let wv = webView, let u = wv.url else { return nil }
+        let rel = u.path.replacingOccurrences(of: wwwDirectoryURL.path, with: "").trimmingCharacters(in: CharacterSet(charactersIn: "/"))
+        var s = "https://sefermormon.com/" + rel
+        if let f = u.fragment, !f.isEmpty { s += "#" + f }
+        return URL(string: s)
     }
 
     // MARK: - the page
@@ -392,8 +438,13 @@ final class WebShell: ObservableObject {
         }
         lastOffset = wv.scrollView.contentOffset.y
         if chromeHidden { chromeHidden = false }
+        pushOverlayHeight()
+        pushFullScreen()
         refreshWhere()
         refreshListen()
+        wv.evaluateJavaScript("(function(){ var s = document.getElementById('sizeSlider'); var p = document.getElementById('page'); var v = s ? parseInt(s.value, 10) : NaN; if (isNaN(v) && p) v = parseInt(p.style.fontSize, 10); return isNaN(v) ? 100 : v; })()") { [weak self] v, _ in
+            if let n = v as? Int { self?.textSize = n } else if let d = v as? Double { self?.textSize = Int(d) }
+        }
     }
 
     func refreshWhere() {

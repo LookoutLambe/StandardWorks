@@ -109,6 +109,56 @@
        band is folded. */
     'html #sw-return { bottom: calc(var(--sw-reader-footer-h, 112px) + 10px) !important; transition: bottom .22s ease; }',
     'html.sw-app-reading #sw-return { bottom: max(10px, env(safe-area-inset-bottom, 0px)) !important; }',
+    /* FULL HEIGHT UNDER FLOATING CHROME (user, 2026-09-20: "see how it
+       optimizes the screen"). Where the shell says so (html.sw-app-row-overlay)
+       its bottom row floats over the page, which runs to the bottom of the
+       glass; the page's own footer is lifted above the row by the row's
+       measured height (--sw-app-row-h, set by the shell), the page pads its
+       end by both, and the Return banner rides above them. While the page is
+       read aloud the footer slides down behind the player. */
+    'html.sw-app-row-overlay #sw-reader-footer { bottom: var(--sw-app-row-h, 0px) !important; }',
+    'html.sw-app-row-overlay #sw-app-chapter-row { padding-bottom: 6px !important; }',
+    'html.sw-app-row-overlay .page, html.sw-app-row-overlay #main-content.page { padding-bottom: calc(var(--sw-reader-footer-h, 62px) + var(--sw-app-row-h, 0px) + 20px) !important; }',
+    'html.sw-app-row-overlay #sw-return { bottom: calc(var(--sw-reader-footer-h, 62px) + var(--sw-app-row-h, 0px) + 10px) !important; }',
+    'html.sw-app-row-overlay.sw-app-reading #sw-return { bottom: calc(var(--sw-app-row-h, 0px) + 10px) !important; }',
+    'html.sw-app-row-overlay.sw-app-listening #sw-reader-footer { transform: translateY(100%) !important; pointer-events: none !important; }',
+    /* CLEAR CHROME: the header and the chapter row let the text show through,
+       the way a scripture app's do. */
+    /* -- as CAPSULES floating on the text, the way a scripture app draws
+       them (user, 2026-09-20): the bar itself is transparent, its inner row
+       a rounded capsule of the chrome over a blur; the footer the same,
+       around the chapter row; circles for the buttons, no boxes. */
+    'html.sw-app-clear .sw-top-bar { background: transparent !important; border: 0 !important; box-shadow: none !important; }',
+    'html.sw-app-clear .sw-top-bar-inner { display: flex !important; align-items: center; gap: 6px; margin: 4px 12px 0; padding: 4px 6px; min-height: 52px; border-radius: 30px;',
+    '  background: color-mix(in srgb, var(--chrome, #1B2A41) 84%, transparent) !important; -webkit-backdrop-filter: saturate(160%) blur(18px); backdrop-filter: saturate(160%) blur(18px); box-shadow: 0 6px 22px rgba(0,0,0,.22); }',
+    'html.sw-app-clear #sw-chrome-nav { flex: 1 1 auto; display: flex; justify-content: center; min-width: 0; }',
+    'html.sw-app-clear .sw-chrome-home img { width: 58px !important; height: 38px !important; }',
+    'html.sw-app-clear #sw-app-more { width: 44px !important; height: 44px !important; min-width: 44px !important; min-height: 44px !important; padding: 0 !important; border: 0 !important; border-radius: 50% !important; background: color-mix(in srgb, var(--on-chrome, #F3EDE2) 14%, transparent) !important; }',
+    'html.sw-app-clear #sw-reader-footer { background: transparent !important; border-top: 0 !important; box-shadow: none !important; }',
+    'html.sw-app-clear #sw-app-chapter-row { margin: 0 12px 8px !important; padding: 5px 6px !important; width: auto !important; border-radius: 30px; gap: 6px;',
+    '  background: color-mix(in srgb, var(--chrome, #1B2A41) 84%, transparent); -webkit-backdrop-filter: saturate(160%) blur(18px); backdrop-filter: saturate(160%) blur(18px); box-shadow: 0 -6px 22px rgba(0,0,0,.18); }',
+    'html.sw-app-clear #sw-app-chapter-row .sw-app-arrow { border: 0 !important; border-radius: 22px !important; min-height: 44px !important; background: color-mix(in srgb, var(--on-chrome, #F3EDE2) 12%, transparent) !important; }',
+    'html.sw-app-clear #sw-app-chapter-row .sw-app-arrow:disabled { background: transparent !important; }',
+    'html.sw-app-clear #sw-app-chapter-pill { border: 0 !important; min-height: 44px !important; }',
+    /* the clock reads on the paper, not on scrolled text: a fade of the
+       paper over the status bar, no band */
+    'html.sw-app-clear #sw-app-statusbar { background: linear-gradient(to bottom, var(--paper, #FCFAF7) 55%, color-mix(in srgb, var(--paper, #FCFAF7) 0%, transparent)) !important; height: calc(env(safe-area-inset-top, 0px) + 14px); }',
+    /* FULL SCREEN ON SCROLL (a Display option): reading folds the header
+       too, up and away; a scroll up brings both back. */
+    'html.sw-app-fullscreen .sw-top-bar { transition: transform .22s ease; }',
+    'html.sw-app-fullscreen.sw-app-reading .sw-top-bar { transform: translateY(-110%) !important; }',
+    '@media (prefers-reduced-motion: reduce) { html.sw-app-fullscreen .sw-top-bar { transition: none !important; } }',
+    /* TWO MORE THEMES, cut from the dark one: Black (the OLED black a night
+       reader wants) and Gray (a lifted charcoal). The page is in its dark
+       theme; the shell adds the variant class and keeps it in
+       sw-app-dark-variant so the class is back before the first paint. */
+    'html.sw-app-theme-black body.dark-mode { --paper: #000000; --paper-2: #0A0A0A; --panel: #0A0A0A; --card: #141414; --chrome: #050810; --chrome-2: #000000; --chrome-line: #1C2230; --surface-1: #0F141C; }',
+    'html.sw-app-theme-gray body.dark-mode { --paper: #2B2B2E; --paper-2: #343437; --panel: #343437; --card: #3C3C40; --ink: #F1ECE3; --ink-2: #C4BBAD; --ink-3: #A79E91; --chrome: #1C1D21; --chrome-2: #141518; --chrome-line: #33353B; --surface-1: #2F3036; }',
+    /* THE HEADER IS MARK · TITLE · MORE (user, 2026-09-20: "see the three dots
+       at the top"): the size and theme buttons fold into the shell's more
+       menu, drawn by shell_end.js (12). */
+    'html.sw-app-more #sw-chrome-size, html.sw-app-more #sw-chrome-dark, html.sw-app-more .sw-chrome-print { display: none !important; }',
+    'html.sw-app-more #sw-app-more { min-width: 44px; min-height: 44px; margin: 0; padding: 0 6px; border: 1px solid color-mix(in srgb, var(--here-chrome, #DDB768) 50%, transparent); border-radius: 6px; background: transparent; color: var(--on-chrome, #F3EDE2); font: 700 22px/1 -apple-system, system-ui, sans-serif; letter-spacing: 1px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; -webkit-tap-highlight-color: transparent; }',
     /* and the status bar itself always sits on chrome, whatever is under it */
     'html #sw-app-statusbar { position: fixed; top: 0; left: 0; right: 0; height: env(safe-area-inset-top, 0px); background: var(--chrome, #1B2A41); z-index: 2147483646; pointer-events: none; }'
   ].join('\n');

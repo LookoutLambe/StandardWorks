@@ -62,8 +62,21 @@ enum AppShell {
     struct Palette {
         let paper, panel, card, ink, ink2, ink3, rule, here, chrome, onChrome, hereChrome: UIColor
     }
+    /// The themes the shell offers: the site's three, and two cuts of its
+    /// dark one (AppShell's stylesheet: html.sw-app-theme-black / -gray).
+    static let themes = ["light", "sepia", "dark", "black", "gray"]
+    static let darkVariants: Set<String> = ["black", "gray"]
+
     static func palette(theme: String) -> Palette {
         switch theme {
+        case "black":
+            return Palette(paper: hex(0x000000), panel: hex(0x0A0A0A), card: hex(0x141414),
+                           ink: hex(0xEDE6DA), ink2: hex(0xB5A896), ink3: hex(0x9A8D7C), rule: hex(0x2A2A2A),
+                           here: hex(0xD9B45F), chrome: hex(0x050810), onChrome: hex(0xE7E0D4), hereChrome: hex(0xE6C87E))
+        case "gray":
+            return Palette(paper: hex(0x2B2B2E), panel: hex(0x343437), card: hex(0x3C3C40),
+                           ink: hex(0xF1ECE3), ink2: hex(0xC4BBAD), ink3: hex(0xA79E91), rule: hex(0x4A4A4E),
+                           here: hex(0xE6C87E), chrome: hex(0x1C1D21), onChrome: hex(0xE7E0D4), hereChrome: hex(0xE6C87E))
         case "dark":
             return Palette(paper: hex(0x14120F), panel: hex(0x1C1916), card: hex(0x221E19),
                            ink: hex(0xEDE6DA), ink2: hex(0xB5A896), ink3: hex(0x9A8D7C), rule: hex(0x3A342C),
@@ -92,7 +105,11 @@ enum AppShell {
     /// switch. The page persists it, so it also survives into the next page
     /// and the next launch.
     static func applyThemeScript(theme: String) -> String {
-        "window.swApplyTheme && window.swApplyTheme('\(["light", "sepia", "dark"].contains(theme) ? theme : "light")');"
+        let base = ["light", "sepia", "dark"].contains(theme) ? theme : (darkVariants.contains(theme) ? "dark" : "light")
+        let variant = darkVariants.contains(theme) ? theme : ""
+        // the page's own switch for the base theme; the variant is the shell's
+        // class on <html>, remembered so the start script restores it before paint
+        return "window.swApplyTheme && window.swApplyTheme('\(base)'); (function (v) { var h = document.documentElement; h.classList.remove('sw-app-theme-black', 'sw-app-theme-gray'); try { if (v) { h.classList.add('sw-app-theme-' + v); localStorage.setItem('sw-app-dark-variant', v); } else { localStorage.removeItem('sw-app-dark-variant'); } } catch (e) {} })('\(variant)');"
     }
 
     /// Asks the page which theme it is showing: "light", "sepia" or "dark".

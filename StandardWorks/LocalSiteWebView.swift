@@ -51,7 +51,10 @@ final class LocalSiteWebViewLogger: NSObject, WKNavigationDelegate, WKScriptMess
     /// white or black. See AppShell.
     static func matchPaper(_ webView: WKWebView, shell: WebShell? = nil) {
         webView.evaluateJavaScript(AppShell.currentThemeScript) { value, _ in
-            let theme = (value as? String) ?? "light"
+            var theme = (value as? String) ?? "light"
+            // the page knows only its dark theme; Black and Gray are the shell's cuts of it
+            let choice = UserDefaults.standard.string(forKey: "shell.appearance") ?? "system"
+            if theme == "dark", AppShell.darkVariants.contains(choice) { theme = choice }
             let paper = AppShell.paper(theme: theme)
             webView.backgroundColor = paper
             webView.scrollView.backgroundColor = paper
@@ -242,7 +245,7 @@ struct LocalSiteWebView: UIViewRepresentable {
         // the chapter sit in the folding band, in thumb reach; `returnPoint`
         // — the shell marks a way back before every jump it makes.
         config.userContentController.addUserScript(WKUserScript(
-            source: "window.__swShellCaps = { chapters: true, chapterRow: true, returnPoint: true, modes: true, readingDefaults: true }; document.documentElement.classList.add('sw-app-chapter-row', 'sw-app-modes-in-settings');",
+            source: "window.__swShellCaps = { chapters: true, chapterRow: true, returnPoint: true, modes: true, readingDefaults: true, more: true, overlay: true }; document.documentElement.classList.add('sw-app-chapter-row', 'sw-app-modes-in-settings', 'sw-app-row-overlay', 'sw-app-clear', 'sw-app-more'); try { var v = localStorage.getItem('sw-app-dark-variant'); if (v === 'black' || v === 'gray') document.documentElement.classList.add('sw-app-theme-' + v); } catch (e) {}",
             injectionTime: .atDocumentStart,
             forMainFrameOnly: true))
         // The app's own surface over the site — the boot redirect, the
@@ -429,6 +432,15 @@ enum DebugBridge {
                     case "appearance":
                         // "@appearance sepia|light|dark|system": what the Settings picker writes
                         if parts.count > 1 { UserDefaults.standard.set(parts[1], forKey: "shell.appearance") } else { answer = "which?" }
+                    case "textsize":
+                        // "@textsize 120": the slider's value, 70…150
+                        if parts.count > 1, let n = Int(parts[1]) { sh.setTextSize(n) } else { answer = "70…150" }
+                    case "fullscreen":
+                        // "@fullscreen 1|0": the Display Options toggle
+                        sh.fullScreenOnScroll = parts.count > 1 && parts[1] == "1"
+                    case "more", "display":
+                        // the header's ⋯ and the Settings row both open Display Options
+                        sh.showDisplayOptions = true
                     case "modes":
                         // "@modes dual 1 0": layout, transliteration, nikkud — what Settings sends
                         if parts.count > 3 { sh.setReading(layout: parts[1], translit: parts[2] == "1", nikkud: parts[3] == "1") } else { answer = "layout translit nikkud" }

@@ -17,46 +17,7 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             Form {
-                // THE READING MODES, here instead of the footer (user,
-                // 2026-09-20): the layout, the transliteration and the vowel
-                // points, each the page's own switch. The default is
-                // interlinear with both (seeded once by AppShell's start script).
-                Section(header: Text("Reading").foregroundStyle(shell.ink2)) {
-                    Picker("Layout", selection: Binding(get: { shell.readLayout }, set: { shell.setReading(layout: $0, translit: shell.readTranslit, nikkud: shell.readNikkud) })) {
-                        Text("Interlinear").tag("inter")
-                        Text("Hebrew only").tag("heb")
-                        Text("Dual").tag("dual")
-                    }
-                    .pickerStyle(.segmented)
-                    Toggle("Transliteration", isOn: Binding(get: { shell.readTranslit }, set: { shell.setReading(layout: shell.readLayout, translit: $0, nikkud: shell.readNikkud) }))
-                    Toggle("Vowel points (nikkud)", isOn: Binding(get: { shell.readNikkud }, set: { shell.setReading(layout: shell.readLayout, translit: shell.readTranslit, nikkud: $0) }))
-                    Text("Interlinear sets the English gloss under every word; Hebrew only is the text alone; Dual sets the English beside it.")
-                        .font(.footnote).foregroundStyle(shell.ink2)
-                }
-                .shellRow(shell)
-                Section(header: Text("Appearance").foregroundStyle(shell.ink2)) {
-                    Picker("Theme", selection: $appearance) {
-                        Text("Match phone").tag("system")
-                        Text("Light").tag("light")
-                        Text("Sepia").tag("sepia")
-                        Text("Dark").tag("dark")
-                    }
-                    .pickerStyle(.inline)
-                    .labelsHidden()
-                }
-                .shellRow(shell)
-                Section(header: Text("Text size").foregroundStyle(shell.ink2)) {
-                    HStack {
-                        Button { shell.stepTextSize(-10) } label: { Label("Smaller", systemImage: "textformat.size.smaller") }
-                            .buttonStyle(.bordered)
-                        Spacer()
-                        Button { shell.stepTextSize(10) } label: { Label("Larger", systemImage: "textformat.size.larger") }
-                            .buttonStyle(.bordered)
-                    }
-                    Text("Sets the reading size on every page; the same control as the Aa button in the reader.")
-                        .font(.footnote).foregroundStyle(shell.ink2)
-                }
-                .shellRow(shell)
+                DisplayOptionsSections()
                 Section(header: Text("About").foregroundStyle(shell.ink2)) {
                     // In a sheet, never in the reader: loading a website page
                     // into the one web view took the book away — no chapter
@@ -111,4 +72,120 @@ private struct SitePageWebView: UIViewRepresentable {
         return wv
     }
     func updateUIView(_ uiView: WKWebView, context: Context) {}
+}
+
+
+/// DISPLAY OPTIONS, the way a scripture app offers them (user, 2026-09-20):
+/// the reading size on a slider, the theme as swatches — the site's Light,
+/// Sepia and Dark, and the shell's Black and Gray cuts of Dark — with "match
+/// phone", and the reading modes (layout, transliteration, vowel points).
+/// One view in two places: the sheet the header's ⋯ opens, and Settings.
+/// Every control drives the page's own switch and shows what the page reports.
+struct DisplayOptionsSections: View {
+    @EnvironmentObject var shell: WebShell
+    @AppStorage("shell.appearance") private var appearance = "system"
+
+    var body: some View {
+        Section(header: Text("Text size").foregroundStyle(shell.ink2)) {
+            HStack(spacing: 12) {
+                Text("A").font(.system(size: 13)).foregroundStyle(shell.ink2)
+                Slider(value: Binding(get: { Double(shell.textSize) }, set: { shell.setTextSize(Int($0.rounded())) }), in: 70...150, step: 5)
+                    .accessibilityLabel("Text size")
+                Text("A").font(.system(size: 24)).foregroundStyle(shell.ink2)
+            }
+        }
+        .shellRow(shell)
+        Section(header: Text("Theme").foregroundStyle(shell.ink2)) {
+            HStack(spacing: 14) {
+                ForEach(AppShell.themes, id: \.self) { key in
+                    Button { appearance = key } label: {
+                        ThemeSwatch(key: key, selected: appearance == key || (appearance == "system" && key == systemTheme))
+                    }
+                    .buttonStyle(.plain)      // the system's pressed dimming, no layout shift
+                }
+            }
+            .padding(.vertical, 4)
+            .sensoryFeedback(.selection, trigger: appearance)
+            Toggle("Match phone", isOn: Binding(get: { appearance == "system" }, set: { appearance = $0 ? "system" : systemTheme }))
+        }
+        .shellRow(shell)
+        Section(header: Text("Reading").foregroundStyle(shell.ink2)) {
+            Picker("Layout", selection: Binding(get: { shell.readLayout }, set: { shell.setReading(layout: $0, translit: shell.readTranslit, nikkud: shell.readNikkud) })) {
+                Text("Interlinear").tag("inter")
+                Text("Hebrew only").tag("heb")
+                Text("Dual").tag("dual")
+            }
+            .pickerStyle(.segmented)
+            Toggle("Transliteration", isOn: Binding(get: { shell.readTranslit }, set: { shell.setReading(layout: shell.readLayout, translit: $0, nikkud: shell.readNikkud) }))
+            Toggle("Vowel points (nikkud)", isOn: Binding(get: { shell.readNikkud }, set: { shell.setReading(layout: shell.readLayout, translit: shell.readTranslit, nikkud: $0) }))
+            Toggle("Full screen on scroll", isOn: Binding(get: { shell.fullScreenOnScroll }, set: { shell.fullScreenOnScroll = $0 }))
+        }
+        .shellRow(shell)
+        if !shell.whereLabel.isEmpty {
+            Section(header: Text(shell.whereLabel).foregroundStyle(shell.ink2)) {
+                // the study panel's own bookmark button, driven while hidden
+                Button { shell.run("(function(){ var b = document.getElementById('xref-bm-add'); if (b) b.click(); })();") } label: { Label("Bookmark this chapter", systemImage: "bookmark") }
+                if let u = shell.currentSiteURL {
+                    ShareLink(item: u) { Label("Share this chapter", systemImage: "square.and.arrow.up") }
+                }
+            }
+            .shellRow(shell)
+        }
+    }
+
+    /// The theme the phone's own scheme means, for the swatch that shows it.
+    private var systemTheme: String { ShellRoot.phoneIsDark ? "dark" : "light" }
+}
+
+/// A theme as its own paper and ink, ringed in "here" when chosen.
+private struct ThemeSwatch: View {
+    @EnvironmentObject var shell: WebShell
+    let key: String
+    let selected: Bool
+    private static let names = ["light": "Light", "sepia": "Sepia", "dark": "Dark", "black": "Black", "gray": "Gray"]
+
+    var body: some View {
+        let p = AppShell.palette(theme: key)
+        VStack(spacing: 6) {
+            ZStack {
+                RoundedRectangle(cornerRadius: 10, style: .continuous).fill(Color(p.paper))
+                VStack(alignment: .leading, spacing: 4) {
+                    ForEach(0..<3) { i in
+                        Capsule().fill(Color(p.ink).opacity(0.75)).frame(width: i == 2 ? 22 : 30, height: 3)
+                    }
+                }
+            }
+            .frame(width: 52, height: 40)
+            .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).strokeBorder(selected ? shell.here : shell.rule, lineWidth: selected ? 2 : 1))
+            Text(Self.names[key] ?? key).font(.caption2).foregroundStyle(selected ? shell.here : shell.ink2)
+        }
+        .frame(maxWidth: .infinity)
+        .contentShape(Rectangle())
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Self.names[key] ?? key)
+        .accessibilityAddTraits(selected ? [.isButton, .isSelected] : [.isButton])
+    }
+}
+
+/// The sheet the header's ⋯ opens: the same sections, with Done.
+struct DisplayOptionsSheet: View {
+    @EnvironmentObject var shell: WebShell
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        NavigationStack {
+            Form { DisplayOptionsSections() }
+                .shellPage()
+                .navigationTitle("Display Options")
+                .navigationBarTitleDisplayMode(.inline)
+                .shellBar()
+                .toolbar {
+                    ToolbarItem(placement: .confirmationAction) {
+                        Button { dismiss() } label: { Image(systemName: "xmark.circle.fill").font(.title3) }
+                            .accessibilityLabel("Close")
+                    }
+                }
+        }
+        .environment(\.colorScheme, shell.dark ? .dark : .light)
+    }
 }

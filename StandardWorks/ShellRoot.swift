@@ -42,24 +42,47 @@ struct ShellRoot: View {
         // navy footer and this row are one navy band to the bottom of the
         // glass, and under the native pages the same navy answers the navy
         // bar at the top ("can the entire footer area be navy blue?").
-        VStack(spacing: 0) {
-            TabView(selection: $shell.tab) {
-                LibraryView().tag(WebShell.Tab.library).toolbar(.hidden, for: .tabBar)
-                readTab.tag(WebShell.Tab.read).toolbar(.hidden, for: .tabBar)
-                SearchView().tag(WebShell.Tab.search).toolbar(.hidden, for: .tabBar)
-                NotesView().tag(WebShell.Tab.notes).toolbar(.hidden, for: .tabBar)
-                SettingsView().tag(WebShell.Tab.settings).toolbar(.hidden, for: .tabBar)
-            }
+        // THE ROW FLOATS (user, 2026-09-20: "see how it optimizes the screen").
+        // As a bottom inset of the tab view the native pages leave it room and
+        // scroll under it; the web view takes none of that room, runs to the
+        // bottom of the glass, and the page lifts its own footer above the row
+        // by the height reported to it (WebShell.bottomOverlay → --sw-app-row-h).
+        // The row is the chrome at 76% over a blur, so the text shows through.
+        TabView(selection: $shell.tab) {
+            LibraryView().tag(WebShell.Tab.library).toolbar(.hidden, for: .tabBar)
+            readTab.tag(WebShell.Tab.read).toolbar(.hidden, for: .tabBar)
+            SearchView().tag(WebShell.Tab.search).toolbar(.hidden, for: .tabBar)
+            NotesView().tag(WebShell.Tab.notes).toolbar(.hidden, for: .tabBar)
+            SettingsView().tag(WebShell.Tab.settings).toolbar(.hidden, for: .tabBar)
+        }
+        .safeAreaInset(edge: .bottom, spacing: 0) {
             if !barHidden {
+                // a capsule floating above the home indicator, inset from the
+                // edges, the chrome over a blur of the text beneath it
                 ShellTabBar()
-                    .padding(.bottom, max(ShellRoot.homeIndicatorInset, 8))
-                    .background(shell.chrome)
+                    .frame(height: 58)
+                    .background { FloatingChrome(shell: shell).clipShape(Capsule()) }
+                    .shadow(color: .black.opacity(0.22), radius: 12, y: 6)
+                    .padding(.horizontal, 12)
+                    .padding(.top, 4)
+                    .padding(.bottom, max(ShellRoot.homeIndicatorInset, 10))
+                    .background(GeometryReader { g in
+                        Color.clear
+                            .onAppear { shell.bottomOverlay = g.size.height }
+                            .onChange(of: g.size.height) { _, h in shell.bottomOverlay = h }
+                    })
                     .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
-        // The stack runs to the bottom of the glass; the row pads itself above
-        // the home indicator, and when the row is gone the page takes it all.
         .ignoresSafeArea(.container, edges: .bottom)
+        .sheet(isPresented: $shell.showDisplayOptions) {
+            DisplayOptionsSheet().environmentObject(shell)
+                .presentationDetents([.medium, .large])
+                .presentationDragIndicator(.visible)
+        }
+        .sheet(isPresented: Binding(get: { shell.shareURL != nil }, set: { if !$0 { shell.shareURL = nil } })) {
+            if let u = shell.shareURL { ActivitySheet(items: [u]) }
+        }
         // Chrome behind everything: a hairline the layout leaves between the
         // page and the row, or the bands beside the page in landscape, is
         // navy and not a white seam.
@@ -101,10 +124,10 @@ struct ShellRoot: View {
             // The player bar, native, above the page while it reads.
             .modifier(ListenBarBelowContent(shell: shell))
             // The page runs under the status bar and pads its own bar by
-            // env(safe-area-inset-top). Its bottom edge is always the row's
-            // (or the player's): the page's footer sits on that edge and the
-            // row never leaves it.
-            .ignoresSafeArea(.container, edges: [.top])
+            // env(safe-area-inset-top), and now to the bottom of the glass
+            // under the floating row (or the player): the page lifts its own
+            // footer by the overlay's height (WebShell.bottomOverlay).
+            .ignoresSafeArea(.container, edges: [.top, .bottom])
     }
 
     /// The bottom safe-area inset of the window, for anything that floats
@@ -128,7 +151,7 @@ struct ShellRoot: View {
     /// Settings only writes the choice.
     private var wantedTheme: String {
         switch appearance {
-        case "light", "sepia", "dark": return appearance
+        case "light", "sepia", "dark", "black", "gray": return appearance
         default: return colorScheme == .dark ? "dark" : "light"
         }
     }
@@ -280,11 +303,38 @@ struct ListenBarBelowContent: ViewModifier {
         content.safeAreaInset(edge: .bottom) {
             if shell.listening {
                 ListenBar().environmentObject(shell)
-                    .padding(.horizontal, 6)
-                    .padding(.top, 2)
+                    .padding(.horizontal, 4)
                     .frame(maxWidth: .infinity)
-                    .background(shell.chrome.ignoresSafeArea(edges: .bottom))
+                    .background { FloatingChrome(shell: shell).clipShape(RoundedRectangle(cornerRadius: 26, style: .continuous)) }
+                    .shadow(color: .black.opacity(0.22), radius: 12, y: 6)
+                    .padding(.horizontal, 12)
+                    .padding(.top, 4)
+                    .padding(.bottom, max(ShellRoot.homeIndicatorInset, 10))
+                    .background(GeometryReader { g in
+                        Color.clear
+                            .onAppear { shell.bottomOverlay = g.size.height }
+                            .onChange(of: g.size.height) { _, h in shell.bottomOverlay = h }
+                    })
             }
         }
     }
+}
+
+/// The chrome that floats over the text: a blur with the theme's navy over
+/// it, so the page shows through the way it does under a scripture app's bars.
+struct FloatingChrome: View {
+    @ObservedObject var shell: WebShell
+    var body: some View {
+        ZStack {
+            Rectangle().fill(.ultraThinMaterial)
+            shell.chrome.opacity(0.84)
+        }
+    }
+}
+
+/// The system share sheet, for a chapter's address on the website.
+struct ActivitySheet: UIViewControllerRepresentable {
+    let items: [Any]
+    func makeUIViewController(context: Context) -> UIActivityViewController { UIActivityViewController(activityItems: items, applicationActivities: nil) }
+    func updateUIViewController(_ vc: UIActivityViewController, context: Context) {}
 }

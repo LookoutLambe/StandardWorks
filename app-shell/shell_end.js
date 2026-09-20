@@ -195,6 +195,35 @@
     var rowTimer = setInterval(function () { if (chapterRow() || ++rowTries > 80) clearInterval(rowTimer); }, 100);
   }
 
+  /* 12. MORE. Where the shell answers it (caps.more), one button at the end
+     of the bar gathers what is not reading: display options, share. The
+     size and theme buttons it replaces are hidden by the shell's stylesheet;
+     their functions are still the page's, driven from the shell's sheet. */
+  function moreButton() {
+    if (!CAPS.more) return true;
+    if (document.getElementById('sw-app-more')) return true;
+    var inner = document.querySelector('.sw-top-bar-inner');
+    if (!inner) return false;
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.id = 'sw-app-more';
+    b.className = 'sw-chrome-btn';
+    b.setAttribute('aria-label', 'Display options');
+    b.setAttribute('aria-haspopup', 'dialog');
+    b.textContent = '\u22EF';
+    b.addEventListener('click', function (e) {
+      e.preventDefault(); e.stopPropagation();
+      var p = shellPort();
+      if (p) p.postMessage({ op: 'more' });
+    });
+    inner.appendChild(b);
+    return true;
+  }
+  if (!moreButton()) {
+    var moreTries = 0;
+    var moreTimer = setInterval(function () { if (moreButton() || ++moreTries > 80) clearInterval(moreTimer); }, 100);
+  }
+
   var NAME = 'Sefer Mormon: Standard Works';
   function rename() {
     var en = document.querySelector('.sw-top-bar-brand-en');
