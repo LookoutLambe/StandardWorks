@@ -15,7 +15,7 @@ android {
         applicationId "com.sefermormon.standardworks"
         minSdk 26            // TextToSpeech's onRangeStart (word highlighting) is API 26
         targetSdk 36
-        versionCode 3
+        versionCode 4
         versionName "1.2.0"
     }
 
