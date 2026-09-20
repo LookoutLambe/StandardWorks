@@ -214,13 +214,14 @@ struct BooksView: View {
             ForEach(Array(volume.divisions.enumerated()), id: \.offset) { _, division in
                 Section(header: Text(division.name).foregroundStyle(shell.ink2)) {
                     ForEach(division.books) { book in
+                        let here = shell.currentVolumeKey == volume.key && shell.book(in: volume, chapterId: shell.currentChapterId)?.id == book.id
                         if book.isFrontMatter || book.ch == 1 {
                             Button {
                                 shell.open(volume: volume, book: book, chapter: 1)
-                            } label: { BookRow(book: book) }
+                            } label: { BookRow(book: book, here: here) }
                             .foregroundStyle(shell.ink)
                         } else {
-                            NavigationLink(value: LibraryRoute.book(volume.key, book.id)) { BookRow(book: book) }
+                            NavigationLink(value: LibraryRoute.book(volume.key, book.id)) { BookRow(book: book, here: here) }
                         }
                     }
                 }
@@ -238,9 +239,15 @@ struct BooksView: View {
 private struct BookRow: View {
     @EnvironmentObject var shell: WebShell
     let book: Book
+    /// The book being read: a mark in the "here" colour before its name.
+    var here = false
     var body: some View {
         HStack {
-            Text(book.en)
+            if here {
+                Image(systemName: "book.pages.fill").font(.footnote).foregroundStyle(shell.here)
+                    .accessibilityLabel("Reading now")
+            }
+            Text(book.en).fontWeight(here ? .semibold : .regular)
             Spacer()
             if book.ch > 1 {
                 Text("\(book.ch)").font(.footnote).foregroundStyle(shell.ink3)
@@ -256,23 +263,37 @@ struct ChaptersView: View {
     let book: Book
     private let columns = [GridItem(.adaptive(minimum: 52), spacing: 10)]
 
+    /// The chapter the reader is in, when this is its book: marked, and
+    /// scrolled into view when the grid opens (the pill brings you here).
+    private var hereChapter: Int? {
+        guard shell.currentVolumeKey == volume.key, shell.currentChapterId.hasPrefix(book.prefix),
+              let n = Int(shell.currentChapterId.dropFirst(book.prefix.count)), n >= 1, n <= book.ch else { return nil }
+        return n
+    }
+
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: 10) {
-                ForEach(1...max(book.ch, 1), id: \.self) { n in
-                    Button {
-                        shell.open(volume: volume, book: book, chapter: n)
-                    } label: {
-                        Text("\(n)")
-                            .font(.body.monospacedDigit())
-                            .frame(maxWidth: .infinity, minHeight: 44)
-                            .background(shell.card, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+        ScrollViewReader { proxy in
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 10) {
+                    ForEach(1...max(book.ch, 1), id: \.self) { n in
+                        let here = n == hereChapter
+                        Button {
+                            shell.open(volume: volume, book: book, chapter: n)
+                        } label: {
+                            Text("\(n)")
+                                .font(here ? .body.monospacedDigit().weight(.semibold) : .body.monospacedDigit())
+                                .frame(maxWidth: .infinity, minHeight: 44)
+                                .background(here ? shell.here.opacity(0.14) : shell.card, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+                                .overlay(RoundedRectangle(cornerRadius: 8, style: .continuous).strokeBorder(shell.here, lineWidth: here ? 1.5 : 0))
+                        }
+                        .foregroundStyle(here ? shell.here : shell.ink)
+                        .accessibilityLabel(here ? "Chapter \(n), reading now" : "Chapter \(n)")
+                        .id(n)
                     }
-                    .foregroundStyle(shell.ink)
-                    .accessibilityLabel("Chapter \(n)")
                 }
+                .padding(16)
             }
-            .padding(16)
+            .onAppear { if let n = hereChapter { proxy.scrollTo(n, anchor: .center) } }
         }
         .shellPage()
         .navigationTitle(book.en)

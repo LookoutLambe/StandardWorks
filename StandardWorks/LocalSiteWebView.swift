@@ -235,6 +235,16 @@ struct LocalSiteWebView: UIViewRepresentable {
             injectionTime: .atDocumentStart,
             forMainFrameOnly: false))
 
+        // WHAT THIS SHELL CAN DO, told to the page before it runs, so the
+        // shared scripts (app-shell/) enable only what a shell answers:
+        // `chapters` — the chapter pill opens the native Library at this
+        // book (one contents, not two); `chapterRow` — next / previous and
+        // the chapter sit in the folding band, in thumb reach; `returnPoint`
+        // — the shell marks a way back before every jump it makes.
+        config.userContentController.addUserScript(WKUserScript(
+            source: "window.__swShellCaps = { chapters: true, chapterRow: true, returnPoint: true };",
+            injectionTime: .atDocumentStart,
+            forMainFrameOnly: true))
         // The app's own surface over the site — the boot redirect, the
         // app-only styles, the bar's name. Main frame only: the page has no
         // frames that need them, and AppShell explains each one.
@@ -386,6 +396,12 @@ enum DebugBridge {
                         if parts.count > 1 { path.append(.volume(parts[1])) }
                         if parts.count > 2 { path.append(.book(parts[1], parts[2])) }
                         sh.libraryPath = path
+                    case "chapters":
+                        // "@chapters bom ch3": what the page's chapter pill posts
+                        sh.openChapters(volumeKey: parts.count > 1 ? parts[1] : "", chapterId: parts.count > 2 ? parts[2] : "")
+                    case "page":
+                        // "@page in-print.html": a site page in the sheet
+                        if parts.count > 1 { sh.presentPage(parts[1]) } else { answer = "which page?" }
                     case "chapter":
                         // "@chapter bom 1ne 3": the Library's own tap path
                         if parts.count > 3, let n = Int(parts[3]),

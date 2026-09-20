@@ -18,7 +18,12 @@ import CoreText
 final class WebShell: ObservableObject {
     enum Tab: Hashable { case library, read, search, notes, settings }
 
-    @Published var tab: Tab = .read
+    @Published var tab: Tab = .read {
+        // The Library marks the place and says "Continue reading": ask the
+        // page where it is as the tab comes up, since a chapter turned by the
+        // page's own arrows or a swipe fires no page load.
+        didSet { if tab == .library, tab != oldValue { refreshWhere() } }
+    }
     /// The Search tab's text, kept here so the tab keeps it across visits.
     @Published var searchQuery = ""
     @Published var searchPresented = false
@@ -56,6 +61,13 @@ final class WebShell: ObservableObject {
     @Published var libraryPath: [LibraryRoute] = []
     /// The chapter the page is showing, for the Read tab's own sense of place.
     @Published private(set) var whereLabel = ""
+    /// Where the page is, from its own last-read record — the volume key and
+    /// the chapter id (`bom`, `ch3`) — so the Library can mark the place.
+    @Published private(set) var currentVolumeKey = ""
+    @Published private(set) var currentChapterId = ""
+    /// A site page shown in a sheet over the app (Settings' print and privacy
+    /// pages): never loaded into the reader, which would take the book away.
+    @Published var sheetPage: String?
     /// Read-aloud (the site's read_aloud.js, Carmit through Web Speech): whether
     /// this page has it, whether it is speaking, and the speeds it offers.
     @Published private(set) var canListen = false
@@ -106,6 +118,10 @@ final class WebShell: ObservableObject {
     func handle(message: [String: Any]) {
         switch message["op"] as? String {
         case "library": tab = .library
+        // The page's chapter pill, tapped in the app: the native Library at
+        // this book's chapters — one contents, not two (app-shell/shell_end.js, 10).
+        case "chapters":
+            openChapters(volumeKey: (message["volume"] as? String) ?? "", chapterId: (message["chapter"] as? String) ?? "")
         // The page changed its theme (its own ◐ button): re-cut the shell's
         // chrome and the web view's paper to match, and make it the choice.
         case "theme":
@@ -154,6 +170,37 @@ final class WebShell: ObservableObject {
         }
     }
 
+    /// The chapter pill's destination: the Library pushed to this volume and,
+    /// for a book of chapters, to its chapter grid, where the current chapter
+    /// is marked (Library.swift). A front-matter piece or a one-chapter book
+    /// stops at the book list.
+    func openChapters(volumeKey: String, chapterId: String) {
+        if !volumeKey.isEmpty { currentVolumeKey = volumeKey }       // the page's own word for where it is
+        if !chapterId.isEmpty { currentChapterId = chapterId }
+        guard let v = volumes.first(where: { $0.key == volumeKey }) else { tab = .library; return }
+        var path: [LibraryRoute] = [.volume(v.key)]
+        if let b = book(in: v, chapterId: chapterId), !b.isFrontMatter, b.ch > 1 { path.append(.book(v.key, b.id)) }
+        libraryPath = path
+        tab = .library
+    }
+
+    /// The book a chapter id belongs to: front matter by its exact id, else
+    /// the longest prefix whose remainder is one of the book's chapter numbers
+    /// (`ch3` is 1 Nephi's, `al-ch32` Alma's, never 1 Nephi's `ch`).
+    func book(in v: Volume, chapterId: String) -> Book? {
+        let books = v.divisions.flatMap(\.books)
+        if let f = books.first(where: { $0.isFrontMatter && $0.prefix == chapterId }) { return f }
+        return books
+            .filter { b in
+                guard !b.isFrontMatter, chapterId.hasPrefix(b.prefix), let n = Int(chapterId.dropFirst(b.prefix.count)) else { return false }
+                return n >= 1 && n <= max(b.ch, 1)
+            }
+            .max { $0.prefix.count < $1.prefix.count }
+    }
+
+    /// A site page in a sheet (SettingsView): the reader stays where it is.
+    func presentPage(_ path: String) { sheetPage = path }
+
     /// The Library tapped a chapter: the page shows it and the Read tab comes up.
     func open(volume: Volume, book: Book, chapter: Int) {
         let chapterId = book.chapterId(chapter)
@@ -177,8 +224,50 @@ final class WebShell: ObservableObject {
         } else {
             var comps = URLComponents(url: target, resolvingAgainstBaseURL: false)
             comps?.fragment = fragment.isEmpty ? nil : fragment
-            if let u = comps?.url { wv.loadFileURL(u, allowingReadAccessTo: wwwDirectoryURL) }
+            guard let u = comps?.url else { return }
+            // A page load: mark the way back first, and only then leave — the
+            // script must have run before the page it runs in is gone.
+            wv.evaluateJavaScript(returnPointScript(to: path)) { _, _ in
+                wv.loadFileURL(u, allowingReadAccessTo: self.wwwDirectoryURL)
+            }
         }
+    }
+
+    /// A WAY BACK FROM EVERY JUMP THE SHELL MAKES. A jump inside one page marks
+    /// its own return point (nav_engine.js's navTo hook: any non-linear move
+    /// shows "← Back to …"); a jump to ANOTHER volume is a page load, and only
+    /// a study-panel reference used to mark one before leaving, so a Search hit
+    /// or a Note in another volume offered no way home. This writes the very
+    /// record the destination page reads on arrival (`sw-return-v1`: `from` is
+    /// the place the page's last-read record and bookmark say, `to` the
+    /// destination in that page's own chapter ids), and nothing when the jump
+    /// lands where the reader already is. The script answers "" so the caller
+    /// can load once it has run.
+    private func returnPointScript(to path: String) -> String {
+        let file = path.split(separator: "#").first.map(String.init) ?? path
+        let fragment = path.split(separator: "#").dropFirst().joined(separator: "#")
+        guard !fragment.isEmpty,
+              let dest = volumes.first(where: { ($0.page as NSString).lastPathComponent == (file as NSString).lastPathComponent }) else { return "''" }
+        let head = fragment.split(whereSeparator: { $0 == ":" || $0 == "&" }).first.map(String.init) ?? fragment
+        var chapterId = head
+        if dest.key == "bom" {
+            // the friendly hash back to the page's id: alma-32 → al-ch32 (BOM_HASHES reversed, longest stem first)
+            for (prefix, stem) in bomHashes.sorted(by: { $0.value.count > $1.value.count }) where head.hasPrefix(stem) {
+                chapterId = prefix + head.dropFirst(stem.count)
+                break
+            }
+        }
+        return """
+        (function (to) { try {
+          var g = JSON.parse(localStorage.getItem('sw-last-read') || 'null');
+          if (!g || !g.volume || !g.chapter) return '';
+          if (g.volume === to.volume && g.chapter === to.chapter) return '';
+          var v = 0;
+          try { var d = JSON.parse(localStorage.getItem('sw-last-read-' + g.volume) || 'null'); if (d && d.chapter === g.chapter && d.verse) v = parseInt(d.verse, 10) || 0; } catch (e) {}
+          if (!v && window.NavEngine && NavEngine.currentVerseNum) { try { v = NavEngine.currentVerseNum() || 0; } catch (e) {} }
+          localStorage.setItem('sw-return-v1', JSON.stringify({ from: { volume: g.volume, chapter: g.chapter, verse: v, label: String(g.label || '') + (v ? ':' + v : '') }, to: to, at: Date.now() }));
+        } catch (e) {} return ''; })({ volume: \(jsString(dest.key)), chapter: \(jsString(chapterId)) });
+        """
     }
 
     func stepTextSize(_ delta: Int) {
@@ -292,6 +381,12 @@ final class WebShell: ObservableObject {
     func refreshWhere() {
         webView?.evaluateJavaScript("(document.getElementById('sw-chrome-chapter') || {}).textContent || ''") { [weak self] v, _ in
             self?.whereLabel = ((v as? String) ?? "").replacingOccurrences(of: "\u{25BE}", with: "").trimmingCharacters(in: .whitespaces)
+        }
+        // and the place itself, as the page records it on every chapter
+        webView?.evaluateJavaScript("(function(){ try { var g = JSON.parse(localStorage.getItem('sw-last-read') || 'null'); return g && g.volume && g.chapter ? [String(g.volume), String(g.chapter)] : null; } catch (e) { return null; } })()") { [weak self] v, _ in
+            guard let self, let a = v as? [String], a.count == 2 else { return }
+            if a[0] != self.currentVolumeKey { self.currentVolumeKey = a[0] }
+            if a[1] != self.currentChapterId { self.currentChapterId = a[1] }
         }
     }
 }

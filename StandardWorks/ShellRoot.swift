@@ -16,6 +16,10 @@ import SwiftUI
 struct ShellRoot: View {
     @StateObject private var shell: WebShell
     @Environment(\.colorScheme) private var colorScheme
+    /// Landscape on a phone is a compact height: the page's mode row folds
+    /// at once there (a scroll up still brings it back), since the header,
+    /// the modes and the row together left half the screen for the text.
+    @Environment(\.verticalSizeClass) private var verticalSizeClass
     @AppStorage("shell.appearance") private var appearance = "system"
     /// The launch splash stays at least this long, and never past the cap.
     @State private var splashMinimumPassed = false
@@ -79,6 +83,9 @@ struct ShellRoot: View {
         }
         .environmentObject(shell)
         .tint(ShellTheme.gold)
+        .onChange(of: verticalSizeClass) { _, size in
+            if size == .compact, !shell.chromeHidden { shell.chromeHidden = true }
+        }
     }
 
     private var splashShowing: Bool {

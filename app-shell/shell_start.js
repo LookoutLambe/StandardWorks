@@ -60,6 +60,25 @@
     /* panels that slide in from the top of the glass leave the status bar its room */
     'html #glossary-panel, html #annotations-panel, html #rsc-panel { padding-top: calc(env(safe-area-inset-top, 0px) + 16px) !important; box-sizing: border-box !important; }',
     'html #nav-sidebar { padding-top: env(safe-area-inset-top, 0px) !important; box-sizing: border-box !important; }',
+    /* THE CHAPTER ROW (shell_end.js, 11): above the modes, inside the band
+       that folds; the site's own arrow style, the pill on the chrome. */
+    'html #sw-reader-footer:has(#sw-app-chapter-row) { flex-direction: column !important; }',
+    'html #sw-app-chapter-row { display: flex; align-items: stretch; gap: 8px; width: 100%; max-width: 960px; margin: 0 auto; box-sizing: border-box; direction: ltr;',
+    '  padding: 6px max(8px, env(safe-area-inset-right, 0px)) 0 max(8px, env(safe-area-inset-left, 0px)); }',
+    'html #sw-app-chapter-row .sw-app-arrow { flex: 0 0 auto !important; min-width: 64px !important; padding: 0 10px !important; gap: 5px; font: 500 15px/1 -apple-system, "SF Pro Text", system-ui, sans-serif; }',
+    'html #sw-app-chapter-row .sw-app-arrow-n:empty { display: none; }',
+    'html #sw-app-chapter-pill { flex: 1 1 auto; min-width: 0; min-height: 44px; margin: 0; padding: 0 12px; display: inline-flex; align-items: center; justify-content: center; gap: 7px;',
+    '  border: 1px solid color-mix(in srgb, var(--here-chrome) 50%, transparent); border-radius: 6px; background: transparent; color: var(--on-chrome, #F3EDE2);',
+    '  font: 600 16px/1.2 "David Libre", serif; cursor: pointer; -webkit-tap-highlight-color: transparent; }',
+    'html #sw-app-chapter-pill .sw-app-pill-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }',
+    'html #sw-app-chapter-pill .sw-app-pill-caret { color: var(--sw-gold, var(--here-chrome)); font-size: 12px; }',
+    '@media (pointer: coarse) { html #sw-app-chapter-pill { min-height: 48px; } }',
+    /* THE RETURN BANNER SITS ABOVE THE FOOTER AS DRAWN. The site pins it over
+       --sw-footer-h; the footer with the chapter row is taller, so here it
+       follows the measured height, and drops to the page's edge while the
+       band is folded. */
+    'html #sw-return { bottom: calc(var(--sw-reader-footer-h, 112px) + 10px) !important; transition: bottom .22s ease; }',
+    'html.sw-app-reading #sw-return { bottom: max(10px, env(safe-area-inset-bottom, 0px)) !important; }',
     /* and the status bar itself always sits on chrome, whatever is under it */
     'html #sw-app-statusbar { position: fixed; top: 0; left: 0; right: 0; height: env(safe-area-inset-top, 0px); background: var(--chrome, #1B2A41); z-index: 2147483646; pointer-events: none; }'
   ].join('\n');

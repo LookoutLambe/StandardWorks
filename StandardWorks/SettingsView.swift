@@ -1,4 +1,5 @@
 import SwiftUI
+import WebKit
 
 /// SETTINGS, NATIVE.
 ///
@@ -40,8 +41,12 @@ struct SettingsView: View {
                 }
                 .shellRow(shell)
                 Section(header: Text("About").foregroundStyle(shell.ink2)) {
-                    Button("Sefer Mormon in print") { shell.open(path: "in-print.html") }
-                    Button("Privacy") { shell.open(path: "privacy.html") }
+                    // In a sheet, never in the reader: loading a website page
+                    // into the one web view took the book away — no chapter
+                    // pill, no Listen, and the Library lost "Continue reading"
+                    // (navigation audit, 2026-09-20).
+                    Button("Sefer Mormon in print") { shell.presentPage("in-print.html") }
+                    Button("Privacy") { shell.presentPage("privacy.html") }
                 }
                 .shellRow(shell)
             }
@@ -49,6 +54,44 @@ struct SettingsView: View {
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
             .shellBar()
+            .sheet(isPresented: Binding(get: { shell.sheetPage != nil }, set: { if !$0 { shell.sheetPage = nil } })) {
+                if let page = shell.sheetPage { SitePageSheet(path: page).environmentObject(shell) }
+            }
         }
     }
+}
+
+/// A SITE PAGE OVER THE APP: its own web view, the app's bar, Done. The
+/// reader underneath keeps its place.
+struct SitePageSheet: View {
+    @EnvironmentObject var shell: WebShell
+    @Environment(\.dismiss) private var dismiss
+    let path: String
+
+    var body: some View {
+        NavigationStack {
+            SitePageWebView(url: shell.wwwDirectoryURL.appendingPathComponent(path), www: shell.wwwDirectoryURL)
+                .ignoresSafeArea(edges: .bottom)
+                .background(shell.paper)
+                .navigationTitle(path.hasPrefix("privacy") ? "Privacy" : "In print")
+                .navigationBarTitleDisplayMode(.inline)
+                .shellBar()
+                .toolbar { ToolbarItem(placement: .confirmationAction) { Button("Done") { dismiss() } } }
+        }
+        .environment(\.colorScheme, shell.dark ? .dark : .light)
+    }
+}
+
+private struct SitePageWebView: UIViewRepresentable {
+    let url: URL
+    let www: URL
+    func makeUIView(context: Context) -> WKWebView {
+        let config = WKWebViewConfiguration()
+        config.defaultWebpagePreferences.preferredContentMode = .mobile
+        let wv = WKWebView(frame: .zero, configuration: config)
+        wv.isOpaque = false
+        wv.loadFileURL(url, allowingReadAccessTo: www)
+        return wv
+    }
+    func updateUIView(_ uiView: WKWebView, context: Context) {}
 }

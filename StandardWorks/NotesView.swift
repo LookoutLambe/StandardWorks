@@ -21,9 +21,16 @@ struct NotesView: View {
         NavigationStack {
             Group {
                 if loaded && empty {
-                    ContentUnavailableView("Nothing marked yet",
-                                           systemImage: "note.text",
-                                           description: Text("Tap a verse in the reader to highlight it or add a note; bookmark a chapter from the study panel."))
+                    // An empty screen is an invitation to act: it says what the
+                    // reader calls things and opens the reader itself.
+                    ContentUnavailableView {
+                        Label("Nothing marked yet", systemImage: "note.text")
+                    } description: {
+                        Text("Select a verse in the reader to highlight it or write a note. Bookmarks are kept in the reader's Study panel.")
+                    } actions: {
+                        Button { shell.tab = .read } label: { Label("Open the reader", systemImage: "book") }
+                            .buttonStyle(.borderedProminent)
+                    }
                 } else {
                     List {
                         if !bookmarks.isEmpty {
