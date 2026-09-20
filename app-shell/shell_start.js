@@ -61,7 +61,15 @@
     'html #glossary-panel, html #annotations-panel, html #rsc-panel { padding-top: calc(env(safe-area-inset-top, 0px) + 16px) !important; box-sizing: border-box !important; }',
     'html #nav-sidebar { padding-top: env(safe-area-inset-top, 0px) !important; box-sizing: border-box !important; }',
     /* THE CHAPTER ROW (shell_end.js, 11): above the modes, inside the band
-       that folds; the site's own arrow style, the pill on the chrome. */
+       that folds; the site's own arrow style, the pill on the chrome. ONE set
+       of chapter controls (user, 2026-09-20: "that footer has the same thing
+       in the header no?"): where the shell draws the row (html.sw-app-chapter-row),
+       the header's arrows go and its pill is the chapter's name, not a button
+       -- the arrows stay in the DOM, hidden, because the row drives them and
+       mirrors their labels. */
+    'html.sw-app-chapter-row #sw-chrome-nav .nqd-nav-btn { display: none !important; }',
+    'html.sw-app-chapter-row #sw-chrome-chapter { pointer-events: none !important; border-color: transparent !important; background: transparent !important; }',
+    'html.sw-app-chapter-row #sw-chrome-chapter .sw-chrome-pill-caret { display: none !important; }',
     'html #sw-reader-footer:has(#sw-app-chapter-row) { flex-direction: column !important; }',
     'html #sw-app-chapter-row { display: flex; align-items: stretch; gap: 8px; width: 100%; max-width: 960px; margin: 0 auto; box-sizing: border-box; direction: ltr;',
     '  padding: 6px max(8px, env(safe-area-inset-right, 0px)) 0 max(8px, env(safe-area-inset-left, 0px)); }',

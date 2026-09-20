@@ -242,7 +242,7 @@ struct LocalSiteWebView: UIViewRepresentable {
         // the chapter sit in the folding band, in thumb reach; `returnPoint`
         // — the shell marks a way back before every jump it makes.
         config.userContentController.addUserScript(WKUserScript(
-            source: "window.__swShellCaps = { chapters: true, chapterRow: true, returnPoint: true };",
+            source: "window.__swShellCaps = { chapters: true, chapterRow: true, returnPoint: true }; document.documentElement.classList.add('sw-app-chapter-row');",
             injectionTime: .atDocumentStart,
             forMainFrameOnly: true))
         // The app's own surface over the site — the boot redirect, the
