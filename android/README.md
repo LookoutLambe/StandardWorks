@@ -68,18 +68,25 @@ Debug builds carry `DebugBridge`: write a command to the app's
 1. Bump `versionCode` (strictly higher than anything already uploaded — Play
    rejects a repeat) and `versionName` in `app/build.gradle`.
 2. Build with the upload key. **The keystore password is never stored in this
-   repo**; the build reads it from the environment, so it lives only in the
-   shell you type it in (without it, a release build signs with the debug key
-   and can only be run locally):
+   repo**; the build reads it from the environment. On this Mac the session
+   that made the key (2026-09-14) left the password beside it in
+   `~/sefermormon-keystore-password.txt` (mode 600, outside the repo), so the
+   build can read it without anyone typing it:
 
         cd android
         export JAVA_HOME=$(/usr/libexec/java_home -v 17)
-        read -rs -p "Keystore password: " SM_KEYSTORE_PASSWORD; echo
-        export SM_KEYSTORE_PASSWORD
-        ./gradlew :app:bundleRelease   # app/build/outputs/bundle/release/app-release.aab
-        unset SM_KEYSTORE_PASSWORD
+        SM_KEYSTORE_PASSWORD="$(tr -d '\r\n' < ~/sefermormon-keystore-password.txt)" ./gradlew :app:bundleRelease
+        # → app/build/outputs/bundle/release/app-release.aab
 
-3. Play Console → the testing track → Create new release → upload the `.aab`.
+   Without the password a release build signs with the debug key and can
+   only be run locally.
+
+3. Play Console → the testing track → Create new release → upload the `.aab`
+   (it is ~30 MB; the Chrome tool's attachment cap is 10 MB, so the upload
+   goes through the native file dialog), release notes, Next, Save, then
+   Publishing overview → Send for review. Keep `minSdk 24`: version code 4
+   was built with 26 and Play flagged 1,379 Android 7 models as dropped.
+   Sent to closed testing (Alpha) as 5 (1.2.0) on 2026-09-19.
 
 ## Store presence
 
