@@ -23,6 +23,7 @@
   /* ── 1. THE GATE ─────────────────────────────────────────────────────── */
   if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.swShell) return;  // the iPhone app
   if (window.AndroidShell) return;                                                                        // the Android app
+  if (window.SMTTS) return;              // the Android build of 2026-09-15 (a WebView over the live site), in testing until 2026-10-01
   var phone, force = /(^|[?&])shell=([01])(&|$)/.exec(location.search || '');
   try {
     if (force) { phone = force[2] === '1'; localStorage.setItem('sw-shell-force', force[2]); }
