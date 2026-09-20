@@ -135,9 +135,11 @@ enum LibraryRoute: Hashable {
 
 struct LibraryView: View {
     @EnvironmentObject var shell: WebShell
-    /// Which volumes are open. The reader's volume opens itself whenever the
-    /// Library is shown; the rest fold to a row each, so the whole library is
-    /// one screen to scan (user, 2026-09-20: "its hard to see and navigate").
+    /// Which volumes are open. Whenever the Library is shown, NONE: six rows,
+    /// one per volume, and a volume unfolds to its books only when tapped
+    /// (user, 2026-09-20: "it should just collapse to all books just not have
+    /// the BOM open when i click on library i need navigation easier"). The
+    /// reader's volume and book are still marked in the "here" colour.
     @State private var open: Set<String> = []
 
     private func rowId(_ volume: Volume, _ book: Book) -> String { "book-\(volume.key)-\(book.id)" }
@@ -146,9 +148,8 @@ struct LibraryView: View {
         return (v, b)
     }
     private func focus(_ proxy: ScrollViewProxy) {
-        if !shell.currentVolumeKey.isEmpty { open = [shell.currentVolumeKey] } else if let first = shell.volumes.first { open = [first.key] }
-        guard let (v, b) = hereBook else { return }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) { withAnimation { proxy.scrollTo(rowId(v, b), anchor: .center) } }
+        open = []
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) { withAnimation { proxy.scrollTo("library-top", anchor: .top) } }
     }
 
     var body: some View {
@@ -204,6 +205,7 @@ struct LibraryView: View {
                 }
                 .listStyle(.insetGrouped)
                 .shellPage()
+                .id("library-top")
                 .onAppear { focus(proxy) }
                 .onChange(of: shell.libraryFocus) { _, _ in focus(proxy) }
             }
