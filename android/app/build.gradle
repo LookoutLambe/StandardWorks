@@ -15,8 +15,8 @@ android {
         applicationId "com.sefermormon.standardworks"
         minSdk 26            // TextToSpeech's onRangeStart (word highlighting) is API 26
         targetSdk 36
-        versionCode 4
-        versionName "6"
+        versionCode 3
+        versionName "1.2.0"
     }
 
     /* The upload key is never stored in this repo. Gradle reads it from the
