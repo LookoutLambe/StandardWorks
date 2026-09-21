@@ -1,0 +1,43 @@
+#!/bin/sh
+# KEEP hebrewbookofmormon.net IN STEP WITH sefermormon.com.
+#
+# The site is served at two domains (user, 2026-09-21: "i want BOTH"). GitHub
+# Pages binds one custom domain per repository, so the second domain is a
+# second repository, LookoutLambe/hebrewbookofmormonInterlinear, whose main
+# branch is this repository's `mirror` branch: main plus one commit that
+# replaces CNAME with hebrewbookofmormon.net. The `mirror` branch lives in a
+# worktree beside this checkout (../hebrewbookofmormon), and this hook, which
+# git runs before every push to origin, merges main into it and pushes it to
+# the `mirror` remote. Nothing else needs to remember the second site.
+#
+# Every page keeps sefermormon.com as its canonical address, so Google files
+# each page once, under the domain that already ranks; the mirror is a second
+# door to the same site, not a second site.
+#
+# The mirror push never blocks the site push: a failure is printed and the
+# push to origin goes ahead, and the next push tries again.
+
+remote="$1"
+[ "$remote" = "origin" ] || exit 0
+
+push_main=
+while read -r local_ref local_sha remote_ref remote_sha; do
+    case "$remote_ref" in refs/heads/main) push_main=1 ;; esac
+done
+[ -n "$push_main" ] || exit 0
+
+ROOT="$(git rev-parse --show-toplevel)"
+WT="$ROOT/../hebrewbookofmormon"
+if [ ! -e "$WT/.git" ]; then
+    echo "mirror: worktree missing at $WT; hebrewbookofmormon.net NOT synced" >&2
+    echo "mirror: recreate it with: git worktree add ../hebrewbookofmormon mirror" >&2
+    exit 0
+fi
+
+if ( cd "$WT" && git merge -q --no-edit main >/dev/null 2>&1 || { git merge --abort >/dev/null 2>&1; false; } ) \
+   && ( cd "$WT" && git push -q mirror mirror:main ); then
+    echo "mirror: hebrewbookofmormon.net synced"
+else
+    echo "mirror: sync FAILED; hebrewbookofmormon.net is behind (site push goes ahead)" >&2
+fi
+exit 0
