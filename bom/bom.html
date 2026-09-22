@@ -5963,8 +5963,23 @@ updateNavButtons();
     // Add Hebrew chapter heading as interlinear word-units if available
     var hebHeadings = (typeof _chapterHeadingsHeb !== 'undefined') ? _chapterHeadingsHeb : {};
     // Heading-specific gloss overrides for words whose verse-data lookup gives wrong/missing results
+    // A bare Hebrew numeral in a heading (יְשַׁעְיָהוּ יג) is a number, not a word:
+    // its transliteration line shows 13, not 'yag' (2026-09-22).
+    function _headTranslit(hw) {
+      var bare = hw.replace(/[.,;:!?״׳]+/g, '');
+      if (/^[\u05D0-\u05EA]{1,3}$/.test(bare) && !/[\u05B0-\u05C7]/.test(hw)) {
+        var v = { 'א':1,'ב':2,'ג':3,'ד':4,'ה':5,'ו':6,'ז':7,'ח':8,'ט':9,'י':10,'כ':20,'ל':30,'מ':40,'נ':50,'ס':60,'ע':70,'פ':80,'צ':90,'ק':100,'ר':200,'ש':300,'ת':400 }, n = 0;
+        for (var i = 0; i < bare.length; i++) n += v[bare[i]] || 0;
+        if (n) return String(n);
+      }
+      return transliterate(hw);
+    }
     var _headGloss = {
       'בְּכִתְבֵי־הַקֹּדֶשׁ':'in the Holy Bible',
+      '2 Nephi 23|דֻגְמָה':'a type of',
+      '2 Nephi 23|לַחֻרְבָּן':'of the destruction',
+      '2 Nephi 23|יוֹם':'a day of',
+      '2 Nephi 23|הוּא':'is',
       'מִכִּתְבֵי־הַקֹּדֶשׁ':'from the Holy Bible',
       'אֲהֵבָם':'He loveth them',
       'אֲשֶׁר':'which',
@@ -6430,7 +6445,7 @@ updateNavButtons();
       'בֶּן':'the Son of',
       'בֶּן־אֱלֹהִים':'the Son of God',
       'בַּבְּשׂוֹרָה':'in the gospel',
-      'בַּבִּיאָה':'the Coming',
+      'בַּבִּיאָה':'at the Coming',
       'בַּדָּבָר':'in the thing',
       'בַּהַשָּׁבָה':'in the who returned',
       'בַּחֹשֶׁךְ':'in darkness',
@@ -6945,7 +6960,7 @@ updateNavButtons();
       'וְנַחֲשִׁים':'and witchcraft',
       'וְנַעֲשִׂים':'nor to be acted upon',
       'וְנַעֲשֶׂה':'and do',
-      'וְנָקָם':'and revenge',
+      'וְנָקָם':'and vengeance',
       'וְנֹחַ':'and Noah',
       'וְנב,א-ב':'',
       'וְנוֹכָחִים':'and sober',
@@ -7276,7 +7291,7 @@ updateNavButtons();
       'יִגָּאֲלוּ':'shall be redeemed',
       'יִגָּלוּ':'shall be revealed',
       'יִדְחוּ':'they shall be driven',
-      'יִהְיֶה':'shall be',
+      'יִהְיֶה':'will be',
       'יִהְיוּ':'they shall be',
       'יִוָּלֵד':'he shall be born',
       'יִוָּשְׁעוּ':'they shall be saved',
@@ -8166,7 +8181,7 @@ updateNavButtons();
       'עֵדֶן':'Eden',
       'עֵדוּת':'witness',
       'עֵזִיאָס':'Ezias',
-      'עֶבְרָה':'fury',
+      'עֶבְרָה':'wrath',
       'עֶבֶד':'the servant of',
       'עֶדְרֵי':'flocks of',
       'עֶזְרָה':'for assistance',
@@ -8526,7 +8541,10 @@ updateNavButtons();
         wu.className = 'word-unit';
         wu.setAttribute('data-h', hw);
         // Look up English gloss from verse word frequency data
-        var gloss = _headGloss[hw] || '';
+        // A chapter may pin a word's gloss ('2 Nephi 23|הוּא' → 'is'): the map is
+        // keyed by surface form corpus-wide, and הוּא is 'he' in thirty headings
+        // but the copula 'is' in this one (translator, 2026-09-22).
+        var gloss = _headGloss[key + '|' + hw] || _headGloss[hw] || '';
         // Try stripping trailing punctuation and parens if no match
         if (!gloss) {
           var stripped = hw.replace(/[.,;:!?]+$/, '');
@@ -8575,7 +8593,7 @@ updateNavButtons();
         }
         wu.setAttribute('data-wid', key + '|h|' + realIdx);
         var hGlCls = 'gl' + ((gloss && gloss.length <= 18 && gloss.split(' ').length <= 3) ? ' gl-nw' : '');
-        wu.innerHTML = '<span class="hw" lang="he">' + hw.replace(/([א-ת][֑-׆]*ׇ[֑-׆]*)/g, '<span class="qq">$1</span>') + '</span><span class="tl">' + transliterate(hw) + '</span><span class="' + hGlCls + '">' + gloss + '</span>';
+        wu.innerHTML = '<span class="hw" lang="he">' + hw.replace(/([א-ת][֑-׆]*ׇ[֑-׆]*)/g, '<span class="qq">$1</span>') + '</span><span class="tl">' + _headTranslit(hw) + '</span><span class="' + hGlCls + '">' + gloss + '</span>';
         wu.setAttribute('tabindex', '0');
         wu.setAttribute('role', 'button');
         var chevron = document.createElement('span');
