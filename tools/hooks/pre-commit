@@ -20,11 +20,11 @@ node "$ROOT/tools/check_bom_hebrew_lock.js" || exit 1
 #     to the synthesiser for each, and sweeps the corpus for the qamats qatan
 #     and stripped-maqqef invariants.
 node "$ROOT/tools/check_read_aloud.js" || exit 1
-# 0c) The scorecards are LOCKED (user, 2026-09-13: "lock everything the way it
-#     is right now then. this is final"). check_root_card_lock.js renders the
-#     CARD FACE of all 334,451 surface+gloss pairs and blocks the commit if any
-#     moved. Approved changes: --rebase, and only on his say-so.
-node "$ROOT/tools/check_root_card_lock.js" || exit 1
+# 0c) The scorecard lock is GONE (user, 2026-09-22: "the glossing is not locked
+#     ... unlock the scorecards then because the hebrew is whats locked").
+#     It fingerprinted every surface+gloss pair and blocked any gloss edit,
+#     which is the one kind of edit the Book of Mormon still takes. The
+#     Hebrew lock above (0b) is the canon; the glosses are working text.
 # 0d) Every token in all six volumes through spoken(), looking for output no
 #     reader should be handed — a lost letter, a doubled space, a mark with no
 #     letter before it. The per-word rules INTERACT and the hand-written cases
