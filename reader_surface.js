@@ -2647,7 +2647,9 @@ function _swQq(s) {
 var _SW_NOT_A_NAME = ('I He His Him Himself God LORD Lord Thou Thee Thy Ye You My O And The A An ' +
   'In Of It They We Behold Yea Now Then But For That This Who Not All So When If As There ' +
   'Their Her She Me Us Our Your Its Is Was Be Have Do Did Shall Will Unto Upon With From By ' +
-  'On At To No Nor Or Yet After Before Because Amen Selah').split(' ');
+  'On At To No Nor Or Yet After Before Because Amen Selah ' +
+  /* title capitals in the chapter headings: "the Second Coming", "the Atonement" */
+  'Coming Second Atonement Resurrection Creation Fall Restoration Gathering Millennium Judgment').split(' ');
 
 /* Particles that attach with a maqqef and carry no English of their own. */
 var _SW_BOUND_PARTICLES = ['\u05D0\u05EA', '\u05D0\u05DC', '\u05E2\u05DC', '\u05DB\u05DC', '\u05DE\u05DF',
