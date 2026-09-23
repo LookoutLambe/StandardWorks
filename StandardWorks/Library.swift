@@ -324,11 +324,16 @@ struct ChaptersView: View {
                         Button {
                             shell.open(volume: volume, book: book, chapter: n)
                         } label: {
-                            Text("\(n)")
-                                .font(here ? .body.monospacedDigit().weight(.semibold) : .body.monospacedDigit())
-                                .frame(maxWidth: .infinity, minHeight: 44)
-                                .background(here ? shell.here.opacity(0.14) : shell.card, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
-                                .overlay(RoundedRectangle(cornerRadius: 8, style: .continuous).strokeBorder(shell.here, lineWidth: here ? 1.5 : 0))
+                            // the Hebrew numeral over the number (user, 2026-09-23): the
+                            // Hebrew landing counts chapters in letters, and an English
+                            // reader still finds "Alma 32" by its digits
+                            VStack(spacing: 1) {
+                                Text(hebrewNumeral(n)).font(ShellTheme.hebrew(19))
+                                Text("\(n)").font(here ? .footnote.monospacedDigit().weight(.semibold) : .footnote.monospacedDigit())
+                            }
+                            .frame(maxWidth: .infinity, minHeight: 56)
+                            .background(here ? shell.here.opacity(0.14) : shell.card, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+                            .overlay(RoundedRectangle(cornerRadius: 8, style: .continuous).strokeBorder(shell.here, lineWidth: here ? 1.5 : 0))
                         }
                         .foregroundStyle(here ? shell.here : shell.ink)
                         .accessibilityLabel(here ? "Chapter \(n), reading now" : "Chapter \(n)")
@@ -336,6 +341,8 @@ struct ChaptersView: View {
                     }
                 }
                 .padding(16)
+                // a Hebrew count runs right to left: א at the top right (user, 2026-09-23)
+                .environment(\.layoutDirection, .rightToLeft)
             }
             .onAppear { if let n = hereChapter { proxy.scrollTo(n, anchor: .center) } }
         }
@@ -344,4 +351,19 @@ struct ChaptersView: View {
         .navigationBarTitleDisplayMode(.inline)
         .shellBar()
     }
+}
+
+/// A chapter number in Hebrew letters, the form the Hebrew landing page shows
+/// (tools/build_static_pages.js hebNum): 15 and 16 are ט״ו and ט״ז, a single
+/// letter takes a geresh, more take gershayim before the last.
+func hebrewNumeral(_ number: Int) -> String {
+    guard number > 0, number < 1000 else { return String(number) }
+    let hundreds = ["", "ק", "ר", "ש", "ת"], tens = ["", "י", "כ", "ל", "מ", "נ", "ס", "ע", "פ", "צ"], ones = ["", "א", "ב", "ג", "ד", "ה", "ו", "ז", "ח", "ט"]
+    var n = number, s = ""
+    var h = n / 100
+    n %= 100
+    while h > 4 { s += "ת"; h -= 4 }
+    s += hundreds[h]
+    if n == 15 { s += "טו" } else if n == 16 { s += "טז" } else { s += tens[n / 10] + ones[n % 10] }
+    return s.count == 1 ? s + "׳" : String(s.dropLast()) + "״" + String(s.last!)
 }

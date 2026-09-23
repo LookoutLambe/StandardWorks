@@ -632,9 +632,17 @@ struct ShellBar: ViewModifier {
 /// dark card, exactly like the reader beside it.
 struct ShellPage: ViewModifier {
     @EnvironmentObject var shell: WebShell
+    /// false for a sheet, which the floating row does not cover
+    var clearOfRow = true
     func body(content: Content) -> some View {
         content
             .scrollContentBackground(.hidden)
+            // THE LAST ROWS SCROLL CLEAR OF THE FLOATING ROW. The row's inset did
+            // not reach the pages inside the tab view (the TabView ignores the
+            // bottom safe area so the reader can run under the row), so a
+            // chapter grid's last line — Psalms 145-150, Alma 61-63 — stayed
+            // behind the capsule at the end of the scroll (2026-09-23).
+            .contentMargins(.bottom, clearOfRow ? shell.bottomOverlay : 0, for: .scrollContent)
             .background(shell.panel.ignoresSafeArea())
             .foregroundStyle(shell.ink)
             .tint(shell.here)
@@ -643,7 +651,7 @@ struct ShellPage: ViewModifier {
 }
 extension View {
     func shellBar() -> some View { modifier(ShellBar()) }
-    func shellPage() -> some View { modifier(ShellPage()) }
+    func shellPage(clearOfRow: Bool = true) -> some View { modifier(ShellPage(clearOfRow: clearOfRow)) }
     /// A list row (or a whole section of them) on the page's card, ruled in
     /// the page's rule colour.
     func shellRow(_ shell: WebShell) -> some View {

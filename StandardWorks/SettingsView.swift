@@ -178,7 +178,7 @@ struct DisplayOptionsSheet: View {
     var body: some View {
         NavigationStack {
             Form { DisplayOptionsSections() }
-                .shellPage()
+                .shellPage(clearOfRow: false)
                 .navigationTitle("Display Options")
                 .navigationBarTitleDisplayMode(.inline)
                 .shellBar()
