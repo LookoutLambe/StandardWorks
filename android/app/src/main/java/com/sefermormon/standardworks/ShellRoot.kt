@@ -4,6 +4,30 @@ import android.content.res.AssetManager
 import android.app.Activity
 import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.tappableElement
+import android.os.Build
+import android.view.HapticFeedbackConstants
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.spring
+import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.draggable
+import androidx.compose.foundation.gestures.rememberDraggableState
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.material.icons.filled.Bookmark
+import androidx.compose.material.icons.filled.Cancel
+import androidx.compose.material.icons.outlined.BookmarkBorder
+import androidx.compose.material3.Typography
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
+import androidx.compose.ui.input.nestedscroll.NestedScrollSource
+import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.semantics.role
+import androidx.compose.ui.unit.Density
+import androidx.compose.ui.unit.Velocity
+import kotlinx.coroutines.CoroutineStart
+import kotlinx.coroutines.launch
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.compositionLocalOf
@@ -98,16 +122,23 @@ import kotlinx.coroutines.delay
 /**
  * THE APP'S FRAME — the Android twin of StandardWorks/ShellRoot.swift.
  *
- * Six icons along the bottom, the reader behind them: Library · Read · Search
- * · Notes · Settings · Listen, icons only. THE ROW FLOATS, as on the iPhone
- * (user, 2026-09-20: "see how it optimizes the screen"): a capsule of the
- * chrome over the page, which runs to the bottom of the glass and lifts its
- * own footer above the capsule by the height the shell reports to it
- * (WebShell.bottomOverlay → --sw-app-row-h). The row is sticky: reading (a
- * scroll down) folds the PAGE'S chapter row, not this one; listening alone
- * replaces it with the player. The one WebView is always in the tree; the
- * native pages are drawn over it, so the reading and the reader's voice never
- * stop for a tab switch.
+ * Seven icons along the bottom, the reader behind them: Library · Read ·
+ * Search · Notes · Bookmark · Settings · Listen, icons only. THE ROW FLOATS,
+ * as on the iPhone (user, 2026-09-20: "see how it optimizes the screen"): a
+ * capsule of the chrome over the page, which runs to the bottom of the glass
+ * and lifts its own footer above the capsule by the height the shell reports
+ * to it (WebShell.bottomOverlay → --sw-app-row-h). The row is sticky: reading
+ * (a scroll down) folds the PAGE'S chapter row, not this one; listening alone
+ * replaces it with the player.
+ *
+ * THE BOOK IS ALWAYS UNDERNEATH (user, 2026-09-23: "these tools were to be
+ * sliders so it didnt fill up the entire page"). The one WebView is always in
+ * the tree; Library and the chapter pill open the page's own drawer, which
+ * slides in from the side (WebShell.showLibrary), and Notes and Settings
+ * slide up over the book as a panel, half the screen at first, the page still
+ * in view and still scrollable above it (PanelSheet) — all but Search, which
+ * stays a whole page over the book, the row floating on it ("keep search as
+ * a full page"). The reading and the reader's voice never stop for any of it.
  */
 @Composable
 fun ShellRoot(shell: WebShell) {
@@ -120,11 +151,13 @@ fun ShellRoot(shell: WebShell) {
     LaunchedEffect(Unit) { delay(900); splashMinimumPassed = true; delay(3600); splashGaveUp = true }
     val splashShowing = !splashGaveUp && !(shell.firstPageReady && splashMinimumPassed)
 
-    // Back: out of a Library push, then to the reader, then through the reader's own history.
-    BackHandler(enabled = shell.tab != WebShell.Tab.READ || shell.webView.canGoBack()) {
+    // Back: out of a Library push, then down to the book, then the page's
+    // drawer shut, then through the reader's own history.
+    BackHandler(enabled = shell.tab != WebShell.Tab.READ || shell.drawerOpen || shell.webView.canGoBack()) {
         when {
             shell.tab == WebShell.Tab.LIBRARY && shell.libraryPath.isNotEmpty() -> shell.libraryPath.removeAt(shell.libraryPath.lastIndex)
             shell.tab != WebShell.Tab.READ -> shell.tab = WebShell.Tab.READ
+            shell.drawerOpen -> shell.closeDrawer()
             shell.webView.canGoBack() -> shell.webView.goBack()
         }
     }
@@ -135,9 +168,10 @@ fun ShellRoot(shell: WebShell) {
     LaunchedEffect(compactHeight) { if (compactHeight && !shell.chromeHidden) shell.setReading(true) }
 
     // THE STATUS BAR SITS ON WHAT IS UNDER IT: the page's paper over the
-    // reader (the clock in ink on Light and Sepia), the navy bar over a native
-    // page. The gesture handle reads on the paper or panel beneath it.
-    val onPaper = shell.tab == WebShell.Tab.READ
+    // reader and above a panel (the clock in ink on Light and Sepia), the
+    // navy bar over Search. The gesture handle reads on the paper or panel
+    // beneath it.
+    val onPaper = shell.tab != WebShell.Tab.SEARCH
     val view = LocalView.current
     val gestureNav = WindowInsets.tappableElement.getBottom(LocalDensity.current) == 0
     SideEffect {
@@ -151,7 +185,12 @@ fun ShellRoot(shell: WebShell) {
 
     val scheme = if (shell.dark) darkColorScheme(primary = p.here, background = p.panel, surface = p.card, onSurface = p.ink, onBackground = p.ink, outline = p.rule)
                  else lightColorScheme(primary = p.here, background = p.panel, surface = p.card, onSurface = p.ink, onBackground = p.ink, outline = p.rule)
-    MaterialTheme(colorScheme = scheme) {
+    // ONE FACE (user, 2026-09-23: "everything is to be david font"): David
+    // Libre for every native Text that names none, a size up, as it sets
+    // smaller than the system face at the same point size (the iPhone's ×1.08).
+    val baseDensity = LocalDensity.current
+    MaterialTheme(colorScheme = scheme, typography = ShellTheme.typography) {
+      CompositionLocalProvider(LocalDensity provides Density(baseDensity.density, baseDensity.fontScale * ShellTheme.SCALE)) {
         val density = LocalDensity.current
         var overlay by remember { mutableStateOf(0.dp) }
         Box(Modifier.fillMaxSize().background(if (onPaper) p.paper else p.chrome)) {
@@ -160,15 +199,9 @@ fun ShellRoot(shell: WebShell) {
                 Spacer(Modifier.fillMaxWidth().windowInsetsTopHeight(WindowInsets.statusBars).background(if (onPaper) p.paper else p.chrome))
                 Box(Modifier.weight(1f).fillMaxWidth()) {
                     AndroidView(factory = { shell.webView }, modifier = Modifier.fillMaxSize())
-                    // the native pages end where the floating row begins
-                    CompositionLocalProvider(LocalRowInset provides overlay) {
-                        when (shell.tab) {
-                            WebShell.Tab.LIBRARY -> LibraryView(shell)
-                            WebShell.Tab.SEARCH -> SearchView(shell)
-                            WebShell.Tab.NOTES -> NotesView(shell)
-                            WebShell.Tab.SETTINGS -> SettingsView(shell)
-                            WebShell.Tab.READ -> {}
-                        }
+                    // Search, the one whole page: it ends where the floating row begins
+                    if (shell.tab == WebShell.Tab.SEARCH) {
+                        CompositionLocalProvider(LocalRowInset provides overlay) { SearchView(shell) }
                     }
                     // The row, or the player in its place while the page reads:
                     // a capsule above the gesture bar, inset from the edges.
@@ -183,7 +216,7 @@ fun ShellRoot(shell: WebShell) {
                                 shell.bottomOverlay = h.value.roundToInt()
                             }
                     ) {
-                        if (shell.listening && shell.tab == WebShell.Tab.READ) {
+                        if (shell.listening && shell.tab != WebShell.Tab.SEARCH) {
                             Box(Modifier.fillMaxWidth().shadow(10.dp, RoundedCornerShape(26.dp)).clip(RoundedCornerShape(26.dp)).background(floatingChrome(p))) {
                                 ListenBar(shell)
                             }
@@ -194,12 +227,104 @@ fun ShellRoot(shell: WebShell) {
                             }
                         }
                     }
+                    // Notes, Settings (and the Library where the page has no
+                    // drawer) slide up over the book and the row
+                    PanelSheet(shell)
                 }
             }
             DisplayOptionsSheet(shell)
             // THE LOGO BEFORE ANYTHING: the system splash's navy continues here
             // until the first page has loaded, at least 0.9 s, never past 4.5 s.
             AnimatedVisibility(visible = splashShowing, exit = fadeOut(tween(400))) { LaunchSplash() }
+        }
+      }
+    }
+}
+
+/**
+ * THE PANEL OVER THE BOOK: the iPhone's sheet at its two heights. It rises to
+ * half the screen, the page still in view and in reach above it (no scrim, so
+ * a tap or a scroll up there reaches the book), and to nearly all of it on a
+ * drag up or a scroll up in its list; a drag down from the top of its list,
+ * or on its bar, lowers it and then puts it away. Its X, Back, or the page's
+ * Read put it away too (WebShell.tab).
+ */
+@Composable
+private fun PanelSheet(shell: WebShell) {
+    val p = shell.palette
+    val showing = shell.tab.isSheet
+    // the last panel stays drawn while it slides away
+    val last = remember { arrayOf(WebShell.Tab.NOTES) }
+    val panel = if (showing) shell.tab.also { last[0] = it } else last[0]
+    val bottomInset = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
+    BoxWithConstraints(Modifier.fillMaxSize()) {
+        val density = LocalDensity.current
+        val fullPx = with(density) { (maxHeight - 10.dp).toPx() }
+        val halfPx = with(density) { (maxHeight * 0.52f).toPx() }
+        val height = remember { Animatable(0f) }
+        val scope = rememberCoroutineScope()
+        val rise = spring<Float>(dampingRatio = 1f, stiffness = Spring.StiffnessMediumLow)
+        LaunchedEffect(showing, shell.panelFull, fullPx, halfPx) {
+            height.animateTo(if (!showing) 0f else if (shell.panelFull) fullPx else halfPx, if (showing) rise else tween(220))
+        }
+        // where a drag lets go: a fling or the nearer of the two heights, or away
+        fun settle(velocity: Float) {
+            val h = height.value
+            val target = when {
+                velocity > 900f -> if (h > halfPx + 40f) halfPx else 0f
+                velocity < -900f -> fullPx
+                h < halfPx * 0.6f -> 0f
+                h > (halfPx + fullPx) / 2f -> fullPx
+                else -> halfPx
+            }
+            if (target == 0f) { shell.tab = WebShell.Tab.READ; return }
+            shell.panelFull = target == fullPx
+            scope.launch { height.animateTo(target, rise) }
+        }
+        /** The panel follows the finger by dy (down is +); answers what it took, in the finger's terms. */
+        fun dragBy(dy: Float): Float {
+            val before = height.value
+            val next = (before - dy).coerceIn(0f, fullPx)
+            // at once, so the next move of the finger starts from this one
+            scope.launch(start = CoroutineStart.UNDISPATCHED) { height.snapTo(next) }
+            return before - next
+        }
+        // the list scrolls first down and the panel first up, as the iPhone's sheet does
+        val nested = remember(fullPx, halfPx) {
+            object : NestedScrollConnection {
+                override fun onPreScroll(available: Offset, source: NestedScrollSource): Offset =
+                    if (available.y < 0 && source == NestedScrollSource.UserInput && height.value < fullPx) Offset(0f, dragBy(available.y)) else Offset.Zero
+                override fun onPostScroll(consumed: Offset, available: Offset, source: NestedScrollSource): Offset =
+                    if (available.y > 0 && source == NestedScrollSource.UserInput) Offset(0f, dragBy(available.y)) else Offset.Zero
+                override suspend fun onPreFling(available: Velocity): Velocity {
+                    val h = height.value
+                    if (h == fullPx || h == halfPx) return Velocity.Zero
+                    settle(available.y)
+                    return available
+                }
+            }
+        }
+        if (height.value > 0.5f || showing) {
+            val shape = RoundedCornerShape(topStart = 14.dp, topEnd = 14.dp)
+            Column(
+                Modifier.align(Alignment.BottomCenter).fillMaxWidth()
+                    .height(with(density) { height.value.toDp() })
+                    .shadow(16.dp, shape).clip(shape).background(p.chrome)
+                    .nestedScroll(nested)
+                    .draggable(rememberDraggableState { dragBy(it) }, Orientation.Vertical, onDragStopped = { settle(it) })
+            ) {
+                // the grip, on the navy of the bar below it
+                Box(Modifier.fillMaxWidth().height(18.dp), contentAlignment = Alignment.Center) {
+                    Box(Modifier.size(36.dp, 5.dp).clip(CircleShape).background(p.onChrome.copy(alpha = 0.45f)))
+                }
+                CompositionLocalProvider(LocalRowInset provides bottomInset) {
+                    when (panel) {
+                        WebShell.Tab.LIBRARY -> LibraryView(shell)
+                        WebShell.Tab.SETTINGS -> SettingsView(shell)
+                        else -> NotesView(shell)
+                    }
+                }
+            }
         }
     }
 }
@@ -224,37 +349,60 @@ fun floatingChrome(p: AppShell.Palette): Color {
     return Color(mix(c.red, paper.red), mix(c.green, paper.green), mix(c.blue, paper.blue), 0.97f)
 }
 
-private data class RowItem(val name: String, val outline: ImageVector, val filled: ImageVector, val tab: WebShell.Tab?)
+/** Five pages, and two actions: Bookmark (this chapter, on or off) and Listen. */
+private enum class RowKind { PAGE, BOOKMARK, LISTEN }
+private data class RowItem(val name: String, val outline: ImageVector, val filled: ImageVector, val kind: RowKind, val tab: WebShell.Tab? = null)
 
-/** THE ROW: six icons on the chrome, no names; the selected one in the "here" gold. */
+/** THE ROW: seven icons on the chrome, no names; one that is "on" filled, in the "here" gold. */
 @Composable
 fun ShellTabBar(shell: WebShell) {
     val p = shell.palette
+    val view = LocalView.current
     val items = listOf(
-        RowItem("Library", Icons.Outlined.LibraryBooks, Icons.Filled.LibraryBooks, WebShell.Tab.LIBRARY),
-        RowItem("Read", Icons.AutoMirrored.Outlined.MenuBook, Icons.AutoMirrored.Filled.MenuBook, WebShell.Tab.READ),
-        RowItem("Search", Icons.Outlined.Search, Icons.Outlined.Search, WebShell.Tab.SEARCH),
-        RowItem("Notes", Icons.Outlined.Description, Icons.Filled.Description, WebShell.Tab.NOTES),
-        RowItem("Settings", Icons.Outlined.Settings, Icons.Filled.Settings, WebShell.Tab.SETTINGS),
-        RowItem("Listen", Icons.Outlined.Headphones, Icons.Outlined.Headphones, null),
+        RowItem("Library", Icons.Outlined.LibraryBooks, Icons.Filled.LibraryBooks, RowKind.PAGE, WebShell.Tab.LIBRARY),
+        RowItem("Read", Icons.AutoMirrored.Outlined.MenuBook, Icons.AutoMirrored.Filled.MenuBook, RowKind.PAGE, WebShell.Tab.READ),
+        RowItem("Search", Icons.Outlined.Search, Icons.Outlined.Search, RowKind.PAGE, WebShell.Tab.SEARCH),
+        RowItem("Notes", Icons.Outlined.Description, Icons.Filled.Description, RowKind.PAGE, WebShell.Tab.NOTES),
+        RowItem("Bookmark", Icons.Outlined.BookmarkBorder, Icons.Filled.Bookmark, RowKind.BOOKMARK),
+        RowItem("Settings", Icons.Outlined.Settings, Icons.Filled.Settings, RowKind.PAGE, WebShell.Tab.SETTINGS),
+        RowItem("Listen", Icons.Outlined.Headphones, Icons.Outlined.Headphones, RowKind.LISTEN),
     )
-    Row(Modifier.fillMaxWidth().padding(horizontal = 12.dp), verticalAlignment = Alignment.CenterVertically) {
+    Row(Modifier.fillMaxWidth().padding(horizontal = 10.dp), verticalAlignment = Alignment.CenterVertically) {
         for (item in items) {
-            val selected = item.tab != null && item.tab == shell.tab
+            val bookmark = item.kind == RowKind.BOOKMARK
+            // "on": the page showing, or this chapter bookmarked
+            val on = if (bookmark) shell.chapterBookmarked else item.tab != null && item.tab == shell.tab
+            val enabled = !bookmark || shell.canBookmark
             Box(
                 Modifier.weight(1f).heightIn(min = 52.dp).clip(RoundedCornerShape(12.dp))
-                    .clickable {
-                        when (item.tab) {
-                            null -> shell.toggleListen()
-                            // the whole library, folded, every time — tapped again while there too
-                            WebShell.Tab.LIBRARY -> shell.showLibrary()
-                            else -> { shell.tab = item.tab; if (item.tab == WebShell.Tab.NOTES) shell.notesVisits++ }
+                    .clickable(enabled = enabled) {
+                        when (item.kind) {
+                            RowKind.LISTEN -> shell.toggleListen()
+                            RowKind.BOOKMARK -> {
+                                if (!shell.chapterBookmarked) view.performHapticFeedback(if (Build.VERSION.SDK_INT >= 30) HapticFeedbackConstants.CONFIRM else HapticFeedbackConstants.VIRTUAL_KEY)
+                                shell.toggleBookmark()
+                            }
+                            RowKind.PAGE -> {
+                                view.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP)
+                                when (item.tab) {
+                                    WebShell.Tab.LIBRARY -> shell.showLibrary()
+                                    // back to the book, whatever was over it
+                                    WebShell.Tab.READ -> { shell.tab = WebShell.Tab.READ; shell.closeDrawer() }
+                                    else -> { shell.tab = item.tab!!; if (item.tab == WebShell.Tab.NOTES) shell.notesVisits++ }
+                                }
+                            }
                         }
                     }
-                    .semantics { contentDescription = item.name; this.selected = selected },
+                    .alpha(if (enabled) 1f else 0.45f)
+                    .semantics {
+                        contentDescription = if (bookmark) {
+                            if (shell.chapterBookmarked) "Remove the bookmark on ${shell.whereLabel}" else "Bookmark ${shell.whereLabel.ifEmpty { "this chapter" }}"
+                        } else item.name
+                        if (!bookmark) this.selected = on
+                    },
                 contentAlignment = Alignment.Center
             ) {
-                Icon(if (selected) item.filled else item.outline, null, tint = if (selected) p.hereChrome else p.onChrome, modifier = Modifier.size(26.dp))
+                Icon(if (on) item.filled else item.outline, null, tint = if (on) p.hereChrome else p.onChrome, modifier = Modifier.size(24.dp))
             }
         }
     }
@@ -315,7 +463,7 @@ fun LaunchSplash() {
  * under the content.
  */
 @Composable
-fun ShellPage(shell: WebShell, title: String, onBack: (() -> Unit)? = null, onDone: (() -> Unit)? = null, barContent: (@Composable () -> Unit)? = null, content: @Composable () -> Unit) {
+fun ShellPage(shell: WebShell, title: String, onBack: (() -> Unit)? = null, onDone: (() -> Unit)? = null, onClose: (() -> Unit)? = null, barContent: (@Composable () -> Unit)? = null, content: @Composable () -> Unit) {
     val p = shell.palette
     Column(Modifier.fillMaxSize().background(p.panel)) {
         Column(Modifier.fillMaxWidth().background(p.chrome)) {
@@ -325,10 +473,17 @@ fun ShellPage(shell: WebShell, title: String, onBack: (() -> Unit)? = null, onDo
                         Icon(Icons.AutoMirrored.Outlined.ArrowBack, null, tint = p.onChrome)
                     }
                 }
-                Text(title, color = p.onChrome, fontSize = 17.sp, fontWeight = FontWeight.SemiBold, modifier = Modifier.padding(horizontal = if (onDone != null) 84.dp else 60.dp), maxLines = 1, overflow = TextOverflow.Ellipsis)
+                Text(title, color = p.onChrome, fontSize = 17.sp, fontWeight = FontWeight.Bold, modifier = Modifier.padding(horizontal = if (onDone != null) 84.dp else 60.dp), maxLines = 1, overflow = TextOverflow.Ellipsis)
+                // a panel's root: its X puts it away, down to the book
+                if (onClose != null) {
+                    Box(Modifier.align(Alignment.CenterEnd).padding(end = 8.dp).size(44.dp).clip(CircleShape).clickable(onClick = onClose)
+                        .semantics { contentDescription = "Close"; role = Role.Button }, contentAlignment = Alignment.Center) {
+                        Icon(Icons.Filled.Cancel, null, tint = p.onChrome.copy(alpha = 0.8f), modifier = Modifier.size(26.dp))
+                    }
+                }
                 if (onDone != null) {
                     Box(Modifier.align(Alignment.CenterEnd).padding(end = 8.dp).heightIn(min = 44.dp).clip(RoundedCornerShape(10.dp)).clickable(role = Role.Button, onClick = onDone).padding(horizontal = 12.dp), contentAlignment = Alignment.Center) {
-                        Text("Done", color = p.hereChrome, fontSize = 17.sp, fontWeight = FontWeight.SemiBold)
+                        Text("Done", color = p.hereChrome, fontSize = 17.sp, fontWeight = FontWeight.Bold)
                     }
                 }
             }
@@ -338,10 +493,27 @@ fun ShellPage(shell: WebShell, title: String, onBack: (() -> Unit)? = null, onDo
     }
 }
 
-/** The site's Hebrew face for the native screens: David Libre from app-shell/fonts. */
+/**
+ * The site's face for the native screens: David Libre from app-shell/fonts,
+ * for the Hebrew and, since 2026-09-23, for everything else too.
+ */
 object ShellTheme {
+    /** David Libre sets smaller than the system face at a size: every native size ×1.08, as on the iPhone. */
+    const val SCALE = 1.08f
     lateinit var hebrew: FontFamily
         private set
+    /** Material's type scale, every style in David Libre. */
+    val typography: Typography by lazy {
+        val t = Typography()
+        val f = hebrew
+        Typography(
+            displayLarge = t.displayLarge.copy(fontFamily = f), displayMedium = t.displayMedium.copy(fontFamily = f), displaySmall = t.displaySmall.copy(fontFamily = f),
+            headlineLarge = t.headlineLarge.copy(fontFamily = f), headlineMedium = t.headlineMedium.copy(fontFamily = f), headlineSmall = t.headlineSmall.copy(fontFamily = f),
+            titleLarge = t.titleLarge.copy(fontFamily = f), titleMedium = t.titleMedium.copy(fontFamily = f), titleSmall = t.titleSmall.copy(fontFamily = f),
+            bodyLarge = t.bodyLarge.copy(fontFamily = f), bodyMedium = t.bodyMedium.copy(fontFamily = f), bodySmall = t.bodySmall.copy(fontFamily = f),
+            labelLarge = t.labelLarge.copy(fontFamily = f), labelMedium = t.labelMedium.copy(fontFamily = f), labelSmall = t.labelSmall.copy(fontFamily = f),
+        )
+    }
     fun init(assets: AssetManager) {
         if (::hebrew.isInitialized) return
         hebrew = try {

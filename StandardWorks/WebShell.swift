@@ -173,8 +173,10 @@ final class WebShell: ObservableObject {
         switch message["op"] as? String {
         // the page turned a chapter by itself (shell_end.js, 13)
         case "place": refreshWhere()
-        // The page's chapter pill, tapped in the app: the native Library at
-        // this book's chapters — one contents, not two (app-shell/shell_end.js, 10).
+        // The page's chapter pill, tapped in the app: the page's drawer at
+        // this book — one contents, not two (app-shell/shell_end.js, 10).
+        // (The drawer's {op:'drawer'} is for a shell with a back button:
+        // Android's; the default case lets it pass here.)
         case "chapters":
             openChapters(volumeKey: (message["volume"] as? String) ?? "", chapterId: (message["chapter"] as? String) ?? "")
         case "modes":

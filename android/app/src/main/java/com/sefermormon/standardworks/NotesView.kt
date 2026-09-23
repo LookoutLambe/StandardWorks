@@ -94,7 +94,7 @@ fun NotesView(shell: WebShell) {
     }
 
     val empty = notes.isEmpty() && highlights.isEmpty() && bookmarks.isEmpty()
-    ShellPage(shell, title = "Notes") {
+    ShellPage(shell, title = "Notes", onClose = { shell.tab = WebShell.Tab.READ }) {
         if (loaded && empty) {
             Box(Modifier.fillMaxSize().padding(32.dp), contentAlignment = Alignment.Center) {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
@@ -102,7 +102,7 @@ fun NotesView(shell: WebShell) {
                     Spacer(Modifier.height(12.dp))
                     Text("Nothing marked yet", color = p.ink, fontSize = 20.sp, fontWeight = FontWeight.Bold)
                     Spacer(Modifier.height(6.dp))
-                    Text("Tap a verse in the reader to highlight it or add a note; bookmark a chapter from the study panel.",
+                    Text("Select a verse in the reader to highlight it or write a note. The Bookmark in the row marks the chapter you are reading.",
                         color = p.ink2, fontSize = 15.sp, textAlign = TextAlign.Center)
                 }
             }

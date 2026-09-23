@@ -87,10 +87,12 @@
 
   /* 10. ONE CONTENTS. A shell that has a native Library says so
      (window.__swShellCaps.chapters, set by the app before the page runs).
-     There the chapter pill opens THAT library, at this book's chapters, and
-     never the page's own drawer -- one contents, not two (navigation audit,
-     2026-09-20). Where the page is comes from its own last-read record,
-     which nav_engine.js writes on every chapter. */
+     There the chapter pill goes through the shell, which opens the page's
+     own drawer at this book (NavEngine.openBooks) beside the text, and its
+     native Library only where the page has no drawer -- one contents, not
+     two (user, 2026-09-23: the drawer is the original design). Where the
+     page is comes from its own last-read record, which nav_engine.js writes
+     on every chapter. */
   var CAPS = window.__swShellCaps || {};
   function shellPort() {
     return window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.swShell;
@@ -239,6 +241,28 @@
     if (!arm()) {
       var placeTries = 0;
       var placeTimer = setInterval(function () { if (arm() || ++placeTries > 80) clearInterval(placeTimer); }, 100);
+    }
+  })();
+
+  /* 14. THE DRAWER, OPEN OR SHUT. A shell with a back button (Android)
+     closes the page's drawer with it, so it is told whenever the drawer
+     opens or shuts ({op:'drawer', open}). */
+  (function () {
+    var port = shellPort();
+    if (!port || !window.MutationObserver) return;
+    function arm() {
+      var d = document.getElementById('nav-sidebar');
+      if (!d) return false;
+      var last = d.classList.contains('open');
+      new MutationObserver(function () {
+        var o = d.classList.contains('open');
+        if (o !== last) { last = o; port.postMessage({ op: 'drawer', open: o }); }
+      }).observe(d, { attributes: true, attributeFilter: ['class'] });
+      return true;
+    }
+    if (!arm()) {
+      var drawerTries = 0;
+      var drawerTimer = setInterval(function () { if (arm() || ++drawerTries > 80) clearInterval(drawerTimer); }, 100);
     }
   })();
 

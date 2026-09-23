@@ -28,7 +28,7 @@ struct NotesView: View {
                     ContentUnavailableView {
                         Label { Text("Nothing marked yet").font(ShellTheme.text(.title2, weight: .semibold)) } icon: { Image(systemName: "note.text") }
                     } description: {
-                        Text("Select a verse in the reader to highlight it or write a note. Bookmarks are kept in the reader's Study panel.")
+                        Text("Select a verse in the reader to highlight it or write a note. The Bookmark in the row marks the chapter you are reading.")
                             .font(ShellTheme.text(.body))
                     } actions: {
                         Button { shell.tab = .read } label: { Label("Open the reader", systemImage: "book") }

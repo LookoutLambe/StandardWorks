@@ -30,7 +30,7 @@ object DebugBridge {
                             var answer = "ok"
                             when (parts.firstOrNull()) {
                                 "tab" -> when (parts.getOrNull(1)) {
-                                    "library" -> shell.tab = WebShell.Tab.LIBRARY
+                                    "library" -> shell.showLibrary()
                                     "read" -> shell.tab = WebShell.Tab.READ
                                     "search" -> shell.tab = WebShell.Tab.SEARCH
                                     "notes" -> { shell.tab = WebShell.Tab.NOTES; shell.notesVisits++ }
@@ -41,12 +41,21 @@ object DebugBridge {
                                 "open" -> parts.getOrNull(1)?.let { shell.open(it) }
                                 // "@page in-print.html": a site page in the sheet; "@page" alone closes it
                                 "page" -> { shell.tab = WebShell.Tab.SETTINGS; shell.sheetPage = parts.getOrNull(1) }
-                                "library" -> {
+                                // "@library": the row's icon (the page's drawer); "@library bom 1ne":
+                                // the native Library, pushed — what a page with no drawer shows
+                                "library" -> if (parts.size < 2) shell.showLibrary() else {
                                     shell.tab = WebShell.Tab.LIBRARY
                                     shell.libraryPath.clear()
                                     parts.getOrNull(1)?.let { shell.libraryPath.add(LibraryRoute.Vol(it)) }
                                     parts.getOrNull(2)?.let { shell.libraryPath.add(LibraryRoute.Bk(parts[1], it)) }
                                 }
+                                // "@chapters bom ch3": what the page's chapter pill posts
+                                "chapters" -> shell.openChapters(parts.getOrNull(1) ?: "", parts.getOrNull(2) ?: "")
+                                // "@bookmark": the row's Bookmark, on or off
+                                "bookmark" -> shell.toggleBookmark()
+                                // "@panel full|half": the panel dragged up or down
+                                "panel" -> shell.panelFull = parts.getOrNull(1) == "full"
+                                "drawer" -> shell.closeDrawer()
                                 "chapter" -> {
                                     val v = shell.volumes.firstOrNull { it.key == parts.getOrNull(1) }
                                     val b = v?.divisions?.flatMap { it.books }?.firstOrNull { it.id == parts.getOrNull(2) }
@@ -62,7 +71,7 @@ object DebugBridge {
                                 "size" -> shell.stepTextSize(parts.getOrNull(1)?.toIntOrNull() ?: 10)
                                 "reading" -> shell.setReading(parts.getOrNull(1) == "1")
                                 "appearance" -> parts.getOrNull(1)?.let { shell.chooseAppearance(it) } ?: run { answer = "which?" }
-                                "state" -> answer = "tab=${shell.tab} chromeHidden=${shell.chromeHidden} where=${shell.whereLabel} volumes=${shell.volumes.size} path=${shell.libraryPath.toList()} canListen=${shell.canListen} listening=${shell.listening} paused=${shell.listenPaused} rate=${shell.listenRate} rates=${shell.listenRates} theme=${shell.theme} appearance=${shell.appearance} ready=${shell.firstPageReady} sheet=${shell.sheetPage} url=${shell.webView.url}"
+                                "state" -> answer = "tab=${shell.tab} panelFull=${shell.panelFull} drawer=${shell.drawerOpen} bookmarked=${shell.chapterBookmarked} here=${shell.currentVolumeKey}/${shell.currentChapterId} chromeHidden=${shell.chromeHidden} where=${shell.whereLabel} volumes=${shell.volumes.size} path=${shell.libraryPath.toList()} canListen=${shell.canListen} listening=${shell.listening} paused=${shell.listenPaused} rate=${shell.listenRate} rates=${shell.listenRates} theme=${shell.theme} appearance=${shell.appearance} ready=${shell.firstPageReady} sheet=${shell.sheetPage} url=${shell.webView.url}"
                                 else -> answer = "unknown command"
                             }
                             out.writeText(answer)

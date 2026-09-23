@@ -78,7 +78,7 @@ import androidx.core.view.WindowCompat
 fun SettingsView(shell: WebShell) {
     val p = shell.palette
     val context = LocalContext.current
-    ShellPage(shell, title = "Settings") {
+    ShellPage(shell, title = "Settings", onClose = { shell.tab = WebShell.Tab.READ }) {
         LazyColumn(contentPadding = PaddingValues(16.dp)) {
             item {
                 Column { DisplayOptionsSections(shell) }

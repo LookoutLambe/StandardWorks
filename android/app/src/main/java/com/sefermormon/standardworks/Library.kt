@@ -35,6 +35,9 @@ import androidx.compose.material.icons.outlined.ChevronRight
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
@@ -189,7 +192,7 @@ private fun VolumesView(shell: WebShell) {
     val open = remember { mutableStateListOf<String>() }
     val list = rememberLazyListState()
     LaunchedEffect(shell.libraryFocus) { open.clear(); list.scrollToItem(0) }
-    ShellPage(shell, title = "Library") {
+    ShellPage(shell, title = "Library", onClose = { shell.tab = WebShell.Tab.READ }) {
         LazyColumn(state = list, contentPadding = PaddingValues(16.dp)) {
             if (shell.whereLabel.isNotEmpty()) {
                 item(key = "continue") {
@@ -317,22 +320,55 @@ private fun ChaptersView(shell: WebShell, volume: Volume, book: Book) {
         grid.scrollBy(-(grid.layoutInfo.viewportSize.height / 2f) + 60f)
     }
     ShellPage(shell, title = book.en, onBack = { shell.libraryPath.removeAt(shell.libraryPath.lastIndex) }) {
+        // a Hebrew count runs right to left: א at the top right (user, 2026-09-23)
+        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
         LazyVerticalGrid(state = grid, columns = GridCells.Adaptive(52.dp), contentPadding = PaddingValues(16.dp),
             horizontalArrangement = Arrangement.spacedBy(10.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
             items((1..maxOf(book.ch, 1)).toList()) { n ->
                 val here = n == hereN
                 val shape = RoundedCornerShape(8.dp)
-                Box(Modifier.heightIn(min = 44.dp).clip(shape).background(if (here) p.here.copy(alpha = 0.14f) else p.card)
+                val ink = if (here) p.here else p.ink
+                Column(Modifier.heightIn(min = 56.dp).clip(shape).background(if (here) p.here.copy(alpha = 0.14f) else p.card)
                     .then(if (here) Modifier.border(1.5.dp, p.here, shape) else Modifier)
                     .clickable { shell.open(volume, book, n) }
-                    .semantics { contentDescription = if (here) "Chapter $n, reading now" else "Chapter $n" },
-                    contentAlignment = Alignment.Center) {
-                    Text("$n", color = if (here) p.here else p.ink, fontSize = 17.sp, fontWeight = if (here) FontWeight.SemiBold else FontWeight.Normal,
-                        textAlign = TextAlign.Center, modifier = Modifier.padding(vertical = 12.dp))
+                    .semantics(mergeDescendants = true) { contentDescription = if (here) "Chapter $n, reading now" else "Chapter $n" }
+                    .padding(vertical = 6.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
+                    // the Hebrew numeral over the number (user, 2026-09-23): the
+                    // Hebrew landing counts chapters in letters, and an English
+                    // reader still finds "Alma 32" by its digits
+                    Text(hebrewNumeral(n), color = ink, fontSize = 19.sp, fontFamily = ShellTheme.hebrew, textAlign = TextAlign.Center, lineHeight = 21.sp)
+                    Text("$n", color = ink, fontSize = 13.sp, fontWeight = if (here) FontWeight.Bold else FontWeight.Normal, textAlign = TextAlign.Center, lineHeight = 15.sp)
                 }
             }
         }
+        }
     }
+}
+
+/**
+ * A chapter number in Hebrew letters, the form the Hebrew landing page shows
+ * (tools/build_static_pages.js hebNum): 15 and 16 are ט״ו and ט״ז, a single
+ * letter takes a geresh, more take gershayim before the last. The twin of
+ * hebrewNumeral in Library.swift.
+ */
+fun hebrewNumeral(number: Int): String {
+    if (number <= 0 || number >= 1000) return number.toString()
+    val hundreds = arrayOf("", "ק", "ר", "ש", "ת")
+    val tens = arrayOf("", "י", "כ", "ל", "מ", "נ", "ס", "ע", "פ", "צ")
+    val ones = arrayOf("", "א", "ב", "ג", "ד", "ה", "ו", "ז", "ח", "ט")
+    var n = number
+    val s = StringBuilder()
+    var h = n / 100
+    n %= 100
+    while (h > 4) { s.append("ת"); h -= 4 }
+    s.append(hundreds[h])
+    when (n) {
+        15 -> s.append("טו")
+        16 -> s.append("טז")
+        else -> s.append(tens[n / 10]).append(ones[n % 10])
+    }
+    return if (s.length == 1) "$s׳" else s.substring(0, s.length - 1) + "״" + s.last()
 }
 
 @Composable

@@ -3,9 +3,12 @@
 The Android app is the **iPhone app's twin**: a native Jetpack Compose shell
 around one WebView that shows the bundled site, with the same injected scripts
 (`app-shell/` at the repo root, shared byte for byte) and the same native
-screens — Library · Read · Search · Notes · Settings · Listen in one row
+screens — Library · Read · Search · Notes · Bookmark · Settings · Listen in one row
 floating over the page, the logo at launch, Display Options behind the
-header's ⋯, Light / Sepia / Dark / Black / Gray on every screen. The page is
+header's ⋯, Light / Sepia / Dark / Black / Gray on every screen, David Libre
+throughout. The book is always underneath: Library and the chapter pill open
+the page's own drawer, Notes and Settings rise over the book as a half-height
+panel (`PanelSheet`), and only Search is a whole page. The page is
 told what the shell can do (`AppShell.CAPS_SCRIPT`, the iPhone's list less
 `returnPoint`) before it runs. Each Kotlin file names the Swift file it mirrors.
 
@@ -76,7 +79,8 @@ points at it and is gitignored). Debug build and run on the emulator:
 
 Debug builds carry `DebugBridge`: write a command to the app's
 `files/shell_cmd.js` (through `adb shell run-as`) and read
-`files/shell_out.txt` — `@state`, `@tab library`, `@open bom/bom.html#1-nephi-3`,
+`files/shell_out.txt` — `@state`, `@tab library`, `@library bom 1ne` (the native Library), `@bookmark`,
+`@panel full`, `@open bom/bom.html#1-nephi-3`,
 `@listen`, `@appearance sepia`, or any JavaScript for the page.
 
 ## Shipping an update

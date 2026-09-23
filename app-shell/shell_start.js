@@ -132,7 +132,13 @@
        a rounded capsule of the chrome over a blur; the footer the same,
        around the chapter row; circles for the buttons, no boxes. */
     'html.sw-app-clear .sw-top-bar { background: transparent !important; border: 0 !important; box-shadow: none !important; }',
-    'html.sw-app-clear .sw-top-bar-inner { display: flex !important; align-items: center; gap: 6px; margin: 4px 12px 0; padding: 4px 6px; min-height: 52px; border-radius: 30px;',
+    /* the capsule begins below the paper fade over the status bar (the
+       #sw-app-statusbar rule below, 14px under the inset): with a top inset
+       (the iPhone upright) 4px under it clears the fade's paper already;
+       with none (Android, whose status bar is the shell's own; an iPhone on
+       its side) it drops to the fade's end, or its top edge is lost in the
+       paper (user, 2026-09-23: "the pill needs to be lower a tad bit") */
+    'html.sw-app-clear .sw-top-bar-inner { display: flex !important; align-items: center; gap: 6px; margin: max(4px, calc(14px - env(safe-area-inset-top, 0px))) 12px 0; padding: 4px 6px; min-height: 52px; border-radius: 30px;',
     '  background: color-mix(in srgb, var(--chrome, #1B2A41) 60%, transparent) !important; -webkit-backdrop-filter: blur(22px) saturate(160%) brightness(.7); backdrop-filter: blur(22px) saturate(160%) brightness(.7); box-shadow: 0 6px 22px rgba(0,0,0,.18), inset 0 0 0 1px color-mix(in srgb, var(--on-chrome, #F3EDE2) 9%, transparent); }',
     'html.sw-app-clear #sw-chrome-nav { flex: 1 1 auto; display: flex; justify-content: center; min-width: 0; }',
     'html.sw-app-clear .sw-chrome-home img { width: 58px !important; height: 38px !important; }',

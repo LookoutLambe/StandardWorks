@@ -30,12 +30,38 @@ import kotlin.math.abs
  * through the page's own globals; the shell never reimplements the page.
  */
 class WebShell(private val context: Context) {
-    enum class Tab { LIBRARY, READ, SEARCH, NOTES, SETTINGS }
+    enum class Tab {
+        LIBRARY, READ, SEARCH, NOTES, SETTINGS;
+        /**
+         * What slides up over the book as a sheet (PanelSheet): Search is a
+         * whole page; the Library is a sheet only where the page has no drawer.
+         */
+        val isSheet get() = this == LIBRARY || this == NOTES || this == SETTINGS
+    }
 
     private val main = Handler(Looper.getMainLooper())
     val prefs: SharedPreferences = context.getSharedPreferences("shell", Context.MODE_PRIVATE)
 
-    var tab by mutableStateOf(Tab.READ)
+    private var tabState = mutableStateOf(Tab.READ)
+    var tab: Tab
+        get() = tabState.value
+        set(t) {
+            val was = tabState.value
+            tabState.value = t
+            if (t == was) return
+            // the Library marks the place: ask the page where it is as it comes up
+            if (t == Tab.LIBRARY) refreshWhere()
+            // a panel opens at half height, over a closed drawer
+            if (t != Tab.READ) { panelFull = false; closeDrawer() }
+        }
+    /** The panel's height: half the screen (the book in view above it), or all of it. */
+    var panelFull by mutableStateOf(false)
+    /** The page's drawer is open (shell_end.js, 14): Back closes it first. */
+    var drawerOpen by mutableStateOf(false)
+        private set
+    /** This chapter is among the page's bookmarks (sw-bookmarks-v1): the row's Bookmark is filled. */
+    var chapterBookmarked by mutableStateOf(false)
+        private set
     /** The Search tab's text, kept here so the tab keeps it across visits. */
     var searchQuery by mutableStateOf("")
     /** Bumped on each visit to Notes, so the tab re-reads the page's stores. */
@@ -130,13 +156,9 @@ class WebShell(private val context: Context) {
         private set
 
     init {
+        // A first launch opens on the landing page, whose covers are the
+        // library; every launch after that opens in the book (the boot redirect).
         ListenService.bind(this)
-        // A first launch opens on the Library, the way a scripture app does;
-        // every launch after that opens in the book (the boot redirect).
-        if (!prefs.getBoolean("shell.launchedBefore", false)) {
-            prefs.edit().putBoolean("shell.launchedBefore", true).apply()
-            tab = Tab.LIBRARY
-        }
     }
 
     fun post(r: () -> Unit) { main.post(r) }
@@ -174,9 +196,13 @@ class WebShell(private val context: Context) {
     fun receive(name: String, body: JSONObject) {
         when (name) {
             "swShell" -> when (body.optString("op")) {
-                // The chapter pill: the native Library at this book's chapters —
-                // one contents, not two (shell_end.js, 10).
+                // The chapter pill: the page's drawer at this book — one
+                // contents, not two (shell_end.js, 10).
                 "chapters" -> openChapters(body.optString("volume"), body.optString("chapter"))
+                // a chapter turned by the page itself (shell_end.js, 13)
+                "place" -> refreshWhere()
+                // the drawer opened or shut (shell_end.js, 14)
+                "drawer" -> drawerOpen = body.optBoolean("open")
                 "modes" -> {
                     if (body.has("layout")) readLayout = body.optString("layout", readLayout)
                     if (body.has("translit")) readTranslit = body.optBoolean("translit", readTranslit)
@@ -271,32 +297,48 @@ class WebShell(private val context: Context) {
     // MARK: - the library
 
     /**
-     * THE WHOLE LIBRARY: the stack popped to its root, every volume folded,
-     * the list at its top. What the row's Library icon does, and again when
-     * tapped while there. (The page's mark is the landing page's link.)
+     * THE LIBRARY IS THE PAGE'S OWN DRAWER (user, 2026-09-23, with
+     * screenshots of it: "original design, the 5th picture isnt what i
+     * wanted"): it slides in from the side at the reader's volume, the text
+     * still in view beside it, with its own search, volume tabs and chapter
+     * grids. The native Library is kept for a page with no drawer (the JST).
+     * The twin of WebShell.showLibrary on the iPhone.
      */
     fun showLibrary() {
+        tab = Tab.READ
+        call("if (window.NavEngine && NavEngine.open) { NavEngine.open(); return { ok: true }; } return { ok: false };") { v ->
+            if (v?.optBoolean("ok") != true) openNativeLibrary()
+        }
+    }
+    private fun openNativeLibrary() {
         libraryPath.clear()
         libraryFocus++
         tab = Tab.LIBRARY
     }
 
     /**
-     * The chapter pill's destination: for a book of chapters its chapter
-     * grid, with the reader's chapter marked; front matter and a one-chapter
-     * book stop at the whole Library. One level deep, never two: back from
-     * the grid is the whole library.
+     * The chapter pill's destination: the page's drawer at this book's
+     * chapters (what the site's own pill does: site_chrome.js, openBooks);
+     * the native chapter grid only where the page has no drawer, one level
+     * deep, never two — back from the grid is the whole library.
      */
     fun openChapters(volumeKey: String, chapterId: String) {
         if (volumeKey.isNotEmpty()) currentVolumeKey = volumeKey
         if (chapterId.isNotEmpty()) currentChapterId = chapterId
-        val v = volumes.firstOrNull { it.key == volumeKey }
-        val b = v?.let { LibraryRegistry.bookOf(it, chapterId) }
-        libraryPath.clear()
-        if (v != null && b != null && !b.isFront && b.ch > 1) libraryPath.add(LibraryRoute.Bk(v.key, b.id))
-        libraryFocus++
-        tab = Tab.LIBRARY
+        tab = Tab.READ
+        call("if (window.NavEngine && NavEngine.openBooks) { NavEngine.openBooks(); return { ok: true }; } return { ok: false };") { v ->
+            if (v?.optBoolean("ok") == true) return@call
+            val vol = volumes.firstOrNull { it.key == volumeKey } ?: run { openNativeLibrary(); return@call }
+            val b = LibraryRegistry.bookOf(vol, chapterId)
+            libraryPath.clear()
+            if (b != null && !b.isFront && b.ch > 1) libraryPath.add(LibraryRoute.Bk(vol.key, b.id))
+            libraryFocus++
+            tab = Tab.LIBRARY
+        }
     }
+
+    /** Closes the page's drawer, if it is open. */
+    fun closeDrawer() = run("window.NavEngine && NavEngine.close && NavEngine.close();")
 
     // MARK: - opening
 
@@ -342,7 +384,29 @@ class WebShell(private val context: Context) {
         }
 
     /** The study panel's own bookmark button, driven while hidden, as on iOS. */
-    fun bookmarkChapter() = run("(function(){ var b = document.getElementById('xref-bm-add'); if (b) b.click(); })();")
+    fun bookmarkChapter() {
+        run("(function(){ var b = document.getElementById('xref-bm-add'); if (b) b.click(); })();")
+        main.postDelayed({ refreshWhere() }, 400)
+    }
+
+    /**
+     * THE ROW'S BOOKMARK (user, 2026-09-23: "can the 6 panel tool add a 7th
+     * as bookmark?"): the reader's chapter into the page's own bookmarks —
+     * the study panel's Add (#xref-bm-add), which files it with its label
+     * and Hebrew name — or out of them on a second tap. The Notes tab lists
+     * them. Nothing to bookmark on a page with no chapter (the landing).
+     */
+    val canBookmark get() = whereLabel.isNotEmpty() && currentChapterId.isNotEmpty()
+    fun toggleBookmark() {
+        if (!canBookmark) return
+        if (chapterBookmarked) {
+            run("(function (v, c) { try { var k = 'sw-bookmarks-v1'; var l = JSON.parse(localStorage.getItem(k) || '[]') || []; localStorage.setItem(k, JSON.stringify(l.filter(function (b) { return !(b && b.volume === v && b.chapter === c); }))); if (window.NavEngine && NavEngine.refreshBookmarksUI) NavEngine.refreshBookmarksUI(); } catch (e) {} })(${JSONObject.quote(currentVolumeKey)}, ${JSONObject.quote(currentChapterId)});")
+        } else {
+            run("(function(){ var b = document.getElementById('xref-bm-add'); if (b) b.click(); })();")
+        }
+        chapterBookmarked = !chapterBookmarked
+        main.postDelayed({ refreshWhere() }, 400)
+    }
 
     // MARK: - listen
 
@@ -473,12 +537,14 @@ class WebShell(private val context: Context) {
             val w = ((v as? String) ?: "").replace("▾", "").trim()
             if (w != whereLabel) whereLabel = w
         }
-        // and the place itself, as the page records it on every chapter
-        eval("(function(){ try { var g = JSON.parse(localStorage.getItem('sw-last-read') || 'null'); return g && g.volume && g.chapter ? [String(g.volume), String(g.chapter)] : null; } catch (e) { return null; } })()") { v ->
+        // and the place itself, as the page records it on every chapter, and
+        // whether it is among the page's bookmarks
+        eval("(function(){ try { var g = JSON.parse(localStorage.getItem('sw-last-read') || 'null'); if (!g || !g.volume || !g.chapter) return null; var b = JSON.parse(localStorage.getItem('sw-bookmarks-v1') || '[]') || []; var on = b.some(function (x) { return x && x.volume === g.volume && x.chapter === g.chapter; }); return [String(g.volume), String(g.chapter), on ? '1' : '0']; } catch (e) { return null; } })()") { v ->
             val a = v as? JSONArray ?: return@eval
-            if (a.length() != 2) return@eval
+            if (a.length() != 3) return@eval
             a.optString(0).let { if (it != currentVolumeKey) currentVolumeKey = it }
             a.optString(1).let { if (it != currentChapterId) currentChapterId = it }
+            (a.optString(2) == "1").let { if (it != chapterBookmarked) chapterBookmarked = it }
         }
     }
 
