@@ -19,6 +19,9 @@ struct SettingsView: View {
             Form {
                 DisplayOptionsSections()
                 Section(header: Text("About").foregroundStyle(shell.ink2)) {
+                    // The same two rows as the Android app, and the same message.
+                    ShareLink(item: AppShell.shareMessage, subject: Text(AppShell.shareSubject)) { Text("Share Sefer Mormon") }
+                    Link("Rate Sefer Mormon", destination: AppShell.writeReviewURL)
                     // In a sheet, never in the reader: loading a website page
                     // into the one web view took the book away — no chapter
                     // pill, no Listen, and the Library lost "Continue reading"

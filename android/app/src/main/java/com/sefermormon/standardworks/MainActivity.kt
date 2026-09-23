@@ -27,9 +27,18 @@ class MainActivity : ComponentActivity() {
         shell.phoneDark = phoneDark
         LocalSiteWebView.make(this, shell, shell.wantedTheme())
         setContent { ShellRoot(shell) }
+        // The review flow needs an Activity; the shell holds only the app context.
+        ReviewPrompt.attach(this)
+    }
+
+    /** A day of use counts when the app comes to the front, not only at a cold start. */
+    override fun onResume() {
+        super.onResume()
+        ReviewPrompt.recordUse(this)
     }
 
     override fun onDestroy() {
+        ReviewPrompt.detach(this)
         if (::shell.isInitialized) { shell.speech.shutdown(); shell.webView.destroy() }
         super.onDestroy()
     }

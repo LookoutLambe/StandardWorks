@@ -198,6 +198,25 @@ class WebShell(private val context: Context) {
 
     fun stepTextSize(delta: Int) { run("window.stepSize && window.stepSize($delta);") }
 
+    /**
+     * The chapter's address on the website, for sharing: the twin of
+     * WebShell.currentSiteURL on iOS. The bundled origin and any query (the
+     * boot flag) are dropped; the hash, which names the chapter, is kept. A page
+     * that is not one of the bundled site's own has no address to give.
+     */
+    val currentSiteUrl: String?
+        get() {
+            val u = webView.url ?: return null
+            if (!u.startsWith(AppShell.WWW)) return null
+            val rest = u.removePrefix(AppShell.WWW)
+            val path = rest.substringBefore('#').substringBefore('?')
+            val hash = rest.substringAfter('#', "")
+            return AppShell.SITE_URL + path + (if (hash.isEmpty()) "" else "#$hash")
+        }
+
+    /** The study panel's own bookmark button, driven while hidden, as on iOS. */
+    fun bookmarkChapter() = run("(function(){ var b = document.getElementById('xref-bm-add'); if (b) b.click(); })();")
+
     // MARK: - listen
 
     fun toggleListen() {
@@ -301,6 +320,7 @@ class WebShell(private val context: Context) {
         if (volumes.isEmpty()) loadRegistry()
         refreshWhere()
         refreshListen()
+        ReviewPrompt.consider(context)
     }
 
     fun refreshWhere() {

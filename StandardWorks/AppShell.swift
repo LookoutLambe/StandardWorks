@@ -48,6 +48,30 @@ enum AppShell {
     /// who tapped the mark to come back to the landing on purpose.
     static let bootQuery = "boot=1"
 
+    // MARK: - out of the app
+
+    /// WHERE THE APP POINTS OUTWARD: the site, both stores, and the one message
+    /// "Share Sefer Mormon" sends. The twin of the same constants in
+    /// android/app/src/main/java/com/sefermormon/standardworks/AppShell.kt;
+    /// change the two together. The message names all three doors, because the
+    /// person it is sent to may carry either phone.
+    static let siteURL = "https://sefermormon.com/"
+    static let appStoreURL = "https://apps.apple.com/app/id6767954376"
+    static let playURL = "https://play.google.com/store/apps/details?id=com.sefermormon.standardworks"
+    static let shareSubject = "Sefer Mormon: Standard Works"
+    static let shareMessage = """
+        Sefer Mormon: Standard Works. The scriptures in Hebrew, with the English and a transliteration under every word.
+
+        iPhone and iPad: \(appStoreURL)
+        Android: \(playURL)
+        On the web: \(siteURL)
+        """
+
+    /// RATE opens the App Store's write-a-review page, never the review sheet:
+    /// Apple asks that requestReview never answer a tap, and the sheet already
+    /// has its own calm moment in ReviewPrompt (ContentView.swift).
+    static let writeReviewURL = URL(string: appStoreURL + "?action=write-review")!
+
     // MARK: - palette
 
     /// THE SITE'S TOKENS PER THEME (reader.css :root, sw_theme.css

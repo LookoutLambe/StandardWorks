@@ -31,6 +31,24 @@ object AppShell {
 
     val THEMES = setOf("light", "sepia", "dark")
 
+    // MARK: - out of the app
+
+    /**
+     * WHERE THE APP POINTS OUTWARD: the site, both stores, and the one message
+     * "Share Sefer Mormon" sends. The twin of the same constants in
+     * StandardWorks/AppShell.swift; change the two together. The message names
+     * all three doors, because the person it is sent to may carry either phone.
+     */
+    const val SITE_URL = "https://sefermormon.com/"
+    const val APP_STORE_URL = "https://apps.apple.com/app/id6767954376"
+    const val PLAY_URL = "https://play.google.com/store/apps/details?id=com.sefermormon.standardworks"
+    const val SHARE_SUBJECT = "Sefer Mormon: Standard Works"
+    const val SHARE_MESSAGE = "Sefer Mormon: Standard Works. The scriptures in Hebrew, with the English and a " +
+        "transliteration under every word.\n\n" +
+        "iPhone and iPad: $APP_STORE_URL\n" +
+        "Android: $PLAY_URL\n" +
+        "On the web: $SITE_URL"
+
     // MARK: - palette
 
     /**
