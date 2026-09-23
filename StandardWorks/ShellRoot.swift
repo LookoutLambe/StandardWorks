@@ -77,7 +77,8 @@ struct ShellRoot: View {
         .ignoresSafeArea(.container, edges: .bottom)
         .sheet(isPresented: $shell.showDisplayOptions) {
             DisplayOptionsSheet().environmentObject(shell)
-                .presentationDetents([.medium, .large])
+                // the height is the shell's: the status bar follows the sheet to the top
+                .presentationDetents([.medium, .large], selection: $shell.displayOptionsDetent)
                 .presentationDragIndicator(.visible)
         }
         .sheet(isPresented: Binding(get: { shell.shareURL != nil }, set: { if !$0 { shell.shareURL = nil } })) {

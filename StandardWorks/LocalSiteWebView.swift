@@ -444,6 +444,9 @@ enum DebugBridge {
                     case "more", "display":
                         // the header's ⋯ and the Settings row both open Display Options
                         sh.showDisplayOptions = true
+                    case "detent":
+                        // "@detent large|medium": the Display Options sheet dragged up or down
+                        sh.displayOptionsDetent = (parts.count > 1 && parts[1] == "large") ? .large : .medium
                     case "modes":
                         // "@modes dual 1 0": layout, transliteration, nikkud — what Settings sends
                         if parts.count > 3 { sh.setReading(layout: parts[1], translit: parts[2] == "1", nikkud: parts[3] == "1") } else { answer = "layout translit nikkud" }

@@ -24,7 +24,10 @@ final class WebShell: ObservableObject {
         // The Library marks the place and says "Continue reading": ask the
         // page where it is as the tab comes up, since a chapter turned by the
         // page's own arrows or a swipe fires no page load.
-        didSet { if tab == .library, tab != oldValue { refreshWhere() } }
+        didSet {
+            if tab == .library, tab != oldValue { refreshWhere() }
+            if tab != oldValue { updateStatusBar() }
+        }
     }
     /// The Search tab's text, kept here so the tab keeps it across visits.
     @Published var searchQuery = ""
@@ -33,7 +36,9 @@ final class WebShell: ObservableObject {
     /// by LocalSiteWebViewLogger.matchPaper, so the shell's own surfaces — the
     /// bottom band, the player, the native bars — are cut from the page's
     /// chrome in every theme.
-    @Published var theme = "light"
+    @Published var theme = "light" {
+        didSet { if theme != oldValue { updateStatusBar() } }
+    }
     var dark: Bool { theme == "dark" || AppShell.darkVariants.contains(theme) }
     /// The page's palette for this theme (AppShell.Palette), as SwiftUI colours.
     var palette: AppShell.Palette { AppShell.palette(theme: theme) }
@@ -55,7 +60,9 @@ final class WebShell: ObservableObject {
     /// shell's own row stays. Carried to the page as a class on <html>, which
     /// the app's injected stylesheet (AppShell) reads.
     /// The first page has finished loading: the launch splash may go.
-    @Published private(set) var firstPageReady = false
+    @Published private(set) var firstPageReady = false {
+        didSet { if firstPageReady != oldValue { updateStatusBar() } }
+    }
     @Published var chromeHidden = false {
         didSet { if chromeHidden != oldValue { run("document.documentElement.classList.toggle('sw-app-reading', \(chromeHidden));") } }
     }
@@ -84,8 +91,18 @@ final class WebShell: ObservableObject {
     @Published private(set) var readNikkud = true
     /// The reading size the page shows, 70…150 (its #sizeSlider).
     @Published private(set) var textSize = 100
-    /// The header's ⋯ (app-shell/shell_end.js, 12) and what it opens.
-    @Published var showDisplayOptions = false
+    /// The header's ⋯ (app-shell/shell_end.js, 12) and what it opens. It
+    /// opens at half height; dragged up to the top, the status bar sits on
+    /// the black behind the card (updateStatusBar).
+    @Published var showDisplayOptions = false {
+        didSet {
+            if !showDisplayOptions { displayOptionsDetent = .medium }
+            updateStatusBar()
+        }
+    }
+    @Published var displayOptionsDetent: PresentationDetent = .medium {
+        didSet { if displayOptionsDetent != oldValue { updateStatusBar() } }
+    }
     @Published var shareURL: URL?
     /// The height of whatever floats over the page's bottom — the row, or the
     /// player — handed to the page as --sw-app-row-h so its own footer sits
@@ -187,6 +204,27 @@ final class WebShell: ObservableObject {
     }
     private func pushFullScreen() {
         run("document.documentElement.classList.toggle('sw-app-fullscreen', \(fullScreenOnScroll));")
+    }
+
+    /// THE CLOCK READS ON WHAT IS UNDER IT (user, 2026-09-23: "the clock goes
+    /// to white on white and white on beige"). The status bar is the app's own
+    /// (Info.plist: not view-controller based, launched light for the navy
+    /// launch screen), and it was white everywhere — right on the navy bars it
+    /// was made for, wrong since the reader's header became a clear capsule
+    /// and the page's paper runs up under the clock (html.sw-app-clear). So:
+    /// ink over the reader's Light and Sepia paper; white over the navy native
+    /// pages, the dark themes, the launch logo, and a sheet open to the top.
+    /// iOS 27 picks the colour from the content by itself; before it, only the
+    /// app-level setter reaches a status bar that is not view-controller based
+    /// (the view-controller route needs a hosting controller of our own, and
+    /// that made SwiftUI open a second window — see StandardWorksApp.swift).
+    private var statusBarInk: Bool?
+    func updateStatusBar() {
+        let sheetAtTop = showDisplayOptions && displayOptionsDetent == .large
+        let ink = firstPageReady && tab == .read && !dark && !sheetAtTop
+        guard ink != statusBarInk else { return }
+        statusBarInk = ink
+        UIApplication.shared.setStatusBarStyle(ink ? .darkContent : .lightContent, animated: true)
     }
 
     private func pushOverlayHeight() {
