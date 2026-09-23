@@ -63,7 +63,7 @@ struct SearchView: View {
                 }
             }
             .listStyle(.insetGrouped)
-            .shellPage()
+            .shellPage(clearOfRow: true)
             .shellBar("Search")
             .searchable(text: query, isPresented: $shell.searchPresented, prompt: "Hebrew or English")
             .searchScopes($scope, activation: .onSearchPresentation) {

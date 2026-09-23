@@ -209,7 +209,7 @@ struct LibraryView: View {
                 .onAppear { focus(proxy) }
                 .onChange(of: shell.libraryFocus) { _, _ in focus(proxy) }
             }
-            .shellBar("Library")
+            .shellBar("Library", closesPanel: true)
             .navigationDestination(for: LibraryRoute.self) { route in
                 switch route {
                 case .volume(let key):

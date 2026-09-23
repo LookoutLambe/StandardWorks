@@ -48,12 +48,18 @@ struct ShellRoot: View {
         // bottom of the glass, and the page lifts its own footer above the row
         // by the height reported to it (WebShell.bottomOverlay → --sw-app-row-h).
         // The row is the chrome at 76% over a blur, so the text shows through.
-        TabView(selection: $shell.tab) {
-            LibraryView().tag(WebShell.Tab.library).toolbar(.hidden, for: .tabBar)
-            readTab.tag(WebShell.Tab.read).toolbar(.hidden, for: .tabBar)
-            SearchView().tag(WebShell.Tab.search).toolbar(.hidden, for: .tabBar)
-            NotesView().tag(WebShell.Tab.notes).toolbar(.hidden, for: .tabBar)
-            SettingsView().tag(WebShell.Tab.settings).toolbar(.hidden, for: .tabBar)
+        // THE BOOK IS ALWAYS UNDERNEATH (user, 2026-09-23: "these tools were
+        // to be sliders so it didnt fill up the entire page... you made them be
+        // pages so i cant see the reading area"). The reader is the one view;
+        // Library and the chapter pill open the page's own drawer, which
+        // slides in from the side (WebShell.showLibrary), and Search, Notes
+        // and Settings slide up over the book as sheets, half the screen at
+        // first, the page still in view and still scrollable above them —
+        // all but Search, which stays a whole page over the book, the row
+        // floating on it as before (user: "keep search as a full page").
+        ZStack {
+            readTab
+            if shell.tab == .search { SearchView() }
         }
         .safeAreaInset(edge: .bottom, spacing: 0) {
             if !barHidden {
@@ -75,6 +81,14 @@ struct ShellRoot: View {
             }
         }
         .ignoresSafeArea(.container, edges: .bottom)
+        .sheet(isPresented: Binding(get: { shell.tab.isSheet }, set: { if !$0 { shell.tab = .read } })) {
+            panel
+                .environmentObject(shell)
+                .presentationDetents([.medium, .large], selection: $shell.panelDetent)
+                .presentationDragIndicator(.visible)
+                // half open, the book above stays in view and in reach
+                .presentationBackgroundInteraction(.enabled(upThrough: .medium))
+        }
         .sheet(isPresented: $shell.showDisplayOptions) {
             DisplayOptionsSheet().environmentObject(shell)
                 // the height is the shell's: the status bar follows the sheet to the top
@@ -121,6 +135,16 @@ struct ShellRoot: View {
 
     /// Gone only while the player is up.
     private var barHidden: Bool { shell.listening }
+
+    /// The panel the row opened, in its sheet.
+    @ViewBuilder private var panel: some View {
+        switch shell.tab {
+        case .library: LibraryView()      // only where the page has no drawer (the JST)
+        case .notes: NotesView()
+        case .settings: SettingsView()
+        case .read, .search: EmptyView()
+        }
+    }
 
     /// The Read page: the one web view and what rides on it.
     private var readTab: some View {
@@ -187,40 +211,65 @@ struct LaunchSplash: View {
 struct ShellTabBar: View {
     @EnvironmentObject var shell: WebShell
 
+    /// Five pages, and two actions: Bookmark (this chapter, on or off) and Listen.
+    private enum Kind { case page(WebShell.Tab), bookmark, listen }
     private struct Item: Identifiable {
-        let id: String, symbol: String, tab: WebShell.Tab?
+        let id: String, symbol: String, kind: Kind
     }
     private let items: [Item] = [
-        Item(id: "Library",  symbol: "books.vertical", tab: .library),
-        Item(id: "Read",     symbol: "book",           tab: .read),
-        Item(id: "Search",   symbol: "magnifyingglass", tab: .search),
-        Item(id: "Notes",    symbol: "note.text",      tab: .notes),
-        Item(id: "Settings", symbol: "gearshape",      tab: .settings),
-        Item(id: "Listen",   symbol: "headphones",     tab: nil),
+        Item(id: "Library",  symbol: "books.vertical", kind: .page(.library)),
+        Item(id: "Read",     symbol: "book",           kind: .page(.read)),
+        Item(id: "Search",   symbol: "magnifyingglass", kind: .page(.search)),
+        Item(id: "Notes",    symbol: "note.text",      kind: .page(.notes)),
+        Item(id: "Bookmark", symbol: "bookmark",       kind: .bookmark),
+        Item(id: "Settings", symbol: "gearshape",      kind: .page(.settings)),
+        Item(id: "Listen",   symbol: "headphones",     kind: .listen),
     ]
 
     var body: some View {
         HStack(spacing: 0) {
             ForEach(items) { item in
-                let selected = item.tab != nil && item.tab == shell.tab
+                // "on": the page showing, or this chapter bookmarked — gold, filled
+                let on: Bool = {
+                    switch item.kind {
+                    case .page(let t): return t == shell.tab
+                    case .bookmark: return shell.chapterBookmarked
+                    case .listen: return false
+                    }
+                }()
+                let bookmark: Bool = { if case .bookmark = item.kind { return true }; return false }()
                 Button {
-                    if let t = item.tab { if t == .library { shell.showLibrary() } else { shell.tab = t } } else { shell.toggleListen() }
+                    switch item.kind {
+                    case .page(let t):
+                        switch t {
+                        case .library: shell.showLibrary()
+                        case .read: shell.tab = .read; shell.closeDrawer()   // back to the book, whatever was over it
+                        default: shell.tab = t
+                        }
+                    case .bookmark: shell.toggleBookmark()
+                    case .listen: shell.toggleListen()
+                    }
                 } label: {
-                    Image(systemName: selected ? filled(item.symbol) : item.symbol)
+                    Image(systemName: on ? filled(item.symbol) : item.symbol)
                         .font(.system(size: 22, weight: .medium))
                         .symbolRenderingMode(.hierarchical)
-                        .foregroundStyle(selected ? shell.hereChrome : shell.onChrome)
+                        .foregroundStyle(on ? shell.hereChrome : shell.onChrome)
                         .frame(maxWidth: .infinity, minHeight: 52)
                         .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
-                .accessibilityLabel(item.id)
-                .accessibilityAddTraits(selected ? [.isSelected] : [])
+                .disabled(bookmark && !shell.canBookmark)
+                .opacity(bookmark && !shell.canBookmark ? 0.45 : 1)
+                .accessibilityLabel(bookmark
+                    ? (shell.chapterBookmarked ? "Remove the bookmark on \(shell.whereLabel)" : "Bookmark \(shell.whereLabel.isEmpty ? "this chapter" : shell.whereLabel)")
+                    : item.id)
+                .accessibilityAddTraits(on && !bookmark ? [.isSelected] : [])
             }
         }
         .padding(.horizontal, 12)
         .padding(.top, 2)
         .sensoryFeedback(.selection, trigger: shell.tab)
+        .sensoryFeedback(.success, trigger: shell.chapterBookmarked) { _, now in now }
     }
 
     /// The selected page's icon is the filled variant where SF Symbols has one.
@@ -230,6 +279,7 @@ struct ShellTabBar: View {
         case "gearshape": return "gearshape.fill"
         case "note.text": return "note.text"
         case "books.vertical": return "books.vertical.fill"
+        case "bookmark": return "bookmark.fill"
         default: return symbol
         }
     }

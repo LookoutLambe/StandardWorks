@@ -32,7 +32,7 @@ struct SettingsView: View {
                 .shellRow(shell)
             }
             .shellPage()
-            .shellBar("Settings")
+            .shellBar("Settings", closesPanel: true)
             .sheet(isPresented: Binding(get: { shell.sheetPage != nil }, set: { if !$0 { shell.sheetPage = nil } })) {
                 if let page = shell.sheetPage { SitePageSheet(path: page).environmentObject(shell) }
             }
@@ -187,7 +187,7 @@ struct DisplayOptionsSheet: View {
     var body: some View {
         NavigationStack {
             Form { DisplayOptionsSections() }
-                .shellPage(clearOfRow: false)
+                .shellPage()
                 .shellBar("Display Options", sheet: true)
                 .toolbar {
                     ToolbarItem(placement: .confirmationAction) {

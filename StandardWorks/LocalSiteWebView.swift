@@ -441,6 +441,9 @@ enum DebugBridge {
                     case "fullscreen":
                         // "@fullscreen 1|0": the Display Options toggle
                         sh.fullScreenOnScroll = parts.count > 1 && parts[1] == "1"
+                    case "bookmark":
+                        // "@bookmark": the row's Bookmark, on or off
+                        sh.toggleBookmark()
                     case "more", "display":
                         // the header's ⋯ and the Settings row both open Display Options
                         sh.showDisplayOptions = true

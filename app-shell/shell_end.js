@@ -219,6 +219,29 @@
     var moreTimer = setInterval(function () { if (moreButton() || ++moreTries > 80) clearInterval(moreTimer); }, 100);
   }
 
+  /* 13. WHERE THE PAGE IS, AS IT TURNS. A chapter turned by the page's own
+     arrows or a swipe fires no page load, so a shell heard of it only when it
+     asked; the pill's text changes with every chapter, and the shell is told
+     ({op:'place'}), so its Continue reading and its Bookmark follow the page. */
+  (function () {
+    var port = shellPort();
+    if (!port || !window.MutationObserver) return;
+    function arm() {
+      var pill = document.querySelector('#sw-chrome-chapter .sw-chrome-pill-text') || document.getElementById('sw-chrome-chapter');
+      if (!pill) return false;
+      var last = pill.textContent;
+      new MutationObserver(function () {
+        var t = pill.textContent;
+        if (t !== last) { last = t; port.postMessage({ op: 'place' }); }
+      }).observe(pill, { childList: true, characterData: true, subtree: true });
+      return true;
+    }
+    if (!arm()) {
+      var placeTries = 0;
+      var placeTimer = setInterval(function () { if (arm() || ++placeTries > 80) clearInterval(placeTimer); }, 100);
+    }
+  })();
+
   var NAME = 'Sefer Mormon: Standard Works';
   function rename() {
     var en = document.querySelector('.sw-top-bar-brand-en');

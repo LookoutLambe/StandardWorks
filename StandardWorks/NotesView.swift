@@ -91,7 +91,7 @@ struct NotesView: View {
                 }
             }
             .shellPage()
-            .shellBar("Notes")
+            .shellBar("Notes", closesPanel: true)
             .onAppear(perform: load)
             .refreshable { load() }
         }

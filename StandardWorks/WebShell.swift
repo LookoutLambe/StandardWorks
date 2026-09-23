@@ -18,7 +18,12 @@ import MediaPlayer
 /// never reimplements what the page already does.
 @MainActor
 final class WebShell: ObservableObject {
-    enum Tab: Hashable { case library, read, search, notes, settings }
+    enum Tab: Hashable {
+        case library, read, search, notes, settings
+        /// what slides up over the book as a sheet (Search is a whole page;
+        /// Library is a sheet only where the page has no drawer)
+        var isSheet: Bool { self == .library || self == .notes || self == .settings }
+    }
 
     @Published var tab: Tab = .read {
         // The Library marks the place and says "Continue reading": ask the
@@ -26,7 +31,11 @@ final class WebShell: ObservableObject {
         // page's own arrows or a swipe fires no page load.
         didSet {
             if tab == .library, tab != oldValue { refreshWhere() }
-            if tab != oldValue { updateStatusBar() }
+            if tab != oldValue {
+                // a panel opens at half height, over a closed drawer
+                if tab != .read { panelDetent = .medium; closeDrawer() }
+                updateStatusBar()
+            }
         }
     }
     /// The Search tab's text, kept here so the tab keeps it across visits.
@@ -79,6 +88,9 @@ final class WebShell: ObservableObject {
     /// the chapter id (`bom`, `ch3`) — so the Library can mark the place.
     @Published private(set) var currentVolumeKey = ""
     @Published private(set) var currentChapterId = ""
+    /// That chapter is among the page's bookmarks (sw-bookmarks-v1): the
+    /// row's Bookmark is filled.
+    @Published private(set) var chapterBookmarked = false
     /// A site page shown in a sheet over the app (Settings' print and privacy
     /// pages): never loaded into the reader, which would take the book away.
     @Published var sheetPage: String?
@@ -102,6 +114,10 @@ final class WebShell: ObservableObject {
     }
     @Published var displayOptionsDetent: PresentationDetent = .medium {
         didSet { if displayOptionsDetent != oldValue { updateStatusBar() } }
+    }
+    /// The height of the panel the row opened (Search, Notes, Settings).
+    @Published var panelDetent: PresentationDetent = .medium {
+        didSet { if panelDetent != oldValue { updateStatusBar() } }
     }
     @Published var shareURL: URL?
     /// The height of whatever floats over the page's bottom — the row, or the
@@ -140,12 +156,10 @@ final class WebShell: ObservableObject {
         for v in volumes { for d in v.divisions { for b in d.books { if order[b.en] == nil { order[b.en] = n; n += 1 } } } }
         order["D&C"] = order["D&C"] ?? n   // the D&C's rows are "D&C 76:1", one book
         searchIndex.bookOrder = order
-        // A first launch opens on the Library, the way a scripture app does;
-        // every launch after that opens in the book (AppShell's boot redirect).
-        if !UserDefaults.standard.bool(forKey: "shell.launchedBefore") {
-            UserDefaults.standard.set(true, forKey: "shell.launchedBefore")
-            tab = .library
-        }
+        // A first launch opens on the landing page, whose volumes are the
+        // way in; every launch after that opens in the book (AppShell's boot
+        // redirect). It opened on the native Library until 2026-09-23, when
+        // the Library became the page's own drawer again.
         // The reader loads from the first moment, whichever tab is showing.
         pageDelegate.shell = self
         let phone = UITraitCollection.current.userInterfaceStyle == .dark ? "dark" : "light"
@@ -157,6 +171,8 @@ final class WebShell: ObservableObject {
     /// What the shared scripts post through the "swShell" message handler.
     func handle(message: [String: Any]) {
         switch message["op"] as? String {
+        // the page turned a chapter by itself (shell_end.js, 13)
+        case "place": refreshWhere()
         // The page's chapter pill, tapped in the app: the native Library at
         // this book's chapters — one contents, not two (app-shell/shell_end.js, 10).
         case "chapters":
@@ -217,8 +233,9 @@ final class WebShell: ObservableObject {
     /// that made SwiftUI open a second window — see StandardWorksApp.swift).
     private var statusBarInk: Bool?
     func updateStatusBar() {
-        let sheetAtTop = showDisplayOptions && displayOptionsDetent == .large
-        let ink = firstPageReady && tab == .read && !dark && !sheetAtTop
+        let sheetAtTop = (showDisplayOptions && displayOptionsDetent == .large) || (tab.isSheet && panelDetent == .large)
+        // Search is a whole page with a navy bar at the top
+        let ink = firstPageReady && !dark && !sheetAtTop && tab != .search
         guard ink != statusBarInk else { return }
         statusBarInk = ink
         UIApplication.shared.setStatusBarStyle(ink ? .darkContent : .lightContent, animated: true)
@@ -276,7 +293,17 @@ final class WebShell: ObservableObject {
     func openChapters(volumeKey: String, chapterId: String) {
         if !volumeKey.isEmpty { currentVolumeKey = volumeKey }       // the page's own word for where it is
         if !chapterId.isEmpty { currentChapterId = chapterId }
-        guard let v = volumes.first(where: { $0.key == volumeKey }) else { showLibrary(); return }
+        // the page's own drawer at this book's chapters, sliding in beside
+        // the text; the native grid only where the page has no drawer
+        tab = .read
+        // (the site's own pill does exactly this: site_chrome.js, openBooks)
+        call("if (window.NavEngine && NavEngine.openBooks) { NavEngine.openBooks(); return true; } return false;") { [weak self] v in
+            guard let self, (v as? Bool) != true else { return }
+            self.openNativeChapters(volumeKey: volumeKey, chapterId: chapterId)
+        }
+    }
+    private func openNativeChapters(volumeKey: String, chapterId: String) {
+        guard let v = volumes.first(where: { $0.key == volumeKey }) else { openNativeLibrary(); return }
         // one level deep, never two: Back from the chapter grid is the whole
         // library, opened at this book (user, 2026-09-20: "it stays on the
         // current book not the full thing")
@@ -286,14 +313,26 @@ final class WebShell: ObservableObject {
         tab = .library
     }
 
-    /// THE WHOLE LIBRARY, at the reader's place: the stack popped to its root,
-    /// the current volume open, the current book in view. What the Library
-    /// icon does — tapping it again while there does it again, the way an iOS
-    /// tab pops to its root. (The page's mark is the landing page's link.)
+    /// THE LIBRARY IS THE PAGE'S OWN DRAWER (user, 2026-09-23, with
+    /// screenshots of it: "original design, the 5th picture isnt what i
+    /// wanted"): it slides in from the side at the reader's volume, the text
+    /// still in view beside it, with its own search, volume tabs and chapter
+    /// grids. The native Library is kept for a page with no drawer (the JST).
     func showLibrary() {
+        tab = .read
+        call("if (window.NavEngine && NavEngine.open) { NavEngine.open(); return true; } return false;") { [weak self] v in
+            guard let self, (v as? Bool) != true else { return }
+            self.openNativeLibrary()
+        }
+    }
+    private func openNativeLibrary() {
         libraryPath = []
         libraryFocus += 1
         tab = .library
+    }
+    /// Closes the page's drawer, if it is open.
+    func closeDrawer() {
+        run("window.NavEngine && NavEngine.close && NavEngine.close();")
     }
 
     /// The book a chapter id belongs to: front matter by its exact id, else
@@ -593,11 +632,29 @@ final class WebShell: ObservableObject {
             self?.whereLabel = ((v as? String) ?? "").replacingOccurrences(of: "\u{25BE}", with: "").trimmingCharacters(in: .whitespaces)
         }
         // and the place itself, as the page records it on every chapter
-        webView?.evaluateJavaScript("(function(){ try { var g = JSON.parse(localStorage.getItem('sw-last-read') || 'null'); return g && g.volume && g.chapter ? [String(g.volume), String(g.chapter)] : null; } catch (e) { return null; } })()") { [weak self] v, _ in
-            guard let self, let a = v as? [String], a.count == 2 else { return }
+        webView?.evaluateJavaScript("(function(){ try { var g = JSON.parse(localStorage.getItem('sw-last-read') || 'null'); if (!g || !g.volume || !g.chapter) return null; var b = JSON.parse(localStorage.getItem('sw-bookmarks-v1') || '[]') || []; var on = b.some(function (x) { return x && x.volume === g.volume && x.chapter === g.chapter; }); return [String(g.volume), String(g.chapter), on ? '1' : '0']; } catch (e) { return null; } })()") { [weak self] v, _ in
+            guard let self, let a = v as? [String], a.count == 3 else { return }
             if a[0] != self.currentVolumeKey { self.currentVolumeKey = a[0] }
             if a[1] != self.currentChapterId { self.currentChapterId = a[1] }
+            if (a[2] == "1") != self.chapterBookmarked { self.chapterBookmarked = a[2] == "1" }
         }
+    }
+
+    /// THE ROW'S BOOKMARK (user, 2026-09-23: "can the 6 panel tool add a 7th
+    /// as bookmark?"): the reader's chapter into the page's own bookmarks —
+    /// the study panel's Add (#xref-bm-add), which files it with its label
+    /// and Hebrew name — or out of them on a second tap. The Notes tab lists
+    /// them. Nothing to bookmark on a page with no chapter (the landing).
+    var canBookmark: Bool { !whereLabel.isEmpty && !currentChapterId.isEmpty }
+    func toggleBookmark() {
+        guard canBookmark else { return }
+        if chapterBookmarked {
+            run("(function (v, c) { try { var k = 'sw-bookmarks-v1'; var l = JSON.parse(localStorage.getItem(k) || '[]') || []; localStorage.setItem(k, JSON.stringify(l.filter(function (b) { return !(b && b.volume === v && b.chapter === c); }))); if (window.NavEngine && NavEngine.refreshBookmarksUI) NavEngine.refreshBookmarksUI(); } catch (e) {} })(\(jsString(currentVolumeKey)), \(jsString(currentChapterId)));")
+        } else {
+            run("(function(){ var b = document.getElementById('xref-bm-add'); if (b) b.click(); })();")
+        }
+        chapterBookmarked.toggle()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { [weak self] in self?.refreshWhere() }
     }
 }
 
@@ -616,6 +673,9 @@ struct ShellBar: ViewModifier {
     let title: String
     /// a sheet's root: no back button to strip, and the editor role would draw one
     var sheet = false
+    /// the root of a panel the row opened (Notes, Settings, the drawerless
+    /// Library): a close button that puts the book back in front
+    var closesPanel = false
     func body(content: Content) -> some View {
         content
             .navigationTitle(title)
@@ -629,8 +689,14 @@ struct ShellBar: ViewModifier {
                     Text(title).font(ShellTheme.text(.headline, weight: .semibold)).foregroundStyle(shell.onChrome)
                         .lineLimit(1).accessibilityAddTraits(.isHeader)
                 }
+                if closesPanel {
+                    ToolbarItem(placement: .confirmationAction) {
+                        Button { shell.tab = .read } label: { Image(systemName: "xmark.circle.fill").font(.title3) }
+                            .accessibilityLabel("Close")
+                    }
+                }
             }
-            .toolbarRole(sheet ? .automatic : .editor)
+            .toolbarRole(sheet || closesPanel ? .automatic : .editor)
             .toolbarBackground(shell.chrome, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarColorScheme(.dark, for: .navigationBar)
@@ -645,16 +711,15 @@ struct ShellBar: ViewModifier {
 /// dark card, exactly like the reader beside it.
 struct ShellPage: ViewModifier {
     @EnvironmentObject var shell: WebShell
-    /// false for a sheet, which the floating row does not cover
-    var clearOfRow = true
+    /// true for a page the floating row covers (Search); a sheet slides over the row
+    var clearOfRow = false
     func body(content: Content) -> some View {
         content
             .scrollContentBackground(.hidden)
-            // THE LAST ROWS SCROLL CLEAR OF THE FLOATING ROW. The row's inset did
-            // not reach the pages inside the tab view (the TabView ignores the
-            // bottom safe area so the reader can run under the row), so a
-            // chapter grid's last line — Psalms 145-150, Alma 61-63 — stayed
-            // behind the capsule at the end of the scroll (2026-09-23).
+            // THE LAST ROWS SCROLL CLEAR OF THE FLOATING ROW on a page it
+            // covers (Search): the row's inset never reached a page under it,
+            // and a list's last line stayed behind the capsule (2026-09-23).
+            // A sheet slides over the row and needs none.
             .contentMargins(.bottom, clearOfRow ? shell.bottomOverlay : 0, for: .scrollContent)
             .background(shell.panel.ignoresSafeArea())
             .foregroundStyle(shell.ink)
@@ -663,8 +728,10 @@ struct ShellPage: ViewModifier {
     }
 }
 extension View {
-    func shellBar(_ title: String, sheet: Bool = false) -> some View { modifier(ShellBar(title: title, sheet: sheet)) }
-    func shellPage(clearOfRow: Bool = true) -> some View { modifier(ShellPage(clearOfRow: clearOfRow)) }
+    func shellBar(_ title: String, sheet: Bool = false, closesPanel: Bool = false) -> some View {
+        modifier(ShellBar(title: title, sheet: sheet, closesPanel: closesPanel))
+    }
+    func shellPage(clearOfRow: Bool = false) -> some View { modifier(ShellPage(clearOfRow: clearOfRow)) }
     /// A list row (or a whole section of them) on the page's card, ruled in
     /// the page's rule colour.
     func shellRow(_ shell: WebShell) -> some View {
