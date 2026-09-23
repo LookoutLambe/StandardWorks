@@ -258,6 +258,41 @@ const inSnippetTest = (vol, book) => vol.key === 'ot' && SNIPPET_TEST.has(book.e
 const JEWISH_NAMES = { Psalms: { latin: 'Tehillim', he: 'תהילים' } };
 const jewishName = (vol, book) => (vol.key === 'ot' && JEWISH_NAMES[book.en]) || null;
 
+/* ---------- the Book of Mormon for a Hebrew reader (2026-09-23) ----------
+   ISRAEL SEARCHES FOR IT IN HEBREW AND FOUND ONLY ENGLISH. Search Console,
+   Israel, 2026-09-11 to 09-21: ספר מורמון at position 47, מורמון at 16, while
+   every page here said <html lang="en">, this book's landing included. A
+   Hebrew query is answered with Hebrew pages first, so the book the site
+   exists for sat behind pages about it. This is its landing in Hebrew,
+   paired with the English one by hreflang the way he.html is paired with the
+   home page. THE WORDS ARE THE TRANSLATOR'S, approved 2026-09-23 as they
+   stand; change them only with the translator. The links sit on words already
+   in the text, so none were added. */
+const BOM_HE = {
+  file: 'he.html',
+  title: 'ספר מורמון בעברית מקראית – מילה במילה עם תרגום לאנגלית',
+  desc: 'ספר מורמון המלא, מנפי א׳ ועד מורוני, בעברית מקראית מנוקדת, עם תרגום לאנגלית מתחת לכל מילה. אפשר לקרוא בחינם באתר ובאפליקציה.',
+  h1: 'ספר מורמון בעברית',
+  intro: reader => [
+    'זהו ספר מורמון בעברית: הספר כולו, מנפי א׳ ועד מורוני, בלשון המקרא של ימי בית ראשון – לשונם של ישעיהו וירמיהו – ולא בעברית של ימינו. כל מילה מנוקדת.',
+    'מתחת לכל מילה מופיע פירושה באנגלית, ולצד כל פסוק הנוסח האנגלי. <a class="open" href="' + reader + '">בתצוגה המלאה</a> יש גם תעתיק, שורש לכל מילה, הפניות לתנ״ך, הערות והקראה בקול.',
+    'התרגום הוא מעשה ידיו של כריס לאמב. אפשר לקרוא בחינם <a href="' + reader + '">באתר</a> ובאפליקציה.'
+  ],
+  translator: { name: 'Chris Lambe', he: 'כריס לאמב' }
+};
+/* the pair, on both pages: each names the other and itself */
+const hreflang = (enUrl, heUrl) =>
+  '<link rel="alternate" hreflang="en" href="' + enUrl + '">\n' +
+  '<link rel="alternate" hreflang="he" href="' + heUrl + '">\n' +
+  '<link rel="alternate" hreflang="x-default" href="' + enUrl + '">\n';
+/* a Hebrew page is set in David Libre, right to left; the chapter pages' sheet
+   is left alone (a ?v= bump would rewrite every page's bytes and date all
+   1,701 of them in the sitemap for a style they do not use) */
+const HE_STYLE = '<style>html[lang=he] body{font-family:\'David Libre\',Georgia,serif;font-size:19px}' +
+  'html[lang=he] h1{font-weight:400;font-size:2.1rem}html[lang=he] h2{font-weight:400;font-size:1.35rem}' +
+  'html[lang=he] .intro{font-size:1.1rem;line-height:1.75}html[lang=he] .cells a{font-family:\'David Libre\',serif;font-size:1.05rem}' +
+  'html[lang=he] .bar .brand [lang=he]{margin-right:0;margin-left:.5em}.other-lang{margin:1.6rem 0 0;font-size:.95rem}</style>\n';
+
 // ---------- the volumes ----------
 // The English name a volume is searched for by; defaults to '<en> in Hebrew'.
 const volName = vol => vol.name || (vol.en + ' in Hebrew');
@@ -283,6 +318,7 @@ const VOLUMES = [
       'Every word carries its English gloss beneath it, so a reader with a little Hebrew can follow the line word by word, and a reader with none can see how the book sounds in the tongue it claims for itself. The chapters below are plain pages: the Hebrew, the gloss under each word, and the English verse beside it. The interlinear reader adds transliteration, the root of every word, cross-references into the Tanakh, notes and read-aloud.',
       'It is free to read here and in the app, and it is in print: a <a href="https://www.amazon.com/dp/B0DVTJC9HJ">Hebrew edition</a> and an <a href="https://www.amazon.com/dp/B0GVZFM6YR">interlinear edition</a> with the English glosses, both on Amazon. The Tanakh, the New Testament, the Doctrine and Covenants and the Pearl of Great Price stand beside it in the same form, because reading the Book of Mormon in Hebrew means reading it against the Tanakh: the same covenant words, the same cadences.'
     ],
+    heLanding: BOM_HE,
     books: () => bomBooks(), english: ['bom/official_verses.js', '_officialVersesData'],
     blurb: 'The Hebrew Book of Mormon: Sefer Mormon, the Book of Mormon in Classical Biblical Hebrew, every word glossed, beside the English.',
     hebrewNote: 'Classical Biblical Hebrew translation' },
@@ -350,8 +386,9 @@ function renderVerse(v, i, english) {
    WKWebView ignores it, so it is a no-op inside the app's own bundled copy. */
 const APP_BANNER = '<meta name="apple-itunes-app" content="app-id=6767954376">\n';
 
-function head(rel, title, desc, canonical, extra) {
-  return '<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="UTF-8">\n' +
+function head(rel, title, desc, canonical, extra, lang) {
+  const he = lang === 'he';
+  return '<!DOCTYPE html>\n<html lang="' + (he ? 'he" dir="rtl' : 'en') + '">\n<head>\n<meta charset="UTF-8">\n' +
     '<meta name="viewport" content="width=device-width, initial-scale=1">\n' +
     '<title>' + esc(title) + '</title>\n' +
     '<meta name="description" content="' + esc(desc) + '">\n' +
@@ -361,6 +398,7 @@ function head(rel, title, desc, canonical, extra) {
     '<meta property="og:url" content="' + canonical + '">\n' +
     '<meta property="og:type" content="article">\n' +
     '<meta property="og:site_name" content="Sefer Mormon">\n' +
+    (he ? '<meta property="og:locale" content="he_IL">\n' : '') +
     '<meta property="og:image" content="' + SITE + 'bom/images/cover-hebrew.jpg">\n' +
     '<meta name="theme-color" content="#1B2A41">\n' +
     '<link rel="icon" href="' + rel + 'icons/icon-192.png?v=3">\n' +
@@ -368,15 +406,16 @@ function head(rel, title, desc, canonical, extra) {
     '<link rel="stylesheet" href="' + rel + 'hebrew/static.css?v=1">\n' +
     (extra || '') + '</head>\n';
 }
-function chrome(rel, crumbs) {
+function chrome(rel, crumbs, home) {
   const trail = crumbs.map((c, i) => c.href
     ? '<a href="' + c.href + '">' + esc(c.text) + '</a>'
     : '<span aria-current="page">' + esc(c.text) + '</span>').join('<span class="sep">›</span>');
-  return '<header class="bar"><a class="brand" href="' + rel + '"><span lang="he" dir="rtl">כתבי הקודש</span> Hebrew Interlinear Standard Works</a></header>\n' +
+  return '<header class="bar"><a class="brand" href="' + (home || rel) + '"><span lang="he" dir="rtl">כתבי הקודש</span> Hebrew Interlinear Standard Works</a></header>\n' +
     '<nav class="crumbs" aria-label="Breadcrumb">' + trail + '</nav>\n';
 }
-function foot(rel) {
-  return '<footer class="foot"><p><a href="' + rel + '">sefermormon.com</a> · <a href="' + rel + 'hebrew-study.html">How to read pointed Hebrew</a> · <a href="' + rel + 'vocabulary.html">Vocabulary by frequency</a> · <a href="' + rel + 'hebrew/index.html">All chapters</a> · <a href="' + rel + 'in-print.html">In print</a> &middot; <a href="' + rel + 'privacy.html">Privacy</a></p>' +
+function foot(rel, lang) {
+  /* the footer is English; on a Hebrew page it keeps its own direction */
+  return '<footer class="foot"' + (lang === 'he' ? ' lang="en" dir="ltr"' : '') + '><p><a href="' + rel + '">sefermormon.com</a> · <a href="' + rel + 'hebrew-study.html">How to read pointed Hebrew</a> · <a href="' + rel + 'vocabulary.html">Vocabulary by frequency</a> · <a href="' + rel + 'hebrew/index.html">All chapters</a> · <a href="' + rel + 'in-print.html">In print</a> &middot; <a href="' + rel + 'privacy.html">Privacy</a></p>' +
     '<p>Hebrew Interlinear Standard Works. The interlinear reader adds transliteration, roots, cross-references, notes and read-aloud.</p></footer>\n</body>\n</html>\n';
 }
 function breadcrumbLd(items) {
@@ -486,16 +525,42 @@ function buildVolume(vol, urls) {
       (b.he ? ' <span lang="he" dir="rtl">' + esc(b.he) + '</span>' : '') + '</h2>' +
     '<p class="cells">' + b.chapters.filter(c => sets[c.id]).map(c =>
       '<a href="' + b.slug + '/' + c.n + '.html" title="' + esc(chapterLabel(b, c)) + '">' + c.n + '</a>').join('') + '</p></section>').join('\n');
+  const heUrl = vol.heLanding ? SITE + 'hebrew/' + vol.slug + '/' + vol.heLanding.file : null;
   const vhtml = head(vrel, volName(vol) + ' — ' + vol.he + ' · Sefer Mormon',
-    vol.blurb + ' ' + pages + ' chapters, each a plain page with the Hebrew and its word-by-word English.', vurl, APP_BANNER + breadcrumbLd(crumbs)) +
+    vol.blurb + ' ' + pages + ' chapters, each a plain page with the Hebrew and its word-by-word English.', vurl,
+    APP_BANNER + (heUrl ? hreflang(vurl, heUrl) : '') + breadcrumbLd(crumbs)) +
     '<body class="volume">\n' + chrome(vrel, crumbs) + '<main>\n<h1>' + esc(volName(vol)) + ' <span class="h1he" lang="he" dir="rtl">' + esc(vol.he) + '</span></h1>\n' +
-    '<p class="lede">' + esc(vol.blurb) + ' <a class="open" href="' + vrel + vol.page + '">Open the ' + esc(vol.en) + ' reader</a>.</p>\n' +
+    '<p class="lede">' + esc(vol.blurb) + ' <a class="open" href="' + vrel + vol.page + '">Open the ' + esc(vol.en) + ' reader</a>.' +
+    (heUrl ? ' <a href="' + vol.heLanding.file + '" lang="he" dir="rtl">' + esc(vol.heLanding.h1) + '</a>' : '') + '</p>\n' +
     (vol.intro || []).map(t => '<p class="intro">' + t + '</p>').join('\n') + (vol.intro ? '\n' : '') +
     list + '\n</main>\n' + foot(vrel);
   fs.writeFileSync(path.join(volDir, 'index.html'), vhtml);
   urls.push(vurl);
+  if (heUrl) { buildHebrewLanding(vol, books, sets, vurl, heUrl); urls.push(heUrl); }
   console.log('  %s: %d chapter pages%s', vol.key, pages, english ? ' (' + missingEn + ' verses without English)' : '');
   return { vol, pages };
+}
+
+/* the volume's landing in Hebrew (BOM_HE): the translator's words, then the
+   books by their Hebrew names, each chapter by its Hebrew numeral */
+function buildHebrewLanding(vol, books, sets, enUrl, heUrl) {
+  const L = vol.heLanding, vrel = '../../';
+  const reader = vrel + vol.page;
+  const crumbs = [{ text: 'כתבי הקודש', href: vrel + 'he.html', url: SITE + 'he.html' }, { text: vol.he, url: heUrl }];
+  const ld = '<script type="application/ld+json">' + JSON.stringify({
+    '@context': 'https://schema.org', '@type': 'Book', name: vol.he, alternateName: ['Sefer Mormon', volName(vol)],
+    inLanguage: 'he', url: heUrl, workExample: { '@type': 'Book', url: SITE + vol.page },
+    translator: { '@type': 'Person', name: L.translator.name, alternateName: L.translator.he }
+  }) + '</script>\n' + breadcrumbLd(crumbs);
+  const list = books.filter(b => b.chapters.some(c => sets[c.id])).map(b =>
+    '<section class="book"><h2>' + esc(b.he || b.en) + '</h2>' +
+    '<p class="cells">' + b.chapters.filter(c => sets[c.id]).map(c =>
+      '<a href="' + b.slug + '/' + c.n + '.html" title="' + esc(chapterHeb(b, c)) + '">' + hebNum(c.n) + '</a>').join('') + '</p></section>').join('\n');
+  const html = head(vrel, L.title, L.desc, heUrl, APP_BANNER + hreflang(enUrl, heUrl) + HE_STYLE + ld, 'he') +
+    '<body class="volume">\n' + chrome(vrel, crumbs, vrel + 'he.html') + '<main>\n<h1>' + esc(L.h1) + '</h1>\n' +
+    L.intro(reader).map(t => '<p class="intro">' + t + '</p>').join('\n') + '\n' +
+    list + '\n<p class="other-lang" lang="en" dir="ltr"><a href="index.html">This page in English &rarr;</a></p>\n</main>\n' + foot(vrel, 'he');
+  fs.writeFileSync(path.join(OUT, vol.slug, L.file), html);
 }
 
 function buildHub(summary, urls) {
