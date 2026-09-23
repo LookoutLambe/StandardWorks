@@ -101,7 +101,7 @@ private struct MissingContentView: View {
     var body: some View {
         VStack(spacing: 16) {
             Text("Standard Works")
-                .font(.title2.weight(.semibold))
+                .font(ShellTheme.text(.title2, weight: .semibold))
             Text("The www folder was not found in the app bundle. Copy your Standard Works Project files into StandardWorks/www (see README on your Desktop).")
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.secondary)

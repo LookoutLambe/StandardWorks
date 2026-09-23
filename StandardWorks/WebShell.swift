@@ -133,7 +133,7 @@ final class WebShell: ObservableObject {
     init(www: URL) {
         wwwDirectoryURL = www
         searchIndex = SearchIndex(www: www)
-        ShellTheme.registerFonts(www: www)
+        ShellTheme.registerFonts()
         volumes = LibraryRegistry.load(www: www)
         bomHashes = LibraryRegistry.bomHashes(www: www)
         var order: [String: Int] = [:], n = 0
@@ -616,8 +616,24 @@ func jsString(_ s: String) -> String {
 /// white on white).
 struct ShellBar: ViewModifier {
     @EnvironmentObject var shell: WebShell
+    let title: String
+    /// a sheet's root: no back button to strip, and the editor role would draw one
+    var sheet = false
     func body(content: Content) -> some View {
         content
+            .navigationTitle(title)
+            .navigationBarTitleDisplayMode(.inline)
+            // the title in the one face, drawn here: SwiftUI's own bar title and
+            // back-button label keep the system face whatever the appearance
+            // says (tried 2026-09-23), so the title is ours and a back button
+            // is its arrow alone
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text(title).font(ShellTheme.text(.headline, weight: .semibold)).foregroundStyle(shell.onChrome)
+                        .lineLimit(1).accessibilityAddTraits(.isHeader)
+                }
+            }
+            .toolbarRole(sheet ? .automatic : .editor)
             .toolbarBackground(shell.chrome, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarColorScheme(.dark, for: .navigationBar)
@@ -650,7 +666,7 @@ struct ShellPage: ViewModifier {
     }
 }
 extension View {
-    func shellBar() -> some View { modifier(ShellBar()) }
+    func shellBar(_ title: String, sheet: Bool = false) -> some View { modifier(ShellBar(title: title, sheet: sheet)) }
     func shellPage(clearOfRow: Bool = true) -> some View { modifier(ShellPage(clearOfRow: clearOfRow)) }
     /// A list row (or a whole section of them) on the page's card, ruled in
     /// the page's rule colour.
@@ -659,31 +675,90 @@ extension View {
     }
 }
 
-/// The site's palette and Hebrew face, for the native tabs — so a Library
+/// The site's palette and its one face, for the native tabs — so a Library
 /// row and a Hebrew name look like the page beside them.
 enum ShellTheme {
     static let navy = Color(red: 0x1B / 255, green: 0x2A / 255, blue: 0x41 / 255)
     static let gold = Color(red: 0xC8 / 255, green: 0x9B / 255, blue: 0x3C / 255)
 
     private static var fontsRegistered = false
-    private static var hebrewFamily = "David Libre"
 
-    /// David Libre ships in www/fonts for the page; the native tabs register
-    /// the same files with CoreText once, so their Hebrew is the page's.
-    static func registerFonts(www: URL) {
+    /// David Libre is registered with CoreText once, from the TrueType files
+    /// in the bundle's app-shell/fonts. NOT from www/fonts: the site
+    /// self-hosts the face as woff2 (fonts/david_libre.css), which CoreText
+    /// cannot load, so for as long as this read www every native Hebrew name
+    /// quietly fell back to the system face (found 2026-09-23).
+    static func registerFonts() {
         guard !fontsRegistered else { return }
         fontsRegistered = true
-        let dir = www.appendingPathComponent("fonts")
-        guard let files = try? FileManager.default.contentsOfDirectory(at: dir, includingPropertiesForKeys: nil) else { return }
-        for f in files where ["ttf", "otf"].contains(f.pathExtension.lowercased()) && f.lastPathComponent.lowercased().contains("david") {
+        guard let dir = Bundle.main.url(forResource: "fonts", withExtension: nil, subdirectory: "app-shell"),
+              let files = try? FileManager.default.contentsOfDirectory(at: dir, includingPropertiesForKeys: nil) else {
+            NSLog("[shell] app-shell/fonts is missing: the native text falls back to the system face")
+            return
+        }
+        for f in files where ["ttf", "otf"].contains(f.pathExtension.lowercased()) {
             CTFontManagerRegisterFontsForURL(f as CFURL, .process, nil)
+        }
+        applyAppearance()
+    }
+
+    /// ONE FONT, DAVID LIBRE ONLY — the site's rule since 2026-09-01, and the
+    /// app's (user, 2026-09-23: "everything is to be david font.... not
+    /// everything is david font"). Every native Text takes its face from
+    /// here: a text style's size, scaling with Dynamic Type like the system
+    /// text it replaces, a little larger because David Libre's letters sit
+    /// lower (x-height 0.48 em against the system face's 0.52). Weights: the
+    /// face ships 400, 500 and 700, so semibold and heavier take the bold.
+    /// SF Symbols keep the system font: they are icons, sized by it.
+    static func text(_ style: Font.TextStyle, weight: Font.Weight = .regular) -> Font {
+        .custom(faceName(weight), size: baseSize(style), relativeTo: style)
+    }
+    static func uiFont(_ size: CGFloat, weight: Font.Weight = .regular) -> UIFont {
+        UIFont(name: faceName(weight), size: size) ?? .systemFont(ofSize: size)
+    }
+    private static func faceName(_ w: Font.Weight) -> String {
+        switch w {
+        case .semibold, .bold, .heavy, .black: return "DavidLibre-Bold"
+        case .medium: return "DavidLibre-Medium"
+        default: return "DavidLibre-Regular"
+        }
+    }
+    /// The system sizes at the default text size, scaled for the face.
+    private static func baseSize(_ style: Font.TextStyle) -> CGFloat {
+        let system: CGFloat
+        switch style {
+        case .largeTitle: system = 34
+        case .title: system = 28
+        case .title2: system = 22
+        case .title3: system = 20
+        case .headline, .body: system = 17
+        case .callout: system = 16
+        case .subheadline: system = 15
+        case .footnote: system = 13
+        case .caption: system = 12
+        case .caption2: system = 11
+        default: system = 17
+        }
+        return (system * 1.08).rounded()
+    }
+
+    /// The UIKit pieces SwiftUI draws with the system face unless told: the
+    /// segmented pickers and the search field. (The navigation bars are not
+    /// here: SwiftUI rebuilds their appearance and drops the face, so ShellBar
+    /// draws their titles itself.)
+    private static func applyAppearance() {
+        UISegmentedControl.appearance().setTitleTextAttributes([.font: uiFont(15)], for: .normal)
+        UISegmentedControl.appearance().setTitleTextAttributes([.font: uiFont(15, weight: .bold)], for: .selected)
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).font = uiFont(18)
+        for state in [UIControl.State.normal, .highlighted, .disabled] {
+            UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes([.font: uiFont(18)], for: state)
         }
     }
 
-    /// Scales with the reader's Dynamic Type setting, like the system text beside it.
-    static func hebrew(_ size: CGFloat) -> Font {
-        if UIFont(name: "DavidLibre-Regular", size: size) != nil { return .custom("DavidLibre-Regular", size: size, relativeTo: .body) }
-        if UIFont(name: hebrewFamily, size: size) != nil { return .custom(hebrewFamily, size: size, relativeTo: .body) }
-        return .system(size: size)
+    /// The face at a given size, scaling with Dynamic Type from the body style.
+    static func face(_ size: CGFloat, weight: Font.Weight = .regular) -> Font {
+        .custom(faceName(weight), size: size, relativeTo: .body)
     }
+    /// Hebrew at a given size: the same face (the site's rule is one font).
+    static func hebrew(_ size: CGFloat) -> Font { face(size) }
 }

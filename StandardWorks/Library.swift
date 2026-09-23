@@ -162,8 +162,8 @@ struct LibraryView: View {
                                 HStack(spacing: 14) {
                                     Image(systemName: "book.pages").font(.title3).foregroundStyle(shell.here).frame(width: 44)
                                     VStack(alignment: .leading, spacing: 2) {
-                                        Text("Continue reading").font(.caption).foregroundStyle(shell.ink2)
-                                        Text(shell.whereLabel).font(.body.weight(.medium))
+                                        Text("Continue reading").font(ShellTheme.text(.caption)).foregroundStyle(shell.ink2)
+                                        Text(shell.whereLabel).font(ShellTheme.text(.body, weight: .medium))
                                     }
                                     Spacer()
                                     Image(systemName: "chevron.right").font(.footnote.weight(.semibold)).foregroundStyle(shell.ink3)
@@ -178,7 +178,7 @@ struct LibraryView: View {
                             DisclosureGroup(isExpanded: Binding(get: { open.contains(volume.key) }, set: { on in if on { open.insert(volume.key) } else { open.remove(volume.key) } })) {
                                 ForEach(Array(volume.divisions.enumerated()), id: \.offset) { _, division in
                                     if volume.divisions.count > 1 {
-                                        Text(division.name.uppercased()).font(.caption2.weight(.semibold)).kerning(0.8).foregroundStyle(shell.ink3)
+                                        Text(division.name.uppercased()).font(ShellTheme.text(.caption2, weight: .semibold)).kerning(0.8).foregroundStyle(shell.ink3)
                                             .listRowBackground(shell.panel)
                                             .accessibilityAddTraits(.isHeader)
                                     }
@@ -209,9 +209,7 @@ struct LibraryView: View {
                 .onAppear { focus(proxy) }
                 .onChange(of: shell.libraryFocus) { _, _ in focus(proxy) }
             }
-            .navigationTitle("Library")
-            .navigationBarTitleDisplayMode(.inline)
-            .shellBar()
+            .shellBar("Library")
             .navigationDestination(for: LibraryRoute.self) { route in
                 switch route {
                 case .volume(let key):
@@ -236,11 +234,11 @@ private struct VolumeRow: View {
         HStack(spacing: 14) {
             ZStack {
                 RoundedRectangle(cornerRadius: 6, style: .continuous).fill(shell.chrome)
-                Text(volume.short).font(.caption.weight(.semibold)).foregroundStyle(shell.hereChrome)
+                Text(volume.short).font(ShellTheme.text(.caption, weight: .semibold)).foregroundStyle(shell.hereChrome)
             }
             .frame(width: 44, height: 56)
             VStack(alignment: .leading, spacing: 3) {
-                Text(volume.name).font(.body.weight(here ? .semibold : .medium)).foregroundStyle(here ? shell.here : shell.ink)
+                Text(volume.name).font(ShellTheme.text(.body, weight: here ? .semibold : .medium)).foregroundStyle(here ? shell.here : shell.ink)
                 Text(volume.heb).font(ShellTheme.hebrew(15)).foregroundStyle(shell.ink2)
             }
             Spacer()
@@ -274,9 +272,7 @@ struct BooksView: View {
         }
         .listStyle(.insetGrouped)
         .shellPage()
-        .navigationTitle(volume.name)
-        .navigationBarTitleDisplayMode(.inline)
-        .shellBar()
+        .shellBar(volume.name)
     }
 }
 
@@ -294,7 +290,7 @@ private struct BookRow: View {
             Text(book.en).fontWeight(here ? .semibold : .regular)
             Spacer()
             if book.ch > 1 {
-                Text("\(book.ch)").font(.footnote).foregroundStyle(shell.ink3)
+                Text("\(book.ch)").font(ShellTheme.text(.footnote)).foregroundStyle(shell.ink3)
             }
             Text(book.heb).font(ShellTheme.hebrew(16)).foregroundStyle(shell.ink2)
         }
@@ -329,7 +325,7 @@ struct ChaptersView: View {
                             // reader still finds "Alma 32" by its digits
                             VStack(spacing: 1) {
                                 Text(hebrewNumeral(n)).font(ShellTheme.hebrew(19))
-                                Text("\(n)").font(here ? .footnote.monospacedDigit().weight(.semibold) : .footnote.monospacedDigit())
+                                Text("\(n)").font(ShellTheme.text(.footnote, weight: here ? .semibold : .regular))
                             }
                             .frame(maxWidth: .infinity, minHeight: 56)
                             .background(here ? shell.here.opacity(0.14) : shell.card, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
@@ -347,9 +343,7 @@ struct ChaptersView: View {
             .onAppear { if let n = hereChapter { proxy.scrollTo(n, anchor: .center) } }
         }
         .shellPage()
-        .navigationTitle(book.en)
-        .navigationBarTitleDisplayMode(.inline)
-        .shellBar()
+        .shellBar(book.en)
     }
 }
 

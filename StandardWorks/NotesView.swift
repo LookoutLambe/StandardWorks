@@ -23,10 +23,13 @@ struct NotesView: View {
                 if loaded && empty {
                     // An empty screen is an invitation to act: it says what the
                     // reader calls things and opens the reader itself.
+                    // the view's own title and description faces are the system's:
+                    // the one face is named on each (ShellTheme.text)
                     ContentUnavailableView {
-                        Label("Nothing marked yet", systemImage: "note.text")
+                        Label { Text("Nothing marked yet").font(ShellTheme.text(.title2, weight: .semibold)) } icon: { Image(systemName: "note.text") }
                     } description: {
                         Text("Select a verse in the reader to highlight it or write a note. Bookmarks are kept in the reader's Study panel.")
+                            .font(ShellTheme.text(.body))
                     } actions: {
                         Button { shell.tab = .read } label: { Label("Open the reader", systemImage: "book") }
                             .buttonStyle(.borderedProminent)
@@ -39,7 +42,7 @@ struct NotesView: View {
                                     Button { shell.open(path: b.path) } label: {
                                         HStack {
                                             Image(systemName: "bookmark.fill").foregroundStyle(shell.here)
-                                            Text(b.label).font(.body.weight(.medium))
+                                            Text(b.label).font(ShellTheme.text(.body, weight: .medium))
                                             Spacer()
                                             Text(b.heb).font(ShellTheme.hebrew(16)).foregroundStyle(shell.ink2)
                                         }
@@ -57,7 +60,7 @@ struct NotesView: View {
                                             Image(systemName: "highlighter").foregroundStyle(shell.here)
                                             Text(h.ref)
                                             Spacer()
-                                            Text(h.when, style: .date).font(.caption).foregroundStyle(shell.ink3)
+                                            Text(h.when, style: .date).font(ShellTheme.text(.caption)).foregroundStyle(shell.ink3)
                                         }
                                     }
                                     .foregroundStyle(shell.ink)
@@ -71,11 +74,11 @@ struct NotesView: View {
                                     Button { open(verseKey: note.key) } label: {
                                         VStack(alignment: .leading, spacing: 4) {
                                             HStack {
-                                                Text(note.ref).font(.footnote.weight(.semibold)).foregroundStyle(shell.here)
+                                                Text(note.ref).font(ShellTheme.text(.footnote, weight: .semibold)).foregroundStyle(shell.here)
                                                 Spacer()
-                                                Text(note.when, style: .date).font(.caption).foregroundStyle(shell.ink3)
+                                                Text(note.when, style: .date).font(ShellTheme.text(.caption)).foregroundStyle(shell.ink3)
                                             }
-                                            Text(note.text).font(.body).lineLimit(4)
+                                            Text(note.text).font(ShellTheme.text(.body)).lineLimit(4)
                                         }
                                     }
                                     .foregroundStyle(shell.ink)
@@ -88,9 +91,7 @@ struct NotesView: View {
                 }
             }
             .shellPage()
-            .navigationTitle("Notes")
-            .navigationBarTitleDisplayMode(.inline)
-            .shellBar()
+            .shellBar("Notes")
             .onAppear(perform: load)
             .refreshable { load() }
         }

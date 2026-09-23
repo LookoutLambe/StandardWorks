@@ -33,7 +33,7 @@ struct SearchView: View {
                         Text("No verses match \u{201c}\(searched)\u{201d}.").foregroundStyle(shell.ink2)
                     } else if hits.isEmpty && shell.searchQuery.isEmpty {
                         Text("Hebrew, with or without vowels, or English \u{2014} every volume at once.")
-                            .font(.footnote).foregroundStyle(shell.ink2)
+                            .font(ShellTheme.text(.footnote)).foregroundStyle(shell.ink2)
                     }
                 }
                 .shellRow(shell)
@@ -44,13 +44,13 @@ struct SearchView: View {
                                 shell.open(path: hit.path)
                             } label: {
                                 VStack(alignment: .leading, spacing: 4) {
-                                    Text(hit.row.ref).font(.footnote.weight(.semibold)).foregroundStyle(shell.here)
+                                    Text(hit.row.ref).font(ShellTheme.text(.footnote, weight: .semibold)).foregroundStyle(shell.here)
                                     if SearchIndex.hasHebrew(searched) {
                                         Text(hit.snippet).font(ShellTheme.hebrew(18))
                                             .frame(maxWidth: .infinity, alignment: .trailing)
                                             .environment(\.layoutDirection, .rightToLeft)
                                     } else {
-                                        Text(hit.snippet).font(.subheadline).foregroundStyle(shell.ink2).lineLimit(3)
+                                        Text(hit.snippet).font(ShellTheme.text(.subheadline)).foregroundStyle(shell.ink2).lineLimit(3)
                                     }
                                 }
                             }
@@ -64,9 +64,7 @@ struct SearchView: View {
             }
             .listStyle(.insetGrouped)
             .shellPage()
-            .navigationTitle("Search")
-            .navigationBarTitleDisplayMode(.inline)
-            .shellBar()
+            .shellBar("Search")
             .searchable(text: query, isPresented: $shell.searchPresented, prompt: "Hebrew or English")
             .searchScopes($scope, activation: .onSearchPresentation) {
                 Text("All").tag("")

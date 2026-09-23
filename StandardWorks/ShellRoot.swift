@@ -106,6 +106,9 @@ struct ShellRoot: View {
             splashGaveUp = true
         }
         .environmentObject(shell)
+        // one face for every native Text that names none (ShellTheme.text),
+        // the sheets included: they hang below this point
+        .font(ShellTheme.text(.body))
         .tint(ShellTheme.gold)
         .onChange(of: verticalSizeClass) { _, size in
             if size == .compact, !shell.chromeHidden { shell.chromeHidden = true }
@@ -255,12 +258,12 @@ struct ListenBar: View {
             .frame(width: 36, height: 36)
             VStack(alignment: .leading, spacing: 1) {
                 Text(shell.whereLabel.isEmpty ? "Reading" : shell.whereLabel)
-                    .font(.footnote.weight(.semibold)).lineLimit(1)
+                    .font(ShellTheme.text(.footnote, weight: .semibold)).lineLimit(1)
                 HStack(spacing: 4) {
                     // The volume's name gives way first (scaled, then cut)
                     // so "Carmit" and the speed always show whole.
                     Text("\(shell.currentVolume?.name ?? "Hebrew") | Carmit \u{00B7}")
-                        .font(.caption).foregroundStyle(shell.onChrome.opacity(0.72))
+                        .font(ShellTheme.text(.caption)).foregroundStyle(shell.onChrome.opacity(0.72))
                         .lineLimit(1).minimumScaleFactor(0.85)
                     Menu {
                         ForEach(shell.listenRates, id: \.self) { r in
@@ -270,7 +273,7 @@ struct ListenBar: View {
                             }
                         }
                     } label: {
-                        Text(String(format: "%g\u{00D7}", shell.listenRate)).font(.caption.weight(.semibold)).foregroundStyle(shell.hereChrome)
+                        Text(String(format: "%g\u{00D7}", shell.listenRate)).font(ShellTheme.text(.caption, weight: .semibold)).foregroundStyle(shell.hereChrome)
                     }
                     .fixedSize()
                     .accessibilityLabel("Reading speed")

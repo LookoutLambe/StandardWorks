@@ -32,9 +32,7 @@ struct SettingsView: View {
                 .shellRow(shell)
             }
             .shellPage()
-            .navigationTitle("Settings")
-            .navigationBarTitleDisplayMode(.inline)
-            .shellBar()
+            .shellBar("Settings")
             .sheet(isPresented: Binding(get: { shell.sheetPage != nil }, set: { if !$0 { shell.sheetPage = nil } })) {
                 if let page = shell.sheetPage { SitePageSheet(path: page).environmentObject(shell) }
             }
@@ -54,10 +52,8 @@ struct SitePageSheet: View {
             SitePageWebView(url: shell.wwwDirectoryURL.appendingPathComponent(path), www: shell.wwwDirectoryURL)
                 .ignoresSafeArea(edges: .bottom)
                 .background(shell.paper)
-                .navigationTitle(path.hasPrefix("privacy") ? "Privacy" : "In print")
-                .navigationBarTitleDisplayMode(.inline)
-                .shellBar()
-                .toolbar { ToolbarItem(placement: .confirmationAction) { Button("Done") { dismiss() } } }
+                .shellBar(path.hasPrefix("privacy") ? "Privacy" : "In print", sheet: true)
+                .toolbar { ToolbarItem(placement: .confirmationAction) { Button { dismiss() } label: { Text("Done").font(ShellTheme.text(.body, weight: .semibold)) } } }
         }
         .environment(\.colorScheme, shell.dark ? .dark : .light)
     }
@@ -69,12 +65,25 @@ private struct SitePageWebView: UIViewRepresentable {
     func makeUIView(context: Context) -> WKWebView {
         let config = WKWebViewConfiguration()
         config.defaultWebpagePreferences.preferredContentMode = .mobile
+        // THE PAGE IS IN THE APP, and is told so the way the reader is: a
+        // swShell port stands the site's phone web shell down (pwa_shell.js
+        // returns where one exists; without it the sheet grew a second
+        // six-icon row at its foot), and shell_start.js keeps the website's
+        // own things on the website. The port is deaf: the sheet is read and
+        // never drives the shell. (Android's sheet, the same: DeafPort.)
+        config.userContentController.add(DeafPort(), name: "swShell")
+        config.userContentController.addUserScript(WKUserScript(source: AppShell.documentStartSource, injectionTime: .atDocumentStart, forMainFrameOnly: true))
         let wv = WKWebView(frame: .zero, configuration: config)
         wv.isOpaque = false
         wv.loadFileURL(url, allowingReadAccessTo: www)
         return wv
     }
     func updateUIView(_ uiView: WKWebView, context: Context) {}
+}
+
+/// The sheet's port: there, so the page knows it is inside the app; deaf, so the page cannot drive it.
+private final class DeafPort: NSObject, WKScriptMessageHandler {
+    func userContentController(_ controller: WKUserContentController, didReceive message: WKScriptMessage) {}
 }
 
 
@@ -91,10 +100,10 @@ struct DisplayOptionsSections: View {
     var body: some View {
         Section(header: Text("Text size").foregroundStyle(shell.ink2)) {
             HStack(spacing: 12) {
-                Text("A").font(.system(size: 13)).foregroundStyle(shell.ink2)
+                Text("A").font(ShellTheme.face(14)).foregroundStyle(shell.ink2)
                 Slider(value: Binding(get: { Double(shell.textSize) }, set: { shell.setTextSize(Int($0.rounded())) }), in: 70...150, step: 5)
                     .accessibilityLabel("Text size")
-                Text("A").font(.system(size: 24)).foregroundStyle(shell.ink2)
+                Text("A").font(ShellTheme.face(26)).foregroundStyle(shell.ink2)
             }
         }
         .shellRow(shell)
@@ -160,7 +169,7 @@ private struct ThemeSwatch: View {
             }
             .frame(width: 52, height: 40)
             .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).strokeBorder(selected ? shell.here : shell.rule, lineWidth: selected ? 2 : 1))
-            Text(Self.names[key] ?? key).font(.caption2).foregroundStyle(selected ? shell.here : shell.ink2)
+            Text(Self.names[key] ?? key).font(ShellTheme.text(.caption2)).foregroundStyle(selected ? shell.here : shell.ink2)
         }
         .frame(maxWidth: .infinity)
         .contentShape(Rectangle())
@@ -179,9 +188,7 @@ struct DisplayOptionsSheet: View {
         NavigationStack {
             Form { DisplayOptionsSections() }
                 .shellPage(clearOfRow: false)
-                .navigationTitle("Display Options")
-                .navigationBarTitleDisplayMode(.inline)
-                .shellBar()
+                .shellBar("Display Options", sheet: true)
                 .toolbar {
                     ToolbarItem(placement: .confirmationAction) {
                         Button { dismiss() } label: { Image(systemName: "xmark.circle.fill").font(.title3) }
