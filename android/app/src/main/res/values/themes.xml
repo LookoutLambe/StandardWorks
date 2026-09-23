@@ -8,6 +8,13 @@
         <item name="android:windowLightStatusBar">false</item>
     </style>
 
+    <!-- A SHEET RISES FROM THE BOTTOM EDGE AND FALLS BACK TO IT, as on the
+         iPhone: the site-page sheet (SitePageSheet in SettingsView.kt). -->
+    <style name="SheetAnimation">
+        <item name="android:windowEnterAnimation">@anim/sheet_rise</item>
+        <item name="android:windowExitAnimation">@anim/sheet_fall</item>
+    </style>
+
     <!-- THE LOGO BEFORE ANYTHING: the system splash (the mark on navy) until
          the Activity is up, then LaunchSplash in Compose holds the same logo
          on the same navy until the first page has loaded — the way the

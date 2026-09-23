@@ -3,9 +3,11 @@
 The Android app is the **iPhone app's twin**: a native Jetpack Compose shell
 around one WebView that shows the bundled site, with the same injected scripts
 (`app-shell/` at the repo root, shared byte for byte) and the same native
-screens — Library · Read · Search · Notes · Settings · Listen in one navy row
-along the bottom, the logo at launch, Light / Sepia / Dark on every screen.
-Each Kotlin file names the Swift file it mirrors.
+screens — Library · Read · Search · Notes · Settings · Listen in one row
+floating over the page, the logo at launch, Display Options behind the
+header's ⋯, Light / Sepia / Dark / Black / Gray on every screen. The page is
+told what the shell can do (`AppShell.CAPS_SCRIPT`, the iPhone's list less
+`returnPoint`) before it runs. Each Kotlin file names the Swift file it mirrors.
 
 | Kotlin | Mirrors | Role |
 |---|---|---|
@@ -13,8 +15,11 @@ Each Kotlin file names the Swift file it mirrors.
 | `LocalSiteWebView.kt` | `LocalSiteWebView.swift` | the one WebView: asset loader, injected scripts, paper, first request |
 | `WebShell.kt` | `WebShell.swift` | the state the two halves share; every call into the page |
 | `SpeechBridge.kt` | `SpeechBridge.swift` | Read aloud through the phone's text-to-speech, the same protocol |
+| `ListenService.kt` | the audio session, remote commands and now-playing in `WebShell.swift` | the reading with the screen off: foreground media service, media session, focus, wake lock |
+| `ReaderWebView.kt` | — | the reader's WebView, held "visible" while it reads so its timers are not throttled |
 | `Library.kt`, `SearchIndex.kt`, `SearchView.kt`, `NotesView.kt`, `SettingsView.kt` | the same names | the native pages |
-| `ShellRoot.kt` | `ShellRoot.swift` | the frame: the row, the player, the splash |
+| `DisplayOptions.kt` | `DisplayOptionsSections`, `DisplayOptionsSheet` in `SettingsView.swift` | text size, theme, reading modes, this chapter — in the ⋯ sheet and in Settings |
+| `ShellRoot.kt` | `ShellRoot.swift` | the frame: the floating row, the player, the splash |
 | `DebugBridge.kt` | `DebugBridge` | debug builds only: the app driven from adb |
 
 ## The site is bundled, as on the iPhone
@@ -40,6 +45,17 @@ end, through `android.speech.tts.TextToSpeech`, with the engine's
 pause mid-utterance: pause stops the voice and resume speaks that utterance
 again from its start. Web rates map onto an Android band (0.3 → 0.62 … 1.0 →
 1.15) in `androidRate`.
+
+With the screen off it keeps reading (`ListenService.kt`): a media-playback
+foreground service keeps the process alive, a partial wake lock keeps the CPU
+up for the page's timers between phrases, and `ReaderWebView` keeps the page
+from being throttled as a hidden page. The media session carries the lock
+screen's and the shade's controls. **The voice sounds from the TTS engine's
+process, not ours**, so Android found no media-button session and earbud
+buttons went nowhere; a looped silent `AudioTrack` while the voice is going
+makes this app the one playing (`dumpsys media_session`: "Media button session
+is com.sefermormon.standardworks/SeferMormon"). Play asks for a foreground
+service declaration (App content) for the `mediaPlayback` type.
 
 ## Identity — do not change these
 

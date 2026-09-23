@@ -1,7 +1,13 @@
 package com.sefermormon.standardworks
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.expandVertically
+import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.scrollBy
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -19,16 +25,30 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.lazy.grid.rememberLazyGridState
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.automirrored.outlined.MenuBook
 import androidx.compose.material.icons.outlined.ChevronRight
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateListOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.role
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -110,6 +130,22 @@ object LibraryRegistry {
         return null
     }
 
+    /**
+     * The book a chapter id belongs to: front matter by its exact id, else
+     * the longest prefix whose remainder is one of the book's chapter numbers
+     * (`ch3` is 1 Nephi's, `al-ch32` Alma's, never 1 Nephi's `ch`). The twin
+     * of WebShell.book(in:chapterId:) on the iPhone.
+     */
+    fun bookOf(v: Volume, chapterId: String): Book? {
+        val books = v.divisions.flatMap { it.books }
+        books.firstOrNull { it.isFront && it.prefix == chapterId }?.let { return it }
+        return books.filter { b ->
+            if (b.isFront || !chapterId.startsWith(b.prefix)) return@filter false
+            val n = chapterId.substring(b.prefix.length).toIntOrNull() ?: return@filter false
+            n >= 1 && n <= maxOf(b.ch, 1)
+        }.maxByOrNull { it.prefix.length }
+    }
+
     /** nav_engine's buildHash: the hash a chapter id is reached by. */
     fun hash(volume: String, chapterId: String, bomHashes: Map<String, String>): String {
         if (volume != "bom" || chapterId.contains("-colophon")) return chapterId
@@ -120,7 +156,13 @@ object LibraryRegistry {
 
 // MARK: - views
 
-/** Volumes → books → chapters, three pushes; every row the registry's own English and Hebrew. */
+/**
+ * THE LIBRARY, ONE LIST, the iPhone's (Library.swift): "Continue reading" at
+ * the top, then the six volumes, every one folded whenever the Library is
+ * shown — a volume unfolds to its books where it stands, and only a book of
+ * chapters goes one level deeper, to its chapter grid. The reader's volume,
+ * book and chapter are marked in the "here" colour at every level.
+ */
 @Composable
 fun LibraryView(shell: WebShell) {
     when (val route = shell.libraryPath.lastOrNull()) {
@@ -134,13 +176,23 @@ fun LibraryView(shell: WebShell) {
     }
 }
 
+/** The book the reader is in, when it is in this volume. */
+private fun hereBook(shell: WebShell, volume: Volume): Book? =
+    if (shell.currentVolumeKey == volume.key) LibraryRegistry.bookOf(volume, shell.currentChapterId) else null
+
 @Composable
 private fun VolumesView(shell: WebShell) {
     val p = shell.palette
+    // Which volumes are open: NONE whenever the Library is shown (user,
+    // 2026-09-20: "it should just collapse to all books"), and the list at
+    // its top — on arrival, and again each time the shell asks (libraryFocus).
+    val open = remember { mutableStateListOf<String>() }
+    val list = rememberLazyListState()
+    LaunchedEffect(shell.libraryFocus) { open.clear(); list.scrollToItem(0) }
     ShellPage(shell, title = "Library") {
-        LazyColumn(contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(0.dp)) {
+        LazyColumn(state = list, contentPadding = PaddingValues(16.dp)) {
             if (shell.whereLabel.isNotEmpty()) {
-                item {
+                item(key = "continue") {
                     ShellCard(p) {
                         ShellRow(p, onClick = { shell.tab = WebShell.Tab.READ }) {
                             Icon(Icons.AutoMirrored.Outlined.MenuBook, null, tint = p.here, modifier = Modifier.size(28.dp))
@@ -155,23 +207,46 @@ private fun VolumesView(shell: WebShell) {
                     Spacer(Modifier.height(20.dp))
                 }
             }
-            item { SectionHeader(p, "Volumes") }
-            item {
-                ShellCard(p) {
-                    shell.volumes.forEachIndexed { i, volume ->
-                        if (i > 0) Rule(p)
-                        ShellRow(p, onClick = { shell.libraryPath.add(LibraryRoute.Vol(volume.key)) }) {
+            for (volume in shell.volumes) {
+                item(key = "volume-" + volume.key) {
+                    val isOpen = volume.key in open
+                    val here = shell.currentVolumeKey == volume.key
+                    val turn by animateFloatAsState(if (isOpen) 90f else 0f, label = "chevron")
+                    ShellCard(p) {
+                        Row(
+                            Modifier.fillMaxWidth().heightIn(min = 72.dp)
+                                .clickable { if (isOpen) open.remove(volume.key) else open.add(volume.key) }
+                                .semantics { role = Role.Button; stateDescription = if (isOpen) "Expanded" else "Collapsed" }
+                                .padding(horizontal = 16.dp, vertical = 8.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
                             Box(Modifier.size(44.dp, 56.dp).clip(RoundedCornerShape(6.dp)).background(p.chrome), contentAlignment = Alignment.Center) {
                                 Text(volume.short, color = p.hereChrome, fontSize = 12.sp, fontWeight = FontWeight.SemiBold)
                             }
                             Spacer(Modifier.width(14.dp))
                             Column(Modifier.weight(1f)) {
-                                Text(volume.name, color = p.ink, fontSize = 17.sp, fontWeight = FontWeight.Medium)
+                                Text(volume.name, color = if (here) p.here else p.ink, fontSize = 17.sp, fontWeight = if (here) FontWeight.SemiBold else FontWeight.Medium)
                                 Text(volume.heb, color = p.ink2, fontSize = 15.sp, fontFamily = ShellTheme.hebrew)
                             }
-                            Chevron(p)
+                            Icon(Icons.Outlined.ChevronRight, null, tint = p.here, modifier = Modifier.size(22.dp).rotate(turn))
+                        }
+                        AnimatedVisibility(visible = isOpen, enter = expandVertically(), exit = shrinkVertically()) {
+                            Column {
+                                val hereB = hereBook(shell, volume)
+                                for (division in volume.divisions) {
+                                    if (volume.divisions.size > 1) {
+                                        Text(division.name.uppercase(), color = p.ink3, fontSize = 11.sp, fontWeight = FontWeight.SemiBold, letterSpacing = 0.8.sp,
+                                            modifier = Modifier.fillMaxWidth().background(p.panel).padding(horizontal = 16.dp, vertical = 8.dp).semantics { heading() })
+                                    }
+                                    division.books.forEachIndexed { i, book ->
+                                        if (i > 0 || volume.divisions.size == 1) Rule(p)
+                                        BookRow(shell, volume, book, here = hereB?.id == book.id)
+                                    }
+                                }
+                            }
                         }
                     }
+                    Spacer(Modifier.height(12.dp))
                 }
             }
             if (shell.volumes.isEmpty()) item { Text("Opening the book…", color = p.ink2, modifier = Modifier.padding(16.dp)) }
@@ -179,9 +254,34 @@ private fun VolumesView(shell: WebShell) {
     }
 }
 
+/**
+ * A book: its English, its chapter count and its Hebrew. A book of chapters
+ * opens its chapter grid; front matter and a one-chapter book open at once.
+ * The reader's book carries the mark before its name.
+ */
+@Composable
+private fun BookRow(shell: WebShell, volume: Volume, book: Book, here: Boolean) {
+    val p = shell.palette
+    val direct = book.isFront || book.ch == 1
+    ShellRow(p, onClick = {
+        if (direct) shell.open(volume, book, 1) else shell.libraryPath.add(LibraryRoute.Bk(volume.key, book.id))
+    }) {
+        if (here) {
+            Icon(Icons.AutoMirrored.Filled.MenuBook, "Reading now", tint = p.here, modifier = Modifier.size(16.dp))
+            Spacer(Modifier.width(8.dp))
+        }
+        Text(book.en, color = p.ink, fontSize = 17.sp, fontWeight = if (here) FontWeight.SemiBold else FontWeight.Normal, modifier = Modifier.weight(1f))
+        if (book.ch > 1) Text("${book.ch}", color = p.ink3, fontSize = 13.sp)
+        Spacer(Modifier.width(10.dp))
+        Text(book.heb, color = p.ink2, fontSize = 16.sp, fontFamily = ShellTheme.hebrew)
+        if (!direct) Chevron(p)
+    }
+}
+
 @Composable
 private fun BooksView(shell: WebShell, volume: Volume) {
     val p = shell.palette
+    val hereB = hereBook(shell, volume)
     ShellPage(shell, title = volume.name, onBack = { shell.libraryPath.removeAt(shell.libraryPath.lastIndex) }) {
         LazyColumn(contentPadding = PaddingValues(16.dp)) {
             volume.divisions.forEachIndexed { di, division ->
@@ -191,16 +291,7 @@ private fun BooksView(shell: WebShell, volume: Volume) {
                     ShellCard(p) {
                         division.books.forEachIndexed { i, book ->
                             if (i > 0) Rule(p)
-                            ShellRow(p, onClick = {
-                                if (book.isFront || book.ch == 1) shell.open(volume, book, 1)
-                                else shell.libraryPath.add(LibraryRoute.Bk(volume.key, book.id))
-                            }) {
-                                Text(book.en, color = p.ink, fontSize = 17.sp, modifier = Modifier.weight(1f))
-                                if (book.ch > 1) Text("${book.ch}", color = p.ink3, fontSize = 13.sp)
-                                Spacer(Modifier.width(10.dp))
-                                Text(book.heb, color = p.ink2, fontSize = 16.sp, fontFamily = ShellTheme.hebrew)
-                                if (!(book.isFront || book.ch == 1)) Chevron(p)
-                            }
+                            BookRow(shell, volume, book, here = hereB?.id == book.id)
                         }
                     }
                 }
@@ -209,16 +300,35 @@ private fun BooksView(shell: WebShell, volume: Volume) {
     }
 }
 
+/**
+ * A book's chapters as a grid. The chapter the reader is in, when this is
+ * its book, is marked and scrolled into the middle of the view (the chapter
+ * pill brings you here).
+ */
 @Composable
 private fun ChaptersView(shell: WebShell, volume: Volume, book: Book) {
     val p = shell.palette
+    val hereN: Int? = if (shell.currentVolumeKey == volume.key && !book.isFront && shell.currentChapterId.startsWith(book.prefix))
+        shell.currentChapterId.substring(book.prefix.length).toIntOrNull()?.takeIf { it in 1..maxOf(book.ch, 1) } else null
+    val grid = rememberLazyGridState()
+    LaunchedEffect(book.id) {
+        val n = hereN ?: return@LaunchedEffect
+        grid.scrollToItem(n - 1)
+        grid.scrollBy(-(grid.layoutInfo.viewportSize.height / 2f) + 60f)
+    }
     ShellPage(shell, title = book.en, onBack = { shell.libraryPath.removeAt(shell.libraryPath.lastIndex) }) {
-        LazyVerticalGrid(columns = GridCells.Adaptive(52.dp), contentPadding = PaddingValues(16.dp),
+        LazyVerticalGrid(state = grid, columns = GridCells.Adaptive(52.dp), contentPadding = PaddingValues(16.dp),
             horizontalArrangement = Arrangement.spacedBy(10.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
             items((1..maxOf(book.ch, 1)).toList()) { n ->
-                Box(Modifier.heightIn(min = 44.dp).clip(RoundedCornerShape(8.dp)).background(p.card)
-                    .clickable { shell.open(volume, book, n) }, contentAlignment = Alignment.Center) {
-                    Text("$n", color = p.ink, fontSize = 17.sp, textAlign = TextAlign.Center, modifier = Modifier.padding(vertical = 12.dp))
+                val here = n == hereN
+                val shape = RoundedCornerShape(8.dp)
+                Box(Modifier.heightIn(min = 44.dp).clip(shape).background(if (here) p.here.copy(alpha = 0.14f) else p.card)
+                    .then(if (here) Modifier.border(1.5.dp, p.here, shape) else Modifier)
+                    .clickable { shell.open(volume, book, n) }
+                    .semantics { contentDescription = if (here) "Chapter $n, reading now" else "Chapter $n" },
+                    contentAlignment = Alignment.Center) {
+                    Text("$n", color = if (here) p.here else p.ink, fontSize = 17.sp, fontWeight = if (here) FontWeight.SemiBold else FontWeight.Normal,
+                        textAlign = TextAlign.Center, modifier = Modifier.padding(vertical = 12.dp))
                 }
             }
         }
@@ -237,7 +347,7 @@ fun Rule(p: AppShell.Palette) {
 
 @Composable
 fun SectionHeader(p: AppShell.Palette, text: String) {
-    Text(text, color = p.ink2, fontSize = 15.sp, fontWeight = FontWeight.SemiBold, modifier = Modifier.padding(start = 4.dp, bottom = 8.dp))
+    Text(text, color = p.ink2, fontSize = 15.sp, fontWeight = FontWeight.SemiBold, modifier = Modifier.padding(start = 4.dp, bottom = 8.dp).semantics { heading() })
 }
 
 /** A card of rows, the inset-grouped shape. */

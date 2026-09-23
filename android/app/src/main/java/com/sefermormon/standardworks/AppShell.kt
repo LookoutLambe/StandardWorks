@@ -29,7 +29,40 @@ object AppShell {
     const val ORIGIN = "https://appassets.androidplatform.net"
     const val WWW = "$ORIGIN/assets/www/"
 
-    val THEMES = setOf("light", "sepia", "dark")
+    /**
+     * The themes the shell offers, in the order Display Options shows them:
+     * the site's three, and two cuts of its dark one — Black (the OLED black a
+     * night reader wants) and Gray (a lifted charcoal). The page knows only
+     * its three; a cut is the shell's class on <html> over the page's Dark
+     * (shell_start.js, html.sw-app-theme-black / -gray). As on the iPhone.
+     */
+    val THEME_ORDER = listOf("light", "sepia", "dark", "black", "gray")
+    val THEMES = THEME_ORDER.toSet()
+    val PAGE_THEMES = setOf("light", "sepia", "dark")
+    val DARK_VARIANTS = setOf("black", "gray")
+
+    /** The page's own theme under a shell theme: Black and Gray are Dark to the page. */
+    fun pageTheme(theme: String) = if (theme in PAGE_THEMES) theme else if (theme in DARK_VARIANTS) "dark" else "light"
+
+    /**
+     * WHAT THIS SHELL CAN DO, told to the page before it runs, so the shared
+     * scripts enable only what a shell answers — the iPhone's list
+     * (LocalSiteWebView.swift) less the one it answers alone:
+     * `chapters` — the chapter pill opens the native Library at this book;
+     * `chapterRow` — next, previous and the chapter in the band at the thumb;
+     * `modes` — the reading modes live in Display Options, not the footer;
+     * `readingDefaults` — interlinear with transliteration and vowels, seeded
+     * once; `more` — the header's ⋯ opens Display Options; `overlay` — the
+     * row floats over the page, which lifts its footer by --sw-app-row-h.
+     * Not `returnPoint`: the app hides the Return banner (html.sw-app-clear),
+     * so a record for it would be written for nothing.
+     * The same classes on <html> as the iPhone, and the dark cut restored
+     * before the first paint.
+     */
+    const val CAPS_SCRIPT =
+        "window.__swShellCaps = { chapters: true, chapterRow: true, modes: true, readingDefaults: true, more: true, overlay: true }; " +
+        "document.documentElement.classList.add('sw-app-chapter-row', 'sw-app-modes-in-settings', 'sw-app-row-overlay', 'sw-app-clear', 'sw-app-more'); " +
+        "try { var v = localStorage.getItem('sw-app-dark-variant'); if (v === 'black' || v === 'gray') document.documentElement.classList.add('sw-app-theme-' + v); } catch (e) {}"
 
     // MARK: - out of the app
 
@@ -53,8 +86,9 @@ object AppShell {
 
     /**
      * THE SITE'S TOKENS PER THEME (reader.css :root, sw_theme.css
-     * body.sepia-mode and body.dark-mode), so a native page is cut from the
-     * same cloth as the reader beside it. Same values as the iPhone app.
+     * body.sepia-mode and body.dark-mode, and shell_start.js's two dark
+     * cuts), so a native page is cut from the same cloth as the reader beside
+     * it. Same values as the iPhone app.
      */
     data class Palette(
         val paper: Color, val panel: Color, val card: Color,
@@ -65,6 +99,14 @@ object AppShell {
     private fun hex(v: Long) = Color(0xFF000000L or v)
 
     fun palette(theme: String): Palette = when (theme) {
+        "black" -> Palette(
+            paper = hex(0x000000), panel = hex(0x0A0A0A), card = hex(0x141414),
+            ink = hex(0xEDE6DA), ink2 = hex(0xB5A896), ink3 = hex(0x9A8D7C), rule = hex(0x2A2A2A),
+            here = hex(0xD9B45F), chrome = hex(0x050810), onChrome = hex(0xE7E0D4), hereChrome = hex(0xE6C87E))
+        "gray" -> Palette(
+            paper = hex(0x2B2B2E), panel = hex(0x343437), card = hex(0x3C3C40),
+            ink = hex(0xF1ECE3), ink2 = hex(0xC4BBAD), ink3 = hex(0xA79E91), rule = hex(0x4A4A4E),
+            here = hex(0xE6C87E), chrome = hex(0x1C1D21), onChrome = hex(0xE7E0D4), hereChrome = hex(0xE6C87E))
         "dark" -> Palette(
             paper = hex(0x14120F), panel = hex(0x1C1916), card = hex(0x221E19),
             ink = hex(0xEDE6DA), ink2 = hex(0xB5A896), ink3 = hex(0x9A8D7C), rule = hex(0x3A342C),
@@ -96,9 +138,17 @@ object AppShell {
         return shellFile(ctx, "shell_mark.js").replace("__SW_MARK_URI__", JSONObject.quote(uri))
     }
 
-    /** Applies a theme through the page's own switch; the page persists it. */
-    fun applyThemeScript(theme: String) =
-        "window.swApplyTheme && window.swApplyTheme('${if (theme in THEMES) theme else "light"}');"
+    /**
+     * Applies a theme through the page's own switch, which persists it; a
+     * dark cut is the shell's class on <html>, remembered so the caps script
+     * restores it before the next page paints.
+     */
+    fun applyThemeScript(theme: String): String {
+        val variant = if (theme in DARK_VARIANTS) theme else ""
+        return "window.swApplyTheme && window.swApplyTheme('${pageTheme(theme)}'); " +
+            "(function (v) { var h = document.documentElement; h.classList.remove('sw-app-theme-black', 'sw-app-theme-gray'); " +
+            "try { if (v) { h.classList.add('sw-app-theme-' + v); localStorage.setItem('sw-app-dark-variant', v); } else { localStorage.removeItem('sw-app-dark-variant'); } } catch (e) {} })('$variant');"
+    }
 
     /** Asks the page which theme it is showing: "light", "sepia" or "dark". */
     const val CURRENT_THEME_SCRIPT =
@@ -125,11 +175,16 @@ object AppShell {
 
     /**
      * Android has document-start injection but no document-end; the
-     * document-end scripts run at DOMContentLoaded instead, from a
-     * document-start wrapper. They poll for what they need, so this is the
-     * same moment for them as WebKit's.
+     * document-end scripts run from a document-start wrapper instead, one
+     * turn AFTER DOMContentLoaded. Not at it: the wrapper's listener is
+     * registered before any of the page's, so it ran first, before the site
+     * had mounted its bar and restored its theme (site_chrome.js mount), and
+     * shell_end.js reported every dark page as Light for a moment — which
+     * turned a Black or Gray choice back into plain Dark on the next launch.
+     * After the page's own listeners, the page is as WebKit's document end
+     * finds it.
      */
     fun atDocumentEnd(vararg scripts: String): String =
         "(function(){ function go(){ try { " + scripts.joinToString("\n") { "(function(){ $it })();" } +
-            " } catch (e) {} } if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', go); else go(); })();"
+            " } catch (e) {} } if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { setTimeout(go, 0); }); else go(); })();"
 }

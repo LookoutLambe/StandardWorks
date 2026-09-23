@@ -2,9 +2,9 @@ package com.sefermormon.standardworks
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
-import android.net.Uri
 import android.util.Log
 import android.webkit.JavascriptInterface
 import android.webkit.WebResourceRequest
@@ -29,7 +29,7 @@ object LocalSiteWebView {
 
     @SuppressLint("SetJavaScriptEnabled")
     fun make(activity: Activity, shell: WebShell, wantedTheme: String): WebView {
-        val web = WebView(activity)
+        val web = ReaderWebView(activity)
         WebView.setWebContentsDebuggingEnabled(BuildConfig.DEBUG)
         web.settings.apply {
             javaScriptEnabled = true
@@ -52,19 +52,15 @@ object LocalSiteWebView {
         // Paper behind everything, never system white.
         web.setBackgroundColor(AppShell.palette(wantedTheme).paper.toArgb())
 
-        // The bundled site at an https origin (see AppShell.ORIGIN).
-        val assets = WebViewAssetLoader.Builder()
-            .addPathHandler("/assets/", WebViewAssetLoader.AssetsPathHandler(activity))
-            .build()
-
         // The page's messages: the ports the shared scripts post to, and the
         // answers to the shell's own async calls.
         web.addJavascriptInterface(ShellPort(shell), "AndroidShell")
 
         // Document start, in this order: the ports, the speech shim (the page
         // tests for speechSynthesis as it loads), the visibility guard, the
-        // touch/zoom clamps, the shell's own stylesheet and boot redirect, and
-        // the document-end pair wrapped to run at DOMContentLoaded.
+        // touch/zoom clamps, what this shell can do (before the scripts that
+        // read it), the shell's own stylesheet and boot redirect, and the
+        // document-end pair wrapped to run at DOMContentLoaded.
         val ctx = activity.applicationContext
         val startScripts = listOf(
             AppShell.PORT_SHIM,
@@ -72,33 +68,13 @@ object LocalSiteWebView {
             FORCE_VISIBLE,
             TOUCH_ACTION,
             VIEWPORT_CLAMP,
+            AppShell.CAPS_SCRIPT,
             AppShell.shellFile(ctx, "shell_start.js"),
             AppShell.atDocumentEnd(*listOfNotNull(AppShell.shellFile(ctx, "shell_end.js"), AppShell.markSource(ctx)).toTypedArray())
         )
-        if (WebViewFeature.isFeatureSupported(WebViewFeature.DOCUMENT_START_SCRIPT)) {
-            for (s in startScripts) WebViewCompat.addDocumentStartJavaScript(web, s, setOf(AppShell.ORIGIN))
-        } else {
-            Log.w(TAG, "no document-start scripts on this WebView; the shell will inject at commit")
-        }
+        injectAtStart(web, startScripts)
 
-        web.webViewClient = object : WebViewClient() {
-            override fun shouldInterceptRequest(view: WebView, request: WebResourceRequest): WebResourceResponse? =
-                assets.shouldInterceptRequest(request.url)
-
-            /** Anything that is not the bundled site belongs to the system. */
-            override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
-                val url = request.url
-                if (url.toString().startsWith(AppShell.ORIGIN)) return false
-                try { activity.startActivity(Intent(Intent.ACTION_VIEW, url)) } catch (e: Exception) {}
-                return true
-            }
-
-            override fun onPageStarted(view: WebView, url: String?, favicon: Bitmap?) {
-                if (!WebViewFeature.isFeatureSupported(WebViewFeature.DOCUMENT_START_SCRIPT)) {
-                    for (s in startScripts) view.evaluateJavascript(s, null)
-                }
-            }
-
+        web.webViewClient = object : Client(activity, startScripts) {
             override fun onPageFinished(view: WebView, url: String?) {
                 Log.i(TAG, "[WebView] didFinish: $url")
                 shell.applyWantedThemeIfChanged()
@@ -117,6 +93,48 @@ object LocalSiteWebView {
         web.loadUrl(first)
         if (BuildConfig.DEBUG) DebugBridge.start(activity, shell)
         return web
+    }
+
+    /**
+     * Scripts that run before any of the page's own, on every page the web
+     * view loads: injected by the WebView at document start where it can,
+     * else by the Client as each page commits.
+     */
+    fun injectAtStart(web: WebView, scripts: List<String>) {
+        if (WebViewFeature.isFeatureSupported(WebViewFeature.DOCUMENT_START_SCRIPT)) {
+            for (s in scripts) WebViewCompat.addDocumentStartJavaScript(web, s, setOf(AppShell.ORIGIN))
+        } else {
+            Log.w(TAG, "no document-start scripts on this WebView; the shell will inject at commit")
+        }
+    }
+
+    /**
+     * THE BUNDLED SITE'S CLIENT, for every web view the app makes (the reader
+     * and the site-page sheet, SitePageSheet): the site served from the assets
+     * at its https origin (AppShell.ORIGIN), the start scripts at commit where
+     * the WebView cannot inject them itself, and anything outside the bundle
+     * (a store, the mail app, the browser) handed to the system.
+     */
+    open class Client(ctx: Context, private val startScripts: List<String>) : WebViewClient() {
+        private val assets = WebViewAssetLoader.Builder()
+            .addPathHandler("/assets/", WebViewAssetLoader.AssetsPathHandler(ctx))
+            .build()
+
+        override fun shouldInterceptRequest(view: WebView, request: WebResourceRequest): WebResourceResponse? =
+            assets.shouldInterceptRequest(request.url)
+
+        override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
+            val url = request.url
+            if (url.toString().startsWith(AppShell.ORIGIN)) return false
+            try { view.context.startActivity(Intent(Intent.ACTION_VIEW, url)) } catch (e: Exception) {}
+            return true
+        }
+
+        override fun onPageStarted(view: WebView, url: String?, favicon: Bitmap?) {
+            if (!WebViewFeature.isFeatureSupported(WebViewFeature.DOCUMENT_START_SCRIPT)) {
+                for (s in startScripts) view.evaluateJavascript(s, null)
+            }
+        }
     }
 
     /** Force the page visible even if its own shell-ready signal never fires. */

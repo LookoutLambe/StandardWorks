@@ -39,6 +39,8 @@ object DebugBridge {
                                     else -> answer = "unknown tab"
                                 }
                                 "open" -> parts.getOrNull(1)?.let { shell.open(it) }
+                                // "@page in-print.html": a site page in the sheet; "@page" alone closes it
+                                "page" -> { shell.tab = WebShell.Tab.SETTINGS; shell.sheetPage = parts.getOrNull(1) }
                                 "library" -> {
                                     shell.tab = WebShell.Tab.LIBRARY
                                     shell.libraryPath.clear()
@@ -60,7 +62,7 @@ object DebugBridge {
                                 "size" -> shell.stepTextSize(parts.getOrNull(1)?.toIntOrNull() ?: 10)
                                 "reading" -> shell.setReading(parts.getOrNull(1) == "1")
                                 "appearance" -> parts.getOrNull(1)?.let { shell.chooseAppearance(it) } ?: run { answer = "which?" }
-                                "state" -> answer = "tab=${shell.tab} chromeHidden=${shell.chromeHidden} where=${shell.whereLabel} volumes=${shell.volumes.size} path=${shell.libraryPath.toList()} canListen=${shell.canListen} listening=${shell.listening} paused=${shell.listenPaused} rate=${shell.listenRate} rates=${shell.listenRates} theme=${shell.theme} appearance=${shell.appearance} ready=${shell.firstPageReady} url=${shell.webView.url}"
+                                "state" -> answer = "tab=${shell.tab} chromeHidden=${shell.chromeHidden} where=${shell.whereLabel} volumes=${shell.volumes.size} path=${shell.libraryPath.toList()} canListen=${shell.canListen} listening=${shell.listening} paused=${shell.listenPaused} rate=${shell.listenRate} rates=${shell.listenRates} theme=${shell.theme} appearance=${shell.appearance} ready=${shell.firstPageReady} sheet=${shell.sheetPage} url=${shell.webView.url}"
                                 else -> answer = "unknown command"
                             }
                             out.writeText(answer)

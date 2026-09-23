@@ -1,6 +1,7 @@
 package com.sefermormon.standardworks
 
 import android.content.Context
+import android.media.AudioAttributes
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.speech.tts.UtteranceProgressListener
@@ -41,6 +42,10 @@ class SpeechBridge(context: Context, private val shell: WebShell) {
     init {
         tts = TextToSpeech(context) { status ->
             ready = status == TextToSpeech.SUCCESS
+            // The voice is spoken audio on the media stream: the volume keys
+            // set it, and it takes and yields audio focus as ListenService does.
+            if (ready) tts?.setAudioAttributes(AudioAttributes.Builder()
+                .setUsage(AudioAttributes.USAGE_MEDIA).setContentType(AudioAttributes.CONTENT_TYPE_SPEECH).build())
             if (ready) tts?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
                 override fun onStart(utteranceId: String?) {}
                 override fun onRangeStart(utteranceId: String?, start: Int, end: Int, frame: Int) {

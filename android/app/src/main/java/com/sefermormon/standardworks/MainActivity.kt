@@ -39,6 +39,8 @@ class MainActivity : ComponentActivity() {
 
     override fun onDestroy() {
         ReviewPrompt.detach(this)
+        // the reading ends with the Activity, and its service and card with it
+        ListenService.sync(applicationContext, null)
         if (::shell.isInitialized) { shell.speech.shutdown(); shell.webView.destroy() }
         super.onDestroy()
     }

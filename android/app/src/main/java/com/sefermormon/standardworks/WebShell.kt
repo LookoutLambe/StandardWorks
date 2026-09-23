@@ -40,12 +40,20 @@ class WebShell(private val context: Context) {
     var searchQuery by mutableStateOf("")
     /** Bumped on each visit to Notes, so the tab re-reads the page's stores. */
     var notesVisits by mutableIntStateOf(0)
-    /** The theme the page is showing, as last read by matchPaper. */
+    /** The site page shown in the sheet over the app (SitePageSheet), or none. */
+    var sheetPage by mutableStateOf<String?>(null)
+    /** The header's ⋯ (app-shell/shell_end.js, 12) and what it opens: DisplayOptionsSheet. */
+    var showDisplayOptions by mutableStateOf(false)
+    /**
+     * The theme the shell is showing: the page's own ("light", "sepia",
+     * "dark"), or the shell's Black or Gray cut of the page's Dark, as last
+     * read by matchPaper.
+     */
     var theme by mutableStateOf("light")
         private set
-    val dark get() = theme == "dark"
+    val dark get() = theme == "dark" || theme in AppShell.DARK_VARIANTS
     val palette get() = AppShell.palette(theme)
-    /** Settings' choice: "system", "light", "sepia" or "dark". */
+    /** Settings' choice: "system", or one of AppShell.THEME_ORDER (light, sepia, dark, black, gray). */
     var appearance by mutableStateOf(prefs.getString("shell.appearance", "system") ?: "system")
         private set
     /** The phone's own scheme, as the root composable last saw it. */
@@ -67,9 +75,49 @@ class WebShell(private val context: Context) {
     var chromeHidden by mutableStateOf(false)
         private set
     val libraryPath = mutableStateListOf<LibraryRoute>()
+    /**
+     * Bumped whenever the Library should show the WHOLE library again: every
+     * volume folded, the list at its top (LibraryView). The row's Library
+     * icon, the page's mark and the chapter pill all come here.
+     */
+    var libraryFocus by mutableIntStateOf(0)
+        private set
     /** The chapter the page is showing, for the Read tab's own sense of place. */
     var whereLabel by mutableStateOf("")
         private set
+    /**
+     * Where the page is, from its own last-read record — the volume key and
+     * the chapter id (`bom`, `ch3`) — so the Library can mark the place.
+     */
+    var currentVolumeKey by mutableStateOf("")
+        private set
+    var currentChapterId by mutableStateOf("")
+        private set
+    /**
+     * The reading modes the page is showing, as the page reports them
+     * ({op:'modes'} from shell_end.js): the layout ("inter", "heb", "dual"),
+     * transliteration and vowel points. Display Options shows and sets them;
+     * the page's footer no longer carries the five buttons in the app.
+     */
+    var readLayout by mutableStateOf("inter")
+        private set
+    var readTranslit by mutableStateOf(true)
+        private set
+    var readNikkud by mutableStateOf(true)
+        private set
+    /** The reading size the page shows, 70…150 (its #sizeSlider). */
+    var textSize by mutableIntStateOf(100)
+        private set
+    /** "Full screen on scroll": the header folds with the chapter row while reading. */
+    var fullScreenOnScroll by mutableStateOf(prefs.getBoolean("shell.fullScreenOnScroll", false))
+        private set
+    /**
+     * The height, in CSS pixels, of whatever floats over the page's bottom —
+     * the row, or the player — handed to the page as --sw-app-row-h so its
+     * own footer sits above it and its text ends clear of it.
+     */
+    var bottomOverlay = 0
+        set(v) { if (field != v) { field = v; pushOverlayHeight() } }
     var canListen by mutableStateOf(false); private set
     var listening by mutableStateOf(false); private set
     var listenPaused by mutableStateOf(false); private set
@@ -82,6 +130,7 @@ class WebShell(private val context: Context) {
         private set
 
     init {
+        ListenService.bind(this)
         // A first launch opens on the Library, the way a scripture app does;
         // every launch after that opens in the book (the boot redirect).
         if (!prefs.getBoolean("shell.launchedBefore", false)) {
@@ -125,8 +174,18 @@ class WebShell(private val context: Context) {
     fun receive(name: String, body: JSONObject) {
         when (name) {
             "swShell" -> when (body.optString("op")) {
-                // The page's own home mark, tapped in the app: the Library tab.
-                "library" -> tab = Tab.LIBRARY
+                // The page's own home mark, tapped in the app: the whole Library.
+                "library" -> showLibrary()
+                // The chapter pill: the native Library at this book's chapters —
+                // one contents, not two (shell_end.js, 10).
+                "chapters" -> openChapters(body.optString("volume"), body.optString("chapter"))
+                "modes" -> {
+                    if (body.has("layout")) readLayout = body.optString("layout", readLayout)
+                    if (body.has("translit")) readTranslit = body.optBoolean("translit", readTranslit)
+                    if (body.has("nikkud")) readNikkud = body.optBoolean("nikkud", readNikkud)
+                }
+                // the header's ⋯ opens Display Options itself, as on the iPhone
+                "more" -> showDisplayOptions = true
                 // The page changed its theme (its own ◐ button).
                 "theme" -> { matchPaper(); body.optString("theme").takeIf { it.isNotEmpty() }?.let { adoptPageTheme(it) } }
             }
@@ -158,20 +217,87 @@ class WebShell(private val context: Context) {
     /** The page's paper behind the web view, and the shell's palette, from the page's theme. */
     fun matchPaper() {
         eval(AppShell.CURRENT_THEME_SCRIPT) { v ->
-            val t = (v as? String)?.takeIf { it in AppShell.THEMES } ?: "light"
+            var t = (v as? String)?.takeIf { it in AppShell.PAGE_THEMES } ?: "light"
+            // the page knows only its Dark; Black and Gray are the shell's cuts of it
+            if (t == "dark" && appearance in AppShell.DARK_VARIANTS) t = appearance
             if (t != theme) theme = t
             if (::webView.isInitialized) webView.setBackgroundColor(AppShell.palette(t).paper.toArgb())
         }
     }
 
-    /** The page shows a theme: it is now Settings' choice, and counts as applied. */
+    /**
+     * The page shows a theme: it is now Settings' choice, and counts as
+     * applied. A Black or Gray choice is Dark to the page, so the page's Dark
+     * leaves it standing.
+     */
     private fun adoptPageTheme(t: String) {
-        if (t !in AppShell.THEMES) return
-        prefs.edit().putString("shell.appliedTheme", t).apply()
-        if (wantedTheme() != t) {
-            appearance = t
-            prefs.edit().putString("shell.appearance", t).apply()
+        if (t !in AppShell.PAGE_THEMES) return
+        val want = wantedTheme()
+        if (AppShell.pageTheme(want) == t) {
+            prefs.edit().putString("shell.appliedTheme", want).apply()
+            return
         }
+        prefs.edit().putString("shell.appliedTheme", t).apply()
+        appearance = t
+        prefs.edit().putString("shell.appearance", t).apply()
+    }
+
+    /** "Full screen on scroll", stored by the shell and carried to the page as a class. */
+    fun chooseFullScreen(on: Boolean) {
+        fullScreenOnScroll = on
+        prefs.edit().putBoolean("shell.fullScreenOnScroll", on).apply()
+        pushFullScreen()
+    }
+    private fun pushFullScreen() = run("document.documentElement.classList.toggle('sw-app-fullscreen', $fullScreenOnScroll);")
+
+    private fun pushOverlayHeight() =
+        run("document.documentElement.style.setProperty('--sw-app-row-h', '${bottomOverlay}px'); window.dispatchEvent(new Event('resize'));")
+
+    /** The page's reading size, through its own setter (which persists it per volume). */
+    fun chooseTextSize(n: Int) {
+        val v = n.coerceIn(70, 150)
+        if (v == textSize) return
+        textSize = v
+        run("(function (v) { var s = document.getElementById('sizeSlider'); if (s) s.value = v; if (window.setSize) window.setSize(v); })($v);")
+    }
+
+    /**
+     * Display Options' reading switches, applied through the page's own (the
+     * page then reports the result back, which is what the switches show).
+     */
+    fun setReading(layout: String, translit: Boolean, nikkud: Boolean) {
+        readLayout = layout; readTranslit = translit; readNikkud = nikkud
+        run("window.__swSetReading && window.__swSetReading({ layout: ${JSONObject.quote(layout)}, translit: $translit, nikkud: $nikkud });")
+    }
+
+    // MARK: - the library
+
+    /**
+     * THE WHOLE LIBRARY: the stack popped to its root, every volume folded,
+     * the list at its top. What the row's Library icon and the page's mark do,
+     * and again when tapped while there.
+     */
+    fun showLibrary() {
+        libraryPath.clear()
+        libraryFocus++
+        tab = Tab.LIBRARY
+    }
+
+    /**
+     * The chapter pill's destination: for a book of chapters its chapter
+     * grid, with the reader's chapter marked; front matter and a one-chapter
+     * book stop at the whole Library. One level deep, never two: back from
+     * the grid is the whole library.
+     */
+    fun openChapters(volumeKey: String, chapterId: String) {
+        if (volumeKey.isNotEmpty()) currentVolumeKey = volumeKey
+        if (chapterId.isNotEmpty()) currentChapterId = chapterId
+        val v = volumes.firstOrNull { it.key == volumeKey }
+        val b = v?.let { LibraryRegistry.bookOf(it, chapterId) }
+        libraryPath.clear()
+        if (v != null && b != null && !b.isFront && b.ch > 1) libraryPath.add(LibraryRoute.Bk(v.key, b.id))
+        libraryFocus++
+        tab = Tab.LIBRARY
     }
 
     // MARK: - opening
@@ -195,6 +321,9 @@ class WebShell(private val context: Context) {
             webView.loadUrl(AppShell.WWW + file + (if (fragment.isEmpty()) "" else "#$fragment"))
         }
     }
+
+    /** A site page in a sheet (SettingsView): the reader stays where it is. */
+    fun presentPage(path: String) { sheetPage = path }
 
     fun stepTextSize(delta: Int) { run("window.stepSize && window.stepSize($delta);") }
 
@@ -256,6 +385,10 @@ class WebShell(private val context: Context) {
         eval("(function(){ var r = window.SWReadAloud; if (!r) return null; var p = document.getElementById('ra-pause'); return { on: !!r.playing, paused: !!(p && p.getAttribute('aria-pressed') === 'true'), rate: Number(r.rate) || 0, speeds: (r.speeds || []).map(Number) }; })()") { v ->
             val d = v as? JSONObject
             if (d == null) {
+                if (listening) {
+                    (webView as? ReaderWebView)?.holdVisible = false
+                    ListenService.sync(context, null)
+                }
                 canListen = false; listening = false; main.removeCallbacks(listenPoll)
                 return@eval
             }
@@ -263,7 +396,16 @@ class WebShell(private val context: Context) {
             val was = listening
             listening = d.optBoolean("on")
             listenPaused = listening && d.optBoolean("paused")
-            if (was != listening) run("document.documentElement.classList.toggle('sw-app-listening', $listening);")
+            if (was != listening) {
+                run("document.documentElement.classList.toggle('sw-app-listening', $listening);")
+                (webView as? ReaderWebView)?.holdVisible = listening
+            }
+            // a book reads on from chapter to chapter by itself: the card follows it
+            if (listening) refreshWhere()
+            ListenService.sync(context, if (listening) ListenService.NowPlaying(
+                title = whereLabel.ifEmpty { "Sefer Mormon" },
+                artist = currentVolume?.name ?: AppShell.SHARE_SUBJECT,
+                paused = listenPaused) else null)
             listenRate = d.optDouble("rate", listenRate)
             val sp = d.optJSONArray("speeds")
             if (sp != null && sp.length() > 0) listenRates = (0 until sp.length()).map { sp.optDouble(it) }
@@ -318,14 +460,27 @@ class WebShell(private val context: Context) {
         lastY = webView.scrollY
         if (chromeHidden) fold(false)
         if (volumes.isEmpty()) loadRegistry()
+        pushOverlayHeight()
+        pushFullScreen()
         refreshWhere()
         refreshListen()
+        eval("(function(){ var s = document.getElementById('sizeSlider'); var p = document.getElementById('page'); var v = s ? parseInt(s.value, 10) : NaN; if (isNaN(v) && p) v = parseInt(p.style.fontSize, 10); return isNaN(v) ? 100 : v; })()") { v ->
+            (v as? Number)?.toInt()?.let { textSize = it }
+        }
         ReviewPrompt.consider(context)
     }
 
     fun refreshWhere() {
         eval("(document.getElementById('sw-chrome-chapter') || {}).textContent || ''") { v ->
-            whereLabel = ((v as? String) ?: "").replace("▾", "").trim()
+            val w = ((v as? String) ?: "").replace("▾", "").trim()
+            if (w != whereLabel) whereLabel = w
+        }
+        // and the place itself, as the page records it on every chapter
+        eval("(function(){ try { var g = JSON.parse(localStorage.getItem('sw-last-read') || 'null'); return g && g.volume && g.chapter ? [String(g.volume), String(g.chapter)] : null; } catch (e) { return null; } })()") { v ->
+            val a = v as? JSONArray ?: return@eval
+            if (a.length() != 2) return@eval
+            a.optString(0).let { if (it != currentVolumeKey) currentVolumeKey = it }
+            a.optString(1).let { if (it != currentChapterId) currentChapterId = it }
         }
     }
 
