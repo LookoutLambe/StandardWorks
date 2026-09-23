@@ -239,6 +239,25 @@ function jstBooks() {
 const SNIPPET_TEST = new Set(['Jeremiah', '1 Samuel', 'Proverbs', 'Ruth']);
 const inSnippetTest = (vol, book) => vol.key === 'ot' && SNIPPET_TEST.has(book.en);
 
+/* ---------- the name a Jewish reader searches by (2026-09-23) ----------
+   ISRAEL SEARCHES PSALMS AS TEHILLIM. Search Console, Israel, 2026-09-11 to
+   09-21: "tehillim 40", "tehillim 5", "tehilim 29" at positions 47-58, while
+   "psalm 27 hebrew" sat at 9.4 — the same chapters, found under their English
+   name and not under the one a Jewish reader types. The title said "Psalms 27"
+   and the Hebrew beside it was pointed and defective, תְּהִלִּים, where a search
+   box gets the plain everyday spelling, תהילים. So a book in this table carries
+   its Jewish name in both scripts: in the title and the description (what a
+   searcher reads), in the lede (what the page says it is), as the chapter's
+   alternateName, and beside the book on the volume page.
+
+   A FEW BOOKS AT A TIME, as the revert note at the chapter title asks: this
+   ADDS to Psalms' 150 titles and rewrites nothing else. Psalms is also the
+   snippet test's biggest control pool, so from this date read that test
+   against the rest of the Old Testament WITHOUT Psalms. Roll a book out by
+   adding its row (it must not be one of SNIPPET_TEST's books). */
+const JEWISH_NAMES = { Psalms: { latin: 'Tehillim', he: 'תהילים' } };
+const jewishName = (vol, book) => (vol.key === 'ot' && JEWISH_NAMES[book.en]) || null;
+
 // ---------- the volumes ----------
 // The English name a volume is searched for by; defaults to '<en> in Hebrew'.
 const volName = vol => vol.name || (vol.en + ' in Hebrew');
@@ -410,14 +429,17 @@ function buildVolume(vol, urls) {
        the position was weeks in the making. If the volume name is ever worth
        adding again it should go a few books at a time, not the whole corpus in
        one push. */
-    /* SNIPPET_TEST — the variant is above; everything else keeps the indexed form. */
+    /* SNIPPET_TEST — the variant is above; everything else keeps the indexed form
+       (JEWISH_NAMES only adds to it). */
+    const jn = jewishName(vol, b);
+    const jnLatin = jn ? jn.latin + ' ' + c.n : '', jnHe = jn ? jn.he + ' ' + hebNum(c.n).replace(/[׳״]/g, '') : '';
     const title = inSnippetTest(vol, b)
       ? label + ' Hebrew Interlinear — every word glossed'
-      : label + ' in Hebrew' + (heb ? ' — ' + heb : '') + ' · Sefer Mormon';
+      : label + ' in Hebrew' + (jn ? ' (' + jnLatin + ')' : '') + (heb ? ' — ' + heb : '') + ' · Sefer Mormon';
     const desc = inSnippetTest(vol, b)
       ? label + ' in the Masoretic text, word by word: an English gloss under every Hebrew word, the King James verse beside it.' +
         quote + ' Free to read, with transliteration and the root of every word in the reader.'
-      : label + ' in Hebrew, every word with its English gloss' + (english ? ', beside the English text.' : '.') + quote +
+      : label + (jn ? ' (' + jnLatin + ', ' + jnHe + ')' : '') + ' in Hebrew, every word with its English gloss' + (english ? ', beside the English text.' : '.') + quote +
         ' ' + vol.en + ' · ' + vol.hebrewNote + '.';
     const prev = flat[k - 1], next = flat[k + 1];
     const navLink = (e2, cls) => !e2 ? '<span class="' + cls + '"></span>'
@@ -431,6 +453,7 @@ function buildVolume(vol, urls) {
     ];
     const ld = '<script type="application/ld+json">' + JSON.stringify({
       '@context': 'https://schema.org', '@type': 'Chapter', name: label + ' in Hebrew', url,
+      ...(jn ? { alternateName: [jnLatin, jnHe] } : {}),
       inLanguage: english ? ['he', 'en'] : ['he'], position: c.n,
       isPartOf: { '@type': 'Book', name: volName(vol) + ' (' + vol.he + ')', url: SITE + vol.page, inLanguage: 'he' }
     }) + '</script>\n' + breadcrumbLd(crumbs);
@@ -444,7 +467,8 @@ function buildVolume(vol, urls) {
     missingEn += missing;
     const html = head(rel, title, desc, url, ld) + '<body class="chapter">\n' + chrome(rel, crumbs) +
       '<main>\n<h1>' + esc(label) + (heb ? ' <span class="h1he" lang="he" dir="rtl">' + esc(heb) + '</span>' : '') + '</h1>\n' +
-      '<p class="lede">' + esc(vol.hebrewNote) + ', word by word with English glosses' + (english ? ', the English verse beneath each' : '') +
+      '<p class="lede">' + (jn ? esc(jnLatin) + ' · <span lang="he" dir="rtl">' + esc(jn.he + ' ' + hebNum(c.n)) + '</span>. ' : '') +
+      esc(vol.hebrewNote) + ', word by word with English glosses' + (english ? ', the English verse beneath each' : '') +
       '. <a class="open" href="' + readerHref + '">Open ' + esc(label) + ' in the interlinear reader</a> for transliteration, roots and notes.</p>\n' +
       nav + '<ol class="verses">\n' + body + '\n</ol>\n' + nav + '</main>\n' + foot(rel);
     fs.mkdirSync(path.join(volDir, b.slug), { recursive: true });
@@ -458,7 +482,8 @@ function buildVolume(vol, urls) {
   const vurl = SITE + 'hebrew/' + vol.slug + '/index.html';
   const crumbs = [{ text: 'Sefer Mormon', href: vrel, url: SITE }, { text: vol.en, url: vurl }];
   const list = books.filter(b => b.chapters.some(c => sets[c.id])).map(b =>
-    '<section class="book"><h2>' + esc(b.en) + (b.he ? ' <span lang="he" dir="rtl">' + esc(b.he) + '</span>' : '') + '</h2>' +
+    '<section class="book"><h2>' + esc(b.en) + (jewishName(vol, b) ? ' (' + esc(jewishName(vol, b).latin) + ')' : '') +
+      (b.he ? ' <span lang="he" dir="rtl">' + esc(b.he) + '</span>' : '') + '</h2>' +
     '<p class="cells">' + b.chapters.filter(c => sets[c.id]).map(c =>
       '<a href="' + b.slug + '/' + c.n + '.html" title="' + esc(chapterLabel(b, c)) + '">' + c.n + '</a>').join('') + '</p></section>').join('\n');
   const vhtml = head(vrel, volName(vol) + ' — ' + vol.he + ' · Sefer Mormon',
