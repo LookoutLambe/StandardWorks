@@ -70,8 +70,8 @@ final class WebShell: ObservableObject {
     @Published var libraryPath: [LibraryRoute] = []
     /// Bumped whenever the Library should show the WHOLE library again, opened
     /// at the reader's place (LibraryView expands that volume and scrolls to
-    /// the book). The tab's own icon, the page's mark and a front-matter pill
-    /// all come here; only a book of chapters goes deeper.
+    /// the book). The tab's own icon and a front-matter pill come here; only
+    /// a book of chapters goes deeper.
     @Published var libraryFocus = 0
     /// The chapter the page is showing, for the Read tab's own sense of place.
     @Published private(set) var whereLabel = ""
@@ -154,12 +154,9 @@ final class WebShell: ObservableObject {
                                          wantedTheme: ["light", "sepia", "dark"].contains(choice) ? choice : phone)
     }
 
-    /// The page's own home mark, tapped in the app: not the website's landing
-    /// page but the Library tab. Posted by the script in AppShell through
-    /// the "swShell" message handler.
+    /// What the shared scripts post through the "swShell" message handler.
     func handle(message: [String: Any]) {
         switch message["op"] as? String {
-        case "library": showLibrary()
         // The page's chapter pill, tapped in the app: the native Library at
         // this book's chapters — one contents, not two (app-shell/shell_end.js, 10).
         case "chapters":
@@ -291,8 +288,8 @@ final class WebShell: ObservableObject {
 
     /// THE WHOLE LIBRARY, at the reader's place: the stack popped to its root,
     /// the current volume open, the current book in view. What the Library
-    /// icon and the page's mark do — tapping the icon again while there does
-    /// it again, the way an iOS tab pops to its root.
+    /// icon does — tapping it again while there does it again, the way an iOS
+    /// tab pops to its root. (The page's mark is the landing page's link.)
     func showLibrary() {
         libraryPath = []
         libraryFocus += 1

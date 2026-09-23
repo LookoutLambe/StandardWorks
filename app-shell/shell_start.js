@@ -170,7 +170,9 @@
        at the top"): the size and theme buttons fold into the shell's more
        menu, drawn by shell_end.js (12). */
     'html.sw-app-more #sw-chrome-size, html.sw-app-more #sw-chrome-dark, html.sw-app-more .sw-chrome-print { display: none !important; }',
-    'html.sw-app-more #sw-app-more { min-width: 44px; min-height: 44px; margin: 0; padding: 0 6px; border: 1px solid color-mix(in srgb, var(--here-chrome, #DDB768) 50%, transparent); border-radius: 6px; background: transparent; color: var(--on-chrome, #F3EDE2); font: 700 22px/1 -apple-system, system-ui, sans-serif; letter-spacing: 1px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; -webkit-tap-highlight-color: transparent; }',
+    /* margin-left auto: the ⋯ keeps the bar's far end on the landing too, where
+       the title is centred absolutely and nothing else fills the row */
+    'html.sw-app-more #sw-app-more { min-width: 44px; min-height: 44px; margin: 0 0 0 auto; padding: 0 6px; border: 1px solid color-mix(in srgb, var(--here-chrome, #DDB768) 50%, transparent); border-radius: 6px; background: transparent; color: var(--on-chrome, #F3EDE2); font: 700 22px/1 -apple-system, system-ui, sans-serif; letter-spacing: 1px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; -webkit-tap-highlight-color: transparent; }',
     /* and the status bar itself always sits on chrome, whatever is under it */
     'html #sw-app-statusbar { position: fixed; top: 0; left: 0; right: 0; height: env(safe-area-inset-top, 0px); background: var(--chrome, #1B2A41); z-index: 2147483646; pointer-events: none; }'
   ].join('\n');

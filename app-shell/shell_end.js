@@ -21,17 +21,12 @@
   window.addEventListener('resize', measure);
   window.addEventListener('orientationchange', function () { setTimeout(measure, 100); });
 
-  /* 8. THE MARK IN THE BAR IS THE LIBRARY, not the website's home page.
-     Captured before the site's own handler, and only where a native
-     shell is listening. */
-  document.addEventListener('click', function (e) {
-    var a = e.target && e.target.closest ? e.target.closest('.sw-chrome-home, .sw-top-bar-brand') : null;
-    if (!a) return;
-    var port = window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.swShell;
-    if (!port) return;
-    e.preventDefault(); e.stopPropagation();
-    port.postMessage({ op: 'library' });
-  }, true);
+  /* 8. THE MARK IN THE BAR IS THE WEBSITE'S OWN: its link to the landing
+     page. From 2026-09-19 the apps caught it here and opened their Library
+     instead, and the landing could no longer be reached at all (user,
+     2026-09-23: "the landing page also is completely gone from the app too
+     when i click on the logo top left"). The Library has its own icon in the
+     row; the mark goes home. Do not catch it again. */
 
   /* 9. THE THEME, AS THE PAGE CHANGES IT. The page's own theme button
      (◐) swaps body classes; the shell's surfaces — the bottom band, the

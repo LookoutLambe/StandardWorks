@@ -78,7 +78,7 @@ class WebShell(private val context: Context) {
     /**
      * Bumped whenever the Library should show the WHOLE library again: every
      * volume folded, the list at its top (LibraryView). The row's Library
-     * icon, the page's mark and the chapter pill all come here.
+     * icon and the chapter pill come here.
      */
     var libraryFocus by mutableIntStateOf(0)
         private set
@@ -174,8 +174,6 @@ class WebShell(private val context: Context) {
     fun receive(name: String, body: JSONObject) {
         when (name) {
             "swShell" -> when (body.optString("op")) {
-                // The page's own home mark, tapped in the app: the whole Library.
-                "library" -> showLibrary()
                 // The chapter pill: the native Library at this book's chapters —
                 // one contents, not two (shell_end.js, 10).
                 "chapters" -> openChapters(body.optString("volume"), body.optString("chapter"))
@@ -274,8 +272,8 @@ class WebShell(private val context: Context) {
 
     /**
      * THE WHOLE LIBRARY: the stack popped to its root, every volume folded,
-     * the list at its top. What the row's Library icon and the page's mark do,
-     * and again when tapped while there.
+     * the list at its top. What the row's Library icon does, and again when
+     * tapped while there. (The page's mark is the landing page's link.)
      */
     fun showLibrary() {
         libraryPath.clear()
