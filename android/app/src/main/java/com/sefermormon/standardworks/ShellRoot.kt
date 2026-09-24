@@ -15,6 +15,8 @@ import androidx.compose.foundation.gestures.rememberDraggableState
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.Cancel
+import androidx.compose.material.icons.outlined.ArrowDownward
+import androidx.compose.material.icons.outlined.ArrowUpward
 import androidx.compose.material.icons.outlined.BookmarkBorder
 import androidx.compose.material3.Typography
 import androidx.compose.runtime.rememberCoroutineScope
@@ -153,11 +155,13 @@ fun ShellRoot(shell: WebShell) {
 
     // Back: out of a Library push, then down to the book, then the page's
     // drawer shut, then through the reader's own history.
-    BackHandler(enabled = shell.tab != WebShell.Tab.READ || shell.drawerOpen || shell.webView.canGoBack()) {
+    BackHandler(enabled = shell.tab != WebShell.Tab.READ || shell.drawerOpen || shell.find != null || shell.webView.canGoBack()) {
         when {
             shell.tab == WebShell.Tab.LIBRARY && shell.libraryPath.isNotEmpty() -> shell.libraryPath.removeAt(shell.libraryPath.lastIndex)
             shell.tab != WebShell.Tab.READ -> shell.tab = WebShell.Tab.READ
             shell.drawerOpen -> shell.closeDrawer()
+            // Back ends a search's walk, as Done does
+            shell.find != null -> shell.endFind()
             shell.webView.canGoBack() -> shell.webView.goBack()
         }
     }
@@ -233,7 +237,8 @@ fun ShellRoot(shell: WebShell) {
                         } else {
                             Box(Modifier.fillMaxWidth().height(58.dp).shadow(10.dp, CircleShape).clip(CircleShape).background(floatingChrome(p)),
                                 contentAlignment = Alignment.Center) {
-                                ShellTabBar(shell)
+                                // while a search is walked, the find bar in the row's place
+                                if (shell.find != null) FindBar(shell) else ShellTabBar(shell)
                             }
                         }
                     }
@@ -415,6 +420,45 @@ fun ShellTabBar(shell: WebShell) {
                 Icon(if (on) item.filled else item.outline, null, tint = if (on) p.hereChrome else p.onChrome, modifier = Modifier.size(24.dp))
             }
         }
+    }
+}
+
+/**
+ * THE FIND BAR, Gospel Library's, in the row's capsule while a search is
+ * walked (WebShell.find) — the iPhone's (ShellRoot.swift): up and down step
+ * through the results in the Search tab's order, into another book or
+ * volume as they fall; the count and the reference say where you are; Done
+ * gives the row back.
+ */
+@Composable
+fun FindBar(shell: WebShell) {
+    val p = shell.palette
+    val f = shell.find ?: return
+    val view = LocalView.current
+    Row(Modifier.fillMaxWidth().padding(horizontal = 10.dp), verticalAlignment = Alignment.CenterVertically) {
+        FindStep(p, Icons.Outlined.ArrowUpward, "Previous match", f.index > 0) {
+            view.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP); shell.stepFind(-1)
+        }
+        FindStep(p, Icons.Outlined.ArrowDownward, "Next match", f.index < f.hits.size - 1) {
+            view.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP); shell.stepFind(1)
+        }
+        Column(Modifier.weight(1f).semantics(mergeDescendants = true) { contentDescription = "Match ${f.index + 1} of ${f.hits.size}, ${f.hit.row.ref}" },
+            horizontalAlignment = Alignment.CenterHorizontally) {
+            Text("${f.index + 1} of ${f.hits.size}", color = p.onChrome, fontSize = 15.sp, fontWeight = FontWeight.Bold)
+            Text(f.hit.row.ref, color = p.onChrome.copy(alpha = 0.78f), fontSize = 12.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
+        }
+        Box(Modifier.heightIn(min = 44.dp).clip(RoundedCornerShape(12.dp)).clickable(role = Role.Button) { shell.endFind() }.padding(horizontal = 14.dp),
+            contentAlignment = Alignment.Center) {
+            Text("Done", color = p.hereChrome, fontSize = 17.sp, fontWeight = FontWeight.Bold)
+        }
+    }
+}
+
+@Composable
+private fun FindStep(p: AppShell.Palette, icon: ImageVector, label: String, enabled: Boolean, onClick: () -> Unit) {
+    Box(Modifier.size(48.dp).clip(CircleShape).clickable(enabled = enabled, onClick = onClick).alpha(if (enabled) 1f else 0.35f)
+        .semantics { contentDescription = label; role = Role.Button }, contentAlignment = Alignment.Center) {
+        Icon(icon, null, tint = p.onChrome, modifier = Modifier.size(24.dp))
     }
 }
 

@@ -53,6 +53,17 @@ object DebugBridge {
                                 "chapters" -> shell.openChapters(parts.getOrNull(1) ?: "", parts.getOrNull(2) ?: "")
                                 // "@bookmark": the row's Bookmark, on or off
                                 "bookmark" -> shell.toggleBookmark()
+                                // "@find sons 3": a Search tap on the 3rd result (1-based) of "sons"
+                                "find" -> {
+                                    val n = parts.lastOrNull()?.toIntOrNull()
+                                    val q = (if (n != null && parts.size > 2) parts.drop(1).dropLast(1) else parts.drop(1)).joinToString(" ")
+                                    val hits = shell.searchIndex.find(q)
+                                    if (hits.isEmpty()) answer = "no hits" else { shell.startFind(q, hits, (n ?: 1) - 1); answer = "${hits.size} hits" }
+                                }
+                                "findnext" -> shell.stepFind(1)
+                                "findprev" -> shell.stepFind(-1)
+                                "finddone" -> shell.endFind()
+                                "findstate" -> answer = shell.find?.let { "${it.index + 1}/${it.hits.size} ${it.hit.row.ref} ${it.hit.path}" } ?: "none"
                                 // "@panel full|half": the panel dragged up or down
                                 "panel" -> shell.panelFull = parts.getOrNull(1) == "full"
                                 "drawer" -> shell.closeDrawer()

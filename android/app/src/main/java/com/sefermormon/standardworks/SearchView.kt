@@ -121,7 +121,11 @@ fun SearchView(shell: WebShell) {
                     ShellCard(p) {
                         list.forEachIndexed { i, hit ->
                             if (i > 0) Rule(p)
-                            ShellRow(p, onClick = { shell.open(hit.path) }) {
+                            // the whole list goes with it: the find bar walks it verse by verse
+                            ShellRow(p, onClick = {
+                                val at = hits.indexOfFirst { it.id == hit.id }
+                                if (at >= 0) shell.startFind(searched, hits, at) else shell.open(hit.path)
+                            }) {
                                 Column(Modifier.weight(1f)) {
                                     Text(hit.row.ref, color = p.here, fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
                                     Spacer(Modifier.height(4.dp))

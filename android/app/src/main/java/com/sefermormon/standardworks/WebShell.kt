@@ -408,6 +408,50 @@ class WebShell(private val context: Context) {
         main.postDelayed({ refreshWhere() }, 400)
     }
 
+    // MARK: - a search, walked verse by verse
+
+    /**
+     * THE FIND BAR'S WALK, the iPhone's (WebShell.swift, FindWalk): a tap on a
+     * Search result starts it with the query and the results in the Search
+     * tab's order; the find bar (ShellRoot) steps up and down through them by
+     * their deep links, into another book or volume as they fall; the page
+     * marks the word in the verse it lands on (shell_end.js, 15); Done or
+     * Back ends it.
+     */
+    class FindWalk(val query: String, val hits: List<SearchIndex.Hit>, val index: Int) {
+        val hit get() = hits[index]
+    }
+    var find by mutableStateOf<FindWalk?>(null)
+        private set
+
+    fun startFind(query: String, hits: List<SearchIndex.Hit>, index: Int) {
+        if (index !in hits.indices) return
+        find = FindWalk(query, hits, index)
+        goFind()
+    }
+    fun stepFind(delta: Int) {
+        val f = find ?: return
+        if (f.index + delta !in f.hits.indices) return
+        find = FindWalk(f.query, f.hits, f.index + delta)
+        goFind()
+    }
+    fun endFind() {
+        find = null
+        run("window.__swFind && window.__swFind(null);")
+    }
+    private fun goFind() {
+        val f = find ?: return
+        open(f.hit.path)
+        // a turn within the page fires no page load; a load re-marks in pageSettled
+        main.postDelayed({ markFind() }, 350)
+    }
+    /** The word, marked in the verse on screen; never in the JST, whose verse keys are file positions. */
+    fun markFind() {
+        val f = find ?: return
+        val key = if (f.hit.row.volume == "jst") "" else SearchIndex.place(f.hit.row.ref).let { "${it.first}|${it.second}|${it.third}" }
+        run("window.__swFind && window.__swFind({ q: ${JSONObject.quote(f.query)}, key: ${JSONObject.quote(key)} });")
+    }
+
     // MARK: - listen
 
     fun toggleListen() {
@@ -526,6 +570,7 @@ class WebShell(private val context: Context) {
         pushFullScreen()
         refreshWhere()
         refreshListen()
+        markFind()
         eval("(function(){ var s = document.getElementById('sizeSlider'); var p = document.getElementById('page'); var v = s ? parseInt(s.value, 10) : NaN; if (isNaN(v) && p) v = parseInt(p.style.fontSize, 10); return isNaN(v) ? 100 : v; })()") { v ->
             (v as? Number)?.toInt()?.let { textSize = it }
         }
