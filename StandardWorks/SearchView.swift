@@ -70,7 +70,11 @@ struct SearchView: View {
             .listStyle(.insetGrouped)
             .shellPage(clearOfRow: true)
             .shellBar("Search")
-            .searchable(text: query, isPresented: $shell.searchPresented, prompt: "Hebrew or English")
+            // The field under the title, always: from iOS 26 the default puts
+            // it at the bottom of the screen, under the floating row, where it
+            // could not be seen or reached (user, 2026-09-24, on iOS 27).
+            .searchable(text: query, isPresented: $shell.searchPresented,
+                        placement: .navigationBarDrawer(displayMode: .always), prompt: "Hebrew or English")
             .searchScopes($scope, activation: .onSearchPresentation) {
                 Text("All").tag("")
                 ForEach(shell.volumes) { v in Text(v.short).tag(v.key) }
