@@ -41,7 +41,12 @@ struct SearchView: View {
                     Section {
                         ForEach(list) { hit in
                             Button {
-                                shell.open(path: hit.path)
+                                // the whole list goes with it: the find bar walks it verse by verse
+                                if let i = hits.firstIndex(where: { $0.id == hit.id }) {
+                                    shell.startFind(query: searched, hits: hits, at: i)
+                                } else {
+                                    shell.open(path: hit.path)
+                                }
                             } label: {
                                 VStack(alignment: .leading, spacing: 4) {
                                     Text(hit.row.ref).font(ShellTheme.text(.footnote, weight: .semibold)).foregroundStyle(shell.here)

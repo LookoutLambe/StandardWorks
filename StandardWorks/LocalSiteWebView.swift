@@ -444,6 +444,17 @@ enum DebugBridge {
                     case "bookmark":
                         // "@bookmark": the row's Bookmark, on or off
                         sh.toggleBookmark()
+                    case "find":
+                        // "@find sons 3": a Search tap on the 3rd result (1-based) of "sons"
+                        let q = parts.count > 2 && Int(parts.last!) != nil ? parts.dropFirst().dropLast().joined(separator: " ") : parts.dropFirst().joined(separator: " ")
+                        let at = (parts.count > 2 ? Int(parts.last!) : nil).map { $0 - 1 } ?? 0
+                        let hits = sh.searchIndex.find(q)
+                        if hits.isEmpty { answer = "no hits" } else { sh.startFind(query: q, hits: hits, at: at); answer = "\(hits.count) hits" }
+                    case "findnext": sh.stepFind(1)
+                    case "findprev": sh.stepFind(-1)
+                    case "finddone": sh.endFind()
+                    case "findstate":
+                        answer = sh.find.map { "\($0.index + 1)/\($0.hits.count) \($0.hit.row.ref) \($0.hit.path)" } ?? "none"
                     case "more", "display":
                         // the header's ⋯ and the Settings row both open Display Options
                         sh.showDisplayOptions = true

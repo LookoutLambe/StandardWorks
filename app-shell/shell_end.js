@@ -266,6 +266,89 @@
     }
   })();
 
+  /* 15. A SEARCH, WALKED VERSE BY VERSE (user, 2026-09-24, with Gospel
+     Library's find bar as the model: "so it goes to each verse that im
+     searching the word in even if it jumps books"). The shell keeps the
+     search's results and steps through them with its own bar (up, down,
+     "3 of 24", Done), opening each verse by its deep link, in this book or
+     another volume; the page marks the searched word in the verse it landed
+     on. window.__swFind({ q: 'sons', key: '1 Nephi|3|7' }) marks, and
+     window.__swFind(null) clears. English marks the glosses and the English
+     verse, never the transliteration; Hebrew, pointed or not, marks whole
+     Hebrew words, compared as the search index compares them (points gone,
+     finals folded). The verse may still be loading: it is waited for. */
+  (function () {
+    var FINALS = { 'ך': 'כ', 'ם': 'מ', 'ן': 'נ', 'ץ': 'צ', 'ף': 'פ' };
+    function normHeb(s) {
+      return String(s || '').replace(/־/g, ' ').replace(/[֑-ׇ\[\]]/g, '')
+        .replace(/[ךםןץף]/g, function (c) { return FINALS[c]; })
+        .replace(/\s+/g, ' ').trim();
+    }
+    function clear() {
+      var marks = document.querySelectorAll('mark.sw-find-hit');
+      for (var i = 0; i < marks.length; i++) {
+        var m = marks[i], p = m.parentNode;
+        if (!p) continue;
+        while (m.firstChild) p.insertBefore(m.firstChild, m);
+        p.removeChild(m);
+        p.normalize();
+      }
+      var words = document.querySelectorAll('.sw-find-word');
+      for (var j = 0; j < words.length; j++) words[j].classList.remove('sw-find-word');
+    }
+    function markEnglish(root, q) {
+      var needle = q.toLowerCase(), n = 0;
+      var hosts = root.querySelectorAll('.gl, .verse-english');
+      for (var h = 0; h < hosts.length; h++) {
+        var walker = document.createTreeWalker(hosts[h], NodeFilter.SHOW_TEXT, null), nodes = [], t;
+        while ((t = walker.nextNode())) nodes.push(t);
+        for (var k = 0; k < nodes.length; k++) {
+          var node = nodes[k], at;
+          while (node && (at = node.nodeValue.toLowerCase().indexOf(needle)) >= 0) {
+            var hit = node.splitText(at);
+            node = hit.splitText(needle.length);
+            var mark = document.createElement('mark');
+            mark.className = 'sw-find-hit';
+            hit.parentNode.insertBefore(mark, hit);
+            mark.appendChild(hit);
+            n++;
+          }
+        }
+      }
+      return n;
+    }
+    function markHebrew(root, q) {
+      var tokens = normHeb(q).split(' ').filter(function (w) { return w.length >= 2; }), n = 0;
+      if (!tokens.length) return 0;
+      var words = root.querySelectorAll('.hw');
+      for (var i = 0; i < words.length; i++) {
+        var w = normHeb(words[i].textContent);
+        for (var j = 0; j < tokens.length; j++) {
+          if (w.indexOf(tokens[j]) >= 0) { words[i].classList.add('sw-find-word'); n++; break; }
+        }
+      }
+      return n;
+    }
+    function verseRow(key) {
+      var rows = document.querySelectorAll('.verse[data-verse-key]');
+      for (var i = 0; i < rows.length; i++) if (rows[i].getAttribute('data-verse-key') === key) return rows[i];
+      return null;
+    }
+    var run = 0;
+    window.__swFind = function (o) {
+      var mine = ++run;
+      clear();
+      if (!o || !o.q || !o.key) return;
+      var q = String(o.q).trim(), heb = /[֐-׿]/.test(q), tries = 0;
+      (function seek() {
+        if (mine !== run) return;
+        var row = verseRow(o.key);
+        if (row) { window.__swFindMarked = heb ? markHebrew(row, q) : markEnglish(row, q); return; }
+        if (++tries < 60) setTimeout(seek, 150);
+      })();
+    };
+  })();
+
   var NAME = 'Sefer Mormon: Standard Works';
   function rename() {
     var en = document.querySelector('.sw-top-bar-brand-en');

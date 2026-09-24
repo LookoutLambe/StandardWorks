@@ -64,8 +64,11 @@ struct ShellRoot: View {
         .safeAreaInset(edge: .bottom, spacing: 0) {
             if !barHidden {
                 // a capsule floating above the home indicator, inset from the
-                // edges, the chrome over a blur of the text beneath it
-                ShellTabBar()
+                // edges, the chrome over a blur of the text beneath it; while
+                // a search is walked, the find bar in the row's place
+                Group {
+                    if shell.find != nil { FindBar() } else { ShellTabBar() }
+                }
                     .frame(height: 58)
                     .background { FloatingChrome(shell: shell).clipShape(Capsule()) }
                     .shadow(color: .black.opacity(0.22), radius: 12, y: 6)
@@ -282,6 +285,60 @@ struct ShellTabBar: View {
         case "bookmark": return "bookmark.fill"
         default: return symbol
         }
+    }
+}
+
+/// THE FIND BAR, Gospel Library's, in the row's capsule while a search is
+/// walked (WebShell.find): up and down step through the results in the
+/// Search tab's order, into another book or volume as they fall; the count
+/// and the reference say where you are; Done gives the row back.
+struct FindBar: View {
+    @EnvironmentObject var shell: WebShell
+
+    var body: some View {
+        if let f = shell.find {
+            HStack(spacing: 2) {
+                step("arrow.up", "Previous match", enabled: f.index > 0) { shell.stepFind(-1) }
+                step("arrow.down", "Next match", enabled: f.index < f.hits.count - 1) { shell.stepFind(1) }
+                VStack(spacing: 1) {
+                    Text("\(f.index + 1) of \(f.hits.count)")
+                        .font(ShellTheme.text(.subheadline, weight: .semibold))
+                        .monospacedDigit()
+                    Text(f.hit.row.ref)
+                        .font(ShellTheme.text(.caption))
+                        .opacity(0.78)
+                        .lineLimit(1)
+                }
+                .frame(maxWidth: .infinity)
+                .accessibilityElement(children: .combine)
+                .accessibilityLabel("Match \(f.index + 1) of \(f.hits.count), \(f.hit.row.ref)")
+                Button { shell.endFind() } label: {
+                    Text("Done")
+                        .font(ShellTheme.text(.body, weight: .semibold))
+                        .foregroundStyle(shell.hereChrome)
+                        .padding(.horizontal, 14)
+                        .frame(minHeight: 44)
+                        .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+            }
+            .foregroundStyle(shell.onChrome)
+            .padding(.horizontal, 12)
+            .sensoryFeedback(.selection, trigger: f.index)
+        }
+    }
+
+    private func step(_ symbol: String, _ label: String, enabled: Bool, _ action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Image(systemName: symbol)
+                .font(.system(size: 20, weight: .semibold))
+                .frame(width: 48, height: 48)
+                .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .disabled(!enabled)
+        .opacity(enabled ? 1 : 0.35)
+        .accessibilityLabel(label)
     }
 }
 

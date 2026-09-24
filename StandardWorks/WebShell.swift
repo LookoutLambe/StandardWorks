@@ -624,6 +624,7 @@ final class WebShell: ObservableObject {
         pushFullScreen()
         refreshWhere()
         refreshListen()
+        markFind()
         wv.evaluateJavaScript("(function(){ var s = document.getElementById('sizeSlider'); var p = document.getElementById('page'); var v = s ? parseInt(s.value, 10) : NaN; if (isNaN(v) && p) v = parseInt(p.style.fontSize, 10); return isNaN(v) ? 100 : v; })()") { [weak self] v, _ in
             if let n = v as? Int { self?.textSize = n } else if let d = v as? Double { self?.textSize = Int(d) }
         }
@@ -657,6 +658,59 @@ final class WebShell: ObservableObject {
         }
         chapterBookmarked.toggle()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { [weak self] in self?.refreshWhere() }
+    }
+
+    // MARK: - a search, walked verse by verse
+
+    /// THE FIND BAR'S WALK (user, 2026-09-24, with Gospel Library's find bar
+    /// as the model: "so it goes to each verse that im searching the word in
+    /// even if it jumps books"). A tap on a Search result starts it: the
+    /// query, the results in the Search tab's own order, and the one on
+    /// screen. The bar (ShellRoot's FindBar) steps up and down through them,
+    /// each by its deep link, into another book or volume as they fall; the
+    /// page marks the word in the verse it lands on (shell_end.js, 15); Done
+    /// ends it.
+    struct FindWalk {
+        let query: String
+        let hits: [SearchIndex.Hit]
+        var index: Int
+        var hit: SearchIndex.Hit { hits[index] }
+    }
+    @Published private(set) var find: FindWalk?
+
+    func startFind(query: String, hits: [SearchIndex.Hit], at index: Int) {
+        guard hits.indices.contains(index) else { return }
+        find = FindWalk(query: query, hits: hits, index: index)
+        goFind()
+    }
+    func stepFind(_ delta: Int) {
+        guard var f = find, f.hits.indices.contains(f.index + delta) else { return }
+        f.index += delta
+        find = f
+        goFind()
+    }
+    func endFind() {
+        find = nil
+        run("window.__swFind && window.__swFind(null);")
+    }
+    private func goFind() {
+        guard let f = find else { return }
+        open(path: f.hit.path)
+        // a turn within the page fires no page load; a load re-marks in pageSettled
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) { [weak self] in self?.markFind() }
+    }
+    /// The word, marked in the verse on screen. The JST keys its verses by
+    /// file position, not by verse number (nav_engine.js), so a JST hit is
+    /// opened but never marked: a mark there could fall on the wrong verse.
+    func markFind() {
+        guard let f = find else { return }
+        let key = f.hit.row.volume == "jst" ? "" : Self.verseKey(f.hit.row.ref)
+        run("window.__swFind && window.__swFind({ q: \(jsString(f.query)), key: \(jsString(key)) });")
+    }
+    /// "1 Nephi 3:7" → "1 Nephi|3|7", the page's data-verse-key.
+    static func verseKey(_ ref: String) -> String {
+        let (book, ch, vs) = SearchIndex.place(ref)
+        return "\(book)|\(ch)|\(vs)"
     }
 }
 
