@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Navy window, no action bar: Compose draws everything. -->
+    <!-- Navy window, no action bar: Compose draws everything. The system bars
+         are enableEdgeToEdge's (MainActivity) and the shell's own bands, not
+         the theme's: statusBarColor and navigationBarColor are deprecated from
+         Android 15, which ignores them, and Play flags an app that sets them. -->
     <style name="Theme.SeferMormon" parent="android:Theme.Material.NoActionBar">
         <item name="android:windowBackground">@color/navy</item>
-        <item name="android:statusBarColor">@color/navy</item>
-        <item name="android:navigationBarColor">@color/navy</item>
         <item name="android:windowLightStatusBar">false</item>
     </style>
 
