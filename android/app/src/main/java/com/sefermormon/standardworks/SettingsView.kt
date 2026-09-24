@@ -178,7 +178,7 @@ private fun spanTheGlass(w: Window) {
  */
 @SuppressLint("SetJavaScriptEnabled", "JavascriptInterface")
 private fun sitePageWebView(ctx: Context, shell: WebShell, path: String): WebView {
-    val web = WebView(ctx)
+    val web = ReaderWebView(ctx)
     web.settings.apply {
         javaScriptEnabled = true
         domStorageEnabled = true
