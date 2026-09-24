@@ -170,7 +170,9 @@ fun ShellRoot(shell: WebShell) {
     // THE STATUS BAR SITS ON WHAT IS UNDER IT: the page's paper over the
     // reader and above a panel (the clock in ink on Light and Sepia), the
     // navy bar over Search. The gesture handle reads on the paper or panel
-    // beneath it.
+    // beneath it; three-button navigation gets the chrome's band behind it
+    // (below). The bars themselves are clear on every Android version
+    // (MainActivity.drawEdgeToEdge).
     val onPaper = shell.tab != WebShell.Tab.SEARCH
     val view = LocalView.current
     val gestureNav = WindowInsets.tappableElement.getBottom(LocalDensity.current) == 0
@@ -202,6 +204,14 @@ fun ShellRoot(shell: WebShell) {
                     // Search, the one whole page: it ends where the floating row begins
                     if (shell.tab == WebShell.Tab.SEARCH) {
                         CompositionLocalProvider(LocalRowInset provides overlay) { SearchView(shell) }
+                    }
+                    // THREE-BUTTON NAVIGATION ON THE CHROME (user, 2026-09-24:
+                    // "i like the navy band"): back, home and recents sit on the
+                    // chrome's band, not over the text, as the status bar sits
+                    // on the paper's. The gesture handle needs none.
+                    if (!gestureNav) {
+                        Box(Modifier.align(Alignment.BottomCenter).fillMaxWidth()
+                            .windowInsetsBottomHeight(WindowInsets.navigationBars).background(p.chrome))
                     }
                     // The row, or the player in its place while the page reads:
                     // a capsule above the gesture bar, inset from the edges.

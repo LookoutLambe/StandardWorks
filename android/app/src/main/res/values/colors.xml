@@ -3,4 +3,10 @@
     <!-- The site's chrome (reader.css chrome token). Everything else is cut from
          AppShell.palette at runtime, per theme. -->
     <color name="navy">#1B2A41</color>
+    <!-- The navigation bar behind the system's own buttons. Below Android 10
+         a transparent bar leaves white buttons over the page, so it is navy;
+         from 10 (values-v29) it is clear and Android keeps the buttons
+         readable itself (enforceNavigationBarContrast). The app's own inset
+         handling and floating row do the rest (ShellRoot). -->
+    <color name="system_nav_bar">#1B2A41</color>
 </resources>

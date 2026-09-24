@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android 10+: a clear navigation bar; the system scrims three-button
+         navigation for contrast and leaves the gesture handle bare. -->
+    <color name="system_nav_bar">@android:color/transparent</color>
+</resources>
