@@ -40,7 +40,7 @@
     /* ...but only inside the APPS. On the website itself — the phone web
        shell, html.sw-web-shell — the landing page IS the website's home and
        keeps every part of it. */
-    'html:not(.sw-web-shell) #sw-beta-invite, html:not(.sw-web-shell) .landing-app-store, html:not(.sw-web-shell) .landing-update-note, html:not(.sw-web-shell) .landing-after,',
+    'html:not(.sw-web-shell) .landing-app-store, html:not(.sw-web-shell) .landing-update-note, html:not(.sw-web-shell) .landing-after,',
     'html:not(.sw-web-shell) .hub-front, html:not(.sw-web-shell) .hub-sources, html:not(.sw-web-shell) .hub-footer-colophon, html:not(.sw-web-shell) .hub-footer-copy, html:not(.sw-web-shell) .shelf-foot,',
     'html:not(.sw-web-shell) .sw-chrome-print, html:not(.sw-web-shell) #safari-browser-tip { display: none !important; }',
     /* LISTEN IS IN THE APP'S ROW. The page's floating transport pill and

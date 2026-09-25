@@ -171,8 +171,8 @@ private fun spanTheGlass(w: Window) {
  * The page is IN THE APP, so it is told so the way the reader is: the port's
  * name stands the site's phone web shell down (pwa_shell.js gates on
  * window.AndroidShell; without it the sheet grew a second six-icon row), and
- * shell_start.js keeps the website's own things on the website (the testers'
- * invitation, the store cards). Nothing else of the reader's: no bar scripts,
+ * shell_start.js keeps the website's own things on the website (the store
+ * cards). Nothing else of the reader's: no bar scripts,
  * no speech, and the port is deaf, so the sheet is read and never drives the
  * shell.
  */
