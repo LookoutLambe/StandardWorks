@@ -684,7 +684,7 @@ var ch4Verses = [
     ["מְאֹד","exceedingly"],
     ["׃",""]
   ]},
-  { num: "י", words: [["וַתְּצִיקֵנִי","and I was constrained"], ["הָרוּחַ","by the Spirit"], ["לַהֲרֹג","that I should kill"], ["אֶת־לָבָן","Laban"], ["וָאֹמַר","but I said"], ["בְּלִבִּי","in my heart"], ["מֵעוֹלָם","never"], ["לֹא־שָׁפַכְתִּי","I have not shed"], ["דַּם־אָדָם","the blood of man"], ["וָאֶסּוֹג","and I shrunk"], ["וָאֶחְפֹּץ","and I desired"], ["לְבִלְתִּי","I might not"], ["הׇרְגוֹ","slay him"], ["׃",""]]},
+  { num: "י", words: [["וַתְּצִיקֵנִי","and I was constrained"], ["הָרוּחַ","by the Spirit"], ["לַהֲרֹג","that I should kill"], ["אֶת־לָבָן","Laban"], ["וָאֹמַר","but I said"], ["בְּלִבִּי","in my heart"], ["מֵעוֹלָם","never"], ["לֹא־שָׁפַכְתִּי","I have not shed"], ["דַּם־אָדָם","the blood of man"], ["וָאֶסּוֹג","and I shrunk"], ["וָאֶחְפֹּץ","and I desired"], ["לְבִלְתִּי","not to"], ["הׇרְגוֹ","slay him"], ["׃",""]]},
   { num: "יא", words: [["וַיֹּאמֶר","and said"], ["הָרוּחַ","the Spirit"], ["אֵלַי","unto me"], ["שֵׁנִית","again"], ["הִנֵּה","behold"], ["נָתַן","hath delivered"], ["יְהוָה","the Lord"], ["אֹתוֹ","him"], ["בְּיָדֶיךָ","into your hands"], ["וְאַף","yea, and"], ["יָדַעְתִּי","I also knew"], ["כִּי","that"], ["בִקֵּשׁ","he had sought"], ["לָקַחַת","to take"], ["אֶת־נַפְשִׁי","mine own life"], ["וְאַף","yea, and"], ["לֹא־שָׁמַע","he hearkened not"], ["לְמִצְוֹת","unto the commandments of"], ["יְהוָה","the Lord"], ["וְגַם","and also"], ["לָקַח","had taken away"], ["אֶת־רְכוּשֵׁנוּ","our property"], ["׃",""]]},
   { num: "יב", words: [["וַיֹּאמֶר","and said"], ["הָרוּחַ","the Spirit"], ["אֵלַי","unto me"], ["שֵׁנִית","again"], ["הׇרְגֵהוּ","slay him"], ["כִּי־נָתַן","for hath delivered"], ["יְהוָה","the Lord"], ["אֹתוֹ","him"], ["בְּיָדֶיךָ","into your hands"], ["׃",""]]},
   { num:"יג", words:[
@@ -1096,8 +1096,8 @@ var ch6Verses = [
     ["עַל־כֵּן","wherefore"],
     ["אֲצַוֶּה","I shall give commandment"],
     ["אֶת־זַרְעִי","unto my seed"],
-    ["לְבִלְתִּי","that not"],
-    ["מַלֵּא","shall they fill"],
+    ["לְבִלְתִּי","not to"],
+    ["מַלֵּא","fill"],
     ["אֶת־הַלֻּחֹת","the plates"], ["הָאֵלֶּה","these"],
     ["בַּדְּבָרִים","with things"],
     ["אֲשֶׁר","which"],
@@ -3902,7 +3902,7 @@ var ch20Verses = [
   { num: "ו", words: [["רָאִיתָ","you have seen"], ["וְשָׁמַעְתָּ","and heard"], ["כׇל־זֹאת","all this"], ["וְאַתֶּם","and you"], ["הֲלוֹא","shall not"], ["תַגִּידוּ","declare them"], ["וְהֶרְאֵיתִיךָ","and I have shewed you"], ["חֲדָשׁוֹת","new things"], ["מֵעַתָּה","from this time"], ["וּנְצֻרוֹת","even hidden things"], ["וְלֹא","and not"], ["יְדַעְתָּם","did you know them"], ["׃",""]]},
   { num: "ז", words: [["עַתָּה","now"], ["נִבְרְאוּ","are they created"], ["וְלֹא","and not"], ["מֵאָז","from of old"], ["וְלִפְנֵי","and before"], ["יוֹם","and before this day"], ["וְלֹא","and not"], ["שְׁמַעְתָּם","you heard them"], ["הֻגְּדוּ","were they declared"], ["לְךָ","unto you"], ["פֶּן־תֹּאמַר","lest you should say"], ["הִנֵּה","behold"], ["יְדַעְתִּין","I knew them"], ["׃",""]]},
   { num: "ח", words: [["גַּם","yea"], ["לֹא־שָׁמַעְתָּ","you heard not"], ["גַּם","yea"], ["לֹא","not"], ["יָדַעְתָּ","did you know"], ["גַּם","yea"], ["מֵאָז","from of old"], ["לֹא־פִתְּחָה","was not opened"], ["אׇזְנֶךָ","your ear"], ["כִּי","for"], ["יָדַעְתִּי","I knew"], ["בָּגוֹד","very treacherously"], ["תִּבְגּוֹד","you would deal treacherously"], ["וּפֹשֵׁעַ","and a transgressor"], ["מִבֶּטֶן","from the womb"], ["קֹרָא","were you called"], ["לָךְ","unto you"], ["׃",""]]},
-  { num: "ט", words: [["אַךְ","nevertheless"], ["לְמַעַן","for"], ["שְׁמִי","My name's sake"], ["אַאֲרִיךְ","will I defer"], ["אַפִּי","Mine anger"], ["וּתְהִלָּתִי","and for My praise"], ["אֶחֱטׇם־לָךְ","will I refrain from you"], ["לְבִלְתִּי","that not"], ["הַכְרִיתֶךָ","I cut you off"], ["׃",""]]},
+  { num: "ט", words: [["אַךְ","nevertheless"], ["לְמַעַן","for"], ["שְׁמִי","My name's sake"], ["אַאֲרִיךְ","will I defer"], ["אַפִּי","Mine anger"], ["וּתְהִלָּתִי","and for My praise"], ["אֶחֱטׇם־לָךְ","will I refrain from you"], ["לְבִלְתִּי","not to"], ["הַכְרִיתֶךָ","cut you off"], ["׃",""]]},
   { num:"י", words:[
     ["כִּי","for"],
     ["הִנֵּה","behold"],
