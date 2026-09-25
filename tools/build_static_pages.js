@@ -376,15 +376,18 @@ function renderVerse(v, i, english) {
    on traffic this site already has. It was on no page at all: a site with
    1,264 indexed pages never once told an iPhone reader the app existed.
 
-   NOT ON THE 1,701 CHAPTER PAGES, deliberately. The tag changes nothing Google
-   indexes, but putting it in head() would rewrite every page and reset every
-   lastmod, and this month's whole problem was 426 pages Google had discovered
-   and never crawled — a site-wide refresh spends the crawl budget re-reading
-   what it already has. It also lands mid-flight in the four-book snippet test.
-   So: the pages people actually land on now, and the chapter pages folded into
-   whatever corpus change ships next, when their lastmod moves anyway.
+   ON EVERY PAGE since 2026-09-24, from head(). It first went only on the
+   volume indexes, the hub and the Hebrew landing (d8fde771), held off the
+   1,701 chapter pages while Google was still crawling 426 of them for the
+   first time, because it rewrites every page and moves every lastmod. Then
+   the App Store's own numbers settled it: 122 product-page views in three
+   months, about one a day, while those chapter pages are where the site's
+   search traffic lands, mostly on phones (user: "no one is even trying to
+   find it in apple"). The footer's "iPhone app" link (foot) reaches the
+   desktop and Android readers the tag cannot.
    WKWebView ignores it, so it is a no-op inside the app's own bundled copy. */
 const APP_BANNER = '<meta name="apple-itunes-app" content="app-id=6767954376">\n';
+const APP_STORE_URL = 'https://apps.apple.com/us/app/sefer-mormon-standard-works/id6767954376';
 
 function head(rel, title, desc, canonical, extra, lang) {
   const he = lang === 'he';
@@ -404,7 +407,7 @@ function head(rel, title, desc, canonical, extra, lang) {
     '<link rel="icon" href="' + rel + 'icons/icon-192.png?v=3">\n' +
     '<link rel="stylesheet" href="' + rel + 'fonts/david_libre.css?v=2">\n' +
     '<link rel="stylesheet" href="' + rel + 'hebrew/static.css?v=1">\n' +
-    (extra || '') + '</head>\n';
+    APP_BANNER + (extra || '') + '</head>\n';
 }
 function chrome(rel, crumbs, home) {
   const trail = crumbs.map((c, i) => c.href
@@ -415,7 +418,7 @@ function chrome(rel, crumbs, home) {
 }
 function foot(rel, lang) {
   /* the footer is English; on a Hebrew page it keeps its own direction */
-  return '<footer class="foot"' + (lang === 'he' ? ' lang="en" dir="ltr"' : '') + '><p><a href="' + rel + '">sefermormon.com</a> · <a href="' + rel + 'hebrew-study.html">How to read pointed Hebrew</a> · <a href="' + rel + 'vocabulary.html">Vocabulary by frequency</a> · <a href="' + rel + 'hebrew/index.html">All chapters</a> · <a href="' + rel + 'in-print.html">In print</a> &middot; <a href="' + rel + 'privacy.html">Privacy</a></p>' +
+  return '<footer class="foot"' + (lang === 'he' ? ' lang="en" dir="ltr"' : '') + '><p><a href="' + rel + '">sefermormon.com</a> · <a href="' + rel + 'hebrew-study.html">How to read pointed Hebrew</a> · <a href="' + rel + 'vocabulary.html">Vocabulary by frequency</a> · <a href="' + rel + 'hebrew/index.html">All chapters</a> · <a href="' + rel + 'in-print.html">In print</a> · <a href="' + APP_STORE_URL + '">iPhone app</a> &middot; <a href="' + rel + 'privacy.html">Privacy</a></p>' +
     '<p>Hebrew Interlinear Standard Works. The interlinear reader adds transliteration, roots, cross-references, notes and read-aloud.</p></footer>\n</body>\n</html>\n';
 }
 function breadcrumbLd(items) {
@@ -528,7 +531,7 @@ function buildVolume(vol, urls) {
   const heUrl = vol.heLanding ? SITE + 'hebrew/' + vol.slug + '/' + vol.heLanding.file : null;
   const vhtml = head(vrel, volName(vol) + ' — ' + vol.he + ' · Sefer Mormon',
     vol.blurb + ' ' + pages + ' chapters, each a plain page with the Hebrew and its word-by-word English.', vurl,
-    APP_BANNER + (heUrl ? hreflang(vurl, heUrl) : '') + breadcrumbLd(crumbs)) +
+    (heUrl ? hreflang(vurl, heUrl) : '') + breadcrumbLd(crumbs)) +
     '<body class="volume">\n' + chrome(vrel, crumbs) + '<main>\n<h1>' + esc(volName(vol)) + ' <span class="h1he" lang="he" dir="rtl">' + esc(vol.he) + '</span></h1>\n' +
     '<p class="lede">' + esc(vol.blurb) + ' <a class="open" href="' + vrel + vol.page + '">Open the ' + esc(vol.en) + ' reader</a>.' +
     (heUrl ? ' <a href="' + vol.heLanding.file + '" lang="he" dir="rtl">' + esc(vol.heLanding.h1) + '</a>' : '') + '</p>\n' +
@@ -556,7 +559,7 @@ function buildHebrewLanding(vol, books, sets, enUrl, heUrl) {
     '<section class="book"><h2>' + esc(b.he || b.en) + '</h2>' +
     '<p class="cells">' + b.chapters.filter(c => sets[c.id]).map(c =>
       '<a href="' + b.slug + '/' + c.n + '.html" title="' + esc(chapterHeb(b, c)) + '">' + hebNum(c.n) + '</a>').join('') + '</p></section>').join('\n');
-  const html = head(vrel, L.title, L.desc, heUrl, APP_BANNER + hreflang(enUrl, heUrl) + HE_STYLE + ld, 'he') +
+  const html = head(vrel, L.title, L.desc, heUrl, hreflang(enUrl, heUrl) + HE_STYLE + ld, 'he') +
     '<body class="volume">\n' + chrome(vrel, crumbs, vrel + 'he.html') + '<main>\n<h1>' + esc(L.h1) + '</h1>\n' +
     L.intro(reader).map(t => '<p class="intro">' + t + '</p>').join('\n') + '\n' +
     list + '\n<p class="other-lang" lang="en" dir="ltr"><a href="index.html">This page in English &rarr;</a></p>\n</main>\n' + foot(vrel, 'he');
@@ -570,7 +573,7 @@ function buildHub(summary, urls) {
   const cards = summary.map(s =>
     '<li><a href="' + s.vol.slug + '/index.html"><span class="vhe" lang="he" dir="rtl">' + esc(s.vol.he) + '</span><span class="ven">' + esc(s.vol.en) + '</span><span class="vn">' + s.pages + ' chapters</span></a><p>' + esc(s.vol.blurb) + '</p></li>').join('\n');
   const html = head(rel, 'The Standard Works in Hebrew, chapter by chapter · Sefer Mormon',
-    'Every chapter of the Old Testament, New Testament, Book of Mormon, Doctrine and Covenants, Pearl of Great Price and Joseph Smith Translation in Hebrew, word by word with English glosses.', url, APP_BANNER + breadcrumbLd(crumbs)) +
+    'Every chapter of the Old Testament, New Testament, Book of Mormon, Doctrine and Covenants, Pearl of Great Price and Joseph Smith Translation in Hebrew, word by word with English glosses.', url, breadcrumbLd(crumbs)) +
     '<body class="hub">\n' + chrome(rel, crumbs) + '<main>\n<h1>The Standard Works in Hebrew <span class="h1he" lang="he" dir="rtl">כתבי הקודש</span></h1>\n' +
     '<p class="lede">Plain pages, one per chapter: the Hebrew with every word glossed in English. The <a class="open" href="' + rel + '">interlinear reader</a> adds transliteration, roots, cross-references, notes and read-aloud.</p>\n' +
     '<ul class="volumes">\n' + cards + '\n</ul>\n</main>\n' + foot(rel);
