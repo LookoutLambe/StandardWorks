@@ -121,7 +121,6 @@ body.dual-mode .word-unit { padding-bottom: 3px; }
 #nav-hint.show { opacity: 1; }
 body.dark-mode #nav-hint { background: rgba(200,200,220,0.88); color: #111; }
 .landing-divider { border: none; border-top: 2px solid var(--rule); margin: 20px auto; max-width: 200px; }
-body.dark-mode .tl { color: var(--gloss); }
 body.dark-mode .page { background: var(--chrome); }
 /* #0d111c and #303648 were navy — leftovers from the scheme before the
    one before it, so in dark mode the control bars and verse rules were still
@@ -318,8 +317,9 @@ body:not(.dual-mode) .verse > .word-flow { width: 100%; }
    At --t1 it was 21px against the transliteration's 16.8px and the
    Hebrew's 42px — half the Hebrew, and visibly the loudest thing under
    each word, so the eye read the English line first and the Hebrew
-   became the decoration. Ranked below the Hebrew, level with the
-   transliteration: colour and position still separate the two tiers.
+   became the decoration. Ranked below the Hebrew by SIZE, level with the
+   transliteration: since 2026-09-25 all three tiers share the Hebrew's
+   ink (--gloss, and .tl below), so size and order do the ranking.
    max-width is re-expressed so the wrap point does not move — 7.2em of
    the old size is ~9em of this one, and glosses like "An account of"
    should break exactly where they broke before. */
@@ -333,12 +333,18 @@ body:not(.dual-mode) .verse > .word-flow { width: 100%; }
   max-width: 9em;
   margin-top: 2px !important;
 }
+/* One ink for all three tiers (user, 2026-09-25: the gloss "the same color as
+   the hebrew", then "even transliteration same color"). The transliteration
+   was --ink-light at 62% and a beginner could barely read it. Size and order
+   rank the tiers now: Hebrew at --t4, then the transliteration, then the
+   gloss. !important because the six pages each carry a grey 70% copy of this
+   rule that loads after this file. */
 .tl {
-  color: var(--ink-light);
+  color: var(--hw) !important;
   font-size: var(--t0) !important;
   line-height: 1.2 !important;
   margin-top: 2px !important;
-  opacity: .62 !important;
+  opacity: 1 !important;
 }
 
 /* ── The chapter summary's interlinear — THE one home ─────────────────
@@ -1001,7 +1007,15 @@ body {
   --bg: var(--paper);
   --bg-deep: var(--paper-2);
   --ink-light: var(--ink-3);
-  --gloss: var(--ink-3);
+  /* The gloss is written in the Hebrew's own ink (user, 2026-09-25, after
+     an Android tester: "English could be more prominent for beginners").
+     It was --ink-3, the transliteration's grey, and a beginner leaning on
+     the English found it faint, worst in Dark. The transliteration followed
+     ("even transliteration same color"). Size and order rank the tiers now:
+     the Hebrew at --t4, the transliteration and the gloss at --t0 beneath
+     it. Anything that wants the old grey is not a gloss and says
+     --ink-light. */
+  --gloss: var(--hw);
   /* --accent chained to --gold (= --on-chrome, near-white) while its own
      sibling --accent-deep already correctly pointed at --here. Every real
      consumer of --accent — 30+ inline `background: var(--accent); color:
@@ -2663,7 +2677,6 @@ body.dark-mode #glossary-panel {
 .xref-ref-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
 /* === ANNOTATIONS PANEL === */ #annotations-panel { display: none; position: fixed; top: 0; right: 0; bottom: 0; width: 360px; max-width: 90vw; background: var(--bg); border-left: 2px solid var(--accent); z-index: var(--z-panel); overflow-y: auto; padding: 16px; font-family: 'David Libre', 'Georgia', serif; transform: translateX(100%); transition: transform 0.25s ease; }
 /* === CROSS-REFERENCES === */ .xref-marker { display: none; }
-/* === DARK MODE === */ body.dark-mode .tl { color: var(--gloss); }
 /* === Docked selection toolbar: RIGHT side (Hebrew is RTL), always visible while reading, no overlap === */ #sel-toolbar { left:auto!important;right:6px!important;top:50%!important;bottom:auto!important;transform:translateY(-50%)!important;max-height:90vh;overflow-y:auto;flex-direction:column!important;flex-wrap:nowrap!important;max-width:none!important; }
 /* === ENHANCED POPUP (Strong's + Root) === */ .popup-strong { font-family: 'David Libre', 'Georgia', serif; font-size: 0.85em; color: var(--ink-light); text-align: center; margin-bottom: 4px; direction: ltr; }
 /* === GLOSSARY PANEL === */ #glossary-panel { display: none; position: fixed; top: 0; left: 0; bottom: 0; width: 380px; max-width: 90vw; background: var(--bg); border-right: 2px solid var(--accent); z-index: var(--z-panel); overflow-y: auto; padding: 16px; font-family: 'David Libre', 'Georgia', serif; transform: translateX(-100%); transition: transform 0.25s ease; }
