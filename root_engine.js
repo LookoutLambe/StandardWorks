@@ -624,6 +624,13 @@
   // through FAMILY; a bare string returns as is and never reaches baseRoot —
   // which is the point for a name (Lehi must not become "jaw").
     var SURFACE_PINS = {
+    // Forms earlier stages misfiled (2026-09-25): Isaiah 28:16's foundation מוּסָד
+    // went to H4143, which has no family link (the BDB gate refuses the מ
+    // preformative); Jacob 7:8's הִכְלַמְתִּיו went to מת "men", וַיַּכְלֵם to יכל
+    // "able", and "devilish" to Shaddai. Every corpus use of each form was read:
+    // all mean foundation / confound / devilish (Isa 28:16, 1 Cor 3:11, Moses too).
+    'מוּסָד': 'יסד', 'לְמוּסָד': 'יסד', 'הַמּוּסָד': 'יסד', 'אֶת־הַמּוּסָד': 'יסד', 'הַמּוּסָּד': 'יסד', 'מוּסַדְכֶם': 'יסד',
+    'הִכְלַמְתִּיו': 'כלם', 'וַיַּכְלֵם': 'כלם', 'שֵׁדִיִּים': 'שד', 'וְשֵׁדִיִּים': 'שד',
     // church/synagogue spellings the כנס block missed: 15 "synagogues" tokens
     // filed under נסס "banner" (the scorecard bug pass, 2026-09-12)
     'כְנֵסִיּוֹת': 'כנס', 'כְּנֶסִיַּת': 'כנס',
