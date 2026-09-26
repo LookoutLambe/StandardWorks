@@ -41,6 +41,10 @@ final class WebShell: ObservableObject {
     /// The Search tab's text, kept here so the tab keeps it across visits.
     @Published var searchQuery = ""
     @Published var searchPresented = false
+    /// The page's Library drawer, open or shut (shell_end.js, 14): the row
+    /// lights Library while it is open, and a second tap on Library shuts it
+    /// (design pass, 2026-09-26: the drawer opened with Read still lit).
+    @Published var drawerOpen = false
     /// The theme the page is showing ("light", "sepia", "dark"), as last read
     /// by LocalSiteWebViewLogger.matchPaper, so the shell's own surfaces — the
     /// bottom band, the player, the native bars — are cut from the page's
@@ -175,8 +179,9 @@ final class WebShell: ObservableObject {
         case "place": refreshWhere()
         // The page's chapter pill, tapped in the app: the page's drawer at
         // this book — one contents, not two (app-shell/shell_end.js, 10).
-        // (The drawer's {op:'drawer'} is for a shell with a back button:
-        // Android's; the default case lets it pass here.)
+        // the page's drawer opened or shut (shell_end.js, 14): the row's
+        // Library icon follows it, and a second tap on Library shuts it
+        case "drawer": drawerOpen = (message["open"] as? Bool) ?? false
         case "chapters":
             openChapters(volumeKey: (message["volume"] as? String) ?? "", chapterId: (message["chapter"] as? String) ?? "")
         case "modes":
@@ -321,6 +326,8 @@ final class WebShell: ObservableObject {
     /// still in view beside it, with its own search, volume tabs and chapter
     /// grids. The native Library is kept for a page with no drawer (the JST).
     func showLibrary() {
+        // open already, the icon is a toggle: a second tap shuts the drawer
+        if drawerOpen, tab == .read { closeDrawer(); return }
         tab = .read
         call("if (window.NavEngine && NavEngine.open) { NavEngine.open(); return true; } return false;") { [weak self] v in
             guard let self, (v as? Bool) != true else { return }
@@ -334,6 +341,7 @@ final class WebShell: ObservableObject {
     }
     /// Closes the page's drawer, if it is open.
     func closeDrawer() {
+        drawerOpen = false                                 // the observer confirms it
         run("window.NavEngine && NavEngine.close && NavEngine.close();")
     }
 
@@ -620,11 +628,14 @@ final class WebShell: ObservableObject {
         }
         lastOffset = wv.scrollView.contentOffset.y
         if chromeHidden { chromeHidden = false }
+        drawerOpen = false                                 // a new page opens with its drawer shut
         pushOverlayHeight()
         pushFullScreen()
         refreshWhere()
         refreshListen()
         markFind()
+        pushFinding()
+        seedTextSizeFromDynamicType(wv)
         wv.evaluateJavaScript("(function(){ var s = document.getElementById('sizeSlider'); var p = document.getElementById('page'); var v = s ? parseInt(s.value, 10) : NaN; if (isNaN(v) && p) v = parseInt(p.style.fontSize, 10); return isNaN(v) ? 100 : v; })()") { [weak self] v, _ in
             if let n = v as? Int { self?.textSize = n } else if let d = v as? Double { self?.textSize = Int(d) }
         }
@@ -681,7 +692,38 @@ final class WebShell: ObservableObject {
     func startFind(query: String, hits: [SearchIndex.Hit], at index: Int) {
         guard hits.indices.contains(index) else { return }
         find = FindWalk(query: query, hits: hits, index: index)
+        pushFinding()
         goFind()
+    }
+    /// WHILE A SEARCH IS WALKED THE CHAPTER ROW FOLDS (shell_start.js: the
+    /// sw-app-finding fold beside the reading one). The find bar already says
+    /// where you are; header, chapter row and find bar together left a third
+    /// of the screen for the text (design pass, 2026-09-26). Put on every
+    /// page the walk opens, since a load starts the page without it.
+    private func pushFinding() {
+        run("document.documentElement.classList.toggle('sw-app-finding', \(find != nil));")
+    }
+    /// THE PHONE'S TEXT SIZE, ONCE PER VOLUME. A reader who set Larger Text in
+    /// the phone's Settings opens each volume at that size the first time;
+    /// after that the slider is theirs, and a size the page has already
+    /// stored is never overridden (design pass, 2026-09-26: at the largest
+    /// Dynamic Type the sheets scaled and the verses stayed at 100%).
+    private func seedTextSizeFromDynamicType(_ wv: WKWebView) {
+        let n: Int
+        switch UIApplication.shared.preferredContentSizeCategory {
+        case .extraSmall, .small, .medium, .large: n = 100
+        case .extraLarge: n = 110
+        case .extraExtraLarge: n = 120
+        case .extraExtraExtraLarge: n = 130
+        default: n = 150                                   // the accessibility sizes
+        }
+        wv.evaluateJavaScript("(function(){ var v = (window.READER && READER.vol) || 'bom'; return [v, localStorage.getItem(v + '-font-size') === null]; })()") { [weak self] v, _ in
+            guard let self, let a = v as? [Any], let vol = a.first as? String else { return }
+            let key = "shell.textSizeSeeded." + vol
+            guard !UserDefaults.standard.bool(forKey: key) else { return }
+            UserDefaults.standard.set(true, forKey: key)
+            if n != 100, (a.last as? Bool) == true { self.setTextSize(n) }
+        }
     }
     func stepFind(_ delta: Int) {
         guard var f = find, f.hits.indices.contains(f.index + delta) else { return }
@@ -691,6 +733,7 @@ final class WebShell: ObservableObject {
     }
     func endFind() {
         find = nil
+        pushFinding()
         run("window.__swFind && window.__swFind(null);")
     }
     private func goFind() {
@@ -753,7 +796,10 @@ struct ShellBar: ViewModifier {
                 }
             }
             .toolbarRole(sheet || closesPanel ? .automatic : .editor)
-            .toolbarBackground(shell.chrome, for: .navigationBar)
+            // the chrome at 85%, the capsules' own number (FloatingChrome), so
+            // a sheet's or page's bar is the same navy glass as the reader's
+            // capsules and not a solid band beside them (design pass, 2026-09-26)
+            .toolbarBackground(shell.chrome.opacity(0.85), for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarColorScheme(.dark, for: .navigationBar)
     }

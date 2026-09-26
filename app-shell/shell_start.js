@@ -41,7 +41,12 @@
        shell, html.sw-web-shell — the landing page IS the website's home and
        keeps every part of it. */
     'html:not(.sw-web-shell) .landing-app-store, html:not(.sw-web-shell) .landing-update-note, html:not(.sw-web-shell) .landing-after,',
-    'html:not(.sw-web-shell) .hub-front, html:not(.sw-web-shell) .hub-sources, html:not(.sw-web-shell) .hub-footer-colophon, html:not(.sw-web-shell) .hub-footer-copy, html:not(.sw-web-shell) .shelf-foot,',
+    /* The footer's colophon and rights line are NOT in this list: they are
+       the edition's back matter and the app carries them like the website
+       (user, 2026-09-26: "you took off the disclaimer... everything below").
+       Only the landing's prose, the source-edition plates and the shelf's
+       tallies stay website-only. */
+    'html:not(.sw-web-shell) .hub-front, html:not(.sw-web-shell) .hub-sources, html:not(.sw-web-shell) .shelf-foot,',
     'html:not(.sw-web-shell) .sw-chrome-print, html:not(.sw-web-shell) #safari-browser-tip { display: none !important; }',
     /* LISTEN IS IN THE APP'S ROW. The page's floating transport pill and
        its inline "Read aloud" bar above verse one would double it
@@ -55,7 +60,9 @@
        below the page's edge, where the app's row is; a scroll up brings
        it back. The row with Listen never moves. */
     'html #sw-reader-footer { transition: transform .22s ease !important; will-change: transform; }',
-    'html.sw-app-reading #sw-reader-footer { transform: translateY(calc(100% + var(--sw-app-row-h, 0px) + 24px)) !important; pointer-events: none !important; }',
+    /* ...and so does a SEARCH WALK (sw-app-finding, WebShell.pushFinding): the
+       find bar in the row's place already says where you are. */
+    'html.sw-app-reading #sw-reader-footer, html.sw-app-finding #sw-reader-footer { transform: translateY(calc(100% + var(--sw-app-row-h, 0px) + 24px)) !important; pointer-events: none !important; }',
     '@media (prefers-reduced-motion: reduce) { html #sw-reader-footer { transition: none !important; } }',
     'html:not(.sw-web-shell) .hub-footer-contact a[href^="mailto:"] { display: none !important; }',
     /* 7. THE PAGE RUNS UNDER THE STATUS BAR, and the site measures its bar
@@ -138,14 +145,21 @@
        with none (Android, whose status bar is the shell's own; an iPhone on
        its side) it drops to the fade's end, or its top edge is lost in the
        paper (user, 2026-09-23: "the pill needs to be lower a tad bit") */
+    /* NAVY GLASS (user, 2026-09-26: "the floating capsules are not the same
+       color as the theme of the rest of the app"). 60% of the chrome over a
+       blur dimmed to .7 came out a slate grey-blue (87,95,108) on light
+       paper, against the theme's navy (27,42,65). 85% over a blur dimmed to
+       .45 lands on the navy with the page still faintly through it. The
+       native capsules (ShellRoot.swift, FloatingChrome) use the same numbers. */
     'html.sw-app-clear .sw-top-bar-inner { display: flex !important; align-items: center; gap: 6px; margin: max(4px, calc(14px - env(safe-area-inset-top, 0px))) 12px 0; padding: 4px 6px; min-height: 52px; border-radius: 30px;',
-    '  background: color-mix(in srgb, var(--chrome, #1B2A41) 60%, transparent) !important; -webkit-backdrop-filter: blur(22px) saturate(160%) brightness(.7); backdrop-filter: blur(22px) saturate(160%) brightness(.7); box-shadow: 0 6px 22px rgba(0,0,0,.18), inset 0 0 0 1px color-mix(in srgb, var(--on-chrome, #F3EDE2) 9%, transparent); }',
+    '  background: color-mix(in srgb, var(--chrome, #1B2A41) 85%, transparent) !important; -webkit-backdrop-filter: blur(22px) saturate(160%) brightness(.45); backdrop-filter: blur(22px) saturate(160%) brightness(.45); box-shadow: 0 6px 22px rgba(0,0,0,.18), inset 0 0 0 1px color-mix(in srgb, var(--on-chrome, #F3EDE2) 9%, transparent); }',
     'html.sw-app-clear #sw-chrome-nav { flex: 1 1 auto; display: flex; justify-content: center; min-width: 0; }',
     'html.sw-app-clear .sw-chrome-home img { width: 58px !important; height: 38px !important; }',
     'html.sw-app-clear #sw-app-more { width: 44px !important; height: 44px !important; min-width: 44px !important; min-height: 44px !important; padding: 0 !important; border: 0 !important; border-radius: 50% !important; background: color-mix(in srgb, var(--on-chrome, #F3EDE2) 14%, transparent) !important; }',
     'html.sw-app-clear #sw-reader-footer { background: transparent !important; border-top: 0 !important; box-shadow: none !important; }',
-    'html.sw-app-clear #sw-app-chapter-row { margin: 0 12px 8px !important; padding: 5px 6px !important; width: auto !important; border-radius: 30px; gap: 6px;',
-    '  background: color-mix(in srgb, var(--chrome, #1B2A41) 60%, transparent); -webkit-backdrop-filter: blur(22px) saturate(160%) brightness(.7); backdrop-filter: blur(22px) saturate(160%) brightness(.7); box-shadow: 0 -6px 22px rgba(0,0,0,.14), inset 0 0 0 1px color-mix(in srgb, var(--on-chrome, #F3EDE2) 9%, transparent); }',
+    /* 4px + 44px targets + 4px = 52px, the header capsule's own height: one rhythm (design pass, 2026-09-26) */
+    'html.sw-app-clear #sw-app-chapter-row { margin: 0 12px 8px !important; padding: 4px 6px !important; width: auto !important; border-radius: 30px; gap: 6px;',
+    '  background: color-mix(in srgb, var(--chrome, #1B2A41) 85%, transparent); -webkit-backdrop-filter: blur(22px) saturate(160%) brightness(.45); backdrop-filter: blur(22px) saturate(160%) brightness(.45); box-shadow: 0 -6px 22px rgba(0,0,0,.14), inset 0 0 0 1px color-mix(in srgb, var(--on-chrome, #F3EDE2) 9%, transparent); }',
     'html.sw-app-clear #sw-app-chapter-row .sw-app-arrow { border: 0 !important; border-radius: 22px !important; min-height: 44px !important; background: color-mix(in srgb, var(--on-chrome, #F3EDE2) 12%, transparent) !important; }',
     'html.sw-app-clear #sw-app-chapter-row .sw-app-arrow:disabled { background: transparent !important; }',
     'html.sw-app-clear #sw-app-chapter-pill { border: 0 !important; min-height: 44px !important; }',

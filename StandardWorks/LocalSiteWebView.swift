@@ -245,7 +245,7 @@ struct LocalSiteWebView: UIViewRepresentable {
         // the chapter sit in the folding band, in thumb reach; `returnPoint`
         // — the shell marks a way back before every jump it makes.
         config.userContentController.addUserScript(WKUserScript(
-            source: "window.__swShellCaps = { chapters: true, chapterRow: true, returnPoint: true, modes: true, readingDefaults: true, more: true, overlay: true }; document.documentElement.classList.add('sw-app-chapter-row', 'sw-app-modes-in-settings', 'sw-app-row-overlay', 'sw-app-clear', 'sw-app-more'); try { var v = localStorage.getItem('sw-app-dark-variant'); if (v === 'black' || v === 'gray') document.documentElement.classList.add('sw-app-theme-' + v); } catch (e) {}",
+            source: "window.__swShellCaps = { chapters: true, chapterRow: true, returnPoint: true, modes: true, readingDefaults: true, more: true, overlay: true, chapterWord: true }; document.documentElement.classList.add('sw-app-chapter-row', 'sw-app-modes-in-settings', 'sw-app-row-overlay', 'sw-app-clear', 'sw-app-more'); try { var v = localStorage.getItem('sw-app-dark-variant'); if (v === 'black' || v === 'gray') document.documentElement.classList.add('sw-app-theme-' + v); } catch (e) {}",
             injectionTime: .atDocumentStart,
             forMainFrameOnly: true))
         // The app's own surface over the site — the boot redirect, the

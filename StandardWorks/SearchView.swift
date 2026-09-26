@@ -13,6 +13,17 @@ struct SearchView: View {
     /// A volume to search within, or "" for the whole canon.
     @State private var scope = ""
     private var query: Binding<String> { $shell.searchQuery }
+    /// The last five searches, newest first, offered on the empty page
+    /// (design pass, 2026-09-26: the page opened to one line of hint).
+    @AppStorage("shell.recentSearches") private var recentRaw = ""
+    private var recents: [String] { recentRaw.split(separator: "\n").map(String.init).filter { !$0.isEmpty } }
+    private func remember(_ q: String) {
+        let t = q.trimmingCharacters(in: .whitespaces)
+        guard t.count >= 2 else { return }
+        var l = recents.filter { $0.caseInsensitiveCompare(t) != .orderedSame }
+        l.insert(t, at: 0)
+        recentRaw = l.prefix(5).joined(separator: "\n")
+    }
 
     private var grouped: [(String, [SearchIndex.Hit])] {
         var order: [String] = [], byVol: [String: [SearchIndex.Hit]] = [:]
@@ -37,11 +48,24 @@ struct SearchView: View {
                     }
                 }
                 .shellRow(shell)
+                if hits.isEmpty && shell.searchQuery.isEmpty && !recents.isEmpty {
+                    Section {
+                        ForEach(recents, id: \.self) { r in
+                            Button { shell.searchQuery = r } label: {
+                                Label(r, systemImage: "clock.arrow.circlepath").foregroundStyle(shell.ink)
+                            }
+                        }
+                    } header: {
+                        Text("Recent").foregroundStyle(shell.ink2)
+                    }
+                    .shellRow(shell)
+                }
                 ForEach(grouped, id: \.0) { name, list in
                     Section {
                         ForEach(list) { hit in
                             Button {
                                 // the whole list goes with it: the find bar walks it verse by verse
+                                remember(searched)
                                 if let i = hits.firstIndex(where: { $0.id == hit.id }) {
                                     shell.startFind(query: searched, hits: hits, at: i)
                                 } else {

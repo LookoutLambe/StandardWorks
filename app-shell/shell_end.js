@@ -175,7 +175,17 @@
       aNext.setAttribute('aria-label', hNext.getAttribute('aria-label') || 'Next chapter');
       aPrev.setAttribute('aria-label', hPrev.getAttribute('aria-label') || 'Previous chapter');
       var t = hPill ? hPill.textContent : '';
-      pill.querySelector('.sw-app-pill-text').textContent = t || 'Chapters';
+      /* The header already names the book and chapter; under caps.chapterWord
+         the row says only what it opens — the chapter (a section in the D&C,
+         a psalm in the Psalms) — so the same words are not on the screen
+         twice (design pass, 2026-09-26). Front matter has no number and
+         keeps its name. */
+      var shown = t || 'Chapters';
+      if (CAPS.chapterWord && t) {
+        var m = /^(.*?)\s*(\d+)\s*$/.exec(t.trim());
+        if (m) shown = (/^D&C\b/i.test(m[1]) ? 'Section ' : /^Psalm/i.test(m[1]) ? 'Psalm ' : 'Chapter ') + m[2];
+      }
+      pill.querySelector('.sw-app-pill-text').textContent = shown;
       pill.setAttribute('aria-label', (t || 'Chapters') + ' — open the chapters');
     }
     sync();

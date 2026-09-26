@@ -38,7 +38,9 @@ import WebKit
 ///
 ///  5. Website things stay on the website: the App Store card, the Android
 ///     invitation, the Safari home-screen tip, the store bag in the bar, the
-///     landing's prose, the sources and the colophon.
+///     landing's prose and the source editions. The colophon and the rights
+///     line at the foot of the landing are the edition's own back matter and
+///     stay (user, 2026-09-26).
 ///
 ///  6. The bar says what the App Store says: Sefer Mormon: Standard Works.
 enum AppShell {

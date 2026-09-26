@@ -235,6 +235,10 @@ struct ShellTabBar: View {
                 // "on": the page showing, or this chapter bookmarked — gold, filled
                 let on: Bool = {
                     switch item.kind {
+                    // Library is on while the page's drawer is open, and the
+                    // book only while nothing is over it (design pass, 2026-09-26)
+                    case .page(.library): return shell.drawerOpen
+                    case .page(.read): return shell.tab == .read && !shell.drawerOpen
                     case .page(let t): return t == shell.tab
                     case .bookmark: return shell.chapterBookmarked
                     case .listen: return false
@@ -369,9 +373,12 @@ struct ListenBar: View {
                 HStack(spacing: 4) {
                     // The volume's name gives way first (scaled, then cut)
                     // so "Carmit" and the speed always show whole.
-                    Text("\(shell.currentVolume?.name ?? "Hebrew") | Carmit \u{00B7}")
+                    Text(shell.currentVolume?.name ?? "Hebrew")
                         .font(ShellTheme.text(.caption)).foregroundStyle(shell.onChrome.opacity(0.72))
-                        .lineLimit(1).minimumScaleFactor(0.85)
+                        .lineLimit(1).truncationMode(.tail).layoutPriority(0)
+                    Text("| Carmit \u{00B7}")
+                        .font(ShellTheme.text(.caption)).foregroundStyle(shell.onChrome.opacity(0.72))
+                        .fixedSize().layoutPriority(1)
                     Menu {
                         ForEach(shell.listenRates, id: \.self) { r in
                             Button { shell.setListenRate(r) } label: {
@@ -440,12 +447,21 @@ struct ListenBarBelowContent: ViewModifier {
 struct FloatingChrome: View {
     @ObservedObject var shell: WebShell
     var body: some View {
-        // glass, not paint: the system blur, darkened, with 60% of the chrome
-        // over it — the text shows through, and on-chrome stays ≥ 4.5:1
+        // NAVY GLASS. The system blur, dimmed by half, with the theme's chrome
+        // over it at 85%: the capsule is the theme's own navy — measured
+        // (41,54,72) on light paper against the chrome's (27,42,65), the same
+        // as the page's capsules (shell_start.js, sw-app-clear: 85% over a
+        // blur at brightness .45) — with the page still faintly through it.
+        // It was black 30% + chrome 60%, a slate grey-blue (90,98,110) that
+        // matched nothing else in the app (user, 2026-09-26: "the floating
+        // capsules are not the same color as the theme of the rest of the
+        // app") and left the selected gold icon at 2.9:1; now 4.4:1. A tinted
+        // DARK material alone brightened to (69,79,95): the black layer is
+        // what pins the blur's ground before the navy goes over it.
         ZStack {
             Rectangle().fill(.ultraThinMaterial)
-            Color.black.opacity(0.3)
-            shell.chrome.opacity(0.6)
+            Color.black.opacity(0.5)
+            shell.chrome.opacity(0.85)
         }
         .environment(\.colorScheme, shell.dark ? .dark : .light)
     }
