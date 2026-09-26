@@ -303,10 +303,14 @@ html.sw-shell-pending #annotations-panel, html.sw-shell-pending #glossary-panel 
 }
 /* the Hebrew chapter name is redundant beside its own numeral at this density */
 .nav-ch-cell .ch-heb { display: none; }
+/* One face, David Libre, here too: the grid was the only place a second
+   typeface (SF Mono) showed. Tabular figures keep the columns aligned, which
+   is what the monospace was for (design pass, 2026-09-26). */
 .nav-ch-cell .ch-num {
   font-size: var(--t-body);
   color: var(--ink-2);
-  font-family: ui-monospace, Menlo, monospace;
+  font-family: 'David Libre', Georgia, serif;
+  font-variant-numeric: tabular-nums;
 }
 .nav-ch-cell:hover { background: color-mix(in srgb, var(--ink) 4%, transparent); }
 .nav-ch-cell.current { border-bottom-color: var(--here); }

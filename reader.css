@@ -279,11 +279,15 @@ body:not(.dual-mode) .verse > .word-flow { width: 100%; }
    for both the Hebrew and its gloss and stopped looking like the thing it is
    teaching. One declaration, two scopes; never a second copy of the numbers. */
 #page, .sw-front {
-  --t0: 0.75em;    /* the under-word tier: gloss + translit  12/16 */
+  /* 13.4/16, not 12/16: the Book of Mormon page already showed its glosses at
+     13.4px by a rule of its own while the five other readers sat at 12px, and
+     a tester's first note on the app was that the English was hard to read
+     (design pass, 2026-09-26). One size on every page, at the book's. */
+  --t0: 0.84em;    /* the under-word tier: gloss + translit  13.4/16 */
   --t1: 0.94em;    /* verse numerals, small labels           15/16 */
   /* The Hebrew was 1.875em (30/16) and only ~3 words fitted on a phone
-     line. Density has to come from HERE: --t0 is already exactly 12px at
-     100%, the legibility floor, so the gloss cannot give anything back —
+     line. Density has to come from HERE: --t0 sits at the legibility
+     floor (see its note), so the gloss cannot give anything back —
      the Hebrew is also what sets the line height and the column width, so
      it is the right lever anyway. 1.45em = 23/16, a quarter smaller, and
      A+ still scales the whole page for anyone who wants the old size. */

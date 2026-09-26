@@ -59,9 +59,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="stylesheet" href="nav_engine.css?v=51">
+<link rel="stylesheet" href="nav_engine.css?v=52">
 <link rel="stylesheet" href="site_chrome.css?v=77">
-<link rel="stylesheet" href="reader.css?v=131">
+<link rel="stylesheet" href="reader.css?v=132">
 <style>
 
 /* ========== THEME ========== */
@@ -417,11 +417,12 @@ button, input, select, textarea, option, optgroup, ::placeholder { font-family: 
   max-width: 640px;
 }
 html.sw-in-app .landing-app-store { display: none; }
-/* The site's primary button: one rule, worn by the reading door under the
-   specimen (.landing-btn) and by the App Store button; same language as the
-   Search button (.gs-go)
-   directly below it: --accent fill, --on-accent text, a dark --header-bg
-   edge. It used to be an outlined dark-chrome button whose border and label
+/* The site's primary button, worn by the App Store button, in the same
+   language as the Search button (.gs-go): --accent fill, --on-accent text, a
+   dark --header-bg edge. (A second wearer, a reading door under the
+   specimen, lived here for a day on 2026-09-26; the user cut it as
+   redundant with the six covers right below, which open the same book.)
+   It used to be an outlined dark-chrome button whose border and label
    were --accent-light — and --accent-light is --here-chrome, ALWAYS bright
    mint whatever the theme, because it exists to sit on the dark chrome.
    The fill was chrome so the mint LABEL was legitimate, but the border
@@ -429,7 +430,7 @@ html.sw-in-app .landing-app-store { display: none; }
    tokens break when --sw-gold falls back to a chrome colour. A paper-facing
    surface takes the paper-scaled accent; only a chrome-backed one takes
    --accent-light. */
-.landing-btn, .landing-app-store-link {
+.landing-app-store-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -446,14 +447,14 @@ html.sw-in-app .landing-app-store { display: none; }
   line-height: 1.35;
   transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
-.landing-btn:hover, .landing-app-store-link:hover {
+.landing-app-store-link:hover {
   /* --accent-hover, not --accent-light: this button sits on paper, so its
      hover fill stays in the paper-scaled family instead of flashing mint. */
   background: var(--accent-hover);
   color: var(--on-fill);
   border-color: var(--header-bg);
 }
-.landing-btn:focus-visible, .landing-app-store-link:focus-visible {
+.landing-app-store-link:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
@@ -464,12 +465,6 @@ html.sw-in-app .landing-app-store { display: none; }
   line-height: 1.45;
   direction: rtl;
 }
-/* THE DOOR. The perception audit's finding at the top of the page (2026-09-26):
-   six equal covers are a six-way choice for a visitor who came for one book
-   (Hick 1952), and the hero named that book without offering it. One primary
-   action, under the specimen it continues; the shelf below stays the library,
-   and the App Store button keeps its place further down. */
-.landing-cta { text-align: center; margin: 26px auto 0; max-width: 640px; }
 /* ========== DIVIDER ========== */
 .diamond-divider {
   text-align: center;
@@ -1068,11 +1063,6 @@ body, button, input, select, textarea,
         </a>
         <figcaption class="lis-ref"><a class="lis-ref-link" href="bom/bom.html#2-nephi-32">נפי ב׳ ל״ב:ג׳ · 2 Nephi 32:3 →</a></figcaption>
       </figure>
-
-      <!-- ===== THE DOOR. One primary action: the book this edition exists for. ===== -->
-      <p class="landing-cta">
-        <a class="landing-btn landing-cta-link" href="bom/bom.html#1-nephi-1">Open the Book of Mormon in Hebrew →</a>
-      </p>
 
     </header>
 
