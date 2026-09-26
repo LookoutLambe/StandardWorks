@@ -15,8 +15,8 @@ android {
         applicationId "com.sefermormon.standardworks"
         minSdk 24            // as the previous release; onRangeStart (word highlighting) needs 26 and is simply never called below it
         targetSdk 36
-        versionCode 12
-        versionName "1.6.1"
+        versionCode 13
+        versionName "1.6.2"
     }
 
     /* The upload key is never stored in this repo. Gradle reads it from the
