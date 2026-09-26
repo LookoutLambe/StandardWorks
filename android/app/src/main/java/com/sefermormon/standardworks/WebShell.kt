@@ -17,6 +17,7 @@ import org.json.JSONArray
 import org.json.JSONObject
 import org.json.JSONTokener
 import kotlin.math.abs
+import kotlin.math.roundToInt
 
 /**
  * ONE WEB VIEW, FIVE TABS — the Android twin of StandardWorks/WebShell.swift.
@@ -305,6 +306,8 @@ class WebShell(private val context: Context) {
      * The twin of WebShell.showLibrary on the iPhone.
      */
     fun showLibrary() {
+        // open already, the icon is a toggle: a second tap shuts the drawer
+        if (drawerOpen && tab == Tab.READ) { closeDrawer(); return }
         tab = Tab.READ
         call("if (window.NavEngine && NavEngine.open) { NavEngine.open(); return { ok: true }; } return { ok: false };") { v ->
             if (v?.optBoolean("ok") != true) openNativeLibrary()
@@ -338,7 +341,10 @@ class WebShell(private val context: Context) {
     }
 
     /** Closes the page's drawer, if it is open. */
-    fun closeDrawer() = run("window.NavEngine && NavEngine.close && NavEngine.close();")
+    fun closeDrawer() {
+        drawerOpen = false                                 // the page's message confirms it
+        run("window.NavEngine && NavEngine.close && NavEngine.close();")
+    }
 
     // MARK: - opening
 
@@ -427,6 +433,7 @@ class WebShell(private val context: Context) {
     fun startFind(query: String, hits: List<SearchIndex.Hit>, index: Int) {
         if (index !in hits.indices) return
         find = FindWalk(query, hits, index)
+        pushFinding()
         goFind()
     }
     fun stepFind(delta: Int) {
@@ -437,8 +444,17 @@ class WebShell(private val context: Context) {
     }
     fun endFind() {
         find = null
+        pushFinding()
         run("window.__swFind && window.__swFind(null);")
     }
+    /**
+     * A SEARCH WALKED FOLDS THE PAGE'S CHAPTER ROW (html.sw-app-finding, the
+     * selector beside sw-app-reading in shell_start.js): header, chapter row
+     * and find bar together had left a third of the screen (design pass,
+     * 2026-09-26). Re-sent on every page, since a load starts with a bare
+     * <html>. The iPhone's pushFinding.
+     */
+    private fun pushFinding() = run("document.documentElement.classList.toggle('sw-app-finding', ${find != null});")
     private fun goFind() {
         val f = find ?: return
         open(f.hit.path)
@@ -565,16 +581,45 @@ class WebShell(private val context: Context) {
         }
         lastY = webView.scrollY
         if (chromeHidden) fold(false)
+        drawerOpen = false                                 // a new page opens with its drawer shut
         if (volumes.isEmpty()) loadRegistry()
         pushOverlayHeight()
         pushFullScreen()
+        pushFinding()
         refreshWhere()
         refreshListen()
         markFind()
         eval("(function(){ var s = document.getElementById('sizeSlider'); var p = document.getElementById('page'); var v = s ? parseInt(s.value, 10) : NaN; if (isNaN(v) && p) v = parseInt(p.style.fontSize, 10); return isNaN(v) ? 100 : v; })()") { v ->
             (v as? Number)?.toInt()?.let { textSize = it }
+            seedTextSizeFromFontScale()
         }
         ReviewPrompt.consider(context)
+    }
+
+    /**
+     * THE PHONE'S TEXT SIZE SEEDS THE READING SIZE, once per volume per
+     * install (the iPhone's seedTextSizeFromDynamicType, design pass
+     * 2026-09-26): a reader who set the system font large meets the verses
+     * large on the first page of each volume, and the slider is theirs from
+     * then on. Only where the page has no size of its own yet. The system
+     * scale is read into the page's own 70…150 slider in steps of five:
+     * 1.15 → 115, 1.3 → 130, 1.5 and beyond → 150.
+     */
+    private fun seedTextSizeFromFontScale() {
+        val scale = context.resources.configuration.fontScale
+        val n = if (scale <= 1f) 100 else ((scale * 100f / 5f).roundToInt() * 5).coerceAtMost(150)
+        eval("(function(){ var v = window.READER && READER.vol; if (!v) return null; return [v, localStorage.getItem(v + '-font-size') === null]; })()") { v ->
+            // null on a page with no reader (the landing): nothing to seed, and
+            // nothing marked seeded — the landing had marked the Book of Mormon
+            // seeded before it was ever opened
+            val a = v as? JSONArray ?: return@eval
+            val vol = a.optString(0)
+            if (vol.isEmpty()) return@eval
+            val key = "shell.textSizeSeeded.$vol"
+            if (prefs.getBoolean(key, false)) return@eval
+            prefs.edit().putBoolean(key, true).apply()
+            if (n != 100 && a.optBoolean(1)) chooseTextSize(n)
+        }
     }
 
     fun refreshWhere() {

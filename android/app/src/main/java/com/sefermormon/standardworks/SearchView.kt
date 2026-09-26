@@ -24,6 +24,7 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Close
+import androidx.compose.material.icons.outlined.History
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -63,6 +64,19 @@ fun SearchView(shell: WebShell) {
     var hits by remember { mutableStateOf(listOf<SearchIndex.Hit>()) }
     var searched by remember { mutableStateOf("") }
     val ready = shell.searchIndex.loaded
+    // The last five searches, newest first, offered on the empty page (the
+    // iPhone's shell.recentSearches; design pass, 2026-09-26: the page had
+    // opened to one line of hint).
+    var recentRaw by remember { mutableStateOf(shell.prefs.getString("shell.recentSearches", "") ?: "") }
+    val recents = recentRaw.split('\n').filter { it.isNotEmpty() }
+    fun rememberQuery(q: String) {
+        val t = q.trim()
+        if (t.length < 2) return
+        val l = ArrayList(recents.filter { !it.equals(t, ignoreCase = true) })
+        l.add(0, t)
+        recentRaw = l.take(5).joinToString("\n")
+        shell.prefs.edit().putString("shell.recentSearches", recentRaw).apply()
+    }
 
     LaunchedEffect(shell.searchQuery, scope, ready) {
         delay(250)
@@ -114,6 +128,19 @@ fun SearchView(shell: WebShell) {
             if (!ready && q.isNotEmpty()) item { Text("Preparing the index…", color = p.ink2, modifier = Modifier.padding(16.dp)) }
             else if (hits.isEmpty() && searched.length >= 2) item { Text("No verses match “$searched”.", color = p.ink2, modifier = Modifier.padding(16.dp)) }
             else if (hits.isEmpty() && q.isEmpty()) item { Text("Hebrew, with or without vowels, or English — every volume at once.", color = p.ink2, fontSize = 13.sp, modifier = Modifier.padding(16.dp)) }
+            if (hits.isEmpty() && q.isEmpty() && recents.isNotEmpty()) item {
+                SectionHeader(p, "Recent")
+                ShellCard(p) {
+                    recents.forEachIndexed { i, r ->
+                        if (i > 0) Rule(p)
+                        ShellRow(p, onClick = { shell.searchQuery = r }) {
+                            Icon(Icons.Outlined.History, null, tint = p.ink2, modifier = Modifier.size(20.dp))
+                            Spacer(Modifier.width(12.dp))
+                            Text(r, color = p.ink, fontSize = 16.sp, maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.weight(1f))
+                        }
+                    }
+                }
+            }
             grouped.forEachIndexed { gi, (name, list) ->
                 item {
                     if (gi > 0) Spacer(Modifier.height(20.dp))
@@ -123,6 +150,7 @@ fun SearchView(shell: WebShell) {
                             if (i > 0) Rule(p)
                             // the whole list goes with it: the find bar walks it verse by verse
                             ShellRow(p, onClick = {
+                                rememberQuery(searched)
                                 val at = hits.indexOfFirst { it.id == hit.id }
                                 if (at >= 0) shell.startFind(searched, hits, at) else shell.open(hit.path)
                             }) {

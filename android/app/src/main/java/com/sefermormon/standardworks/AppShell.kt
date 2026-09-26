@@ -54,13 +54,16 @@ object AppShell {
      * `readingDefaults` — interlinear with transliteration and vowels, seeded
      * once; `more` — the header's ⋯ opens Display Options; `overlay` — the
      * row floats over the page, which lifts its footer by --sw-app-row-h.
+     * `chapterWord` — the row's pill says what it opens, "Chapter 5",
+     * "Section 101", "Psalm 23", the header keeping the book and chapter
+     * (design pass, 2026-09-26: the same name twice on one screen).
      * Not `returnPoint`: the app hides the Return banner (html.sw-app-clear),
      * so a record for it would be written for nothing.
      * The same classes on <html> as the iPhone, and the dark cut restored
      * before the first paint.
      */
     const val CAPS_SCRIPT =
-        "window.__swShellCaps = { chapters: true, chapterRow: true, modes: true, readingDefaults: true, more: true, overlay: true }; " +
+        "window.__swShellCaps = { chapters: true, chapterRow: true, modes: true, readingDefaults: true, more: true, overlay: true, chapterWord: true }; " +
         "document.documentElement.classList.add('sw-app-chapter-row', 'sw-app-modes-in-settings', 'sw-app-row-overlay', 'sw-app-clear', 'sw-app-more'); " +
         "try { var v = localStorage.getItem('sw-app-dark-variant'); if (v === 'black' || v === 'gray') document.documentElement.classList.add('sw-app-theme-' + v); } catch (e) {}"
 

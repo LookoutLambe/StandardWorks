@@ -199,10 +199,10 @@ fun ShellRoot(shell: WebShell) {
       CompositionLocalProvider(LocalDensity provides Density(baseDensity.density, baseDensity.fontScale * ShellTheme.SCALE)) {
         val density = LocalDensity.current
         var overlay by remember { mutableStateOf(0.dp) }
-        Box(Modifier.fillMaxSize().background(if (onPaper) p.paper else p.chrome)) {
+        Box(Modifier.fillMaxSize().background(if (onPaper) p.paper else barChrome(p))) {
             Column(Modifier.fillMaxSize().windowInsetsPadding(WindowInsets.displayCutout).imePadding()) {
                 // The status bar's band: the page begins below it.
-                Spacer(Modifier.fillMaxWidth().windowInsetsTopHeight(WindowInsets.statusBars).background(if (onPaper) p.paper else p.chrome))
+                Spacer(Modifier.fillMaxWidth().windowInsetsTopHeight(WindowInsets.statusBars).background(if (onPaper) p.paper else barChrome(p)))
                 Box(Modifier.weight(1f).fillMaxWidth()) {
                     AndroidView(factory = { shell.webView }, modifier = Modifier.fillMaxSize())
                     // Search, the one whole page: it ends where the floating row begins
@@ -324,7 +324,7 @@ private fun PanelSheet(shell: WebShell) {
             Column(
                 Modifier.align(Alignment.BottomCenter).fillMaxWidth()
                     .height(with(density) { height.value.toDp() })
-                    .shadow(16.dp, shape).clip(shape).background(p.chrome)
+                    .shadow(16.dp, shape).clip(shape).background(barChrome(p))
                     .nestedScroll(nested)
                     .draggable(rememberDraggableState { dragBy(it) }, Orientation.Vertical, onDragStopped = { settle(it) })
             ) {
@@ -352,17 +352,23 @@ val LocalRowInset = compositionLocalOf { 0.dp }
 
 /**
  * THE CHROME THAT FLOATS OVER THE TEXT. On the iPhone it is glass — the
- * system blur, darkened, with 60% of the chrome over it. Android draws no
- * blur behind a native view over a WebView, so this is the colour that
- * glass comes to over the page's paper (60% chrome over the paper at 70%),
- * nearly opaque: the same slate on the paper, the same navy in the dark,
- * and the on-chrome ink stays above 4.5:1 with no text showing through.
+ * system blur darkened to 45%, with 85% of the chrome over it (design pass,
+ * 2026-09-26: at 60% the capsules came out a slate the user did not know as
+ * the theme's navy). Android draws no blur behind a native view over a
+ * WebView, so this is the colour that glass comes to over the page's paper
+ * (85% chrome over the paper at 45%), nearly opaque: (40,53,72) on Light,
+ * which is what the page's own capsules come to by the same recipe
+ * (shell_start.js), the same navy family in every theme, and the selected
+ * gold reads at 6.5:1 on it. The native bars wear it too (barChrome), so
+ * there is one chrome, not a capsule navy and a bar navy.
  */
 fun floatingChrome(p: AppShell.Palette): Color {
     val c = p.chrome; val paper = p.paper
-    fun mix(a: Float, b: Float) = a * 0.6f + b * 0.7f * 0.4f
+    fun mix(a: Float, b: Float) = a * 0.85f + b * 0.45f * 0.15f
     return Color(mix(c.red, paper.red), mix(c.green, paper.green), mix(c.blue, paper.blue), 0.97f)
 }
+/** The same navy, opaque, for a bar or a panel with nothing to show through. */
+fun barChrome(p: AppShell.Palette): Color = floatingChrome(p).copy(alpha = 1f)
 
 /** Five pages, and two actions: Bookmark (this chapter, on or off) and Listen. */
 private enum class RowKind { PAGE, BOOKMARK, LISTEN }
@@ -385,8 +391,16 @@ fun ShellTabBar(shell: WebShell) {
     Row(Modifier.fillMaxWidth().padding(horizontal = 10.dp), verticalAlignment = Alignment.CenterVertically) {
         for (item in items) {
             val bookmark = item.kind == RowKind.BOOKMARK
-            // "on": the page showing, or this chapter bookmarked
-            val on = if (bookmark) shell.chapterBookmarked else item.tab != null && item.tab == shell.tab
+            // "on": the page showing, or this chapter bookmarked. The Library
+            // is on while the page's drawer is open — the drawer IS the
+            // Library — and Read only while nothing is over the book
+            // (design pass, 2026-09-26: the drawer opened and Read stayed lit).
+            val on = when {
+                bookmark -> shell.chapterBookmarked
+                item.tab == WebShell.Tab.LIBRARY -> shell.drawerOpen || shell.tab == WebShell.Tab.LIBRARY
+                item.tab == WebShell.Tab.READ -> shell.tab == WebShell.Tab.READ && !shell.drawerOpen
+                else -> item.tab != null && item.tab == shell.tab
+            }
             val enabled = !bookmark || shell.canBookmark
             Box(
                 Modifier.weight(1f).heightIn(min = 52.dp).clip(RoundedCornerShape(12.dp))
@@ -478,7 +492,9 @@ fun ListenBar(shell: WebShell) {
         Column(Modifier.weight(1f)) {
             Text(shell.whereLabel.ifEmpty { "Reading" }, color = p.onChrome, fontSize = 13.sp, fontWeight = FontWeight.SemiBold, maxLines = 1, overflow = TextOverflow.Ellipsis)
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Text("${shell.currentVolume?.name ?: "Hebrew"} | ${shell.speech.voiceLabel()} ·", color = p.onChrome.copy(alpha = 0.72f), fontSize = 12.sp, maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.weight(1f, fill = false))
+                // the volume's name gives way first; the voice and the speed stay whole
+                Text(shell.currentVolume?.name ?: "Hebrew", color = p.onChrome.copy(alpha = 0.72f), fontSize = 12.sp, maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.weight(1f, fill = false))
+                Text(" | ${shell.speech.voiceLabel()} ·", color = p.onChrome.copy(alpha = 0.72f), fontSize = 12.sp, maxLines = 1, softWrap = false)
                 Spacer(Modifier.width(4.dp))
                 Box {
                     Text(trimRate(shell.listenRate) + "×", color = p.hereChrome, fontSize = 12.sp, fontWeight = FontWeight.SemiBold,
@@ -520,7 +536,7 @@ fun LaunchSplash() {
 fun ShellPage(shell: WebShell, title: String, onBack: (() -> Unit)? = null, onDone: (() -> Unit)? = null, onClose: (() -> Unit)? = null, barContent: (@Composable () -> Unit)? = null, content: @Composable () -> Unit) {
     val p = shell.palette
     Column(Modifier.fillMaxSize().background(p.panel)) {
-        Column(Modifier.fillMaxWidth().background(p.chrome)) {
+        Column(Modifier.fillMaxWidth().background(barChrome(p))) {
             Box(Modifier.fillMaxWidth().height(56.dp), contentAlignment = Alignment.Center) {
                 if (onBack != null) {
                     Box(Modifier.align(Alignment.CenterStart).padding(start = 8.dp).size(44.dp).clip(CircleShape).clickable(onClick = onBack).semantics { contentDescription = "Back" }, contentAlignment = Alignment.Center) {

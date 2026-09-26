@@ -717,7 +717,10 @@ final class WebShell: ObservableObject {
         case .extraExtraExtraLarge: n = 130
         default: n = 150                                   // the accessibility sizes
         }
-        wv.evaluateJavaScript("(function(){ var v = (window.READER && READER.vol) || 'bom'; return [v, localStorage.getItem(v + '-font-size') === null]; })()") { [weak self] v, _ in
+        wv.evaluateJavaScript("(function(){ var v = window.READER && READER.vol; if (!v) return null; return [v, localStorage.getItem(v + '-font-size') === null]; })()") { [weak self] v, _ in
+            // null on a page with no reader (the landing): nothing to seed, and
+            // nothing marked seeded — the landing had marked the Book of Mormon
+            // seeded before it was ever opened (found on Android, 2026-09-26)
             guard let self, let a = v as? [Any], let vol = a.first as? String else { return }
             let key = "shell.textSizeSeeded." + vol
             guard !UserDefaults.standard.bool(forKey: key) else { return }
