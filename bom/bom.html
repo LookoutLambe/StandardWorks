@@ -8685,9 +8685,18 @@ NavEngine.init({
     var btn = document.getElementById('safari-browser-tip-dismiss');
     if (!tip || !btn) return;
     if (!isIOS() || isStandalone()) return;
+    /* THE FIRST VISIT IS THE FIRST IMPRESSION: the text, and nothing above
+       it. The tip waits for a return visit, when adding the book to the Home
+       Screen is a question the reader has a reason to ask (perception audit,
+       2026-09-26). Storage that cannot be read counts as a return visit, as
+       the dismiss check always treated it. */
+    var returning = true;
     try {
       if (localStorage.getItem('bom-dismiss-safari-tip') === '1') return;
+      returning = localStorage.getItem('bom-safari-tip-visited') === '1';
+      if (!returning) localStorage.setItem('bom-safari-tip-visited', '1');
     } catch (e) {}
+    if (!returning) return;
     tip.removeAttribute('hidden');
     tip.classList.add('show');
     btn.addEventListener('click', function() {
