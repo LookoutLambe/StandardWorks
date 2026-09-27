@@ -24,7 +24,7 @@ var mr_ch2Verses = [
 ];
 renderVerseSet(mr_ch2Verses, 'mr-ch2-verses');
 var mr_ch3Verses = [
-  { num: "א", words: [["הַדֶּרֶךְ","the manner"], ["אֲשֶׁר","which"], ["הַתַּלְמִידִים","the disciples"], ["הַנִּקְרָאִים","who were called"], ["זִקְנֵי","the elders of"], ["הַקָּהָל","the church"], ["הִסְמִיכוּ","ordained"], ["כֹּהֲנִים","priests"], ["וּמוֹרִים","and teachers"], ["׃",""]]},
+  { num: "א", words: [["הַדֶּרֶךְ","the manner"], ["אֲשֶׁר","which"], ["הַתַּלְמִידִים","the disciples"], ["הַנִּקְרָאִים","who were called"], ["זִקְנֵי","the elders of"], ["הַקָּהָל","the church"], ["סָמְכוּ","laid"], ["יְדֵיהֶם","their hands"], ["עַל־כֹּהֲנִים","upon priests"], ["וּמוֹרִים","and teachers"], ["׃",""]]},
   { num: "ב", words: [
     ["אַחֲרֵי","after"],["אֲשֶׁר","that"],["הִתְפַּלְלוּ","they prayed"],["אֶל־הָאָב","unto the Father"],["בְּשֵׁם","in the name of"],["הַמָּשִׁיחַ","Christ"],["סָמְכוּ","they laid"],["אֶת־יְדֵיהֶם","their hands"],["עֲלֵיהֶם","upon them"],["וַיֹּאמְרוּ","and said"], ["׃",""]
   ]},

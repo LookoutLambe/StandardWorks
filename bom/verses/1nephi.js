@@ -436,7 +436,7 @@ var ch3Verses = [
     ["מִפְּנֵי","before"],
     ["עַבְדֵי","the servants of"],
     ["לָבָן","Laban"],
-    ["וַנֵּאָנֵס","and we were obliged"],
+    ["וַנְּאֻלַּץ","and we were compelled"],
     ["לַעֲזֹב","to leave behind"],
     ["אֶת־רְכוּשֵׁנוּ","our property"],
     ["וַיִּפֹּל","and it fell"],
@@ -1610,8 +1610,8 @@ var ch9Verses = [
     ["נֶפִי","Nephi"],
     ["׃",""]
   ]},
-  { num: "ג", words: [["אַךְ","nevertheless"], ["קִבַּלְתִּי","I have received"], ["מִצְוַת","a commandment of"], ["יְהוָה","the Lord"], ["לַעֲשׂוֹת","to make"], ["אֶת־הַלּוּחוֹת","the plates"], ["הָאֵלֶּה","these"], ["לְמַעַן","for the special purpose that"], ["יֵחָקְקוּ","should be engraven"], ["עֲלֵיהֶם","upon them"], ["דִּבְרֵי","the affairs of"], ["עֲבוֹדַת","the ministry of"], ["עַמִּי","my people"], ["׃",""]]},
-  { num: "ד", words: [["וְעַל־הַלֻּחוֹת","and upon the plates"], ["הָאֲחֵרִים","the other"], ["יֵחָקֵק","should be engraven"], ["דְּבַר","an account of"], ["מֶמְשֶׁלֶת","the reign of"], ["הַמְּלָכִים","the kings"], ["וּמִלְחֲמוֹת","and the wars"], ["וּמְרִיבוֹת","and contentions of"], ["עַמִּי","my people"], ["וְעַל־כֵּן","wherefore"], ["הַלֻּחוֹת","the plates"], ["הָאֵלֶּה","these"], ["לְרֹב","are for the more part of"], ["הָעֲבוֹדָה","the ministry"], ["וְהַלֻּחוֹת","and the plates"], ["הָאֲחֵרִים","the other"], ["רֹב","are for the more part"], ["דִּבְרֵיהֶם","of their matters"], ["בְּמֶמְשֶׁלֶת","of the reign of"], ["הַמְּלָכִים","the kings"], ["וּבְמִלְחֲמוֹת","and the wars"], ["וּבִמְרִיבוֹת","and contentions of"], ["עַמִּי","my people"], ["׃",""]]},
+  { num: "ג", words: [["אַךְ","nevertheless"], ["קִבַּלְתִּי","I have received"], ["מִצְוַת","a commandment of"], ["יְהוָה","the Lord"], ["לַעֲשׂוֹת","to make"], ["אֶת־הַלּוּחוֹת","the plates"], ["הָאֵלֶּה","these"], ["לְמַעַן","for the special purpose that"], ["יֻחָקוּ","should be engraven"], ["עֲלֵיהֶם","upon them"], ["דִּבְרֵי","the affairs of"], ["עֲבוֹדַת","the ministry of"], ["עַמִּי","my people"], ["׃",""]]},
+  { num: "ד", words: [["וְעַל־הַלֻּחוֹת","and upon the plates"], ["הָאֲחֵרִים","the other"], ["יֻחַק","should be engraven"], ["דְּבַר","an account of"], ["מֶמְשֶׁלֶת","the reign of"], ["הַמְּלָכִים","the kings"], ["וּמִלְחֲמוֹת","and the wars"], ["וּמְרִיבוֹת","and contentions of"], ["עַמִּי","my people"], ["וְעַל־כֵּן","wherefore"], ["הַלֻּחוֹת","the plates"], ["הָאֵלֶּה","these"], ["לְרֹב","are for the more part of"], ["הָעֲבוֹדָה","the ministry"], ["וְהַלֻּחוֹת","and the plates"], ["הָאֲחֵרִים","the other"], ["רֹב","are for the more part"], ["דִּבְרֵיהֶם","of their matters"], ["בְּמֶמְשֶׁלֶת","of the reign of"], ["הַמְּלָכִים","the kings"], ["וּבְמִלְחֲמוֹת","and the wars"], ["וּבִמְרִיבוֹת","and contentions of"], ["עַמִּי","my people"], ["׃",""]]},
   { num:"ה", words:[
     ["עַל־כֵּן","wherefore"],
     ["צִוַּנִי","hath commanded me"],
@@ -1718,11 +1718,10 @@ var ch10Verses = [
   { num: "כא", words: [["לָכֵן","wherefore"], ["אִם־בִּקַּשְׁתֶּם","if you have sought"], ["לַעֲשׂוֹת","to do"], ["רָעָה","wickedly"], ["בִּימֵי","in the days of"], ["נִסְיֹנְכֶם","your probation"], ["אָז","then"], ["תִּמָּצְאוּ","you are found"], ["טְמֵאִים","unclean"], ["לִפְנֵי","before"], ["כִּסֵּא","the seat of"], ["מִשְׁפָּט","judgment"], ["אֱלֹהִים","God"], ["וְכׇל־טָמֵא","and no unclean thing"], ["לֹא־יוּכַל","cannot"], ["לָשֶׁבֶת","dwell"], ["עִם־אֱלֹהִים","with God"], ["עַל־כֵּן","wherefore"], ["תֻּשְׁלְכוּ","you must be cast off"], ["לָנֶצַח","forever"], ["׃",""]]},
   { num:"כב", words:[
     ["וְרוּחַ־הַקֹּדֶשׁ","and the Holy Ghost"],
-    ["הִסְמִיכַנִי","giveth me authority"],
+    ["נְתָנַנִי","hath given me"],
     ["לְדַבֵּר","to speak"],
     ["אֶת־הַדְּבָרִים","the things"], ["הָאֵלֶּה","these"],
-    ["וְלֹא","and not"],
-    ["לְהַכְחִישָׁם","to deny them"],
+    ["וְלֹא","and not"], ["לְכַחֵשׁ","to deny"], ["בָּם","them"],
     ["׃",""]
   ]}
 ];
@@ -2873,7 +2872,7 @@ var ch14Verses = [
     ["הַנְּפוֹצִים","who were scattered"],
     ["עַל־פְּנֵי","upon all the face of"],
     ["כׇל־הָאָרֶץ","all the earth"],
-    ["וַיֵּאָזְרוּ","and they were armed"],
+    ["וַיִּתְאַזְּרוּ","and they girded themselves"],
     ["בְּצֶדֶק","with righteousness"],
     ["וּגְבוּרַת","and with the power of"],
     ["אֱלֹהִים","God"],
@@ -3496,7 +3495,7 @@ var ch17Verses = [
   { num: "טו", words: [["לָכֵן","wherefore"], ["חָתַרְתִּי","I strove"], ["אֲנִי","I"], ["נֶפִי","Nephi"], ["לִשְׁמֹר","to keep"], ["אֶת־מִצְוֹת","the commandments of"], ["יְהוָה","the Lord"], ["וָאַזְהִיר","and I did exhort"], ["אֶת־אַחַי","my brethren"], ["לֶאֱמוּנָה","unto faithfulness"], ["וְלַחֲרִיצוּת","and unto diligence"], ["׃",""]]},
   { num: "טז", words: [["וָאַעַשׂ","and I did make"], ["כֵּלִים","tools"], ["מִן־הָעָפָר","of the ore"], ["אֲשֶׁר","which"], ["הִתַּכְתִּי","I did molten"], ["מִן־הַסֶּלַע","out of the rock"], ["׃",""]]},
   { num: "יז", words: [["וְכִרְאוֹת","and when saw"], ["אַחַי","my brethren"], ["כִּי־אֲנִי","that I"], ["הוֹלֵךְ","was going"], ["לִבְנוֹת","to build"], ["אֳנִיָּה","a ship"], ["וַיָּחֵלּוּ","and they began"], ["לְהִתְלוֹנֵן","to murmur"], ["עָלַי","against me"], ["לֵאמֹר","saying"], ["אָחִינוּ","our brother"], ["סָכׇל","is a fool"], ["כִּי","for"], ["יַחְשֹׁב","he thinketh"], ["כִּי","that"], ["יוּכַל","he can"], ["לִבְנוֹת","build"], ["אֳנִיָּה","a ship"], ["וְאַף","yea, and"], ["גַּם","also"], ["יַחְשֹׁב","he thinketh"], ["כִּי","that"], ["יוּכַל","he can"], ["לַעֲבֹר","cross"], ["אֶת־הַמַּיִם","the waters"], ["הָרַבִּים","the great"], ["הָאֵלֶּה","these"], ["׃",""]]},
-  { num: "יח", words: [["וְכֵן","and thus"], ["נִתְאוֹנְנוּ","did complain"], ["אַחַי","my brethren"], ["עָלַי","against me"], ["וַיְמָאֲנוּ","and refused"], ["לַעֲבֹד","to labor"], ["כִּי־לֹא","for not"], ["הֶאֱמִינוּ","believed they"], ["כִּי","that"], ["אוּכַל","I could"], ["לִבְנוֹת","build"], ["אֳנִיָּה","a ship"], ["וְגַם","and also"], ["לֹא־הֶאֱמִינוּ","they believed not"], ["כִּי","that"], ["הוֹרֵיתִי","I was instructed"], ["מֵאֵת","of"], ["יְהוָה","the Lord"], ["׃",""]]},
+  { num: "יח", words: [["וְכֵן","and thus"], ["נִתְאוֹנְנוּ","did complain"], ["אַחַי","my brethren"], ["עָלַי","against me"], ["וַיְמָאֲנוּ","and refused"], ["לַעֲבֹד","to labor"], ["כִּי־לֹא","for not"], ["הֶאֱמִינוּ","believed they"], ["כִּי","that"], ["אוּכַל","I could"], ["לִבְנוֹת","build"], ["אֳנִיָּה","a ship"], ["וְגַם","and also"], ["לֹא־הֶאֱמִינוּ","they believed not"], ["כִּי","that"], ["הוֹרַנִי","hath instructed me"], ["יְהוָה","the Lord"], ["׃",""]]},
   { num: "יט", words: [["וַאֲנִי","and I"], ["נֶפִי","Nephi"], ["אָנֹחַ","exceeding"], ["נֶאֱנַחְתִּי","was sorrowful"], ["מִפְּנֵי","because of"], ["קְשִׁי","the hardness of"], ["לִבָּם","their hearts"], ["וַיְהִי","and now"], ["כִּרְאוֹתָם","when they saw"], ["כִּי","that"], ["הָחֵלֹּתִי","I began"], ["לְהֵעָצֵב","to be sorrowful"], ["וַיִּשְׂמְחוּ","they were glad"], ["בְּלִבָּם","in their hearts"], ["עַד־כִּי","insomuch that"], ["שָׂשׂוּ","they did rejoice"], ["עָלַי","over me"], ["לֵאמֹר","saying"], ["יָדַעְנוּ","we knew"], ["כִּי","that"], ["לֹא","not"], ["תוּכַל","you could"], ["לִבְנוֹת","construct"], ["אֳנִיָּה","a ship"], ["כִּי","for"], ["יָדַעְנוּ","we knew"], ["כִּי","that"], ["אֵין־לְךָ","you were lacking in"], ["בִּינָה","judgment"], ["לָכֵן","wherefore"], ["מַעֲשֶׂה","a work"], ["גָדוֹל","great"], ["כָּזֶה","so"], ["לֹא","not"], ["תוּכַל","you can"], ["לַעֲשׂוֹת","accomplish"], ["׃",""]]},
   { num: "כ", words: [["וְכָמוֹךָ","and you are like unto"], ["אָבִינוּ","our father"], ["הַמּוּבָל","led away"], ["בְּיֵצֶר","by the imaginations of"], ["לִבּוֹ","his heart"], ["הָאֱוִלִי","the foolish"], ["אַף","yea"], ["הוּא","he"], ["הוֹצִיאָנוּ","hath led us out"], ["מֵאֶרֶץ","of the land of"], ["יְרוּשָׁלַיִם","Jerusalem"], ["וְזֶה","and these"], ["שָׁנִים","years"], ["רַבּוֹת","many"], ["נַדְנוּ","we have wandered"], ["בַמִּדְבָּר","in the wilderness"], ["וְנָשֵׁינוּ","and our women"], ["הָרוֹת","being big with child"], ["עָמְלוּ","have toiled"], ["וְיָלְדוּ","and they have borne"], ["בָנִים","children"], ["בַּמִּדְבָּר","in the wilderness"], ["וְסָבְלוּ","and suffered"], ["כֹּל","all things"], ["זוּלָתִי","save it were"], ["הַמָּוֶת","death"], ["וְטוֹב","and better"], ["הָיָה","it would have been"], ["לָהֶן","for them"], ["לוּ","that"], ["מֵתוּ","they had died"], ["בְּטֶרֶם","before"], ["צֵאתָן","they came out"], ["מִירוּשָׁלַיִם","of Jerusalem"], ["מִסְּבֹל","than to have suffered"], ["אֶת־הַצָּרוֹת","the afflictions"], ["הָאֵלֶּה","these"], ["׃",""]]},
   { num: "כא", words: [["הִנֵּה","behold"], ["זֶה","these"], ["שָׁנִים","years"], ["רַבּוֹת","many"], ["סָבַלְנוּ","we have suffered"], ["בַמִּדְבָּר","in the wilderness"], ["תַּחַת","which time"], ["אֲשֶׁר","that"], ["יָכֹלְנוּ","we might have"], ["לְהִתְעַנֵּג","enjoyed"], ["בְּקִנְיָנֵינוּ","our possessions"], ["וּבְאֶרֶץ","and the land of"], ["נַחֲלָתֵנוּ","our inheritance"], ["וְאַף","yea, and"], ["שְׂמֵחִים","happy"], ["הָיִינוּ","we might have been"], ["׃",""]]},
