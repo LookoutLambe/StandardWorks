@@ -2,7 +2,7 @@
 (function() {
 var mr_ch1Verses = [
   { num: "א", words: [
-    ["וְעַתָּה","and now"],["אֲנִי","I"],["מוֹרוֹנִי","Moroni"],["אַחֲרֵי","after"],["כַּלּוֹתִי","I finished"],["לְקַצֵּר","abridging"],["אֶת־דִּבְרֵי","the account of"],["עַם־יֶרֶד","the people of Jared"],["חָשַׁבְתִּי","I supposed"],["לֹא","not"],["לִכְתֹּב","to write"],["עוֹד","more"],["וְהִנֵּה","but behold"],["עוֹד","yet"],["לֹא","not"],["אָבַדְתִּי","I perished"],["וְלֹא","and not"],["אֶתְוַדַּע","I make myself known"],["אֶל־הַלָּמָנִים","to the Lamanites"],["פֶּן","lest"],["יַשְׁמִידוּנִי","they should destroy me"], ["׃",""]
+    ["וְעַתָּה","and now"],["אֲנִי","I"],["מוֹרוֹנִי","Moroni"],["אַחֲרֵי","after"],["כַּלּוֹתִי","I finished"],["לְקַצֵּר","abridging"],["אֶת־דִּבְרֵי","the account of"],["עַם־יֶרֶד","the people of Jared"],["חָשַׁבְתִּי","I supposed"],["לֹא","not"],["לִכְתֹּב","to write"],["עוֹד","more"],["וְהִנֵּה","but behold"],["עוֹד","yet"],["לֹא","not"],["אָבַדְתִּי","I perished"],["וְלֹא","and not"],["אֶתְוַדַּע","make myself known"],["אֶל־הַלָּמָנִים","to the Lamanites"],["פֶּן","lest"],["יַשְׁמִידוּנִי","they should destroy me"], ["׃",""]
   ]},
   { num: "ב", words: [
     ["כִּי","for"],["הִנֵּה","behold"],["מִלְחֲמוֹתֵיהֶם","their wars"],["אַכְזָרִיּוֹת","fierce"],["מְאֹד","exceedingly"],["בֵּינֵיהֶם","among themselves"],["וּמִשִּׂנְאָתָם","and because of their hatred"],["יָמִיתוּ","they put to death"],["כׇּל־נֶפִי","every Nephite"],["אֲשֶׁר","who"],["לֹא־יְכַחֵשׁ","will not deny"],["בַּמָּשִׁיחַ","in Christ"], ["׃",""]
