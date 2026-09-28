@@ -31,7 +31,7 @@ var colophonWords = [
   ["אֶת־נַפְשׁוֹ","his life"],
   ["׃",""],
   ["וַיֵּלֶךְ","and he went"],
-  ["דֶּרֶךְ","way"],
+  ["דֶּרֶךְ","a journey of"],
   ["שְׁלֹשֶׁת","three"],
   ["יָמִים","days"],
   ["בַּמִּדְבָּר","in the wilderness"],
