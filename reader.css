@@ -335,6 +335,15 @@ body:not(.dual-mode) .verse > .word-flow { width: 100%; }
      six agree and the chevron column can mirror one number, not six. */
   line-height: 1.35 !important;
   max-width: 9em;
+  /* A word is never broken inside itself ("imaginatio-ns"): min-content
+     outranks max-width in CSS, so a single word longer than the cap widens
+     the gloss instead of splitting; and a gloss is never more than two lines
+     — interlinear_gloss.js fitGlossLines lifts the cap per gloss, measured,
+     after render (user, 2026-09-28). !important because bom.html's copy of
+     this rule loads after this file. */
+  min-width: min-content !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
   margin-top: 2px !important;
 }
 /* One ink for all three tiers (user, 2026-09-25: the gloss "the same color as

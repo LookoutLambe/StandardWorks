@@ -36,7 +36,7 @@
 <link rel="stylesheet" href="../nav_engine.css?v=52">
 <link rel="stylesheet" href="../site_chrome.css?v=77">
 <link rel="stylesheet" href="../xref_study_panel.css?v=14">
-<link rel="stylesheet" href="../reader.css?v=132">
+<link rel="stylesheet" href="../reader.css?v=133">
 <style>
 
 /* Skip-to-content link (screen reader / keyboard) */
@@ -295,9 +295,8 @@ body.hide-translit .tl { display: none; }
   text-align: center;
   direction: ltr;
   white-space: normal;
-  overflow-wrap: break-word;
-  hyphens: none;
-  max-width: 96px;
+  /* wrap, cap and the two-line fit live in reader.css (.gl) and
+     interlinear_gloss.js — one home for all six pages */
   padding: 0 6px;
   margin-top: 2px;
   opacity: 0.85;
@@ -3541,7 +3540,7 @@ window.READER = window.READER || {
 <script src="chapter_headings_heb.js?v=20"></script>
 <script defer src="topical_guide.js?v=3"></script>
 <script src="../notes_engine.js"></script>
-<script src="../interlinear_gloss.js?v=6"></script>
+<script src="../interlinear_gloss.js?v=7"></script>
 <script>
 (function readerTouchBurstTracker() {
   var recentEnds = [];

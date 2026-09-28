@@ -233,6 +233,7 @@ function toggleTranslit() {
 function setSize(val) {
   _keepVersePosition(function() {
   document.getElementById('page').style.fontSize = val + '%';
+  if (window.fitGlossLines) window.fitGlossLines(document);   // interlinear_gloss.js: the two-line fit follows the type size
   });
   try { localStorage.setItem(window.READER.vol + '-font-size', val); } catch(e) {}
 }

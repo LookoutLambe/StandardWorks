@@ -162,8 +162,51 @@
     if (!container || !group) return;
     if (container.lastChild) container.appendChild(document.createTextNode(' '));
     container.appendChild(group);
+    queueGlossFit(group);
+  }
+
+  /* TWO LINES AT MOST. reader.css caps a gloss at 9em so a phrase folds under
+     its word — but a phrase longer than two such lines folded into three and
+     four ("and all their / precious / things"), and a word longer than the cap
+     broke inside itself ("imaginatio-ns"). The user, 2026-09-28: a gloss
+     lengthens so it is only ever two lines. The stylesheet keeps whole words
+     whole (min-width: min-content); this widens the few glosses that still
+     need a third line, after their words are in the page and measured — not
+     estimated, so it holds at every text size and in every font. Batched per
+     frame so a chapter's render pays one layout, and re-run when the type size
+     changes (setSize) and when David Libre arrives (fonts.ready), since both
+     move the wrap points. */
+  var _fitQueue = [], _fitRaf = 0;
+  function _glossLines(g, lh) { return Math.round(g.getBoundingClientRect().height / lh); }
+  function fitGlossLines(root) {
+    var gls = (root || document).querySelectorAll('.gl:not(.gl-nw)');
+    if (!gls.length) return;
+    gls.forEach(function (g) { if (g.style.maxWidth) g.style.maxWidth = ''; });
+    var over = [];
+    gls.forEach(function (g) {
+      var cs = getComputedStyle(g), lh = parseFloat(cs.lineHeight) || parseFloat(cs.fontSize) * 1.35;
+      if (lh && _glossLines(g, lh) > 2) over.push([g, lh, parseFloat(cs.fontSize) * 0.75]);
+    });
+    over.forEach(function (p) {
+      var g = p[0], lh = p[1], step = p[2], w = g.getBoundingClientRect().width;
+      for (var i = 0; i < 14 && _glossLines(g, lh) > 2; i++) { w += step; g.style.maxWidth = Math.ceil(w) + 'px'; }
+    });
+  }
+  function queueGlossFit(group) {
+    _fitQueue.push(group);
+    if (_fitRaf) return;
+    _fitRaf = requestAnimationFrame(function () {
+      _fitRaf = 0;
+      var q = _fitQueue, roots = []; _fitQueue = [];
+      q.forEach(function (g) { var r = g.parentNode; if (r && roots.indexOf(r) < 0) roots.push(r); });
+      roots.forEach(fitGlossLines);
+    });
+  }
+  if (typeof document !== 'undefined' && document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(function () { fitGlossLines(document); });
   }
 
   global.augmentGlossWithPrefixes = augmentGlossWithPrefixes;
   global.appendWordGroup = appendWordGroup;
+  global.fitGlossLines = fitGlossLines;
 })(typeof window !== 'undefined' ? window : global);
