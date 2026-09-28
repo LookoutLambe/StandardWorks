@@ -73,7 +73,14 @@ body.dark-mode *:focus-visible { outline-color: var(--here-chrome); }
    page mirrors lose exactly the way the stale `.hw` copies already do.
 
    transform: scale() is layout-free, so the glyph can be drawn at reading
-   size while its box stays the height of the row it belongs to. */
+   size while its box stays the height of the row it belongs to.
+
+   The mark itself (user, 2026-09-28, against the Schottenstein interlinear):
+   Times New Roman — the same face as the stress mark above the Hebrew (.sacc,
+   below); David Libre's guillemet is a small heavy comma at this size — in
+   the TEXT's ink, not the accent gold, and at text weight: the old 2.5x
+   scale read as a bold blob. 1.3x lifts Times's x-height guillemet to the
+   ascender line, which is where the Schottenstein's sits beside its gloss. */
 /* The word and its chevron are ONE row. pgp/jst/bom gave .word-unit a 2px
    vertical margin that .arr never had, so the chevrons rode 2px high on
    those three and sat flush on ot/nt/dc — the same copied-constant drift in
@@ -84,15 +91,15 @@ body.dark-mode *:focus-visible { outline-color: var(--here-chrome); }
   display: inline-flex; flex-direction: column;
   align-items: center; justify-content: flex-start;
   vertical-align: top;
-  color: var(--accent-deep);
-  font-family: 'David Libre', serif; font-style: normal; font-weight: 400;
+  color: var(--gloss);
+  font-family: 'Times New Roman', Times, serif; font-style: normal; font-weight: 400;
   padding: 3px 0; margin: 0; opacity: 1;
   direction: ltr; unicode-bidi: isolate; line-height: 1.2;
   user-select: none; -webkit-user-select: none;
 }
 .arr-hw { visibility: hidden; max-width: 0; font-size: var(--t4) !important; line-height: 1.5; }
-.arr-tl { font-size: var(--t0) !important; line-height: 1.2;  margin-top: 2px; transform: scale(2.5); visibility: visible; }
-.arr-gl { font-size: var(--t0) !important; line-height: 1.35; margin-top: 2px; transform: scale(2.5); visibility: visible; }
+.arr-tl { font-size: var(--t0) !important; line-height: 1.2;  margin-top: 2px; transform: scale(1.3); visibility: visible; }
+.arr-gl { font-size: var(--t0) !important; line-height: 1.35; margin-top: 2px; transform: scale(1.3); visibility: visible; }
 .word-unit.sof + .arr { display: none; }
 body.hide-translit .arr-tl { display: none; }
 body.hide-gloss .arr-gl { display: none; }
