@@ -912,7 +912,7 @@ var ch4Verses = [
     ["הַמִּדְבָּרָה","into the wilderness"],
     ["אֶל־אָבִינוּ","unto our father"],
     ["וְגַם","and also"],
-    ["נִשְׁבַּע","sware"],
+    ["נִשְׁבַּע","swore"],
     ["לָנוּ","unto us"],
     ["לָשֶׁבֶת","that he would tarry"],
     ["עִמָּנוּ","with us"],
@@ -939,7 +939,7 @@ var ch4Verses = [
   { num:"לז", words:[
     ["וַיְהִי","and it happened"],
     ["כַּאֲשֶׁר","that when"],
-    ["נִשְׁבַּע","made an oath"],
+    ["נִשְׁבַּע","swore"],
     ["זוֹרָם","Zoram"],
     ["לָנוּ","unto us"],
     ["וַיַּחְדְּלוּ","ceased"],
