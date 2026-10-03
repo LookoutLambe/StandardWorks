@@ -383,11 +383,13 @@ function renderVerse(v, i, english) {
    the App Store's own numbers settled it: 122 product-page views in three
    months, about one a day, while those chapter pages are where the site's
    search traffic lands, mostly on phones (user: "no one is even trying to
-   find it in apple"). The footer's "iPhone app" link (foot) reaches the
-   desktop and Android readers the tag cannot.
+   find it in apple"). The footer's "iPhone app" and "Android app" links (foot) reach
+   the desktop and Android readers the tag cannot.
    WKWebView ignores it, so it is a no-op inside the app's own bundled copy. */
 const APP_BANNER = '<meta name="apple-itunes-app" content="app-id=6767954376">\n';
 const APP_STORE_URL = 'https://apps.apple.com/us/app/sefer-mormon-standard-works/id6767954376';
+/* Google Play since production access was granted (2026-10-03): the footer carries both apps. */
+const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.sefermormon.standardworks';
 
 function head(rel, title, desc, canonical, extra, lang) {
   const he = lang === 'he';
@@ -418,7 +420,7 @@ function chrome(rel, crumbs, home) {
 }
 function foot(rel, lang) {
   /* the footer is English; on a Hebrew page it keeps its own direction */
-  return '<footer class="foot"' + (lang === 'he' ? ' lang="en" dir="ltr"' : '') + '><p><a href="' + rel + '">sefermormon.com</a> · <a href="' + rel + 'hebrew-study.html">How to read pointed Hebrew</a> · <a href="' + rel + 'vocabulary.html">Vocabulary by frequency</a> · <a href="' + rel + 'hebrew/index.html">All chapters</a> · <a href="' + rel + 'in-print.html">In print</a> · <a href="' + APP_STORE_URL + '">iPhone app</a> &middot; <a href="' + rel + 'privacy.html">Privacy</a></p>' +
+  return '<footer class="foot"' + (lang === 'he' ? ' lang="en" dir="ltr"' : '') + '><p><a href="' + rel + '">sefermormon.com</a> · <a href="' + rel + 'hebrew-study.html">How to read pointed Hebrew</a> · <a href="' + rel + 'vocabulary.html">Vocabulary by frequency</a> · <a href="' + rel + 'hebrew/index.html">All chapters</a> · <a href="' + rel + 'in-print.html">In print</a> · <a href="' + APP_STORE_URL + '">iPhone app</a> &middot; <a href="' + PLAY_URL + '">Android app</a> &middot; <a href="' + rel + 'privacy.html">Privacy</a></p>' +
     '<p>Hebrew Interlinear Standard Works. The interlinear reader adds transliteration, roots, cross-references, notes and read-aloud.</p></footer>\n</body>\n</html>\n';
 }
 function breadcrumbLd(items) {
