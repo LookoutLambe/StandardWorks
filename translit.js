@@ -53,7 +53,12 @@
                       'מִשְּׂמֹאול':'missemol', 'מֵהַשְּׂמֹאול':'mehassemol', 'מָרָדְתָּא':'marodta',
                       'עָצְבְּכֶם':'otsbekhem', 'קָרְבָּנְךָ':'korbanekha', 'קָרְבָּנָהּ':'korbana',
                       'קוֹלֹב':'kolob', 'קוֹקַאוּבְּאֵם':'kokaubeam', 'קוֹקֹב':'kokob',
-                      'שְׂמֹאול':'semol', 'שְׂמֹאולֶךָ':'semolekh', 'שִׁינֵהָה':'shinehah'
+                      'שְׂמֹאול':'semol', 'שְׂמֹאולֶךָ':'semolekh', 'שִׁינֵהָה':'shinehah',
+                      /* Restoration names (Book of Mormon, D&C): the dagesh after a vowel
+                         letter only hardens the consonant, as the English spells it
+                         (Antipus, Riplakish, Brigham, Independence, Pulsipher). Without
+                         these the forte rule would double it: antippus, beriggam. */
+                      'אַנְטִיפּוּס':'antipus', 'לְאַנְטִיפּוּס':'leantipus', 'אַנְטִיפָּרָה':'antipara', 'אַנְטִיפַּס':'antipas', 'רִיפְּלָקִישׁ':'ripelakish', 'וְרִיפְּלָקִישׁ':'veripelakish', 'רִיפְּלָה':'ripela', 'רִיפְּלִיאַנְקוּם':'ripeliankum', 'בְּרִיגָּם':'berigam', 'אִינְדִּיפֶּנְדֶּנְס':'indipendens', 'בְּאִינְדִּיפֶּנְדֶּנְס':'beindipendens', 'פּוּלְסִיפֶּר':'pulsiper'
   };
 
   var _tlKnown = {
@@ -138,7 +143,15 @@
       else if (tk.dag && dmap[tk.c]) c = dmap[tk.c]; // dagesh in bgdkpt
       else c = cmap[tk.c] || '';
       // Shuruk: vav + dagesh + no vowel = û (unchangeable long, circumflex)
-      if (tk.c === '\u05D5' && tk.dag && !tk.vowel) {
+      /* ...BUT ONLY WHERE NO VOWEL STANDS BEFORE IT. After a consonant that has
+         its own vowel, וּ cannot be a second vowel: it is the consonant vav
+         doubled by a dagesh forte, and the shureq that follows it is its
+         vowel. יְקַוּוּ is ye-qa-vvu (translator, 2026-10-07: "transliteration
+         is off"; it printed "yeku"). It falls through to the consonant path,
+         where the dagesh doubles it, and the next וּ lends it the û. */
+      var vavAfterVowel = t > 0 && tokens[t-1].vowel && tokens[t-1].vowel !== '\u05B0';
+      if (tk.c === '\u05D5' && tk.dag && !tk.vowel && !vavAfterVowel) {
+        tk.mater = true;
         if (t > 0 && tokens[t-1].c === '\u05D0' && !tokens[t-1].vowel) { segments.push({c:'\u02BE', v:'\u00FB'}); continue; }
         if (segments.length > 0) segments[segments.length-1].v = '\u00FB';
         else segments.push({c:'', v:'\u00FB'});
@@ -148,9 +161,9 @@
       // Only treat as mater lectionis if previous consonant has no vowel yet;
       // otherwise the vav is a root consonant bearing cholam (e.g. עֲוֹנוֹת)
       if (tk.c === '\u05D5' && tk.vowel === '\u05B9' && !tk.dag) {
-        if (t > 0 && tokens[t-1].c === '\u05D0' && !tokens[t-1].vowel) { segments.push({c:'\u02BE', v:'\u00F4'}); continue; }
+        if (t > 0 && tokens[t-1].c === '\u05D0' && !tokens[t-1].vowel) { tk.mater = true; segments.push({c:'\u02BE', v:'\u00F4'}); continue; }
         var prevSeg = segments.length > 0 ? segments[segments.length-1] : null;
-        if (!prevSeg) { segments.push({c:'', v:'\u00F4'}); continue; }
+        if (!prevSeg) { tk.mater = true; segments.push({c:'', v:'\u00F4'}); continue; }
         /* A SILENT SHEVA IS NOT "no vowel yet" — it CLOSES the syllable, so the
            vav cannot be its mater and has to be a consonant carrying the holam
            (translator, 2026-09-15, on אֶת־מִצְוֹת: "its mitsvot").
@@ -158,11 +171,11 @@
            מִצְוֹת came out "mitsot" with the /v/ gone. The corpus proves the
            point itself: where it writes the same word with U+05BA, the holam
            haser FOR VAV, this engine already prints mitsvot. */
-        if (!prevSeg.v && !(t > 0 && tokens[t-1].vowel === '\u05B0')) { prevSeg.v = '\u00F4'; continue; }
+        if (!prevSeg.v && !(t > 0 && tokens[t-1].vowel === '\u05B0')) { tk.mater = true; prevSeg.v = '\u00F4'; continue; }
         // Consonantal vav with cholam: fall through to produce 'v' + 'ô'
       }
       // Cholam male variant: vav after cholam on prev consonant = silent
-      if (tk.c === '\u05D5' && !tk.vowel && !tk.dag && t > 0 && tokens[t-1].vowel === '\u05B9') continue;
+      if (tk.c === '\u05D5' && !tk.vowel && !tk.dag && t > 0 && tokens[t-1].vowel === '\u05B9') { tk.mater = true; continue; }
       if (tk.c === '\u05D0' && !tk.vowel && !tk.dag && t < len - 1) {
         var nxtAv = tokens[t + 1];
         if (nxtAv.c === '\u05D5' && (nxtAv.vowel === '\u05B9' || (nxtAv.dag && !nxtAv.vowel))) continue;
@@ -171,16 +184,19 @@
       if (tk.c === '\u05D4' && isLast && !tk.vowel) continue;
       // Chiriq male: yod after chiriq = î (unchangeable long, circumflex)
       if (tk.c === '\u05D9' && !tk.vowel && !tk.dag && t > 0 && tokens[t-1].vowel === '\u05B4') {
+        tk.mater = true;
         if (segments.length > 0) segments[segments.length-1].v = '\u00EE';
         continue;
       }
       // Tsere-yod: yod after tsere = ê (unchangeable long, circumflex)
       if (tk.c === '\u05D9' && !tk.vowel && !tk.dag && t > 0 && tokens[t-1].vowel === '\u05B5') {
+        tk.mater = true;
         if (segments.length > 0) segments[segments.length-1].v = '\u00EA';
         continue;
       }
       // Seghol-yod: yod after seghol = ê (unchangeable long, circumflex)
       if (tk.c === '\u05D9' && !tk.vowel && !tk.dag && t > 0 && tokens[t-1].vowel === '\u05B6') {
+        tk.mater = true;
         if (segments.length > 0) segments[segments.length-1].v = '\u00EA';
         continue;
       }
@@ -188,6 +204,12 @@
       var v = tk.vowel ? (vmap[tk.vowel] || '') : '';
       var bgdkpt = '\u05D1\u05D2\u05D3\u05DB\u05E4\u05EA'; // בגדכפת
       var prevVowel = t > 0 ? tokens[t-1].vowel : '';
+      /* A VOWEL WRITTEN WITH A LETTER IS STILL A VOWEL. The shureq וּ, the
+         holam vav and the mater yod carry no vowel point of their own, so a
+         dagesh after one was never read as forte: וּלְאוּמִּי came out
+         "uleumi" (translator, 2026-10-07). Only the dagesh tests read this;
+         the sheva rules keep reading the point itself. */
+      var prevForForte = prevVowel || (t > 1 && tokens[t-1].mater ? 'mater' : '');
       var nextTok = t < len-1 ? tokens[t+1] : null;
       // Shva rules: nach (silent) vs na (voiced as 'e')
       if (tk.vowel === '\u05B0') {
@@ -219,9 +241,12 @@
       // FINAL syllable carries the stress and keeps qamets gadol — \u05D0\u05B8\u05D6 is
       // "az", \u05E8\u05B8\u05DD is "ram"; only a written \u05C7 (\u05DB\u05C7\u05DC\u05BE, \u05E7\u05C7\u05E8\u05B0\u05D1\u05B8\u05BC\u05DF) reads "o".
       // Dagesh forte: double the consonant (non-bgdkpt with dagesh after a vowel)
-      var isDagForte = tk.dag && bgdkpt.indexOf(tk.c) < 0 && t > 0 && prevVowel;
+      /* A dagesh in he (or alef) is MAPPIQ, never gemination: the letter is
+         sounded, not doubled. Read as forte it gave gavohah for גָּבֹהַּ
+         and elohah for אֱלוֹהַּ; they are gavoah and eloah. */
+      var isDagForte = tk.dag && bgdkpt.indexOf(tk.c) < 0 && tk.c !== '\u05D4' && tk.c !== '\u05D0' && t > 0 && prevForForte;
       // bgdkpt with dagesh after a vowel = also forte (doubled + hard)
-      var isBgdkptForte = tk.dag && bgdkpt.indexOf(tk.c) >= 0 && t > 0 && prevVowel && prevVowel !== '\u05B0';
+      var isBgdkptForte = tk.dag && bgdkpt.indexOf(tk.c) >= 0 && t > 0 && prevForForte && prevForForte !== '\u05B0';
       /* GEMINATION REPEATS THE WHOLE DIGRAPH (translator's ruling 2026-09-10,
          on קַצְּרִי: "this is katstseri"). A dagesh forte doubles the
          consonant, and where that consonant is spelled as a digraph — sh, ts,
