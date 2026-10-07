@@ -126,8 +126,8 @@
     html += '<div style="display:flex; align-items:flex-start; justify-content:space-between; gap:10px; flex-wrap:wrap;">';
     html +=   '<div>';
     html +=     '<h2 style="margin:0"><span style="direction:rtl; font-size:1.2em">' + safe(w) + '</span> <span style="opacity:0.7; font-size:0.75em">(' + safe(hNum) + ')</span></h2>';
-    html +=     '<div class="pill" style="margin-top:10px">Translit: <strong>' + safe(x || '—') + '</strong></div>';
-    html +=     '<div class="pill" style="margin-top:10px">Gloss: <strong>' + safe(g || '—') + '</strong></div>';
+    html +=     '<div class="pill" style="margin-top:10px">Translit: <strong>' + safe(x || '–') + '</strong></div>';
+    html +=     '<div class="pill" style="margin-top:10px">Gloss: <strong>' + safe(g || '–') + '</strong></div>';
     if (r && /^H\d{4}$/.test(r)) html += '<div class="pill" style="margin-top:10px">Related: <code>' + safe(r) + '</code></div>';
     html +=   '</div>';
     html +=   '<div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end;">';
@@ -175,8 +175,8 @@
       var it = items[i];
       html += '' +
         '<div class="item" data-h="' + safe(it.h) + '">' +
-          '<div class="heb">' + safe(it.w || '—') + '</div>' +
-          '<div class="meta"><strong>' + safe(it.h) + '</strong> · ' + safe(it.g || '—') + (it.x ? (' · ' + safe(it.x)) : '') + '</div>' +
+          '<div class="heb">' + safe(it.w || '–') + '</div>' +
+          '<div class="meta"><strong>' + safe(it.h) + '</strong> · ' + safe(it.g || '–') + (it.x ? (' · ' + safe(it.x)) : '') + '</div>' +
         '</div>';
     }
     elList.innerHTML = html;

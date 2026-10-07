@@ -27,11 +27,14 @@
 
         <!-- configChanges: the one WebView survives a rotation or a theme
              change in place; recreating the Activity would reload the book
-             and cancel the reading. -->
+             and cancel the reading. The phone's font size and bold-text
+             switch too: they recreated it, and the chapter stood blank for
+             5-9 s while the book reloaded (Deep Testing BUG-006). Compose
+             re-reads the scale itself; the page keeps its own Aa size. -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|uiMode|smallestScreenSize|density"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|uiMode|smallestScreenSize|density|fontScale|fontWeightAdjustment"
             android:launchMode="singleTask"
             android:theme="@style/Theme.SeferMormon.Splash"
             android:windowSoftInputMode="adjustResize">

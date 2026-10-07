@@ -3,7 +3,7 @@ package com.sefermormon.standardworks
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -16,7 +16,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
@@ -117,9 +116,13 @@ fun SearchView(shell: WebShell) {
                 }
             }
             Spacer(Modifier.height(8.dp))
-            Row(Modifier.horizontalScroll(rememberScrollState())) {
-                ScopeChip(p, "All", scope == "") { scope = "" }
-                for (v in shell.volumes) { Spacer(Modifier.width(6.dp)); ScopeChip(p, v.short, scope == v.key) { scope = v.key } }
+            // ALL SEVEN SCOPES ON THE SCREEN AT ONCE, as the iPhone's scope
+            // bar: equal shares of the width. As a sideways scroll the last
+            // chip, JST, was cut at the screen's edge with nothing to say the
+            // row moved (Deep Testing BUG-005).
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                ScopeChip(p, "All", scope == "", Modifier.weight(1f)) { scope = "" }
+                for (v in shell.volumes) ScopeChip(p, v.short, scope == v.key, Modifier.weight(1f)) { scope = v.key }
             }
         }
     }) {
@@ -127,7 +130,7 @@ fun SearchView(shell: WebShell) {
             val q = shell.searchQuery
             if (!ready && q.isNotEmpty()) item { Text("Preparing the index…", color = p.ink2, modifier = Modifier.padding(16.dp)) }
             else if (hits.isEmpty() && searched.length >= 2) item { Text("No verses match “$searched”.", color = p.ink2, modifier = Modifier.padding(16.dp)) }
-            else if (hits.isEmpty() && q.isEmpty()) item { Text("Hebrew, with or without vowels, or English — every volume at once.", color = p.ink2, fontSize = 13.sp, modifier = Modifier.padding(16.dp)) }
+            else if (hits.isEmpty() && q.isEmpty()) item { Text("Hebrew, with or without vowels, or English, in every volume at once.", color = p.ink2, fontSize = 13.sp, modifier = Modifier.padding(16.dp)) }
             if (hits.isEmpty() && q.isEmpty() && recents.isNotEmpty()) item {
                 SectionHeader(p, "Recent")
                 ShellCard(p) {
@@ -175,12 +178,12 @@ fun SearchView(shell: WebShell) {
 }
 
 @Composable
-private fun ScopeChip(p: AppShell.Palette, label: String, selected: Boolean, onClick: () -> Unit) {
+private fun ScopeChip(p: AppShell.Palette, label: String, selected: Boolean, modifier: Modifier = Modifier, onClick: () -> Unit) {
     Box(
-        Modifier.heightIn(min = 32.dp).clip(RoundedCornerShape(8.dp))
+        modifier.heightIn(min = 36.dp).clip(RoundedCornerShape(8.dp))
             .background(if (selected) p.onChrome.copy(alpha = 0.22f) else p.onChrome.copy(alpha = 0.08f))
             .border(1.dp, p.onChrome.copy(alpha = if (selected) 0.35f else 0.12f), RoundedCornerShape(8.dp))
-            .clickable(onClick = onClick).padding(horizontal = 12.dp, vertical = 6.dp),
+            .clickable(onClick = onClick).padding(horizontal = 2.dp, vertical = 6.dp),
         contentAlignment = Alignment.Center
-    ) { Text(label, color = p.onChrome, fontSize = 14.sp, fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Normal) }
+    ) { Text(label, color = p.onChrome, fontSize = 14.sp, maxLines = 1, softWrap = false, fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Normal) }
 }

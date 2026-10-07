@@ -2409,7 +2409,7 @@ var frontBrief = [
     ["וְהוּא","and it"],
     ["כָּתַב","wrote"],
     ["אֶת־הַתָּכְנָה","the software"],
-  ], english:"The app itself — the interlinear layout, the root scorecards and the concordance behind them, the Topical Guide, the search and the cross-references, and The Standard Works app for iPhone — was built with artificial intelligence: the translator directed Claude, a model made by Anthropic, and it wrote the software."},
+  ], english:"The app itself (the interlinear layout, the root scorecards and the concordance behind them, the Topical Guide, the search and the cross-references, and The Standard Works app for iPhone) was built with artificial intelligence: the translator directed Claude, a model made by Anthropic, and it wrote the software."},
   { num:"כ", words:[
     ["לָמָּה","why"],
     ["כַּרְטִיסֵי","the scorecards"],
@@ -2452,7 +2452,7 @@ var frontBrief = [
     ["וְאֶת","and"],
     ["כָּל־מַרְאֵי","every reference"],
     ["הַמְּקוֹמוֹת","of the places"],
-  ], english:"Why the scorecards: Tap any Hebrew word and its root scorecard opens, showing the root and its meaning, how many times the root occurs in each of the six volumes — the Tanakh, the New Testament, the Book of Mormon, the Doctrine and Covenants, the Pearl of Great Price and the Joseph Smith Translation — its forms and its glosses, and every reference."},
+  ], english:"Why the scorecards: Tap any Hebrew word and its root scorecard opens, showing the root and its meaning, how many times the root occurs in each of the six volumes (the Tanakh, the New Testament, the Book of Mormon, the Doctrine and Covenants, the Pearl of Great Price and the Joseph Smith Translation), its forms and its glosses, and every reference."},
   { num:"כא", words:[
     ["כַּרְטִיסֵי","the scorecards"],
     ["הַשֳּׁרָשִׁים","of the roots"],

@@ -127,7 +127,7 @@
       'box-shadow:0 4px 18px rgba(0,0,0,0.35);cursor:pointer;display:flex;' +
       'align-items:center;gap:10px;max-width:92vw;';
     var label = document.createElement('span');
-    label.textContent = 'עדכון זמין · Update ready — tap to refresh';
+    label.textContent = 'עדכון זמין · Update ready. Tap to refresh.';
     bar.appendChild(label);
     var close = document.createElement('span');
     close.textContent = '✕';

@@ -78,7 +78,7 @@ function _syncSelToolbarModeButton() {
   var off = document.body.classList.contains('hide-sel-toolbar');
   b.classList.toggle('active', off);
   b.setAttribute('aria-pressed', off ? 'true' : 'false');
-  b.title = off ? 'Selection toolbar off — tap to turn on (tools appear after you select text)' : 'Hide floating selection toolbar (copy/select works normally)';
+  b.title = off ? 'Selection toolbar off. Tap to turn it on (the tools appear after you select text).' : 'Hide floating selection toolbar (copy/select works normally)';
 }
 
 function toggleFloatingSelToolbar(e) {
@@ -864,14 +864,14 @@ function getShareContent() {
   var verse = _getHighlightedVerse();
   if (verse && verse.heb) {
     return {
-      title: verse.ref + ' \u2014 ' + _swShareTitle(),
+      title: verse.ref + ' \u00b7 ' + _swShareTitle(),
       text: verse.heb + '\n' + verse.eng + '\n(' + verse.ref + ')',
       url: url
     };
   }
   return {
     title: _swShareTitle(),
-    text: chapter + ' \u2014 ' + _swShareTitle(),
+    text: chapter + ' \u00b7 ' + _swShareTitle(),
     url: url
   };
 }
@@ -1119,7 +1119,7 @@ function selToolbarShare() {
     ref = getChapterLabel(window.currentChapterId);
   }
   _shareContent = {
-    title: ref + ' \u2014 ' + _swShareTitle(),
+    title: ref + ' \u00b7 ' + _swShareTitle(),
     text: shareText,
     url: typeof _getShareUrl === 'function' ? _getShareUrl() : window.location.href
   };
@@ -1200,7 +1200,7 @@ function makeWordUnit(h, e, isSof) {
     ? _stripNikkudDisplay(h)
     : h.replace(/([\u05D0-\u05EA][\u0591-\u05C6]*\u05C7[\u0591-\u05C6]*)/g, '<span class="qq">$1</span>');
   if (_isTranslitTerm(h)) {
-    displayH += '<span class="tt-mark" title="transliterated term or acronym — no Hebrew root">*</span>';
+    displayH += '<span class="tt-mark" title="transliterated term or acronym: no Hebrew root">*</span>';
   }
   var glCls = 'gl' + ((gloss && gloss.length <= 18 && gloss.split(' ').length <= 3) ? ' gl-nw' : '');
   div.innerHTML = '<span class="hw" lang="he">' + displayH + '</span>' +

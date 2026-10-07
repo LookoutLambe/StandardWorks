@@ -164,7 +164,7 @@
     row.appendChild(aNext); row.appendChild(pill); row.appendChild(aPrev);
     footer.insertBefore(row, footer.firstChild);
     function numberOf(label) {
-      var m = /(\d+)\s*$/.exec(String(label || '').split('—').pop() || '');
+      var m = /(\d+)\s*$/.exec(String(label || ''));   // "Next chapter: 1 Nephi 2" → 2
       return m ? m[1] : '';
     }
     function sync() {
@@ -186,7 +186,7 @@
         if (m) shown = (/^D&C\b/i.test(m[1]) ? 'Section ' : /^Psalm/i.test(m[1]) ? 'Psalm ' : 'Chapter ') + m[2];
       }
       pill.querySelector('.sw-app-pill-text').textContent = shown;
-      pill.setAttribute('aria-label', (t || 'Chapters') + ' — open the chapters');
+      pill.setAttribute('aria-label', (t || 'Chapters') + ', open the chapters');
     }
     sync();
     if (window.MutationObserver) {

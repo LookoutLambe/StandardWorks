@@ -2,12 +2,14 @@ import SwiftUI
 
 /// NOTES, NATIVE — everything the reader has marked, in three lists.
 ///
-/// The reader keeps its notes in IndexedDB through notes_engine.js
-/// (window.NotesEngine, keyed "Book|chapter|verse"), its highlights in
-/// localStorage `sw-highlights-v1` ({verseKey: {on, ts}}) and its bookmarks
-/// in `sw-bookmarks-v1` ([{volume, chapter, label, heb, path, ts}]). This tab
-/// reads all three from the page and lists them newest first; a tap opens the
-/// place in the Read tab. Nothing is stored twice.
+/// The page's `SWMarks.collect()` (nav_engine.js) reads every store the
+/// reader writes: the word popover's per-volume highlights and notes
+/// (`<vol>-annotations`, `<vol>-notes`), the verse menu's (`sw-highlights-v1`,
+/// NotesEngine in IndexedDB) and the bookmarks (`sw-bookmarks-v1`). This tab
+/// used to read the verse menu's stores itself and so never saw the popover's,
+/// which is how nearly everyone marks (Deep Testing BUG-003, 2026-10-03). Each
+/// row comes with the path that opens it; a tap opens it in the Read tab. A
+/// popover mark keeps no time, so it shows no date. Nothing is stored twice.
 struct NotesView: View {
     @EnvironmentObject var shell: WebShell
     @State private var notes: [NoteRow] = []
@@ -55,12 +57,14 @@ struct NotesView: View {
                         if !highlights.isEmpty {
                             Section(header: Text("Highlights").foregroundStyle(shell.ink2)) {
                                 ForEach(highlights) { h in
-                                    Button { open(verseKey: h.key) } label: {
+                                    Button { open(path: h.path, verseKey: h.key) } label: {
                                         HStack {
                                             Image(systemName: "highlighter").foregroundStyle(shell.here)
                                             Text(h.ref)
                                             Spacer()
-                                            Text(h.when, style: .date).font(ShellTheme.text(.caption)).foregroundStyle(shell.ink3)
+                                            if let when = h.when {
+                                                Text(when, style: .date).font(ShellTheme.text(.caption)).foregroundStyle(shell.ink3)
+                                            }
                                         }
                                     }
                                     .foregroundStyle(shell.ink)
@@ -71,12 +75,14 @@ struct NotesView: View {
                         if !notes.isEmpty {
                             Section(header: Text("Notes").foregroundStyle(shell.ink2)) {
                                 ForEach(notes) { note in
-                                    Button { open(verseKey: note.key) } label: {
+                                    Button { open(path: note.path, verseKey: note.key) } label: {
                                         VStack(alignment: .leading, spacing: 4) {
                                             HStack {
                                                 Text(note.ref).font(ShellTheme.text(.footnote, weight: .semibold)).foregroundStyle(shell.here)
                                                 Spacer()
-                                                Text(note.when, style: .date).font(ShellTheme.text(.caption)).foregroundStyle(shell.ink3)
+                                                if let when = note.when {
+                                                    Text(when, style: .date).font(ShellTheme.text(.caption)).foregroundStyle(shell.ink3)
+                                                }
                                             }
                                             Text(note.text).font(ShellTheme.text(.body)).lineLimit(4)
                                         }
@@ -99,27 +105,28 @@ struct NotesView: View {
 
     private func load() {
         let body = """
-        var out = { notes: [], highlights: {}, bookmarks: [] };
-        try { if (window.NotesEngine) { var all = await window.NotesEngine.exportAll(); out.notes = (all && all.notes) || []; } } catch (e) {}
-        try { out.highlights = JSON.parse(localStorage.getItem('sw-highlights-v1') || '{}') || {}; } catch (e) {}
-        try { out.bookmarks = JSON.parse(localStorage.getItem('sw-bookmarks-v1') || '[]') || []; } catch (e) {}
-        return out;
+        if (window.SWMarks) return await window.SWMarks.collect();
+        return { notes: [], highlights: [], bookmarks: [] };
         """
         shell.call(body) { v in
             let d = (v as? [String: Any]) ?? [:]
+            // The collector has already put each list in order.
+            func when(_ r: [String: Any]) -> Date? {
+                let ms = (r["ts"] as? Double) ?? 0
+                return ms > 0 ? Date(timeIntervalSince1970: ms / 1000) : nil
+            }
             let noteRows = (d["notes"] as? [[String: Any]]) ?? []
-            notes = noteRows.compactMap { r -> NoteRow? in
-                guard let key = r["verseKey"] as? String, let text = r["text"] as? String else { return nil }
-                let ms = (r["updatedAt"] as? Double) ?? 0
-                return NoteRow(key: key, ref: NotesView.ref(key), text: text, when: Date(timeIntervalSince1970: ms / 1000))
-            }.sorted { $0.when > $1.when }
-            let hl = (d["highlights"] as? [String: Any]) ?? [:]
-            highlights = hl.compactMap { key, val -> MarkRow? in
-                let info = val as? [String: Any]
-                if let on = info?["on"] as? Bool, !on { return nil }
-                let ms = (info?["ts"] as? Double) ?? 0
-                return MarkRow(key: key, ref: NotesView.ref(key), when: Date(timeIntervalSince1970: ms / 1000))
-            }.sorted { $0.when > $1.when }
+            notes = noteRows.enumerated().compactMap { i, r -> NoteRow? in
+                guard let key = r["key"] as? String, let text = r["text"] as? String else { return nil }
+                let ref = (r["ref"] as? String).flatMap { $0.isEmpty ? nil : $0 } ?? NotesView.ref(key)
+                return NoteRow(id: "n:\(i)", key: key, ref: ref, path: r["path"] as? String ?? "", text: text, when: when(r))
+            }
+            let markRows = (d["highlights"] as? [[String: Any]]) ?? []
+            highlights = markRows.enumerated().compactMap { i, r -> MarkRow? in
+                guard let key = r["key"] as? String else { return nil }
+                let ref = (r["ref"] as? String).flatMap { $0.isEmpty ? nil : $0 } ?? NotesView.ref(key)
+                return MarkRow(id: "h:\(i)", key: key, ref: ref, path: r["path"] as? String ?? "", when: when(r))
+            }
             let bm = (d["bookmarks"] as? [[String: Any]]) ?? []
             bookmarks = bm.compactMap { b -> BookmarkRow? in
                 guard let path = b["path"] as? String, let label = b["label"] as? String else { return nil }
@@ -133,6 +140,11 @@ struct NotesView: View {
     static func ref(_ key: String) -> String {
         let parts = key.split(separator: "|").map(String.init)
         return parts.count >= 3 ? "\(parts[0]) \(parts[1]):\(parts[2])" : key
+    }
+
+    /// The path the page built for the mark; the registry lookup only when it could not build one.
+    private func open(path: String, verseKey: String) {
+        if !path.isEmpty { shell.open(path: path) } else { open(verseKey: verseKey) }
     }
 
     /// "1 Nephi|3|7" → the registry's 1 Nephi, chapter 3, at verse 7 through the
@@ -156,13 +168,13 @@ struct NotesView: View {
     }
 }
 
+/// The id is the row's place in the collector's list: one verse can carry a
+/// note in each of two stores, so the key alone is not unique.
 struct NoteRow: Identifiable {
-    let key: String, ref: String, text: String, when: Date
-    var id: String { "n:" + key }
+    let id: String, key: String, ref: String, path: String, text: String, when: Date?
 }
 struct MarkRow: Identifiable {
-    let key: String, ref: String, when: Date
-    var id: String { "h:" + key }
+    let id: String, key: String, ref: String, path: String, when: Date?
 }
 struct BookmarkRow: Identifiable {
     let path: String, label: String, heb: String, when: Date

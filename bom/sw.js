@@ -4,18 +4,18 @@
     the hook did not touch it (it pointed at scripts/write_build_version.js,
     which does not exist), so the list below had been frozen for days and
     every Book of Mormon asset change was served stale. Never hand-edit. */
-const CACHE = 'bom-2026-10-03T13-19-05';
+const CACHE = 'bom-2026-10-07T10-15-44';
 /** Shell only — verse *.js files are cached at runtime, refreshed in the background (see fetch handler). */
 const ASSETS = [
   './bom.html',
   './bom_book_loader.js?v=11',
   './bom_lazy_assets.js?v=3',
-  '../reader_surface.js?v=49',
-  '../root_scorecard.js?v=396',
+  '../reader_surface.js?v=50',
+  '../root_scorecard.js?v=397',
   '../root_engine.js?v=333',
   '../xref_study_panel.css?v=14',
-  '../reader.css?v=134',
-  '../editions.js?v=2',
+  '../reader.css?v=135',
+  '../editions.js?v=3',
   '../xref_study_panel.js?v=6',
   '../read_aloud.js?v=74',
   /* root_concordance.js (1.62 MB gzipped) and scripture_verses.js (1.32 MB)
@@ -33,7 +33,7 @@ const ASSETS = [
      here and are no longer fetched by anything: both are split per book into
      crossrefs/<book>.js and inverse_crossrefs/<book>.js by
      tools/build_crossref_chunks.js, and arrive with the book like the verses. */
-  './topical_guide.js?v=3',
+  './topical_guide.js?v=4',
   './images/cover-dual.jpg?v=3',
   './images/cover-hardcover.jpg?v=3',
   './images/cover-hebrew.jpg?v=8',

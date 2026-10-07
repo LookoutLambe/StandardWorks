@@ -55,7 +55,7 @@
     var g = String(glossText || '').trim().replace(/,$/, '');
     if (!/^[A-Z]\.$/.test(g)) return '';
     if (ttSkel(surface).length !== 1) return '';
-    return '<span class="tt-note"><b>' + esc(g) + '</b> \u2014 ' +
+    return '<span class="tt-note"><b>' + esc(g) + '</b>: ' +
       'an initial: the letter stands in for a name, so it has no Hebrew root and no Strong\u2019s number.</span>';
   }
   function numeralNote(surface, glossText) {
@@ -85,7 +85,7 @@
       var lead = barePfx
         ? 'a number with its prefix ' + esc(barePfx) + '\u05BE attached: the figure itself has no Hebrew root'
         : 'a number, not a word: it has no Hebrew root';
-      return '<span class="tt-note"><b>' + esc(String(surface).trim()) + '</b> \u2014 ' +
+      return '<span class="tt-note"><b>' + esc(String(surface).trim()) + '</b>: ' +
         lead + ' and no Strong\u2019s number.</span>';
     }
     /* An ordinal gloss is only safe on a one- or two-letter surface — the bare
@@ -106,12 +106,12 @@
        Covenants headings alone, every one a blank card until now. The surface is
        digits, so say so in the numeral's own words rather than claiming letters. */
     if (/^\d{1,3}(,\d{3})*([\s\u2013\u2014-]+\d{1,3}(,\d{3})*)?$/.test(raw) || /^\d{1,7}([\s\u2013\u2014-]+\d{1,7})?$/.test(raw)) {
-      return '<span class="tt-note"><b>' + esc(raw) + '</b> \u2014 ' +
+      return '<span class="tt-note"><b>' + esc(raw) + '</b>: ' +
         'a number, not a word: a summary\u2019s pointer to the verses it covers, with no Hebrew root and no Strong\u2019s number.</span>';
     }
     var sk = raw.replace(/[-\u05BE]/g, '');
     if (!NUM_LETTERS.test(sk)) return '';
-    return '<span class="tt-note"><b>' + esc(g) + '</b> \u2014 ' +
+    return '<span class="tt-note"><b>' + esc(g) + '</b>: ' +
       'a Hebrew numeral: the letters stand for the number, so it has no Hebrew root and no Strong\u2019s number.</span>';
   }
   // U+05F4 GERSHAYIM is the acronym's own punctuation and must strip like a quote.
@@ -138,11 +138,11 @@
       var key = ttKey(ttSkel(p.split(/[־\s]+/).join('')));
       var acro = ACRONYM_TERMS[key];
       if (acro) {
-        return '<span class="tt-note"><b>' + esc(acro) + '</b> \u2014 ' +
+        return '<span class="tt-note"><b>' + esc(acro) + '</b>: ' +
           'an acronym, not a word: its letters stand for those three, so it has no Hebrew root and no Strong\u2019s number.</span>';
       }
       var name = TRANSLIT_TERMS[key] || '';
-      return '<span class="tt-note">' + (name ? '<b>' + esc(name) + '</b> \u2014 ' : '') +
+      return '<span class="tt-note">' + (name ? '<b>' + esc(name) + '</b>: ' : '') +
         'transliterated term: carried over from the English as it sounds, not a Hebrew word. It has no Hebrew root and no Strong\u2019s number.</span>';
     }).join('<br>');
   }
@@ -1000,7 +1000,7 @@
             '<span class="rsc-root"><span style="font-family:\'David Libre\',serif">' + esc(heb2) + '</span>' +
             (tr2 ? ' <span style="font-size:0.85em;opacity:0.7;">(' + esc(tr2) + ')</span>' : '') + '</span>' +
             '<br><span style="font-style:italic;opacity:0.85;font-size:0.9em;">' + esc(d2.meaning) + '</span>' +
-            '<div style="font-size:0.8em;opacity:0.6;margin-top:0.3em;">Chapter-heading vocabulary — no verse occurrences</div>' +
+            '<div style="font-size:0.8em;opacity:0.6;margin-top:0.3em;">Chapter-heading vocabulary: no verse occurrences</div>' +
             '</div>';
         }
         if (mini || ttHtml) slotEl.innerHTML = mini + ttHtml;
@@ -1263,7 +1263,7 @@
       var h = '';
       if (scoped && senseRec) {
         h += '<div class="rsc-note">Showing only where this word means <b>' + esc(senseRec.g) +
-             '</b> — ' + senseRec.n + ' uses in ' + senseRec.v + ' verses, of ' +
+             '</b>: ' + senseRec.n + ' uses in ' + senseRec.v + ' verses, of ' +
              (entry.c || []).reduce(function(a, b) { return a + b; }, 0) + ' for the whole root.</div>';
       }
       // Order volumes: current volume first, then canonical order

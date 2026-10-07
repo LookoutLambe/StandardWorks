@@ -396,7 +396,7 @@
     _searchInput = document.createElement('input');
     _searchInput.type = 'text';
     _searchInput.id = 'nav-search-input';
-    _searchInput.placeholder = 'Search a word, or jump to a verse… — / or Ctrl+K';
+    _searchInput.placeholder = 'Search a word, or jump to a verse… (/ or Ctrl+K)';
     _searchInput.oninput = onSearchInput;
     _searchInput.onkeydown = onSearchKeydown;
     var closeBtn = document.createElement('button');
@@ -1706,7 +1706,7 @@
     if (!d) return;                       // no progress yet: leave "Begin Reading"
     var where = d.vlabel || d.label || '';
     if (!where) return;
-    btn.textContent = 'Continue Reading \u2014 ' + where + ' \u2192';
+    btn.textContent = 'Continue Reading: ' + where + ' \u2192';
     btn.onclick = function (e) {
       if (e) e.stopPropagation();
       if (typeof window.navTo !== 'function') return;
@@ -1788,6 +1788,119 @@
     var deep = buildHash(hit.volume, chapId) + (v ? (hit.volume === 'bom' ? ':' + v : '&v=' + v) : '');
     if (hit.volume === (_config && _config.volume) && !(_config && _config.hub)) return '#' + deep;
     return ((_config && _config.basePath) || '') + VOLUMES[hit.volume].page + '#' + deep;
+  };
+
+  /* EVERYTHING THE READER HAS MARKED, in one list, for the Notes pages (the
+     iPhone's, Android's and the phone web shell's). Two tools write marks,
+     and each keeps its own stores:
+
+       the verse-number menu       sw-highlights-v1 {verseKey: {on, ts}} and
+                                   the NotesEngine notes in IndexedDB
+       the word-selection popover  <vol>-annotations {wordId: {hl, ul}} and
+                                   <vol>-notes {verseKey: text}, one pair per
+                                   volume (reader_surface.js)
+
+     The Notes pages used to read the first pair only, so every highlight and
+     note made from the popover, the way almost everyone marks, never reached
+     them: "Nothing marked yet" over a page full of marks (Deep Testing
+     BUG-003, 2026-10-03). They read this now and never a store, so a store
+     cannot be missed again. Each row carries its verse key, the label to
+     show and the page path that opens it, built from the book table here.
+
+     A word id is "Book|chapter|verse|n"; a heading word's third part is not
+     a number ("1 Nephi 1|h|0", "Genesis|1|heading|0") and has no verse to
+     list. The JST keys its verses by FILE position, not chapter (see
+     NavEngineRefHref above), so a JST mark opens its chapter, labelled with
+     the real chapter when jst_refmap.js is on the page. */
+  var MARK_VOLS = ['ot', 'nt', 'bom', 'dc', 'pgp', 'jst'];
+  function _markStore(key, empty) {
+    try { var v = JSON.parse(localStorage.getItem(key) || 'null'); return v || empty; } catch (e) { return empty; }
+  }
+  function _isMarked(rec) {                        // {hl, ul}, or the legacy per-tier record _annOf folds
+    if (!rec || typeof rec !== 'object') return false;
+    if (rec.hl || rec.ul) return true;
+    for (var t in rec) if (rec[t] && typeof rec[t] === 'object' && (rec[t].hl || rec[t].ul)) return true;
+    return false;
+  }
+  function _markBook(vol, name) {
+    var divs = (VOLUMES[vol] && VOLUMES[vol].divisions) || [];
+    for (var d = 0; d < divs.length; d++) {
+      var bs = divs[d].books || [];
+      for (var b = 0; b < bs.length; b++) if (bs[b].en === name) return bs[b];
+    }
+    return null;
+  }
+  /* vol is null for the verse-menu stores, which do not say which volume. */
+  function _markRow(vol, verseKey) {
+    var p = String(verseKey || '').split('|');
+    var name = p[0], ch = parseInt(p[1], 10), v = parseInt(p[2], 10) || 0;
+    if (!name || !ch) return null;
+    if (vol === 'jst') {
+      var jb = _markBook('jst', name);
+      if (!jb) return null;
+      var jid = jb.prefix + ch, real = '', map = window._jstRefMap || {};
+      for (var k in map) if (map[k] === jid) { real = k; break; }
+      return { vol: 'jst', key: verseKey, ref: 'JST ' + (real || name), path: VOLUMES.jst.page + '#' + jid };
+    }
+    var vb = vol ? _markBook(vol, name) : null;
+    var hit = vol ? (vb ? { volume: vol, book: vb } : null) : _refBookLookup(name);
+    if (!hit && /^D&C$/.test(name)) {              // the D&C's books are its sections
+      var sb = _markBook('dc', 'Section ' + ch);
+      if (sb) { hit = { volume: 'dc', book: sb }; ch = 1; }
+    }
+    if (!hit) return null;
+    var chapId = hit.book.prefix + (hit.book.isFront ? '' : ch);
+    var deep = buildHash(hit.volume, chapId) + (v ? (hit.volume === 'bom' ? ':' + v : '&v=' + v) : '');
+    return { vol: hit.volume, key: verseKey, ref: p[0] + ' ' + p[1] + (v ? ':' + v : ''), path: VOLUMES[hit.volume].page + '#' + deep };
+  }
+  window.SWMarks = {
+    /* → { notes: [{vol, key, ref, path, text, ts}], highlights: [{vol, key, ref, path, ts}],
+           bookmarks: sw-bookmarks-v1 as stored }. Rows with a time come first,
+       newest first; the popover's stores keep no time, so theirs follow,
+       volume by volume, in the order each store holds them. */
+    collect: async function () {
+      var notes = [], highlights = [], seen = {};
+      function add(list, kind, vol, verseKey, extra) {
+        var row = _markRow(vol, verseKey);
+        if (!row) row = { vol: vol, key: verseKey, ref: String(verseKey).split('|').join(' '), path: '' };
+        var id = kind + '\u0001' + row.vol + '\u0001' + verseKey + (kind === 'n' ? '\u0001' + extra.text : '');
+        if (seen[id]) return;
+        seen[id] = true;
+        row.ts = extra.ts || 0;
+        if (kind === 'n') row.text = extra.text;
+        row.order = list.length;
+        list.push(row);
+      }
+      var vh = _markStore('sw-highlights-v1', {});
+      Object.keys(vh).forEach(function (k) {
+        var info = vh[k];
+        if (info && info.on === false) return;
+        add(highlights, 'h', null, k, { ts: (info && info.ts) || 0 });
+      });
+      try {
+        if (window.NotesEngine && window.NotesEngine.exportAll) {
+          var all = await window.NotesEngine.exportAll();
+          ((all && all.notes) || []).forEach(function (n) {
+            if (n && n.verseKey && String(n.text || '').trim()) add(notes, 'n', null, n.verseKey, { text: n.text, ts: n.updatedAt || 0 });
+          });
+        }
+      } catch (e) {}
+      MARK_VOLS.forEach(function (vol) {
+        var ann = _markStore(vol + '-annotations', {});
+        Object.keys(ann).forEach(function (wid) {
+          var p = wid.split('|');
+          if (p.length < 4 || !/^\d+$/.test(p[2]) || !_isMarked(ann[wid])) return;
+          add(highlights, 'h', vol, p.slice(0, 3).join('|'), {});
+        });
+        var vn = _markStore(vol + '-notes', {});
+        Object.keys(vn).forEach(function (k) {
+          if (String(vn[k] || '').trim()) add(notes, 'n', vol, k, { text: vn[k] });
+        });
+      });
+      function byTime(a, b) { return (b.ts - a.ts) || (a.order - b.order); }
+      notes.sort(byTime); highlights.sort(byTime);
+      return { notes: notes, highlights: highlights, bookmarks: _markStore('sw-bookmarks-v1', []) };
+    }
   };
 
   window.NavEngineClearReturn = function () { clearReturnPoint(); };
@@ -2445,9 +2558,9 @@
   function setDockNavButtonLabels(btn, hebDefault, enDefault, destLabel) {
     if (!btn) return;
     /* icon-only arrows: the destination chapter is the tooltip and the
-       accessible name, so "Next chapter — 1 Nephi 2" is still announced */
+       accessible name, so "Next chapter: 1 Nephi 2" is still announced */
     var base = enDefault === 'Next' ? 'Next chapter' : 'Previous chapter';
-    btn.title = destLabel ? (base + ' \u2014 ' + destLabel) : base;
+    btn.title = destLabel ? (base + ': ' + destLabel) : base;
     btn.setAttribute('aria-label', btn.title);
   }
 
@@ -2493,7 +2606,7 @@
     var slot = center.querySelector('.nqd-now-label');
     if (slot) slot.textContent = shown; else center.textContent = shown;
     center.title = '\u05E4\u05EA\u05D7 \u05E8\u05E9\u05D9\u05DE\u05EA \u05E1\u05E4\u05E8\u05D9\u05DD \u00B7 ' + shown;
-    center.setAttribute('aria-label', shown + ' \u2014 open book list');
+    center.setAttribute('aria-label', shown + ', open book list');
   }
 
   /* The footer's chapter control opens the book list for the volume in hand —

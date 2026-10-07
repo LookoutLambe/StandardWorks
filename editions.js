@@ -19,7 +19,7 @@
     { key: 'footnote', title: 'Footnote Edition', name: 'Sefer Mormon: Footnote Edition, blue linen hardcover',
       format: 'Blue Linen · Dust Jacket', spec: 'Hardcover · Blue linen · Dust jacket', seller: 'Lulu',
       href: 'https://www.lulu.com/shop/christopher-lambe/%D7%A1%D7%A4%D7%A8-%D7%9E%D7%95%D7%A8%D7%9E%D7%95%D7%9F/hardcover/product-2m87weq.html',
-      w: 578, h: 900, img: 'cover-hardcover.jpg?v=3', alt: 'Hebrew Book of Mormon, footnote edition — blue linen hardcover with dust jacket',
+      w: 578, h: 900, img: 'cover-hardcover.jpg?v=3', alt: 'Hebrew Book of Mormon, footnote edition: blue linen hardcover with dust jacket',
       blurb: 'The Hebrew text with the translator’s footnotes, bound in blue linen under a dust jacket. The edition for the shelf.' },
     { key: 'dual', title: 'Dual Language Edition', name: 'Sefer Mormon: Dual Language Edition, Hebrew and English',
       format: 'Soft Cover', spec: 'Softcover · 7 × 10 in', seller: 'Amazon', href: 'https://www.amazon.com/dp/B0GGQZG9K9',

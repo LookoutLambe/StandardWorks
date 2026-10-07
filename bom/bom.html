@@ -2,7 +2,7 @@
 <html lang="en" dir="rtl">
 <head>
 <!-- THE PHONE SHELL (app-shell/pwa_shell.js): on a phone, the site wears the app; on a computer this line does nothing. -->
-<script src="../app-shell/pwa_shell.js?v=1"></script>
+<script src="../app-shell/pwa_shell.js?v=2"></script>
 <link rel="stylesheet" href="../fonts/david_libre.css?v=2">
 
 <meta charset="UTF-8">
@@ -36,7 +36,7 @@
 <link rel="stylesheet" href="../nav_engine.css?v=52">
 <link rel="stylesheet" href="../site_chrome.css?v=77">
 <link rel="stylesheet" href="../xref_study_panel.css?v=14">
-<link rel="stylesheet" href="../reader.css?v=134">
+<link rel="stylesheet" href="../reader.css?v=135">
 <style>
 
 /* Skip-to-content link (screen reader / keyboard) */
@@ -500,20 +500,6 @@ body.dual-mode .hw { font-size: 1.3em; }
 /* Heading glosses follow the display mode, exactly as verse glosses do:
       hidden in Hebrew Only and in Dual (where the English summary carries
       the English side). */
-@media (max-width: 700px) {
-  body.dual-mode .verse { flex-wrap: nowrap; }
-  body.dual-mode .verse-english {
-    flex: 0 0 35%;
-    min-width: 0;
-    border-left: 1px solid var(--rule-light);
-    padding: 4px 0 4px 6px;
-    font-size: 0.62em;
-    line-height: 1.4;
-  }
-  body.dual-mode .word-flow { flex: 1 1 0; min-width: 0; }
-  body.dual-mode .hw { font-size: 1.3em; }
-  body.dual-mode .verse-num { min-width: 22px; font-size: 0.7em; }
-}
 
 /* Responsive */
 @media (max-width: 700px) {
@@ -1482,54 +1468,10 @@ body:not(.hide-sel-toolbar) #sel-toolbar{display:flex!important;}
 body.hide-sel-toolbar #sel-toolbar-reopen{display:block;}
 body:not(.hide-sel-toolbar) .chapter-panel{padding-right:60px!important;}@media (max-width:600px) {body:not(.hide-sel-toolbar) .chapter-panel{padding-right:52px!important;}}
 
-/* -- Dual: Hebrew and English at the same size, split 55/45, and the
-      chapter summary laid out side by side the way the verses are. -- */
-body.dual-mode .verse-english { font-size: 0.85em; flex: 45 1 0; }
-/* Phones: side by side, each column was about 140 px (14 characters of
-   English per line). Stack instead: the Hebrew block first, its English
-   under it, full width. */
-@media (max-width: 600px) {
-  body.dual-mode .verse { flex-wrap: wrap; }
-  body.dual-mode .word-flow { flex: 1 1 0; order: 0; }
-  body.dual-mode .verse-english {
-    order: 1;
-    flex: 1 1 100%;
-    border-left: none;
-    border-top: 1px dotted var(--rule-light);
-    margin-top: 2px;
-    padding: 8px 0 2px;
-    font-size: 0.82em;
-    line-height: 1.55;
-  }
-  body.dual-mode .chapter-heading { flex-wrap: wrap; }
-  body.dual-mode .chapter-heading > .chapter-summary-en {
-    order: 3;
-    flex: 1 1 100%;
-    border-left: none;
-    padding-left: 0;
-    padding-top: 8px;
-  }
-}
+/* -- Dual's layout (the 55/45 split, the chapter summary beside its Hebrew,
+      and the phone stacking of both) lives in reader.css, DUAL MODE. -- */
 body.dual-mode .colophon .word-unit .hw { font-size: 1em; }
 
-body.dual-mode .chapter-heading { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0 14px; }
-body.dual-mode .chapter-heading > h2,
-body.dual-mode .chapter-heading > .chapter-label-en { flex: 0 0 100%; }
-body.dual-mode .chapter-heading > .chapter-summary,
-body.dual-mode .chapter-heading > .heading-flow {
-  min-width: 0; max-width: none; margin-top: 10px;
-}
-body.dual-mode .chapter-heading > .heading-flow { text-align: right; }
-body.dual-mode .chapter-heading > .chapter-summary {
-  text-align: left; order: 1; flex: 45 1 0; direction: ltr; padding-left: 14px;
-  border-left: 1px solid var(--rule-light);
-}
-body.dual-mode .chapter-heading > .heading-flow { order: 2; flex: 55 1 0; direction: rtl; }@media (max-width: 700px) {
-  body.dual-mode .chapter-heading > .chapter-summary { font-size: 0.78em; padding-right: 8px; }
-  /* the 0.9em that was here is gone: reader.css now sets .heading-flow to
-     0.62em, and the two multiplied to 0.56em — which would have dropped
-     the summary's gloss to ~11px, under the legibility floor. */
-}
 
 /* -- Chapter summary. The interlinear heading is the Hebrew in every mode;
       the plain Hebrew paragraph is superseded by it. The English shows only
@@ -1564,7 +1506,7 @@ body.dual-mode .chapter-summary { display: block; }
 
 <!-- Selection toolbar (vertical icon strip on desktop, horizontal on mobile) -->
 <div id="sel-toolbar">
-  <button id="sel-btn-close" onclick="toggleFloatingSelToolbar(event)" title="Hide tools — reopen from the tab at the screen edge" aria-label="Hide study tools">✕</button>
+  <button id="sel-btn-close" onclick="toggleFloatingSelToolbar(event)" title="Hide tools. Reopen them from the tab at the screen edge." aria-label="Hide study tools">✕</button>
   <button id="sel-btn-highlight" onclick="selToolbarToggleColors()" title="Highlight" aria-label="Highlight"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4l5 5L9 20H4v-5z"/></svg></button>
   <button id="sel-btn-note" onclick="selToolbarOpenNote()" title="Note" aria-label="Note"><svg class="sw-i" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20h4.2L20 8.2a2.1 2.1 0 0 0-3-3L5.2 17 4 20Z"/><path d="m14.8 6.4 2.8 2.8"/></svg></button>
   <button id="sel-btn-copy" onclick="selToolbarCopy()" title="Copy" aria-label="Copy"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="4" width="12" height="16" rx="2"/><path d="M16 4V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v1"/><path d="M4 8v12a2 2 0 0 0 2 2h8"/></svg></button>
@@ -1686,7 +1628,7 @@ body.dual-mode .chapter-summary { display: block; }
     <div id="xref-panel-refs"></div>
   </div>
   <div id="xref-pane-bookmarks" class="xref-pane" data-pane="bookmarks">
-    <p class="study-pane-hint">Saved places — jump back anytime.</p>
+    <p class="study-pane-hint">Saved places: jump back anytime.</p>
     <div class="study-btn-row">
       <button type="button" id="xref-bm-add">Add current</button>
       <button type="button" id="xref-bm-clear">Clear all</button>
@@ -1710,7 +1652,7 @@ body.dual-mode .chapter-summary { display: block; }
       <button type="button" id="xref-sp-dict">Dictionary</button>
       <button type="button" id="xref-sp-vocab">Vocabulary by frequency</button>
     </div>
-    <p class="study-pane-sub">Full backup — notes, highlights, bookmarks.</p>
+    <p class="study-pane-sub">Full backup: notes, highlights, bookmarks.</p>
     <div class="study-btn-row">
       <button type="button" id="xref-bk-export">Export backup</button>
       <button type="button" id="xref-bk-import">Import backup</button>
@@ -1759,9 +1701,9 @@ body.dual-mode .chapter-summary { display: block; }
         <div class="hero-lis-kicker">INTERLINEAR EDITION</div>
       </div>
       <div style="margin:24px 0 4px">
-        <button id="start-reading-btn" onclick="startReading()">Start Reading — 1 Nephi 1 →</button>
-        <div style="margin-top:14px;font-size:0.95em;direction:ltr"><a href="#intro" class="landing-preface-link" onclick="navTo('intro');return false;">To the Reader — the translator’s preface →</a></div>
-        <div style="margin-top:8px;font-size:0.95em;direction:ltr"><a href="../vocabulary.html" class="landing-preface-link" onclick="try{if(window.NavEngineMarkReturn)NavEngineMarkReturn(this.getAttribute('href'));}catch(e){}">The shortest way in — 300 roots carry 85% of this book →</a></div>
+        <button id="start-reading-btn" onclick="startReading()">Start Reading: 1 Nephi 1 →</button>
+        <div style="margin-top:14px;font-size:0.95em;direction:ltr"><a href="#intro" class="landing-preface-link" onclick="navTo('intro');return false;">To the Reader: the translator’s preface →</a></div>
+        <div style="margin-top:8px;font-size:0.95em;direction:ltr"><a href="../vocabulary.html" class="landing-preface-link" onclick="try{if(window.NavEngineMarkReturn)NavEngineMarkReturn(this.getAttribute('href'));}catch(e){}">The shortest way in: 300 roots carry 85% of this book →</a></div>
       </div>
       <hr class="landing-divider">
       <div id="landing-contents" class="landing-sections" style="text-align:initial"></div>
@@ -1789,13 +1731,13 @@ body.dual-mode .chapter-summary { display: block; }
       <div style="font-size:1.25em;color:var(--accent);margin-bottom:14px" dir="rtl">בִּדְפוּס</div>
       <div class="ornament" style="margin:10px 0 22px">✦ ✦ ✦</div>
       <p style="max-width:560px;margin:0 auto 26px;color:var(--ink-light);line-height:1.7;font-size:0.95em">
-        Sefer Mormon on paper — for the shelf, the study table, and gifts.
+        Sefer Mormon on paper, for the shelf, the study table, and gifts.
         Every edition is the same translation you read here; the web edition
         is free and always carries the latest corrections.
       </p>
         <div id="print-editions-cards"></div>
         <p class="ed-more"><a href="../in-print.html">About each edition →</a></p>
-        <script src="../editions.js?v=2"></script>
+        <script src="../editions.js?v=3"></script>
         <script>document.getElementById('print-editions-cards').innerHTML = Editions.cards('images/');</script>
       <div style="margin-top:34px">
         <button class="glossary-highlight-btn" onclick="navTo('landing')" style="font-size:1em;padding:8px 24px">← Back to Sefer Mormon</button>
@@ -1811,8 +1753,8 @@ body.dual-mode .chapter-summary { display: block; }
       <hr class="tr-rule">
 
       <p class="tr-muted" style="margin-top:0;text-align:center">
-        For the preface to the whole edition — why it exists, whose Hebrew is in each
-        volume, and how to read an interlinear — see
+        For the preface to the whole edition (why it exists, whose Hebrew is in each
+        volume, and how to read an interlinear), see
         <a href="../index.html#to-the-reader" class="tr-link"
            onclick="try{if(window.NavEngineMarkReturn)NavEngineMarkReturn(this.getAttribute('href'));}catch(e){}"
         >To the Reader</a>.
@@ -1823,13 +1765,13 @@ body.dual-mode .chapter-summary { display: block; }
       <h3 class="tr-h">An Israelite record</h3>
 
       <p class="tr-p">
-        The Book of Mormon presents itself as an Israelite record. Its authors think in Hebrew categories, build arguments with Hebrew parallelism, and lean on covenant terms that do not map cleanly into English. President Russell M. Nelson has noted that <span class="tr-he" dir="rtl">חֶסֶד</span> has no true one-word equivalent in English, and that translators end up reaching for several approximations at once — “mercy,” “goodness,” “lovingkindness,” and in older English even “goodly.” When Nephi writes about <span class="tr-he" dir="rtl">חֶסֶד</span> he is not using a vague feeling-word. He is invoking covenant loyalty and steadfast love, the word that anchors prophetic appeals across the Tanakh (Exodus 34:6).
+        The Book of Mormon presents itself as an Israelite record. Its authors think in Hebrew categories, build arguments with Hebrew parallelism, and lean on covenant terms that do not map cleanly into English. President Russell M. Nelson has noted that <span class="tr-he" dir="rtl">חֶסֶד</span> has no true one-word equivalent in English, and that translators end up reaching for several approximations at once: “mercy,” “goodness,” “lovingkindness,” and in older English even “goodly.” When Nephi writes about <span class="tr-he" dir="rtl">חֶסֶד</span> he is not using a vague feeling-word. He is invoking covenant loyalty and steadfast love, the word that anchors prophetic appeals across the Tanakh (Exodus 34:6).
       </p>
       <p class="tr-p">
         English can bury that architecture. Read “grace,” “mercy,” “salvation” and you can quietly import later categories onto a text that is speaking in covenant terms. This edition does not replace the English. It shows you what the English cannot: which word is repeating, which words share a root, and how a claim is being made through a biblical pattern of speech rather than stated outright.
       </p>
       <p class="tr-p">
-        The clearest way to see it is in the first verse of the book. Read it as covenant credentials that turn on a center point — and the center is <span class="tr-he" dir="rtl">חֶסֶד יְהוָה</span>.
+        The clearest way to see it is in the first verse of the book. Read it as covenant credentials that turn on a center point, and the center is <span class="tr-he" dir="rtl">חֶסֶד יְהוָה</span>.
       </p>
 
       <div class="tr-box">
@@ -1869,7 +1811,7 @@ body.dual-mode .chapter-summary { display: block; }
         The verse turns on <span class="tr-he" dir="rtl">חֶסֶד</span> and comes back out the way it went in. He is born into the covenant and ends by passing it on; he is taught by his father and ends taught by God. That is not decoration. It is the argument, and it is made by the shape of the sentence.
       </p>
       <p class="tr-p">
-        The same thing happens across the book. When Lehi blesses his sons the patriarchal formulae are not borrowed from Genesis — they are the same tradition, because Lehi is a patriarch working inside the same covenant framework as Isaac and Jacob before him. In the opening chapters the pattern is Deuteronomic: faithful parents teach, a son receives and is formed, and then he teaches in his turn by writing for readers he will never meet. Record-keeping is not how the story is preserved. It is the covenant obligation being kept.
+        The same thing happens across the book. When Lehi blesses his sons the patriarchal formulae are not borrowed from Genesis; they are the same tradition, because Lehi is a patriarch working inside the same covenant framework as Isaac and Jacob before him. In the opening chapters the pattern is Deuteronomic: faithful parents teach, a son receives and is formed, and then he teaches in his turn by writing for readers he will never meet. Record-keeping is not how the story is preserved. It is the covenant obligation being kept.
       </p>
 
       <hr class="tr-rule tr-rule--narrow">
@@ -1886,14 +1828,14 @@ body.dual-mode .chapter-summary { display: block; }
         That discipline is this volume’s alone. The Doctrine and Covenants is a nineteenth-century book and is allowed nineteenth-century things; the Tanakh and the New Testament I did not translate, and they are held to no rule of mine.
       </p>
       <p class="tr-p">
-        This is not a claim about what the plates contained. It is a disciplined exercise in hearing the Book of Mormon in the linguistic world it claims for itself — the world of First Temple Israel.
+        This is not a claim about what the plates contained. It is a disciplined exercise in hearing the Book of Mormon in the linguistic world it claims for itself: the world of First Temple Israel.
       </p>
 
       <h3 class="tr-h">What is on the page</h3>
 
       <p class="tr-p">
         The bar at the foot of the screen sets the view. <em>Interlinear</em> puts a
-        transliteration and an English gloss under each Hebrew word &mdash; one gloss for one
+        transliteration and an English gloss under each Hebrew word: one gloss for one
         word, standing in Hebrew order, so it does not read as English prose and is not meant
         to. <em>Dual</em> sets the Hebrew beside the printed English, verse by verse.
         <em>Hebrew Only</em> clears the apparatus away, <em>Transliterate</em> keeps the sound,
@@ -1923,7 +1865,7 @@ body.dual-mode .chapter-summary { display: block; }
 
       <p class="tr-p">
         Where the two diverge, the printed English of the Book of Mormon decides and the Hebrew
-        follows it &mdash; adding where the English has more, and leaving out where it has
+        follows it, adding where the English has more, and leaving out where it has
         less. 3 Nephi does not read like Matthew, and this edition does not quietly make it.
       </p>
 
@@ -1932,8 +1874,8 @@ body.dual-mode .chapter-summary { display: block; }
       </p>
 
       <p class="tr-muted" style="margin-bottom:0">
-        The full introduction &mdash; how to use the edition, why the scorecards, and the
-        translator&rsquo;s own preface to this volume &mdash; is in the front matter, which
+        The full introduction (how to use the edition, why the scorecards, and the
+        translator&rsquo;s own preface to this volume) is in the front matter, which
         opens from the contents on the previous page.
       </p>
 
@@ -3464,7 +3406,7 @@ window.READER = window.READER || {
   navLabelHe: 'Book of Mormon',
   /* So the shared search does not offer this volume as an "other volume". */
   selfPage: 'bom/bom.html',
-  shareTitle: '\u05E1\u05E4\u05E8 \u05DE\u05D5\u05E8\u05DE\u05D5\u05DF \u2014 Hebrew Interlinear Book of Mormon',
+  shareTitle: '\u05E1\u05E4\u05E8 \u05DE\u05D5\u05E8\u05DE\u05D5\u05DF \u00b7 Hebrew Interlinear Book of Mormon',
   /* Ids that are not chapters. reader_surface.js's getChapterLabel checks
      these before it tries to read a book and a number out of the id. */
   frontTitles: {
@@ -3519,13 +3461,13 @@ window.READER = window.READER || {
   books: []      /* filled from BOOK_DATA the moment it exists, below */
 };
 </script>
-<script src="../reader_surface.js?v=49"></script>
+<script src="../reader_surface.js?v=50"></script>
 <script defer src="stress.js?v=2"></script>  <!-- where the accent falls; deferred, applied on arrival -->
-<script src="../crossrefs_engine.js?v=23"></script>  <!-- the cross-reference panel, shared with the other five -->  <!-- panels, selection tools, annotation marks: shared with the other five -->
+<script src="../crossrefs_engine.js?v=24"></script>  <!-- the cross-reference panel, shared with the other five -->  <!-- panels, selection tools, annotation marks: shared with the other five -->
 <script src="../translit.js?v=5"></script>
 <script src="../jst_refmap.js?v=1"></script>
 <script src="../verse_loader.js?v=5"></script>
-<script src="../root_scorecard.js?v=396"></script>
+<script src="../root_scorecard.js?v=397"></script>
 <script>RootScorecard.init({ vol: 'bom', base: '../' });</script>
 <!-- Reference data (cross-references, glossary, roots, topical guide: ~2.4 MB)
      is deferred: it is consumed only after load (cross-ref markers at +500 ms,
@@ -3538,7 +3480,7 @@ window.READER = window.READER || {
      inverse_crossrefs/<book>.js -->
 <script src="chapter_headings.js"></script>
 <script src="chapter_headings_heb.js?v=20"></script>
-<script defer src="topical_guide.js?v=3"></script>
+<script defer src="topical_guide.js?v=4"></script>
 <script src="../notes_engine.js"></script>
 <script src="../interlinear_gloss.js?v=7"></script>
 <script>
@@ -5213,7 +5155,7 @@ document.addEventListener('keydown', function(e) {
          the reader off the app to look up a word the app already defines; the
          number now opens our own dictionary. */
       popupStrong.innerHTML = "Strong\u2019s: <span class='popup-strong-link' role='button' tabindex='0' data-strongs='" + strongsNum + "'>" + strongsNum + "</span>" +
-        (sDef ? " <span style=\"font-style:italic;opacity:0.8;\">\u2014 " + sDef + "</span>" : "");
+        (sDef ? " <span style=\"font-style:italic;opacity:0.8;\">\u00b7 " + sDef + "</span>" : "");
       popupStrong.style.display = '';
     } else {
       popupStrong.style.display = 'none';
@@ -5230,7 +5172,7 @@ document.addEventListener('keydown', function(e) {
         var lemE = _strongsRoots[lemNum];
         lemmaLine = 'Word: <span style="font-family:\'David Libre\',serif">' + (lemE.w || '') + '</span>' +
           (lemE.x ? ' <span style="font-size:0.85em;opacity:0.7;">(' + ((typeof transliterate === 'function' && lemE.w ? transliterate(lemE.w) : '') || lemE.x) + ')</span>' : '') +
-          (lemE.g ? ' \u2014 ' + lemE.g : '') + '<br>';
+          (lemE.g ? ' \u00b7 ' + lemE.g : '') + '<br>';
       }
     }
     var sInfo = wordFreq[hText];
@@ -5272,7 +5214,7 @@ detailHtml += '<div class="rsc-slot">';   // RootScorecard upgrades this block w
         rootMeaning = meanings.slice(0, 4).join(', ');
       }
       if (!rootMeaning && typeof strongsGloss === 'string') rootMeaning = strongsGloss;
-      detailHtml += lemmaLine + '<span style="cursor:pointer;text-decoration:underline;" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">Root ' + rootDisplay + '</span> — ' + rInfo.count + ' uses in ' + verseCount + ' verses';
+      detailHtml += lemmaLine + '<span style="cursor:pointer;text-decoration:underline;" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">Root ' + rootDisplay + '</span>: ' + rInfo.count + ' uses in ' + verseCount + ' verses';
       if (rootMeaning) {
         detailHtml += '<br><span style="font-style:italic;color:var(--ink-2);font-size:0.9em;">' + rootMeaning + '</span>';
       }
@@ -5292,7 +5234,7 @@ detailHtml += '<div class="rsc-slot">';   // RootScorecard upgrades this block w
       // from _verseRegistry only. Printing "Occurrences: 1" there invented a
       // count for a word that occurs zero times in the corpus; say so instead.
       if (sInfo) detailHtml += '<span>Occurrences:</span> ' + sInfo.count;
-      else detailHtml += '<span style="font-style:italic;color:var(--ink-2);font-size:0.9em;">Not in the verse text \u2014 chapter summary only</span>';
+      else detailHtml += '<span style="font-style:italic;color:var(--ink-2);font-size:0.9em;">Not in the verse text: chapter summary only</span>';
     }
 
     // Show alternate glosses for this exact form
@@ -5338,7 +5280,7 @@ detailHtml += '</div>';
         /* No inline colour: it hard-coded --here-chrome, which is mint in
            BOTH themes, and the word card is paper — mint on white measured
            ~1.9:1. Styling lives in reader.css with the rest of the card. */
-        detailHtml += '<br><span class="popup-tg-link">Topical Guide: ' + tgEntry.hebrew + ' — ' + tgEntry.english + ' →</span>';
+        detailHtml += '<br><span class="popup-tg-link">Topical Guide: ' + tgEntry.hebrew + ' · ' + tgEntry.english + ' →</span>';
       }
     }
 
@@ -5786,7 +5728,7 @@ function renderTgEntry(entry) {
     // Verse references
     html += '<div class="tg-def-label">Book of Mormon References · אַזְכָּרוֹת מִסֵּפֶר מוֹרְמוֹן</div>';
     entry.verseRefs.forEach(function(ref) {
-      var snippet = ref.snippet ? ' <span class="tg-ref-snippet">— ' + ref.snippet + '</span>' : '';
+      var snippet = ref.snippet ? ' <span class="tg-ref-snippet">· ' + ref.snippet + '</span>' : '';
       var hebLabel = _tgHebRefLabel(ref.chapterId, ref.verse);
       var hebSpan = hebLabel ? ' <span class="tg-ref-heb">' + hebLabel + '</span>' : '';
       html += '<span class="tg-ref" onclick="event.stopPropagation();goToTgVerse(\'' + ref.chapterId + '\',' + (ref.verse || 0) + ')">' +
@@ -8681,9 +8623,9 @@ try {
 
 </script>
 
-<script src="../site_chrome.js?v=54" data-sw-volume="bom"></script>
+<script src="../site_chrome.js?v=55" data-sw-volume="bom"></script>
 <script src="../verse_search.js?v=3"></script>
-<script src="../nav_engine.js?v=90"></script>
+<script src="../nav_engine.js?v=91"></script>
 <script src="./bom_phrase_breaks.js" defer></script>
 <script src="../imperatives.js" defer></script>
 <script src="../read_aloud.js?v=74"></script>

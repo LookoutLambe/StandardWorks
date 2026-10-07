@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
@@ -35,6 +36,7 @@ import androidx.compose.material3.BottomSheetDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.material3.SegmentedButton
 import androidx.compose.material3.SegmentedButtonDefaults
 import androidx.compose.material3.SingleChoiceSegmentedButtonRow
@@ -221,8 +223,17 @@ fun DisplayOptionsSheet(shell: WebShell) {
     if (!shell.showDisplayOptions) return
     val p = shell.palette
     val close = { shell.showDisplayOptions = false }
+    // IT OPENS WHERE EVERY ROW CAN BE TOUCHED. Material's half-open state is
+    // the whole sheet slid down, so the screen's edge cut through whatever row
+    // sat there, under the navigation buttons: tapping "Match phone" pressed
+    // Back and shut the sheet (Deep Testing BUG-001). It opens at one height
+    // now, a little over half the screen like the iPhone's medium detent, the
+    // page still in view above it; its list scrolls inside and ends above the
+    // navigation bar (the sheet's own bottom inset).
+    val state = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     ModalBottomSheet(
         onDismissRequest = close,
+        sheetState = state,
         // fully open, it stops under the status bar, as the iPhone's leaves the page's edge showing
         modifier = Modifier.windowInsetsPadding(WindowInsets.statusBars),
         containerColor = p.chrome,
@@ -238,15 +249,17 @@ fun DisplayOptionsSheet(shell: WebShell) {
                 WindowCompat.getInsetsController(it, view).isAppearanceLightStatusBars = paperUnder
             }
         }
-        Box(Modifier.fillMaxWidth().height(48.dp), contentAlignment = Alignment.Center) {
-            Text("Display Options", color = p.onChrome, fontSize = 17.sp, fontWeight = FontWeight.SemiBold)
-            Box(Modifier.align(Alignment.CenterEnd).padding(end = 8.dp).size(44.dp).clip(CircleShape).clickable(onClick = close)
-                .semantics { contentDescription = "Close"; role = Role.Button }, contentAlignment = Alignment.Center) {
-                Icon(Icons.Filled.Cancel, null, tint = p.onChrome.copy(alpha = 0.8f), modifier = Modifier.size(26.dp))
+        Column(Modifier.fillMaxWidth().fillMaxHeight(0.62f)) {
+            Box(Modifier.fillMaxWidth().height(48.dp), contentAlignment = Alignment.Center) {
+                Text("Display Options", color = p.onChrome, fontSize = 17.sp, fontWeight = FontWeight.SemiBold)
+                Box(Modifier.align(Alignment.CenterEnd).padding(end = 8.dp).size(44.dp).clip(CircleShape).clickable(onClick = close)
+                    .semantics { contentDescription = "Close"; role = Role.Button }, contentAlignment = Alignment.Center) {
+                    Icon(Icons.Filled.Cancel, null, tint = p.onChrome.copy(alpha = 0.8f), modifier = Modifier.size(26.dp))
+                }
             }
-        }
-        LazyColumn(Modifier.fillMaxWidth().background(p.panel), contentPadding = PaddingValues(16.dp)) {
-            item { Column { DisplayOptionsSections(shell) } }
+            LazyColumn(Modifier.fillMaxWidth().weight(1f).background(p.panel), contentPadding = PaddingValues(16.dp)) {
+                item { Column { DisplayOptionsSections(shell) } }
+            }
         }
     }
 }

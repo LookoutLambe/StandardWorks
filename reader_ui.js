@@ -331,7 +331,7 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
          the reader off the app to look up a word the app already defines; the
          number now opens our own dictionary. */
       popupStrong.innerHTML = "Strong\u2019s: <span class='popup-strong-link' role='button' tabindex='0' data-strongs='" + strongsNum + "'>" + strongsNum + "</span>" +
-        (sDef ? " <span style=\"font-style:italic;opacity:0.8;\">\u2014 " + sDef + "</span>" : "");
+        (sDef ? " <span style=\"font-style:italic;opacity:0.8;\">\u00b7 " + sDef + "</span>" : "");
       popupStrong.style.display = '';
     } else {
       popupStrong.style.display = 'none';
@@ -348,7 +348,7 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
         var lemE = _strongsRoots[lemNum];
         lemmaLine = 'Word: <span style="font-family:David Libre,serif">' + (lemE.w || '') + '</span>' +
           (lemE.x ? ' <span style="font-size:0.85em;opacity:0.7;">(' + ((typeof transliterate === 'function' && lemE.w ? transliterate(lemE.w) : '') || lemE.x) + ')</span>' : '') +
-          (lemE.g ? ' \u2014 ' + lemE.g : '') + '<br>';
+          (lemE.g ? ' \u00b7 ' + lemE.g : '') + '<br>';
       }
     }
     var sInfo = wordFreq[hText];
@@ -386,7 +386,7 @@ detailHtml += '<div class="rsc-slot">';   // RootScorecard upgrades this block w
         rootMeaning = meanings.slice(0, 4).join(', ');
       }
       if (!rootMeaning && typeof strongsGloss === 'string') rootMeaning = strongsGloss;
-      detailHtml += lemmaLine + '<span style="cursor:pointer;text-decoration:none;color:var(--tap-blue,var(--here));" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">Root ' + rootDisplay + '</span> \u2014 ' + rInfo.count + ' uses in ' + verseCount + ' verses';
+      detailHtml += lemmaLine + '<span style="cursor:pointer;text-decoration:none;color:var(--tap-blue,var(--here));" onclick="event.stopPropagation();openGlossaryAtRoot(\'' + root.replace(/'/g,"\\'") + '\')">Root ' + rootDisplay + '</span>: ' + rInfo.count + ' uses in ' + verseCount + ' verses';
       if (rootMeaning) detailHtml += '<br><span style="font-style:italic;color:var(--ink-light);font-size:0.9em;">' + rootMeaning + '</span>';
       var formKeys = Object.keys(rInfo.forms);
       if (formKeys.length > 1) {
@@ -404,7 +404,7 @@ detailHtml += '<div class="rsc-slot">';   // RootScorecard upgrades this block w
       // from _verseRegistry only. Printing "Occurrences: 1" there invented a
       // count for a word that occurs zero times in the corpus; say so instead.
       if (sInfo) detailHtml += '<span>Occurrences:</span> ' + sInfo.count;
-      else detailHtml += '<span style="font-style:italic;color:var(--ink-2);font-size:0.9em;">Not in the verse text \u2014 chapter summary only</span>';
+      else detailHtml += '<span style="font-style:italic;color:var(--ink-2);font-size:0.9em;">Not in the verse text: chapter summary only</span>';
     }
     if (sInfo && Object.keys(sInfo.glosses).length > 1) {
       var sorted = Object.entries(sInfo.glosses).sort(function(a,b) { return b[1]-a[1]; });

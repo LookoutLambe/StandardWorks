@@ -37,12 +37,15 @@ import java.text.DateFormat
 import java.util.Date
 
 /**
- * NOTES, NATIVE — everything the reader has marked, in three lists, read from
- * the page's own stores (NotesEngine in IndexedDB, sw-highlights-v1 and
- * sw-bookmarks-v1 in localStorage). Nothing is stored twice.
+ * NOTES, NATIVE — everything the reader has marked, in three lists, from the
+ * page's SWMarks.collect() (nav_engine.js), which reads every store the reader
+ * writes: the word popover's per-volume highlights and notes as well as the
+ * verse menu's. This page used to read the verse menu's stores itself and
+ * never saw the popover's, which is how nearly everyone marks (Deep Testing
+ * BUG-003). Nothing is stored twice; each row brings the path that opens it.
  */
-data class NoteRow(val key: String, val ref: String, val text: String, val whenMs: Long)
-data class MarkRow(val key: String, val ref: String, val whenMs: Long)
+data class NoteRow(val key: String, val ref: String, val path: String, val text: String, val whenMs: Long)
+data class MarkRow(val key: String, val ref: String, val path: String, val whenMs: Long)
 data class BookmarkRow(val path: String, val label: String, val heb: String, val whenMs: Long)
 
 @Composable
@@ -56,30 +59,29 @@ fun NotesView(shell: WebShell) {
 
     LaunchedEffect(visits) {
         shell.call("""
-            var out = { notes: [], highlights: {}, bookmarks: [] };
-            try { if (window.NotesEngine) { var all = await window.NotesEngine.exportAll(); out.notes = (all && all.notes) || []; } } catch (e) {}
-            try { out.highlights = JSON.parse(localStorage.getItem('sw-highlights-v1') || '{}') || {}; } catch (e) {}
-            try { out.bookmarks = JSON.parse(localStorage.getItem('sw-bookmarks-v1') || '[]') || []; } catch (e) {}
-            return out;
+            if (window.SWMarks) return await window.SWMarks.collect();
+            return { notes: [], highlights: [], bookmarks: [] };
         """.trimIndent()) { d ->
             val o = d ?: JSONObject()
+            // The collector has already put each list in order.
             val n = ArrayList<NoteRow>()
             val na = o.optJSONArray("notes")
             if (na != null) for (i in 0 until na.length()) {
                 val r = na.optJSONObject(i) ?: continue
-                val key = r.optString("verseKey"); val text = r.optString("text")
+                val key = r.optString("key")
                 if (key.isEmpty()) continue
-                n.add(NoteRow(key, refOf(key), text, r.optDouble("updatedAt", 0.0).toLong()))
+                n.add(NoteRow(key, r.optString("ref").ifEmpty { refOf(key) }, r.optString("path"), r.optString("text"), r.optDouble("ts", 0.0).toLong()))
             }
-            notes = n.sortedByDescending { it.whenMs }
+            notes = n
             val h = ArrayList<MarkRow>()
-            val ho = o.optJSONObject("highlights")
-            if (ho != null) for (key in ho.keys()) {
-                val info = ho.optJSONObject(key)
-                if (info != null && info.has("on") && !info.optBoolean("on")) continue
-                h.add(MarkRow(key, refOf(key), info?.optDouble("ts", 0.0)?.toLong() ?: 0L))
+            val ha = o.optJSONArray("highlights")
+            if (ha != null) for (i in 0 until ha.length()) {
+                val r = ha.optJSONObject(i) ?: continue
+                val key = r.optString("key")
+                if (key.isEmpty()) continue
+                h.add(MarkRow(key, r.optString("ref").ifEmpty { refOf(key) }, r.optString("path"), r.optDouble("ts", 0.0).toLong()))
             }
-            highlights = h.sortedByDescending { it.whenMs }
+            highlights = h
             val b = ArrayList<BookmarkRow>()
             val ba = o.optJSONArray("bookmarks")
             if (ba != null) for (i in 0 until ba.length()) {
@@ -128,7 +130,7 @@ fun NotesView(shell: WebShell) {
                     ShellCard(p) {
                         highlights.forEachIndexed { i, h ->
                             if (i > 0) Rule(p)
-                            ShellRow(p, onClick = { openVerse(shell, h.key) }) {
+                            ShellRow(p, onClick = { openMark(shell, h.path, h.key) }) {
                                 Icon(Icons.Outlined.BorderColor, null, tint = p.here, modifier = Modifier.size(22.dp))
                                 Spacer(Modifier.width(12.dp))
                                 Text(h.ref, color = p.ink, fontSize = 17.sp, modifier = Modifier.weight(1f))
@@ -143,7 +145,7 @@ fun NotesView(shell: WebShell) {
                     ShellCard(p) {
                         notes.forEachIndexed { i, n ->
                             if (i > 0) Rule(p)
-                            ShellRow(p, onClick = { openVerse(shell, n.key) }) {
+                            ShellRow(p, onClick = { openMark(shell, n.path, n.key) }) {
                                 Column(Modifier.weight(1f)) {
                                     Row(Modifier.fillMaxWidth()) {
                                         Text(n.ref, color = p.here, fontSize = 13.sp, fontWeight = FontWeight.SemiBold, modifier = Modifier.weight(1f))
@@ -168,6 +170,11 @@ private fun refOf(key: String): String {
 }
 
 private fun dateOf(ms: Long): String = if (ms <= 0) "" else DateFormat.getDateInstance(DateFormat.MEDIUM).format(Date(ms))
+
+/** The path the page built for the mark; the registry lookup only when it could not build one. */
+private fun openMark(shell: WebShell, path: String, verseKey: String) {
+    if (path.isNotEmpty()) shell.open(path) else openVerse(shell, verseKey)
+}
 
 /** "1 Nephi|3|7" → the registry's 1 Nephi, chapter 3, at verse 7 through the reader's own deep-link forms. */
 private fun openVerse(shell: WebShell, verseKey: String) {

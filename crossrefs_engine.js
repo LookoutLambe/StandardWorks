@@ -950,7 +950,7 @@ function parseScriptureRef(refText) {
       ? ' <span style="font-weight:400;font-size:0.75em;opacity:0.7;">' + xrefTranslit + '</span>'
       : '';
     panel.querySelector('.xref-panel-word').innerHTML = displayText + translitHtml +
-      (engMeaning ? ' <span style="font-weight:400;font-size:0.8em;color:var(--ink-light,#888);">\u2014 ' + engMeaning + '</span>' : '') +
+      (engMeaning ? ' <span style="font-weight:400;font-size:0.8em;color:var(--ink-light,#888);">\u00b7 ' + engMeaning + '</span>' : '') +
       (rootNote ? '<span style="display:block;font-weight:400;font-size:0.7em;color:var(--ink-light,#888);opacity:0.85;margin-top:2px;">' + rootNote + '</span>' : '');
 
     var catLabel = ref.category === 'cross-ref' ? 'Cross-Reference' :
@@ -1216,7 +1216,7 @@ function parseScriptureRef(refText) {
     }
     panel.querySelector('.xref-panel-word').innerHTML = displayRoot +
       (rootTranslit ? ' <span style="font-weight:400;font-size:0.75em;opacity:0.7;">' + rootTranslit + '</span>' : '') +
-      (engMeaning ? ' <span style="font-weight:400;font-size:0.8em;color:var(--ink-light,#888);">\u2014 ' + engMeaning + '</span>' : '');
+      (engMeaning ? ' <span style="font-weight:400;font-size:0.8em;color:var(--ink-light,#888);">\u00b7 ' + engMeaning + '</span>' : '');
     panel.querySelector('.xref-panel-category').textContent = 'Study footnotes (' + entries.length + ' markers)';
 
     var refsContainer = document.getElementById('xref-panel-refs');

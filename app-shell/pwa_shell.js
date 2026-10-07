@@ -314,9 +314,9 @@
     function render() {
       results.innerHTML = '';
       var q = query.trim();
-      if (q.length < 2) { results.appendChild(el('div', 'sw-app-hint', 'Hebrew, with or without vowels, or English — every volume at once.')); return; }
+      if (q.length < 2) { results.appendChild(el('div', 'sw-app-hint', 'Hebrew, with or without vowels, or English, in every volume at once.')); return; }
       if (!window.SW_SEARCH_INDEX) {
-        results.appendChild(el('div', 'sw-app-hint', idxState === 3 ? 'Text search could not load — reload the page and try again.' : 'Preparing the index…'));
+        results.appendChild(el('div', 'sw-app-hint', idxState === 3 ? 'Text search could not load. Reload the page and try again.' : 'Preparing the index…'));
         loadIndex(function () { if (current === 'search') render(); });
         return;
       }
@@ -339,7 +339,10 @@
     setTimeout(function () { try { input.focus(); } catch (e) {} }, 50);
   }
 
-  /* ── NOTES: bookmarks, highlights and notes from the page's own stores. ── */
+  /* ── NOTES: bookmarks, highlights and notes, from the page's SWMarks.collect()
+     (nav_engine.js), which reads every store the reader writes, the word
+     popover's per-volume ones included. This page used to read the verse
+     menu's stores itself and never saw the popover's (Deep Testing BUG-003). ── */
   function refOf(key) { var p = String(key).split('|'); return p.length >= 3 ? p[0] + ' ' + p[1] + ':' + p[2] : key; }
   function dateOf(ms) { try { return ms > 0 ? new Date(ms).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' }) : ''; } catch (e) { return ''; } }
   function openVerse(key) {
@@ -348,17 +351,18 @@
     try { href = window.NavEngineRefHref && window.NavEngineRefHref(p[0], p[1], p[2] || 0); } catch (e) {}
     if (href) { closePanel(); if (/^https?:|^\//.test(href)) location.href = href; else location.href = BASE + href.replace(/^\.\//, ''); }
   }
+  /* The path the page built for the mark; the reference lookup only when it could not build one. */
+  function openMark(m) { if (m.path) open(m.path); else openVerse(m.key); }
   function renderNotes() {
     var p = page('Notes');
     p.scroll.appendChild(el('div', 'sw-app-hint', 'Reading your marks…'));
-    var out = { notes: [], highlights: {}, bookmarks: [] };
-    try { out.highlights = JSON.parse(localStorage.getItem('sw-highlights-v1') || '{}') || {}; } catch (e) {}
-    try { out.bookmarks = JSON.parse(localStorage.getItem('sw-bookmarks-v1') || '[]') || []; } catch (e) {}
+    var out = { notes: [], highlights: [], bookmarks: [] };
     function show() {
       if (current !== 'notes') return;
       p.scroll.innerHTML = '';
-      var notes = (out.notes || []).filter(function (n) { return n && n.verseKey; }).sort(function (a, b) { return (b.updatedAt || 0) - (a.updatedAt || 0); });
-      var hl = Object.keys(out.highlights || {}).filter(function (k) { var i = out.highlights[k]; return !(i && i.on === false); }).map(function (k) { return { key: k, ts: (out.highlights[k] && out.highlights[k].ts) || 0 }; }).sort(function (a, b) { return b.ts - a.ts; });
+      // The collector has already put each list in order.
+      var notes = (out.notes || []).filter(function (n) { return n && n.key; });
+      var hl = (out.highlights || []).filter(function (h) { return h && h.key; });
       var bm = (out.bookmarks || []).filter(function (b) { return b && b.path && b.label; });
       if (!notes.length && !hl.length && !bm.length) {
         var e = el('div', 'sw-app-empty');
@@ -372,16 +376,16 @@
       }
       if (hl.length) {
         header(p.scroll, 'Highlights'); var ch = card(p.scroll);
-        hl.forEach(function (h) { rowIn(ch, '<span class="sw-app-ic sw-app-here">' + svg('marker', 22) + '</span><span class="sw-app-t sw-app-grow">' + esc(refOf(h.key)) + '</span><span class="sw-app-n">' + esc(dateOf(h.ts)) + '</span>', function () { openVerse(h.key); }); });
+        hl.forEach(function (h) { rowIn(ch, '<span class="sw-app-ic sw-app-here">' + svg('marker', 22) + '</span><span class="sw-app-t sw-app-grow">' + esc(h.ref || refOf(h.key)) + '</span><span class="sw-app-n">' + esc(dateOf(h.ts)) + '</span>', function () { openMark(h); }); });
         p.scroll.appendChild(el('div', 'sw-app-gap'));
       }
       if (notes.length) {
         header(p.scroll, 'Notes'); var cn = card(p.scroll);
-        notes.forEach(function (n) { rowIn(cn, '<span class="sw-app-grow"><span class="sw-app-ref">' + esc(refOf(n.verseKey)) + '<span class="sw-app-n sw-app-right">' + esc(dateOf(n.updatedAt)) + '</span></span><span class="sw-app-t sw-app-clamp4">' + esc(n.text || '') + '</span></span>', function () { openVerse(n.verseKey); }); });
+        notes.forEach(function (n) { rowIn(cn, '<span class="sw-app-grow"><span class="sw-app-ref">' + esc(n.ref || refOf(n.key)) + '<span class="sw-app-n sw-app-right">' + esc(dateOf(n.ts)) + '</span></span><span class="sw-app-t sw-app-clamp4">' + esc(n.text || '') + '</span></span>', function () { openMark(n); }); });
       }
     }
-    if (window.NotesEngine && window.NotesEngine.exportAll) {
-      try { Promise.resolve(window.NotesEngine.exportAll()).then(function (all) { out.notes = (all && all.notes) || []; show(); }, show); } catch (e) { show(); }
+    if (window.SWMarks && window.SWMarks.collect) {
+      try { window.SWMarks.collect().then(function (all) { out = all || out; show(); }, show); } catch (e) { show(); }
     } else show();
   }
 

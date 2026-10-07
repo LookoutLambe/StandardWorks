@@ -2,7 +2,7 @@
 <html lang="en" dir="rtl">
 <head>
 <!-- THE PHONE SHELL (app-shell/pwa_shell.js): on a phone, the site wears the app; on a computer this line does nothing. -->
-<script src="app-shell/pwa_shell.js?v=1"></script>
+<script src="app-shell/pwa_shell.js?v=2"></script>
 <link rel="stylesheet" href="fonts/david_libre.css?v=2">
 
 <meta charset="UTF-8">
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="כתבי הקודש">
 <title>Pearl of Great Price · Hebrew Interlinear Standard Works</title>
-<meta name="description" content="פנינת המחיר הגדול — the Pearl of Great Price in Hebrew: Moses, Abraham, Joseph Smith—Matthew and the Articles of Faith, word by word with an English gloss.">
+<meta name="description" content="פנינת המחיר הגדול, the Pearl of Great Price in Hebrew: Moses, Abraham, Joseph Smith—Matthew and the Articles of Faith, word by word with an English gloss.">
 <link rel="canonical" id="canonical-link" href="https://sefermormon.com/pgp.html">
 <meta property="og:title" content="Pearl of Great Price in Hebrew — Hebrew Interlinear Standard Works">
 <meta property="og:description" content="The Pearl of Great Price in Classical Biblical Hebrew, word by word with English glosses.">
@@ -31,7 +31,7 @@
 <link rel="stylesheet" href="nav_engine.css?v=52">
 <link rel="stylesheet" href="site_chrome.css?v=77">
 <link rel="stylesheet" href="xref_study_panel.css?v=14">
-<link rel="stylesheet" href="reader.css?v=134">
+<link rel="stylesheet" href="reader.css?v=135">
 <style>
 
 /* Skip-to-content link (screen reader / keyboard) */
@@ -674,7 +674,7 @@ body.dual-mode .colophon .word-unit .hw { font-size: 1em; }
 
 <!-- Selection Toolbar -->
 <div id="sel-toolbar">
-  <button id="sel-btn-close" onclick="toggleFloatingSelToolbar(event)" title="Hide tools — reopen from the tab at the screen edge" aria-label="Hide study tools">✕</button>
+  <button id="sel-btn-close" onclick="toggleFloatingSelToolbar(event)" title="Hide tools. Reopen them from the tab at the screen edge." aria-label="Hide study tools">✕</button>
   <button id="sel-btn-highlight" onclick="selToolbarToggleColors()" title="Highlight" aria-label="Highlight"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4l5 5L9 20H4v-5z"/></svg></button>
   <button id="sel-btn-note" onclick="selToolbarOpenNote()" title="Note" aria-label="Note"><svg class="sw-i" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20h4.2L20 8.2a2.1 2.1 0 0 0-3-3L5.2 17 4 20Z"/><path d="m14.8 6.4 2.8 2.8"/></svg></button>
   <button id="sel-btn-copy" onclick="selToolbarCopy()" title="Copy" aria-label="Copy"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="4" width="12" height="16" rx="2"/><path d="M16 4V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v1"/><path d="M4 8v12a2 2 0 0 0 2 2h8"/></svg></button>
@@ -802,7 +802,7 @@ body.dual-mode .colophon .word-unit .hw { font-size: 1em; }
     <div id="xref-panel-refs"></div>
   </div>
   <div id="xref-pane-bookmarks" class="xref-pane" data-pane="bookmarks">
-    <p class="study-pane-hint">Saved places — jump back anytime.</p>
+    <p class="study-pane-hint">Saved places: jump back anytime.</p>
     <div class="study-btn-row">
       <button type="button" id="xref-bm-add">Add current</button>
       <button type="button" id="xref-bm-clear">Clear all</button>
@@ -826,7 +826,7 @@ body.dual-mode .colophon .word-unit .hw { font-size: 1em; }
       <button type="button" id="xref-sp-dict">Dictionary</button>
       <button type="button" id="xref-sp-vocab">Vocabulary by frequency</button>
     </div>
-    <p class="study-pane-sub">Full backup — notes, highlights, bookmarks.</p>
+    <p class="study-pane-sub">Full backup: notes, highlights, bookmarks.</p>
     <div class="study-btn-row">
       <button type="button" id="xref-bk-export">Export backup</button>
       <button type="button" id="xref-bk-import">Import backup</button>
@@ -1151,7 +1151,7 @@ window.READER = {
 <script src="translit.js?v=5"></script>
 <script src="jst_refmap.js?v=1"></script>
 <script src="verse_loader.js?v=5"></script>
-<script src="root_scorecard.js?v=396"></script>
+<script src="root_scorecard.js?v=397"></script>
 <script>RootScorecard.init({ vol: 'pgp', base: '' });</script>
 
 <!-- English text for dual mode -->
@@ -1163,11 +1163,11 @@ window.READER = {
 
 <!-- Cross-reference data + engine -->
 <!-- pgp_crossrefs.js is fetched on idle by crossrefs_engine.js (it was 73 KB of blocking critical path) -->
-<script src="crossrefs_engine.js?v=23"></script>
+<script src="crossrefs_engine.js?v=24"></script>
 
-<script src="reader_surface.js?v=49"></script>
+<script src="reader_surface.js?v=50"></script>
 <script defer src="pgp_stress.js?v=1"></script>  <!-- where the accent falls; deferred, applied on arrival -->  <!-- panels, selection tools, annotation marks: one copy for all six pages -->
-<script src="reader_ui.js?v=59"></script>
+<script src="reader_ui.js?v=60"></script>
 <script>
 // === PGP canon overrides (phase 2) — later function declarations win, so
 // these load AFTER reader_ui.js: book-map chapter labels, the progress nav
@@ -1228,9 +1228,9 @@ function goToGlossaryVerse(verseKey) {
 </script>
 
 <script src="notes_engine.js"></script>
-<script src="site_chrome.js?v=54" data-sw-volume="pgp"></script>
+<script src="site_chrome.js?v=55" data-sw-volume="pgp"></script>
 <script src="verse_search.js?v=3"></script>
-<script src="nav_engine.js?v=90"></script>
+<script src="nav_engine.js?v=91"></script>
 <script src="pgp_phrase_breaks.js" defer></script>
 <script src="imperatives.js" defer></script>
 <script src="read_aloud.js?v=74"></script>

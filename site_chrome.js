@@ -186,7 +186,7 @@
     var a = document.createElement(reader ? 'a' : 'button');
     if (reader) a.href = hubUrl(); else a.type = 'button';
     a.className = 'sw-chrome-home';
-    a.setAttribute('aria-label', reader ? 'Home \u2014 Standard Works' : 'Open books and navigation');
+    a.setAttribute('aria-label', reader ? 'Home: Standard Works' : 'Open books and navigation');
     a.title = reader ? 'Home' : 'Books and navigation';
     a.style.cssText = 'background:none;border:none;padding:0;cursor:pointer';
     /* THE MARK IN THE NAVY BAR: the open book with the spire, star and arc
@@ -304,7 +304,7 @@
     }
     t.textContent = text || 'Books';
     var pill = document.getElementById('sw-chrome-chapter');
-    if (pill) pill.setAttribute('aria-label', (text || 'Books') + ' \u2014 open the book list');
+    if (pill) pill.setAttribute('aria-label', (text || 'Books') + ', open the book list');
   };
 
   function ensureHomeLink() {
@@ -384,7 +384,7 @@
       '<div class="sw-top-bar-inner">' +
         (reader
           ? ''   /* the chapter pill is inserted below, after the home mark */
-          : '<a class="sw-top-bar-brand" href="' + hubUrl() + '" aria-label="Home — Hebrew Interlinear Standard Works">' +
+          : '<a class="sw-top-bar-brand" href="' + hubUrl() + '" aria-label="Home: Hebrew Interlinear Standard Works">' +
               '<span class="sw-top-bar-brand-he" lang="he" dir="rtl">\u05DB\u05EA\u05D1\u05D9 \u05D4\u05E7\u05D5\u05D3\u05E9</span>' +
               '<span class="sw-top-bar-brand-en">Standard Works</span>' +
             '</a>') +
@@ -477,7 +477,7 @@
     window.addEventListener('resize', syncChromeHeight);
 
     var swReg = document.createElement('script');
-    swReg.src = assetBase() + 'sw_register.js?v=5';
+    swReg.src = assetBase() + 'sw_register.js?v=6';
     swReg.async = true;
     document.body.appendChild(swReg);
   }

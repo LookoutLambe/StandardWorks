@@ -60,7 +60,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.imePadding
+import androidx.compose.foundation.layout.isImeVisible
 import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredSize
@@ -142,6 +144,7 @@ import kotlinx.coroutines.delay
  * stays a whole page over the book, the row floating on it ("keep search as
  * a full page"). The reading and the reader's voice never stop for any of it.
  */
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun ShellRoot(shell: WebShell) {
     val p = shell.palette
@@ -217,10 +220,19 @@ fun ShellRoot(shell: WebShell) {
                         Box(Modifier.align(Alignment.BottomCenter).fillMaxWidth()
                             .windowInsetsBottomHeight(WindowInsets.navigationBars).background(p.chrome))
                     }
+                    // THE KEYBOARD TAKES THE ROW'S PLACE. Everything above it is
+                    // lifted clear of the keyboard (imePadding), and the row went
+                    // with it, floating over the band left to type in: the second
+                    // Search result and the lower half of the page's note box sat
+                    // under it (Deep Testing BUG-002). It steps out while a
+                    // keyboard is up, and gives back the space it reserved, as the
+                    // iPhone's row goes under the keyboard.
+                    val typing = WindowInsets.isImeVisible
+                    LaunchedEffect(typing) { if (typing) { overlay = 0.dp; shell.bottomOverlay = 0 } }
                     // The row, or the player in its place while the page reads:
                     // a capsule above the gesture bar, inset from the edges.
                     val bottomGap = maxOf(WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding(), 10.dp)
-                    Box(
+                    if (!typing) Box(
                         Modifier.align(Alignment.BottomCenter).fillMaxWidth()
                             .padding(start = 12.dp, end = 12.dp, top = 4.dp, bottom = bottomGap)
                             .onSizeChanged { size ->

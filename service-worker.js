@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-10-03T13-19-05';
+const BUILD_ID = '2026-10-07T10-15-44';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -40,23 +40,23 @@ const CORE_ASSETS = [
        site_chrome, xref_study_panel and reader, and nothing else. The tokens
        it defines (--here, --highlight, --rule) live in reader.css now. The
        file is left on disk; only the download is removed. */
-    '/StandardWorks/site_chrome.js?v=54',
+    '/StandardWorks/site_chrome.js?v=55',
     /* the phone shell (app-shell/pwa_shell.js): the row, the panels and the
        shared injected scripts the apps use; a computer never fetches past the
        first file, which returns at its gate */
-    '/StandardWorks/app-shell/pwa_shell.js?v=1',
+    '/StandardWorks/app-shell/pwa_shell.js?v=2',
     '/StandardWorks/app-shell/pwa_shell.css?v=1',
     '/StandardWorks/app-shell/shell_start.js',
     '/StandardWorks/app-shell/shell_end.js',
     '/StandardWorks/app-shell/shell_mark.js',
     '/StandardWorks/app-shell/appmark.png',
     '/StandardWorks/app-shell/launch_logo.png',
-    '/StandardWorks/editions.js?v=2',
-    '/StandardWorks/nav_engine.js?v=90',
+    '/StandardWorks/editions.js?v=3',
+    '/StandardWorks/nav_engine.js?v=91',
     '/StandardWorks/verse_search.js?v=3',
     '/StandardWorks/nav_engine.css?v=52',
     '/StandardWorks/xref_study_panel.css?v=14',
-    '/StandardWorks/reader.css?v=134',
+    '/StandardWorks/reader.css?v=135',
     '/StandardWorks/xref_study_panel.js?v=6',
     '/StandardWorks/read_aloud.js?v=74',
     /* The five <vol>_phrase_breaks.js tables and imperatives.js were precached
