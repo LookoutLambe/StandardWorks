@@ -640,7 +640,7 @@ function refreshInPrint(urls) {
       '@type': 'ListItem', position: i + 1,
       item: { '@type': 'Book', name: e.name, alternateName: 'Sefer Mormon — ' + e.title,
         author: { '@type': 'Person', name: 'Chris Lambe' }, inLanguage: 'he',
-        bookFormat: /Hardcover/.test(e.spec) ? 'https://schema.org/Hardcover' : 'https://schema.org/Paperback',
+        bookFormat: /Kindle|eBook/i.test(e.spec) ? 'https://schema.org/EBook' : /Hardcover/.test(e.spec) ? 'https://schema.org/Hardcover' : 'https://schema.org/Paperback',
         image: SITE + 'bom/images/' + e.img.replace(/\?.*$/, ''), url: e.href,
         offers: { '@type': 'Offer', url: e.href, availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: e.seller } } }
     }))
