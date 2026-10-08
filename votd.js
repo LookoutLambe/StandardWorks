@@ -33,22 +33,49 @@
     toggle.textContent = getState() === 'off' ? 'Show the daily verse' : 'Hide the daily verse';
   }
 
-  var loaded = false;
+  /* A NEW DAY WITHOUT A RELOAD (user, 2026-10-08). A page left open, or an app brought
+     back from the background, kept yesterday's verse: the day was read once, at load.
+     refresh() reads it again when the page comes back to the front, when the browser
+     restores it from its back/forward cache, and at local midnight; a new day in the
+     same week renders from the week already loaded, a new week loads its file. */
+  var weekWanted = '', weekData = null, shownDay = '';
   function load() {
-    if (loaded) return;
-    loaded = true;
-    window.__votdWeek = render;
+    var monday = thisMonday();
+    if (weekWanted === monday) { if (weekData) render(weekData); return; }
+    weekWanted = monday;
+    weekData = null;
+    window.__votdWeek = function (week) {
+      if (!week || week.week !== weekWanted) return;   // a late file from a week already past
+      weekData = week;
+      render(week);
+    };
     var s = document.createElement('script');
-    s.src = 'votd/' + thisMonday() + '.js';
+    s.src = 'votd/' + monday + '.js';
     s.async = true;
-    s.onerror = function () {};                  // no file for this week: nothing is shown
+    s.onerror = function () { box.hidden = true; };   // no file for this week: nothing is shown
     document.head.appendChild(s);
+  }
+
+  function refresh() {
+    if (document.visibilityState === 'hidden') return;
+    var st = getState(), t = today();
+    if (st === 'off' || st === 'hide:' + t) return;
+    if (st.indexOf('hide:') === 0) setState('');      // yesterday's "hide for today" has expired
+    if (shownDay === t && !box.hidden) return;
+    load();
+  }
+
+  function atMidnight() {
+    var now = new Date();
+    var next = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 5);
+    setTimeout(function () { refresh(); atMidnight(); }, next - now);
   }
 
   function render(week) {
     var day = null, list = (week && week.days) || [], t = today();
     for (var i = 0; i < list.length; i++) if (list[i].d === t) { day = list[i]; break; }
-    if (!day) return;
+    if (!day) { box.hidden = true; return; }
+    shownDay = t;
     /* The reference is the KJV's (Isaiah 9:6); the link is the site's own numbering, which for
        the Old Testament is the Hebrew's (9:5). NavEngineRefHref builds it exactly as a
        cross-reference does, and NavEngineFollow marks the way back. */
@@ -81,13 +108,13 @@
 
   if (toggle) {
     toggle.addEventListener('click', function () {
-      if (getState() === 'off') { setState(''); syncToggle(); load(); if (box.innerHTML) box.hidden = false; }
+      if (getState() === 'off') { setState(''); syncToggle(); load(); }
       else { setState('off'); box.hidden = true; syncToggle(); }
     });
   }
   syncToggle();
-  var st = getState();
-  if (st === 'off' || st === 'hide:' + today()) return;
-  if (st.indexOf('hide:') === 0) setState('');      // yesterday's "hide for today" has expired
-  load();
+  document.addEventListener('visibilitychange', refresh);
+  window.addEventListener('pageshow', function (e) { if (e.persisted) refresh(); });
+  atMidnight();
+  refresh();
 })();
