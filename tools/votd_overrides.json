@@ -1,9 +1,28 @@
 {
-  "_about": "The translator's own picks for the front page's daily verse. 'weeks': a week's Monday -> seven references, Monday to Sunday (the weeks Come, Follow Me gives no chapters: Easter, Christmas). 'days': a date -> one reference, replacing that day's automatic pick. References are written as the KJV numbers them (Isaiah 9:6, not the Hebrew's 9:5). Edit, then run: node tools/build_votd.js",
-  "weeks": {
-    "2026-12-21": ["Isaiah 9:6", "Isaiah 7:14", "Micah 5:2", "Luke 2:10", "Luke 2:11", "Luke 2:14", "John 1:14"],
-    "2027-03-22": ["Isaiah 53:5", "Job 19:25", "John 11:25", "Matthew 28:6", "Luke 24:39", "1 Corinthians 15:22", "1 Corinthians 15:55"],
-    "2027-12-20": ["Isaiah 9:6", "Micah 5:2", "Matthew 1:23", "Luke 2:10", "Luke 2:11", "Luke 2:14", "John 1:14"]
+  "_about": "The translator's own picks for the front page's daily verse. References are written as the KJV and the Church editions number them (Isaiah 9:6, not the Hebrew's 9:5; Doctrine and Covenants 76:22). 'specials': for each year of the cycle, seven verses (Monday to Sunday) for the weeks Come, Follow Me gives no chapters: intro, easter, christmas, and the Doctrine and Covenants year's proclamation week. A list may hold a second seven: a longer year's spare week takes them (2028 has two weeks before Christmas). They are starting points, written 2026-10-08 for the translator to change. 'weeks': a week's Monday -> seven references, replacing that one week. 'days': a date -> one reference, replacing that day. Edit, then run: node tools/build_votd.js",
+  "specials": {
+    "ot": {
+      "intro": ["Psalms 119:105", "Joshua 1:8", "Deuteronomy 6:5", "Isaiah 55:8", "Isaiah 55:9", "Amos 3:7", "Micah 6:8"],
+      "easter": ["Isaiah 53:4", "Isaiah 53:5", "Isaiah 25:8", "Job 19:25", "Hosea 13:14", "Psalms 16:10", "Isaiah 26:19"],
+      "christmas": ["Isaiah 9:6", "Isaiah 7:14", "Micah 5:2", "Luke 2:10", "Luke 2:11", "Luke 2:14", "John 1:14"]
+    },
+    "nt": {
+      "easter": ["Isaiah 53:5", "Job 19:25", "John 11:25", "Matthew 28:6", "Luke 24:39", "1 Corinthians 15:22", "1 Corinthians 15:55"],
+      "christmas": ["Isaiah 9:6", "Micah 5:2", "Matthew 1:23", "Luke 2:10", "Luke 2:11", "Luke 2:14", "John 1:14"]
+    },
+    "bom": {
+      "intro": ["2 Nephi 25:26", "1 Nephi 6:4", "2 Nephi 29:7", "Mormon 7:9", "Moroni 10:3", "Moroni 10:4", "Moroni 10:5"],
+      "easter": ["Alma 11:42", "Mosiah 16:8", "Alma 7:11", "Alma 7:12", "2 Nephi 2:8", "3 Nephi 11:10", "3 Nephi 11:11"],
+      "christmas": ["1 Nephi 11:18", "1 Nephi 11:20", "Mosiah 3:8", "Alma 7:10", "Helaman 14:2", "3 Nephi 1:13", "3 Nephi 1:21",
+                    "1 Nephi 10:4", "1 Nephi 11:13", "1 Nephi 11:21", "2 Nephi 25:19", "Mosiah 15:1", "Helaman 14:5", "3 Nephi 1:19"]
+    },
+    "dc": {
+      "intro": ["Joseph Smith—History 1:17", "Doctrine and Covenants 1:30", "Doctrine and Covenants 1:38", "Doctrine and Covenants 13:1", "Doctrine and Covenants 76:22", "Doctrine and Covenants 76:24", "Doctrine and Covenants 135:3"],
+      "easter": ["Doctrine and Covenants 19:16", "Doctrine and Covenants 19:18", "Doctrine and Covenants 19:19", "Doctrine and Covenants 76:22", "Doctrine and Covenants 76:23", "Doctrine and Covenants 76:24", "Doctrine and Covenants 88:6"],
+      "christmas": ["Isaiah 9:6", "Luke 2:11", "Luke 2:14", "John 1:14", "Doctrine and Covenants 93:4", "Doctrine and Covenants 76:23", "Doctrine and Covenants 6:21"],
+      "proclamation": ["Genesis 1:27", "Genesis 2:24", "Malachi 4:6", "Doctrine and Covenants 49:15", "Doctrine and Covenants 68:25", "Doctrine and Covenants 93:40", "Doctrine and Covenants 131:2"]
+    }
   },
+  "weeks": {},
   "days": {}
 }
