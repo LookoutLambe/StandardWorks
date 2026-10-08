@@ -106,7 +106,22 @@ Debug builds carry `DebugBridge`: write a command to the app's
    goes through the native file dialog), release notes, Next, Save, then
    Publishing overview → Send for review. Keep `minSdk 24`: version code 4
    was built with 26 and Play flagged 1,379 Android 7 models as dropped.
-   Sent to closed testing (Alpha) as 5 (1.2.0) on 2026-09-19.
+   Sent to closed testing (Alpha) as 5 (1.2.0) on 2026-09-19. Since
+   2026-10-06 every update goes to the Production track.
+4. Attach the native debug symbols, or Play warns on the review page that the
+   bundle "contains native code" with none uploaded. The only native code is
+   `libandroidx.graphics.path.so` (Compose's path iterator), which Google ships
+   already stripped: it keeps only its exported (JNI) symbol table, so
+   `ndk { debugSymbolLevel }` has nothing to extract and adds nothing to the
+   bundle (tried 2026-10-08). Zip that bundle's own libraries by ABI instead:
+
+        mkdir -p /tmp/sym && unzip -o app/build/outputs/bundle/release/app-release.aab 'base/lib/*' -d /tmp/sym
+        (cd /tmp/sym/base/lib && zip -r ~/Desktop/native-symbols-<code>.zip .)
+
+   and upload it at Play Console → Test and release → Latest releases and
+   bundles → the version → Downloads → Native debug symbols → Upload (first
+   done for 21, 2026-10-08). It attaches to the bundle and does not change a
+   release in review.
 
 ## Store presence
 
