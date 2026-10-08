@@ -45,11 +45,11 @@ html.sw-in-app .landing-update-note { display: none; }
    screen, where three of its four tables scrolled sideways and cut off their
    last column. Now only .page's 24px sides, as the reader has; one column on a phone; from 1100px
    the sections pair side by side and the long ones run the full width, so the
-   tables have room. Prose keeps the reading measure (about 71 characters) at
-   every width: the width goes to the tables and grids, not to longer lines. */
+   tables have room. THE PROSE SPANS TOO: a 71-character measure was tried
+   and he ruled it out the same day ("not just ... the excel piece of it but
+   the actual reading, all of it should expand"). No max-width on any text. */
 .sw-front.tr-body.hg-page { max-width: none; padding: 16px 0 60px; }
 .hg-wrap { direction: ltr; text-align: left; }
-.hg-head, .hg-sec > p, .hg-sec--wide .hg-text { max-width: min(44rem, 75ch); margin-left: auto; margin-right: auto; }
 .hg-grid { display: grid; grid-template-columns: minmax(0, 1fr); column-gap: 48px; }
 .hg-sec { min-width: 0; }
 .hg-sec table { width: 100%; }
@@ -61,7 +61,7 @@ html.sw-in-app .landing-update-note { display: none; }
   .hg-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hg-sec--wide { grid-column: 1 / -1; }
   /* Using the Reader is four paragraphs: two balanced columns, as a printed page sets them */
-  .hg-sec--wide .hg-text--cols { max-width: calc(2 * min(44rem, 75ch) + 48px); columns: 2; column-gap: 48px; }
+  .hg-text--cols { columns: 2; column-gap: 48px; }
   .hg-text--cols p:first-child { margin-top: 0; }
 }
 </style>
@@ -177,7 +177,7 @@ html.sw-in-app .landing-update-note { display: none; }
         A dot placed <strong>inside</strong> a consonant is called a <em>dagesh</em>. For three letters, it changes the pronunciation:
       </p>
       <div style="overflow-x:auto">
-      <table style="width:100%;max-width:500px;margin:0 auto 20px;border-collapse:collapse;font-size:0.95em">
+      <table style="width:100%;margin:0 auto 20px;border-collapse:collapse;font-size:0.95em">
         <tr>
           <td style="padding:8px 14px;text-align:center;font-family:'David Libre',serif;font-size:1.5em">בּ</td>
           <td style="padding:8px 14px"><strong>b</strong> (boy)</td>
