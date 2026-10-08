@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-10-08T11-02-08';
+const BUILD_ID = '2026-10-08T11-38-57';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -52,6 +52,7 @@ const CORE_ASSETS = [
     '/StandardWorks/app-shell/appmark.png',
     '/StandardWorks/app-shell/launch_logo.png',
     '/StandardWorks/editions.js?v=4',
+    '/StandardWorks/votd.js?v=1',
     '/StandardWorks/nav_engine.js?v=91',
     '/StandardWorks/verse_search.js?v=3',
     '/StandardWorks/nav_engine.css?v=52',

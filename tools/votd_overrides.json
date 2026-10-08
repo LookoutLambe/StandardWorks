@@ -1,0 +1,9 @@
+{
+  "_about": "The translator's own picks for the front page's daily verse. 'weeks': a week's Monday -> seven references, Monday to Sunday (the weeks Come, Follow Me gives no chapters: Easter, Christmas). 'days': a date -> one reference, replacing that day's automatic pick. References are written as the KJV numbers them (Isaiah 9:6, not the Hebrew's 9:5). Edit, then run: node tools/build_votd.js",
+  "weeks": {
+    "2026-12-21": ["Isaiah 9:6", "Isaiah 7:14", "Micah 5:2", "Luke 2:10", "Luke 2:11", "Luke 2:14", "John 1:14"],
+    "2027-03-22": ["Isaiah 53:5", "Job 19:25", "John 11:25", "Matthew 28:6", "Luke 24:39", "1 Corinthians 15:22", "1 Corinthians 15:55"],
+    "2027-12-20": ["Isaiah 9:6", "Micah 5:2", "Matthew 1:23", "Luke 2:10", "Luke 2:11", "Luke 2:14", "John 1:14"]
+  },
+  "days": {}
+}

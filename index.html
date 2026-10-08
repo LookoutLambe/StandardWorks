@@ -422,6 +422,82 @@ button, input, select, textarea, option, optgroup, ::placeholder { font-family: 
 .landing-hand .lis-tl { font-size: var(--hub-micro); }
 .landing-hand .lis-gl { font-size: var(--hub-small); }
 
+/* TODAY'S VERSE (votd.js). One verse from this week's Come, Follow Me reading, set
+   like the specimen it sits near: the Hebrew leads, the English below it in the
+   quieter ink, the reference in the specimen's own reference style. Rules above
+   and below instead of a box or a card, so it reads as part of the page and not
+   as something inserted into it. Nothing moves; the × hides it for the day. */
+.votd {
+  position: relative;
+  max-width: 62ch;
+  margin: 4px auto 30px;
+  padding: 14px 44px 12px;
+  text-align: center;
+  border-top: 1px solid color-mix(in srgb, var(--accent-deep, var(--here)) 22%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--accent-deep, var(--here)) 22%, transparent);
+}
+.votd[hidden] { display: none; }
+.votd-head { margin-bottom: 8px; }
+.votd-label {
+  font-size: var(--hub-micro);
+  color: var(--ink-light);
+  letter-spacing: 0.02em;
+}
+.votd-close {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: none;
+  color: var(--ink-light);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.votd-close:hover { color: var(--ink); }
+.votd-close:focus-visible { outline: 2px solid var(--here); outline-offset: 2px; }
+.votd-link { display: block; color: inherit; text-decoration: none; border-radius: 8px; }
+.votd-link:focus-visible { outline: 2px solid var(--here); outline-offset: 6px; }
+.votd-he {
+  font-family: 'David Libre', serif;
+  font-size: var(--hub-body-he);
+  color: var(--ink);
+  line-height: 1.75;
+  margin: 0 0 6px;
+}
+.votd-link:hover .votd-he { color: var(--here); }
+.votd-en {
+  font-size: var(--hub-small);
+  color: var(--ink-light);
+  line-height: 1.55;
+  margin: 0;
+}
+.votd-ref {
+  font-family: 'David Libre', serif;
+  font-size: var(--hub-micro);
+  color: var(--accent-deep, var(--here));
+  margin: 8px 0 0;
+}
+@media (max-width: 600px) {
+  .votd { padding: 12px 36px 10px; margin-bottom: 24px; }
+}
+/* The footer's switch for it: worded like the footer's links, so it reads as one of them. */
+.votd-toggle {
+  border: 0;
+  background: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+  cursor: pointer;
+}
+.votd-toggle:focus-visible { outline: 2px solid var(--here); outline-offset: 2px; border-radius: 3px; }
+
 .landing-app-store {
   /* Under the title plate and above the six covers, where a reader
      arriving on a phone sees it without scrolling (user, 2026-10-02). The
@@ -1094,6 +1170,11 @@ body, button, input, select, textarea,
     </div>
 
 
+    <!-- ===== TODAY'S VERSE (votd.js; user, 2026-10-08) =====
+         One verse from this week's Come, Follow Me reading, chosen ahead by tools/build_votd.js.
+         Hidden until there is a verse for today; never shown inside a reading page. -->
+    <section class="votd" id="votd" hidden aria-labelledby="votd-label"></section>
+
     <!-- ===== UPDATE NOTE (web only — hidden inside the iPhone app via html.sw-in-app) ===== -->
 
 
@@ -1422,7 +1503,8 @@ body, button, input, select, textarea,
         <a href="hebrew-study.html">Reading Hebrew: the letters and the vowels</a><br>
         <a href="hebrew/index.html">Every chapter as a plain page</a><br>
         <a href="he.html" lang="he" dir="rtl">כתבי הקודש בעברית</a><br>
-        <a href="in-print.html">Sefer Mormon in print</a>
+        <a href="in-print.html">Sefer Mormon in print</a><br>
+        <button type="button" class="votd-toggle" id="votd-toggle">Hide the daily verse</button>
       </p>
       <div class="hub-footer-colophon">
         <div class="hub-footer-colophon-lis">
@@ -1827,5 +1909,6 @@ document.addEventListener('keydown', function(e) {
   window.addEventListener('hashchange', function () { consumeHash(true); });
 })();
 </script>
+<script src="votd.js?v=1"></script>
 </body>
 </html>
