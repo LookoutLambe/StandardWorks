@@ -427,6 +427,55 @@
     var d = k.charAt(0) + k.slice(1).replace(/[וי]/g, '');
     return d.length >= 3 ? c.demater[d] : null;
   }
+  /* A STRONG'S NUMBER FOR THE WORDS THE TANAKH NEVER WROTE (2026-10-08, the
+     user: "im missing strong concordance on words"). The card's number comes
+     from the attested table or the surface lookup, and both know only forms
+     the Masoretic Text has, so 20,540 Book of Mormon tokens (18%) showed none:
+     לְכַחֵשׁ "to deny", מְשַׁחֲרָיו "who diligently seek Him", הִתְרַצּוּ. The engine
+     has already put each of them in a family, and the family's own Strong's
+     entries are known (RootEngine.familyOf, the engine's single rule for
+     membership), so:
+       - a family with ONE entry gives that entry as the word's number;
+       - a family whose entries all descend from ONE primitive root gives that
+         root's number, shown on the card's root line as the ROOT's number,
+         never as the word's (כחש: H3585 and H3586 come from H3584 כָּחַשׁ).
+     Checked first against the control corpus, the Tanakh, with its known
+     numbers hidden: the one-entry rule agrees 98.9% (99.6% without לָהֶם, a
+     particle that keeps its own number on a real card), and for verbs the
+     root's number IS the verb's number 99.47% of the time. Rejected on the
+     same test: "a verb-shaped gloss picks the family's verb" (94% on what it
+     adds), "the most frequent entry" (92%) and "the glossary sense the gloss
+     matches" (87%). A family with two primitives (שחר: "be dark", "seek
+     early") stays blank; the layered parser is what will settle those.
+     Built once, after strongs_roots.js has arrived (an empty table is never
+     cached); 8,674 entries, about 30 ms. */
+  function _familyNumbers(key) {
+    var cache = window._rscFamilyNumsCache;
+    if (!cache) {
+      var S = window._strongsRoots, RE = window.RootEngine;
+      if (!S || !RE || !RE.familyOf) return [];
+      cache = {};
+      for (var n in S) {
+        var fk = '';
+        try { fk = RE.familyOf(n); } catch (e) { fk = ''; }
+        if (fk) (cache[fk] = cache[fk] || []).push(n);
+      }
+      window._rscFamilyNumsCache = cache;
+    }
+    return cache[key] || [];
+  }
+  function _familyRootNumber(key) {
+    var nums = _familyNumbers(key), S = window._strongsRoots || {};
+    if (nums.length === 1) return nums[0];
+    var prim = nums.filter(function (n) { return S[n] && !S[n].r && !S[n].u; });
+    if (prim.length !== 1) return '';
+    var P = prim[0];
+    for (var i = 0; i < nums.length; i++) {
+      var e = S[nums[i]];
+      if (nums[i] !== P && !(e && (e.u === P || e.r === P))) return '';
+    }
+    return P;
+  }
   function _strongsGloss(num) {
     // Follow the root/usage pointers when an entry has no gloss of its own
     // (Aramaic forms point at their Hebrew twin: H8065 heavens -> H8064).
@@ -834,7 +883,12 @@
     var wordNum = hgNum || (pz && pz.strongs) ||
       (window._strongsLookup && (window._strongsLookup[pieceSurface] || window._strongsLookup[surface])) || '';
     if (wordNum && !hgNum && _otherWord(wordNum)) wordNum = '';   // the lookup's number can be the other word too (Chemish → Chemosh)
-    var wordLemma = wordNum && window._strongsRoots && window._strongsRoots[wordNum] ? window._strongsRoots[wordNum].w : '';
+    // a form the Tanakh never wrote: a one-entry family's entry is this word's number (see _familyNumbers)
+    var famNums = (!wordNum && !isFn && found.key) ? _familyNumbers(found.key) : [];
+    if (famNums.length === 1) wordNum = famNums[0];
+    // ...and a family with one primitive root names that root, on the root line below
+    var rootNum = (!wordNum && !isFn && found.key) ? _familyRootNumber(found.key) : '';
+    var wordLemma =wordNum && window._strongsRoots && window._strongsRoots[wordNum] ? window._strongsRoots[wordNum].w : '';
     var meaningLine = senseFor(d.meaning, wordLemma, glossText);
     /* THE FOURTH STATEMENT OF THE SAME WORD. A glossary line names its lemma in
        parentheses — "God — the divine name Elohim (אלהים, אלוה)" — which is
@@ -865,20 +919,26 @@
        number used to head its own line as "Strong’s: H0430 — gods", whose
        archaic headword sat directly under the card's own gloss "God" and read
        like an error. The number is worth keeping; Strong's wording is not. */
-    if (meaningLine || wordNum) {
-      h += '<div class="rsc-meaning">' + (meaningLine ? esc(meaningLine) : '') +
-        (wordNum ? '<span class="rsc-strongs" role="button" tabindex="0" data-strongs="' +
-          esc(wordNum) + '" title="Open in the dictionary">' + esc(wordNum) + '</span>' : '') + '</div>';
-    }
-
+    var strongsChip = function (n, title) {
+      return '<span class="rsc-strongs" role="button" tabindex="0" data-strongs="' +
+        esc(n) + '" title="' + esc(title) + '">' + esc(n) + '</span>';
+    };
     /* THE ROOT, only when it is not the word already at the top of the card.
        אלהים is its own root, so the card was naming the same word four times
-       over — heading, root line, meaning line, and first in Forms. */
-    if (!isFn && cons(d.heb) && cons(d.heb) !== cons(found.part || cleanSurface(surface))) {
+       over — heading, root line, meaning line, and first in Forms. A root's
+       number (rootNum) sits on this line, where the root is named; with no
+       root line the word is its own root, and the number joins the meaning. */
+    var showRootLine = !isFn && cons(d.heb) && cons(d.heb) !== cons(found.part || cleanSurface(surface));
+    var meaningNum = wordNum || (showRootLine ? '' : rootNum);
+    if (meaningLine || meaningNum) {
+      h += '<div class="rsc-meaning">' + (meaningLine ? esc(meaningLine) : '') +
+        (meaningNum ? strongsChip(meaningNum, 'Open in the dictionary') : '') + '</div>';
+    }
+    if (showRootLine) {
       h += '<div class="rsc-rootline"><span class="rsc-root">' +
         '<span style="font-family:\'David Libre\',serif">' + esc(d.heb) + '</span>' +
         (d.translit ? ' <span class="rsc-dim">(' + esc(d.translit) + ')</span>' : '') +
-        '</span></div>';
+        '</span>' + (rootNum ? strongsChip(rootNum, 'The root’s entry in the dictionary') : '') + '</div>';
     }
     // per-volume chips
     if (!isFn) {
@@ -1054,16 +1114,19 @@
              the Hebrew this edition actually renders, to look up a word the
              app already defines. openGlossaryAtRoot resolves an H-number to
              its lexeme and opens the glossary there. */
-          var sNum = blk.querySelector('.rsc-strongs');
-          if (sNum && typeof window.openGlossaryAtRoot === 'function') {
-            var openDict = function (ev) {
-              ev.stopPropagation();
-              ev.preventDefault();
-              window.openGlossaryAtRoot(sNum.getAttribute('data-strongs') || '');
-            };
-            sNum.addEventListener('click', openDict);
-            sNum.addEventListener('keydown', function (ev) {
-              if (ev.key === 'Enter' || ev.key === ' ') openDict(ev);
+          // the word's number and, on the root line, the root's (_familyRootNumber)
+          var sNums = blk.querySelectorAll('.rsc-strongs');
+          if (typeof window.openGlossaryAtRoot === 'function') {
+            Array.prototype.forEach.call(sNums, function (sNum) {
+              var openDict = function (ev) {
+                ev.stopPropagation();
+                ev.preventDefault();
+                window.openGlossaryAtRoot(sNum.getAttribute('data-strongs') || '');
+              };
+              sNum.addEventListener('click', openDict);
+              sNum.addEventListener('keydown', function (ev) {
+                if (ev.key === 'Enter' || ev.key === ' ') openDict(ev);
+              });
             });
           }
           var refsLink = blk.querySelector('.rsc-refs-link');

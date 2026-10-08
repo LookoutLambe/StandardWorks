@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-10-08T10-31-52';
+const BUILD_ID = '2026-10-08T11-02-08';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -56,7 +56,7 @@ const CORE_ASSETS = [
     '/StandardWorks/verse_search.js?v=3',
     '/StandardWorks/nav_engine.css?v=52',
     '/StandardWorks/xref_study_panel.css?v=14',
-    '/StandardWorks/reader.css?v=135',
+    '/StandardWorks/reader.css?v=136',
     '/StandardWorks/xref_study_panel.js?v=6',
     '/StandardWorks/read_aloud.js?v=74',
     /* The five <vol>_phrase_breaks.js tables and imperatives.js were precached
