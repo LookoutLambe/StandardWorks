@@ -38,8 +38,32 @@ html.sw-in-app .landing-update-note { display: none; }
 /* The primer's own table striping, lifted with it out of bom/bom.html and
    re-scoped from #panel-front-hebrew-guide to .hg-page. */
 .hg-page .hg-alt{background:#f8f6f0} body.dark-mode .hg-page .hg-alt{background:rgba(255,255,255,0.06)} body.dark-mode .hg-page td{color:var(--on-chrome) !important}
-/* This page is one long document: no reader chrome, no panels. */
-.hg-page { padding-bottom: 60px; }
+/* This page is one long document: no reader chrome, no panels.
+   IT SPANS THE WINDOW, like the scriptures and the landing (user, 2026-10-08:
+   "this page needs that expanded capability like the rest of the website").
+   It sat in the front-matter measure, min(44rem, 75ch): 599px on a 1600px
+   screen, where three of its four tables scrolled sideways and cut off their
+   last column. Now only .page's 24px sides, as the reader has; one column on a phone; from 1100px
+   the sections pair side by side and the long ones run the full width, so the
+   tables have room. Prose keeps the reading measure (about 71 characters) at
+   every width: the width goes to the tables and grids, not to longer lines. */
+.sw-front.tr-body.hg-page { max-width: none; padding: 16px 0 60px; }
+.hg-wrap { direction: ltr; text-align: left; }
+.hg-head, .hg-sec > p, .hg-sec--wide .hg-text { max-width: min(44rem, 75ch); margin-left: auto; margin-right: auto; }
+.hg-grid { display: grid; grid-template-columns: minmax(0, 1fr); column-gap: 48px; }
+.hg-sec { min-width: 0; }
+.hg-sec table { width: 100%; }
+/* A phone: the cells' inline 10px sides would push the marks table 20px past the screen */
+@media (max-width: 600px) {
+  .hg-sec th, .hg-sec td { padding-left: 6px !important; padding-right: 6px !important; }
+}
+@media (min-width: 1100px) {
+  .hg-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hg-sec--wide { grid-column: 1 / -1; }
+  /* Using the Reader is four paragraphs: two balanced columns, as a printed page sets them */
+  .hg-sec--wide .hg-text--cols { max-width: calc(2 * min(44rem, 75ch) + 48px); columns: 2; column-gap: 48px; }
+  .hg-text--cols p:first-child { margin-top: 0; }
+}
 </style>
 </head>
 <body>
@@ -47,8 +71,9 @@ html.sw-in-app .landing-update-note { display: none; }
 <div class="page">
   <div class="sw-front tr-body hg-page">
 
-    <div style="max-width:900px;margin:0 auto;padding:20px 30px;direction:ltr;text-align:left">
+    <div class="hg-wrap">
 
+      <header class="hg-head">
       <h1 style="text-align:center;font-size:1.6em;margin-bottom:2px;color:var(--ink)">Reading Hebrew</h1>
       <p style="text-align:center;font-family:'David Libre',serif;font-size:1.3em;color:var(--ink);margin:0 0 6px">קריאת עברית</p>
       <hr style="width:200px;margin:0 auto 20px;border:none;border-top:1px solid #ccc">
@@ -56,13 +81,17 @@ html.sw-in-app .landing-update-note { display: none; }
       <p style="font-size:0.95em;line-height:1.7;color:var(--ink);margin-bottom:14px">
         Hebrew is read <strong>right to left</strong>. In this interlinear edition, each Hebrew word appears above its English gloss; the Transliterate button adds a pronunciation under every word, and a tap on any word opens its root scorecard. This guide introduces the Hebrew alphabet and vowel system, the marks you will meet in this edition, and the reader itself, so you can begin reading on your own.
       </p>
+      </header>
 
-      <!-- THE ALEPH-BET -->
+      <div class="hg-grid">
+
+<section class="hg-sec">
+<!-- THE ALEPH-BET -->
       <h3 style="font-size:1.2em;color:var(--ink);margin:28px 0 10px;text-align:center">The Aleph-Bet (Consonants)</h3>
       <hr style="width:140px;margin:0 auto 16px;border:none;border-top:1px solid #ccc">
 
       <div style="overflow-x:auto">
-      <table style="width:100%;min-width:34rem;border-collapse:collapse;font-size:0.92em;margin-bottom:20px">
+      <table style="width:100%;border-collapse:collapse;font-size:0.92em;margin-bottom:20px">
         <thead>
           <tr style="background:var(--accent);color:var(--on-accent);">
             <th style="padding:6px 10px;text-align:center">Letter</th>
@@ -98,7 +127,10 @@ html.sw-in-app .landing-update-note { display: none; }
       </table>
       </div>
 
-      <!-- NIKKUD (VOWELS) -->
+</section>
+
+<section class="hg-sec">
+<!-- NIKKUD (VOWELS) -->
       <h3 style="font-size:1.2em;color:var(--ink);margin:28px 0 10px;text-align:center">Nikkud (Vowel Points)</h3>
       <hr style="width:140px;margin:0 auto 16px;border:none;border-top:1px solid #ccc">
 
@@ -107,7 +139,7 @@ html.sw-in-app .landing-update-note { display: none; }
       </p>
 
       <div style="overflow-x:auto">
-      <table style="width:100%;min-width:34rem;border-collapse:collapse;font-size:0.92em;margin-bottom:20px">
+      <table style="width:100%;border-collapse:collapse;font-size:0.92em;margin-bottom:20px">
         <thead>
           <tr style="background:var(--accent);color:var(--on-accent);">
             <th style="padding:6px 10px;text-align:center">Symbol</th>
@@ -134,7 +166,10 @@ html.sw-in-app .landing-update-note { display: none; }
       </table>
       </div>
 
-      <!-- DAGESH -->
+</section>
+
+<section class="hg-sec">
+<!-- DAGESH -->
       <h3 style="font-size:1.2em;color:var(--ink);margin:28px 0 10px;text-align:center">The Dagesh (Dot Inside a Letter)</h3>
       <hr style="width:140px;margin:0 auto 16px;border:none;border-top:1px solid #ccc">
 
@@ -167,7 +202,10 @@ html.sw-in-app .landing-update-note { display: none; }
         For all other letters, the dagesh simply indicates a doubled or strengthened sound.
       </p>
 
-      <!-- MAQQEF -->
+</section>
+
+<section class="hg-sec">
+<!-- MAQQEF -->
       <h3 style="font-size:1.2em;color:var(--ink);margin:28px 0 10px;text-align:center">The Maqqef (Hebrew Hyphen)</h3>
       <hr style="width:140px;margin:0 auto 16px;border:none;border-top:1px solid #ccc">
 
@@ -175,12 +213,15 @@ html.sw-in-app .landing-update-note { display: none; }
         The maqqef <span style="font-family:'David Libre',serif;font-size:1.2em">&#x05BE;</span> is a small horizontal line that joins two or more words into a single unit, much like a hyphen in English. For example: <span dir="rtl" style="font-family:'David Libre',serif;font-size:1.1em;color:var(--ink)">אֶת־הָאָרֶץ</span> (<em>et-ha’arets</em>) = “[ACC]-the-land.”
       </p>
 
-      <!-- MARKS IN THIS EDITION -->
+</section>
+
+<section class="hg-sec hg-sec--wide">
+<!-- MARKS IN THIS EDITION -->
 <h3 style="font-size:1.2em;color:var(--ink);margin:28px 0 10px;text-align:center">Other Marks You Will Meet in This Edition</h3>
 <hr style="width:140px;margin:0 auto 16px;border:none;border-top:1px solid #ccc">
 <p style="font-size:0.92em;line-height:1.7;color:var(--ink);margin-bottom:14px">A few marks are not in the tables above but appear on every page of this edition.</p>
 <div style="overflow-x:auto">
-<table style="width:100%;min-width:34rem;border-collapse:collapse;font-size:0.92em;margin-bottom:20px">
+<table style="width:100%;border-collapse:collapse;font-size:0.92em;margin-bottom:20px">
 <thead>
 <tr style="background:var(--accent);color:var(--on-accent);"><th style="padding:6px 10px;text-align:center">Mark</th><th style="padding:6px 10px;text-align:left">Name</th><th style="padding:6px 10px;text-align:center">Sound</th><th style="padding:6px 10px;text-align:left">What it does</th></tr>
 </thead>
@@ -195,19 +236,30 @@ html.sw-in-app .landing-update-note { display: none; }
 </table>
 </div>
 
+</section>
+
+<section class="hg-sec hg-sec--wide">
 <!-- TRANSLITERATION -->
 <h3 style="font-size:1.2em;color:var(--ink);margin:28px 0 10px;text-align:center">The Transliteration in This Edition</h3>
 <hr style="width:140px;margin:0 auto 16px;border:none;border-top:1px solid #ccc">
 <p style="font-size:0.92em;line-height:1.7;color:var(--ink);margin-bottom:14px">The Transliterate button writes each word in Latin letters. The scheme is the popular one, not the scholarly one: <strong>ch</strong> is ח (as in Bach), <strong>kh</strong> is כ without a dagesh (loch), <strong>ts</strong> is צ, <strong>k</strong> stands for both ק and כּ, <strong>sh</strong> and <strong>s</strong> follow the dot on שׁ and שׂ, and א and ע are not written. A doubled consonant shows a dagesh forte: <em>lakkore</em> for <span dir="rtl" style="font-family:'David Libre',serif;font-size:1.15em;color:var(--ink)">לַקּוֹרֵא</span>. Words joined by a maqqef are joined by a hyphen: <em>devar-Adonai</em>.</p>
 
+</section>
+
+<section class="hg-sec hg-sec--wide">
 <!-- USING THE READER -->
 <h3 style="font-size:1.2em;color:var(--ink);margin:28px 0 10px;text-align:center">Using the Reader</h3>
 <hr style="width:140px;margin:0 auto 16px;border:none;border-top:1px solid #ccc">
+<div class="hg-text hg-text--cols">
 <p style="font-size:0.92em;line-height:1.7;color:var(--ink);margin-bottom:14px">The bar at the foot of the screen sets the view: <strong>Interlinear</strong> (Hebrew with a gloss under each word), <strong>Hebrew Only</strong>, <strong>Dual</strong> (Hebrew and English side by side), <strong>Transliterate</strong>, and <strong>No Nikkud</strong> (the consonants alone, as in a Torah scroll). Beside it the buttons turn the chapter, and the chapter name between them opens the list of books. The two letters at the head of the page change the size of the text; the moon turns on night reading.</p>
 <p style="font-size:0.92em;line-height:1.7;color:var(--ink);margin-bottom:14px"><strong>Tap any Hebrew word</strong> and its root scorecard opens: the root and its meaning, how many times that root occurs in each of the six volumes, its forms and glosses, and every reference. The scorecards are there so that you can test the translation for yourself: a word chosen for the Book of Mormon can be weighed against the same root in the Hebrew Bible, and where a root is rare or unattested the card says so.</p>
 <p style="font-size:0.92em;line-height:1.7;color:var(--ink);margin-bottom:14px"><strong>Words in blue</strong> belong to the major themes of the Topical Guide; tap one to open the theme. <strong>Press and hold</strong> to select a run of words, then highlight it, add a note, copy or share it, or open its cross-references and glossary. <strong>Search</strong> finds Hebrew with or without vowel points, or English. The other five volumes open from the Standard Works page, and every scorecard reaches across all six.</p>
 <p style="font-size:0.92em;line-height:1.7;color:var(--ink);margin-bottom:14px">The Hebrew text is an original translation into Biblical Hebrew by Chris Lambe; the English shown in Dual view is the 1920 edition. The reader itself was built with artificial intelligence under the translator’s direction. The Brief Explanation in the front matter says more: <a href="#"  style="color:var(--tap-blue,var(--here))">About this edition &rarr;</a></p>
+</div>
 
+</section>
+
+<section class="hg-sec hg-sec--wide">
 <!-- PRACTICE EXAMPLES -->
       <h3 style="font-size:1.2em;color:var(--ink);margin:28px 0 10px;text-align:center">Practice: Words from the Book of Mormon</h3>
       <hr style="width:140px;margin:0 auto 16px;border:none;border-top:1px solid #ccc">
@@ -265,6 +317,9 @@ html.sw-in-app .landing-update-note { display: none; }
         </div>
 
       </div>
+</section>
+
+      </div><!-- .hg-grid -->
 
       <div style="text-align:center;margin:30px 0 20px">
         <a class="glossary-highlight-btn" href="bom/bom.html#1-nephi-1">Start Reading: 1 Nephi 1 &rarr;</a>
