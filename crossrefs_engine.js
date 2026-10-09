@@ -548,7 +548,7 @@ function parseScriptureRef(refText) {
         if (!first) html += '<span class="xref-ref-arr">\u2039</span>';
         first = false;
         html += '<span class="xref-ref-word">';
-        html += '<span class="hw">' + hwEl.textContent + '</span>';
+        html += '<span class="hw">' + _hwText(hwEl) + '</span>';
         if (glEl) html += '<span class="en">' + glEl.textContent + '</span>';
         html += '</span>';
       }
@@ -736,8 +736,8 @@ function parseScriptureRef(refText) {
         // not its etymological parent root (בָּנָה "build") — lemma first.
         var wuRoot = '';
         if (hwEl) {
-          wuRoot = getLemmaStrongs(hwEl.textContent) ||
-            (window.getRoot ? window.getRoot(hwEl.textContent) : '');
+          wuRoot = getLemmaStrongs(_hwText(hwEl)) ||
+            (window.getRoot ? window.getRoot(_hwText(hwEl)) : '');
         }
         sup.onclick = (function(r, rt, k) {
           return function(e) {
@@ -758,7 +758,7 @@ function parseScriptureRef(refText) {
         // ran, which indexes every verse once and keeps counts stable). The
         // seed is per verse now, so the test is too: this verse, not the volume.
         if (!_seededVerseKeys[key] && hwEl && window.getRoot) {
-          var root = window.getRoot(hwEl.textContent);
+          var root = window.getRoot(_hwText(hwEl));
           if (root) {
             if (!window._rootXrefs[root]) window._rootXrefs[root] = [];
             window._rootXrefs[root].push({ ref: ref, verseKey: key });
@@ -1321,7 +1321,7 @@ function parseScriptureRef(refText) {
       if (xrefData && xrefKey) {
         var hw = wu.querySelector('.hw');
         if (hw && window.getRoot) {
-          var root = window.getRoot(hw.textContent);
+          var root = window.getRoot(_hwText(hw));
           if (root && window._rootXrefs && window._rootXrefs[root]) {
             if (typeof _hideSelToolbar === 'function') _hideSelToolbar();
             openRootXrefPanel(root);
@@ -1334,7 +1334,7 @@ function parseScriptureRef(refText) {
       }
       var hw2 = wu.querySelector('.hw');
       if (hw2 && window.getRoot) {
-        var root2 = window.getRoot(hw2.textContent);
+        var root2 = window.getRoot(_hwText(hw2));
         if (root2 && window._rootXrefs && window._rootXrefs[root2]) {
           if (typeof _hideSelToolbar === 'function') _hideSelToolbar();
           openRootXrefPanel(root2);
@@ -1351,7 +1351,7 @@ function parseScriptureRef(refText) {
       if (verseXref) {
         var hw3 = verseXref.querySelector('.hw');
         if (hw3 && window.getRoot) {
-          var root3 = window.getRoot(hw3.textContent);
+          var root3 = window.getRoot(_hwText(hw3));
           if (root3 && window._rootXrefs && window._rootXrefs[root3]) {
             if (typeof _hideSelToolbar === 'function') _hideSelToolbar();
             openRootXrefPanel(root3);
@@ -1376,7 +1376,7 @@ function parseScriptureRef(refText) {
       if (firstXref) {
         var hw4 = firstXref.querySelector('.hw');
         if (hw4 && window.getRoot) {
-          var root4 = window.getRoot(hw4.textContent);
+          var root4 = window.getRoot(_hwText(hw4));
           if (root4 && window._rootXrefs && window._rootXrefs[root4]) { openRootXrefPanel(root4); return; }
         }
         var xd2 = firstXref.getAttribute('data-xref-ref');

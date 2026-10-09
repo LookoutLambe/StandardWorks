@@ -303,7 +303,7 @@ for (var ri = 0; ri < _verseRegistry.length; ri++) {
     var hw = wu.querySelector('.hw'), gl = wu.querySelector('.gl');
     if (!hw || !gl) return;
     window._popupWordUnit = wu;
-    var hText = hw.textContent, gText = gl.textContent;
+    var hText = _hwText(hw), gText = gl.textContent;   // reader_surface.js: never the cantillation layer
     hText = hText.replace(/^[\s.,;:?!()]+|[\s.,;:?!()]+$/g, '');
     // A transliterated term (RootScorecard's exception table: Adam-ondi-Ahman,
     // Ahman, Shedolamak) gets its note, never a root or a Strong's number.

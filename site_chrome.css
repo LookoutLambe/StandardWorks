@@ -259,7 +259,8 @@ body.sw-chrome-reader #sw-chrome-dark     { grid-column: 4; justify-self: end; }
   right: max(10px, env(safe-area-inset-right, 0px));
   z-index: calc(var(--z-chrome) + 1);
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
   gap: 8px;
   padding: 8px;
   background: var(--header-bg);
@@ -268,6 +269,30 @@ body.sw-chrome-reader #sw-chrome-dark     { grid-column: 4; justify-self: end; }
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 .sw-size-pop[hidden] { display: none; }
+.sw-size-pop .sw-pop-size { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+/* a display layer's on/off switch, under the size control (site_chrome.js) */
+.sw-size-pop .sw-pop-switch {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  min-height: 44px; padding: 0 8px 0 10px;
+  background: transparent;
+  border: 1px solid var(--sw-gold-border, var(--here-chrome));
+  border-radius: 6px;
+  color: var(--sw-gold, var(--here-chrome));
+  font-family: 'David Libre', serif; font-size: 0.95em; cursor: pointer;
+}
+.sw-size-pop .sw-pop-switch:hover { background: color-mix(in srgb, var(--here-chrome) 14%, transparent); }
+.sw-size-pop .sw-pop-track {
+  position: relative; flex: none; width: 34px; height: 20px;
+  border: 1px solid currentColor; border-radius: 10px;
+}
+.sw-size-pop .sw-pop-track::after {
+  content: ''; position: absolute; top: 2px; left: 2px;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: currentColor; opacity: 0.5; transition: transform 0.15s ease;
+}
+.sw-size-pop .sw-pop-switch[aria-pressed="true"] .sw-pop-track { background: color-mix(in srgb, var(--here-chrome) 30%, transparent); }
+.sw-size-pop .sw-pop-switch[aria-pressed="true"] .sw-pop-track::after { transform: translateX(14px); opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .sw-size-pop .sw-pop-track::after { transition: none; } }
 .sw-size-pop .sw-size-pct { min-width: 3.2em; text-align: center; color: var(--sw-gold, var(--here-chrome)); font-size: 0.85em; font-variant-numeric: tabular-nums; }
 .sw-size-pop .sw-size-btn {
   min-width: 44px; min-height: 44px;

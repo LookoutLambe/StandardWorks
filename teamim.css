@@ -1,0 +1,29 @@
+/* teamim.css — the face of the Old Testament's cantillation layer (teamim.js).
+   Loaded only when the reader switches the layer on.
+
+   David Libre has no cantillation marks; with them the browser would borrow
+   each accented letter from some other font. So while the layer is on, the
+   verse text (and only the verse text: headings, glosses and every other
+   volume stay David Libre) is set in Taamey David CLM, a David cut built for
+   the te'amim. Culmus project, GPL with the font exception for embedding;
+   fonts/TaameyDavidCLM-LICENSE.txt. The file is the Hebrew block only. */
+@font-face {
+  font-family: 'Taamey David CLM';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('fonts/TaameyDavidCLM-Medium.woff2') format('woff2');
+  unicode-range: U+0590-05FF, U+FB1D-FB4F, U+2009, U+25CC, U+034F, U+200C-200F;
+}
+html.sw-teamim .verse .word-unit .hw {
+  font-family: 'Taamey David CLM', 'David Libre', serif;
+}
+/* A paseq stands between two words. Drawn here rather than written into the
+   word, so nothing that reads a word back off the page ever sees it. */
+html.sw-teamim .verse .word-unit .hw .tm-paseq::before {
+  content: '\2009\05C0';
+}
+/* The stress mark (.sacc, a small "<" over the stressed vowel) stands down
+   while the accents are shown: marking the stress is what they do, and the
+   "<" sits exactly where the accents above the line are drawn. */
+html.sw-teamim .verse .word-unit .hw .sacc::before { content: none; }

@@ -409,6 +409,13 @@
     var bs = r.querySelectorAll('button'); bs[0].addEventListener('click', function () { window.stepSize && window.stepSize(-10); }); bs[1].addEventListener('click', function () { window.stepSize && window.stepSize(10); });
     rowIn(cs, '<span class="sw-app-sub">Sets the reading size on every page; the same control as the Aa button in the reader.</span>');
     p.scroll.appendChild(el('div', 'sw-app-gap'));
+    /* The Old Testament's cantillation layer (teamim.js): only where it exists. */
+    if (window.SWTeamim) {
+      header(p.scroll, 'Cantillation'); var ct = card(p.scroll);
+      rowIn(ct, '<span class="sw-app-t sw-app-grow">Show the cantillation marks <span lang="he">\u05D8\u05B0\u05E2\u05B8\u05DE\u05B4\u05D9\u05DD</span></span>' + (window.SWTeamim.on ? '<span class="sw-app-here">' + svg('check', 22) + '</span>' : ''), function () { window.SWTeamim.toggle(); renderSettings(); });
+      rowIn(ct, '<span class="sw-app-sub">The Masoretic accents over the Hebrew of the Old Testament, from the Leningrad Codex.</span>');
+      p.scroll.appendChild(el('div', 'sw-app-gap'));
+    }
     header(p.scroll, 'About'); var cb = card(p.scroll);
     rowIn(cb, '<span class="sw-app-t">Sefer Mormon in print</span>', function () { open('in-print.html'); });
     rowIn(cb, '<span class="sw-app-t">Privacy</span>', function () { open('privacy.html'); });

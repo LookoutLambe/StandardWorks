@@ -435,16 +435,7 @@ function toggleNoNikkud() {
   _keepVersePosition(function() {
   window._noNikkud = !window._noNikkud;
   document.getElementById('btn-nikkud').classList.toggle('active', window._noNikkud);
-  document.querySelectorAll('.word-unit').forEach(function(unit) {
-    var hw = unit.querySelector('.hw');
-    if (!hw) return;
-    var orig = unit.getAttribute('data-h');
-    if (orig) {
-      var ttMark = _isTranslitTerm(orig) ? '<span class="tt-mark" title="transliterated term">*</span>' : '';
-      if (window._noNikkud) hw.innerHTML = _stripNikkudDisplay(orig) + ttMark;
-      else hw.innerHTML = orig.replace(/([\u05D0-\u05EA][\u0591-\u05C6]*\u05C7[\u0591-\u05C6]*)/g, '<span class="qq">$1</span>') + ttMark;
-    }
-  });
+  _redrawHebrewWords(document);   // reader_surface.js: the one home of a word's display
     document.querySelectorAll('.chapter-summary-he[data-heb]').forEach(function(el) {
     var orig = el.getAttribute('data-heb');
     el.textContent = window._noNikkud ? _stripNikkudDisplay(orig) : orig;

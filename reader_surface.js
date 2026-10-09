@@ -1189,21 +1189,66 @@ function _isTranslitTerm(h) {
   } catch (e) { return false; }
 }
 
-function makeWordUnit(h, e, isSof) {
+/* \u2500\u2500 What the reader sees of a word \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+   One home for the .hw markup. The render (makeWordUnit) and every switch
+   that redraws the words in place (toggleNoNikkud, the Old Testament's
+   cantillation layer in teamim.js) and the stress mark (applyStressMarks)
+   all draw it here, so a display rule is written once: the pointed Hebrew
+   with qamats qatan marked; in No Nikkud the consonants alone; with the
+   cantillation layer on, the Masoretic accents laid over the pointed text for
+   the verse word `wid` names; and, given `stressSlot`, the stressed syllable
+   wrapped in .sacc. Before this the stress mark rebuilt the word from data-h
+   on its own, and so erased whatever else the display carried (the accents,
+   and the asterisk of a transliterated term). data-h stays the bare word, and
+   every lookup (scorecard, search, transliteration, read-aloud) goes on
+   reading that, never the display. */
+function _hwShown(h, wid) {
+  var T = window.SWTeamim;
+  return (wid && T && T.on) ? T.accents(h, wid) : { text: h, after: '' };
+}
+function _hwHtml(h, wid, stressSlot) {
+  var tt = _isTranslitTerm(h)
+    ? '<span class="tt-mark" title="transliterated term or acronym: no Hebrew root">*</span>' : '';
+  if (_swNoNikkud()) return _stripNikkudDisplay(h) + tt;
+  var s = _hwShown(h, wid), d = s.text;
+  if (stressSlot == null) return _swQq(d) + s.after + tt;
+  d = d.normalize ? d.normalize('NFC') : d;
+  var v = _swVowelSlots(d)[stressSlot];
+  if (v === undefined) return _swQq(d) + s.after + tt;
+  var isLetter = function (c) { return c >= '\u05D0' && c <= '\u05EA'; };
+  var start = v; while (start > 0 && !isLetter(d[start])) start--;
+  var end = v + 1; while (end < d.length && !isLetter(d[end])) end++;
+  return _swQq(d.slice(0, start)) + '<span class="sacc">' + _swQq(d.slice(start, end)) + '</span>' +
+         _swQq(d.slice(end)) + s.after + tt;
+}
+/* Reading a word back OFF the page — the word card, the cross-reference
+   lookups — goes through here. The display may carry the cantillation layer,
+   and an accent is never part of what a word is: te'amim U+0591–U+05AF and
+   meteg U+05BD are dropped, so a lookup sees exactly the pointed word it saw
+   before the layer existed. */
+function _hwText(hw) {
+  return ((hw && hw.textContent) || '').replace(/[֑-ֽ֯]/g, '');
+}
+/* Redraw the words under `root` from their data-h: a display switch changes
+   how a word looks, never what it is. */
+function _redrawHebrewWords(root) {
+  (root || document).querySelectorAll('.word-unit[data-h]').forEach(function (unit) {
+    var hw = unit.querySelector('.hw');
+    if (hw) hw.innerHTML = _hwHtml(unit.getAttribute('data-h'), unit.getAttribute('data-wid'));
+  });
+  applyStressMarks(root || document);   /* the redraw cleared them; put them back */
+}
+
+function makeWordUnit(h, e, isSof, wid) {
   if (h === '\u05C3') return '';
   h = h.replace(/\u05C3/g, '');            // embedded sof pasuq: CSS ::after draws it
   var div = document.createElement('div');
   div.className = 'word-unit' + (isSof ? ' sof' : '');
   div.setAttribute('data-h', h);
+  if (wid) div.setAttribute('data-wid', wid);   // the annotation key: verse|word
   var gloss = augmentGlossWithPrefixes(h, e.replace(/-/g, ' '));
-  var displayH = _swNoNikkud()
-    ? _stripNikkudDisplay(h)
-    : h.replace(/([\u05D0-\u05EA][\u0591-\u05C6]*\u05C7[\u0591-\u05C6]*)/g, '<span class="qq">$1</span>');
-  if (_isTranslitTerm(h)) {
-    displayH += '<span class="tt-mark" title="transliterated term or acronym: no Hebrew root">*</span>';
-  }
   var glCls = 'gl' + ((gloss && gloss.length <= 18 && gloss.split(' ').length <= 3) ? ' gl-nw' : '');
-  div.innerHTML = '<span class="hw" lang="he">' + displayH + '</span>' +
+  div.innerHTML = '<span class="hw" lang="he">' + _hwHtml(h, wid) + '</span>' +
                   '<span class="tl"></span><span class="' + glCls + '">' + gloss + '</span>';
   div.setAttribute('tabindex', '0');
   div.setAttribute('role', 'button');
@@ -1371,8 +1416,7 @@ function renderWords(words, container, verseKey) {
     if (h === '\u05C3') return;
     var isSof = (i + 1 < words.length && words[i+1][0] === '\u05C3') || (realCount === lastRealIdx);
     var isLastWord = (realCount === lastRealIdx);
-    var el = makeWordUnit(h, e, isSof);
-    if (el && verseKey) el.setAttribute('data-wid', verseKey + '|' + realCount);   // the annotation key
+    var el = makeWordUnit(h, e, isSof, verseKey ? verseKey + '|' + realCount : '');
     /* Schottenstein-style chevron between words (points left in the RTL flow). */
     var chevron = document.createElement('span');
     chevron.className = 'arr';
@@ -2508,7 +2552,6 @@ window.addEventListener('scroll', function () {
 function applyStressMarks(root) {
   var table = window.SW_STRESS;
   if (!table) return;                       /* the volume's table has not landed yet */
-  var isLetter = function (c) { return c >= 'א' && c <= 'ת'; };
   var units = (root || document).querySelectorAll('.word-unit .hw');
   for (var u = 0; u < units.length; u++) {
     var hw = units[u];
@@ -2533,20 +2576,14 @@ function applyStressMarks(root) {
     if (!slots.length) continue;
     var k = table[w];
     if (k === undefined) k = slots.length - 1;             /* the default: last vowel */
-    var v = slots[k];
-    if (v === undefined) continue;
-    var start = v; while (start > 0 && !isLetter(w[start])) start--;
-    var end = v + 1; while (end < w.length && !isLetter(w[end])) end++;
-    /* THE QAMATS QATAN IS RED, AND REBUILDING .hw FROM THE RAW STRING ERASED IT.
-       makeWordUnit wraps every letter carrying U+05C7 in .qq, which is what
-       makes the sign red — the whole point of writing it. Writing innerHTML
-       from data-h threw that markup away, so every red qamats in the corpus
-       went black the moment the stress marks were applied. The wrapping is
-       re-applied here, on each of the three pieces, so a letter can carry both
-       the red and the accent mark. */
-    hw.innerHTML = _swQq(w.slice(0, start)) +
-                   '<span class="sacc">' + _swQq(w.slice(start, end)) + '</span>' +
-                   _swQq(w.slice(end));
+    if (slots[k] === undefined) continue;
+    /* THE QAMATS QATAN IS RED, AND REBUILDING .hw FROM THE RAW STRING ERASED IT
+       (every red qamats went black the moment the marks were applied). The
+       word is drawn by _hwHtml now, the one home of its display: the red, the
+       cantillation layer and the asterisk all survive the mark. The slot is
+       counted on the bare word; an accent is not a vowel, so it is the same
+       slot in the accented one. */
+    hw.innerHTML = _hwHtml(wu.getAttribute('data-h'), wu.getAttribute('data-wid'), k);
   }
 }
 

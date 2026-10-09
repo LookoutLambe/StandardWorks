@@ -250,13 +250,31 @@
     pop.setAttribute('role', 'group');
     pop.setAttribute('aria-label', 'Text size');
     pop.hidden = true;
-    pop.innerHTML =
+    pop.innerHTML = '<div class="sw-pop-size">' +
       '<button type="button" class="sw-size-btn" aria-label="Smaller text">A<span aria-hidden="true">\u2212</span></button>' +
       '<span class="sw-size-pct" aria-live="polite"></span>' +
-      '<button type="button" class="sw-size-btn sw-size-btn-up" aria-label="Larger text">A<span aria-hidden="true">+</span></button>';
+      '<button type="button" class="sw-size-btn sw-size-btn-up" aria-label="Larger text">A<span aria-hidden="true">+</span></button>' +
+      '</div>';
     var btns = pop.querySelectorAll('.sw-size-btn');
     btns[0].addEventListener('click', function () { window.stepSize(-10); syncSizePct(); });
     btns[1].addEventListener('click', function () { window.stepSize(10); syncSizePct(); });
+    /* THE WEB'S DISPLAY SETTINGS LIVE UNDER Aa: the site has no settings page
+       (user, 2026-10-09: "i dont have a settings to include on the web"), and
+       the footer is the five reading modes by design. A page that has a
+       display layer offers it here; today that is the Old Testament's
+       cantillation (teamim.js), and only there. */
+    if (window.SWTeamim) {
+      pop.setAttribute('aria-label', 'Display');
+      var sw = document.createElement('button');
+      sw.type = 'button';
+      sw.id = 'sw-teamim-switch';
+      sw.className = 'sw-pop-switch';
+      sw.setAttribute('aria-pressed', window.SWTeamim.on ? 'true' : 'false');
+      sw.innerHTML = '<span class="sw-pop-switch-label">Cantillation <span lang="he" dir="rtl">\u05d8\u05b0\u05e2\u05b8\u05de\u05b4\u05d9\u05dd</span></span>' +
+        '<span class="sw-pop-track" aria-hidden="true"></span>';
+      sw.addEventListener('click', function () { window.SWTeamim.toggle(); });
+      pop.appendChild(sw);
+    }
     document.body.appendChild(pop);
     document.addEventListener('click', function (e) {
       if (pop.hidden) return;

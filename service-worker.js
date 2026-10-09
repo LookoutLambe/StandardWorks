@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-10-08T12-43-24';
+const BUILD_ID = '2026-10-09T18-39-15';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -34,17 +34,17 @@ const CORE_ASSETS = [
     '/StandardWorks/icons/icon-192.png?v=3',
     '/StandardWorks/icons/icon-512.png?v=3',
     '/StandardWorks/icons/icon-maskable.png?v=3',
-    '/StandardWorks/site_chrome.css?v=77',
+    '/StandardWorks/site_chrome.css?v=78',
     /* sw_theme.css was precached here and no page links it — checked in the
        browser, document.styleSheets holds david_libre, nav_engine,
        site_chrome, xref_study_panel and reader, and nothing else. The tokens
        it defines (--here, --highlight, --rule) live in reader.css now. The
        file is left on disk; only the download is removed. */
-    '/StandardWorks/site_chrome.js?v=55',
+    '/StandardWorks/site_chrome.js?v=56',
     /* the phone shell (app-shell/pwa_shell.js): the row, the panels and the
        shared injected scripts the apps use; a computer never fetches past the
        first file, which returns at its gate */
-    '/StandardWorks/app-shell/pwa_shell.js?v=2',
+    '/StandardWorks/app-shell/pwa_shell.js?v=3',
     '/StandardWorks/app-shell/pwa_shell.css?v=1',
     '/StandardWorks/app-shell/shell_start.js',
     '/StandardWorks/app-shell/shell_end.js',
@@ -208,6 +208,7 @@ function isVerseAssetPath(pathname) {
      falling through to the generic network-first branch, so every page turn
      into a new book waited on the network for its chapter summary. */
   return /\/(ot|nt|pgp|jst|dc|bom)_(verses|english|headings|crossrefs)\//.test(pathname) ||
+    /\/ot_teamim\//.test(pathname) ||   /* the cantillation layer, a book at a time (teamim.js) */
     /\/(ot|nt|pgp|jst|dc)_stress\.js$/.test(pathname) || /\/bom\/stress\.js$/.test(pathname) ||
     /\/(ot|nt|pgp|jst|dc)_phrase_breaks\.js$/.test(pathname) || /\/bom\/bom_phrase_breaks\.js$/.test(pathname) ||
     /\/(imperatives|root_concordance|root_concordance_refs|attested_forms)\.js$/.test(pathname) ||
