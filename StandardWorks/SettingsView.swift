@@ -96,6 +96,12 @@ private final class DeafPort: NSObject, WKScriptMessageHandler {
 struct DisplayOptionsSections: View {
     @EnvironmentObject var shell: WebShell
     @AppStorage("shell.appearance") private var appearance = "system"
+    /// THE OLD TESTAMENT'S CANTILLATION LAYER (the page's teamim.js; user,
+    /// 2026-10-09: "do the same now for the iphone and google app"). The page
+    /// owns the setting (localStorage sw-teamim) and the drawing; this row
+    /// shows the page's state and flips it through SWTeamim.set, so nothing is
+    /// stored twice. Only on the Old Testament: nobody accented Nephi.
+    @State private var teamim = false
 
     var body: some View {
         Section(header: Text("Text size").foregroundStyle(shell.ink2)) {
@@ -130,9 +136,18 @@ struct DisplayOptionsSections: View {
             .pickerStyle(.segmented)
             Toggle("Transliteration", isOn: Binding(get: { shell.readTranslit }, set: { shell.setReading(layout: shell.readLayout, translit: $0, nikkud: shell.readNikkud) }))
             Toggle("Vowel points (nikkud)", isOn: Binding(get: { shell.readNikkud }, set: { shell.setReading(layout: shell.readLayout, translit: shell.readTranslit, nikkud: $0) }))
+            if shell.currentVolumeKey == "ot" {
+                Toggle("Cantillation marks (te\u{2019}amim)", isOn: Binding(get: { teamim }, set: { on in
+                    teamim = on
+                    shell.run("window.SWTeamim && SWTeamim.set(\(on ? "true" : "false"));")
+                }))
+            }
             Toggle("Full screen on scroll", isOn: Binding(get: { shell.fullScreenOnScroll }, set: { shell.fullScreenOnScroll = $0 }))
         }
         .shellRow(shell)
+        .onAppear {
+            shell.webView?.evaluateJavaScript("!!(window.SWTeamim && SWTeamim.on)") { v, _ in teamim = (v as? Bool) ?? false }
+        }
         if !shell.whereLabel.isEmpty {
             Section(header: Text(shell.whereLabel).foregroundStyle(shell.ink2)) {
                 // the study panel's own bookmark button, driven while hidden

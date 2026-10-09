@@ -46,7 +46,12 @@ import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.SideEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -121,6 +126,20 @@ fun ColumnScope.DisplayOptionsSections(shell: WebShell) {
         Rule(p)
         SwitchRow(p, "Vowel points (nikkud)", shell.readNikkud) { shell.setReading(shell.readLayout, shell.readTranslit, it) }
         Rule(p)
+        /* THE OLD TESTAMENT'S CANTILLATION LAYER (the page's teamim.js), the
+           iPhone's row the same way: the page owns the setting (localStorage
+           sw-teamim) and the drawing; this shows its state and flips it
+           through SWTeamim.set, so nothing is stored twice. Only on the Old
+           Testament: nobody accented Nephi. */
+        if (shell.currentVolumeKey == "ot") {
+            var teamim by remember { mutableStateOf(false) }
+            LaunchedEffect(Unit) { shell.eval("!!(window.SWTeamim && SWTeamim.on)") { teamim = it == true } }
+            SwitchRow(p, "Cantillation marks (te’amim)", teamim) { on ->
+                teamim = on
+                shell.run("window.SWTeamim && SWTeamim.set($on);")
+            }
+            Rule(p)
+        }
         SwitchRow(p, "Full screen on scroll", shell.fullScreenOnScroll) { shell.chooseFullScreen(it) }
     }
 
