@@ -100,7 +100,8 @@ struct DisplayOptionsSections: View {
     /// 2026-10-09: "do the same now for the iphone and google app"). The page
     /// owns the setting (localStorage sw-teamim) and the drawing; this row
     /// shows the page's state and flips it through SWTeamim.set, so nothing is
-    /// stored twice. Only on the Old Testament: nobody accented Nephi.
+    /// stored twice. On the Old Testament, whose accents are the Masoretes', and
+    /// the Book of Mormon, whose are laid by their rules (bom/teamim).
     @State private var teamim = false
 
     var body: some View {
@@ -136,7 +137,7 @@ struct DisplayOptionsSections: View {
             .pickerStyle(.segmented)
             Toggle("Transliteration", isOn: Binding(get: { shell.readTranslit }, set: { shell.setReading(layout: shell.readLayout, translit: $0, nikkud: shell.readNikkud) }))
             Toggle("Vowel points (nikkud)", isOn: Binding(get: { shell.readNikkud }, set: { shell.setReading(layout: shell.readLayout, translit: shell.readTranslit, nikkud: $0) }))
-            if shell.currentVolumeKey == "ot" {
+            if shell.currentVolumeKey == "ot" || shell.currentVolumeKey == "bom" {
                 Toggle("Cantillation marks (te\u{2019}amim)", isOn: Binding(get: { teamim }, set: { on in
                     teamim = on
                     shell.run("window.SWTeamim && SWTeamim.set(\(on ? "true" : "false"));")

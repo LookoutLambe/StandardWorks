@@ -129,9 +129,10 @@ fun ColumnScope.DisplayOptionsSections(shell: WebShell) {
         /* THE OLD TESTAMENT'S CANTILLATION LAYER (the page's teamim.js), the
            iPhone's row the same way: the page owns the setting (localStorage
            sw-teamim) and the drawing; this shows its state and flips it
-           through SWTeamim.set, so nothing is stored twice. Only on the Old
-           Testament: nobody accented Nephi. */
-        if (shell.currentVolumeKey == "ot") {
+           through SWTeamim.set, so nothing is stored twice. On the Old
+           Testament, whose accents are the Masoretes', and the Book of
+           Mormon, whose are laid by their rules (bom/teamim). */
+        if (shell.currentVolumeKey == "ot" || shell.currentVolumeKey == "bom") {
             var teamim by remember { mutableStateOf(false) }
             LaunchedEffect(Unit) { shell.eval("!!(window.SWTeamim && SWTeamim.on)") { teamim = it == true } }
             SwitchRow(p, "Cantillation marks (te’amim)", teamim) { on ->

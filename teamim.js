@@ -18,15 +18,35 @@
 
    WHERE THE SWITCH IS. Under Aa in the reader's header (site_chrome.js: the
    web has no settings page, and the footer is the five reading modes by
-   design) and on the phone shell's Settings page (app-shell/pwa_shell.js).
-   The state is one localStorage key, sw-teamim. */
+   design), on the phone shell's Settings page (app-shell/pwa_shell.js), and
+   in the two apps' Settings. The state is one localStorage key, sw-teamim.
+
+   AND THE BOOK OF MORMON (user, 2026-10-09: "based on the cantillation marks
+   in the bible you can study them and know exactly how to do it to the BOM").
+   bom/teamim/<book>.js carries the te'amim laid over the Book of Mormon by
+   the Masoretes' own rules, counted out of the Tanakh (tools/teamim_grammar.py,
+   tools/build_bom_teamim.py); where a verse quotes the Tanakh, its phrasing is
+   the Tanakh's. Same encoding, same switch, same font; the canon is never
+   touched. */
 (function () {
   'use strict';
   var R = window.READER || {};
-  if (R.vol !== 'ot') return;                    // nobody accented Nephi
+  if (R.vol !== 'ot' && R.vol !== 'bom') return;
   var KEY = 'sw-teamim', DATA_V = '1', CSS_V = '2';
+  /* this file's own directory, so the stylesheet and the data resolve from
+     bom/bom.html as they do from ot.html */
+  var SELF = document.currentScript && document.currentScript.src;
+  var BASE = SELF ? SELF.replace(/[^\/]*$/, '') : '';
+  var DIR = BASE + (R.vol === 'bom' ? 'bom/teamim/' : 'ot_teamim/');
+  /* book name (the first field of data-wid) -> the data file's name: the Old
+     Testament's book prefix, the Book of Mormon's verse-file slug, which its
+     loader derives from a chapter id so there is no second table of names */
   var byName = {};
-  (R.books || []).forEach(function (b) { byName[b.en] = b.prefix; });
+  function fileFor(b) {
+    if (R.vol === 'bom') return window.bomBookSlugForChapId ? bomBookSlugForChapId(b.idPrefix + '1') : null;
+    return b.prefix;
+  }
+  (R.books || []).forEach(function (b) { byName[b.en] = fileFor(b); });
   var state = { loaded: {}, loading: {} };
   var observer = null;
 
@@ -82,7 +102,7 @@
   function css() {
     if (document.getElementById('sw-teamim-css')) return;
     var l = document.createElement('link');
-    l.id = 'sw-teamim-css'; l.rel = 'stylesheet'; l.href = 'teamim.css?v=' + CSS_V;
+    l.id = 'sw-teamim-css'; l.rel = 'stylesheet'; l.href = BASE + 'teamim.css?v=' + CSS_V;
     document.head.appendChild(l);
   }
 
@@ -90,7 +110,7 @@
     if (!prefix || state.loaded[prefix] || state.loading[prefix]) return;
     state.loading[prefix] = true;
     var s = document.createElement('script');
-    s.src = 'ot_teamim/' + prefix + '.js?v=' + DATA_V;
+    s.src = DIR + prefix + '.js?v=' + DATA_V;
     s.async = true;
     s.onload = function () { state.loaded[prefix] = true; state.loading[prefix] = false; if (T.on) redraw(); };
     s.onerror = function () { state.loading[prefix] = false; };
@@ -105,7 +125,10 @@
       if (!seen[name]) { seen[name] = 1; load(byName[name]); }
     });
     var cur = window.currentChapterId || '';
-    if (cur) load(cur.replace(/-ch\d+$/, ''));
+    if (cur) {
+      if (R.vol === 'bom') { if (window.bomBookSlugForChapId) load(bomBookSlugForChapId(cur)); }
+      else load(cur.replace(/-ch\d+$/, ''));
+    }
   }
 
   /* a book that arrives later (a page turn, a jump, the next chapter rendered

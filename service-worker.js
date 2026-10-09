@@ -1,5 +1,5 @@
 /** Replaced on deploy by scripts/write_build_version.js (GITHUB_SHA). */
-const BUILD_ID = '2026-10-09T21-49-12';
+const BUILD_ID = '2026-10-09T23-04-26';
 const CACHE_NAME = 'standard-works-' + BUILD_ID;
 const OFFLINE_CACHE = 'standard-works-offline-v2';
 
@@ -209,6 +209,7 @@ function isVerseAssetPath(pathname) {
      into a new book waited on the network for its chapter summary. */
   return /\/(ot|nt|pgp|jst|dc|bom)_(verses|english|headings|crossrefs)\//.test(pathname) ||
     /\/ot_teamim\//.test(pathname) ||   /* the cantillation layer, a book at a time (teamim.js) */
+    /\/bom\/teamim\//.test(pathname) ||  /* ...and the Book of Mormon's */
     /\/(ot|nt|pgp|jst|dc)_stress\.js$/.test(pathname) || /\/bom\/stress\.js$/.test(pathname) ||
     /\/(ot|nt|pgp|jst|dc)_phrase_breaks\.js$/.test(pathname) || /\/bom\/bom_phrase_breaks\.js$/.test(pathname) ||
     /\/(imperatives|root_concordance|root_concordance_refs|attested_forms)\.js$/.test(pathname) ||
