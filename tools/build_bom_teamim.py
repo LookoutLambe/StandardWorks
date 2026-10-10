@@ -974,10 +974,13 @@ def printed_marks(key, toks, speak, ent, hand):
        (2 Nephi 11:1) before the mend ever saw it."""
     br = mend_marks(speak, [tuple(x) for x in hand[key]] if key in hand else breaks_for(toks, ent, finish=False), ent)
     if key in hand: return br
+    # (both filters are the breath table's and judge commas only: a full stop
+    # after עוֹד, גַּם, אַף is the author's clause end, "I speak unto you again;"
+    # is אֲדַבֵּר אֲלֵיכֶם עוֹד and the stop belongs on עוֹד, 2 Nephi 6:3)
     stops = [(i, c) for i, c in br if c >= 2]
     br, _ = drop_split_pairs([(i, c) for i, c in br if c < 2], speak)
-    br, _ = drop_unnatural(sorted(set(br) | set(stops)), speak)
-    return br
+    br, _ = drop_unnatural(br, speak)
+    return sorted(set(br) | set(stops))
 
 
 # ------------------------------------------------------------ main
@@ -1033,6 +1036,19 @@ def main():
                 # with no main division): the printed English's stands in
                 if 1 not in bounds and par[6] and n >= ETNACHTA_MIN and 1 in pb:
                     bounds = list(bounds); bounds[pb.index(1)] = 1
+                # the MT's etnachta on a word the printed English leaves unmarked,
+                # with the English's own stop a word or three on: Nephi lengthened
+                # the sentence ("a word in season unto thee, O house of Israel."
+                # after Isaiah 50:4's דָּבָ֑ר, 2 Nephi 7:4) and the stop is its end
+                # ...only where every word from the MT's etnachta to that stop is
+                # Nephi's own (Isaiah 48:7's פֶּן־תֹּאמַר carries the dash of 1 Nephi
+                # 20:7 and is the Masoretes' word: their etnachta stands)
+                if 1 in bounds:
+                    i1 = bounds.index(1)
+                    if not any(i == i1 for i, c in marks):
+                        later = [i for i, c in marks if c >= 2 and i1 < i <= i1 + 3 and i < n - 1
+                                 and all(k not in par[5] for k in range(i1 + 1, i + 1))]
+                        if later: bounds[i1] = 2; bounds[later[0]] = 1
             else:
                 bounds, how = pb, 'english'
             if key in OVER:

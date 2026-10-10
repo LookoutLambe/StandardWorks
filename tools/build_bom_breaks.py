@@ -464,7 +464,10 @@ def breaks_for(tokens, entext, finish=True):
             # "behold" fell after it (1 Nephi 18:9); "And now, the thing which"
             # put it after זֶה (15:13). The pause after "behold", "and now",
             # "yea", "wherefore" belongs where the English writes it.
-            if hi > lo and connective(speak[lo][1]): q = lo
+            # (only when the mark is the connective's own: its last placed word
+            # is the marked word. "yea, even every whit;" has אַף placed at "yea"
+            # and the stop three words on, where it belongs, 1 Nephi 4:19)
+            if hi > lo and connective(speak[lo][1]) and reach[lo] == j: q = lo
             for t in (range(lo, hi) if q == hi else ()):
                 if opens(speak[t + 1][0]): q = t; break
             else:
@@ -516,6 +519,11 @@ def breaks_for(tokens, entext, finish=True):
                         g = speak[t][1]
                         sense = [norm(x) for x in re.findall(r"[A-Za-z][A-Za-z'\-]*", g)]
                         sense = [x for x in sense if x not in SENSELESS and len(x) >= 3]
+                        # (passing a token with no word of sense was tried for
+                        # "the people. The isles shall wait upon me", whose stop
+                        # sat after אֵלַי, 2 Nephi 8:5: it carried "he was a
+                        # descendant of Joseph;" back off its copula הוּא, 1 Nephi
+                        # 5:14, and was withdrawn)
                         if not (re.match(r'and\b', g.strip().lower()) or connective(g)
                                 or (cls == 2 and sense and all(x in after and x not in before for x in sense))):
                             break
