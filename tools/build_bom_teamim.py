@@ -202,6 +202,34 @@ def pair_link(toks, i):
 # giving up)
 NOMINAL = -5.0
 
+def mend_marks(toks, marks, ent):
+    """Two misplacements of the English's own marks that the alignment makes
+       (tools/build_bom_breaks.py), mended before the marks become a tree:
+       (1) "blessed art thou, Nephi, because": the comma before the vocative
+       name lands after the pronoun; it belongs after the name (11:6, 2:19).
+       (2) "I answered him, saying: Yea, it is": the colon that opens a speech
+       is lost when the Hebrew's speech verb glosses differently; the first
+       English word after the colon finds its token and the stop goes before
+       it (11:22)."""
+    out = []
+    for i, c in marks:
+        if 0 <= i < len(toks) - 2 and bare(toks[i][0]) in PRON2 and NAME_GLOSS.match(toks[i + 1][1].strip()):
+            i += 1
+        out.append((i, c))
+    if ent:
+        for m in re.finditer(r'\b(saying|said|spake|answered|cried)\b[^:]{0,20}:\s*([A-Za-z]+(?:\s+[A-Za-z]+)?)', ent):
+            # the speech's first two words where it has them ("I will go" is
+            # אֵלְכָה, not the "I" of אֲנִי נֶפִי two words before it, 3:7)
+            first = m.group(2).lower()
+            for j in range(1, len(toks)):
+                g = toks[j][1].strip().lower()
+                if (g == first or g.startswith(first + ' ')) and SPEECH.search(toks[j - 1][1]) \
+                   and not any(k == j - 1 for k, _ in out):
+                    out.append((j - 1, 2)); break
+    return sorted(set(out))
+
+PRON2 = set(u'אתה את אתם אתן'.split())
+
 def copula_after(toks, i):
     """A printed mark that falls right before a bare הוּא, הִיא or הֵם glossed as
        a copula ("he is", "they are") is the English comma carried one word too
@@ -331,6 +359,16 @@ def attributive(h, h2):
     m1, m2 = article(morph_of(h)), article(morph_of(h2, last=False))
     return m1.startswith('HNc') and m1.endswith('a') and m2.startswith('HAa') and m2.endswith('a')
 
+def adj_pair(toks, i):
+    """a noun's two adjectives, "the great and spacious building" (הַבִּנְיָן
+       הַגָּדוֹל וְהָרָחָב): the link between them holds like the one before them
+       (the Tanakh's clause-final הַגָּדוֹל scored it +11.7 in 11:36 and the
+       segolta fell inside the phrase)"""
+    if i < 1 or i + 1 >= len(toks) or u'־' in toks[i + 1][0]: return False
+    article = lambda m: re.sub(r'^HTd/', 'H', m)
+    m0, m1, m2 = article(morph_of(toks[i - 1][0])), article(morph_of(toks[i][0])), morph_of(toks[i + 1][0], last=False)
+    return m0.startswith('HNc') and m1.startswith('HAa') and bool(re.match(r'HC/(Td/)?Aa', m2))
+
 
 def make_weakest(toks, prior, w, ent=None):
     """Where a phrase most plausibly ends, by the Tanakh's log-odds that a
@@ -358,7 +396,12 @@ def make_weakest(toks, prior, w, ent=None):
         return prior + sum(w.get(k, 0.0) for k in pair_feats(toks, i))
     def hard(i):
         h, g = toks[i]
-        if nfc(h) in NEVER_AFTER or nfc(h) in EXTRA_NEVER: return True
+        if nfc(h) in EXTRA_NEVER: return True
+        if nfc(h) in NEVER_AFTER:
+            # a bare כֹּל reaches forward to its noun (כֹּל הָאָרֶץ), not when the
+            # next word opens with a waw: there it is absolute and ends its
+            # phrase (מֵעַל כֹּל ׀ וּבָרוּךְ אַתָּה, 11:6 "above all. And blessed")
+            if not (bare(h) in (u'כל',) and i + 1 < len(toks) and nfc(toks[i + 1][0]).startswith(u'ו')): return True
         # a gloss that ends in "of", "the", "that", "which"... reaches forward,
         # except the demonstrative after its noun (\u05d4\u05b7\u05e9\u05b8\u05bc\u05c1\u05e0\u05b8\u05d4 \u05d4\u05b7\u05d4\u05b4\u05d9\u05d0 "that year",
         # \u05d4\u05b7\u05d3\u05b0\u05bc\u05d1\u05b8\u05e8\u05b4\u05d9\u05dd \u05d4\u05b8\u05d0\u05b5\u05dc\u05b6\u05bc\u05d4 "these things"), which closes the phrase
@@ -420,7 +463,7 @@ def make_weakest(toks, prior, w, ent=None):
             # A CONSTRUCT FORM REACHES FORWARD whatever its gloss says (גְּדָל
             # קוֹמָה "large in stature"), and a noun holds its adjective (כֹּחַ
             # רַב): the Tanakh's own analysis of the form, as a weak link
-            if construct(h, h2) or attributive(h, h2): s = min(s, NOMINAL)
+            if construct(h, h2) or attributive(h, h2) or adj_pair(toks, i): s = min(s, NOMINAL)
         if near is not None and i < near: s += FAR * (near - i)
         return s
     printed = set()        # the links the printed English marks, filled per verse by the caller
@@ -573,7 +616,7 @@ def main():
             weakest, joiner, hard, strong, printed, score = make_weakest(speak, prior, w, ent)
             # ...and one inside a pair of names ("Laman | and Lemuel", 3:28) is the
             # English comma landed a word or two off by the alignment
-            marks = [(i, c) for i, c in BREAKS.get(key, [])
+            marks = [(i, c) for i, c in mend_marks(speak, BREAKS.get(key, []), ent)
                      if not (0 <= i < n - 1 and (hard(i) or copula_after(speak, i) or pair_link(speak, i)))]
             printed.update(i for i, c in marks)
             pb = punctuation_bounds(n, marks, ent, strong, score)
