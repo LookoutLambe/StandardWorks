@@ -495,17 +495,23 @@ def shares_root(h, h2):
     def match(h, h2):
         a = stem3(h)
         if len(a) < 3: return False
-        b = bare(h2).split(u'־')[-1]        # the verb is the last word of its group (לֹא־עֲזָבַנִי)
+        # a lamed-he root's infinitive absolute ends in ו (הָיוֹ תִהְיֶה, רָאֹה
+        # רָאִיתִי): its ה is the root's third letter (2 Nephi 9:7 had a zarqa
+        # between הָיוֹ and תִהְיֶה)
+        roots = [a] + ([a[:-1] + u'ה'] if a.endswith(u'ו') and len(a) == 3 else [])
         # the verb as written, then with each one-letter prefix off in turn: the
         # hiphil keeps its ה (הוֹכֵחַ הוֹכִיחָם, 16:39: stripped to the bone first,
         # הוכיחם lost its ה, its ו and its כ and nothing was left to match)
-        while True:
-            if b.startswith(a): return True
-            # behind an imperfect prefix the whole root: two letters matched לָבָן
-            # to וָאֶלְבַּשׁ (1 Nephi 4:19); a geminate root keeps one of its pair (אָרֹר אָאֹר)
-            if len(b) >= 3 and b[0] in u'איתנ' and (b[1:4] == a or (a[1] == a[2] and b[1:3] == a[:2])): return True
-            if len(b) > 3 and b[0] in PREFIXES: b = b[1:]
-            else: return False
+        for a in roots:
+            b = bare(h2).split(u'־')[-1]        # the verb is the last word of its group (לֹא־עֲזָבַנִי)
+            while True:
+                if b.startswith(a): return True
+                # behind an imperfect prefix the whole root: two letters matched לָבָן
+                # to וָאֶלְבַּשׁ (1 Nephi 4:19); a geminate root keeps one of its pair (אָרֹר אָאֹר)
+                if len(b) >= 3 and b[0] in u'איתנ' and (b[1:4] == a or (a[1] == a[2] and b[1:3] == a[:2])): return True
+                if len(b) > 3 and b[0] in PREFIXES: b = b[1:]
+                else: break
+        return False
     # the pair is a verb and its verb: a noun of the same root is not it
     # (דַבְּרִי אֶת־הַדְּבָרִים, לְדַבֵּר אֶת־הַדְּבָרִים bound as if infinitive absolutes,
     # 1 Nephi 4:4, 10:22), by the Tanakh's analysis where it has the form
