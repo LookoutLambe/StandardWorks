@@ -441,10 +441,14 @@ def shares_root(h, h2):
     """The infinitive absolute before its own verb (עָזֹב לֹא־עֲזָבַנִי, גַּלֵּה גִלּוּ,
        שָׁמוֹר תִּשְׁמְרוּ, אָרֹר אָאֹר): the second word repeats the first's root,
        with or without an imperfect prefix (א י ת נ) in front of it."""
-    # an attested finite verb or participle is no infinitive absolute: "shall
-    # write; and that which shall be written" is יִכְתֹּב וְהַנִּכְתָּב, one root
-    # and two clauses, and the stop between them was held hard (2 Nephi 3:12)
-    if re.match(r'^H(C/)?V', morph_of(h)) and not re.match(r'^H(C/)?V.a', morph_of(h)): return False
+    # the verb follows its infinitive absolute at once, a negation at most
+    # between them (עָזֹב לֹא־עֲזָבַנִי): a second word that opens with a waw or
+    # the article is a new clause or a noun of the same root, not the verb
+    # ("shall write; and that which shall be written" is יִכְתֹּב וְהַנִּכְתָּב, and
+    # the stop between them was held hard, 2 Nephi 3:12; the hitpael's
+    # infinitive absolute is spelt as its perfect, הִתְאַבֵּל הִתְאַבַּלְנָה, 1 Nephi
+    # 16:35, so the form itself cannot decide)
+    if PLAIN_WAW.match(nfc(h2)) or re.match(r'^H(C/)?Td/', morph_of(h2)): return False
     def match(h, h2):
         a = stem3(h)
         if len(a) < 3: return False
