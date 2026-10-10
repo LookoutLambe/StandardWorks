@@ -21,6 +21,17 @@
    design), on the phone shell's Settings page (app-shell/pwa_shell.js), and
    in the two apps' Settings. The state is one localStorage key, sw-teamim.
 
+   AND NO NIKKUD (user, 2026-10-10: "fix the competing views on the nikkud
+   and cantillations"). Accents are written over pointed text and over
+   nothing else; the two switches are exclusive. Switching the layer on takes
+   No Nikkud off, through the page's own toggle (toggleNoNikkud on the five,
+   toggleNikkud on the Book of Mormon), and switching No Nikkud on takes the
+   layer off (those toggles call SWTeamim.set(false)). Before this a reader
+   could hold both on: the accents vanished with the vowels while the switch
+   under Aa still read on, and on the Book of Mormon they stayed gone when the
+   vowels came back, because that page's toggle redrew the words on its own
+   instead of through _hwHtml.
+
    AND THE BOOK OF MORMON (user, 2026-10-09: "based on the cantillation marks
    in the bible you can study them and know exactly how to do it to the BOM").
    bom/teamim/<book>.js carries the te'amim laid over the Book of Mormon by
@@ -167,13 +178,22 @@
     observer.observe(main, { childList: true, subtree: true });
   }
 
+  /* No Nikkud off, through the page's own toggle, so its button and its
+     stored choice follow */
+  function nikkudOff() {
+    var on = !!window._noNikkud || !!(document.body && document.body.classList.contains('no-nikkud'));
+    if (!on) return;
+    var f = window.toggleNoNikkud || window.toggleNikkud;
+    if (typeof f === 'function') f();
+  }
+
   function set(v) {
     T.on = !!v;
     try { if (T.on) localStorage.setItem(KEY, '1'); else localStorage.removeItem(KEY); } catch (e) {}
     if (T.on) css();
     sync();
     watch(T.on);
-    if (T.on) loadVisible(document);
+    if (T.on) { loadVisible(document); nikkudOff(); }
     redraw();
   }
 

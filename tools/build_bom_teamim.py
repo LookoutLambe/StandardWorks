@@ -59,11 +59,12 @@ import teamim_grammar as G
 from learn_teamim import prose_verses, RANK
 from learn_teamim import pair_feats
 from build_bom_breaks import (BOOKS, corpus, english, silent, breaks_for,
-                              NEVER_AFTER, BINDS, binds_back, nfc)
+                              NEVER_AFTER, BINDS, binds_back, nfc, CONNECTIVES, SENSELESS)
 from build_volume_breaks import drop_split_pairs, drop_unnatural
+from build_ot_teamim import wlc_stream, encode_verse as encode_verbatim
 
 N = lambda s: ud.normalize('NFC', s)
-POINTS = re.compile(u'[֑-ֽֿ-ׇ]')
+POINTS = re.compile(u'[֑-ֽֿ-ׇ\u034f]')     # (the joiner inside וִירוּשָׁלָ͏ִם is no letter: 2 Nephi 12:1 is Isaiah 2:1 word for word)
 HEB = re.compile(u'[א-ת]')
 bare = lambda h: POINTS.sub('', h or '')
 MIN_OVERLAP = 0.45       # as tools/build_mt_parallels.py
@@ -93,15 +94,27 @@ def mt_index():
     return MT, by_word
 
 
+def same_word(a, b):
+    """The same bare word, a plene spelling of a defective one allowed: Nephi's
+       מִירוּשָׁלַיִם is Isaiah's מִירוּשָׁלִָם (2 Nephi 12:3), one mater more inside a
+       word of four letters or longer (בֵּן is not בֵּין)."""
+    if a == b: return True
+    if abs(len(a) - len(b)) != 1: return False
+    short, long_ = (a, b) if len(a) < len(b) else (b, a)
+    if len(short) < 4: return False
+    for k in range(1, len(long_)):
+        if long_[k] in u'יו' and long_[:k] + long_[k + 1:] == short: return True
+    return False
+
 def lcs_map(a, b):
     n, m = len(a), len(b)
     T = [[0] * (m + 1) for _ in range(n + 1)]
     for i in range(n - 1, -1, -1):
         for j in range(m - 1, -1, -1):
-            T[i][j] = T[i + 1][j + 1] + 1 if a[i] == b[j] else max(T[i + 1][j], T[i][j + 1])
+            T[i][j] = T[i + 1][j + 1] + 1 if same_word(a[i], b[j]) else max(T[i + 1][j], T[i][j + 1])
     out, i, j = {}, 0, 0
     while i < n and j < m:
-        if a[i] == b[j]: out[i] = j; i += 1; j += 1
+        if same_word(a[i], b[j]): out[i] = j; i += 1; j += 1
         elif T[i + 1][j] >= T[i][j + 1]: i += 1
         else: j += 1
     return out
@@ -123,13 +136,40 @@ def mt_parallel(words, MT, by_word):
     ref, us, mw = MT[best]
     m = lcs_map(words, mw)
     if len(m) < MIN_ALIGNED * len(words): return None
-    bounds = [0] * len(words)
+    # every word its Masoretic word and none left over: the verse IS the
+    # Masoretes' (246 of the 442: Nephi's Isaiah where he keeps the text), and
+    # its accents are copied as they stand (verbatim) instead of regenerated
+    # from the ranks, which the grammar does with a 3% error (2 Nephi 12:2 had
+    # a gershayim for Isaiah 2:2's munach legarmeh)
+    verbatim = len(m) == len(words) == len(mw)
+    bounds, tifchas = [0] * len(words), set()
     for ti, mi in m.items():
         r = us[mi]['rank']
         if r is None: continue
         if r == 0: r = 2 if ti < len(words) - 1 else 0     # the MT's silluq word, not last here: a clause end
+        # a tifcha is positional, the near divider of its etnachta or silluq:
+        # where the word after it is not the Masoretes' (Isaiah's קָצִ֖ין
+        # תִּֽהְיֶה־לָּ֑נוּ is Nephi's קָצִין לָּנוּ) its rank says nothing here
+        # (2 Nephi 13:6 had a zaqef gadol on קָצִין before a yetiv on לָּנוּ),
+        # unless the printed English marks the link itself (main restores it:
+        # "I have refined thee," keeps Isaiah 48:10's division, 1 Nephi 20:10)
+        if us[mi]['lab'] == 'tifcha' and m.get(ti + 1) != mi + 1: tifchas.add(ti); continue
         bounds[ti] = r
-    return ref, bounds, len(m) / float(len(words))
+    # a verse the Masoretes leave without an etnachta (a list: Isaiah 3:18)
+    # takes none from the English either, unless Nephi lengthened it
+    etnachta_ok = any(u['rank'] == 1 for u in us) or len(words) > len(mw) + 1
+    return ref, bounds, len(m) / float(len(words)), verbatim, [us[m[i]]['lab'] for i in range(len(words))] if verbatim else None, set(m), etnachta_ok, tifchas
+
+
+_WLC = {}
+def wlc_verse(ref):
+    """the WLC verse behind an OSIS ref ('Isa.2.2') as build_ot_teamim reads it:
+       [(consonant, accents, paseq after)], or None"""
+    book, ch, v = ref.split('.')
+    if book not in _WLC:
+        try: _WLC[book] = wlc_stream(book)
+        except (IOError, OSError): _WLC[book] = {}
+    return _WLC[book].get((int(ch), int(v)))
 
 
 # ------------------------------------------------------------ the phrasing
@@ -340,19 +380,6 @@ def folded_mark(toks, i):
 # the subject ("Yea, my father spake much" is אַף הִרְבָּה אָבִי, 10:12; "Now, my
 # father had begat" וְעַתָּה הוֹלִיד אָבִי, 18:7; "and also, my brethren took"
 # וְגַם לָקְחוּ אַחַי, 16:7)
-CONNECTIVES = set(['yea', 'now', 'and now', 'wherefore', 'therefore', 'also', 'and also', 'behold',
-                   'and behold', 'for behold', 'but behold', 'nevertheless', 'yea even', 'and', 'but',
-                   'for', 'and thus', 'thus', 'and it came to pass', 'and it came to pass that'])
-def connective_comma(toks, i, ent):
-    """A mark that is an opening connective's comma landed a token late, or
-       the comma after a connective the breath table does not list (כֵּן "Yea,",
-       11:5): no division."""
-    g = re.sub(r'[^a-z ]', '', toks[i][1].lower()).strip()
-    if g in CONNECTIVES: return True
-    if i < 1 or not ent: return False
-    gp = re.sub(r'[^a-z ]', '', toks[i - 1][1].lower()).strip()
-    return gp in CONNECTIVES and bool(re.search(r'\b' + re.escape(gp.split()[-1]) + r',', ent, re.I))
-
 def copula_after(toks, i):
     """A printed mark that falls right before a bare הוּא, הִיא or הֵם glossed as
        a copula ("he is", "they are") is the English comma carried one word too
@@ -369,6 +396,8 @@ PREFIXES = u'והלבכמש'
 # adjectives (אַחֲרֵי, נֶגֶד): they reach forward as surely as אֶל does, and the
 # gloss rule misses them when the English is "by" (8:20 אֵ֨צֶל֙ מַעֲקֵ֣ה הַבַּרְזֶ֔ל)
 EXTRA_NEVER = set(u'אֵצֶל תַּחַת מוּל נֶגֶד לִפְנֵי אַחֲרֵי בְּתוֹךְ מִתּוֹךְ סְבִיב'.split())
+ENCLITIC = set(u'בלבד'.split())
+COMPOUND = set([(u'אף', u'גם')])
 PROCLITIC = set(NEVER_AFTER) | EXTRA_NEVER | set(u'עַל מִן עַד אֵת אֶת בֵּין אַל פֶּן עִם'.split())
 DEMONSTRATIVE = set(u'ההוא ההיא הזה הזאת האלה ההם ההן ההמה'.split())
 # pointed, and matched pointed: the consonants of וְהִנֵּה "and behold" are those
@@ -556,6 +585,13 @@ def make_weakest(toks, prior, w, ent=None):
             # the noun's own unit and a phrase ends before it as before any other
             # (וַיַּ֥רְא אֱלֹהִ֖ים אֶת־הָא֑וֹר)
             if u'\u05be' not in h2 and binds_back(h2): return True
+            # ...and so does an adverb that closes the phrase before it: אֵלֶּה
+            # בִלְבַד is "these only", and a revia between them read "these |
+            # only have I commanded" (2 Nephi 11:1; the Tanakh has no בִּלְבַד)
+            if bare(h2) in ENCLITIC: return True
+            # ...and a compound particle is one word: אַף גַּם "yea, even" (27 in
+            # the volume; 11 carried a disjunctive on אַף, 2 Nephi 20:21 אַ֕ף גַּ֖ם)
+            if (bare(h), bare(h2)) in COMPOUND: return True
             # this volume glosses a construct "the mercy" + "of the Lord": the
             # "of" on the next word says the two are one chain, unless that
             # word carries a preposition ("ask of God" מֵאֱלֹהִים, "of the
@@ -839,9 +875,12 @@ def printed_marks(key, toks, speak, ent, hand):
        1 Nephi 15:15). And the Masoretes' veto on a pair they never split is
        kept off a full stop: "unto him. And also" lost its sentence's end to the
        Tanakh's one לוֹ וְגַם (16:8). A verse the hand phrased stands as phrased
-       (tools/phrase_break_overrides.json)."""
-    if key in hand: return [tuple(x) for x in hand[key]]
-    br = breaks_for(toks, ent, finish=False)
+       (tools/phrase_break_overrides.json). The alignment's misplacements are
+       mended (mend_marks) before the filters judge the marks: the veto on a
+       connective would otherwise drop the stop the mend moves back off אַךְ
+       (2 Nephi 11:1) before the mend ever saw it."""
+    br = mend_marks(speak, [tuple(x) for x in hand[key]] if key in hand else breaks_for(toks, ent, finish=False), ent)
+    if key in hand: return br
     stops = [(i, c) for i, c in br if c >= 2]
     br, _ = drop_split_pairs([(i, c) for i, c in br if c < 2], speak)
     br, _ = drop_unnatural(sorted(set(br) | set(stops)), speak)
@@ -880,20 +919,26 @@ def main():
             weakest, joiner, hard, strong, printed, score, appos, list_comma = make_weakest(speak, prior, w, ent)
             # ...and one inside a pair of names ("Laman | and Lemuel", 3:28) is the
             # English comma landed a word or two off by the alignment
-            marks = [(i, c) for i, c in mend_marks(speak, printed_marks(key, toks, speak, ent, HAND), ent)
+            marks = [(i, c) for i, c in printed_marks(key, toks, speak, ent, HAND)
                      if not (0 <= i < n - 1 and (hard(i) or copula_after(speak, i) or pair_link(speak, i)
-                                                 or folded_mark(speak, i) or connective_comma(speak, i, ent)))]
+                                                 or folded_mark(speak, i)))]
             printed.update(i for i, c in marks)
             pb = punctuation_bounds(n, marks, ent, strong, score, appos,
                                     lambda: G.first_cut(words, STRESS.get, weakest, [i for i in range(n) if appos(i)]),
                                     list_comma)
             if par:
-                bounds, how = par[1], 'mt'
+                bounds, how = list(par[1]), 'mt'
+                # the Masoretes rule the words they accented; the printed English
+                # rules the words Nephi set between them: "Therefore, O Lord,"
+                # before Isaiah 2:6 had its vocative's comma dropped and the Name
+                # served the verb with a qadma (2 Nephi 12:6)
+                for i, c in marks:
+                    if 0 <= i < n - 1 and (i not in par[5] or i in par[7]) and not bounds[i]: bounds[i] = 2 if c >= 2 else 3
                 # the MT's etnachta fell on a word the alignment could not pair
                 # (the clauses cross: Isaiah's וּמִמֵּי יְהוּדָה יָצָאוּ is 1 Nephi
                 # 20:1's וַאֲשֶׁר יָצְאוּ מִמֵּי יְהוּדָה, and the verse ran 25 units
                 # with no main division): the printed English's stands in
-                if 1 not in bounds and n >= ETNACHTA_MIN and 1 in pb:
+                if 1 not in bounds and par[6] and n >= ETNACHTA_MIN and 1 in pb:
                     bounds = list(bounds); bounds[pb.index(1)] = 1
             else:
                 bounds, how = pb, 'english'
@@ -907,8 +952,15 @@ def main():
                     if r == 1: bounds = [2 if x == 1 else x for x in bounds]
                     if 0 <= idx < n: bounds[idx] = r
                 how = 'override'
+            stream = wlc_verse(par[0]) if par and par[3] and key not in OVER else None
+            if stream: how = 'verbatim'
             stats[how] += 1
-            codes, labels = G.accent_verse(words, bounds, STRESS.get, weakest, None, joiner)
+            if stream:
+                # the Masoretes' own accents, consonant by consonant (the OT layer's encoder)
+                code, _, _ = encode_verbatim(words, stream)
+                codes, labels = code.split('|'), par[4]
+            else:
+                codes, labels = G.accent_verse(words, bounds, STRESS.get, weakest, None, joiner)
             labels_count.update(labels)
             if check and par:
                 # the English route against the Masoretes, on the verses that quote them
@@ -929,8 +981,8 @@ def main():
             fh.write(u'// the layer is on; the verse data is never touched.\n')
             fh.write(u'window.SW_TEAMIM = Object.assign(window.SW_TEAMIM || {}, %s);\n' % body)
     size = sum(os.path.getsize(os.path.join(OUT, p)) for p in os.listdir(OUT) if p.endswith('.js'))
-    print('verses %s · phrased by the Tanakh %s · by the printed English %s · by hand %s · %s KB in bom/teamim/'
-          % (format(stats['verses'], ','), stats['mt'], format(stats['english'], ','), stats['override'], format(size // 1024, ',')))
+    print('verses %s · phrased by the Tanakh %s (%s of them its accents verbatim) · by the printed English %s · by hand %s · %s KB in bom/teamim/'
+          % (format(stats['verses'], ','), stats['mt'] + stats['verbatim'], stats['verbatim'], format(stats['english'], ','), stats['override'], format(size // 1024, ',')))
     tot = sum(labels_count.values())
     print('accents: ' + ', '.join('%s %.1f%%' % (k or 'none', 100.0 * v / tot) for k, v in labels_count.most_common(12)))
     if check and agree[2]:

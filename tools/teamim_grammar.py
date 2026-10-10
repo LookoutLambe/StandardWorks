@@ -117,6 +117,21 @@ class Unit(object):
         self.syl = [i for i, (ch, vs) in enumerate(self.letters) if self._full(ch, vs)]
         # the letter whose full vowel is stressed (one of self.syl)
         self.stress_letter = self._stress_letter(stress_slot)
+        # THE NAME IS COUNTED AS IT IS READ. יְהוָה is אֲדֹנָי to the Masoretes
+        # (יְהוִה after אֲדֹנָי is אֱלֹהִים): two syllables before the stress, not
+        # the written יְ. The WLC has darga before a tevir on the Name 210 times
+        # and merkha never; the written form, one sheva between the stresses,
+        # would take merkha (וְנִשְׂגַּ֥ב יְהוָ֛ה for Isaiah 2:11's וְנִשְׂגַּ֧ב יְהוָ֛ה).
+        # The accent still sits on the written word (its ו); only the counts
+        # the rules ask for come from the Qere.
+        self.qere = None
+        cons = u''.join(ch for ch, _ in self.letters)
+        if cons.endswith(u'יהוה') and len(self.letters) >= 4 and stress_slot is None:
+            k = len(self.w) - 1
+            while k >= 0 and self.w[k] != u'י': k -= 1          # the Name's first letter
+            pre = self.w[:k]
+            read = u'אֱלֹהִים' if 0x5b4 in self.letters[-2][1] else u'אֲדֹנָי'
+            self.qere = Unit(pre + read)
         self.marks = []            # [(letter index, code)] laid by the grammar
         self.paseq = False
         self.label = ''
@@ -195,21 +210,26 @@ class Unit(object):
 
     # features the rules ask about
     def syl_before(self):
+        if self.qere: return self.qere.syl_before()
         return sum(1 for l in self.syl if l < self.stress_letter)
     def syl_after(self):
+        if self.qere: return self.qere.syl_after()
         return sum(1 for l in self.syl if l > self.stress_letter)
     def half_before(self):
         """letters before the stress carrying only a sheva or hataf (a half syllable)"""
+        if self.qere: return self.qere.half_before()
         return sum(1 for i, (ch, vs) in enumerate(self.letters)
                    if i < self.stress_letter and vs and not any(v in VOWEL for v in vs)
                    and any(v in HALF or v == SHEVA for v in vs))
     def half_after(self):
+        if self.qere: return self.qere.half_after()
         return sum(1 for i, (ch, vs) in enumerate(self.letters)
                    if i > self.stress_letter and vs and not any(v in VOWEL for v in vs)
                    and any(v in HALF or v == SHEVA for v in vs))
     def stress_final(self):
         return self.syl_after() == 0
     def nsyl(self):
+        if self.qere: return self.qere.nsyl()
         return len(self.syl)
 
     def encode(self):

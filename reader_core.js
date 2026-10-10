@@ -435,6 +435,8 @@ function toggleNoNikkud() {
   _keepVersePosition(function() {
   window._noNikkud = !window._noNikkud;
   document.getElementById('btn-nikkud').classList.toggle('active', window._noNikkud);
+  // the cantillation layer is written over pointed text: No Nikkud takes it off (teamim.js)
+  if (window._noNikkud && window.SWTeamim && window.SWTeamim.on) window.SWTeamim.set(false);
   _redrawHebrewWords(document);   // reader_surface.js: the one home of a word's display
     document.querySelectorAll('.chapter-summary-he[data-heb]').forEach(function(el) {
     var orig = el.getAttribute('data-heb');

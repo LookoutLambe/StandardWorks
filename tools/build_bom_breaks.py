@@ -257,6 +257,21 @@ OPENERS = [re.compile(u'^וְעַתָּה'), re.compile(u'^לָכֵן'), re.comp
            re.compile(u'^ו[ַָ][איתנ]')]           # the waw-consecutive
 def opens(h):
     return (not binds_back(h)) and any(r.match(h or '') for r in OPENERS)
+
+# THE GLOSSES THAT OPEN A UNIT AND NOTHING ELSE: a token glossed with one of
+# these, left unplaced at the far end of an alignment window, belongs to
+# what follows (breaks_for), and the cantillation builder reads a comma
+# after one as the English's own breath, not a division (connective_comma).
+CONNECTIVES = set(['yea', 'now', 'and now', 'wherefore', 'therefore', 'also', 'and also', 'behold',
+                   'and behold', 'for behold', 'but behold', 'nevertheless', 'yea even', 'and', 'but',
+                   'for', 'and thus', 'thus', 'and it came to pass', 'and it came to pass that'])
+def connective(g):
+    return re.sub(r'[^a-z ]', '', g.lower()).strip() in CONNECTIVES
+# the words that carry no sense of their own, for the test of where a gloss's
+# sense sits in the English (breaks_for)
+SENSELESS = STOP | set('''will has does had have did do not that which who he she it they them his her
+their i me my we us our you your him for but yea also with from by on upon into as so all there
+this these those are were been am'''.split())
 def binds_back(h):
     return any(r.match(h or '') for r in BINDS_HEB)
 
@@ -348,6 +363,16 @@ def eng_words(text):
         out.append((w, cls))
     return out
 
+def rule_veto(speak, i):
+    """The three house rules against a break after speak[i]: a word that
+       reaches forward (אֲשֶׁר, כִּי, לֹא...), a gloss that ends inside a construct
+       chain ("the words of"), and אֵת or כׇּל on the next word. The words that
+       always take a pause after them win over all three."""
+    if nfc(speak[i][0]) in ALWAYS_AFTER: return False
+    gl = speak[i][1].rstrip(u' ,;:.\u2014').strip()
+    return (nfc(speak[i][0]) in NEVER_AFTER or bool(BINDS.search(gl))
+            or (i + 1 < len(speak) and binds_back(speak[i + 1][0])))
+
 def breaks_for(tokens, entext, finish=True):
     """[(index_into_speakable, class)] for one verse, or [] if it cannot be read.
        finish=False leaves out the finishing for the ear: the floor under a
@@ -400,11 +425,21 @@ def breaks_for(tokens, entext, finish=True):
             for w in re.findall(r"[A-Za-z][A-Za-z'\-]*", g):
                 gw.append(norm(w)); owner.append(i)
         pos = align(gw, [norm(w) for w, _ in ew])
-        anchor = [-1]*n
+        anchor, reach = [-1]*n, [-1]*n
         for k, j in enumerate(pos):
             if j >= 0 and anchor[owner[k]] < 0: anchor[owner[k]] = j
+            if j >= 0: reach[owner[k]] = max(reach[owner[k]], j)
+        # the tokens whose own gloss carries a mark inside it ("yea, even")
+        inner = set(i for i, (h, g) in enumerate(speak) if re.search(r'[,;:.\u2014]\s*\S', g.strip()))
         for j, (w, cls) in enumerate(ew):
             if not cls: continue
+            # A TOKEN WHOSE GLOSS CARRIES THE MARK SWALLOWS IT. "Yea, even six
+            # hundred years" is אַף בְּעוֹד, and אַף is glossed "yea, even": the
+            # comma after "Yea" is inside the token's own rendering, and a
+            # break there cut בְּעוֹד from its "six hundred years" (1 Nephi
+            # 10:4). Only a gloss that writes the mark: "when I returned"
+            # straddles "I, Nephi," by its "I" alone (3:1).
+            if any(0 <= anchor[i] <= j < reach[i] for i in inner): continue
             # THE ALIGNMENT GIVES A WINDOW; THE HEBREW CHOOSES THE POINT IN IT.
             # Between the last token certainly before the mark and the first
             # certainly after it lies a run of tokens the alignment could not
@@ -422,7 +457,14 @@ def breaks_for(tokens, entext, finish=True):
             if lo < 0: continue
             if hi < lo: hi = lo
             q = hi
-            for t in range(lo, hi):
+            # A CONNECTIVE'S COMMA IS ITS OWN. "behold, my brethren and the
+            # sons of Ishmael ... began" is הִנֵּה הֵחֵלּוּ אַחַי: the verb, placed
+            # nowhere, sat at the near end of the window and the comma after
+            # "behold" fell after it (1 Nephi 18:9); "And now, the thing which"
+            # put it after זֶה (15:13). The pause after "behold", "and now",
+            # "yea", "wherefore" belongs where the English writes it.
+            if hi > lo and connective(speak[lo][1]): q = lo
+            for t in (range(lo, hi) if q == hi else ()):
                 if opens(speak[t + 1][0]): q = t; break
             else:
                 # AN UNPLACED "and X" AT THE FAR END OF THE WINDOW BELONGS TO
@@ -444,12 +486,36 @@ def breaks_for(tokens, entext, finish=True):
                 #   alignment places firmly beyond the mark, so that whole
                 #   run belongs to the next unit. וְאֵם is followed by
                 #   "goodly", which is placed nowhere and belongs to it.
-                if hi not in marks:
-                    for t in range(lo, hi):
-                        nxt_g = speak[t + 1][1].strip().lower()
-                        if (anchor[t + 1] < 0 and re.match(r'and\b', nxt_g)
-                                and t + 2 < n and anchor[t + 2] > j):
-                            q = t; break
+                #   AND SO MUST ANY OTHER OPENER, AND ANY TOKEN WHOSE SENSE
+                #   SITS BEYOND THE MARK. "at that time; nevertheless only
+                #   these" is בָּעֵת הַהִיא אַךְ אֵלֶּה, and אַךְ, glossed "but",
+                #   matched nothing and sat at the far end of the window: the
+                #   stop went after it, where a connective never ends a phrase
+                #   (2 Nephi 11:1). "saith the prophet; every nation ... shall
+                #   be blessed" is אָמַר הַנָּבִיא יְבֹרְכוּ כׇּל־גּוֹי, the verb
+                #   before its subjects where the English has it after them:
+                #   "blessed" is in the English only beyond the semicolon, so
+                #   יְבֹרְכוּ belongs beyond it too (1 Nephi 19:17). The run of
+                #   such tokens at the far end all go to the next unit; a
+                #   token with a placed word stops the walk. Only a full stop
+                #   proves a token's place by its sense: the two languages
+                #   order their clauses alike and their words inside a clause
+                #   differently, and across a comma "no commandments unto the
+                #   children of men, save he shall prepare" found דָּבָר's "a
+                #   thing" in "the thing which he commandeth" (3:7).
+                if hi not in marks and hi < n - 1 and q == hi:
+                    before = set(norm(x) for x, _ in ew[:j + 1])
+                    after = set(norm(x) for x, _ in ew[j + 1:])
+                    t = hi
+                    while t > lo and anchor[t] < 0:
+                        g = speak[t][1]
+                        sense = [norm(x) for x in re.findall(r"[A-Za-z][A-Za-z'\-]*", g)]
+                        sense = [x for x in sense if x not in SENSELESS and len(x) >= 3]
+                        if not (re.match(r'and\b', g.strip().lower()) or connective(g)
+                                or (cls == 2 and sense and all(x in after and x not in before for x in sense))):
+                            break
+                        t -= 1
+                    q = t
             put(q, cls, eng=True)
 
     # 4. AND THE MASORETES ON THE WORD THAT FOLLOWS.
@@ -498,12 +564,11 @@ def breaks_for(tokens, entext, finish=True):
         # the house rules on them; this model held "that great work; | and ye
         # know" bound and took the stop off 1 Nephi 17:26)
         if finish and i in from_english and breakiness(speak, i) < VETO: marks.pop(i); continue
+    # (the cantillation builder keeps its own: the Masoretes divide before
+    # אֶת־ and after a verb freely, וַיִּקַּח֙ אָבִ֣י לֶ֔חִי אֶת־הַסְּפָרִ֧ים, and its
+    # hard() has the rules that are theirs)
     for i in list(marks):
-        if nfc(speak[i][0]) in ALWAYS_AFTER: continue    # these always win
-        gl = speak[i][1].rstrip(u' ,;:.\u2014')
-        if nfc(speak[i][0]) in NEVER_AFTER: marks.pop(i)       # reaches forward
-        elif BINDS.search(gl.strip()):      marks.pop(i)       # construct chain
-        elif binds_back(speak[i+1][0]):     marks.pop(i)       # את / כל
+        if finish and rule_veto(speak, i): marks.pop(i)
 
     # ---- A PHRASE HAS A FLOOR ---------------------------------------
     #  This is what keeps "I, Nephi," from becoming "I, / Nephi,". A single
@@ -537,9 +602,7 @@ def breaks_for(tokens, entext, finish=True):
         while b - a + 1 > LONG:
             best, at = SPLIT_MIN, -1
             for t in range(a + MIN_PHRASE - 1, b - MIN_PHRASE + 1):
-                if nfc(speak[t][0]) in NEVER_AFTER: continue
-                if BINDS.search(speak[t][1].rstrip(u' ,;:.\u2014').strip()): continue
-                if binds_back(speak[t + 1][0]): continue
+                if rule_veto(speak, t): continue
                 sc = breakiness(speak, t)
                 if sc > best: best, at = sc, t
             if at < 0: break

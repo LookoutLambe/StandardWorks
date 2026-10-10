@@ -3462,7 +3462,7 @@ window.READER = window.READER || {
 };
 </script>
 <script src="../reader_surface.js?v=52"></script>
-<script src="../teamim.js?v=5"></script>  <!-- the cantillation layer: off until the reader switches it on -->
+<script src="../teamim.js?v=6"></script>  <!-- the cantillation layer: off until the reader switches it on -->
 <script defer src="stress.js?v=2"></script>  <!-- where the accent falls; deferred, applied on arrival -->
 <script src="../crossrefs_engine.js?v=25"></script>  <!-- the cross-reference panel, shared with the other five -->  <!-- panels, selection tools, annotation marks: shared with the other five -->
 <script src="../translit.js?v=6"></script>
@@ -3722,13 +3722,12 @@ function toggleNikkud() {
 function _toggleNikkudBody() {
   var isNow = document.body.classList.toggle('no-nikkud');
   document.getElementById('btn-nikkud').classList.toggle('active', isNow);
-  document.querySelectorAll('.word-unit[data-h]').forEach(function(wu) {
-    var hwEl = wu.querySelector('.hw');
-    if (!hwEl) return;
-    var orig = wu.getAttribute('data-h');
-    if (isNow) hwEl.textContent = orig.replace(/ו(ּ[ְ-ׇֻ]|[ְ-ׇֻ]ּ)/g,'וו$1').replace(/[\u0591-\u05BD\u05BF-\u05C0\u05C3-\u05C7]/g, '');
-    else hwEl.innerHTML = orig.replace(/([\u05D0-\u05EA][\u0591-\u05C6]*\u05C7[\u0591-\u05C6]*)/g, '<span class="qq">$1</span>');
-  });
+  // the cantillation layer is written over pointed text: No Nikkud takes it off (teamim.js)
+  if (isNow && window.SWTeamim && window.SWTeamim.on) window.SWTeamim.set(false);
+  /* the words are redrawn where every display rule lives (_hwHtml in
+     reader_surface.js): this page's own rewrite put the bare data-h back when
+     the vowels returned and lost the accents the layer had laid over them */
+  _redrawHebrewWords(document);
   try { localStorage.setItem('bom-no-nikkud', isNow ? '1' : '0'); } catch(e) {}
 }
 
