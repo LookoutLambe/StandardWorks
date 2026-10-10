@@ -313,7 +313,7 @@ def make_weakest(toks, prior, w):
         h, h2 = toks[i][0], toks[i + 1][0]
         if PLAIN_WAW.match(nfc(h2)) and not PLAIN_WAW.match(nfc(h)): return False
         return weight(i, None, None, None) >= STRONG
-    return weakest, joiner, hard, strong, printed
+    return weakest, joiner, hard, strong, printed, score
 
 
 MAX_CHAIN = 3            # dividers of one rank in one domain: the WLC's zaqef chains run to three (four in 0.2%)
@@ -353,11 +353,13 @@ def stop_kinds(entext):
     return kinds[:-1]
 
 
-def punctuation_bounds(n, breaks, entext=None, strong=None):
+def punctuation_bounds(n, breaks, entext=None, strong=None, score=None):
     """stops -> rank 2, commas -> rank 3, and the links the Tanakh all but
        always divides -> rank 3 too; the etnachta goes to the stop nearest the
        middle, and a sentence's end outranks a clause's: a verse that holds two
-       sentences divides between them (Genesis 1:5 divides at לָיְלָה)."""
+       sentences divides between them (Genesis 1:5 divides at לָיְלָה).
+       `score(i)`: the model's log-odds for a division after unit i, which
+       settles two stops tied for the middle."""
     b = [0] * n
     for i, wgt in breaks:
         if 0 <= i < n - 1: b[i] = 2 if wgt >= 2 else 3
@@ -376,11 +378,16 @@ def punctuation_bounds(n, breaks, entext=None, strong=None):
                 kinds = stop_kinds(entext)
                 if len(kinds) == len(cands) and any(kinds):
                     cands = [i for i, k in zip(cands, kinds) if k]
-            # two stops the same distance from the middle: the later one (the
-            # Masoretes' second half is the shorter: WLC prose, six units and
-            # up, the etnachta stands past the middle in 58.8% of verses)
+            # TWO STOPS THE SAME DISTANCE FROM THE MIDDLE: the one the Tanakh
+            # rates the stronger boundary (the model's log-odds at the link:
+            # 1 Nephi 1:11's semicolon over its comma, 1:13's speech end over
+            # the dash, 2:7's second clause of three as in Genesis 1:5). Taking
+            # the later of the two outright (the Masoretes' second half is the
+            # shorter, 58.8%) moved 310 etnachtas and the model backed only
+            # 162 of them; taking the earlier is no better. Position is the
+            # last resort only.
             mid = (n - 1) / 2.0
-            p = min(cands, key=lambda i: (abs(i + 0.5 - mid), -i))
+            p = min(cands, key=lambda i: (abs(i + 0.5 - mid), -(score(i) if score else 0.0), -i))
             b[p] = 1
     if p is not None:
         thin(b, 0, p); thin(b, p + 1, n - 1)
@@ -417,13 +424,13 @@ def main():
             ent = EN.get((en, ref[0], ref[1])) if ref else None
             # the reader's breaths were marked for the ear; one after a word that
             # reaches forward (an infinitive absolute, a construct) is no division
-            weakest, joiner, hard, strong, printed = make_weakest(speak, prior, w)
+            weakest, joiner, hard, strong, printed, score = make_weakest(speak, prior, w)
             # ...and one inside a pair of names ("Laman | and Lemuel", 3:28) is the
             # English comma landed a word or two off by the alignment
             marks = [(i, c) for i, c in BREAKS.get(key, [])
                      if not (0 <= i < n - 1 and (hard(i) or copula_after(speak, i) or pair_link(speak, i)))]
             printed.update(i for i, c in marks)
-            pb = punctuation_bounds(n, marks, ent, strong)
+            pb = punctuation_bounds(n, marks, ent, strong, score)
             if par:
                 bounds, how = par[1], 'mt'
             else:
