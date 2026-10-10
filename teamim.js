@@ -32,7 +32,7 @@
   'use strict';
   var R = window.READER || {};
   if (R.vol !== 'ot' && R.vol !== 'bom') return;
-  var KEY = 'sw-teamim', DATA_V = '2', CSS_V = '3';
+  var KEY = 'sw-teamim', DATA_V = '3', CSS_V = '3';
   /* this file's own directory, so the stylesheet and the data resolve from
      bom/bom.html as they do from ot.html */
   var SELF = document.currentScript && document.currentScript.src;

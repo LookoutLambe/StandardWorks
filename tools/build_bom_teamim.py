@@ -204,12 +204,89 @@ def shares_root(h, h2):
     """The infinitive absolute before its own verb (עָזֹב לֹא־עֲזָבַנִי, גַּלֵּה גִלּוּ,
        שָׁמוֹר תִּשְׁמְרוּ, אָרֹר אָאֹר): the second word repeats the first's root,
        with or without an imperfect prefix (א י ת נ) in front of it."""
-    a = stem3(h)
-    if len(a) < 3: return False
-    b = bare(h2).split(u'־')[-1]            # the verb is the last word of its group (לֹא־עֲזָבַנִי)
-    while len(b) > 3 and b[0] in PREFIXES: b = b[1:]
-    if b.startswith(a): return True
-    return len(b) >= 3 and b[0] in u'איתנ' and b[1:3] == a[:2]
+    def match(h, h2):
+        a = stem3(h)
+        if len(a) < 3: return False
+        b = bare(h2).split(u'־')[-1]        # the verb is the last word of its group (לֹא־עֲזָבַנִי)
+        while len(b) > 3 and b[0] in PREFIXES: b = b[1:]
+        if b.startswith(a): return True
+        if len(b) < 3 or b[0] not in u'איתנ': return False
+        # behind the prefix the whole root: two letters matched לָבָן to וָאֶלְבַּשׁ
+        # (1 Nephi 4:19); a geminate root keeps one of its pair (אָרֹר אָאֹר)
+        return b[1:4] == a or (a[1] == a[2] and b[1:3] == a[:2])
+    # as written, then with the matres out (אָרוֹר תֵּאָרֵר, Jacob 2:29; but הָיֹה
+    # יִהְיֶה keeps its yod and matches as written)
+    strip = lambda s: re.sub(u'[וי]', '', s)
+    return match(h, h2) or match(strip(h), strip(h2))
+
+# ---- the Tanakh's own analysis of a form (attested_forms.js: OSHB + TAHOT,
+# [Strong's, morph, segments, n, alts]; keys by RootEngine.pointedKey)
+_ATTESTED = None
+
+def pointed_key(s):
+    """root_engine.js pointedKey, ported: accents, meteg, maqqef and sof pasuq
+       out, qamats qatan to qamats, the marks of each letter sorted"""
+    s = re.sub(u'[֑-ֽֿ֯׀׃-׆/]', '', s or '').replace(u'ׇ', u'ָ')
+    s = re.sub(u'[^ְ-ּׁׂא-ת]', '', s)
+    out, i = [], 0
+    while i < len(s):
+        ch = s[i]; i += 1
+        marks = []
+        while i < len(s) and ord(s[i]) < 0x5d0:
+            marks.append(s[i]); i += 1
+        out.append(ch + u''.join(sorted(marks)))
+    return u''.join(out)
+
+def attested(h):
+    """the table's entry for a pointed form, or None"""
+    global _ATTESTED
+    if _ATTESTED is None:
+        s = io.open(os.path.join(ROOT, 'attested_forms.js'), encoding='utf-8').read()
+        _ATTESTED = json.loads(s[s.index('{'):s.rindex('}') + 1])
+    return _ATTESTED.get(pointed_key(nfc(h)))
+
+def morph_of(h, last=True):
+    """the morph code of a word; of a maqqef group, its last word (the one
+       that reaches forward: אֶת־עֶבֶד) or its first"""
+    parts = nfc(h).split(u'־')
+    e = attested(parts[-1] if last else parts[0])
+    return e[1] if e else ''
+
+def real_prefix(h):
+    """The מֵ or לְ this word opens with is a preposition (מֵאֱלֹהִים, לְמַלְכוּת),
+       not the first letter of a name (לָבָן, לְמוּאֵל, מִצְרַיִם): the Tanakh's
+       analysis of the form shows the segment, and a form the Tanakh lacks is
+       a prefix only if what follows the prefix is a form the Tanakh has."""
+    h = nfc(h).split(u'־')[0]          # of a group, the word that opens it (מִן־הַפְּרִי)
+    e = attested(h)
+    # the morph opens with the language letter: HR/Ncfsc (לְמַלְכוּת), HR/R (מֵאֵת), HR (מִן), HC/R/...
+    if e: return bool(re.search(r'(^H|/)R[a-z]?(/|$)', e[1]))
+    # a form the Tanakh lacks: מִ or לַ before a doubled letter is the assimilated
+    # מִן or the article (מִגִּבּוֹרֵיהֶם, לַמֶּלֶךְ); otherwise what follows must be a form it has
+    # (NFC puts the letter's vowel before its dagesh: גִּ is ג, hiriq, dagesh)
+    if re.match(u'^[מל][ִַ][א-ת][ְ-ֻ]?ּ', h): return True
+    rest = h[2:]
+    return attested(rest) is not None or attested(rest.replace(u'ּ', u'', 1)) is not None
+
+def construct(h, h2):
+    """an attested construct form (HNcmsc, HAamsc: עֶבֶד, אוֹצַר, גְּדָל) before
+       the bare noun, name or adjective it governs: the WLC puts a disjunctive
+       after one 21% of the time against 61% for any word. The table's morph is
+       the form's commonest reading, so a form that is also an absolute (סֵפֶר,
+       עֳנִי) counts only when what follows could be its nomen rectum: before a
+       verb or a prefixed word (רַב־עֳנִי רָאוּ, סֵפֶר בִּלְשׁוֹן) it is left to the model."""
+    m1 = morph_of(h)
+    if not (m1.endswith('c') and m1[:3] in ('HNc', 'HAa')): return False
+    m2 = re.sub(r'^HTd/', 'H', morph_of(h2, last=False))     # the article is no bar (עֶבֶד הַמֶּלֶךְ)
+    return m2[:3] in ('HNc', 'HNp', 'HAa', 'HAc') and '/' not in m2
+
+def attributive(h, h2):
+    """a noun and the bare adjective after it (כֹּחַ רַב, זָהָב טָהוֹר), both
+       absolute: divided between 21% of the time in the WLC"""
+    if u'־' in h2: return False
+    m1, m2 = morph_of(h), morph_of(h2, last=False)
+    return m1.startswith('HNc') and m1.endswith('a') and m2.startswith('HAa') and m2.endswith('a')
+
 
 def make_weakest(toks, prior, w):
     """Where a phrase most plausibly ends, by the Tanakh's log-odds that a
@@ -253,7 +330,7 @@ def make_weakest(toks, prior, w):
             # "of" on the next word says the two are one chain, unless that
             # word carries a preposition ("ask of God" מֵאֱלֹהִים, "of the
             # reign" לְמַלְכוּת)
-            if re.match(r'of\b', g2.strip().lower()) and not PREP_PREFIX.match(nfc(h2)): return True
+            if re.match(r'of\b', g2.strip().lower()) and not (PREP_PREFIX.match(nfc(h2)) and real_prefix(h2)): return True
             # the infinitive absolute before its verb (עָזֹב לֹא־עֲזָבַנִי, מוֹת תָּמוּת)
             if shares_root(h, h2): return True
             # a compound numeral (שְׁנֵים עָשָׂר) and a title before a name (אָבִי לֶחִי)
@@ -272,6 +349,10 @@ def make_weakest(toks, prior, w):
             # phrase the "and" may open a new clause ("by the sword | and many")
             # or a parallel phrase ("a goodly father | and a goodly mother"), and
             # penalising those tore "and a mother | goodly" instead.
+            # (a penalty, not a cap: capped, it moved the pashta off מוּסַ֤ר אָבִי֙
+            # וּבְדַעְתּ֔וֹ in 1 Nephi 1:1, and the Masoretes split a closing pair
+            # with pashta + zaqef or tifcha + etnachta routinely: תֹ֙הוּ֙ וָבֹ֔הוּ,
+            # אֵ֥ת הַשָּׁמַ֖יִם וְאֵ֥ת הָאָֽרֶץ)
             if (hi is None or i + 1 == hi) and PLAIN_WAW.match(nfc(h2)) and not PLAIN_WAW.match(nfc(h)):
                 s += PAIR
             # A PAIR OF NAMES IS ONE CONSTITUENT wherever it stands (pair_link:
@@ -280,6 +361,10 @@ def make_weakest(toks, prior, w):
             # only: "a goodly father | and a goodly mother" is the parallel
             # the pair rule above must leave alone.
             if pair_link(toks, i): s = min(s, NOMINAL)
+            # A CONSTRUCT FORM REACHES FORWARD whatever its gloss says (גְּדָל
+            # קוֹמָה "large in stature"), and a noun holds its adjective (כֹּחַ
+            # רַב): the Tanakh's own analysis of the form, as a weak link
+            if construct(h, h2) or attributive(h, h2): s = min(s, NOMINAL)
         if near is not None and i < near: s += FAR * (near - i)
         return s
     printed = set()        # the links the printed English marks, filled per verse by the caller

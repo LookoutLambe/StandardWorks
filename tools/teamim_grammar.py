@@ -128,10 +128,13 @@ class Unit(object):
         return ch == u'ו' and DAGESH in vs and not any(v in VOWEL or v in HALF or v == SHEVA for v in vs)
 
     def _is_mater(self, li):
-        """a vav carrying only the syllable's holam or shuruk, after a consonant with no vowel of its own"""
+        """a vav carrying only the syllable's holam or shuruk, after a consonant
+           with no vowel of its own (a dagesh is not a vowel: בּוֹ, אִתּוֹ, עַמּוֹ,
+           רַבּוֹת are as much mater syllables as ל֖וֹ; counting the dagesh as a
+           mark put 2,818 Book of Mormon accents on the vav instead of its consonant)"""
         if li <= 0 or li >= len(self.letters): return False
         ch, vs = self.letters[li]
-        return ch == u'ו' and not self.letters[li - 1][1] and \
+        return ch == u'ו' and not any(v != DAGESH for v in self.letters[li - 1][1]) and \
             (0x5b9 in vs or (DAGESH in vs and not any(v in VOWEL for v in vs)))
 
     def set_stress_syllable(self, li):
