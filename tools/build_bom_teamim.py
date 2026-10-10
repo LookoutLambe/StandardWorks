@@ -142,7 +142,53 @@ NAME_GLOSS = re.compile(r"^[A-Z][a-z']+$")  # a gloss that is one capitalised wo
 TENS = {u'עשר', u'עשרה'}                        # the second word of a compound numeral (שְׁנֵים עָשָׂר)
 # a title that stands before a name is one breath with it: "my father, Lehi"
 # (the reader's own rule, tools/build_volume_breaks.py)
-TITLE_BEFORE_NAME = set(u'אני אנכי אבי אמי אחי אחיו אביו אמו בני בנו בתו אשתו אביהם אחיהם אחיך אביך בנך'.split())
+TITLE_BEFORE_NAME = set(u'אני אנכי אבי אמי אחי אחיו אביו אמו בני בנו בתו אשתו אביהם אחיהם אחיך אביך בנך '
+                        u'אחינו אבינו אחיכם אביכם בניו בנינו בניהם אחותי אחותו אשתי אמם'.split())
+# the pronouns that make a compound subject (אֲנִי וְאַחַי, אַתָּה וְאַחֶיךָ): the first
+# and second persons only. Bare הוּא ends a clause or opens the next one far
+# more often than it joins a pair (WLC: a disjunctive follows it 81% of the
+# time before an and-word; וְהוּא after a name opens a clause: לָמָ֔ן וְה֥וּא הֹלֵ֖ךְ)
+PRON = set(u'אני אנכי אתה את אנחנו אתם אתן'.split())
+PRON3 = set(u'הוא היא הם המה'.split())
+COPULA = re.compile(r'^(he|she|it|they)[- ](is|are|was|were)$|^(is|are|was|were)$', re.I)
+
+def nominal(h, g):
+    """a name, a kin word (my father, thy brethren) or a pronoun, its waw
+       stripped: one member of a pair that is a single constituent"""
+    h = nfc(h)
+    if PLAIN_WAW.match(h): h, g = h[2:], re.sub(r'^and[- ]', '', g.strip(), flags=re.I)
+    b = bare(h)
+    return b in PRON or b in TITLE_BEFORE_NAME or bool(NAME_GLOSS.match(g.strip()))
+
+def pair_link(toks, i):
+    """The link inside a pair of names: "Laman and Lemuel", "I and my
+       brethren", "thou and thy brethren" are one constituent and are not
+       divided before their "and" unless a near divider is forced on them
+       (WLC: after a pair a disjunctive follows 87% of the time; inside a list
+       of three the cut before the last member, לְאַבְרָהָ֛ם לְיִצְחָ֥ק וּֽלְיַעֲקֹ֖ב, is
+       the commoner at 70% against 45%, so every link of a list is held alike
+       and the model's own preference settles which)."""
+    if i + 1 >= len(toks): return False
+    (h, g), (h2, g2) = toks[i], toks[i + 1]
+    if u'־' in h2 or not PLAIN_WAW.match(nfc(h2)): return False
+    return nominal(h, g) and nominal(h2, g2)
+
+# the most a pair's link may score: a weak link, whatever the model says of it
+# (its log-odds for אַתָּה וְאַחֶיךָ are +8.4, the Tanakh's clause-final "thou"; a
+# fixed penalty either left that standing or sank אֲנִי וְאַחַי past the point of
+# giving up)
+NOMINAL = -5.0
+
+def copula_after(toks, i):
+    """A printed mark that falls right before a bare הוּא, הִיא or הֵם glossed as
+       a copula ("he is", "they are") is the English comma carried one word too
+       early: "he is a mighty man," is אִישׁ גִּבּוֹר הוּא, and the aligner, finding
+       its "he is" before the comma in the English, set the break in front of
+       the pronoun (20 such marks in the volume, Mosiah 20:13 מֶלֶךְ הַלָּמָנִים ׀ הוּא
+       נִפְצַע). The mark is dropped and the model decides the link."""
+    if i + 1 >= len(toks): return False
+    h2, g2 = toks[i + 1]
+    return u'־' not in h2 and bare(h2) in PRON3 and bool(COPULA.match(g2.strip()))
 PREFIXES = u'והלבכמש'
 # particles the Masoretes join forward with a maqqef when they stand bare
 PROCLITIC = set(NEVER_AFTER) | set(u'עַל מִן עַד אֵת אֶת בֵּין אַל פֶּן'.split())
@@ -228,6 +274,12 @@ def make_weakest(toks, prior, w):
             # penalising those tore "and a mother | goodly" instead.
             if (hi is None or i + 1 == hi) and PLAIN_WAW.match(nfc(h2)) and not PLAIN_WAW.match(nfc(h)):
                 s += PAIR
+            # A PAIR OF NAMES IS ONE CONSTITUENT wherever it stands (pair_link:
+            # the model alone put a tifcha after אֲנִי in וַנִּסַּע אֲנִי וְאַחַי, the
+            # Tanakh's clause-final הוּא speaking for every pronoun). Names
+            # only: "a goodly father | and a goodly mother" is the parallel
+            # the pair rule above must leave alone.
+            if pair_link(toks, i): s = min(s, NOMINAL)
         if near is not None and i < near: s += FAR * (near - i)
         return s
     printed = set()        # the links the printed English marks, filled per verse by the caller
@@ -324,8 +376,11 @@ def punctuation_bounds(n, breaks, entext=None, strong=None):
                 kinds = stop_kinds(entext)
                 if len(kinds) == len(cands) and any(kinds):
                     cands = [i for i, k in zip(cands, kinds) if k]
+            # two stops the same distance from the middle: the later one (the
+            # Masoretes' second half is the shorter: WLC prose, six units and
+            # up, the etnachta stands past the middle in 58.8% of verses)
             mid = (n - 1) / 2.0
-            p = min(cands, key=lambda i: (abs(i + 0.5 - mid), i))
+            p = min(cands, key=lambda i: (abs(i + 0.5 - mid), -i))
             b[p] = 1
     if p is not None:
         thin(b, 0, p); thin(b, p + 1, n - 1)
@@ -363,7 +418,10 @@ def main():
             # the reader's breaths were marked for the ear; one after a word that
             # reaches forward (an infinitive absolute, a construct) is no division
             weakest, joiner, hard, strong, printed = make_weakest(speak, prior, w)
-            marks = [(i, c) for i, c in BREAKS.get(key, []) if not (0 <= i < n - 1 and hard(i))]
+            # ...and one inside a pair of names ("Laman | and Lemuel", 3:28) is the
+            # English comma landed a word or two off by the alignment
+            marks = [(i, c) for i, c in BREAKS.get(key, [])
+                     if not (0 <= i < n - 1 and (hard(i) or copula_after(speak, i) or pair_link(speak, i)))]
             printed.update(i for i, c in marks)
             pb = punctuation_bounds(n, marks, ent, strong)
             if par:

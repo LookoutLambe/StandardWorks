@@ -3518,7 +3518,7 @@ var ch17Verses = [
   { num:"לא", words:[
     ["וַיְהִי","and it happened"],
     ["בִּדְבָרוֹ","by His word"],
-    ["וַיַּשְׁמִידֵם","and destroyed them"],
+    ["הִשְׁמִידָם","destroyed them"],
     ["וּבִדְבָרוֹ","and by His word"],
     ["הִנְחָם","led them"],
     ["וּבִדְבָרוֹ","and by His word"],

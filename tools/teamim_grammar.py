@@ -160,14 +160,28 @@ class Unit(object):
                 if not (0x5b0 <= nx <= 0x5bb or nx == 0x5c7): slots.append(i)
         if not slots or not self.letters:
             return len(self.letters) - 1 if self.letters else None
-        k = len(slots) - 1 if slot is None or slot >= len(slots) else slot
+        default = slot is None or slot >= len(slots)
+        k = len(slots) - 1 if default else slot
         p = slots[k]
         li = sum(1 for c in w[:p] if IS_CONS(c)) - 1
         if li < 0: li = 0
         # the stressed vowel is a full one: a closing sheva belongs to the syllable before it
         while li > 0 and li not in self.syl:
             li -= 1
-        return li
+        return self._skip_furtive(li) if default else li
+
+    def _skip_furtive(self, li):
+        """The default stress is the last vowel, but a patah under a final ח, ע or
+           הּ after another vowel is the furtive patah, a glide and not a syllable
+           (רוּחַ, מָשִׁיחַ, שָׂמוֹחַ): the stress, and the accent, sit on the vowel
+           before it (WLC ר֣וּחַ, מָשִׁ֣יחַ). The stress table lists the forms the
+           Tanakh has; the ones it lacks (בַּמָּשִׁיחַ, שָׂמוֹחַ, לִשְׂמֹחַ) take this rule."""
+        if li != len(self.letters) - 1: return li
+        ch, vs = self.letters[li]
+        furtive = (ch in u'חע' and vs == [0x5b7]) or (ch == u'ה' and sorted(vs) == [0x5b7, DAGESH])
+        if not furtive: return li
+        prev = [l for l in self.syl if l < li]
+        return prev[-1] if prev else li
 
     def accent_letter(self):
         """Where a stress accent is written: on the stressed syllable's consonant, which
@@ -505,4 +519,9 @@ def accent_verse(words, bounds, stress_of=None, weakest=None, stress_letters=Non
         assign(p + 1, n - 1, 'silluq', 1)
     else:
         assign(0, n - 1, 'silluq', 1)
-    return [u.encode() for u in units], [u.label for u in units]
+    codes = [u.encode() for u in units]
+    # a joined word is written as the Masoretes write it: a maqqef to the next
+    # word and no accent of its own (מִצְוֺת־יְהוָֽה); the layer draws the maqqef
+    for i in joined:
+        if codes[i] == u'' and any(vs for _, vs in units[i].letters): codes[i] = u'־'
+    return codes, [u.label for u in units]

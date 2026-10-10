@@ -32,7 +32,7 @@
   'use strict';
   var R = window.READER || {};
   if (R.vol !== 'ot' && R.vol !== 'bom') return;
-  var KEY = 'sw-teamim', DATA_V = '1', CSS_V = '2';
+  var KEY = 'sw-teamim', DATA_V = '2', CSS_V = '3';
   /* this file's own directory, so the stylesheet and the data resolve from
      bom/bom.html as they do from ot.html */
   var SELF = document.currentScript && document.currentScript.src;
@@ -62,8 +62,9 @@
   var observer = null;
 
   /* The word `h` (data-h) with its accents laid over it, as plain text, and
-     `after`: markup that follows the word (a paseq). _hwShown in
-     reader_surface.js is the only caller. */
+     `after`: markup that follows the word (a paseq, or the maqqef of a word the
+     Masoretes would join to the next: no accent of its own, מִצְוֺת־יְהוָֽה).
+     _hwShown in reader_surface.js is the only caller. */
   function accents(h, wid) {
     var plain = { text: h, after: '' };
     var cut = wid.lastIndexOf('|');
@@ -71,10 +72,11 @@
     if (!row) return plain;
     var code = row.split('|')[+wid.slice(cut + 1)];
     if (!code) return plain;
-    var acc = {}, k = -1, paseq = false, i, c;
+    var acc = {}, k = -1, paseq = false, maqqef = false, i, c;
     for (i = 0; i < code.length; i++) {
       c = code.charCodeAt(i);
       if (c === 0x05C0) paseq = true;
+      else if (c === 0x05BE) maqqef = true;
       else if (c < 0x0590) { k = c - 0x30; acc[k] = ''; }
       else if (k >= 0) acc[k] += code.charAt(i);
     }
@@ -90,8 +92,9 @@
       }
     }
     if (out.normalize) out = out.normalize('NFC');
-    /* a paseq stands between words; drawn by CSS so no lookup ever reads it */
-    return { text: out, after: paseq ? '<span class="tm-paseq" aria-hidden="true"></span>' : '' };
+    /* a paseq or a maqqef stands between words; drawn by CSS so no lookup ever reads it */
+    return { text: out, after: paseq ? '<span class="tm-paseq" aria-hidden="true"></span>'
+                                     : maqqef ? '<span class="tm-maqqef" aria-hidden="true"></span>' : '' };
   }
 
   var T = window.SWTeamim = { on: false, accents: accents, toggle: function () { set(!T.on); }, set: set };

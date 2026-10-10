@@ -24,10 +24,11 @@ POINTS = re.compile(u'[֑-ׇ]')
 
 def apply(h, code):
     """teamim.js accents(): lay the code's marks over the word."""
-    acc, k, paseq = {}, -1, False
+    acc, k, paseq, maqqef = {}, -1, False, False
     for c in code:
         o = ord(c)
         if o == 0x5c0: paseq = True
+        elif o == 0x5be: maqqef = True          # a joined word: written with a maqqef to the next
         elif o < 0x590: k = o - 0x30; acc[k] = u''
         elif k >= 0: acc[k] += c
     out, n, i = u'', -1, 0
@@ -39,7 +40,7 @@ def apply(h, code):
                 i += 1; out += h[i]
             if acc.get(n): out += acc[n]
         i += 1
-    return ud.normalize('NFC', out) + (u' ׀' if paseq else u'')
+    return ud.normalize('NFC', out) + (u' ׀' if paseq else u'־' if maqqef else u'')
 
 
 def labels_of(code):
@@ -49,6 +50,7 @@ def labels_of(code):
         if 0x591 <= o <= 0x5ae or o == 0x5bd:
             names.append(NAME.get(o, hex(o)))
     if u'׀' in code: names.append('+paseq')
+    if u'־' in code: names.append('maqqef')
     return '+'.join(names) if names else '-'
 
 
@@ -66,7 +68,7 @@ def main():
         codes = T.get(key, '').split('|')
         words = [apply(h, codes[i] if i < len(codes) else '') for i, (h, g) in enumerate(speak)]
         print('\n%s' % key)
-        print('  ' + u' '.join(words) + u'׃')
+        print('  ' + u' '.join(words).replace(u'־ ', u'־') + u'׃')   # a joined word closes up on the next
         if ref and EN.get((book, ref[0], ref[1])): print('  ' + EN[(book, ref[0], ref[1])])
         if show_labels:
             print('  ' + ' | '.join('%s %s' % (h, labels_of(codes[i] if i < len(codes) else '')) for i, (h, g) in enumerate(speak)))

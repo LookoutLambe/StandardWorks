@@ -23,6 +23,12 @@ html.sw-teamim .verse .word-unit .hw {
 html.sw-teamim .verse .word-unit .hw .tm-paseq::before {
   content: '\2009\05C0';
 }
+/* A maqqef after a word the Masoretes would join to the next one (it carries
+   no accent of its own: מִצְוֺת־יְהוָֽה). Same arrangement as the paseq: drawn,
+   never written into the word. */
+html.sw-teamim .verse .word-unit .hw .tm-maqqef::before {
+  content: '\05BE';
+}
 /* The stress mark (.sacc, a small "<" over the stressed vowel) stands down
    while the accents are shown: marking the stress is what they do, and the
    "<" sits exactly where the accents above the line are drawn. */
