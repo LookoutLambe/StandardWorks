@@ -340,6 +340,26 @@ def servants(gov_label, gov, tail):
 
 
 # ------------------------------------------------------------ the verse
+def first_cut(words, stress_of, weakest, locked=()):
+    """Where the verse's first dichotomy falls when nothing marks it: the
+       weakest link of the whole verse by the chooser's own reckoning, with no
+       window pulling it towards the silluq (that window is the tifcha's, and
+       with it 1 Nephi 3:1 was halved at מִדַּבֵּ֑ר עִ֖ם יְהוָֽה), so that a verse
+       with no printed mark and no sure link is halved all the same and the
+       etnachta goes there (1 Nephi 5:20 was ten units with a zaqef for its
+       main division). Each half keeps at least two units; a link in `locked`
+       (the comma of an apposition, "I, Nephi,") is passed over. Returns the
+       unit index the division follows, or None."""
+    units = [Unit(w, stress_of(w) if stress_of else None) for w in words]
+    n = len(units)
+    if n < 4: return None
+    for i in locked:
+        if 0 <= i < n: units[i].locked = True
+    place(units[n - 1], 'silluq')
+    at = weakest(units, 1, n - 2, 'silluq', None)
+    return at if at is not None and 1 <= at <= n - 3 else None
+
+
 def accent_verse(words, bounds, stress_of=None, weakest=None, stress_letters=None, joiner=None):
     """Lay the te'amim over one verse.
 

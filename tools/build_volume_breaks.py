@@ -101,7 +101,10 @@ def drop_unnatural(br, speak):
     for i, c in br:
         if 0 <= i < len(speak) - 1:
             w, nxt = _bare(speak[i][0]), _bare(speak[i + 1][0])
-            if w in _NO_BREAK_AFTER:
+            # לוּ "if only" is a connective; לוֹ "to him" ends its clause as any
+            # word does ("given unto him. And also", 1 Nephi 16:8) and shares
+            # the letters: the shureq tells them apart
+            if w in _NO_BREAK_AFTER and not (w in (u'לו', u'ולו') and u'\u05bc' not in speak[i][0]):
                 cut += 1
                 continue
             if w in _TITLE_BEFORE_NAME and not nxt.startswith(u'ו') and nxt not in _NO_BREAK_AFTER:

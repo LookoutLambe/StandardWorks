@@ -123,13 +123,13 @@ def corpus(root, file, prefix):
     return out
 
 def english(root):
+    """{(book, chapter, verse): english} from bom/official_verses.js, which is
+       plain JSON (read as JSON: decoding the string by unicode_escape turned
+       every em dash into three Latin-1 characters, and the dash that ends a
+       clause, "thereof—for I spake", was no stop at all)"""
     src = io.open(os.path.join(root,'bom/official_verses.js'), encoding='utf-8').read()
-    out = {}
-    for m in re.finditer(r'"book":\s*"([^"]+)",\s*"chapter":\s*(\d+),\s*"verse":\s*(\d+),'
-                         r'\s*"english":\s*"((?:[^"\\]|\\.)*)"', src):
-        out[(m.group(1), int(m.group(2)), int(m.group(3)))] = \
-            m.group(4).encode().decode('unicode_escape')
-    return out
+    data = json.loads(src[src.index('['): src.rindex(']') + 1])
+    return {(r['book'], r['chapter'], r['verse']): r['english'] for r in data}
 
 # ---------------------------------------------------------------- words
 HEB = re.compile(u'[א-ת]')
@@ -348,8 +348,14 @@ def eng_words(text):
         out.append((w, cls))
     return out
 
-def breaks_for(tokens, entext):
-    """[(index_into_speakable, class)] for one verse, or [] if it cannot be read."""
+def breaks_for(tokens, entext, finish=True):
+    """[(index_into_speakable, class)] for one verse, or [] if it cannot be read.
+       finish=False leaves out the finishing for the ear: the floor under a
+       phrase, the tail, the breaks the Masoretes' habits add before כִּי and
+       its kind, and the breaths the model adds inside a long clause.
+       The cantillation builder wants the printed marks alone, every one of
+       them (a one-word last phrase is a silluq with its tifcha before it),
+       and divides the long clauses by its own reckoning."""
     speak = [(h, g) for (h, g) in tokens if not silent(h)]
     if len(speak) < 3: return []
     n = len(speak)
@@ -463,7 +469,11 @@ def breaks_for(tokens, entext):
         r = mt.get(bare(speak[i + 1][0]))
         if not r: continue
         rate = r[0] / float(r[1])
-        if rate >= MT_BREAK: put(i, 1)
+        # (the breaks the Masoretes' habits add are for the ear too: the
+        # cantillation builder has those habits as its own log-odds, and a
+        # breath added before כַּאֲשֶׁר took the etnachta off the printed comma
+        # of 1 Nephi 2:3)
+        if rate >= MT_BREAK and finish: put(i, 1)
         elif rate <= MT_BIND and i in marks and i not in from_english: marks.pop(i)
         elif rate <= MT_BIND and i in marks: marks.pop(i)
 
@@ -499,12 +509,12 @@ def breaks_for(tokens, entext):
     for i in sorted(marks):
         length = i - last
         solo = length == 1 and nfc(speak[i][0]) in ALWAYS_AFTER
-        if length < MIN_PHRASE and not solo: continue
+        if finish and length < MIN_PHRASE and not solo: continue
         keep.append((i, marks[i])); last = i
     #  ... and the tail is a phrase too. A break at the second-to-last word
     #  leaves one word hanging: 46 verses ended "... | saying". Only אָמֵן
     #  really does stand by itself.
-    while keep and n - 1 - keep[-1][0] < MIN_PHRASE and \
+    while finish and keep and n - 1 - keep[-1][0] < MIN_PHRASE and \
             bare(speak[-1][0]) not in (u'אמן',):
         keep.pop()
 
@@ -519,7 +529,7 @@ def breaks_for(tokens, entext):
     ends = [i for i, _ in keep] + [n - 1]
     starts = [0] + [i + 1 for i, _ in keep]
     extra = []
-    for a, b in zip(starts, ends):
+    for a, b in (zip(starts, ends) if finish else []):
         while b - a + 1 > LONG:
             best, at = SPLIT_MIN, -1
             for t in range(a + MIN_PHRASE - 1, b - MIN_PHRASE + 1):

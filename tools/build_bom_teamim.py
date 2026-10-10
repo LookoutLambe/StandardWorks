@@ -24,9 +24,10 @@ Mormon verse comes from three places, in this order:
      across at their own ranks. Where the Book of Mormon adds or changes a
      word, the grammar fills in.
   2. THE PRINTED ENGLISH, which is where the author put the pauses: the
-     reader's own phrase-break table (bom/bom_phrase_breaks.js) carries its
-     stops and commas onto the Hebrew words, with the Masoretes' veto on
-     breaks they never make and the words that always take one. A stop is a
+     reader's own phrase-break extraction (tools/build_bom_breaks.py, the
+     source of bom/bom_phrase_breaks.js, run live here without its added
+     breaths: printed_marks) carries its stops and commas onto the Hebrew
+     words, with the Masoretes' veto on breaks they never make. A stop is a
      division of the clause (zaqef, tifcha), a comma a division within it
      (pashta, revia, tevir); the verse's main division (etnachta) is the
      stop nearest its middle. Ranks are relative, as they are in the Tanakh:
@@ -57,8 +58,9 @@ sys.path.insert(0, HERE)
 import teamim_grammar as G
 from learn_teamim import prose_verses, RANK
 from learn_teamim import pair_feats
-from build_bom_breaks import (BOOKS, corpus, english, silent,
+from build_bom_breaks import (BOOKS, corpus, english, silent, breaks_for,
                               NEVER_AFTER, BINDS, binds_back, nfc)
+from build_volume_breaks import drop_split_pairs, drop_unnatural
 
 N = lambda s: ud.normalize('NFC', s)
 POINTS = re.compile(u'[֑-ֽֿ-ׇ]')
@@ -67,6 +69,8 @@ bare = lambda h: POINTS.sub('', h or '')
 MIN_OVERLAP = 0.45       # as tools/build_mt_parallels.py
 MIN_ALIGNED = 0.6        # of the verse's words must find their MT word for the MT's phrasing to be used
 ETNACHTA_MIN = 6         # units: the WLC puts an etnachta in 68% of six-unit verses, 49% of five
+FIRST_CUT_MIN = 7        # ...and in 87.5% of seven-unit verses, 92% of eight: a verse that long is
+                         # halved even with no mark and no sure link to say where (first_cut)
 
 
 def load_js_table(path, var):
@@ -135,11 +139,16 @@ def binding():
 
 
 CONSTRUCT_PL = re.compile(u'ֵי$')     # a tsere-yod ending: the plural construct (דִּבְרֵי, בְּנֵי)
-# מִ / מֵ ("from") and לְ / לַ / לִ ("to", "of") are prepositions, glossed "of" too
-PREP_PREFIX = re.compile(u'^(מ[ִֵ]|ל[ְִַָ])')
+# מִ / מֵ ("from"), לְ / לַ / לִ ("to", "of"), בְּ / בָּ ("in"; "great hopes of them" is בָּם,
+# 16:5) and כְּ are prepositions, glossed "of" too
+PREP_PREFIX = re.compile(u'^(מ[ִֵ]|ל[ְִַָ]|ב[ְִַָ]|כ[ְִַָ])')
 # וְ or וּ, or וַ before an alef with a hataf (וַאֲבוֹתָיו, וַאֲנִי): the coordinating
 # waw, not the wayyiqtol's וַ (and not וַהֲ, וַעֲ: וַהֲמִיתִיךָ, וַעֲשִׂיתֶם are verbs)
-PLAIN_WAW = re.compile(u'^ו[ְּ]|^וַא[ֱֲֳ]')
+# And וָ before any letter but alef: the waw of a pair's second member, which
+# takes the qamats before the stressed syllable (תֹהוּ וָבֹהוּ, לְעוֹלָם וָעֶד,
+# כֶּסֶף וָזָהָב; the WLC divides before one 41.5% of the time against 85.3% before
+# a וְ-word). Before an alef it is the wayyiqtol's own וָא (וָאֹמַר, וָאֵרֶא).
+PLAIN_WAW = re.compile(u'^ו[ְּ]|^וַא[ֱֲֳ]|^וָ[^א]')
 NAME_GLOSS = re.compile(r"^[A-Z][a-z']+$")  # a gloss that is one capitalised word: a name
 TENS = {u'עשר', u'עשרה'}                        # the second word of a compound numeral (שְׁנֵים עָשָׂר)
 # a title that stands before a name is one breath with it: "my father, Lehi"
@@ -152,13 +161,16 @@ KIN = re.compile(u'^(אב|אח|א[מם]|ב[נן]|בת|אשת|אחות)(ות|י)?
 # the sentence's subject after its object (וַיֹּאמֶר אֵלַי יְהוָה, יַעֲזֹר לִי אֲדֹנָי,
 # לְךָ אֵל אַחֵר), and of a vocative after a verb of speaking (וַיֹּאמֶר אֵלַי נֶפִי
 # מַה תִּרְאֶה, 11:14)
-DIVINE = set('God Lord LORD Jehovah Christ Messiah Jesus Father Spirit Son Holy Almighty'.split())
+DIVINE = set('God Lord LORD Jehovah Christ Messiah Jesus Father Spirit Son Holy Almighty Eternal Most High'
+             ' Redeemer Savior Saviour Creator Lamb King Mighty Shepherd'.split())
 SPEECH = re.compile(r'\b(said|saith|say|spake|speak|speaking|saying|cried|crying|answered|called|commanded)\b', re.I)
 
 def title_word(h):
     """the word a name follows as its title: a kin word or אֲנִי (אָבִי לֶחִי,
        אֲנִי נֶפִי); of a group its last word (אֶת־אִמִּי שְׂרָיָה, 5:6, where the
        comma after "mother," used to land as a tifcha between them)"""
+    h = nfc(h)
+    if PLAIN_WAW.match(h): h = h[2:]            # וַאֲנִי נֶפִי, וְאִמִּי שְׂרָיָה (2:16, 5:1)
     b = bare(h).split(u'־')[-1]
     return b in (u'אני', u'אנכי') or bool(KIN.match(b))
 # the pronouns that make a compound subject (אֲנִי וְאַחַי, אַתָּה וְאַחֶיךָ): the first
@@ -202,37 +214,126 @@ def pair_link(toks, i):
 # giving up)
 NOMINAL = -5.0
 
+SPEECH_COLON = r'\b(saying|said|say|saith|spake|speak|answered|cried)\b'
+# the words that carry no content: a token glossed with these alone is not
+# placed by them (and "or" is not: it moved the stop of "on the one hand or on
+# the other—" past the או, 14:7)
+STOP_WORDS = set("""and or nor but for yea even also so then thus that which who whom the a an of to in on at by
+                    with from unto into he she it they them him his her their its is are was were be been""".split())
+_words = lambda s: re.findall(r"[a-z']+", (s or '').lower())
+_stem = lambda w: w[:5]          # "chastened" is "chasten", "spindles" "spindle"
+
+def transposed(toks, i, ent):
+    """The comma after "a bow," closes "did make out of wood a bow", and the
+       Hebrew says קֶשֶׁת מֵעֵץ, "of wood" after "a bow": the mark the aligner set
+       after קֶשֶׁת belongs after מֵעֵץ (16:23), as "exceedingly;" belongs after
+       הוֹכִיחָם in הוֹכֵחַ הוֹכִיחָם (16:39). The English segment that ends with this
+       token's gloss is found, and the mark moves past each following token
+       whose gloss stands just before that gloss inside the segment. Not past
+       a waw-word: "the words of my father, | and the words" has "words" in
+       the segment and is a new phrase all the same."""
+    gi = [_stem(w) for w in _words(toks[i][1])]
+    if not gi or not ent: return i
+    for seg in re.split(r'[,;:.?!\u2014]+', ent):
+        ws = [_stem(w) for w in _words(seg)]
+        if len(ws) > len(gi) and ws[-len(gi):] == gi: break
+    else: return i
+    content = lambda ws: [_stem(w) for w in ws if w not in STOP_WORDS and len(w) >= 3]
+    body = content(_words(seg)[:-len(gi)])
+    j = i
+    while j + 1 < len(toks) - 1 and not nfc(toks[j + 1][0]).startswith(u'ו'):
+        gn = content(_words(toks[j + 1][1]))
+        if not gn or len(gn) > len(body) or body[-len(gn):] != gn: break
+        body = body[:-len(gn)]; j += 1
+    return j
+
 def mend_marks(toks, marks, ent):
-    """Two misplacements of the English's own marks that the alignment makes
+    """Misplacements of the English's own marks that the alignment makes
        (tools/build_bom_breaks.py), mended before the marks become a tree:
        (1) "blessed art thou, Nephi, because": the comma before the vocative
        name lands after the pronoun; it belongs after the name (11:6, 2:19).
        (2) "I answered him, saying: Yea, it is": the colon that opens a speech
        is lost when the Hebrew's speech verb glosses differently; the first
        English word after the colon finds its token and the stop goes before
-       it (11:22)."""
+       it (11:22); where the speech's own words gloss differently too ("Thou
+       speakest" is קָשׁוֹת דִּבַּרְתָּ, 16:3), the stop goes after the verb of
+       speaking and whatever the English puts between it and the colon ("said
+       unto my father:"). (3) the colon is a comma to the breath table and a
+       stop to the Masoretes. (4) the mark of a transposed phrase (transposed)."""
     out = []
-    colon = bool(ent and re.search(r'\b(saying|said|spake|answered|cried)\b[^:.;]{0,25}:', ent))
+    colon = bool(ent and re.search(SPEECH_COLON + r'[^:.;]{0,25}:', ent))
     for i, c in marks:
         if 0 <= i < len(toks) - 2 and bare(toks[i][0]) in PRON2 and NAME_GLOSS.match(toks[i + 1][1].strip()):
             i += 1
+        # (5) "saying: These last records": the colon lands after the quote's first
+        # token when that token's gloss ("shall establish") comes later in the
+        # English; it belongs after לֵאמֹר (13:40 had a zaqef gadol on יְקַיְּמ֕וּ)
+        if c == 2 and i >= 1 and bare(toks[i - 1][0]) == u'לאמר' and ':' not in toks[i][1]:
+            # ...unless the token is the quote's own first word ("saying: Look!"
+            # keeps its stop after רְאֵה, 11:30)
+            g0 = _words(toks[i][1])[:1]
+            if not (g0 and ent and re.search(r'\bsaying:\s*' + re.escape(g0[0][:4]), ent, re.I)): i -= 1
+        if 0 <= i < len(toks) - 1: i = transposed(toks, i, ent)
         # (3) the colon that opens a speech is a comma to the breath table
         # (weight 1); to the Masoretes לֵאמֹר before the speech is a stop (13:40)
         if c == 1 and colon and 0 <= i < len(toks) and SPEECH.search(toks[i][1]): c = 2
         out.append((i, c))
     if ent:
-        for m in re.finditer(r'\b(saying|said|spake|answered|cried)\b[^:]{0,20}:\s*([A-Za-z]+(?:\s+[A-Za-z]+)?)', ent):
+        glosses = [[_stem(w) for w in _words(g)] for h, g in toks]
+        for m in re.finditer(SPEECH_COLON + r'([^:]{0,20}):\s*([A-Za-z]+(?:\s+[A-Za-z]+)?)', ent):
             # the speech's first two words where it has them ("I will go" is
-            # אֵלְכָה, not the "I" of אֲנִי נֶפִי two words before it, 3:7)
-            first = m.group(2).lower()
+            # אֵלְכָה, not the "I" of אֲנִי נֶפִי two words before it, 3:7): the
+            # glosses from some token on begin with them
+            first = [_stem(w) for w in _words(m.group(3))]
+            # what the Hebrew may put between the verb of speaking and the
+            # quote: the English's own words round the verb ("unto me again",
+            # and the subject, which the Hebrew says after the verb: וַיֹּאמֶר
+            # הָרוּחַ אֵלַי שֵׁנִית, 4:11)
+            around = set(_stem(w) for w in _words(ent[max(0, m.start() - 30):m.end(2)]))
             for j in range(1, len(toks)):
-                g = toks[j][1].strip().lower()
-                if (g == first or g.startswith(first + ' ')) and SPEECH.search(toks[j - 1][1]) \
-                   and not any(k == j - 1 for k, _ in out):
+                seq = sum(glosses[j:j + 2], [])
+                if seq[:len(first)] != first or any(k == j - 1 for k, _ in out): continue
+                t, ok = j - 1, False
+                while t >= 0 and j - 1 - t <= 4:
+                    if SPEECH.search(toks[t][1]): ok = True; break
+                    g = [w for w in glosses[t] if w not in STOP_WORDS]
+                    if not g or not all(w in around for w in g): break
+                    t -= 1
+                if ok:
                     out.append((j - 1, 2)); break
     return sorted(set(out))
 
 PRON2 = set(u'אתה את אתם אתן'.split())
+
+def verb_subject(toks, i):
+    """A bare wayyiqtol holds the subject that follows it: וַיֹּאמֶר יְהוָה,
+       וַיְדַבֵּר אָבִי, וַיֵּצֵא הַמֶּלֶךְ. The WLC divides between a third-person
+       wayyiqtol and a following name 14.5% of the time (3,021 pairs), an
+       article noun 22.9%, a verb of saying and its subject 11.6%; the
+       division falls after the subject (וַיֹּ֥אמֶר יְהוָ֖ה אֵלַ֣י לֵאמֹ֑ר)."""
+    if i + 1 >= len(toks): return False
+    (h, g), (h2, g2) = toks[i], toks[i + 1]
+    h, h2 = nfc(h), nfc(h2)
+    if u'־' in h or u'־' in h2: return False
+    m1 = morph_of(h)
+    # the wayyiqtol by the Tanakh's analysis (Hc/Vqw3ms), or by its shape when
+    # the Tanakh lacks the form (וַיְצַו, וַיַּבְטַח); a verb of saying by its gloss
+    wayy = bool(re.match(r'^H[cC]/V.w', m1)) or (not m1 and bool(re.match(u'^וַ[יתא]', h))) \
+        or (bool(re.search(r'(^H|/)V.[pqiw]', m1)) and bool(SPEECH.search(g)))
+    if not wayy: return False
+    m2 = re.sub(r'^HTd/', 'H', morph_of(h2, last=False))
+    return bool(NAME_GLOSS.match(g2.strip())) or g2.strip() in DIVINE or m2.startswith('HNp') \
+        or bool(re.match(r'^HNc..[ac]/Sp', m2)) or bool(KIN.match(bare(h2))) \
+        or (h2.startswith(u'הַ') and m2.startswith('HNc'))
+
+def folded_mark(toks, i):
+    """A mark after a token whose gloss folds a connective and its comma into
+       the verb ("yea, he feared" is וַיִּירָא, 8:36; "yea, and I beheld" is
+       וָאֵרֶא): the English comma the aligner carried is that inner one, no
+       pause after the word, and the mark is dropped (55 such glosses in the
+       volume, most of them אַף "yea, even", which drops its mark anyway)."""
+    g = toks[i][1]
+    return bool(re.search(r'[,;:]\s*[A-Za-z]', g)) and not g.rstrip().endswith((',', ';', ':'))
 
 def copula_after(toks, i):
     """A printed mark that falls right before a bare הוּא, הִיא or הֵם glossed as
@@ -252,6 +353,7 @@ PREFIXES = u'והלבכמש'
 EXTRA_NEVER = set(u'אֵצֶל תַּחַת מוּל נֶגֶד לִפְנֵי אַחֲרֵי בְּתוֹךְ מִתּוֹךְ סְבִיב'.split())
 PROCLITIC = set(NEVER_AFTER) | EXTRA_NEVER | set(u'עַל מִן עַד אֵת אֶת בֵּין אַל פֶּן עִם'.split())
 DEMONSTRATIVE = set(u'ההוא ההיא הזה הזאת האלה ההם ההן ההמה'.split())
+CLAUSE_OPENERS = set(u'כי כאשר וכאשר למען ולמען לבלתי וגם בעבור ובעבור עד והנה ויהי לכן ולכן על־כן ועל־כן'.split())
 
 def stem3(h):
     """the first three root letters, past the one-letter prefixes and a maqqef"""
@@ -267,12 +369,16 @@ def shares_root(h, h2):
         a = stem3(h)
         if len(a) < 3: return False
         b = bare(h2).split(u'־')[-1]        # the verb is the last word of its group (לֹא־עֲזָבַנִי)
-        while len(b) > 3 and b[0] in PREFIXES: b = b[1:]
-        if b.startswith(a): return True
-        if len(b) < 3 or b[0] not in u'איתנ': return False
-        # behind the prefix the whole root: two letters matched לָבָן to וָאֶלְבַּשׁ
-        # (1 Nephi 4:19); a geminate root keeps one of its pair (אָרֹר אָאֹר)
-        return b[1:4] == a or (a[1] == a[2] and b[1:3] == a[:2])
+        # the verb as written, then with each one-letter prefix off in turn: the
+        # hiphil keeps its ה (הוֹכֵחַ הוֹכִיחָם, 16:39: stripped to the bone first,
+        # הוכיחם lost its ה, its ו and its כ and nothing was left to match)
+        while True:
+            if b.startswith(a): return True
+            # behind an imperfect prefix the whole root: two letters matched לָבָן
+            # to וָאֶלְבַּשׁ (1 Nephi 4:19); a geminate root keeps one of its pair (אָרֹר אָאֹר)
+            if len(b) >= 3 and b[0] in u'איתנ' and (b[1:4] == a or (a[1] == a[2] and b[1:3] == a[:2])): return True
+            if len(b) > 3 and b[0] in PREFIXES: b = b[1:]
+            else: return False
     # the pair is a verb and its verb: a noun of the same root is not it
     # (דַבְּרִי אֶת־הַדְּבָרִים, לְדַבֵּר אֶת־הַדְּבָרִים bound as if infinitive absolutes,
     # 1 Nephi 4:4, 10:22), by the Tanakh's analysis where it has the form
@@ -353,7 +459,9 @@ def construct(h, h2):
     m1 = morph_of(h)
     if not (m1.endswith('c') and m1[:3] in ('HNc', 'HAa')): return False
     m2 = re.sub(r'^HTd/', 'H', morph_of(h2, last=False))     # the article is no bar (עֶבֶד הַמֶּלֶךְ)
-    return m2[:3] in ('HNc', 'HNp', 'HAa', 'HAc') and '/' not in m2
+    # ...or a participle (מַעֲשֵׂה חֹשֵׁב "the work of a craftsman", 16:10; the WLC
+    # divides after a construct before one 26% of the time)
+    return (m2[:3] in ('HNc', 'HNp', 'HAa', 'HAc') or bool(re.match(r'HV.[rs]', m2))) and '/' not in m2
 
 def attributive(h, h2):
     """a noun and the bare adjective after it (כֹּחַ רַב, זָהָב טָהוֹר), both
@@ -375,9 +483,9 @@ def adj_pair(toks, i):
     # an adjective or a participle (הַבְּרוּרִים וְהַיְקָרִים "plain and precious",
     # הַגְּדוֹלָה וְהַנִּתְעָבָה "great and abominable"); a form the Tanakh lacks
     # passes on its shape when both carry the article, the attributive's mark
-    adj = lambda m: bool(re.match(r'H(Aa|V..[rs])', m))
+    adj = lambda m: bool(re.match(r'H(Aa|V.[rs])', m))        # HAamsa; HVqrmsa, HVNrfsa: the stem, then r/s
     if not m0.startswith('HNc') or not (adj(m1) or (not m1 and h1.startswith(u'ה'))): return False
-    if m2: return bool(re.match(r'HC/(Td/)?(Aa|V..[rs])', m2))
+    if m2: return bool(re.match(r'HC/(Td/)?(Aa|V.[rs])', m2))
     return h1.startswith(u'ה') and h2.startswith(u'וְה')
 
 
@@ -428,7 +536,11 @@ def make_weakest(toks, prior, w, ent=None):
             # "of" on the next word says the two are one chain, unless that
             # word carries a preposition ("ask of God" מֵאֱלֹהִים, "of the
             # reign" לְמַלְכוּת)
-            if re.match(r'of\b', g2.strip().lower()) and not (PREP_PREFIX.match(nfc(h2)) and real_prefix(h2)): return True
+            # ...and unless this word is an adjective in the absolute (כַּדּוּר עָגֹל
+            # מַעֲשֵׂה חֹשֵׁב "a round ball of curious workmanship", 16:10): the WLC
+            # divides after one before a construct noun 100% of the time (80)
+            if re.match(r'of\b', g2.strip().lower()) and not (PREP_PREFIX.match(nfc(h2)) and real_prefix(h2)) \
+               and not re.match(r'^H(Td/)?Aa.*a$', morph_of(h)): return True
             # the infinitive absolute before its verb (עָזֹב לֹא־עֲזָבַנִי, מוֹת תָּמוּת)
             if shares_root(h, h2): return True
             # a compound numeral (שְׁנֵים עָשָׂר) and a title before a name (אָבִי לֶחִי)
@@ -471,10 +583,17 @@ def make_weakest(toks, prior, w, ent=None):
             # only: "a goodly father | and a goodly mother" is the parallel
             # the pair rule above must leave alone.
             if pair_link(toks, i): s = min(s, NOMINAL)
+            # A WORD AND ITSELF: הֵנָּה וָהֵנָּה "hither and thither" (4:2; 2 Kings 2:8
+            # וַיֵּחָצ֖וּ הֵ֥נָּה וָהֵֽנָּה), דּוֹר וָדוֹר, יוֹם וָיוֹם: one phrase
+            if PLAIN_WAW.match(nfc(h2)) and bare(nfc(h2)[2:]) == bare(nfc(h)): s = min(s, NOMINAL)
             # A CONSTRUCT FORM REACHES FORWARD whatever its gloss says (גְּדָל
             # קוֹמָה "large in stature"), and a noun holds its adjective (כֹּחַ
             # רַב): the Tanakh's own analysis of the form, as a weak link
             if construct(h, h2) or attributive(h, h2) or adj_pair(toks, i): s = min(s, NOMINAL)
+            # A WAYYIQTOL HOLDS ITS SUBJECT (verb_subject: the model alone put a
+            # zaqef gadol on וַיֹּ֕אמֶר before יְהוָה in 2:19, its "and said" being
+            # clause-final so often in the glosses)
+            if verb_subject(toks, i): s = min(s, NOMINAL)
         if near is not None and i < near: s += FAR * (near - i)
         return s
     printed = set()        # the links the printed English marks, filled per verse by the caller
@@ -501,6 +620,17 @@ def make_weakest(toks, prior, w, ent=None):
         for i in range(hi - 1, lo - 1, -1):
             if i + 1 < len(toks) and hard(i): return i
         return None
+    def appos(i):
+        """The mark after the name of "I, Nephi," or "my father, Lehi," is the
+           English's closing comma of an apposition, not the end of a clause:
+           it may divide the clause (Daniel's אֲנִ֣י דָנִיֵּ֔אל takes zaqef, revia,
+           tifcha, mahpakh) but never halves the verse (15:1 had its etnachta on
+           נֶפִי between "carried away" and "in the Spirit")."""
+        g = toks[i][1].strip()
+        # ("the Son of the Eternal Father!" is בֶּן־אֲבִי עוֹלָם: "Eternal" is capitalised
+        # as a name and is no name, 11:21)
+        if i < 1 or not NAME_GLOSS.match(g) or g in DIVINE: return False
+        return title_word(toks[i - 1][0]) or bool(re.match(r'^H(R|Rd|To)/Sp', morph_of(toks[i - 1][0])))
     def strong(i):
         """A link the Tanakh divides at all but surely, with no mark from the
            English to say so: וַיְהִי before כַּאֲשֶׁר, עַל־כֵּן before its clause, a verb
@@ -509,9 +639,24 @@ def make_weakest(toks, prior, w, ent=None):
            a comma would be, with the house rules still counting against it."""
         if i + 1 >= len(toks): return False
         h, h2 = toks[i][0], toks[i + 1][0]
+        # the link before a word that opens a clause (CLAUSE_OPENERS:
+        # the Tanakh breaks before a bare כִּי 88.7% of the time, כַּאֲשֶׁר 84.1%,
+        # לְמַעַן 83.7%, לְבִלְתִּי 92.2%, וְגַם 94.9%, בַּעֲבוּר 83.3%, עַד 85.5%, וְהִנֵּה
+        # 87.3%, וַיְהִי 95.2%, לָכֵן 93.8%, עַל־כֵּן 90.7%: tools/mt_break_before.json),
+        # whose log-odds here never reach 6.5: the model's prior for a כִּי-link
+        # is a quarter of that. Such a link divides as a comma would and halves
+        # a verse that has no printed mark (וָאֵדַ֖ע גַּ֣ם אֲנִ֑י כִּ֧י, 4:16), but it
+        # is no printed mark: as one it took the etnachta off the comma of 2:3.
+        # Not the phrase heads the same table rates as high (עַל 86%, כֹּל 88%,
+        # וְאֵת 89%): before those the division is a verb's from its complement.
+        # The bare word, or כִּי at the head of its group (כִּי־אִם, כִּי־הוּא): עַד־הַקֵּץ
+        # "unto the end" is a preposition's phrase, not a clause (13:37).
+        # (Before the pair guard below: וְגַם and וְהִנֵּה open with the plain waw.)
+        b2 = bare(h2)
+        if (b2 in CLAUSE_OPENERS or (b2.startswith(u'כי־') and u'־' not in b2[3:])) and not hard(i): return True
         if PLAIN_WAW.match(nfc(h2)) and not PLAIN_WAW.match(nfc(h)): return False
         return weight(i, None, None, None) >= STRONG
-    return weakest, joiner, hard, strong, printed, score
+    return weakest, joiner, hard, strong, printed, score, appos
 
 
 MAX_CHAIN = 3            # dividers of one rank in one domain: the WLC's zaqef chains run to three (four in 0.2%)
@@ -551,13 +696,16 @@ def stop_kinds(entext):
     return kinds[:-1]
 
 
-def punctuation_bounds(n, breaks, entext=None, strong=None, score=None):
+def punctuation_bounds(n, breaks, entext=None, strong=None, score=None, appos=None, first_cut=None):
     """stops -> rank 2, commas -> rank 3, and the links the Tanakh all but
        always divides -> rank 3 too; the etnachta goes to the stop nearest the
        middle, and a sentence's end outranks a clause's: a verse that holds two
        sentences divides between them (Genesis 1:5 divides at לָיְלָה).
        `score(i)`: the model's log-odds for a division after unit i, which
-       settles two stops tied for the middle."""
+       settles two stops tied for the middle; `appos(i)`: the mark closes an
+       apposition ("I, Nephi,") and is not the etnachta while any other is;
+       `first_cut()`: where the grammar itself would first divide the verse,
+       the etnachta of a verse with no mark and no sure link."""
     b = [0] * n
     for i, wgt in breaks:
         if 0 <= i < n - 1: b[i] = 2 if wgt >= 2 else 3
@@ -567,17 +715,38 @@ def punctuation_bounds(n, breaks, entext=None, strong=None, score=None):
             if not b[i] and strong(i): b[i] = 3
     p = None
     if n >= ETNACHTA_MIN:
-        # the printed marks name the etnachta; a strong link only when there are none
-        # (never after the first unit alone: WLC 0.18% of verses; 1 Nephi 13:4
-        # had וָאֵ֑רֶא as a one-word first half off a strong link)
-        marked = [i for i in (printed or [i for i in range(n - 1) if b[i]]) if i >= 1]
+        # the printed marks name the etnachta, the sure links only when there are
+        # none (never after the first unit alone: WLC 0.18% of verses; 1 Nephi
+        # 13:4 had וָאֵ֑רֶא as a one-word first half off a strong link), and the
+        # comma that closes an apposition is neither (12:12 "I, Nephi," had its
+        # etnachta on the name when that comma was the verse's only mark)
+        ok = lambda i: i >= 1 and not (appos and appos(i))
+        marked = [i for i in printed if ok(i)] or [i for i in range(n - 1) if b[i] and ok(i)]
+        # ...though against the chooser's bare guess it does stand: the end of
+        # the subject is a division the Masoretes make (וְעַתָּה לֹא אֲדַבֵּר אֲנִי
+        # נֶפִ֑י אֶת־כׇּל־דִּבְרֵי אָבִי, 8:29, which the guess halved at אֲדַבֵּ֑ר)
+        if not marked: marked = [i for i in printed if i >= 1]
+        if not marked and first_cut and n >= FIRST_CUT_MIN:
+            # no mark and no sure link: the verse is halved all the same, at the
+            # chooser's weakest link (WLC: an etnachta in 92% of eight-unit
+            # verses and nearly every longer one)
+            at = first_cut()
+            if at is not None and 1 <= at < n - 1: b[at] = 1; p = at
         if marked:
             top = min(b[i] for i in marked)
             cands = [i for i in marked if b[i] == top]
+            mid = (n - 1) / 2.0
             if top == 2:
                 kinds = stop_kinds(entext)
                 if len(kinds) == len(cands) and any(kinds):
                     cands = [i for i, k in zip(cands, kinds) if k]
+                # A STOP FAR FROM THE MIDDLE YIELDS TO A COMMA NEAR IT: the speech
+                # colon four words from the end of 16:3 ("and say: Thou speakest
+                # hard things against us") took the etnachta off "give heed unto
+                # it," at the verse's middle. The etnachta keeps to the middle
+                # half of the verse when any mark stands there.
+                if min(abs(i + 0.5 - mid) for i in cands) > n / 4.0 and any(abs(i + 0.5 - mid) <= n / 4.0 for i in marked):
+                    cands = marked
             # TWO STOPS THE SAME DISTANCE FROM THE MIDDLE: the one the Tanakh
             # rates the stronger boundary (the model's log-odds at the link:
             # 1 Nephi 1:11's semicolon over its comma, 1:13's speech end over
@@ -586,7 +755,6 @@ def punctuation_bounds(n, breaks, entext=None, strong=None, score=None):
             # shorter, 58.8%) moved 310 etnachtas and the model backed only
             # 162 of them; taking the earlier is no better. Position is the
             # last resort only.
-            mid = (n - 1) / 2.0
             p = min(cands, key=lambda i: (abs(i + 0.5 - mid), -(score(i) if score else 0.0), -i))
             b[p] = 1
     if p is not None:
@@ -596,13 +764,34 @@ def punctuation_bounds(n, breaks, entext=None, strong=None, score=None):
     return b
 
 
+def printed_marks(key, toks, speak, ent, hand):
+    """The printed English's marks on the Hebrew words: the reader's own
+       extraction (tools/build_bom_breaks.py, the filters of
+       tools/build_volume_breaks.py) run live, as the breath table is built,
+       with two differences. The breaths the extraction adds inside a long
+       clause are left out: they are the breath model's guess at a division,
+       and this builder makes that guess itself from the Tanakh's log-odds (an
+       added breath took the +8 of a printed mark and tore עֹז ׀ וּמָזוֹן,
+       1 Nephi 15:15). And the Masoretes' veto on a pair they never split is
+       kept off a full stop: "unto him. And also" lost its sentence's end to the
+       Tanakh's one לוֹ וְגַם (16:8). A verse the hand phrased stands as phrased
+       (tools/phrase_break_overrides.json)."""
+    if key in hand: return [tuple(x) for x in hand[key]]
+    br = breaks_for(toks, ent, finish=False)
+    stops = [(i, c) for i, c in br if c >= 2]
+    br, _ = drop_split_pairs([(i, c) for i, c in br if c < 2], speak)
+    br, _ = drop_unnatural(sorted(set(br) | set(stops)), speak)
+    return br
+
+
 # ------------------------------------------------------------ main
 def main():
     check = '--check' in sys.argv
     show = set(sys.argv[sys.argv.index('--show') + 1].split(',')) if '--show' in sys.argv else set()
     STRESS = load_js_table(os.path.join(ROOT, 'bom', 'stress.js'), 'SW_STRESS')
     EN = english(ROOT)
-    BREAKS = load_js_table(os.path.join(ROOT, 'bom', 'bom_phrase_breaks.js'), 'SW_BREAKS')
+    hand_path = os.path.join(HERE, 'phrase_break_overrides.json')
+    HAND = json.load(io.open(hand_path, encoding='utf-8')).get('bom', {}) if os.path.exists(hand_path) else {}
     over_path = os.path.join(HERE, 'teamim_overrides.json')
     OVER = json.load(io.open(over_path, encoding='utf-8')) if os.path.exists(over_path) else {}
     prior, w = binding()
@@ -624,13 +813,14 @@ def main():
             ent = EN.get((en, ref[0], ref[1])) if ref else None
             # the reader's breaths were marked for the ear; one after a word that
             # reaches forward (an infinitive absolute, a construct) is no division
-            weakest, joiner, hard, strong, printed, score = make_weakest(speak, prior, w, ent)
+            weakest, joiner, hard, strong, printed, score, appos = make_weakest(speak, prior, w, ent)
             # ...and one inside a pair of names ("Laman | and Lemuel", 3:28) is the
             # English comma landed a word or two off by the alignment
-            marks = [(i, c) for i, c in mend_marks(speak, BREAKS.get(key, []), ent)
-                     if not (0 <= i < n - 1 and (hard(i) or copula_after(speak, i) or pair_link(speak, i)))]
+            marks = [(i, c) for i, c in mend_marks(speak, printed_marks(key, toks, speak, ent, HAND), ent)
+                     if not (0 <= i < n - 1 and (hard(i) or copula_after(speak, i) or pair_link(speak, i) or folded_mark(speak, i)))]
             printed.update(i for i, c in marks)
-            pb = punctuation_bounds(n, marks, ent, strong, score)
+            pb = punctuation_bounds(n, marks, ent, strong, score, appos,
+                                    lambda: G.first_cut(words, STRESS.get, weakest, [i for i in range(n) if appos(i)]))
             if par:
                 bounds, how = par[1], 'mt'
             else:
