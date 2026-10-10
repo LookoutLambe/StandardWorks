@@ -247,8 +247,9 @@ def nfc(h): return ud.normalize('NFC', h or '')
 BINDS = re.compile(r'\b(of|in|to|unto|with|from|upon|on|all|the|a|an|under|over|before|'
                    r'after|against|among|between|into|through|beneath|above|beside|'
                    r'toward|towards|about|and|nor|or|that|which|who|whom|whose|for|but)$', re.I)
-BINDS_HEB = [re.compile(u'^אֵת'), re.compile(u'^אֶת'),
-             re.compile(u'^כׇּל'), re.compile(u'^כָּל')]
+# the whole word: a prefix match took אֶתְגַּלֶּה "I will manifest myself" for
+# אֶת and bound the Lamb's colon to it (1 Nephi 13:35)
+BINDS_HEB = [re.compile(u'^(אֵת|אֶת|כׇּל|כָּל|כֹּל|כׇל|כֹל)$')]
 # the same openers read_aloud.js measured against the accented WLC — 79% to
 # 97% of the time the Masoretes put a break in front of one of these
 OPENERS = [re.compile(u'^וְעַתָּה'), re.compile(u'^לָכֵן'), re.compile(u'^עַל־?כֵּן'),
@@ -504,6 +505,10 @@ def breaks_for(tokens, entext, finish=True):
                 #   children of men, save he shall prepare" found דָּבָר's "a
                 #   thing" in "the thing which he commandeth" (3:7).
                 if hi not in marks and hi < n - 1 and q == hi:
+                    # (the words as written, not their stems: "make an end; for
+                    # I durst not speak" has מְכַלֶּה לְדַבֵּר "of speaking" before
+                    # the stop, and a stem took its "speak" for the one beyond
+                    # it, 1 Nephi 22:29)
                     before = set(norm(x) for x, _ in ew[:j + 1])
                     after = set(norm(x) for x, _ in ew[j + 1:])
                     t = hi
@@ -541,7 +546,9 @@ def breaks_for(tokens, entext, finish=True):
         # breath added before כַּאֲשֶׁר took the etnachta off the printed comma
         # of 1 Nephi 2:3)
         if rate >= MT_BREAK and finish: put(i, 1)
-        elif rate <= MT_BIND and i in marks and i not in from_english: marks.pop(i)
+        # (carrying the mark past the word instead was tried for 2 Nephi 5:10,
+        # whose "judgments," fell before יְהוָה: it re-phrased 60 verses of
+        # 1 Nephi, so that verse is ruled by hand)
         elif rate <= MT_BIND and i in marks: marks.pop(i)
 
     # 5. THE WORDS THAT ALWAYS TAKE A PAUSE AFTER THEM.

@@ -308,10 +308,41 @@ def transposed(toks, i, ent):
         if not gn:
             if all(w in SENSELESS for w in _words(toks[at + 1][1])): at += 1; continue
             break
-        if len(gn) > len(body) or body[-len(gn):] != gn: break
-        if head and gn[0] == head[0]: break
-        body = body[:-len(gn)]; at += 1; j = at
+        # a NOUN's words stand anywhere in the segment before this gloss (a
+        # subject after its verb keeps the English's order inside itself: "the
+        # servants of Laban did not overtake us," is לֹא הִשִּׂיגוּנוּ עַבְדֵי לָבָן,
+        # 1 Nephi 3:27); a verb's must stand just before it (the second וָאֵרֶא
+        # "and I beheld" found the first "beheld" of 11:24)
+        # (not a waw-word: "and upon the plates" opens the next clause, and its
+        # "upon" and "plates" were both in "engraven upon them ... plates of
+        # ore", 1 Nephi 19:1)
+        noun = bool(re.match(r'^H(C/)?(N|Td/|R/N|Rd/N)', morph_of(toks[at + 1][0]))) and not PLAIN_WAW.match(nfc(toks[at + 1][0]))
+        if noun:
+            if not all(w in body for w in gn): break
+        elif len(gn) > len(body) or body[-len(gn):] != gn: break
+        if head and head[0] in gn: break
+        if noun:
+            for w in gn: body.remove(w)
+        else: body = body[:-len(gn)]
+        at += 1; j = at
     return j
+
+def reaches_forward(toks, i):
+    """A MARK ON A WORD THAT REACHES FORWARD BELONGS AFTER WHAT IT REACHES FOR.
+       "the judgments, and the statutes, and the commandments of the Lord" is
+       מִשְׁפְּטֵי יְהוָה וְחֻקָּיו וּמִצְוֹתָיו: the first comma fell on the construct
+       מִשְׁפְּטֵי, the pair filter dropped it (the Tanakh never splits that pair),
+       and the list lost its first member, so the etnachta split it (2 Nephi
+       5:10). A construct, a gloss the next word continues with "of ...", a
+       bare preposition, a word before a bare אֵת: the mark slides to the end
+       of the chain, before the filters see it."""
+    if not (0 <= i < len(toks) - 2): return False
+    h, h2 = toks[i][0], toks[i + 1][0]
+    g2 = toks[i + 1][1].strip().lower()
+    return bool(construct(h, h2) or nfc(h) in PROCLITIC - NEVER_AFTER
+                or (u'\u05be' not in h2 and binds_back(h2))
+                or (re.match(r'of\b', g2) and not (PREP_PREFIX.match(nfc(h2)) and real_prefix(h2))
+                    and not morph_of(h2, last=False).startswith('HD')))
 
 def mend_marks(toks, marks, ent):
     """Misplacements of the English's own marks that the alignment makes
@@ -343,6 +374,9 @@ def mend_marks(toks, marks, ent):
         # (3) the colon that opens a speech is a comma to the breath table
         # (weight 1); to the Masoretes לֵאמֹר before the speech is a stop (13:40)
         if c == 1 and colon and 0 <= i < len(toks) and SPEECH.search(toks[i][1]): c = 2
+        # (6) a mark on a word that reaches forward slides to the end of its
+        # chain (reaches_forward, 2 Nephi 5:10)
+        while reaches_forward(toks, i): i += 1
         out.append((i, c))
     if ent:
         glosses = [[_stem(w) for w in _words(g)] for h, g in toks]
@@ -367,7 +401,16 @@ def mend_marks(toks, marks, ent):
                     t -= 1
                 if ok:
                     out.append((j - 1, 2)); break
-    return sorted(set(out))
+    out = sorted(set(out))
+    # (7) a mark right before a vocative that carries its own mark is the
+    # speech colon before the name the English sets off: "I said: Lord,
+    # whither shall I go" is וָאֹמַר יְהוָה אָנָה, and the Masoretes bind the
+    # verb to the name (וָאֹמַ֣ר יְהוָ֔ה, not two zaqef gadols; 1 Nephi 17:9)
+    drop = set()
+    for (i, c), (i2, c2) in zip(out, out[1:]):
+        if i2 == i + 1 and 0 <= i2 < len(toks) - 1 and NAME_GLOSS.match(toks[i2][1].strip()) and toks[i2][1].strip() in DIVINE:
+            drop.add((i, c))
+    return [m for m in out if m not in drop]
 
 PRON2 = set(u'אתה את אתם אתן'.split())
 
@@ -603,6 +646,12 @@ def make_weakest(toks, prior, w, ent=None):
     def hard(i):
         h, g = toks[i]
         if nfc(h) in EXTRA_NEVER: return True
+        # a bare preposition is joined to its noun: the WLC writes עַל־ 3,220
+        # times against 347 unjoined (עַד 780/312, אֶת 6,718/652, עִם 477/185,
+        # בֵּין conjunctive 117 of 134), so the link after one is never a
+        # division here and the joiner draws the maqqef (עַ֗ל חֶ֤סֶד יְהוָה֙ took a
+        # revia on the preposition, 2 Nephi 4:17)
+        if nfc(h) in PROCLITIC - NEVER_AFTER: return True
         # a maqqef group ends with its last word: וְאִם־אֵין reaches forward as
         # אֵין does (וְאִם־אֵ֔ין צֶ֗דֶק, 2 Nephi 2:13), אֲשֶׁר־לֹא as לֹא
         if u'\u05be' in nfc(h) and nfc(h).split(u'\u05be')[-1] in (NEVER_AFTER | EXTRA_NEVER) - set([u'כׇּל', u'כֹּל', u'כׇל', u'כֹל']): return True
@@ -715,6 +764,10 @@ def make_weakest(toks, prior, w, ent=None):
            governor; then any word that reaches forward"""
         for i in range(hi - 1, lo - 1, -1):
             if i + 1 < len(toks) and nfc(toks[i][0]) in NEVER_AFTER: return i
+        # then a bare preposition (עַל, עַד, אֵין: אֲשֶׁר־אֵ֥ין כָּמוֹה֖וּ joins the
+        # clause particle first, 1 Nephi 17:42)
+        for i in range(hi - 1, lo - 1, -1):
+            if i + 1 < len(toks) and nfc(toks[i][0]) in PROCLITIC: return i
         for i in range(hi - 1, lo - 1, -1):
             if i + 1 < len(toks) and hard(i): return i
         return None
@@ -959,9 +1012,9 @@ def main():
             weakest, joiner, hard, strong, printed, score, appos, list_comma = make_weakest(speak, prior, w, ent)
             # ...and one inside a pair of names ("Laman | and Lemuel", 3:28) is the
             # English comma landed a word or two off by the alignment
-            marks = [(i, c) for i, c in printed_marks(key, toks, speak, ent, HAND)
+            marks = sorted(set((i, c) for i, c in printed_marks(key, toks, speak, ent, HAND)
                      if not (0 <= i < n - 1 and (hard(i) or copula_after(speak, i) or pair_link(speak, i)
-                                                 or folded_mark(speak, i)))]
+                                                 or folded_mark(speak, i)))))
             printed.update(i for i, c in marks)
             pb = punctuation_bounds(n, marks, ent, strong, score, appos,
                                     lambda: G.first_cut(words, STRESS.get, weakest, [i for i in range(n) if appos(i)]),
