@@ -179,7 +179,7 @@ def make_weakest(toks, prior, w):
        the window where the near divider stands (a tifcha within a word or two of
        its etnachta). When even the best link is a hard one, the answer is to
        join a word instead (the joiner)."""
-    HARD, PAIR, FAR, GIVE_UP = -20.0, -4.0, -3.0, -10.0
+    HARD, PAIR, FAR, GIVE_UP, STRONG, BOUND = -20.0, -6.0, -3.0, -10.0, 6.5, 8.0
     def score(i):
         # a bare particle that reaches forward (אֶל יַם־סוּף, עַל אַחֶיךָ) is
         # scored as the Masoretes wrote it, joined to its noun by a maqqef:
@@ -222,18 +222,26 @@ def make_weakest(toks, prior, w):
             # A PAIR STAYS A PAIR: "great and marvelous", "saw and heard" are not
             # divided before their "and" when that leaves the second to end the
             # phrase alone; the division falls earlier and the pair keeps one
-            # accent between them (אֲשֶׁר־רָאָ֣ה וְשָׁמַ֔ע). Not before a silluq or
-            # etnachta: there a list's last two words take tifcha and the clause
-            # accent (גֵּרְשׁ֛וּ וְסָקְל֖וּ וְהָרָ֑גוּ), and the clause must divide.
-            if i + 1 == hi and PLAIN_WAW.match(nfc(h2)) and not PLAIN_WAW.match(nfc(h)) and glabel not in ('silluq', 'etnachta'):
+            # accent between them (אֲשֶׁר־רָאָ֣ה וְשָׁמַ֔ע). Only there: inside a
+            # phrase the "and" may open a new clause ("by the sword | and many")
+            # or a parallel phrase ("a goodly father | and a goodly mother"), and
+            # penalising those tore "and a mother | goodly" instead.
+            if (hi is None or i + 1 == hi) and PLAIN_WAW.match(nfc(h2)) and not PLAIN_WAW.match(nfc(h)):
                 s += PAIR
         if near is not None and i < near: s += FAR * (near - i)
         return s
+    printed = set()        # the links the printed English marks, filled per verse by the caller
     def weakest(units, lo, hi, glabel=None, near=None):
+        # a link the printed English marks is where a forced division of a
+        # higher rank goes, before any link the model alone prefers (the
+        # model's own strong links get no such bonus: that would count its
+        # opinion twice)
+        def total(i):
+            return weight(i, hi, glabel, near) + (BOUND if i in printed else 0.0)
         cands = [i for i in range(lo, hi) if i + 1 < len(toks) and not getattr(units[i], 'locked', False)]
         if not cands: return None
-        best = max(cands, key=lambda i: weight(i, hi, glabel, near))
-        return best if weight(best, hi, glabel, near) > GIVE_UP else None
+        best = max(cands, key=total)
+        return best if total(best) > GIVE_UP else None
     def joiner(units, lo, hi):
         """the word in [lo, hi) to write as if a maqqef joined it to the next: a
            particle first (כִּי, לֹא, אֶל: the ones the Masoretes join), nearest the
@@ -243,7 +251,17 @@ def make_weakest(toks, prior, w):
         for i in range(hi - 1, lo - 1, -1):
             if i + 1 < len(toks) and hard(i): return i
         return None
-    return weakest, joiner, hard
+    def strong(i):
+        """A link the Tanakh divides at all but surely, with no mark from the
+           English to say so: וַיְהִי before כַּאֲשֶׁר, עַל־כֵּן before its clause, a verb
+           of knowing before כִּי. The model's log-odds at 6.5 and above are a
+           disjunctive 92-99% of the time in the WLC; such a link is divided as
+           a comma would be, with the house rules still counting against it."""
+        if i + 1 >= len(toks): return False
+        h, h2 = toks[i][0], toks[i + 1][0]
+        if PLAIN_WAW.match(nfc(h2)) and not PLAIN_WAW.match(nfc(h)): return False
+        return weight(i, None, None, None) >= STRONG
+    return weakest, joiner, hard, strong, printed
 
 
 MAX_CHAIN = 3            # dividers of one rank in one domain: the WLC's zaqef chains run to three (four in 0.2%)
@@ -283,16 +301,22 @@ def stop_kinds(entext):
     return kinds[:-1]
 
 
-def punctuation_bounds(n, breaks, entext=None):
-    """stops -> rank 2, commas -> rank 3; the etnachta goes to the stop nearest
-       the middle, and a sentence's end outranks a clause's: a verse that holds
-       two sentences divides between them (Genesis 1:5 divides at לָיְלָה)."""
+def punctuation_bounds(n, breaks, entext=None, strong=None):
+    """stops -> rank 2, commas -> rank 3, and the links the Tanakh all but
+       always divides -> rank 3 too; the etnachta goes to the stop nearest the
+       middle, and a sentence's end outranks a clause's: a verse that holds two
+       sentences divides between them (Genesis 1:5 divides at לָיְלָה)."""
     b = [0] * n
     for i, wgt in breaks:
         if 0 <= i < n - 1: b[i] = 2 if wgt >= 2 else 3
+    printed = [i for i in range(n - 1) if b[i]]
+    if strong:
+        for i in range(n - 1):
+            if not b[i] and strong(i): b[i] = 3
     p = None
     if n >= ETNACHTA_MIN:
-        marked = [i for i in range(n - 1) if b[i]]
+        # the printed marks name the etnachta; a strong link only when there are none
+        marked = printed or [i for i in range(n - 1) if b[i]]
         if marked:
             top = min(b[i] for i in marked)
             cands = [i for i in marked if b[i] == top]
@@ -338,8 +362,10 @@ def main():
             ent = EN.get((en, ref[0], ref[1])) if ref else None
             # the reader's breaths were marked for the ear; one after a word that
             # reaches forward (an infinitive absolute, a construct) is no division
-            weakest, joiner, hard = make_weakest(speak, prior, w)
-            pb = punctuation_bounds(n, [(i, c) for i, c in BREAKS.get(key, []) if not (0 <= i < n - 1 and hard(i))], ent)
+            weakest, joiner, hard, strong, printed = make_weakest(speak, prior, w)
+            marks = [(i, c) for i, c in BREAKS.get(key, []) if not (0 <= i < n - 1 and hard(i))]
+            printed.update(i for i, c in marks)
+            pb = punctuation_bounds(n, marks, ent, strong)
             if par:
                 bounds, how = par[1], 'mt'
             else:

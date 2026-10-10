@@ -356,14 +356,22 @@ def accent_verse(words, bounds, stress_of=None, weakest=None, stress_letters=Non
     for i in range(n):
         if b[i] == -1:
             b[i] = 0; units[i].locked = True
+        units[i].bound = b[i]          # what the chooser may see of the tree
     b[n - 1] = 0
     joined = set()
     place(units[n - 1], 'silluq')
     if n == 1:
         return [u.encode() for u in units], [u.label for u in units]
 
-    def dividers(s, e):
-        """the divisions inside [s, e): the strongest rank present (smallest number)"""
+    def dividers(s, e, clause=False):
+        """the divisions inside [s, e): the strongest rank present (smallest number).
+           A silluq or etnachta clause is divided by its rank-2 boundaries only:
+           a comma's boundary (rank 3) stays under the tifcha the clause will be
+           forced to take, and rises to a zaqef only when that domain outgrows
+           its accent (וַיְהִ֗י כַּאֲשֶׁ֥ר הָלַ֛ךְ שְׁלֹ֥שֶׁת יָמִ֖ים בַּמִּדְבָּ֑ר: a revia under
+           the tifcha, not a zaqef of its own)."""
+        if clause:
+            return [i for i in range(s, e) if b[i] == 2]
         rs = [b[i] for i in range(s, e) if b[i]]
         if not rs: return []
         r = min(rs)
@@ -372,7 +380,8 @@ def accent_verse(words, bounds, stress_of=None, weakest=None, stress_letters=Non
     def assign(s, e, glabel, grank):
         """units[e] carries glabel (rank grank); name everything in [s, e)."""
         g = units[e]
-        divs = dividers(s, e)
+        is_clause = glabel in ('silluq', 'etnachta')
+        divs = dividers(s, e, is_clause)
         limit = MAX_SERVANTS.get(glabel, 0)
         # a tail longer than the governor allows is divided again, at the weakest
         # link; a silluq or etnachta clause is divided whatever its length
@@ -403,7 +412,8 @@ def accent_verse(words, bounds, stress_of=None, weakest=None, stress_letters=Non
             if at is None or at < lo or at > e - 1: at = near
             while at in joined and at > lo: at -= 1
             b[at] = b[divs[0]] if divs else min(grank + 1, 4)
-            divs = dividers(s, e)
+            units[at].bound = b[at]
+            divs = dividers(s, e, is_clause)
 
         def label_divs(divs):
             k = len(divs)
@@ -455,12 +465,17 @@ def accent_verse(words, bounds, stress_of=None, weakest=None, stress_letters=Non
                 prev = divs[idx - 1] if idx > 0 else s - 1
                 own = sum(1 for i in range(prev + 1, d + 1) if i not in joined)
                 cap = MAX_DOMAIN.get(labels[idx], 99)
+                # a domain that opens with a division of its own, a one-word
+                # clause like וַיְהִי, may run one unit over: its five units are
+                # "revia ... tevir ... tifcha" (וַיְהִ֗י כַּאֲשֶׁ֥ר הָלַ֛ךְ שְׁלֹ֥שֶׁת יָמִ֖ים)
+                if d > prev + 1 and b[prev + 1]: cap += 1
                 if own <= cap: continue
                 lo = prev + 1
                 at = weakest(units, lo, d, labels[idx], max(lo, d - cap))
                 if at is None: continue
                 b[at] = b[d]
-                divs = dividers(s, e)
+                units[at].bound = b[at]
+                divs = dividers(s, e, is_clause)
                 labels = label_divs(divs)
                 grew = True
                 break
