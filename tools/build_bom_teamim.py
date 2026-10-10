@@ -137,13 +137,23 @@ def binding():
 CONSTRUCT_PL = re.compile(u'ֵי$')     # a tsere-yod ending: the plural construct (דִּבְרֵי, בְּנֵי)
 # מִ / מֵ ("from") and לְ / לַ / לִ ("to", "of") are prepositions, glossed "of" too
 PREP_PREFIX = re.compile(u'^(מ[ִֵ]|ל[ְִַָ])')
-PLAIN_WAW = re.compile(u'^ו[ְּ]')      # וְ or וּ: the coordinating waw (not the wayyiqtol's וַ)
+# וְ or וּ, or וַ before an alef with a hataf (וַאֲבוֹתָיו, וַאֲנִי): the coordinating
+# waw, not the wayyiqtol's וַ (and not וַהֲ, וַעֲ: וַהֲמִיתִיךָ, וַעֲשִׂיתֶם are verbs)
+PLAIN_WAW = re.compile(u'^ו[ְּ]|^וַא[ֱֲֳ]')
 NAME_GLOSS = re.compile(r"^[A-Z][a-z']+$")  # a gloss that is one capitalised word: a name
 TENS = {u'עשר', u'עשרה'}                        # the second word of a compound numeral (שְׁנֵים עָשָׂר)
 # a title that stands before a name is one breath with it: "my father, Lehi"
 # (the reader's own rule, tools/build_volume_breaks.py)
-TITLE_BEFORE_NAME = set(u'אני אנכי אבי אמי אחי אחיו אביו אמו בני בנו בתו אשתו אביהם אחיהם אחיך אביך בנך '
-                        u'אחינו אבינו אחיכם אביכם בניו בנינו בניהם אחותי אחותו אשתי אמם'.split())
+# a kin word, bare or with its suffix (אָבִי, אַחֶיךָ, אֲבוֹתָיו, אִשְׁתּוֹ): the
+# title before a name, and a member of a compound subject
+# (both mem and nun forms: bare אֵם ends in ם, אִמִּי has the medial מ)
+KIN = re.compile(u'^(אב|אח|א[מם]|ב[נן]|בת|אשת|אחות)(ות|י)?(י|ך|ו|ה|נו|כם|כן|הם|הן|יו|יך|יה|ינו|יכם|יהם)?$')
+def title_word(h):
+    """the word a name follows as its title: a kin word or אֲנִי (אָבִי לֶחִי,
+       אֲנִי נֶפִי); of a group its last word (אֶת־אִמִּי שְׂרָיָה, 5:6, where the
+       comma after "mother," used to land as a tifcha between them)"""
+    b = bare(h).split(u'־')[-1]
+    return b in (u'אני', u'אנכי') or bool(KIN.match(b))
 # the pronouns that make a compound subject (אֲנִי וְאַחַי, אַתָּה וְאַחֶיךָ): the first
 # and second persons only. Bare הוּא ends a clause or opens the next one far
 # more often than it joins a pair (WLC: a disjunctive follows it 81% of the
@@ -158,7 +168,7 @@ def nominal(h, g):
     h = nfc(h)
     if PLAIN_WAW.match(h): h, g = h[2:], re.sub(r'^and[- ]', '', g.strip(), flags=re.I)
     b = bare(h)
-    return b in PRON or b in TITLE_BEFORE_NAME or bool(NAME_GLOSS.match(g.strip()))
+    return b in PRON or bool(KIN.match(b)) or bool(NAME_GLOSS.match(g.strip()))
 
 def pair_link(toks, i):
     """The link inside a pair of names: "Laman and Lemuel", "I and my
@@ -170,8 +180,14 @@ def pair_link(toks, i):
        and the model's own preference settles which)."""
     if i + 1 >= len(toks): return False
     (h, g), (h2, g2) = toks[i], toks[i + 1]
-    if u'־' in h2 or not PLAIN_WAW.match(nfc(h2)): return False
-    return nominal(h, g) and nominal(h2, g2)
+    if u'־' in h2 or not PLAIN_WAW.match(nfc(h2)) or not nominal(h2, g2): return False
+    # "I, Nephi, | and I bear record" (14:27): a pronoun after the "and" opens a
+    # clause of its own; the pair's second member is a name or a kin word
+    if bare(nfc(h2)[2:]) in PRON: return False
+    if nominal(h, g): return True
+    # a third-person pronoun opens a pair only before a name or a kin word
+    # (ה֖וּא וַאֲבוֹתָ֥יו, 5:16); before anything else bare הוּא ends its clause
+    return bare(h) in PRON3 and bare(nfc(h2)[2:]) not in PRON
 
 # the most a pair's link may score: a weak link, whatever the model says of it
 # (its log-odds for אַתָּה וְאַחֶיךָ are +8.4, the Tanakh's clause-final "thou"; a
@@ -214,6 +230,12 @@ def shares_root(h, h2):
         # behind the prefix the whole root: two letters matched לָבָן to וָאֶלְבַּשׁ
         # (1 Nephi 4:19); a geminate root keeps one of its pair (אָרֹר אָאֹר)
         return b[1:4] == a or (a[1] == a[2] and b[1:3] == a[:2])
+    # the pair is a verb and its verb: a noun of the same root is not it
+    # (דַבְּרִי אֶת־הַדְּבָרִים, לְדַבֵּר אֶת־הַדְּבָרִים bound as if infinitive absolutes,
+    # 1 Nephi 4:4, 10:22), by the Tanakh's analysis where it has the form
+    is_verb = lambda m: bool(re.search(r'(^H|/)V', m))        # a V segment anywhere: HVqp3ms/Sp1bs
+    m1, m2 = morph_of(h), morph_of(h2)
+    if (m1 and not is_verb(m1)) or (m2 and not is_verb(m2)): return False
     # as written, then with the matres out (אָרוֹר תֵּאָרֵר, Jacob 2:29; but הָיֹה
     # יִהְיֶה keeps its yod and matches as written)
     strip = lambda s: re.sub(u'[וי]', '', s)
@@ -249,8 +271,18 @@ def morph_of(h, last=True):
     """the morph code of a word; of a maqqef group, its last word (the one
        that reaches forward: אֶת־עֶבֶד) or its first"""
     parts = nfc(h).split(u'־')
-    e = attested(parts[-1] if last else parts[0])
-    return e[1] if e else ''
+    w = parts[-1] if last else parts[0]
+    e = attested(w)
+    if e: return e[1]
+    # a form the Tanakh lacks only for its prefix (הֶעָנָף, וְהָאָרֶץ): peel the
+    # article or a one-letter prefix and read the rest, as the table's own
+    # segments do (HTd/Ncmsa)
+    m = re.match(u'^(ו[ְַּ]|ה[ֶַָ]|[בלכמש][ְִֵַָּ])', w)
+    if m:
+        rest = w[m.end():]
+        e = attested(rest) or attested(rest.replace(u'ּ', u'', 1))
+        if e: return ('HTd/' if m.group(1)[0] == u'ה' else 'HX/') + e[1][1:]
+    return ''
 
 def real_prefix(h):
     """The מֵ or לְ this word opens with is a preposition (מֵאֱלֹהִים, לְמַלְכוּת),
@@ -284,7 +316,8 @@ def attributive(h, h2):
     """a noun and the bare adjective after it (כֹּחַ רַב, זָהָב טָהוֹר), both
        absolute: divided between 21% of the time in the WLC"""
     if u'־' in h2: return False
-    m1, m2 = morph_of(h), morph_of(h2, last=False)
+    article = lambda m: re.sub(r'^HTd/', 'H', m)        # הֶעָנָף הַצַּדִּיק as much as עָנָף צַדִּיק
+    m1, m2 = article(morph_of(h)), article(morph_of(h2, last=False))
     return m1.startswith('HNc') and m1.endswith('a') and m2.startswith('HAa') and m2.endswith('a')
 
 
@@ -335,7 +368,10 @@ def make_weakest(toks, prior, w):
             if shares_root(h, h2): return True
             # a compound numeral (שְׁנֵים עָשָׂר) and a title before a name (אָבִי לֶחִי)
             if bare(h2) in TENS: return True
-            if bare(h) in TITLE_BEFORE_NAME and NAME_GLOSS.match(g2.strip()): return True
+            if title_word(h) and NAME_GLOSS.match(g2.strip()): return True
+            # a bare demonstrative stays with its noun (לוּחוֹת הַנְּחֹשֶׁת הָאֵלֶּה, 5:18:
+            # the WLC divides before one 12% of the time against 61% for any word)
+            if u'־' not in h2 and bare(h2) in DEMONSTRATIVE: return True
         return False
     def weight(i, hi, glabel, near):
         s = score(i)
@@ -378,6 +414,9 @@ def make_weakest(toks, prior, w):
         cands = [i for i in range(lo, hi) if i + 1 < len(toks) and not getattr(units[i], 'locked', False)]
         if not cands: return None
         best = max(cands, key=total)
+        # (dividing a merely unlikely link rather than joining was tried for
+        # 1 Nephi 4:4 and gave אֶת־אֲשֶׁ֥ר צִוָּ֛ה יְהוָ֖ה and כִּ֥י אֵין֙ יְהוָ֔ה: a verb
+        # cut from its subject; the join, אֲשֶׁר־צִוָּ֥ה, is the Masoretes' own)
         return best if total(best) > GIVE_UP else None
     def joiner(units, lo, hi):
         """the word in [lo, hi) to write as if a maqqef joined it to the next: a
