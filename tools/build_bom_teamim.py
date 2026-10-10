@@ -335,6 +335,24 @@ def folded_mark(toks, i):
     g = toks[i][1]
     return bool(re.search(r'[,;:]\s*[A-Za-z]', g)) and not g.rstrip().endswith((',', ';', ':'))
 
+# the English's opening connectives, whose comma is a mark of writing: the
+# aligner sets it after the Hebrew verb when the Hebrew says the verb before
+# the subject ("Yea, my father spake much" is אַף הִרְבָּה אָבִי, 10:12; "Now, my
+# father had begat" וְעַתָּה הוֹלִיד אָבִי, 18:7; "and also, my brethren took"
+# וְגַם לָקְחוּ אַחַי, 16:7)
+CONNECTIVES = set(['yea', 'now', 'and now', 'wherefore', 'therefore', 'also', 'and also', 'behold',
+                   'and behold', 'for behold', 'but behold', 'nevertheless', 'yea even', 'and', 'but',
+                   'for', 'and thus', 'thus', 'and it came to pass', 'and it came to pass that'])
+def connective_comma(toks, i, ent):
+    """A mark that is an opening connective's comma landed a token late, or
+       the comma after a connective the breath table does not list (כֵּן "Yea,",
+       11:5): no division."""
+    g = re.sub(r'[^a-z ]', '', toks[i][1].lower()).strip()
+    if g in CONNECTIVES: return True
+    if i < 1 or not ent: return False
+    gp = re.sub(r'[^a-z ]', '', toks[i - 1][1].lower()).strip()
+    return gp in CONNECTIVES and bool(re.search(r'\b' + re.escape(gp.split()[-1]) + r',', ent, re.I))
+
 def copula_after(toks, i):
     """A printed mark that falls right before a bare הוּא, הִיא or הֵם glossed as
        a copula ("he is", "they are") is the English comma carried one word too
@@ -353,7 +371,10 @@ PREFIXES = u'והלבכמש'
 EXTRA_NEVER = set(u'אֵצֶל תַּחַת מוּל נֶגֶד לִפְנֵי אַחֲרֵי בְּתוֹךְ מִתּוֹךְ סְבִיב'.split())
 PROCLITIC = set(NEVER_AFTER) | EXTRA_NEVER | set(u'עַל מִן עַד אֵת אֶת בֵּין אַל פֶּן עִם'.split())
 DEMONSTRATIVE = set(u'ההוא ההיא הזה הזאת האלה ההם ההן ההמה'.split())
-CLAUSE_OPENERS = set(u'כי כאשר וכאשר למען ולמען לבלתי וגם בעבור ובעבור עד והנה ויהי לכן ולכן על־כן ועל־כן'.split())
+# pointed, and matched pointed: the consonants of וְהִנֵּה "and behold" are those
+# of וָהֵנָּה "and thither" (הֵנָּה וָהֵנָּה, 17:26)
+CLAUSE_OPENERS = set(N(w) for w in u'כִּי כַּאֲשֶׁר וְכַאֲשֶׁר לְמַעַן וּלְמַעַן לְבִלְתִּי וְגַם בַּעֲבוּר וּבַעֲבוּר עַד וְהִנֵּה וַיְהִי לָכֵן וְלָכֵן עַל־כֵּן וְעַל־כֵּן'.split())
+KI_MAQQEF = N(u'כִּי־')     # (NFC, as the corpus is read: the marks of a letter in canonical order)
 
 def stem3(h):
     """the first three root letters, past the one-letter prefixes and a maqqef"""
@@ -446,6 +467,9 @@ def real_prefix(h):
     # מִן or the article (מִגִּבּוֹרֵיהֶם, לַמֶּלֶךְ); otherwise what follows must be a form it has
     # (NFC puts the letter's vowel before its dagesh: גִּ is ג, hiriq, dagesh)
     if re.match(u'^[מל][ִַ][א-ת][ְ-ֻ]?ּ', h): return True
+    # מֵ before a guttural or resh is מִן with its vowel lengthened (מֵעוֹרוֹת
+    # "of the skins", 17:11; מֵאֶרֶץ, מֵרֹאשׁ): a noun's own מֵ there is rare
+    if re.match(u'^מֵ[אהחער]', h): return True
     rest = h[2:]
     return attested(rest) is not None or attested(rest.replace(u'ּ', u'', 1)) is not None
 
@@ -539,8 +563,9 @@ def make_weakest(toks, prior, w, ent=None):
             # ...and unless this word is an adjective in the absolute (כַּדּוּר עָגֹל
             # מַעֲשֵׂה חֹשֵׁב "a round ball of curious workmanship", 16:10): the WLC
             # divides after one before a construct noun 100% of the time (80)
+            # ...and unless the next word is an adverb ("of a truth" is אׇמְנָם, 19:2)
             if re.match(r'of\b', g2.strip().lower()) and not (PREP_PREFIX.match(nfc(h2)) and real_prefix(h2)) \
-               and not re.match(r'^H(Td/)?Aa.*a$', morph_of(h)): return True
+               and not re.match(r'^H(Td/)?Aa.*a$', morph_of(h)) and not morph_of(h2, last=False).startswith('HD'): return True
             # the infinitive absolute before its verb (עָזֹב לֹא־עֲזָבַנִי, מוֹת תָּמוּת)
             if shares_root(h, h2): return True
             # a compound numeral (שְׁנֵים עָשָׂר) and a title before a name (אָבִי לֶחִי)
@@ -631,6 +656,31 @@ def make_weakest(toks, prior, w, ent=None):
         # as a name and is no name, 11:21)
         if i < 1 or not NAME_GLOSS.match(g) or g in DIVINE: return False
         return title_word(toks[i - 1][0]) or bool(re.match(r'^H(R|Rd|To)/Sp', morph_of(toks[i - 1][0])))
+    def list_comma(i):
+        """The commas inside a list of nouns, "nations, kindreds, tongues, and
+           people shall dwell" (22:28): a run of two or more marked nouns in a
+           row whose next word is the "and"-noun that ends the list. The
+           English's commas, which halved the verse inside its subject; the
+           division that stands for them is the one after the list's last
+           member. Returns that member's index, or None. One marked noun
+           before an "and"-noun is no list ("filled with joy, and my mother",
+           5:1)."""
+        # a member of the list by its last word (כׇּל־הַגּוֹיִם is one), the closing
+        # "and"-noun by its first; a form the Tanakh lacks reads past its prefix (HX/)
+        noun = lambda k, last=True: bool(re.match(r'^H(Td/)?(Nc|Aa|Np)', re.sub(r'^H[CX]/', 'H', morph_of(toks[k][0], last=last))))
+        if i not in printed or not noun(i): return None
+        lo, hi = i, i
+        while lo - 1 in printed and noun(lo - 1): lo -= 1
+        while hi + 1 in printed and noun(hi + 1): hi += 1
+        if not (hi - lo + 1 >= 2 and hi + 1 < len(toks) and u'־' not in toks[hi + 1][0]
+                and noun(hi + 1, False) and PLAIN_WAW.match(nfc(toks[hi + 1][0]))): return None
+        # the last member with its adjective or participle ("and fine-twined
+        # linen" is וְשֵׁשׁ מׇשְׁזָר, 13:7: the division after שֵׁשׁ cut the phrase)
+        e = hi + 1
+        h = nfc(toks[e][0]); h = h[2:] if PLAIN_WAW.match(h) else h
+        if e + 1 < len(toks) - 1 and (attributive(h, toks[e + 1][0]) or
+           (re.match(r'^H(Td/)?(Nc|Ac|Aa)', morph_of(h)) and re.match(r'^H(Td/)?V.[rs]', morph_of(toks[e + 1][0], last=False)))): e += 1
+        return e
     def strong(i):
         """A link the Tanakh divides at all but surely, with no mark from the
            English to say so: וַיְהִי before כַּאֲשֶׁר, עַל־כֵּן before its clause, a verb
@@ -652,11 +702,11 @@ def make_weakest(toks, prior, w, ent=None):
         # The bare word, or כִּי at the head of its group (כִּי־אִם, כִּי־הוּא): עַד־הַקֵּץ
         # "unto the end" is a preposition's phrase, not a clause (13:37).
         # (Before the pair guard below: וְגַם and וְהִנֵּה open with the plain waw.)
-        b2 = bare(h2)
-        if (b2 in CLAUSE_OPENERS or (b2.startswith(u'כי־') and u'־' not in b2[3:])) and not hard(i): return True
+        p2 = nfc(h2)
+        if (p2 in CLAUSE_OPENERS or (p2.startswith(KI_MAQQEF) and u'־' not in p2[len(KI_MAQQEF):])) and not hard(i): return True
         if PLAIN_WAW.match(nfc(h2)) and not PLAIN_WAW.match(nfc(h)): return False
         return weight(i, None, None, None) >= STRONG
-    return weakest, joiner, hard, strong, printed, score, appos
+    return weakest, joiner, hard, strong, printed, score, appos, list_comma
 
 
 MAX_CHAIN = 3            # dividers of one rank in one domain: the WLC's zaqef chains run to three (four in 0.2%)
@@ -696,7 +746,7 @@ def stop_kinds(entext):
     return kinds[:-1]
 
 
-def punctuation_bounds(n, breaks, entext=None, strong=None, score=None, appos=None, first_cut=None):
+def punctuation_bounds(n, breaks, entext=None, strong=None, score=None, appos=None, first_cut=None, list_comma=None):
     """stops -> rank 2, commas -> rank 3, and the links the Tanakh all but
        always divides -> rank 3 too; the etnachta goes to the stop nearest the
        middle, and a sentence's end outranks a clause's: a verse that holds two
@@ -720,18 +770,32 @@ def punctuation_bounds(n, breaks, entext=None, strong=None, score=None, appos=No
         # 13:4 had וָאֵ֑רֶא as a one-word first half off a strong link), and the
         # comma that closes an apposition is neither (12:12 "I, Nephi," had its
         # etnachta on the name when that comma was the verse's only mark)
-        ok = lambda i: i >= 1 and not (appos and appos(i))
-        marked = [i for i in printed if ok(i)] or [i for i in range(n - 1) if b[i] and ok(i)]
-        # ...though against the chooser's bare guess it does stand: the end of
-        # the subject is a division the Masoretes make (וְעַתָּה לֹא אֲדַבֵּר אֲנִי
-        # נֶפִ֑י אֶת־כׇּל־דִּבְרֵי אָבִי, 8:29, which the guess halved at אֲדַבֵּ֑ר)
-        if not marked: marked = [i for i in printed if i >= 1]
+        # the commas of a list are one division, after the list's last member
+        ends = sorted(set(list_comma(i) for i in printed if list_comma and list_comma(i)))
+        for e in ends:
+            if e < n - 1 and not b[e]: b[e] = 3
+        clean = lambda i: i >= 1 and not (appos and appos(i)) and not (list_comma and list_comma(i))
+        marked = [i for i in printed if clean(i)] + [e for e in ends if 1 <= e < n - 1 and e not in printed]
+        marked = marked or [i for i in range(n - 1) if b[i] and clean(i)]
+        # ...though against the chooser's bare guess the apposition's comma does
+        # stand: the end of the subject is a division the Masoretes make (וְעַתָּה
+        # לֹא אֲדַבֵּר אֲנִי נֶפִ֑י אֶת־כׇּל־דִּבְרֵי אָבִי, 8:29, which the guess halved
+        # at אֲדַבֵּ֑ר); the list's comma does not
+        if not marked: marked = [i for i in printed if i >= 1 and not (list_comma and list_comma(i))]
+        # a sure link with no printed mark halves the verse only from its middle
+        # half: אַ֖ף הֲתַחְשְׁב֑וּ כִּ֤י (17:24, two units against nine) is the
+        # chooser's own call instead
+        if marked and not printed and first_cut and n >= FIRST_CUT_MIN \
+           and all(abs(i + 0.5 - (n - 1) / 2.0) > n / 4.0 for i in marked):
+            at = first_cut()
+            if at is not None and abs(at + 0.5 - (n - 1) / 2.0) <= n / 4.0: marked = [at]
         if not marked and first_cut and n >= FIRST_CUT_MIN:
             # no mark and no sure link: the verse is halved all the same, at the
             # chooser's weakest link (WLC: an etnachta in 92% of eight-unit
             # verses and nearly every longer one)
             at = first_cut()
             if at is not None and 1 <= at < n - 1: b[at] = 1; p = at
+        if not marked and p is None: marked = [i for i in printed if i >= 1]
         if marked:
             top = min(b[i] for i in marked)
             cands = [i for i in marked if b[i] == top]
@@ -813,16 +877,24 @@ def main():
             ent = EN.get((en, ref[0], ref[1])) if ref else None
             # the reader's breaths were marked for the ear; one after a word that
             # reaches forward (an infinitive absolute, a construct) is no division
-            weakest, joiner, hard, strong, printed, score, appos = make_weakest(speak, prior, w, ent)
+            weakest, joiner, hard, strong, printed, score, appos, list_comma = make_weakest(speak, prior, w, ent)
             # ...and one inside a pair of names ("Laman | and Lemuel", 3:28) is the
             # English comma landed a word or two off by the alignment
             marks = [(i, c) for i, c in mend_marks(speak, printed_marks(key, toks, speak, ent, HAND), ent)
-                     if not (0 <= i < n - 1 and (hard(i) or copula_after(speak, i) or pair_link(speak, i) or folded_mark(speak, i)))]
+                     if not (0 <= i < n - 1 and (hard(i) or copula_after(speak, i) or pair_link(speak, i)
+                                                 or folded_mark(speak, i) or connective_comma(speak, i, ent)))]
             printed.update(i for i, c in marks)
             pb = punctuation_bounds(n, marks, ent, strong, score, appos,
-                                    lambda: G.first_cut(words, STRESS.get, weakest, [i for i in range(n) if appos(i)]))
+                                    lambda: G.first_cut(words, STRESS.get, weakest, [i for i in range(n) if appos(i)]),
+                                    list_comma)
             if par:
                 bounds, how = par[1], 'mt'
+                # the MT's etnachta fell on a word the alignment could not pair
+                # (the clauses cross: Isaiah's וּמִמֵּי יְהוּדָה יָצָאוּ is 1 Nephi
+                # 20:1's וַאֲשֶׁר יָצְאוּ מִמֵּי יְהוּדָה, and the verse ran 25 units
+                # with no main division): the printed English's stands in
+                if 1 not in bounds and n >= ETNACHTA_MIN and 1 in pb:
+                    bounds = list(bounds); bounds[pb.index(1)] = 1
             else:
                 bounds, how = pb, 'english'
             if key in OVER:

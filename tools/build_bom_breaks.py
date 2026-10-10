@@ -352,7 +352,8 @@ def breaks_for(tokens, entext, finish=True):
     """[(index_into_speakable, class)] for one verse, or [] if it cannot be read.
        finish=False leaves out the finishing for the ear: the floor under a
        phrase, the tail, the breaks the Masoretes' habits add before כִּי and
-       its kind, and the breaths the model adds inside a long clause.
+       its kind, the breath model's veto on a printed mark, and the breaths the
+       model adds inside a long clause.
        The cantillation builder wants the printed marks alone, every one of
        them (a one-word last phrase is a silluq with its tifcha before it),
        and divides the long clauses by its own reckoning."""
@@ -493,7 +494,10 @@ def breaks_for(tokens, entext, finish=True):
     #  1 Nephi 1:1 that survives. Only the ENGLISH's breaks are open to this —
     #  the corpus's own marks and the words that always break are not.
     for i in list(marks):
-        if i in from_english and breakiness(speak, i) < VETO: marks.pop(i); continue
+        # (the cantillation builder keeps its own veto, its Tanakh log-odds with
+        # the house rules on them; this model held "that great work; | and ye
+        # know" bound and took the stop off 1 Nephi 17:26)
+        if finish and i in from_english and breakiness(speak, i) < VETO: marks.pop(i); continue
     for i in list(marks):
         if nfc(speak[i][0]) in ALWAYS_AFTER: continue    # these always win
         gl = speak[i][1].rstrip(u' ,;:.\u2014')
