@@ -56,7 +56,8 @@ OUT = os.path.join(ROOT, 'bom', 'teamim')
 sys.path.insert(0, HERE)
 import teamim_grammar as G
 from learn_teamim import prose_verses, RANK
-from build_bom_breaks import (BOOKS, corpus, english, silent, feats as pair_feats,
+from learn_teamim import pair_feats
+from build_bom_breaks import (BOOKS, corpus, english, silent,
                               NEVER_AFTER, BINDS, binds_back, nfc)
 
 N = lambda s: ud.normalize('NFC', s)
@@ -134,7 +135,14 @@ def binding():
 
 
 CONSTRUCT_PL = re.compile(u'ֵי$')     # a tsere-yod ending: the plural construct (דִּבְרֵי, בְּנֵי)
-MIN_PREFIX = re.compile(u'^מ[ִֵ]')  # מִ / מֵ: the preposition "from", glossed "of" too
+# מִ / מֵ ("from") and לְ / לַ / לִ ("to", "of") are prepositions, glossed "of" too
+PREP_PREFIX = re.compile(u'^(מ[ִֵ]|ל[ְִַָ])')
+PLAIN_WAW = re.compile(u'^ו[ְּ]')      # וְ or וּ: the coordinating waw (not the wayyiqtol's וַ)
+NAME_GLOSS = re.compile(r"^[A-Z][a-z']+$")  # a gloss that is one capitalised word: a name
+TENS = {u'עשר', u'עשרה'}                        # the second word of a compound numeral (שְׁנֵים עָשָׂר)
+# a title that stands before a name is one breath with it: "my father, Lehi"
+# (the reader's own rule, tools/build_volume_breaks.py)
+TITLE_BEFORE_NAME = set(u'אני אנכי אבי אמי אחי אחיו אביו אמו בני בנו בתו אשתו אביהם אחיהם אחיך אביך בנך'.split())
 PREFIXES = u'והלבכמש'
 
 def stem3(h):
@@ -144,36 +152,64 @@ def stem3(h):
     return s[:3]
 
 def make_weakest(toks, prior, w):
-    """The position in [lo, hi) after which a phrase most plausibly ends, by the
-       Tanakh's log-odds; never after a word that reaches forward (אֲשֶׁר, כִּי, a
-       construct: the WLC puts a disjunctive after a tsere-yod construct 17.6% of
-       the time against 60.8% for any word) and never before אֶת or כׇּל, unless
-       nothing else is allowed."""
+    """Where a phrase most plausibly ends, by the Tanakh's log-odds that a
+       disjunctive follows a word, with the rules of the house laid on as
+       penalties rather than walls: a wall narrows a window down to whatever is
+       left in it ("and a mother | goodly"), a penalty lets the best link win and
+       tips only the close calls. HARD (the Masoretes do not do it): after a word
+       that reaches forward (אֲשֶׁר, כִּי, a construct: the WLC puts a disjunctive
+       after a tsere-yod construct 17.6% of the time against 60.8% for any word),
+       before a bare אֶת or כׇּל, inside a compound numeral, between a title and
+       its name, between the infinitive absolute and its verb. SOFT: before the
+       "and" of a pair that ends the phrase ("great and marvelous"), and outside
+       the window where the near divider stands (a tifcha within a word or two of
+       its etnachta). When even the best link is a hard one, the answer is to
+       join a word instead (the joiner)."""
+    HARD, PAIR, FAR, GIVE_UP = -20.0, -4.0, -3.0, -10.0
     def score(i):
         return prior + sum(w.get(k, 0.0) for k in pair_feats(toks, i))
-    def allowed(i):
+    def hard(i):
         h, g = toks[i]
-        if nfc(h) in NEVER_AFTER: return False
-        if BINDS.search(g.rstrip(u' ,;:.—').strip()): return False
-        if CONSTRUCT_PL.search(nfc(h).replace(u'־', u'')): return False
+        if nfc(h) in NEVER_AFTER: return True
+        if BINDS.search(g.rstrip(u' ,;:.\u2014').strip()): return True
+        if CONSTRUCT_PL.search(nfc(h).replace(u'\u05be', u'')): return True
         if i + 1 < len(toks):
             h2, g2 = toks[i + 1]
             # a bare אֶת or כׇּל reaches back; joined by a maqqef to its noun it is
             # the noun's own unit and a phrase ends before it as before any other
             # (וַיַּ֥רְא אֱלֹהִ֖ים אֶת־הָא֑וֹר)
-            if u'־' not in h2 and binds_back(h2): return False
+            if u'\u05be' not in h2 and binds_back(h2): return True
             # this volume glosses a construct "the mercy" + "of the Lord": the
             # "of" on the next word says the two are one chain, unless that
-            # word carries the preposition מִן ("ask of God", מֵאֱלֹהִים)
-            if re.match(r'of\b', g2.strip().lower()) and not MIN_PREFIX.match(nfc(h2)): return False
+            # word carries a preposition ("ask of God" מֵאֱלֹהִים, "of the
+            # reign" לְמַלְכוּת)
+            if re.match(r'of\b', g2.strip().lower()) and not PREP_PREFIX.match(nfc(h2)): return True
             # the infinitive absolute before its verb (עָזֹב לֹא־עֲזָבַנִי, מוֹת תָּמוּת)
-            if len(stem3(h)) == 3 and stem3(h) == stem3(h2): return False
-        return True
-    def weakest(units, lo, hi):
+            if len(stem3(h)) == 3 and stem3(h) == stem3(h2): return True
+            # a compound numeral (שְׁנֵים עָשָׂר) and a title before a name (אָבִי לֶחִי)
+            if bare(h2) in TENS: return True
+            if bare(h) in TITLE_BEFORE_NAME and NAME_GLOSS.match(g2.strip()): return True
+        return False
+    def weight(i, hi, glabel, near):
+        s = score(i)
+        if hard(i): s += HARD
+        if i + 1 < len(toks):
+            h, h2 = toks[i][0], toks[i + 1][0]
+            # A PAIR STAYS A PAIR: "great and marvelous", "saw and heard" are not
+            # divided before their "and" when that leaves the second to end the
+            # phrase alone; the division falls earlier and the pair keeps one
+            # accent between them (אֲשֶׁר־רָאָ֣ה וְשָׁמַ֔ע). Not before a silluq or
+            # etnachta: there a list's last two words take tifcha and the clause
+            # accent (גֵּרְשׁ֛וּ וְסָקְל֖וּ וְהָרָ֑גוּ), and the clause must divide.
+            if i + 1 == hi and PLAIN_WAW.match(nfc(h2)) and not PLAIN_WAW.match(nfc(h)) and glabel not in ('silluq', 'etnachta'):
+                s += PAIR
+        if near is not None and i < near: s += FAR * (near - i)
+        return s
+    def weakest(units, lo, hi, glabel=None, near=None):
         cands = [i for i in range(lo, hi) if i + 1 < len(toks)]
         if not cands: return None
-        ok = [i for i in cands if allowed(i)]
-        return max(ok, key=score) if ok else None
+        best = max(cands, key=lambda i: weight(i, hi, glabel, near))
+        return best if weight(best, hi, glabel, near) > GIVE_UP else None
     def joiner(units, lo, hi):
         """the word in [lo, hi) to write as if a maqqef joined it to the next: a
            particle first (כִּי, לֹא, אֶל: the ones the Masoretes join), nearest the
@@ -181,7 +217,7 @@ def make_weakest(toks, prior, w):
         for i in range(hi - 1, lo - 1, -1):
             if i + 1 < len(toks) and nfc(toks[i][0]) in NEVER_AFTER: return i
         for i in range(hi - 1, lo - 1, -1):
-            if i + 1 < len(toks) and not allowed(i): return i
+            if i + 1 < len(toks) and hard(i): return i
         return None
     return weakest, joiner
 
@@ -209,8 +245,24 @@ def thin(b, s, e):
     thin(b, prev + 1, e)
 
 
-def punctuation_bounds(n, breaks):
-    """stops -> rank 2, commas -> rank 3, the stop nearest the middle -> the etnachta."""
+HARD_STOP = re.compile(r'[.]')     # a full stop; ! and ? end a cry inside a speech as often as a sentence
+
+def stop_kinds(entext):
+    """For each stop the printed English carries before its last word, in order,
+       whether it ends a sentence (a full stop) rather than a clause (; : ! ? and
+       the dash: "O Lord God Almighty! Thy throne is high" runs on inside one
+       speech, and the Masoretes divide at the "saying" before it)."""
+    kinds = []
+    for m in re.finditer(r"[A-Za-z][A-Za-z'\-]*([^A-Za-z]*)", entext or ''):
+        tail = m.group(1)
+        if re.search(r'[;:.!?—]', tail): kinds.append(bool(HARD_STOP.search(tail)))
+    return kinds[:-1]
+
+
+def punctuation_bounds(n, breaks, entext=None):
+    """stops -> rank 2, commas -> rank 3; the etnachta goes to the stop nearest
+       the middle, and a sentence's end outranks a clause's: a verse that holds
+       two sentences divides between them (Genesis 1:5 divides at לָיְלָה)."""
     b = [0] * n
     for i, wgt in breaks:
         if 0 <= i < n - 1: b[i] = 2 if wgt >= 2 else 3
@@ -220,6 +272,10 @@ def punctuation_bounds(n, breaks):
         if marked:
             top = min(b[i] for i in marked)
             cands = [i for i in marked if b[i] == top]
+            if top == 2:
+                kinds = stop_kinds(entext)
+                if len(kinds) == len(cands) and any(kinds):
+                    cands = [i for i, k in zip(cands, kinds) if k]
             mid = (n - 1) / 2.0
             p = min(cands, key=lambda i: (abs(i + 0.5 - mid), i))
             b[p] = 1
@@ -235,6 +291,7 @@ def main():
     check = '--check' in sys.argv
     show = set(sys.argv[sys.argv.index('--show') + 1].split(',')) if '--show' in sys.argv else set()
     STRESS = load_js_table(os.path.join(ROOT, 'bom', 'stress.js'), 'SW_STRESS')
+    EN = english(ROOT)
     BREAKS = load_js_table(os.path.join(ROOT, 'bom', 'bom_phrase_breaks.js'), 'SW_BREAKS')
     over_path = os.path.join(HERE, 'teamim_overrides.json')
     OVER = json.load(io.open(over_path, encoding='utf-8')) if os.path.exists(over_path) else {}
@@ -254,13 +311,21 @@ def main():
             stats['verses'] += 1
             words = [h for h, g in speak]
             par = mt_parallel([bare(h) for h in words], MT, by_word)
-            pb = punctuation_bounds(n, BREAKS.get(key, []))
-            if key in OVER:
-                bounds, how = OVER[key], 'override'
-            elif par:
+            ent = EN.get((en, ref[0], ref[1])) if ref else None
+            pb = punctuation_bounds(n, BREAKS.get(key, []), ent)
+            if par:
                 bounds, how = par[1], 'mt'
             else:
                 bounds, how = pb, 'english'
+            if key in OVER:
+                # a hand ruling (tools/teamim_overrides.json): {"index": rank} laid
+                # over the computed phrasing; 0 = no division, 1 moves the etnachta
+                bounds = list(bounds)
+                for idx, r in OVER[key].items():
+                    idx, r = int(idx), int(r)
+                    if r == 1: bounds = [2 if x == 1 else x for x in bounds]
+                    if 0 <= idx < n: bounds[idx] = r
+                how = 'override'
             stats[how] += 1
             weakest, joiner = make_weakest(speak, prior, w)
             codes, labels = G.accent_verse(words, bounds, STRESS.get, weakest, None, joiner)

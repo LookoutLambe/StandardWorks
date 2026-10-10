@@ -74,6 +74,12 @@ NEAR_FAR = {'silluq': ('tifcha', 'zaqef'), 'etnachta': ('tifcha', 'zaqef'),
 # a silluq or etnachta clause of two or more units is always divided
 # (WLC: a 2-unit clause is "tifcha etnachta" 100%, "tifcha silluq" 100%)
 MUST_DIVIDE = {'silluq', 'etnachta'}
+# how many units a divider's own domain holds, at the 90-95% point of the WLC's
+# counts (tifcha 1-4: 94%; pashta 1-4: 97%; tevir 1-4: 96%; zaqef up to 7: 93%;
+# revia up to 5: 92%; segolta up to 8: 93%); beyond this the phrasing divides again
+MAX_DOMAIN = {'tifcha': 4, 'pashta': 4, 'tevir': 4, 'zarqa': 4, 'zaqef_q': 7, 'revia': 5,
+              'segolta': 8, 'geresh': 5, 'pazer': 6, 'telisha_g': 6,
+              'yetiv': 1, 'zaqef_g': 1, 'gershayim': 1, 'legarmeh': 1}
 
 _TABLES = None
 def tables():
@@ -324,10 +330,12 @@ def accent_verse(words, bounds, stress_of=None, weakest=None, stress_letters=Non
                   verse's main division), 2, 3, 4, or 0 for no division. The last
                   unit's own entry is ignored (it ends the verse).
        stress_of  word -> the reader's vowel-slot index of the stress, or None
-       weakest    (units, lo, hi) -> index in [lo, hi) after which to divide a
-                  tail that is too long for its governor, or None when every
-                  word there reaches forward; without it the earliest position
-                  that leaves the governor its servants
+       weakest    (units, lo, hi, governor label, near) -> index in [lo, hi)
+                  after which to divide a tail that is too long for its governor
+                  (units[hi]); `near` is where the window begins in which the
+                  near divider would leave the governor its servants; None when
+                  every word there reaches forward. Without it the earliest
+                  position that leaves the governor its servants
        joiner     (units, lo, hi) -> index in [lo, hi) of a word to join to the
                   one after it, as a maqqef would, when a tail cannot be divided
                   (לֹא נִרְאָה becomes לֹא־נִרְאָה: no accent of its own); None
@@ -381,12 +389,7 @@ def accent_verse(words, bounds, stress_of=None, weakest=None, stress_letters=Non
             # instead, as the Masoretes' maqqef does (לֹא־נִרְאָה).
             lo = last + 1
             near = max(lo, e - 1 - limit)
-            at = None
-            if weakest:
-                at = weakest(units, near, e)
-                if at is None and near > lo: at = weakest(units, lo, near)
-            else:
-                at = near
+            at = weakest(units, lo, e, glabel, near) if weakest else near
             if at is None and joiner:
                 j = joiner(units, lo, e)
                 if j is not None and j not in joined and j <= e - 1:
@@ -396,35 +399,67 @@ def accent_verse(words, bounds, stress_of=None, weakest=None, stress_letters=Non
             while at in joined and at > lo: at -= 1
             b[at] = b[divs[0]] if divs else min(grank + 1, 4)
             divs = dividers(s, e)
-        k = len(divs)
-        near, far = NEAR_FAR.get(glabel, ('rank4', 'rank4'))
-        labels = []
-        for idx, d in enumerate(divs):
-            from_near = k - 1 - idx
-            dist = e - d
-            own = d - (divs[idx - 1] if idx > 0 else s - 1)
-            u = units[d]
-            if glabel in ('silluq', 'etnachta'):
-                if from_near == 0:
-                    lab = 'tifcha'
+
+        def label_divs(divs):
+            k = len(divs)
+            near, far = NEAR_FAR.get(glabel, ('rank4', 'rank4'))
+            labels = []
+            for idx, d in enumerate(divs):
+                from_near = k - 1 - idx
+                dist = e - d
+                own = d - (divs[idx - 1] if idx > 0 else s - 1)
+                u = units[d]
+                if glabel in ('silluq', 'etnachta'):
+                    if from_near == 0:
+                        lab = 'tifcha'
+                    else:
+                        lab = zaqef_form(u) if own == 1 else 'zaqef_q'
+                        # the farthest division of the etnachta clause, far from the
+                        # etnachta, is segolta (WLC: 87.5% at 9+ units, 80% with three
+                        # divisions after it at 6+)
+                        if glabel == 'etnachta' and idx == 0 and own >= 2:
+                            if lookup('segolta', ('k%d' % min(from_near, 3), 'd%d' % min(dist, 9)), 'zaqef_q') == 'segolta':
+                                lab = 'segolta'
+                elif near == 'rank4':
+                    lab = rank4_form(glabel, from_near, dist, own, idx == 0, u)
                 else:
-                    lab = zaqef_form(u) if own == 1 else 'zaqef_q'
-                    # the farthest division of the etnachta clause, far from the
-                    # etnachta, is segolta (WLC: 87.5% at 9+ units, 80% with three
-                    # divisions after it at 6+)
-                    if glabel == 'etnachta' and idx == 0 and own >= 2:
-                        if lookup('segolta', ('k%d' % min(from_near, 3), 'd%d' % min(dist, 9)), 'zaqef_q') == 'segolta':
-                            lab = 'segolta'
-            elif near == 'rank4':
-                lab = rank4_form(glabel, from_near, dist, own, idx == 0, u)
-            else:
-                # the nearest division takes the near form; so does the second
-                # when a third stands behind it (WLC zaqef: "revia pashta pashta"
-                # 86-100% with three divisions, "revia pashta" with two); the
-                # farther ones are revia
-                lab = near if (from_near == 0 or (from_near == 1 and k >= 3)) else far
-                if lab == 'pashta' and own == 1: lab = pashta_form(u)
-            labels.append(lab)
+                    # the nearest division takes the near form; so does the second
+                    # when a third stands behind it (WLC zaqef: "revia pashta pashta"
+                    # 86-100% with three divisions, "revia pashta" with two); the
+                    # farther ones are revia
+                    lab = near if (from_near == 0 or (from_near == 1 and k >= 3)) else far
+                    if lab == 'pashta' and own == 1: lab = pashta_form(u)
+                labels.append(lab)
+            return labels
+
+        labels = label_divs(divs)
+        # A DOMAIN HAS A SIZE ITS ACCENT CARRIES. A tifcha governs one to four
+        # units in the Tanakh (94%), a pashta or tevir the same, a zaqef up to
+        # seven, a revia five; a tifcha left with eleven words is a shape the
+        # Masoretes never wrote. So a divider whose domain outgrows its accent
+        # takes a division of its own rank before it, at the best link within
+        # reach, and the clause becomes a chain: zaqef, zaqef, tifcha. Only for
+        # phrasing this file is asked to make (weakest given): the Tanakh's own
+        # trees are taken as they are.
+        guard = 0
+        while weakest and guard < 32:
+            guard += 1
+            grew = False
+            for idx in range(len(divs) - 1, -1, -1):
+                d = divs[idx]
+                prev = divs[idx - 1] if idx > 0 else s - 1
+                own = sum(1 for i in range(prev + 1, d + 1) if i not in joined)
+                cap = MAX_DOMAIN.get(labels[idx], 99)
+                if own <= cap: continue
+                lo = prev + 1
+                at = weakest(units, lo, d, labels[idx], max(lo, d - cap))
+                if at is None: continue
+                b[at] = b[d]
+                divs = dividers(s, e)
+                labels = label_divs(divs)
+                grew = True
+                break
+            if not grew: break
         for idx, d in enumerate(divs):
             place(units[d], labels[idx])
         for idx, d in enumerate(divs):

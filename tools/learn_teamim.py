@@ -38,7 +38,27 @@ ROOT = os.path.dirname(HERE)
 WLC = os.path.expanduser('~/Desktop/morphhb/wlc')
 sys.path.insert(0, HERE)
 import teamim_grammar as G
-from build_bom_breaks import feats as pair_feats, array_bodies
+from build_bom_breaks import feats as _reader_feats, array_bodies
+
+# THE FEATURES OF THE BINDING MODEL: the reader's own (the gloss words at the
+# join, the two Hebrew forms, the position) plus the shape of the two words,
+# which the reader's model does without and this one cannot: a wayyiqtol
+# opens a clause (the WLC breaks before one 79% of the time), a plain waw
+# coordinates, an article or a preposition continues a phrase. Counted here
+# and read by tools/build_bom_teamim.py through this one function.
+import re as _re
+_SHAPES = [('wayy', _re.compile(u'^\u05d5[\u05b7\u05b8][\u05d9\u05ea\u05d0\u05e0]')),
+           ('waw', _re.compile(u'^\u05d5[\u05b0\u05bc]')),
+           ('art', _re.compile(u'^\u05d4[\u05b7\u05b8\u05b6]')),
+           ('prep', _re.compile(u'^[\u05d1\u05db\u05dc][\u05b0\u05b7\u05b8\u05b4\u05b6]|^\u05de[\u05b4\u05b5]')),
+           ('maqqef', _re.compile(u'\u05be'))]
+def shape(h):
+    for name, rx in _SHAPES:
+        if rx.search(h): return name
+    return 'bare'
+def pair_feats(toks, i):
+    h1, h2 = toks[i][0], toks[i + 1][0]
+    return _reader_feats(toks, i) + ['s1=' + shape(h1), 's2=' + shape(h2), 's12=' + shape(h1) + '>' + shape(h2)]
 
 POETIC = {'Ps', 'Prov', 'Job'}
 N = lambda s: ud.normalize('NFC', s)
