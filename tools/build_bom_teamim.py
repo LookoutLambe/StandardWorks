@@ -144,12 +144,26 @@ TENS = {u'עשר', u'עשרה'}                        # the second word of a co
 # (the reader's own rule, tools/build_volume_breaks.py)
 TITLE_BEFORE_NAME = set(u'אני אנכי אבי אמי אחי אחיו אביו אמו בני בנו בתו אשתו אביהם אחיהם אחיך אביך בנך'.split())
 PREFIXES = u'והלבכמש'
+# particles the Masoretes join forward with a maqqef when they stand bare
+PROCLITIC = set(NEVER_AFTER) | set(u'עַל מִן עַד אֵת אֶת בֵּין אַל פֶּן'.split())
+DEMONSTRATIVE = set(u'ההוא ההיא הזה הזאת האלה ההם ההן ההמה'.split())
 
 def stem3(h):
     """the first three root letters, past the one-letter prefixes and a maqqef"""
     s = bare(h).split(u'־')[-1]
     while len(s) > 3 and s[0] in PREFIXES: s = s[1:]
     return s[:3]
+
+def shares_root(h, h2):
+    """The infinitive absolute before its own verb (עָזֹב לֹא־עֲזָבַנִי, גַּלֵּה גִלּוּ,
+       שָׁמוֹר תִּשְׁמְרוּ, אָרֹר אָאֹר): the second word repeats the first's root,
+       with or without an imperfect prefix (א י ת נ) in front of it."""
+    a = stem3(h)
+    if len(a) < 3: return False
+    b = bare(h2).split(u'־')[-1]            # the verb is the last word of its group (לֹא־עֲזָבַנִי)
+    while len(b) > 3 and b[0] in PREFIXES: b = b[1:]
+    if b.startswith(a): return True
+    return len(b) >= 3 and b[0] in u'איתנ' and b[1:3] == a[:2]
 
 def make_weakest(toks, prior, w):
     """Where a phrase most plausibly ends, by the Tanakh's log-odds that a
@@ -167,11 +181,21 @@ def make_weakest(toks, prior, w):
        join a word instead (the joiner)."""
     HARD, PAIR, FAR, GIVE_UP = -20.0, -4.0, -3.0, -10.0
     def score(i):
+        # a bare particle that reaches forward (אֶל יַם־סוּף, עַל אַחֶיךָ) is
+        # scored as the Masoretes wrote it, joined to its noun by a maqqef:
+        # the link before it is the link before the whole phrase
+        if i + 2 < len(toks) and nfc(toks[i + 1][0]) in PROCLITIC and u'־' not in toks[i + 1][0]:
+            h2, g2 = toks[i + 1]; h3, g3 = toks[i + 2]
+            pair = [toks[i], (nfc(h2) + u'־' + nfc(h3), g2 + ' ' + g3)]
+            return prior + sum(w.get(k, 0.0) for k in pair_feats(pair, 0))
         return prior + sum(w.get(k, 0.0) for k in pair_feats(toks, i))
     def hard(i):
         h, g = toks[i]
         if nfc(h) in NEVER_AFTER: return True
-        if BINDS.search(g.rstrip(u' ,;:.\u2014').strip()): return True
+        # a gloss that ends in "of", "the", "that", "which"... reaches forward,
+        # except the demonstrative after its noun (\u05d4\u05b7\u05e9\u05b8\u05bc\u05c1\u05e0\u05b8\u05d4 \u05d4\u05b7\u05d4\u05b4\u05d9\u05d0 "that year",
+        # \u05d4\u05b7\u05d3\u05b0\u05bc\u05d1\u05b8\u05e8\u05b4\u05d9\u05dd \u05d4\u05b8\u05d0\u05b5\u05dc\u05b6\u05bc\u05d4 "these things"), which closes the phrase
+        if BINDS.search(g.rstrip(u' ,;:.\u2014').strip()) and bare(h) not in DEMONSTRATIVE: return True
         if CONSTRUCT_PL.search(nfc(h).replace(u'\u05be', u'')): return True
         if i + 1 < len(toks):
             h2, g2 = toks[i + 1]
@@ -185,7 +209,7 @@ def make_weakest(toks, prior, w):
             # reign" לְמַלְכוּת)
             if re.match(r'of\b', g2.strip().lower()) and not PREP_PREFIX.match(nfc(h2)): return True
             # the infinitive absolute before its verb (עָזֹב לֹא־עֲזָבַנִי, מוֹת תָּמוּת)
-            if len(stem3(h)) == 3 and stem3(h) == stem3(h2): return True
+            if shares_root(h, h2): return True
             # a compound numeral (שְׁנֵים עָשָׂר) and a title before a name (אָבִי לֶחִי)
             if bare(h2) in TENS: return True
             if bare(h) in TITLE_BEFORE_NAME and NAME_GLOSS.match(g2.strip()): return True
@@ -206,7 +230,7 @@ def make_weakest(toks, prior, w):
         if near is not None and i < near: s += FAR * (near - i)
         return s
     def weakest(units, lo, hi, glabel=None, near=None):
-        cands = [i for i in range(lo, hi) if i + 1 < len(toks)]
+        cands = [i for i in range(lo, hi) if i + 1 < len(toks) and not getattr(units[i], 'locked', False)]
         if not cands: return None
         best = max(cands, key=lambda i: weight(i, hi, glabel, near))
         return best if weight(best, hi, glabel, near) > GIVE_UP else None
@@ -219,7 +243,7 @@ def make_weakest(toks, prior, w):
         for i in range(hi - 1, lo - 1, -1):
             if i + 1 < len(toks) and hard(i): return i
         return None
-    return weakest, joiner
+    return weakest, joiner, hard
 
 
 MAX_CHAIN = 3            # dividers of one rank in one domain: the WLC's zaqef chains run to three (four in 0.2%)
@@ -312,14 +336,18 @@ def main():
             words = [h for h, g in speak]
             par = mt_parallel([bare(h) for h in words], MT, by_word)
             ent = EN.get((en, ref[0], ref[1])) if ref else None
-            pb = punctuation_bounds(n, BREAKS.get(key, []), ent)
+            # the reader's breaths were marked for the ear; one after a word that
+            # reaches forward (an infinitive absolute, a construct) is no division
+            weakest, joiner, hard = make_weakest(speak, prior, w)
+            pb = punctuation_bounds(n, [(i, c) for i, c in BREAKS.get(key, []) if not (0 <= i < n - 1 and hard(i))], ent)
             if par:
                 bounds, how = par[1], 'mt'
             else:
                 bounds, how = pb, 'english'
             if key in OVER:
                 # a hand ruling (tools/teamim_overrides.json): {"index": rank} laid
-                # over the computed phrasing; 0 = no division, 1 moves the etnachta
+                # over the computed phrasing; 0 = no division, 1 moves the
+                # etnachta, -1 = the link after this word stays closed
                 bounds = list(bounds)
                 for idx, r in OVER[key].items():
                     idx, r = int(idx), int(r)
@@ -327,7 +355,6 @@ def main():
                     if 0 <= idx < n: bounds[idx] = r
                 how = 'override'
             stats[how] += 1
-            weakest, joiner = make_weakest(speak, prior, w)
             codes, labels = G.accent_verse(words, bounds, STRESS.get, weakest, None, joiner)
             labels_count.update(labels)
             if check and par:

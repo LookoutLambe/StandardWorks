@@ -120,6 +120,7 @@ class Unit(object):
         self.marks = []            # [(letter index, code)] laid by the grammar
         self.paseq = False
         self.label = ''
+        self.locked = False        # a hand ruling: no division may be forced after this unit
 
     @staticmethod
     def _full(ch, vs):
@@ -351,6 +352,10 @@ def accent_verse(words, bounds, stress_of=None, weakest=None, stress_letters=Non
     n = len(units)
     if n == 0: return [], []
     b = list(bounds) + [0] * (n - len(bounds))
+    # a bound of -1 is a ruling that the link after this unit stays closed
+    for i in range(n):
+        if b[i] == -1:
+            b[i] = 0; units[i].locked = True
     b[n - 1] = 0
     joined = set()
     place(units[n - 1], 'silluq')
