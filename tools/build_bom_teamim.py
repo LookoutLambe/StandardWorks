@@ -270,21 +270,47 @@ def transposed(toks, i, ent):
        הוֹכִיחָם in הוֹכֵחַ הוֹכִיחָם (16:39). The English segment that ends with this
        token's gloss is found, and the mark moves past each following token
        whose gloss stands just before that gloss inside the segment. Not past
-       a waw-word: "the words of my father, | and the words" has "words" in
-       the segment and is a new phrase all the same."""
+       a token that OPENS the next segment: "the words of my father, | and the
+       words" has "words" in the segment and is a new phrase all the same, and
+       "a land of promise, | a land which is choice" set its segolta on the
+       second אֶרֶץ (2 Nephi 1:5). A waw-word may move: "the statutes and the
+       judgments of the Lord;" is חֻקֵּי יְהוָה וּמִשְׁפָּטָיו, and the stop belongs
+       after וּמִשְׁפָּטָיו (1:16)."""
     gi = [_stem(w) for w in _words(toks[i][1])]
     if not gi or not ent: return i
-    for seg in re.split(r'[,;:.?!\u2014]+', ent):
+    segs = re.split(r'[,;:.?!\u2014]+', ent)
+    # the segment ends with this token's gloss, or with it and the words the
+    # token BEFORE it glosses: "the Holy Messiah;" is הַמָּשִׁיחַ הַקָּדוֹשׁ, the
+    # adjective last in Hebrew and first in English (2 Nephi 2:6)
+    prev = [_stem(w) for w in _words(toks[i - 1][1])] if i >= 1 else []
+    for k, seg in enumerate(segs):
         ws = [_stem(w) for w in _words(seg)]
-        if len(ws) > len(gi) and ws[-len(gi):] == gi: break
+        for cut in range(0, 3):
+            tail = ws[len(ws) - cut:] if cut else []
+            if cut and not all(w in prev or w in STOP_WORDS for w in tail): continue
+            core = ws[:len(ws) - cut] if cut else ws
+            if len(core) > len(gi) and core[-len(gi):] == gi: break
+        else: continue
+        seg = ' '.join(_words(seg)[:len(ws) - cut]) if cut else seg
+        break
     else: return i
     content = lambda ws: [_stem(w) for w in ws if w not in STOP_WORDS and len(w) >= 3]
     body = content(_words(seg)[:-len(gi)])
-    j = i
-    while j + 1 < len(toks) - 1 and not nfc(toks[j + 1][0]).startswith(u'ו'):
-        gn = content(_words(toks[j + 1][1]))
-        if not gn or len(gn) > len(body) or body[-len(gn):] != gn: break
-        body = body[:-len(gn)]; j += 1
+    # (the next segment's first word of sense: "And they did murmur" opens with
+    # "murmur", not "they", 1 Nephi 2:12)
+    head = [w for w in content(_words(segs[k + 1])) if w not in SENSELESS][:1] if k + 1 < len(segs) else []
+    j = at = i
+    while at + 1 < len(toks) - 1:
+        gn = content(_words(toks[at + 1][1]))
+        # a token with no word of sense ("is", הִיא) neither proves nor bars the
+        # move: "the Spirit is the same," is אַחַת הִיא הָרוּחַ (2 Nephi 2:4); the
+        # mark passes it only when a token of sense is matched beyond it
+        if not gn:
+            if all(w in SENSELESS for w in _words(toks[at + 1][1])): at += 1; continue
+            break
+        if len(gn) > len(body) or body[-len(gn):] != gn: break
+        if head and gn[0] == head[0]: break
+        body = body[:-len(gn)]; at += 1; j = at
     return j
 
 def mend_marks(toks, marks, ent):
@@ -395,7 +421,7 @@ PREFIXES = u'והלבכמש'
 # prepositions the Tanakh tags as construct nouns (אֵצֶל HNcbsc, תַּחַת, מוּל) or
 # adjectives (אַחֲרֵי, נֶגֶד): they reach forward as surely as אֶל does, and the
 # gloss rule misses them when the English is "by" (8:20 אֵ֨צֶל֙ מַעֲקֵ֣ה הַבַּרְזֶ֔ל)
-EXTRA_NEVER = set(u'אֵצֶל תַּחַת מוּל נֶגֶד לִפְנֵי אַחֲרֵי בְּתוֹךְ מִתּוֹךְ סְבִיב'.split())
+EXTRA_NEVER = set(u'אֵצֶל תַּחַת מוּל נֶגֶד לִפְנֵי אַחֲרֵי בְּתוֹךְ מִתּוֹךְ סְבִיב אֵין וְאֵין'.split())   # (אֵין before its noun: WLC conjunctive 399, maqqef 149, disjunctive 70; וְאִם־אֵ֔ין צֶ֗דֶק 2 Nephi 2:13)
 ENCLITIC = set(u'בלבד'.split())
 COMPOUND = set([(u'אף', u'גם')])
 PROCLITIC = set(NEVER_AFTER) | EXTRA_NEVER | set(u'עַל מִן עַד אֵת אֶת בֵּין אַל פֶּן עִם'.split())
@@ -846,7 +872,10 @@ def punctuation_bounds(n, breaks, entext=None, strong=None, score=None, appos=No
                 # it," at the verse's middle. The etnachta keeps to the middle
                 # half of the verse when any mark stands there.
                 if min(abs(i + 0.5 - mid) for i in cands) > n / 4.0 and any(abs(i + 0.5 - mid) <= n / 4.0 for i in marked):
-                    cands = marked
+                    # ...a clause's stop inside the middle half before any comma
+                    # there ("with you; ‖ but behold", not "of God, ‖ which was in
+                    # him", 2 Nephi 1:26)
+                    cands = [i for i in marked if b[i] == 2 and abs(i + 0.5 - mid) <= n / 4.0] or marked
             # TWO STOPS THE SAME DISTANCE FROM THE MIDDLE: the one the Tanakh
             # rates the stronger boundary (the model's log-odds at the link:
             # 1 Nephi 1:11's semicolon over its comma, 1:13's speech end over
