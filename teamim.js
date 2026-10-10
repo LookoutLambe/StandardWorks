@@ -40,13 +40,24 @@
   var DIR = BASE + (R.vol === 'bom' ? 'bom/teamim/' : 'ot_teamim/');
   /* book name (the first field of data-wid) -> the data file's name: the Old
      Testament's book prefix, the Book of Mormon's verse-file slug, which its
-     loader derives from a chapter id so there is no second table of names */
+     loader derives from a chapter id so there is no second table of names.
+     LOOKED UP WHEN ASKED, NEVER AT LOAD: bom.html fills READER.books further
+     down the page than this script, so a table built here was empty, and a
+     reload with the layer on drew no accents until the switch was flipped
+     (the switch goes through the chapter id and never saw it). */
   var byName = {};
-  function fileFor(b) {
-    if (R.vol === 'bom') return window.bomBookSlugForChapId ? bomBookSlugForChapId(b.idPrefix + '1') : null;
-    return b.prefix;
+  function fileFor(name) {
+    if (byName[name]) return byName[name];
+    var books = R.books || [], f = null;
+    for (var i = 0; i < books.length; i++) {
+      if (books[i].en !== name) continue;
+      if (R.vol === 'bom') f = window.bomBookSlugForChapId ? bomBookSlugForChapId(books[i].idPrefix + '1') : null;
+      else f = books[i].prefix;
+      break;
+    }
+    if (f) byName[name] = f;
+    return f;
   }
-  (R.books || []).forEach(function (b) { byName[b.en] = fileFor(b); });
   var state = { loaded: {}, loading: {} };
   var observer = null;
 
@@ -122,7 +133,7 @@
     var seen = {};
     (root || document).querySelectorAll('.word-unit[data-wid]').forEach(function (u) {
       var w = u.getAttribute('data-wid'), name = w.slice(0, w.indexOf('|'));
-      if (!seen[name]) { seen[name] = 1; load(byName[name]); }
+      if (!seen[name]) { seen[name] = 1; load(fileFor(name)); }
     });
     var cur = window.currentChapterId || '';
     if (cur) {
@@ -145,7 +156,7 @@
           if (el.nodeType !== 1) continue;
           var u = el.matches && el.matches('.word-unit[data-wid]') ? el : (el.querySelector && el.querySelector('.word-unit[data-wid]'));
           if (!u) continue;
-          var w = u.getAttribute('data-wid'), p = byName[w.slice(0, w.indexOf('|'))];
+          var w = u.getAttribute('data-wid'), p = fileFor(w.slice(0, w.indexOf('|')));
           if (p && !state.loaded[p]) load(p);
         }
       }
