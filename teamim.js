@@ -97,11 +97,21 @@
       out += ch;
       if (ch >= 'א' && ch <= 'ת') {
         n++;
-        /* the letter's own points first, then the accents the Masoretes put on it */
-        while (j + 1 < h.length && /[֑-ׇֽֿׁׂׅׄ]/.test(h.charAt(j + 1))) out += h.charAt(++j);
+        /* the letter's own points first, then the accents the Masoretes put on
+           it. The joiner U+034F is one of the points: the canon writes
+           וִירוּשָׁלָ͏ִם with it between the qamats and the hiriq, and an accent
+           laid before it split the letter's vowels (2 Nephi 12:1: the silluq
+           sat between לָ and ִם, and the hiriq drifted under the mem). */
+        while (j + 1 < h.length && /[֑-ׇֽֿׁׂׅׄ\u034F]/.test(h.charAt(j + 1))) out += h.charAt(++j);
         if (acc[n]) out += acc[n];
       }
     }
+    /* ...and under the layer the joiner itself is dropped: Taamey David CLM
+       set the hiriq it holds apart from its lamed, a dot adrift between לָ
+       and ם; without it NFC puts the marks in the Masoretes' own order, hiriq,
+       qamats, meteg (וִירוּשָׁלִָֽם), the sequence the face was cut for. The
+       canon keeps its joiner: data-h is never touched. */
+    out = out.replace(/\u034F/g, '');
     if (out.normalize) out = out.normalize('NFC');
     /* a paseq or a maqqef stands between words; drawn by CSS so no lookup ever reads it */
     return { text: out, after: paseq ? '<span class="tm-paseq" aria-hidden="true"></span>'

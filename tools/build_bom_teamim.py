@@ -441,6 +441,10 @@ def shares_root(h, h2):
     """The infinitive absolute before its own verb (עָזֹב לֹא־עֲזָבַנִי, גַּלֵּה גִלּוּ,
        שָׁמוֹר תִּשְׁמְרוּ, אָרֹר אָאֹר): the second word repeats the first's root,
        with or without an imperfect prefix (א י ת נ) in front of it."""
+    # an attested finite verb or participle is no infinitive absolute: "shall
+    # write; and that which shall be written" is יִכְתֹּב וְהַנִּכְתָּב, one root
+    # and two clauses, and the stop between them was held hard (2 Nephi 3:12)
+    if re.match(r'^H(C/)?V', morph_of(h)) and not re.match(r'^H(C/)?V.a', morph_of(h)): return False
     def match(h, h2):
         a = stem3(h)
         if len(a) < 3: return False
@@ -595,6 +599,9 @@ def make_weakest(toks, prior, w, ent=None):
     def hard(i):
         h, g = toks[i]
         if nfc(h) in EXTRA_NEVER: return True
+        # a maqqef group ends with its last word: וְאִם־אֵין reaches forward as
+        # אֵין does (וְאִם־אֵ֔ין צֶ֗דֶק, 2 Nephi 2:13), אֲשֶׁר־לֹא as לֹא
+        if u'\u05be' in nfc(h) and nfc(h).split(u'\u05be')[-1] in (NEVER_AFTER | EXTRA_NEVER) - set([u'כׇּל', u'כֹּל', u'כׇל', u'כֹל']): return True
         if nfc(h) in NEVER_AFTER:
             # a bare כֹּל reaches forward to its noun (כֹּל הָאָרֶץ), not when the
             # next word opens with a waw: there it is absolute and ends its
