@@ -212,9 +212,13 @@ def mend_marks(toks, marks, ent):
        English word after the colon finds its token and the stop goes before
        it (11:22)."""
     out = []
+    colon = bool(ent and re.search(r'\b(saying|said|spake|answered|cried)\b[^:.;]{0,25}:', ent))
     for i, c in marks:
         if 0 <= i < len(toks) - 2 and bare(toks[i][0]) in PRON2 and NAME_GLOSS.match(toks[i + 1][1].strip()):
             i += 1
+        # (3) the colon that opens a speech is a comma to the breath table
+        # (weight 1); to the Masoretes לֵאמֹר before the speech is a stop (13:40)
+        if c == 1 and colon and 0 <= i < len(toks) and SPEECH.search(toks[i][1]): c = 2
         out.append((i, c))
     if ent:
         for m in re.finditer(r'\b(saying|said|spake|answered|cried)\b[^:]{0,20}:\s*([A-Za-z]+(?:\s+[A-Za-z]+)?)', ent):
@@ -366,8 +370,15 @@ def adj_pair(toks, i):
        segolta fell inside the phrase)"""
     if i < 1 or i + 1 >= len(toks) or u'־' in toks[i + 1][0]: return False
     article = lambda m: re.sub(r'^HTd/', 'H', m)
-    m0, m1, m2 = article(morph_of(toks[i - 1][0])), article(morph_of(toks[i][0])), morph_of(toks[i + 1][0], last=False)
-    return m0.startswith('HNc') and m1.startswith('HAa') and bool(re.match(r'HC/(Td/)?Aa', m2))
+    h1, h2 = nfc(toks[i][0]), nfc(toks[i + 1][0])
+    m0, m1, m2 = article(morph_of(toks[i - 1][0])), article(morph_of(h1)), morph_of(h2, last=False)
+    # an adjective or a participle (הַבְּרוּרִים וְהַיְקָרִים "plain and precious",
+    # הַגְּדוֹלָה וְהַנִּתְעָבָה "great and abominable"); a form the Tanakh lacks
+    # passes on its shape when both carry the article, the attributive's mark
+    adj = lambda m: bool(re.match(r'H(Aa|V..[rs])', m))
+    if not m0.startswith('HNc') or not (adj(m1) or (not m1 and h1.startswith(u'ה'))): return False
+    if m2: return bool(re.match(r'HC/(Td/)?(Aa|V..[rs])', m2))
+    return h1.startswith(u'ה') and h2.startswith(u'וְה')
 
 
 def make_weakest(toks, prior, w, ent=None):
