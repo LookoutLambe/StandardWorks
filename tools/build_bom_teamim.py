@@ -148,6 +148,13 @@ TENS = {u'עשר', u'עשרה'}                        # the second word of a co
 # title before a name, and a member of a compound subject
 # (both mem and nun forms: bare אֵם ends in ם, אִמִּי has the medial מ)
 KIN = re.compile(u'^(אב|אח|א[מם]|ב[נן]|בת|אשת|אחות)(ות|י)?(י|ך|ו|ה|נו|כם|כן|הם|הן|יו|יך|יה|ינו|יכם|יהם)?$')
+# the pronoun-apposition rule (בִּי נֶפִי) stops short of a divine title, which is
+# the sentence's subject after its object (וַיֹּאמֶר אֵלַי יְהוָה, יַעֲזֹר לִי אֲדֹנָי,
+# לְךָ אֵל אַחֵר), and of a vocative after a verb of speaking (וַיֹּאמֶר אֵלַי נֶפִי
+# מַה תִּרְאֶה, 11:14)
+DIVINE = set('God Lord LORD Jehovah Christ Messiah Jesus Father Spirit Son Holy Almighty'.split())
+SPEECH = re.compile(r'\b(said|saith|say|spake|speak|speaking|saying|cried|crying|answered|called|commanded)\b', re.I)
+
 def title_word(h):
     """the word a name follows as its title: a kin word or אֲנִי (אָבִי לֶחִי,
        אֲנִי נֶפִי); of a group its last word (אֶת־אִמִּי שְׂרָיָה, 5:6, where the
@@ -207,7 +214,11 @@ def copula_after(toks, i):
     return u'־' not in h2 and bare(h2) in PRON3 and bool(COPULA.match(g2.strip()))
 PREFIXES = u'והלבכמש'
 # particles the Masoretes join forward with a maqqef when they stand bare
-PROCLITIC = set(NEVER_AFTER) | set(u'עַל מִן עַד אֵת אֶת בֵּין אַל פֶּן'.split())
+# prepositions the Tanakh tags as construct nouns (אֵצֶל HNcbsc, תַּחַת, מוּל) or
+# adjectives (אַחֲרֵי, נֶגֶד): they reach forward as surely as אֶל does, and the
+# gloss rule misses them when the English is "by" (8:20 אֵ֨צֶל֙ מַעֲקֵ֣ה הַבַּרְזֶ֔ל)
+EXTRA_NEVER = set(u'אֵצֶל תַּחַת מוּל נֶגֶד לִפְנֵי אַחֲרֵי בְּתוֹךְ מִתּוֹךְ סְבִיב'.split())
+PROCLITIC = set(NEVER_AFTER) | EXTRA_NEVER | set(u'עַל מִן עַד אֵת אֶת בֵּין אַל פֶּן עִם'.split())
 DEMONSTRATIVE = set(u'ההוא ההיא הזה הזאת האלה ההם ההן ההמה'.split())
 
 def stem3(h):
@@ -321,7 +332,7 @@ def attributive(h, h2):
     return m1.startswith('HNc') and m1.endswith('a') and m2.startswith('HAa') and m2.endswith('a')
 
 
-def make_weakest(toks, prior, w):
+def make_weakest(toks, prior, w, ent=None):
     """Where a phrase most plausibly ends, by the Tanakh's log-odds that a
        disjunctive follows a word, with the rules of the house laid on as
        penalties rather than walls: a wall narrows a window down to whatever is
@@ -347,7 +358,7 @@ def make_weakest(toks, prior, w):
         return prior + sum(w.get(k, 0.0) for k in pair_feats(toks, i))
     def hard(i):
         h, g = toks[i]
-        if nfc(h) in NEVER_AFTER: return True
+        if nfc(h) in NEVER_AFTER or nfc(h) in EXTRA_NEVER: return True
         # a gloss that ends in "of", "the", "that", "which"... reaches forward,
         # except the demonstrative after its noun (\u05d4\u05b7\u05e9\u05b8\u05bc\u05c1\u05e0\u05b8\u05d4 \u05d4\u05b7\u05d4\u05b4\u05d9\u05d0 "that year",
         # \u05d4\u05b7\u05d3\u05b0\u05bc\u05d1\u05b8\u05e8\u05b4\u05d9\u05dd \u05d4\u05b8\u05d0\u05b5\u05dc\u05b6\u05bc\u05d4 "these things"), which closes the phrase
@@ -368,7 +379,16 @@ def make_weakest(toks, prior, w):
             if shares_root(h, h2): return True
             # a compound numeral (שְׁנֵים עָשָׂר) and a title before a name (אָבִי לֶחִי)
             if bare(h2) in TENS: return True
-            if title_word(h) and NAME_GLOSS.match(g2.strip()): return True
+            # a title before its name (אָבִי לֶחִי), and a pronoun before its name in
+            # apposition (בִּי נֶפִי "me, Nephi", לוֹ לֶחִי "him, Lehi", 7:1, 7:6: the
+            # Tanakh tags the pronoun HR/Sp1bs, HRd/Sp3ms, HTo/Sp3ms)
+            if NAME_GLOSS.match(g2.strip()) and title_word(h): return True
+            # ...and only where the printed English itself sets the name off with
+            # a comma ("against me, Nephi,"): without one the name is the subject
+            # after its object (וַיְסַפֵּר לוֹ לָמוֹנִי "Lamoni rehearsed unto him")
+            if NAME_GLOSS.match(g2.strip()) and re.match(r'^H(R|Rd|To)/Sp', morph_of(h)) \
+               and g2.strip() not in DIVINE and not (i > 0 and SPEECH.search(toks[i - 1][1])) \
+               and ent and re.search(r',\s*' + re.escape(g2.strip()) + r'\b', ent): return True
             # a bare demonstrative stays with its noun (לוּחוֹת הַנְּחֹשֶׁת הָאֵלֶּה, 5:18:
             # the WLC divides before one 12% of the time against 61% for any word)
             if u'־' not in h2 and bare(h2) in DEMONSTRATIVE: return True
@@ -494,7 +514,9 @@ def punctuation_bounds(n, breaks, entext=None, strong=None, score=None):
     p = None
     if n >= ETNACHTA_MIN:
         # the printed marks name the etnachta; a strong link only when there are none
-        marked = printed or [i for i in range(n - 1) if b[i]]
+        # (never after the first unit alone: WLC 0.18% of verses; 1 Nephi 13:4
+        # had וָאֵ֑רֶא as a one-word first half off a strong link)
+        marked = [i for i in (printed or [i for i in range(n - 1) if b[i]]) if i >= 1]
         if marked:
             top = min(b[i] for i in marked)
             cands = [i for i in marked if b[i] == top]
@@ -548,7 +570,7 @@ def main():
             ent = EN.get((en, ref[0], ref[1])) if ref else None
             # the reader's breaths were marked for the ear; one after a word that
             # reaches forward (an infinitive absolute, a construct) is no division
-            weakest, joiner, hard, strong, printed, score = make_weakest(speak, prior, w)
+            weakest, joiner, hard, strong, printed, score = make_weakest(speak, prior, w, ent)
             # ...and one inside a pair of names ("Laman | and Lemuel", 3:28) is the
             # English comma landed a word or two off by the alignment
             marks = [(i, c) for i, c in BREAKS.get(key, [])
