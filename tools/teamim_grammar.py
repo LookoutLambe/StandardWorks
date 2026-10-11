@@ -392,7 +392,7 @@ def first_cut(words, stress_of, weakest, locked=()):
     return at if at is not None and 1 <= at <= n - 3 else None
 
 
-def accent_verse(words, bounds, stress_of=None, weakest=None, stress_letters=None, joiner=None):
+def accent_verse(words, bounds, stress_of=None, weakest=None, stress_letters=None, joiner=None, prejoined=()):
     """Lay the te'amim over one verse.
 
        words      the units in reading order (pointed, no accents; maqqef groups as one)
@@ -413,6 +413,10 @@ def accent_verse(words, bounds, stress_of=None, weakest=None, stress_letters=Non
        stress_letters  per unit, the index of the stressed consonant when it is
                   known outright (the test hands over the Masoretes' own); None
                   falls back to stress_of
+       prejoined  units written with a maqqef to the next from the start, whatever
+                  the division needs: the particles the Masoretes always join
+                  (אֶל, מִן, אֶת). Held as a word the joiner joined: a division
+                  chosen after one slides back before it
        returns    [code string per unit], [label per unit]"""
     units = [Unit(w, stress_of(w) if stress_of else None) for w in words]
     if stress_letters:
@@ -428,6 +432,10 @@ def accent_verse(words, bounds, stress_of=None, weakest=None, stress_letters=Non
         units[i].bound = b[i]          # what the chooser may see of the tree
     b[n - 1] = 0
     joined = set()
+    for j in prejoined:
+        if 0 <= j < n - 1:
+            b[j] = 0; units[j].bound = 0; units[j].prejoined = True
+            joined.add(j)
     place(units[n - 1], 'silluq')
     if n == 1:
         return [u.encode() for u in units], [u.label for u in units]
