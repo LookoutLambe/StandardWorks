@@ -138,8 +138,13 @@ def silent(h): return not HEB.search(h or '')
 STOP = set('a an the of to in and is was be'.split())
 def norm(w):
     w = re.sub(r"[^a-z']", '', w.lower())
+    # ("desire" is the gloss of רְצוֹנִי where the English says "I would that": "O my
+    # sons, I would that" put the vocative's comma after רְצוֹנִי, Mosiah 1:6;
+    # רָאוּי is "worthy" where the English says "do merit", 2:19; גְּדוֹלוֹת is "great"
+    # where it says "mighty miracles", 8:18)
     return {'mine':'my','thine':'thy','unto':'to','shall':'will','hath':'has',
-            'doth':'does','ye':'you','thee':'you','thou':'you'}.get(w, w)
+            'doth':'does','ye':'you','thee':'you','thou':'you','desire':'would',
+            'merit':'worthy','mighty':'great'}.get(w, w)
 def stem(w):
     for suf in ("'s","ies","es","ed","ing","s"):
         if w.endswith(suf) and len(w) - len(suf) >= 3:
@@ -266,10 +271,16 @@ OPENERS = [re.compile(u'^וְעַתָּה'), re.compile(u'^לָכֵן'), re.comp
 # you; if I do not" put its stop after an unplaced אִם־לֹא, Jacob 4:18)
 # (and בִּלְתִּי "save", which heads בִּלְתִּי אִם: found first, it keeps the comma off the
 # אִם inside the compound, 2 Nephi 1:31)
-OPENER_WORDS = set(u'אחרי ואחרי כאשר וכאשר למען ולמען בעבור ובעבור אם ואם אך בלתי'.split())
+# (and the rhetorical הֲלֹא, which the Tanakh divides before 109 times in 126:
+# "do merit any thanks from you, O how you ought to thank" is מִיֶּדְכֶם הֲלֹא
+# עֲלֵיכֶם, and the comma, carried past the unplaced הֲלֹא, was lost, Mosiah 2:19)
+OPENER_WORDS = set(u'אחרי ואחרי כאשר וכאשר למען ולמען בעבור ובעבור אם ואם אך בלתי הלא הלוא'.split())
 def opens(h):
-    return (not binds_back(h)) and (any(r.match(h or '') for r in OPENERS)
-                                    or re.sub(u'[^\u05d0-\u05ea\u05be]', '', h or '').split(u'\u05be')[0] in OPENER_WORDS)
+    first = re.sub(u'[^\u05d0-\u05ea\u05be]', '', h or '').split(u'\u05be')[0]
+    # (the question's הֲלֹא by its hataf patach: הַלֹּא is the article on a negation,
+    # "ye unbelieving" is אַתֶּם הַלֹּא מַאֲמִינִים, Mormon 9:6)
+    if first in (u'הלא', u'הלוא') and u'\u05b2' not in (h or '')[:3]: return False
+    return (not binds_back(h)) and (any(r.match(h or '') for r in OPENERS) or first in OPENER_WORDS)
 
 # THE GLOSSES THAT OPEN A UNIT AND NOTHING ELSE: a token glossed with one of
 # these, left unplaced at the far end of an alignment window, belongs to
@@ -367,14 +378,22 @@ def mt_before():
         except Exception: _MT[0] = {}
     return _MT[0]
 
+NUMBER_WORDS = set("""one two three four five six seven eight nine ten eleven twelve thirteen fourteen
+fifteen sixteen seventeen eighteen nineteen twenty thirty forty fifty sixty seventy eighty ninety
+first second third fourth fifth sixth seventh eighth ninth""".split())
 def eng_words(text):
-    """[(word, punct_class)] — 0 none, 1 comma, 2 full stop."""
+    """[(word, punct_class)] — 0 none, 1 comma, 2 full stop. A hyphenated number
+       is its words ("three thousand and forty-three;" is שְׁלֹשֶׁת אֲלָפִים וְאַרְבָּעִים
+       וּשְׁלֹשָׁה, and the stop fell between the forty and the three, Mosiah 9:18)."""
     out = []
     for m in re.finditer(r"([A-Za-z][A-Za-z'\-]*)([^A-Za-z]*)", text):
         w, tail = m.group(1), m.group(2)
         cls = 0
         if re.search(r'[,()]', tail): cls = 1      # (a parenthesis closes as a comma does, Jacob 4:1)
         if re.search(r'[;:.!?—]', tail): cls = 2
+        parts = w.split('-')
+        if len(parts) > 1 and all(p.lower() in NUMBER_WORDS for p in parts):
+            out.extend((p, 0) for p in parts[:-1]); w = parts[-1]
         out.append((w, cls))
     return out
 
@@ -387,6 +406,19 @@ def rule_veto(speak, i):
     gl = speak[i][1].rstrip(u' ,;:.\u2014').strip()
     return (nfc(speak[i][0]) in NEVER_AFTER or bool(BINDS.search(gl))
             or (i + 1 < len(speak) and binds_back(speak[i + 1][0])))
+
+def vocative(g, ent):
+    """the gloss is an address the English sets off with a comma after it ("And
+       now, my brethren, I would", "O Lord, ...", "my kindred and my people,")"""
+    g = (g or '').strip().rstrip(' ,;:.')
+    anded = bool(re.match(r'and\s', g))
+    g = re.sub(r'^and\s+', '', g)
+    if not ent or not re.match(r'(O|my|our)\s', g): return False
+    if re.search(r'(^|[,;:.!?]\s*)' + re.escape(g) + r',', ent, re.I): return True
+    # (the last of a chain of addresses that opens the sentence: "saying: My friends
+    # and my brethren, my kindred and my people," but not "that I, Nephi, and my
+    # brethren, should again return", 1 Nephi 7:2)
+    return anded and bool(re.search(r'(^|[:.!?]\s*)(O|my|our)\b[^;:.!?]*\band\s+' + re.escape(g) + r',', ent, re.I))
 
 def breaks_for(tokens, entext, finish=True):
     """[(index_into_speakable, class)] for one verse, or [] if it cannot be read.
@@ -436,7 +468,11 @@ def breaks_for(tokens, entext, finish=True):
     if entext:
         ew = eng_words(entext)
         # (which marks are a colon: the same words as eng_words, in the same order)
-        colon = [':' in m.group(2) for m in re.finditer(r"([A-Za-z][A-Za-z'\-]*)([^A-Za-z]*)", entext)]
+        colon = []
+        for m in re.finditer(r"([A-Za-z][A-Za-z'\-]*)([^A-Za-z]*)", entext):
+            parts = m.group(1).split('-')
+            if len(parts) > 1 and all(p.lower() in NUMBER_WORDS for p in parts): colon.extend([False] * (len(parts) - 1))
+            colon.append(':' in m.group(2))
         def seg_start(j):
             k = j
             while k > 0 and not ew[k - 1][1]: k -= 1
@@ -574,6 +610,27 @@ def breaks_for(tokens, entext, finish=True):
                             break
                         t -= 1
                     q = t
+            # A WORD THAT REACHES FORWARD ENDS NO PHRASE. "this perfect knowledge of
+            # God, he could not be kept" is הַזֹּאת בֵּאלֹהִים לֹא נִמְנַע: לֹא, its "not"
+            # placed nowhere, sat at the far end of the window and the comma after it
+            # was lost to the veto on a negation (Ether 3:20). Inside the window the
+            # mark goes before such a word. (Not the answer's own mark after לֹא,
+            # "Nay": "I say unto you, Nay; for" is לָכֶם לֹא כִּי, and the stop moved
+            # onto לָכֶם, 2 Nephi 31:19. The mark before it does step back: "that I
+            # have not nourished it? Nay," is אוֹתוֹ לֹא, Jacob 5:47.)
+            # (and a group a clause particle opens: "at the judgment day; whereof they
+            # shall be judged" is בְּיוֹם הַמִּשְׁפָּט אֲשֶׁר־בּוֹ, its "wherein" placed nowhere,
+            # and the stop fell after it, Mosiah 3:24. Not the relative that is whole
+            # in itself, an attribute: אֲשֶׁר־לְעוֹלָם "eternal", אֲשֶׁר־לִי "mine"; "God, the
+            # Eternal Father," is אֱלֹהִים הָאָב אֲשֶׁר־לְעוֹלָם, Moroni 4:3)
+            nay = ew[j][0].lower() in ('nay', 'no')
+            def forward(t):
+                h = speak[t][0]
+                if nfc(h) in NEVER_AFTER: return True
+                parts = bare(h).split(u'\u05be')
+                return u'\u05be' in h and parts[0] in (u'אשר', u'ואשר', u'כי', u'וכי', u'אם', u'ואם') \
+                       and not re.match(u'^(ל?עולם|לי|לו|לה|לנו|לכם|להם|להן|לך)$', parts[-1])
+            while q > lo and forward(q) and not (nay and bare(speak[q][0]) == u'לא'): q -= 1
             # A SPEECH'S COLON OPENS THE QUOTE. "Zion hath said: The Lord hath forsaken
             # me" is אָמְרָה צִיּוֹן עֲזָבַנִי יְהוָה, the quote verb first: the verb, placed
             # nowhere, sat before the colon (1 Nephi 21:14, Isaiah 49:14 עֲזָבַ֣נִי יְהוָ֑ה;
@@ -622,7 +679,10 @@ def breaks_for(tokens, entext, finish=True):
         # (a full stop stands for the cantillation builder: "hearken ye people from
         # far; the Lord hath called me" is Isaiah 49:1, מֵרָח֑וֹק יְהוָה֙, the etnachta
         # before the Name, and the stop was lost, 1 Nephi 21:1)
-        elif rate <= MT_BIND and i in marks and (finish or marks[i] < 2): marks.pop(i)
+        # (nor the comma that closes an address: "my kindred and my people, I would
+        # again call" lost it to the Tanakh's one break in 26 before אֶקְרָא, Mosiah 4:4)
+        elif rate <= MT_BIND and i in marks and (finish or marks[i] < 2) and not vocative(speak[i][1], entext):
+            marks.pop(i)
 
     # 5. THE WORDS THAT ALWAYS TAKE A PAUSE AFTER THEM.
     for i, (h, g) in enumerate(speak):
