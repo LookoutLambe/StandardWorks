@@ -59,7 +59,7 @@ import teamim_grammar as G
 from learn_teamim import prose_verses, RANK
 from learn_teamim import pair_feats
 from build_bom_breaks import (BOOKS, corpus, english, silent, breaks_for, norm,
-                              NEVER_AFTER, BINDS, binds_back, nfc, CONNECTIVES, SENSELESS)
+                              NEVER_AFTER, BINDS, binds_back, nfc, CONNECTIVES, SENSELESS, connective)
 from build_volume_breaks import drop_split_pairs, drop_unnatural
 from build_ot_teamim import wlc_stream, encode_verse as encode_verbatim
 
@@ -212,7 +212,9 @@ def title_word(h):
     h = nfc(h)
     if PLAIN_WAW.match(h): h = h[2:]            # וַאֲנִי נֶפִי, וְאִמִּי שְׂרָיָה (2:16, 5:1)
     b = bare(h).split(u'־')[-1]
-    return b in (u'אני', u'אנכי') or bool(KIN.match(b))
+    # (and "the king": הַמֶּ֣לֶךְ דָּוִ֔ד, the WLC dividing the title from its name 30
+    # times in 187; "king Benjamin" was split by a pashta, Words of Mormon 1:16)
+    return b in (u'אני', u'אנכי', u'המלך', u'למלך', u'במלך', u'כמלך') or bool(KIN.match(b))
 # the pronouns that make a compound subject (אֲנִי וְאַחַי, אַתָּה וְאַחֶיךָ): the first
 # and second persons only. Bare הוּא ends a clause or opens the next one far
 # more often than it joins a pair (WLC: a disjunctive follows it 81% of the
@@ -227,7 +229,9 @@ def nominal(h, g):
     h = nfc(h)
     if PLAIN_WAW.match(h): h, g = h[2:], re.sub(r'^and[- ]', '', g.strip(), flags=re.I)
     b = bare(h)
-    return b in PRON or bool(KIN.match(b)) or bool(NAME_GLOSS.match(g.strip()))
+    # (and a people by name, "the Nephites": "between the Nephites and Lamanites"
+    # took its etnachta between them, Enos 1:24)
+    return b in PRON or bool(KIN.match(b)) or bool(NAME_GLOSS.match(g.strip())) or bool(re.match(r"^the [A-Z][a-z']+$", g.strip()))
 
 def pair_link(toks, i):
     """The link inside a pair of names: "Laman and Lemuel", "I and my
@@ -359,12 +363,17 @@ def verb_first(toks, i, ent):
     if not ent or i < 1 or i + 1 >= len(toks): return i
     h, g = toks[i]
     m = morph_of(h, last=False)
-    if nfc(h).startswith(u'\u05d5') or (m and not re.match(r'^HV.[pivj]', m)): return i
+    if nfc(h).startswith(u'\u05d5') or (m and not re.match(r'^HV.[pivjr]', m)): return i
     # (the verb's last word of sense: "became corrupt" is "corrupt", which the
     # English says as "become corrupted")
     gi = [_stem(w) for w in _words(g) if w not in STOP_WORDS and w not in SENSELESS and len(w) >= 3][-1:]
     prev = [_stem(w) for w in _words(toks[i - 1][1]) if w not in STOP_WORDS]
     if not gi or not prev: return i
+    # (never onto a negation or a word that reaches forward, and not when what
+    # follows is a connective opening the next sentence: "lieth not. Wherefore,"
+    # took its stop off וְלֹא יְכַזֵּב onto וְלֹא, Jacob 4:13)
+    if bare(toks[i - 1][0]).split(u'\u05be')[-1] in (u'לא', u'ולא', u'אל', u'ואל') or nfc(toks[i - 1][0]) in NEVER_AFTER: return i
+    if connective(toks[i + 1][1]) or nfc(toks[i + 1][0]) in CLAUSE_OPENERS: return i
     segs = re.split(r'[,;:.?!\u2014]+', ent)
     for k in range(len(segs) - 1):
         ws = [_stem(w) for w in _words(segs[k]) if w not in STOP_WORDS]
@@ -374,10 +383,15 @@ def verb_first(toks, i, ent):
         # thee, I have chosen thee" has its comma after the verb, and "behold," before
         # it was another comma (1 Nephi 20:10; "Eat, drink", 2 Nephi 28:7)
         after = [_stem(w) for w in _words(toks[i + 1][1]) if w not in STOP_WORDS and w not in SENSELESS and len(w) >= 3]
-        if all(w in nxt for w in gi) and not any(w in ws for w in gi) and after and all(w in nxt for w in after):
+        if not any(w in ws for w in gi) and after and all(w in nxt for w in after):
             # a form the table cannot read (נִשְׁחְתוּ) proves itself a verb by the
             # inversion: the English says its subject first
-            if m or max(nxt.index(w) for w in after) < min(nxt.index(w) for w in gi):
+            if all(w in nxt for w in gi) and (m or max(nxt.index(w) for w in after) < min(nxt.index(w) for w in gi)):
+                return i - 1
+            # a verb the Tanakh reads, glossed otherwise than the English says it
+            # (אֹכְלִים "eating" for "feeding": "full of idolatry and filthiness;
+            # feeding upon beasts of prey", Enos 1:20) goes with what follows it
+            if m and not any(w in _words(ent.lower()) for w in _words(g) if w not in STOP_WORDS and w not in SENSELESS and len(w) >= 3):
                 return i - 1
     return i
 
@@ -424,8 +438,12 @@ def mend_marks(toks, marks, ent):
             # keeps its stop after רְאֵה, 11:30)
             g0 = _words(toks[i][1])[:1]
             if not (g0 and ent and re.search(r'\bsaying:\s*' + re.escape(g0[0][:4]), ent, re.I)): i -= 1
+        # (a mark on the question's הֲלֹא is the end of what came before it: "more than
+        # my fathers have written? For have not they revealed" glossed הֲלֹא "have they
+        # not", and its "have" found "have written", Jarom 1:2)
+        if 0 < i < len(toks) - 1 and bare(toks[i][0]) in (u'הלא', u'הלוא'): i -= 1
         if 0 <= i < len(toks) - 1: i = transposed(toks, i, ent)
-        if c == 1 and 0 <= i < len(toks) - 1: i = verb_first(toks, i, ent)
+        if 0 <= i < len(toks) - 1: i = verb_first(toks, i, ent)
         # (3) the colon that opens a speech is a comma to the breath table
         # (weight 1); to the Masoretes לֵאמֹר before the speech is a stop (13:40)
         if c == 1 and colon and 0 <= i < len(toks) and SPEECH.search(toks[i][1]): c = 2
@@ -469,7 +487,7 @@ def mend_marks(toks, marks, ent):
     return [m for m in out if m not in drop]
 
 PRON2 = set(u'אתה את אתם אתן'.split())
-EL_EPITHET = set(u'שדי עליון גבור חי קנא רחום אמונה נאמן גדול נורא'.split())
+EL_EPITHET = set(u'שדי עליון גבור חי קנא רחום אמונה נאמן גדול נורא עולם'.split())   # (אֵ֥ל עוֹלָֽם, Genesis 21:33)
 
 def kin_after_name(toks, i):
     """the link between a name and the kin word in apposition after it
@@ -532,9 +550,9 @@ PREFIXES = u'והלבכמש'
 # prepositions the Tanakh tags as construct nouns (אֵצֶל HNcbsc, תַּחַת, מוּל) or
 # adjectives (אַחֲרֵי, נֶגֶד): they reach forward as surely as אֶל does, and the
 # gloss rule misses them when the English is "by" (8:20 אֵ֨צֶל֙ מַעֲקֵ֣ה הַבַּרְזֶ֔ל)
-EXTRA_NEVER = set(u'אֵצֶל תַּחַת מוּל נֶגֶד לִפְנֵי אַחֲרֵי בְּתוֹךְ מִתּוֹךְ סְבִיב אֵין וְאֵין גַּם גַם'.split())   # (אֵין before its noun: WLC conjunctive 399, maqqef 149, disjunctive 70; וְאִם־אֵ֔ין צֶ֗דֶק 2 Nephi 2:13;
+EXTRA_NEVER = set(u'אֵצֶל תַּחַת מוּל נֶגֶד לִפְנֵי אַחֲרֵי בְּתוֹךְ מִתּוֹךְ סְבִיב אֵין וְאֵין גַּם גַם הֲלֹא הֲלוֹא'.split())   # (אֵין before its noun: WLC conjunctive 399, maqqef 149, disjunctive 70; וְאִם־אֵ֔ין צֶ֗דֶק 2 Nephi 2:13;
 # a bare גַּם before what it adds: disjunctive 41 of 437, כִּ֥י גַם֙ לְכׇל־הַנְּבִיאִ֣ים took a
-# pashta on גַם, Jacob 4:4)
+# pashta on גַם, Jacob 4:4; the question's הֲלֹא, 48 of 240)
 ENCLITIC = set(u'בלבד'.split())
 COMPOUND = set([(u'אף', u'גם')])
 PROCLITIC = set(NEVER_AFTER) | EXTRA_NEVER | set(u'עַל מִן עַד אֵת אֶת בֵּין אַל פֶּן עִם'.split())
@@ -774,7 +792,11 @@ def make_weakest(toks, prior, w, ent=None):
         # phrase: וְהִנֵּ֥ה הַכֹּ֛ל הֶ֖בֶל, Ecclesiastes 1:14; WLC a disjunctive after it 34 of 53.
         # "I would ask if all is
         # done? Behold" lost its stop on הַכֹּל, 2 Nephi 31:19)
-        if BINDS.search(g.rstrip(u' ,;:.\u2014').strip()) and bare(h) not in DEMONSTRATIVE and bare(h) != u'הכל': return True
+        # (...and not a noun in the absolute, whose gloss ends in an adverb: מֵעוֹלָם
+        # "ever before" reaches forward to nothing, and the full stop after "never
+        # before heard nor seen." was held hard, Enos 1:8)
+        if BINDS.search(g.rstrip(u' ,;:.\u2014').strip()) and bare(h) not in DEMONSTRATIVE and bare(h) != u'הכל' \
+           and not (re.search(r'\b(before|after|above|beneath)$', g.rstrip(u' ,;:.\u2014').strip()) and re.search(r'(^H|/)N\w*a$', morph_of(h))): return True
         if CONSTRUCT_PL.search(nfc(h).replace(u'\u05be', u'')): return True
         if i + 1 < len(toks):
             h2, g2 = toks[i + 1]
@@ -861,6 +883,11 @@ def make_weakest(toks, prior, w, ent=None):
         # 23; וּבְהַחִלָּם לִצְמֹחַ ‖ תְּפַנּוּ "as they begin to grow ye shall clear
         # away", Jacob 5:65)
         head = head or re.match(r'^H(R/|Rd/|X/)?V.c', morph_of(h))
+        # ...and a name the Tanakh does not have, known by its gloss (the WLC count
+        # had its names as Np: "at the time that Mosiah discovered them, ‖ they
+        # had become" is מְצָאָם מוֹשִׁיָּה הָיוּ, Omni 1:17)
+        g = toks[i][1].strip()
+        head = head or (not morph_of(h) and u'\u05be' not in h and bool(NAME_GLOSS.match(g)) and g not in DIVINE)
         # (not a head with its own waw, which the WLC count left out: the table
         # reads וְיָמֶיךָ past its waw as HX/ like any prefix, 2 Nephi 2:3; nor a verb
         # the Tanakh also reads as another word: יָבֵשׁ is "dried up" and the
@@ -962,6 +989,10 @@ def make_weakest(toks, prior, w, ent=None):
         # ("the Son of the Eternal Father!" is בֶּן־אֲבִי עוֹלָם: "Eternal" is capitalised
         # as a name and is no name, 11:21)
         if i < 1 or not NAME_GLOSS.match(g) or g in DIVINE: return False
+        # (an apposition the English sets off on both sides: "into the hands of my
+        # son Moroni, behold" closes a clause, and held as an apposition it left
+        # the etnachta to "my people, the Nephites", Words of Mormon 1:1)
+        if ent and not re.search(r',\s*' + re.escape(g) + r'\b', ent): return False
         return title_word(toks[i - 1][0]) or bool(re.match(r'^H(R|Rd|To)/Sp', morph_of(toks[i - 1][0])))
     def list_comma(i):
         """The commas inside a list of nouns, "nations, kindreds, tongues, and
@@ -987,6 +1018,10 @@ def make_weakest(toks, prior, w, ent=None):
         h = nfc(toks[e][0]); h = h[2:] if PLAIN_WAW.match(h) else h
         if e + 1 < len(toks) - 1 and (attributive(h, toks[e + 1][0]) or
            (re.match(r'^H(Td/)?(Nc|Ac|Aa)', morph_of(h)) and re.match(r'^H(Td/)?V.[rs]', morph_of(toks[e + 1][0], last=False)))): e += 1
+        # (...and over a construct chain: "and flocks of herds," is וְעֶדְרֵי בְהֵמוֹת, and
+        # the list's end on וְעֶדְרֵי took the etnachta inside it, Enos 1:21)
+        while e + 1 < len(toks) - 1 and (construct(toks[e][0], toks[e + 1][0]) or CONSTRUCT_PL.search(nfc(toks[e][0]))):
+            e += 1
         return e
     def strong(i):
         """A link the Tanakh divides at all but surely, with no mark from the
