@@ -256,8 +256,20 @@ OPENERS = [re.compile(u'^וְעַתָּה'), re.compile(u'^לָכֵן'), re.comp
            re.compile(u'^וַיְהִי'), re.compile(u'^יַעַן'), re.compile(u'^וְאַף'),
            re.compile(u'^פֶּן'), re.compile(u'^כִּי'), re.compile(u'^ו?ְ?הִנֵּה'),
            re.compile(u'^ו[ַָ][איתנ]')]           # the waw-consecutive
+# ...and the words that open a clause the way כִּי does, as the cantillation
+# builder's CLAUSE_OPENERS has them, by the bare word that heads the group
+# (אַחֲרֵיהֶם "after them" is no opener; וְכַאֲשֶׁר has no dagesh to match):
+# "in the temple, having first obtained mine errand" is בַּהֵיכָל אַחֲרֵי קִבְּלִי
+# אֶת־מַשָּׂאִי, and the comma went after an unplaced אַחֲרֵי and slid on to split
+# קִבְּלִי from its object (Jacob 1:17)
+# (and אִם, וְאִם, אַךְ: WLC a disjunctive before them 76%, 91%, 93%; "this mystery unto
+# you; if I do not" put its stop after an unplaced אִם־לֹא, Jacob 4:18)
+# (and בִּלְתִּי "save", which heads בִּלְתִּי אִם: found first, it keeps the comma off the
+# אִם inside the compound, 2 Nephi 1:31)
+OPENER_WORDS = set(u'אחרי ואחרי כאשר וכאשר למען ולמען בעבור ובעבור אם ואם אך בלתי'.split())
 def opens(h):
-    return (not binds_back(h)) and any(r.match(h or '') for r in OPENERS)
+    return (not binds_back(h)) and (any(r.match(h or '') for r in OPENERS)
+                                    or re.sub(u'[^\u05d0-\u05ea\u05be]', '', h or '').split(u'\u05be')[0] in OPENER_WORDS)
 
 # THE GLOSSES THAT OPEN A UNIT AND NOTHING ELSE: a token glossed with one of
 # these, left unplaced at the far end of an alignment window, belongs to
@@ -265,7 +277,7 @@ def opens(h):
 # after one as the English's own breath, not a division (connective_comma).
 CONNECTIVES = set(['yea', 'now', 'and now', 'wherefore', 'therefore', 'also', 'and also', 'behold',
                    'and behold', 'for behold', 'but behold', 'nevertheless', 'yea even', 'and', 'but',
-                   'for', 'and thus', 'thus', 'and it came to pass', 'and it came to pass that'])
+                   'for', 'and thus', 'thus', 'and it came to pass', 'and it came to pass that', 'although'])
 def connective(g):
     return re.sub(r'[^a-z ]', '', g.lower()).strip() in CONNECTIVES
 # the words that carry no sense of their own, for the test of where a gloss's
@@ -274,6 +286,7 @@ SENSELESS = STOP | set('''will has does had have did do not that which who he sh
 their i me my we us our you your him for but yea also with from by on upon into as so all there
 this these those are were been am'''.split())
 MODALS = set('would should could may might must can cannot'.split())   # no word of sense at a clause's head
+SPEECH_EN = re.compile(r'\b(said|saith|say|saying|spake|spoke|cried|answered|sayeth)\b', re.I)
 def binds_back(h):
     return any(r.match(h or '') for r in BINDS_HEB)
 
@@ -360,7 +373,7 @@ def eng_words(text):
     for m in re.finditer(r"([A-Za-z][A-Za-z'\-]*)([^A-Za-z]*)", text):
         w, tail = m.group(1), m.group(2)
         cls = 0
-        if re.search(r'[,]', tail): cls = 1
+        if re.search(r'[,()]', tail): cls = 1      # (a parenthesis closes as a comma does, Jacob 4:1)
         if re.search(r'[;:.!?—]', tail): cls = 2
         out.append((w, cls))
     return out
@@ -422,6 +435,12 @@ def breaks_for(tokens, entext, finish=True):
     #    token in between simply stays with what precedes it.
     if entext:
         ew = eng_words(entext)
+        # (which marks are a colon: the same words as eng_words, in the same order)
+        colon = [':' in m.group(2) for m in re.finditer(r"([A-Za-z][A-Za-z'\-]*)([^A-Za-z]*)", entext)]
+        def seg_start(j):
+            k = j
+            while k > 0 and not ew[k - 1][1]: k -= 1
+            return k
         gw, owner = [], []
         for i, (h, g) in enumerate(speak):
             for w in re.findall(r"[A-Za-z][A-Za-z'\-]*", g):
@@ -470,7 +489,10 @@ def breaks_for(tokens, entext, finish=True):
             # and the stop three words on, where it belongs, 1 Nephi 4:19)
             if hi > lo and connective(speak[lo][1]) and reach[lo] == j: q = lo
             for t in (range(lo, hi) if q == hi else ()):
-                if opens(speak[t + 1][0]): q = t; break
+                # (a token glossed as a connective opens the next unit too: "like unto
+                # you, nevertheless they are cursed" is כָּמוֹכֶם אַף־כִּי מְקֻלָּלִים, and
+                # the comma fell after מְקֻלָּלִים, Jacob 3:3)
+                if opens(speak[t + 1][0]) or connective(speak[t + 1][1]): q = t; break
             else:
                 # AN UNPLACED "and X" AT THE FAR END OF THE WINDOW BELONGS TO
                 # WHAT FOLLOWS. 1 Nephi 1:4 reads "...Zedekiah, king of Judah,
@@ -541,12 +563,34 @@ def breaks_for(tokens, entext, finish=True):
                         # sat after אֵלַי, 2 Nephi 8:5: it carried "he was a
                         # descendant of Joseph;" back off its copula הוּא, 1 Nephi
                         # 5:14, and was withdrawn)
-                        if not (re.match(r'and\b', g.strip().lower()) or connective(g)
+                        # (not an "and X" that repeats the word before it: כׇּל־מִין וָמִין
+                        # "every sort" is one phrase, and the stop after it went
+                        # between them, Jacob 5:31)
+                        andx = re.match(r'and\b', g.strip().lower()) and not (
+                            t > 0 and bare(speak[t][0])[1:] and bare(speak[t][0])[1:] == bare(speak[t - 1][0]).split(u'\u05be')[-1])
+                        if not (andx or connective(g)
                                 or (cls == 2 and sense and all(x in after and x not in before for x in sense))
                                 or (cls == 1 and sense and all(x in head and x not in before for x in sense))):
                             break
                         t -= 1
                     q = t
+            # A SPEECH'S COLON OPENS THE QUOTE. "Zion hath said: The Lord hath forsaken
+            # me" is אָמְרָה צִיּוֹן עֲזָבַנִי יְהוָה, the quote verb first: the verb, placed
+            # nowhere, sat before the colon (1 Nephi 21:14, Isaiah 49:14 עֲזָבַ֣נִי יְהוָ֑ה;
+            # "thus saith the Lord: This people begin", Jacob 2:23). After a verb of
+            # speaking the unplaced tokens go to the quote, unless one of them glosses a
+            # word the English says before the colon ("said unto me" put after
+            # its verb is the formula's own)
+            if cls == 2 and colon[j] and q > lo and SPEECH_EN.search(' '.join(x for x, _ in ew[max(0, j - 4):j + 1])):
+                said = set(norm(x) for x, _ in ew[seg_start(j):j + 1])
+                # (nor a noun: "And the Lord said:" is וַיֹּאמֶר הָאָדוֹן, and the subject,
+                # glossed "the master", is the formula's though the English names it
+                # otherwise, Jacob 5:51)
+                nominal = lambda g: bool(re.match(r"(the|a|an|my|his|her|our|your|their|thy)\b|[A-Z]", (g or '').strip()))
+                if not any(set(norm(x) for x in re.findall(r"[A-Za-z][A-Za-z'\-]*", speak[t][1])
+                               if norm(x) not in SENSELESS and len(x) >= 3) & said or nominal(speak[t][1])
+                           for t in range(lo + 1, q + 1)):
+                    q = lo
             put(q, cls, eng=True)
 
     # 4. AND THE MASORETES ON THE WORD THAT FOLLOWS.
@@ -575,7 +619,10 @@ def breaks_for(tokens, entext, finish=True):
         # (carrying the mark past the word instead was tried for 2 Nephi 5:10,
         # whose "judgments," fell before יְהוָה: it re-phrased 60 verses of
         # 1 Nephi, so that verse is ruled by hand)
-        elif rate <= MT_BIND and i in marks: marks.pop(i)
+        # (a full stop stands for the cantillation builder: "hearken ye people from
+        # far; the Lord hath called me" is Isaiah 49:1, מֵרָח֑וֹק יְהוָה֙, the etnachta
+        # before the Name, and the stop was lost, 1 Nephi 21:1)
+        elif rate <= MT_BIND and i in marks and (finish or marks[i] < 2): marks.pop(i)
 
     # 5. THE WORDS THAT ALWAYS TAKE A PAUSE AFTER THEM.
     for i, (h, g) in enumerate(speak):

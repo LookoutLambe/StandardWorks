@@ -107,7 +107,10 @@ def drop_unnatural(br, speak):
             if w in _NO_BREAK_AFTER and not (w in (u'לו', u'ולו') and u'\u05bc' not in speak[i][0]):
                 cut += 1
                 continue
-            if w in _TITLE_BEFORE_NAME and not nxt.startswith(u'ו') and nxt not in _NO_BREAK_AFTER:
+            # (only before a NAME: אַחַי "my brethren" is spelt as אָחִי "my brother", and
+            # "And now, my brethren, do ye suppose" lost its vocative's comma, Jacob 2:14)
+            if w in _TITLE_BEFORE_NAME and not nxt.startswith(u'ו') and nxt not in _NO_BREAK_AFTER \
+               and re.match(r"^[A-Z][a-z'\-]+$", (speak[i + 1][1] or '').strip()):
                 cut += 1
                 continue
         out.append((i, c))

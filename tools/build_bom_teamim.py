@@ -322,6 +322,10 @@ def transposed(toks, i, ent):
         # "upon" and "plates" were both in "engraven upon them ... plates of
         # ore", 1 Nephi 19:1)
         noun = bool(re.match(r'^H(C/)?(N|Td/|R/N|Rd/N)', morph_of(toks[at + 1][0]))) and not PLAIN_WAW.match(nfc(toks[at + 1][0]))
+        # (nor past a verb with its waw: it opens the next clause. "their husbands
+        # love their wives, and their wives love" is ... אֶת־נְשֵׁיהֶם וְאֹהֲבוֹת נְשֵׁיהֶם,
+        # and the first clause's "love" carried the comma past וְאֹהֲבוֹת, Jacob 3:7)
+        if nfc(toks[at + 1][0]).startswith(u'\u05d5') and waw_verb(toks[at + 1]): break
         if noun:
             if not all(w in body for w in gn): break
         elif len(gn) > len(body) or body[-len(gn):] != gn: break
@@ -331,6 +335,51 @@ def transposed(toks, i, ent):
         else: body = body[:-len(gn)]
         at += 1; j = at
     return j
+
+def waw_verb(tok):
+    """a verb with its waw (וְאֹהֲבוֹת, וַיֹּאמֶר), by the Tanakh's analysis where it has
+       the form, else by the gloss: "and love", not "and their wives" (a word the
+       table cannot read, וְאֹהֲבוֹת, glosses as the verb it is)"""
+    m = morph_of(tok[0], last=False)
+    if re.match(r'^H[Cc]/V', m): return True
+    if re.match(r'^H[Cc]/', m) and len(m) > 3: return False
+    rest = re.sub(r'^and\s+', '', (tok[1] or '').strip().lower())
+    return bool(rest) and rest != (tok[1] or '').strip().lower() and not re.match(
+        r"(the|a|an|his|her|their|my|our|your|thy|its|all|every|this|these|that|those|many|much)\b", rest)
+
+def verb_first(toks, i, ent):
+    """THE HEBREW SETS ITS VERB BEFORE THE SUBJECT THE ENGLISH PUTS FIRST. "all the
+       care which we have taken of my vineyard, the trees thereof have become
+       corrupted" is ... אֶת־כַּרְמִי נִשְׁחְתוּ הָעֵצִים: the verb, its "corrupted" placed
+       nowhere before the comma, sat at the far end of the window and took the
+       comma after it (Jacob 5:46). A comma on a bare finite verb whose words of
+       sense the English says only in the segment after the comma, when the
+       segment before ends with the word before the verb, belongs before the
+       verb. The reverse of transposed()."""
+    if not ent or i < 1 or i + 1 >= len(toks): return i
+    h, g = toks[i]
+    m = morph_of(h, last=False)
+    if nfc(h).startswith(u'\u05d5') or (m and not re.match(r'^HV.[pivj]', m)): return i
+    # (the verb's last word of sense: "became corrupt" is "corrupt", which the
+    # English says as "become corrupted")
+    gi = [_stem(w) for w in _words(g) if w not in STOP_WORDS and w not in SENSELESS and len(w) >= 3][-1:]
+    prev = [_stem(w) for w in _words(toks[i - 1][1]) if w not in STOP_WORDS]
+    if not gi or not prev: return i
+    segs = re.split(r'[,;:.?!\u2014]+', ent)
+    for k in range(len(segs) - 1):
+        ws = [_stem(w) for w in _words(segs[k]) if w not in STOP_WORDS]
+        if ws[-len(prev):] != prev: continue
+        nxt = [_stem(w) for w in _words(segs[k + 1])]
+        # ...and the subject after the verb is in that segment too: "I have refined
+        # thee, I have chosen thee" has its comma after the verb, and "behold," before
+        # it was another comma (1 Nephi 20:10; "Eat, drink", 2 Nephi 28:7)
+        after = [_stem(w) for w in _words(toks[i + 1][1]) if w not in STOP_WORDS and w not in SENSELESS and len(w) >= 3]
+        if all(w in nxt for w in gi) and not any(w in ws for w in gi) and after and all(w in nxt for w in after):
+            # a form the table cannot read (נִשְׁחְתוּ) proves itself a verb by the
+            # inversion: the English says its subject first
+            if m or max(nxt.index(w) for w in after) < min(nxt.index(w) for w in gi):
+                return i - 1
+    return i
 
 def reaches_forward(toks, i):
     """A MARK ON A WORD THAT REACHES FORWARD BELONGS AFTER WHAT IT REACHES FOR.
@@ -376,6 +425,7 @@ def mend_marks(toks, marks, ent):
             g0 = _words(toks[i][1])[:1]
             if not (g0 and ent and re.search(r'\bsaying:\s*' + re.escape(g0[0][:4]), ent, re.I)): i -= 1
         if 0 <= i < len(toks) - 1: i = transposed(toks, i, ent)
+        if c == 1 and 0 <= i < len(toks) - 1: i = verb_first(toks, i, ent)
         # (3) the colon that opens a speech is a comma to the breath table
         # (weight 1); to the Masoretes לֵאמֹר before the speech is a stop (13:40)
         if c == 1 and colon and 0 <= i < len(toks) and SPEECH.search(toks[i][1]): c = 2
@@ -413,11 +463,24 @@ def mend_marks(toks, marks, ent):
     # verb to the name (וָאֹמַ֣ר יְהוָ֔ה, not two zaqef gadols; 1 Nephi 17:9)
     drop = set()
     for (i, c), (i2, c2) in zip(out, out[1:]):
-        if i2 == i + 1 and 0 <= i2 < len(toks) - 1 and NAME_GLOSS.match(toks[i2][1].strip()) and toks[i2][1].strip() in DIVINE:
+        voc = re.sub(r'^O\s+', '', toks[i2][1].strip()) if 0 <= i2 < len(toks) else ''   # ("O Lord", 1 Nephi 17:9)
+        if i2 == i + 1 and 0 <= i2 < len(toks) - 1 and NAME_GLOSS.match(voc) and voc in DIVINE:
             drop.add((i, c))
     return [m for m in out if m not in drop]
 
 PRON2 = set(u'אתה את אתם אתן'.split())
+EL_EPITHET = set(u'שדי עליון גבור חי קנא רחום אמונה נאמן גדול נורא'.split())
+
+def kin_after_name(toks, i):
+    """the link between a name and the kin word in apposition after it
+       (יוֹסֵף אָחִי, וְלֶחִי אָבִי): the name by its gloss or the Tanakh's Np, the
+       kin word bare, without its own waw or maqqef"""
+    if i + 1 >= len(toks): return False
+    (h, g), (h2, g2) = toks[i], toks[i + 1]
+    if u'\u05be' in h or u'\u05be' in h2 or PLAIN_WAW.match(nfc(h2)): return False
+    g = re.sub(r'^and[- ]', '', g.strip(), flags=re.I)
+    name = bool(NAME_GLOSS.match(g)) and g not in DIVINE or bool(re.match(r'^H(C/)?Np[mfl]', morph_of(h)))
+    return name and bool(KIN.match(bare(h2)))
 
 def verb_subject(toks, i):
     """A bare wayyiqtol holds the subject that follows it: וַיֹּאמֶר יְהוָה,
@@ -469,16 +532,18 @@ PREFIXES = u'והלבכמש'
 # prepositions the Tanakh tags as construct nouns (אֵצֶל HNcbsc, תַּחַת, מוּל) or
 # adjectives (אַחֲרֵי, נֶגֶד): they reach forward as surely as אֶל does, and the
 # gloss rule misses them when the English is "by" (8:20 אֵ֨צֶל֙ מַעֲקֵ֣ה הַבַּרְזֶ֔ל)
-EXTRA_NEVER = set(u'אֵצֶל תַּחַת מוּל נֶגֶד לִפְנֵי אַחֲרֵי בְּתוֹךְ מִתּוֹךְ סְבִיב אֵין וְאֵין'.split())   # (אֵין before its noun: WLC conjunctive 399, maqqef 149, disjunctive 70; וְאִם־אֵ֔ין צֶ֗דֶק 2 Nephi 2:13)
+EXTRA_NEVER = set(u'אֵצֶל תַּחַת מוּל נֶגֶד לִפְנֵי אַחֲרֵי בְּתוֹךְ מִתּוֹךְ סְבִיב אֵין וְאֵין גַּם גַם'.split())   # (אֵין before its noun: WLC conjunctive 399, maqqef 149, disjunctive 70; וְאִם־אֵ֔ין צֶ֗דֶק 2 Nephi 2:13;
+# a bare גַּם before what it adds: disjunctive 41 of 437, כִּ֥י גַם֙ לְכׇל־הַנְּבִיאִ֣ים took a
+# pashta on גַם, Jacob 4:4)
 ENCLITIC = set(u'בלבד'.split())
 COMPOUND = set([(u'אף', u'גם')])
 PROCLITIC = set(NEVER_AFTER) | EXTRA_NEVER | set(u'עַל מִן עַד אֵת אֶת בֵּין אַל פֶּן עִם'.split())
 DEMONSTRATIVE = set(u'ההוא ההיא הזה הזאת האלה ההם ההן ההמה'.split())
 # pointed, and matched pointed: the consonants of וְהִנֵּה "and behold" are those
 # of וָהֵנָּה "and thither" (הֵנָּה וָהֵנָּה, 17:26)
-CLAUSE_OPENERS = set(N(w) for w in u'כִּי כַּאֲשֶׁר וְכַאֲשֶׁר לְמַעַן וּלְמַעַן לְבִלְתִּי וְגַם בַּעֲבוּר וּבַעֲבוּר עַד וְהִנֵּה וַיְהִי לָכֵן וְלָכֵן עַל־כֵּן וְעַל־כֵּן הוֹי הִנֵּה'.split())
+CLAUSE_OPENERS = set(N(w) for w in u'כִּי כַּאֲשֶׁר וְכַאֲשֶׁר לְמַעַן וּלְמַעַן לְבִלְתִּי וְגַם בַּעֲבוּר וּבַעֲבוּר עַד וְהִנֵּה וַיְהִי לָכֵן וְלָכֵן עַל־כֵּן וְעַל־כֵּן הוֹי הִנֵּה וְאִם אַךְ'.split())
 # (הוֹי: a disjunctive before it 11 of 12 in the WLC, "to fulfil all righteousness, ‖ O then"
-# 2 Nephi 31:5; bare הִנֵּה 292 of 315)
+# 2 Nephi 31:5; bare הִנֵּה 292 of 315; וְאִם 103 of 113; אַךְ 65 of 70)
 KI_MAQQEF = N(u'כִּי־')     # (NFC, as the corpus is read: the marks of a letter in canonical order)
 
 def stem3(h):
@@ -499,6 +564,13 @@ def shares_root(h, h2):
     # infinitive absolute is spelt as its perfect, הִתְאַבֵּל הִתְאַבַּלְנָה, 1 Nephi
     # 16:35, so the form itself cannot decide)
     if PLAIN_WAW.match(nfc(h2)) or re.match(r'^H(C/)?Td/', morph_of(h2)): return False
+    # the Tanakh's own analysis first: an infinitive absolute and a verb of the same
+    # lemma (הַכֵּה יַכּוּ, both H5221: the weak root נכה keeps one radical of three,
+    # and "shall scourge you" took a zaqef between them, Jacob 3:3)
+    ea, eb = attested(nfc(h).split(u'\u05be')[-1]), attested(nfc(h2).split(u'\u05be')[-1])
+    # (an infinitive of either kind: the hollow root's absolute is spelt as its
+    # construct, and the table reads בּוֹא in בּוֹא יָבֹאוּ as one, Jacob 2:14)
+    if ea and eb and ea[0] and ea[0] == eb[0] and re.match(r'^HV.[ac]', ea[1] or ''): return True
     def match(h, h2):
         a = stem3(h)
         if len(a) < 3: return False
@@ -519,6 +591,14 @@ def shares_root(h, h2):
                 if len(b) > 3 and b[0] in PREFIXES: b = b[1:]
                 else: break
         return False
+    # the hiphil or hophal infinitive absolute of a hollow root keeps two radicals
+    # behind its ה, and the imperfect keeps them behind its prefix and a mater:
+    # הָכֵן יוּכַן "must needs be prepared" (1 Nephi 15:34 had a zaqef between them)
+    def hollow(h, h2):
+        a, b = bare(h).split(u'\u05be')[-1], bare(h2).split(u'\u05be')[-1]
+        if len(a) != 3 or a[0] != u'ה' or len(b) < 3 or b[0] not in u'איתנ': return False
+        core = re.sub(u'[וי]', '', b[1:])
+        return len(core) >= 2 and core[:2] == a[1:] and a[2] not in u'הוי'
     # the pair is a verb and its verb: a noun of the same root is not it
     # (דַבְּרִי אֶת־הַדְּבָרִים, לְדַבֵּר אֶת־הַדְּבָרִים bound as if infinitive absolutes,
     # 1 Nephi 4:4, 10:22), by the Tanakh's analysis where it has the form
@@ -528,7 +608,7 @@ def shares_root(h, h2):
     # as written, then with the matres out (אָרוֹר תֵּאָרֵר, Jacob 2:29; but הָיֹה
     # יִהְיֶה keeps its yod and matches as written)
     strip = lambda s: re.sub(u'[וי]', '', s)
-    return match(h, h2) or match(strip(h), strip(h2))
+    return match(h, h2) or match(strip(h), strip(h2)) or hollow(h, h2)
 
 # ---- the Tanakh's own analysis of a form (attested_forms.js: OSHB + TAHOT,
 # [Strong's, morph, segments, n, alts]; keys by RootEngine.pointedKey)
@@ -610,9 +690,17 @@ def attributive(h, h2):
     """a noun and the bare adjective after it (כֹּחַ רַב, זָהָב טָהוֹר), both
        absolute: divided between 21% of the time in the WLC"""
     if u'־' in h2: return False
-    article = lambda m: re.sub(r'^HTd/', 'H', m)        # הֶעָנָף הַצַּדִּיק as much as עָנָף צַדִּיק
+    # הֶעָנָף הַצַּדִּיק as much as עָנָף צַדִּיק, and בִּקְלָלָה חֲמוּרָה "with a sore curse" as
+    # much as קְלָלָה (the noun's preposition or waw is no part of the pair, Jacob 3:3)
+    article = lambda m: re.sub(r'^H((C|R|Rd|X|Td)/)+', 'H', m)
     m1, m2 = article(morph_of(h)), article(morph_of(h2, last=False))
-    return m1.startswith('HNc') and m1.endswith('a') and m2.startswith('HAa') and m2.endswith('a')
+    adj = m2.startswith('HAa') and m2.endswith('a')
+    # a noun the table cannot read, before an adjective that agrees with it in
+    # number: עֲנָפִים צְעִירִים "young branches" (Jacob 5:4 had a zaqef between them)
+    if not m1 and adj and u'\u05be' not in h and not nfc(h).startswith(u'\u05d5'):
+        e1, e2 = bare(h)[-2:], bare(h2)[-2:]
+        return e1 == e2 and e1 in (u'ים', u'ות')
+    return m1.startswith('HNc') and m1.endswith('a') and adj
 
 def adj_pair(toks, i):
     """a noun's two adjectives, "the great and spacious building" (הַבִּנְיָן
@@ -701,6 +789,8 @@ def make_weakest(toks, prior, w, ent=None):
             # ...and a compound particle is one word: אַף גַּם "yea, even" (27 in
             # the volume; 11 carried a disjunctive on אַף, 2 Nephi 20:21 אַ֕ף גַּ֖ם)
             if (bare(h), bare(h2)) in COMPOUND: return True
+            # ...and בִּלְתִּי אִם "save, unless" (2 Nephi 1:31 had a zaqef between them)
+            if bare(h) == u'בלתי' and bare(h2).split(u'\u05be')[0] == u'אם': return True
             # this volume glosses a construct "the mercy" + "of the Lord": the
             # "of" on the next word says the two are one chain, unless that
             # word carries a preposition ("ask of God" מֵאֱלֹהִים, "of the
@@ -713,6 +803,9 @@ def make_weakest(toks, prior, w, ent=None):
                and not re.match(r'^H(Td/)?Aa.*a$', morph_of(h)) and not morph_of(h2, last=False).startswith('HD'): return True
             # the infinitive absolute before its verb (עָזֹב לֹא־עֲזָבַנִי, מוֹת תָּמוּת)
             if shares_root(h, h2): return True
+            # God and his epithet are one name: אֵ֣ל שַׁדַּ֔י, אֵ֣ל גִּבּ֔וֹר, אֵ֥ל עֶלְיֽוֹן (WLC: divided
+            # 2 times in 26; עֵין־אֵ֛ל שַׁדַּ֖י took a tevir, Jacob 2:10)
+            if re.sub(u'^[ובלכ]', '', bare(h).split(u'\u05be')[-1]) == u'אל' and bare(h2) in EL_EPITHET: return True
             # a compound numeral (שְׁנֵים עָשָׂר) and a title before a name (אָבִי לֶחִי)
             if bare(h2) in TENS: return True
             # a title before its name (אָבִי לֶחִי), and a pronoun before its name in
@@ -733,7 +826,7 @@ def make_weakest(toks, prior, w, ent=None):
     # a noun, a prepositional phrase, an adjective (not a cardinal: the table this
     # volume reads tags עוֹד "still" HAcmsa where the WLC has HD, and כִּי־ע֤וֹד תֶּהְגּוּ֙
     # took a pashta inside its clause, 2 Nephi 32:8)
-    NOMINAL_HEAD = re.compile(r'^H(Td/|R/|Rd/)?(Nc|Np|Aa)')
+    NOMINAL_HEAD = re.compile(r'^H(Td/|R/|Rd/|X/)?(Nc|Np|Aa)')     # (X/: a form read past its prefix, מֵחַטֹּאתֵיכֶם ‖ יִהְיֶה, Jacob 3:8)
     # the negative particle the table tags as a noun (בִּלְתִּי H1115, Ncbsc): it reaches
     # forward to its verb (לְבִלְתִּ֨י יֵדְע֤וּ הַיְּהוּדִים֙, 1 Nephi 4:36; the WLC divides
     # after one 40 times in 99, against 84% for a noun)
@@ -763,6 +856,19 @@ def make_weakest(toks, prior, w, ent=None):
         # of our seed know", 1 Nephi 15:14). By the word: the table tags them HTd/Tm
         # and HTd/Pp3ms where the WLC has Pd
         head = NOMINAL_HEAD.match(morph_of(h)) or (u'\u05be' not in h and bare(h) in DEMONSTRATIVE)
+        # ...and an infinitive construct ending its clause, with or without its
+        # preposition (WLC: a disjunctive before the finite verb 218 of 234 and 21 of
+        # 23; וּבְהַחִלָּם לִצְמֹחַ ‖ תְּפַנּוּ "as they begin to grow ye shall clear
+        # away", Jacob 5:65)
+        head = head or re.match(r'^H(R/|Rd/|X/)?V.c', morph_of(h))
+        # (not a head with its own waw, which the WLC count left out: the table
+        # reads וְיָמֶיךָ past its waw as HX/ like any prefix, 2 Nephi 2:3; nor a verb
+        # the Tanakh also reads as another word: יָבֵשׁ is "dried up" and the
+        # adjective "dry" (H3002), and כְּקָנֶה ‖ יָבֵשׁ cut the reed from its
+        # adjective, 1 Nephi 17:48)
+        if nfc(h).startswith(u'\u05d5'): return False
+        e2 = attested(nfc(h2).split(u'\u05be')[0])
+        if e2 and len(e2) > 4 and e2[4]: return False
         return 'verb' if (head and FINITE.match(morph_of(h2, last=False))) else False
     def weight(i, hi, glabel, near):
         s = score(i)
@@ -791,6 +897,20 @@ def make_weakest(toks, prior, w, ent=None):
             # only: "a goodly father | and a goodly mother" is the parallel
             # the pair rule above must leave alone.
             if pair_link(toks, i): s = min(s, NOMINAL)
+            # A NAME HOLDS ITS KIN TITLE: יוֹסֵף אָחִי "Joseph my brother", לֶחִי אָבִי (WLC:
+            # a disjunctive between a name and a following kin word 60 times in
+            # 488; וְיוֹסֵ֗ף אָחִי֙ took a revia, Jacob 1:18)
+            if kin_after_name(toks, i): s = min(s, NOMINAL)
+            # A CLOSE PAIR IS ONE PHRASE: the waw pointed with qamats joins a fixed pair
+            # (שָׁמַיִם וָאָרֶץ, דָּ֣ם וָאֵ֔שׁ, כִנּ֨וֹר וָנֶ֜בֶל); WLC: a noun before one is divided 21%
+            # of the time, by a major divider 13%, against 73% and 51% before a plain
+            # וְ, as seldom as a construct ("Creator of heaven ‖ and earth" had a zaqef
+            # inside it, Jacob 2:5). Where the pair ends the domain the forced near
+            # divider falls on its first member, זָהָ֥ב וָכֶ֖סֶף, as the Masoretes write it
+            # (held hard there too, זָהָב־וָכֶסֶף was joined by a maqqef, Jacob 2:12)
+            if nfc(h2).startswith(u'\u05d5\u05b8') and re.match(r'^HC/N', morph_of(h2, last=False)) \
+               and re.match(r'^H(Td/|R/|Rd/)?N', morph_of(h)):
+                s = min(s, NOMINAL) if (hi is not None and i + 1 == hi) else s + HARD
             # A WORD AND ITSELF: הֵנָּה וָהֵנָּה "hither and thither" (4:2; 2 Kings 2:8
             # וַיֵּחָצ֖וּ הֵ֥נָּה וָהֵֽנָּה), דּוֹר וָדוֹר, יוֹם וָיוֹם: one phrase
             if PLAIN_WAW.match(nfc(h2)) and bare(nfc(h2)[2:]) == bare(nfc(h)): s = min(s, NOMINAL)
